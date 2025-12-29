@@ -126,6 +126,13 @@
 	},
 /turf/simulated/floor/tiled,
 /area/specialty/redspace)
+"aaz" = (
+/obj/machinery/door/airlock/centcom/nameddorm{
+	matchnames = list("Tasesii");
+	name = "Tasesii's Residence"
+	},
+/turf/simulated/floor/wood,
+/area/centcom/living)
 "aaA" = (
 /obj/effect/shuttle_landmark/premade/mercenary/transit,
 /turf/space/transit/north,
@@ -751,6 +758,29 @@
 	icon_state = "milspec"
 	},
 /area/centcom/security)
+"abT" = (
+/obj/effect/floor_decal/corner/grey{
+	dir = 9
+	},
+/obj/structure/sign/sec2{
+	pixel_x = -32
+	},
+/turf/unsimulated/floor/steel{
+	icon_state = "tile_full";
+	color = "#385e60"
+	},
+/area/centcom/living)
+"abU" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/item/clothing/shoes/slippers{
+	pixel_x = -5;
+	pixel_y = -6
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/centcom/living)
+"abV" = (
+/turf/simulated/floor/wood/oak/panel,
+/area/centcom/living)
 "abW" = (
 /obj/structure/bed/chair/bay/comfy/red{
 	dir = 4
@@ -768,6 +798,63 @@
 /obj/structure/fans/hardlight,
 /turf/unsimulated/shuttle/plating,
 /area/centcom/security)
+"abY" = (
+/obj/machinery/computer/security/telescreen/entertainment{
+	pixel_y = -32
+	},
+/turf/simulated/floor/wood/oak/panel,
+/area/centcom/living)
+"abZ" = (
+/obj/structure/closet/crate/bin,
+/obj/structure/extinguisher_cabinet{
+	dir = 1;
+	pixel_y = -30
+	},
+/turf/simulated/floor/wood/oak/panel,
+/area/centcom/living)
+"aca" = (
+/obj/structure/sink{
+	dir = 8;
+	pixel_x = -12;
+	pixel_y = -7
+	},
+/obj/structure/mirror{
+	dir = 8;
+	pixel_x = -32
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/centcom/living)
+"acb" = (
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/white,
+/area/centcom/living)
+"acc" = (
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
+	},
+/obj/effect/floor_decal/spline/plain,
+/turf/simulated/floor/tiled/white,
+/area/centcom/living)
+"acd" = (
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
+	},
+/obj/effect/floor_decal/spline/plain,
+/obj/structure/closet/walllocker/wooden/east{
+	name = "cupboard"
+	},
+/obj/item/storage/box/donkpockets/spicy,
+/obj/item/storage/box/donkpockets/spicy{
+	pixel_x = -5;
+	pixel_y = 10
+	},
+/turf/simulated/floor/tiled/white,
+/area/centcom/living)
 "ace" = (
 /obj/machinery/portable_atmospherics/canister/oxygen/prechilled,
 /obj/machinery/atmospherics/portables_connector{
@@ -779,10 +866,303 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/milspec,
 /area/specialty/redspace)
+"acf" = (
+/obj/structure/undies_wardrobe,
+/obj/item/reagent_containers/spray/cleaner{
+	pixel_y = 16;
+	pixel_x = -7
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/centcom/living)
+"acg" = (
+/obj/structure/table/bench/padded{
+	pixel_x = 7;
+	pixel_y = 2
+	},
+/turf/simulated/floor/wood/oak/panel,
+/area/centcom/living)
+"ach" = (
+/obj/structure/sign/clock{
+	pixel_y = 35
+	},
+/obj/structure/table/woodentable,
+/obj/item/flashlight/lamp/green{
+	pixel_y = 15
+	},
+/turf/simulated/floor/wood/oak/panel,
+/area/centcom/living)
+"aci" = (
+/obj/structure/table/bench/padded{
+	pixel_y = 2;
+	pixel_x = -6
+	},
+/obj/structure/sign/painting{
+	pixel_y = 32
+	},
+/turf/simulated/floor/wood/oak/panel,
+/area/centcom/living)
+"acj" = (
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 8
+	},
+/obj/structure/sink/kitchen{
+	pixel_y = 13
+	},
+/turf/simulated/floor/tiled/white,
+/area/centcom/living)
+"ack" = (
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
+	},
+/obj/structure/closet/walllocker/wooden/north{
+	name = "cupboard"
+	},
+/obj/item/material/kitchen/utensil/spoon{
+	pixel_x = -4
+	},
+/obj/item/material/kitchen/utensil/spoon{
+	pixel_x = -4
+	},
+/obj/item/material/kitchen/utensil/fork{
+	pixel_x = 2
+	},
+/obj/item/material/kitchen/utensil/fork{
+	pixel_x = 2
+	},
+/obj/item/material/knife/table{
+	pixel_x = 10
+	},
+/obj/item/material/knife/table{
+	pixel_x = 10
+	},
+/obj/item/reagent_containers/food/drinks/glass2/coffeemug/britcup{
+	pixel_x = 10;
+	pixel_y = 9
+	},
+/obj/item/reagent_containers/food/drinks/glass2/coffeemug/britcup{
+	pixel_x = 10;
+	pixel_y = 9
+	},
+/obj/structure/table/marble,
+/turf/simulated/floor/tiled/white,
+/area/centcom/living)
 "acl" = (
 /obj/structure/salvageable/computer_os,
 /turf/simulated/floor/reinforced,
 /area/specialty/redspace)
+"acm" = (
+/obj/machinery/microwave/advanced{
+	pixel_y = 9
+	},
+/obj/effect/floor_decal/corner/grey/diagonal{
+	dir = 4
+	},
+/obj/structure/table/marble,
+/turf/simulated/floor/tiled/white,
+/area/centcom/living)
+"acn" = (
+/obj/structure/bed/chair/sofa/corp/corner{
+	dir = 4
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 10
+	},
+/turf/simulated/floor/carpet/graycarpet,
+/area/centcom/living)
+"aco" = (
+/obj/structure/bed/chair/sofa/corp/left{
+	dir = 1
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 6
+	},
+/turf/simulated/floor/carpet/graycarpet,
+/area/centcom/living)
+"acp" = (
+/obj/structure/table/oak{
+	pixel_x = -2;
+	pixel_y = -2
+	},
+/turf/simulated/floor/wood/oak/panel,
+/area/centcom/living)
+"acq" = (
+/obj/structure/closet/crate/large/einstein{
+	pixel_x = -9;
+	pixel_y = -4
+	},
+/obj/item/stack/cable_coil/random{
+	pixel_y = 8;
+	pixel_x = -6
+	},
+/obj/item/airlock_electronics{
+	pixel_y = -4;
+	pixel_x = -6
+	},
+/obj/item/airlock_electronics{
+	pixel_y = -12;
+	pixel_x = -10
+	},
+/turf/simulated/floor/wood/oak/panel,
+/area/centcom/living)
+"acr" = (
+/obj/structure/bed/pillowpile/orange{
+	pixel_y = 13;
+	pixel_x = 8
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 10
+	},
+/obj/structure/curtain/open/bed,
+/turf/simulated/floor/carpet/oracarpet,
+/area/centcom/living)
+"acs" = (
+/obj/effect/floor_decal/spline/plain{
+	dir = 6
+	},
+/obj/structure/bed/pillowpile/orange{
+	pixel_y = 4
+	},
+/turf/simulated/floor/carpet/oracarpet,
+/area/centcom/living)
+"act" = (
+/obj/structure/bed/chair/sofa/corp{
+	dir = 4
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 8
+	},
+/turf/simulated/floor/carpet/graycarpet,
+/area/centcom/living)
+"acu" = (
+/obj/structure/table/hardwoodtable{
+	pixel_x = -4;
+	pixel_y = -4
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 4
+	},
+/obj/item/camera{
+	pixel_y = 3;
+	pixel_x = 4
+	},
+/turf/simulated/floor/carpet/graycarpet,
+/area/centcom/living)
+"acv" = (
+/obj/effect/floor_decal/spline/plain{
+	dir = 8
+	},
+/obj/structure/curtain/open/bed,
+/obj/structure/bed/pillowpile/orange,
+/turf/simulated/floor/carpet/oracarpet,
+/area/centcom/living)
+"acw" = (
+/obj/effect/floor_decal/spline/plain{
+	dir = 4
+	},
+/obj/structure/bed/chair/bay/chair/padded/red/bignest{
+	pixel_y = -2;
+	pixel_x = -1
+	},
+/turf/simulated/floor/carpet/oracarpet,
+/area/centcom/living)
+"acx" = (
+/obj/structure/bed/chair/sofa/corp/corner{
+	dir = 1
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 9
+	},
+/turf/simulated/floor/carpet/graycarpet,
+/area/centcom/living)
+"acy" = (
+/obj/structure/bed/chair/sofa/corp/left,
+/obj/effect/floor_decal/spline/plain{
+	dir = 5
+	},
+/obj/structure/sign/painting{
+	pixel_y = 32
+	},
+/turf/simulated/floor/carpet/graycarpet,
+/area/centcom/living)
+"acz" = (
+/obj/structure/sign/calendar{
+	pixel_y = 32
+	},
+/turf/simulated/floor/wood/oak/panel,
+/area/centcom/living)
+"acA" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/clothing/head/hardhat{
+	pixel_y = 1;
+	pixel_x = -5
+	},
+/obj/item/clothing/head/hardhat/white{
+	pixel_x = 4;
+	pixel_y = 0
+	},
+/obj/item/storage/belt/utility{
+	pixel_y = -9
+	},
+/turf/simulated/floor/wood/oak/panel,
+/area/centcom/living)
+"acB" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/paper/crumpled{
+	pixel_x = -7;
+	pixel_y = 12;
+	name = "teleportation scroll"
+	},
+/turf/simulated/floor/wood/oak/panel,
+/area/centcom/living)
+"acC" = (
+/obj/structure/closet/cabinet{
+	pixel_x = -10;
+	pixel_y = 4;
+	name = "Tasesii's Wardrobe"
+	},
+/obj/item/clothing/suit/storage/teshari/cloak/jobs/engineer{
+	pixel_x = -8
+	},
+/obj/item/clothing/shoes/footwraps/teshari,
+/obj/item/clothing/under/teshari/undercoat/standard/worksuit/blackorange,
+/obj/item/clothing/accessory/solgov/specialty/officer/eshui,
+/turf/simulated/floor/wood/oak/panel,
+/area/centcom/living)
+"acD" = (
+/obj/structure/bed/pillowpile/orange{
+	pixel_y = -10;
+	pixel_x = 7
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 9
+	},
+/obj/structure/curtain/open/bed,
+/turf/simulated/floor/carpet/oracarpet,
+/area/centcom/living)
+"acE" = (
+/obj/effect/floor_decal/spline/plain{
+	dir = 5
+	},
+/obj/structure/bed/pillowpile/orange{
+	pixel_y = -4
+	},
+/turf/simulated/floor/carpet/oracarpet,
+/area/centcom/living)
+"acF" = (
+/obj/effect/floor_decal/corner/grey{
+	dir = 9
+	},
+/obj/structure/sign/sec1{
+	pixel_x = -32
+	},
+/turf/unsimulated/floor/steel{
+	icon_state = "tile_full";
+	color = "#385e60"
+	},
+/area/centcom/living)
 "acI" = (
 /obj/machinery/ai_status_display{
 	pixel_y = 32
@@ -4329,9 +4709,8 @@
 /turf/simulated/floor/flesh,
 /area/specialty/redspace)
 "bOK" = (
-/obj/machinery/microwave/advanced,
-/obj/structure/table/wooden_reinforced,
-/turf/simulated/floor/wood,
+/obj/structure/table/rack/shelf/wood,
+/turf/simulated/floor/wood/oak/panel,
 /area/centcom/living)
 "bOR" = (
 /obj/effect/floor_decal/corner/red{
@@ -21991,6 +22370,7 @@
 	dir = 5
 	},
 /obj/item/robot_parts/l_arm,
+/obj/item/clothing/accessory/solgov/specialty/officer/eshui,
 /turf/simulated/floor/carpet/purple,
 /area/centcom/living)
 "kLc" = (
@@ -22170,8 +22550,10 @@
 /area/specialty/redspace)
 "kRA" = (
 /obj/structure/table/glass,
-/obj/item/soap/uranium_soap,
-/obj/item/reagent_containers/spray/cleaner,
+/obj/item/soap/fire_soap{
+	pixel_y = 7
+	},
+/obj/structure/closet/walllocker/medical/west,
 /turf/simulated/floor/tiled/freezer,
 /area/centcom/living)
 "kRC" = (
@@ -22227,6 +22609,7 @@
 	pixel_y = 14
 	},
 /obj/item/toy/plushie/squid,
+/obj/item/clothing/accessory/solgov/specialty/officer/eshui,
 /turf/simulated/floor/wood{
 	oxygen = 0;
 	phoron = 21.8366
@@ -26178,10 +26561,22 @@
 /area/centcom/main_hall)
 "nrZ" = (
 /obj/structure/table/glass,
-/obj/item/clothing/under/bathrobe,
-/obj/item/towel/random,
-/obj/item/towel/random,
-/obj/item/reagent_containers/spray/cleaner,
+/obj/item/clothing/under/bathrobe{
+	pixel_x = 7;
+	pixel_y = -4
+	},
+/obj/item/towel/random{
+	pixel_x = -2;
+	pixel_y = 4
+	},
+/obj/item/towel/random{
+	pixel_y = 8;
+	pixel_x = -7
+	},
+/obj/item/reagent_containers/spray/cleaner{
+	pixel_x = 8;
+	pixel_y = 11
+	},
 /turf/simulated/floor/tiled/freezer,
 /area/centcom/living)
 "nsg" = (
@@ -31488,6 +31883,7 @@
 /obj/item/assembly/signaler{
 	frequency = 1399
 	},
+/obj/item/clothing/accessory/solgov/specialty/officer/eshui,
 /turf/simulated/floor/wood{
 	oxygen = 0;
 	phoron = 21.8366
@@ -41760,12 +42156,6 @@
 	icon_state = "milspec"
 	},
 /area/centcom/control)
-"wjq" = (
-/obj/structure/table/wooden_reinforced,
-/obj/item/storage/box/donkpockets/pizza,
-/obj/item/storage/box/donkpockets/pizza,
-/turf/simulated/floor/wood,
-/area/centcom/living)
 "wjC" = (
 /obj/effect/landmark/redspacestart,
 /turf/simulated/floor/wood,
@@ -50660,7 +51050,7 @@ mgz
 qQV
 aaw
 kRA
-aGk
+aca
 oLX
 aas
 xAJ
@@ -50983,9 +51373,9 @@ aaw
 aaw
 aaw
 aaw
-asb
+acf
 mgz
-aFo
+abU
 aas
 xAJ
 xxV
@@ -51141,9 +51531,9 @@ vhe
 nMI
 eHO
 aas
-aSx
-aSx
-aSx
+acx
+act
+acn
 aaw
 aaw
 gqN
@@ -51303,12 +51693,12 @@ hdx
 wCE
 yfb
 aas
-aSx
-aSx
-aSx
+acy
+acu
+aco
 aaw
-aSx
-aSx
+acg
+abV
 bOK
 aas
 xAJ
@@ -51465,13 +51855,13 @@ iTb
 wCE
 sdB
 aas
-aSx
-aSx
-aSx
+acz
+abV
+acp
 aaw
-aSx
-aSx
-wjq
+ach
+abV
+bOK
 aas
 xAJ
 xxV
@@ -51627,13 +52017,13 @@ sSI
 wCE
 ooL
 aas
-aSx
-aSx
-aSx
+acA
+abV
+acq
 aaw
-aSx
-aSx
-gGi
+aci
+abV
+abV
 aas
 xAJ
 xxV
@@ -51789,14 +52179,14 @@ aqU
 wCE
 rsX
 aas
-aSx
-aSx
-aSx
+acB
+abV
+abV
 gqN
-aSx
-aSx
-aSx
-abn
+abV
+abV
+abV
+aaz
 xxV
 xxV
 tJx
@@ -51951,13 +52341,13 @@ wCE
 xDT
 wCE
 aas
-aSx
-aSx
-aSx
+acC
+abV
+abV
 aaw
-aSx
-aSx
-aSx
+acj
+acb
+abV
 aas
 xAJ
 xxV
@@ -52113,13 +52503,13 @@ hHH
 wCE
 veR
 aas
-aSx
-aSx
-aSx
+acD
+acv
+acr
 aaw
-aSx
-aSx
-tad
+ack
+acc
+abY
 aas
 xAJ
 xxV
@@ -52275,13 +52665,13 @@ dmu
 vXu
 qvr
 aas
-aSx
-aSx
-aSx
+acE
+acw
+acs
 aaw
-aSx
-aSx
-aSx
+acm
+acd
+abZ
 aas
 xAJ
 xxV
@@ -59228,7 +59618,7 @@ qCC
 qCC
 qCC
 qCC
-qCC
+acF
 hsA
 xxV
 tBK
@@ -59248,7 +59638,7 @@ xxV
 qCC
 qCC
 qCC
-qCC
+abT
 hsA
 xxV
 tJx
