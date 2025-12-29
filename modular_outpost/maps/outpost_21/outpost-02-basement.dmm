@@ -13585,9 +13585,7 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/flesh,
-/turf/simulated/floor{
-	temperature = 321.5
-	},
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/muriki/processor/hall)
 "ayl" = (
 /obj/machinery/atmospherics/pipe/simple/visible/red{
@@ -13601,9 +13599,7 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/flesh,
-/turf/simulated/floor{
-	temperature = 321.5
-	},
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/muriki/processor/hall)
 "aym" = (
 /turf/simulated/floor/water/acidic/turfpack/muriki,
@@ -15588,9 +15584,7 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/flesh,
-/turf/simulated/floor{
-	temperature = 321.5
-	},
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/muriki/processor/hall)
 "aBZ" = (
 /obj/effect/zone_divider,
@@ -16785,9 +16779,7 @@
 /obj/effect/floor_decal/flesh{
 	dir = 4
 	},
-/turf/simulated/floor{
-	temperature = 321.5
-	},
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/muriki/processor/hall)
 "aEn" = (
 /obj/structure/table/standard{
@@ -18975,9 +18967,7 @@
 	dir = 1
 	},
 /obj/effect/landmark/step_trap,
-/turf/simulated/floor{
-	temperature = 321.5
-	},
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/muriki/processor/hall)
 "aIg" = (
 /obj/structure/disposalpipe/segment{
@@ -21151,9 +21141,7 @@
 	dir = 8
 	},
 /obj/effect/landmark/step_trap,
-/turf/simulated/floor{
-	temperature = 321.5
-	},
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/muriki/processor/hall)
 "aMi" = (
 /obj/structure/cable/green{
@@ -38527,9 +38515,7 @@
 /obj/machinery/door/airlock/glass_external{
 	req_one_access = list(52,56)
 	},
-/turf/simulated/floor{
-	temperature = 321.5
-	},
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/muriki/processor/gland/space)
 "bsf" = (
 /obj/effect/map_effect/interval/atmogland/airmix,
@@ -45413,6 +45399,9 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/effect/floor_decal/industrial/stand_clear/red{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/security/tankstore)
 "bEo" = (
@@ -45443,6 +45432,8 @@
 /obj/structure/sign/warning/acid{
 	pixel_y = 32
 	},
+/obj/effect/floor_decal/industrial/warning/tile,
+/obj/effect/floor_decal/industrial/warning/color/tile/red,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/security/tankstore)
 "bEr" = (
@@ -45599,6 +45590,9 @@
 "bEJ" = (
 /obj/effect/floor_decal/corner/red/border,
 /obj/machinery/light,
+/obj/effect/floor_decal/industrial/stand_clear/red{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/security/tankstore)
 "bEK" = (
@@ -60776,7 +60770,8 @@
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/cargo)
 "ckQ" = (
-/obj/machinery/porta_turret/stationary,
+/obj/machinery/porta_turret/heavy,
+/obj/effect/floor_decal/industrial/outline/red,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/security/tankstore)
 "ckR" = (
@@ -63285,9 +63280,7 @@
 	},
 /obj/effect/floor_decal/flesh,
 /obj/effect/mist,
-/turf/simulated/floor{
-	temperature = 321.5
-	},
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/muriki/processor/hall)
 "crD" = (
 /obj/effect/map_effect/interval/atmogland/bodyheat,
@@ -63319,9 +63312,7 @@
 	dir = 4
 	},
 /obj/effect/mist,
-/turf/simulated/floor{
-	temperature = 321.5
-	},
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/muriki/processor/hall)
 "crI" = (
 /obj/structure/trash_pile,
@@ -63619,6 +63610,23 @@
 "csw" = (
 /turf/simulated/gore,
 /area/muriki/processor/hall/waterway_low)
+"csx" = (
+/obj/effect/floor_decal/industrial/warning/tile,
+/obj/effect/floor_decal/industrial/warning/color/tile/red,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/security/tankstore)
+"csy" = (
+/obj/effect/floor_decal/industrial/warning/tile,
+/obj/effect/floor_decal/industrial/warning/color/tile/red,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/security/tankstore)
+"csz" = (
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/stand_clear/blue,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/cave)
 "csG" = (
 /obj/machinery/reagent_refinery/hub{
 	dir = 1
@@ -65320,9 +65328,7 @@
 /obj/effect/mine/n2o{
 	camo_net = 1
 	},
-/turf/simulated/floor{
-	temperature = 321.5
-	},
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/muriki/processor/hall)
 "cxS" = (
 /obj/structure/window/phoronreinforced,
@@ -65609,9 +65615,7 @@
 /obj/effect/floor_decal/flesh{
 	dir = 4
 	},
-/turf/simulated/floor{
-	temperature = 321.5
-	},
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/muriki/processor/gland/airmix)
 "cyq" = (
 /obj/item/trash/raisins,
@@ -66401,9 +66405,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/red,
 /obj/effect/landmark/step_trap,
-/turf/simulated/floor{
-	temperature = 321.5
-	},
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/muriki/processor/hall)
 "dma" = (
 /turf/simulated/wall/r_wall,
@@ -66425,10 +66427,11 @@
 /turf/simulated/floor/tiled/dark,
 /area/security/prison)
 "dmD" = (
-/obj/machinery/porta_turret/stationary,
 /obj/structure/cable/orange{
 	icon_state = "1-2"
 	},
+/obj/machinery/porta_turret/heavy,
+/obj/effect/floor_decal/industrial/outline/red,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/security/tankstore)
 "dmL" = (
@@ -66495,9 +66498,7 @@
 /obj/machinery/atmospherics/pipe/simple/visible/red{
 	dir = 4
 	},
-/turf/simulated/floor{
-	temperature = 321.5
-	},
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/muriki/processor/hall)
 "dre" = (
 /obj/structure/table/woodentable,
@@ -67714,9 +67715,7 @@
 /obj/machinery/door/airlock/glass_external{
 	req_one_access = list(52,56)
 	},
-/turf/simulated/floor{
-	temperature = 321.5
-	},
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/muriki/processor/hall)
 "eAo" = (
 /obj/machinery/atmospherics/portables_connector{
@@ -68678,9 +68677,7 @@
 	},
 /obj/effect/floor_decal/flesh,
 /obj/effect/landmark/step_trap,
-/turf/simulated/floor{
-	temperature = 321.5
-	},
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/muriki/processor/hall)
 "fIc" = (
 /obj/structure/table/fancyblack,
@@ -69543,9 +69540,7 @@
 	dir = 4
 	},
 /obj/effect/landmark/step_trap,
-/turf/simulated/floor{
-	temperature = 321.5
-	},
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/muriki/processor/hall)
 "gQC" = (
 /obj/machinery/processor,
@@ -71000,6 +70995,8 @@
 /obj/structure/sign/warning/lethal_turrets{
 	pixel_y = 32
 	},
+/obj/effect/floor_decal/industrial/warning/tile,
+/obj/effect/floor_decal/industrial/warning/color/tile/red,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/security/tankstore)
 "iGX" = (
@@ -71194,9 +71191,7 @@
 /area/muriki/bathroom/scilower)
 "iPS" = (
 /obj/structure/catwalk,
-/turf/simulated/floor{
-	temperature = 321.5
-	},
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/muriki/processor/hall)
 "iQB" = (
 /obj/structure/sink{
@@ -71320,9 +71315,7 @@
 /obj/effect/floor_decal/flesh{
 	dir = 4
 	},
-/turf/simulated/floor{
-	temperature = 321.5
-	},
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/muriki/processor/hall)
 "iYc" = (
 /turf/simulated/floor/wood,
@@ -71608,9 +71601,7 @@
 	},
 /obj/effect/floor_decal/flesh,
 /obj/effect/landmark/step_trap,
-/turf/simulated/floor{
-	temperature = 321.5
-	},
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/muriki/processor/hall)
 "jlL" = (
 /obj/structure/table/steel,
@@ -74294,6 +74285,8 @@
 /obj/structure/sign/warning/enzyme{
 	pixel_y = -32
 	},
+/obj/effect/floor_decal/industrial/warning/tile,
+/obj/effect/floor_decal/industrial/warning/color/tile/red,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/security/tankstore)
 "mbv" = (
@@ -74558,9 +74551,7 @@
 /obj/effect/floor_decal/flesh{
 	dir = 8
 	},
-/turf/simulated/floor{
-	temperature = 321.5
-	},
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/muriki/processor/hall)
 "mBu" = (
 /obj/structure/window/reinforced{
@@ -75006,9 +74997,7 @@
 	},
 /obj/structure/catwalk,
 /obj/effect/mist,
-/turf/simulated/floor{
-	temperature = 321.5
-	},
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/muriki/processor/gland/airmix)
 "mWT" = (
 /turf/simulated/floor/flesh/turfpack/muriki,
@@ -75113,9 +75102,7 @@
 	},
 /obj/effect/floor_decal/flesh,
 /obj/effect/mist,
-/turf/simulated/floor{
-	temperature = 321.5
-	},
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/muriki/processor/gland/airmix)
 "nkl" = (
 /turf/simulated/wall/r_wall,
@@ -75176,6 +75163,8 @@
 /obj/structure/sign/warning/secure_area{
 	pixel_y = 32
 	},
+/obj/effect/floor_decal/industrial/warning/tile,
+/obj/effect/floor_decal/industrial/warning/color/tile/red,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/security/tankstore)
 "nqh" = (
@@ -76868,9 +76857,7 @@
 /obj/effect/floor_decal/flesh{
 	dir = 4
 	},
-/turf/simulated/floor{
-	temperature = 321.5
-	},
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/muriki/processor/hall/waterway_low)
 "pkf" = (
 /obj/structure/prop/rock/small/water,
@@ -78184,9 +78171,7 @@
 	},
 /obj/effect/floor_decal/flesh,
 /obj/effect/mist,
-/turf/simulated/floor{
-	temperature = 321.5
-	},
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/muriki/processor/gland/airmix)
 "qHY" = (
 /obj/effect/floor_decal/industrial/warning/corner{
@@ -79044,6 +79029,8 @@
 /obj/structure/sign/warning/lethal_turrets{
 	pixel_y = -32
 	},
+/obj/effect/floor_decal/industrial/warning/tile,
+/obj/effect/floor_decal/industrial/warning/color/tile/red,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/security/tankstore)
 "rvd" = (
@@ -79335,9 +79322,7 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/flesh,
-/turf/simulated/floor{
-	temperature = 321.5
-	},
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/muriki/processor/hall)
 "rOS" = (
 /obj/machinery/floodlight,
@@ -79991,9 +79976,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/red,
 /obj/effect/mist,
-/turf/simulated/floor{
-	temperature = 321.5
-	},
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/muriki/processor/hall)
 "ssD" = (
 /obj/structure/urinal{
@@ -82615,9 +82598,7 @@
 /obj/effect/mine/claymore{
 	dir = 4
 	},
-/turf/simulated/floor{
-	temperature = 321.5
-	},
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/muriki/processor/hall)
 "vyZ" = (
 /obj/random/contraband,
@@ -84897,9 +84878,7 @@
 /obj/effect/floor_decal/flesh{
 	dir = 4
 	},
-/turf/simulated/floor{
-	temperature = 321.5
-	},
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/muriki/processor/hall)
 "yfx" = (
 /obj/structure/disposalpipe/segment,
@@ -119648,8 +119627,8 @@ bhW
 aHF
 bDQ
 npY
-hiK
-hiK
+csx
+csx
 bEG
 bDQ
 glX
@@ -121268,8 +121247,8 @@ xFf
 bCW
 bCq
 iGx
-bEh
-bEh
+csy
+csy
 ruq
 bCq
 bCq
@@ -121430,8 +121409,8 @@ xFf
 bCW
 bCq
 bEq
-bEh
-bEh
+csy
+csy
 maD
 bCq
 bCq
@@ -122506,7 +122485,7 @@ aSe
 dmL
 hjS
 bFw
-cuy
+csz
 kqO
 kqO
 alY
@@ -122830,7 +122809,7 @@ aSe
 icW
 lBJ
 aSe
-cuy
+csz
 kqO
 kqO
 alY
