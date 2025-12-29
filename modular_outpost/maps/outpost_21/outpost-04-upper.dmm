@@ -1307,6 +1307,11 @@
 	},
 /turf/simulated/open/muriki,
 /area/engineering/engine_room)
+"acG" = (
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/explored/muriki/river/hole)
 "acH" = (
 /obj/structure/cable/orange{
 	icon_state = "1-2"
@@ -21646,7 +21651,7 @@
 "jRC" = (
 /obj/structure/lattice,
 /turf/simulated/open/indoor/turfpack/muriki,
-/area/mine/unexplored/muriki/mountaintopnorth)
+/area/mine/explored/muriki/river/hole)
 "jRD" = (
 /obj/effect/fancy_shuttle/medbus{
 	fancy_shuttle_tag = "medi"
@@ -78840,8 +78845,8 @@ ovc
 ovc
 ovc
 ovc
-hci
-hci
+acG
+acG
 hci
 ovc
 lpq
@@ -79003,7 +79008,7 @@ ovc
 ovc
 ovc
 jRC
-hci
+acG
 ovc
 ovc
 lpq
