@@ -78054,13 +78054,6 @@
 /obj/structure/window/reinforced/tinted,
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/muriki/bathroom/scilower)
-"qxI" = (
-/obj/effect/floor_decal/milspec/stripe{
-	dir = 1
-	},
-/mob/living/simple_mob/vore/aggressive/corrupthound/swoopie,
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/security/tankstore)
 "qzg" = (
 /obj/machinery/disposal,
 /obj/structure/disposalpipe/trunk{
@@ -123512,7 +123505,7 @@ bDN
 bDN
 bDN
 bDN
-qxI
+bEY
 bEa
 bDN
 bDN
