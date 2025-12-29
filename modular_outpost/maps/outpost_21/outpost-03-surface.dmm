@@ -134,6 +134,9 @@
 	name = "Trawler Security Shutters"
 	},
 /obj/machinery/door/firedoor/glass,
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
 /turf/simulated/floor/plating,
 /area/shuttle/trawler)
 "aao" = (
@@ -208,6 +211,9 @@
 	dir = 5
 	},
 /obj/effect/floor_decal/milspec/cargo,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/trawler)
 "aau" = (
@@ -247,6 +253,9 @@
 /obj/item/storage/pouch/ifak,
 /obj/item/storage/pouch/ifak,
 /obj/item/storage/pouch/ifak,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/trawler)
 "aax" = (
@@ -288,6 +297,9 @@
 	},
 /obj/machinery/light{
 	dir = 8
+	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/trawler)
@@ -339,6 +351,10 @@
 	name = "Trawler Security Shutters"
 	},
 /obj/machinery/door/firedoor/glass,
+/obj/structure/cable/green,
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
 /turf/simulated/floor/plating,
 /area/shuttle/trawler)
 "aaD" = (
@@ -427,6 +443,9 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/milspec/cargo,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/trawler)
 "aaK" = (
@@ -466,6 +485,9 @@
 	},
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 8
+	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/trawler)
@@ -557,6 +579,9 @@
 	},
 /obj/structure/handrail{
 	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/trawler)
@@ -703,6 +728,9 @@
 	c_tag = "MNE - Aid";
 	dir = 4
 	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/trawler)
 "abb" = (
@@ -803,6 +831,9 @@
 /obj/structure/handrail{
 	dir = 4
 	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/trawler)
 "abi" = (
@@ -891,6 +922,9 @@
 /obj/structure/handrail{
 	dir = 8
 	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/trawler)
 "abo" = (
@@ -938,6 +972,9 @@
 	},
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 8
+	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/trawler)
@@ -1012,6 +1049,12 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/corner/white/bordercorner,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/cable/green{
+	icon_state = "2-4"
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/trawler)
 "aby" = (
@@ -1021,6 +1064,9 @@
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/corner/white/border,
 /obj/machinery/elevator_warning,
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/trawler)
 "abz" = (
@@ -1037,6 +1083,9 @@
 /obj/machinery/status_display{
 	layer = 4;
 	pixel_y = -32
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/trawler)
@@ -1094,6 +1143,9 @@
 /obj/structure/handrail{
 	dir = 8
 	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/trawler)
 "abF" = (
@@ -1140,6 +1192,9 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/corner/blue/bordercorner,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/trawler)
 "abJ" = (
@@ -1200,6 +1255,9 @@
 	dir = 4
 	},
 /obj/machinery/door/firedoor/glass,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/trawler)
 "abN" = (
@@ -1308,6 +1366,9 @@
 	dir = 8
 	},
 /obj/machinery/door/firedoor/glass,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/trawler)
 "abT" = (
@@ -1353,6 +1414,9 @@
 	dir = 4
 	},
 /obj/machinery/door/firedoor/glass,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/trawler)
 "abW" = (
@@ -1446,6 +1510,9 @@
 /obj/effect/floor_decal/corner/white/bordercorner{
 	dir = 1
 	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/trawler)
 "acb" = (
@@ -1528,6 +1595,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/effect/catwalk_plated/dark,
+/obj/structure/cable/green{
+	icon_state = "2-4"
+	},
 /turf/simulated/floor/plating,
 /area/shuttle/trawler)
 "aci" = (
@@ -1538,6 +1608,15 @@
 	dir = 1
 	},
 /obj/structure/handrail,
+/obj/machinery/power/thermoregulator/cryogaia{
+	pixel_y = 32
+	},
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/trawler)
 "acj" = (
@@ -1550,6 +1629,9 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/trawler)
 "ack" = (
@@ -1561,6 +1643,9 @@
 	dir = 1
 	},
 /obj/structure/handrail,
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/trawler)
 "acl" = (
@@ -1569,6 +1654,9 @@
 	},
 /obj/effect/floor_decal/corner/orange/border{
 	dir = 1
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/trawler)
@@ -1586,6 +1674,9 @@
 /obj/effect/floor_decal/corner/orange/bordercorner{
 	dir = 4
 	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/trawler)
 "acn" = (
@@ -1599,6 +1690,12 @@
 /obj/machinery/shuttle_sensor{
 	id_tag = "shuttlesens_exp_psg";
 	pixel_y = 32
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/trawler)
@@ -1617,6 +1714,12 @@
 /obj/effect/floor_decal/corner/blue/bordercorner{
 	dir = 1
 	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-8"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/trawler)
 "acp" = (
@@ -1626,6 +1729,9 @@
 	},
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 1
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/trawler)
@@ -1639,6 +1745,9 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/trawler)
 "acr" = (
@@ -1649,6 +1758,9 @@
 /obj/effect/floor_decal/corner/brown/border{
 	dir = 1
 	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/trawler)
 "acs" = (
@@ -1658,15 +1770,27 @@
 /obj/effect/floor_decal/corner/brown/bordercorner{
 	dir = 1
 	},
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/trawler)
 "act" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/trawler)
 "acu" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/trawler)
 "acv" = (
@@ -1710,9 +1834,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 6
 	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
 /obj/effect/floor_decal/borderfloorblack/corner{
 	dir = 8
 	},
@@ -1723,6 +1844,9 @@
 	docking_controller = "trawler_dock_controller"
 	},
 /obj/effect/overmap/visitable/ship/landable/trawler,
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/shuttle/trawler)
 "acz" = (
@@ -1739,11 +1863,11 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 1
 	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
 /obj/effect/floor_decal/borderfloorblack/corner,
 /obj/effect/floor_decal/corner/brown/bordercorner,
+/obj/structure/cable/green{
+	icon_state = "2-4"
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/shuttle/trawler)
 "acB" = (
@@ -1780,6 +1904,9 @@
 	dir = 8
 	},
 /obj/effect/catwalk_plated/dark,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/plating,
 /area/shuttle/trawler)
 "acD" = (
@@ -1821,6 +1948,9 @@
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
 /obj/effect/catwalk_plated/dark,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/plating,
 /area/shuttle/trawler)
 "acG" = (
@@ -1904,6 +2034,9 @@
 /obj/effect/floor_decal/corner/brown/bordercorner{
 	dir = 8
 	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/trawler)
 "acM" = (
@@ -1953,6 +2086,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/trawler)
 "acR" = (
@@ -1984,8 +2120,8 @@
 	dir = 1
 	},
 /obj/machinery/elevator_warning,
-/obj/machinery/power/thermoregulator/cryogaia{
-	pixel_y = -32
+/obj/structure/cable/green{
+	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/shuttle/trawler)
@@ -2001,11 +2137,11 @@
 /obj/effect/floor_decal/corner/brown/border{
 	dir = 6
 	},
-/obj/structure/handrail{
-	dir = 1
-	},
 /obj/machinery/light{
 	dir = 4
+	},
+/obj/machinery/power/breakerbox{
+	name = "Station Power Transfer"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/shuttle/trawler)
@@ -2071,6 +2207,9 @@
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/trawler)
 "acX" = (
@@ -2092,6 +2231,9 @@
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/trawler)
 "acY" = (
@@ -2182,6 +2324,9 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/trawler)
 "adg" = (
@@ -2246,6 +2391,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
+	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/trawler)
@@ -2362,6 +2510,9 @@
 "ads" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
+	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/trawler)
@@ -2641,6 +2792,9 @@
 	dir = 8
 	},
 /obj/machinery/power/port_gen/pacman/super,
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/trawler)
 "adL" = (
@@ -2675,6 +2829,9 @@
 "adN" = (
 /obj/effect/floor_decal/borderfloorblack/corner,
 /obj/effect/floor_decal/corner/brown/bordercorner,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/trawler)
 "adO" = (
@@ -2701,6 +2858,9 @@
 "adQ" = (
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/corner/brown/border,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/trawler)
 "adR" = (
@@ -2808,6 +2968,7 @@
 /obj/effect/floor_decal/corner/orange/border{
 	dir = 10
 	},
+/obj/structure/cable/green,
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/trawler)
 "aea" = (
@@ -2861,6 +3022,9 @@
 	},
 /obj/item/gun/energy/locked/frontier/holdout/unlocked,
 /obj/item/gun/energy/locked/frontier/holdout/unlocked,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/trawler)
 "aed" = (
@@ -2873,6 +3037,9 @@
 	name = "Trawler Security Shutters"
 	},
 /obj/machinery/door/firedoor/glass,
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
 /turf/simulated/floor/plating,
 /area/shuttle/trawler)
 "aee" = (
@@ -2904,6 +3071,9 @@
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/corner/brown/border,
 /obj/effect/floor_decal/milspec/cargo,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/trawler)
 "aeh" = (
@@ -4900,9 +5070,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 1
 	},
@@ -4921,9 +5088,6 @@
 /turf/simulated/floor/tiled,
 /area/muriki/tramstation/cargeng)
 "aho" = (
-/obj/structure/cable/green{
-	icon_state = "1-8"
-	},
 /obj/structure/disposalpipe/junction/yjunction{
 	dir = 1
 	},
@@ -8110,6 +8274,13 @@
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/freezer,
 /area/security/detectives_office)
+"ann" = (
+/obj/effect/floor_decal/industrial/warning/tile,
+/obj/effect/floor_decal/industrial/warning/color/tile/red,
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
+	},
+/area/muriki/grounds/sec)
 "ano" = (
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/freezer,
@@ -11178,7 +11349,7 @@
 "ava" = (
 /obj/effect/map_effect/interval/atmogland/bodyheat,
 /turf/simulated/floor/gorefloor2/turfpack/muriki,
-/area/muriki/processor/hall)
+/area/muriki/processor)
 "avb" = (
 /obj/structure/bed/chair/bay/shuttle{
 	dir = 8
@@ -11251,6 +11422,89 @@
 /obj/structure/disposalpipe/trunk,
 /turf/simulated/floor/tiled/milspec/sterile,
 /area/medical/virology)
+"avk" = (
+/obj/machinery/porta_turret/heavy,
+/turf/simulated/floor/outdoors/snow/turfpack/muriki,
+/area/security/tactical)
+"avl" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/obj/structure/window/reinforced,
+/obj/machinery/door/blast/regular{
+	id = "trawler_blast";
+	layer = 3.8;
+	name = "Trawler Security Shutters"
+	},
+/obj/machinery/door/firedoor/glass,
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
+/obj/structure/cable/green,
+/turf/simulated/floor/plating,
+/area/shuttle/trawler)
+"avm" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/obj/structure/window/reinforced,
+/obj/machinery/door/blast/regular{
+	id = "trawler_blast";
+	layer = 3.8;
+	name = "Trawler Security Shutters"
+	},
+/obj/machinery/door/firedoor/glass,
+/obj/structure/cable/green,
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/trawler)
+"avn" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/obj/structure/window/reinforced,
+/obj/machinery/door/blast/regular{
+	id = "trawler_blast";
+	layer = 3.8;
+	name = "Trawler Security Shutters"
+	},
+/obj/machinery/door/firedoor/glass,
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/trawler)
+"avo" = (
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/shuttle/trawler)
+"avp" = (
+/obj/effect/floor_decal/milspec/cargo,
+/obj/structure/railing,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/shuttle/trawler)
+"avq" = (
+/obj/effect/floor_decal/milspec/cargo,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/shuttle/trawler)
+"avr" = (
+/obj/effect/floor_decal/milspec/cargo,
+/obj/structure/ore_box,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/shuttle/trawler)
 "avs" = (
 /obj/structure/window/maintenance_panel{
 	dir = 8
@@ -11262,6 +11516,315 @@
 /obj/item/assembly/mousetrap/armed,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/muriki/cybstorage)
+"avt" = (
+/obj/effect/floor_decal/milspec/cargo,
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/structure/ore_box,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/shuttle/trawler)
+"avu" = (
+/obj/structure/cable/green{
+	icon_state = "1-10"
+	},
+/turf/simulated/floor/tiled,
+/area/quartermaster/mining)
+"avv" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/effect/floor_decal/borderfloorblack/corner{
+	dir = 4
+	},
+/obj/effect/floor_decal/borderfloorblack/corner{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/brown/bordercorner{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/brown/bordercorner{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/trawler)
+"avw" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/green{
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/trawler)
+"avx" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/glass,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
+/turf/simulated/floor/plating,
+/area/quartermaster/mining)
+"avy" = (
+/obj/structure/grille,
+/obj/machinery/door/firedoor/glass,
+/obj/structure/window/reinforced/full,
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
+/turf/simulated/floor/plating,
+/area/quartermaster/mining)
+"avz" = (
+/obj/structure/grille,
+/obj/machinery/door/firedoor/glass,
+/obj/structure/window/reinforced/full,
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/plating,
+/area/quartermaster/mining)
+"avA" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/door/blast/regular{
+	id = "trawler_blast";
+	layer = 3.8;
+	name = "Trawler Security Shutters"
+	},
+/obj/machinery/door/firedoor/glass,
+/obj/structure/cable/green,
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/trawler)
+"avB" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/door/blast/regular{
+	id = "trawler_blast";
+	layer = 3.8;
+	name = "Trawler Security Shutters"
+	},
+/obj/machinery/door/firedoor/glass,
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/trawler)
+"avC" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/machinery/door/blast/regular{
+	id = "trawler_blast";
+	layer = 3.8;
+	name = "Trawler Security Shutters"
+	},
+/obj/machinery/door/firedoor/glass,
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/trawler)
+"avD" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/machinery/door/blast/regular{
+	id = "trawler_blast";
+	layer = 3.8;
+	name = "Trawler Security Shutters"
+	},
+/obj/machinery/door/firedoor/glass,
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/trawler)
+"avE" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/machinery/door/blast/regular{
+	id = "trawler_blast";
+	layer = 3.8;
+	name = "Trawler Security Shutters"
+	},
+/obj/machinery/door/firedoor/glass,
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/trawler)
+"avF" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/machinery/door/blast/regular{
+	id = "trawler_blast";
+	layer = 3.8;
+	name = "Trawler Security Shutters"
+	},
+/obj/machinery/door/firedoor/glass,
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/trawler)
+"avG" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/machinery/door/blast/regular{
+	id = "trawler_blast";
+	layer = 3.8;
+	name = "Trawler Security Shutters"
+	},
+/obj/machinery/door/firedoor/glass,
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/trawler)
+"avH" = (
+/obj/machinery/conveyor{
+	dir = 4;
+	id = "QMLoad"
+	},
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled,
+/area/quartermaster/storage)
+"avI" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/tiled,
+/area/quartermaster/office)
+"avJ" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/glass,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/machinery/door/blast/gate/open{
+	dir = 4;
+	id = "cargolock";
+	name = "Cargo Lockdown"
+	},
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
+/obj/structure/cable/green,
+/turf/simulated/floor/plating,
+/area/quartermaster/storage)
+"avK" = (
+/obj/structure/grille,
+/obj/structure/window/basic/full,
+/obj/machinery/door/blast/gate/open{
+	dir = 2;
+	id = "englockdown";
+	name = "Engineering Lockdown"
+	},
+/obj/machinery/door/firedoor/glass,
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/plating,
+/area/engineering/foyer)
+"avL" = (
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/engineering/storage)
+"avM" = (
+/turf/simulated/floor/gorefloor2/turfpack/muriki,
+/area/muriki/processor)
+"avN" = (
+/obj/machinery/light,
+/obj/structure/cable/orange{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/techfloor/grid/turfpack/muriki,
+/area/muriki/processor/euth)
 "awe" = (
 /turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/unexplored/muriki/mountaineast)
@@ -11559,6 +12122,7 @@
 	dir = 4
 	},
 /obj/machinery/porta_turret/heavy,
+/obj/effect/floor_decal/industrial/outline/red,
 /turf/simulated/floor/tiled/techfloor/grid/turfpack/muriki,
 /area/muriki/processor/euth)
 "awV" = (
@@ -11573,6 +12137,7 @@
 	dir = 8
 	},
 /obj/machinery/porta_turret/heavy,
+/obj/effect/floor_decal/industrial/outline/red,
 /turf/simulated/floor/tiled/techfloor/grid/turfpack/muriki,
 /area/muriki/processor/euth)
 "awX" = (
@@ -11587,12 +12152,6 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/muriki/processor/euth)
-"awY" = (
-/obj/structure/cable/orange{
-	icon_state = "1-8"
-	},
-/turf/simulated/floor/redgrid/off/turfpack/muriki,
 /area/muriki/processor/euth)
 "awZ" = (
 /obj/structure/disposalpipe/segment{
@@ -11610,12 +12169,6 @@
 	},
 /turf/simulated/floor/redgrid/off/turfpack/muriki,
 /area/muriki/processor/euth)
-"axb" = (
-/obj/structure/cable/orange{
-	icon_state = "1-4"
-	},
-/turf/simulated/floor/redgrid/off/turfpack/muriki,
-/area/muriki/processor/euth)
 "axc" = (
 /obj/machinery/power/rtg/advanced,
 /obj/item/stock_parts/micro_laser/hyper,
@@ -11630,9 +12183,6 @@
 /turf/simulated/floor/plating,
 /area/muriki/processor/euth)
 "axd" = (
-/obj/structure/cable/orange{
-	icon_state = "1-2"
-	},
 /obj/machinery/door/airlock/vault{
 	name = "Euthanizer Core Access"
 	},
@@ -11641,7 +12191,7 @@
 /area/muriki/processor/euth)
 "axe" = (
 /obj/structure/cable/orange{
-	icon_state = "2-5"
+	icon_state = "5-8"
 	},
 /turf/simulated/floor/redgrid/off/turfpack/muriki,
 /area/muriki/processor/euth)
@@ -11654,7 +12204,7 @@
 /area/muriki/processor/euth)
 "axg" = (
 /obj/structure/cable/orange{
-	icon_state = "2-9"
+	icon_state = "4-9"
 	},
 /turf/simulated/floor/redgrid/off/turfpack/muriki,
 /area/muriki/processor/euth)
@@ -12183,6 +12733,9 @@
 /obj/effect/floor_decal/rust,
 /obj/effect/floor_decal/corner/brown{
 	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/storage)
@@ -13611,6 +14164,12 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-8"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/quartermaster/mining)
 "bbJ" = (
@@ -14350,6 +14909,8 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/reception)
 "bnE" = (
+/obj/effect/floor_decal/industrial/warning/tile,
+/obj/effect/floor_decal/industrial/warning/color/tile/red,
 /obj/effect/floor_decal/steeldecal/steel_decals10{
 	dir = 4
 	},
@@ -14975,6 +15536,9 @@
 /area/security/warden)
 "bxh" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/engineering/foyer)
 "bxi" = (
@@ -15490,6 +16054,10 @@
 	dir = 1
 	},
 /obj/structure/window/reinforced,
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
+/obj/structure/cable/green,
 /turf/simulated/floor/plating,
 /area/quartermaster/mining/firstaid)
 "bGx" = (
@@ -16411,6 +16979,9 @@
 	dir = 4;
 	id = "cargolock";
 	name = "Cargo Lockdown"
+	},
+/obj/structure/cable/green{
+	icon_state = "0-2"
 	},
 /turf/simulated/floor/plating,
 /area/quartermaster/storage)
@@ -18391,9 +18962,13 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/structure/cable/green{
-	icon_state = "4-8"
+	icon_state = "1-2"
 	},
-/turf/simulated/floor/tiled/milspec,
+/obj/structure/cable/green{
+	icon_state = "1-8"
+	},
+/obj/effect/catwalk_plated,
+/turf/simulated/floor,
 /area/engineering/foyer)
 "cDC" = (
 /obj/machinery/camera/network/outside{
@@ -20736,6 +21311,9 @@
 /obj/structure/cable/green{
 	icon_state = "0-2"
 	},
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
 /turf/simulated/floor/plating,
 /area/engineering/eva)
 "dqS" = (
@@ -21042,6 +21620,9 @@
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/engineering/storage)
@@ -21448,6 +22029,9 @@
 	pixel_x = 20;
 	pixel_y = -28
 	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/engineering/storage)
 "dCn" = (
@@ -21785,6 +22369,9 @@
 	name = "Engineering Hallway"
 	},
 /obj/machinery/door/firedoor/glass,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/engineering/storage)
 "dHT" = (
@@ -23870,9 +24457,6 @@
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/muriki/research/showers)
 "esv" = (
-/obj/structure/cable/orange{
-	icon_state = "1-2"
-	},
 /obj/machinery/door/airlock/vault{
 	name = "Euthanizer Core Access"
 	},
@@ -24442,6 +25026,9 @@
 	id_tag = "trawler_bay_door";
 	locked = 1;
 	req_one_access = list(13,48,52)
+	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/quartermaster/mining)
@@ -25907,6 +26494,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/mining/prep)
 "fbw" = (
@@ -26607,6 +27197,9 @@
 /obj/machinery/firealarm{
 	dir = 1;
 	pixel_y = -26
+	},
+/obj/structure/cable/orange{
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor/grid/turfpack/muriki,
 /area/muriki/processor/euth)
@@ -28916,9 +29509,6 @@
 /turf/simulated/floor/tiled/old_tile/white,
 /area/medical/laundry)
 "gcg" = (
-/obj/structure/cable/orange{
-	icon_state = "4-8"
-	},
 /obj/machinery/light{
 	dir = 1
 	},
@@ -29006,6 +29596,7 @@
 	id = "cargolock";
 	name = "Cargo Lockdown"
 	},
+/obj/structure/cable/green,
 /turf/simulated/floor/plating,
 /area/quartermaster/storage)
 "gee" = (
@@ -29047,6 +29638,9 @@
 	},
 /obj/machinery/camera/network/mining{
 	c_tag = "MNE - Equipment"
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/mining/prep)
@@ -29694,6 +30288,9 @@
 /obj/item/stamp/cargo{
 	pixel_x = -5
 	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled{
 	icon_state = "monotile"
 	},
@@ -29996,6 +30593,9 @@
 	dir = 2;
 	id = "cargolock";
 	name = "Cargo Lockdown"
+	},
+/obj/structure/cable/green{
+	icon_state = "0-2"
 	},
 /turf/simulated/floor/plating,
 /area/quartermaster/office)
@@ -32287,6 +32887,9 @@
 /obj/structure/cable/green,
 /obj/item/shovel,
 /obj/item/shovel,
+/obj/structure/cable/green{
+	icon_state = "1-8"
+	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/office)
 "hih" = (
@@ -34293,6 +34896,9 @@
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 8
 	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/engineering/storage)
 "hMg" = (
@@ -36031,6 +36637,13 @@
 	dir = 4;
 	id = "cargolock";
 	name = "Cargo Lockdown"
+	},
+/obj/structure/cable/green,
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
+/obj/structure/cable/green{
+	icon_state = "0-4"
 	},
 /turf/simulated/floor/plating,
 /area/quartermaster/storage)
@@ -37963,6 +38576,9 @@
 	dir = 1
 	},
 /obj/structure/window/reinforced,
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
 /turf/simulated/floor/plating,
 /area/quartermaster/storage)
 "iNM" = (
@@ -39816,6 +40432,9 @@
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/engineering/storage)
@@ -42184,6 +42803,9 @@
 	dir = 4
 	},
 /obj/structure/window/reinforced,
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
 /turf/simulated/floor/plating,
 /area/quartermaster/mining/firstaid)
 "kaM" = (
@@ -44626,6 +45248,9 @@
 /area/muriki/tramstation/civ)
 "kMJ" = (
 /obj/effect/floor_decal/corner/brown,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/storage)
 "kNf" = (
@@ -44768,6 +45393,9 @@
 	dir = 9
 	},
 /obj/structure/closet/emcloset,
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/office)
 "kOZ" = (
@@ -45542,6 +46170,9 @@
 	dir = 4
 	},
 /obj/structure/window/reinforced,
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
 /turf/simulated/floor/plating,
 /area/quartermaster/mining/prep)
 "lcw" = (
@@ -46302,6 +46933,9 @@
 	dir = 5
 	},
 /obj/machinery/medical_kiosk,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/mining)
 "lpG" = (
@@ -47123,6 +47757,9 @@
 /obj/effect/floor_decal/corner/brown{
 	dir = 5
 	},
+/obj/structure/cable/green{
+	icon_state = "6-8"
+	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/mining/prep)
 "lAA" = (
@@ -47309,6 +47946,9 @@
 	},
 /obj/machinery/recharger{
 	pixel_x = 6
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/engineering/foyer)
@@ -48275,6 +48915,13 @@
 	dir = 4;
 	id = "cargolock";
 	name = "Cargo Lockdown"
+	},
+/obj/structure/cable/green,
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
+/obj/structure/cable/green{
+	icon_state = "0-2"
 	},
 /turf/simulated/floor/plating,
 /area/quartermaster/storage)
@@ -49435,6 +50082,12 @@
 	name = "Engineering Lockdown"
 	},
 /obj/machinery/door/firedoor/glass,
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
 /turf/simulated/floor/plating,
 /area/engineering/foyer)
 "miD" = (
@@ -50578,6 +51231,12 @@
 	},
 /obj/structure/window/reinforced{
 	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "0-4"
 	},
 /turf/simulated/floor/plating,
 /area/engineering/eva)
@@ -52537,6 +53196,9 @@
 /obj/item/storage/excavation,
 /obj/effect/floor_decal/corner/brown{
 	dir = 6
+	},
+/obj/structure/cable/green{
+	icon_state = "4-9"
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/mining/prep)
@@ -55164,9 +55826,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
 /obj/machinery/door/blast/gate/open{
 	dir = 4;
 	id = "englockdown";
@@ -55329,6 +55988,9 @@
 /area/mine/unexplored/muriki/mountainnorth)
 "oeR" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/engineering/foyer)
 "oeY" = (
@@ -61204,6 +61866,12 @@
 	c_tag = "CRG - Main Warehouse East";
 	dir = 8
 	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
 /turf/simulated/floor/tiled{
 	icon_state = "monotile"
 	},
@@ -61503,6 +62171,7 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
+/obj/structure/cable/green,
 /turf/simulated/floor/plating,
 /area/quartermaster/mining)
 "qhW" = (
@@ -63631,12 +64300,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/main)
-"qPs" = (
-/obj/structure/cable/orange{
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/redgrid/off/turfpack/muriki,
-/area/muriki/processor/euth)
 "qPy" = (
 /obj/structure/cable/orange{
 	icon_state = "2-4"
@@ -64502,6 +65165,9 @@
 	dir = 8;
 	id = "cargolock";
 	name = "Cargo Lockdown"
+	},
+/obj/structure/cable/green{
+	icon_state = "0-4"
 	},
 /turf/simulated/floor/plating,
 /area/quartermaster/office)
@@ -65643,6 +66309,9 @@
 /obj/structure/cable/green{
 	icon_state = "1-8"
 	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled{
 	icon_state = "monotile"
 	},
@@ -66697,6 +67366,10 @@
 /obj/structure/grille,
 /obj/structure/window/basic/full,
 /obj/machinery/door/firedoor/glass,
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
+/obj/structure/cable/green,
 /turf/simulated/floor/plating,
 /area/engineering/foyer)
 "rRm" = (
@@ -67362,6 +68035,9 @@
 /obj/item/storage/firstaid/fire{
 	pixel_x = -2
 	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/white,
 /area/quartermaster/mining/firstaid)
 "sbu" = (
@@ -67680,7 +68356,9 @@
 /area/engineering/engine_room)
 "sff" = (
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/smartfridge/chemistry,
+/obj/machinery/smartfridge/chemistry{
+	req_one_access = list(33,66)
+	},
 /turf/simulated/floor/plating,
 /area/medical/chemistry)
 "sfu" = (
@@ -68065,6 +68743,11 @@
 "smu" = (
 /obj/machinery/vending/cargo_resale/medi,
 /obj/machinery/door/firedoor/glass,
+/obj/machinery/door/window/brigdoor/westleft{
+	req_one_access = list(5);
+	req_access = null;
+	name = "Vending Access"
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/reception)
 "smw" = (
@@ -70204,6 +70887,9 @@
 	pixel_x = -23;
 	dir = 4
 	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/eva)
 "sVR" = (
@@ -70318,6 +71004,10 @@
 	dir = 4;
 	id = "cargolock";
 	name = "Cargo Lockdown"
+	},
+/obj/structure/cable/green,
+/obj/structure/cable/green{
+	icon_state = "0-2"
 	},
 /turf/simulated/floor/plating,
 /area/quartermaster/storage)
@@ -71453,6 +72143,12 @@
 	dir = 1
 	},
 /obj/structure/window/reinforced,
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
 /turf/simulated/floor/plating,
 /area/quartermaster/mining/firstaid)
 "tqv" = (
@@ -72484,6 +73180,9 @@
 /obj/structure/railing,
 /obj/structure/sign/warning/acid{
 	pixel_y = 32
+	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/storage)
@@ -73894,6 +74593,12 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
 /turf/simulated/floor/plating,
 /area/quartermaster/mining/prep)
 "ucE" = (
@@ -74565,6 +75270,7 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
+/obj/structure/cable/green,
 /turf/simulated/floor/plating,
 /area/quartermaster/mining/prep)
 "ulD" = (
@@ -75400,6 +76106,9 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
 /turf/simulated/floor/plating,
 /area/engineering/eva)
 "uzk" = (
@@ -75890,6 +76599,11 @@
 	name = "Cargo Lockdown"
 	},
 /obj/machinery/vending/cargo_resale,
+/obj/machinery/door/window/northright{
+	dir = 2;
+	name = "Mailing Room";
+	req_access = list(50)
+	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/quartermaster/office)
 "uHr" = (
@@ -77132,6 +77846,9 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals_central7{
 	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "5-8"
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/mining)
@@ -78477,6 +79194,10 @@
 /obj/structure/window/reinforced,
 /obj/structure/cable/green{
 	icon_state = "1-2"
+	},
+/obj/structure/cable/green,
+/obj/structure/cable/green{
+	icon_state = "0-4"
 	},
 /turf/simulated/floor/plating,
 /area/quartermaster/mining/prep)
@@ -79833,9 +80554,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
-	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 1;
@@ -83701,6 +84419,9 @@
 	name = "Engineering Lockdown"
 	},
 /obj/machinery/door/firedoor/glass,
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
 /turf/simulated/floor/plating,
 /area/engineering/foyer)
 "wXv" = (
@@ -83833,6 +84554,9 @@
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
 	dir = 8
+	},
+/obj/structure/cable/green{
+	icon_state = "0-8"
 	},
 /turf/simulated/floor/plating,
 /area/quartermaster/storage)
@@ -84393,6 +85117,9 @@
 	dir = 10
 	},
 /obj/item/reagent_containers/spray/cleaner,
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/engineering/foyer)
 "xjm" = (
@@ -84940,6 +85667,9 @@
 "xsq" = (
 /obj/structure/cable/green{
 	icon_state = "2-4"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/office)
@@ -86331,6 +87061,9 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
 /turf/simulated/floor/plating,
 /area/quartermaster/storage)
 "xRg" = (
@@ -87550,6 +88283,12 @@
 	dir = 1
 	},
 /obj/structure/window/reinforced,
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
 /turf/simulated/floor/plating,
 /area/quartermaster/mining/prep)
 "ykT" = (
@@ -94017,9 +94756,9 @@ awM
 awM
 awM
 awM
-auZ
-auZ
-auZ
+auU
+auU
+auU
 awM
 awM
 awM
@@ -94180,10 +94919,10 @@ awM
 awM
 awM
 awM
-auZ
-auZ
 awM
-awX
+awM
+awM
+awM
 awP
 awU
 awP
@@ -94343,9 +95082,9 @@ aMa
 awM
 awM
 awM
+awX
 awM
-awM
-qPs
+suD
 suD
 suD
 awQ
@@ -94669,7 +95408,7 @@ awM
 kSV
 axe
 esv
-awY
+suD
 lpG
 awM
 awM
@@ -94993,13 +95732,13 @@ awM
 kSV
 axg
 axd
-axb
+suD
 lpG
 awM
 awM
 awO
-auW
-aAQ
+avM
+miq
 nif
 nyl
 nyl
@@ -95153,15 +95892,15 @@ uQn
 awM
 awN
 vLQ
-awR
+avN
 awM
 gcg
 lpG
 lpG
 awR
 awM
-auW
-auW
+avM
+avM
 suD
 nyl
 nyl
@@ -95315,14 +96054,14 @@ aMa
 awM
 awM
 awM
+axc
 awM
-awM
-qPs
+suD
 suD
 suD
 awQ
 awM
-auU
+auZ
 ava
 qew
 aAQ
@@ -95333,7 +96072,7 @@ lpG
 hfw
 lpG
 suD
-nyl
+eJe
 eJe
 eJe
 eJe
@@ -95476,16 +96215,16 @@ awM
 awM
 awM
 awM
-eJe
-auZ
 awM
-axc
+awM
+awM
+awM
 awT
 awW
 awT
 awM
-auW
-auU
+avM
+auZ
 kSV
 lGf
 suD
@@ -95495,9 +96234,9 @@ nyl
 aAQ
 nif
 suD
-nyl
-nyl
-nyl
+eJe
+eJe
+eJe
 eJe
 eJe
 eJe
@@ -95637,8 +96376,8 @@ awM
 awM
 awM
 awM
-eJe
-eJe
+nyl
+nyl
 nyl
 awM
 awM
@@ -95646,8 +96385,8 @@ awM
 awM
 awM
 awM
-auW
-aAQ
+avM
+miq
 ixt
 nyl
 nyl
@@ -95659,7 +96398,7 @@ lpG
 suD
 gPg
 xPi
-aAQ
+miq
 eJe
 eJe
 eJe
@@ -95727,9 +96466,9 @@ ahf
 lle
 jaC
 qId
-yiH
+avy
 lpE
-hpI
+avu
 wCM
 tVm
 naj
@@ -95810,18 +96549,18 @@ auW
 auY
 auW
 ixt
-dwQ
-eJe
-eJe
-eJe
-eJe
-eJe
+ixt
+nyl
+nyl
+nyl
+nyl
+nyl
 nyl
 nyl
 dsu
 aAQ
 swA
-nyl
+eJe
 eJe
 eJe
 eJe
@@ -95889,7 +96628,7 @@ lTy
 qVJ
 aYd
 ryw
-yiH
+avz
 aUZ
 hpI
 wCM
@@ -95972,18 +96711,18 @@ aAQ
 xsj
 aAQ
 nyl
-eJe
+nyl
 ykH
 ykH
 ykH
 ykH
 ykH
-eJe
+nyl
 nyl
 ixt
 aAQ
 gLp
-aAQ
+miq
 eJe
 eJe
 jms
@@ -96128,24 +96867,24 @@ ixt
 ixt
 auW
 auU
-auZ
-auZ
+auU
+auU
 auU
 auW
 nyl
 nyl
-eJe
+nyl
 ykH
 ykH
 ykH
 ykH
 ykH
-eJe
+nyl
 nyl
 ixt
 aAQ
 ubX
-aAQ
+miq
 eJe
 jms
 jms
@@ -96290,24 +97029,24 @@ nyl
 nyl
 auW
 auU
-auZ
-auZ
+auU
+auU
 auU
 auY
 nyl
 nyl
-eJe
+nyl
 ykH
 ykH
-eJe
-eJe
-eJe
-eJe
+nyl
+nyl
+nyl
+nyl
 ixt
 uHC
 aAQ
 oVd
-aAQ
+miq
 jms
 jms
 jms
@@ -96452,16 +97191,16 @@ nyl
 nyl
 auY
 auU
-auZ
-auZ
+auU
+auU
 auU
 auW
 ixt
 nyl
-eJe
-eJe
-eJe
-eJe
+nyl
+nyl
+nyl
+nyl
 nyl
 ixt
 nyl
@@ -96538,7 +97277,7 @@ aqq
 aqq
 aqq
 oLo
-qhQ
+avx
 eDi
 bbA
 qhQ
@@ -96620,8 +97359,8 @@ auW
 kES
 auW
 nyl
-eJe
-eJe
+nyl
+nyl
 ixt
 ixt
 ixt
@@ -97990,22 +98729,22 @@ asV
 asV
 asV
 vjd
-aan
+avC
 aat
 aaJ
 aaJ
 abn
 abE
 abS
-abY
+avv
 acF
 acW
 adf
 ads
-bhD
+avo
 adN
 aec
-aed
+avl
 lsV
 apZ
 apZ
@@ -98649,10 +99388,10 @@ acn
 acL
 acX
 adj
-bhD
-bhD
+avo
+avo
 adQ
-aed
+avm
 aeo
 lsV
 apZ
@@ -98800,7 +99539,7 @@ asV
 asV
 asV
 vjd
-aan
+avD
 aaw
 aaM
 aba
@@ -98814,7 +99553,7 @@ adk
 adw
 kJx
 adR
-aed
+avn
 aeo
 lsV
 apZ
@@ -98962,7 +99701,7 @@ asV
 asV
 asV
 vjd
-aan
+avE
 aax
 bhD
 abc
@@ -99124,7 +99863,7 @@ asV
 asV
 asV
 vjd
-aan
+avF
 aay
 aaN
 abe
@@ -99457,13 +100196,13 @@ aal
 abX
 acs
 acQ
-ada
-adm
-ady
-adF
-bhD
+avt
+avr
+avq
+avp
+avo
 aeg
-aed
+avm
 lsV
 apZ
 apZ
@@ -99625,7 +100364,7 @@ ady
 adF
 bhD
 aeh
-aed
+avn
 lsV
 apZ
 apZ
@@ -99934,14 +100673,14 @@ asV
 asV
 asV
 vjd
-aan
+avG
 aaz
 aaR
 abh
 abx
 abM
 aca
-act
+avw
 acR
 pAZ
 pAZ
@@ -100096,7 +100835,7 @@ asV
 asV
 asV
 vjd
-aan
+avF
 aaA
 aaS
 abi
@@ -100421,9 +101160,9 @@ asV
 asV
 vjd
 aal
-aaC
-aaC
-aaC
+avB
+avA
+avA
 aaC
 aal
 aal
@@ -107506,7 +108245,7 @@ alS
 xky
 hVq
 xDs
-wXr
+avK
 ahQ
 ahZ
 iHl
@@ -107668,7 +108407,7 @@ khC
 sfF
 heJ
 xxw
-wXr
+avK
 ahQ
 aia
 tQY
@@ -107830,7 +108569,7 @@ mbK
 nXl
 heJ
 goF
-wXr
+avK
 ahQ
 aib
 iHl
@@ -107992,7 +108731,7 @@ yfG
 esj
 wDY
 cOu
-wXr
+avK
 ahQ
 ahX
 iHl
@@ -108154,7 +108893,7 @@ rfN
 lMA
 lSk
 wHz
-wXr
+avK
 ahQ
 ahX
 wKn
@@ -108308,7 +109047,7 @@ oNO
 vYP
 oNO
 jsN
-oNO
+avL
 hLV
 dCm
 dHO
@@ -108316,7 +109055,7 @@ oeR
 bxh
 cDq
 xjg
-wXr
+avK
 ahR
 aic
 wQz
@@ -108478,7 +109217,7 @@ agX
 agW
 vRd
 lCr
-wXr
+avK
 ahQ
 aid
 kSS
@@ -110770,7 +111509,7 @@ tXP
 rPS
 gvn
 gqA
-gCL
+avI
 kwh
 qts
 rmk
@@ -113038,13 +113777,13 @@ aqq
 aqq
 uLx
 bUm
-sXk
+avJ
 lTb
 tGJ
 kMJ
 qcF
 aFy
-rvx
+avH
 ikI
 sXk
 sXk
@@ -121494,12 +122233,12 @@ vEe
 nYj
 aqi
 xgD
-xgD
-xgD
-xgD
-xgD
-xgD
-xgD
+oBE
+ann
+ann
+ann
+ann
+oBE
 aqi
 aqi
 aqi
@@ -125704,7 +126443,7 @@ sqq
 jqT
 eLh
 aqa
-swd
+avk
 iId
 aqa
 swd
@@ -126844,7 +127583,7 @@ eCt
 aqa
 edo
 aqa
-swd
+avk
 aqa
 aqa
 ozB
@@ -127492,7 +128231,7 @@ eCt
 aqa
 edo
 aqa
-swd
+avk
 aqa
 aqa
 ozB
@@ -128623,7 +129362,7 @@ emP
 oxr
 afs
 gli
-swd
+avk
 iId
 aqa
 jzX
