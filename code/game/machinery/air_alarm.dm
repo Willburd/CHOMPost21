@@ -167,7 +167,7 @@
 	TLV[GAS_CH4] = 		list(-1.0, -1.0, 0, 0.5) // Partial pressure, kpa
 	TLV["other"] =			list(-1.0, -1.0, 0.5, 1.0) // Partial pressure, kpa
 	TLV["pressure"] =		list(ONE_ATMOSPHERE * 0.80, ONE_ATMOSPHERE * 0.90, ONE_ATMOSPHERE * 1.10, ONE_ATMOSPHERE * 1.20) /* kpa */
-	TLV["temperature"] =	list(T0C - 26, T0C, T0C + 40, T0C + 66) // K
+	TLV["temperature"] =	list(T0C - 30, T0C - 15, T0C + 60, T0C + 80) // K // Outpost 21 edit - Much wider temp spread due to planet atmos
 
 	update_icon()
 
