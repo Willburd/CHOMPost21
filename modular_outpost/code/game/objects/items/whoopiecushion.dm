@@ -46,6 +46,9 @@
 		burst()
 
 /obj/item/latexballon/whoopee/attack_self(mob/user as mob)
+	. = ..(user)
+	if(.)
+		return TRUE
 	src.add_fingerprint(user)
 	if(icon_state == "whoopee_bursted")
 		return

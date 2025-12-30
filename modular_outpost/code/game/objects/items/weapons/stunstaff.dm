@@ -62,6 +62,9 @@
 			update_held_icon()
 
 /obj/item/melee/baton/stunstaff/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	if(bcell && bcell.charge > hitcost)
 		status = !status
 		to_chat(user, span_notice("[src] is now [status ? "on" : "off"]."))
