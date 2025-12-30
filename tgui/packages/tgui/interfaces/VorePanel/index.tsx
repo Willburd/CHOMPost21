@@ -17,7 +17,7 @@ import { VoreInsidePanel } from './VorePanelMainTabs/VoreInsidePanel';
 // import { VoreSoulcatcher } from './VorePanelMainTabs/VoreSoulcatcher'; Outpost 21 edit - Disable soulgems
 import { VoreUserGeneral } from './VorePanelMainTabs/VoreUserGeneral';
 import { VoreUserPreferences } from './VorePanelMainTabs/VoreUserPreferences';
-import { VoreContentsPanel } from './VoreSelectedBellyTabs/VoreContentsPanel';
+import { VoreContentsPreyPanel } from './VoreSelectedBellyTabs/VoreContentsPreyPanel';
 
 /**
  * There are three main sections to this UI.
@@ -42,6 +42,7 @@ export const VorePanel = () => {
     prefs,
     show_pictures,
     icon_overflow,
+    prey_abilities,
     host_mobtype,
     unsaved_changes,
     vore_words,
@@ -76,17 +77,13 @@ export const VorePanel = () => {
       maxBellyName={max_belly_name}
     />
   );
-  tabs[1] = inside.contents?.length ? (
-    <VoreContentsPanel
-      contents={inside.contents}
-      belly={inside.ref}
+  tabs[1] = (
+    <VoreContentsPreyPanel
+      inside={inside}
+      prey_abilities={prey_abilities}
       show_pictures={show_pictures}
       icon_overflow={icon_overflow}
     />
-  ) : (
-    <Section fill>
-      <Box>There is nothing else around you.</Box>
-    </Section>
   );
   // Outpost 21 edit begin - Disable soulgems
   tabs[2] = our_bellies && abilities && (
