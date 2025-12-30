@@ -38,7 +38,7 @@
 	set name = "Toggle Crowbar Jaws"
 	// Because these are actually not puppyjaws and are a reskined cyborg crowbar...
 	// And I am tired of chewing up the floors stupidly as I try to defend myself as a borg
-	var/obj/item/tool/crowbar/cyborg/C = locate() in module.modules
+	var/obj/item/tool/crowbar/cyborg/jaws/C = locate() in module.modules
 	if(C)
 		if(initial(C.pry))
 			C.pry = !C.pry
