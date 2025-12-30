@@ -1,7 +1,15 @@
 import { useEffect, useState } from 'react';
 import { useBackend } from 'tgui/backend';
 import { Window } from 'tgui/layouts';
-import { Button, Icon, NoticeBox, Stack, Tabs } from 'tgui-core/components';
+import {
+  Box,
+  Button,
+  Icon,
+  NoticeBox,
+  Section,
+  Stack,
+  Tabs,
+} from 'tgui-core/components';
 
 import type { Data } from './types';
 import { VoreBellySelectionAndCustomization } from './VorePanelMainTabs/VoreBellySelectionAndCustomization';
