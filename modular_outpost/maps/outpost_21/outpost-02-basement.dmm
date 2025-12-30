@@ -1180,7 +1180,7 @@
 /turf/simulated/floor/plating,
 /area/engineering/atmos)
 "acy" = (
-/turf/simulated/mineral/alt/turfpack/muriki,
+/turf/simulated/floor/plating,
 /area/rnd/research/longtermstorage)
 "acz" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -63621,6 +63621,30 @@
 /obj/effect/floor_decal/industrial/stand_clear/blue,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/cave)
+"csA" = (
+/obj/item/paper{
+	info = "Get to my shit now, B-shift! Thieving bastards!"
+	},
+/turf/simulated/floor/plating,
+/area/rnd/research/longtermstorage)
+"csB" = (
+/obj/random/material/precious,
+/obj/random/material/precious,
+/obj/random/material/precious,
+/obj/random/material/precious,
+/obj/random/material/precious,
+/obj/random/material/precious,
+/obj/random/material/precious,
+/obj/random/material/precious,
+/obj/random/material/precious,
+/obj/random/material/precious,
+/obj/structure/window/maintenance_panel,
+/turf/simulated/floor/plating,
+/area/rnd/research/longtermstorage)
+"csC" = (
+/obj/machinery/portable_atmospherics/canister/nitrous_oxide/broken,
+/turf/simulated/floor/plating,
+/area/rnd/research/longtermstorage)
 "csG" = (
 /obj/machinery/reagent_refinery/hub{
 	dir = 1
@@ -65262,10 +65286,40 @@
 /area/maintenance/cave)
 "cxL" = (
 /obj/structure/closet/secure_closet{
-	req_one_access = list(1);
-	name = "Valinari's locker"
+	req_one_access = list(1)
 	},
-/obj/fiftyspawner/mhydrogen,
+/obj/item/material/armor_plating/insert{
+	material = "mhydrogen";
+	default_material = "mhydrogen"
+	},
+/obj/item/material/armor_plating/insert{
+	material = "mhydrogen";
+	default_material = "mhydrogen"
+	},
+/obj/item/material/armor_plating/insert{
+	material = "mhydrogen";
+	default_material = "mhydrogen"
+	},
+/obj/item/material/armor_plating/insert{
+	material = "mhydrogen";
+	default_material = "mhydrogen"
+	},
+/obj/item/material/armor_plating/insert{
+	material = "mhydrogen";
+	default_material = "mhydrogen"
+	},
+/obj/item/material/armor_plating/insert{
+	material = "mhydrogen";
+	default_material = "mhydrogen"
+	},
+/obj/item/material/armor_plating/insert{
+	material = "mhydrogen";
+	default_material = "mhydrogen"
+	},
+/obj/item/material/armor_plating/insert{
+	material = "mhydrogen";
+	default_material = "mhydrogen"
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/secelevbasement)
 "cxM" = (
@@ -133269,9 +133323,9 @@ bJG
 bJG
 cav
 bJG
-bVg
-bVg
-acy
+adw
+csC
+csB
 acy
 adw
 akO
@@ -133431,10 +133485,10 @@ pmN
 bJG
 bUL
 bJG
-bVg
-bVg
+adw
 acy
-acy
+csB
+csA
 ahB
 afS
 aeL
