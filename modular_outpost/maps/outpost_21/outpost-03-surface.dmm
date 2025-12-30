@@ -11825,6 +11825,16 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid/turfpack/muriki,
 /area/muriki/processor/euth)
+"avO" = (
+/obj/structure/closet/crate,
+/obj/effect/floor_decal/corner/red{
+	dir = 6
+	},
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/security/secmail)
 "awe" = (
 /turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/unexplored/muriki/mountaineast)
@@ -43350,6 +43360,9 @@
 	},
 /obj/effect/floor_decal/corner/red{
 	dir = 6
+	},
+/obj/machinery/light{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/security/secmail)
@@ -131121,7 +131134,7 @@ gND
 gND
 bIp
 ayh
-ayh
+avO
 nWP
 aWa
 aWa
