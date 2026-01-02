@@ -121,5 +121,5 @@
 /datum/gear/mask/gas/half/sec
 	display_name = "security black gas half-mask"
 	path = /obj/item/clothing/mask/gas/sechailer
-	allowed_roles = list(JOB_SECURITY_OFFICER,JOB_HEAD_OF_SECURITY,JOB_WARDEN, JOB_DETECTIVE)
+	allowed_roles = list(JOB_SECURITY_OFFICER,JOB_HEAD_OF_SECURITY,JOB_WARDEN) // , JOB_DETECTIVE) Outpost 21 edit - Detective is officer now
 	cost = 3 ///Because it functions as a gas mask, and therefore has a mechanical advantage.
