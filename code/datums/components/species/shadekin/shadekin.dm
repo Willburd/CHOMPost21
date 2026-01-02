@@ -93,7 +93,7 @@
 								// /datum/power/shadekin/dark_tunneling) // Outpost 21 edit - No using this
 	extended_kin = TRUE
 	drop_items_on_phase = TRUE
-	camera_counts_as_watcher = TRUE
+	camera_counts_as_watcher = FALSE // Outpost 21 edit - We don't want cameras to count here
 
 /datum/component/shadekin/full/rakshasa
 	flicker_time = 0 //Rakshasa don't flicker lights when they phase in.

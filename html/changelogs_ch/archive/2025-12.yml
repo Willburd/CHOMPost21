@@ -352,3 +352,64 @@
   - bugfix: Fixed reactive armour being able to be printed in any departmental lathe
   Will:
   - bugfix: Drone ventcrawling no longer using slime's vent crawling restriction list
+2025-12-29:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: whitelist help command
+  - bugfix: xenoarch runtime properly
+  Diana:
+  - bugfix: Users with no DNA can no longer upload their non-existent DNA to a DNA
+      locking chip
+  - bugfix: Artifact casings no longer drop.
+  - code_imp: Made it a bit easier to read xenoarch spawn code
+  - bugfix: Makes illegal excavations no longer crash the server
+  - qol: Telecube spawns now spawn with a second one, allowing for immediate mating.
+  - rscadd: Alien hive node also adds the alien language to the newfound owner.
+  - rscadd: Added xenoborgs from Bubbers
+  - image: Xenoborgs added from Bubbers
+  - qol: You can manually resleeve with the autosleever if you're given the prompt
+      and accidentally close it.
+  - bugfix: Radiation component will no longer passively heal + give nutrition when
+      not irradiated
+  - bugfix: Hybrid cutters use the correct sprite, now.
+  - bugfix: Robotic multitool will no longer go invisible when used to link references
+  - bugfix: Holodeck properly clears up its landmarks
+  Guti:
+  - qol: Non-Contagious viruses can be picked up with a sample of blood
+  - qol: Added extra info description to the extrapolator
+  Kashargul:
+  - code_imp: rust-g 5.0.1
+  whooshboom:
+  - qol: removes compression artifacts from the main splash screen.
+2025-12-31:
+  CHOMPStation2StaffMirrorBot:
+  - qol: (mapping) broken floors can now be done via a landmark rather than a subtype
+      of that specific floor
+  - bugfix: ghosts and shadekin messing with production directions
+  - bugfix: non-greyscale monitor icons now show the correct color, regardless of
+      your eye color
+  - bugfix: hephaestus alt monitor icons should work now
+  - rscadd: Added two sets of black and recolourable long fingerless glove variants;
+      mid-forearm and elbow-length
+  - image: Fixed some stray pixels on two of the standard fingerless glove variants
+  Diana:
+  - qol: Having a spleen will no longer cause you to suffer infinite organ damage
+      while damaged by toxins. Instead, it'll convert that toxin damage into organ
+      damage.
+  - bugfix: Having your spleen rupture will now cause real internal bleeding instead
+      of fake internal bleeding
+  - refactor: All of attack_self now uses signals!
+  - bugfix: Fixes jackets not showing proper unbutton sprite
+  - bugfix: Medical implant will no longer become infected
+  Nova:
+  - qol: Add spice crate option to be requested from cargo.
+  - rscadd: '"Colour changing eyes" trait'
+  Wide Eyes:
+  - rscadd: Slimline YR3 chassis
+  - rscadd: several new monitor icons to both yr3 variants, including cbeast faces
+      and a hypno visor, and both variants now function based on eye color
+  - rscadd: several new markings- hazard signs and yr3 plating/customization variants
+  Wide Eyes, Kashargul:
+  - rscadd: '"Absorbed prey can devour" addon, which gives absorbed prey a verb in
+      the abilities tab to devour adjacent creatures into that belly!
+
+      fix:complete absorb and muffling belly addons now affect simplemobs'
