@@ -24,7 +24,7 @@
 	lasers.Cut()
 	. = ..()
 
-/obj/effect/mine/claymore/explode(var/mob/living/M)
+/obj/effect/mine/claymore/explode(mob/living/M)
 	if(triggered) // Prevents circular mine explosions from two mines detonating eachother
 		return
 	var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread()
@@ -43,8 +43,10 @@
 		qdel(s)
 		qdel(src)
 
-/obj/effect/mine/claymore/Crossed(atom/movable/AM as mob|obj)
+/obj/effect/mine/claymore/Crossed(atom/movable/AM)
 	if(istype(AM, /mob/observer) || AM.is_incorporeal())
+		return
+	if(istype(AM,/obj/effect))
 		return
 	if(ismob(AM))
 		var/mob/M = AM
@@ -97,10 +99,10 @@
 	. = ..()
 	update_icon()
 
-/obj/effect/step_trigger/claymore_laser/Trigger(var/atom/movable/A)
+/obj/effect/step_trigger/claymore_laser/Trigger(atom/movable/A)
 	if(istype(A,/obj/effect))
 		return
-	if(!owner)
+	if(!owner?.resolve())
 		qdel(src)
 		return
 	var/obj/effect/mine/claymore/C = owner.resolve()
@@ -140,7 +142,7 @@
 	icon_state = "landmine"
 	mineitemtype = /obj/item/mine/claymore/donksoft
 
-/obj/effect/mine/claymore/donksoft/explode(var/mob/living/M)
+/obj/effect/mine/claymore/donksoft/explode(mob/living/M)
 	if(triggered) // Prevents circular mine explosions from two mines detonating eachother
 		return
 	var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread()
