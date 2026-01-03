@@ -32,7 +32,7 @@
 	#define JOB_ALT_CO_PETTY_CADET "Cadet"
 	#define JOB_ALT_CO_WARRANT_OFFICER "Warrant Officer"
 	#define JOB_ALT_CO_ASSIST_MED_OFFICER "Assistant Medical Officer"
-	#define JOB_ALT_CO_ASSIST_SEC_OFFICER "Security Training Officer"
+	#define JOB_ALT_CO_ASSIST_SEC_OFFICER "Combat Control Officer"
 	#define JOB_ALT_CO_ASSIST_ENG_OFFICER "Engineering Specialist"
 	#define JOB_ALT_CO_ASSIST_SCI_OFFICER "Command Intelligence Officer"
 // Outpost 21 edit end
