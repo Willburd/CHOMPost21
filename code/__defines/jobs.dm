@@ -26,6 +26,17 @@
 	#define JOB_ALT_BRIDGE_ASSISTANT "Bridge Assistant"
 	#define JOB_ALT_BRIDGE_OFFICER "Bridge Officer" // CHOMPAdd
 
+// Outpost 21 edit begin - command officer
+#define JOB_COMMAND_OFFICER "Command Officer"
+	#define JOB_ALT_CO_PETTY_OFFICER "Petty Officer"
+	#define JOB_ALT_CO_PETTY_CADET "Cadet"
+	#define JOB_ALT_CO_WARRANT_OFFICER "Warrant Officer"
+	#define JOB_ALT_CO_ASSIST_MED_OFFICER "Assistant Medical Officer"
+	#define JOB_ALT_CO_ASSIST_SEC_OFFICER "Security Training Officer"
+	#define JOB_ALT_CO_ASSIST_ENG_OFFICER "Engineering Specialist"
+	#define JOB_ALT_CO_ASSIST_SCI_OFFICER "Command Intelligence Officer"
+// Outpost 21 edit end
+
 #define JOB_HEAD_OF_SECURITY "Head of Security"
 	// Head of Security alt titles
 	#define JOB_ALT_SECURITY_COMMANDER "Security Commander"
@@ -533,7 +544,7 @@
 #define LAWYER (1<<9)
 #define CHAPLAIN (1<<10)
 #define ASSISTANT (1<<11)
-// define BRIDGE (1<<12) //Outpost 21 edit - Command sec folded into hop
+#define BRIDGE (1<<12)
 // #define PILOT (1<<13) // CHOMPRemove
 #define ENTERTAINER (1<<14)
 #define ENTREPRENEUR (1<<15)
@@ -561,6 +572,7 @@ GLOBAL_LIST_INIT(command_positions, list(
 	JOB_CHIEF_ENGINEER,
 	JOB_RESEARCH_DIRECTOR,
 	JOB_CHIEF_MEDICAL_OFFICER,
+	JOB_COMMAND_OFFICER, // Outpost 21 edit - Command officer
 	// JOB_COMMAND_SECRETARY, // Outpost 21 edit - Command sec folded into hop
 	// JOB_BLUESHIELD_GUARD // CHOMPEnable // Outpost 21 edit - Job disabled
 ))
