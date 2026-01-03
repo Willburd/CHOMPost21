@@ -15620,7 +15620,6 @@
 /area/maintenance/engi_engine)
 "byA" = (
 /obj/structure/table/darkglass,
-/obj/item/clothing/accessory/medal/solgov/gold/crest/eshui,
 /turf/simulated/floor/tiled/milspec/raised/turfpack/muriki,
 /area/mine/unexplored/muriki/mountaineast)
 "byK" = (
@@ -49025,9 +49024,6 @@
 /obj/effect/floor_decal/corner/red/full{
 	dir = 1
 	},
-/obj/machinery/disposal{
-	name = "Amnesty Box"
-	},
 /obj/structure/disposalpipe/trunk{
 	dir = 8
 	},
@@ -49035,6 +49031,7 @@
 	dir = 4;
 	pixel_x = 26
 	},
+/obj/machinery/disposal/turn_in,
 /turf/simulated/floor/tiled,
 /area/security/lobby)
 "lUx" = (
@@ -82838,11 +82835,9 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 4
 	},
-/obj/machinery/disposal/wall/cleaner{
+/obj/machinery/disposal/wall/turn_in{
 	dir = 1;
-	name = "Amnesty Box";
-	desc = "A secure, and safe, location to deposit any contraband without getting in trouble.";
-	pixel_y = -36
+	pixel_y = -32
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/security/checkpoint2)
@@ -83316,11 +83311,9 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 1
 	},
-/obj/machinery/disposal/wall/cleaner{
+/obj/machinery/disposal/wall/turn_in{
 	dir = 4;
-	name = "Amnesty Box";
-	desc = "A secure, and safe, location to deposit any contraband without getting in trouble.";
-	pixel_x = -36
+	pixel_x = -32
 	},
 /turf/simulated/floor/tiled/steel,
 /area/hallway/primary/central_one)
