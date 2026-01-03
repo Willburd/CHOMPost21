@@ -56415,11 +56415,11 @@
 "onq" = (
 /obj/structure/table/rack,
 /obj/effect/floor_decal/industrial/outline/grey,
-/obj/item/clothing/glasses/sunglasses/sechud/tactical,
-/obj/item/clothing/glasses/sunglasses/sechud/tactical,
 /obj/structure/cable/orange{
 	icon_state = "2-8"
 	},
+/obj/item/clothing/glasses/thermal,
+/obj/item/clothing/glasses/thermal,
 /turf/simulated/floor/tiled/dark,
 /area/security/tactical)
 "onG" = (
@@ -71128,10 +71128,8 @@
 /turf/simulated/floor/tiled,
 /area/hallway/security/armor)
 "sYt" = (
-/obj/structure/table/rack,
 /obj/effect/floor_decal/industrial/outline/grey,
-/obj/item/clothing/glasses/thermal,
-/obj/item/clothing/glasses/thermal,
+/obj/machinery/vending/security_armory_armor,
 /turf/simulated/floor/tiled/dark,
 /area/security/tactical)
 "sYC" = (
