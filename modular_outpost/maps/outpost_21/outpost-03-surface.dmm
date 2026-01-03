@@ -15620,7 +15620,6 @@
 /area/maintenance/engi_engine)
 "byA" = (
 /obj/structure/table/darkglass,
-/obj/item/clothing/accessory/medal/solgov/gold/crest/eshui,
 /turf/simulated/floor/tiled/milspec/raised/turfpack/muriki,
 /area/mine/unexplored/muriki/mountaineast)
 "byK" = (
