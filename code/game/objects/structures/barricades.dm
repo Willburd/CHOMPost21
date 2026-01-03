@@ -126,7 +126,7 @@
 	name = "sandbags"
 	desc = "Bags. Bags of sand. It's rough and coarse and somehow stays in the bag."
 	icon = 'icons/obj/sandbags.dmi'
-	icon_state = "blank"
+	icon_state = "sandbag" // Outpost 21 edit(port) - Mappable sandbags
 
 /obj/structure/barricade/sandbag/Initialize(mapload, var/material_name)
 	if(!material_name)
@@ -136,7 +136,10 @@
 	color = null
 	maxhealth = material.integrity * 2	// These things are, commonly, used to stop bullets where possible.
 	health = maxhealth
+	icon_state = "blank" // Outpost 21 edit(port) - Mappable sandbags
 	update_connections(1)
+
+	AddElement(/datum/element/climbable) // Outpost 21 edit(port) - Climbable sandbags
 
 /obj/structure/barricade/sandbag/Destroy()
 	update_connections(1, src)
@@ -188,12 +191,19 @@
 	return 0
 
 /obj/structure/barricade/sandbag/CanPass(atom/movable/mover, turf/target)
+	/* Outpost 21 edit begin - Redo sandbag canpass
 	. = ..()
 
 	if(.)
-		if(istype(mover, /obj/item/projectile))
-			var/obj/item/projectile/P = mover
+	*/
+	if(istype(mover, /obj/item/projectile))
+		var/obj/item/projectile/P = mover
 
-			if(P.firer && get_dist(P.firer, src) > 1)	// If you're firing from adjacent turfs, you are unobstructed.
-				if(P.armor_penetration < (material.protectiveness + material.hardness) || prob(33))
-					return FALSE
+		if(P.firer && get_dist(P.firer, src) > 1)	// If you're firing from adjacent turfs, you are unobstructed.
+			if(P.armor_penetration < (material.protectiveness + material.hardness) || prob(33))
+				return FALSE
+
+		return TRUE
+
+	return FALSE
+	// Outpost 21 edit end

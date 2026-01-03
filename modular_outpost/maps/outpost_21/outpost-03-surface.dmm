@@ -7429,6 +7429,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
+/obj/effect/landmark/start/command_officer,
 /turf/simulated/floor/wood,
 /area/crew_quarters/bar)
 "alP" = (
@@ -7504,6 +7505,7 @@
 	},
 /obj/effect/floor_decal/spline/fancy/wood,
 /obj/item/latexballon/whoopee,
+/obj/effect/landmark/start/command_officer,
 /turf/simulated/floor/wood,
 /area/crew_quarters/bar)
 "alW" = (
@@ -8918,6 +8920,7 @@
 /obj/structure/bed/chair/bay/comfy{
 	dir = 8
 	},
+/obj/effect/landmark/start/command_officer,
 /turf/simulated/floor/tiled/milspec,
 /area/bridge)
 "aoP" = (
@@ -11835,6 +11838,13 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/security/secmail)
+"avP" = (
+/obj/structure/bed/chair/bay/comfy{
+	dir = 1
+	},
+/obj/effect/landmark/start/command_officer,
+/turf/simulated/floor/tiled/milspec,
+/area/bridge)
 "awe" = (
 /turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/unexplored/muriki/mountaineast)
@@ -15620,7 +15630,6 @@
 /area/maintenance/engi_engine)
 "byA" = (
 /obj/structure/table/darkglass,
-/obj/item/clothing/accessory/medal/solgov/gold/crest/eshui,
 /turf/simulated/floor/tiled/milspec/raised/turfpack/muriki,
 /area/mine/unexplored/muriki/mountaineast)
 "byK" = (
@@ -26992,6 +27001,7 @@
 /area/rnd/hallway/main)
 "fjK" = (
 /obj/structure/bed/chair/bay/comfy,
+/obj/effect/landmark/start/command_officer,
 /turf/simulated/floor/tiled/milspec,
 /area/bridge)
 "fjV" = (
@@ -28908,6 +28918,7 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 1
 	},
+/obj/effect/landmark/start/command_officer,
 /turf/simulated/floor/carpet/blucarpet,
 /area/bridge/meeting_room)
 "fRn" = (
@@ -34978,6 +34989,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
+/obj/effect/landmark/start/command_officer,
 /turf/simulated/floor/carpet/blucarpet,
 /area/bridge/meeting_room)
 "hMI" = (
@@ -43778,6 +43790,7 @@
 "koP" = (
 /obj/effect/floor_decal/corner/white,
 /obj/structure/bed/chair/bay/comfy,
+/obj/effect/landmark/start/command_officer,
 /turf/simulated/floor/tiled/milspec,
 /area/bridge)
 "kpc" = (
@@ -49025,9 +49038,6 @@
 /obj/effect/floor_decal/corner/red/full{
 	dir = 1
 	},
-/obj/machinery/disposal{
-	name = "Amnesty Box"
-	},
 /obj/structure/disposalpipe/trunk{
 	dir = 8
 	},
@@ -49035,6 +49045,7 @@
 	dir = 4;
 	pixel_x = 26
 	},
+/obj/machinery/disposal/turn_in,
 /turf/simulated/floor/tiled,
 /area/security/lobby)
 "lUx" = (
@@ -52204,6 +52215,7 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/spline/plain,
+/obj/effect/landmark/start/command_officer,
 /turf/simulated/floor/carpet/turcarpet,
 /area/hallway/secondary/entry/docking_lounge)
 "mVc" = (
@@ -56979,6 +56991,7 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 10
 	},
+/obj/effect/landmark/start/command_officer,
 /turf/simulated/floor/carpet/turcarpet,
 /area/hallway/secondary/entry/docking_lounge)
 "ovT" = (
@@ -70254,6 +70267,7 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 1
 	},
+/obj/effect/landmark/start/command_officer,
 /turf/simulated/floor/carpet/turcarpet,
 /area/hallway/secondary/entry/docking_lounge)
 "sLG" = (
@@ -72402,6 +72416,7 @@
 	override_name = 1
 	},
 /obj/effect/floor_decal/spline/plain,
+/obj/effect/landmark/start/command_officer,
 /turf/simulated/floor/carpet/blucarpet,
 /area/bridge/meeting_room)
 "tuS" = (
@@ -76180,6 +76195,7 @@
 /obj/structure/bed/chair/sofa/purp{
 	dir = 1
 	},
+/obj/effect/landmark/start/command_officer,
 /turf/simulated/floor/carpet/purcarpet,
 /area/crew_quarters/bar)
 "uAa" = (
@@ -82838,11 +82854,9 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 4
 	},
-/obj/machinery/disposal/wall/cleaner{
+/obj/machinery/disposal/wall/turn_in{
 	dir = 1;
-	name = "Amnesty Box";
-	desc = "A secure, and safe, location to deposit any contraband without getting in trouble.";
-	pixel_y = -36
+	pixel_y = -32
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/security/checkpoint2)
@@ -83119,6 +83133,7 @@
 /obj/structure/bed/chair/sofa/left/purp{
 	dir = 4
 	},
+/obj/effect/landmark/start/command_officer,
 /turf/simulated/floor/carpet/purcarpet,
 /area/crew_quarters/bar)
 "wDs" = (
@@ -83316,11 +83331,9 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 1
 	},
-/obj/machinery/disposal/wall/cleaner{
+/obj/machinery/disposal/wall/turn_in{
 	dir = 4;
-	name = "Amnesty Box";
-	desc = "A secure, and safe, location to deposit any contraband without getting in trouble.";
-	pixel_x = -36
+	pixel_x = -32
 	},
 /turf/simulated/floor/tiled/steel,
 /area/hallway/primary/central_one)
@@ -143596,7 +143609,7 @@ iJL
 moW
 rvN
 qmu
-eqg
+avP
 bgB
 awh
 rfZ
@@ -144082,7 +144095,7 @@ dKg
 ycs
 rvN
 qnX
-eqg
+avP
 jLf
 rfZ
 koP
