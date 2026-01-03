@@ -126,7 +126,7 @@
 	name = "sandbags"
 	desc = "Bags. Bags of sand. It's rough and coarse and somehow stays in the bag."
 	icon = 'icons/obj/sandbags.dmi'
-	icon_state = "blank"
+	icon_state = "sandbag" // Outpost 21 edit - Mappable sandbags
 
 /obj/structure/barricade/sandbag/Initialize(mapload, var/material_name)
 	if(!material_name)
@@ -136,6 +136,7 @@
 	color = null
 	maxhealth = material.integrity * 2	// These things are, commonly, used to stop bullets where possible.
 	health = maxhealth
+	icon_state = "blank" // Outpost 21 edit - Mappable sandbags
 	update_connections(1)
 
 /obj/structure/barricade/sandbag/Destroy()
