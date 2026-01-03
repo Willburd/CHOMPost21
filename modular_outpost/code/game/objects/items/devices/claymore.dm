@@ -102,6 +102,8 @@
 /obj/effect/step_trigger/claymore_laser/Trigger(atom/movable/A)
 	if(istype(A,/obj/effect))
 		return
+	if(istype(A,/obj/item/projectile))
+		return
 	if(!owner?.resolve())
 		qdel(src)
 		return
