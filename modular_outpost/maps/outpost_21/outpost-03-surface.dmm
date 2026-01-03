@@ -7429,6 +7429,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
+/obj/effect/landmark/start/command_officer,
 /turf/simulated/floor/wood,
 /area/crew_quarters/bar)
 "alP" = (
@@ -7504,6 +7505,7 @@
 	},
 /obj/effect/floor_decal/spline/fancy/wood,
 /obj/item/latexballon/whoopee,
+/obj/effect/landmark/start/command_officer,
 /turf/simulated/floor/wood,
 /area/crew_quarters/bar)
 "alW" = (
@@ -8918,6 +8920,7 @@
 /obj/structure/bed/chair/bay/comfy{
 	dir = 8
 	},
+/obj/effect/landmark/start/command_officer,
 /turf/simulated/floor/tiled/milspec,
 /area/bridge)
 "aoP" = (
@@ -11835,6 +11838,13 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/security/secmail)
+"avP" = (
+/obj/structure/bed/chair/bay/comfy{
+	dir = 1
+	},
+/obj/effect/landmark/start/command_officer,
+/turf/simulated/floor/tiled/milspec,
+/area/bridge)
 "awe" = (
 /turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/unexplored/muriki/mountaineast)
@@ -26991,6 +27001,7 @@
 /area/rnd/hallway/main)
 "fjK" = (
 /obj/structure/bed/chair/bay/comfy,
+/obj/effect/landmark/start/command_officer,
 /turf/simulated/floor/tiled/milspec,
 /area/bridge)
 "fjV" = (
@@ -28907,6 +28918,7 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 1
 	},
+/obj/effect/landmark/start/command_officer,
 /turf/simulated/floor/carpet/blucarpet,
 /area/bridge/meeting_room)
 "fRn" = (
@@ -34977,6 +34989,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
+/obj/effect/landmark/start/command_officer,
 /turf/simulated/floor/carpet/blucarpet,
 /area/bridge/meeting_room)
 "hMI" = (
@@ -43777,6 +43790,7 @@
 "koP" = (
 /obj/effect/floor_decal/corner/white,
 /obj/structure/bed/chair/bay/comfy,
+/obj/effect/landmark/start/command_officer,
 /turf/simulated/floor/tiled/milspec,
 /area/bridge)
 "kpc" = (
@@ -52201,6 +52215,7 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/spline/plain,
+/obj/effect/landmark/start/command_officer,
 /turf/simulated/floor/carpet/turcarpet,
 /area/hallway/secondary/entry/docking_lounge)
 "mVc" = (
@@ -56976,6 +56991,7 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 10
 	},
+/obj/effect/landmark/start/command_officer,
 /turf/simulated/floor/carpet/turcarpet,
 /area/hallway/secondary/entry/docking_lounge)
 "ovT" = (
@@ -70251,6 +70267,7 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 1
 	},
+/obj/effect/landmark/start/command_officer,
 /turf/simulated/floor/carpet/turcarpet,
 /area/hallway/secondary/entry/docking_lounge)
 "sLG" = (
@@ -72399,6 +72416,7 @@
 	override_name = 1
 	},
 /obj/effect/floor_decal/spline/plain,
+/obj/effect/landmark/start/command_officer,
 /turf/simulated/floor/carpet/blucarpet,
 /area/bridge/meeting_room)
 "tuS" = (
@@ -76177,6 +76195,7 @@
 /obj/structure/bed/chair/sofa/purp{
 	dir = 1
 	},
+/obj/effect/landmark/start/command_officer,
 /turf/simulated/floor/carpet/purcarpet,
 /area/crew_quarters/bar)
 "uAa" = (
@@ -83114,6 +83133,7 @@
 /obj/structure/bed/chair/sofa/left/purp{
 	dir = 4
 	},
+/obj/effect/landmark/start/command_officer,
 /turf/simulated/floor/carpet/purcarpet,
 /area/crew_quarters/bar)
 "wDs" = (
@@ -143589,7 +143609,7 @@ iJL
 moW
 rvN
 qmu
-eqg
+avP
 bgB
 awh
 rfZ
@@ -144075,7 +144095,7 @@ dKg
 ycs
 rvN
 qnX
-eqg
+avP
 jLf
 rfZ
 koP
