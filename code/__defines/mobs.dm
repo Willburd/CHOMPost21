@@ -532,7 +532,7 @@
 #define EXAMINE_SKIPLEGS			0x0080
 #define EXAMINE_SKIPFEET			0x0100
 
-#define MAX_NUTRITION	6000 //VOREStation Edit
+#define MAX_NUTRITION	800 //VOREStation Edit // Outpost 21 edit - Max nutrition tweaked
 
 #define FAKE_INVIS_ALPHA_THRESHOLD 64 //CHOMPEdit. 25% down from 50% // If something's alpha var is at or below this number, certain things will pretend it is invisible.
 
