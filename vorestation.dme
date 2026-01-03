@@ -5772,6 +5772,8 @@
 #include "modular_outpost\code\modules\client\preference_setup\loadout\loadout_eyes.dm"
 #include "modular_outpost\code\modules\client\preference_setup\loadout\loadout_fluffitems.dm"
 #include "modular_outpost\code\modules\client\preference_setup\loadout\loadout_general.dm"
+#include "modular_outpost\code\modules\client\preference_setup\loadout\loadout_head.dm"
+#include "modular_outpost\code\modules\client\preference_setup\loadout\loadout_uniform.dm"
 #include "modular_outpost\code\modules\clothing\accessories\fluff_awards.dm"
 #include "modular_outpost\code\modules\clothing\accessories\neoclothing.dm"
 #include "modular_outpost\code\modules\clothing\suits\miscellaneous.dm"
