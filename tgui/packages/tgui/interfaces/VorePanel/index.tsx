@@ -49,6 +49,7 @@ export const VorePanel = () => {
     general_pref_data,
     min_belly_name,
     max_belly_name,
+    presets,
   } = data;
 
   const [editMode, setEditMode] = useState(!!persist_edit_mode);
@@ -75,6 +76,7 @@ export const VorePanel = () => {
       persist_edit_mode={persist_edit_mode}
       minBellyName={min_belly_name}
       maxBellyName={max_belly_name}
+      presets={presets}
     />
   );
   tabs[1] = (
@@ -99,6 +101,7 @@ export const VorePanel = () => {
       editMode={editMode}
       toggleEditMode={setEditMode}
       persist_edit_mode={persist_edit_mode}
+      presets={presets}
     />
   );
   tabs[4] = prefs && <VoreUserPreferences prefs={prefs} />;
