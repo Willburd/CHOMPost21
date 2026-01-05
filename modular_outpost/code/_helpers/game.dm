@@ -3,6 +3,8 @@
 
 // THis is a big todo that's hard to figure out a non-laggy as fuck solution for.
 
+// This still has difficulties due to bodycams, and radios nested inside multiple layers. So it's been disabled again.
+
 
 /proc/get_mobs_in_radio_ranges(var/list/obj/item/radio/radios)
 
