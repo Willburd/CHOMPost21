@@ -62,8 +62,7 @@
 	melee_attack_delay = 0	// For some reason, having a delay makes item pick-up not work.
 
 /mob/living/simple_mob/vore/alienanimals/jil/jillilah
-	name = "jillilah"
-	real_name = "jillilah"
+	name = "\proper jillilah"
 	desc = "When you stare deep in her beady little eyes, you can feel an intense desire to declare independence..."
 	tt_desc = "Crinitus Latrunculus"
 
@@ -77,8 +76,7 @@
 	icon_rest = "jil_cargo_sleep"
 
 /mob/living/simple_mob/vore/alienanimals/jil/bean
-	name = "jilly-bean"
-	real_name = "jilly-bean"
+	name = "\proper jilly-bean"
 	desc = "They smell like diet cherry bepis..."
 	tt_desc = "Crinitus Latrunculus"
 
