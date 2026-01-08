@@ -1758,12 +1758,23 @@
 	flags = RAD_SHIELDED | AREA_BLOCK_GHOST_SIGHT | AREA_FLAG_IS_NOT_PERSISTENT
 	color_grading = COLORTINT_UNDERDARK
 
-/area/maintenance/shadekin_dark/north // edit me
-	name = "\improper Maintenance Tunnel North"
+/area/maintenance/shadekin_dark/mountain
+	name = "\improper Mountainside caves"
 
-/area/maintenance/shadekin_dark/south // edit me
-	name = "\improper Maintenance Tunnel South"
+/area/maintenance/shadekin_dark/waste
+	name = "\improper Maintenance tunnels near Waste"
 
+/area/maintenance/shadekin_dark/med
+	name = "\improper Maintenance tunnels near Medical"
+
+/area/maintenance/shadekin_dark/sec
+	name = "\improper Maintenance tunnels near Security"
+
+/area/maintenance/shadekin_dark/cave
+	name = "\improper Basement caves"
+
+/area/maintenance/shadekin_dark/river
+	name = "\improper Maintenance tunnels along the river"
 
 //
 // Collapsed underdark entrances ------------------------------------------------------------
