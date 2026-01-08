@@ -3436,7 +3436,6 @@
 /obj/structure/window/maintenance_panel{
 	dir = 1
 	},
-/obj/structure/window/maintenance_panel,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/engi_engine)
 "aeS" = (
@@ -6829,9 +6828,6 @@
 /obj/structure/window/maintenance_panel{
 	dir = 4
 	},
-/obj/structure/window/maintenance_panel{
-	dir = 8
-	},
 /obj/structure/grille{
 	desc = "A flimsy lattice of metal rods, with screws to secure it to the floor. This grille seems slightly more sturdy than others probably reinforced to withstand the wildlife.";
 	health = 25;
@@ -9933,9 +9929,6 @@
 /obj/structure/window/maintenance_panel{
 	dir = 4
 	},
-/obj/structure/window/maintenance_panel{
-	dir = 8
-	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/medbay_aft)
 "arD" = (
@@ -9985,7 +9978,6 @@
 /obj/structure/window/maintenance_panel{
 	dir = 1
 	},
-/obj/structure/window/maintenance_panel,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/wastedisposal)
 "arI" = (
@@ -11510,9 +11502,6 @@
 /area/shuttle/trawler)
 "avs" = (
 /obj/structure/window/maintenance_panel{
-	dir = 8
-	},
-/obj/structure/window/maintenance_panel{
 	dir = 4
 	},
 /obj/effect/mine/n2o,
@@ -11829,13 +11818,13 @@
 /turf/simulated/floor/tiled/techfloor/grid/turfpack/muriki,
 /area/muriki/processor/euth)
 "avO" = (
-/obj/structure/closet/crate,
-/obj/effect/floor_decal/corner/red{
-	dir = 6
-	},
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/effect/floor_decal/corner/red/full{
+	dir = 4
+	},
+/obj/structure/closet/crate,
 /turf/simulated/floor/tiled/techfloor,
 /area/security/secmail)
 "avP" = (
@@ -11845,6 +11834,114 @@
 /obj/effect/landmark/start/command_officer,
 /turf/simulated/floor/tiled/milspec,
 /area/bridge)
+"avQ" = (
+/obj/machinery/atmospherics/pipe/zpipe/up{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/outline/grey,
+/obj/random/junk,
+/turf/simulated/floor/plating,
+/area/maintenance/wastedisposal)
+"avR" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/catwalk,
+/obj/random/junk,
+/turf/simulated/floor/plating,
+/area/maintenance/security_starboard)
+"avS" = (
+/turf/simulated/floor/tiled/old_tile/white,
+/area/security/security_equiptment_storage)
+"avT" = (
+/obj/machinery/alarm{
+	dir = 8;
+	pixel_x = 26
+	},
+/obj/effect/floor_decal/corner_techfloor_grid,
+/turf/simulated/floor/tiled/old_tile/white,
+/area/security/security_equiptment_storage)
+"avU" = (
+/obj/structure/closet/wardrobe/red,
+/obj/effect/floor_decal/corner/red{
+	dir = 5
+	},
+/obj/machinery/doorbell_chime{
+	id_tag = "secding";
+	name = "Security Hail";
+	pixel_y = 32
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/item/storage/pouch/baton,
+/obj/item/storage/pouch/baton,
+/obj/item/storage/pouch/baton,
+/obj/item/universal_translator/ear,
+/obj/item/clothing/suit/storage/teshari/beltcloak/jobs/sec,
+/obj/item/clothing/suit/storage/teshari/cloak/jobs/sec,
+/obj/item/clothing/under/teshari/undercoat/jobs/sec,
+/obj/item/clothing/shoes/footwraps,
+/obj/item/clothing/shoes/footwraps,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/old_tile/white,
+/area/security/security_equiptment_storage)
+"avV" = (
+/obj/random/junk,
+/turf/simulated/floor/plating,
+/area/maintenance/cargomid)
+"avW" = (
+/obj/random/junk,
+/turf/simulated/floor,
+/area/constructionsite/engineering)
+"avX" = (
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/random/junk,
+/turf/simulated/floor/plating,
+/area/maintenance/bar)
+"avY" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/random/junk,
+/turf/simulated/floor/plating,
+/area/maintenance/medicelev)
+"avZ" = (
+/obj/random/junk,
+/turf/simulated/floor/plating,
+/area/maintenance/bar)
+"awa" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/random/junk,
+/turf/simulated/floor,
+/area/maintenance/engi_engine)
+"awb" = (
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/disposalpipe/segment,
+/obj/random/junk,
+/turf/simulated/floor/plating,
+/area/maintenance/medicelev)
+"awc" = (
+/obj/random/junk,
+/turf/simulated/floor/plating,
+/area/maintenance/medicelev)
+"awd" = (
+/obj/random/junk,
+/turf/simulated/floor/plating,
+/area/maintenance/medbay_aft)
 "awe" = (
 /turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/unexplored/muriki/mountaineast)
@@ -12173,6 +12270,11 @@
 	},
 /turf/simulated/floor/plating,
 /area/muriki/processor/euth)
+"awY" = (
+/obj/random/junk,
+/obj/random/junk,
+/turf/simulated/floor/plating,
+/area/maintenance/medbay_aft)
 "awZ" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4;
@@ -12189,6 +12291,10 @@
 	},
 /turf/simulated/floor/redgrid/off/turfpack/muriki,
 /area/muriki/processor/euth)
+"axb" = (
+/obj/random/junk,
+/turf/simulated/floor,
+/area/engineering/engine_smes)
 "axc" = (
 /obj/machinery/power/rtg/advanced,
 /obj/item/stock_parts/micro_laser/hyper,
@@ -12451,6 +12557,7 @@
 	icon_state = "4-8"
 	},
 /obj/structure/catwalk,
+/obj/random/junk,
 /turf/simulated/floor,
 /area/maintenance/engi_engine)
 "aAH" = (
@@ -12742,9 +12849,6 @@
 	dir = 4
 	},
 /obj/structure/window/maintenance_panel{
-	dir = 4
-	},
-/obj/structure/window/maintenance_panel{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -12778,9 +12882,6 @@
 	},
 /obj/structure/window/maintenance_panel{
 	dir = 4
-	},
-/obj/structure/window/maintenance_panel{
-	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/wastedisposal)
@@ -13423,9 +13524,6 @@
 	icon_state = "1-2"
 	},
 /obj/structure/window/maintenance_panel,
-/obj/structure/window/maintenance_panel{
-	dir = 1
-	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/substation/security)
 "aRI" = (
@@ -14381,7 +14479,6 @@
 	icon_state = "1-2"
 	},
 /obj/effect/step_trigger/dephase_shadekin,
-/obj/structure/window/maintenance_panel,
 /obj/structure/window/maintenance_panel{
 	dir = 1
 	},
@@ -14585,7 +14682,7 @@
 /obj/machinery/conveyor{
 	id = "burnpit"
 	},
-/obj/random/trash,
+/obj/random/junk,
 /turf/simulated/floor/plating,
 /area/maintenance/wastedisposal)
 "bjb" = (
@@ -14917,9 +15014,6 @@
 	icon_state = "4-8"
 	},
 /obj/structure/window/maintenance_panel{
-	dir = 8
-	},
-/obj/structure/window/maintenance_panel{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -15132,9 +15226,6 @@
 "brr" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
-	},
-/obj/structure/window/maintenance_panel{
-	dir = 4
 	},
 /obj/structure/window/maintenance_panel{
 	dir = 8
@@ -17466,6 +17557,7 @@
 /area/crew_quarters/bar)
 "cbO" = (
 /obj/structure/catwalk,
+/obj/random/junk,
 /turf/simulated/floor/plating,
 /area/maintenance/substation/security)
 "cch" = (
@@ -21727,7 +21819,6 @@
 /obj/structure/cable/green{
 	icon_state = "32-2"
 	},
-/obj/structure/window/maintenance_panel,
 /turf/simulated/open,
 /area/maintenance/medicelev)
 "dxv" = (
@@ -23922,9 +24013,6 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/bar)
 "eiX" = (
-/obj/structure/window/maintenance_panel{
-	dir = 4
-	},
 /obj/structure/window/maintenance_panel{
 	dir = 8
 	},
@@ -26271,6 +26359,7 @@
 	dir = 4;
 	icon_state = "pipe-c"
 	},
+/obj/random/junk,
 /turf/simulated/floor,
 /area/maintenance/engineering)
 "eWM" = (
@@ -28339,6 +28428,15 @@
 /obj/effect/floor_decal/industrial/outline/grey,
 /obj/item/clothing/glasses/night,
 /obj/item/clothing/glasses/night,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/machinery/door/window/brigdoor/northright{
+	req_one_access = list(1,3,19)
+	},
 /turf/simulated/floor/tiled/dark,
 /area/security/tactical)
 "fHG" = (
@@ -28793,6 +28891,13 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
+/obj/item/storage/box,
+/obj/item/storage/box,
+/obj/item/storage/box,
+/obj/item/storage/box,
+/obj/item/storage/box,
+/obj/item/storage/box,
+/obj/item/storage/box,
 /turf/simulated/floor/tiled/techfloor,
 /area/security/secmail)
 "fOZ" = (
@@ -28855,6 +28960,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
 	},
+/obj/random/junk,
 /turf/simulated/floor/plating,
 /area/maintenance/wastedisposal)
 "fPS" = (
@@ -30125,6 +30231,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
+/obj/random/junk,
 /turf/simulated/floor/plating,
 /area/maintenance/cargomid)
 "goa" = (
@@ -33046,7 +33153,6 @@
 /obj/structure/window/maintenance_panel{
 	dir = 1
 	},
-/obj/structure/window/maintenance_panel,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/wastedisposal)
 "hkA" = (
@@ -33752,9 +33858,6 @@
 /area/maintenance/medbay_roof)
 "hut" = (
 /obj/structure/window/maintenance_panel,
-/obj/structure/window/maintenance_panel{
-	dir = 1
-	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/muriki/bathroom/virology)
 "huB" = (
@@ -34902,14 +35005,12 @@
 /obj/effect/floor_decal/corner/red{
 	dir = 10
 	},
-/obj/machinery/disposal/wall{
-	desc = "A secure, and safe, location to deposit any contraband without getting in trouble.";
-	dir = 1;
-	name = "Evidence Turn-In";
-	pixel_y = -36
-	},
 /obj/structure/disposalpipe/trunk{
 	dir = 4
+	},
+/obj/machinery/disposal/wall/turn_in{
+	dir = 1;
+	pixel_y = -32
 	},
 /turf/simulated/floor/tiled,
 /area/security/security_processing)
@@ -35399,9 +35500,6 @@
 /obj/structure/cable/orange{
 	icon_state = "1-2"
 	},
-/obj/structure/window/maintenance_panel{
-	dir = 1
-	},
 /obj/structure/window/maintenance_panel,
 /obj/structure/grille{
 	desc = "A flimsy lattice of metal rods, with screws to secure it to the floor. This grille seems slightly more sturdy than others probably reinforced to withstand the wildlife.";
@@ -35646,6 +35744,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-8"
 	},
+/obj/random/junk,
 /turf/simulated/floor/plating,
 /area/maintenance/medicelev)
 "hWJ" = (
@@ -36904,9 +37003,6 @@
 /obj/structure/window/maintenance_panel{
 	dir = 4
 	},
-/obj/structure/window/maintenance_panel{
-	dir = 8
-	},
 /obj/structure/grille{
 	desc = "A flimsy lattice of metal rods, with screws to secure it to the floor. This grille seems slightly more sturdy than others probably reinforced to withstand the wildlife.";
 	health = 25;
@@ -37687,6 +37783,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/random/junk,
 /turf/simulated/floor/plating,
 /area/maintenance/wastedisposal)
 "izL" = (
@@ -42336,9 +42433,6 @@
 	name = "Command SMES Security Shutters"
 	},
 /obj/structure/window/maintenance_panel,
-/obj/structure/window/maintenance_panel{
-	dir = 1
-	},
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
@@ -42910,6 +43004,7 @@
 	icon_state = "4-8"
 	},
 /obj/structure/disposalpipe/segment,
+/obj/random/junk,
 /turf/simulated/floor/plating,
 /area/maintenance/medicelev)
 "kbu" = (
@@ -45215,16 +45310,6 @@
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/bridge)
-"kMa" = (
-/obj/machinery/conveyor{
-	dir = 1;
-	id = "secmail"
-	},
-/obj/structure/railing/grey{
-	dir = 4
-	},
-/turf/simulated/floor/plating,
-/area/security/secmail)
 "kMb" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -45830,6 +45915,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
 	},
+/obj/random/junk,
 /turf/simulated/floor,
 /area/maintenance/engi_engine)
 "kWA" = (
@@ -47142,6 +47228,7 @@
 /obj/machinery/light/small{
 	dir = 4
 	},
+/obj/random/junk,
 /turf/simulated/floor/plating,
 /area/maintenance/medicelev)
 "lrQ" = (
@@ -51994,9 +52081,6 @@
 /obj/structure/window/maintenance_panel{
 	dir = 4
 	},
-/obj/structure/window/maintenance_panel{
-	dir = 8
-	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/muriki/bathroom/cargopub)
 "mRH" = (
@@ -53045,30 +53129,6 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/hallway/security/main)
-"nhc" = (
-/obj/structure/closet/wardrobe/red,
-/obj/effect/floor_decal/corner/red{
-	dir = 5
-	},
-/obj/machinery/doorbell_chime{
-	id_tag = "secding";
-	name = "Security Hail";
-	pixel_y = 32
-	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/item/storage/pouch/baton,
-/obj/item/storage/pouch/baton,
-/obj/item/storage/pouch/baton,
-/obj/item/universal_translator/ear,
-/obj/item/clothing/suit/storage/teshari/beltcloak/jobs/sec,
-/obj/item/clothing/suit/storage/teshari/cloak/jobs/sec,
-/obj/item/clothing/under/teshari/undercoat/jobs/sec,
-/obj/item/clothing/shoes/footwraps,
-/obj/item/clothing/shoes/footwraps,
-/turf/simulated/floor/tiled/old_tile/white,
-/area/security/security_equiptment_storage)
 "nhe" = (
 /obj/structure/atmopost,
 /turf/simulated/floor/outdoors/snow/turfpack/muriki,
@@ -54655,9 +54715,6 @@
 	name = "Security Lockdown Shutters"
 	},
 /obj/structure/window/maintenance_panel,
-/obj/structure/window/maintenance_panel{
-	dir = 1
-	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/security/brig/observation)
 "nFl" = (
@@ -55521,11 +55578,7 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/chemistry)
 "nWP" = (
-/obj/structure/closet/crate,
-/obj/effect/floor_decal/corner/red/full{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/techfloor,
+/turf/simulated/wall/r_wall,
 /area/security/secmail)
 "nXl" = (
 /obj/machinery/hologram/holopad,
@@ -56335,6 +56388,7 @@
 /turf/simulated/open,
 /area/muriki/crewstairwell)
 "okZ" = (
+/obj/random/junk,
 /turf/simulated/floor/plating,
 /area/maintenance/substation/command)
 "olp" = (
@@ -56420,6 +56474,15 @@
 	},
 /obj/item/clothing/glasses/thermal,
 /obj/item/clothing/glasses/thermal,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/door/window/brigdoor/northleft{
+	req_one_access = list(1,3,19)
+	},
 /turf/simulated/floor/tiled/dark,
 /area/security/tactical)
 "onG" = (
@@ -57622,12 +57685,11 @@
 /obj/effect/floor_decal/corner/red{
 	dir = 5
 	},
-/obj/machinery/disposal/wall{
-	pixel_y = 34;
-	name = "Evidence Turn-In"
-	},
 /obj/structure/disposalpipe/trunk{
 	dir = 4
+	},
+/obj/machinery/disposal/wall/turn_in{
+	pixel_y = 32
 	},
 /turf/simulated/floor/tiled,
 /area/security/security_processing)
@@ -59653,7 +59715,6 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/structure/window/maintenance_panel,
 /turf/simulated/floor/plating,
 /area/maintenance/medicelev)
 "pqW" = (
@@ -59888,9 +59949,6 @@
 	},
 /obj/structure/plasticflaps/mining,
 /obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/structure/railing/grey{
 	dir = 4
 	},
 /turf/simulated/floor/plating,
@@ -60201,9 +60259,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/disposalpipe/segment,
-/obj/structure/window/maintenance_panel{
-	dir = 1
-	},
 /obj/structure/window/maintenance_panel,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/muriki/bathroom/engineering)
@@ -60594,7 +60649,6 @@
 "pHx" = (
 /obj/structure/lattice,
 /obj/machinery/atmospherics/pipe/zpipe/down,
-/obj/structure/window/maintenance_panel,
 /turf/simulated/open,
 /area/maintenance/medicelev)
 "pHz" = (
@@ -61687,7 +61741,6 @@
 /turf/simulated/wall/r_wall,
 /area/muriki/bathroom/medical)
 "pZb" = (
-/obj/effect/floor_decal/corner_techfloor_grid,
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/old_tile/white,
 /area/security/security_equiptment_storage)
@@ -61859,9 +61912,6 @@
 	},
 /obj/structure/window/maintenance_panel{
 	dir = 4
-	},
-/obj/structure/window/maintenance_panel{
-	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/medicelev)
@@ -63287,10 +63337,6 @@
 	dir = 6
 	},
 /obj/structure/table/standard,
-/obj/machinery/alarm{
-	dir = 8;
-	pixel_x = 26
-	},
 /obj/item/storage/box/holobadge{
 	pixel_y = 10;
 	pixel_x = 6
@@ -64938,6 +64984,7 @@
 /obj/machinery/light/small{
 	dir = 4
 	},
+/obj/random/junk,
 /turf/simulated/floor,
 /area/maintenance/engi_engine)
 "qZr" = (
@@ -66291,6 +66338,7 @@
 	icon_state = "pipe-c"
 	},
 /obj/item/assembly/mousetrap/armed,
+/obj/random/junk,
 /turf/simulated/floor,
 /area/maintenance/engineering)
 "rxd" = (
@@ -68009,7 +68057,7 @@
 	},
 /obj/machinery/light_switch{
 	dir = 1;
-	pixel_x = -27;
+	pixel_x = -21;
 	pixel_y = -28
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -69981,7 +70029,7 @@
 	dir = 4
 	},
 /obj/effect/landmark/step_trap,
-/obj/random/trash,
+/obj/random/junk,
 /turf/simulated/floor/plating,
 /area/maintenance/security_starboard)
 "sHp" = (
@@ -70514,6 +70562,7 @@
 	dir = 4
 	},
 /obj/random/maintenance/security,
+/obj/random/junk,
 /turf/simulated/floor/plating,
 /area/maintenance/security_starboard)
 "sQa" = (
@@ -70966,7 +71015,7 @@
 	dir = 8;
 	id = "burnpit"
 	},
-/obj/random/trash,
+/obj/random/junk,
 /turf/simulated/floor/plating,
 /area/maintenance/wastedisposal)
 "sWP" = (
@@ -71245,7 +71294,7 @@
 /obj/structure/handrail{
 	dir = 1
 	},
-/obj/random/trash,
+/obj/random/junk,
 /turf/simulated/floor/plating,
 /area/maintenance/wastedisposal)
 "taF" = (
@@ -71551,9 +71600,6 @@
 	icon_state = "1-2"
 	},
 /obj/structure/window/maintenance_panel,
-/obj/structure/window/maintenance_panel{
-	dir = 1
-	},
 /turf/simulated/floor,
 /area/maintenance/engi_engine)
 "tet" = (
@@ -73336,9 +73382,6 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/obj/structure/window/maintenance_panel{
-	dir = 1
-	},
 /obj/structure/window/maintenance_panel,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/substation/virology)
@@ -73954,9 +73997,6 @@
 	dir = 1
 	},
 /obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/structure/window/reinforced{
 	health = 1e+006
 	},
 /obj/machinery/door/firedoor/glass,
@@ -73969,6 +74009,9 @@
 /obj/structure/cable/orange,
 /obj/structure/cable/orange{
 	icon_state = "0-4"
+	},
+/obj/structure/window/reinforced{
+	dir = 8
 	},
 /turf/simulated/floor/plating,
 /area/security/tactical)
@@ -75672,9 +75715,6 @@
 	icon_state = "1-2"
 	},
 /obj/effect/step_trigger/dephase_shadekin,
-/obj/structure/window/maintenance_panel{
-	dir = 1
-	},
 /obj/structure/window/maintenance_panel,
 /obj/structure/grille{
 	desc = "A flimsy lattice of metal rods, with screws to secure it to the floor. This grille seems slightly more sturdy than others probably reinforced to withstand the wildlife.";
@@ -76178,9 +76218,6 @@
 	icon_state = "4-8"
 	},
 /obj/structure/window/maintenance_panel{
-	dir = 8
-	},
-/obj/structure/window/maintenance_panel{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -76376,6 +76413,7 @@
 /area/security/tactical)
 "uCe" = (
 /obj/effect/floor_decal/industrial/warning/corner,
+/obj/random/junk,
 /turf/simulated/floor,
 /area/engineering/engine_smes)
 "uCr" = (
@@ -77682,7 +77720,6 @@
 /turf/simulated/floor/tiled,
 /area/quartermaster/storage)
 "uXX" = (
-/obj/structure/window/maintenance_panel,
 /obj/structure/window/maintenance_panel{
 	dir = 1
 	},
@@ -77702,9 +77739,6 @@
 /area/muriki/research/showers)
 "uYp" = (
 /obj/structure/disposalpipe/segment,
-/obj/structure/window/maintenance_panel{
-	dir = 1
-	},
 /obj/structure/window/maintenance_panel,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/security_port)
@@ -77956,7 +77990,6 @@
 /obj/structure/window/maintenance_panel{
 	dir = 4
 	},
-/obj/structure/window/maintenance_panel,
 /turf/simulated/floor/plating,
 /area/maintenance/wastedisposal)
 "vbM" = (
@@ -78211,9 +78244,6 @@
 "vgv" = (
 /obj/structure/cable/orange{
 	icon_state = "1-2"
-	},
-/obj/structure/window/maintenance_panel{
-	dir = 1
 	},
 /obj/structure/window/maintenance_panel,
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -78630,9 +78660,6 @@
 /area/crew_quarters/captain)
 "vml" = (
 /obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/structure/window/reinforced{
 	dir = 1
 	},
 /obj/structure/window/reinforced{
@@ -78647,6 +78674,9 @@
 /obj/effect/mine/n2o,
 /obj/structure/cable/orange{
 	icon_state = "0-8"
+	},
+/obj/structure/window/reinforced{
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/security/tactical)
@@ -78743,13 +78773,6 @@
 	},
 /turf/simulated/floor/tiled/steel,
 /area/hallway/primary/central_three)
-"vny" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/random/trash,
-/turf/simulated/floor/plating,
-/area/maintenance/security_starboard)
 "vnA" = (
 /turf/simulated/wall,
 /area/maintenance/scielev)
@@ -79655,6 +79678,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/random/junk,
 /turf/simulated/floor/plating,
 /area/muriki/crewstairwell)
 "vCf" = (
@@ -79860,6 +79884,7 @@
 /area/hallway/secondary/engineering_hallway)
 "vGB" = (
 /obj/item/assembly/mousetrap/armed,
+/obj/random/junk,
 /turf/simulated/floor/plating,
 /area/muriki/bathroom/engineering)
 "vGL" = (
@@ -79948,6 +79973,7 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
+/obj/random/junk,
 /turf/simulated/floor/plating,
 /area/maintenance/medbay_roof)
 "vHt" = (
@@ -82706,6 +82732,7 @@
 	dir = 4;
 	icon_state = "pipe-c"
 	},
+/obj/random/junk,
 /turf/simulated/floor/plating,
 /area/muriki/bathroom/cargopub)
 "wug" = (
@@ -85979,6 +86006,7 @@
 	dir = 4;
 	icon_state = "pipe-c"
 	},
+/obj/random/junk,
 /turf/simulated/floor/plating,
 /area/maintenance/wastedisposal)
 "xwY" = (
@@ -86272,6 +86300,7 @@
 	dir = 9
 	},
 /obj/structure/disposalpipe/segment,
+/obj/random/junk,
 /turf/simulated/floor,
 /area/constructionsite/engineering)
 "xBC" = (
@@ -87587,6 +87616,7 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
+/obj/random/junk,
 /turf/simulated/floor/plating,
 /area/maintenance/medicelev)
 "xYB" = (
@@ -87730,6 +87760,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/random/junk,
 /turf/simulated/floor/plating,
 /area/maintenance/security_starboard)
 "ybm" = (
@@ -90993,7 +91024,7 @@ amP
 qxd
 vrt
 wXG
-vgu
+avQ
 rQP
 nEv
 dQB
@@ -109590,7 +109621,7 @@ ulQ
 agT
 uMJ
 eOe
-prJ
+avV
 esm
 uMJ
 uMJ
@@ -109707,7 +109738,7 @@ tyl
 qIi
 qZf
 nUS
-nUS
+awa
 byn
 gjV
 txe
@@ -110183,7 +110214,7 @@ ark
 ark
 qJS
 izb
-izb
+axb
 qJS
 omK
 oPk
@@ -113122,7 +113153,7 @@ krN
 bWF
 oNd
 oNd
-oNd
+avW
 oNd
 hts
 sJq
@@ -113444,9 +113475,9 @@ ucJ
 qMN
 krN
 alD
+avW
 oNd
-oNd
-oNd
+avW
 alr
 hts
 uvT
@@ -127040,7 +127071,7 @@ kNy
 kNy
 kNy
 goC
-mtp
+awb
 mtp
 mtp
 mtp
@@ -127052,7 +127083,7 @@ cnf
 cnf
 ale
 eiY
-eiY
+avY
 eiY
 eiY
 gWK
@@ -127847,7 +127878,7 @@ kNy
 lCV
 dxp
 xAU
-sPE
+awc
 sPE
 ceP
 arB
@@ -128817,7 +128848,7 @@ kpj
 arf
 dRW
 bKq
-jue
+awd
 kny
 bKQ
 vUg
@@ -129626,7 +129657,7 @@ arf
 arf
 arf
 dRW
-jue
+awd
 kny
 xyV
 gIE
@@ -130499,8 +130530,8 @@ wwe
 iMm
 iMm
 iMm
-iMm
 aiL
+avS
 bMl
 qfx
 fTZ
@@ -130658,11 +130689,11 @@ key
 wlE
 dLX
 pvf
-kMa
 gLY
 gLY
-iMm
-nhc
+gND
+avU
+avS
 bMl
 qha
 fTZ
@@ -130761,7 +130792,7 @@ arf
 arf
 dRW
 wGS
-jue
+awd
 kny
 kny
 kny
@@ -130820,11 +130851,11 @@ qQX
 pwc
 mDc
 qwp
-qwp
 pFZ
 mca
-iMm
+gND
 ugN
+avS
 bMl
 qha
 fTZ
@@ -130923,7 +130954,7 @@ arf
 arf
 dRW
 eWd
-jue
+awY
 hUY
 kby
 nZX
@@ -130983,10 +131014,10 @@ kip
 cnN
 tOz
 mDc
-mDc
 dIm
-iMm
+gND
 bud
+avT
 aKD
 eAm
 fTZ
@@ -131478,7 +131509,7 @@ mvb
 aWa
 aWa
 hnb
-hYk
+avR
 sfD
 olp
 rCI
@@ -131642,7 +131673,7 @@ sfP
 hnb
 hYk
 sfD
-vny
+ybc
 rCI
 apP
 apP
@@ -144062,7 +144093,7 @@ uPc
 ohQ
 iNX
 dcU
-aPc
+avZ
 nbD
 tco
 vjp
@@ -144388,7 +144419,7 @@ eiW
 rWk
 wTZ
 nSm
-wTZ
+avX
 mdm
 nAY
 nAY
