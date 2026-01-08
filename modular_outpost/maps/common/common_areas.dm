@@ -1745,6 +1745,26 @@
 	icon_state = "deckmaint1"
 	use_emergency_overlay = TRUE
 
+
+//
+// Shadekin darkness in maintenance ------------------------------------------------------------
+//
+
+/area/maintenance/shadekin_dark
+	name = "USE SUBTYPE"
+	icon = 'icons/turf/areas_vr.dmi'
+	icon_state = "debrisexplored"
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
+	flags = RAD_SHIELDED | AREA_BLOCK_GHOST_SIGHT | AREA_FLAG_IS_NOT_PERSISTENT
+	color_grading = COLORTINT_UNDERDARK
+
+/area/maintenance/shadekin_dark/north // edit me
+	name = "\improper Maintenance Tunnel North"
+
+/area/maintenance/shadekin_dark/south // edit me
+	name = "\improper Maintenance Tunnel South"
+
+
 //
 // Collapsed underdark entrances ------------------------------------------------------------
 //
