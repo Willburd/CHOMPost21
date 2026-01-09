@@ -102,7 +102,7 @@
 
 /datum/trait/positive/hardy_extreme
 	banned_species = list(SPECIES_ALRAUNE, SPECIES_TESHARI, SPECIES_UNATHI, SPECIES_DIONA, SPECIES_PROMETHEAN, SPECIES_PROTEAN) //These species can't take the other two hardies, why can they take this one? Make it make sense.
-	cost = 20 //fuck you cost of points, for being IMMUNE to all slowdown of armor, hardsuits, etc. Which is a major balancing factor
+	cost = 12 //fuck you cost of points, for being IMMUNE to all slowdown of armor, hardsuits, etc. Which is a major balancing factor, Will: Lowered from 20 to 12 mirroring onelife. 20 is a bit much.
 
 /datum/trait/positive/sonar
 	cost = 0 //This trait is el barbagio. It needs to be free.
