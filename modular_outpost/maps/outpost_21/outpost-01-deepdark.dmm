@@ -62,7 +62,6 @@
 /area/muriki/crew/bunker_deep/main)
 "aao" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/structure/window/maintenance_panel,
 /obj/structure/window/maintenance_panel{
 	dir = 1;
 	name = "emergency egress panel"

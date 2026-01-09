@@ -216,9 +216,6 @@
 "aav" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/window/maintenance_panel,
-/obj/structure/window/maintenance_panel{
-	dir = 1
-	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/substation/research)
 "aaw" = (
@@ -1720,7 +1717,6 @@
 /obj/structure/window/maintenance_panel{
 	dir = 1
 	},
-/obj/structure/window/maintenance_panel,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/tcommsat/powercontrol)
 "adN" = (
@@ -2218,6 +2214,11 @@
 /mob/living/simple_mob/animal/synx/ai,
 /turf/simulated/floor/gorefloor2/turfpack/muriki,
 /area/muriki/processor/hall)
+"aeS" = (
+/turf/simulated/wall/r_wall{
+	can_open = 1
+	},
+/area/maintenance/medbay_fore)
 "afb" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
@@ -2865,9 +2866,6 @@
 /obj/structure/cable/orange{
 	icon_state = "32-4"
 	},
-/obj/structure/window/maintenance_panel{
-	dir = 4
-	},
 /obj/structure/window/maintenance_panel,
 /turf/simulated/open,
 /area/maintenance/medicelev)
@@ -3137,9 +3135,6 @@
 "aBd" = (
 /obj/structure/cable/orange{
 	icon_state = "4-8"
-	},
-/obj/structure/window/maintenance_panel{
-	dir = 4
 	},
 /obj/structure/window/maintenance_panel{
 	dir = 8
@@ -3909,9 +3904,6 @@
 "aUs" = (
 /obj/structure/window/maintenance_panel{
 	dir = 4
-	},
-/obj/structure/window/maintenance_panel{
-	dir = 8
 	},
 /obj/structure/cable/orange{
 	icon_state = "4-8"
@@ -7225,9 +7217,6 @@
 /area/hydroponics/publicgarden)
 "cvJ" = (
 /obj/structure/window/maintenance_panel{
-	dir = 4
-	},
-/obj/structure/window/maintenance_panel{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -7838,9 +7827,6 @@
 /area/rnd/research/phoronics)
 "cQe" = (
 /obj/structure/window/maintenance_panel,
-/obj/structure/window/maintenance_panel{
-	dir = 1
-	},
 /obj/structure/cable/orange{
 	icon_state = "1-2"
 	},
@@ -8811,12 +8797,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
-/obj/structure/window/maintenance_panel{
-	dir = 8
-	},
-/obj/structure/window/maintenance_panel{
-	dir = 4
-	},
+/obj/structure/grille,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/tcommsat/powercontrol)
 "dqk" = (
@@ -13157,9 +13138,6 @@
 	icon_state = "1-2"
 	},
 /obj/structure/window/maintenance_panel,
-/obj/structure/window/maintenance_panel{
-	dir = 1
-	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/substation/arrivals)
 "fzy" = (
@@ -20163,9 +20141,6 @@
 	icon_state = "4-8"
 	},
 /obj/structure/window/maintenance_panel{
-	dir = 4
-	},
-/obj/structure/window/maintenance_panel{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -20515,9 +20490,6 @@
 /turf/simulated/floor/outdoors/snow/roofing/turfpack/muriki,
 /area/muriki/rooftop/disposal)
 "jqQ" = (
-/obj/structure/window/maintenance_panel{
-	dir = 4
-	},
 /obj/structure/window/maintenance_panel{
 	dir = 8
 	},
@@ -22826,9 +22798,6 @@
 	},
 /obj/structure/window/maintenance_panel{
 	dir = 8
-	},
-/obj/structure/window/maintenance_panel{
-	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/substation/arrivals)
@@ -26998,9 +26967,6 @@
 /area/rnd/research/roof_eva)
 "mFV" = (
 /obj/structure/window/maintenance_panel,
-/obj/structure/window/maintenance_panel{
-	dir = 1
-	},
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
@@ -27604,7 +27570,6 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/obj/structure/window/maintenance_panel,
 /obj/structure/window/maintenance_panel{
 	dir = 1
 	},
@@ -29123,9 +29088,6 @@
 /obj/structure/window/maintenance_panel{
 	dir = 4
 	},
-/obj/structure/window/maintenance_panel{
-	dir = 8
-	},
 /turf/simulated/floor/plating,
 /area/maintenance/cargobay_roof)
 "nLv" = (
@@ -30165,7 +30127,6 @@
 /area/muriki/rooftop/security)
 "ome" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
-/obj/structure/window/maintenance_panel,
 /obj/structure/window/maintenance_panel{
 	dir = 1
 	},
@@ -33560,9 +33521,6 @@
 /obj/structure/window/maintenance_panel{
 	dir = 4
 	},
-/obj/structure/window/maintenance_panel{
-	dir = 8
-	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/medicelev)
 "pZv" = (
@@ -35488,9 +35446,6 @@
 /obj/structure/window/maintenance_panel{
 	dir = 4
 	},
-/obj/structure/window/maintenance_panel{
-	dir = 8
-	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/chapel/chapel_morgue)
 "qWs" = (
@@ -35626,6 +35581,9 @@
 "qZo" = (
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 1
+	},
+/obj/effect/auto_crayon{
+	icon_state = "down"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/medbay_fore)
@@ -39697,9 +39655,6 @@
 "sYZ" = (
 /obj/machinery/atmospherics/pipe/simple/visible/red,
 /obj/structure/window/maintenance_panel,
-/obj/structure/window/maintenance_panel{
-	dir = 1
-	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/rnd/research/phoronics/burn)
 "sZc" = (
@@ -42967,9 +42922,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/disposalpipe/segment,
-/obj/structure/window/maintenance_panel{
-	dir = 1
-	},
 /obj/structure/window/maintenance_panel,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/hydroponics/hallway)
@@ -43297,9 +43249,6 @@
 "uIG" = (
 /obj/structure/window/maintenance_panel{
 	dir = 4
-	},
-/obj/structure/window/maintenance_panel{
-	dir = 8
 	},
 /obj/structure/cable/orange{
 	icon_state = "4-8"
@@ -45857,9 +45806,6 @@
 	},
 /obj/structure/window/maintenance_panel{
 	dir = 4
-	},
-/obj/structure/window/maintenance_panel{
-	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/tcommsat/computer)
@@ -93010,7 +92956,7 @@ nHR
 nHR
 qZo
 eVP
-nHR
+aeS
 fJX
 hBl
 mYU

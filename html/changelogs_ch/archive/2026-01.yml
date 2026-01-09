@@ -41,3 +41,79 @@
   - rscadd: Added weather anomaly
   - qol: Smoke from neutralized anomalies is now much short-lived
   - bugfix: Fixed spawned anomalies from telesci not having cores
+2026-01-05:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: Added premade liquid options to the Swoopie mob's stomach.
+  - image: Changed Swoopie's fullscreen overlays to use animated versions.
+  - spellcheck: Changed Swoopie's throat vbellies to use fancier worded progressive
+      stages rather than numbered stages.
+  - code_imp: moves all forceMoves for vore code to nom_atom
+  - bugfix: limits belly entered messages and transfer lookups
+  - bugfix: Fixes the number of hours until a job is available.
+  Diana:
+  - bugfix: Things that 'knock you out' will properly KO you now, instead of simply
+      paralyzing you.
+  - bugfix: Plushies can be interacted with again
+  - qol: Changeling helmet can eat more than just survival rations.
+  - bugfix: Vox magclaws no longer slow you down when enabled.
+  - bugfix: Holywater thresholds adjusted for horror elements.
+  - spellcheck: fixes a typo with the bodysnatcher
+  FluffMedic:
+  - bugfix: Makes the aegis bridge armory more consistent with other armories
+  - bugfix: Alters the areas so the rust computers share the area with the rust
+  Guti:
+  - bugfix: Fixed accidental mob vore not caring about prefs
+  - rscadd: Added weather anomaly event
+  - balance: Various events now weight more with their heads on, and scaled as more
+      people join in.
+  - rscdel: Removed various events out of rotation, mostly broken or completely ignored.
+  - bugfix: Fixed lead ingots not being grindable
+  - bugfix: Teshari CE cloak can now be properly selected
+  - spellcheck: Changes multiple instances of "Cheif" to "Chief"
+2026-01-06:
+  CHOMPStation2StaffMirrorBot:
+  - config: new config entries to set discord channels for round start/end announcements
+  - rscadd: Added new xenomorph queen backplate to wing menu.
+  - image: Added new sprites for xeno queen backplate.
+  - bugfix: Fixed xenomorph tail (vwag) not being able to toggle off vwag.
+  Diana:
+  - bugfix: You can no longer activate grenades in your hand while dead.
+  - code_imp: Rightclick functionality with held objects is possible now.
+  - bugfix: Fultons can no longer be deployed inside of things.
+  Guti:
+  - bugfix: Fixed Dark Maw not eating captured prey, if prefs aligned
+  Will:
+  - bugfix: Attempting to pass mob grabs to another player no longer drops a qdeleted
+      grab on the floor
+2026-01-07:
+  CHOMPStation2StaffMirrorBot:
+  - code_imp: updates rust g to 6.0.0
+  - bugfix: Ctrl+R in tgui works again
+  - bugfix: Passthrough in tgui works again
+  - rscadd: Added a new vac-pack subtype and a new power level and effects.
+  - qol: Vac-pack custom sounds and verbs and anim toggle are now editable vars.
+  - code_imp: update overlay subsystem
+  - code_imp: modernises the chat and tgui backend code
+  Shoanaea, Zayahpapayah:
+  - rscadd: Added the Electrovore trait to allow players to drain power cells for
+      nutrition
+  - rscadd: Added the Electrovore, Obligate to allow players to drain cells for and
+      charge cells with nutrition
+  - code_imp: Added the Electrovore and Obligate code, touched up cell.dm to allow
+      for draining and charging
+2026-01-08:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: fixed mech maintenance mode causing issues for clients and server whilst
+      trying to move
+  - rscadd: 'Added two more admin player effects: Wet Surrounding Surfaces and Give
+      Quest'
+  Guti:
+  - bugfix: Fixed pyroclastic anomaly sending weather anomaly alerts
+  wide eyes:
+  - bugfix: fixes airlock, solars, and hopefully fixes sec intercom
+2026-01-09:
+  CHOMPStation2StaffMirrorBot:
+  - code_imp: moves those alists to lists
+  - balance: Security Protolathe can now print researched device cells.
+  - code_imp: cleans up the vore fx and resist code
+  - bugfix: multiple throwing issues

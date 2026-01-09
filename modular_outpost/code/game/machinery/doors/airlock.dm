@@ -87,6 +87,8 @@
 
 /obj/machinery/door/airlock/examine(mob/user)
 	. = ..()
+	if(welded) // Outpost 21 edit(port) - Show a door is welded
+		. += span_danger(text("it is welded shut."))
 	if(brace)
 		. += span_danger(text("A [brace] is installed on the airlock, preventing it from opening."))
 		. += brace.examine_health()
