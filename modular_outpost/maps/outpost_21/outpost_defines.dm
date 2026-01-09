@@ -179,7 +179,14 @@
 										/area/maintenance/damaged_resleeverA,
 										/area/maintenance/damaged_resleeverB,
 										/area/security/brig_hole,
-										/area/muriki/crew/bunker)
+										/area/muriki/crew/bunker,
+										// Shadekin exclusions
+										/area/maintenance/shadekin_dark/waste,
+										/area/maintenance/shadekin_dark/sec,
+										/area/maintenance/shadekin_dark/river,
+										/area/maintenance/shadekin_dark/med,
+										/area/maintenance/shadekin_dark/cave,
+										/area/maintenance/shadekin_dark/mountain)
 
 	unit_test_exempt_from_apc = list(	/area/muriki/processor,
 										/area/muriki/processor/hall,
@@ -237,7 +244,14 @@
 										/area/muriki/crystal,
 										/area/maintenance/damaged_resleeverA,
 										/area/maintenance/damaged_resleeverB,
-										/area/security/brig_hole)
+										/area/security/brig_hole,
+										// Shadekin exclusions
+										/area/maintenance/shadekin_dark/waste,
+										/area/maintenance/shadekin_dark/sec,
+										/area/maintenance/shadekin_dark/river,
+										/area/maintenance/shadekin_dark/med,
+										/area/maintenance/shadekin_dark/cave,
+										/area/maintenance/shadekin_dark/mountain)
 
 	planet_datums_to_make = list(/datum/planet/muriki)
 
