@@ -6825,13 +6825,13 @@
 	icon_state = "4-8"
 	},
 /obj/effect/step_trigger/dephase_shadekin,
-/obj/structure/window/maintenance_panel{
-	dir = 4
-	},
 /obj/structure/grille{
 	desc = "A flimsy lattice of metal rods, with screws to secure it to the floor. This grille seems slightly more sturdy than others probably reinforced to withstand the wildlife.";
 	health = 25;
 	name = "Reinforced Grille"
+	},
+/obj/structure/window/maintenance_panel{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/security/tactical)
@@ -9929,7 +9929,7 @@
 /obj/structure/window/maintenance_panel{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/techfloor,
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/medbay_aft)
 "arD" = (
 /obj/structure/grille,
@@ -12334,6 +12334,14 @@
 	},
 /turf/simulated/floor/redgrid/off/turfpack/muriki,
 /area/muriki/processor/euth)
+"axh" = (
+/obj/machinery/conveyor{
+	dir = 8;
+	id = "packageSort2"
+	},
+/obj/random/junk,
+/turf/simulated/floor/plating,
+/area/quartermaster/delivery)
 "axi" = (
 /obj/machinery/alembic,
 /obj/structure/table/alien,
@@ -16598,7 +16606,6 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/item/stolenpackage,
 /turf/simulated/floor/plating,
 /area/maintenance/cargomid)
 "bNf" = (
@@ -16855,7 +16862,6 @@
 /obj/structure/window/maintenance_panel{
 	dir = 1
 	},
-/obj/structure/window/maintenance_panel,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/scielev)
 "bQR" = (
@@ -22536,6 +22542,14 @@
 /obj/structure/grille,
 /obj/structure/cable/green{
 	icon_state = "0-4"
+	},
+/obj/machinery/door/blast/regular{
+	density = 0;
+	dir = 8;
+	icon_state = "pdoor0";
+	id = "Scilock";
+	name = "Science Lockdown";
+	opacity = 0
 	},
 /turf/simulated/floor/plating,
 /area/rnd/lockers)
@@ -44290,9 +44304,6 @@
 /obj/structure/window/maintenance_panel{
 	dir = 4
 	},
-/obj/structure/window/maintenance_panel{
-	dir = 8
-	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/scielev)
 "kvn" = (
@@ -51480,6 +51491,7 @@
 	id = "packageSort1"
 	},
 /obj/effect/floor_decal/industrial/outline/grey,
+/obj/item/stolenpackage,
 /turf/simulated/floor/plating,
 /area/quartermaster/delivery)
 "mFG" = (
@@ -70601,6 +70613,7 @@
 	id = "packageSort2"
 	},
 /obj/effect/floor_decal/industrial/outline/grey,
+/obj/random/junk,
 /turf/simulated/floor/plating,
 /area/quartermaster/delivery)
 "sQz" = (
@@ -86595,6 +86608,14 @@
 /obj/structure/cable/green,
 /obj/structure/cable/green{
 	icon_state = "0-8"
+	},
+/obj/machinery/door/blast/regular{
+	density = 0;
+	dir = 8;
+	icon_state = "pdoor0";
+	id = "Scilock";
+	name = "Science Lockdown";
+	opacity = 0
 	},
 /turf/simulated/floor/plating,
 /area/rnd/lockers)
@@ -112229,7 +112250,7 @@ cyp
 kZW
 hKU
 egE
-uhR
+axh
 evU
 lBq
 aqr
@@ -112391,7 +112412,7 @@ tJh
 gOV
 hKU
 brN
-uhR
+axh
 rXN
 lBq
 aqr

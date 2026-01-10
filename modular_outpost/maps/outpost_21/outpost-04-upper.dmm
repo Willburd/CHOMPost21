@@ -34797,7 +34797,6 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
 	},
-/obj/structure/flora/tree/pine/xmas,
 /turf/simulated/floor/wood,
 /area/crew_quarters/medbreak)
 "qDW" = (
@@ -45710,10 +45709,6 @@
 /obj/structure/closet/firecloset,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
-	},
-/obj/machinery/alarm{
-	dir = 8;
-	pixel_x = 26
 	},
 /obj/effect/floor_decal/corner/purple{
 	dir = 6
