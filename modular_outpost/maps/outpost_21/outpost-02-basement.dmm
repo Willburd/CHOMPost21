@@ -33185,9 +33185,6 @@
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/pool)
 "biv" = (
-/obj/structure/window/maintenance_panel{
-	dir = 1
-	},
 /obj/structure/window/maintenance_panel,
 /turf/simulated/floor/tiled/techfloor,
 /area/muriki/bathroom/dorm)
@@ -33196,9 +33193,6 @@
 	icon_state = "1-2"
 	},
 /obj/structure/window/maintenance_panel,
-/obj/structure/window/maintenance_panel{
-	dir = 1
-	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/crew_quarters/locker)
 "bix" = (
@@ -79517,9 +79511,6 @@
 /area/engineering/refinery/tankstorage)
 "rxz" = (
 /obj/structure/window/maintenance_panel{
-	dir = 4
-	},
-/obj/structure/window/maintenance_panel{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -84660,9 +84651,6 @@
 	},
 /obj/structure/window/maintenance_panel{
 	dir = 4
-	},
-/obj/structure/window/maintenance_panel{
-	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/medical/mail)
