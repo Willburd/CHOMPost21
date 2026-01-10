@@ -12,8 +12,20 @@
 		to_chat(usr, span_warning("You appear to be in a place without any sort of concept of direction. You have bigger problems to worry about."))
 		return
 
+	// Outpost 21 edit begin - Remote view to look above
+	var/show_nothing = TRUE
+	var/turf/above_turf = GetAbove(src)
+	if(above_turf && above_turf.CanZPass(src, DOWN))
+		if(is_remote_viewing())
+			reset_perspective()
+			return
+		AddComponent(/datum/component/remote_view, focused_on = above_turf, vconfig_path = /datum/remote_view_config/turf_decoupling)
+		show_nothing = FALSE
+	// Outpost 21 edit end
+
 	if(!T.is_outdoors()) // They're inside.
-		to_chat(usr, "You see nothing interesting.")
+		if(show_nothing) // Outpost 21 edit - Remote view to look above
+			to_chat(usr, "You see nothing interesting.")
 		return
 
 	else // They're outside and hopefully on a planet.
