@@ -51544,10 +51544,10 @@
 	req_access = list(2);
 	dir = 2
 	},
-/obj/item/storage/backpack/stunstaff,
-/obj/item/storage/backpack/stunstaff,
-/obj/item/storage/backpack/stunstaff,
-/obj/item/storage/backpack/stunstaff,
+/obj/item/storage/backpack/fluff/stunstaff,
+/obj/item/storage/backpack/fluff/stunstaff,
+/obj/item/storage/backpack/fluff/stunstaff,
+/obj/item/storage/backpack/fluff/stunstaff,
 /turf/simulated/floor/tiled/milspec,
 /area/security/armoury)
 "mGh" = (
