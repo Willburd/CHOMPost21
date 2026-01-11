@@ -37748,24 +37748,6 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/cargo)
-"bqY" = (
-/obj/effect/auto_crayon{
-	icon_state = "d"
-	},
-/obj/effect/auto_crayon{
-	icon_state = "down"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 8
-	},
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/sec)
 "bqZ" = (
 /obj/structure/disposalpipe/segment{
 	dir = 1;
@@ -119022,7 +119004,7 @@ rPd
 rPd
 rPd
 bhW
-bqY
+bCD
 bhW
 aef
 bqk
