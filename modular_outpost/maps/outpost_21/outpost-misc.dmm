@@ -3140,8 +3140,6 @@
 /obj/item/perfect_tele/one_beacon,
 /obj/item/perfect_tele/one_beacon,
 /obj/item/perfect_tele/one_beacon,
-/obj/item/perfect_tele/one_beacon,
-/obj/item/perfect_tele/one_beacon,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -3278,10 +3276,6 @@
 	icon_state = "dark"
 	},
 /area/syndicate_mothership)
-"hj" = (
-/obj/item/broken_gun/laserrifle,
-/turf/simulated/floor/indoorrocks,
-/area/specialty/hell)
 "hk" = (
 /obj/structure/bed/chair/bay/comfy/black{
 	dir = 8
@@ -4544,6 +4538,16 @@
 	icon_state = "white"
 	},
 /area/syndicate_mothership)
+"jq" = (
+/obj/structure/table/wooden_reinforced,
+/obj/item/paper{
+	info = "Set your faction to syndicate"
+	},
+/turf/unsimulated/floor{
+	icon_state = "cult";
+	name = "plating"
+	},
+/area/syndicate_mothership)
 "jr" = (
 /obj/structure/table/reinforced,
 /obj/item/dnainjector/set_trait/hulk,
@@ -4845,6 +4849,37 @@
 	},
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/trade/centcom)
+"jT" = (
+/obj/structure/table/wooden_reinforced,
+/obj/item/card/id/syndicate{
+	access = list(150)
+	},
+/obj/item/card/id/syndicate{
+	access = list(150)
+	},
+/obj/item/card/id/syndicate{
+	access = list(150)
+	},
+/obj/item/card/id/syndicate{
+	access = list(150)
+	},
+/obj/item/card/id/syndicate{
+	access = list(150)
+	},
+/obj/item/card/id/syndicate{
+	access = list(150)
+	},
+/obj/item/card/id/syndicate{
+	access = list(150)
+	},
+/obj/item/card/id/syndicate{
+	access = list(150)
+	},
+/turf/unsimulated/floor{
+	icon_state = "cult";
+	name = "plating"
+	},
+/area/syndicate_mothership)
 "jU" = (
 /obj/machinery/door/airlock/centcom{
 	name = "Heavy Armor";
@@ -5070,6 +5105,25 @@
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
+	},
+/area/syndicate_mothership)
+"km" = (
+/obj/item/storage/pouch/ifak,
+/obj/item/storage/pouch/ifak,
+/obj/item/storage/pouch/ifak,
+/obj/item/storage/pouch/ifak,
+/obj/item/storage/pouch/ifak,
+/obj/item/storage/pouch/ifak,
+/obj/item/storage/pouch/ifak,
+/obj/item/storage/pouch/ifak,
+/obj/item/storage/pouch/ifak,
+/obj/item/storage/pouch/ifak,
+/obj/item/storage/pouch/ifak,
+/obj/item/storage/pouch/ifak,
+/obj/item/storage/pouch/ifak,
+/obj/structure/table/reinforced,
+/turf/unsimulated/floor{
+	icon_state = "white"
 	},
 /area/syndicate_mothership)
 "ko" = (
@@ -5398,19 +5452,23 @@
 /area/wizard_station)
 "nS" = (
 /obj/structure/table/rack,
-/obj/item/ammo_magazine/awp/ap,
-/obj/item/ammo_magazine/awp/ap,
-/obj/item/ammo_magazine/awp/ap,
-/obj/item/ammo_magazine/awp/ap,
-/obj/item/ammo_magazine/awp/ap,
-/obj/item/ammo_magazine/awp/ap,
-/obj/item/ammo_magazine/awp/ap,
-/obj/item/ammo_magazine/awp/ap,
-/obj/item/ammo_magazine/awp/ap,
-/obj/item/ammo_magazine/awp/ap,
-/obj/item/ammo_magazine/awp/ap,
-/obj/item/ammo_magazine/awp/ap,
-/obj/item/gun/projectile/automatic/serdy/awp,
+/obj/item/gun/projectile/automatic/serdy/hectate,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -50483,7 +50541,7 @@ yb
 yb
 yb
 ju
-fR
+iV
 fc
 iW
 iV
@@ -50807,7 +50865,7 @@ jL
 sg
 yb
 sg
-fR
+iV
 iA
 ik
 iV
@@ -51131,14 +51189,14 @@ jL
 sg
 jC
 jx
-fR
+iV
 fd
 iX
 iV
 eX
 eX
 eU
-fR
+iV
 eT
 eR
 eN
@@ -53427,8 +53485,8 @@ sg
 gM
 yb
 gn
-aJ
-aJ
+jT
+jq
 aJ
 aJ
 gk
@@ -55017,7 +55075,7 @@ iL
 hc
 jN
 hc
-hc
+km
 hc
 jn
 yb
@@ -55179,7 +55237,7 @@ iM
 hc
 jO
 hc
-hc
+jH
 hc
 jp
 yb
@@ -57308,7 +57366,7 @@ TW
 TW
 Sg
 ac
-hj
+sd
 sd
 sd
 bZ
