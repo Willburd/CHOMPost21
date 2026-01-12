@@ -289,6 +289,16 @@
 	star_desc = "Fr prTecxtIng oUtpsT an ExuCUtiinG CrwMetEs"
 
 
+// Accessories
+/obj/item/clothing/accessory/therapy_dog_tag
+	icon = 'modular_outpost/icons/inventory/accessory/item.dmi'
+	name = "Therapy Dog Lanyard"
+	desc = "TEMP"
+	icon_state = "therapydog"
+	slot = ACCESSORY_SLOT_TIE
+	drop_sound = 'sound/items/drop/accessory.ogg'
+	pickup_sound = 'sound/items/pickup/accessory.ogg'
+
 
 // TEMP DEFINITIONS SOME NOT MEANT FOR HERE! These exist purely to placate loadout code's typechecks
 /obj/item/toy/plushie/fluff
