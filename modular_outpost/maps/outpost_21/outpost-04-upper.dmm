@@ -22145,7 +22145,7 @@
 /turf/simulated/floor/outdoors/snow/roofing/turfpack/muriki,
 /area/muriki/rooftop/security)
 "kfm" = (
-/obj/machinery/porta_turret/stationary,
+/obj/machinery/porta_turret/heavy,
 /turf/simulated/floor/reinforced/airless,
 /area/tcommsat/computer)
 "kgr" = (
