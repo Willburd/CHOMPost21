@@ -34288,6 +34288,12 @@
 /area/crew_quarters/locker)
 "bku" = (
 /obj/structure/table/glass,
+/obj/item/leash,
+/obj/item/leash,
+/obj/item/leash,
+/obj/item/leash,
+/obj/item/leash,
+/obj/item/leash,
 /turf/simulated/floor/tiled/steel,
 /area/crew_quarters/locker)
 "bkv" = (
@@ -34295,6 +34301,16 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
+/obj/random/shibari,
+/obj/random/shibari,
+/obj/random/shibari,
+/obj/random/shibari,
+/obj/random/shibari,
+/obj/random/shibari,
+/obj/random/shibari,
+/obj/random/shibari,
+/obj/random/shibari,
+/obj/random/shibari,
 /turf/simulated/floor/tiled/steel,
 /area/crew_quarters/locker)
 "bkw" = (
@@ -67900,6 +67916,7 @@
 /turf/simulated/floor,
 /area/maintenance/oldbridge)
 "esV" = (
+/obj/random/shibari,
 /turf/simulated/floor/wood/alt/parquet/broken,
 /area/muriki/crew/arcade/lasertag)
 "esW" = (
