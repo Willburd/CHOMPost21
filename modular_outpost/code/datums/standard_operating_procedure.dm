@@ -147,73 +147,6 @@
 			<hr/>
 			<b>Condition Delta:</b> While E-Shui can see no reason for a Terraformer to ever be euthanized, in compliance with SolGov Vs NanoTrasen 443-72, which states "Any facility that has the potential to be used against the: The owning company, Solgov or its allies, or is of tactical, strategic, or technological significance must be able to be destroyed before capture." Every E-Shui terraformer is installed with a Euthanizer. Condition Delta is automatically applied upon activation of the Euthanizer. All crew must immediately muster and make their way to the evacuation points. Any attempts to stop or impede the escape of crew is considered a Condition Red threat."}
 
-/datum/sop_entry/escalation
-	title = "Escalation of Force, and Condition Codes"
-	author = "E-Shui Official"
-	body = 	{"<b>General Rulings</b>: The station's condition code must be set to the lowest level necessary for station operations and current threat. In order: Green > Yellow > Blue > Orange > Violet > Red > Delta. The condition code should be elevated as quickly as possible upon discovery of the station threat, and must be lowered immediately upon resolution of the station threat.
-			<br>Body armor is not to be worn by non-security personnel, and weapons are not to be carried by non-security personnel without a permit. Crew with an authorized weapon and permit are not allowed to conceal their weapon, and must carry it openly.
-			<br>To conserve station resources, equipment should be returned to the department in appropriate storage locations immediately when it is no longer required for the task. Failure to return equipment is considered theft of station property.
-			<br>Condition codes are separated into Low Level, Moderate Level, and Severe. These severities define legal recourse for disobeying orders under specific levels and provide a guide for understanding severity of the situation.
-			<br>In all situations, the Captain is the highest authority on station, this does not extend to acting captains of the station or the Head of Personnel. The captain should have trust in their heads of staff to manage a crisis they may be in charge of: Such as the CMO in condition Violet, or the HoS in conditions Blue or higher. Although the captain, and captain alone, retain responsibility and ability to override any other command staff at any time.
-			<hr/><b><center>Low Level Threats.</center></b>
-			<br/>
-			<center><b>Green:</b></center>
-			<br>Security must declare the reason for an arrest to the suspect, along with the reason for the arrest. Security may not use force until suspects are fleeing, or openly hostile. Every attempt to peacefully subdue a suspect must be made by security personnel. Security may only use nonlethals, such as tazers, batons, rubber bullets, and pepper spray. No non-security crew may attempt "civilian arrests." Security may not access the Blue or Red armory. Security may not place barricades, use door braces, or otherwise impede access to the station.
-			<br>Department crew are not to wear hardsuits, soft suits, or rigs unless actively venturing outside, or into hazardous atmospheric conditions. Crew wearing aforementioned equipment without reason is in violation of 'Misuse of Company Equipment', and subject to search and seizure. Any crew wearing any hardsuits, rigs, or soft suits should be questioned by security, but not immediately arrested.
-			<br/>
-			<center><b>Yellow:</b></center>
-			<br>Security does not have to announce, or give reason for an arrest until after incarceration. Security may only use force as necessary to subdue existing threats. Security may use any resources found within the Green Armory as needed, to include door bracing suspected areas. Braces must be removed after the situation is resolved. Non-security crew may attempt "civilian arrests" with nonlethal force only, and only for suspects in a department they are not a part of, and only while the arresting crew member is a part of that department. The Warden or the Head of Security may temporarily "deputize" crew members to assist in security matters, counting them as security personnel for the duration of the threat. Security may not access the Blue or Red armory.
-			<br>Department crew are not to wear hardsuits, soft suits, or rigs without approval from security to aid in the current station threat. Crew wearing hardsuits, softsuits, or rigs under code Yellow without approval are to be stopped and questioned, as it is considered suspicious activity. Security should verify that if a Hardsuit or Rig does not match department with the crew wearing it, security should immediately arrest and charge the suspect with confirmed theft of station equipment.
-			<br>Non-security crew are not to wear body armor under any circumstance.
-			<hr/><b><center>Moderate Level Threats.</center></b>
-			<br/>
-			<center><b>Blue:</b></center>
-			<br>Security does not have to announce arrests, and does not have to provide reasoning until after the situation is resolved. Security is allowed to use any equipment located in the Blue armory to subdue the station threat. Departments are encouraged to lock down to mitigate access to station threats, unless remaining open is required by security to subdue the station threat. Chain of Command is adjusted to place Security Officers above all crew except for the Captain.
-			<br>Hardsuits, and rigs are not to be worn by any station crew except security, and approved medical staff for paramedic reasons. Soft suits are authorized to be worn at medical or security discretion. All other crew wearing aforementioned gear or armor, are to be immediately counted as a threat to the station and neutralized.
-			<br>All infractions of corporate law are increased severity: Non-security crew wearing armor, possessing weaponry, hacking into departments, etc without authorization, are to be considered active sabotage against the station, and security should neutralize the threats immediately.
-			<center><b>Violet:</b></center>
-			<br>Security operates as though under condition Blue. Medical staff is considered station authority, The Chief Medical Officer takes temporary charge of the station until the situation is resolved to a lesser status. All departments are encouraged to lock down, unless remaining open is required by medical staff. Triage facilities must be established in a safe area, decided by medical staff. Security is to aid in evacuating crew to safe Triage locations and ensuring compliance with medical crew with all necessary force warranting a code Blue event. Chain of command is adjusted to place Medical staff above all crew except for the captain.
-			<br>Hardsuits and rigs are recommended to be worn by medical staff. And are not to be worn by any other station crew without approval from medical command. Soft suits are authorized to be worn by crew at medical discretion. All other crew wearing aforementioned gear or armor, are to be immediately arrested and questioned.
-			<br/>
-			<center><b>Orange:</b></center>
-			<br>Security operates as though under condition Blue. Engineering staff is considered to be station authority, the Chief Engineer assumes temporary charge of the station until the situation is resolved to a lesser status. All departments are encouraged to lock down, unless remaining open is required by engineering staff. All non-engineering crew are to report to a designated safe area to avoid further damage, risk of injury, or impedance of repair operations. Chain of command is adjusted to place Engineering staff above all crew except for the captain.
-			<br>Hardsuits, and rigs are recommended to be worn by engineering staff. And are not to be worn by any other station crew without approval from engineering command. Soft suits are authorized to be worn by crew at medical or engineering discretion. All other crew wearing aforementioned gear or armor, are to be immediately arrested and questioned.
-			<hr/><b><center>Severe Level Threats.</center></b>
-			<br/>
-			<center><b>Red:</b></center>
-			<br>Security is authorized immediate lethal force to any threat to the station or terraformer, and should not make arrests. Security is authorized any equipment in the Red Armory. Equipment must be returned at the end of the Red-level event. All departments must lock down unless security access, or evacuation, is needed in to or out of the department. All crew must muster to a safe Triage location decided by Medical and Security, and shelter in place until the event has passed, or evacuation is initiated.
-			<br>Hard suits and Rigs are not to be worn by: non-security crew, the captain, or heads of staff unless authorized by security forces. Soft suits are to be handed out and worn at medical or security discretion. Non-authorized crew wearing a hard suit or a rig are shoot-on-sight as they may be assisting the threat to the station.
-			<br>Non-security crew wearing body armor of any kind are to be considered part of the direct threat to the station and shot on sight.
-			<br/>
-			<center><b>Delta:</b></center>
-			<br>Security is authorized immediate lethal force to any threat to evacuation efforts. Medical is to oversee evacuation efforts. All other crew are to proceed to muster locations or evacuation points immediately. Failure to obey any order from Security or Medical is considered a threat to crew survival, and is to be met with Red-Level force to neutralize the threat to crew survival.
-			<br>Hard suits and rigs are not to be worn by non-security crew unless previously authorized. Soft suits are to be worn by all crew as necessary to make it to evacuation points.
-			<br>Non-security crew wearing body armor of any kind are to be considered impeding evacuation efforts and shot on sight. The Warden and Head of Security are no longer able to 'deputize' crew members, and any previously 'deputized' crew are grandfathered into remaining security, but may only assist in evacuation and may not give orders. 'Deputized' crew are for peacekeeping and enforcing security's will only."}
-
-/datum/sop_entry/chain_of_command
-	title = "Chain of Command"
-	author = "E-Shui Official"
-	body = 	{"Through either the natures of a frontier world, crew death, crew departure, or otherwise, you will invariably not have a fully staffed crew. This is where the Chain of Command comes into play, everyone has a boss, and almost everyone has someone under them. Knowing who your boss is at any given moment is critical.
-			<br/>From the top, the head authority is Central Command, you will rarely engage with CC directly, things have gone horribly wrong if so. CC reports to E-Shui Main.
-			<br/>
-			<br/>The Captain of the station, sometimes called the Colony Director, is the highest authority on the station. However, there is an exception for the CMO being a higher authority for determining the health of the captain.
-			<br/>
-			<br/>The Chief Medical Officer is the second highest command of the station, following the lack of a CD, the CMO is responsible for the safety and wellfare of the entire station.
-			<br/>
-			<br/>Following the CMO is the Head of Security, who is responsible for the security of the station. Depending on alert status, the HoS may take authority over the CMO.
-			<br/>
-			<br/>Following HoS is the Chief Engineer, who is responsible for the maintenance and function of all station functions, as well as assembling evacuation points, and assisting in recovery efforts as needed.
-			<br/>
-			<br/>Following the CE is the Research Director, who is in charge of the research wing.
-			<br/>
-			<br/>Following the RD is the Quartermaster, who is in charge of the supplies of the station. Despite confusion, the QM and cargo are a separate department that is not under the control of the head of personnel, and behold directly to the captain.
-			<br/>
-			<br/>Following the QM is the Command Secretary (Formerly known as Head of Personnel, sometimes called the Executive Officer), while technically the lowest head, they can operate just below the captain during a crisis if delegated to.
-			<br/>
-			<hr/>In the unlikely event where there is no head authority on the station, individuals of each department take charge based on seniority and experience, as follows.
-			<br/>Command Secretary, Medical, Security, Engineering, Research, Cargo, Civilian (To include IAAs), Guests.
-			<br/>The lowest ranking in the chain of command is the station AI. The station AI has no authority, and can never give orders to any non-synthetic crew, regardless of its laws. Synthetic crew and cyborgs fall under the station AI."}
-
 /datum/sop_entry/stationlaw
 	title = "Station Law"
 	author = "E-Shui Official"
@@ -356,6 +289,48 @@
 			<br/>
 			<br/>Violation of Injunction:  To violate the terms of any injunction made by security staff, command staff, or any other legal authority.  Minimum sentence:  10 minutes brig, 400 Thalers."}
 
+/datum/sop_entry/escalation
+	title = "Escalation of Force, and Condition Codes"
+	author = "E-Shui Official"
+	body = 	{"<b>General Rulings</b>: The station's condition code must be set to the lowest level necessary for station operations and current threat. In order: Green > Yellow > Blue > Orange > Violet > Red > Delta. The condition code should be elevated as quickly as possible upon discovery of the station threat, and must be lowered immediately upon resolution of the station threat.
+			<br>Body armor is not to be worn by non-security personnel, and weapons are not to be carried by non-security personnel without a permit. Crew with an authorized weapon and permit are not allowed to conceal their weapon, and must carry it openly.
+			<br>To conserve station resources, equipment should be returned to the department in appropriate storage locations immediately when it is no longer required for the task. Failure to return equipment is considered theft of station property.
+			<br>Condition codes are separated into Low Level, Moderate Level, and Severe. These severities define legal recourse for disobeying orders under specific levels and provide a guide for understanding severity of the situation.
+			<br>In all situations, the Captain is the highest authority on station, this does not extend to acting captains of the station or the Head of Personnel. The captain should have trust in their heads of staff to manage a crisis they may be in charge of: Such as the CMO in condition Violet, or the HoS in conditions Blue or higher. Although the captain, and captain alone, retain responsibility and ability to override any other command staff at any time.
+			<hr/><b><center>Low Level Threats.</center></b>
+			<br/>
+			<center><b>Green:</b></center>
+			<br>Security must declare the reason for an arrest to the suspect, along with the reason for the arrest. Security may not use force until suspects are fleeing, or openly hostile. Every attempt to peacefully subdue a suspect must be made by security personnel. Security may only use nonlethals, such as tazers, batons, rubber bullets, and pepper spray. No non-security crew may attempt "civilian arrests." Security may not access the Blue or Red armory. Security may not place barricades, use door braces, or otherwise impede access to the station.
+			<br>Department crew are not to wear hardsuits, soft suits, or rigs unless actively venturing outside, or into hazardous atmospheric conditions. Crew wearing aforementioned equipment without reason is in violation of 'Misuse of Company Equipment', and subject to search and seizure. Any crew wearing any hardsuits, rigs, or soft suits should be questioned by security, but not immediately arrested.
+			<br/>
+			<center><b>Yellow:</b></center>
+			<br>Security does not have to announce, or give reason for an arrest until after incarceration. Security may only use force as necessary to subdue existing threats. Security may use any resources found within the Green Armory as needed, to include door bracing suspected areas. Braces must be removed after the situation is resolved. Non-security crew may attempt "civilian arrests" with nonlethal force only, and only for suspects in a department they are not a part of, and only while the arresting crew member is a part of that department. The Warden or the Head of Security may temporarily "deputize" crew members to assist in security matters, counting them as security personnel for the duration of the threat. Security may not access the Blue or Red armory.
+			<br>Department crew are not to wear hardsuits, soft suits, or rigs without approval from security to aid in the current station threat. Crew wearing hardsuits, softsuits, or rigs under code Yellow without approval are to be stopped and questioned, as it is considered suspicious activity. Security should verify that if a Hardsuit or Rig does not match department with the crew wearing it, security should immediately arrest and charge the suspect with confirmed theft of station equipment.
+			<br>Non-security crew are not to wear body armor under any circumstance.
+			<hr/><b><center>Moderate Level Threats.</center></b>
+			<br/>
+			<center><b>Blue:</b></center>
+			<br>Security does not have to announce arrests, and does not have to provide reasoning until after the situation is resolved. Security is allowed to use any equipment located in the Blue armory to subdue the station threat. Departments are encouraged to lock down to mitigate access to station threats, unless remaining open is required by security to subdue the station threat. Chain of Command is adjusted to place Security Officers above all crew except for the Captain.
+			<br>Hardsuits, and rigs are not to be worn by any station crew except security, and approved medical staff for paramedic reasons. Soft suits are authorized to be worn at medical or security discretion. All other crew wearing aforementioned gear or armor, are to be immediately counted as a threat to the station and neutralized.
+			<br>All infractions of corporate law are increased severity: Non-security crew wearing armor, possessing weaponry, hacking into departments, etc without authorization, are to be considered active sabotage against the station, and security should neutralize the threats immediately.
+			<center><b>Violet:</b></center>
+			<br>Security operates as though under condition Blue. Medical staff is considered station authority, The Chief Medical Officer takes temporary charge of the station until the situation is resolved to a lesser status. All departments are encouraged to lock down, unless remaining open is required by medical staff. Triage facilities must be established in a safe area, decided by medical staff. Security is to aid in evacuating crew to safe Triage locations and ensuring compliance with medical crew with all necessary force warranting a code Blue event. Chain of command is adjusted to place Medical staff above all crew except for the captain.
+			<br>Hardsuits and rigs are recommended to be worn by medical staff. And are not to be worn by any other station crew without approval from medical command. Soft suits are authorized to be worn by crew at medical discretion. All other crew wearing aforementioned gear or armor, are to be immediately arrested and questioned.
+			<br/>
+			<center><b>Orange:</b></center>
+			<br>Security operates as though under condition Blue. Engineering staff is considered to be station authority, the Chief Engineer assumes temporary charge of the station until the situation is resolved to a lesser status. All departments are encouraged to lock down, unless remaining open is required by engineering staff. All non-engineering crew are to report to a designated safe area to avoid further damage, risk of injury, or impedance of repair operations. Chain of command is adjusted to place Engineering staff above all crew except for the captain.
+			<br>Hardsuits, and rigs are recommended to be worn by engineering staff. And are not to be worn by any other station crew without approval from engineering command. Soft suits are authorized to be worn by crew at medical or engineering discretion. All other crew wearing aforementioned gear or armor, are to be immediately arrested and questioned.
+			<hr/><b><center>Severe Level Threats.</center></b>
+			<br/>
+			<center><b>Red:</b></center>
+			<br>Security is authorized immediate lethal force to any threat to the station or terraformer, and should not make arrests. Security is authorized any equipment in the Red Armory. Equipment must be returned at the end of the Red-level event. All departments must lock down unless security access, or evacuation, is needed in to or out of the department. All crew must muster to a safe Triage location decided by Medical and Security, and shelter in place until the event has passed, or evacuation is initiated.
+			<br>Hard suits and Rigs are not to be worn by: non-security crew, the captain, or heads of staff unless authorized by security forces. Soft suits are to be handed out and worn at medical or security discretion. Non-authorized crew wearing a hard suit or a rig are shoot-on-sight as they may be assisting the threat to the station.
+			<br>Non-security crew wearing body armor of any kind are to be considered part of the direct threat to the station and shot on sight.
+			<br/>
+			<center><b>Delta:</b></center>
+			<br>Security is authorized immediate lethal force to any threat to evacuation efforts. Medical is to oversee evacuation efforts. All other crew are to proceed to muster locations or evacuation points immediately. Failure to obey any order from Security or Medical is considered a threat to crew survival, and is to be met with Red-Level force to neutralize the threat to crew survival.
+			<br>Hard suits and rigs are not to be worn by non-security crew unless previously authorized. Soft suits are to be worn by all crew as necessary to make it to evacuation points.
+			<br>Non-security crew wearing body armor of any kind are to be considered impeding evacuation efforts and shot on sight. The Warden and Head of Security are no longer able to 'deputize' crew members, and any previously 'deputized' crew are grandfathered into remaining security, but may only assist in evacuation and may not give orders. 'Deputized' crew are for peacekeeping and enforcing security's will only."}
 
 /datum/sop_entry/contraband
 	title = "Station Contraband"
@@ -453,10 +428,33 @@
 			<br/>Civilian roles include: Chaplain, librarian, visitors, residents, lawyers, IAAs, or any other role that does not belong to any prior listed department. Civilian positions are not authorized any additional equipment. Possession of a tool belt, gloves, flash-proof glasses, or any other visible department equipment is grounds for immediate search and seizure under contraband SoP found in SOP document; Station Law.
 			<br/>The radio listening outpost is authorized 1 serialized bolt-action rifle, with one box of hunting rounds for self-defense against hostile wildlife and the defense of the listening outpost and telecommunications. This rifle is not to leave the listening outpost premises, and is grounds for immediate felonious arrest if located on station property. Any damage or injury to the station or crew from long-range fire is considered an act of sabotage and to be treated as a red-level threat."}
 
+/datum/sop_entry/chain_of_command
+	title = "Chain of Command"
+	author = "E-Shui Official"
+	body = 	{"Through either the natures of a frontier world, crew death, crew departure, or otherwise, you will invariably not have a fully staffed crew. This is where the Chain of Command comes into play, everyone has a boss, and almost everyone has someone under them. Knowing who your boss is at any given moment is critical.
+			<br/>From the top, the head authority is Central Command, you will rarely engage with CC directly, things have gone horribly wrong if so. CC reports to E-Shui Main.
+			<br/>
+			<br/>The Captain of the station, sometimes called the Colony Director, is the highest authority on the station. However, there is an exception for the CMO being a higher authority for determining the health of the captain.
+			<br/>
+			<br/>The Chief Medical Officer is the second highest command of the station, following the lack of a CD, the CMO is responsible for the safety and wellfare of the entire station.
+			<br/>
+			<br/>Following the CMO is the Head of Security, who is responsible for the security of the station. Depending on alert status, the HoS may take authority over the CMO.
+			<br/>
+			<br/>Following HoS is the Chief Engineer, who is responsible for the maintenance and function of all station functions, as well as assembling evacuation points, and assisting in recovery efforts as needed.
+			<br/>
+			<br/>Following the CE is the Research Director, who is in charge of the research wing.
+			<br/>
+			<br/>Following the RD is the Quartermaster, who is in charge of the supplies of the station. Despite confusion, the QM and cargo are a separate department that is not under the control of the head of personnel, and behold directly to the captain.
+			<br/>
+			<br/>Following the QM is the Command Secretary (Formerly known as Head of Personnel, sometimes called the Executive Officer), while technically the lowest head, they can operate just below the captain during a crisis if delegated to.
+			<br/>
+			<hr/>In the unlikely event where there is no head authority on the station, individuals of each department take charge based on seniority and experience, as follows.
+			<br/>Command Secretary, Medical, Security, Engineering, Research, Cargo, Civilian (To include IAAs), Guests.
+			<br/>The lowest ranking in the chain of command is the station AI. The station AI has no authority, and can never give orders to any non-synthetic crew, regardless of its laws. Synthetic crew and cyborgs fall under the station AI."}
 
 /datum/sop_entry/secguide
 	title = "A Guide to Security and Armor Choice"
-	author = "Head of Security, Janik Vam"
+	author = "Head of Security, Janik Blackscale"
 	body = 	{"Central said my last document wasnt 'professional' enough and came across too rude on new officers, so we'll try this again.
 			<br/ Security work is hard, and gear equipment is essential to understand to not overburden yourself and drain security resources. Below will cover armor types and loadout expectations
 			<hr/>
@@ -775,6 +773,182 @@
 			<br><b>E-Shui Medal of Heroism:</b> A golden star awarded to crew members for acts of incredible heroism during a combat situation, depicting a long star 'tear drop', with a red crest, and a green, gold, and silver ribbon. It is not exclusive to security, however must be earned during an active role during a combat situation, beyond that of normal station wildlife.
 			<br>
 			<br><b>E-Shui Medal of Exceptional Heroism:</b> A golden medal awarded for only the most distinguished actions, depicting the portrait of an individual, with a red, gold, and blue ribbon. It is the highest honor that any individual can achieve, and as such, is the rarest award found on any E-Shui station."}
+/*
+/datum/sop_entry/xenoarch
+	title = "Guide to Xenoarcheology"
+	Author = "Diana Kuznetsova"
+	body = {"<center><b>E-Shui Xenoarcheological Studies and Research Field Guide</b>
+			<br><b><u>Xenoarcheology, Anomalies, and You</u></b> </center>
+			<br>
+			<br><b>A letter to any aspiring xenoarcheologist</b>:
+			<br>Xenoarcheology is an inherently dangerous, ever-changing field with numerous lost relics and artifacts that can be found.
+			<br>While some relics may be beneficial and others mundane, some can be <b>highly</b> lethal for both organics and synthetics alike!
+			<br>
+			<br>Due to the ever-changing nature of this field and frequent word-of-mouth education, we have written this guide in order to protect you, the station, and most importantly: Our Terraformer.
+			<br><hr><center><b>Equipment</b></center>
+			<br><b>Mandatory Equipment:</b>
+			<br>Eyewear - Meson Scanners
+			<br><small> Allows for visualization of artifacts, which often appear as large brown deposits with white streaks through them. </small>
+			<br>Hand Equipment - Pickaxe
+			<br><small> Allows for reaching artifact deposit sites.</small>
+			<br>
+			<br><b>Specialty / Critical Equipment:</b>
+			<br>
+			<br>Alden-Saraspova Counter (ASC)
+			<br><small> Allows for pinpointing the site of artifacts.
+			<br>Upon use, it will output a string that appears like such:
+			<br>Large artifact energy signature detected on wavelength '%IDENTIFIER' in a radius of %DISTANCE; small anomaly detected in a radius of %DISTANCE
+			<br>Pinpointing an artifact can be performed by scanning, seeing what the distance reads, then moving to the North, South, East, or West for a few meters and re-scanning.
+			<br>This distance has a detection variation of +/- 2m
+			<br>
+			<br>USAGE:
+			<br>If the number goes up (further away), go in the opposite direction.
+			<br>If the number stays the same, it means that the artifact has a greater pull in another direction (If staying the same when going East/West, the artifact has a greater pull towards the North/South, for example.
+			<br>
+			<br>Depth Analysis Scanner (DAS)
+			<br><small> Allows for scanning artifact deposits to learn the artifact type and depth.
+			<br>
+			<br>USAGE:
+			<br>To use, simply scan a deposit with the scanner and then look at the display, where it will output four lines of information:
+			<br>Time: What time the scan was taken
+			<br>Coords<sic>: Where the anomaly deposit was at when scanned.
+			<br>Anomaly Depth: How far down the anomaly is.
+			<br>Anomaly Material: What type of energy signature the anomaly is off-putting.
+			<br>
+			<br>NOTES:
+			<br>While Material is useful, Depth is the most essential part.
+			<br>If there are multiple artifacts in one deposit, every artifact onward is already excavated as far as you have dug.
+			<br>(I.e, artifact 1: 50, artifact 2: 100. You have dug to 50. You only need to dig 50mm more to unearth artifact 2)
+			<br>If there is a large artifact in the deposit, upon excavating all small artifacts, the depth scanner will read 'ERROR' for depth. This means that after excavating the deposit to >200 mm, rocky debris will be left behind, which must be further excavated with a hand pick or a excavation pick.
+			<br>(This large artifact is sealed from the outside world until excavated, in which it may activate.)</small>
+			<br>
+			<br>Excavation Pick Set & Hand Pickaxe
+			<br><small> Allows for carefully excavating artifacts.
+			<br>Digging too deep or not using picks will result in their potential destruction or improper excavation.
+			<br>
+			<br>USAGE:
+			<br>Look at the Anomaly Depth given to you by the Depth Analysis Scanner
+			<br>Select the appropriate picks to dig to <b>EXACTLY</b> that depth.
+			<br>For reference:
+			<br>Brush 1, Red 2, orange 4, yellow 6, olive 8, blue 10, purple 12. (For color blind individuals look at the length/notches on the shaft of the excavation picks)
+			<br>Hand Pickaxe: 30 mm</small>
+			<br>
+			<br><b>Supplementary Equipment:</b>
+			<br>Xenoarcheology Multitool
+			<br><small>Works as the Alden-Saraspova counter, Depth Analysis Scanner, and Measuring Tape all in one tool.</small>
+			<br>
+			<br>Excavation Drill
+			<br><small>Replaces the Excavation Pick Set & Hand Pickaxe. Can dig from 1 to 60 mm in one go.</small>
+			<br>
+			<br>Measuring Tape
+			<br><small>Allows seeing how far your current excavation is.</small>
+			<br>
+			<br>Core Sampler
+			<br><small>Useless. Do not bother with it.</small>
+			<br>
+			<br>Locator Device + Tracking Beacon
+			<br><small>Tracking beacon can be set to a frequency, placed on a table, and the Locator can then be set to the same frequency. Tell the locator to 'search' for the device and place it down some ways away from the tracking beacon and they will pair, allowing the tracking beacon to be located at all times.
+			<br>NOTES:
+			<br>Do not place the tracking beacon and locator too close while searching, otherwise they will be incapable of linking.
+			<br>The tracking beacon allows individuals to teleport to the beacon via the station's many teleporters.</small>
+			<br>
+			<br>GPS
+			<br><small>Make sure to activate it and give it a unique identifier, such as your name.</small>
+			<br>
+			<br>Excavation Suit + Excavation Hood
+			<br><small>A pressure sealed suit for excavating in locations that lack or have a hostile atmosphere. Lined with asbestos and lead, rendering it radiation immune.</small>
+			<br>
+			<br>Anomaly Hood + Anomaly Suit + Latex Gloves + goggles
+			<br><small>Allows for examining and interacting with anomalies, lowering the chance of negative effects.
+			<br>NOTE: Does not block EMPs emitted from artifacts.
+			<br>: A properly fitted gasmask and internals are suggested for crew that need to breathe.</small>
+			<br>
+			<br>Suspension Field Generator
+			<br><small>Can be pulled along and wrenched down. Upon turning on, will place whatever entity is directly in front of it in stasis. Recommended for extremely skilled archeologists only.</small>
+			<br>
+			<br>Sample Container
+			<br>small>Allows storing small artifacts found in an orderly fashion.</small>
+			<br>
+			<br>Anomaly Container
+			<br><small>Allows safe storage and transport of an anomaly. These are large cases held in a secondary storage room.
+			<br>This lead lined container will hold an artifact inside, indefinitely preventing its effects.</small>
+			<br>
+			<br><hr><center><b>Machinery</b></center>
+			<br>Anomaly Analyzer
+			<br><small>When next to an Anomaly Scanner Pad, can be used to analyze an anomaly on the Scanner Pad. This will give triggering factors and information as to the effects of the anomaly. More detail will be listed in the 'Artifact Identification' and 'Artifact Activation' sections of this document.</small>
+			<br>
+			<br>Exotic Particle Harvester
+			<br><small>When next to an Anomaly Scanner Pad with an anomaly on the Scanner Pad, can be used to extract the energy of an artifact into a Anomaly power battery.</small>
+			<br><hr><center><b>Artifact Identification</b>
+			<br></center>
+			<br> can be identified in a plethora of ways, ranging from the coloration and 'look' of their effect to the artifact shape and form itself.
+			<br>Artifacts that have the same effect have been noted to have the same energy appearance, such as sparkles, or a blue sphere around it for example. Memorizing the artifact
+			<br>
+			<br>Some smaller artifacts may be seemingly meaningless trinkets and baubles such as coins, but may also contain energetic effects, such as off-putting EMP waves, allowing resurrection of dead subjects, or creation of entirely new entities.
+			<br>
+			<br>Additionally, artifacts can vary even with the same effect. Some will only cause an effect it touched, nearby, or on a multi kilometer basis.
+			<br>Needless to say, if an artifact has the ability to effect the entire outpost with hostile effects, it should be quickly placed into an Anomaly Container for storage and safety.
+			<br>
+			<br>NOTE: Artifacts can multiple anomalous effects at once.
+			<br><hr><center><b>Artifact Activation</b></center>
+			<br>After scanning the artifact in the Anomaly Analyzer, it will note down some potential activators for the artifact. For quick reference, the potential activators will be noted here as well.
+			<br>
+			<br>Physical Interaction: Simply touch the artifact with ungloved hands.
+			<br>
+			<br>Chemical Interaction: Involves splashing a specific reagent onto the artifact via a beaker. Involves four subsections:
+			<br><small>Water: Hydrogen or Water
+			<br>Acid: Sulfuric Acid or Diethylamine
+			<br>Volatile: Thermite, Hydrophoron, Phoron
+			<br>Toxic: Any toxins, such as liquid lead.</small>
+			<br>
+			<br>Forceful or Energetic Interaction:
+			<br>If it is energetic, a multitool, stun baton, energy blade, or an energy beam can activate it.
+			<br>If it is forceful, a strong blow with something such as a full sized fire extinguisher or other strong object can activate it.
+			<br>
+			<br>Precise Temperature Conditions:
+			<br>If it is triggered by heat, a lit welder can activate it. Alternatively, an atmosphere above 375K can activate it.
+			<br>If it is triggered by cold, the surrounding air must be cooled below 225K for the artifact to activate.
+			<br><hr><center><b>Artifact Harvesting</b></center>
+			<br>In order to harvest an artifact, the artifact must be placed on the Anomaly Scanner Pad next to an Exotic Particle Harvester.
+			<br>Afterwards, an Anomaly power battery must be placed inside the Exotic Particle Harvester. Upon telling the harvester to activate, it will scan the artifact and note down any energy signals it detects and give the best approximation of what effect the energy signal creates.
+			<br>Selecting this signal will then harvest the energy into the battery.
+			<br>This battery can, once full, be removed from the artifact and placed in an Anomaly power utilizer. From here, the duration between energy pulses and the duration the utilizer will work for. This can be used only a limited amount of times before having to be recharged. Research can yield greater battery sizes.
+			<br>
+			<br><hr><center><b>Quick Reference / How to Excavate</b>
+			<br>
+			<br>Step 0: Obtain a mind and body backup. Retrieve a 'Death Alarm Implant' from Medical. If extreme safety is desired, perform step 6.5 now.
+			<br>
+			<br>Step 1: Grab a belt, mesons, and pickaxe.
+			<br>
+			<br>Step 2: Put the following in your belt: GPS (After activating it), Alden-Saraspova Counter (ASC), Depth Analysis Scanner (DAS), Excavation Pick Set & Hand Pickaxe.
+			<br>
+			<br>Step 3: Go outside to an appropriate location and scan with your ASC. Go in various directions until the number on the ASC is becoming smaller and you see a brown deposit  with white streaks in it. Go over towards it.
+			<br>Step 4: Use your DAS on the deposit and examine the depth. Proceed to use your Excavation Pick Set to perfectly excavate the artifact to that exact depth.
+			<br>
+			<br>Step 5: An artifact (small) will be excavated. Continue to excavate until the DAS reads no more signatures, or until it reads 'ERROR' in which case dig >200mm and then dig the rocky debris up.
+			<br>
+			<br>Step 6: Bring your finds back to the Anomaly lab.
+			<br>
+			<br>Step 6.5: Put on an Anomaly Suit, Anomaly Hood, Latex Gloves, Gas Mask w/ Oxygen Tank attached, and goggles. (If not already done in Step 0)
+			<br>
+			<br>Step 7: Place the artifact in the Artifact Analyzer and scan it. Reference the 'Artifact Activation' on how to activate it given what the paper reads.
+			<br>
+			<br>Step 7.5: Harvest it with the harvester, if desired.
+			<br>
+			<br>Step 8: Place the artifact in a safe location while deactivated, or in an Anomaly Container if deactivation is unable to be performed.
+			<br>
+			<br></center>
+			<br>
+			<br><hr><small><i>
+			<br>This field guide and all attached documents are intended only for E-Shui contracted employees and may contain confidential information. Any unauthorized disclosure is strictly prohibited.
+			<br>
+			<br>The information provided in this document does not guarantee safety or protection even if all steps are performed. E-Shui does not take any responsibility for accidents that occur while using this handbook or utilizing any information held within this handbook.
+			<br>
+			<br>Excavated finds can and have activated at random, resulting in effects such as: Irreversible Genetic Mutations, EMP explosions, Terrain Annihilation, Ego Death, Hivemind Assimilation, Robotic Transformation, Immolation, Asphyxiation, Perpetual Sleep, Hallucinations, Belief in the Supernatural, Spontaneous Magnetism, Spontaneous Evisceration, Resurrection, Bluespace Re-translocation, Radiation sickness, among others.
+			<br>
+			<br>Information has been reviewed and found to be up to date as of 2569-09-29
+			<br></i></small>"}
+*/ //Temp commented until Diana fixes it
 
 /datum/sop_entry/fragords
 	title = "Fragmentary Orders"
