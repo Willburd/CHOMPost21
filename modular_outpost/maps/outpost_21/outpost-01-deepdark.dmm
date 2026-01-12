@@ -1592,7 +1592,7 @@
 /area/muriki/crew/bunker_deep/eng)
 "adt" = (
 /obj/effect/step_trigger/dephase_shadekin,
-/obj/machinery/porta_turret/stationary,
+/obj/machinery/porta_turret/heavy,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/muriki/crew/bunker_deep/eng)
 "adu" = (
@@ -2544,6 +2544,11 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/muriki/crew/bunker_deep/main)
+"agg" = (
+/obj/effect/step_trigger/dephase_shadekin,
+/obj/machinery/porta_turret/heavy/lmg,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/muriki/crew/bunker_deep/eng)
 "amr" = (
 /obj/effect/map_effect/interval/atmogland/bodyheat,
 /obj/effect/mist,
@@ -59555,7 +59560,7 @@ afi
 ads
 ads
 ads
-adt
+agg
 gNY
 tWu
 tWu
@@ -60027,7 +60032,7 @@ tWu
 tWu
 qyX
 gNY
-adt
+agg
 ads
 ads
 ads
@@ -61175,7 +61180,7 @@ aay
 aay
 aay
 aap
-adt
+agg
 ads
 gNY
 gNY
@@ -64077,7 +64082,7 @@ tWu
 tWu
 tWu
 gNY
-adt
+agg
 ads
 ads
 afi
@@ -64092,7 +64097,7 @@ adu
 afi
 afO
 ads
-adt
+agg
 gNY
 gNY
 tWu
