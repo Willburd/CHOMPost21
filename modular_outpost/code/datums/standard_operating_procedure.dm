@@ -20,7 +20,9 @@
 			<hr/>
 			<center><b>Rescue Operations</center></b>
 			<br/>Medical are required to rescue crew members, and crew member corpses that are located outside, or in the river. For the purposes of Triage; crew members outside that are alive are counted as Immediate. Crew members outside that are deceased, or that are located in the River, are counted as Expectant.
-			<br/>Crew members located within the Terraformer are to be rescued at safe opportunity, and are counted as Delayed, regardless of injury status. Crew members located within the Gizzard, or atmospheric glands of the Terraformer are not to be retrieved."}
+			<br/>Crew members located within the Terraformer are to be rescued at safe opportunity, and are counted as Delayed, regardless of injury status. Crew members located within the Gizzard, or atmospheric glands of the Terraformer are not to be retrieved.
+			<br>
+			<center><logo></center> "}
 
 /datum/sop_entry/expectations
 	title = "Crew Expectations"
