@@ -134,8 +134,8 @@
 
 	// Outpost 21 edit begin - Eshui ranks
 	if(LAZYLEN(ranks_items))
-		for(var/obj/item/clothing/accessory/rank_eshui/rank in ranks_items)
-			msg += "[p_They()] [p_have()] the rank of [span_underline(span_bold(rank.name))]."
+		for(var/obj/item/clothing/accessory/rank_eshui/pin in ranks_items)
+			msg += "[p_They()] [p_have()] the rank of [span_underline(span_bold(pin.rank))]."
 	// Outpost 21 edit end
 
 	//suit/armour
