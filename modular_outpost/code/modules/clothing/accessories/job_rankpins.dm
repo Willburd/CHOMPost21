@@ -71,7 +71,7 @@
 
 /obj/item/clothing/accessory/rank_eshui/warrant3
 	name = "\improper (WO-3) Senior Warrant Officer"
-	desc = "A small strip of cloth denoting the rank of WO-3, Senior Warrant Officer. Incredibly specialized individuals, whos knowledge and expertice of their field shouldn't be understated."
+	desc = "A small strip of cloth denoting the rank of WO-3, Senior Warrant Officer. Incredibly specialized individuals, whos knowledge and expertise of their field shouldn't be understated."
 	icon = 'modular_outpost/icons/inventory/accessory/item.dmi'
 	icon_state = "rank_wo3"
 
