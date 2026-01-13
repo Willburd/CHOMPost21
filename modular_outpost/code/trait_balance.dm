@@ -30,6 +30,9 @@
 
 /datum/trait/positive/photosynth
 	cost = 1 //Base: 3. Can't get fat, kinda doodoo overall. It's fine.
+	is_genetrait = TRUE
+	activation_message="You feel reinvigorated in the light."
+	primitive_expression_messages = list("stands in the light.")
 
 /datum/trait/positive/trauma_tolerance
 	cost = 3 //Base 2: Grit is REALLY strong, and hyper abusable if you use it right.
