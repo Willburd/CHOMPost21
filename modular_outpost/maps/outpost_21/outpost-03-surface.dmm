@@ -43497,6 +43497,81 @@
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/item/mail/envelope{
+	pixel_y = 16
+	},
+/obj/item/mail/envelope{
+	pixel_y = 16
+	},
+/obj/item/mail/envelope{
+	pixel_y = 16
+	},
+/obj/item/mail/envelope{
+	pixel_y = 16
+	},
+/obj/item/mail/envelope{
+	pixel_y = 16
+	},
+/obj/item/mail/envelope{
+	pixel_y = 16
+	},
+/obj/item/mail/envelope{
+	pixel_y = 16
+	},
+/obj/item/mail/envelope{
+	pixel_y = 16
+	},
+/obj/item/mail/envelope{
+	pixel_y = 16
+	},
+/obj/item/mail/envelope{
+	pixel_y = 16
+	},
+/obj/item/mail/envelope{
+	pixel_y = 16
+	},
+/obj/item/mail/envelope{
+	pixel_y = 16
+	},
+/obj/item/mail/envelope{
+	pixel_y = 16
+	},
+/obj/item/mail/envelope{
+	pixel_y = 16
+	},
+/obj/item/mail/envelope{
+	pixel_y = 16
+	},
+/obj/item/mail/envelope{
+	pixel_y = 16
+	},
+/obj/item/mail/envelope{
+	pixel_y = 16
+	},
+/obj/item/mail/envelope{
+	pixel_y = 16
+	},
+/obj/item/mail/envelope{
+	pixel_y = 16
+	},
+/obj/item/mail/envelope{
+	pixel_y = 16
+	},
+/obj/item/mail/envelope{
+	pixel_y = 16
+	},
+/obj/item/mail/envelope{
+	pixel_y = 16
+	},
+/obj/item/mail/envelope{
+	pixel_y = 16
+	},
+/obj/item/mail/envelope{
+	pixel_y = 16
+	},
+/obj/item/mail/envelope{
+	pixel_y = 16
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/security/secmail)
 "kit" = (
@@ -53840,6 +53915,28 @@
 	pixel_x = -30;
 	pixel_y = 9
 	},
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/structure/table/steel,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
 /turf/simulated/floor/tiled/techfloor,
 /area/rnd/research/mailing)
 "ntb" = (
@@ -60487,6 +60584,34 @@
 "pEF" = (
 /obj/structure/closet/crate,
 /obj/effect/floor_decal/milspec/cargo,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
 /turf/simulated/floor/tiled/milspec,
 /area/quartermaster/warehouse)
 "pEH" = (
