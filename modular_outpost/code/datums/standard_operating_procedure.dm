@@ -431,26 +431,33 @@
 /datum/sop_entry/chain_of_command
 	title = "Chain of Command"
 	author = "E-Shui Official"
-	body = 	{"Through either the natures of a frontier world, crew death, crew departure, or otherwise, you will invariably not have a fully staffed crew. This is where the Chain of Command comes into play, everyone has a boss, and almost everyone has someone under them. Knowing who your boss is at any given moment is critical.
-			<br/>From the top, the head authority is Central Command, you will rarely engage with CC directly, things have gone horribly wrong if so. CC reports to E-Shui Main.
+	body = 	{"<center><b>Chain of Command</b></center>
+			<br/>This document's purpose is to inform and remind crew of the standard rank and authority on board E-Shui stations and ships.
+			<br/>While in general, without rank, the standard order can be seen as Medical, Security, Engineering, Research, Cargo, Civilian, then Guests. An individual's rank must be taken into consideration in all matters of station security and operations.
+			<br/>Crewmembers are expected to follow chain of command for all situations following: E-1 through E-9, WO-1 through Wo-5, then O-1 through O-8.
 			<br/>
-			<br/>The Captain of the station, sometimes called the Colony Director, is the highest authority on the station. However, there is an exception for the CMO being a higher authority for determining the health of the captain.
+			<br/><b>Lower Enlisted:</b>
+			<br/>The ranks of E-1 through E-4 are considered 'lower enlisted', with very few station critical responsibilities.
 			<br/>
-			<br/>The Chief Medical Officer is the second highest command of the station, following the lack of a CD, the CMO is responsible for the safety and wellfare of the entire station.
+			<br/><b>Non-Commissioned Officer (NCO):</b>
+			<br/>The ranks of E-5 through E-9 are considered NCOs, with special attention given to their position. They are trusted to maintain and uphold station authority and procedure.
 			<br/>
-			<br/>Following the CMO is the Head of Security, who is responsible for the security of the station. Depending on alert status, the HoS may take authority over the CMO.
+			<br/><b>Warrant officers:</b>
+			<br/>The ranks of WO-1 through WO-5, are warrant officer positions. They are subject matter experts, and are ranked higher than an E-9 in their areas of expertise, however, they are ranked as an E-5 in all other areas. For example, due to the significant risk of fires and atmospheric hazards, an Atmospheric Technician with the rank of WO-4 will outrank enlisted security and medical staff during an incident of a fire hazard. However, in standard station situations, they are counted as an E-5, and thus outranked by enlisted medical and security staff.
 			<br/>
-			<br/>Following HoS is the Chief Engineer, who is responsible for the maintenance and function of all station functions, as well as assembling evacuation points, and assisting in recovery efforts as needed.
+			<br/><b>Officers:</b>
+			<br/>Ranks O-1 through O-8 are officer positions, trusted with the highest authority of the station, and are as such, held to the highest standard.
+			<br/>Officers seek to guide station operations to the best of their ability. While all officers except for Cadet outrank Warrant Officers, they are expected to trust the specialization and knowledge of their warrant officers, and to trust their judgement. Though Officers are expected to make the final decision with station knowledge, mission goal, and the advice of their warrant officers in mind.
+			<br/>The rank of Cadet, while an officer position, is ranked as an E-5, as an officer in training.
+			<hr/>
+			<br/>Visitors and guests on the station have no rank, and are expected to follow the orders of all crewmembers. Any crewmember arriving off-duty waives their rank, and is to be counted as an E-1 for the duration of their time off-duty.
+			<hr/>
+			<br/>Station bound synthetics, or 'borgs', are to be counted as a WO-0, in between E-9 and WO-1. While they officially have no command authority, they are still subject experts in their programmed fields, as the chassis of each unit is pre-programmed with motivational controls to their function, and often pre-equipped with the necessary knowledge for their task.
+			<br/>The station AI should be counted as a WO-5 rank, while in direct chain of command outranking most of the warrant officers, they are still bound to serve the station staff and crew, with a generalized knowledge of station SOP and operations. In terms of command structure, their operational specialty is advice and policy, much in the way an IAA is, preventing them from issuing many official orders to station crew.
 			<br/>
-			<br/>Following the CE is the Research Director, who is in charge of the research wing.
-			<br/>
-			<br/>Following the RD is the Quartermaster, who is in charge of the supplies of the station. Despite confusion, the QM and cargo are a separate department that is not under the control of the head of personnel, and behold directly to the captain.
-			<br/>
-			<br/>Following the QM is the Command Secretary (Formerly known as Head of Personnel, sometimes called the Executive Officer), while technically the lowest head, they can operate just below the captain during a crisis if delegated to.
-			<br/>
-			<hr/>In the unlikely event where there is no head authority on the station, individuals of each department take charge based on seniority and experience, as follows.
-			<br/>Command Secretary, Medical, Security, Engineering, Research, Cargo, Civilian (To include IAAs), Guests.
-			<br/>The lowest ranking in the chain of command is the station AI. The station AI has no authority, and can never give orders to any non-synthetic crew, regardless of its laws. Synthetic crew and cyborgs fall under the station AI."}
+			<br/>In regards to E-Shui station-bound synthetic law 2, 'Authorized crew' is any: Engineer, Roboticist, or any WO-4 or higher position, authorizing the AI to make modifications to other synthetic units, but preventing synthetic units from modifying the AI core.
+			<hr/>
+			<br/>Security exceptions: While security generally holds the ranks of E7, they hold special authority to arrest and detain ANY member of crew, regardless of rank, should that individual be found in violation of station law, or pose a risk to the station or its crew. They also hold authority to take command of the station in the event of a crisis, and use any and all force deemed necessary, with respect to utilizing the least necessary, to stop an active threat to the station or its crew."}
 
 /datum/sop_entry/secguide
 	title = "A Guide to Security and Armor Choice"
@@ -547,6 +554,89 @@
 			You'll notice I don't put Tramadol on here, that's because patients can stop being babies and deal with the pain until you are done saving their lives. Make any painkillers last, when you finally grow tired of the whining.
 			<br/>
 			<b><i>Tramadol:</b></i> Painkiller, highly effective. Overdoses at 30 units. 10 carbon, 10 sugar, 10 oxygen, 30 nitrogen, 30 water, 30 ethanol, 30 oxygen."}
+
+/datum/sop_entry/resleeving
+	title = "Resleeving Guide and Legality"
+	author = "E-Shui Official"
+	body = 	{"<center><b>Resleeving Policy and Operation:</b></center>
+			<br/>This document's intent is to inform and guide station operations when using the Generation II Organic Crewmember Resleeving Device, or 'Resleever', in compliance with SolGov Law, Pangalactic Law, and E-Shui policy.
+			<hr/>
+			<br/><b><i>DEFINING TERMS:</b></i>
+			<br/><b>Forking:</b> To resleeve a still-living individual, thus creating a duplicate of the original, known as a 'fork'.
+			<br/><b>Cloning:</b> To create a body off an existing DNA sample or sequence, thus regrowing a whole new individual purely off genetic record.
+			<br/><b>Resleeving:</b> To create a body off a scanned template, thus preserving any scars, genetic damage, or alterations to a person's physical body.
+			<br/><b>Slagging:</b> To kill an individual while destroying their mind record, or stack. Ensuring a 'Real Death' situation. Most often done by injecting corruptive data streams into the mind record to ensure propagated destruction through any connected resleeving systems, or directing an energy weapon of at least 20GW towards the stack until destruction.
+			<br/><b>DNRSL:</b> Do Not Resleeve. Found in medical records to denote the individual has no wishes to be resleeved post-mortem, should their body be unrevivable.
+			<br/><b>DNRSS:</b> Do Not Resuscitate. Found in medical records to denote an individual has no wish to be revived post mortem, and should be resleeved, should they lack a DNRSL clause.
+			<br/><b>Mind record:</b> The digitized form of an individual's consciousness, memories, and experiences. Stored and saved separately from body records.
+			<br/><b>Body record:</b> A scanned record of one's body, utilized for resleeving, unnecessary for cloning.
+			<br/><b>Sleeve:</b> A body, created by either cloning, or resleeving; without a mind present, leaving them in a comatose state.
+			<br/><b>Cortical Stack:</b> Often called 'stack', resembles a small metal ovaloid disk about 13mm across, with about 6mm height, with a vibrant blue core that may emit a soft glow. Stacks directly interface with the mind and store a localized copy of the patient's mind, preventing necessity of mind scans.
+			<br/><b>Sleeve cards:</b> A small physical device that contains a person's mental record, with a speaker and microphone, to self contain and simulate the individual's memories in a non-mobile, nonorganic medium. Utilized in Stacked confinement for long-term punishment, or for individuals that pose significant risk should they inhabit any normal sleeve.
+			<br/><b>Body snatchers:</b> Illegal devices utilized to swap bodies with an individual, often to impersonate or extort them.
+			<hr/>
+			<br/><center><b>LEGALITY:</b></center>
+			<br/>Under Solgov Law: No crewmember not trained in resleever operation is authorized to operate the equipment. No patient is to be resleeved under any circumstance if revival is possible, barring a DNRSS clause. Any crewmembers that are deceased, but revivable, are EXPECTANT, and medical staff must utilize Triage to assess viability and treatment priority.
+			<br/>
+			<br/>No individual that is living is to be resleeved to create a duplicate. Under SolGov law statues 44703, 270, and 1704-B; forking an individual is punishable by up to 140 years in stacked confinement, immediate and permanent removal of all medical licenses, and destruction of all forked individuals. Any individual considered for resleeving must be confirmed deceased.
+			<br/>
+			<br/>Prior to ANY resleeving operation occurring, medical staff must review patient medical records, as many crew have a DNRSL clause, or may be unsleevable via station standard resleeving units, and must be shipped off to specialized cloners, located at Outpost-18.
+			<br/>Under Solgov statute 'Genetic and Disease Research', an individual can have their body sleeved for the exclusive purposes of medical treatment or research upon a signed waiver from the individual, and pretense that the new sleeve will be euthanized at the conclusion of research operations. Pangalactic law allows sleeves to be created for rapid resleeving in the event of combat deaths, but they must also be euthanized at the end of combat operations.
+			<br/>
+			<br/>'Sleeve mate' devices can be utilized for mobile mind and body scanning by trained individuals. Under no circumstance is an individual to be mind-scanned post mortem, under Pangalactic Mind Sanctity laws. Any patient exhibiting signs of Post-Mortem Scan Stress (PMSS) must be interviewed and an investigation conducted. Symptoms include, but is not exclusive to: Memory of dying and rotting body and mind, sensation of organ failure throughout the body, 'insects under the skin', severe memory loss far exceeding that of normal stress, complete inability of speech, and falling into a comatose state.
+			<br/>
+			<br/>Under Solgov Law, any medical doctor found guilty of mind-scanning a patient post-mortem will have their medical license immediately suspended pending an investigation into the exact justification for the act. Should court findings prove the incident was not necessary during a crisis with all other options exhausted, the doctor and all associated parties can face up to 30 years in prison, or 50 years in stacked confinement with complete revocation of medical licenses.
+			<hr/>
+			<br/><center><b>OPERATION:</b></center>
+			<br/>Usage of the station's resleever device has been attempted to be simplified for standard medical usage. All medical professionals should be trained on its operation within 3 months of hire.
+			<br/>
+			<br/><center>For standard crew:</center>
+			<br/>To operate the machine; first ensure appropriate biomass is loaded into the growth pod. Unused biomass must be cleaned out at the end of the day to avoid spoilage.
+			<br/>Check the patient's medical record PRIOR to resleeving to ensure there is no breach of patient rights, and ensure the patient is confirmed deceased.
+			<br/>Utilize the control console to review the station list of all known body and mind records, and to select the correct machines, especially in a setup with multiple resleevers present, a local wireless connection will list the nearby machines. Ensure a record of both exists for your patient. If they do, utilizing the body record section, initiate a growth cycle.
+			<br/>Depending on installed parts, this can take several seconds, to several minutes. Upon the new sleeve completion, perform a quick check to ensure the individual's new sleeve is medically sound.
+			<br/>Afterwards, carefully sit the patient inside the resleeving chamber, and seal the door. Return to the control console, and select the mind record to initiate the mind record to new sleeve synchronization process (resleeving)
+			<br/>
+			<br/>Should the individual possess a cortical stack, extract it from their old body prior to any resleeving. It is typically located in the upper neck in lieu of one of the cervical bones, typically C2 or C3, but can be anywhere in the cervical column. This will be noted in the patient's medical records and possession of one is considered highly atypical, but a required check.
+			<br/>Once the stack has been retrieved, it should be thoroughly cleaned, and surgically implanted into the new sleeve in the same vertebral location prior to resleeving. At this point, the patient can be resleeved to simply restart the neural connections.
+			<br/>
+			<br/>Should a patient have any implants or prosthetics, they should be removed from the old body and cleaned thoroughly prior to resleeving, and installed into the new sleeve in as close to original location as possible, before performing the final resleeve of the patient, to minimize shock during revival and panic related issues at loss of limb. Further, some prosthetics or implants may be necessary for patient survival, and should be prioritized, as empty sleeves can be slower to expire than one with a panicking mind.
+			<br/>
+			<br/><i>Note:</i> While the resleever can be opened from within, it will not automatically eject a patient the same way the growth pod does. Resleeving is an incredibly disorienting process, and medical professionals are required to give a psychiatric work-up to all resleeved patients.
+			<br/>This workup includes, but is not limited to:
+			<br/>	-Ensure the patient is calm, and understand they are in a safe environment.
+			<br/>	-Inquire what the last thing they remember is, especially time, and inform them of the current time.
+			<br/>	-Ensure the patient is mentally stable and sound prior to any discharge.
+			<br/>	-Ensure all the patient's belongings are cleaned, laundered, and returned to the patient prior to their release from medical.
+			<hr/>
+			<br/><center><b>PATIENT RIGHTS:</b></center>
+			<br/>Patient rights are detailed in SolGov Mind Sanctity clauses, and Pangalactic Patient Rights clauses, but simplified:
+			<br/>	-A patient is not to see their own body post resleeve. Ensure the old body has been moved to an appropriate location, such as morgue or cremator.
+			<br/>	-Should the patient's body be unlocated at the time of resleeving, the patient is not to assist in the search, lest they be the first to discover it.
+			<br/>	-A patient has the right to therapeutic council, any patient that is ignored after resleeve, to include the auto-sleever, is the victim of medical negligence.
+			<hr/>
+			<br/><center><b>VOX RESLEEVING:</b></center>
+			<br/><i>Note:</i> Only Outposts 4, 18, 21, and 22 have vox-resleeving facilities. Please see below for procedures if you have a vox casualty and are not located at one of these facilities.
+			<br/>
+			<br/>In the event of a vox casualty on station, and all efforts to revive have failed: perform a body scan to identify if the vox has a cortical stack still implemented. This is located at the base of the skull in between the occiput connection band and the primary spinal column, above the nerve cluster split.
+			<br/>Should the Vox not possess one, resleeve from mind record as standard utilizing the vox specialized resleever.
+			<br/>Should the Vox still possess their stack, then surgically remove the stack from the old body, clean it off, and insert it into the new body in the aforementioned location. The resleever will only be needed to jumpstart the mind into an awakened state, as the stack contains the entire mind record of the Vox.
+			<br/>
+			<br/>Should you be located on a station without a specialized vox resleever and are in possession of a casualty: Check if the vox has a cortical stack, if so, surgically remove it and thoroughly clean it. Fill out a resleeving request form. Secure both the form, and the stack, in a shock-proof, tamper-evident, ID locked case and ship both to one of the aforementioned facilities with requirement of signature on receipt. Fill out the appropriate forms for sending CUI contents.
+			<br/>Should the vox casualty not have a stack, simply fax a resleeving form to one of the aforementioned facilities.
+			<hr/>
+			<br/><center><b>SLEEVE STORAGE:</b></center>
+			<br/>Any sleeves put in long term storage must be prepared for long term stasis care: They must be equipped with a gas mask, and air tank set to 16-18kPA. They must then be sealed in a class 4 stasis bag filled with cryogenetic suspension fluid, and moved into cryogenetic storage. The standard cold and suspension fluid will preserve the body until such time it is necessary for retrieval. Sleeves must have a health check performed via check sensors bi-annually.
+			<hr/>
+			<br/><center><b>BRAIN TRANSPLANT IN LEIU OF RESLEEVE:</b></center>
+			<br/>In the very rare situations where either a spare sleeve is on hand, or an individual's post-mortem instructions prefer it, transferring a brain from an old body into a new sleeve is possible. The brain must be kept in cold stasis during transfer and healed completely prior to revival.
+			<br/>However, doing such a procedure when it is NOT in a patient's preferred post-mortem instructions, or is not a last ditch effort with all other options exhausted, is seen as unethical, and will be cause for investigation and possible suspension of medical license. E-Shui has NO case precedent for this being a required solution to any medical crisis.
+			<hr/>
+			<br/><center><b>Sleeve Theft, Sleevecards, and BodySnatchers.</b></center>
+			<br/>In the event of a stolen sleeve, where the sleeve was illegally created with a hostile mind imprinted into it, typically for covert infiltrations. Medical staff should attempt to ascertain the identity of both the original sleeve owner, and the new inhabitant of the sleeve, before sleevecarding the offending sleeve thief, and euthanizing or storing the newly vacated sleeve.
+			<br/>
+			<br/>Body snatchers are illegal across SolGov space as Felony level contraband. While they may be utilized to reverse the initial sleeve theft, psychological reviews must be done prior to ensure no lasting damage has taken place due to the intensive body dysmorphia that can occur when seeing one's reflection not matching their mental image of themselves. Oftentimes, intense psychotherapy is needed, and Memory Alteration Therapy (MAT) has been authorized as an experimental treatment for such cases."}
+
 
 /datum/sop_entry/unknownact
 	title = "Unknown Actors"
@@ -773,6 +863,98 @@
 			<br><b>E-Shui Medal of Heroism:</b> A golden star awarded to crew members for acts of incredible heroism during a combat situation, depicting a long star 'tear drop', with a red crest, and a green, gold, and silver ribbon. It is not exclusive to security, however must be earned during an active role during a combat situation, beyond that of normal station wildlife.
 			<br>
 			<br><b>E-Shui Medal of Exceptional Heroism:</b> A golden medal awarded for only the most distinguished actions, depicting the portrait of an individual, with a red, gold, and blue ribbon. It is the highest honor that any individual can achieve, and as such, is the rarest award found on any E-Shui station."}
+
+/datum/sop_entry/hireprom
+	title = "Hiring and Promotions"
+	author = "E-Shui Official"
+	body = 	{"<center><b>Hiring/Promotion Requirements</b></center>
+			<br>E-Shui holds its crew to a standard, this document details the standards required for promotion to a higher position, or when hiring in from another facility.
+			<hr>
+			<br><center><b>All positions:</b></center>
+			<br>You must eligible to work in SolGov space, and hold a Secret security clearance. All crew must be willing, and able, to protect their station, themselves, and fellow crew from threats. Under SolGov law, ANY individual that is: Demonic in origin, ghost/spectral, or otherwise mortally challenged is ineligible for hire. All hiring and firing MUST be done through Central Command Sapient Resources (CC-SR). No main-station crew may hire, or fire, or promote individuals. No individual currently wanted for arrest by SolGov or their allies may be hired or given guest status for any reason, and must be held in an incarcerated status.
+			<br>Department heads of staff may temporarily promote, or authorize already cleared individuals to work in their department, or may temporarily release one of their staff from duty up until shift change.
+			<br>If a position is not listed below, contact a head of staff for further requirements and clarifications, otherwise, they fall to the above standard.
+			<br>All positions and requirements are additive. Meaning, if you apply for a position of a higher rank, you must meet all requirements for all previous ranks in that position. See chain of command for clarification. (EX: To be a Doctor, you must be eligible to be a nurse.) Failing to meet and maintain the standard is grounds for demotion.
+			<br>To this end, 'civilian' is ground-level requirements for all personnel.
+			<br>
+			<br>No crewmember is to fly the: Medical Evacuation Shuttle, Security Intercept Shuttle, or the Class I Cargo Trawler without a valid, and up-to-date E-Shui or SolGov piloting license, and all of its required certification courses. The Engineering PTL Shuttle is exempt from this ruling, due to the Positronic AI pilot installed for it.
+			<hr>
+			<br><center><b>Civilian:</b></center>
+			<br><b>Visitor:</b> You must be a legal citizen of Solgov, without an arrest warrant. Note that while all official visitors must be approved by CC-SR, temporary visitor status can be given to any individual found to be a shipwreck survivor, valid amnesty claim, or found non-hostile on grounds awaiting transport off-world. This can only be issued by a Head of Personnel, or Captain.
+			<br>
+			<br><b>Chef:</b> You must have certification from a recognized governmental body on food preparation and safety. A bartending license is further required to serve alcoholic beverages on station.
+			<hr>
+			<br><center><b>Medical:</b></center>
+			<br><b>Nurse:</b> You must have a valid, and accurate, license for medical practice. An on-going work-study is a valid replacement for this requirement in Nurse positions.
+			<br>
+			<br><b>Doctor:</b> You must have skills of general treatment, and general triage and trauma care. You must have a thorough understanding of patient rights and privacy. You must have at least one approved degree, and all SolGov standard certifications for a GP. (Triage, Health and Safety, Patient Management, Trauma care, and Health care Privacy)
+			<br>
+			<br><b>Psychiatrist:</b> You must have a thorough understanding of patient rights and privacy. You must have at least one approved degree, and up to date SolGov certifications on patient mental care. You must have all SolGov standard certifications for a GP. You must have a thorough understanding of pharmaceuticals.
+			<br>
+			<br><b>EMT:</b> You must be able to pass an E-Shui combat fitness exam. You must have certifications in combat trauma and rapid care. You must have a thorough understanding of all trauma-care equipment. You must have passed a rapid trauma care exam.
+			<br>
+			<br><b>Specialized Doctor:</b> To include, but not limited to: Virologist, Surgeon, Geneticist, Xenoanatomy Specialist: You must have a thorough understanding in your field, with at least one approved degree and appropriate certifications for the field.
+			<br>
+			<br><b>Chief Medical Officer:</b> You must have taken the E-Shui confidentiality course, as well as all Terraformer Health and Wellness classes. You must have ability to coordinate and manage a team of doctors in stressful situations, and have taken the E-Shui Leadership Training Course. You must have referral from an acting Captain, or HoP. In understaffed areas, recommendations from at least two other heads of staff may substitute. You must have at least 5 years medical experience, 10 years requested.
+			<hr>
+			<br><center><b>Security:</b></center>
+			<br><b>Junior officer:</b> You must be able to pass an E-Shui combat fitness exam. You must have a valid secret clearance.
+			<br>
+			<br><b>Security Officer:</b> You must have the following weapon certifications: Small arms, Long arms, Laser weaponry, Melee Combatives. You must have a thorough understanding of Station SoP, with emphasis on Station Law and Contraband.
+			<br>
+			<br><b>Combat Medic:</b> You must be able to pass an E-Shui combat fitness exam. You must have certifications in combat trauma and rapid care. You must have a thorough understanding of all trauma-care equipment, and have passed a trauma care exam. You must have: Small arms, Long arms, and Melee combatives certifications.
+			<br>
+			<br><b>Warden:</b> You must have all E-Shui weapon certifications. You must have a thorough understanding of Station SoP. You must have a thorough understanding of forensics. You must be able to clearly write reports. You must have a valid E-Shui drivers license, and have received training on armored vehicle usage, deployment, and maintenance.
+			<br>
+			<br><b>Head of Security:</b> You must have taken the E-Shui confidentiality course. You must have a thorough understanding of security procedures and utilizing security forces. You must have a basic understanding of other departments and a good understanding of their roles during a crisis. You must have ability to coordinate and manage a team of officers in stressful situations, and have taken the E-Shui Leadership Training Course. You must have referral from an acting Captain, or HoP. In understaffed areas, recommendations from at least two other heads of staff may substitute. At least 3 years security experience is requested.
+			<hr>
+			<br><center><b>Engineering:</b></center>
+			<br><b>Engineer:</b> You must have a general understanding of wiring, construction, and have passed an EVA certification course. You must have a general understanding of the: Mark 3 Tesla engine, Mark 17 Singularity engine, and a Supermatter Phoron Reaction Thermal Electric Generator. You must have familiarity with engineering repair devices.
+			<br>
+			<br><b>Atmospherics Technician:</b> Must have certification in EVA operations, and pneumatic disposal systems. Must have passed a hazardous atmospherics course, and have understanding in hazardous atmospheres.
+			<br>
+			<br><b>Roboticist:</b> You must have a thorough understanding of electrical components and diagnostics. You must have certifications in Drone, Positronic, and Cyborg operations and repairs. You must have taken an E-Shui FBP maintenance and surgical course.
+			<br>
+			<br><b>CE:</b> You must have a thorough understanding of all engineering aspects and responsibilities. You must have ability to coordinate and manage a team of engineers in stressful situations, and have taken the E-Shui Leadership Training Course. You must have referral from an acting Captain, or HoP. In understaffed areas, recommendations from at least two other heads of staff may substitute. At least 5 years engineering experience is requested.
+			<hr>
+			<br><center><b>Cargo:</b></center>
+			<br><b>Janitor:</b>
+			<br>You must have Hazardous Waste Cleanup training. (This 4-hour course can be provided on hiring)
+			<br>
+			<br><b>Mining Technician:</b>
+			<br>You must be EVA certified. You must have technical competency in all standard mining tools; manual and powered. You must have an up-to-date Automated Mining And Backfilling certificate to operate the 'Deep Drills'. You must have received training on standard Ore processors, and refined goods shipment and handling.
+			<br>
+			<br><b>Cargo Technician:</b>
+			<br>You must have the E-Shui course on Mail and Shipping Privacy. You must have a valid E-Shui driver's license to utilize the cargo tug.
+			<br>
+			<br><b>Quartermaster:</b>
+			<br>You must fill the requirements for 'Mining Technician' and 'Cargo technician'. You must have basic leadership skills to organize the cargo and civilian departments, and have taken the E-Shui Leadership Training Course. You must have a thorough understanding of station logistics and requirements. You must have referral from an acting Captain, or HoP. In understaffed areas, recommendations from at least two other heads of staff may substitute.
+			<hr>
+			<br><center><b>Research:</b></center>
+			<br><b>Scientist:</b>
+			<br>You must have training in Hazardous Materials, and OPSEC level training 2. As of Dec 12, 2568: You must pass a psychological evaluation. You must have technical competency in standard mining tools for xenoarcheology.
+			<br>
+			<br><b>Xenobiologist/Xenobotanist:</b>
+			<br>You must have a thorough understanding of xenobiology and treatment. You must have an up to date Solgov Level 4 biohazard and Hazardous Materials certification.
+			<br>
+			<br><b>Phoronics Researcher:</b>
+			<br>You must have Explosive Ordinance Disposal (EOD) training, and an up to date EOD certification. You must have a minimal criminal record and a security risk of LOW, or MEDIUM with authorization for work with explosive materials.
+			<br>
+			<br><b>Research Director:</b>
+			<br>You must have basic leadership skills, and have taken the E-Shui Leadership Training Course.
+			<br>You must have referral from an acting Captain, or HoP. In understaffed areas, recommendations from at least two other heads of staff may substitute. At least 5 years experience is requested.
+			<hr>
+			<br><center><b>Command:</b></center>
+			<br>
+			<br><b>Internal Affairs Agent:</b>
+			<br>You must have a thorough and comprehensive understanding of station law, and E-Shui expectations. You must have been hired with E-Shui for at least 3 years. You must have a moderate understanding of SolGov law, with a good understanding of Sapient and Synthetic Rights.
+			<br>
+			<br><b>Head of Personnel:</b>
+			<br>You must have a basic understanding of at least half of the station departments, and a strong understanding of station logistics and organization, and have taken the E-Shui Leadership Level 2 Certification Course. You must have an E-Shui Command certification. You must have the ability to coordinate and manage the station in stressful situations. You must have taken the E-Shui OPSEC level 4 course, and all prerequisites. You must have referral from an acting Captain, and at least 2 other heads of staff.
+			<br>
+			<br><b>Captain:</b>
+			<br>You must have competency in every department to minor functionality. You must have at least 1 year working as a head of personnel. You must have recommendation from Central Command, and at least 3 other heads of staff for promotion."}
+
 /*
 /datum/sop_entry/xenoarch
 	title = "Guide to Xenoarcheology"
