@@ -101,6 +101,19 @@ var/list/outfits_decls_by_type_
 /decl/hierarchy/outfit/proc/equip(mob/living/carbon/human/H, var/rank, var/assignment)
 	equip_base(H)
 
+	// Outpost 21 edit begin - Give your rank pin
+	var/pin_path = null
+	var/datum/job/rank_job = GLOB.joblist[rank]
+	pin_path = rank_job.rank_pin
+	if(assignment in rank_job.alt_titles)
+		var/datum/alt_title/alt = rank_job.alt_titles[assignment]
+		if(!isnull(initial(alt.rank_pin)))
+			pin_path = initial(alt.rank_pin)
+	if(ispath(pin_path))
+		var/obj/new_pin = new pin_path(get_turf(H))
+		H.equip_to_slot_if_possible( new_pin, slot_tie)
+	// Outpost 21 edit end
+
 	rank = rank || id_pda_assignment
 	assignment = id_pda_assignment || assignment || rank
 	var/obj/item/card/id/W = equip_id(H, rank, assignment)

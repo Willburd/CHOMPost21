@@ -95,6 +95,8 @@
 
 	var/list/msg = list("This is [icon2html(src, user.client)] <EM>[src.name]</EM>[name_ender]")
 
+	var/list/ranks_items = list() // Outpost 21 edit - Eshui ranks
+
 	//uniform
 	if(w_uniform && !(skip_gear & EXAMINE_SKIPJUMPSUIT) && w_uniform.show_examine)
 		//Ties
@@ -106,11 +108,15 @@
 				var/list/accessory_descs = list()
 				if(skip_gear & EXAMINE_SKIPHOLSTER)
 					for(var/obj/item/clothing/accessory/A in U.accessories)
-						if(A.show_examine && !istype(A, /obj/item/clothing/accessory/holster)) // If we're supposed to skip holsters, actually skip them
+						if(istype(A, /obj/item/clothing/accessory/rank_eshui)) // Outpost 21 edit - Eshui ranks
+							ranks_items += A
+						else if(A.show_examine && !istype(A, /obj/item/clothing/accessory/holster)) // If we're supposed to skip holsters, actually skip them
 							accessory_descs += "\a [A]"
 				else
 					for(var/obj/item/clothing/accessory/A in U.accessories)
-						if(A.concealed_holster == 0 && A.show_examine)
+						if(istype(A, /obj/item/clothing/accessory/rank_eshui)) // Outpost 21 edit - Eshui ranks
+							ranks_items += A
+						else if(A.concealed_holster == 0 && A.show_examine)
 							accessory_descs += "<a href='byond://?src=\ref[src];lookitem_desc_only=\ref[A]'>\a [A]</a>"
 
 				tie_msg += " [lowertext(english_list(accessory_descs))]."
@@ -125,6 +131,12 @@
 			msg += span_warning("[p_Theyre()] wearing [icon2html(head,user.client)] [head.gender==PLURAL?"some":"a"] [(head.blood_color != "#030303") ? "blood" : "oil"]-stained <a href='byond://?src=\ref[src];lookitem_desc_only=\ref[head]'>[head.name]</a> on [p_their()] head!")
 		else
 			msg += "[p_Theyre()] wearing [icon2html(head,user.client)] <a href='byond://?src=\ref[src];lookitem_desc_only=\ref[head]'>\a [head]</a> on [p_their()] head."
+
+	// Outpost 21 edit begin - Eshui ranks
+	if(LAZYLEN(ranks_items))
+		for(var/obj/item/clothing/accessory/rank_eshui/rank in ranks_items)
+			msg += "[p_They()] [p_have()] the rank of [span_underline(span_bold(rank.name))]."
+	// Outpost 21 edit end
 
 	//suit/armour
 	if(wear_suit)

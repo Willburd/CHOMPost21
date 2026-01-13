@@ -30,7 +30,7 @@
 #define JOB_COMMAND_OFFICER "Command Officer"
 	#define JOB_ALT_CO_PETTY_OFFICER "Petty Officer"
 	#define JOB_ALT_CO_PETTY_CADET "Cadet"
-	#define JOB_ALT_CO_WARRANT_OFFICER "Warrant Officer"
+	#define JOB_ALT_CO_WARRANT_OFFICER "Chief Warrant Officer"
 	#define JOB_ALT_CO_ASSIST_MED_OFFICER "Assistant Medical Officer"
 	#define JOB_ALT_CO_ASSIST_SEC_OFFICER "Combat Control Officer"
 	#define JOB_ALT_CO_ASSIST_ENG_OFFICER "Engineering Specialist"
