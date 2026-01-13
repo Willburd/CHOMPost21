@@ -175,6 +175,14 @@
 	ckeywhitelist = list("niilomarvy")
 	character_name = list("Tobin")
 
+//natesaruli
+/datum/gear/fluff/cecilbadge
+	display_name = "Therapy Dog Lanyard"
+	path = /obj/item/clothing/accessory/therapy_dog_tag
+	desc = "A rare badge on a lanyard for Vulpkanin who've distinguished themselves in the mental stabilization and care of other sapients, reading 'Therapy Dog' in bright lettering. The image features a prominent blue which most species can recognize with an image of a hand reaching out to pet a canine head."
+	ckeywhitelist = list("natesaruli")
+	character_name = list("Cecil Colfax")
+
 //  O CKEYS
 
 //  P CKEYS

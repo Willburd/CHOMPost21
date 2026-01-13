@@ -293,7 +293,7 @@
 /obj/item/clothing/accessory/therapy_dog_tag
 	icon = 'modular_outpost/icons/inventory/accessory/item.dmi'
 	name = "Therapy Dog Lanyard"
-	desc = "TEMP"
+	desc = "A rare badge on a lanyard for Vulpkanin who've distinguished themselves in the mental stabilization and care of other sapients, reading 'Therapy Dog' in bright lettering. The image features a prominent blue which most species can recognize with an image of a hand reaching out to pet a canine head."
 	icon_state = "therapydog"
 	slot = ACCESSORY_SLOT_TIE
 	drop_sound = 'sound/items/drop/accessory.ogg'
