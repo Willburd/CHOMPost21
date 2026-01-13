@@ -43,6 +43,7 @@ export const VorePanel = () => {
     show_pictures,
     icon_overflow,
     prey_abilities,
+    intent_data,
     host_mobtype,
     unsaved_changes,
     vore_words,
@@ -83,6 +84,7 @@ export const VorePanel = () => {
     <VoreContentsPreyPanel
       inside={inside}
       prey_abilities={prey_abilities}
+      intent_data={intent_data}
       show_pictures={show_pictures}
       icon_overflow={icon_overflow}
     />
