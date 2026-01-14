@@ -12,19 +12,17 @@
 		to_chat(usr, span_warning("You appear to be in a place without any sort of concept of direction. You have bigger problems to worry about."))
 		return
 
-	// Outpost 21 edit begin - Remote view to look above
 	var/show_nothing = TRUE
 	var/turf/above_turf = GetAbove(src)
-	if(above_turf && above_turf.CanZPass(src, DOWN))
+	if(istype(above_turf, /turf/simulated/open) || istype(above_turf, /turf/space) || istype(above_turf, /turf/simulated/floor/glass)) // Typecheck because CanZPass() doesn't work right, because our actual loc is at the destination so it always returns true if on a floor.
 		if(is_remote_viewing())
 			reset_perspective()
 			return
-		AddComponent(/datum/component/remote_view, focused_on = above_turf, vconfig_path = /datum/remote_view_config/turf_decoupling)
+		AddComponent(/datum/component/remote_view, focused_on = above_turf, viewsize = 5, vconfig_path = /datum/remote_view_config/looking_up)
 		show_nothing = FALSE
-	// Outpost 21 edit end
 
 	if(!T.is_outdoors()) // They're inside.
-		if(show_nothing) // Outpost 21 edit - Remote view to look above
+		if(show_nothing)
 			to_chat(usr, "You see nothing interesting.")
 		return
 
