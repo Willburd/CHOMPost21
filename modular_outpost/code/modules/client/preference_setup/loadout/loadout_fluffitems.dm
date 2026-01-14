@@ -62,8 +62,8 @@
 /datum/gear/fluff/ESHUI_medalcomb
 	display_name = "ESHUI Combat Action Medal"
 	path = /obj/item/clothing/accessory/medal/solgov/silver/sword/eshui
-	ckeywhitelist = list("ozydev","synxplushy","remthebold","cameron653","ironicleo","caramelion","pirakahunter788")
-	character_name = list("Raine Rattlewag","Cracker","Zeeshi","Trashfire","Diana Kuznetsova","Nikel","Tasesii","Calza Colfax")
+	ckeywhitelist = list("ozydev","synxplushy","remthebold","cameron653","ironicleo","caramelion","pirakahunter788","haliaeetus","valinari","silencedmp5a5","natesaruli")
+	character_name = list("Raine Rattlewag","Cracker","Zeeshi","Trashfire","Diana Kuznetsova","Nikel","Tasesii","Calza Colfax","Atus","Valinari Sandivi Gloria","Russo","Cecil Colfax")
 
 /datum/gear/fluff/ESHUI_rankpin
 	display_name = "ESHUI Officer's Qualification Pin"
@@ -80,8 +80,8 @@
 /datum/gear/fluff/ESHUI_whiteheart
 	display_name = "ESHUI Medical Action Award"
 	path = /obj/item/clothing/accessory/medal/solgov/heart/eshui
-	ckeywhitelist = list("seagha","darklord92","lumithefox","cameron653","pirakahunter788")
-	character_name = list("Schale","Qdel","Nach Uligo","Tenepu","Calza Colfax")
+	ckeywhitelist = list("seagha","darklord92","lumithefox","cameron653","pirakahunter788","razgrizmazur")
+	character_name = list("Schale","Qdel","Nach Uligo","Tenepu","Calza Colfax","Midnight")
 
 /datum/gear/fluff/ESHUI_servemed
 	display_name = "ESHUI Service Medal"
@@ -174,6 +174,14 @@
 	description = "A small coin made out of some kind of exotic metal."
 	ckeywhitelist = list("niilomarvy")
 	character_name = list("Tobin")
+
+//natesaruli
+/datum/gear/fluff/cecilbadge
+	display_name = "Therapy Dog Lanyard"
+	path = /obj/item/clothing/accessory/therapy_dog_tag
+	description = "A rare badge on a lanyard for Vulpkanin who've distinguished themselves in the mental stabilization and care of other sapients, reading 'Therapy Dog' in bright lettering. The image features a prominent blue which most species can recognize with an image of a hand reaching out to pet a canine head."
+	ckeywhitelist = list("natesaruli")
+	character_name = list("Cecil Colfax")
 
 //  O CKEYS
 

@@ -12347,6 +12347,19 @@
 /obj/structure/table/alien,
 /turf/simulated/floor/tiled/yellow/turfpack/muriki,
 /area/mine/unexplored/muriki/mountainnorth)
+"axj" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 8
+	},
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Civ Airlock Hall";
+	dir = 4
+	},
+/turf/simulated/floor/tiled/steel,
+/area/hallway/primary/central_two)
 "axk" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -41323,7 +41336,6 @@
 /obj/structure/window/maintenance_panel{
 	dir = 1
 	},
-/obj/structure/window/maintenance_panel,
 /turf/simulated/floor/tiled/techfloor,
 /area/muriki/crewstairwell)
 "jBN" = (
@@ -43484,6 +43496,81 @@
 	},
 /obj/machinery/light{
 	dir = 4
+	},
+/obj/item/mail/envelope{
+	pixel_y = 16
+	},
+/obj/item/mail/envelope{
+	pixel_y = 16
+	},
+/obj/item/mail/envelope{
+	pixel_y = 16
+	},
+/obj/item/mail/envelope{
+	pixel_y = 16
+	},
+/obj/item/mail/envelope{
+	pixel_y = 16
+	},
+/obj/item/mail/envelope{
+	pixel_y = 16
+	},
+/obj/item/mail/envelope{
+	pixel_y = 16
+	},
+/obj/item/mail/envelope{
+	pixel_y = 16
+	},
+/obj/item/mail/envelope{
+	pixel_y = 16
+	},
+/obj/item/mail/envelope{
+	pixel_y = 16
+	},
+/obj/item/mail/envelope{
+	pixel_y = 16
+	},
+/obj/item/mail/envelope{
+	pixel_y = 16
+	},
+/obj/item/mail/envelope{
+	pixel_y = 16
+	},
+/obj/item/mail/envelope{
+	pixel_y = 16
+	},
+/obj/item/mail/envelope{
+	pixel_y = 16
+	},
+/obj/item/mail/envelope{
+	pixel_y = 16
+	},
+/obj/item/mail/envelope{
+	pixel_y = 16
+	},
+/obj/item/mail/envelope{
+	pixel_y = 16
+	},
+/obj/item/mail/envelope{
+	pixel_y = 16
+	},
+/obj/item/mail/envelope{
+	pixel_y = 16
+	},
+/obj/item/mail/envelope{
+	pixel_y = 16
+	},
+/obj/item/mail/envelope{
+	pixel_y = 16
+	},
+/obj/item/mail/envelope{
+	pixel_y = 16
+	},
+/obj/item/mail/envelope{
+	pixel_y = 16
+	},
+/obj/item/mail/envelope{
+	pixel_y = 16
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/security/secmail)
@@ -53828,6 +53915,28 @@
 	pixel_x = -30;
 	pixel_y = 9
 	},
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/structure/table/steel,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
 /turf/simulated/floor/tiled/techfloor,
 /area/rnd/research/mailing)
 "ntb" = (
@@ -60475,6 +60584,34 @@
 "pEF" = (
 /obj/structure/closet/crate,
 /obj/effect/floor_decal/milspec/cargo,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
+/obj/item/mail/envelope,
 /turf/simulated/floor/tiled/milspec,
 /area/quartermaster/warehouse)
 "pEH" = (
@@ -139740,7 +139877,7 @@ mjk
 bQx
 wmQ
 xdL
-eLN
+axj
 tvK
 rgI
 rgI

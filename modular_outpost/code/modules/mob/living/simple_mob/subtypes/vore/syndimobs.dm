@@ -59,11 +59,13 @@
 	max_co2 = 0
 	max_n2 = 0
 	max_ch4 = 0
+	ai_holder_type = /datum/ai_holder/simple_mob/merc/ranged/torch //More aggressive AI holder, no warning, just shootin'
 
 /mob/living/simple_mob/vore/wolftaur/syndicate/lmg
 	projectiletype = /obj/item/projectile/bullet/rifle/a545 // Fixes this to use the same bullet as the actual LMG
 	projectile_dispersion = 8 // was 12. Lowering cuz these are trained taurs in a full suit. C'mon
 	projectile_accuracy = -18 // was -25
+	ai_holder_type = /datum/ai_holder/simple_mob/merc/ranged/torch/lmg
 
 /mob/living/simple_mob/vore/wolftaur/syndicate/smg
 	projectiletype = /obj/item/projectile/bullet/pistol // The actual bullet the p90 uses. Technically this one is a nerf.

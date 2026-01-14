@@ -34288,6 +34288,12 @@
 /area/crew_quarters/locker)
 "bku" = (
 /obj/structure/table/glass,
+/obj/item/leash,
+/obj/item/leash,
+/obj/item/leash,
+/obj/item/leash,
+/obj/item/leash,
+/obj/item/leash,
 /turf/simulated/floor/tiled/steel,
 /area/crew_quarters/locker)
 "bkv" = (
@@ -34295,6 +34301,16 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
+/obj/random/shibari,
+/obj/random/shibari,
+/obj/random/shibari,
+/obj/random/shibari,
+/obj/random/shibari,
+/obj/random/shibari,
+/obj/random/shibari,
+/obj/random/shibari,
+/obj/random/shibari,
+/obj/random/shibari,
 /turf/simulated/floor/tiled/steel,
 /area/crew_quarters/locker)
 "bkw" = (
@@ -37748,24 +37764,6 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/cargo)
-"bqY" = (
-/obj/effect/auto_crayon{
-	icon_state = "d"
-	},
-/obj/effect/auto_crayon{
-	icon_state = "down"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 8
-	},
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/sec)
 "bqZ" = (
 /obj/structure/disposalpipe/segment{
 	dir = 1;
@@ -67918,6 +67916,7 @@
 /turf/simulated/floor,
 /area/maintenance/oldbridge)
 "esV" = (
+/obj/random/shibari,
 /turf/simulated/floor/wood/alt/parquet/broken,
 /area/muriki/crew/arcade/lasertag)
 "esW" = (
@@ -73337,6 +73336,63 @@
 /obj/structure/cable/green{
 	icon_state = "1-4"
 	},
+/obj/item/mail/envelope{
+	pixel_y = 12
+	},
+/obj/item/mail/envelope{
+	pixel_y = 12
+	},
+/obj/item/mail/envelope{
+	pixel_y = 12
+	},
+/obj/item/mail/envelope{
+	pixel_y = 12
+	},
+/obj/item/mail/envelope{
+	pixel_y = 12
+	},
+/obj/item/mail/envelope{
+	pixel_y = 12
+	},
+/obj/item/mail/envelope{
+	pixel_y = 12
+	},
+/obj/item/mail/envelope{
+	pixel_y = 12
+	},
+/obj/item/mail/envelope{
+	pixel_y = 12
+	},
+/obj/item/mail/envelope{
+	pixel_y = 12
+	},
+/obj/item/mail/envelope{
+	pixel_y = 12
+	},
+/obj/item/mail/envelope{
+	pixel_y = 12
+	},
+/obj/item/mail/envelope{
+	pixel_y = 12
+	},
+/obj/item/mail/envelope{
+	pixel_y = 12
+	},
+/obj/item/mail/envelope{
+	pixel_y = 12
+	},
+/obj/item/mail/envelope{
+	pixel_y = 12
+	},
+/obj/item/mail/envelope{
+	pixel_y = 12
+	},
+/obj/item/mail/envelope{
+	pixel_y = 12
+	},
+/obj/item/mail/envelope{
+	pixel_y = 12
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/medical/mail)
 "kxH" = (
@@ -78312,6 +78368,57 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "0-2"
+	},
+/obj/item/mail/envelope{
+	pixel_x = 18
+	},
+/obj/item/mail/envelope{
+	pixel_x = 18
+	},
+/obj/item/mail/envelope{
+	pixel_x = 18
+	},
+/obj/item/mail/envelope{
+	pixel_x = 18
+	},
+/obj/item/mail/envelope{
+	pixel_x = 18
+	},
+/obj/item/mail/envelope{
+	pixel_x = 18
+	},
+/obj/item/mail/envelope{
+	pixel_x = 18
+	},
+/obj/item/mail/envelope{
+	pixel_x = 18
+	},
+/obj/item/mail/envelope{
+	pixel_x = 18
+	},
+/obj/item/mail/envelope{
+	pixel_x = 18
+	},
+/obj/item/mail/envelope{
+	pixel_x = 18
+	},
+/obj/item/mail/envelope{
+	pixel_x = 18
+	},
+/obj/item/mail/envelope{
+	pixel_x = 18
+	},
+/obj/item/mail/envelope{
+	pixel_x = 18
+	},
+/obj/item/mail/envelope{
+	pixel_x = 18
+	},
+/obj/item/mail/envelope{
+	pixel_x = 18
+	},
+/obj/item/mail/envelope{
+	pixel_x = 18
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/mail)
@@ -119022,7 +119129,7 @@ rPd
 rPd
 rPd
 bhW
-bqY
+bCD
 bhW
 aef
 bqk

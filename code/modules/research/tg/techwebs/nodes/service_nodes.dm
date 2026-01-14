@@ -57,6 +57,7 @@
 		"light_replacer",
 		"spraybottle",
 		"beartrap",
+		"bearslap", // Outpost 21 edit - bearslap
 		// "buffer",
 		// "vacuum",
 	)
