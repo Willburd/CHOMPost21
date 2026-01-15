@@ -4680,8 +4680,8 @@
 /turf/space,
 /area/syndicate_mothership)
 "jy" = (
-/mob/living/simple_mob/vore/wolftaur/syndicate/alt1,
 /obj/structure/window/reinforced,
+/mob/living/simple_mob/vore/wolftaur/syndicate,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -5282,11 +5282,24 @@
 	icon_state = "dark"
 	},
 /area/syndicate_mothership)
+"kw" = (
+/obj/structure/window/reinforced,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
 "kx" = (
 /obj/structure/table/rack,
 /obj/item/storage/belt/medical/alien,
 /obj/item/storage/belt/medical/alien,
 /obj/item/storage/belt/medical/alien,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"ky" = (
+/obj/structure/window/reinforced,
+/mob/living/simple_mob/vore/wolftaur/syndicate/lmg,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -5297,6 +5310,13 @@
 	req_access = list(150);
 	req_one_access = list()
 	},
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"kA" = (
+/obj/structure/window/reinforced,
+/mob/living/simple_mob/vore/wolftaur/syndicate/shotty,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -53272,10 +53292,10 @@ sg
 sg
 yb
 jy
-jh
-je
-iN
-hP
+kw
+ky
+kw
+kw
 dU
 yb
 ir
@@ -53919,11 +53939,11 @@ jE
 sg
 sg
 yb
-jz
-jh
-je
-iN
-hP
+kw
+kA
+ky
+kw
+kw
 iH
 yb
 ix
@@ -54082,7 +54102,7 @@ sg
 sg
 yb
 jz
-jh
+kA
 je
 iN
 hP
