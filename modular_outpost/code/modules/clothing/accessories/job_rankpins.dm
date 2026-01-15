@@ -46,7 +46,7 @@
 
 /obj/item/clothing/accessory/rank_eshui/enlisted7
 	name = "\improper (E-7) Sergeant First Class patch"
-	rank = "(E-7) Sergeant First"
+	rank = "(E-7) Sergeant First Class"
 	desc = "A small strip of cloth denoting the rank of E-7, Sergeant First Class. Those tasked to uphold station values and security."
 	icon = 'modular_outpost/icons/inventory/accessory/item.dmi'
 	icon_state = "rank_e7"
