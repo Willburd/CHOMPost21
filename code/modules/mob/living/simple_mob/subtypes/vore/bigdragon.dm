@@ -224,10 +224,10 @@ I think I covered everything.
 	maxHealth = 1200 //small health boost, up from 800.
 
 	armor = list(
-				"melee" = 25,
-				"bullet" = 35,
-				"laser" = 50,
-				"energy" = 10,
+				"melee" = 50,
+				"bullet" = 50,
+				"laser" = 70,
+				"energy" = 80,
 				"bomb" = 80,
 				"bio" = 100,
 				"rad" = 100) //Tough boi ain't so easy to take down. Lasereyes aren't a win button here~ High armor to rad, bombs, and bio for cheese protection.
