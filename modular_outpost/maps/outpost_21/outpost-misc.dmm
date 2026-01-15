@@ -3030,11 +3030,12 @@
 /obj/item/ammo_magazine/m45/ap,
 /obj/item/ammo_magazine/m45/ap,
 /obj/item/ammo_magazine/m45/ap,
-/obj/item/gun/projectile/silenced,
-/obj/item/gun/projectile/silenced,
-/obj/item/gun/projectile/silenced,
-/obj/item/gun/projectile/silenced,
-/obj/item/gun/projectile/silenced,
+/obj/item/gun/projectile/silenced/empty,
+/obj/item/gun/projectile/silenced/empty,
+/obj/item/gun/projectile/silenced/empty,
+/obj/item/gun/projectile/silenced/empty,
+/obj/item/gun/projectile/silenced/empty,
+/obj/item/gun/projectile/silenced/empty,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -3114,6 +3115,12 @@
 /obj/item/ammo_magazine/ak74/ap,
 /obj/item/ammo_magazine/ak74/ap,
 /obj/item/ammo_magazine/ak74/ap,
+/obj/item/ammo_magazine/ak74/ap,
+/obj/item/ammo_magazine/ak74/ap,
+/obj/item/ammo_magazine/ak74/ap,
+/obj/item/ammo_magazine/ak74/ap,
+/obj/item/ammo_magazine/ak74/ap,
+/obj/item/ammo_magazine/ak74/ap,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -3146,6 +3153,10 @@
 /area/syndicate_mothership)
 "gY" = (
 /obj/structure/table/rack,
+/obj/item/ammo_magazine/ammo_box/b45/emp,
+/obj/item/ammo_magazine/ammo_box/b45/emp,
+/obj/item/ammo_magazine/ammo_box/b45/emp,
+/obj/item/ammo_magazine/ammo_box/b45/emp,
 /obj/item/ammo_magazine/ammo_box/b45/emp,
 /obj/item/ammo_magazine/ammo_box/b45/emp,
 /obj/item/ammo_magazine/ammo_box/b45/emp,
@@ -3272,6 +3283,32 @@
 /obj/item/ammo_magazine/s357,
 /obj/item/ammo_magazine/s357,
 /obj/item/ammo_magazine/s357,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"hj" = (
+/obj/structure/table/rack,
+/obj/item/ammo_magazine/ak74/hp,
+/obj/item/ammo_magazine/ak74/hp,
+/obj/item/ammo_magazine/ak74/hp,
+/obj/item/ammo_magazine/ak74/hp,
+/obj/item/ammo_magazine/ak74/hp,
+/obj/item/ammo_magazine/ak74/hp,
+/obj/item/ammo_magazine/ak74/hp,
+/obj/item/ammo_magazine/ak74/hp,
+/obj/item/ammo_magazine/ak74/hp,
+/obj/item/ammo_magazine/ak74/hp,
+/obj/item/ammo_magazine/ak74/hp,
+/obj/item/ammo_magazine/ak74/hp,
+/obj/item/ammo_magazine/ak74/hp,
+/obj/item/ammo_magazine/ak74/hp,
+/obj/item/ammo_magazine/ak74/hp,
+/obj/item/ammo_magazine/ak74/hp,
+/obj/item/ammo_magazine/ak74/hp,
+/obj/item/ammo_magazine/ak74/hp,
+/obj/item/ammo_magazine/ak74/hp,
+/obj/item/ammo_magazine/ak74/hp,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -5126,6 +5163,14 @@
 	icon_state = "white"
 	},
 /area/syndicate_mothership)
+"kn" = (
+/obj/structure/table/rack,
+/obj/item/rig/merc,
+/obj/item/rig/merc,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
 "ko" = (
 /obj/structure/table/steel_reinforced,
 /obj/item/clothing/head/fancy_crown,
@@ -5134,6 +5179,71 @@
 	icon_state = "vault"
 	},
 /area/wizard_station)
+"kp" = (
+/obj/structure/table/rack,
+/obj/item/gun/projectile/automatic/c20r/empty,
+/obj/item/gun/projectile/automatic/c20r/empty,
+/obj/item/gun/projectile/automatic/c20r/empty,
+/obj/item/gun/projectile/automatic/c20r/empty,
+/obj/item/gun/projectile/automatic/c20r/empty,
+/obj/item/gun/projectile/automatic/c20r/empty,
+/obj/item/gun/projectile/automatic/c20r/empty,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"kq" = (
+/obj/structure/table/rack,
+/obj/item/ammo_magazine/m10mm/emp,
+/obj/item/ammo_magazine/m10mm/emp,
+/obj/item/ammo_magazine/m10mm/emp,
+/obj/item/ammo_magazine/m10mm/emp,
+/obj/item/ammo_magazine/m10mm/emp,
+/obj/item/ammo_magazine/m10mm/emp,
+/obj/item/ammo_magazine/m10mm/emp,
+/obj/item/ammo_magazine/m10mm/emp,
+/obj/item/ammo_magazine/m10mm/emp,
+/obj/item/ammo_magazine/m10mm/emp,
+/obj/item/ammo_magazine/m10mm/emp,
+/obj/item/ammo_magazine/m10mm/emp,
+/obj/item/ammo_magazine/m10mm/emp,
+/obj/item/ammo_magazine/m10mm/emp,
+/obj/item/ammo_magazine/m10mm/emp,
+/obj/item/ammo_magazine/m10mm/emp,
+/obj/item/ammo_magazine/m10mm/emp,
+/obj/item/ammo_magazine/m10mm/emp,
+/obj/item/ammo_magazine/m10mm/emp,
+/obj/item/ammo_magazine/m10mm/emp,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"kr" = (
+/obj/structure/table/rack,
+/obj/item/ammo_magazine/m10mm,
+/obj/item/ammo_magazine/m10mm,
+/obj/item/ammo_magazine/m10mm,
+/obj/item/ammo_magazine/m10mm,
+/obj/item/ammo_magazine/m10mm,
+/obj/item/ammo_magazine/m10mm,
+/obj/item/ammo_magazine/m10mm,
+/obj/item/ammo_magazine/m10mm,
+/obj/item/ammo_magazine/m10mm,
+/obj/item/ammo_magazine/m10mm,
+/obj/item/ammo_magazine/m10mm,
+/obj/item/ammo_magazine/m10mm,
+/obj/item/ammo_magazine/m10mm,
+/obj/item/ammo_magazine/m10mm,
+/obj/item/ammo_magazine/m10mm,
+/obj/item/ammo_magazine/m10mm,
+/obj/item/ammo_magazine/m10mm,
+/obj/item/ammo_magazine/m10mm,
+/obj/item/ammo_magazine/m10mm,
+/obj/item/ammo_magazine/m10mm,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
 "ks" = (
 /obj/structure/table/rack,
 /obj/item/clothing/under/color/red,
@@ -5143,6 +5253,35 @@
 /obj/item/gun/energy/laser,
 /turf/unsimulated/floor/techfloor_grid,
 /area/tdome/tdome1)
+"kt" = (
+/obj/structure/table/rack,
+/obj/item/rig/breacher/fancy,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"ku" = (
+/obj/structure/table/rack,
+/obj/item/clothing/shoes/magboots,
+/obj/item/clothing/suit/space/void/merc/odst,
+/obj/item/clothing/head/helmet/space/void/merc/odst,
+/obj/item/clothing/mask/gas/syndicate,
+/obj/item/tank/emergency/oxygen/double,
+/obj/item/clothing/mask/breath,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"kv" = (
+/obj/structure/table/rack,
+/obj/item/material/twohanded/fireaxe/dura,
+/obj/item/material/twohanded/fireaxe/dura,
+/obj/item/material/twohanded/fireaxe/dura,
+/obj/item/material/twohanded/fireaxe/dura,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
 "kx" = (
 /obj/structure/table/rack,
 /obj/item/storage/belt/medical/alien,
@@ -52993,8 +53132,8 @@ kQ
 yb
 hm
 sg
-kQ
-kQ
+kp
+hj
 sg
 kh
 yb
@@ -53155,7 +53294,7 @@ kQ
 yb
 kQ
 sg
-kQ
+kq
 gV
 sg
 gJ
@@ -53317,7 +53456,7 @@ kQ
 yb
 bM
 sg
-kQ
+kr
 gV
 sg
 gK
@@ -54778,7 +54917,7 @@ sg
 sg
 sg
 sg
-hp
+kQ
 yb
 gp
 sg
@@ -55092,7 +55231,7 @@ fV
 yb
 hp
 sg
-kQ
+kv
 hf
 sg
 ps
@@ -55261,7 +55400,7 @@ gR
 yb
 iC
 sg
-ij
+kt
 ij
 sg
 iB
@@ -55424,7 +55563,7 @@ yb
 iD
 sg
 im
-im
+kn
 sg
 iB
 yb
@@ -55585,7 +55724,7 @@ gU
 yb
 iE
 sg
-ki
+ku
 ki
 sg
 iB

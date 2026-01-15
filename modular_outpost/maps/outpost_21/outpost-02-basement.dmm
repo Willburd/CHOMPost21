@@ -27785,7 +27785,7 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
-/turf/simulated/floor/carpet/brown,
+/turf/simulated/floor/tiled/material/gold,
 /area/muriki/crew/casinostore)
 "aYu" = (
 /obj/structure/cable/green{
@@ -37764,6 +37764,12 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/cargo)
+"bqY" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 10
+	},
+/turf/simulated/floor/wood/alt,
+/area/muriki/crew/casino)
 "bqZ" = (
 /obj/structure/disposalpipe/segment{
 	dir = 1;
@@ -44702,6 +44708,12 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/incinerator)
+"bDa" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 8
+	},
+/turf/simulated/floor/wood/alt,
+/area/muriki/crew/casino)
 "bDb" = (
 /obj/vehicle/boat/dragon{
 	dir = 8
@@ -47334,7 +47346,7 @@
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/maintenance/sec)
 "bHW" = (
-/turf/simulated/floor/carpet/brown,
+/turf/simulated/floor/tiled/material/gold,
 /area/muriki/crew/casinostore)
 "bHX" = (
 /turf/simulated/floor/water/acidic/turfpack/muriki,
@@ -48329,7 +48341,10 @@
 /obj/structure/disposalpipe/broken{
 	dir = 4
 	},
-/turf/simulated/floor/wood/alt,
+/obj/effect/floor_decal/spline/plain{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/purcarpet,
 /area/muriki/crew/casino)
 "bKe" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -48341,7 +48356,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/simulated/floor/wood/alt,
+/turf/simulated/floor/carpet,
 /area/muriki/crew/casino)
 "bKf" = (
 /obj/structure/disposalpipe/junction,
@@ -52116,7 +52131,7 @@
 /obj/structure/bed/chair/bay/comfy/brown{
 	dir = 1
 	},
-/turf/simulated/floor/wood/alt,
+/turf/simulated/floor/carpet/purcarpet,
 /area/muriki/crew/casino)
 "bRq" = (
 /obj/structure/cable/heavyduty{
@@ -53271,7 +53286,7 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/tiled/kafel_full,
+/turf/simulated/floor/tiled/material/silver,
 /area/muriki/bathroom/casino)
 "bTJ" = (
 /obj/machinery/light/small{
@@ -62032,7 +62047,7 @@
 	pixel_x = -5;
 	pixel_y = 30
 	},
-/turf/simulated/floor/carpet/brown,
+/turf/simulated/floor/tiled/material/gold,
 /area/muriki/crew/casinostore)
 "coi" = (
 /obj/structure/catwalk,
@@ -64598,6 +64613,9 @@
 /obj/structure/bed/chair/bay/comfy/brown{
 	dir = 8
 	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 4
+	},
 /turf/simulated/floor/wood/hardwood/parquet,
 /area/maintenance/research)
 "cuT" = (
@@ -64607,11 +64625,17 @@
 /obj/structure/sign/poster/eshui{
 	dir = 1
 	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 1
+	},
 /turf/simulated/floor/wood/hardwood/parquet,
 /area/maintenance/research)
 "cuU" = (
 /obj/structure/table/gamblingtable,
 /obj/item/flashlight/lamp,
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 1
+	},
 /turf/simulated/floor/wood/hardwood/parquet,
 /area/maintenance/research)
 "cuV" = (
@@ -66228,6 +66252,81 @@
 /obj/structure/prop/dark_node,
 /turf/simulated/floor/weird_things/dark,
 /area/maintenance/shadekin_dark/cave)
+"czn" = (
+/turf/simulated/floor/carpet,
+/area/muriki/crew/casino)
+"czo" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 9
+	},
+/turf/simulated/floor/wood/alt,
+/area/muriki/crew/casino)
+"czp" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 1
+	},
+/turf/simulated/floor/wood/alt,
+/area/muriki/crew/casino)
+"czq" = (
+/obj/structure/bed/chair/bay/comfy/brown{
+	dir = 1
+	},
+/obj/effect/floor_decal/spline/fancy/wood,
+/turf/simulated/floor/wood/alt,
+/area/muriki/crew/casino)
+"czr" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 10
+	},
+/turf/simulated/floor/wood/hardwood/parquet,
+/area/maintenance/research)
+"czs" = (
+/obj/effect/floor_decal/spline/fancy/wood,
+/turf/simulated/floor/wood/hardwood/parquet,
+/area/maintenance/research)
+"czt" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 6
+	},
+/turf/simulated/floor/wood/hardwood/parquet,
+/area/maintenance/research)
+"czu" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 8
+	},
+/turf/simulated/floor/wood/hardwood/parquet,
+/area/maintenance/research)
+"czv" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 8
+	},
+/obj/effect/floor_decal/spline/fancy/wood/corner{
+	dir = 1
+	},
+/turf/simulated/floor/wood/hardwood/parquet,
+/area/maintenance/research)
+"czw" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 1
+	},
+/turf/simulated/floor/wood/hardwood/parquet,
+/area/maintenance/research)
+"czx" = (
+/obj/structure/table/gamblingtable,
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 1
+	},
+/turf/simulated/floor/wood/hardwood/parquet,
+/area/maintenance/research)
+"czy" = (
+/obj/structure/bed/chair/bay/comfy/brown{
+	dir = 8
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 5
+	},
+/turf/simulated/floor/wood/hardwood/parquet,
+/area/maintenance/research)
 "czC" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 4
@@ -66578,7 +66677,10 @@
 /obj/structure/window/reinforced/tinted{
 	dir = 4
 	},
-/turf/simulated/floor/wood/alt,
+/obj/effect/floor_decal/spline/plain{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/purcarpet,
 /area/muriki/crew/casino)
 "daP" = (
 /obj/effect/floor_decal/corner/purple{
@@ -66816,7 +66918,7 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
 	},
-/turf/simulated/floor/wood/alt,
+/turf/simulated/floor/tiled/material/gold,
 /area/muriki/crew/casino)
 "dlZ" = (
 /obj/structure/catwalk,
@@ -66887,10 +66989,10 @@
 /obj/structure/bed/chair/bay/comfy/brown{
 	dir = 4
 	},
-/obj/effect/floor_decal/spline/fancy/wood{
+/obj/effect/floor_decal/spline/plain{
 	dir = 8
 	},
-/turf/simulated/floor/wood/alt,
+/turf/simulated/floor/carpet/purcarpet,
 /area/muriki/crew/casino)
 "doY" = (
 /obj/structure/disposalpipe/segment,
@@ -67047,7 +67149,7 @@
 /obj/machinery/firealarm{
 	pixel_y = 26
 	},
-/turf/simulated/floor/tiled/kafel_full,
+/turf/simulated/floor/tiled/material/silver,
 /area/muriki/bathroom/casino)
 "dBg" = (
 /obj/effect/floor_decal/corner/purple{
@@ -67384,7 +67486,10 @@
 	dir = 2;
 	icon_state = "pipe-j2"
 	},
-/turf/simulated/floor/wood/alt,
+/obj/effect/floor_decal/spline/plain{
+	dir = 4
+	},
+/turf/simulated/floor/carpet,
 /area/muriki/crew/casino)
 "dOK" = (
 /obj/effect/catwalk_plated/techfloor,
@@ -67465,7 +67570,7 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 6
 	},
-/turf/simulated/floor/tiled/kafel_full,
+/turf/simulated/floor/tiled/material/silver,
 /area/muriki/bathroom/casino)
 "dRa" = (
 /obj/structure/grille,
@@ -68040,7 +68145,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/turf/simulated/floor/wood/alt,
+/turf/simulated/floor/carpet/purcarpet,
 /area/muriki/crew/casino)
 "ewf" = (
 /obj/effect/floor_decal/industrial/warning,
@@ -68666,7 +68771,7 @@
 /area/muriki/bathroom/atmospherics)
 "fhv" = (
 /obj/structure/table/gamblingtable,
-/turf/simulated/floor/wood/alt,
+/turf/simulated/floor/tiled/material/gold,
 /area/muriki/crew/casino)
 "fiW" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -68970,7 +69075,7 @@
 	dir = 4;
 	pixel_x = -8
 	},
-/turf/simulated/floor/wood/alt,
+/turf/simulated/floor/carpet,
 /area/muriki/crew/casino)
 "fBg" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -69105,9 +69210,9 @@
 /area/muriki/processor/hall)
 "fIc" = (
 /obj/structure/table/fancyblack,
-/obj/effect/floor_decal/spline/fancy/wood,
 /obj/structure/sign/poster,
-/turf/simulated/floor/wood/alt,
+/obj/effect/floor_decal/spline/plain,
+/turf/simulated/floor/tiled/material/gold,
 /area/muriki/crew/casino)
 "fIE" = (
 /obj/machinery/ai_status_display,
@@ -69263,7 +69368,11 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/turf/simulated/floor/wood/alt,
+/obj/effect/floor_decal/spline/plain,
+/obj/effect/floor_decal/spline/plain{
+	dir = 1
+	},
+/turf/simulated/floor/carpet,
 /area/muriki/crew/casino)
 "fUK" = (
 /turf/simulated/floor/water/acidic/indoor/turfpack/muriki,
@@ -69441,10 +69550,10 @@
 /obj/structure/bed/chair/bay/comfy/brown{
 	dir = 4
 	},
-/obj/effect/floor_decal/spline/fancy/wood{
+/obj/effect/floor_decal/spline/plain{
 	dir = 10
 	},
-/turf/simulated/floor/wood/alt,
+/turf/simulated/floor/carpet/purcarpet,
 /area/muriki/crew/casino)
 "gdw" = (
 /obj/effect/floor_decal/milspec/color/purple/half,
@@ -70668,11 +70777,11 @@
 /turf/simulated/floor/tiled/milspec,
 /area/medical/robotics)
 "hHM" = (
-/obj/effect/floor_decal/spline/fancy/wood{
-	dir = 4
-	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 5
 	},
 /turf/simulated/floor/wood/alt,
 /area/muriki/crew/casino)
@@ -70949,7 +71058,7 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
 	},
-/turf/simulated/floor/carpet/brown,
+/turf/simulated/floor/tiled/material/gold,
 /area/muriki/crew/casinostore)
 "ick" = (
 /obj/effect/floor_decal/industrial/warning,
@@ -71028,7 +71137,7 @@
 "iiP" = (
 /obj/structure/table/gamblingtable,
 /obj/structure/casino_table/blackjack_m,
-/turf/simulated/floor/wood/alt,
+/turf/simulated/floor/tiled/material/gold,
 /area/muriki/crew/casino)
 "iiY" = (
 /obj/effect/floor_decal/spline/fancy/wood{
@@ -71747,7 +71856,7 @@
 "iYh" = (
 /obj/structure/casino_table/roulette_long,
 /obj/item/deck/cards/casino,
-/turf/simulated/floor/wood/alt,
+/turf/simulated/floor/tiled/material/gold,
 /area/muriki/crew/casino)
 "iYi" = (
 /obj/effect/floor_decal/spline/fancy/wood{
@@ -71886,14 +71995,14 @@
 /turf/simulated/floor/tiled/dark,
 /area/server)
 "jeF" = (
-/obj/effect/floor_decal/spline/fancy/wood,
 /obj/machinery/light,
 /obj/structure/table/gamblingtable,
 /obj/item/book/codex/casino,
 /obj/structure/sign/painting/public{
 	pixel_y = -32
 	},
-/turf/simulated/floor/wood/alt,
+/obj/effect/floor_decal/spline/plain,
+/turf/simulated/floor/carpet,
 /area/muriki/crew/casino)
 "jfw" = (
 /obj/structure/prop/machine/core/starts_on{
@@ -72132,7 +72241,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/turf/simulated/floor/wood/alt,
+/turf/simulated/floor/carpet/purcarpet,
 /area/muriki/crew/casino)
 "jpD" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -72765,14 +72874,14 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/obj/effect/floor_decal/spline/fancy/wood{
-	dir = 1
-	},
 /obj/machinery/vending/deluxe_cigs/open{
 	dir = 4;
 	pixel_x = -8
 	},
-/turf/simulated/floor/wood/alt,
+/obj/effect/floor_decal/spline/plain{
+	dir = 1
+	},
+/turf/simulated/floor/carpet,
 /area/muriki/crew/casino)
 "kaY" = (
 /obj/item/handcuffs/fuzzy,
@@ -72978,13 +73087,13 @@
 /obj/machinery/alarm{
 	pixel_y = 26
 	},
-/obj/effect/floor_decal/spline/fancy/wood{
-	dir = 1
-	},
 /obj/machinery/light{
 	dir = 1
 	},
 /obj/effect/landmark/holiday_event_spawn,
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 9
+	},
 /turf/simulated/floor/wood/alt,
 /area/muriki/crew/casino)
 "kjZ" = (
@@ -73165,7 +73274,7 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 1
 	},
-/turf/simulated/floor/carpet/brown,
+/turf/simulated/floor/tiled/material/gold,
 /area/muriki/crew/casinostore)
 "kqt" = (
 /obj/effect/floor_decal/borderfloor{
@@ -73788,7 +73897,7 @@
 	dir = 4;
 	pixel_x = -9
 	},
-/turf/simulated/floor/wood/alt,
+/turf/simulated/floor/carpet,
 /area/muriki/crew/casino)
 "kUm" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -74186,14 +74295,14 @@
 /turf/simulated/floor/plating,
 /area/rnd/supermatter)
 "lrx" = (
-/obj/effect/floor_decal/spline/fancy/wood{
-	dir = 4
-	},
 /obj/machinery/holoposter{
 	dir = 8;
 	pixel_x = 30
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 6
+	},
 /turf/simulated/floor/wood/alt,
 /area/muriki/crew/casino)
 "lrS" = (
@@ -74291,7 +74400,10 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/wood/alt,
+/obj/effect/floor_decal/spline/plain{
+	dir = 4
+	},
+/turf/simulated/floor/carpet,
 /area/muriki/crew/casino)
 "lyb" = (
 /obj/effect/floor_decal/techfloor/orange{
@@ -74504,9 +74616,6 @@
 /turf/simulated/wall/r_wall,
 /area/mine/explored/muriki/cave/med/west_access)
 "lJe" = (
-/obj/effect/floor_decal/spline/fancy/wood{
-	dir = 8
-	},
 /obj/structure/cable/green{
 	icon_state = "1-8"
 	},
@@ -74516,7 +74625,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
 	},
-/turf/simulated/floor/wood/alt,
+/obj/effect/floor_decal/spline/plain{
+	dir = 8
+	},
+/turf/simulated/floor/carpet/purcarpet,
 /area/muriki/crew/casino)
 "lKV" = (
 /obj/effect/landmark/event_spawn/dronepod_landing,
@@ -75112,9 +75224,6 @@
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/sec)
 "mFa" = (
-/obj/effect/floor_decal/spline/fancy/wood{
-	dir = 8
-	},
 /obj/structure/sign/poster{
 	dir = 8
 	},
@@ -75124,7 +75233,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
 	},
-/turf/simulated/floor/wood/alt,
+/obj/effect/floor_decal/spline/plain{
+	dir = 8
+	},
+/turf/simulated/floor/carpet/purcarpet,
 /area/muriki/crew/casino)
 "mFP" = (
 /obj/structure/grille,
@@ -75813,7 +75925,7 @@
 "nAX" = (
 /obj/structure/table/gamblingtable,
 /obj/structure/casino_table/blackjack_r,
-/turf/simulated/floor/wood/alt,
+/turf/simulated/floor/tiled/material/gold,
 /area/muriki/crew/casino)
 "nBa" = (
 /obj/effect/floor_decal/corner/purple{
@@ -76384,13 +76496,16 @@
 "okM" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/effect/floor_decal/spline/fancy/wood/corner{
-	dir = 8
-	},
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/wood/alt,
+/obj/effect/floor_decal/spline/plain{
+	dir = 4
+	},
+/obj/effect/floor_decal/spline/plain/corner{
+	dir = 8
+	},
+/turf/simulated/floor/carpet,
 /area/muriki/crew/casino)
 "olr" = (
 /obj/structure/prop/rock/watersharp,
@@ -76525,16 +76640,19 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
-/turf/simulated/floor/wood/alt,
+/obj/effect/floor_decal/spline/plain/corner{
+	dir = 1
+	},
+/turf/simulated/floor/carpet,
 /area/muriki/crew/casino)
 "otm" = (
-/obj/effect/floor_decal/spline/fancy/wood,
 /obj/structure/table/gamblingtable,
 /obj/machinery/atm{
 	pixel_y = -32
 	},
 /obj/item/retail_scanner,
-/turf/simulated/floor/wood/alt,
+/obj/effect/floor_decal/spline/plain,
+/turf/simulated/floor/carpet,
 /area/muriki/crew/casino)
 "otB" = (
 /obj/structure/catwalk,
@@ -76767,7 +76885,7 @@
 	dir = 10
 	},
 /obj/structure/table/fancyblack,
-/turf/simulated/floor/carpet/brown,
+/turf/simulated/floor/tiled/material/gold,
 /area/muriki/crew/casinostore)
 "oHd" = (
 /obj/effect/landmark/start/stowaway,
@@ -76892,7 +77010,7 @@
 	name = "Station Intercom (General)";
 	pixel_x = -22
 	},
-/turf/simulated/floor/tiled/kafel_full,
+/turf/simulated/floor/tiled/material/silver,
 /area/muriki/bathroom/casino)
 "oPd" = (
 /obj/structure/cable/heavyduty{
@@ -77086,7 +77204,8 @@
 /obj/structure/table/fancyblack,
 /obj/item/storage/fancy/cigar/havana,
 /obj/item/storage/fancy/cigar/havana,
-/turf/simulated/floor/wood/alt,
+/obj/effect/floor_decal/spline/plain,
+/turf/simulated/floor/tiled/material/gold,
 /area/muriki/crew/casino)
 "pbc" = (
 /turf/simulated/floor/water/digestive_enzymes/turfpack/muriki,
@@ -77144,10 +77263,10 @@
 /obj/structure/sign/yessmoking_1{
 	pixel_y = 32
 	},
-/obj/effect/floor_decal/spline/fancy/wood{
+/obj/effect/floor_decal/spline/plain{
 	dir = 1
 	},
-/turf/simulated/floor/wood/alt,
+/turf/simulated/floor/tiled/material/gold,
 /area/muriki/crew/casino)
 "pdE" = (
 /obj/effect/floor_decal/spline/fancy/wood,
@@ -77404,7 +77523,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/tiled/kafel_full,
+/turf/simulated/floor/tiled/material/silver,
 /area/muriki/bathroom/casino)
 "poc" = (
 /obj/effect/map_effect/interval/burnpit,
@@ -77558,9 +77677,6 @@
 /obj/structure/cable/green{
 	icon_state = "0-4"
 	},
-/obj/effect/floor_decal/spline/fancy/wood{
-	dir = 9
-	},
 /obj/machinery/holoposter{
 	pixel_y = 32
 	},
@@ -77568,7 +77684,10 @@
 /obj/structure/cable/green{
 	icon_state = "0-2"
 	},
-/turf/simulated/floor/wood/alt,
+/obj/effect/floor_decal/spline/plain{
+	dir = 9
+	},
+/turf/simulated/floor/carpet/purcarpet,
 /area/muriki/crew/casino)
 "pxx" = (
 /turf/simulated/floor/plating/turfpack/muriki,
@@ -77638,11 +77757,11 @@
 /obj/structure/table/fancyblack,
 /obj/item/storage/fancy/cigar/havana,
 /obj/item/storage/fancy/cigar/havana,
-/obj/effect/floor_decal/spline/fancy/wood,
 /obj/machinery/computer/security/telescreen/entertainment{
 	pixel_y = -35
 	},
-/turf/simulated/floor/wood/alt,
+/obj/effect/floor_decal/spline/plain,
+/turf/simulated/floor/tiled/material/gold,
 /area/muriki/crew/casino)
 "pAu" = (
 /obj/structure/disposalpipe/up{
@@ -77945,7 +78064,7 @@
 /obj/structure/cable/green{
 	icon_state = "2-4"
 	},
-/turf/simulated/floor/tiled/kafel_full,
+/turf/simulated/floor/tiled/material/silver,
 /area/muriki/bathroom/casino)
 "pRR" = (
 /obj/effect/floor_decal/borderfloor,
@@ -78063,9 +78182,6 @@
 /obj/structure/bed/chair/bay/comfy/brown{
 	dir = 4
 	},
-/obj/effect/floor_decal/spline/fancy/wood{
-	dir = 8
-	},
 /obj/item/radio/intercom{
 	dir = 8;
 	name = "Station Intercom (General)";
@@ -78074,7 +78190,10 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/wood/alt,
+/obj/effect/floor_decal/spline/plain{
+	dir = 8
+	},
+/turf/simulated/floor/carpet/purcarpet,
 /area/muriki/crew/casino)
 "pXD" = (
 /obj/structure/table/standard,
@@ -78257,12 +78376,6 @@
 	pixel_x = -25;
 	pixel_y = 28
 	},
-/obj/effect/floor_decal/spline/fancy/wood/corner{
-	dir = 4
-	},
-/obj/effect/floor_decal/spline/fancy/wood/corner{
-	dir = 1
-	},
 /obj/effect/floor_decal/steeldecal/steel_decals_central7{
 	dir = 4
 	},
@@ -78275,7 +78388,13 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/disposalpipe/segment,
-/turf/simulated/floor/wood/alt,
+/obj/effect/floor_decal/spline/plain{
+	dir = 4
+	},
+/obj/effect/floor_decal/spline/plain/corner{
+	dir = 4
+	},
+/turf/simulated/floor/carpet,
 /area/muriki/crew/casino)
 "qhF" = (
 /obj/machinery/hologram/holopad,
@@ -78288,7 +78407,11 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/turf/simulated/floor/wood/alt,
+/obj/effect/floor_decal/spline/plain,
+/obj/effect/floor_decal/spline/plain{
+	dir = 1
+	},
+/turf/simulated/floor/carpet,
 /area/muriki/crew/casino)
 "qiI" = (
 /obj/structure/window/basic{
@@ -78619,7 +78742,7 @@
 	name = "Station Intercom (General)";
 	pixel_x = -21
 	},
-/turf/simulated/floor/carpet/brown,
+/turf/simulated/floor/tiled/material/gold,
 /area/muriki/crew/casinostore)
 "qBj" = (
 /obj/structure/cable/green{
@@ -78641,7 +78764,7 @@
 	dir = 8;
 	pixel_x = 32
 	},
-/turf/simulated/floor/carpet/brown,
+/turf/simulated/floor/tiled/material/gold,
 /area/muriki/crew/casinostore)
 "qCK" = (
 /obj/structure/disposalpipe/segment{
@@ -78829,7 +78952,7 @@
 	name = "Station Intercom (General)";
 	pixel_y = 21
 	},
-/turf/simulated/floor/wood/alt,
+/turf/simulated/floor/tiled/material/gold,
 /area/muriki/crew/casino)
 "qOy" = (
 /obj/structure/disposalpipe/segment{
@@ -79305,6 +79428,9 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 8
 	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 8
+	},
 /turf/simulated/floor/wood/alt,
 /area/muriki/crew/casino)
 "rjB" = (
@@ -79424,7 +79550,7 @@
 	dir = 4;
 	pixel_x = -30
 	},
-/turf/simulated/floor/tiled/kafel_full,
+/turf/simulated/floor/tiled/material/silver,
 /area/muriki/bathroom/casino)
 "rqp" = (
 /obj/random/maintenance/misc,
@@ -79635,7 +79761,7 @@
 /obj/structure/closet/crate,
 /obj/structure/table/fancyblack,
 /obj/effect/floor_decal/spline/plain,
-/turf/simulated/floor/carpet/brown,
+/turf/simulated/floor/tiled/material/gold,
 /area/muriki/crew/casinostore)
 "rzl" = (
 /obj/structure/disposalpipe/segment{
@@ -80145,7 +80271,11 @@
 /obj/structure/cable/green{
 	icon_state = "2-8"
 	},
-/turf/simulated/floor/wood/alt,
+/obj/effect/floor_decal/spline/plain{
+	dir = 1
+	},
+/obj/effect/floor_decal/spline/plain/corner,
+/turf/simulated/floor/carpet,
 /area/muriki/crew/casino)
 "scO" = (
 /obj/machinery/atmospherics/unary/outlet_injector{
@@ -80471,7 +80601,7 @@
 	dir = 4;
 	pixel_x = 26
 	},
-/turf/simulated/floor/carpet/brown,
+/turf/simulated/floor/tiled/material/gold,
 /area/muriki/crew/casinostore)
 "srp" = (
 /turf/simulated/wall,
@@ -80632,7 +80762,7 @@
 	dir = 1;
 	icon_state = "spline_plain_full"
 	},
-/turf/simulated/floor/tiled/kafel_full,
+/turf/simulated/floor/tiled/material/silver,
 /area/muriki/bathroom/casino)
 "szY" = (
 /obj/effect/floor_decal/industrial/warning,
@@ -80739,7 +80869,7 @@
 "sHp" = (
 /obj/structure/table/gamblingtable,
 /obj/structure/casino_table/blackjack_l,
-/turf/simulated/floor/wood/alt,
+/turf/simulated/floor/tiled/material/gold,
 /area/muriki/crew/casino)
 "sHs" = (
 /obj/structure/salvageable/console,
@@ -80906,7 +81036,7 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
 	},
-/turf/simulated/floor/wood/alt,
+/turf/simulated/floor/tiled/material/gold,
 /area/muriki/crew/casino)
 "sRg" = (
 /obj/structure/cable/yellow{
@@ -80932,16 +81062,16 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 1
 	},
-/obj/effect/floor_decal/spline/fancy/wood/corner,
-/obj/effect/floor_decal/spline/fancy/wood/corner{
-	dir = 1
-	},
 /obj/machinery/light_switch{
 	dir = 8;
 	pixel_x = 25;
 	pixel_y = -26
 	},
-/turf/simulated/floor/wood/alt,
+/obj/effect/floor_decal/spline/plain,
+/obj/effect/floor_decal/spline/plain{
+	dir = 1
+	},
+/turf/simulated/floor/carpet,
 /area/muriki/crew/casino)
 "sRX" = (
 /obj/structure/fence{
@@ -80976,7 +81106,10 @@
 /obj/structure/bed/chair/bay/comfy/brown{
 	dir = 8
 	},
-/turf/simulated/floor/wood/alt,
+/obj/effect/floor_decal/spline/plain{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/purcarpet,
 /area/muriki/crew/casino)
 "sSA" = (
 /turf/simulated/floor/tiled/dark/turfpack/muriki,
@@ -81074,7 +81207,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-8"
 	},
-/turf/simulated/floor/tiled/kafel_full,
+/turf/simulated/floor/tiled/material/silver,
 /area/muriki/bathroom/casino)
 "tbI" = (
 /obj/machinery/conveyor{
@@ -81256,7 +81389,7 @@
 "tje" = (
 /obj/item/material/ashtray/bronze,
 /obj/structure/casino_table/roulette_chart,
-/turf/simulated/floor/wood/alt,
+/turf/simulated/floor/tiled/material/gold,
 /area/muriki/crew/casino)
 "tkR" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -81357,6 +81490,9 @@
 "tuP" = (
 /obj/structure/flora/pottedplant{
 	icon_state = "plant-20"
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 10
 	},
 /turf/simulated/floor/wood/alt,
 /area/muriki/crew/casino)
@@ -81683,10 +81819,10 @@
 	},
 /obj/structure/table/gamblingtable,
 /obj/item/material/ashtray/bronze,
-/obj/effect/floor_decal/spline/fancy/wood{
+/obj/effect/floor_decal/spline/plain{
 	dir = 1
 	},
-/turf/simulated/floor/wood/alt,
+/turf/simulated/floor/tiled/material/gold,
 /area/muriki/crew/casino)
 "tPV" = (
 /obj/structure/salvageable/computer,
@@ -82004,7 +82140,7 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/kafel_full,
+/turf/simulated/floor/tiled/material/silver,
 /area/muriki/bathroom/casino)
 "umT" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -82108,7 +82244,7 @@
 	dir = 4;
 	pixel_x = 26
 	},
-/turf/simulated/floor/wood/alt,
+/turf/simulated/floor/tiled/material/gold,
 /area/muriki/crew/casino)
 "uqV" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
@@ -82504,7 +82640,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/wood/alt,
+/obj/effect/floor_decal/spline/plain{
+	dir = 4
+	},
+/turf/simulated/floor/carpet,
 /area/muriki/crew/casino)
 "uOA" = (
 /obj/effect/landmark/event_spawn/maintpred,
@@ -82560,10 +82699,10 @@
 /obj/structure/bed/chair/bay/comfy/brown{
 	dir = 8
 	},
-/obj/effect/floor_decal/spline/fancy/wood{
-	dir = 1
+/obj/effect/floor_decal/spline/plain{
+	dir = 5
 	},
-/turf/simulated/floor/wood/alt,
+/turf/simulated/floor/carpet/purcarpet,
 /area/muriki/crew/casino)
 "uUn" = (
 /obj/structure/disposalpipe/segment{
@@ -83463,7 +83602,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/turf/simulated/floor/wood/alt,
+/obj/effect/floor_decal/spline/plain{
+	dir = 1
+	},
+/turf/simulated/floor/carpet,
 /area/muriki/crew/casino)
 "vSa" = (
 /obj/structure/table/reinforced,
@@ -83739,7 +83881,7 @@
 	specialfunctions = 4;
 	pixel_y = 29
 	},
-/turf/simulated/floor/tiled/kafel_full,
+/turf/simulated/floor/tiled/material/silver,
 /area/muriki/bathroom/casino)
 "whf" = (
 /obj/structure/cable/heavyduty{
@@ -83868,15 +84010,17 @@
 "wrB" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/effect/floor_decal/spline/fancy/wood/corner,
-/obj/effect/floor_decal/spline/fancy/wood{
-	dir = 8
-	},
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
 /obj/item/geiger/wall/west,
-/turf/simulated/floor/wood/alt,
+/obj/effect/floor_decal/spline/plain{
+	dir = 4
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 8
+	},
+/turf/simulated/floor/carpet,
 /area/muriki/crew/casino)
 "wrE" = (
 /turf/simulated/floor/tiled/dark,
@@ -83904,7 +84048,7 @@
 /obj/structure/stripper_pole{
 	pixel_y = -6
 	},
-/turf/simulated/floor/wood/alt,
+/turf/simulated/floor/tiled/material/gold,
 /area/muriki/crew/casino)
 "wte" = (
 /obj/structure/cable/yellow{
@@ -83962,13 +84106,13 @@
 /obj/structure/table/gamblingtable,
 /obj/item/deck/cards/casino,
 /obj/item/deck/cards/casino,
-/obj/effect/floor_decal/spline/fancy/wood{
-	dir = 1
-	},
 /obj/machinery/light{
 	dir = 1
 	},
-/turf/simulated/floor/wood/alt,
+/obj/effect/floor_decal/spline/plain{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/material/gold,
 /area/muriki/crew/casino)
 "wwm" = (
 /obj/effect/floor_decal/spline/plain,
@@ -84008,8 +84152,8 @@
 "wyM" = (
 /obj/machinery/media/jukebox,
 /obj/structure/sign/poster,
-/obj/effect/floor_decal/spline/fancy/wood,
-/turf/simulated/floor/wood/alt,
+/obj/effect/floor_decal/spline/plain,
+/turf/simulated/floor/carpet,
 /area/muriki/crew/casino)
 "wzy" = (
 /obj/effect/floor_decal/spline/fancy/wood{
@@ -84218,8 +84362,8 @@
 /obj/item/deck/cards/casino,
 /obj/structure/table/gamblingtable,
 /obj/structure/sign/poster,
-/obj/effect/floor_decal/spline/fancy/wood,
-/turf/simulated/floor/wood/alt,
+/obj/effect/floor_decal/spline/plain,
+/turf/simulated/floor/carpet,
 /area/muriki/crew/casino)
 "wGA" = (
 /obj/effect/step_trigger/dephase_shadekin,
@@ -84414,7 +84558,7 @@
 "wUn" = (
 /obj/structure/table/fancyblack,
 /obj/item/flame/lighter/zippo/gold,
-/turf/simulated/floor/wood/alt,
+/turf/simulated/floor/tiled/material/gold,
 /area/muriki/crew/casino)
 "wUH" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
@@ -84897,7 +85041,7 @@
 	dir = 4
 	},
 /obj/structure/disposalpipe/segment,
-/turf/simulated/floor/carpet/brown,
+/turf/simulated/floor/tiled/material/gold,
 /area/muriki/crew/casinostore)
 "xGX" = (
 /obj/effect/floor_decal/spline/fancy/wood{
@@ -85422,7 +85566,6 @@
 /obj/structure/window/reinforced/tinted{
 	dir = 4
 	},
-/obj/effect/floor_decal/spline/fancy/wood,
 /obj/machinery/vending/wallmed1/public{
 	dir = 1;
 	pixel_y = -30
@@ -85430,7 +85573,10 @@
 /obj/structure/bed/chair/bay/comfy/brown{
 	dir = 8
 	},
-/turf/simulated/floor/wood/alt,
+/obj/effect/floor_decal/spline/plain{
+	dir = 6
+	},
+/turf/simulated/floor/carpet/purcarpet,
 /area/muriki/crew/casino)
 "yhn" = (
 /obj/effect/step_trigger/dephase_shadekin,
@@ -135295,7 +135441,7 @@ kaU
 kTD
 fAP
 bKe
-ppH
+czn
 wyM
 rJg
 bKB
@@ -135457,7 +135603,7 @@ qhv
 dMo
 uNl
 osW
-ppH
+czn
 jeF
 rJg
 sLP
@@ -135619,7 +135765,7 @@ kjY
 rjm
 tuP
 vQV
-ppH
+czn
 otm
 rJg
 szv
@@ -135773,15 +135919,15 @@ amq
 bYN
 ccn
 bZB
-cuP
-cuP
-cuP
+czv
+czu
+czr
 rJg
 xqb
 ppH
-ppH
+kuq
 vQV
-ppH
+czn
 wGn
 rJg
 sLP
@@ -135935,13 +136081,13 @@ amq
 amq
 bRU
 amq
+czw
 cuP
-cuP
-cuP
+czs
 rJg
 siu
 jqS
-ppH
+kuq
 scm
 lxM
 okM
@@ -136099,15 +136245,15 @@ chl
 amq
 cuT
 cuQ
-cuP
+czs
 rJg
 qNK
 sHp
-bRp
+czq
 fUd
-ppH
-ppH
-kuq
+czo
+bDa
+bqY
 sLP
 dAx
 dQJ
@@ -136261,13 +136407,13 @@ amq
 amq
 cuU
 cuR
-cuP
+czs
 cuO
 sQj
 iiP
-bRp
+czq
 qhF
-ppH
+czp
 tje
 lLj
 aPO
@@ -136421,15 +136567,15 @@ bLg
 amq
 ahC
 amq
+czx
 cuR
-cuR
-cuP
+czs
 rJg
 dlQ
 nAX
-bRp
+czq
 fUd
-ppH
+czp
 iYh
 iHg
 aPO
@@ -136583,9 +136729,9 @@ amq
 amq
 ahC
 amq
+czy
 cuS
-cuS
-cuP
+czt
 rJg
 tYY
 gwo
