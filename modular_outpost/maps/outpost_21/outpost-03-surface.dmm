@@ -26247,6 +26247,15 @@
 	dir = 5
 	},
 /obj/item/bikehorn/rubberducky,
+/obj/item/soap/deluxe{
+	pixel_y = 11
+	},
+/obj/item/soap/deluxe{
+	pixel_y = 11
+	},
+/obj/item/soap/deluxe{
+	pixel_y = 11
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/medical)
 "eUb" = (
@@ -32775,7 +32784,9 @@
 /obj/effect/floor_decal/corner/blue{
 	dir = 5
 	},
-/obj/machinery/reagentgrinder,
+/obj/machinery/reagentgrinder{
+	anchored = 1
+	},
 /obj/item/stack/material/phoron,
 /obj/item/stack/material/phoron,
 /obj/item/stack/material/phoron,
@@ -34871,6 +34882,9 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "1-8"
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/main)
@@ -72173,16 +72187,13 @@
 /turf/simulated/wall,
 /area/medical/medbay_primary_storage)
 "tnv" = (
-/obj/structure/table/glass,
 /obj/structure/sign/nosmoking_1{
 	pixel_y = 32
 	},
-/obj/item/soap/deluxe,
-/obj/item/soap/deluxe,
-/obj/item/soap/deluxe,
 /obj/effect/floor_decal/corner/blue{
 	dir = 5
 	},
+/obj/machinery/washing_machine,
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/medical)
 "tnA" = (

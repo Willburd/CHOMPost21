@@ -2251,10 +2251,6 @@
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/rnd/chemistry)
-"afk" = (
-/obj/structure/flora/tree/pine/xmas,
-/turf/simulated/floor/tiled,
-/area/quartermaster/cargupbreak)
 "afr" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -2492,6 +2488,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/machinery/washing_machine,
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/medupper)
 "ajl" = (
@@ -27168,6 +27165,9 @@
 /obj/item/robotanalyzer,
 /obj/item/perfect_tele{
 	name = "CE's Translocator"
+	},
+/obj/effect/landmark{
+	name = "nukeitem"
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/heads/chief)
@@ -72479,7 +72479,7 @@ tPp
 wHl
 kIH
 kIH
-afk
+kIH
 ygf
 kIH
 uCV

@@ -40727,7 +40727,16 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/turf/simulated/floor/plating/turfpack/muriki,
+/obj/effect/floor_decal/milspec/hatchmarks,
+/obj/machinery/door/blast/regular{
+	density = 0;
+	dir = 4;
+	icon_state = "pdoor0";
+	id = "Scilock";
+	name = "Science Lockdown";
+	opacity = 0
+	},
+/turf/simulated/floor/tiled/techfloor,
 /area/maintenance/research)
 "bvz" = (
 /obj/effect/mine/claymore{
@@ -66326,6 +66335,20 @@
 	dir = 5
 	},
 /turf/simulated/floor/wood/hardwood/parquet,
+/area/maintenance/research)
+"czz" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/effect/floor_decal/milspec/hatchmarks,
+/obj/machinery/door/blast/regular{
+	density = 0;
+	dir = 2;
+	icon_state = "pdoor0";
+	id = "Scilock";
+	name = "Science Lockdown";
+	opacity = 0
+	},
+/turf/simulated/floor/tiled/techfloor,
 /area/maintenance/research)
 "czC" = (
 /obj/effect/floor_decal/borderfloor/corner{
@@ -137363,7 +137386,7 @@ fnR
 awT
 aqJ
 aCl
-amq
+agP
 bDc
 amq
 ahC
@@ -137525,16 +137548,16 @@ apy
 mac
 aBa
 aCn
-bzD
+czz
 bDl
 amq
 ahC
 ahC
 ahC
 amq
-amq
+agP
 bvy
-amq
+agP
 ahC
 ahC
 ahC
@@ -137687,14 +137710,14 @@ wki
 axN
 aBb
 aDt
-aDt
-aDt
-aDt
-aDt
-aDt
-aDt
-aDt
-aDt
+aJc
+aJc
+aJc
+aJc
+aJc
+aJc
+aJc
+aJc
 dQF
 aJc
 aJc
