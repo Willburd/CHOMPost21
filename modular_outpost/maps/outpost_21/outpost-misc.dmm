@@ -735,20 +735,24 @@
 /area/beach)
 "bM" = (
 /obj/structure/table/rack,
-/obj/item/gun/projectile/automatic/serdy/rpk,
-/obj/item/ammo_magazine/akm/drum/ap,
-/obj/item/ammo_magazine/akm/drum/ap,
-/obj/item/ammo_magazine/akm/drum/ap,
-/obj/item/ammo_magazine/akm/drum/ap,
-/obj/item/ammo_magazine/akm/drum/ap,
-/obj/item/ammo_magazine/akm/drum/ap,
-/obj/item/ammo_magazine/akm/drum/ap,
-/obj/item/ammo_magazine/akm/drum/ap,
-/obj/item/ammo_magazine/akm/drum/ap,
-/obj/item/ammo_magazine/akm/drum/ap,
-/obj/item/ammo_magazine/akm/drum/ap,
-/obj/item/ammo_magazine/akm/drum/ap,
-/obj/item/ammo_magazine/akm/drum/ap,
+/obj/item/gun/projectile/automatic/serdy/rpd,
+/obj/item/ammo_magazine/rpd/ap,
+/obj/item/ammo_magazine/rpd/ap,
+/obj/item/ammo_magazine/rpd/ap,
+/obj/item/ammo_magazine/rpd/ap,
+/obj/item/ammo_magazine/rpd/ap,
+/obj/item/ammo_magazine/rpd/ap,
+/obj/item/ammo_magazine/rpd/ap,
+/obj/item/ammo_magazine/rpd/ap,
+/obj/item/ammo_magazine/rpd/ap,
+/obj/item/ammo_magazine/rpd/ap,
+/obj/item/ammo_magazine/rpd/ap,
+/obj/item/ammo_magazine/rpd/ap,
+/obj/item/ammo_magazine/rpd/ap,
+/obj/item/ammo_magazine/rpd/ap,
+/obj/item/ammo_magazine/rpd/ap,
+/obj/item/ammo_magazine/rpd/ap,
+/obj/item/ammo_magazine/rpd/ap,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -1744,6 +1748,9 @@
 "ef" = (
 /obj/machinery/computer/security/nuclear,
 /obj/structure/table/steel_reinforced,
+/obj/item/clothing/head/helmet/bucket{
+	name = "Fortrailia's Warhelm"
+	},
 /turf/simulated/shuttle/floor/darkred,
 /area/shuttle/mercenary)
 "eg" = (
@@ -3324,16 +3331,22 @@
 /area/shuttle/mercenary)
 "hm" = (
 /obj/structure/table/rack,
-/obj/item/ammo_magazine/m545saw/ap,
-/obj/item/ammo_magazine/m545saw/ap,
-/obj/item/ammo_magazine/m545saw/ap,
-/obj/item/ammo_magazine/m545saw/ap,
-/obj/item/ammo_magazine/m545saw/ap,
-/obj/item/ammo_magazine/m545saw/ap,
-/obj/item/ammo_magazine/m545saw/ap,
-/obj/item/ammo_magazine/m545saw/ap,
-/obj/item/ammo_magazine/m545saw/ap,
-/obj/item/gun/projectile/automatic/l6_saw,
+/obj/item/gun/projectile/automatic/serdy/plamya/mk3,
+/obj/item/ammo_magazine/plamya/ap,
+/obj/item/ammo_magazine/plamya/ap,
+/obj/item/ammo_magazine/plamya/ap,
+/obj/item/ammo_magazine/plamya/ap,
+/obj/item/ammo_magazine/plamya/ap,
+/obj/item/ammo_magazine/plamya/ap,
+/obj/item/ammo_magazine/plamya/ap,
+/obj/item/ammo_magazine/plamya/ap,
+/obj/item/ammo_magazine/plamya/ap,
+/obj/item/ammo_magazine/plamya/ap,
+/obj/item/ammo_magazine/plamya/ap,
+/obj/item/ammo_magazine/plamya/ap,
+/obj/item/ammo_magazine/plamya/ap,
+/obj/item/ammo_magazine/plamya/ap,
+/obj/item/ammo_magazine/plamya/ap,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},

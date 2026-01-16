@@ -88184,7 +88184,6 @@
 "yga" = (
 /obj/structure/table/rack/gun_rack/steel,
 /obj/item/gun/energy/soapenergy/gaussrifle,
-/obj/item/gun/projectile/silenced,
 /obj/effect/floor_decal/corner/white{
 	dir = 9
 	},
@@ -88192,6 +88191,7 @@
 	dir = 4;
 	icon_state = "pipe-c"
 	},
+/obj/item/gun/projectile/deagle/camo,
 /turf/simulated/floor/tiled/dark,
 /area/security/nuke_storage)
 "ygk" = (

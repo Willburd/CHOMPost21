@@ -66354,6 +66354,11 @@
 /obj/structure/waterfall/top,
 /turf/simulated/floor/water/acidic/deep/indoor/turfpack/muriki,
 /area/muriki/processor/pools/eastfund)
+"czB" = (
+/obj/machinery/door/airlock/maintenance/int,
+/obj/item/grenade/flashbang/clusterbang,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/maintenance/civ/west)
 "czC" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 4
@@ -130804,7 +130809,7 @@ cnU
 ceO
 aOU
 ceB
-ayD
+czB
 aOU
 cnU
 cef
