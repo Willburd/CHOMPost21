@@ -105,6 +105,8 @@ var/list/shotgun_mean1 = list(/obj/item/projectile/ion,/obj/item/projectile/ener
 	reload_time = 4 SECONDS
 
 /mob/living/simple_mob/vore/wolftaur/syndicate/shotty //New shotgun boys. Nasty little shits~
+	name = "mercenary commando breacher"
+	desc = "A tough looking armored canid creature armed with a sawn-off shotgun!"
 	projectiletype = /obj/item/projectile/scatter/flechette
 	loot_list = list(/obj/item/gun/projectile/shotgun/pump/shorty = 3)
 	projectilesound = 'sound/weapons/gunshot_shotgun.ogg'
@@ -122,6 +124,8 @@ var/list/shotgun_mean1 = list(/obj/item/projectile/ion,/obj/item/projectile/ener
 
 //Absolute devil. Use this one with caution... and I'M saying that
 /mob/living/simple_mob/vore/wolftaur/syndicate/shotty/combat
+	name = "mercenary commando breacher"
+	desc = "A very mean looking armored canid creature armed with a combat shotgun!"
 	loot_list = list(/obj/item/gun/projectile/shotgun/pump/USDF = 3)
 	base_attack_cooldown = 0.6 SECONDS //just over half a second between shots.. makes up for having more shells and having to rack them
 	reload_max = 12

@@ -5321,6 +5321,13 @@
 	icon_state = "dark"
 	},
 /area/syndicate_mothership)
+"kB" = (
+/obj/structure/window/reinforced,
+/mob/living/simple_mob/vore/wolftaur/syndicate/shotty/combat,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
 "kG" = (
 /obj/structure/table/rack,
 /obj/item/ammo_casing/rocket,
@@ -53132,7 +53139,7 @@ yb
 jy
 jh
 je
-iN
+kA
 hP
 dU
 yb
@@ -53940,7 +53947,7 @@ sg
 sg
 yb
 kw
-kA
+kw
 ky
 kw
 kw
@@ -54102,7 +54109,7 @@ sg
 sg
 yb
 jz
-kA
+kB
 je
 iN
 hP
