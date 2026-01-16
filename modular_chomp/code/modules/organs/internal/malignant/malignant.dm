@@ -271,7 +271,7 @@
 
 
 
-/* CHOMPRemove Start- Disabled gib tumors
+// Outpost 21 edit - reenable fun
 // pinata makes you eventually explode into candy
 /obj/item/organ/internal/malignant/tumor/pinata
 	name = "pinata gland"
@@ -345,8 +345,7 @@
 		T = get_turf(src)
 	new /obj/effect/decal/cleanable/confetti(T)
 	qdel(src)
-*/
-// CHOMPRemove End
+// Outpost 21 edit end
 
 // Teleports you randomly, until it gets you killed
 /obj/item/organ/internal/malignant/tumor/bluespace
