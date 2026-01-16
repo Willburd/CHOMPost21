@@ -3005,5 +3005,4 @@
 
 /area/specialty/stowaway_clubhouse/upper
 	base_turf = /turf/simulated/open
-	icon = 'icons/turf/areas.dmi'
-	icon_state = "LP2"
+	icon_state = "LPS"
