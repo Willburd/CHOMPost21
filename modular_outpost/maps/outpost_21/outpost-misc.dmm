@@ -735,20 +735,24 @@
 /area/beach)
 "bM" = (
 /obj/structure/table/rack,
-/obj/item/gun/projectile/automatic/serdy/rpk,
-/obj/item/ammo_magazine/akm/drum/ap,
-/obj/item/ammo_magazine/akm/drum/ap,
-/obj/item/ammo_magazine/akm/drum/ap,
-/obj/item/ammo_magazine/akm/drum/ap,
-/obj/item/ammo_magazine/akm/drum/ap,
-/obj/item/ammo_magazine/akm/drum/ap,
-/obj/item/ammo_magazine/akm/drum/ap,
-/obj/item/ammo_magazine/akm/drum/ap,
-/obj/item/ammo_magazine/akm/drum/ap,
-/obj/item/ammo_magazine/akm/drum/ap,
-/obj/item/ammo_magazine/akm/drum/ap,
-/obj/item/ammo_magazine/akm/drum/ap,
-/obj/item/ammo_magazine/akm/drum/ap,
+/obj/item/gun/projectile/automatic/serdy/rpd,
+/obj/item/ammo_magazine/rpd/ap,
+/obj/item/ammo_magazine/rpd/ap,
+/obj/item/ammo_magazine/rpd/ap,
+/obj/item/ammo_magazine/rpd/ap,
+/obj/item/ammo_magazine/rpd/ap,
+/obj/item/ammo_magazine/rpd/ap,
+/obj/item/ammo_magazine/rpd/ap,
+/obj/item/ammo_magazine/rpd/ap,
+/obj/item/ammo_magazine/rpd/ap,
+/obj/item/ammo_magazine/rpd/ap,
+/obj/item/ammo_magazine/rpd/ap,
+/obj/item/ammo_magazine/rpd/ap,
+/obj/item/ammo_magazine/rpd/ap,
+/obj/item/ammo_magazine/rpd/ap,
+/obj/item/ammo_magazine/rpd/ap,
+/obj/item/ammo_magazine/rpd/ap,
+/obj/item/ammo_magazine/rpd/ap,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -1744,6 +1748,9 @@
 "ef" = (
 /obj/machinery/computer/security/nuclear,
 /obj/structure/table/steel_reinforced,
+/obj/item/clothing/head/helmet/bucket{
+	name = "Fortrailia's Warhelm"
+	},
 /turf/simulated/shuttle/floor/darkred,
 /area/shuttle/mercenary)
 "eg" = (
@@ -3030,11 +3037,12 @@
 /obj/item/ammo_magazine/m45/ap,
 /obj/item/ammo_magazine/m45/ap,
 /obj/item/ammo_magazine/m45/ap,
-/obj/item/gun/projectile/silenced,
-/obj/item/gun/projectile/silenced,
-/obj/item/gun/projectile/silenced,
-/obj/item/gun/projectile/silenced,
-/obj/item/gun/projectile/silenced,
+/obj/item/gun/projectile/silenced/empty,
+/obj/item/gun/projectile/silenced/empty,
+/obj/item/gun/projectile/silenced/empty,
+/obj/item/gun/projectile/silenced/empty,
+/obj/item/gun/projectile/silenced/empty,
+/obj/item/gun/projectile/silenced/empty,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -3114,6 +3122,12 @@
 /obj/item/ammo_magazine/ak74/ap,
 /obj/item/ammo_magazine/ak74/ap,
 /obj/item/ammo_magazine/ak74/ap,
+/obj/item/ammo_magazine/ak74/ap,
+/obj/item/ammo_magazine/ak74/ap,
+/obj/item/ammo_magazine/ak74/ap,
+/obj/item/ammo_magazine/ak74/ap,
+/obj/item/ammo_magazine/ak74/ap,
+/obj/item/ammo_magazine/ak74/ap,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -3146,6 +3160,10 @@
 /area/syndicate_mothership)
 "gY" = (
 /obj/structure/table/rack,
+/obj/item/ammo_magazine/ammo_box/b45/emp,
+/obj/item/ammo_magazine/ammo_box/b45/emp,
+/obj/item/ammo_magazine/ammo_box/b45/emp,
+/obj/item/ammo_magazine/ammo_box/b45/emp,
 /obj/item/ammo_magazine/ammo_box/b45/emp,
 /obj/item/ammo_magazine/ammo_box/b45/emp,
 /obj/item/ammo_magazine/ammo_box/b45/emp,
@@ -3276,6 +3294,32 @@
 	icon_state = "dark"
 	},
 /area/syndicate_mothership)
+"hj" = (
+/obj/structure/table/rack,
+/obj/item/ammo_magazine/ak74/hp,
+/obj/item/ammo_magazine/ak74/hp,
+/obj/item/ammo_magazine/ak74/hp,
+/obj/item/ammo_magazine/ak74/hp,
+/obj/item/ammo_magazine/ak74/hp,
+/obj/item/ammo_magazine/ak74/hp,
+/obj/item/ammo_magazine/ak74/hp,
+/obj/item/ammo_magazine/ak74/hp,
+/obj/item/ammo_magazine/ak74/hp,
+/obj/item/ammo_magazine/ak74/hp,
+/obj/item/ammo_magazine/ak74/hp,
+/obj/item/ammo_magazine/ak74/hp,
+/obj/item/ammo_magazine/ak74/hp,
+/obj/item/ammo_magazine/ak74/hp,
+/obj/item/ammo_magazine/ak74/hp,
+/obj/item/ammo_magazine/ak74/hp,
+/obj/item/ammo_magazine/ak74/hp,
+/obj/item/ammo_magazine/ak74/hp,
+/obj/item/ammo_magazine/ak74/hp,
+/obj/item/ammo_magazine/ak74/hp,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
 "hk" = (
 /obj/structure/bed/chair/bay/comfy/black{
 	dir = 8
@@ -3287,16 +3331,22 @@
 /area/shuttle/mercenary)
 "hm" = (
 /obj/structure/table/rack,
-/obj/item/ammo_magazine/m545saw/ap,
-/obj/item/ammo_magazine/m545saw/ap,
-/obj/item/ammo_magazine/m545saw/ap,
-/obj/item/ammo_magazine/m545saw/ap,
-/obj/item/ammo_magazine/m545saw/ap,
-/obj/item/ammo_magazine/m545saw/ap,
-/obj/item/ammo_magazine/m545saw/ap,
-/obj/item/ammo_magazine/m545saw/ap,
-/obj/item/ammo_magazine/m545saw/ap,
-/obj/item/gun/projectile/automatic/l6_saw,
+/obj/item/gun/projectile/automatic/serdy/plamya/mk3,
+/obj/item/ammo_magazine/plamya/ap,
+/obj/item/ammo_magazine/plamya/ap,
+/obj/item/ammo_magazine/plamya/ap,
+/obj/item/ammo_magazine/plamya/ap,
+/obj/item/ammo_magazine/plamya/ap,
+/obj/item/ammo_magazine/plamya/ap,
+/obj/item/ammo_magazine/plamya/ap,
+/obj/item/ammo_magazine/plamya/ap,
+/obj/item/ammo_magazine/plamya/ap,
+/obj/item/ammo_magazine/plamya/ap,
+/obj/item/ammo_magazine/plamya/ap,
+/obj/item/ammo_magazine/plamya/ap,
+/obj/item/ammo_magazine/plamya/ap,
+/obj/item/ammo_magazine/plamya/ap,
+/obj/item/ammo_magazine/plamya/ap,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -4186,13 +4236,6 @@
 	icon_state = "dark"
 	},
 /area/syndicate_mothership)
-"iN" = (
-/mob/living/simple_mob/vore/wolftaur/syndicate/smg,
-/obj/structure/window/reinforced,
-/turf/unsimulated/floor{
-	icon_state = "dark"
-	},
-/area/syndicate_mothership)
 "iO" = (
 /obj/structure/table/standard,
 /obj/machinery/light{
@@ -4388,8 +4431,8 @@
 	},
 /area/syndicate_mothership)
 "je" = (
-/mob/living/simple_mob/vore/wolftaur/syndicate/lmg,
 /obj/structure/window/reinforced,
+/mob/living/simple_mob/vore/wolftaur/syndicate/smg,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -4643,8 +4686,8 @@
 /turf/space,
 /area/syndicate_mothership)
 "jy" = (
-/mob/living/simple_mob/vore/wolftaur/syndicate/alt1,
 /obj/structure/window/reinforced,
+/mob/living/simple_mob/vore/wolftaur/syndicate,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -5126,6 +5169,14 @@
 	icon_state = "white"
 	},
 /area/syndicate_mothership)
+"kn" = (
+/obj/structure/table/rack,
+/obj/item/rig/merc,
+/obj/item/rig/merc,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
 "ko" = (
 /obj/structure/table/steel_reinforced,
 /obj/item/clothing/head/fancy_crown,
@@ -5134,6 +5185,71 @@
 	icon_state = "vault"
 	},
 /area/wizard_station)
+"kp" = (
+/obj/structure/table/rack,
+/obj/item/gun/projectile/automatic/c20r/empty,
+/obj/item/gun/projectile/automatic/c20r/empty,
+/obj/item/gun/projectile/automatic/c20r/empty,
+/obj/item/gun/projectile/automatic/c20r/empty,
+/obj/item/gun/projectile/automatic/c20r/empty,
+/obj/item/gun/projectile/automatic/c20r/empty,
+/obj/item/gun/projectile/automatic/c20r/empty,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"kq" = (
+/obj/structure/table/rack,
+/obj/item/ammo_magazine/m10mm/emp,
+/obj/item/ammo_magazine/m10mm/emp,
+/obj/item/ammo_magazine/m10mm/emp,
+/obj/item/ammo_magazine/m10mm/emp,
+/obj/item/ammo_magazine/m10mm/emp,
+/obj/item/ammo_magazine/m10mm/emp,
+/obj/item/ammo_magazine/m10mm/emp,
+/obj/item/ammo_magazine/m10mm/emp,
+/obj/item/ammo_magazine/m10mm/emp,
+/obj/item/ammo_magazine/m10mm/emp,
+/obj/item/ammo_magazine/m10mm/emp,
+/obj/item/ammo_magazine/m10mm/emp,
+/obj/item/ammo_magazine/m10mm/emp,
+/obj/item/ammo_magazine/m10mm/emp,
+/obj/item/ammo_magazine/m10mm/emp,
+/obj/item/ammo_magazine/m10mm/emp,
+/obj/item/ammo_magazine/m10mm/emp,
+/obj/item/ammo_magazine/m10mm/emp,
+/obj/item/ammo_magazine/m10mm/emp,
+/obj/item/ammo_magazine/m10mm/emp,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"kr" = (
+/obj/structure/table/rack,
+/obj/item/ammo_magazine/m10mm,
+/obj/item/ammo_magazine/m10mm,
+/obj/item/ammo_magazine/m10mm,
+/obj/item/ammo_magazine/m10mm,
+/obj/item/ammo_magazine/m10mm,
+/obj/item/ammo_magazine/m10mm,
+/obj/item/ammo_magazine/m10mm,
+/obj/item/ammo_magazine/m10mm,
+/obj/item/ammo_magazine/m10mm,
+/obj/item/ammo_magazine/m10mm,
+/obj/item/ammo_magazine/m10mm,
+/obj/item/ammo_magazine/m10mm,
+/obj/item/ammo_magazine/m10mm,
+/obj/item/ammo_magazine/m10mm,
+/obj/item/ammo_magazine/m10mm,
+/obj/item/ammo_magazine/m10mm,
+/obj/item/ammo_magazine/m10mm,
+/obj/item/ammo_magazine/m10mm,
+/obj/item/ammo_magazine/m10mm,
+/obj/item/ammo_magazine/m10mm,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
 "ks" = (
 /obj/structure/table/rack,
 /obj/item/clothing/under/color/red,
@@ -5143,11 +5259,53 @@
 /obj/item/gun/energy/laser,
 /turf/unsimulated/floor/techfloor_grid,
 /area/tdome/tdome1)
+"kt" = (
+/obj/structure/table/rack,
+/obj/item/rig/breacher/fancy,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"ku" = (
+/obj/structure/table/rack,
+/obj/item/clothing/shoes/magboots,
+/obj/item/clothing/suit/space/void/merc/odst,
+/obj/item/clothing/head/helmet/space/void/merc/odst,
+/obj/item/clothing/mask/gas/syndicate,
+/obj/item/tank/emergency/oxygen/double,
+/obj/item/clothing/mask/breath,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"kv" = (
+/obj/structure/table/rack,
+/obj/item/material/twohanded/fireaxe/dura,
+/obj/item/material/twohanded/fireaxe/dura,
+/obj/item/material/twohanded/fireaxe/dura,
+/obj/item/material/twohanded/fireaxe/dura,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"kw" = (
+/obj/structure/window/reinforced,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
 "kx" = (
 /obj/structure/table/rack,
 /obj/item/storage/belt/medical/alien,
 /obj/item/storage/belt/medical/alien,
 /obj/item/storage/belt/medical/alien,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"ky" = (
+/obj/structure/window/reinforced,
+/mob/living/simple_mob/vore/wolftaur/syndicate/lmg,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -5158,6 +5316,20 @@
 	req_access = list(150);
 	req_one_access = list()
 	},
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"kA" = (
+/obj/structure/window/reinforced,
+/mob/living/simple_mob/vore/wolftaur/syndicate/shotty,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"kB" = (
+/obj/structure/window/reinforced,
+/mob/living/simple_mob/vore/wolftaur/syndicate/shotty/combat,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -52973,7 +53145,7 @@ yb
 jy
 jh
 je
-iN
+ky
 hP
 dU
 yb
@@ -52993,8 +53165,8 @@ kQ
 yb
 hm
 sg
-kQ
-kQ
+kp
+hj
 sg
 kh
 yb
@@ -53133,10 +53305,10 @@ sg
 sg
 yb
 jy
-jh
-je
-iN
-hP
+kw
+kw
+ky
+kw
 dU
 yb
 ir
@@ -53155,7 +53327,7 @@ kQ
 yb
 kQ
 sg
-kQ
+kq
 gV
 sg
 gJ
@@ -53317,7 +53489,7 @@ kQ
 yb
 bM
 sg
-kQ
+kr
 gV
 sg
 gK
@@ -53780,11 +53952,11 @@ jE
 sg
 sg
 yb
-jz
-jh
-je
-iN
-hP
+kw
+kw
+kw
+ky
+kw
 iH
 yb
 ix
@@ -53943,9 +54115,9 @@ sg
 sg
 yb
 jz
-jh
-je
-iN
+kB
+kA
+ky
 hP
 iH
 yb
@@ -54778,7 +54950,7 @@ sg
 sg
 sg
 sg
-hp
+kQ
 yb
 gp
 sg
@@ -55092,7 +55264,7 @@ fV
 yb
 hp
 sg
-kQ
+kv
 hf
 sg
 ps
@@ -55261,7 +55433,7 @@ gR
 yb
 iC
 sg
-ij
+kt
 ij
 sg
 iB
@@ -55424,7 +55596,7 @@ yb
 iD
 sg
 im
-im
+kn
 sg
 iB
 yb
@@ -55585,7 +55757,7 @@ gU
 yb
 iE
 sg
-ki
+ku
 ki
 sg
 iB

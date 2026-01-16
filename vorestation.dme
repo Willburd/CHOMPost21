@@ -5730,6 +5730,7 @@
 #include "modular_outpost\code\game\objects\items\weapons\tape.dm"
 #include "modular_outpost\code\game\objects\items\weapons\circuitboards\frame.dm"
 #include "modular_outpost\code\game\objects\items\weapons\grenades\dephase.dm"
+#include "modular_outpost\code\game\objects\items\weapons\grenades\grenade.dm"
 #include "modular_outpost\code\game\objects\items\weapons\grenades\projectile.dm"
 #include "modular_outpost\code\game\objects\items\weapons\id cards\id_stacks.dm"
 #include "modular_outpost\code\game\objects\items\weapons\id cards\station_ids.dm"

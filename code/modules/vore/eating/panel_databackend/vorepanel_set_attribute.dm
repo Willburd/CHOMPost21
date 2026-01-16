@@ -55,6 +55,7 @@
 			host.vore_selected.slow_digestion = FALSE
 			if(host.vore_selected.mode_flags & DM_FLAG_SLOWBODY)
 				host.vore_selected.slow_digestion = TRUE
+			/* Outpost 21 edit - Remove turbo mode
 			if(toggle_addon == "TURBO MODE")
 				STOP_PROCESSING(SSbellies, host.vore_selected)
 				STOP_PROCESSING(SSobj, host.vore_selected)
@@ -66,6 +67,7 @@
 					host.vore_selected.speedy_mob_processing = FALSE
 					START_PROCESSING(SSbellies, host.vore_selected)
 					to_chat(user, span_warning("TURBO MODE deactivated. Belly processing returned to normal speed."))
+			*/
 			. = TRUE
 		if("b_item_mode")
 			var/new_mode = params["val"]
