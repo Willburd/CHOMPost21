@@ -2992,3 +2992,18 @@
 	requires_power = FALSE
 	dynamic_lighting = 0
 	color_grading = COLORTINT_OMEN
+
+/area/specialty/stowaway_clubhouse
+	name = "\improper Someplace"
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
+	icon = 'icons/turf/areas.dmi'
+	icon_state = "LP"
+	flags = AREA_BLOCK_INSTANT_BUILDING | RAD_SHIELDED | AREA_BLOCK_SUIT_SENSORS | AREA_FLAG_IS_NOT_PERSISTENT | AREA_BLOCK_TRACKING
+	sound_env = LARGE_SOFTFLOOR
+	ambience = AMBIENCE_GENERIC
+	color_grading = COLORTINT_DUST
+
+/area/specialty/stowaway_clubhouse/upper
+	base_turf = /turf/simulated/open
+	icon = 'icons/turf/areas.dmi'
+	icon_state = "LP2"
