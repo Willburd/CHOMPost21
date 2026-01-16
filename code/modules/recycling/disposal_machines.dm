@@ -484,7 +484,7 @@
 		pressurize() // drain the room!
 		if(!flush && prob(10))
 			flush = TRUE
-			update()
+			update_icon()
 	else if(mode != DISPOSALMODE_CHARGING) //if off or ready, no need to charge
 	// Outpost 21 edit end
 		update_use_power(USE_POWER_IDLE)
@@ -537,10 +537,13 @@
 	PROTECTED_PROC(TRUE)
 	if(QDELETED(src))
 		return
+
+	/* Outpost 21 edit - You have other ways to dispose of these, players should be allowed to make mistakes and get caught
 	// We don't ever want digestion remains going through disposals, but people understandably thing they're doing right by trashing them
 	// So let's just delete them instead!
 	for(var/obj/item/digestion_remains/bone in src)
 		qdel(bone)
+	*/
 
 	var/list/flushed_items = list()
 	for(var/atom/movable/AM in src)
