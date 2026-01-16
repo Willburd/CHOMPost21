@@ -66350,6 +66350,10 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/research)
+"czA" = (
+/obj/structure/waterfall/top,
+/turf/simulated/floor/water/acidic/deep/indoor/turfpack/muriki,
+/area/muriki/processor/pools/eastfund)
 "czC" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 4
@@ -68404,6 +68408,8 @@
 /area/crew_quarters/recreation_area_hallway)
 "eIw" = (
 /obj/effect/mist,
+/obj/structure/waterfall,
+/obj/structure/waterfall/mist,
 /turf/simulated/floor/water/acidic/deep/indoor/turfpack/muriki,
 /area/muriki/processor/pools/eastfund)
 "eID" = (
@@ -95382,7 +95388,7 @@ aaa
 aac
 ugO
 ogx
-tCK
+czA
 eIw
 tCK
 tCK

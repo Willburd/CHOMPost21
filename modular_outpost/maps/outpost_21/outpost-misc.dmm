@@ -4223,13 +4223,6 @@
 	icon_state = "dark"
 	},
 /area/syndicate_mothership)
-"iN" = (
-/mob/living/simple_mob/vore/wolftaur/syndicate/smg,
-/obj/structure/window/reinforced,
-/turf/unsimulated/floor{
-	icon_state = "dark"
-	},
-/area/syndicate_mothership)
 "iO" = (
 /obj/structure/table/standard,
 /obj/machinery/light{
@@ -4425,8 +4418,8 @@
 	},
 /area/syndicate_mothership)
 "je" = (
-/mob/living/simple_mob/vore/wolftaur/syndicate/lmg,
 /obj/structure/window/reinforced,
+/mob/living/simple_mob/vore/wolftaur/syndicate/smg,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -53139,7 +53132,7 @@ yb
 jy
 jh
 je
-kA
+ky
 hP
 dU
 yb
@@ -53300,8 +53293,8 @@ sg
 yb
 jy
 kw
-ky
 kw
+ky
 kw
 dU
 yb
@@ -53948,8 +53941,8 @@ sg
 yb
 kw
 kw
-ky
 kw
+ky
 kw
 iH
 yb
@@ -54110,8 +54103,8 @@ sg
 yb
 jz
 kB
-je
-iN
+kA
+ky
 hP
 iH
 yb

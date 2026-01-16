@@ -20535,6 +20535,7 @@
 /area/crew_quarters/captain)
 "dbg" = (
 /obj/effect/map_effect/interval/effect_emitter/smoke/mist/passive,
+/obj/structure/waterfall/top,
 /turf/simulated/open/indoor/turfpack/muriki,
 /area/muriki/processor/hall/waterway_upper)
 "dbp" = (
@@ -28690,7 +28691,7 @@
 /obj/structure/cliff{
 	dir = 4
 	},
-/turf/simulated/floor/water/acidic/indoor/turfpack/muriki,
+/turf/simulated/floor/outdoors/ice/turfpack/muriki,
 /area/mine/explored/muriki/river/hole)
 "fKN" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
