@@ -102,9 +102,8 @@
 	icon_state = "synditaur_shotgun"
 	icon_rest = "synditaur_shotgun"
 
-
-
-mob/living/simple_mob/vore/wolftaur/syndicate/load_default_bellies() //Apparently default wolftaurs have these, so giving these guys their own
+//Apparently default wolftaurs have these, so giving these guys their own
+/mob/living/simple_mob/vore/wolftaur/syndicate/load_default_bellies()
 	. = ..()
 	var/obj/belly/B = vore_selected
 	B.name = "stomach"
