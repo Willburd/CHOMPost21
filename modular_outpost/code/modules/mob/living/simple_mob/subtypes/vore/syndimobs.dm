@@ -38,6 +38,13 @@
 				"rad" = 100
 				)
 
+
+//Vars for new ammo belts. Putting these up here to keep them in one spot
+var/shottype_index = 1
+var/list/lmgshot = list(/obj/item/projectile/bullet/rifle/a545/ap,/obj/item/projectile/bullet/rifle/a545/rubber)
+var/list/shotgun_mean1 = list(/obj/item/projectile/ion,/obj/item/projectile/energy/flash/flare,/obj/item/projectile/scatter/flechette,/obj/item/projectile/scatter/flechette,/obj/item/projectile/bullet/shotgun,/obj/item/projectile/bullet/shotgun/beanbag)
+
+///Base taur.
 /mob/living/simple_mob/vore/wolftaur/syndicate
 	maxHealth = 275 //Editing to better match in-game values where HP is double what it says. You can reach 150 Hp easily without trait debt
 	projectiletype = /obj/item/projectile/bullet/rifle/a762/ap // This is the bullet the Z8 actually fires, now with AP fun!
@@ -65,23 +72,34 @@
 	base_attack_cooldown = 6 //was 8. Lets let these guys shoot a bit faster... but not as fast as the others, they're the slow, continual fire.
 	reload_time = 2.2 SECONDS //Trained reload speed. Probably horribly slow for what a hotkey player can do.
 
+////LMG guys. Meant to put down a lot of fire.
 /mob/living/simple_mob/vore/wolftaur/syndicate/lmg
-	projectiletype = /obj/item/projectile/bullet/rifle/a545/ap // Fixes this to use the same bullet as the actual LMG. Now with AP fun!
 	projectile_dispersion = 8 // was 12. Lowering cuz these are trained taurs in a full suit. C'mon
 	projectile_accuracy = -18 // was -25
 	ai_holder_type = /datum/ai_holder/simple_mob/merc/ranged/torch/lmg
 	base_attack_cooldown = 0.1 //Fully auto, should shoot the fastest
-	reload_max = 75 //Lotta suppression before they need to reload
+	reload_max = 50
 	reload_time = 5 SECONDS //gunna take a bit
+//Steps through the ammo types listed above
+/mob/living/simple_mob/vore/wolftaur/syndicate/lmg/shoot_target(atom/A)
+	projectiletype = lmgshot[shottype_index]
+	shottype_index++
+	if(shottype_index > lmgshot.len) shottype_index = 1
+	. = ..()
 
+/////SMG guys. Disabling and mean... technically nonlethal unless they eat you.
 /mob/living/simple_mob/vore/wolftaur/syndicate/smg
 	loot_list = list(/obj/item/gun/projectile/automatic/c20r = 2) //Lets make these guys MEANER~
-	projectiletype = /obj/item/projectile/ion/small //10mm haywire rounds.. these guys are gunna FUCK.
 	projectilesound = 'sound/weapons/Gunshot1.ogg'
 	ai_holder_type = /datum/ai_holder/simple_mob/merc/ranged/torch
 	base_attack_cooldown = 4
 	reload_max = 20 //Matches ammo to the real thing
+//Randomized bullet types.
+/mob/living/simple_mob/vore/wolftaur/syndicate/smg/shoot_target(atom/A)
+	projectiletype = pick(/obj/item/projectile/ion/small,/obj/item/projectile/bullet/a10mm/rubber)
+	. = ..()
 
+/////Sniper overrides
 /mob/living/simple_mob/vore/wolftaur/syndicate/awp
 	projectiletype = /obj/item/projectile/bullet/rifle/a338/ap //Giving them AP rounds for full funny
 	reload_time = 4 SECONDS
@@ -101,6 +119,19 @@
 	icon_living = "synditaur_shotgun"
 	icon_state = "synditaur_shotgun"
 	icon_rest = "synditaur_shotgun"
+
+//Absolute devil. Use this one with caution... and I'M saying that
+/mob/living/simple_mob/vore/wolftaur/syndicate/shotty/combat
+	loot_list = list(/obj/item/gun/projectile/shotgun/pump/USDF = 3)
+	base_attack_cooldown = 0.6 SECONDS //just over half a second between shots.. makes up for having more shells and having to rack them
+	reload_max = 12
+	reload_time = 4 SECONDS //Matches ammo to the actual shotgun, but takes longer to load than the double.
+/mob/living/simple_mob/vore/wolftaur/syndicate/shotty/combat/shoot_target(atom/A)
+	projectiletype = shotgun_mean1[shottype_index]
+	shottype_index++
+	if(shottype_index > shotgun_mean1.len) shottype_index = 1
+	. = ..()
+
 
 //Apparently default wolftaurs have these, so giving these guys their own
 /mob/living/simple_mob/vore/wolftaur/syndicate/load_default_bellies()
