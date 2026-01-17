@@ -88,7 +88,9 @@
 		/area/ai_sat/core_external,
 		/area/offworld/confinementbeam/exterior,
 		/area/ai_sat/power_control,
-		/area/security/brig_hole
+		/area/security/brig_hole,
+		/area/specialty/stowaway_clubhouse,
+		/area/specialty/stowaway_clubhouse/upper
 		)
 
 	var/list/forced_hallway = list(
