@@ -209,16 +209,16 @@
 		// Bad tools make it less likely to succeed.
 		if(!prob(selected_surgery.tool_quality(src)))
 			success = FALSE
-	// Outpost 21 edit end
 
-	// Not staying still fails you too.
-	if(success)
-		var/calc_duration = rand(selected_surgery.min_duration, selected_surgery.max_duration)
-		calc_duration *= CLAMP((100-cleanliness)/10 + 1, 1, 10)
-		if(!do_after(user, calc_duration * toolspeed, M, target_zone = zone, max_distance = reach))
-			success = FALSE
-			to_chat(user, span_warning("You must remain close to and keep focused on your patient to conduct surgery."))
-			user.balloon_alert(user, "you must remain close to and keep focused on your patent to conduct surgery") // CHOMPEdit
+		// Not staying still fails you too.
+		if(success)
+			var/calc_duration = rand(selected_surgery.min_duration, selected_surgery.max_duration)
+			calc_duration *= CLAMP((100-cleanliness)/10 + 1, 1, 10)
+			if(!do_after(user, calc_duration * toolspeed, M, target_zone = zone, max_distance = reach))
+				success = FALSE
+				to_chat(user, span_warning("You must remain close to and keep focused on your patient to conduct surgery."))
+				user.balloon_alert(user, "you must remain close to and keep focused on your patent to conduct surgery") // CHOMPEdit
+	// Outpost 21 edit end
 
 	if(success)
 		selected_surgery.end_step(user, M, zone, src)

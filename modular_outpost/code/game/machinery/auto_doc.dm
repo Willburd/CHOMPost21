@@ -197,104 +197,107 @@
 			I.forceMove(loc)
 	. = ..()
 
-/obj/machinery/auto_doc/proc/start_operation(mob/user as mob)
+/obj/machinery/auto_doc/proc/start_operation(mob/user)
 	// get target surgical zone
 	var/mob/living/carbon/human/victim = get_victim()
 	if(!victim)
-		src.visible_message("\The [src] flashes 'Please position subject for surgery on operating table'.")
+		visible_message("\The [src] flashes 'Please position subject for surgery on operating table'.")
 		return
-	else
-		src.visible_message("\The [src] flashes 'Please prepare subject for surgery, reminder to place N2O mask over their face before operation begins'.")
+
+	visible_message("\The [src] flashes 'Please prepare subject for surgery, reminder to place N2O mask over their face before operation begins'.")
 	var/list/targetlist = list()
 	var/list/destinationlist = list()
 	for(var/organ_name in BP_ALL)
 		var/obj/item/organ/O = victim.get_organ(organ_name)
-		targetlist.Add(O.name)
-		destinationlist[O.name] = O
+		if(O)
+			targetlist.Add(O.name)
+			destinationlist[O.name] = O
 
 	var/aim_choice = tgui_input_list(user, "Choose surgical target:", "Surgical Target", targetlist)
 	if(!aim_choice || !victim)
 		return
-	else
-		// get surgery
-		var/obj/item/organ/external/EO = destinationlist[aim_choice]
-		external_organ_target = EO.organ_tag
-		var/list/surgery_type = list("Remove Organ","Insert Organ","Repair Internal Bleeding","Repair Bone")
-		// Special zone operations
-		if(emagged && EO.organ_tag != BP_TORSO && EO.organ_tag != BP_GROIN)
-			surgery_type.Add("Amputate Limb")
-		if(EO.organ_tag == BP_HEAD)
-			surgery_type.Add("Facial Repair")
-		if(EO.organ_tag == BP_TORSO)
-			surgery_type.Add("Tissue Regeneration")
-		// Proceed to surgeries
-		var/surgery = tgui_input_list(user, "Choose surgery:", "Surgery Type", surgery_type)
-		switch(surgery)
-			if("Remove Organ")
-				operation_type = "remove_organ"
-				if(EO.encased)
-					src.visible_message("\The [src] flashes 'Target location requires complex bone manipulation, a surgical professional is required for organ removal'.")
-					playsound(src, 'sound/machines/defib_failed.ogg', 50, 0)
-					return
-				// if organ removal, select target organ
-				var/list/internallist = list()
-				var/list/internaldestinationlist = list()
-				for(var/obj/item/organ/internal/O in victim.internal_organs)
-					if(O.parent_organ == EO.organ_tag)
-						internallist.Add(O.name)
-						internaldestinationlist[O.name] = O
-				if(internallist.len == 0)
-					src.visible_message("\The [src] flashes 'Target location has no internal organs'.")
-					playsound(src, 'sound/machines/defib_failed.ogg', 50, 0)
-					return
-				var/organremove = tgui_input_list(user, "Choose organ to remove:", "Organ Target", internallist)
-				if(!organremove || !victim)
-					return
-				var/obj/item/organ/target_organ = internaldestinationlist[organremove]
-				if(target_organ)
-					internal_organ_target = target_organ.organ_tag
-					src.visible_message("\The [src] flashes 'Beginning operation: Remove Organ [target_organ.name]'.")
-			if("Insert Organ")
-				operation_type = "insert_organ"
-				if(EO.encased)
-					src.visible_message("\The [src] flashes 'Target location requires complex bone manipulation, a surgical professional is required for organ transplant'.")
-					playsound(src, 'sound/machines/defib_failed.ogg', 50, 0)
-					return
-				// if organ insertion, NEED an organ to insert!
-				if(!tools[TOOL_TRANSPLANT])
-					src.visible_message("\The [src] flashes 'Please load organ into storage chamber'.")
-					playsound(src, 'sound/machines/defib_failed.ogg', 50, 0)
-					return
-				else
-					var/obj/item/organ/I = tools[TOOL_TRANSPLANT]
-					if(I.status & ORGAN_DEAD)
-						src.visible_message("\The [src] flashes 'Organ has decayed beyond safety treshold'.")
-						playsound(src, 'sound/machines/defib_failed.ogg', 50, 0)
-						return
-					src.visible_message("\The [src] flashes 'Beginning operation: Transplant [I.name] into [EO.name]'.")
-			if("Repair Internal Bleeding")
-				operation_type = "internal_bleeding"
-				if(EO.encased)
-					src.visible_message("\The [src] flashes 'Target location requires complex bone manipulation, a surgical professional is required to repair internal bleeding'.")
-					playsound(src, 'sound/machines/defib_failed.ogg', 50, 0)
-					return
-				src.visible_message("\The [src] flashes 'Beginning operation: Repair Internal Bleeding in [EO.name]'.")
-			if("Repair Bone")
-				operation_type = "repair_bone"
-				src.visible_message("\The [src] flashes 'Beginning operation: Repair Bones in [EO.name], bicardine injection advised. A damaged limb will result in surgical complications'.")
-			if("Amputate Limb")
-				operation_type = "amputate_limb"
-				src.visible_message("\The [src] flashes 'Beginning operation: Amputate [EO.name].")
-			if("Facial Repair")
-				external_organ_target = O_MOUTH
-				operation_type = "reconstruct_face"
-				src.visible_message("\The [src] flashes 'Beginning operation: Reconstructing Face.")
-			if("Tissue Regeneration")
-				external_organ_target = BP_TORSO
-				operation_type = "heal_husk"
-				src.visible_message("\The [src] flashes 'Beginning operation: Tissue Regeneration.")
-			else
+
+	// get surgery
+	var/obj/item/organ/external/EO = destinationlist[aim_choice]
+	external_organ_target = EO.organ_tag
+	var/list/surgery_type = list("Remove Organ","Insert Organ","Repair Internal Bleeding","Repair Bone")
+	// Special zone operations
+	if(emagged && EO.organ_tag != BP_TORSO && EO.organ_tag != BP_GROIN)
+		surgery_type.Add("Amputate Limb")
+	if(EO.organ_tag == BP_HEAD)
+		surgery_type.Add("Facial Repair")
+	if(EO.organ_tag == BP_TORSO)
+		surgery_type.Add("Tissue Regeneration")
+
+	// Proceed to surgeries
+	var/surgery = tgui_input_list(user, "Choose surgery:", "Surgery Type", surgery_type)
+	switch(surgery)
+		if("Remove Organ")
+			operation_type = "remove_organ"
+			if(EO.encased)
+				src.visible_message("\The [src] flashes 'Target location requires complex bone manipulation, a surgical professional is required for organ removal'.")
+				playsound(src, 'sound/machines/defib_failed.ogg', 50, 0)
 				return
+			// if organ removal, select target organ
+			var/list/internallist = list()
+			var/list/internaldestinationlist = list()
+			for(var/obj/item/organ/internal/O in victim.internal_organs)
+				if(O.parent_organ == EO.organ_tag)
+					internallist.Add(O.name)
+					internaldestinationlist[O.name] = O
+			if(internallist.len == 0)
+				src.visible_message("\The [src] flashes 'Target location has no internal organs'.")
+				playsound(src, 'sound/machines/defib_failed.ogg', 50, 0)
+				return
+			var/organremove = tgui_input_list(user, "Choose organ to remove:", "Organ Target", internallist)
+			if(!organremove || !victim)
+				return
+			var/obj/item/organ/target_organ = internaldestinationlist[organremove]
+			if(target_organ)
+				internal_organ_target = target_organ.organ_tag
+				src.visible_message("\The [src] flashes 'Beginning operation: Remove Organ [target_organ.name]'.")
+		if("Insert Organ")
+			operation_type = "insert_organ"
+			if(EO.encased)
+				src.visible_message("\The [src] flashes 'Target location requires complex bone manipulation, a surgical professional is required for organ transplant'.")
+				playsound(src, 'sound/machines/defib_failed.ogg', 50, 0)
+				return
+			// if organ insertion, NEED an organ to insert!
+			if(!tools[TOOL_TRANSPLANT])
+				src.visible_message("\The [src] flashes 'Please load organ into storage chamber'.")
+				playsound(src, 'sound/machines/defib_failed.ogg', 50, 0)
+				return
+			else
+				var/obj/item/organ/I = tools[TOOL_TRANSPLANT]
+				if(I.status & ORGAN_DEAD)
+					src.visible_message("\The [src] flashes 'Organ has decayed beyond safety treshold'.")
+					playsound(src, 'sound/machines/defib_failed.ogg', 50, 0)
+					return
+				src.visible_message("\The [src] flashes 'Beginning operation: Transplant [I.name] into [EO.name]'.")
+		if("Repair Internal Bleeding")
+			operation_type = "internal_bleeding"
+			if(EO.encased)
+				src.visible_message("\The [src] flashes 'Target location requires complex bone manipulation, a surgical professional is required to repair internal bleeding'.")
+				playsound(src, 'sound/machines/defib_failed.ogg', 50, 0)
+				return
+			src.visible_message("\The [src] flashes 'Beginning operation: Repair Internal Bleeding in [EO.name]'.")
+		if("Repair Bone")
+			operation_type = "repair_bone"
+			src.visible_message("\The [src] flashes 'Beginning operation: Repair Bones in [EO.name], bicardine injection advised. A damaged limb will result in surgical complications'.")
+		if("Amputate Limb")
+			operation_type = "amputate_limb"
+			src.visible_message("\The [src] flashes 'Beginning operation: Amputate [EO.name].")
+		if("Facial Repair")
+			external_organ_target = O_MOUTH
+			operation_type = "reconstruct_face"
+			src.visible_message("\The [src] flashes 'Beginning operation: Reconstructing Face.")
+		if("Tissue Regeneration")
+			external_organ_target = BP_TORSO
+			operation_type = "heal_husk"
+			src.visible_message("\The [src] flashes 'Beginning operation: Tissue Regeneration.")
+		else
+			return
+
 	// BEGIN
 	playsound(src,  'sound/machines/boobeebeep.ogg', 100, 0)
 	playsound(src, 'sound/machines/turrets/turret_deploy.ogg', 70, 1)
