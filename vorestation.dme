@@ -5663,6 +5663,7 @@
 #include "modular_outpost\code\game\gamemodes\events\power_failure.dm"
 #include "modular_outpost\code\game\gamemodes\events\wormholes.dm"
 #include "modular_outpost\code\game\gamemodes\events\holidays\Holidays.dm"
+#include "modular_outpost\code\game\jobs\job_mail.dm"
 #include "modular_outpost\code\game\jobs\job_ranks.dm"
 #include "modular_outpost\code\game\jobs\job\assistant.dm"
 #include "modular_outpost\code\game\jobs\job\captain.dm"
