@@ -194,13 +194,13 @@
 	color = reagents.get_color()
 
 /obj/item/reagent_containers/pill/tramadol
-	name = REAGENT_TRAMADOL + " (15u)"
+	name = REAGENT_TRAMADOL + " (5u)" // Outpost 21 edit - Reduced tramadol pill reagents
 	desc = "A simple painkiller."
 	icon_state = "pill3"
 
 /obj/item/reagent_containers/pill/tramadol/Initialize(mapload)
 	. = ..()
-	reagents.add_reagent(REAGENT_ID_TRAMADOL, 15)
+	reagents.add_reagent(REAGENT_ID_TRAMADOL, 5) // Outpost 21 edit - Reduced tramadol pill reagents
 	color = reagents.get_color()
 
 /obj/item/reagent_containers/pill/methylphenidate
