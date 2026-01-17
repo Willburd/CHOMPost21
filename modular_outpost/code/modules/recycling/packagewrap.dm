@@ -5,7 +5,6 @@
 
 // Unwrapping
 /obj/item/smallDelivery/attack_robot(mob/living/user)
-	to_chat(world,"WAT 1")
 	if(user.stat || !Adjacent(user))
 		return
 	attack_self(user)
