@@ -9542,13 +9542,6 @@
 	dir = 1
 	},
 /area/specialty/redspace)
-"erG" = (
-/obj/machinery/door/airlock/centcom{
-	name = "Special Operations";
-	req_access = list(103)
-	},
-/turf/space,
-/area/centcom/specops)
 "erK" = (
 /obj/structure/disposalpipe/segment,
 /turf/unsimulated/floor/steel{
@@ -61045,7 +61038,7 @@ yfq
 rah
 iQm
 uwj
-erG
+iNq
 yfq
 yfq
 yfq
@@ -61207,7 +61200,7 @@ jmT
 vjk
 iQm
 uwj
-erG
+iNq
 yfq
 yfq
 yfq
@@ -65582,7 +65575,7 @@ rWp
 iQm
 aLT
 esY
-kzR
+cNT
 kzR
 kzR
 kzR
@@ -65744,7 +65737,7 @@ iNq
 hsz
 aLT
 vjk
-kzR
+acP
 kzR
 kzR
 kzR

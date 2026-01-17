@@ -2,7 +2,8 @@
 	var/rank_pin = /obj/item/clothing/accessory/rank_eshui
 /datum/alt_title
 	var/rank_pin = null // Override for above
-
+/datum/job/stowaway
+	rank_pin = null // no rank
 
 // Lowest rank, no duty
 #define RANK_PIN_PATH /obj/item/clothing/accessory/rank_eshui
