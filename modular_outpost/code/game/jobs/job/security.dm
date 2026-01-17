@@ -26,3 +26,17 @@
 
 /datum/alt_title/forensic_tech
 	title_blurb = "A " + JOB_ALT_FORENSIC_TECHNICIAN + " works more with hard evidence and labwork than a " + JOB_ALT_DETECTIVE + ", but they share the purpose of solving crimes."
+
+
+
+/datum/job/brigphysician
+	mail_goodies = list(
+		/obj/item/stack/medical/bruise_pack = 200,
+		/obj/item/stack/medical/ointment = 200,
+		/obj/item/stack/medical/advanced/bruise_pack = 175,
+		/obj/item/stack/medical/advanced/ointment = 175,
+		/obj/item/reagent_containers/syringe/antiviral = 100,
+		/obj/item/storage/pill_bottle/tramadol = 100,
+		/obj/item/reagent_containers/pill/myelamine = 10
+	)
+	mail_color = COMMS_COLOR_SECURITY

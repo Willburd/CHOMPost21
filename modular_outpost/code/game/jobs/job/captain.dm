@@ -43,6 +43,13 @@
 	outfit_type = /decl/hierarchy/outfit/job/command_officer
 	job_description = "A " + JOB_COMMAND_OFFICER + " is the introductory role to most officer positions. Tasked with learning from, and assisting heads of staff."
 
+/datum/job/command_officer
+	mail_goodies = list(
+		/obj/item/storage/fancy/cigar/havana = 250,
+		/obj/item/form_printer = 200,
+		/obj/item/pen/fountain6 = 50
+	)
+	mail_color = COMMS_COLOR_COMMAND
 
 /datum/alt_title/co_petty_officer
 	title = JOB_ALT_CO_PETTY_OFFICER
