@@ -15,7 +15,11 @@
 					/area/mine,
 					/area/vacant/vacant_shop,
 					/area/turbolift,
-					/area/submap
+					/area/submap,
+					// Outpost 21 edit begin - Exempt the clubhouse
+					/area/specialty/stowaway_clubhouse,
+					/area/specialty/stowaway_clubhouse/upper
+					// Outpost 21 edit end
 					)
 
 	var/list/exempt_from_atmos = typesof(/area/maintenance,
