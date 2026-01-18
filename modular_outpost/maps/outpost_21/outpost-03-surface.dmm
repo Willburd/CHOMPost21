@@ -25274,8 +25274,10 @@
 	req_access = list(58)
 	},
 /obj/structure/table/rack,
-/obj/item/key/heavyarmor_tank,
 /obj/item/perfect_tele/one_beacon,
+/obj/item/key/heavyarmor_tank{
+	pixel_x = -12
+	},
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/heads/hos)
 "eEv" = (
@@ -61896,8 +61898,8 @@
 "pYn" = (
 /obj/structure/table/steel,
 /obj/effect/floor_decal/milspec/color/red/half,
-/obj/item/key/heavyarmor_carrier,
 /obj/item/megaphone,
+/obj/item/key/heavyarmor_carrier,
 /turf/simulated/floor/tiled/milspec,
 /area/security/warden)
 "pYq" = (

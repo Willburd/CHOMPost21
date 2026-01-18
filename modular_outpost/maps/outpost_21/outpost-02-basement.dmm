@@ -66368,6 +66368,13 @@
 	},
 /turf/simulated/floor/tiled/steel,
 /area/hallway/muriki/bunkerhall)
+"czD" = (
+/obj/vehicle/has_interior/controller/heavyarmor_medic{
+	haskey = 0;
+	interior_area = /area/vehicle_interior/heavyarmor_medic_recovery
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/medical/tankstore)
 "cCT" = (
 /obj/effect/floor_decal/corner/blue/full{
 	dir = 8
@@ -123326,7 +123333,7 @@ gTT
 gpp
 sdW
 aSe
-aSe
+czD
 aSe
 aSe
 aWS
