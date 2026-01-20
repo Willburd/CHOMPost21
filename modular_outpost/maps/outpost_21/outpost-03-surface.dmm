@@ -27469,6 +27469,9 @@
 /obj/item/hailer,
 /obj/item/hailer,
 /obj/item/hailer,
+/obj/item/hand_labeler{
+	pixel_x = 16
+	},
 /turf/simulated/floor/tiled/old_tile/white,
 /area/security/security_equiptment_storage)
 "fov" = (
