@@ -73486,63 +73486,25 @@
 /obj/structure/cable/green{
 	icon_state = "1-4"
 	},
-/obj/item/mail/envelope{
-	pixel_y = 12
-	},
-/obj/item/mail/envelope{
-	pixel_y = 12
-	},
-/obj/item/mail/envelope{
-	pixel_y = 12
-	},
-/obj/item/mail/envelope{
-	pixel_y = 12
-	},
-/obj/item/mail/envelope{
-	pixel_y = 12
-	},
-/obj/item/mail/envelope{
-	pixel_y = 12
-	},
-/obj/item/mail/envelope{
-	pixel_y = 12
-	},
-/obj/item/mail/envelope{
-	pixel_y = 12
-	},
-/obj/item/mail/envelope{
-	pixel_y = 12
-	},
-/obj/item/mail/envelope{
-	pixel_y = 12
-	},
-/obj/item/mail/envelope{
-	pixel_y = 12
-	},
-/obj/item/mail/envelope{
-	pixel_y = 12
-	},
-/obj/item/mail/envelope{
-	pixel_y = 12
-	},
-/obj/item/mail/envelope{
-	pixel_y = 12
-	},
-/obj/item/mail/envelope{
-	pixel_y = 12
-	},
-/obj/item/mail/envelope{
-	pixel_y = 12
-	},
-/obj/item/mail/envelope{
-	pixel_y = 12
-	},
-/obj/item/mail/envelope{
-	pixel_y = 12
-	},
-/obj/item/mail/envelope{
-	pixel_y = 12
-	},
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
 /turf/simulated/floor/tiled/techfloor,
 /area/medical/mail)
 "kxH" = (
@@ -78533,57 +78495,23 @@
 /obj/structure/cable/green{
 	icon_state = "0-2"
 	},
-/obj/item/mail/envelope{
-	pixel_x = 18
-	},
-/obj/item/mail/envelope{
-	pixel_x = 18
-	},
-/obj/item/mail/envelope{
-	pixel_x = 18
-	},
-/obj/item/mail/envelope{
-	pixel_x = 18
-	},
-/obj/item/mail/envelope{
-	pixel_x = 18
-	},
-/obj/item/mail/envelope{
-	pixel_x = 18
-	},
-/obj/item/mail/envelope{
-	pixel_x = 18
-	},
-/obj/item/mail/envelope{
-	pixel_x = 18
-	},
-/obj/item/mail/envelope{
-	pixel_x = 18
-	},
-/obj/item/mail/envelope{
-	pixel_x = 18
-	},
-/obj/item/mail/envelope{
-	pixel_x = 18
-	},
-/obj/item/mail/envelope{
-	pixel_x = 18
-	},
-/obj/item/mail/envelope{
-	pixel_x = 18
-	},
-/obj/item/mail/envelope{
-	pixel_x = 18
-	},
-/obj/item/mail/envelope{
-	pixel_x = 18
-	},
-/obj/item/mail/envelope{
-	pixel_x = 18
-	},
-/obj/item/mail/envelope{
-	pixel_x = 18
-	},
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/mail)
 "qnS" = (

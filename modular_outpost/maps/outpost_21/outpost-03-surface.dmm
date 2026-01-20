@@ -12390,6 +12390,9 @@
 /obj/effect/landmark/late_antag/zombie,
 /turf/simulated/floor/outdoors/ice/dark/turfpack/muriki,
 /area/muriki/grounds/med)
+"axo" = (
+/turf/simulated/wall/r_wall,
+/area/medical/medbay_primary_storage)
 "axF" = (
 /mob/living/simple_mob/vore/slug,
 /turf/simulated/mineral/floor/turfpack/muriki{
@@ -23919,10 +23922,6 @@
 	},
 /obj/item/storage/box/sinpockets,
 /obj/item/storage/box/sinpockets,
-/obj/structure/extinguisher_cabinet{
-	pixel_x = -5;
-	pixel_y = 30
-	},
 /turf/simulated/floor/tiled/old_tile/white,
 /area/security/security_equiptment_storage)
 "egh" = (
@@ -39152,6 +39151,11 @@
 /obj/item/gps/security,
 /obj/item/gps/security,
 /obj/item/gps/security,
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 7;
+	pixel_y = -32;
+	dir = 1
+	},
 /turf/simulated/floor/tiled/old_tile/white,
 /area/security/security_equiptment_storage)
 "iVv" = (
@@ -43524,81 +43528,31 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/obj/item/mail/envelope{
-	pixel_y = 16
-	},
-/obj/item/mail/envelope{
-	pixel_y = 16
-	},
-/obj/item/mail/envelope{
-	pixel_y = 16
-	},
-/obj/item/mail/envelope{
-	pixel_y = 16
-	},
-/obj/item/mail/envelope{
-	pixel_y = 16
-	},
-/obj/item/mail/envelope{
-	pixel_y = 16
-	},
-/obj/item/mail/envelope{
-	pixel_y = 16
-	},
-/obj/item/mail/envelope{
-	pixel_y = 16
-	},
-/obj/item/mail/envelope{
-	pixel_y = 16
-	},
-/obj/item/mail/envelope{
-	pixel_y = 16
-	},
-/obj/item/mail/envelope{
-	pixel_y = 16
-	},
-/obj/item/mail/envelope{
-	pixel_y = 16
-	},
-/obj/item/mail/envelope{
-	pixel_y = 16
-	},
-/obj/item/mail/envelope{
-	pixel_y = 16
-	},
-/obj/item/mail/envelope{
-	pixel_y = 16
-	},
-/obj/item/mail/envelope{
-	pixel_y = 16
-	},
-/obj/item/mail/envelope{
-	pixel_y = 16
-	},
-/obj/item/mail/envelope{
-	pixel_y = 16
-	},
-/obj/item/mail/envelope{
-	pixel_y = 16
-	},
-/obj/item/mail/envelope{
-	pixel_y = 16
-	},
-/obj/item/mail/envelope{
-	pixel_y = 16
-	},
-/obj/item/mail/envelope{
-	pixel_y = 16
-	},
-/obj/item/mail/envelope{
-	pixel_y = 16
-	},
-/obj/item/mail/envelope{
-	pixel_y = 16
-	},
-/obj/item/mail/envelope{
-	pixel_y = 16
-	},
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
 /turf/simulated/floor/tiled/techfloor,
 /area/security/secmail)
 "kit" = (
@@ -51997,6 +51951,11 @@
 /obj/item/storage/pouch/ifak,
 /obj/item/storage/pouch/ifak,
 /obj/item/storage/pouch/ifak,
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -8;
+	pixel_y = -32;
+	dir = 1
+	},
 /turf/simulated/floor/tiled/old_tile/white,
 /area/security/security_aid_station)
 "mMH" = (
@@ -53935,28 +53894,28 @@
 	pixel_x = -30;
 	pixel_y = 9
 	},
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
 /obj/structure/table/steel,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
 /turf/simulated/floor/tiled/techfloor,
 /area/rnd/research/mailing)
 "ntb" = (
@@ -60604,34 +60563,34 @@
 "pEF" = (
 /obj/structure/closet/crate,
 /obj/effect/floor_decal/milspec/cargo,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
 /turf/simulated/floor/tiled/milspec,
 /area/quartermaster/warehouse)
 "pEH" = (
@@ -64985,6 +64944,10 @@
 	dir = 4
 	},
 /obj/structure/closet/firecloset/full,
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -7;
+	pixel_y = 30
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/security/main)
 "qVm" = (
@@ -71714,7 +71677,7 @@
 /obj/item/clothing/suit/storage/teshari/beltcloak/jobs/hos,
 /obj/item/clothing/under/teshari/undercoat/jobs/sec,
 /obj/structure/extinguisher_cabinet{
-	pixel_x = 5;
+	pixel_x = 7;
 	pixel_y = -32;
 	dir = 1
 	},
@@ -130976,7 +130939,7 @@ iRD
 iJc
 chU
 gBj
-brS
+axo
 brS
 wHB
 iwB
@@ -131139,7 +131102,7 @@ lEp
 lEp
 rHg
 qSA
-brS
+axo
 iTh
 iwB
 mZb

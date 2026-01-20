@@ -47010,78 +47010,30 @@
 	dir = 4;
 	pixel_x = -26
 	},
-/obj/item/mail/envelope{
-	pixel_y = 16
-	},
-/obj/item/mail/envelope{
-	pixel_y = 16
-	},
-/obj/item/mail/envelope{
-	pixel_y = 16
-	},
-/obj/item/mail/envelope{
-	pixel_y = 16
-	},
-/obj/item/mail/envelope{
-	pixel_y = 16
-	},
-/obj/item/mail/envelope{
-	pixel_y = 16
-	},
-/obj/item/mail/envelope{
-	pixel_y = 16
-	},
-/obj/item/mail/envelope{
-	pixel_y = 16
-	},
-/obj/item/mail/envelope{
-	pixel_y = 16
-	},
-/obj/item/mail/envelope{
-	pixel_y = 16
-	},
-/obj/item/mail/envelope{
-	pixel_y = 16
-	},
-/obj/item/mail/envelope{
-	pixel_y = 16
-	},
-/obj/item/mail/envelope{
-	pixel_y = 16
-	},
-/obj/item/mail/envelope{
-	pixel_y = 16
-	},
-/obj/item/mail/envelope{
-	pixel_y = 16
-	},
-/obj/item/mail/envelope{
-	pixel_y = 16
-	},
-/obj/item/mail/envelope{
-	pixel_y = 16
-	},
-/obj/item/mail/envelope{
-	pixel_y = 16
-	},
-/obj/item/mail/envelope{
-	pixel_y = 16
-	},
-/obj/item/mail/envelope{
-	pixel_y = 16
-	},
-/obj/item/mail/envelope{
-	pixel_y = 16
-	},
-/obj/item/mail/envelope{
-	pixel_y = 16
-	},
-/obj/item/mail/envelope{
-	pixel_y = 16
-	},
-/obj/item/mail/envelope{
-	pixel_y = 16
-	},
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
 /turf/simulated/floor/tiled/techfloor,
 /area/muriki/crew/civmail)
 "wFV" = (
