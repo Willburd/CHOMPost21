@@ -1449,6 +1449,11 @@
 		we_process = FALSE
 		return PROCESS_KILL
 
+/turf/simulated/floor/water/digestive_enzymes/Destroy()
+	if(we_process)
+		STOP_PROCESSING(SSturfs, src)
+	. = ..()
+
 /turf/simulated/floor/water/digestive_enzymes/proc/can_digest(atom/movable/digest_target)
 	. = FALSE
 	if(digest_target.loc != src)
@@ -1506,7 +1511,7 @@
 		var/mob/living/carbon/human/H = thing
 		if(!H)
 			return
-		visible_message(runemessage = "blub...")
+		balloon_alert_visible("*blub...*")
 		if(H.stat == DEAD)
 			H.unacidable = TRUE	//Don't touch this one again, we're gonna delete it in a second
 			H.release_vore_contents()
@@ -1537,7 +1542,7 @@
 		var/mob/living/L = thing
 		if(!L)
 			return
-		visible_message(runemessage = "blub...")
+		balloon_alert_visible("*blub...*")
 		if(L.stat == DEAD)
 			L.unacidable = TRUE	//Don't touch this one again, we're gonna delete it in a second
 			L.release_vore_contents()
