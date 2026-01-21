@@ -203,6 +203,7 @@
 				container = null
 			. = TRUE
 
+		/* Outpost 21 edit - NOPE NOPE NOPE NOPE NOPE FORBIDDEN, stop making chemistry even more powerful, Remove chemistry import files
 		if("import_config")
 			/* CHOMPRemve Start, skip the import_job check
 			if(import_job && (ui.user.mind.assigned_role != import_job))
@@ -221,6 +222,7 @@
 			if(length(new_recipes))
 				saved_recipes = new_recipes
 			. = TRUE
+		*/
 
 		if("record_recipe")
 			recording_recipe = list()
