@@ -138,7 +138,7 @@ GLOBAL_LIST_EMPTY(areas_by_type)
 
 // Either close or open firedoors and arfgs depending on current alert statuses
 /area/proc/firedoors_update()
-	if(fire || party || atmosalm)
+	if(/*fire || */party || atmosalm) // Outpost 21 edit - Fire alarm doesn't close fire doors
 		firedoors_close()
 		arfgs_activate()
 		if(fire)
