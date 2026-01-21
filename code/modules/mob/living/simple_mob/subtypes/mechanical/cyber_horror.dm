@@ -34,6 +34,8 @@
 	var/emp_damage = 0
 	var/nanobot_chance = 40
 
+	can_be_drop_prey = FALSE
+
 // Outpost 21 edit begin - Undead reviving mobs
 /mob/living/simple_mob/mechanical/cyber_horror/Initialize(mapload)
 	. = ..()

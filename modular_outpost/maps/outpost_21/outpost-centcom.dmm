@@ -3585,7 +3585,6 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
-/obj/item/key/heavyarmor_tank,
 /turf/simulated/floor/tiled/techfloor,
 /area/vehicle_interior/heavyarmor_tank_A)
 "bmS" = (
@@ -4501,7 +4500,6 @@
 /obj/machinery/light/floortube{
 	dir = 8
 	},
-/obj/item/key/heavyarmor_medic,
 /turf/simulated/floor/tiled/techfloor,
 /area/vehicle_interior/heavyarmor_medic_recovery)
 "bIQ" = (
@@ -4510,22 +4508,6 @@
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
-	},
-/obj/item/bone/skull/tajaran{
-	pixel_x = -2;
-	pixel_y = 8
-	},
-/obj/item/bone,
-/obj/item/bone{
-	pixel_y = -7
-	},
-/obj/item/bone{
-	pixel_y = -3;
-	pixel_x = -5
-	},
-/obj/item/bone{
-	pixel_x = 12;
-	pixel_y = 7
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/vehicle_interior/heavyarmor_medic_recovery)
@@ -21549,7 +21531,6 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
-/obj/item/clothing/mask/smokable/pipe/bonepipe,
 /turf/simulated/floor/tiled/techfloor,
 /area/vehicle_interior/heavyarmor_medic_recovery)
 "koo" = (

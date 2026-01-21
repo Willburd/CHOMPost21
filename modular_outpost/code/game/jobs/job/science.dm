@@ -1,8 +1,8 @@
 /datum/job/rd/New()
 	. = ..()
-	access -= list(ACCESS_ROBOTICS)
+	access -= list(ACCESS_ROBOTICS,ACCESS_AI_UPLOAD)
 	access |= list(ACCESS_MAINT_TUNNELS, ACCESS_CHANGE_IDS)
-	minimal_access -= list(ACCESS_ROBOTICS)
+	minimal_access -= list(ACCESS_ROBOTICS,ACCESS_AI_UPLOAD)
 	minimal_access |= list(ACCESS_MAINT_TUNNELS, ACCESS_CHANGE_IDS)
 
 

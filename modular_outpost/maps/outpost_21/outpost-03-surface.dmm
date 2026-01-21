@@ -12391,178 +12391,14 @@
 /turf/simulated/floor/outdoors/ice/dark/turfpack/muriki,
 /area/muriki/grounds/med)
 "axo" = (
-/turf/simulated/floor/outdoors/snow/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"axp" = (
-/obj/random/outcrop,
-/turf/simulated/floor/outdoors/snow/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"axq" = (
-/turf/simulated/floor/outdoors/ice/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"axr" = (
-/obj/structure/closet/grave/dirthole,
-/turf/simulated/floor/outdoors/snow/turfpack/muriki,
-/area/mine/unexplored/muriki/valleyeast)
-"axs" = (
-/obj/structure/cliff_end,
-/turf/simulated/floor/outdoors/rocks/turfpack/muriki,
-/area/mine/explored/muriki/mountaineast)
-"axt" = (
-/turf/simulated/wall/stonelogs/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"axu" = (
-/obj/item/material/barbedwire/start_active,
-/turf/simulated/floor/outdoors/snow/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"axv" = (
-/turf/simulated/floor/outdoors/rocks/turfpack/muriki,
-/area/mine/explored/muriki/mountaineast)
-"axw" = (
-/obj/structure/table/rack/shelf/wood,
-/obj/item/material/barbedwire,
-/obj/item/material/barbedwire,
-/obj/item/material/barbedwire,
-/obj/item/material/barbedwire,
-/obj/item/material/barbedwire,
-/obj/item/material/barbedwire,
-/obj/item/material/barbedwire,
-/obj/item/material/barbedwire,
-/obj/item/material/barbedwire,
-/obj/item/material/barbedwire,
-/obj/item/material/barbedwire,
-/obj/item/material/barbedwire,
-/obj/item/material/barbedwire,
-/obj/item/material/barbedwire,
-/obj/item/material/barbedwire,
-/obj/item/material/barbedwire,
-/obj/item/material/barbedwire,
-/obj/item/material/barbedwire,
-/obj/item/material/barbedwire,
-/obj/item/material/barbedwire,
-/obj/item/material/barbedwire,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"axx" = (
-/obj/machinery/light/small,
-/obj/structure/table/rack/shelf/wood,
-/obj/item/implanter/compliance,
-/obj/item/mine/claymore,
-/obj/item/mine/claymore,
-/obj/item/mine/claymore,
-/obj/item/mine/claymore,
-/obj/item/mine/claymore,
-/obj/item/mine/claymore,
-/obj/item/mine/claymore,
-/obj/item/mine/claymore,
-/obj/item/mine/claymore,
-/obj/item/mine/claymore,
-/obj/item/mine/claymore,
-/obj/item/mine/claymore,
-/obj/item/mine/claymore,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"axy" = (
-/turf/simulated/wall/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"axz" = (
-/obj/structure/table/rack/shelf/wood,
-/obj/item/clothing/gloves/fyellow,
-/obj/item/clothing/gloves/fyellow,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"axA" = (
-/obj/structure/simple_door/wood,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"axB" = (
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"axC" = (
-/obj/machinery/space_heater,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"axD" = (
-/obj/structure/table/rack/shelf/wood,
-/obj/item/clothing/gloves/arm_guard/combat,
-/obj/item/clothing/gloves/arm_guard/combat,
-/obj/item/clothing/gloves/arm_guard/combat,
-/obj/item/clothing/gloves/arm_guard/combat,
-/obj/item/clothing/gloves/arm_guard/combat,
-/obj/item/clothing/gloves/arm_guard/combat,
-/obj/item/clothing/shoes/leg_guard/combat,
-/obj/item/clothing/shoes/leg_guard/combat,
-/obj/item/clothing/shoes/leg_guard/combat,
-/obj/item/clothing/shoes/leg_guard/combat,
-/obj/item/clothing/shoes/leg_guard/combat,
-/obj/item/clothing/shoes/leg_guard/combat,
-/obj/item/clothing/suit/armor/combat,
-/obj/item/clothing/suit/armor/combat,
-/obj/item/clothing/suit/armor/combat,
-/obj/item/clothing/suit/armor/combat,
-/obj/item/clothing/suit/armor/combat,
-/obj/item/clothing/suit/armor/combat,
-/obj/item/clothing/head/helmet/combat,
-/obj/item/clothing/head/helmet/combat,
-/obj/item/clothing/head/helmet/combat,
-/obj/item/clothing/head/helmet/combat,
-/obj/item/clothing/head/helmet/combat,
-/obj/item/clothing/head/helmet/combat,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"axE" = (
-/obj/structure/table/rack/shelf/wood,
-/obj/item/clothing/gloves/arm_guard/combat,
-/obj/item/clothing/gloves/arm_guard/combat,
-/obj/item/clothing/gloves/arm_guard/combat,
-/obj/item/clothing/gloves/arm_guard/combat,
-/obj/item/clothing/gloves/arm_guard/combat,
-/obj/item/clothing/gloves/arm_guard/combat,
-/obj/item/clothing/shoes/leg_guard/combat,
-/obj/item/clothing/shoes/leg_guard/combat,
-/obj/item/clothing/shoes/leg_guard/combat,
-/obj/item/clothing/shoes/leg_guard/combat,
-/obj/item/clothing/shoes/leg_guard/combat,
-/obj/item/clothing/shoes/leg_guard/combat,
-/obj/item/clothing/suit/armor/combat,
-/obj/item/clothing/suit/armor/combat,
-/obj/item/clothing/suit/armor/combat,
-/obj/item/clothing/suit/armor/combat,
-/obj/item/clothing/suit/armor/combat,
-/obj/item/clothing/suit/armor/combat,
-/obj/item/clothing/head/helmet/combat,
-/obj/item/clothing/head/helmet/combat,
-/obj/item/clothing/head/helmet/combat,
-/obj/item/clothing/head/helmet/combat,
-/obj/item/clothing/head/helmet/combat,
-/obj/item/clothing/head/helmet/combat,
-/obj/machinery/light/small,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
+/turf/simulated/wall/r_wall,
+/area/medical/medbay_primary_storage)
 "axF" = (
 /mob/living/simple_mob/vore/slug,
 /turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
 	},
 /area/mine/unexplored/muriki/mountaineast)
-"axG" = (
-/obj/vehicle/has_interior/controller/heavyarmor_medic{
-	haskey = 0;
-	interior_area = /area/vehicle_interior/heavyarmor_medic_recovery
-	},
-/turf/simulated/floor/outdoors/snow/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"axH" = (
-/obj/structure/reagent_dispensers/fueltank,
-/turf/simulated/floor/outdoors/snow/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"axI" = (
-/obj/vehicle/has_interior/controller/heavyarmor_tank{
-	haskey = 0;
-	interior_area = /area/vehicle_interior/heavyarmor_tank_A
-	},
-/turf/simulated/floor/outdoors/snow/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
 "axJ" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -12576,74 +12412,9 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/muriki/bathroom/sciupper)
-"axK" = (
-/obj/structure/cliff_end{
-	dir = 1
-	},
-/turf/simulated/floor/outdoors/rocks/turfpack/muriki,
-/area/mine/explored/muriki/mountaineast)
-"axL" = (
-/obj/structure/window/reinforced/full,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"axM" = (
-/obj/random/trash,
-/obj/random/junk,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"axN" = (
-/turf/simulated/floor/wood/broken/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
 "axO" = (
 /turf/simulated/open/indoor/turfpack/muriki,
 /area/muriki/processor/hall)
-"axP" = (
-/obj/item/trash/rkibble{
-	desc = "A bowl of healthy food for any pet to grow big and strong! It looks untouched. ";
-	name = "bowl of kibble"
-	},
-/obj/item/trash/rkibble{
-	desc = "A bowl of healthy food for any pet to grow big and strong! It looks untouched. ";
-	name = "bowl of kibble"
-	},
-/obj/item/trash/rkibble{
-	desc = "A bowl of healthy food for any pet to grow big and strong! It looks untouched. ";
-	name = "bowl of kibble"
-	},
-/obj/item/trash/rkibble{
-	desc = "A bowl of healthy food for any pet to grow big and strong! It looks untouched. ";
-	name = "bowl of kibble"
-	},
-/obj/item/trash/rkibble{
-	desc = "A bowl of healthy food for any pet to grow big and strong! It looks untouched. ";
-	name = "bowl of kibble"
-	},
-/obj/item/trash/rkibble{
-	desc = "A bowl of healthy food for any pet to grow big and strong! It looks untouched. ";
-	name = "bowl of kibble"
-	},
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"axQ" = (
-/obj/item/trash/rkibble{
-	desc = "A bowl of healthy food for any pet to grow big and strong! It looks untouched. ";
-	name = "bowl of kibble"
-	},
-/obj/item/trash/rkibble{
-	desc = "A bowl of healthy food for any pet to grow big and strong! It looks untouched. ";
-	name = "bowl of kibble"
-	},
-/obj/item/trash/rkibble{
-	desc = "A bowl of healthy food for any pet to grow big and strong! It looks untouched. ";
-	name = "bowl of kibble"
-	},
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"axR" = (
-/obj/random/trash,
-/obj/random/junk,
-/turf/simulated/floor/wood/broken/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
 "axS" = (
 /obj/structure/closet{
 	name = "Evidence Closet"
@@ -12653,100 +12424,6 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/security/evidence_storage)
-"axT" = (
-/obj/structure/barricade/sandbag,
-/turf/simulated/floor/outdoors/snow/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"axU" = (
-/obj/random/junk,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"axV" = (
-/obj/item/trash/rkibble{
-	desc = "A bowl of healthy food for any pet to grow big and strong! It looks untouched. ";
-	name = "bowl of kibble"
-	},
-/turf/simulated/floor/wood/broken/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"axW" = (
-/obj/item/clothing/suit/armor/combat,
-/obj/structure/table/rack/shelf/wood,
-/obj/item/material/twohanded/sledgehammer/gravity,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"axX" = (
-/obj/random/flashlight,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"axY" = (
-/obj/structure/barricade/sandbag,
-/obj/item/stack/material/wood/oak,
-/obj/item/stack/material/wood/oak{
-	pixel_x = -10
-	},
-/obj/item/stack/material/wood/oak{
-	pixel_x = 10
-	},
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"axZ" = (
-/obj/structure/stairs/spawner/west,
-/obj/structure/railing,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"aya" = (
-/obj/structure/railing,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"ayb" = (
-/obj/structure/table/rack/shelf/wood,
-/obj/item/blade_trap_kit,
-/obj/item/blade_trap_kit,
-/obj/item/blade_trap_kit,
-/obj/item/blade_trap_kit,
-/obj/item/blade_trap_kit,
-/obj/item/blade_trap_kit,
-/obj/item/blade_trap_kit,
-/obj/item/blade_trap_kit,
-/obj/item/blade_trap_kit,
-/obj/item/blade_trap_kit,
-/obj/item/pen/crayon/marker/rainbow,
-/obj/item/pen/crayon/marker/rainbow,
-/obj/item/pen/crayon/marker/rainbow,
-/obj/item/pen/crayon/marker/rainbow,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"ayc" = (
-/obj/structure/closet/tent/B,
-/turf/simulated/floor/outdoors/snow/turfpack/muriki,
-/area/mine/unexplored/muriki/valleyeast)
-"ayd" = (
-/obj/structure/barricade,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"aye" = (
-/obj/structure/barricade/sandbag,
-/obj/machinery/light/small{
-	dir = 8
-	},
-/turf/simulated/floor/outdoors/snow/turfpack/muriki{
-	outdoors = 0
-	},
-/area/specialty/stowaway_clubhouse)
-"ayf" = (
-/obj/structure/barricade/sandbag,
-/obj/structure/dancepole{
-	name = "roof support"
-	},
-/turf/simulated/floor/outdoors/snow/turfpack/muriki{
-	outdoors = 0
-	},
-/area/specialty/stowaway_clubhouse)
-"ayg" = (
-/turf/simulated/floor/outdoors/snow/turfpack/muriki{
-	outdoors = 0
-	},
-/area/specialty/stowaway_clubhouse)
 "ayh" = (
 /obj/structure/closet/crate,
 /obj/effect/floor_decal/corner/red{
@@ -12754,22 +12431,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/security/secmail)
-"ayi" = (
-/obj/structure/ladder_assembly,
-/turf/simulated/floor/outdoors/snow/turfpack/muriki{
-	outdoors = 0
-	},
-/area/specialty/stowaway_clubhouse)
-"ayj" = (
-/obj/item/material/barbedwire/start_active,
-/turf/simulated/floor/outdoors/ice/turfpack/muriki,
-/area/mine/unexplored/muriki/valleyeast)
-"ayk" = (
-/obj/structure/barricade/sandbag,
-/turf/simulated/floor/outdoors/snow/turfpack/muriki{
-	outdoors = 0
-	},
-/area/specialty/stowaway_clubhouse)
 "ayl" = (
 /obj/machinery/computer/crew{
 	dir = 8;
@@ -12786,54 +12447,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/reception)
-"aym" = (
-/obj/item/clothing/suit/caution,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"ayn" = (
-/obj/item/trash/rkibble{
-	desc = "A bowl of healthy food for any pet to grow big and strong! It looks untouched. ";
-	name = "bowl of kibble"
-	},
-/obj/item/sticky_pad{
-	pixel_x = -12;
-	pixel_y = 3
-	},
-/obj/item/sticky_pad{
-	pixel_x = -12;
-	pixel_y = 3
-	},
-/obj/item/sticky_pad{
-	pixel_x = -12;
-	pixel_y = 3
-	},
-/turf/simulated/floor/wood/broken/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"ayo" = (
-/obj/machinery/light/small/flicker{
-	dir = 1
-	},
-/obj/random/trash,
-/obj/random/junk,
-/turf/simulated/floor/wood/broken/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"ayp" = (
-/obj/machinery/light/small,
-/obj/random/trash,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"ayq" = (
-/obj/item/clothing/head/cone,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"ayr" = (
-/obj/structure/barricade/sandbag,
-/turf/simulated/floor/outdoors/ice/turfpack/muriki,
-/area/mine/unexplored/muriki/valleyeast)
-"ays" = (
-/obj/structure/reagent_dispensers/fueltank,
-/turf/simulated/floor/outdoors/snow/turfpack/muriki,
-/area/mine/unexplored/muriki/valleyeast)
 "ayt" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 4
@@ -12844,299 +12457,6 @@
 /obj/effect/catwalk_plated/dark,
 /turf/simulated/floor/plating,
 /area/quartermaster/warehouse)
-"ayu" = (
-/obj/structure/barricade/sandbag,
-/turf/simulated/floor/outdoors/snow/turfpack/muriki,
-/area/mine/explored/muriki/mountaineast)
-"ayv" = (
-/obj/machinery/light/small/flicker{
-	dir = 4
-	},
-/turf/simulated/floor/outdoors/snow/turfpack/muriki{
-	outdoors = 0
-	},
-/area/specialty/stowaway_clubhouse)
-"ayw" = (
-/obj/item/reagent_containers/syringe/drugs,
-/obj/structure/table/rack/shelf/wood,
-/obj/item/reagent_containers/syringe/voxkit{
-	pixel_y = -5
-	},
-/obj/item/reagent_containers/syringe/voxkit{
-	pixel_y = -5
-	},
-/obj/item/laser_pointer/blue,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"ayx" = (
-/obj/structure/table/rack/shelf/wood,
-/obj/item/tank/emergency/oxygen/engi,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"ayy" = (
-/obj/structure/table/rack/shelf/wood,
-/obj/item/rig/hazmat/equipped,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"ayz" = (
-/obj/structure/table/rack/shelf/wood,
-/obj/item/beartrap,
-/obj/item/beartrap,
-/obj/item/beartrap,
-/obj/item/beartrap,
-/obj/item/beartrap,
-/obj/item/beartrap,
-/obj/item/beartrap,
-/obj/item/pen/crayon/marker/rainbow,
-/obj/item/pen/crayon/marker/rainbow,
-/obj/item/pen/crayon/marker/rainbow,
-/obj/item/beartrap,
-/obj/item/beartrap,
-/obj/item/beartrap,
-/obj/item/beartrap,
-/obj/item/beartrap,
-/obj/item/beartrap,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"ayA" = (
-/obj/structure/table/rack/shelf/wood,
-/obj/item/stack/sandbags{
-	amount = 30
-	},
-/turf/simulated/floor/outdoors/snow/turfpack/muriki{
-	outdoors = 0
-	},
-/area/specialty/stowaway_clubhouse)
-"ayB" = (
-/obj/structure/table/rack/shelf/wood,
-/obj/item/stack/sandbags{
-	amount = 30
-	},
-/obj/machinery/light/small/flicker{
-	dir = 1
-	},
-/turf/simulated/floor/outdoors/snow/turfpack/muriki{
-	outdoors = 0
-	},
-/area/specialty/stowaway_clubhouse)
-"ayC" = (
-/turf/simulated/wall/stonelogs/turfpack/muriki,
-/area/specialty/stowaway_clubhouse/upper)
-"ayD" = (
-/obj/item/material/barbedwire/start_active,
-/turf/simulated/floor/outdoors/ice/dark_smooth/turfpack/muriki,
-/area/mine/unexplored/muriki/valleyeast)
-"ayE" = (
-/obj/structure/barricade/sandbag,
-/turf/simulated/floor/outdoors/ice/dark_smooth/turfpack/muriki,
-/area/mine/unexplored/muriki/valleyeast)
-"ayF" = (
-/obj/item/material/barbedwire/start_active,
-/turf/simulated/floor/outdoors/snow/turfpack/muriki,
-/area/mine/explored/muriki/mountaineast)
-"ayG" = (
-/obj/structure/table/rack/shelf/wood,
-/obj/item/storage/belt/utility/full,
-/obj/item/material/twohanded/spear,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"ayH" = (
-/turf/simulated/mineral/alt/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"ayI" = (
-/turf/simulated/open/muriki,
-/area/specialty/stowaway_clubhouse/upper)
-"ayJ" = (
-/obj/structure/barricade/sandbag,
-/turf/simulated/floor/outdoors/snow/turfpack/muriki,
-/area/mine/unexplored/muriki/valleyeast)
-"ayK" = (
-/obj/item/stack/sandbags{
-	amount = 30
-	},
-/obj/structure/table/rack/shelf/wood,
-/turf/simulated/floor/outdoors/snow/turfpack/muriki{
-	outdoors = 0
-	},
-/area/specialty/stowaway_clubhouse)
-"ayL" = (
-/obj/item/reagent_containers/blood/OMinus,
-/obj/item/reagent_containers/blood/OMinus,
-/obj/item/reagent_containers/blood/OMinus,
-/obj/item/reagent_containers/blood/OMinus,
-/obj/structure/medical_stand,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"ayM" = (
-/obj/machinery/light/small{
-	dir = 4
-	},
-/turf/simulated/floor/wood/broken/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"ayN" = (
-/obj/item/trash/rkibble{
-	desc = "A bowl of healthy food for any pet to grow big and strong! It looks untouched. ";
-	name = "bowl of kibble"
-	},
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"ayO" = (
-/obj/structure/table/rack/shelf/wood,
-/obj/item/storage/firstaid/regular,
-/obj/item/storage/firstaid/regular,
-/obj/item/storage/firstaid/regular,
-/obj/item/storage/firstaid/regular,
-/obj/item/storage/firstaid/regular,
-/obj/item/storage/firstaid/regular,
-/obj/item/storage/firstaid/regular,
-/obj/item/storage/firstaid/regular,
-/obj/item/storage/firstaid/regular,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"ayP" = (
-/obj/structure/table/rack/shelf/wood,
-/obj/item/healthanalyzer,
-/obj/item/healthanalyzer,
-/obj/item/healthanalyzer,
-/obj/item/healthanalyzer,
-/obj/item/storage/pouch/ifak{
-	pixel_x = -8
-	},
-/obj/item/storage/pouch/ifak{
-	pixel_x = -8
-	},
-/obj/item/storage/pouch/ifak{
-	pixel_x = -8
-	},
-/obj/item/healthanalyzer/advanced,
-/obj/item/storage/pouch/ifak{
-	pixel_x = -8
-	},
-/obj/item/storage/pouch/ifak{
-	pixel_x = -8
-	},
-/obj/item/storage/pouch/ifak{
-	pixel_x = -8
-	},
-/obj/item/storage/pouch/ifak{
-	pixel_x = -8
-	},
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"ayQ" = (
-/obj/structure/table/rack/shelf/wood,
-/obj/item/storage/firstaid/fire{
-	pixel_x = 4;
-	pixel_y = 4
-	},
-/obj/item/storage/firstaid/fire{
-	pixel_x = 4;
-	pixel_y = 4
-	},
-/obj/item/storage/firstaid/fire{
-	pixel_x = 4;
-	pixel_y = 4
-	},
-/obj/item/storage/firstaid/fire{
-	pixel_x = 4;
-	pixel_y = 4
-	},
-/obj/item/storage/firstaid/fire{
-	pixel_x = 4;
-	pixel_y = 4
-	},
-/obj/item/storage/firstaid/toxin,
-/obj/item/storage/firstaid/o2{
-	pixel_x = -4;
-	pixel_y = -4
-	},
-/obj/item/storage/firstaid/o2{
-	pixel_x = -4;
-	pixel_y = -4
-	},
-/obj/item/storage/firstaid/o2{
-	pixel_x = -4;
-	pixel_y = -4
-	},
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"ayR" = (
-/obj/item/stack/medical/ointment,
-/obj/item/stack/medical/ointment,
-/obj/item/stack/medical/ointment,
-/obj/item/stack/medical/ointment,
-/obj/item/stack/medical/ointment,
-/obj/item/stack/medical/ointment,
-/obj/item/stack/medical/ointment,
-/obj/item/stack/medical/bruise_pack,
-/obj/item/stack/medical/bruise_pack,
-/obj/item/stack/medical/bruise_pack,
-/obj/item/stack/medical/bruise_pack,
-/obj/item/stack/medical/bruise_pack,
-/obj/item/stack/medical/bruise_pack,
-/obj/item/stack/medical/bruise_pack,
-/obj/structure/table/rack/shelf/wood,
-/obj/item/storage/pill_bottle/dermaline{
-	pixel_y = 6;
-	pixel_x = 9
-	},
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"ayS" = (
-/obj/item/sticky_pad,
-/obj/item/sticky_pad,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"ayT" = (
-/obj/item/material/barbedwire/start_active,
-/turf/simulated/floor/outdoors/snow/turfpack/muriki,
-/area/mine/unexplored/muriki/valleyeast)
-"ayU" = (
-/obj/structure/bed/padded,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"ayV" = (
-/obj/structure/barricade/sandbag,
-/obj/item/sleevemate,
-/obj/item/sleevemate,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"ayW" = (
-/obj/item/trash/rkibble{
-	desc = "A bowl of healthy food for any pet to grow big and strong! It looks untouched. ";
-	name = "bowl of kibble"
-	},
-/obj/machinery/light/small{
-	dir = 4
-	},
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"ayX" = (
-/obj/item/healthanalyzer/guide,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"ayY" = (
-/obj/item/pen/crayon/marker/rainbow,
-/turf/simulated/floor/wood/broken/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"ayZ" = (
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse/upper)
-"aza" = (
-/obj/structure/lattice,
-/obj/item/stack/material/wood/oak,
-/obj/item/stack/material/wood/oak{
-	pixel_x = 10
-	},
-/obj/item/stack/material/wood/oak{
-	pixel_x = -10
-	},
-/turf/simulated/open/muriki,
-/area/specialty/stowaway_clubhouse/upper)
-"azb" = (
-/obj/random/trash,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse/upper)
 "azc" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -13147,19 +12467,6 @@
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/hallway/security/main)
-"azd" = (
-/obj/structure/closet/grave/dirthole,
-/turf/simulated/floor/outdoors/snow/turfpack/muriki,
-/area/mine/explored/muriki/mountaineast)
-"aze" = (
-/obj/structure/table/rack/shelf/wood,
-/obj/item/storage/firstaid/surgery,
-/obj/item/roller{
-	pixel_x = -8;
-	pixel_y = -7
-	},
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
 "azf" = (
 /obj/item/stool/baystool/padded{
 	dir = 1
@@ -13172,15 +12479,6 @@
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/bar)
-"azg" = (
-/obj/random/trash,
-/obj/structure/table/rack/shelf/wood,
-/obj/item/surgical/scalpel/laser3,
-/obj/item/surgical/circular_saw/manager{
-	pixel_y = 6
-	},
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
 "azh" = (
 /obj/effect/floor_decal/milspec/stripe{
 	dir = 1
@@ -13192,30 +12490,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/milspec,
 /area/quartermaster/warehouse)
-"azi" = (
-/obj/item/defib_kit,
-/obj/structure/table/rack/shelf/wood,
-/obj/machinery/light/small{
-	dir = 1
-	},
-/obj/item/defib_kit,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"azj" = (
-/obj/item/storage/pill_bottle/tramadol,
-/obj/structure/table/rack/shelf/wood,
-/obj/item/stack/nanopaste{
-	pixel_x = 10
-	},
-/obj/item/storage/pill_bottle/dylovene{
-	pixel_x = -6
-	},
-/obj/item/storage/pill_bottle/tramadol,
-/obj/item/stack/nanopaste{
-	pixel_x = 10
-	},
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
 "azk" = (
 /obj/structure/window/reinforced/tinted/frosted,
 /obj/item/radio/intercom{
@@ -13232,59 +12506,6 @@
 /obj/item/towel/random,
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/bridge)
-"azl" = (
-/obj/structure/table/rack/shelf/wood,
-/obj/item/storage/firstaid/adv,
-/obj/item/storage/firstaid/adv,
-/obj/item/storage/firstaid/adv,
-/obj/item/storage/firstaid/adv,
-/obj/item/storage/firstaid/adv,
-/obj/item/storage/firstaid/adv,
-/obj/item/storage/firstaid/adv,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"azm" = (
-/obj/item/stack/material/wood/oak,
-/turf/simulated/floor/wood/broken/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"azn" = (
-/obj/structure/barricade/sandbag,
-/obj/item/material/barbedwire/start_active,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"azo" = (
-/obj/machinery/light/small{
-	dir = 4
-	},
-/obj/random/trash,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"azp" = (
-/obj/structure/table/rack/shelf/wood,
-/obj/item/soap/syndie,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"azq" = (
-/obj/structure/table/rack/shelf/wood,
-/obj/fiftyspawner/plasteel,
-/obj/item/plastique/seismic{
-	pixel_x = -8
-	},
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"azr" = (
-/obj/structure/table/rack/shelf/wood,
-/obj/item/perfect_tele/one_beacon,
-/obj/item/perfect_tele/one_beacon,
-/obj/machinery/light/small{
-	dir = 4
-	},
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"azs" = (
-/obj/structure/barricade/cutout/fluke,
-/turf/simulated/floor/outdoors/snow/turfpack/muriki,
-/area/mine/explored/muriki/mountaineast)
 "azt" = (
 /obj/machinery/light_switch{
 	dir = 1;
@@ -13298,68 +12519,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/techmaint,
 /area/security/evidence_storage)
-"azu" = (
-/obj/structure/barricade/sandbag,
-/obj/item/material/barbedwire/start_active,
-/turf/simulated/floor/wood/broken/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"azv" = (
-/obj/random/trash,
-/turf/simulated/floor/wood/broken/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"azw" = (
-/obj/item/clothing/head/cone,
-/turf/simulated/floor/outdoors/snow/turfpack/muriki,
-/area/mine/explored/muriki/mountaineast)
-"azx" = (
-/obj/structure/table/rack/shelf/wood,
-/obj/item/airlock_electronics,
-/obj/item/laser_pointer/purple,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"azy" = (
-/obj/machinery/light/small{
-	dir = 1
-	},
-/obj/machinery/power/apc/alarms_hidden{
-	dir = 1;
-	pixel_y = 28
-	},
-/obj/structure/cable/yellow{
-	icon_state = "0-4"
-	},
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"azz" = (
-/obj/structure/simple_door/wood,
-/obj/structure/cable/yellow{
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"azA" = (
-/obj/structure/cable/yellow{
-	icon_state = "16-0"
-	},
-/obj/structure/cable/yellow{
-	icon_state = "0-8"
-	},
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"azB" = (
-/obj/item/stack/material/wood/oak,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"azC" = (
-/obj/random/flashlight,
-/turf/simulated/floor/wood/broken/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"azD" = (
-/obj/machinery/light/small{
-	dir = 4
-	},
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
 "azE" = (
 /obj/structure/closet/l3closet/virology,
 /obj/effect/floor_decal/corner/black{
@@ -13370,17 +12529,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virology/prep)
-"azF" = (
-/obj/structure/table/rack/shelf/wood,
-/obj/random/thermalponcho,
-/obj/random/thermalponcho,
-/obj/random/thermalponcho,
-/obj/random/thermalponcho,
-/obj/random/thermalponcho,
-/obj/random/thermalponcho,
-/obj/random/thermalponcho,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
 "azG" = (
 /obj/machinery/camera/network/outside{
 	c_tag = "EXT - Sci west hole";
@@ -13388,165 +12536,6 @@
 	},
 /turf/simulated/floor/outdoors/snow/turfpack/muriki,
 /area/muriki/grounds/sci)
-"azH" = (
-/obj/structure/table/rack/shelf/wood,
-/obj/item/clothing/suit/space/void/wizard,
-/obj/item/clothing/head/helmet/space/void/wizard,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"azI" = (
-/obj/structure/table/rack/shelf/wood,
-/obj/item/poster,
-/turf/simulated/floor/wood/broken/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"azJ" = (
-/obj/structure/barricade,
-/obj/item/stack/material/wood/oak,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"azK" = (
-/obj/structure/table/rack/shelf/wood,
-/obj/fiftyspawner/glass{
-	pixel_x = -9
-	},
-/obj/fiftyspawner/steel,
-/obj/fiftyspawner/steel,
-/obj/fiftyspawner/plastic{
-	pixel_x = 7
-	},
-/obj/fiftyspawner/plastic{
-	pixel_x = 7
-	},
-/obj/fiftyspawner/plastic{
-	pixel_x = 7
-	},
-/obj/fiftyspawner/phoronrglass{
-	pixel_y = -9
-	},
-/obj/fiftyspawner/rglass{
-	pixel_x = -8;
-	pixel_y = -9
-	},
-/obj/fiftyspawner/uranium{
-	pixel_x = 8;
-	pixel_y = -9
-	},
-/obj/fiftyspawner/uranium{
-	pixel_x = 8;
-	pixel_y = -9
-	},
-/obj/fiftyspawner/steel,
-/obj/fiftyspawner/steel,
-/obj/fiftyspawner/glass{
-	pixel_x = -9
-	},
-/obj/fiftyspawner/steel,
-/obj/item/stack/material/durasteel{
-	pixel_y = 8;
-	pixel_x = 7;
-	amount = 16
-	},
-/obj/item/stack/material/titanium{
-	pixel_y = 8;
-	amount = 16
-	},
-/obj/item/stack/material/plasteel{
-	pixel_x = -8;
-	pixel_y = 8;
-	amount = 50
-	},
-/obj/fiftyspawner/steel,
-/obj/fiftyspawner/plastic{
-	pixel_x = 7
-	},
-/obj/fiftyspawner/plastic{
-	pixel_x = 7
-	},
-/obj/fiftyspawner/steel,
-/obj/fiftyspawner/steel,
-/obj/fiftyspawner/steel,
-/obj/item/stack/material/plasteel{
-	pixel_x = -8;
-	pixel_y = 8;
-	amount = 50
-	},
-/obj/fiftyspawner/phoron{
-	pixel_x = -3;
-	pixel_y = -4
-	},
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"azL" = (
-/obj/structure/table/rack/shelf/wood,
-/obj/item/clothing/gloves/black{
-	pixel_y = -6
-	},
-/obj/item/clothing/gloves/yellow,
-/obj/item/clothing/gloves/yellow,
-/obj/item/clothing/gloves/yellow,
-/obj/item/healthanalyzer/guide{
-	pixel_y = 7
-	},
-/obj/item/healthanalyzer/guide{
-	pixel_y = 7
-	},
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"azM" = (
-/obj/structure/table/rack/shelf/wood,
-/obj/item/storage/toolbox/syndicate,
-/obj/machinery/light/small{
-	dir = 1
-	},
-/obj/item/storage/toolbox/electrical{
-	pixel_y = -8
-	},
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"azN" = (
-/obj/structure/barricade/cutout/greytide,
-/turf/simulated/floor/outdoors/snow/turfpack/muriki,
-/area/mine/unexplored/muriki/valleyeast)
-"azO" = (
-/obj/structure/bed,
-/obj/item/bedsheet/mime,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"azP" = (
-/obj/structure/table/rack/shelf/wood,
-/obj/item/radio,
-/obj/item/radio,
-/obj/item/radio,
-/obj/item/radio,
-/obj/item/holosign_creator/combifan,
-/obj/item/holosign_creator/combifan,
-/obj/item/gun/energy/locked/frontier/holdout/unlocked,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"azQ" = (
-/obj/structure/bed,
-/obj/item/bedsheet/craftable,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"azR" = (
-/obj/structure/table/rack/shelf/wood,
-/obj/item/radio,
-/obj/item/radio,
-/obj/item/radio,
-/obj/item/gun/projectile/silenced,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"azS" = (
-/obj/structure/bed,
-/obj/item/bedsheet/hop,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"azT" = (
-/obj/structure/bed,
-/obj/item/bedsheet/craftable,
-/obj/item/toy/plushie/pillow/green,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
 "azU" = (
 /obj/structure/reagent_dispensers/watertank,
 /turf/simulated/floor/plating,
@@ -13555,32 +12544,6 @@
 /obj/effect/floor_decal/eshui/emblem/eshui_l,
 /turf/simulated/floor/tiled,
 /area/quartermaster/foyer)
-"azW" = (
-/obj/structure/table/rack/shelf/wood,
-/obj/item/radio,
-/obj/item/radio,
-/obj/item/gun/projectile/dartgun,
-/obj/item/gun/projectile/shotgun/pump/empty{
-	pixel_x = -16;
-	desc = "A blood soaked shotgun, betraying its history... do you feel lucky?"
-	},
-/obj/item/ammo_casing/a12g/bb,
-/obj/item/ammo_casing/a12g/bb,
-/obj/item/ammo_casing/a12g/bb,
-/obj/item/ammo_casing/a12g/bb,
-/obj/item/ammo_magazine/ammo_box/b12g,
-/obj/item/ammo_magazine/ammo_box/b12g,
-/obj/item/ammo_magazine/ammo_box/b12g,
-/obj/item/ammo_magazine/ammo_box/b12g,
-/obj/item/ammo_magazine/ammo_box/b12g,
-/obj/item/ammo_magazine/ammo_box/b12g,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"azX" = (
-/obj/structure/bed,
-/obj/item/bedsheet/hos,
-/turf/simulated/floor/wood/broken/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
 "azY" = (
 /obj/structure/cable/green{
 	icon_state = "2-4"
@@ -13596,34 +12559,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/muriki/tramstation/civ)
-"azZ" = (
-/obj/structure/table/rack/shelf/wood,
-/obj/item/storage/belt/utility{
-	pixel_y = -4
-	},
-/obj/item/storage/belt/utility/full/multitool,
-/obj/item/tape_roll{
-	pixel_x = 10;
-	pixel_y = 10
-	},
-/obj/item/tape_roll{
-	pixel_x = 10;
-	pixel_y = 10
-	},
-/obj/item/tape_roll{
-	pixel_x = 10;
-	pixel_y = 10
-	},
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"aAa" = (
-/obj/structure/table/rack/shelf/wood,
-/obj/item/multitool,
-/obj/item/multitool,
-/obj/item/multitool,
-/obj/item/multitool,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
 "aAb" = (
 /obj/machinery/sleep_console,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -13634,144 +12569,6 @@
 	},
 /turf/simulated/floor/tiled/old_cargo,
 /area/medical/sleeper)
-"aAc" = (
-/obj/item/flashlight/glowstick,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"aAd" = (
-/obj/item/trash/rkibble{
-	desc = "A bowl of healthy food for any pet to grow big and strong! It looks untouched. ";
-	name = "bowl of kibble"
-	},
-/obj/item/trash/rkibble{
-	desc = "A bowl of healthy food for any pet to grow big and strong! It looks untouched. ";
-	name = "bowl of kibble"
-	},
-/obj/item/trash/rkibble{
-	desc = "A bowl of healthy food for any pet to grow big and strong! It looks untouched. ";
-	name = "bowl of kibble"
-	},
-/obj/machinery/light/small{
-	dir = 4
-	},
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"aAe" = (
-/obj/random/trash,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"aAf" = (
-/obj/structure/table/rack/shelf/wood,
-/obj/item/pickaxe,
-/obj/item/tank/jetpack/carbondioxide,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"aAg" = (
-/obj/structure/table/rack/shelf/wood,
-/obj/item/clothing/suit/armor/reactive/repulse,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"aAh" = (
-/obj/structure/bed,
-/obj/item/bedsheet/brown,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"aAi" = (
-/obj/structure/table/rack/shelf/wood,
-/obj/item/radio,
-/obj/item/radio,
-/obj/item/radio,
-/obj/item/spacecash/c500,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"aAj" = (
-/obj/structure/bed,
-/obj/item/bedsheet/craftable,
-/obj/machinery/light/small{
-	dir = 1
-	},
-/obj/item/toy/plushie/pillow/green,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"aAk" = (
-/obj/structure/table/rack/shelf/wood,
-/obj/item/radio,
-/obj/item/storage/backpack/dufflebag/syndie,
-/obj/item/gun/energy/locked/frontier/holdout/unlocked,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"aAl" = (
-/obj/structure/bed,
-/obj/item/bedsheet/ce,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"aAm" = (
-/obj/structure/table/rack/shelf/wood,
-/obj/item/gun/projectile/automatic/serdy/hectate,
-/obj/item/ammo_magazine/hectate{
-	pixel_x = 5
-	},
-/obj/item/ammo_magazine/hectate{
-	pixel_x = 5
-	},
-/obj/item/ammo_magazine/hectate{
-	pixel_x = 5
-	},
-/obj/item/ammo_magazine/hectate{
-	pixel_x = 5
-	},
-/obj/item/ammo_magazine/hectate/ap{
-	pixel_x = -5
-	},
-/obj/item/ammo_magazine/hectate/ap{
-	pixel_x = -5
-	},
-/obj/item/ammo_magazine/hectate/ap{
-	pixel_x = -5
-	},
-/obj/item/ammo_magazine/hectate/ap{
-	pixel_x = -5
-	},
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"aAn" = (
-/obj/structure/table/rack/shelf/wood,
-/obj/item/ammo_magazine/m16,
-/obj/item/ammo_magazine/m16,
-/obj/item/ammo_magazine/m16,
-/obj/item/ammo_magazine/m16,
-/obj/item/ammo_magazine/m16,
-/obj/item/ammo_magazine/m16,
-/obj/item/ammo_magazine/m16,
-/obj/item/ammo_magazine/m16,
-/obj/item/ammo_magazine/m16,
-/obj/item/ammo_magazine/m16,
-/obj/item/gun/projectile/automatic/serdy/m4a1{
-	pixel_x = -10
-	},
-/obj/item/gun/projectile/automatic/serdy/m4a1{
-	pixel_x = -10
-	},
-/obj/item/gun/projectile/automatic/serdy/m4a1{
-	pixel_x = -10
-	},
-/obj/item/ammo_magazine/m16,
-/obj/item/ammo_magazine/m16,
-/obj/item/ammo_magazine/m16,
-/obj/item/ammo_magazine/m16,
-/obj/machinery/light/small{
-	dir = 1
-	},
-/obj/item/ammo_magazine/m16,
-/obj/item/ammo_magazine/m16,
-/obj/item/ammo_magazine/m16,
-/obj/item/ammo_magazine/m16,
-/obj/item/ammo_magazine/m16,
-/obj/item/ammo_magazine/m16,
-/obj/item/ammo_magazine/m16,
-/obj/item/ammo_magazine/m16,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
 "aAo" = (
 /obj/structure/closet/secure_closet/paramedic,
 /obj/random/medical,
@@ -13786,27 +12583,6 @@
 /obj/effect/floor_decal/corner/blue/full,
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay_emt_bay)
-"aAp" = (
-/obj/structure/table/rack/shelf/wood,
-/obj/item/storage/box/scattershot/large,
-/obj/item/storage/box/scattershot/large,
-/obj/item/gun/projectile/shotgun/pump/USDF,
-/obj/item/gun/projectile/shotgun/pump/USDF,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"aAq" = (
-/obj/structure/table/rack/shelf/wood,
-/obj/item/tool/wirecutters,
-/obj/item/tool/wirecutters,
-/obj/item/tool/wrench,
-/obj/item/tool/wrench,
-/obj/item/tool/wirecutters,
-/obj/item/tool/wrench,
-/obj/item/tool/wirecutters,
-/obj/item/tool/wrench,
-/obj/item/tool/wrench,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
 "aAr" = (
 /obj/machinery/light/small,
 /obj/effect/floor_decal/industrial/warning/corner{
@@ -13814,56 +12590,6 @@
 	},
 /turf/simulated/floor,
 /area/engineering/engine_smes)
-"aAs" = (
-/obj/structure/table/rack/shelf/wood,
-/obj/item/tool/screwdriver,
-/obj/item/stack/cable_coil,
-/obj/item/stack/cable_coil,
-/obj/item/tool/screwdriver,
-/obj/item/stack/cable_coil,
-/obj/machinery/light/small{
-	dir = 1
-	},
-/obj/item/tool/screwdriver,
-/obj/item/tool/screwdriver,
-/obj/item/stack/cable_coil,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"aAt" = (
-/obj/structure/table/rack/shelf/wood,
-/obj/item/weldingtool,
-/obj/item/weldingtool,
-/obj/item/tool/crowbar,
-/obj/item/tool/crowbar,
-/obj/item/weldingtool,
-/obj/item/weldingtool,
-/obj/item/weldingtool,
-/obj/item/tool/crowbar/red,
-/obj/item/weldingtool,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"aAu" = (
-/obj/structure/barricade/cutout/fluke,
-/turf/simulated/floor/outdoors/snow/turfpack/muriki,
-/area/mine/unexplored/muriki/valleyeast)
-"aAv" = (
-/obj/structure/barricade/planks,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"aAw" = (
-/turf/simulated/floor/outdoors/snow/gravsnow/turfpack/muriki,
-/area/mine/explored/muriki/mountaineast)
-"aAx" = (
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
-/area/specialty/stowaway_clubhouse)
-"aAy" = (
-/obj/effect/landmark/loot_spawn,
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
-/area/specialty/stowaway_clubhouse)
 "aAz" = (
 /obj/structure/cable/orange{
 	icon_state = "4-8"
@@ -13872,52 +12598,6 @@
 /obj/random/junk,
 /turf/simulated/floor,
 /area/maintenance/engi_engine)
-"aAA" = (
-/obj/item/gun/projectile/shotgun/doublebarrel/quad,
-/obj/structure/table/rack/shelf/wood,
-/obj/item/ammo_magazine/ammo_box/b12g/pellet,
-/obj/item/ammo_magazine/ammo_box/b12g/pellet,
-/obj/item/ammo_magazine/ammo_box/b12g/pellet,
-/obj/item/ammo_magazine/ammo_box/b12g/pellet,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"aAB" = (
-/obj/structure/table/rack/shelf/wood,
-/obj/item/material/butterfly,
-/obj/item/material/butterfly,
-/obj/item/material/knife/tacknife,
-/obj/item/material/butterfly,
-/turf/simulated/floor/wood/broken/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"aAC" = (
-/obj/item/gun/energy/soapenergy/gaussrifle,
-/obj/structure/table/rack/shelf/wood,
-/turf/simulated/floor/wood/broken/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"aAD" = (
-/obj/structure/bonfire/permanent,
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
-/area/specialty/stowaway_clubhouse)
-"aAE" = (
-/obj/structure/table/rack/shelf/wood,
-/obj/item/pickaxe,
-/obj/item/shovel,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"aAF" = (
-/obj/random/flashlight,
-/obj/random/flashlight,
-/obj/random/flashlight,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"aAG" = (
-/obj/machinery/light/small{
-	dir = 8
-	},
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
 "aAH" = (
 /obj/structure/railing,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -13931,19 +12611,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/secelev)
-"aAI" = (
-/obj/structure/simple_door/wood,
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
-/area/specialty/stowaway_clubhouse)
-"aAJ" = (
-/obj/machinery/light/small,
-/obj/structure/reagent_dispensers/fueltank,
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
-/area/specialty/stowaway_clubhouse)
 "aAK" = (
 /obj/structure/railing/grey{
 	dir = 8
@@ -13956,31 +12623,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/security/brig/observation)
-"aAL" = (
-/obj/machinery/portable_atmospherics/canister/phoron,
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
-/area/mine/unexplored/muriki/mountaineast)
-"aAM" = (
-/obj/structure/barricade/cutout/fluke,
-/turf/simulated/floor/outdoors/snow/turfpack/muriki{
-	outdoors = 0
-	},
-/area/mine/explored/muriki/mountaineast)
-"aAN" = (
-/obj/structure/table/rack,
-/obj/item/storage/pouch/flares/full_glow,
-/obj/item/suit_cooling_unit,
-/obj/item/gps/mining,
-/obj/item/tank/jetpack/carbondioxide,
-/obj/item/clothing/shoes/magboots,
-/obj/item/clothing/mask/breath,
-/obj/item/tank/air,
-/obj/item/clothing/suit/space/void/mining,
-/obj/item/clothing/head/helmet/space/void/mining,
-/turf/simulated/floor/wood/broken/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
 "aAO" = (
 /obj/structure/prop/rock/small/alt,
 /turf/simulated/floor/outdoors/ice/turfpack/muriki,
@@ -13992,12 +12634,6 @@
 "aAQ" = (
 /turf/simulated/wall/r_wall,
 /area/muriki/processor/hall)
-"aAR" = (
-/obj/structure/table/rack,
-/obj/item/suit_cooling_unit,
-/obj/item/suit_cooling_unit,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
 "aAS" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -14018,27 +12654,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/storage/tools)
-"aAT" = (
-/obj/machinery/light/small,
-/obj/item/clothing/shoes/magboots,
-/obj/item/clothing/shoes/magboots,
-/obj/item/clothing/shoes/magboots,
-/obj/item/clothing/shoes/magboots,
-/obj/structure/table/rack,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"aAU" = (
-/obj/machinery/light/small,
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
-/area/specialty/stowaway_clubhouse)
-"aAV" = (
-/obj/structure/closet/grave/dirthole,
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
-/area/mine/unexplored/muriki/mountaineast)
 "aAW" = (
 /obj/structure/bed/chair/bay/chair/padded/purple,
 /obj/structure/cable/green{
@@ -14050,83 +12665,6 @@
 /obj/effect/landmark/start/scientist,
 /turf/simulated/floor/wood,
 /area/rnd/breakroom)
-"aAX" = (
-/obj/structure/simple_door/wood,
-/turf/simulated/floor/wood/broken/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"aAY" = (
-/obj/effect/auto_crayon{
-	icon_state = "x"
-	},
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
-/area/specialty/stowaway_clubhouse)
-"aAZ" = (
-/obj/machinery/portable_atmospherics/canister/phoron,
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
-/area/specialty/stowaway_clubhouse)
-"aBa" = (
-/obj/random/junk,
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
-/area/mine/unexplored/muriki/mountaineast)
-"aBb" = (
-/obj/item/material/barbedwire/start_active,
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
-/area/mine/unexplored/muriki/mountaineast)
-"aBc" = (
-/obj/structure/barricade/planks,
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
-/area/mine/unexplored/muriki/mountaineast)
-"aBd" = (
-/turf/simulated/wall,
-/area/maintenance/civ)
-"aBe" = (
-/obj/structure/table/rack/shelf/wood,
-/obj/item/tank/jetpack/oxygen,
-/obj/item/tank/jetpack/oxygen,
-/obj/item/tank/oxygen,
-/obj/item/tank/oxygen,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"aBf" = (
-/obj/structure/table/rack/shelf/wood,
-/obj/item/clothing/suit/space/void/medical,
-/obj/item/clothing/suit/space/void/medical,
-/obj/item/clothing/head/helmet/space/void/medical,
-/obj/item/clothing/head/helmet/space/void/medical,
-/obj/item/gps/medical,
-/obj/item/gps/medical,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"aBg" = (
-/obj/machinery/light/small{
-	dir = 1
-	},
-/obj/structure/table/rack/shelf/wood,
-/obj/item/clothing/suit/space/void/security,
-/obj/item/clothing/suit/space/void/security,
-/obj/item/clothing/head/helmet/space/void/security,
-/obj/item/clothing/head/helmet/space/void/security,
-/obj/item/gps/security,
-/obj/item/gps/security,
-/obj/item/clothing/mask/breath,
-/obj/item/clothing/mask/breath,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"aBh" = (
-/obj/machinery/door/airlock/maintenance/int,
-/obj/structure/blade_trap/start_active,
-/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
-/area/maintenance/civ)
 "aBi" = (
 /obj/structure/railing/grey{
 	dir = 4
@@ -14145,56 +12683,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/reception)
-"aBj" = (
-/obj/machinery/door/airlock/maintenance/int,
-/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
-/area/maintenance/civ)
-"aBk" = (
-/turf/simulated/wall,
-/area/mine/unexplored/muriki/mountaineast)
-"aBl" = (
-/turf/simulated/wall/stonelogs/turfpack/muriki,
-/area/mine/unexplored/muriki/mountaineast)
-"aBm" = (
-/obj/structure/barricade/cutout/greytide,
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
-/area/mine/explored/muriki/river/hole)
-"aBn" = (
-/obj/structure/table/woodentable,
-/obj/random/maintenance/foodstuff,
-/obj/random/maintenance/foodstuff,
-/obj/random/maintenance/foodstuff,
-/obj/random/maintenance/foodstuff,
-/obj/item/flamethrower/full,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/mine/unexplored/muriki/mountaineast)
-"aBo" = (
-/obj/structure/table/woodentable,
-/obj/random/maintenance/morestuff,
-/obj/random/maintenance/morestuff,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/mine/unexplored/muriki/mountaineast)
-"aBp" = (
-/obj/structure/table/woodentable,
-/obj/random/maintenance/misc,
-/obj/random/maintenance/misc,
-/obj/random/maintenance/medical,
-/obj/random/maintenance/medical,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/mine/unexplored/muriki/mountaineast)
-"aBq" = (
-/obj/structure/simple_door/wood,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/mine/unexplored/muriki/mountaineast)
-"aBr" = (
-/obj/random/junk,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/mine/unexplored/muriki/mountaineast)
-"aBs" = (
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/mine/unexplored/muriki/mountaineast)
 "aBt" = (
 /obj/structure/cliff{
 	dir = 10
@@ -14202,17 +12690,6 @@
 /turf/simulated/floor/outdoors/mud/turfpack/muriki{
 	outdoors = -1
 	},
-/area/mine/unexplored/muriki/mountaineast)
-"aBu" = (
-/obj/structure/disposalpipe/segment,
-/obj/structure/catwalk,
-/obj/random/junk,
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/civ)
-"aBv" = (
-/obj/structure/bed,
-/obj/item/bedsheet/hop,
-/turf/simulated/floor/wood/turfpack/muriki,
 /area/mine/unexplored/muriki/mountaineast)
 "aBw" = (
 /obj/effect/landmark/holiday_event_spawn,
@@ -14228,46 +12705,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/telesci)
-"aBx" = (
-/obj/effect/landmark/loot_spawn,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/mine/unexplored/muriki/mountaineast)
-"aBy" = (
-/obj/structure/bed,
-/obj/item/bedsheet/craftable,
-/obj/effect/landmark/start/stowaway,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/mine/unexplored/muriki/mountaineast)
-"aBz" = (
-/obj/structure/barricade/sandbag,
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
-/area/mine/unexplored/muriki/mountaineast)
-"aBA" = (
-/obj/structure/barricade/cutout/shadowling,
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
-/area/mine/unexplored/muriki/mountaineast)
-"aBB" = (
-/obj/structure/table/woodentable,
-/obj/random/maintenance/foodstuff,
-/obj/random/maintenance/foodstuff,
-/obj/random/maintenance/foodstuff,
-/obj/random/maintenance/foodstuff,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/mine/unexplored/muriki/mountaineast)
-"aBC" = (
-/obj/effect/landmark/bslocker,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/mine/unexplored/muriki/mountaineast)
-"aBD" = (
-/obj/structure/bonfire/permanent,
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
-/area/mine/unexplored/muriki/mountaineast)
 "aBF" = (
 /obj/structure/cliff/corner{
 	dir = 10
@@ -20034,6 +18471,8 @@
 /turf/simulated/floor/glass/reinforced,
 /area/security/brig/observation)
 "cqO" = (
+/obj/item/clothing/suit/space/void/wizard,
+/obj/item/clothing/head/helmet/space/void/wizard,
 /obj/structure/table/rack,
 /obj/machinery/light{
 	dir = 1
@@ -24777,7 +23216,6 @@
 /obj/structure/disposalpipe/up{
 	dir = 1
 	},
-/obj/random/junk,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/civ)
 "dUG" = (
@@ -25484,10 +23922,6 @@
 	},
 /obj/item/storage/box/sinpockets,
 /obj/item/storage/box/sinpockets,
-/obj/structure/extinguisher_cabinet{
-	pixel_x = -5;
-	pixel_y = 30
-	},
 /turf/simulated/floor/tiled/old_tile/white,
 /area/security/security_equiptment_storage)
 "egh" = (
@@ -26840,6 +25274,9 @@
 	},
 /obj/structure/table/rack,
 /obj/item/perfect_tele/one_beacon,
+/obj/item/key/heavyarmor_tank{
+	pixel_x = -12
+	},
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/heads/hos)
 "eEv" = (
@@ -27199,14 +25636,15 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/rnd/hallway/main)
 "eHG" = (
+/obj/item/pickaxe,
+/obj/item/pickaxe,
+/obj/item/cell/high,
 /obj/item/airlock_electronics,
 /obj/item/airlock_electronics,
 /obj/structure/table/reinforced,
 /obj/effect/floor_decal/milspec/color/orange/half{
 	dir = 8
 	},
-/obj/item/chainsaw,
-/obj/item/cell/high,
 /turf/simulated/floor/tiled/milspec,
 /area/engineering/storage)
 "eHL" = (
@@ -29031,6 +27469,9 @@
 /obj/item/hailer,
 /obj/item/hailer,
 /obj/item/hailer,
+/obj/item/hand_labeler{
+	pixel_x = 16
+	},
 /turf/simulated/floor/tiled/old_tile/white,
 /area/security/security_equiptment_storage)
 "fov" = (
@@ -37966,14 +36407,9 @@
 /turf/simulated/floor/tiled/milspec,
 /area/security/brig/drunk)
 "ieC" = (
-/obj/structure/table/rack/shelf/wood,
-/obj/item/clothing/suit/storage/toggle/hoodie/black,
-/obj/item/tool/crowbar/brace_jack,
-/obj/machinery/light/small,
-/obj/item/tool/crowbar/brace_jack,
-/obj/item/tool/crowbar/brace_jack,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
+/obj/random/outcrop,
+/turf/simulated/floor/outdoors/ice/turfpack/muriki,
+/area/mine/explored/muriki/mountaineast)
 "ieZ" = (
 /obj/structure/sign/directions/security{
 	dir = 8;
@@ -40718,6 +39154,11 @@
 /obj/item/gps/security,
 /obj/item/gps/security,
 /obj/item/gps/security,
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 7;
+	pixel_y = -32;
+	dir = 1
+	},
 /turf/simulated/floor/tiled/old_tile/white,
 /area/security/security_equiptment_storage)
 "iVv" = (
@@ -45090,81 +43531,31 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/obj/item/mail/envelope{
-	pixel_y = 16
-	},
-/obj/item/mail/envelope{
-	pixel_y = 16
-	},
-/obj/item/mail/envelope{
-	pixel_y = 16
-	},
-/obj/item/mail/envelope{
-	pixel_y = 16
-	},
-/obj/item/mail/envelope{
-	pixel_y = 16
-	},
-/obj/item/mail/envelope{
-	pixel_y = 16
-	},
-/obj/item/mail/envelope{
-	pixel_y = 16
-	},
-/obj/item/mail/envelope{
-	pixel_y = 16
-	},
-/obj/item/mail/envelope{
-	pixel_y = 16
-	},
-/obj/item/mail/envelope{
-	pixel_y = 16
-	},
-/obj/item/mail/envelope{
-	pixel_y = 16
-	},
-/obj/item/mail/envelope{
-	pixel_y = 16
-	},
-/obj/item/mail/envelope{
-	pixel_y = 16
-	},
-/obj/item/mail/envelope{
-	pixel_y = 16
-	},
-/obj/item/mail/envelope{
-	pixel_y = 16
-	},
-/obj/item/mail/envelope{
-	pixel_y = 16
-	},
-/obj/item/mail/envelope{
-	pixel_y = 16
-	},
-/obj/item/mail/envelope{
-	pixel_y = 16
-	},
-/obj/item/mail/envelope{
-	pixel_y = 16
-	},
-/obj/item/mail/envelope{
-	pixel_y = 16
-	},
-/obj/item/mail/envelope{
-	pixel_y = 16
-	},
-/obj/item/mail/envelope{
-	pixel_y = 16
-	},
-/obj/item/mail/envelope{
-	pixel_y = 16
-	},
-/obj/item/mail/envelope{
-	pixel_y = 16
-	},
-/obj/item/mail/envelope{
-	pixel_y = 16
-	},
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
 /turf/simulated/floor/tiled/techfloor,
 /area/security/secmail)
 "kit" = (
@@ -51039,7 +49430,6 @@
 	dir = 1;
 	icon_state = "pipe-c"
 	},
-/obj/random/junk,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/civ)
 "lZs" = (
@@ -53564,6 +51954,11 @@
 /obj/item/storage/pouch/ifak,
 /obj/item/storage/pouch/ifak,
 /obj/item/storage/pouch/ifak,
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -8;
+	pixel_y = -32;
+	dir = 1
+	},
 /turf/simulated/floor/tiled/old_tile/white,
 /area/security/security_aid_station)
 "mMH" = (
@@ -55502,28 +53897,28 @@
 	pixel_x = -30;
 	pixel_y = 9
 	},
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
 /obj/structure/table/steel,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
 /turf/simulated/floor/tiled/techfloor,
 /area/rnd/research/mailing)
 "ntb" = (
@@ -62171,34 +60566,34 @@
 "pEF" = (
 /obj/structure/closet/crate,
 /obj/effect/floor_decal/milspec/cargo,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
-/obj/item/mail/envelope,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
+/obj/item/mail/blank,
 /turf/simulated/floor/tiled/milspec,
 /area/quartermaster/warehouse)
 "pEH" = (
@@ -63465,8 +61860,8 @@
 "pYn" = (
 /obj/structure/table/steel,
 /obj/effect/floor_decal/milspec/color/red/half,
-/obj/item/key/heavyarmor_carrier,
 /obj/item/megaphone,
+/obj/item/key/heavyarmor_carrier,
 /turf/simulated/floor/tiled/milspec,
 /area/security/warden)
 "pYq" = (
@@ -66552,6 +64947,10 @@
 	dir = 4
 	},
 /obj/structure/closet/firecloset/full,
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -7;
+	pixel_y = 30
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/security/main)
 "qVm" = (
@@ -66602,7 +65001,6 @@
 	icon_state = "pipe-c"
 	},
 /obj/structure/catwalk,
-/obj/item/clothing/head/cone,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/civ)
 "qVF" = (
@@ -73282,7 +71680,7 @@
 /obj/item/clothing/suit/storage/teshari/beltcloak/jobs/hos,
 /obj/item/clothing/under/teshari/undercoat/jobs/sec,
 /obj/structure/extinguisher_cabinet{
-	pixel_x = 5;
+	pixel_x = 7;
 	pixel_y = -32;
 	dir = 1
 	},
@@ -83472,9 +81870,9 @@
 /turf/simulated/floor/wood,
 /area/lawoffice)
 "wfj" = (
-/obj/machinery/light/small,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
+/obj/structure/prop/rock/small/alt,
+/turf/simulated/floor/outdoors/ice/turfpack/muriki,
+/area/mine/explored/muriki/mountaineast)
 "wfr" = (
 /obj/machinery/microwave{
 	pixel_x = -2;
@@ -87243,6 +85641,7 @@
 /obj/item/digestion_remains/variant1{
 	pixel_x = -4
 	},
+/obj/item/gun/projectile/shotgun/doublebarrel/quad,
 /turf/simulated/floor/outdoors/mud/turfpack/muriki,
 /area/mine/unexplored/muriki/valleywest)
 "xop" = (
@@ -89752,6 +88151,7 @@
 /area/mine/unexplored/muriki/valleyeast)
 "yga" = (
 /obj/structure/table/rack/gun_rack/steel,
+/obj/item/gun/energy/soapenergy/gaussrifle,
 /obj/effect/floor_decal/corner/white{
 	dir = 9
 	},
@@ -132542,7 +130942,7 @@ iRD
 iJc
 chU
 gBj
-brS
+axo
 brS
 wHB
 iwB
@@ -132705,7 +131105,7 @@ lEp
 lEp
 rHg
 qSA
-brS
+axo
 iTh
 iwB
 mZb
@@ -146861,7 +145261,7 @@ apP
 apR
 apR
 apR
-azd
+apR
 ewo
 lvr
 rTU
@@ -147345,7 +145745,7 @@ apR
 apR
 apR
 apR
-azd
+apR
 tds
 gUn
 apH
@@ -147355,7 +145755,7 @@ geM
 apH
 apH
 apH
-axr
+apH
 asH
 asH
 apG
@@ -147672,7 +146072,7 @@ apH
 apH
 apH
 apH
-axr
+apH
 apH
 apH
 apH
@@ -147851,7 +146251,7 @@ asH
 apG
 apG
 apG
-ayj
+apG
 apG
 aiR
 aiR
@@ -147991,7 +146391,7 @@ apR
 apR
 apR
 apR
-azd
+apR
 apR
 mPz
 wia
@@ -148013,7 +146413,7 @@ pJD
 asH
 asH
 asH
-ayj
+apG
 apG
 apG
 apG
@@ -148149,7 +146549,7 @@ rZO
 rZO
 apR
 apR
-azd
+apR
 apR
 apR
 apR
@@ -148175,7 +146575,7 @@ apH
 apH
 apH
 asH
-ayD
+asH
 asH
 apG
 apG
@@ -148316,7 +146716,7 @@ rZO
 rZO
 rZO
 aqg
-azd
+apR
 apR
 apR
 apR
@@ -148331,17 +146731,17 @@ apH
 apH
 apX
 apH
-axr
+apH
 apH
 apH
 apH
 apO
 apH
-ayT
-ayD
-ayD
-ayj
-ayj
+apH
+asH
+asH
+apG
+apG
 apG
 apG
 apG
@@ -148491,18 +146891,18 @@ dcI
 mPz
 wia
 dcI
-aAu
 apH
 apH
 apH
 apH
 apH
 apH
-axr
-ayT
-ayJ
-ayE
-ayr
+apH
+apH
+apH
+apH
+asH
+apG
 apG
 apG
 apG
@@ -148648,7 +147048,7 @@ rZO
 rZO
 apR
 apR
-azd
+apR
 mPz
 wia
 dcI
@@ -148661,8 +147061,8 @@ apH
 apH
 apH
 apH
-ayT
-ayJ
+apH
+apH
 asH
 asH
 asH
@@ -148818,21 +147218,21 @@ dcI
 mPz
 dcI
 apH
-azN
 apH
 apH
 apH
 apH
-ayT
-ayJ
+apH
+apH
+apH
 apH
 apH
 asH
 asH
 asH
 asH
-asH
-asH
+qBl
+qBl
 qBl
 qBl
 qBl
@@ -148972,7 +147372,7 @@ rJa
 rZO
 rZO
 rZO
-aAM
+afc
 cxC
 apR
 apR
@@ -148991,7 +147391,7 @@ dcI
 apH
 apH
 apH
-axr
+apH
 apH
 apH
 apH
@@ -149137,20 +147537,20 @@ rZO
 rZO
 rZO
 rZO
-aAw
-aAw
+apR
+apR
 mPz
 wia
 wia
 wia
 dcI
-azd
+apR
 edp
 apR
 tbv
 dcI
 ewo
-ays
+apH
 apH
 apH
 apH
@@ -149291,35 +147691,35 @@ rZO
 rJa
 rJa
 rJa
-axt
-axt
-axt
-axt
-axt
-axt
-axt
+rJa
+rJa
+rJa
+rJa
+rJa
 rZO
 rZO
-aAw
+rZO
+rZO
+apR
 apR
 apR
 edp
-ayF
+apR
 mPz
 dcI
-azs
+apR
 tbv
 fZG
 ewo
 mPz
 wia
 dcI
-ayc
 apH
 apH
 apH
 apH
-axr
+apH
+apH
 apH
 iwu
 gEJ
@@ -149453,13 +147853,13 @@ rZO
 rJa
 rJa
 rJa
-axt
-aBe
-axB
-axB
-axN
-aAN
-axt
+rJa
+rJa
+rJa
+rJa
+rJa
+rZO
+rZO
 rZO
 rZO
 rZO
@@ -149471,13 +147871,13 @@ apR
 mPz
 wia
 fZG
-iRb
+apR
 mPz
 wia
 dcI
 mPz
 dcI
-axr
+apH
 apH
 apH
 apH
@@ -149615,15 +148015,15 @@ rZO
 rJa
 rJa
 rJa
-axt
-aBf
-axN
-axN
-axB
-aAR
-axt
 rJa
 rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
 rZO
 rZO
 rZO
@@ -149632,10 +148032,10 @@ rZO
 apR
 apR
 apR
+aBN
+iRb
 apR
-ayF
-ayF
-ayF
+apR
 mPz
 dcI
 ewo
@@ -149643,7 +148043,7 @@ apH
 apH
 apH
 apH
-axr
+apH
 tbv
 fZG
 gEJ
@@ -149777,34 +148177,34 @@ rZO
 rJa
 rJa
 rJa
-axt
-aBg
-axB
-axC
-axN
-aAT
-axt
 rJa
 rJa
 rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
 rZO
 rZO
 rZO
 rZO
 rZO
-azw
 apR
 apR
-ayF
-ayu
-ayu
-ayu
+apR
+apR
+apR
+apR
+apR
 ewo
 mPz
 wia
-axK
-axv
-axs
+wia
+wia
+wia
 wia
 fZG
 tbv
@@ -149939,13 +148339,13 @@ nOz
 kmJ
 rJa
 rJa
-axt
-axt
-axt
-axt
-aAX
-axt
-axt
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
 rJa
 rJa
 rJa
@@ -149955,18 +148355,18 @@ rJa
 rJa
 rZO
 rZO
-ayF
 apR
-ayF
-ayu
 apR
-ayu
+apR
+apR
+apR
+apR
 mPz
 wia
 wia
-axK
-axv
-axs
+wia
+wia
+wia
 wia
 wia
 fZG
@@ -150105,9 +148505,9 @@ rJa
 rJa
 rJa
 rJa
-aAx
-aAU
-axt
+rJa
+rJa
+rJa
 rJa
 rJa
 rJa
@@ -150119,19 +148519,19 @@ rZO
 rZO
 rZO
 apR
-ayF
-axT
-axo
-axT
-axT
-axT
-axT
-axo
-axo
-axo
-axo
-axo
-axo
+apR
+npT
+apR
+apR
+apR
+apR
+apR
+apR
+apR
+apR
+apR
+apR
+apR
 gEJ
 "}
 (371,1,1) = {"
@@ -150225,11 +148625,11 @@ rJa
 rJa
 rJa
 fhs
-aBl
-aBl
-aBl
-aBl
-aBl
+rJa
+rJa
+rJa
+rJa
+rJa
 rJa
 rJa
 rJa
@@ -150267,33 +148667,33 @@ rJa
 rJa
 rJa
 rJa
-aAx
-aAx
-axt
-axt
-axt
-axt
-axt
-axt
-axt
-axt
-axt
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rZO
 rZO
 rZO
 apR
 apR
-axo
-axo
-axo
-axo
-axo
-axo
-axo
-axo
-axo
-axo
-axo
-axo
+apR
+apR
+apR
+apR
+apR
+apR
+apR
+apR
+apR
+apR
+npT
+apR
 gEJ
 "}
 (372,1,1) = {"
@@ -150387,11 +148787,11 @@ rJa
 rJa
 fhs
 fhs
-aBl
-aBr
-aBs
-aBB
-aBl
+rJa
+rJa
+rJa
+rJa
+rJa
 rJa
 rJa
 rJa
@@ -150424,38 +148824,38 @@ mho
 mho
 mho
 eic
-aBm
+ddK
 blG
-fhs
-fhs
-aBc
-aAY
-aAx
-axt
-aAF
-axU
-axB
-aAv
-aAh
-aAe
-azO
-axt
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
 rJa
 rZO
-azd
-ayF
-axT
-axo
-axo
-axu
-axu
-axu
-axo
-axo
-axo
-axo
-axo
-axo
+apR
+apR
+apR
+apR
+aqF
+apR
+apR
+apR
+apR
+apR
+apR
+apR
+apR
+apR
 gEJ
 "}
 (373,1,1) = {"
@@ -150549,11 +148949,11 @@ fhs
 rJa
 fhs
 fhs
-aBq
-aBs
-aBs
-aBo
-aBl
+rJa
+rJa
+rJa
+rJa
+rJa
 rJa
 rJa
 fhs
@@ -150585,39 +148985,39 @@ pNM
 mho
 mho
 mho
-aBd
-aBd
-aBd
-aBh
-aBd
+wdu
+wdu
+wdu
+wdu
+wdu
 rJa
-aAZ
-aAx
-axt
-axt
-axA
-axt
-axt
-aAi
-axN
-azP
-axt
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
 rJa
 rZO
 rZO
 rZO
-ayk
-ayf
-ayg
-ayk
-axL
-axL
-axL
-axt
-axt
-axo
-axo
-axo
+apR
+apR
+apR
+uyX
+apR
+apR
+apR
+wql
+apR
+apR
+apR
+apR
 gEJ
 "}
 (374,1,1) = {"
@@ -150708,14 +149108,14 @@ fhs
 fhs
 fhs
 fhs
+axF
 fhs
 fhs
-aBb
-aBl
-aBs
-aBr
-aBp
-aBl
+rJa
+rJa
+rJa
+rJa
+rJa
 rJa
 rJa
 fhs
@@ -150751,35 +149151,35 @@ ddY
 uKL
 dJM
 lZo
-aBd
+wdu
 rJa
 rJa
-aAx
-aAI
-aAx
-aAx
-aAx
-axt
-aAj
-axB
-azQ
-axt
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
 rJa
 rZO
 rZO
 rZO
-ayK
-ayg
-ayg
-ayg
-axL
-axU
-axM
-axw
-axt
-axo
-axo
-axo
+apR
+aqF
+apR
+apR
+apR
+aqF
+apR
+wql
+wql
+apR
+apR
+apR
 gEJ
 "}
 (375,1,1) = {"
@@ -150870,14 +149270,14 @@ fhs
 fhs
 rJa
 rJa
-aBl
-aBl
-aBl
-aBl
-fhs
-aBs
-aBC
-aBl
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
 rJa
 rJa
 fhs
@@ -150910,38 +149310,38 @@ mho
 mho
 wdu
 lPc
-aBd
-aBd
+wdu
+wdu
 vFG
-aBd
+wdu
 rJa
 rJa
-aAx
-axt
-aAx
-aAD
-aAx
-axL
-aAk
-axU
-azR
-axt
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
 rJa
 rJa
 rJa
 rZO
-ayK
-ayg
-ayv
-ayg
-axL
-axV
-axB
-axx
-axt
-axq
-axq
-axo
+apR
+apR
+apR
+apR
+apR
+apR
+apR
+wql
+wql
+wql
+wql
+apR
 gEJ
 "}
 (376,1,1) = {"
@@ -151032,25 +149432,9 @@ fhs
 fhs
 rJa
 rJa
-aBl
-aBx
-aBs
-fhs
-aBD
-fhs
-aBv
-aBl
 rJa
 rJa
-fhs
-fhs
-fhs
 rJa
-rJa
-aAV
-fhs
-fhs
-fhs
 rJa
 rJa
 rJa
@@ -151061,8 +149445,24 @@ rJa
 fhs
 fhs
 fhs
+rJa
+rJa
 fhs
 fhs
+fhs
+fhs
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
 rJa
 rZO
 rZO
@@ -151070,40 +149470,40 @@ ixl
 qVy
 cEo
 uKL
-aBu
+uKL
 oKM
-aBd
-aBd
+wdu
+wdu
 vFG
-aBd
-aBd
+wdu
+wdu
 rJa
-aAx
-axt
-aAx
-aAx
-aAy
-axt
-aAl
-axN
-azS
-axt
-axt
-axt
-axt
-axt
-axt
-axt
-axt
-axA
-axt
-axy
-axA
-axy
-axt
-axq
-axq
-axo
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rZO
+apR
+apR
+npT
+apR
+apR
+aBN
+wql
+wql
+wql
+ieC
+wql
+apR
 gEJ
 "}
 (377,1,1) = {"
@@ -151194,14 +149594,14 @@ fhs
 hdI
 rJa
 rJa
-aBl
-aBx
-aBr
-aBs
-fhs
-aBs
-aBs
-aBl
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
 rJa
 rJa
 rJa
@@ -151215,57 +149615,57 @@ fhs
 egh
 rJa
 rJa
-fhs
-fhs
-fhs
-fhs
-fhs
-fhs
-aBz
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
 oKx
 fhs
 fhs
-fhs
 rJa
 rJa
-fhs
-fhs
+rJa
+rJa
 rZO
 rZO
-aBk
-aBk
-aBk
-aBd
+rZO
+rZO
+rZO
+rZO
+wdu
 hNX
 dUi
-aBd
+wdu
 rJa
-aAU
-axt
-axt
-axt
-axt
-axt
-axy
-axA
-axy
-azJ
-azx
-axy
-aze
-ayU
-ayL
-ayG
-axy
-aym
-axy
-axW
-axN
-axz
-axt
-axq
-axo
-axo
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rZO
+apR
+apR
+apR
+apR
+apR
+apR
+wql
+wql
+wql
+wql
+apR
+apR
 gEJ
 "}
 (378,1,1) = {"
@@ -151356,14 +149756,14 @@ fhs
 rJa
 rJa
 rJa
-aBl
-aBv
-aBs
-aBs
-aBr
-aBs
-aBy
-aBl
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
 rJa
 rJa
 rJa
@@ -151375,10 +149775,10 @@ rJa
 rJa
 fhs
 fhs
-aBb
-fhs
-fhs
-aBA
+rJa
+rJa
+rJa
+rJa
 rJa
 rJa
 aXA
@@ -151388,46 +149788,46 @@ hdI
 sku
 iwS
 fhs
-fhs
-fhs
-fhs
 rJa
 rJa
 rJa
 rJa
 rJa
 rJa
-aBd
-aBj
-aBd
-aBd
 rJa
-aAx
-ayH
-axt
-axU
-aAA
-axt
-aAm
-axB
-azT
-axy
-azy
-axy
-azg
-axB
-ayM
-axB
-axA
-ayn
-axA
-axX
-axB
+rJa
+rJa
+wdu
+wdu
+wdu
+wdu
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rZO
+rZO
+apR
+apR
+apR
+apR
+apR
+wql
 ieC
-axt
-axq
-axo
-axo
+wql
+wql
+apR
+apR
 gEJ
 "}
 (379,1,1) = {"
@@ -151494,38 +149894,17 @@ fhs
 fhs
 fhs
 fhs
-axF
-fhs
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
 fhs
 fhs
 rJa
 rJa
-aBl
-aBl
-aBl
-aBl
-aBl
-aBl
-aBl
-aBl
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
 rJa
 rJa
 rJa
@@ -151537,7 +149916,28 @@ rJa
 rJa
 fhs
 fhs
-aAV
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+fhs
+fhs
+fhs
 fhs
 rJa
 rJa
@@ -151551,7 +149951,6 @@ sAR
 xHO
 xHO
 xHO
-fhs
 rJa
 rJa
 rJa
@@ -151559,37 +149958,38 @@ rJa
 rJa
 rJa
 rJa
-aBk
-fhs
-fhs
-fhs
-aAV
-aAx
-aAJ
-axt
-axN
-aAB
-axt
-aAn
-aAe
-azW
-axy
-azz
-axy
-axy
-ayV
-axy
-axy
-axy
-ayo
-axy
-axY
-axA
-axy
-axt
-axq
-axo
-axo
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rZO
+rZO
+apR
+apR
+apR
+apR
+wql
+wql
+wql
+wql
+apR
+apR
 gEJ
 "}
 (380,1,1) = {"
@@ -151713,45 +150113,45 @@ aNB
 aBU
 jtw
 xHO
-fhs
-fhs
 rJa
 rJa
 rJa
 rJa
-fhs
-aBa
-fhs
-fhs
-fhs
-fhs
-fhs
-aAx
-aAx
-axA
-axU
-axB
-axA
-axX
-azm
-axB
-axA
-azA
-axA
-axB
-ayW
-ayN
-axA
-axB
-axU
-axA
-axB
-axN
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rZO
+rZO
+apR
+apR
+aqF
+wql
 wfj
-axt
-axq
-axo
-axo
+wql
+wql
+apR
+apR
 gEJ
 "}
 (381,1,1) = {"
@@ -151876,44 +150276,44 @@ aBU
 jXc
 rJa
 rJa
-fhs
-fhs
-fhs
-fhs
-fhs
-fhs
 rJa
 rJa
 rJa
 rJa
 rJa
-fhs
 rJa
 rJa
-axt
-axX
-axN
-axt
-aAp
-axB
-azX
-axy
-axA
-axy
-axA
-axy
-axy
-axy
-ayd
-axA
-axy
-axy
-axy
-axA
-axt
-axo
-axo
-axo
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rZO
+rZO
+aqF
+apR
+apR
+wql
+apR
+wql
+apR
+aBN
+apR
 gEJ
 "}
 (382,1,1) = {"
@@ -152040,42 +150440,42 @@ rJa
 rJa
 rJa
 rJa
-aBl
-aBl
-aBl
-aBq
-aBl
-aBl
 rJa
 rJa
 rJa
-fhs
 rJa
 rJa
-axt
-aAE
-aAC
-axt
-axy
-azJ
-axy
-axy
-axU
-axy
-axB
-ayX
-ayO
-axy
-ayw
-axU
-axy
-axZ
-axP
-axB
-axt
-axo
-axo
-axo
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+apR
+apR
+apR
+apR
+apR
+apR
+wql
+apR
+apR
+apR
 gEJ
 "}
 (383,1,1) = {"
@@ -152202,42 +150602,42 @@ rJa
 rJa
 rJa
 rJa
-aBl
-aBv
-aBs
-aBr
-aBn
-aBl
 rJa
 rJa
 rJa
-fhs
 rJa
 rJa
-axt
-axt
-axt
-axt
-aAq
-axB
-azZ
-azK
-azB
-axy
-azi
-ayY
-ayP
-axy
-ayx
-axB
-ayd
-aya
-axQ
-axC
-axt
-axo
-axo
-axo
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+apR
+apR
+apR
+apR
+apR
+aBN
+apR
+apR
+apR
+apR
 gEJ
 "}
 (384,1,1) = {"
@@ -152364,42 +150764,42 @@ xHO
 fpc
 rJa
 rJa
-aBl
-aBx
-aBr
-aBs
-aBo
-aBl
 rJa
 rJa
 rJa
-aBa
-fhs
-fhs
-aAG
-axB
-axA
-ayd
-aAs
-aAe
-aAa
-azL
-azC
-azu
-azj
-axB
-ayQ
-ayd
-ayy
-ayp
-axy
-axB
-axR
-axD
-axt
-axo
-axo
-axo
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+apR
+apR
+apR
+npT
+apR
+apR
+apR
+apR
+apR
+apR
 gEJ
 "}
 (385,1,1) = {"
@@ -152526,42 +150926,42 @@ xHO
 jqx
 rJa
 rJa
-aBl
-aBy
-aBs
-aBs
-aBp
-aBl
 rJa
 rJa
 rJa
-fhs
-fhs
-aAL
-ayH
-axt
-axt
-axt
-aAt
-axB
-ayN
-ayN
-axB
-axy
-azl
-axU
-ayR
-axy
-ayz
-ayq
-axy
-ayb
-axB
-axE
-axt
-axo
-axo
-axo
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+apR
+apR
+apR
+aqF
+apR
+apR
+apR
+apR
+apR
+apR
 gEJ
 "}
 (386,1,1) = {"
@@ -152688,42 +151088,42 @@ xHO
 jqx
 rJa
 rJa
-aBl
-aBl
-aBl
-aBl
-aBl
-aBl
 rJa
 rJa
 rJa
-aBb
-aAV
 rJa
 rJa
-ayH
-ayH
-axt
-axt
-axt
-axt
-axy
-axA
-axy
-axy
-axA
-axt
-axt
-axt
-axA
-axt
-axL
-axL
-axt
-axt
-axo
-axo
-axo
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+apR
+apR
+apR
+apR
+apR
+apR
+uyX
+apR
+apR
+apR
 gEJ
 "}
 (387,1,1) = {"
@@ -152868,24 +151268,24 @@ rJa
 rJa
 rJa
 rJa
-axt
-azM
-axB
-azv
-azm
-axB
-axt
-ayH
-ayA
-ayg
-aye
-axu
-axu
-axu
-axu
-axo
-axo
-axo
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+apR
+apR
+apR
+apR
+apR
+npT
+apR
+apR
+apR
+apR
 gEJ
 "}
 (388,1,1) = {"
@@ -153030,24 +151430,24 @@ wFh
 rJa
 rJa
 rJa
-axt
-axy
-axy
-axy
-azn
-axA
-axt
-axt
-ayB
-ayg
-ayf
-axu
-axo
-axo
-axo
-axo
-axo
-axo
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+apR
+apR
+apR
+apR
+apR
+apR
+apR
+apR
+apR
+apR
 gEJ
 "}
 (389,1,1) = {"
@@ -153192,24 +151592,24 @@ wFh
 wFh
 rJa
 rJa
-axt
-axB
-azD
-axA
-azo
-axU
-ayS
-axA
-ayg
-ayg
-ayg
-axo
-axo
-axG
-axo
-axo
-axo
-axo
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+apR
+apR
+apR
+apR
+apR
+apR
+aqF
+apR
 gEJ
 "}
 (390,1,1) = {"
@@ -153352,26 +151752,26 @@ wFh
 wFh
 wFh
 wFh
-axt
-axt
-axt
-axA
-axy
-axy
-axy
-axA
-axt
-axt
 rJa
 rJa
-ayi
-axo
-axo
-axo
-axo
-axo
-axo
-axo
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+apR
+apR
+apR
+aqF
+apR
+apR
+apR
+apR
 gEJ
 "}
 (391,1,1) = {"
@@ -153514,26 +151914,26 @@ wFh
 wFh
 wFh
 wFh
-axA
-axB
-aAc
-axB
-azF
-axy
-azp
-ayZ
-ayC
 rJa
 rJa
 rJa
 rJa
-axo
-axH
-axH
-axo
-axo
-axo
-axo
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+apR
+apR
+apR
+apR
+apR
+apR
+apR
 gEJ
 "}
 (392,1,1) = {"
@@ -153676,26 +152076,26 @@ rJa
 rJa
 rJa
 rJa
-axt
-aAf
-azv
-axN
-azH
-ayd
-azq
-aza
-ayC
-ayC
-ayC
 rJa
 rJa
-axo
-axo
-axo
-axo
-axo
-axo
-axo
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+apR
+apR
+apR
+apR
+apR
+apR
+apR
 gEJ
 "}
 (393,1,1) = {"
@@ -153838,26 +152238,26 @@ rJa
 rJa
 rJa
 rJa
-axt
-aAg
-aAd
-axU
-azI
-axy
-azr
-azb
-ayI
-ayI
-ayC
 rJa
 rJa
-axo
-axo
-axI
-axo
-axo
-axo
-axo
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+apR
+apR
+apR
+apR
+aqF
+apR
+apR
 gEJ
 "}
 (394,1,1) = {"
@@ -154000,26 +152400,26 @@ rJa
 rJa
 rJa
 rJa
-axt
-axt
-axt
-axt
-axt
-axt
-axt
-ayC
-ayC
-ayC
-ayC
 rJa
 rJa
-axo
-axo
-axo
-axq
-axq
-axq
-axo
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+rJa
+apR
+apR
+apR
+wql
+wql
+wql
+apR
 gEJ
 "}
 (395,1,1) = {"
@@ -154175,13 +152575,13 @@ rJa
 rJa
 rJa
 rJa
-axo
-axo
-axq
-axq
-axq
-axq
-axo
+apR
+apR
+wql
+wql
+wql
+wql
+apR
 gEJ
 "}
 (396,1,1) = {"
@@ -154337,13 +152737,13 @@ rJa
 rJa
 rJa
 rJa
-axo
-axo
-axo
-axo
-axo
-axo
-axp
+apR
+apR
+npT
+apR
+apR
+apR
+apR
 gEJ
 "}
 (397,1,1) = {"
@@ -154499,13 +152899,13 @@ rJa
 rJa
 rJa
 rJa
-axp
-axo
-axo
-axo
-axo
-axo
-axo
+apR
+apR
+apR
+apR
+apR
+apR
+apR
 gEJ
 "}
 (398,1,1) = {"
@@ -154661,13 +153061,13 @@ rJa
 rJa
 rJa
 rJa
-axo
-axo
-axo
-axo
-axo
-axo
-axo
+apR
+apR
+aqF
+apR
+apR
+apR
+apR
 gEJ
 "}
 (399,1,1) = {"
@@ -154823,13 +153223,13 @@ rJa
 rJa
 rJa
 rJa
-axo
-axo
-axo
-axp
-axo
-axo
-axo
+apR
+apR
+apR
+apR
+apR
+apR
+apR
 gEJ
 "}
 (400,1,1) = {"

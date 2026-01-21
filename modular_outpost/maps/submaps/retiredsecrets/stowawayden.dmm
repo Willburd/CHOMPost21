@@ -1,0 +1,5373 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"ae" = (
+/obj/structure/closet/grave/dirthole,
+/turf/simulated/floor/outdoors/snow/turfpack/muriki,
+/area/space)
+"aq" = (
+/obj/item/trash/rkibble{
+	desc = "A bowl of healthy food for any pet to grow big and strong! It looks untouched. ";
+	name = "bowl of kibble"
+	},
+/obj/item/trash/rkibble{
+	desc = "A bowl of healthy food for any pet to grow big and strong! It looks untouched. ";
+	name = "bowl of kibble"
+	},
+/turf/simulated/floor/wood/broken/turfpack/muriki{
+	outdoors = 0
+	},
+/area/space)
+"ax" = (
+/obj/structure/barricade/cutout/fluke,
+/turf/simulated/floor/outdoors/snow/turfpack/muriki,
+/area/space)
+"aK" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/perfect_tele/one_beacon,
+/obj/item/perfect_tele/one_beacon,
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"aP" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/item/storage/bag/ore/holding,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"aR" = (
+/obj/structure/simple_door/wood,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"aX" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/storage/firstaid/fire{
+	pixel_x = 4;
+	pixel_y = 4
+	},
+/obj/item/storage/firstaid/fire{
+	pixel_x = 4;
+	pixel_y = 4
+	},
+/obj/item/storage/firstaid/fire{
+	pixel_x = 4;
+	pixel_y = 4
+	},
+/obj/item/storage/firstaid/fire{
+	pixel_x = 4;
+	pixel_y = 4
+	},
+/obj/item/storage/firstaid/fire{
+	pixel_x = 4;
+	pixel_y = 4
+	},
+/obj/item/storage/firstaid/toxin,
+/obj/item/storage/firstaid/o2{
+	pixel_x = -4;
+	pixel_y = -4
+	},
+/obj/item/storage/firstaid/o2{
+	pixel_x = -4;
+	pixel_y = -4
+	},
+/obj/item/storage/firstaid/o2{
+	pixel_x = -4;
+	pixel_y = -4
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"bd" = (
+/obj/structure/lattice,
+/obj/item/stack/material/wood/oak,
+/obj/item/stack/material/wood/oak{
+	pixel_x = -10
+	},
+/obj/item/stack/material/wood/oak{
+	pixel_x = 10
+	},
+/turf/simulated/open/muriki,
+/area/space)
+"bk" = (
+/obj/structure/bed/padded,
+/obj/item/bedsheet/cosmos,
+/obj/effect/landmark/redspaceexit,
+/turf/simulated/floor/wood,
+/area/space)
+"bu" = (
+/obj/item/trash/cigbutt,
+/obj/effect/floor_decal/spline/plain{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable/yellow{
+	icon_state = "6-9"
+	},
+/turf/simulated/floor/carpet/turcarpet,
+/area/space)
+"bE" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/material/butterfly,
+/obj/item/material/butterfly,
+/obj/item/material/knife/tacknife,
+/obj/item/material/butterfly,
+/turf/simulated/floor/wood/broken/turfpack/muriki,
+/area/space)
+"bM" = (
+/obj/effect/floor_decal/spline/plain{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable/yellow{
+	icon_state = "4-9"
+	},
+/turf/simulated/floor/carpet/turcarpet,
+/area/space)
+"cg" = (
+/obj/item/sticky_pad,
+/obj/item/sticky_pad,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"cC" = (
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 1
+	},
+/turf/simulated/floor/wood/turfpack/muriki{
+	outdoors = 1
+	},
+/area/space)
+"cO" = (
+/obj/structure/bed,
+/obj/item/bedsheet/craftable,
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/item/toy/plushie/pillow/green,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"cZ" = (
+/obj/random/trash,
+/turf/simulated/floor/wood/turfpack/muriki{
+	outdoors = 0
+	},
+/area/space)
+"df" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/storage/belt/utility{
+	pixel_y = -4
+	},
+/obj/item/storage/belt/utility/full/multitool,
+/obj/item/tape_roll{
+	pixel_x = 10;
+	pixel_y = 10
+	},
+/obj/item/tape_roll{
+	pixel_x = 10;
+	pixel_y = 10
+	},
+/obj/item/tape_roll{
+	pixel_x = 10;
+	pixel_y = 10
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"di" = (
+/obj/structure/window/reinforced/full,
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor,
+/area/space)
+"dp" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/gun/projectile/automatic/serdy/hectate,
+/obj/item/ammo_magazine/hectate{
+	pixel_x = 5
+	},
+/obj/item/ammo_magazine/hectate{
+	pixel_x = 5
+	},
+/obj/item/ammo_magazine/hectate{
+	pixel_x = 5
+	},
+/obj/item/ammo_magazine/hectate{
+	pixel_x = 5
+	},
+/obj/item/ammo_magazine/hectate/ap{
+	pixel_x = -5
+	},
+/obj/item/ammo_magazine/hectate/ap{
+	pixel_x = -5
+	},
+/obj/item/ammo_magazine/hectate/ap{
+	pixel_x = -5
+	},
+/obj/item/ammo_magazine/hectate/ap{
+	pixel_x = -5
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"dq" = (
+/obj/item/trash/cigbutt/cigarbutt,
+/turf/simulated/floor/wood,
+/area/space)
+"eg" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/healthanalyzer,
+/obj/item/healthanalyzer,
+/obj/item/healthanalyzer,
+/obj/item/healthanalyzer,
+/obj/item/storage/pouch/ifak{
+	pixel_x = -8
+	},
+/obj/item/storage/pouch/ifak{
+	pixel_x = -8
+	},
+/obj/item/storage/pouch/ifak{
+	pixel_x = -8
+	},
+/obj/item/healthanalyzer/advanced,
+/obj/item/storage/pouch/ifak{
+	pixel_x = -8
+	},
+/obj/item/storage/pouch/ifak{
+	pixel_x = -8
+	},
+/obj/item/storage/pouch/ifak{
+	pixel_x = -8
+	},
+/obj/item/storage/pouch/ifak{
+	pixel_x = -8
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"ei" = (
+/obj/structure/barricade/sandbag,
+/obj/structure/dancepole{
+	name = "roof support"
+	},
+/turf/simulated/floor/outdoors/snow/turfpack/muriki{
+	outdoors = 0
+	},
+/area/space)
+"ek" = (
+/obj/structure/bed,
+/obj/item/bedsheet/brown,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"er" = (
+/turf/simulated/mineral/alt/turfpack/muriki,
+/area/space)
+"eC" = (
+/obj/item/storage/pill_bottle/tramadol,
+/obj/structure/table/rack/shelf/wood,
+/obj/item/stack/nanopaste{
+	pixel_x = 10
+	},
+/obj/item/storage/pill_bottle/dylovene{
+	pixel_x = -6
+	},
+/obj/item/storage/pill_bottle/tramadol,
+/obj/item/stack/nanopaste{
+	pixel_x = 10
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"eP" = (
+/obj/structure/bookcase,
+/obj/item/storage/bible,
+/turf/simulated/floor/wood,
+/area/space)
+"eW" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/cell{
+	pixel_x = -7
+	},
+/obj/item/cell/super{
+	pixel_x = 8
+	},
+/obj/item/cell/giga,
+/obj/item/cell/high{
+	pixel_x = -5
+	},
+/obj/item/cell/hyper{
+	pixel_x = 9
+	},
+/obj/item/cell/super{
+	pixel_x = 8
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"eX" = (
+/turf/simulated/floor/water/acidic/indoor/turfpack/muriki,
+/area/space)
+"fg" = (
+/turf/simulated/floor/outdoors/ice/turfpack/muriki,
+/area/space)
+"fi" = (
+/obj/structure/window/reinforced/full,
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced,
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor,
+/area/space)
+"fm" = (
+/obj/effect/floor_decal/spline/plain{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
+	},
+/turf/simulated/floor/carpet/turcarpet,
+/area/space)
+"fw" = (
+/obj/random/trash,
+/obj/item/pizzavoucher,
+/obj/structure/table/rack/shelf/wood,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"fV" = (
+/turf/simulated/wall/r_wall{
+	can_open = 1
+	},
+/area/space)
+"fW" = (
+/obj/random/flashlight,
+/obj/random/flashlight,
+/obj/random/flashlight,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"gr" = (
+/obj/effect/floor_decal/spline/plain{
+	dir = 8
+	},
+/obj/machinery/computer/security{
+	dir = 1;
+	pixel_y = -4
+	},
+/turf/simulated/floor/carpet/turcarpet,
+/area/space)
+"gx" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/storage/firstaid/surgery,
+/obj/item/roller{
+	pixel_x = -8;
+	pixel_y = -7
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"gC" = (
+/obj/item/defib_kit,
+/obj/structure/table/rack/shelf/wood,
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/item/defib_kit,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"gG" = (
+/turf/simulated/wall/r_wall,
+/area/space)
+"gN" = (
+/obj/machinery/medical_kiosk,
+/obj/structure/extinguisher_cabinet{
+	dir = 8;
+	pixel_x = 30
+	},
+/turf/simulated/floor/wood,
+/area/space)
+"gS" = (
+/obj/machinery/portable_atmospherics/canister/phoron,
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/space)
+"gZ" = (
+/obj/effect/floor_decal/spline/plain{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/carpet/turcarpet,
+/area/space)
+"hd" = (
+/obj/structure/railing,
+/obj/effect/floor_decal/snow/floor/edges,
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 1
+	},
+/turf/simulated/floor/wood/turfpack/muriki{
+	outdoors = 1
+	},
+/area/space)
+"he" = (
+/obj/item/trash/cigbutt,
+/obj/effect/floor_decal/spline/plain{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/carpet/turcarpet,
+/area/space)
+"hf" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/assembly/signaler,
+/obj/item/assembly/prox_sensor,
+/obj/item/assembly/signaler,
+/obj/item/assembly/timer,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"hw" = (
+/turf/simulated/floor/wood,
+/area/space)
+"hC" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/clothing/gloves/arm_guard/combat,
+/obj/item/clothing/gloves/arm_guard/combat,
+/obj/item/clothing/gloves/arm_guard/combat,
+/obj/item/clothing/gloves/arm_guard/combat,
+/obj/item/clothing/gloves/arm_guard/combat,
+/obj/item/clothing/gloves/arm_guard/combat,
+/obj/item/clothing/shoes/leg_guard/combat,
+/obj/item/clothing/shoes/leg_guard/combat,
+/obj/item/clothing/shoes/leg_guard/combat,
+/obj/item/clothing/shoes/leg_guard/combat,
+/obj/item/clothing/shoes/leg_guard/combat,
+/obj/item/clothing/shoes/leg_guard/combat,
+/obj/item/clothing/suit/armor/combat,
+/obj/item/clothing/suit/armor/combat,
+/obj/item/clothing/suit/armor/combat,
+/obj/item/clothing/suit/armor/combat,
+/obj/item/clothing/suit/armor/combat,
+/obj/item/clothing/suit/armor/combat,
+/obj/item/clothing/head/helmet/combat,
+/obj/item/clothing/head/helmet/combat,
+/obj/item/clothing/head/helmet/combat,
+/obj/item/clothing/head/helmet/combat,
+/obj/item/clothing/head/helmet/combat,
+/obj/item/clothing/head/helmet/combat,
+/obj/machinery/light/small,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"hK" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/material/barbedwire,
+/obj/item/material/barbedwire,
+/obj/item/material/barbedwire,
+/obj/item/material/barbedwire,
+/obj/item/material/barbedwire,
+/obj/item/material/barbedwire,
+/obj/item/material/barbedwire,
+/obj/item/material/barbedwire,
+/obj/item/material/barbedwire,
+/obj/item/material/barbedwire,
+/obj/item/material/barbedwire,
+/obj/item/material/barbedwire,
+/obj/item/material/barbedwire,
+/obj/item/material/barbedwire,
+/obj/item/material/barbedwire,
+/obj/item/material/barbedwire,
+/obj/item/material/barbedwire,
+/obj/item/material/barbedwire,
+/obj/item/material/barbedwire,
+/obj/item/material/barbedwire,
+/obj/item/material/barbedwire,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"ik" = (
+/obj/structure/table/woodentable,
+/obj/random/maintenance/medical,
+/obj/random/maintenance/medical,
+/obj/random/maintenance/morestuff,
+/obj/random/maintenance/morestuff,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"il" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/wood/broken/turfpack/muriki,
+/area/space)
+"iv" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/obj/structure/table/woodentable,
+/obj/item/toy/plushie/jil,
+/obj/structure/extinguisher_cabinet{
+	pixel_y = -30;
+	dir = 1
+	},
+/obj/item/clothing/glasses/omnihud/eng,
+/obj/item/clothing/glasses/omnihud/med,
+/turf/simulated/floor/wood,
+/area/space)
+"ju" = (
+/obj/structure/railing,
+/obj/effect/floor_decal/snow/floor/surround{
+	dir = 4
+	},
+/turf/simulated/floor/wood/broken/turfpack/muriki{
+	outdoors = 1
+	},
+/area/space)
+"jy" = (
+/obj/machinery/light/small,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"jG" = (
+/obj/structure/bonfire/permanent,
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/space)
+"jQ" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/space)
+"kc" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/structure/railing{
+	dir = 8
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"kr" = (
+/obj/structure/bed,
+/obj/item/bedsheet/craftable,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"kx" = (
+/obj/structure/closet/tent/B,
+/turf/simulated/floor/outdoors/snow/turfpack/muriki,
+/area/space)
+"ky" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/firealarm{
+	pixel_y = 26
+	},
+/obj/structure/cable/yellow{
+	icon_state = "6-8"
+	},
+/turf/simulated/floor/wood,
+/area/space)
+"kA" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
+/obj/item/sticky_pad,
+/obj/item/sticky_pad,
+/obj/item/sticky_pad,
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"kB" = (
+/obj/item/clothing/suit/caution,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"kJ" = (
+/obj/structure/railing,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"kM" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/soap/syndie,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"kW" = (
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 8
+	},
+/turf/simulated/floor/wood/turfpack/muriki{
+	outdoors = 0
+	},
+/area/space)
+"la" = (
+/obj/item/trash/rkibble{
+	desc = "A bowl of healthy food for any pet to grow big and strong! It looks untouched. ";
+	name = "bowl of kibble"
+	},
+/turf/simulated/floor/wood/broken/turfpack/muriki,
+/area/space)
+"ln" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/spacecash/c500,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"lz" = (
+/obj/structure/cliff/corner{
+	dir = 5
+	},
+/turf/simulated/floor/outdoors/rocks/turfpack/muriki,
+/area/space)
+"lB" = (
+/obj/effect/map_effect/interval/effect_emitter/smoke/mist/passive,
+/obj/structure/prop/rock/small/wateralt,
+/turf/simulated/deathdrop/waterfall/turfpack/muriki,
+/area/space)
+"lI" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/pda,
+/obj/item/clothing/suit/storage/toggle/labcoat/neo_redemt,
+/obj/item/pda,
+/obj/item/pda,
+/obj/item/pda,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"mj" = (
+/turf/simulated/floor/water/acidic/deep/indoor/turfpack/muriki,
+/area/space)
+"ml" = (
+/turf/simulated/mineral/alt/ignore_cavegen/turfpack/muriki,
+/area/space)
+"mm" = (
+/obj/item/multitool,
+/obj/item/radio,
+/obj/structure/table/steel_reinforced,
+/obj/machinery/alarm{
+	dir = 8;
+	pixel_x = 26
+	},
+/turf/simulated/floor/wood,
+/area/space)
+"mq" = (
+/obj/structure/disposalpipe/trunk{
+	dir = 8
+	},
+/obj/machinery/disposal/mail_reciever{
+	name = "disposal mail destination(Listening Outpost)"
+	},
+/turf/simulated/floor/wood,
+/area/space)
+"mH" = (
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 4
+	},
+/turf/simulated/floor/wood/broken/turfpack/muriki{
+	outdoors = 1
+	},
+/area/space)
+"mZ" = (
+/obj/item/stack/material/wood/oak,
+/obj/item/trash/rkibble{
+	desc = "A bowl of healthy food for any pet to grow big and strong! It looks untouched. ";
+	name = "bowl of kibble"
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"ng" = (
+/turf/simulated/floor/outdoors/rocks/turfpack/muriki,
+/area/space)
+"nr" = (
+/obj/machinery/power/grounding_rod/pre_mapped,
+/turf/simulated/floor/outdoors/snow/turfpack/muriki,
+/area/space)
+"nA" = (
+/obj/structure/toilet{
+	icon_state = "toilet10"
+	},
+/obj/structure/handrail,
+/obj/structure/micro_tunnel{
+	dir = 1;
+	pixel_y = 32
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/space)
+"nC" = (
+/obj/item/pen/crayon/marker/rainbow,
+/turf/simulated/floor/wood/broken/turfpack/muriki,
+/area/space)
+"nG" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/random/trash,
+/turf/simulated/floor/wood,
+/area/space)
+"nL" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/clothing/shoes/galoshes,
+/obj/item/sticky_pad{
+	pixel_y = 8;
+	pixel_x = -7
+	},
+/obj/item/sticky_pad{
+	pixel_y = 8
+	},
+/obj/item/sticky_pad{
+	pixel_y = 8;
+	pixel_x = 7
+	},
+/obj/item/sticky_pad{
+	pixel_y = 8;
+	pixel_x = -7
+	},
+/obj/item/sticky_pad{
+	pixel_y = 8;
+	pixel_x = -7
+	},
+/obj/item/sticky_pad{
+	pixel_y = 8
+	},
+/obj/item/sticky_pad{
+	pixel_y = 8
+	},
+/obj/item/sticky_pad{
+	pixel_y = 8;
+	pixel_x = 7
+	},
+/obj/item/sticky_pad{
+	pixel_y = 8;
+	pixel_x = 7
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"nQ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/obj/machinery/light_switch{
+	dir = 1;
+	pixel_x = -23;
+	pixel_y = -24
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals3{
+	dir = 9
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals3{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/space)
+"nW" = (
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 8
+	},
+/turf/simulated/floor/wood/turfpack/muriki{
+	outdoors = 1
+	},
+/area/space)
+"ob" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/stack/sandbags{
+	amount = 30
+	},
+/obj/machinery/light/small/flicker{
+	dir = 1
+	},
+/turf/simulated/floor/outdoors/snow/turfpack/muriki{
+	outdoors = 0
+	},
+/area/space)
+"op" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/gun/projectile/automatic/z8,
+/obj/item/ammo_magazine/m762/ap,
+/obj/item/ammo_magazine/m762/ap,
+/obj/item/ammo_magazine/m762/ap,
+/obj/item/ammo_magazine/m762/ap,
+/obj/item/ammo_magazine/m762/ap,
+/obj/item/ammo_magazine/m762/ap,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"oN" = (
+/obj/effect/landmark/loot_spawn,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"oQ" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/vac_attachment,
+/obj/item/vac_attachment,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"oV" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/radio/intercom/syndicate{
+	desc = "Talk through this.";
+	layer = 2;
+	name = "station intercom (General)";
+	pixel_y = -9
+	},
+/turf/simulated/floor/wood,
+/area/space)
+"oZ" = (
+/obj/structure/barricade/sandbag,
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/space)
+"ph" = (
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 10
+	},
+/turf/simulated/floor/wood/turfpack/muriki{
+	outdoors = 1
+	},
+/area/space)
+"po" = (
+/obj/structure/window/reinforced/full,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"pG" = (
+/turf/space,
+/area/space)
+"pM" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/pickaxe,
+/obj/item/tank/jetpack/carbondioxide,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"qc" = (
+/obj/structure/table/steel_reinforced,
+/obj/random/mre,
+/obj/random/mre,
+/obj/random/mre,
+/obj/random/mre,
+/obj/random/mre,
+/obj/random/mre,
+/obj/random/mre,
+/obj/random/mre,
+/obj/random/mre,
+/obj/random/mre,
+/obj/random/mre,
+/obj/random/mre,
+/obj/random/mre,
+/obj/random/mre,
+/obj/random/mre,
+/obj/random/mre,
+/obj/random/mre,
+/obj/random/mre,
+/obj/random/mre,
+/obj/random/mre,
+/obj/random/mre,
+/obj/random/mre,
+/obj/random/mre,
+/obj/random/mre,
+/obj/random/mre,
+/obj/random/mre,
+/obj/random/mre,
+/obj/random/mre,
+/turf/simulated/floor/wood,
+/area/space)
+"qi" = (
+/obj/item/trash/rkibble{
+	desc = "A bowl of healthy food for any pet to grow big and strong! It looks untouched. ";
+	name = "bowl of kibble"
+	},
+/obj/item/trash/rkibble{
+	desc = "A bowl of healthy food for any pet to grow big and strong! It looks untouched. ";
+	name = "bowl of kibble"
+	},
+/obj/item/trash/rkibble{
+	desc = "A bowl of healthy food for any pet to grow big and strong! It looks untouched. ";
+	name = "bowl of kibble"
+	},
+/obj/item/trash/rkibble{
+	desc = "A bowl of healthy food for any pet to grow big and strong! It looks untouched. ";
+	name = "bowl of kibble"
+	},
+/obj/item/trash/rkibble{
+	desc = "A bowl of healthy food for any pet to grow big and strong! It looks untouched. ";
+	name = "bowl of kibble"
+	},
+/obj/item/trash/rkibble{
+	desc = "A bowl of healthy food for any pet to grow big and strong! It looks untouched. ";
+	name = "bowl of kibble"
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"qq" = (
+/obj/random/trash,
+/obj/random/junk,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"qr" = (
+/obj/effect/map_effect/interval/effect_emitter/smoke/mist/passive,
+/turf/simulated/floor/water/acidic/deep/indoor/turfpack/muriki,
+/area/space)
+"qs" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/random/trash,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"qv" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/simple_door/wood,
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/tiled/kafel_full,
+/area/space)
+"qE" = (
+/obj/structure/simple_door/wood,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/glass,
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/wood,
+/area/space)
+"qG" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/space)
+"qW" = (
+/turf/simulated/deathdrop/waterfall/turfpack/muriki,
+/area/space)
+"qX" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/multitool,
+/obj/item/multitool,
+/obj/item/multitool,
+/obj/item/multitool,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"rl" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/storage/belt/utility/full,
+/obj/item/material/twohanded/spear,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"rq" = (
+/obj/random/flashlight,
+/turf/simulated/floor/wood/broken/turfpack/muriki,
+/area/space)
+"rr" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/obj/structure/sink{
+	dir = 1
+	},
+/obj/structure/mirror{
+	pixel_y = -30
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/space)
+"rv" = (
+/obj/item/trash/rkibble{
+	desc = "A bowl of healthy food for any pet to grow big and strong! It looks untouched. ";
+	name = "bowl of kibble"
+	},
+/obj/item/trash/rkibble{
+	desc = "A bowl of healthy food for any pet to grow big and strong! It looks untouched. ";
+	name = "bowl of kibble"
+	},
+/obj/item/trash/rkibble{
+	desc = "A bowl of healthy food for any pet to grow big and strong! It looks untouched. ";
+	name = "bowl of kibble"
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"rA" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/random/thermalponcho,
+/obj/random/thermalponcho,
+/obj/random/thermalponcho,
+/obj/random/thermalponcho,
+/obj/random/thermalponcho,
+/obj/random/thermalponcho,
+/obj/random/thermalponcho,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"rQ" = (
+/obj/structure/railing,
+/obj/effect/floor_decal/snow/floor/edges,
+/turf/simulated/floor/wood/turfpack/muriki{
+	outdoors = 1
+	},
+/area/space)
+"rU" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"rW" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/clothing/glasses/meson{
+	pixel_y = 6
+	},
+/obj/item/clothing/glasses/graviton,
+/obj/item/clothing/glasses/graviton,
+/obj/item/clothing/glasses/thermal{
+	pixel_y = -8
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"sa" = (
+/obj/structure/barricade/sandbag,
+/turf/simulated/floor/outdoors/snow/turfpack/muriki,
+/area/space)
+"sJ" = (
+/obj/item/gun/projectile/shotgun/doublebarrel/quad,
+/obj/structure/table/rack/shelf/wood,
+/obj/item/ammo_magazine/ammo_box/b12g/pellet,
+/obj/item/ammo_magazine/ammo_box/b12g/pellet,
+/obj/item/ammo_magazine/ammo_box/b12g/pellet,
+/obj/item/ammo_magazine/ammo_box/b12g/pellet,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"sM" = (
+/turf/simulated/floor/wood/turfpack/muriki{
+	outdoors = 0
+	},
+/area/space)
+"ta" = (
+/obj/structure/barricade,
+/obj/item/stack/material/wood/oak,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"tB" = (
+/obj/machinery/vending/foodfast,
+/turf/simulated/floor/wood,
+/area/space)
+"tD" = (
+/obj/structure/barricade/sandbag,
+/obj/item/material/barbedwire/start_active,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"tL" = (
+/obj/item/stack/sandbags{
+	amount = 30
+	},
+/obj/structure/table/rack/shelf/wood,
+/turf/simulated/floor/outdoors/snow/turfpack/muriki{
+	outdoors = 0
+	},
+/area/space)
+"uf" = (
+/obj/machinery/space_heater,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"uh" = (
+/obj/structure/cliff_end{
+	dir = 1
+	},
+/turf/simulated/floor/outdoors/rocks/turfpack/muriki,
+/area/space)
+"uC" = (
+/obj/structure/lattice,
+/obj/effect/floor_decal/snow/floor/pointy,
+/obj/effect/floor_decal/snow/floor/pointy{
+	dir = 1
+	},
+/obj/effect/floor_decal/snow/floor/pointy{
+	dir = 4
+	},
+/turf/simulated/open/muriki,
+/area/space)
+"uF" = (
+/obj/vehicle/has_interior/controller/heavyarmor_tank{
+	haskey = 0;
+	interior_area = /area/vehicle_interior/heavyarmor_tank_A
+	},
+/turf/simulated/floor/outdoors/snow/turfpack/muriki,
+/area/space)
+"uL" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/holosign_creator/combifan,
+/obj/item/holosign_creator/combifan,
+/obj/item/gun/energy/locked/frontier/holdout/unlocked,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"vi" = (
+/obj/item/sticky_pad,
+/obj/item/sticky_pad,
+/obj/item/sticky_pad,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"vo" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"vr" = (
+/obj/item/clothing/head/cone,
+/turf/simulated/floor/outdoors/snow/turfpack/muriki,
+/area/space)
+"vu" = (
+/obj/item/trash/rkibble{
+	desc = "A bowl of healthy food for any pet to grow big and strong! It looks untouched. ";
+	name = "bowl of kibble"
+	},
+/obj/item/trash/rkibble{
+	desc = "A bowl of healthy food for any pet to grow big and strong! It looks untouched. ";
+	name = "bowl of kibble"
+	},
+/obj/item/trash/rkibble{
+	desc = "A bowl of healthy food for any pet to grow big and strong! It looks untouched. ";
+	name = "bowl of kibble"
+	},
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"vv" = (
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -26
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/space)
+"vx" = (
+/obj/structure/bed/chair/comfy/brown{
+	dir = 8
+	},
+/obj/effect/landmark/start/entertainer,
+/turf/simulated/floor/wood,
+/area/space)
+"vB" = (
+/turf/simulated/floor/outdoors/snow/turfpack/muriki,
+/area/space)
+"vH" = (
+/obj/item/trash/rkibble{
+	desc = "A bowl of healthy food for any pet to grow big and strong! It looks untouched. ";
+	name = "bowl of kibble"
+	},
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"vL" = (
+/obj/structure/barricade/sandbag,
+/obj/item/sleevemate,
+/obj/item/sleevemate,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"vU" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/storage/fancy/cigar/havana,
+/obj/random/cigarettes,
+/obj/random/cigarettes,
+/obj/item/flame/lighter/zippo/red,
+/turf/simulated/floor/wood,
+/area/space)
+"vV" = (
+/obj/item/trash/rkibble{
+	desc = "A bowl of healthy food for any pet to grow big and strong! It looks untouched. ";
+	name = "bowl of kibble"
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"wi" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/clothing/glasses/welding,
+/obj/item/clothing/glasses/welding,
+/obj/item/clothing/glasses/welding,
+/obj/item/clothing/glasses/welding,
+/obj/item/flash,
+/obj/item/flash,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"wm" = (
+/obj/item/clothing/suit/armor/combat,
+/obj/structure/table/rack/shelf/wood,
+/obj/item/material/twohanded/sledgehammer/gravity,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"xa" = (
+/obj/structure/bed/chair/comfy/brown,
+/obj/effect/landmark/start{
+	name = "Journalist"
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/space)
+"xj" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/random/mre,
+/obj/random/mre,
+/obj/random/mre,
+/obj/random/mre,
+/obj/random/mre,
+/obj/random/mre,
+/obj/random/mre,
+/obj/random/mre,
+/obj/random/mre,
+/obj/random/mre,
+/obj/random/mre,
+/obj/random/mre,
+/turf/simulated/floor/wood,
+/area/space)
+"xr" = (
+/obj/structure/girder,
+/turf/simulated/floor/plating,
+/area/space)
+"xt" = (
+/obj/structure/simple_door/wood,
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"xv" = (
+/obj/random/trash,
+/obj/random/junk,
+/turf/simulated/floor/wood/broken/turfpack/muriki,
+/area/space)
+"xz" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/storage/firstaid/adv,
+/obj/item/storage/firstaid/adv,
+/obj/item/storage/firstaid/adv,
+/obj/item/storage/firstaid/adv,
+/obj/item/storage/firstaid/adv,
+/obj/item/storage/firstaid/adv,
+/obj/item/storage/firstaid/adv,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"xD" = (
+/obj/vehicle/has_interior/controller/heavyarmor_medic{
+	haskey = 0;
+	interior_area = /area/vehicle_interior/heavyarmor_medic_recovery
+	},
+/turf/simulated/floor/outdoors/snow/turfpack/muriki,
+/area/space)
+"xI" = (
+/obj/random/trash,
+/obj/structure/cable/yellow{
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"xN" = (
+/obj/structure/barricade,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"xV" = (
+/obj/structure/table/woodentable,
+/obj/random_multi/single_item/sfr_headset,
+/obj/item/material/ashtray/glass,
+/obj/random/mre,
+/obj/random/mre,
+/obj/random/mre,
+/obj/random/mre,
+/obj/random/mre,
+/turf/simulated/floor/wood,
+/area/space)
+"xY" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
+/turf/simulated/floor/wood,
+/area/space)
+"yd" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/clothing/suit/space/void/wizard,
+/obj/item/clothing/head/helmet/space/void/wizard,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"ye" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/clothing/gloves/fyellow,
+/obj/item/clothing/gloves/fyellow,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"yD" = (
+/turf/simulated/floor/outdoors/snow/turfpack/muriki{
+	outdoors = 0
+	},
+/area/space)
+"yE" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/random/flashlight,
+/obj/random/flashlight,
+/obj/item/personal_shield_generator/belt/melee/loaded,
+/obj/item/personal_shield_generator/belt/melee/loaded,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"yN" = (
+/obj/structure/bed/padded,
+/obj/item/bedsheet/cosmos,
+/turf/simulated/floor/wood,
+/area/space)
+"zg" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/binoculars,
+/obj/item/binoculars,
+/obj/item/binoculars,
+/turf/simulated/floor/wood/turfpack/muriki{
+	outdoors = 0
+	},
+/area/space)
+"zm" = (
+/obj/machinery/alarm{
+	pixel_y = 26
+	},
+/obj/structure/table/glass,
+/obj/item/storage/firstaid/regular,
+/turf/simulated/floor/tiled/kafel_full,
+/area/space)
+"zn" = (
+/obj/structure/cliff{
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/rocks/turfpack/muriki,
+/area/space)
+"zF" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/beartrap,
+/obj/item/beartrap,
+/obj/item/beartrap,
+/obj/item/beartrap,
+/obj/item/beartrap,
+/obj/item/beartrap,
+/obj/item/beartrap,
+/obj/item/pen/crayon/marker/rainbow,
+/obj/item/pen/crayon/marker/rainbow,
+/obj/item/pen/crayon/marker/rainbow,
+/obj/item/beartrap,
+/obj/item/beartrap,
+/obj/item/beartrap,
+/obj/item/beartrap,
+/obj/item/beartrap,
+/obj/item/beartrap,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"zN" = (
+/obj/random/trash,
+/turf/simulated/floor/wood/broken/turfpack/muriki,
+/area/space)
+"Av" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/obj/structure/closet,
+/mob/living/simple_mob/vore/alienanimals/jil/bean,
+/turf/simulated/floor/wood,
+/area/space)
+"AC" = (
+/obj/item/material/barbedwire/start_active,
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/space)
+"AK" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/effect/spawner/newbomb{
+	phoron_amt = 18.5;
+	oxygen_amt = 28.5
+	},
+/obj/effect/spawner/newbomb{
+	phoron_amt = 18.5;
+	oxygen_amt = 28.5
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"AR" = (
+/obj/structure/prop/rock/watersharp,
+/obj/effect/decal/remains/tajaran,
+/turf/simulated/floor/water/acidic/deep/indoor/turfpack/muriki,
+/area/space)
+"AZ" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/pickaxe,
+/obj/effect/landmark/loot_spawn,
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/space)
+"Bp" = (
+/obj/structure/cliff{
+	dir = 5
+	},
+/turf/simulated/floor/outdoors/rocks/turfpack/muriki,
+/area/space)
+"BC" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/storage/box/frags,
+/obj/item/storage/box/frags,
+/obj/item/storage/box/frags,
+/obj/item/storage/box/frags,
+/obj/item/storage/box/frags,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"BF" = (
+/obj/structure/table/rack,
+/obj/item/gun/projectile/shotgun/pump/rifle/lever{
+	name = "Listening outpost lever-action rifle";
+	desc = "The Weissen Company's version of an iconic manually operated lever action rifle, the Bushhog, offering adequate stopping power due to it's still powerful cartridge while at the same time having a rather respectable firing rate due to it's mechanism. It is very probable this is a replica instead of a museum piece, but rifles of this pattern still see usage as colonist guns in some far off regions. Uses 7.62mm rounds. Engraved on the side is stamped: 'Property of E-Shui Listening Outpost. ESLO-04-11473' Not authorized for station usage."
+	},
+/obj/item/ammo_magazine/ammo_box/b762/hunter,
+/turf/simulated/floor/wood,
+/area/space)
+"Cl" = (
+/obj/structure/cliff/corner{
+	dir = 5
+	},
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/space)
+"Co" = (
+/obj/random/landmine,
+/turf/simulated/floor/outdoors/snow/turfpack/muriki,
+/area/space)
+"CD" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/wood,
+/area/space)
+"CO" = (
+/obj/structure/simple_door/wood,
+/turf/simulated/floor/wood/broken/turfpack/muriki,
+/area/space)
+"CX" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/tool/wirecutters,
+/obj/item/tool/wirecutters,
+/obj/item/tool/wrench,
+/obj/item/tool/wrench,
+/obj/item/tool/wirecutters,
+/obj/item/tool/wrench,
+/obj/item/tool/wirecutters,
+/obj/item/tool/wrench,
+/obj/item/tool/wrench,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"Dc" = (
+/obj/structure/bed/padded,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"Dd" = (
+/turf/simulated/open/muriki,
+/area/space)
+"Dg" = (
+/obj/random/junk,
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 9
+	},
+/turf/simulated/floor/wood/turfpack/muriki{
+	outdoors = 1
+	},
+/area/space)
+"Dt" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/fiftyspawner/glass{
+	pixel_x = -9
+	},
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/plastic{
+	pixel_x = 7
+	},
+/obj/fiftyspawner/plastic{
+	pixel_x = 7
+	},
+/obj/fiftyspawner/plastic{
+	pixel_x = 7
+	},
+/obj/fiftyspawner/phoronrglass{
+	pixel_y = -9
+	},
+/obj/fiftyspawner/rglass{
+	pixel_x = -8;
+	pixel_y = -9
+	},
+/obj/fiftyspawner/uranium{
+	pixel_x = 8;
+	pixel_y = -9
+	},
+/obj/fiftyspawner/uranium{
+	pixel_x = 8;
+	pixel_y = -9
+	},
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/glass{
+	pixel_x = -9
+	},
+/obj/fiftyspawner/steel,
+/obj/item/stack/material/durasteel{
+	pixel_y = 8;
+	pixel_x = 7;
+	amount = 16
+	},
+/obj/item/stack/material/titanium{
+	pixel_y = 8;
+	amount = 16
+	},
+/obj/item/stack/material/plasteel{
+	pixel_x = -8;
+	pixel_y = 8;
+	amount = 50
+	},
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/plastic{
+	pixel_x = 7
+	},
+/obj/fiftyspawner/plastic{
+	pixel_x = 7
+	},
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/steel,
+/obj/item/stack/material/plasteel{
+	pixel_x = -8;
+	pixel_y = 8;
+	amount = 50
+	},
+/obj/fiftyspawner/phoron{
+	pixel_x = -3;
+	pixel_y = -4
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"Dx" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"DS" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/ammo_magazine/mg42,
+/obj/item/ammo_magazine/mg42,
+/obj/item/ammo_magazine/mg42,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"DZ" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/clothing/suit/armor/reactive/repulse,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"Eb" = (
+/obj/effect/map_effect/interval/effect_emitter/smoke/mist/passive,
+/obj/structure/prop/rock/small/water,
+/turf/simulated/deathdrop/waterfall/turfpack/muriki,
+/area/space)
+"El" = (
+/obj/structure/barricade/sandbag,
+/obj/item/stack/material/wood/oak,
+/obj/item/stack/material/wood/oak{
+	pixel_x = -10
+	},
+/obj/item/stack/material/wood/oak{
+	pixel_x = 10
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"EI" = (
+/obj/random/trash,
+/obj/structure/table/rack/shelf/wood,
+/obj/item/surgical/scalpel/laser3,
+/obj/item/surgical/circular_saw/manager{
+	pixel_y = 6
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"EK" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/inducer,
+/turf/simulated/floor/wood/broken/turfpack/muriki,
+/area/space)
+"EX" = (
+/turf/simulated/floor/wood/broken/turfpack/muriki,
+/area/space)
+"EY" = (
+/obj/item/stack/medical/ointment,
+/obj/item/stack/medical/ointment,
+/obj/item/stack/medical/ointment,
+/obj/item/stack/medical/ointment,
+/obj/item/stack/medical/ointment,
+/obj/item/stack/medical/ointment,
+/obj/item/stack/medical/ointment,
+/obj/item/stack/medical/bruise_pack,
+/obj/item/stack/medical/bruise_pack,
+/obj/item/stack/medical/bruise_pack,
+/obj/item/stack/medical/bruise_pack,
+/obj/item/stack/medical/bruise_pack,
+/obj/item/stack/medical/bruise_pack,
+/obj/item/stack/medical/bruise_pack,
+/obj/structure/table/rack/shelf/wood,
+/obj/item/storage/pill_bottle/dermaline{
+	pixel_y = 6;
+	pixel_x = 9
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"Fa" = (
+/turf/simulated/floor/wood/broken/turfpack/muriki{
+	outdoors = 0
+	},
+/area/space)
+"FB" = (
+/obj/structure/table/hardwoodtable,
+/obj/item/paper_bin,
+/obj/item/pen/fountain,
+/obj/structure/sign/yessmoking_1{
+	pixel_y = -32
+	},
+/turf/simulated/floor/wood,
+/area/space)
+"FE" = (
+/obj/item/flashlight/glowstick,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"FJ" = (
+/obj/structure/cliff/corner{
+	dir = 6
+	},
+/turf/simulated/floor/outdoors/rocks/turfpack/muriki,
+/area/space)
+"FN" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/pickaxe,
+/obj/item/shovel,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"FU" = (
+/turf/simulated/wall/wood/turfpack/muriki,
+/area/space)
+"Gr" = (
+/obj/structure/table/woodentable,
+/obj/random/maintenance/security,
+/obj/random/maintenance/misc,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"Gt" = (
+/obj/structure/lattice,
+/obj/item/stack/material/wood/oak,
+/obj/item/stack/material/wood/oak{
+	pixel_x = 10
+	},
+/obj/item/stack/material/wood/oak{
+	pixel_x = -10
+	},
+/turf/simulated/open/muriki,
+/area/space)
+"GO" = (
+/obj/structure/cliff{
+	dir = 4
+	},
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/space)
+"GS" = (
+/obj/machinery/light/flamp,
+/turf/simulated/floor/wood,
+/area/space)
+"GV" = (
+/obj/structure/simple_door/wood,
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/space)
+"GW" = (
+/obj/machinery/shower,
+/obj/structure/curtain/open/shower,
+/obj/structure/window/reinforced/tinted/frosted{
+	dir = 8
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 1;
+	icon_state = "spline_plain_full"
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/space)
+"Hh" = (
+/obj/machinery/rnd/production/circuit_imprinter,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"Hi" = (
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 9
+	},
+/turf/simulated/floor/wood/broken/turfpack/muriki{
+	outdoors = 0
+	},
+/area/space)
+"Hr" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/blade_trap_kit,
+/obj/item/blade_trap_kit,
+/obj/item/blade_trap_kit,
+/obj/item/blade_trap_kit,
+/obj/item/blade_trap_kit,
+/obj/item/blade_trap_kit,
+/obj/item/blade_trap_kit,
+/obj/item/blade_trap_kit,
+/obj/item/blade_trap_kit,
+/obj/item/blade_trap_kit,
+/obj/item/pen/crayon/marker/rainbow,
+/obj/item/pen/crayon/marker/rainbow,
+/obj/item/pen/crayon/marker/rainbow,
+/obj/item/pen/crayon/marker/rainbow,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"Hx" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/ammo_magazine/m16,
+/obj/item/ammo_magazine/m16,
+/obj/item/ammo_magazine/m16,
+/obj/item/ammo_magazine/m16,
+/obj/item/ammo_magazine/m16,
+/obj/item/ammo_magazine/m16,
+/obj/item/ammo_magazine/m16,
+/obj/item/ammo_magazine/m16,
+/obj/item/ammo_magazine/m16,
+/obj/item/ammo_magazine/m16,
+/obj/item/gun/projectile/automatic/serdy/m4a1{
+	pixel_x = -10
+	},
+/obj/item/gun/projectile/automatic/serdy/m4a1{
+	pixel_x = -10
+	},
+/obj/item/gun/projectile/automatic/serdy/m4a1{
+	pixel_x = -10
+	},
+/obj/item/ammo_magazine/m16,
+/obj/item/ammo_magazine/m16,
+/obj/item/ammo_magazine/m16,
+/obj/item/ammo_magazine/m16,
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/item/ammo_magazine/m16,
+/obj/item/ammo_magazine/m16,
+/obj/item/ammo_magazine/m16,
+/obj/item/ammo_magazine/m16,
+/obj/item/ammo_magazine/m16,
+/obj/item/ammo_magazine/m16,
+/obj/item/ammo_magazine/m16,
+/obj/item/ammo_magazine/m16,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"Hz" = (
+/turf/simulated/mineral/alt/ignore_mapgen/turfpack/muriki,
+/area/space)
+"HC" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/cell/device,
+/obj/item/cell/device/giga{
+	pixel_y = 7
+	},
+/obj/item/cell/device/weapon,
+/obj/item/cell/device/weapon/recharge{
+	pixel_y = -8
+	},
+/obj/item/cell/device/weapon,
+/obj/item/cell/device/weapon,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"HJ" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/gun/projectile/dartgun,
+/obj/item/gun/projectile/shotgun/pump/empty{
+	pixel_x = -16;
+	desc = "A blood soaked shotgun, betraying its history... do you feel lucky?"
+	},
+/obj/item/ammo_casing/a12g/bb,
+/obj/item/ammo_casing/a12g/bb,
+/obj/item/ammo_casing/a12g/bb,
+/obj/item/ammo_casing/a12g/bb,
+/obj/item/ammo_magazine/ammo_box/b12g,
+/obj/item/ammo_magazine/ammo_box/b12g,
+/obj/item/ammo_magazine/ammo_box/b12g,
+/obj/item/ammo_magazine/ammo_box/b12g,
+/obj/item/ammo_magazine/ammo_box/b12g,
+/obj/item/ammo_magazine/ammo_box/b12g,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"HM" = (
+/obj/structure/prop/rock/small/wateralt,
+/turf/simulated/deathdrop/waterfall/turfpack/muriki,
+/area/space)
+"HR" = (
+/obj/machinery/light/small,
+/obj/structure/table/rack/shelf/wood,
+/obj/item/implanter/compliance,
+/obj/item/mine/claymore,
+/obj/item/mine/claymore,
+/obj/item/mine/claymore,
+/obj/item/mine/claymore,
+/obj/item/mine/claymore,
+/obj/item/mine/claymore,
+/obj/item/mine/claymore,
+/obj/item/mine/claymore,
+/obj/item/mine/claymore,
+/obj/item/mine/claymore,
+/obj/item/mine/claymore,
+/obj/item/mine/claymore,
+/obj/item/mine/claymore,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"Ib" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/structure/table/rack/shelf/wood,
+/obj/item/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
+/obj/item/storage/briefcase/inflatable,
+/turf/simulated/floor/wood/turfpack/muriki{
+	outdoors = 0
+	},
+/area/space)
+"If" = (
+/obj/structure/barricade/sandbag,
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/snow/turfpack/muriki{
+	outdoors = 0
+	},
+/area/space)
+"Iy" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/storage/toolbox/syndicate,
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/item/storage/toolbox/electrical{
+	pixel_y = -8
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"IA" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/fiftyspawner/plasteel,
+/obj/item/plastique/seismic{
+	pixel_x = -8
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"IB" = (
+/obj/structure/simple_door/wood,
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"IC" = (
+/obj/structure/cable/yellow{
+	icon_state = "2-9"
+	},
+/turf/simulated/floor/wood,
+/area/space)
+"IJ" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/reagent_containers/glass/rag,
+/obj/item/reagent_containers/glass/rag,
+/obj/item/reagent_containers/glass/rag,
+/obj/item/reagent_containers/glass/rag,
+/obj/item/reagent_containers/glass/rag,
+/obj/item/reagent_containers/glass/rag,
+/obj/item/reagent_containers/glass/rag,
+/obj/item/reagent_containers/glass/rag,
+/obj/item/reagent_containers/glass/rag,
+/obj/item/reagent_containers/glass/rag,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"IL" = (
+/obj/effect/floor_decal/spline/plain{
+	dir = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/turcarpet,
+/area/space)
+"Ja" = (
+/obj/structure/stairs/spawner/north,
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/structure/railing{
+	dir = 8
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"Jd" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/yellow{
+	icon_state = "1-6"
+	},
+/turf/simulated/floor/wood,
+/area/space)
+"Jl" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/storage/box/scattershot/large,
+/obj/item/storage/box/scattershot/large,
+/obj/item/gun/projectile/shotgun/pump/USDF,
+/obj/item/gun/projectile/shotgun/pump/USDF,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"Jt" = (
+/turf/simulated/floor/outdoors/snow/gravsnow/turfpack/muriki,
+/area/space)
+"Jv" = (
+/obj/structure/bed,
+/obj/item/bedsheet/hos,
+/turf/simulated/floor/wood/broken/turfpack/muriki,
+/area/space)
+"JP" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"KB" = (
+/obj/effect/landmark/bslocker,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"KN" = (
+/obj/structure/barricade/sandbag,
+/obj/item/material/barbedwire/start_active,
+/turf/simulated/floor/wood/broken/turfpack/muriki,
+/area/space)
+"KO" = (
+/obj/structure/ladder_assembly,
+/turf/simulated/floor/outdoors/snow/turfpack/muriki{
+	outdoors = 0
+	},
+/area/space)
+"KP" = (
+/obj/structure/cable/yellow{
+	icon_state = "16-0"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"KT" = (
+/obj/structure/cliff{
+	dir = 6
+	},
+/turf/simulated/floor/outdoors/rocks/turfpack/muriki,
+/area/space)
+"Le" = (
+/obj/structure/cliff{
+	dir = 1
+	},
+/turf/simulated/floor/outdoors/rocks/turfpack/muriki,
+/area/space)
+"Lr" = (
+/obj/item/cartridge/signal/engineering,
+/obj/structure/table/rack/shelf/wood,
+/obj/item/cartridge/atmos,
+/obj/item/cartridge/engineering,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"LA" = (
+/obj/structure/barricade/planks,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"LK" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/gps/explorer,
+/turf/simulated/floor/wood/turfpack/muriki{
+	outdoors = 0
+	},
+/area/space)
+"LN" = (
+/obj/structure/barricade/sandbag,
+/turf/simulated/floor/outdoors/snow/turfpack/muriki{
+	outdoors = 0
+	},
+/area/space)
+"Mq" = (
+/obj/random/trash,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"Mt" = (
+/obj/structure/bed,
+/obj/item/bedsheet/hop,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"Mv" = (
+/obj/item/material/barbedwire/start_active,
+/turf/simulated/floor/outdoors/snow/turfpack/muriki,
+/area/space)
+"MH" = (
+/obj/structure/table/hardwoodtable,
+/obj/machinery/photocopier/faxmachine{
+	department = "Radio Station"
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_y = -30;
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/space)
+"MM" = (
+/obj/structure/table/woodentable,
+/obj/random/maintenance,
+/obj/random/maintenance,
+/obj/random/maintenance,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"MU" = (
+/obj/structure/bed,
+/obj/item/bedsheet/ce,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"MX" = (
+/obj/item/healthanalyzer/guide,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"Nu" = (
+/obj/structure/closet/tent/B,
+/obj/effect/landmark/start/stowaway,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"Nw" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/clothing/suit/storage/toggle/hoodie/black,
+/obj/item/tool/crowbar/brace_jack,
+/obj/machinery/light/small,
+/obj/item/tool/crowbar/brace_jack,
+/obj/item/tool/crowbar/brace_jack,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"NG" = (
+/obj/machinery/autolathe,
+/obj/machinery/power/apc/alarms_hidden{
+	dir = 1;
+	pixel_y = 28
+	},
+/obj/structure/cable/yellow{
+	icon_state = "0-2"
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"NI" = (
+/obj/structure/undies_wardrobe,
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/machinery/firealarm{
+	pixel_y = 26
+	},
+/turf/simulated/floor/wood,
+/area/space)
+"NP" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/rig/hazmat/equipped,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"NW" = (
+/obj/structure/reagent_dispensers/fueltank/barrel/two,
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/space)
+"Oa" = (
+/obj/effect/floor_decal/snow/floor/pointy,
+/turf/simulated/open/muriki,
+/area/space)
+"Od" = (
+/obj/item/trash/rkibble{
+	desc = "A bowl of healthy food for any pet to grow big and strong! It looks untouched. ";
+	name = "bowl of kibble"
+	},
+/obj/item/sticky_pad{
+	pixel_x = -12;
+	pixel_y = 3
+	},
+/obj/item/sticky_pad{
+	pixel_x = -12;
+	pixel_y = 3
+	},
+/obj/item/sticky_pad{
+	pixel_x = -12;
+	pixel_y = 3
+	},
+/turf/simulated/floor/wood/broken/turfpack/muriki,
+/area/space)
+"Ol" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/tank/emergency/oxygen/engi,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"Or" = (
+/obj/structure/bed/chair/wood{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/turf/simulated/floor/wood,
+/area/space)
+"OA" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/tool/screwdriver,
+/obj/item/stack/cable_coil,
+/obj/item/stack/cable_coil,
+/obj/item/tool/screwdriver,
+/obj/item/stack/cable_coil,
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/item/tool/screwdriver,
+/obj/item/tool/screwdriver,
+/obj/item/stack/cable_coil,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"OH" = (
+/obj/structure/reagent_dispensers/fueltank,
+/turf/simulated/floor/outdoors/snow/turfpack/muriki,
+/area/space)
+"OY" = (
+/obj/item/stack/material/wood/oak,
+/turf/simulated/floor/wood/broken/turfpack/muriki,
+/area/space)
+"Pj" = (
+/obj/structure/barricade,
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"Pv" = (
+/turf/simulated/wall/stonelogs/turfpack/muriki,
+/area/space)
+"PA" = (
+/obj/random/junk,
+/turf/simulated/floor/wood/broken/turfpack/muriki,
+/area/space)
+"PC" = (
+/obj/structure/closet/tent/B,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"PE" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable/yellow{
+	icon_state = "4-9"
+	},
+/turf/simulated/floor/wood,
+/area/space)
+"PM" = (
+/obj/effect/floor_decal/snow/floor/pointy{
+	dir = 4
+	},
+/turf/simulated/open/muriki,
+/area/space)
+"PZ" = (
+/turf/simulated/wall,
+/area/space)
+"Qh" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/clothing/gloves/arm_guard/combat,
+/obj/item/clothing/gloves/arm_guard/combat,
+/obj/item/clothing/gloves/arm_guard/combat,
+/obj/item/clothing/gloves/arm_guard/combat,
+/obj/item/clothing/gloves/arm_guard/combat,
+/obj/item/clothing/gloves/arm_guard/combat,
+/obj/item/clothing/shoes/leg_guard/combat,
+/obj/item/clothing/shoes/leg_guard/combat,
+/obj/item/clothing/shoes/leg_guard/combat,
+/obj/item/clothing/shoes/leg_guard/combat,
+/obj/item/clothing/shoes/leg_guard/combat,
+/obj/item/clothing/shoes/leg_guard/combat,
+/obj/item/clothing/suit/armor/combat,
+/obj/item/clothing/suit/armor/combat,
+/obj/item/clothing/suit/armor/combat,
+/obj/item/clothing/suit/armor/combat,
+/obj/item/clothing/suit/armor/combat,
+/obj/item/clothing/suit/armor/combat,
+/obj/item/clothing/head/helmet/combat,
+/obj/item/clothing/head/helmet/combat,
+/obj/item/clothing/head/helmet/combat,
+/obj/item/clothing/head/helmet/combat,
+/obj/item/clothing/head/helmet/combat,
+/obj/item/clothing/head/helmet/combat,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"QO" = (
+/obj/machinery/rnd/production/protolathe/department/engineering,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"QR" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/machinery/light/small{
+	dir = 8
+	},
+/obj/item/stack/material/lead,
+/obj/item/stack/material/platinum,
+/obj/item/stack/material/gold,
+/obj/item/stack/material/mhydrogen,
+/obj/item/stack/material/verdantium,
+/obj/item/stack/material/morphium,
+/obj/item/stack/material/durasteel,
+/obj/item/stack/material/plastitanium,
+/obj/item/stack/material/titanium,
+/obj/item/stack/material/uranium,
+/obj/item/stack/material/aluminium,
+/obj/item/stack/material/tritium,
+/obj/item/stack/material/silver,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"QZ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/light_switch{
+	dir = 4;
+	pixel_x = -28;
+	pixel_y = 28
+	},
+/obj/structure/cable/yellow{
+	icon_state = "6-8"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "5-8"
+	},
+/turf/simulated/floor/wood,
+/area/space)
+"Ri" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/clothing/suit/space/void/atmos,
+/obj/item/clothing/head/helmet/space/void/atmos,
+/obj/item/tank/air,
+/obj/item/clothing/mask/gas/clear,
+/turf/simulated/floor/wood/broken/turfpack/muriki,
+/area/space)
+"Rn" = (
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"Rx" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/machinery/station_map{
+	pixel_y = 32
+	},
+/obj/machinery/recharge_station,
+/turf/simulated/floor/wood,
+/area/space)
+"RB" = (
+/obj/item/reagent_containers/syringe/drugs,
+/obj/structure/table/rack/shelf/wood,
+/obj/item/reagent_containers/syringe/voxkit{
+	pixel_y = -5
+	},
+/obj/item/reagent_containers/syringe/voxkit{
+	pixel_y = -5
+	},
+/obj/item/laser_pointer/blue,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"RI" = (
+/obj/structure/closet/wardrobe/suit,
+/turf/simulated/floor/wood,
+/area/space)
+"RN" = (
+/obj/effect/landmark/loot_spawn,
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/space)
+"RU" = (
+/obj/structure/window/reinforced/full,
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor,
+/area/space)
+"RW" = (
+/obj/item/gun/energy/soapenergy/gaussrifle,
+/obj/structure/table/rack/shelf/wood,
+/turf/simulated/floor/wood/broken/turfpack/muriki,
+/area/space)
+"RX" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/machinery/power/apc/alarms_hidden{
+	dir = 1;
+	pixel_y = 28
+	},
+/obj/structure/cable/yellow{
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"Sd" = (
+/obj/item/clothing/head/cone,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"Sl" = (
+/obj/machinery/light/small,
+/obj/random/trash,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"Sm" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/tool/transforming/jawsoflife,
+/obj/item/weldingtool/experimental,
+/obj/item/tool/transforming/powerdrill,
+/turf/simulated/floor/wood/broken/turfpack/muriki,
+/area/space)
+"SZ" = (
+/obj/random/junk,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"Tj" = (
+/obj/item/mop{
+	pixel_y = -10
+	},
+/obj/item/reagent_containers/glass/bucket{
+	pixel_x = 10;
+	pixel_y = -10
+	},
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/space)
+"Tm" = (
+/obj/structure/stairs/spawner/west,
+/obj/structure/railing,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"Tu" = (
+/obj/effect/floor_decal/spline/plain{
+	dir = 10
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/turcarpet,
+/area/space)
+"TG" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/poster,
+/turf/simulated/floor/wood/broken/turfpack/muriki,
+/area/space)
+"TZ" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/radio/intercom{
+	dir = 8;
+	layer = 2;
+	pixel_x = -8
+	},
+/obj/item/material/ashtray/glass,
+/obj/item/clothing/mask/smokable/cigarette/cigar/cohiba,
+/obj/item/flame/lighter/zippo/engraved,
+/turf/simulated/floor/wood,
+/area/space)
+"Ua" = (
+/obj/random/maintenance/foodstuff,
+/obj/random/maintenance/foodstuff,
+/obj/structure/table/woodentable,
+/turf/simulated/floor/wood/broken/turfpack/muriki,
+/area/space)
+"Ub" = (
+/obj/machinery/light/small,
+/obj/structure/reagent_dispensers/fueltank,
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/space)
+"Uk" = (
+/obj/random/flashlight,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"Uo" = (
+/obj/random/trash,
+/obj/machinery/space_heater,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"Uq" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/simple_door/wood,
+/obj/machinery/door/firedoor/glass,
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/wood,
+/area/space)
+"UT" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/airlock_electronics,
+/obj/item/laser_pointer/purple,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"Vt" = (
+/obj/machinery/alarm{
+	dir = 8;
+	pixel_x = 26
+	},
+/turf/simulated/floor/wood,
+/area/space)
+"Vu" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"VE" = (
+/obj/machinery/light/small/flicker{
+	dir = 1
+	},
+/obj/random/trash,
+/obj/random/junk,
+/turf/simulated/floor/wood/broken/turfpack/muriki,
+/area/space)
+"VF" = (
+/obj/structure/bed,
+/obj/item/bedsheet/craftable,
+/obj/item/toy/plushie/pillow/green,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"VJ" = (
+/obj/item/stack/material/wood/oak,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"Wd" = (
+/obj/item/reagent_containers/blood/OMinus,
+/obj/item/reagent_containers/blood/OMinus,
+/obj/item/reagent_containers/blood/OMinus,
+/obj/item/reagent_containers/blood/OMinus,
+/obj/structure/medical_stand,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"Wp" = (
+/obj/machinery/light/small/flicker{
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/snow/turfpack/muriki{
+	outdoors = 0
+	},
+/area/space)
+"WB" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/lattice,
+/obj/item/stack/material/wood/oak{
+	pixel_x = 10
+	},
+/obj/item/stack/material/wood/oak,
+/obj/item/stack/material/wood/oak{
+	pixel_x = -10
+	},
+/obj/structure/cable/yellow{
+	icon_state = "32-10"
+	},
+/turf/simulated/open/muriki,
+/area/space)
+"WE" = (
+/obj/structure/cliff{
+	dir = 5
+	},
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/space)
+"WG" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/obj/machinery/alarm{
+	dir = 8;
+	pixel_x = 26
+	},
+/obj/item/reagent_containers/food/drinks/bottle/vodka,
+/obj/structure/table/rack/shelf/wood,
+/obj/item/reagent_containers/food/drinks/bottle/tequila,
+/obj/item/reagent_containers/food/drinks/bottle/rum,
+/obj/item/reagent_containers/food/drinks/bottle/small/beer/silverdragon,
+/obj/item/reagent_containers/food/drinks/bottle/small/beer/silverdragon,
+/turf/simulated/floor/wood,
+/area/space)
+"WK" = (
+/obj/random/junk,
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/space)
+"WV" = (
+/obj/structure/bed,
+/obj/item/bedsheet/mime,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"WX" = (
+/obj/structure/window/reinforced/full,
+/obj/structure/grille,
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor,
+/area/space)
+"WZ" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/radio,
+/obj/item/storage/backpack/dufflebag/syndie,
+/obj/item/gun/energy/locked/frontier/holdout/unlocked,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"Xc" = (
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 10
+	},
+/turf/simulated/floor/wood/turfpack/muriki{
+	outdoors = 0
+	},
+/area/space)
+"Xi" = (
+/obj/structure/cliff_end,
+/turf/simulated/floor/outdoors/rocks/turfpack/muriki,
+/area/space)
+"Xm" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/item/pizzavoucher,
+/turf/simulated/floor/wood,
+/area/space)
+"Xz" = (
+/obj/machinery/media/jukebox/hacked,
+/turf/simulated/floor/wood,
+/area/space)
+"XC" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/item/storage/belt/utility/chief,
+/obj/item/clothing/gloves/heavy_engineer{
+	pixel_x = 7;
+	pixel_y = 14
+	},
+/turf/simulated/floor/wood/broken/turfpack/muriki,
+/area/space)
+"XO" = (
+/obj/structure/table/hardwoodtable,
+/obj/machinery/newscaster{
+	name = "Journalist News Uploader";
+	pixel_y = -32
+	},
+/obj/random/mre,
+/obj/random/mre,
+/obj/random/mre,
+/obj/random/mre,
+/obj/random/mre,
+/obj/random/mre,
+/obj/random/mre,
+/turf/simulated/floor/wood,
+/area/space)
+"Yf" = (
+/obj/structure/closet/grave/dirthole,
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/space)
+"Yj" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/storage/firstaid/regular,
+/obj/item/storage/firstaid/regular,
+/obj/item/storage/firstaid/regular,
+/obj/item/storage/firstaid/regular,
+/obj/item/storage/firstaid/regular,
+/obj/item/storage/firstaid/regular,
+/obj/item/storage/firstaid/regular,
+/obj/item/storage/firstaid/regular,
+/obj/item/storage/firstaid/regular,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"Yp" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/stack/sandbags{
+	amount = 30
+	},
+/turf/simulated/floor/outdoors/snow/turfpack/muriki{
+	outdoors = 0
+	},
+/area/space)
+"YB" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/weldingtool,
+/obj/item/weldingtool,
+/obj/item/tool/crowbar,
+/obj/item/tool/crowbar,
+/obj/item/weldingtool,
+/obj/item/weldingtool,
+/obj/item/weldingtool,
+/obj/item/tool/crowbar/red,
+/obj/item/weldingtool,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"YH" = (
+/obj/structure/table/hardwoodtable,
+/obj/item/tvcamera,
+/obj/item/flame/lighter/zippo/red{
+	pixel_x = -6;
+	pixel_y = 7
+	},
+/obj/random/cigarettes{
+	pixel_x = -8
+	},
+/obj/random/cigarettes{
+	pixel_x = -8
+	},
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -26
+	},
+/obj/item/universal_translator/ear,
+/turf/simulated/floor/wood,
+/area/space)
+"YJ" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/gun/projectile/silenced,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"YK" = (
+/obj/structure/window/reinforced/full,
+/obj/structure/lattice,
+/turf/simulated/open/muriki,
+/area/space)
+"YO" = (
+/obj/structure/cable/yellow{
+	icon_state = "1-4"
+	},
+/obj/item/trash/rkibble{
+	desc = "A bowl of healthy food for any pet to grow big and strong! It looks untouched. ";
+	name = "bowl of kibble"
+	},
+/turf/simulated/floor/wood/broken/turfpack/muriki,
+/area/space)
+"YS" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
+/turf/simulated/floor/wood,
+/area/space)
+"Zh" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/clothing/gloves/black{
+	pixel_y = -6
+	},
+/obj/item/clothing/gloves/yellow,
+/obj/item/clothing/gloves/yellow,
+/obj/item/clothing/gloves/yellow,
+/obj/item/healthanalyzer/guide{
+	pixel_y = 7
+	},
+/obj/item/healthanalyzer/guide{
+	pixel_y = 7
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/space)
+"Zv" = (
+/obj/effect/auto_crayon{
+	icon_state = "left"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/space)
+"ZI" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/space)
+"ZV" = (
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/space)
+
+(1,1,1) = {"
+Pv
+Hz
+Hz
+Jt
+vB
+vB
+Co
+Mv
+lz
+Bp
+ax
+KT
+FJ
+Le
+lz
+zn
+Bp
+kx
+vB
+vB
+vB
+vB
+ae
+pG
+Dd
+Dd
+Dd
+Dd
+Dd
+Dd
+Dd
+Dd
+Dd
+Dd
+Dd
+Dd
+Dd
+Dd
+Dd
+Dd
+Dd
+Dd
+Dd
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+"}
+(2,1,1) = {"
+Pv
+Hz
+Hz
+Hz
+Co
+vB
+vB
+vB
+vB
+lz
+zn
+FJ
+nr
+lz
+zn
+Bp
+lz
+Bp
+ae
+vB
+vB
+vB
+vB
+pG
+RU
+RU
+fi
+Dd
+Dd
+Dd
+Dd
+Dd
+Dd
+Dd
+Dd
+Dd
+Dd
+Dd
+Dd
+Dd
+Dd
+Dd
+Dd
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+"}
+(3,1,1) = {"
+Pv
+er
+er
+Hz
+Hz
+Hz
+Hz
+Hz
+vB
+vB
+vB
+vB
+Mv
+Mv
+Mv
+lz
+Bp
+Le
+vB
+vB
+vB
+vB
+ae
+pG
+TZ
+GS
+WX
+fi
+Dd
+Dd
+Dd
+Dd
+Dd
+Dd
+Dd
+Dd
+Dd
+Dd
+Dd
+Dd
+Dd
+Dd
+Dd
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+"}
+(4,1,1) = {"
+Pv
+er
+er
+er
+Hz
+Hz
+Hz
+Hz
+Hz
+vr
+vB
+vB
+Mv
+sa
+sa
+sa
+Le
+lz
+zn
+uh
+ng
+Xi
+zn
+pG
+oV
+dq
+Xz
+WX
+fi
+Dd
+Dd
+Dd
+Dd
+Dd
+Dd
+Dd
+Dd
+Dd
+Dd
+Dd
+Dd
+Dd
+Dd
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+"}
+(5,1,1) = {"
+Pv
+er
+er
+er
+er
+er
+er
+er
+Hz
+Hz
+Mv
+vB
+Mv
+sa
+vB
+sa
+lz
+zn
+zn
+uh
+ng
+Xi
+zn
+pG
+gr
+Tu
+qG
+vx
+WX
+fi
+Dd
+Dd
+Dd
+Dd
+Dd
+Dd
+Dd
+Dd
+Dd
+Dd
+Dd
+Dd
+Dd
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+"}
+(6,1,1) = {"
+Pv
+er
+er
+er
+er
+er
+er
+er
+Hz
+Hz
+Hz
+vB
+Mv
+sa
+vB
+sa
+sa
+sa
+sa
+vB
+vB
+vB
+vB
+pG
+he
+gZ
+Jd
+YS
+qc
+di
+Dd
+Dd
+Dd
+Dd
+Dd
+Dd
+Dd
+Dd
+Dd
+Dd
+Dd
+Dd
+Dd
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+"}
+(7,1,1) = {"
+Pv
+Pv
+Pv
+Pv
+Pv
+Pv
+Pv
+Pv
+Pv
+Hz
+Hz
+vB
+vB
+vB
+vB
+vB
+vB
+vB
+vB
+vB
+vB
+vB
+vB
+pG
+vU
+mq
+gN
+PE
+mm
+di
+Dd
+Dd
+PM
+PM
+PM
+PM
+Dd
+Dd
+Dd
+Dd
+Dd
+Dd
+Dd
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+"}
+(8,1,1) = {"
+Pv
+fW
+SZ
+Rn
+LA
+ek
+Mq
+WV
+Pv
+er
+Hz
+ae
+Mv
+sa
+vB
+vB
+Mv
+Mv
+Mv
+vB
+vB
+vB
+vB
+pG
+WX
+WX
+PZ
+qE
+PZ
+gG
+gG
+gG
+Hi
+kW
+kW
+Xc
+po
+po
+po
+po
+Pv
+Dd
+Dd
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+"}
+(9,1,1) = {"
+Pv
+Pv
+aR
+Pv
+Pv
+ln
+EX
+uL
+Pv
+er
+Hz
+Hz
+Hz
+LN
+ei
+yD
+LN
+po
+po
+po
+Pv
+Pv
+vB
+pG
+hw
+YH
+PZ
+ky
+Av
+BF
+RI
+di
+Fa
+sM
+cZ
+sM
+YK
+fw
+Hh
+yE
+Pv
+Dd
+Dd
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+"}
+(10,1,1) = {"
+GV
+ZV
+ZV
+ZV
+Pv
+cO
+Rn
+kr
+Pv
+er
+Hz
+Hz
+Hz
+tL
+yD
+yD
+yD
+po
+SZ
+qq
+hK
+Pv
+vB
+pG
+xa
+XO
+PZ
+Or
+bu
+fm
+xj
+di
+LK
+aq
+Ib
+zg
+po
+Rn
+EX
+SZ
+Pv
+Dd
+Dd
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+"}
+(11,1,1) = {"
+Pv
+ZV
+jG
+ZV
+po
+WZ
+SZ
+YJ
+Pv
+er
+er
+er
+Hz
+tL
+yD
+Wp
+yD
+po
+la
+Rn
+HR
+Pv
+fg
+pG
+hw
+FB
+PZ
+xV
+IL
+bM
+tB
+di
+Pv
+aR
+Pv
+Pv
+Pv
+aP
+oQ
+Rn
+Pv
+Dd
+Dd
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+"}
+(12,1,1) = {"
+Pv
+ZV
+ZV
+RN
+Pv
+MU
+EX
+Mt
+Pv
+Pv
+Pv
+Pv
+Pv
+Pv
+Pv
+Pv
+aR
+Pv
+FU
+aR
+FU
+Pv
+fg
+pG
+Vt
+MH
+PZ
+eP
+WG
+CD
+GS
+di
+QO
+vV
+QR
+EK
+FU
+FU
+FU
+aR
+Pv
+Dd
+Dd
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+"}
+(13,1,1) = {"
+Pv
+Pv
+Pv
+Pv
+Pv
+FU
+aR
+FU
+ta
+UT
+FU
+gx
+Dc
+Wd
+rl
+FU
+kB
+FU
+wm
+EX
+ye
+Pv
+fg
+pG
+gG
+PZ
+PZ
+PZ
+PZ
+Uq
+xr
+gG
+NG
+YO
+mZ
+Rn
+aR
+bd
+SZ
+Rn
+Pv
+Dd
+Dd
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+"}
+(14,1,1) = {"
+er
+Pv
+SZ
+sJ
+Pv
+dp
+Rn
+VF
+FU
+RX
+FU
+EI
+Rn
+il
+Rn
+aR
+Od
+aR
+Uk
+Rn
+Nw
+Pv
+fg
+pG
+gG
+Tj
+rr
+PZ
+Xm
+QZ
+yN
+gG
+FU
+Pj
+aR
+FU
+FU
+lI
+XC
+Rn
+Pv
+Dd
+Dd
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+"}
+(15,1,1) = {"
+Ub
+Pv
+EX
+bE
+Pv
+Hx
+Mq
+HJ
+FU
+IB
+FU
+FU
+vL
+FU
+FU
+FU
+VE
+FU
+El
+aR
+FU
+Pv
+fg
+pG
+gG
+nA
+nQ
+qv
+WB
+nG
+IC
+xt
+kA
+xI
+Gt
+nL
+FU
+FU
+xN
+aR
+Pv
+Dd
+Dd
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+"}
+(16,1,1) = {"
+ZV
+aR
+SZ
+Rn
+aR
+Uk
+OY
+Rn
+aR
+KP
+aR
+Rn
+vH
+vV
+aR
+Rn
+SZ
+aR
+Rn
+EX
+jy
+Pv
+fg
+pG
+gG
+zm
+ZI
+PZ
+Rx
+xY
+iv
+gG
+FU
+FU
+CO
+FU
+FU
+Dx
+VJ
+SZ
+Pv
+Dd
+Dd
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+"}
+(17,1,1) = {"
+er
+Pv
+Uk
+EX
+Pv
+Jl
+Rn
+Jv
+FU
+aR
+FU
+aR
+FU
+FU
+FU
+xN
+aR
+FU
+FU
+FU
+aR
+Pv
+vB
+pG
+gG
+GW
+vv
+PZ
+NI
+Vt
+bk
+gG
+Lr
+VJ
+EX
+BC
+FU
+Dd
+vo
+Sm
+Pv
+Dd
+Dd
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+"}
+(18,1,1) = {"
+er
+Pv
+FN
+RW
+Pv
+FU
+ta
+FU
+FU
+SZ
+FU
+Rn
+MX
+Yj
+FU
+RB
+SZ
+FU
+Tm
+qi
+Rn
+Pv
+vB
+pG
+gG
+fV
+gG
+gG
+gG
+gG
+gG
+gG
+Ri
+Rn
+SZ
+IJ
+FU
+Dd
+vo
+rW
+Pv
+Dd
+Dd
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+"}
+(19,1,1) = {"
+er
+Pv
+Pv
+Pv
+Pv
+CX
+Rn
+df
+Dt
+VJ
+FU
+gC
+nC
+eg
+FU
+Ol
+Rn
+xN
+kJ
+rv
+uf
+Pv
+vB
+pG
+ml
+Zv
+ZV
+ZV
+ZV
+ZV
+ZV
+Pv
+DS
+Mq
+EX
+hf
+xN
+Vu
+EX
+Uo
+Pv
+Dd
+Dd
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+"}
+(20,1,1) = {"
+ZV
+JP
+Rn
+aR
+xN
+OA
+Mq
+qX
+Zh
+rq
+KN
+eC
+Rn
+aX
+xN
+NP
+Sl
+FU
+Rn
+xv
+Qh
+Pv
+vB
+pG
+ml
+ml
+ml
+ml
+ml
+ZV
+ZV
+Pv
+op
+rU
+Rn
+AK
+FU
+eW
+HC
+wi
+Pv
+Dd
+Dd
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+"}
+(21,1,1) = {"
+gS
+er
+Pv
+Pv
+Pv
+YB
+Rn
+vV
+vV
+Rn
+FU
+xz
+SZ
+EY
+FU
+zF
+Sd
+FU
+Hr
+Rn
+hC
+Pv
+vB
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+Pv
+Pv
+Pv
+Pv
+Pv
+Pv
+po
+po
+Pv
+Pv
+Dd
+Dd
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+"}
+(22,1,1) = {"
+er
+er
+er
+er
+Pv
+Pv
+Pv
+Pv
+FU
+aR
+FU
+FU
+aR
+Pv
+Pv
+Pv
+aR
+Pv
+po
+po
+Pv
+Pv
+vB
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+ZV
+ZV
+ZV
+Dg
+nW
+ph
+Oa
+Dd
+Dd
+Dd
+Dd
+Dd
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+"}
+(23,1,1) = {"
+er
+er
+er
+er
+er
+er
+er
+Pv
+Iy
+Rn
+zN
+OY
+Rn
+Pv
+er
+Yp
+yD
+If
+Mv
+Mv
+Mv
+Mv
+vB
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+er
+er
+ZV
+cC
+mH
+rQ
+Oa
+Dd
+Dd
+Dd
+Dd
+Dd
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+"}
+(24,1,1) = {"
+eX
+er
+eX
+eX
+er
+er
+er
+Pv
+FU
+FU
+FU
+tD
+aR
+Pv
+Pv
+ob
+yD
+ei
+Mv
+vB
+vB
+vB
+vB
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+er
+er
+ZV
+uC
+ZV
+hd
+Oa
+Dd
+Dd
+Dd
+Dd
+Dd
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+"}
+(25,1,1) = {"
+eX
+eX
+eX
+eX
+eX
+er
+er
+Pv
+Rn
+rU
+aR
+qs
+SZ
+cg
+aR
+yD
+yD
+yD
+vB
+vB
+xD
+vB
+vB
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+er
+ZV
+ZV
+ZV
+ZV
+ju
+Oa
+Dd
+Dd
+Dd
+Dd
+Dd
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+"}
+(26,1,1) = {"
+eX
+eX
+eX
+eX
+eX
+Pv
+Pv
+Pv
+aR
+FU
+FU
+FU
+aR
+Pv
+Pv
+er
+er
+KO
+vB
+vB
+vB
+vB
+vB
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+"}
+(27,1,1) = {"
+er
+eX
+eX
+eX
+eX
+aR
+Rn
+FE
+Rn
+rA
+FU
+kM
+Rn
+Pv
+er
+er
+er
+er
+vB
+OH
+OH
+vB
+vB
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+"}
+(28,1,1) = {"
+er
+er
+er
+er
+er
+Pv
+pM
+zN
+EX
+yd
+xN
+IA
+Gt
+Pv
+Pv
+Pv
+er
+er
+vB
+vB
+vB
+vB
+vB
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+"}
+(29,1,1) = {"
+er
+er
+er
+er
+er
+Pv
+DZ
+vu
+SZ
+TG
+FU
+aK
+Mq
+Dd
+Dd
+Pv
+er
+er
+vB
+vB
+uF
+vB
+vB
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+"}
+(30,1,1) = {"
+er
+er
+er
+er
+er
+Pv
+Pv
+Pv
+Pv
+Pv
+Pv
+Pv
+Pv
+Pv
+Pv
+Pv
+er
+er
+vB
+vB
+vB
+fg
+fg
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+"}
+(31,1,1) = {"
+er
+er
+er
+er
+er
+er
+er
+er
+er
+er
+er
+er
+er
+er
+er
+er
+er
+er
+vB
+vB
+fg
+fg
+fg
+pG
+pG
+pG
+pG
+pG
+ZV
+ZV
+ZV
+ZV
+Yf
+er
+er
+er
+er
+Cl
+GO
+WE
+qr
+mj
+Eb
+qW
+pG
+pG
+pG
+pG
+pG
+pG
+"}
+(32,1,1) = {"
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+er
+er
+ZV
+ZV
+ZV
+ZV
+er
+er
+er
+AC
+AC
+Cl
+WE
+AR
+qW
+lB
+pG
+pG
+pG
+pG
+pG
+pG
+"}
+(33,1,1) = {"
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+er
+er
+NW
+ZV
+ZV
+WK
+ZV
+ZV
+ZV
+ZV
+oZ
+oZ
+Cl
+GO
+WE
+HM
+pG
+pG
+pG
+pG
+pG
+pG
+"}
+(34,1,1) = {"
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+Pv
+Pv
+Pv
+aR
+Pv
+Pv
+Pv
+er
+AZ
+ZV
+ZV
+jQ
+er
+er
+Cl
+WE
+pG
+pG
+pG
+pG
+pG
+pG
+"}
+(35,1,1) = {"
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+Pv
+PC
+Rn
+Rn
+EX
+ik
+Pv
+er
+er
+Pv
+aR
+Pv
+Pv
+Pv
+Pv
+Cl
+pG
+pG
+pG
+pG
+pG
+pG
+"}
+(36,1,1) = {"
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+Pv
+KB
+Rn
+Rn
+Rn
+Gr
+Pv
+Pv
+Pv
+Pv
+vi
+Mq
+Rn
+EX
+Pv
+er
+pG
+pG
+pG
+pG
+pG
+pG
+"}
+(37,1,1) = {"
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+Pv
+Ua
+EX
+SZ
+EX
+MM
+aR
+EX
+FU
+FU
+xN
+Ja
+kc
+Rn
+Pv
+er
+pG
+pG
+pG
+pG
+pG
+pG
+"}
+(38,1,1) = {"
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+Pv
+Nu
+Rn
+SZ
+PA
+EX
+FU
+oN
+aR
+EX
+Mq
+rU
+Rn
+EX
+Pv
+er
+pG
+pG
+pG
+pG
+pG
+pG
+"}
+(39,1,1) = {"
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+Pv
+Pv
+Pv
+Pv
+Pv
+Pv
+Pv
+Pv
+Pv
+Pv
+Pv
+Pv
+Pv
+Pv
+Pv
+er
+pG
+pG
+pG
+pG
+pG
+pG
+"}
+(40,1,1) = {"
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+er
+er
+er
+er
+er
+er
+er
+er
+er
+er
+er
+er
+er
+er
+er
+er
+pG
+pG
+pG
+pG
+pG
+pG
+"}
+(41,1,1) = {"
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+"}
+(42,1,1) = {"
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+"}
+(43,1,1) = {"
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+"}
+(44,1,1) = {"
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+"}
+(45,1,1) = {"
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+"}
+(46,1,1) = {"
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+"}
+(47,1,1) = {"
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+"}
+(48,1,1) = {"
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+"}
+(49,1,1) = {"
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+"}
+(50,1,1) = {"
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+pG
+"}
