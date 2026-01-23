@@ -261,6 +261,7 @@
 			amount_per_transfer_from_this = clamp(round(text2num(params["amount"]), 1), min_transfer_amount, max_transfer_amount) // Round to nearest 1, clamp between min and max transfer amount
 			. = TRUE
 
+		/* Outpost 21 edit - NOPE NOPE NOPE NOPE NOPE FORBIDDEN, stop making chemistry even more powerful, Remove chemistry import files
 		if("import_config")
 			var/list/our_data = params["config"]
 			if(!islist(our_data))
@@ -274,6 +275,7 @@
 			if(length(new_recipes))
 				saved_recipes = new_recipes
 			. = TRUE
+		*/
 
 		if("record_recipe")
 			recording_recipe = list()
