@@ -3785,7 +3785,7 @@
 /obj/machinery/doorbell_chime/medical{
 	name = "Medical Non-Emergency Request";
 	pixel_x = -32;
-	id = "medding"
+	id_tag = "medding"
 	},
 /turf/simulated/floor/tiled/white{
 	oxygen = 0;
@@ -7585,7 +7585,7 @@
 /obj/machinery/doorbell_chime/medical{
 	name = "Medical Non-Emergency Request";
 	pixel_x = 32;
-	id = "medding"
+	id_tag = "medding"
 	},
 /turf/simulated/floor/wood{
 	oxygen = 0;
@@ -19309,7 +19309,7 @@
 /obj/machinery/doorbell_chime/medical{
 	name = "Medical Non-Emergency Request";
 	pixel_y = 32;
-	id = "medding"
+	id_tag = "medding"
 	},
 /turf/simulated/floor/tiled/milspec/sterile,
 /area/medical/surgtrain)
@@ -19417,7 +19417,7 @@
 /obj/machinery/doorbell_chime/medical{
 	name = "Medical Non-Emergency Request";
 	pixel_y = 32;
-	id = "medding"
+	id_tag = "medding"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/medical/biostorage)
@@ -22842,7 +22842,7 @@
 /obj/machinery/doorbell_chime/medical{
 	name = "Medical Non-Emergency Request";
 	pixel_y = 32;
-	id = "medding"
+	id_tag = "medding"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/medical/medbay2)
@@ -24798,7 +24798,7 @@
 /obj/machinery/doorbell_chime/medical{
 	name = "Medical Non-Emergency Request";
 	pixel_y = -30;
-	id = "medding"
+	id_tag = "medding"
 	},
 /turf/simulated/floor/tiled/freezer/cold,
 /area/medical/surgery_storage)
@@ -26332,7 +26332,7 @@
 /obj/machinery/doorbell_chime/medical{
 	name = "Medical Non-Emergency Request";
 	pixel_x = 32;
-	id = "medding"
+	id_tag = "medding"
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/chem_storage)
@@ -64259,7 +64259,7 @@
 /obj/machinery/doorbell_chime/medical{
 	name = "Medical Non-Emergency Request";
 	pixel_y = 32;
-	id = "medding"
+	id_tag = "medding"
 	},
 /turf/simulated/floor/tiled/white,
 /area/engineering/refinery/lab)
@@ -66359,7 +66359,7 @@
 /obj/machinery/doorbell_chime/medical{
 	name = "Medical Non-Emergency Request";
 	pixel_y = -30;
-	id = "medding"
+	id_tag = "medding"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/medical/morgue)
@@ -66379,7 +66379,7 @@
 /obj/machinery/doorbell_chime/medical{
 	name = "Medical Non-Emergency Request";
 	pixel_y = -30;
-	id = "medding"
+	id_tag = "medding"
 	},
 /turf/simulated/floor/tiled/dark/turfpack/muriki,
 /area/engineering/refinery/main)
@@ -66393,7 +66393,7 @@
 /obj/machinery/doorbell_chime/medical{
 	name = "Medical Non-Emergency Request";
 	pixel_y = -30;
-	id = "medding"
+	id_tag = "medding"
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay2)
@@ -66408,7 +66408,7 @@
 /obj/machinery/doorbell_chime/medical{
 	name = "Medical Non-Emergency Request";
 	pixel_x = -32;
-	id = "medding"
+	id_tag = "medding"
 	},
 /turf/simulated/floor/tiled/white{
 	oxygen = 0;
@@ -71354,7 +71354,7 @@
 /obj/machinery/doorbell_chime/medical{
 	name = "Medical Non-Emergency Request";
 	pixel_y = 32;
-	id = "medding"
+	id_tag = "medding"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/medical/autosleever)
@@ -71790,7 +71790,7 @@
 /obj/machinery/doorbell_chime/medical{
 	name = "Medical Non-Emergency Request";
 	pixel_y = 32;
-	id = "medding"
+	id_tag = "medding"
 	},
 /turf/simulated/floor/tiled/dark/turfpack/muriki,
 /area/engineering/refinery/main)
@@ -73488,7 +73488,7 @@
 /obj/machinery/doorbell_chime/medical{
 	name = "Medical Non-Emergency Request";
 	pixel_x = 32;
-	id = "medding"
+	id_tag = "medding"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/constructionsite/medical)
@@ -74013,7 +74013,7 @@
 /obj/machinery/doorbell_chime/medical{
 	name = "Medical Non-Emergency Request";
 	pixel_y = 32;
-	id = "medding"
+	id_tag = "medding"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/refinery/tugstorage)
