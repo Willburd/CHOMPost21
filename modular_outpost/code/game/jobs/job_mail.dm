@@ -17,3 +17,6 @@
 		/obj/item/pen/fountain6 = 50
 	)
 	mail_color = COMMS_COLOR_COMMAND
+
+/datum/job/roboticist
+	mail_color = COMMS_COLOR_ENGINEER
