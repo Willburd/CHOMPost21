@@ -3768,11 +3768,6 @@
 /area/medical/voxlab/surgery)
 "ahs" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/doorbell_chime{
-	id_tag = "medding";
-	name = "Medical Dinger";
-	pixel_x = -32
-	},
 /obj/effect/floor_decal/corner/black{
 	dir = 9
 	},
@@ -3786,6 +3781,11 @@
 	},
 /obj/effect/floor_decal/corner/blue{
 	dir = 8
+	},
+/obj/machinery/doorbell_chime/medical{
+	name = "Medical Non-Emergency Request";
+	pixel_x = -32;
+	id = "medding"
 	},
 /turf/simulated/floor/tiled/white{
 	oxygen = 0;
@@ -7569,11 +7569,6 @@
 	},
 /area/medical/voxlab/breakroom)
 "anN" = (
-/obj/machinery/doorbell_chime{
-	id_tag = "medding";
-	name = "Medical Dinger";
-	pixel_x = 32
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
 	},
@@ -7586,6 +7581,11 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
+	},
+/obj/machinery/doorbell_chime/medical{
+	name = "Medical Non-Emergency Request";
+	pixel_x = 32;
+	id = "medding"
 	},
 /turf/simulated/floor/wood{
 	oxygen = 0;
@@ -10862,11 +10862,6 @@
 /obj/machinery/computer/med_data/laptop,
 /obj/effect/floor_decal/corner/black{
 	dir = 6
-	},
-/obj/machinery/doorbell_chime{
-	id_tag = "medding";
-	name = "Medical Dinger";
-	pixel_x = 32
 	},
 /obj/effect/floor_decal/corner/blue,
 /turf/simulated/floor/tiled/white{
@@ -19304,11 +19299,6 @@
 /turf/simulated/floor/tiled/milspec/sterile,
 /area/medical/surgtrain)
 "aIN" = (
-/obj/machinery/doorbell_chime{
-	id_tag = "medding";
-	name = "Medical Dinger";
-	pixel_y = 32
-	},
 /obj/effect/floor_decal/milspec/color/blue/half{
 	dir = 1
 	},
@@ -19316,6 +19306,11 @@
 	c_tag = "MED - Surgery Training"
 	},
 /obj/machinery/oxygen_pump/mobile/stabilizer,
+/obj/machinery/doorbell_chime/medical{
+	name = "Medical Non-Emergency Request";
+	pixel_y = 32;
+	id = "medding"
+	},
 /turf/simulated/floor/tiled/milspec/sterile,
 /area/medical/surgtrain)
 "aIO" = (
@@ -19379,11 +19374,6 @@
 /obj/structure/table/rack,
 /obj/item/handcuffs/legcuffs/fuzzy,
 /obj/item/handcuffs/fuzzy,
-/obj/machinery/doorbell_chime{
-	id_tag = "medding";
-	name = "Medical Dinger";
-	pixel_y = 32
-	},
 /turf/simulated/floor/tiled/dark,
 /area/medical/biostorage)
 "aIU" = (
@@ -19424,6 +19414,11 @@
 /area/medical/biostorage)
 "aIW" = (
 /obj/structure/closet/l3closet/medical,
+/obj/machinery/doorbell_chime/medical{
+	name = "Medical Non-Emergency Request";
+	pixel_y = 32;
+	id = "medding"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/medical/biostorage)
 "aIX" = (
@@ -22844,10 +22839,10 @@
 /obj/effect/floor_decal/steeldecal/steel_decals10{
 	dir = 8
 	},
-/obj/machinery/doorbell_chime{
-	id_tag = "medding";
-	name = "Medical Dinger";
-	pixel_y = 32
+/obj/machinery/doorbell_chime/medical{
+	name = "Medical Non-Emergency Request";
+	pixel_y = 32;
+	id = "medding"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/medical/medbay2)
@@ -23378,9 +23373,6 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/item/radio/intercom/department/security{
-	pixel_y = -33
-	},
 /turf/simulated/floor/wood,
 /area/muriki/crew/judge)
 "aQb" = (
@@ -23772,11 +23764,6 @@
 /obj/structure/morgue,
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 5
-	},
-/obj/machinery/doorbell_chime{
-	id_tag = "medding";
-	name = "Medical Dinger";
-	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/dark,
 /area/medical/morgue)
@@ -24808,10 +24795,10 @@
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 10
 	},
-/obj/machinery/doorbell_chime{
-	id_tag = "medding";
-	name = "Medical Dinger";
-	pixel_y = -32
+/obj/machinery/doorbell_chime/medical{
+	name = "Medical Non-Emergency Request";
+	pixel_y = -30;
+	id = "medding"
 	},
 /turf/simulated/floor/tiled/freezer/cold,
 /area/medical/surgery_storage)
@@ -24866,11 +24853,6 @@
 /obj/item/reagent_containers/blood/synthblood,
 /obj/item/reagent_containers/blood/synthblood,
 /obj/item/reagent_containers/blood/synthblood,
-/obj/machinery/doorbell_chime{
-	id_tag = "medding";
-	name = "Medical Dinger";
-	pixel_y = 32
-	},
 /turf/simulated/floor/tiled/freezer/cold,
 /area/medical/surgery_storage)
 "aTp" = (
@@ -26338,11 +26320,6 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/chem_storage)
 "aVM" = (
-/obj/machinery/doorbell_chime{
-	id_tag = "medding";
-	name = "Medical Dinger";
-	pixel_x = 32
-	},
 /obj/effect/floor_decal/corner/blue{
 	dir = 6
 	},
@@ -26351,6 +26328,11 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals10{
 	dir = 10
+	},
+/obj/machinery/doorbell_chime/medical{
+	name = "Medical Non-Emergency Request";
+	pixel_x = 32;
+	id = "medding"
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/chem_storage)
@@ -49856,11 +49838,6 @@
 /obj/effect/floor_decal/corner/paleblue/full{
 	dir = 1
 	},
-/obj/machinery/doorbell_chime{
-	id_tag = "cargodinger";
-	name = "Cargo Dinger";
-	pixel_x = 30
-	},
 /obj/item/bodybag/cryobag,
 /obj/item/radio/intercom{
 	dir = 1;
@@ -64279,10 +64256,10 @@
 /obj/effect/floor_decal/corner/orange{
 	dir = 1
 	},
-/obj/machinery/doorbell_chime{
-	id_tag = "medding";
-	name = "Medical Dinger";
-	pixel_y = 32
+/obj/machinery/doorbell_chime/medical{
+	name = "Medical Non-Emergency Request";
+	pixel_y = 32;
+	id = "medding"
 	},
 /turf/simulated/floor/tiled/white,
 /area/engineering/refinery/lab)
@@ -66375,6 +66352,69 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/medical/tankstore)
+"czE" = (
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 10
+	},
+/obj/machinery/doorbell_chime/medical{
+	name = "Medical Non-Emergency Request";
+	pixel_y = -30;
+	id = "medding"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/medical/morgue)
+"czF" = (
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/blue{
+	dir = 10
+	},
+/obj/effect/floor_decal/corner/orange{
+	dir = 8
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/doorbell_chime/medical{
+	name = "Medical Non-Emergency Request";
+	pixel_y = -30;
+	id = "medding"
+	},
+/turf/simulated/floor/tiled/dark/turfpack/muriki,
+/area/engineering/refinery/main)
+"czG" = (
+/obj/effect/floor_decal/corner/blue{
+	dir = 10
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/doorbell_chime/medical{
+	name = "Medical Non-Emergency Request";
+	pixel_y = -30;
+	id = "medding"
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/medbay2)
+"czH" = (
+/obj/effect/floor_decal/corner/black{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/purple,
+/obj/effect/floor_decal/corner/blue{
+	dir = 8
+	},
+/obj/machinery/doorbell_chime/medical{
+	name = "Medical Non-Emergency Request";
+	pixel_x = -32;
+	id = "medding"
+	},
+/turf/simulated/floor/tiled/white{
+	oxygen = 0;
+	phoron = 21.8366
+	},
+/area/medical/voxlab/main)
 "cCT" = (
 /obj/effect/floor_decal/corner/blue/full{
 	dir = 8
@@ -66383,6 +66423,11 @@
 	dir = 1
 	},
 /obj/machinery/vending/tool,
+/obj/machinery/doorbell_chime{
+	id_tag = "engdinger";
+	name = "Engineering Dinger";
+	pixel_y = 32
+	},
 /turf/simulated/floor/tiled/dark/turfpack/muriki,
 /area/engineering/refinery/main)
 "cCW" = (
@@ -71302,15 +71347,15 @@
 	dir = 2;
 	icon_state = "pipe-c"
 	},
-/obj/machinery/doorbell_chime{
-	id_tag = "medding";
-	name = "Medical Dinger";
-	pixel_y = 32
-	},
 /obj/effect/floor_decal/corner/blue/full{
 	dir = 1
 	},
 /obj/machinery/vending/fooddessert,
+/obj/machinery/doorbell_chime/medical{
+	name = "Medical Non-Emergency Request";
+	pixel_y = 32;
+	id = "medding"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/medical/autosleever)
 "ipM" = (
@@ -71736,14 +71781,16 @@
 /obj/item/circuitboard/industrial_reagent_grinder,
 /obj/item/circuitboard/industrial_reagent_grinder,
 /obj/machinery/atmospherics/unary/vent_pump/on,
-/obj/machinery/alarm{
-	pixel_y = 26
-	},
 /obj/effect/floor_decal/corner/blue{
 	dir = 5
 	},
 /obj/effect/floor_decal/corner/orange{
 	dir = 1
+	},
+/obj/machinery/doorbell_chime/medical{
+	name = "Medical Non-Emergency Request";
+	pixel_y = 32;
+	id = "medding"
 	},
 /turf/simulated/floor/tiled/dark/turfpack/muriki,
 /area/engineering/refinery/main)
@@ -73438,6 +73485,11 @@
 /obj/item/storage/pouch/ifak,
 /obj/item/storage/pouch/ifak,
 /obj/structure/table/rack,
+/obj/machinery/doorbell_chime/medical{
+	name = "Medical Non-Emergency Request";
+	pixel_x = 32;
+	id = "medding"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/constructionsite/medical)
 "kwU" = (
@@ -73958,10 +74010,10 @@
 	},
 /obj/item/geiger/wall/west,
 /obj/item/tool/crowbar/red,
-/obj/machinery/doorbell_chime{
-	id_tag = "medding";
-	name = "Medical Dinger";
-	pixel_y = 32
+/obj/machinery/doorbell_chime/medical{
+	name = "Medical Non-Emergency Request";
+	pixel_y = 32;
+	id = "medding"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/refinery/tugstorage)
@@ -75687,10 +75739,8 @@
 /obj/effect/floor_decal/corner/orange{
 	dir = 1
 	},
-/obj/machinery/doorbell_chime{
-	id_tag = "medding";
-	name = "Medical Dinger";
-	pixel_y = 32
+/obj/machinery/alarm{
+	pixel_y = 26
 	},
 /turf/simulated/floor/tiled/dark/turfpack/muriki,
 /area/engineering/refinery/main)
@@ -77339,16 +77389,16 @@
 /obj/item/circuitboard/industrial_reagent_pump,
 /obj/item/circuitboard/industrial_reagent_pump,
 /obj/item/circuitboard/industrial_reagent_pump,
-/obj/structure/extinguisher_cabinet{
-	pixel_x = -5;
-	pixel_y = 30
-	},
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /obj/effect/floor_decal/corner/blue{
 	dir = 5
 	},
 /obj/effect/floor_decal/corner/orange{
 	dir = 1
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -5;
+	pixel_y = 30
 	},
 /turf/simulated/floor/tiled/dark/turfpack/muriki,
 /area/engineering/refinery/main)
@@ -77412,8 +77462,8 @@
 	name = "disposal mail destination(Refinery)"
 	},
 /obj/machinery/doorbell_chime{
-	id_tag = "medding";
-	name = "Medical Dinger";
+	id_tag = "engdinger";
+	name = "Engineering Dinger";
 	pixel_y = -30
 	},
 /turf/simulated/floor/tiled/dark/turfpack/muriki,
@@ -121793,7 +121843,7 @@ fDP
 aZA
 fDP
 fDP
-rPI
+czF
 fzx
 fzx
 chd
@@ -126005,7 +126055,7 @@ aLD
 aII
 aII
 aOd
-aPc
+czG
 aPD
 aTo
 aRA
@@ -126145,7 +126195,7 @@ apl
 aqv
 arC
 aqv
-aqv
+czH
 auI
 avU
 aeH
@@ -128118,7 +128168,7 @@ aRH
 aSo
 aSU
 aSU
-aSs
+czE
 aKP
 rzl
 gsI
@@ -128597,7 +128647,7 @@ aLR
 aMV
 aIR
 aOh
-aPc
+czG
 aPH
 aQO
 aRK
