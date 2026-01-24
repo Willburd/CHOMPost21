@@ -3,7 +3,7 @@
 
 /datum/controller/subsystem/sounds/create_talk_sound_map()
 	. = ..() // Extend the base sounds!
-	talk_sound_map["Vox Shriek"] = list('sound/voice/shriek1.ogg')
+	talk_sound_map["Vox Shriek"] = list('modular_outpost/sound/voice/shriek1.ogg') // Outpost 21 edit - Vox sounds reduced in volume
 	// Bubbers base
 	talk_sound_map["Muted String (Low)"] = list('sound/runtime/instruments/synthesis_samples/guitar/crisis_muted/C2.ogg')
 	talk_sound_map["Muted String (Medium)"] = list('sound/runtime/instruments/synthesis_samples/guitar/crisis_muted/C3.ogg')
