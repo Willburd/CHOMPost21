@@ -41457,7 +41457,7 @@
 /obj/machinery/button/doorbell{
 	name = "Medical Request";
 	pixel_x = -28;
-	id = "medding"
+	id_tag = "medding"
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
