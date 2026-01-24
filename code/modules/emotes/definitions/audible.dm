@@ -229,7 +229,7 @@
 /decl/emote/audible/vox_shriek
 	key = "shriek"
 	emote_message_3p = "SHRIEKS!"
-	emote_sound = 'sound/voice/shriek1.ogg'
+	emote_sound = 'modular_outpost/sound/voice/shriek1.ogg' // Outpost 21 edit - Vox sounds reduced in volume
 
 /decl/emote/audible/caw
 	key = "caw"

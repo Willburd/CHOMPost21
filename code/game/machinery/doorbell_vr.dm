@@ -89,6 +89,7 @@
 	icon = 'icons/obj/machines/doorbell_vr.dmi'
 	icon_state = "doorbell-standby"
 	use_power = USE_POWER_OFF
+	var/delay_time = 0 // Outpost 21 edit - Dinger delay
 
 /obj/machinery/button/doorbell/Initialize(mapload, var/dir, var/building = FALSE)
 	. = ..()
@@ -117,6 +118,14 @@
 	user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
 	if(..())
 		return
+
+	// Outpost 21 edit begin - Dinger delay
+	if(world.time < delay_time)
+		to_chat(user, "The bell is recharging.")
+		return
+	delay_time = world.time + 5 SECONDS
+	// Outpost 21 edit end
+
 	use_power(5)
 	flick("doorbell-active", src)
 

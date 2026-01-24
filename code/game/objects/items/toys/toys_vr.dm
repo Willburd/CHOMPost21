@@ -185,7 +185,7 @@
 	icon = 'icons/obj/toy.dmi'
 	icon_state = "plushie_vox"
 	pokephrase = "Skreee!"
-	squeeze_sound = 'sound/voice/shriek1.ogg'
+	squeeze_sound = 'modular_outpost/sound/voice/shriek1.ogg' // Outpost 21 edit - Vox sounds reduced in volume
 
 
 /obj/item/toy/plushie/ipc

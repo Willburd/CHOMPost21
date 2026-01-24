@@ -410,7 +410,7 @@
 		var/yy = rand(5,10) * (prob(50) ? 1 : -1)
 		var/turf/T = locate(goal_turf.x + xx,goal_turf.y + yy,goal_turf.z)
 		if(T)
-			var/screm = pick(list('sound/voice/shriek1.ogg','sound/voice/teshscream.ogg','sound/voice/malescream_2.ogg','sound/hallucinations/far_noise.ogg'))
+			var/screm = pick(list('modular_outpost/sound/voice/shriek1.ogg','sound/voice/teshscream.ogg','sound/voice/malescream_2.ogg','sound/hallucinations/far_noise.ogg'))
 			M.playsound_local(T, screm, 40)
 	end()
 
