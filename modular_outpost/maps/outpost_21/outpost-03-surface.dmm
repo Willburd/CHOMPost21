@@ -6289,7 +6289,7 @@
 	dir = 1
 	},
 /obj/machinery/button/doorbell{
-	id_tag = "medding";
+	id = "medding";
 	name = "Medical Non-Emergency Request";
 	pixel_x = -27;
 	pixel_y = 27;
