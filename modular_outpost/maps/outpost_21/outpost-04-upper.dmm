@@ -2219,6 +2219,17 @@
 	can_open = 1
 	},
 /area/maintenance/medbay_fore)
+"aeT" = (
+/obj/effect/floor_decal/corner/blue{
+	dir = 9
+	},
+/obj/machinery/doorbell_chime/medical{
+	name = "Medical Non-Emergency Request";
+	pixel_x = -32;
+	id = "medding"
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/patient_wing)
 "afb" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
@@ -6232,15 +6243,15 @@
 /turf/simulated/floor/plating,
 /area/hydroponics/hallway)
 "bZu" = (
-/obj/machinery/doorbell_chime{
-	id_tag = "medding";
-	name = "Medical Dinger";
-	pixel_x = -32
-	},
 /obj/effect/floor_decal/corner/blue/diagonal,
 /obj/machinery/camera/network/medbay{
 	c_tag = "MED - Genetics West";
 	dir = 4
+	},
+/obj/machinery/doorbell_chime/medical{
+	name = "Medical Non-Emergency Request";
+	pixel_x = -32;
+	id = "medding"
 	},
 /turf/simulated/floor/wmarble,
 /area/medical/genetics)
@@ -25390,10 +25401,10 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/machinery/doorbell_chime{
-	id_tag = "medding";
-	name = "Medical Dinger";
-	pixel_y = -32
+/obj/machinery/doorbell_chime/medical{
+	name = "Medical Non-Emergency Request";
+	pixel_y = -30;
+	id = "medding"
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/patient_wing)
@@ -28356,6 +28367,11 @@
 /obj/effect/floor_decal/corner/blue/full{
 	dir = 8
 	},
+/obj/machinery/doorbell_chime/medical{
+	name = "Medical Non-Emergency Request";
+	pixel_y = 32;
+	id = "medding"
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/patient_wing)
 "nos" = (
@@ -29171,11 +29187,6 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/phoronics)
 "nNJ" = (
-/obj/machinery/doorbell_chime{
-	id_tag = "medding";
-	name = "Medical Dinger";
-	pixel_x = -32
-	},
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 10
 	},
@@ -29183,6 +29194,11 @@
 /obj/machinery/camera/network/medbay{
 	c_tag = "MED - Chief Medical Officer's Office";
 	dir = 4
+	},
+/obj/machinery/doorbell_chime/medical{
+	name = "Medical Non-Emergency Request";
+	pixel_x = -32;
+	id = "medding"
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/heads/cmo)
@@ -32925,17 +32941,17 @@
 /turf/simulated/floor/plating,
 /area/medical/patient_wing)
 "pFx" = (
-/obj/machinery/doorbell_chime{
-	id_tag = "medding";
-	name = "Medical Dinger";
-	pixel_x = 32
-	},
 /obj/machinery/disposal,
 /obj/structure/disposalpipe/trunk{
 	dir = 8
 	},
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 4
+	},
+/obj/machinery/doorbell_chime/medical{
+	name = "Medical Non-Emergency Request";
+	pixel_x = 32;
+	id = "medding"
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/medbreak)
@@ -33418,10 +33434,10 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
 	},
-/obj/machinery/doorbell_chime{
-	id_tag = "medding";
-	name = "Medical Dinger";
-	pixel_x = -32
+/obj/machinery/doorbell_chime/medical{
+	name = "Medical Non-Emergency Request";
+	pixel_x = -32;
+	id = "medding"
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/medbreak)
@@ -45106,10 +45122,10 @@
 /obj/effect/floor_decal/corner/blue{
 	dir = 10
 	},
-/obj/machinery/doorbell_chime{
-	id_tag = "medding";
-	name = "Medical Dinger";
-	pixel_y = -32
+/obj/machinery/doorbell_chime/medical{
+	name = "Medical Non-Emergency Request";
+	pixel_y = -30;
+	id = "medding"
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/evastore)
@@ -47837,6 +47853,11 @@
 	},
 /obj/structure/railing/grey{
 	dir = 4
+	},
+/obj/machinery/doorbell_chime/medical{
+	name = "Medical Non-Emergency Request";
+	pixel_y = -30;
+	id = "medding"
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/medical/hangar)
@@ -89896,7 +89917,7 @@ oTD
 gxW
 gxW
 xKC
-oTD
+aeT
 uyn
 wzE
 eyr

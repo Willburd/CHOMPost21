@@ -34209,6 +34209,13 @@
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 10
 	},
+/obj/machinery/button/remote/blast_door{
+	dir = 4;
+	id = "medgarage";
+	name = "Garage Door Opener";
+	pixel_x = -28;
+	pixel_y = 6
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/vehicle_interior/heavyarmor_medic_recovery)
 "rEV" = (
