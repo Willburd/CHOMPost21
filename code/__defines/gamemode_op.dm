@@ -51,7 +51,7 @@ var/global/list/special_roles = list( //keep synced with the defines BE_* in set
 	"synx" = 1,											// 20
 )
 
-var/list/be_special_flags = list(
+GLOBAL_LIST_INIT(be_special_flags, list(
 	"Traitor"          = BE_TRAITOR,
 	"Operative"        = BE_OPERATIVE,
 	"Changeling"       = BE_CHANGELING,
@@ -73,4 +73,4 @@ var/list/be_special_flags = list(
 	"Deep Hunger"      = BE_DEEPHUNGER,
 	"Zombie"           = BE_ZOMBIE,
 	"Synx"             = BE_SYNX
-)
+))
