@@ -5841,6 +5841,7 @@
 #include "modular_outpost\code\modules\mob\enzyme_immune.dm"
 #include "modular_outpost\code\modules\mob\hear_say.dm"
 #include "modular_outpost\code\modules\mob\transform_procs.dm"
+#include "modular_outpost\code\modules\mob\_modifiers\modifiers_op.dm"
 #include "modular_outpost\code\modules\mob\dead\observer.dm"
 #include "modular_outpost\code\modules\mob\language\animal.dm"
 #include "modular_outpost\code\modules\mob\language\language.dm"
