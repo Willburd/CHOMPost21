@@ -162,6 +162,7 @@
 	var/belly_fullscreen_alpha = 255
 
 	// Liquid belly vars
+	var/reagent_gen_cost_limit = 10			//Our lower percentage limit of nutrition / charge until which we produce liquids
 	var/reagentbellymode = FALSE			// Belly has abilities to make liquids from digested/absorbed/drained prey and/or nutrition
 	var/reagent_mode_flags = 0
 
@@ -379,6 +380,7 @@
 	"colorization_enabled",
 	"show_liquids",
 	"reagentbellymode",
+	"reagent_gen_cost_limit",
 	"liquid_fullness1_messages",
 	"liquid_fullness2_messages",
 	"liquid_fullness3_messages",
@@ -655,12 +657,12 @@
 			owner.handle_belly_update() // This is run whenever a belly's contents are changed.
 		var/obj/item/I = thing
 		if(I.gurgled)
-			I.cut_overlay(gurgled_overlays[I.gurgled_color]) //No double-overlay for worn items.
-			I.add_overlay(gurgled_overlays[I.gurgled_color])
+			I.cut_overlay(GLOB.gurgled_overlays[I.gurgled_color]) //No double-overlay for worn items.
+			I.add_overlay(GLOB.gurgled_overlays[I.gurgled_color])
 		if(I.d_mult < 1)
 			if(I.d_stage_overlay)
 				I.cut_overlay(I.d_stage_overlay)
-			var/image/temp = new /image(gurgled_overlays[I.gurgled_color ? I.gurgled_color : "green"])
+			var/image/temp = new /image(GLOB.gurgled_overlays[I.gurgled_color ? I.gurgled_color : "green"])
 			temp.filters += filter(type = "alpha", icon = icon(I.icon, I.icon_state))
 			I.d_stage_overlay = temp
 			for(var/count in I.d_mult to 1 step 0.25)
@@ -1361,6 +1363,7 @@
 	dupe.belly_fullscreen_color4 = belly_fullscreen_color4
 	dupe.belly_fullscreen_alpha = belly_fullscreen_alpha
 	dupe.show_liquids = show_liquids
+	dupe.reagent_gen_cost_limit = reagent_gen_cost_limit
 	dupe.reagentbellymode = reagentbellymode
 	dupe.vorefootsteps_sounds = vorefootsteps_sounds
 	dupe.liquid_fullness1_messages = liquid_fullness1_messages
