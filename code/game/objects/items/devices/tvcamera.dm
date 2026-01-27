@@ -321,12 +321,14 @@
 
 /obj/item/clothing/accessory/bodycam/update_icon()
 	..()
+	/* Outpost 21 edit(port) - Unneeded icon setting
 	if(bcamera.status)
 		icon_state = "eshield"
 		item_state = "eshield"
 	else
 		icon_state = "eshield"
 		item_state = "eshield"
+	*/
 	var/mob/living/carbon/human/H = loc
 	if(istype(H))
 		H.update_inv_r_hand()

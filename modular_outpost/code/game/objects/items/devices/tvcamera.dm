@@ -4,6 +4,7 @@
 	channel = "YoBro Default Feed"
 	icon = 'modular_outpost/icons/obj/weapons.dmi'
 	icon_state = "yobro"
+	item_state = "yobro"
 
 /obj/item/clothing/accessory/bodycam/yobro/Initialize(mapload)
 	. = ..()
