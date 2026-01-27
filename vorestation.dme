@@ -5256,6 +5256,7 @@
 #include "modular_chomp\code\game\objects\items\clockwork\ratvarian_spear.dm"
 #include "modular_chomp\code\game\objects\items\devices\flipper.dm"
 #include "modular_chomp\code\game\objects\items\devices\mind_binder.dm"
+#include "modular_chomp\code\game\objects\items\devices\tvcamera.dm"
 #include "modular_chomp\code\game\objects\items\devices\radio\encryptionkey.dm"
 #include "modular_chomp\code\game\objects\items\devices\radio\headset.dm"
 #include "modular_chomp\code\game\objects\items\devices\radio\radio.dm"
