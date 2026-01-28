@@ -86,10 +86,7 @@
 //				pick_turfs -= exit
 				if( !exit || !istype(exit) )	continue	//sanity
 
-				if(prob(1))
-					redspace = TRUE // rare chance
-
-				if(redspace)
+				if(redspace || prob(1)) // rare chance
 					create_redspace_wormhole(enter,exit,FALSE,wormhole_min_duration,wormhole_max_duration)
 				else
 					create_wormhole(enter,exit,wormhole_min_duration,wormhole_max_duration)
