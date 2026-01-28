@@ -25733,6 +25733,10 @@
 /obj/structure/sign/signnew/explosives{
 	pixel_x = 32
 	},
+/obj/machinery/camera/network/medbay{
+	c_tag = "MED - Lower Hall Hazop";
+	dir = 8
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay2)
 "aUZ" = (
@@ -28393,6 +28397,11 @@
 	light_type = /obj/item/light/bulb/blue;
 	name = "Lasertag light fixture"
 	},
+/obj/item/clothing/accessory/bodycam/yobro,
+/obj/item/clothing/accessory/bodycam/yobro,
+/obj/item/clothing/accessory/bodycam/yobro,
+/obj/item/clothing/accessory/bodycam/yobro,
+/obj/structure/table/standard,
 /turf/simulated/floor/carpet/geo,
 /area/muriki/crew/arcade/lasertag)
 "aZK" = (
@@ -30469,6 +30478,11 @@
 /obj/item/juke_remote{
 	autolinkareajuke_onspawn = /area/djstation
 	},
+/obj/item/clothing/accessory/bodycam/yobro,
+/obj/item/clothing/accessory/bodycam/yobro,
+/obj/item/clothing/accessory/bodycam/yobro,
+/obj/item/clothing/accessory/bodycam/yobro,
+/obj/structure/table/standard,
 /turf/simulated/floor/carpet/geo,
 /area/muriki/crew/arcade/lasertag)
 "bdi" = (
@@ -79460,10 +79474,6 @@
 /obj/effect/floor_decal/corner/blue{
 	dir = 9
 	},
-/obj/machinery/camera/network/medbay{
-	c_tag = "MED - Lower Hall Hazop";
-	dir = 4
-	},
 /obj/structure/disposalpipe/trunk{
 	dir = 4
 	},
@@ -79634,6 +79644,7 @@
 /obj/effect/floor_decal/milspec/color/silver/half{
 	dir = 6
 	},
+/obj/item/clothing/accessory/bodycam/yobro,
 /turf/simulated/floor/tiled/milspec,
 /area/maintenance/oldbridge)
 "rsR" = (

@@ -2230,6 +2230,10 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/patient_wing)
+"aeU" = (
+/mob/living/simple_mob/vore/aggressive/corrupthound/swoopie/randomized,
+/turf/simulated/floor/wood,
+/area/rnd/research/phoronics/breakroom)
 "afb" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
@@ -9013,6 +9017,9 @@
 "duP" = (
 /obj/structure/table/woodentable,
 /obj/effect/landmark/event_spawn/dronepod_landing,
+/obj/item/clothing/accessory/bodycam/yobro,
+/obj/item/clothing/accessory/bodycam/yobro,
+/obj/item/clothing/accessory/bodycam/yobro,
 /turf/simulated/floor/tiled,
 /area/quartermaster/cargupbreak)
 "dve" = (
@@ -9807,7 +9814,6 @@
 	name = "Station Intercom (General)";
 	pixel_y = 21
 	},
-/mob/living/simple_mob/vore/aggressive/corrupthound/swoopie,
 /obj/effect/floor_decal/corner/paleblue/border,
 /turf/simulated/floor/tiled/dark{
 	nitrogen = 100;
@@ -44016,6 +44022,12 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
+/obj/item/clothing/accessory/bodycam/yobro,
+/obj/item/clothing/accessory/bodycam/yobro,
+/obj/item/clothing/accessory/bodycam/yobro,
+/obj/item/clothing/accessory/bodycam/yobro,
+/obj/item/clothing/accessory/bodycam/yobro,
+/obj/item/clothing/accessory/bodycam/yobro,
 /turf/simulated/floor/wood,
 /area/library_conference_room)
 "vcv" = (
@@ -44820,6 +44832,8 @@
 	pixel_y = -26
 	},
 /obj/item/universal_translator/ear,
+/obj/item/clothing/accessory/bodycam/yobro,
+/obj/item/clothing/accessory/bodycam/yobro,
 /turf/simulated/floor/wood,
 /area/djstation)
 "vut" = (
@@ -100225,7 +100239,7 @@ ovc
 ovc
 eGr
 gDH
-fOi
+aeU
 hFK
 xNc
 bCs

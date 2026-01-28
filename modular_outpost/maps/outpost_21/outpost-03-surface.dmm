@@ -12453,6 +12453,21 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay)
+"axw" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/table/woodentable,
+/obj/item/clothing/accessory/bodycam/yobro,
+/obj/item/clothing/accessory/bodycam/yobro,
+/obj/item/clothing/accessory/bodycam/yobro,
+/turf/simulated/floor/wood,
+/area/engineering/break_room)
+"axx" = (
+/obj/structure/table/woodentable,
+/obj/item/clothing/accessory/bodycam/yobro,
+/obj/item/clothing/accessory/bodycam/yobro,
+/obj/item/clothing/accessory/bodycam/yobro,
+/turf/simulated/floor/wood,
+/area/rnd/breakroom)
 "axF" = (
 /mob/living/simple_mob/vore/slug,
 /turf/simulated/mineral/floor/turfpack/muriki{
@@ -57261,6 +57276,9 @@
 /obj/structure/cable/green{
 	icon_state = "0-2"
 	},
+/obj/item/clothing/accessory/bodycam/yobro,
+/obj/item/clothing/accessory/bodycam/yobro,
+/obj/item/clothing/accessory/bodycam/yobro,
 /turf/simulated/floor/tiled,
 /area/quartermaster/mining)
 "ows" = (
@@ -112248,7 +112266,7 @@ uKK
 vwz
 vOo
 whX
-lIh
+axw
 oXx
 lIh
 ykZ
@@ -136688,7 +136706,7 @@ are
 coj
 rbR
 wPy
-oYS
+axx
 oYS
 hZc
 dFz
