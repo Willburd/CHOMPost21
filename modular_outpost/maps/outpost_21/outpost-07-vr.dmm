@@ -1,4 +1,9 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aaa" = (
+/obj/effect/landmark/corpse/miner,
+/mob,
+/turf/simulated/floor/tiled,
+/area/vr/bloodstar)
 "aad" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -3094,8 +3099,8 @@
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 8;
-	frequency = 1380;
-	id_tag = "engineering_dock_pump"
+	id_tag = "engineering_dock_pump";
+	frequency = 1379
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/vr/bloodstar)
@@ -17893,7 +17898,6 @@
 	dir = 1;
 	external_pressure_bound = 100;
 	external_pressure_bound_default = 0;
-	frequency = 1438;
 	icon_state = "map_vent_in";
 	id_tag = "vr_cooling_out";
 	initialize_directions = 1;
@@ -24961,11 +24965,6 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/vr/bloodstar)
 "hKG" = (
-/obj/machinery/air_sensor{
-	frequency = 1438;
-	id_tag = "engine_sensor";
-	output = 63
-	},
 /obj/effect/floor_decal/industrial/warning,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
@@ -27456,7 +27455,7 @@
 /area/vr/bloodstar)
 "izc" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1380;
+	frequency = 1379;
 	id_tag = "research_dock_pump"
 	},
 /obj/effect/floor_decal/industrial/warning{
@@ -42209,14 +42208,6 @@
 /area/vr/bloodstar)
 "mZW" = (
 /obj/machinery/light,
-/obj/machinery/embedded_controller/radio/docking_port_multi{
-	child_names_txt = "Airlock One;Airlock Two;Airlock Three;Airlock Four";
-	child_tags_txt = "escape_dock_north_airlock;escape_dock_south_airlock;escape_dock_snorth_airlock;escape_dock_ssouth_airlock";
-	frequency = 1380;
-	id_tag = "escape_dock";
-	pixel_y = -25;
-	req_one_access = list(13)
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
@@ -54153,7 +54144,7 @@
 "qKr" = (
 /obj/machinery/atmospherics/unary/outlet_injector{
 	dir = 1;
-	frequency = 1438;
+	frequency = 1439;
 	id = "vr_cooling_in";
 	name = "Coolant Injector";
 	pixel_y = 1;
@@ -64111,7 +64102,7 @@
 "tYQ" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 1;
-	frequency = 1380;
+	frequency = 1379;
 	id_tag = "research_dock_pump"
 	},
 /obj/effect/floor_decal/industrial/warning{
@@ -72625,15 +72616,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
-"wEN" = (
-/obj/structure/bed/chair/wood/wings{
-	dir = 8
-	},
-/obj/structure/bed/chair/wood/wings{
-	dir = 8
-	},
-/turf/simulated/floor/wood,
-/area/vr/bloodstar)
 "wES" = (
 /obj/machinery/light{
 	dir = 8
@@ -75011,8 +74993,8 @@
 "xst" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 4;
-	frequency = 1380;
-	id_tag = "engineering_dock_pump"
+	id_tag = "engineering_dock_pump";
+	frequency = 1379
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 10
@@ -111751,7 +111733,7 @@ nRJ
 mrw
 xeV
 grb
-wdm
+aaa
 grb
 grb
 mrw
@@ -128902,7 +128884,7 @@ hBa
 hBa
 hBa
 hay
-wEN
+hay
 tlC
 glW
 vuI
