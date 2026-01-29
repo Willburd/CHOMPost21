@@ -18339,9 +18339,7 @@
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "fFl" = (
-/obj/structure/closet/radiation{
-	starts_with = list(/obj/item/clothing/suit/radiation = 2, /obj/item/clothing/head/radiation = 2, /obj/item/device/geiger = 2, /obj/item/clothing/glasses/meson = 2)
-	},
+/obj/structure/closet/radiation,
 /obj/effect/floor_decal/corner/lightorange/full{
 	dir = 1
 	},
@@ -28392,9 +28390,7 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
-/obj/structure/closet/radiation{
-	starts_with = list(/obj/item/clothing/suit/radiation = 2, /obj/item/clothing/head/radiation = 2, /obj/item/device/geiger = 2, /obj/item/clothing/glasses/meson = 2)
-	},
+/obj/structure/closet/radiation,
 /obj/effect/floor_decal/corner/lightorange/full{
 	dir = 1
 	},
