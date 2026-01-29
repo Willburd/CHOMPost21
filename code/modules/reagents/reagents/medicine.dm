@@ -303,7 +303,7 @@
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
 /datum/reagent/dexalin/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	if(alien == IS_VOX)
+	if(alien == IS_VOX || M?.species.poison_type == GAS_O2) // Outpost 21 edit - If oxygen is toxic, this is deadly
 		M.adjustToxLoss(removed * 24)
 	else if(alien == IS_SLIME && dose >= 15)
 		M.add_chemical_effect(CE_PAINKILLER, 15 * M.species.chem_strength_pain)
@@ -332,7 +332,7 @@
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
 /datum/reagent/dexalinp/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	if(alien == IS_VOX)
+	if(alien == IS_VOX || M?.species.poison_type == GAS_O2) // Outpost 21 edit - If oxygen is toxic, this is deadly
 		M.adjustToxLoss(removed * 9)
 	else if(alien == IS_SLIME && dose >= 10)
 		M.add_chemical_effect(CE_PAINKILLER, 25 * M.species.chem_strength_pain)
