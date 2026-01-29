@@ -18982,8 +18982,9 @@
 	dir = 6
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 6
+	dir = 4
 	},
+/obj/item/assembly/mousetrap/armed,
 /turf/simulated/floor/plating,
 /area/maintenance/wastedisposal)
 "czu" = (
@@ -22589,6 +22590,10 @@
 "dHL" = (
 /obj/machinery/light/small{
 	dir = 1
+	},
+/obj/machinery/meter,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/wastedisposal)
@@ -29092,13 +29097,11 @@
 /turf/simulated/floor/tiled/steel,
 /area/bridge/hallway)
 "fPN" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 6
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
 	},
 /obj/random/junk,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/plating,
 /area/maintenance/wastedisposal)
 "fPS" = (
@@ -55371,10 +55374,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 9
-	},
-/obj/item/assembly/mousetrap/armed,
+/obj/machinery/meter,
 /turf/simulated/floor/plating,
 /area/maintenance/wastedisposal)
 "nNF" = (
