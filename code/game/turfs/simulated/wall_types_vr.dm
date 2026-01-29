@@ -52,25 +52,25 @@ GLOBAL_LIST_EMPTY(flesh_overlay_cache)
 			if(istype(T) && !T.density)
 				var/place_dir = turn(direction, 180)
 				var/offset = 32
-				if(!flesh_overlay_cache["flesh_side_[place_dir]"])
-					flesh_overlay_cache["flesh_side_[place_dir]"] = image('modular_outpost/icons/turf/stomach.dmi', "flesh_side", dir = place_dir) // Outpost 21 edit - Flesh terrain tweaked
+				if(!GLOB.flesh_overlay_cache["flesh_side_[place_dir]"])
+					GLOB.flesh_overlay_cache["flesh_side_[place_dir]"] = image('modular_outpost/icons/turf/stomach.dmi', "flesh_side", dir = place_dir) // Outpost 21 edit - Flesh terrain tweaked
 					// Outpost 21 edit begin - Offset edge of flesh tiles to actually overhang other tiles
 					var/image/cache = null
 					switch(direction)
 						if(NORTH)
-							cache = flesh_overlay_cache["flesh_side_[place_dir]"]
+							cache = GLOB.flesh_overlay_cache["flesh_side_[place_dir]"]
 							cache.pixel_y = offset
 						if(SOUTH)
-							cache = flesh_overlay_cache["flesh_side_[place_dir]"]
+							cache = GLOB.flesh_overlay_cache["flesh_side_[place_dir]"]
 							cache.pixel_y = -offset
 						if(EAST)
-							cache = flesh_overlay_cache["flesh_side_[place_dir]"]
+							cache = GLOB.flesh_overlay_cache["flesh_side_[place_dir]"]
 							cache.pixel_x = offset
 						if(WEST)
-							cache = flesh_overlay_cache["flesh_side_[place_dir]"]
+							cache = GLOB.flesh_overlay_cache["flesh_side_[place_dir]"]
 							cache.pixel_x = -offset
 					// Outpost 21 edit end
-				add_overlay(flesh_overlay_cache["flesh_side_[place_dir]"])
+				add_overlay(GLOB.flesh_overlay_cache["flesh_side_[place_dir]"])
 
 	if(update_neighbors)
 		for(var/direction in GLOB.alldirs)
