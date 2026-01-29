@@ -39,7 +39,7 @@
 	. = ..()
 	update_icon(1)
 
-var/list/flesh_overlay_cache = list()
+GLOBAL_LIST_EMPTY(flesh_overlay_cache)
 
 /turf/simulated/flesh/update_icon(var/update_neighbors)
 	cut_overlays()
