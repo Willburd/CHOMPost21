@@ -1,0 +1,7 @@
+author: "FluffMedic"
+delete-after: True
+changes:
+  - balance: "Cult Cell recharges faster"
+  - balance: "Tyr Agate Hammer has gone from 20 to 35 force"
+  - bugfix: "Tyr Agate Hammer has the proper meta desc."
+  - bugfix: "Tyr weapons should no longer gain a blue hue"
