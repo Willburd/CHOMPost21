@@ -16380,7 +16380,7 @@
 /area/vr/bloodstar)
 "fcw" = (
 /obj/structure/closet/secure_closet/personal/patient{
-	req_access = nill
+	req_access = null
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
