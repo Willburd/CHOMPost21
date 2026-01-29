@@ -395,7 +395,9 @@ Extracted to its own procedure for easier logic handling with paper bundles.
 	else
 		message_admins(sender, "[uppertext(destination)] FAX", rcvdcopy, "UNKNOWN")
 
+	#ifdef OUTPOST_FRIENDSHIP_MODE
 	sendcooldown = 1800
+	#endif
 	sleep(50)
 	visible_message("[src] beeps, \"Message transmitted successfully.\"")
 
