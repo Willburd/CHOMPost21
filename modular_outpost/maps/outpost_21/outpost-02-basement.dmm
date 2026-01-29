@@ -19874,7 +19874,7 @@
 /obj/effect/catwalk_plated/white,
 /obj/machinery/shower/automated{
 	dir = 4;
-	watertemp = "freezing"
+	current_temperature = "freezing"
 	},
 /obj/effect/floor_decal/industrial/bot_outline/blue,
 /turf/simulated/floor/plating/turfpack/muriki,

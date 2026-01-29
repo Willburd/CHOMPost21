@@ -9898,7 +9898,6 @@
 	dir = 10
 	},
 /obj/machinery/conveyor_switch/oneway{
-	convdir = -1;
 	id = "vr_QMLoad"
 	},
 /turf/simulated/floor/tiled,
