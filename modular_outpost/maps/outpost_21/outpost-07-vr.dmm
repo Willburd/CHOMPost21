@@ -1345,8 +1345,7 @@
 "auG" = (
 /obj/structure/sign/directions/engineering{
 	dir = 8;
-	pixel_y = -32;
-	pixel_z = 8
+	pixel_y = -24
 	},
 /obj/structure/sign/directions/security{
 	dir = 8;
@@ -1354,8 +1353,7 @@
 	},
 /obj/structure/sign/directions/cargo{
 	dir = 8;
-	pixel_y = -32;
-	pixel_z = -8
+	pixel_y = -40
 	},
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/lightgrey/border,
@@ -14339,8 +14337,7 @@
 "ewX" = (
 /obj/structure/sign/directions/science{
 	dir = 8;
-	pixel_y = -32;
-	pixel_z = 8
+	pixel_y = -24
 	},
 /obj/structure/sign/directions/medical{
 	dir = 8;
@@ -14348,8 +14345,7 @@
 	},
 /obj/structure/sign/directions/evac{
 	dir = 8;
-	pixel_y = -32;
-	pixel_z = -8
+	pixel_y = -40
 	},
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/lightgrey/border,
@@ -18221,15 +18217,13 @@
 	dir = 1
 	},
 /obj/structure/sign/directions/engineering{
-	pixel_y = -32;
-	pixel_z = 8
+	pixel_y = -24
 	},
 /obj/structure/sign/directions/security{
 	pixel_y = -32
 	},
 /obj/structure/sign/directions/cargo{
-	pixel_y = -32;
-	pixel_z = -8
+	pixel_y = -40
 	},
 /obj/machinery/light{
 	dir = 8
@@ -22568,7 +22562,7 @@
 /obj/structure/sign/directions/science{
 	dir = 8;
 	pixel_x = -32;
-	pixel_z = -8
+	pixel_y = -8
 	},
 /obj/structure/sign/directions/security{
 	dir = 1;
@@ -22576,7 +22570,7 @@
 	},
 /obj/structure/sign/directions/evac{
 	pixel_x = -32;
-	pixel_z = 8
+	pixel_y = 8
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 9
@@ -23469,15 +23463,13 @@
 /area/vr/bloodstar)
 "hoi" = (
 /obj/structure/sign/directions/science{
-	pixel_y = -32;
-	pixel_z = 8
+	pixel_y = -24
 	},
 /obj/structure/sign/directions/medical{
 	pixel_y = -32
 	},
 /obj/structure/sign/directions/evac{
-	pixel_y = -32;
-	pixel_z = -8
+	pixel_y = -40
 	},
 /obj/structure/flora/pottedplant{
 	icon_state = "plant-22"
@@ -25786,7 +25778,6 @@
 /obj/effect/landmark/corpse/doctor,
 /obj/item/material/shard,
 /obj/effect/decal/cleanable/blood,
-/obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/tiled/white,
 /area/vr/bloodstar)
 "hZC" = (
@@ -26791,7 +26782,6 @@
 /obj/effect/floor_decal/corner/lightgrey/bordercorner{
 	dir = 8
 	},
-/obj/effect/decal/cleanable/blood,
 /obj/effect/decal/cleanable/blood,
 /obj/effect/landmark/corpse/random_civ,
 /turf/simulated/floor/tiled,
@@ -30624,12 +30614,10 @@
 	pixel_y = 32
 	},
 /obj/structure/sign/directions/cargo{
-	pixel_y = 32;
-	pixel_z = 8
+	pixel_y = 40
 	},
 /obj/structure/sign/directions/engineering{
-	pixel_y = 32;
-	pixel_z = -8
+	pixel_y = 24
 	},
 /obj/machinery/light{
 	dir = 1
@@ -35032,14 +35020,14 @@
 	},
 /obj/structure/sign/directions/science{
 	pixel_x = -32;
-	pixel_z = -8
+	pixel_y = -8
 	},
 /obj/structure/sign/directions/security{
 	pixel_x = -32
 	},
 /obj/structure/sign/directions/evac{
 	pixel_x = -32;
-	pixel_z = 8
+	pixel_y = 8
 	},
 /obj/machinery/light{
 	dir = 8
@@ -36490,16 +36478,14 @@
 	pixel_x = -32
 	},
 /obj/structure/sign/directions/evac{
-	pixel_y = 32;
-	pixel_z = 8
+	pixel_y = 40
 	},
 /obj/structure/sign/directions/medical{
 	dir = 4;
 	pixel_y = 32
 	},
 /obj/structure/sign/directions/science{
-	pixel_y = 32;
-	pixel_z = -8
+	pixel_y = 24
 	},
 /obj/machinery/light{
 	dir = 1
@@ -43492,12 +43478,6 @@
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/tiled/steel_grid,
 /area/vr/bloodstar)
-"nrk" = (
-/obj/effect/landmark/corpse/doctor,
-/obj/effect/decal/cleanable/blood,
-/obj/effect/decal/cleanable/blood,
-/turf/simulated/floor/tiled/white,
-/area/vr/bloodstar)
 "nrq" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
@@ -47416,7 +47396,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/effect/landmark/corpse/doctor,
-/obj/effect/decal/cleanable/blood,
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/tiled/white,
 /area/vr/bloodstar)
@@ -55069,15 +55048,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
-"red" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/machinery/door/firedoor/border_only,
-/obj/effect/decal/cleanable/blood,
-/obj/effect/decal/cleanable/blood,
-/turf/simulated/floor/tiled/steel_grid,
-/area/vr/bloodstar)
 "ree" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced{
@@ -57738,14 +57708,14 @@
 "rZY" = (
 /obj/structure/sign/directions/cargo{
 	pixel_x = -32;
-	pixel_z = 8
+	pixel_y = 8
 	},
 /obj/structure/sign/directions/medical{
 	pixel_x = -32
 	},
 /obj/structure/sign/directions/engineering{
 	pixel_x = -32;
-	pixel_z = -8
+	pixel_y = -8
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 10
@@ -64834,7 +64804,6 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
-/obj/effect/decal/cleanable/blood,
 /obj/effect/decal/cleanable/blood,
 /obj/effect/landmark/corpse/random_civ,
 /turf/simulated/floor/tiled,
@@ -120474,7 +120443,7 @@ nBk
 rHD
 dfV
 jdp
-red
+xGP
 rHD
 rHD
 vuI
@@ -140037,7 +140006,7 @@ bWx
 jPp
 ryP
 tzq
-nrk
+tzq
 inK
 wve
 wLo
