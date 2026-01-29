@@ -13295,9 +13295,7 @@
 /area/vr/bloodstar)
 "efK" = (
 /obj/effect/floor_decal/industrial/warning,
-/obj/structure/closet/radiation{
-	starts_with = list(/obj/item/clothing/suit/radiation = 2, /obj/item/clothing/head/radiation = 2, /obj/item/geiger = 2, /obj/item/clothing/glasses/meson = 2)
-	},
+/obj/structure/closet/radiation,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
