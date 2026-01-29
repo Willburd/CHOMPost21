@@ -54532,10 +54532,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
-/obj/structure/closet/crate/secure/gear{
-	name = "Legcuff Crate";
-	starts_with = list(/obj/item/weapon/handcuffs/legcuffs = 6)
-	},
+/obj/structure/closet/crate/secure/gear,
 /obj/effect/floor_decal/corner/red{
 	dir = 5
 	},
@@ -75426,9 +75423,7 @@
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "xBz" = (
-/obj/structure/closet/crate/radiation{
-	starts_with = list(/obj/item/clothing/suit/radiation = 4, /obj/item/clothing/head/radiation = 4, /obj/item/clothing/glasses/meson = 2)
-	},
+/obj/structure/closet/crate/radiation,
 /turf/simulated/floor,
 /area/vr/bloodstar)
 "xBS" = (
