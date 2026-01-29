@@ -20923,8 +20923,7 @@
 "gyb" = (
 /obj/structure/sign/directions/science{
 	dir = 4;
-	pixel_y = 32;
-	pixel_z = -8
+	pixel_y = 24
 	},
 /obj/structure/sign/directions/medical{
 	dir = 4;
@@ -20932,8 +20931,7 @@
 	},
 /obj/structure/sign/directions/evac{
 	dir = 4;
-	pixel_y = 32;
-	pixel_z = 8
+	pixel_y = 40
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -29928,20 +29926,6 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/blood,
-/turf/simulated/floor/tiled,
-/area/vr/bloodstar)
-"jmi" = (
-/obj/machinery/light,
-/obj/machinery/embedded_controller/radio/docking_port_multi{
-	child_names_txt = "Airlock One;Airlock Two";
-	child_tags_txt = "arrivals_dock_north_airlock;arrivals_dock_south_airlock";
-	frequency = 1380;
-	id_tag = "arrivals_dock";
-	pixel_y = -25;
-	req_one_access = list(13)
-	},
-/obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/corner/lightgrey/border,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "jmm" = (
@@ -53018,7 +53002,7 @@
 /obj/structure/sign/directions/evac{
 	dir = 8;
 	pixel_x = 32;
-	pixel_z = 8
+	pixel_y = 8
 	},
 /obj/structure/sign/directions/security{
 	dir = 8;
@@ -53027,7 +53011,7 @@
 /obj/structure/sign/directions/science{
 	dir = 8;
 	pixel_x = 32;
-	pixel_z = -8
+	pixel_y = -8
 	},
 /obj/machinery/light{
 	dir = 4
@@ -56140,13 +56124,11 @@
 	},
 /obj/structure/sign/directions/engineering{
 	dir = 8;
-	pixel_y = 32;
-	pixel_z = -8
+	pixel_y = 24
 	},
 /obj/structure/sign/directions/cargo{
 	dir = 8;
-	pixel_y = 32;
-	pixel_z = 8
+	pixel_y = 40
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 9
@@ -63798,12 +63780,12 @@
 /obj/structure/sign/directions/cargo{
 	dir = 8;
 	pixel_x = 32;
-	pixel_z = 8
+	pixel_y = 8
 	},
 /obj/structure/sign/directions/engineering{
 	dir = 8;
 	pixel_x = 32;
-	pixel_z = -8
+	pixel_y = -8
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 6
@@ -68238,8 +68220,7 @@
 /area/vr/bloodstar)
 "vmX" = (
 /obj/structure/sign/directions/engineering{
-	pixel_y = 32;
-	pixel_z = -8
+	pixel_y = 24
 	},
 /obj/structure/sign/directions/security{
 	dir = 4;
@@ -68247,8 +68228,7 @@
 	},
 /obj/structure/sign/directions/cargo{
 	dir = 8;
-	pixel_y = 32;
-	pixel_z = 8
+	pixel_y = 40
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -71378,12 +71358,10 @@
 	},
 /obj/structure/sign/directions/science{
 	dir = 8;
-	pixel_y = 32;
-	pixel_z = -8
+	pixel_y = 24
 	},
 /obj/structure/sign/directions/evac{
-	pixel_y = 32;
-	pixel_z = 8
+	pixel_y = 40
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 5
@@ -130509,7 +130487,7 @@ vuI
 mZy
 uIC
 oCo
-jmi
+spp
 kyA
 bCE
 bCE
