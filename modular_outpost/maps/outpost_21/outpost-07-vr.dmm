@@ -66316,7 +66316,8 @@
 /area/vr/bloodstar)
 "uFF" = (
 /obj/machinery/embedded_controller/radio/airlock/advanced_airlock_controller{
-	pixel_x = -24
+	pixel_x = -24;
+	id_tag = "vr_bloodstar_35"
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 9
