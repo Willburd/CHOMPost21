@@ -32,6 +32,19 @@
 	shot_delay = 0.18 SECONDS //Super fast fire rate. It's a machine gun. Vali set the number, blame her :P
 	reqpower = 50
 
+/obj/machinery/porta_turret/heavy/disabler
+	name = "hardened defense turret"
+	desc = "Specialized, hardened turrets for securing the most valuable assets. Not to be taken lightly."
+	installation = /obj/item/gun/energy/taser/disabler //Drop em boys! Nonlethally~ :>
+	health = 400 // Since lasers do 40 each. //op- So 10 hits~? Sounds fair~
+	maxhealth = 400
+	faction = "outpost21" //Makes sure specific station critters, like swoopies, aren't targeted
+	shot_delay = 1.5 SECONDS
+	auto_repair = TRUE
+	lethal = TRUE
+	lethal_is_configurable = FALSE //Always angry, always lethal
+
+
 /obj/machinery/porta_turret/stationary/CIWS //Why do the AA guns suck?
 	installation = /obj/item/gun/projectile/automatic/l6_saw
 	shot_delay = 0.18 SECONDS //Super fast fire rate. It's a machine gun. Vali set the number, blame her :P
