@@ -57,3 +57,37 @@
 	emergency_shuttle.evac = FALSE
 	emergency_shuttle.autopilot = FALSE
 	emergency_shuttle.shuttle.launch(usr)
+
+/client/proc/make_red_exit()
+	set name = "Make Redspace Exit Portal"
+	set desc = "Allows players to escape from redspace. Spawns at your location"
+	set category = "Admin.Events"
+
+	if(!check_rights(R_ADMIN|R_EVENT))
+		return
+	var/turf/epicenter = mob.loc
+	if(!epicenter)
+		return
+	create_redspace_wormhole( epicenter, epicenter, TRUE, 15 SECONDS, 45 SECONDS)
+
+/* DO NOT USE THIS UNLESS TESTING
+/client/proc/base_all_turfs()
+	set name = "All Turf To Base"
+	set desc = "OH GOD NO."
+	set category = "Admin.Events"
+
+	if(!check_rights(R_ADMIN|R_EVENT))
+		return
+	for(var/turf/T in world)
+		var/turf/nw = get_base_turf_by_area(T)
+		if(istype(nw,/turf/simulated/open) && (!HasBelow(T.z) || T.z == 1))
+			admin_notice("Turf at [T.x].[T.y].[T.z] [get_area(T)]: becomes illegal openspace")
+			continue
+		var/planet = null
+		if(T.z <= SSplanets.z_to_planet.len && SSplanets.z_to_planet[T.z])
+			planet = SSplanets.z_to_planet[T.z]
+		if((planet && istype(nw,/turf/space)) || istype(nw,/turf/unsimulated))
+			admin_notice("Turf at [T.x].[T.y].[T.z] [get_area(T)]: is illegal, is a [T.type]")
+			continue
+		T.ChangeTurf(nw)
+*/
