@@ -30,7 +30,8 @@
 	var/mob/living/carbon/human/H = holder.wearer
 
 	to_chat(H, span_boldnotice("You are now nearly invisible to normal detection."))
-	H.alpha = 5
+	//H.alpha = 5
+	cloak() // Outpost 21 edit - Cloaking change
 
 	anim(get_turf(H), H, 'icons/effects/effects.dmi', "electricity",null,20,null)
 
@@ -47,7 +48,8 @@
 
 	anim(get_turf(H), H,'icons/mob/mob.dmi',,"uncloak",,H.dir)
 	anim(get_turf(H), H, 'icons/effects/effects.dmi', "electricity",null,20,null)
-	H.alpha = initial(H.alpha)
+	//H.alpha = initial(H.alpha)
+	uncloak() // Outpost 21 edit - Cloaking change
 
 	H.visible_message("[H.name] appears from thin air!")
 	playsound(H, 'sound/effects/stealthoff.ogg', 75, 1)
