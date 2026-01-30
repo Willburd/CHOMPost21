@@ -126,6 +126,8 @@
 			var/list/flooring_near_beacon = list()
 			for(var/turf/simulated/floor/floor in orange(1, warp_goal)) // Outpost 21 edit - No escaping redspace
 				flooring_near_beacon += floor
+			if(!flooring_near_beacon.len) // Outpost 21 edit(port) - Fulton nullspace destination fix
+				flooring_near_beacon += get_turf(warp_goal)
 			holder_obj.forceMove(pick(flooring_near_beacon))
 			animate(holder_obj, pixel_z = 10, time = 50)
 			sleep(50)
