@@ -5727,6 +5727,7 @@
 #include "modular_outpost\code\game\objects\items\devices\claymore.dm"
 #include "modular_outpost\code\game\objects\items\devices\laserdesignator.dm"
 #include "modular_outpost\code\game\objects\items\devices\taperecorder.dm"
+#include "modular_outpost\code\game\objects\items\devices\tvcamera.dm"
 #include "modular_outpost\code\game\objects\items\devices\radio\intercom.dm"
 #include "modular_outpost\code\game\objects\items\devices\radio\radio.dm"
 #include "modular_outpost\code\game\objects\items\toys\toys.dm"

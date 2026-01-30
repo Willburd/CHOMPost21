@@ -17,7 +17,7 @@
 		if(SPIDERS)
 			log_world("## DEBUG: Hord event, spiders selected.")
 			spawncount = rand(4 * severity, 10 * severity)
-			sent_spiders_to_station = 0
+			GLOB.sent_spiders_to_station = FALSE
 
 		if(TROIDS)
 			log_world("## DEBUG: Horde event, metroids selected.")

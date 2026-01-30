@@ -311,44 +311,6 @@
 	},
 /turf/simulated/floor/outdoors/snow/roofing/turfpack/muriki,
 /area/muriki/rooftop/civilian)
-"aaK" = (
-/obj/structure/table/rack/shelf,
-/obj/effect/floor_decal/corner/red{
-	dir = 9
-	},
-/obj/item/material/barbedwire{
-	default_material = "durasteel"
-	},
-/obj/item/material/barbedwire{
-	default_material = "durasteel"
-	},
-/obj/item/material/barbedwire{
-	default_material = "durasteel"
-	},
-/obj/item/material/barbedwire{
-	default_material = "durasteel"
-	},
-/obj/item/material/barbedwire{
-	default_material = "durasteel"
-	},
-/obj/item/material/barbedwire{
-	default_material = "durasteel"
-	},
-/obj/item/material/barbedwire{
-	default_material = "durasteel"
-	},
-/obj/item/material/barbedwire{
-	default_material = "durasteel"
-	},
-/obj/item/material/barbedwire{
-	default_material = "durasteel"
-	},
-/obj/item/material/barbedwire{
-	default_material = "durasteel"
-	},
-/obj/item/tool/wirecutters,
-/turf/simulated/floor/tiled,
-/area/security/vacantoffice)
 "aaL" = (
 /obj/effect/floor_decal/rust,
 /obj/structure/prop/war/tgmc_missile_rack/napalm,
@@ -2230,6 +2192,42 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/patient_wing)
+"aeU" = (
+/mob/living/simple_mob/vore/aggressive/corrupthound/swoopie/randomized,
+/turf/simulated/floor/wood,
+/area/rnd/research/phoronics/breakroom)
+"aeV" = (
+/obj/structure/reagent_dispensers/fueltank,
+/turf/simulated/floor/plating,
+/area/maintenance/secelev)
+"aeW" = (
+/obj/structure/reagent_dispensers/watertank,
+/turf/simulated/floor/plating,
+/area/maintenance/secelev)
+"aeX" = (
+/obj/machinery/deployable/barrier,
+/obj/effect/floor_decal/industrial/outline/cut_corners/red,
+/turf/simulated/floor/tiled,
+/area/security/vacantoffice)
+"aeY" = (
+/obj/effect/floor_decal/corner/red{
+	dir = 5
+	},
+/obj/machinery/deployable/barrier,
+/obj/effect/floor_decal/industrial/outline/cut_corners/red,
+/turf/simulated/floor/tiled,
+/area/security/vacantoffice)
+"aeZ" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/reagent_dispensers/fueltank,
+/turf/simulated/floor/plating,
+/area/medical/hangar)
+"afa" = (
+/obj/structure/reagent_dispensers/fueltank/high,
+/turf/simulated/floor,
+/area/maintenance/roof_tube_access)
 "afb" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
@@ -2444,8 +2442,8 @@
 /obj/effect/floor_decal/corner/red{
 	dir = 6
 	},
-/obj/effect/floor_decal/industrial/outline/yellow,
-/obj/machinery/metal_detector,
+/obj/effect/floor_decal/industrial/outline/cut_corners/red,
+/obj/machinery/deployable/barrier,
 /turf/simulated/floor/tiled,
 /area/security/vacantoffice)
 "aiq" = (
@@ -2944,7 +2942,27 @@
 /obj/effect/floor_decal/corner/red{
 	dir = 9
 	},
-/obj/fiftyspawner/plastic,
+/obj/item/stack/sandbags{
+	amount = 30
+	},
+/obj/item/stack/sandbags{
+	amount = 30
+	},
+/obj/item/stack/sandbags{
+	amount = 30
+	},
+/obj/item/stack/sandbags{
+	amount = 30
+	},
+/obj/item/stack/sandbags{
+	amount = 30
+	},
+/obj/item/stack/sandbags{
+	amount = 30
+	},
+/obj/item/stack/sandbags{
+	amount = 30
+	},
 /turf/simulated/floor/tiled,
 /area/security/vacantoffice)
 "avY" = (
@@ -9013,6 +9031,9 @@
 "duP" = (
 /obj/structure/table/woodentable,
 /obj/effect/landmark/event_spawn/dronepod_landing,
+/obj/item/clothing/accessory/bodycam/yobro,
+/obj/item/clothing/accessory/bodycam/yobro,
+/obj/item/clothing/accessory/bodycam/yobro,
 /turf/simulated/floor/tiled,
 /area/quartermaster/cargupbreak)
 "dve" = (
@@ -9807,7 +9828,6 @@
 	name = "Station Intercom (General)";
 	pixel_y = 21
 	},
-/mob/living/simple_mob/vore/aggressive/corrupthound/swoopie,
 /obj/effect/floor_decal/corner/paleblue/border,
 /turf/simulated/floor/tiled/dark{
 	nitrogen = 100;
@@ -13503,6 +13523,7 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
+/obj/structure/reagent_dispensers/watertank/high,
 /turf/simulated/floor,
 /area/maintenance/roof_tube_access)
 "fLG" = (
@@ -16331,6 +16352,12 @@
 /obj/fiftyspawner/steel,
 /obj/machinery/light{
 	dir = 1
+	},
+/obj/fiftyspawner/glass{
+	pixel_x = 8
+	},
+/obj/fiftyspawner/plastic{
+	pixel_x = -7
 	},
 /turf/simulated/floor/tiled,
 /area/security/vacantoffice)
@@ -38102,6 +38129,8 @@
 /obj/item/material/barbedwire{
 	default_material = "durasteel"
 	},
+/obj/item/clothing/gloves/black,
+/obj/item/tool/wirecutters,
 /turf/simulated/floor/tiled,
 /area/security/vacantoffice)
 "ski" = (
@@ -43115,7 +43144,7 @@
 /obj/effect/floor_decal/corner/red{
 	dir = 9
 	},
-/obj/fiftyspawner/glass,
+/obj/item/storage/toolbox/syndicate,
 /turf/simulated/floor/tiled,
 /area/security/vacantoffice)
 "uFN" = (
@@ -44016,6 +44045,12 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
+/obj/item/clothing/accessory/bodycam/yobro,
+/obj/item/clothing/accessory/bodycam/yobro,
+/obj/item/clothing/accessory/bodycam/yobro,
+/obj/item/clothing/accessory/bodycam/yobro,
+/obj/item/clothing/accessory/bodycam/yobro,
+/obj/item/clothing/accessory/bodycam/yobro,
 /turf/simulated/floor/wood,
 /area/library_conference_room)
 "vcv" = (
@@ -44820,6 +44855,8 @@
 	pixel_y = -26
 	},
 /obj/item/universal_translator/ear,
+/obj/item/clothing/accessory/bodycam/yobro,
+/obj/item/clothing/accessory/bodycam/yobro,
 /turf/simulated/floor/wood,
 /area/djstation)
 "vut" = (
@@ -48474,6 +48511,7 @@
 /obj/structure/cable/orange{
 	icon_state = "4-9"
 	},
+/obj/structure/reagent_dispensers/watertank,
 /turf/simulated/floor/plating,
 /area/medical/hangar)
 "xpO" = (
@@ -88008,7 +88046,7 @@ vjH
 hkh
 uFM
 avW
-aaK
+skf
 skf
 sZc
 iUe
@@ -88329,10 +88367,10 @@ vTx
 goV
 aef
 bPB
-uxs
-tWt
+aeY
+aeX
+adD
 aec
-tWt
 nId
 fPH
 bIs
@@ -88493,7 +88531,7 @@ mGC
 bPB
 adE
 adD
-qKV
+adD
 qKV
 hWT
 kDA
@@ -88502,7 +88540,7 @@ qbe
 yie
 jeT
 eBP
-ttl
+aeV
 sNv
 weP
 avY
@@ -88664,7 +88702,7 @@ qbe
 yie
 jEN
 eBP
-ttl
+aeW
 ttl
 ttl
 vaD
@@ -94136,7 +94174,7 @@ cac
 cac
 uQb
 xpJ
-mwx
+aeZ
 eUb
 fJX
 oHy
@@ -99465,7 +99503,7 @@ jnM
 fQL
 iUq
 cwU
-cPh
+afa
 cPh
 fWj
 cwU
@@ -100225,7 +100263,7 @@ ovc
 ovc
 eGr
 gDH
-fOi
+aeU
 hFK
 xNc
 bCs

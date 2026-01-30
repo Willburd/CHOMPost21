@@ -101,19 +101,7 @@
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Electrical Storm",	/datum/event/electrical_storm				,2	, null, FALSE),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Septic Explosion",	/datum/event/septic_explosion				,1	, null, TRUE, min_jobs = list(DEPARTMENT_ENGINEERING = 1)),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Hostile Runtime", 	/datum/event/hostile_runtime				,2  , null, FALSE, min_jobs = list(DEPARTMENT_ENGINEERING = 1)),
-		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Random Borg Laws",	/datum/event/law_reset						,2	, null, FALSE, min_jobs = list(JOB_CYBORG = 1)),
-		new /datum/event_meta(EVENT_LEVEL_MAJOR, "All Is Clean",		/datum/event/allisclean						,0  , null, TRUE, min_jobs = list(DEPARTMENT_SECURITY = 99)),
-		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Shell Engineering",	/datum/event/bluespace_shelling/engineering	,0	, null, TRUE, min_jobs = list(DEPARTMENT_SECURITY = 99)),
-		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Shell Science",		/datum/event/bluespace_shelling/science		,0	, null, TRUE, min_jobs = list(DEPARTMENT_SECURITY = 99)),
-		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Shell Security",		/datum/event/bluespace_shelling/security	,0	, null, TRUE, min_jobs = list(DEPARTMENT_SECURITY = 99)),
-		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Shell Cargo",			/datum/event/bluespace_shelling/cargo		,0	, null, TRUE, min_jobs = list(DEPARTMENT_SECURITY = 99)),
-		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Shell Civilian",		/datum/event/bluespace_shelling/civilian	,0  , null, TRUE, min_jobs = list(DEPARTMENT_SECURITY = 99)),
-		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Shell Medical",		/datum/event/bluespace_shelling/medical		,0  , null, TRUE, min_jobs = list(DEPARTMENT_SECURITY = 99)),
-		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Shell Waste",			/datum/event/bluespace_shelling/waste		,0  , null, TRUE, min_jobs = list(DEPARTMENT_SECURITY = 99)),
-		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Shell Station",		/datum/event/bluespace_shelling				,0  , null, TRUE, min_jobs = list(DEPARTMENT_SECURITY = 99)),
-		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Weeping Statue Forced",/datum/event/weeping_statue				,0	, null, TRUE, min_jobs = list(DEPARTMENT_SECURITY = 99)),
-		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Haunted Body Forced",	/datum/event/badbody/forced					,0	, null, TRUE, min_jobs = list(DEPARTMENT_SECURITY = 99)),
-		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Haunted Morgue Forced",/datum/event/badbody/morgue/forced			,0	, null, TRUE, min_jobs = list(DEPARTMENT_SECURITY = 99))
+		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Random Borg Laws",	/datum/event/law_reset						,2	, null, FALSE, min_jobs = list(JOB_CYBORG = 1))
 	)
 	add_disabled_events(list(
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "All Is Clean",		/datum/event/allisclean,					 0  , list(), TRUE, min_jobs = list(DEPARTMENT_SECURITY = 99)),

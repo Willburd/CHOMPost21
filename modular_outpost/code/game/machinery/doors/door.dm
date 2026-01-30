@@ -78,23 +78,23 @@
 		if(istype(T) && !T.density)
 			var/place_dir = turn(direction, 180)
 			var/offset = 32
-			if(!flesh_overlay_cache["flesh_side_[place_dir]"])
-				flesh_overlay_cache["flesh_side_[place_dir]"] = image('icons/turf/stomach_vr.dmi', "flesh_side", dir = place_dir)
+			if(!GLOB.flesh_overlay_cache["flesh_side_[place_dir]"])
+				GLOB.flesh_overlay_cache["flesh_side_[place_dir]"] = image('icons/turf/stomach_vr.dmi', "flesh_side", dir = place_dir)
 				var/image/cache = null
 				switch(direction)
 					if(NORTH)
-						cache = flesh_overlay_cache["flesh_side_[place_dir]"]
+						cache = GLOB.flesh_overlay_cache["flesh_side_[place_dir]"]
 						cache.pixel_y = offset
 					if(SOUTH)
-						cache = flesh_overlay_cache["flesh_side_[place_dir]"]
+						cache = GLOB.flesh_overlay_cache["flesh_side_[place_dir]"]
 						cache.pixel_y = -offset
 					if(EAST)
-						cache = flesh_overlay_cache["flesh_side_[place_dir]"]
+						cache = GLOB.flesh_overlay_cache["flesh_side_[place_dir]"]
 						cache.pixel_x = offset
 					if(WEST)
-						cache = flesh_overlay_cache["flesh_side_[place_dir]"]
+						cache = GLOB.flesh_overlay_cache["flesh_side_[place_dir]"]
 						cache.pixel_x = -offset
-			add_overlay(flesh_overlay_cache["flesh_side_[place_dir]"])
+			add_overlay(GLOB.flesh_overlay_cache["flesh_side_[place_dir]"])
 
 /obj/machinery/door/flesh/open()
 	playsound(src, 'sound/effects/blobattack.ogg', 100, 1)

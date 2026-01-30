@@ -2980,6 +2980,17 @@
 /area/vr/spacesim/get_gravity()
 	return 0
 
+/area/vr/bloodstar //Special area for turret controls.
+	dynamic_lighting = 1 //Dynamic lights, so you can shoot out the station lights for darkness
+	requires_power = FALSE //But always has power, so doors and stuff work
+	base_turf = /turf/simulated/mineral/floor/ignore_mapgen //Needs a different base turf because otherwise stuff will get ANGRY
+	icon = 'icons/turf/areas.dmi'
+	icon_state = "blue"
+
+/area/vr/bloodstar/spacebase //Just for base turf changes
+	base_turf = /turf/space
+	icon_state = "bluenew"
+
 /area/specialty/hell
 	name = "\improper Unknown"
 	base_turf = /turf/simulated/floor/lava
