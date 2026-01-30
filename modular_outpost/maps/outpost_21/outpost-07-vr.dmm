@@ -31907,7 +31907,8 @@
 	dir = 4
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod_berth{
-	pixel_y = 26
+	pixel_y = 26;
+	id_tag = "vr_bloodstar_31"
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -50892,7 +50893,7 @@
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
 	name = "Airlock Console";
 	pixel_y = 25;
-	id_tag = "vr_bloodstar_30"
+	id_tag = "vr_bloodstar_32"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 1
