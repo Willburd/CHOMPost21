@@ -48374,7 +48374,8 @@
 /area/vr/bloodstar)
 "oSV" = (
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
-	pixel_y = 30
+	pixel_y = 30;
+	id_tag = "vr_bloodstar_33"
 	},
 /obj/machinery/airlock_sensor{
 	pixel_y = -25
@@ -68215,7 +68216,8 @@
 /area/vr/bloodstar)
 "vli" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod_berth{
-	pixel_x = -26
+	pixel_x = -26;
+	id_tag = "vr_bloodstar_34"
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
