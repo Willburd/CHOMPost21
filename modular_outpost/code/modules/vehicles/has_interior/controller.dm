@@ -147,7 +147,11 @@
 	playsound(entrance_hatch, get_sfx("vehicle_crush"), 50, 1)
 
 	// make a smaller explosion inside
-	explosion(entrance_hatch, 0, 0, 6, 8)
+	for(var/D in GLOB.cardinal)
+		var/turf/T = get_step(src, D)
+		if(istype(T,/turf/simulated/floor))
+			explosion(entrance_hatch, 0, 0, 6, 8)
+			break
 
 	// disable ex_act destruction, would lead to gamebreaking behaviors
 	switch(severity)
