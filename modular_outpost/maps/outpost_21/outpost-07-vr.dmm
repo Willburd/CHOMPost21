@@ -31907,7 +31907,8 @@
 	dir = 4
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod_berth{
-	pixel_y = 26
+	pixel_y = 26;
+	id_tag = "vr_bloodstar_31"
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -48373,7 +48374,8 @@
 /area/vr/bloodstar)
 "oSV" = (
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
-	pixel_y = 30
+	pixel_y = 30;
+	id_tag = "vr_bloodstar_33"
 	},
 /obj/machinery/airlock_sensor{
 	pixel_y = -25
@@ -50892,7 +50894,7 @@
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
 	name = "Airlock Console";
 	pixel_y = 25;
-	id_tag = "vr_bloodstar_30"
+	id_tag = "vr_bloodstar_32"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 1
@@ -66314,7 +66316,8 @@
 /area/vr/bloodstar)
 "uFF" = (
 /obj/machinery/embedded_controller/radio/airlock/advanced_airlock_controller{
-	pixel_x = -24
+	pixel_x = -24;
+	id_tag = "vr_bloodstar_35"
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 9
@@ -68214,7 +68217,8 @@
 /area/vr/bloodstar)
 "vli" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod_berth{
-	pixel_x = -26
+	pixel_x = -26;
+	id_tag = "vr_bloodstar_34"
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
