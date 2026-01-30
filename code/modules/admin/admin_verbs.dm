@@ -478,7 +478,7 @@ ADMIN_VERB(deadmin, R_NONE, "DeAdmin", "Shed your admin powers.", ADMIN_CATEGORY
 	set category = "Admin.Game"
 	if(check_rights(R_HOLDER))
 		var/list/jobs = list()
-		for (var/datum/job/J in job_master.occupations)
+		for (var/datum/job/J in GLOB.job_master.occupations)
 			if (J.current_positions >= J.total_positions && J.total_positions != -1)
 				jobs += J.title
 		if (!jobs.len)
@@ -486,7 +486,7 @@ ADMIN_VERB(deadmin, R_NONE, "DeAdmin", "Shed your admin powers.", ADMIN_CATEGORY
 			return
 		var/job = tgui_input_list(usr, "Please select job slot to free", "Free job slot", jobs)
 		if (job)
-			job_master.FreeRole(job)
+			GLOB.job_master.FreeRole(job)
 			message_admins("A job slot for [job] has been opened by [key_name_admin(usr)]")
 			return
 
@@ -761,40 +761,4 @@ ADMIN_VERB(removetickets, R_ADMIN, "Security Tickets", "Allows one to remove tic
 			to_chat(usr, "You have [CONFIG_GET(flag/allow_simple_mob_recolor) ? "enabled" : "disabled"] newly spawned simple mobs to spawn with the recolour verb")
 
 ADMIN_VERB(modify_shift_end, (R_ADMIN|R_EVENT|R_SERVER), "Modify Shift End", "Modifies the hard shift end time.", "Server.Game")
-	transfer_controller.modify_hard_end(user)
-
-// Outpost 21 edit begin - Spawn redspace exit command
-/client/proc/make_red_exit()
-	set name = "Make Redspace Exit Portal"
-	set desc = "Allows players to escape from redspace. Spawns at your location"
-	set category = "Admin.Events"
-
-	if(!check_rights(R_ADMIN|R_EVENT))
-		return
-	var/turf/epicenter = mob.loc
-	if(!epicenter)
-		return
-	create_redspace_wormhole( epicenter, epicenter, TRUE, 15 SECONDS, 45 SECONDS)
-// Outpost 21 edit end
-
-/* Outpost 21 edit - DO NOT USE THIS UNLESS TESTING
-/client/proc/base_all_turfs()
-	set name = "All Turf To Base"
-	set desc = "OH GOD NO."
-	set category = "Admin.Events"
-
-	if(!check_rights(R_ADMIN|R_EVENT))
-		return
-	for(var/turf/T in world)
-		var/turf/nw = get_base_turf_by_area(T)
-		if(istype(nw,/turf/simulated/open) && (!HasBelow(T.z) || T.z == 1))
-			admin_notice("Turf at [T.x].[T.y].[T.z] [get_area(T)]: becomes illegal openspace")
-			continue
-		var/planet = null
-		if(T.z <= SSplanets.z_to_planet.len && SSplanets.z_to_planet[T.z])
-			planet = SSplanets.z_to_planet[T.z]
-		if((planet && istype(nw,/turf/space)) || istype(nw,/turf/unsimulated))
-			admin_notice("Turf at [T.x].[T.y].[T.z] [get_area(T)]: is illegal, is a [T.type]")
-			continue
-		T.ChangeTurf(nw)
-*/
+	GLOB.transfer_controller.modify_hard_end(user)
