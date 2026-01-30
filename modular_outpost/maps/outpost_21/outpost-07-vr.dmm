@@ -4398,7 +4398,7 @@
 /turf/simulated/floor,
 /area/vr/bloodstar)
 "bqK" = (
-/turf/unsimulated/mineral,
+/turf/simulated/mineral/ignore_mapgen,
 /area/vr/bloodstar)
 "bqO" = (
 /obj/effect/decal/cleanable/dirt,
@@ -22836,7 +22836,7 @@
 /area/vr/bloodstar)
 "hdf" = (
 /obj/structure/lattice,
-/turf/unsimulated/mineral,
+/turf/simulated/mineral/ignore_mapgen,
 /area/vr/bloodstar)
 "hdg" = (
 /obj/effect/floor_decal/industrial/warning/corner{
@@ -53026,7 +53026,7 @@
 "qtd" = (
 /obj/structure/lattice,
 /obj/effect/blocker,
-/turf/unsimulated/mineral,
+/turf/simulated/mineral/ignore_mapgen,
 /area/vr/bloodstar)
 "qtf" = (
 /obj/structure/window/reinforced/polarized{
@@ -65948,7 +65948,7 @@
 /area/vr/bloodstar)
 "uCS" = (
 /obj/effect/blocker,
-/turf/unsimulated/mineral,
+/turf/simulated/mineral/ignore_mapgen,
 /area/vr/bloodstar)
 "uDn" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
