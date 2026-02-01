@@ -77,6 +77,7 @@
 	if(forensic_data?.get_hiddenprints())
 		prints = ", all touchers : " + forensic_data?.get_hiddenprints()
 
+	SSturf_cascade.start_cascade(get_turf(src), /turf/unsimulated/wall/supermatter)
 	SetUniversalState(/datum/universal_state/supermatter_cascade)
 
 	// Outpost 21 edit(port) begin - spawn the bluespace void
