@@ -17,3 +17,6 @@
   - bugfix: Turrets are no longer limited to 2 second tickrate when in combat
   - bugfix: Turret retaliation behavior is actually functional, and makes sounds when
       they enter and leave it.
+2026-02-03:
+  Guti:
+  - balance: Pyroclastic anomalies are now less likely to roll
