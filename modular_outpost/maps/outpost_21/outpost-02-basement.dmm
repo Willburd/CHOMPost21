@@ -25620,9 +25620,26 @@
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/coffee_shop)
 "aUJ" = (
-/obj/structure/closet/secure_closet/freezer/fridge{
-	starts_with = list(/obj/item/reagent_containers/food/drinks/milk = 6, /obj/item/storage/fancy/egg_box = 4, /obj/item/reagent_containers/food/condiment/carton/flour = 7, /obj/item/reagent_containers/food/condiment/sugar = 2)
-	},
+/obj/structure/closet/secure_closet/freezer/fridge/empty,
+/obj/item/reagent_containers/food/drinks/milk,
+/obj/item/reagent_containers/food/drinks/milk,
+/obj/item/reagent_containers/food/drinks/milk,
+/obj/item/reagent_containers/food/drinks/milk,
+/obj/item/reagent_containers/food/drinks/milk,
+/obj/item/reagent_containers/food/drinks/milk,
+/obj/item/storage/fancy/egg_box,
+/obj/item/storage/fancy/egg_box,
+/obj/item/storage/fancy/egg_box,
+/obj/item/storage/fancy/egg_box,
+/obj/item/reagent_containers/food/condiment/carton/flour,
+/obj/item/reagent_containers/food/condiment/carton/flour,
+/obj/item/reagent_containers/food/condiment/carton/flour,
+/obj/item/reagent_containers/food/condiment/carton/flour,
+/obj/item/reagent_containers/food/condiment/carton/flour,
+/obj/item/reagent_containers/food/condiment/carton/flour,
+/obj/item/reagent_containers/food/condiment/carton/flour,
+/obj/item/reagent_containers/food/condiment/sugar,
+/obj/item/reagent_containers/food/condiment/sugar,
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/coffee_shop)
 "aUK" = (
