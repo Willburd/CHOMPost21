@@ -578,7 +578,7 @@
 /obj/machinery/porta_turret/stationary/syndie/CIWS{
 	req_access = list(150)
 	},
-/turf/simulated/shuttle/plating/airless,
+/turf/simulated/shuttle/floor/voidcraft/turfpack/airless,
 /area/shuttle/mercenary)
 "bv" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -1586,7 +1586,7 @@
 /area/syndicate_mothership)
 "dF" = (
 /obj/structure/prop/war/minirocket_pod,
-/turf/simulated/shuttle/plating/airless,
+/turf/simulated/shuttle/floor/voidcraft/turfpack/airless,
 /area/shuttle/mercenary)
 "dG" = (
 /obj/structure/table/alien,
@@ -1602,7 +1602,7 @@
 	dir = 1
 	},
 /obj/machinery/shield_diffuser,
-/turf/simulated/shuttle/plating/airless,
+/turf/simulated/shuttle/floor/voidcraft/turfpack/airless,
 /area/shuttle/mercenary)
 "dI" = (
 /obj/machinery/atmospherics/pipe/simple/visible{
@@ -1739,7 +1739,7 @@
 /obj/machinery/porta_turret/stationary/syndie{
 	req_access = list(150)
 	},
-/turf/simulated/shuttle/plating/airless,
+/turf/simulated/shuttle/floor/voidcraft/turfpack/airless,
 /area/shuttle/mercenary)
 "ee" = (
 /obj/machinery/implantchair,
@@ -1835,7 +1835,7 @@
 /area/shuttle/mercenary)
 "et" = (
 /obj/machinery/atmospherics/unary/engine/bigger,
-/turf/simulated/shuttle/plating/airless,
+/turf/simulated/shuttle/floor/voidcraft/turfpack/airless,
 /area/shuttle/mercenary)
 "eu" = (
 /obj/machinery/shipsensors{
@@ -2427,7 +2427,7 @@
 /area/syndicate_mothership)
 "fO" = (
 /obj/machinery/power/solar/fake,
-/turf/simulated/shuttle/plating/airless,
+/turf/simulated/shuttle/floor/voidcraft/turfpack/airless,
 /area/shuttle/mercenary)
 "fP" = (
 /obj/machinery/light/small,
@@ -4236,6 +4236,9 @@
 	icon_state = "dark"
 	},
 /area/syndicate_mothership)
+"iN" = (
+/turf/simulated/shuttle/floor/voidcraft/turfpack/airless,
+/area/shuttle/mercenary)
 "iO" = (
 /obj/structure/table/standard,
 /obj/machinery/light{
@@ -5114,15 +5117,6 @@
 	icon_state = "dark"
 	},
 /area/syndicate_mothership)
-"kj" = (
-/obj/machinery/porta_turret/alien{
-	check_all = 0;
-	check_anomalies = 0;
-	check_arrest = 0;
-	check_records = 0
-	},
-/turf/simulated/mineral,
-/area/space)
 "kk" = (
 /obj/structure/window/phoronreinforced{
 	dir = 4
@@ -5334,6 +5328,30 @@
 	icon_state = "dark"
 	},
 /area/syndicate_mothership)
+"kC" = (
+/obj/machinery/porta_turret/alien{
+	check_all = 0;
+	check_anomalies = 0;
+	check_arrest = 0;
+	check_records = 0;
+	faction = "vox"
+	},
+/turf/simulated/shuttle/floor/voidcraft/turfpack/airless,
+/area/shuttle/skipjack)
+"kD" = (
+/obj/machinery/floor_light,
+/turf/simulated/shuttle/floor/voidcraft/turfpack/airless,
+/area/shuttle/skipjack)
+"kE" = (
+/obj/effect/fancy_shuttle/tether_cargo{
+	dir = 1;
+	fancy_shuttle_tag = "supply_shuttle"
+	},
+/turf/space,
+/area/space)
+"kF" = (
+/turf/simulated/shuttle/wall/dark,
+/area/shuttle/supply)
 "kG" = (
 /obj/structure/table/rack,
 /obj/item/ammo_casing/rocket,
@@ -5350,6 +5368,16 @@
 	icon_state = "dark"
 	},
 /area/syndicate_mothership)
+"kH" = (
+/obj/structure/shuttle/engine/propulsion,
+/turf/simulated/shuttle/plating/carry,
+/area/shuttle/supply)
+"kI" = (
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
+"kJ" = (
+/turf/unsimulated/wall/r_wall,
+/area/centcom/suppy)
 "kK" = (
 /obj/effect/landmark{
 	name = "tdome1"
@@ -5359,6 +5387,9 @@
 	},
 /turf/unsimulated/floor/techfloor_grid,
 /area/tdome/tdome1)
+"kL" = (
+/turf/simulated/shuttle/wall/dark/hard_corner,
+/area/shuttle/supply)
 "kM" = (
 /obj/structure/crystalholder,
 /turf/unsimulated/floor{
@@ -5372,6 +5403,16 @@
 	},
 /turf/simulated/floor/indoorrocks,
 /area/specialty/hell)
+"kO" = (
+/obj/structure/shuttle/engine/heater,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/turf/simulated/shuttle/plating,
+/area/shuttle/supply)
+"kP" = (
+/turf/unsimulated/floor/techfloor_grid,
+/area/centcom/suppy)
 "kQ" = (
 /obj/structure/table/rack,
 /turf/unsimulated/floor{
@@ -5388,11 +5429,57 @@
 	icon_state = "dark"
 	},
 /area/syndicate_mothership)
+"kS" = (
+/turf/unsimulated/wall/fakeglass,
+/area/centcom/suppy)
 "kT" = (
 /turf/simulated/floor/tiled{
 	icon_state = "white"
 	},
 /area/tdome/tdomeobserve)
+"kU" = (
+/turf/simulated/shuttle/floor/voidcraft,
+/area/shuttle/supply)
+"kV" = (
+/turf/unsimulated/wall/fakeglass{
+	dir = 1
+	},
+/area/centcom/suppy)
+"kW" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/shuttle/floor/voidcraft,
+/area/shuttle/supply)
+"kX" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor/voidcraft,
+/area/shuttle/supply)
+"kY" = (
+/obj/machinery/door/airlock/glass_external{
+	icon_state = "door_locked";
+	locked = 1;
+	name = "Cargo Shuttle Airlock"
+	},
+/turf/unsimulated/floor/techfloor_grid,
+/area/centcom/suppy)
+"kZ" = (
+/obj/machinery/door/airlock/external{
+	name = "Shuttle Hatch";
+	icon_state = "door_locked";
+	frequency = 1381;
+	req_access = list(13);
+	locked = 1;
+	id_tag = "supply_shuttle_hatch"
+	},
+/obj/machinery/conveyor{
+	dir = 4;
+	id = "QMLoad"
+	},
+/turf/simulated/shuttle/floor/voidcraft,
+/area/shuttle/supply)
 "la" = (
 /obj/structure/table/rack,
 /obj/item/storage/toolbox/syndicate/powertools,
@@ -5401,6 +5488,92 @@
 	icon_state = "dark"
 	},
 /area/syndicate_mothership)
+"lb" = (
+/obj/machinery/conveyor{
+	dir = 4;
+	id = "QMLoad"
+	},
+/turf/simulated/shuttle/floor/voidcraft,
+/area/shuttle/supply)
+"lc" = (
+/obj/machinery/door/airlock/external{
+	name = "Shuttle Hatch";
+	icon_state = "door_locked";
+	frequency = 1381;
+	req_access = list(13);
+	locked = 1;
+	id_tag = "supply_shuttle_hatch"
+	},
+/turf/simulated/shuttle/floor/voidcraft,
+/area/shuttle/supply)
+"ld" = (
+/obj/item/paper{
+	name = "unnerving letter";
+	info = "You're not supposed to be here."
+	},
+/turf/unsimulated/floor/techfloor_grid,
+/area/centcom/suppy)
+"le" = (
+/obj/machinery/embedded_controller/radio/simple_docking_controller{
+	pixel_x = 25;
+	frequency = 1381;
+	req_one_access = list(13,31);
+	id_tag = "supply_shuttle";
+	tag_door = "supply_shuttle_hatch"
+	},
+/turf/simulated/shuttle/floor/voidcraft,
+/area/shuttle/supply)
+"lf" = (
+/obj/machinery/door/airlock/external{
+	name = "Shuttle Hatch";
+	icon_state = "door_locked";
+	frequency = 1381;
+	req_access = list(13);
+	locked = 1;
+	id_tag = "supply_shuttle_hatch"
+	},
+/obj/machinery/conveyor{
+	dir = 8;
+	id = "QMLoad2"
+	},
+/turf/simulated/shuttle/floor/voidcraft,
+/area/shuttle/supply)
+"lg" = (
+/obj/effect/shuttle_landmark/premade/supply/centcom,
+/obj/machinery/conveyor{
+	dir = 8;
+	id = "QMLoad2"
+	},
+/turf/simulated/shuttle/floor/voidcraft,
+/area/shuttle/supply)
+"lh" = (
+/obj/machinery/conveyor{
+	dir = 8;
+	id = "QMLoad2"
+	},
+/turf/simulated/shuttle/floor/voidcraft,
+/area/shuttle/supply)
+"li" = (
+/obj/machinery/status_display/supply_display{
+	pixel_y = 32
+	},
+/obj/machinery/computer/supplycomp/control,
+/turf/unsimulated/floor/techfloor_grid,
+/area/centcom/suppy)
+"lj" = (
+/turf/unsimulated/wall/r_wall,
+/area/space)
+"lk" = (
+/obj/machinery/power/emitter,
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
+"ll" = (
+/obj/structure/sign/scenery/map/left_outpost21{
+	pixel_y = 32
+	},
+/obj/machinery/power/emitter,
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
 "lm" = (
 /obj/machinery/computer/shuttle_control{
 	req_access = list(101);
@@ -5408,6 +5581,170 @@
 	},
 /turf/simulated/shuttle/floor/red,
 /area/shuttle/administration/centcom)
+"ln" = (
+/obj/structure/sign/scenery/map/right_outpost21{
+	pixel_y = 32
+	},
+/obj/structure/table/steel_reinforced,
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
+"lo" = (
+/obj/machinery/computer/security,
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
+"lp" = (
+/obj/machinery/computer/shuttle_control/specops,
+/obj/machinery/embedded_controller/radio/simple_docking_controller{
+	name = "docking port controller";
+	pixel_y = 25;
+	frequency = 1381;
+	req_one_access = list(103);
+	id_tag = "specops_centcom_dock";
+	tag_door = "specops_centcom_dock_door"
+	},
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
+"lq" = (
+/obj/effect/floor_decal/industrial/stand_clear/red{
+	dir = 8
+	},
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
+"lr" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/warning/color/red{
+	dir = 8
+	},
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
+"ls" = (
+/turf/unsimulated/wall/fakeglass,
+/area/space)
+"lt" = (
+/obj/machinery/door/airlock/external{
+	icon_state = "door_locked";
+	frequency = 1381;
+	locked = 1;
+	id_tag = "specops_centcom_dock_door"
+	},
+/obj/structure/fans/hardlight,
+/turf/simulated/floor/tiled/dark,
+/area/space)
+"lu" = (
+/obj/structure/artilleryplaceholder/decorative{
+	icon_state = "25"
+	},
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
+"lv" = (
+/obj/structure/artilleryplaceholder/decorative{
+	icon_state = "26"
+	},
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
+"lw" = (
+/obj/structure/artilleryplaceholder/decorative{
+	icon_state = "27"
+	},
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
+"lx" = (
+/obj/structure/artilleryplaceholder/decorative{
+	icon_state = "28"
+	},
+/obj/machinery/artillerycontrol,
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
+"ly" = (
+/obj/structure/artilleryplaceholder/decorative{
+	icon_state = "29"
+	},
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
+"lz" = (
+/obj/structure/artilleryplaceholder/decorative{
+	icon_state = "30"
+	},
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
+"lA" = (
+/obj/structure/artilleryplaceholder/decorative{
+	icon_state = "31"
+	},
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
+"lB" = (
+/obj/structure/artilleryplaceholder/decorative{
+	icon_state = "32"
+	},
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
+"lC" = (
+/obj/structure/artilleryplaceholder/decorative{
+	icon_state = "33"
+	},
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
+"lD" = (
+/obj/structure/artilleryplaceholder/decorative{
+	icon_state = "34"
+	},
+/obj/effect/floor_decal/industrial/stand_clear/red{
+	dir = 8
+	},
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
+"lE" = (
+/obj/structure/artilleryplaceholder/decorative{
+	icon_state = "35"
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 9
+	},
+/obj/effect/floor_decal/industrial/warning/color/red{
+	dir = 9
+	},
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
+"lF" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/warning/color/red{
+	dir = 1
+	},
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
+"lG" = (
+/turf/unsimulated/wall/fakeglass{
+	icon_state = "fakewindows2"
+	},
+/area/space)
+"lH" = (
+/obj/structure/shuttle/engine/propulsion{
+	icon_state = "burst_r";
+	dir = 8
+	},
+/turf/simulated/shuttle/plating/airless/carry,
+/area/shuttle/specops)
+"lI" = (
+/turf/simulated/shuttle/wall/dark{
+	join_group = "shuttle_ert"
+	},
+/area/shuttle/specops)
+"lJ" = (
+/obj/machinery/door/airlock/external{
+	name = "Port Docking Hatch";
+	icon_state = "door_locked";
+	frequency = 1381;
+	req_access = list(13);
+	locked = 1;
+	id_tag = "specops_shuttle_port_hatch"
+	},
+/turf/simulated/shuttle/floor/red,
+/area/shuttle/specops)
 "lK" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
 	frequency = 1331;
@@ -5419,6 +5756,37 @@
 	icon_state = "dark"
 	},
 /area/syndicate_mothership)
+"lL" = (
+/obj/structure/artilleryplaceholder/decorative{
+	icon_state = "13"
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 10
+	},
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
+"lM" = (
+/obj/structure/artilleryplaceholder/decorative{
+	icon_state = "14"
+	},
+/obj/effect/floor_decal/industrial/warning,
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
+"lN" = (
+/obj/structure/artilleryplaceholder/decorative{
+	icon_state = "15"
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 6
+	},
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
+"lO" = (
+/obj/structure/artilleryplaceholder/decorative{
+	icon_state = "16"
+	},
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
 "lP" = (
 /obj/machinery/vending/hydronutrients,
 /turf/unsimulated/floor{
@@ -5434,6 +5802,59 @@
 	icon_state = "dark"
 	},
 /area/syndicate_mothership)
+"lR" = (
+/obj/structure/artilleryplaceholder/decorative{
+	icon_state = "17"
+	},
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
+"lS" = (
+/obj/structure/artilleryplaceholder/decorative{
+	icon_state = "18"
+	},
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
+"lT" = (
+/obj/structure/artilleryplaceholder/decorative{
+	icon_state = "19"
+	},
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
+"lU" = (
+/obj/structure/artilleryplaceholder/decorative{
+	icon_state = "20"
+	},
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
+"lV" = (
+/obj/structure/artilleryplaceholder/decorative{
+	icon_state = "21"
+	},
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
+"lW" = (
+/obj/structure/artilleryplaceholder/decorative{
+	icon_state = "22"
+	},
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
+"lX" = (
+/obj/structure/artilleryplaceholder/decorative{
+	icon_state = "23"
+	},
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
+"lY" = (
+/obj/structure/artilleryplaceholder/decorative{
+	icon_state = "24"
+	},
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
+"lZ" = (
+/obj/effect/floor_decal/industrial/warning/tile,
+/obj/effect/floor_decal/industrial/warning/color/tile/red,
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
 "ma" = (
 /obj/structure/bed/chair/wood/wings{
 	dir = 8
@@ -5443,6 +5864,66 @@
 	icon_state = "wood"
 	},
 /area/wizard_station)
+"mb" = (
+/obj/effect/floor_decal/industrial/warning/tile,
+/obj/effect/floor_decal/industrial/warning/color/tile/red,
+/obj/structure/fixed_teleporter{
+	destination_tag = null;
+	my_tag = null
+	},
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
+"mc" = (
+/obj/structure/shuttle/engine/propulsion{
+	dir = 8
+	},
+/turf/simulated/shuttle/plating/airless/carry,
+/area/shuttle/specops)
+"md" = (
+/obj/structure/shuttle/engine/heater{
+	dir = 8
+	},
+/obj/structure/window/plastitanium{
+	dir = 4
+	},
+/turf/simulated/shuttle/plating/airless,
+/area/shuttle/specops)
+"me" = (
+/obj/machinery/computer/communications{
+	dir = 1
+	},
+/obj/item/radio/intercom{
+	name = "Spec Ops Intercom";
+	dir = 1;
+	pixel_y = -28;
+	frequency = 1443
+	},
+/turf/simulated/shuttle/floor{
+	icon_state = "floor_red"
+	},
+/area/shuttle/specops)
+"mf" = (
+/obj/machinery/computer/prisoner{
+	name = "Implant Management";
+	dir = 1
+	},
+/turf/simulated/shuttle/floor{
+	icon_state = "floor_red"
+	},
+/area/shuttle/specops)
+"mg" = (
+/obj/structure/bed/chair/bay/shuttle{
+	dir = 1
+	},
+/turf/simulated/shuttle/floor{
+	icon_state = "floor_red"
+	},
+/area/shuttle/specops)
+"mh" = (
+/turf/simulated/shuttle/floor{
+	icon_state = "floor_red"
+	},
+/area/shuttle/specops)
 "mi" = (
 /obj/structure/table/fancyblack,
 /obj/item/reagent_containers/food/condiment/sprinkles,
@@ -5456,6 +5937,38 @@
 /obj/item/reagent_containers/food/snacks/chaoscakeslice,
 /turf/simulated/floor/carpet/geo,
 /area/planet/clown)
+"mj" = (
+/obj/machinery/embedded_controller/radio/simple_docking_controller{
+	name = "port docking hatch controller";
+	pixel_y = -25;
+	frequency = 1381;
+	id_tag = "specops_shuttle_port";
+	tag_door = "specops_shuttle_port_hatch"
+	},
+/obj/structure/bed/chair/bay/shuttle{
+	dir = 1
+	},
+/turf/simulated/shuttle/floor{
+	icon_state = "floor_red"
+	},
+/area/shuttle/specops)
+"mk" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/structure/bed/chair/bay/shuttle{
+	dir = 1
+	},
+/turf/simulated/shuttle/floor{
+	icon_state = "floor_red"
+	},
+/area/shuttle/specops)
+"ml" = (
+/turf/simulated/shuttle/wall/dark{
+	hard_corner = 1;
+	join_group = "shuttle_ert"
+	},
+/area/shuttle/specops)
 "mm" = (
 /obj/structure/table/marble,
 /obj/item/storage/box/glasses/meta/metapint,
@@ -5465,6 +5978,52 @@
 	icon_state = "vault"
 	},
 /area/wizard_station)
+"mn" = (
+/obj/structure/artilleryplaceholder/decorative{
+	icon_state = "1"
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 9
+	},
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
+"mo" = (
+/obj/structure/artilleryplaceholder/decorative{
+	icon_state = "2"
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
+"mp" = (
+/obj/structure/artilleryplaceholder/decorative{
+	icon_state = "3"
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 5
+	},
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
+"mq" = (
+/obj/structure/artilleryplaceholder/decorative{
+	icon_state = "4"
+	},
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
+"mr" = (
+/obj/structure/artilleryplaceholder/decorative{
+	icon_state = "5"
+	},
+/obj/structure/ship_munition/disperser_charge/explosive,
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
+"ms" = (
+/obj/structure/artilleryplaceholder/decorative{
+	icon_state = "6"
+	},
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
 "mt" = (
 /obj/machinery/computer/pod{
 	id = "thunderdomegen";
@@ -5475,6 +6034,36 @@
 "mu" = (
 /turf/space,
 /area/syndicate_mothership)
+"mv" = (
+/obj/structure/artilleryplaceholder/decorative{
+	icon_state = "7"
+	},
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
+"mw" = (
+/obj/structure/artilleryplaceholder/decorative{
+	icon_state = "8"
+	},
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
+"mx" = (
+/obj/structure/artilleryplaceholder/decorative{
+	icon_state = "9"
+	},
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
+"my" = (
+/obj/structure/artilleryplaceholder/decorative{
+	icon_state = "10"
+	},
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
+"mz" = (
+/obj/structure/artilleryplaceholder/decorative{
+	icon_state = "11"
+	},
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
 "mA" = (
 /obj/machinery/door/airlock/vault{
 	name = "Armory";
@@ -5485,6 +6074,12 @@
 	icon_state = "dark"
 	},
 /area/syndicate_mothership)
+"mB" = (
+/obj/structure/artilleryplaceholder/decorative{
+	icon_state = "12"
+	},
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
 "mC" = (
 /obj/structure/flora/pottedplant{
 	icon_state = "plant-08"
@@ -5494,6 +6089,68 @@
 	icon_state = "wood"
 	},
 /area/wizard_station)
+"mD" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/structure/bed/chair/bay/shuttle{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor{
+	icon_state = "floor_red"
+	},
+/area/shuttle/specops)
+"mE" = (
+/obj/machinery/embedded_controller/radio/simple_docking_controller{
+	name = "forward docking hatch controller";
+	pixel_y = -25;
+	frequency = 1381;
+	id_tag = "specops_shuttle_fore";
+	tag_door = "specops_shuttle_fore_hatch"
+	},
+/obj/effect/shuttle_landmark/premade/specops/centcom,
+/turf/simulated/shuttle/floor{
+	icon_state = "floor_red"
+	},
+/area/shuttle/specops)
+"mF" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 10
+	},
+/obj/effect/floor_decal/industrial/warning/color/red{
+	dir = 10
+	},
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
+"mG" = (
+/obj/effect/floor_decal/industrial/warning,
+/obj/effect/floor_decal/industrial/warning/color/red,
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
+"mH" = (
+/obj/machinery/computer/security/telescreen{
+	name = "Spec. Ops. Monitor";
+	desc = "";
+	pixel_y = 30;
+	network = list("NETWORK_ERT")
+	},
+/obj/machinery/computer/shuttle_control/specops,
+/turf/simulated/shuttle/floor{
+	icon_state = "floor_red"
+	},
+/area/shuttle/specops)
+"mI" = (
+/obj/machinery/computer/security,
+/turf/simulated/shuttle/floor{
+	icon_state = "floor_red"
+	},
+/area/shuttle/specops)
+"mJ" = (
+/obj/structure/bed/chair/bay/shuttle,
+/turf/simulated/shuttle/floor{
+	icon_state = "floor_red"
+	},
+/area/shuttle/specops)
 "mK" = (
 /obj/structure/window/reinforced{
 	dir = 4
@@ -5517,10 +6174,138 @@
 "mN" = (
 /turf/space,
 /area/space)
+"mO" = (
+/obj/structure/bed/chair/bay/shuttle,
+/obj/structure/sign/scenery/map/left_outpost21{
+	pixel_y = 32
+	},
+/turf/simulated/shuttle/floor{
+	icon_state = "floor_red"
+	},
+/area/shuttle/specops)
+"mP" = (
+/obj/structure/bed/chair/bay/shuttle,
+/obj/structure/sign/scenery/map/right_outpost21{
+	pixel_y = 32
+	},
+/turf/simulated/shuttle/floor{
+	icon_state = "floor_red"
+	},
+/area/shuttle/specops)
+"mQ" = (
+/obj/machinery/recharger/wallcharger{
+	pixel_x = 4;
+	pixel_y = 32
+	},
+/obj/structure/bed/chair/bay/shuttle,
+/turf/simulated/shuttle/floor{
+	icon_state = "floor_red"
+	},
+/area/shuttle/specops)
+"mR" = (
+/obj/machinery/recharger/wallcharger{
+	pixel_x = 4;
+	pixel_y = 32
+	},
+/obj/machinery/vending/wallmed1{
+	name = "Emergency NanoMed";
+	layer = 3.3;
+	pixel_x = 28
+	},
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/structure/bed/chair/bay/shuttle,
+/turf/simulated/shuttle/floor{
+	icon_state = "floor_red"
+	},
+/area/shuttle/specops)
 "mS" = (
 /obj/machinery/vending/medical,
 /turf/simulated/shuttle/floor/red,
 /area/shuttle/administration/centcom)
+"mT" = (
+/obj/machinery/transportpod,
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
+"mU" = (
+/obj/effect/floor_decal/industrial/outline/red,
+/obj/structure/ship_munition/disperser_charge/emp,
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
+"mV" = (
+/obj/effect/floor_decal/industrial/outline/red,
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
+"mW" = (
+/obj/effect/floor_decal/industrial/outline/red,
+/obj/structure/ship_munition/disperser_charge/explosive,
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
+"mX" = (
+/obj/effect/floor_decal/industrial/outline/red,
+/obj/structure/ship_munition/disperser_charge/mining,
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
+"mY" = (
+/obj/effect/floor_decal/industrial/outline/red,
+/obj/structure/ship_munition/disperser_charge,
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
+"mZ" = (
+/turf/unsimulated/wall/fakeglass{
+	dir = 1
+	},
+/area/space)
+"na" = (
+/obj/structure/shuttle/engine/propulsion{
+	icon_state = "burst_l";
+	dir = 8
+	},
+/turf/simulated/shuttle/plating/airless/carry,
+/area/shuttle/specops)
+"nb" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 9
+	},
+/obj/effect/floor_decal/industrial/warning/color/red{
+	dir = 9
+	},
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
+"nc" = (
+/obj/effect/floor_decal/industrial/outline/red,
+/obj/structure/ship_munition/disperser_charge/fire,
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
+"nd" = (
+/obj/machinery/door/airlock/highsecurity{
+	name = "Last Resort";
+	req_one_access = list(101,103)
+	},
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
+"ne" = (
+/turf/unsimulated/wall/fakeglass{
+	dir = 8
+	},
+/area/space)
+"nf" = (
+/turf/unsimulated/wall/fakeglass{
+	icon_state = "fakewindows2";
+	dir = 1
+	},
+/area/space)
+"ng" = (
+/turf/unsimulated/wall/fakeglass{
+	dir = 4
+	},
+/area/space)
+"nh" = (
+/obj/effect/floor_decal/industrial/outline/red,
+/obj/machinery/nuclearbomb,
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
 "nm" = (
 /obj/machinery/recharge_station,
 /turf/simulated/shuttle/floor/red,
@@ -6833,9 +7618,7 @@
 "uH" = (
 /obj/structure/fans/hardlight/colorable/abductor,
 /obj/machinery/door/airlock/alien,
-/turf/unsimulated/floor{
-	icon_state = "cult";
-	name = "plating";
+/turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
 	},
@@ -6848,7 +7631,7 @@
 /turf/space,
 /area/syndicate_mothership)
 "uJ" = (
-/turf/simulated/shuttle/plating/airless,
+/turf/simulated/shuttle/floor/voidcraft/turfpack/airless,
 /area/syndicate_mothership)
 "uK" = (
 /turf/simulated/shuttle/wall/alien/hard_corner,
@@ -7033,13 +7816,13 @@
 	dir = 4
 	},
 /obj/effect/shuttle_landmark/premade/skipjack/base,
-/turf/simulated/shuttle/plating/airless,
+/turf/simulated/shuttle/floor/voidcraft/turfpack/airless,
 /area/shuttle/skipjack)
 "wf" = (
 /obj/structure/handrail{
 	dir = 8
 	},
-/turf/simulated/shuttle/plating/airless,
+/turf/simulated/shuttle/floor/voidcraft/turfpack/airless,
 /area/shuttle/skipjack)
 "wg" = (
 /obj/machinery/door/airlock/alien/blue,
@@ -7386,7 +8169,7 @@
 /obj/machinery/shipsensors{
 	dir = 8
 	},
-/turf/simulated/shuttle/plating/airless,
+/turf/simulated/shuttle/floor/voidcraft/turfpack/airless,
 /area/shuttle/skipjack)
 "xC" = (
 /turf/unsimulated/floor{
@@ -7497,7 +8280,7 @@
 /obj/structure/cable/cyan{
 	icon_state = "2-8"
 	},
-/turf/simulated/shuttle/plating/airless,
+/turf/simulated/shuttle/floor/voidcraft/turfpack/airless,
 /area/shuttle/skipjack)
 "yb" = (
 /turf/unsimulated/wall,
@@ -7506,7 +8289,7 @@
 /obj/structure/cable/cyan{
 	icon_state = "1-2"
 	},
-/turf/simulated/shuttle/plating/airless,
+/turf/simulated/shuttle/floor/voidcraft/turfpack/airless,
 /area/shuttle/skipjack)
 "yd" = (
 /obj/item/tool/prybar/red,
@@ -7678,7 +8461,7 @@
 /obj/structure/cable/cyan{
 	icon_state = "4-8"
 	},
-/turf/simulated/shuttle/plating/airless,
+/turf/simulated/shuttle/floor/voidcraft/turfpack/airless,
 /area/shuttle/skipjack)
 "yJ" = (
 /obj/structure/grille{
@@ -7806,13 +8589,13 @@
 /obj/structure/cable/cyan{
 	icon_state = "1-8"
 	},
-/turf/simulated/shuttle/plating/airless,
+/turf/simulated/shuttle/floor/voidcraft/turfpack/airless,
 /area/shuttle/skipjack)
 "zk" = (
 /obj/structure/handrail{
 	dir = 1
 	},
-/turf/simulated/shuttle/plating/airless,
+/turf/simulated/shuttle/floor/voidcraft/turfpack/airless,
 /area/shuttle/skipjack)
 "zl" = (
 /obj/structure/table/alien/blue,
@@ -8766,7 +9549,7 @@
 /obj/structure/cable/cyan{
 	icon_state = "1-4"
 	},
-/turf/simulated/shuttle/plating/airless,
+/turf/simulated/shuttle/floor/voidcraft/turfpack/airless,
 /area/shuttle/skipjack)
 "DC" = (
 /obj/structure/handrail{
@@ -9000,7 +9783,7 @@
 /obj/structure/cable/cyan{
 	icon_state = "0-4"
 	},
-/turf/simulated/shuttle/plating/airless,
+/turf/simulated/shuttle/floor/voidcraft/turfpack/airless,
 /area/shuttle/skipjack)
 "Fg" = (
 /obj/structure/table/marble,
@@ -11359,7 +12142,7 @@
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/trade/centcom)
 "Vs" = (
-/turf/simulated/shuttle/plating/airless,
+/turf/simulated/shuttle/floor/voidcraft/turfpack/airless,
 /area/shuttle/skipjack)
 "Vt" = (
 /obj/machinery/door/window/northleft{
@@ -11551,7 +12334,7 @@
 /area/shuttle/skipjack)
 "WB" = (
 /obj/structure/handrail,
-/turf/simulated/shuttle/plating/airless,
+/turf/simulated/shuttle/floor/voidcraft/turfpack/airless,
 /area/shuttle/skipjack)
 "WD" = (
 /obj/structure/table/marble,
@@ -21053,19 +21836,19 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+lj
+lj
+lj
+lj
+lj
+lj
+lj
+lj
+lj
+lj
+lj
+lj
+lj
 mN
 mN
 mN
@@ -21215,19 +21998,19 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+lj
+nc
+nc
+kI
+mT
+mT
+mT
+kI
+kI
+kI
+kI
+kI
+lj
 mN
 mN
 mN
@@ -21377,19 +22160,19 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+lj
+nc
+nc
+kI
+kI
+kI
+kI
+kI
+kI
+kI
+kI
+kI
+lj
 mN
 mN
 mN
@@ -21539,19 +22322,19 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+lj
+nc
+nc
+kI
+kI
+kI
+kI
+kI
+mn
+lL
+lu
+kI
+lj
 mN
 mN
 mN
@@ -21701,19 +22484,19 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+lj
+kI
+kI
+kI
+mU
+mU
+mU
+kI
+mo
+lM
+kI
+kI
+lj
 mN
 mN
 mN
@@ -21863,19 +22646,19 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+lj
+kI
+kI
+kI
+mU
+mU
+mU
+kI
+mp
+lN
+lv
+kI
+lj
 mN
 mN
 mN
@@ -22025,19 +22808,19 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+lj
+mW
+mW
+kI
+kI
+kI
+kI
+kI
+mq
+lO
+lw
+kI
+lj
 mN
 mN
 mN
@@ -22187,34 +22970,34 @@ mN
 mN
 mN
 mN
+lj
+mW
+mW
+kI
+mW
+mW
+mV
+kI
+mr
+lR
+lx
+kI
+lj
 mN
 mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+kI
+kI
+kI
+kI
+kI
+kI
+kI
+kI
+kI
+kI
 mN
 mN
 mN
@@ -22349,34 +23132,34 @@ mN
 mN
 mN
 mN
+lj
+mW
+mW
+kI
+mW
+mW
+mW
+kI
+ms
+lS
+ly
+kI
+lj
 mN
 mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+kI
+kI
+kI
+kI
+kI
+kI
+kI
+kI
+kI
+kI
 mN
 mN
 mN
@@ -22511,34 +23294,34 @@ mN
 mN
 mN
 mN
+lj
+mW
+mW
+kI
+kI
+kI
+kI
+kI
+mv
+lT
+lz
+kI
+lj
 mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+kJ
+kP
+kP
+kP
+kP
+kP
+kP
+kP
+kP
+kP
+kJ
 mN
 mN
 mN
@@ -22672,35 +23455,35 @@ mN
 mN
 mN
 mN
+lj
+lj
+lj
+lj
+kI
+mX
+mX
+mX
+kI
+mw
+lU
+lA
+kI
+lj
 mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+kJ
+li
+kP
+kP
+kP
+ld
+kP
+kP
+kP
+kP
+kJ
 mN
 mN
 mN
@@ -22834,35 +23617,35 @@ mN
 mN
 mN
 mN
+lj
+nh
+kI
+nd
+kI
+mY
+mY
+mY
+kI
+mx
+lV
+lB
+kI
+lj
 mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+kJ
+kP
+kP
+kP
+kP
+kP
+kP
+kP
+kP
+kP
+kJ
 mN
 mN
 mN
@@ -22996,35 +23779,35 @@ mN
 mN
 mN
 mN
+lj
+nh
+kI
+ne
+kI
+kI
+kI
+kI
+kI
+my
+lW
+lC
+kI
+lj
 mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+kJ
+kV
+kS
+kY
+kY
+kJ
+kY
+kY
+kV
+kS
+kJ
 mN
 mN
 mN
@@ -23158,36 +23941,36 @@ mN
 mN
 mN
 mN
+lj
+nh
+kI
+nf
+kI
+kI
+lq
+lq
+lq
+mz
+lX
+lD
+lq
+lj
 mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+kL
+kF
+kF
+lf
+lc
+kF
+lc
+kZ
+kF
+kF
+kL
+kE
 mN
 mN
 mN
@@ -23320,36 +24103,36 @@ mN
 mN
 mN
 mN
+lj
+nh
+kI
+ng
+kI
+kI
+nb
+lr
+mF
+mB
+lY
+lE
+lr
+lj
 mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+kF
+kU
+kW
+lg
+kU
+kU
+kU
+lb
+kW
+kU
+kF
+kF
 mN
 mN
 mN
@@ -23482,36 +24265,36 @@ mN
 mN
 mN
 mN
+lj
+lj
+lj
+lj
+lj
+lj
+lj
+kI
+mG
+lZ
+lZ
+lF
+kI
+lj
 mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+kF
+kU
+kU
+lh
+kU
+kU
+kU
+lb
+kU
+kU
+kO
+kH
 mN
 mN
 mN
@@ -23650,30 +24433,30 @@ mN
 mN
 mN
 mN
+lj
+kI
+mG
+lZ
+lZ
+lF
+kI
+lj
 mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+kF
+kU
+kU
+lh
+kU
+kU
+kU
+lb
+kU
+kU
+kF
+kF
 mN
 mN
 mN
@@ -23812,30 +24595,30 @@ mN
 mN
 mN
 mN
+lj
+kI
+mG
+lZ
+lZ
+lF
+kI
+lj
 mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+kF
+kU
+kU
+kU
+kU
+kU
+kU
+kU
+kU
+kU
+kO
+kH
 mN
 mN
 mN
@@ -23974,30 +24757,30 @@ mN
 mN
 mN
 mN
+lj
+kI
+mG
+mb
+mb
+lF
+kI
+lj
 mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+kF
+kU
+kX
+kU
+kU
+le
+kU
+kU
+kX
+kU
+kF
+kF
 mN
 mN
 mN
@@ -24136,29 +24919,29 @@ mN
 mN
 mN
 mN
+lj
+mZ
+lG
+lG
+lG
+lG
+ls
+lj
 mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+kL
+kF
+kF
+kF
+kF
+kF
+kF
+kF
+kF
+kF
+kL
 mN
 mN
 mN
@@ -24622,15 +25405,15 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+lj
+lj
+lj
+lj
+lj
+lj
+lj
+lj
+lj
 mN
 mN
 mN
@@ -24784,15 +25567,15 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+Sg
+na
+mc
+mc
+mc
+lH
+Sg
+lk
+lj
 mN
 mN
 mN
@@ -24946,15 +25729,15 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+Sg
+lI
+md
+md
+md
+lI
+Sg
+ll
+lj
 mN
 mN
 mN
@@ -25108,15 +25891,15 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+Sg
+lI
+mH
+mD
+me
+lI
+Sg
+ln
+lj
 mN
 mN
 mN
@@ -25270,15 +26053,15 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+Sg
+lI
+mI
+mh
+mf
+lI
+Sg
+lo
+lj
 mN
 mN
 mN
@@ -25432,15 +26215,15 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+Sg
+lI
+mJ
+mh
+mg
+lI
+Sg
+lp
+lj
 mN
 mN
 mN
@@ -25594,15 +26377,15 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+Sg
+lI
+mO
+mh
+mh
+lJ
+lt
+kI
+lj
 mN
 mN
 mN
@@ -25756,15 +26539,15 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+Sg
+lI
+mP
+mh
+mh
+lJ
+lt
+kI
+lj
 mN
 mN
 mN
@@ -25918,15 +26701,15 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+Sg
+lI
+mJ
+mh
+mj
+lI
+Sg
+kI
+lj
 mN
 mN
 mN
@@ -26080,15 +26863,15 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+Sg
+lI
+mQ
+mh
+mg
+lI
+Sg
+kI
+lj
 mN
 mN
 mN
@@ -26242,15 +27025,15 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+Sg
+lI
+mR
+mh
+mk
+lI
+Sg
+kI
+lj
 mN
 mN
 mN
@@ -26404,15 +27187,15 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+Sg
+lI
+ml
+mE
+ml
+lI
+Sg
+kI
+lj
 mN
 mN
 mN
@@ -26566,15 +27349,15 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+Sg
+Sg
+lI
+lI
+lI
+Sg
+Sg
+lj
+lj
 mN
 mN
 mN
@@ -49441,13 +50224,13 @@ mN
 mN
 mN
 mN
-dC
-dC
-dC
-dC
-dC
-dC
-dC
+iN
+iN
+iN
+iN
+iN
+iN
+iN
 et
 fR
 mK
@@ -49603,20 +50386,20 @@ mN
 mN
 mN
 mN
-dC
-dC
-dC
-dC
-dC
-dC
-dC
-dC
+iN
+iN
+iN
+iN
+iN
+iN
+iN
+iN
 fR
 fy
 fx
 fR
-dC
-dC
+iN
+iN
 be
 mN
 mN
@@ -49777,8 +50560,8 @@ fR
 fy
 cH
 fR
-dC
-dC
+iN
+iN
 bn
 mN
 mN
@@ -49939,8 +50722,8 @@ iV
 fy
 fx
 iV
-dC
-dC
+iN
+iN
 bn
 mN
 mN
@@ -50101,8 +50884,8 @@ dW
 hl
 hl
 dJ
-dC
-dC
+iN
+iN
 mN
 mN
 mN
@@ -52045,8 +52828,8 @@ dW
 mM
 mM
 fR
-dC
-dC
+iN
+iN
 mN
 mN
 mN
@@ -52207,8 +52990,8 @@ mK
 dR
 dj
 fR
-dC
-dC
+iN
+iN
 be
 mN
 mN
@@ -52369,8 +53152,8 @@ fR
 dT
 mM
 fR
-dC
-dC
+iN
+iN
 bn
 mN
 mN
@@ -52519,20 +53302,20 @@ mN
 mN
 mN
 mN
-dC
-dC
-dC
-dC
-dC
-dC
-dC
+iN
+iN
+iN
+iN
+iN
+iN
+iN
 et
 fR
 dV
 mM
 fR
-dC
-dC
+iN
+iN
 bn
 mN
 TW
@@ -52681,14 +53464,14 @@ mN
 mN
 mN
 mN
-dC
-dC
-dC
-dC
-dC
-dC
-dC
-dC
+iN
+iN
+iN
+iN
+iN
+iN
+iN
+iN
 fR
 mK
 fR
@@ -64516,7 +65299,7 @@ TW
 TW
 TW
 TW
-kj
+TW
 TW
 TW
 TW
@@ -66620,10 +67403,10 @@ Dm
 Bm
 DE
 WB
-Vs
+kD
 Vs
 yI
-Vs
+kD
 zk
 Bm
 zE
@@ -67106,10 +67889,10 @@ xg
 Bm
 Vs
 Vs
-Vs
+kD
 Vs
 yI
-Vs
+kD
 Vs
 zu
 zN
@@ -67430,11 +68213,11 @@ DE
 Bm
 Bm
 Bm
-zV
+kC
 Vs
 yI
 Vs
-zV
+kC
 Bm
 zO
 Au
@@ -68395,7 +69178,7 @@ uI
 uI
 uI
 va
-zV
+kC
 DE
 DE
 DE
@@ -68881,7 +69664,7 @@ Iu
 uP
 uP
 va
-zV
+kC
 DE
 DE
 Bm
