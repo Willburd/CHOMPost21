@@ -10285,8 +10285,6 @@
 /turf/simulated/floor/plating,
 /area/maintenance/medicelev)
 "ebb" = (
-/obj/item/cane,
-/obj/structure/table/glass,
 /obj/structure/sign/botany{
 	icon_state = "restroom";
 	name = "\improper LATRINE";
@@ -10295,6 +10293,7 @@
 /obj/effect/floor_decal/corner/blue{
 	dir = 10
 	},
+/obj/machinery/vending/loadout/clothing,
 /turf/simulated/floor/tiled/white,
 /area/medical/ward)
 "ebg" = (
@@ -31305,6 +31304,7 @@
 /obj/effect/floor_decal/corner/blue{
 	dir = 5
 	},
+/obj/item/cane,
 /turf/simulated/floor/tiled/white,
 /area/medical/ward)
 "oOg" = (
@@ -35925,11 +35925,11 @@
 /area/muriki/processor/hall)
 "rfu" = (
 /obj/effect/floor_decal/corner/blue/full,
-/obj/structure/table/glass,
 /obj/machinery/firealarm{
 	dir = 8;
 	pixel_x = -26
 	},
+/obj/machinery/vending/loadout/uniform,
 /turf/simulated/floor/tiled/white,
 /area/medical/ward)
 "rfw" = (
