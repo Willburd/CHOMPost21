@@ -28,6 +28,7 @@
 		handle_mutations()
 		handle_radiation()
 
+		handle_outpost_hygene() // Outpost 21 edit - Germ interactions
 
 
 		//Blood
