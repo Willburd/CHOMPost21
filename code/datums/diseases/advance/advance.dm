@@ -17,19 +17,22 @@ GLOBAL_LIST_INIT(advance_cures, list(
 */
 // Outpost 21 edit begin - Increase the cruelty of the chems to encourage the use of monkeys
 GLOBAL_LIST_INIT(advance_cures, list(
-	REAGENT_ID_SPACEACILLIN,
-	REAGENT_ID_ORANGEJUICE,
-	REAGENT_ID_ETHANOL,
-	REAGENT_ID_GLUCOSE,
-	REAGENT_ID_COPPER,
-	REAGENT_ID_LEAD,
-	REAGENT_ID_LITHIUM,
 	REAGENT_ID_RADIUM,
+	REAGENT_ID_TOXIN,
+	REAGENT_ID_FUEL,
 	REAGENT_ID_MERCURY,
 	REAGENT_ID_BLISS,
+	REAGENT_ID_POTASSIUM,
 	REAGENT_ID_MUTAGEN,
+	REAGENT_ID_MINDBREAKER,
+	REAGENT_ID_HYPERZINE,
+	REAGENT_ID_HEMOCYANIN,
+	REAGENT_ID_CLEANER,
+	REAGENT_ID_CRYOXADONE,
+	REAGENT_ID_MUTAGENX,
 	REAGENT_ID_PHORON,
-	REAGENT_ID_SACID
+	REAGENT_ID_SACID,
+	REAGENT_ID_ASUSTENANCE
 ))
 // Outpost 21 edit end
 
@@ -321,7 +324,7 @@ GLOBAL_LIST_INIT(advance_cures, list(
 
 // Randomly generate a symptom, has a chance to lose or gain a symptom.
 /datum/disease/advance/proc/Evolve(min_level, max_level, ignore_mutable = FALSE)
-	if(!global_flag_check(virus_modifiers, IMMUTABLE) && !ignore_mutable)
+	if(global_flag_check(virus_modifiers, IMMUTABLE) && !ignore_mutable)
 		return
 	var/s = safepick(GenerateSymptoms(min_level, max_level, 1))
 	if(s)
@@ -330,8 +333,8 @@ GLOBAL_LIST_INIT(advance_cures, list(
 	return
 
 // Randomly generates a symptom from a given list, has a chance to lose or gain a symptom.
-/datum/disease/advance/proc/PickyEvolve(var/list/datum/symptom/D, ignore_mutable)
-	if(!global_flag_check(virus_modifiers, IMMUTABLE) && !ignore_mutable)
+/datum/disease/advance/proc/PickyEvolve(list/datum/symptom/D, ignore_mutable = FALSE)
+	if(global_flag_check(virus_modifiers, IMMUTABLE) && !ignore_mutable)
 		return
 	var/s = safepick(D)
 	if(s)
@@ -341,7 +344,7 @@ GLOBAL_LIST_INIT(advance_cures, list(
 
 // Randomly remove a symptom.
 /datum/disease/advance/proc/Devolve(ignore_mutable = FALSE)
-	if(!global_flag_check(virus_modifiers, IMMUTABLE) && !ignore_mutable)
+	if(global_flag_check(virus_modifiers, IMMUTABLE) && !ignore_mutable)
 		return
 	if(length(symptoms) > 1)
 		var/s = safepick(symptoms)
@@ -352,7 +355,7 @@ GLOBAL_LIST_INIT(advance_cures, list(
 
 // Randomly neuter a symptom.
 /datum/disease/advance/proc/Neuter(ignore_mutable = FALSE)
-	if(!global_flag_check(virus_modifiers, IMMUTABLE) && !ignore_mutable)
+	if(global_flag_check(virus_modifiers, IMMUTABLE) && !ignore_mutable)
 		return
 	if(symptoms.len)
 		var/s = safepick(symptoms)
@@ -461,7 +464,7 @@ GLOBAL_LIST_INIT(advance_cures, list(
 	var/list/diseases = list()
 
 	for(var/datum/disease/advance/A in D_list)
-		if(!global_flag_check(A.virus_modifiers, IMMUTABLE))
+		if(global_flag_check(A.virus_modifiers, IMMUTABLE))
 			return
 		diseases += A.Copy()
 
@@ -556,9 +559,9 @@ GLOBAL_LIST_INIT(advance_cures, list(
 
 		return TRUE
 
-/datum/disease/advance/infect(var/mob/living/infectee, make_copy = TRUE)
+/datum/disease/advance/infect(mob/living/infectee, make_copy = TRUE)
 	var/datum/disease/advance/A = make_copy ? Copy() : src
-	if(!initial && global_flag_check(A.virus_modifiers, IMMUTABLE) && (spread_flags & DISEASE_SPREAD_FLUIDS))
+	if(!initial && !global_flag_check(A.virus_modifiers, IMMUTABLE) && (spread_flags & DISEASE_SPREAD_FLUIDS))
 		var/minimum = 1
 		if(prob(clamp(35-(A.resistance + A.stealth - A.speed), 0, 50) * (A.mutability)))
 			if(infectee.job == JOB_CLOWN || infectee.job == JOB_MIME || prob(1))
