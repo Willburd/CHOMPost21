@@ -52,8 +52,6 @@
 	icon_state = "utility"
 	can_hold = list(
 		///obj/item/combitool,
-		/obj/item/reagent_scanner, 		// Outpost 21 edit(port) - for industrial refinery
-		/obj/item/reagent_scanner/adv,	// Outpost 21 edit(port) - for industrial refinery
 		/obj/item/tool/crowbar,
 		/obj/item/tool/screwdriver,
 		/obj/item/weldingtool,
@@ -233,7 +231,6 @@
 		/obj/item/stack/material/steel,
 		/obj/item/stack/material/glass,
 		/obj/item/lightreplacer,
-		/obj/item/lightpainter, // Outpost 21 edit(port) - Light painter in belt
 		/obj/item/pickaxe/plasmacutter,
 		/obj/item/holosign_creator/combifan,
 		/obj/item/reagent_scanner,
