@@ -16198,7 +16198,7 @@
 	dir = 4;
 	icon_state = "pipe-c"
 	},
-/obj/random/junk,
+/obj/random/trash,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/civ/north)
 "aDn" = (
@@ -56985,6 +56985,9 @@
 /obj/structure/cable/orange{
 	icon_state = "5-8"
 	},
+/obj/effect/auto_crayon{
+	icon_state = "x"
+	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/cargo)
 "cbg" = (
@@ -57541,7 +57544,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/random/junk,
+/obj/random/trash,
 /obj/effect/landmark/event_spawn/maintpred,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/civ/north)
@@ -60260,10 +60263,7 @@
 /area/maintenance/cargo)
 "cjK" = (
 /obj/structure/window/maintenance_panel,
-/obj/structure/window/maintenance_panel{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/techfloor/grid,
+/turf/simulated/floor/tiled/techfloor/grid/turfpack/muriki,
 /area/mine/explored/muriki/liminaltoobs)
 "cjL" = (
 /obj/machinery/light/small{
@@ -66795,6 +66795,214 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/atmos_control)
+"cAq" = (
+/turf/simulated/wall/stonelogs/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
+"cAr" = (
+/turf/simulated/mineral/alt/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
+"cAs" = (
+/obj/structure/boulder,
+/obj/effect/floorbreak,
+/turf/simulated/floor/wood/broken/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
+"cAt" = (
+/obj/structure/boulder,
+/obj/effect/floorbreak,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
+"cAu" = (
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
+"cAv" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
+"cAw" = (
+/obj/structure/barricade/sandbag,
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/unexplored/muriki/mountainbase)
+"cAx" = (
+/obj/structure/boulder,
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/unexplored/muriki/mountainbase)
+"cAy" = (
+/obj/random/trash,
+/obj/machinery/light/broken/small{
+	dir = 8
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
+"cAz" = (
+/obj/structure/stairs/spawner/north,
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/structure/railing{
+	dir = 8
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
+"cAA" = (
+/obj/effect/floorbreak,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
+"cAB" = (
+/obj/structure/simple_door/wood,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
+"cAC" = (
+/obj/structure/barricade,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
+"cAD" = (
+/obj/random/trash,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
+"cAE" = (
+/turf/simulated/wall/wood/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
+"cAF" = (
+/turf/simulated/wall,
+/area/mine/unexplored/muriki/cave/east)
+"cAG" = (
+/obj/structure/table/rack/shelf/wood,
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/unexplored/muriki/mountainbase)
+"cAH" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/auto_crayon{
+	icon_state = "revolution"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/civ/north)
+"cAI" = (
+/turf/simulated/wall{
+	can_open = 1
+	},
+/area/maintenance/civ/north)
+"cAJ" = (
+/obj/effect/auto_crayon{
+	icon_state = "left"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/unexplored/muriki/cave/east)
+"cAK" = (
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/unexplored/muriki/cave/east)
+"cAL" = (
+/obj/random/junk,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/unexplored/muriki/cave/east)
+"cAM" = (
+/obj/machinery/door/airlock/maintenance/int,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/mine/unexplored/muriki/cave/east)
+"cAN" = (
+/obj/random/junk,
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/unexplored/muriki/mountainbase)
+"cAO" = (
+/obj/structure/table/woodentable,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
+"cAP" = (
+/turf/simulated/floor/wood/broken/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
+"cAQ" = (
+/obj/structure/closet/grave/dirthole,
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/unexplored/muriki/mountainbase)
+"cAR" = (
+/obj/effect/floorbreak,
+/turf/simulated/floor/wood/broken/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
+"cAS" = (
+/obj/random/junk,
+/turf/simulated/floor/wood/broken/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
+"cAT" = (
+/obj/effect/auto_crayon{
+	icon_state = "up"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/unexplored/muriki/cave/east)
+"cAU" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/random/junk,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/unexplored/muriki/cave/east)
+"cAV" = (
+/obj/structure/railing,
+/obj/structure/railing{
+	dir = 1
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/unexplored/muriki/cave/east)
+"cAW" = (
+/obj/structure/cliff{
+	dir = 8
+	},
+/turf/simulated/mineral/alt/ignore_mapgen/turfpack/muriki,
+/area/mine/unexplored/muriki/cave/east)
+"cAX" = (
+/obj/structure/cliff{
+	dir = 4
+	},
+/turf/simulated/mineral/alt/ignore_mapgen/turfpack/muriki,
+/area/mine/unexplored/muriki/mountainbase)
+"cAY" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/structure/railing,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/unexplored/muriki/mountainbase)
+"cAZ" = (
+/obj/structure/railing,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/unexplored/muriki/mountainbase)
+"cBa" = (
+/obj/random/junk,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
+"cBb" = (
+/obj/random/junk,
+/obj/machinery/light/broken/small{
+	dir = 4
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
+"cBc" = (
+/obj/structure/boulder,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
+"cBd" = (
+/obj/random/maintenance/foodstuff,
+/obj/random/maintenance/foodstuff,
+/obj/structure/table/woodentable,
+/turf/simulated/floor/wood/broken/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
+"cBe" = (
+/obj/structure/closet/tent/B,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
 "cCT" = (
 /obj/effect/floor_decal/corner/blue/full{
 	dir = 8
@@ -141737,7 +141945,7 @@ akQ
 akQ
 akQ
 akQ
-alg
+cAH
 akQ
 mpL
 auV
@@ -142385,7 +142593,7 @@ akQ
 akQ
 akQ
 akQ
-akQ
+cAI
 akQ
 mpL
 mpL
@@ -142541,14 +142749,14 @@ olM
 ahb
 ahb
 akQ
-alg
+aum
 akQ
 ahb
 ahb
 ahb
-ahb
-ahb
-ahb
+cAF
+cAJ
+cAF
 mpL
 mpL
 mpL
@@ -142708,9 +142916,9 @@ akQ
 ahb
 ahb
 ahb
-ahb
-ahb
-ahb
+cAF
+cAK
+cAF
 mpL
 mpL
 mpL
@@ -142870,9 +143078,9 @@ akQ
 ahb
 ahb
 ahb
-ahb
-ahb
-ahb
+cAF
+cAK
+cAF
 mpL
 mpL
 mpL
@@ -143032,9 +143240,9 @@ akQ
 ahb
 ahb
 ahb
-ahb
-ahb
-ahb
+cAF
+cAL
+cAF
 mpL
 mpL
 mpL
@@ -143194,9 +143402,9 @@ akQ
 ahb
 ahb
 ahb
-ahb
-ahb
-ahb
+cAF
+cAK
+cAF
 mpL
 mpL
 mpL
@@ -143356,9 +143564,9 @@ akQ
 ahb
 ahb
 ahb
-ahb
-ahb
-ahb
+cAF
+cAL
+cAF
 mpL
 mpL
 mpL
@@ -143518,9 +143726,9 @@ akQ
 ahb
 ahb
 ahb
-ahb
-ahb
-ahb
+cAF
+cAK
+cAF
 mpL
 mpL
 mpL
@@ -143675,14 +143883,14 @@ ccI
 ccI
 ahb
 akQ
-alg
+cAH
 akQ
-ahb
-ahb
-ahb
-ahb
-ahb
-ahb
+cAF
+cAF
+cAF
+cAF
+cAK
+cAF
 mpL
 mpL
 mpL
@@ -143839,12 +144047,12 @@ ahb
 akQ
 ccz
 akQ
-ahb
-ahb
-ahb
-ahb
-ahb
-ahb
+cAK
+cAL
+cAK
+cAF
+cAL
+cAF
 mpL
 mpL
 mpL
@@ -144000,13 +144208,13 @@ ahb
 akQ
 akQ
 alg
-akQ
-ahb
-ahb
-ahb
-ahb
-ahb
-ahb
+cAI
+cAT
+cAF
+cAK
+cAM
+cAK
+cAF
 mpL
 mpL
 mpL
@@ -144163,12 +144371,12 @@ akQ
 avz
 amX
 akQ
-ahb
-ahb
-ahb
-ahb
-ahb
-ahb
+cAK
+cAK
+cAF
+cAF
+cAF
+cAF
 mpL
 mpL
 mpL
@@ -144325,10 +144533,10 @@ aDm
 amX
 akQ
 akQ
-ahb
-ahb
-ahb
-ahb
+cAF
+cAM
+cAF
+cAF
 ahb
 ahb
 mpL
@@ -144487,10 +144695,10 @@ amX
 akQ
 akQ
 ahb
-ahb
-ahb
-ahb
-ahb
+cAF
+cAK
+cAL
+cAF
 ahb
 ahb
 mpL
@@ -144650,9 +144858,9 @@ akQ
 ahb
 ahb
 ahb
-ahb
-ahb
-ahb
+cAF
+cAK
+cAF
 ahb
 ahb
 mpL
@@ -144812,9 +145020,9 @@ ahb
 ahb
 ahb
 ahb
-ahb
-ahb
-ahb
+cAF
+cAK
+cAF
 ahb
 ahb
 mpL
@@ -144973,10 +145181,10 @@ ahb
 ahb
 ahb
 ahb
-ahb
-ahb
-ahb
-ahb
+cAF
+cAF
+cAL
+cAF
 ahb
 ahb
 mpL
@@ -145134,11 +145342,11 @@ ahb
 ahb
 ahb
 ahb
-ahb
-ahb
-ahb
-ahb
-ahb
+cAF
+cAF
+cAK
+cAK
+cAF
 ahb
 ahb
 mpL
@@ -145290,17 +145498,17 @@ aql
 arq
 amX
 akQ
+cAF
 ahb
 ahb
 ahb
 ahb
 ahb
-ahb
-ahb
-ahb
-ahb
-ahb
-ahb
+cAF
+cAK
+cAK
+cAF
+cAF
 ahb
 ahb
 mpL
@@ -145458,11 +145666,11 @@ ahb
 ahb
 ahb
 ahb
-ahb
-ahb
-ahb
-ahb
-ahb
+cAF
+cAK
+cAF
+cAF
+cAF
 ahb
 ahb
 mpL
@@ -145620,9 +145828,9 @@ ahb
 ahb
 ahb
 ahb
-ahb
-ahb
-ahb
+cAF
+cAL
+cAF
 ahb
 ahb
 ahb
@@ -145782,9 +145990,9 @@ ahb
 ahb
 ahb
 ahb
-ahb
-ahb
-ahb
+cAF
+cAM
+cAF
 ahb
 ahb
 ahb
@@ -145944,9 +146152,9 @@ nDq
 nDq
 kae
 ahb
-ahb
-ahb
-ahb
+cAF
+cAU
+cAF
 ahb
 ahb
 ahb
@@ -146107,8 +146315,8 @@ hSg
 bQd
 nDq
 kae
-ahb
-ahb
+cAV
+cAF
 ahb
 ahb
 ahb
@@ -146269,7 +146477,7 @@ hSg
 hSg
 hSg
 bQd
-nDq
+cAW
 nDq
 kae
 ahb
@@ -147710,7 +147918,7 @@ cyP
 cyL
 vSb
 coc
-vSb
+azz
 coc
 vSb
 vSb
@@ -147727,7 +147935,7 @@ rAa
 rAa
 eNr
 eNn
-eET
+hSg
 hSg
 hSg
 eET
@@ -147870,9 +148078,9 @@ cyO
 cyM
 cyM
 cyL
-vSb
-vSb
-vSb
+coc
+coc
+azz
 coc
 vSb
 vSb
@@ -147889,7 +148097,7 @@ vSb
 vSb
 lTl
 rAa
-rAa
+cAX
 eNr
 hSg
 hSg
@@ -148032,6 +148240,12 @@ cyS
 cyQ
 cyP
 cyL
+coc
+azz
+azz
+coc
+coc
+coc
 vSb
 vSb
 vSb
@@ -148044,14 +148258,8 @@ vSb
 vSb
 vSb
 vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
+coc
+cAY
 lTl
 rAa
 eNr
@@ -148194,6 +148402,16 @@ cyP
 cyM
 cyP
 cyL
+coc
+azz
+coc
+azz
+azz
+cok
+cei
+cei
+cei
+cei
 vSb
 vSb
 vSb
@@ -148203,17 +148421,7 @@ vSb
 vSb
 vSb
 vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
+cAZ
 vSb
 vSb
 lTl
@@ -148356,6 +148564,17 @@ cyP
 cyP
 cyO
 cyL
+coc
+azz
+azz
+azz
+coc
+coc
+coc
+vSb
+cei
+cei
+cei
 vSb
 vSb
 vSb
@@ -148364,18 +148583,7 @@ vSb
 vSb
 vSb
 vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
+azz
 vSb
 vSb
 vSb
@@ -148518,26 +148726,26 @@ cyO
 cyP
 cyO
 cyL
+coc
+coc
+coc
+coc
+coc
 vSb
 vSb
 vSb
 vSb
+cAQ
+cei
+cei
+cei
+cei
+cei
+cei
 vSb
 vSb
 vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
+cei
 vSb
 vSb
 vSb
@@ -148693,14 +148901,14 @@ vSb
 vSb
 vSb
 vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
+cei
+cei
+cei
+cei
+cei
+cei
+cei
+cAQ
 vSb
 vSb
 vSb
@@ -148860,15 +149068,15 @@ vSb
 vSb
 vSb
 vSb
+cAx
+cei
+cei
+cei
 vSb
 vSb
 vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
+cAx
+cAx
 lTl
 eNr
 hBa
@@ -149022,16 +149230,16 @@ vSb
 vSb
 vSb
 vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
+cAx
+cei
+cAx
+cAN
+cAx
+cei
+cei
+cei
+cAw
+cAw
 lTl
 rAa
 eNr
@@ -149183,17 +149391,17 @@ vSb
 vSb
 vSb
 vSb
+cAr
+cAq
+cAB
+cAq
+cAq
+cAq
 vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
+cAG
+cAx
+cei
+cAx
 vSb
 vSb
 lTl
@@ -149344,21 +149552,21 @@ vSb
 vSb
 vSb
 vSb
+cAr
+cAr
+cBc
+cAu
+cAP
+cAO
+cAq
 vSb
 vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
+cAq
+cAB
+cAq
+cAq
+cAq
+cAq
 lTl
 rAa
 eNr
@@ -149506,21 +149714,21 @@ vSb
 vSb
 vSb
 vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
+cAr
+cBc
+cAu
+cAA
+cAu
+cAO
+cAq
+cAq
+cAq
+cAq
+cAu
+cAy
+cAu
+cAs
+cAq
 vSb
 afa
 lTl
@@ -149668,21 +149876,21 @@ vSb
 vSb
 vSb
 vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
+cAq
+cBd
+cAP
+cBa
+cAR
+cAO
+cAB
+cAs
+cAE
+cAE
+cAC
+cAz
+cAv
+cAt
+cAq
 vSb
 afa
 qFc
@@ -149830,21 +150038,21 @@ vSb
 vSb
 vSb
 vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
+cAq
+cBe
+cAu
+cBb
+cAS
+cAP
+cAE
+cAt
+cAt
+cAs
+cAD
+cAA
+cAt
+cAs
+cAr
 vSb
 afa
 afa
@@ -149992,19 +150200,19 @@ vSb
 vSb
 vSb
 vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
+cAq
+cAq
+cAq
+cAq
+cAq
+cAq
+cAq
+cAq
+cAq
+cAq
+cAq
+cAq
+cAq
 vSb
 vSb
 vSb

@@ -12468,12 +12468,53 @@
 /obj/item/clothing/accessory/bodycam/yobro,
 /turf/simulated/floor/wood,
 /area/rnd/breakroom)
+"axy" = (
+/turf/simulated/wall/stonelogs/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
+"axz" = (
+/turf/simulated/mineral/alt/ignore_mapgen/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
+"axA" = (
+/obj/structure/simple_door/wood,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
+"axB" = (
+/turf/simulated/open/muriki,
+/area/specialty/stowaway_clubhouse/upper)
+"axC" = (
+/obj/effect/floorbreak,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
+"axD" = (
+/obj/item/pen/crayon/marker/rainbow,
+/obj/structure/boulder,
+/obj/effect/floorbreak,
+/turf/simulated/floor/wood/broken/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
+"axE" = (
+/obj/structure/boulder,
+/obj/effect/floorbreak,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
 "axF" = (
 /mob/living/simple_mob/vore/slug,
 /turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
 	},
 /area/mine/unexplored/muriki/mountaineast)
+"axG" = (
+/obj/random/junk,
+/obj/effect/floorbreak,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
+"axH" = (
+/obj/random/junk,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
+"axI" = (
+/obj/structure/boulder,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
 "axJ" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -12487,9 +12528,50 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/muriki/bathroom/sciupper)
+"axK" = (
+/obj/structure/lattice,
+/obj/item/stack/material/wood/oak,
+/obj/item/stack/material/wood/oak{
+	pixel_x = 10
+	},
+/obj/item/stack/material/wood/oak{
+	pixel_x = -10
+	},
+/turf/simulated/open/muriki,
+/area/specialty/stowaway_clubhouse/upper)
+"axL" = (
+/obj/random/trash,
+/obj/effect/floorbreak,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/specialty/stowaway_clubhouse/upper)
+"axM" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/effect/floorbreak,
+/obj/machinery/light/broken/small{
+	dir = 1
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
+"axN" = (
+/obj/structure/table/rack/shelf/wood,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
 "axO" = (
 /turf/simulated/open/indoor/turfpack/muriki,
 /area/muriki/processor/hall)
+"axP" = (
+/turf/simulated/wall/wood/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
+"axQ" = (
+/obj/item/stack/material/wood/oak,
+/turf/simulated/floor/wood/broken/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
+"axR" = (
+/obj/random/trash,
+/obj/structure/boulder,
+/obj/effect/floorbreak,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
 "axS" = (
 /obj/structure/closet{
 	name = "Evidence Closet"
@@ -12499,6 +12581,74 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/security/evidence_storage)
+"axT" = (
+/turf/simulated/mineral/alt/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
+"axU" = (
+/obj/item/material/barbedwire/start_active,
+/turf/simulated/floor/outdoors/snow/turfpack/muriki,
+/area/mine/explored/muriki/mountaineast)
+"axV" = (
+/obj/effect/floorbreak,
+/obj/item/material/twohanded/sledgehammer/gravity{
+	desc = "A specialized sledgehammer, dented and damaged from some great battle... engraved on the handle is 'Ed'reith Foley";
+	name = "Ed's Gravity Hammer"
+	},
+/obj/structure/boulder,
+/turf/simulated/floor/wood/broken/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
+"axW" = (
+/obj/structure/boulder,
+/obj/structure/simple_door/wood,
+/obj/effect/floorbreak,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
+"axX" = (
+/obj/structure/barricade/sandbag,
+/obj/item/material/barbedwire/start_active,
+/turf/simulated/floor/wood/broken/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
+"axY" = (
+/obj/random/trash,
+/turf/simulated/floor/wood/broken/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
+"axZ" = (
+/obj/item/clothing/head/cone,
+/turf/simulated/floor/outdoors/snow/turfpack/muriki,
+/area/mine/explored/muriki/mountaineast)
+"aya" = (
+/obj/structure/boulder,
+/obj/item/stack/material/wood/oak,
+/obj/effect/floorbreak,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
+"ayb" = (
+/obj/item/stack/material/wood/oak,
+/obj/item/stack/material/wood/oak,
+/obj/effect/floorbreak,
+/obj/machinery/light/broken/small{
+	dir = 1
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
+"ayc" = (
+/obj/structure/prop/rock/small/alt,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
+"ayd" = (
+/obj/item/stack/material/wood/oak,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
+"aye" = (
+/turf/simulated/floor/wood/broken/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
+"ayf" = (
+/obj/structure/prop/rock/small,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
+"ayg" = (
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
 "ayh" = (
 /obj/structure/closet/crate,
 /obj/effect/floor_decal/corner/red{
@@ -12506,6 +12656,29 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/security/secmail)
+"ayi" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/effect/floorbreak,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
+"ayj" = (
+/obj/structure/barricade,
+/obj/item/stack/material/wood/oak,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
+"ayk" = (
+/obj/effect/floorbreak,
+/obj/item/stack/material/wood/oak,
+/obj/item/stack/material/wood/oak{
+	pixel_x = 10
+	},
+/obj/item/stack/material/wood/oak{
+	pixel_x = -10
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
 "ayl" = (
 /obj/machinery/computer/crew{
 	dir = 8;
@@ -12522,6 +12695,46 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/reception)
+"aym" = (
+/obj/item/stack/material/wood/oak,
+/obj/item/stack/material/wood/oak,
+/obj/item/stack/material/wood/oak,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
+"ayn" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
+"ayo" = (
+/obj/structure/bed,
+/obj/item/bedsheet/mime,
+/obj/effect/floorbreak,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
+"ayp" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/effect/floorbreak,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
+"ayq" = (
+/obj/structure/bed,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
+"ayr" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/random/maintenance/foodstuff,
+/obj/random/maintenance/foodstuff,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
+"ays" = (
+/obj/structure/bed,
+/obj/item/bedsheet/hop,
+/obj/effect/landmark/start/stowaway,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
 "ayt" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 4
@@ -12532,6 +12745,213 @@
 /obj/effect/catwalk_plated/dark,
 /turf/simulated/floor/plating,
 /area/quartermaster/warehouse)
+"ayu" = (
+/obj/structure/bed,
+/obj/item/bedsheet/craftable,
+/obj/item/toy/plushie/pillow/green,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
+"ayv" = (
+/obj/item/stack/material/wood/oak,
+/obj/item/stack/material/wood/oak{
+	pixel_x = 10
+	},
+/obj/item/stack/material/wood/oak,
+/obj/effect/floorbreak,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
+"ayw" = (
+/obj/item/flashlight/glowstick,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
+"ayx" = (
+/obj/item/trash/rkibble{
+	desc = "A bowl of healthy food for any pet to grow big and strong! It looks untouched. ";
+	name = "bowl of kibble"
+	},
+/obj/item/trash/rkibble{
+	desc = "A bowl of healthy food for any pet to grow big and strong! It looks untouched. ";
+	name = "bowl of kibble"
+	},
+/obj/item/trash/rkibble{
+	desc = "A bowl of healthy food for any pet to grow big and strong! It looks untouched. ";
+	name = "bowl of kibble"
+	},
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
+"ayy" = (
+/obj/random/trash,
+/obj/effect/floorbreak,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
+"ayz" = (
+/mob/living/simple_mob/vore/alienanimals/jil,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
+"ayA" = (
+/obj/effect/floorbreak,
+/turf/simulated/floor/wood/broken/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
+"ayB" = (
+/obj/item/stack/material/wood/oak,
+/obj/effect/floorbreak,
+/turf/simulated/floor/wood/broken/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
+"ayC" = (
+/obj/structure/bed,
+/obj/item/toy/plushie/pillow/green,
+/obj/machinery/light/broken/small{
+	dir = 1
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
+"ayD" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/gun/projectile/revolver/capgun{
+	name = "revolver";
+	desc = "A small revolver... this one looks a bit off"
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
+"ayE" = (
+/obj/structure/bed,
+/obj/item/bedsheet/ce,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
+"ayF" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/machinery/light/broken/small{
+	dir = 1
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
+"ayG" = (
+/obj/item/stack/material/wood/oak,
+/obj/item/stack/material/wood/oak,
+/obj/item/stack/material/wood/oak,
+/obj/item/stack/material/wood/oak,
+/obj/structure/boulder,
+/obj/effect/floorbreak,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
+"ayH" = (
+/obj/item/material/shard,
+/obj/item/material/shard,
+/obj/effect/floorbreak,
+/turf/simulated/floor/wood/broken/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
+"ayI" = (
+/obj/structure/barricade,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
+"ayJ" = (
+/turf/simulated/floor/outdoors/snow/gravsnow/turfpack/muriki,
+/area/mine/explored/muriki/mountaineast)
+"ayK" = (
+/obj/structure/prop/rock,
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/specialty/stowaway_clubhouse)
+"ayL" = (
+/obj/structure/prop/rock/small/alt,
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/specialty/stowaway_clubhouse)
+"ayM" = (
+/obj/structure/boulder,
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/specialty/stowaway_clubhouse)
+"ayN" = (
+/obj/structure/table/rack/shelf/wood,
+/turf/simulated/floor/wood/broken/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
+"ayO" = (
+/obj/structure/boulder,
+/turf/simulated/floor/wood/broken/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
+"ayP" = (
+/obj/structure/boulder,
+/obj/effect/floorbreak,
+/turf/simulated/floor/wood/broken/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
+"ayQ" = (
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/specialty/stowaway_clubhouse)
+"ayR" = (
+/obj/structure/prop/rock/small,
+/obj/machinery/light/broken/small,
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/unexplored/muriki/mountaineast)
+"ayS" = (
+/obj/structure/prop/rock/small/alt,
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/unexplored/muriki/mountaineast)
+"ayT" = (
+/obj/effect/floorbreak,
+/obj/structure/boulder,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
+"ayU" = (
+/obj/machinery/light/broken/small,
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/unexplored/muriki/mountaineast)
+"ayV" = (
+/obj/structure/closet/grave/dirthole,
+/obj/structure/prop/rock/flat,
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/unexplored/muriki/mountaineast)
+"ayW" = (
+/obj/effect/floorbreak,
+/obj/structure/boulder,
+/turf/simulated/floor/wood/broken/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
+"ayX" = (
+/obj/structure/simple_door/wood,
+/turf/simulated/floor/wood/broken/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
+"ayY" = (
+/obj/structure/prop/rock/small,
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/unexplored/muriki/mountaineast)
+"ayZ" = (
+/obj/effect/auto_crayon{
+	icon_state = "x"
+	},
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/unexplored/muriki/mountaineast)
+"aza" = (
+/obj/random/junk,
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/unexplored/muriki/mountaineast)
+"azb" = (
+/obj/structure/barricade/planks,
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/unexplored/muriki/mountaineast)
 "azc" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -12542,6 +12962,15 @@
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/hallway/security/main)
+"azd" = (
+/turf/simulated/wall,
+/area/maintenance/civ)
+"aze" = (
+/obj/structure/prop/rock,
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/unexplored/muriki/mountaineast)
 "azf" = (
 /obj/item/stool/baystool/padded{
 	dir = 1
@@ -12554,6 +12983,10 @@
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/bar)
+"azg" = (
+/obj/structure/prop/rock/small,
+/turf/simulated/floor/wood/broken/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
 "azh" = (
 /obj/effect/floor_decal/milspec/stripe{
 	dir = 1
@@ -12565,6 +12998,18 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/milspec,
 /area/quartermaster/warehouse)
+"azi" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/structure/table/rack/shelf/wood,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
+"azj" = (
+/obj/machinery/door/airlock/maintenance/int,
+/obj/structure/blade_trap/start_active,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/maintenance/civ)
 "azk" = (
 /obj/structure/window/reinforced/tinted/frosted,
 /obj/item/radio/intercom{
@@ -12581,6 +13026,46 @@
 /obj/item/towel/random,
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/bridge)
+"azl" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/auto_crayon{
+	icon_state = "revolution"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/civ)
+"azm" = (
+/obj/machinery/door/airlock/maintenance/int,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/maintenance/civ)
+"azn" = (
+/turf/simulated/wall,
+/area/mine/unexplored/muriki/mountaineast)
+"azo" = (
+/turf/simulated/wall/stonelogs/turfpack/muriki,
+/area/mine/unexplored/muriki/mountaineast)
+"azp" = (
+/obj/structure/barricade/cutout/greytide,
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/explored/muriki/river/hole)
+"azq" = (
+/obj/structure/table/woodentable,
+/obj/random/maintenance/foodstuff,
+/obj/random/maintenance/foodstuff,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/unexplored/muriki/mountaineast)
+"azr" = (
+/obj/structure/table/woodentable,
+/obj/effect/floorbreak,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/unexplored/muriki/mountaineast)
+"azs" = (
+/obj/structure/simple_door/wood,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/unexplored/muriki/mountaineast)
 "azt" = (
 /obj/machinery/light_switch{
 	dir = 1;
@@ -12594,6 +13079,40 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/techmaint,
 /area/security/evidence_storage)
+"azu" = (
+/obj/random/junk,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/unexplored/muriki/mountaineast)
+"azv" = (
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/unexplored/muriki/mountaineast)
+"azw" = (
+/obj/effect/floorbreak,
+/obj/structure/boulder,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/unexplored/muriki/mountaineast)
+"azx" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/catwalk,
+/obj/random/junk,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/civ)
+"azy" = (
+/obj/effect/floorbreak,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/unexplored/muriki/mountaineast)
+"azz" = (
+/obj/machinery/light/broken/small{
+	dir = 4
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/unexplored/muriki/mountaineast)
+"azA" = (
+/obj/structure/bed,
+/obj/item/bedsheet/craftable,
+/obj/effect/floorbreak,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/unexplored/muriki/mountaineast)
 "azE" = (
 /obj/structure/closet/l3closet/virology,
 /obj/effect/floor_decal/corner/black{
@@ -23303,6 +23822,7 @@
 /obj/structure/disposalpipe/up{
 	dir = 1
 	},
+/obj/random/junk,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/civ)
 "dUG" = (
@@ -49534,6 +50054,13 @@
 /obj/structure/disposalpipe/segment{
 	dir = 1;
 	icon_state = "pipe-c"
+	},
+/obj/random/junk,
+/obj/effect/auto_crayon{
+	icon_state = "left"
+	},
+/obj/effect/auto_crayon{
+	icon_state = "x"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/civ)
@@ -82060,6 +82587,7 @@
 	dir = 4
 	},
 /obj/structure/railing,
+/obj/effect/floor_decal/industrial/bot_outline/red,
 /turf/simulated/floor/tiled/freezer/cold,
 /area/muriki/crew/kitchenfreezer)
 "wgT" = (
@@ -147804,20 +148332,20 @@ rZO
 rJa
 rJa
 rJa
-rJa
-rJa
-rJa
-rJa
-rJa
+axy
+axy
+axy
+axy
 rZO
 rZO
 rZO
 rZO
-apR
+rZO
+ayJ
 apR
 apR
 edp
-apR
+axU
 mPz
 dcI
 apR
@@ -147966,11 +148494,11 @@ rZO
 rJa
 rJa
 rJa
-rJa
-rJa
-rJa
-rJa
-rJa
+axy
+axN
+ayg
+ayT
+ayW
 rZO
 rZO
 rZO
@@ -148128,13 +148656,13 @@ rZO
 rJa
 rJa
 rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
+axy
+ayg
+azg
+aye
+ayT
+ayT
+rZO
 rJa
 rJa
 rZO
@@ -148290,13 +148818,13 @@ rZO
 rJa
 rJa
 rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
+axy
+azi
+axI
+ayf
+aye
+ayT
+axy
 rJa
 rJa
 rJa
@@ -148305,7 +148833,7 @@ rZO
 rZO
 rZO
 rZO
-apR
+axZ
 apR
 apR
 apR
@@ -148453,12 +148981,12 @@ kmJ
 rJa
 rJa
 rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
+axy
+axy
+axy
+ayX
+axy
+axy
 rJa
 rJa
 rJa
@@ -148468,7 +148996,7 @@ rJa
 rJa
 rZO
 rZO
-apR
+axU
 apR
 apR
 apR
@@ -148618,9 +149146,9 @@ rJa
 rJa
 rJa
 rJa
-rJa
-rJa
-rJa
+ayY
+iwS
+axy
 rJa
 rJa
 rJa
@@ -148780,17 +149308,17 @@ rJa
 rJa
 rJa
 rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rZO
+fhs
+iwS
+axy
+axy
+axy
+axT
+axT
+axT
+axy
+axy
+axy
 rZO
 rZO
 apR
@@ -148937,22 +149465,22 @@ mho
 mho
 mho
 eic
-ddK
+azp
 blG
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
+fhs
+fhs
+azb
+ayZ
+fhs
+axy
+ayg
+axG
+axE
+axE
+axC
+ayy
+ayo
+axy
 rJa
 rZO
 apR
@@ -149098,23 +149626,23 @@ pNM
 mho
 mho
 mho
-wdu
-wdu
-wdu
-wdu
-wdu
+azd
+azd
+azd
+azj
+azd
 rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
+iwS
+fhs
+axy
+axy
+axA
+axy
+axy
+axN
+aye
+ayp
+axy
 rJa
 rZO
 rZO
@@ -149264,19 +149792,19 @@ ddY
 uKL
 dJM
 lZo
-wdu
+azd
 rJa
 rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
+fhs
+ayQ
+ayQ
+ayQ
+ayK
+axy
+ayC
+ayz
+ayq
+axy
 rJa
 rZO
 rZO
@@ -149423,25 +149951,25 @@ mho
 mho
 wdu
 lPc
-wdu
-wdu
+azd
+azd
 vFG
-wdu
+azd
 rJa
 rJa
+fhs
+axy
+ayM
+ayM
+ayL
+ayH
+ayD
+axH
+ayr
+axy
 rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
+rZO
+rZO
 rZO
 apR
 apR
@@ -149583,27 +150111,27 @@ ixl
 qVy
 cEo
 uKL
-uKL
+azx
 oKM
-wdu
-wdu
-vFG
-wdu
-wdu
+azd
+azd
+azl
+azd
+azd
 rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
+fhs
+axy
+ayM
+ayM
+ayM
+axy
+ayE
+ayA
+ays
+axy
+axy
+axy
+axy
 rZO
 apR
 apR
@@ -149741,31 +150269,31 @@ fhs
 rJa
 rJa
 rJa
-rJa
+fhs
+fhs
 rZO
 rZO
-rZO
-rZO
-rZO
-rZO
-wdu
+azn
+azn
+azn
+azd
 hNX
 dUi
-wdu
+azd
 rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
+ayU
+axy
+axy
+axy
+axy
+axy
+axP
+axA
+axP
+ayj
+aya
+axE
+rZO
 rZO
 apR
 apR
@@ -149901,33 +150429,33 @@ hdI
 sku
 iwS
 fhs
+fhs
+fhs
+fhs
 rJa
 rJa
 rJa
 rJa
 rJa
 rJa
+azd
+azm
+azd
+azd
 rJa
+fhs
 rJa
-rJa
-wdu
-wdu
-wdu
-wdu
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
+axy
+axH
+axN
+axy
+axN
+ayg
+ayu
+axP
+ayb
+axV
+rZO
 rZO
 rZO
 apR
@@ -150064,6 +150592,7 @@ sAR
 xHO
 xHO
 xHO
+fhs
 rJa
 rJa
 rJa
@@ -150071,26 +150600,25 @@ rJa
 rJa
 rJa
 rJa
+azn
+fhs
+fhs
+aze
 rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
+fhs
+ayR
+axy
+aye
+ayN
+axy
+ayF
+ayy
+axN
+axP
+axA
+axP
+rZO
+rZO
 rZO
 rZO
 apR
@@ -150226,34 +150754,34 @@ aNB
 aBU
 jtw
 xHO
+fhs
+fhs
 rJa
 rJa
 rJa
 rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
+fhs
+aza
+fhs
+fhs
+fhs
+fhs
+fhs
+fhs
+fhs
+axA
+axH
+ayg
+axA
+axC
+ayB
+ayg
+axA
+ayc
+axW
+rZO
+rZO
+rZO
 rZO
 rZO
 apR
@@ -150389,36 +150917,36 @@ aBU
 jXc
 rJa
 rJa
+fhs
+fhs
+fhs
+fhs
+fhs
+fhs
 rJa
 rJa
 rJa
 rJa
 rJa
+fhs
 rJa
 rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
+axy
+axE
+ayO
+axy
+axN
+ayg
+aye
+axP
+axA
+axP
 rZO
 rZO
-aqF
+rZO
+rZO
+rZO
+apR
 apR
 apR
 wql
@@ -150555,30 +151083,30 @@ rJa
 rJa
 rJa
 rJa
+azo
+azs
+azo
+azo
 rJa
 rJa
 rJa
+fhs
 rJa
 rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
+axT
+axT
+ayP
+axy
+axP
+ayj
+axP
+ayk
+axH
+axP
+axE
+rZO
+rZO
+rZO
 apR
 apR
 apR
@@ -150717,30 +151245,30 @@ rJa
 rJa
 rJa
 rJa
+azy
+azu
+azq
+azo
 rJa
 rJa
 rJa
+fhs
 rJa
 rJa
 rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
+axT
+axy
+axy
+axN
+axC
+axN
+aym
+ayd
+axP
+axM
+axD
+rZO
+rZO
 apR
 apR
 apR
@@ -150878,31 +151406,31 @@ fpc
 rJa
 rJa
 rJa
+azw
+azu
+azv
+azr
+azo
 rJa
 rJa
 rJa
+aza
+fhs
+ayS
 rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
+axT
+axE
+ayI
+ayn
+ayy
+ayv
+axN
+aye
+axX
+axN
+axE
+rZO
+rZO
 apR
 apR
 apR
@@ -151039,32 +151567,32 @@ xHO
 jqx
 rJa
 rJa
+azo
+azA
+azz
+azw
+azr
 rJa
 rJa
 rJa
 rJa
+fhs
+fhs
+iwS
 rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
+axy
+axy
+axy
+ayG
+axE
+axC
+ayg
+ayf
+axP
+axN
+axG
+rZO
+rZO
 apR
 apR
 apR
@@ -151201,32 +151729,32 @@ xHO
 jqx
 rJa
 rJa
+azo
+azo
+azo
+azo
 rJa
 rJa
 rJa
 rJa
 rJa
+fhs
+ayV
 rJa
 rJa
 rJa
 rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
+axT
+axT
+axy
+axy
+axP
+axA
+axP
+axP
+axA
+axy
+axz
 apR
 apR
 apR
@@ -151381,14 +151909,14 @@ rJa
 rJa
 rJa
 rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
+axy
+ayn
+ayg
+axY
+axQ
+axC
+axy
+axz
 apR
 apR
 apR
@@ -151543,14 +152071,14 @@ wFh
 rJa
 rJa
 rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
+axy
+axP
+axP
+axP
+axE
+axA
+axy
+axy
 apR
 apR
 apR
@@ -151705,16 +152233,16 @@ wFh
 wFh
 rJa
 rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
+axy
+ayg
+ayi
+axA
+axR
+axH
+axC
+axA
+afc
+afc
 apR
 apR
 apR
@@ -151865,16 +152393,16 @@ wFh
 wFh
 wFh
 wFh
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
+axy
+axy
+axy
+axA
+axP
+axP
+axP
+axA
+axy
+axy
 rJa
 rJa
 apR
@@ -152027,15 +152555,15 @@ wFh
 wFh
 wFh
 wFh
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
+axA
+ayg
+ayw
+ayg
+axN
+axP
+axN
+axI
+axy
 rJa
 rJa
 rJa
@@ -152189,17 +152717,17 @@ rJa
 rJa
 rJa
 rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
+axy
+axN
+axY
+aye
+axE
+axT
+axE
+axK
+axy
+axy
+axy
 rJa
 rJa
 apR
@@ -152351,17 +152879,17 @@ rJa
 rJa
 rJa
 rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
+axy
+axN
+ayx
+axE
+axT
+axT
+axT
+axL
+axB
+axB
+axy
 rJa
 rJa
 apR
@@ -152513,17 +153041,17 @@ rJa
 rJa
 rJa
 rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
+axy
+axy
+axy
+axy
+axT
+axT
+axT
+axy
+axy
+axy
+axy
 rJa
 rJa
 apR
