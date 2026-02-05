@@ -1779,6 +1779,9 @@
 	dir = 1;
 	maxhealth = 35000
 	},
+/obj/structure/grille/rustic{
+	health = 10000
+	},
 /turf/simulated/floor/tiled/dark,
 /area/vr)
 "adv" = (
@@ -1789,6 +1792,9 @@
 	},
 /obj/structure/window/maintenance_panel{
 	maxhealth = 35000
+	},
+/obj/structure/grille/rustic{
+	health = 10000
 	},
 /turf/simulated/floor/tiled/dark,
 /area/vr)
@@ -11083,11 +11089,6 @@
 /obj/structure/window/reinforced,
 /turf/simulated/floor/plating,
 /area/vr/bloodstar)
-"cUe" = (
-/turf/unsimulated/wall/fakeglass2{
-	dir = 1
-	},
-/area/vr)
 "cUm" = (
 /obj/structure/table/darkglass,
 /obj/item/gun/energy/lasertag/omni,
@@ -38568,9 +38569,7 @@
 /area/vr/bloodstar)
 "lok" = (
 /obj/machinery/light/floortube,
-/turf/unsimulated/wall/fakeglass2{
-	dir = 1
-	},
+/turf/simulated/floor/tiled/material/phoron,
 /area/vr)
 "los" = (
 /obj/machinery/light/small{
@@ -52330,11 +52329,6 @@
 /mob/living/simple_mob/animal/passive/mouse,
 /turf/simulated/floor,
 /area/vr/requirespower)
-"pDz" = (
-/turf/unsimulated/wall/fakeglass{
-	dir = 8
-	},
-/area/vr)
 "pDB" = (
 /obj/machinery/light{
 	dir = 8
@@ -61072,11 +61066,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/carpet,
 /area/vr/bloodstar)
-"szr" = (
-/turf/unsimulated/wall/fakeglass{
-	dir = 4
-	},
-/area/vr)
 "szv" = (
 /obj/machinery/disposal/deliveryChute{
 	dir = 4
@@ -110361,7 +110350,7 @@ dJc
 foN
 foN
 foN
-xYq
+krp
 krp
 krp
 krp
@@ -110523,7 +110512,7 @@ dJc
 foN
 wab
 sQk
-pDz
+kyu
 ejh
 ejh
 ejh
@@ -110685,7 +110674,7 @@ dJc
 foN
 ehe
 rzQ
-cUe
+kyu
 kyu
 kyu
 kyu
@@ -111171,7 +111160,7 @@ dJc
 foN
 ehe
 rzQ
-cUe
+kyu
 kyu
 kyu
 kyu
@@ -111333,7 +111322,7 @@ dJc
 foN
 ehe
 rzQ
-cUe
+kyu
 kyu
 kyu
 kyu
@@ -111819,7 +111808,7 @@ dJc
 foN
 ehe
 rzQ
-cUe
+kyu
 kyu
 kyu
 kyu
@@ -111981,7 +111970,7 @@ dJc
 foN
 wab
 sQk
-szr
+kyu
 ejh
 ejh
 ejh
@@ -112143,7 +112132,7 @@ dJc
 foN
 foN
 foN
-xYq
+krp
 krp
 krp
 krp
