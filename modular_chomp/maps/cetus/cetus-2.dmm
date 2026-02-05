@@ -521,6 +521,146 @@
 /obj/machinery/atmospherics/pipe/simple/visible/universal,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/twofp)
+"aaZ" = (
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -28;
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/hallway/secondary/entry/D1)
+"aba" = (
+/obj/structure/lattice,
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 29;
+	dir = 8
+	},
+/turf/simulated/open,
+/area/crew_quarters/cetus/cafeteriaf2)
+"abb" = (
+/obj/machinery/hologram/holopad,
+/obj/effect/floor_decal/corner/paleblue/bordercorner,
+/obj/effect/floor_decal/corner/paleblue/bordercorner{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/paleblue/bordercorner{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/paleblue/bordercorner{
+	dir = 8
+	},
+/obj/effect/floor_decal/spline/plain/three_quarters,
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 29;
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec/raised,
+/area/medical/Autoresleeving)
+"abc" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_y = 30;
+	pixel_x = -25
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/cetus/hall)
+"abd" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_y = 30
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/crew_quarters/cetus/atrium/primary)
+"abe" = (
+/obj/structure/closet/emcloset,
+/obj/structure/extinguisher_cabinet{
+	dir = 1;
+	pixel_y = -30
+	},
+/turf/simulated/floor/tiled,
+/area/hallway/primary/central_two)
+"abf" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/green/bordercorner{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner_steel_grid{
+	dir = 5
+	},
+/obj/structure/extinguisher_cabinet{
+	dir = 1;
+	pixel_y = -30
+	},
+/turf/simulated/floor/tiled,
+/area/hallway/primary/central_two)
+"abg" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner_steel_grid{
+	dir = 10
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_y = 30
+	},
+/turf/simulated/floor/tiled,
+/area/hallway/primary/central_four)
+"abh" = (
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/corner_steel_grid{
+	dir = 9
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 29;
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/crew_quarters/cetus/atrium/primary)
+"abi" = (
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -28;
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/storage/tools)
+"abj" = (
+/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/corner_steel_grid{
+	dir = 9
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 29;
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/hallway/primary/central_one)
+"abk" = (
+/obj/structure/extinguisher_cabinet{
+	pixel_y = 30
+	},
+/turf/simulated/floor/tiled/dark,
+/area/security/Brig)
+"abl" = (
+/turf/simulated/wall/r_wall,
+/area/crew_quarters/sleep/cetus/jrdorm2)
 "abm" = (
 /obj/structure/railing/overhang/hazard,
 /obj/structure/closet/emcloset,
@@ -2112,6 +2252,9 @@
 	dir = 1;
 	layer = 3
 	},
+/obj/structure/extinguisher_cabinet{
+	pixel_y = 30
+	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cetus/jrhallway)
 "aDk" = (
@@ -2785,7 +2928,7 @@
 /turf/simulated/floor/tiled,
 /area/quartermaster/Reception)
 "aOR" = (
-/turf/simulated/wall,
+/turf/simulated/wall/r_wall,
 /area/crew_quarters/sleep/cetus/jrdorm4)
 "aPd" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -3636,6 +3779,10 @@
 /obj/effect/floor_decal/industrial/danger/corner{
 	dir = 4
 	},
+/obj/structure/extinguisher_cabinet{
+	pixel_y = -30;
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/medical/Virology)
 "beW" = (
@@ -4081,6 +4228,10 @@
 	dir = 1;
 	layer = 3
 	},
+/obj/structure/extinguisher_cabinet{
+	pixel_y = 30;
+	pixel_x = -25
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ai_monitored/storage/eva)
 "bkE" = (
@@ -4112,6 +4263,10 @@
 /obj/structure/disposalpipe/segment{
 	dir = 1;
 	icon_state = "pipe-c"
+	},
+/obj/structure/extinguisher_cabinet{
+	dir = 1;
+	pixel_y = -30
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/crew_quarters/cetus/atrium/secondaryf2)
@@ -4546,6 +4701,10 @@
 /obj/effect/floor_decal/corner_steel_grid{
 	dir = 9
 	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 29;
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/central_three)
 "bum" = (
@@ -4664,6 +4823,9 @@
 /turf/simulated/floor/outdoors/rocks/cetus,
 /area/maintenance/cetus/twoap)
 "bwA" = (
+/obj/structure/extinguisher_cabinet{
+	pixel_y = 30
+	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cetus/jrhallway)
 "bwM" = (
@@ -4722,6 +4884,9 @@
 	dir = 8
 	},
 /obj/machinery/vending/loadout/gadget,
+/obj/structure/extinguisher_cabinet{
+	pixel_y = 30
+	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/Circuitry_Den)
 "bxJ" = (
@@ -5983,6 +6148,10 @@
 /obj/machinery/light,
 /obj/effect/floor_decal/corner_steel_grid{
 	dir = 5
+	},
+/obj/structure/extinguisher_cabinet{
+	dir = 1;
+	pixel_y = -30
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cetus/atrium/primary)
@@ -11400,6 +11569,10 @@
 /obj/structure/dispenser{
 	phorontanks = 0
 	},
+/obj/structure/extinguisher_cabinet{
+	dir = 4;
+	pixel_x = -28
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/Engineering_EVA)
 "dLw" = (
@@ -11518,6 +11691,10 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/corner_steel_grid,
+/obj/structure/extinguisher_cabinet{
+	dir = 4;
+	pixel_x = -28
+	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cetus/atrium/primary)
 "dOc" = (
@@ -14247,6 +14424,11 @@
 	c_tag = "MED - CMO";
 	dir = 10
 	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -29;
+	dir = 4;
+	pixel_y = -7
+	},
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/heads/sc/cmo)
 "eNy" = (
@@ -15920,7 +16102,7 @@
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/twobar)
 "fqw" = (
-/turf/simulated/wall,
+/turf/simulated/wall/r_wall,
 /area/crew_quarters/sleep/cetus/jrdorm1)
 "fqJ" = (
 /obj/effect/floor_decal/industrial/warning/corner{
@@ -17607,6 +17789,10 @@
 "fSs" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/yellow/border,
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 29;
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/engineering/cetus/atriumdeck2)
 "fSv" = (
@@ -17819,6 +18005,10 @@
 	},
 /obj/effect/floor_decal/industrial/danger{
 	dir = 4
+	},
+/obj/structure/extinguisher_cabinet{
+	dir = 1;
+	pixel_y = -30
 	},
 /turf/simulated/floor/tiled/hydro,
 /area/hydroponics)
@@ -20136,6 +20326,10 @@
 /obj/effect/floor_decal/corner_steel_grid{
 	dir = 9
 	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 29;
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/central_three)
 "gIq" = (
@@ -20259,6 +20453,10 @@
 /area/crew_quarters/cetus/servicecloset)
 "gLD" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/structure/extinguisher_cabinet{
+	pixel_y = 30;
+	pixel_x = -25
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/cetus/quartermaster)
 "gMn" = (
@@ -21592,6 +21790,9 @@
 /obj/machinery/light{
 	dir = 1;
 	name = "1N-lighting fixture"
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_y = 30
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/Holodeck)
@@ -28456,19 +28657,6 @@
 /obj/random/trash,
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/twobar)
-"jEr" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/structure/closet,
-/turf/simulated/floor/tiled/dark,
-/area/security/Brig)
 "jEK" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/highsecurity{
@@ -28527,6 +28715,10 @@
 	},
 /obj/effect/floor_decal/spline/plain/cee{
 	dir = 1
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -28;
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/security/checkpoint2)
@@ -29075,6 +29267,10 @@
 	dir = 2;
 	icon_state = "pipe-c"
 	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 29;
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/security/detectives_office)
 "jOM" = (
@@ -29561,6 +29757,10 @@
 /obj/effect/floor_decal/industrial/warning,
 /obj/machinery/light/small{
 	dir = 1
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_y = 30;
+	pixel_x = -25
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/quartermaster/Recycling)
@@ -31754,6 +31954,10 @@
 /obj/structure/closet/secure_closet/engineering_chief,
 /obj/random_multi/single_item/hand_tele,
 /obj/machinery/light,
+/obj/structure/extinguisher_cabinet{
+	dir = 1;
+	pixel_y = -30
+	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/heads/sc/chief)
 "kPN" = (
@@ -32807,6 +33011,9 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 1
 	},
+/obj/machinery/light/fluorescent{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/Chemistry)
 "ljf" = (
@@ -33091,6 +33298,10 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 29;
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/Gym)
@@ -40481,6 +40692,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
 	},
+/obj/structure/extinguisher_cabinet{
+	dir = 1;
+	pixel_y = -30
+	},
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/cetus/Galleryf1)
 "nRq" = (
@@ -40702,7 +40917,6 @@
 /turf/simulated/floor/plating,
 /area/hallway/secondary/entry/D1)
 "nVi" = (
-/obj/structure/closet/toolcloset,
 /obj/structure/closet/toolcloset,
 /obj/structure/disposalpipe/segment{
 	dir = 8;
@@ -41605,6 +41819,9 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
+/obj/structure/extinguisher_cabinet{
+	pixel_y = 30
+	},
 /turf/simulated/floor/tiled,
 /area/medical/medsci)
 "okz" = (
@@ -42093,7 +42310,7 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/cetus/hall)
 "osi" = (
-/turf/simulated/wall,
+/turf/simulated/wall/r_wall,
 /area/crew_quarters/sleep/cetus/jrdorm3)
 "osD" = (
 /obj/structure/bed/chair/sofa/corp/right{
@@ -43475,16 +43692,16 @@
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/door/firedoor/glass,
 /obj/structure/cable/green,
+/obj/effect/floor_decal/industrial/danger/corner{
+	dir = 4
+	},
 /obj/machinery/door/blast/regular{
 	density = 0;
 	icon_state = "pdoor0";
-	id = "xenobio1station";
+	id = "xenopublic";
 	name = "Containment Blast Doors";
 	opacity = 0;
 	dir = 8
-	},
-/obj/effect/floor_decal/industrial/danger/corner{
-	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/rnd/Xenobiology_Lab)
@@ -43874,6 +44091,10 @@
 	},
 /obj/effect/floor_decal/corner_steel_grid{
 	dir = 5
+	},
+/obj/structure/extinguisher_cabinet{
+	dir = 1;
+	pixel_y = -30
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cetus/atrium/primary)
@@ -44626,6 +44847,10 @@
 /obj/machinery/light{
 	dir = 8;
 	layer = 3
+	},
+/obj/structure/extinguisher_cabinet{
+	dir = 4;
+	pixel_x = -28
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/cetus/chem)
@@ -47218,6 +47443,10 @@
 	},
 /obj/effect/floor_decal/corner/black/diagonal,
 /obj/machinery/light,
+/obj/structure/extinguisher_cabinet{
+	dir = 4;
+	pixel_x = -28
+	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/kitchen)
 "pVO" = (
@@ -51650,6 +51879,10 @@
 	tag_door = "escape_pod_1_berth_hatch";
 	dir = 4
 	},
+/obj/structure/extinguisher_cabinet{
+	dir = 1;
+	pixel_y = -30
+	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cetus/escapepodport)
 "ruI" = (
@@ -52936,6 +53169,10 @@
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
+	},
+/obj/structure/extinguisher_cabinet{
+	dir = 1;
+	pixel_y = -30
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/crew_quarters/cetus/escapepodport)
@@ -54290,6 +54527,10 @@
 /obj/item/radio/intercom{
 	dir = 1;
 	pixel_y = 34
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_y = 30;
+	pixel_x = 25
 	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/medical/Genetics_Lab)
@@ -56064,10 +56305,11 @@
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/twocargo)
 "sTX" = (
+/obj/structure/flora/pottedplant/subterranean,
 /obj/structure/extinguisher_cabinet{
+	dir = 1;
 	pixel_y = -30
 	},
-/obj/structure/flora/pottedplant/subterranean,
 /turf/simulated/floor/tiled,
 /area/engineering/Reception)
 "sTZ" = (
@@ -56661,15 +56903,16 @@
 /area/maintenance/cetus/twostar)
 "tdr" = (
 /obj/structure/reagent_dispensers/fueltank,
-/obj/structure/extinguisher_cabinet{
-	pixel_x = 28
-	},
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/light{
 	dir = 4;
 	light_color = "#DDFFD3"
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 29;
+	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/Engineering_Workshop)
@@ -58236,6 +58479,10 @@
 	dir = 4
 	},
 /obj/machinery/light,
+/obj/structure/extinguisher_cabinet{
+	dir = 1;
+	pixel_y = -30
+	},
 /turf/simulated/floor/tiled,
 /area/hangar/cetus/explofoyer)
 "tET" = (
@@ -59138,6 +59385,10 @@
 	dir = 4
 	},
 /obj/machinery/light,
+/obj/structure/extinguisher_cabinet{
+	pixel_y = -30;
+	dir = 1
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/security/Firing_Range)
 "tUB" = (
@@ -59496,6 +59747,10 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/corner/beige/diagonal,
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 29;
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/medical/Lounge)
 "tZX" = (
@@ -65500,9 +65755,6 @@
 	name = "north bump";
 	pixel_y = 24
 	},
-/obj/machinery/light/fluorescent{
-	dir = 8
-	},
 /obj/structure/cable/green{
 	icon_state = "0-6"
 	},
@@ -66529,7 +66781,7 @@
 /obj/machinery/door/blast/regular{
 	density = 0;
 	icon_state = "pdoor0";
-	id = "xenobio1station";
+	id = "xenopublic";
 	name = "Containment Blast Doors";
 	opacity = 0;
 	dir = 8
@@ -67648,6 +67900,10 @@
 /obj/effect/floor_decal/corner/purple/bordercorner{
 	dir = 1
 	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 29;
+	dir = 8
+	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/cetus/jrhall)
 "wQC" = (
@@ -68255,16 +68511,21 @@
 /obj/effect/floor_decal/corner_steel_grid{
 	dir = 5
 	},
+/obj/structure/extinguisher_cabinet{
+	dir = 1;
+	pixel_y = -30
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/central_two)
 "xbS" = (
 /obj/structure/closet/secure_closet/atmos_personal,
 /obj/item/gps/engineering/atmos,
-/obj/structure/extinguisher_cabinet{
-	pixel_x = 28
-	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/item/clothing/under/swimsuit/fluff/engineering,
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 29;
+	dir = 8
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/Locker_Room)
 "xcf" = (
@@ -83697,7 +83958,7 @@ iMO
 iMO
 iMO
 iMO
-eEO
+abl
 jqR
 eUB
 eEO
@@ -83955,7 +84216,7 @@ bRa
 bRa
 bRa
 bRa
-eEO
+abl
 fRW
 vWK
 cbc
@@ -84213,16 +84474,16 @@ eyh
 wSM
 chJ
 bRa
-eEO
+abl
 pwW
 tET
-eEO
+abl
 kym
 pyF
-xvm
-xvm
-xvm
-xvm
+gjK
+gjK
+gjK
+gjK
 xvm
 xvm
 esf
@@ -84471,10 +84732,10 @@ jGF
 dkC
 vSM
 bNY
-eEO
-eEO
-eEO
-eEO
+abl
+abl
+abl
+abl
 aDc
 lOL
 xvm
@@ -94617,7 +94878,7 @@ tZJ
 gYc
 kzU
 qqd
-rCH
+abc
 oeA
 eHl
 eza
@@ -101312,7 +101573,7 @@ hbw
 tkx
 alH
 taE
-cpa
+abg
 wgI
 jKZ
 bfy
@@ -102410,7 +102671,7 @@ fxY
 mSm
 fxY
 fxY
-fxY
+aaZ
 alC
 vMq
 pCo
@@ -103450,7 +103711,7 @@ qHq
 xzy
 hdY
 lMb
-pNA
+pzb
 oJw
 oJw
 oJw
@@ -103654,7 +103915,7 @@ sMZ
 lQO
 mxf
 hwA
-jXs
+abb
 kXb
 fYs
 ksd
@@ -105181,7 +105442,7 @@ ozP
 oNr
 ozP
 rYd
-ozP
+abh
 kDK
 kDK
 kDK
@@ -107467,7 +107728,7 @@ rXD
 plZ
 iHn
 gkm
-jEr
+bcN
 aai
 oox
 qLN
@@ -108000,7 +108261,7 @@ aqk
 nWz
 aae
 qDi
-aqk
+abj
 aqk
 ciZ
 qwr
@@ -110095,7 +110356,7 @@ gys
 gys
 gys
 ikE
-qgD
+abd
 uzj
 fWs
 nom
@@ -110553,7 +110814,7 @@ ryf
 aTU
 uCq
 phC
-oaG
+abk
 pJT
 hNN
 siN
@@ -110621,7 +110882,7 @@ hBE
 xOv
 nMW
 xOv
-tkE
+aba
 jGY
 dZZ
 dZZ
@@ -116788,13 +117049,13 @@ aTW
 aaF
 dms
 eWj
-rSb
+abi
 dPW
 cMT
 iTc
 oOu
 efF
-xGB
+abf
 agW
 jWR
 aVC
@@ -122730,7 +122991,7 @@ rFl
 dyt
 iZo
 iqH
-eDR
+abe
 dvf
 abm
 eYp

@@ -374,6 +374,50 @@
 /obj/item/destTagger,
 /turf/space,
 /area/space)
+"aaU" = (
+/obj/structure/cable/cyan{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/extinguisher_cabinet/old{
+	pixel_y = 32
+	},
+/turf/simulated/floor/tiled/neutral,
+/area/maintenance/cetus/shallow/derelict/hallway)
+"aaV" = (
+/obj/machinery/atmospherics/pipe/simple/visible/red{
+	dir = 6
+	},
+/obj/structure/extinguisher_cabinet/old{
+	pixel_y = 32
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/maintenance/cetus/shallow/derelict/atmos)
+"aaW" = (
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 29;
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/ai_upload)
+"aaX" = (
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 29;
+	dir = 8
+	},
+/turf/simulated/floor/greengrid,
+/area/ai)
+"aaY" = (
+/obj/structure/extinguisher_cabinet{
+	pixel_y = 30
+	},
+/turf/simulated/floor/carpet/graycarpet,
+/area/hallway/primary/firstdeck/vaultlobby)
 "aaZ" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
@@ -390,6 +434,13 @@
 	},
 /turf/simulated/shuttle/plating,
 /area/shuttle/escape_pod2/station)
+"aba" = (
+/obj/structure/extinguisher_cabinet{
+	dir = 4;
+	pixel_x = -28
+	},
+/turf/simulated/floor/carpet/brown,
+/area/maintenance/cetus/shallow/law)
 "abb" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -402,6 +453,15 @@
 	},
 /turf/simulated/floor/wood,
 /area/bridge/sleep/CMO_Quarters)
+"abc" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 29;
+	dir = 8
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/cetus/lounge)
 "abd" = (
 /obj/machinery/button/remote/airlock{
 	id = "cmoquarters";
@@ -424,6 +484,40 @@
 	},
 /turf/simulated/floor/wood,
 /area/bridge/sleep/RD_Quarters)
+"abe" = (
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 29;
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/engineering/Atmospherics_Chamber)
+"abf" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/extinguisher_cabinet{
+	dir = 4;
+	pixel_x = -28
+	},
+/turf/simulated/floor/wood,
+/area/bridge/sleep/Secretary_Quarters)
+"abg" = (
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 29;
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark,
+/area/rnd/cetus/stairwelljr3)
+"abh" = (
+/obj/effect/floor_decal/spline/plain{
+	dir = 8
+	},
+/obj/structure/extinguisher_cabinet{
+	dir = 1;
+	pixel_y = -30
+	},
+/turf/simulated/floor/boxing/gym,
+/area/maintenance/cetus/jrthreestar)
 "abn" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -2656,6 +2750,10 @@
 /area/maintenance/cetus/d3docks)
 "bwV" = (
 /obj/machinery/light,
+/obj/structure/extinguisher_cabinet{
+	dir = 1;
+	pixel_y = -30
+	},
 /turf/simulated/floor/carpet/retro_red,
 /area/bridge/sleep/HoS_Quarters)
 "bxa" = (
@@ -5995,6 +6093,10 @@
 /obj/structure/table/bench/wooden,
 /obj/item/camera_film,
 /obj/item/camera,
+/obj/structure/extinguisher_cabinet{
+	dir = 1;
+	pixel_y = -30
+	},
 /turf/simulated/floor/boxing/gym{
 	name = "floor mat"
 	},
@@ -7103,6 +7205,10 @@
 /turf/simulated/floor/plating,
 /area/maintenance/cetus/threeas)
 "elo" = (
+/obj/structure/extinguisher_cabinet{
+	dir = 1;
+	pixel_y = -30
+	},
 /turf/simulated/floor/carpet/blucarpet,
 /area/bridge/sleep/HoP_Quarters)
 "elq" = (
@@ -7643,6 +7749,9 @@
 "eyX" = (
 /obj/structure/bed/chair/comfy/brown{
 	dir = 4
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_y = 30
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/cetus/Galleryf2)
@@ -8185,6 +8294,9 @@
 /obj/machinery/light/yellowed{
 	dir = 1
 	},
+/obj/structure/extinguisher_cabinet/old{
+	pixel_y = 32
+	},
 /turf/simulated/floor/tiled/old_tile,
 /area/maintenance/cetus/shallow/derelict/medbay)
 "eOA" = (
@@ -8249,6 +8361,9 @@
 /obj/machinery/portable_atmospherics/canister/air/airlock,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_y = 30
 	},
 /turf/simulated/floor/plating,
 /area/engineering/Atmospherics_Chamber)
@@ -8884,6 +8999,10 @@
 	},
 /obj/machinery/light/fluorescent{
 	dir = 1
+	},
+/obj/structure/extinguisher_cabinet{
+	dir = 4;
+	pixel_x = -28
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ai)
@@ -9584,6 +9703,10 @@
 /turf/simulated/mineral/cetus/edge,
 /area/maintenance/disposal)
 "fFY" = (
+/obj/structure/extinguisher_cabinet{
+	dir = 1;
+	pixel_y = -30
+	},
 /turf/simulated/floor/carpet/tealcarpet,
 /area/bridge/sleep/CMO_Quarters)
 "fGi" = (
@@ -11018,6 +11141,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
+/obj/structure/extinguisher_cabinet{
+	dir = 1;
+	pixel_y = -30
+	},
 /turf/simulated/floor/plating,
 /area/engineering/cetus/jointsubstation)
 "gAn" = (
@@ -12213,6 +12340,10 @@
 "hgT" = (
 /obj/structure/transit_tube/station{
 	dir = 1
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 29;
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/rnd/cetus/entry)
@@ -13878,6 +14009,10 @@
 /obj/effect/floor_decal/corner/brown/bordercorner{
 	dir = 4
 	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 29;
+	dir = 8
+	},
 /turf/simulated/floor/tiled/neutral,
 /area/quartermaster/mininglockerroom)
 "ifh" = (
@@ -14288,6 +14423,10 @@
 "iww" = (
 /obj/machinery/ai_status_display{
 	pixel_y = 32
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 29;
+	dir = 8
 	},
 /turf/simulated/floor/greengrid,
 /area/ai)
@@ -16752,6 +16891,9 @@
 /area/maintenance/cetus/d3docks)
 "jYo" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/structure/extinguisher_cabinet/old{
+	pixel_y = 32
+	},
 /turf/simulated/floor/tiled/neutral,
 /area/maintenance/cetus/shallow/derelict/hallway)
 "jYJ" = (
@@ -17553,6 +17695,10 @@
 /obj/effect/floor_decal/industrial/warning{
 	layer = 3;
 	dir = 1
+	},
+/obj/structure/extinguisher_cabinet{
+	dir = 4;
+	pixel_x = -28
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ai_server_room)
@@ -19079,6 +19225,9 @@
 	name = "station director's wardrobe"
 	},
 /obj/random/drinkbottle,
+/obj/structure/extinguisher_cabinet{
+	pixel_y = 30
+	},
 /turf/simulated/floor/wood,
 /area/bridge/sleep/Captain_Quarters)
 "lmC" = (
@@ -20029,6 +20178,10 @@
 /area/crew_quarters/cetus/lounge)
 "lKn" = (
 /obj/structure/filingcabinet,
+/obj/structure/extinguisher_cabinet{
+	dir = 4;
+	pixel_x = -28
+	},
 /turf/simulated/floor/carpet/graycarpet,
 /area/maintenance/cetus/shallow/bodyguard)
 "lKp" = (
@@ -21966,6 +22119,9 @@
 	c_tag = "SCI - JR D3 Stairwell 1";
 	dir = 6
 	},
+/obj/structure/extinguisher_cabinet{
+	pixel_y = 30
+	},
 /turf/simulated/floor/tiled,
 /area/rnd/cetus/entry)
 "mMB" = (
@@ -22699,6 +22855,9 @@
 /obj/machinery/meter,
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
 	dir = 10
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_y = 30
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/Atmospherics_Chamber)
@@ -25041,6 +25200,10 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
 	},
+/obj/structure/extinguisher_cabinet{
+	dir = 1;
+	pixel_y = -30
+	},
 /turf/simulated/floor/wood,
 /area/bridge/sleep/RD_Quarters)
 "oyc" = (
@@ -25713,6 +25876,9 @@
 "oVe" = (
 /obj/structure/bed/chair/comfy/brown{
 	dir = 8
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_y = 30
 	},
 /turf/simulated/floor/carpet,
 /area/crew_quarters/heads/sc/sd)
@@ -26486,6 +26652,9 @@
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 4
 	},
+/obj/structure/extinguisher_cabinet{
+	pixel_y = 30
+	},
 /turf/simulated/floor/tiled/dark,
 /area/security/nuke_storage)
 "pvF" = (
@@ -26580,6 +26749,9 @@
 /obj/machinery/camera/network/engineering{
 	c_tag = "ENG - Atmospherics Fore Port";
 	dir = 6
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_y = 30
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/Atmospherics_Chamber)
@@ -27823,6 +27995,10 @@
 /obj/machinery/status_display{
 	pixel_y = -32
 	},
+/obj/structure/extinguisher_cabinet{
+	dir = 4;
+	pixel_x = -28
+	},
 /turf/simulated/floor/greengrid,
 /area/ai)
 "qgB" = (
@@ -28939,6 +29115,10 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4;
 	icon_state = "pipe-c"
+	},
+/obj/structure/extinguisher_cabinet{
+	dir = 4;
+	pixel_x = -28
 	},
 /turf/simulated/floor/wood,
 /area/bridge/secretaryoffice)
@@ -31064,6 +31244,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
 	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 29;
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cetus/atrium/secondaryf3)
 "sbL" = (
@@ -31159,6 +31343,10 @@
 "sfv" = (
 /obj/machinery/light/small/yellowed{
 	dir = 8
+	},
+/obj/structure/extinguisher_cabinet{
+	dir = 4;
+	pixel_x = -28
 	},
 /turf/simulated/floor/boxing,
 /area/maintenance/cetus/shallow/quack)
@@ -31410,6 +31598,10 @@
 	},
 /obj/machinery/light/spot{
 	dir = 4
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 29;
+	dir = 8
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/cetus/theater)
@@ -32027,6 +32219,10 @@
 /obj/random/pottedplant,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
+	},
+/obj/structure/extinguisher_cabinet{
+	dir = 1;
+	pixel_y = -30
 	},
 /turf/simulated/floor/wood,
 /area/bridge/sleep/CE_Quarters)
@@ -33030,6 +33226,10 @@
 "tre" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
+	},
+/obj/structure/extinguisher_cabinet{
+	dir = 1;
+	pixel_y = -30
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/heads/sc/restroom)
@@ -35287,6 +35487,10 @@
 /obj/structure/bed/chair/office/dark{
 	dir = 4
 	},
+/obj/structure/extinguisher_cabinet{
+	dir = 4;
+	pixel_x = -28
+	},
 /turf/simulated/floor/wood,
 /area/maintenance/cetus/shallow/detective)
 "uDb" = (
@@ -36779,6 +36983,11 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
+	},
+/obj/structure/extinguisher_cabinet{
+	dir = 1;
+	pixel_y = -30;
+	pixel_x = 28
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/disposal)
@@ -38893,6 +39102,10 @@
 /obj/machinery/light{
 	dir = 4;
 	light_color = "#DDFFD3"
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 29;
+	dir = 8
 	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge)
@@ -58788,7 +59001,7 @@ aib
 mlx
 hlO
 ulN
-ulN
+abg
 xsu
 asv
 enp
@@ -59816,7 +60029,7 @@ dSN
 uez
 xAw
 jve
-asv
+uez
 oSy
 qyy
 oSy
@@ -60074,7 +60287,7 @@ dSN
 gnS
 sOx
 jve
-asv
+uez
 iUO
 hLd
 xAM
@@ -60332,7 +60545,7 @@ jlZ
 uez
 xnZ
 jve
-asv
+uez
 pZz
 hLd
 haG
@@ -60590,7 +60803,7 @@ asv
 asv
 hUS
 mOO
-asv
+uez
 lkE
 rnV
 rKt
@@ -61106,7 +61319,7 @@ rIV
 asv
 lLJ
 akT
-asv
+uez
 oSy
 qyy
 oSy
@@ -62391,7 +62604,7 @@ ajO
 tKH
 eVg
 lSA
-eVg
+abh
 asv
 aib
 aib
@@ -72789,7 +73002,7 @@ aqE
 gnv
 gnv
 gnv
-ftW
+aaY
 gly
 uwf
 eDb
@@ -75879,7 +76092,7 @@ dhV
 lWk
 hVI
 oNM
-qbV
+abc
 qbV
 rdE
 pzJ
@@ -82591,7 +82804,7 @@ nyi
 cgn
 vMR
 igz
-igz
+aba
 qjT
 nMy
 cBI
@@ -82829,7 +83042,7 @@ qih
 iqX
 fHw
 awN
-doD
+abf
 doD
 lqg
 ozA
@@ -83634,7 +83847,7 @@ nMy
 jbL
 jiP
 uYA
-ojB
+aaV
 mcz
 oQw
 ydE
@@ -86477,7 +86690,7 @@ vxT
 vxT
 rRw
 nIu
-xHx
+aaU
 gCA
 eNe
 hfC
@@ -89560,7 +89773,7 @@ qHv
 hAw
 atV
 elq
-pMS
+aaX
 rVT
 jSG
 jSG
@@ -91115,7 +91328,7 @@ evc
 evc
 icT
 whC
-eoq
+aaW
 vcX
 wFl
 cRb
@@ -95996,7 +96209,7 @@ pmr
 vbb
 rmt
 yjs
-yjs
+abe
 yjs
 jfb
 okA
