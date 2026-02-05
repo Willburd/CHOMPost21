@@ -123,6 +123,7 @@ GLOBAL_LIST_EMPTY(vending_products)
 			var/datum/stored_item/vending_product/product = new/datum/stored_item/vending_product(src, entry)
 
 			product.price = (entry in prices) ? prices[entry] : 0
+			if(istype(get_area(src), /area/vr)) product.price = 0 // Outpost 21 edit - VR areas make things free
 			product.amount = (current_list[1][entry]) ? current_list[1][entry] : 1
 			product.category = category
 
