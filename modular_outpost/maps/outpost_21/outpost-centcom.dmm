@@ -955,13 +955,13 @@
 /obj/item/tool/wirecutters{
 	pixel_y = -7
 	},
-/turf/unsimulated/floor/reinforced/turfpack/airless,
+/turf/unsimulated/floor/reinforced/turfpack,
 /area/centcom/living)
 "aco" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 6
 	},
-/turf/unsimulated/floor/reinforced/turfpack/airless,
+/turf/unsimulated/floor/reinforced/turfpack,
 /area/centcom/living)
 "acp" = (
 /obj/structure/table/oak{
@@ -1019,13 +1019,13 @@
 	pixel_x = 13;
 	pixel_y = 1
 	},
-/turf/unsimulated/floor/reinforced/turfpack/airless,
+/turf/unsimulated/floor/reinforced/turfpack,
 /area/centcom/living)
 "acu" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 4
 	},
-/turf/unsimulated/floor/reinforced/turfpack/airless,
+/turf/unsimulated/floor/reinforced/turfpack,
 /area/centcom/living)
 "acv" = (
 /obj/effect/floor_decal/spline/plain{
@@ -1059,7 +1059,7 @@
 	pixel_y = 2;
 	pixel_x = 6
 	},
-/turf/unsimulated/floor/reinforced/turfpack/airless,
+/turf/unsimulated/floor/reinforced/turfpack,
 /area/centcom/living)
 "acy" = (
 /obj/effect/floor_decal/spline/plain{
@@ -1071,7 +1071,7 @@
 /obj/item/kit{
 	name = "Pioneer's Spare Parts"
 	},
-/turf/unsimulated/floor/reinforced/turfpack/airless,
+/turf/unsimulated/floor/reinforced/turfpack,
 /area/centcom/living)
 "acz" = (
 /obj/structure/sign/calendar{
