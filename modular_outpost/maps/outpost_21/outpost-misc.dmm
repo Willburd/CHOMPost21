@@ -5117,6 +5117,9 @@
 	icon_state = "dark"
 	},
 /area/syndicate_mothership)
+"kj" = (
+/turf/unsimulated/wall/r_wall,
+/area/centcom/simulated/cent_sat)
 "kk" = (
 /obj/structure/window/phoronreinforced{
 	dir = 4
@@ -5374,10 +5377,7 @@
 /area/shuttle/supply)
 "kI" = (
 /turf/unsimulated/floor/techfloor_grid,
-/area/space)
-"kJ" = (
-/turf/unsimulated/wall/r_wall,
-/area/centcom/suppy)
+/area/centcom/simulated/cent_sat)
 "kK" = (
 /obj/effect/landmark{
 	name = "tdome1"
@@ -5412,7 +5412,7 @@
 /area/shuttle/supply)
 "kP" = (
 /turf/unsimulated/floor/techfloor_grid,
-/area/centcom/suppy)
+/area/centcom/simulated/cent_cargo_sat)
 "kQ" = (
 /obj/structure/table/rack,
 /turf/unsimulated/floor{
@@ -5431,7 +5431,7 @@
 /area/syndicate_mothership)
 "kS" = (
 /turf/unsimulated/wall/fakeglass,
-/area/centcom/suppy)
+/area/centcom/simulated/cent_cargo_sat)
 "kT" = (
 /turf/simulated/floor/tiled{
 	icon_state = "white"
@@ -5444,7 +5444,7 @@
 /turf/unsimulated/wall/fakeglass{
 	dir = 1
 	},
-/area/centcom/suppy)
+/area/centcom/simulated/cent_cargo_sat)
 "kW" = (
 /obj/machinery/light{
 	dir = 8
@@ -5464,7 +5464,7 @@
 	name = "Cargo Shuttle Airlock"
 	},
 /turf/unsimulated/floor/techfloor_grid,
-/area/centcom/suppy)
+/area/centcom/simulated/cent_cargo_sat)
 "kZ" = (
 /obj/machinery/door/airlock/external{
 	name = "Shuttle Hatch";
@@ -5512,7 +5512,7 @@
 	info = "You're not supposed to be here."
 	},
 /turf/unsimulated/floor/techfloor_grid,
-/area/centcom/suppy)
+/area/centcom/simulated/cent_cargo_sat)
 "le" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
 	pixel_x = 25;
@@ -5559,21 +5559,21 @@
 	},
 /obj/machinery/computer/supplycomp/control,
 /turf/unsimulated/floor/techfloor_grid,
-/area/centcom/suppy)
+/area/centcom/simulated/cent_cargo_sat)
 "lj" = (
 /turf/unsimulated/wall/r_wall,
-/area/space)
+/area/centcom/simulated/cent_cargo_sat)
 "lk" = (
 /obj/machinery/power/emitter,
 /turf/unsimulated/floor/techfloor_grid,
-/area/space)
+/area/centcom/simulated/cent_sat)
 "ll" = (
 /obj/structure/sign/scenery/map/left_outpost21{
 	pixel_y = 32
 	},
 /obj/machinery/power/emitter,
 /turf/unsimulated/floor/techfloor_grid,
-/area/space)
+/area/centcom/simulated/cent_sat)
 "lm" = (
 /obj/machinery/computer/shuttle_control{
 	req_access = list(101);
@@ -5587,11 +5587,11 @@
 	},
 /obj/structure/table/steel_reinforced,
 /turf/unsimulated/floor/techfloor_grid,
-/area/space)
+/area/centcom/simulated/cent_sat)
 "lo" = (
 /obj/machinery/computer/security,
 /turf/unsimulated/floor/techfloor_grid,
-/area/space)
+/area/centcom/simulated/cent_sat)
 "lp" = (
 /obj/machinery/computer/shuttle_control/specops,
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
@@ -5603,13 +5603,13 @@
 	tag_door = "specops_centcom_dock_door"
 	},
 /turf/unsimulated/floor/techfloor_grid,
-/area/space)
+/area/centcom/simulated/cent_sat)
 "lq" = (
 /obj/effect/floor_decal/industrial/stand_clear/red{
 	dir = 8
 	},
 /turf/unsimulated/floor/techfloor_grid,
-/area/space)
+/area/centcom/simulated/cent_sat)
 "lr" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -5618,10 +5618,10 @@
 	dir = 8
 	},
 /turf/unsimulated/floor/techfloor_grid,
-/area/space)
+/area/centcom/simulated/cent_sat)
 "ls" = (
 /turf/unsimulated/wall/fakeglass,
-/area/space)
+/area/centcom/simulated/cent_sat)
 "lt" = (
 /obj/machinery/door/airlock/external{
 	icon_state = "door_locked";
@@ -5631,62 +5631,62 @@
 	},
 /obj/structure/fans/hardlight,
 /turf/simulated/floor/tiled/dark,
-/area/space)
+/area/centcom/simulated/cent_sat)
 "lu" = (
 /obj/structure/artilleryplaceholder/decorative{
 	icon_state = "25"
 	},
 /turf/unsimulated/floor/techfloor_grid,
-/area/space)
+/area/centcom/simulated/cent_sat)
 "lv" = (
 /obj/structure/artilleryplaceholder/decorative{
 	icon_state = "26"
 	},
 /turf/unsimulated/floor/techfloor_grid,
-/area/space)
+/area/centcom/simulated/cent_sat)
 "lw" = (
 /obj/structure/artilleryplaceholder/decorative{
 	icon_state = "27"
 	},
 /turf/unsimulated/floor/techfloor_grid,
-/area/space)
+/area/centcom/simulated/cent_sat)
 "lx" = (
 /obj/structure/artilleryplaceholder/decorative{
 	icon_state = "28"
 	},
 /obj/machinery/artillerycontrol,
 /turf/unsimulated/floor/techfloor_grid,
-/area/space)
+/area/centcom/simulated/cent_sat)
 "ly" = (
 /obj/structure/artilleryplaceholder/decorative{
 	icon_state = "29"
 	},
 /turf/unsimulated/floor/techfloor_grid,
-/area/space)
+/area/centcom/simulated/cent_sat)
 "lz" = (
 /obj/structure/artilleryplaceholder/decorative{
 	icon_state = "30"
 	},
 /turf/unsimulated/floor/techfloor_grid,
-/area/space)
+/area/centcom/simulated/cent_sat)
 "lA" = (
 /obj/structure/artilleryplaceholder/decorative{
 	icon_state = "31"
 	},
 /turf/unsimulated/floor/techfloor_grid,
-/area/space)
+/area/centcom/simulated/cent_sat)
 "lB" = (
 /obj/structure/artilleryplaceholder/decorative{
 	icon_state = "32"
 	},
 /turf/unsimulated/floor/techfloor_grid,
-/area/space)
+/area/centcom/simulated/cent_sat)
 "lC" = (
 /obj/structure/artilleryplaceholder/decorative{
 	icon_state = "33"
 	},
 /turf/unsimulated/floor/techfloor_grid,
-/area/space)
+/area/centcom/simulated/cent_sat)
 "lD" = (
 /obj/structure/artilleryplaceholder/decorative{
 	icon_state = "34"
@@ -5695,7 +5695,7 @@
 	dir = 8
 	},
 /turf/unsimulated/floor/techfloor_grid,
-/area/space)
+/area/centcom/simulated/cent_sat)
 "lE" = (
 /obj/structure/artilleryplaceholder/decorative{
 	icon_state = "35"
@@ -5707,7 +5707,7 @@
 	dir = 9
 	},
 /turf/unsimulated/floor/techfloor_grid,
-/area/space)
+/area/centcom/simulated/cent_sat)
 "lF" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
@@ -5716,12 +5716,12 @@
 	dir = 1
 	},
 /turf/unsimulated/floor/techfloor_grid,
-/area/space)
+/area/centcom/simulated/cent_sat)
 "lG" = (
 /turf/unsimulated/wall/fakeglass{
 	icon_state = "fakewindows2"
 	},
-/area/space)
+/area/centcom/simulated/cent_sat)
 "lH" = (
 /obj/structure/shuttle/engine/propulsion{
 	icon_state = "burst_r";
@@ -5764,14 +5764,14 @@
 	dir = 10
 	},
 /turf/unsimulated/floor/techfloor_grid,
-/area/space)
+/area/centcom/simulated/cent_sat)
 "lM" = (
 /obj/structure/artilleryplaceholder/decorative{
 	icon_state = "14"
 	},
 /obj/effect/floor_decal/industrial/warning,
 /turf/unsimulated/floor/techfloor_grid,
-/area/space)
+/area/centcom/simulated/cent_sat)
 "lN" = (
 /obj/structure/artilleryplaceholder/decorative{
 	icon_state = "15"
@@ -5780,13 +5780,13 @@
 	dir = 6
 	},
 /turf/unsimulated/floor/techfloor_grid,
-/area/space)
+/area/centcom/simulated/cent_sat)
 "lO" = (
 /obj/structure/artilleryplaceholder/decorative{
 	icon_state = "16"
 	},
 /turf/unsimulated/floor/techfloor_grid,
-/area/space)
+/area/centcom/simulated/cent_sat)
 "lP" = (
 /obj/machinery/vending/hydronutrients,
 /turf/unsimulated/floor{
@@ -5807,54 +5807,54 @@
 	icon_state = "17"
 	},
 /turf/unsimulated/floor/techfloor_grid,
-/area/space)
+/area/centcom/simulated/cent_sat)
 "lS" = (
 /obj/structure/artilleryplaceholder/decorative{
 	icon_state = "18"
 	},
 /turf/unsimulated/floor/techfloor_grid,
-/area/space)
+/area/centcom/simulated/cent_sat)
 "lT" = (
 /obj/structure/artilleryplaceholder/decorative{
 	icon_state = "19"
 	},
 /turf/unsimulated/floor/techfloor_grid,
-/area/space)
+/area/centcom/simulated/cent_sat)
 "lU" = (
 /obj/structure/artilleryplaceholder/decorative{
 	icon_state = "20"
 	},
 /turf/unsimulated/floor/techfloor_grid,
-/area/space)
+/area/centcom/simulated/cent_sat)
 "lV" = (
 /obj/structure/artilleryplaceholder/decorative{
 	icon_state = "21"
 	},
 /turf/unsimulated/floor/techfloor_grid,
-/area/space)
+/area/centcom/simulated/cent_sat)
 "lW" = (
 /obj/structure/artilleryplaceholder/decorative{
 	icon_state = "22"
 	},
 /turf/unsimulated/floor/techfloor_grid,
-/area/space)
+/area/centcom/simulated/cent_sat)
 "lX" = (
 /obj/structure/artilleryplaceholder/decorative{
 	icon_state = "23"
 	},
 /turf/unsimulated/floor/techfloor_grid,
-/area/space)
+/area/centcom/simulated/cent_sat)
 "lY" = (
 /obj/structure/artilleryplaceholder/decorative{
 	icon_state = "24"
 	},
 /turf/unsimulated/floor/techfloor_grid,
-/area/space)
+/area/centcom/simulated/cent_sat)
 "lZ" = (
 /obj/effect/floor_decal/industrial/warning/tile,
 /obj/effect/floor_decal/industrial/warning/color/tile/red,
 /turf/unsimulated/floor/techfloor_grid,
-/area/space)
+/area/centcom/simulated/cent_sat)
 "ma" = (
 /obj/structure/bed/chair/wood/wings{
 	dir = 8
@@ -5872,7 +5872,7 @@
 	my_tag = null
 	},
 /turf/unsimulated/floor/techfloor_grid,
-/area/space)
+/area/centcom/simulated/cent_sat)
 "mc" = (
 /obj/structure/shuttle/engine/propulsion{
 	dir = 8
@@ -5986,7 +5986,7 @@
 	dir = 9
 	},
 /turf/unsimulated/floor/techfloor_grid,
-/area/space)
+/area/centcom/simulated/cent_sat)
 "mo" = (
 /obj/structure/artilleryplaceholder/decorative{
 	icon_state = "2"
@@ -5995,7 +5995,7 @@
 	dir = 1
 	},
 /turf/unsimulated/floor/techfloor_grid,
-/area/space)
+/area/centcom/simulated/cent_sat)
 "mp" = (
 /obj/structure/artilleryplaceholder/decorative{
 	icon_state = "3"
@@ -6004,26 +6004,26 @@
 	dir = 5
 	},
 /turf/unsimulated/floor/techfloor_grid,
-/area/space)
+/area/centcom/simulated/cent_sat)
 "mq" = (
 /obj/structure/artilleryplaceholder/decorative{
 	icon_state = "4"
 	},
 /turf/unsimulated/floor/techfloor_grid,
-/area/space)
+/area/centcom/simulated/cent_sat)
 "mr" = (
 /obj/structure/artilleryplaceholder/decorative{
 	icon_state = "5"
 	},
 /obj/structure/ship_munition/disperser_charge/explosive,
 /turf/unsimulated/floor/techfloor_grid,
-/area/space)
+/area/centcom/simulated/cent_sat)
 "ms" = (
 /obj/structure/artilleryplaceholder/decorative{
 	icon_state = "6"
 	},
 /turf/unsimulated/floor/techfloor_grid,
-/area/space)
+/area/centcom/simulated/cent_sat)
 "mt" = (
 /obj/machinery/computer/pod{
 	id = "thunderdomegen";
@@ -6039,31 +6039,31 @@
 	icon_state = "7"
 	},
 /turf/unsimulated/floor/techfloor_grid,
-/area/space)
+/area/centcom/simulated/cent_sat)
 "mw" = (
 /obj/structure/artilleryplaceholder/decorative{
 	icon_state = "8"
 	},
 /turf/unsimulated/floor/techfloor_grid,
-/area/space)
+/area/centcom/simulated/cent_sat)
 "mx" = (
 /obj/structure/artilleryplaceholder/decorative{
 	icon_state = "9"
 	},
 /turf/unsimulated/floor/techfloor_grid,
-/area/space)
+/area/centcom/simulated/cent_sat)
 "my" = (
 /obj/structure/artilleryplaceholder/decorative{
 	icon_state = "10"
 	},
 /turf/unsimulated/floor/techfloor_grid,
-/area/space)
+/area/centcom/simulated/cent_sat)
 "mz" = (
 /obj/structure/artilleryplaceholder/decorative{
 	icon_state = "11"
 	},
 /turf/unsimulated/floor/techfloor_grid,
-/area/space)
+/area/centcom/simulated/cent_sat)
 "mA" = (
 /obj/machinery/door/airlock/vault{
 	name = "Armory";
@@ -6079,7 +6079,7 @@
 	icon_state = "12"
 	},
 /turf/unsimulated/floor/techfloor_grid,
-/area/space)
+/area/centcom/simulated/cent_sat)
 "mC" = (
 /obj/structure/flora/pottedplant{
 	icon_state = "plant-08"
@@ -6121,12 +6121,12 @@
 	dir = 10
 	},
 /turf/unsimulated/floor/techfloor_grid,
-/area/space)
+/area/centcom/simulated/cent_sat)
 "mG" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/effect/floor_decal/industrial/warning/color/red,
 /turf/unsimulated/floor/techfloor_grid,
-/area/space)
+/area/centcom/simulated/cent_sat)
 "mH" = (
 /obj/machinery/computer/security/telescreen{
 	name = "Spec. Ops. Monitor";
@@ -6227,36 +6227,36 @@
 "mT" = (
 /obj/machinery/transportpod,
 /turf/unsimulated/floor/techfloor_grid,
-/area/space)
+/area/centcom/simulated/cent_sat)
 "mU" = (
 /obj/effect/floor_decal/industrial/outline/red,
 /obj/structure/ship_munition/disperser_charge/emp,
 /turf/unsimulated/floor/techfloor_grid,
-/area/space)
+/area/centcom/simulated/cent_sat)
 "mV" = (
 /obj/effect/floor_decal/industrial/outline/red,
 /turf/unsimulated/floor/techfloor_grid,
-/area/space)
+/area/centcom/simulated/cent_sat)
 "mW" = (
 /obj/effect/floor_decal/industrial/outline/red,
 /obj/structure/ship_munition/disperser_charge/explosive,
 /turf/unsimulated/floor/techfloor_grid,
-/area/space)
+/area/centcom/simulated/cent_sat)
 "mX" = (
 /obj/effect/floor_decal/industrial/outline/red,
 /obj/structure/ship_munition/disperser_charge/mining,
 /turf/unsimulated/floor/techfloor_grid,
-/area/space)
+/area/centcom/simulated/cent_sat)
 "mY" = (
 /obj/effect/floor_decal/industrial/outline/red,
 /obj/structure/ship_munition/disperser_charge,
 /turf/unsimulated/floor/techfloor_grid,
-/area/space)
+/area/centcom/simulated/cent_sat)
 "mZ" = (
 /turf/unsimulated/wall/fakeglass{
 	dir = 1
 	},
-/area/space)
+/area/centcom/simulated/cent_sat)
 "na" = (
 /obj/structure/shuttle/engine/propulsion{
 	icon_state = "burst_l";
@@ -6272,40 +6272,43 @@
 	dir = 9
 	},
 /turf/unsimulated/floor/techfloor_grid,
-/area/space)
+/area/centcom/simulated/cent_sat)
 "nc" = (
 /obj/effect/floor_decal/industrial/outline/red,
 /obj/structure/ship_munition/disperser_charge/fire,
 /turf/unsimulated/floor/techfloor_grid,
-/area/space)
+/area/centcom/simulated/cent_sat)
 "nd" = (
 /obj/machinery/door/airlock/highsecurity{
 	name = "Last Resort";
 	req_one_access = list(101,103)
 	},
 /turf/unsimulated/floor/techfloor_grid,
-/area/space)
+/area/centcom/simulated/cent_sat)
 "ne" = (
 /turf/unsimulated/wall/fakeglass{
 	dir = 8
 	},
-/area/space)
+/area/centcom/simulated/cent_sat)
 "nf" = (
 /turf/unsimulated/wall/fakeglass{
 	icon_state = "fakewindows2";
 	dir = 1
 	},
-/area/space)
+/area/centcom/simulated/cent_sat)
 "ng" = (
 /turf/unsimulated/wall/fakeglass{
 	dir = 4
 	},
-/area/space)
+/area/centcom/simulated/cent_sat)
 "nh" = (
 /obj/effect/floor_decal/industrial/outline/red,
 /obj/machinery/nuclearbomb,
 /turf/unsimulated/floor/techfloor_grid,
-/area/space)
+/area/centcom/simulated/cent_sat)
+"ni" = (
+/turf/unsimulated/wall,
+/area/centcom/simulated/cent_sat)
 "nm" = (
 /obj/machinery/recharge_station,
 /turf/simulated/shuttle/floor/red,
@@ -21836,19 +21839,19 @@ mN
 mN
 mN
 mN
-lj
-lj
-lj
-lj
-lj
-lj
-lj
-lj
-lj
-lj
-lj
-lj
-lj
+kj
+kj
+kj
+kj
+kj
+kj
+kj
+kj
+kj
+kj
+kj
+kj
+kj
 mN
 mN
 mN
@@ -21998,7 +22001,7 @@ mN
 mN
 mN
 mN
-lj
+kj
 nc
 nc
 kI
@@ -22010,7 +22013,7 @@ kI
 kI
 kI
 kI
-lj
+kj
 mN
 mN
 mN
@@ -22160,7 +22163,7 @@ mN
 mN
 mN
 mN
-lj
+kj
 nc
 nc
 kI
@@ -22172,7 +22175,7 @@ kI
 kI
 kI
 kI
-lj
+kj
 mN
 mN
 mN
@@ -22322,7 +22325,7 @@ mN
 mN
 mN
 mN
-lj
+kj
 nc
 nc
 kI
@@ -22334,7 +22337,7 @@ mn
 lL
 lu
 kI
-lj
+kj
 mN
 mN
 mN
@@ -22484,7 +22487,7 @@ mN
 mN
 mN
 mN
-lj
+kj
 kI
 kI
 kI
@@ -22496,7 +22499,7 @@ mo
 lM
 kI
 kI
-lj
+kj
 mN
 mN
 mN
@@ -22646,7 +22649,7 @@ mN
 mN
 mN
 mN
-lj
+kj
 kI
 kI
 kI
@@ -22658,7 +22661,7 @@ mp
 lN
 lv
 kI
-lj
+kj
 mN
 mN
 mN
@@ -22808,7 +22811,7 @@ mN
 mN
 mN
 mN
-lj
+kj
 mW
 mW
 kI
@@ -22820,7 +22823,7 @@ mq
 lO
 lw
 kI
-lj
+kj
 mN
 mN
 mN
@@ -22970,7 +22973,7 @@ mN
 mN
 mN
 mN
-lj
+kj
 mW
 mW
 kI
@@ -22982,7 +22985,7 @@ mr
 lR
 lx
 kI
-lj
+kj
 mN
 mN
 mN
@@ -23132,7 +23135,7 @@ mN
 mN
 mN
 mN
-lj
+kj
 mW
 mW
 kI
@@ -23144,7 +23147,7 @@ ms
 lS
 ly
 kI
-lj
+kj
 mN
 mN
 mN
@@ -23294,7 +23297,7 @@ mN
 mN
 mN
 mN
-lj
+kj
 mW
 mW
 kI
@@ -23306,12 +23309,12 @@ mv
 lT
 lz
 kI
+kj
+mN
+mN
+mN
+mN
 lj
-mN
-mN
-mN
-mN
-kJ
 kP
 kP
 kP
@@ -23321,7 +23324,7 @@ kP
 kP
 kP
 kP
-kJ
+lj
 mN
 mN
 mN
@@ -23455,10 +23458,10 @@ mN
 mN
 mN
 mN
-lj
-lj
-lj
-lj
+kj
+kj
+kj
+kj
 kI
 mX
 mX
@@ -23468,12 +23471,12 @@ mw
 lU
 lA
 kI
+kj
+mN
+mN
+mN
+mN
 lj
-mN
-mN
-mN
-mN
-kJ
 li
 kP
 kP
@@ -23483,7 +23486,7 @@ kP
 kP
 kP
 kP
-kJ
+lj
 mN
 mN
 mN
@@ -23617,7 +23620,7 @@ mN
 mN
 mN
 mN
-lj
+kj
 nh
 kI
 nd
@@ -23630,12 +23633,12 @@ mx
 lV
 lB
 kI
+kj
+mN
+mN
+mN
+mN
 lj
-mN
-mN
-mN
-mN
-kJ
 kP
 kP
 kP
@@ -23645,7 +23648,7 @@ kP
 kP
 kP
 kP
-kJ
+lj
 mN
 mN
 mN
@@ -23779,7 +23782,7 @@ mN
 mN
 mN
 mN
-lj
+kj
 nh
 kI
 ne
@@ -23792,22 +23795,22 @@ my
 lW
 lC
 kI
+kj
+mN
+mN
+mN
+mN
 lj
-mN
-mN
-mN
-mN
-kJ
 kV
 kS
 kY
 kY
-kJ
+lj
 kY
 kY
 kV
 kS
-kJ
+lj
 mN
 mN
 mN
@@ -23941,7 +23944,7 @@ mN
 mN
 mN
 mN
-lj
+kj
 nh
 kI
 nf
@@ -23954,7 +23957,7 @@ mz
 lX
 lD
 lq
-lj
+kj
 mN
 mN
 mN
@@ -24103,7 +24106,7 @@ mN
 mN
 mN
 mN
-lj
+kj
 nh
 kI
 ng
@@ -24116,7 +24119,7 @@ mB
 lY
 lE
 lr
-lj
+kj
 mN
 mN
 mN
@@ -24265,20 +24268,20 @@ mN
 mN
 mN
 mN
-lj
-lj
-lj
-lj
-lj
-lj
-lj
+kj
+kj
+kj
+kj
+kj
+kj
+kj
 kI
 mG
 lZ
 lZ
 lF
 kI
-lj
+kj
 mN
 mN
 mN
@@ -24433,14 +24436,14 @@ mN
 mN
 mN
 mN
-lj
+kj
 kI
 mG
 lZ
 lZ
 lF
 kI
-lj
+kj
 mN
 mN
 mN
@@ -24595,14 +24598,14 @@ mN
 mN
 mN
 mN
-lj
+kj
 kI
 mG
 lZ
 lZ
 lF
 kI
-lj
+kj
 mN
 mN
 mN
@@ -24757,14 +24760,14 @@ mN
 mN
 mN
 mN
-lj
+kj
 kI
 mG
 mb
 mb
 lF
 kI
-lj
+kj
 mN
 mN
 mN
@@ -24919,14 +24922,14 @@ mN
 mN
 mN
 mN
-lj
+kj
 mZ
 lG
 lG
 lG
 lG
 ls
-lj
+kj
 mN
 mN
 mN
@@ -25405,15 +25408,15 @@ mN
 mN
 mN
 mN
-lj
-lj
-lj
-lj
-lj
-lj
-lj
-lj
-lj
+kj
+kj
+kj
+kj
+kj
+kj
+kj
+kj
+kj
 mN
 mN
 mN
@@ -25567,15 +25570,15 @@ mN
 mN
 mN
 mN
-Sg
+ni
 na
 mc
 mc
 mc
 lH
-Sg
+ni
 lk
-lj
+kj
 mN
 mN
 mN
@@ -25729,15 +25732,15 @@ mN
 mN
 mN
 mN
-Sg
+ni
 lI
 md
 md
 md
 lI
-Sg
+ni
 ll
-lj
+kj
 mN
 mN
 mN
@@ -25891,15 +25894,15 @@ mN
 mN
 mN
 mN
-Sg
+ni
 lI
 mH
 mD
 me
 lI
-Sg
+ni
 ln
-lj
+kj
 mN
 mN
 mN
@@ -26053,15 +26056,15 @@ mN
 mN
 mN
 mN
-Sg
+ni
 lI
 mI
 mh
 mf
 lI
-Sg
+ni
 lo
-lj
+kj
 mN
 mN
 mN
@@ -26215,15 +26218,15 @@ mN
 mN
 mN
 mN
-Sg
+ni
 lI
 mJ
 mh
 mg
 lI
-Sg
+ni
 lp
-lj
+kj
 mN
 mN
 mN
@@ -26377,7 +26380,7 @@ mN
 mN
 mN
 mN
-Sg
+ni
 lI
 mO
 mh
@@ -26385,7 +26388,7 @@ mh
 lJ
 lt
 kI
-lj
+kj
 mN
 mN
 mN
@@ -26539,7 +26542,7 @@ mN
 mN
 mN
 mN
-Sg
+ni
 lI
 mP
 mh
@@ -26547,7 +26550,7 @@ mh
 lJ
 lt
 kI
-lj
+kj
 mN
 mN
 mN
@@ -26701,15 +26704,15 @@ mN
 mN
 mN
 mN
-Sg
+ni
 lI
 mJ
 mh
 mj
 lI
-Sg
+ni
 kI
-lj
+kj
 mN
 mN
 mN
@@ -26863,15 +26866,15 @@ mN
 mN
 mN
 mN
-Sg
+ni
 lI
 mQ
 mh
 mg
 lI
-Sg
+ni
 kI
-lj
+kj
 mN
 mN
 mN
@@ -27025,15 +27028,15 @@ mN
 mN
 mN
 mN
-Sg
+ni
 lI
 mR
 mh
 mk
 lI
-Sg
+ni
 kI
-lj
+kj
 mN
 mN
 mN
@@ -27187,15 +27190,15 @@ mN
 mN
 mN
 mN
-Sg
+ni
 lI
 ml
 mE
 ml
 lI
-Sg
+ni
 kI
-lj
+kj
 mN
 mN
 mN
@@ -27349,15 +27352,15 @@ mN
 mN
 mN
 mN
-Sg
-Sg
+ni
+ni
 lI
 lI
 lI
-Sg
-Sg
-lj
-lj
+ni
+ni
+kj
+kj
 mN
 mN
 mN
