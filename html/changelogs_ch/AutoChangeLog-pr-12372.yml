@@ -1,0 +1,5 @@
+author: "CHOMPStation2StaffMirrorBot"
+delete-after: True
+changes:
+  - qol: "move the borg mining scanner upgrade to science"
+  - bugfix: "color gear tweak preview circle"

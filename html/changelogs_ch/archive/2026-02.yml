@@ -20,3 +20,20 @@
 2026-02-03:
   Guti:
   - balance: Pyroclastic anomalies are now less likely to roll
+2026-02-05:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: Fixed microwaves not being able to accept reagents
+  - code_imp: bans start_with from map edited closets
+  Guti:
+  - bugfix: Fixed viruses not being mutable
+  Will:
+  - code_imp: Removed unneeded icon change in bodycam update_icon
+  - code_imp: fear strings are no longer copypaste unique lists on every mob in the
+      game, and are now static shared lists.
+  - bugfix: Attaching a limb while in a dirty environment no longer makes additional
+      surgeries on that limb impossible
+  - bugfix: Bows can be drawn again
+  - qol: drawing a hardlight bow spawns the projectile in the same action
+  wide eyes:
+  - bugfix: cetus fixes
+  - bugfix: cetus has had a fire safety inspection

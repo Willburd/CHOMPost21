@@ -162,13 +162,11 @@ handles linking back and forth.
 	if(istype(target, /obj/item/multitool))
 		return OnMultitool(source, user, target)
 
-	// Outpost 21 edit(port) begin - Forensics items cannot be used on remote material component things
 	if(istype(target, /obj/item/forensics))
-		return
-	// Outpost 21 edit end
+		return FALSE
 
 	if(mat_container_flags & MATCONTAINER_NO_INSERT)
-		return
+		return FALSE
 
 	if(istype(target, /obj/item/storage/bag/sheetsnatcher))
 		return mat_container.OnSheetSnatcher(source, target, user)
