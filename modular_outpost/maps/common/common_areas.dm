@@ -2939,6 +2939,14 @@
 // Specialtiy -------------------------------------------------------------------------------
 //
 
+/area/centcom/simulated/cent_sat
+	name = "\improper CentCom Satelight"
+	icon_state = "exit"
+
+/area/centcom/simulated/cent_cargo_sat
+	name = "\improper CentCom Cargo Docking"
+	icon_state = "center"
+
 /area/specialty/redspace
 	name = "\improper Unknown"
 	base_turf = /turf/simulated/floor/flesh

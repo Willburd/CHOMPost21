@@ -1,6 +1,6 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "aaa" = (
-/obj/effect/landmark/corpse/miner,
+/obj/random/humanoidremains,
 /mob,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
@@ -145,9 +145,243 @@
 	},
 /turf/simulated/floor/plating,
 /area/vr/bloodstar)
+"aan" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
+/turf/simulated/floor/plating,
+/area/vr/bloodstar)
+"aao" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced,
+/obj/effect/blocker,
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
+/turf/simulated/floor/plating,
+/area/vr/bloodstar)
+"aap" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/effect/blocker,
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
+/turf/simulated/floor/plating,
+/area/vr/bloodstar)
+"aaq" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
+/turf/simulated/floor/plating,
+/area/vr/bloodstar)
+"aar" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/industrial/danger,
+/obj/effect/floorbreak,
+/turf/simulated/floor/tiled,
+/area/vr/bloodstar)
+"aas" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/effect/blocker,
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
+/turf/simulated/floor/plating,
+/area/vr/bloodstar)
 "aat" = (
 /turf/simulated/floor/grass,
 /area/vr/bloodstar)
+"aau" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 1
+	},
+/obj/effect/floorbreak,
+/turf/simulated/floor/tiled,
+/area/vr/bloodstar)
+"aav" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
+/turf/simulated/floor/plating,
+/area/vr/bloodstar)
+"aaw" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
+/turf/simulated/floor/plating,
+/area/vr/bloodstar)
+"aax" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/machinery/door/airlock/maintenance/engi{
+	req_one_access = null
+	},
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/vr/bloodstar)
+"aay" = (
+/obj/effect/floor_decal/corner/lightorange{
+	dir = 10
+	},
+/obj/effect/floorbreak,
+/turf/simulated/floor/tiled,
+/area/vr/bloodstar)
+"aaz" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment,
+/obj/effect/floorbreak,
+/turf/simulated/floor/tiled,
+/area/vr/bloodstar)
+"aaA" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
+/turf/simulated/floor/plating,
+/area/vr/bloodstar)
+"aaB" = (
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/lightgrey/bordercorner{
+	dir = 8
+	},
+/obj/effect/floorbreak,
+/turf/simulated/floor/tiled,
+/area/vr/bloodstar)
+"aaC" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 4
+	},
+/obj/effect/floorbreak,
+/turf/simulated/floor/tiled,
+/area/vr/bloodstar/spacebase)
+"aaD" = (
+/obj/effect/blocker,
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
+/turf/simulated/wall/bay/r_wall,
+/area/vr/bloodstar)
+"aaE" = (
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/effect/floorbreak,
+/turf/simulated/floor/tiled,
+/area/vr/bloodstar/spacebase)
+"aaF" = (
+/obj/effect/decal/cleanable/blood,
+/obj/effect/floorbreak,
+/turf/simulated/floor/tiled,
+/area/vr/bloodstar/spacebase)
+"aaG" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/item/material/barbedwire/start_active,
+/obj/effect/floorbreak,
+/turf/simulated/floor/tiled,
+/area/vr/bloodstar/spacebase)
+"aaH" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/effect/floorbreak,
+/turf/simulated/floor/tiled,
+/area/vr/bloodstar/spacebase)
 "aaI" = (
 /obj/structure/table/steel,
 /obj/effect/floor_decal/corner/blue/full{
@@ -167,6 +401,11 @@
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/tiled/white,
 /area/vr/bloodstar)
+"aaK" = (
+/obj/effect/floorbreak,
+/obj/effect/floorbreak,
+/turf/simulated/floor/tiled,
+/area/vr/bloodstar/spacebase)
 "aaL" = (
 /obj/structure/table/standard,
 /obj/effect/floor_decal/corner/blue{
@@ -177,6 +416,49 @@
 /obj/random/mre,
 /turf/simulated/floor/tiled/white,
 /area/vr/bloodstar)
+"aaM" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/effect/floorbreak,
+/turf/simulated/floor/tiled,
+/area/vr/bloodstar/spacebase)
+"aaN" = (
+/obj/effect/floorbreak,
+/turf/simulated/floor/tiled,
+/area/vr/bloodstar/spacebase)
+"aaO" = (
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/effect/floorbreak,
+/turf/simulated/floor/tiled,
+/area/vr/bloodstar)
+"aaP" = (
+/obj/machinery/atmospherics/pipe/simple/visible/red,
+/obj/item/material/shard,
+/obj/effect/floorbreak,
+/obj/effect/floorbreak,
+/turf/simulated/floor/tiled,
+/area/vr/bloodstar)
+"aaQ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/lightgrey/bordercorner{
+	dir = 4
+	},
+/obj/effect/floorbreak,
+/turf/simulated/floor/tiled,
+/area/vr/bloodstar)
+"aaR" = (
+/obj/machinery/atmospherics/pipe/simple/visible/green{
+	dir = 4
+	},
+/obj/effect/floorbreak,
+/turf/simulated/floor/tiled,
+/area/vr/bloodstar)
 "aaS" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -184,11 +466,116 @@
 /obj/structure/barricade/sandbag,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
+"aaT" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced,
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/effect/blocker,
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
+/turf/simulated/floor/plating,
+/area/vr/bloodstar)
 "aaU" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
+/area/vr/bloodstar)
+"aaV" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced,
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/blocker,
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
+/turf/simulated/floor/plating,
+/area/vr/bloodstar)
+"aaW" = (
+/obj/machinery/door/airlock/glass{
+	name = "Dock"
+	},
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/vr/bloodstar)
+"aaX" = (
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/machinery/door/airlock/glass{
+	name = "Dock"
+	},
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floorbreak,
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/vr/bloodstar)
+"aaY" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/lightgrey/border,
+/obj/effect/floorbreak,
+/turf/simulated/floor/tiled,
+/area/vr/bloodstar)
+"aaZ" = (
+/obj/machinery/atmospherics/pipe/simple/visible/green,
+/obj/effect/floorbreak,
+/turf/simulated/floor/tiled,
+/area/vr/bloodstar)
+"aba" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced,
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
+/turf/simulated/floor/plating,
+/area/vr/bloodstar)
+"abb" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced,
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
+/turf/simulated/floor/plating,
+/area/vr/bloodstar)
+"abc" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
+/obj/effect/floorbreak,
+/turf/simulated/floor/tiled,
+/area/vr/bloodstar)
+"abd" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floorbreak,
+/turf/simulated/floor/tiled/steel_grid,
 /area/vr/bloodstar)
 "abe" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
@@ -196,6 +583,63 @@
 	},
 /obj/item/material/barbedwire/start_active,
 /turf/simulated/floor/tiled,
+/area/vr/bloodstar)
+"abf" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floorbreak,
+/turf/simulated/floor/tiled/steel_grid,
+/area/vr/bloodstar)
+"abg" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/lightgrey/bordercorner{
+	dir = 4
+	},
+/obj/effect/floorbreak,
+/turf/simulated/floor/tiled,
+/area/vr/bloodstar)
+"abh" = (
+/obj/structure/sign/directions/medical{
+	dir = 8;
+	pixel_y = 32
+	},
+/obj/structure/sign/directions/science{
+	dir = 8;
+	pixel_y = 24
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 1
+	},
+/obj/effect/floorbreak,
+/turf/simulated/floor/tiled,
+/area/vr/bloodstar)
+"abi" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 9
+	},
+/obj/effect/floorbreak,
+/turf/simulated/floor/tiled/dark,
+/area/vr/bloodstar)
+"abj" = (
+/obj/machinery/door/firedoor/glass,
+/obj/effect/decal/cleanable/blood/oil,
+/turf/simulated/floor/tiled/steel_grid,
 /area/vr/bloodstar)
 "abk" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
@@ -217,11 +661,101 @@
 	},
 /turf/simulated/floor/plating,
 /area/vr/bloodstar)
+"abm" = (
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 4
+	},
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/lightgrey/bordercorner{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/lightgrey/bordercorner{
+	dir = 4
+	},
+/obj/effect/floorbreak,
+/turf/simulated/floor/tiled/dark,
+/area/vr/bloodstar)
+"abn" = (
+/obj/effect/decal/cleanable/blood,
+/obj/effect/floorbreak,
+/turf/simulated/floor/tiled,
+/area/vr/bloodstar)
+"abo" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/blood/oil,
+/turf/simulated/floor/tiled,
+/area/vr/bloodstar)
+"abp" = (
+/obj/machinery/atmospherics/pipe/manifold/visible/yellow{
+	dir = 8
+	},
+/obj/effect/floorbreak,
+/turf/simulated/floor/tiled,
+/area/vr/bloodstar)
+"abq" = (
+/obj/machinery/atmospherics/pipe/simple/visible/red{
+	dir = 4
+	},
+/obj/effect/floorbreak,
+/turf/simulated/floor/tiled,
+/area/vr/bloodstar)
+"abr" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 4
+	},
+/obj/effect/floorbreak,
+/turf/simulated/floor/tiled/dark,
+/area/vr/bloodstar)
+"abs" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 4
+	},
+/obj/effect/floorbreak,
+/turf/simulated/floor/tiled,
+/area/vr/bloodstar)
 "abt" = (
 /obj/machinery/mineral/mint,
 /obj/effect/floor_decal/corner/brown{
 	dir = 9
 	},
+/turf/simulated/floor/tiled,
+/area/vr/bloodstar)
+"abu" = (
+/obj/effect/floorbreak,
+/turf/simulated/floor/lino,
+/area/vr/bloodstar)
+"abv" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/lightgrey/border,
+/obj/effect/floorbreak,
+/turf/simulated/floor/tiled,
+/area/vr/bloodstar)
+"abw" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
+/obj/effect/floorbreak,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "abx" = (
@@ -232,6 +766,40 @@
 	},
 /turf/simulated/floor/wmarble,
 /area/vr/lighting)
+"aby" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 4
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 8
+	},
+/obj/effect/floorbreak,
+/turf/simulated/floor/tiled,
+/area/vr/bloodstar)
+"abz" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/barricade,
+/obj/effect/floorbreak,
+/turf/simulated/floor/tiled/steel_grid,
+/area/vr/bloodstar)
+"abA" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/effect/floorbreak,
+/turf/simulated/floor/tiled,
+/area/vr/bloodstar)
+"abB" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 8
+	},
+/obj/effect/floorbreak,
+/turf/simulated/floor/tiled/dark,
+/area/vr/bloodstar)
 "abC" = (
 /obj/structure/disposalpipe/segment{
 	dir = 2;
@@ -246,6 +814,12 @@
 /obj/effect/floorbreak,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
+"abD" = (
+/obj/effect/floor_decal/borderfloor/corner,
+/obj/effect/floor_decal/corner/lightgrey/bordercorner,
+/obj/effect/decal/cleanable/blood/oil,
+/turf/simulated/floor/tiled,
+/area/vr/bloodstar)
 "abE" = (
 /obj/structure/bed/chair/wood{
 	dir = 8
@@ -253,7 +827,38 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
 	},
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled/yellow,
+/area/vr/bloodstar)
+"abF" = (
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/effect/floorbreak,
+/turf/simulated/floor/tiled/steel_grid,
+/area/vr/bloodstar)
+"abG" = (
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/lightgrey/bordercorner{
+	dir = 1
+	},
+/obj/effect/floorbreak,
+/turf/simulated/floor/tiled,
+/area/vr/bloodstar)
+"abH" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/floorbreak,
+/turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "abI" = (
 /obj/structure/grille,
@@ -267,6 +872,22 @@
 /obj/machinery/door/firedoor/border_only,
 /turf/simulated/floor/plating,
 /area/vr/bloodstar/spacebase)
+"abJ" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/blood,
+/obj/effect/floorbreak,
+/turf/simulated/floor/tiled,
+/area/vr/bloodstar)
+"abK" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/effect/floorbreak,
+/turf/simulated/floor/tiled,
+/area/vr/bloodstar)
 "abL" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -284,6 +905,81 @@
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
+"abM" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 4
+	},
+/obj/effect/floor_decal/borderfloor/corner,
+/obj/effect/floor_decal/corner/lightgrey/bordercorner,
+/obj/effect/floor_decal/corner/lightgrey/bordercorner{
+	dir = 4
+	},
+/obj/effect/floorbreak,
+/turf/simulated/floor/tiled,
+/area/vr/bloodstar)
+"abN" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/obj/effect/floor_decal/spline/fancy/wood/corner{
+	dir = 4
+	},
+/obj/effect/floorbreak,
+/turf/simulated/floor/wood,
+/area/vr/bloodstar)
+"abO" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/effect/floorbreak,
+/turf/simulated/floor/wood,
+/area/vr/bloodstar)
+"abP" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/blood/oil,
+/turf/simulated/floor/tiled,
+/area/vr/bloodstar)
+"abQ" = (
+/obj/structure/bed/chair/comfy/black{
+	dir = 4
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 10
+	},
+/obj/random/humanoidremains,
+/turf/simulated/floor/carpet,
+/area/vr/bloodstar)
+"abR" = (
+/obj/structure/bed/chair/comfy/black{
+	dir = 8
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 6
+	},
+/obj/random/humanoidremains,
+/turf/simulated/floor/carpet,
+/area/vr/bloodstar)
 "abS" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -295,6 +991,37 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
+/area/vr/bloodstar)
+"abT" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/obj/effect/floorbreak,
+/turf/simulated/floor/tiled,
+/area/vr/bloodstar)
+"abU" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/lightorange/border{
+	dir = 4
+	},
+/obj/effect/floorbreak,
+/turf/simulated/floor/tiled/dark,
+/area/vr/bloodstar)
+"abV" = (
+/obj/structure/bed/chair/comfy/black{
+	dir = 8
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 4
+	},
+/obj/random/humanoidremains,
+/turf/simulated/floor/carpet,
+/area/vr/bloodstar)
+"abW" = (
+/obj/effect/decal/cleanable/blood/oil,
+/turf/simulated/floor/tiled/steel_grid,
 /area/vr/bloodstar)
 "abX" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -357,6 +1084,36 @@
 /obj/structure/barricade/sandbag,
 /turf/simulated/floor/tiled/dark,
 /area/vr/bloodstar)
+"aca" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
+/obj/effect/floorbreak,
+/turf/simulated/floor/tiled,
+/area/vr/bloodstar)
+"acb" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/effect/floor_decal/spline/fancy/wood/corner{
+	dir = 1
+	},
+/obj/effect/floorbreak,
+/turf/simulated/floor/wood,
+/area/vr/bloodstar)
+"acc" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 1
+	},
+/obj/effect/floorbreak,
+/turf/simulated/floor/wood,
+/area/vr/bloodstar)
 "acd" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -365,6 +1122,101 @@
 	dir = 10
 	},
 /turf/simulated/floor/plating/turfpack/airless,
+/area/vr/bloodstar)
+"ace" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 4
+	},
+/obj/effect/floorbreak,
+/turf/simulated/floor/wood,
+/area/vr/bloodstar)
+"acf" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 8
+	},
+/obj/effect/floorbreak,
+/turf/simulated/floor/wood,
+/area/vr/bloodstar)
+"acg" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 4
+	},
+/obj/effect/floorbreak,
+/obj/effect/decal/cleanable/blood/oil,
+/turf/simulated/floor/tiled/white,
+/area/vr/bloodstar)
+"ach" = (
+/obj/machinery/hologram/holopad,
+/obj/effect/decal/cleanable/blood/oil,
+/obj/random/humanoidremains,
+/turf/simulated/floor/tiled/white,
+/area/vr/bloodstar)
+"aci" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 4
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/blood/oil,
+/turf/simulated/floor/tiled,
+/area/vr/bloodstar)
+"acj" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/effect/decal/cleanable/blood/oil,
+/turf/simulated/floor/tiled/white,
+/area/vr/bloodstar)
+"ack" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 8
+	},
+/obj/effect/floorbreak,
+/turf/simulated/floor/tiled,
+/area/vr/bloodstar)
+"acl" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 1
+	},
+/obj/effect/floorbreak,
+/turf/simulated/floor/tiled/white,
+/area/vr/bloodstar)
+"acm" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/blood/oil,
+/turf/simulated/floor/tiled/white,
+/area/vr/bloodstar)
+"acn" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/disposalpipe/segment,
+/obj/effect/decal/cleanable/blood/oil,
+/turf/simulated/floor/tiled,
+/area/vr/bloodstar)
+"aco" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 10
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 10
+	},
+/obj/effect/floorbreak,
+/turf/simulated/floor/tiled/dark,
 /area/vr/bloodstar)
 "acp" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -375,9 +1227,113 @@
 	},
 /turf/simulated/floor/wood,
 /area/vr/bloodstar)
+"acq" = (
+/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/lightgrey/bordercorner{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled,
+/area/vr/bloodstar)
 "acr" = (
 /turf/simulated/floor/tiled/dark,
 /area/vr/lighting)
+"acs" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/random/humanoidremains,
+/turf/simulated/floor/tiled,
+/area/vr/bloodstar)
+"act" = (
+/obj/effect/floor_decal/borderfloor/corner,
+/obj/effect/floor_decal/corner/lightgrey/bordercorner,
+/obj/random/humanoidremains,
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled,
+/area/vr/bloodstar)
+"acu" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/floorbreak,
+/turf/simulated/floor/tiled,
+/area/vr/bloodstar)
+"acv" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 1
+	},
+/obj/effect/floorbreak,
+/turf/simulated/floor/wood,
+/area/vr/bloodstar)
+"acw" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 8
+	},
+/obj/effect/floorbreak,
+/turf/simulated/floor/tiled/dark,
+/area/vr/bloodstar)
+"acx" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/effect/floorbreak,
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled,
+/area/vr/bloodstar)
+"acy" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/effect/floorbreak,
+/turf/simulated/floor/tiled,
+/area/vr/bloodstar)
+"acz" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 4
+	},
+/obj/random/humanoidremains,
+/turf/simulated/floor/tiled,
+/area/vr/bloodstar)
+"acA" = (
+/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/lightgrey/bordercorner{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/blood/oil,
+/turf/simulated/floor/tiled,
+/area/vr/bloodstar)
+"acB" = (
+/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 8
+	},
+/obj/effect/floorbreak,
+/turf/simulated/floor/tiled,
+/area/vr/bloodstar)
 "acC" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 5
@@ -388,6 +1344,198 @@
 /obj/structure/bed/chair/backed_red,
 /turf/simulated/floor/wmarble,
 /area/vr/lighting)
+"acD" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/floorbreak,
+/turf/simulated/floor,
+/area/vr/bloodstar)
+"acE" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/decal/cleanable/blood,
+/obj/effect/floorbreak,
+/turf/simulated/floor/tiled,
+/area/vr/bloodstar)
+"acF" = (
+/obj/random/humanoidremains,
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled,
+/area/vr/bloodstar)
+"acG" = (
+/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/lightgrey/bordercorner{
+	dir = 8
+	},
+/obj/effect/floorbreak,
+/turf/simulated/floor/tiled,
+/area/vr/bloodstar)
+"acH" = (
+/obj/machinery/door/airlock/glass{
+	name = "Central Access"
+	},
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled/steel_grid,
+/area/vr/bloodstar)
+"acI" = (
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/lightgrey/border,
+/obj/item/material/barbedwire/start_active,
+/obj/effect/floorbreak,
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled,
+/area/vr/bloodstar)
+"acJ" = (
+/obj/machinery/light,
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/lightgrey/border,
+/obj/effect/floorbreak,
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled,
+/area/vr/bloodstar)
+"acK" = (
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/lightgrey/bordercorner{
+	dir = 8
+	},
+/obj/effect/floorbreak,
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled,
+/area/vr/bloodstar)
+"acL" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/floor_decal/borderfloor/corner,
+/obj/effect/floor_decal/corner/lightgrey/bordercorner,
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled,
+/area/vr/bloodstar)
+"acM" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/border_only,
+/obj/item/material/barbedwire/start_active,
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled/steel_grid,
+/area/vr/bloodstar)
+"acN" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/light,
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/lightgrey/border,
+/obj/effect/floorbreak,
+/obj/random/humanoidremains,
+/turf/simulated/floor/tiled,
+/area/vr/bloodstar)
+"acO" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/lightorange/border,
+/obj/effect/floorbreak,
+/turf/simulated/floor/tiled,
+/area/vr/bloodstar)
+"acP" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/lightgrey/border,
+/obj/effect/floorbreak,
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled,
+/area/vr/bloodstar)
+"acQ" = (
+/obj/item/material/barbedwire/start_active,
+/obj/effect/floorbreak,
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled,
+/area/vr/bloodstar)
+"acR" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/effect/floorbreak,
+/obj/effect/decal/cleanable/blood,
+/obj/random/humanoidremains,
+/turf/simulated/floor/tiled,
+/area/vr/bloodstar)
+"acS" = (
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/item/material/barbedwire/start_active,
+/obj/effect/floorbreak,
+/turf/simulated/floor/tiled/steel_grid,
+/area/vr/bloodstar)
+"acT" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/effect/floorbreak,
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled,
+/area/vr/bloodstar)
+"acU" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 10
+	},
+/obj/random/humanoidremains,
+/obj/effect/decal/cleanable/blood/oil,
+/turf/simulated/floor/tiled,
+/area/vr/bloodstar)
+"acV" = (
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/white/border,
+/obj/effect/floorbreak,
+/turf/simulated/floor/tiled,
+/area/vr/bloodstar)
+"acW" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/obj/effect/floorbreak,
+/turf/simulated/floor/tiled,
+/area/vr/bloodstar)
+"acX" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/blue/border{
+	dir = 1
+	},
+/obj/effect/floorbreak,
+/turf/simulated/floor/tiled,
+/area/vr/bloodstar)
 "acY" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -409,6 +1557,207 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/vr/bloodstar)
+"adb" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced,
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
+/turf/simulated/floor/plating,
+/area/vr/bloodstar)
+"adc" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/effect/floorbreak,
+/turf/simulated/floor/tiled/white,
+/area/vr/bloodstar)
+"add" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
+/turf/simulated/floor/plating,
+/area/vr/bloodstar)
+"ade" = (
+/obj/structure/table/woodentable,
+/obj/random/ammo_all,
+/obj/random/ammo_all,
+/obj/random/ammo_all,
+/obj/random/ammo_all,
+/obj/random/ammo_all,
+/turf/simulated/floor/tiled,
+/area/vr/bloodstar)
+"adf" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
+/turf/simulated/floor/plating,
+/area/vr/bloodstar)
+"adg" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/blue/border{
+	dir = 8
+	},
+/obj/effect/floorbreak,
+/turf/simulated/floor/tiled,
+/area/vr/bloodstar)
+"adh" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced,
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
+/turf/simulated/floor/plating,
+/area/vr/bloodstar)
+"adi" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
+/turf/simulated/floor/plating,
+/area/vr/bloodstar)
+"adj" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
+/turf/simulated/floor/plating,
+/area/vr/bloodstar)
+"adk" = (
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/obj/machinery/conveyor_switch/oneway{
+	id = "vrburnpit";
+	position = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/vr)
+"adl" = (
+/obj/structure/disposalpipe/trunk{
+	dir = 8
+	},
+/obj/structure/disposaloutlet{
+	dir = 4
+	},
+/obj/machinery/conveyor{
+	id = "vrburnpit";
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
+/area/vr)
+"adm" = (
+/obj/structure/plasticflaps/mining,
+/obj/machinery/conveyor{
+	id = "vrburnpit";
+	dir = 4
+	},
+/turf/simulated/floor/reinforced/airless{
+	phoron = 30;
+	oxygen = 70;
+	name = "reinforced floor"
+	},
+/area/vr)
+"adn" = (
+/obj/effect/map_effect/interval/burnpit,
+/turf/simulated/floor/reinforced/airless{
+	phoron = 30;
+	oxygen = 70;
+	name = "reinforced floor"
+	},
+/area/vr)
+"ado" = (
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled/dark,
+/area/vr)
+"adp" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/white/border{
+	dir = 4
+	},
+/obj/effect/floorbreak,
+/turf/simulated/floor/tiled,
+/area/vr/bloodstar)
+"adq" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/vr)
+"adr" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/vr)
+"ads" = (
+/obj/effect/floor_decal/corner/white{
+	dir = 9
+	},
+/obj/effect/floorbreak,
+/turf/simulated/floor/tiled/dark,
+/area/vr/bloodstar)
 "adt" = (
 /obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/borderfloor{
@@ -421,6 +1770,59 @@
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
+"adu" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/window/maintenance_panel{
+	maxhealth = 35000
+	},
+/turf/unsimulated/wall/seperator,
+/area/vr)
+"adv" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/window/maintenance_panel{
+	dir = 1;
+	maxhealth = 35000
+	},
+/turf/unsimulated/wall/seperator,
+/area/vr)
+"adw" = (
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled/material/phoron,
+/area/vr)
+"adx" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/structure/disposalpipe/junction{
+	dir = 2;
+	icon_state = "pipe-j2"
+	},
+/turf/simulated/floor/tiled/material/phoron,
+/area/vr)
+"ady" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled/material/phoron,
+/area/vr)
+"adz" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled,
+/area/vr/bloodstar)
+"adA" = (
+/obj/machinery/disposal/wall/burn_pit{
+	pixel_y = 32;
+	name = "Starting Clothal Disposal"
+	},
+/obj/structure/disposalpipe/trunk,
+/turf/simulated/floor/tiled/material/phoron,
+/area/vr)
 "adB" = (
 /obj/structure/bed/chair/modern_chair{
 	dir = 4
@@ -430,6 +1832,53 @@
 	},
 /turf/simulated/floor/wmarble,
 /area/vr/lighting)
+"adC" = (
+/obj/machinery/disposal/wall/burn_pit{
+	pixel_y = 32;
+	name = "Starting Clothal Disposal"
+	},
+/obj/structure/disposalpipe/trunk,
+/obj/structure/signevent/yellow{
+	desc = "Please strip, and place any pre-generated clothing in the bins below for removal.";
+	name = "Instructions";
+	pixel_y = 34;
+	pixel_x = -16
+	},
+/turf/simulated/floor/tiled/material/phoron,
+/area/vr)
+"adD" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
+/turf/simulated/floor/plating,
+/area/vr/bloodstar)
+"adE" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/blocker,
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
+/turf/simulated/floor/plating,
+/area/vr/bloodstar)
 "adK" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/white/border,
@@ -519,7 +1968,8 @@
 	},
 /obj/effect/decal/cleanable/blood,
 /obj/random/humanoidremains,
-/obj/effect/landmark/corpse/random_civ,
+/obj/random/humanoidremains,
+/obj/effect/floorbreak,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "afd" = (
@@ -754,7 +2204,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 1
 	},
-/obj/effect/landmark/corpse/miner,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "ajG" = (
@@ -923,6 +2373,7 @@
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 8
 	},
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled/yellow,
 /area/vr/bloodstar)
 "amu" = (
@@ -951,6 +2402,9 @@
 	id = "vr_atmoslockdown";
 	name = "Atmospherics Lockdown";
 	opacity = 0
+	},
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
 	},
 /turf/simulated/floor,
 /area/vr/bloodstar)
@@ -1273,7 +2727,7 @@
 	},
 /obj/effect/decal/cleanable/blood,
 /obj/random/handgun/sec,
-/obj/effect/landmark/corpse/security,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "arz" = (
@@ -1552,7 +3006,7 @@
 /obj/item/gun/projectile/automatic/serdy/t12,
 /obj/item/ammo_magazine/t12,
 /obj/item/ammo_magazine/t12,
-/obj/effect/landmark/corpse/random_civ,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "awa" = (
@@ -1705,7 +3159,8 @@
 	dir = 1
 	},
 /obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/corpse/engineer,
+/obj/random/humanoidremains,
+/obj/effect/floorbreak,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar/spacebase)
 "axF" = (
@@ -1807,7 +3262,7 @@
 /turf/simulated/wall/bay,
 /area/vr/bloodstar)
 "azp" = (
-/obj/machinery/porta_turret/ai_defense,
+/obj/machinery/porta_turret/heavy,
 /turf/simulated/floor,
 /area/vr/bloodstar)
 "azA" = (
@@ -1842,7 +3297,7 @@
 /area/vr/lighting)
 "aAm" = (
 /obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/corpse/random_civ,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar/spacebase)
 "aAr" = (
@@ -1962,7 +3417,7 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/corpse/random_civ,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "aBi" = (
@@ -2043,6 +3498,9 @@
 	opacity = 0;
 	dir = 8
 	},
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
 /turf/simulated/floor,
 /area/vr/bloodstar)
 "aCG" = (
@@ -2095,6 +3553,9 @@
 	id = "vr_atmoslockdown";
 	name = "Atmospherics Lockdown";
 	opacity = 0
+	},
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
 	},
 /turf/simulated/floor,
 /area/vr/bloodstar)
@@ -2221,7 +3682,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/hologram/holopad,
-/obj/effect/landmark/corpse/syndicatesoldier,
+/obj/random/humanoidremains,
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
@@ -2241,6 +3702,7 @@
 /obj/effect/floor_decal/industrial/danger/corner{
 	dir = 1
 	},
+/obj/effect/floorbreak,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "aGb" = (
@@ -2311,6 +3773,9 @@
 	name = "Atmospherics Lockdown";
 	opacity = 0;
 	dir = 8
+	},
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
 	},
 /turf/simulated/floor,
 /area/vr/bloodstar)
@@ -2503,7 +3968,7 @@
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 1
 	},
-/obj/effect/landmark/corpse/random_civ,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "aIV" = (
@@ -2569,7 +4034,7 @@
 /obj/item/gun/projectile/smartgun,
 /obj/item/ammo_magazine/smartgun,
 /obj/item/ammo_magazine/smartgun,
-/obj/effect/landmark/corpse/engineer,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/vr/bloodstar)
 "aJA" = (
@@ -2587,7 +4052,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/effect/landmark/corpse/doctor,
+/obj/random/humanoidremains,
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/tiled/old_tile,
 /area/vr/bloodstar)
@@ -2765,6 +4230,7 @@
 	},
 /obj/effect/decal/cleanable/blood,
 /obj/random/humanoidremains,
+/obj/effect/floorbreak,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "aMM" = (
@@ -2818,6 +4284,8 @@
 	dir = 8
 	},
 /obj/effect/floorbreak,
+/obj/item/ammo_casing/spent,
+/obj/item/ammo_casing/spent,
 /turf/simulated/floor/tiled/white,
 /area/vr/bloodstar)
 "aNK" = (
@@ -2939,6 +4407,9 @@
 	locked = 1;
 	name = "Public External Airlock"
 	},
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/vr/bloodstar)
 "aQb" = (
@@ -2987,6 +4458,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 4
 	},
+/obj/effect/floorbreak,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "aRt" = (
@@ -3300,11 +4772,14 @@
 	dir = 8;
 	icon_state = "pipe-c"
 	},
+/obj/effect/floorbreak,
+/obj/effect/decal/cleanable/blood/oil,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "aWs" = (
 /obj/machinery/door/airlock/glass_engineering{
-	name = "Engineering Hallway"
+	name = "Engineering Hallway";
+	req_one_access = null
 	},
 /obj/machinery/door/firedoor/border_only,
 /turf/simulated/floor/tiled/steel_grid,
@@ -3847,7 +5322,7 @@
 	dir = 8
 	},
 /obj/machinery/door/firedoor/border_only,
-/obj/effect/landmark/corpse/miner,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled/steel_grid,
 /area/vr/bloodstar)
 "bfg" = (
@@ -4019,12 +5494,6 @@
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/vr/bloodstar)
-"bix" = (
-/obj/machinery/atmospherics/pipe/simple/hidden,
-/obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/corpse/doctor,
-/turf/simulated/floor/tiled,
-/area/vr/bloodstar/spacebase)
 "biy" = (
 /obj/machinery/door/window/southleft{
 	name = "Bar"
@@ -4219,7 +5688,7 @@
 	dir = 4
 	},
 /obj/structure/bed/roller,
-/obj/effect/landmark/corpse/security/rig/eva,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled/white,
 /area/vr/bloodstar)
 "bme" = (
@@ -4804,6 +6273,9 @@
 	name = "Escape Pod 6"
 	},
 /obj/machinery/door/firedoor/glass,
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/vr/bloodstar)
 "bvI" = (
@@ -4939,7 +6411,7 @@
 	dir = 1
 	},
 /obj/structure/bed/roller,
-/obj/effect/landmark/corpse/clown,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "bxs" = (
@@ -5054,7 +6526,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
-/obj/effect/landmark/corpse/scientist,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled/white,
 /area/vr/bloodstar)
 "bzJ" = (
@@ -6015,6 +7487,9 @@
 	dir = 1
 	},
 /obj/machinery/door/airlock/glass_external/public,
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/vr/bloodstar)
 "bRK" = (
@@ -6048,7 +7523,7 @@
 /obj/effect/floor_decal/corner/lightorange/border{
 	dir = 4
 	},
-/obj/effect/landmark/corpse/engineer,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "bSo" = (
@@ -6131,6 +7606,9 @@
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/firedoor/glass,
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/vr/bloodstar)
 "bVh" = (
@@ -6210,6 +7688,9 @@
 	id = "vr_atmoslockdown";
 	name = "Atmospherics Lockdown";
 	opacity = 0
+	},
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
 	},
 /turf/simulated/floor,
 /area/vr/bloodstar)
@@ -6354,7 +7835,7 @@
 	dir = 4
 	},
 /obj/structure/bed/roller,
-/obj/effect/landmark/corpse/security,
+/obj/random/humanoidremains,
 /obj/item/reagent_containers/hypospray/autoinjector/used,
 /obj/effect/decal/cleanable/blood,
 /obj/item/reagent_containers/syringe/inaprovaline,
@@ -6466,6 +7947,9 @@
 	},
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/blocker,
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
 /turf/simulated/floor/plating,
 /area/vr/bloodstar)
 "bZB" = (
@@ -6780,6 +8264,9 @@
 	dir = 1
 	},
 /obj/effect/blocker,
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
 /turf/simulated/floor/plating,
 /area/vr/bloodstar)
 "cdn" = (
@@ -6868,7 +8355,7 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/corner/blue,
-/obj/effect/landmark/corpse/doctor,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled/white,
 /area/vr/bloodstar)
 "ceX" = (
@@ -7111,7 +8598,7 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
 	},
-/obj/effect/landmark/corpse/random_civ,
+/obj/random/humanoidremains,
 /turf/simulated/floor/wood,
 /area/vr/bloodstar)
 "cjc" = (
@@ -7284,6 +8771,7 @@
 	},
 /obj/structure/grille/broken,
 /obj/item/material/shard,
+/obj/effect/floorbreak,
 /turf/simulated/floor/plating,
 /area/vr/bloodstar)
 "ckQ" = (
@@ -7313,6 +8801,9 @@
 	name = "Atmospherics Lockdown";
 	opacity = 0;
 	dir = 8
+	},
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
 	},
 /turf/simulated/floor,
 /area/vr/bloodstar)
@@ -7350,7 +8841,7 @@
 	dir = 5
 	},
 /obj/item/material/shard,
-/obj/effect/landmark/corpse/scientist,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled/hydro,
 /area/vr/bloodstar)
 "cll" = (
@@ -7413,6 +8904,9 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/item/material/shard,
 /obj/effect/blocker,
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
 /turf/simulated/floor/plating,
 /area/vr/bloodstar)
 "clL" = (
@@ -7533,6 +9027,9 @@
 	dir = 8
 	},
 /obj/effect/blocker,
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
 /turf/simulated/floor/plating,
 /area/vr/bloodstar)
 "cmH" = (
@@ -7581,7 +9078,7 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/spline/fancy/wood/corner,
-/obj/effect/landmark/corpse/random_civ,
+/obj/random/humanoidremains,
 /turf/simulated/floor/wood,
 /area/vr/bloodstar)
 "cnh" = (
@@ -7596,7 +9093,7 @@
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 8
 	},
-/obj/effect/landmark/corpse/engineer,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "cnk" = (
@@ -7775,6 +9272,7 @@
 	dir = 9
 	},
 /obj/item/material/shard,
+/obj/effect/floorbreak,
 /turf/simulated/floor/tiled/white,
 /area/vr/bloodstar)
 "cqr" = (
@@ -7968,6 +9466,9 @@
 	name = "Atmospherics Lockdown";
 	opacity = 0;
 	dir = 8
+	},
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
 	},
 /turf/simulated/floor,
 /area/vr/bloodstar)
@@ -8183,6 +9684,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 8
 	},
+/obj/effect/decal/cleanable/blood/oil,
 /turf/simulated/floor/tiled/white,
 /area/vr/bloodstar)
 "cyd" = (
@@ -8273,7 +9775,8 @@
 /obj/effect/floor_decal/borderfloor/corner,
 /obj/effect/floor_decal/corner/lightgrey/bordercorner,
 /obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/corpse/random_civ,
+/obj/random/humanoidremains,
+/obj/effect/floorbreak,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "czp" = (
@@ -8354,7 +9857,7 @@
 /obj/item/ammo_magazine/clip/c12g/beanbag,
 /obj/item/ammo_magazine/clip/c12g/beanbag,
 /obj/item/ammo_magazine/clip/c12g/beanbag,
-/obj/effect/landmark/corpse/doctor,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "cBg" = (
@@ -8911,7 +10414,7 @@
 	dir = 9
 	},
 /obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/corpse/random_civ,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "cMm" = (
@@ -8987,7 +10490,7 @@
 /area/vr/requirespower)
 "cNf" = (
 /obj/machinery/door/firedoor/border_only,
-/obj/effect/landmark/mobcorpse/russian,
+/obj/random/humanoidremains,
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/tiled/steel_grid,
 /area/vr/bloodstar)
@@ -9026,7 +10529,8 @@
 	dir = 1
 	},
 /obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/corpse/random_civ,
+/obj/random/humanoidremains,
+/obj/effect/floorbreak,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "cNT" = (
@@ -9430,6 +10934,9 @@
 	name = "Atmospherics Lockdown";
 	opacity = 0
 	},
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
 /turf/simulated/floor,
 /area/vr/bloodstar)
 "cSD" = (
@@ -9608,7 +11115,7 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 4
 	},
-/obj/effect/landmark/corpse/random_civ,
+/obj/random/humanoidremains,
 /turf/simulated/floor/wood,
 /area/vr/bloodstar)
 "cUD" = (
@@ -9892,6 +11399,9 @@
 	},
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/blocker,
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
 /turf/simulated/floor/plating,
 /area/vr/bloodstar)
 "cYT" = (
@@ -9994,6 +11504,7 @@
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/material/phoron,
 /area/vr)
 "cZN" = (
@@ -10145,7 +11656,8 @@
 	},
 /obj/effect/floor_decal/borderfloor/corner,
 /obj/effect/floor_decal/corner/lightgrey/bordercorner,
-/obj/effect/landmark/corpse/random_civ,
+/obj/random/humanoidremains,
+/obj/effect/floorbreak,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "dbM" = (
@@ -10522,6 +12034,9 @@
 	locked = 1;
 	name = "Public External Airlock"
 	},
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/vr/bloodstar)
 "dhz" = (
@@ -10589,7 +12104,7 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 8
 	},
-/obj/effect/landmark/corpse/random_civ,
+/obj/random/humanoidremains,
 /turf/simulated/floor/wood,
 /area/vr/bloodstar)
 "diD" = (
@@ -10753,6 +12268,9 @@
 	name = "Cargo EVA Internal Airlock"
 	},
 /obj/machinery/door/firedoor/glass,
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/vr/bloodstar)
 "dlJ" = (
@@ -10790,7 +12308,7 @@
 "dmz" = (
 /obj/effect/decal/cleanable/blood,
 /obj/item/gun/energy/netgun,
-/obj/effect/landmark/corpse/doctor,
+/obj/random/humanoidremains,
 /turf/simulated/floor,
 /area/vr/bloodstar)
 "dmC" = (
@@ -10977,6 +12495,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
 	},
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "doJ" = (
@@ -10987,6 +12506,7 @@
 	dir = 5
 	},
 /obj/effect/mine/lube,
+/obj/effect/floorbreak,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "doM" = (
@@ -11325,6 +12845,7 @@
 /obj/machinery/atmospherics/pipe/simple/visible/red{
 	dir = 4
 	},
+/obj/effect/floorbreak,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "dtJ" = (
@@ -11337,9 +12858,16 @@
 /turf/simulated/floor/wood,
 /area/vr/bloodstar)
 "dtL" = (
-/obj/structure/closet/secure_closet/hos2{
-	req_access = null
-	},
+/obj/structure/closet/secure_closet,
+/obj/item/flashlight/maglight,
+/obj/item/gun/energy/taser,
+/obj/item/ticket_printer,
+/obj/item/melee/telebaton,
+/obj/item/flash,
+/obj/item/tool/crowbar/red,
+/obj/item/reagent_containers/spray/pepper,
+/obj/item/clothing/accessory/badge/holo/hos,
+/obj/item/taperoll/police,
 /turf/simulated/floor/tiled/dark,
 /area/vr/bloodstar)
 "dtM" = (
@@ -12007,7 +13535,7 @@
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 1
 	},
-/obj/effect/landmark/corpse/random_civ,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "dHh" = (
@@ -12074,7 +13602,7 @@
 "dIb" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/corpse/random_civ,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled/steel_grid,
 /area/vr/bloodstar)
 "dIi" = (
@@ -12122,11 +13650,11 @@
 /turf/simulated/floor/tiled/hydro,
 /area/vr/bloodstar)
 "dJp" = (
+/obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/airlock/medical{
 	name = "Operating Theatre 1";
-	req_access = list(45)
+	req_one_access = null
 	},
-/obj/machinery/door/firedoor/border_only,
 /turf/simulated/floor/tiled/white,
 /area/vr/bloodstar)
 "dJs" = (
@@ -12379,6 +13907,9 @@
 /obj/structure/grille,
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/blocker,
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
 /turf/simulated/floor/plating,
 /area/vr/bloodstar)
 "dNt" = (
@@ -12600,6 +14131,9 @@
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/firedoor/glass,
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/vr/bloodstar)
 "dRe" = (
@@ -13154,7 +14688,7 @@
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 1
 	},
-/obj/effect/landmark/corpse/random_civ,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "ecG" = (
@@ -13296,7 +14830,7 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/corpse/random_civ,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "eeG" = (
@@ -13363,6 +14897,9 @@
 	name = "Chapel Maintenance EVA Internal Access"
 	},
 /obj/machinery/door/firedoor/glass,
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/vr/bloodstar)
 "efq" = (
@@ -13448,6 +14985,9 @@
 	dir = 8
 	},
 /obj/item/material/shard,
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
 /turf/simulated/floor,
 /area/vr/bloodstar)
 "egj" = (
@@ -13628,6 +15168,7 @@
 /obj/effect/floor_decal/spline/fancy/wood/corner{
 	dir = 8
 	},
+/obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/wood/broken,
 /area/vr/bloodstar)
 "eiZ" = (
@@ -14064,6 +15605,7 @@
 /obj/effect/floor_decal/corner/lightgrey/bordercorner{
 	dir = 8
 	},
+/obj/effect/floorbreak,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "eqq" = (
@@ -14298,7 +15840,7 @@
 /obj/effect/floor_decal/corner/lightgrey/bordercorner{
 	dir = 1
 	},
-/obj/effect/landmark/corpse/syndicatesoldier,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled/dark,
 /area/vr/bloodstar)
 "eve" = (
@@ -14433,7 +15975,7 @@
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 4
 	},
-/obj/effect/landmark/corpse/doctor,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar/spacebase)
 "ewV" = (
@@ -14515,6 +16057,9 @@
 	name = "Coffee Shop";
 	sortType = "Coffee Shop"
 	},
+/obj/random/humanoidremains,
+/obj/effect/decal/cleanable/blood/oil,
+/obj/effect/floorbreak,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "eyc" = (
@@ -14535,7 +16080,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/effect/floorbreak,
-/obj/effect/landmark/corpse/vintage/engineering,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "eyI" = (
@@ -14570,6 +16115,7 @@
 /obj/effect/floor_decal/corner/blue/bordercorner{
 	dir = 4
 	},
+/obj/effect/floorbreak,
 /turf/simulated/floor/tiled/white,
 /area/vr/bloodstar)
 "ezm" = (
@@ -14805,6 +16351,9 @@
 /obj/machinery/conveyor{
 	dir = 4;
 	id = "vr_QMLoad2"
+	},
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/vr/bloodstar)
@@ -15238,12 +16787,13 @@
 /turf/simulated/floor/tiled/milspec,
 /area/vr/lighting)
 "eKA" = (
-/obj/machinery/door/airlock/glass_engineering{
-	name = "Engineering Hallway"
-	},
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/door/airlock/glass_engineering{
+	name = "Engineering Hallway";
+	req_one_access = null
+	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/vr/bloodstar)
 "eKE" = (
@@ -15372,6 +16922,7 @@
 /obj/effect/floor_decal/corner/lightgrey/bordercorner{
 	dir = 4
 	},
+/obj/effect/floorbreak,
 /turf/simulated/floor/tiled/dark,
 /area/vr/bloodstar)
 "eLV" = (
@@ -15789,7 +17340,7 @@
 /obj/machinery/atmospherics/pipe/manifold4w/visible/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold4w/visible/supply,
 /obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/corpse/engineer,
+/obj/random/humanoidremains,
 /turf/simulated/floor,
 /area/vr/bloodstar)
 "eSj" = (
@@ -16875,6 +18426,9 @@
 	locked = 1;
 	name = "Cargo Docking Hatch"
 	},
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/vr/bloodstar)
 "fjY" = (
@@ -16942,6 +18496,7 @@
 /obj/effect/floor_decal/corner/lightorange/bordercorner{
 	dir = 8
 	},
+/obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "fkQ" = (
@@ -17330,6 +18885,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/effect/decal/cleanable/blood/oil,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "fqV" = (
@@ -17585,6 +19141,7 @@
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 4
 	},
+/obj/effect/floorbreak,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "ftV" = (
@@ -17655,6 +19212,9 @@
 	},
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/blocker,
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
 /turf/simulated/floor/plating,
 /area/vr/bloodstar)
 "fuC" = (
@@ -17787,7 +19347,7 @@
 "fwC" = (
 /obj/machinery/door/airlock/glass_mining{
 	name = "Cargo Bay";
-	req_access = list(31)
+	req_one_access = null
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/structure/disposalpipe/segment,
@@ -18026,7 +19586,7 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/corpse/engineer,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "fAs" = (
@@ -18207,7 +19767,10 @@
 	name = "Dock"
 	},
 /obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/corpse/random_civ,
+/obj/random/humanoidremains,
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/vr/bloodstar)
 "fCr" = (
@@ -18291,7 +19854,7 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/mobcorpse/russian/ranged,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/vr/bloodstar)
 "fDh" = (
@@ -18429,6 +19992,9 @@
 	opacity = 0;
 	dir = 8
 	},
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
 /turf/simulated/floor,
 /area/vr/bloodstar)
 "fFe" = (
@@ -18558,7 +20124,7 @@
 	},
 /obj/effect/decal/cleanable/blood,
 /obj/random/humanoidremains,
-/obj/effect/landmark/corpse/random_civ,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled/white,
 /area/vr/bloodstar)
 "fIp" = (
@@ -18569,6 +20135,9 @@
 	icon_state = "door_locked";
 	locked = 1;
 	name = "Engineering Port Internal Access"
+	},
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/vr/bloodstar)
@@ -18762,6 +20331,9 @@
 	name = "Atmospherics Lockdown";
 	opacity = 0
 	},
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
 /turf/simulated/floor,
 /area/vr/bloodstar)
 "fLZ" = (
@@ -18885,9 +20457,6 @@
 "fNE" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 6
-	},
-/obj/structure/closet{
-	pixel_x = 32
 	},
 /obj/structure/table/steel,
 /obj/machinery/cell_charger,
@@ -19188,7 +20757,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
-/obj/machinery/porta_turret/ai_defense,
+/obj/machinery/porta_turret/heavy,
 /turf/simulated/floor/tiled/dark,
 /area/vr/bloodstar)
 "fUu" = (
@@ -19218,6 +20787,7 @@
 /obj/effect/floor_decal/corner/lightorange/full{
 	dir = 4
 	},
+/obj/effect/floorbreak,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "fUA" = (
@@ -19323,6 +20893,7 @@
 	dir = 6
 	},
 /obj/structure/reagent_dispensers/fueltank/barrel/two,
+/obj/effect/floorbreak,
 /turf/simulated/floor/tiled/dark,
 /area/vr/bloodstar)
 "fVR" = (
@@ -19387,6 +20958,9 @@
 	opacity = 0;
 	dir = 8
 	},
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
 /turf/simulated/floor,
 /area/vr/bloodstar)
 "fWE" = (
@@ -19448,11 +21022,15 @@
 /obj/item/gun/projectile/automatic/serdy/mp5,
 /obj/item/ammo_magazine/mp5mag,
 /obj/item/ammo_magazine/mp5mag,
-/obj/effect/landmark/corpse/security,
+/obj/random/humanoidremains,
+/obj/item/ammo_casing/spent,
+/obj/item/ammo_casing/spent,
+/obj/item/ammo_casing/spent,
+/obj/item/ammo_casing/spent,
 /turf/simulated/floor/tiled/white,
 /area/vr/bloodstar)
 "fXd" = (
-/obj/machinery/porta_turret/ai_defense,
+/obj/machinery/porta_turret/heavy,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/vr/bloodstar)
 "fXp" = (
@@ -20195,7 +21773,7 @@
 	},
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/industrial/danger,
-/obj/effect/landmark/corpse/random_civ,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "gld" = (
@@ -20735,6 +22313,9 @@
 	},
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/blocker,
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
 /turf/simulated/floor/plating,
 /area/vr/bloodstar)
 "guA" = (
@@ -20923,8 +22504,7 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/glass{
-	name = "Garden";
-	req_access = list(28)
+	name = "Garden"
 	},
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled/white,
@@ -21266,6 +22846,9 @@
 	name = "Atmospherics Lockdown";
 	opacity = 0;
 	dir = 8
+	},
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
 	},
 /turf/simulated/floor,
 /area/vr/bloodstar)
@@ -21626,7 +23209,7 @@
 /area/vr/bloodstar)
 "gHI" = (
 /obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/corpse/random_civ,
+/obj/random/humanoidremains,
 /obj/effect/floorbreak,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
@@ -21678,6 +23261,7 @@
 	},
 /obj/effect/decal/cleanable/blood,
 /obj/random/ammo_all,
+/obj/effect/floorbreak,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "gID" = (
@@ -21808,7 +23392,7 @@
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/blue/border,
 /obj/structure/bed/roller,
-/obj/effect/landmark/corpse/engineer,
+/obj/random/humanoidremains,
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/tiled/white,
 /area/vr/bloodstar)
@@ -22038,14 +23622,6 @@
 	},
 /obj/effect/floorbreak,
 /turf/simulated/floor/tiled/white,
-/area/vr/bloodstar)
-"gPx" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 8
-	},
-/obj/machinery/door/firedoor/border_only,
-/obj/effect/landmark/corpse/random_civ,
-/turf/simulated/floor/tiled/steel_grid,
 /area/vr/bloodstar)
 "gPL" = (
 /obj/effect/floor_decal/borderfloor{
@@ -22392,6 +23968,9 @@
 	opacity = 0;
 	dir = 8
 	},
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
 /turf/simulated/floor,
 /area/vr/bloodstar)
 "gUJ" = (
@@ -22736,6 +24315,7 @@
 	dir = 10
 	},
 /obj/item/material/shard,
+/obj/effect/floorbreak,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "gYV" = (
@@ -22748,11 +24328,6 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/vr/bloodstar)
-"gZa" = (
-/obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/corpse/random_civ,
-/turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "gZe" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
@@ -23153,7 +24728,7 @@
 	dir = 4
 	},
 /obj/structure/bed/roller,
-/obj/effect/landmark/corpse/security,
+/obj/random/humanoidremains,
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/tiled/white,
 /area/vr/bloodstar)
@@ -23178,7 +24753,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 4
 	},
-/obj/effect/landmark/mobcorpse/russian,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "hhD" = (
@@ -23232,7 +24807,7 @@
 "hif" = (
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
-/obj/effect/landmark/corpse/security,
+/obj/random/humanoidremains,
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/tiled/white,
 /area/vr/bloodstar)
@@ -23667,8 +25242,21 @@
 	},
 /obj/item/ammo_magazine/cell_mag/medical/advanced,
 /obj/item/ammo_magazine/cell_mag/medical/advanced,
-/obj/item/ammo_magazine/cell_mag/medical/advanced,
-/obj/item/ammo_magazine/cell_mag/medical/advanced,
+/obj/item/ammo_casing/microbattery/medical/omni3,
+/obj/item/ammo_casing/microbattery/medical/omni3,
+/obj/item/ammo_casing/microbattery/medical/omni3,
+/obj/item/ammo_casing/microbattery/medical/omni3,
+/obj/item/ammo_casing/microbattery/medical/omni3,
+/obj/item/ammo_casing/microbattery/medical/omni3,
+/obj/item/ammo_casing/microbattery/medical/omni3,
+/obj/item/ammo_casing/microbattery/medical/omni3,
+/obj/item/ammo_casing/microbattery/medical/omni3,
+/obj/item/ammo_casing/microbattery/medical/omni3,
+/obj/item/ammo_casing/microbattery/medical/omni3,
+/obj/item/ammo_casing/microbattery/medical/omni3,
+/obj/item/ammo_casing/microbattery/medical/omni3,
+/obj/item/ammo_casing/microbattery/medical/omni3,
+/obj/item/ammo_casing/microbattery/medical/omni3,
 /obj/item/gun/projectile/cell_loaded/medical/cmo,
 /turf/simulated/floor/tiled/white,
 /area/vr/bloodstar)
@@ -24014,6 +25602,9 @@
 /obj/structure/window/reinforced,
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/blocker,
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
 /turf/simulated/floor/plating,
 /area/vr/bloodstar)
 "hvA" = (
@@ -24141,6 +25732,9 @@
 	name = "Atmospherics Lockdown";
 	opacity = 0;
 	dir = 8
+	},
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
 	},
 /turf/simulated/floor,
 /area/vr/bloodstar)
@@ -24567,7 +26161,7 @@
 /obj/item/gun/projectile/serdy_pistols/tp23s,
 /obj/item/ammo_magazine/tp23s,
 /obj/item/ammo_magazine/tp23s,
-/obj/effect/landmark/corpse/doctor,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "hEl" = (
@@ -24754,7 +26348,7 @@
 	},
 /obj/effect/decal/cleanable/blood,
 /obj/item/melee/energy/sword/pirate,
-/obj/effect/landmark/corpse/syndicatecommando,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "hGQ" = (
@@ -25249,7 +26843,7 @@
 /obj/effect/floor_decal/corner/red/border{
 	dir = 4
 	},
-/obj/effect/landmark/corpse/vintage/marine,
+/obj/random/humanoidremains,
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
@@ -25261,6 +26855,9 @@
 	locked = 1;
 	name = "Public External Airlock";
 	req_one_access = null
+	},
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/vr/bloodstar)
@@ -25676,6 +27273,9 @@
 	req_one_access = null
 	},
 /obj/machinery/door/firedoor/glass,
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/vr/bloodstar)
 "hVg" = (
@@ -25738,6 +27338,9 @@
 	name = "Dock"
 	},
 /obj/machinery/door/firedoor/border_only,
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/vr/bloodstar)
 "hWe" = (
@@ -25871,7 +27474,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/effect/landmark/corpse/doctor,
+/obj/random/humanoidremains,
 /obj/item/material/shard,
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/tiled/white,
@@ -26004,14 +27607,6 @@
 /obj/random/grenade/box,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
-"ibp" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/effect/decal/cleanable/blood,
-/turf/simulated/floor/tiled,
-/area/vr/bloodstar/spacebase)
 "ibw" = (
 /obj/structure/table/standard,
 /obj/random/tech_supply,
@@ -26111,7 +27706,7 @@
 /turf/simulated/floor/plating,
 /area/vr/bloodstar)
 "icy" = (
-/obj/effect/landmark/mobcorpse/russian/ranged,
+/obj/random/humanoidremains,
 /turf/simulated/floor,
 /area/vr/bloodstar)
 "icI" = (
@@ -26162,6 +27757,7 @@
 	},
 /obj/item/material/barbedwire/start_active,
 /obj/effect/decal/cleanable/blood,
+/obj/effect/floorbreak,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar/spacebase)
 "idm" = (
@@ -26453,6 +28049,7 @@
 	dir = 8
 	},
 /obj/structure/disposalpipe/segment,
+/obj/effect/floorbreak,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "iht" = (
@@ -26488,7 +28085,7 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/mobcorpse/russian/ranged,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "iiL" = (
@@ -26879,7 +28476,7 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/corpse/random_civ,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "ipn" = (
@@ -26894,7 +28491,7 @@
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
 	dir = 4
 	},
-/obj/effect/landmark/corpse/vintage/engineering,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "ipH" = (
@@ -26965,7 +28562,7 @@
 "iqD" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/corpse/random_civ,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar/spacebase)
 "iqL" = (
@@ -26997,6 +28594,8 @@
 /obj/effect/floor_decal/corner/lightgrey/bordercorner{
 	dir = 4
 	},
+/obj/effect/floorbreak,
+/obj/effect/decal/cleanable/blood/oil,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "iqX" = (
@@ -27114,7 +28713,7 @@
 "irW" = (
 /obj/machinery/door/airlock/medical{
 	name = "Operating Theatre 1";
-	req_access = list(45)
+	req_one_access = null
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -27469,9 +29068,7 @@
 /turf/simulated/floor/wmarble,
 /area/vr/lighting)
 "iyg" = (
-/obj/structure/closet/secure_closet/hos{
-	req_access = null
-	},
+/obj/structure/closet/secure_closet/hos,
 /turf/simulated/floor/tiled/dark,
 /area/vr/bloodstar)
 "iyj" = (
@@ -27800,6 +29397,9 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/structure/window/reinforced,
 /obj/effect/blocker,
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
 /turf/simulated/floor/plating,
 /area/vr/bloodstar)
 "iFg" = (
@@ -27841,7 +29441,7 @@
 	dir = 4
 	},
 /obj/random/energy/highend,
-/obj/effect/landmark/corpse/scientist,
+/obj/random/humanoidremains,
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/floor,
 /area/vr/bloodstar)
@@ -28046,6 +29646,9 @@
 	dir = 8
 	},
 /obj/effect/blocker,
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
 /turf/simulated/floor/plating,
 /area/vr/bloodstar)
 "iJb" = (
@@ -28259,7 +29862,7 @@
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar/spacebase)
 "iMF" = (
-/obj/machinery/porta_turret/ai_defense,
+/obj/machinery/porta_turret/heavy,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "iMT" = (
@@ -28284,6 +29887,7 @@
 "iNo" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/hologram/holopad,
+/obj/effect/floorbreak,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "iNp" = (
@@ -28700,7 +30304,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/obj/effect/landmark/corpse/security/rig/eva,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "iTr" = (
@@ -29496,6 +31100,7 @@
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 1
 	},
+/obj/effect/floorbreak,
 /turf/simulated/floor/tiled/dark,
 /area/vr/bloodstar)
 "jdF" = (
@@ -30134,7 +31739,7 @@
 /obj/effect/floor_decal/corner/red/border{
 	dir = 4
 	},
-/obj/effect/landmark/corpse/syndicatecommando,
+/obj/random/humanoidremains,
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
@@ -30234,7 +31839,7 @@
 	dir = 6
 	},
 /obj/structure/disposalpipe/segment,
-/obj/effect/landmark/corpse/doctor,
+/obj/random/humanoidremains,
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/tiled/white,
 /area/vr/bloodstar)
@@ -30281,7 +31886,7 @@
 	},
 /obj/effect/decal/cleanable/blood,
 /obj/random/projectile/random,
-/obj/effect/landmark/corpse/random_civ,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "jqC" = (
@@ -30437,7 +32042,7 @@
 	dir = 1
 	},
 /obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/corpse/random_civ,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "jtj" = (
@@ -30731,11 +32336,12 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/vr/bloodstar)
 "jwT" = (
-/obj/machinery/door/airlock/glass_engineering{
-	name = "Engineering Hallway"
-	},
 /obj/structure/disposalpipe/segment,
 /obj/machinery/door/firedoor/border_only,
+/obj/machinery/door/airlock/glass_engineering{
+	name = "Engineering Hallway";
+	req_one_access = null
+	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/vr/bloodstar)
 "jxd" = (
@@ -30938,7 +32544,7 @@
 /area/vr/bloodstar)
 "jAv" = (
 /obj/effect/decal/cleanable/blood,
-/obj/machinery/porta_turret/ai_defense,
+/obj/machinery/porta_turret/heavy,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "jAH" = (
@@ -31118,6 +32724,9 @@
 	locked = 1;
 	name = "Large Escape Pod 2"
 	},
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/vr/bloodstar)
 "jCw" = (
@@ -31166,16 +32775,6 @@
 "jDp" = (
 /obj/machinery/door/firedoor/border_only,
 /turf/simulated/floor/tiled/steel_grid,
-/area/vr/bloodstar)
-"jDs" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/effect/landmark/corpse/syndicatesoldier,
-/turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "jDw" = (
 /obj/structure/disposalpipe/segment,
@@ -31285,6 +32884,9 @@
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/firedoor/glass,
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/vr/bloodstar)
 "jFk" = (
@@ -31543,7 +33145,7 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 4
 	},
-/obj/effect/landmark/corpse/random_civ,
+/obj/random/humanoidremains,
 /turf/simulated/floor/wood,
 /area/vr/bloodstar)
 "jHv" = (
@@ -31593,6 +33195,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/effect/floorbreak,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "jHU" = (
@@ -31610,7 +33213,7 @@
 /area/vr/bloodstar)
 "jIu" = (
 /obj/structure/bed/roller,
-/obj/effect/landmark/corpse/random_civ,
+/obj/random/humanoidremains,
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/tiled/white,
 /area/vr/bloodstar)
@@ -31729,7 +33332,8 @@
 "jJu" = (
 /obj/item/material/barbedwire/start_active,
 /obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/corpse/random_civ,
+/obj/random/humanoidremains,
+/obj/effect/floorbreak,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar/spacebase)
 "jJz" = (
@@ -31890,9 +33494,6 @@
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "jLP" = (
-/obj/structure/closet{
-	pixel_y = 32
-	},
 /obj/structure/table/reinforced,
 /obj/effect/floor_decal/corner/white/full{
 	dir = 1
@@ -32130,6 +33731,9 @@
 	name = "Dock"
 	},
 /obj/effect/decal/cleanable/blood,
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/vr/bloodstar)
 "jQI" = (
@@ -32805,6 +34409,9 @@
 	},
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/blocker,
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
 /turf/simulated/floor/plating,
 /area/vr/bloodstar)
 "kbl" = (
@@ -33391,6 +34998,9 @@
 	},
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/blocker,
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
 /turf/simulated/floor/plating,
 /area/vr/bloodstar)
 "kkF" = (
@@ -33767,7 +35377,7 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
 	},
-/obj/effect/landmark/mobcorpse/russian/ranged,
+/obj/random/humanoidremains,
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/wood,
 /area/vr/bloodstar)
@@ -33885,6 +35495,9 @@
 	name = "Atmospherics Lockdown";
 	opacity = 0;
 	dir = 8
+	},
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
 	},
 /turf/simulated/floor,
 /area/vr/bloodstar)
@@ -34084,6 +35697,9 @@
 	dir = 6
 	},
 /obj/effect/blocker,
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
 /turf/simulated/floor/plating,
 /area/vr/bloodstar)
 "kvq" = (
@@ -34149,7 +35765,7 @@
 	},
 /obj/structure/bed/padded,
 /obj/effect/floor_decal/corner/red/full,
-/obj/effect/landmark/corpse/prisoner,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "kwd" = (
@@ -34523,7 +36139,7 @@
 	dir = 1
 	},
 /obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/corpse/random_civ,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "kAS" = (
@@ -34933,8 +36549,9 @@
 /obj/structure/bed/chair/office/light{
 	dir = 8
 	},
-/obj/effect/landmark/corpse/doctor,
+/obj/random/humanoidremains,
 /obj/effect/decal/cleanable/blood,
+/obj/effect/floorbreak,
 /turf/simulated/floor/tiled/white,
 /area/vr/bloodstar)
 "kGy" = (
@@ -35571,7 +37188,7 @@
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/industrial/danger,
 /obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/corpse/random_civ,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "kSy" = (
@@ -36212,13 +37829,11 @@
 /turf/simulated/floor/water/acidic/deep/indoor,
 /area/vr/requirespower)
 "lcX" = (
-/obj/structure/closet/secure_closet/warden{
-	req_access = null
-	},
 /obj/effect/floor_decal/corner/red{
 	dir = 10
 	},
 /obj/effect/floor_decal/industrial/outline/grey,
+/obj/structure/closet/secure_closet,
 /turf/simulated/floor/tiled/dark,
 /area/vr/bloodstar)
 "ldg" = (
@@ -36265,6 +37880,8 @@
 	dir = 1;
 	icon_state = "pipe-j2"
 	},
+/obj/effect/floorbreak,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "lek" = (
@@ -36311,7 +37928,7 @@
 /area/vr/bloodstar)
 "leC" = (
 /obj/structure/disposalpipe/segment,
-/obj/effect/landmark/corpse/random_civ,
+/obj/random/humanoidremains,
 /turf/simulated/floor/wood/broken,
 /area/vr/bloodstar)
 "leE" = (
@@ -36718,6 +38335,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
 	},
+/obj/effect/floorbreak,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "lkm" = (
@@ -36823,7 +38441,7 @@
 "llZ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/effect/landmark/mobcorpse/russian,
+/obj/random/humanoidremains,
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/wood,
 /area/vr/bloodstar)
@@ -37020,7 +38638,7 @@
 /turf/simulated/floor/wood,
 /area/vr/bloodstar)
 "lqi" = (
-/obj/effect/landmark/corpse/scientist,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled/white,
 /area/vr/bloodstar)
 "lql" = (
@@ -37356,6 +38974,7 @@
 /obj/machinery/hologram/holopad,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/effect/floorbreak,
 /turf/simulated/floor/tiled/dark,
 /area/vr/bloodstar)
 "luC" = (
@@ -37726,7 +39345,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/black{
 	dir = 4
 	},
-/obj/effect/landmark/corpse/doctor,
+/obj/random/humanoidremains,
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/tiled/white,
 /area/vr/bloodstar)
@@ -37962,6 +39581,7 @@
 /obj/effect/floor_decal/spline/fancy/wood/corner{
 	dir = 1
 	},
+/obj/effect/floorbreak,
 /turf/simulated/floor/wood,
 /area/vr/bloodstar)
 "lCb" = (
@@ -38879,7 +40499,6 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "lUh" = (
@@ -38977,7 +40596,7 @@
 	dir = 1
 	},
 /obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/corpse/scientist,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled/white,
 /area/vr/bloodstar)
 "lWt" = (
@@ -39058,6 +40677,8 @@
 /obj/effect/floor_decal/corner/lightgrey/bordercorner{
 	dir = 8
 	},
+/obj/effect/decal/cleanable/blood/oil,
+/obj/effect/floorbreak,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "lXI" = (
@@ -39313,7 +40934,7 @@
 /obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/borderfloor/corner,
 /obj/effect/floor_decal/corner/lightorange/bordercorner,
-/obj/effect/landmark/mobcorpse/russian/ranged,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "mdo" = (
@@ -39402,6 +41023,7 @@
 	dir = 1;
 	icon_state = "pipe-c"
 	},
+/obj/effect/floorbreak,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "mfm" = (
@@ -39852,7 +41474,7 @@
 /area/vr/bloodstar)
 "mom" = (
 /obj/structure/bed/roller,
-/obj/effect/landmark/corpse/engineer,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled/white,
 /area/vr/bloodstar)
 "moy" = (
@@ -39980,7 +41602,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/corpse/scientist,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled/white,
 /area/vr/bloodstar)
 "mrr" = (
@@ -40027,6 +41649,7 @@
 /obj/effect/floor_decal/corner/lightgrey/bordercorner{
 	dir = 8
 	},
+/obj/effect/floorbreak,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "mrw" = (
@@ -40480,7 +42103,7 @@
 "myn" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/yellow,
 /obj/machinery/meter,
-/obj/effect/landmark/mobcorpse/altevian,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "myp" = (
@@ -40671,12 +42294,13 @@
 	},
 /obj/effect/decal/cleanable/blood,
 /obj/random/ammo_all,
+/obj/effect/floorbreak,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "mAz" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/effect/landmark/corpse/random_civ,
+/obj/random/humanoidremains,
 /obj/random/cash/big,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar/spacebase)
@@ -40830,6 +42454,7 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/blood,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "mEv" = (
@@ -41347,6 +42972,7 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/blood,
+/obj/effect/floorbreak,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "mMS" = (
@@ -41507,6 +43133,9 @@
 	icon_state = "door_locked";
 	locked = 1;
 	name = "Cargo Docking Hatch"
+	},
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/vr/bloodstar)
@@ -41677,6 +43306,9 @@
 	icon_state = "door_locked";
 	locked = 1;
 	name = "Public External Airlock"
+	},
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/vr/bloodstar)
@@ -42708,15 +44340,6 @@
 	},
 /turf/simulated/floor/wmarble,
 /area/vr/lighting)
-"nfy" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 4
-	},
-/obj/machinery/porta_turret/ai_defense,
-/turf/simulated/floor/tiled,
-/area/vr/bloodstar/spacebase)
 "nfz" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 1
@@ -42769,6 +44392,9 @@
 	name = "Atmospherics Lockdown";
 	opacity = 0;
 	dir = 8
+	},
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
 	},
 /turf/simulated/floor,
 /area/vr/bloodstar)
@@ -42978,7 +44604,7 @@
 	dir = 8
 	},
 /obj/structure/bed/roller,
-/obj/effect/landmark/corpse/random_civ,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled/white,
 /area/vr/bloodstar)
 "njn" = (
@@ -43413,6 +45039,9 @@
 	},
 /obj/structure/window/reinforced,
 /obj/effect/blocker,
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
 /turf/simulated/floor/plating,
 /area/vr/bloodstar)
 "npL" = (
@@ -43580,6 +45209,7 @@
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 4
 	},
+/obj/effect/decal/cleanable/blood/oil,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "nrw" = (
@@ -43666,6 +45296,7 @@
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 6
 	},
+/obj/effect/floorbreak,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "ntb" = (
@@ -43741,6 +45372,7 @@
 /obj/effect/floor_decal/corner/lightgrey/bordercorner{
 	dir = 4
 	},
+/obj/effect/floorbreak,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "nuz" = (
@@ -44116,6 +45748,7 @@
 /obj/effect/floor_decal/corner/lightgrey/bordercorner{
 	dir = 8
 	},
+/obj/effect/floorbreak,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "nBy" = (
@@ -44299,6 +45932,9 @@
 	req_one_access = null
 	},
 /obj/machinery/door/firedoor/glass,
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/vr/bloodstar)
 "nDN" = (
@@ -45002,6 +46638,9 @@
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/firedoor/glass,
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/vr/bloodstar)
 "nNj" = (
@@ -45094,6 +46733,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
 	},
+/obj/effect/floorbreak,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "nOI" = (
@@ -45252,7 +46892,7 @@
 /obj/effect/floor_decal/corner/lightgrey/bordercorner{
 	dir = 1
 	},
-/obj/effect/landmark/corpse/random_civ,
+/obj/random/humanoidremains,
 /obj/random/cash/big,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
@@ -45336,7 +46976,7 @@
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/blue/border,
 /obj/structure/bed/roller,
-/obj/effect/landmark/corpse/engineer,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled/white,
 /area/vr/bloodstar)
 "nSA" = (
@@ -45623,6 +47263,7 @@
 /obj/random/ammo_all,
 /obj/random/ammo_all,
 /obj/random/ammo_all,
+/obj/random/ammo_all,
 /turf/simulated/floor/tiled/white,
 /area/vr/bloodstar)
 "nWh" = (
@@ -45860,7 +47501,7 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/vr/bloodstar)
 "oco" = (
-/obj/machinery/porta_turret/ai_defense,
+/obj/machinery/porta_turret/heavy,
 /turf/simulated/floor/bluegrid,
 /area/vr/bloodstar)
 "oct" = (
@@ -45940,7 +47581,7 @@
 /area/vr/bloodstar)
 "ofe" = (
 /obj/structure/bed/padded,
-/obj/effect/landmark/corpse/prisoner,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "ofs" = (
@@ -45963,7 +47604,7 @@
 /obj/effect/floor_decal/corner/blue{
 	dir = 6
 	},
-/obj/effect/landmark/corpse/syndicatesoldier,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "ofG" = (
@@ -46487,6 +48128,9 @@
 	req_one_access = null
 	},
 /obj/machinery/door/firedoor/glass,
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/vr/bloodstar)
 "omG" = (
@@ -46529,6 +48173,9 @@
 	dir = 8
 	},
 /obj/effect/blocker,
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
 /turf/simulated/floor/plating,
 /area/vr/bloodstar)
 "onU" = (
@@ -46610,7 +48257,7 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/corpse/random_civ,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled/steel_grid,
 /area/vr/bloodstar)
 "ooO" = (
@@ -46635,7 +48282,7 @@
 	dir = 4
 	},
 /obj/item/material/shard,
-/obj/effect/landmark/corpse/miner/rig,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "opr" = (
@@ -46656,6 +48303,9 @@
 /obj/machinery/atmospherics/pipe/simple/visible,
 /obj/machinery/door/airlock/maintenance/engi{
 	req_one_access = null
+	},
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/vr/bloodstar)
@@ -46963,7 +48613,7 @@
 	dir = 5
 	},
 /obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/corpse/engineer,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "otA" = (
@@ -47047,6 +48697,7 @@
 /obj/effect/decal/cleanable/blood/oil/streak{
 	amount = 0
 	},
+/obj/effect/floorbreak,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "ouy" = (
@@ -47490,7 +49141,7 @@
 "oDl" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/effect/landmark/corpse/doctor,
+/obj/random/humanoidremains,
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/tiled/white,
 /area/vr/bloodstar)
@@ -47785,10 +49436,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
-"oHi" = (
-/obj/effect/landmark/corpse/vintage/engineering,
-/turf/simulated/floor/tiled,
-/area/vr/bloodstar)
 "oHo" = (
 /obj/machinery/light{
 	dir = 1
@@ -47808,7 +49455,7 @@
 	dir = 2;
 	icon_state = "pipe-c"
 	},
-/obj/effect/landmark/mobcorpse/russian,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "oHJ" = (
@@ -48086,7 +49733,7 @@
 	dir = 8
 	},
 /obj/structure/bed/roller,
-/obj/effect/landmark/corpse/random_civ,
+/obj/random/humanoidremains,
 /turf/simulated/floor/wood,
 /area/vr/bloodstar)
 "oNi" = (
@@ -48431,7 +50078,8 @@
 /area/vr/bloodstar)
 "oUp" = (
 /obj/machinery/door/firedoor/glass,
-/obj/effect/landmark/corpse/random_civ,
+/obj/random/humanoidremains,
+/obj/effect/floorbreak,
 /turf/simulated/floor/tiled/steel_grid,
 /area/vr/bloodstar)
 "oUu" = (
@@ -48717,6 +50365,7 @@
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 1
 	},
+/obj/effect/floorbreak,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "oYY" = (
@@ -48858,6 +50507,7 @@
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 1
 	},
+/obj/effect/floorbreak,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "paB" = (
@@ -48921,6 +50571,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/effect/floor_decal/borderfloor/corner,
 /obj/effect/floor_decal/corner/lightgrey/bordercorner,
+/obj/effect/floorbreak,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "pbp" = (
@@ -49006,7 +50657,7 @@
 /area/vr/bloodstar)
 "pdl" = (
 /obj/item/material/knife/machete,
-/obj/effect/landmark/corpse/prisoner,
+/obj/random/humanoidremains,
 /turf/simulated/floor,
 /area/vr/bloodstar)
 "pdp" = (
@@ -49207,6 +50858,9 @@
 /obj/structure/window/reinforced,
 /obj/structure/grille,
 /obj/machinery/door/firedoor/border_only,
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
 /turf/simulated/floor/plating,
 /area/vr/bloodstar)
 "pha" = (
@@ -49219,7 +50873,7 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/industrial/stand_clear/red,
-/obj/effect/landmark/corpse/syndicatecommando,
+/obj/random/humanoidremains,
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/vr/bloodstar)
@@ -49720,6 +51374,9 @@
 	name = "Chapel Maintenance EVA Internal Access"
 	},
 /obj/machinery/door/firedoor/glass,
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/vr/bloodstar)
 "ppH" = (
@@ -49731,7 +51388,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/effect/floorbreak,
-/obj/effect/landmark/corpse/scientist,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "ppP" = (
@@ -49871,6 +51528,7 @@
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 6
 	},
+/obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/tiled/dark,
 /area/vr/bloodstar)
 "prI" = (
@@ -50627,6 +52285,9 @@
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/firedoor/glass,
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/vr/bloodstar)
 "pDm" = (
@@ -50684,6 +52345,9 @@
 	},
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/blocker,
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
 /turf/simulated/floor/plating,
 /area/vr/bloodstar)
 "pDD" = (
@@ -50957,10 +52621,6 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/vr/bloodstar)
 "pIa" = (
-/obj/machinery/door/airlock/medical{
-	name = "Operating Theatre 2";
-	req_access = list(45)
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
@@ -50968,6 +52628,10 @@
 	dir = 4
 	},
 /obj/machinery/door/firedoor/border_only,
+/obj/machinery/door/airlock/medical{
+	name = "Operating Theatre 2";
+	req_one_access = null
+	},
 /turf/simulated/floor/tiled/white,
 /area/vr/bloodstar)
 "pIb" = (
@@ -51237,6 +52901,9 @@
 	name = "Atmospherics Lockdown";
 	opacity = 0
 	},
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
 /turf/simulated/floor,
 /area/vr/bloodstar)
 "pLh" = (
@@ -51398,6 +53065,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/effect/floorbreak,
 /turf/simulated/floor/tiled/dark,
 /area/vr/bloodstar)
 "pNv" = (
@@ -52135,6 +53803,9 @@
 	dir = 9
 	},
 /obj/effect/blocker,
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
 /turf/simulated/floor/plating,
 /area/vr/bloodstar)
 "qah" = (
@@ -52776,6 +54447,8 @@
 	dir = 6
 	},
 /obj/effect/decal/cleanable/blood,
+/obj/item/ammo_casing/spent,
+/obj/item/ammo_casing/spent,
 /turf/simulated/floor/tiled/white,
 /area/vr/bloodstar)
 "qlD" = (
@@ -53157,7 +54830,8 @@
 /area/vr/bloodstar)
 "qsL" = (
 /obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/corpse/engineer,
+/obj/random/humanoidremains,
+/obj/effect/floorbreak,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar/spacebase)
 "qsQ" = (
@@ -53227,7 +54901,7 @@
 /obj/effect/floor_decal/borderfloor/corner,
 /obj/effect/floor_decal/corner/lightorange/bordercorner,
 /obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/corpse/syndicatesoldier,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "qtv" = (
@@ -53326,6 +55000,7 @@
 	name = "Construction Area"
 	},
 /obj/machinery/door/firedoor/glass,
+/obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/tiled/steel_grid,
 /area/vr/bloodstar)
 "quE" = (
@@ -53404,6 +55079,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
+/obj/effect/decal/cleanable/blood/oil,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "qvG" = (
@@ -53506,13 +55182,6 @@
 "qxp" = (
 /obj/machinery/air_sensor,
 /turf/simulated/floor/reinforced/carbon_dioxide,
-/area/vr/bloodstar)
-"qxv" = (
-/obj/effect/floor_decal/borderfloor/corner,
-/obj/effect/floor_decal/corner/purple/bordercorner,
-/obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/corpse/miner/rig,
-/turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "qxB" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -53632,6 +55301,9 @@
 	opacity = 0;
 	dir = 4
 	},
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
 /turf/simulated/floor/plating,
 /area/vr/bloodstar)
 "qzA" = (
@@ -53688,6 +55360,7 @@
 	dir = 10
 	},
 /obj/structure/disposalpipe/segment,
+/obj/effect/decal/cleanable/blood/oil,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "qAw" = (
@@ -54378,7 +56051,7 @@
 /obj/structure/morgue{
 	dir = 8
 	},
-/obj/effect/landmark/corpse/syndicatesoldier,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "qOX" = (
@@ -54616,7 +56289,7 @@
 /obj/machinery/door/firedoor/glass,
 /obj/effect/decal/cleanable/blood,
 /obj/random/projectile/random,
-/obj/effect/landmark/corpse/random_civ,
+/obj/random/humanoidremains,
 /obj/effect/floorbreak,
 /turf/simulated/floor/tiled/steel_grid,
 /area/vr/bloodstar)
@@ -55061,6 +56734,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/door/airlock/glass{
 	name = "Dock"
+	},
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/vr/bloodstar)
@@ -55714,6 +57390,9 @@
 	},
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/blocker,
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
 /turf/simulated/floor/plating,
 /area/vr/bloodstar)
 "rnL" = (
@@ -55825,6 +57504,9 @@
 	dir = 8
 	},
 /obj/structure/grille/broken,
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
 /turf/simulated/floor,
 /area/vr/bloodstar)
 "rpB" = (
@@ -56418,6 +58100,9 @@
 	locked = 1;
 	name = "Public External Airlock"
 	},
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/vr/bloodstar)
 "rAc" = (
@@ -56463,11 +58148,6 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
-/area/vr/bloodstar)
-"rAH" = (
-/obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/corpse/scientist,
-/turf/simulated/floor/tiled/hydro,
 /area/vr/bloodstar)
 "rAK" = (
 /obj/machinery/light{
@@ -56850,6 +58530,7 @@
 /obj/machinery/ai_slipper{
 	icon_state = "motion0"
 	},
+/obj/effect/floorbreak,
 /turf/simulated/floor/tiled/dark,
 /area/vr/bloodstar)
 "rIl" = (
@@ -57208,7 +58889,7 @@
 	dir = 1
 	},
 /obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/mobcorpse/russian/ranged,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "rOA" = (
@@ -57257,7 +58938,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/corpse/random_civ,
+/obj/random/humanoidremains,
+/obj/effect/floorbreak,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar/spacebase)
 "rPR" = (
@@ -57907,7 +59589,7 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 4
 	},
-/obj/effect/landmark/corpse/random_civ,
+/obj/random/humanoidremains,
 /turf/simulated/floor/wood,
 /area/vr/bloodstar)
 "sdg" = (
@@ -58566,6 +60248,7 @@
 /obj/structure/bed/chair{
 	dir = 4
 	},
+/obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "snu" = (
@@ -58918,7 +60601,7 @@
 /area/vr/bloodstar)
 "srv" = (
 /obj/machinery/optable,
-/obj/effect/landmark/corpse/syndicatesoldier,
+/obj/random/humanoidremains,
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
@@ -59073,6 +60756,9 @@
 	locked = 1;
 	name = "Public External Airlock"
 	},
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/vr/bloodstar)
 "stF" = (
@@ -59216,7 +60902,7 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/mobcorpse/russian/ranged,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled/steel_grid,
 /area/vr/bloodstar)
 "swa" = (
@@ -59310,12 +60996,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar/spacebase)
-"sxF" = (
-/obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/corner/lightgrey/border,
-/obj/effect/landmark/corpse/security,
-/turf/simulated/floor/tiled,
-/area/vr/bloodstar)
 "syn" = (
 /obj/structure/table/darkglass,
 /obj/item/toy/tennis/purple,
@@ -59520,7 +61200,7 @@
 /obj/effect/floor_decal/industrial/danger{
 	dir = 1
 	},
-/obj/effect/landmark/corpse/random_civ,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "sBC" = (
@@ -59597,7 +61277,7 @@
 /obj/effect/floor_decal/corner/red/bordercorner{
 	dir = 8
 	},
-/obj/effect/landmark/corpse/vintage/marine,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "sDs" = (
@@ -59876,7 +61556,7 @@
 	dir = 9
 	},
 /obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/corpse/scientist,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled/white,
 /area/vr/bloodstar)
 "sHM" = (
@@ -60182,7 +61862,7 @@
 /area/vr/bloodstar)
 "sNc" = (
 /obj/structure/bed/chair,
-/obj/effect/landmark/corpse/prisoner,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "sNf" = (
@@ -60529,6 +62209,7 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/corner/lightgrey/bordercorner,
+/obj/effect/floorbreak,
 /turf/simulated/floor/tiled/dark,
 /area/vr/bloodstar)
 "sUq" = (
@@ -60553,7 +62234,7 @@
 "sUD" = (
 /obj/machinery/door/airlock/medical{
 	name = "Operating Theatre 2";
-	req_access = list(45)
+	req_one_access = null
 	},
 /obj/machinery/door/firedoor/border_only,
 /turf/simulated/floor/tiled/old_tile,
@@ -60675,7 +62356,7 @@
 	dir = 1
 	},
 /obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/corpse/random_civ,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "sWE" = (
@@ -60760,6 +62441,9 @@
 	},
 /obj/item/material/shard,
 /obj/structure/grille/broken,
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
 /turf/simulated/floor,
 /area/vr/bloodstar)
 "sXu" = (
@@ -60833,6 +62517,7 @@
 /obj/effect/floor_decal/corner/white/bordercorner{
 	dir = 4
 	},
+/obj/effect/floorbreak,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "sYl" = (
@@ -60978,7 +62663,7 @@
 /obj/item/gun/projectile/serdy_pistols/vp70m,
 /obj/item/ammo_magazine/m9mm,
 /obj/item/ammo_magazine/m9mm,
-/obj/effect/landmark/corpse/security,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled/white,
 /area/vr/bloodstar)
 "taQ" = (
@@ -61075,7 +62760,8 @@
 /obj/effect/floor_decal/corner/lightgrey/bordercorner{
 	dir = 1
 	},
-/obj/effect/landmark/corpse/security,
+/obj/random/humanoidremains,
+/obj/effect/floorbreak,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar/spacebase)
 "tbF" = (
@@ -61155,6 +62841,9 @@
 	},
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/blocker,
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
 /turf/simulated/floor/plating,
 /area/vr/bloodstar)
 "tcx" = (
@@ -61869,7 +63558,7 @@
 /obj/effect/floor_decal/corner/lightorange/bordercorner{
 	dir = 8
 	},
-/obj/effect/landmark/corpse/syndicatesoldier,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "toC" = (
@@ -62032,7 +63721,7 @@
 "trQ" = (
 /obj/effect/decal/cleanable/blood/oil,
 /obj/random/handgun,
-/obj/effect/landmark/corpse/random_civ,
+/obj/random/humanoidremains,
 /turf/simulated/floor,
 /area/vr/bloodstar)
 "trT" = (
@@ -62045,7 +63734,7 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
 	},
-/obj/effect/landmark/corpse/random_civ,
+/obj/random/humanoidremains,
 /turf/simulated/floor/wood,
 /area/vr/bloodstar)
 "tsp" = (
@@ -62061,7 +63750,7 @@
 /obj/structure/bed/chair/office/light{
 	dir = 1
 	},
-/obj/effect/landmark/corpse/doctor,
+/obj/random/humanoidremains,
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/tiled/white,
 /area/vr/bloodstar)
@@ -62299,6 +63988,9 @@
 	name = "Engineering Port Internal Access"
 	},
 /obj/machinery/door/firedoor/glass,
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/vr/bloodstar)
 "tvO" = (
@@ -62320,7 +64012,7 @@
 "twg" = (
 /obj/effect/decal/cleanable/blood,
 /obj/effect/floorbreak,
-/obj/effect/landmark/corpse/engineer,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "twl" = (
@@ -62328,7 +64020,7 @@
 	dir = 1
 	},
 /obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/corpse/random_civ,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "twm" = (
@@ -62364,6 +64056,9 @@
 	},
 /obj/structure/grille/broken,
 /obj/item/material/shard,
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
 /turf/simulated/floor/plating,
 /area/vr/bloodstar)
 "twA" = (
@@ -62527,7 +64222,7 @@
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "tzq" = (
-/obj/effect/landmark/corpse/doctor,
+/obj/random/humanoidremains,
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/tiled/white,
 /area/vr/bloodstar)
@@ -63211,6 +64906,7 @@
 	dir = 4
 	},
 /obj/structure/reagent_dispensers/fueltank/barrel/two,
+/obj/effect/floorbreak,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "tKd" = (
@@ -63300,6 +64996,7 @@
 /obj/effect/decal/cleanable/blood/oil/streak{
 	amount = 0
 	},
+/obj/effect/floorbreak,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "tLf" = (
@@ -63682,7 +65379,7 @@
 	dir = 6
 	},
 /obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/corpse/scientist,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled/white,
 /area/vr/bloodstar)
 "tTh" = (
@@ -63700,7 +65397,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/effect/landmark/corpse/miner,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "tTt" = (
@@ -63754,6 +65451,9 @@
 	name = "Escape Pod 5"
 	},
 /obj/machinery/door/firedoor/glass,
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/vr/bloodstar)
 "tTR" = (
@@ -63996,7 +65696,7 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/blue/full,
-/obj/effect/landmark/corpse/doctor,
+/obj/random/humanoidremains,
 /obj/item/material/shard,
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/tiled/white,
@@ -64422,7 +66122,7 @@
 /area/vr/bloodstar)
 "ucG" = (
 /obj/structure/morgue,
-/obj/effect/landmark/corpse/syndicatesoldier,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "ucH" = (
@@ -64506,7 +66206,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/effect/landmark/mobcorpse/russian/ranged,
+/obj/random/humanoidremains,
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/wood,
 /area/vr/bloodstar)
@@ -64901,7 +66601,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/corpse/random_civ,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "ujy" = (
@@ -65237,7 +66937,7 @@
 /obj/effect/floor_decal/industrial/warning,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/effect/landmark/corpse/random_civ,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled/steel_grid,
 /area/vr/bloodstar)
 "uph" = (
@@ -65250,6 +66950,7 @@
 /obj/random/ammo_all,
 /obj/random/ammo_all,
 /obj/random/projectile/random,
+/obj/effect/floorbreak,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "upt" = (
@@ -65403,6 +67104,8 @@
 /area/vr/bloodstar)
 "ush" = (
 /obj/structure/table/woodentable,
+/obj/random/ammo_all,
+/obj/random/ammo_all,
 /obj/random/ammo_all,
 /obj/random/ammo_all,
 /obj/random/ammo_all,
@@ -65718,7 +67421,8 @@
 /obj/effect/floor_decal/spline/fancy/wood/corner{
 	dir = 1
 	},
-/obj/effect/landmark/corpse/random_civ,
+/obj/random/humanoidremains,
+/obj/effect/floorbreak,
 /turf/simulated/floor/wood,
 /area/vr/bloodstar)
 "uwn" = (
@@ -66054,7 +67758,7 @@
 	dir = 4
 	},
 /obj/structure/bed/roller/adv,
-/obj/effect/landmark/corpse/random_civ,
+/obj/random/humanoidremains,
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
@@ -66109,7 +67813,7 @@
 /obj/effect/floor_decal/corner/lightgrey/bordercorner,
 /obj/effect/decal/cleanable/blood,
 /obj/item/material/butterfly/switchblade,
-/obj/effect/landmark/corpse/random_civ,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "uCQ" = (
@@ -66141,7 +67845,7 @@
 	dir = 10
 	},
 /obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/corpse/random_civ,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "uDB" = (
@@ -66576,7 +68280,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/effect/landmark/mobcorpse/russian/ranged,
+/obj/random/humanoidremains,
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
@@ -67022,6 +68726,9 @@
 /obj/structure/grille,
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/blocker,
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
 /turf/simulated/floor/plating,
 /area/vr/bloodstar)
 "uRt" = (
@@ -67203,7 +68910,7 @@
 /obj/effect/floor_decal/corner/lightgrey/bordercorner{
 	dir = 4
 	},
-/obj/effect/landmark/corpse/random_civ,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "uTZ" = (
@@ -67991,6 +69698,9 @@
 	name = "Atmospherics Lockdown";
 	opacity = 0
 	},
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
 /turf/simulated/floor,
 /area/vr/bloodstar)
 "vhr" = (
@@ -68236,7 +69946,7 @@
 "vln" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /obj/structure/bed/padded,
-/obj/effect/landmark/corpse/prisoner,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "vlw" = (
@@ -68303,9 +70013,7 @@
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar/spacebase)
 "vmE" = (
-/obj/structure/closet/secure_closet/quartermaster{
-	req_access = null
-	},
+/obj/structure/closet/secure_closet,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "vmG" = (
@@ -68648,6 +70356,7 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/blood,
+/obj/effect/floorbreak,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "vsd" = (
@@ -68677,6 +70386,9 @@
 	name = "Security Blast Door";
 	opacity = 0;
 	dir = 4
+	},
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
 	},
 /turf/simulated/floor/plating,
 /area/vr/bloodstar)
@@ -68765,14 +70477,14 @@
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "vtv" = (
-/obj/machinery/door/airlock/glass_mining{
-	name = "Cargo Bay";
-	req_access = list(31)
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/door/firedoor/glass,
 /obj/effect/decal/cleanable/blood,
+/obj/machinery/door/airlock/glass_mining{
+	name = "Cargo Bay";
+	req_one_access = null
+	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/vr/bloodstar)
 "vtw" = (
@@ -69046,7 +70758,7 @@
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "vxy" = (
-/obj/effect/landmark/corpse/vintage/marine,
+/obj/random/humanoidremains,
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/tiled/dark,
 /area/vr/bloodstar)
@@ -69093,6 +70805,7 @@
 	},
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/lightgrey/border,
+/obj/effect/floorbreak,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "vyA" = (
@@ -69155,6 +70868,9 @@
 	},
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/blocker,
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
 /turf/simulated/floor/plating,
 /area/vr/bloodstar)
 "vzy" = (
@@ -69266,13 +70982,13 @@
 /turf/simulated/floor,
 /area/vr/bloodstar)
 "vBz" = (
-/obj/structure/closet/secure_closet/engineering_chief{
-	req_access = null
-	},
 /obj/effect/floor_decal/corner/lightorange/full{
 	dir = 1
 	},
 /obj/random/projectile/shotgun,
+/obj/structure/closet/secure_closet/engineering_chief_wardrobe{
+	req_access = null
+	},
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "vBC" = (
@@ -69351,6 +71067,7 @@
 "vCT" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/blood/oil,
+/obj/effect/floorbreak,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "vDc" = (
@@ -69701,6 +71418,7 @@
 /obj/machinery/light/broken{
 	dir = 8
 	},
+/obj/effect/floorbreak,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "vJY" = (
@@ -70005,7 +71723,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 1
 	},
-/obj/effect/landmark/corpse/random_civ,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "vPc" = (
@@ -70053,8 +71771,7 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/glass{
-	name = "Kitchen";
-	req_access = list(28)
+	name = "Kitchen"
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -70246,7 +71963,7 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/mobcorpse/russian/ranged,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/vr/bloodstar)
 "vSt" = (
@@ -70677,11 +72394,6 @@
 /obj/effect/floor_decal/corner/lightgrey/bordercorner,
 /turf/simulated/floor/tiled/dark,
 /area/vr/bloodstar)
-"waK" = (
-/obj/structure/bed/roller,
-/obj/effect/landmark/corpse/random_civ,
-/turf/simulated/floor/tiled/white,
-/area/vr/bloodstar)
 "waV" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 2
@@ -70843,7 +72555,7 @@
 	dir = 1
 	},
 /obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/corpse/random_civ,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "wcW" = (
@@ -70891,10 +72603,6 @@
 /obj/machinery/optable,
 /obj/machinery/auto_doc,
 /turf/simulated/floor/tiled/white,
-/area/vr/bloodstar)
-"wdm" = (
-/obj/effect/landmark/corpse/miner,
-/turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "wdx" = (
 /obj/machinery/libraryscanner,
@@ -71055,6 +72763,7 @@
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 1
 	},
+/obj/effect/floorbreak,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "wfF" = (
@@ -71214,6 +72923,7 @@
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 8
 	},
+/obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "wiR" = (
@@ -71837,6 +73547,9 @@
 	},
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/blocker,
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
 /turf/simulated/floor/plating,
 /area/vr/bloodstar)
 "wsr" = (
@@ -72440,11 +74153,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
-"wAV" = (
-/obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/corpse/doctor,
-/turf/simulated/floor/tiled,
-/area/vr/bloodstar/spacebase)
 "wBa" = (
 /obj/machinery/hologram/holo_tutorial/intro_8,
 /turf/simulated/floor/wood/sif,
@@ -72768,6 +74476,9 @@
 /obj/structure/window/reinforced,
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/blocker,
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
 /turf/simulated/floor/plating,
 /area/vr/bloodstar)
 "wGv" = (
@@ -73055,6 +74766,9 @@
 	name = "Public External Airlock";
 	req_one_access = null
 	},
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/vr/bloodstar)
 "wLk" = (
@@ -73096,6 +74810,9 @@
 	},
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/blocker,
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
 /turf/simulated/floor/plating,
 /area/vr/bloodstar)
 "wLG" = (
@@ -73402,7 +75119,7 @@
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 8
 	},
-/obj/effect/landmark/corpse/random_civ,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar/spacebase)
 "wRq" = (
@@ -73432,7 +75149,7 @@
 	amount = 0
 	},
 /obj/structure/disposalpipe/segment,
-/obj/effect/landmark/corpse/engineer,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "wRT" = (
@@ -73895,7 +75612,7 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/corpse/random_civ,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "wZb" = (
@@ -74110,6 +75827,9 @@
 /obj/structure/window/reinforced,
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/blocker,
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
 /turf/simulated/floor/plating,
 /area/vr/bloodstar)
 "xbR" = (
@@ -74157,6 +75877,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/barricade,
+/obj/effect/floorbreak,
 /turf/simulated/floor/tiled/steel_grid,
 /area/vr/bloodstar)
 "xdk" = (
@@ -74167,7 +75888,7 @@
 /area/vr/bloodstar)
 "xdl" = (
 /obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/corpse/scientist,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled/white,
 /area/vr/bloodstar)
 "xdn" = (
@@ -74480,7 +76201,7 @@
 /obj/item/ammo_magazine/m762/ext,
 /obj/item/ammo_magazine/m762/ext,
 /obj/item/gun/projectile/automatic/bullpup,
-/obj/effect/landmark/corpse/security/rig/eva,
+/obj/random/humanoidremains,
 /turf/simulated/floor,
 /area/vr/bloodstar)
 "xiB" = (
@@ -74677,6 +76398,9 @@
 	req_one_access = null
 	},
 /obj/machinery/door/firedoor/glass,
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/vr/bloodstar)
 "xlW" = (
@@ -75054,7 +76778,7 @@
 /obj/effect/decal/cleanable/blood,
 /obj/random/ammo_all,
 /obj/item/material/knife/butch/dura,
-/obj/effect/landmark/corpse/chef,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "xst" = (
@@ -75095,7 +76819,7 @@
 	},
 /obj/effect/decal/cleanable/blood,
 /obj/random/humanoidremains,
-/obj/effect/landmark/corpse/security,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "xsQ" = (
@@ -75528,6 +77252,7 @@
 /obj/effect/floor_decal/corner/lightorange/bordercorner{
 	dir = 4
 	},
+/obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "xBq" = (
@@ -75550,7 +77275,7 @@
 	dir = 6
 	},
 /obj/random/projectile/sec,
-/obj/effect/landmark/corpse/security,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "xBz" = (
@@ -75598,6 +77323,7 @@
 	dir = 1
 	},
 /obj/effect/decal/cleanable/blood,
+/obj/effect/floorbreak,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "xCw" = (
@@ -75964,6 +77690,9 @@
 	opacity = 0;
 	dir = 8
 	},
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
 /turf/simulated/floor,
 /area/vr/bloodstar)
 "xIw" = (
@@ -76304,6 +78033,7 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/blood,
+/obj/effect/floorbreak,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar/spacebase)
 "xMZ" = (
@@ -76840,6 +78570,7 @@
 	dir = 8
 	},
 /obj/effect/decal/cleanable/blood,
+/obj/effect/floorbreak,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "xWz" = (
@@ -77251,6 +78982,9 @@
 	},
 /obj/machinery/door/firedoor/border_only,
 /obj/effect/blocker,
+/obj/structure/fans/hardlight/colorable{
+	color = "#A10808"
+	},
 /turf/simulated/floor/plating,
 /area/vr/bloodstar)
 "ydN" = (
@@ -77332,7 +79066,8 @@
 /area/vr/lighting)
 "yeH" = (
 /obj/machinery/door/airlock/glass_medical{
-	name = "Virology Laboratory"
+	name = "Virology Laboratory";
+	req_one_access = null
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -77351,7 +79086,7 @@
 /obj/item/ammo_magazine/s357,
 /obj/item/ammo_magazine/s357,
 /obj/item/gun/projectile/revolver/nova,
-/obj/effect/landmark/corpse/random_civ,
+/obj/random/humanoidremains,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "yeZ" = (
@@ -77796,6 +79531,7 @@
 /obj/effect/floor_decal/corner/orange{
 	dir = 6
 	},
+/obj/effect/floorbreak,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "ylr" = (
@@ -108636,17 +110372,17 @@ krp
 krp
 krp
 krp
-dJc
-bCE
-bCE
-bCE
-bCE
-bCE
-bCE
-bCE
-bCE
-bCE
-bCE
+xYq
+adq
+ado
+ado
+ado
+ado
+ado
+ado
+ado
+adk
+xYq
 bCE
 bCE
 bCE
@@ -108790,25 +110526,25 @@ ejh
 ejh
 oqg
 krp
-kyu
+adA
+adx
+adw
+adw
+adw
 cZM
-kyu
-kyu
-kyu
-cZM
-kyu
-krp
-dJc
-bCE
-bCE
-bCE
-bCE
-bCE
-bCE
-bCE
-bCE
-bCE
-bCE
+adw
+adv
+adu
+adr
+xYq
+xYq
+xYq
+xYq
+xYq
+xYq
+xYq
+adl
+xYq
 bCE
 bCE
 bCE
@@ -108952,25 +110688,25 @@ kyu
 kyu
 kyu
 krp
-kyu
-kyu
+adC
+ady
 kyu
 kyu
 kyu
 kyu
 kyu
 krp
-dJc
+xYq
+xYq
+xYq
 bCE
 bCE
 bCE
 bCE
 bCE
-bCE
-bCE
-bCE
-bCE
-bCE
+xYq
+adm
+xYq
 bCE
 bCE
 bCE
@@ -109130,9 +110866,9 @@ bCE
 bCE
 bCE
 bCE
-bCE
-bCE
-bCE
+xYq
+adn
+xYq
 bCE
 bCE
 bCE
@@ -109292,9 +111028,9 @@ bCE
 bCE
 bCE
 bCE
-bCE
-bCE
-bCE
+xYq
+xYq
+xYq
 bCE
 bCE
 bCE
@@ -111145,7 +112881,7 @@ nUM
 jVF
 dfW
 grb
-wdm
+kLM
 rkd
 dWE
 gAi
@@ -111938,7 +113674,7 @@ abt
 roH
 fBj
 wbv
-wdm
+kLM
 tGr
 wZt
 nhJ
@@ -112098,7 +113834,7 @@ lLy
 jRW
 kpC
 grb
-wdm
+kLM
 wDF
 qIZ
 rbP
@@ -112404,7 +114140,7 @@ whK
 sFS
 wAt
 wAt
-eWs
+aax
 wAt
 wAt
 bqK
@@ -113751,7 +115487,7 @@ nmx
 wlw
 grb
 wkk
-grb
+cqL
 kKH
 lqs
 jlg
@@ -113913,15 +115649,15 @@ gNz
 tsN
 oUu
 dpn
-vjL
-vjL
+aaZ
+aaZ
 uuk
 vjL
 vjL
 wQX
 gWC
 hdp
-vjL
+aaZ
 fZp
 mQN
 grb
@@ -114083,7 +115819,7 @@ klY
 amu
 gSM
 deL
-grb
+cqL
 bpm
 dpn
 vjL
@@ -114219,7 +115955,7 @@ bqK
 vMV
 nyM
 oCo
-sxF
+cmv
 vMV
 bqK
 rHD
@@ -114422,7 +116158,7 @@ wAt
 bGH
 wAt
 wAt
-eWs
+aax
 wAt
 aKM
 bCE
@@ -114727,7 +116463,7 @@ grb
 sGq
 eGp
 qyQ
-atF
+abp
 kwd
 hjf
 grb
@@ -114744,7 +116480,7 @@ ydr
 aSY
 wAt
 bGH
-hNW
+aaA
 gQS
 rjE
 tvC
@@ -114895,7 +116631,7 @@ ghB
 grb
 grb
 ruc
-keE
+aaR
 xVk
 jBq
 rpy
@@ -114906,7 +116642,7 @@ wAt
 wAt
 wAt
 bCE
-vte
+aav
 qCS
 ubX
 fIp
@@ -115058,7 +116794,7 @@ lPp
 bVh
 rjm
 suk
-hlL
+aaP
 gYU
 sXq
 sXa
@@ -115472,9 +117208,9 @@ bqK
 bqK
 bqK
 cIF
-uaW
+adf
 dQR
-uaW
+adf
 cIF
 vuI
 vuI
@@ -115557,7 +117293,7 @@ wAt
 fcR
 dlm
 nzZ
-vte
+aav
 mSM
 xst
 vte
@@ -115691,13 +117427,13 @@ wAt
 tQQ
 mHJ
 tTT
-rLG
+abK
 raA
 grb
 iNp
 jes
 mwA
-mwA
+aUm
 mfe
 dtw
 hqQ
@@ -115799,7 +117535,7 @@ pzi
 oAc
 caz
 xou
-hNW
+aaA
 vuI
 vuI
 vuI
@@ -115861,7 +117597,7 @@ jpw
 xTI
 uaa
 jHS
-ruc
+abq
 ejG
 fTe
 iqX
@@ -115961,7 +117697,7 @@ jYN
 hOb
 kZr
 nLh
-nhJ
+add
 vuI
 vuI
 vuI
@@ -116043,7 +117779,7 @@ wAt
 lpw
 lIB
 cjD
-fvc
+aaw
 mEx
 tjj
 vte
@@ -116272,9 +118008,9 @@ bqK
 bqK
 rHD
 rHD
-bxT
-ttW
-pVN
+adj
+adi
+adh
 rHD
 rHD
 rHD
@@ -116355,7 +118091,7 @@ grb
 cCR
 grb
 axU
-oHi
+kLM
 gTk
 nLX
 vDJ
@@ -117458,7 +119194,7 @@ rHD
 rHD
 rHD
 vmX
-jDs
+iTf
 aNm
 iHJ
 nLX
@@ -117661,7 +119397,7 @@ bPf
 mxF
 jwT
 nCO
-tcg
+aaz
 eKf
 sUN
 fsw
@@ -117981,12 +119717,12 @@ jDp
 bRn
 hWs
 grb
-oCo
+pSo
 bRn
 aWs
 cmE
 olH
-gTk
+aay
 hNW
 oAZ
 grb
@@ -118246,7 +119982,7 @@ bod
 soi
 tgO
 bxc
-rAH
+dJk
 vDq
 bXS
 dJk
@@ -119608,8 +121344,8 @@ wAt
 uYS
 aGZ
 aKM
-msA
-avC
+aas
+aao
 aKM
 fxh
 pYF
@@ -120077,7 +121813,7 @@ rHD
 kaG
 xuT
 sJo
-ree
+aba
 vuI
 kjX
 hBa
@@ -120085,14 +121821,14 @@ fGe
 pOF
 kyA
 oxC
-msA
+aas
 iJa
 pKU
 hBa
 wOR
 azp
 onF
-avC
+aao
 bCE
 bCE
 bCE
@@ -120239,7 +121975,7 @@ sJN
 sJo
 sJo
 sJo
-iaO
+abb
 vuI
 kjX
 kjX
@@ -120249,10 +121985,10 @@ kyA
 bCE
 bCE
 vzr
-mNh
-mNh
-mNh
-mNh
+aap
+aap
+aap
+aap
 wLq
 bCE
 bCE
@@ -120401,7 +122137,7 @@ rHD
 sJo
 sJo
 sJo
-eTQ
+aaq
 vuI
 vuI
 vuI
@@ -121314,7 +123050,7 @@ fkR
 nhz
 eqD
 pET
-qxv
+fpF
 bvz
 olB
 cUS
@@ -121533,7 +123269,7 @@ vuI
 vuI
 vuI
 rHD
-bzT
+ora
 aae
 tTL
 vKF
@@ -122506,7 +124242,7 @@ vuI
 vuI
 vuI
 rHD
-jDp
+abd
 jNO
 jDp
 ayZ
@@ -122671,7 +124407,7 @@ ree
 bzT
 oCo
 ceR
-kCk
+aaT
 bCE
 bCE
 bCE
@@ -122799,7 +124535,7 @@ jDA
 jDA
 mPj
 rpj
-mPj
+acH
 rHD
 rHD
 rHD
@@ -122833,7 +124569,7 @@ iaO
 dVy
 oCo
 ceR
-rnQ
+aaV
 bCE
 bCE
 bCE
@@ -122960,8 +124696,8 @@ vuI
 vuI
 nAG
 sel
-xeV
-uhI
+acQ
+acI
 nAG
 vuI
 rHD
@@ -122994,8 +124730,8 @@ vuI
 iaO
 bzT
 oCo
-ceR
-rnQ
+jng
+aaV
 bCE
 bCE
 bCE
@@ -123157,7 +124893,7 @@ iaO
 bzT
 tAH
 cEt
-rnQ
+aaV
 bCE
 bCE
 bCE
@@ -123199,7 +124935,7 @@ vuI
 vuI
 vuI
 vuI
-iaO
+abb
 oKX
 iRv
 tLR
@@ -123284,8 +125020,8 @@ gwv
 vuI
 iWm
 mNF
-grb
-ceR
+kpC
+jng
 iWm
 vuI
 vuI
@@ -123319,7 +125055,7 @@ iaO
 bzT
 oCo
 spp
-rnQ
+aaV
 bCE
 bCE
 bCE
@@ -123481,7 +125217,7 @@ iaO
 bzT
 oCo
 ceR
-rnQ
+aaV
 bCE
 bCE
 bCE
@@ -123641,7 +125377,7 @@ vuI
 vuI
 eTQ
 ejD
-jSn
+abc
 ceR
 ydx
 bCE
@@ -123964,10 +125700,10 @@ bqK
 vuI
 vuI
 ree
-bzT
-oCo
+ora
+pSo
 ceR
-kCk
+aaT
 bCE
 bCE
 nXh
@@ -124095,15 +125831,15 @@ vuI
 iaO
 txt
 dqO
-ceR
+jng
 rHD
 rLK
 ogj
 ogj
 ogj
 ppq
-wHB
-vRF
+acw
+aco
 rHD
 rHD
 vuI
@@ -124572,7 +126308,7 @@ eVM
 uku
 hfG
 eNV
-uif
+mwA
 hof
 eGC
 pAf
@@ -124611,7 +126347,7 @@ rHD
 rHD
 rHD
 rHD
-iXg
+abi
 kAR
 iIU
 xWk
@@ -124746,7 +126482,7 @@ olH
 sMZ
 pLh
 qGV
-ceR
+jng
 bQG
 iFj
 iFj
@@ -124780,7 +126516,7 @@ wYS
 jQH
 mAz
 vBC
-rrB
+aaG
 dtV
 pMj
 htY
@@ -124897,7 +126633,7 @@ gwv
 gwv
 vZm
 kpC
-tzN
+ryA
 cqL
 cXa
 kjX
@@ -124939,7 +126675,7 @@ ogY
 dnG
 kNb
 cNE
-qNF
+aaW
 xMT
 qsL
 jJu
@@ -125186,7 +126922,7 @@ gwv
 dja
 vpB
 lCF
-uuC
+pyU
 pWr
 oYD
 gwv
@@ -125233,7 +126969,7 @@ ceR
 iWm
 bzT
 eMe
-ogj
+ack
 ogj
 ppq
 ppq
@@ -125546,7 +127282,7 @@ gwv
 jLP
 nom
 xYs
-kpC
+grb
 qXW
 gwv
 vuI
@@ -125576,7 +127312,7 @@ hny
 ree
 bPW
 njn
-njn
+abu
 njn
 jPr
 thb
@@ -125714,8 +127450,8 @@ gwv
 vuI
 nAG
 mNF
-olH
-ceR
+ifn
+jng
 nAG
 vuI
 vuI
@@ -125740,16 +127476,16 @@ paB
 gHc
 wfp
 wUM
-njn
+abu
 njn
 njn
 vwV
 gsy
 eTQ
-bzT
+ora
 oCo
 hEF
-kCk
+aaT
 bCE
 bCE
 bCE
@@ -125876,8 +127612,8 @@ gwv
 vuI
 iaO
 mNF
-olH
-spp
+acR
+acJ
 iaO
 vuI
 vuI
@@ -125911,7 +127647,7 @@ rHD
 gBB
 oCo
 hEF
-rnQ
+aaV
 bCE
 bCE
 bCE
@@ -126073,7 +127809,7 @@ rHD
 bzT
 oCo
 hEF
-rnQ
+aaV
 bCE
 bCE
 bCE
@@ -126200,7 +127936,7 @@ vuI
 jDA
 jDA
 eLr
-jdp
+acS
 dfV
 rHD
 rHD
@@ -126235,7 +127971,7 @@ rHD
 pCL
 tAH
 dIi
-rnQ
+aaV
 bCE
 bCE
 bCE
@@ -126363,7 +128099,7 @@ jDA
 rwt
 ycY
 olH
-eMe
+acK
 vyg
 rHD
 rHD
@@ -126386,7 +128122,7 @@ kns
 rHD
 jdy
 uZj
-ppq
+abB
 vWH
 eAv
 wGQ
@@ -126395,9 +128131,9 @@ fsi
 eyc
 cTG
 bzT
-oCo
+pSo
 hEF
-rnQ
+aaV
 bCE
 bCE
 bCE
@@ -126526,14 +128262,14 @@ pMo
 mwA
 tcg
 gPq
-xEc
+acG
 ygT
 vXV
-bMO
+acB
 gBG
-nlr
+mdA
 mwA
-xEc
+acq
 wZH
 bMO
 bMO
@@ -126546,13 +128282,13 @@ xjZ
 vgZ
 apW
 bxs
-xKm
+abG
 tGr
 grb
 grb
-grb
+cqL
 fav
-grb
+cqL
 dqO
 eMe
 qNF
@@ -126691,13 +128427,13 @@ pqo
 kPc
 eTw
 gTt
-rXy
+acs
 lRL
-rXy
-rXy
-rXy
+acx
+mJk
+acs
 uMF
-rXy
+pni
 eXQ
 pYH
 rXy
@@ -126705,10 +128441,10 @@ dGp
 boX
 rXy
 mPS
-rXy
+mJk
 rXy
 syX
-aHZ
+abH
 nAX
 rXy
 ncV
@@ -126857,13 +128593,13 @@ sRt
 whd
 dnG
 grb
-lGX
+act
 kXj
-sRt
+hse
 tbi
 jDp
 xBn
-jfn
+aca
 olH
 grb
 grb
@@ -126878,12 +128614,12 @@ grb
 grb
 grb
 tGr
-lGX
+ceA
 qNF
 dnG
 oCo
 hEF
-kCk
+aaT
 bCE
 bCE
 bCE
@@ -127010,8 +128746,8 @@ rHD
 rHD
 wmX
 mjq
-olH
-wPM
+dkV
+acL
 prH
 rHD
 rHD
@@ -127027,7 +128763,7 @@ rHD
 gQA
 uxg
 wgL
-uxg
+abU
 uxg
 xdN
 jMg
@@ -127038,14 +128774,14 @@ gzA
 dQl
 bcO
 kyv
-gzA
+abr
 nSj
 eyc
 cTG
 bzT
 oCo
 hEF
-rnQ
+aaV
 bCE
 bCE
 bCE
@@ -127173,7 +128909,7 @@ rHD
 rHD
 eLr
 jdp
-eBy
+acM
 rHD
 rHD
 vuI
@@ -127207,7 +128943,7 @@ rHD
 gHE
 jSn
 hEF
-rnQ
+aaV
 bCE
 bCE
 bCE
@@ -127369,7 +129105,7 @@ rHD
 bzT
 oCo
 hEF
-rnQ
+aaV
 bCE
 bCE
 bCE
@@ -127496,8 +129232,8 @@ vuI
 bqK
 rHD
 lIX
-olH
-sOp
+acT
+acN
 iaO
 vuI
 vuI
@@ -127530,8 +129266,8 @@ iwe
 rHD
 dVy
 oCo
-hEF
-rnQ
+aaY
+aaV
 bCE
 bCE
 bCE
@@ -127659,7 +129395,7 @@ bqK
 rHD
 lIX
 olH
-kWp
+vsN
 iWm
 vuI
 vuI
@@ -128469,15 +130205,15 @@ vuI
 iaO
 lIX
 rze
-osl
+acO
 iWm
 mvF
-cCf
+acD
 grb
 dWE
 dWE
 dWE
-hMx
+acu
 tTb
 rHD
 rHD
@@ -128503,10 +130239,10 @@ fNK
 nRn
 vZp
 gIu
-qNF
+aaW
 tbE
 bqZ
-wAV
+aAm
 aAm
 gvh
 oCG
@@ -128633,9 +130369,9 @@ lIX
 olH
 fkK
 quu
-hMx
-hBa
-grb
+acE
+qEs
+kpC
 wOR
 iMF
 wOR
@@ -128793,7 +130529,7 @@ vuI
 iaO
 lIX
 olH
-sXy
+rHT
 nAG
 hMx
 grb
@@ -128801,7 +130537,7 @@ qpx
 wOR
 grb
 wOR
-hBa
+qEs
 grb
 rHD
 rHD
@@ -128827,11 +130563,11 @@ vMt
 kKh
 hZN
 dbI
-hWd
+aaX
 jGX
 kwS
 fgD
-bix
+iqD
 ndE
 rjR
 phl
@@ -128955,7 +130691,7 @@ vuI
 iaO
 lIX
 olH
-sXy
+rHT
 iaO
 rOT
 grb
@@ -129055,7 +130791,7 @@ hXu
 rHD
 gTJ
 grb
-gTk
+ogA
 rHD
 rHD
 vuI
@@ -129119,7 +130855,7 @@ lIX
 olH
 sXy
 iWm
-kLM
+acF
 rOT
 hbU
 grb
@@ -129148,7 +130884,7 @@ vuI
 vuI
 vuI
 rHD
-bcU
+abf
 jNO
 dQP
 ayZ
@@ -129216,7 +130952,7 @@ grb
 umk
 rHD
 oKl
-grb
+cqL
 euH
 gmc
 rHD
@@ -129245,7 +130981,7 @@ nIK
 qTO
 tvs
 bzT
-tdd
+ade
 xSC
 czL
 qBr
@@ -129312,7 +131048,7 @@ vuI
 ree
 uIC
 oCo
-ceR
+jng
 cdg
 bCE
 bCE
@@ -129568,7 +131304,7 @@ jiw
 tvs
 krA
 kFF
-gZa
+iiL
 grb
 grb
 ndx
@@ -129612,7 +131348,7 @@ rln
 pOK
 tOc
 rHD
-hOP
+acl
 cdV
 wvQ
 wvQ
@@ -129637,7 +131373,7 @@ iaO
 uIC
 oCo
 ceR
-kCk
+aaT
 bCE
 bCE
 bCE
@@ -129774,8 +131510,8 @@ mHA
 pOK
 sIB
 uaz
-hOP
-cdV
+acm
+fnj
 abE
 xxs
 tBk
@@ -129799,7 +131535,7 @@ iaO
 pCC
 jSn
 ceR
-rnQ
+aaV
 bCE
 bCE
 bCE
@@ -129926,7 +131662,7 @@ vuI
 vuI
 rHD
 lIX
-dsH
+uNK
 vwn
 rHD
 vuI
@@ -129937,14 +131673,14 @@ udF
 kQM
 ecD
 szY
-vBX
-skg
+acj
+acg
 cxV
 luH
 wmk
 inG
 grf
-fzy
+abQ
 tcz
 rhK
 grf
@@ -129961,7 +131697,7 @@ eTQ
 uIC
 oCo
 ceR
-rnQ
+aaV
 bCE
 bCE
 bCE
@@ -130100,7 +131836,7 @@ ntb
 dCn
 hOP
 cdV
-mUq
+ach
 vtS
 cdV
 hMK
@@ -130123,7 +131859,7 @@ rHD
 vJD
 oCo
 ceR
-rnQ
+aaV
 bCE
 bCE
 bCE
@@ -130187,7 +131923,7 @@ jto
 aIV
 aIV
 sYk
-ubg
+adp
 ubg
 frC
 ubg
@@ -130250,8 +131986,8 @@ vuI
 vuI
 iaO
 mQx
-olH
-kWp
+acT
+acP
 iaO
 vuI
 vuI
@@ -130267,9 +132003,9 @@ iUr
 cdV
 bNu
 rHD
-gNB
-nAW
-aHn
+abV
+abR
+abO
 snZ
 gNB
 rHD
@@ -130285,7 +132021,7 @@ rHD
 nwI
 tAH
 cEt
-rnQ
+aaV
 bCE
 bCE
 bCE
@@ -130507,7 +132243,7 @@ rHD
 vuI
 rHD
 fyE
-ayQ
+ads
 ayQ
 ayQ
 pNp
@@ -130581,7 +132317,7 @@ rHD
 vuI
 rHD
 bzT
-uZu
+acy
 seU
 rcV
 jjX
@@ -130695,7 +132431,7 @@ ufF
 gDw
 nUr
 qBr
-gPx
+beU
 ooJ
 xFm
 qBr
@@ -130736,7 +132472,7 @@ pvK
 rHD
 iFU
 gXS
-ugS
+acU
 lXw
 eHW
 rHD
@@ -130771,7 +132507,7 @@ rHD
 aTp
 oCo
 ceR
-kCk
+aaT
 bCE
 bCE
 bCE
@@ -130835,7 +132571,7 @@ fQe
 afG
 kYa
 hhR
-pyU
+uuC
 afG
 xnT
 sXI
@@ -130898,42 +132634,42 @@ ogj
 mPj
 ebu
 grb
-dqO
+pyF
 exT
-xEc
+acG
 bMO
 bMO
 ljh
-nlr
+acA
 qvF
 gzW
+abo
+ogj
+ack
+aci
 ogj
 ogj
 ogj
-hzn
-ogj
-ogj
-ogj
-oXZ
+abW
 ebu
-fav
-ryA
-grb
+abT
+abP
+cqL
 eMe
 lky
 ebu
 eMe
-hzn
+aby
 jFN
-ogj
+abo
 kbm
 ogj
-ogj
-kns
+abo
+abj
 pGP
-oCo
+pSo
 ceR
-rnQ
+aaV
 bCE
 bCE
 bCE
@@ -130994,7 +132730,7 @@ vuI
 rHD
 rHD
 dhZ
-pyU
+uuC
 pyU
 pyU
 pyU
@@ -131055,14 +132791,14 @@ rXy
 pwm
 rXy
 doJ
-grb
+cqL
 grb
 rpj
 grb
 grb
 dqO
 dqQ
-mwA
+aUm
 mwA
 pyB
 rcV
@@ -131070,7 +132806,7 @@ lxp
 qAs
 led
 mGa
-igD
+acn
 igD
 ihl
 igD
@@ -131081,13 +132817,13 @@ qIc
 eIl
 aWl
 doD
-lGX
+abD
 kns
 dnG
-lGX
+abD
 nrq
 szP
-rkX
+abs
 ftP
 nJb
 nJb
@@ -131095,7 +132831,7 @@ mLd
 iqT
 fOf
 ceR
-rnQ
+aaV
 bCE
 bCE
 bCE
@@ -131215,7 +132951,7 @@ tbi
 jDp
 sRt
 dnG
-kUY
+acW
 tcg
 mwA
 pyB
@@ -131229,7 +132965,7 @@ sRt
 iJw
 mZy
 gwQ
-sRt
+acz
 iRk
 fXT
 sRt
@@ -131257,7 +132993,7 @@ rHD
 uIC
 oCo
 ceR
-rnQ
+aaV
 bCE
 bCE
 bCE
@@ -131419,7 +133155,7 @@ ree
 uIC
 oCo
 ceR
-rnQ
+aaV
 bCE
 bCE
 bCE
@@ -131718,7 +133454,7 @@ vcf
 dnG
 grb
 fqv
-rLG
+abK
 iNo
 fmo
 hOg
@@ -131795,7 +133531,7 @@ ksK
 eDT
 sxe
 qgA
-juK
+adz
 hAd
 rXy
 jxp
@@ -131993,7 +133729,7 @@ ofN
 nHI
 aOr
 mcc
-mcc
+adg
 mcc
 mcc
 nHI
@@ -132156,14 +133892,14 @@ wNf
 men
 rXy
 dgn
-rXy
+mJk
 snt
 yir
 uzX
 nlx
 mcL
 eyX
-pUk
+adc
 hAq
 kJB
 pUk
@@ -132326,7 +134062,7 @@ nsQ
 wve
 owK
 lJq
-cdV
+fnj
 njk
 cdV
 eHP
@@ -132393,11 +134129,11 @@ ssw
 uhE
 hWd
 wGf
-cHf
-fgD
+aaM
+iMm
 fgD
 iMm
-iMm
+aaE
 iqD
 iMm
 bnb
@@ -132549,22 +134285,22 @@ kaG
 sJo
 sJo
 vKX
-pPl
+abm
 gqo
 vfe
 hOg
 rcH
+aaH
+qzP
+aaH
+htY
+htY
 aOo
-ibp
-aOo
-htY
-htY
-htY
 wUq
 aOo
 aOo
 iqL
-nfy
+xoI
 aOo
 aOo
 tmh
@@ -132674,7 +134410,7 @@ vuI
 vuI
 iaO
 lSg
-dsH
+vTR
 muz
 tVE
 abl
@@ -132712,14 +134448,14 @@ onW
 cVo
 rHD
 xMC
-kKh
+abg
 oCo
 lGX
-qNF
+aaW
 kFe
-bqZ
-bqZ
-bqZ
+aaN
+aaK
+aaF
 lsz
 bqZ
 xNX
@@ -132836,8 +134572,8 @@ vuI
 vuI
 iaO
 lSg
-olH
-tEm
+dkV
+acV
 iaO
 vuI
 gwv
@@ -132884,7 +134620,7 @@ jev
 isL
 cld
 isL
-jev
+aaC
 isL
 luC
 uvt
@@ -133159,7 +134895,7 @@ vuI
 vuI
 vuI
 iWm
-lSg
+acX
 olH
 tEm
 iWm
@@ -133362,7 +135098,7 @@ vuI
 rHD
 uVS
 jSn
-ceR
+jng
 kyA
 bCE
 bCE
@@ -133515,7 +135251,7 @@ vXi
 deF
 rHD
 juI
-grb
+cqL
 eMe
 psv
 ree
@@ -133525,7 +135261,7 @@ ree
 uIC
 oCo
 ceR
-kCk
+aaT
 bCE
 bCE
 bCE
@@ -133647,7 +135383,7 @@ xMQ
 fAi
 kKG
 kvR
-ceR
+jng
 rHD
 bqK
 bqK
@@ -133667,7 +135403,7 @@ rHD
 dhz
 aLd
 hZE
-lBu
+acb
 oDU
 rHD
 bqK
@@ -133677,7 +135413,7 @@ lBu
 cqr
 rHD
 vfz
-grb
+cqL
 grb
 nhC
 iaO
@@ -133687,7 +135423,7 @@ iaO
 uIC
 hZN
 ceR
-rnQ
+aaV
 bCE
 bCE
 bCE
@@ -133849,7 +135585,7 @@ iaO
 uIC
 sto
 cEt
-rnQ
+aaV
 bCE
 bCE
 bCE
@@ -133985,7 +135721,7 @@ rHD
 doh
 sjA
 rHD
-hEl
+acv
 gmh
 rHD
 doh
@@ -134001,7 +135737,7 @@ hEl
 gmh
 rHD
 tiR
-grb
+cqL
 dqO
 vyu
 iaO
@@ -134011,7 +135747,7 @@ eTQ
 uIC
 oCo
 ceR
-rnQ
+aaV
 bCE
 bCE
 bCE
@@ -134173,7 +135909,7 @@ rHD
 uIC
 oCo
 spp
-rnQ
+aaV
 bCE
 bCE
 bCE
@@ -134384,7 +136120,7 @@ rlT
 wve
 cdV
 bKp
-waK
+mom
 wve
 wve
 xav
@@ -134494,7 +136230,7 @@ rHD
 bqK
 bqK
 rHD
-vJD
+abh
 oCo
 ceR
 kyA
@@ -134659,7 +136395,7 @@ rHD
 uIC
 oCo
 ceR
-kCk
+aaT
 bCE
 bCE
 bCE
@@ -134796,7 +136532,7 @@ fzN
 qrC
 eFG
 nup
-dwZ
+czW
 dwZ
 usf
 huT
@@ -134807,12 +136543,12 @@ dwZ
 aGb
 huT
 ehq
-hNV
-dwZ
+abM
+czW
 dwZ
 jhs
 tJw
-qLX
+abv
 rHD
 bqK
 bqK
@@ -134821,7 +136557,7 @@ rHD
 uIC
 oCo
 nyk
-rnQ
+aaV
 bCE
 bCE
 bCE
@@ -134973,7 +136709,7 @@ vLb
 rHD
 rHD
 rHD
-vHX
+abz
 aDa
 rHD
 rHD
@@ -134983,7 +136719,7 @@ rHD
 uIC
 oCo
 sVG
-rnQ
+aaV
 bCE
 bCE
 bCE
@@ -135145,7 +136881,7 @@ rHD
 eMn
 qFQ
 ceR
-rnQ
+aaV
 bCE
 bCE
 bCE
@@ -135298,7 +137034,7 @@ jJN
 rHD
 qxK
 kpC
-olH
+dkV
 tKP
 ree
 vuI
@@ -135306,8 +137042,8 @@ vuI
 ree
 uIC
 oCo
-ceR
-rnQ
+jng
+aaV
 bCE
 bCE
 bCE
@@ -135621,8 +137357,8 @@ ciZ
 xrG
 rHD
 kMC
-nHY
-jqo
+abA
+abw
 mrO
 iaO
 vuI
@@ -135773,13 +137509,13 @@ rHD
 cVF
 gcO
 gcO
-qiv
+abN
 hWB
 rHD
 bqK
 rHD
 cVF
-qiv
+abN
 sMu
 rHD
 bzT
@@ -135933,7 +137669,7 @@ uYt
 fIy
 rHD
 egD
-gop
+fzk
 uoJ
 uYt
 wAG
@@ -135956,22 +137692,22 @@ bcU
 jNO
 jDp
 kyA
-msA
-avC
+aas
+aao
 kyA
-msA
-mNh
+aas
+aap
 avC
-kyA
-msA
-mNh
+aaD
+aas
+aap
 wGg
 pDV
 kbb
 pDC
-mNh
-mNh
-mNh
+aap
+aap
+aap
 wGg
 kSF
 hxl
@@ -136112,7 +137848,7 @@ afb
 eMe
 dIb
 mOQ
-jDp
+abd
 gjn
 dRA
 cgX
@@ -136127,19 +137863,19 @@ ogj
 ogj
 ogj
 bEa
-eTQ
+aaq
 aPJ
 dhp
-eTQ
+aaq
 wEp
 qQw
 axV
-eTQ
+aaq
 dhp
 aPJ
 vzr
-mNh
-avC
+aap
+aao
 kyA
 aSV
 wJK
@@ -136269,26 +138005,26 @@ hBa
 qcl
 rHD
 fcQ
-grb
+cqL
 olH
-lOz
+rlR
 oUp
 cyu
 fDh
-kpC
+abn
 amP
 uju
 usq
 lzE
 jYJ
-usq
+aaO
 usq
 jYJ
 usq
 usq
 aMt
 usq
-uhE
+aaB
 tbf
 hGQ
 oxN
@@ -136442,14 +138178,14 @@ mui
 tSC
 pbn
 nDn
-vyF
+aaQ
 eXQ
 hOg
 hOg
 nQU
 hOg
 jUS
-hOg
+jTf
 hOg
 hOg
 hOg
@@ -136593,9 +138329,9 @@ acp
 nSA
 rHD
 bzT
-kpC
+abn
 ifn
-ceR
+jng
 rHD
 rHD
 rHD
@@ -136626,7 +138362,7 @@ sRt
 sfu
 tbi
 aZl
-cTG
+aan
 dlJ
 xNI
 rnQ
@@ -136744,7 +138480,7 @@ vIC
 rHD
 dhz
 hZE
-hZE
+ace
 wcu
 xoL
 rHD
@@ -136907,7 +138643,7 @@ rHD
 rHD
 rHD
 rHD
-orj
+acc
 cMI
 rHD
 rHD
@@ -137063,7 +138799,7 @@ rHD
 doh
 sjA
 rHD
-orj
+acc
 gmh
 rHD
 doh
@@ -137429,7 +139165,7 @@ bqK
 rHD
 rHD
 plb
-vts
+aar
 wKv
 acd
 nvG
@@ -137712,7 +139448,7 @@ dTg
 lBI
 ogj
 cnX
-ogj
+ack
 aZB
 hIi
 ogj
@@ -137724,11 +139460,11 @@ hzn
 ogj
 egt
 eqj
-egt
+abJ
 ogj
 vHX
 aMy
-qLX
+abv
 rHD
 bqK
 bqK
@@ -137888,7 +139624,7 @@ iZe
 dex
 bwC
 nJb
-mLd
+abF
 vyF
 wGv
 rHD
@@ -138401,7 +140137,7 @@ bqK
 rHD
 rHD
 gnx
-vts
+aar
 rHD
 aeP
 nvG
@@ -138527,7 +140263,7 @@ rHD
 tTt
 ctk
 hBa
-orj
+acc
 gFL
 rHD
 tTt
@@ -138746,9 +140482,9 @@ kyA
 kyA
 gpG
 kyA
-vwG
-ttW
-bzV
+adE
+adi
+adD
 kjX
 kjX
 efn
@@ -138850,7 +140586,7 @@ hJy
 rHD
 cVF
 oMZ
-gcO
+acf
 axt
 fJv
 rHD
@@ -138886,7 +140622,7 @@ bqK
 bqK
 bqK
 rHD
-gnx
+aau
 hEF
 rHD
 bqK
@@ -139048,7 +140784,7 @@ bqK
 bqK
 bqK
 rHD
-gnx
+aau
 eDH
 rHD
 bqK
@@ -140120,7 +141856,7 @@ wve
 wve
 bVQ
 exp
-lmn
+adb
 wni
 wyq
 kjX
@@ -140597,9 +142333,9 @@ bqK
 bqK
 bqK
 wve
-lmn
+adb
 xlI
-lmn
+adb
 wve
 bqK
 bqK

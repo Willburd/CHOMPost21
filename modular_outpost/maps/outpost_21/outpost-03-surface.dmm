@@ -12591,7 +12591,7 @@
 "axV" = (
 /obj/effect/floorbreak,
 /obj/item/material/twohanded/sledgehammer/gravity{
-	desc = "A specialized sledgehammer, dented and damaged from some great battle... engraved on the handle is 'Ed'reith Foley";
+	desc = "A specialized sledgehammer, dented and damaged from some great battle... engraved on the handle is 'Ed'reith Foley. The handle's leather is surprisingly light and strong, and bears a strangely sweet scent like mangoes and grapes";
 	name = "Ed's Gravity Hammer"
 	},
 /obj/structure/boulder,
