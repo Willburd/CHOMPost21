@@ -35,7 +35,7 @@
 /obj/machinery/porta_turret/heavy/disabler
 	name = "hardened defense turret"
 	desc = "Specialized, hardened turrets for securing the most valuable assets. Not to be taken lightly."
-	installation = /obj/item/gun/energy/taser/disabler //Drop em boys! Nonlethally~ :>
+	installation = /obj/item/gun/energy/robotic/disabler //Drop em boys! Nonlethally~ :>
 	health = 400 // Since lasers do 40 each. //op- So 10 hits~? Sounds fair~
 	maxhealth = 400
 	faction = "outpost21" //Makes sure specific station critters, like swoopies, aren't targeted
