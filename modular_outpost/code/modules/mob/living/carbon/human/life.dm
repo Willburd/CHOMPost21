@@ -61,7 +61,7 @@
 	if(prob(99) || stat != CONSCIOUS || is_incorporeal())
 		return
 	feels_gross++
-	if(feels_gross < 5)
+	if(feels_gross < 12)
 		return
 	// Wash your damn ass
 	switch(rand(1,6))
