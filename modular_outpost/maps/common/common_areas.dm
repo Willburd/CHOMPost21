@@ -1884,7 +1884,7 @@
 
 /area/medical/evastore
 	name = "\improper Medical Hazop And Hardsuit Storage"
-	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
+	base_turf = /turf/simulated/open/muriki
 	icon_state = "locker"
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
 
