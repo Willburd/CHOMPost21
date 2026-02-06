@@ -311,6 +311,12 @@
 	},
 /turf/simulated/floor/outdoors/snow/roofing/turfpack/muriki,
 /area/muriki/rooftop/civilian)
+"aaK" = (
+/obj/structure/cliff_end{
+	dir = 1
+	},
+/turf/simulated/mineral/alt/turfpack/muriki,
+/area/mine/unexplored/muriki/mountaintopeast)
 "aaL" = (
 /obj/effect/floor_decal/rust,
 /obj/structure/prop/war/tgmc_missile_rack/napalm,
@@ -2260,6 +2266,16 @@
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/rnd/chemistry)
+"afe" = (
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/unexplored/muriki/mountaintopeast)
+"aff" = (
+/turf/simulated/wall/stonelogs/turfpack/muriki,
+/area/mine/unexplored/muriki/mountaintopeast)
+"afg" = (
+/obj/structure/cliff_end,
+/turf/simulated/mineral/alt/turfpack/muriki,
+/area/mine/unexplored/muriki/mountaintopeast)
 "afr" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -7178,6 +7194,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
 	},
+/obj/effect/floor_decal/industrial/warning/color/red{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/hydroponics/gibber)
 "cuh" = (
@@ -9677,6 +9696,16 @@
 	dir = 4;
 	pixel_x = 26
 	},
+/obj/effect/floor_decal/industrial/warning/color/corner/red{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/arrows/yellow{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/arrows/yellow{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/bot_outline/corner/yellow,
 /turf/simulated/floor/tiled/milspec,
 /area/hydroponics/gibber)
 "dMB" = (
@@ -10143,6 +10172,10 @@
 /obj/effect/floor_decal/corner/lime{
 	dir = 10
 	},
+/obj/effect/floor_decal/industrial/warning/color/red{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/bot_outline/yellow,
 /turf/simulated/floor/tiled/milspec,
 /area/hydroponics/gibber)
 "dWR" = (
@@ -10285,8 +10318,6 @@
 /turf/simulated/floor/plating,
 /area/maintenance/medicelev)
 "ebb" = (
-/obj/item/cane,
-/obj/structure/table/glass,
 /obj/structure/sign/botany{
 	icon_state = "restroom";
 	name = "\improper LATRINE";
@@ -10295,6 +10326,7 @@
 /obj/effect/floor_decal/corner/blue{
 	dir = 10
 	},
+/obj/machinery/vending/loadout/clothing,
 /turf/simulated/floor/tiled/white,
 /area/medical/ward)
 "ebg" = (
@@ -16731,6 +16763,7 @@
 /obj/structure/sign/warning/falling{
 	pixel_y = 32
 	},
+/obj/effect/floor_decal/industrial/warning/color/red,
 /turf/simulated/floor/tiled/milspec,
 /area/hydroponics/gibber)
 "huO" = (
@@ -23484,6 +23517,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/effect/floor_decal/industrial/warning/color/corner/red,
 /turf/simulated/floor/tiled/milspec,
 /area/hydroponics/gibber)
 "kKW" = (
@@ -29823,12 +29857,16 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
-/obj/effect/floor_decal/industrial/loading{
-	dir = 8
-	},
 /obj/structure/cable/green{
 	icon_state = "1-4"
 	},
+/obj/effect/floor_decal/industrial/warning/color/red{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/stand_clear/yellow{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/bot_outline/red,
 /turf/simulated/floor/tiled/milspec,
 /area/hydroponics/gibber)
 "ocp" = (
@@ -31305,6 +31343,7 @@
 /obj/effect/floor_decal/corner/blue{
 	dir = 5
 	},
+/obj/item/cane,
 /turf/simulated/floor/tiled/white,
 /area/medical/ward)
 "oOg" = (
@@ -35925,11 +35964,11 @@
 /area/muriki/processor/hall)
 "rfu" = (
 /obj/effect/floor_decal/corner/blue/full,
-/obj/structure/table/glass,
 /obj/machinery/firealarm{
 	dir = 8;
 	pixel_x = -26
 	},
+/obj/machinery/vending/loadout/uniform,
 /turf/simulated/floor/tiled/white,
 /area/medical/ward)
 "rfw" = (
@@ -36521,7 +36560,7 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/substation/civilian)
 "rwg" = (
 /obj/structure/filingcabinet,
@@ -37108,6 +37147,9 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/industrial/loading{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/hydroponics/gibber)
@@ -43303,7 +43345,7 @@
 /obj/structure/cable/orange{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/substation/civilian)
 "uIJ" = (
 /turf/simulated/wall,
@@ -44081,6 +44123,9 @@
 	dir = 1
 	},
 /obj/machinery/light,
+/obj/effect/floor_decal/industrial/warning/color/corner/red{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/hydroponics/gibber)
 "vcU" = (
@@ -44160,6 +44205,9 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "0-2"
+	},
+/obj/effect/floor_decal/industrial/warning/color/corner/red{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/hydroponics/gibber)
@@ -108137,14 +108185,14 @@ hIk
 hIk
 hIk
 hIk
-hIk
-hIk
-hIk
-hIk
-hIk
-hIk
-hIk
-hIk
+afg
+mcg
+mcg
+mcg
+mcg
+mcg
+mcg
+aaK
 hIk
 hIk
 qQa
@@ -108301,11 +108349,11 @@ hIk
 idv
 idv
 idv
+afe
+afe
 idv
 idv
 idv
-hIk
-hIk
 hIk
 hIk
 hIk
@@ -108462,12 +108510,12 @@ hIk
 hIk
 hIk
 hQF
-hIk
-hIk
-hIk
+aff
+afe
+afe
+afe
+afe
 idv
-idv
-hIk
 hIk
 hIk
 hIk
@@ -108625,10 +108673,10 @@ hIk
 hIk
 hIk
 hIk
-hIk
-hIk
-hIk
-idv
+afe
+afe
+afe
+aff
 idv
 idv
 kOj
@@ -108788,9 +108836,9 @@ hIk
 hIk
 hIk
 hIk
-hIk
-hIk
-hIk
+aff
+aff
+aff
 hIk
 hIk
 hIk
