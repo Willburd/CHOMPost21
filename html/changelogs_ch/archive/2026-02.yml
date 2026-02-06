@@ -37,3 +37,17 @@
   wide eyes:
   - bugfix: cetus fixes
   - bugfix: cetus has had a fire safety inspection
+2026-02-06:
+  CHOMPStation2StaffMirrorBot:
+  - qol: move the borg mining scanner upgrade to science
+  - bugfix: color gear tweak preview circle
+  Diana:
+  - qol: Unlucky vending interactions more clear
+  - qol: Allows vox to be revived via defibs & CPR
+  Will:
+  - bugfix: concealed sword cane runtime during init
+  - bugfix: Runtime when a fluidpump tries to extract from an empty resource list
+      turf
+  - bugfix: Forensics items are no longer recycled in the lathe when trying to get
+      samples
+  - rscadd: Floodlights can be rotated using the rotatable element verbs
