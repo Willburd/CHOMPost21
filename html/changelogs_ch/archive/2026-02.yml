@@ -51,3 +51,40 @@
   - bugfix: Forensics items are no longer recycled in the lathe when trying to get
       samples
   - rscadd: Floodlights can be rotated using the rotatable element verbs
+2026-02-07:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: added three bellies to the dullahan Version 3 model
+  - bugfix: windows resetting their initialized flag mit Initialize
+  Diana:
+  - bugfix: Fixes destructive analyzer duplicating matter
+  - qol: Heavily reworks human movement code, making things such as halloss affected
+      by species pain tolerance, making injury slowdown based on health % instead
+      of a hardcoded 40 damage, making traumatic shock gradually apply slowdown instead
+      of all at once.
+  - qol: Removes 5 slowdown penalty when using AIM MODE
+  - bugfix: force_max_speed will now properly apply the HUMAN MAX SPEED instead of
+      allowing things to slow you down.
+  - bugfix: Modifiers with haste now apply HUMAN MAX SPEED instead of allowing things
+      to slow you down.
+  - code_imp: Makes Unusual Movement a TRAIT() instead of a species var.
+  - balance: Oxycodone now fully ignores slowdown from halloss and injury. (It still
+      applies 1 slowdown and multiplies all slowdown you're taking by 1.25x however)
+  - balance: The max slowdown from injury / halloss is now 4.
+  - bugfix: pain_mod now affects pain.
+  Guti:
+  - bugfix: Fixed teshari not being able to be holstered
+  Will:
+  - rscadd: Teshari taur tail
+  - rscadd: Teshari taur tail alt
+  - bugfix: SSchemistry reverse lookup data is correctly init. Meaning Bingle and
+      the chem analyzer now properly list all reagents a chemical can actually produce,
+      and not just the first recipe.
+  - bugfix: Daiquiri is now possible to drinkmix and is no longer blocked by fire
+      punch (add limejuice first)
+  - code_imp: reagent IDs used as reagent names are now forbidden by unit testing
+  - bugfix: pitcher nectar reagent no longer uses it's ID as it's name
+  - qol: locator device no longer needs to be dropped to the ground after activation
+      to sync to a nearby beacon
+  - bugfix: Disposal flush lever can no longer be pulled from inside the bin by using
+      alt click
+  - bugfix: Things inside device rechargers will be dropped on qdel
