@@ -59,7 +59,7 @@
 		return
 
 	// Need to be at maximum filth
-	var/threshold = 30
+	var/threshold = 20
 	if(germ_level < GERM_LEVEL_MOVE_CAP || isbelly(loc))
 		if(feels_gross >= threshold && !isbelly(loc)) // Got cleaned
 			to_chat(src,span_notice("You feel refreshed and clean."))
@@ -74,7 +74,7 @@
 		return
 
 	// Wash your damn ass
-	if(feels_gross == threshold + 30)
+	if(feels_gross == threshold + 10)
 		to_chat(src,span_warning("You feel like you should take a shower..."))
 		return
 	if((feels_gross % 2) == 0) // Only do it half the time
