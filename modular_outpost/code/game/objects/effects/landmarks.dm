@@ -421,6 +421,10 @@
 	var/chance = 0
 	delete_me = TRUE
 
+/obj/effect/landmark/wet_floor/Initialize(mapload)
+	..()
+	return INITIALIZE_HINT_LATELOAD
+
 /obj/effect/landmark/wet_floor/twentyfive
 	name = "wet floor 25%"
 	chance = 25
@@ -438,7 +442,10 @@
 		return
 	var/turf/simulated/floor/T = get_turf(src)
 	T.wet = TURFSLIP_WET
-
+	if(T.wet_overlay)
+		return
+	T.wet_overlay = image('icons/effects/water.dmi', icon_state = "wet_floor")
+	T.add_overlay(T.wet_overlay)
 
 
 // lube floor with no end timer
@@ -446,6 +453,10 @@
 	name = "lube floor 0%"
 	var/chance = 0
 	delete_me = TRUE
+
+/obj/effect/landmark/lube_floor/Initialize(mapload)
+	..()
+	return INITIALIZE_HINT_LATELOAD
 
 /obj/effect/landmark/lube_floor/twentyfive
 	name = "lube floor 25%"
@@ -464,3 +475,7 @@
 		return
 	var/turf/simulated/floor/T = get_turf(src)
 	T.wet = TURFSLIP_LUBE
+	if(T.wet_overlay)
+		return
+	T.wet_overlay = image('icons/effects/water.dmi', icon_state = "wet_floor")
+	T.add_overlay(T.wet_overlay)
