@@ -5923,6 +5923,7 @@
 #include "modular_outpost\code\modules\research\designs\weapons.dm"
 #include "modular_outpost\code\modules\research\designs\weapons_yw.dm"
 #include "modular_outpost\code\modules\research\designs\experisci\experiment\misc.dm"
+#include "modular_outpost\code\modules\research\techwebs\techweb_types.dm"
 #include "modular_outpost\code\modules\research\techwebs\nodes\engi_nodes.dm"
 #include "modular_outpost\code\modules\resleeving\autoresleever.dm"
 #include "modular_outpost\code\modules\resleeving\machines.dm"
