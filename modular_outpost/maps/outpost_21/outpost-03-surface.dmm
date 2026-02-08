@@ -51519,8 +51519,6 @@
 	pixel_x = 3;
 	pixel_y = -4
 	},
-/obj/item/flash,
-/obj/item/flash,
 /obj/item/storage/secure/briefcase,
 /obj/structure/closet,
 /obj/item/storage/secure/briefcase,
