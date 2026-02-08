@@ -88,3 +88,6 @@
   - bugfix: Disposal flush lever can no longer be pulled from inside the bin by using
       alt click
   - bugfix: Things inside device rechargers will be dropped on qdel
+2026-02-08:
+  Will:
+  - bugfix: sheetsnatcher properly calls oresilo storage proc
