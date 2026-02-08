@@ -35,7 +35,7 @@
 	// Outpost 21 edit end
 
 	// Moving around increases germ_level faster
-	if(germ_level < GERM_LEVEL_MOVE_CAP && prob(4 * dirt_multiplier)) // Outpost 21 edit - Dirty floors affect germ growth
+	if(germ_level < GERM_LEVEL_MOVE_CAP && prob(8 * dirt_multiplier)) // Outpost 21 edit - Dirty floors affect germ growth
 		germ_level++
 
 /mob/living/carbon
