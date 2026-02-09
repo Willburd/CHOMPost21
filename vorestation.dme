@@ -5886,6 +5886,7 @@
 #include "modular_outpost\code\modules\projectiles\ammunition.dm"
 #include "modular_outpost\code\modules\projectiles\guns\pump.dm"
 #include "modular_outpost\code\modules\projectiles\guns\launcher\confetti.dm"
+#include "modular_outpost\code\modules\projectiles\precursor\eclipse.dm"
 #include "modular_outpost\code\modules\projectiles\projectile\explosive.dm"
 #include "modular_outpost\code\modules\random_map\diona.dm"
 #include "modular_outpost\code\modules\reagents\machinery\dispenser\cartridge_presets.dm"
