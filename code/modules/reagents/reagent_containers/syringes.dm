@@ -118,7 +118,7 @@
 		return
 
 	if(user.a_intent == I_HURT && ismob(target))
-		if((CLUMSY in user.mutations) && prob(20)) // Outpost 21 edit - Made clumsy less obnoxious
+		if(CLUMSY_HARM_CHANCE(user))
 			target = user
 		syringestab(target, user)
 		return
