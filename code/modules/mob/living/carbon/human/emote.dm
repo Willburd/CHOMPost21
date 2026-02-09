@@ -1,4 +1,4 @@
-var/list/_human_default_emotes = list(
+GLOBAL_LIST_INIT(human_default_emotes, list(
 	/decl/emote/visible/blink,
 	/decl/emote/audible/synth,
 	/decl/emote/audible/synth/beep,
@@ -99,7 +99,6 @@ var/list/_human_default_emotes = list(
 	/decl/emote/visible/vomit,
 	/decl/emote/visible/floorspin,
 	/decl/emote/visible/flip,
-	//VOREStation Add
 	/decl/emote/audible/bug_hiss,
 	/decl/emote/audible/bug_buzz,
 	/decl/emote/audible/bug_chitter,
@@ -181,9 +180,7 @@ var/list/_human_default_emotes = list(
 	/decl/emote/audible/caw2,
 	/decl/emote/audible/caw_m,
 	/decl/emote/audible/gwah,
-	//VOREStation Add End
 	//YW ADDITION: Add Start
-	/decl/emote/audible/chirp,
 	/decl/emote/audible/hooh,
 	/decl/emote/audible/ack,
 	/decl/emote/audible/ough,
@@ -191,6 +188,7 @@ var/list/_human_default_emotes = list(
 	/decl/emote/visible/cross,
 	//YW ADDITION: Add End
 	//CHOMP Add start
+	/decl/emote/audible/wheeze,
 	/decl/emote/audible/prbt2,
 	/decl/emote/audible/pain,
 	/decl/emote/audible/mgeow,
@@ -198,12 +196,10 @@ var/list/_human_default_emotes = list(
 	/decl/emote/audible/xenogrowl,
 	/decl/emote/audible/xenohiss,
 	/decl/emote/audible/xenopurr,
-	/decl/emote/audible/gwah,
 	/decl/emote/audible/wawa,
 	/decl/emote/audible/malehumanscream,
 	/decl/emote/audible/scientist/scream,
 	/decl/emote/audible/scientist/pain,
-	/decl/emote/audible/caw,
 	/decl/emote/audible/yip,
 	/decl/emote/audible/tailthump,
 	/decl/emote/audible/squeal,
@@ -221,11 +217,9 @@ var/list/_human_default_emotes = list(
 	/decl/emote/audible/synth/rberr,
 	/decl/emote/audible/synth/rbpos,
 	//outpost 21 add end
-)
+))
 
-	//VOREStation Add Start
-
-var/list/_simple_mob_default_emotes = list(
+GLOBAL_LIST_INIT(simple_mob_default_emotes, list(
 	/decl/emote/visible/blink,
 	/decl/emote/visible/nod,
 	/decl/emote/visible/shake,
@@ -369,13 +363,13 @@ var/list/_simple_mob_default_emotes = list(
 	/decl/emote/audible/caw_m,
 	/decl/emote/audible/gwah,
 	//CHOMP Add start
+	/decl/emote/audible/wheeze,
 	/decl/emote/audible/prbt2,
 	/decl/emote/audible/pain,
 	/decl/emote/audible/mgeow,
 	/decl/emote/audible/xenogrowl,
 	/decl/emote/audible/xenohiss,
 	/decl/emote/audible/xenopurr,
-	/decl/emote/audible/caw,
 	/decl/emote/audible/yip,
 	/decl/emote/audible/tailthump,
 	/decl/emote/audible/squeal,
@@ -393,16 +387,15 @@ var/list/_simple_mob_default_emotes = list(
 	/decl/emote/audible/synth/rberr,
 	/decl/emote/audible/synth/rbpos,
 	//outpost 21 add end
-	)
-	//VOREStation Add End
+	))
 
 /mob/living/carbon/human/get_available_emotes()
-	. = global._human_default_emotes.Copy()
+	. = GLOB.human_default_emotes.Copy()
 	if(length(species?.default_emotes))
 		return . | species.default_emotes
 
 /mob/living/simple_mob/get_available_emotes()
-	. = global._simple_mob_default_emotes.Copy()
+	. = GLOB.simple_mob_default_emotes.Copy()
 
 /mob/living/carbon/human/verb/pose()
 	set name = "Set Pose"

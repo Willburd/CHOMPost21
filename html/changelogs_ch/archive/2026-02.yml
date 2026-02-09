@@ -91,3 +91,45 @@
 2026-02-08:
   Will:
   - bugfix: sheetsnatcher properly calls oresilo storage proc
+2026-02-09:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: non-station personnel (talon, lurkers, etc.) should no longer receive
+      mail in cargo shipments
+  - code_imp: updates some tgui devs and code
+  - qol: robot sheet snatchers can be upgraded to be on par with the non robot ones
+  - code_imp: change the robot upgrade code to rid of usr
+  - rscadd: Pref to ignore shoes when walking, preserving footsteppy sounds
+  - rscadd: More footsteppy sounds
+  - bugfix: wrong sql table name in admin sync calls
+  - admin: fix give modifier missing in admin verbs
+  - refactor: changes playertips subsystem to no longer overtime
+  - bugfix: initial player tips reminder not being shown
+  - bugfix: multiple hard dels
+  - code_imp: converts more globals to GLOBs
+  - balance: shredding interactions, with the exception of escaping restraints, are
+      now also based on punch damage. Characters with sufficient punch damage can
+      sometimes harm machinery, structures, borgs, etc, when attacking on harm intent.
+      This does not take equipment damage, like from brass knuckles, into account
+  - balance: xenochimera ferality bonus to punch damage is now capped at 40
+  - refactor: cleans up robot gripper code
+  - bugfix: items getting stuck in the robot when using the gripper
+  - qol: grippers can place items on tables
+  FluffMedic:
+  - rscadd: Adds the Astral Collective, a reworked Eclipse faction. Has some new foes
+      and bosses
+  - rscadd: Adds a hidden path to Tyr
+  - rscdel: Removed some old things that didn't have the spark
+  Nova:
+  - refactor: converted name and nickname prefs from bay to TG
+  Wide Eyes:
+  - balance: vac pack now cleans half as fast
+  - bugfix: vac pack no longer bypasses trash eating restrictions
+  - bugfix: vac pack no longer bypasses container size restrictions
+  Will:
+  - bugfix: clumsy trait/gene not being applied to characters
+  - balance: Clumsy gene failure chance reduced from 50% to 15%
+  - balance: Clumsy gene failures that are potentially lethal moved from 50% to 10%
+  - code_imp: Clumsy failure chance moved to a define
+  - code_imp: Added separate define for harmful clumsy chance
+  - bugfix: SSchemistry indexing order reverted to be based on first reagent in recipe
+      (Recipes fixed to be match old recipe priorities)

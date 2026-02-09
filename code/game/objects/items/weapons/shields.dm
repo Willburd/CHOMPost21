@@ -158,7 +158,7 @@
 	. = ..(user)
 	if(.)
 		return TRUE
-	if ((CLUMSY in user.mutations) && prob(10)) // Outpost 21 edit - Made clumsy less obnoxious
+	if (CLUMSY_FAIL_CHANCE(user))
 		to_chat(user, span_warning("You beat yourself in the head with [src]."))
 		user.take_organ_damage(5)
 	active = !active
