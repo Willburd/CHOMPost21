@@ -48,15 +48,15 @@
 
 	if(!check_rights(R_ADMIN|R_EVENT))
 		return
-	if(emergency_shuttle.shuttle.moving_status == SHUTTLE_INTRANSIT)
+	if(GLOB.emergency_shuttle.shuttle.moving_status == SHUTTLE_INTRANSIT)
 		to_chat(usr,"The shuttle is moving, please wait till it arrives to send it back with this verb.")
 		return
 
 	// MUST be called to avoid round-end
-	emergency_shuttle.admin_override_mode = TRUE
-	emergency_shuttle.evac = FALSE
-	emergency_shuttle.autopilot = FALSE
-	emergency_shuttle.shuttle.launch(usr)
+	GLOB.emergency_shuttle.admin_override_mode = TRUE
+	GLOB.emergency_shuttle.evac = FALSE
+	GLOB.emergency_shuttle.autopilot = FALSE
+	GLOB.emergency_shuttle.shuttle.launch(usr)
 
 /client/proc/make_red_exit()
 	set name = "Make Redspace Exit Portal"

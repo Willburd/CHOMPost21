@@ -8,7 +8,7 @@ SUBSYSTEM_DEF(mail)
 	var/mail_waiting = 0					// Pending mail
 	var/mail_per_process = 0.55				// Mail to be generated
 	var/admin_mail = list()					// Mail added by Spawn Mail
-	var/list/banned_jobs = list(JOB_OUTSIDER,JOB_ANOMALY,JOB_VR,JOB_MAINT_LURKER,JOB_TALON_CAPTAIN,JOB_TALON_DOCTOR,JOB_TALON_ENGINEER,JOB_TALON_GUARD,JOB_TALON_PILOT,JOB_TALON_MINER,JOB_STOWAWAY) // Jobs that can't receive mail // Outpost 21 edit - Job removal
+	var/list/banned_jobs = list(/*JOB_OUTSIDER,JOB_ANOMALY,*/JOB_VR,JOB_MAINT_LURKER,JOB_TALON_CAPTAIN,JOB_TALON_DOCTOR,JOB_TALON_ENGINEER,JOB_TALON_GUARD,JOB_TALON_PILOT,JOB_TALON_MINER,JOB_STOWAWAY) // Jobs that can't receive mail // Outpost 21 edit - Job removal
 
 /datum/controller/subsystem/mail/fire()
 	mail_waiting += mail_per_process
