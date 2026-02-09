@@ -1,6 +1,0 @@
-author: "FluffMedic"
-delete-after: True
-changes:
-  - rscadd: "Adds the Astral Collective, a reworked Eclipse faction. Has some new foes and bosses"
-  - rscadd: "Adds a hidden path to Tyr"
-  - rscdel: "Removed some old things that didn't have the spark"
