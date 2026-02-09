@@ -16953,10 +16953,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/rnd/research/atmosia)
-"aEF" = (
-/obj/machinery/requests_console/preset/research,
-/turf/simulated/wall/r_wall,
-/area/rnd/xenobiology/burn)
 "aEG" = (
 /obj/effect/floor_decal/milspec/color/orange/half{
 	dir = 1
@@ -25220,9 +25216,9 @@
 	icon_state = "0-2"
 	},
 /obj/machinery/power/apc{
-	dir = 1;
-	name = "north bump";
-	pixel_y = 24
+	dir = 4;
+	name = "east bump";
+	pixel_x = 24
 	},
 /turf/simulated/floor/plating,
 /area/muriki/elevator/medibasement)
@@ -34535,8 +34531,8 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/cargolower)
 "bkR" = (
-/obj/item/bikehorn/rubberducky,
 /obj/structure/table/glass,
+/obj/item/bikehorn/rubberducky/gold,
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/cargolower)
 "bkS" = (
@@ -43280,13 +43276,28 @@
 /obj/effect/floor_decal/corner/red{
 	dir = 9
 	},
-/obj/machinery/power/apc{
-	dir = 8;
-	name = "west bump";
-	pixel_x = -24
+/obj/machinery/button/flasher{
+	id = "permflash";
+	name = "Brig flashes";
+	pixel_x = -39;
+	req_access = list(2);
+	pixel_y = 8
 	},
-/obj/structure/cable/green{
-	icon_state = "0-4"
+/obj/machinery/button/remote/blast_door{
+	dir = 4;
+	id = "Secure Gate";
+	name = "Prison Lockdown";
+	pixel_x = -27;
+	pixel_y = 6;
+	req_one_access = list(1)
+	},
+/obj/machinery/button/remote/blast_door{
+	dir = 4;
+	id = "brigobs";
+	name = "Observation Shutters";
+	pixel_x = -27;
+	pixel_y = -6;
+	req_access = list(2)
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/prison)
@@ -45794,24 +45805,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/security/tankstore)
-"bFg" = (
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden,
-/obj/effect/floor_decal/corner/red{
-	dir = 6
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/cable/green{
-	icon_state = "2-8"
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals_central7{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/dark,
-/area/security/prison)
 "bFh" = (
 /obj/structure/sign/yessmoking_1{
 	pixel_y = 32
@@ -46691,11 +46684,9 @@
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology/hallway)
 "bGJ" = (
-/obj/machinery/power/apc{
-	name = "south bump";
-	pixel_y = -24
+/obj/structure/cable/green{
+	icon_state = "1-8"
 	},
-/obj/structure/cable/green,
 /turf/simulated/floor/plating,
 /area/muriki/elevator/scibase)
 "bGK" = (
@@ -46824,15 +46815,6 @@
 /area/rnd/xenobiology)
 "bGS" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/power/apc{
-	cell_type = /obj/item/cell/super;
-	dir = 8;
-	name = "west bump";
-	pixel_x = -24
-	},
-/obj/structure/cable/green{
-	icon_state = "0-2"
-	},
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
@@ -46841,7 +46823,7 @@
 	},
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
-/area/muriki/elevator/secbase)
+/area/maintenance/secelevbasement)
 "bGT" = (
 /turf/simulated/mineral/alt/turfpack/muriki,
 /area/mine/unexplored/muriki/cave/underdark_pit/east_civ)
@@ -67003,6 +66985,55 @@
 /obj/structure/closet/tent/B,
 /turf/simulated/floor/wood/turfpack/muriki,
 /area/specialty/stowaway_clubhouse)
+"cBf" = (
+/obj/structure/catwalk,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/machinery/power/apc{
+	dir = 4;
+	name = "east bump";
+	pixel_x = 24
+	},
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
+/turf/simulated/floor/plating,
+/area/muriki/elevator/secbase)
+"cBg" = (
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/effect/floor_decal/corner/red{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/power/apc{
+	dir = 4;
+	name = "east bump";
+	pixel_x = 24
+	},
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/security/prison)
+"cBh" = (
+/obj/machinery/power/apc{
+	cell_type = /obj/item/cell/super;
+	dir = 8;
+	name = "west bump";
+	pixel_x = -24
+	},
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/plating,
+/area/muriki/elevator/scibase)
 "cCT" = (
 /obj/effect/floor_decal/corner/blue/full{
 	dir = 8
@@ -123934,8 +123965,8 @@ bpn
 bqg
 bqT
 brG
-bFg
 brG
+cBg
 btG
 buv
 buY
@@ -124589,7 +124620,7 @@ bux
 buZ
 byn
 bvV
-bvV
+cBf
 bGS
 bzd
 aHt
@@ -134547,7 +134578,7 @@ ady
 fuD
 abv
 agc
-adE
+cBh
 apr
 adE
 agd
@@ -141836,7 +141867,7 @@ ahQ
 aiS
 guI
 bpW
-aEF
+ahd
 aoz
 apN
 aqW
