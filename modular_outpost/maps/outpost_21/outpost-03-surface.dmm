@@ -13255,6 +13255,12 @@
 /obj/effect/floor_decal/steeldecal/steel_decals3{
 	dir = 10
 	},
+/obj/structure/handrail{
+	dir = 4
+	},
+/obj/machinery/light/small{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/securitypub)
 "azY" = (
@@ -43825,6 +43831,9 @@
 	dir = 6
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals3,
+/obj/structure/handrail{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/security)
 "jYy" = (
