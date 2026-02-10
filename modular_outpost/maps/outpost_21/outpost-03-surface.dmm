@@ -13894,12 +13894,6 @@
 "aBc" = (
 /obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/blast/gate/thin/open{
-	dir = 2;
-	icon_state = "shutter2_0";
-	id = "security_lockdown";
-	name = "Security Lockdown"
-	},
 /obj/structure/window/reinforced/full,
 /obj/structure/cable/green{
 	icon_state = "0-4"
@@ -13918,12 +13912,6 @@
 "aBd" = (
 /obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/blast/gate/thin/open{
-	dir = 2;
-	icon_state = "shutter2_0";
-	id = "security_lockdown";
-	name = "Security Lockdown"
-	},
 /obj/structure/window/reinforced/full,
 /obj/structure/cable/green{
 	icon_state = "0-8"
@@ -53413,12 +53401,6 @@
 "mVP" = (
 /obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/blast/gate/thin/open{
-	dir = 2;
-	icon_state = "shutter2_0";
-	id = "security_lockdown";
-	name = "Security Lockdown"
-	},
 /obj/structure/window/reinforced/full,
 /obj/structure/cable/green{
 	icon_state = "0-8"
