@@ -5844,6 +5844,7 @@
 #include "modular_outpost\code\modules\mob\living\silicon\robot\robot_simple_items.dm"
 #include "modular_outpost\code\modules\mob\living\silicon\robot\dogborg\dog_sleeper.dm"
 #include "modular_outpost\code\modules\mob\living\silicon\robot\sprites\fluff.dm"
+#include "modular_outpost\code\modules\mob\living\silicon\robot\sprites\medical.dm"
 #include "modular_outpost\code\modules\mob\living\simple_animal\statue.dm"
 #include "modular_outpost\code\modules\mob\living\simple_animal\aliens\synx.dm"
 #include "modular_outpost\code\modules\mob\living\simple_mob\subtypes\animal\chu.dm"
