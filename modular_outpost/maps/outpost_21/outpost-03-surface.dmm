@@ -11488,13 +11488,11 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/trawler)
 "avs" = (
-/obj/machinery/cryopod{
-	dir = 1
-	},
 /obj/effect/floor_decal/industrial/danger{
 	dir = 9
 	},
 /obj/machinery/light,
+/obj/machinery/cryopod/robot,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/muriki/cybstorage)
 "avt" = (
@@ -16948,8 +16946,7 @@
 	pixel_y = 16
 	},
 /obj/structure/mirror{
-	dir = 1;
-	pixel_y = 36
+	pixel_y = 34
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/security)
