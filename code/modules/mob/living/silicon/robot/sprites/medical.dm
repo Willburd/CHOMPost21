@@ -191,7 +191,7 @@
 // Regular sprites
 
 /datum/robot_sprite/surgical
-	module_type = "Surgeon" // Outpost 21 edit - Split surgery and crisis borgs again, was "Crisis"
+	module_type = "Crisis"
 	sprite_icon = 'icons/mob/robot/surgical.dmi'
 
 /datum/robot_sprite/surgical/toiletbot
