@@ -305,6 +305,11 @@
 	holomap_color = HOLOMAP_AREACOLOR_CIV
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 
+/area/muriki/bathroom/vr_coop
+	name = "\improper Struggle Simulator"
+	holomap_color = HOLOMAP_AREACOLOR_CIV
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
+
 //
 // Medical ---------------------------------------------------------
 //

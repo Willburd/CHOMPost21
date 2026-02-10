@@ -216,6 +216,9 @@
 "aav" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/window/maintenance_panel,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/substation/research)
 "aaw" = (
@@ -2276,6 +2279,47 @@
 /obj/structure/cliff_end,
 /turf/simulated/mineral/alt/turfpack/muriki,
 /area/mine/unexplored/muriki/mountaintopeast)
+"afh" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/power/apc{
+	name = "south bump";
+	pixel_y = -24
+	},
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/plating,
+/area/muriki/elevator/secupper)
+"afi" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor,
+/area/maintenance/substation/research)
+"afj" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/power/apc{
+	dir = 8;
+	name = "west bump";
+	pixel_x = -24
+	},
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
+/turf/simulated/floor,
+/area/muriki/elevator/sciupper)
 "afr" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -16432,15 +16476,6 @@
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/quartermaster/mining/expl)
-"hlg" = (
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/turf/simulated/floor/plating,
-/area/maintenance/medicelev)
 "hlv" = (
 /obj/structure/bookcase{
 	name = "bookcase (Non-Fiction)"
@@ -19830,11 +19865,11 @@
 /area/muriki/rooftop/disposal)
 "iYn" = (
 /obj/machinery/light/small,
-/obj/structure/cable/green{
-	icon_state = "1-8"
-	},
 /obj/structure/disposalpipe/broken{
 	dir = 8
+	},
+/obj/structure/cable/green{
+	icon_state = "1-4"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/medicelev)
@@ -24425,6 +24460,9 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 5
 	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/upper)
 "llh" = (
@@ -24495,6 +24533,9 @@
 	},
 /obj/structure/closet/secure_closet{
 	req_one_access = list(7,47)
+	},
+/obj/structure/cable/green{
+	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/upper)
@@ -28786,6 +28827,10 @@
 	dir = 4;
 	pixel_x = 26
 	},
+/obj/item/bikehorn/rubberducky/white{
+	pixel_x = 8;
+	pixel_y = 15
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/chapel)
 "nzr" = (
@@ -31881,17 +31926,6 @@
 	},
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/xenobiology/xenoflora)
-"pbj" = (
-/obj/structure/cable/green{
-	icon_state = "0-4"
-	},
-/obj/machinery/power/apc{
-	dir = 8;
-	name = "west bump";
-	pixel_x = -24
-	},
-/turf/simulated/floor,
-/area/muriki/elevator/sciupper)
 "pbz" = (
 /obj/structure/railing{
 	dir = 1
@@ -32204,8 +32238,16 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
+/obj/machinery/power/apc{
+	dir = 4;
+	name = "east bump";
+	pixel_x = 24
+	},
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
 /turf/simulated/floor/tiled/techfloor,
-/area/maintenance/medicelev)
+/area/muriki/elevator/mediupper)
 "pjA" = (
 /obj/machinery/light{
 	dir = 4
@@ -42351,29 +42393,6 @@
 	color = "#999999"
 	},
 /area/chapel/main)
-"ukN" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/machinery/power/apc{
-	dir = 1;
-	name = "north bump";
-	pixel_y = 24
-	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/obj/structure/cable/green{
-	icon_state = "0-8"
-	},
-/turf/simulated/floor/plating,
-/area/muriki/elevator/secupper)
 "ukZ" = (
 /obj/structure/disposalpipe/segment{
 	dir = 1;
@@ -43632,6 +43651,9 @@
 /obj/structure/disposalpipe/segment,
 /obj/machinery/light/small{
 	dir = 8
+	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
 	},
 /turf/simulated/floor,
 /area/maintenance/substation/research)
@@ -46561,19 +46583,6 @@
 "wnQ" = (
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/quartermaster/mining/expl)
-"wom" = (
-/obj/structure/cable/green{
-	icon_state = "0-4"
-	},
-/obj/machinery/power/apc{
-	name = "south bump";
-	pixel_y = -24
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/turf/simulated/floor/plating,
-/area/muriki/elevator/mediupper)
 "wot" = (
 /obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
@@ -47361,9 +47370,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
-	},
-/obj/structure/cable/green{
-	icon_state = "1-8"
 	},
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -88275,7 +88281,7 @@ djf
 djf
 djf
 eGn
-rLE
+afh
 vaD
 lXn
 wuk
@@ -88437,7 +88443,7 @@ eGn
 eGn
 eGn
 mlx
-ukN
+rLE
 wZt
 xtQ
 uLa
@@ -89187,7 +89193,7 @@ cnZ
 rLy
 rLy
 csA
-wom
+rmQ
 dtu
 ydg
 ydg
@@ -89349,7 +89355,7 @@ cMG
 ffc
 iqb
 nwT
-hlg
+rmQ
 dtu
 ydg
 ydg
@@ -98555,11 +98561,11 @@ kxr
 bri
 lhQ
 bMu
-bMu
-bMu
-bMu
+afj
+afi
+afi
 uOB
-bMu
+afi
 aav
 lns
 xFb
@@ -99689,7 +99695,7 @@ kxr
 bri
 jUH
 jHp
-pbj
+jHp
 uoy
 rdU
 fRy

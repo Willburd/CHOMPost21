@@ -16954,9 +16954,8 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/rnd/research/atmosia)
 "aEF" = (
-/obj/machinery/requests_console/preset/research,
-/turf/simulated/wall/r_wall,
-/area/rnd/xenobiology/burn)
+/turf/simulated/wall,
+/area/muriki/bathroom/vr_coop)
 "aEG" = (
 /obj/effect/floor_decal/milspec/color/orange/half{
 	dir = 1
@@ -25220,9 +25219,9 @@
 	icon_state = "0-2"
 	},
 /obj/machinery/power/apc{
-	dir = 1;
-	name = "north bump";
-	pixel_y = 24
+	dir = 4;
+	name = "east bump";
+	pixel_x = 24
 	},
 /turf/simulated/floor/plating,
 /area/muriki/elevator/medibasement)
@@ -31759,7 +31758,7 @@
 	pixel_y = 2
 	},
 /obj/structure/mirror{
-	dir = 8;
+	dir = 4;
 	pixel_x = -32
 	},
 /turf/simulated/floor/tiled/kafel_full,
@@ -34535,8 +34534,8 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/cargolower)
 "bkR" = (
-/obj/item/bikehorn/rubberducky,
 /obj/structure/table/glass,
+/obj/item/bikehorn/rubberducky/gold,
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/cargolower)
 "bkS" = (
@@ -43280,13 +43279,28 @@
 /obj/effect/floor_decal/corner/red{
 	dir = 9
 	},
-/obj/machinery/power/apc{
-	dir = 8;
-	name = "west bump";
-	pixel_x = -24
+/obj/machinery/button/flasher{
+	id = "permflash";
+	name = "Brig flashes";
+	pixel_x = -39;
+	req_access = list(2);
+	pixel_y = 8
 	},
-/obj/structure/cable/green{
-	icon_state = "0-4"
+/obj/machinery/button/remote/blast_door{
+	dir = 4;
+	id = "Secure Gate";
+	name = "Prison Lockdown";
+	pixel_x = -27;
+	pixel_y = 6;
+	req_one_access = list(1)
+	},
+/obj/machinery/button/remote/blast_door{
+	dir = 4;
+	id = "brigobs";
+	name = "Observation Shutters";
+	pixel_x = -27;
+	pixel_y = -6;
+	req_access = list(2)
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/prison)
@@ -45795,23 +45809,22 @@
 /turf/simulated/floor/plating,
 /area/security/tankstore)
 "bFg" = (
+/obj/structure/table/standard,
+/obj/random/soap_common,
+/obj/random/soap_common,
+/obj/random/soap_common,
 /obj/structure/cable/green{
-	icon_state = "1-2"
+	icon_state = "1-4"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden,
-/obj/effect/floor_decal/corner/red{
-	dir = 6
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/cable/green{
-	icon_state = "2-8"
+	icon_state = "9-10"
 	},
-/obj/effect/floor_decal/steeldecal/steel_decals_central7{
-	dir = 4
+/obj/structure/cable/green{
+	icon_state = "6-10"
 	},
-/turf/simulated/floor/tiled/dark,
-/area/security/prison)
+/obj/machinery/light/fluorescent,
+/turf/simulated/floor/tiled/kafel_full,
+/area/muriki/bathroom/vr_coop)
 "bFh" = (
 /obj/structure/sign/yessmoking_1{
 	pixel_y = 32
@@ -46691,11 +46704,9 @@
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology/hallway)
 "bGJ" = (
-/obj/machinery/power/apc{
-	name = "south bump";
-	pixel_y = -24
+/obj/structure/cable/green{
+	icon_state = "1-8"
 	},
-/obj/structure/cable/green,
 /turf/simulated/floor/plating,
 /area/muriki/elevator/scibase)
 "bGK" = (
@@ -46824,15 +46835,6 @@
 /area/rnd/xenobiology)
 "bGS" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/power/apc{
-	cell_type = /obj/item/cell/super;
-	dir = 8;
-	name = "west bump";
-	pixel_x = -24
-	},
-/obj/structure/cable/green{
-	icon_state = "0-2"
-	},
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
@@ -46841,7 +46843,7 @@
 	},
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
-/area/muriki/elevator/secbase)
+/area/maintenance/secelevbasement)
 "bGT" = (
 /turf/simulated/mineral/alt/turfpack/muriki,
 /area/mine/unexplored/muriki/cave/underdark_pit/east_civ)
@@ -47345,22 +47347,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/incinerator)
-"bHR" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/machinery/door/airlock/maintenance/int,
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
-/area/maintenance/spine/civ)
 "bHS" = (
 /obj/machinery/meter,
 /obj/machinery/atmospherics/pipe/simple/hidden/red{
@@ -51788,11 +51774,6 @@
 /obj/machinery/door/airlock/maintenance/int,
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/maintenance/spine/civ)
-"bQG" = (
-/turf/simulated/wall{
-	can_open = 1
-	},
-/area/muriki/crew/vr_train)
 "bQH" = (
 /obj/structure/disposalpipe/segment{
 	dir = 1;
@@ -55314,22 +55295,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/maintenance/atmos_control)
-"bXK" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 8
-	},
-/obj/random/junk,
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/spine/civ)
 "bXL" = (
 /obj/structure/disposalpipe/segment{
 	dir = 8;
@@ -55375,15 +55340,6 @@
 	},
 /obj/random/junk,
 /turf/simulated/floor/plating,
-/area/maintenance/spine/civ)
-"bXP" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/random/junk,
-/turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/spine/civ)
 "bXQ" = (
 /obj/structure/disposalpipe/segment{
@@ -57061,12 +57017,6 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/liminaltoobs)
-"cbo" = (
-/obj/machinery/atmospherics/unary/vent_scrubber/on,
-/obj/machinery/vr_sleeper,
-/obj/effect/floor_decal/industrial/outline/blue,
-/turf/simulated/floor/tiled/dark,
-/area/muriki/crew/vr_train)
 "cbp" = (
 /obj/structure/disposalpipe/segment{
 	dir = 8;
@@ -66711,27 +66661,10 @@
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/spine/civ)
 "cAg" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
+/turf/simulated/wall{
+	can_open = 1
 	},
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 9
-	},
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/spine/civ)
-"cAh" = (
-/obj/machinery/meter,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 6
-	},
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/spine/civ)
+/area/muriki/bathroom/vr_coop)
 "cAi" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 8
@@ -67003,6 +66936,1162 @@
 /obj/structure/closet/tent/B,
 /turf/simulated/floor/wood/turfpack/muriki,
 /area/specialty/stowaway_clubhouse)
+"cBf" = (
+/obj/structure/catwalk,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/machinery/power/apc{
+	dir = 4;
+	name = "east bump";
+	pixel_x = 24
+	},
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
+/turf/simulated/floor/plating,
+/area/muriki/elevator/secbase)
+"cBg" = (
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/effect/floor_decal/corner/red{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/power/apc{
+	dir = 4;
+	name = "east bump";
+	pixel_x = 24
+	},
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/security/prison)
+"cBh" = (
+/obj/machinery/power/apc{
+	cell_type = /obj/item/cell/super;
+	dir = 8;
+	name = "west bump";
+	pixel_x = -24
+	},
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/plating,
+/area/muriki/elevator/scibase)
+"cBi" = (
+/obj/machinery/shower{
+	dir = 1
+	},
+/obj/structure/curtain/open/shower,
+/obj/effect/floor_decal/spline/plain{
+	dir = 1;
+	icon_state = "spline_plain_full"
+	},
+/obj/structure/window/reinforced/tinted/frosted{
+	dir = 8
+	},
+/obj/structure/cable/green{
+	icon_state = "8-9"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
+/obj/structure/cable/green{
+	icon_state = "2-10"
+	},
+/obj/structure/cable/green{
+	icon_state = "2-6"
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/muriki/bathroom/vr_coop)
+"cBj" = (
+/obj/machinery/shower{
+	dir = 1
+	},
+/obj/structure/curtain/open/shower,
+/obj/effect/floor_decal/spline/plain{
+	dir = 1;
+	icon_state = "spline_plain_full"
+	},
+/obj/structure/window/reinforced/tinted/frosted{
+	dir = 8
+	},
+/obj/structure/cable/green{
+	icon_state = "5-9"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "6-10"
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/muriki/bathroom/vr_coop)
+"cBk" = (
+/obj/machinery/shower{
+	dir = 1
+	},
+/obj/structure/curtain/open/shower,
+/obj/effect/floor_decal/spline/plain{
+	dir = 1;
+	icon_state = "spline_plain_full"
+	},
+/obj/structure/window/reinforced/tinted/frosted{
+	dir = 8
+	},
+/obj/structure/cable/green{
+	icon_state = "1-6"
+	},
+/obj/structure/cable/green{
+	icon_state = "8-10"
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/muriki/bathroom/vr_coop)
+"cBl" = (
+/obj/machinery/shower{
+	dir = 1
+	},
+/obj/structure/curtain/open/shower,
+/obj/effect/floor_decal/spline/plain{
+	dir = 1;
+	icon_state = "spline_plain_full"
+	},
+/obj/structure/window/reinforced/tinted/frosted{
+	dir = 8
+	},
+/obj/structure/cable/green{
+	icon_state = "4-9"
+	},
+/obj/structure/cable/green{
+	icon_state = "6-10"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/muriki/bathroom/vr_coop)
+"cBm" = (
+/obj/machinery/shower{
+	dir = 1
+	},
+/obj/structure/curtain/open/shower,
+/obj/effect/floor_decal/spline/plain{
+	dir = 1;
+	icon_state = "spline_plain_full"
+	},
+/obj/structure/window/reinforced/tinted/frosted{
+	dir = 8
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "5-9"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-10"
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/muriki/bathroom/vr_coop)
+"cBn" = (
+/obj/machinery/shower{
+	dir = 1
+	},
+/obj/structure/curtain/open/shower,
+/obj/effect/floor_decal/spline/plain{
+	dir = 1;
+	icon_state = "spline_plain_full"
+	},
+/obj/structure/window/reinforced/tinted/frosted{
+	dir = 8
+	},
+/obj/structure/cable/green{
+	icon_state = "1-5"
+	},
+/obj/structure/cable/green{
+	icon_state = "4-5"
+	},
+/obj/structure/cable/green{
+	icon_state = "4-10"
+	},
+/obj/structure/cable/green{
+	icon_state = "6-10"
+	},
+/obj/structure/cable/green{
+	icon_state = "2-6"
+	},
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
+/obj/structure/bed/chair{
+	dir = 8;
+	pixel_x = 8
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/muriki/bathroom/vr_coop)
+"cBo" = (
+/obj/structure/closet/emcloset,
+/turf/simulated/floor/tiled/techfloor,
+/area/maintenance/spine/civ)
+"cBp" = (
+/obj/structure/closet/firecloset,
+/turf/simulated/floor/tiled/techfloor,
+/area/maintenance/spine/civ)
+"cBq" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/structure/closet/secure_closet/personal,
+/obj/structure/cable/green{
+	icon_state = "2-10"
+	},
+/obj/structure/cable/green{
+	icon_state = "2-6"
+	},
+/obj/structure/cable/green{
+	icon_state = "8-9"
+	},
+/obj/structure/cable/green{
+	icon_state = "8-10"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-9"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-5"
+	},
+/obj/structure/cable/green{
+	icon_state = "4-5"
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/muriki/bathroom/vr_coop)
+"cBr" = (
+/obj/structure/closet/secure_closet/personal,
+/obj/structure/cable/green{
+	icon_state = "6-10"
+	},
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "2-4"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/muriki/bathroom/vr_coop)
+"cBs" = (
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
+/obj/structure/cable/green{
+	icon_state = "2-9"
+	},
+/obj/structure/cable/green{
+	icon_state = "2-10"
+	},
+/obj/structure/closet/secure_closet/personal,
+/turf/simulated/floor/tiled/kafel_full,
+/area/muriki/bathroom/vr_coop)
+"cBt" = (
+/obj/structure/cable/green{
+	icon_state = "5-6"
+	},
+/obj/structure/cable/green{
+	icon_state = "2-4"
+	},
+/obj/structure/cable/green{
+	icon_state = "9-10"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/muriki/bathroom/vr_coop)
+"cBu" = (
+/obj/effect/floor_decal/steeldecal/steel_decals3{
+	dir = 8
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals3{
+	dir = 9
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/muriki/bathroom/vr_coop)
+"cBv" = (
+/obj/effect/floor_decal/steeldecal/steel_decals3{
+	dir = 8
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals3{
+	dir = 9
+	},
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
+/obj/structure/cable/green{
+	icon_state = "9-10"
+	},
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/muriki/bathroom/vr_coop)
+"cBw" = (
+/obj/effect/floor_decal/steeldecal/steel_decals3{
+	dir = 8
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals3{
+	dir = 9
+	},
+/obj/structure/cable/green{
+	icon_state = "1-6"
+	},
+/obj/structure/cable/green{
+	icon_state = "2-9"
+	},
+/obj/structure/cable/green{
+	icon_state = "8-10"
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/muriki/bathroom/vr_coop)
+"cBx" = (
+/obj/effect/floor_decal/steeldecal/steel_decals3{
+	dir = 8
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals3{
+	dir = 9
+	},
+/obj/structure/cable/green{
+	icon_state = "1-6"
+	},
+/obj/structure/cable/green{
+	icon_state = "4-5"
+	},
+/obj/structure/cable/green{
+	icon_state = "2-9"
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/muriki/bathroom/vr_coop)
+"cBy" = (
+/obj/effect/floor_decal/steeldecal/steel_decals3{
+	dir = 8
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals3{
+	dir = 9
+	},
+/obj/structure/cable/green{
+	icon_state = "1-5"
+	},
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/muriki/bathroom/vr_coop)
+"cBz" = (
+/obj/effect/floor_decal/steeldecal/steel_decals3{
+	dir = 8
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals3{
+	dir = 9
+	},
+/obj/structure/cable/green{
+	icon_state = "2-5"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-10"
+	},
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/muriki/bathroom/vr_coop)
+"cBA" = (
+/obj/structure/cable/pink{
+	icon_state = "1-6"
+	},
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/maintenance/spine/civ)
+"cBB" = (
+/obj/structure/cable/pink{
+	icon_state = "1-10"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/maintenance/spine/civ)
+"cBC" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/machinery/door/airlock/maintenance/common,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/muriki/bathroom/vr_coop)
+"cBD" = (
+/obj/structure/cable/green{
+	icon_state = "5-9"
+	},
+/obj/structure/cable/green{
+	icon_state = "8-9"
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/muriki/bathroom/vr_coop)
+"cBE" = (
+/obj/structure/cable/green{
+	icon_state = "2-5"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/muriki/bathroom/vr_coop)
+"cBF" = (
+/obj/structure/cable/green{
+	icon_state = "2-4"
+	},
+/obj/structure/cable/green{
+	icon_state = "5-10"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/muriki/bathroom/vr_coop)
+"cBG" = (
+/obj/structure/cable/green{
+	icon_state = "4-10"
+	},
+/obj/structure/cable/green{
+	icon_state = "5-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "2-9"
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/muriki/bathroom/vr_coop)
+"cBH" = (
+/obj/structure/window/reinforced/tinted/frosted{
+	dir = 1
+	},
+/obj/structure/table/standard,
+/obj/structure/window/reinforced/tinted/frosted{
+	dir = 8
+	},
+/obj/item/towel/random,
+/obj/item/towel/random,
+/obj/item/towel/random,
+/obj/item/towel/random,
+/obj/item/towel/random,
+/obj/item/towel/random,
+/obj/structure/cable/green{
+	icon_state = "6-10"
+	},
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "4-9"
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/muriki/bathroom/vr_coop)
+"cBI" = (
+/obj/structure/window/reinforced/tinted/frosted{
+	dir = 1
+	},
+/obj/structure/table/standard,
+/obj/structure/cable/green{
+	icon_state = "2-6"
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/muriki/bathroom/vr_coop)
+"cBJ" = (
+/obj/structure/window/reinforced/tinted/frosted{
+	dir = 1
+	},
+/obj/structure/table/standard,
+/obj/structure/cable/green{
+	icon_state = "2-5"
+	},
+/obj/structure/cable/green{
+	icon_state = "6-8"
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/muriki/bathroom/vr_coop)
+"cBK" = (
+/obj/structure/window/reinforced/tinted/frosted{
+	dir = 1
+	},
+/obj/structure/cable/green{
+	icon_state = "2-5"
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/muriki/bathroom/vr_coop)
+"cBL" = (
+/obj/structure/window/reinforced/tinted/frosted{
+	dir = 1
+	},
+/obj/structure/cable/green{
+	icon_state = "1-6"
+	},
+/obj/structure/cable/green{
+	icon_state = "2-10"
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/muriki/bathroom/vr_coop)
+"cBM" = (
+/obj/structure/window/reinforced/tinted/frosted{
+	dir = 1
+	},
+/obj/structure/cable/green{
+	icon_state = "1-6"
+	},
+/obj/structure/cable/green{
+	icon_state = "2-9"
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/muriki/bathroom/vr_coop)
+"cBN" = (
+/obj/structure/cable/pink{
+	icon_state = "2-6"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/maintenance/spine/civ)
+"cBO" = (
+/obj/structure/cable/pink{
+	icon_state = "2-10"
+	},
+/obj/structure/railing{
+	dir = 8
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/spine/civ)
+"cBP" = (
+/obj/machinery/disposal,
+/obj/structure/disposalpipe/trunk{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/muriki/bathroom/vr_coop)
+"cBQ" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "9-10"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-6"
+	},
+/obj/structure/cable/green{
+	icon_state = "4-5"
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/muriki/bathroom/vr_coop)
+"cBR" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
+/obj/structure/cable/green{
+	icon_state = "4-5"
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/muriki/bathroom/vr_coop)
+"cBS" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/muriki/bathroom/vr_coop)
+"cBT" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/muriki/bathroom/vr_coop)
+"cBU" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-9"
+	},
+/obj/structure/cable/green{
+	icon_state = "5-8"
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/muriki/bathroom/vr_coop)
+"cBV" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "5-8"
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/muriki/bathroom/vr_coop)
+"cBW" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/obj/structure/cable/green{
+	icon_state = "4-10"
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/muriki/bathroom/vr_coop)
+"cBX" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/obj/structure/cable/green{
+	icon_state = "6-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "2-10"
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/muriki/bathroom/vr_coop)
+"cBY" = (
+/obj/structure/closet/emcloset,
+/obj/structure/cable/green{
+	icon_state = "2-9"
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/muriki/bathroom/vr_coop)
+"cBZ" = (
+/obj/structure/cable/green{
+	icon_state = "6-10"
+	},
+/obj/structure/cable/green{
+	icon_state = "9-10"
+	},
+/obj/structure/cable/green{
+	icon_state = "4-9"
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/muriki/bathroom/vr_coop)
+"cCa" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
+	},
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "4-5"
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/muriki/bathroom/vr_coop)
+"cCb" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "8-10"
+	},
+/obj/structure/cable/green{
+	icon_state = "2-9"
+	},
+/obj/structure/cable/green{
+	icon_state = "4-5"
+	},
+/obj/structure/cable/green{
+	icon_state = "4-6"
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/muriki/bathroom/vr_coop)
+"cCc" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/structure/cable/green{
+	icon_state = "1-9"
+	},
+/obj/structure/cable/green{
+	icon_state = "2-5"
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals3{
+	dir = 10
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals3{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/muriki/bathroom/vr_coop)
+"cCd" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/item/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 24
+	},
+/obj/structure/cable/green{
+	icon_state = "5-6"
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/muriki/bathroom/vr_coop)
+"cCe" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/effect/floor_decal/steeldecal/steel_decals3{
+	dir = 10
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals3{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/muriki/bathroom/vr_coop)
+"cCf" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "9-10"
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals3{
+	dir = 1
+	},
+/obj/machinery/light/no_nightshift{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/muriki/bathroom/vr_coop)
+"cCg" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable/green{
+	icon_state = "9-10"
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/muriki/bathroom/vr_coop)
+"cCh" = (
+/obj/structure/cable/green{
+	icon_state = "6-9"
+	},
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = 26
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/muriki/bathroom/vr_coop)
+"cCi" = (
+/obj/machinery/door/firedoor/multi_tile/glass,
+/obj/machinery/door/airlock/multi_tile/metal{
+	name = "Co-Op Mode"
+	},
+/turf/simulated/floor/tiled/old_cargo/white,
+/area/muriki/bathroom/vr_coop)
+"cCj" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/tiled/old_cargo/white,
+/area/muriki/bathroom/vr_coop)
+"cCk" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/green{
+	icon_state = "5-6"
+	},
+/obj/structure/cable/green{
+	icon_state = "2-9"
+	},
+/obj/machinery/door/airlock/silver{
+	name = "Story Mode";
+	id_tag = "storymode"
+	},
+/turf/simulated/floor/tiled/old_cargo/white,
+/area/muriki/bathroom/vr_coop)
+"cCl" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/green{
+	icon_state = "6-10"
+	},
+/obj/machinery/door/airlock/silver{
+	name = "Singleplayer"
+	},
+/turf/simulated/floor/tiled/old_cargo/white,
+/area/muriki/bathroom/vr_coop)
+"cCm" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/disposalpipe/segment,
+/obj/machinery/power/apc{
+	dir = 8;
+	name = "west bump";
+	pixel_x = -24
+	},
+/obj/structure/cable/green{
+	icon_state = "1-5"
+	},
+/obj/structure/cable/green{
+	icon_state = "0-10"
+	},
+/obj/structure/cable/green{
+	icon_state = "4-6"
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/muriki/bathroom/vr_coop)
+"cCn" = (
+/obj/machinery/alarm{
+	dir = 8;
+	pixel_x = 26
+	},
+/obj/structure/cable/green{
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/muriki/bathroom/vr_coop)
+"cCo" = (
+/obj/structure/toilet{
+	name = "Player One"
+	},
+/obj/structure/handrail{
+	dir = 4
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/muriki/bathroom/vr_coop)
+"cCp" = (
+/obj/structure/toilet{
+	name = "Player Two"
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/muriki/bathroom/vr_coop)
+"cCq" = (
+/obj/structure/toilet,
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/structure/handrail{
+	dir = 4
+	},
+/obj/machinery/button/remote/airlock{
+	id = "storymode";
+	name = "Door Bolt Control";
+	pixel_x = -26;
+	specialfunctions = 4;
+	pixel_y = -8;
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "5-6"
+	},
+/obj/structure/cable/green{
+	icon_state = "5-10"
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/muriki/bathroom/vr_coop)
+"cCr" = (
+/obj/structure/toilet,
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/structure/handrail{
+	dir = 4
+	},
+/obj/machinery/light/small/emergency{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/muriki/bathroom/vr_coop)
+"cCs" = (
+/obj/machinery/door/firedoor/multi_tile/glass,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable/green{
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/muriki/bathroom/vr_coop)
+"cCt" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable/green{
+	icon_state = "1-6"
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/muriki/bathroom/vr_coop)
+"cCu" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/obj/structure/cable/green{
+	icon_state = "2-6"
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/muriki/bathroom/vr_coop)
+"cCv" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/light_switch{
+	dir = 8;
+	pixel_x = 25;
+	pixel_y = -27
+	},
+/obj/structure/cable/green{
+	icon_state = "2-9"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/muriki/bathroom/vr_coop)
+"cCw" = (
+/obj/machinery/door/firedoor,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/door/airlock{
+	name = "Struggle Simulator"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/steel_ridged,
+/area/muriki/bathroom/vr_coop)
+"cCx" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/vr_train)
+"cCy" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "0-2"
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "0-4"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/spine/civ)
+"cCz" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
+/obj/effect/auto_crayon{
+	icon_state = "down"
+	},
+/obj/random/junk,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/spine/civ)
+"cCA" = (
+/obj/structure/cable/green{
+	icon_state = "6-8"
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/muriki/bathroom/vr_coop)
+"cCB" = (
+/obj/machinery/hologram/holopad,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/green{
+	icon_state = "1-10"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/vr_train)
+"cCC" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/obj/machinery/meter,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/spine/civ)
+"cCD" = (
+/obj/structure/cable/green{
+	icon_state = "1-10"
+	},
+/obj/structure/cable/green{
+	icon_state = "6-8"
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/muriki/bathroom/vr_coop)
+"cCE" = (
+/obj/structure/sink{
+	dir = 4;
+	pixel_x = 11
+	},
+/obj/structure/mirror{
+	dir = 8;
+	pixel_x = 28
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/muriki/bathroom/vr_coop)
+"cCF" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/green{
+	icon_state = "2-5"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/vr_train)
+"cCG" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/vr_train)
+"cCH" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/vr_train)
+"cCI" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/structure/cable/green{
+	icon_state = "4-10"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/vr_train)
+"cCJ" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/vr_train)
+"cCK" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/vr_train)
 "cCT" = (
 /obj/effect/floor_decal/corner/blue/full{
 	dir = 8
@@ -67374,19 +68463,16 @@
 /turf/simulated/floor/wood/alt,
 /area/maintenance/oldbridge)
 "dcc" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 8
+/obj/structure/urinal{
+	dir = 4;
+	pixel_x = -32
 	},
-/obj/effect/floor_decal/corner/lightgrey/border{
-	dir = 8
+/obj/structure/window/reinforced/tinted/frosted,
+/obj/structure/cable/green{
+	icon_state = "4-5"
 	},
-/obj/structure/closet/secure_closet/personal,
-/obj/machinery/camera/network/civilian{
-	c_tag = "CIV - VR Trainer Lockers";
-	dir = 5
-	},
-/turf/simulated/floor/tiled/dark,
-/area/muriki/crew/vr_train)
+/turf/simulated/floor/tiled/kafel_full,
+/area/muriki/bathroom/vr_coop)
 "dcz" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -67919,16 +69005,14 @@
 /turf/simulated/floor/wood/alt,
 /area/maintenance/oldbridge)
 "dFH" = (
-/obj/structure/closet/secure_closet/personal,
-/obj/effect/floor_decal/borderfloor{
-	dir = 6
+/obj/structure/cable/green{
+	icon_state = "9-10"
 	},
-/obj/effect/floor_decal/corner/lightgrey/border{
-	dir = 6
+/obj/structure/cable/green{
+	icon_state = "2-8"
 	},
-/obj/machinery/light,
-/turf/simulated/floor/tiled/dark,
-/area/muriki/crew/vr_train)
+/turf/simulated/floor/tiled/kafel_full,
+/area/muriki/bathroom/vr_coop)
 "dGB" = (
 /obj/structure/closet{
 	name = "materials"
@@ -70275,16 +71359,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/medical/autosleever)
-"gkn" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 10
-	},
-/obj/effect/floor_decal/corner/lightgrey/border{
-	dir = 10
-	},
-/obj/structure/closet/secure_closet/personal,
-/turf/simulated/floor/tiled/dark,
-/area/muriki/crew/vr_train)
 "glC" = (
 /obj/structure/table/steel,
 /obj/structure/sign/nosmoking_1{
@@ -72942,13 +74016,13 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/lowmain)
 "jqh" = (
+/obj/structure/reagent_dispensers/water_cooler/full,
 /obj/effect/floor_decal/borderfloor{
 	dir = 10
 	},
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 10
 	},
-/obj/structure/reagent_dispensers/water_cooler/full,
 /turf/simulated/floor/tiled/dark,
 /area/muriki/crew/vr_train)
 "jqz" = (
@@ -73120,15 +74194,10 @@
 /turf/simulated/floor/wood,
 /area/crew_quarters/fitness)
 "jyh" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 8
-	},
-/obj/effect/floor_decal/corner/lightgrey/border{
-	dir = 8
-	},
-/obj/structure/closet/secure_closet/personal,
-/turf/simulated/floor/tiled/dark,
-/area/muriki/crew/vr_train)
+/obj/machinery/recharge_station,
+/obj/machinery/light,
+/turf/simulated/floor/tiled/kafel_full,
+/area/muriki/bathroom/vr_coop)
 "jzW" = (
 /obj/effect/map_effect/interval/effect_emitter/smoke/mist/passive,
 /turf/simulated/floor/water/acidic/indoor/turfpack/muriki,
@@ -74175,12 +75244,6 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 5
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 6
-	},
 /obj/structure/cable/green{
 	icon_state = "2-4"
 	},
@@ -74189,6 +75252,15 @@
 	},
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/muriki/crew/vr_train)
@@ -75064,16 +76136,6 @@
 /obj/machinery/microwave,
 /turf/simulated/floor/wood/alt,
 /area/maintenance/oldbridge)
-"lAb" = (
-/obj/structure/disposalpipe/segment,
-/obj/effect/floor_decal/borderfloor/corner{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/lightgrey/bordercorner{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/dark,
-/area/muriki/crew/vr_train)
 "lAI" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -76246,6 +77308,15 @@
 	dir = 4
 	},
 /obj/machinery/hologram/holopad,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/muriki/crew/vr_train)
 "nab" = (
@@ -76880,15 +77951,14 @@
 /turf/simulated/floor/tiled,
 /area/rnd/research/anomaly)
 "nUy" = (
-/obj/structure/closet/secure_closet/personal,
-/obj/effect/floor_decal/borderfloor{
-	dir = 4
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
 	},
-/obj/effect/floor_decal/corner/lightgrey/border{
-	dir = 4
+/obj/structure/cable/green{
+	icon_state = "1-9"
 	},
-/turf/simulated/floor/tiled/dark,
-/area/muriki/crew/vr_train)
+/turf/simulated/floor/tiled/kafel_full,
+/area/muriki/bathroom/vr_coop)
 "nUH" = (
 /obj/machinery/recharge_station,
 /obj/structure/cable/green{
@@ -77097,16 +78167,6 @@
 	},
 /turf/simulated/floor/tiled/dark/turfpack/muriki,
 /area/maintenance/cargo)
-"ogB" = (
-/obj/structure/window/basic{
-	dir = 4
-	},
-/obj/structure/window/basic{
-	dir = 8
-	},
-/obj/structure/grille,
-/turf/simulated/floor/plating,
-/area/muriki/crew/vr_train)
 "ohs" = (
 /obj/structure/window/maintenance_panel{
 	dir = 8
@@ -78002,12 +79062,30 @@
 /turf/simulated/floor/tiled/dark,
 /area/maintenance/cave)
 "phM" = (
-/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/disposalpipe/junction{
+	dir = 1;
+	icon_state = "pipe-j2"
+	},
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 8
 	},
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/lightgrey/bordercorner{
+	dir = 1
+	},
 /obj/effect/floor_decal/corner/lightgrey/bordercorner{
 	dir = 8
+	},
+/obj/structure/cable/green{
+	icon_state = "5-8"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/muriki/crew/vr_train)
@@ -82231,17 +83309,6 @@
 	},
 /turf/simulated/floor/wood/alt,
 /area/maintenance/oldbridge)
-"tHL" = (
-/obj/structure/window/basic{
-	dir = 4
-	},
-/obj/structure/window/basic{
-	dir = 8
-	},
-/obj/structure/window/basic,
-/obj/structure/grille,
-/turf/simulated/floor/plating,
-/area/muriki/crew/vr_train)
 "tHM" = (
 /turf/simulated/floor/flesh/turfpack/muriki,
 /area/muriki/processor)
@@ -83206,14 +84273,18 @@
 /turf/simulated/floor/tiled/dark,
 /area/maintenance/cave)
 "uKK" = (
-/obj/effect/floor_decal/borderfloor{
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -8;
+	pixel_y = 30
+	},
+/obj/structure/cable/green{
+	icon_state = "2-10"
+	},
+/obj/machinery/light{
 	dir = 1
 	},
-/obj/effect/floor_decal/corner/lightgrey/border{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/dark,
-/area/muriki/crew/vr_train)
+/turf/simulated/floor/tiled/kafel_full,
+/area/muriki/bathroom/vr_coop)
 "uLI" = (
 /turf/simulated/wall,
 /area/mine/explored/muriki/cave/med/west_access)
@@ -83384,18 +84455,19 @@
 /turf/simulated/floor/tiled/milspec,
 /area/medical/robotics)
 "uXo" = (
-/obj/structure/closet/secure_closet/personal,
-/obj/effect/floor_decal/borderfloor{
-	dir = 5
+/obj/structure/sink{
+	dir = 4;
+	pixel_x = 11
 	},
-/obj/effect/floor_decal/corner/lightgrey/border{
-	dir = 5
+/obj/structure/mirror{
+	dir = 8;
+	pixel_x = 28
 	},
-/obj/machinery/light{
-	dir = 1
+/obj/machinery/alarm{
+	pixel_y = 26
 	},
-/turf/simulated/floor/tiled/dark,
-/area/muriki/crew/vr_train)
+/turf/simulated/floor/tiled/kafel_full,
+/area/muriki/bathroom/vr_coop)
 "uXX" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -83696,19 +84768,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay2)
-"vpZ" = (
-/obj/structure/window/basic{
-	dir = 4
-	},
-/obj/structure/window/basic{
-	dir = 8
-	},
-/obj/structure/window/basic{
-	dir = 1
-	},
-/obj/structure/grille,
-/turf/simulated/floor/plating,
-/area/muriki/crew/vr_train)
 "vqa" = (
 /obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/wall,
@@ -85107,14 +86166,20 @@
 /turf/simulated/floor/plating,
 /area/engineering/atmos)
 "wSA" = (
-/obj/effect/floor_decal/borderfloor/corner{
-	dir = 4
+/obj/structure/sink{
+	dir = 4;
+	pixel_x = 11
 	},
-/obj/effect/floor_decal/corner/lightgrey/bordercorner{
-	dir = 4
+/obj/structure/mirror{
+	dir = 8;
+	pixel_x = 28
 	},
-/turf/simulated/floor/tiled/dark,
-/area/muriki/crew/vr_train)
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/structure/cable/green{
+	icon_state = "2-9"
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/muriki/bathroom/vr_coop)
 "wSG" = (
 /obj/effect/catwalk_plated/dark,
 /obj/structure/railing{
@@ -86088,19 +87153,13 @@
 /turf/simulated/wall,
 /area/hallway/muriki/dorm)
 "ydN" = (
-/obj/structure/extinguisher_cabinet{
+/obj/structure/urinal{
 	dir = 4;
-	pixel_x = -30
+	pixel_x = -32
 	},
-/obj/effect/floor_decal/borderfloor{
-	dir = 9
-	},
-/obj/effect/floor_decal/corner/lightgrey/border{
-	dir = 9
-	},
-/obj/structure/closet/secure_closet/personal,
-/turf/simulated/floor/tiled/dark,
-/area/muriki/crew/vr_train)
+/obj/structure/window/reinforced/tinted/frosted,
+/turf/simulated/floor/tiled/kafel_full,
+/area/muriki/bathroom/vr_coop)
 "ydP" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/red,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -123934,8 +124993,8 @@ bpn
 bqg
 bqT
 brG
-bFg
 brG
+cBg
 btG
 buv
 buY
@@ -124589,7 +125648,7 @@ bux
 buZ
 byn
 bvV
-bvV
+cBf
 bGS
 bzd
 aHt
@@ -130214,7 +131273,7 @@ bQx
 aKP
 aKP
 aKP
-bHR
+bQv
 aKP
 aKP
 aKP
@@ -130374,13 +131433,13 @@ cch
 bJO
 aUC
 aKP
-aKP
+bKB
 aKP
 bQv
-aKP
-vka
-vka
-vka
+clD
+cBN
+cBA
+cBo
 alY
 iCG
 aiy
@@ -130535,14 +131594,14 @@ gsI
 gsI
 gsI
 cci
-cch
 bJJ
+bIw
 bIw
 bQr
 aKP
-vka
-vka
-vka
+cBO
+cBB
+cBp
 alY
 ivA
 aiy
@@ -130694,17 +131753,17 @@ gsI
 bTH
 gsI
 gsI
-axL
 aKP
 aKP
 aKP
 aCv
-aKP
-aKP
-aKP
-vka
-vka
-vka
+aEF
+aEF
+aEF
+aEF
+aEF
+cBC
+aEF
 alY
 ivA
 ajK
@@ -130857,16 +131916,16 @@ bsp
 bKB
 aKP
 axL
-axL
-axL
+aKP
 aKP
 bQv
-aKP
-vka
-vka
-vka
-vka
-vka
+aEF
+cCo
+cCi
+cBZ
+cBP
+cBD
+cBq
 alY
 mhU
 wSG
@@ -131019,16 +132078,16 @@ fxd
 iWQ
 aKP
 axL
-axL
-axL
 aKP
-bXK
-aKP
-vka
-vka
-vka
-vka
-vka
+cCy
+bQr
+aEF
+cCp
+cCj
+cCa
+cBQ
+cBE
+cBr
 alY
 alY
 alY
@@ -131180,19 +132239,19 @@ aKP
 aKP
 aKP
 aKP
-axL
-axL
 aKP
 aKP
 cAf
 aKP
-vka
-vka
-vka
-vka
-vka
-vka
-vka
+aEF
+aEF
+aEF
+cCb
+cBR
+cBF
+cBs
+aEF
+aEF
 vka
 vka
 vka
@@ -131343,18 +132402,18 @@ bQP
 aMb
 aKP
 aKP
-aKP
-aKP
-cAh
+cCC
+cCz
+bKB
 cAg
-aKP
-vka
-vka
-vka
-vka
-vka
-vka
-vka
+cCq
+cCk
+cCc
+cBS
+cBG
+cBt
+bFg
+aEF
 vka
 vka
 vka
@@ -131504,19 +132563,19 @@ bQY
 aKP
 aXx
 bQF
-bQC
-bXP
 crj
 bJU
 bXL
 aKP
-vka
-vka
-vka
-vka
-vka
-vka
-vka
+aEF
+aEF
+aEF
+cCd
+cBT
+cBH
+cBu
+cBi
+aEF
 vka
 vka
 vka
@@ -131665,20 +132724,20 @@ aKP
 bRq
 aKP
 aKP
-fpG
-fpG
-fpG
-fpG
-fpG
-fpG
-fpG
-fpG
-vka
-vka
-vka
-vka
-vka
-vka
+aEF
+aEF
+aEF
+aEF
+aEF
+aEF
+cCr
+cCl
+cCe
+cBU
+cBI
+cBv
+cBj
+aEF
 vka
 vka
 vka
@@ -131827,20 +132886,20 @@ xST
 bQY
 cbO
 aKP
-fpG
+aEF
 ydN
-jyh
+dcc
 dcc
 jyh
-jyh
-gkn
-fpG
-vka
-vka
-vka
-vka
-vka
-vka
+aEF
+aEF
+aEF
+cCf
+cBV
+cBJ
+cBw
+cBk
+aEF
 vka
 vka
 vka
@@ -131989,20 +133048,20 @@ clA
 bQZ
 cbP
 bQM
-bQG
+cAg
 uKK
-oxh
-oxh
-oxh
-oxh
-cRo
-fpG
-vka
-vka
-vka
-vka
-vka
-vka
+cCD
+cCA
+cCu
+cCt
+cCs
+cCm
+cCg
+cBW
+cBK
+cBx
+cBl
+aEF
 vka
 vka
 vka
@@ -132151,20 +133210,20 @@ aKP
 aKP
 aKP
 fpG
-fpG
+aEF
 uXo
-nUy
+cCE
 wSA
-gsY
+cCv
 nUy
 dFH
-fpG
-fpG
-vka
-vka
-vka
-vka
-vka
+cCn
+cCh
+cBX
+cBL
+cBy
+cBm
+aEF
 vka
 vka
 vka
@@ -132313,20 +133372,20 @@ aKP
 axL
 fpG
 fpG
-fpG
-ogB
-tHL
-uKK
-cRo
-vpZ
-ogB
-fpG
-fpG
-vka
-vka
-vka
-vka
-vka
+aEF
+aEF
+aEF
+aEF
+cCw
+aEF
+aEF
+aEF
+aEF
+cBY
+cBM
+cBz
+cBn
+aEF
 vka
 vka
 vka
@@ -132478,17 +133537,17 @@ crQ
 teD
 eDP
 sfF
-lAb
+sfF
 phM
 sfF
 vEQ
 jqh
 fpG
-vka
-vka
-vka
-vka
-vka
+aEF
+aEF
+aEF
+aEF
+aEF
 vka
 vka
 vka
@@ -132638,11 +133697,11 @@ aKP
 fpG
 crQ
 dEE
-rFZ
+cCH
+cCF
+cCB
+cCx
 oxh
-oxh
-oxh
-rjB
 rFZ
 opV
 fpG
@@ -132800,7 +133859,7 @@ aKP
 fpG
 crQ
 teD
-rFZ
+cCI
 eMH
 qiI
 teD
@@ -132962,7 +134021,7 @@ xST
 fpG
 crQ
 wZu
-rFZ
+cCJ
 eMH
 pzn
 teD
@@ -133124,7 +134183,7 @@ bKB
 fpG
 crQ
 teD
-rFZ
+cCJ
 eMH
 pzn
 teD
@@ -133448,7 +134507,7 @@ aKP
 fpG
 crQ
 teD
-rFZ
+cCJ
 eMH
 pzn
 teD
@@ -133610,7 +134669,7 @@ aKP
 fpG
 crQ
 ptZ
-rFZ
+cCJ
 eMH
 pzn
 kJi
@@ -133772,7 +134831,7 @@ bKB
 fpG
 crQ
 teD
-rFZ
+cCJ
 eMH
 aDn
 teD
@@ -133934,11 +134993,11 @@ xST
 fpG
 crQ
 uzC
-rFZ
-oxh
-oxh
-oxh
+cCK
+cCG
 rjB
+oxh
+oxh
 oxh
 nQR
 fpG
@@ -134095,7 +135154,7 @@ bQY
 aKP
 fpG
 crQ
-cbo
+teD
 kzJ
 gxG
 kNo
@@ -134547,7 +135606,7 @@ ady
 fuD
 abv
 agc
-adE
+cBh
 apr
 adE
 agd
@@ -141836,7 +142895,7 @@ ahQ
 aiS
 guI
 bpW
-aEF
+ahd
 aoz
 apN
 aqW
