@@ -2894,6 +2894,16 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/trawler)
+"adU" = (
+/obj/effect/floor_decal/corner/red{
+	dir = 9
+	},
+/obj/structure/disposalpipe/segment,
+/obj/machinery/ai_status_display{
+	pixel_x = -32
+	},
+/turf/simulated/floor/tiled,
+/area/hallway/security/main)
 "adV" = (
 /obj/machinery/conveyor_switch/oneway{
 	id = "shuttle_outbound"
@@ -51037,6 +51047,10 @@
 /obj/effect/floor_decal/corner/lightgrey{
 	dir = 1
 	},
+/obj/structure/extinguisher_cabinet{
+	dir = 4;
+	pixel_x = -30
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/muriki/cybstorage)
 "mgv" = (
@@ -70067,6 +70081,11 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
 	},
+/obj/item/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 24
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/muriki/cybstorage)
 "sti" = (
@@ -84285,10 +84304,11 @@
 /obj/effect/floor_decal/corner/red{
 	dir = 9
 	},
-/obj/machinery/computer/security/telescreen/bodycamera{
+/obj/structure/disposalpipe/segment,
+/obj/machinery/status_display{
+	layer = 4;
 	pixel_x = -32
 	},
-/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/hallway/security/main)
 "wLi" = (
@@ -127410,7 +127430,7 @@ qFN
 iUT
 udO
 wKX
-wUM
+adU
 hZp
 dLG
 maN
