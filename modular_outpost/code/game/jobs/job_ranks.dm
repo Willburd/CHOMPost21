@@ -98,6 +98,8 @@
 	rank_pin = RANK_PIN_PATH
 /datum/alt_title/ship_breaker
 	rank_pin = RANK_PIN_PATH
+/datum/alt_title/hall_monitor // this is a joke
+	rank_pin = RANK_PIN_PATH
 #undef RANK_PIN_PATH
 
 
