@@ -208,6 +208,10 @@
 /obj/structure/simple_door/wood,
 /turf/unsimulated/wall/steel,
 /area/centcom/living)
+"aaP" = (
+/obj/effect/floor_decal/corner/blue/full,
+/turf/simulated/floor/tiled/white,
+/area/centcom/medical)
 "aaQ" = (
 /turf/unsimulated/wall/r_wall,
 /area/centcom/control)
@@ -1397,6 +1401,12 @@
 	},
 /turf/simulated/floor/tiled/steel,
 /area/specialty/redspace)
+"adh" = (
+/obj/machinery/door/airlock/glass_medical{
+	name = "Storage"
+	},
+/turf/simulated/floor/tiled/old_cargo,
+/area/centcom/medical)
 "adi" = (
 /obj/structure/curtain/black,
 /turf/simulated/floor/wood/sif,
@@ -1647,8 +1657,29 @@
 /obj/machinery/light,
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/specialty/redspace)
+"adT" = (
+/obj/machinery/oxygen_pump/mobile/stabilizer,
+/obj/effect/floor_decal/corner/blue/full{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white,
+/area/centcom/medical)
+"adU" = (
+/obj/machinery/oxygen_pump/mobile/stabilizer,
+/obj/effect/floor_decal/corner/blue{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/white,
+/area/centcom/medical)
 "adV" = (
 /obj/structure/window/reinforced/tinted/full,
+/turf/simulated/floor/tiled/white,
+/area/centcom/medical)
+"adW" = (
+/obj/structure/table/standard,
+/obj/effect/floor_decal/corner/blue{
+	dir = 5
+	},
 /turf/simulated/floor/tiled/white,
 /area/centcom/medical)
 "adX" = (
@@ -1943,6 +1974,13 @@
 	},
 /turf/simulated/floor/tiled/old_cargo,
 /area/centcom/medical)
+"aeI" = (
+/obj/machinery/oxygen_pump/mobile/anesthetic,
+/obj/effect/floor_decal/corner/blue{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/white,
+/area/centcom/medical)
 "aeJ" = (
 /obj/structure/table/marble,
 /obj/structure/sink/countertop{
@@ -2001,6 +2039,13 @@
 	pixel_y = 5
 	},
 /obj/item/storage/box/bodybags,
+/turf/simulated/floor/tiled/white,
+/area/centcom/medical)
+"aeP" = (
+/obj/machinery/oxygen_pump/mobile/anesthetic,
+/obj/effect/floor_decal/corner/blue/full{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/white,
 /area/centcom/medical)
 "aeR" = (
@@ -62743,8 +62788,8 @@ wBs
 wBs
 uho
 wBs
-wBs
-wBs
+uho
+uho
 wBs
 wBs
 wBs
@@ -62905,9 +62950,9 @@ uho
 uho
 uho
 uho
-wBs
-wBs
-wBs
+uho
+uho
+uho
 wBs
 wBs
 wBs
@@ -63064,12 +63109,12 @@ kwV
 aaM
 aaM
 aaM
+aaM
+kwV
+aaM
+aaM
+aaM
 uho
-uho
-uho
-uho
-wBs
-wBs
 wBs
 wBs
 wBs
@@ -63226,13 +63271,13 @@ aeB
 aeB
 aey
 aaM
+adT
+jdG
+jdG
+aaP
+aaM
 uho
-wBs
 uho
-uho
-wBs
-wBs
-wBs
 wBs
 wBs
 uho
@@ -63388,14 +63433,14 @@ aeB
 aeB
 aey
 aaM
+adU
+vWP
+vWP
+foe
+aaM
 uho
-wBs
-wBs
-wBs
-wBs
-wBs
-wBs
-wBs
+uho
+uho
 wBs
 uho
 uho
@@ -63550,13 +63595,13 @@ aeB
 aeB
 aey
 aaM
+adW
+vWP
+vWP
+foe
+aaM
 uho
 uho
-wBs
-wBs
-wBs
-wBs
-wBs
 wBs
 uho
 uho
@@ -63712,13 +63757,13 @@ aeB
 aeB
 aey
 aaM
+aeI
+vWP
+vWP
+foe
+aaM
 uho
 uho
-uho
-wBs
-wBs
-wBs
-wBs
 uho
 uho
 uho
@@ -63874,11 +63919,11 @@ aeB
 aeB
 aey
 aaM
-uho
-uho
-uho
-uho
-uho
+aeP
+vWP
+iXj
+hzx
+aaM
 uho
 uho
 uho
@@ -64036,8 +64081,8 @@ aeG
 aaM
 aaM
 aaM
-kwV
 aaM
+adh
 aaM
 aaM
 aaM
@@ -64199,7 +64244,7 @@ jdG
 jdG
 jdG
 jdG
-jdG
+vWP
 jdG
 aee
 aaM
@@ -64656,7 +64701,7 @@ iDm
 bwr
 rRh
 yaJ
-aXA
+eqO
 aht
 cHO
 vWP
@@ -64818,7 +64863,7 @@ thW
 yaJ
 rRh
 yaJ
-fzF
+aXA
 iJY
 dzR
 vWP
@@ -64980,7 +65025,7 @@ thW
 yaJ
 rRh
 yaJ
-eqO
+fzF
 oDk
 rsN
 vWP
