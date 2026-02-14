@@ -10763,6 +10763,7 @@
 /area/syndicate_mothership)
 "MT" = (
 /obj/structure/table/alien,
+/obj/item/gun/launcher/confetti_cannon/pie/super,
 /turf/simulated/floor/carpet/geo,
 /area/planet/clown)
 "Nb" = (
