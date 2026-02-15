@@ -84211,14 +84211,6 @@
 "uFM" = (
 /turf/simulated/wall,
 /area/rnd/research/xenobio_storage)
-"uFN" = (
-/obj/machinery/light{
-	dir = 1
-	},
-/turf/simulated/floor/outdoors/mud/turfpack/muriki{
-	outdoors = 0
-	},
-/area/mine/explored/muriki/river/east)
 "uFW" = (
 /obj/structure/prop/rock/water,
 /turf/simulated/floor/water/acidic/deep/indoor/turfpack/muriki,
@@ -143307,7 +143299,7 @@ bvo
 bwm
 con
 bxu
-uFN
+wEd
 wEd
 uAQ
 gan
