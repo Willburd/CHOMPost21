@@ -237,7 +237,6 @@
 #include "code\__defines\wires.dm"
 #include "code\__defines\xenoarcheaology.dm"
 #include "code\__defines\ZAS.dm"
-#include "code\__defines\ZAS_op.dm"
 #include "code\__defines\_flags\turf_flags_ch.dm"
 #include "code\__defines\dcs\declarations.dm"
 #include "code\__defines\dcs\helpers.dm"
