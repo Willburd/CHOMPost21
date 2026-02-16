@@ -5,6 +5,14 @@
 /datum/job/stowaway
 	rank_pin = null // no rank
 
+// Specialty
+/datum/job/cyborg
+	rank_pin = /obj/item/clothing/accessory/rank_eshui/borg
+/datum/alt_title/drone
+	rank_pin = /obj/item/clothing/accessory/rank_eshui/drone
+/datum/job/ai
+	rank_pin = /obj/item/clothing/accessory/rank_eshui/ai
+
 // Lowest rank, no duty
 #define RANK_PIN_PATH /obj/item/clothing/accessory/rank_eshui
 /datum/job/offduty_cargo

@@ -219,6 +219,23 @@
 						dat += "<br>"
 						dat += html_encode(description[2])
 
+			// Outpost 21 edit begin - Show job rank
+			dat += "<hr style='clear:left;'>"
+
+			// Check for alt-title
+			var/obj/item/clothing/accessory/rank_eshui/rank_path = job.rank_pin
+			if(job && (alt_title in job.alt_titles))
+				var/datum/alt_title/alt = job.alt_titles[alt_title]
+				if(ispath(initial(alt.rank_pin)))
+					rank_path = initial(alt.rank_pin)
+			if(ispath(rank_path))
+				var/rank_name = initial(rank_path.rank)
+				dat += "Your rank is [rank_name].<br>"
+				dat += "[station_rank_guide(initial(rank_path.rank_level_index))]<br>"
+			else
+				dat += "This job has no rank or authority on station.<br>"
+			// Outpost 21 edit end
+
 			var/datum/browser/popup = new(user, "Job Info", "[capitalize(rank)]", 430, 520, src)
 			popup.set_content(jointext(dat,"<br>"))
 			popup.open()
