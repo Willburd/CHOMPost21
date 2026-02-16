@@ -47347,6 +47347,10 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/incinerator)
+"bHR" = (
+/obj/effect/zone_divider,
+/turf/simulated/floor/water/acidic/deep/indoor/turfpack/muriki,
+/area/mine/explored/muriki/river/south)
 "bHS" = (
 /obj/machinery/meter,
 /obj/machinery/atmospherics/pipe/simple/hidden/red{
@@ -51774,6 +51778,10 @@
 /obj/machinery/door/airlock/maintenance/int,
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/maintenance/spine/civ)
+"bQG" = (
+/obj/effect/zone_divider,
+/turf/simulated/floor/water/acidic/deep/turfpack/muriki,
+/area/mine/explored/muriki/river/south)
 "bQH" = (
 /obj/structure/disposalpipe/segment{
 	dir = 1;
@@ -55295,6 +55303,10 @@
 	},
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/maintenance/atmos_control)
+"bXK" = (
+/obj/effect/zone_divider,
+/turf/simulated/floor/water/acidic/indoor/turfpack/muriki,
+/area/mine/explored/muriki/river/east)
 "bXL" = (
 /obj/structure/disposalpipe/segment{
 	dir = 8;
@@ -55341,6 +55353,10 @@
 /obj/random/junk,
 /turf/simulated/floor/plating,
 /area/maintenance/spine/civ)
+"bXP" = (
+/obj/effect/zone_divider,
+/turf/simulated/floor/water/acidic/deep/indoor/turfpack/muriki,
+/area/mine/explored/muriki/river/east)
 "bXQ" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -57017,6 +57033,11 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/liminaltoobs)
+"cbo" = (
+/obj/structure/prop/rock/waterflat,
+/obj/effect/zone_divider,
+/turf/simulated/floor/water/acidic/deep/indoor/turfpack/muriki,
+/area/mine/explored/muriki/river/east)
 "cbp" = (
 /obj/structure/disposalpipe/segment{
 	dir = 8;
@@ -66665,6 +66686,10 @@
 	can_open = 1
 	},
 /area/muriki/bathroom/vr_coop)
+"cAh" = (
+/obj/effect/zone_divider,
+/turf/simulated/floor/water/acidic/indoor/turfpack/muriki,
+/area/mine/explored/muriki/river/south)
 "cAi" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 8
@@ -68092,6 +68117,42 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/muriki/crew/vr_train)
+"cCL" = (
+/obj/structure/prop/rock/water,
+/obj/effect/zone_divider,
+/turf/simulated/floor/water/acidic/deep/indoor/turfpack/muriki,
+/area/mine/explored/muriki/river/south)
+"cCM" = (
+/obj/effect/zone_divider,
+/turf/simulated/floor/outdoors/mud/turfpack/muriki{
+	outdoors = 0
+	},
+/area/mine/explored/muriki/river/south)
+"cCN" = (
+/obj/effect/zone_divider,
+/turf/simulated/floor/water/acidic/deep/indoor/turfpack/muriki,
+/area/mine/explored/muriki/river/mouth)
+"cCO" = (
+/obj/structure/prop/rock/watersharp,
+/obj/effect/zone_divider,
+/turf/simulated/floor/water/acidic/deep/indoor/turfpack/muriki,
+/area/mine/explored/muriki/river/mouth)
+"cCP" = (
+/obj/effect/zone_divider,
+/turf/simulated/floor/water/acidic/indoor/turfpack/muriki,
+/area/mine/explored/muriki/river/north)
+"cCQ" = (
+/obj/effect/zone_divider,
+/turf/simulated/floor/water/acidic/deep/indoor/turfpack/muriki,
+/area/mine/explored/muriki/river/north)
+"cCR" = (
+/obj/effect/zone_divider,
+/turf/simulated/floor/water/acidic/deep/turfpack/muriki,
+/area/mine/explored/muriki/river/mouth)
+"cCS" = (
+/obj/effect/zone_divider,
+/turf/simulated/floor/water/acidic/turfpack/muriki,
+/area/mine/explored/muriki/river/mouth)
 "cCT" = (
 /obj/effect/floor_decal/corner/blue/full{
 	dir = 8
@@ -68107,6 +68168,16 @@
 	},
 /turf/simulated/floor/tiled/dark/turfpack/muriki,
 /area/engineering/refinery/main)
+"cCU" = (
+/obj/effect/zone_divider,
+/turf/simulated/floor/water/acidic/deep/turfpack/muriki,
+/area/mine/explored/muriki/river/north)
+"cCV" = (
+/obj/effect/zone_divider,
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/engineering/coreproctunnel)
 "cCW" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
@@ -68121,6 +68192,10 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/cave)
+"cCX" = (
+/obj/effect/zone_divider,
+/turf/simulated/floor/water/acidic/turfpack/muriki,
+/area/mine/explored/muriki/river/north)
 "cDn" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/camera/network/engineering{
@@ -87065,6 +87140,7 @@
 /area/maintenance/oldbridge)
 "xZm" = (
 /obj/structure/outcrop/uranium,
+/obj/effect/zone_divider,
 /turf/simulated/floor/water/acidic/deep/indoor/turfpack/muriki,
 /area/mine/explored/muriki/river/south)
 "xZo" = (
@@ -100144,18 +100220,18 @@ kwU
 kwU
 kwU
 kwU
-tts
-aqY
-lOA
-lOA
-lOA
-lOA
-duQ
-duQ
-duQ
-lOA
-lOA
-lOA
+cCP
+cCU
+cCR
+cCR
+cCR
+cCR
+cCS
+cCS
+cCS
+cCR
+cCR
+cCR
 kwU
 kwU
 kwU
@@ -101785,7 +101861,7 @@ fVT
 fVT
 fVT
 fVT
-fVT
+cCN
 fVT
 fVT
 fVT
@@ -101947,7 +102023,7 @@ lOA
 fVT
 fVT
 fVT
-fVT
+cCN
 fVT
 fVT
 fVT
@@ -102109,7 +102185,7 @@ fVT
 fVT
 fVT
 fVT
-fVT
+cCN
 fVT
 fVT
 fVT
@@ -102271,7 +102347,7 @@ fVT
 fVT
 fVT
 fVT
-cXn
+cCO
 fVT
 fVT
 fVT
@@ -102433,7 +102509,7 @@ fVT
 fVT
 fVT
 fVT
-fVT
+cCN
 fVT
 fVT
 fVT
@@ -102595,7 +102671,7 @@ fVT
 fVT
 fVT
 fVT
-fVT
+cCN
 fVT
 fVT
 wZz
@@ -102757,7 +102833,7 @@ wZz
 fVT
 fVT
 fVT
-fVT
+cCN
 fVT
 fVT
 fVT
@@ -102879,7 +102955,7 @@ bTr
 bZg
 bTb
 gKH
-bUb
+cCV
 tts
 aqY
 aqY
@@ -102919,7 +102995,7 @@ wZz
 wZz
 fVT
 fVT
-fVT
+cCN
 fVT
 fVT
 fVT
@@ -103041,7 +103117,7 @@ gKH
 gKH
 gKH
 bUb
-tts
+cCP
 aqY
 aqY
 tIC
@@ -103081,7 +103157,7 @@ bMZ
 wZz
 fVT
 fVT
-fVT
+cCN
 fVT
 fVT
 fVT
@@ -103203,7 +103279,7 @@ gKH
 bSS
 bHX
 bHX
-aqY
+cCU
 aqY
 tGN
 tts
@@ -103243,7 +103319,7 @@ bMZ
 bMZ
 fVT
 fVT
-fVT
+cCN
 fVT
 fVT
 fVT
@@ -103365,7 +103441,7 @@ gKH
 bHX
 bHX
 aqY
-aqY
+cCU
 bHX
 tts
 bTQ
@@ -103405,7 +103481,7 @@ bMZ
 bMZ
 bMZ
 bMZ
-fVT
+cCN
 fVT
 fVT
 fVT
@@ -103527,7 +103603,7 @@ bHX
 aqY
 aqY
 aqY
-bHX
+cCX
 tts
 gKH
 bTj
@@ -103689,7 +103765,7 @@ aqY
 aqY
 aqY
 bHX
-bHX
+cCX
 bMZ
 gKH
 chO
@@ -104093,7 +104169,7 @@ mGE
 mGE
 mGE
 mGE
-mGE
+bHR
 aIY
 aIY
 aIY
@@ -104255,7 +104331,7 @@ mGE
 mGE
 mGE
 mGE
-mGE
+bHR
 xrv
 mGE
 aIY
@@ -104417,7 +104493,7 @@ mGE
 mGE
 mGE
 mGE
-mGE
+bHR
 mGE
 mGE
 mGE
@@ -104741,7 +104817,7 @@ mGE
 mGE
 mGE
 mGE
-uFW
+cCL
 mGE
 mGE
 mGE
@@ -104903,7 +104979,7 @@ mGE
 mGE
 mGE
 mGE
-mGE
+bHR
 mGE
 mGE
 mGE
@@ -105065,7 +105141,7 @@ mGE
 mGE
 mGE
 mGE
-mGE
+bHR
 mGE
 mGE
 mGE
@@ -105227,7 +105303,7 @@ mGE
 mGE
 mGE
 mGE
-mGE
+bHR
 rYF
 mGE
 mGE
@@ -105389,7 +105465,7 @@ mGE
 mGE
 mGE
 fBh
-fBh
+cAh
 fBh
 mGE
 mGE
@@ -105551,7 +105627,7 @@ fBh
 aNL
 aNL
 aNL
-xpG
+cCM
 xpG
 fBh
 fBh
@@ -106583,10 +106659,10 @@ gqd
 gqd
 gqd
 gqd
-tts
-tts
-tIC
-tts
+cCP
+cCP
+cCQ
+cCP
 bMZ
 bMZ
 bMZ
@@ -106702,14 +106778,14 @@ aNL
 aNL
 aNL
 aNL
-blV
-blV
-blV
-blV
-blV
-blV
-mGE
-mGE
+bQG
+bQG
+bQG
+bQG
+bQG
+bQG
+bHR
+bHR
 iCS
 iCS
 iCS
@@ -113061,11 +113137,11 @@ gqd
 gqd
 gqd
 gqd
-tts
-tts
-tIC
-tts
-tts
+cCP
+cCP
+cCQ
+cCP
+cCP
 bMZ
 bMZ
 bMZ
@@ -113160,14 +113236,14 @@ baR
 baR
 baR
 baR
-fBh
-fBh
-fBh
-fBh
-fBh
-fBh
-fBh
-fBh
+cAh
+cAh
+cAh
+cAh
+cAh
+cAh
+cAh
+cAh
 aNL
 aNL
 aNL
@@ -113191,12 +113267,12 @@ aNL
 aNL
 aNL
 aNL
-mGE
-mGE
-mGE
-mGE
-mGE
-mGE
+bHR
+bHR
+bHR
+bHR
+bHR
+bHR
 iCS
 iCS
 iCS
@@ -113327,7 +113403,7 @@ fBh
 fBh
 fBh
 fBh
-fBh
+cAh
 fBh
 fBh
 fBh
@@ -113489,7 +113565,7 @@ bMy
 fBh
 fBh
 fBh
-fBh
+cAh
 fBh
 fBh
 fBh
@@ -113651,7 +113727,7 @@ fBh
 fBh
 fBh
 fBh
-fBh
+cAh
 fBh
 fBh
 fBh
@@ -113813,7 +113889,7 @@ mGE
 mGE
 mGE
 mGE
-mGE
+bHR
 mGE
 fBh
 fBh
@@ -113975,7 +114051,7 @@ mGE
 mGE
 mGE
 mGE
-mGE
+bHR
 mGE
 mGE
 fBh
@@ -114137,7 +114213,7 @@ mGE
 mGE
 mGE
 mGE
-mGE
+bHR
 mGE
 mGE
 mGE
@@ -114299,7 +114375,7 @@ mGE
 mGE
 fBh
 fBh
-mGE
+bHR
 mGE
 mGE
 mGE
@@ -114461,7 +114537,7 @@ mGE
 fBh
 rPd
 fBh
-mGE
+bHR
 mGE
 mGE
 mGE
@@ -114623,7 +114699,7 @@ mGE
 fBh
 rPd
 fBh
-mGE
+bHR
 mGE
 mGE
 mGE
@@ -114785,7 +114861,7 @@ fBh
 fBh
 rPd
 fBh
-fBh
+cAh
 mGE
 mGE
 mGE
@@ -114947,7 +115023,7 @@ fBh
 fBh
 rPd
 fBh
-fBh
+cAh
 fBh
 mGE
 mGE
@@ -115109,7 +115185,7 @@ fBh
 rPd
 rPd
 fBh
-fBh
+cAh
 fBh
 mGE
 mGE
@@ -115271,7 +115347,7 @@ fBh
 rPd
 rPd
 fBh
-fBh
+cAh
 mGE
 mGE
 mGE
@@ -115433,7 +115509,7 @@ rPd
 rPd
 rPd
 fBh
-fBh
+cAh
 fBh
 fBh
 mGE
@@ -115595,7 +115671,7 @@ rPd
 rPd
 rPd
 fBh
-fBh
+cAh
 fBh
 fBh
 mGE
@@ -115757,7 +115833,7 @@ rPd
 rPd
 rPd
 rPd
-fBh
+cAh
 fBh
 fBh
 fBh
@@ -118269,7 +118345,7 @@ tIC
 tIC
 tts
 tts
-tts
+cCP
 bMZ
 bMZ
 bMZ
@@ -118431,7 +118507,7 @@ tts
 tts
 tIC
 tts
-tts
+cCP
 bMZ
 bMZ
 bMZ
@@ -118593,7 +118669,7 @@ bMU
 tIC
 tIC
 tIC
-tts
+cCP
 tts
 tts
 bMZ
@@ -118755,7 +118831,7 @@ bMU
 tts
 tts
 aRu
-tIC
+cCQ
 tIC
 tIC
 tts
@@ -118917,7 +118993,7 @@ bMU
 bMU
 tts
 tts
-tIC
+cCQ
 tIC
 tIC
 tts
@@ -119079,7 +119155,7 @@ aPF
 bMU
 bMU
 bMU
-tts
+cCP
 tts
 tts
 tIC
@@ -119615,15 +119691,15 @@ aEq
 cwu
 cwo
 cwg
-xpG
-mGE
-mGE
-mGE
-mGE
-mGE
-mGE
-mGE
-mGE
+cCM
+bHR
+bHR
+bHR
+bHR
+bHR
+bHR
+bHR
+bHR
 aeV
 aeV
 aeV
@@ -120415,7 +120491,7 @@ tIC
 bHE
 tIC
 tts
-tts
+cCP
 aNL
 aNL
 aNL
@@ -120577,7 +120653,7 @@ tIC
 bYs
 tIC
 tIC
-tIC
+cCQ
 tts
 tts
 aNL
@@ -120739,7 +120815,7 @@ tIC
 bYs
 tIC
 tIC
-tIC
+cCQ
 tts
 tts
 aNL
@@ -120901,7 +120977,7 @@ tIC
 bXs
 bHf
 tts
-tIC
+cCQ
 tIC
 tts
 aNL
@@ -121063,7 +121139,7 @@ tts
 bXt
 bHf
 bMU
-tts
+cCP
 tIC
 tIC
 tIC
@@ -126097,15 +126173,15 @@ cqZ
 bHf
 bMU
 bMU
-olM
-olM
-olM
-olM
-olM
-olM
-olM
-olM
-olM
+bXP
+bXP
+bXP
+bXP
+bXP
+bXP
+bXP
+bXP
+bXP
 bhW
 bUV
 bVr
@@ -130985,7 +131061,7 @@ olM
 olM
 vWv
 olM
-olM
+bXP
 fUK
 fUK
 glX
@@ -131147,7 +131223,7 @@ olM
 olM
 olM
 olM
-olM
+bXP
 olM
 vBn
 glX
@@ -131309,7 +131385,7 @@ fUK
 fUK
 fUK
 olM
-olM
+bXP
 olM
 fUK
 fUK
@@ -131471,7 +131547,7 @@ olM
 olM
 olM
 fUK
-fUK
+bXK
 olM
 olM
 olM
@@ -131633,7 +131709,7 @@ olM
 olM
 olM
 olM
-fUK
+bXK
 olM
 olM
 olM
@@ -131795,7 +131871,7 @@ olM
 olM
 olM
 olM
-olM
+bXP
 fUK
 olM
 olM
@@ -131957,7 +132033,7 @@ vka
 vka
 olM
 xOO
-olM
+bXP
 olM
 olM
 olM
@@ -132119,7 +132195,7 @@ vka
 vka
 vka
 olM
-olM
+bXP
 olM
 olM
 olM
@@ -132609,14 +132685,14 @@ cnU
 vka
 vka
 vka
-olM
-olM
-olM
-vWv
-olM
-olM
-olM
-fUK
+bXP
+bXP
+bXP
+cbo
+bXP
+bXP
+bXP
+bXK
 mpL
 mpL
 mpL
@@ -139248,14 +139324,14 @@ cnU
 bdw
 bcT
 cnU
-fUK
-fUK
-olM
-olM
-olM
-olM
-olM
-fUK
+bXK
+bXK
+bXP
+bXP
+bXP
+bXP
+bXP
+bXK
 aZW
 aZW
 akQ
@@ -145558,18 +145634,18 @@ cdL
 aXy
 aTx
 aXy
-fUK
-olM
-olM
-olM
-olM
-olM
-olM
-olM
-olM
-olM
-fUK
-fUK
+bXK
+bXP
+bXP
+bXP
+bXP
+bXP
+bXP
+bXP
+bXP
+bXP
+bXK
+bXK
 ahb
 ahb
 ahb

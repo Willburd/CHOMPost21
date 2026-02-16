@@ -165,7 +165,7 @@ SUBSYSTEM_DEF(haunting)
 	return SS_INIT_SUCCESS
 
 /datum/controller/subsystem/haunting/stat_entry(msg)
-	msg = "Score: [haunt_score] | Mode: [world_mode] | Change: [new_score] | Who: [current_player_target?.resolve()] | Event: [last_event][current_haunt ? "" : "(finished)"] | Total: [total_haunts]/[prior_haunts.len]"
+	msg = "Score: [haunt_score] | Mode: [world_mode] | Change: [new_score] | Who: [current_player_target?.resolve()] | Event: [last_event][current_haunt ? "" : "(finished)"] | Total: [total_haunts]/[length(prior_haunts)]"
 	return ..()
 
 /datum/controller/subsystem/haunting/fire()
@@ -241,7 +241,7 @@ SUBSYSTEM_DEF(haunting)
 
 /datum/controller/subsystem/haunting/proc/get_random_player()
 	SHOULD_NOT_OVERRIDE(TRUE)
-	if(!GLOB.player_list.len)
+	if(!length(GLOB.player_list))
 		return null
 	return pick(GLOB.player_list)
 
