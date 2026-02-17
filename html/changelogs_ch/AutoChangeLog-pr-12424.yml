@@ -1,0 +1,4 @@
+author: "CHOMPStation2StaffMirrorBot"
+delete-after: True
+changes:
+  - code_imp: "migrates some more admin verbs to the subsystem"
