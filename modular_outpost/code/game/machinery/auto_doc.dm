@@ -61,6 +61,7 @@
 	doctor = new(src)
 	doctor.owner_machine = src
 	doctor.AddElement(/datum/element/godmode)
+	doctor.species.flags &= NO_DNA | NO_HALLUCINATION | NO_PAIN | NO_INFECT // No mutation
 
 /obj/machinery/auto_doc/proc/create_operations()
 	operations = list()
