@@ -472,7 +472,7 @@ GLOBAL_DATUM(autospeaker, /mob/living/silicon/ai/announcer)
 
 		// Outpost 21 edit begin - haunted areas cause compression
 		var/area/A = get_area(M)
-		if((A && A.haunted) || (prob(10) && SShaunting.station_is_haunted()))
+		if(A && A.haunted)
 			signal.data["compression"] = rand(20,70)
 			signal.data["haunted"] = TRUE
 		// Outpost 21 edit end
@@ -499,7 +499,7 @@ GLOBAL_DATUM(autospeaker, /mob/living/silicon/ai/announcer)
 
 		// Outpost 21 edit begin - haunted areas cause compression
 		var/area/A = get_area(M)
-		if((A && A.haunted) || (prob(10) && SShaunting.station_is_haunted()))
+		if(A && A.haunted)
 			signal.data["compression"] = rand(20,70)
 			signal.data["haunted"] = TRUE
 		// Outpost 21 edit end
@@ -535,7 +535,7 @@ GLOBAL_DATUM(autospeaker, /mob/living/silicon/ai/announcer)
 
 		// Outpost 21 edit begin - haunted areas cause compression
 		var/area/A = get_area(M)
-		if((A && A.haunted) || (prob(10) && SShaunting.station_is_haunted()))
+		if(A && A.haunted)
 			signal.data["compression"] = rand(20,70)
 			signal.data["haunted"] = TRUE
 		// Outpost 21 edit end
@@ -550,7 +550,7 @@ GLOBAL_DATUM(autospeaker, /mob/living/silicon/ai/announcer)
 	for(var/obj/machinery/telecomms/receiver/R in telecomms_list)
 		// Outpost 21 edit begin - haunted areas cause compression
 		var/area/A = get_area(M)
-		if((A && A.haunted) || (prob(10) && SShaunting.station_is_haunted()))
+		if(A && A.haunted)
 			signal.data["compression"] = rand(20,70)
 			signal.data["haunted"] = TRUE
 		// Outpost 21 edit end
@@ -566,7 +566,7 @@ GLOBAL_DATUM(autospeaker, /mob/living/silicon/ai/announcer)
 
 	// Outpost 21 edit begin - haunted areas cause compression
 	var/area/A = get_area(M)
-	if((A && A.haunted) || (prob(10) && SShaunting.station_is_haunted()))
+	if(A && A.haunted)
 		signal.data["compression"] = rand(20,70)
 		signal.data["haunted"] = TRUE
 	// Outpost 21 edit end
