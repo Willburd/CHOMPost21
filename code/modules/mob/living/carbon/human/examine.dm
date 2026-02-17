@@ -437,6 +437,14 @@
 	if(hasHUD(user,"best"))
 		msg += "Employment records: <a href='byond://?src=\ref[src];emprecord=`'>\[View\]</a> <a href='byond://?src=\ref[src];emprecordadd=`'>\[Add comment\]</a>"
 
+	// Outpost 21 edit begin - Gold digger trait
+	if(HAS_TRAIT(user, TRAIT_GOLDDIGGER))
+		var/datum/preferences/P = client?.prefs
+		if(P)
+			msg += "They look like they're [lowertext(P.economic_status)] economically."
+		else
+			msg += "You can't get a sense of how well off they are..."
+	// Outpost 21 edit end
 
 	var/flavor_text = print_flavor_text()
 	if(flavor_text)
