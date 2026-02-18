@@ -176,3 +176,19 @@
   - bugfix: Fixes anomaly weather doing effects in open turfs
   - code_imp: Added various weather anomaly subtypes for easier way to spawn a specific
       weather
+2026-02-17:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: Manifest being requested during the small time the server is restarting
+      could return weird results
+  - code_imp: migrates some more admin verbs to the subsystem
+  - bugfix: corrected bingle chemistry documentation, it is no longer missing "used
+      to produce" recipes.
+  - bugfix: Bingle printed chemistry documentation no longer uses pressure requirements
+      as the temperature range values
+  Will:
+  - bugfix: Electric guitar note files use correct path, electric guitar actually
+      plays notes now
+2026-02-18:
+  CHOMPStation2StaffMirrorBot:
+  - qol: rework the color matrix solver
+  - qol: ticket chat auto focusses again after message send
