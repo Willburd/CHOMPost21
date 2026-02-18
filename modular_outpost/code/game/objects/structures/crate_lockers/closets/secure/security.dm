@@ -28,3 +28,10 @@
 		/obj/item/flashlight/maglight,
 		/obj/item/radio
 		)
+
+/obj/structure/closet/secure_closet/brigmedic
+	name = "brigmedic's locker"
+	req_access = list(ACCESS_SECURITY)
+	closet_appearance = /decl/closet_appearance/secure_closet/brigmedic
+
+	starts_with = list() // TODO - Mapset right now while we figure out what even goes in here

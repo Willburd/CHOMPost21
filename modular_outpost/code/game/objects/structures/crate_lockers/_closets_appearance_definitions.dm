@@ -7,3 +7,13 @@
 		"stripe_vertical_mid_partial" = COLOR_WARM_YELLOW,
 		"hop" = COLOR_WARM_YELLOW
 	)
+
+/decl/closet_appearance/secure_closet/brigmedic
+	color = COLOR_NT_RED
+	decals = list(
+		"lower_holes"
+	)
+	extra_decals = list(
+		"stripe_vertical_mid_full" = COLOR_BABY_BLUE,
+		"security" = COLOR_WARM_YELLOW
+	)
