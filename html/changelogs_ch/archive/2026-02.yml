@@ -192,3 +192,10 @@
   CHOMPStation2StaffMirrorBot:
   - qol: rework the color matrix solver
   - qol: ticket chat auto focusses again after message send
+2026-02-19:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: innland redgate; fixed stairwell to/from bedrooms, now uses basic step
+      teleporters
+  - bugfix: Fixes the meowl attempting to check a null target
+  - qol: Examining a Honey Extractor when you're next to it will now tell you how
+      much honey it contains (if any)
