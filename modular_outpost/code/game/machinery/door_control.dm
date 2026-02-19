@@ -1,6 +1,8 @@
 /obj/machinery/button/remote/admin_only
 	name = "secure remote object control"
 	desc = "It controls objects, remotely and with extreme prejudice."
+	icon = 'icons/obj/door_release.dmi'
+	icon_state = "doorctrl0"
 
 /obj/machinery/button/remote/admin_only/attack_ai(mob/user as mob)
 	return attack_hand(user)
