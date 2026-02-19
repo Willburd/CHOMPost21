@@ -2727,7 +2727,8 @@
 	dir = 4
 	},
 /obj/structure/disposaloutlet{
-	dir = 1
+	dir = 1;
+	throw_range = 1
 	},
 /obj/structure/railing{
 	dir = 8
@@ -3173,7 +3174,8 @@
 /area/shuttle/trawler)
 "aes" = (
 /obj/structure/disposaloutlet{
-	dir = 4
+	dir = 4;
+	throw_range = 1
 	},
 /obj/structure/disposalpipe/trunk{
 	dir = 8
@@ -7782,6 +7784,9 @@
 /obj/item/juke_remote{
 	autolinkareajuke_onspawn = /area/djstation
 	},
+/obj/machinery/computer/security/telescreen/entertainment{
+	pixel_y = -32
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/security/checkpoint2)
 "amt" = (
@@ -11369,9 +11374,6 @@
 	pixel_x = -26
 	},
 /obj/structure/table/rack,
-/obj/structure/window/reinforced{
-	dir = 8
-	},
 /obj/machinery/door/window/brigdoor/eastright{
 	name = "Ballistics"
 	},
@@ -15117,6 +15119,13 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/muriki/bathroom/cargo)
+"aED" = (
+/obj/structure/grille,
+/obj/machinery/door/firedoor/glass,
+/obj/structure/window/basic/full,
+/obj/machinery/computer/security/telescreen/entertainment,
+/turf/simulated/floor/plating,
+/area/medical/reception)
 "aFy" = (
 /obj/effect/floor_decal/rust,
 /obj/effect/floor_decal/corner/brown{
@@ -17551,6 +17560,10 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 1
 	},
+/obj/item/clothing/shoes/boots/winter/command{
+	name = "colony director's snow boots"
+	},
+/obj/item/clothing/suit/storage/hooded/wintercoat/captain,
 /turf/simulated/floor/carpet/tealcarpet,
 /area/crew_quarters/captain)
 "bsH" = (
@@ -18582,9 +18595,6 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
 /obj/machinery/door/window/brigdoor/eastleft{
 	name = "Ballistics"
 	},
@@ -18856,7 +18866,8 @@
 	dir = 4
 	},
 /obj/structure/disposaloutlet{
-	dir = 8
+	dir = 8;
+	throw_range = 1
 	},
 /obj/structure/window/reinforced{
 	dir = 4
@@ -19238,15 +19249,11 @@
 "bTD" = (
 /obj/structure/table/rack,
 /obj/structure/window/reinforced{
-	health = 1e+006
-	},
-/obj/structure/window/reinforced{
 	dir = 8
 	},
 /obj/effect/floor_decal/corner/green/full,
 /obj/machinery/door/window/brigdoor/northleft{
-	name = "Ammo";
-	req_access = list(2)
+	name = "Ammo"
 	},
 /obj/item/storage/box/scattershot/large,
 /obj/item/storage/box/scattershot/large,
@@ -21757,6 +21764,15 @@
 /obj/machinery/atm{
 	pixel_x = 28
 	},
+/obj/structure/closet{
+	name = "Winter Coats"
+	},
+/obj/item/clothing/shoes/boots/winter/supply,
+/obj/item/clothing/shoes/boots/winter/supply,
+/obj/item/clothing/shoes/boots/winter/supply,
+/obj/item/clothing/suit/storage/hooded/wintercoat/cargo,
+/obj/item/clothing/suit/storage/hooded/wintercoat/cargo,
+/obj/item/clothing/suit/storage/hooded/wintercoat/cargo,
 /turf/simulated/floor/tiled,
 /area/quartermaster/office)
 "cKb" = (
@@ -24104,7 +24120,22 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/obj/machinery/vending/security,
+/obj/structure/closet/secure_closet/brigmedic,
+/obj/item/stack/medical/splint,
+/obj/item/storage/pouch/baton/full,
+/obj/item/storage/backpack/dufflebag/syndie/med{
+	name = "combat medic dufflebag"
+	},
+/obj/item/storage/firstaid/adv,
+/obj/item/clothing/suit/storage/vest/tactical,
+/obj/item/clothing/gloves/black,
+/obj/item/clothing/gloves/sterile/nitrile,
+/obj/item/storage/belt/medical,
+/obj/item/flash,
+/obj/item/clothing/glasses/sunglasses/medhud,
+/obj/item/reagent_containers/hypospray/autoinjector/biginjector/combat_recovery,
+/obj/item/reagent_containers/hypospray/autoinjector/biginjector/combat_recovery,
+/obj/item/reagent_containers/hypospray/autoinjector/biginjector/combat_recovery,
 /turf/simulated/floor/tiled,
 /area/hallway/security/armor)
 "dyT" = (
@@ -25488,9 +25519,6 @@
 	},
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 8
-	},
-/obj/machinery/computer/security/telescreen/entertainment{
-	pixel_x = -32
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/reception)
@@ -26877,10 +26905,6 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
-/obj/machinery/alarm{
-	dir = 8;
-	pixel_x = 26
-	},
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
@@ -26891,6 +26915,7 @@
 /obj/item/clothing/mask/breath,
 /obj/item/shovel,
 /obj/item/shovel,
+/obj/item/clothing/suit/storage/hooded/wintercoat/security,
 /turf/simulated/floor/tiled/steel_grid,
 /area/security/eva)
 "evf" = (
@@ -33888,7 +33913,8 @@
 /area/muriki/processor/euth)
 "gPo" = (
 /obj/structure/disposaloutlet{
-	dir = 8
+	dir = 8;
+	throw_range = 2
 	},
 /obj/structure/disposalpipe/trunk{
 	dir = 2
@@ -35995,7 +36021,22 @@
 /obj/effect/floor_decal/corner/red/full{
 	dir = 1
 	},
-/obj/machinery/vending/security,
+/obj/structure/closet/secure_closet/brigmedic,
+/obj/item/stack/medical/splint,
+/obj/item/storage/pouch/baton/full,
+/obj/item/storage/backpack/dufflebag/syndie/med{
+	name = "combat medic dufflebag"
+	},
+/obj/item/storage/firstaid/adv,
+/obj/item/clothing/suit/storage/vest/tactical,
+/obj/item/clothing/gloves/black,
+/obj/item/clothing/gloves/sterile/nitrile,
+/obj/item/storage/belt/medical,
+/obj/item/flash,
+/obj/item/clothing/glasses/sunglasses/medhud,
+/obj/item/reagent_containers/hypospray/autoinjector/biginjector/combat_recovery,
+/obj/item/reagent_containers/hypospray/autoinjector/biginjector/combat_recovery,
+/obj/item/reagent_containers/hypospray/autoinjector/biginjector/combat_recovery,
 /turf/simulated/floor/tiled,
 /area/hallway/security/armor)
 "huO" = (
@@ -38473,9 +38514,6 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/trawler)
 "ifp" = (
-/obj/structure/disposaloutlet{
-	dir = 8
-	},
 /obj/structure/disposalpipe/trunk{
 	dir = 4
 	},
@@ -38485,6 +38523,10 @@
 	},
 /obj/structure/window/maintenance_panel{
 	dir = 4
+	},
+/obj/structure/disposaloutlet{
+	dir = 8;
+	throw_range = 2
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/cargomid)
@@ -39883,9 +39925,6 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/security/evidence_storage)
 "iAY" = (
-/obj/structure/window/reinforced{
-	health = 1e+006
-	},
 /obj/structure/table/rack,
 /obj/machinery/door/window/brigdoor/northright{
 	name = "Ammo"
@@ -40167,9 +40206,6 @@
 /turf/simulated/floor/plating,
 /area/medical/virology/prep)
 "iEL" = (
-/obj/structure/window/phoronreinforced{
-	dir = 8
-	},
 /obj/effect/floor_decal/corner/red/full,
 /turf/simulated/floor/tiled/white,
 /area/security/detectives_office)
@@ -40359,7 +40395,8 @@
 /area/muriki/bathroom/engineering)
 "iIy" = (
 /obj/structure/disposaloutlet{
-	dir = 8
+	dir = 8;
+	throw_range = 2
 	},
 /obj/structure/disposalpipe/trunk{
 	dir = 4
@@ -41083,6 +41120,7 @@
 	dir = 4;
 	icon_state = "pipe-c"
 	},
+/obj/effect/landmark/holiday_event_spawn,
 /turf/simulated/floor/tiled,
 /area/hallway/security/main)
 "iVl" = (
@@ -42672,6 +42710,9 @@
 /obj/item/storage/box/holobadge,
 /obj/machinery/light{
 	dir = 4
+	},
+/obj/machinery/computer/security/telescreen/entertainment{
+	pixel_x = 32
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/warden)
@@ -45620,9 +45661,6 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
-/obj/structure/window/reinforced{
-	dir = 4
-	},
 /obj/machinery/door/window/brigdoor/westright{
 	name = "Energy"
 	},
@@ -46524,6 +46562,15 @@
 	layer = 4;
 	pixel_x = -32
 	},
+/obj/structure/closet{
+	name = "Winter Coats"
+	},
+/obj/item/clothing/shoes/boots/winter/science,
+/obj/item/clothing/shoes/boots/winter/science,
+/obj/item/clothing/shoes/boots/winter/science,
+/obj/item/clothing/suit/storage/hooded/wintercoat/science,
+/obj/item/clothing/suit/storage/hooded/wintercoat/science,
+/obj/item/clothing/suit/storage/hooded/wintercoat/science,
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/main)
 "kzI" = (
@@ -46729,7 +46776,6 @@
 	name = "Station Intercom (General)";
 	pixel_x = -21
 	},
-/obj/effect/landmark/holiday_event_spawn,
 /obj/machinery/embedded_controller/radio/airlock/access_controller{
 	id_tag = "med_exterior_west";
 	name = "Medical West Airlock";
@@ -46737,6 +46783,15 @@
 	pixel_x = -24;
 	req_one_access = list(5)
 	},
+/obj/structure/closet{
+	name = "Winter Coats"
+	},
+/obj/item/clothing/shoes/boots/winter/medical,
+/obj/item/clothing/shoes/boots/winter/medical,
+/obj/item/clothing/shoes/boots/winter/medical,
+/obj/item/clothing/suit/storage/hooded/wintercoat/medical/sar,
+/obj/item/clothing/suit/storage/hooded/wintercoat/medical/sar,
+/obj/item/clothing/suit/storage/hooded/wintercoat/medical/sar,
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay)
 "kDB" = (
@@ -59887,14 +59942,48 @@
 /turf/simulated/floor/tiled/dark,
 /area/muriki/arriveelev)
 "oMh" = (
+/obj/structure/table/rack,
+/obj/item/ammo_magazine/hectate/ap{
+	pixel_x = -8
+	},
+/obj/item/ammo_magazine/hectate/ap{
+	pixel_x = -8
+	},
+/obj/item/ammo_magazine/hectate/ap{
+	pixel_x = -8
+	},
+/obj/item/ammo_magazine/hectate/ap{
+	pixel_x = -8
+	},
+/obj/item/ammo_magazine/hectate/ap{
+	pixel_x = -8
+	},
+/obj/item/ammo_magazine/hectate{
+	pixel_x = 8
+	},
+/obj/item/ammo_magazine/hectate{
+	pixel_x = 8
+	},
+/obj/item/ammo_magazine/hectate{
+	pixel_x = 8
+	},
+/obj/item/ammo_magazine/hectate{
+	pixel_x = 8
+	},
+/obj/item/ammo_magazine/hectate{
+	pixel_x = 8
+	},
+/obj/item/gun/projectile/automatic/serdy/hectate,
+/obj/machinery/door/window/brigdoor/northright{
+	name = "Anti-Material"
+	},
+/obj/effect/floor_decal/corner/red/full{
+	dir = 4
+	},
 /obj/machinery/camera/motion/security{
 	c_tag = "SEC - Red Armory (M)";
 	dir = 1
 	},
-/obj/machinery/flasher/portable{
-	anchored = 1
-	},
-/obj/effect/floor_decal/industrial/outline/red,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/security/tactical)
 "oMl" = (
@@ -60395,9 +60484,6 @@
 "oTw" = (
 /obj/structure/table/rack,
 /obj/effect/floor_decal/corner/blue/full{
-	dir = 4
-	},
-/obj/structure/window/reinforced{
 	dir = 4
 	},
 /obj/structure/window/reinforced{
@@ -65612,7 +65698,15 @@
 /obj/effect/floor_decal/corner/red/full{
 	dir = 8
 	},
-/obj/effect/landmark/holiday_event_spawn,
+/obj/structure/closet{
+	name = "Winter Coats"
+	},
+/obj/item/clothing/shoes/boots/winter/security,
+/obj/item/clothing/shoes/boots/winter/security,
+/obj/item/clothing/shoes/boots/winter/security,
+/obj/item/clothing/suit/storage/hooded/wintercoat/security,
+/obj/item/clothing/suit/storage/hooded/wintercoat/security,
+/obj/item/clothing/suit/storage/hooded/wintercoat/security,
 /turf/simulated/floor/tiled,
 /area/hallway/security/main)
 "qFV" = (
@@ -66284,6 +66378,15 @@
 	layer = 4;
 	pixel_x = 32
 	},
+/obj/structure/closet{
+	name = "Winter Coats"
+	},
+/obj/item/clothing/shoes/boots/winter,
+/obj/item/clothing/shoes/boots/winter,
+/obj/item/clothing/shoes/boots/winter,
+/obj/item/clothing/suit/storage/hooded/wintercoat/hop,
+/obj/item/clothing/suit/storage/hooded/wintercoat/aformal,
+/obj/item/clothing/suit/storage/hooded/wintercoat/aformal,
 /turf/simulated/floor/tiled/steel,
 /area/bridge/hallway)
 "qPM" = (
@@ -67839,7 +67942,6 @@
 	dir = 8;
 	health = 1e+006
 	},
-/obj/structure/window/reinforced,
 /obj/effect/floor_decal/corner/yellow/full,
 /obj/machinery/door/window/brigdoor/northleft{
 	name = "Combat Armor";
@@ -74309,7 +74411,8 @@
 /area/security/mechent)
 "twY" = (
 /obj/structure/disposaloutlet{
-	dir = 1
+	dir = 1;
+	throw_range = 2
 	},
 /obj/structure/disposalpipe/trunk,
 /obj/machinery/door/firedoor/glass,
@@ -76058,10 +76161,34 @@
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/engineering_hallway)
 "tXm" = (
-/obj/structure/ladder,
-/obj/structure/sign/ironhammer{
-	pixel_y = -32
+/obj/structure/table/rack,
+/obj/item/ammo_casing/rocket,
+/obj/item/ammo_casing/rocket,
+/obj/item/ammo_casing/rocket,
+/obj/item/ammo_casing/rocket,
+/obj/item/ammo_casing/rocket,
+/obj/item/ammo_casing/rocket,
+/obj/item/ammo_casing/rocket,
+/obj/item/ammo_casing/rocket,
+/obj/item/ammo_casing/rocket,
+/obj/item/ammo_casing/rocket,
+/obj/item/ammo_casing/rocket,
+/obj/item/ammo_casing/rocket,
+/obj/item/ammo_casing/rocket,
+/obj/item/ammo_casing/rocket,
+/obj/item/ammo_casing/rocket,
+/obj/item/ammo_casing/rocket,
+/obj/item/ammo_casing/rocket,
+/obj/item/ammo_casing/rocket,
+/obj/item/ammo_casing/rocket,
+/obj/item/ammo_casing/rocket,
+/obj/item/gun/launcher/rocket{
+	pixel_x = -7
 	},
+/obj/machinery/door/window/brigdoor/northleft{
+	name = "Anti-Material"
+	},
+/obj/effect/floor_decal/corner/red/full,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/security/tactical)
 "tXr" = (
@@ -85764,9 +85891,6 @@
 /obj/structure/table/rack,
 /obj/effect/floor_decal/corner/green/full,
 /obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/structure/window/reinforced{
 	health = 1e+006
 	},
 /obj/machinery/light{
@@ -86416,7 +86540,6 @@
 	dir = 8;
 	health = 1e+006
 	},
-/obj/structure/window/reinforced,
 /obj/machinery/door/window/brigdoor/northright{
 	name = "Target Designator";
 	req_access = null;
@@ -86924,6 +87047,15 @@
 	pixel_x = -24
 	},
 /obj/structure/cable/green,
+/obj/structure/closet{
+	name = "Winter Coats"
+	},
+/obj/item/clothing/shoes/boots/winter/engineering,
+/obj/item/clothing/shoes/boots/winter/engineering,
+/obj/item/clothing/shoes/boots/winter/engineering,
+/obj/item/clothing/suit/storage/hooded/wintercoat/engineering,
+/obj/item/clothing/suit/storage/hooded/wintercoat/engineering,
+/obj/item/clothing/suit/storage/hooded/wintercoat/engineering,
 /turf/simulated/floor/tiled/yellow,
 /area/engineering/locker_room)
 "xky" = (
@@ -89625,7 +89757,6 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/obj/structure/window/reinforced,
 /obj/effect/floor_decal/corner/yellow/full{
 	dir = 4
 	},
@@ -114255,7 +114386,7 @@ dxn
 dxn
 dxn
 dxn
-dxn
+uMJ
 loU
 ajR
 uMJ
@@ -133804,7 +133935,7 @@ qRx
 iBg
 ahx
 iBg
-qRx
+aED
 iBg
 qSX
 qwe
