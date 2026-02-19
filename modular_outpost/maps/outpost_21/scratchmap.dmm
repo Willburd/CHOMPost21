@@ -51,6 +51,26 @@
 /mob/living/simple_mob/vore/wolf/direwolf/syndicate/black,
 /turf/simulated/floor/reinforced,
 /area/space)
+"al" = (
+/turf/unsimulated/wall/r_wall,
+/area/space)
+"am" = (
+/turf/unsimulated/wall/fakeglass2{
+	dir = 4
+	},
+/area/space)
+"an" = (
+/obj/machinery/door/airlock/centcom{
+	name = "Special Operations";
+	req_access = list(103)
+	},
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"ao" = (
+/turf/unsimulated/wall/fakeglass,
+/area/space)
 "ap" = (
 /obj/random/maintenance/engineering,
 /turf/space,
@@ -84,6 +104,9 @@
 	ignore_mapgen = 1
 	},
 /area/space)
+"aw" = (
+/turf/simulated/floor/wood,
+/area/space)
 "ax" = (
 /obj/effect/landmark/event_spawn/maintpred,
 /turf/space,
@@ -110,15 +133,144 @@
 /obj/effect/recycler_vendor_beacon,
 /turf/space,
 /area/space)
+"aD" = (
+/obj/machinery/recharge_station,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"aE" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/vending/security_armor,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"aF" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/table/rack,
+/obj/fiftyspawner/mhydrogen,
+/obj/fiftyspawner/mhydrogen,
+/obj/fiftyspawner/mhydrogen,
+/obj/fiftyspawner/mhydrogen,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"aG" = (
+/obj/structure/table/rack,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/fiftyspawner/leather,
+/obj/fiftyspawner/leather,
+/obj/item/tool/wirecutters/alien{
+	pixel_y = 6
+	},
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"aH" = (
+/obj/structure/table/rack,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/fiftyspawner/durasteel/hull,
+/obj/fiftyspawner/durasteel/hull,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"aI" = (
+/obj/structure/table/rack,
+/obj/item/storage/belt/security/tactical,
+/obj/item/storage/belt/security/tactical,
+/obj/item/storage/belt/security/tactical,
+/obj/item/storage/belt/security/tactical,
+/obj/item/storage/belt/security/tactical,
+/obj/effect/floor_decal/corner/black{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/red,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"aJ" = (
+/obj/effect/floor_decal/corner/black{
+	dir = 10
+	},
+/obj/effect/floor_decal/corner/red,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
 "aK" = (
 /obj/random/maintenance/cargo,
 /turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
 	},
 /area/space)
+"aL" = (
+/obj/structure/table/rack,
+/obj/item/storage/belt/utility,
+/obj/item/storage/belt/utility,
+/obj/item/storage/belt/utility,
+/obj/item/storage/belt/utility,
+/obj/item/storage/belt/utility,
+/obj/effect/floor_decal/corner/black{
+	dir = 10
+	},
+/obj/effect/floor_decal/corner/red,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
 "aM" = (
 /obj/machinery/door/airlock/maintenance/int,
 /turf/simulated/floor/plating/turfpack/muriki,
+/area/space)
+"aN" = (
+/obj/structure/table/rack,
+/obj/item/storage/belt/medical/emt,
+/obj/item/storage/belt/medical/emt,
+/obj/item/storage/belt/medical/emt,
+/obj/item/storage/belt/medical/emt,
+/obj/item/storage/belt/medical/emt,
+/obj/effect/floor_decal/corner/black{
+	dir = 10
+	},
+/obj/effect/floor_decal/corner/red,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"aO" = (
+/obj/effect/floor_decal/corner/black/full{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/red,
+/obj/structure/table/reinforced,
+/obj/item/clothing/accessory/holster/hip/black,
+/obj/item/clothing/accessory/holster/hip/black,
+/obj/item/clothing/accessory/holster/hip/black,
+/obj/item/clothing/accessory/holster/hip/black,
+/obj/item/clothing/accessory/holster/hip/black,
+/obj/item/clothing/accessory/holster/hip/black,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"aP" = (
+/turf/unsimulated/wall/fakeglass{
+	dir = 8
+	},
+/area/space)
+"aQ" = (
+/turf/unsimulated/wall/fakeglass{
+	icon_state = "fakewindows2";
+	dir = 1
+	},
 /area/space)
 "aR" = (
 /obj/structure/trash_pile,
@@ -134,6 +286,44 @@
 /area/space)
 "aT" = (
 /turf/simulated/floor/plating/turfpack/muriki,
+/area/space)
+"aU" = (
+/turf/unsimulated/wall/fakeglass{
+	dir = 4
+	},
+/area/space)
+"aV" = (
+/turf/unsimulated/wall/fakeglass{
+	icon_state = "fakewindows2"
+	},
+/area/space)
+"aW" = (
+/obj/structure/bed/chair/backed_red{
+	dir = 1
+	},
+/obj/effect/landmark/late_antag/ert,
+/turf/simulated/floor/wood,
+/area/space)
+"aX" = (
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"aY" = (
+/obj/structure/table/reinforced,
+/obj/effect/floor_decal/corner/black{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/red,
+/obj/item/clothing/accessory/holster/hip/black,
+/obj/item/clothing/accessory/holster/hip/black,
+/obj/item/clothing/accessory/holster/hip/black,
+/obj/item/clothing/accessory/holster/hip/black,
+/obj/item/clothing/accessory/holster/hip/black,
+/obj/item/clothing/accessory/holster/hip/black,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
 /area/space)
 "aZ" = (
 /obj/item/flame/candle/everburn,
@@ -154,6 +344,19 @@
 	ignore_mapgen = 1
 	},
 /area/space)
+"bc" = (
+/obj/structure/table/steel_reinforced,
+/obj/structure/reagent_dispensers/acid{
+	pixel_x = -30
+	},
+/obj/item/reagent_containers/glass/beaker/sulphuric,
+/obj/item/reagent_containers/glass/beaker/sulphuric,
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
+"bd" = (
+/obj/machinery/rnd/production/circuit_imprinter,
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
 "be" = (
 /obj/machinery/transhuman/autoresleever,
 /turf/simulated/floor/plating/turfpack/muriki,
@@ -172,13 +375,156 @@
 	ignore_mapgen = 1
 	},
 /area/space)
+"bh" = (
+/obj/machinery/computer/mecha{
+	dir = 1;
+	pixel_y = -2
+	},
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
+"bi" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/mecha_parts/mecha_equipment/tool/jetpack,
+/obj/item/mecha_parts/mecha_equipment/antiproj_armor_booster,
+/obj/item/mecha_parts/mecha_equipment/anticcw_armor_booster,
+/obj/item/mecha_parts/mecha_equipment/storage/bluespace,
+/obj/item/mecha_parts/mecha_equipment/cloak,
+/obj/item/mecha_parts/mecha_equipment/generator/nuclear,
+/obj/item/mecha_parts/mecha_equipment/tesla_energy_relay,
+/obj/item/mecha_parts/mecha_equipment/weapon/energy/laser/xray,
+/obj/item/mecha_parts/mecha_equipment/weapon/energy/ion,
+/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/scattershot,
+/obj/item/mecha_parts/mecha_equipment/repair_droid,
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
+"bj" = (
+/obj/machinery/mech_recharger,
+/obj/mecha/combat/phazon/janus,
+/turf/unsimulated/shuttle/plating,
+/area/space)
 "bk" = (
 /turf/simulated/mineral/alt/turfpack/muriki,
+/area/space)
+"bl" = (
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
+"bm" = (
+/obj/machinery/mech_recharger,
+/obj/mecha/combat/phazon,
+/turf/unsimulated/shuttle/plating,
 /area/space)
 "bn" = (
 /obj/effect/decal/cleanable/blood/oil,
 /turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
+	},
+/area/space)
+"bo" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/mecha_parts/mecha_equipment/tool/jetpack,
+/obj/item/mecha_parts/mecha_equipment/antiproj_armor_booster,
+/obj/item/mecha_parts/mecha_equipment/anticcw_armor_booster,
+/obj/item/mecha_parts/mecha_equipment/storage/bluespace,
+/obj/item/mecha_parts/mecha_equipment/gravcatapult,
+/obj/item/mecha_parts/mecha_equipment/cloak,
+/obj/item/mecha_parts/mecha_equipment/generator,
+/obj/item/mecha_parts/mecha_equipment/tesla_energy_relay,
+/obj/item/mecha_parts/mecha_equipment/weapon/energy/laser/xray,
+/obj/item/mecha_parts/mecha_equipment/weapon/energy/ion,
+/obj/item/mecha_parts/mecha_equipment/weapon/energy/taser,
+/obj/item/mecha_parts/mecha_equipment/weapon/energy/medigun,
+/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/missile_rack/grenade/frag,
+/obj/item/mecha_parts/mecha_equipment/repair_droid,
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
+"bp" = (
+/obj/structure/table/rack,
+/obj/effect/floor_decal/corner/black{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/item/rig/ert/assetprotection,
+/obj/item/rig/ert/assetprotection,
+/obj/item/clothing/mask/gas/swat{
+	pixel_x = -7
+	},
+/obj/item/clothing/mask/gas/swat{
+	pixel_x = -7
+	},
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"bq" = (
+/obj/structure/table/rack,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/item/clothing/suit/armor/swat,
+/obj/item/clothing/mask/gas/swat,
+/obj/item/clothing/shoes/boots/swat,
+/obj/item/clothing/gloves/swat,
+/obj/item/clothing/head/helmet/swat,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"br" = (
+/obj/structure/table/rack,
+/obj/effect/floor_decal/corner/black{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/red,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/item/clothing/gloves/arm_guard/laserproof,
+/obj/item/clothing/suit/armor/laserproof,
+/obj/item/clothing/shoes/leg_guard/laserproof,
+/obj/item/clothing/head/helmet/laserproof,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"bs" = (
+/obj/structure/table/rack,
+/obj/item/clothing/accessory/storage/black_vest,
+/obj/item/clothing/accessory/storage/black_vest,
+/obj/item/clothing/accessory/storage/black_vest,
+/obj/item/clothing/accessory/storage/black_vest,
+/obj/item/clothing/accessory/storage/black_vest,
+/obj/item/clothing/accessory/storage/black_vest,
+/obj/effect/floor_decal/corner/black{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 1
+	},
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"bt" = (
+/obj/structure/table/rack,
+/obj/item/clothing/accessory/storage/brown_vest,
+/obj/item/clothing/accessory/storage/brown_vest,
+/obj/item/clothing/accessory/storage/brown_vest,
+/obj/item/clothing/accessory/storage/brown_vest,
+/obj/item/clothing/accessory/storage/brown_vest,
+/obj/item/clothing/accessory/storage/brown_vest,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"bu" = (
+/obj/structure/table/rack,
+/obj/item/clothing/accessory/storage/white_vest,
+/obj/item/clothing/accessory/storage/white_vest,
+/obj/item/clothing/accessory/storage/white_vest,
+/obj/item/clothing/accessory/storage/white_vest,
+/obj/item/clothing/accessory/storage/white_vest,
+/obj/item/clothing/accessory/storage/white_vest,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
 	},
 /area/space)
 "bv" = (
@@ -193,6 +539,106 @@
 	ignore_mapgen = 1
 	},
 /area/space)
+"bx" = (
+/obj/structure/table/reinforced,
+/obj/effect/floor_decal/corner/black{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/red,
+/obj/item/clothing/accessory/holster/hip/black,
+/obj/item/clothing/accessory/holster/hip/black,
+/obj/item/clothing/accessory/holster/hip/black,
+/obj/item/clothing/accessory/holster/hip/black,
+/obj/item/clothing/accessory/holster/hip/black,
+/obj/item/clothing/accessory/holster/hip/black,
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"by" = (
+/turf/unsimulated/wall/fakeglass2,
+/area/space)
+"bz" = (
+/obj/structure/table/rack,
+/obj/item/storage/backpack/dufflebag/syndie/ammo,
+/obj/item/storage/backpack/dufflebag/syndie/ammo,
+/obj/item/storage/backpack/dufflebag/syndie/ammo,
+/obj/effect/floor_decal/corner/black{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/outline/cut_corners/red,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"bA" = (
+/obj/structure/table/rack,
+/obj/item/storage/backpack/dufflebag/syndie,
+/obj/item/storage/backpack/dufflebag/syndie,
+/obj/item/storage/backpack/dufflebag/syndie,
+/obj/effect/floor_decal/industrial/outline/cut_corners/yellow,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"bB" = (
+/obj/structure/table/rack,
+/obj/item/storage/backpack/dufflebag/syndie/med,
+/obj/item/storage/backpack/dufflebag/syndie/med,
+/obj/item/storage/backpack/dufflebag/syndie/med,
+/obj/effect/floor_decal/industrial/outline/cut_corners/blue,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"bC" = (
+/obj/structure/closet{
+	name = "tactical equipment";
+	desc = "It's a storage unit for standard-issue attire."
+	},
+/obj/effect/floor_decal/corner/black{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/red,
+/obj/effect/floor_decal/industrial/outline,
+/obj/item/clothing/under/tactical,
+/obj/item/clothing/under/tactical,
+/obj/item/clothing/under/tactical,
+/obj/item/clothing/under/tactical,
+/obj/item/clothing/under/tactical,
+/obj/item/storage/belt/security/tactical,
+/obj/item/storage/belt/security/tactical,
+/obj/item/storage/belt/security/tactical,
+/obj/item/storage/belt/security/tactical,
+/obj/item/storage/belt/security/tactical,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"bD" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/cell/giga,
+/obj/item/cell/giga,
+/obj/item/cell/giga,
+/obj/item/cell/giga,
+/obj/item/cell/giga,
+/obj/item/cell/giga,
+/obj/item/cell/giga,
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
+"bE" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/cell/infinite,
+/obj/item/cell/infinite,
+/obj/item/cell/infinite,
+/obj/item/cell/infinite,
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
+"bF" = (
+/obj/structure/table/steel_reinforced,
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
 "bG" = (
 /obj/structure/cliff{
 	dir = 8
@@ -201,11 +647,194 @@
 	ignore_mapgen = 1
 	},
 /area/space)
+"bH" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/mecha_parts/mecha_equipment/gravcatapult,
+/obj/item/mecha_parts/mecha_equipment/gravcatapult,
+/obj/item/mecha_parts/mecha_equipment/weapon/energy/flamer,
+/obj/item/mecha_parts/mecha_equipment/weapon/energy/flamer,
+/obj/item/mecha_parts/mecha_equipment/wormhole_generator,
+/obj/item/mecha_parts/mecha_equipment/wormhole_generator,
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
+"bI" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/cell/mech/super,
+/obj/item/cell/mech/super,
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
+"bJ" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/mecha_parts/component/actuator/hispeed,
+/obj/item/mecha_parts/component/actuator/hispeed,
+/obj/item/mecha_parts/component/electrical/high_current,
+/obj/item/mecha_parts/component/electrical/high_current,
+/obj/item/mecha_parts/component/gas/reinforced,
+/obj/item/mecha_parts/component/gas/reinforced,
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
+"bK" = (
+/turf/unsimulated/wall/fakeglass{
+	dir = 1
+	},
+/area/space)
+"bL" = (
+/obj/effect/floor_decal/industrial/loading,
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
+"bM" = (
+/obj/structure/table/wooden_reinforced,
+/obj/item/storage/box/trackimp{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/storage/box/cdeathalarm_kit,
+/turf/simulated/floor/wood,
+/area/space)
+"bN" = (
+/obj/structure/table/wooden_reinforced,
+/obj/item/card/id/event/altcard/ert{
+	access = list(1,101,103)
+	},
+/turf/simulated/floor/wood,
+/area/space)
+"bO" = (
+/obj/structure/bed/chair/backed_red,
+/turf/simulated/floor/wood,
+/area/space)
+"bP" = (
+/obj/structure/table/wooden_reinforced,
+/obj/item/megaphone,
+/turf/simulated/floor/wood,
+/area/space)
+"bQ" = (
+/obj/effect/floor_decal/corner/black{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 1
+	},
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"bR" = (
+/obj/effect/floor_decal/corner/black{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 1
+	},
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"bS" = (
+/obj/effect/floor_decal/corner/black/full{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/red,
+/obj/effect/floor_decal/corner/red{
+	dir = 1
+	},
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"bT" = (
+/obj/machinery/mecha_part_fabricator_tg/prosthetics,
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
+"bU" = (
+/obj/machinery/mecha_part_fabricator_tg,
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
 "bV" = (
 /obj/vehicle/train/trolley,
 /turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
 	},
+/area/space)
+"bW" = (
+/obj/structure/sign/directions/eva{
+	dir = 4;
+	pixel_y = 3
+	},
+/obj/structure/sign/directions/elevator{
+	pixel_y = -3
+	},
+/turf/unsimulated/wall/r_wall,
+/area/space)
+"bX" = (
+/obj/machinery/door/airlock/centcom{
+	name = "Special Operations";
+	req_access = list(103)
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"bY" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/black{
+	dir = 10
+	},
+/obj/effect/floor_decal/corner/red,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"bZ" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"ca" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/black{
+	dir = 10
+	},
+/obj/effect/floor_decal/corner/red,
+/obj/machinery/door/airlock/centcom{
+	name = "Special Operations";
+	req_access = list(103)
+	},
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"cb" = (
+/obj/effect/floor_decal/corner/black{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 4
+	},
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"cc" = (
+/obj/machinery/door/airlock/centcom{
+	name = "Commander";
+	req_access = list(103)
+	},
+/turf/simulated/floor/tiled/dark,
+/area/space)
+"cd" = (
+/obj/structure/table/reinforced,
+/obj/item/pinpointer/advpinpointer,
+/turf/simulated/floor/wood,
 /area/space)
 "ce" = (
 /obj/item/circuitboard/broken,
@@ -219,6 +848,263 @@
 	ignore_mapgen = 1
 	},
 /area/space)
+"cg" = (
+/obj/structure/table/reinforced,
+/obj/item/storage/box/flashbangs,
+/obj/item/storage/belt/security/tactical,
+/obj/item/clothing/glasses/sunglasses/sechud/tactical,
+/obj/item/material/knife/tacknife/combatknife/durahull,
+/turf/simulated/floor/wood,
+/area/space)
+"ch" = (
+/obj/structure/table/reinforced,
+/obj/item/pda/ert,
+/obj/item/perfect_tele,
+/obj/item/hand_tele,
+/turf/simulated/floor/wood,
+/area/space)
+"ci" = (
+/obj/structure/table/reinforced,
+/obj/item/card/id/centcom/ert/commander{
+	access = list(1,101,103)
+	},
+/turf/simulated/floor/wood,
+/area/space)
+"cj" = (
+/obj/effect/floor_decal/corner/black/full,
+/obj/effect/floor_decal/corner/red{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/red,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"ck" = (
+/obj/structure/table/rack,
+/obj/effect/floor_decal/corner/black{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/red,
+/obj/item/gun/magnetic/railgun,
+/obj/item/gun/magnetic/railgun,
+/obj/item/rcd_ammo/large,
+/obj/item/rcd_ammo/large,
+/obj/item/rcd_ammo/large,
+/obj/item/rcd_ammo/large,
+/obj/item/rcd_ammo/large,
+/obj/item/rcd_ammo/large,
+/obj/item/rcd_ammo/large,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"cl" = (
+/obj/structure/table/rack,
+/obj/effect/floor_decal/corner/black/full,
+/obj/effect/floor_decal/corner/red{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/red,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"cm" = (
+/obj/structure/table/rack,
+/obj/effect/floor_decal/corner/black/full{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/red,
+/obj/item/rig/ert/medical,
+/obj/item/rig/ert/medical,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"cn" = (
+/obj/structure/table/rack,
+/obj/effect/floor_decal/corner/black/full,
+/obj/effect/floor_decal/corner/red,
+/obj/effect/floor_decal/corner/red{
+	dir = 1
+	},
+/obj/item/storage/firstaid/fire{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/storage/firstaid/fire{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/storage/firstaid/fire{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/storage/firstaid/fire{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/storage/firstaid/o2,
+/obj/item/storage/firstaid/o2,
+/obj/item/storage/firstaid/o2,
+/obj/item/storage/firstaid/o2,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"co" = (
+/obj/effect/floor_decal/corner/black/full{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/red,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"cp" = (
+/obj/structure/table/reinforced,
+/obj/item/toy/nuke,
+/turf/simulated/floor/wood,
+/area/space)
+"cq" = (
+/obj/structure/table/rack,
+/obj/item/gun/projectile/automatic/p90,
+/obj/item/gun/projectile/automatic/p90,
+/obj/item/gun/projectile/automatic/p90,
+/obj/item/gun/projectile/automatic/p90,
+/obj/effect/floor_decal/corner/black{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 1
+	},
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"cr" = (
+/obj/structure/table/rack,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"cs" = (
+/obj/structure/table/rack,
+/obj/item/material/twohanded/fireaxe/dura,
+/obj/item/material/twohanded/fireaxe/dura,
+/obj/item/material/twohanded/fireaxe/dura,
+/obj/item/material/twohanded/fireaxe/dura,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"ct" = (
+/obj/structure/table/rack,
+/obj/item/cell/device/weapon/recharge/alien{
+	pixel_x = 4;
+	pixel_y = 4
+	},
+/obj/item/cell/device/weapon/recharge/alien{
+	pixel_x = 4;
+	pixel_y = 4
+	},
+/obj/item/cell/device/weapon/recharge/alien{
+	pixel_x = 4;
+	pixel_y = 4
+	},
+/obj/item/cell/device/weapon/recharge/alien{
+	pixel_x = 2;
+	pixel_y = 2
+	},
+/obj/item/cell/device/weapon/recharge/alien{
+	pixel_x = 2;
+	pixel_y = 2
+	},
+/obj/item/cell/device/weapon/recharge/alien{
+	pixel_x = 2;
+	pixel_y = 2
+	},
+/obj/item/cell/device/weapon/recharge/alien,
+/obj/item/cell/device/weapon/recharge/alien,
+/obj/item/cell/device/weapon/recharge/alien,
+/obj/item/cell/device/weapon/recharge/alien{
+	pixel_x = -2;
+	pixel_y = -2
+	},
+/obj/item/cell/device/weapon/recharge/alien{
+	pixel_x = -2;
+	pixel_y = -2
+	},
+/obj/item/cell/device/weapon/recharge/alien{
+	pixel_x = -2;
+	pixel_y = -2
+	},
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"cu" = (
+/obj/structure/table/rack,
+/obj/item/plastique,
+/obj/item/plastique,
+/obj/item/plastique,
+/obj/item/plastique,
+/obj/item/plastique,
+/obj/item/plastique,
+/obj/item/plastique,
+/obj/item/plastique,
+/obj/item/plastique,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"cv" = (
+/obj/structure/table/rack,
+/obj/fiftyspawner/phoron,
+/obj/fiftyspawner/phoron,
+/obj/item/gun/magnetic/matfed/phoronbore/loaded,
+/obj/effect/floor_decal/corner/black{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/red,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"cw" = (
+/obj/structure/table/rack,
+/obj/effect/floor_decal/corner/black{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 1
+	},
+/obj/item/rig/ert/assetprotection,
+/obj/item/rig/ert/assetprotection,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
 "cx" = (
 /obj/item/broken_device/random,
 /obj/item/circuitboard/broken,
@@ -227,10 +1113,290 @@
 	ignore_mapgen = 1
 	},
 /area/space)
+"cy" = (
+/obj/structure/table/rack,
+/obj/effect/floor_decal/corner/black{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/red,
+/obj/item/rig/ert/janitor,
+/obj/item/rig/ert/janitor,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"cz" = (
+/obj/structure/table/rack,
+/obj/item/storage/firstaid/adv{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/storage/firstaid/adv{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/storage/firstaid/adv{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/storage/firstaid/adv{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/storage/firstaid/adv{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/storage/firstaid/clotting,
+/obj/item/storage/firstaid/clotting,
+/obj/item/storage/firstaid/clotting,
+/obj/item/storage/firstaid/clotting,
+/obj/item/storage/firstaid/clotting,
+/obj/effect/floor_decal/corner/black{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 1
+	},
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"cA" = (
+/obj/structure/table/rack,
+/obj/item/storage/pouch/ifak,
+/obj/item/storage/pouch/ifak,
+/obj/item/storage/pouch/ifak,
+/obj/item/storage/pouch/ifak,
+/obj/item/storage/pouch/ifak,
+/obj/item/storage/pouch/ifak,
+/obj/item/storage/pouch/ifak,
+/obj/item/storage/pouch/ifak,
+/obj/item/storage/pouch/ifak,
+/obj/item/storage/pouch/ifak,
+/obj/item/storage/pouch/ifak,
+/obj/item/storage/pouch/ifak,
+/obj/item/storage/pouch/ifak,
+/obj/item/storage/pouch/ifak,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"cB" = (
+/obj/structure/table/rack,
+/obj/item/storage/firstaid/regular{
+	pixel_x = 5;
+	pixel_y = 7
+	},
+/obj/item/storage/firstaid/regular{
+	pixel_x = 5;
+	pixel_y = 7
+	},
+/obj/item/storage/firstaid/regular{
+	pixel_x = 5;
+	pixel_y = 7
+	},
+/obj/item/storage/firstaid/regular{
+	pixel_x = 5;
+	pixel_y = 7
+	},
+/obj/item/storage/firstaid/regular{
+	pixel_x = 5;
+	pixel_y = 7
+	},
+/obj/item/storage/firstaid/regular,
+/obj/item/storage/firstaid/regular,
+/obj/item/storage/firstaid/regular,
+/obj/item/storage/firstaid/regular,
+/obj/item/storage/firstaid/regular,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"cC" = (
+/obj/structure/table/rack,
+/obj/item/storage/firstaid/toxin{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/storage/firstaid/toxin{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/storage/firstaid/toxin{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/storage/firstaid/toxin{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/storage/firstaid/toxin{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/storage/firstaid/vox,
+/obj/item/storage/firstaid/vox,
+/obj/item/storage/firstaid/vox,
+/obj/item/storage/firstaid/vox,
+/obj/item/storage/firstaid/vox,
+/obj/effect/floor_decal/corner/black{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/red,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"cD" = (
+/obj/structure/table/reinforced,
+/obj/machinery/cell_charger,
+/obj/effect/floor_decal/corner/black{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/outline/cut_corners/yellow,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"cE" = (
+/obj/structure/table/reinforced,
+/obj/item/cell/hyper,
+/obj/item/cell/hyper,
+/obj/item/cell/hyper,
+/obj/item/cell/hyper,
+/obj/item/cell/hyper,
+/obj/item/cell/hyper,
+/obj/item/cell/hyper,
+/obj/item/cell/hyper,
+/obj/item/cell/hyper,
+/obj/item/cell/hyper,
+/obj/item/cell/hyper,
+/obj/item/cell/hyper,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"cF" = (
+/obj/structure/table/reinforced,
+/obj/item/tool/crowbar,
+/obj/item/tool/screwdriver,
+/obj/item/tool/wrench,
+/obj/item/tool/crowbar,
+/obj/item/tool/screwdriver,
+/obj/item/tool/wrench,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"cG" = (
+/obj/structure/table/reinforced,
+/obj/machinery/cell_charger,
+/obj/effect/floor_decal/corner/black{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/red,
+/obj/effect/floor_decal/industrial/outline/cut_corners/yellow,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"cH" = (
+/obj/structure/table/reinforced,
+/obj/item/radio/intercom{
+	name = "Spec Ops Intercom";
+	dir = 4;
+	pixel_x = 24;
+	frequency = 1443;
+	broadcasting = 1
+	},
+/obj/item/gun/energy/pulse_rifle/compact/admin,
+/obj/item/clothing/accessory/holster/hip/black{
+	pixel_y = 12
+	},
+/turf/simulated/floor/wood,
+/area/space)
+"cI" = (
+/obj/structure/table/rack,
+/obj/item/flamethrower/full,
+/obj/item/flamethrower/full,
+/obj/item/flamethrower/full,
+/obj/effect/floor_decal/corner/black{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 1
+	},
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
 "cJ" = (
 /obj/structure/outcrop/silver,
 /turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
+	},
+/area/space)
+"cK" = (
+/obj/structure/table/rack,
+/obj/item/tank/phoron,
+/obj/item/tank/phoron,
+/obj/item/tank/phoron,
+/obj/item/tank/phoron,
+/obj/item/tank/phoron,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"cL" = (
+/obj/structure/table/rack,
+/obj/item/material/knife/tacknife/combatknife/durahull,
+/obj/item/material/knife/tacknife/combatknife/durahull,
+/obj/item/material/knife/tacknife/combatknife/durahull,
+/obj/item/material/knife/tacknife/combatknife/durahull,
+/obj/item/material/knife/tacknife/combatknife/durahull,
+/obj/item/material/knife/tacknife/combatknife/durahull,
+/obj/item/material/knife/tacknife/combatknife/durahull,
+/obj/item/material/knife/tacknife/combatknife/durahull,
+/obj/item/material/knife/tacknife/combatknife/durahull,
+/obj/item/material/knife/tacknife/combatknife/durahull,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"cM" = (
+/obj/structure/table/rack,
+/obj/item/cell/device/weapon/empproof{
+	pixel_x = 4;
+	pixel_y = 4
+	},
+/obj/item/cell/device/weapon/empproof{
+	pixel_x = 4;
+	pixel_y = 4
+	},
+/obj/item/cell/device/weapon/empproof{
+	pixel_x = 2;
+	pixel_y = 2
+	},
+/obj/item/cell/device/weapon/empproof{
+	pixel_x = 2;
+	pixel_y = 2
+	},
+/obj/item/cell/device/weapon/empproof,
+/obj/item/cell/device/weapon/empproof,
+/obj/item/cell/device/weapon/empproof{
+	pixel_x = -2;
+	pixel_y = -2
+	},
+/obj/item/cell/device/weapon/empproof{
+	pixel_x = -2;
+	pixel_y = -2
+	},
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
 	},
 /area/space)
 "cN" = (
@@ -240,8 +1406,164 @@
 	ignore_mapgen = 1
 	},
 /area/space)
+"cO" = (
+/obj/structure/table/rack,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"cP" = (
+/obj/structure/table/rack,
+/obj/item/gun/projectile/automatic/serdy/hectate{
+	pixel_x = -9
+	},
+/obj/effect/floor_decal/corner/black{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/red,
+/obj/item/gun/projectile/automatic/serdy/hectate{
+	pixel_x = -9
+	},
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"cQ" = (
+/obj/structure/table/rack,
+/obj/effect/floor_decal/corner/black{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/red,
+/obj/item/card/id/centcom/ert/medic,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"cR" = (
+/obj/structure/table/rack,
+/obj/item/storage/firstaid/bonemed{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/storage/firstaid/bonemed{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/storage/firstaid/bonemed{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/storage/firstaid/bonemed{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/storage/firstaid/bonemed{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/storage/firstaid/combat,
+/obj/item/storage/firstaid/combat,
+/obj/item/storage/firstaid/combat,
+/obj/item/storage/firstaid/combat,
+/obj/item/storage/firstaid/combat,
+/obj/effect/floor_decal/corner/black{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 1
+	},
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"cS" = (
+/obj/structure/table/rack,
+/obj/item/storage/firstaid/adv{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/storage/firstaid/adv{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/storage/firstaid/adv{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/storage/firstaid/adv{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/storage/firstaid/adv{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/storage/firstaid/adv{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/storage/firstaid/adv,
+/obj/item/storage/firstaid/adv,
+/obj/item/storage/firstaid/adv,
+/obj/item/storage/firstaid/adv,
+/obj/item/storage/firstaid/adv,
+/obj/item/storage/firstaid/adv,
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"cT" = (
+/obj/structure/table/rack,
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"cU" = (
+/obj/structure/table/rack,
+/obj/item/healthanalyzer/phasic,
+/obj/item/healthanalyzer/phasic,
+/obj/item/healthanalyzer/phasic,
+/obj/effect/floor_decal/corner/black{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/red,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
 "cV" = (
 /turf/simulated/mineral/alt/ignore_mapgen/turfpack/muriki,
+/area/space)
+"cW" = (
+/obj/structure/table/reinforced,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"cX" = (
+/obj/structure/table/reinforced,
+/obj/item/pda/ert,
+/obj/item/pda/ert,
+/obj/item/pda/ert,
+/obj/item/pda/ert,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"cY" = (
+/obj/structure/table/rack,
+/obj/item/rig/ert,
+/obj/item/clothing/accessory/storage/black_vest,
+/obj/item/clothing/suit/armor/swat/officer,
+/turf/simulated/floor/wood,
 /area/space)
 "cZ" = (
 /obj/random/maintenance/cargo,
@@ -250,12 +1572,90 @@
 	ignore_mapgen = 1
 	},
 /area/space)
+"da" = (
+/obj/structure/table/rack,
+/obj/item/clothing/suit/armor/vest/ert/command,
+/obj/item/storage/backpack/ert/commander,
+/turf/simulated/floor/wood,
+/area/space)
 "db" = (
 /obj/structure/cliff/corner{
 	dir = 9
 	},
 /turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
+	},
+/area/space)
+"dc" = (
+/obj/item/personal_shield_generator/belt/adminbus,
+/turf/simulated/floor/wood,
+/area/space)
+"dd" = (
+/obj/machinery/computer/communications,
+/turf/simulated/floor/wood,
+/area/space)
+"de" = (
+/obj/structure/table/reinforced,
+/obj/item/ammo_magazine/ammo_box/b145,
+/obj/item/ammo_magazine/ammo_box/b145,
+/obj/item/ammo_magazine/ammo_box/b145,
+/obj/item/ammo_magazine/ammo_box/b145/highvel,
+/obj/item/ammo_magazine/ammo_box/b145/highvel,
+/obj/item/gun/projectile/revolver/slab,
+/turf/simulated/floor/wood,
+/area/space)
+"df" = (
+/obj/structure/table/rack,
+/obj/item/gun/projectile/serdy_pistols/tp23s,
+/obj/item/gun/projectile/serdy_pistols/tp23s,
+/obj/item/gun/projectile/serdy_pistols/tp23s,
+/obj/item/gun/projectile/serdy_pistols/tp23s,
+/obj/item/gun/projectile/serdy_pistols/tp23s,
+/obj/item/gun/projectile/serdy_pistols/tp23s,
+/obj/item/gun/projectile/serdy_pistols/tp23s,
+/obj/item/gun/projectile/serdy_pistols/tp23s,
+/obj/item/gun/projectile/serdy_pistols/tp23s,
+/obj/item/gun/projectile/serdy_pistols/tp23s,
+/obj/item/gun/projectile/serdy_pistols/tp23s,
+/obj/item/gun/projectile/serdy_pistols/tp23s,
+/obj/item/gun/projectile/serdy_pistols/tp23s,
+/obj/item/gun/projectile/serdy_pistols/tp23s,
+/obj/effect/floor_decal/corner/black{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 1
+	},
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"dg" = (
+/obj/structure/table/rack,
+/obj/item/ammo_magazine/tp23s/highpower,
+/obj/item/ammo_magazine/tp23s/highpower,
+/obj/item/ammo_magazine/tp23s/highpower,
+/obj/item/ammo_magazine/tp23s/highpower,
+/obj/item/ammo_magazine/tp23s/highpower,
+/obj/item/ammo_magazine/tp23s/highpower,
+/obj/item/ammo_magazine/tp23s/highpower,
+/obj/item/ammo_magazine/tp23s/highpower,
+/obj/item/ammo_magazine/tp23s/highpower,
+/obj/item/ammo_magazine/tp23s/highpower,
+/obj/item/ammo_magazine/tp23s/highpower,
+/obj/item/ammo_magazine/tp23s/highpower,
+/obj/item/ammo_magazine/tp23s/highpower,
+/obj/item/ammo_magazine/tp23s/highpower,
+/obj/item/ammo_magazine/tp23s/highpower,
+/obj/item/ammo_magazine/tp23s/highpower,
+/obj/item/ammo_magazine/tp23s/highpower,
+/obj/item/ammo_magazine/tp23s/highpower,
+/obj/item/ammo_magazine/tp23s/highpower,
+/obj/item/ammo_magazine/tp23s/highpower,
+/obj/item/ammo_magazine/tp23s/highpower,
+/obj/item/ammo_magazine/tp23s/highpower,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
 	},
 /area/space)
 "dh" = (
@@ -266,12 +1666,89 @@
 	ignore_mapgen = 1
 	},
 /area/space)
+"di" = (
+/obj/structure/table/rack,
+/obj/item/material/knife/machete/durahull,
+/obj/item/material/knife/machete/durahull,
+/obj/item/material/knife/machete/durahull,
+/obj/item/material/knife/machete/durahull,
+/obj/item/material/knife/machete/durahull,
+/obj/item/material/knife/machete/durahull,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"dj" = (
+/obj/structure/table/rack,
+/obj/item/gun/energy/pulse_rifle/carbine,
+/obj/item/gun/energy/pulse_rifle/carbine,
+/obj/item/gun/energy/pulse_rifle/carbine,
+/obj/item/gun/energy/pulse_rifle/carbine,
+/obj/item/gun/energy/pulse_rifle/carbine,
+/obj/item/gun/energy/pulse_rifle/carbine,
+/obj/item/gun/energy/pulse_rifle/carbine,
+/obj/item/gun/energy/pulse_rifle/carbine,
+/obj/item/gun/energy/pulse_rifle/carbine,
+/obj/item/gun/energy/pulse_rifle/carbine,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
 "dk" = (
 /obj/structure/cliff{
 	dir = 9
 	},
 /turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
+	},
+/area/space)
+"dl" = (
+/obj/structure/table/rack,
+/obj/item/storage/box/frags,
+/obj/item/storage/box/frags,
+/obj/item/storage/box/frags,
+/obj/item/storage/box/frags,
+/obj/item/storage/box/frags,
+/obj/item/storage/box/frags,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"dm" = (
+/obj/structure/table/rack,
+/obj/item/gun/launcher/grenade/underslung,
+/obj/item/gun/launcher/grenade/underslung,
+/obj/effect/floor_decal/corner/black{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/red,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"dn" = (
+/obj/structure/table/rack,
+/obj/effect/floor_decal/corner/black{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 1
+	},
+/obj/item/rig/ch/precursor,
+/obj/item/rig/ch/precursor,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"do" = (
+/obj/structure/table/rack,
+/obj/effect/floor_decal/corner/black{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/red,
+/obj/item/card/id/centcom/ert/janitor,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
 	},
 /area/space)
 "dp" = (
@@ -282,6 +1759,23 @@
 	ignore_mapgen = 1
 	},
 /area/space)
+"dq" = (
+/obj/structure/table/rack,
+/obj/item/bodybag/cryobag,
+/obj/item/bodybag/cryobag,
+/obj/item/bodybag/cryobag,
+/obj/item/bodybag/cryobag,
+/obj/item/bodybag/cryobag,
+/obj/effect/floor_decal/corner/black{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 1
+	},
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
 "dr" = (
 /obj/structure/cliff/corner{
 	dir = 5
@@ -290,11 +1784,195 @@
 	ignore_mapgen = 1
 	},
 /area/space)
+"ds" = (
+/obj/structure/table/rack,
+/obj/item/defib_kit/compact/combat/loaded,
+/obj/item/defib_kit/compact/combat/loaded,
+/obj/item/defib_kit/compact/combat/loaded,
+/obj/effect/floor_decal/corner/black{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/red,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"dt" = (
+/obj/structure/table/rack,
+/obj/item/rig_module/mounted/taser,
+/obj/item/rig_module/mounted/taser,
+/obj/item/rig_module/mounted/taser,
+/obj/effect/floor_decal/corner/black{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 1
+	},
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"du" = (
+/obj/machinery/autolathe{
+	name = "Unlocked Autolathe";
+	desc = "Your typical Autolathe. It appears to have much more options than your regular one, however...";
+	hacked = 1
+	},
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"dv" = (
+/obj/item/stack/cable_coil,
+/obj/item/stack/cable_coil,
+/obj/item/stack/cable_coil,
+/obj/item/stack/cable_coil,
+/obj/item/stack/cable_coil,
+/obj/item/stack/cable_coil,
+/obj/structure/table/rack,
+/obj/effect/floor_decal/corner/black{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/red,
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"dw" = (
+/obj/structure/table/rack,
+/obj/item/gun/projectile/automatic/mg42,
+/obj/effect/floor_decal/corner/black{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 1
+	},
+/obj/item/gun/projectile/automatic/mg42,
+/obj/item/gun/projectile/automatic/mg42,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
 "dx" = (
 /obj/structure/cliff/corner{
 	dir = 5
 	},
 /turf/simulated/mineral/alt/ignore_mapgen/turfpack/muriki,
+/area/space)
+"dy" = (
+/obj/structure/table/rack,
+/obj/item/ammo_magazine/mg42,
+/obj/item/ammo_magazine/mg42,
+/obj/item/ammo_magazine/mg42,
+/obj/item/ammo_magazine/mg42,
+/obj/item/ammo_magazine/mg42,
+/obj/item/ammo_magazine/mg42,
+/obj/item/ammo_magazine/mg42,
+/obj/item/ammo_magazine/mg42,
+/obj/item/ammo_magazine/mg42,
+/obj/item/ammo_magazine/mg42,
+/obj/item/ammo_magazine/mg42,
+/obj/item/ammo_magazine/mg42,
+/obj/item/ammo_magazine/mg42,
+/obj/item/ammo_magazine/mg42,
+/obj/item/ammo_magazine/mg42,
+/obj/item/ammo_magazine/mg42,
+/obj/item/ammo_magazine/mg42,
+/obj/item/ammo_magazine/mg42,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"dz" = (
+/obj/structure/table/rack,
+/obj/item/shield/energy,
+/obj/item/shield/energy,
+/obj/item/shield/energy,
+/obj/item/shield/energy,
+/obj/item/shield/energy,
+/obj/item/shield/energy,
+/obj/item/shield/energy,
+/obj/item/shield/energy,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"dA" = (
+/obj/structure/table/rack,
+/obj/item/gun/launcher/grenade,
+/obj/item/gun/launcher/grenade,
+/obj/item/gun/launcher/grenade,
+/obj/effect/floor_decal/corner/black{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/red,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"dB" = (
+/obj/structure/table/rack,
+/obj/effect/floor_decal/corner/black{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/red,
+/obj/item/card/id/centcom/ert/engineer,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"dC" = (
+/obj/effect/floor_decal/corner/black{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 1
+	},
+/obj/structure/table/reinforced,
+/obj/item/reagent_containers/glass/beaker/bluespace,
+/obj/item/reagent_containers/glass/beaker/bluespace,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"dD" = (
+/obj/structure/table/reinforced,
+/obj/machinery/chemical_dispenser/ert/specialops,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"dE" = (
+/obj/structure/table/reinforced,
+/obj/machinery/chemical_dispenser/biochemistry/full,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"dF" = (
+/obj/effect/floor_decal/corner/black{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/red,
+/obj/structure/table/reinforced,
+/obj/item/reagent_containers/glass/beaker/bluespace,
+/obj/item/reagent_containers/glass/beaker/bluespace,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"dG" = (
+/obj/structure/table/rack,
+/obj/item/rig_module/mounted/egun,
+/obj/item/rig_module/mounted/egun,
+/obj/effect/floor_decal/corner/black{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 1
+	},
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
 /area/space)
 "dH" = (
 /obj/structure/cliff/corner{
@@ -302,6 +1980,87 @@
 	},
 /turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
+	},
+/area/space)
+"dI" = (
+/obj/item/stack/material/glass{
+	amount = 50
+	},
+/obj/item/stack/material/glass{
+	amount = 50
+	},
+/obj/item/stack/material/glass{
+	amount = 50
+	},
+/obj/item/stack/material/glass{
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	pixel_x = 2;
+	pixel_y = 2;
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	pixel_x = 2;
+	pixel_y = 2;
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	pixel_x = 2;
+	pixel_y = 2;
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	pixel_x = 2;
+	pixel_y = 2;
+	amount = 50
+	},
+/obj/item/stack/material/plasteel{
+	amount = 50
+	},
+/obj/item/stack/material/plasteel{
+	amount = 50
+	},
+/obj/item/stack/material/plasteel{
+	amount = 50
+	},
+/obj/item/stack/material/plasteel{
+	amount = 50
+	},
+/obj/item/stack/material/glass/reinforced{
+	amount = 50
+	},
+/obj/item/stack/material/glass/reinforced{
+	amount = 50
+	},
+/obj/item/stack/material/glass/reinforced{
+	amount = 50
+	},
+/obj/item/storage/briefcase/inflatable{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/storage/briefcase/inflatable{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/storage/briefcase/inflatable{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/storage/briefcase/inflatable{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/structure/table/steel_reinforced,
+/obj/item/stack/rods,
+/obj/item/stack/rods,
+/obj/item/stack/material/glass/phoronglass,
+/obj/item/stack/material/glass/phoronglass,
+/obj/item/stack/rods,
+/obj/item/stack/rods,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
 	},
 /area/space)
 "dJ" = (
@@ -312,6 +2071,45 @@
 	ignore_mapgen = 1
 	},
 /area/space)
+"dK" = (
+/obj/item/clothing/glasses/welding/superior,
+/obj/item/clothing/glasses/welding/superior,
+/obj/item/clothing/glasses/welding/superior,
+/obj/item/clothing/glasses/welding/superior,
+/obj/item/clothing/glasses/welding/superior,
+/obj/item/clothing/glasses/welding/superior,
+/obj/item/grenade/chem_grenade/metalfoam,
+/obj/item/grenade/chem_grenade/metalfoam,
+/obj/item/grenade/chem_grenade/metalfoam,
+/obj/item/grenade/chem_grenade/metalfoam,
+/obj/item/grenade/chem_grenade/metalfoam,
+/obj/item/grenade/chem_grenade/metalfoam,
+/obj/structure/table/rack,
+/obj/effect/floor_decal/corner/black{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/red,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"dL" = (
+/obj/structure/table/rack,
+/obj/item/gun/projectile/automatic/serdy/m41a,
+/obj/item/gun/projectile/automatic/serdy/m41a,
+/obj/item/gun/projectile/automatic/serdy/m41a,
+/obj/effect/floor_decal/corner/black{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 1
+	},
+/obj/item/gun/projectile/automatic/serdy/m41a,
+/obj/item/gun/projectile/automatic/serdy/m41a,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
 "dM" = (
 /obj/effect/decal/cleanable/blood/oil,
 /obj/structure/cliff,
@@ -319,10 +2117,197 @@
 	ignore_mapgen = 1
 	},
 /area/space)
+"dN" = (
+/obj/structure/table/rack,
+/obj/item/ammo_magazine/m41,
+/obj/item/ammo_magazine/m41,
+/obj/item/ammo_magazine/m41,
+/obj/item/ammo_magazine/m41,
+/obj/item/ammo_magazine/m41,
+/obj/item/ammo_magazine/m41,
+/obj/item/ammo_magazine/m41,
+/obj/item/ammo_magazine/m41,
+/obj/item/ammo_magazine/m41,
+/obj/item/ammo_magazine/m41,
+/obj/item/ammo_magazine/m41,
+/obj/item/ammo_magazine/m41,
+/obj/item/ammo_magazine/m41,
+/obj/item/ammo_magazine/m41,
+/obj/item/ammo_magazine/m41,
+/obj/item/ammo_magazine/m41,
+/obj/item/ammo_magazine/m41,
+/obj/item/ammo_magazine/m41,
+/obj/item/ammo_magazine/m41,
+/obj/item/ammo_magazine/m41,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"dO" = (
+/obj/structure/table/rack,
+/obj/item/personal_shield_generator/belt/adminbus,
+/obj/item/personal_shield_generator/belt/adminbus,
+/obj/item/personal_shield_generator/belt/adminbus,
+/obj/item/personal_shield_generator/belt/adminbus,
+/obj/item/personal_shield_generator/belt/adminbus,
+/obj/item/personal_shield_generator/belt/adminbus,
+/obj/item/personal_shield_generator/belt/adminbus,
+/obj/item/personal_shield_generator/belt/adminbus,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"dP" = (
+/obj/structure/table/rack,
+/obj/item/gun/energy/plasmastun,
+/obj/item/gun/energy/plasmastun,
+/obj/item/gun/energy/plasmastun,
+/obj/item/gun/energy/plasmastun,
+/obj/item/gun/energy/plasmastun,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"dQ" = (
+/obj/structure/table/rack,
+/obj/item/gun/launcher/rocket,
+/obj/item/gun/launcher/rocket,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"dR" = (
+/obj/structure/table/rack,
+/obj/item/ammo_casing/rocket,
+/obj/item/ammo_casing/rocket,
+/obj/item/ammo_casing/rocket,
+/obj/item/ammo_casing/rocket,
+/obj/item/ammo_casing/rocket,
+/obj/item/ammo_casing/rocket,
+/obj/item/ammo_casing/rocket,
+/obj/item/ammo_casing/rocket,
+/obj/item/ammo_casing/rocket,
+/obj/effect/floor_decal/corner/black{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/red,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"dS" = (
+/obj/effect/floor_decal/corner/black{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/red,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"dT" = (
+/obj/effect/floor_decal/corner/black{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 1
+	},
+/obj/machinery/chem_master,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"dU" = (
+/obj/effect/floor_decal/corner/black{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/red,
+/obj/machinery/chem_master,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"dV" = (
+/obj/structure/table/rack,
+/obj/item/rig_module/chem_dispenser/combat,
+/obj/item/rig_module/chem_dispenser/combat,
+/obj/item/rig_module/chem_dispenser/injector,
+/obj/item/rig_module/chem_dispenser/injector,
+/obj/item/rig_module/device/healthscanner,
+/obj/item/rig_module/device/healthscanner,
+/obj/effect/floor_decal/corner/black{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 1
+	},
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
 "dW" = (
 /obj/random/maintenance/misc,
 /turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
+	},
+/area/space)
+"dX" = (
+/obj/item/circuitboard/aiupload,
+/obj/item/circuitboard/borgupload,
+/obj/item/circuitboard/smes,
+/obj/item/aiModule/nanotrasen,
+/obj/item/aiModule/reset,
+/obj/item/aiModule/freeformcore,
+/obj/item/aiModule/protectStation,
+/obj/item/aiModule/quarantine,
+/obj/item/aiModule/paladin,
+/obj/item/aiModule/robocop,
+/obj/item/aiModule/safeguard,
+/obj/structure/table/rack,
+/obj/effect/floor_decal/corner/black{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/red,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"dY" = (
+/obj/structure/table/rack,
+/obj/item/gun/projectile/automatic/as24,
+/obj/item/gun/projectile/automatic/as24,
+/obj/item/gun/projectile/automatic/as24,
+/obj/item/gun/projectile/automatic/as24,
+/obj/item/gun/projectile/automatic/as24,
+/obj/effect/floor_decal/corner/black{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 1
+	},
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"dZ" = (
+/obj/structure/table/rack,
+/obj/item/ammo_magazine/m12gdrum,
+/obj/item/ammo_magazine/m12gdrum,
+/obj/item/ammo_magazine/m12gdrum,
+/obj/item/ammo_magazine/m12gdrum,
+/obj/item/ammo_magazine/m12gdrum,
+/obj/item/ammo_magazine/m12gdrum,
+/obj/item/ammo_magazine/m12gdrum,
+/obj/item/ammo_magazine/m12gdrum,
+/obj/item/ammo_magazine/m12gdrum,
+/obj/item/ammo_magazine/m12gdrum/pellet,
+/obj/item/ammo_magazine/m12gdrum/pellet,
+/obj/item/ammo_magazine/m12gdrum/pellet,
+/obj/item/ammo_magazine/m12gdrum/pellet,
+/obj/item/ammo_magazine/m12gdrum/pellet,
+/obj/item/ammo_magazine/m12gdrum/pellet,
+/obj/item/ammo_magazine/m12gdrum/pellet,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
 	},
 /area/space)
 "ea" = (
@@ -333,10 +2318,201 @@
 	ignore_mapgen = 1
 	},
 /area/space)
+"eb" = (
+/obj/structure/table/rack,
+/obj/item/clothing/glasses/omni,
+/obj/item/clothing/glasses/omni,
+/obj/item/clothing/glasses/omni,
+/obj/item/clothing/glasses/omni,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"ec" = (
+/obj/structure/table/rack,
+/obj/item/gun/energy/alien,
+/obj/item/gun/energy/alien,
+/obj/item/gun/energy/alien,
+/obj/item/gun/energy/alien,
+/obj/item/gun/energy/alien,
+/obj/item/gun/energy/alien,
+/obj/item/gun/energy/alien,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"ed" = (
+/obj/structure/table/rack,
+/obj/item/gun/energy/gun/burst/mg42,
+/obj/item/gun/energy/gun/burst/mg42,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
 "ee" = (
 /obj/structure/cliff_end,
 /turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
+	},
+/area/space)
+"ef" = (
+/obj/structure/table/rack,
+/obj/item/laser_designator,
+/obj/effect/floor_decal/corner/black{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/red,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"eg" = (
+/obj/structure/table/rack{
+	dir = 4
+	},
+/obj/item/clothing/shoes/magboots,
+/obj/item/clothing/shoes/magboots,
+/obj/item/clothing/shoes/magboots,
+/obj/item/clothing/shoes/magboots,
+/obj/item/clothing/shoes/magboots,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/effect/floor_decal/corner/black/full{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"eh" = (
+/obj/structure/dispenser/oxygen,
+/obj/effect/floor_decal/corner/black{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"ei" = (
+/obj/structure/table/rack{
+	dir = 4
+	},
+/obj/item/suit_cooling_unit,
+/obj/item/suit_cooling_unit,
+/obj/item/suit_cooling_unit,
+/obj/item/clothing/shoes/magboots,
+/obj/item/clothing/shoes/magboots,
+/obj/item/clothing/shoes/magboots,
+/obj/item/clothing/shoes/magboots,
+/obj/item/clothing/shoes/magboots,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/effect/floor_decal/corner/black/full{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/red,
+/obj/effect/floor_decal/corner/red{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"ej" = (
+/obj/effect/floor_decal/corner/black/full{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 1
+	},
+/obj/structure/table/rack,
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"ek" = (
+/obj/effect/floor_decal/corner/black{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 1
+	},
+/obj/structure/table/reinforced,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"el" = (
+/obj/effect/floor_decal/corner/black/full{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/red,
+/obj/effect/floor_decal/corner/red{
+	dir = 1
+	},
+/obj/structure/table/rack,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"em" = (
+/obj/structure/table/rack,
+/obj/item/rig_module/device/rcd,
+/obj/item/rig_module/device/rcd,
+/obj/item/rig_module/device/plasmacutter,
+/obj/item/rig_module/device/plasmacutter,
+/obj/effect/floor_decal/corner/black/full{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 1
+	},
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"en" = (
+/obj/structure/table/rack,
+/obj/item/rig_module/rescue_pharm,
+/obj/item/rig_module/sprinter,
+/obj/item/rig_module/sprinter,
+/obj/effect/floor_decal/corner/black{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 1
+	},
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"eo" = (
+/obj/structure/table/rack,
+/obj/item/rig_module/device/drill,
+/obj/item/rig_module/device/drill,
+/obj/item/rig_module/maneuvering_jets,
+/obj/item/rig_module/maneuvering_jets,
+/obj/effect/floor_decal/corner/black{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 1
+	},
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
 	},
 /area/space)
 "ep" = (
@@ -346,18 +2522,680 @@
 	ignore_mapgen = 1
 	},
 /area/space)
+"eq" = (
+/obj/item/stack/material/phoron,
+/obj/structure/table/rack,
+/obj/effect/floor_decal/corner/black{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 1
+	},
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
 "er" = (
 /obj/item/stolenpackage,
 /turf/space,
 /area/space)
+"es" = (
+/obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/t_scanner/advanced,
+/obj/item/t_scanner/advanced,
+/obj/structure/table/rack,
+/obj/effect/floor_decal/corner/black/full{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/red,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"et" = (
+/obj/effect/floor_decal/corner/black/full{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 1
+	},
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"eu" = (
+/turf/unsimulated/mineral/muriki/basalt,
+/area/space)
+"ev" = (
+/turf/simulated/wall,
+/area/space)
+"ew" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/door/airlock/maintenance/int,
+/obj/effect/decal/cleanable/blood/tracks/suspicious,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/space)
+"ex" = (
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/space)
+"ey" = (
+/obj/structure/disposalpipe/junction{
+	dir = 8;
+	icon_state = "pipe-j2"
+	},
+/obj/effect/decal/cleanable/blood/tracks/suspicious{
+	dir = 9
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/space)
+"ez" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/obj/effect/decal/cleanable/blood/tracks/suspicious{
+	dir = 6
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/space)
+"eA" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/door/airlock/maintenance/int,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/space)
+"eB" = (
+/obj/structure/disposalpipe/junction/yjunction{
+	dir = 8
+	},
+/obj/effect/landmark/step_trap,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/space)
+"eC" = (
+/obj/structure/disposalpipe/junction/yjunction{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/blood/tracks/suspicious,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/space)
+"eD" = (
+/turf/simulated/mineral/alt/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"eE" = (
+/obj/item/material/barbedwire/start_active,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"eF" = (
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"eG" = (
+/turf/simulated/wall,
+/area/mine/explored/muriki/liminaltoobs)
+"eH" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"eI" = (
+/obj/structure/disposalpipe/junction{
+	dir = 4;
+	icon_state = "pipe-j2"
+	},
+/obj/effect/decal/cleanable/blood/tracks/suspicious{
+	dir = 10
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"eJ" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/obj/effect/decal/cleanable/blood/tracks/suspicious{
+	dir = 5
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"eK" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/door/airlock/maintenance/int,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"eL" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/door/airlock/maintenance/int,
+/obj/effect/landmark/electrify_door/ten,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"eM" = (
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"eN" = (
+/obj/structure/disposalpipe/junction{
+	dir = 4
+	},
+/obj/structure/blade_trap/start_active,
+/obj/effect/landmark/step_trap,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"eO" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"eP" = (
+/obj/structure/disposalpipe/junction{
+	dir = 4
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"eQ" = (
+/obj/structure/disposalpipe/junction/yjunction,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"eR" = (
+/obj/structure/disposalpipe/junction{
+	dir = 8;
+	icon_state = "pipe-j2"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"eS" = (
+/obj/effect/auto_crayon{
+	icon_state = "uboa"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/space)
+"eT" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/door/airlock/maintenance/int,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"eU" = (
+/obj/structure/disposalpipe/junction/yjunction{
+	dir = 8
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"eV" = (
+/obj/structure/disposalpipe/junction{
+	dir = 1
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"eW" = (
+/obj/structure/disposalpipe/junction/yjunction{
+	dir = 4
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"eX" = (
+/obj/structure/disposalpipe/junction{
+	dir = 1;
+	icon_state = "pipe-j2"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"eY" = (
+/obj/structure/disposalpipe/junction/yjunction{
+	dir = 8
+	},
+/obj/effect/landmark/step_trap,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"eZ" = (
+/obj/structure/disposalpipe/junction/yjunction{
+	dir = 1
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"fa" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/obj/random/junk,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"fb" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/obj/effect/landmark/step_trap,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"fc" = (
+/obj/structure/disposalpipe/junction{
+	dir = 8
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"fd" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"fe" = (
+/obj/structure/disposalpipe/junction/yjunction{
+	dir = 1
+	},
+/obj/effect/landmark/step_trap,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"ff" = (
+/obj/structure/disposalpipe/junction{
+	dir = 4;
+	icon_state = "pipe-j2"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"fg" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/obj/effect/landmark/step_trap,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"fh" = (
+/turf/simulated/open/muriki,
+/area/mine/explored/muriki/liminaltoobs)
 "fi" = (
 /obj/random/outcrop,
 /turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
 	},
 /area/space)
+"fj" = (
+/obj/structure/disposalpipe/broken,
+/turf/simulated/open/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"fk" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/auto_crayon{
+	icon_state = "uboa"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/space)
+"fl" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/door/airlock/maintenance/int,
+/obj/effect/landmark/electrify_door/ten,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"fm" = (
+/obj/structure/disposalpipe/junction{
+	dir = 2;
+	icon_state = "pipe-j2"
+	},
+/obj/random/junk,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"fn" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/door/airlock/maintenance/int,
+/obj/item/grenade/concussion,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"fo" = (
+/obj/structure/disposalpipe/broken{
+	dir = 8
+	},
+/turf/simulated/open/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"fp" = (
+/obj/structure/disposalpipe/broken{
+	dir = 4
+	},
+/turf/simulated/open/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"fq" = (
+/obj/structure/disposalpipe/broken{
+	dir = 1
+	},
+/turf/simulated/open/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"fr" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/obj/effect/landmark/step_trap,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"fs" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/door/airlock/maintenance/int,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/space)
+"ft" = (
+/obj/structure/disposalpipe/junction/yjunction,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/space)
+"fu" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/obj/effect/landmark/step_trap,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/space)
+"fv" = (
+/obj/structure/disposalpipe/junction{
+	dir = 4
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/space)
+"fw" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/obj/effect/landmark{
+	name = "badbody"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/space)
+"fx" = (
+/obj/structure/disposalpipe/junction{
+	dir = 4
+	},
+/obj/effect/mine/claymore,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"fy" = (
+/obj/structure/disposalpipe/junction{
+	dir = 8;
+	icon_state = "pipe-j2"
+	},
+/obj/effect/landmark/step_trap,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"fz" = (
+/obj/structure/disposalpipe/junction{
+	dir = 1;
+	icon_state = "pipe-j2"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/space)
+"fA" = (
+/obj/structure/disposalpipe/junction{
+	dir = 2;
+	icon_state = "pipe-j2"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/space)
+"fB" = (
+/obj/structure/disposalpipe/junction,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/space)
+"fC" = (
+/obj/structure/disposalpipe/junction{
+	dir = 1
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/space)
+"fD" = (
+/obj/structure/disposalpipe/junction,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"fE" = (
+/obj/structure/disposalpipe/junction{
+	dir = 1
+	},
+/obj/effect/landmark/redspaceexit,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"fF" = (
+/obj/structure/disposalpipe/junction{
+	dir = 1
+	},
+/obj/effect/mine/claymore{
+	dir = 4
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"fG" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/door/airlock/maintenance/int,
+/obj/effect/landmark/electrify_door/fifty,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/space)
+"fH" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/space)
+"fI" = (
+/obj/structure/disposalpipe/junction{
+	dir = 4;
+	icon_state = "pipe-j2"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/space)
+"fJ" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/space)
+"fK" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/obj/random/junk,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/space)
+"fL" = (
+/obj/structure/disposalpipe/junction{
+	dir = 8
+	},
+/obj/effect/landmark/step_trap,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"fM" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/obj/structure/blade_trap/start_active,
+/obj/random/junk,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"fN" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/obj/random/junk,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"fO" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/door/airlock/maintenance/int,
+/obj/effect/landmark/electrify_door/ten,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/space)
+"fP" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/space)
+"fQ" = (
+/obj/structure/disposalpipe/junction{
+	dir = 8;
+	icon_state = "pipe-j2"
+	},
+/obj/effect/landmark/step_trap,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/space)
+"fR" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/obj/random/junk,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
 "fS" = (
 /obj/random/maintenance/medical,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/space)
+"fT" = (
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/obj/effect/landmark{
+	name = "badbody"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"fU" = (
+/obj/structure/disposalpipe/junction,
+/obj/random/junk,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/space)
+"fV" = (
+/obj/structure/disposalpipe/junction/yjunction{
+	dir = 4
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/space)
+"fW" = (
+/obj/structure/disposalpipe/junction/yjunction{
+	dir = 8
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/space)
+"fX" = (
+/obj/structure/disposalpipe/junction/yjunction{
+	dir = 8
+	},
+/obj/effect/mine/claymore{
+	dir = 8
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"fY" = (
+/obj/structure/disposalpipe/junction{
+	dir = 2;
+	icon_state = "pipe-j2"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"fZ" = (
+/obj/structure/disposalpipe/junction{
+	dir = 8
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/space)
+"ga" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/obj/effect/landmark/step_trap,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/space)
+"gb" = (
+/obj/structure/disposalpipe/junction/yjunction{
+	dir = 1
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/space)
+"gc" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/obj/random/junk,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/space)
+"gd" = (
+/obj/structure/disposalpipe/broken{
+	dir = 1
+	},
+/obj/structure/disposalpipe/broken{
+	dir = 4
+	},
+/turf/simulated/open/muriki,
+/area/space)
+"ge" = (
+/obj/random/junk,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/space)
+"gf" = (
+/obj/item/trash/porkpie,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/space)
+"gg" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/door/airlock/maintenance/int,
+/obj/item/grenade/spawnergrenade/manhacks,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/space)
+"gh" = (
+/obj/structure/disposalpipe/junction{
+	dir = 1
+	},
+/obj/effect/mine/claymore{
+	dir = 4
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/space)
+"gi" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/door/airlock/maintenance/int,
+/obj/effect/landmark/electrify_door/ten,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/space)
+"gj" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/obj/effect/landmark/step_trap,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/space)
 "hm" = (
@@ -15657,23 +18495,23 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+al
+al
+al
+al
+al
+al
+an
+bX
+al
+bK
+aV
+aV
+aV
+aV
+aV
+ao
+al
 hm
 hm
 hm
@@ -15914,23 +18752,23 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+al
+cY
+aw
+aw
+cd
+aP
+cb
+bY
+aP
+bM
+aw
+aW
+aW
+aW
+aW
+aw
+am
 hm
 hm
 hm
@@ -16171,23 +19009,23 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+al
+da
+aw
+aw
+cg
+aU
+cb
+bY
+aQ
+bN
+aw
+aw
+aw
+aw
+aw
+aw
+al
 hm
 hm
 hm
@@ -16428,23 +19266,23 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+al
+dc
+aw
+aw
+aw
+cc
+aX
+bY
+aQ
+bO
+aw
+aW
+aW
+aW
+aW
+aw
+an
 hm
 hm
 hm
@@ -16685,23 +19523,23 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+al
+dd
+aw
+aw
+ch
+aP
+cb
+bY
+aU
+bP
+aw
+aW
+aW
+aW
+aW
+aw
+an
 hm
 hm
 hm
@@ -16942,23 +19780,23 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+al
+aw
+aw
+aw
+aw
+aQ
+cb
+bZ
+an
+aw
+aw
+aw
+aw
+aw
+aw
+aw
+al
 hm
 hm
 hm
@@ -17199,23 +20037,23 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+al
+de
+cH
+cp
+ci
+aU
+cb
+bZ
+an
+aw
+aw
+aw
+aw
+aw
+aw
+aw
+al
 hm
 hm
 hm
@@ -17456,23 +20294,23 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+al
+al
+al
+al
+al
+al
+an
+ca
+al
+al
+al
+al
+al
+al
+al
+al
+al
 hm
 hm
 hm
@@ -17709,27 +20547,27 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+al
+et
+dY
+dL
+dw
+df
+cI
+cq
+cj
+am
+cb
+bY
+am
+bQ
+bp
+bp
+bp
+bp
+aX
+aD
+al
 hm
 hm
 hm
@@ -17966,27 +20804,27 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+al
+bR
+aX
+aX
+aX
+aX
+aX
+aX
+aX
+an
+cb
+bZ
+an
+aX
+aX
+aX
+aX
+aX
+aX
+aE
+al
 hm
 hm
 hm
@@ -18223,27 +21061,27 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+al
+bR
+dZ
+dN
+dy
+dg
+cK
+cr
+aJ
+aP
+aX
+bY
+aP
+aX
+bq
+bq
+bq
+bq
+aX
+aF
+al
 hm
 hm
 hm
@@ -18480,27 +21318,27 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+al
+bR
+eb
+dO
+dz
+di
+cL
+cs
+aJ
+aU
+cb
+bY
+aU
+aX
+bq
+bq
+bq
+bq
+aX
+aG
+al
 hm
 hm
 hm
@@ -18737,27 +21575,27 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+al
+bR
+aX
+aX
+aX
+aX
+aX
+aX
+aX
+an
+cb
+bZ
+an
+aX
+aX
+aX
+aX
+aX
+aX
+aH
+al
 hm
 hm
 hm
@@ -18994,27 +21832,27 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+al
+bR
+ec
+dP
+dj
+dj
+cM
+ct
+aJ
+aP
+cb
+bY
+am
+aX
+br
+br
+br
+br
+aX
+aD
+al
 hm
 hm
 hm
@@ -19145,6 +21983,17 @@ hm
 hm
 hm
 hm
+bk
+ev
+ev
+eA
+ev
+ev
+ev
+eA
+ev
+ev
+bk
 hm
 hm
 hm
@@ -19240,38 +22089,27 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+al
+bR
+ed
+dQ
+dl
+dl
+cO
+cu
+aJ
+aU
+aX
+bY
+al
+an
+bK
+by
+by
+ao
+an
+al
+al
 hm
 hm
 hm
@@ -19402,6 +22240,17 @@ hm
 hm
 hm
 hm
+bk
+ev
+fH
+fU
+ex
+ev
+fH
+fz
+ex
+ev
+bk
 hm
 hm
 hm
@@ -19497,38 +22346,27 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+al
+bR
+aX
+aX
+aX
+aX
+aX
+aX
+aX
+an
+cb
+bY
+am
+aX
+bz
+bz
+bz
+bs
+aX
+aI
+al
 hm
 hm
 hm
@@ -19659,6 +22497,17 @@ hm
 hm
 hm
 hm
+aT
+fs
+fZ
+ev
+ft
+fO
+fI
+ev
+ft
+fs
+aT
 hm
 hm
 hm
@@ -19754,38 +22603,27 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+al
+bS
+ef
+dR
+dA
+dm
+cP
+cv
+ck
+am
+cb
+bZ
+an
+aX
+aX
+aX
+aX
+aX
+aX
+aJ
+al
 hm
 hm
 hm
@@ -19909,6 +22747,24 @@ hm
 hm
 hm
 hm
+bk
+bk
+aT
+bk
+bk
+bk
+aT
+aT
+ev
+ga
+fV
+fP
+ev
+fJ
+fA
+fu
+ev
+bk
 hm
 hm
 hm
@@ -20004,45 +22860,27 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
+cb
+bY
+aP
+bR
+bA
+bA
+bA
+bt
+aX
+aL
+al
 hm
 hm
 hm
@@ -20166,6 +23004,24 @@ hm
 hm
 hm
 hm
+ev
+ev
+eA
+ev
+ev
+ev
+eA
+ev
+ev
+ev
+eA
+ev
+ev
+ev
+eA
+ev
+ev
+ev
 hm
 hm
 hm
@@ -20246,6 +23102,7 @@ hm
 hm
 hm
 hm
+eu
 hm
 hm
 hm
@@ -20260,46 +23117,27 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+eu
+al
+eg
+bQ
+dn
+dn
+cw
+cw
+cl
+am
+aX
+bY
+aU
+bR
+bB
+bB
+bB
+bu
+aX
+aN
+al
 hm
 hm
 hm
@@ -20423,6 +23261,24 @@ hm
 hm
 hm
 hm
+ev
+gj
+fB
+ex
+ev
+fH
+fz
+ex
+ev
+fH
+fW
+ex
+ev
+fH
+fB
+ex
+ev
+ev
 hm
 hm
 hm
@@ -20503,6 +23359,7 @@ hm
 hm
 hm
 hm
+eu
 hm
 hm
 hm
@@ -20517,46 +23374,27 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+eu
+al
+eh
+aX
+aX
+aX
+aX
+aX
+aX
+an
+cb
+bZ
+an
+aX
+aX
+aX
+aX
+aX
+aX
+aJ
+al
 hm
 hm
 hm
@@ -20680,6 +23518,24 @@ hm
 hm
 hm
 hm
+fs
+fZ
+ev
+ft
+fs
+fI
+ev
+ft
+fO
+gb
+ev
+fQ
+fs
+fI
+ev
+fv
+fs
+eS
 hm
 hm
 hm
@@ -20760,6 +23616,7 @@ hm
 hm
 hm
 hm
+eu
 hm
 hm
 hm
@@ -20774,46 +23631,27 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+eu
+al
+eh
+aX
+aX
+aX
+aX
+aX
+aX
+an
+cb
+bY
+am
+bS
+bC
+bC
+bC
+bx
+aY
+aO
+al
 hm
 hm
 hm
@@ -20937,6 +23775,30 @@ hm
 hm
 hm
 hm
+ev
+fJ
+fV
+fw
+ev
+fJ
+fA
+fu
+ev
+fK
+fC
+fP
+ev
+fK
+fC
+fw
+ev
+ev
+fk
+ev
+bk
+ev
+eS
+ev
 hm
 hm
 hm
@@ -21011,6 +23873,7 @@ hm
 hm
 hm
 hm
+eu
 hm
 hm
 hm
@@ -21026,51 +23889,26 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+al
+ei
+dS
+dB
+do
+cQ
+cy
+cm
+am
+cb
+bY
+al
+al
+al
+al
+al
+al
+al
+al
+al
 hm
 hm
 hm
@@ -21194,6 +24032,32 @@ hm
 hm
 hm
 hm
+ev
+ev
+gi
+ev
+ev
+ev
+gg
+ev
+ev
+ev
+eT
+eG
+eG
+eG
+eT
+eG
+eG
+eG
+eT
+eG
+eG
+eG
+eT
+eG
+eG
+eD
 hm
 hm
 hm
@@ -21266,6 +24130,7 @@ hm
 hm
 hm
 hm
+eu
 hm
 hm
 hm
@@ -21281,52 +24146,25 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+al
+al
+al
+al
+al
+al
+al
+al
+al
+aX
+bY
+aP
+bT
+bL
+bl
+bl
+bl
+bc
+aP
 hm
 hm
 hm
@@ -21451,6 +24289,32 @@ hm
 hm
 hm
 hm
+ev
+fH
+fW
+ex
+ev
+fH
+fB
+gd
+ev
+fH
+fX
+eM
+eG
+eH
+fD
+eM
+eG
+fb
+eU
+eM
+eG
+eH
+eU
+eM
+eG
+eD
 hm
 hm
 hm
@@ -21523,6 +24387,7 @@ hm
 hm
 hm
 hm
+eu
 hm
 hm
 hm
@@ -21538,52 +24403,25 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+al
+ej
+dT
+dC
+dq
+cR
+cz
+cn
+am
+cb
+bY
+aQ
+bU
+bL
+bl
+bl
+bl
+bd
+aQ
 hm
 hm
 hm
@@ -21708,6 +24546,32 @@ hm
 hm
 hm
 hm
+fs
+gb
+ev
+fQ
+fs
+fI
+ev
+fv
+fs
+fI
+eG
+eR
+eL
+fL
+eG
+fx
+eK
+fc
+eG
+eP
+eK
+eZ
+eG
+eN
+eK
+eE
 hm
 hm
 hm
@@ -21780,6 +24644,7 @@ hm
 hm
 hm
 hm
+eu
 hm
 hm
 hm
@@ -21795,52 +24660,25 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+al
+bR
+aX
+aX
+aX
+aX
+aX
+aX
+an
+cb
+bY
+aU
+bl
+bl
+bl
+bl
+bl
+bh
+aU
 hm
 hm
 hm
@@ -21965,6 +24803,32 @@ hm
 hm
 hm
 hm
+ev
+fJ
+fC
+fP
+ev
+fJ
+gh
+fP
+ev
+ga
+fY
+fR
+eG
+fd
+fE
+eO
+eG
+fd
+eV
+eO
+eG
+fa
+eV
+eO
+eG
+eD
 hm
 hm
 hm
@@ -22037,6 +24901,7 @@ hm
 hm
 hm
 hm
+eu
 hm
 hm
 hm
@@ -22052,52 +24917,25 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+al
+ek
+dD
+dD
+aX
+cS
+cA
+aJ
+aP
+aX
+bY
+al
+al
+al
+bl
+bl
+al
+al
+al
 hm
 hm
 hm
@@ -22222,6 +25060,32 @@ hm
 hm
 hm
 hm
+ev
+ev
+eA
+ev
+ev
+ev
+eA
+ev
+ev
+ev
+eT
+eG
+eG
+eG
+eT
+eG
+eG
+eG
+fl
+eG
+eG
+eG
+eT
+eG
+eG
+eD
 hm
 hm
 hm
@@ -22294,6 +25158,7 @@ hm
 hm
 hm
 hm
+eu
 hm
 hm
 hm
@@ -22309,52 +25174,25 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+al
+ek
+dE
+dE
+aX
+cT
+cB
+aJ
+aU
+cb
+bY
+aP
+bi
+bl
+bl
+bl
+bl
+bi
+aP
 hm
 hm
 hm
@@ -22479,6 +25317,32 @@ hm
 hm
 hm
 hm
+bk
+bk
+aT
+bk
+bk
+bk
+aT
+aT
+ev
+fH
+fD
+fT
+eG
+eH
+fD
+eM
+eG
+eH
+eX
+eM
+eG
+fb
+eU
+eM
+eG
+eD
 hm
 hm
 hm
@@ -22551,6 +25415,7 @@ hm
 hm
 hm
 hm
+eu
 hm
 hm
 hm
@@ -22566,52 +25431,25 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+al
+bR
+aX
+aX
+aX
+aX
+aX
+aX
+an
+cb
+bY
+aU
+bj
+bl
+bl
+bl
+bl
+bj
+aQ
 hm
 hm
 hm
@@ -22743,6 +25581,25 @@ hm
 hm
 hm
 hm
+aT
+fs
+fZ
+eG
+eQ
+eL
+fc
+eG
+eQ
+eK
+ff
+eG
+eQ
+eL
+fc
+eG
+eP
+eK
+eF
 hm
 hm
 hm
@@ -22815,6 +25672,7 @@ hm
 hm
 hm
 hm
+eu
 hm
 hm
 hm
@@ -22830,45 +25688,25 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+al
+el
+dU
+dF
+ds
+cU
+cC
+co
+am
+aX
+bZ
+an
+bl
+bl
+bH
+bD
+bl
+bl
+aQ
 hm
 hm
 hm
@@ -23000,6 +25838,25 @@ hm
 hm
 hm
 hm
+bk
+ev
+fJ
+fY
+eO
+eG
+fM
+eW
+eO
+eG
+fd
+fm
+fg
+eG
+fd
+eW
+eO
+eG
+eD
 hm
 hm
 hm
@@ -23072,6 +25929,7 @@ hm
 hm
 hm
 hm
+eu
 hm
 hm
 hm
@@ -23087,45 +25945,25 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+al
+al
+al
+al
+al
+al
+al
+al
+al
+cb
+bZ
+an
+bl
+bl
+bI
+bE
+bl
+bl
+aQ
 hm
 hm
 hm
@@ -23257,6 +26095,25 @@ hm
 hm
 hm
 hm
+bk
+ev
+ev
+eT
+eG
+eG
+eG
+eT
+eG
+eG
+eG
+fn
+eG
+eG
+eG
+eT
+eG
+eG
+eD
 hm
 hm
 hm
@@ -23329,6 +26186,7 @@ hm
 hm
 hm
 hm
+eu
 hm
 hm
 hm
@@ -23344,45 +26202,25 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+al
+em
+dV
+dG
+dt
+cD
+cD
+cj
+am
+cb
+bY
+aP
+bl
+bl
+bJ
+bF
+bl
+bm
+aQ
 hm
 hm
 hm
@@ -23514,6 +26352,25 @@ hm
 hm
 hm
 hm
+bk
+ev
+gc
+eU
+eM
+eG
+eH
+eU
+eM
+eG
+fh
+fo
+fh
+eG
+eH
+eX
+eM
+eG
+eD
 hm
 hm
 hm
@@ -23586,6 +26443,7 @@ hm
 hm
 hm
 hm
+eu
 hm
 hm
 hm
@@ -23601,45 +26459,25 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+al
+bR
+aX
+aX
+aX
+aX
+aX
+aX
+an
+cb
+bY
+aU
+bl
+bl
+bl
+bl
+bl
+bo
+aU
 hm
 hm
 hm
@@ -23771,6 +26609,25 @@ hm
 hm
 hm
 hm
+aT
+fs
+fI
+eG
+eR
+eL
+eZ
+eG
+fy
+eK
+fq
+fh
+fj
+eK
+fe
+eG
+eQ
+eL
+eF
 hm
 hm
 hm
@@ -23843,6 +26700,7 @@ hm
 hm
 hm
 hm
+eu
 hm
 hm
 hm
@@ -23858,45 +26716,25 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+al
+en
+aX
+dI
+du
+cW
+cE
+aJ
+aP
+aX
+bY
+bW
+al
+al
+al
+al
+al
+al
+al
 hm
 hm
 hm
@@ -24028,6 +26866,25 @@ hm
 hm
 hm
 hm
+bk
+ev
+ga
+fY
+eO
+eG
+fa
+eV
+eO
+eG
+fh
+fp
+fh
+eG
+fd
+eV
+eO
+eG
+eF
 hm
 hm
 hm
@@ -24100,6 +26957,7 @@ hm
 hm
 hm
 hm
+eu
 hm
 hm
 hm
@@ -24115,36 +26973,16 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+al
+eo
+aX
+dI
+du
+cX
+cF
+aJ
+aQ
+cb
 hm
 hm
 hm
@@ -24285,6 +27123,28 @@ hm
 hm
 hm
 hm
+bk
+ev
+ev
+eT
+eG
+eG
+eG
+eT
+eG
+eG
+eG
+eT
+eG
+eG
+eG
+eT
+eG
+eG
+eG
+eA
+ev
+ev
 hm
 hm
 hm
@@ -24354,6 +27214,7 @@ hm
 hm
 hm
 hm
+eu
 hm
 hm
 hm
@@ -24369,39 +27230,16 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+al
+eq
+aX
+dI
+du
+cW
+cE
+aJ
+aU
+cb
 hm
 hm
 hm
@@ -24542,6 +27380,28 @@ hm
 hm
 hm
 hm
+ev
+ev
+fH
+eU
+eM
+eG
+fN
+eU
+eM
+eG
+eH
+eU
+eM
+eG
+eH
+eY
+eM
+eG
+eH
+eB
+ex
+ev
 hm
 hm
 hm
@@ -24627,38 +27487,16 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+al
+bR
+aX
+aX
+aX
+aX
+aX
+aX
+an
+aX
 hm
 hm
 hm
@@ -24799,6 +27637,28 @@ hm
 hm
 hm
 hm
+aT
+fs
+fZ
+eG
+eQ
+eK
+ff
+eG
+eR
+eK
+eZ
+eG
+eQ
+eL
+ff
+eG
+eR
+eK
+eI
+ev
+ey
+ew
 hm
 hm
 hm
@@ -24884,38 +27744,16 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+al
+es
+dX
+dK
+dv
+cG
+cG
+co
+am
+cb
 hm
 hm
 hm
@@ -25056,6 +27894,28 @@ hm
 hm
 hm
 hm
+ge
+ev
+fJ
+eW
+eO
+eG
+fr
+fF
+eO
+eG
+fr
+eV
+eO
+eG
+fd
+eW
+eO
+eG
+eJ
+eC
+ez
+ev
 hm
 hm
 hm
@@ -25141,38 +28001,16 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+al
+al
+al
+al
+al
+al
+al
+al
+al
+cb
 hm
 hm
 hm
@@ -25313,28 +28151,28 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+gf
+ev
+ev
+eA
+ev
+ev
+ev
+fG
+ev
+ev
+ev
+eA
+ev
+ev
+ev
+eA
+ev
+ev
+ev
+eA
+ev
+ev
 hm
 hm
 hm

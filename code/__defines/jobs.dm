@@ -363,6 +363,7 @@
 	#define JOB_ALT_SECURITY_INSPECTOR "Security Inspector"
 	#define JOB_ALT_FORENSIC_TECHNICIAN "Forensic Technician"
 	#define JOB_ALT_LOSS_PREVENTION "Loss Prevention Officer"
+	#define JOB_ALT_HALLMONITOR "Hall Monitor" // Outpost 21 edit - joke role
 
 // CHOMPAdd
 #define JOB_BRIG_PHYSICIAN "Brig Physician"
