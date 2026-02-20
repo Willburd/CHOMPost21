@@ -36,6 +36,7 @@
 		// "jerrycan",
 		// "reflex_hammer",
 		// "blood_scanner",
+		"needle_cleaner_board", // Outpost 21 edit(port) - Needle cleaning centrifuge
 	)
 
 /datum/techweb_node/chem_synthesis

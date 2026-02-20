@@ -55,24 +55,6 @@
 
 /obj/item/reagent_containers/syringe/on_reagent_change()
 	update_icon()
-	// Outpost 21 edit begin - Sterilization of dirty needles
-	// This should really be moved to a reagent var...
-	if(reagents.has_reagent(REAGENT_ID_SACID, 1) \
-	|| reagents.has_reagent(REAGENT_ID_PACID, 1) \
-	|| reagents.has_reagent(REAGENT_ID_CLEANER, 1) \
-	|| reagents.has_reagent(REAGENT_ID_AMMONIA, 1) \
-	|| reagents.has_reagent(REAGENT_ID_CHLORINE, 1) \
-	|| reagents.has_reagent(REAGENT_ID_ETHANOL, 1) \
-	|| reagents.has_reagent(REAGENT_ID_CHLORALHYDRATE, 1) \
-	|| reagents.has_reagent(REAGENT_ID_STERILIZINE, 1) \
-	|| reagents.has_reagent(REAGENT_ID_FLUORINE, 1) \
-	|| reagents.has_reagent(REAGENT_ID_VODKA, 1) \
-	|| reagents.has_reagent(REAGENT_ID_VODKAMARTINI, 1) \
-	|| reagents.has_reagent(REAGENT_ID_VODKATONIC, 1) \
-	|| reagents.has_reagent(REAGENT_ID_UNATHILIQUOR, 1) \
-	|| reagents.has_reagent(REAGENT_ID_PHORON, 1))
-		sterilize()
-	// Outpost 21 edit end
 
 /obj/item/reagent_containers/syringe/pickup(mob/user)
 	..()
@@ -436,25 +418,17 @@
 	//reagents.add_reagent(REAGENT_ID_ADRENALINE,5) //VOREStation Edit - No thanks.
 	reagents.add_reagent(REAGENT_ID_HYPERZINE,10)
 
-// Outpost 21 edit begin - Sterilization of dirty needles
+// Outpost 21 edit(port) begin - Sterilization of dirty needles
 /obj/item/reagent_containers/syringe/proc/sterilize()
-	var/become_sterile = FALSE
 	if(dirtiness > 0)
-		become_sterile = TRUE
 		dirtiness = 0
 	if(viruses && viruses.len > 0)
-		become_sterile = TRUE
 		QDEL_LIST_NULL(viruses)
 	if(targets && targets.len > 0)
-		become_sterile = TRUE
 		LAZYCLEARLIST(targets)
 	if(used)
-		become_sterile = TRUE
 		used = FALSE
 		STOP_PROCESSING(SSobj, src)
-
-	if(become_sterile)
-		visible_message("\The [src] was sterilized.")
 // Outpost 21 edit end
 
 /obj/item/reagent_containers/syringe/proc/dirty(var/mob/living/carbon/human/target, var/obj/item/organ/external/eo)
