@@ -46,7 +46,9 @@
 	if(in_use)
 		to_chat(usr, span_warning("\The [src] is currenty cleaning!"))
 	if(istype(W,/obj/item/reagent_containers/syringe))
-		user.drop_from_inventory(W, src)
+		var/needle_count = (length(contents)-1)
+		if(needle_count < NEEDLE_AMOUNT_CAP)
+			user.drop_from_inventory(W, src)
 		return
 	. = ..()
 
