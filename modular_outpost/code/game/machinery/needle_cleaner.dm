@@ -31,13 +31,20 @@
 	if(in_use)
 		return
 	add_fingerprint(user)
+
+	var/needle_count = (length(contents)-1)
+	if(needle_count == 0)
+		to_chat(usr, span_warning("\The [src] is empty!"))
+		return
+
 	in_use = TRUE
 	update_icon()
-
 	playsound(src, 'sound/machines/buttonbeep.ogg', 50, 1)
 	addtimer(CALLBACK(src, PROC_REF(finish_cleaning)), 10 SECONDS, TIMER_DELETE_ME)
 
 /obj/machinery/needle_cleaner/attackby(obj/item/W, mob/user, attack_modifier, click_parameters)
+	if(in_use)
+		to_chat(usr, span_warning("\The [src] is currenty cleaning!"))
 	if(istype(W,/obj/item/reagent_containers/syringe))
 		user.drop_from_inventory(W, src)
 		return
