@@ -15126,6 +15126,21 @@
 /obj/machinery/computer/security/telescreen/entertainment,
 /turf/simulated/floor/plating,
 /area/medical/reception)
+"aEE" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/light/floortube,
+/turf/simulated/floor/tiled/milspec,
+/area/security/warden)
+"aEF" = (
+/obj/effect/floor_decal/spline/plain,
+/obj/machinery/needle_cleaner,
+/turf/simulated/floor/tiled/milspec/sterile,
+/area/medical/virology)
 "aFy" = (
 /obj/effect/floor_decal/rust,
 /obj/effect/floor_decal/corner/brown{
@@ -129859,7 +129874,7 @@ chp
 cMy
 cEq
 clE
-fZk
+aEF
 afa
 dYq
 xoP
@@ -132191,7 +132206,7 @@ hvz
 mVP
 qPc
 wLi
-aAR
+aEE
 gSP
 aAC
 nCt
