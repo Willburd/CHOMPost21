@@ -30604,6 +30604,9 @@
 /obj/item/storage/toolbox/electrical,
 /obj/structure/table/steel,
 /obj/item/melee/umbrella/random,
+/obj/machinery/light{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/drone_fabrication)
 "fGZ" = (
