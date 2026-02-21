@@ -1800,6 +1800,14 @@
 /obj/effect/floor_decal/corner/white/bordercorner{
 	dir = 4
 	},
+/obj/machinery/button/remote/blast_door{
+	id = "trawlercargodoor";
+	name = "Cargo Bay Door";
+	pixel_x = 26;
+	req_one_access = list(13,48,52);
+	pixel_y = 25;
+	dir = 8
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/trawler)
 "acw" = (
@@ -15126,6 +15134,21 @@
 /obj/machinery/computer/security/telescreen/entertainment,
 /turf/simulated/floor/plating,
 /area/medical/reception)
+"aEE" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/light/floortube,
+/turf/simulated/floor/tiled/milspec,
+/area/security/warden)
+"aEF" = (
+/obj/effect/floor_decal/spline/plain,
+/obj/machinery/needle_cleaner,
+/turf/simulated/floor/tiled/milspec/sterile,
+/area/medical/virology)
 "aFy" = (
 /obj/effect/floor_decal/rust,
 /obj/effect/floor_decal/corner/brown{
@@ -24427,12 +24450,6 @@
 /obj/structure/table/standard{
 	name = "plastic table frame"
 	},
-/obj/machinery/button/remote/blast_door{
-	id = "trawlercargodoor";
-	name = "Cargo Bay Door";
-	pixel_x = 28;
-	req_one_access = list(13,48,52)
-	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/trawler)
 "dDv" = (
@@ -30604,6 +30621,9 @@
 /obj/item/storage/toolbox/electrical,
 /obj/structure/table/steel,
 /obj/item/melee/umbrella/random,
+/obj/machinery/light{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/drone_fabrication)
 "fGZ" = (
@@ -129856,7 +129876,7 @@ chp
 cMy
 cEq
 clE
-fZk
+aEF
 afa
 dYq
 xoP
@@ -132188,7 +132208,7 @@ hvz
 mVP
 qPc
 wLi
-aAR
+aEE
 gSP
 aAC
 nCt

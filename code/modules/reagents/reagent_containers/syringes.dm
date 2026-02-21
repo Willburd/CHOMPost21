@@ -420,12 +420,9 @@
 
 // Outpost 21 edit(port) begin - Sterilization of dirty needles
 /obj/item/reagent_containers/syringe/proc/sterilize()
-	if(dirtiness > 0)
-		dirtiness = 0
-	if(viruses && viruses.len > 0)
-		QDEL_LIST_NULL(viruses)
-	if(targets && targets.len > 0)
-		LAZYCLEARLIST(targets)
+	dirtiness = 0
+	QDEL_LIST_NULL(viruses)
+	LAZYCLEARLIST(targets)
 	if(used)
 		used = FALSE
 		STOP_PROCESSING(SSobj, src)
