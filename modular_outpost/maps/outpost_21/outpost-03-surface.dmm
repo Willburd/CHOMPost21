@@ -1800,6 +1800,14 @@
 /obj/effect/floor_decal/corner/white/bordercorner{
 	dir = 4
 	},
+/obj/machinery/button/remote/blast_door{
+	id = "trawlercargodoor";
+	name = "Cargo Bay Door";
+	pixel_x = 26;
+	req_one_access = list(13,48,52);
+	pixel_y = 25;
+	dir = 8
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/trawler)
 "acw" = (
@@ -24441,12 +24449,6 @@
 /obj/item/storage/firstaid/toxin,
 /obj/structure/table/standard{
 	name = "plastic table frame"
-	},
-/obj/machinery/button/remote/blast_door{
-	id = "trawlercargodoor";
-	name = "Cargo Bay Door";
-	pixel_x = 28;
-	req_one_access = list(13,48,52)
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/trawler)

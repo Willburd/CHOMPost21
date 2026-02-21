@@ -208,6 +208,14 @@
 /obj/structure/simple_door/wood,
 /turf/unsimulated/wall/steel,
 /area/centcom/living)
+"aaP" = (
+/obj/machinery/door/airlock/centcom{
+	name = "General Access";
+	req_access = list(101)
+	},
+/obj/structure/fans/hardlight,
+/turf/simulated/floor/tiled/techfloor,
+/area/centcom/control)
 "aaQ" = (
 /turf/unsimulated/wall/r_wall,
 /area/centcom/control)
@@ -3881,7 +3889,7 @@
 "ajB" = (
 /obj/machinery/door/airlock/security,
 /obj/structure/disposalpipe/segment,
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/tiled/techfloor,
 /area/centcom/security)
 "ajC" = (
 /obj/structure/table/standard,
@@ -3943,7 +3951,7 @@
 	name = "Security Doors";
 	id = "crescent_checkpoint_access"
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techfloor,
 /area/centcom/control)
 "ajJ" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
@@ -4047,7 +4055,7 @@
 "ajU" = (
 /obj/machinery/door/airlock/glass_security,
 /obj/structure/disposalpipe/segment,
-/turf/space,
+/turf/simulated/floor/tiled/techfloor,
 /area/centcom/security)
 "ajV" = (
 /obj/structure/table/reinforced,
@@ -4256,14 +4264,7 @@
 	name = "Amnesty Sorting"
 	},
 /obj/structure/disposalpipe/segment,
-/turf/unsimulated/floor/steel{
-	icon_state = "milspec"
-	},
-/area/centcom/security)
-"aku" = (
-/obj/machinery/door/airlock/glass_security,
-/obj/structure/disposalpipe/segment,
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/tiled/techfloor,
 /area/centcom/security)
 "akv" = (
 /obj/machinery/status_display{
@@ -4330,9 +4331,7 @@
 /area/centcom/security)
 "akC" = (
 /obj/machinery/door/airlock/glass_security,
-/turf/unsimulated/floor/steel{
-	icon_state = "milspec"
-	},
+/turf/simulated/floor/tiled/techfloor,
 /area/centcom/security)
 "akD" = (
 /obj/effect/floor_decal/corner/red{
@@ -4490,16 +4489,14 @@
 	name = "Holding Cell"
 	},
 /obj/structure/disposalpipe/segment,
-/turf/unsimulated/floor/steel{
-	icon_state = "milspec"
-	},
+/turf/simulated/floor/tiled/techfloor,
 /area/centcom/security)
 "akR" = (
 /obj/machinery/door/airlock/glass_centcom{
 	req_one_access = list(101,103);
 	name = "Special Operations"
 	},
-/turf/unsimulated/floor/techfloor_grid,
+/turf/simulated/floor/tiled/techfloor,
 /area/centcom/specops)
 "akS" = (
 /obj/effect/floor_decal/corner/white{
@@ -5025,7 +5022,7 @@
 	name = "Commander";
 	req_access = list(103)
 	},
-/turf/simulated/floor/wood,
+/turf/simulated/floor/tiled/techfloor,
 /area/centcom/specops)
 "alW" = (
 /obj/effect/floor_decal/techfloor/orange{
@@ -5050,15 +5047,6 @@
 /obj/item/cell/giga,
 /obj/item/cell/giga,
 /turf/unsimulated/floor/techfloor_grid,
-/area/centcom/specops)
-"ama" = (
-/obj/machinery/door/airlock/glass_centcom{
-	req_one_access = list(101,103);
-	name = "Special Operations"
-	},
-/turf/unsimulated/floor/steel{
-	icon_state = "milspec"
-	},
 /area/centcom/specops)
 "amb" = (
 /obj/effect/floor_decal/techfloor/orange/corner{
@@ -5243,13 +5231,6 @@
 	icon_state = "milspec"
 	},
 /area/centcom/specops)
-"amr" = (
-/obj/machinery/door/airlock/glass_centcom{
-	req_one_access = list(101,103);
-	name = "Special Operations"
-	},
-/turf/simulated/floor/tiled/milspec,
-/area/centcom/specops)
 "ams" = (
 /obj/item/radio/intercom/omni{
 	pixel_y = -26
@@ -5260,13 +5241,6 @@
 /obj/machinery/porta_turret/heavy,
 /turf/simulated/floor/reinforced,
 /area/centcom/control)
-"amu" = (
-/obj/machinery/door/airlock/glass_centcom{
-	req_one_access = list(101,103);
-	name = "Special Operations"
-	},
-/turf/simulated/floor/tiled/milspec/raised,
-/area/centcom/specops)
 "amv" = (
 /obj/machinery/status_display{
 	pixel_x = -32
@@ -9390,7 +9364,7 @@
 	req_access = list(101)
 	},
 /obj/item/airlock_brace,
-/turf/unsimulated/mineral,
+/turf/simulated/floor/tiled/techfloor,
 /area/centcom/control)
 "cDI" = (
 /obj/effect/floor_decal/corner/grey/full{
@@ -9755,15 +9729,6 @@
 	color = "#385e60"
 	},
 /area/centcom/living)
-"cMR" = (
-/obj/machinery/door/airlock/centcom{
-	name = "Special Operations";
-	req_access = list(103)
-	},
-/turf/unsimulated/floor/steel{
-	icon_state = "milspec"
-	},
-/area/centcom/control)
 "cMZ" = (
 /obj/structure/railing{
 	dir = 1
@@ -18448,9 +18413,7 @@
 	dir = 4;
 	id = "CentComPort"
 	},
-/turf/unsimulated/floor/steel{
-	icon_state = "milspec"
-	},
+/turf/simulated/floor/tiled/techfloor,
 /area/centcom/control)
 "hsz" = (
 /turf/unsimulated/floor/steel{
@@ -18562,7 +18525,7 @@
 	name = "General Access";
 	req_access = list(101)
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/techfloor,
 /area/centcom/control)
 "hvX" = (
 /obj/item/hand_labeler,
@@ -21051,9 +21014,7 @@
 	name = "Special Operations";
 	req_access = list(103)
 	},
-/turf/unsimulated/floor/steel{
-	icon_state = "milspec"
-	},
+/turf/simulated/floor/tiled/techfloor,
 /area/centcom/specops)
 "iNZ" = (
 /obj/machinery/door/airlock/freezer{
@@ -25887,13 +25848,6 @@
 /obj/item/folder/red,
 /turf/simulated/floor/carpet/bcarpet,
 /area/specialty/redspace)
-"lHL" = (
-/obj/machinery/door/airlock/glass_security,
-/obj/structure/disposalpipe/segment,
-/turf/unsimulated/floor/steel{
-	icon_state = "milspec"
-	},
-/area/centcom/security)
 "lIn" = (
 /obj/effect/floor_decal/milspec/color/emerald/half{
 	dir = 8
@@ -26472,7 +26426,7 @@
 	name = "Heavy Armor Garage";
 	req_one_access = list(101,103)
 	},
-/turf/unsimulated/floor/techfloor_grid,
+/turf/simulated/floor/tiled/techfloor,
 /area/centcom/specops)
 "mbK" = (
 /obj/machinery/door/airlock/medical{
@@ -33679,7 +33633,7 @@
 	name = "Special Operations";
 	req_access = list(103)
 	},
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/tiled/techfloor,
 /area/centcom/control)
 "qxC" = (
 /obj/machinery/door/airlock/multi_tile/glass{
@@ -60588,7 +60542,7 @@ aBJ
 aBJ
 aBJ
 aBJ
-pGr
+aaP
 aBJ
 aBJ
 aBJ
@@ -60724,8 +60678,8 @@ aaQ
 aaQ
 aaQ
 aaQ
-cMR
-cMR
+qxz
+qxz
 aaQ
 aaQ
 aaQ
@@ -62198,8 +62152,8 @@ acY
 acH
 hPE
 hPE
-cMR
-cMR
+qxz
+qxz
 aaQ
 alo
 ale
@@ -64476,7 +64430,7 @@ bOi
 tqH
 nAK
 akA
-aku
+ajU
 cAq
 cAq
 cAq
@@ -65772,7 +65726,7 @@ kSy
 tqH
 akA
 akB
-aku
+ajU
 cAq
 akm
 tpV
@@ -65930,7 +65884,7 @@ tqH
 tOV
 akA
 akB
-lHL
+ajU
 akB
 iMu
 jfi
@@ -66744,7 +66698,7 @@ bOi
 tqH
 akA
 akB
-aku
+ajU
 cAq
 cAq
 bFs
@@ -67379,8 +67333,8 @@ hPE
 ada
 acY
 acH
-ama
-ama
+akR
+akR
 ada
 acH
 hPE
@@ -68021,8 +67975,8 @@ uho
 uho
 hPE
 rWp
-amu
-amr
+akR
+akR
 rWp
 hPE
 hPE
