@@ -30499,6 +30499,7 @@
 /obj/machinery/disposal/wall{
 	pixel_y = 32
 	},
+/obj/item/clothing/under/bathrobe,
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/crew/poollocker)
 "bdg" = (
@@ -31112,11 +31113,12 @@
 /area/muriki/crew/poollocker)
 "bel" = (
 /obj/structure/table/standard,
-/obj/item/clothing/under/bathrobe,
-/obj/random/soap,
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
+/obj/random/soap,
+/obj/random/soap,
+/obj/random/soap,
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/crew/poollocker)
 "bem" = (
@@ -81436,6 +81438,11 @@
 /obj/effect/floor_decal/steeldecal/steel_decals3,
 /obj/structure/disposalpipe/segment{
 	dir = 4
+	},
+/obj/machinery/light_switch{
+	dir = 8;
+	pixel_x = 28;
+	pixel_y = 27
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/crew/poollocker)
