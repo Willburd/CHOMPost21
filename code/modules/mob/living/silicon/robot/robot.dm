@@ -310,7 +310,8 @@
 //If there's an MMI in the robot, have it ejected when the mob goes away. --NEO
 //Improved /N
 /mob/living/silicon/robot/Destroy()
-	client.screen -= GLOB.global_hud.whitense // outpost 21 addition - radiation and haunting affects borg vision
+	if(client) // outpost 21 addition - radiation and haunting affects borg vision
+		client.screen -= GLOB.global_hud.whitense
 	if(mmi)//Safety for when a cyborg gets dust()ed. Or there is no MMI inside.
 		if(mind)
 			var/turf/T = get_turf(loc)//To hopefully prevent run time errors.
