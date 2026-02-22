@@ -53,3 +53,8 @@
 	. = ..()
 	if(!(/mob/living/proc/super_fart in S.inherent_verbs))
 		remove_verb(H, /mob/living/proc/super_fart)
+
+/datum/trait/positive/disposable_respawn
+	name = "Disposable Body"
+	desc = "Autosleever respawn time reduced to 5 minutes regardless of what caused death."
+	cost = 12 // You really should know what this means by now

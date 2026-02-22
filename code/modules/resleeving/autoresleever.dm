@@ -49,6 +49,13 @@ GLOBAL_LIST_EMPTY(active_autoresleevers)
 		to_chat(user, span_warning("There are no more respawn slots."))
 		return
 	if(user.mind)
+		if(islist(user.client?.prefs?.pos_traits) && (/datum/trait/positive/disposable_respawn in user.client.prefs.pos_traits))
+			var/fast_respawn = 5 MINUTES
+			if(fast_respawn <= world.time - user.timeofdeath)
+				autoresleeve(user)
+			else
+				to_chat(user, span_warning("You must wait [((fast_respawn - (world.time - user.timeofdeath)) * 0.1) / 60] minutes to use \the [src]."))
+			return
 		if(user.mind.vore_death)
 			if(vore_respawn <= world.time - user.timeofdeath)
 				autoresleeve(user)
