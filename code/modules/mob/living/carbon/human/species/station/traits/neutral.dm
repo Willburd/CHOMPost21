@@ -328,17 +328,17 @@
 /datum/trait/neutral/venom_bite/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
 	add_verb(H, /mob/living/proc/injection)
-	H.trait_injection_reagents += REAGENT_ID_MICROCILLIN		// get small
-	H.trait_injection_reagents += REAGENT_ID_MACROCILLIN		// get BIG
-	H.trait_injection_reagents += REAGENT_ID_NORMALCILLIN	// normal
-	H.trait_injection_reagents += REAGENT_ID_NUMBENZYME		// no feelings
-	H.trait_injection_reagents += REAGENT_ID_ANDROROVIR 		// -> MALE
-	H.trait_injection_reagents += REAGENT_ID_GYNOROVIR 		// -> FEMALE
-	H.trait_injection_reagents += REAGENT_ID_ANDROGYNOROVIR 	// -> PLURAL
-	H.trait_injection_reagents += REAGENT_ID_STOXIN			// night night chem
-	H.trait_injection_reagents += REAGENT_ID_RAINBOWTOXIN 	// Funny flashing lights.
+//	H.trait_injection_reagents += REAGENT_ID_MICROCILLIN		// get small 	//Outpost 21 Edit: Rebalancing
+//	H.trait_injection_reagents += REAGENT_ID_MACROCILLIN		// get BIG 		//Outpost 21 Edit: Rebalancing
+//	H.trait_injection_reagents += REAGENT_ID_NORMALCILLIN		// normal 		//Outpost 21 Edit: Rebalancing
+	H.trait_injection_reagents += REAGENT_ID_NUMBENZYME			// no feelings
+//	H.trait_injection_reagents += REAGENT_ID_ANDROROVIR 		// -> MALE 		//Outpost 21 Edit: Rebalancing
+//	H.trait_injection_reagents += REAGENT_ID_GYNOROVIR 			// -> FEMALE 	//Outpost 21 Edit: Rebalancing
+//	H.trait_injection_reagents += REAGENT_ID_ANDROGYNOROVIR 	// -> PLURAL 	//Outpost 21 Edit: Rebalancing
+	H.trait_injection_reagents += REAGENT_ID_STOXIN				// night night chem
+	H.trait_injection_reagents += REAGENT_ID_RAINBOWTOXIN 		// Funny flashing lights.
 	H.trait_injection_reagents += REAGENT_ID_PARALYSISTOXIN 	// Paralysis!
-	H.trait_injection_reagents += REAGENT_ID_PAINENZYME		// Pain INCREASER
+	H.trait_injection_reagents += REAGENT_ID_PAINENZYME			// Pain INCREASER
 	H.trait_injection_reagents += REAGENT_ID_APHRODISIAC		// Horni //CHOMPedit
 
 /datum/trait/neutral/long_vore
