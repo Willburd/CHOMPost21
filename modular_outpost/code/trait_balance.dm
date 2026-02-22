@@ -116,30 +116,38 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////
 /// NEUTRAL
 /////////////////////////////////////////////////////////////////////////////////////////////////
-/* NOTE: Until neutral traits actually give or cost points, these are not even usable...
+//You need to redefine the trait. change it from TRAIT_TYPE_NEUTRAL to  TRAIT_TYPE_NEGATIVE or TRAIT_TYPE_POSITIVE
 /datum/trait/neutral/allergy_reaction/gibbing // Sploot gives some bonus points
 	cost = -2 // upstream is: 0
 
 /datum/trait/neutral/venom_bite
 	cost = 2 // Base 0. Lets you give various toxins for mechanical benefit, too stronk for free.
+	category = TRAIT_TYPE_POSITIVE
 
 /datum/trait/neutral/long_vore
 	cost = 1 //Base 0. Free ranged spontaneous vore with a 5 tile range? Wuh?
+	category = TRAIT_TYPE_POSITIVE
 
 /datum/trait/neutral/allergen_increased_effect
-	cost = -1 //Base 0: A lot of reactions can HURT. This feels fair.
+	cost = -2 //Base 0: A lot of reactions can HURT. This feels fair.
+	category = TRAIT_TYPE_NEGATIVE
 
 /datum/trait/neutral/colorblind/mono
-	cost = -1 //Base 0: No colors makes the game HELL, and it affects wire hacking.
+	cost = -3 //Base 0: No colors makes the game HELL, and it affects wire hacking.
+	category = TRAIT_TYPE_NEGATIVE
 
 /datum/trait/neutral/colorblind/para_vulp
 	cost = -1 //Base 0: All colorblindness makes things harder, and it effects wires and various mechanics.
+	category = TRAIT_TYPE_NEGATIVE
 
 /datum/trait/neutral/colorblind/para_taj
 	cost = -1 //Base 0. Ibid.
-*/
+	category = TRAIT_TYPE_NEGATIVE
+
 /datum/trait/neutral/strongimmunesystem
 	hidden = TRUE //Base False. This is virus immunity reflavored. Fukkin why?
+	category = TRAIT_TYPE_POSITIVE
+	cost = 10
 
 /////////////////////////////////////////////////////////////////////////////////////////////////
 /// NEGATIVE
