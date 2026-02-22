@@ -251,6 +251,7 @@
 	REAGENT_CONCENTRATEDRADIUM,
 	REAGENT_TRICORDRAZINE,
 	REAGENT_SPIDEREGG, // Outpost 21 edit - Spoods
+	REAGENT_COFFEE, // Outpost 21 edit - Coffee machine belly
 	REAGENT_ETHANOL
 	)
 
