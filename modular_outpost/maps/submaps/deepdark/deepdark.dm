@@ -28,6 +28,7 @@
 #include "liminal_A.dmm"
 #include "liminal_B.dmm"
 #include "liminal_C.dmm"
+#include "liminal_D.dmm"
 #include "redspace_A.dmm"
 #include "redspace_B.dmm"
 #include "redspace_C.dmm"
@@ -618,6 +619,13 @@
 	discard_prob = 40
 	cost = 10
 
+/datum/map_template/outpost21/muriki/caves_deepdark_huge/liminal_D
+	name = "Liminal D"
+	desc = "Random liminal space."
+	mappath = "modular_outpost/maps/submaps/deepdark/liminal_D.dmm"
+	discard_prob = 10
+	cost = 30
+
 /datum/map_template/outpost21/muriki/caves_deepdark_huge/redspace_A
 	name = "Red A"
 	desc = "Random redspace leak."
@@ -846,6 +854,16 @@
 
 /area/submap/outpost21/cave_liminal_B/get_name()
 	return show_name
+
+/area/submap/outpost21/cave_liminal_D
+	name = "\improper It Hurts"
+	icon_state = "red2"
+	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS | AREA_SECRET_NAME | AREA_BLOCK_GHOST_SIGHT
+	sound_env = SOUND_ENVIRONMENT_PSYCHOTIC
+	ambience = AMBIENCE_OTHERWORLDLY
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
+	haunted = TRUE
+	color_grading = COLORTINT_OMEN
 
 /area/submap/outpost21/cave_red_A
 	name = "\improper Our Pulsing Mass"
