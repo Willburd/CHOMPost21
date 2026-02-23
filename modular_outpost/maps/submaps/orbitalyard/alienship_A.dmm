@@ -543,8 +543,7 @@
 /area/submap/outpost21/structure_generic/alienshipa)
 "KD" = (
 /obj/structure/table/alien,
-/obj/item/prop/alien/junk,
-/obj/item/prop/alien/junk,
+/obj/item/prop/deconstructable/gigacell,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
