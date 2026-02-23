@@ -29,6 +29,8 @@
 	rank_pin = RANK_PIN_PATH
 /datum/job/offduty_security
 	rank_pin = RANK_PIN_PATH
+/datum/alt_title/experiment
+	rank_pin = RANK_PIN_PATH
 #undef RANK_PIN_PATH
 
 
