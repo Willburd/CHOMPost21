@@ -88,6 +88,10 @@
 #include "ghost_caveG.dmm"
 #include "ghost_caveH.dmm"
 #include "submarine_A.dmm"
+#include "portal_A.dmm"
+#include "portal_B.dmm"
+#include "portal_C.dmm"
+#include "portal_D.dmm"
 #endif
 
 /datum/map_template/outpost21/muriki/caves_deepdark
@@ -808,6 +812,38 @@
 	mappath = "modular_outpost/maps/submaps/deepdark/foundation_A.dmm"
 	allow_duplicates = FALSE
 	discard_prob = 50
+	cost = 25
+
+/datum/map_template/outpost21/muriki/caves_deepdark_huge/portal_A
+	name = "Portal A"
+	desc = "Two linked cavern portals."
+	mappath = "modular_outpost/maps/submaps/deepdark/portal_A.dmm"
+	allow_duplicates = FALSE
+	discard_prob = 20
+	cost = 25
+
+/datum/map_template/outpost21/muriki/caves_deepdark_huge/portal_B
+	name = "Portal B"
+	desc = "Two linked cavern portals."
+	mappath = "modular_outpost/maps/submaps/deepdark/portal_B.dmm"
+	allow_duplicates = FALSE
+	discard_prob = 20
+	cost = 25
+
+/datum/map_template/outpost21/muriki/caves_deepdark_huge/portal_C
+	name = "Portal C"
+	desc = "Two linked cavern portals."
+	mappath = "modular_outpost/maps/submaps/deepdark/portal_C.dmm"
+	allow_duplicates = FALSE
+	discard_prob = 20
+	cost = 25
+
+/datum/map_template/outpost21/muriki/caves_deepdark_huge/portal_D
+	name = "Portal D"
+	desc = "Two linked cavern portals."
+	mappath = "modular_outpost/maps/submaps/deepdark/portal_D.dmm"
+	allow_duplicates = FALSE
+	discard_prob = 20
 	cost = 25
 
 //////////////////////////////////////////////////////////////
