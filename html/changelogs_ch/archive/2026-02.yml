@@ -199,3 +199,26 @@
   - bugfix: Fixes the meowl attempting to check a null target
   - qol: Examining a Honey Extractor when you're next to it will now tell you how
       much honey it contains (if any)
+2026-02-22:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: Fixes synx sonar ping to a working cooldown
+  - bugfix: borg sleepers showing a 0 where they shouldn't
+  - qol: gives multiple robot UIs robot themes
+  FluffMedic:
+  - maptweak: Some POIs have been altered to exchange some threats for other challenges
+  Will:
+  - bugfix: Catslug belly markings can be colored
+2026-02-23:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: adds a game collection table and pda app
+  - refactor: moves a lot of non static datum paths explicitly to /datum/
+  - bugfix: Made Bad shot and thick digits mutually exclusive
+  - spellcheck: fixes the spelling in the not implemented pref messages
+  - bugfix: Bone related traits now properly exclude each other.
+  - code_imp: dependency update
+  Cerami:
+  - bugfix: Disables the AFK prey preference from functioning while someone is dead
+  Diana:
+  - code_imp: rubber duckies don't destroy the universe anymore
+  Will:
+  - code_imp: adds smes rcon name_tag unit test

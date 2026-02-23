@@ -1,4 +1,4 @@
-/decl/hierarchy/outfit/job/engineering/roboticist
+/datum/decl/hierarchy/outfit/job/engineering/roboticist
 	name = OUTFIT_JOB_NAME(JOB_ROBOTICIST)
 	uniform = /obj/item/clothing/under/rank/roboticist
 	l_ear = /obj/item/radio/headset/headset_eng

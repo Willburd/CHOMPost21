@@ -1192,7 +1192,7 @@
 					if(src.species && src.species.get_bodytype() != "Vox" && src.species.get_bodytype() != "Shadekin" && src.species.phoron_contact_mod > 0)	// Outpost 21 edit - phoron contact mod
 						// This is hacky, I'm so sorry.
 						if(I != l_hand && I != r_hand)	//If the item isn't in your hands, you're probably wearing it. Full damage for you.
-							total_phoronloss += vsc.plc.CONTAMINATION_LOSS * src.species.phoron_contact_mod  // Outpost 21 edit(port) - phoron contact mod
+							total_phoronloss += GLOB.vsc.plc.CONTAMINATION_LOSS * src.species.phoron_contact_mod  // Outpost 21 edit(port) - phoron contact mod
 						else if(I == l_hand)	//If the item is in your hands, but you're wearing protection, you might be alright.
 							// Outpost 21 edit(port) begin - glove permiability instead of bio armor (minimum limit)
 							var/l_hand_blocked = 1
@@ -1201,7 +1201,7 @@
 								if(l_hand_blocked <= 0.02)
 									l_hand_blocked = 0
 							// Outpost 21 edit(port) end
-							total_phoronloss += vsc.plc.CONTAMINATION_LOSS * l_hand_blocked * src.species.phoron_contact_mod  // Outpost 21 edit(port) - phoron contact mod
+							total_phoronloss += GLOB.vsc.plc.CONTAMINATION_LOSS * l_hand_blocked * src.species.phoron_contact_mod  // Outpost 21 edit(port) - phoron contact mod
 						else if(I == r_hand)	//If the item is in your hands, but you're wearing protection, you might be alright.
 							// Outpost 21 edit(port) begin - glove permiability instead of bio armor (minimum limit)
 							var/r_hand_blocked = 1
@@ -1210,7 +1210,7 @@
 								if(r_hand_blocked <= 0.02)
 									r_hand_blocked = 0
 							// Outpost 21 edit(port) end
-							total_phoronloss += vsc.plc.CONTAMINATION_LOSS * r_hand_blocked * src.species.phoron_contact_mod  // Outpost 21 edit(port) - phoron contact mod
+							total_phoronloss += GLOB.vsc.plc.CONTAMINATION_LOSS * r_hand_blocked * src.species.phoron_contact_mod  // Outpost 21 edit(port) - phoron contact mod
 
 			if(total_phoronloss)
 				adjustToxLoss(total_phoronloss)
