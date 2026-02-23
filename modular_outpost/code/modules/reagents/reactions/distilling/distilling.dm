@@ -1,5 +1,5 @@
 // For changeling detection
-/decl/chemical_reaction/distilling/anti_changeling
+/datum/decl/chemical_reaction/distilling/anti_changeling
 	name = "Distilling Water From Blood"
 	id = "distill_antichangeling"
 	result = REAGENT_ID_WATER
@@ -9,7 +9,7 @@
 	temp_shift = -2
 	result_amount = 1
 
-/decl/chemical_reaction/distilling/anti_changeling/on_reaction(var/datum/reagents/holder, var/created_volume)
+/datum/decl/chemical_reaction/distilling/anti_changeling/on_reaction(var/datum/reagents/holder, var/created_volume)
 	var/datum/reagent/blood/B = holder.get_reagent(REAGENT_ID_BLOOD)
 	if(B && B.changling_blood_test(holder))
 		return

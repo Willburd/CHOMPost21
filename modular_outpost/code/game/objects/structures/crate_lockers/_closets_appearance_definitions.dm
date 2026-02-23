@@ -1,4 +1,4 @@
-/decl/closet_appearance/secure_closet/security_pilot
+/datum/decl/closet_appearance/secure_closet/security_pilot
 	color = COLOR_NT_RED
 	decals = list(
 		"lower_holes"
@@ -8,7 +8,7 @@
 		"hop" = COLOR_WARM_YELLOW
 	)
 
-/decl/closet_appearance/secure_closet/brigmedic
+/datum/decl/closet_appearance/secure_closet/brigmedic
 	color = COLOR_NT_RED
 	decals = list(
 		"lower_holes"

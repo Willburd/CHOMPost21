@@ -205,17 +205,17 @@ GLOBAL_LIST_INIT(human_default_emotes, list(
 	/datum/decl/emote/audible/squeal,
 	//CHOMP Add end
 	//outpost 21 add begin
-	/decl/emote/visible/ragescree,
-	/decl/emote/visible/sdance,
-	/decl/emote/visible/floorspin/tantrum,
-	/decl/emote/audible/woo,
-	/decl/emote/visible/kiss,
-	/decl/emote/visible/dab,
-	/decl/emote/audible/synth/rstartup,
-	/decl/emote/audible/synth/rshutdown,
-	/decl/emote/audible/synth/error,
-	/decl/emote/audible/synth/rberr,
-	/decl/emote/audible/synth/rbpos,
+	/datum/decl/emote/visible/ragescree,
+	/datum/decl/emote/visible/sdance,
+	/datum/decl/emote/visible/floorspin/tantrum,
+	/datum/decl/emote/audible/woo,
+	/datum/decl/emote/visible/kiss,
+	/datum/decl/emote/visible/dab,
+	/datum/decl/emote/audible/synth/rstartup,
+	/datum/decl/emote/audible/synth/rshutdown,
+	/datum/decl/emote/audible/synth/error,
+	/datum/decl/emote/audible/synth/rberr,
+	/datum/decl/emote/audible/synth/rbpos,
 	//outpost 21 add end
 ))
 
@@ -375,17 +375,17 @@ GLOBAL_LIST_INIT(simple_mob_default_emotes, list(
 	/datum/decl/emote/audible/squeal,
 	//CHOMP Add end
 	//outpost 21 add begin
-	/decl/emote/audible/wawa,
-	/decl/emote/visible/sdance,
-	/decl/emote/visible/floorspin/tantrum,
-	/decl/emote/visible/ragescree,
-	/decl/emote/visible/kiss,
-	/decl/emote/visible/dab,
-	/decl/emote/audible/synth/rstartup,
-	/decl/emote/audible/synth/rshutdown,
-	/decl/emote/audible/synth/error,
-	/decl/emote/audible/synth/rberr,
-	/decl/emote/audible/synth/rbpos,
+	/datum/decl/emote/audible/wawa,
+	/datum/decl/emote/visible/sdance,
+	/datum/decl/emote/visible/floorspin/tantrum,
+	/datum/decl/emote/visible/ragescree,
+	/datum/decl/emote/visible/kiss,
+	/datum/decl/emote/visible/dab,
+	/datum/decl/emote/audible/synth/rstartup,
+	/datum/decl/emote/audible/synth/rshutdown,
+	/datum/decl/emote/audible/synth/error,
+	/datum/decl/emote/audible/synth/rberr,
+	/datum/decl/emote/audible/synth/rbpos,
 	//outpost 21 add end
 	))
 

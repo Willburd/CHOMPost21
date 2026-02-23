@@ -1,4 +1,4 @@
-/decl/hierarchy/outfit/proc/equip_stowaway_gear(mob/living/carbon/human/H)
+/datum/decl/hierarchy/outfit/proc/equip_stowaway_gear(mob/living/carbon/human/H)
 	// A crowbar
 	var/obj/item/tool/crowbar/red/bar = new()
 	if(H.backbag == 1)

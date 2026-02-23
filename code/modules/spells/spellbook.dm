@@ -246,7 +246,7 @@
 						// Outpost 21 edit begin - buttblasting
 						if("buttblast")
 							feedback_add_details("wizard_spell_learned","BB") //please do not change the abbreviation to keep data processing consistent. Add a unique id to any new spells
-							H.add_spell(new/spell/targeted/buttblast)
+							H.add_spell(new/datum/spell/targeted/buttblast)
 							temp = "You have learned buttblast."
 						// Outpost 21 edit end
 		else

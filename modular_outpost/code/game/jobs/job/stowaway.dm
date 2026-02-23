@@ -21,7 +21,7 @@
 	spawn_positions = 4
 	economic_modifier = 1
 	alt_titles = list("Gremlin" = /datum/alt_title/gremlin, "Hunter" = /datum/alt_title/hunter, "Scavenger" = /datum/alt_title/scavenger, "Moss Collector" = /datum/alt_title/moss_collector)
-	outfit_type = /decl/hierarchy/outfit/job/stowaway
+	outfit_type = /datum/decl/hierarchy/outfit/job/stowaway
 	access = list()
 	minimal_access = list()
 	forbid_department_account_access = TRUE
