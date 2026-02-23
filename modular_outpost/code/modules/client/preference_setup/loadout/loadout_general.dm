@@ -20,3 +20,7 @@
 	description = "A small pouch designed to compactly carry a small amount of medical items in it, for healing one's own injuries when far from medical help."
 	path = /obj/item/storage/pouch/ifak
 	cost = 4
+
+/datum/gear/yobro
+	display_name = "Yohan Broadcaster personal bodycamera(YoBRO)"
+	path = /obj/item/clothing/accessory/bodycam/yobro

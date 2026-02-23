@@ -1,11 +1,11 @@
-/spell/targeted/buttblast
+/datum/spell/targeted/buttblast
 	name = "Butt blaster"
 	desc = "Blasts the booty off of your target."
 	invocation = "PHUK BYUK KER"
 	invocation_type = SpI_SHOUT
 	hud_state = "wiz_butt"
 
-/spell/targeted/buttblast/cast(list/targets)
+/datum/spell/targeted/buttblast/cast(list/targets)
 	..()
 	for(var/mob/living/target in targets)
 		var/obj/item/organ/internal/butt/Bu = locate() in target.internal_organs

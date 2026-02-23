@@ -19,7 +19,7 @@
 	supervisors = "the " + JOB_CHIEF_ENGINEER
 	selection_color = "#5B4D20"
 	pto_type = PTO_ENGINEERING
-	outfit_type = /decl/hierarchy/outfit/job/engineering/roboticist
+	outfit_type = /datum/decl/hierarchy/outfit/job/engineering/roboticist
 	access = list(ACCESS_ROBOTICS, ACCESS_EVA, ACCESS_ENGINE, ACCESS_ENGINE_EQUIP, ACCESS_TECH_STORAGE, ACCESS_MAINT_TUNNELS, ACCESS_EXTERNAL_AIRLOCKS, ACCESS_CONSTRUCTION, ACCESS_EXTERNAL_AIRLOCKS, ACCESS_ATMOSPHERICS)
 	minimal_access = list(ACCESS_ROBOTICS, ACCESS_EVA, ACCESS_ENGINE, ACCESS_MAINT_TUNNELS, ACCESS_EMERGENCY_STORAGE, ACCESS_CONSTRUCTION, ACCESS_EXTERNAL_AIRLOCKS)
 	alt_titles = list(
