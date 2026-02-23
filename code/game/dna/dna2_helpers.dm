@@ -67,6 +67,7 @@
 			M.dna.SetSEValue(i,rand(1,4095),1)
 	M.dna.UpdateSE()
 	domutcheck(M, null, MUTCHK_FORCED|MUTCHK_HIDEMSG)
+	M.check_mutation_cascade_gib() // Outpost 21 edit - mutation cascade trait
 	M.UpdateAppearance()
 	return
 

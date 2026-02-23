@@ -742,6 +742,7 @@
 			else
 				randmutg(M)
 			domutcheck(M, null)
+			M.check_mutation_cascade_gib() // Outpost 21 edit - mutation cascade trait
 			M.UpdateAppearance()
 	M.apply_effect(10 * removed, IRRADIATE, 0)
 
@@ -1041,6 +1042,7 @@
 			else
 				randmutg(M)
 			domutcheck(M, null)
+			M.check_mutation_cascade_gib() // Outpost 21 edit - mutation cascade trait
 			M.UpdateAppearance()
 	M.apply_effect(16 * removed, IRRADIATE, 0)
 
@@ -1071,6 +1073,7 @@
 			else
 				randmutg(M)
 			domutcheck(M, null)
+			M.check_mutation_cascade_gib() // Outpost 21 edit - mutation cascade trait
 			M.UpdateAppearance()
 	M.apply_effect(6 * removed, IRRADIATE, 0)
 

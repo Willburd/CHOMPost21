@@ -145,6 +145,7 @@
 		M.radiation += 50
 		randmutb(M)
 		domutcheck(M,null)
+		M.check_mutation_cascade_gib() // Outpost 21 edit - mutation cascade trait
 		M.UpdateAppearance()
 	visible_message("\The [src.name] flashes violently before disintegrating!")
 	SSmotiontracker.ping(src,100)

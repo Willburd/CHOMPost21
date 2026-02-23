@@ -308,6 +308,7 @@ But for now, for what it's been used for, it works.
 				// Turn off gene
 				H.dna.SetSEState(gene.block,0)
 			domutcheck(H,null,MUTCHK_FORCED)
+			H.check_mutation_cascade_gib() // Outpost 21 edit - mutation cascade trait
 			H.UpdateAppearance()
 			H.update_mutations()
 	if(H.species.name == SPECIES_VOX || SPECIES_ZADDAT)	//Species that 'actually' require survival gear to live. The rest don't.

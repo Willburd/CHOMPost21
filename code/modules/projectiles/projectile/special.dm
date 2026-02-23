@@ -167,9 +167,11 @@
 				if(prob(80))
 					randmutb(M)
 					domutcheck(M,null)
+					M.check_mutation_cascade_gib() // Outpost 21 edit - mutation cascade trait
 				else
 					randmutg(M)
 					domutcheck(M,null)
+					M.check_mutation_cascade_gib() // Outpost 21 edit - mutation cascade trait
 				M.UpdateAppearance()
 			else
 				M.adjustFireLoss(rand(5,15))

@@ -20,3 +20,12 @@
 	// Set firstlang as default for now
 	var/datum/language/L = H.languages[1]
 	H.apply_default_language(L)
+
+/datum/trait/negative/mutation_gibbing
+	name = "Mutation Cascade"
+	desc = "Your genes are highly reactive to any change. Even the smallest mutation causes your body to quickly and violently unravel on the spot in a burst of gore."
+	cost = -5
+
+/datum/trait/negative/mutation_gibbing/apply(datum/species/S, mob/living/carbon/human/H, trait_prefs)
+	. = ..()
+	ADD_TRAIT(H, TRAIT_MUTATIONCASCADE, ROUNDSTART_TRAIT)

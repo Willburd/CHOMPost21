@@ -134,6 +134,7 @@ GLOBAL_DATUM_INIT(contamination_overlay, /image, 'icons/effects/contamination.dm
 			randmutb(src)
 			to_chat(src, span_danger("High levels of toxins cause you to spontaneously mutate!"))
 			domutcheck(src,null)
+			check_mutation_cascade_gib() // Outpost 21 edit - mutation cascade trait
 			UpdateAppearance()
 
 /mob/living/carbon/human/proc/burn_eyes()

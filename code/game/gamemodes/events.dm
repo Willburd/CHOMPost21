@@ -156,9 +156,11 @@ GLOBAL_VAR_INIT(hadevent, 0)
 				if (prob(75))
 					randmutb(H)
 					domutcheck(H,null,MUTCHK_FORCED)
+					H.check_mutation_cascade_gib() // Outpost 21 edit - mutation cascade trait
 				else
 					randmutg(H)
 					domutcheck(H,null,MUTCHK_FORCED)
+					H.check_mutation_cascade_gib() // Outpost 21 edit - mutation cascade trait
 				H.UpdateAppearance()
 	sleep(100)
 	command_announcement.Announce("High levels of radiation detected near \the [station_name()]. Please report to the Med-bay if you feel strange.", "Anomaly Alert", new_sound = 'sound/AI/radiation.ogg')
