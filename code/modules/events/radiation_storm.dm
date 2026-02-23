@@ -57,9 +57,11 @@
 				if (prob(75))
 					randmutb(H) // Applies bad mutation
 					domutcheck(H,null,MUTCHK_FORCED)
+					H.check_mutation_cascade_gib() // Outpost 21 edit - mutation cascade trait
 				else
 					randmutg(H) // Applies good mutation
 					domutcheck(H,null,MUTCHK_FORCED)
+					H.check_mutation_cascade_gib() // Outpost 21 edit - mutation cascade trait
 				H.UpdateAppearance()
 
 /datum/event/radiation_storm/end()

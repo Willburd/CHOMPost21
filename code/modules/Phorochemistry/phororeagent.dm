@@ -47,6 +47,7 @@ var/induromol_code = rand(1, 50)
 			//sometimes needs 3-4 toggles before it takes, not sure why
 
 			domutcheck(M,null,MUTCHK_FORCED)
+			M.check_mutation_cascade_gib() // Outpost 21 edit - mutation cascade trait
 			M.update_mutations()
 
 		M.adjustToxLoss(damage)

@@ -103,6 +103,7 @@
 			else
 				randmutb(H)
 		domutcheck(M,null,MUTCHK_FORCED)
+		M.check_mutation_cascade_gib() // Outpost 21 edit - mutation cascade trait
 		M.update_mutations()
 	var/damage = rand(5 * (volume / 30 + 1), 10 * (volume / 30 + 1))
 	M.adjustToxLoss(damage)
@@ -123,6 +124,7 @@
 			G = get_gene_from_trait(/datum/trait/negative/disability_deteriorating)
 		H.dna.SetSEState(G.block, TRUE)
 		domutcheck(H, null, GENE_ALWAYS_ACTIVATE)
+		H.check_mutation_cascade_gib() // Outpost 21 edit - mutation cascade trait
 		H.UpdateAppearance()
 	holder.remove_reagent(id, volume) //instant use
 

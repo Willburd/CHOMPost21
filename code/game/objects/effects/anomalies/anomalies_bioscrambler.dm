@@ -32,6 +32,7 @@
 		if(prob(susceptibility * 100))
 			randmutb(nearby)
 			domutcheck(nearby, null)
+			nearby.check_mutation_cascade_gib() // Outpost 21 edit - mutation cascade trait
 			nearby.balloon_alert(nearby, "something has changed about you")
 
 /obj/effect/anomaly/bioscrambler/move_anomaly()
