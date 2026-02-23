@@ -78,7 +78,7 @@
 /obj/item/pen/crayon/afterattack(atom/target, mob/user, proximity, click_parameters)
 	if(!proximity) return
 	if(istype(target,/turf/simulated/floor))
-		var/drawtype = tgui_input_list(user, "Choose what you'd like to draw.", "Crayon scribbles", list("graffiti","rune","letter","arrow"))
+		var/drawtype = tgui_input_list(user, "Choose what you'd like to draw.", "Crayon scribbles", list("graffiti","rune","letter","arrow","scavmarks"))
 		if(!drawtype)
 			return
 		if(get_dist(target, user) > 1 || !(user.z == target.z))
@@ -104,6 +104,13 @@
 				if(!drawtype || get_dist(target, user) > 1 || !(user.z == target.z))
 					return
 				to_chat(user, "You start drawing an arrow on the [target.name].")
+			//Outpost 21 edit begin - New marking subtype to avoid conflicts
+			if("scavmarks")
+				drawtype = tgui_input_list(user, "Choose the marking.", "Crayon scribbles", list("one_wrath", "two_lust", "three_trade", "four_greed", "five_life", "six_tranquility", "seven_resolve", "eight_decision", "nine_removal", "ten_death", "shelter", "agony", "suspicious", "cant_find", "wander", "violence", "desire", "companion", "food", "survival", "stomach", "pill", "skull", "travel", "intersection", "beach", "market", "marsh", "depart", "light", "dark", "air", "water", "fire", "earth", "chaos", "day", "night", "cog"))
+				if(!drawtype || get_dist(target, user) > 1 || !(user.z == target.z))
+					return
+				to_chat(user, "You start drawing a marking on the [target.name].")
+				//Outpost 21 edit end
 		if(instant || do_after(user, 5 SECONDS, target = src))
 			var/list/mouse_control = params2list(click_parameters)
 			var/p_x = 0
