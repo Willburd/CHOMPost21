@@ -92,6 +92,11 @@
 #include "portal_B.dmm"
 #include "portal_C.dmm"
 #include "portal_D.dmm"
+#include "stowaway_A.dmm"
+#include "stowaway_B.dmm"
+#include "stowaway_C.dmm"
+#include "stowaway_D.dmm"
+#include "stowaway_E.dmm"
 #endif
 
 /datum/map_template/outpost21/muriki/caves_deepdark
@@ -845,6 +850,46 @@
 	allow_duplicates = FALSE
 	discard_prob = 20
 	cost = 25
+
+/datum/map_template/outpost21/muriki/caves_deepdark_huge/stowaway_A
+	name = "Stowaway A"
+	desc = "An old stowaway structure."
+	mappath = "modular_outpost/maps/submaps/deepdark/stowaway_A.dmm"
+	allow_duplicates = FALSE
+	discard_prob = 10
+	cost = 15
+
+/datum/map_template/outpost21/muriki/caves_deepdark_huge/stowaway_B
+	name = "Stowaway B"
+	desc = "An old stowaway structure."
+	mappath = "modular_outpost/maps/submaps/deepdark/stowaway_B.dmm"
+	allow_duplicates = FALSE
+	discard_prob = 10
+	cost = 15
+
+/datum/map_template/outpost21/muriki/caves_deepdark_huge/stowaway_C
+	name = "Stowaway C"
+	desc = "An old stowaway structure."
+	mappath = "modular_outpost/maps/submaps/deepdark/stowaway_C.dmm"
+	allow_duplicates = FALSE
+	discard_prob = 10
+	cost = 15
+
+/datum/map_template/outpost21/muriki/caves_deepdark_huge/stowaway_D
+	name = "Stowaway D"
+	desc = "An old stowaway structure."
+	mappath = "modular_outpost/maps/submaps/deepdark/stowaway_D.dmm"
+	allow_duplicates = FALSE
+	discard_prob = 20
+	cost = 35
+
+/datum/map_template/outpost21/muriki/caves_deepdark_huge/stowaway_E
+	name = "Stowaway E"
+	desc = "An old stowaway structure."
+	mappath = "modular_outpost/maps/submaps/deepdark/stowaway_E.dmm"
+	allow_duplicates = FALSE
+	discard_prob = 20
+	cost = 40
 
 //////////////////////////////////////////////////////////////
 // Area definitions
