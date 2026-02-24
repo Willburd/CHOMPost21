@@ -475,6 +475,7 @@
 	dir = 1;
 	pixel_y = -26
 	},
+/obj/item/circuitboard/telecomms/relay,
 /turf/simulated/floor/bluegrid,
 /area/offworld/asteroidyard/station/telecomms)
 "bd" = (
@@ -522,13 +523,13 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/asteroidyard/station/halls)
 "bi" = (
-/obj/machinery/telecomms/relay/preset/outpost/recyard,
 /obj/item/radio/intercom{
 	dir = 8;
 	name = "Station Intercom (General)";
 	pixel_x = -21;
 	listening = 1
 	},
+/obj/structure/frame,
 /turf/simulated/floor/bluegrid,
 /area/offworld/asteroidyard/station/telecomms)
 "bj" = (

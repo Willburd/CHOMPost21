@@ -158,7 +158,8 @@ SUBSYSTEM_DEF(haunting)
 		/datum/station_haunt/camera_stare,
 		/datum/station_haunt/tesh_encircle,
 		/datum/station_haunt/shuttle_sabotage,
-		/datum/station_haunt/entity_spawn
+		/datum/station_haunt/entity_spawn,
+		/datum/station_haunt/tcomms_sabotage
 		)
 
 	next_haunt_time = world.time + (rand(15,30) MINUTES) // No instant ghosts
