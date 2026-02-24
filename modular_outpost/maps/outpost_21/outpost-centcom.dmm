@@ -3191,7 +3191,6 @@
 /area/centcom/medical)
 "ahv" = (
 /obj/structure/bed/double/padded,
-/obj/structure/bed/double/padded,
 /obj/item/bedsheet/purpledouble,
 /obj/effect/floor_decal/spline/plain{
 	dir = 4
