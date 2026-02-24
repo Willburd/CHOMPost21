@@ -12464,12 +12464,6 @@
 	temperature = 80
 	},
 /area/server)
-"awj" = (
-/obj/effect/mine/claymore{
-	dir = 1
-	},
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/mine/unexplored/muriki/cave/underdark_pit/south_west_waste)
 "awk" = (
 /obj/structure/cable/orange{
 	icon_state = "1-2"
@@ -57343,6 +57337,9 @@
 "ccJ" = (
 /obj/effect/decal/cleanable/blood/tracks/suspicious{
 	dir = 9
+	},
+/obj/effect/mine/claymore{
+	dir = 4
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/unexplored/muriki/cave/underdark_pit/south_west_waste)
@@ -103533,7 +103530,7 @@ agW
 ccJ
 awm
 awl
-awj
+awl
 bzV
 bzV
 bzV
