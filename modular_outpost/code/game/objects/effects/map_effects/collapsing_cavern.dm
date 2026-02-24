@@ -13,7 +13,7 @@ GLOBAL_LIST_EMPTY(collapsing_cave_effects)
 	var/collapse_strength = 6
 	var/collapsing = FALSE
 	var/vital_support = FALSE
-	var/static/list/valid_types = list(/turf/simulated/mineral, /turf/simulated/floor/plating, /turf/simulated/wall, /turf/simulated/floor/tiled)
+	var/static/list/valid_types = list(/turf/simulated/mineral, /turf/simulated/floor/plating, /turf/simulated/wall, /turf/simulated/floor/tiled, /turf/simulated/floor/wood, /turf/simulated/floor/carpet)
 
 /obj/effect/map_effect/interval/collapsing_cavern/instant_collapse/Initialize(mapload)
 	. = ..()
