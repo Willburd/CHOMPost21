@@ -8,6 +8,12 @@
 	ignore_mapgen = 1
 	},
 /area/mine/explored/muriki/cave/deepdark)
+"c" = (
+/obj/effect/auto_crayon{
+	icon_state = "one_wrath"
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
 "d" = (
 /obj/random/junk,
 /turf/simulated/floor/wood/turfpack/muriki,
@@ -116,6 +122,9 @@
 /area/mine/explored/muriki/cave/deepdark)
 "U" = (
 /obj/item/pickaxe,
+/obj/effect/auto_crayon{
+	icon_state = "air"
+	},
 /turf/simulated/floor/wood/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "V" = (
@@ -236,7 +245,7 @@ C
 v
 S
 S
-S
+c
 S
 G
 v

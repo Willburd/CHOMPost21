@@ -5272,7 +5272,7 @@
 /area/medical/chem_storage)
 "ajP" = (
 /obj/effect/auto_crayon{
-	icon_state = "uboa"
+	icon_state = "stomach"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/civ/north)
@@ -16841,6 +16841,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
 	},
+/obj/effect/auto_crayon{
+	icon_state = "dark"
+	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/spine/waste)
 "aEt" = (
@@ -22501,6 +22504,9 @@
 /obj/structure/cable/green{
 	icon_state = "0-5"
 	},
+/obj/effect/auto_crayon{
+	icon_state = "down"
+	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/spine/waste)
 "aOx" = (
@@ -23091,10 +23097,9 @@
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/atmos_control)
 "aPv" = (
-/obj/effect/floor_decal/spline/fancy/wood/corner{
-	dir = 1
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 4
 	},
-/obj/effect/floor_decal/spline/fancy/wood/corner,
 /turf/simulated/floor/wood,
 /area/muriki/crew/judge)
 "aPw" = (
@@ -24700,6 +24705,9 @@
 "aTa" = (
 /obj/item/bikehorn,
 /obj/machinery/light/small,
+/obj/effect/auto_crayon{
+	icon_state = "four_greed"
+	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/atmos_control)
 "aTb" = (
@@ -25310,9 +25318,6 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/wood,
 /area/crew_quarters/courtroom)
-"aUh" = (
-/turf/simulated/wall,
-/area/crew_quarters/coffee_shop)
 "aUi" = (
 /obj/machinery/disposal,
 /obj/effect/floor_decal/milspec/box,
@@ -25570,6 +25575,12 @@
 	icon_state = "pipe-j2"
 	},
 /obj/item/bikehorn,
+/obj/effect/auto_crayon{
+	icon_state = "x"
+	},
+/obj/effect/auto_crayon{
+	icon_state = "left"
+	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/spine/civ)
 "aUD" = (
@@ -25610,10 +25621,9 @@
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/cave/waste)
 "aUG" = (
-/obj/machinery/microwave,
-/obj/structure/table/marble,
-/turf/simulated/floor/tiled/white,
-/area/crew_quarters/coffee_shop)
+/obj/item/material/barbedwire/start_active,
+/turf/simulated/floor/plating,
+/area/maintenance/civ/bunker)
 "aUH" = (
 /turf/simulated/wall,
 /area/maintenance/shadekin_dark/waste)
@@ -25624,40 +25634,13 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
-/area/crew_quarters/coffee_shop)
-"aUJ" = (
-/obj/structure/closet/secure_closet/freezer/fridge/empty,
-/obj/item/reagent_containers/food/drinks/milk,
-/obj/item/reagent_containers/food/drinks/milk,
-/obj/item/reagent_containers/food/drinks/milk,
-/obj/item/reagent_containers/food/drinks/milk,
-/obj/item/reagent_containers/food/drinks/milk,
-/obj/item/reagent_containers/food/drinks/milk,
-/obj/item/storage/fancy/egg_box,
-/obj/item/storage/fancy/egg_box,
-/obj/item/storage/fancy/egg_box,
-/obj/item/storage/fancy/egg_box,
-/obj/item/reagent_containers/food/condiment/carton/flour,
-/obj/item/reagent_containers/food/condiment/carton/flour,
-/obj/item/reagent_containers/food/condiment/carton/flour,
-/obj/item/reagent_containers/food/condiment/carton/flour,
-/obj/item/reagent_containers/food/condiment/carton/flour,
-/obj/item/reagent_containers/food/condiment/carton/flour,
-/obj/item/reagent_containers/food/condiment/carton/flour,
-/obj/item/reagent_containers/food/condiment/sugar,
-/obj/item/reagent_containers/food/condiment/sugar,
-/turf/simulated/floor/tiled/white,
-/area/crew_quarters/coffee_shop)
-"aUK" = (
-/obj/machinery/chem_master/condimaster,
-/turf/simulated/floor/tiled/white,
-/area/crew_quarters/coffee_shop)
+/area/maintenance/civ/bunker)
 "aUL" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 8
 	},
 /turf/simulated/wall,
-/area/crew_quarters/coffee_shop)
+/area/maintenance/civ/bunker)
 "aUM" = (
 /obj/item/storage/box/cups,
 /obj/structure/table/standard,
@@ -26177,19 +26160,14 @@
 /turf/simulated/floor/gas_crack/phoron,
 /area/mine/explored/muriki/cave/waste)
 "aVs" = (
-/obj/structure/table/marble,
-/obj/item/reagent_containers/food/drinks/teapot,
-/obj/item/reagent_containers/food/drinks/britcup,
-/obj/item/reagent_containers/food/drinks/britcup,
-/obj/item/reagent_containers/food/condiment/small/sugar,
 /obj/structure/sign/yessmoking_1{
 	pixel_x = -32
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/white,
-/area/crew_quarters/coffee_shop)
+/turf/simulated/floor/plating,
+/area/maintenance/civ/bunker)
 "aVt" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4;
@@ -26201,8 +26179,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
 	},
-/turf/simulated/floor/tiled/white,
-/area/crew_quarters/coffee_shop)
+/turf/simulated/floor/plating,
+/area/maintenance/civ/bunker)
 "aVu" = (
 /obj/structure/disposalpipe/segment{
 	dir = 8;
@@ -26211,11 +26189,14 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
-/turf/simulated/floor/tiled/white,
-/area/crew_quarters/coffee_shop)
+/turf/simulated/floor/plating,
+/area/maintenance/civ/bunker)
 "aVv" = (
-/turf/simulated/floor/tiled/white,
-/area/crew_quarters/coffee_shop)
+/obj/effect/auto_crayon{
+	icon_state = "shelter"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/civ/bunker)
 "aVw" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 8
@@ -26402,16 +26383,18 @@
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/turf/simulated/floor/tiled/steel_grid,
-/area/crew_quarters/coffee_shop)
+/obj/item/assembly/mousetrap/armed,
+/turf/simulated/floor/tiled/techfloor,
+/area/maintenance/civ/bunker)
 "aVQ" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/full{
 	dir = 10;
 	icon_state = "fwindow"
 	},
+/obj/structure/barricade/planks,
 /turf/simulated/floor/plating,
-/area/crew_quarters/coffee_shop)
+/area/maintenance/civ/bunker)
 "aVR" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 8
@@ -26754,7 +26737,6 @@
 /area/crew_quarters/fitness)
 "aWv" = (
 /obj/machinery/disposal,
-/obj/effect/floor_decal/corner/brown/diagonal,
 /obj/structure/disposalpipe/trunk{
 	dir = 4
 	},
@@ -26763,99 +26745,32 @@
 	name = "Station Intercom (General)";
 	pixel_y = 24
 	},
-/turf/simulated/floor/tiled/white,
-/area/crew_quarters/coffee_shop)
+/turf/simulated/floor/plating,
+/area/maintenance/civ/bunker)
 "aWw" = (
-/obj/effect/floor_decal/corner/brown/diagonal,
 /obj/structure/disposalpipe/segment{
 	dir = 2;
 	icon_state = "pipe-c"
 	},
 /obj/machinery/vending/coffee,
-/turf/simulated/floor/tiled/white,
-/area/crew_quarters/coffee_shop)
-"aWx" = (
-/obj/structure/table/marble,
-/obj/item/reagent_containers/food/drinks/cup{
-	pixel_x = 8;
-	pixel_y = 8
-	},
-/obj/item/reagent_containers/food/drinks/cup{
-	pixel_x = -4;
-	pixel_y = 8
-	},
-/obj/item/reagent_containers/food/drinks/cup{
-	pixel_x = 8;
-	pixel_y = -4
-	},
-/obj/item/reagent_containers/food/drinks/cup{
-	pixel_x = -4;
-	pixel_y = -4
-	},
-/obj/item/reagent_containers/food/drinks/cup{
-	pixel_x = 8
-	},
-/obj/item/reagent_containers/food/drinks/cup{
-	pixel_x = -4
-	},
-/obj/item/reagent_containers/food/drinks/cup{
-	pixel_x = 8;
-	pixel_y = 12
-	},
-/obj/item/reagent_containers/food/drinks/cup{
-	pixel_x = -4;
-	pixel_y = 12
-	},
-/obj/machinery/firealarm{
-	pixel_y = 26
-	},
-/obj/machinery/light_switch{
-	dir = 4;
-	pixel_x = -36
-	},
-/obj/machinery/button/remote/blast_door{
-	dir = 4;
-	id = "coffeeshop";
-	name = "Cafe Shutters";
-	pixel_x = -26
-	},
-/obj/machinery/button/neonsign{
-	pixel_y = 10;
-	pixel_x = -24;
-	name = "Cafe sign switch";
-	id = "cafesign"
-	},
-/obj/item/retail_scanner,
-/turf/simulated/floor/tiled/white,
-/area/crew_quarters/coffee_shop)
+/turf/simulated/floor/plating,
+/area/maintenance/civ/bunker)
 "aWy" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/white,
-/area/crew_quarters/coffee_shop)
-"aWz" = (
-/obj/machinery/chemical_dispenser/bar_coffee/full,
-/obj/structure/table/standard,
-/obj/machinery/camera/network/civilian{
-	c_tag = "CIV - Cafe serving"
-	},
-/turf/simulated/floor/tiled/white,
-/area/crew_quarters/coffee_shop)
-"aWA" = (
-/obj/machinery/chemical_dispenser/bar_soft/full,
-/obj/structure/table/standard,
-/turf/simulated/floor/tiled/white,
-/area/crew_quarters/coffee_shop)
+/area/maintenance/civ/bunker)
 "aWB" = (
-/obj/machinery/alarm{
-	dir = 8;
-	pixel_x = 26
+/obj/structure/bed/chair/hammock_kbraid_n,
+/obj/item/radio/intercom{
+	dir = 4;
+	name = "Common Channel";
+	pixel_x = 21
 	},
-/obj/machinery/food_replicator,
-/obj/structure/table/standard,
-/turf/simulated/floor/tiled/white,
-/area/crew_quarters/coffee_shop)
+/obj/effect/landmark/start/stowaway,
+/turf/simulated/floor/plating,
+/area/maintenance/civ/bunker)
 "aWC" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 8
@@ -27264,38 +27179,19 @@
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/fitness)
-"aXi" = (
-/obj/structure/sign/coffee_shop_library{
-	desc = "A sign that perfectly depicts that there is, in fact, a coffee shop in this direction.";
-	name = "\improper Coffee Shop"
-	},
-/turf/simulated/wall,
-/area/crew_quarters/coffee_shop)
 "aXj" = (
-/obj/effect/floor_decal/corner/brown/diagonal,
 /obj/machinery/light{
 	dir = 8
 	},
-/turf/simulated/floor/tiled/white,
-/area/crew_quarters/coffee_shop)
+/turf/simulated/floor/plating,
+/area/maintenance/civ/bunker)
 "aXk" = (
 /obj/structure/disposalpipe/junction{
 	dir = 2;
 	icon_state = "pipe-j2"
 	},
-/obj/effect/floor_decal/corner/brown/diagonal,
-/turf/simulated/floor/tiled/white,
-/area/crew_quarters/coffee_shop)
-"aXl" = (
-/obj/machinery/door/airlock{
-	name = "Coffee Shop";
-	req_one_access = list(25,28)
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/steel_grid,
-/area/crew_quarters/coffee_shop)
+/turf/simulated/floor/plating,
+/area/maintenance/civ/bunker)
 "aXm" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -27306,8 +27202,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
 	},
-/turf/simulated/floor/tiled/white,
-/area/crew_quarters/coffee_shop)
+/turf/simulated/floor/plating,
+/area/maintenance/civ/bunker)
 "aXn" = (
 /obj/structure/disposalpipe/segment{
 	dir = 8;
@@ -27320,27 +27216,18 @@
 	dir = 9
 	},
 /turf/simulated/floor/tiled/white,
-/area/crew_quarters/coffee_shop)
+/area/maintenance/civ/bunker)
 "aXo" = (
-/obj/effect/landmark/start{
-	name = "Bartender"
-	},
+/obj/random/junk,
 /turf/simulated/floor/tiled/white,
-/area/crew_quarters/coffee_shop)
+/area/maintenance/civ/bunker)
 "aXp" = (
-/obj/machinery/light{
-	dir = 4
+/obj/structure/hammock_kbraid_s,
+/obj/structure/dancepole{
+	name = "hammock pole"
 	},
-/obj/item/juke_remote{
-	autolinkareajuke_onspawn = /area/djstation
-	},
-/obj/item/radio/intercom{
-	dir = 4;
-	name = "Common Channel";
-	pixel_x = 21
-	},
-/turf/simulated/floor/tiled/white,
-/area/crew_quarters/coffee_shop)
+/turf/simulated/floor/plating,
+/area/maintenance/civ/bunker)
 "aXq" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 8
@@ -27436,94 +27323,39 @@
 /turf/simulated/floor/wood,
 /area/crew_quarters/fitness)
 "aXE" = (
-/obj/effect/floor_decal/spline/fancy/wood/corner{
-	dir = 1
-	},
-/obj/effect/floor_decal/spline/fancy/wood/corner,
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/machinery/light_switch{
-	dir = 8;
-	pixel_x = 28;
-	pixel_y = -21
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 4
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/fitness)
 "aXF" = (
-/obj/effect/floor_decal/spline/fancy/wood{
-	dir = 1
-	},
-/obj/effect/floor_decal/spline/fancy/wood,
-/obj/machinery/door/firedoor/glass,
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/machinery/door/airlock/glass{
-	name = "Cafe"
+/obj/structure/window/maintenance_panel{
+	dir = 8
 	},
-/turf/simulated/floor/tiled/steel_grid,
-/area/crew_quarters/coffee_shop)
-"aXG" = (
-/obj/effect/floor_decal/corner/brown/diagonal,
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/white,
-/area/crew_quarters/coffee_shop)
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/maintenance/civ/bunker)
 "aXH" = (
 /obj/structure/disposalpipe/junction,
-/obj/effect/floor_decal/corner/brown/diagonal,
-/turf/simulated/floor/tiled/white,
-/area/crew_quarters/coffee_shop)
+/obj/random/junk,
+/turf/simulated/floor/plating,
+/area/maintenance/civ/bunker)
 "aXI" = (
-/obj/structure/table/standard,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/door/blast/gate/thin{
-	name = "Cafe Shutters";
-	id = "coffeeshop";
-	layer = 3.1;
-	can_atmos_pass = 1;
-	dir = 2
-	},
 /turf/simulated/floor/tiled/white,
-/area/crew_quarters/coffee_shop)
+/area/maintenance/civ/bunker)
 "aXJ" = (
-/obj/structure/table/standard,
-/obj/item/pizzabox/vegetable,
-/obj/machinery/door/blast/gate/thin{
-	name = "Cafe Shutters";
-	id = "coffeeshop";
-	layer = 3.1;
-	can_atmos_pass = 1;
-	dir = 2
+/obj/effect/auto_crayon{
+	icon_state = "three_trade"
 	},
 /turf/simulated/floor/tiled/white,
-/area/crew_quarters/coffee_shop)
-"aXK" = (
-/obj/structure/table/standard,
-/obj/machinery/door/blast/gate/thin{
-	name = "Cafe Shutters";
-	id = "coffeeshop";
-	layer = 3.1;
-	can_atmos_pass = 1;
-	dir = 2
-	},
-/turf/simulated/floor/tiled/white,
-/area/crew_quarters/coffee_shop)
-"aXL" = (
-/obj/structure/table/standard,
-/obj/item/pizzabox/meat,
-/obj/machinery/door/blast/gate/thin{
-	name = "Cafe Shutters";
-	id = "coffeeshop";
-	layer = 3.1;
-	can_atmos_pass = 1;
-	dir = 2
-	},
-/turf/simulated/floor/tiled/white,
-/area/crew_quarters/coffee_shop)
+/area/maintenance/civ/bunker)
 "aXM" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 8
@@ -27703,54 +27535,27 @@
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/fitness)
-"aYf" = (
-/obj/machinery/light_switch{
-	dir = 4;
-	pixel_x = -28
-	},
-/obj/effect/floor_decal/corner/brown/diagonal,
-/obj/item/juke_remote{
-	autolinkareajuke_onspawn = /area/djstation
-	},
-/turf/simulated/floor/tiled/white,
-/area/crew_quarters/coffee_shop)
-"aYg" = (
-/obj/effect/floor_decal/corner/brown/diagonal,
-/obj/structure/disposalpipe/segment,
-/turf/simulated/floor/tiled/white,
-/area/crew_quarters/coffee_shop)
-"aYh" = (
-/obj/effect/floor_decal/corner/brown/diagonal,
-/obj/machinery/hologram/holopad,
-/turf/simulated/floor/tiled/white,
-/area/crew_quarters/coffee_shop)
 "aYi" = (
-/obj/structure/bed/chair/wood{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/brown/diagonal,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/turf/simulated/floor/tiled/white,
-/area/crew_quarters/coffee_shop)
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/civ/bunker)
 "aYj" = (
-/obj/structure/bed/chair/wood{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/brown/diagonal,
+/obj/structure/table/standard,
+/obj/random/maintenance/foodstuff,
+/obj/random/maintenance/foodstuff,
+/obj/random/maintenance/foodstuff,
 /turf/simulated/floor/tiled/white,
-/area/crew_quarters/coffee_shop)
+/area/maintenance/civ/bunker)
 "aYk" = (
-/obj/structure/bed/chair/wood{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/brown/diagonal,
-/obj/machinery/firealarm{
-	dir = 4;
-	pixel_x = 26
-	},
+/obj/structure/table/standard,
+/obj/item/flame/candle/everburn,
 /turf/simulated/floor/tiled/white,
-/area/crew_quarters/coffee_shop)
+/area/maintenance/civ/bunker)
 "aYl" = (
 /obj/machinery/light/small{
 	dir = 8;
@@ -27855,12 +27660,12 @@
 /turf/simulated/wall,
 /area/crew_quarters/fitness)
 "aYy" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
 /obj/structure/disposalpipe/segment{
 	dir = 4;
 	icon_state = "pipe-c"
-	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/fitness)
@@ -27871,68 +27676,34 @@
 	},
 /obj/effect/floor_decal/corner/brown/diagonal,
 /turf/simulated/floor/tiled/white,
-/area/crew_quarters/coffee_shop)
+/area/maintenance/civ/bunker)
 "aYA" = (
+/obj/random/junk,
 /obj/effect/floor_decal/corner/brown/diagonal,
-/obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
-	},
 /turf/simulated/floor/tiled/white,
-/area/crew_quarters/coffee_shop)
+/area/maintenance/civ/bunker)
 "aYB" = (
-/obj/effect/floor_decal/corner/brown/diagonal,
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/white,
-/area/crew_quarters/coffee_shop)
+/turf/simulated/floor/plating,
+/area/maintenance/civ/bunker)
 "aYC" = (
-/obj/effect/floor_decal/corner/brown/diagonal,
-/obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
-	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/white,
-/area/crew_quarters/coffee_shop)
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/plating,
+/area/maintenance/civ/bunker)
 "aYD" = (
-/obj/effect/floor_decal/corner/brown/diagonal,
-/obj/structure/cable/green{
-	icon_state = "2-4"
-	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
-/turf/simulated/floor/tiled/white,
-/area/crew_quarters/coffee_shop)
-"aYE" = (
-/obj/effect/floor_decal/corner/brown/diagonal,
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/tiled/white,
-/area/crew_quarters/coffee_shop)
-"aYF" = (
-/obj/effect/floor_decal/corner/brown/diagonal,
-/obj/machinery/power/apc{
-	dir = 4;
-	name = "east bump";
-	pixel_x = 24
-	},
-/obj/structure/cable/green{
-	icon_state = "0-8"
-	},
-/turf/simulated/floor/tiled/white,
-/area/crew_quarters/coffee_shop)
+/turf/simulated/floor/plating,
+/area/maintenance/civ/bunker)
 "aYG" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 10
@@ -28047,11 +27818,11 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/tug)
 "aYV" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/fitness)
@@ -28112,62 +27883,27 @@
 /turf/simulated/floor/carpet,
 /area/crew_quarters/recreation_area)
 "aZc" = (
-/obj/structure/bed/chair/wood{
-	dir = 4
-	},
 /obj/effect/floor_decal/corner/brown/diagonal,
-/obj/structure/sign/yessmoking_1{
-	pixel_x = -32
-	},
 /turf/simulated/floor/tiled/white,
-/area/crew_quarters/coffee_shop)
+/area/maintenance/civ/bunker)
 "aZd" = (
-/obj/structure/table/woodentable,
-/obj/item/reagent_containers/food/condiment/small/sugar,
-/obj/machinery/computer/security/telescreen/entertainment{
-	pixel_y = -32
-	},
-/obj/effect/floor_decal/corner/brown/diagonal,
-/obj/random/mug,
-/turf/simulated/floor/tiled/white,
-/area/crew_quarters/coffee_shop)
-"aZe" = (
-/obj/structure/bed/chair/wood{
-	dir = 8
-	},
+/obj/item/material/barbedwire/start_active,
 /obj/effect/floor_decal/corner/brown/diagonal,
 /turf/simulated/floor/tiled/white,
-/area/crew_quarters/coffee_shop)
+/area/maintenance/civ/bunker)
 "aZf" = (
-/obj/effect/floor_decal/corner/brown/diagonal,
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/tiled/white,
-/area/crew_quarters/coffee_shop)
+/turf/simulated/floor/plating,
+/area/maintenance/civ/bunker)
 "aZg" = (
-/obj/effect/floor_decal/corner/brown/diagonal,
-/obj/structure/cable/green{
-	icon_state = "1-2"
+/obj/effect/auto_crayon{
+	icon_state = "suspicious"
 	},
-/turf/simulated/floor/tiled/white,
-/area/crew_quarters/coffee_shop)
-"aZh" = (
-/obj/structure/bed/chair/wood{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/brown/diagonal,
-/obj/machinery/camera/network/civilian{
-	c_tag = "CIV - Cafe";
-	dir = 1
-	},
-/turf/simulated/floor/tiled/white,
-/area/crew_quarters/coffee_shop)
+/turf/simulated/floor/plating,
+/area/maintenance/civ/bunker)
 "aZi" = (
-/obj/structure/bed/chair/wood{
-	dir = 8
-	},
-/obj/effect/floor_decal/corner/brown/diagonal,
 /obj/machinery/light{
 	dir = 4
 	},
@@ -28178,8 +27914,8 @@
 	pixel_y = -30;
 	dir = 1
 	},
-/turf/simulated/floor/tiled/white,
-/area/crew_quarters/coffee_shop)
+/turf/simulated/floor/plating,
+/area/maintenance/civ/bunker)
 "aZj" = (
 /obj/structure/window/reinforced/full{
 	color = "#0000ff"
@@ -28360,11 +28096,11 @@
 /turf/simulated/floor/carpet,
 /area/crew_quarters/recreation_area)
 "aZC" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
 /obj/structure/cable/green{
 	icon_state = "1-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/fitness)
@@ -28388,48 +28124,17 @@
 	},
 /turf/simulated/floor/carpet,
 /area/crew_quarters/recreation_area)
-"aZF" = (
-/obj/structure/grille,
-/obj/machinery/door/firedoor/glass,
-/obj/structure/window/reinforced/full{
-	dir = 10;
-	icon_state = "fwindow"
-	},
-/turf/simulated/floor/plating,
-/area/crew_quarters/coffee_shop)
-"aZG" = (
-/obj/structure/grille,
-/obj/machinery/door/firedoor/glass,
-/obj/structure/window/reinforced/full{
-	dir = 10;
-	icon_state = "fwindow"
-	},
-/obj/structure/sign/coffee_shop_library{
-	desc = "A sign that perfectly depicts that there is, in fact, a coffee shop in this direction.";
-	name = "\improper Coffee Shop"
-	},
-/turf/simulated/floor/plating,
-/area/crew_quarters/coffee_shop)
 "aZH" = (
-/obj/machinery/door/firedoor/glass,
 /obj/structure/disposalpipe/segment,
-/obj/machinery/door/airlock/glass{
-	name = "Cafe"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/tiled/steel_grid,
-/area/crew_quarters/coffee_shop)
+/obj/structure/window/maintenance_panel,
+/turf/simulated/floor/tiled/techfloor,
+/area/maintenance/civ/bunker)
 "aZI" = (
-/obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/glass{
-	name = "Cafe"
-	},
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/tiled/steel_grid,
-/area/crew_quarters/coffee_shop)
+/obj/structure/window/maintenance_panel,
+/turf/simulated/floor/tiled/techfloor,
+/area/maintenance/civ/bunker)
 "aZJ" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 9
@@ -28646,10 +28351,6 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/obj/machinery/vending/fooddessert{
-	dir = 8;
-	pixel_x = 6
-	},
 /turf/simulated/floor/carpet,
 /area/crew_quarters/recreation_area)
 "bab" = (
@@ -28680,9 +28381,7 @@
 /turf/simulated/floor/carpet/geo,
 /area/muriki/crew/arcade)
 "baf" = (
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
+/obj/machinery/vending/fooddessert,
 /turf/simulated/floor/carpet/geo,
 /area/muriki/crew/arcade)
 "bag" = (
@@ -30638,12 +30337,6 @@
 	icon_state = "8-9"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/cargo)
-"bdu" = (
-/obj/effect/auto_crayon{
-	icon_state = "left"
-	},
-/turf/simulated/floor/wood/turfpack/muriki,
 /area/maintenance/cargo)
 "bdv" = (
 /obj/structure/disposalpipe/segment{
@@ -33099,6 +32792,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
+	},
+/obj/effect/auto_crayon{
+	icon_state = "x"
 	},
 /turf/simulated/floor/plating,
 /area/engineering/trammaint)
@@ -36442,7 +36138,7 @@
 "boo" = (
 /obj/effect/floor_decal/industrial/warning/corner,
 /obj/effect/auto_crayon{
-	icon_state = "face"
+	icon_state = "three_trade"
 	},
 /turf/simulated/floor/plating,
 /area/engineering/trammaint)
@@ -43490,11 +43186,6 @@
 /obj/structure/foamedmetal,
 /turf/simulated/floor,
 /area/maintenance/spine/waste)
-"bAs" = (
-/obj/structure/foamedmetal,
-/obj/structure/foamedmetal,
-/turf/simulated/floor,
-/area/maintenance/spine/waste)
 "bAt" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -43997,6 +43688,9 @@
 	},
 /obj/structure/disposalpipe/broken{
 	dir = 8
+	},
+/obj/effect/auto_crayon{
+	icon_state = "shelter"
 	},
 /turf/simulated/floor/wood/alt,
 /area/maintenance/oldbridge)
@@ -45286,7 +44980,7 @@
 /area/maintenance/sec)
 "bDX" = (
 /obj/effect/auto_crayon{
-	icon_state = "revolution"
+	icon_state = "violence"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/cargo)
@@ -47209,6 +46903,24 @@
 	},
 /turf/simulated/floor/tiled/steel,
 /area/crew_quarters/locker)
+"bHz" = (
+/obj/effect/auto_crayon{
+	icon_state = "earth"
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
+"bHA" = (
+/obj/effect/auto_crayon{
+	icon_state = "dark"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/wastedisposalnear)
+"bHB" = (
+/obj/effect/auto_crayon{
+	icon_state = "water"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/unexplored/muriki/mountainbase)
 "bHC" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -47587,6 +47299,18 @@
 "bIq" = (
 /turf/simulated/open/muriki,
 /area/mine/explored/muriki/tuggrave)
+"bIr" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/orange{
+	icon_state = "4-8"
+	},
+/obj/effect/auto_crayon{
+	icon_state = "survival"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/civ/north)
 "bIs" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -47772,6 +47496,12 @@
 "bIP" = (
 /turf/simulated/wall,
 /area/mine/unexplored/muriki/cave/shelter/north)
+"bIQ" = (
+/obj/effect/auto_crayon{
+	icon_state = "one_wrath"
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/maintenance/cargo)
 "bIR" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -48207,6 +47937,12 @@
 "bJK" = (
 /turf/simulated/floor/plating,
 /area/maintenance/sec)
+"bJL" = (
+/obj/effect/auto_crayon{
+	icon_state = "earth"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/spine/waste)
 "bJM" = (
 /obj/structure/catwalk,
 /obj/structure/dancepole{
@@ -48354,6 +48090,22 @@
 /obj/machinery/door/airlock/maintenance/int,
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/maintenance/cargo)
+"bJZ" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/obj/effect/auto_crayon{
+	icon_state = "four_greed"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/wastedisposalnear)
+"bKa" = (
+/obj/effect/auto_crayon{
+	icon_state = "wander"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/civ/north)
 "bKb" = (
 /obj/structure/catwalk,
 /obj/structure/railing{
@@ -48407,6 +48159,18 @@
 /obj/random/junk,
 /turf/simulated/open/muriki,
 /area/mine/explored/muriki/tuggrave)
+"bKg" = (
+/obj/effect/auto_crayon{
+	icon_state = "dark"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/unexplored/muriki/mountainbase)
+"bKh" = (
+/obj/effect/auto_crayon{
+	icon_state = "air"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/wastedisposalnear)
 "bKi" = (
 /obj/structure/disposalpipe/segment{
 	dir = 2;
@@ -48448,6 +48212,12 @@
 /obj/structure/window/maintenance_panel,
 /turf/simulated/floor/tiled/techfloor/grid/turfpack/muriki,
 /area/rnd/workshop)
+"bKn" = (
+/obj/effect/auto_crayon{
+	icon_state = "desire"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/wastedisposalnear)
 "bKo" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/sign/warning/incinerator{
@@ -48597,6 +48367,12 @@
 	},
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/maintenance/civ/bunker)
+"bKD" = (
+/obj/effect/auto_crayon{
+	icon_state = "earth"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/wastedisposalnear)
 "bKE" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -48834,6 +48610,12 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/eng)
+"bKY" = (
+/obj/effect/auto_crayon{
+	icon_state = "four_greed"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/wastedisposalnear)
 "bKZ" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/door/airlock/maintenance/int,
@@ -49252,6 +49034,12 @@
 "bLW" = (
 /turf/simulated/wall,
 /area/mine/unexplored/muriki/cave/underdark_pit/west_terraformer)
+"bLX" = (
+/obj/effect/auto_crayon{
+	icon_state = "air"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/civ/east)
 "bLY" = (
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/unexplored/muriki/cave/underdark_pit/west_terraformer)
@@ -51405,7 +51193,7 @@
 	dir = 9
 	},
 /obj/effect/auto_crayon{
-	icon_state = "x"
+	icon_state = "fire"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/spine/eng)
@@ -51857,9 +51645,6 @@
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/spine/eng)
 "bQR" = (
-/obj/effect/auto_crayon{
-	icon_state = "right"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
 	},
@@ -51896,6 +51681,12 @@
 	},
 /obj/effect/floor_decal/industrial/warning/dust/corner{
 	dir = 1
+	},
+/obj/effect/auto_crayon{
+	icon_state = "travel"
+	},
+/obj/effect/auto_crayon{
+	icon_state = "depart"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/med_refinery)
@@ -53968,10 +53759,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 8
 	},
-/obj/effect/auto_crayon{
-	icon_state = "face"
-	},
 /obj/effect/landmark/event_spawn/maintpred,
+/obj/effect/auto_crayon{
+	icon_state = "wander"
+	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/sec)
 "bVa" = (
@@ -54030,6 +53821,9 @@
 	},
 /obj/effect/floor_decal/corner/orange/border{
 	dir = 10
+	},
+/obj/effect/auto_crayon{
+	icon_state = "survival"
 	},
 /turf/simulated/floor/tiled,
 /area/maintenance/oldbridge)
@@ -54476,12 +54270,25 @@
 /obj/machinery/cryopod/robot,
 /turf/simulated/floor/tiled,
 /area/maintenance/oldbridge)
+"bWd" = (
+/obj/effect/auto_crayon{
+	icon_state = "desire"
+	},
+/turf/simulated/floor/plating/external/turfpack/muriki,
+/area/maintenance/civ/west)
 "bWe" = (
 /obj/structure/cliff,
 /turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
 	},
 /area/mine/explored/muriki/tuggrave)
+"bWf" = (
+/obj/item/bikehorn,
+/obj/effect/auto_crayon{
+	icon_state = "wander"
+	},
+/turf/simulated/floor/plating/external/turfpack/muriki,
+/area/maintenance/civ/west)
 "bWg" = (
 /obj/structure/cliff/corner{
 	dir = 6
@@ -54498,6 +54305,22 @@
 	ignore_mapgen = 1
 	},
 /area/mine/explored/muriki/cave/waste)
+"bWi" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/auto_crayon{
+	icon_state = "x"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/spine/eng)
+"bWj" = (
+/obj/random/junk,
+/obj/effect/auto_crayon{
+	icon_state = "wander"
+	},
+/turf/simulated/floor/plating/external/turfpack/muriki,
+/area/maintenance/civ/west)
 "bWk" = (
 /obj/structure/cliff{
 	dir = 6
@@ -54678,6 +54501,13 @@
 /obj/effect/landmark/event_spawn/maintpred,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/wastedisposalnear)
+"bWC" = (
+/obj/random/junk,
+/obj/effect/auto_crayon{
+	icon_state = "water"
+	},
+/turf/simulated/floor/plating/external/turfpack/muriki,
+/area/maintenance/civ/west)
 "bWD" = (
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 8
@@ -54977,6 +54807,12 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/med_refinery)
+"bXj" = (
+/obj/effect/auto_crayon{
+	icon_state = "dark"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/maintenance/cave)
 "bXk" = (
 /obj/random/junk,
 /turf/simulated/floor/plating/turfpack/muriki,
@@ -55302,6 +55138,12 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/spine/eng)
+"bXS" = (
+/obj/effect/auto_crayon{
+	icon_state = "five_life"
+	},
+/turf/simulated/floor/tiled/old_tile/turfpack/muriki,
+/area/maintenance/oldbridge)
 "bXT" = (
 /obj/effect/auto_crayon{
 	icon_state = "uboa"
@@ -56040,7 +55882,7 @@
 	dir = 4
 	},
 /obj/effect/auto_crayon{
-	icon_state = "engie"
+	icon_state = "desire"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/med)
@@ -56319,6 +56161,9 @@
 	icon_state = "pipe-c"
 	},
 /obj/item/assembly/mousetrap/armed,
+/obj/effect/auto_crayon{
+	icon_state = "x"
+	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/med)
 "bZY" = (
@@ -56614,7 +56459,7 @@
 /area/mine/unexplored/muriki/cave/shelter/north)
 "caz" = (
 /obj/effect/auto_crayon{
-	icon_state = "engie"
+	icon_state = "desire"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/med)
@@ -56723,6 +56568,12 @@
 /obj/random/junk,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/spine/eng)
+"caP" = (
+/obj/effect/auto_crayon{
+	icon_state = "travel"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/maintenance/tug)
 "caQ" = (
 /obj/structure/cable/orange{
 	icon_state = "4-8"
@@ -56773,6 +56624,12 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/spine/civ)
+"caX" = (
+/obj/effect/auto_crayon{
+	icon_state = "wander"
+	},
+/turf/simulated/floor/wood/alt,
+/area/mine/unexplored/muriki/cave/cargo)
 "caY" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
@@ -56844,7 +56701,7 @@
 	icon_state = "5-8"
 	},
 /obj/effect/auto_crayon{
-	icon_state = "x"
+	icon_state = "four_greed"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/cargo)
@@ -56867,6 +56724,12 @@
 /obj/random/junk,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/cargo)
+"cbi" = (
+/obj/effect/auto_crayon{
+	icon_state = "water"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/med_refinery)
 "cbj" = (
 /turf/simulated/floor/plating,
 /area/maintenance/cargo)
@@ -56887,6 +56750,17 @@
 	},
 /turf/simulated/floor/plating,
 /area/engineering/atmos)
+"cbm" = (
+/obj/effect/auto_crayon{
+	icon_state = "fire"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/med_refinery)
+"cbn" = (
+/obj/random/trash,
+/obj/structure/trash_pile/disable_mouse_spawn,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/med_refinery)
 "cbo" = (
 /obj/structure/prop/rock/waterflat,
 /obj/effect/zone_divider,
@@ -56921,6 +56795,12 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/civ/north)
+"cbs" = (
+/obj/effect/auto_crayon{
+	icon_state = "uboa"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/unexplored/muriki/mountainbase)
 "cbt" = (
 /obj/structure/lattice,
 /obj/structure/catwalk,
@@ -56965,9 +56845,35 @@
 /obj/item/trash/tidegobs,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/sec)
+"cby" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/effect/auto_crayon{
+	icon_state = "travel"
+	},
+/obj/effect/auto_crayon{
+	icon_state = "depart"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/spine/eng)
+"cbz" = (
+/obj/effect/auto_crayon{
+	icon_state = "air"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/atmos_control)
 "cbA" = (
 /obj/structure/cable/orange{
 	icon_state = "4-9"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/atmos_control)
+"cbB" = (
+/obj/effect/auto_crayon{
+	icon_state = "desire"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/atmos_control)
@@ -57004,6 +56910,13 @@
 /obj/item/trash/tgmc_mre,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/sec)
+"cbG" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/vending/loadout/costume,
+/turf/simulated/floor/carpet/geo,
+/area/muriki/crew/arcade)
 "cbH" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -57598,10 +57511,10 @@
 "cdi" = (
 /obj/structure/disposalpipe/segment,
 /obj/effect/auto_crayon{
-	icon_state = "d"
+	icon_state = "right"
 	},
 /obj/effect/auto_crayon{
-	icon_state = "right"
+	icon_state = "desire"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/sec)
@@ -57685,7 +57598,9 @@
 	dir = 1;
 	icon_state = "pipe-c"
 	},
-/obj/effect/auto_crayon,
+/obj/effect/auto_crayon{
+	icon_state = "shelter"
+	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/spine/waste)
 "cdv" = (
@@ -57889,7 +57804,9 @@
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/maintenance/sec)
 "cee" = (
-/obj/effect/auto_crayon,
+/obj/effect/auto_crayon{
+	icon_state = "shelter"
+	},
 /turf/simulated/floor/plating/external/turfpack/muriki,
 /area/maintenance/civ/west)
 "cef" = (
@@ -58571,6 +58488,9 @@
 	dir = 1
 	},
 /obj/effect/landmark/event_spawn/maintpred,
+/obj/effect/auto_crayon{
+	icon_state = "dark"
+	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/med_refinery)
 "cfX" = (
@@ -58843,7 +58763,9 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "0-8"
 	},
-/obj/effect/auto_crayon,
+/obj/effect/auto_crayon{
+	icon_state = "shelter"
+	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/spine/eng)
 "cgH" = (
@@ -58943,10 +58865,10 @@
 /area/maintenance/eng)
 "cgW" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/effect/auto_crayon{
-	icon_state = "x"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/effect/auto_crayon{
+	icon_state = "fire"
+	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/spine/eng)
 "cgX" = (
@@ -59324,6 +59246,9 @@
 /obj/effect/auto_crayon{
 	icon_state = "left"
 	},
+/obj/effect/auto_crayon{
+	icon_state = "violence"
+	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/atmos_control)
 "chV" = (
@@ -59612,6 +59537,54 @@
 /obj/structure/reagent_dispensers/fueltank,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/cave)
+"ciF" = (
+/obj/effect/auto_crayon{
+	icon_state = "wander"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/cave)
+"ciG" = (
+/obj/structure/table/standard,
+/obj/random/maintenance/medical,
+/turf/simulated/floor/tiled/white,
+/area/maintenance/civ/bunker)
+"ciH" = (
+/obj/effect/auto_crayon{
+	icon_state = "market"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/maintenance/oldbridge)
+"ciI" = (
+/obj/effect/decal/cleanable/blood,
+/obj/effect/auto_crayon{
+	icon_state = "x"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/maintenance/oldbridge)
+"ciJ" = (
+/obj/item/geiger/wall/west,
+/obj/effect/auto_crayon{
+	icon_state = "earth"
+	},
+/turf/simulated/floor/tiled/dark/turfpack/muriki,
+/area/mine/explored/muriki/cave/civ/east_access)
+"ciK" = (
+/obj/effect/auto_crayon{
+	icon_state = "night"
+	},
+/turf/simulated/floor/tiled,
+/area/maintenance/oldbridge)
+"ciL" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/effect/auto_crayon{
+	icon_state = "right"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/spine/eng)
 "ciM" = (
 /obj/structure/reagent_dispensers/watertank,
 /turf/simulated/floor/plating,
@@ -60686,6 +60659,9 @@
 "cli" = (
 /obj/effect/mine/lasertag/omni,
 /obj/item/clothing/head/cone,
+/obj/effect/auto_crayon{
+	icon_state = "x"
+	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/med_refinery)
 "clj" = (
@@ -60698,6 +60674,13 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/tug)
+"cll" = (
+/obj/random/junk,
+/obj/effect/auto_crayon{
+	icon_state = "five_life"
+	},
+/turf/simulated/floor/tiled/old_tile/turfpack/muriki,
+/area/mine/unexplored/muriki/cave/med)
 "clm" = (
 /obj/structure/disposalpipe/segment{
 	dir = 8;
@@ -60994,10 +60977,7 @@
 /area/maintenance/atmos_control)
 "cmb" = (
 /obj/effect/auto_crayon{
-	icon_state = "face"
-	},
-/obj/effect/auto_crayon{
-	icon_state = "h"
+	icon_state = "survival"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/med)
@@ -61030,9 +61010,6 @@
 "cme" = (
 /obj/item/trash/oort,
 /obj/machinery/light/small,
-/obj/effect/auto_crayon{
-	icon_state = "left"
-	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/med)
 "cmf" = (
@@ -61052,13 +61029,6 @@
 /obj/item/bikehorn,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/med)
-"cmi" = (
-/obj/structure/prop/poicanister,
-/obj/effect/auto_crayon{
-	icon_state = "x"
-	},
-/turf/simulated/floor,
-/area/maintenance/oldbridge)
 "cmj" = (
 /obj/item/trash/candybowl,
 /turf/simulated/floor/plating/turfpack/muriki,
@@ -61983,6 +61953,9 @@
 /obj/structure/sign/secure_eshui_facility_highsec{
 	pixel_y = 32
 	},
+/obj/effect/auto_crayon{
+	icon_state = "ten_death"
+	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/engineering/coreproctunnel)
 "coK" = (
@@ -62052,6 +62025,9 @@
 /obj/structure/cable/orange{
 	icon_state = "1-4"
 	},
+/obj/effect/auto_crayon{
+	icon_state = "two_lust"
+	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/civ/east)
 "coU" = (
@@ -62084,6 +62060,9 @@
 /obj/structure/cable/orange{
 	icon_state = "1-2"
 	},
+/obj/effect/auto_crayon{
+	icon_state = "up"
+	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/civ/east)
 "coZ" = (
@@ -62112,6 +62091,9 @@
 "cpc" = (
 /obj/structure/cable/orange{
 	icon_state = "2-8"
+	},
+/obj/effect/auto_crayon{
+	icon_state = "earth"
 	},
 /turf/simulated/floor/tiled/dark/turfpack/muriki,
 /area/mine/explored/muriki/cave/civ/east_access)
@@ -62264,6 +62246,15 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/cave/civ/east_access)
+"cpy" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/auto_crayon{
+	icon_state = "air"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/atmos_control)
 "cpz" = (
 /turf/simulated/floor/plating/snow/plating/turfpack/muriki{
 	outdoors = 1
@@ -62565,6 +62556,15 @@
 /obj/item/trash/ratpackcake,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/eng)
+"cqo" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/auto_crayon{
+	icon_state = "desire"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/atmos_control)
 "cqp" = (
 /obj/effect/auto_crayon{
 	icon_state = "x"
@@ -62588,6 +62588,18 @@
 /obj/item/trash/pocky,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/eng)
+"cqt" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/red{
+	dir = 4
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/effect/auto_crayon{
+	icon_state = "stomach"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/engineering/coreproctunnel)
 "cqu" = (
 /obj/structure/closet,
 /turf/simulated/floor/plating/turfpack/muriki,
@@ -62786,6 +62798,16 @@
 /obj/effect/catwalk_plated,
 /turf/simulated/floor/plating,
 /area/crew_quarters/recreation_area_hallway)
+"crd" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/obj/effect/auto_crayon{
+	icon_state = "x"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/med)
 "cre" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -63055,6 +63077,12 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/maintenance/cave)
+"crP" = (
+/obj/effect/auto_crayon{
+	icon_state = "earth"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/med/west_access)
 "crQ" = (
 /obj/structure/grille,
 /obj/structure/window/basic,
@@ -63175,6 +63203,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/black{
 	dir = 10
+	},
+/obj/effect/auto_crayon{
+	icon_state = "desire"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/atmos_control)
@@ -63518,10 +63549,57 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/tuggrave)
+"cth" = (
+/obj/effect/auto_crayon{
+	icon_state = "travel"
+	},
+/obj/effect/auto_crayon{
+	icon_state = "depart"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/atmos_control)
 "cti" = (
 /obj/random/junk,
 /turf/simulated/floor/tiled/milspec,
 /area/maintenance/oldbridge)
+"ctj" = (
+/obj/structure/disposalpipe/segment,
+/obj/random/junk,
+/obj/effect/auto_crayon{
+	icon_state = "food"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/atmos_control)
+"ctk" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/black{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
+/obj/effect/auto_crayon{
+	icon_state = "dark"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/atmos_control)
+"ctl" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/black{
+	dir = 4
+	},
+/obj/effect/auto_crayon{
+	icon_state = "earth"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/atmos_control)
+"ctm" = (
+/obj/effect/auto_crayon{
+	icon_state = "x"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/med)
 "ctn" = (
 /obj/structure/window/maintenance_panel{
 	dir = 8
@@ -64538,12 +64616,6 @@
 "cvt" = (
 /turf/simulated/mineral/alt/ignore_mapgen/turfpack/muriki,
 /area/mine/unexplored/muriki/cave/cargo)
-"cvu" = (
-/obj/effect/auto_crayon{
-	icon_state = "right"
-	},
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/mine/unexplored/muriki/cave/cargo)
 "cvv" = (
 /obj/structure/inflatable/door,
 /turf/simulated/floor/plating/turfpack/muriki,
@@ -64785,13 +64857,13 @@
 /area/mine/unexplored/muriki/cave/cargo)
 "cwr" = (
 /obj/effect/auto_crayon{
-	icon_state = "face"
+	icon_state = "wander"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/med_refinery)
 "cws" = (
 /obj/effect/auto_crayon{
-	icon_state = "engie"
+	icon_state = "desire"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/med_refinery)
@@ -64859,18 +64931,6 @@
 /obj/machinery/door/airlock/maintenance/int,
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/mine/unexplored/muriki/cave/med)
-"cwG" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/effect/auto_crayon{
-	icon_state = "h"
-	},
-/turf/simulated/floor/tiled,
-/area/maintenance/oldbridge)
 "cwH" = (
 /obj/structure/window/maintenance_panel{
 	dir = 4
@@ -65177,10 +65237,7 @@
 /area/maintenance/civ/north)
 "cxF" = (
 /obj/effect/auto_crayon{
-	icon_state = "h"
-	},
-/obj/effect/auto_crayon{
-	icon_state = "x"
+	icon_state = "four_greed"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/civ/north)
@@ -65826,6 +65883,9 @@
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/maintenance/shadekin_dark/sec)
 "cyK" = (
+/obj/effect/auto_crayon{
+	icon_state = "dark"
+	},
 /turf/simulated/floor/plating,
 /area/mine/unexplored/muriki/cave/sec)
 "cyL" = (
@@ -65902,7 +65962,7 @@
 	icon_state = "1-2"
 	},
 /obj/effect/auto_crayon{
-	icon_state = "left"
+	icon_state = "wander"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/spine/waste)
@@ -66532,7 +66592,7 @@
 	dir = 4
 	},
 /obj/effect/auto_crayon{
-	icon_state = "revolution"
+	icon_state = "violence"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/civ/north)
@@ -66626,6 +66686,9 @@
 /area/mine/unexplored/muriki/mountainbase)
 "cAZ" = (
 /obj/structure/railing,
+/obj/effect/auto_crayon{
+	icon_state = "fire"
+	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/unexplored/muriki/mountainbase)
 "cBa" = (
@@ -71864,8 +71927,8 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/lowmain)
 "fLc" = (
-/obj/machinery/door/airlock/maintenance/common,
-/obj/machinery/door/firedoor/border_only,
+/obj/machinery/door/airlock/maintenance/int,
+/obj/item/tape/engineering,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/civ/bunker)
 "fLH" = (
@@ -72135,12 +72198,6 @@
 	dir = 5
 	},
 /area/muriki/processor/hall)
-"fZL" = (
-/obj/effect/auto_crayon{
-	icon_state = "x"
-	},
-/turf/simulated/floor/tiled/milspec,
-/area/maintenance/oldbridge)
 "gan" = (
 /turf/simulated/floor/water/acidic/shoreline/shoreline_mud/indoor/turfpack/muriki{
 	dir = 6
@@ -72649,9 +72706,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/effect/auto_crayon{
-	icon_state = "x"
-	},
 /turf/simulated/floor,
 /area/maintenance/oldbridge)
 "gOY" = (
@@ -73090,12 +73144,6 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals3{
 	dir = 9
-	},
-/obj/effect/auto_crayon{
-	icon_state = "d"
-	},
-/obj/effect/auto_crayon{
-	icon_state = "right"
 	},
 /turf/simulated/floor/tiled{
 	icon_state = "white"
@@ -74018,8 +74066,7 @@
 /obj/structure/cable/orange{
 	icon_state = "4-8"
 	},
-/obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/maintenance/int,
+/obj/machinery/door/airlock/maintenance/common,
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/crew_quarters/courtroom)
 "iyw" = (
@@ -74860,13 +74907,6 @@
 	},
 /turf/simulated/floor/carpet/purcarpet,
 /area/muriki/crew/casino)
-"jpD" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/effect/auto_crayon{
-	icon_state = "x"
-	},
-/turf/simulated/floor,
-/area/maintenance/oldbridge)
 "jpW" = (
 /obj/structure/cable/orange{
 	icon_state = "4-8"
@@ -75699,9 +75739,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/effect/auto_crayon{
-	icon_state = "x"
-	},
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 4
 	},
@@ -76331,19 +76368,8 @@
 /turf/simulated/floor/plating,
 /area/engineering/refinery/main)
 "kMP" = (
-/obj/structure/table/standard,
-/obj/item/deskbell{
-	anchored = 1
-	},
-/obj/machinery/door/blast/gate/thin{
-	name = "Cafe Shutters";
-	id = "coffeeshop";
-	layer = 3.1;
-	can_atmos_pass = 1;
-	dir = 2
-	},
 /turf/simulated/floor/tiled/white,
-/area/crew_quarters/coffee_shop)
+/area/maintenance/civ/bunker)
 "kNo" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -77050,6 +77076,12 @@
 /obj/effect/floor_decal/steeldecal/steel_decals3{
 	dir = 9
 	},
+/obj/effect/auto_crayon{
+	icon_state = "down"
+	},
+/obj/effect/auto_crayon{
+	icon_state = "x"
+	},
 /turf/simulated/floor/tiled{
 	icon_state = "white"
 	},
@@ -77144,7 +77176,7 @@
 /area/mine/unexplored/muriki/cave/terra)
 "lIe" = (
 /obj/effect/auto_crayon{
-	icon_state = "face"
+	icon_state = "wander"
 	},
 /turf/simulated/floor/wood/alt,
 /area/maintenance/oldbridge)
@@ -78228,7 +78260,7 @@
 	pixel_x = 26
 	},
 /obj/effect/auto_crayon{
-	icon_state = "face"
+	icon_state = "wander"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/tug)
@@ -78585,6 +78617,12 @@
 /obj/effect/floor_decal/steeldecal/steel_decals3{
 	dir = 9
 	},
+/obj/effect/auto_crayon{
+	icon_state = "desire"
+	},
+/obj/effect/auto_crayon{
+	icon_state = "left"
+	},
 /turf/simulated/floor/tiled{
 	icon_state = "white"
 	},
@@ -78777,9 +78815,6 @@
 /area/rnd/research/atmosia)
 "nRS" = (
 /obj/effect/floor_decal/spline/plain,
-/obj/effect/auto_crayon{
-	icon_state = "amyjon"
-	},
 /obj/structure/bed/chair/bay/comfy/blue{
 	dir = 1
 	},
@@ -79571,10 +79606,10 @@
 	icon_state = "4-8"
 	},
 /obj/effect/auto_crayon{
-	icon_state = "d"
+	icon_state = "up"
 	},
 /obj/effect/auto_crayon{
-	icon_state = "up"
+	icon_state = "desire"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/sec)
@@ -79679,9 +79714,6 @@
 /turf/simulated/floor/reinforced/airmix,
 /area/engineering/atmos)
 "oUt" = (
-/obj/effect/auto_crayon{
-	icon_state = "down"
-	},
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/maintenance/oldbridge)
@@ -80940,7 +80972,6 @@
 "qgN" = (
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
-/obj/effect/auto_crayon,
 /turf/simulated/floor/wood/alt,
 /area/maintenance/oldbridge)
 "qhv" = (
@@ -84064,6 +84095,9 @@
 "tzM" = (
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
+/obj/effect/auto_crayon{
+	icon_state = "six_tranquility"
+	},
 /turf/simulated/floor/tiled,
 /area/maintenance/oldbridge)
 "tAA" = (
@@ -84386,6 +84420,9 @@
 	},
 /obj/effect/floor_decal/corner/lightgrey/bordercorner,
 /obj/structure/disposalpipe/segment,
+/obj/effect/auto_crayon{
+	icon_state = "travel"
+	},
 /turf/simulated/floor/tiled,
 /area/maintenance/oldbridge)
 "tUa" = (
@@ -85195,14 +85232,6 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/xenobiology/xenobioh)
-"uQR" = (
-/obj/structure/table/woodentable,
-/obj/item/reagent_containers/food/condiment/small/sugar,
-/obj/effect/floor_decal/corner/brown/diagonal,
-/obj/item/material/ashtray/plastic,
-/obj/random/mug,
-/turf/simulated/floor/tiled/white,
-/area/crew_quarters/coffee_shop)
 "uTK" = (
 /turf/simulated/floor/water/acidic/indoor/turfpack/muriki,
 /area/mine/unexplored/muriki/cave/sec)
@@ -86009,17 +86038,6 @@
 	},
 /turf/simulated/floor,
 /area/maintenance/oldbridge)
-"vNv" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced/full{
-	dir = 10;
-	icon_state = "fwindow"
-	},
-/obj/machinery/neonsign/cafe{
-	id = "cafesign"
-	},
-/turf/simulated/floor/plating,
-/area/crew_quarters/coffee_shop)
 "vNJ" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -86700,6 +86718,9 @@
 /obj/structure/disposalpipe/broken{
 	dir = 8
 	},
+/obj/effect/auto_crayon{
+	icon_state = "food"
+	},
 /turf/simulated/floor/wood/alt,
 /area/maintenance/oldbridge)
 "wAT" = (
@@ -86729,6 +86750,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
+	},
+/obj/effect/auto_crayon{
+	icon_state = "water"
 	},
 /turf/simulated/floor/tiled{
 	icon_state = "white"
@@ -87120,8 +87144,11 @@
 	pixel_y = -30;
 	dir = 1
 	},
+/obj/effect/auto_crayon{
+	icon_state = "water"
+	},
 /turf/simulated/floor/tiled/white,
-/area/crew_quarters/coffee_shop)
+/area/maintenance/civ/bunker)
 "wZu" = (
 /obj/machinery/camera/network/civilian{
 	c_tag = "CIV - VR Trainer West"
@@ -92440,7 +92467,7 @@ iNY
 uoh
 cwB
 cwn
-cwn
+bXS
 cwl
 yjs
 kwU
@@ -93084,7 +93111,7 @@ wzy
 gmi
 iBE
 pTK
-cwG
+kZt
 bVf
 yjs
 exX
@@ -93302,7 +93329,7 @@ aIa
 byK
 byK
 byK
-ava
+bHA
 byK
 cfv
 cfv
@@ -94369,7 +94396,7 @@ crD
 ehk
 xJd
 eRP
-fSf
+ciI
 eFK
 eFK
 xxJ
@@ -94531,7 +94558,7 @@ axj
 ehk
 xJd
 wXs
-fZL
+eFK
 bbJ
 ajS
 rYo
@@ -94695,8 +94722,8 @@ xJd
 dHz
 eFK
 eFK
-cti
 eFK
+ciH
 sZT
 fxi
 tdi
@@ -94709,7 +94736,7 @@ vAv
 iVB
 jvX
 nsH
-cmi
+rNr
 uoh
 xGm
 bIV
@@ -94871,7 +94898,7 @@ rWc
 iVB
 fdT
 vJP
-jpD
+sfC
 sfC
 wDZ
 obm
@@ -95180,7 +95207,7 @@ aad
 xJd
 mwV
 eFK
-eFK
+cti
 eFK
 eFK
 xxJ
@@ -95720,7 +95747,7 @@ aAO
 aAO
 aRw
 cvv
-aSa
+bJL
 cdc
 kMh
 kMh
@@ -96172,7 +96199,7 @@ kQO
 iBE
 wJR
 nFq
-ceI
+qIJ
 wVj
 yjs
 aLS
@@ -96471,7 +96498,7 @@ aad
 xJd
 kGE
 rBM
-rBM
+ciK
 vap
 iVB
 nws
@@ -96820,7 +96847,7 @@ iBE
 iBE
 ssD
 lCU
-qIJ
+ceI
 wVj
 yjs
 aLS
@@ -97466,7 +97493,7 @@ yjs
 yjs
 yjs
 yjs
-bAs
+bAr
 bAr
 ayb
 ayb
@@ -97813,7 +97840,7 @@ aIY
 byK
 byK
 byK
-ava
+bKn
 byK
 aIY
 aIY
@@ -97825,7 +97852,7 @@ kMh
 bJx
 kMh
 bdO
-aEw
+bJZ
 awb
 aHi
 awb
@@ -98135,9 +98162,9 @@ aIY
 aIY
 aIY
 byK
+bKY
 ava
-ava
-ava
+bKD
 byK
 aIY
 aIY
@@ -99276,7 +99303,7 @@ byK
 aIY
 byK
 cvE
-ava
+bKh
 byK
 aIY
 aIY
@@ -100175,7 +100202,7 @@ kwU
 kwU
 kwU
 gKH
-bTh
+cqt
 gKH
 kwU
 kwU
@@ -106055,7 +106082,7 @@ gWL
 gWL
 gWL
 gWL
-bHD
+bWi
 gWL
 cfl
 gWL
@@ -106857,7 +106884,7 @@ bPT
 bPT
 bPT
 cyD
-bPT
+cby
 bPI
 bPv
 gWL
@@ -106998,7 +107025,7 @@ cfY
 gWL
 gWL
 bPZ
-bPT
+ciL
 bQR
 gWL
 gWL
@@ -109976,7 +110003,7 @@ aNL
 aNL
 cvt
 cvt
-cvu
+aQF
 cvt
 aNL
 aNL
@@ -110300,7 +110327,7 @@ aNL
 aNL
 bge
 bin
-bdu
+aRp
 aRm
 bge
 aNL
@@ -110463,7 +110490,7 @@ aNL
 bge
 aSG
 bdQ
-aRp
+bIQ
 bge
 aNL
 aNL
@@ -111718,7 +111745,7 @@ aFC
 cjU
 asB
 wrE
-wrE
+caP
 kfN
 bdP
 ngt
@@ -113334,7 +113361,7 @@ bLx
 clv
 adu
 adu
-bLx
+cbz
 clv
 bcX
 cbe
@@ -113496,7 +113523,7 @@ adu
 bLx
 cpZ
 bLx
-bLx
+cbB
 adu
 bge
 cjM
@@ -114103,7 +114130,7 @@ adu
 bUd
 adu
 cqA
-bLx
+cth
 aSB
 adu
 adu
@@ -114907,7 +114934,7 @@ bMZ
 bMZ
 bMZ
 adu
-bUh
+ctk
 csh
 bUc
 adu
@@ -115069,7 +115096,7 @@ bMZ
 bMZ
 bMZ
 adu
-cmv
+ctl
 adu
 csg
 bJF
@@ -115231,7 +115258,7 @@ bMZ
 bMZ
 bMZ
 adu
-bUd
+cmv
 adu
 adu
 adu
@@ -115570,7 +115597,7 @@ bLx
 clv
 bLx
 cjp
-bLS
+cpy
 adu
 bMZ
 bMZ
@@ -115732,7 +115759,7 @@ adu
 adu
 adu
 adu
-bLS
+cqo
 adu
 bMZ
 bMZ
@@ -117177,7 +117204,7 @@ bLE
 bLi
 bLA
 chU
-clL
+ctj
 bLo
 adu
 adu
@@ -120628,7 +120655,7 @@ aNL
 aNL
 aQF
 cwA
-cwv
+caX
 cwp
 cwg
 xpG
@@ -122368,7 +122395,7 @@ iAI
 bZH
 bZE
 bYj
-bMo
+crd
 pgH
 cua
 pgH
@@ -123382,7 +123409,7 @@ bMU
 bMU
 bMU
 bHf
-bQX
+cbi
 cwr
 bHf
 bMU
@@ -123544,7 +123571,7 @@ bHf
 bHf
 bHf
 bHf
-kWz
+cbm
 cws
 bHf
 bMU
@@ -123868,7 +123895,7 @@ cgs
 bQX
 bQX
 bHf
-aCw
+cbn
 bQX
 bHf
 bMU
@@ -124472,7 +124499,7 @@ bXp
 cia
 ilx
 cia
-jGR
+crP
 suQ
 bTt
 qTI
@@ -128405,7 +128432,7 @@ cgr
 cxJ
 afY
 bCA
-lOX
+bXj
 alY
 bMU
 bMU
@@ -129179,7 +129206,7 @@ bMU
 bMV
 cxf
 cxb
-cwW
+cll
 cwV
 cwC
 aHM
@@ -130340,7 +130367,7 @@ aIC
 aIC
 alY
 qMR
-qMR
+ciF
 qMR
 cfx
 cgv
@@ -131421,7 +131448,7 @@ aPF
 xaP
 xaP
 aPF
-xaP
+ctm
 bXk
 aPF
 bMU
@@ -132070,7 +132097,7 @@ caB
 bJG
 aPF
 bWW
-xaP
+ctm
 aPF
 bMU
 bMU
@@ -136554,7 +136581,7 @@ olM
 ahb
 ahb
 akQ
-bMO
+bIr
 cxF
 cqV
 bMg
@@ -137316,7 +137343,7 @@ cvf
 cve
 cvd
 cvb
-bLI
+bWC
 aOU
 bLI
 aOU
@@ -137651,7 +137678,7 @@ cit
 ayD
 bSa
 cnU
-aOU
+bWd
 cnU
 aOU
 ayD
@@ -137806,14 +137833,14 @@ bdR
 beh
 bcq
 aOU
-bLI
+bWj
 cdD
 cnU
 cnU
 cnU
 bSa
 byC
-ckL
+bWf
 aOU
 cnU
 cnU
@@ -141675,14 +141702,14 @@ aRU
 aRU
 aRU
 aRU
-aUh
-aUh
-aXi
+fJz
+fJz
+fJz
 aXF
-aUh
-aUh
-aUh
-aUh
+fJz
+fJz
+fJz
+fJz
 aZX
 aYT
 bbp
@@ -141837,14 +141864,14 @@ bKj
 fJz
 twq
 twq
-aUh
+fJz
 aWv
 aXj
-aXG
-aYf
+bKk
+aZc
 aYz
 aZc
-aZF
+fJz
 bab
 baw
 bbq
@@ -141999,14 +142026,14 @@ bXV
 fJz
 twq
 twq
-aUh
+fJz
 aWw
 aXk
 aXH
-aYg
+bKj
 aYA
 aZd
-aZF
+fJz
 bac
 bax
 bbr
@@ -142159,16 +142186,16 @@ twq
 fJz
 bKk
 fJz
-aUh
-aUh
-aUh
-aUh
-aXl
-vNv
-aYh
+fJz
+fJz
+fJz
+fJz
+bKk
+bKs
+bKk
 aYB
-aZe
-aZG
+aZc
+fJz
 bad
 bay
 bbs
@@ -142323,15 +142350,15 @@ bKk
 fJz
 aUG
 aVs
-aUh
-aWx
+fJz
+kMP
 aXm
 aXI
 aYi
 aYC
 aZf
 aZH
-bae
+cbG
 bae
 bbt
 baz
@@ -142489,13 +142516,13 @@ aVP
 aWy
 aXn
 aXJ
-aYj
+bYl
 aYD
 aZg
 aZI
 baf
-baf
-bbu
+baz
+bbs
 baz
 wwm
 djx
@@ -142648,13 +142675,13 @@ fJz
 aUI
 aVu
 aVQ
-aWz
+bKs
 aXo
 kMP
 aYj
-aYE
-aZh
-aZF
+bKs
+bKs
+fJz
 bag
 baz
 bbs
@@ -142806,17 +142833,17 @@ fJz
 fJz
 bKq
 bKl
-aUh
-aUJ
-aVv
+fJz
+kMP
+bKs
 aVQ
-aWA
-aVv
-aXL
-aYj
-aYE
-uQR
-aZF
+kMP
+bKs
+bKs
+ciG
+bYl
+bKs
+fJz
 bGZ
 baA
 bbu
@@ -142968,17 +142995,17 @@ bKC
 bKy
 bKk
 fJz
-aUh
-aUK
+fJz
+kMP
 wZi
-aUh
+fJz
 aWB
 aXp
-aXK
+bKs
 aYk
-aYF
+bKs
 aZi
-aUh
+fJz
 bai
 bai
 bbv
@@ -143130,17 +143157,17 @@ fJz
 bYb
 bKk
 fJz
-aUh
+fJz
 aUL
-aUh
-aUh
-aUh
-aUh
-aUh
-aUh
-aUh
-aUh
-aUh
+fJz
+fJz
+fJz
+fJz
+fJz
+fJz
+fJz
+fJz
+fJz
 baj
 baB
 bbw
@@ -145438,7 +145465,7 @@ aTx
 ceU
 ceb
 aTx
-aTx
+bLX
 cdQ
 aXy
 syy
@@ -145722,7 +145749,7 @@ mUC
 bpi
 aEN
 cpE
-cpi
+ciJ
 ceR
 cfG
 cYZ
@@ -147232,7 +147259,7 @@ fUK
 aZW
 aZW
 cdp
-bMg
+bKa
 bMg
 cdj
 akQ
@@ -149498,7 +149525,7 @@ cyP
 cyO
 cyN
 cyM
-azz
+bKg
 azz
 coc
 vSb
@@ -149788,7 +149815,7 @@ vSb
 vSb
 vSb
 azz
-azz
+cbs
 azz
 cpf
 cpf
@@ -150488,7 +150515,7 @@ vSb
 vSb
 vSb
 vSb
-azz
+bHB
 vSb
 vSb
 vSb
@@ -151629,7 +151656,7 @@ cAq
 cAq
 cAq
 cAq
-cAu
+bHz
 cAy
 cAu
 cAs
@@ -151786,7 +151813,7 @@ cBd
 cAP
 cBa
 cAR
-cAO
+bHz
 cAB
 cAs
 cAE
