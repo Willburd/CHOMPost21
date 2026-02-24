@@ -29812,8 +29812,8 @@
 	dir = 4;
 	pixel_x = 26
 	},
-/obj/item/bikehorn/rubberducky/white{
-	pixel_x = 8;
+/obj/item/bikehorn/rubberducky/white_harmless{
+	pixel_x = 7;
 	pixel_y = 15
 	},
 /turf/simulated/floor/tiled/kafel_full,
