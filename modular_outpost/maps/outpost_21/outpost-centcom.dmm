@@ -367,6 +367,12 @@
 	icon_state = "plating"
 	},
 /area/centcom)
+"abp" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/clothing/suit/fluff/purp_robes,
+/obj/item/clothing/head/fluff/pink_tiara,
+/turf/simulated/floor/tiled/old_tile/purple,
+/area/centcom/living)
 "abq" = (
 /obj/structure/table/rack,
 /obj/effect/floor_decal/corner/black{
@@ -1148,9 +1154,19 @@
 	color = "#385e60"
 	},
 /area/centcom/living)
+"acG" = (
+/obj/structure/table/darkglass,
+/obj/item/storage/laundry_basket,
+/obj/item/towel/random,
+/obj/item/soap/rainbow_soap,
+/turf/simulated/floor/tiled/old_tile/purple,
+/area/centcom/living)
 "acH" = (
 /turf/unsimulated/wall/fakeglass,
 /area/centcom/specops)
+"acI" = (
+/turf/simulated/wall/wood,
+/area/centcom/living)
 "acJ" = (
 /turf/unsimulated/wall/fakeglass{
 	icon_state = "fakewindows2"
@@ -1223,6 +1239,10 @@
 /obj/mecha/combat/phazon,
 /turf/unsimulated/shuttle/plating,
 /area/centcom/specops)
+"acR" = (
+/obj/machinery/door/blast/regular/bookcase,
+/turf/simulated/floor/carpet/purple,
+/area/centcom/living)
 "acS" = (
 /obj/structure/table/steel_reinforced,
 /obj/item/cell/infinite,
@@ -1306,6 +1326,76 @@
 	dir = 1
 	},
 /area/centcom/specops)
+"adb" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/rocksliver{
+	pixel_x = 9;
+	pixel_y = 11
+	},
+/obj/item/rocksliver{
+	pixel_x = 4;
+	pixel_y = 11
+	},
+/obj/item/rocksliver{
+	pixel_x = -1;
+	pixel_y = 11
+	},
+/obj/item/rocksliver{
+	pixel_x = -6;
+	pixel_y = 11
+	},
+/obj/item/rocksliver{
+	pixel_x = -11;
+	pixel_y = 11
+	},
+/obj/item/rocksliver{
+	pixel_x = -11
+	},
+/obj/item/rocksliver{
+	pixel_x = -6
+	},
+/obj/item/rocksliver{
+	pixel_x = -1
+	},
+/obj/item/rocksliver{
+	pixel_x = 4
+	},
+/obj/item/rocksliver{
+	pixel_x = 9
+	},
+/obj/effect/floor_decal/spline/plain,
+/turf/simulated/floor/carpet/purple,
+/area/centcom/living)
+"adc" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/soulstone{
+	pixel_x = 3;
+	pixel_y = 3;
+	desc = "A shiny, red gemshard"
+	},
+/obj/item/soulstone{
+	pixel_x = -5;
+	pixel_y = 3;
+	desc = "A shiny, red gemshard";
+	name = "Red Shard"
+	},
+/obj/structure/prop/rock/crystal_dust{
+	pixel_y = 16;
+	pixel_x = 6
+	},
+/obj/structure/prop/rock/crystal_dust{
+	pixel_y = 16;
+	pixel_x = -4
+	},
+/obj/item/soulstone{
+	pixel_x = 3;
+	pixel_y = 3;
+	desc = "A shiny, red gemshard";
+	name = "Red Shard"
+	},
+/obj/effect/floor_decal/spline/plain,
+/turf/simulated/floor/carpet/purple,
+/area/centcom/living)
 "add" = (
 /obj/structure/table/reinforced,
 /obj/item/card/id/centcom/ert/commander{
@@ -1313,6 +1403,36 @@
 	},
 /turf/simulated/floor/wood,
 /area/centcom/specops)
+"ade" = (
+/obj/structure/bed/chair/bay/chair/padded/red/bignest,
+/obj/item/toy/plushie/tabby_cat,
+/obj/item/toy/plushie/deer{
+	pixel_x = 7;
+	pixel_y = 4
+	},
+/obj/item/toy/plushie/squid/blue{
+	pixel_x = 7;
+	pixel_y = -7
+	},
+/obj/effect/floor_decal/spline/plain,
+/turf/simulated/floor/carpet/purple,
+/area/centcom/living)
+"adf" = (
+/obj/structure/bed/chair/bay/chair/padded/red/bignest,
+/obj/item/toy/plushie/green_fox{
+	pixel_y = 9
+	},
+/obj/item/toy/plushie/nymph{
+	pixel_y = 10;
+	pixel_x = 7
+	},
+/obj/item/toy/plushie/vox{
+	pixel_x = -8;
+	pixel_y = -1
+	},
+/obj/effect/floor_decal/spline/plain,
+/turf/simulated/floor/carpet/purple,
+/area/centcom/living)
 "adg" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 4
@@ -1596,6 +1716,14 @@
 /obj/structure/window/reinforced/tinted/full,
 /turf/simulated/floor/tiled/white,
 /area/centcom/medical)
+"adW" = (
+/obj/item/flashlight/lamp/green,
+/obj/structure/table/fancyblack,
+/obj/effect/floor_decal/spline/plain{
+	dir = 6
+	},
+/turf/simulated/floor/carpet/purple,
+/area/centcom/living)
 "adX" = (
 /obj/structure/table/steel,
 /obj/machinery/cell_charger,
@@ -1889,6 +2017,9 @@
 	},
 /turf/simulated/floor/tiled/old_cargo,
 /area/centcom/medical)
+"aeI" = (
+/turf/simulated/floor/tiled/old_tile/purple,
+/area/centcom/living)
 "aeJ" = (
 /obj/structure/table/marble,
 /obj/structure/sink/countertop{
@@ -3040,6 +3171,12 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/centcom/main_hall)
+"ahs" = (
+/obj/effect/floor_decal/spline/plain{
+	dir = 8
+	},
+/turf/simulated/floor/carpet/purple,
+/area/centcom/living)
 "aht" = (
 /obj/structure/sign/nosmoking_1,
 /turf/unsimulated/wall/fakeglass{
@@ -3052,6 +3189,15 @@
 	dir = 4
 	},
 /area/centcom/medical)
+"ahv" = (
+/obj/structure/bed/double/padded,
+/obj/structure/bed/double/padded,
+/obj/item/bedsheet/purpledouble,
+/obj/effect/floor_decal/spline/plain{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/purple,
+/area/centcom/living)
 "ahw" = (
 /obj/effect/floor_decal/industrial/outline/red,
 /obj/machinery/porta_turret/heavy/disabler{
@@ -3077,6 +3223,19 @@
 /obj/effect/step_trigger/dephase_shadekin,
 /turf/unsimulated/floor/steel,
 /area/centcom/main_hall)
+"ahA" = (
+/obj/machinery/washing_machine,
+/turf/simulated/floor/tiled/old_tile/purple,
+/area/centcom/living)
+"ahB" = (
+/obj/item/stool/padded{
+	dir = 4
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 9
+	},
+/turf/simulated/floor/carpet/purple,
+/area/centcom/living)
 "ahC" = (
 /obj/effect/floor_decal/corner/white{
 	dir = 8
@@ -3085,6 +3244,30 @@
 	icon_state = "milspec"
 	},
 /area/centcom/control)
+"ahD" = (
+/obj/structure/table/darkglass,
+/obj/item/paper/crumpled{
+	pixel_x = -15;
+	pixel_y = 10
+	},
+/obj/item/paper/crumpled{
+	pixel_x = -15;
+	pixel_y = -6
+	},
+/obj/item/paper/crumpled{
+	pixel_x = 7;
+	pixel_y = 10
+	},
+/obj/item/tool/screwdriver/brass{
+	pixel_x = -5;
+	pixel_y = 8
+	},
+/obj/item/mcguffin/brass,
+/obj/effect/floor_decal/spline/plain{
+	dir = 1
+	},
+/turf/simulated/floor/carpet/purple,
+/area/centcom/living)
 "ahE" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 10
@@ -3148,12 +3331,32 @@
 	},
 /turf/unsimulated/floor/reinforced,
 /area/centcom/specops)
+"ahM" = (
+/obj/effect/floor_decal/spline/plain/corner{
+	dir = 4
+	},
+/obj/effect/floor_decal/spline/plain/corner{
+	dir = 1
+	},
+/turf/simulated/floor/carpet/purple,
+/area/centcom/living)
 "ahN" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 5
 	},
 /turf/unsimulated/floor/reinforced,
 /area/centcom/specops)
+"ahO" = (
+/obj/structure/undies_wardrobe,
+/obj/structure/flora/pottedplant/unusual{
+	pixel_y = 21;
+	color = "#a42abf"
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 1
+	},
+/turf/simulated/floor/carpet/purple,
+/area/centcom/living)
 "ahP" = (
 /obj/effect/floor_decal/corner/black{
 	dir = 6
@@ -3275,6 +3478,25 @@
 	icon_state = "milspec"
 	},
 /area/centcom/specops)
+"aib" = (
+/obj/structure/bed/chair/bay/chair/padded/red/bignest,
+/obj/item/toy/plushie/dragon/white_east{
+	pixel_y = 11
+	},
+/obj/item/toy/plushie/borgplushie/scrubpuppy{
+	pixel_x = -4
+	},
+/obj/item/toy/plushie/borgplushie/medihound{
+	pixel_x = 8
+	},
+/obj/item/toy/plushie/borgplushie/drake/sec{
+	pixel_y = 4
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 1
+	},
+/turf/simulated/floor/carpet/purple,
+/area/centcom/living)
 "aic" = (
 /obj/effect/floor_decal/corner/black{
 	dir = 5
@@ -3300,6 +3522,25 @@
 	icon_state = "milspec"
 	},
 /area/centcom/specops)
+"aie" = (
+/obj/structure/bed/chair/bay/chair/padded/red/bignest,
+/obj/item/toy/plushie/teshari/eili{
+	pixel_x = 5;
+	pixel_y = 7
+	},
+/obj/item/toy/plushie/teshari/strix{
+	pixel_y = -9;
+	pixel_x = 4
+	},
+/obj/item/toy/plushie/teshari/y_yw{
+	pixel_y = -1;
+	pixel_x = -4
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 5
+	},
+/turf/simulated/floor/carpet/purple,
+/area/centcom/living)
 "aif" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -4266,6 +4507,10 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/techfloor,
 /area/centcom/security)
+"aku" = (
+/obj/structure/simple_door/wood,
+/turf/simulated/floor/tiled/old_tile/purple,
+/area/centcom/living)
 "akv" = (
 /obj/machinery/status_display{
 	layer = 4;
@@ -5048,6 +5293,16 @@
 /obj/item/cell/giga,
 /turf/unsimulated/floor/techfloor_grid,
 /area/centcom/specops)
+"ama" = (
+/obj/structure/simple_door/wood,
+/obj/effect/floor_decal/spline/plain{
+	dir = 4
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 8
+	},
+/turf/simulated/floor/carpet/purple,
+/area/centcom/living)
 "amb" = (
 /obj/effect/floor_decal/techfloor/orange/corner{
 	dir = 4
@@ -5231,6 +5486,10 @@
 	icon_state = "milspec"
 	},
 /area/centcom/specops)
+"amr" = (
+/obj/structure/sign/painting/public,
+/turf/simulated/wall/wood,
+/area/centcom/living)
 "ams" = (
 /obj/item/radio/intercom/omni{
 	pixel_y = -26
@@ -5241,6 +5500,13 @@
 /obj/machinery/porta_turret/heavy,
 /turf/simulated/floor/reinforced,
 /area/centcom/control)
+"amu" = (
+/obj/structure/curtain/open/shower,
+/obj/machinery/shower{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/old_tile/purple,
+/area/centcom/living)
 "amv" = (
 /obj/machinery/status_display{
 	pixel_x = -32
@@ -5301,9 +5567,127 @@
 /obj/item/bodybag/large,
 /turf/simulated/floor/tiled/milspec,
 /area/centcom/specops)
+"amA" = (
+/obj/structure/bed/chair/comfy/purp{
+	dir = 4
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 10
+	},
+/turf/simulated/floor/carpet/purple,
+/area/centcom/living)
+"amB" = (
+/obj/structure/cult/tome{
+	desc = "A desk with a pile of books atop it."
+	},
+/obj/item/folder/white_rd{
+	pixel_x = -6
+	},
+/obj/item/pen/fountain3{
+	pixel_x = -7
+	},
+/obj/effect/floor_decal/spline/plain,
+/turf/simulated/floor/carpet/purple,
+/area/centcom/living)
+"amC" = (
+/obj/structure/bed/chair/comfy/purp{
+	dir = 8
+	},
+/obj/effect/floor_decal/spline/plain,
+/turf/simulated/floor/carpet/purple,
+/area/centcom/living)
+"amD" = (
+/obj/effect/floor_decal/spline/plain/corner,
+/obj/effect/floor_decal/spline/plain/corner{
+	dir = 8
+	},
+/turf/simulated/floor/carpet/purple,
+/area/centcom/living)
+"amE" = (
+/obj/structure/bed/chair/sofa/right/purp{
+	dir = 1
+	},
+/obj/effect/floor_decal/spline/plain,
+/turf/simulated/floor/carpet/purple,
+/area/centcom/living)
+"amF" = (
+/obj/structure/bed/chair/sofa/purp{
+	dir = 1
+	},
+/obj/effect/floor_decal/spline/plain,
+/turf/simulated/floor/carpet/purple,
+/area/centcom/living)
+"amG" = (
+/obj/structure/bed/chair/sofa/corner/purp{
+	dir = 8
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 6
+	},
+/turf/simulated/floor/carpet/purple,
+/area/centcom/living)
+"amH" = (
+/obj/structure/sink{
+	dir = 8;
+	pixel_x = -15;
+	pixel_y = -6
+	},
+/obj/structure/mirror{
+	dir = 4;
+	pixel_x = -28
+	},
+/turf/simulated/floor/tiled/old_tile/purple,
+/area/centcom/living)
+"amI" = (
+/obj/structure/table/fancyblack,
+/obj/item/flame/candle/candelabra/everburn{
+	pixel_y = 5
+	},
+/obj/item/storage/box/matches{
+	pixel_x = 9;
+	pixel_y = -4
+	},
+/turf/simulated/floor/carpet/purple,
+/area/centcom/living)
+"amJ" = (
+/obj/structure/table/fancyblack,
+/obj/item/starcaster_news{
+	pixel_x = 4
+	},
+/obj/item/storage/pill_bottle/dice_nerd{
+	pixel_x = -8
+	},
+/turf/simulated/floor/carpet/purple,
+/area/centcom/living)
+"amK" = (
+/obj/structure/bed/chair/sofa/purp{
+	dir = 8
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/purple,
+/area/centcom/living)
+"amL" = (
+/obj/item/sleevemate,
+/obj/item/storage/pill_bottle/paracetamol,
+/obj/item/makeover,
+/obj/structure/closet/walllocker_double{
+	dir = 8;
+	pixel_x = -28
+	},
+/obj/structure/toilet{
+	pixel_y = 12
+	},
+/turf/simulated/floor/tiled/old_tile/purple,
+/area/centcom/living)
 "amM" = (
 /turf/simulated/shuttle/wall/dark/hard_corner,
 /area/vehicle_interior/heavyarmor_tank_A)
+"amN" = (
+/obj/structure/closet/crate/bin,
+/turf/simulated/floor/tiled/old_tile/purple,
+/area/centcom/living)
 "amO" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 5
@@ -5318,6 +5702,56 @@
 	},
 /obj/structure/salvageable/console,
 /turf/simulated/floor/tiled/milspec,
+/area/specialty/redspace)
+"amP" = (
+/obj/effect/floor_decal/spline/plain{
+	dir = 9
+	},
+/turf/simulated/floor/carpet/purple,
+/area/centcom/living)
+"amQ" = (
+/obj/structure/coatrack,
+/obj/effect/floor_decal/spline/plain{
+	dir = 1
+	},
+/turf/simulated/floor/carpet/purple,
+/area/centcom/living)
+"amR" = (
+/obj/structure/bed/chair/sofa/right/purp,
+/obj/effect/floor_decal/spline/plain{
+	dir = 1
+	},
+/turf/simulated/floor/carpet/purple,
+/area/centcom/living)
+"amS" = (
+/obj/structure/bed/chair/sofa/purp,
+/obj/machinery/computer/security/telescreen/entertainment{
+	pixel_y = 29
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 1
+	},
+/turf/simulated/floor/carpet/purple,
+/area/centcom/living)
+"amT" = (
+/obj/structure/bed/chair/sofa/corner/purp,
+/obj/effect/floor_decal/spline/plain{
+	dir = 5
+	},
+/turf/simulated/floor/carpet/purple,
+/area/centcom/living)
+"amU" = (
+/obj/machinery/door/airlock/centcom/nameddorm{
+	name = "Diana's Residence";
+	matchnames = list("Diana Kutzenova")
+	},
+/turf/simulated/floor/wood,
+/area/centcom/living)
+"amV" = (
+/obj/effect/auto_crayon{
+	icon_state = "cant_find"
+	},
+/turf/simulated/floor/tiled/white,
 /area/specialty/redspace)
 "anb" = (
 /turf/simulated/shuttle/wall/dark,
@@ -53618,15 +54052,15 @@ aas
 xAJ
 xxV
 tJx
-aas
-aas
-aas
-aas
-aas
-aas
-aas
-aas
-aas
+vCT
+vCT
+vCT
+vCT
+vCT
+vCT
+vCT
+vCT
+vCT
 hIA
 hIA
 hIA
@@ -53780,15 +54214,15 @@ aas
 xAJ
 xxV
 adZ
-aas
-oLX
-aGk
-pcA
-aaw
-xpk
-mgz
-qQV
-aas
+vCT
+amL
+amH
+aeI
+aku
+aeI
+aeI
+abp
+vCT
 hIA
 hIA
 hIA
@@ -53942,15 +54376,15 @@ aas
 xAJ
 xxV
 tJx
-aas
-mgz
-mgz
-mgz
-liv
-ppO
-mgz
-qSV
-aas
+vCT
+amN
+aeI
+amu
+acI
+ahA
+aeI
+acG
+vCT
 hIA
 hIA
 hIA
@@ -54104,15 +54538,15 @@ aas
 xAJ
 xxV
 tJx
-aas
-mgz
-mgz
-asb
-aaw
-aaw
-aaw
-aaw
-aas
+vCT
+acI
+aku
+acI
+acI
+acI
+acI
+acI
+vCT
 hIA
 hIA
 hIA
@@ -54266,15 +54700,15 @@ aas
 xAJ
 xxV
 tJx
-aas
-aaw
-liv
-aaw
-aaw
-aSx
-aSx
-aSx
-aas
+vCT
+amP
+ahs
+amA
+acI
+ahB
+ahs
+acR
+vCT
 hIA
 hIA
 hIA
@@ -54428,15 +54862,15 @@ aas
 xAJ
 xxV
 tJx
-aas
-aSx
-aSx
-aSx
-aaw
-aSx
-aSx
-aSx
-aas
+vCT
+rqL
+ocW
+amB
+acI
+ahD
+ocW
+acR
+vCT
 hIA
 hIA
 hIA
@@ -54590,15 +55024,15 @@ aas
 xAJ
 xxV
 tJx
-aas
-aSx
-aSx
-aSx
-aaw
-aSx
-aSx
-aSx
-aas
+vCT
+rqL
+ocW
+amC
+acI
+rqL
+ocW
+hat
+vCT
 hIA
 hIA
 hIA
@@ -54752,15 +55186,15 @@ aas
 xAJ
 xxV
 tJx
-aas
-aSx
-aSx
-aSx
-aaw
-aSx
-aSx
-aSx
-aas
+vCT
+amQ
+ocW
+amD
+ama
+ahM
+ocW
+adb
+vCT
 hIA
 hIA
 hIA
@@ -54914,15 +55348,15 @@ xTv
 xxV
 xxV
 xxV
-abn
-aSx
-aSx
-aSx
-gqN
-aSx
-aSx
-aSx
-aas
+amU
+rqL
+ocW
+hat
+amr
+rqL
+ocW
+adc
+vCT
 hIA
 hIA
 hIA
@@ -55076,15 +55510,15 @@ aas
 xAJ
 xxV
 tJx
-aas
-aSx
-aSx
-aSx
-aaw
-aSx
-aSx
-aSx
-aas
+vCT
+amR
+amI
+amE
+acI
+ahO
+ocW
+ade
+vCT
 hIA
 hIA
 hIA
@@ -55238,15 +55672,15 @@ aas
 xAJ
 xxV
 tJx
-aas
-aSx
-aSx
-aSx
-aaw
-aSx
-aSx
-aSx
-aas
+vCT
+amS
+amJ
+amF
+acI
+aib
+ocW
+adf
+vCT
 hIA
 hIA
 hIA
@@ -55400,15 +55834,15 @@ aas
 xAJ
 xxV
 tJx
-aas
-aSx
-aSx
-aSx
-aaw
-aSx
-aSx
-aSx
-aas
+vCT
+amT
+amK
+amG
+acI
+aie
+ahv
+adW
+vCT
 hIA
 hIA
 hIA
@@ -55562,15 +55996,15 @@ aas
 xAJ
 xxV
 tJx
-aas
-aas
-aas
-aas
-aas
-aas
-aas
-aas
-aas
+vCT
+vCT
+vCT
+vCT
+vCT
+vCT
+vCT
+vCT
+vCT
 hIA
 hIA
 hIA
@@ -99770,7 +100204,7 @@ haW
 tjE
 eag
 wZG
-haW
+amV
 abu
 bQe
 hyc

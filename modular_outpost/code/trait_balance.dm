@@ -145,9 +145,9 @@
 	category = TRAIT_TYPE_NEGATIVE
 
 /datum/trait/neutral/strongimmunesystem
-	hidden = TRUE //Base False. This is virus immunity reflavored. Fukkin why?
-	category = TRAIT_TYPE_POSITIVE
-	cost = 10
+	hidden = TRUE //Base False. Apparently all this does is make you not get a dormant virus.
+	category = TRAIT_TYPE_NEUTRAL
+	cost = 0
 
 /////////////////////////////////////////////////////////////////////////////////////////////////
 /// NEGATIVE

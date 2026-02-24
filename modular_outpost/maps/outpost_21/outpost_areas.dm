@@ -161,10 +161,12 @@
 	base_turf = /turf/simulated/open
 
 /area/crew_quarters/locker
+	name = "\improper Pool Locker Room"
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	holomap_color = HOLOMAP_AREACOLOR_CIV
 
 /area/crew_quarters/locker/locker_toilet
+	name = "\improper Pool Bathroom"
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	holomap_color = HOLOMAP_AREACOLOR_CIV
 
@@ -212,7 +214,7 @@
 
 /area/crew_quarters/coffee_shop
 	holomap_color = HOLOMAP_AREACOLOR_CIV
-	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
+	base_turf = /turf/simulated/open
 
 /area/crew_quarters/kitchen
 	holomap_color = HOLOMAP_AREACOLOR_HYDROPONICS

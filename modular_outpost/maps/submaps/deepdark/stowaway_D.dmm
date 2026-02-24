@@ -1,4 +1,16 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/obj/effect/auto_crayon{
+	icon_state = "air"
+	},
+/turf/simulated/floor/wood/broken/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"ab" = (
+/obj/effect/auto_crayon{
+	icon_state = "one_wrath"
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
 "bI" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -16,7 +28,6 @@
 /obj/structure/table/rack/shelf/wood,
 /obj/random/flashlight,
 /obj/random/flashlight,
-/obj/item/personal_shield_generator/belt/melee/loaded,
 /obj/item/personal_shield_generator/belt/melee/loaded,
 /turf/simulated/floor/wood/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
@@ -162,8 +173,6 @@
 "wS" = (
 /obj/structure/table/rack/shelf/wood,
 /obj/item/gun/projectile/automatic/z8,
-/obj/item/ammo_magazine/m762/ap,
-/obj/item/ammo_magazine/m762/ap,
 /obj/item/ammo_magazine/m762/ap,
 /obj/item/ammo_magazine/m762/ap,
 /obj/item/ammo_magazine/m762/ap,
@@ -336,9 +345,6 @@
 /area/mine/explored/muriki/cave/deepdark)
 "Of" = (
 /obj/structure/table/rack/shelf/wood,
-/obj/item/storage/box/frags,
-/obj/item/storage/box/frags,
-/obj/item/storage/box/frags,
 /obj/item/storage/box/frags,
 /obj/item/storage/box/frags,
 /turf/simulated/floor/wood/turfpack/muriki,
@@ -657,7 +663,7 @@ wh
 Ov
 nY
 QF
-Wk
+ab
 BD
 iU
 LZ
@@ -792,7 +798,7 @@ Ea
 uG
 Hv
 Ll
-Ea
+aa
 ji
 pq
 Sk

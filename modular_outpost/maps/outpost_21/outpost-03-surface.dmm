@@ -12444,6 +12444,10 @@
 	pixel_x = 32;
 	id_tag = "medding"
 	},
+/obj/machinery/camera/network/medbay{
+	c_tag = "MED - Virology Entry";
+	dir = 8
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay)
 "axw" = (
@@ -13019,15 +13023,6 @@
 /obj/item/towel/random,
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/bridge)
-"azl" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/effect/auto_crayon{
-	icon_state = "revolution"
-	},
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/civ)
 "azm" = (
 /obj/machinery/door/airlock/maintenance/int,
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
@@ -15149,6 +15144,173 @@
 /obj/machinery/needle_cleaner,
 /turf/simulated/floor/tiled/milspec/sterile,
 /area/medical/virology)
+"aEG" = (
+/obj/effect/auto_crayon{
+	icon_state = "water"
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
+"aEH" = (
+/turf/simulated/floor/water/indoors,
+/area/mine/unexplored/muriki/mountaineast)
+"aEI" = (
+/obj/effect/auto_crayon{
+	icon_state = "six_tranquility"
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
+"aEJ" = (
+/obj/effect/auto_crayon{
+	icon_state = "water"
+	},
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/unexplored/muriki/mountaineast)
+"aEK" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/effect/auto_crayon{
+	icon_state = "uboa"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/river/hole)
+"aEL" = (
+/obj/effect/floor_decal/corner/blue{
+	dir = 9
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/machinery/button/remote/blast_door{
+	desc = "A remote control-switch for shutters.";
+	id = "virologyquar";
+	name = "Virology Emergency Lockdown Control";
+	dir = 4;
+	pixel_x = -26
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/medbay)
+"aEM" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/medbay)
+"aEN" = (
+/turf/simulated/wall,
+/area/medical/virologyaccess)
+"aEO" = (
+/obj/machinery/door/airlock/medical{
+	autoclose = 0;
+	frequency = 1379;
+	icon_state = "door_locked";
+	id_tag = "virology_airlock_interior";
+	locked = 1;
+	name = "Virology Interior Airlock";
+	req_access = list(39)
+	},
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/green,
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/access_button{
+	command = "cycle_interior";
+	frequency = 1379;
+	master_tag = "virology_airlock_control";
+	name = "Virology Access Button";
+	pixel_x = -28;
+	pixel_y = -5;
+	req_access = list(39)
+	},
+/obj/machinery/embedded_controller/radio/airlock/access_controller{
+	id_tag = "virology_airlock_control";
+	name = "Virology Access Console";
+	pixel_x = -30;
+	pixel_y = 5;
+	tag_exterior_door = "virology_airlock_exterior";
+	tag_interior_door = "virology_airlock_interior"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/medical/virologyaccess)
+"aEP" = (
+/obj/effect/floor_decal/corner/black/full,
+/obj/effect/floor_decal/industrial/warning/corner,
+/obj/effect/floor_decal/corner/blue{
+	dir = 8
+	},
+/obj/structure/filingcabinet/filingcabinet,
+/turf/simulated/floor/tiled/white,
+/area/medical/virology/prep)
+"aEQ" = (
+/obj/machinery/button/remote/blast_door{
+	desc = "A remote control-switch for shutters.";
+	id = "virologyquar";
+	name = "Virology Emergency Lockdown Control";
+	pixel_y = -28;
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/black/full{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/blue,
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/virology/prep)
+"aER" = (
+/obj/effect/auto_crayon{
+	icon_state = "ten_death"
+	},
+/turf/simulated/floor/redgrid/off/turfpack/muriki,
+/area/muriki/processor/euth)
+"aES" = (
+/obj/effect/auto_crayon{
+	icon_state = "wander"
+	},
+/turf/simulated/floor/plating,
+/area/muriki/processor)
+"aET" = (
+/obj/effect/auto_crayon{
+	icon_state = "violence"
+	},
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/unexplored/muriki/mountainnorth)
+"aEU" = (
+/obj/effect/auto_crayon{
+	icon_state = "skull"
+	},
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/unexplored/muriki/mountainnorth)
+"aEV" = (
+/obj/effect/auto_crayon{
+	icon_state = "one_wrath"
+	},
+/turf/simulated/floor/wood,
+/area/mine/unexplored/muriki/mountainnorth)
+"aEW" = (
+/turf/simulated/wall/r_wall{
+	can_open = 1
+	},
+/area/mine/unexplored/muriki/cave/shelter/north_west_far)
+"aEX" = (
+/obj/effect/auto_crayon{
+	icon_state = "left"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/unexplored/muriki/mountainnorth)
 "aFy" = (
 /obj/effect/floor_decal/rust,
 /obj/effect/floor_decal/corner/brown{
@@ -16424,11 +16586,6 @@
 /obj/item/extraction_pack,
 /turf/simulated/floor/tiled/milspec,
 /area/security/armoury)
-"aZW" = (
-/obj/machinery/smartfridge/produce/plantvator/down,
-/obj/effect/floor_decal/corner_kafel/white/diagonal,
-/turf/simulated/floor/tiled/kafel_full,
-/area/crew_quarters/kitchen)
 "aZZ" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
 	frequency = 1381;
@@ -26166,16 +26323,19 @@
 /turf/simulated/floor/plating,
 /area/muriki/bathroom/engineering)
 "ehF" = (
-/obj/effect/floor_decal/corner/blue{
-	dir = 9
+/obj/machinery/door/blast/regular{
+	density = 0;
+	dir = 4;
+	icon_state = "pdoor0";
+	id = "virologyquar";
+	name = "Virology Emergency Quarantine Blast Doors";
+	opacity = 0
 	},
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 4
+/obj/structure/sign/biohazard{
+	pixel_x = -32
 	},
-/obj/machinery/light{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/white,
+/obj/effect/floor_decal/milspec/hatchmarks,
+/turf/simulated/floor/tiled/techfloor,
 /area/medical/medbay)
 "ehG" = (
 /obj/effect/floor_decal/borderfloor/corner{
@@ -34194,17 +34354,22 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/exam_room)
 "gTN" = (
+/obj/machinery/door/blast/regular{
+	density = 0;
+	dir = 4;
+	icon_state = "pdoor0";
+	id = "virologyquar";
+	name = "Virology Emergency Quarantine Blast Doors";
+	opacity = 0
+	},
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/green{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/white,
+/obj/effect/floor_decal/milspec/hatchmarks,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/green,
+/turf/simulated/floor/tiled/techfloor,
 /area/medical/medbay)
 "gUf" = (
 /obj/effect/floor_decal/industrial/warning,
@@ -37338,6 +37503,9 @@
 /obj/structure/disposalpipe/segment{
 	dir = 2;
 	icon_state = "pipe-c"
+	},
+/obj/effect/auto_crayon{
+	icon_state = "shelter"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/civ)
@@ -42313,24 +42481,19 @@
 /turf/simulated/open/muriki,
 /area/mine/explored/muriki/river/hole)
 "jnZ" = (
-/obj/effect/floor_decal/corner/blue{
-	dir = 6
-	},
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 8
-	},
-/obj/machinery/camera/network/medbay{
-	c_tag = "MED - Virology Entry";
-	dir = 8
-	},
-/obj/machinery/button/remote/blast_door{
-	desc = "A remote control-switch for shutters.";
+/obj/machinery/door/blast/regular{
+	density = 0;
+	dir = 4;
+	icon_state = "pdoor0";
 	id = "virologyquar";
-	name = "Virology Emergency Lockdown Control";
-	dir = 8;
-	pixel_x = 26
+	name = "Virology Emergency Quarantine Blast Doors";
+	opacity = 0
 	},
-/turf/simulated/floor/tiled/white,
+/obj/structure/sign/biohazard{
+	pixel_x = 32
+	},
+/obj/effect/floor_decal/milspec/hatchmarks,
+/turf/simulated/floor/tiled/techfloor,
 /area/medical/medbay)
 "joj" = (
 /obj/effect/floor_decal/borderfloor,
@@ -44658,10 +44821,6 @@
 	dir = 8;
 	icon_state = "pipe-c"
 	},
-/obj/effect/floor_decal/corner/black{
-	dir = 10
-	},
-/obj/effect/floor_decal/industrial/warning/corner,
 /turf/simulated/floor/tiled/white,
 /area/medical/virology/prep)
 "jWE" = (
@@ -44898,7 +45057,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/muriki/arriveelev)
 "jZS" = (
-/obj/effect/floor_decal/industrial/warning,
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
@@ -44909,11 +45067,6 @@
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
 /obj/structure/cable/green{
 	icon_state = "1-8"
-	},
-/obj/machinery/light_switch{
-	dir = 1;
-	pixel_x = 23;
-	pixel_y = -24
 	},
 /obj/structure/disposalpipe/junction{
 	dir = 2;
@@ -45155,13 +45308,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/muriki/arriveelev)
 "kcZ" = (
-/obj/machinery/button/remote/blast_door{
-	desc = "A remote control-switch for shutters.";
-	id = "virologyquar";
-	name = "Virology Emergency Lockdown Control";
-	pixel_y = -28;
-	dir = 1
-	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
@@ -45173,12 +45319,6 @@
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
-	},
-/obj/effect/floor_decal/corner/black{
-	dir = 10
-	},
-/obj/effect/floor_decal/industrial/warning/corner{
-	dir = 8
 	},
 /obj/effect/floor_decal/corner/blue,
 /turf/simulated/floor/tiled/white,
@@ -48166,40 +48306,17 @@
 /turf/simulated/floor/tiled,
 /area/quartermaster/delivery)
 "lag" = (
-/obj/machinery/door/airlock/medical{
-	autoclose = 0;
-	frequency = 1379;
-	icon_state = "door_locked";
-	id_tag = "virology_airlock_interior";
-	locked = 1;
-	name = "Virology Interior Airlock";
-	req_access = list(39)
+/obj/machinery/light_switch{
+	dir = 1;
+	pixel_x = 23;
+	pixel_y = -24
 	},
+/obj/effect/floor_decal/industrial/warning,
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/green,
-/obj/machinery/door/firedoor/glass,
-/obj/machinery/access_button{
-	command = "cycle_interior";
-	frequency = 1379;
-	master_tag = "virology_airlock_control";
-	name = "Virology Access Button";
-	pixel_x = -28;
-	pixel_y = -5;
-	req_access = list(39)
-	},
-/obj/machinery/embedded_controller/radio/airlock/access_controller{
-	id_tag = "virology_airlock_control";
-	name = "Virology Access Console";
-	pixel_x = -30;
-	pixel_y = 5;
-	tag_exterior_door = "virology_airlock_exterior";
-	tag_interior_door = "virology_airlock_interior"
-	},
-/turf/simulated/floor/tiled/techfloor,
+/turf/simulated/floor/tiled/white,
 /area/medical/virology/prep)
 "las" = (
 /obj/structure/table/standard,
@@ -59632,21 +59749,6 @@
 /obj/structure/closet/firecloset/full,
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/main)
-"oHR" = (
-/obj/machinery/door/blast/regular{
-	density = 0;
-	dir = 4;
-	icon_state = "pdoor0";
-	id = "virologyquar";
-	name = "Virology Emergency Quarantine Blast Doors";
-	opacity = 0
-	},
-/obj/structure/sign/biohazard{
-	pixel_x = -32
-	},
-/obj/effect/floor_decal/milspec/hatchmarks,
-/turf/simulated/floor/tiled/techfloor,
-/area/medical/virologyaccess)
 "oHX" = (
 /obj/effect/floor_decal/steeldecal/steel_decals10{
 	dir = 4
@@ -59681,45 +59783,12 @@
 	},
 /turf/simulated/floor/tiled/steel,
 /area/bridge/hallway)
-"oJa" = (
-/obj/machinery/door/blast/regular{
-	density = 0;
-	dir = 4;
-	icon_state = "pdoor0";
-	id = "virologyquar";
-	name = "Virology Emergency Quarantine Blast Doors";
-	opacity = 0
-	},
-/obj/structure/disposalpipe/segment,
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
-/obj/effect/floor_decal/milspec/hatchmarks,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/green,
-/turf/simulated/floor/tiled/techfloor,
-/area/medical/virologyaccess)
 "oJb" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
 /area/storage/tools)
-"oJi" = (
-/obj/machinery/door/blast/regular{
-	density = 0;
-	dir = 4;
-	icon_state = "pdoor0";
-	id = "virologyquar";
-	name = "Virology Emergency Quarantine Blast Doors";
-	opacity = 0
-	},
-/obj/structure/sign/biohazard{
-	pixel_x = 32
-	},
-/obj/effect/floor_decal/milspec/hatchmarks,
-/turf/simulated/floor/tiled/techfloor,
-/area/medical/virologyaccess)
 "oJu" = (
 /obj/effect/floor_decal/corner/red{
 	dir = 5
@@ -65936,7 +66005,9 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
+	},
 /obj/machinery/atmospherics/pipe/simple/hidden/green,
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay)
@@ -70769,7 +70840,6 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
-/obj/structure/filingcabinet/filingcabinet,
 /obj/effect/floor_decal/corner/black/full,
 /obj/effect/floor_decal/corner/blue,
 /obj/effect/floor_decal/corner/blue{
@@ -71671,12 +71741,6 @@
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/securitypub)
-"sEA" = (
-/obj/effect/auto_crayon{
-	icon_state = "x"
-	},
-/turf/simulated/floor/tiled/milspec/turfpack/muriki,
-/area/mine/unexplored/muriki/mountaineast)
 "sEN" = (
 /obj/machinery/light{
 	dir = 8
@@ -76448,6 +76512,12 @@
 	},
 /obj/effect/floor_decal/flesh{
 	dir = 10
+	},
+/obj/effect/auto_crayon{
+	icon_state = "x"
+	},
+/obj/effect/auto_crayon{
+	icon_state = "right"
 	},
 /turf/simulated/floor/redgrid/off,
 /area/muriki/processor/euth)
@@ -97322,7 +97392,7 @@ suD
 awV
 awS
 tYP
-suD
+aER
 iZQ
 kSV
 nyl
@@ -100873,7 +100943,7 @@ uHC
 ixt
 uFJ
 niQ
-niQ
+aES
 cQo
 niQ
 niQ
@@ -114129,12 +114199,12 @@ wyS
 aeu
 pIR
 aoy
-aoy
+aEW
 aoy
 aoy
 aoy
 pIR
-dMj
+aEU
 bck
 gAH
 lhs
@@ -114291,7 +114361,7 @@ wyS
 aeu
 pIR
 pIR
-pIR
+aEX
 pIR
 pIR
 pIR
@@ -114453,7 +114523,7 @@ wyS
 aeu
 pIR
 pIR
-pIR
+dMj
 pIR
 pIR
 pIR
@@ -114615,10 +114685,10 @@ wyS
 aeu
 pIR
 pIR
-pIR
-pIR
-pIR
-pIR
+dMj
+dMj
+dMj
+dMj
 qkC
 pIR
 pIR
@@ -114780,7 +114850,7 @@ pIR
 pIR
 pIR
 pIR
-pIR
+dMj
 dMj
 dMj
 aiP
@@ -120618,7 +120688,7 @@ aiP
 aiP
 dMj
 dMj
-dMj
+aEU
 oeQ
 oeQ
 arq
@@ -129724,7 +129794,7 @@ fyk
 fyk
 mGo
 fyk
-jFv
+aEN
 jFv
 jFv
 jFv
@@ -129885,14 +129955,14 @@ hlw
 fyk
 iOr
 jWt
-fyk
+aEP
+aEN
 lUf
 mCm
 nko
 jFv
-oHR
 ehF
-bkI
+aEL
 qdV
 anT
 anR
@@ -130048,11 +130118,11 @@ hZY
 aRI
 jZS
 lag
+aEO
 nqh
 mDJ
 hzC
 odM
-oJa
 gTN
 qJn
 ags
@@ -130209,14 +130279,14 @@ hpc
 fyk
 iPF
 kcZ
-fyk
+aEQ
+aEN
 lYn
 mDO
 nqy
 mfH
-oJi
 jnZ
-ePO
+aEM
 axv
 gYt
 gYt
@@ -130372,7 +130442,7 @@ fyk
 iXP
 kfs
 fyk
-jFv
+aEN
 jFv
 jFv
 jFv
@@ -130669,7 +130739,7 @@ aiP
 aiP
 aiP
 dMj
-dMj
+aET
 dMj
 uem
 uem
@@ -133574,7 +133644,7 @@ kdq
 rvS
 sXP
 aAP
-rvS
+aEV
 rvS
 wLm
 rvS
@@ -144172,7 +144242,7 @@ buo
 wYW
 bgu
 cYR
-aZW
+nuL
 oZU
 jWh
 tpU
@@ -151029,7 +151099,7 @@ azx
 oKM
 azd
 azd
-azl
+vFG
 azd
 azd
 rJa
@@ -151685,7 +151755,7 @@ fhs
 fhs
 axA
 axH
-ayg
+aEI
 axA
 axC
 ayB
@@ -151826,7 +151896,7 @@ xHO
 xHO
 xWt
 sgc
-sEA
+aBU
 aBU
 jXc
 rJa
@@ -152282,7 +152352,7 @@ rJa
 rJa
 cCp
 anc
-anc
+aEK
 anu
 rJa
 rJa
@@ -152652,7 +152722,7 @@ rJa
 rJa
 rJa
 rJa
-fhs
+aEJ
 ayV
 rJa
 rJa
@@ -152814,8 +152884,8 @@ rJa
 rJa
 rJa
 rJa
-wFh
-wFh
+aEH
+aEH
 rJa
 rJa
 rJa
@@ -152976,12 +153046,12 @@ rJa
 rJa
 rJa
 rJa
-wFh
-wFh
-wFh
+aEH
+aEH
+aEH
 rJa
-wFh
-wFh
+aEH
+aEH
 rJa
 rJa
 rJa
@@ -153138,13 +153208,13 @@ rJa
 rJa
 rJa
 rJa
-wFh
-wFh
-wFh
-wFh
-wFh
-wFh
-wFh
+aEH
+aEH
+aEH
+aEH
+aEH
+aEH
+aEH
 rJa
 rJa
 axy
@@ -153302,11 +153372,11 @@ rJa
 rJa
 rJa
 rJa
-wFh
-wFh
-wFh
-wFh
-wFh
+aEH
+aEH
+aEH
+aEH
+aEH
 axy
 axy
 axy
@@ -153465,12 +153535,12 @@ rJa
 rJa
 rJa
 rJa
-wFh
-wFh
-wFh
-wFh
+aEH
+aEH
+aEH
+aEH
 axA
-ayg
+aEG
 ayw
 ayg
 axN

@@ -11,9 +11,6 @@
 "o" = (
 /turf/template_noop,
 /area/mine/explored/muriki/cave/deepdark)
-"w" = (
-/turf/simulated/mineral/alt/ignore_cavegen/turfpack/muriki,
-/area/template_noop)
 "B" = (
 /obj/effect/map_effect/portal/master/side_a{
 	dir = 8;
@@ -382,16 +379,16 @@ a
 a
 a
 a
-a
-o
+b
+b
+b
+b
+b
+b
+b
 n
-n
 o
 o
-a
-a
-a
-a
 a
 a
 a
@@ -462,19 +459,19 @@ a
 "}
 (6,1,1) = {"
 a
-a
+b
+b
+b
+b
+b
+b
+b
+b
+b
+b
+n
 o
-n
-n
-n
-n
-n
-n
-n
 o
-o
-a
-a
 a
 a
 a
@@ -544,7 +541,6 @@ a
 "}
 (7,1,1) = {"
 a
-a
 b
 b
 b
@@ -553,10 +549,11 @@ b
 b
 b
 b
-n
+b
+b
+b
+b
 o
-o
-a
 a
 a
 a
@@ -625,7 +622,6 @@ a
 a
 "}
 (8,1,1) = {"
-a
 b
 b
 b
@@ -636,8 +632,9 @@ b
 b
 b
 b
-n
-o
+b
+b
+b
 o
 a
 a
@@ -707,7 +704,6 @@ a
 a
 "}
 (9,1,1) = {"
-a
 b
 b
 b
@@ -719,8 +715,9 @@ b
 b
 b
 b
-n
-o
+b
+b
+b
 a
 a
 a
@@ -802,7 +799,7 @@ b
 b
 b
 b
-o
+b
 a
 a
 a
@@ -1440,7 +1437,7 @@ b
 b
 b
 b
-a
+b
 a
 a
 "}
@@ -1522,8 +1519,8 @@ b
 b
 b
 b
-a
-a
+b
+b
 a
 "}
 (19,1,1) = {"
@@ -1605,7 +1602,7 @@ b
 b
 b
 b
-a
+b
 a
 "}
 (20,1,1) = {"
@@ -1687,7 +1684,7 @@ b
 b
 b
 b
-a
+b
 a
 "}
 (21,1,1) = {"
@@ -1755,7 +1752,6 @@ a
 a
 a
 n
-n
 b
 b
 b
@@ -1769,7 +1765,8 @@ b
 b
 b
 b
-a
+b
+b
 a
 "}
 (22,1,1) = {"
@@ -1837,7 +1834,6 @@ a
 a
 a
 o
-n
 b
 b
 b
@@ -1851,7 +1847,8 @@ b
 b
 b
 b
-a
+b
+b
 a
 "}
 (23,1,1) = {"
@@ -1919,7 +1916,6 @@ a
 a
 a
 o
-n
 b
 b
 b
@@ -1933,7 +1929,8 @@ b
 b
 b
 b
-a
+b
+b
 a
 "}
 (24,1,1) = {"
@@ -2001,7 +1998,6 @@ a
 a
 a
 o
-n
 b
 b
 b
@@ -2014,8 +2010,9 @@ b
 b
 b
 b
-o
-a
+b
+b
+b
 a
 "}
 (25,1,1) = {"
@@ -2083,8 +2080,6 @@ a
 a
 a
 a
-o
-n
 b
 b
 b
@@ -2095,9 +2090,11 @@ b
 b
 b
 b
-n
-a
-a
+b
+b
+b
+b
+b
 a
 "}
 (26,1,1) = {"
@@ -2166,19 +2163,19 @@ a
 a
 a
 a
-a
-w
-w
-P
 b
 b
 b
 b
 b
-P
-w
-w
-a
+b
+b
+b
+b
+b
+b
+b
+b
 a
 a
 "}
@@ -2249,17 +2246,17 @@ a
 a
 a
 a
-a
-w
-w
-w
-w
-w
-w
-w
-w
-w
-a
+b
+b
+b
+b
+b
+b
+b
+b
+b
+b
+b
 a
 a
 a
@@ -2333,13 +2330,13 @@ a
 a
 a
 a
-a
-a
-a
-a
-a
-a
-a
+b
+b
+b
+b
+b
+b
+b
 a
 a
 a

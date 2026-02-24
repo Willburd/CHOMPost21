@@ -1,4 +1,47 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/obj/effect/floor_decal/stairs/station{
+	dir = 8;
+	icon_state = "stair_u"
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"ab" = (
+/obj/effect/floor_decal/stairs/station{
+	dir = 8
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"ac" = (
+/obj/effect/auto_crayon{
+	icon_state = "one_wrath"
+	},
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"ad" = (
+/obj/effect/auto_crayon{
+	icon_state = "survival"
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"ae" = (
+/obj/effect/auto_crayon{
+	icon_state = "wander"
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"af" = (
+/obj/effect/auto_crayon{
+	icon_state = "fire"
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"ag" = (
+/obj/effect/auto_crayon{
+	icon_state = "one_wrath"
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
 "ai" = (
 /obj/item/pen/crayon/marker/rainbow,
 /turf/simulated/floor/wood/broken/turfpack/muriki,
@@ -38,7 +81,7 @@
 /turf/simulated/floor/wood/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "cN" = (
-/obj/structure/bonfire/permanent,
+/obj/structure/bonfire,
 /turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "cR" = (
@@ -208,7 +251,6 @@
 /turf/simulated/floor/wood/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "jc" = (
-/obj/item/gun/energy/soapenergy/gaussrifle,
 /obj/structure/table/rack/shelf/wood,
 /turf/simulated/floor/wood/broken/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
@@ -418,7 +460,6 @@
 /obj/item/radio,
 /obj/item/holosign_creator/combifan,
 /obj/item/holosign_creator/combifan,
-/obj/item/gun/energy/locked/frontier/holdout/unlocked,
 /turf/simulated/floor/wood/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "pG" = (
@@ -534,7 +575,6 @@
 /obj/structure/table/rack/shelf/wood,
 /obj/item/radio,
 /obj/item/storage/backpack/dufflebag/syndie,
-/obj/item/gun/energy/locked/frontier/holdout/unlocked,
 /turf/simulated/floor/wood/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "tU" = (
@@ -714,8 +754,6 @@
 /obj/structure/table/rack/shelf/wood,
 /obj/item/multitool,
 /obj/item/multitool,
-/obj/item/multitool,
-/obj/item/multitool,
 /turf/simulated/floor/wood/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "Bc" = (
@@ -864,10 +902,6 @@
 "Jx" = (
 /obj/item/gun/projectile/shotgun/doublebarrel/quad,
 /obj/structure/table/rack/shelf/wood,
-/obj/item/ammo_magazine/ammo_box/b12g/pellet,
-/obj/item/ammo_magazine/ammo_box/b12g/pellet,
-/obj/item/ammo_magazine/ammo_box/b12g/pellet,
-/obj/item/ammo_magazine/ammo_box/b12g/pellet,
 /turf/simulated/floor/wood/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "JF" = (
@@ -935,30 +969,6 @@
 /area/mine/explored/muriki/cave/deepdark)
 "Nd" = (
 /obj/structure/table/rack/shelf/wood,
-/obj/item/clothing/gloves/arm_guard/combat,
-/obj/item/clothing/gloves/arm_guard/combat,
-/obj/item/clothing/gloves/arm_guard/combat,
-/obj/item/clothing/gloves/arm_guard/combat,
-/obj/item/clothing/gloves/arm_guard/combat,
-/obj/item/clothing/gloves/arm_guard/combat,
-/obj/item/clothing/shoes/leg_guard/combat,
-/obj/item/clothing/shoes/leg_guard/combat,
-/obj/item/clothing/shoes/leg_guard/combat,
-/obj/item/clothing/shoes/leg_guard/combat,
-/obj/item/clothing/shoes/leg_guard/combat,
-/obj/item/clothing/shoes/leg_guard/combat,
-/obj/item/clothing/suit/armor/combat,
-/obj/item/clothing/suit/armor/combat,
-/obj/item/clothing/suit/armor/combat,
-/obj/item/clothing/suit/armor/combat,
-/obj/item/clothing/suit/armor/combat,
-/obj/item/clothing/suit/armor/combat,
-/obj/item/clothing/head/helmet/combat,
-/obj/item/clothing/head/helmet/combat,
-/obj/item/clothing/head/helmet/combat,
-/obj/item/clothing/head/helmet/combat,
-/obj/item/clothing/head/helmet/combat,
-/obj/item/clothing/head/helmet/combat,
 /turf/simulated/floor/wood/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "NH" = (
@@ -1008,7 +1018,6 @@
 /obj/item/radio,
 /obj/item/radio,
 /obj/item/radio,
-/obj/item/gun/projectile/silenced,
 /turf/simulated/floor/wood/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "QT" = (
@@ -1039,12 +1048,6 @@
 /obj/structure/barricade/sandbag,
 /turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
-"RV" = (
-/obj/item/clothing/suit/armor/combat,
-/obj/structure/table/rack/shelf/wood,
-/obj/item/material/twohanded/sledgehammer/gravity,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/mine/explored/muriki/cave/deepdark)
 "Sq" = (
 /obj/structure/table/rack/shelf/wood,
 /obj/item/airlock_electronics,
@@ -1056,14 +1059,6 @@
 /obj/item/bedsheet/brown,
 /turf/simulated/floor/wood/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
-"Tf" = (
-/obj/structure/table/rack/shelf/wood,
-/obj/item/storage/box/scattershot/large,
-/obj/item/storage/box/scattershot/large,
-/obj/item/gun/projectile/shotgun/pump/USDF,
-/obj/item/gun/projectile/shotgun/pump/USDF,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/mine/explored/muriki/cave/deepdark)
 "Ub" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -1073,35 +1068,6 @@
 "Uo" = (
 /obj/structure/bed,
 /obj/item/bedsheet/hop,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/mine/explored/muriki/cave/deepdark)
-"UQ" = (
-/obj/structure/table/rack/shelf/wood,
-/obj/item/gun/projectile/automatic/serdy/hectate,
-/obj/item/ammo_magazine/hectate{
-	pixel_x = 5
-	},
-/obj/item/ammo_magazine/hectate{
-	pixel_x = 5
-	},
-/obj/item/ammo_magazine/hectate{
-	pixel_x = 5
-	},
-/obj/item/ammo_magazine/hectate{
-	pixel_x = 5
-	},
-/obj/item/ammo_magazine/hectate/ap{
-	pixel_x = -5
-	},
-/obj/item/ammo_magazine/hectate/ap{
-	pixel_x = -5
-	},
-/obj/item/ammo_magazine/hectate/ap{
-	pixel_x = -5
-	},
-/obj/item/ammo_magazine/hectate/ap{
-	pixel_x = -5
-	},
 /turf/simulated/floor/wood/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "Wr" = (
@@ -1491,7 +1457,7 @@ sO
 AT
 Ro
 tr
-WO
+af
 yU
 SL
 KS
@@ -1568,7 +1534,7 @@ Qr
 Qr
 AT
 eJ
-WO
+ae
 cf
 AT
 Rw
@@ -1615,7 +1581,7 @@ Bp
 pG
 qG
 gx
-Qr
+ac
 XG
 sN
 WO
@@ -1691,7 +1657,7 @@ Aw
 Oe
 ja
 Oe
-RV
+Nd
 gu
 yA
 AT
@@ -1715,14 +1681,14 @@ AT
 tr
 Jx
 AT
-UQ
+Nd
 WO
 xs
 Oe
 kE
 Oe
 uv
-WO
+ad
 gn
 WO
 rO
@@ -1826,7 +1792,7 @@ AT
 ZD
 gu
 AT
-Tf
+Nd
 WO
 xc
 Oe
@@ -1876,7 +1842,7 @@ Oe
 Qv
 tr
 Oe
-WO
+aa
 kC
 WO
 AT
@@ -1913,7 +1879,7 @@ Oe
 LJ
 WO
 bO
-WO
+ab
 zg
 wT
 AT
@@ -1934,7 +1900,7 @@ Gx
 Qr
 Qr
 Ub
-WO
+ag
 rO
 bO
 ce
@@ -2242,8 +2208,8 @@ bO
 nq
 WO
 AT
-Rw
-Rw
+AT
+AT
 Rw
 Rw
 Qr
@@ -2278,9 +2244,9 @@ kt
 Oe
 Yx
 KS
+Qr
+Qr
 AT
-Rw
-Rw
 Rw
 Rw
 Qr
@@ -2316,8 +2282,8 @@ AT
 AT
 AT
 AT
-Rw
-Rw
+AT
+AT
 Rw
 Rw
 Qr

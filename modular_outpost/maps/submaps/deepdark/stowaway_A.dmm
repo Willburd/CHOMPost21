@@ -2,6 +2,13 @@
 "a" = (
 /turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
+"b" = (
+/obj/random/junk,
+/obj/effect/auto_crayon{
+	icon_state = "air"
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
 "d" = (
 /obj/random/junk,
 /turf/simulated/floor/wood/turfpack/muriki,
@@ -216,7 +223,7 @@ A
 A
 H
 T
-d
+b
 Y
 J
 H

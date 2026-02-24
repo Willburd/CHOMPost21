@@ -2603,7 +2603,7 @@
 /area/mine/explored/muriki/cave/deepdark)
 "ago" = (
 /obj/structure/prop/rock/small/alt,
-/obj/effect/decal/cleanable/blood/old,
+/obj/effect/decal/cleanable/blood,
 /turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
 	},
@@ -2665,7 +2665,7 @@
 /area/mine/explored/muriki/cave/deepdark)
 "agw" = (
 /obj/structure/ladder/up,
-/obj/effect/decal/cleanable/blood/old,
+/obj/effect/decal/cleanable/blood,
 /turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
 	},
@@ -2679,7 +2679,7 @@
 /area/mine/explored/muriki/cave/deepdark)
 "agy" = (
 /obj/structure/prop/rock/small,
-/obj/effect/decal/cleanable/blood/old,
+/obj/effect/decal/cleanable/blood,
 /turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
 	},
@@ -2697,7 +2697,7 @@
 	},
 /area/mine/explored/muriki/cave/deepdark)
 "agB" = (
-/obj/effect/decal/cleanable/blood/old,
+/obj/effect/decal/cleanable/blood,
 /turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
 	},
@@ -2724,7 +2724,7 @@
 /area/mine/explored/muriki/cave/deepdark)
 "agF" = (
 /obj/structure/prop/rock/small/alt,
-/obj/effect/decal/cleanable/blood/old,
+/obj/effect/decal/cleanable/blood,
 /obj/random/humanoidremains,
 /turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
@@ -2753,7 +2753,7 @@
 	},
 /area/mine/explored/muriki/cave/deepdark)
 "agJ" = (
-/obj/effect/decal/cleanable/blood/old,
+/obj/effect/decal/cleanable/blood,
 /obj/structure/prop/rock/small,
 /turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
@@ -2768,7 +2768,7 @@
 	},
 /area/mine/explored/muriki/cave/deepdark)
 "agL" = (
-/obj/effect/decal/cleanable/blood/old,
+/obj/effect/decal/cleanable/blood,
 /obj/effect/landmark/step_trap,
 /turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
@@ -2791,6 +2791,12 @@
 "agO" = (
 /obj/structure/cliff_end,
 /turf/simulated/mineral/alt/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"agP" = (
+/obj/effect/auto_crayon{
+	icon_state = "skull"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "amr" = (
 /obj/effect/map_effect/interval/atmogland/bodyheat,
@@ -29784,7 +29790,7 @@ afZ
 afW
 afU
 adn
-uXm
+agP
 gNY
 gNY
 fMG
