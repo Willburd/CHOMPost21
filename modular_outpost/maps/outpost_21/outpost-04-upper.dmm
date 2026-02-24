@@ -2672,6 +2672,13 @@
 	},
 /turf/simulated/floor/grass,
 /area/hydroponics/garden)
+"agg" = (
+/obj/effect/floor_decal/corner/brown/diagonal,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/coffee_shop)
 "agh" = (
 /obj/machinery/light{
 	dir = 4
@@ -3229,6 +3236,9 @@
 /obj/structure/bed/chair/wood{
 	dir = 4
 	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/coffee_shop)
 "ahD" = (
@@ -3287,6 +3297,9 @@
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/crew_quarters/coffee_shop)
@@ -3661,6 +3674,16 @@
 	},
 /turf/simulated/floor,
 /area/maintenance/substation/phoronics)
+"aiE" = (
+/obj/effect/floor_decal/corner/brown/diagonal,
+/obj/structure/bed/chair/wood{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/coffee_shop)
 "aiG" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
@@ -6883,6 +6906,9 @@
 	},
 /obj/structure/disposalpipe/junction{
 	dir = 1
+	},
+/obj/structure/cable/green{
+	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/chapel_hallway)
@@ -19076,6 +19102,11 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/corner/brown/diagonal,
+/obj/machinery/power/apc{
+	name = "south bump";
+	pixel_y = -24
+	},
+/obj/structure/cable/green,
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/coffee_shop)
 "ibP" = (
@@ -26856,6 +26887,9 @@
 /obj/effect/floor_decal/corner/brown/diagonal,
 /obj/structure/disposalpipe/segment{
 	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/coffee_shop)
@@ -39058,6 +39092,9 @@
 /obj/structure/disposalpipe/segment{
 	dir = 8;
 	icon_state = "pipe-c"
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/coffee_shop)
@@ -104415,9 +104452,9 @@ khK
 ahf
 ykx
 bUS
+aiE
 ahC
-ahC
-bUS
+agg
 ibb
 ahf
 tPL
