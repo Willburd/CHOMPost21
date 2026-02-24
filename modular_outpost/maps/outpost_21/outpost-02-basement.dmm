@@ -12464,6 +12464,12 @@
 	temperature = 80
 	},
 /area/server)
+"awj" = (
+/obj/effect/auto_crayon{
+	icon_state = "water"
+	},
+/turf/simulated/floor,
+/area/maintenance/oldbridge)
 "awk" = (
 /obj/structure/cable/orange{
 	icon_state = "1-2"
@@ -34232,7 +34238,7 @@
 /area/muriki/bathroom/cargolower)
 "bkR" = (
 /obj/structure/table/glass,
-/obj/item/bikehorn/rubberducky/gold,
+/obj/item/bikehorn/rubberducky/gold_harmless,
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/cargolower)
 "bkS" = (
@@ -93921,7 +93927,7 @@ cte
 bEx
 dwP
 iVB
-uoh
+awj
 akf
 rBM
 cqk

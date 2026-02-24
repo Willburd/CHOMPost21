@@ -13338,7 +13338,7 @@
 	dir = 8
 	},
 /obj/structure/table/glass,
-/obj/item/bikehorn/rubberducky/red,
+/obj/item/bikehorn/rubberducky/red_harmless,
 /turf/simulated/floor/tiled/freezer,
 /area/muriki/bathroom/security)
 "aAd" = (
@@ -16917,13 +16917,13 @@
 	name = "Station Intercom (General)";
 	pixel_y = 24
 	},
-/obj/item/bikehorn/rubberducky/viking,
 /obj/effect/floor_decal/corner/beige/border{
 	dir = 8
 	},
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/item/bikehorn/rubberducky/viking_harmless,
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/securitypub)
 "bfg" = (
@@ -22899,9 +22899,9 @@
 	pixel_y = 21
 	},
 /obj/structure/undies_wardrobe,
-/obj/item/bikehorn/rubberducky/pink{
+/obj/item/bikehorn/rubberducky/pink_harmless{
 	pixel_x = -5;
-	pixel_y = 14
+	pixel_y = 15
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/engineering)
@@ -28621,7 +28621,7 @@
 /obj/item/soap/deluxe{
 	pixel_y = 11
 	},
-/obj/item/bikehorn/rubberducky/blue,
+/obj/item/bikehorn/rubberducky/blue_harmless,
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/medical)
 "eUb" = (
@@ -35832,9 +35832,9 @@
 	dir = 1;
 	pixel_y = -26
 	},
-/obj/item/bikehorn/rubberducky/green{
+/obj/item/bikehorn/rubberducky/green_harmless{
 	pixel_x = 4;
-	pixel_y = 11
+	pixel_y = 12
 	},
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/muriki/research/showers)
@@ -56791,7 +56791,7 @@
 	dir = 8
 	},
 /obj/structure/table/glass,
-/obj/item/bikehorn/rubberducky/galaxy,
+/obj/item/bikehorn/rubberducky/galaxy_harmless,
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/bridge)
 "nEn" = (
