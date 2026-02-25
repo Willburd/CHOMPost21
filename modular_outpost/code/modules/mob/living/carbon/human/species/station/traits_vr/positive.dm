@@ -60,7 +60,7 @@
 	cost = 12 // You really should know what this means by now
 
 /datum/trait/positive/naturaltunneler
-	name = "Natural Tunneller"
+	name = "Natural Tunneler"
 	desc = "Using strong claws or inhuman strength you have the ability to carve your way through rough stone walls."
 	cost = 7
 
