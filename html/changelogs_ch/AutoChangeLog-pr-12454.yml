@@ -1,0 +1,5 @@
+author: "CHOMPStation2StaffMirrorBot"
+delete-after: True
+changes:
+  - bugfix: "Prometheans and proteans can no longer take Rotting Genetics"
+  - bugfix: "Stable Genetics and Rotting Genetics can no longer be taken together."
