@@ -1313,7 +1313,7 @@
 /turf/simulated/floor/plating/snow/plating/turfpack/muriki{
 	outdoors = 0
 	},
-/area/tcomfoyer)
+/area/mine/unexplored/muriki/mountaintopeast)
 "acK" = (
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging{
 	dir = 4
@@ -3421,15 +3421,15 @@
 /area/mine/unexplored/muriki/mountaintopeast)
 "ahX" = (
 /turf/simulated/wall/r_wall,
-/area/mine/unexplored/muriki/mountaintopeast)
+/area/maintenance/damaged_resleeverC)
 "ahY" = (
 /obj/machinery/door/airlock/maintenance/common,
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/mine/unexplored/muriki/mountaintopeast)
+/area/maintenance/damaged_resleeverC)
 "ahZ" = (
 /obj/item/flame/candle/everburn,
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/mine/unexplored/muriki/mountaintopeast)
+/area/maintenance/damaged_resleeverC)
 "aia" = (
 /obj/machinery/atmospherics/portables_connector{
 	dir = 4
@@ -3441,15 +3441,15 @@
 "aib" = (
 /obj/random/trash,
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/mine/unexplored/muriki/mountaintopeast)
+/area/maintenance/damaged_resleeverC)
 "aic" = (
 /obj/random/thermalponcho,
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/mine/unexplored/muriki/mountaintopeast)
+/area/maintenance/damaged_resleeverC)
 "aid" = (
 /obj/structure/trash_pile,
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/mine/unexplored/muriki/mountaintopeast)
+/area/maintenance/damaged_resleeverC)
 "aie" = (
 /obj/item/radio/intercom/department/security{
 	dir = 4;
@@ -3484,22 +3484,22 @@
 "aig" = (
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/mine/unexplored/muriki/mountaintopeast)
+/area/maintenance/damaged_resleeverC)
 "aih" = (
 /obj/machinery/mineral/input,
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/mine/unexplored/muriki/mountaintopeast)
+/area/maintenance/damaged_resleeverC)
 "aii" = (
 /obj/machinery/transhuman/autoresleever/rogue,
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/mine/unexplored/muriki/mountaintopeast)
+/area/maintenance/damaged_resleeverC)
 "aij" = (
 /obj/machinery/gibber/autogibber{
 	emagged = 1
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/mine/unexplored/muriki/mountaintopeast)
+/area/maintenance/damaged_resleeverC)
 "aik" = (
 /turf/simulated/wall,
 /area/muriki/crew/civmail)
@@ -3684,6 +3684,9 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/coffee_shop)
+"aiF" = (
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/damaged_resleeverC)
 "aiG" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
@@ -4248,7 +4251,7 @@
 	icon_state = "ten_death"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/tcomfoyer)
+/area/mine/unexplored/muriki/mountaintopeast)
 "awX" = (
 /obj/effect/floor_decal/corner/purple{
 	dir = 6
@@ -34288,9 +34291,6 @@
 /obj/effect/floor_decal/industrial/warning/dust,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/cargobay_roof)
-"pLd" = (
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/tcomfoyer)
 "pLh" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -111464,7 +111464,7 @@ luR
 luR
 luR
 luR
-pLd
+afe
 awW
 acJ
 ueG
@@ -112057,8 +112057,8 @@ hIk
 hIk
 hIk
 ahX
-afe
-afe
+aiF
+aiF
 ahZ
 ahX
 hIk
@@ -112220,7 +112220,7 @@ hIk
 hIk
 ahX
 aih
-afe
+aiF
 aib
 ahY
 ahW
@@ -112382,7 +112382,7 @@ hIk
 hIk
 ahX
 aii
-afe
+aiF
 aic
 ahX
 hIk
