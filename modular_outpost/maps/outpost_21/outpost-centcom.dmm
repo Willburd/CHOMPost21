@@ -355,8 +355,11 @@
 /turf/simulated/floor/carpet/retro,
 /area/centcom/living)
 "abn" = (
-/obj/machinery/door/airlock/centcom/nameddorm,
-/turf/simulated/floor/wood,
+/obj/machinery/door/airlock/centcom/nameddorm{
+	matchnames = list("Chester Koifuuan");
+	name = "Chester's Residence"
+	},
+/turf/simulated/floor/wood/alt,
 /area/centcom/living)
 "abo" = (
 /obj/structure/window/maintenance_panel{
@@ -1586,16 +1589,10 @@
 	},
 /turf/simulated/floor/wood/sif,
 /area/centcom/living)
-"adE" = (
-/obj/item/toy/sif,
-/turf/simulated/floor/wood,
-/area/centcom/living)
 "adF" = (
-/obj/structure/prop/statue/jumpscare,
-/obj/item/toy/figure/profwho{
-	pixel_y = -11
-	},
-/turf/simulated/floor/wood,
+/obj/structure/table/woodentable,
+/obj/item/modular_computer/laptop,
+/turf/simulated/floor/carpet/oracarpet,
 /area/centcom/living)
 "adG" = (
 /obj/machinery/door/blast/regular{
@@ -5752,12 +5749,333 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/specialty/redspace)
+"amW" = (
+/obj/machinery/door/window/southleft{
+	dir = 1
+	},
+/obj/structure/curtain/open/shower/engineering,
+/turf/simulated/floor/wmarble,
+/area/centcom/living)
+"amX" = (
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/machinery/shower{
+	dir = 8;
+	pixel_x = -5;
+	pixel_y = -6
+	},
+/obj/structure/curtain/open/shower/engineering,
+/obj/structure/handrail{
+	dir = 1
+	},
+/turf/simulated/floor/wmarble,
+/area/centcom/living)
+"amY" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	icon_state = "spline_fancy";
+	dir = 10
+	},
+/obj/structure/table/standard{
+	pixel_x = 0;
+	pixel_y = 0
+	},
+/obj/item/reagent_containers/food/drinks/cans/waterbottle{
+	pixel_x = 0;
+	pixel_y = 7
+	},
+/obj/item/reagent_containers/food/drinks/cans/waterbottle{
+	pixel_x = -6;
+	pixel_y = 7
+	},
+/obj/item/reagent_containers/food/snacks/bageleverything{
+	pixel_x = 4;
+	pixel_y = 8
+	},
+/obj/item/towel{
+	pixel_x = -4;
+	pixel_y = -1
+	},
+/obj/item/reagent_containers/food/snacks/bageleverything{
+	pixel_x = 4;
+	pixel_y = 2
+	},
+/turf/simulated/floor/carpet/turfpack,
+/area/centcom/living)
+"amZ" = (
+/obj/effect/floor_decal/spline/fancy/wood,
+/turf/simulated/floor/carpet/turfpack,
+/area/centcom/living)
+"ana" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 6
+	},
+/turf/simulated/floor/carpet/turfpack,
+/area/centcom/living)
 "anb" = (
 /turf/simulated/shuttle/wall/dark,
 /area/vehicle_interior/heavyarmor_tank_A)
+"anc" = (
+/turf/simulated/floor/carpet/sblucarpet,
+/area/centcom/living)
+"and" = (
+/obj/structure/bookcase,
+/turf/simulated/floor/carpet/sblucarpet,
+/area/centcom/living)
+"ane" = (
+/obj/structure/table/woodentable,
+/obj/item/clothing/ears/earmuffs{
+	pixel_x = -5;
+	pixel_y = 9
+	},
+/obj/item/bedsheet/orange,
+/turf/simulated/floor/carpet/sblucarpet,
+/area/centcom/living)
+"anf" = (
+/obj/structure/bed,
+/obj/item/bedsheet/pillow/white,
+/turf/simulated/floor/carpet/sblucarpet,
+/area/centcom/living)
+"ang" = (
+/obj/effect/floor_decal/steeldecal/steel_decals10{
+	dir = 6
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals10{
+	dir = 5
+	},
+/turf/simulated/floor/wmarble,
+/area/centcom/living)
+"anh" = (
+/turf/simulated/floor/wmarble,
+/area/centcom/living)
+"ani" = (
+/obj/structure/simple_door,
+/turf/simulated/floor/wood/alt,
+/area/centcom/living)
+"anj" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 8
+	},
+/turf/simulated/floor/carpet/turfpack,
+/area/centcom/living)
+"ank" = (
+/turf/simulated/floor/carpet/turfpack,
+/area/centcom/living)
+"anl" = (
+/obj/effect/floor_decal/industrial/bot_outline/yellow,
+/obj/structure/barricade/cutout{
+	pixel_x = 0;
+	pixel_y = 2
+	},
+/turf/simulated/floor/carpet/turfpack,
+/area/centcom/living)
+"anm" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/turfpack,
+/area/centcom/living)
+"ann" = (
+/obj/structure/table/glass,
+/obj/item/towel{
+	color = "#3fc0ea";
+	name = "light blue towel";
+	pixel_x = 3;
+	pixel_y = -2
+	},
+/obj/item/towel{
+	color = "#ff0000";
+	name = "red towel";
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/turf/simulated/floor/wmarble,
+/area/centcom/living)
+"ano" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 9
+	},
+/obj/item/material/sword/foam{
+	pixel_x = -4;
+	pixel_y = 0
+	},
+/obj/item/clothing/suit/imperium_monk{
+	pixel_x = 4;
+	pixel_y = 0
+	},
+/obj/item/clothing/mask/gas/cyborg{
+	pixel_x = 4;
+	pixel_y = 3
+	},
+/turf/simulated/floor/carpet/turfpack,
+/area/centcom/living)
+"anp" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 1
+	},
+/turf/simulated/floor/carpet/turfpack,
+/area/centcom/living)
+"anq" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 1
+	},
+/obj/structure/handrail,
+/turf/simulated/floor/carpet/turfpack,
+/area/centcom/living)
+"anr" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 5
+	},
+/obj/structure/sign/clock{
+	pixel_y = 32
+	},
+/turf/simulated/floor/carpet/turfpack,
+/area/centcom/living)
+"ans" = (
+/obj/structure/closet/cabinet,
+/turf/simulated/floor/carpet/sblucarpet,
+/area/centcom/living)
+"ant" = (
+/obj/structure/bed/pillowpile/orange,
+/obj/item/toy/plushie/borgplushie/medihound,
+/turf/simulated/floor/carpet/sblucarpet,
+/area/centcom/living)
+"anu" = (
+/obj/structure/simple_door,
+/turf/simulated/floor/wmarble,
+/area/centcom/living)
+"anv" = (
+/obj/machinery/washing_machine,
+/turf/simulated/floor/wmarble,
+/area/centcom/living)
+"anw" = (
+/obj/structure/table/glass,
+/obj/item/storage/laundry_basket,
+/turf/simulated/floor/wmarble,
+/area/centcom/living)
+"anx" = (
+/obj/structure/table/marble,
+/obj/machinery/microwave,
+/turf/simulated/floor/wood/alt,
+/area/centcom/living)
+"any" = (
+/obj/structure/table/marble,
+/obj/structure/sink/countertop{
+	dir = 1;
+	pixel_x = 0;
+	pixel_y = -4
+	},
+/obj/item/reagent_containers/food/drinks/glass2/mug{
+	pixel_x = -7;
+	pixel_y = 13
+	},
+/turf/simulated/floor/wood/alt,
+/area/centcom/living)
+"anz" = (
+/obj/structure/closet/secure_closet/freezer/fridge/empty,
+/turf/simulated/floor/wood/alt,
+/area/centcom/living)
+"anA" = (
+/turf/simulated/floor/wood/alt,
+/area/centcom/living)
+"anB" = (
+/obj/structure/sink{
+	icon_state = "sink";
+	dir = 8;
+	pixel_x = -12;
+	pixel_y = 2
+	},
+/obj/structure/mirror{
+	dir = 4;
+	pixel_x = -28
+	},
+/turf/simulated/floor/wmarble,
+/area/centcom/living)
 "anC" = (
 /turf/simulated/shuttle/wall/dark,
 /area/specialty/redspace)
+"anD" = (
+/obj/structure/table/glass,
+/obj/item/soap/purple_soap,
+/turf/simulated/floor/wmarble,
+/area/centcom/living)
+"anE" = (
+/obj/structure/table/marble,
+/obj/item/storage/box/donkpockets/berry{
+	pixel_x = -5;
+	pixel_y = -3
+	},
+/obj/item/reagent_containers/food/drinks/cans/root_beer{
+	pixel_x = 8;
+	pixel_y = -5
+	},
+/turf/simulated/floor/wood/alt,
+/area/centcom/living)
+"anF" = (
+/obj/structure/table/woodentable,
+/obj/effect/floor_decal/spline/fancy/wood{
+	icon_state = "spline_fancy";
+	dir = 10
+	},
+/obj/item/book{
+	pixel_x = -8;
+	pixel_y = 4
+	},
+/obj/item/paper{
+	pixel_x = 7;
+	pixel_y = 1
+	},
+/turf/simulated/floor/carpet/oracarpet,
+/area/centcom/living)
+"anG" = (
+/obj/structure/bed/chair/office/dark{
+	dir = 8
+	},
+/obj/effect/floor_decal/spline/fancy/wood,
+/turf/simulated/floor/carpet/oracarpet,
+/area/centcom/living)
+"anH" = (
+/obj/structure/toilet{
+	dir = 4
+	},
+/turf/simulated/floor/wmarble,
+/area/centcom/living)
+"anI" = (
+/obj/structure/closet/secure_closet/medical_wall{
+	pixel_y = 32
+	},
+/obj/item/storage/firstaid/regular,
+/obj/item/storage/pill_bottle/methylphenidate,
+/obj/item/flashlight/glowstick/orange,
+/turf/simulated/floor/wmarble,
+/area/centcom/living)
+"anJ" = (
+/obj/structure/sign/clock{
+	pixel_y = 32
+	},
+/turf/simulated/floor/wood/alt,
+/area/centcom/living)
+"anK" = (
+/obj/structure/coatrack,
+/turf/simulated/floor/wood/alt,
+/area/centcom/living)
+"anL" = (
+/obj/structure/table/woodentable,
+/obj/item/flashlight/lamp/green{
+	pixel_x = -5;
+	pixel_y = 11
+	},
+/obj/item/reagent_containers/food/drinks/greentea{
+	pixel_x = 5;
+	pixel_y = 8
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 8
+	},
+/obj/item/dice/d12,
+/turf/simulated/floor/carpet/oracarpet,
+/area/centcom/living)
 "anZ" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 6
@@ -14698,12 +15016,6 @@
 /obj/structure/reagent_dispensers/water_cooler/full,
 /turf/simulated/floor/wood,
 /area/specialty/redspace)
-"fjj" = (
-/obj/structure/sign/calendar{
-	pixel_y = 32
-	},
-/turf/simulated/floor/wood,
-/area/centcom/living)
 "fjl" = (
 /obj/structure/bed/chair/bay/shuttle{
 	dir = 1
@@ -15611,10 +15923,8 @@
 /turf/simulated/floor/carpet/oracarpet,
 /area/centcom/living)
 "fHu" = (
-/obj/structure/sign/clock{
-	pixel_y = 32
-	},
-/turf/simulated/floor/wood,
+/obj/structure/undies_wardrobe,
+/turf/simulated/floor/carpet/sblucarpet,
 /area/centcom/living)
 "fHw" = (
 /obj/machinery/door/firedoor/glass,
@@ -52107,15 +52417,15 @@ aas
 aas
 aas
 aas
-aas
-aas
-aas
-aas
-aas
-aas
-aas
-aas
-aas
+vCT
+vCT
+vCT
+vCT
+vCT
+vCT
+vCT
+vCT
+vCT
 hIA
 hIA
 hIA
@@ -52269,15 +52579,15 @@ aas
 xAJ
 xxV
 tJx
-aas
-oLX
-aGk
-pcA
-aaw
-xpk
-mgz
-qQV
-aas
+vCT
+anH
+anB
+anh
+anu
+anh
+ang
+amW
+vCT
 hIA
 hIA
 hIA
@@ -52431,15 +52741,15 @@ aas
 xAJ
 xxV
 tJx
-aas
-mgz
-mgz
-mgz
-liv
-ppO
-mgz
-qSV
-aas
+vCT
+anI
+anh
+anv
+byP
+ann
+anh
+amX
+vCT
 hIA
 hIA
 hIA
@@ -52593,15 +52903,15 @@ aas
 xAJ
 xxV
 tJx
-aas
-mgz
-mgz
-asb
-aaw
-aaw
-aaw
-aaw
-aas
+vCT
+anh
+anD
+anw
+byP
+byP
+ani
+byP
+vCT
 hIA
 hIA
 hIA
@@ -52755,15 +53065,15 @@ aas
 uKi
 pXX
 fEr
-aas
-aaw
-liv
-aaw
-aaw
-aSx
-aSx
-aSx
-aas
+vCT
+ani
+byP
+byP
+byP
+ano
+anj
+amY
+vCT
 hIA
 hIA
 hIA
@@ -52917,15 +53227,15 @@ aas
 xAJ
 xxV
 tJx
-aas
-adE
-aSx
-aSx
-aaw
-aSx
-aSx
-aSx
-aas
+vCT
+anA
+anE
+anx
+byP
+anp
+ank
+amZ
+vCT
 hIA
 hIA
 hIA
@@ -53079,15 +53389,15 @@ aas
 xAJ
 xxV
 tJx
-aas
-aSx
-aSx
-aSx
-aaw
-aSx
-aSx
-aSx
-aas
+vCT
+anJ
+anA
+any
+byP
+anq
+anl
+amZ
+vCT
 hIA
 hIA
 hIA
@@ -53241,15 +53551,15 @@ aas
 xAJ
 xxV
 tJx
-aas
-aSx
-aSx
-aSx
-aaw
-aSx
-aSx
-aSx
-aas
+vCT
+anK
+anA
+anz
+byP
+anr
+anm
+ana
+vCT
 hIA
 hIA
 hIA
@@ -53404,14 +53714,14 @@ xxV
 xxV
 xxV
 abn
-aSx
-aSx
-aSx
-gqN
-aSx
-aSx
-aSx
-aas
+anA
+anA
+anA
+byP
+ans
+anc
+anc
+vCT
 hIA
 hIA
 hIA
@@ -53565,15 +53875,15 @@ aas
 xAJ
 xxV
 tJx
-aas
-aSx
-aSx
-aSx
-aaw
+vCT
+anA
+anA
+anA
+byP
 fHu
-aSx
-aSx
-aas
+anc
+and
+vCT
 hIA
 hIA
 hIA
@@ -53727,15 +54037,15 @@ aas
 xAJ
 xxV
 tJx
-aas
-aSx
-aSx
-aSx
-aaw
-fjj
-aSx
-aSx
-aas
+vCT
+anL
+anF
+anA
+ani
+anc
+anc
+ane
+vCT
 hIA
 hIA
 hIA
@@ -53889,15 +54199,15 @@ aas
 xAJ
 xxV
 tJx
-aas
+vCT
 adF
-aSx
-aSx
-aaw
-aSx
-aSx
-aSx
-aas
+anG
+anA
+byP
+ant
+anc
+anf
+vCT
 hIA
 hIA
 hIA

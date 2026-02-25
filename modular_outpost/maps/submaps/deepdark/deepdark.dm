@@ -97,6 +97,7 @@
 #include "stowaway_C.dmm"
 #include "stowaway_D.dmm"
 #include "stowaway_E.dmm"
+#include "sinkhole_A.dmm"
 #endif
 
 /datum/map_template/outpost21/muriki/caves_deepdark
@@ -890,6 +891,13 @@
 	allow_duplicates = FALSE
 	discard_prob = 20
 	cost = 40
+
+/datum/map_template/outpost21/muriki/caves_deepdark_huge/sinkhole_A
+	name = "Sinkhole A"
+	desc = "An unstable section of cavern waiting to collapse."
+	mappath = "modular_outpost/maps/submaps/deepdark/sinkhole_A.dmm"
+	discard_prob = 40
+	cost = 30
 
 //////////////////////////////////////////////////////////////
 // Area definitions

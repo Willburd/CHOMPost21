@@ -1,8 +1,8 @@
 // For changeling detection
 /datum/decl/chemical_reaction/distilling/anti_changeling
-	name = "Distilling Water From Blood"
+	name = "Burning Blood"
 	id = "distill_antichangeling"
-	result = REAGENT_ID_WATER
+	result = REAGENT_ID_CARBON
 	inhibitors = list(REAGENT_ID_SUGAR = 0.1, REAGENT_ID_PHORON = 0.1, REAGENT_ID_BIOMASS = 0.1) // or it would block biomass
 	required_reagents = list(REAGENT_ID_BLOOD = 1)
 	temp_range = list(T20C + 80, T20C + 330)

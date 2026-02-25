@@ -770,6 +770,22 @@
 	qdel(ghost)
 	. = ..()
 
+// turn off tcomms
+/datum/station_haunt/tcomms_sabotage
+	name = "Tcomms Sabotage"
+
+/datum/station_haunt/tcomms_sabotage/fire()
+	for(var/obj/machinery/power/apc/A in GLOB.apcs)
+		if(istype(A.area, /area/comms))
+			A.locked = FALSE
+			A.toggle_breaker()
+			A.visible_message("clicks","clicks")
+			SSmotiontracker.ping(A,100)
+			SShaunting.reduce_world_haunt() // Cause this is pretty annoying
+		end()
+		return
+	end()
+
 //////////////////////////////////////////////////////////////////////////////////////
 // HAUNTING ENITIES, Things that go bump in the night!
 //////////////////////////////////////////////////////////////////////////////////////
