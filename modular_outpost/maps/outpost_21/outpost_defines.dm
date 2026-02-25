@@ -242,6 +242,7 @@
 										/area/muriki/lowerelev,
 										/area/muriki/lowerevac,
 										/area/muriki/crystal,
+										/area/rnd/xenobiology/lost,
 										/area/maintenance/damaged_resleeverA,
 										/area/maintenance/damaged_resleeverB,
 										/area/security/brig_hole,
