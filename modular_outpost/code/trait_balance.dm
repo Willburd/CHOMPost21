@@ -45,6 +45,7 @@
 
 /datum/trait/positive/melee_attack
 	cost = 0 //Base 1: Literally every species except prommies and humans has this by default, no real advantage in combat. It's fair to have it at 0
+	category = TRAIT_TYPE_NEUTRAL
 
 /datum/trait/positive/melee_attack_fangs
 	cost = 1 //Base 2: Balances with the above.
@@ -109,6 +110,7 @@
 
 /datum/trait/positive/sonar
 	cost = 0 //This trait is el barbagio. It needs to be free.
+	category = TRAIT_TYPE_NEUTRAL
 
 /datum/trait/positive/toxin_gut
 	cost = 4 //Immunities should not be cheap.
