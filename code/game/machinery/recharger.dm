@@ -17,7 +17,16 @@ GLOBAL_LIST_INIT(allowed_recharger_devices, list(
 	/obj/item/personal_shield_generator,
 	/obj/item/gun/projectile/cell_loaded,
 	/obj/item/ammo_magazine/cell_mag,
-	/obj/item/medigun_backpack
+	/obj/item/medigun_backpack,
+	// Outpost 21 edit begin - Device cell powered vision goggles
+	/obj/item/clothing/glasses/meson,
+	/obj/item/clothing/glasses/graviton,
+	/obj/item/clothing/glasses/thermal,
+	/obj/item/clothing/glasses/material,
+	/obj/item/clothing/glasses/night,
+	/obj/item/clothing/glasses/omni,
+	/obj/item/clothing/glasses/omnihud/eng/meson,
+	// Outpost 21 edit end
 	))
 
 GLOBAL_LIST_INIT(allowed_wallcharger_devices, list(
