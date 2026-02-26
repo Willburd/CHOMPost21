@@ -4,6 +4,12 @@
 	icon = 'icons/obj/flora/rocks.dmi'
 	icon_state = "basalt2"
 
+// Outpost 21 edit(port) begin - Make rocks climbable
+/obj/structure/prop/rock/Initialize(mapload)
+	. = ..()
+	AddElement(/datum/element/climbable)
+// Outpost 21 edit(port) end
+
 /obj/structure/prop/rock/sharp
 	icon_state = "basalt1"
 
