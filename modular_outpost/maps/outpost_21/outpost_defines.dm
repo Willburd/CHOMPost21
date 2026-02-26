@@ -178,6 +178,7 @@
 										/area/rnd/xenobiology/lost,
 										/area/maintenance/damaged_resleeverA,
 										/area/maintenance/damaged_resleeverB,
+										/area/maintenance/damaged_resleeverC,
 										/area/security/brig_hole,
 										/area/muriki/crew/bunker,
 										// Shadekin exclusions
@@ -245,6 +246,7 @@
 										/area/rnd/xenobiology/lost,
 										/area/maintenance/damaged_resleeverA,
 										/area/maintenance/damaged_resleeverB,
+										/area/maintenance/damaged_resleeverC,
 										/area/security/brig_hole,
 										// Shadekin exclusions
 										/area/maintenance/shadekin_dark/waste,

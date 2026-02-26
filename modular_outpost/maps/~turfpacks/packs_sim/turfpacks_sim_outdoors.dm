@@ -468,3 +468,15 @@
 	nitrogen = TURFPACK_N2
 	phoron = TURFPACK_PHORON
 	carbon_dioxide = TURFPACK_CO2
+/turf/simulated/floor/water/deep/turfpack/TURFPACK_PACKNAME
+	temperature = TURFPACK_TEMP
+	oxygen = TURFPACK_O2
+	nitrogen = TURFPACK_N2
+	phoron = TURFPACK_PHORON
+	carbon_dioxide = TURFPACK_CO2
+/turf/simulated/floor/water/deep/indoors/turfpack/TURFPACK_PACKNAME
+	temperature = TURFPACK_TEMP
+	oxygen = TURFPACK_O2
+	nitrogen = TURFPACK_N2
+	phoron = TURFPACK_PHORON
+	carbon_dioxide = TURFPACK_CO2

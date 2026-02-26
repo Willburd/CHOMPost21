@@ -1846,7 +1846,8 @@
 	set category = "Abilities.General"
 	set desc = "Switch your horizontal direction while prone."
 
-	if(stat || paralysis || weakened || stunned || world.time < last_special)
+	// if(stat || paralysis || weakened || stunned || world.time < last_special)
+	if(stat || paralysis || world.time < last_special) // Outpost 21 edit - Less restrictive direction flipping
 		to_chat(src, span_warning("You can't do that in your current state."))
 		return
 

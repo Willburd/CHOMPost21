@@ -80,13 +80,12 @@
 
 /datum/element/sellable/food_snack/sell_error(obj/source)
 	var/obj/mecha/exo = source
+	exo.wreckage = null // Exo sold, remove it's lootpile on qdel, or we'll have issues in cargo....
 	var/check_val = calculate_sell_value(source)
 	if(!check_val)
 		if((exo.health / exo.maxhealth) < 0.5)
 			return "Error: The unit is too damaged to sell, and will be used as scrap. Payment rendered null under terms of agreement."
 		return "Error: The unit in its current condition has no resale value at all, and will be used as scrap. Payment rendered null under terms of agreement."
-	// Exo sold, remove it's lootpile on qdel, or we'll have issues in cargo....
-	exo.wreckage = null
 	return null
 
 /datum/element/sellable/mecha/calculate_sell_value(obj/source)

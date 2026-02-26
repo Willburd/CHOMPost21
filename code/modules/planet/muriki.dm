@@ -600,6 +600,8 @@ var/datum/planet/muriki/planet_muriki = null
 	indoor_sounds_type = /datum/looping_sound/weather/rainindoors
 	color_grading = COLORTINT_DARK
 
+	hazardous_weather = TRUE
+
 /datum/weather/muriki/downpour/process_effects()
 	..()
 	handle_lightning()
@@ -659,6 +661,8 @@ var/datum/planet/muriki/planet_muriki = null
 	outdoor_sounds_type = /datum/looping_sound/weather/rainextreme
 	indoor_sounds_type = /datum/looping_sound/weather/rainindoors
 	color_grading = COLORTINT_DARK
+
+	hazardous_weather = TRUE
 
 /datum/weather/muriki/downpourfatal/process_effects()
 	..()
@@ -866,6 +870,8 @@ var/datum/planet/muriki/planet_muriki = null
 	indoor_sounds_type = /datum/looping_sound/weather/inside_blizzard
 	color_grading = COLORTINT_COLD
 
+	hazardous_weather = TRUE
+
 /datum/weather/muriki/blizzard/planet_effect(mob/living/L)
 	if(L.z in holder.our_planet.expected_z_levels)
 		var/turf/T = get_turf(L)
@@ -957,6 +963,7 @@ var/datum/planet/muriki/planet_muriki = null
 	transition_messages = list(
 		"The blizzard's wind chills you to your bones."
 	)
+	hazardous_weather = TRUE
 
 /////////////////////////////////////////////////////////////////////////////////////////
 // EVIL DARKNESS
@@ -977,6 +984,7 @@ var/datum/planet/muriki/planet_muriki = null
 	transition_messages = list(
 		"Everything around you seems to stop, it's quiet enough to hear the air creaking under the weight of something you cannot see."
 	)
+	hazardous_weather = TRUE
 
 
 /////////////////////////////////////////////////////////////////////////////////////////

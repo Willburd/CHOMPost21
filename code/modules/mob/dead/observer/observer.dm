@@ -855,8 +855,8 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	set desc = "Toggles your ability to see lighting overlays, and the darkness they create."
 	set category = "Ghost.Settings"
 
-	var/static/list/darkness_names = list("normal darkness levels", "30% darkness removed", "70% darkness removed", "no darkness")
-	var/static/list/darkness_levels = list(255, 178, 76, 0)
+	var/static/list/darkness_names = list("normal darkness levels", "25% darkness removed", "50% darkness removed", "75% darkness removed", "no darkness") // Outpost 21 edit - More darkness levels
+	var/static/list/darkness_levels = list(255, 192, 128, 64, 0) // Outpost 21 edit - More darkness levels
 
 	var/index = darkness_levels.Find(lighting_alpha)
 	if(!index || index >= darkness_levels.len)

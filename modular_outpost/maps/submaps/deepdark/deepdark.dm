@@ -909,6 +909,7 @@
 	flags = AREA_BLOCK_GHOST_SIGHT | AREA_FORBID_EVENTS
 	haunted = TRUE
 	color_grading = COLORTINT_UNDERDARK
+	ambience = AMBIENCE_UNDERDARK
 /area/mine/unexplored/muriki/cave/deepdark
 	name = "\improper Muriki Underground"
 	sound_env = TUNNEL_ENCLOSED
@@ -917,13 +918,14 @@
 	flags = AREA_BLOCK_GHOST_SIGHT | AREA_FORBID_EVENTS
 	haunted = TRUE
 	color_grading = COLORTINT_UNDERDARK
+	ambience = AMBIENCE_UNDERDARK
 
 /area/submap/outpost21/cave_liminal_A
 	name = "\improper Come Closer"
 	icon_state = "red2"
 	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS | AREA_SECRET_NAME | AREA_BLOCK_GHOST_SIGHT
 	sound_env = SOUND_ENVIRONMENT_PSYCHOTIC
-	ambience = AMBIENCE_OTHERWORLDLY
+	ambience = AMBIENCE_UNDERDARK
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	haunted = TRUE
 	color_grading = COLORTINT_OMEN
@@ -949,7 +951,7 @@
 	icon_state = "red2"
 	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS | AREA_SECRET_NAME | AREA_BLOCK_GHOST_SIGHT
 	sound_env = SOUND_ENVIRONMENT_PSYCHOTIC
-	ambience = AMBIENCE_OTHERWORLDLY
+	ambience = AMBIENCE_UNDERDARK
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	haunted = TRUE
 	color_grading = COLORTINT_OMEN
@@ -959,7 +961,7 @@
 	icon_state = "red2"
 	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS | AREA_SECRET_NAME | AREA_BLOCK_GHOST_SIGHT
 	sound_env = SOUND_ENVIRONMENT_CAVE
-	ambience = AMBIENCE_OTHERWORLDLY
+	ambience = AMBIENCE_UNDERDARK
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	haunted = TRUE
 	color_grading = COLORTINT_MEAT
@@ -1041,7 +1043,7 @@
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	icon_state = "blue"
 	sound_env = SOUND_ENVIRONMENT_ARENA
-	ambience = AMBIENCE_GENERIC
+	ambience = AMBIENCE_UNDERDARK
 	use_emergency_overlay = FALSE
 	flags = AREA_BLOCK_GHOST_SIGHT
 	haunted = TRUE
