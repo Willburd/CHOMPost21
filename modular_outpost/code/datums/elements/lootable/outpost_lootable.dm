@@ -24,7 +24,8 @@ GLOBAL_VAR_INIT(spawned_theta,FALSE) // Only one a ROUND
 		/obj/item/research_sample/rare,
 		/obj/item/dnainjector/random_labeled,
 		/obj/item/dnainjector/random,
-		/obj/item/clothing/accessory/bodycam/yobro
+		/obj/item/clothing/accessory/bodycam/yobro,
+		/obj/random/scavmark_paper,
 	)
 	var/static/list/outpost_rare_table = list(
 		/obj/item/reagent_containers/glass/beaker/wheymax,

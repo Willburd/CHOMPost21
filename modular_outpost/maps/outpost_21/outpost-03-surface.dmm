@@ -10669,7 +10669,8 @@
 	pixel_x = -32
 	},
 /turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
+	ignore_mapgen = 1;
+	outdoors = 0
 	},
 /area/rnd/hallway/main)
 "atu" = (
@@ -15179,7 +15180,7 @@
 /area/medical/virology/prep)
 "aER" = (
 /obj/effect/auto_crayon{
-	icon_state = "ten_death"
+	icon_state = "nine_removal"
 	},
 /turf/simulated/floor/redgrid/off/turfpack/muriki,
 /area/muriki/processor/euth)
@@ -16287,11 +16288,6 @@
 /obj/effect/landmark/step_trap,
 /turf/simulated/floor/outdoors/mud/turfpack/muriki,
 /area/muriki/grounds/civ)
-"aJn" = (
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
-/area/muriki/grounds/tramborder)
 "aJo" = (
 /obj/structure/flora/mushroom,
 /turf/simulated/floor/outdoors/mud/turfpack/muriki,
@@ -16935,12 +16931,6 @@
 "aLO" = (
 /obj/structure/prop/rock/watersharp,
 /turf/simulated/floor/water/acidic/deep/turfpack/muriki,
-/area/mine/explored/muriki/mountainnorth)
-"aLP" = (
-/mob/living/simple_mob/vore/alienanimals/teppi,
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
 /area/mine/explored/muriki/mountainnorth)
 "aLQ" = (
 /obj/effect/zone_divider,
@@ -21698,7 +21688,8 @@
 	dir = 8
 	},
 /turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
+	ignore_mapgen = 1;
+	outdoors = 0
 	},
 /area/rnd/hallway/main)
 "bTD" = (
@@ -55785,7 +55776,8 @@
 /area/muriki/yard)
 "mHe" = (
 /turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
+	ignore_mapgen = 1;
+	outdoors = 0
 	},
 /area/rnd/hallway/main)
 "mHo" = (
@@ -56353,7 +56345,8 @@
 	dir = 1
 	},
 /turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
+	ignore_mapgen = 1;
+	outdoors = 0
 	},
 /area/rnd/hallway/main)
 "mUh" = (
@@ -59042,7 +59035,8 @@
 "nJm" = (
 /obj/item/geiger/wall/west,
 /turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
+	ignore_mapgen = 1;
+	outdoors = 0
 	},
 /area/rnd/hallway/main)
 "nJE" = (
@@ -76861,11 +76855,6 @@
 	},
 /turf/simulated/floor/tiled/freezer/cold,
 /area/muriki/crew/kitchenfreezer)
-"tDO" = (
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
-/area/muriki/grounds/sci)
 "tDT" = (
 /obj/machinery/light,
 /turf/simulated/floor/glass/reinforced,
@@ -88427,11 +88416,6 @@
 /obj/item/geiger/wall/south,
 /turf/simulated/floor/tiled/milspec,
 /area/security/armoury)
-"xbP" = (
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
-/area/mine/explored/muriki/mountainnorth)
 "xck" = (
 /obj/effect/floor_decal/corner/brown{
 	dir = 10
@@ -131805,7 +131789,7 @@ hHA
 kDA
 tHY
 hHA
-aJn
+aHB
 uCF
 aqr
 aqr
@@ -132129,8 +132113,8 @@ maY
 tFQ
 vEB
 maY
-aJn
-aJn
+aHB
+aHB
 aHB
 eOf
 aHB
@@ -141961,14 +141945,14 @@ aKW
 aKW
 ekA
 aKW
-aLP
+aLE
 aKW
 ekA
 aJY
 aJY
 tjQ
 aJY
-tDO
+aJY
 fjo
 fjo
 fjo
@@ -142120,16 +142104,16 @@ aiP
 aiP
 aiP
 aKW
-xbP
-xbP
-xbP
 aKW
-xbP
-xbP
-tDO
-tDO
-tDO
-tDO
+aKW
+aKW
+aKW
+aKW
+aKW
+aJY
+aJY
+aJY
+aJY
 aJY
 mlP
 vlf
@@ -142281,18 +142265,18 @@ oeQ
 aiP
 aiP
 aiP
-xbP
-xbP
-xbP
-xbP
-xbP
-aLP
-xbP
-tDO
-tDO
-tDO
-tDO
-tDO
+aKW
+aKW
+aKW
+aKW
+aKW
+aLE
+aKW
+aJY
+aJY
+aJY
+aJY
+aJY
 gge
 vlf
 mqP
@@ -142443,18 +142427,18 @@ oeQ
 aiP
 aiP
 aiP
-xbP
 aKW
-xbP
-aLP
-xbP
-xbP
+aKW
+aKW
+aLE
+aKW
+aKW
 aKW
 aJY
 aJY
-tDO
-tDO
-tDO
+aJY
+aJY
+aJY
 fTw
 vlf
 mqP
@@ -142615,7 +142599,7 @@ ekA
 aJY
 aJY
 tjQ
-tDO
+aJY
 aoi
 hjE
 hjE
