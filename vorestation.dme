@@ -5759,6 +5759,7 @@
 #include "modular_outpost\code\game\objects\structures\fitness.dm"
 #include "modular_outpost\code\game\objects\structures\hookah.dm"
 #include "modular_outpost\code\game\objects\structures\residential_teleporter.dm"
+#include "modular_outpost\code\game\objects\structures\rocks.dm"
 #include "modular_outpost\code\game\objects\structures\signs.dm"
 #include "modular_outpost\code\game\objects\structures\watercloset.dm"
 #include "modular_outpost\code\game\objects\structures\crate_lockers\_closets_appearance_definitions.dm"
