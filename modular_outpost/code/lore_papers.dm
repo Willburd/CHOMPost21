@@ -1,3 +1,14 @@
+// Randomized spawner for map loot, and because adding every paper one by one to the loot table would pack it to hell and back. Have fun adding to maint/bridge
+/obj/random/scavmark_paper
+	name = "random underdark treasure"
+	desc = "Random treasure loot for Underdark."
+	icon = 'icons/obj/storage.dmi'
+	icon_state = "cashbag"
+
+/obj/random/scavmark_paper/item_to_spawn()
+	return pick(subtypesof(/obj/item/paper/scavmark))
+
+
 /obj/item/paper/scavmark
 	name = "Scav paper"
 	info = "white stuff here<BR>\na newline"
