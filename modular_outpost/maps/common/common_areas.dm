@@ -397,11 +397,13 @@
 	name = "\improper The Yard"
 	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki
 	icon_state = "yelwhicir"
+	ambience = AMBIENCE_MURIKIOUTSIDE
 
 /area/muriki/station/trawler_dock
 	name = "\improper Mining trawler Landing Pad"
 	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki
 	icon_state = "orablasqu"
+	ambience = AMBIENCE_MURIKIOUTSIDE
 
 /area/maintenance/cargoupper
 	name = "Cargo Roof Maintenance"
@@ -1117,6 +1119,7 @@
 	music = 'sound/ambience/ambiatm1.ogg'
 	flags = AREA_FLAG_IS_NOT_PERSISTENT
 	outdoors = TRUE
+	ambience = AMBIENCE_MURIKIOUTSIDE
 
 /area/muriki/grounds/graveyard
 	name = "\improper Facility Graveyard"
@@ -1195,12 +1198,14 @@
 	sound_env = SOUND_ENVIRONMENT_MOUNTAINS
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	music = 'sound/ambience/ambiatm1.ogg'
+	ambience = AMBIENCE_MURIKIOUTSIDE
 
 /area/mine/unexplored/muriki/surface
 	name = "\improper Facility Grounds"
 	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki
 	sound_env = SOUND_ENVIRONMENT_MOUNTAINS
 	music = 'sound/ambience/ambiatm1.ogg'
+	ambience = AMBIENCE_MURIKIOUTSIDE
 
 /area/mine/explored/muriki/cave
 	name = "\improper Facility Tunnels"
@@ -1208,6 +1213,7 @@
 	sound_env = TUNNEL_ENCLOSED
 	flags = AREA_BLOCK_GHOST_SIGHT | AREA_FLAG_IS_NOT_PERSISTENT
 	color_grading = COLORTINT_DARK
+	ambience = AMBIENCE_MURIKICAVE
 
 /area/mine/unexplored/muriki/cave
 	name = "\improper Muriki Caverns"
@@ -1215,13 +1221,16 @@
 	sound_env = TUNNEL_ENCLOSED
 	flags = AREA_BLOCK_GHOST_SIGHT | AREA_FLAG_IS_NOT_PERSISTENT
 	color_grading = COLORTINT_DARK
+	ambience = AMBIENCE_MURIKICAVE
 
 //Subdivided areas because holy crap zas hates our map.
 //Basement. Dept.
 /area/mine/explored/muriki
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
+	ambience = AMBIENCE_MURIKICAVE
 /area/mine/unexplored/muriki
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
+	ambience = AMBIENCE_MURIKICAVE
 
 /area/mine/explored/muriki/cave/eng
 	name = "\improper Facility Engineering Tunnels"
@@ -1484,6 +1493,7 @@
 	outdoors = TRUE
 	dynamic_lighting = FALSE // Disable sky light
 	base_turf = /turf/simulated/open/muriki
+	ambience = AMBIENCE_MURIKIOUTSIDE
 
 /area/muriki/skyline/east
 	name = "\improper Eastern Facility Airspace"
@@ -1513,6 +1523,7 @@
 	flags = AREA_BLOCK_GHOST_SIGHT|AREA_FLAG_IS_NOT_PERSISTENT
 	icon_state = "dk_yellow"
 	color_grading = COLORTINT_UNDERDARK
+	ambience = AMBIENCE_UNDERDARK
 
 /area/mine/explored/muriki/liminaltoobs
 	name = "\improper Disposal Return Maintenance"
@@ -1521,6 +1532,7 @@
 	flags = AREA_BLOCK_GHOST_SIGHT|AREA_FLAG_IS_NOT_PERSISTENT
 	icon_state = "dk_yellow"
 	color_grading = COLORTINT_DARK
+	ambience = AMBIENCE_UNDERDARK
 
 //Moon riiiiver
 /area/mine/explored/muriki/river
@@ -2021,6 +2033,7 @@
 	music = 'sound/ambience/ambiatm1.ogg'
 	base_turf = /turf/simulated/open
 	outdoors = TRUE
+	ambience = AMBIENCE_MURIKIOUTSIDE
 
 /area/muriki/rooftop/engineering
 	name = "\improper Engineering Roof"
@@ -2886,7 +2899,7 @@
 	icon_state = "red2"
 	flags = AREA_FORBID_EVENTS | AREA_BLOCK_GHOST_SIGHT | RAD_SHIELDED
 	sound_env = SOUND_ENVIRONMENT_HANGAR
-	ambience = AMBIENCE_FOREBODING
+	ambience = AMBIENCE_UNDERDARK
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	color_grading = COLORTINT_DARK
 
@@ -2981,7 +2994,7 @@
 	icon = 'icons/turf/areas.dmi'
 	icon_state = "blue"
 	flags = /area/specialty/redspace::flags
-	ambience = AMBIENCE_FOREBODING
+	ambience = AMBIENCE_UNDERDARK
 	music = 'sound/ambience/ambisin1.ogg'
 	haunted = TRUE
 	color_grading = COLORTINT_OMEN

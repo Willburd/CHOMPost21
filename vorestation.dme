@@ -5892,6 +5892,7 @@
 #include "modular_outpost\code\modules\phorochemistry\lockers.dm"
 #include "modular_outpost\code\modules\phorochemistry\reactions.dm"
 #include "modular_outpost\code\modules\phorochemistry\reagents.dm"
+#include "modular_outpost\code\modules\planet\weather.dm"
 #include "modular_outpost\code\modules\player_tips\player_tips_list.dm"
 #include "modular_outpost\code\modules\power\lighting.dm"
 #include "modular_outpost\code\modules\power\confinement\beam_collector.dm"

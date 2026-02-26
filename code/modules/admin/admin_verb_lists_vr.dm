@@ -409,6 +409,7 @@ GLOBAL_LIST_INIT(admin_verbs_event_manager, list(
 	/datum/admins/proc/lock_planet_light, // Outpost 21 edit - Light level lock
 	/datum/admins/proc/add_department_goal, // Outpost 21 edit - Department goals
 	/datum/admins/proc/remove_department_goal, // Outpost 21 edit - Department goals
+	/datum/admins/proc/weather_warning_siren, // Outpost 21 edit - weather warning siren
 	// /client/proc/base_all_turfs,
 	/client/proc/modify_event_collector,
 	/client/proc/induce_malfunction,
