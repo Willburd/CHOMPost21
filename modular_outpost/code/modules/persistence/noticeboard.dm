@@ -135,10 +135,10 @@
 
 /obj/structure/noticeboard/stowaway/Initialize(mapload)
 	var/obj/item/paper/P
-	ADD_NOTICE("Drawing: Traps","<br>On the paper is a crudely drawn image of a raptor-like creature. They appear to be kneeling down and inspecting in front of them. <br>In front of them is a small box with a laser coming from it, a bear trap, and a frayed wire sparking angrily. The raptor appears to be drawing an 'X' on the floor",null)
-	ADD_NOTICE("Drawing: Walls","<br>On the paper is a crudely drawn image of a raptor-like creature. The creature appears to be drawing an arrow on the ground, pointing towards a section of wall they're pushing back into place. The wall section appears to be dislodged somehow.",null)
+	ADD_NOTICE("Drawing: Danger","<br>On the paper is a crudely drawn image of a raptor-like creature. They appear to be kneeling down and inspecting in front of them. <br>In front of them is a small box with a laser coming from it, a bear trap, and a frayed wire sparking angrily. The raptor appears to be drawing an 'X' on the floor",null)
+	ADD_NOTICE("Drawing: Pointer","<br>On the paper is a crudely drawn image of a raptor-like creature. The creature appears to be drawing an arrow on the ground, pointing towards a section of wall they're pushing back into place. The wall section appears to be dislodged somehow.",null)
 	ADD_NOTICE("Drawing: Borgs","<br>On the paper is a crudely drawn image of a raptor-like creature, and a dogborg. The dogborg looms in the distance with a menacing aura, the raptor is running and hiding from the dogborg. Images of 'X' and skulls surround the borg.",null)
-	ADD_NOTICE("Drawing: Menace","<br>On the paper is a horrifying visage of a ghoulish face. The surrounding paper is scribbled with attempts of drawing... something. The drawing seems to radiate menace, but you're not even sure what it's trying to warn you of.",null)
+	ADD_NOTICE("Drawing: Menace","<br>On the paper is a horrifying visage of a ghoulish face. The surrounding paper is scribbled with attempts of drawing... something. The drawing seems to radiate an unnatural menace, but you're not even sure what it's trying to warn you of.",null)
 	ADD_NOTICE("Drawing: Rest","<br>On the paper is a crudely drawn image of a raptor-like creature, they appear to be laying in a bed with closed eyes. A small box with an open bottom is clearly drawn on the floor nearby. The image appears to display peace and safety.",null)
 	ADD_NOTICE("Drawing: Door","<br>On the paper is a cruedely drawn image of a raptor-like creature, they appear to be reeling back from a door and gently pressing a button on it. The door flashes with a soft light, and they enter. Another image shows the door sparking softly, the raptor then turns away to leave, unharmed.",null)
 	. = ..()
