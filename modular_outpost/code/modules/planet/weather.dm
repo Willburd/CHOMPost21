@@ -11,11 +11,11 @@
 	var/datum/weather/new_data = allowed_weather_types[next_weather]
 	if(!new_data || !new_data.hazardous_weather)
 		return
-	addtimer(CALLBACK(src, PROC_REF(weather_alarm)), rand(5,10) SECONDS, TIMER_DELETE_ME)
+	addtimer(CALLBACK(src, PROC_REF(weather_alarm)), rand(10,25) SECONDS, TIMER_DELETE_ME)
 
 /datum/weather_holder/proc/weather_alarm()
 	SHOULD_NOT_OVERRIDE(TRUE)
-	priority_announcement.Announce("A severe weather warning is in effect, crew are advised to take advanced precaution when performing activities outside of the station.", "Attention! Severe weather warning is in effect!", new_sound = 'modular_outpost/sound/soundbible/asian_air_raid_siren_fadesout.ogg', zlevel = our_planet.expected_z_levels[1])
+	priority_announcement.Announce("Crew are advised to delay EVA activities or prepare and shelter accordingly for approaching weather.", "Attention! Severe weather warning is in effect!", new_sound = 'modular_outpost/sound/soundbible/asian_air_raid_siren_fadesout.ogg', zlevel = our_planet.expected_z_levels[1])
 
 /datum/admins/proc/weather_warning_siren()
 	set category = "Debug.Events"
