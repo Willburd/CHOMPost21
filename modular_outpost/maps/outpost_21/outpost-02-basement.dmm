@@ -36259,7 +36259,7 @@
 "boo" = (
 /obj/effect/floor_decal/industrial/warning/corner,
 /obj/effect/auto_crayon{
-	icon_state = "three_trade"
+	icon_state = "market"
 	},
 /turf/simulated/floor/plating,
 /area/engineering/trammaint)
@@ -40470,6 +40470,9 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals3{
 	dir = 5
+	},
+/obj/effect/auto_crayon{
+	icon_state = "two_lust"
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/Dorm_5)
@@ -61972,7 +61975,7 @@
 	pixel_y = 32
 	},
 /obj/effect/auto_crayon{
-	icon_state = "ten_death"
+	icon_state = "stomach"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/engineering/coreproctunnel)
@@ -62612,7 +62615,7 @@
 	icon_state = "4-8"
 	},
 /obj/effect/auto_crayon{
-	icon_state = "stomach"
+	icon_state = "nine_removal"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/engineering/coreproctunnel)
@@ -124409,7 +124412,7 @@ bYe
 cGJ
 cGr
 cGr
-tIC
+aqY
 aqY
 aqY
 aqY
@@ -124565,7 +124568,7 @@ rKp
 uoW
 tts
 tIC
-tIC
+aqY
 cGI
 aqY
 cGK

@@ -3112,12 +3112,6 @@
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/hydroponics/publicgarden)
-"aho" = (
-/obj/effect/auto_crayon{
-	icon_state = "ten_death"
-	},
-/turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
-/area/mine/unexplored/muriki/mountaintop_pathway)
 "ahp" = (
 /obj/effect/floor_decal/corner/brown/diagonal,
 /obj/structure/bed/chair/wood{
@@ -3630,10 +3624,10 @@
 "aiz" = (
 /obj/structure/catwalk,
 /obj/effect/auto_crayon{
-	icon_state = "ten_death"
+	icon_state = "up"
 	},
 /obj/effect/auto_crayon{
-	icon_state = "up"
+	icon_state = "nine_removal"
 	},
 /turf/simulated/floor/plating,
 /area/muriki/processor/hall)
@@ -3658,19 +3652,13 @@
 	dir = 4
 	},
 /obj/effect/auto_crayon{
-	icon_state = "ten_death"
+	icon_state = "down"
 	},
 /obj/effect/auto_crayon{
-	icon_state = "down"
+	icon_state = "nine_removal"
 	},
 /turf/simulated/floor/plating,
 /area/muriki/processor/hall)
-"aiD" = (
-/obj/effect/auto_crayon{
-	icon_state = "ten_death"
-	},
-/turf/simulated/floor,
-/area/maintenance/substation/phoronics)
 "aiE" = (
 /obj/effect/floor_decal/corner/brown/diagonal,
 /obj/structure/bed/chair/wood{
@@ -3888,6 +3876,23 @@
 	outdoors = 0
 	},
 /area/mine/unexplored/muriki/mountaintopnorth)
+"ajp" = (
+/obj/effect/auto_crayon{
+	icon_state = "nine_removal"
+	},
+/turf/simulated/floor/outdoors/rocks/turfpack/muriki{
+	outdoors = 0
+	},
+/area/muriki/crystal)
+"ajq" = (
+/obj/effect/auto_crayon{
+	icon_state = "nine_removal"
+	},
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1;
+	outdoors = 1
+	},
+/area/mine/unexplored/muriki/mountaintop_pathway)
 "ajG" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -4405,9 +4410,6 @@
 	specialfunctions = 4;
 	req_one_access = list(52,56,61);
 	dir = 8
-	},
-/obj/effect/auto_crayon{
-	icon_state = "ten_death"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/unexplored/muriki/mountaintopeast)
@@ -22261,9 +22263,6 @@
 /area/quartermaster/mining/expl)
 "jBD" = (
 /obj/structure/prop/rock/ice/small/alt,
-/obj/effect/auto_crayon{
-	icon_state = "ten_death"
-	},
 /turf/simulated/floor/outdoors/rocks/turfpack/muriki{
 	outdoors = 0
 	},
@@ -37383,6 +37382,9 @@
 	},
 /area/muriki/rooftop/civilian)
 "rnS" = (
+/obj/effect/auto_crayon{
+	icon_state = "nine_removal"
+	},
 /turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1;
 	outdoors = 1
@@ -104285,7 +104287,7 @@ ovc
 ovc
 ovc
 iII
-aiD
+ndp
 iog
 iII
 pXM
@@ -104609,7 +104611,7 @@ ovc
 ovc
 ovc
 pXM
-acn
+ajq
 pXM
 aaZ
 pXM
@@ -109828,7 +109830,7 @@ bMv
 bMv
 ajc
 mxz
-mxz
+ajp
 mxz
 vFk
 rEY
@@ -109865,7 +109867,7 @@ fWw
 agi
 kmM
 iWO
-aho
+adT
 adT
 pEi
 pEi
