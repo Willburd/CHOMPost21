@@ -161,6 +161,7 @@
 "aao" = (
 /obj/item/bone,
 /mob/living/simple_mob/vore/alienanimals/jil,
+/obj/item/coin/gold,
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
 /area/mine/unexplored/muriki/mountaintop_pathway)
 "aap" = (
@@ -1307,6 +1308,11 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/patient_c)
+"acJ" = (
+/obj/machinery/atmospherics/pipe/simple/visible/blue,
+/obj/structure/flora/mushroom,
+/turf/simulated/floor/plating,
+/area/maintenance/wastedisposal)
 "acK" = (
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging{
 	dir = 4
@@ -3749,6 +3755,86 @@
 /obj/structure/waterfall/top,
 /turf/simulated/mineral/alt/ignore_cavegen/turfpack/muriki,
 /area/mine/unexplored/muriki/mountaintopnorth)
+"aiS" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/structure/flora/mushroom,
+/turf/simulated/floor/plating,
+/area/maintenance/substation/mining)
+"aiT" = (
+/obj/structure/prop/rock,
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/unexplored/muriki/mountaintopeast)
+"aiU" = (
+/obj/structure/flora/mushroom,
+/turf/simulated/floor/plating,
+/area/maintenance/cargobay_roof)
+"aiV" = (
+/obj/structure/flora/mushroom,
+/turf/simulated/floor/plating,
+/area/maintenance/gravgen)
+"aiW" = (
+/obj/structure/flora/rocks2,
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/unexplored/muriki/mountaintopeast)
+"aiX" = (
+/obj/structure/flora/rocks2,
+/turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
+/area/mine/unexplored/muriki/mountaintop_pathway)
+"aiY" = (
+/obj/structure/flora/mushroom,
+/turf/simulated/floor/plating,
+/area/maintenance/medbay_fore)
+"aiZ" = (
+/obj/structure/flora/rocks2,
+/turf/simulated/floor/outdoors/rocks/turfpack/muriki,
+/area/mine/unexplored/muriki/mountaintop_pathway)
+"aja" = (
+/obj/structure/flora/rocks1,
+/turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
+/area/mine/unexplored/muriki/mountaintop_pathway)
+"ajb" = (
+/obj/structure/flora/mushroom,
+/turf/simulated/floor/indoorrocks/turfpack/muriki{
+	icon_state = "rock_grey"
+	},
+/area/muriki/crystal)
+"ajc" = (
+/obj/structure/prop/rock/ice/round,
+/turf/simulated/floor/outdoors/rocks/turfpack/muriki{
+	outdoors = 0
+	},
+/area/muriki/crystal)
+"ajd" = (
+/obj/structure/loot_pile/surface/bones,
+/obj/structure/flora/mushroom,
+/turf/simulated/floor/indoorrocks/turfpack/muriki{
+	icon_state = "rock_grey"
+	},
+/area/muriki/crystal)
+"aje" = (
+/obj/structure/prop/rock,
+/turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
+/area/mine/unexplored/muriki/mountaintop_pathway)
+"ajf" = (
+/obj/structure/prop/rock,
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/unexplored/muriki/mountaintopnorth)
+"ajg" = (
+/obj/item/beartrap{
+	anchored = 1;
+	deployed = 1
+	},
+/obj/structure/flora/rocks2,
+/turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
+/area/mine/unexplored/muriki/mountaintop_pathway)
 "ajh" = (
 /obj/machinery/light{
 	dir = 1
@@ -3756,6 +3842,28 @@
 /obj/machinery/washing_machine,
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/medupper)
+"aji" = (
+/obj/structure/flora/mushroom,
+/turf/simulated/floor/indoorrocks/turfpack/muriki{
+	icon_state = "rock_grey"
+	},
+/area/mine/unexplored/muriki/mountaintopnorth)
+"ajj" = (
+/obj/structure/prop/rock,
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/explored/muriki/river/hole)
+"ajk" = (
+/obj/structure/cliff_end{
+	dir = 8
+	},
+/obj/structure/flora/mushroom,
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1;
+	outdoors = 1
+	},
+/area/mine/unexplored/muriki/mountaintop_pathway)
 "ajl" = (
 /obj/machinery/button/garbosystem{
 	pixel_x = 21;
@@ -3766,6 +3874,20 @@
 /obj/structure/reagent_dispensers/medical_waste_tank,
 /turf/simulated/floor/tiled,
 /area/quartermaster/cargrecycle)
+"ajm" = (
+/obj/structure/flora/mushroom,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/unexplored/muriki/cave/shelter/north_west_far)
+"ajn" = (
+/obj/structure/prop/rock,
+/turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
+/area/mine/unexplored/muriki/mountaintopnorth)
+"ajo" = (
+/obj/structure/flora/mushroom,
+/turf/simulated/floor/plating/external/turfpack/muriki{
+	outdoors = 0
+	},
+/area/mine/unexplored/muriki/mountaintopnorth)
 "ajG" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -7590,6 +7712,7 @@
 	dir = 8
 	},
 /obj/structure/window/maintenance_panel,
+/obj/structure/flora/mushroom,
 /turf/simulated/floor/plating,
 /area/maintenance/medicelev)
 "cbE" = (
@@ -12684,6 +12807,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/substation/arrivals)
 "eEg" = (
+/obj/structure/flora/mushroom,
 /turf/simulated/floor,
 /area/storage/tech)
 "eEs" = (
@@ -17383,6 +17507,7 @@
 /obj/machinery/door/airlock/glass_external{
 	req_one_access = null
 	},
+/obj/structure/blade_trap/start_active,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/unexplored/muriki/cave/shelter/north_west_far)
 "hgs" = (
@@ -17608,7 +17733,7 @@
 /turf/simulated/floor/tiled,
 /area/hallway/muriki/civup)
 "hlA" = (
-/obj/machinery/light/small,
+/obj/structure/flora/mushroom,
 /turf/simulated/floor,
 /area/rnd/hallway/phoronicsmainhall)
 "hmy" = (
@@ -24329,6 +24454,7 @@
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/industrial/warning,
+/obj/structure/flora/mushroom,
 /turf/simulated/floor/plating,
 /area/maintenance/medbay_fore)
 "kDH" = (
@@ -38546,6 +38672,7 @@
 /obj/structure/cable/orange{
 	icon_state = "4-8"
 	},
+/obj/structure/flora/mushroom,
 /turf/simulated/floor/plating,
 /area/maintenance/substation/mining)
 "rZn" = (
@@ -43178,9 +43305,6 @@
 	icon_state = "rock_grey"
 	},
 /area/muriki/crystal)
-"uiX" = (
-/turf/simulated/floor,
-/area/rnd/hallway/phoronicsmainhall)
 "ujy" = (
 /obj/structure/table/reinforced,
 /obj/item/paper_bin,
@@ -48124,6 +48248,7 @@
 /area/teleporter/engineering)
 "wKw" = (
 /obj/structure/loot_pile/surface/bones,
+/obj/structure/flora/rocks2,
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
 /area/mine/unexplored/muriki/mountaintop_pathway)
 "wKD" = (
@@ -53415,7 +53540,7 @@ fCW
 ckj
 pTo
 tlK
-dAD
+acJ
 ttR
 tFt
 vux
@@ -53575,7 +53700,7 @@ mMd
 raP
 gZh
 qTd
-dAD
+acJ
 dAD
 npi
 cKj
@@ -55034,7 +55159,7 @@ abv
 abv
 lNF
 erm
-erm
+aiS
 erm
 lNF
 ttw
@@ -69807,7 +69932,7 @@ kPb
 (117,1,1) = {"
 vWq
 dGy
-adX
+ajn
 adX
 kxr
 kxr
@@ -74019,7 +74144,7 @@ plQ
 (143,1,1) = {"
 vWq
 dGy
-aiK
+ajo
 aiK
 kxr
 kxr
@@ -74461,7 +74586,7 @@ hVQ
 tlI
 xQz
 hgt
-hgt
+aiU
 kVs
 sAt
 sAt
@@ -74668,7 +74793,7 @@ plQ
 vWq
 dGy
 aaW
-aaX
+ajm
 aaX
 aaX
 aaW
@@ -74784,7 +74909,7 @@ fPO
 hVQ
 kOI
 pKM
-hgt
+aiU
 hgt
 kVs
 sAt
@@ -79212,7 +79337,7 @@ ovc
 ovc
 ovc
 ovc
-hci
+ajf
 hci
 hci
 ovc
@@ -79857,7 +79982,7 @@ ovc
 ovc
 ovc
 jRC
-acG
+ajj
 ovc
 ovc
 lpq
@@ -81967,7 +82092,7 @@ ovc
 ovc
 ovc
 ovc
-hci
+ajf
 kxr
 kxr
 kxr
@@ -82776,7 +82901,7 @@ ovc
 ovc
 ovc
 ovc
-hci
+ajf
 hci
 kxr
 kxr
@@ -86844,7 +86969,7 @@ hci
 hci
 aiI
 ovc
-hci
+ajf
 ovc
 ovc
 ovc
@@ -87169,7 +87294,7 @@ ovc
 ovc
 ovc
 ovc
-hci
+ajf
 hci
 hci
 ovc
@@ -93231,7 +93356,7 @@ cGv
 jmK
 sXP
 mfx
-mfx
+aiV
 fci
 dsJ
 erP
@@ -94343,7 +94468,7 @@ jal
 dFf
 mQf
 nHR
-xgm
+aiY
 xgm
 bRx
 iKs
@@ -100599,7 +100724,7 @@ mHE
 ddI
 hoX
 oFY
-uiX
+hlA
 oFY
 xim
 cCP
@@ -105451,7 +105576,7 @@ ovc
 ovc
 ovc
 pXM
-ebM
+ajk
 kwX
 acn
 dEE
@@ -107397,7 +107522,7 @@ pXM
 pXM
 dEE
 adT
-adT
+aja
 idb
 bHj
 kxr
@@ -107425,7 +107550,7 @@ kmM
 adT
 adT
 adT
-adT
+aiX
 adT
 idb
 bHj
@@ -107554,13 +107679,13 @@ pxP
 vWq
 ovc
 pXM
-tMO
+aji
 pXM
 pXM
 dEE
 fwN
 adT
-adT
+aje
 dEE
 kxr
 kxr
@@ -107584,7 +107709,7 @@ kxr
 pjZ
 kmM
 adT
-adT
+aiX
 sbU
 aao
 lIG
@@ -107722,7 +107847,7 @@ pXM
 dEE
 adT
 adT
-adT
+aja
 dEE
 kxr
 kxr
@@ -107744,14 +107869,14 @@ kxr
 kxr
 kxr
 iWO
-adT
+aje
 adT
 adT
 adT
 wKw
 vXx
 adT
-adT
+aje
 idb
 agr
 kxr
@@ -108203,13 +108328,13 @@ vWq
 ovc
 pXM
 pXM
-tMO
+aji
 xQG
 ruB
 idb
 bHj
 adT
-adT
+aje
 dEE
 kxr
 kxr
@@ -108230,7 +108355,7 @@ kxr
 iWO
 pjZ
 kmM
-adT
+aje
 adT
 adT
 adT
@@ -108238,7 +108363,7 @@ idb
 fWw
 bHj
 adT
-adT
+aja
 agk
 idb
 bHj
@@ -108393,7 +108518,7 @@ kmM
 iWO
 adT
 adT
-adT
+aiX
 adT
 adT
 adT
@@ -108402,7 +108527,7 @@ idb
 bHj
 adT
 agk
-adT
+aje
 dEE
 qQa
 qQa
@@ -108559,7 +108684,7 @@ rEY
 wrh
 adT
 adT
-adT
+aja
 adT
 idb
 bHj
@@ -108696,7 +108821,7 @@ pXM
 pXM
 idb
 bHj
-adT
+aja
 adT
 adT
 adT
@@ -109036,7 +109161,7 @@ kmM
 adT
 iWO
 adT
-adT
+aiX
 dtt
 flq
 adT
@@ -109052,7 +109177,7 @@ adT
 agk
 dEE
 adT
-adT
+aja
 idb
 bHj
 qQa
@@ -109183,11 +109308,11 @@ pXM
 pXM
 pXM
 tMO
+aji
 tMO
 tMO
-tMO
-adT
-adW
+aja
+ajg
 idb
 fWw
 fWw
@@ -109419,10 +109544,10 @@ fWw
 pEi
 mKN
 idv
+aiW
 idv
 idv
-idv
-idv
+aiW
 bdD
 idv
 elf
@@ -109502,7 +109627,7 @@ ovc
 ovc
 pXM
 pXM
-tMO
+aji
 bsk
 tMO
 tMO
@@ -109517,7 +109642,7 @@ rEY
 wrh
 adZ
 fwN
-adT
+aiX
 adT
 adT
 adW
@@ -109537,7 +109662,7 @@ bMv
 laF
 bMv
 bMv
-adT
+aja
 adT
 adT
 adT
@@ -109701,7 +109826,7 @@ bMv
 bMv
 bMv
 bMv
-mxz
+ajc
 mxz
 mxz
 mxz
@@ -109709,7 +109834,7 @@ vFk
 rEY
 rEY
 wrh
-adT
+aja
 adT
 adU
 dEE
@@ -109733,7 +109858,7 @@ idb
 fWw
 kmM
 ckD
-ckD
+aiZ
 ckD
 idb
 fWw
@@ -109889,7 +110014,7 @@ fWw
 fWw
 fWw
 kmM
-adT
+aiX
 idb
 bHj
 ckD
@@ -110049,22 +110174,22 @@ flq
 adU
 adT
 adT
-adT
+aiX
 adT
 chu
 adT
 dEE
-ckD
+aiZ
 iWO
 adU
 adT
 adT
-adT
+aiX
 adT
 agk
 adT
 adU
-adT
+aiX
 hLc
 pEi
 pEi
@@ -110202,13 +110327,13 @@ adT
 adT
 adU
 adT
+aja
 adT
 adT
 adT
 adT
 adT
-adT
-adT
+aja
 dtt
 rEY
 rEY
@@ -110259,7 +110384,7 @@ idv
 hIk
 hIk
 hIk
-idv
+aiT
 idv
 idv
 idv
@@ -110501,7 +110626,7 @@ qOs
 qOs
 bMv
 bMv
-qOs
+ajb
 qOs
 oGM
 gQF
@@ -110593,7 +110718,7 @@ qBW
 icF
 idv
 pwD
-idv
+aiT
 luR
 luR
 luR
@@ -110651,7 +110776,7 @@ bMv
 bMv
 bMv
 bMv
-qOs
+ajb
 qOs
 qOs
 qOs
@@ -110827,15 +110952,15 @@ qOs
 bMv
 bMv
 bMv
-qOs
+ajb
 qOs
 qOs
 bMv
 bMv
 bMv
 bMv
-xTc
-qOs
+ajd
+ajb
 bMv
 qOs
 tVJ
@@ -110974,7 +111099,7 @@ bMv
 bMv
 bMv
 bMv
-qOs
+ajb
 qOs
 qOs
 bUv
@@ -110985,7 +111110,7 @@ qOs
 qOs
 hBO
 qOs
-qOs
+ajb
 bMv
 bMv
 bMv
@@ -111193,7 +111318,7 @@ hIk
 hIk
 hIk
 hIk
-idv
+aiH
 idv
 aay
 hIk
@@ -111483,7 +111608,7 @@ bMv
 bMv
 bMv
 xTc
-qOs
+ajb
 bMv
 qOs
 bMv
@@ -111526,7 +111651,7 @@ hIk
 hIk
 hIk
 idv
-idv
+aiH
 idv
 idv
 idv
@@ -111554,7 +111679,7 @@ hIk
 hIk
 hIk
 idv
-idv
+aiT
 pEi
 luR
 luR
@@ -111644,7 +111769,7 @@ bMv
 bMv
 bMv
 bMv
-qOs
+ajb
 iQC
 qOs
 qOs
@@ -111680,7 +111805,7 @@ hIk
 hIk
 hIk
 hIk
-idv
+aiT
 idv
 idv
 idv
@@ -111781,7 +111906,7 @@ bMv
 bMv
 bMv
 bMv
-qOs
+ajb
 qOs
 bUv
 bHh
@@ -112127,7 +112252,7 @@ xsX
 bMv
 qOs
 qOs
-qOs
+ajb
 bMv
 bMv
 bMv
@@ -112178,7 +112303,7 @@ hIk
 hIk
 hIk
 hIk
-idv
+aiT
 idv
 aiH
 idv
@@ -112284,7 +112409,7 @@ wci
 eoT
 xYA
 qOs
-qOs
+ajb
 qOs
 bMv
 gQF
@@ -112329,7 +112454,7 @@ hIk
 hIk
 hIk
 idv
-idv
+aiH
 hIk
 hIk
 hIk
@@ -112459,7 +112584,7 @@ qOs
 qOs
 qOs
 qOs
-qOs
+ajb
 bMv
 bMv
 bMv
@@ -112784,7 +112909,7 @@ qOs
 bMv
 bMv
 bMv
-qOs
+ajb
 bMv
 qOs
 bMv
@@ -112915,7 +113040,7 @@ bMv
 bMv
 bMv
 bMv
-qOs
+ajb
 qOs
 qOs
 qOs
@@ -112948,7 +113073,7 @@ bMv
 bMv
 qOs
 qOs
-qOs
+ajb
 bMv
 bMv
 hIk
@@ -113110,7 +113235,7 @@ qOs
 qOs
 qOs
 qOs
-qOs
+ajb
 bMv
 bMv
 hIk
@@ -113263,8 +113388,8 @@ bMv
 bMv
 bMv
 bMv
-qOs
-qOs
+ajb
+ajb
 bMv
 bMv
 bMv
@@ -113417,7 +113542,7 @@ qOs
 qOs
 qOs
 qOs
-xTc
+ajd
 bMv
 bUv
 qOs
@@ -113581,13 +113706,13 @@ qOs
 qOs
 bMv
 bMv
-qOs
+ajb
 gME
 qOs
 qOs
 bMv
 bMv
-qOs
+ajb
 qOs
 qOs
 bMv
@@ -113730,7 +113855,7 @@ bMv
 bMv
 bMv
 qOs
-qOs
+ajb
 qOs
 qOs
 qOs
@@ -113742,7 +113867,7 @@ qOs
 qOs
 qOs
 bMv
-qOs
+ajb
 qOs
 qOs
 qOs
@@ -113752,7 +113877,7 @@ bMv
 qOs
 qOs
 qOs
-qOs
+ajb
 qOs
 bMv
 bMv
@@ -113913,7 +114038,7 @@ bMv
 bMv
 kzE
 qOs
-qOs
+ajb
 bIL
 bMv
 bMv
@@ -114057,7 +114182,7 @@ bMv
 bMv
 bMv
 bMv
-xTc
+ajd
 tMq
 bMv
 bMv
@@ -114125,7 +114250,7 @@ hIk
 hIk
 hIk
 hIk
-idv
+aiT
 idv
 idv
 idv
