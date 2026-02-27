@@ -4834,7 +4834,6 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 4
 	},
-/obj/effect/landmark/corpse/bridgeofficer,
 /turf/simulated/floor/carpet,
 /area/vr/bloodstar)
 "aWS" = (
@@ -13233,11 +13232,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/vr/bloodstar)
-"dAj" = (
-/obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/corpse/vintage/medical,
-/turf/simulated/floor/tiled/white,
-/area/vr/bloodstar)
 "dAz" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -13386,7 +13380,6 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/corpse/bridgeofficer,
 /turf/simulated/floor/wood,
 /area/vr/bloodstar)
 "dDN" = (
@@ -28933,7 +28926,6 @@
 /obj/structure/bed/chair/comfy/brown{
 	dir = 1
 	},
-/obj/effect/landmark/corpse/commander,
 /turf/simulated/floor/wood/broken,
 /area/vr/bloodstar)
 "ivp" = (
@@ -28947,10 +28939,6 @@
 "ivA" = (
 /turf/simulated/floor/carpet/turcarpet,
 /area/vr/lighting)
-"ivD" = (
-/obj/effect/landmark/corpse/bridgeofficer,
-/turf/simulated/floor/carpet,
-/area/vr/bloodstar)
 "ivG" = (
 /obj/machinery/iv_drip,
 /turf/simulated/floor/tiled/dark,
@@ -33530,7 +33518,6 @@
 /obj/item/gun/projectile/serdy_pistols/tp23,
 /obj/item/ammo_magazine/tp23,
 /obj/item/ammo_magazine/tp23,
-/obj/effect/landmark/corpse/vintage/pilot,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "jLU" = (
@@ -33615,7 +33602,6 @@
 /obj/item/gun/energy/imperial,
 /obj/item/clothing/gloves/arm_guard/combat/imperial,
 /obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/corpse/bridgeofficer,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "jNH" = (
@@ -62323,7 +62309,6 @@
 /obj/item/melee/energy/sword/imperial,
 /obj/item/shield/energy/imperial,
 /obj/effect/decal/cleanable/blood,
-/obj/effect/landmark/corpse/bridgeofficer,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "sWt" = (
@@ -125320,7 +125305,7 @@ bLv
 klk
 nIj
 xqO
-ivD
+uTs
 aJp
 hIL
 gwv
@@ -136492,7 +136477,7 @@ cdV
 eHP
 koK
 kjv
-dAj
+nRf
 cdV
 kVx
 pUk
