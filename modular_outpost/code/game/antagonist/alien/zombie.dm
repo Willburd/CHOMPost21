@@ -12,8 +12,8 @@ var/datum/antagonist/zombie/zombies
 	welcome_text = "You have so many new friends to meet today... Stalk crew from the dark, and convert them into more chus. You'll always be safer with friends!"
 	antag_sound = 'sound/goonstation/spooky/Meatzone_BreathingSlow.ogg'
 	protected_jobs = list("Security Officer", "Warden", "Detective", "Internal Affairs Agent", "Head of Security", "Site Manager")
-	role_type = BE_ZOMBIE
-	antag_indicator = "zombies"
+	role_type = BE_CULTIST
+	antag_indicator = "brainworm"
 	flags = ANTAG_OVERRIDE_MOB | ANTAG_RANDSPAWN | ANTAG_OVERRIDE_JOB | ANTAG_VOTABLE | ANTAG_IMPLANT_IMMUNE | ANTAG_CHOOSE_NAME
 	victory_text = "Zombies win - more later"
 	loss_text = "Zombies lost - more later!"

@@ -11,8 +11,8 @@ var/datum/antagonist/hungers/hungryones
 	welcome_text = "You feel a terrible sensation from deep inside you. A voice speaks as if from every cell in your body at once. \"We are awake, we hunger! only the flesh of the other shall state our desire, so that we may once again slumber.\" Your mind filling with the voices of others like you, they are your unwitting companions... You have become the host of some kind of otherworldly entity, willing or unwilling. Your only chance to be free is submit to its demands!"
 	antag_sound = 'sound/goonstation/spooky/Meatzone_BreathingSlow.ogg'
 	protected_jobs = list("Security Officer", "Warden", "Detective", "Internal Affairs Agent", "Head of Security", "Site Manager")
-	role_type = BE_DEEPHUNGER
-	antag_indicator = "deephunger"
+	role_type = BE_CULTIST
+	antag_indicator = "cult"
 	flags = ANTAG_RANDSPAWN | ANTAG_VOTABLE
 	victory_text = "The Deep Hunger wins! Dragging all those it consumed with it, back into the abyss. Sparing it's hosts the same fate."
 	loss_text = "The Deep Hunger's desires were denied! Unable to maintain its hold on our world, its voices fall silent once more. Dragging its hosts with it..."
@@ -35,7 +35,6 @@ var/datum/antagonist/hungers/hungryones
 	var/datum/objective/consume/deephunger/consume_objective = new(2,4)
 	consume_objective.owner = hunger
 	hunger.objectives += consume_objective
-
 
 /datum/antagonist/hungers/equip(var/mob/living/carbon/human/hunger_mob)
 	if(issilicon(hunger_mob)) // this needs to be here because ..() returns false if the mob isn't human

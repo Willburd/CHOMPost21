@@ -12,7 +12,7 @@ var/datum/antagonist/synx/synxes
 	welcome_text = "You awaken once again to the hunt. Stalk the crew, and strike when they least expect it... You are an ambush predator after all."
 	antag_sound = 'sound/rakshasa/Breath1.ogg'
 	role_type = BE_ALIEN
-	antag_indicator = "synxhunt"
+	antag_indicator = "brainworm"
 	flags = ANTAG_OVERRIDE_MOB | ANTAG_RANDSPAWN | ANTAG_OVERRIDE_JOB | ANTAG_VOTABLE | ANTAG_CHOOSE_NAME
 	victory_text = "Synx win - more later"
 	loss_text = "Synx lost - more later!"
@@ -35,7 +35,6 @@ var/datum/antagonist/synx/synxes
 	var/datum/objective/consume/hunter/consume_objective = new(3,6)
 	consume_objective.owner = synx
 	synx.objectives += consume_objective
-
 
 /datum/antagonist/synx/equip(var/mob/living/carbon/human/synx_mob)
 	if(!..())
