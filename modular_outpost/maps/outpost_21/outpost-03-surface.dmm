@@ -4969,10 +4969,6 @@
 /obj/item/melee/umbrella/random,
 /obj/random/flashlight,
 /obj/random/flashlight,
-/obj/machinery/firealarm{
-	dir = 8;
-	pixel_x = -26
-	},
 /turf/simulated/floor/tiled,
 /area/maintenance/disposal)
 "ahg" = (
