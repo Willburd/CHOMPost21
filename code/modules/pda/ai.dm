@@ -16,7 +16,8 @@
 		new/datum/data/pda/app/crew_records/security,
 		new/datum/data/pda/app/crew_records/medical,
 		// Outpost 21 addition end
-		new/datum/data/pda/app/messenger)
+		new/datum/data/pda/app/messenger,
+		new/datum/data/pda/app/game_launcher)
 	special_handling = TRUE
 
 /obj/item/pda/ai/proc/set_name_and_job(newname as text, newjob as text, newrank as null|text)

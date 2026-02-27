@@ -1,5 +1,0 @@
-author: "FluffMedic"
-delete-after: True
-changes:
-  - bugfix: "Agate virus being grabbable outside of the one mob meant to inflict it"
-  - balance: "Tones down the hidden Tyr blob"

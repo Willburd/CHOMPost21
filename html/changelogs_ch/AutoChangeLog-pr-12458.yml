@@ -1,4 +1,0 @@
-author: "FluffMedic"
-delete-after: True
-changes:
-  - bugfix: "Alter Fossil Tank's Ai to hopefully not break everything as it enjoys a meal"

@@ -239,3 +239,24 @@
   - refactor: Convert bay gender and pronoun prefs to TG
   tacoguy7765093:
   - maptweak: Dragoncave outside pod is indoors now.
+2026-02-27:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: runechat bold not working
+  - bugfix: runechat bold formatting breaking spans
+  - bugfix: robots not being able to play PDA games
+  - bugfix: item autotransfer flags not getting imported
+  - image: fixed back pieces on corner couches being set up wrong in the dmis
+  - code_imp: cleans up some typescript types
+  - bugfix: vorepanel export showing null while used in the lobby menu for the name
+  Diana:
+  - bugfix: Being splashed with ice (and various other substances) will no longer
+      kill you.
+  - bugfix: Distillery machine now works properly when connected to a gas pipeline.
+  - bugfix: Syringe gun darts no longer accidentally delete syringes.
+  - qol: Cyanide is still not 'fast and lethal' as the coder comment implies but is
+      now more lethal than previous. It also is no longer an instant win button.
+  FluffMedic:
+  - bugfix: Agate virus being grabbable outside of the one mob meant to inflict it
+  - balance: Tones down the hidden Tyr blob
+  - bugfix: Alter Fossil Tank's Ai to hopefully not break everything as it enjoys
+      a meal
