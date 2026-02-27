@@ -882,6 +882,7 @@
 	scannable = SCANNABLE_ADVANCED
 	description = "A chemical agent used for self-defense and in police work."
 	taste_description = "fire"
+	dermal_absorption = 0
 	taste_mult = 10
 	reagent_state = LIQUID
 	touch_met = 50 // Get rid of it quickly
@@ -1037,6 +1038,7 @@
 	var/adj_temp = 0
 	var/nutriment_factor = 0 //CHOMPStation addition
 	var/water_based = TRUE
+	dermal_absorption = 0
 	wiki_flag = WIKI_DRINK
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_FOOD

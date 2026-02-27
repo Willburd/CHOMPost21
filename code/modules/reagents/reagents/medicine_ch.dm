@@ -12,6 +12,7 @@
 	color = "#AAAAFF"
 	overdose = REAGENTS_OVERDOSE * 100
 	metabolism = REM * 0.1
+	dermal_absorption = 1
 	scannable = 1
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_DRUG
@@ -39,6 +40,15 @@
 			M.custom_pain("Your vision becomes blurred!",30),
 			M.add_chemical_effect(CE_ALCOHOL, 5),)
 
+/datum/reagent/claridyl/bloodburn
+	name = REAGENT_BLOODBURN
+	id = REAGENT_ID_BLOODBURN
+	description = "A chemical used to soak up any reagents inside someones stomach, injection is not advised, if you need to ask why please seek a new job."
+	taste_description = "liquid void"
+	dermal_absorption = 0
+	color = "#000000"
+	metabolism = REM * 5
+
 /datum/reagent/claridyl/bloodburn/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(M.bloodstr)//No seriously dont inject this wtf is wrong with you.
 		for(var/datum/reagent/R in M.bloodstr.reagent_list)
@@ -50,14 +60,6 @@
 		for(var/datum/reagent/R in M.ingested.reagent_list)
 			if(istype(R, /datum/reagent/ethanol))
 				R.remove_self(removed * 5)
-
-/datum/reagent/claridyl/bloodburn
-	name = REAGENT_BLOODBURN
-	id = REAGENT_ID_BLOODBURN
-	description = "A chemical used to soak up any reagents inside someones stomach, injection is not advised, if you need to ask why please seek a new job."
-	taste_description = "liquid void"
-	color = "#000000"
-	metabolism = REM * 5
 
 /datum/reagent/eden
 	name = REAGENT_EDEN
@@ -125,7 +127,7 @@
 	color = "#163851"
 	overdose = 8
 	scannable = 1
-	metabolism = 0.03
+	metabolism = REM * 0.15
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_DRUG
 
@@ -171,7 +173,7 @@
 	color = "#163851"
 	overdose = 8 //This many units starts killing you.
 	scannable = 1 // Mechs can scan this ye
-	metabolism = 0.03 //Slow metabolism. This value was plucked out of nowhere. Can be changed.
+	metabolism = REM * 0.15 //Slow metabolism. This value was plucked out of nowhere. Can be changed.
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_DRUG
 
@@ -195,6 +197,7 @@
 	reagent_state = LIQUID
 	color = "#df9898"
 	scannable = 1
+	dermal_absorption = 0.25
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_DRUG
 
@@ -216,6 +219,7 @@
 	color = "#b37979"
 	overdose = REAGENTS_OVERDOSE
 	scannable = 1
+	dermal_absorption = 0.2
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_DRUG
 
