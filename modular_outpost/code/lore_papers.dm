@@ -111,39 +111,35 @@
 
 /obj/item/paper/scavmark/water
 	name = "Water"
-	info = ""
+	info = "On the paper is a crudely drawn image of a raptor-like creature. They appear to be dipping their hands into some water, with more dripping from their muzzle. On the ground nearby is a symbol depicting a horizontal line, with three dashes above it. The line trails below itself to the right, then curls left. On the right side is a single dot."
 
 /obj/item/paper/scavmark/fire
 	name = "Fire"
-	info = ""
+	info = "On the paper is a crudely drawn image of a jil. The jil is on fire. Next to the jil is a symbol of a broken crest, with a dot in the top right. A straight line down, a frantic line to the left, and a loop in the bottom right."
 
 /obj/item/paper/scavmark/earth
 	name = "Earth"
-	info = ""
+	info = "On the paper is a crudely drawn image of a massive armored taur. The taur is weilding a pickaxe, and appears to be digging through stone. On the stone is a symbol of a square arch with a tail on the left, and a fang in the middle, with a dot above."
 
 /obj/item/paper/scavmark/chaos
 	name = "Chaos"
-	info = ""
+	info = "On the paper is a crudely drawn image of a black bird. Surrounding them are various symbols and effects with an unclear and confusing meaning.. above the bird is a complex symbol, of a down-facing crescent, encased by a sharp arch with a large tail to the left, and feathers to one side. The image gives you an intense feeling of chaos."
 
 /obj/item/paper/scavmark/acidwater
 	name = "Acid Water"
-	info = ""
-
-/obj/item/paper/scavmark/day
-	name = "Day"
-	info = ""
+	info = "On the paper is a crudely drawn image of a fox-like creature, they are waist deep in water. The water appears to be burning their body and they're screaming in pain. The symbols of Water and Earth can be seen above them."
 
 /obj/item/paper/scavmark/night
 	name = "Night"
-	info = ""
+	info = "On the paper is a crudely drawn image of some kind of machine. A four-eared canine is inside looking fast asleep, marks around the machine seem to indicate cold. On the machine is a symbol of a right-facing triangle, with a crescent moon and star in the bottom right. The image seems to convey an idea of long sleep."
 
 /obj/item/paper/scavmark/suspicious
 	name = "Watching"
-	info = ""
+	info = "On the paper is a crudely drawn image of a raptor-like creature. The raptor is gazing through some kind of obstruction at two indistinct individuals. They do not appear to be aware of the raptor. On the ground is a simplified drawing of a man in a space suit."
 
 /obj/item/paper/scavmark/stomach
 	name = "Stomach"
-	info = ""
+	info = "On the paper is a crudely drawn symbol of a stomach. Beyond the picture is a large fleshy tunnel, easily enough to fit a person."
 
 /obj/item/paper/scavmark/Uboa
 	name = "Menace"
