@@ -5854,6 +5854,7 @@
 #include "modular_outpost\code\modules\mob\living\living.dm"
 #include "modular_outpost\code\modules\mob\living\carbon\carbon_powers.dm"
 #include "modular_outpost\code\modules\mob\living\carbon\alien\alien.dm"
+#include "modular_outpost\code\modules\mob\living\carbon\brain\MMI.dm"
 #include "modular_outpost\code\modules\mob\living\carbon\human\human.dm"
 #include "modular_outpost\code\modules\mob\living\carbon\human\life.dm"
 #include "modular_outpost\code\modules\mob\living\carbon\human\species\species.dm"
