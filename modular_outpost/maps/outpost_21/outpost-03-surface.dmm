@@ -1814,6 +1814,10 @@
 /obj/effect/floor_decal/industrial/danger{
 	dir = 4
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/reinforced/turfpack/muriki,
 /area/shuttle/trawler)
 "acx" = (
@@ -2731,9 +2735,6 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/trawler)
 "adG" = (
-/obj/structure/disposalpipe/trunk{
-	dir = 4
-	},
 /obj/structure/disposaloutlet{
 	dir = 1;
 	throw_range = 1
@@ -2751,20 +2752,12 @@
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/structure/disposalpipe/trunk,
 /turf/simulated/floor/tiled/techmaint,
-/area/shuttle/trawler)
-"adH" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/turf/simulated/wall/rshull,
 /area/shuttle/trawler)
 "adI" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 6
-	},
-/obj/structure/disposalpipe/trunk{
-	dir = 8
 	},
 /obj/machinery/disposal/deliveryChute,
 /obj/machinery/camera/network/mining{
@@ -2774,9 +2767,7 @@
 /obj/structure/railing{
 	dir = 4
 	},
-/obj/structure/railing{
-	dir = 1
-	},
+/obj/structure/disposalpipe/trunk,
 /turf/simulated/floor/reinforced/turfpack/muriki,
 /area/shuttle/trawler)
 "adJ" = (
@@ -2929,6 +2920,10 @@
 	dir = 4
 	},
 /obj/structure/fans/tiny,
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/trawler)
 "adX" = (
@@ -2965,6 +2960,9 @@
 	name = "Trawler Security Shutters"
 	},
 /obj/structure/fans/hardlight,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/trawler)
 "adZ" = (
@@ -21039,28 +21037,44 @@
 /obj/machinery/door/window/brigdoor/eastleft{
 	name = "Ballistics"
 	},
-/obj/item/gun/projectile/automatic/z8{
-	pixel_x = -12;
-	pixel_y = -6
+/obj/item/gun/projectile/automatic/serdy/type901,
+/obj/item/gun/projectile/automatic/serdy/type901,
+/obj/item/gun/projectile/automatic/serdy/type901,
+/obj/item/ammo_magazine/type901{
+	pixel_x = -9;
+	pixel_y = -1
 	},
-/obj/item/gun/projectile/automatic/z8{
-	pixel_x = -12
+/obj/item/ammo_magazine/type901{
+	pixel_x = -9;
+	pixel_y = -1
 	},
-/obj/item/ammo_magazine/m762{
-	pixel_x = -4;
-	pixel_y = 6
+/obj/item/ammo_magazine/type901{
+	pixel_x = -9;
+	pixel_y = -1
 	},
-/obj/item/ammo_magazine/m762{
-	pixel_x = -4;
-	pixel_y = 6
+/obj/item/ammo_magazine/type901{
+	pixel_x = -9;
+	pixel_y = -1
 	},
-/obj/item/ammo_magazine/m762{
-	pixel_x = -4;
-	pixel_y = 6
+/obj/item/ammo_magazine/type901{
+	pixel_x = -9;
+	pixel_y = -1
 	},
-/obj/item/ammo_magazine/m762/ap,
-/obj/item/ammo_magazine/m762/ap,
-/obj/item/ammo_magazine/m762/ap,
+/obj/item/ammo_magazine/type901/ap{
+	pixel_x = 6
+	},
+/obj/item/ammo_magazine/type901/ap{
+	pixel_x = 6
+	},
+/obj/item/ammo_magazine/type901/ap{
+	pixel_x = 6
+	},
+/obj/item/ammo_magazine/type901/ap{
+	pixel_x = 6
+	},
+/obj/item/ammo_magazine/type901/ap{
+	pixel_x = 6
+	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/security/tactical)
 "bKQ" = (
@@ -52242,6 +52256,8 @@
 /obj/effect/floor_decal/corner/brown/full{
 	dir = 8
 	},
+/obj/item/storage/bag/mail,
+/obj/item/storage/bag/mail,
 /turf/simulated/floor/tiled,
 /area/quartermaster/delivery)
 "lCb" = (
@@ -104626,7 +104642,7 @@ pAZ
 pAZ
 ifl
 aal
-adH
+aal
 adY
 aal
 aes
