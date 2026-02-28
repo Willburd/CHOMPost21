@@ -286,6 +286,7 @@ This device records all warnings given and teleport events for admin review in c
 				R.force_dismount(rider)
 
 	// Outpost 21 edit begin - Teleport redspace chance
+	var/atom/movable/dest_beacon = destination
 	var/area/current_area = get_area(target)
 	var/chance = 1
 	if(current_area?.haunted)
@@ -297,7 +298,7 @@ This device records all warnings given and teleport events for admin review in c
 				redlist += R
 		if(redlist.len > 0)
 			// if teleport worked, drop out... otherwise just teleport normally, it means there was no redspace spawns!
-			destination = pick(redlist)
+			dest_beacon = pick(redlist)
 			to_chat(user,span_danger("Something feels wrong..."))
 	//Failure chance
 	else if (!ignore_fail_chance)
@@ -305,16 +306,18 @@ This device records all warnings given and teleport events for admin review in c
 		if(prob(failure_chance) && beacons.len >= 2)
 			var/list/wrong_choices = beacons - destination.tele_name
 			var/wrong_name = pick(wrong_choices)
-			destination = beacons[wrong_name]
+			dest_beacon = beacons[wrong_name]
 			to_chat(user,span_warning("\The [src] malfunctions and sends you to the wrong beacon!"))
 
-
+	// Outpost 21 edit begin - Swap beacon with teleporter now
+	var/atom/movable/before_teleport_loc = get_turf(src)
+	// Outpost 21 edit end
 
 	//Destination beacon vore checking
-	var/turf/dT = get_turf(destination)
+	var/turf/dT = get_turf(dest_beacon) // Outpost 21 edit - Teleport redspace chance
 	var/atom/real_dest = dT
 
-	var/atom/real_loc = destination.loc
+	var/atom/real_loc = dest_beacon.loc // Outpost 21 edit - Teleport redspace chance
 	if(isbelly(real_loc))
 		real_dest = real_loc
 	if(isliving(real_loc))
@@ -359,6 +362,11 @@ This device records all warnings given and teleport events for admin review in c
 
 			//Phase-in effect for grabbed person
 			phase_in(G.affecting,get_turf(G.affecting))
+
+	// Outpost 21 edit begin - Swap beacon with teleporter now
+	if(istype(dest_beacon, /obj/item/perfect_tele_beacon) && !dest_beacon.anchored)
+		dest_beacon.forceMove(before_teleport_loc)
+	// Outpost 21 edit end
 
 	update_icon()
 	spawn(30 SECONDS)
