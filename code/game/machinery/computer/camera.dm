@@ -118,6 +118,8 @@ GLOBAL_LIST_EMPTY(bodycamera_screens) // CHOMPEdit
 	radio.canhear_range = world.view // Same as default sight range.
 	power_change()
 
+	toggle() // Outpost 21 edit - Toggle entertainment off by default
+
 /obj/machinery/computer/security/telescreen/entertainment/Destroy()
 	GLOB.entertainment_screens -= src
 	if(showing)
