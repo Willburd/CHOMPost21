@@ -43,15 +43,17 @@ x/proc/disable_goggles()\
 	}\
 	active = FALSE;\
 	icon_state = off_state;\
-	if(ismob(loc))\
-	{\
-		var/mob/M = loc;\
-		M.update_inv_glasses();\
-	}\
 	flash_protection = FLASH_PROTECTION_NONE;\
 	tint = TINT_NONE;\
 	away_planes = enables_planes;\
 	enables_planes = null;\
+	if(ismob(loc))\
+	{\
+		var/mob/M = loc;\
+		M.update_inv_glasses();\
+		M.update_mob_action_buttons();\
+		M.recalculate_vis();\
+	}\
 }\
 \
 x/attack_hand(mob/user)\
