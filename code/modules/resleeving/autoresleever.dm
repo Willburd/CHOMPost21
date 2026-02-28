@@ -259,6 +259,22 @@ GLOBAL_LIST_EMPTY(active_autoresleevers)
 		imp.post_implant(new_character)
 	*/
 
+	// Outpost 21 edit begin - Give players loadout implants
+	if(new_character?.client?.prefs && !issilicon(new_character))
+		var/list/active_gear_list = LAZYACCESS(new_character.client.prefs.gear_list, "[new_character.client.prefs.gear_slot]")
+		for(var/thing in active_gear_list)
+			var/datum/gear/G = gear_datums[thing]
+			if(!G) //Not a real gear datum (maybe removed, as this is loaded from their savefile)
+				continue
+			if(G.whitelisted && !is_alien_whitelisted(new_character.client, GLOB.all_species[G.whitelisted]))
+				continue
+			if(G.slot != "implant")
+				continue
+			var/obj/item/implant/I = G.spawn_item(new_character, active_gear_list[G.display_name])
+			I.invisibility = INVISIBILITY_MAXIMUM
+			I.implant_loadout(new_character)
+	// Outpost 21 edit end
+
 	var/datum/transcore_db/db = SStranscore.db_by_mind_name(new_character.mind.name)
 	if(db)
 
