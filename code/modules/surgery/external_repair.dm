@@ -90,9 +90,9 @@
 	allowed_tools = list(
 	/obj/item/stack/medical/advanced/ointment = 100,
 	/obj/item/stack/medical/ointment = 100,
-	/obj/item/tape_roll = 30,
-	/obj/item/taperoll = 10
-	)
+	/obj/item/tape_roll = 50,
+	/obj/item/taperoll = 30
+	) // Outpost 21 edit - Buffing ghetto surgery
 
 	priority = 3
 
@@ -162,9 +162,9 @@
 	allowed_tools = list(
 	/obj/item/stack/medical/advanced/bruise_pack = 100,
 	/obj/item/stack/medical/bruise_pack = 100,
-	/obj/item/tape_roll = 40,
-	/obj/item/taperoll = 10
-	)
+	/obj/item/tape_roll = 60,
+	/obj/item/taperoll = 30
+	) // Outpost 21 edit - Buffing ghetto surgery
 
 	priority = 3
 
