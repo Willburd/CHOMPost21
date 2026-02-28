@@ -32,9 +32,9 @@
 	surgery_name = "Create Incision"
 	allowed_tools = list(
 		/obj/item/surgical/scalpel = 100,		\
-		/obj/item/material/knife = 95,	\
-		/obj/item/material/shard = 80, 		\
-	) // Outpost 21 edit - Buffing ghetto surgery
+		/obj/item/material/knife = 75,	\
+		/obj/item/material/shard = 50, 		\
+	)
 	req_open = 0
 
 	min_duration = 40 //CHOMPedit
@@ -241,8 +241,8 @@
 	surgery_name = "Retract Skin"
 	allowed_tools = list(
 		/obj/item/surgical/retractor = 100,	\
-		/obj/item/material/kitchen/utensil/fork = 90
-	) // Outpost 21 edit - Buffing ghetto surgery
+		/obj/item/material/kitchen/utensil/fork = 50
+	)
 
 	allowed_procs = list(IS_CROWBAR = 75)
 
@@ -322,10 +322,10 @@
 	surgery_name = "Cauterize Incision"
 	allowed_tools = list(
 		/obj/item/surgical/cautery = 100,			\
-		/obj/item/clothing/mask/smokable/cigarette = 95,	\
-		/obj/item/flame/lighter = 75,			\
-		/obj/item/weldingtool = 60
-	) // Outpost 21 edit - Buffing ghetto surgery
+		/obj/item/clothing/mask/smokable/cigarette = 75,	\
+		/obj/item/flame/lighter = 50,			\
+		/obj/item/weldingtool = 25
+	)
 
 	min_duration = 30 //CHOMPedit
 	max_duration = 50 //CHOMPedit
@@ -398,7 +398,7 @@
 	user.visible_message(span_notice("[user] amputates [target]'s [affected.name] at the [affected.amputation_point] with \the [tool]."), \
 	span_notice("You amputate [target]'s [affected.name] with \the [tool]."))
 	user.balloon_alert_visible("amputates [target]'s [affected.name] at the [affected.amputation_point]", "amputated \the [affected.name]")
-	affected.droplimb(1,DROPLIMB_EDGE)
+	affected.droplimb(TRUE,DROPLIMB_EDGE)
 
 /datum/surgery_step/generic/amputate/fail_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
