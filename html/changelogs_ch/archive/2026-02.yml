@@ -260,3 +260,10 @@
   - balance: Tones down the hidden Tyr blob
   - bugfix: Alter Fossil Tank's Ai to hopefully not break everything as it enjoys
       a meal
+2026-02-28:
+  CHOMPStation2StaffMirrorBot:
+  - image: added digitigrade states for signalis-inspired replikant and sleek uniforms
+  Guti:
+  - rscadd: Added the dust anomaly
+  - code_imp: Added random vermin object for mapping
+  - code_imp: Added a has_lungs helper proc

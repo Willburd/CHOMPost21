@@ -666,17 +666,6 @@
 	color = "#CF3600"
 	cup_prefix = "minty"
 
-// Outpost 21 edit begin - WAFER THIN
-/datum/reagent/nutriment/mint/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
-	. = ..()
-	if(M.nutrition >= (M.max_nutrition * 0.98))
-		M.max_nutrition = M.max_nutrition * 0.975 // prevent spam, they're doomed anyway
-		M.emote("belch")
-		M.Stun(4)
-		spawn(25)
-			M.gib()
-// Outpost 21 edit end
-
 /datum/reagent/lipozine // The anti-nutriment.
 	name = REAGENT_LIPOZINE
 	id = REAGENT_ID_LIPOZINE
@@ -726,6 +715,19 @@
 	ingest_met = REM
 	color = "#000000"
 	cup_prefix = "peppery"
+	wiki_flag = WIKI_FOOD
+	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
+	industrial_use = REFINERYEXPORT_REASON_FOOD
+
+/datum/reagent/mustardpods
+	name = REAGENT_MUSTARDPODS
+	id = REAGENT_ID_MUSTARDPODS
+	description = "Densely-packed seed pods from a mustard plant. Good for making mustard. Not much use for anything else."
+	taste_description = "sharp, bitter, dry mustard"
+	reagent_state = SOLID
+	ingest_met = REM
+	color = "#B2A00D"
+	cup_prefix = "mustardy"
 	wiki_flag = WIKI_FOOD
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_FOOD

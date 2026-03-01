@@ -51,9 +51,9 @@
 	surgery_name = "Create Cavity"
 	allowed_tools = list(
 		/obj/item/surgical/surgicaldrill = 100,	\
-		/obj/item/pen = 95,	\
-		/obj/item/stack/rods = 70
-	) // Outpost 21 edit - Buffing ghetto surgery
+		/obj/item/pen = 75,	\
+		/obj/item/stack/rods = 50
+	)
 
 	min_duration = 60
 	max_duration = 60  //CHOMPedit
@@ -87,10 +87,10 @@
 	priority = 2
 	allowed_tools = list(
 		/obj/item/surgical/cautery = 100,			\
-		/obj/item/clothing/mask/smokable/cigarette = 95,	\
-		/obj/item/flame/lighter = 90,			\
-		/obj/item/weldingtool = 85
-	) // Outpost 21 edit - Buffing ghetto surgery
+		/obj/item/clothing/mask/smokable/cigarette = 75,	\
+		/obj/item/flame/lighter = 50,			\
+		/obj/item/weldingtool = 25
+	)
 
 	min_duration = 30 //CHOMPedit
 	max_duration = 30 //CHOMPedit

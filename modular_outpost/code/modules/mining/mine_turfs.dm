@@ -56,3 +56,22 @@
 			qdel(src)
 		return
 	. = ..()
+
+/obj/structure/boulder/attack_hand(mob/living/user)
+	if(HAS_TRAIT(user, TRAIT_NATURALTUNNELER))
+		if(do_after(user, 2 SECONDS, target = src))
+			//success
+			if(artifact_find)
+				var/spawn_type = artifact_find.artifact_find_type
+				var/obj/O = new spawn_type(get_turf(src))
+				if(istype(O, /obj/machinery/artifact))
+					var/obj/machinery/artifact/X = O
+					if(X.artifact_master)
+						X.artifact_master.artifact_id = artifact_find.artifact_id
+				O.anchored = FALSE	// Anchored finds are lame.
+				src.visible_message(span_warning("\The [src] suddenly crumbles away."))
+			else
+				user.visible_message(span_warning("\The [src] suddenly crumbles away."), span_notice("\The [src] has been whittled away under your careful digging, but there was nothing of interest inside."))
+			qdel(src)
+		return
+	. = ..()
