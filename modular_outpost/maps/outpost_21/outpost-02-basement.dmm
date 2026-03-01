@@ -27397,7 +27397,7 @@
 /area/maintenance/civ/bunker)
 "aXJ" = (
 /obj/effect/auto_crayon{
-	icon_state = "three_trade"
+	icon_state = "companion"
 	},
 /turf/simulated/floor/tiled/white,
 /area/maintenance/civ/bunker)
@@ -56286,7 +56286,6 @@
 /turf/simulated/floor/plating/external/turfpack/muriki,
 /area/mine/explored/muriki/river/north)
 "cag" = (
-/obj/structure/boulder,
 /obj/effect/floorbreak,
 /obj/structure/flora/mushroom,
 /turf/simulated/floor/wood/turfpack/muriki,
@@ -66520,16 +66519,6 @@
 /area/specialty/stowaway_clubhouse)
 "cAr" = (
 /turf/simulated/mineral/alt/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"cAs" = (
-/obj/structure/boulder,
-/obj/effect/floorbreak,
-/turf/simulated/floor/wood/broken/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"cAt" = (
-/obj/structure/boulder,
-/obj/effect/floorbreak,
-/turf/simulated/floor/wood/turfpack/muriki,
 /area/specialty/stowaway_clubhouse)
 "cAu" = (
 /turf/simulated/floor/wood/turfpack/muriki,
@@ -152850,7 +152839,7 @@ cAq
 bHz
 cAy
 bWK
-cAs
+cAR
 cAq
 vSb
 afa
@@ -153006,13 +152995,13 @@ cBa
 cAR
 bHz
 cAB
-cAs
+cAR
 cAE
 cAE
 cAC
 cAz
 cAv
-cAt
+cAA
 cAq
 vSb
 afa
@@ -153169,12 +153158,12 @@ cAS
 cAP
 cAE
 cag
-cAt
-cAs
+cAA
+cAR
 cAD
 cAA
-cAt
-cAs
+cAA
+cAR
 cAr
 vSb
 afa

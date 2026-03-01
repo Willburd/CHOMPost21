@@ -2954,14 +2954,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/hydroponics/publicgarden)
-"agV" = (
-/obj/effect/auto_crayon{
-	icon_state = "uboa"
-	},
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
-/area/mine/unexplored/muriki/mountaintopeast)
 "agW" = (
 /obj/machinery/disposal,
 /obj/structure/disposalpipe/trunk{
@@ -113112,7 +113104,7 @@ hIk
 hIk
 idv
 idv
-agV
+idv
 hIk
 hIk
 hIk

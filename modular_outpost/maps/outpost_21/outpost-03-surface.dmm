@@ -2755,6 +2755,12 @@
 /obj/structure/disposalpipe/trunk,
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/trawler)
+"adH" = (
+/obj/effect/auto_crayon{
+	icon_state = "companion"
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
 "adI" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 6
@@ -12499,12 +12505,6 @@
 /obj/item/stack/material/wood/oak,
 /turf/simulated/floor/wood/broken/turfpack/muriki,
 /area/specialty/stowaway_clubhouse)
-"axR" = (
-/obj/random/trash,
-/obj/structure/boulder,
-/obj/effect/floorbreak,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
 "axS" = (
 /obj/structure/closet{
 	name = "Evidence Closet"
@@ -12567,10 +12567,6 @@
 /area/specialty/stowaway_clubhouse)
 "ayc" = (
 /obj/structure/prop/rock/small/alt,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
-"ayd" = (
-/obj/item/stack/material/wood/oak,
 /turf/simulated/floor/wood/turfpack/muriki,
 /area/specialty/stowaway_clubhouse)
 "aye" = (
@@ -12686,10 +12682,6 @@
 /turf/simulated/floor/wood/turfpack/muriki,
 /area/specialty/stowaway_clubhouse)
 "ayv" = (
-/obj/item/stack/material/wood/oak,
-/obj/item/stack/material/wood/oak{
-	pixel_x = 10
-	},
 /obj/item/stack/material/wood/oak,
 /obj/effect/floorbreak,
 /turf/simulated/floor/wood/turfpack/muriki,
@@ -15110,6 +15102,10 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay)
+"aEN" = (
+/obj/machinery/trailblazer/yellow,
+/turf/simulated/floor/outdoors/sidewalk/slab/turfpack/muriki,
+/area/muriki/grounds/civ)
 "aEO" = (
 /obj/machinery/door/airlock/medical{
 	autoclose = 0;
@@ -16282,6 +16278,10 @@
 /obj/effect/landmark/step_trap,
 /turf/simulated/floor/outdoors/mud/turfpack/muriki,
 /area/muriki/grounds/civ)
+"aJn" = (
+/obj/machinery/trailblazer/yellow,
+/turf/simulated/floor/outdoors/sidewalk/slab/turfpack/muriki,
+/area/muriki/grounds/sci)
 "aJo" = (
 /obj/structure/flora/mushroom,
 /turf/simulated/floor/outdoors/mud/turfpack/muriki,
@@ -16680,7 +16680,7 @@
 /area/muriki/grounds/med)
 "aKK" = (
 /obj/machinery/trailblazer/blue,
-/turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
+/turf/simulated/floor/outdoors/sidewalk/slab/turfpack/muriki,
 /area/muriki/grounds/med)
 "aKL" = (
 /obj/effect/zone_divider,
@@ -110543,7 +110543,7 @@ fxo
 ara
 ara
 ara
-aJD
+ajG
 aDx
 ara
 ara
@@ -138587,7 +138587,7 @@ fQG
 aJY
 aJY
 aJY
-aty
+aJn
 aJY
 aJX
 aJX
@@ -146848,7 +146848,7 @@ edp
 aNY
 aqw
 aqw
-aqY
+aEN
 aqw
 eTa
 ucE
@@ -148632,7 +148632,7 @@ aFc
 aqw
 aqw
 aqw
-aqY
+aEN
 aqw
 aqw
 aqw
@@ -148827,7 +148827,7 @@ aHR
 aHR
 aHR
 aIo
-aqY
+aEN
 aqw
 aqw
 aqw
@@ -148844,7 +148844,7 @@ aqw
 aqw
 aqw
 aqw
-aqY
+aEN
 aqw
 aqx
 oNH
@@ -153413,7 +153413,7 @@ ayN
 axy
 ayF
 ayy
-axN
+ayg
 axP
 axA
 axP
@@ -153575,7 +153575,7 @@ aEI
 axA
 axC
 ayB
-ayg
+adH
 axA
 ayc
 axW
@@ -153735,7 +153735,7 @@ axy
 axE
 ayO
 axy
-axN
+ayg
 ayg
 aye
 axP
@@ -154061,9 +154061,9 @@ axy
 axy
 axN
 axC
-axN
+ayg
 aym
-ayd
+ayg
 axP
 axM
 axD
@@ -154218,17 +154218,17 @@ aza
 aIe
 ayS
 rJa
-axT
+axy
 axE
 ayI
 ayn
 ayy
 ayv
-axN
+ayg
 aye
 axX
-axN
-axE
+ayg
+axC
 rZO
 rZO
 aFc
@@ -154384,12 +154384,12 @@ axy
 axy
 axy
 ayG
-axE
+axC
 axC
 ayg
 ayf
 axP
-axN
+ayg
 axG
 rZO
 rZO
@@ -154875,7 +154875,7 @@ axy
 axP
 axP
 axP
-axE
+axC
 axA
 axy
 axy
@@ -155037,7 +155037,7 @@ axy
 ayg
 ayi
 axA
-axR
+ayy
 axH
 axC
 axA
@@ -155362,7 +155362,7 @@ ayg
 axN
 axP
 axN
-axI
+ayg
 axy
 rJa
 rJa
@@ -155523,7 +155523,7 @@ axY
 aye
 axE
 axT
-axE
+axC
 axK
 axy
 axy
