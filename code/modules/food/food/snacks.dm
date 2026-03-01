@@ -6650,6 +6650,18 @@
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_MINT, 1)
 
+// Outpost 21 edit begin - WAFER THIN
+/obj/item/reagent_containers/food/snacks/mint/On_Consume(mob/living/eater, mob/living/feeder)
+	. = ..()
+	if(M.nutrition >= (M.max_nutrition * 0.98))
+		M.max_nutrition = M.max_nutrition * 0.975 // prevent spam, they're doomed anyway
+		M.emote("belch")
+		M.Stun(4)
+		spawn(25)
+			M.gib()
+// Outpost 21 edit end
+
+
 /obj/item/reagent_containers/food/snacks/mint/admints
 	desc = "Spearmint, peppermint's non-festive cousin."
 	icon = 'icons/obj/food_snacks.dmi'

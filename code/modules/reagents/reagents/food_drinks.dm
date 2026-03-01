@@ -666,17 +666,6 @@
 	color = "#CF3600"
 	cup_prefix = "minty"
 
-// Outpost 21 edit begin - WAFER THIN
-/datum/reagent/nutriment/mint/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
-	. = ..()
-	if(M.nutrition >= (M.max_nutrition * 0.98))
-		M.max_nutrition = M.max_nutrition * 0.975 // prevent spam, they're doomed anyway
-		M.emote("belch")
-		M.Stun(4)
-		spawn(25)
-			M.gib()
-// Outpost 21 edit end
-
 /datum/reagent/lipozine // The anti-nutriment.
 	name = REAGENT_LIPOZINE
 	id = REAGENT_ID_LIPOZINE
