@@ -6653,12 +6653,12 @@
 // Outpost 21 edit begin - WAFER THIN
 /obj/item/reagent_containers/food/snacks/mint/On_Consume(mob/living/eater, mob/living/feeder)
 	. = ..()
-	if(M.nutrition >= (M.max_nutrition * 0.98))
-		M.max_nutrition = M.max_nutrition * 0.975 // prevent spam, they're doomed anyway
-		M.emote("belch")
-		M.Stun(4)
+	if(eater.nutrition >= (eater.max_nutrition * 0.98))
+		eater.max_nutrition = eater.max_nutrition * 0.975 // prevent spam, they're doomed anyway
+		eater.emote("belch")
+		eater.Stun(4)
 		spawn(25)
-			M.gib()
+			eater.gib()
 // Outpost 21 edit end
 
 
