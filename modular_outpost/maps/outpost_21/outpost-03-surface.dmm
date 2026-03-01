@@ -15076,6 +15076,12 @@
 	ignore_mapgen = 1
 	},
 /area/mine/unexplored/muriki/mountaineast)
+"aEK" = (
+/obj/structure/sink/puddle,
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/unexplored/muriki/mountaineast)
 "aEL" = (
 /obj/effect/floor_decal/corner/blue{
 	dir = 9
@@ -18234,6 +18240,19 @@
 /obj/structure/ladder/up,
 /turf/simulated/open/muriki,
 /area/mine/explored/muriki/river/hole)
+"aQE" = (
+/obj/machinery/portable_atmospherics/hydroponics/soil,
+/obj/item/material/minihoe,
+/turf/simulated/floor/outdoors/mud/turfpack/muriki{
+	outdoors = 0
+	},
+/area/mine/unexplored/muriki/mountaineast)
+"aQF" = (
+/obj/machinery/portable_atmospherics/hydroponics/soil,
+/turf/simulated/floor/outdoors/mud/turfpack/muriki{
+	outdoors = 0
+	},
+/area/mine/unexplored/muriki/mountaineast)
 "aQH" = (
 /obj/structure/railing,
 /obj/effect/floor_decal/industrial/outline/grey,
@@ -154230,7 +154249,7 @@ azr
 azo
 rJa
 rJa
-rJa
+aQE
 aza
 aIe
 ayS
@@ -154392,9 +154411,9 @@ azr
 rJa
 rJa
 rJa
-rJa
+aQF
 fhs
-fhs
+aEK
 iwS
 rJa
 axy

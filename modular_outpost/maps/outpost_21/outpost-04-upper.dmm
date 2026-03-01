@@ -127,9 +127,6 @@
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
-/obj/effect/auto_crayon{
-	icon_state = "wander"
-	},
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/djstation)
 "aal" = (
@@ -3480,6 +3477,9 @@
 	},
 /turf/simulated/floor/tiled/hydro,
 /area/hydroponics/hallway)
+"aig" = (
+/turf/simulated/mineral/alt/ignore_cavegen/turfpack/muriki,
+/area/specialty/expie_clubhouse)
 "aih" = (
 /obj/machinery/mineral/input,
 /obj/effect/decal/cleanable/blood,
@@ -3906,16 +3906,10 @@
 /obj/structure/ladder,
 /turf/simulated/open/muriki,
 /area/mine/explored/muriki/river/hole)
-"ajs" = (
-/obj/structure/inflatable,
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
-/area/mine/unexplored/muriki/mountaintopeast)
 "ajt" = (
 /obj/structure/inflatable/door,
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/mine/unexplored/muriki/mountaintopeast)
+/area/specialty/expie_clubhouse)
 "aju" = (
 /obj/effect/auto_crayon{
 	icon_state = "three_trade"
@@ -3934,7 +3928,7 @@
 /turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
 	},
-/area/mine/unexplored/muriki/mountaintopeast)
+/area/specialty/expie_clubhouse)
 "ajw" = (
 /obj/effect/auto_crayon{
 	icon_state = "six_tranquility"
@@ -3942,7 +3936,7 @@
 /turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
 	},
-/area/mine/unexplored/muriki/mountaintopeast)
+/area/specialty/expie_clubhouse)
 "ajx" = (
 /obj/effect/auto_crayon{
 	icon_state = "survival"
@@ -3953,57 +3947,12 @@
 /area/mine/unexplored/muriki/mountaintopeast)
 "ajy" = (
 /obj/structure/table/rack/shelf/wood,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/steel,
 /turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
 	},
-/area/mine/unexplored/muriki/mountaintopeast)
-"ajz" = (
-/obj/effect/auto_crayon{
-	icon_state = "five_life"
-	},
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
-/area/mine/unexplored/muriki/mountaintopeast)
-"ajA" = (
-/obj/item/paper/scavmark/companion{
-	pixel_x = 9
-	},
-/obj/item/paper/scavmark/expietrade{
-	pixel_x = -10
-	},
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
-/area/mine/unexplored/muriki/mountaintopeast)
-"ajB" = (
-/obj/structure/noticeboard/expie{
-	dir = 8;
-	pixel_x = 32
-	},
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
-/area/mine/unexplored/muriki/mountaintopeast)
-"ajC" = (
-/turf/simulated/wall/r_wall,
-/area/mine/unexplored/muriki/mountaintopeast)
-"ajD" = (
-/turf/simulated/wall/r_wall{
-	can_open = 1
-	},
-/area/maintenance/damaged_resleeverC)
-"ajE" = (
-/obj/structure/inflatable/door,
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
-/area/mine/unexplored/muriki/mountaintopeast)
-"ajF" = (
-/turf/simulated/wall{
-	can_open = 1
-	},
-/area/mine/unexplored/muriki/mountaintopeast)
+/area/specialty/expie_clubhouse)
 "ajG" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -4016,53 +3965,42 @@
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/cargupbreak)
-"ajH" = (
-/obj/effect/auto_crayon{
-	icon_state = "left"
+"ajR" = (
+/turf/simulated/wall,
+/area/specialty/expie_clubhouse)
+"ajS" = (
+/obj/item/stack/tile/floor/steel{
+	amount = 60
+	},
+/obj/item/stack/tile/floor/steel{
+	amount = 60
 	},
 /turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
 	},
-/area/mine/unexplored/muriki/mountaintopeast)
-"ajI" = (
-/obj/random/soap_common,
+/area/specialty/expie_clubhouse)
+"ajT" = (
+/obj/item/paper/scavmark/companion{
+	pixel_x = 9
+	},
+/obj/item/paper/scavmark/expietrade{
+	pixel_x = -10
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/specialty/expie_clubhouse)
+"ajU" = (
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/specialty/expie_clubhouse)
+"ajV" = (
 /turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
 	},
-/area/mine/unexplored/muriki/mountaintopeast)
-"ajJ" = (
-/turf/simulated/floor/water/turfpack/muriki,
-/area/mine/unexplored/muriki/mountaintopeast)
-"ajK" = (
-/obj/structure/sink/puddle,
-/turf/simulated/floor/outdoors/mud/turfpack/muriki{
-	outdoors = 0
-	},
-/area/mine/unexplored/muriki/mountaintopeast)
-"ajL" = (
-/turf/simulated/floor/outdoors/mud/turfpack/muriki{
-	outdoors = 0
-	},
-/area/mine/unexplored/muriki/mountaintopeast)
-"ajM" = (
-/obj/effect/auto_crayon{
-	icon_state = "four_greed"
-	},
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
-/area/mine/unexplored/muriki/mountaintopeast)
-"ajN" = (
-/obj/item/material/minihoe,
-/turf/simulated/floor/outdoors/mud/turfpack/muriki{
-	outdoors = 0
-	},
-/area/mine/unexplored/muriki/mountaintopeast)
-"ajO" = (
+/area/specialty/expie_clubhouse)
+"ajW" = (
 /obj/structure/reagent_dispensers/souppot/half,
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/mine/unexplored/muriki/mountaintopeast)
-"ajP" = (
+/area/specialty/expie_clubhouse)
+"ajX" = (
 /obj/item/reagent_containers/glass/bucket{
 	pixel_y = 16;
 	pixel_x = 9
@@ -4083,13 +4021,7 @@
 /turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
 	},
-/area/mine/unexplored/muriki/mountaintopeast)
-"ajQ" = (
-/obj/machinery/portable_atmospherics/hydroponics/soil,
-/turf/simulated/floor/outdoors/mud/turfpack/muriki{
-	outdoors = 0
-	},
-/area/mine/unexplored/muriki/mountaintopeast)
+/area/specialty/expie_clubhouse)
 "akn" = (
 /obj/effect/floor_decal/corner/purple{
 	dir = 10
@@ -10416,12 +10348,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/outpost_roof/turfpack/muriki,
 /area/muriki/rooftop/cargo)
-"drJ" = (
-/obj/structure/prop/rock/small,
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
-/area/djstation)
 "drK" = (
 /obj/structure/table/standard,
 /obj/machinery/firealarm{
@@ -30620,14 +30546,8 @@
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
-/obj/effect/auto_crayon{
-	icon_state = "down"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
-	},
-/obj/effect/auto_crayon{
-	icon_state = "desire"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/djstation)
@@ -32545,11 +32465,6 @@
 /obj/random/mre,
 /turf/simulated/floor/wood,
 /area/djstation)
-"oLL" = (
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
-/area/djstation)
 "oMk" = (
 /obj/structure/railing{
 	dir = 8
@@ -33224,7 +33139,7 @@
 /turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
 	},
-/area/djstation)
+/area/mine/unexplored/muriki/mountaintopeast)
 "peo" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/cable/green{
@@ -38382,12 +38297,6 @@
 	},
 /turf/simulated/floor/outpost_roof/turfpack/muriki,
 /area/muriki/rooftop/disposal)
-"rMu" = (
-/obj/machinery/trailblazer/yellow,
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
-/area/djstation)
 "rMw" = (
 /obj/machinery/door/airlock/glass{
 	name = "Gibber Deposit";
@@ -110586,7 +110495,7 @@ luR
 luR
 luR
 luR
-drJ
+feX
 qsj
 kMc
 kMc
@@ -110748,7 +110657,7 @@ luR
 luR
 luR
 luR
-oLL
+idv
 mJm
 acv
 acv
@@ -110909,8 +110818,8 @@ aiT
 luR
 luR
 luR
-oLL
-oLL
+idv
+idv
 pWp
 szB
 szB
@@ -111066,13 +110975,13 @@ luR
 gae
 luR
 pwD
-idv
+agO
 orG
 luR
 luR
 luR
 pej
-oLL
+idv
 iIC
 szB
 jHG
@@ -111228,13 +111137,13 @@ luR
 luR
 luR
 luR
-agO
+ajx
 idv
 idv
 idv
 aiH
-oLL
-oLL
+idv
+idv
 fXb
 szB
 aaj
@@ -111395,8 +111304,8 @@ aiH
 idv
 idv
 feX
-oLL
-rMu
+idv
+hQF
 qkt
 aai
 sIm
@@ -112136,11 +112045,11 @@ pEi
 hIk
 hIk
 hIk
-luR
-luR
-luR
-luR
-luR
+hIk
+hIk
+hIk
+hIk
+hIk
 luR
 luR
 luR
@@ -112297,12 +112206,12 @@ pEi
 pEi
 hIk
 hIk
-luR
-luR
-idv
-luR
-luR
-luR
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
 luR
 luR
 luR
@@ -112459,12 +112368,12 @@ pEi
 pEi
 hIk
 hIk
-luR
-idv
-idv
-idv
-luR
-luR
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
 luR
 luR
 luR
@@ -112620,13 +112529,13 @@ bMv
 pEi
 pEi
 hIk
-luR
-luR
-idv
-idv
-idv
-luR
-luR
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
 luR
 luR
 luR
@@ -112782,16 +112691,16 @@ pEi
 pEi
 pEi
 hIk
-luR
-ajQ
-ajL
-idv
-idv
-ajK
-ajJ
-luR
-luR
-luR
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
 ahX
 aij
 aiF
@@ -112800,11 +112709,11 @@ ahX
 luR
 luR
 luR
-luR
-wjo
+aig
+ajR
 ajt
-wjo
-luR
+ajR
+aig
 luR
 luR
 luR
@@ -112944,29 +112853,29 @@ pEi
 pEi
 pEi
 hIk
-luR
-ajQ
-ajN
-idv
-idv
-ajL
-ajJ
-ajJ
-luR
-luR
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
 ahX
 ahX
-ajD
 ahX
 ahX
+ahX
 luR
 luR
 luR
-wjo
+ajR
 ajy
 ajv
-idv
-wjo
+ajS
+ajR
 luR
 luR
 luR
@@ -113106,29 +113015,29 @@ pEi
 hIk
 pEi
 hIk
-luR
-ajQ
-ajL
-idv
-idv
-idv
-luR
-luR
-luR
-luR
-luR
-luR
-idv
-luR
-luR
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
 luR
 luR
 luR
-wjo
-idv
-idv
-idv
-idv
+luR
+luR
+ajR
+ajW
+ajV
+ajT
+ajR
 luR
 luR
 luR
@@ -113268,29 +113177,29 @@ hIk
 hIk
 hIk
 hIk
-luR
-wjo
-wjo
-idv
-afe
-idv
-wjo
-idv
-wjo
-luR
-luR
-luR
-ajE
-luR
-luR
-luR
-luR
-luR
-idv
-idv
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+ajR
+ajX
 ajw
-afe
-idv
+ajU
+ajR
 luR
 luR
 luR
@@ -113430,29 +113339,29 @@ hIk
 hIk
 hIk
 hIk
-luR
-idv
-ajO
-idv
-idv
-idv
-idv
-idv
-wjo
-wjo
-idv
-wjo
-ajF
-wjo
-idv
-idv
-wjo
-wjo
-wjo
-wjo
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+ajR
+ajR
 ajt
-wjo
-wjo
+ajR
+ajR
 luR
 luR
 luR
@@ -113592,29 +113501,29 @@ hIk
 hIk
 hIk
 hIk
-luR
-idv
-ajP
-idv
-idv
-idv
-idv
-idv
-idv
-wjo
-idv
-idv
-ajH
-idv
-idv
-idv
-idv
-wjo
-idv
-idv
-idv
-ajs
-luR
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
 aaY
 avC
 avC
@@ -113754,29 +113663,29 @@ hIk
 hIk
 hIk
 hIk
-luR
-wjo
-idv
-idv
-idv
-idv
-idv
-idv
-idv
-wjo
-idv
-idv
-idv
-idv
-idv
-idv
-idv
-wjo
-idv
-idv
-afe
-wjo
-idv
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
 aiD
 avC
 avC
@@ -113916,29 +113825,29 @@ hIk
 hIk
 hIk
 hIk
-luR
-wjo
-idv
-idv
-idv
-ajM
-idv
-idv
-idv
-afe
-idv
-idv
-ajI
-ajA
-idv
-idv
-idv
-afe
-idv
-idv
-idv
-ajt
-idv
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
 ajr
 avC
 avC
@@ -114078,29 +113987,29 @@ hIk
 hIk
 hIk
 hIk
-luR
-luR
-idv
-idv
-idv
-idv
-idv
-idv
-idv
-idv
-idv
-idv
-idv
-aju
-idv
-idv
-idv
-idv
-idv
-idv
-idv
-ajs
-idv
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
 aaY
 avC
 avC
@@ -114241,28 +114150,28 @@ hIk
 hIk
 hIk
 hIk
-luR
-wjo
-idv
-idv
-idv
-idv
-idv
-idv
-idv
-idv
-idv
-idv
-idv
-idv
-idv
-idv
-idv
-idv
-idv
-idv
-ajs
-luR
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
 luR
 luR
 avC
@@ -114403,28 +114312,28 @@ hIk
 hIk
 hIk
 hIk
-luR
-luR
-wjo
-idv
-idv
-idv
-idv
-afe
-wjo
-afe
-idv
-idv
-ajB
-idv
-idv
-idv
-wjo
-idv
-idv
-idv
-wjo
-luR
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
 luR
 luR
 luR
@@ -114566,27 +114475,27 @@ hIk
 hIk
 hIk
 hIk
-luR
-luR
-luR
-wjo
-idv
-idv
-wjo
-wjo
-wjo
-idv
-idv
-ajC
-afe
-idv
-idv
-wjo
-wjo
-idv
-idv
-wjo
-luR
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
 luR
 luR
 luR
@@ -114726,28 +114635,28 @@ hIk
 hIk
 hIk
 hIk
+luR
+luR
+luR
 hIk
 hIk
 hIk
-luR
-luR
-luR
-luR
-luR
-luR
-luR
-luR
-wjo
-idv
-idv
-afe
-idv
-idv
-luR
-luR
-luR
-luR
-luR
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
 luR
 luR
 luR
@@ -114888,28 +114797,28 @@ hIk
 hIk
 hIk
 hIk
+luR
+luR
+luR
 hIk
 hIk
 hIk
-luR
-luR
-luR
-luR
-luR
-luR
-luR
-luR
-wjo
-idv
-idv
-idv
-idv
-idv
-luR
-luR
-luR
-luR
-luR
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
 luR
 luR
 luR
@@ -115060,18 +114969,18 @@ luR
 luR
 luR
 luR
-luR
-idv
-idv
-idv
-ajz
-idv
-idv
-luR
-luR
-luR
-luR
-luR
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
 luR
 luR
 luR
@@ -115222,18 +115131,18 @@ luR
 luR
 luR
 luR
-luR
-idv
-idv
-idv
-idv
-idv
-idv
-luR
-luR
-luR
-luR
-luR
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
 luR
 luR
 luR
@@ -115384,14 +115293,14 @@ luR
 luR
 luR
 luR
-luR
-wjo
-idv
-idv
-idv
-idv
-wjo
-luR
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
 luR
 luR
 luR
@@ -115546,14 +115455,14 @@ luR
 luR
 luR
 luR
-luR
-wjo
-wjo
-idv
-idv
-idv
-wjo
-luR
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
 luR
 luR
 luR
@@ -115708,14 +115617,14 @@ luR
 luR
 luR
 luR
-luR
-luR
-luR
-luR
-luR
-luR
-luR
-luR
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
+hIk
 luR
 luR
 luR
