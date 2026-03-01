@@ -12505,6 +12505,9 @@
 /obj/item/stack/material/wood/oak,
 /turf/simulated/floor/wood/broken/turfpack/muriki,
 /area/specialty/stowaway_clubhouse)
+"axR" = (
+/turf/simulated/wall,
+/area/mine/explored/muriki/river/hole)
 "axS" = (
 /obj/structure/closet{
 	name = "Evidence Closet"
@@ -12569,6 +12572,9 @@
 /obj/structure/prop/rock/small/alt,
 /turf/simulated/floor/wood/turfpack/muriki,
 /area/specialty/stowaway_clubhouse)
+"ayd" = (
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/unexplored/muriki/mountaineast)
 "aye" = (
 /turf/simulated/floor/wood/broken/turfpack/muriki,
 /area/specialty/stowaway_clubhouse)
@@ -12642,6 +12648,7 @@
 /obj/structure/bed,
 /obj/item/bedsheet/mime,
 /obj/effect/floorbreak,
+/obj/effect/landmark/start/stowaway,
 /turf/simulated/floor/wood/turfpack/muriki,
 /area/specialty/stowaway_clubhouse)
 "ayp" = (
@@ -12745,6 +12752,7 @@
 "ayE" = (
 /obj/structure/bed,
 /obj/item/bedsheet/ce,
+/obj/effect/landmark/start/stowaway,
 /turf/simulated/floor/wood/turfpack/muriki,
 /area/specialty/stowaway_clubhouse)
 "ayF" = (
@@ -15068,15 +15076,6 @@
 	ignore_mapgen = 1
 	},
 /area/mine/unexplored/muriki/mountaineast)
-"aEK" = (
-/obj/structure/railing{
-	dir = 4
-	},
-/obj/effect/auto_crayon{
-	icon_state = "uboa"
-	},
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/mine/explored/muriki/river/hole)
 "aEL" = (
 /obj/effect/floor_decal/corner/blue{
 	dir = 9
@@ -16926,6 +16925,11 @@
 /obj/structure/prop/rock/watersharp,
 /turf/simulated/floor/water/acidic/deep/turfpack/muriki,
 /area/mine/explored/muriki/mountainnorth)
+"aLP" = (
+/obj/machinery/door/airlock/maintenance/common,
+/obj/item/airlock_brace,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/mine/explored/muriki/river/hole)
 "aLQ" = (
 /obj/effect/zone_divider,
 /turf/simulated/floor/water/acidic/turfpack/muriki,
@@ -18214,6 +18218,22 @@
 /obj/structure/flora/mushroom,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/unexplored/muriki/cave/shelter/north_west_far)
+"aQB" = (
+/obj/effect/auto_crayon{
+	icon_state = "uboa"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/unexplored/muriki/mountaineast)
+"aQC" = (
+/obj/structure/lattice,
+/obj/structure/ladder,
+/turf/simulated/open/muriki,
+/area/mine/explored/muriki/river/hole)
+"aQD" = (
+/obj/structure/lattice,
+/obj/structure/ladder/up,
+/turf/simulated/open/muriki,
+/area/mine/explored/muriki/river/hole)
 "aQH" = (
 /obj/structure/railing,
 /obj/effect/floor_decal/industrial/outline/grey,
@@ -79354,9 +79374,6 @@
 	},
 /obj/structure/window/maintenance_panel{
 	dir = 8
-	},
-/obj/structure/window/maintenance_panel{
-	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/muriki/bathroom/kitchen)
@@ -153843,8 +153860,8 @@ rJa
 rJa
 rJa
 aIe
-fhs
-fhs
+aQB
+ayd
 rJa
 rJa
 rJa
@@ -154005,9 +154022,9 @@ rJa
 rJa
 rJa
 rJa
-fhs
-fhs
-fhs
+axR
+aLP
+axR
 rJa
 rJa
 rJa
@@ -154168,7 +154185,7 @@ rJa
 rJa
 cCp
 anc
-aEK
+anc
 anu
 rJa
 rJa
@@ -154488,7 +154505,7 @@ rJa
 rJa
 rJa
 rJa
-jnX
+aQC
 jnX
 jnX
 jnX
@@ -154650,7 +154667,7 @@ rJa
 rJa
 rJa
 rJa
-jnX
+aQD
 jnX
 jnX
 jnX

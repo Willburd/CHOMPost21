@@ -1589,6 +1589,11 @@
 	},
 /turf/simulated/floor/wood/sif,
 /area/centcom/living)
+"adE" = (
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/space)
 "adF" = (
 /obj/structure/table/woodentable,
 /obj/item/modular_computer/laptop,
@@ -9212,6 +9217,7 @@
 /obj/item/reagent_containers/food/drinks/bluespace_coffee{
 	name = "Trashfire's bluespace coffee"
 	},
+/obj/item/reagent_containers/food/drinks/glass2/coffeemug/tall/metal,
 /turf/simulated/floor/carpet/turcarpet,
 /area/centcom/living)
 "cag" = (
@@ -54488,7 +54494,7 @@ hIA
 hIA
 hIA
 hIA
-hIA
+adE
 hIA
 hIA
 hIA

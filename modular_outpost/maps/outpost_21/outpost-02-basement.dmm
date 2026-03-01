@@ -27390,9 +27390,6 @@
 "aXI" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/item/paper/scavmark/companion{
-	pixel_x = 9
-	},
 /turf/simulated/floor/tiled/white,
 /area/maintenance/civ/bunker)
 "aXJ" = (
@@ -48058,12 +48055,6 @@
 "bJK" = (
 /turf/simulated/floor/plating,
 /area/maintenance/sec)
-"bJL" = (
-/obj/item/paper/scavmark/expietrade{
-	pixel_x = -10
-	},
-/turf/simulated/floor/tiled/white,
-/area/maintenance/civ/bunker)
 "bJM" = (
 /obj/structure/catwalk,
 /obj/structure/dancepole{
@@ -48333,6 +48324,17 @@
 /obj/structure/window/maintenance_panel,
 /turf/simulated/floor/tiled/techfloor/grid/turfpack/muriki,
 /area/rnd/workshop)
+"bKn" = (
+/obj/effect/auto_crayon{
+	icon_state = "night"
+	},
+/obj/effect/auto_crayon{
+	icon_state = "up"
+	},
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/explored/muriki/cave/waste)
 "bKo" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/sign/warning/incinerator{
@@ -48482,6 +48484,11 @@
 	},
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/maintenance/civ/bunker)
+"bKD" = (
+/obj/structure/lattice,
+/obj/structure/ladder/up,
+/turf/simulated/open/muriki,
+/area/mine/unexplored/muriki/cave/underdark_pit/east_civ)
 "bKE" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -63607,6 +63614,11 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/atmos_control)
+"ctm" = (
+/obj/structure/lattice,
+/obj/structure/ladder,
+/turf/simulated/open/muriki,
+/area/mine/unexplored/muriki/cave/underdark_pit/east_civ)
 "ctn" = (
 /obj/structure/window/maintenance_panel{
 	dir = 8
@@ -94947,7 +94959,7 @@ rBM
 qgn
 jrr
 erX
-aAO
+bKn
 aAO
 aAO
 aAO
@@ -143857,7 +143869,7 @@ aVu
 aVQ
 bKs
 aXo
-bJL
+kMP
 aYj
 bKs
 bKs
@@ -151800,7 +151812,7 @@ vSb
 vSb
 vSb
 bGT
-aBs
+bKD
 aBs
 aBs
 aBs
@@ -151962,7 +151974,7 @@ vSb
 vSb
 vSb
 bGT
-aBs
+ctm
 aBs
 aBs
 aBs

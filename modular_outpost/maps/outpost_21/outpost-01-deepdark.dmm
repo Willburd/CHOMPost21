@@ -2798,6 +2798,13 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
+"agQ" = (
+/obj/structure/prop/rock/small,
+/obj/structure/ladder/up,
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/explored/muriki/cave/deepdark)
 "amr" = (
 /obj/effect/map_effect/interval/atmogland/bodyheat,
 /obj/effect/mist,
@@ -65650,7 +65657,7 @@ tWu
 tWu
 tWu
 tWu
-vEI
+agQ
 hfs
 hfs
 plJ
