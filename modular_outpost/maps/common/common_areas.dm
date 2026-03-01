@@ -3052,3 +3052,13 @@
 /area/specialty/stowaway_clubhouse/upper
 	base_turf = /turf/simulated/open
 	icon_state = "LPS"
+
+/area/specialty/expie_clubhouse
+	name = "\improper Dog House"
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
+	icon = 'icons/turf/areas.dmi'
+	icon_state = "medbay_mental"
+	flags = RAD_SHIELDED
+	sound_env = LARGE_SOFTFLOOR
+	ambience = AMBIENCE_GENERIC
+	color_grading = COLORTINT_COZY
