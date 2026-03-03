@@ -14847,7 +14847,7 @@
 /obj/structure/railing{
 	dir = 8
 	},
-/obj/structure/prop/machine/comm_tower,
+/obj/structure/prop/machine/comm_tower/starts_on,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/djstation)
 "fIC" = (
