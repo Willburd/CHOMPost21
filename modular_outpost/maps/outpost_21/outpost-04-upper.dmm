@@ -2295,12 +2295,13 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/obj/machinery/power/apc{
-	name = "south bump";
-	pixel_y = -24
-	},
 /obj/structure/cable/green{
 	icon_state = "0-8"
+	},
+/obj/machinery/power/apc{
+	dir = 1;
+	name = "north bump";
+	pixel_y = 24
 	},
 /turf/simulated/floor/plating,
 /area/muriki/elevator/secupper)
@@ -2313,13 +2314,13 @@
 /area/maintenance/substation/research)
 "afj" = (
 /obj/structure/disposalpipe/segment,
-/obj/machinery/power/apc{
-	dir = 8;
-	name = "west bump";
-	pixel_x = -24
-	},
 /obj/structure/cable/green{
 	icon_state = "0-2"
+	},
+/obj/machinery/power/apc{
+	dir = 4;
+	name = "east bump";
+	pixel_x = 24
 	},
 /turf/simulated/floor,
 /area/muriki/elevator/sciupper)
@@ -5573,7 +5574,7 @@
 /area/rnd/hallway/upper)
 "aZD" = (
 /obj/structure/sign/deck/third,
-/turf/simulated/shuttle/wall/dark/hard_corner,
+/turf/simulated/wall/titanium,
 /area/muriki/elevator/sciupper)
 "aZN" = (
 /obj/structure/sink{
@@ -6519,9 +6520,6 @@
 /obj/effect/floor_decal/corner/blue/diagonal,
 /turf/simulated/floor/wmarble,
 /area/medical/genetics)
-"byK" = (
-/turf/simulated/shuttle/wall/dark/hard_corner,
-/area/muriki/elevator/sciupper)
 "bzn" = (
 /turf/simulated/wall/r_wall,
 /area/rnd/hallway/phoronicsmainhall)
@@ -10447,9 +10445,6 @@
 	outdoors = 1
 	},
 /area/mine/unexplored/muriki/mountaintop_pathway)
-"dtu" = (
-/turf/simulated/shuttle/wall/dark,
-/area/muriki/elevator/mediupper)
 "dtP" = (
 /turf/simulated/floor/outdoors/rocks/turfpack/muriki{
 	outdoors = 0
@@ -12104,7 +12099,7 @@
 /turf/simulated/floor,
 /area/maintenance/engineering)
 "ejR" = (
-/turf/simulated/shuttle/wall/dark,
+/turf/simulated/wall/titanium,
 /area/muriki/elevator/sciupper)
 "ejW" = (
 /obj/structure/catwalk,
@@ -13032,9 +13027,6 @@
 	},
 /turf/simulated/floor/outpost_roof/turfpack/muriki,
 /area/muriki/rooftop/security)
-"eGn" = (
-/turf/simulated/shuttle/wall/dark,
-/area/muriki/elevator/secupper)
 "eGr" = (
 /turf/simulated/wall/r_wall,
 /area/rnd/research/phoronics/breakroom)
@@ -27503,7 +27495,7 @@
 /turf/simulated/floor/tiled,
 /area/teleporter/engineering)
 "mlx" = (
-/turf/simulated/shuttle/wall/dark/hard_corner,
+/turf/simulated/wall/titanium,
 /area/muriki/elevator/secupper)
 "mlI" = (
 /obj/machinery/atmospherics/unary/freezer,
@@ -33394,13 +33386,12 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
-/obj/machinery/power/apc{
-	dir = 4;
-	name = "east bump";
-	pixel_x = 24
-	},
 /obj/structure/cable/green{
 	icon_state = "0-8"
+	},
+/obj/machinery/power/apc{
+	name = "south bump";
+	pixel_y = -24
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/muriki/elevator/mediupper)
@@ -42018,7 +42009,7 @@
 /area/rnd/research/phoronics/burn)
 "tBl" = (
 /obj/structure/sign/deck/third,
-/turf/simulated/shuttle/wall/dark/hard_corner,
+/turf/simulated/wall/titanium,
 /area/muriki/elevator/mediupper)
 "tBv" = (
 /obj/item/bone/ribs,
@@ -42786,7 +42777,7 @@
 /turf/simulated/floor,
 /area/chapel/main)
 "tUv" = (
-/turf/simulated/shuttle/wall/dark/hard_corner,
+/turf/simulated/wall/titanium,
 /area/muriki/elevator/mediupper)
 "tUG" = (
 /turf/simulated/floor/water/indoors/beach,
@@ -88613,10 +88604,10 @@ eBP
 apf
 ivW
 mlx
-eGn
-eGn
-eGn
-eGn
+mlx
+mlx
+mlx
+mlx
 mlx
 kay
 vaD
@@ -88774,12 +88765,12 @@ nMU
 nGH
 our
 eiu
-eGn
+mlx
 djf
 djf
 djf
 djf
-eGn
+mlx
 sLu
 vaD
 pGG
@@ -88941,7 +88932,7 @@ djf
 djf
 djf
 djf
-eGn
+mlx
 vYL
 vaD
 pGG
@@ -89103,7 +89094,7 @@ djf
 djf
 djf
 djf
-eGn
+mlx
 vGV
 vaD
 gaz
@@ -89260,12 +89251,12 @@ tFg
 vXl
 jlk
 urv
-eGn
+mlx
 djf
 djf
 djf
 djf
-eGn
+mlx
 afh
 vaD
 lXn
@@ -89423,10 +89414,10 @@ gTx
 cTh
 cTh
 mlx
-eGn
-eGn
-eGn
-eGn
+mlx
+mlx
+mlx
+mlx
 mlx
 rLE
 wZt
@@ -90018,10 +90009,10 @@ qYn
 rKO
 rmQ
 tUv
-dtu
-dtu
-dtu
-dtu
+tUv
+tUv
+tUv
+tUv
 tUv
 cbx
 lJY
@@ -90179,12 +90170,12 @@ rLy
 rLy
 csA
 rmQ
-dtu
+tUv
 ydg
 ydg
 ydg
 ydg
-dtu
+tUv
 hZw
 bAs
 eaG
@@ -90341,12 +90332,12 @@ ffc
 iqb
 nwT
 rmQ
-dtu
+tUv
 ydg
 ydg
 ydg
 ydg
-dtu
+tUv
 auk
 kCb
 idg
@@ -90503,12 +90494,12 @@ ffc
 iqb
 eMC
 iYn
-dtu
+tUv
 ydg
 ydg
 ydg
 ydg
-dtu
+tUv
 vQU
 qyp
 mOr
@@ -90665,12 +90656,12 @@ ffc
 qdc
 sZA
 pjy
-dtu
+tUv
 ydg
 ydg
 ydg
 ydg
-dtu
+tUv
 ffc
 pYQ
 ffc
@@ -90828,10 +90819,10 @@ ary
 kQw
 ffc
 tBl
-dtu
+tUv
 ife
 ife
-dtu
+tUv
 tUv
 wUV
 vWF
@@ -99708,7 +99699,7 @@ kxr
 bri
 aCc
 ekG
-byK
+ejR
 ejR
 ejR
 ejR
@@ -100518,12 +100509,12 @@ kxr
 bri
 wTy
 ioG
-byK
 ejR
 ejR
 ejR
 ejR
-byK
+ejR
+ejR
 qvr
 gZe
 dSK

@@ -937,9 +937,6 @@
 /obj/effect/floor_decal/industrial/warning/corner,
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/atmos)
-"abY" = (
-/turf/simulated/shuttle/wall/dark/hard_corner,
-/area/muriki/elevator/scibase)
 "abZ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
@@ -5922,7 +5919,7 @@
 /area/rnd/supermatter)
 "akT" = (
 /obj/structure/sign/deck/first,
-/turf/simulated/shuttle/wall/dark/hard_corner,
+/turf/simulated/wall/titanium,
 /area/muriki/elevator/scibase)
 "akU" = (
 /turf/simulated/open/muriki,
@@ -7685,7 +7682,7 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/lowmain)
 "anY" = (
-/turf/simulated/shuttle/wall/dark,
+/turf/simulated/wall/titanium,
 /area/muriki/elevator/scibase)
 "anZ" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
@@ -23593,14 +23590,11 @@
 /turf/simulated/floor/tiled/dark/turfpack/muriki,
 /area/engineering/refinery/main)
 "aQv" = (
-/turf/simulated/shuttle/wall/dark/hard_corner,
-/area/muriki/elevator/medibasement)
-"aQw" = (
-/turf/simulated/shuttle/wall/dark,
+/turf/simulated/wall/titanium,
 /area/muriki/elevator/medibasement)
 "aQx" = (
 /obj/structure/sign/deck/first,
-/turf/simulated/shuttle/wall/dark/hard_corner,
+/turf/simulated/wall/titanium,
 /area/muriki/elevator/medibasement)
 "aQy" = (
 /obj/effect/floor_decal/corner/blue{
@@ -25234,9 +25228,9 @@
 	icon_state = "0-2"
 	},
 /obj/machinery/power/apc{
-	dir = 4;
-	name = "east bump";
-	pixel_x = 24
+	dir = 1;
+	name = "north bump";
+	pixel_y = 24
 	},
 /turf/simulated/floor/plating,
 /area/muriki/elevator/medibasement)
@@ -40204,10 +40198,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/security/brig)
 "buW" = (
-/turf/simulated/shuttle/wall/dark/hard_corner,
-/area/muriki/elevator/secbase)
-"buX" = (
-/turf/simulated/shuttle/wall/dark,
+/turf/simulated/wall/titanium,
 /area/muriki/elevator/secbase)
 "buY" = (
 /obj/effect/floor_decal/steeldecal/steel_decals10{
@@ -46516,9 +46507,11 @@
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology/hallway)
 "bGJ" = (
-/obj/structure/cable/green{
-	icon_state = "1-8"
+/obj/machinery/power/apc{
+	name = "south bump";
+	pixel_y = -24
 	},
+/obj/structure/cable/green,
 /turf/simulated/floor/plating,
 /area/muriki/elevator/scibase)
 "bGK" = (
@@ -66721,13 +66714,13 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/obj/machinery/power/apc{
-	dir = 4;
-	name = "east bump";
-	pixel_x = 24
-	},
 /obj/structure/cable/green{
 	icon_state = "0-2"
+	},
+/obj/machinery/power/apc{
+	dir = 8;
+	name = "west bump";
+	pixel_x = -24
 	},
 /turf/simulated/floor/plating,
 /area/muriki/elevator/secbase)
@@ -66751,18 +66744,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/prison)
-"cBh" = (
-/obj/machinery/power/apc{
-	cell_type = /obj/item/cell/super;
-	dir = 8;
-	name = "west bump";
-	pixel_x = -24
-	},
-/obj/structure/cable/green{
-	icon_state = "0-4"
-	},
-/turf/simulated/floor/plating,
-/area/muriki/elevator/scibase)
 "cBi" = (
 /obj/machinery/shower{
 	dir = 1
@@ -126723,10 +126704,10 @@ bqN
 aVU
 buu
 buW
-buX
-buX
-buX
-buX
+buW
+buW
+buW
+buW
 buW
 ctT
 ctT
@@ -126884,12 +126865,12 @@ bAa
 bsx
 btF
 buu
-buX
+buW
 bvU
 bvU
 bvU
 bym
-buX
+buW
 bzU
 bzU
 bzU
@@ -127051,7 +127032,7 @@ bvU
 bvU
 bvU
 bvU
-buX
+buW
 bzW
 aNM
 cxL
@@ -127213,7 +127194,7 @@ bvU
 bvU
 bvU
 bvU
-buX
+buW
 bzY
 bAJ
 aOn
@@ -127370,12 +127351,12 @@ bsz
 bqj
 btr
 buu
-buX
+buW
 bvU
 bvU
 bvU
 bvU
-buX
+buW
 bsC
 bAK
 bzU
@@ -127533,10 +127514,10 @@ bqN
 btv
 buu
 buW
-buX
-buX
-buX
-buX
+buW
+buW
+buW
+buW
 buW
 bzX
 bAL
@@ -128128,10 +128109,10 @@ gGA
 qcl
 aLz
 aQv
-aQw
-aQw
-aQw
-aQw
+aQv
+aQv
+aQv
+aQv
 aQv
 aTT
 qCK
@@ -128289,12 +128270,12 @@ aNr
 jUm
 eOJ
 pcx
-aQw
+aQv
 aRz
 aRz
 aRz
 aTj
-aQw
+aQv
 aTU
 aUu
 xSM
@@ -128451,12 +128432,12 @@ awQ
 awQ
 awQ
 awQ
-aQw
+aQv
 aRz
 aRz
 aRz
 aRz
-aQw
+aQv
 aTV
 aUu
 xSM
@@ -128613,12 +128594,12 @@ aNt
 xSM
 aOW
 aOW
-aQw
+aQv
 aRz
 aRz
 aRz
 aRz
-aQw
+aQv
 aTW
 aUv
 xSM
@@ -128775,12 +128756,12 @@ aNu
 xSM
 aOX
 aOX
-aQw
+aQv
 aRz
 aRz
 aRz
 aRz
-aQw
+aQv
 aTX
 aUw
 xSM
@@ -128938,10 +128919,10 @@ xSM
 aOY
 aPz
 aQx
-aQw
+aQv
 keX
 keX
-aQw
+aQv
 aQv
 aKA
 aUx
@@ -137655,7 +137636,7 @@ ady
 fuD
 abv
 agc
-cBh
+adE
 apr
 adE
 agd
@@ -137818,7 +137799,7 @@ euR
 aiA
 ajH
 bGJ
-abY
+anY
 anY
 anY
 anY
@@ -138628,12 +138609,12 @@ aqI
 kqR
 agc
 wJT
-abY
 anY
 anY
 anY
 anY
-abY
+anY
+anY
 agt
 ald
 qbx

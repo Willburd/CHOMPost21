@@ -1589,11 +1589,6 @@
 	},
 /turf/simulated/floor/wood/sif,
 /area/centcom/living)
-"adE" = (
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
-/area/space)
 "adF" = (
 /obj/structure/table/woodentable,
 /obj/item/modular_computer/laptop,
@@ -54526,7 +54521,7 @@ hIA
 hIA
 hIA
 hIA
-adE
+hIA
 hIA
 hIA
 hIA
