@@ -604,7 +604,7 @@
 	},
 /obj/structure/window/reinforced,
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/shuttle/specops)
+/area/shuttle/specops/centcom)
 "bz" = (
 /obj/structure/table/standard,
 /obj/effect/floor_decal/milspec/monotile,
@@ -5400,7 +5400,7 @@
 /turf/simulated/wall/fancy_shuttle/nondense/turfpack/airless{
 	fancy_shuttle_tag = "cc_drop1"
 	},
-/area/shuttle/specops)
+/area/shuttle/specops/centcom)
 "kK" = (
 /obj/effect/landmark{
 	name = "tdome1"
@@ -5614,9 +5614,6 @@
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/shuttle/specialops_overmap)
-"lp" = (
-/turf/simulated/wall/rplastitanium,
-/area/space)
 "lq" = (
 /obj/effect/floor_decal/industrial/stand_clear/red{
 	dir = 8
@@ -6359,10 +6356,10 @@
 /turf/simulated/wall/fancy_shuttle/nondense/turfpack/airless{
 	fancy_shuttle_tag = "cc_drop1"
 	},
-/area/shuttle/specops)
+/area/shuttle/specops/centcom)
 "nk" = (
 /turf/simulated/wall/fancy_shuttle/low/turfpack/airless,
-/area/shuttle/specops)
+/area/shuttle/specops/centcom)
 "nl" = (
 /obj/effect/fancy_shuttle/delivery{
 	dir = 1
@@ -6448,7 +6445,7 @@
 /turf/simulated/wall/fancy_shuttle/turfpack/airless{
 	fancy_shuttle_tag = "cc_drop1"
 	},
-/area/shuttle/specops)
+/area/shuttle/specops/centcom)
 "nx" = (
 /turf/simulated/shuttle/wall/dark/hard_corner,
 /area/centcom/simulated/cent_cargo_sat)
@@ -6470,7 +6467,7 @@
 "nB" = (
 /obj/machinery/autolathe/armory,
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/shuttle/specops)
+/area/shuttle/specops/centcom)
 "nC" = (
 /obj/machinery/door/airlock/glass_external{
 	icon_state = "door_locked";
@@ -6518,13 +6515,13 @@
 	overlay_color = "#FFFEB8"
 	},
 /turf/simulated/floor/tiled/milspec/raised,
-/area/shuttle/specops)
+/area/shuttle/specops/centcom)
 "nI" = (
 /obj/effect/floor_decal/fancy_shuttle{
 	fancy_shuttle_tag = "cc_drop1"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/shuttle/specops)
+/area/shuttle/specops/centcom)
 "nJ" = (
 /obj/machinery/mech_recharger,
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
@@ -6540,7 +6537,7 @@
 	overlay_color = "#FFFEB8"
 	},
 /turf/simulated/floor/tiled/milspec/raised,
-/area/shuttle/specops)
+/area/shuttle/specops/centcom)
 "nK" = (
 /turf/unsimulated/wall/fakeglass{
 	dir = 6
@@ -6603,7 +6600,7 @@
 	},
 /obj/machinery/atmospheric_field_generator/perma/underdoors,
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/shuttle/specops)
+/area/shuttle/specops/centcom)
 "nS" = (
 /obj/structure/table/rack,
 /obj/item/gun/projectile/automatic/serdy/hectate,
@@ -6691,7 +6688,7 @@
 	},
 /obj/effect/shuttle_landmark/premade/specops/centcom,
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/shuttle/specops)
+/area/shuttle/specops/centcom)
 "nY" = (
 /obj/structure/lattice,
 /turf/space,
@@ -6706,7 +6703,7 @@
 	},
 /obj/structure/handrail,
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/shuttle/specops)
+/area/shuttle/specops/centcom)
 "oa" = (
 /obj/structure/closet/walllocker/medical/east,
 /obj/item/storage/firstaid/o2,
@@ -6719,7 +6716,7 @@
 	},
 /obj/structure/handrail,
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/shuttle/specops)
+/area/shuttle/specops/centcom)
 "ob" = (
 /obj/machinery/computer/security/telescreen/bodycamera{
 	pixel_y = -3
@@ -6727,14 +6724,14 @@
 /turf/simulated/wall/fancy_shuttle/turfpack/airless{
 	fancy_shuttle_tag = "cc_drop1"
 	},
-/area/shuttle/specops)
+/area/shuttle/specops/centcom)
 "oc" = (
 /obj/effect/floor_decal/fancy_shuttle{
 	fancy_shuttle_tag = "cc_drop1"
 	},
 /obj/machinery/door/airlock/glass_centcom,
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/shuttle/specops)
+/area/shuttle/specops/centcom)
 "od" = (
 /obj/structure/table/alien/blue,
 /obj/item/bikehorn,
@@ -6745,7 +6742,7 @@
 /turf/simulated/wall/fancy_shuttle/turfpack/airless{
 	fancy_shuttle_tag = "cc_drop1"
 	},
-/area/shuttle/specops)
+/area/shuttle/specops/centcom)
 "of" = (
 /obj/machinery/sleep_console{
 	dir = 4
@@ -6757,7 +6754,7 @@
 	dir = 10
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/shuttle/specops)
+/area/shuttle/specops/centcom)
 "og" = (
 /obj/machinery/sleeper{
 	dir = 4
@@ -6769,7 +6766,7 @@
 	dir = 10
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/shuttle/specops)
+/area/shuttle/specops/centcom)
 "oh" = (
 /obj/machinery/bodyscanner{
 	dir = 4
@@ -6781,7 +6778,7 @@
 	dir = 10
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/shuttle/specops)
+/area/shuttle/specops/centcom)
 "oi" = (
 /obj/machinery/body_scanconsole,
 /obj/effect/floor_decal/corner/blue{
@@ -6791,7 +6788,7 @@
 	dir = 10
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/shuttle/specops)
+/area/shuttle/specops/centcom)
 "oj" = (
 /obj/effect/floor_decal/fancy_shuttle{
 	fancy_shuttle_tag = "cc_drop1"
@@ -6801,14 +6798,14 @@
 	overlay_color = "#FFFEB8"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/shuttle/specops)
+/area/shuttle/specops/centcom)
 "ok" = (
 /obj/effect/floor_decal/fancy_shuttle{
 	fancy_shuttle_tag = "cc_drop1"
 	},
 /obj/structure/handrail,
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/shuttle/specops)
+/area/shuttle/specops/centcom)
 "ol" = (
 /obj/effect/floor_decal/fancy_shuttle{
 	fancy_shuttle_tag = "cc_drop1"
@@ -6818,14 +6815,14 @@
 	overlay_color = "#FFFEB8"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/shuttle/specops)
+/area/shuttle/specops/centcom)
 "om" = (
 /obj/machinery/oxygen_pump/mobile/stabilizer,
 /obj/effect/floor_decal/fancy_shuttle{
 	fancy_shuttle_tag = "cc_drop1"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/shuttle/specops)
+/area/shuttle/specops/centcom)
 "on" = (
 /obj/effect/floor_decal/fancy_shuttle{
 	fancy_shuttle_tag = "cc_drop1"
@@ -6835,7 +6832,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/shuttle/specops)
+/area/shuttle/specops/centcom)
 "oo" = (
 /obj/structure/closet/secure_closet/guncabinet{
 	pixel_x = 7
@@ -6844,7 +6841,7 @@
 	fancy_shuttle_tag = "cc_drop1"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/shuttle/specops)
+/area/shuttle/specops/centcom)
 "op" = (
 /obj/structure/lattice,
 /turf/space,
@@ -6858,7 +6855,7 @@
 	fancy_shuttle_tag = "cc_drop1"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/shuttle/specops)
+/area/shuttle/specops/centcom)
 "or" = (
 /obj/structure/table/steel_reinforced,
 /obj/machinery/recharger{
@@ -6871,7 +6868,7 @@
 	fancy_shuttle_tag = "cc_drop1"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/shuttle/specops)
+/area/shuttle/specops/centcom)
 "os" = (
 /obj/effect/floor_decal/fancy_shuttle{
 	fancy_shuttle_tag = "cc_drop1"
@@ -6882,7 +6879,7 @@
 	},
 /obj/structure/bed/chair/bay/shuttle,
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/shuttle/specops)
+/area/shuttle/specops/centcom)
 "ot" = (
 /obj/machinery/vending/wardrobe/clowndrobe,
 /obj/machinery/light{
@@ -6896,7 +6893,7 @@
 	},
 /obj/structure/bed/chair/bay/shuttle,
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/shuttle/specops)
+/area/shuttle/specops/centcom)
 "ov" = (
 /obj/effect/floor_decal/fancy_shuttle{
 	fancy_shuttle_tag = "cc_drop1"
@@ -6905,7 +6902,7 @@
 	fancy_shuttle_tag = "cc_drop1"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/shuttle/specops)
+/area/shuttle/specops/centcom)
 "ow" = (
 /obj/effect/floor_decal/fancy_shuttle{
 	fancy_shuttle_tag = "cc_drop1"
@@ -6916,7 +6913,7 @@
 	},
 /obj/structure/bed/chair/bay/shuttle,
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/shuttle/specops)
+/area/shuttle/specops/centcom)
 "ox" = (
 /obj/machinery/door/airlock/centcom{
 	name = "Supply Room";
@@ -6944,12 +6941,12 @@
 	fancy_shuttle_tag = "cc_drop1"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/shuttle/specops)
+/area/shuttle/specops/centcom)
 "oz" = (
 /turf/simulated/wall/fancy_shuttle/window/turfpack/airless{
 	fancy_shuttle_tag = "cc_drop1"
 	},
-/area/shuttle/specops)
+/area/shuttle/specops/centcom)
 "oA" = (
 /obj/structure/bed/chair/bay/shuttle{
 	dir = 1
@@ -6958,7 +6955,7 @@
 	fancy_shuttle_tag = "cc_drop1"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/shuttle/specops)
+/area/shuttle/specops/centcom)
 "oB" = (
 /obj/machinery/computer/shuttle_control/specops{
 	pixel_y = -23
@@ -6966,7 +6963,7 @@
 /turf/simulated/wall/fancy_shuttle/window/turfpack/airless{
 	fancy_shuttle_tag = "cc_drop1"
 	},
-/area/shuttle/specops)
+/area/shuttle/specops/centcom)
 "oE" = (
 /obj/machinery/atmospheric_field_generator/perma/underdoors,
 /obj/machinery/door/airlock/centcom{
@@ -8491,7 +8488,7 @@
 	pixel_x = -32
 	},
 /turf/simulated/floor/tiled/milspec/sterile,
-/area/space)
+/area/shuttle/specialops_overmap)
 "rO" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/fuel{
 	dir = 4
@@ -32896,7 +32893,7 @@ tZ
 tq
 sN
 iO
-lp
+iO
 iO
 mP
 iO
