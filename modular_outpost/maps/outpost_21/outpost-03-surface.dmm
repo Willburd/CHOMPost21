@@ -178,7 +178,6 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/obj/machinery/portable_atmospherics/canister/phoron,
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/trawler)
 "aar" = (
@@ -2008,7 +2007,8 @@
 /obj/effect/floor_decal/corner/brown/border,
 /obj/structure/extinguisher_cabinet{
 	pixel_x = 5;
-	pixel_y = -32
+	pixel_y = -32;
+	dir = 1
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/trawler)
@@ -6879,14 +6879,11 @@
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/engineering_hallway)
 "akR" = (
-/turf/simulated/shuttle/wall/dark/hard_corner,
-/area/muriki/elevator/medical)
-"akS" = (
-/turf/simulated/shuttle/wall/dark,
+/turf/simulated/wall/titanium,
 /area/muriki/elevator/medical)
 "akT" = (
 /obj/structure/sign/deck/second,
-/turf/simulated/shuttle/wall/dark/hard_corner,
+/turf/simulated/wall/titanium,
 /area/muriki/elevator/medical)
 "akU" = (
 /turf/simulated/open,
@@ -6901,10 +6898,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/muriki/elevator/medical)
 "akW" = (
-/turf/simulated/shuttle/wall/dark/hard_corner,
-/area/muriki/elevator/secmain)
-"akX" = (
-/turf/simulated/shuttle/wall/dark,
+/turf/simulated/wall/titanium,
 /area/muriki/elevator/secmain)
 "akY" = (
 /obj/effect/floor_decal/steeldecal/steel_decals10{
@@ -6995,9 +6989,9 @@
 	icon_state = "2-8"
 	},
 /obj/machinery/power/apc{
-	dir = 4;
-	name = "east bump";
-	pixel_x = 24
+	dir = 1;
+	name = "north bump";
+	pixel_y = 24
 	},
 /turf/simulated/floor/plating,
 /area/muriki/elevator/medical)
@@ -13928,13 +13922,12 @@
 /area/muriki/tramstation/civ)
 "aBg" = (
 /obj/structure/disposalpipe/segment,
-/obj/machinery/power/apc{
-	cell_type = /obj/item/cell/super;
-	dir = 8;
-	name = "west bump";
-	pixel_x = -24
-	},
 /obj/structure/cable/green,
+/obj/machinery/power/apc{
+	dir = 4;
+	name = "east bump";
+	pixel_x = 24
+	},
 /turf/simulated/floor/plating,
 /area/muriki/elevator/scimain)
 "aBh" = (
@@ -18311,6 +18304,15 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virology/prep)
+"aQJ" = (
+/obj/machinery/atmospherics/unary/engine/bigger{
+	dir = 4
+	},
+/turf/simulated/floor/reinforced/turfpack/muriki,
+/area/shuttle/trawler)
+"aQK" = (
+/turf/simulated/floor/reinforced/turfpack/muriki,
+/area/shuttle/trawler)
 "aQW" = (
 /obj/structure/railing{
 	dir = 8
@@ -31666,10 +31668,9 @@
 	icon_state = "0-2"
 	},
 /obj/machinery/power/apc{
-	cell_type = /obj/item/cell/super;
-	dir = 8;
-	name = "west bump";
-	pixel_x = -24
+	dir = 1;
+	name = "north bump";
+	pixel_y = 24
 	},
 /turf/simulated/floor/plating,
 /area/muriki/elevator/secmain)
@@ -52511,9 +52512,6 @@
 /obj/effect/floor_decal/industrial/danger,
 /turf/simulated/floor/tiled,
 /area/muriki/tramstation/civ)
-"lFo" = (
-/turf/simulated/shuttle/wall/dark,
-/area/muriki/elevator/scimain)
 "lFs" = (
 /obj/structure/closet/secure_closet/engineering_welding,
 /obj/structure/window/reinforced,
@@ -65281,7 +65279,7 @@
 /area/muriki/bathroom/bridge)
 "pSk" = (
 /obj/structure/sign/deck/second,
-/turf/simulated/shuttle/wall/dark/hard_corner,
+/turf/simulated/wall/titanium,
 /area/muriki/elevator/scimain)
 "pSy" = (
 /turf/simulated/wall,
@@ -71036,7 +71034,7 @@
 /turf/simulated/mineral/alt/turfpack/muriki,
 /area/mine/unexplored/muriki/mountaineast)
 "rJE" = (
-/turf/simulated/shuttle/wall/dark/hard_corner,
+/turf/simulated/wall/titanium,
 /area/muriki/elevator/scimain)
 "rJF" = (
 /obj/machinery/power/grounding_rod,
@@ -101289,16 +101287,16 @@ vjd
 jRT
 jRT
 jRT
-jRT
-jRT
+aQK
+aQJ
 aal
 aal
 acd
 acx
 aal
 aal
-jRT
-jRT
+aQK
+aQJ
 jRT
 jRT
 jRT
@@ -101451,16 +101449,16 @@ vjd
 jRT
 aal
 aaE
-aaE
-aaE
+aQK
+aQK
 aal
 abO
 ace
 acy
 acS
 aal
-aaE
-aaE
+aQK
+aQK
 aaE
 aal
 jRT
@@ -129473,10 +129471,10 @@ knd
 nNi
 qxj
 akW
-akX
-akX
-akX
-akX
+akW
+akW
+akW
+akW
 akW
 eLh
 aMh
@@ -129634,12 +129632,12 @@ gLK
 sre
 nNi
 ewZ
-akX
+akW
 akZ
 akZ
 akZ
 akZ
-akX
+akW
 fic
 alb
 alc
@@ -129801,7 +129799,7 @@ akZ
 akZ
 akZ
 akZ
-akX
+akW
 xPr
 blK
 onG
@@ -129963,7 +129961,7 @@ akZ
 akZ
 akZ
 akZ
-akX
+akW
 ala
 dxZ
 apb
@@ -130120,12 +130118,12 @@ kke
 ydu
 oZv
 ewZ
-akX
+akW
 akZ
 akZ
 akZ
 akZ
-akX
+akW
 kws
 mCF
 onG
@@ -130283,10 +130281,10 @@ pVh
 fXh
 jPh
 akW
-akX
-akX
-akX
-akX
+akW
+akW
+akW
+akW
 akW
 aAH
 jvj
@@ -130878,10 +130876,10 @@ fBl
 wKG
 wKG
 akR
-akS
-akS
-akS
-akS
+akR
+akR
+akR
+akR
 akR
 qPI
 xYs
@@ -131039,12 +131037,12 @@ wWF
 qGf
 oYP
 rtv
-akS
+akR
 akU
 akU
 akU
 akU
-akS
+akR
 pqI
 pGw
 nNL
@@ -131201,12 +131199,12 @@ lzS
 anx
 anv
 tUj
-akS
+akR
 akU
 akU
 akU
 akU
-akS
+akR
 hEt
 alh
 ljs
@@ -131363,12 +131361,12 @@ lzS
 asN
 fNw
 anP
-akS
+akR
 akU
 akU
 akU
 akU
-akS
+akR
 iJW
 alh
 hAj
@@ -131525,12 +131523,12 @@ lzS
 asN
 fNw
 nIL
-akS
+akR
 akU
 akU
 akU
 akU
-akS
+akR
 alf
 hWe
 hAj
@@ -131688,10 +131686,10 @@ hco
 fWj
 xwc
 akT
-akS
+akR
 akV
 akV
-akS
+akR
 akR
 lCV
 lCV
@@ -140569,10 +140567,10 @@ fjo
 aBk
 lso
 rJE
-lFo
-lFo
-lFo
-lFo
+rJE
+rJE
+rJE
+rJE
 rJE
 rcZ
 nSL
@@ -140730,12 +140728,12 @@ aJY
 fjo
 aBk
 ciC
-lFo
+rJE
 say
 say
 say
 say
-lFo
+rJE
 kvg
 nSL
 nSL
@@ -140892,7 +140890,7 @@ aPB
 fjo
 aBk
 kaM
-lFo
+rJE
 say
 say
 say
@@ -141054,7 +141052,7 @@ aJY
 fjo
 aBl
 waD
-lFo
+rJE
 say
 say
 say
@@ -141216,12 +141214,12 @@ aJY
 fjo
 wTr
 aBj
-lFo
+rJE
 say
 say
 say
 say
-lFo
+rJE
 bjr
 mUh
 llA
@@ -141379,10 +141377,10 @@ fjo
 cCh
 jNX
 rJE
-lFo
-lFo
-lFo
-lFo
+rJE
+rJE
+rJE
+rJE
 pSk
 vjX
 eMm
