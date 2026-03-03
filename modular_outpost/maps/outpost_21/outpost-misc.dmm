@@ -2709,12 +2709,12 @@
 /turf/simulated/floor/carpet/gaycarpet,
 /area/planet/clown)
 "gt" = (
-/obj/machinery/power/smes/buildable/power_shuttle/max_charge_max_input,
 /obj/item/smes_coil/super_io/hyper,
 /obj/item/smes_coil/super_capacity/hyper,
 /obj/structure/cable/orange{
 	icon_state = "0-2"
 	},
+/obj/machinery/power/smes/buildable/engine_default,
 /turf/simulated/floor/reinforced,
 /area/shuttle/specialops_overmap)
 "gu" = (
@@ -4278,6 +4278,10 @@
 	icon_state = "dark"
 	},
 /area/syndicate_mothership)
+"iQ" = (
+/obj/effect/overmap/visitable/sector/murkiki_space/distant_gateway,
+/turf/space,
+/area/space)
 "iR" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
@@ -22370,7 +22374,7 @@ mN
 mN
 mN
 mN
-mN
+iQ
 ab
 mN
 mN
