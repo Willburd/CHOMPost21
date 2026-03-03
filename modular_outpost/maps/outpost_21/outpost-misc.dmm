@@ -595,6 +595,16 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/tram)
+"by" = (
+/obj/effect/floor_decal/fancy_shuttle{
+	fancy_shuttle_tag = "cc_drop1"
+	},
+/obj/structure/bed/chair/bay/shuttle{
+	dir = 1
+	},
+/obj/structure/window/reinforced,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/shuttle/specops)
 "bz" = (
 /obj/structure/table/standard,
 /obj/effect/floor_decal/milspec/monotile,
@@ -6465,18 +6475,13 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/shuttle/specops)
 "on" = (
-/obj/structure/bed/chair/bay/shuttle{
-	dir = 1;
-	pixel_x = -7
-	},
-/obj/structure/bed/chair/bay/shuttle{
-	dir = 1;
-	pixel_x = 8
-	},
 /obj/effect/floor_decal/fancy_shuttle{
 	fancy_shuttle_tag = "cc_drop1"
 	},
 /obj/structure/window/reinforced,
+/obj/structure/bed/chair/bay/shuttle{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/shuttle/specops)
 "oo" = (
@@ -6516,12 +6521,6 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/shuttle/specops)
 "os" = (
-/obj/structure/bed/chair/bay/shuttle{
-	pixel_x = -7
-	},
-/obj/structure/bed/chair/bay/shuttle{
-	pixel_x = 8
-	},
 /obj/effect/floor_decal/fancy_shuttle{
 	fancy_shuttle_tag = "cc_drop1"
 	},
@@ -6529,6 +6528,7 @@
 	dir = 8;
 	overlay_color = "#FFFEB8"
 	},
+/obj/structure/bed/chair/bay/shuttle,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/shuttle/specops)
 "ot" = (
@@ -6539,15 +6539,10 @@
 /turf/simulated/floor/carpet/geo,
 /area/planet/clown)
 "ou" = (
-/obj/structure/bed/chair/bay/shuttle{
-	pixel_x = -7
-	},
-/obj/structure/bed/chair/bay/shuttle{
-	pixel_x = 8
-	},
 /obj/effect/floor_decal/fancy_shuttle{
 	fancy_shuttle_tag = "cc_drop1"
 	},
+/obj/structure/bed/chair/bay/shuttle,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/shuttle/specops)
 "ov" = (
@@ -6560,12 +6555,6 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/shuttle/specops)
 "ow" = (
-/obj/structure/bed/chair/bay/shuttle{
-	pixel_x = -7
-	},
-/obj/structure/bed/chair/bay/shuttle{
-	pixel_x = 8
-	},
 /obj/effect/floor_decal/fancy_shuttle{
 	fancy_shuttle_tag = "cc_drop1"
 	},
@@ -6573,6 +6562,7 @@
 	dir = 4;
 	overlay_color = "#FFFEB8"
 	},
+/obj/structure/bed/chair/bay/shuttle,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/shuttle/specops)
 "ox" = (
@@ -29090,8 +29080,8 @@ oA
 oy
 ov
 nI
-nI
-nI
+by
+ok
 nI
 oc
 nI
