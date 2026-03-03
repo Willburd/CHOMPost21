@@ -14904,9 +14904,6 @@
 /obj/structure/window/maintenance_panel{
 	dir = 4
 	},
-/obj/structure/window/maintenance_panel{
-	dir = 8
-	},
 /turf/simulated/floor/tiled/techfloor,
 /area/medical/voxlab/airlock)
 "aAL" = (
@@ -42859,7 +42856,6 @@
 /obj/structure/window/maintenance_panel{
 	dir = 1
 	},
-/obj/structure/window/maintenance_panel,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/spine/eng)
 "bzv" = (
@@ -60926,9 +60922,6 @@
 /area/maintenance/atmos_control)
 "clR" = (
 /obj/structure/window/maintenance_panel,
-/obj/structure/window/maintenance_panel{
-	dir = 1
-	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/medical/biostorage)
 "clS" = (
@@ -61035,9 +61028,6 @@
 "cmf" = (
 /obj/structure/window/maintenance_panel{
 	dir = 8
-	},
-/obj/structure/window/maintenance_panel{
-	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/med)
@@ -64003,9 +63993,6 @@
 "cua" = (
 /obj/structure/window/maintenance_panel{
 	dir = 4
-	},
-/obj/structure/window/maintenance_panel{
-	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/black{
 	dir = 4
@@ -83629,9 +83616,6 @@
 /turf/simulated/floor/tiled/milspec/raised,
 /area/muriki/crew/arcade/lasertag)
 "rFY" = (
-/obj/structure/window/maintenance_panel{
-	dir = 1
-	},
 /obj/structure/window/maintenance_panel,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,

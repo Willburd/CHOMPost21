@@ -13069,6 +13069,9 @@
 /obj/effect/floor_decal/corner/blue{
 	dir = 8
 	},
+/obj/structure/cable/green{
+	icon_state = "5-6"
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virology/prep)
 "azF" = (
@@ -18253,6 +18256,32 @@
 	outdoors = 0
 	},
 /area/mine/unexplored/muriki/mountaineast)
+"aQG" = (
+/obj/structure/grille,
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/blast/regular{
+	density = 0;
+	dir = 4;
+	icon_state = "pdoor0";
+	id = "virologyquar";
+	name = "Virology Emergency Quarantine Blast Doors";
+	opacity = 0
+	},
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "0-9"
+	},
+/turf/simulated/floor/plating,
+/area/medical/virology/prep)
 "aQH" = (
 /obj/structure/railing,
 /obj/effect/floor_decal/industrial/outline/grey,
@@ -18267,6 +18296,21 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/substation/civilian)
+"aQI" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/green{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-10"
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/virology/prep)
 "aQW" = (
 /obj/structure/railing{
 	dir = 8
@@ -21769,10 +21813,10 @@
 /obj/effect/floor_decal/steeldecal/steel_decals10{
 	dir = 1
 	},
+/obj/effect/floor_decal/industrial/danger,
 /obj/effect/floor_decal/steeldecal/steel_decals10{
 	dir = 8
 	},
-/obj/effect/floor_decal/industrial/danger,
 /turf/simulated/floor/tiled,
 /area/muriki/tramstation/civ)
 "bTU" = (
@@ -31434,9 +31478,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 8
 	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -31798,6 +31839,9 @@
 	},
 /obj/structure/sign/painting/public{
 	pixel_y = 32
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals10{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/muriki/tramstation/civ)
@@ -46883,9 +46927,6 @@
 	icon_state = "0-2"
 	},
 /obj/structure/cable/green,
-/obj/structure/cable/green{
-	icon_state = "0-4"
-	},
 /turf/simulated/floor/plating,
 /area/medical/virology/prep)
 "jVu" = (
@@ -48414,16 +48455,6 @@
 "krx" = (
 /obj/structure/lattice,
 /obj/structure/disposalpipe/down{
-	dir = 4
-	},
-/obj/structure/window/maintenance_panel,
-/obj/structure/window/maintenance_panel{
-	dir = 1
-	},
-/obj/structure/window/maintenance_panel{
-	dir = 8
-	},
-/obj/structure/window/maintenance_panel{
 	dir = 4
 	},
 /turf/simulated/open,
@@ -62720,9 +62751,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/green{
 	dir = 5
 	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -74456,9 +74484,6 @@
 /turf/simulated/floor/tiled/milspec,
 /area/security/brig/drunk)
 "sQr" = (
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 1;
 	icon_state = "pipe-c"
@@ -85259,9 +85284,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
-	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -131482,9 +131504,9 @@ vLX
 hkD
 fyk
 iLs
-feI
+aQI
 kTU
-rOi
+aQG
 bSW
 iwU
 bSW
