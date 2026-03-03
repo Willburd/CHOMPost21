@@ -1,24 +1,10 @@
-/datum/admins/proc/lock_weather()
-	set category = "Debug.Events"
-	set name = "Lock Weather"
-	set desc = "Locks or unlocks the current weather from proceeding to the next forcast."
-
-	if(!check_rights(R_EVENT))
-		return
-
+ADMIN_VERB(lock_weather, R_EVENT, "Lock Weather", "Locks or unlocks the current weather from proceeding to the next forcast.", ADMIN_CATEGORY_EVENTS)
 	var/datum/planet/planet = tgui_input_list(usr, "Which planet do you want to toggle the weather lock on?", "Toggle Lock Weather", SSplanets.planets)
 	if(istype(planet))
 		planet.weather_holder.locked = !planet.weather_holder.locked
 		to_chat(usr, span_vdanger("The weather on [planet] is now [planet.weather_holder.locked ? "LOCKED" : "unlocked"], the weather is currently [planet.weather_holder.current_weather]."))
 
-/datum/admins/proc/lock_planet_light()
-	set category = "Debug.Events"
-	set name = "Lock Planet Lightlevel"
-	set desc = "Locks a planet to a specific light level and color."
-
-	if(!check_rights(R_EVENT))
-		return
-
+ADMIN_VERB(lock_planet_light, R_EVENT, "Lock Planet Lightlevel", "Locks a planet to a specific light level and color.", ADMIN_CATEGORY_EVENTS)
 	var/datum/planet/planet = tgui_input_list(usr, "Which planet do you want to toggle the weather lock on?", "Toggle Lock Weather", SSplanets.planets)
 	if(istype(planet))
 		if(!isnull(planet.locked_light_color))
@@ -35,14 +21,7 @@
 		planet.locked_light_intensity = new_intensity
 		planet.update_sun()
 
-/datum/admins/proc/change_weather_temp()
-	set category = "Debug.Events"
-	set name = "Change Weather Temperature"
-	set desc = "Sets the temperature of the current weather."
-
-	if(!check_rights(R_EVENT))
-		return
-
+ADMIN_VERB(change_weather_temp, R_EVENT, "Change Weather Temperature", "Sets the temperature of the current weather.", ADMIN_CATEGORY_EVENTS)
 	var/datum/planet/planet = tgui_input_list(usr, "Which planet do you want to change the temperature on?", "Change Weather Temperature", SSplanets.planets)
 	var/set_temp = tgui_input_number(usr,"The new temperature in kelvin.", "New Temperature", 215, 999999, 1)
 	if(set_temp && istype(planet))
