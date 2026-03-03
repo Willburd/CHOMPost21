@@ -3907,6 +3907,10 @@
 /obj/structure/ladder,
 /turf/simulated/open/muriki,
 /area/mine/explored/muriki/river/hole)
+"ajs" = (
+/obj/effect/shuttle_landmark/premade/specops/station,
+/turf/simulated/open/muriki,
+/area/muriki/skyline/east)
 "ajt" = (
 /obj/structure/inflatable/door,
 /turf/simulated/floor/plating/turfpack/muriki,
@@ -3954,6 +3958,17 @@
 	ignore_mapgen = 1
 	},
 /area/specialty/expie_clubhouse)
+"ajz" = (
+/obj/structure/railing,
+/turf/simulated/floor/plating/external/turfpack/muriki,
+/area/muriki/rooftop/civilian)
+"ajA" = (
+/obj/structure/railing{
+	dir = 1;
+	flags = null
+	},
+/turf/simulated/floor/plating/external/turfpack/muriki,
+/area/muriki/rooftop/civilian)
 "ajG" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -20290,10 +20305,10 @@
 /turf/simulated/floor/tiled/dark,
 /area/chapel/chapel_morgue)
 "iDQ" = (
-/obj/structure/railing,
 /obj/structure/cable/orange{
 	icon_state = "1-8"
 	},
+/obj/structure/railing,
 /turf/simulated/floor/outpost_roof/turfpack/muriki,
 /area/muriki/rooftop/civilian)
 "iDX" = (
@@ -38163,6 +38178,12 @@
 	flags = null
 	},
 /obj/structure/railing{
+	dir = 4
+	},
+/obj/machinery/embedded_controller/radio/simple_docking_controller{
+	frequency = 1381;
+	id_tag = "specops_station_dock";
+	pixel_x = -30;
 	dir = 4
 	},
 /turf/simulated/floor/outpost_roof/turfpack/muriki,
@@ -107995,8 +108016,8 @@ qQa
 qQa
 mkk
 tDp
-tDp
-tDp
+acQ
+acQ
 tDp
 tDp
 tDp
@@ -108157,8 +108178,8 @@ qQa
 qQa
 qQa
 qQa
-qQa
-qQa
+ajA
+ajz
 qQa
 qQa
 qQa
@@ -108643,7 +108664,7 @@ qQa
 qQa
 qQa
 qQa
-qQa
+ajs
 qQa
 qQa
 qQa

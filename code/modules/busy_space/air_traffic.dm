@@ -71,11 +71,11 @@ var/datum/lore/atc_controller/atc = new/datum/lore/atc_controller
 	//CHOMPStation Edit End
 
 /datum/lore/atc_controller/proc/random_convo(var/force_chatter_type)
-	var/one = pick(loremaster.organizations) //These will pick an index, not an instance
-	var/two = pick(loremaster.organizations)
+	var/one = pick(GLOB.loremaster.organizations) //These will pick an index, not an instance
+	var/two = pick(GLOB.loremaster.organizations)
 
-	var/datum/lore/organization/source = loremaster.organizations[one] //Resolve to the instances
-	var/datum/lore/organization/secondary = loremaster.organizations[two] //repurposed for new fun stuff
+	var/datum/lore/organization/source = GLOB.loremaster.organizations[one] //Resolve to the instances
+	var/datum/lore/organization/secondary = GLOB.loremaster.organizations[two] //repurposed for new fun stuff
 
 	//Let's get some mission parameters, pick our first ship
 	var/name = source.name					//get the name
