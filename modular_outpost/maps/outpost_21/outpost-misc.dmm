@@ -6357,9 +6357,6 @@
 	fancy_shuttle_tag = "cc_drop1"
 	},
 /area/shuttle/specops/centcom)
-"nk" = (
-/turf/simulated/wall/fancy_shuttle/low/turfpack/airless,
-/area/shuttle/specops/centcom)
 "nl" = (
 /obj/effect/fancy_shuttle/delivery{
 	dir = 1
@@ -28200,8 +28197,8 @@ nH
 nw
 nw
 nw
-nk
-nk
+nw
+nw
 nj
 mN
 mN
@@ -28362,8 +28359,8 @@ nI
 nB
 nw
 nw
-nk
-nk
+nw
+nw
 nj
 mN
 mN
@@ -28524,8 +28521,8 @@ nJ
 nw
 nw
 nw
-nk
-nk
+nw
+nw
 nj
 mN
 mN
