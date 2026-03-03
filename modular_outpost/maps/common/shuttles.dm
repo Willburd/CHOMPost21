@@ -431,8 +431,8 @@
 /obj/effect/shuttle_landmark/premade/specops/station
 	name = "ES Outpost 21"
 	landmark_tag = "specops_station"
-	docking_controller = "specops_dock_airlock"
-	special_dock_targets = list("Special Operations" = "specops_shuttle_fore")
+	base_area = /area/muriki/skyline/east
+	base_turf = /turf/simulated/open/muriki
 
 //////////////////////////////////////////////////////////////
 // Medical shuttle

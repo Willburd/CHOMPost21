@@ -3958,6 +3958,21 @@
 	ignore_mapgen = 1
 	},
 /area/specialty/expie_clubhouse)
+"ajz" = (
+/obj/structure/railing,
+/turf/simulated/floor/plating/external/turfpack/muriki{
+	outdoors = 0
+	},
+/area/muriki/skyline/east)
+"ajA" = (
+/obj/structure/railing{
+	dir = 1;
+	flags = null
+	},
+/turf/simulated/floor/plating/external/turfpack/muriki{
+	outdoors = 0
+	},
+/area/muriki/skyline/east)
 "ajG" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -20294,10 +20309,10 @@
 /turf/simulated/floor/tiled/dark,
 /area/chapel/chapel_morgue)
 "iDQ" = (
-/obj/structure/railing,
 /obj/structure/cable/orange{
 	icon_state = "1-8"
 	},
+/obj/structure/railing,
 /turf/simulated/floor/outpost_roof/turfpack/muriki,
 /area/muriki/rooftop/civilian)
 "iDX" = (
@@ -107999,8 +108014,8 @@ qQa
 qQa
 mkk
 tDp
-tDp
-tDp
+acQ
+acQ
 tDp
 tDp
 tDp
@@ -108161,8 +108176,8 @@ qQa
 qQa
 qQa
 qQa
-qQa
-qQa
+ajA
+ajz
 qQa
 qQa
 qQa
@@ -108485,7 +108500,7 @@ qQa
 qQa
 qQa
 qQa
-ajs
+qQa
 qQa
 qQa
 qQa
@@ -108647,7 +108662,7 @@ qQa
 qQa
 qQa
 qQa
-qQa
+ajs
 qQa
 qQa
 qQa

@@ -6881,6 +6881,14 @@
 "akR" = (
 /turf/simulated/wall/titanium,
 /area/muriki/elevator/medical)
+"akS" = (
+/obj/structure/dancepole{
+	name = "roof support";
+	pixel_x = 7;
+	pixel_y = 1
+	},
+/turf/simulated/floor/outdoors/sidewalk/slab/turfpack/muriki,
+/area/muriki/grounds/civ)
 "akT" = (
 /obj/structure/sign/deck/second,
 /turf/simulated/wall/titanium,
@@ -149026,8 +149034,8 @@ aHR
 aHR
 aNY
 aqw
-aqw
-aqw
+hbv
+akS
 aqx
 bBB
 aOb
