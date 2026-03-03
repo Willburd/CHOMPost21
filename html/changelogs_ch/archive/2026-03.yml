@@ -52,3 +52,25 @@
   - bugfix: Limbs that are pain immune don't add their damage to the pain calculation.
   - code_imp: Gets rid of a typecast
   - code_imp: Puts some surgeries into their own files.
+2026-03-03:
+  CHOMPStation2StaffMirrorBot:
+  - code_imp: cleans up some more updateDialog
+  - refactor: replaces many old browser UIs with tgui
+  - bugfix: plushie vending
+  - bugfix: bad deletes of equipment vendors
+  - code_imp: migrates some more globals to GLOBs
+  - rscadd: Added omni lasertag helmet that uses the doomguy sprite for giggles, and
+      added intercoms that are locked to the Entertainment Frequency
+  - maptweak: Replaced the Starview Lounge in the Laserdome with an all-new FFA Arena!
+      Also has red/blue kit lockers for doing team deathmatch.
+  - maptweak: Added a couple more redgate inhabitant spawners to the Laserdome. The
+      fast food venue also has ketchup and mustard bottles now, and the two shops
+      have gained cash registers and had their inventories shuffled around a bit.
+  - spellcheck: fixed the name of the universal lasertag gear locker because it had
+      an extra n in it
+  - code_imp: migrates more admin verbs to the subsystem
+  FluffMedic:
+  - bugfix: fixed weird candy miniboss being immune to projectiles
+  Guti:
+  - maptweak: Removed the PISS from Southern Cross
+  - rscadd: Added dust anomaly random event
