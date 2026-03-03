@@ -72,7 +72,7 @@ SUBSYSTEM_DEF(ticker)
 
 	/// ### LEGACY VARS ###
 	/// Default time to wait before rebooting in desiseconds.
-	var/const/restart_timeout = 4 MINUTES
+	var/const/restart_timeout = 9 MINUTES // Outpost 21 edit - Raised end of round time from 5 to 10 mins
 	/// Track where we are ending game/round
 	var/end_game_state = END_GAME_NOT_OVER
 	/// Time remaining until restart in desiseconds

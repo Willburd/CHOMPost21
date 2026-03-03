@@ -64,6 +64,7 @@
 			if (alert(M,"This chemical will change your gender, proceed?", "Warning", "Yes", "No") == "Yes")
 				M.change_gender_identity(gender_change)
 				M.change_gender(gender_change)
+				M.check_mutation_cascade_gib() // this counts for change of dna
 				to_chat(M, span_warning("You feel like a new person."))
 
 /* Outpost 21 edit - Removing badly designed chems

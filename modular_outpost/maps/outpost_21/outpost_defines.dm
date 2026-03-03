@@ -416,12 +416,13 @@
 
 
 /obj/effect/landmark/map_data/muriki
-    height = 4
+	height = 4
 
 // Overmap represetation of muriki
 /obj/effect/overmap/visitable/sector/muriki
 	name = "Muriki"
 	desc = "What a terrible place to call home."
+	icon_state = "ruined"
 	scanner_desc = @{"[i]Registration[/i]: ES Outpost 21-00
 [i]Class[/i]: Planetary Installation
 [i]Transponder[/i]: Transmitting (CIV), ESHUI IFF
@@ -465,6 +466,7 @@
 	initial_generic_waypoints = list("orbitalyard_civ","orbitalyard_north","orbitalyard_south","orbitalyard_east","orbitalyard_west")
 	initial_restricted_waypoints = list("Mining Trawler" = list("trawler_yard"))
 	name = "Orbital Reclamation Yard"
+	icon_state = "htu_cruiser"
 	scanner_desc = @{"[i]Registration[/i]: ES Orbital 21-03
 [i]Class[/i]: Installation
 [i]Transponder[/i]: Transmitting (CIV), ESHUI IFF
@@ -502,6 +504,7 @@
 /obj/effect/overmap/visitable/sector/murkiki_space/confinementbeam
 	initial_generic_waypoints = list("confinementbeam_civ")
 	name = "Confinement Beam Platform"
+	icon_state = "htu_cruiser"
 	scanner_desc = @{"[i]Registration[/i]: ES Orbital 21-04
 [i]Class[/i]: Confinement Beam
 [i]Transponder[/i]: Transmitting (ENG), ESHUI IFF
@@ -534,3 +537,18 @@
 
 /obj/effect/overmap/visitable/sector/murkiki_space/confinementbeam/get_space_zlevels()
 	return list(Z_LEVEL_OUTPOST_CONFINEMENTBEAM)
+
+
+
+/obj/effect/overmap/visitable/sector/murkiki_space/distant_gateway
+	name = "Sector Gateway"
+	icon_state = "ring"
+	scanner_desc = @{"[i]Registration[/i]: SOLGOV GATE SB323
+[i]Class[/i]: Longjump Bluespace Gateway
+[i]Transponder[/i]: Transmitting (CIV), SOLGOV IFF
+[b]Notice[/b]: Solgov Transport Facility"}
+	map_z = list(Z_NAME_ALIAS_MISC)
+	initial_restricted_waypoints = list("Interferon" = list("interferon_hangar"))
+
+/obj/effect/overmap/visitable/sector/murkiki_space/distant_gateway/get_space_zlevels()
+	return list() //None!

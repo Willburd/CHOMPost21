@@ -26,7 +26,8 @@
 			inserted_id = null
 		else
 			QDEL_NULL(inserted_id)
-	QDEL_NULL_LIST(prize_list)
+	for(var/key, value in prize_list)
+		QDEL_NULL_LIST(value)
 	. = ..()
 
 /datum/data/mining_equipment
@@ -276,9 +277,9 @@
 				return
 
 			remove_points(inserted_id, prize.cost)
-			/*var/obj/item/I = */
+			// Outpost 21 edit begin - Let players keep their prizes, at least until security takes them away.
 			new prize.equipment_path(loc)
-			// I.persist_storable = FALSE Outpost 21 edit - Let players keep their prizes, at least until security takes them away.
+			// Outpost 21 edit end
 			flick(icon_vend, src)
 		else
 			flick(icon_deny, src)

@@ -143,5 +143,7 @@
 	ADD_NOTICE("Drawing: Door","<br>On the paper is a cruedely drawn image of a raptor-like creature, they appear to be reeling back from a door and gently pressing a button on it. The door flashes with a soft light, and they enter. Another image shows the door sparking softly, the raptor then turns away to leave, unharmed.",null)
 	. = ..()
 
+/obj/structure/noticeboard/expie
+	name = "Pawprint Notice Board"
 
 #undef ADD_NOTICE

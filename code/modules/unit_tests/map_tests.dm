@@ -17,6 +17,7 @@
 					/area/turbolift,
 					/area/submap,
 					// Outpost 21 edit begin - Exempt the clubhouse
+					/area/specialty/expie_clubhouse,
 					/area/specialty/stowaway_clubhouse,
 					/area/specialty/stowaway_clubhouse/upper
 					// Outpost 21 edit end

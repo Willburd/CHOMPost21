@@ -90,7 +90,8 @@
 		/area/ai_sat/power_control,
 		/area/security/brig_hole,
 		/area/specialty/stowaway_clubhouse,
-		/area/specialty/stowaway_clubhouse/upper
+		/area/specialty/stowaway_clubhouse/upper,
+		/area/specialty/expie_clubhouse,
 		)
 
 	var/list/forced_hallway = list(

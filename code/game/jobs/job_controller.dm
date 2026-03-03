@@ -586,20 +586,19 @@ GLOBAL_DATUM(job_master, /datum/controller/occupations)
 
 	// It is VERY unlikely that we'll have two players, in the same round, with the same name and branch, but still, this is here.
 	// If such conflict is encountered, a random number will be appended to the email address. If this fails too, no email account will be created.
-	if(ntnet_global.does_email_exist(complete_login))
+	if(GLOB.ntnet_global.does_email_exist(complete_login))
 		complete_login = "[sanitized_name][random_id(/datum/computer_file/data/email_account/, 100, 999)]@[domain]"
 
 	// If even fallback login generation failed, just don't give them an email. The chance of this happening is astronomically low.
-	if(H.mind) // Outpost 21 edit - Allow without a mind equips
-		if(ntnet_global.does_email_exist(complete_login) || job.title == JOB_STOWAWAY) // Outpost 21 edit - Stowaways don't get accounts
-			to_chat(H, span_filter_notice("You were not assigned an email address."))
-			H.mind.store_memory("You were not assigned an email address.")
-		else
-			var/datum/computer_file/data/email_account/EA = new/datum/computer_file/data/email_account()
-			EA.password = GenerateKey()
-			EA.login = 	complete_login
-			to_chat(H, span_filter_notice("Your email account address is <b>[EA.login]</b> and the password is <b>[EA.password]</b>. This information has also been placed into your notes."))
-			H.mind.store_memory("Your email account address is [EA.login] and the password is [EA.password].")
+	if(GLOB.ntnet_global.does_email_exist(complete_login))
+		to_chat(H, span_filter_notice("You were not assigned an email address."))
+		H.mind.store_memory("You were not assigned an email address.")
+	else
+		var/datum/computer_file/data/email_account/EA = new/datum/computer_file/data/email_account()
+		EA.password = GenerateKey()
+		EA.login = 	complete_login
+		to_chat(H, span_filter_notice("Your email account address is <b>[EA.login]</b> and the password is <b>[EA.password]</b>. This information has also been placed into your notes."))
+		H.mind.store_memory("Your email account address is [EA.login] and the password is [EA.password].")
 	// END EMAIL GENERATION
 	*/
 
