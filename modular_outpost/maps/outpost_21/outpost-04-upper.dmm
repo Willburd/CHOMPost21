@@ -3907,6 +3907,10 @@
 /obj/structure/ladder,
 /turf/simulated/open/muriki,
 /area/mine/explored/muriki/river/hole)
+"ajs" = (
+/obj/effect/shuttle_landmark/premade/specops/station,
+/turf/simulated/open/muriki,
+/area/muriki/skyline/east)
 "ajt" = (
 /obj/structure/inflatable/door,
 /turf/simulated/floor/plating/turfpack/muriki,
@@ -108481,7 +108485,7 @@ qQa
 qQa
 qQa
 qQa
-qQa
+ajs
 qQa
 qQa
 qQa
