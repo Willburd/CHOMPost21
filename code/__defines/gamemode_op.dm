@@ -19,16 +19,16 @@
 #define BE_LOSTDRONE  0x1000
 
 GLOBAL_LIST_INIT(special_roles, list(
-	"traitor" = 0,										// 0
-	"operative" = 0,									// 1
-	"changeling" = 0,									// 2
-	"wizard" = 0,										// 3
+	"traitor" = 1,										// 0
+	"operative" = 1,									// 1
+	"changeling" = 1,									// 2
+	"wizard" = 1,										// 3
 	"malf AI" = 0,										// 4
 	"ninja" = 0,										// 5
-	"exotic species" = 0,								// 6
+	"exotic species" = 1,								// 6
 	"positronic brain" = 1,								// 7
 	"cultist" = 0,										// 8
-	"raider" = 0,										// 9
+	"raider" = 1,										// 9
 	"diona" = 1,										// 10
 	"pAI candidate" = 1,								// 11
 	"Lost Drone" = 1,									// 12
@@ -46,6 +46,6 @@ GLOBAL_LIST_INIT(be_special_flags, list(
 	"Cultist"          = BE_CULTIST,
 	"Raider"           = BE_RAIDER,
 	"Diona"            = BE_PLANT,
-	"pAI"              = BE_PAI,
+	"pAI Candidate"    = BE_PAI,
 	"Lost Drone"       = BE_LOSTDRONE,
 ))
