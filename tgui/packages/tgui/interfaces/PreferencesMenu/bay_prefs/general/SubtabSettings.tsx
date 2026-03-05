@@ -263,7 +263,6 @@ export const SubtabSettings = (props: {
                   </LabeledList.Item>
                 </LabeledList>
               </Stack.Item>
-              {/* Outpost 21 edit - Disabled here, we manually select players
               <Stack.Item>
                 <Box bold>Special Roles</Box>
                 {syndicate_ban ? (
@@ -296,7 +295,6 @@ export const SubtabSettings = (props: {
                   </LabeledList>
                 )}
               </Stack.Item>
-              */}
             </Stack>
           </Stack.Item>
           <Stack.Divider />

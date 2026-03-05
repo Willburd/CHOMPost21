@@ -963,6 +963,7 @@ GLOBAL_LIST_INIT(xeno2ChemList, list(REAGENT_ID_INAPROVALINE,
 						REAGENT_ID_CONDENSEDCAPSAICIN,
 						REAGENT_ID_NEUROTOXIN))
 
+/* Outpost 21 edit - Use ours
 //keep synced with the defines BE_* in setup.dm --rastaf
 //some autodetection here.
 //Change these to 0 if the equivalent mode is disabled for whatever reason!
@@ -988,6 +989,7 @@ GLOBAL_LIST_INIT(special_roles, list(
 	"cursed sword" = 1,									// 18
 	"ship survivor" = 1,								// 19
 ))
+*/
 
 GLOBAL_LIST_INIT(maint_mob_pred_options, list(
 	"Rabbit" = /mob/living/simple_mob/vore/rabbit,

@@ -1,10 +1,10 @@
-/*
+
+/* Outpost 21 edit - Role disabled here
 /datum/ghost_query/morph
 	role_name = "Morph"
 	be_special_flag = BE_MORPH
 	question = "A weird morphic creature has appeared in maintenance. Do you want to play as it? ((You get to play as a weird shapeshifting \'morph\' that can mimic objects and people.))"
 	cutoff_number = 1
-*/
 
 /datum/ghost_query/maints_pred
 	role_name = "Maintenance Critter"
@@ -12,7 +12,6 @@
 	question = "It appears a critter of some kind, possibly predatory, is lurking in maintenance. Do you want to play as it? ((You get to choose from a wide range of critters.))"
 	cutoff_number = 1
 
-/* Outpost 21 edit - Role disabled here
 /datum/ghost_query/maints_lurker
 	role_name = "Maintenance Lurker"
 	be_special_flag = BE_MAINTLURKER
