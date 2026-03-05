@@ -74,3 +74,7 @@
   Guti:
   - maptweak: Removed the PISS from Southern Cross
   - rscadd: Added dust anomaly random event
+2026-03-04:
+  zeskorion:
+  - bugfix: CS upkeep
+  - bugfix: removes Persistent Industrial Sheet Storage from cetus
