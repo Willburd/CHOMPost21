@@ -837,6 +837,7 @@ GLOBAL_LIST_EMPTY(all_objectives)
 /datum/objective/cult/sacrifice/check_completion()
 	return (target && GLOB.cult && !GLOB.cult.sacrificed.Find(target))
 
+/* Outpost 21 edit - Disabled mode
 /datum/objective/rev/find_target()
 	..()
 	if(target && target.current)
@@ -870,3 +871,4 @@ GLOBAL_LIST_EMPTY(all_objectives)
 			rval = 2
 		return 0
 	return rval
+*/

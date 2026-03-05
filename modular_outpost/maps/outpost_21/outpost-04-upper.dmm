@@ -1096,9 +1096,6 @@
 	},
 /area/mine/unexplored/muriki/mountaintop_pathway)
 "aco" = (
-/obj/effect/floor_decal/corner/red{
-	dir = 10
-	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
@@ -1110,6 +1107,9 @@
 	},
 /obj/structure/micro_tunnel{
 	pixel_y = -32
+	},
+/obj/effect/floor_decal/corner/orange{
+	dir = 10
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/quartermaster/mining/expl)
@@ -3969,6 +3969,52 @@
 	},
 /turf/simulated/floor/plating/external/turfpack/muriki,
 /area/muriki/rooftop/civilian)
+"ajB" = (
+/obj/structure/grille,
+/obj/machinery/door/firedoor/glass,
+/obj/structure/window/reinforced/full,
+/obj/structure/window/reinforced,
+/turf/simulated/floor/plating,
+/area/maintenance/wastedisposal)
+"ajC" = (
+/obj/structure/grille,
+/obj/machinery/door/firedoor/glass,
+/obj/structure/window/reinforced/full,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced,
+/turf/simulated/floor/plating,
+/area/maintenance/wastedisposal)
+"ajD" = (
+/obj/structure/grille,
+/obj/machinery/door/firedoor/glass,
+/obj/structure/window/reinforced/full,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/wastedisposal)
+"ajE" = (
+/obj/structure/grille,
+/obj/machinery/door/firedoor/glass,
+/obj/structure/window/reinforced/full,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/wastedisposal)
+"ajF" = (
+/obj/structure/grille,
+/obj/machinery/door/firedoor/glass,
+/obj/structure/window/reinforced/full,
+/obj/structure/cable/green,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/quartermaster/mining/secpi)
 "ajG" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -3981,6 +4027,91 @@
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/cargupbreak)
+"ajH" = (
+/obj/structure/grille,
+/obj/machinery/door/firedoor/glass,
+/obj/structure/window/reinforced/full,
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/quartermaster/mining/secpi)
+"ajI" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/quartermaster/mining/secpi)
+"ajJ" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/quartermaster/mining/secpi)
+"ajK" = (
+/obj/structure/grille,
+/obj/machinery/door/firedoor/glass,
+/obj/structure/window/reinforced/full,
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
+/obj/structure/cable/green,
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/quartermaster/mining/secpi)
+"ajL" = (
+/obj/structure/grille,
+/obj/machinery/door/firedoor/glass,
+/obj/structure/window/reinforced/full,
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
+/obj/structure/cable/green,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/quartermaster/mining/secpi)
+"ajM" = (
+/obj/structure/grille,
+/obj/machinery/door/firedoor/glass,
+/obj/structure/window/reinforced/full,
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/quartermaster/mining/secpi)
+"ajN" = (
+/obj/structure/grille,
+/obj/machinery/door/firedoor/glass,
+/obj/structure/window/reinforced/full,
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/quartermaster/mining/secpi)
 "ajR" = (
 /turf/simulated/wall,
 /area/specialty/expie_clubhouse)
@@ -5115,8 +5246,14 @@
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/medical)
 "aLE" = (
-/obj/machinery/suit_cycler/security,
-/obj/effect/floor_decal/corner/red/full,
+/obj/structure/table/rack/shelf,
+/obj/item/clothing/shoes/magboots,
+/obj/item/tank/jetpack/breaker,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/suit/space/void/salvagecorp_shipbreaker,
+/obj/item/clothing/head/helmet/space/void/salvagecorp_shipbreaker,
+/obj/item/gps/engineering,
+/obj/effect/floor_decal/corner/orange/full,
 /turf/simulated/floor/tiled/milspec,
 /area/quartermaster/mining/expl)
 "aMm" = (
@@ -15997,6 +16134,9 @@
 /obj/effect/floor_decal/corner/red{
 	dir = 9
 	},
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/quartermaster/mining/secpi)
 "gnk" = (
@@ -16745,6 +16885,10 @@
 /obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
 /obj/structure/window/reinforced/full,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced,
 /turf/simulated/floor/plating,
 /area/maintenance/wastedisposal)
 "gLs" = (
@@ -18966,16 +19110,16 @@
 /turf/simulated/floor/wood,
 /area/rnd/research/phoronics/breakroom)
 "hRi" = (
-/obj/structure/table/rack,
 /obj/item/clothing/mask/breath,
 /obj/item/clothing/shoes/magboots,
 /obj/item/tank/jetpack/oxygen,
-/obj/item/clothing/suit/space/void/security,
-/obj/item/clothing/head/helmet/space/void/security,
-/obj/item/gps/security,
-/obj/effect/floor_decal/corner/red/full{
+/obj/item/clothing/suit/space/void/hev,
+/obj/item/clothing/head/helmet/space/void/hev,
+/obj/item/gps/explorer,
+/obj/effect/floor_decal/corner/orange/full{
 	dir = 4
 	},
+/obj/structure/table/rack/shelf,
 /turf/simulated/floor/tiled/milspec,
 /area/quartermaster/mining/expl)
 "hRq" = (
@@ -22158,9 +22302,6 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology/xenoflora2)
 "jxM" = (
-/obj/effect/floor_decal/corner/red{
-	dir = 10
-	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
@@ -22172,6 +22313,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
+	},
+/obj/effect/floor_decal/corner/orange{
+	dir = 10
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/quartermaster/mining/expl)
@@ -23229,15 +23373,15 @@
 /turf/simulated/floor/outpost_roof/turfpack/muriki,
 /area/muriki/rooftop/security)
 "jXP" = (
-/obj/structure/table/rack,
 /obj/item/clothing/mask/breath,
 /obj/item/clothing/shoes/magboots,
 /obj/machinery/light,
 /obj/item/tank/jetpack/oxygen,
-/obj/item/clothing/suit/space/void/security,
-/obj/item/clothing/head/helmet/space/void/security,
-/obj/item/gps/security,
-/obj/effect/floor_decal/corner/red{
+/obj/item/clothing/suit/space/void/pilot,
+/obj/item/clothing/head/helmet/space/void/pilot,
+/obj/structure/table/rack/shelf,
+/obj/item/gps/explorer,
+/obj/effect/floor_decal/corner/orange{
 	dir = 10
 	},
 /turf/simulated/floor/tiled/milspec,
@@ -26505,6 +26649,7 @@
 /obj/item/gps/explorer,
 /obj/item/gps/explorer,
 /obj/item/gps/explorer,
+/obj/structure/cable/green,
 /turf/simulated/floor/tiled/milspec,
 /area/quartermaster/mining/secpi)
 "lJg" = (
@@ -32354,9 +32499,6 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/tcommsat/computer)
 "oHI" = (
-/obj/effect/floor_decal/corner/red{
-	dir = 10
-	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
@@ -32365,6 +32507,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
+	},
+/obj/effect/floor_decal/corner/orange{
+	dir = 10
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/quartermaster/mining/expl)
@@ -34509,6 +34654,12 @@
 /obj/item/gps/security,
 /obj/effect/floor_decal/corner/red/full{
 	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/quartermaster/mining/secpi)
@@ -37432,6 +37583,9 @@
 /area/maintenance/engineering)
 "rmz" = (
 /obj/effect/floor_decal/corner/red,
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/quartermaster/mining/secpi)
 "rmN" = (
@@ -37642,7 +37796,13 @@
 /turf/simulated/floor/tiled,
 /area/security/vacantoffice2)
 "rta" = (
-/obj/machinery/suit_cycler/medical,
+/obj/structure/table/rack/shelf,
+/obj/item/clothing/shoes/magboots,
+/obj/item/suit_cooling_unit,
+/obj/item/tank/oxygen,
+/obj/item/clothing/suit/space/void/medical,
+/obj/item/clothing/head/helmet/space/void/medical,
+/obj/item/gps/medical,
 /obj/effect/floor_decal/corner/blue/full,
 /turf/simulated/floor/tiled/milspec,
 /area/quartermaster/mining/expl)
@@ -37767,6 +37927,9 @@
 /obj/machinery/door/window/brigdoor/northleft{
 	req_access = null;
 	req_one_access = list(1)
+	},
+/obj/effect/floor_decal/corner/orange{
+	dir = 9
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/quartermaster/mining/expl)
@@ -38520,6 +38683,8 @@
 /obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
 /obj/structure/window/reinforced/full,
+/obj/structure/cable/green,
+/obj/structure/window/reinforced,
 /turf/simulated/floor/plating,
 /area/quartermaster/mining/secpi)
 "rQG" = (
@@ -42756,6 +42921,9 @@
 	dir = 1;
 	pixel_y = -26
 	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/quartermaster/mining/secpi)
 "tUi" = (
@@ -44322,11 +44490,11 @@
 /turf/simulated/floor/wood,
 /area/djstation)
 "uGX" = (
-/obj/effect/floor_decal/corner/red{
-	dir = 6
-	},
 /obj/structure/window/reinforced{
 	dir = 1
+	},
+/obj/effect/floor_decal/corner/orange{
+	dir = 6
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/quartermaster/mining/expl)
@@ -49173,6 +49341,9 @@
 /obj/item/gps/explorer,
 /obj/item/gps/explorer,
 /obj/item/gps/explorer,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/quartermaster/mining/secpi)
 "xeu" = (
@@ -50291,6 +50462,15 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "1-2"
+	},
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "2-4"
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals_central7{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/quartermaster/mining/secpi)
@@ -53488,8 +53668,8 @@ sWt
 mMd
 mMd
 mMd
-gKI
-gKI
+ajD
+ajD
 gKI
 ttw
 ttw
@@ -53652,7 +53832,7 @@ acJ
 ttR
 tFt
 vux
-gKI
+ajB
 ttw
 ttw
 ttw
@@ -53814,7 +53994,7 @@ npi
 cKj
 tFt
 fEp
-gKI
+ajB
 ttw
 ttw
 ttw
@@ -53974,9 +54154,9 @@ mMd
 mMd
 mMd
 mMd
-gKI
-gKI
-gKI
+ajE
+ajE
+ajC
 ttw
 ttw
 ttw
@@ -58985,11 +59165,11 @@ oRv
 dYT
 cUt
 mZC
-rQu
+ajH
 vuM
 vuM
 vuM
-rQu
+ajH
 siY
 cUt
 abv
@@ -59313,7 +59493,7 @@ pOj
 pOj
 fJd
 xDm
-xDm
+ajI
 qAP
 cUt
 abv
@@ -59475,7 +59655,7 @@ pOj
 faV
 blI
 wWN
-pOj
+ajJ
 cTI
 cUt
 kyL
@@ -59957,7 +60137,7 @@ ttw
 ttw
 ttw
 ttw
-rQu
+ajM
 uyM
 ojY
 ntH
@@ -60119,12 +60299,12 @@ ttw
 ttw
 ttw
 ttw
-rQu
-rQu
-rQu
-rQu
-rQu
-rQu
+ajN
+ajL
+ajL
+ajL
+ajK
+ajF
 ttw
 ttw
 ttw
