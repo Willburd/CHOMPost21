@@ -354,6 +354,7 @@
 		t = replacetext(t, "\[logo\]", "<img src=\ref['html/images/eslogo.png']>")
 		t = replacetext(t, "\[eslogo\]", "<img src=\ref['html/images/eslogo.png']>")
 		t = replacetext(t, "\[ntlogo\]", "<img src=\ref['html/images/ntlogo.png']>")
+		t = replacetext(t, "\[talogo\]", "<img src=\ref['html/images/talonlogo.png']>")
 		t = replacetext(t, "\[sglogo\]", "<img src=\ref['html/images/sglogo.png']>")
 		t = replacetext(t, "\[trlogo\]", "<img src=\ref['html/images/trader.png']>")
 		t = replacetext(t, "\[pclogo\]", "<img src=\ref['html/images/pclogo.png']>") // Not available on virgo // CHOMPEnable
@@ -377,6 +378,7 @@
 		t = replacetext(t, "\[logo\]", "")
 		t = replacetext(t, "\[eslogo\]", "")
 		t = replacetext(t, "\[ntlogo\]", "")
+		t = replacetext(t, "\[talogo\]", "")
 		t = replacetext(t, "\[sglogo\]", "")
 		t = replacetext(t, "\[trlogo\]", "")
 		t = replacetext(t, "\[pclogo\]", "")
