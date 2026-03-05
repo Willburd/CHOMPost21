@@ -2774,6 +2774,10 @@
 	dir = 4
 	},
 /obj/structure/disposalpipe/trunk,
+/obj/machinery/door/window/brigdoor/southleft{
+	req_one_access = list(1,5,10,31,47,48,52);
+	req_access = null
+	},
 /turf/simulated/floor/reinforced/turfpack/muriki,
 /area/shuttle/trawler)
 "adJ" = (
@@ -6908,6 +6912,18 @@
 "akW" = (
 /turf/simulated/wall/titanium,
 /area/muriki/elevator/secmain)
+"akX" = (
+/obj/structure/grille,
+/obj/machinery/door/firedoor/glass,
+/obj/structure/window/reinforced/full,
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/plating,
+/area/quartermaster/mining)
 "akY" = (
 /obj/effect/floor_decal/steeldecal/steel_decals10{
 	dir = 6
@@ -75992,6 +76008,9 @@
 /obj/machinery/atm{
 	pixel_y = -32
 	},
+/obj/structure/cable/green{
+	icon_state = "1-8"
+	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/mining)
 "tpb" = (
@@ -76008,6 +76027,9 @@
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /obj/machinery/camera/network/mining{
 	c_tag = "MNE - Main Entrance Hall"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/mining)
@@ -90424,6 +90446,9 @@
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/quartermaster/mining)
 "xJI" = (
@@ -91819,6 +91844,9 @@
 /obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
 /obj/structure/window/reinforced/full,
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
 /turf/simulated/floor/plating,
 /area/quartermaster/mining)
 "yiY" = (
@@ -98221,7 +98249,7 @@ oYY
 crK
 wjC
 wjC
-yiH
+akX
 qAN
 vtA
 wUD
@@ -98707,7 +98735,7 @@ oYY
 qit
 vaN
 jwV
-yiH
+avy
 tph
 toQ
 wUD
@@ -98869,7 +98897,7 @@ oYY
 qit
 hcT
 xze
-yiH
+avz
 viW
 gRv
 wUD
