@@ -38,7 +38,7 @@
 	// add_verb(src,/mob/proc/nme_vore_ch) // Outpost 21 edit - Nif removal
 	// add_verb(src,/mob/proc/enter_soulcatcher) Outpost 21 edit - Disable soulgems
 
-	if(!voice_sounds_list.len || !voice_sounds_list)
+	if(!length(voice_sounds_list))
 		if(client.prefs.voice_sound)
 			var/prefsound = client.prefs.voice_sound
 			voice_sounds_list = get_talk_sound(prefsound)
