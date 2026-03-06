@@ -262,13 +262,13 @@
 	return data
 
 /obj/machinery/nuclearbomb/station/explode()
-	update_icon()
 	if(!has_timer() || safety || !auth || !yes_code)
 		abort_timer()
 		return
 	exploding = TRUE
 	yes_code = 0
 	safety = 1
+	update_icon()
 	world << sound('sound/machines/Alarm.ogg') // force sound!
 	if(SSticker && SSticker.mode)
 		SSticker.mode.explosion_in_progress = 1
