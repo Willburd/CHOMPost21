@@ -23,6 +23,7 @@
 	base_attack_cooldown = 8 SECONDS
 	projectiletype = /obj/item/projectile/bullet/srmrocket/weak
 	pilot_type = /mob/living/simple_mob/clowns/big/normal
+	turn_sound = "clownstep" // HONK
 
 /obj/structure/loot_pile/mecha/honker
 	name = "jester wreckage"
