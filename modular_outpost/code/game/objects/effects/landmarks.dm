@@ -44,6 +44,7 @@
 			/mob/living/simple_mob/vore/ashy,
 			/mob/living/simple_mob/vore/cryptdrake,
 			/mob/living/simple_mob/vore/demonAI,
+			/mob/living/simple_mob/mechanical/mecha/combat/honker,
 			// Cult
 			/mob/living/simple_mob/creature,
 			/mob/living/simple_mob/vore/aggressive/corrupthound,

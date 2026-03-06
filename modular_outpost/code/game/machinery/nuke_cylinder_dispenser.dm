@@ -9,6 +9,7 @@
 
 	var/locked = TRUE
 	var/open = FALSE
+	var/shown_message = FALSE
 
 /obj/machinery/nuke_cylinder_dispenser/Initialize(mapload)
 	. = ..()
@@ -26,6 +27,9 @@
 		user.visible_message("[user] unlocks \the [src].", "You unlock \the [src].")
 		update_icon()
 		add_fingerprint(user)
+		if(!shown_message)
+			GLOB.global_announcer.autosay("The Terraformer Euthanizer Nuclear Cylinder Storage has been accessed. Respond to the scene immediately if this is unauthorized.", "Primary System Warning", CHANNEL_COMMAND)
+			shown_message = TRUE
 		return TRUE
 	if(!locked)
 		open = !open

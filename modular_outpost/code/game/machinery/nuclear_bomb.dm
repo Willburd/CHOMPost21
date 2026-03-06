@@ -14,8 +14,8 @@
 	var/warningstage = 0
 
 	var/announced = FALSE
-	var/countdown_start_minutes = 10 // default (10 mins)
-	var/self_destruct_cutoff = 60 * 5 //Seconds (5 mins)
+	var/countdown_start_minutes = 10 MINUTES
+	var/self_destruct_cutoff = 5 MINUTES
 
 	var/countdown_timer = null
 	var/cache_full_time = 0 // This is agonizing, but the value you put in should be retained
@@ -116,11 +116,11 @@
 	GLOB.bomb_set = 1 //There can still be issues with this reseting when there are multiple bombs. Not a big deal tho for Nuke/N
 	// notify station
 	if(get_security_level() != SEC_LEVEL_DELTA)
-		priority_announcement.Announce("Self destruct sequence has been activated. Self-destructing in [timeleft] seconds.", "Self-Destruct Control Computer")
+		priority_announcement.Announce("Self destruct sequence has been activated. Self-destructing in [get_time_remaining() / (1 SECOND)] seconds.", "Self-Destruct Control Computer")
 	set_security_level(SEC_LEVEL_DELTA)
 	if(countdown_timer)
 		deltimer(countdown_timer, SStimer)
-	countdown_timer = addtimer(CALLBACK(src, PROC_REF(explode)), countdown_start_minutes MINUTES, TIMER_DELETE_ME|TIMER_STOPPABLE)
+	countdown_timer = addtimer(CALLBACK(src, PROC_REF(explode)), countdown_start_minutes, TIMER_DELETE_ME|TIMER_STOPPABLE)
 	cache_full_time = timeleft(countdown_timer, SStimer) // we need to do this for dumb reasons
 	update_icon()
 	announced = FALSE
@@ -153,21 +153,12 @@
 /obj/machinery/nuclearbomb/station/proc/get_time_remaining()
 	if(exploding)
 		return 0
-	var/remaining = (countdown_start_minutes MINUTES) / (1 SECOND) // deci to seconds
-	if(has_timer())
-		remaining = timeleft(countdown_timer, SStimer) SECONDS
-	return remaining
-
-/// This is ugly. But without doing this the input time of Xminutes jumps up to show the real time it would take with server lag factored in... 10 mins to 13 for example
-/obj/machinery/nuclearbomb/station/proc/get_compensating_time()
-	if(exploding)
-		return (countdown_start_minutes MINUTES) / (1 SECOND) // deci to seconds
-	if(!cache_full_time)
-		return (countdown_start_minutes MINUTES) / (1 SECOND) // deci to seconds
-	return ((countdown_start_minutes MINUTES) * (get_time_remaining() / cache_full_time)) / (1 SECOND) // Solve the percent of the alarm remaining and solve off of the start minutes
+	if(!has_timer())
+		return countdown_start_minutes
+	return timeleft(countdown_timer)
 
 /obj/machinery/nuclearbomb/station/proc/countdown_too_far_gone()
-	return exploding || (get_compensating_time() <= self_destruct_cutoff)
+	return exploding || (get_time_remaining() <= self_destruct_cutoff)
 
 /obj/machinery/nuclearbomb/station/update_icon()
 	var/target_icon_state
@@ -237,7 +228,7 @@
 				var/min_time = 10
 				var/max_time = 30
 				var/new_time = tgui_input_number(ui.user,"Enter minutes until detonation","Set Timer", 0, max_time, min_time)
-				countdown_start_minutes = between(min_time, new_time, max_time) // different min timer( 10 min, 30 min )
+				countdown_start_minutes = between(min_time, new_time, max_time) MINUTES
 				return TRUE
 
 		if("timer")
@@ -262,22 +253,22 @@
 		"code" = code,
 		"yes_code" = yes_code,
 		"safety" = safety,
-		"timeleft" = get_compensating_time(),
+		"timeleft" = get_time_remaining() / (1 SECOND),
 		"timing" = has_timer(),
 		"critical" = countdown_too_far_gone(),
-		"start_minutes" = countdown_start_minutes
+		"start_minutes" = countdown_start_minutes / (1 MINUTE),
 	)
 
 	return data
 
 /obj/machinery/nuclearbomb/station/explode()
-	update_icon()
 	if(!has_timer() || safety || !auth || !yes_code)
 		abort_timer()
 		return
 	exploding = TRUE
 	yes_code = 0
 	safety = 1
+	update_icon()
 	world << sound('sound/machines/Alarm.ogg') // force sound!
 	if(SSticker && SSticker.mode)
 		SSticker.mode.explosion_in_progress = 1
