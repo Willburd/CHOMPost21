@@ -35,7 +35,6 @@ var/datum/antagonist/rustdrone/rust_drones
 		var/obj/item/mmi/digital/posibrain/cube = locate() in drone.current.contents
 		if(cube)
 			cube.make_rusted()
-		drone.current.AddElement(/datum/element/lite_godmode) // WIP this should be the necromorph component
 		welcome_text = initial(welcome_text)
 	else
 		// Alternate intro
