@@ -125,3 +125,39 @@
 2026-03-08:
   Diana:
   - bugfix: Robotics surgery works again
+2026-03-09:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: vanity copy eye color
+  - rscadd: Added a Command style Gooborg Chassis
+  - code_imp: migrates GPS to tgui
+  - bugfix: bad compass_holder del
+  - bugfix: ship placement in two player mode
+  - qol: critter rifts are now emissive, so they can be seen in unlit areas (still
+      only visible to ghosts)
+  - bugfix: fixed notification prefs for maint critter rifts (I think)
+  - code_imp: update font awesome to v7
+  - code_imp: tgui dependency up
+  Diana:
+  - bugfix: Reagents will now have some effect - even if extremely small - if you
+      have slow metabolism.
+  Will:
+  - refactor: Moved solarpanel update to it's own subsystem
+  - bugfix: Solarpanels now follow the sun on planet, and not the global SPACESUN
+      the stations use.
+  - bugfix: wrapping up people in giftwrap no longer makes them invisible
+  - bugfix: missing giftbox icons fixed on several objects
+  - bugfix: handheld flashes no longer stun phased shadekin
+  - bugfix: flashbangs no longer hit phased shadekin
+  - bugfix: explosions no longer hit phased shadekin
+  - bugfix: emps no longer hit phased shadekin
+  - bugfix: chemical sprays no longer hit phased shadekin
+  - bugfix: shadekin can no longer toggle oxygen/anesthetic pumps while in phase
+  - bugfix: you can no longer mount phased shadekin taurs, or mount a taur while phased
+  - bugfix: pai correctly uses the new chassis data when changing chassis(would sometimes
+      turn you invisible)
+  - bugfix: paicards no longer comfort minor loneliness if they do not have a client
+  - bugfix: forensic scanner runtime fix
+  - code_imp: added TRAIT_AMBIENT_PEST_MOB trait define
+  - refactor: 'Made pest mob interactions consistent (ex: mice couldn''t open airlocks,
+      but cockroaches could )'
+  - bugfix: lingering fires no longer catch phased shadekin on fire
