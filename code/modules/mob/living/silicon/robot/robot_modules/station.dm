@@ -186,7 +186,9 @@
 	T.water = water
 	src.modules += T
 	//CHOMPEdit End
-	src.modules += new /obj/item/gps/robot(src)
+	var/obj/item/gps/robot/robot_gps = new /obj/item/gps/robot(src)
+	adjust_gps(robot_gps)
+	src.modules += robot_gps
 	src.modules += new /obj/item/boop_module(src)
 	src.modules += new /obj/item/flash/robot(src)
 	src.modules += new /obj/item/extinguisher(src)
@@ -194,6 +196,9 @@
 	src.modules += new /obj/item/melee/robotic/jaws/small(src)
 	src.modules += new /obj/item/gripper/scene(src)
 	src.modules += new /obj/item/robo_dice(src)
+
+/obj/item/robot_module/robot/proc/adjust_gps(obj/item/gps/robot/robot_gps)
+	return
 
 /obj/item/robot_module/robot/standard
 	name = "standard robot module"
