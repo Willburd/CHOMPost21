@@ -4203,6 +4203,7 @@
 /area/specialty/expie_clubhouse)
 "akg" = (
 /obj/structure/closet,
+/obj/item/material/twohanded/sledgehammer/gravity/ed,
 /turf/simulated/floor/carpet/turfpack/muriki,
 /area/specialty/expie_clubhouse)
 "akh" = (
