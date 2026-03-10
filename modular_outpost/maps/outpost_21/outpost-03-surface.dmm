@@ -16953,6 +16953,7 @@
 /area/mine/explored/muriki/mountainnorth)
 "aLP" = (
 /obj/machinery/door/airlock/maintenance/common,
+/obj/item/beartrap/start_active,
 /obj/item/airlock_brace,
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/mine/explored/muriki/river/hole)
