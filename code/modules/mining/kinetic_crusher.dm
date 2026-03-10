@@ -65,12 +65,14 @@
 /obj/item/kinetic_crusher/Destroy()
 	return ..()
 
+/* Outpost 21 edit - Absolutely not
 /obj/item/kinetic_crusher/emag_act()
 	. = ..()
 	if(emagged)
 		return
 	emagged = TRUE
 	desc = desc + " The destabilizer module occasionally sparks and glows a menacing red."
+*/
 
 /obj/item/kinetic_crusher/proc/can_mark(mob/living/victim)
 	if(emagged)
@@ -371,5 +373,5 @@
 	if(isliving(target))
 		var/mob/living/L = target
 		if(hammer_synced.can_mark(L))
-			L.add_modifier(/datum/modifier/crusher_mark, 30 SECONDS, firer, TRUE)
+			L.add_modifier(/datum/modifier/crusher_mark, 5 SECONDS, firer, TRUE) // Outpost 21 edit - 30 seconds to 5
 	..()
