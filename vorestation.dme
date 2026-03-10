@@ -5869,7 +5869,6 @@
 #include "modular_outpost\code\modules\mob\living\carbon\human\species\station\traits_vr\positive.dm"
 #include "modular_outpost\code\modules\mob\living\silicon\laws.dm"
 #include "modular_outpost\code\modules\mob\living\silicon\silicon.dm"
-#include "modular_outpost\code\modules\mob\living\silicon\pai\pai.dm"
 #include "modular_outpost\code\modules\mob\living\silicon\robot\robot.dm"
 #include "modular_outpost\code\modules\mob\living\silicon\robot\robot_simple_items.dm"
 #include "modular_outpost\code\modules\mob\living\silicon\robot\dogborg\dog_sleeper.dm"
