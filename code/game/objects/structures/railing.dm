@@ -28,7 +28,11 @@
 		anchored = FALSE
 	AddElement(/datum/element/climbable/unanchored_can_break, 3.4 SECONDS, TRUE) // It's a RAILING!
 	AddElement(/datum/element/rotatable)
+
+	#ifndef OUTPOST_FRIENDSHIP_MODE
 	AddElement(/datum/element/headbonk/railing) // Outpost 21 edit - Bonk!
+	#endif
+
 	if(src.anchored)
 		update_icon(0)
 

@@ -80,7 +80,10 @@
 	update_icon()
 
 	update_nearby_tiles(need_rebuild=1)
+
+	#ifndef OUTPOST_FRIENDSHIP_MODE
 	AddElement(/datum/element/headbonk/door) // Outpost 21 edit - Bonk!
+	#endif
 
 /obj/machinery/door/Destroy()
 	density = FALSE
