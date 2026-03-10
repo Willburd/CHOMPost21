@@ -1,15 +1,24 @@
 #define VISION_GOGGLE_USES_CELL(x) \
 x\
 {\
+	var/ignore_cell = FALSE;\
 	var/obj/item/cell/device/cell;\
+}\
+\
+x/ignores_cell\
+{\
+	ignore_cell = TRUE;\
 }\
 \
 x/Initialize(mapload)\
 {\
 	. = ..();\
 	cell = new(src);\
-	disable_goggles();\
-	START_PROCESSING(SSobj, src);\
+	if(!ignore_cell)\
+	{\
+		disable_goggles();\
+		START_PROCESSING(SSobj, src);\
+	}\
 }\
 \
 x/Destroy()\
@@ -26,7 +35,7 @@ x/get_cell()\
 \
 x/toggle_active(mob/living/user)\
 {\
-	if(!cell?.charge)\
+	if(!ignore_cell && !cell?.charge)\
 	{\
 		disable_goggles();\
 		to_chat(user, span_warning("\The [src] won't turn on."));\
@@ -58,7 +67,7 @@ x/proc/disable_goggles()\
 \
 x/attack_hand(mob/user)\
 {\
-	if(user.get_inactive_hand() != src || !cell)\
+	if(user.get_inactive_hand() != src || ignore_cell || !cell)\
 	{\
 		return ..();\
 	}\
@@ -73,7 +82,7 @@ x/attack_hand(mob/user)\
 \
 x/attackby(obj/item/I, mob/user)\
 {\
-	if(istype(I,/obj/item/cell/device))\
+	if(istype(I,/obj/item/cell/device) && !ignore_cell)\
 	{\
 		if(!cell)\
 		{\
@@ -94,7 +103,7 @@ x/attackby(obj/item/I, mob/user)\
 \
 x/process()\
 {\
-	if(isrobot(loc))\
+	if(ignore_cell || isrobot(loc))\
 	{\
 		return;\
 	}\
@@ -102,7 +111,7 @@ x/process()\
 	{\
 		return;\
 	}\
-	if(!cell || !cell.checked_use(2))\
+	if((!cell || !cell.checked_use(2)))\
 	{\
 		disable_goggles();\
 		visible_message(span_warning("\The [src] flickers and turn off."));\

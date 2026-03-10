@@ -17,31 +17,31 @@
 	mode = "night vision"
 
 /datum/rig_vision/nvg/New()
-	glasses = new /obj/item/clothing/glasses/night
+	glasses = new /obj/item/clothing/glasses/night/ignores_cell // Outpost 21 edit - We use a special subtype that ignores our powercell code
 
 /datum/rig_vision/thermal
 	mode = "thermal scanner"
 
 /datum/rig_vision/thermal/New()
-	glasses = new /obj/item/clothing/glasses/thermal
+	glasses = new /obj/item/clothing/glasses/thermal/ignores_cell // Outpost 21 edit - We use a special subtype that ignores our powercell code
 
 /datum/rig_vision/meson
 	mode = "meson scanner"
 
 /datum/rig_vision/meson/New()
-	glasses = new /obj/item/clothing/glasses/meson
+	glasses = new /obj/item/clothing/glasses/meson/ignores_cell // Outpost 21 edit - We use a special subtype that ignores our powercell code
 
 /datum/rig_vision/graviton
 	mode = "graviton scanner"
 
 /datum/rig_vision/graviton/New()
-	glasses = new /obj/item/clothing/glasses/graviton
+	glasses = new /obj/item/clothing/glasses/graviton/ignores_cell // Outpost 21 edit - We use a special subtype that ignores our powercell code
 
 /datum/rig_vision/sechud
 	mode = "security HUD"
 
 /datum/rig_vision/sechud/New()
-	glasses = new /obj/item/clothing/glasses/hud/security
+	glasses = new /obj/item/clothing/glasses/hud/security/ignores_cell // Outpost 21 edit - We use a special subtype that ignores our powercell code
 
 /datum/rig_vision/medhud
 	mode = "medical HUD"
@@ -53,7 +53,7 @@
 	mode = "material scanner"
 
 /datum/rig_vision/material/New()
-	glasses = new /obj/item/clothing/glasses/material
+	glasses = new /obj/item/clothing/glasses/material/ignores_cell // Outpost 21 edit - We use a special subtype that ignores our powercell code
 
 /obj/item/rig_module/vision
 
