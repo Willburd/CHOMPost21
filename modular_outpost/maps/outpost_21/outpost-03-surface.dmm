@@ -12542,15 +12542,6 @@
 /obj/item/material/barbedwire/start_active,
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
 /area/mine/explored/muriki/mountaineast)
-"axV" = (
-/obj/effect/floorbreak,
-/obj/item/material/twohanded/sledgehammer/gravity{
-	desc = "A specialized sledgehammer, dented and damaged from some great battle... engraved on the handle is 'Ed'reith Foley. The handle's leather is surprisingly light and strong, and bears a strangely sweet scent like mangoes and grapes";
-	name = "Ed's Gravity Hammer"
-	},
-/obj/structure/boulder,
-/turf/simulated/floor/wood/broken/turfpack/muriki,
-/area/specialty/stowaway_clubhouse)
 "axW" = (
 /obj/structure/boulder,
 /obj/structure/simple_door/wood,
@@ -153347,7 +153338,7 @@ ayg
 ayu
 axP
 ayb
-axV
+ayW
 rZO
 rZO
 rZO
