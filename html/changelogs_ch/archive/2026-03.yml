@@ -161,3 +161,11 @@
   - refactor: 'Made pest mob interactions consistent (ex: mice couldn''t open airlocks,
       but cockroaches could )'
   - bugfix: lingering fires no longer catch phased shadekin on fire
+2026-03-10:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: Added new species-dependent melee attacks. Currently unused on Virgo.
+  - balance: Reduced damage on some accidentally overtuned existing species-dependent
+      melee attacks. Currently unused on Virgo.
+  - sound: Added a new melee attack sound.
+  - bugfix: design disk scrolling
+  - code_imp: rids of Flex in techweb UIs

@@ -41,7 +41,7 @@
 	mode = "security HUD"
 
 /datum/rig_vision/sechud/New()
-	glasses = new /obj/item/clothing/glasses/hud/security/ignores_cell // Outpost 21 edit - We use a special subtype that ignores our powercell code
+	glasses = new /obj/item/clothing/glasses/hud/security
 
 /datum/rig_vision/medhud
 	mode = "medical HUD"
