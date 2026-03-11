@@ -5597,6 +5597,7 @@
 #include "modular_outpost\code\disabled_objs.dm"
 #include "modular_outpost\code\lockbox_rebalancing.dm"
 #include "modular_outpost\code\lore_papers.dm"
+#include "modular_outpost\code\material_weapon_rebalance.dm"
 #include "modular_outpost\code\species_restrictions.dm"
 #include "modular_outpost\code\suit_rebalancing.dm"
 #include "modular_outpost\code\trait_balance.dm"
