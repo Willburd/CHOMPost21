@@ -169,3 +169,7 @@
   - sound: Added a new melee attack sound.
   - bugfix: design disk scrolling
   - code_imp: rids of Flex in techweb UIs
+2026-03-11:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: text edit state being held too long
+  - qol: Cargo borgs may work as mailman
