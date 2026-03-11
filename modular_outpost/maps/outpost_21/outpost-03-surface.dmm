@@ -6362,7 +6362,7 @@
 /turf/simulated/floor/flesh/turfpack/muriki,
 /area/muriki/processor/hall)
 "ajG" = (
-/obj/machinery/trailblazer/yellow,
+/obj/structure/trailblazer/yellow,
 /turf/simulated/floor/outdoors/sidewalk/slab/turfpack/muriki,
 /area/muriki/grounds/engi)
 "ajH" = (
@@ -6427,7 +6427,7 @@
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
 /area/mine/explored/muriki/valley)
 "ajQ" = (
-/obj/machinery/trailblazer/yellow,
+/obj/structure/trailblazer/yellow,
 /turf/simulated/floor/outdoors/mud/turfpack/muriki,
 /area/muriki/grounds/engi)
 "ajR" = (
@@ -6485,7 +6485,7 @@
 /turf/simulated/floor/wood,
 /area/crew_quarters/bar)
 "ajX" = (
-/obj/machinery/trailblazer/blue,
+/obj/structure/trailblazer/blue,
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
 /area/muriki/grounds/tramborder)
 "ajY" = (
@@ -6520,7 +6520,7 @@
 /turf/simulated/floor/tiled,
 /area/hallway/security/main)
 "akd" = (
-/obj/machinery/trailblazer/red,
+/obj/structure/trailblazer/red,
 /turf/simulated/floor/outdoors/sidewalk/slab/turfpack/muriki,
 /area/muriki/grounds/tramborder)
 "ake" = (
@@ -6691,7 +6691,7 @@
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
 /area/muriki/grounds/terraform)
 "akD" = (
-/obj/machinery/trailblazer/blue,
+/obj/structure/trailblazer/blue,
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
 /area/mine/explored/muriki/mountainnorth)
 "akE" = (
@@ -9500,7 +9500,7 @@
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
 /area/mine/explored/muriki/mountaineast)
 "aqh" = (
-/obj/machinery/trailblazer/yellow,
+/obj/structure/trailblazer/yellow,
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
 /area/muriki/grounds/waste)
 "aqi" = (
@@ -9525,7 +9525,7 @@
 /turf/simulated/floor/outdoors/mud/turfpack/muriki,
 /area/muriki/grounds/shutt)
 "aqn" = (
-/obj/machinery/trailblazer/yellow,
+/obj/structure/trailblazer/yellow,
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
 /area/muriki/grounds/shutt)
 "aqo" = (
@@ -9536,7 +9536,7 @@
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
 /area/muriki/grounds/shutt)
 "aqp" = (
-/obj/machinery/trailblazer/red,
+/obj/structure/trailblazer/red,
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
 /area/muriki/grounds/sec)
 "aqq" = (
@@ -9641,7 +9641,7 @@
 /turf/simulated/floor/outdoors/mud/turfpack/muriki,
 /area/muriki/grounds/tramlinewest)
 "aqJ" = (
-/obj/machinery/trailblazer/red,
+/obj/structure/trailblazer/red,
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
 /area/muriki/grounds/tramborder)
 "aqK" = (
@@ -9736,7 +9736,7 @@
 /turf/simulated/floor/outdoors/sidewalk/slab/turfpack/muriki,
 /area/muriki/grounds/civ)
 "aqY" = (
-/obj/machinery/trailblazer/yellow,
+/obj/structure/trailblazer/yellow,
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
 /area/muriki/grounds/civ)
 "aqZ" = (
@@ -9778,7 +9778,7 @@
 /turf/simulated/floor/outdoors/sidewalk/slab/turfpack/muriki,
 /area/muriki/grounds/med)
 "arh" = (
-/obj/machinery/trailblazer/blue,
+/obj/structure/trailblazer/blue,
 /turf/simulated/floor/water/acidic/turfpack/muriki,
 /area/muriki/grounds/med)
 "ari" = (
@@ -9819,7 +9819,7 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/main)
 "arn" = (
-/obj/machinery/trailblazer/yellow,
+/obj/structure/trailblazer/yellow,
 /turf/simulated/floor/water/acidic/turfpack/muriki,
 /area/engineering/engine_room)
 "aro" = (
@@ -9859,7 +9859,7 @@
 /turf/simulated/floor/outdoors/mud/turfpack/muriki,
 /area/mine/unexplored/muriki/valleyeast)
 "art" = (
-/obj/machinery/trailblazer/yellow,
+/obj/structure/trailblazer/yellow,
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
 /area/mine/explored/muriki/mountainnorth)
 "aru" = (
@@ -10051,7 +10051,7 @@
 /turf/simulated/floor/plating/external/turfpack/muriki,
 /area/muriki/grounds/tramborder)
 "arS" = (
-/obj/machinery/trailblazer/yellow,
+/obj/structure/trailblazer/yellow,
 /obj/structure/railing/grey{
 	dir = 4
 	},
@@ -10080,7 +10080,7 @@
 /turf/simulated/floor/plating/external/turfpack/muriki,
 /area/muriki/grounds/tramborder)
 "arV" = (
-/obj/machinery/trailblazer/yellow,
+/obj/structure/trailblazer/yellow,
 /obj/structure/railing/grey{
 	dir = 8
 	},
@@ -10121,7 +10121,7 @@
 /turf/simulated/floor/plating/external/turfpack/muriki,
 /area/muriki/grounds/engi)
 "asb" = (
-/obj/machinery/trailblazer/yellow,
+/obj/structure/trailblazer/yellow,
 /obj/structure/railing/grey{
 	dir = 4
 	},
@@ -10140,7 +10140,7 @@
 /turf/simulated/floor/plating/external/turfpack/muriki,
 /area/muriki/grounds/engi)
 "asd" = (
-/obj/machinery/trailblazer/yellow,
+/obj/structure/trailblazer/yellow,
 /obj/structure/railing/grey{
 	dir = 8
 	},
@@ -10629,7 +10629,7 @@
 /turf/simulated/floor/water/acidic/turfpack/muriki,
 /area/muriki/grounds/sec)
 "atl" = (
-/obj/machinery/trailblazer/red,
+/obj/structure/trailblazer/red,
 /turf/simulated/floor/water/acidic/turfpack/muriki,
 /area/muriki/grounds/sec)
 "atm" = (
@@ -10643,7 +10643,7 @@
 /turf/simulated/floor/outdoors/mud/turfpack/muriki,
 /area/mine/unexplored/muriki/valleywest)
 "ato" = (
-/obj/machinery/trailblazer/yellow,
+/obj/structure/trailblazer/yellow,
 /turf/simulated/floor/outdoors/sidewalk/slab/turfpack/muriki,
 /area/muriki/grounds/tramborder)
 "atp" = (
@@ -10722,7 +10722,7 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/main)
 "aty" = (
-/obj/machinery/trailblazer/yellow,
+/obj/structure/trailblazer/yellow,
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
 /area/muriki/grounds/sci)
 "atz" = (
@@ -11199,7 +11199,7 @@
 	anchored = 1;
 	deployed = 1
 	},
-/obj/machinery/trailblazer/yellow,
+/obj/structure/trailblazer/yellow,
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
 /area/muriki/grounds/med)
 "auJ" = (
@@ -11954,7 +11954,7 @@
 /turf/simulated/floor/plating/external/turfpack/muriki,
 /area/muriki/grounds/civ)
 "awk" = (
-/obj/machinery/trailblazer/yellow,
+/obj/structure/trailblazer/yellow,
 /turf/simulated/floor/plating/external/turfpack/muriki,
 /area/muriki/grounds/civ)
 "awl" = (
@@ -14132,7 +14132,7 @@
 /turf/simulated/floor/water/acidic/turfpack/muriki,
 /area/muriki/yard)
 "aBJ" = (
-/obj/machinery/trailblazer/red,
+/obj/structure/trailblazer/red,
 /obj/effect/zone_divider,
 /turf/simulated/floor/outdoors/mud/turfpack/muriki,
 /area/muriki/grounds/sec)
@@ -14456,7 +14456,7 @@
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
 /area/muriki/grounds/tramborder)
 "aCM" = (
-/obj/machinery/trailblazer/yellow,
+/obj/structure/trailblazer/yellow,
 /obj/effect/zone_divider,
 /turf/simulated/floor/outdoors/sidewalk/slab/turfpack/muriki,
 /area/muriki/grounds/tramborder)
@@ -14628,7 +14628,7 @@
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
 /area/muriki/grounds/tramborder)
 "aDp" = (
-/obj/machinery/trailblazer/yellow,
+/obj/structure/trailblazer/yellow,
 /obj/effect/zone_divider,
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
 /area/muriki/grounds/tramborder)
@@ -14651,7 +14651,7 @@
 /turf/simulated/floor/plating/external/turfpack/muriki,
 /area/muriki/grounds/tramborder)
 "aDs" = (
-/obj/machinery/trailblazer/red,
+/obj/structure/trailblazer/red,
 /obj/effect/zone_divider,
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
 /area/muriki/grounds/tramborder)
@@ -14672,7 +14672,7 @@
 /turf/simulated/floor/water/acidic/deep/turfpack/muriki,
 /area/muriki/grounds/civ)
 "aDw" = (
-/obj/machinery/trailblazer/blue,
+/obj/structure/trailblazer/blue,
 /obj/effect/zone_divider,
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
 /area/muriki/grounds/tramborder)
@@ -14788,7 +14788,7 @@
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
 /area/muriki/grounds/sci)
 "aDQ" = (
-/obj/machinery/trailblazer/yellow,
+/obj/structure/trailblazer/yellow,
 /obj/effect/zone_divider,
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
 /area/muriki/grounds/sci)
@@ -15119,7 +15119,7 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay)
 "aEN" = (
-/obj/machinery/trailblazer/yellow,
+/obj/structure/trailblazer/yellow,
 /turf/simulated/floor/outdoors/sidewalk/slab/turfpack/muriki,
 /area/muriki/grounds/civ)
 "aEO" = (
@@ -15328,7 +15328,7 @@
 /turf/simulated/floor/water/acidic/deep/turfpack/muriki,
 /area/mine/explored/muriki/mountaineast)
 "aFx" = (
-/obj/machinery/trailblazer/yellow,
+/obj/structure/trailblazer/yellow,
 /turf/simulated/floor/outdoors/mud/turfpack/muriki,
 /area/mine/unexplored/muriki/valleyeast)
 "aFy" = (
@@ -15560,7 +15560,7 @@
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
 /area/muriki/grounds/sec)
 "aGu" = (
-/obj/machinery/trailblazer/yellow,
+/obj/structure/trailblazer/yellow,
 /turf/simulated/floor/outdoors/mud/turfpack/muriki,
 /area/muriki/grounds/waste)
 "aGv" = (
@@ -15816,7 +15816,7 @@
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
 /area/muriki/grounds/shutt)
 "aHs" = (
-/obj/machinery/trailblazer/yellow,
+/obj/structure/trailblazer/yellow,
 /turf/simulated/floor/outdoors/mud/turfpack/muriki,
 /area/muriki/grounds/shutt)
 "aHt" = (
@@ -15981,7 +15981,7 @@
 /turf/simulated/floor/water/acidic/turfpack/muriki,
 /area/muriki/grounds/civ)
 "aIa" = (
-/obj/machinery/trailblazer/yellow,
+/obj/structure/trailblazer/yellow,
 /turf/simulated/floor/outdoors/mud/turfpack/muriki,
 /area/muriki/grounds/tramborder)
 "aIb" = (
@@ -16100,7 +16100,7 @@
 /turf/simulated/floor/water/acidic/turfpack/muriki,
 /area/muriki/grounds/waste)
 "aIz" = (
-/obj/machinery/trailblazer/red,
+/obj/structure/trailblazer/red,
 /turf/simulated/floor/outdoors/mud/turfpack/muriki,
 /area/muriki/grounds/tramborder)
 "aIA" = (
@@ -16108,7 +16108,7 @@
 /turf/simulated/floor/outdoors/mud/turfpack/muriki,
 /area/muriki/grounds/tramborder)
 "aIB" = (
-/obj/machinery/trailblazer/yellow,
+/obj/structure/trailblazer/yellow,
 /turf/simulated/floor/outdoors/mud/turfpack/muriki,
 /area/muriki/grounds/civ)
 "aIC" = (
@@ -16295,7 +16295,7 @@
 /turf/simulated/floor/outdoors/mud/turfpack/muriki,
 /area/muriki/grounds/civ)
 "aJn" = (
-/obj/machinery/trailblazer/yellow,
+/obj/structure/trailblazer/yellow,
 /turf/simulated/floor/outdoors/sidewalk/slab/turfpack/muriki,
 /area/muriki/grounds/sci)
 "aJo" = (
@@ -16373,7 +16373,7 @@
 /turf/simulated/open/muriki,
 /area/mine/explored/muriki/river/hole)
 "aJD" = (
-/obj/machinery/trailblazer/yellow,
+/obj/structure/trailblazer/yellow,
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
 /area/muriki/grounds/engi)
 "aJE" = (
@@ -16403,7 +16403,7 @@
 /turf/simulated/floor/outdoors/rocks/turfpack/muriki,
 /area/mine/explored/muriki/river/hole)
 "aJJ" = (
-/obj/machinery/trailblazer/yellow,
+/obj/structure/trailblazer/yellow,
 /turf/simulated/floor/water/acidic/turfpack/muriki,
 /area/muriki/grounds/civ)
 "aJK" = (
@@ -16574,7 +16574,7 @@
 /turf/simulated/floor/water/acidic/turfpack/muriki,
 /area/muriki/grounds/med)
 "aKr" = (
-/obj/machinery/trailblazer/yellow,
+/obj/structure/trailblazer/yellow,
 /turf/simulated/floor/outdoors/mud/turfpack/muriki,
 /area/muriki/grounds/sci)
 "aKs" = (
@@ -16695,7 +16695,7 @@
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
 /area/muriki/grounds/med)
 "aKK" = (
-/obj/machinery/trailblazer/blue,
+/obj/structure/trailblazer/blue,
 /turf/simulated/floor/outdoors/sidewalk/slab/turfpack/muriki,
 /area/muriki/grounds/med)
 "aKL" = (
@@ -16883,7 +16883,7 @@
 /turf/simulated/floor/water/acidic/turfpack/muriki,
 /area/muriki/grounds/engi)
 "aLB" = (
-/obj/machinery/trailblazer/blue,
+/obj/structure/trailblazer/blue,
 /turf/simulated/floor/water/acidic/turfpack/muriki,
 /area/mine/explored/muriki/mountainnorth)
 "aLC" = (
@@ -16901,7 +16901,7 @@
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
 /area/mine/explored/muriki/mountainnorth)
 "aLF" = (
-/obj/machinery/trailblazer/yellow,
+/obj/structure/trailblazer/yellow,
 /turf/simulated/floor/water/acidic/turfpack/muriki,
 /area/muriki/grounds/engi)
 "aLG" = (
@@ -20599,7 +20599,7 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/reception)
 "bzZ" = (
-/obj/machinery/trailblazer/yellow,
+/obj/structure/trailblazer/yellow,
 /turf/simulated/floor/water/acidic/turfpack/muriki,
 /area/muriki/grounds/shutt)
 "bAc" = (
@@ -23381,7 +23381,7 @@
 /turf/simulated/floor/tiled/milspec,
 /area/quartermaster/warehouse)
 "ctg" = (
-/obj/machinery/trailblazer/yellow,
+/obj/structure/trailblazer/yellow,
 /obj/structure/railing{
 	dir = 1
 	},
@@ -25532,7 +25532,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/security/kennels)
 "deS" = (
-/obj/machinery/trailblazer/yellow,
+/obj/structure/trailblazer/yellow,
 /obj/structure/railing,
 /obj/structure/railing{
 	dir = 4
@@ -27363,7 +27363,7 @@
 /turf/simulated/floor/water/acidic/deep/turfpack/muriki,
 /area/muriki/grounds/civ)
 "dKp" = (
-/obj/machinery/trailblazer/red,
+/obj/structure/trailblazer/red,
 /turf/simulated/floor/plating/external/turfpack/muriki,
 /area/muriki/grounds/sec)
 "dKB" = (
@@ -28448,7 +28448,7 @@
 /turf/simulated/floor/tiled/milspec,
 /area/engineering/storage)
 "edo" = (
-/obj/machinery/trailblazer/red,
+/obj/structure/trailblazer/red,
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
 /area/security/tactical)
 "edp" = (
@@ -31397,7 +31397,7 @@
 /turf/simulated/floor/tiled,
 /area/security/detectives_office)
 "fcW" = (
-/obj/machinery/trailblazer/yellow,
+/obj/structure/trailblazer/yellow,
 /turf/simulated/floor/water/acidic/deep/turfpack/muriki,
 /area/muriki/grounds/engi)
 "fdj" = (
@@ -33519,7 +33519,7 @@
 /turf/simulated/floor/tiled,
 /area/quartermaster/storage)
 "fNT" = (
-/obj/machinery/trailblazer/blue,
+/obj/structure/trailblazer/blue,
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
 /area/muriki/grounds/graveyard)
 "fNU" = (
@@ -36311,7 +36311,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/auxstore)
 "gNn" = (
-/obj/machinery/trailblazer/yellow,
+/obj/structure/trailblazer/yellow,
 /turf/simulated/floor/outdoors/mud/turfpack/muriki,
 /area/engineering/engine_room)
 "gNo" = (
@@ -37486,7 +37486,7 @@
 /turf/simulated/wall/r_wall,
 /area/muriki/bathroom/cargopub)
 "hgC" = (
-/obj/machinery/trailblazer/yellow,
+/obj/structure/trailblazer/yellow,
 /obj/structure/railing{
 	dir = 1
 	},
@@ -40511,7 +40511,7 @@
 /turf/simulated/floor/tiled,
 /area/hallway/security/main)
 "hZu" = (
-/obj/machinery/trailblazer/yellow,
+/obj/structure/trailblazer/yellow,
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
 /area/muriki/grounds/tramborder)
 "hZC" = (
@@ -40640,7 +40640,7 @@
 /turf/simulated/floor/tiled/steel,
 /area/hallway/primary/central_three)
 "iat" = (
-/obj/machinery/trailblazer/yellow,
+/obj/structure/trailblazer/yellow,
 /obj/structure/railing{
 	dir = 4
 	},
@@ -42118,7 +42118,7 @@
 /turf/simulated/floor/tiled,
 /area/quartermaster/mining/prep)
 "ixl" = (
-/obj/machinery/trailblazer/yellow,
+/obj/structure/trailblazer/yellow,
 /obj/structure/cliff_end{
 	dir = 8
 	},
@@ -43810,7 +43810,7 @@
 /turf/simulated/floor/tiled/steel,
 /area/hallway/primary/central_three)
 "iZp" = (
-/obj/machinery/trailblazer/yellow,
+/obj/structure/trailblazer/yellow,
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
 /area/muriki/grounds/sec)
 "iZq" = (
@@ -53765,7 +53765,7 @@
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/research/testingrange)
 "lZV" = (
-/obj/machinery/trailblazer/yellow,
+/obj/structure/trailblazer/yellow,
 /turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
 	},
@@ -59229,7 +59229,7 @@
 /turf/simulated/floor/tiled,
 /area/quartermaster/storage)
 "nKv" = (
-/obj/machinery/trailblazer/yellow,
+/obj/structure/trailblazer/yellow,
 /obj/structure/railing,
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
 /area/engineering/engine_room)
@@ -62019,7 +62019,7 @@
 /area/muriki/arriveproc)
 "oLe" = (
 /obj/structure/railing,
-/obj/machinery/trailblazer/yellow,
+/obj/structure/trailblazer/yellow,
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
 /area/mine/explored/muriki/valley)
 "oLk" = (
@@ -63192,7 +63192,7 @@
 /turf/simulated/floor/plating,
 /area/security/mechent)
 "per" = (
-/obj/machinery/trailblazer/yellow,
+/obj/structure/trailblazer/yellow,
 /turf/simulated/floor/outdoors/sidewalk/slab/turfpack/muriki,
 /area/muriki/grounds/med)
 "pev" = (
@@ -65275,7 +65275,7 @@
 /obj/structure/railing/grey{
 	dir = 8
 	},
-/obj/machinery/trailblazer/blue,
+/obj/structure/trailblazer/blue,
 /turf/simulated/floor/plating/external/turfpack/muriki,
 /area/muriki/grounds/tramborder)
 "pRL" = (
@@ -67993,7 +67993,7 @@
 /turf/simulated/wall/r_wall,
 /area/hallway/primary/central_one)
 "qIv" = (
-/obj/machinery/trailblazer/yellow,
+/obj/structure/trailblazer/yellow,
 /turf/simulated/floor/plating/external/turfpack/muriki,
 /area/muriki/grounds/engi)
 "qIC" = (
@@ -68074,7 +68074,7 @@
 /turf/simulated/floor/plating,
 /area/maintenance/substation/virology)
 "qKq" = (
-/obj/machinery/trailblazer/yellow,
+/obj/structure/trailblazer/yellow,
 /turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
 	},
@@ -69782,7 +69782,7 @@
 /turf/simulated/floor/tiled/yellow,
 /area/engineering/hardsuitstore)
 "rnn" = (
-/obj/machinery/trailblazer/yellow,
+/obj/structure/trailblazer/yellow,
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
 /area/muriki/yard)
 "rnw" = (
@@ -74372,7 +74372,7 @@
 /turf/simulated/floor/water/acidic/turfpack/muriki,
 /area/muriki/grounds/sec)
 "sNK" = (
-/obj/machinery/trailblazer/blue,
+/obj/structure/trailblazer/blue,
 /turf/simulated/floor/outdoors/mud/turfpack/muriki,
 /area/muriki/grounds/med)
 "sNN" = (
@@ -77561,7 +77561,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/security/secmail)
 "tOC" = (
-/obj/machinery/trailblazer/red,
+/obj/structure/trailblazer/red,
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
 /area/muriki/grounds/engi)
 "tOE" = (
@@ -79204,7 +79204,7 @@
 /turf/simulated/floor/plating,
 /area/quartermaster/mining/prep)
 "ulD" = (
-/obj/machinery/trailblazer/red,
+/obj/structure/trailblazer/red,
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
 /area/muriki/grounds/terraform)
 "ulQ" = (
@@ -79429,7 +79429,7 @@
 /turf/simulated/floor/plating/external/turfpack/muriki,
 /area/muriki/grounds/civ)
 "uqy" = (
-/obj/machinery/trailblazer/yellow,
+/obj/structure/trailblazer/yellow,
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
 /area/mine/explored/muriki/valley)
 "uqA" = (
@@ -81220,7 +81220,7 @@
 	c_tag = "EXT - Engineering Chem Refinery Access";
 	dir = 4
 	},
-/obj/machinery/trailblazer/yellow,
+/obj/structure/trailblazer/yellow,
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
 /area/muriki/grounds/engi)
 "uRO" = (
@@ -85864,7 +85864,7 @@
 /obj/structure/railing/grey{
 	dir = 4
 	},
-/obj/machinery/trailblazer/blue,
+/obj/structure/trailblazer/blue,
 /turf/simulated/floor/plating/external/turfpack/muriki,
 /area/muriki/grounds/tramborder)
 "wkJ" = (

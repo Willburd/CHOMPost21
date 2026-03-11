@@ -43,7 +43,7 @@
 /area/submap/outpost21/asteroid_generic)
 "p" = (
 /obj/structure/lattice,
-/obj/machinery/trailblazer/yellow,
+/obj/structure/trailblazer/yellow,
 /turf/space,
 /area/template_noop)
 "r" = (
