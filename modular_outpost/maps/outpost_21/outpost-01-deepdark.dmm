@@ -1862,7 +1862,7 @@
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "adV" = (
-/obj/machinery/trailblazer/red,
+/obj/structure/trailblazer/red,
 /turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
 	},
@@ -1877,7 +1877,7 @@
 /turf/simulated/wall/r_wall,
 /area/submap/outpost21/foundation_block/waste)
 "adZ" = (
-/obj/machinery/trailblazer/yellow,
+/obj/structure/trailblazer/yellow,
 /turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
 	},
@@ -2128,7 +2128,7 @@
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/submap/outpost21/foundation_block/carg)
 "aeO" = (
-/obj/machinery/trailblazer/blue,
+/obj/structure/trailblazer/blue,
 /turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
 	},
@@ -2216,7 +2216,7 @@
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/submap/outpost21/foundation_block/bridge)
 "afc" = (
-/obj/machinery/trailblazer/blue,
+/obj/structure/trailblazer/blue,
 /turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
 	},
@@ -2953,7 +2953,7 @@
 /turf/simulated/floor/flesh/turfpack/muriki,
 /area/muriki/processor/depths)
 "qyX" = (
-/obj/machinery/trailblazer/yellow,
+/obj/structure/trailblazer/yellow,
 /turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
 	},

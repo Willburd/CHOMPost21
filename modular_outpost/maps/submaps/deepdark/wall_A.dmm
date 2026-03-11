@@ -7,7 +7,7 @@
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "s" = (
-/obj/machinery/trailblazer/yellow,
+/obj/structure/trailblazer/yellow,
 /turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "t" = (

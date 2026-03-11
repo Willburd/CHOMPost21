@@ -5209,7 +5209,7 @@
 /turf/simulated/floor/grass,
 /area/hydroponics/publicgarden)
 "aEt" = (
-/obj/machinery/trailblazer/yellow,
+/obj/structure/trailblazer/yellow,
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
 /area/mine/unexplored/muriki/mountaintopnorth)
 "aFa" = (
@@ -6744,7 +6744,7 @@
 /turf/simulated/floor/plating,
 /area/library_conference_room)
 "bum" = (
-/obj/machinery/trailblazer/blue,
+/obj/structure/trailblazer/blue,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/structure/sign/warning/acid{
 	pixel_x = 32
@@ -10786,7 +10786,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/machinery/trailblazer/red,
+/obj/structure/trailblazer/red,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/plating,
 /area/security/hangar)
@@ -16927,7 +16927,7 @@
 /turf/simulated/floor/outpost_roof/turfpack/muriki,
 /area/muriki/rooftop/cargo)
 "gEw" = (
-/obj/machinery/trailblazer/red,
+/obj/structure/trailblazer/red,
 /turf/simulated/floor/plating/external/turfpack/muriki,
 /area/rnd/research/phoronics/bombrange)
 "gED" = (
@@ -19304,7 +19304,7 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology/xenoflora2)
 "hQF" = (
-/obj/machinery/trailblazer/yellow,
+/obj/structure/trailblazer/yellow,
 /turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
 	},
@@ -29512,7 +29512,7 @@
 /turf/simulated/floor/wood,
 /area/crew_quarters/heads/chief)
 "mZv" = (
-/obj/machinery/trailblazer/red,
+/obj/structure/trailblazer/red,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/plating,
 /area/security/hangar)
@@ -31873,7 +31873,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/chapel/chapel_morgue)
 "onY" = (
-/obj/machinery/trailblazer/red,
+/obj/structure/trailblazer/red,
 /turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
 	},
@@ -36125,7 +36125,7 @@
 /turf/simulated/floor/tiled/milspec,
 /area/quartermaster/mining/secpi)
 "qwx" = (
-/obj/machinery/trailblazer/yellow,
+/obj/structure/trailblazer/yellow,
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
 /area/djstation)
 "qwL" = (
@@ -45212,7 +45212,7 @@
 /turf/simulated/floor/tiled,
 /area/hallway/muriki/civup)
 "uQb" = (
-/obj/machinery/trailblazer/blue,
+/obj/structure/trailblazer/blue,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/plating,
 /area/medical/hangar)
@@ -45825,7 +45825,7 @@
 /area/security/brig/lowobservation)
 "vjY" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/machinery/trailblazer/blue,
+/obj/structure/trailblazer/blue,
 /obj/structure/cable/orange{
 	icon_state = "1-2"
 	},

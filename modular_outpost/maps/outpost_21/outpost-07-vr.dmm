@@ -72357,7 +72357,7 @@
 /turf/simulated/floor/plating,
 /area/vr/bloodstar)
 "wab" = (
-/obj/machinery/trailblazer/red,
+/obj/structure/trailblazer/red,
 /turf/simulated/floor/tiled/material/phoron,
 /area/vr/bloodstar)
 "waw" = (
