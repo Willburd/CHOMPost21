@@ -8,7 +8,7 @@
 // stabby stabby
 /obj/item/material/sword/gladius
 	armor_penetration = 10
-	force_divisor = 0.84
+	force_divisor = 0.42
 	attackspeed = DEFAULT_QUICK_COOLDOWN
 
 // Parry this casual
@@ -28,7 +28,7 @@
 
 // engarde
 /obj/item/material/sword/rapier
-	reach = TRUE
+	reach = 2
 	force_divisor = 0.34
 	attackspeed = DEFAULT_QUICK_COOLDOWN
 
@@ -83,6 +83,10 @@
 	if(!check_shield_arc(user, bad_arc, damage_source, attacker))
 		return 0
 	return 1
+
+// Heavy bonker
+/obj/item/material/twohanded/sledgehammer
+	force_divisor = 1.5
 
 // disarms and non lethal
 /obj/item/material/twohanded/staff
