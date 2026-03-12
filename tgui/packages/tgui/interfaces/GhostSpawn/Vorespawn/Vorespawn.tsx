@@ -26,7 +26,7 @@ export const Vorespawn = (props: {
 
   const allowBellySpawn = all_vore_spawns[selectedPlayer]?.vorespawn;
 
-  const searcher = createSearch(searchText, (element: DropdownEntry) => {
+  const searcher = createSearch<DropdownEntry>(searchText, (element) => {
     return element.displayText;
   });
 
