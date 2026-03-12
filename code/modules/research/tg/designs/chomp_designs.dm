@@ -58,6 +58,7 @@
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
 
+/* Outpost 21 edit - Removed overpowered mech shields
 /datum/design_techweb/mechfab/combat_shield
 	name = "linear combat shield"
 	id = "mech_shield_droid"
@@ -78,6 +79,7 @@
 		RND_CATEGORY_EQUIPMENT
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE | DEPARTMENT_BITFLAG_SECURITY
+*/
 
 // New Stuff
 
