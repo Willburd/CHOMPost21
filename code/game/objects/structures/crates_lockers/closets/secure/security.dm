@@ -31,7 +31,7 @@
 		/obj/item/radio/headset/alt/heads/hop,
 		/obj/item/radio/headset/earbud/heads/hop,
 		/obj/item/storage/box/ids = 2,
-		/obj/item/gun/energy/gun/compact,
+		// /obj/item/gun/energy/gun/compact, // Outpost 21 edit - Not authorized
 		/obj/item/storage/box/commandkeys,
 		/obj/item/storage/box/servicekeys,
 		/obj/item/flash,

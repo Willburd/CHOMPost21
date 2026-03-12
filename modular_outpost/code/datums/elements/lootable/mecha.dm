@@ -1,4 +1,3 @@
-
 // Honker loot
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /datum/element/lootable/mecha/honker
@@ -24,4 +23,22 @@
 		/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/lmg,
 		/obj/item/mecha_parts/mecha_equipment/repair_droid,
 		/obj/item/mecha_parts/mecha_equipment/weapon/energy/laser/heavy
+		)
+
+// Powerful rare loot, as these were removed from research
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/datum/element/lootable/mecha/gygax/New()
+	. = ..()
+
+	rare_loot |= list(
+		/obj/item/mecha_parts/mecha_equipment/combat_shield,
+		/obj/item/mecha_parts/mecha_equipment/omni_shield
+		)
+
+/datum/element/lootable/mecha/phazon/New()
+	. = ..()
+
+	rare_loot |= list(
+		/obj/item/mecha_parts/mecha_equipment/combat_shield,
+		/obj/item/mecha_parts/mecha_equipment/omni_shield
 		)
