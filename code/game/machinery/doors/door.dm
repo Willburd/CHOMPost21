@@ -80,7 +80,10 @@
 	update_icon()
 
 	update_nearby_tiles(need_rebuild=1)
+
+	#ifndef OUTPOST_FRIENDSHIP_MODE
 	AddElement(/datum/element/headbonk/door) // Outpost 21 edit - Bonk!
+	#endif
 
 /obj/machinery/door/Destroy()
 	density = FALSE
@@ -132,8 +135,8 @@
 		M.last_bumped = world.time
 		if(M.restrained() && !check_access(null))
 			return
-		else if(istype(M, /mob/living/simple_mob/animal/passive/mouse) && !(M.ckey))	//VOREStation Edit: Make wild mice
-			return																		//VOREStation Edit: unable to open doors
+		else if(HAS_TRAIT(M, TRAIT_AMBIENT_PEST_MOB) && !(M.ckey))
+			return
 		else
 			bumpopen(M)
 		return

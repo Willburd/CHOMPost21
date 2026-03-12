@@ -30713,7 +30713,7 @@
 /turf/simulated/floor/plating/turfpack/airless,
 /area/vr/lighting)
 "bjr" = (
-/obj/machinery/trailblazer/red,
+/obj/structure/trailblazer/red,
 /turf/simulated/floor/tiled/material/phoron,
 /area/vr/lighting)
 "bjs" = (

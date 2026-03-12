@@ -78,7 +78,10 @@ var/list/table_icon_cache = list()
 	update_material()
 
 	AddElement(/datum/element/climbable/table)
+
+	#ifndef OUTPOST_FRIENDSHIP_MODE
 	AddElement(/datum/element/headbonk/table) // Outpost 21 edit - Bonk!
+	#endif
 
 /obj/structure/table/Destroy()
 	material = null
