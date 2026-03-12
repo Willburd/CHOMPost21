@@ -42,7 +42,6 @@
 /datum/decl/hierarchy/outfit/job/science/roboticist
 	name = OUTFIT_JOB_NAME(JOB_ROBOTICIST)
 	uniform = /obj/item/clothing/under/rank/roboticist
-	l_ear = /obj/item/radio/headset/headset_sci
 	shoes = /obj/item/clothing/shoes/black
 	belt = /obj/item/storage/belt/utility/full/multitool
 	id_type = /obj/item/card/id/science
@@ -52,6 +51,7 @@
 	satchel_one = /obj/item/storage/backpack/satchel/norm
 	suit = /obj/item/clothing/suit/storage/toggle/labcoat/roboticist
 
-	headset = /obj/item/radio/headset/headset_sci
-	headset_alt = /obj/item/radio/headset/alt/headset_sci
-	headset_earbud = /obj/item/radio/headset/earbud/headset_sci
+/datum/decl/hierarchy/outfit/job/science/scientist/anomalist
+	name = OUTFIT_JOB_NAME(JOB_ALT_ANOMALIST)
+	l_pocket = /obj/item/anomaly_scanner
+	r_pocket = /obj/item/anomaly_releaser/science
