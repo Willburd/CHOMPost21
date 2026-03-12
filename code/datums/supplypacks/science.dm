@@ -141,3 +141,10 @@
 	containername = "VARMAcorp adaptive beta subject (Experimental)"
 	access = ACCESS_XENOBIOLOGY
 //CHOMEdit End
+
+/datum/supply_pack/sci/anomaly_harvesting
+	name = "Anomaly Harvesting crate"
+	desc = "Contains the tools to start anomaly harvesting. Requires Research access."
+	cost = 300
+	containertype = /obj/structure/largecrate/anomaly
+	access = ACCESS_RESEARCH
