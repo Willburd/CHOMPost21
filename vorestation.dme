@@ -5711,6 +5711,7 @@
 #include "modular_outpost\code\game\machinery\doors\airlock.dm"
 #include "modular_outpost\code\game\machinery\doors\airlock_subtypes.dm"
 #include "modular_outpost\code\game\machinery\doors\door.dm"
+#include "modular_outpost\code\game\mecha\emp_rebalance.dm"
 #include "modular_outpost\code\game\mecha\equipment.dm"
 #include "modular_outpost\code\game\mecha\submarine.dm"
 #include "modular_outpost\code\game\objects\effects\dark_growth.dm"
