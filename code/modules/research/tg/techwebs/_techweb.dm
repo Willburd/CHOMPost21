@@ -55,7 +55,7 @@
 	///Boolean on whether the techweb should generate research points overtime.
 	var/should_generate_points = FALSE
 	///A multiplier applied to all research gain, cut in half if the Master server was sabotaged.
-	var/income_modifier = 1
+	var/income_modifier = 0.4 // Outpost 21 edit - Much slower point gen, DO EXPERIMENTS!
 	///The amount of research points generated the techweb generated the latest time it generated.
 	var/last_income
 
