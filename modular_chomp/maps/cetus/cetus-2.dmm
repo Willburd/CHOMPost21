@@ -2092,6 +2092,9 @@
 	},
 /obj/item/toy/plushie/lizardplushie/kobold,
 /obj/machinery/recharger,
+/obj/structure/cable/green{
+	icon_state = "6-9"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/workshop)
 "axk" = (
@@ -28924,6 +28927,22 @@
 /obj/effect/floor_decal/corner/white/bordercorner{
 	dir = 1
 	},
+/obj/structure/closet/secure_closet/guncabinet{
+	req_one_access = null
+	},
+/obj/item/gun/energy/locked/phasegun,
+/obj/item/gun/energy/locked/phasegun/pistol,
+/obj/item/gun/energy/locked/phasegun/pistol,
+/obj/item/clothing/accessory/permit/gun/planetside,
+/obj/item/clothing/accessory/permit/gun/planetside,
+/obj/item/clothing/accessory/permit/gun/planetside,
+/obj/item/clothing/accessory/permit/gun/planetside,
+/obj/item/clothing/accessory/permit/gun/planetside,
+/obj/item/cell/device/weapon,
+/obj/item/cell/device/weapon,
+/obj/item/cell/device/weapon,
+/obj/item/storage/box/cdeathalarm_kit,
+/obj/item/storage/box/cdeathalarm_kit,
 /turf/simulated/floor/tiled,
 /area/teleporter/arrivals)
 "jGB" = (
