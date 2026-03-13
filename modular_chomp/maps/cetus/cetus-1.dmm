@@ -1063,6 +1063,7 @@
 	id = "anomemit";
 	name = "Emitter Hatch"
 	},
+/obj/effect/wingrille_spawn/reinforced_phoron,
 /turf/simulated/floor/reinforced,
 /area/rnd/cetus/meteor/anomtest)
 "abZ" = (
@@ -10751,9 +10752,6 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/cetus/meteor/anomtest)
 "fhG" = (
-/obj/machinery/power/emitter{
-	dir = 4
-	},
 /obj/effect/floor_decal/industrial/warning/color/full,
 /obj/effect/floor_decal/industrial/warning/full,
 /obj/effect/floor_decal/industrial/warning/color/full/red,
@@ -10764,6 +10762,13 @@
 	icon_state = "0-8"
 	},
 /obj/effect/floor_decal/spline/plain/three_quarters,
+/obj/machinery/power/emitter{
+	anchored = 1;
+	dir = 4;
+	icon_state = "emitter2";
+	id = "EngineEmitter";
+	state = 2
+	},
 /turf/simulated/floor/plating,
 /area/rnd/cetus/meteor/anomtest)
 "fhR" = (
@@ -18139,13 +18144,13 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
-/obj/item/rig/combat,
 /obj/machinery/door/window/brigdoor/westleft{
 	name = "Hardsuit"
 	},
 /obj/structure/window/reinforced{
 	dir = 4
 	},
+/obj/item/rig/hazard/equipped,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/security/cetus/meteor/armory)
 "jdq" = (
@@ -46750,6 +46755,7 @@
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/door/firedoor/glass/hidden,
 /turf/simulated/floor/tiled/white,
 /area/rnd/cetus/meteor/anomtest)
 "xrv" = (
@@ -47388,8 +47394,9 @@
 	name = "Emitter Hatch";
 	pixel_x = 26;
 	pixel_y = 6;
-	req_access = list(16);
-	dir = 8
+	req_access = list(65);
+	dir = 8;
+	req_one_access = list(47)
 	},
 /obj/machinery/button/remote/blast_door{
 	desc = "A remote control-switch for the AI core maintenance door.";
@@ -47397,8 +47404,9 @@
 	name = "Anomaly Blast Doors";
 	pixel_x = 26;
 	pixel_y = -5;
-	req_access = list(16);
-	dir = 8
+	req_access = list(65);
+	dir = 8;
+	req_one_access = list(47)
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/cetus/meteor/anomtest)

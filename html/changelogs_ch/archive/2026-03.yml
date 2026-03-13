@@ -203,3 +203,35 @@
   - refactor: package wrapper and gift wrap cleaned up
   zeskorion:
   - bugfix: cleans up P.I.S.S.
+2026-03-13:
+  Aroliacue:
+  - balance: Xenomorph Hybrids are now immune to space.
+  - balance: Xenomorph Hybrids now take more damage from burns.
+  - balance: Xenomorph Hybrids are now significantly harder to heal with chemicals.
+  - balance: Xenomorph Hybrids dissipate rads faster and have innate toxin resistance.
+  - balance: Xenomorph Hybrids are now highly resistant to pain.
+  - balance: Xenomorph Hybrid subtypes have been rebalanced.
+  - balance: Xenomorph Hybrids no longer have innate shredding.
+  - bugfix: Corrected Xenomorph Hybrid Praetorian subtype providing additional movespeed
+      instead of slowdown.
+  - bugfix: Corrected excessive melee damage being applied to the 'strong' melee subtypes.
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: Added additional starting security items to the SecTech vending machine.
+  - qol: Moved excessive clothing options from security lockers to clothing vending
+      machines.
+  - balance: Reduced weight class on legcuffs from normal to small. They now take
+      up the same space as regular handcuffs.
+  - bugfix: disposal outlets ejection when not maploaded
+  Guti:
+  - rscadd: Added "Anomaly Harvesting" crate to Cargo
+  - rscadd: Added "Anomaly harvesting kit"
+  - rscadd: Added "Latent anomaly core"
+  - code_imp: Added random core obj
+  - balance: Doubled the points from samples
+  - balance: Doubled the passive point generation of R&D's server (0.4)
+  - bugfix: Unsimulated turfs can no longer be converted by the dimensional anomaly
+  Wide Eyes:
+  - rscadd: adds anomaly research to cetus
+  - bugfix: few cetus fixes
+  zeskorion:
+  - bugfix: few more cs fixes, for anomaly science and more
