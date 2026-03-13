@@ -87756,10 +87756,8 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/muriki/crew/baraid)
 "wRr" = (
-/obj/structure/closet/crate/freezer,
-/obj/effect/floor_decal/corner/lime{
-	dir = 10
-	},
+/obj/machinery/smartfridge/produce/plantvator/down,
+/obj/effect/floor_decal/corner/lime/diagonal,
 /turf/simulated/floor/tiled/freezer/cold,
 /area/muriki/crew/kitchenfreezer)
 "wRM" = (

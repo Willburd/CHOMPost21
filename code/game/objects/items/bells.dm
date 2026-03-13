@@ -37,7 +37,7 @@
 
 /obj/item/deskbell/attack_hand(mob/user)
 	// Outpost 21 edit begin - Remove radial menu
-	if(!isturf(loc) || anchored)
+	if(src == user.get_active_hand() || anchored)
 		if(!broken && check_ability(user))
 			ring(user)
 			add_fingerprint(user)

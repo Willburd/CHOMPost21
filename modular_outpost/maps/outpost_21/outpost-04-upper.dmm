@@ -3478,6 +3478,11 @@
 	},
 /turf/simulated/floor/tiled/hydro,
 /area/hydroponics/hallway)
+"aig" = (
+/obj/machinery/smartfridge/produce/plantvator,
+/obj/effect/floor_decal/corner/lime/diagonal,
+/turf/simulated/floor/tiled/hydro,
+/area/hydroponics/gibber)
 "aih" = (
 /obj/machinery/mineral/input,
 /obj/effect/decal/cleanable/blood,
@@ -12369,10 +12374,10 @@
 /turf/simulated/floor/plating,
 /area/rnd/hallway/upper)
 "egv" = (
-/obj/machinery/vending/hydronutrients,
 /obj/effect/floor_decal/corner/green{
 	dir = 5
 	},
+/obj/machinery/vending/hydronutrients,
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/xenobiology/xenoflora)
 "egx" = (
@@ -15112,11 +15117,6 @@
 "fEr" = (
 /obj/effect/floor_decal/corner/lime{
 	dir = 6
-	},
-/obj/machinery/doorbell_chime{
-	id_tag = "kitchending";
-	name = "Kitchen Bell";
-	pixel_x = 32
 	},
 /obj/machinery/light{
 	dir = 4
@@ -19511,10 +19511,10 @@
 /turf/simulated/floor,
 /area/crew_quarters/heads/chief)
 "hVe" = (
-/obj/machinery/biogenerator,
 /obj/effect/floor_decal/corner/green{
 	dir = 5
 	},
+/obj/machinery/chemical_analyzer,
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/xenobiology/xenoflora)
 "hVQ" = (
@@ -19875,10 +19875,10 @@
 /turf/simulated/floor/wood,
 /area/library)
 "ieW" = (
-/obj/machinery/seed_storage/xenobotany,
 /obj/effect/floor_decal/corner/green{
 	dir = 5
 	},
+/obj/machinery/seed_storage/xenobotany,
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/xenobiology/xenoflora)
 "ieX" = (
@@ -20989,10 +20989,10 @@
 /turf/simulated/open,
 /area/muriki/tramstation/civ)
 "iKu" = (
-/obj/machinery/seed_extractor,
 /obj/effect/floor_decal/corner/green{
 	dir = 5
 	},
+/obj/machinery/botany/precisioneditor,
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/xenobiology/xenoflora)
 "iKE" = (
@@ -23695,12 +23695,12 @@
 /turf/simulated/floor/plating,
 /area/medical/patient_c)
 "jZF" = (
-/obj/machinery/disposal,
-/obj/structure/disposalpipe/trunk{
-	dir = 4
-	},
 /obj/effect/floor_decal/corner/green/full{
 	dir = 8
+	},
+/obj/machinery/firealarm{
+	pixel_y = 26;
+	pixel_x = -6
 	},
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/xenobiology/xenoflora2)
@@ -24182,10 +24182,10 @@
 /turf/simulated/floor/plating,
 /area/engineering/gravgen)
 "knG" = (
-/obj/machinery/smartfridge/drying_rack,
 /obj/effect/floor_decal/corner/green{
 	dir = 5
 	},
+/obj/machinery/smartfridge/drying_rack,
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/xenobiology/xenoflora)
 "knK" = (
@@ -24287,7 +24287,6 @@
 /turf/simulated/open,
 /area/muriki/tramstation/waste)
 "kqd" = (
-/obj/machinery/vending/hydronutrients,
 /obj/machinery/firealarm{
 	pixel_y = 26;
 	pixel_x = -6
@@ -24295,6 +24294,7 @@
 /obj/effect/floor_decal/corner/green{
 	dir = 5
 	},
+/obj/machinery/biogenerator,
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/xenobiology/xenoflora)
 "kql" = (
@@ -24308,6 +24308,11 @@
 	dir = 5
 	},
 /obj/machinery/vending/hydronutrients,
+/obj/machinery/doorbell_chime{
+	id_tag = "kitchending";
+	name = "Kitchen Bell";
+	pixel_y = 32
+	},
 /turf/simulated/floor/tiled/hydro,
 /area/hydroponics)
 "kqJ" = (
@@ -28198,11 +28203,12 @@
 /turf/simulated/floor/outpost_roof/turfpack/muriki,
 /area/muriki/rooftop/engineering)
 "mrF" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
 /obj/effect/floor_decal/corner/green{
 	dir = 1
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/xenobiology/xenoflora2)
@@ -32228,6 +32234,13 @@
 /obj/item/reagent_containers/spray/plantbgone,
 /obj/item/reagent_containers/spray/plantbgone,
 /obj/item/reagent_containers/spray/plantbgone,
+/obj/machinery/disposal/wall{
+	dir = 4;
+	pixel_x = -35
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 2
+	},
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/xenobiology/xenoflora2)
 "oxh" = (
@@ -38531,7 +38544,6 @@
 /turf/simulated/floor/tiled/monotile,
 /area/hallway/secondary/secmedbridge)
 "rGN" = (
-/obj/machinery/botany/precisioneditor,
 /obj/item/radio/intercom{
 	dir = 1;
 	name = "Station Intercom (General)";
@@ -38540,6 +38552,7 @@
 /obj/effect/floor_decal/corner/green{
 	dir = 5
 	},
+/obj/machinery/botany/editor,
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/xenobiology/xenoflora)
 "rGW" = (
@@ -39112,6 +39125,7 @@
 	dir = 9
 	},
 /obj/item/geiger/wall/west,
+/obj/machinery/botany/editor,
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/xenobiology/xenoflora2)
 "rXi" = (
@@ -45293,7 +45307,7 @@
 /obj/effect/floor_decal/corner/green{
 	dir = 5
 	},
-/obj/machinery/chemical_analyzer,
+/obj/machinery/seed_extractor,
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/xenobiology/xenoflora)
 "uTD" = (
@@ -46064,9 +46078,7 @@
 /obj/effect/floor_decal/corner/green{
 	dir = 10
 	},
-/obj/structure/closet/secure_closet{
-	req_one_access = list(7,47)
-	},
+/obj/structure/closet/secure_closet/hydroponics,
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/xenobiology/xenoflora)
 "voo" = (
@@ -46100,10 +46112,7 @@
 /obj/effect/floor_decal/corner/green{
 	dir = 9
 	},
-/obj/machinery/firealarm{
-	dir = 8;
-	pixel_x = -26
-	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/xenobiology/xenoflora2)
 "vpS" = (
@@ -106163,7 +106172,7 @@ lfs
 aRE
 tFY
 tHA
-aRE
+aig
 sYb
 sYb
 kDU

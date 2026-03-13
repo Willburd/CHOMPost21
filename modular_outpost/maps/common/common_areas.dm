@@ -2314,6 +2314,12 @@
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 	flags = AREA_FIRE_SUPRESSION
 
+/area/rnd/anomlab
+	name = "\improper Anomaly Lab"
+	icon_state = "research_foyer_aux"
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
+	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
+
 /area/rnd/research/atmosia
 	name = "\improper Sphenoidal Atmospherics"
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
