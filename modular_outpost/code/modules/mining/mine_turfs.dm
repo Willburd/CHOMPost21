@@ -46,7 +46,7 @@
 
 /obj/item/strangerock/attack_hand(mob/living/user)
 	if(HAS_TRAIT(user, TRAIT_NATURALTUNNELER))
-		if(do_after(user, 2 SECONDS, target = src))
+		if(do_after(user, 6 SECONDS, target = src))
 			var/obj/item/inside = locate() in src
 			if(inside)
 				inside.loc = get_turf(src)
@@ -59,7 +59,7 @@
 
 /obj/structure/boulder/attack_hand(mob/living/user)
 	if(HAS_TRAIT(user, TRAIT_NATURALTUNNELER))
-		if(do_after(user, 2 SECONDS, target = src))
+		if(do_after(user, 6 SECONDS, target = src))
 			//success
 			if(artifact_find)
 				var/spawn_type = artifact_find.artifact_find_type
@@ -72,6 +72,17 @@
 				src.visible_message(span_warning("\The [src] suddenly crumbles away."))
 			else
 				user.visible_message(span_warning("\The [src] suddenly crumbles away."), span_notice("\The [src] has been whittled away under your careful digging, but there was nothing of interest inside."))
+			qdel(src)
+		return
+	. = ..()
+
+/obj/structure/outcrop/attack_hand(mob/user)
+	if(HAS_TRAIT(user, TRAIT_NATURALTUNNELER))
+		to_chat(user, span_notice("[user] begins to hack away at \the [src]."))
+		if(do_after(user, 10 SECONDS, target = src))
+			to_chat(user, span_notice("You have finished digging!"))
+			for(var/i=0;i<(rand(mindrop,upperdrop));i++)
+				new outcropdrop(get_turf(src))
 			qdel(src)
 		return
 	. = ..()
