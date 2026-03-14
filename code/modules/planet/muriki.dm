@@ -165,7 +165,7 @@ var/datum/planet/muriki/planet_muriki = null
 		WEATHER_LIGHT_SNOW	= new /datum/weather/muriki/light_snow(),
 		WEATHER_SNOW		= new /datum/weather/muriki/snow(),
 		WEATHER_BLIZZARD	= new /datum/weather/muriki/blizzard(),
-		WEATHER_OVERCAST	= new /datum/weather/muriki/acid_overcast(),
+		WEATHER_OVERCAST	= new /datum/weather/muriki/clear(),
 		WEATHER_FOG			= new /datum/weather/muriki/acid_overcast(),
 		WEATHER_RAIN        = new /datum/weather/muriki/acid_rain(),
 		WEATHER_STORM		= new /datum/weather/muriki/acid_storm(),
@@ -186,7 +186,8 @@ var/datum/planet/muriki/planet_muriki = null
 			roundstart_weather_chances = list(
 				WEATHER_CLEAR = 0,
 				WEATHER_LIGHT_SNOW = 25,
-				WEATHER_OVERCAST = 5,
+				WEATHER_OVERCAST = 3,
+				WEATHER_FOG = 2,
 				WEATHER_RAIN = 40,
 				WEATHER_STORM = 20,
 				WEATHER_HAIL = 15
@@ -195,7 +196,8 @@ var/datum/planet/muriki/planet_muriki = null
 			roundstart_weather_chances = list(
 				WEATHER_CLEAR = 0,
 				WEATHER_LIGHT_SNOW = 0,
-				WEATHER_OVERCAST = 10,
+				WEATHER_OVERCAST = 5,
+				WEATHER_FOG = 5,
 				WEATHER_RAIN = 40,
 				WEATHER_STORM = 50,
 				WEATHER_HAIL = 5
@@ -205,6 +207,7 @@ var/datum/planet/muriki/planet_muriki = null
 				WEATHER_CLEAR = 0,
 				WEATHER_LIGHT_SNOW = 10,
 				WEATHER_OVERCAST = 0,
+				WEATHER_FOG = 0,
 				WEATHER_RAIN = 40,
 				WEATHER_STORM = 40,
 				WEATHER_HAIL = 15
@@ -214,6 +217,7 @@ var/datum/planet/muriki/planet_muriki = null
 				WEATHER_CLEAR = 0,
 				WEATHER_LIGHT_SNOW = 50,
 				WEATHER_OVERCAST = 0,
+				WEATHER_FOG = 0,
 				WEATHER_RAIN = 20,
 				WEATHER_STORM = 10,
 				WEATHER_HAIL = 24,
@@ -260,7 +264,8 @@ var/datum/planet/muriki/planet_muriki = null
 				WEATHER_CLEAR = 15,
 				WEATHER_RAIN = 65,
 				WEATHER_HAIL = 5,
-				WEATHER_OVERCAST = 15
+				WEATHER_OVERCAST = 10,
+				WEATHER_FOG = 5
 				)
 		if("autumn")
 			transition_chances = list(
@@ -303,11 +308,14 @@ var/datum/planet/muriki/planet_muriki = null
 	indoor_sounds_type = /datum/looping_sound/weather/wind/gentle/indoors
 	color_grading = COLORTINT_WARM
 
+	hazardous_weather = TRUE
+
 /datum/weather/muriki/acid_overcast/New()
 	switch(GLOB.world_time_season)
 		if("spring")
 			transition_chances = list(
-				WEATHER_OVERCAST = 15,
+				WEATHER_OVERCAST = 10,
+				WEATHER_FOG = 5,
 				WEATHER_RAIN = 60,
 				WEATHER_HAIL = 10,
 				WEATHER_LIGHT_SNOW = 10,
@@ -315,20 +323,23 @@ var/datum/planet/muriki/planet_muriki = null
 				)
 		if("summer")
 			transition_chances = list(
-				WEATHER_OVERCAST = 35,
+				WEATHER_OVERCAST = 20,
+				WEATHER_FOG = 15,
 				WEATHER_RAIN = 60,
 				WEATHER_CLEAR = 5
 				)
 		if("autumn")
 			transition_chances = list(
-				WEATHER_OVERCAST = 15,
+				WEATHER_OVERCAST = 10,
+				WEATHER_FOG = 5,
 				WEATHER_RAIN = 80,
 				WEATHER_HAIL = 4,
 				WEATHER_CLEAR = 1
 				)
 		if("winter")
 			transition_chances = list(
-				WEATHER_OVERCAST = 15,
+				WEATHER_OVERCAST = 10,
+				WEATHER_FOG = 5,
 				WEATHER_RAIN = 40,
 				WEATHER_LIGHT_SNOW = 20,
 				WEATHER_HAIL = 25
@@ -372,7 +383,8 @@ var/datum/planet/muriki/planet_muriki = null
 	switch(GLOB.world_time_season)
 		if("spring")
 			transition_chances = list(
-				WEATHER_OVERCAST = 5,
+				WEATHER_OVERCAST = 3,
+				WEATHER_FOG = 2,
 				WEATHER_RAIN = 60,
 				WEATHER_STORM = 45,
 				WEATHER_HAIL = 10,
@@ -380,7 +392,8 @@ var/datum/planet/muriki/planet_muriki = null
 			)
 		if("summer")
 			transition_chances = list(
-				WEATHER_OVERCAST = 55,
+				WEATHER_OVERCAST = 40,
+				WEATHER_FOG = 20,
 				WEATHER_RAIN = 25,
 				WEATHER_STORM = 10,
 				WEATHER_HAIL = 5,
@@ -388,7 +401,8 @@ var/datum/planet/muriki/planet_muriki = null
 			)
 		if("autumn")
 			transition_chances = list(
-				WEATHER_OVERCAST = 15,
+				WEATHER_OVERCAST = 10,
+				WEATHER_FOG = 5,
 				WEATHER_RAIN = 30,
 				WEATHER_STORM = 45,
 				WEATHER_HAIL = 5,
@@ -396,7 +410,8 @@ var/datum/planet/muriki/planet_muriki = null
 			)
 		if("winter")
 			transition_chances = list(
-				WEATHER_OVERCAST = 5,
+				WEATHER_OVERCAST = 3,
+				WEATHER_FOG = 2,
 				WEATHER_RAIN = 15,
 				WEATHER_STORM = 50,
 				WEATHER_LIGHT_SNOW = 10,
@@ -473,7 +488,8 @@ var/datum/planet/muriki/planet_muriki = null
 				WEATHER_STORM = 30,
 				WEATHER_DOWNPOURWARNING = 6, // Fun times ahead
 				WEATHER_HAIL = 15,
-				WEATHER_OVERCAST = 4
+				WEATHER_OVERCAST = 2,
+				WEATHER_FOG = 2,
 				)
 		if("summer")
 			transition_chances = list(
@@ -487,7 +503,8 @@ var/datum/planet/muriki/planet_muriki = null
 				WEATHER_STORM = 30,
 				WEATHER_DOWNPOURWARNING = 4, // Fun times ahead
 				WEATHER_HAIL = 15,
-				WEATHER_OVERCAST = 6
+				WEATHER_OVERCAST = 4,
+				WEATHER_FOG = 2,
 				)
 		if("winter")
 			transition_chances = list(
@@ -495,7 +512,8 @@ var/datum/planet/muriki/planet_muriki = null
 				WEATHER_STORM = 10,
 				WEATHER_DOWNPOURWARNING = 3, // Fun times ahead
 				WEATHER_HAIL = 25,
-				WEATHER_OVERCAST = 7
+				WEATHER_OVERCAST = 5,
+				WEATHER_FOG = 2,
 				)
 	. = ..()
 
@@ -728,7 +746,8 @@ var/datum/planet/muriki/planet_muriki = null
 		WEATHER_RAIN = 20,
 		WEATHER_STORM = 5,
 		WEATHER_HAIL = 4,
-		WEATHER_OVERCAST = 70,
+		WEATHER_OVERCAST = 50,
+		WEATHER_FOG = 20,
 		WEATHER_CLEAR = 1
 		)
 	observed_message = "Frozen acid is falling from the sky."
@@ -928,7 +947,8 @@ var/datum/planet/muriki/planet_muriki = null
 
 	transition_chances = list(
 		WEATHER_RAIN = 50,
-		WEATHER_OVERCAST = 20,
+		WEATHER_OVERCAST = 10,
+		WEATHER_FOG = 10,
 		WEATHER_CONFETTI = 5
 		)
 	observed_message = "Confetti is raining from the sky."
