@@ -235,3 +235,7 @@
   - bugfix: few cetus fixes
   zeskorion:
   - bugfix: few more cs fixes, for anomaly science and more
+2026-03-14:
+  CHOMPStation2StaffMirrorBot:
+  - code_imp: removes invisible spawned item in xenoarch
+  - code_imp: moves some more bicon to icon2html
