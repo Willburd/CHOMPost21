@@ -3915,7 +3915,7 @@
 /area/muriki/skyline/east)
 "ajt" = (
 /obj/structure/inflatable/door,
-/turf/simulated/floor/plating/turfpack/muriki,
+/turf/simulated/floor/tiled/turfpack/muriki,
 /area/specialty/expie_clubhouse)
 "aju" = (
 /obj/effect/auto_crayon{
@@ -3934,6 +3934,20 @@
 	},
 /turf/simulated/floor/tiled/turfpack/muriki,
 /area/specialty/expie_clubhouse)
+"ajw" = (
+/obj/structure/window/reinforced/full,
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/machinery/door/firedoor/glass,
+/obj/structure/cable/yellow,
+/obj/structure/cable/yellow{
+	icon_state = "0-4"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor,
+/area/djstation)
 "ajx" = (
 /obj/effect/auto_crayon{
 	icon_state = "survival"
@@ -4122,15 +4136,6 @@
 "ajR" = (
 /turf/simulated/wall,
 /area/specialty/expie_clubhouse)
-"ajS" = (
-/obj/item/paper/scavmark/expietrade{
-	pixel_x = -10
-	},
-/obj/item/paper/scavmark/companion{
-	pixel_x = 9
-	},
-/turf/simulated/floor/tiled/turfpack/muriki,
-/area/specialty/expie_clubhouse)
 "ajT" = (
 /obj/structure/table/rack/shelf/wood,
 /obj/item/clothing/suit/space/emergency,
@@ -4288,7 +4293,7 @@
 /turf/simulated/floor/carpet/turfpack/muriki,
 /area/specialty/expie_clubhouse)
 "aku" = (
-/obj/structure/hookah,
+/obj/structure/hookah/randomized_drugs,
 /obj/item/flame/lighter/random,
 /turf/simulated/floor/carpet/turfpack/muriki,
 /area/specialty/expie_clubhouse)
@@ -4437,6 +4442,60 @@
 	outdoors = 0
 	},
 /area/specialty/expie_clubhouse)
+"akS" = (
+/obj/structure/window/reinforced/full,
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/machinery/door/firedoor/glass,
+/obj/structure/cable/yellow{
+	icon_state = "0-4"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor,
+/area/djstation)
+"akT" = (
+/obj/structure/window/reinforced/full,
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/machinery/door/firedoor/glass,
+/obj/structure/cable/yellow{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor,
+/area/djstation)
+"akU" = (
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/wood,
+/area/djstation)
+"akV" = (
+/obj/structure/window/reinforced/full,
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/machinery/door/firedoor/glass,
+/obj/structure/cable/yellow{
+	icon_state = "0-8"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "0-4"
+	},
+/turf/simulated/floor,
+/area/djstation)
+"akW" = (
+/obj/structure/window/reinforced/full,
+/obj/structure/grille,
+/obj/machinery/door/firedoor/glass,
+/obj/structure/cable/yellow{
+	icon_state = "0-8"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "0-2"
+	},
+/turf/simulated/floor,
+/area/djstation)
 "akX" = (
 /obj/structure/table/woodentable,
 /obj/item/material/knife/machete/hatchet,
@@ -4449,6 +4508,105 @@
 	},
 /turf/simulated/floor/tiled/hydro,
 /area/djstation)
+"akY" = (
+/obj/structure/window/reinforced/full,
+/obj/structure/grille,
+/obj/machinery/door/firedoor/glass,
+/obj/structure/cable/yellow{
+	icon_state = "0-8"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "0-2"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "0-4"
+	},
+/turf/simulated/floor,
+/area/djstation)
+"akZ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/wood,
+/area/djstation)
+"ala" = (
+/obj/structure/simple_door/wood,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/glass,
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/wood,
+/area/djstation)
+"alb" = (
+/obj/structure/window/reinforced/full,
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/machinery/door/firedoor/glass,
+/obj/structure/cable/yellow{
+	icon_state = "0-2"
+	},
+/turf/simulated/floor,
+/area/djstation)
+"alc" = (
+/obj/effect/auto_crayon{
+	icon_state = "companion"
+	},
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/unexplored/muriki/mountaintopeast)
+"ald" = (
+/obj/structure/flora/mushroom,
+/obj/effect/zone_divider,
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/unexplored/muriki/mountaintopeast)
+"ale" = (
+/obj/structure/cliff/corner{
+	dir = 6
+	},
+/obj/effect/zone_divider,
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/unexplored/muriki/mountaintopeast)
+"alf" = (
+/obj/item/material/barbedwire/start_active,
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/unexplored/muriki/mountaintopeast)
+"alg" = (
+/obj/structure/cliff{
+	dir = 4
+	},
+/obj/effect/zone_divider,
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/unexplored/muriki/mountaintopeast)
+"alh" = (
+/obj/machinery/recharger{
+	pixel_x = -5
+	},
+/obj/structure/table/steel,
+/turf/simulated/floor/tiled/turfpack/muriki,
+/area/specialty/expie_clubhouse)
 "alp" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
@@ -12168,6 +12326,9 @@
 /obj/machinery/firealarm{
 	pixel_y = 26
 	},
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/wood,
 /area/djstation)
 "ebM" = (
@@ -14216,6 +14377,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/disposalpipe/segment,
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/carpet/turcarpet,
 /area/djstation)
 "faS" = (
@@ -14476,6 +14640,9 @@
 /obj/structure/bed/padded,
 /obj/item/bedsheet/cosmos,
 /obj/effect/landmark/redspaceexit,
+/obj/machinery/computer/security/telescreen/entertainment{
+	pixel_y = -32
+	},
 /turf/simulated/floor/wood,
 /area/djstation)
 "fkB" = (
@@ -15041,11 +15208,11 @@
 	},
 /obj/effect/step_trigger/dephase_shadekin,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/window/maintenance_panel,
 /obj/structure/window/maintenance_panel{
 	dir = 1
 	},
-/turf/simulated/floor/tiled/techfloor,
+/obj/structure/window/maintenance_panel,
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/tcomfoyer)
 "fBK" = (
 /obj/machinery/camera/network/civilian{
@@ -18805,6 +18972,9 @@
 /obj/structure/grille,
 /obj/structure/window/reinforced,
 /obj/machinery/door/firedoor/glass,
+/obj/structure/cable/yellow{
+	icon_state = "0-4"
+	},
 /turf/simulated/floor,
 /area/djstation)
 "hGr" = (
@@ -20113,6 +20283,9 @@
 /obj/structure/disposalpipe/segment{
 	dir = 1;
 	icon_state = "pipe-c"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/carpet/turcarpet,
 /area/djstation)
@@ -24644,6 +24817,10 @@
 	dir = 8
 	},
 /obj/machinery/door/firedoor/glass,
+/obj/structure/cable/yellow{
+	icon_state = "0-2"
+	},
+/obj/structure/cable/yellow,
 /turf/simulated/floor,
 /area/djstation)
 "kyc" = (
@@ -24766,6 +24943,15 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
+	},
+/obj/structure/cable/yellow{
+	icon_state = "1-4"
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals_central7{
+	dir = 4
+	},
+/obj/structure/cable/yellow{
+	icon_state = "1-8"
 	},
 /turf/simulated/floor/wood,
 /area/djstation)
@@ -26572,6 +26758,9 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/wood,
 /area/djstation)
 "lAJ" = (
@@ -32812,6 +33001,10 @@
 	},
 /obj/structure/window/reinforced,
 /obj/machinery/door/firedoor/glass,
+/obj/structure/cable/yellow{
+	icon_state = "0-4"
+	},
+/obj/structure/cable/yellow,
 /turf/simulated/floor,
 /area/djstation)
 "oKf" = (
@@ -35679,6 +35872,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/disposalpipe/segment,
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/monotile{
 	color = "#999999"
 	},
@@ -36511,6 +36707,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
+	},
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/carpet/turcarpet,
 /area/djstation)
@@ -40537,6 +40736,9 @@
 	dir = 4
 	},
 /obj/structure/disposalpipe/segment,
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/monotile{
 	color = "#999999"
 	},
@@ -41019,6 +41221,9 @@
 	},
 /obj/structure/disposalpipe/segment,
 /obj/machinery/hologram/holopad,
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/carpet/turcarpet,
 /area/djstation)
 "sQJ" = (
@@ -42237,6 +42442,9 @@
 	dir = 8
 	},
 /obj/effect/landmark/start/entertainer,
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/wood,
 /area/djstation)
 "tws" = (
@@ -42258,6 +42466,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/disposalpipe/segment,
 /obj/machinery/door/firedoor/glass,
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/djstation)
 "twP" = (
@@ -42900,6 +43111,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/disposalpipe/segment,
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/wood,
 /area/djstation)
 "tMF" = (
@@ -43416,6 +43630,9 @@
 /obj/machinery/camera/network/civilian{
 	c_tag = "CIV - Radio Host"
 	},
+/obj/structure/sign/yessmoking_1{
+	pixel_y = 32
+	},
 /turf/simulated/floor/wood,
 /area/djstation)
 "uad" = (
@@ -43621,6 +43838,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
+	},
+/obj/structure/cable/yellow{
+	icon_state = "2-8"
 	},
 /turf/simulated/floor/wood,
 /area/djstation)
@@ -49374,8 +49594,8 @@
 /obj/item/radio/phone{
 	name = "Radio Host Phone"
 	},
-/obj/structure/sign/yessmoking_1{
-	pixel_y = 32
+/obj/machinery/computer/security/telescreen/entertainment{
+	pixel_y = 28
 	},
 /turf/simulated/floor/wood,
 /area/djstation)
@@ -50473,6 +50693,9 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 4
+	},
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/carpet/turcarpet,
 /area/djstation)
@@ -109915,12 +110138,12 @@ pEi
 pEi
 pEi
 pEi
-mcg
-mcg
-mcg
-mcg
-icF
-aiH
+alg
+alg
+alg
+alg
+ale
+ald
 pEi
 idv
 hIk
@@ -111100,7 +111323,7 @@ acv
 dKL
 dvt
 szB
-kya
+alb
 kya
 kya
 oKa
@@ -111265,7 +111488,7 @@ szB
 bxz
 bxH
 uGL
-rPu
+akW
 oKa
 qQa
 qQa
@@ -111428,7 +111651,7 @@ aah
 inL
 eQI
 kLO
-rPu
+akY
 oKa
 qQa
 qQa
@@ -111573,7 +111796,7 @@ luR
 luR
 luR
 luR
-ajx
+alc
 idv
 idv
 idv
@@ -111591,7 +111814,7 @@ tKg
 fqk
 alQ
 tvz
-rPu
+akW
 oKa
 qQa
 qQa
@@ -111754,7 +111977,7 @@ ilw
 lAp
 kAf
 oLu
-hFX
+akV
 qQa
 qQa
 qQa
@@ -111914,9 +112137,9 @@ qJw
 bYj
 eBJ
 uHw
-qJw
+akZ
 wbs
-hFX
+akT
 qQa
 qQa
 qQa
@@ -112019,9 +112242,9 @@ luR
 luR
 luR
 luR
-luR
 idv
-elf
+idv
+idv
 idv
 idv
 hIk
@@ -112076,7 +112299,7 @@ oym
 rPu
 rPu
 ueG
-oym
+ala
 ueG
 szB
 szB
@@ -112181,9 +112404,9 @@ idv
 idv
 luR
 luR
-luR
 idv
-aiH
+idv
+alf
 idv
 idv
 idv
@@ -112342,10 +112565,10 @@ idv
 idv
 idv
 idv
+alf
 idv
 idv
-idv
-idv
+alf
 idv
 luR
 idv
@@ -112403,8 +112626,8 @@ ueG
 udY
 xDd
 qEq
-cmL
-hFX
+akU
+ajw
 qQa
 qQa
 qQa
@@ -112503,16 +112726,16 @@ idv
 idv
 idv
 aiH
-hQF
 idv
+alf
+idv
+idv
+luR
+luR
+luR
+hQF
 elf
 idv
-luR
-luR
-luR
-idv
-elf
-hQF
 idv
 idv
 hIk
@@ -112566,7 +112789,7 @@ xjA
 vfT
 aCj
 nuz
-hFX
+akS
 qQa
 qQa
 qQa
@@ -112663,17 +112886,17 @@ idv
 idv
 idv
 idv
-idv
-idv
 aho
 idv
-elf
+idv
+idv
+idv
 idv
 luR
 luR
 luR
 luR
-idv
+alf
 idv
 idv
 idv
@@ -112728,7 +112951,7 @@ mBY
 oEp
 wRL
 uGL
-hFX
+akT
 qQa
 qQa
 qQa
@@ -112827,7 +113050,7 @@ idv
 idv
 luR
 luR
-idv
+hQF
 idv
 luR
 luR
@@ -113310,7 +113533,7 @@ luR
 ajR
 ajy
 ajv
-ajS
+ajQ
 ajR
 luR
 luR
@@ -114430,7 +114653,7 @@ akM
 akM
 akM
 ajR
-ajQ
+alh
 ajQ
 ajQ
 ajQ
@@ -115565,7 +115788,7 @@ luR
 luR
 ajR
 akL
-ajQ
+ajZ
 akA
 akA
 akA
@@ -116460,12 +116683,12 @@ iut
 iut
 iut
 iut
-kPb
-kPb
-kPb
-kPb
-kPb
-kPb
-kPb
-kPb
+pxP
+pxP
+pxP
+pxP
+pxP
+pxP
+pxP
+pxP
 "}

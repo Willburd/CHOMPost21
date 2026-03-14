@@ -16157,6 +16157,7 @@
 /turf/simulated/floor/water/acidic/turfpack/muriki,
 /area/muriki/grounds/civ)
 "aIM" = (
+/obj/effect/zone_divider,
 /turf/simulated/floor/outdoors/mud/turfpack/muriki,
 /area/mine/unexplored/muriki/mountaineast)
 "aIN" = (
@@ -45716,7 +45717,7 @@
 /obj/structure/window/maintenance_panel{
 	dir = 1
 	},
-/turf/simulated/floor/tiled/techfloor,
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/muriki/crewstairwell)
 "jBN" = (
 /obj/structure/prop/rock/small/alt,
@@ -49716,6 +49717,9 @@
 	},
 /obj/effect/floor_decal/corner/red{
 	dir = 10
+	},
+/obj/item/geiger/wall/south{
+	pixel_y = -36
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/bridge)
@@ -56529,6 +56533,9 @@
 	dir = 1
 	},
 /obj/item/pen/fountain4,
+/obj/machinery/computer/security/telescreen/entertainment{
+	pixel_y = 28
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/heads/hop)
 "mVf" = (
@@ -66717,8 +66724,8 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/obj/item/geiger/wall{
-	pixel_y = 30
+/obj/machinery/computer/security/telescreen/entertainment{
+	pixel_y = 28
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/bridge)
