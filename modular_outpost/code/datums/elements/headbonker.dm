@@ -22,7 +22,7 @@
 	return TRUE
 
 /datum/element/headbonk/proc/clonk(atom/source,var/mob/living/M)
-	playsound(C, 'modular_outpost/sound/effects/clonk.ogg', 100, 1)
+	playsound(source, 'modular_outpost/sound/effects/clonk.ogg', 100, 1)
 	playsound(source,"punch")
 	M.visible_message(span_danger("\The [M] clonks their head into \the [source]!"))
 	M.Stun(5)
