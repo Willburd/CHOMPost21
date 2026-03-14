@@ -203,7 +203,8 @@ GLOBAL_LIST_INIT(civilian_cartridges, list(
 	programs = list(
 		new/datum/data/pda/app/crew_records/security,
 
-		new/datum/data/pda/app/status_display)
+		new/datum/data/pda/app/status_display,
+		new/datum/data/pda/app/prisoner_manager) // Outpost 21 edit - Prisoner tracker
 
 /obj/item/cartridge/ce
 	name = "\improper Power-On DELUXE cartridge"
