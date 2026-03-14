@@ -2746,7 +2746,7 @@
 /area/centcom/medical)
 "ags" = (
 /obj/machinery/door/airlock/centcom/nameddorm{
-	matchnames = list("Ristsene Hkridytchf");
+	matchnames = list("Ristsene Hkridytchf","Visby Kazeev");
 	name = "Ristsene's Residence"
 	},
 /turf/simulated/floor/wood,
