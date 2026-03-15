@@ -163,5 +163,5 @@
 
 /obj/item/reagent_containers/food/snacks/tyrant_bonus/Initialize(mapload)
 	. = ..()
-	reagents.add_reagent(REAGENT_ID_PROTEIN, 5)
-	reagents.add_reagent(REAGENT_ID_LIQUIDLIFE, 5)
+	reagents.add_reagent(REAGENT_ID_PROTEIN, 3)
+	reagents.add_reagent(REAGENT_ID_TRICORDRAZINE, 3) // REAGENT_ID_LIQUIDLIFE Outpost 21 edit - Removing badly designed chems
