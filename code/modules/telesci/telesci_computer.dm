@@ -378,7 +378,7 @@
 /obj/machinery/computer/telescience/proc/recalibrate()
 	teles_left = rand(40, 50)
 	distance_off = rand(-4, 4)
-	rotation_off = rand(-10, 10)
+//	rotation_off = rand(-10, 10) // Outpost 21 edit - Remove randomized offset in Tsci
 
 
 // Procedure that calculates the actual trajectory taken!
