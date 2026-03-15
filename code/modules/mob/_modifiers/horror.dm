@@ -53,7 +53,7 @@ GLOBAL_LIST_INIT(redspace_areas, list(
 		handle_corpse()
 		var/obj/effect/landmark/drop_point
 		// Outpost 21 edit begin - Use our landmarks
-		if(is_type_in_list(get_area(unfortunate_soul), redspace_areas)) // Only teleport if in redspace
+		if(is_type_in_list(get_area(unfortunate_soul), GLOB.redspace_areas)) // Only teleport if in redspace
 			var/list/redexitlist = list()
 			for(var/obj/effect/landmark/R in GLOB.landmarks_list)
 				if(R.name == "redexit")

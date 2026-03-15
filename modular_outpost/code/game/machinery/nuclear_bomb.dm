@@ -116,7 +116,7 @@
 	GLOB.bomb_set = 1 //There can still be issues with this reseting when there are multiple bombs. Not a big deal tho for Nuke/N
 	// notify station
 	if(get_security_level() != SEC_LEVEL_DELTA)
-		priority_announcement.Announce("Self destruct sequence has been activated. Self-destructing in [get_time_remaining() / (1 SECOND)] seconds.", "Self-Destruct Control Computer")
+		GLOB.priority_announcement.Announce("Self destruct sequence has been activated. Self-destructing in [get_time_remaining() / (1 SECOND)] seconds.", "Self-Destruct Control Computer")
 	set_security_level(SEC_LEVEL_DELTA)
 	if(countdown_timer)
 		deltimer(countdown_timer, SStimer)
@@ -131,7 +131,7 @@
 	if(!has_timer())
 		return
 	if(get_security_level() == SEC_LEVEL_DELTA)
-		priority_announcement.Announce("Self destruct sequence has been cancelled.", "Self-Destruct Control Computer")
+		GLOB.priority_announcement.Announce("Self destruct sequence has been cancelled.", "Self-Destruct Control Computer")
 		set_security_level(SEC_LEVEL_RED)
 	if(has_timer())
 		deltimer(countdown_timer, SStimer)
@@ -143,7 +143,7 @@
 	if(has_timer())
 		GLOB.bomb_set = 1 //So long as there is one nuke timing, it means one nuke is armed.
 		if(countdown_too_far_gone() && !announced)
-			priority_announcement.Announce("The self-destruct sequence has reached terminal countdown, abort systems have been disabled.", "Self-Destruct Control Computer")
+			GLOB.priority_announcement.Announce("The self-destruct sequence has reached terminal countdown, abort systems have been disabled.", "Self-Destruct Control Computer")
 			announced = TRUE
 	return 0
 
@@ -290,8 +290,8 @@
 
 				feedback_set_details("end_error","nuke - unhandled ending")
 
-				if(blackbox)
-					blackbox.save_all_data_to_sql()
+				if(GLOB.blackbox)
+					GLOB.blackbox.save_all_data_to_sql()
 				sleep(300)
 				log_game("Rebooting due to nuclear detonation")
 				world.Reboot()
