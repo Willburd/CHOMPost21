@@ -5,7 +5,7 @@
 	flags = RAD_SHIELDED|AREA_FLAG_IS_NOT_PERSISTENT|BLUE_SHIELDED|AREA_BLOCK_PHASE_SHIFT|AREA_BLOCK_GHOST_SIGHT|AREA_FORBID_EVENTS
 
 /area/mine/unexplored
-	flags = AREA_BLOCK_GHOST_SIGHT
+	flags = AREA_BLOCK_GHOST_SIGHT|AREA_FLAG_IS_NOT_PERSISTENT
 
 /area/supply/station
 	base_turf = /turf/simulated/floor/outdoors/mud/turfpack/muriki
