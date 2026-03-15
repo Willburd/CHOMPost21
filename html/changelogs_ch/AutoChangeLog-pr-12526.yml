@@ -1,8 +1,0 @@
-author: "FluffMedic"
-delete-after: True
-changes:
-  - rscadd: "Some new Mineral Ants, and non-lethal mineral harvesting. Ant meat is also universally useable"
-  - rscadd: "Tyr repair drones are different now"
-  - balance: "Astral Collective Tesh warn of their gambit attack. Gambit threshholds lowered"
-  - balance: "AC Purity's lost their healing, gain a sound based confusion effect"
-  - balance: "Fossil Tank is less destructive"

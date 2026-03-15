@@ -9,7 +9,7 @@
 	spawncount = rand(20, 32)
 
 /datum/event/phone_spiders/announce()
-	command_announcement.Announce("Anti-spam counter-measures have been redirected toward station communication systems.", "Firewall Notice")
+	GLOB.command_announcement.Announce("Anti-spam counter-measures have been redirected toward station communication systems.", "Firewall Notice")
 
 /datum/event/phone_spiders/start()
 	while((spawncount >= 1) && phones_on_station.len)

@@ -33,7 +33,7 @@
 		var/mob/living/carbon/human/H = M
 
 		// Regular redspace horrors are always applied if you enter here!
-		if(is_type_in_list(src, redspace_areas))
+		if(is_type_in_list(src, GLOB.redspace_areas))
 			H.add_modifier(/datum/modifier/redspace_drain)
 			H.AddComponent(/datum/component/haunting_vision)
 

@@ -7,7 +7,7 @@
 	spawncount = rand(8 * severity, 12 * severity)
 
 /datum/event/mouse_assualt/announce()
-	command_announcement.Announce("Unidentified lifesigns detected coming aboard [station_name()]. Secure any exterior access, including ducting and ventilation.", "Lifesign Alert", new_sound = 'sound/AI/aliens.ogg')
+	GLOB.command_announcement.Announce("Unidentified lifesigns detected coming aboard [station_name()]. Secure any exterior access, including ducting and ventilation.", "Lifesign Alert", new_sound = 'sound/AI/aliens.ogg')
 
 /datum/event/mouse_assualt/start()
 	var/list/possibleSpawnspots = list()
