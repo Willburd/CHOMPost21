@@ -4199,26 +4199,27 @@
 /turf/simulated/floor/carpet/blucarpet/turfpack/muriki,
 /area/specialty/expie_clubhouse)
 "akd" = (
-/obj/random/firstaid,
-/obj/random/firstaid,
-/obj/random/firstaid,
 /obj/structure/table/standard,
+/obj/random/firstaid,
+/obj/random/firstaid,
+/obj/random/firstaid,
+/obj/random/firstaid,
+/obj/random/firstaid,
 /turf/simulated/floor/carpet/blucarpet/turfpack/muriki,
 /area/specialty/expie_clubhouse)
 "ake" = (
-/obj/random/medical,
-/obj/random/medical,
-/obj/random/medical,
 /obj/structure/table/standard,
-/turf/simulated/floor/carpet/blucarpet/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"akf" = (
-/obj/structure/table/standard,
+/obj/random/medical,
+/obj/random/medical,
+/obj/random/medical,
+/obj/random/medical,
+/obj/random/medical,
 /turf/simulated/floor/carpet/blucarpet/turfpack/muriki,
 /area/specialty/expie_clubhouse)
 "akg" = (
 /obj/structure/closet,
 /obj/item/material/twohanded/sledgehammer/gravity/ed,
+/obj/item/tool/crowbar/brace_jack,
 /turf/simulated/floor/carpet/turfpack/muriki,
 /area/specialty/expie_clubhouse)
 "akh" = (
@@ -4681,7 +4682,7 @@
 	},
 /area/specialty/expie_clubhouse)
 "als" = (
-/turf/simulated/mineral/crystal_shiny/ignore_cavegen,
+/turf/simulated/mineral/crystal_shiny/ignore_mapgen/turfpack/muriki,
 /area/muriki/crystal)
 "alt" = (
 /obj/machinery/crystal/lava,
@@ -4802,6 +4803,18 @@
 	icon_state = "rock_grey"
 	},
 /area/muriki/crystal)
+"alE" = (
+/obj/effect/auto_crayon{
+	icon_state = "nine_removal"
+	},
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/unexplored/muriki/mountaintopeast)
+"alF" = (
+/obj/structure/tanning_rack,
+/turf/simulated/floor/tiled/turfpack/muriki,
+/area/specialty/expie_clubhouse)
 "alI" = (
 /turf/simulated/wall,
 /area/medical/evastore)
@@ -114333,7 +114346,7 @@ qOs
 bMv
 als
 als
-hIk
+agV
 hIk
 hIk
 hIk
@@ -115317,7 +115330,7 @@ akP
 ajV
 ajV
 ajR
-ajQ
+alF
 akI
 akA
 akA
@@ -115976,7 +115989,7 @@ all
 alj
 akc
 akc
-akf
+ake
 ajR
 hIk
 hIk
@@ -116290,7 +116303,7 @@ luR
 idv
 idv
 idv
-idv
+alE
 idv
 hIk
 hIk
