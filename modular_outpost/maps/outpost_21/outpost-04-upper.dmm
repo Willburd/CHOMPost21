@@ -4136,6 +4136,10 @@
 "ajR" = (
 /turf/simulated/wall,
 /area/specialty/expie_clubhouse)
+"ajS" = (
+/obj/machinery/light/small,
+/turf/simulated/floor/tiled/turfpack/muriki,
+/area/specialty/expie_clubhouse)
 "ajT" = (
 /obj/structure/table/rack/shelf/wood,
 /obj/item/clothing/suit/space/emergency,
@@ -4188,6 +4192,7 @@
 "akb" = (
 /obj/structure/bed/bath,
 /obj/random/soap,
+/obj/machinery/light,
 /turf/simulated/floor/carpet/blucarpet/turfpack/muriki,
 /area/specialty/expie_clubhouse)
 "akc" = (
@@ -4607,6 +4612,49 @@
 /obj/structure/table/steel,
 /turf/simulated/floor/tiled/turfpack/muriki,
 /area/specialty/expie_clubhouse)
+"ali" = (
+/obj/structure/simple_door/wood,
+/turf/simulated/floor/tiled/turfpack/muriki,
+/area/specialty/expie_clubhouse)
+"alj" = (
+/obj/machinery/power/apc/alarms_hidden{
+	dir = 4;
+	pixel_x = 24
+	},
+/turf/simulated/floor/carpet/blucarpet/turfpack/muriki,
+/area/specialty/expie_clubhouse)
+"alk" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/machinery/light_switch{
+	pixel_y = 28
+	},
+/turf/simulated/floor/carpet/blucarpet/turfpack/muriki,
+/area/specialty/expie_clubhouse)
+"all" = (
+/obj/structure/table/steel,
+/turf/simulated/floor/carpet/blucarpet/turfpack/muriki,
+/area/specialty/expie_clubhouse)
+"alm" = (
+/obj/item/clothing/ears/earring/dangle/gold,
+/obj/item/clothing/ears/earring/dangle/gold,
+/obj/item/clothing/ears/earring/dangle/gold,
+/obj/item/clothing/ears/earring/dangle/gold,
+/obj/item/clothing/ears/earring/dangle/gold,
+/obj/item/clothing/ears/earring/dangle/gold,
+/turf/simulated/floor/tiled/turfpack/muriki,
+/area/specialty/expie_clubhouse)
+"aln" = (
+/obj/fiftyspawner/wood,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/specialty/expie_clubhouse)
+"alo" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/turfpack/muriki,
+/area/specialty/expie_clubhouse)
 "alp" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
@@ -4622,16 +4670,138 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/muriki/civup)
+"alq" = (
+/obj/structure/simple_door/sandstone,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/specialty/expie_clubhouse)
+"alr" = (
+/obj/item/flashlight/lamp/green,
+/turf/simulated/floor/outdoors/mud/turfpack/muriki{
+	outdoors = 0
+	},
+/area/specialty/expie_clubhouse)
+"als" = (
+/turf/simulated/mineral/crystal_shiny/ignore_cavegen,
+/area/muriki/crystal)
+"alt" = (
+/obj/machinery/crystal/lava,
+/turf/simulated/floor/indoorrocks/turfpack/muriki{
+	icon_state = "rock_grey"
+	},
+/area/muriki/crystal)
+"alu" = (
+/obj/item/coin/gold,
+/obj/item/ore/silver,
+/obj/item/ore/silver,
+/obj/item/ore/silver,
+/obj/item/ore/silver,
+/obj/item/ore/silver,
+/obj/item/ore/silver,
+/obj/item/ore/silver,
+/obj/item/ore/silver,
+/turf/simulated/floor/indoorrocks/turfpack/muriki{
+	icon_state = "rock_grey"
+	},
+/area/muriki/crystal)
+"alv" = (
+/obj/item/ore/gold,
+/obj/item/ore/gold,
+/obj/item/ore/gold,
+/obj/item/ore/gold,
+/obj/item/ore/gold,
+/obj/item/ore/gold,
+/obj/item/ore/gold,
+/obj/item/ore/gold,
+/obj/item/ore/gold,
+/obj/item/ore/gold,
+/obj/item/ore/gold,
+/turf/simulated/floor/indoorrocks/turfpack/muriki{
+	icon_state = "rock_grey"
+	},
+/area/muriki/crystal)
+"alw" = (
+/obj/item/coin/gold,
+/obj/item/ore/quartz,
+/obj/item/ore/quartz,
+/obj/item/ore/quartz,
+/obj/item/ore/quartz,
+/turf/simulated/floor/indoorrocks/turfpack/muriki{
+	icon_state = "rock_grey"
+	},
+/area/muriki/crystal)
 "alx" = (
 /obj/machinery/ai_status_display,
 /turf/simulated/wall,
 /area/rnd/hallway/upper)
+"aly" = (
+/obj/item/clothing/accessory/bracelet/material/silver,
+/obj/item/ore/silver,
+/obj/item/ore/silver,
+/obj/item/ore/silver,
+/obj/item/ore/silver,
+/obj/item/ore/silver,
+/obj/item/ore/silver,
+/obj/item/ore/silver,
+/obj/item/ore/silver,
+/turf/simulated/floor/indoorrocks/turfpack/muriki{
+	icon_state = "rock_grey"
+	},
+/area/muriki/crystal)
 "alz" = (
 /obj/structure/cable/green{
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled/steel,
 /area/rnd/research/phoronics/bombrange)
+"alA" = (
+/obj/item/coin/gold,
+/obj/item/coin/gold,
+/obj/item/coin/gold,
+/obj/item/toy/plushie/dragon/gold_east,
+/turf/simulated/floor/indoorrocks/turfpack/muriki{
+	icon_state = "rock_grey"
+	},
+/area/muriki/crystal)
+"alB" = (
+/obj/item/coin/gold,
+/obj/item/ore/gold,
+/obj/item/ore/gold,
+/obj/item/ore/gold,
+/obj/item/ore/gold,
+/obj/item/ore/gold,
+/obj/item/ore/gold,
+/obj/item/ore/gold,
+/obj/item/ore/gold,
+/obj/item/ore/gold,
+/turf/simulated/floor/indoorrocks/turfpack/muriki{
+	icon_state = "rock_grey"
+	},
+/area/muriki/crystal)
+"alC" = (
+/obj/item/coin/gold,
+/obj/item/coin/gold,
+/obj/item/ore/gold,
+/obj/item/ore/gold,
+/obj/item/ore/gold,
+/obj/item/ore/gold,
+/obj/item/ore/gold,
+/obj/item/ore/gold,
+/obj/item/ore/gold,
+/obj/item/ore/gold,
+/turf/simulated/floor/indoorrocks/turfpack/muriki{
+	icon_state = "rock_grey"
+	},
+/area/muriki/crystal)
+"alD" = (
+/obj/random/crate,
+/obj/item/potion_material/golden_scale,
+/obj/item/potion_material/golden_scale,
+/obj/item/potion_material/golden_grapes,
+/obj/item/potion_material/golden_grapes,
+/turf/simulated/floor/indoorrocks/turfpack/muriki{
+	icon_state = "rock_grey"
+	},
+/area/muriki/crystal)
 "alI" = (
 /turf/simulated/wall,
 /area/medical/evastore)
@@ -20224,6 +20394,13 @@
 /obj/item/coin/gold,
 /obj/item/coin/gold,
 /obj/item/coin/platinum,
+/obj/item/ore/diamond,
+/obj/item/ore/diamond,
+/obj/item/ore/diamond,
+/obj/item/ore/diamond,
+/obj/item/ore/diamond,
+/obj/item/ore/diamond,
+/obj/item/ore/diamond,
 /turf/simulated/floor/indoorrocks/turfpack/muriki{
 	icon_state = "rock_grey"
 	},
@@ -35821,6 +35998,7 @@
 /area/medical/genetics)
 "qhZ" = (
 /obj/item/clothing/accessory/medal/silver,
+/obj/item/toy/plushie/carp/gold,
 /turf/simulated/floor/indoorrocks/turfpack/muriki{
 	icon_state = "rock_grey"
 	},
@@ -110895,7 +111073,7 @@ bMv
 bMv
 bMv
 qOs
-qOs
+alt
 bMv
 bMv
 bMv
@@ -112015,7 +112193,7 @@ bMv
 bMv
 bMv
 bMv
-mGY
+alD
 qOs
 qOs
 tBv
@@ -112349,7 +112527,7 @@ knK
 qhZ
 ufq
 epT
-qOs
+alv
 qOs
 bUv
 qOs
@@ -112531,7 +112709,7 @@ qOs
 bMv
 bMv
 bMv
-qOs
+alt
 qOs
 bMv
 bMv
@@ -112668,7 +112846,7 @@ bHh
 qOs
 iYK
 hzY
-xYA
+alB
 xYA
 hzY
 nxT
@@ -112996,7 +113174,7 @@ dHw
 ihW
 tFU
 gpn
-xYA
+alw
 rAt
 xYA
 wci
@@ -113147,14 +113325,14 @@ bMv
 bMv
 bMv
 bMv
-qOs
+alt
 qOs
 qOs
 knK
 qOs
 vCe
 ufq
-wci
+alC
 gjU
 nxT
 aan
@@ -113309,7 +113487,7 @@ bMv
 bMv
 bMv
 bMv
-qOs
+alt
 bUv
 qOs
 qOs
@@ -113322,7 +113500,7 @@ naD
 dkj
 wci
 hgZ
-xYA
+alu
 dzi
 qOs
 rCV
@@ -113370,7 +113548,7 @@ luR
 luR
 ajR
 ajR
-ajt
+ali
 ajR
 ajR
 luR
@@ -113481,7 +113659,7 @@ oRJ
 vOE
 oeF
 ujW
-ujW
+alA
 iKZ
 xYA
 dcL
@@ -113533,7 +113711,7 @@ luR
 ajR
 ajy
 ajv
-ajQ
+ajS
 ajR
 luR
 luR
@@ -113666,7 +113844,7 @@ bMv
 bMv
 ajb
 bMv
-qOs
+alt
 bMv
 bMv
 bMv
@@ -113806,7 +113984,7 @@ qOs
 xYA
 xYA
 gBl
-jQz
+aly
 qOs
 qOs
 qOs
@@ -113847,7 +114025,7 @@ ajU
 akG
 ajU
 ajR
-ajQ
+alm
 ajQ
 akr
 ako
@@ -113991,7 +114169,7 @@ qOs
 qOs
 qOs
 ajb
-bMv
+als
 bMv
 hIk
 hIk
@@ -114007,7 +114185,7 @@ ajR
 ajU
 akJ
 akH
-ajU
+aln
 ajR
 ajQ
 akz
@@ -114153,8 +114331,8 @@ qOs
 qOs
 qOs
 bMv
-bMv
-bMv
+als
+als
 hIk
 hIk
 hIk
@@ -114305,7 +114483,7 @@ qOs
 qOs
 bMv
 bMv
-bIL
+alt
 qOs
 bIL
 bMv
@@ -114464,7 +114642,7 @@ bMv
 ajb
 gME
 qOs
-qOs
+alt
 bMv
 bMv
 ajb
@@ -114609,7 +114787,7 @@ bMv
 bMv
 bMv
 bMv
-qOs
+bIL
 ajb
 qOs
 qOs
@@ -114655,7 +114833,7 @@ akM
 ajR
 alh
 ajQ
-ajQ
+alo
 ajQ
 ajQ
 ajQ
@@ -114786,7 +114964,7 @@ qOs
 qOs
 qOs
 qOs
-qOs
+alt
 bMv
 bMv
 bMv
@@ -114810,7 +114988,7 @@ hIk
 hIk
 hIk
 ajR
-akP
+alr
 akO
 ajV
 ajV
@@ -115146,7 +115324,7 @@ akA
 akA
 akA
 ajR
-akc
+alk
 akc
 akc
 akc
@@ -115470,7 +115648,7 @@ akF
 akA
 akB
 ajR
-akc
+all
 akc
 akj
 akc
@@ -115632,7 +115810,7 @@ akA
 akA
 akC
 ajR
-akc
+all
 akc
 akc
 akc
@@ -115794,8 +115972,8 @@ akA
 akA
 akD
 ajR
-akc
-akc
+all
+alj
 akc
 akc
 akf
@@ -115951,7 +116129,7 @@ luR
 ajR
 ajR
 ajR
-ajR
+alq
 ajR
 ajR
 ajR
@@ -116109,11 +116287,11 @@ hIk
 hIk
 luR
 luR
-luR
-luR
-luR
-luR
-luR
+idv
+idv
+idv
+idv
+idv
 hIk
 hIk
 hIk
@@ -116273,9 +116451,9 @@ luR
 luR
 luR
 luR
-luR
-luR
-luR
+idv
+idv
+idv
 hIk
 hIk
 hIk
