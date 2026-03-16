@@ -1,0 +1,327 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/simulated/floor/wood/sif/turfpack,
+/area/template_noop)
+"c" = (
+/mob/living/simple_mob/vore/blackhole/bikers,
+/turf/template_noop,
+/area/template_noop)
+"d" = (
+/turf/template_noop,
+/area/template_noop)
+"g" = (
+/mob/living/simple_mob/humanoid/merc/ranged/sniper/blackhole,
+/turf/template_noop,
+/area/template_noop)
+"l" = (
+/turf/simulated/wall/bay/purple/turfpack/muriki,
+/area/template_noop)
+"t" = (
+/mob/living/simple_mob/vore/blackhole_obelisk/monolith,
+/turf/simulated/floor/reinforced/turfpack/muriki,
+/area/template_noop)
+"v" = (
+/mob/living/simple_mob/vore/blackhole/taur/shield,
+/turf/simulated/floor/bronze/turfpack/muriki,
+/area/template_noop)
+"A" = (
+/turf/simulated/floor/bronze/turfpack/muriki,
+/area/template_noop)
+"B" = (
+/turf/simulated/floor/reinforced/turfpack/muriki,
+/area/template_noop)
+"C" = (
+/mob/living/simple_mob/vore/blackhole/ranged/smg,
+/turf/template_noop,
+/area/template_noop)
+"D" = (
+/mob/living/simple_mob/mechanical/mecha/combat/durand/blackhole,
+/turf/simulated/floor/reinforced/turfpack/muriki,
+/area/template_noop)
+"E" = (
+/turf/simulated/wall/bay/r_wall/purple/turfpack/muriki,
+/area/template_noop)
+"F" = (
+/mob/living/simple_mob/vore/otie/syndicate/blackhole,
+/turf/template_noop,
+/area/template_noop)
+"G" = (
+/obj/structure/simple_door/phoron,
+/turf/simulated/floor/bronze/turfpack/muriki,
+/area/template_noop)
+"K" = (
+/mob/living/simple_mob/vore/blackhole/ranged/rifle,
+/turf/template_noop,
+/area/template_noop)
+"R" = (
+/mob/living/simple_mob/humanoid/merc/ranged/sniper/blackhole/rocket,
+/turf/template_noop,
+/area/template_noop)
+"W" = (
+/mob/living/simple_mob/mechanical/mecha/combat/gygax/dark/advanced/blackhole,
+/turf/simulated/floor/reinforced/turfpack/muriki,
+/area/template_noop)
+"Y" = (
+/mob/living/simple_mob/vore/blackhole/grotesque,
+/turf/template_noop,
+/area/template_noop)
+"Z" = (
+/mob/living/simple_mob/vore/blackhole/taur/ranged/hmg,
+/turf/simulated/floor/reinforced/turfpack/muriki,
+/area/template_noop)
+
+(1,1,1) = {"
+d
+d
+Y
+d
+d
+F
+K
+d
+C
+F
+d
+d
+Y
+d
+d
+"}
+(2,1,1) = {"
+d
+c
+d
+d
+g
+E
+E
+G
+E
+E
+R
+d
+d
+c
+d
+"}
+(3,1,1) = {"
+Y
+d
+d
+E
+E
+E
+a
+a
+a
+E
+E
+E
+d
+d
+Y
+"}
+(4,1,1) = {"
+d
+d
+E
+E
+a
+a
+a
+v
+a
+a
+a
+E
+E
+d
+d
+"}
+(5,1,1) = {"
+d
+d
+E
+a
+a
+A
+A
+A
+A
+A
+a
+a
+E
+d
+d
+"}
+(6,1,1) = {"
+F
+l
+E
+a
+A
+A
+B
+W
+B
+A
+A
+a
+E
+E
+F
+"}
+(7,1,1) = {"
+C
+E
+a
+a
+A
+B
+Z
+B
+Z
+B
+A
+a
+a
+E
+K
+"}
+(8,1,1) = {"
+d
+G
+a
+v
+A
+B
+B
+t
+B
+B
+A
+v
+a
+G
+d
+"}
+(9,1,1) = {"
+K
+E
+a
+a
+A
+B
+Z
+B
+Z
+B
+A
+a
+a
+E
+C
+"}
+(10,1,1) = {"
+F
+E
+E
+a
+A
+A
+B
+D
+B
+A
+A
+a
+E
+E
+F
+"}
+(11,1,1) = {"
+d
+d
+E
+a
+a
+A
+A
+A
+A
+A
+a
+a
+E
+d
+d
+"}
+(12,1,1) = {"
+d
+d
+E
+E
+a
+a
+a
+v
+a
+a
+a
+E
+E
+d
+d
+"}
+(13,1,1) = {"
+Y
+d
+d
+E
+E
+E
+a
+a
+a
+E
+E
+E
+d
+d
+Y
+"}
+(14,1,1) = {"
+d
+c
+d
+d
+R
+E
+E
+G
+E
+E
+g
+d
+d
+c
+d
+"}
+(15,1,1) = {"
+d
+d
+Y
+d
+d
+F
+C
+d
+K
+F
+d
+d
+Y
+d
+d
+"}
