@@ -52,3 +52,9 @@
 
 /mob/living/simple_mob/vore/gryphon
 	enzyme_affect = FALSE
+
+/mob/living/simple_mob/vore/blackhole
+	enzyme_affect = FALSE
+
+/mob/living/simple_mob/vore/blackhole_obelisk
+	enzyme_affect = FALSE
