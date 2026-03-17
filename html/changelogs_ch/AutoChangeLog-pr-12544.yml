@@ -1,0 +1,5 @@
+author: "CHOMPStation2StaffMirrorBot"
+delete-after: True
+changes:
+  - rscadd: "new markings: Skull mask, three lengths of a thin snout variant, thinner lower snout sprites, snout teeth, and a snout-tip horn"
+  - bugfix: "circle tattoo unevenness fixed"
