@@ -28,11 +28,13 @@
 #define TECHWEB_NODE_BORG_UTILITY "borg_utility"
 #define TECHWEB_NODE_BOTANY_EQUIP "botany_equip"
 #define TECHWEB_NODE_CAFETERIA_EQUIP "cafeteria_equip"
+#define TECHWEB_NODE_CASELESS_RIFLE "caseless_rifle"
 #define TECHWEB_NODE_CHEM_SYNTHESIS "chem_synthesis"
 #define TECHWEB_NODE_CIRCUIT_SHELLS "circuit_shells"
 #define TECHWEB_NODE_COMBAT_IMPLANTS "combat_implants"
 #define TECHWEB_NODE_CONSOLES "consoles"
 #define TECHWEB_NODE_CONSTRUCTION "construction"
+#define TECHWEB_NODE_CRYOGUN "cryogun"
 #define TECHWEB_NODE_CRYOSTASIS "cryostasis"
 #define TECHWEB_NODE_CYBER_IMPLANTS "cyber_implants"
 #define TECHWEB_NODE_CYBER_ORGANS "cyber_organs"
@@ -127,6 +129,7 @@
 #define TECHWEB_NODE_PROGRAMMED_SERVER "programmed_server"
 #define TECHWEB_NODE_PROGRAMMING "programming"
 #define TECHWEB_NODE_PROTEAN "protean"
+#define TECHWEB_NODE_PROTOLATHE_BOARDS "protolathe_boards"
 #define TECHWEB_NODE_RCD_UPGRADE "rcd_upgrade"
 #define TECHWEB_NODE_RIOT_SUPRESSION "riot_supression"
 #define TECHWEB_NODE_ROBOTICS "robotics"
@@ -153,8 +156,6 @@
 
 //CHOMPEDIT Start - Chomp Specific techwebs.
 #define TECHWEB_NODE_PHASE_WEAPONS "phase_weapons" //CHOMPEDIT ADD - Adds Phase Weaponry
-#define TECHWEB_NODE_CRYOGUN "cryogun" //CHOMPEDIT Add - Adds Cryogun
-#define TECHWEB_NODE_CASELESS_RIFLE "caseless_rifle" //CHOMPEDIT Add - Adds Caseless Rifle
 #define TECHWEB_NODE_METAMORPHOSIS_RAY "metamorphosis_ray" //CHOMPEDIT Add - Adds Caseless Rifle
 #define TECHWEB_NODE_MOD_ANOMALY_SUIT "mod_anomaly_suit" //CHOMPEDIT Add - Adds Anomaly RIGs
 #define TECHWEB_NODE_MECH_SHIELDS "mech_shields" //CHOMPEDIT Add - Adds Mech Shields
