@@ -266,3 +266,31 @@
       in a crash.
   zeskorion:
   - bugfix: poi active edges
+2026-03-18:
+  ARGUS:
+  - qol: The Task Manager now accepts a significantly larger variety of department
+      objects across all six departments, making it easier to complete a scan without
+      hunting for specific items.
+  - balance: Expanded scannable pools for Bridge, Engineering, Medical, Science, Service,
+      and Security departments.
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: copy slot skipping some values
+  - rscadd: Standard and Exploration Gooborg sprites
+  - rscadd: 'new markings: Skull mask, three lengths of a thin snout variant, thinner
+      lower snout sprites, snout teeth, and a snout-tip horn'
+  - bugfix: circle tattoo unevenness fixed
+  - bugfix: Copy loadout now correctly makes unique metadata entries for gear. So
+      that changing the color on one pair of glasses doesnt affect the ones in your
+      other loadout.
+  Diana:
+  - rscadd: Adds the Caseless Rifle (and its ammo) to the techweb.
+  - qol: Protolathe boards can be made via science protolathe (engineering can make
+      engineering protolathe boards) so if they're ever destroyed, they can be remade.
+  - qol: Protolathe boards can be ordered via cargo if the original science protolathe
+      is ever destroyed.
+  Guti:
+  - qol: Normal anomalies can now be scanned with the anomaly scanner for it's frequencies.
+  - qol: The anomaly scanner will indicate the user to use a releaser, if used on
+      a core.
+  - qol: Added particle descriptions when examining the anomaly scanner.
+  - bugfix: Fixed Anomalis spawning without PDA
