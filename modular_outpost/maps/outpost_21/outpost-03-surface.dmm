@@ -51236,6 +51236,9 @@
 /obj/effect/floor_decal/corner/brown{
 	dir = 9
 	},
+/obj/machinery/computer/stockexchange{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/office)
 "lod" = (
