@@ -1,5 +1,0 @@
-author: "ARGUS"
-delete-after: True
-changes:
-  - qol: "The Task Manager now accepts a significantly larger variety of department objects across all six departments, making it easier to complete a scan without hunting for specific items."
-  - balance: "Expanded scannable pools for Bridge, Engineering, Medical, Science, Service, and Security departments."
