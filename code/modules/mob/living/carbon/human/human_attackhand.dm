@@ -3,7 +3,8 @@
 
 /mob/living/carbon/human/proc/get_unarmed_attack(var/mob/living/carbon/human/target, var/hit_zone)
 	/* Outpost 21 edit - Nif removal
-	if(nif && nif.flag_check(NIF_C_HARDCLAWS,NIF_FLAGS_COMBAT)){return unarmed_hardclaws}
+	if(nif && nif.flag_check(NIF_C_HARDCLAWS,NIF_FLAGS_COMBAT))
+		return GLOB.unarmed_hardclaws
 	*/
 	if(src.default_attack && src.default_attack.is_usable(src, target, hit_zone))
 		if(HAS_TRAIT(src, TRAIT_NONLETHAL_BLOWS))

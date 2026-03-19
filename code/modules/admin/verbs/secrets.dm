@@ -319,11 +319,11 @@ ADMIN_VERB(secrets, R_HOLDER, "Secrets", "Abuse harder than you ever have before
 			if(GLOB.gravity_is_on)
 				log_admin("[key_name(holder)] toggled gravity on.", 1)
 				message_admins(span_notice("[key_name_admin(holder)] toggled gravity on."), 1)
-				command_announcement.Announce("Gravity generators are again functioning within normal parameters. Sorry for any inconvenience.")
+				GLOB.command_announcement.Announce("Gravity generators are again functioning within normal parameters. Sorry for any inconvenience.")
 			else
 				log_admin("[key_name(holder)] toggled gravity off.", 1)
 				message_admins(span_notice("[key_name_admin(holder)] toggled gravity off."), 1)
-				command_announcement.Announce("Feedback surge detected in mass-distributions systems. Artificial gravity has been disabled whilst the system reinitializes. Further failures may result in a gravitational collapse and formation of blackholes. Have a nice day.")
+				GLOB.command_announcement.Announce("Feedback surge detected in mass-distributions systems. Artificial gravity has been disabled whilst the system reinitializes. Further failures may result in a gravitational collapse and formation of blackholes. Have a nice day.")
 		if("tripleAI")
 			if(!is_funmin)
 				return
@@ -447,7 +447,7 @@ ADMIN_VERB(secrets, R_HOLDER, "Secrets", "Abuse harder than you ever have before
 				new /obj/singularity/allisclean(get_turf(ui.user))
 				for(var/mob/living/L in GLOB.player_list)
 					L.say("All will be clean.")
-				command_announcement.Announce("Attention [station_name()]. Unidentified energy signals detected on all frequencies, are you seeing these readings-- All will be clean. --What was that!? ", new_sound = 'modular_outpost/sound/misc/allisclean.ogg')
+				GLOB.command_announcement.Announce("Attention [station_name()]. Unidentified energy signals detected on all frequencies, are you seeing these readings-- All will be clean. --What was that!? ", new_sound = 'modular_outpost/sound/misc/allisclean.ogg')
 				log_and_message_admins("has summoned All Is Clean, nothing can escape his scrubbing power.", ui.user)
 
 		if("drainpower")

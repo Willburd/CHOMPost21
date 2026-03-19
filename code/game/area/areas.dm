@@ -428,9 +428,9 @@ GLOBAL_LIST_EMPTY(forced_ambiance_list)
 			var/sound = pick(ambience)
 			// Outpost 21 edit begin - Extreme spooky ambience, very rarely anywhere can be UD
 			var/area/A = get_area(L)
-			if(prob(3) || (A && A.haunted && prob(10)))
+			if(prob(2) || (A && A.haunted && prob(6)))
 				sound = pick(AMBIENCE_UNDERDARK)
-				volume_mod *= 0.25
+				volume_mod *= 0.15
 			// Outpost 21 edit end
 			L << sound(sound, repeat = 0, wait = 0, volume = 50 * volume_mod, channel = CHANNEL_AMBIENCE)
 			L.client.time_last_ambience_played = world.time

@@ -7,9 +7,9 @@
 	spawncount = rand(6 * severity, 9 * severity)
 
 /datum/event/clune_infestation/announce()
-	command_announcement.Announce("Unidentified lifesigns detected coming aboard [station_name()]. Secure any exterior access, including ducting and ventilation.", "Lifesign Alert", new_sound = 'sound/AI/aliens.ogg')
+	GLOB.command_announcement.Announce("Unidentified lifesigns detected coming aboard [station_name()]. Secure any exterior access, including ducting and ventilation.", "Lifesign Alert", new_sound = 'sound/AI/aliens.ogg')
 	sleep(15)
-	command_announcement.Announce("Attention, all security staff. Hostile circumorph bio-signs detected in maintenance tunnels. Euthanize all infected individuals immediately.", "Circumorph Alert")
+	GLOB.command_announcement.Announce("Attention, all security staff. Hostile circumorph bio-signs detected in maintenance tunnels. Euthanize all infected individuals immediately.", "Circumorph Alert")
 
 
 /datum/event/clune_infestation/start()

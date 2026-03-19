@@ -906,7 +906,7 @@
 	sound_env = TUNNEL_ENCLOSED
 	icon_state = "orange"
 	always_unpowered = TRUE
-	flags = AREA_BLOCK_GHOST_SIGHT | AREA_FORBID_EVENTS
+	flags = AREA_BLOCK_GHOST_SIGHT | AREA_FORBID_EVENTS | AREA_FLAG_IS_NOT_PERSISTENT
 	haunted = TRUE
 	color_grading = COLORTINT_UNDERDARK
 	ambience = AMBIENCE_UNDERDARK
@@ -915,7 +915,7 @@
 	sound_env = TUNNEL_ENCLOSED
 	icon_state = "yellow"
 	always_unpowered = TRUE
-	flags = AREA_BLOCK_GHOST_SIGHT | AREA_FORBID_EVENTS
+	flags = AREA_BLOCK_GHOST_SIGHT | AREA_FORBID_EVENTS | AREA_FLAG_IS_NOT_PERSISTENT
 	haunted = TRUE
 	color_grading = COLORTINT_UNDERDARK
 	ambience = AMBIENCE_UNDERDARK

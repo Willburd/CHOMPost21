@@ -51236,6 +51236,9 @@
 /obj/effect/floor_decal/corner/brown{
 	dir = 9
 	},
+/obj/machinery/computer/stockexchange{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/office)
 "lod" = (
@@ -81843,13 +81846,13 @@
 /turf/simulated/floor/plating,
 /area/maintenance/wastedisposal)
 "vbM" = (
-/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
 	},
+/obj/effect/floor_decal/industrial/outline/cut_corners/yellow,
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/central_two)
 "vbS" = (
@@ -83017,7 +83020,6 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/drone_fabrication)
 "vvy" = (
-/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
