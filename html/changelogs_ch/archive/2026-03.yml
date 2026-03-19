@@ -294,3 +294,11 @@
       a core.
   - qol: Added particle descriptions when examining the anomaly scanner.
   - bugfix: Fixed Anomalis spawning without PDA
+2026-03-19:
+  ARGUS-Memory:
+  - bugfix: Taskmaager coupon code now gives coupons
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: 2 missing parent paths for tall borgs
+  - bugfix: some more gooborgs
+  - bugfix: explo tall parent path
+  - code_imp: migrates more globals to GLOBs

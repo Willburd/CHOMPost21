@@ -1,4 +1,0 @@
-author: "ARGUS-Memory"
-delete-after: True
-changes:
-  - bugfix: "Taskmaager coupon code now gives coupons"

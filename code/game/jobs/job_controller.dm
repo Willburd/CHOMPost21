@@ -994,7 +994,7 @@ GLOBAL_DATUM(job_master, /datum/controller/occupations)
 			.["msg"] = "will arrive at the station shortly"
 			return // If successful end here, otherwise fail over to standard spawning
 	// Outpost 21 edit end
-	if(spawnpos && istype(spawnpos) && spawnpos.turfs.len)
+	if(spawnpos && istype(spawnpos) && length(spawnpos.turfs))
 		SShaunting.influence(HAUNTING_RESLEEVE) // Outpost 21 edit - IT DA SPOOKY STATION! Comforting new crew!
 		if(spawnpos.check_job_spawning(rank))
 			.["turf"] = spawnpos.get_spawn_position()
