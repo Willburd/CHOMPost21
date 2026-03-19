@@ -736,15 +736,16 @@ GLOBAL_LIST_INIT(organ_rel_size, list(
 
 //Icon is used to occlude things like huds from the faulty byond context menu.
 //   http://www.byond.com/forum/?post=2336679
-var/global/image/backplane
-/hook/startup/proc/generate_backplane()
+GLOBAL_DATUM_INIT(backplane, /image, generate_backplane())
+/proc/generate_backplane()
+	var/image/backplane
 	backplane = image('icons/misc/win32.dmi')
 	backplane.alpha = 0
 	backplane.plane = -100
 	backplane.layer = MOB_LAYER-0.1
 	backplane.mouse_opacity = 0
 
-	return TRUE
+	return backplane
 
 /mob/proc/get_sound_env(var/spot, var/pressure_factor) // Outpost 21 edit(port) - AI can hear through holograms
 	if (pressure_factor < 0.5)
