@@ -5592,9 +5592,6 @@
 	},
 /turf/space/transit/east,
 /area/space)
-"ll" = (
-/turf/simulated/shuttle/wall/dark,
-/area/shuttle/specialops_overmap)
 "lm" = (
 /obj/structure/bed/chair/bay/shuttle{
 	dir = 1
@@ -6941,6 +6938,9 @@
 /obj/effect/floor_decal/fancy_shuttle{
 	fancy_shuttle_tag = "cc_drop1"
 	},
+/obj/structure/bed/chair/bay/shuttle{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/shuttle/specops/centcom)
 "oz" = (
@@ -6949,21 +6949,11 @@
 	},
 /area/shuttle/specops/centcom)
 "oA" = (
-/obj/structure/bed/chair/bay/shuttle{
-	dir = 1
-	},
 /obj/effect/floor_decal/fancy_shuttle{
 	fancy_shuttle_tag = "cc_drop1"
 	},
+/obj/machinery/computer/shuttle_control/specops,
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/shuttle/specops/centcom)
-"oB" = (
-/obj/machinery/computer/shuttle_control/specops{
-	pixel_y = -23
-	},
-/turf/simulated/wall/fancy_shuttle/window/turfpack/airless{
-	fancy_shuttle_tag = "cc_drop1"
-	},
 /area/shuttle/specops/centcom)
 "oE" = (
 /obj/machinery/atmospheric_field_generator/perma/underdoors,
@@ -28347,7 +28337,7 @@ nL
 nL
 oH
 nf
-oB
+oz
 oA
 oy
 ov
@@ -33853,9 +33843,9 @@ mN
 mN
 mN
 mN
-ll
-ll
-ll
+iO
+iO
+iO
 mN
 iO
 vU
@@ -33871,9 +33861,9 @@ ua
 nb
 iO
 mN
-ll
-ll
-ll
+iO
+iO
+iO
 mN
 mN
 mN
@@ -34016,9 +34006,9 @@ mN
 mN
 mN
 mN
-ll
-ll
-ll
+iO
+iO
+iO
 iO
 vV
 Kn
@@ -34032,9 +34022,9 @@ rQ
 qW
 qW
 iO
-ll
-ll
-ll
+iO
+iO
+iO
 mN
 mN
 mN
@@ -34179,8 +34169,8 @@ mN
 mN
 mN
 mN
-ll
-ll
+iO
+iO
 iO
 vY
 gt
@@ -34194,8 +34184,8 @@ rR
 qX
 qX
 iO
-ll
-ll
+iO
+iO
 mN
 mN
 mN
@@ -34342,7 +34332,7 @@ mN
 mN
 mN
 mN
-ll
+iO
 iO
 iO
 iO
@@ -34356,7 +34346,7 @@ iO
 iO
 iO
 iO
-ll
+iO
 mN
 mN
 mN
