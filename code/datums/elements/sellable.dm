@@ -143,6 +143,11 @@
 /datum/element/sellable/trolley_tank/calculate_sell_value(obj/source)
 	var/obj/vehicle/train/trolley_tank/tank = source
 
+	// Outpost 21 edit(port) begin - Tank price examine fix
+	if(!length(tank.reagents.reagent_list))
+		return 0
+	// Outpost 21 end
+
 	// Update export values
 	var/datum/reagent/R = tank.reagents.reagent_list[1]
 	var/reagent_value = FLOOR(R.volume * R.supply_conversion_value, 1)
