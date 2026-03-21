@@ -172,3 +172,7 @@
 #define TECHWEB_NODE_PRECUSORTOOLS "precursor tools" //CHOMPEDIT Add - Adds craftable precursor items
 #define TECHWEB_NODE_PARADOX_RIFT "paradox rift" //CHOMPEDIT Add - Adds Paradox Rift.
 //CHOMPEDIT End - Chomp Specific techwebs.
+
+// Outpost 21 edit begin - Outpost unique techwebs
+#define TECHWEB_NODE_OUTPOST_AMMO "outpost_ammo"
+// Outpost 21 edit end
