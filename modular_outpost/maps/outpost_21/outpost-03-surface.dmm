@@ -91963,7 +91963,7 @@
 	},
 /obj/machinery/computer/prisoner{
 	dir = 8;
-	pixel_x = 4
+	pixel_x = 5
 	},
 /turf/simulated/floor/carpet,
 /area/crew_quarters/heads/hos)

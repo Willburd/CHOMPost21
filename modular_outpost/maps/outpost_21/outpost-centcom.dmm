@@ -1589,6 +1589,17 @@
 	},
 /turf/simulated/floor/wood/sif,
 /area/centcom/living)
+"adE" = (
+/obj/structure/closet,
+/obj/item/clothing/under/ert,
+/obj/item/clothing/under/ert,
+/obj/item/clothing/under/ert,
+/obj/item/clothing/under/ert,
+/obj/item/clothing/under/ert,
+/obj/item/clothing/under/ert,
+/obj/item/clothing/under/ert,
+/turf/simulated/floor/wood,
+/area/centcom/specops)
 "adF" = (
 /obj/structure/table/woodentable,
 /obj/item/modular_computer/laptop,
@@ -4182,6 +4193,19 @@
 	icon_state = "milspec"
 	},
 /area/centcom/main_hall)
+"ajI" = (
+/obj/structure/table/rack,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/item/clothing/suit/armor/swat,
+/obj/item/clothing/mask/gas/swat,
+/obj/item/clothing/shoes/boots/swat,
+/obj/item/clothing/gloves/swat,
+/obj/item/clothing/head/helmet/swat,
+/obj/item/clothing/under/ert,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/centcom/specops)
 "ajJ" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/steel_grid,
@@ -5040,7 +5064,15 @@
 /turf/simulated/fitness,
 /area/centcom)
 "alA" = (
-/obj/structure/table/wooden_reinforced,
+/obj/structure/closet,
+/obj/item/clothing/under/ert,
+/obj/item/clothing/under/ert,
+/obj/item/clothing/under/ert,
+/obj/item/clothing/under/ert,
+/obj/item/clothing/under/ert,
+/obj/item/clothing/under/ert,
+/obj/item/clothing/under/ert,
+/obj/item/clothing/under/ert,
 /turf/simulated/floor/wood,
 /area/centcom/specops)
 "alB" = (
@@ -5325,6 +5357,7 @@
 /obj/item/clothing/suit/armor/swat/officer,
 /obj/item/storage/backpack/ert/commander,
 /obj/item/clothing/suit/armor/vest/ert/command,
+/obj/item/clothing/under/ert,
 /turf/simulated/floor/wood,
 /area/centcom/specops)
 "amh" = (
@@ -63739,7 +63772,7 @@ yfq
 yfq
 yfq
 yfq
-alA
+adE
 hPE
 akW
 alf
@@ -64546,7 +64579,7 @@ dHx
 jbz
 jbz
 jbz
-jbz
+ajI
 hsz
 acL
 hPE
@@ -64708,7 +64741,7 @@ dHx
 jbz
 jbz
 jbz
-jbz
+ajI
 hsz
 acM
 hPE
