@@ -425,7 +425,7 @@
 		return
 
 	// Outpost 21 edit(port) begin - Must be empty storage!
-	if(istype(O, /obj/item/storage) && lenght(O.contents))
+	if(istype(O, /obj/item/storage) && length(O.contents))
 		to_chat(user, "You cannot insert this item into \the [src] while it has things in it!")
 		return
 	// Outpost 21 edit end
