@@ -15,7 +15,7 @@
 	id = "awp_338_ap"
 	materials = list(MAT_STEEL = 5600, MAT_PLASTEEL = 1200)
 	build_type = AUTOLATHE
-	build_path = /obj/item/ammo_magazine/awp_338_ap
+	build_path = /obj/item/ammo_magazine/awp/ap
 	category = list(
 		RND_CATEGORY_INITIAL,
 		RND_CATEGORY_HACKED,
