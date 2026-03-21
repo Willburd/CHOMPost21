@@ -89,6 +89,8 @@
 		"idcardconsole",
 		"jukebox",
 		"request",
+		"request_computeralt", // Outpost 21 edit - Request console alt
+		"lockdown_console", // Outpost 21 edit - Lockdown console
 		// PDAs
 		"pda",
 		"cart_basic",
