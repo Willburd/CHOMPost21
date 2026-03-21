@@ -5,21 +5,15 @@
 	description = "Refinement and processing of alloys and ores to enhance their utility and value."
 	design_ids = list(
 		"autolathe",
-		// "pickaxe",
-		// "shovel",
+		"pickaxe",
+		"shovel",
+		"iceaxe",
 		// "conveyor_switch",
 		// "conveyor_belt",
 		// "mass_driver",
 		// "recycler",
 		// "stack_machine",
 		// "stack_console",
-		// "rglass",
-		// "plasmaglass",
-		// "plasmareinforcedglass",
-		// "plasteel",
-		// "titaniumglass",
-		// "plastitanium",
-		// "plastitaniumglass",
 		"retail_scanner", // Outpost 21 edit - Scanner
 	)
 
@@ -43,7 +37,8 @@
 		// "b_smelter",
 		// "b_refinery",
 		// "ore_redemption",
-		// "mining_equipment_vendor",
+		"mining_equipment_vendor",
+		"survey_equipment_vendor",
 		// "mech_mscanner",
 		// "superresonator",
 		// "mech_drill",
@@ -52,7 +47,6 @@
 		// "beacon",
 		// "telesci_gps",
 		// "mod_visor_meson",
-		// "mesons",
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_1_POINTS)
 	announce_channels = list(CHANNEL_SUPPLY)
@@ -119,18 +113,6 @@
 		"trailblazer_red",
 		"trailblazer_yellow",
 		"trailblazer_blue",
-	)
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_1_POINTS)
-	announce_channels = list(CHANNEL_SUPPLY)
-
-/datum/techweb_node/snow_clearing
-	id = TECHWEB_NODE_DEBRISREMOVAL
-	display_name = "Debris Removal"
-	description = "Development of tools for removing rocks, snow, ice, and many other forms of loose debris."
-	prereq_ids = list(TECHWEB_NODE_MATERIAL_PROC)
-	design_ids = list(
-		"shovel",
-		"iceaxe",
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_1_POINTS)
 	announce_channels = list(CHANNEL_SUPPLY)
