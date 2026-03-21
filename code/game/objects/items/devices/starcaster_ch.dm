@@ -19,7 +19,9 @@
 
 
 /obj/item/starcaster_news/attack_self(mob/user as mob)
-
+	. = ..(user)
+	if(.)
+		return TRUE
 	user.set_machine(src)
 	tgui_interact(user) //Activates tgui. Bless tgui.
 	return
@@ -43,7 +45,7 @@
 			"content" = loaded_article.stored_data,
 		)
 	else										// Viewing list of articles
-		for(var/datum/computer_file/data/news_article/F in ntnet_global.available_news)
+		for(var/datum/computer_file/data/news_article/F in GLOB.ntnet_global.available_news)
 			if(!show_archived && F.archived)
 				continue
 			all_articles.Add(list(list(
@@ -64,7 +66,7 @@
 			if(loaded_article)
 				return TRUE
 
-			for(var/datum/computer_file/data/news_article/N in ntnet_global.available_news)
+			for(var/datum/computer_file/data/news_article/N in GLOB.ntnet_global.available_news)
 				if(N.uid == text2num(params["uid"]))
 					loaded_article = N.clone()
 					break

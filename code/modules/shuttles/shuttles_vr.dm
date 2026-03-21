@@ -32,7 +32,7 @@
 
 /obj/machinery/computer/shuttle_control/belter
 	name = "belter control console"
-	req_one_access = list(ACCESS_MINING, ACCESS_MEDICAL_EQUIP) //Allows xenoarch, miners AND doctors to use it.
+	// req_one_access = list(ACCESS_MINING, ACCESS_MEDICAL_EQUIP) //Allows xenoarch, miners AND doctors to use it. // Outpost 21 edit - Removed belter req access
 	shuttle_tag = "Belter" //The scanning console needs to enable/disable this at will.
 	ai_control = TRUE
 

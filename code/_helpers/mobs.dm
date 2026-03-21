@@ -46,7 +46,9 @@
 			continue
 		if(S.name == DEVELOPER_WARNING_NAME)
 			continue
-		if( !(species in S.species_allowed))
+		if(!(species in S.species_allowed))
+			continue
+		if(!S.can_be_selected)
 			continue
 		valid_hairstyles[hairstyle] = GLOB.hair_styles_list[hairstyle]
 
@@ -67,7 +69,9 @@
 			continue
 		if(S.name == DEVELOPER_WARNING_NAME)
 			continue
-		if( !(species in S.species_allowed))
+		if(!(species in S.species_allowed))
+			continue
+		if(!S.can_be_selected)
 			continue
 
 		valid_facialhairstyles[facialhairstyle] = GLOB.facial_hair_styles_list[facialhairstyle]
@@ -98,16 +102,6 @@
 	else
 		return current_species.get_random_name(gender)
 
-/proc/random_skin_tone()
-	switch(pick(60;"caucasian", 15;"afroamerican", 10;"african", 10;"latino", 5;"albino"))
-		if("caucasian")		. = -10
-		if("afroamerican")	. = -115
-		if("african")		. = -165
-		if("latino")		. = -55
-		if("albino")		. = 34
-		else				. = rand(-185,34)
-	return min(max( .+rand(-25, 25), -185),34)
-
 /proc/skintone2racedescription(tone)
 	switch (tone)
 		if(30 to INFINITY)		return "albino"
@@ -134,7 +128,7 @@
 		else				return "unknown"
 
 /proc/RoundHealth(health)
-	var/list/icon_states = cached_icon_states(GLOB.ingame_hud_med)
+	var/list/icon_states = icon_states_fast(GLOB.ingame_hud_med)
 	for(var/icon_state in icon_states)
 		if(health >= text2num(icon_state))
 			return icon_state
@@ -157,13 +151,8 @@ Proc for attack log creation, because really why not
 			add_attack_logs(user,M,what_done,admin_notify)
 		return
 
-	var/user_str = key_name(user)
 	var/target_str = key_name(target)
 
-	if(ismob(user))
-		user.attack_log += text("\[[time_stamp()]\] [span_red("Attacked [target_str]: [what_done]")]")
-	if(ismob(target))
-		target.attack_log += text("\[[time_stamp()]\] [span_orange("Attacked by [user_str]: [what_done]")]")
 	log_combat(user, target, what_done)
 	if(admin_notify)
 		msg_admin_attack("[key_name_admin(user)] vs [target_str]: [what_done]")
@@ -181,72 +170,6 @@ Proc for attack log creation, because really why not
 		return pick(BP_HEAD, BP_L_HAND, BP_R_HAND, BP_L_FOOT, BP_R_FOOT, BP_L_ARM, BP_R_ARM, BP_L_LEG, BP_R_LEG)
 	else
 		return pick(BP_TORSO, BP_GROIN)
-
-/proc/do_mob(mob/user , mob/target, time = 30, target_zone = 0, uninterruptible = FALSE, progress = TRUE, ignore_movement = FALSE, exclusive = FALSE)
-	if(!user || !target)
-		return FALSE
-	if(!time)
-		return TRUE //Done!
-	if(user.status_flags & DOING_TASK)
-		to_chat(user, span_warning("You're in the middle of doing something else already."))
-		return FALSE //Performing an exclusive do_after or do_mob already
-	if(target?.flags & IS_BUSY)
-		to_chat(user, span_warning("Someone is already doing something with \the [target]."))
-		return FALSE
-	var/user_loc = user.loc
-	var/target_loc = target.loc
-
-	var/holding = user.get_active_hand()
-	var/datum/progressbar/progbar
-	if (progress)
-		progbar = new(user, time, target)
-
-	var/endtime = world.time+time
-	var/starttime = world.time
-
-	if(exclusive & TASK_USER_EXCLUSIVE)
-		user.status_flags |= DOING_TASK
-	if(target && exclusive & TASK_TARGET_EXCLUSIVE)
-		target.flags |= IS_BUSY
-
-	. = TRUE
-	while (world.time < endtime)
-		stoplag(1)
-		if (progress)
-			progbar.update(world.time - starttime)
-		if(!user || !target)
-			. = FALSE
-			break
-		if(uninterruptible)
-			continue
-
-		if(!user || user.incapacitated())
-			. = FALSE
-			break
-
-		if(user.loc != user_loc && !ignore_movement)
-			. = FALSE
-			break
-
-		if(target.loc != target_loc && !ignore_movement)
-			. = FALSE
-			break
-
-		if(user.get_active_hand() != holding)
-			. = FALSE
-			break
-
-		if(user.zone_sel && target_zone && user.zone_sel?.selecting != target_zone) // Outpost 21 addition - autodoc sanity check
-			. = FALSE
-			break
-
-	if(exclusive & TASK_USER_EXCLUSIVE)
-		user.status_flags &= ~DOING_TASK
-	if(exclusive & TASK_TARGET_EXCLUSIVE)
-		target?.status_flags &= ~IS_BUSY
-
-	if (progbar)
-		qdel(progbar)
 
 /**
  * Timed action involving one mob user. Target is optional.
@@ -275,12 +198,19 @@ Proc for attack log creation, because really why not
  * @param {icon} icon - The icon file of the cog. Default: 'icons/effects/progressbar.dmi'
  *
  * @param {iconstate} iconstate - The icon state of the cog. Default: "Cog"
+ *
+ * @param {string} target_zone - The target zone of the user. See _defines/mobs.dm. If the user swaps from this zone, we break the do_after
+ *
+ * @param {number} max_distance - The maximum distance we can be away from the target before the do_after breaks. Default to 1.
  */
-/proc/do_after(mob/user, delay, atom/target, timed_action_flags = NONE, progress = TRUE, datum/callback/extra_checks, interaction_key, max_interact_count = 1, hidden = FALSE, icon = 'icons/effects/progressbar.dmi', iconstate = "cog", max_distance = null)
+/proc/do_after(mob/user, delay, atom/target, timed_action_flags = NONE, progress = TRUE, datum/callback/extra_checks, interaction_key, max_interact_count = 1, hidden = FALSE, icon = 'icons/effects/progressbar.dmi', iconstate = "cog", target_zone, max_distance = null)
 	if(!user)
 		return FALSE
 	if(!isnum(delay))
 		CRASH("do_after was passed a non-number delay: [delay || "null"].")
+
+	if(!isatom(target))
+		CRASH("do_after was given a non-atom target! [target]")
 
 	if(!interaction_key && target)
 		interaction_key = target //Use the direct ref to the target
@@ -336,6 +266,7 @@ Proc for attack log creation, because really why not
 			|| (!(timed_action_flags & IGNORE_HELD_ITEM) && user.get_active_hand() != holding) \
 			|| (!(timed_action_flags & IGNORE_INCAPACITATED) && HAS_TRAIT(user, TRAIT_INCAPACITATED)) \
 			|| (max_distance && target && get_dist(user, target) > max_distance) \
+			|| (target_zone && user.zone_sel?.selecting != target_zone) \
 			|| (extra_checks && !extra_checks.Invoke()))
 			. = FALSE
 			break

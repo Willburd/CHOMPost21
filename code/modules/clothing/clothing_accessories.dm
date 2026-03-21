@@ -65,10 +65,10 @@
 				usr.put_in_l_hand(src)
 		src.add_fingerprint(usr)
 
-/obj/item/clothing/examine(var/mob/user)
+/obj/item/clothing/examine(mob/user)
 	. = ..(user)
 	if(LAZYLEN(accessories))
-		. += "It has the following attached: [counting_english_list(accessories, user)]" //CHOMPEdit
+		. += "It has the following attached: [counting_english_list(user.client, accessories)]"
 
 /**
  *  Attach accessory A to src
@@ -157,9 +157,3 @@
 	if(!LAZYLEN(accessories))
 		src.verbs -= /obj/item/clothing/proc/removetie_verb
 		accessories = null
-
-/obj/item/clothing/emp_act(severity)
-	if(LAZYLEN(accessories))
-		for(var/obj/item/clothing/accessory/A in accessories)
-			A.emp_act(severity)
-	..()

@@ -1382,6 +1382,19 @@
 	icon_add = 'icons/mob/human_face_alt_add.dmi'
 	icon_state = "serg_fairytail"
 
+/datum/sprite_accessory/hair/deceitful
+	name = "Deceitful"
+	icon_state = "deceitful"
+
+/datum/sprite_accessory/hair/deceitful_eyeless
+	name = "deceitful, eyeless"
+	icon_state = "deceitful_eyeless"
+
+/datum/sprite_accessory/hair/muscov
+	name = "Muscov"
+	icon_state = "muscov"
+
+
 // Vulpa stuffs
 
 /datum/sprite_accessory/hair/vulp_hair_kajam
@@ -1804,6 +1817,13 @@
 	name = "Tajaran Finger Curls"
 	icon_state = "hair_fingerwave"
 
+/datum/sprite_accessory/hair/dragonmane
+	name = "Dragon Mane"
+	icon_state = "hair_dragonmane"
+
+/datum/sprite_accessory/hair/dragonmaneshort
+	name = "Short Dragon Mane"
+	icon_state = "hair_dragonmaneshort"
 
 //Teshari things
 /datum/sprite_accessory/hair/teshari

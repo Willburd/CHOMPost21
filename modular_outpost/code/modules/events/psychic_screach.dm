@@ -6,7 +6,7 @@
 	announceWhen = endWhen + rand( 20, 30)
 
 /datum/event/psychic_screach/announce()
-	command_announcement.Announce("We just received readings that an unknown energy emission just passed through \the [location_name()]. Electrical systems appear to have been affected. Is anyone reading this?", "Anomaly Alert")
+	GLOB.command_announcement.Announce("We just received readings that an unknown energy emission just passed through \the [location_name()]. Electrical systems appear to have been affected. Is anyone reading this?", "Anomaly Alert")
 
 /datum/event/psychic_screach/start()
 	// SCARY
@@ -19,7 +19,7 @@
 		SShaunting.intense_world_haunt()
 
 	// Break telecoms for a bit
-	for(var/obj/machinery/telecomms/T in telecomms_list)
+	for(var/obj/machinery/telecomms/T in GLOB.telecomms_list)
 		T.emp_act(1)
 	for(var/obj/machinery/exonet_node/N in GLOB.machines)
 		N.emp_act(1)

@@ -87,14 +87,12 @@
 		if("bluespacerift")
 			GLOB.endgame_exits += loc
 			delete_me = TRUE
-		//VOREStation Add Start
 		if("vinestart")
 			GLOB.vinestart += loc
 			delete_me = TRUE
-		//VORE Station Add End
 		// outpost 21 edit begin - nuke item random spawns
 		if("nukeitem")
-			nukeitems += loc
+			GLOB.nukeitems += loc
 			delete_me = TRUE
 		// outpost 21 edit end
 
@@ -104,7 +102,7 @@
 		GLOB.landmarks_list += src
 
 /obj/effect/landmark/Destroy(var/force = FALSE)
-	if(force)
+	if(delete_me || force)
 		GLOB.landmarks_list -= src
 		return ..()
 	return QDEL_HINT_LETMELIVE
@@ -305,3 +303,11 @@
 /// In landmarks.dm and not unit_test.dm so it is always active in the mapping tools.
 /obj/effect/landmark/unit_test_top_right
 	name = "unit test zone top right"
+
+/obj/effect/landmark/bslocker
+	name = "bslocker spawn"
+
+/obj/effect/landmark/bslocker/Initialize(mapload)
+	. = ..()
+	var/obj/structure/closet/closet = new /obj/structure/closet/bluespace(loc)
+	GLOB.bslockers.Add(closet)

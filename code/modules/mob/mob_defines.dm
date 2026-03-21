@@ -21,8 +21,22 @@
 
 	var/datum/mind/mind
 
-	var/stat = 0 //Whether a mob is alive or dead. TODO: Move this to living - Nodrak
+	var/stat = CONSCIOUS //Whether a mob is alive or dead.
 	var/next_move = null // world.time when mob is next allowed to self-move.
+
+	/**
+	 * Whether and how a mob is incapacitated
+	 *
+	 * Normally being restrained, agressively grabbed, or in stasis counts as incapacitated
+	 * unless there is a flag being used to check if it's ignored
+	 *
+	 * * bitflags: (see code/__DEFINES/status_effects.dm)
+	 * * INCAPABLE_RESTRAINTS - if our mob is in a restraint (handcuffs)
+	 * * INCAPABLE_STASIS - if our mob is in stasis (stasis bed, etc.)
+	 * * INCAPABLE_GRAB - if our mob is being agressively grabbed
+	 *
+	**/
+	VAR_FINAL/incapacitated = NONE
 
 	//Not in use yet
 	var/obj/effect/organstructure/organStructure = null
@@ -42,6 +56,7 @@
 	var/atom/movable/screen/gun/run/gun_run_icon = null
 	var/atom/movable/screen/gun/mode/gun_setting_icon = null
 	var/atom/movable/screen/ling/chems/ling_chem_display = null
+	var/atom/movable/screen/borer/chems/borer_chem_display = null
 	var/atom/movable/screen/wizard/energy/wiz_energy_display = null
 	var/atom/movable/screen/wizard/instability/wiz_instability_display = null
 	var/atom/movable/screen/autowhisper_display = null
@@ -69,7 +84,6 @@
 	var/list/logging = list()
 
 	var/already_placed = 0.0
-	var/obj/machinery/machine = null
 	var/other_mobs = null
 	var/memory = ""
 	var/poll_answer = 0.0
@@ -168,6 +182,8 @@
 
 	var/voice_name = "unidentifiable voice"
 
+	var/list/ventcraw_item_admin_allow = null // If this is a list, it will be appended to the default list of items the mob is allowed to ventcrawl with
+
 	var/faction = FACTION_NEUTRAL //Used for checking whether hostile simple animals will attack you, possibly more stuff later
 	var/AI_ignores = FALSE  //Outpost 21 addition - makes a mob ignored by AI
 
@@ -192,7 +208,7 @@
 	var/mob/living/carbon/LAssailant = null
 
 //Wizard mode, but can be used in other modes thanks to the brand new "Give Spell" badmin button
-	var/list/spell/spell_list = list()
+	var/list/datum/spell/spell_list = list()
 
 //Changlings, but can be used in other modes
 //	var/obj/effect/proc_holder/changpower/list/power_list = list()
@@ -265,6 +281,6 @@
 	VAR_PROTECTED/list/resistances
 
 	var/custom_footstep = FOOTSTEP_MOB_SHOE
-	var/vent_crawl_time = 45 // Outpost 21 addition - vent crawling speed can be defined per mob
+	var/vent_crawl_time = 4.5 SECONDS // Time to animate entering a vent
 	VAR_PRIVATE/is_motion_tracking = FALSE // Prevent multiple unsubs and resubs, also used to check if the vis layer is enabled, use has_motiontracking() to get externally.
 	VAR_PRIVATE/wants_to_see_motion_echos = TRUE

@@ -37,7 +37,7 @@
 
 /obj/item/deskbell/attack_hand(mob/user)
 	// Outpost 21 edit begin - Remove radial menu
-	if(!isturf(loc) || anchored)
+	if(src == user.get_active_hand() || anchored)
 		if(!broken && check_ability(user))
 			ring(user)
 			add_fingerprint(user)
@@ -92,7 +92,7 @@
 		to_chat(user,span_notice("You gracefully ring [src]."))
 
 /obj/item/deskbell/proc/check_ability(mob/user)
-	if (ishuman(user))
+	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
 		var/obj/item/organ/external/temp = H.organs_by_name[BP_R_HAND]
 		if (H.hand)

@@ -62,10 +62,10 @@ GLOBAL_LIST_INIT(pitcher_plant_lure_messages, list(
 	var/last_lifechecks = 0 //Timing variable to limit vore/hungry proc calls
 	var/list/pitcher_plant_lure_messages = null
 
-	// Outpost 21 edit begin - muriki enzyme immunity
-	enzyme_affect = FALSE
+	// Outpost 21 edit begin - increased pitcher visibility
+	plane = ABOVE_PLANE
 	// Outpost 21 edit end
-	
+
 	can_be_drop_prey = FALSE
 
 /mob/living/simple_mob/vore/pitcher_plant //Putting vore variables separately because apparently that's tradition.
@@ -305,6 +305,7 @@ GLOBAL_LIST_INIT(pitcher_plant_lure_messages, list(
 	w_class = ITEMSIZE_SMALL
 	var/datum/seed/seed = null
 	var/obj/item/seeds/pit = null
+	special_handling = TRUE
 
 /obj/item/reagent_containers/food/snacks/pitcher_fruit/Initialize(mapload)
 	. = ..()
@@ -329,6 +330,9 @@ GLOBAL_LIST_INIT(pitcher_plant_lure_messages, list(
 	qdel(src)
 
 /obj/item/reagent_containers/food/snacks/pitcher_fruit/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	to_chat(user, span_notice("You plant the fruit."))
 	new /obj/machinery/portable_atmospherics/hydroponics/soil/invisible(get_turf(user),src.seed)
 	GLOB.seed_planted_shift_roundstat++

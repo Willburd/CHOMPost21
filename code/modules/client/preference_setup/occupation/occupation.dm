@@ -71,10 +71,10 @@
 	//CHOMPStation Add End
 	if(!(pref.player_alt_titles)) pref.player_alt_titles = new()
 
-	if(!job_master)
+	if(!GLOB.job_master)
 		return
 
-	for(var/datum/job/job in job_master.occupations)
+	for(var/datum/job/job in GLOB.job_master.occupations)
 		var/alt_title = pref.player_alt_titles[job.title]
 		if(alt_title && !(alt_title in job.alt_titles))
 			pref.player_alt_titles -= job.title
@@ -107,7 +107,7 @@
 			// reasons you can't select it
 			"banned" = !!jobban_isbanned(user, job.title),
 			"denylist_days" = !job.player_old_enough(user.client),
-			"available_in_days" = !job.available_in_days(user.client),
+			"available_in_days" = job.available_in_days(user.client),
 			"denylist_playtime" = !job.player_has_enough_playtime(user.client),
 			"available_in_hours" = job.available_in_playhours(user.client),
 			"denylist_whitelist" = !is_job_whitelisted(user, job.title),
@@ -188,7 +188,7 @@
 
 		if("job_info")
 			var/rank = params["rank"]
-			var/datum/job/job = job_master.GetJob(rank)
+			var/datum/job/job = GLOB.job_master.GetJob(rank)
 			if(!istype(job))
 				return TOPIC_NOACTION
 
@@ -219,6 +219,23 @@
 						dat += "<br>"
 						dat += html_encode(description[2])
 
+			// Outpost 21 edit begin - Show job rank
+			dat += "<hr style='clear:left;'>"
+
+			// Check for alt-title
+			var/obj/item/clothing/accessory/rank_eshui/rank_path = job.rank_pin
+			if(job && (alt_title in job.alt_titles))
+				var/datum/alt_title/alt = job.alt_titles[alt_title]
+				if(ispath(initial(alt.rank_pin)))
+					rank_path = initial(alt.rank_pin)
+			if(ispath(rank_path))
+				var/rank_name = initial(rank_path.rank)
+				dat += "Your rank is [rank_name].<br>"
+				dat += "[station_rank_guide(initial(rank_path.rank_level_index))]<br>"
+			else
+				dat += "This job has no rank or authority on station.<br>"
+			// Outpost 21 edit end
+
 			var/datum/browser/popup = new(user, "Job Info", "[capitalize(rank)]", 430, 520, src)
 			popup.set_content(jointext(dat,"<br>"))
 			popup.open()
@@ -240,7 +257,7 @@
 		pref.player_alt_titles[job.title] = new_title
 
 /datum/category_item/player_setup_item/occupation/proc/SetJob(mob/user, role, level)
-	var/datum/job/job = job_master.GetJob(role)
+	var/datum/job/job = GLOB.job_master.GetJob(role)
 	if(!job)
 		return 0
 

@@ -5,7 +5,7 @@
 	flags = RAD_SHIELDED|AREA_FLAG_IS_NOT_PERSISTENT|BLUE_SHIELDED|AREA_BLOCK_PHASE_SHIFT|AREA_BLOCK_GHOST_SIGHT|AREA_FORBID_EVENTS
 
 /area/mine/unexplored
-	flags = AREA_BLOCK_GHOST_SIGHT
+	flags = AREA_BLOCK_GHOST_SIGHT|AREA_FLAG_IS_NOT_PERSISTENT
 
 /area/supply/station
 	base_turf = /turf/simulated/floor/outdoors/mud/turfpack/muriki
@@ -161,10 +161,12 @@
 	base_turf = /turf/simulated/open
 
 /area/crew_quarters/locker
+	name = "\improper Pool Locker Room"
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	holomap_color = HOLOMAP_AREACOLOR_CIV
 
 /area/crew_quarters/locker/locker_toilet
+	name = "\improper Pool Bathroom"
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	holomap_color = HOLOMAP_AREACOLOR_CIV
 
@@ -183,28 +185,28 @@
 	color_grading = COLORTINT_WARM
 
 /area/crew_quarters/sleep/Dorm_2
-	holomap_color = HOLOMAP_AREACOLOR_DORMS
+	holomap_color = /area/crew_quarters/sleep/Dorm_1::holomap_color
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
-	flags = AREA_FIRE_SUPRESSION|AREA_ALLOW_LARGE_SIZE|AREA_SOUNDPROOF
-	color_grading = COLORTINT_WARM
+	flags = /area/crew_quarters/sleep/Dorm_1::flags
+	color_grading = /area/crew_quarters/sleep/Dorm_1::color_grading
 
 /area/crew_quarters/sleep/Dorm_3
-	holomap_color = HOLOMAP_AREACOLOR_DORMS
+	holomap_color = /area/crew_quarters/sleep/Dorm_1::holomap_color
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
-	flags = AREA_FIRE_SUPRESSION|AREA_ALLOW_LARGE_SIZE|AREA_SOUNDPROOF
-	color_grading = COLORTINT_WARM
+	flags = /area/crew_quarters/sleep/Dorm_1::flags
+	color_grading = /area/crew_quarters/sleep/Dorm_1::color_grading
 
 /area/crew_quarters/sleep/Dorm_4
-	holomap_color = HOLOMAP_AREACOLOR_DORMS
+	holomap_color = /area/crew_quarters/sleep/Dorm_1::holomap_color
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
-	flags = AREA_FIRE_SUPRESSION|AREA_ALLOW_LARGE_SIZE|AREA_SOUNDPROOF
-	color_grading = COLORTINT_WARM
+	flags = /area/crew_quarters/sleep/Dorm_1::flags
+	color_grading = /area/crew_quarters/sleep/Dorm_1::color_grading
 
 /area/crew_quarters/sleep/Dorm_5
-	holomap_color = HOLOMAP_AREACOLOR_DORMS
+	holomap_color = /area/crew_quarters/sleep/Dorm_1::holomap_color
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
-	flags = AREA_FIRE_SUPRESSION|AREA_ALLOW_LARGE_SIZE|AREA_SOUNDPROOF
-	color_grading = COLORTINT_WARM
+	flags = /area/crew_quarters/sleep/Dorm_1::flags
+	color_grading = /area/crew_quarters/sleep/Dorm_1::color_grading
 
 /area/crew_quarters/cafeteria
 	holomap_color = HOLOMAP_AREACOLOR_CIV
@@ -212,7 +214,7 @@
 
 /area/crew_quarters/coffee_shop
 	holomap_color = HOLOMAP_AREACOLOR_CIV
-	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
+	base_turf = /turf/simulated/open
 
 /area/crew_quarters/kitchen
 	holomap_color = HOLOMAP_AREACOLOR_HYDROPONICS
@@ -249,12 +251,12 @@
 
 /area/security/prison
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
-	flags = AREA_FIRE_SUPRESSION
+	flags = AREA_BLOCK_INSTANT_BUILDING | AREA_FIRE_SUPRESSION
 	lightswitch = 1
 
 /area/security/brig
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
-	flags = AREA_FIRE_SUPRESSION
+	flags = /area/security/prison::flags
 	color_grading = COLORTINT_DIM
 	lightswitch = 1
 
@@ -263,7 +265,7 @@
 	icon_state = "medbay2"
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
 	base_turf = /turf/simulated/open
-	flags = AREA_FIRE_SUPRESSION
+	flags = /area/medical/first_aid_station::flags
 	lightswitch = 1
 
 /area/constructionsite/medical
@@ -288,7 +290,7 @@
 /area/medical/medbay4
 	name = "\improper Medbay Hallway - Vox"
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
-	flags = AREA_FIRE_SUPRESSION
+	flags = AREA_BLOCK_INSTANT_BUILDING | AREA_FIRE_SUPRESSION
 
 /area/medical/psych
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
@@ -385,7 +387,7 @@
 /area/medical/first_aid_station
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
 	base_turf = /turf/simulated/open
-	flags = AREA_FIRE_SUPRESSION
+	flags = AREA_BLOCK_INSTANT_BUILDING | AREA_FIRE_SUPRESSION
 	lightswitch = 1
 
 /area/storage/tools

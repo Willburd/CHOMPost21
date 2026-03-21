@@ -24,7 +24,7 @@
 // Outpost 21 edit begin - Flesh terrain tweaked
 	icon = 'modular_outpost/icons/turf/stomach.dmi'
 	temperature = TERRAFORMER_BODY_TEMP
-	initial_flooring = /decl/flooring/flesh
+	initial_flooring = /datum/decl/flooring/flesh
 
 /turf/simulated/floor/flesh/Initialize(mapload)
 	. = ..()

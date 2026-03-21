@@ -17,13 +17,6 @@
 #define BLOODLOSS 0x10000
 #define WEIRD_ORGANS 0x20000 //CHOMPedit malignant
 
-// Outpost 21 addition begin
-/datum/category_item/catalogue/technology/medical_kiosk
-	name = "Medical Kiosk"
-	desc = "A standard issue medical kiosk, also called a \"save station\". Used for scanning injuries deeper than a normal health analyzer, in addition, it scans and saves the current neural network of crew for uploading into the station's database for resleeving. Don't forget to save!"
-	value = CATALOGUER_REWARD_TRIVIAL
-// Outpost 21 addition end
-
 /obj/machinery/medical_kiosk
 	name = "medical kiosk"
 	desc = "A helpful kiosk for finding out whatever is wrong with you."
@@ -199,7 +192,7 @@
 			problems |= ALCOHOL_POISONING
 		if(our_user.chem_effects[CE_ALCOHOL])
 			is_drunk = TRUE
-		if(our_user.vessel.total_volume < our_user.vessel.maximum_volume) //Bloodloss
+		if(our_user.vessel.total_volume < (our_user.vessel.maximum_volume*0.95)) //Bloodloss. Only happens at below 95% blood.
 			problems |= BLOODLOSS
 
 	if(!problems) //Minor stuff that we really don't care much about, but can be annoying! So let's tell people how to fix it. But only if they don't  have a health crisis going on!

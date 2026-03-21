@@ -19,6 +19,9 @@
 	flick(anim, animation)
 	if(do_gibs) gibs(loc, dna)
 
+	if (!QDELETED(src))
+		ghostize()
+
 	spawn(15)
 		if(animation)	qdel(animation)
 		if(src)			qdel(src)
@@ -43,6 +46,10 @@
 	new remains(loc)
 
 	GLOB.dead_mob_list -= src
+
+	if (!QDELETED(src))
+		ghostize()
+
 	spawn(15)
 		if(animation)	qdel(animation)
 		if(src)			qdel(src)
@@ -63,6 +70,10 @@
 	flick(anim, animation)
 
 	GLOB.dead_mob_list -= src
+
+	if (!QDELETED(src))
+		ghostize()
+
 	spawn(15)
 		if(animation)	qdel(animation)
 		if(src)			qdel(src)
@@ -71,7 +82,14 @@
 
 	if(stat == DEAD)
 		return 0
+
+	var/mob/living/simple_mob/animal/borer/has_worm = has_brain_worms()
+	if(has_worm) // This is our host's problem to deal with
+		has_worm.detatch()
+
 	SEND_SIGNAL(src, COMSIG_MOB_DEATH, gibbed)
+	SEND_GLOBAL_SIGNAL(COMSIG_GLOB_MOB_DEATH, src, gibbed)
+
 	if(src.loc && istype(loc,/obj/belly) || istype(loc,/obj/item/dogborg/sleeper) || istype(loc, /obj/item/clothing/shoes)) deathmessage = "no message" //VOREStation Add - Prevents death messages from inside mobs - CHOMPEdit: Added in-shoe as well
 	//CHOMPAdd Start - Muffle original body death on Mob TF death
 	if(src.loc && isliving(loc))

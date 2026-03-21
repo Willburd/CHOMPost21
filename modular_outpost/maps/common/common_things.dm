@@ -9,6 +9,17 @@
 /obj/machinery/camera/network/foundations
 	network = list(NETWORK_FOUNDATIONS)
 
+/obj/machinery/camera/network/waste
+	network = list(NETWORK_WASTE)
+
+/obj/machinery/camera/network/ai_sat
+	network = list(NETWORK_AISAT)
+
+/obj/machinery/camera/xray/ai_sat
+	network = list(NETWORK_AISAT)
+
+/obj/machinery/camera/motion/ai_sat
+	network = list(NETWORK_AISAT)
 
 // Do not put unique items, structures, or anything else in here. Only variations of existing stuff.
 /obj/structure/window/reinforced/polarized/full
@@ -85,7 +96,6 @@
 /obj/machinery/computer/security/exploration
 	name = "head mounted camera monitor"
 	desc = "Used to access the built-in cameras in helmets."
-	// icon_state = "syndicam" // Outpost 21 edit - CI wants this fixed
 	network = list(NETWORK_EXPLORATION)
 	circuit = null
 
@@ -108,7 +118,7 @@
 		playsound(get_turf(src), 'sound/effects/supermatter.ogg', 75, 1)
 	if(ismob(A) && prob(5))//lucky day
 		var/destturf = locate(rand(5,world.maxx-5),rand(5,world.maxy-5),pick(using_map.event_levels))
-		new /datum/teleport/instant(A, destturf, 0, 1, null, null, null, 'sound/effects/phasein.ogg')
+		do_teleport(A, destturf, 0, 1, asoundin = 'sound/effects/phasein.ogg', forced = TRUE)
 	else
 		return ..()
 

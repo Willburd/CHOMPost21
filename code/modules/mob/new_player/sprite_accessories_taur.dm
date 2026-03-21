@@ -93,6 +93,8 @@
 /mob/living/carbon/human/buckle_mob(mob/living/M, forced = FALSE, check_loc = TRUE)
 	if(forced)
 		return ..() // Skip our checks
+	if(is_incorporeal(src) || is_incorporeal(M))
+		return FALSE
 	if(!istaurtail(tail_style))
 		return FALSE
 	else
@@ -619,9 +621,9 @@
 
 /datum/sprite_accessory/tail/taur/feline/feline_2c_wag
 	name = "Feline 3-color (Taur, Fat vwag)"
-	icon_state = "feline2_s"
-	extra_overlay = "feline2_markings"
-	extra_overlay2 = "feline2_markings_2"
+	icon_state = "fatfeline2_s"
+	extra_overlay = "fatfeline2_markings"
+	extra_overlay2 = "fatfeline2_markings_2"
 	ani_state = "fatfeline_s"
 	extra_overlay_w = "fatfeline_markings_vwag"
 	extra_overlay2_w = "fatfeline_markings_vwag2"
@@ -1431,3 +1433,33 @@
 /datum/sprite_accessory/tail/taur/long_lizard/scaled
 	name = "Large Dragon Tail/W scales"
 	extra_overlay = "big_liz_mark"
+
+/datum/sprite_accessory/tail/taur/treeoak_roots
+	name = "Tree Roots (Oak)"
+	icon_state = "tree_oak_roots"
+	can_ride = 0
+
+/datum/sprite_accessory/tail/longtail/scug // Wawa
+	name = "Catslug Tail"
+	icon_state = "scug"
+
+/datum/sprite_accessory/tail/longtail/scug/dots
+	name = "Catslug Tail Dotted"
+	extra_overlay =  "scug_markings"
+
+/datum/sprite_accessory/tail/taur/teshari // chickenbutt
+	name = "Teshari dual-color (Taur)"
+	icon = 'icons/mob/human_races/sprite_accessories/taurs_teshari.dmi'
+	icon_loaf = 'icons/mob/vore/taurs_teshari_loaf.dmi'
+	icon_state = "tesh"
+	icon_sprite_tag = "tesh"
+	extra_overlay = "tesh_markings"
+	can_loaf = TRUE
+	belly_variant_when_loaf = TRUE
+	loaf_offset = 4
+	fullness_icons = 1
+	vore_tail_sprite_variant = "Tesh"
+
+/datum/sprite_accessory/tail/taur/teshari/alt
+	name = "Teshari dual-color Alt (Taur)"
+	extra_overlay = "tesh_markings_alt"

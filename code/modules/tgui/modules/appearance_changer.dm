@@ -95,16 +95,16 @@
 	. = ..()
 	if(owner == user || !customize_usr)
 		close_ui()
-		UnregisterSignal(owner, COMSIG_OBSERVER_MOVED)
+		UnregisterSignal(owner, COMSIG_MOVABLE_ATTEMPTED_MOVE)
 		SEND_SIGNAL(owner, COMSIG_HUMAN_DNA_FINALIZED) // Update any components using our saved appearance
 		owner = null
 		last_camera_turf = null
 		cut_data()
 
 /datum/tgui_module/appearance_changer/Destroy()
-	qdel(cam_screen)
+	QDEL_NULL(cam_screen)
 	QDEL_LIST(cam_plane_masters)
-	qdel(cam_background)
+	QDEL_NULL(cam_background)
 	return ..()
 
 /datum/tgui_module/appearance_changer/tgui_act(action, list/params, datum/tgui/ui, datum/tgui_state/state)
@@ -486,7 +486,7 @@
 					owner.species.deform = owner.species.get_icobase(get_deform = TRUE)
 					owner.species.vanity_base_fit = new_species
 					if(istype(owner.species, /datum/species/shapeshifter)) //TODO: See if this is still needed.
-						wrapped_species_by_ref["\ref[owner]"] = new_species
+						GLOB.wrapped_species_by_ref["\ref[owner]"] = new_species
 					owner.regenerate_icons()
 					generate_data(ui.user, owner)
 					changed_hook(APPEARANCECHANGER_CHANGED_RACE)
@@ -551,7 +551,7 @@
 				changed_hook(APPEARANCECHANGER_CHANGED_RACE)
 				return TRUE
 		if("species_sound")
-			var/list/possible_species_sound_types = species_sound_map
+			var/list/possible_species_sound_types = GLOB.species_sound_map
 			var/choice = tgui_input_list(ui.user, "Which set of sounds would you like to use? (Cough, Sneeze, Scream, Pain, Gasp, Death)", "Species Sounds", possible_species_sound_types)
 			if(choice && can_change(owner, APPEARANCE_MISC))
 				owner.species.species_sounds = choice
@@ -672,7 +672,7 @@
 		return
 	if(!ui)
 		owner.AddComponent(/datum/component/recursive_move)
-		RegisterSignal(owner, COMSIG_OBSERVER_MOVED, PROC_REF(update_active_camera_screen), TRUE)
+		RegisterSignal(owner, COMSIG_MOVABLE_ATTEMPTED_MOVE, PROC_REF(update_active_camera_screen), TRUE)
 		// Register map objects
 		user.client.register_map_obj(cam_screen)
 		for(var/plane in cam_plane_masters)
@@ -991,6 +991,8 @@
 		return FALSE
 	if(!isnull(X.species_allowed) && !(target.species.name in X.species_allowed) && (!istype(target.species, /datum/species/custom))) // Letting custom species access wings/ears/tails.
 		return FALSE
+	if(!X.can_be_selected && (!user || !check_rights_for(user.client, R_HOLDER))) //So staff can quickly change people's appearance for events.
+		return FALSE
 
 	if(LAZYLEN(X.ckeys_allowed) && !(user?.ckey in X.ckeys_allowed) && !(target.ckey in X.ckeys_allowed))
 		return FALSE
@@ -1024,6 +1026,11 @@
 		return STATUS_CLOSE
 	return ..()
 
+/datum/tgui_module/appearance_changer/vore/tgui_close(mob/user)
+	. = ..()
+	if(!QDELETED(src))
+		qdel(src)
+
 /datum/tgui_module/appearance_changer/vore/update_active_camera_screen()
 	cam_screen.vis_contents = list(owner)
 	cam_background.icon_state = "clear"
@@ -1032,7 +1039,8 @@
 
 /datum/tgui_module/appearance_changer/vore/tgui_close(mob/user)
 	. = ..()
-	QDEL_IN(src, 1)
+	if(!QDELETED(src))
+		qdel(src)
 
 /datum/tgui_module/appearance_changer/vore/changed_hook(flag)
 	var/mob/living/carbon/human/M = owner
@@ -1066,6 +1074,11 @@
 	flags = APPEARANCE_ALL_COSMETIC
 	customize_usr = TRUE
 
+/datum/tgui_module/appearance_changer/cocoon/tgui_close(mob/user)
+	. = ..()
+	if(!QDELETED(src))
+		qdel(src)
+
 /datum/tgui_module/appearance_changer/cocoon/tgui_status(mob/user, datum/tgui_state/state)
 	if(!istype(owner.loc, /obj/item/holder/micro))
 		return STATUS_CLOSE
@@ -1078,6 +1091,11 @@
 	name ="Appearance Editor (Superpower)"
 	flags = APPEARANCE_ALL_COSMETIC
 	customize_usr = TRUE
+
+/datum/tgui_module/appearance_changer/superpower/tgui_close(mob/user)
+	. = ..()
+	if(!QDELETED(src))
+		qdel(src)
 
 /datum/tgui_module/appearance_changer/superpower/tgui_status(mob/user, datum/tgui_state/state)
 	var/datum/gene/G = get_gene_from_trait(/datum/trait/positive/superpower_morph)
@@ -1092,6 +1110,11 @@
 	name ="Appearance Editor (Innate)"
 	flags = APPEARANCE_ALL_COSMETIC
 	customize_usr = TRUE
+
+/datum/tgui_module/appearance_changer/innate/tgui_close(mob/user)
+	. = ..()
+	if(!QDELETED(src))
+		qdel(src)
 
 /datum/tgui_module/appearance_changer/innate/tgui_status(mob/user, datum/tgui_state/state)
 	if(owner.stat != CONSCIOUS)
@@ -1121,7 +1144,7 @@
 /datum/tgui_module/appearance_changer/body_designer/proc/make_fake_owner()
 	// checks for monkey to tell if on the menu
 	if(owner)
-		UnregisterSignal(owner, COMSIG_OBSERVER_MOVED)
+		UnregisterSignal(owner, COMSIG_MOVABLE_ATTEMPTED_MOVE)
 		QDEL_NULL(owner)
 	owner = new(src)
 	owner.set_species(SPECIES_LLEILL)
@@ -1129,11 +1152,11 @@
 	owner.invisibility = INVISIBILITY_ABSTRACT
 	// Add listeners back
 	owner.AddComponent(/datum/component/recursive_move)
-	RegisterSignal(owner, COMSIG_OBSERVER_MOVED, PROC_REF(update_active_camera_screen), TRUE)
+	RegisterSignal(owner, COMSIG_MOVABLE_ATTEMPTED_MOVE, PROC_REF(update_active_camera_screen), TRUE)
 
 /datum/tgui_module/appearance_changer/body_designer/proc/load_record_to_body(var/datum/transhuman/body_record/current_project)
 	if(owner)
-		UnregisterSignal(owner, COMSIG_OBSERVER_MOVED)
+		UnregisterSignal(owner, COMSIG_MOVABLE_ATTEMPTED_MOVE)
 		QDEL_NULL(owner)
 	owner = current_project.produce_human_mob(src,FALSE,FALSE,"Designer [rand(999)]")
 	// Update some specifics from the current record
@@ -1147,4 +1170,10 @@
 		owner.custom_species = current_project.speciesname
 	// Add listeners back
 	owner.AddComponent(/datum/component/recursive_move)
-	RegisterSignal(owner, COMSIG_OBSERVER_MOVED, PROC_REF(update_active_camera_screen), TRUE)
+	RegisterSignal(owner, COMSIG_MOVABLE_ATTEMPTED_MOVE, PROC_REF(update_active_camera_screen), TRUE)
+
+/datum/tgui_module/appearance_changer/self_deleting
+/datum/tgui_module/appearance_changer/self_deleting/tgui_close(mob/user)
+	. = ..()
+	if(!QDELETED(src))
+		qdel(src)

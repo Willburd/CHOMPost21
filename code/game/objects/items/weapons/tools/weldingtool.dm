@@ -170,6 +170,9 @@
 		if (istype(location, /turf))
 			location.hotspot_expose(700, 50, 1)
 /obj/item/weldingtool/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	setWelding(!welding, user)
 
 //Returns the amount of fuel in the welder
@@ -636,7 +639,7 @@
 		..()
 
 /obj/item/weldingtool/electric/proc/get_external_power_supply()
-	if(istype(src.loc, /obj/item/robotic_multibelt)) //We are in a multibelt
+	if(isrobotmultibelt(src.loc)) //We are in a multibelt
 		if(istype(src.loc.loc, /mob/living/silicon/robot))  //We are in a multibelt that is in a robot! This is sanity in case someone spawns a multibelt in via admin commands.
 			var/mob/living/silicon/robot/R = src.loc.loc
 			return R.cell

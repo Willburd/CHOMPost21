@@ -63,9 +63,6 @@
 	//used for optional self-objectives that antagonists can give themselves, which are displayed at the end of the round.
 	var/ambitions
 
-	//used to store what traits the player had picked out in their preferences before joining, in text form.
-	var/list/traits = list()
-
 	var/datum/religion/my_religion
 
 /datum/mind/New(var/key)
@@ -77,10 +74,10 @@
 /datum/mind/proc/transfer_to(mob/living/new_character, force = FALSE)
 	if(!istype(new_character))
 		log_world("## DEBUG: transfer_to(): Some idiot has tried to transfer_to() a non mob/living mob. Please inform Carn")
-	var/datum/component/antag/changeling/comp
+	var/datum/component/antag/changeling/changeling_comp
 	if(current)
-		comp = is_changeling(current)			//remove ourself from our old body's mind variable
-		if(comp)
+		changeling_comp = is_changeling(current)			//remove ourself from our old body's mind variable
+		if(changeling_comp)
 			current.remove_changeling_powers()
 			remove_verb(current, /mob/proc/EvolutionMenu)
 		current.mind = null
@@ -91,14 +88,22 @@
 	current = new_character		//link ourself to our new body
 	new_character.mind = src	//and link our new body to ourself
 
-	if(comp)
+	// Handle mode/antag specific respawns
+	if(changeling_comp)
 		new_character.make_changeling()
+
+	if(learned_spells)
+		for(var/datum/spell/spell_to_add in learned_spells)
+			new_character.add_spell(spell_to_add)
 
 	if(active || force)
 		new_character.key = key		//now transfer the key to link the client to our new body
 
 	if(new_character.client)
 		new_character.client.init_verbs() // re-initialize character specific verbs
+
+	update_antag_icons(src)
+
 
 /datum/mind/proc/store_memory(new_text)
 	memory += "[new_text]<BR>"
@@ -495,6 +500,12 @@
 			if(G.can_reenter_corpse || even_if_they_cant_reenter)
 				return G
 			break
+
+///Proc that FORCIBLY grabs a client no matter where they are and returns their currently inhabited mob.
+/datum/mind/proc/forcibly_grab_client()
+	for(var/mob/mob_to_grab in GLOB.player_list)
+		if(mob_to_grab.ckey == loaded_from_ckey)
+			return mob_to_grab
 
 /datum/mind/proc/grab_ghost(force)
 	var/mob/observer/dead/G = get_ghost(even_if_they_cant_reenter = force)

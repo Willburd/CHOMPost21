@@ -98,16 +98,6 @@
 				"rad" = 100
 				)
 
-	armor_soak = list(
-				"melee" = 5,
-				"bullet" = 5,
-				"laser" = 5,
-				"energy" = 0,
-				"bomb" = 0,
-				"bio" = 0,
-				"rad" = 0
-				)
-
 	slime_mutation = list(
 			/mob/living/simple_mob/slime/xenobio/silver,
 			/mob/living/simple_mob/slime/xenobio/yellow,
@@ -450,7 +440,7 @@
 	for(var/mob/living/L in view(1, src))
 		if(L.stat == DEAD || !IIsAlly(L))
 			continue
-		if(L == src || istype(L, /mob/living/simple_mob/slime/xenobio/amber)) // Don't feed themselves, or it is impossible to stop infinite slimes without killing all of the ambers.
+		if(L == src || (istype(L, /mob/living/simple_mob/slime/xenobio/amber) && prob(95))) // Don't feed themselves, or it is impossible to stop infinite slimes without killing all of the ambers. // Outpost 21 edit - Allow rarely feeding other ambers
 			continue
 		if(istype(L, /mob/living/simple_mob/slime/xenobio))
 			var/mob/living/simple_mob/slime/xenobio/X = L

@@ -110,6 +110,7 @@
 				H.sync_organ_dna()
 			M.regenerate_icons()
 			// Traitgenes edit end
+			M.check_mutation_cascade_gib() // Outpost 21 edit - mutation cascade trait
 	qdel(src)
 	return uses
 

@@ -128,9 +128,9 @@
 	if(!surpress_send) send_status()
 
 
-/obj/machinery/door/airlock/close(surpress_send)
+/obj/machinery/door/airlock/close(var/forced= FALSE, var/ignore_safties = FALSE, var/crush_damage = DOOR_CRUSH_DAMAGE)
 	. = ..()
-	if(!surpress_send) send_status()
+	if(!forced) send_status()
 
 
 /obj/machinery/door/airlock/Bumped(atom/AM)
@@ -270,6 +270,9 @@
 		return TRUE
 	return ..()
 
+/obj/machinery/airlock_sensor/allow_pai_interaction(mob/living/silicon/pai/user, proximity_flag)
+	return proximity_flag
+
 /obj/machinery/airlock_sensor/airlock_interior
 	command = "cycle_interior"
 
@@ -361,6 +364,8 @@
 		radio_connection.post_signal(src, signal, range = AIRLOCK_CONTROL_RANGE, radio_filter = RADIO_AIRLOCK)
 	flick("access_button_cycle", src)
 
+/obj/machinery/access_button/allow_pai_interaction(mob/living/silicon/pai/user, proximity_flag)
+	return proximity_flag
 
 /obj/machinery/access_button/proc/set_frequency(new_frequency)
 	SSradio.remove_object(src, frequency)

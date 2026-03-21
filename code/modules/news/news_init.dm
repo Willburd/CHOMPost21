@@ -5,7 +5,8 @@ GLOBAL_DATUM_INIT(news_data, /datum/lore/news, new)
 	//CreateFeedChannel("Vir News Network", "Oculum Broadcast", 1, 1, "Updates from the Vir News Network!") //VOREStation Removal
 	// Outpost 21 edit - Use ours
 	CreateFeedChannel("Station Announcements", "Eshui Administration", 1, 1, "New Station Announcement Available")
-	CreateFeedChannel_FromFile("The Out-Post", "ESHUI Publishing Division", 'news_feed/outpost_vol_2.json')
+	CreateFeedChannel_FromFile("The Out-Post", "ESHUI Publishing Division", 'news_feed/outpost_vol_3.json')
+	CreateFeedChannel_FromFile("The Out-Post Vol-2 Archive", "ESHUI Publishing Division", 'news_feed/outpost_vol_2.json')
 	CreateFeedChannel_FromFile("The Out-Post Vol-1 Archive", "ESHUI Publishing Division", 'news_feed/outpost_vol_1.json')
 
 /datum/lore/news
@@ -16,7 +17,7 @@ GLOBAL_DATUM_INIT(news_data, /datum/lore/news, new)
 /datum/lore/news/New()
 	..()
 	spawn(50) //Give it a second or it gets fucky.
-		for(var/datum/feed_channel/F in news_network.network_channels)
+		for(var/datum/feed_channel/F in GLOB.news_network.network_channels)
 			if(F.channel_name == "Vir News Network")
 				station_newspaper = F
 				break
@@ -28,7 +29,7 @@ GLOBAL_DATUM_INIT(news_data, /datum/lore/news, new)
 		newsindex = news_codex.newsindex
 
 /datum/lore/news/proc/fill_codex_news()
-	if(!news_network)
+	if(!GLOB.news_network)
 		log_runtime("Load: Could not find newscaster network.")
 		return
 
@@ -38,6 +39,6 @@ GLOBAL_DATUM_INIT(news_data, /datum/lore/news, new)
 
 	//Feed the Lore Codex into the News Machine
 	for(var/datum/lore/codex/child in news_codex.children)
-		news_network.SubmitArticle("[child.data]", "Oculum", "Vir News Network", null, 1, "", "[child.name]")
+		GLOB.news_network.SubmitArticle("[child.data]", "Oculum", "Vir News Network", null, 1, "", "[child.name]")
 
 	return 1

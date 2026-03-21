@@ -729,6 +729,7 @@
 	adj_dizzy = 0
 	adj_drowsy = -5
 	adj_sleepy = -10
+	dermal_absorption = 0.15 //Nukies are build different.
 
 	glass_name = REAGENT_ID_NUKIE
 	glass_desc = "A drink to perk you up and refresh you!"
@@ -878,7 +879,7 @@
 				nif.stat = NIF_INSTALLING
 			nif.repair(removed)
 		else if(prob(5))
-			M.confused = max(M.confused, 20)
+			M.SetConfused(max(M.confused, 20))
 			M.emote(pick("shudders", "seems lost", "blanks for a moment"))
 	*/
 	// Outpost 21 edit begin - makes super jittery and speedy for small time

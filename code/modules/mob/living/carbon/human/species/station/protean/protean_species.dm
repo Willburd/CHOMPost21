@@ -19,7 +19,7 @@
 
 	flags =            NO_DNA | NO_SLEEVE | NO_SLIP | NO_MINOR_CUT | NO_HALLUCINATION | NO_INFECT | NO_PAIN
 	appearance_flags = HAS_SKIN_COLOR | HAS_EYE_COLOR | HAS_HAIR_COLOR | HAS_UNDERWEAR | HAS_LIPS
-	spawn_flags		 = SPECIES_IS_RESTRICTED // SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_WHITELIST_SELECTABLE Outpost 21 edit - restricted
+	spawn_flags		 = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_WHITELIST_SELECTABLE
 	health_hud_intensity = 2
 	num_alternate_languages = 3
 	species_language = LANGUAGE_EAL
@@ -128,13 +128,14 @@
 		"dragon_eyesNormal" = "#FFFFFF"
 	)
 	var/list/dullahan_overlays = list(
-		"dullahanbody" = "#FFFFFF",
-		"dullahanhead" = "#FFFFFF",
-		"dullahanmetal" = "#FFFFFF",
-		"dullahaneyes" = "#FFFFFF",
-		"dullahandecals" = "#FFFFFF",
-		"dullahanextended" = "#FFFFFF"
-		// loads the icons from the DMI file in that order on spawn. they are overlay 1-6.
+		"dullahanbody" = "#FFFFFF", // body 1
+		"dullahaneyes" = "#FFFFFF", // eyes 2
+		"dullahanmetal" = "#FFFFFF", // metal 3
+		"dullahanhead" = "#FFFFFF", // head 4
+		"dullahanlightsempty" = "#FFFFFF", // lights 5
+		"dullahanextended" = "#FFFFFF", // breastplate part only on 6, do not use for anything else
+		"dullahanclothesempty" = "#FFFFFF" // clothes 7
+		// loads the icons from the DMI file in that order on spawn. they are overlay 1-6. specifically it uses those names in the DMI file.
 	)
 	var/pseudodead = 0
 

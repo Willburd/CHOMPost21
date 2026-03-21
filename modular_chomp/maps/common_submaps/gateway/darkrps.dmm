@@ -2348,7 +2348,6 @@
 	icon_state = "1-2"
 	},
 /mob/living/simple_mob/humanoid/merc/ranged/sniper{
-	ai_holder_type = /datum/ai_holder/simple_mob/merc/eclipse/ranged/sniper;
 	special_attack_max_range = 15
 	},
 /turf/simulated/floor/concrete{
@@ -8715,7 +8714,6 @@
 /area/awaymission/darkrp/outside/plaza)
 "lDC" = (
 /mob/living/simple_mob/humanoid/merc/ranged/sniper{
-	ai_holder_type = /datum/ai_holder/simple_mob/merc/eclipse/ranged/sniper;
 	special_attack_max_range = 15
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -13158,11 +13156,7 @@
 /obj/structure/cable/green{
 	icon_state = "0-4"
 	},
-/obj/machinery/power/smes/buildable{
-	input_attempt = 1;
-	inputting = 1;
-	outputting = 1
-	},
+/obj/machinery/power/smes/buildable/max_input_max_output,
 /turf/simulated/floor/outdoors/sidewalk/slab{
 	movement_cost = 0;
 	temperature = 293.15

@@ -253,10 +253,10 @@
 
 	user.visible_message(span_notice("\The [user] searches for specific cards in \the [src], and draws [cards_to_draw.len]."))
 
-/obj/item/deck/CtrlClick(mob/user)
+/obj/item/deck/item_ctrl_click(mob/user)
 	deal_card()
 
-/obj/item/deck/CtrlShiftClick(mob/user)
+/obj/item/deck/click_ctrl_shift(mob/user)
 	deal_card_multi()
 
 /obj/item/deck/proc/deal_at(mob/user, mob/target, dcard) // Take in the no. of card to be dealt
@@ -269,8 +269,7 @@
 		H.concealed = 1
 		H.update_icon()
 	if(user==target)
-		var/datum/gender/TU = GLOB.gender_datums[user.get_visible_gender()]
-		user.visible_message(span_notice("\The [user] deals [dcard] card(s) to [TU.himself]."))
+		user.visible_message(span_notice("\The [user] deals [dcard] card(s) to [user.p_themselves()]."))
 	else
 		user.visible_message(span_notice("\The [user] deals [dcard] card(s) to \the [target]."))
 	H.throw_at(get_step(target,target.dir),10,1,H)
@@ -306,6 +305,9 @@
 	..()
 
 /obj/item/deck/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	shuffle(user)
 
 
@@ -330,7 +332,7 @@
 	else
 		return
 
-/obj/item/deck/AltClick(mob/user)
+/obj/item/deck/click_alt(mob/user)
 	if(user.stat || !Adjacent(user))
 		return
 	shuffle(user)
@@ -389,7 +391,10 @@
 	pickup_sound = 'sound/items/pickup/paper.ogg'
 
 
-/obj/item/pack/attack_self(var/mob/user as mob)
+/obj/item/pack/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	user.visible_message(span_danger("[user] rips open \the [src]!"))
 	var/obj/item/hand/H = new()
 
@@ -452,7 +457,10 @@
 	if(!cards.len)
 		qdel(src)
 
-/obj/item/hand/attack_self(var/mob/user as mob)
+/obj/item/hand/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	concealed = !concealed
 	update_icon()
 	user.visible_message(span_notice("\The [user] [concealed ? "conceals" : "reveals"] their hand."))
@@ -570,10 +578,10 @@
 	..()
 	src.update_icon()
 
-/obj/item/hand/CtrlClick(mob/user)
+/obj/item/hand/item_ctrl_click(mob/user)
 	if(user.stat || !Adjacent(user))
 		return
 	discard()
 
-/obj/item/hand/AltClick(mob/user)
+/obj/item/hand/click_alt(mob/user)
 	Removecard()

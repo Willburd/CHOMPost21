@@ -27,3 +27,12 @@
 		reagents.add_reagent(REAGENT_ID_EXPIREDMEDICINE, 5)
 	reagents.add_reagent(REAGENT_ID_STIMM, 10)
 	color = reagents.get_color()
+
+/obj/item/reagent_containers/pill/tercozolam
+	name = "Tercozolam (5u)"
+	desc = "Used in the treatment of schizophrenia, and periodic delerium. Medicate cautiously."
+	icon_state = "pill10"
+
+/obj/item/reagent_containers/pill/tercozolam/Initialize(mapload)
+	. = ..()
+	reagents.add_reagent(REAGENT_ID_TERCOZOLAM, 5)

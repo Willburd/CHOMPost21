@@ -1300,6 +1300,7 @@
 /obj/structure/reagent_dispensers/acid{
 	pixel_x = 32
 	},
+/obj/machinery/power/emitter,
 /turf/simulated/floor/tiled/steel_grid,
 /area/rnd/research)
 "cx" = (
@@ -3092,9 +3093,8 @@
 	color = "#42038a";
 	icon_state = "0-2"
 	},
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Substation - Exploration";
-	output_attempt = 0
+/obj/machinery/power/smes/buildable/disable_output{
+	RCon_tag = "Substation - Exploration"
 	},
 /turf/simulated/floor,
 /area/maintenance/stellardelight/substation/exploration)
@@ -3683,9 +3683,8 @@
 	icon_state = "0-2"
 	},
 /obj/structure/cable/pink,
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Substation - Security";
-	output_attempt = 0
+/obj/machinery/power/smes/buildable/disable_output{
+	RCon_tag = "Substation - Security"
 	},
 /turf/simulated/floor,
 /area/maintenance/stellardelight/substation/security)
@@ -6770,11 +6769,10 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/door/airlock/angled_bay/standard/glass{
-	door_color = "#8c1d11";
-	name = "Security Processing";
+/obj/machinery/door/airlock/angled_bay/standard/color/security{
 	req_access = list(63);
-	stripe_color = "#d27428"
+	name = "Security Processing";
+	id_tag = "sec_processing"
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/security/security_processing)
@@ -9834,6 +9832,8 @@
 /obj/item/pen,
 /obj/item/packageWrap,
 /obj/item/packageWrap,
+/obj/item/multitool/scioutpost,
+/obj/item/retail_scanner/science,
 /turf/simulated/floor/tiled/steel_grid,
 /area/rnd/research)
 "tP" = (
@@ -11866,8 +11866,14 @@
 "yq" = (
 /obj/structure/table/standard,
 /obj/machinery/recharger,
-/obj/item/retail_scanner/science,
-/obj/item/multitool/scioutpost,
+/obj/item/storage/box/anomaly{
+	pixel_y = 10;
+	pixel_x = -10
+	},
+/obj/item/storage/box/anomaly{
+	pixel_y = 2;
+	pixel_x = -10
+	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/rnd/research)
 "yr" = (
@@ -11909,6 +11915,7 @@
 /obj/machinery/disposal/wall{
 	dir = 1
 	},
+/obj/machinery/anomaly_harvester,
 /turf/simulated/floor/tiled/steel_grid,
 /area/rnd/research)
 "yw" = (
@@ -12840,6 +12847,13 @@
 	dir = 4
 	},
 /obj/effect/landmark/start/security,
+/obj/machinery/button/remote/airlock{
+	pixel_y = 32;
+	pixel_x = 36;
+	id = "sec_processing";
+	specialfunctions = 4;
+	name = "Door Control"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/security/security_processing)
 "Ax" = (
@@ -15595,9 +15609,8 @@
 /obj/structure/cable/green{
 	color = "#42038a"
 	},
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Substation - Research";
-	output_attempt = 0
+/obj/machinery/power/smes/buildable/disable_output{
+	RCon_tag = "Substation - Research"
 	},
 /turf/simulated/floor,
 /area/maintenance/stellardelight/substation/research)
@@ -19166,9 +19179,8 @@
 /obj/structure/cable/yellow{
 	icon_state = "0-2"
 	},
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Substation - Cargo";
-	output_attempt = 0
+/obj/machinery/power/smes/buildable/disable_output{
+	RCon_tag = "Substation - Cargo"
 	},
 /turf/simulated/floor,
 /area/maintenance/stellardelight/substation/cargo)
@@ -19929,9 +19941,8 @@
 /obj/structure/cable/green{
 	icon_state = "0-2"
 	},
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Substation - Civilian";
-	output_attempt = 0
+/obj/machinery/power/smes/buildable/disable_output{
+	RCon_tag = "Substation - Civilian"
 	},
 /turf/simulated/floor,
 /area/maintenance/stellardelight/substation/civilian)
@@ -20032,9 +20043,8 @@
 	icon_state = "0-2"
 	},
 /obj/structure/cable/orange,
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Substation - Atmospherics";
-	output_attempt = 0
+/obj/machinery/power/smes/buildable/disable_output{
+	RCon_tag = "Substation - Atmospherics"
 	},
 /turf/simulated/floor,
 /area/maintenance/stellardelight/substation/atmospherics)
@@ -21639,9 +21649,8 @@
 /obj/structure/cable/white{
 	icon_state = "0-2"
 	},
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Substation - Medical";
-	output_attempt = 0
+/obj/machinery/power/smes/buildable/disable_output{
+	RCon_tag = "Substation - Medical"
 	},
 /turf/simulated/floor,
 /area/maintenance/stellardelight/substation/medical)
@@ -22241,6 +22250,7 @@
 "UA" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/rnd/destructive_analyzer,
 /turf/simulated/floor/tiled/dark,
 /area/rnd/research)
 "UB" = (

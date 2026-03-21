@@ -56,6 +56,39 @@
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
 
+/datum/design_techweb/caselessrifle_prototype
+	name = "Caseless Rifle"
+	id = "caselessrifle"
+	materials = list(MAT_STEEL = 7000, MAT_TITANIUM = 4000)
+	build_path = /obj/item/gun/projectile/caseless/prototype
+	build_type = PROTOLATHE
+	category = list(
+		RND_CATEGORY_WEAPONS
+	)
+	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE | DEPARTMENT_BITFLAG_SECURITY
+
+/datum/design_techweb/caselessrifle_ammo
+	name = "Caseless Ammo"
+	id = "caselessrifle_ammo"
+	materials = list(MAT_PHORON = 10000, MAT_STEEL = 4000)
+	build_path = /obj/item/ammo_magazine/m5mmcaseless
+	build_type = PROTOLATHE
+	category = list(
+		RND_CATEGORY_WEAPONS
+	)
+	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE | DEPARTMENT_BITFLAG_SECURITY
+
+/datum/design_techweb/caselessrifle_ammo_stun
+	name = "Caseless Ammo - Stun"
+	id = "caselessrifle_ammo_stun"
+	materials = list(MAT_PHORON = 10000, MAT_STEEL = 4000)
+	build_path = /obj/item/ammo_magazine/m5mmcaseless/stun
+	build_type = PROTOLATHE
+	category = list(
+		RND_CATEGORY_WEAPONS
+	)
+	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE | DEPARTMENT_BITFLAG_SECURITY
+
 /datum/design_techweb/lasercannon
 	name = "Laser Cannon"
 	desc = "The lasing medium of this prototype is enclosed in a tube lined with uranium-235 and subjected to high neutron flux in a nuclear reactor core."
@@ -68,6 +101,20 @@
 		RND_CATEGORY_WEAPONS + RND_SUBCATEGORY_WEAPONS_RANGED
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_SECURITY | DEPARTMENT_BITFLAG_SCIENCE
+
+/**/ //CHOMPEnable
+/datum/design_techweb/cyrogun
+	name = "Cryo Gun"
+	desc = "An improperly researched and poorly built weapon, specialized in utlizing frost offensively.."
+	id = "cryogun"
+	materials = list(MAT_GLASS = 3000, MAT_MORPHIUM = 4000, MAT_DURASTEEL = 6000, MAT_LEAD = 6000, MAT_METALHYDROGEN = 3000)
+	build_path = /obj/item/gun/energy/freezegun
+	build_type = PROTOLATHE
+	category = list(
+		RND_CATEGORY_WEAPONS
+	)
+	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE | DEPARTMENT_BITFLAG_SECURITY
+/**/ //CHOMPEnable
 
 /datum/design_techweb/decloner
 	name = "Decloner"
@@ -376,6 +423,19 @@
 	build_type = PROTOLATHE
 	materials = list(MAT_STEEL = 6000, MAT_GLASS = 4000)
 	build_path = /obj/item/gun/energy/netgun/shrink
+	category = list(
+		RND_CATEGORY_WEAPONS + RND_SUBCATEGORY_WEAPONS_RANGED
+	)
+	departmental_flags = DEPARTMENT_BITFLAG_SECURITY | DEPARTMENT_BITFLAG_SCIENCE
+
+/datum/design_techweb/bola_gun
+	name = "Bola Blaster"
+	desc  = "The \"Bola Blaster\" is an energy net projector designed to immobilize humanoid creatures."
+	id = "bolablaster"
+	// req_tech = list(TECH_COMBAT = 3, TECH_MATERIAL = 5, TECH_MAGNET = 3)
+	build_type = PROTOLATHE
+	materials = list(MAT_STEEL = 6000, MAT_GLASS = 3000)
+	build_path = /obj/item/gun/energy/bolagun
 	category = list(
 		RND_CATEGORY_WEAPONS + RND_SUBCATEGORY_WEAPONS_RANGED
 	)
@@ -870,6 +930,17 @@
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_MEDICAL | DEPARTMENT_BITFLAG_SCIENCE
 
+/datum/design_techweb/medigun_constant
+	name = "Prototype Bluespace Medigun Backpack"
+	id = "medigun_constant"
+	build_type = PROTOLATHE
+	materials = list(MAT_STEEL = 8000, MAT_PLASTIC = 8000, MAT_GLASS = 5000, MAT_SILVER = 1000, MAT_GOLD = 1000, MAT_URANIUM = 1000)
+	build_path = /obj/item/medigun_backpack
+	category = list(
+		RND_CATEGORY_WEAPONS + RND_SUBCATEGORY_WEAPONS_RANGED
+	)
+	departmental_flags = DEPARTMENT_BITFLAG_MEDICAL | DEPARTMENT_BITFLAG_SCIENCE
+
 /datum/design_techweb/upgradeAOE
 	name = "Mining Explosion Upgrade"
 	desc = "An area of effect upgrade for the Proto-Kinetic Accelerator."
@@ -932,6 +1003,17 @@
 	build_type = PROTOLATHE
 	materials = list(MAT_STEEL = 3500, MAT_GLASS = 3500, MAT_PHORON = 1500, MAT_DIAMOND = 1500)
 	build_path = /obj/item/xenobio/monkey_gun
+	category = list(
+		RND_CATEGORY_WEAPONS + RND_SUBCATEGORY_WEAPONS_RANGED
+	)
+	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
+
+/datum/design_techweb/anomaly_gun
+	name = "Handheld Anomalous Particle Releaser"
+	id = "anom_gun"
+	build_type = PROTOLATHE
+	materials = list(MAT_STEEL = 4000, MAT_GLASS = 3500, MAT_PHORON = 1500, MAT_DIAMOND = 1500, MAT_URANIUM = 1500)
+	build_path = /obj/item/gun/energy/anomaly
 	category = list(
 		RND_CATEGORY_WEAPONS + RND_SUBCATEGORY_WEAPONS_RANGED
 	)

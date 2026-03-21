@@ -34,8 +34,10 @@
 /obj/item/beartrap/proc/can_use(mob/user)
 	return (user.IsAdvancedToolUser() && !issilicon(user) && !user.stat && !user.restrained())
 
-/obj/item/beartrap/attack_self(mob/user as mob)
-	..()
+/obj/item/beartrap/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	if(!deployed && can_use(user))
 		user.visible_message(
 			span_danger("[user] starts to deploy \the [src]."),
@@ -98,15 +100,11 @@
 
 	//armour
 	var/blocked = L.run_armor_check(target_zone, "melee")
-	var/soaked = L.get_armor_soak(target_zone, "melee")
 
 	if(blocked >= 100)
 		return
 
-	if(soaked >= 30)
-		return
-
-	if(!L.apply_damage(30, BRUTE, target_zone, blocked, soaked, used_weapon=src))
+	if(!L.apply_damage(30, BRUTE, target_zone, blocked, used_weapon=src))
 		return 0
 
 	if(ishuman(L))
@@ -200,6 +198,15 @@
 		health = round(material.integrity / 3)
 		name = (material.get_edge_damage() * force_divisor > 15) ?  "[material.display_name] razor wire" : "[material.display_name] [initial(name)]"
 
+/obj/item/material/barbedwire/start_active
+	anchored = TRUE
+
+// Outpost 21 edit(port) begin - Fixed icon vanishing
+/obj/item/material/barbedwire/start_active/Initialize(mapload, material_key)
+	. = ..()
+	update_icon()
+// Outpost 21 edit ned
+
 /obj/item/material/barbedwire/proc/can_use(mob/user)
 	return (user.IsAdvancedToolUser() && !issilicon(user) && !user.stat && !user.restrained())
 
@@ -222,8 +229,10 @@
 	else
 		..()
 
-/obj/item/material/barbedwire/attack_self(mob/user as mob)
-	..()
+/obj/item/material/barbedwire/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	if(!anchored && can_use(user))
 		user.visible_message(
 			span_danger("[user] starts to deploy \the [src]."),
@@ -260,6 +269,12 @@
 			if(!shock(user, 100, pick(BP_L_HAND, BP_R_HAND)))
 				playsound(src, W.usesound, 100, 1)
 				inc_damage *= 3
+				// Outpost 21 edit begin - Need gloves to safely remove this
+				var/mob/living/carbon/human/H = user
+				if(istype(H) && !H.gloves)
+					if(H.apply_damage(force, BRUTE, pick(BP_R_HAND, BP_L_HAND), 0, 0, sharp, edge, src))
+						to_chat(H, span_danger("You cut your unprotected hands as you attempt to remove \the [src]!"))
+				// Outpost 21 edit end
 
 		if(W.damtype != BRUTE)
 			inc_damage *= 0.3
@@ -347,12 +362,8 @@
 
 	//armour
 	var/blocked = L.run_armor_check(target_zone, "melee")
-	var/soaked = L.get_armor_soak(target_zone, "melee")
 
 	if(blocked >= 100)
-		return
-
-	if(soaked >= 30)
 		return
 
 	if(L.buckled) //wheelchairs, office chairs, rollerbeds
@@ -362,7 +373,7 @@
 
 	L.add_modifier(/datum/modifier/entangled, 3 SECONDS)
 
-	if(!L.apply_damage(force * (issilicon(L) ? 0.25 : 1), BRUTE, target_zone, blocked, soaked, sharp, edge, src))
+	if(!L.apply_damage(force * (issilicon(L) ? 0.25 : 1), BRUTE, target_zone, blocked, sharp, edge, src))
 		return
 
 	playsound(src, 'sound/effects/glass_step.ogg', 50, 1) // not sure how to handle metal shards with sounds
@@ -395,11 +406,13 @@
 				return
 			check -= picked
 
+	/* Outpost 21 edit - Disable breaking on crossing
 	if(material.is_brittle() && prob(material.hardness))
 		health = 0
 	else if(!prob(material.hardness))
 		health--
 	check_health()
+	*/
 
 	return
 

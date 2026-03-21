@@ -410,15 +410,12 @@
 	name = "chemical storage"
 	icon_state = "power_display"
 
-// Outpost 21 edit(port) begin - borer fixes
-/atom/movable/borer
-	invisibility = 101
+/atom/movable/screen/borer
+	invisibility = INVISIBILITY_ABSTRACT
 
-/atom/movable/borer/chems
+/atom/movable/screen/borer/chems
 	name = "chemical storage"
-	icon = 'modular_outpost/icons/mob/screen1.dmi'
 	icon_state = "power_display"
-// Outpost 21 edit end
 
 /atom/movable/screen/wizard
 	invisibility = INVISIBILITY_ABSTRACT

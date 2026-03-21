@@ -221,7 +221,6 @@
 	var/spawn_flags = 0										// Flags that specify who can spawn as this species
 
 	var/slowdown = 0										// Passive movement speed malus (or boost, if negative)
-	var/unusual_running = 0									// Trait var to change movement speed in human_movement.dm when nothing in hands
 	var/obj/effect/decal/cleanable/blood/tracks/move_trail = /obj/effect/decal/cleanable/blood/tracks/footprints // What marks are left when walking
 	var/list/skin_overlays = list()
 	var/has_floating_eyes = 0								// Whether the eyes can be shown above other icons
@@ -246,7 +245,7 @@
 	var/list/env_traits = list()
 	var/pixel_offset_x = 0									// Used for offsetting 64x64 and up icons.
 	var/pixel_offset_y = 0									// Used for offsetting 64x64 and up icons.
-	var/rad_levels = NORMAL_RADIATION_RESISTANCE		//For handle_mutations_and_radiation
+	var/rad_levels = NORMAL_RADIATION_RESISTANCE			//For handle_radiation
 	var/rad_removal_mod = 1
 
 	// Outpost 21 addition begin
@@ -279,9 +278,7 @@
 		O_SPLEEN =		/obj/item/organ/internal/spleen,
 		O_EYES =		/obj/item/organ/internal/eyes,
 		O_STOMACH =		/obj/item/organ/internal/stomach,
-		O_INTESTINE =	/obj/item/organ/internal/intestine,
-		// Outpost 21 edit - butt
-		O_BUTT = 		/obj/item/organ/internal/butt
+		O_INTESTINE =	/obj/item/organ/internal/intestine
 		)
 	var/vision_organ										// If set, this organ is required for vision. Defaults to "eyes" if the species has them.
 	var/dispersed_eyes            // If set, the species will be affected by flashbangs regardless if they have eyes or not, as they see in large areas.
@@ -366,20 +363,20 @@
 	var/list/food_preference = list() //RS edit
 	var/food_preference_bonus = 0
 
-	var/datum/component/species_component = null // The component that this species uses. Example: Xenochimera use /datum/component/xenochimera
+	var/list/species_component = list() // The component that this species uses. Example: Xenochimera use /datum/component/xenochimera
 	var/component_requires_late_recalc = FALSE // If TRUE, the component will do special recalculation stuff at the end of update_icons_body()
 
 	// For Lleill and Hanner
 	var/lleill_energy = 200
 	var/lleill_energy_max = 200
 
-	var/bite_mod = 1 //NYI - Used Downstream
-	var/grab_resist_divisor_victims = 1 //NYI - Used Downstream
-	var/grab_resist_divisor_self = 1 //NYI - Used Downstream
-	var/grab_power_victims = 0 //NYI - Used Downstream
-	var/grab_power_self = 0 //NYI - Used Downstream
+	var/bite_mod = 1
+	var/grab_resist_divisor_victims = 1
+	var/grab_resist_divisor_self = 1
+	var/grab_power_victims = 0
+	var/grab_power_self = 0
 	var/waking_speed = 1 //NYI - Used Downstream
-	var/lightweight_light = 0 //NYI - Used Downstream
+	var/lightweight_light = 0
 	var/unarmed_bonus = 0 //do you have stronger unarmed attacks?
 	var/shredding = FALSE //do you shred when attacking? Affects escaping restraints, and punching normally unpunchable things
 
@@ -642,20 +639,25 @@
 /datum/species/proc/can_understand(var/mob/other)
 	return
 
-// Called when using the shredding behavior.
-/datum/species/proc/can_shred(var/mob/living/carbon/human/H, var/ignore_intent)
+// Called when using the shredding behavior, returning unarmed damage value
+//CheckHighDamage returns the damage value of the attack if it meets at least the noted value
+/datum/species/proc/can_shred(var/mob/living/carbon/human/H, var/ignore_intent, var/checkhighdamage = 0)
 
 	if(!ignore_intent && H.a_intent != I_HURT)
 		return 0
-	if(shredding)
-		return 1
+
+	var/damage = 0
+	var/shreds = (shredding * 5)
+
 	for(var/datum/unarmed_attack/attack in unarmed_attacks)
 		if(!attack.is_usable(H))
 			continue
+		damage = max(damage, attack.get_unarmed_damage(H) + 5)
 		if(attack.shredding)
-			return 1
-
-	return 0
+			shreds = 5
+	if((checkhighdamage && damage >= checkhighdamage) || shreds)
+		shreds += damage
+	return shreds
 
 // Called in life() when the mob has no client.
 /datum/species/proc/handle_npc(var/mob/living/carbon/human/H)
@@ -744,6 +746,21 @@
 			playsound(H, "rustle", 25, 1)
 		return TRUE
 
+	if(HAS_TRAIT(src, TRAIT_HEAVY_LANDING))
+
+		if(!silent)
+			to_chat(H, span_danger("You land with a heavy crash!"))
+			landing.visible_message(span_danger(span_bold("\The [H]") + " crashes down from above!"))
+			playsound(H, 'sound/effects/meteorimpact.ogg', 75, TRUE, 3)
+			for(var/i = 1 to 10)
+				H.adjustBruteLoss(rand((0), (10)))
+			H.Weaken(20)
+			H.updatehealth()
+			if(istype(landing, /turf/simulated/floor) && prob(50))
+				var/turf/simulated/floor/our_crash = landing
+				our_crash.break_tile()
+		return TRUE
+
 	return FALSE
 
 /datum/species/proc/post_spawn_special(mob/living/carbon/human/H)
@@ -799,8 +816,9 @@
 */
 
 /datum/species/proc/apply_components(var/mob/living/carbon/human/H)
-	if(species_component)
-		H.LoadComponent(species_component)
+	if(LAZYLEN(species_component))
+		for(var/component in species_component)
+			H.LoadComponent(component)
 
 /datum/species/proc/produceCopy(var/list/traits, var/mob/living/carbon/human/H, var/custom_base, var/reset_dna = TRUE) // Traitgenes reset_dna flag required, or genes get reset on resleeve
 	ASSERT(src)

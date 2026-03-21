@@ -15,17 +15,14 @@
 /datum/category_item/autolathe/arms/shotgun_blanks
 	name = "ammunition (12g, blank)"
 	path =/obj/item/ammo_casing/a12g/blank
-	lethal = FALSE // Outpost 21 edit - stunonly range autolathe varient
 
 /datum/category_item/autolathe/arms/shotgun_beanbag
 	name = "ammunition (12g, beanbag)"
 	path =/obj/item/ammo_casing/a12g/beanbag
-	lethal = FALSE // Outpost 21 edit - stunonly range autolathe varient
 
 /datum/category_item/autolathe/arms/shotgun_flash
 	name = "ammunition (12g, flash)"
 	path =/obj/item/ammo_casing/a12g/flash
-	lethal = FALSE // Outpost 21 edit - stunonly range autolathe varient
 
 /datum/category_item/autolathe/arms/shotgun
 	name = "ammunition (12g, slug)"
@@ -35,7 +32,6 @@
 /datum/category_item/autolathe/arms/shotgun_clip_beanbag
 	name = "2-round 12g speedloader (beanbag)"
 	path =/obj/item/ammo_magazine/clip/c12g/beanbag
-	lethal = FALSE // Outpost 21 edit - stunonly range autolathe varient
 
 /datum/category_item/autolathe/arms/shotgun_clip_slug
 	name = "2-round 12g speedloader (slug)"
@@ -50,7 +46,6 @@
 /datum/category_item/autolathe/arms/shotgun_clip_beanbag
 	name = "2-round 12g speedloader (beanbag)"
 	path =/obj/item/ammo_magazine/clip/c12g/beanbag
-	lethal = FALSE // Outpost 21 edit - stunonly range autolathe varient
 
 /datum/category_item/autolathe/arms/shotgun_pellet
 	name = "ammunition (12g, pellet)"
@@ -99,7 +94,6 @@
 	name = "foam dart"
 	path = /obj/item/ammo_casing/afoam_dart
 	hidden = 0
-	lethal = FALSE // Outpost 21 edit - stunonly range autolathe varient
 
 /datum/category_item/autolathe/arms/foamdartriot
 	name = "riot foam dart"
@@ -110,7 +104,6 @@
 	name = "box of foam darts"
 	path = /obj/item/ammo_magazine/ammo_box/foam
 	hidden = 0
-	lethal = FALSE // Outpost 21 edit - stunonly range autolathe varient
 
 /datum/category_item/autolathe/arms/foamboxriot
 	name = "box of riot foam darts"
@@ -131,7 +124,6 @@
 /datum/category_item/autolathe/arms/speedloader_38r
 	name = "speedloader (.38 rubber)"
 	path =/obj/item/ammo_magazine/s38/rubber
-	lethal = FALSE // Outpost 21 edit - stunonly range autolathe varient
 
 /datum/category_item/autolathe/arms/speedloader_45
 	name = "speedloader (.45)"
@@ -141,7 +133,6 @@
 /datum/category_item/autolathe/arms/speedloader_45r
 	name = "speedloader (.45 rubber)"
 	path = /obj/item/ammo_magazine/s45/rubber
-	lethal = FALSE // Outpost 21 edit - stunonly range autolathe varient
 
 // 10mm
 /datum/category_item/autolathe/arms/b10mm
@@ -152,12 +143,10 @@
 /datum/category_item/autolathe/arms/b10mm/practice
 	name = "ammo box (10mm practice)"
 	path = /obj/item/ammo_magazine/ammo_box/b10mm/practice
-	lethal = FALSE // Outpost 21 edit - stunonly range autolathe varient
 
 /datum/category_item/autolathe/arms/b10mm/rubber
 	name = "ammo box (10mm rubber)"
 	path = /obj/item/ammo_magazine/ammo_box/b10mm/rubber
-	lethal = FALSE // Outpost 21 edit - stunonly range autolathe varient
 
 /datum/category_item/autolathe/arms/b10mm/emp
 	name = "ammo box (10mm haywire)"
@@ -174,7 +163,6 @@
 /datum/category_item/autolathe/arms/b44/rubber
 	name = "ammo box (.44 rubber)"
 	path = /obj/item/ammo_magazine/ammo_box/b44/rubber
-	lethal = FALSE // Outpost 21 edit - stunonly range autolathe varient
 
 // .45
 
@@ -186,7 +174,6 @@
 /datum/category_item/autolathe/arms/b45/practice
 	name = "ammo box (.45 Practice)"
 	path = /obj/item/ammo_magazine/ammo_box/b45/practice
-	lethal = FALSE // Outpost 21 edit - stunonly range autolathe varient
 
 /datum/category_item/autolathe/arms/b45/ap
 	name = "ammo box (.45 AP)"
@@ -201,7 +188,6 @@
 /datum/category_item/autolathe/arms/b45/rubber
 	name = "ammo box (.45 rubber)"
 	path = /obj/item/ammo_magazine/ammo_box/b45/rubber
-	lethal = FALSE // Outpost 21 edit - stunonly range autolathe varient
 	hidden = 1
 
 /datum/category_item/autolathe/arms/b45/emp
@@ -232,7 +218,7 @@
 
 /datum/category_item/autolathe/arms/b12g/emp
 	name = "ammo box (12 gauge EMP)"
-	path = /obj/item/ammo_magazine/ammo_box/b12g/beanbag
+	path = /obj/item/ammo_magazine/ammo_box/b12g/emp
 	hidden = 1
 
 /datum/category_item/autolathe/arms/b12g/flechette
@@ -296,7 +282,6 @@
 /datum/category_item/autolathe/arms/b545/practice
 	name = "ammo box (5.45mm practice)"
 	path = /obj/item/ammo_magazine/ammo_box/b545/practice
-	lethal = FALSE // Outpost 21 edit - stunonly range autolathe varient
 
 /datum/category_item/autolathe/arms/b545/hunter
 	name = "ammo box (5.45mm hunter)"
@@ -324,7 +309,6 @@
 /datum/category_item/autolathe/arms/b545/large/practice
 	name = "large ammo box (5.45mm practice)"
 	path = /obj/item/ammo_magazine/ammo_box/b545/large/practice
-	lethal = FALSE // Outpost 21 edit - stunonly range autolathe varient
 
 /datum/category_item/autolathe/arms/b545/large/hunter
 	name = "large ammo box (5.45mm hunter)"
@@ -340,7 +324,6 @@
 /datum/category_item/autolathe/arms/b9mm/practice
 	name = "ammo box (9mm practice)"
 	path = /obj/item/ammo_magazine/ammo_box/b9mm/practice
-	lethal = FALSE // Outpost 21 edit - stunonly range autolathe varient
 
 /datum/category_item/autolathe/arms/b9mm/ap
 	name = "ammo box (9mm AP)"
@@ -355,7 +338,6 @@
 /datum/category_item/autolathe/arms/b9mm/rubber
 	name = "ammo box (9mm rubber)"
 	path = /obj/item/ammo_magazine/ammo_box/b9mm/rubber
-	lethal = FALSE // Outpost 21 edit - stunonly range autolathe varient
 
 /datum/category_item/autolathe/arms/b9mm/flash
 	name = "ammo box (9mm flash)"

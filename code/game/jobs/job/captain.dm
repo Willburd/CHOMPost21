@@ -1,4 +1,4 @@
-var/datum/announcement/minor/captain_announcement = new(do_newscast = 1)
+GLOBAL_DATUM_INIT(captain_announcement, /datum/announcement/minor, new(do_newscast = 1))
 
 //////////////////////////////////
 //			Captain
@@ -32,7 +32,7 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 1)
 	pto_type = PTO_CIVILIAN
 	dept_time_required = 80 //Pending something more complicated
 
-	outfit_type = /decl/hierarchy/outfit/job/captain
+	outfit_type = /datum/decl/hierarchy/outfit/job/captain
 	job_description = "The " + JOB_SITE_MANAGER + " manages the other Command Staff, and through them the rest of the station. Though they have access to everything, \
 						they do not understand everything, and are expected to delegate tasks to the appropriate crew member. The " + JOB_SITE_MANAGER + " is expected to \
 						have an understanding of Standard Operating Procedure, and is subject to it, and legal action, in the same way as every other crew member."
@@ -102,19 +102,13 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 1)
 	departments_managed = list(DEPARTMENT_CIVILIAN, DEPARTMENT_CARGO, DEPARTMENT_PLANET)
 	dept_time_required = 60
 
-	outfit_type = /decl/hierarchy/outfit/job/hop
+	outfit_type = /datum/decl/hierarchy/outfit/job/hop
 	job_description = "The " + JOB_HEAD_OF_PERSONNEL + " manages the Service department and most other civilians. They also \
 						manage the Supply department, through the " + JOB_QUARTERMASTER + ". In addition, the " + JOB_HEAD_OF_PERSONNEL + " oversees the personal accounts \
 						of the crew, including their money and access. If necessary, the " + JOB_HEAD_OF_PERSONNEL + " is first in line to assume Acting Command." //YW EDIT
 	alt_titles = list(JOB_ALT_CREW_RESOURCE_OFFICER = /datum/alt_title/cro, JOB_ALT_DEPUTY_MANAGER = /datum/alt_title/deputy_manager, JOB_ALT_STAFF_MANAGER = /datum/alt_title/staff_manager,
 						JOB_ALT_FACILITY_STEWARD = /datum/alt_title/facility_steward, JOB_ALT_FIRST_MATE = /datum/alt_title/first_mate //CHOMPEdit
-						, JOB_ALT_PERFORMANCE_MANAGEMENT_SUPERVISOR = /datum/alt_title/performance_management_supervisor, //CHOMPEdit
-						// Outpost 21 edit begin - Command Secretary folded into HoP
-						JOB_ALT_COMMAND_LIAISON = /datum/alt_title/command_liaison, JOB_ALT_COMMAND_ASSISTANT = /datum/alt_title/command_assistant, JOB_ALT_COMMAND_INTERN = /datum/alt_title/command_intern,
-						JOB_ALT_BRIDGE_SECRETARY = /datum/alt_title/bridge_secretary, JOB_ALT_BRIDGE_ASSISTANT = /datum/alt_title/bridge_assistant,
-						JOB_ALT_BRIDGE_OFFICER = /datum/alt_title/bridge_officer, JOB_ALT_COMMAND_SECRETARY = /datum/alt_title/bridge_officer,
-						// Outpost 21 edit end
-						)
+						, JOB_ALT_PERFORMANCE_MANAGEMENT_SUPERVISOR = /datum/alt_title/performance_management_supervisor) //CHOMPEdit
 
 	access = list(ACCESS_SECURITY, ACCESS_SEC_DOORS, ACCESS_BRIG, ACCESS_FORENSICS_LOCKERS, ACCESS_MEDICAL, ACCESS_ENGINE, ACCESS_CHANGE_IDS, ACCESS_AI_UPLOAD, ACCESS_EVA, ACCESS_HEADS, ACCESS_ALL_PERSONAL_LOCKERS, ACCESS_MAINT_TUNNELS, ACCESS_BAR, ACCESS_JANITOR, ACCESS_CONSTRUCTION, ACCESS_MORGUE, ACCESS_CREMATORIUM, ACCESS_KITCHEN, ACCESS_CARGO, ACCESS_CARGO_BOT, ACCESS_MAILSORTING, ACCESS_QM, ACCESS_HYDROPONICS, ACCESS_LAWYER, ACCESS_CHAPEL_OFFICE, ACCESS_LIBRARY, ACCESS_RESEARCH, ACCESS_MINING, ACCESS_HEADS_VAULT, ACCESS_MINING_STATION, ACCESS_HOP, ACCESS_RC_ANNOUNCE, ACCESS_CLOWN, ACCESS_TOMFOOLERY, ACCESS_MIME, ACCESS_KEYCARD_AUTH, ACCESS_GATEWAY, ACCESS_ENTERTAINMENT)
 	minimal_access = list(ACCESS_SECURITY, ACCESS_SEC_DOORS, ACCESS_BRIG, ACCESS_FORENSICS_LOCKERS,ACCESS_MEDICAL, ACCESS_ENGINE, ACCESS_CHANGE_IDS, ACCESS_AI_UPLOAD, ACCESS_EVA, ACCESS_HEADS,ACCESS_ALL_PERSONAL_LOCKERS, ACCESS_MAINT_TUNNELS, ACCESS_BAR, ACCESS_JANITOR, ACCESS_CONSTRUCTION, ACCESS_MORGUE, ACCESS_CREMATORIUM, ACCESS_KITCHEN, ACCESS_CARGO, ACCESS_CARGO_BOT, ACCESS_MAILSORTING, ACCESS_QM, ACCESS_HYDROPONICS, ACCESS_LAWYER,ACCESS_CHAPEL_OFFICE, ACCESS_LIBRARY, ACCESS_RESEARCH, ACCESS_MINING, ACCESS_HEADS_VAULT, ACCESS_MINING_STATION, ACCESS_HOP, ACCESS_RC_ANNOUNCE, ACCESS_CLOWN, ACCESS_TOMFOOLERY, ACCESS_MIME, ACCESS_KEYCARD_AUTH, ACCESS_GATEWAY, ACCESS_ENTERTAINMENT)
@@ -171,15 +165,10 @@ var/datum/announcement/minor/captain_announcement = new(do_newscast = 1)
 	access = list(ACCESS_HEADS, ACCESS_KEYCARD_AUTH, ACCESS_RC_ANNOUNCE) //YAWN EDIT
 	minimal_access = list(ACCESS_HEADS, ACCESS_KEYCARD_AUTH, ACCESS_RC_ANNOUNCE)//YAWN EDIT
 
-	outfit_type = /decl/hierarchy/outfit/job/secretary
+	outfit_type = /datum/decl/hierarchy/outfit/job/secretary
 	job_description = "A " + JOB_COMMAND_SECRETARY + " handles paperwork duty for the Heads of Staff, so they can better focus on managing their departments. \
 						They are not Heads of Staff, and have no real authority."
 */
-
-// Outpost 21 edit begin - Command Secretary folded into HoP
-/datum/alt_title/command_secretary
-	title = JOB_ALT_COMMAND_SECRETARY
-// Outpost 21 edit end
 
 /datum/alt_title/command_liaison
 	title = JOB_ALT_COMMAND_LIAISON

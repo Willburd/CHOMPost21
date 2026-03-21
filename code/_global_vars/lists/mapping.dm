@@ -38,6 +38,8 @@ GLOBAL_LIST_EMPTY(wizardstart)
 GLOBAL_LIST_EMPTY(newplayer_start)
 
 GLOBAL_LIST_EMPTY(latejoin)
+GLOBAL_LIST_EMPTY(latejoin_talon)
+GLOBAL_LIST_EMPTY(latejoin_tram)
 GLOBAL_LIST_EMPTY(latejoin_gateway)
 GLOBAL_LIST_EMPTY(latejoin_elevator)
 GLOBAL_LIST_EMPTY(latejoin_cryo)
@@ -64,3 +66,5 @@ GLOBAL_LIST_EMPTY(verminstart)
 GLOBAL_LIST_EMPTY(awayabductors) // List of scatter landmarks for Abductors in Gateways
 GLOBAL_LIST_EMPTY(eventdestinations) // List of scatter landmarks for VOREStation event portals
 GLOBAL_LIST_EMPTY(eventabductors) // List of scatter landmarks for VOREStation abductor portals
+
+GLOBAL_LIST_EMPTY(bslockers) // List of (roundstart) bluespace lockers

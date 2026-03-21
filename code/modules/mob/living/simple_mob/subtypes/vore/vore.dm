@@ -32,8 +32,14 @@
 	feeding = client.prefs_vr.feeding
 	can_be_drop_prey = client.prefs_vr.can_be_drop_prey
 	can_be_drop_pred = client.prefs_vr.can_be_drop_pred
+	can_be_afk_prey = client.prefs_vr.can_be_afk_prey
+	can_be_afk_pred = client.prefs_vr.can_be_afk_pred
 	throw_vore = client.prefs_vr.throw_vore
 	food_vore = client.prefs_vr.food_vore
+	spont_belly_rear = client.prefs_vr.spont_belly_rear
+	spont_belly_left = client.prefs_vr.spont_belly_left
+	spont_belly_front = client.prefs_vr.spont_belly_front
+	spont_belly_right = client.prefs_vr.spont_belly_right
 	consume_liquid_belly = client.prefs_vr.consume_liquid_belly
 	allow_spontaneous_tf = client.prefs_vr.allow_spontaneous_tf
 	digest_leave_remains = client.prefs_vr.digest_leave_remains
@@ -41,6 +47,7 @@
 	permit_healbelly = client.prefs_vr.permit_healbelly
 	noisy = client.prefs_vr.noisy
 	selective_preference = client.prefs_vr.selective_preference
+	size_strip_preference = client.prefs_vr.size_strip_preference
 	eating_privacy_global = client.prefs_vr.eating_privacy_global
 	allow_mimicry = client.prefs_vr.allow_mimicry
 	allowtemp = client.prefs_vr.allowtemp
@@ -65,6 +72,7 @@
 	autotransferable = client.prefs_vr.autotransferable
 	noisy_full = client.prefs_vr.noisy_full
 	strip_pref = client.prefs_vr.strip_pref
+	contaminate_pref = client.prefs_vr.contaminate_pref
 	vore_sprite_color = client.prefs_vr.vore_sprite_color
 	vore_sprite_multiply = client.prefs_vr.vore_sprite_multiply
 	no_latejoin_vore_warning = client.prefs_vr.no_latejoin_vore_warning

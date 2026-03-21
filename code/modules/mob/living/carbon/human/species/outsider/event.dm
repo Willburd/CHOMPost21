@@ -108,9 +108,7 @@ Variables you may want to make use of are:
 		O_PLASMA =   /obj/item/organ/internal/xenos/plasmavessel/grey/colormatch,
 		O_ACID =     /obj/item/organ/internal/xenos/acidgland/grey/colormatch,
 		O_HIVE =     /obj/item/organ/internal/xenos/hivenode/grey/colormatch,
-		O_RESIN =    /obj/item/organ/internal/xenos/resinspinner/grey/colormatch,
-		// Outpost 21 edit - butt
-		O_BUTT = 		/obj/item/organ/internal/butt
+		O_RESIN =    /obj/item/organ/internal/xenos/resinspinner/grey/colormatch
 		)
 
 	var/use_bodyshape = SPECIES_HUMAN

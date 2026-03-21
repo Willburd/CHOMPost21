@@ -69,7 +69,7 @@ var/global/statue_photos_allowed = 3 // Photos can spawn statues... Lets not let
 
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/statue
 	var/datum/weakref/cached_watcher = null
-	var/banishable = 0 // If the chaplain has any power here
+	var/banishable = TRUE // If the chaplain has any power here
 	var/view_range = 8
 
 	var/player_has_activated = FALSE // if true, allows it to start going to random places if bored

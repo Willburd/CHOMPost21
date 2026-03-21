@@ -1,8 +1,5 @@
 //CHOMPEdit this file is unticked, see arms_ch.dm
 
-/datum/category_item/autolathe/arms // Outpost 21 edit - stunonly range autolathe varient
-	var/lethal = TRUE // assume it
-
 /datum/category_item/autolathe/arms/syringegun_ammo
 	name = "syringe gun cartridge"
 	path =/obj/item/syringe_cartridge
@@ -14,17 +11,14 @@
 /datum/category_item/autolathe/arms/shotgun_blanks
 	name = "ammunition (12g, blank)"
 	path =/obj/item/ammo_casing/a12g/blank
-	lethal = FALSE // Outpost 21 edit - stunonly range autolathe varient
 
 /datum/category_item/autolathe/arms/shotgun_beanbag
 	name = "ammunition (12g, beanbag)"
 	path =/obj/item/ammo_casing/a12g/beanbag
-	lethal = FALSE // Outpost 21 edit - stunonly range autolathe varient
 
 /datum/category_item/autolathe/arms/shotgun_flash
 	name = "ammunition (12g, flash)"
 	path =/obj/item/ammo_casing/a12g/flash
-	lethal = FALSE // Outpost 21 edit - stunonly range autolathe varient
 
 /datum/category_item/autolathe/arms/shotgun
 	name = "ammunition (12g, slug)"
@@ -69,17 +63,14 @@
 /datum/category_item/autolathe/arms/pistol_45p
 	name = "pistol magazine (.45 practice)"
 	path =/obj/item/ammo_magazine/m45/practice
-	lethal = FALSE // Outpost 21 edit - stunonly range autolathe varient
 
 /datum/category_item/autolathe/arms/pistol_45r
 	name = "pistol magazine (.45 rubber)"
 	path =/obj/item/ammo_magazine/m45/rubber
-	lethal = FALSE // Outpost 21 edit - stunonly range autolathe varient
 
 /datum/category_item/autolathe/arms/pistol_45f
 	name = "pistol magazine (.45 flash)"
 	path =/obj/item/ammo_magazine/m45/flash
-	lethal = FALSE // Outpost 21 edit - stunonly range autolathe varient
 
 /datum/category_item/autolathe/arms/pistol_45ap
 	name = "pistol magazine (.45 armor piercing)"
@@ -119,17 +110,14 @@
 /datum/category_item/autolathe/arms/pistol_9mmr
 	name = "pistol magazine (9mm rubber)"
 	path =/obj/item/ammo_magazine/m9mm/rubber
-	lethal = FALSE // Outpost 21 edit - stunonly range autolathe varient
 
 /datum/category_item/autolathe/arms/pistol_9mmp
 	name = "pistol magazine (9mm practice)"
 	path =/obj/item/ammo_magazine/m9mm/practice
-	lethal = FALSE // Outpost 21 edit - stunonly range autolathe varient
 
 /datum/category_item/autolathe/arms/pistol_9mmf
 	name = "pistol magazine (9mm flash)"
 	path =/obj/item/ammo_magazine/m9mm/flash
-	lethal = FALSE // Outpost 21 edit - stunonly range autolathe varient
 
 // Small mags for small or old guns.
 /datum/category_item/autolathe/arms/pistol_9mm_compact
@@ -161,17 +149,14 @@
 /datum/category_item/autolathe/arms/smg_9mmr
 	name = "top-mounted SMG magazine (9mm rubber)"
 	path =/obj/item/ammo_magazine/m9mmt/rubber
-	lethal = FALSE // Outpost 21 edit - stunonly range autolathe varient
 
 /datum/category_item/autolathe/arms/smg_9mmp
 	name = "top-mounted SMG magazine (9mm practice)"
 	path =/obj/item/ammo_magazine/m9mmt/practice
-	lethal = FALSE // Outpost 21 edit - stunonly range autolathe varient
 
 /datum/category_item/autolathe/arms/smg_9mmf
 	name = "top-mounted SMG magazine (9mm flash)"
 	path =/obj/item/ammo_magazine/m9mmt/flash
-	lethal = FALSE // Outpost 21 edit - stunonly range autolathe varient
 
 /datum/category_item/autolathe/arms/smg_9mmap
 	name = "top-mounted SMG magazine (9mm armor piercing)"
@@ -199,7 +184,6 @@
 /datum/category_item/autolathe/arms/rifle_545p
 	name = "rifle magazine (5.45mm practice)"
 	path =/obj/item/ammo_magazine/m545/practice
-	lethal = FALSE // Outpost 21 edit - stunonly range autolathe varient
 
 /*/datum/category_item/autolathe/arms/rifle_545_hunter //VOREStation Edit Start. By request of Ace
 	name = "rifle magazine (5.45mm hunting)"
@@ -234,7 +218,6 @@
 /datum/category_item/autolathe/arms/shotgun_clip_beanbag
 	name = "2-round 12g speedloader (beanbag)"
 	path =/obj/item/ammo_magazine/clip/c12g/beanbag
-	lethal = FALSE // Outpost 21 edit - stunonly range autolathe varient
 
 /datum/category_item/autolathe/arms/shotgun_clip_slug
 	name = "2-round 12g speedloader (slug)"
@@ -249,7 +232,6 @@
 /datum/category_item/autolathe/arms/shotgun_clip_beanbag
 	name = "2-round 12g speedloader (beanbag)"
 	path =/obj/item/ammo_magazine/clip/c12g/beanbag
-	lethal = FALSE // Outpost 21 edit - stunonly range autolathe varient
 
 /* Commented out until autolathe stuff is decided/fixed. Will probably remove these entirely. -Spades
 // These should always be/empty! The idea is to fill them up manually with ammo clips.
@@ -372,7 +354,6 @@
 /datum/category_item/autolathe/arms/speedloader_38r
 	name = "speedloader (.38 rubber)"
 	path =/obj/item/ammo_magazine/s38/rubber
-	lethal = FALSE // Outpost 21 edit - stunonly range autolathe varient
 
 /datum/category_item/autolathe/arms/speedloader_45
 	name = "speedloader (.45)"
@@ -382,7 +363,6 @@
 /datum/category_item/autolathe/arms/speedloader_45r
 	name = "speedloader (.45 rubber)"
 	path = /obj/item/ammo_magazine/s45/rubber
-	lethal = FALSE // Outpost 21 edit - stunonly range autolathe varient
 
 // Commented out until metal exploits with autolathe is fixed.
 /*/datum/category_item/autolathe/arms/pistol_clip_45

@@ -11,7 +11,7 @@
 
 	var/datum/pipe_network/network
 
-	var/welded = 0 //defining this here for ventcrawl stuff
+	var/welded = FALSE //defining this here for ventcrawl stuff
 
 /obj/machinery/atmospherics/unary/Initialize(mapload)
 	. = ..()
@@ -116,7 +116,7 @@
 	return FALSE
 
 //CHOMPEdit Start - Keybinds for EVEEERYTHING* (* = not everything))
-/obj/machinery/atmospherics/unary/CtrlClick(mob/user)
+/obj/machinery/atmospherics/unary/click_ctrl(mob/user)
 	if((power_rating != null) && !(pipe_state in list("scrubber", "uvent", "injector"))) //TODO: Add compatibility with air alarm. When not disabled, overrides air alarm state and doesn't tell the air alarm that. Injectors have their own, different bind for enabling.
 		user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
 		if(allowed(user))

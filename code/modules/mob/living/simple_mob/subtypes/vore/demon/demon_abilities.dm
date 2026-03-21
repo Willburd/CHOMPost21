@@ -59,8 +59,8 @@
 			var/list/potentials = living_mobs(0)
 			if(potentials.len)
 				var/mob/living/target = pick(potentials)
-				if(istype(target) && target.devourable && target.can_be_drop_prey && vore_selected)
-					target.forceMove(vore_selected)
+				if(can_phase_vore(src, target))
+					vore_selected.nom_atom(target)
 					to_chat(target,span_vwarning("\The [src] phases in around you, [vore_selected.vore_verb]ing you into their [vore_selected.get_belly_name()]!"))
 
 		// Do this after the potential vore, so we get the belly
@@ -93,7 +93,7 @@
 		health = maxHealth	//Fullheal
 
 		for(var/obj/belly/B as anything in vore_organs)
-			B.escapable = FALSE
+			B.escapable = B_ESCAPABLE_NONE
 
 		cut_overlays()
 		flick("phaseout",src)
@@ -148,7 +148,7 @@
 	name = "Something"
 
 	for(var/obj/belly/B as anything in vore_organs)
-		B.escapable = FALSE
+		B.escapable = B_ESCAPABLE_NONE
 
 	cut_overlays()
 	flick("phaseout",src)
@@ -203,8 +203,8 @@
 			var/list/potentials = living_mobs(0)
 			if(potentials.len)
 				var/mob/living/target = pick(potentials)
-				if(istype(target) && target.devourable && target.can_be_drop_prey && vore_selected)
-					target.forceMove(vore_selected)
+				if(can_phase_vore(src, target))
+					vore_selected.nom_atom(target)
 					to_chat(target,span_vwarning("\The [src] phases in around you, [vore_selected.vore_verb]ing you into their [vore_selected.get_belly_name()]!"))
 
 		// Do this after the potential vore, so we get the belly

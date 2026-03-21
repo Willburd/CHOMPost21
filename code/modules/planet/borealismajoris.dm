@@ -1,4 +1,4 @@
-var/datum/planet/borealis2/planet_borealis2 = null
+GLOBAL_DATUM(planet_borealis2, /datum/planet/borealis2)
 //Dev note: This entire file handles weather and planetary effects. File name subject to change pending planet name finalization.
 /datum/time/borealis2
 	seconds_in_day = 3 HOURS
@@ -19,7 +19,7 @@ var/datum/planet/borealis2/planet_borealis2 = null
 
 /datum/planet/borealis2/New()
 	..()
-	planet_borealis2 = src
+	GLOB.planet_borealis2 = src
 	weather_holder = new /datum/weather_holder/borealis2(src)
 
 /datum/planet/borealis2/update_sun()
@@ -433,15 +433,11 @@ var/datum/planet/borealis2/planet_borealis2 = null
 
 		var/target_zone = pick(BP_ALL)
 		var/amount_blocked = H.run_armor_check(target_zone, "melee")
-		var/amount_soaked = H.get_armor_soak(target_zone, "melee")
 
 		if(amount_blocked >= 100)
 			continue // No need to apply damage.
 
-		if(amount_soaked >= 10)
-			continue // No need to apply damage.
-
-		H.apply_damage(rand(1, 3), BRUTE, target_zone, amount_blocked, amount_soaked, used_weapon = "hail")
+		H.apply_damage(rand(1, 3), BRUTE, target_zone, amount_blocked, used_weapon = "hail")
 		if(show_message)
 			to_chat(H, effect_message)
 

@@ -1,21 +1,12 @@
-/client/proc/test_haunting_controller()
-	set name = "Test Station Haunting"
-	set desc = "Selects a haunting subsystem event to begin."
-	set category = "Admin.Events"
-
-	if(!check_rights(R_ADMIN|R_EVENT))
+ADMIN_VERB(test_haunting_controller, R_EVENT, "Test Station Haunting", "Selects a haunting subsystem event to begin.", ADMIN_CATEGORY_EVENTS)
+	var/mob/ply = tgui_input_list(usr,"Select player to haunt","Select Player", GLOB.player_list)
+	if(!isliving(ply))
 		return
-	var/list/all_haunt = subtypesof(/datum/station_haunt)
-	SShaunting.set_haunting(tgui_input_list(usr,"Select haunting type","Select Haunt",all_haunt))
+	if(SShaunting.force_player_target(ply))
+		var/list/all_haunt = subtypesof(/datum/station_haunt)
+		SShaunting.set_haunting(tgui_input_list(usr,"Select haunting type","Select Haunt",all_haunt))
 
-/client/proc/spawn_bad_body()
-	set name = "Spawn Badbody"
-	set desc = "Spawns a badbody haunting from a selectable list of the current crew."
-	set category = "Admin.Events"
-
-	if(!check_rights(R_ADMIN|R_EVENT))
-		return
-
+ADMIN_VERB(spawn_bad_body, R_EVENT, "Spawn Badbody", "Spawns a badbody haunting from a selectable list of the current crew.", ADMIN_CATEGORY_EVENTS)
 	var/list/checks = list()
 	for(var/client/C in GLOB.clients)
 		if(C)
@@ -37,19 +28,35 @@
 		log_world("## DEBUG: successfully spawned badbody [badbody.real_name] at [T.x] [T.y] [T.z].")
 		qdel(env)
 
-/client/proc/escape_shuttle_force()
-	set name = "Safely Move Escape Shuttle"
-	set desc = "Forces the escape shuttle to move to and from the station without triggering round end."
-	set category = "Admin.Events"
-
-	if(!check_rights(R_ADMIN|R_EVENT))
-		return
-	if(emergency_shuttle.shuttle.moving_status == SHUTTLE_INTRANSIT)
+ADMIN_VERB(escape_shuttle_force, R_EVENT, "Safely Move Escape Shuttle", "Forces the escape shuttle to move to and from the station without triggering round end.", ADMIN_CATEGORY_EVENTS)
+	if(GLOB.emergency_shuttle.shuttle.moving_status == SHUTTLE_INTRANSIT)
 		to_chat(usr,"The shuttle is moving, please wait till it arrives to send it back with this verb.")
 		return
 
 	// MUST be called to avoid round-end
-	emergency_shuttle.admin_override_mode = TRUE
-	emergency_shuttle.evac = FALSE
-	emergency_shuttle.autopilot = FALSE
-	emergency_shuttle.shuttle.launch(usr)
+	GLOB.emergency_shuttle.admin_override_mode = TRUE
+	GLOB.emergency_shuttle.evac = FALSE
+	GLOB.emergency_shuttle.autopilot = FALSE
+	GLOB.emergency_shuttle.shuttle.launch(usr)
+
+ADMIN_VERB(make_red_exit, R_EVENT, "Make Redspace Exit Portal", "Allows players to escape from redspace. Spawns at your location", ADMIN_CATEGORY_EVENTS)
+	var/turf/epicenter = usr.loc
+	if(!epicenter)
+		return
+	create_redspace_wormhole( epicenter, epicenter, TRUE, 15 SECONDS, 45 SECONDS)
+
+/* DO NOT USE THIS UNLESS TESTING
+ADMIN_VERB(base_all_turfs, R_ADMIN, "All Turf To Base", "OH GOD NO.", ADMIN_CATEGORY_DEBUG_DANGEROUS)
+	for(var/turf/T in world)
+		var/turf/nw = get_base_turf_by_area(T)
+		if(istype(nw,/turf/simulated/open) && (!HasBelow(T.z) || T.z == 1))
+			admin_notice("Turf at [T.x].[T.y].[T.z] [get_area(T)]: becomes illegal openspace")
+			continue
+		var/planet = null
+		if(T.z <= SSplanets.z_to_planet.len && SSplanets.z_to_planet[T.z])
+			planet = SSplanets.z_to_planet[T.z]
+		if((planet && istype(nw,/turf/space)) || istype(nw,/turf/unsimulated))
+			admin_notice("Turf at [T.x].[T.y].[T.z] [get_area(T)]: is illegal, is a [T.type]")
+			continue
+		T.ChangeTurf(nw)
+*/

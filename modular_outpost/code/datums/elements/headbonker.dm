@@ -1,5 +1,5 @@
 /datum/element/headbonk
-	var/bonk_chance = 1
+	var/bonk_chance = 0.5
 
 /datum/element/headbonk/Attach(atom/target)
 	. = ..()
@@ -22,9 +22,9 @@
 	return TRUE
 
 /datum/element/headbonk/proc/clonk(atom/source,var/mob/living/M)
-	playsound(source,'sound/effects/clang1.ogg')
+	playsound(source, 'modular_outpost/sound/effects/clonk.ogg', 100, 1)
 	playsound(source,"punch")
-	M.visible_message(span_danger("\The [M] bonks their head into \the [source]!"))
+	M.visible_message(span_danger("\The [M] clonks their head into \the [source]!"))
 	M.Stun(5)
 	M.Weaken(5)
 	M.apply_damage(rand(1,3),BRUTE,BP_HEAD)
@@ -54,6 +54,8 @@
 		return
 	var/obj/structure/table/T = source
 	var/mob/M = AM
+	if(M.resting || M.lying)
+		return // Safe to slide under
 	if(M.m_intent == I_WALK)
 		return // Safe to walk into
 	if(M.size_multiplier <= (RESIZE_MINIMUM + 0.25))

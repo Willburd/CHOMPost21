@@ -7,6 +7,7 @@
 	layer = ABOVE_WINDOW_LAYER
 	density = FALSE
 	anchored = TRUE
+	flags = WALL_ITEM
 	var/shattered = 0
 	var/glass = 1
 	var/datum/tgui_module/appearance_changer/mirror/M
@@ -135,7 +136,7 @@
 			if(choice && choice == "Yes")
 				var/mob/living/carbon/human/vox/vox = new(get_turf(src),SPECIES_VOX)
 				vox.gender = user.gender
-				raiders.equip(vox)
+				GLOB.raiders.equip(vox)
 				if(user.mind)
 					user.mind.transfer_to(vox)
 				spawn(1)
@@ -145,6 +146,6 @@
 						newname = L.get_random_name()
 					vox.real_name = newname
 					vox.name = vox.real_name
-					raiders.update_access(vox)
+					GLOB.raiders.update_access(vox)
 				qdel(user)
 	..()

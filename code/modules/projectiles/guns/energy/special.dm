@@ -13,8 +13,8 @@
 	slot_flags = SLOT_BACK
 	projectile_type = /obj/item/projectile/ion
 
-/obj/item/gun/energy/ionrifle/emp_act(severity)
-	..(max(severity, 4)) //so it doesn't EMP itself, I guess
+/obj/item/gun/energy/ionrifle/emp_act(severity, recursive)
+	return
 
 /obj/item/gun/energy/ionrifle/empty
 	cell_type = null
@@ -54,7 +54,7 @@
 	cell_type = /obj/item/cell/device/weapon/recharge
 	battery_lock = 1
 
-	var/decl/plantgene/gene = null
+	var/datum/decl/plantgene/gene = null
 	recoil_mode = 0
 	var/obj/item/stock_parts/micro_laser/emitter
 
@@ -198,7 +198,7 @@
 	charge_meter = 0
 
 /obj/item/gun/energy/staff/special_check(var/mob/user)
-	if((user.mind && !wizards.is_antagonist(user.mind)))
+	if((user.mind && !GLOB.wizards.is_antagonist(user.mind)))
 		to_chat(user, span_warning("You focus your mind on \the [src], but nothing happens!"))
 		return 0
 

@@ -188,16 +188,6 @@
 	build_path = /obj/item/organ/internal/stomach
 	materials = list(MAT_STEEL = 5625, MAT_GLASS = 1000)
 
-/* Outpost 21 TODO - Prosthetic butt
-/datum/design/item/prosfab/pros/internal/butt
-	name = "Prosthetic Butt"
-	id = "pros_butt"
-	build_path = /obj/item/organ/internal/butt
-	time = 15
-	materials = list(MAT_STEEL = 3000, MAT_GLASS = 1000)
-//	req_tech = list(TECH_ENGINEERING = 2, TECH_MATERIAL = 2)
-*/
-
 //////////////////// Cyborg Parts ////////////////////
 /datum/design_techweb/prosfab/cyborg
 	category = list(
@@ -487,6 +477,38 @@
 	materials = list(MAT_PLASTEEL = 5000, MAT_GLASS = 1000, MAT_URANIUM = 500, MAT_PLATINUM = 350)
 	build_path = /obj/item/borg/upgrade/restricted/pka
 
+/datum/design_techweb/prosfab/robot_upgrade/restricted/adv_scanner
+	category = list(
+		RND_CATEGORY_MECHFAB_CYBORG_MODULES + RND_SUBCATEGORY_MECHFAB_CYBORG_MODULES_RESTRICTED + RND_SUBCATEGORY_MECHFAB_CYBORG_MODULES_MINING
+	)
+	name = "Ore Scanning Upgrade"
+	desc = "An upgrade module to improve the potency of the integrated ore scanner."
+	id = "borg_adv_scanner_module"
+	// req_tech = list(TECH_ENGINEERING = 6, TECH_MATERIAL = 5, TECH_POWER = 4)
+	materials = list(MAT_STEEL = 6000, MAT_GLASS = 4000, MAT_GOLD = 2000, MAT_VERDANTIUM = 1500, MAT_DIAMOND = 350)
+	build_path = /obj/item/borg/upgrade/restricted/adv_scanner
+
+/datum/design_techweb/prosfab/robot_upgrade/restricted/adv_snatcher
+	category = list(
+		RND_CATEGORY_MECHFAB_CYBORG_MODULES + RND_SUBCATEGORY_MECHFAB_CYBORG_MODULES_RESTRICTED + RND_SUBCATEGORY_MECHFAB_CYBORG_MODULES_MINING
+	)
+	name = "Sheet Snatcher Upgrade"
+	desc = "An upgrade module to expand the robot's sheet storage capacity."
+	id = "borg_adv_snatcher_module"
+	// req_tech = list(TECH_ENGINEERING = 7, TECH_MATERIAL = 8, TECH_POWER = 6)
+	materials = list(MAT_STEEL = 12000, MAT_GLASS = 8000, MAT_PLASTEEL = 2000, MAT_DURASTEEL = 500, MAT_DIAMOND = 700)
+	build_path = /obj/item/borg/upgrade/restricted/adv_snatcher
+
+/datum/design_techweb/prosfab/robot_upgrade/restricted/adv_mailbag
+	category = list(
+		RND_CATEGORY_MECHFAB_CYBORG_MODULES + RND_SUBCATEGORY_MECHFAB_CYBORG_MODULES_RESTRICTED + RND_SUBCATEGORY_MECHFAB_CYBORG_MODULES_MINING
+	)
+	name = "Mail Compartment Upgrade"
+	desc = "An upgrade module to expand the robot's postage capacity."
+	id = "borg_adv_mailbag"
+	materials = list(MAT_STEEL = 12000, MAT_GLASS = 8000, MAT_PLASTEEL = 2000, MAT_DURASTEEL = 500, MAT_DIAMOND = 700)
+	build_path = /obj/item/borg/upgrade/restricted/adv_mailbag
+
 /datum/design_techweb/prosfab/robot_upgrade/restricted/tasercooler
 	category = list(
 		RND_CATEGORY_MECHFAB_CYBORG_MODULES + RND_SUBCATEGORY_MECHFAB_CYBORG_MODULES_RESTRICTED + RND_SUBCATEGORY_MECHFAB_CYBORG_MODULES_SECURITY
@@ -579,6 +601,7 @@
 
 // Replacement protean bits
 
+/* Outpost 21 edit - Protean removal
 /datum/design_techweb/prosfab/orchestrator
 	name = "Protean Orchestrator"
 	id = "prot_orch"
@@ -592,6 +615,7 @@
 	build_path = /obj/item/organ/internal/nano/refactory
 	materials = list(MAT_STEEL = 8000, MAT_GLASS = 2000, MAT_SILVER = 2000, MAT_GOLD = 2000)
 	// req_tech = list(TECH_MAGNET = 5, TECH_BLUESPACE = 5, TECH_MATERIAL = 5, TECH_ENGINEERING = 5, TECH_DATA = 5)
+*/
 
 ///// pAI parts!!!
 
@@ -680,3 +704,10 @@
 	id = "prosthetic_teshari"
 	// req_tech = list(TECH_DATA = 3, TECH_BIO = 4)
 	build_path = /obj/item/disk/species/teshari
+
+/datum/design_techweb/prosfab/robot_upgrade/advanced/anomgun
+	name = "Anomalous Particle Gun Module"
+	desc = "An anomalous particle gun, for anomaly harvesting."
+	id = "borg_anomgun_module"
+	materials = list(MAT_STEEL = 4000, MAT_GLASS = 3500, MAT_PHORON = 1500, MAT_DIAMOND = 1500, MAT_URANIUM = 1500)
+	build_path = /obj/item/borg/upgrade/restricted/anomalygun

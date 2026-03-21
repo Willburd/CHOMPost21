@@ -1,4 +1,4 @@
-/var/global/sent_spiders_to_station = 0
+GLOBAL_VAR_INIT(sent_spiders_to_station, 0)
 
 /datum/event/spider_infestation
 	announceWhen	= 90
@@ -7,11 +7,11 @@
 
 /datum/event/spider_infestation/setup()
 	announceWhen = rand(announceWhen, announceWhen + 60)
-	spawncount = rand(4 * severity, 10 * severity)	//spiderlings only have a 50% chance to grow big and strong //CHOMP Edit: old: 2/4 new: 6/14 new: 4/10
-	sent_spiders_to_station = 0
+	spawncount = rand(4 * severity, 10 * severity)	//spiderlings only have a 50% chance to grow big and strong //CHOMPEdit: old: 4/6 new: 4/10
+	GLOB.sent_spiders_to_station = 0
 
 /datum/event/spider_infestation/announce()
-	command_announcement.Announce("Unidentified lifesigns detected coming aboard [station_name()]. Secure any exterior access, including ducting and ventilation.", "Lifesign Alert", new_sound = 'sound/AI/aliens.ogg')
+	GLOB.command_announcement.Announce("Unidentified lifesigns detected coming aboard [station_name()]. Secure any exterior access, including ducting and ventilation.", "Lifesign Alert", new_sound = 'sound/AI/aliens.ogg')
 
 
 /datum/event/spider_infestation/start()
@@ -30,7 +30,7 @@
 	while((spawncount >= 1) && vents.len)
 		var/obj/vent = pick(vents)
 
-	//CHOMPEDIT START adding spider EGGS to the possible spawns instead of singular spiderling spawns.
+	//CHOMPEDIT START adding spider EGGS to the possible spawns instead of singular spiderling spawns. All spiders now space spiders
 		if(severity == 3)
 			var/spawn_spiderlings = pickweight(list(
 				/obj/effect/spider/spiderling/space = 95,
@@ -39,7 +39,7 @@
 				))
 			new spawn_spiderlings(vent.loc)
 		if(severity < 3) //If the severity is less than 3, only spawn regular spiderlings
-			new /obj/effect/spider/spiderling/broodling(vent.loc) //VOREStation Edit - No nurses //CHOMP Edit Oh my JESUS CHRIST, this slipped past me. Literally no nurses. Well guess what, nurses are back.
+			new /obj/effect/spider/spiderling/space(vent.loc) //VOREStation Edit - No nurses //CHOMP Edit Oh my JESUS CHRIST, this slipped past me. Literally no nurses. Well guess what, nurses are back.
 
 	//CHOMPEDIT END
 		vents -= vent

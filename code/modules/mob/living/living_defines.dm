@@ -72,8 +72,6 @@
 
 	var/makes_dirt = TRUE	//FALSE if the mob shouldn't be making dirt on the ground when it walks
 
-	var/looking_elsewhere = FALSE //If the mob's view has been relocated to somewhere else, like via a camera or with binocs
-
 	var/image/selected_image = null // Used for buildmode AI control stuff.
 
 	var/allow_self_surgery = TRUE	// Used to determine if the mob can perform surgery on itself. // Outpost 21 edit - Allow self surgery by default
@@ -88,7 +86,7 @@
 	var/fear = 0 						//For fear effects and phobias
 	var/last_fear_sound = 0				//For making sure the heartbeats don't play over each other
 
-	var/list/fear_message_self = list(
+	var/static/list/fear_message_self = list(
 									"Your heart is racing, it feels like it's going burst from your chest.",
 									"Your stomach clenches and churns with anxiety.",
 									"It's getting hard to breathe, you're panting heavily.",
@@ -99,7 +97,7 @@
 									"Your legs feel weak, you can barely control them.",
 									"You have difficulty even swallowing."
 									)
-	var/list/fear_message_other = list(
+	var/static/list/fear_message_other = list(
 									"'s eyes are darting around the room rapidly.",
 									" looks like they are shivering, literally shaking.",
 									" is breathing rapidly.",

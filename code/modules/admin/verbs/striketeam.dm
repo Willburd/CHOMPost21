@@ -24,9 +24,9 @@
 
 	switch(choice)
 		if("Heavy Asset Protection")
-			team = deathsquad
+			team = GLOB.deathsquad
 		if("Mercenaries")
-			team = commandos
+			team = GLOB.commandos
 		else
 			return
 
@@ -111,10 +111,10 @@ GLOBAL_VAR_INIT(silent_ert, 0)
 		if(jobban_isbanned(usr, JOB_SYNDICATE) || jobban_isbanned(usr, JOB_EMERGENCY_RESPONSE_TEAM) || jobban_isbanned(usr, JOB_SECURITY_OFFICER))
 			to_chat(usr, span_danger("You are jobbanned from the emergency reponse team!"))
 			return
-		if(ert.current_antagonists.len >= ert.hard_cap)
+		if(GLOB.ert.current_antagonists.len >= GLOB.ert.hard_cap)
 			to_chat(usr, "The emergency response team is already full!")
 			return
-		ert.create_default(usr)
+		GLOB.ert.create_default(usr)
 	else
 		to_chat(usr, "You need to be an observer or new player to use this.")
 
@@ -178,11 +178,11 @@ GLOBAL_VAR_INIT(silent_ert, 0)
 
 	// there's only a certain chance a team will be sent
 	if(!prob(send_team_chance))
-		command_announcement.Announce("It would appear that an emergency response team was requested for [station_name()]. Unfortunately, we were unable to send one at this time.", "[using_map.boss_name]")
+		GLOB.command_announcement.Announce("It would appear that an emergency response team was requested for [station_name()]. Unfortunately, we were unable to send one at this time.", "[using_map.boss_name]")
 		GLOB.can_call_ert = 0 // Only one call per round, ladies.
 		return
 	if(GLOB.silent_ert == 0)
-		command_announcement.Announce("It would appear that an emergency response team was requested for [station_name()]. We will prepare and send one as soon as possible.", "[using_map.boss_name]")
+		GLOB.command_announcement.Announce("It would appear that an emergency response team was requested for [station_name()]. We will prepare and send one as soon as possible.", "[using_map.boss_name]")
 
 	GLOB.can_call_ert = 0 // Only one call per round, gentleman.
 	GLOB.send_emergency_team = 1

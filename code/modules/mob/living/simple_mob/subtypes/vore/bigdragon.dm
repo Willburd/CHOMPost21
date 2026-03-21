@@ -112,6 +112,8 @@ I think I covered everything.
 
 	plane = MOB_PLANE
 
+	mob_size = MOB_HUGE // Why was he medium... // outpost 21 edit(port) - These are huge. wtf
+
 	//Dragon vars
 	var/notame
 	var/norange
@@ -184,10 +186,6 @@ I think I covered everything.
 	)
 	var/eyes
 
-	// Outpost 21 edit begin - muriki enzyme immunity
-	enzyme_affect = FALSE
-	// Outpost 21 edit end
-	
 	can_be_drop_prey = FALSE
 
 ///
@@ -219,28 +217,21 @@ I think I covered everything.
 	name = "Zircon"
 	desc = "A large, intimidating creature reminiscent of the traditional idea of medieval fire breathing lizards. This one is the unofficial 'lord' of outpost-21. You should run."
 	notame = 1 //He's got a hoard, he don't want your bribes.
-	special_attack_cooldown = 50 //Faster windups, he's mean.
+	special_attack_cooldown = 40 //Twice as fast windups. He's mean.
 	allow_spontaneous_tf = 0 //No mouseray cheat for you.
 	resizable = 0 //No size gun cheesing~
 	capture_crystal = FALSE //He ain't your pet... honestly I should do this for the default type... maybe same with the others, tbfh.
+	maxHealth = 1200 //small health boost, up from 800.
+	evasion = 15 //I think this is a percent, so let's give him just a chance to dodge your shit :>
 
 	armor = list(
-				"melee" = 25,
-				"bullet" = 25,
-				"laser" = 50,
-				"energy" = 10,
+				"melee" = 50,
+				"bullet" = 50,
+				"laser" = 70,
+				"energy" = 80,
 				"bomb" = 80,
 				"bio" = 100,
 				"rad" = 100) //Tough boi ain't so easy to take down. Lasereyes aren't a win button here~ High armor to rad, bombs, and bio for cheese protection.
-
-	armor_soak = list(
-				"melee" = 7,
-				"bullet" = 5,
-				"laser" = 5,
-				"energy" = 0,
-				"bomb" = 10,
-				"bio" = 0,
-				"rad" = 0) //Straight removal of damage, after(?) the above armor percentage kicks in. Allows it to be immune to being nibbled to death by weak mobs that don't hit the gym.
 
 //Outpost addition end.
 
@@ -605,7 +596,7 @@ I think I covered everything.
 	autotransferchance = 50
 	autotransferwait = 150
 	autotransfer_enabled = TRUE
-	escapable = TRUE
+	escapable = B_ESCAPABLE_DEFAULT
 	escapechance = 100
 	escapetime = 15
 	fancy_vore = TRUE
@@ -695,7 +686,7 @@ I think I covered everything.
 	mode_flags = DM_FLAG_NUMBING
 	struggle_messages_inside = list(
 		"Deciding that you've stayed long enough, you wriggle and writhe, stretching yourself out in the chamber, trying to thrust your hands and face up the way you entered. The beast stirs, and this churny pocket of flesh providing you safety clenches hard, aiding your entry back up into the lowermost depths of it's gullet. rhythmic clenches continue to invite you back down, however, should you reconsider.")
-	belly_fullscreen = "anim_belly"
+	belly_fullscreen = "VBOanim_belly1"
 
 ///
 ///		AI handling stuff

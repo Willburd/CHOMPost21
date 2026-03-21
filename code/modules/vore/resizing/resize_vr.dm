@@ -89,8 +89,9 @@
  * * uncapped - CHANGE_ME. Default: FALSE
  * * ignore_prefs - CHANGE_ME. Default: FALSE
  * * aura_animation - CHANGE_ME. Default: TRUE
+ * * allow_stripping - CHANGE_ME.  Default: FALSE
  */
-/mob/living/proc/resize(var/new_size, var/animate = TRUE, var/uncapped = FALSE, var/ignore_prefs = FALSE, var/aura_animation = FALSE) //CHOMPEdit - Disable aura_animation. Too expensive for something you can't even see.
+/mob/living/proc/resize(var/new_size, var/animate = TRUE, var/uncapped = FALSE, var/ignore_prefs = FALSE, var/aura_animation = FALSE, var/allow_stripping = FALSE) //CHOMPEdit - Disable aura_animation. Too expensive for something you can't even see.
 	if(!uncapped)
 		if((z in using_map.station_levels) && CONFIG_GET(flag/pixel_size_limit))
 			var/size_diff = ((runechat_y_offset() / size_multiplier) * new_size) // This returns 32 multiplied with the new size
@@ -147,11 +148,17 @@
 	else
 		update_transform() //Lame way
 
-
-/mob/living/carbon/human/resize(var/new_size, var/animate = TRUE, var/uncapped = FALSE, var/ignore_prefs = FALSE, var/aura_animation = FALSE) //CHOMPEdit - Disable aura_animation. Too expensive for something you can't even see.
+/mob/living/carbon/human/resize(var/new_size, var/animate = TRUE, var/uncapped = FALSE, var/ignore_prefs = FALSE, var/aura_animation = FALSE, var/allow_stripping = FALSE) //CHOMPEdit - Disable aura_animation. Too expensive for something you can't even see.
 	if(!resizable && !ignore_prefs)
 		return 1
+	var/previous_scale = size_multiplier
 	. = ..()
+	var/size_difference = previous_scale - size_multiplier
+	if((allow_stripping == TRUE) && (size_difference >= 0.3) || (size_difference <= -0.3))
+		if(size_strip_preference == SIZESTRIP_ITEMS)
+			drop_all_clothing(FALSE)
+		else if(size_strip_preference == SIZESTRIP_ALL)
+			drop_all_clothing(TRUE)
 	if(!ishuman(temporary_form) && isliving(temporary_form))
 		var/mob/living/temp_form = temporary_form
 		temp_form.resize(new_size, animate, uncapped, ignore_prefs, aura_animation)
@@ -163,7 +170,7 @@
 			apply_hud(index, HI)
 
 // Optimize mannequins - never a point to animating or doing HUDs on these.
-/mob/living/carbon/human/dummy/mannequin/resize(var/new_size, var/animate = TRUE, var/uncapped = FALSE, var/ignore_prefs = FALSE, var/aura_animation = TRUE)
+/mob/living/carbon/human/dummy/mannequin/resize(var/new_size, var/animate = TRUE, var/uncapped = FALSE, var/ignore_prefs = FALSE, var/aura_animation = TRUE, var/allow_stripping = FALSE)
 	size_multiplier = new_size
 
 /**
@@ -191,33 +198,32 @@
  */
 /mob/living/proc/attempt_to_scoop(mob/living/M, mob/living/G, ignore_size = FALSE) //second one is for the Grabber, only exists for animals to self-grab
 	if(src == M)
-		return 0
+		return FALSE
 	if(!(pickup_pref && M.pickup_pref && M.pickup_active))
-		return 0
+		return FALSE
 	if(!(M.a_intent == I_HELP))
-		return 0
+		return FALSE
 	var/size_diff = M.get_effective_size(FALSE) - get_effective_size(TRUE)
 	if(!holder_default && holder_type)
 		holder_default = holder_type
 	if(!istype(M))
-		return 0
+		return FALSE
 	if(isanimal(M))
 		var/mob/living/simple_mob/SA = M
 		if(!SA.has_hands)
-			return 0
+			return FALSE
 		if(mob_size < MOB_SMALL && src == M)
-			return 0
+			return FALSE
 	if(size_diff >= 0.50 || mob_size < MOB_SMALL || size_diff >= get_effective_size() || ignore_size)
 		if(buckled)
 			to_chat(src,span_notice("You have to unbuckle \the [src] before you pick them up."))
-			return 0
+			return FALSE
 		holder_type = /obj/item/holder/micro
 		var/obj/item/holder/m_holder = get_scooped(M, G)
-		holder_type = holder_default
 		if (m_holder)
-			return 1
+			return TRUE
 		else
-			return 0; // Unable to scoop, let other code run
+			return FALSE; // Unable to scoop, let other code run
 
 #define STEP_TEXT_OWNER(x) "[replacetext(x,"%prey",tmob)]"
 #define STEP_TEXT_PREY(x) "[replacetext(x,"%owner",src)]"

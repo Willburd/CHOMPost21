@@ -27,7 +27,7 @@
 	update_docking_target(current_location)
 	if(active_docking_controller)
 		set_docking_codes(active_docking_controller.docking_codes)
-	else if(global.using_map.use_overmap)
+	else if(using_map.use_overmap)
 		var/obj/effect/overmap/visitable/location = get_overmap_sector(get_z(current_location))
 		if(location && location.docking_codes)
 			set_docking_codes(location.docking_codes)
@@ -168,10 +168,19 @@
 	"Public" procs
 */
 // Queue shuttle for undock and launch by shuttle subsystem.
-/datum/shuttle/autodock/proc/launch(var/user)
+/datum/shuttle/autodock/proc/launch(var/mob/user)
 	if (!can_launch()) return
 
 	in_use = user	//obtain an exclusive lock on the shuttle
+
+	//Outpost 21 edit begin - AHAHAHAHAHAHAHA
+	if(user)
+		if(HAS_TRAIT(user, TRAIT_UNLUCKY) && prob(0.5))
+			emagged_crash = 1
+		var/area/A = get_area(user)
+		if(A && A.haunted && prob(1))
+			emagged_crash = 1
+	//Outpost 21 edit end
 
 	process_state = WAIT_LAUNCH
 	undock()

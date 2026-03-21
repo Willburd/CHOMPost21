@@ -39,7 +39,7 @@ GLOBAL_LIST_EMPTY(areas_by_type)
 	var/static_environ = 0
 
 	var/music = null
-	var/has_gravity = 1 // Don't check this var directly; use get_gravity() instead
+	var/has_gravity = TRUE // Don't check this var directly; use get_gravity() instead
 	var/obj/machinery/power/apc/apc = null
 	var/no_air = null
 //	var/list/lights				// list of all lights on this area
@@ -109,13 +109,13 @@ GLOBAL_LIST_EMPTY(areas_by_type)
 
 /area/proc/atmosalert(danger_level, var/alarm_source)
 	if (danger_level == 0)
-		atmosphere_alarm.clearAlarm(src, alarm_source)
+		GLOB.atmosphere_alarm.clearAlarm(src, alarm_source)
 	else
 		var/obj/machinery/alarm/atmosalarm = alarm_source //maybe other things can trigger these, who knows
 		if(istype(atmosalarm))
-			atmosphere_alarm.triggerAlarm(src, alarm_source, severity = danger_level, hidden = atmosalarm.alarms_hidden)
+			GLOB.atmosphere_alarm.triggerAlarm(src, alarm_source, severity = danger_level, hidden = atmosalarm.alarms_hidden)
 		else
-			atmosphere_alarm.triggerAlarm(src, alarm_source, severity = danger_level)
+			GLOB.atmosphere_alarm.triggerAlarm(src, alarm_source, severity = danger_level)
 
 	//Check all the alarms before lowering atmosalm. Raising is perfectly fine.
 	var/obj/machinery/alarm/AM = main_air_alarm?.resolve()
@@ -139,7 +139,8 @@ GLOBAL_LIST_EMPTY(areas_by_type)
 // Either close or open firedoors and arfgs depending on current alert statuses
 /area/proc/firedoors_update()
 	if(fire || party || atmosalm)
-		firedoors_close()
+		if(!fire) // Outpost 21 edit - Fire alarm shouldn't close fire doors
+			firedoors_close()
 		arfgs_activate()
 		if(fire)
 			for(var/obj/machinery/light/L in src)
@@ -368,8 +369,7 @@ GLOBAL_LIST_EMPTY(areas_by_type)
 	return (actual_static_equip == static_equip && actual_static_light == static_light && actual_static_environ == static_environ)
 
 //////////////////////////////////////////////////////////////////
-
-var/list/mob/living/forced_ambiance_list = list()
+GLOBAL_LIST_EMPTY(forced_ambiance_list)
 
 /area/Entered(mob/M)
 	if(!istype(M) || !M.ckey)
@@ -394,13 +394,6 @@ var/list/mob/living/forced_ambiance_list = list()
 		L.disable_spoiler_vision()
 	check_phase_shift(M)
 
-	// Outpost 21 edit begin - Constant horror!
-	if(ishuman(L))
-		var/mob/living/carbon/human/H = L
-		if(is_type_in_list(src, redspace_areas) || (haunted && prob(4) && !H.job == JOB_STOWAWAY)) // Stowaways spawn in haunted areas, lets not screw em/metagame
-			H.add_modifier(/datum/modifier/redspace_drain)
-	// Outpost 21 edit end
-
 	// Update the area's color grading
 	if(L.client && L.client.color != get_color_tint()) // Try to check if we should bother changing before doing blending
 		L.update_client_color()
@@ -413,15 +406,15 @@ var/list/mob/living/forced_ambiance_list = list()
 	var/volume_mod = L.get_preference_volume_channel(VOLUME_CHANNEL_AMBIENCE)
 
 	// If we previously were in an area with force-played ambiance, stop it.
-	if((L in forced_ambiance_list) && initial)
+	if((L in GLOB.forced_ambiance_list) && initial)
 		L << sound(null, channel = CHANNEL_AMBIENCE_FORCED)
-		forced_ambiance_list -= L
+		GLOB.forced_ambiance_list -= L
 
 	if(forced_ambience)
-		if(L in forced_ambiance_list)
+		if(L in GLOB.forced_ambiance_list)
 			return
 		if(forced_ambience.len)
-			forced_ambiance_list |= L
+			GLOB.forced_ambiance_list |= L
 			var/sound/chosen_ambiance = pick(forced_ambience)
 			if(!istype(chosen_ambiance))
 				chosen_ambiance = sound(chosen_ambiance, repeat = 1, wait = 0, volume = 25, channel = CHANNEL_AMBIENCE_FORCED)
@@ -433,6 +426,12 @@ var/list/mob/living/forced_ambiance_list = list()
 		var/ambience_odds = L.read_preference(/datum/preference/numeric/ambience_chance)
 		if(prob(ambience_odds) && (world.time >= L.client.time_last_ambience_played + 1 MINUTE))
 			var/sound = pick(ambience)
+			// Outpost 21 edit begin - Extreme spooky ambience, very rarely anywhere can be UD
+			var/area/A = get_area(L)
+			if(prob(2) || (A && A.haunted && prob(6)))
+				sound = pick(AMBIENCE_UNDERDARK)
+				volume_mod *= 0.15
+			// Outpost 21 edit end
 			L << sound(sound, repeat = 0, wait = 0, volume = 50 * volume_mod, channel = CHANNEL_AMBIENCE)
 			L.client.time_last_ambience_played = world.time
 
@@ -449,7 +448,7 @@ var/list/mob/living/forced_ambiance_list = list()
 	if(istype(get_turf(mob), /turf/space)) // Can't fall onto nothing.
 		return
 
-	if(istype(mob,/mob/living/carbon/human/))
+	if(ishuman(mob))
 		var/mob/living/carbon/human/H = mob
 		if(H.buckled)
 			return // Being buckled to something solid keeps you in place.
@@ -467,6 +466,10 @@ var/list/mob/living/forced_ambiance_list = list()
 			H.AdjustStunned(1) // CHOMPedit: No longer a supermassive long stun.
 //			H.AdjustWeakened(3) // CHOMPedit: No longer weakens.
 		to_chat(mob, span_notice("The sudden appearance of gravity makes you fall to the floor!"))
+		if(HAS_TRAIT(H, TRAIT_UNLUCKY) && prob(50) && H.get_bodypart_name(BP_HEAD))
+			H.visible_message(span_warning("[H] falls to the ground from the sudden appearance of gravity, smashing [H.p_their()] head against the ground!"),span_warning("You smash your head into the ground as gravity appears!"))
+			H.apply_damage(14, BRUTE, BP_HEAD, used_weapon = "blunt force")
+			playsound(H, 'sound/effects/tableheadsmash.ogg', 90, TRUE)
 		playsound(mob, "bodyfall", 50, 1)
 
 /area/proc/prison_break(break_lights = TRUE, open_doors = TRUE, open_blast_doors = FALSE) //CHOMP Edit set blast doors to FALSE

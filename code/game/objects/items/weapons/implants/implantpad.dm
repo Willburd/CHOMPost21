@@ -47,19 +47,24 @@
 	return
 
 
-/obj/item/implantpad/attack_self(mob/user as mob)
+/obj/item/implantpad/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	user.set_machine(src)
 	var/dat = span_bold("Implant Mini-Computer:") + "<HR>"
 	if (src.case)
 		if(src.case.imp)
 			if(istype(src.case.imp, /obj/item/implant))
 				dat += src.case.imp.get_data()
+				/* Outpost 21 edit - This is no longer needed
 				if(istype(src.case.imp, /obj/item/implant/tracking))
 					dat += {"ID (1-100):
 					<A href='byond://?src=\ref[src];tracking_id=-10'>-</A>
 					<A href='byond://?src=\ref[src];tracking_id=-1'>-</A> [case.imp:id]
 					<A href='byond://?src=\ref[src];tracking_id=1'>+</A>
 					<A href='byond://?src=\ref[src];tracking_id=10'>+</A><BR>"}
+				*/
 		else
 			dat += "The implant casing is empty."
 	else

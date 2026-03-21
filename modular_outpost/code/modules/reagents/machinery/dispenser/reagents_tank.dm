@@ -89,7 +89,7 @@
 		var/image/cap = image(icon, loc, "soup_cap",dir = dir)
 		add_overlay(cap)
 
-/obj/structure/reagent_dispensers/souppot/AltClick(mob/user)
+/obj/structure/reagent_dispensers/souppot/click_alt(mob/user)
 	. = ..()
 	update_icon()
 

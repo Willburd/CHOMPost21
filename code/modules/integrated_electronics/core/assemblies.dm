@@ -408,6 +408,9 @@
 		return ..()
 
 /obj/item/electronic_assembly/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	if(!check_interactivity(user))
 		return
 	if(opened)
@@ -442,11 +445,6 @@
 		return attack_self(user)
 	else
 		return ..()
-
-/obj/item/electronic_assembly/emp_act(severity)
-	..()
-	for(var/atom/movable/AM in contents)
-		AM.emp_act(severity)
 
 // Returns true if power was successfully drawn.
 /obj/item/electronic_assembly/proc/draw_power(amount)

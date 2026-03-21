@@ -36,7 +36,8 @@ NOTICE: Do not leave trailing commas!!!!
 	/obj/item/universal_translator, \
 	/obj/item/clipboard, \
 	/obj/item/measuring_tape, \
-	/obj/item/lightreplacer
+	/obj/item/lightreplacer, \
+	/obj/item/shield/energy
 
 #define POCKET_EMERGENCY \
 	/obj/item/tank/emergency, \
@@ -168,4 +169,10 @@ NOTICE: Do not leave trailing commas!!!!
 #define POCKET_BAYSUIT \
 	/obj/item/storage/backpack, \
 	/obj/item/bluespaceradio, \
-	/obj/item/defib_kit
+	/obj/item/defib_kit, \
+	/obj/item/medigun_backpack
+
+/// Wrapper for adding clothing based traits
+#define ADD_CLOTHING_TRAIT(mob, trait) ADD_TRAIT(mob, trait, "[CLOTHING_TRAIT]_[REF(src)]")
+/// Wrapper for removing clothing based traits
+#define REMOVE_CLOTHING_TRAIT(mob, trait) REMOVE_TRAIT(mob, trait, "[CLOTHING_TRAIT]_[REF(src)]")

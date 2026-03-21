@@ -372,7 +372,7 @@
 /obj/structure/sign/poster{
 	dir = 1;
 	icon_state = "";
-	poster_decl = "/decl/poster/vore_2"
+	poster_decl = "/datum/decl/poster/vore_2"
 	},
 /turf/simulated/wall,
 /area/aro2/cockpit)
@@ -1621,12 +1621,7 @@
 /obj/structure/cable/cyan{
 	icon_state = "0-4"
 	},
-/obj/machinery/power/smes/buildable/hybrid{
-	input_attempt = 1;
-	input_level = 250000;
-	input_level_max = 250000;
-	output_level = 190000
-	},
+/obj/machinery/power/smes/buildable/hybrid/engine_default,
 /turf/simulated/floor/plating/eris/under,
 /area/aro2/powerarea)
 "pX" = (
@@ -2409,9 +2404,6 @@
 /turf/simulated/floor/tiled/eris/dark,
 /area/aro2/boatdeck)
 "yK" = (
-/obj/structure/closet/secure_closet/freezer/fridge{
-	starts_with = null
-	},
 /obj/item/reagent_containers/food/snacks/generalschicken,
 /obj/item/storage/box/wings,
 /obj/item/reagent_containers/food/snacks/kitsuneudon,
@@ -2419,6 +2411,7 @@
 /obj/item/reagent_containers/food/snacks/grilledcheese,
 /obj/item/reagent_containers/food/snacks/jellysandwich,
 /obj/item/reagent_containers/food/snacks/enchiladas,
+/obj/structure/closet/secure_closet/freezer/fridge/empty,
 /turf/simulated/floor/tiled/eris/techmaint_perforated,
 /area/aro2/dining)
 "yY" = (
@@ -3606,12 +3599,7 @@
 /turf/simulated/floor/plating/eris/under,
 /area/aro2/boatdeck)
 "MU" = (
-/obj/machinery/power/smes/buildable/hybrid{
-	input_attempt = 1;
-	input_level = 250000;
-	input_level_max = 250000;
-	output_level = 190000
-	},
+/obj/machinery/power/smes/buildable/hybrid/engine_default,
 /obj/structure/cable/cyan{
 	icon_state = "0-4"
 	},

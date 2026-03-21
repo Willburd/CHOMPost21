@@ -1,55 +1,6 @@
-#define MAT_TYRWOOD			"petrified wood"
-#define MAT_WAGATE			"weathered agate"
 //Hello, welcome to the tyr outsider content.
 //We're going to have some oddities here.
-//Two-ish tiers. The first tier is made from natural stuff around the caverns.
-//Tier 2 armor is made from the hides and such from the dangerous wildlife.
-//Whilst weapons have parts from the wildlife, and the alien ruins.
-//tier 1
-//Agate and wood for weapons
-//cloth and something else is used for armor
-//tier 2
-//monster flesh for armor
-//agate, alien props, and monster bits for weapons.
-/datum/material/wood/tyr
-	name = MAT_TYRWOOD
-	stack_type = /obj/item/stack/material/wood/tyr
-	icon_colour = "#808080" // grey-ish
-	stack_origin_tech = list(TECH_MATERIAL = 8, TECH_BIO = 2)
-
-
-/obj/item/stack/material/wood/tyr
-	name = "petrified bark"
-	color = "#808080"
-	default_type = MAT_TYRWOOD
-
-
-/datum/material/weathered_agate
-	name = MAT_WAGATE
-	display_name = "weathered agate"
-	use_name = "weather agate"
-	icon_colour = "#FF3300"
-	stack_type = /obj/item/stack/material/weathered_agate
-	flags = MATERIAL_UNMELTABLE
-	cut_delay = 60
-	reflectivity = 0
-	conductivity = 1
-	shard_type = SHARD_SHARD
-	tableslam_noise = 'sound/effects/Glasshit.ogg'
-	stack_origin_tech = list(TECH_ARCANE = 1)
-	sheet_singular_name = "gem"
-	sheet_plural_name = "gems"
-	supply_conversion_value = 40	// These are hilariously rare.
-	icon_base = "stone"
-	table_icon_base = "stone"
-
-
-/obj/item/stack/material/weathered_agate
-	name = MAT_WAGATE
-	icon_state = "sheet-void_opal"
-	singular_name = "weathered agate"
-	default_type = MAT_WAGATE
-
+//Otherwise holds stuff meant for outsiders on tyr
 /obj/item/reagent_containers/food/snacks/weatherlily
 	name = "strange leaves"
 	desc = "A strange flower producing an odd substance."
@@ -95,7 +46,7 @@
 	name = "flora"
 	desc = "A strange plant."
 	icon_state = "stonetree"
-	harvest_loot = list(/obj/item/stack/material/wood/tyr = 1)
+	harvest_loot = list(/obj/item/stack/material/wood = 1)
 
 /obj/structure/flora/tyr/lilly
 	name = "flora"
@@ -245,7 +196,7 @@
 
 //Rad Storm
 /obj/item/pickaxe/diamonddrill/alien
-	name = "strane mining drill"
+	name = "alien mining drill"
 	icon_state = "diamonddrill"
 	item_state = "jackhammer"
 	digspeed = 6
@@ -269,12 +220,16 @@
 	defend_chance = 65
 
 
-//Five player check
-/obj/item/shield_projector/rectangle/automatic/tyrvault
-	shield_health = 250
-	max_shield_health = 250
-	shield_regen_delay = 600 SECONDS
-	shield_regen_amount = 50
+/obj/item/shield_projector/rectangle/automatic/tyrbarrier
+	name = "tyrian energy barrier"
+	desc = "An automatic shield generator made from tyr tech. Wearable as a belt."
+	description_info = "The barrier has 150 health, and does not benefit from armor. It will fully regenerate every 180 seconds."
+	shield_health = 125
+	max_shield_health = 125
+	shield_regen_delay = 180 SECONDS
+	shield_regen_amount = 125
+	w_class = ITEMSIZE_NO_CONTAINER
+	slot_flags = SLOT_BELT
 	size_x = 4
 	size_y = 4
 	color = "#FF3300"
@@ -304,42 +259,105 @@
 		slot_r_hand_str = 'modular_chomp/icons/obj/guns/precursor/righthand.dmi',
 		)
 
-/obj/item/clothing/suit/armor/tyr_alien
-	name = "expirmental biosuit"
-	desc = "It's a strange piece of what appears to be a suit of some sort."
-	description_info = "Organic users of the suit will be slowly healed, and given nutrition."
-	icon_state = "lingchameleon"
-	body_parts_covered = CHEST
-	armor = list(melee = 60, bullet = 50, laser = 40, energy = 40, bomb = 0, bio = 80, rad = 80)
-	siemens_coefficient = 0.4
+//E sword has 30 damage, 50 AP, and 65% projectile block
+//Axe is 60 damage, 65 AP, no guard
+//Normal attackspeed is 8
+//The katar is meant for quick strikes, the real damage from from effects
+/obj/item/melee/energy/tyr_katar
+	name = "tyrian scout katar"
+	slot_flags = SLOT_BELT | SLOT_BACK
+	desc = "A forgien blade made via techniques formly lost. Gains a diffrent effect base off your stance."
+	description_info = "Attacking whilst on grab intent will plant a heat bomb, attacking whilst on disarm will increase your speed for a brief moment, and attacking whilst on harm will phase out your foe's armor."
+	lcolor = null
+	colorable = FALSE
+	attackspeed = 4
+	active_force = 5
+	active_armourpen = 70
 
-/obj/item/clothing/suit/armor/tyr_alien/Initialize(mapload)
-	. = ..()
-	START_PROCESSING(SSobj, src)
+	projectile_parry_chance = 70
 
-/obj/item/clothing/suit/armor/tyr_alien/Destroy()
-	wearer = null
-	STOP_PROCESSING(SSobj, src)
-	return ..()
+	w_class = ITEMSIZE_SMALL
+	active_w_class = ITEMSIZE_HUGE
 
-/obj/item/clothing/suit/armor/tyr_alien/process()
-	var/mob/living/carbon/human/H = wearer?.resolve()
-	if(!ishuman(H) || H.isSynthetic() || H.stat == DEAD || H.nutrition <= 10)
-		return // Robots and dead people don't have a metabolism.
+	icon = 'modular_chomp/icons/mob/tribal_gear.dmi'
+	icon_state = "katar"
+	item_state = "katar"
 
-	if(H.getBruteLoss())
-		H.adjustBruteLoss(-0.2)
-		H.nutrition = max(H.nutrition + 5, 0)
-	if(H.getFireLoss())
-		H.adjustFireLoss(-0.2)
-		H.nutrition = max(H.nutrition + 5, 0)
-	if(H.getToxLoss())
-		H.adjustToxLoss(-0.2)
-		H.nutrition = max(H.nutrition + 5, 0)
-	if(H.getOxyLoss())
-		H.adjustOxyLoss(-0.2)
-		H.nutrition = max(H.nutrition + 5, 0)
-	if(H.getCloneLoss())
-		H.adjustCloneLoss(-0.2)
-		H.nutrition = max(H.nutrition + 5, 0)
+	item_icons = list(
+		slot_l_hand_str = 'modular_chomp/icons/obj/guns/precursor/lefthand.dmi',
+		slot_r_hand_str = 'modular_chomp/icons/obj/guns/precursor/righthand.dmi',
+		)
 
+/obj/item/melee/energy/tyr_katar/apply_hit_effect(mob/living/target, mob/living/user, var/hit_zone)
+	if(active)
+		. = ..()
+		switch(user.a_intent)
+			if(I_GRAB)
+				target.add_modifier(/datum/modifier/agate_bomb, 8 SECONDS)
+			if(I_DISARM)
+				user.add_modifier(/datum/modifier/technomancer/haste, 2 SECONDS)
+			if(I_HURT)
+				target.add_modifier(/datum/modifier/phase_armor, 5 SECONDS)
+
+/datum/modifier/agate_bomb
+	name = "Agate Bomb"
+	desc = "The bomb has been planted."
+
+	on_created_text = span_notice("A strange substance is applied to your form.")
+	on_expired_text = span_warning("The substance explodes.")
+	stacks = MODIFIER_STACK_ALLOWED
+
+/datum/modifier/agate_bomb/on_expire()
+	if(holder.stat != DEAD)
+		holder.inflict_heat_damage(20)
+
+/datum/modifier/phase_armor
+	name = "Phased Armor"
+	desc = "Your defense has been phased out."
+	on_created_text = span_notice("Part of your form phases out.")
+	on_expired_text = span_warning("Your missing form phases back in.")
+	stacks = MODIFIER_STACK_EXTEND
+	incoming_damage_percent = 1.5
+
+//Trades speed for defense
+//you are the wall
+/obj/item/melee/energy/tyr_hammer
+	name = "tyrian guardian hammer"
+	slot_flags = SLOT_BELT | SLOT_BACK
+	desc = "A strange hammer made via techniques formly lost. Gains a diffrent effect base off your stance."
+	description_info = "Attacking whilst on grab intent restore the wielder's health, attacking whilst on disarm weakens the target and attacking whilst on harm can throw back the target."
+	lcolor = null
+	colorable = FALSE
+
+	active_force = 35
+	active_armourpen = 40
+
+	attackspeed = 20
+	defend_chance = 50
+	projectile_parry_chance = 50
+
+	active_w_class = ITEMSIZE_HUGE
+	can_cleave = TRUE
+
+	icon = 'modular_chomp/icons/mob/tribal_gear.dmi'
+	icon_state = "hammer"
+	item_state = "hammer"
+
+	item_icons = list(
+		slot_l_hand_str = 'modular_chomp/icons/obj/guns/precursor/lefthand.dmi',
+		slot_r_hand_str = 'modular_chomp/icons/obj/guns/precursor/righthand.dmi',
+		)
+
+/obj/item/melee/energy/tyr_hammer/apply_hit_effect(mob/living/target, mob/living/user, var/hit_zone)
+	if(active)
+		. = ..()
+		switch(user.a_intent)
+			if(I_GRAB)
+				user.adjustFireLoss(-5)
+				user.adjustFireLoss(-5)
+			if(I_DISARM)
+				target.Weaken(30)
+			if(I_HURT)
+				var/atom/target_zone = get_edge_target_turf(user,get_dir(user, target))
+				if(!target.anchored)
+					target.throw_at(target_zone, 5, 2, user, FALSE)

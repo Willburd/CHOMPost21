@@ -13,11 +13,10 @@
 	selection_color = "#9b633e"
 	access = list(ACCESS_MAINT_TUNNELS)
 	minimal_access = list(ACCESS_MAINT_TUNNELS)
-	outfit_type = /decl/hierarchy/outfit/job/assistant/worker
+	outfit_type = /datum/decl/hierarchy/outfit/job/assistant/worker
 	job_description = "Off-duty crew has no responsibilities or authority and is just there to spend their well-deserved time off."
 	pto_type = PTO_CIVILIAN
 	economic_modifier = 2
-	forbid_department_account_access = TRUE // Outpost 21 edit - disable some jobs from having access to department accounts
 
 /datum/job/offduty_cargo
 	title = JOB_OFFDUTY_CARGO
@@ -30,11 +29,10 @@
 	selection_color = "#9b633e"
 	access = list(ACCESS_MAINT_TUNNELS)
 	minimal_access = list(ACCESS_MAINT_TUNNELS)
-	outfit_type = /decl/hierarchy/outfit/job/assistant/cargo
+	outfit_type = /datum/decl/hierarchy/outfit/job/assistant/cargo
 	job_description = "Off-duty crew has no responsibilities or authority and is just there to spend their well-deserved time off."
 	pto_type = PTO_CARGO
 	economic_modifier = 2
-	forbid_department_account_access = TRUE // Outpost 21 edit - disable some jobs from having access to department accounts
 
 /datum/job/offduty_engineering
 	title = JOB_OFFDUTY_ENGINEER
@@ -47,11 +45,10 @@
 	selection_color = "#5B4D20"
 	access = list(ACCESS_MAINT_TUNNELS, ACCESS_EXTERNAL_AIRLOCKS, ACCESS_CONSTRUCTION)
 	minimal_access = list(ACCESS_MAINT_TUNNELS, ACCESS_EXTERNAL_AIRLOCKS)
-	outfit_type = /decl/hierarchy/outfit/job/assistant/engineer
+	outfit_type = /datum/decl/hierarchy/outfit/job/assistant/engineer
 	job_description = "Off-duty crew has no responsibilities or authority and is just there to spend their well-deserved time off."
 	pto_type = PTO_ENGINEERING
 	economic_modifier = 5
-	forbid_department_account_access = TRUE // Outpost 21 edit - disable some jobs from having access to department accounts
 
 /datum/job/offduty_medical
 	title = JOB_OFFDUTY_MEDIC
@@ -64,11 +61,10 @@
 	selection_color = "#013D3B"
 	access = list(ACCESS_MAINT_TUNNELS, ACCESS_EXTERNAL_AIRLOCKS)
 	minimal_access = list(ACCESS_MAINT_TUNNELS, ACCESS_EXTERNAL_AIRLOCKS)
-	outfit_type = /decl/hierarchy/outfit/job/assistant/medic
+	outfit_type = /datum/decl/hierarchy/outfit/job/assistant/medic
 	job_description = "Off-duty crew has no responsibilities or authority and is just there to spend their well-deserved time off."
 	pto_type = PTO_MEDICAL
 	economic_modifier = 5
-	forbid_department_account_access = TRUE // Outpost 21 edit - disable some jobs from having access to department accounts
 
 /datum/job/offduty_science
 	title = JOB_OFFDUTY_SCIENTIST
@@ -81,11 +77,10 @@
 	selection_color = "#633D63"
 	access = list(ACCESS_MAINT_TUNNELS)
 	minimal_access = list(ACCESS_MAINT_TUNNELS)
-	outfit_type = /decl/hierarchy/outfit/job/assistant/scientist
+	outfit_type = /datum/decl/hierarchy/outfit/job/assistant/scientist
 	job_description = "Off-duty crew has no responsibilities or authority and is just there to spend their well-deserved time off."
 	pto_type = PTO_SCIENCE
 	economic_modifier = 5
-	forbid_department_account_access = TRUE // Outpost 21 edit - disable some jobs from having access to department accounts
 
 /datum/job/offduty_security
 	title = JOB_OFFDUTY_OFFICER
@@ -98,11 +93,10 @@
 	selection_color = "#601C1C"
 	access = list(ACCESS_MAINT_TUNNELS)
 	minimal_access = list(ACCESS_MAINT_TUNNELS)
-	outfit_type = /decl/hierarchy/outfit/job/assistant/officer
+	outfit_type = /datum/decl/hierarchy/outfit/job/assistant/officer
 	job_description = "Off-duty crew has no responsibilities or authority and is just there to spend their well-deserved time off."
 	pto_type = PTO_SECURITY
 	economic_modifier = 5
-	forbid_department_account_access = TRUE // Outpost 21 edit - disable some jobs from having access to department accounts
 
 /datum/job/offduty_exploration
 	title = JOB_OFFDUTY_EXPLORER
@@ -115,8 +109,7 @@
 	selection_color = "#999440"
 	access = list(ACCESS_MAINT_TUNNELS, ACCESS_EXTERNAL_AIRLOCKS)
 	minimal_access = list(ACCESS_MAINT_TUNNELS, ACCESS_EXTERNAL_AIRLOCKS)
-	outfit_type = /decl/hierarchy/outfit/job/assistant/explorer
+	outfit_type = /datum/decl/hierarchy/outfit/job/assistant/explorer
 	job_description = "Off-duty crew has no responsibilities or authority and is just there to spend their well-deserved time off."
 	pto_type = PTO_EXPLORATION
 	economic_modifier = 5
-	forbid_department_account_access = TRUE // Outpost 21 edit - disable some jobs from having access to department accounts

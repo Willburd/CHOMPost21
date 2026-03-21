@@ -155,7 +155,7 @@
 /obj/item/modular_computer/proc/add_log(var/text)
 	if(!get_ntnet_status())
 		return 0
-	return ntnet_global.add_log(text, network_card)
+	return GLOB.ntnet_global.add_log(text, network_card)
 
 /obj/item/modular_computer/proc/shutdown_computer(var/loud = 1)
 	kill_program(1)
@@ -271,24 +271,6 @@
 		update_uis()
 
 // Used by camera monitor program
-/obj/item/modular_computer/check_eye(var/mob/user)
-	if(active_program)
-		return active_program.check_eye(user)
-	else
-		return ..()
-
-/obj/item/modular_computer/apply_visual(var/mob/user)
-	if(active_program)
-		return active_program.apply_visual(user)
-
-/obj/item/modular_computer/remove_visual(var/mob/user)
-	if(active_program)
-		return active_program.remove_visual(user)
-
-/obj/item/modular_computer/relaymove(var/mob/user, direction)
-	if(active_program)
-		return active_program.relaymove(user, direction)
-
 /obj/item/modular_computer/proc/set_autorun(program)
 	if(!hard_drive)
 		return

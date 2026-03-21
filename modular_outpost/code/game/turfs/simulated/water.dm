@@ -55,8 +55,8 @@
 	cut_overlays()
 	..() // Get the underlay first.
 	var/cache_string = "[ground_state]_[water_state]_[src.dir]"
-	if(cache_string in shoreline_icon_cache) // Check to see if an icon already exists.
-		add_overlay(shoreline_icon_cache[cache_string])
+	if(cache_string in GLOB.shoreline_icon_cache) // Check to see if an icon already exists.
+		add_overlay(GLOB.shoreline_icon_cache[cache_string])
 	else // If not, make one, but only once.
 		var/icon/shoreline_water = icon(src.icon, "shoreline_water", src.dir)
 		var/icon/shoreline_subtract = icon(src.icon, "[ground_state]_subtract", src.dir)
@@ -64,8 +64,8 @@
 		var/image/final = image(shoreline_water)
 		final.layer = WATER_LAYER
 
-		shoreline_icon_cache[cache_string] = final
-		add_overlay(shoreline_icon_cache[cache_string])
+		GLOB.shoreline_icon_cache[cache_string] = final
+		add_overlay(GLOB.shoreline_icon_cache[cache_string])
 
 
 

@@ -247,6 +247,11 @@ GLOBAL_LIST(construction_frame_floor)
 	icon_override = 'icons/obj/stock_parts_refinery.dmi'
 	frame_class = FRAME_CLASS_MACHINE
 
+/datum/frame/frame_types/industrial_reagent_splitter
+	name = "Industrial Chemical Splitter"
+	icon_override = 'icons/obj/stock_parts_refinery.dmi'
+	frame_class = FRAME_CLASS_MACHINE
+
 /datum/frame/frame_types/industrial_reagent_waste_processor
 	name = "Industrial Chemical Waste Processor"
 	icon_override = 'icons/obj/stock_parts_refinery.dmi'
@@ -276,6 +281,7 @@ GLOBAL_LIST(construction_frame_floor)
 	name = "frame"
 	icon = 'icons/obj/stock_parts.dmi'
 	icon_state = "machine_0"
+	flags = WALL_ITEM
 	var/state = FRAME_PLACED
 	var/obj/item/circuitboard/circuit = null
 	var/need_circuit = TRUE

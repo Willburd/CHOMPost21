@@ -28,6 +28,9 @@
 	var/moon_name = null // Purely for flavor. Null means no moon exists.
 	var/moon_phase = null // Set if above is defined.
 
+	var/locked_light_intensity = 0 // Outpost 21 edit - Locking light levels
+	var/locked_light_color = null // Outpost 21 edit - Locking light levels
+
 /datum/planet/New()
 	..()
 	weather_holder = new(src)
@@ -66,3 +69,7 @@
 	sun["brightness"] = CLAMP01(new_brightness)
 	sun["color"] = new_color
 	needs_work |= PLANET_PROCESS_SUN
+
+/// Override for unique sun angle handling for stuff like northern/southern hemisphere sun angles during the day cycle
+/datum/planet/proc/get_sun_solar_position()
+	return 220 - (sun_position * 80) // this base version doesn't know how long a planet's day is, so just goes back and forth facing south-eastish based on midnight to noon intensity

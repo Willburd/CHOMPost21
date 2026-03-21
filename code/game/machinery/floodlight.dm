@@ -17,6 +17,7 @@
 	. = ..()
 	cell = new(src)
 	AddElement(/datum/element/climbable)
+	AddElement(/datum/element/rotatable)
 
 /obj/machinery/floodlight/update_icon()
 	cut_overlays()
@@ -133,3 +134,10 @@
 				cell = W
 				to_chat(user, "You insert the power cell.")
 	update_icon()
+
+/obj/machinery/floodlight/starts_on
+	icon_state = "flood01"
+
+/obj/machinery/floodlight/starts_on/Initialize(mapload)
+	. = ..()
+	turn_on()

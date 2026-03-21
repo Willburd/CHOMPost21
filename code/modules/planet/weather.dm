@@ -17,6 +17,8 @@
 
 	var/firework_override = FALSE
 
+	var/locked = FALSE // Outpost 21 edit - Locking weather
+
 /datum/weather_holder/New(var/source)
 	..()
 	our_planet = source
@@ -66,6 +68,13 @@
 	log_game("[our_planet.name]'s weather is now [new_weather], with a temperature of [temperature]&deg;K ([temperature - T0C]&deg;C | [temperature * 1.8 - 459.67]&deg;F).")
 
 /datum/weather_holder/process()
+	// Outpost 21 edit begin - Locking weather
+	if(current_weather && locked)
+		imminent_weather = null // We are too powerful for you
+		current_weather.process_effects()
+		current_weather.process_sounds()
+		return
+	// Outpost 21 edit end
 	if(imminent_weather && world.time >= imminent_weather_shift)
 		proceed_to_imminent_weather()
 	else if(!imminent_weather && world.time >= next_weather_shift)
@@ -132,7 +141,12 @@
 	forecast.Cut()
 	build_forecast()
 
-
+// Outpost 21 edit(port) being - Forecast accessors
+/datum/weather_holder/proc/get_forecast_data()
+	if(locked)
+		return list(current_weather,current_weather,current_weather) // locked in
+	return forecast
+// Outpost 21 edit end
 
 /datum/weather_holder/proc/update_icon_effects()
 	visuals.icon_state = current_weather.icon_state
@@ -222,21 +236,29 @@
 	if(effect_flags & HAS_PLANET_EFFECT)
 		if(effect_flags & EFFECT_ALL_MOBS)
 			for(var/mob/M as anything in GLOB.mob_list)
+				if(isobserver(M)) // Outpost 21 edit - AI eye is in mob list
+					return
 				if(M.is_incorporeal() && !(effect_flags & EFFECT_ALWAYS_HITS))
 					continue
 				planet_effect(M)
 		if(effect_flags & EFFECT_ONLY_LIVING)
 			for(var/mob/living/L as anything in GLOB.living_mob_list)
+				if(isobserver(L)) // Outpost 21 edit - AI eye is in mob list
+					return
 				if(L.is_incorporeal() && !(effect_flags & EFFECT_ALWAYS_HITS))
 					continue
 				planet_effect(L)
 		if(effect_flags & EFFECT_ONLY_HUMANS)
 			for(var/mob/living/carbon/H as anything in GLOB.human_mob_list)
+				if(isobserver(H)) // Outpost 21 edit - AI eye is in mob list
+					return
 				if(H.is_incorporeal() && !(effect_flags & EFFECT_ALWAYS_HITS))
 					continue
 				planet_effect(H)
 		if(effect_flags & EFFECT_ONLY_ROBOTS)
 			for(var/mob/living/silicon/R as anything in GLOB.silicon_mob_list)
+				if(isobserver(R)) // Outpost 21 edit - AI eye is in mob list
+					return
 				if(R.is_incorporeal() && !(effect_flags & EFFECT_ALWAYS_HITS))
 					continue
 				planet_effect(R)

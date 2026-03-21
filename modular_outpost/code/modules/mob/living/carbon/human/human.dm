@@ -11,39 +11,39 @@
 	for(var/obj/item/storage/S in contents)
 		Bag = S
 		break
-
-	if(!isnull(Bag))
-		//Gives medications for neurological disabilities
-		if(disabilities & SCHIZOPHRENIA)
-			var/perscrip = new /obj/item/storage/pill_bottle/lithium()
-			to_chat(src, "<span class='notice'>Placing \the [perscrip] medication in your [Bag.name]!</span>")
-			Bag.contents += perscrip
-
-		if(disabilities & DEPRESSION || GetComponent(/datum/component/nervousness_disability) || GetComponent(/datum/component/epilepsy_disability) || GetComponent(/datum/component/tourettes_disability))
-			var/perscrip = new /obj/item/storage/pill_bottle/citalopram() // currently the only reasonable med, also one of the few with an actual pill bottle
-			to_chat(src, "<span class='notice'>Placing \the [perscrip] medication in your [Bag.name]!</span>")
-			Bag.contents += perscrip
-
-		// allergy meds!
-		if(species.allergens & ALLERGEN_POLLEN)
-			var/perscrip = new /obj/item/storage/pill_bottle/inaprovaline() // because anaphylactic shock from grass is overwhelming
-			to_chat(src, "<span class='notice'>Placing \the [perscrip] medication in your [Bag.name]!</span>")
-			Bag.contents += perscrip
-
-		if(!isnull(species.breath_type) && species.breath_type != GAS_O2)
-			// antitox pills
-			var/perscrip = new /obj/item/storage/pill_bottle/dylovene() // anti-toxin for accidents
-			to_chat(src, "<span class='notice'>Placing \the [perscrip] medication in your [Bag.name]!</span>")
-			Bag.contents += perscrip
-
-		// Sustinance addiction... They REALLY need this one, so make sure they get it...
-		if(get_addiction_to_reagent(REAGENT_ID_ASUSTENANCE) > 0)
-			var/obj/item/reagent_containers/glass/beaker/vial/perscrip = new /obj/item/reagent_containers/glass/beaker/vial/sustenance()
-			perscrip.flags ^= OPENCONTAINER // Close the container
-			to_chat(src, "<span class='notice'>Placing \the [perscrip] in your [Bag.name]!</span>")
-			Bag.contents += perscrip
-	else
+	if(!Bag)
 		to_chat(src, "<span class='danger'>Failed to locate a storage object for your medication on your mob, either you spawned with no arms and no backpack or this is a bug.</span>")
+		return
+
+	//Gives medications for neurological disabilities
+	if((disabilities & SCHIZOPHRENIA) || GetComponent(/datum/component/schizophrenia))
+		var/perscrip = new /obj/item/storage/pill_bottle/tercozolam()
+		to_chat(src, "<span class='notice'>Placing \the [perscrip] medication in your [Bag.name]!</span>")
+		Bag.contents += perscrip
+
+	if((disabilities & DEPRESSION) || GetComponent(/datum/component/nervousness_disability) || GetComponent(/datum/component/epilepsy_disability) || GetComponent(/datum/component/tourettes_disability))
+		var/perscrip = new /obj/item/storage/pill_bottle/citalopram() // currently the only reasonable med, also one of the few with an actual pill bottle
+		to_chat(src, "<span class='notice'>Placing \the [perscrip] medication in your [Bag.name]!</span>")
+		Bag.contents += perscrip
+
+	// allergy meds!
+	if(species.allergens & ALLERGEN_POLLEN)
+		var/perscrip = new /obj/item/storage/pill_bottle/inaprovaline() // because anaphylactic shock from grass is overwhelming
+		to_chat(src, "<span class='notice'>Placing \the [perscrip] medication in your [Bag.name]!</span>")
+		Bag.contents += perscrip
+
+	if(!isnull(species.breath_type) && species.breath_type != GAS_O2)
+		// antitox pills
+		var/perscrip = new /obj/item/storage/pill_bottle/dylovene() // anti-toxin for accidents
+		to_chat(src, "<span class='notice'>Placing \the [perscrip] medication in your [Bag.name]!</span>")
+		Bag.contents += perscrip
+
+	// Sustinance addiction... They REALLY need this one, so make sure they get it...
+	if(get_addiction_to_reagent(REAGENT_ID_ASUSTENANCE) > 0)
+		var/obj/item/reagent_containers/glass/beaker/vial/perscrip = new /obj/item/reagent_containers/glass/beaker/vial/sustenance()
+		perscrip.flags ^= OPENCONTAINER // Close the container
+		to_chat(src, "<span class='notice'>Placing \the [perscrip] in your [Bag.name]!</span>")
+		Bag.contents += perscrip
 
 /mob/living/carbon/human/proc/equip_survival_tanks(var/forceback = FALSE)
 	if(!isnull(species) && !isnull(species.breath_type) && species.breath_type != GAS_O2)

@@ -29,23 +29,23 @@
 
 //ERT
 
-/obj/item/card/id/centcom/ERT
+/obj/item/card/id/centcom/ert
 	name = "Emergency Responder ID"
 	initial_sprite_stack = list("base-stamp-silver", "top-blue", "stamp-n", "pips-red", "stripe-red")
 
-/obj/item/card/id/centcom/ERT/medic
+/obj/item/card/id/centcom/ert/medic
 	name = "Emergency Medical Responder ID"
 	initial_sprite_stack = list("base-stamp-silver", "top-blue", "stamp-n", "pips-medblu", "stripe-medblu")
 
-/obj/item/card/id/centcom/ERT/commander
+/obj/item/card/id/centcom/ert/commander
 	name = "Emergency Response Commander ID"
 	initial_sprite_stack = list("base-stamp-silver", "top-blue", "stamp-n", "pips-gold", "stripe-gold")
 
-/obj/item/card/id/centcom/ERT/engineer
+/obj/item/card/id/centcom/ert/engineer
 	name = "Emergency Engineering Responder ID"
 	initial_sprite_stack = list("base-stamp-silver", "top-blue", "stamp-n", "pips-orange", "stripe-orange")
 
-/obj/item/card/id/centcom/ERT/janitor
+/obj/item/card/id/centcom/ert/janitor
 	name = "Emergency Cleanup Responder ID"
 	initial_sprite_stack = list("base-stamp-silver", "top-blue", "stamp-n", "pips-purple", "stripe-purple")
 
@@ -160,12 +160,10 @@
 	initial_sprite_stack = list("base-stamp-silver", "top-orange", "stamp-n", "pips-gold")
 	rank = JOB_CHIEF_ENGINEER
 
-// Outpost 21 edit(port) begin - Chemical Engineering
 /obj/item/card/id/engineering/chemical
 	name = JOB_ALT_CHEMENGINEER + "'s ID"
 	initial_sprite_stack = list("base-stamp", "top-orange", "stamp-n", "pips-medblu", "stripe-white")
 	rank = JOB_ENGINEER
-// Outpost 21 edit end
 
 //Science
 
@@ -311,7 +309,7 @@
 	if(isrobot(loc?.loc))
 		R = loc.loc
 		registered_name = R.braintype
-		RegisterSignal(src, COMSIG_OBSERVER_MOVED, PROC_REF(check_loc))
+		RegisterSignal(src, COMSIG_MOVABLE_ATTEMPTED_MOVE, PROC_REF(check_loc))
 
 /obj/item/card/id/exploration/borg/proc/check_loc(atom/movable/mover, atom/old_loc, atom/new_loc)
 	SIGNAL_HANDLER
@@ -328,7 +326,7 @@
 
 /obj/item/card/id/exploration/borg/Destroy()
 	if(R)
-		UnregisterSignal(src, COMSIG_OBSERVER_MOVED)
+		UnregisterSignal(src, COMSIG_MOVABLE_ATTEMPTED_MOVE)
 		R = null
 		last_robot_loc = null
 	. = ..()
@@ -375,6 +373,7 @@
 	name = "Syndicate ID"
 	initial_sprite_stack = list("base-stamp-dark", "top-syndicate", "stamp-s")
 	rank = JOB_SYNDICATE
+	special_handling = TRUE
 
 /obj/item/card/id/syndicate/officer
 	name = "Syndicate Officer ID"

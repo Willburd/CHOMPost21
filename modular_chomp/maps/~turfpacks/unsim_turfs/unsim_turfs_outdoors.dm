@@ -96,6 +96,7 @@
 	icon_state = "ice"
 	desc = "Looks slippery."
 	edge_blending_priority = 0
+	wet = TURFSLIP_ICE // Outpost 21 edit(port) - Ice respects slipcode
 
 /turf/unsimulated/floor/outdoors/ice/dark
 	name = "black ice"
@@ -107,6 +108,8 @@
 	icon_state = "ice_dark_smooth"
 	desc = "Dark rock that has been smoothened to be perfectly even. It's coated in a layer of slippey ice"
 
+
+/* Outpost 21 edit(port) - Ice respects slipcode
 /turf/unsimulated/floor/outdoors/ice/Entered(var/mob/living/M)
 	addtimer(CALLBACK(src, PROC_REF(do_slip), M), (1 * world.tick_lag), TIMER_DELETE_ME)
 
@@ -116,6 +119,7 @@
 			to_chat(M, span_warning("You slide across the ice!"))
 		M.SetStunned(1)
 		step(M,M.dir)
+*/
 
 /turf/unsimulated/floor/outdoors/shelfice
 	name = "ice"

@@ -3,11 +3,19 @@
 
 /obj/machinery/door/airlock/Initialize(mapload, obj/structure/door_assembly/assembly)
 	. = ..()
+	if(!mapload)
+		return
 
 	// Airlock brace
-	var/obj/item/airlock_brace/B = locate(/obj/item/airlock_brace) in loc
+	var/obj/item/airlock_brace/B = locate() in loc
 	if(!brace && B)
 		B.lock_brace(src)
+
+	// Grenade trapped map spawn
+	var/obj/item/grenade/G = locate() in loc
+	if(G)
+		G.forceMove(src) // Put into the door
+		AddComponent(/datum/component/grenadetrap,G)
 
 	// Maint breaks airlocks sometimes
 	var/area/A = get_area(src)
@@ -79,6 +87,8 @@
 
 /obj/machinery/door/airlock/examine(mob/user)
 	. = ..()
+	if(welded) // Outpost 21 edit(port) - Show a door is welded
+		. += span_danger(text("it is welded shut."))
 	if(brace)
 		. += span_danger(text("A [brace] is installed on the airlock, preventing it from opening."))
 		. += brace.examine_health()

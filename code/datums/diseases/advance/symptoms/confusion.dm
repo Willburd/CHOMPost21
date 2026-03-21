@@ -56,9 +56,9 @@ Bonus
 	if(L.stat == DEAD)
 		return
 	switch(A.stage)
-		if(1, 2, 3, 4)
+		if(1 to 4)
 			if(prob(base_message_chance) && !supress_warning)
 				to_chat(L, span_warning(pick("Your head hurts", "Your mind blanks for a moment.")))
 		else
 			to_chat(L, span_userdanger("You can't think straight!"))
-			L.confused = min(50 * power, L.confused+8)
+			L.SetConfused(min(50 * power, L.confused+8))

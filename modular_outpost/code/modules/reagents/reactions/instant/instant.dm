@@ -1,4 +1,4 @@
-/decl/chemical_reaction/instant/hemocyanin
+/datum/decl/chemical_reaction/instant/hemocyanin
 	name = REAGENT_HEMOCYANIN
 	id = REAGENT_ID_HEMOCYANIN
 	result = REAGENT_ID_HEMOCYANIN
@@ -6,35 +6,28 @@
 	catalysts = list(REAGENT_ID_PHORON = 1)
 	result_amount = 20
 
-/decl/chemical_reaction/instant/artificial_sustenance
-	name = REAGENT_ASUSTENANCE
-	id = REAGENT_ID_ASUSTENANCE
-	result = REAGENT_ID_ASUSTENANCE
-	required_reagents = list(REAGENT_ID_NUTRIMENT = 1, REAGENT_ID_MUTAGEN = 1, REAGENT_ID_PHORON = 1)
-	result_amount = 1
-
-/decl/chemical_reaction/instant/sulphuricacid
+/datum/decl/chemical_reaction/instant/sulphuricacid
 	name = REAGENT_SACID
 	id = REAGENT_ID_SACID
 	result = REAGENT_ID_SACID
 	required_reagents = list(REAGENT_ID_HYDROGEN = 2,REAGENT_ID_SULFUR = 1,REAGENT_ID_OXYGEN = 4)
 	result_amount = 5
 
-/decl/chemical_reaction/instant/silicon
+/datum/decl/chemical_reaction/instant/silicon
 	name = REAGENT_SILICON
 	id = "reduce_silicate"
 	result = REAGENT_ID_SILICON
 	required_reagents = list(REAGENT_ID_SILICATE = 1, REAGENT_ID_SACID = 1,REAGENT_ID_SULFUR = 1)
 	result_amount = 1
 
-/decl/chemical_reaction/instant/riotsmoke
+/datum/decl/chemical_reaction/instant/riotsmoke
 	name = "Riotgas"
 	id = "riotsmoke"
 	result = null
 	required_reagents = list(REAGENT_ID_TITANIUMDIOX = 1, REAGENT_ID_CHLORINE = 4, REAGENT_ID_PHOSPHORUS= 1)
 	result_amount = 0.4
 
-/decl/chemical_reaction/instant/riotsmoke/on_reaction(var/datum/reagents/holder, var/created_volume)
+/datum/decl/chemical_reaction/instant/riotsmoke/on_reaction(var/datum/reagents/holder, var/created_volume)
 	var/location = get_turf(holder.my_atom)
 	var/datum/effect/effect/system/smoke_spread/bad/S = new /datum/effect/effect/system/smoke_spread/bad
 	S.attach(location)
@@ -47,7 +40,7 @@
 	return
 
 // Nukies OMEGA
-/decl/chemical_reaction/instant/nukies_final
+/datum/decl/chemical_reaction/instant/nukies_final
 	name = REAGENT_NUKIEFINAL
 	id = REAGENT_ID_NUKIEFINAL
 	result = REAGENT_ID_NUKIEFINAL

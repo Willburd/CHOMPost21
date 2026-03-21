@@ -4,7 +4,8 @@
 	var/list/dispense_reagents = list()
 	var/process_tick = 0
 
-/* Outpost 21 edit - Chem dispenser changes, disable chem regeneration
+// Outpost 21 edit begin - Chem dispenser changes, disable chem regeneration, but upstream friendship mode still generates!
+#ifdef OUTPOST_FRIENDSHIP_MODE
 /obj/machinery/chemical_dispenser/process()
 	if(!_recharge_reagents)
 		return
@@ -27,7 +28,8 @@
 				. = 1
 		if(.)
 			SStgui.update_uis(src)
-*/
+#endif
+// Outpost 21 edit end
 
 /obj/machinery/chemical_dispenser
 	dispense_reagents = list(

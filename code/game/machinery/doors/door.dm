@@ -44,6 +44,8 @@
 	var/icon_tinted
 	var/id_tint
 
+	var/update_adjacent_tiles = TRUE
+
 /obj/machinery/door/attack_generic(var/mob/user, var/damage)
 	if(isanimal(user))
 		var/mob/living/simple_mob/S = user
@@ -78,7 +80,10 @@
 	update_icon()
 
 	update_nearby_tiles(need_rebuild=1)
+
+	#ifndef OUTPOST_FRIENDSHIP_MODE
 	AddElement(/datum/element/headbonk/door) // Outpost 21 edit - Bonk!
+	#endif
 
 /obj/machinery/door/Destroy()
 	density = FALSE
@@ -130,8 +135,8 @@
 		M.last_bumped = world.time
 		if(M.restrained() && !check_access(null))
 			return
-		else if(istype(M, /mob/living/simple_mob/animal/passive/mouse) && !(M.ckey))	//VOREStation Edit: Make wild mice
-			return																		//VOREStation Edit: unable to open doors
+		else if(HAS_TRAIT(M, TRAIT_AMBIENT_PEST_MOB) && !(M.ckey))
+			return
 		else
 			bumpopen(M)
 		return
@@ -183,7 +188,7 @@
 		return
 	if(operating)
 		return
-	if(user.last_airflow > world.time - vsc.airflow_delay) //Fakkit
+	if(user.last_airflow > world.time - GLOB.vsc.airflow_delay) //Fakkit
 		return
 	if(SEND_SIGNAL(user, COMSIG_MOB_BUMPED_DOOR_OPEN, src) & DOOR_STOP_BUMP)
 		return
@@ -219,9 +224,10 @@
 
 
 
-/obj/machinery/door/hitby(atom/movable/source, var/speed=5)
+/obj/machinery/door/hitby(atom/movable/source, datum/thrownthing/throwingdatum)
 	..()
 	visible_message(span_danger("[name] was hit by [source]."))
+	var/speed = throwingdatum?.speed || THROWFORCE_SPEED_DIVISOR
 	var/tforce = 0
 	if(ismob(source))
 		tforce = 15 * (speed/THROWFORCE_SPEED_DIVISOR)
@@ -410,7 +416,7 @@
 	return
 
 
-/obj/machinery/door/emp_act(severity)
+/obj/machinery/door/emp_act(severity, recursive)
 	if(prob(20/severity) && (istype(src,/obj/machinery/door/airlock) || istype(src,/obj/machinery/door/window)) )
 		open()
 	..()
@@ -528,7 +534,7 @@
 		open_speed = 15
 	return (normalspeed ? open_speed : 5)
 
-/obj/machinery/door/proc/close(var/forced = 0)
+/obj/machinery/door/proc/close(var/forced = 0, var/ignore_safties = FALSE, var/crush_damage = DOOR_CRUSH_DAMAGE)
 	if(!can_close(forced))
 		return
 	operating = 1
@@ -603,7 +609,8 @@
 			bound_width = world.icon_size
 			bound_height = width * world.icon_size
 
-	update_nearby_tiles()
+	if(update_adjacent_tiles)
+		update_nearby_tiles()
 
 /obj/machinery/door/morgue
 	icon = 'icons/obj/doors/doormorgue.dmi'

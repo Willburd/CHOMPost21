@@ -51,7 +51,7 @@ GLOBAL_VAR(bomb_set)
 		if(timeleft <= 0)
 			explode()
 		for(var/mob/M in viewers(1, src))
-			if((M.client && M.machine == src))
+			if((M.client && M.check_current_machine(src)))
 				attack_hand(M)
 	return ..()
 
@@ -354,7 +354,7 @@ GLOBAL_VAR(bomb_set)
 
 		add_fingerprint(usr)
 		for(var/mob/M in viewers(1, src))
-			if((M.client && M.machine == src))
+			if((M.client && M.check_current_machine(src)))
 				attack_hand(M)
 	else
 		usr << browse(null, "window=nuclearbomb")
@@ -434,8 +434,8 @@ GLOBAL_VAR(bomb_set)
 
 				feedback_set_details("end_error","nuke - unhandled ending")
 
-				if(blackbox)
-					blackbox.save_all_data_to_sql()
+				if(GLOB.blackbox)
+					GLOB.blackbox.save_all_data_to_sql()
 				sleep(300)
 				log_game("Rebooting due to nuclear detonation")
 				world.Reboot()

@@ -106,6 +106,9 @@
 	qdel(src)
 	return
 
+/obj/structure/window/proc/can_glasspassers_pass()
+	PROTECTED_PROC(TRUE)
+	return TRUE
 
 /obj/structure/window/bullet_act(var/obj/item/projectile/Proj)
 
@@ -141,7 +144,7 @@
 
 /obj/structure/window/CanPass(atom/movable/mover, turf/target)
 	if(istype(mover) && mover.checkpass(PASSGLASS))
-		return TRUE
+		return can_glasspassers_pass()
 	if(is_fulltile())
 		return FALSE	//full tile window, you can't move into it!
 	if(get_dir(mover, target) == GLOB.reverse_dir[dir]) // From elsewhere to here, can't move against our dir
@@ -162,15 +165,18 @@
 		return !anchored // If it's anchored, it'll block air.
 	return TRUE // Don't stop airflow from the other sides.
 
-/obj/structure/window/hitby(atom/movable/source)
+/obj/structure/window/hitby(atom/movable/source, datum/thrownthing/throwingdatum)
 	..()
 	visible_message(span_danger("[src] was hit by [source]."))
 	var/tforce = 0
 	if(ismob(source))
 		tforce = 40
-	else if(isobj(source))
+	else if(isitem(source))
 		var/obj/item/I = source
 		tforce = I.throwforce
+	else if(isobj(source))
+		var/obj/hitting_object = source
+		tforce = hitting_object.w_class * 5
 	if(reinf) tforce *= 0.25
 	if(health - tforce <= 7 && !reinf)
 		anchored = FALSE
@@ -205,10 +211,11 @@
 
 	else if (user.a_intent == I_HURT)
 
-		if (ishuman(user))
+		if(ishuman(user))
 			var/mob/living/carbon/human/H = user
-			if(H.species.can_shred(H))
-				attack_generic(H,25)
+			var/shreddamage = H.species.can_shred(H, FALSE, 15)
+			if(shreddamage)
+				attack_generic(H, shreddamage + 5, "attacks")
 				return
 
 		playsound(src, 'sound/effects/glassknock.ogg', 80, 1)
@@ -360,7 +367,7 @@
 	take_damage(damage)
 	return
 
-/obj/structure/window/handle_rotation_verbs(angle)
+/obj/structure/window/handle_rotation_verbs(angle, mob/user)
 	if(is_fulltile())
 		return FALSE
 	update_nearby_tiles(need_rebuild=1) //Compel updates before
@@ -460,7 +467,7 @@
 		icon_state = "[basestate]"
 		return
 	else
-		flags = NONE // Removes ON_BORDER and OPPOSITE_OPACITY
+		flags &= ~ON_BORDER // Removes ON_BORDER
 	var/list/dirs = list()
 	if(anchored)
 		for(var/obj/structure/window/W in orange(src,1))
@@ -601,6 +608,11 @@
 	fulltile = TRUE
 	flags = NONE
 
+/obj/structure/window/reinforced/polarized/can_glasspassers_pass()
+	// If the windows are currently tinted, they're blocking light from passing.
+	// So, they should block stuff like lasers at that time.
+	return opacity
+
 /obj/structure/window/reinforced/polarized/attackby(obj/item/W as obj, mob/user as mob)
 	if(istype(W, /obj/item/multitool) && !anchored) // Only allow programming if unanchored!
 		var/obj/item/multitool/MT = W
@@ -635,8 +647,9 @@
 	icon = 'icons/obj/stationobjs.dmi'
 	icon_state = "light0"
 	desc = "A remote control switch for polarized windows."
-	var/range = 7
 	circuit = /obj/item/circuitboard/electrochromic
+	flags = WALL_ITEM
+	var/range = 7
 
 /obj/machinery/button/windowtint/attack_hand(mob/user as mob)
 	if(..())

@@ -70,7 +70,7 @@
 	name = "Xenoarchaeology Tech crate"
 	desc = "A set of standard xenoarchaeological supplies. Requires Xenoarchaeology access."
 	contains = list(
-				// /obj/item/pickaxe/excavationdrill, // Outpost 21 edit - No roundstart xenodrills
+				/obj/item/pickaxe/excavationdrill,
 				/obj/item/xenoarch_multi_tool,
 				/obj/item/clothing/suit/space/anomaly,
 				/obj/item/clothing/head/helmet/space/anomaly,
@@ -88,6 +88,21 @@
 	cost = 100
 	containertype = /obj/structure/closet/crate/secure/xion
 	containername = "Xenoarchaeology Tech crate"
+	access = ACCESS_RESEARCH
+
+/datum/supply_pack/sci/protolathe_boards
+	name = "Protolathe Board Crate"
+	desc = "A set of standard protolathe boards, one for every department! Locked to science."
+	contains = list(
+			/obj/item/circuitboard/machine/protolathe/department/engineering,
+			/obj/item/circuitboard/machine/protolathe/department/service,
+			/obj/item/circuitboard/machine/protolathe/department/medical,
+			/obj/item/circuitboard/machine/protolathe/department/cargo,
+			/obj/item/circuitboard/machine/protolathe/department/science,
+			/obj/item/circuitboard/machine/protolathe/department/security)
+	cost = 200 //If you're ordering this, you're doing something sus or you REALLY messed up
+	containertype = /obj/structure/closet/crate/secure/science
+	containername = "Protolathe Board crate"
 	access = ACCESS_RESEARCH
 
 /*
@@ -141,3 +156,10 @@
 	containername = "VARMAcorp adaptive beta subject (Experimental)"
 	access = ACCESS_XENOBIOLOGY
 //CHOMEdit End
+
+/datum/supply_pack/sci/anomaly_harvesting
+	name = "Anomaly Harvesting crate"
+	desc = "Contains the tools to start anomaly harvesting. Requires Research access."
+	cost = 300
+	containertype = /obj/structure/largecrate/anomaly
+	access = ACCESS_RESEARCH

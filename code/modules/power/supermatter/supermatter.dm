@@ -174,7 +174,7 @@
 
 	set waitfor = 0
 
-	message_admins("Supermatter exploded at ([x],[y],[z] - <A href='byond://?_src_=holder;[HrefToken()];adminplayerobservecoodjump=1;X=[x];Y=[y];Z=[z]'>JMP</a>)",0,1)
+	message_admins("Supermatter exploded at ([x],[y],[z] - <A href='byond://?_src_=holder;[HrefToken()];adminplayerobservecoodjump=1;X=[x];Y=[y];Z=[z]'>JMP</a>)")
 	log_game("SUPERMATTER([x],[y],[z]) Exploded. Power:[power], Oxygen:[oxygen], Damage:[damage], Integrity:[get_integrity()]")
 	anchored = TRUE
 	grav_pulling = 1
@@ -348,6 +348,16 @@
 	if(grav_pulling)
 		supermatter_pull(src)
 
+	if(damage) // Start fucking things up
+		if(get_integrity() < 85 && prob(5))
+			generate_anomaly(get_ranged_target_turf(src, pick(GLOB.cardinal), rand(5, 10)), FLUX_ANOMALY)
+		if(get_integrity() < 75 && prob(5))
+			generate_anomaly(get_ranged_target_turf(src, pick(GLOB.cardinal), rand(5, 10)), HALLUCINATION_ANOMALY)
+		if(get_integrity() < 50 && prob(2))
+			generate_anomaly(get_ranged_target_turf(src, pick(GLOB.cardinal), rand(5, 10)), GRAVITATIONAL_ANOMALY)
+		if(get_integrity() < 25 && prob(0.3))
+			generate_anomaly(get_ranged_target_turf(src, pick(GLOB.cardinal), rand(5, 10)), PYRO_ANOMALY)
+
 	// Vary volume by power produced.
 	if(power)
 		// Volume will be 1 at no power, ~12.5 at ENERGY_NITROGEN, and 20+ at ENERGY_PHORON.
@@ -518,8 +528,7 @@
 	tgui_interact(user)
 
 /obj/machinery/power/supermatter/attack_hand(mob/user as mob)
-	var/datum/gender/TU = GLOB.gender_datums[user.get_visible_gender()]
-	user.visible_message(span_warning("\The [user] reaches out and touches \the [src], inducing a resonance... [TU.his] body starts to glow and bursts into flames before flashing into ash."),\
+	user.visible_message(span_warning("\The [user] reaches out and touches \the [src], inducing a resonance... [user.p_Their()] body starts to glow and bursts into flames before flashing into ash."),\
 		span_danger("You reach out and touch \the [src]. Everything starts burning and all you can hear is ringing. Your last thought is \"That was not a wise decision.\""),\
 		span_warning("You hear an uneartly ringing, then what sounds like a shrilling kettle as you are washed with a wave of heat."))
 
@@ -567,8 +576,7 @@
 		return
 	if(isliving(AM))
 		var/mob/living/M = AM
-		var/datum/gender/T = GLOB.gender_datums[M.get_visible_gender()]
-		AM.visible_message(span_warning("\The [AM] slams into \the [src] inducing a resonance... [T.his] body starts to glow and catch flame before flashing into ash."),\
+		AM.visible_message(span_warning("\The [AM] slams into \the [src] inducing a resonance... [M.p_Their()] body starts to glow and catch flame before flashing into ash."),\
 		span_danger("You slam into \the [src] as your ears are filled with unearthly ringing. Your last thought is \"Oh, fuck.\""),\
 		span_warning("You hear an uneartly ringing, then what sounds like a shrilling kettle as you are washed with a wave of heat."))
 	else if(!grav_pulling) //To prevent spam, detonating supermatter does not indicate non-mobs being destroyed
@@ -635,7 +643,7 @@
 
 /obj/item/broken_sm/Initialize(mapload)
 	. = ..()
-	message_admins("Broken SM shard created at ([x],[y],[z] - <A href='byond://?_src_=holder;[HrefToken()];adminplayerobservecoodjump=1;X=[x];Y=[y];Z=[z]'>JMP</a>)",0,1)
+	message_admins("Broken SM shard created at ([x],[y],[z] - <A href='byond://?_src_=holder;[HrefToken()];adminplayerobservecoodjump=1;X=[x];Y=[y];Z=[z]'>JMP</a>)")
 	START_PROCESSING(SSobj, src)
 
 /obj/item/broken_sm/process()

@@ -1,7 +1,8 @@
 /obj/item/spellbook/oneuse/buttblast
-	spell = /spell/targeted/buttblast
+	icon = 'modular_outpost/icons/obj/library.dmi'
+	spell = /datum/spell/targeted/buttblast
 	spellname = "buttblast"
-	icon_state ="bookknock"
+	icon_state ="bookbutt"
 	desc = "This book seems indecent."
 
 /obj/item/spellbook/oneuse/buttblast/recoil(mob/user as mob)

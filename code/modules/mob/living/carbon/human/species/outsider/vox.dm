@@ -20,7 +20,7 @@
 	refer to them as 'shitbirds' for their violent and offensive nature, as well as their horrible \
 	smell.<br/><br/>Most humans will never meet a Vox raider, instead learning of this insular species through \
 	dealing with their traders and merchants; those that do rarely enjoy the experience."
-	wikilink="https://wiki.vore-station.net/Vox"
+	wikilink="https://wiki.chompstation13.net/index.php?title=Vox" //CHOMPEdit
 	catalogue_data = list(/datum/category_item/catalogue/fauna/vox)
 
 //	taste_sensitivity = TASTE_DULL
@@ -44,12 +44,12 @@
 	cold_level_2 = 50
 	cold_level_3 = 0
 
-	breath_type = GAS_PHORON // Outpost 21 edit - phoron vox is correct thankyou
+	breath_type = GAS_N2
 	poison_type = GAS_O2
 	ideal_air_type = /datum/gas_mixture/belly_air/vox
 	siemens_coefficient = 0.2
 
-	flags = NO_DNA | NO_DEFIB // Outpost 21 edit - Vox are no longer NO_SLEEVE
+	flags = NO_DNA | NO_SLEEVE
 	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_WHITELIST_SELECTABLE
 	appearance_flags = HAS_EYE_COLOR | HAS_HAIR_COLOR | HAS_SKIN_COLOR
 
@@ -75,19 +75,19 @@
 
 
 	has_organ = list(
-		O_HEART =    /obj/item/organ/internal/heart/vox,
-		O_LUNGS =    /obj/item/organ/internal/lungs/vox,
-		O_VOICE =	 /obj/item/organ/internal/voicebox,
-		O_LIVER =    /obj/item/organ/internal/liver/vox,
-		O_KIDNEYS =  /obj/item/organ/internal/kidneys/vox,
-		O_BRAIN =    /obj/item/organ/internal/brain/vox,
-		O_EYES =     /obj/item/organ/internal/eyes,
+		O_HEART =	/obj/item/organ/internal/heart/vox,
+		O_LUNGS =	/obj/item/organ/internal/lungs/vox,
+		O_VOICE =	/obj/item/organ/internal/voicebox/vox,
+		O_LIVER =	/obj/item/organ/internal/liver/vox,
+		O_KIDNEYS =	/obj/item/organ/internal/kidneys/vox,
+		O_BRAIN =	/obj/item/organ/internal/brain/vox,
+		O_EYES =	/obj/item/organ/internal/eyes,
 		)
 
 	genders = list(NEUTER)
 
 	default_emotes = list(
-		/decl/emote/audible/vox_shriek
+		/datum/decl/emote/audible/vox_shriek
 	)
 	inherent_verbs = list(/mob/living/carbon/human/proc/tie_hair) //Get ya quills done did
 

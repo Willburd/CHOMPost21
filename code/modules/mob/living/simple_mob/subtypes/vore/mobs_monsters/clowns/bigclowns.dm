@@ -228,16 +228,6 @@
 				"bio" = 0,
 				"rad" = 0
 				)
-	armor_soak = list(
-				"melee" = 10,
-				"bullet" = 5,
-				"laser" = 0,
-				"energy" = 0,
-				"bomb" = 0,
-				"bio" = 0,
-				"rad" = 0
-				)
-
 
 /mob/living/simple_mob/clowns/big/chlown
 	name = "A Clown?"
@@ -315,7 +305,6 @@
 	default_pixel_x = -16
 	pixel_x = -16
 	pixel_y = 0
-
 
 /mob/living/simple_mob/clowns/big/blob
 	name = "A Clown?"

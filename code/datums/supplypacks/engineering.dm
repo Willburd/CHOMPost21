@@ -15,6 +15,16 @@
 	containertype = /obj/structure/closet/crate/galaksi
 	containername = "Replacement lights"
 
+/* CHOMPRemove Start
+/datum/supply_pack/eng/fusion_coils
+	name = "Fusion Coils (SMES Recharge)"
+	desc = "A pair of single-use heavy-duty fusion coils, for recharging depleted SMES units."
+	contains = list(/obj/item/fusion_coil, /obj/item/fusion_coil)
+	cost = 150
+	containertype = /obj/structure/closet/crate/einstein
+	containername = "Fusion Coil crate"
+*/// CHOMPRemove End
+
 /datum/supply_pack/eng/smescoil
 	name = "Superconducting Magnetic Coil"
 	desc = "A single standard superconducting magnetic coil."
@@ -425,7 +435,7 @@
 	containername = "algae sheets crate"
 
 /datum/supply_pack/eng/inducer
-	contains = list(/obj/item/inducer/unloaded = 3) // Outpost 21 edit - Science rebalance
+	contains = list(/obj/item/inducer = 3)
 	name = "inducer"
 	desc = "A trio of inducers, used for remotely recharging powered devices. Requires Engine access."
 	cost = 90	//Relatively expensive

@@ -64,6 +64,7 @@
 	icon_state = "scanner_0"
 	density = TRUE
 	anchored = TRUE
+	flags = REMOTEVIEW_ON_ENTER
 	use_power = USE_POWER_IDLE
 	idle_power_usage = 50
 	active_power_usage = 300
@@ -172,8 +173,6 @@
 		to_chat(usr, span_warning("There is already something inside."))
 		return
 	usr.stop_pulling()
-	usr.client.perspective = EYE_PERSPECTIVE
-	usr.client.eye = src
 	usr.forceMove(src)
 	set_occupant(usr)
 	icon_state = "scanner_1"
@@ -250,9 +249,6 @@
 	. = ..()
 
 /obj/machinery/dna_scannernew/proc/put_in(var/mob/M)
-	if(M.client)
-		M.client.perspective = EYE_PERSPECTIVE
-		M.client.eye = src
 	M.forceMove(src)
 	set_occupant(M)
 	icon_state = "scanner_1"
@@ -274,9 +270,6 @@
 	var/mob/living/carbon/WC = get_occupant()
 	if((!WC || locked))
 		return
-	if(WC.client)
-		WC.client.eye = WC.client.mob
-		WC.client.perspective = MOB_PERSPECTIVE
 	if(istype(WC,/mob/living/carbon/brain))
 		for(var/obj/O in src)
 			if(istype(O,/obj/item/organ/internal/brain))
@@ -848,6 +841,7 @@
 			//testing("Random bad mut!")
 			randmutb(WC)
 			domutcheck(WC,null,MUTCHK_FORCED)
+			WC.check_mutation_cascade_gib() // Outpost 21 edit - mutation cascade trait
 			WC.UpdateAppearance()
 	// Traitgenes Do gene updates here, and more comprehensively
 	if(ishuman(WC))
@@ -872,6 +866,7 @@
 			if(prob(95))
 				randmutg(WC)
 		domutcheck(WC,null,MUTCHK_FORCED)
+		WC.check_mutation_cascade_gib() // Outpost 21 edit - mutation cascade trait
 		WC.UpdateAppearance()
 	// Traitgenes Do gene updates here, and more comprehensively
 	if(ishuman(WC))

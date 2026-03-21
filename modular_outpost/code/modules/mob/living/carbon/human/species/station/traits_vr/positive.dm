@@ -53,3 +53,17 @@
 	. = ..()
 	if(!(/mob/living/proc/super_fart in S.inherent_verbs))
 		remove_verb(H, /mob/living/proc/super_fart)
+
+/datum/trait/positive/disposable_respawn
+	name = "Disposable Body"
+	desc = "Autosleever respawn time reduced to 5 minutes regardless of what caused death."
+	cost = 12 // You really should know what this means by now
+
+/datum/trait/positive/naturaltunneler
+	name = "Natural Tunneler"
+	desc = "Using strong claws or inhuman strength you have the ability to carve your way through rough stone walls."
+	cost = 7
+
+/datum/trait/positive/naturaltunneler/apply(datum/species/S, mob/living/carbon/human/H, trait_prefs)
+	. = ..()
+	ADD_TRAIT(H, TRAIT_NATURALTUNNELER, ROUNDSTART_TRAIT)

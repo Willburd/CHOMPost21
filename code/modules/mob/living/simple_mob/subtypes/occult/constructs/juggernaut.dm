@@ -21,7 +21,7 @@
 	attack_armor_pen = 60 //Being punched by a living, floating statue.
 	attacktext = list("smashed their armoured gauntlet into")
 	friendly = list("pats")
-	organ_names = /decl/mob_organ_names/juggernaut
+	organ_names = /datum/decl/mob_organ_names/juggernaut
 	mob_size = MOB_HUGE
 
 
@@ -33,9 +33,9 @@
 	attack_sound = 'sound/weapons/heavysmash.ogg'
 	status_flags = 0
 	resistance = 10
-	construct_spells = list(/spell/aoe_turf/conjure/forcewall/lesser,
-							/spell/targeted/fortify,
-							/spell/targeted/construct_advanced/slam
+	construct_spells = list(/datum/spell/aoe_turf/conjure/forcewall/lesser,
+							/datum/spell/targeted/fortify,
+							/datum/spell/targeted/construct_advanced/slam
 							)
 
 	armor = list(
@@ -59,7 +59,6 @@
 		var/projectile_dam_type = P.damage_type
 		var/incoming_damage = (round(P.damage / damage_mod) - (round((P.damage / damage_mod) * 0.3)))
 		var/armorcheck = run_armor_check(null, P.check_armour)
-		var/soakedcheck = get_armor_soak(null, P.check_armour)
 		if(!(istype(P, /obj/item/projectile/energy) || istype(P, /obj/item/projectile/beam)))
 			visible_message(span_danger("The [P.name] bounces off of [src]'s shell!"), \
 						span_userdanger("The [P.name] bounces off of [src]'s shell!"))
@@ -67,7 +66,7 @@
 			if(!(P.damage_type == BRUTE || P.damage_type == BURN))
 				projectile_dam_type = BRUTE
 				incoming_damage = round(incoming_damage / 4) //Damage from strange sources is converted to brute for physical projectiles, though severely decreased.
-			apply_damage(incoming_damage, projectile_dam_type, null, armorcheck, soakedcheck, is_sharp(P), has_edge(P), P)
+			apply_damage(incoming_damage, projectile_dam_type, null, armorcheck, is_sharp(P), has_edge(P), P)
 			return -1 //Doesn't reflect non-beams or non-energy projectiles. They just smack and drop with little to no effect.
 		else
 			visible_message(span_danger("The [P.name] gets reflected by [src]'s shell!"), \
@@ -77,7 +76,7 @@
 			if(!(P.damage_type == BRUTE || P.damage_type == BURN))
 				projectile_dam_type = BURN
 				incoming_damage = round(incoming_damage / 4) //Damage from strange sources is converted to burn for energy-type projectiles, though severely decreased.
-			apply_damage(incoming_damage, P.damage_type, null, armorcheck, soakedcheck, is_sharp(P), has_edge(P), P)
+			apply_damage(incoming_damage, P.damage_type, null, armorcheck, is_sharp(P), has_edge(P), P)
 
 		// Find a turf near or on the original location to bounce to
 		if(P.starting)
@@ -124,9 +123,9 @@
 				"bomb" = 10,
 				"bio" = 100,
 				"rad" = 100)
-	construct_spells = list(/spell/aoe_turf/conjure/forcewall/lesser,
-							/spell/targeted/fortify,
-							/spell/targeted/construct_advanced/slam
+	construct_spells = list(/datum/spell/aoe_turf/conjure/forcewall/lesser,
+							/datum/spell/targeted/fortify,
+							/datum/spell/targeted/construct_advanced/slam
 							)
 
 /mob/living/simple_mob/construct/juggernaut/behemoth/bullet_act(var/obj/item/projectile/P)
@@ -149,7 +148,7 @@
 
 	return (..(P))
 
-/decl/mob_organ_names/juggernaut
+/datum/decl/mob_organ_names/juggernaut
 	hit_zones = list("body", "left pauldron", "right pauldron", "left arm", "right arm", "eye", "head", "crystaline spike")
 
 /mob/living/simple_mob/construct/juggernaut/behemoth/unstoppable

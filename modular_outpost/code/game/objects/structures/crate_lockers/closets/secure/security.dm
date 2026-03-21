@@ -1,7 +1,7 @@
 /obj/structure/closet/secure_closet/security_pilot
 	name = "security pilot's locker"
 	req_access = list(ACCESS_SECURITY)
-	closet_appearance = /decl/closet_appearance/secure_closet/security_pilot
+	closet_appearance = /datum/decl/closet_appearance/secure_closet/security_pilot
 	storage_capacity = 2.5 * MOB_MEDIUM
 
 	starts_with = list(
@@ -28,3 +28,10 @@
 		/obj/item/flashlight/maglight,
 		/obj/item/radio
 		)
+
+/obj/structure/closet/secure_closet/brigmedic
+	name = "brigmedic's locker"
+	req_access = list(ACCESS_SECURITY)
+	closet_appearance = /datum/decl/closet_appearance/secure_closet/brigmedic
+
+	starts_with = list() // TODO - Mapset right now while we figure out what even goes in here

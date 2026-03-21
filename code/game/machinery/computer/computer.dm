@@ -8,7 +8,7 @@
 	use_power = USE_POWER_IDLE
 	idle_power_usage = 300
 	active_power_usage = 300
-	blocks_emissive = FALSE
+	blocks_emissive = EMISSIVE_BLOCK_NONE
 	var/processing = 0
 
 	var/icon_keyboard = "generic_key"
@@ -29,7 +29,7 @@
 		return 0
 	return 1
 
-/obj/machinery/computer/emp_act(severity)
+/obj/machinery/computer/emp_act(severity, recursive)
 	if(prob(20/severity)) set_broken()
 	..()
 
@@ -121,7 +121,7 @@
 	else
 		if(istype(I,/obj/item/gripper)) //Behold, Grippers and their horribleness. If ..() is called by any computers' attackby() now or in the future, this should let grippers work with them appropriately.
 			var/obj/item/gripper/B = I	//B, for Borg.
-			var/obj/item/wrapped = B.get_current_pocket()
+			var/obj/item/wrapped = B.get_wrapped_item()
 			if(!wrapped)
 				to_chat(user, "\The [B] is not holding anything.")
 				return

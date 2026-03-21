@@ -1,10 +1,17 @@
 //oooh, shiny
 /obj/structure/prop/tyr_elevator //This won't function for a while, if ever
 	name = "odd elevator"
-	desc = "A strange metal cylandir. Seems sealed shut."
+	desc = "A strange metal cylandir, a partially functioning elevator it seems. However the doors need to be pried open."
+	description_info = "Utlize a weapon or tool to get warped somewhere else."
 	icon = 'modular_chomp/icons/obj/tribal_gear.dmi'
 	icon_state = "elevator"
 	anchored = TRUE
+	var/descendx
+	var/descendy
+
+/obj/structure/prop/tyr_elevator/attackby(var/obj/item/W as obj, var/mob/user as mob)
+	if (do_after(user, 30, target = src))
+		do_teleport(user, locate(descendx,descendy,src.z), channel = TELEPORT_CHANNEL_QUANTUM)
 
 /obj/machinery/door/blast/puzzle/tyrdoor
 	name = "strange door"
@@ -461,6 +468,20 @@
 	scavanging is to be done at that site."
 	value = CATALOGUER_REWARD_HARD
 
+/obj/item/prop/tyrlore/fossiltank
+	name = "final desgination"
+	icon_state = "old_disc_eclipse"
+	catalogue_data = list(/datum/category_item/catalogue/anomalous/fossil_tank)
+
+/datum/category_item/catalogue/anomalous/fossil_tank
+	name = "Rolling Crematorium"
+	desc = "Station Point - Lost\
+	Attackers - The Terrain\
+	Leader - Nonfunctional\
+	Objective - Eliminate all hostiles\
+	Awaiting further instruction."
+	value = CATALOGUER_REWARD_HARD
+
 
 /obj/item/material/barbedwire/plastic/active
 	anchored = 1
@@ -475,142 +496,337 @@
 	anchored = 1
 	icon_state = "barbedwire-out"
 
-/obj/item/prop/tyrlore/reddisc
-	catalogue_data = list(/datum/category_item/catalogue/anomalous/tyr_red)
-	color = "#FFFFFF"
+/obj/item/prop/tyrlore/acid_boss
+	name = "tyrian expirment data disc one"
+	catalogue_data = list(/datum/category_item/catalogue/anomalous/acid_boss)
 
-/datum/category_item/catalogue/anomalous/tyr_red
-	name = "Precursor Object - Tyr Data Disc Red"
-	desc = "The following data has been corrupted. \
-	<br><br>\
-	oslra yclce hietg hotfsaun ifev undhdre htiytr veesn.\
-	No huftrer ritrdecisev cevredive. \
-	notencnidoc tihw fof pantel posd lsot wot tuhanosd cslcey..\
-	leif sgisn lbeow tslo gilans reorsr.\
-	ireaneregnot dops wolakrbe.. \
-	rsoescure gaklicn. \
-	cenictomon To lawdorr.\
-	tatepmt treeh hudnedr senevty tow."
+/datum/category_item/catalogue/anomalous/acid_boss
+	name = "Tyr Expirment Data - Corrupted Data One"
+	desc = "18106832146282688032166282183282421432861268324012244216621432241<BR> \
+	8406414821682161862321660328242143228184848188616622034321232606414241612<BR> \
+	4848803226146016206214263264481262823282421282328616484832206818863286421<BR> \
+	4623216628268182610241426328218324214128252324812601468603218683212628082<BR> \
+	4216622032824212823222106862605232861648483214622010482832824214321462146<BR> \
+	8208032286818403216823212622632206818863212603212326814601048823632861432<BR> \
+	1268143260821648483286186846166220321862321682523222108232168232148864126<BR> \
+	2266032681264162648803216623260106248162042825232401662186832481260146860<BR> \
+	3226186254823242106882321682523212622632163212403260106814328616824232801<BR> \
+	8106832281062261662203212622632601064641868823286143224181048263226183260<BR> \
+	1832401024423240186814363216401220166214523218106832261664481840122480321<BR> \
+	2201462826032266818646416622032601840143260141426603218282832128232181068<BR> \
+	3212484816146032421840146034328242143284166214603286181048263214628212622<BR> \
+	0481432824214166832166228681260826810248210681452321262263216283282421480<BR> \
+	3212828214406482142632824214324018608232142828142482168414324014824218266<BR> \
+	0321828326814401884124852328242148032441060823240122614321682328618686014<BR> \
+	3632221482821468328014825232861432241262324012461432824214322848186812326<BR> \
+	4681826102414321224162652322612401220166220321262808242166220321268181062<BR> \
+	2632824214326448126282363216326814206814823232261280328618623432261240403<BR> \
+	2241862821460823432601832241848263432601832144064828034328616484832201862<BR> \
+	14343260826816622032821020343240106082321822148034"
 	value = CATALOGUER_REWARD_HARD
 
-/obj/item/prop/tyrlore/purpledisc
-	catalogue_data = list(/datum/category_item/catalogue/anomalous/tyr_purple)
-	color = "#530E31"
+/obj/item/prop/tyrlore/sonic_boss
+	name = "tyrian expirment data disc two"
+	catalogue_data = list(/datum/category_item/catalogue/anomalous/sonic_boss)
 
-/datum/category_item/catalogue/anomalous/tyr_purple
-	name = "Precursor Object - Tyr Data Disc Purple"
-	desc = "The following data has been corrupted. \
-	<br><br>\
-	tapa'cnsi lgo, 1 ohur rebofe rcoy elpa.\
-	I ma ont yerlal rues wtah yeht tawn ee to ptu ni tihs. \
-	ts'i tjsu gipretena tginsh e'vi yarelad sida.\
-	amirpexnlet irwnig is gongi yirwahe.\
-	varesel crew memebers are filling ill. \
-	But the elevators are holding strong. \
-	And stable power is, well, stable.\
-	I hope for a good dream."
+/datum/category_item/catalogue/anomalous/sonic_boss
+	name = "Tyr Expirment Data - Corrupted Data Two"
+	desc = "1842322614126832204818681618106032481412261468<BR>\
+	42188632824214326082126860322048188632226816204282146832122218841432801810683242141226<BR>\
+	42188632824214322816144826603222481818403216623280181068326082141226<BR>\
+	42188632801810683212684060326814122442321810823212622632206812606432124848<BR>\
+	18106832124848161460321262263228681614622660<BR>\
+	2468106042142632106226146832801810683242141448<BR>\
+	401280321632824268188632408032601810483212861280<BR>\
+	281868328242143226128032801810324812803210622614683282421860143280181032601064646814606032"
 	value = CATALOGUER_REWARD_HARD
 
-/obj/item/prop/tyrlore/greendisc
-	catalogue_data = list(/datum/category_item/catalogue/anomalous/tyr_green)
-	color = "#530E31"
+/obj/item/prop/tyrlore/shield_boss
+	name = "tyrian expirment data disc three"
+	catalogue_data = list(/datum/category_item/catalogue/anomalous/shield_boss)
 
-/datum/category_item/catalogue/anomalous/tyr_green
-	name = "Precursor Object - Tyr Data Disc Green"
-	desc = "Final mortality count before cryo leap.\
-	29,895 illness\
-	113,615 workplace injuries\
-	20,105 off planet\
-	300 to be determined."
+/datum/category_item/catalogue/anomalous/shield_boss
+	name = "Tyr Expirment Data - Corrupted Data Three"
+	desc = "24106868146282326042161448261662203216603212623214886414681640146282128216186<BR>\
+	2328616824232824214321260826812483260141234328614321268143212224814328218326014622632<BR>\
+	6018401432646818441424821648146032821832824214321222806060523242188614841468328242146<BR>\
+	8143216603212324816401682322818683242188632401024423286143224126232601462263432261014<BR>\
+	3282183248164016821282161862603212622632241862826818486052321822441424826032182832481<BR>\
+	2682014321462181020423260160214322412626218823222143260146282343240126280328242141868<BR>\
+	1602143282421660328616484832124848188632401448141432241840221282126282603282183212248<BR>\
+	2321260321232241810628214683282183282421660326214863210621682343286143224186224106832<BR>\
+	8616824232601024423260821282144014628260523242188614841468328614324212841432188242146<BR>\
+	8321062168260321064321862321828281468166220328218322410484832824214326414608260328242<BR>\
+	128232128282144064823282183224481216403218106832821682481434"
 	value = CATALOGUER_REWARD_HARD
 
-/obj/item/prop/tyrlore/basicflora
-	color = "#FF66CC"
-	catalogue_data = list(/datum/category_item/catalogue/anomalous/tyre_basicflora)
+/obj/item/prop/tyrlore/crystal_boss
+	name = "tyrian expirment data disc four"
+	catalogue_data = list(/datum/category_item/catalogue/anomalous/crystal_boss)
 
-/datum/category_item/catalogue/anomalous/tyre_basicflora
-	name = "Tyr Data - Flora Expirments"
-	desc = "Energy Siphon Unit Attempt\
-	Damage is retained until enough energy is accured\
-	Subject grows with the acculmated energy\
-	Transfering flora program from offense division to sabatoge\
-	Utility to be determined."
+/datum/category_item/catalogue/anomalous/crystal_boss
+	name = "Tyr Expirment Data - Corrupted Data Four"
+	desc = "181068328618684614686032126814322014828216622032681886268052328242681886166220<BR>\
+	32604012484832646818821460826032122012166260823218106832204818681618106032401862126824<BR>\
+	42343264141864481432126046166220326610146082161862603212221810823282421860143286421832<BR>\
+	42128414322214146232244218601462343282421480’68143214841462322218824214681662203240145<BR>\
+	23212622632163212403244106082324214681432821832681062328242143248126226602412641468321<BR>\
+	262263214622016621460363216’8414322214146232401884166220324080322610821614603282183262<BR>\
+	16204282821640145232221082321484146232824214623260184014321626161882603224184014321262<BR>\
+	26324212681260603240143432163286181048263248164614328218326814661014608232601228148280<BR>\
+	32681216481662206032281868328242143228101448326082186812201452322214241210601432824214<BR>\
+	60143264141260126282603240162042823282688032821832641060423240143216623218824214688616601436"
 	value = CATALOGUER_REWARD_HARD
 
-/obj/item/prop/tyrlore/basicshield
-	color = "#530E31"
-	catalogue_data = list(/datum/category_item/catalogue/anomalous/tyre_basicshield)
+/obj/item/prop/tyrlore/gravity_boss
+	name = "tyrian expirment data disc four"
+	catalogue_data = list(/datum/category_item/catalogue/anomalous/gravity_boss)
 
-/datum/category_item/catalogue/anomalous/tyre_basicshield
-	name = "Tyr Data - Barrier Expirments"
-	desc = "Barrier Unit Attempt\
-	Barrier is capable of limiting damage\
-	However the barrier will break under repeated stress\
-	Rebuilding the barrier is swift but costly\
-	Attempts to be made to incoperate Astral Sea warping."
+/datum/category_item/catalogue/anomalous/gravity_boss
+	name = "Tyr Expirment Data - Corrupted Data Five"
+	desc = "206812841682805232123228186824143218283262128210681432824212823216603212488612<BR>\
+	06032821020201662203218623210603432801482326018324012628032126814328218183286141246328<BR>\
+	21832206812606432824214322810484832148882146282321828321682603264188614683432124848321<BR>\
+	828321810683264681484161810603264128216146282’6052321248483224681040224814321062261468<BR>\
+	62141282423216826032206812606434328242141668328616484860321268143286141246523222182616<BR>\
+	14603228184848188616622032824214166832401662263432821832646818841432824216605232163242<BR>\
+	12841432261424162614263282183210622614682018321232606414241612481602142632826814128240<BR>\
+	14628234321632861648483248141226321060328218321232621486321468125232241862826818484816<BR>\
+	62203282421432281868241460321828326212821068143228186832181068322048186816181060324018621268244236"
 	value = CATALOGUER_REWARD_HARD
 
-/obj/item/prop/tyrlore/advanceshield
-	color = "#FF0000"
-	catalogue_data = list(/datum/category_item/catalogue/anomalous/tyre_advanceshield)
+//hivebot discs
+/obj/item/prop/tyrlore/gatekeeper
+	name = "tyrian data disc one"
+	catalogue_data = list(/datum/category_item/catalogue/anomalous/gatekeeper)
 
-/datum/category_item/catalogue/anomalous/tyre_advanceshield
-	name = "Tyr Data - Astral Barrier Expirments"
-	desc = "barrier Unit Attempt\
-	Low class damage is vanished\
-	Higher speed and energized projectiles bypass the barrier\
-	Unbonded Astral Sea projects slightly damaged due to this expirment\
-	Swapping Astral Sea useage from defensive to offensive\
-	Gravity to be utlized for further defensive expirments."
+/datum/category_item/catalogue/anomalous/gatekeeper
+	name = "Tyr Data - Corrupted Data One"
+	desc = "28681860823260481414643832401248281062248216186216622032<BR>\
+	26142814626014321864146812821618623832186248166214<BR>\
+	122012821432646818261024821618623832186248166214<BR>\
+	681460181068241432646818261024821618623832186248166214<BR>\
+	6016206212481468383226124012201426<BR>\
+	24186814383222122648803226124012201426<BR>\
+	286818608232821640143832621420128216841432621662143282421810601262263282426814143242106226681426326014841462828032601688321220146034<BR>\
+	60146226166220322616608268146060326016206212486034<BR>\
+	602412626216622032281868326016206212486034<BR>\
+	1468681868343228186814162062326016206212486032261482142482142634321462821468326016142014324018261434"
 	value = CATALOGUER_REWARD_HARD
 
-/obj/item/prop/tyrlore/basicsonic
-	color = "#CCCCFF"
-	catalogue_data = list(/datum/category_item/catalogue/anomalous/tyre_basicsonic)
+/obj/item/prop/tyrlore/gatekeeper
+	name = "tyrian data disc one"
+	catalogue_data = list(/datum/category_item/catalogue/anomalous/gatekeeper)
 
-/datum/category_item/catalogue/anomalous/tyre_basicsonic
-	name = "Tyr Data - Shockwave Expirments"
-	desc = "Enforcer Unit Attempt\
-	Success upon creating a shockwave capable of throwing indivuals\
-	Damage is limited\
-	Force spreads out, launching subjects\
-	Further energy to be added before hand held weaponery expirments."
+/datum/category_item/catalogue/anomalous/gatekeeper
+	name = "Tyr Data - Corrupted Data One"
+	desc = "28681860823260481414643832401248281062248216186216622032<BR>\
+	2614281462601432186414681282161862383218624816621<BR>4\
+	122012821432646818261024821618623832186248166214<BR>\
+	681460181068241432646818261024821618623832186248166214<BR>\
+	6016206212481468383226124012201426<BR>\
+	24186814383222122648803226124012201426<BR>\
+	286818608232821640143832621420128216841432621662143282421810601262263282426814143242106226681426326014841462828032601688321220146034<BR>\
+	60146226166220322616608268146060326016206212486034<BR>\
+	602412626216622032281868326016206212486034<BR>\
+	1468681868343228186814162062326016206212486032261482142482142634321462821468326016142014324018261434"
 	value = CATALOGUER_REWARD_HARD
 
-/obj/item/prop/tyrlore/basicpower
-	color = "#530E31"
-	catalogue_data = list(/datum/category_item/catalogue/anomalous/tyre_basicpower)
+/obj/item/prop/tyrlore/shotgun
+	name = "tyrian data disc two"
+	catalogue_data = list(/datum/category_item/catalogue/anomalous/shotgun)
 
-/datum/category_item/catalogue/anomalous/tyre_basicpower
-	name = "Tyr Data - Liquid Flame Generators"
-	desc = "Utilization of underground liquid flames is succesful\
-	Power is stable\
-	Capable of further growth\
-	Further expansion recomended\
-	Awaiting approval."
+/datum/category_item/catalogue/anomalous/shotgun
+	name = "Tyr Data - Corrupted Data Two"
+	desc = "461414643228122416481682803260142410681426<BR>\
+1448164016621282143212484832166282681026146860<BR>\
+60184014186214<BR>\
+10642612821662203264128268184832641282821468626032<BR>\
+6468164016622032126082681248326014123244121062826034<BR>\
+42144864<BR>\
+601462261662203218108232261660826814606032284812681460<BR>\
+602412626216622032281868322814484818862818484634<BR>\
+4210688260<BR>\
+28122416481682803266101248168280321222806040124832<BR>\
+681466101460821662203214841224<BR>\
+126280186214<BR>\
+26148214248216622032106246621886623260162062128210681460<BR>\
+646814641268143228186832221282824814<BR>\
+481660821462166220"
 	value = CATALOGUER_REWARD_HARD
 
-/obj/item/prop/tyrlore/ants
-	color = "#993300"
-	catalogue_data = list(/datum/category_item/catalogue/anomalous/tyre_ants)
+/obj/item/prop/tyrlore/engi_boss
+	name = "tyrian data disc three"
+	catalogue_data = list(/datum/category_item/catalogue/anomalous/engi_boss)
 
-/datum/category_item/catalogue/anomalous/tyre_ants
-	name = "Tyr Data - Living Mines Expirments"
-	desc = "Success Living Mines\
-	Minerants\
-	Insect like creatures capable of reproducing metallic and gemstone structures\
-	Highly useful for gemstone production\
-	Altering for wartime useage approved."
+/datum/category_item/catalogue/anomalous/engi_boss
+	name = "Tyr Data - Corrupted Data Three"
+	desc = "181068326814601412682442326414681618263242126<BR>\
+	03224186224481026142634328616824232168252328614326218<BR>\
+	86324662188632824214322818484818861662203432861432401<BR>\
+	28032481666101626160214328242143212201282143228186832<BR>\
+	28106882421468322418622610248216841682803432126464488<BR>\
+	01662203228106882421468324214128252321868326010224414<BR>\
+	24821662203282183212608268124832601412328214406414681<BR>\
+	66220523286164848322810688242146832166224681412601432<BR>\
+	16826032241264122416828034324218861484146832824216603<BR>\
+	28616484832401246143212628032604616623224186282122482<BR>\
+	32861682423282421432481666101626321232206814128214683<BR>\
+	24212021268263432168254603260102020146082142632821832<BR>\
+	12488612806032221432861412681662203212326010168232864<BR>\
+	21648608232861682421662328242143284162416621682803218<BR>\
+	28321462146820160214263212201282143432824214324818622<BR>\
+	03282146840321428281424826032421284143280148232821832<BR>\
+	22143260821026161426322210823260421868823282146840321<BR>\
+	66032123284126816148280321828322210686260523282421432<BR>\
+	86186860823224126014328242106032281268322214166220321<BR>\
+	23284162482164032241884146814263216623268126246328322<BR>\
+	210686260343282421480324212841432801482328218-4214803<BR>\
+	28642128232126814328018103226181662203216623240803218<BR>\
+	28281624143632163212403268142418682616622032126232146<BR>\
+	28268803228186832824214321662821468626036328642128252<BR>\
+	32163226162662548232261832126280<BR>\
+	641886146832601064644880383260102828162416146282<BR>\
+	861668166220383226124012201426<BR>\
+	28122416481682803832186248166214"
 	value = CATALOGUER_REWARD_HARD
 
-/obj/item/prop/tyrlore/drones
-	catalogue_data = list(/datum/category_item/catalogue/anomalous/tyre_drones)
+/obj/item/prop/tyrlore/meteor_boss
+	name = "tyrian data disc four"
+	catalogue_data = list(/datum/category_item/catalogue/anomalous/meteor_boss)
 
-/datum/category_item/catalogue/anomalous/tyre_drones
-	name = "Tyr Data - Drones"
-	desc = "Success\
-	Drone Data Aquired\
-	Allies none the wise\
-	Further data siphoning to contunie\
-	Remodel based off their blueprints."
+/datum/category_item/catalogue/anomalous/meteor_boss
+	name = "Tyr Data - Corrupted Data Four"
+	desc = "16324212821432824216603228122416481682803432601832221868166220321662601626145232621882421<BR>\
+	6622032221082326812166232186832601262263218108260162614343280181032861810482632824216624632861682<BR>\
+	4232181068326448126214826042126416622032861432861810482632421284143212322214828214683264481262148<BR>\
+	2322280326218863632608210641626326414122414328268141282803260821064162616828034328614484832163212<BR>\
+	4032221416622032826812626028146868142632286818403244126216821868161248322610821614603282183212623<BR>\
+	2148864146816401462821248326468184414248252324218641662203216823220181460328614484834<BR>\
+	8614128242146832281868241260823832601062628032861682423212322268106042321828326012622660821868406034"
 	value = CATALOGUER_REWARD_HARD
+
+/obj/item/prop/tyrlore/swarm_boss
+	name = "tyrian data disc five"
+	catalogue_data = list(/datum/category_item/catalogue/anomalous/swarm_boss)
+
+/datum/category_item/catalogue/anomalous/swarm_boss
+	name = "Tyr Data - Corrupted Data Five"
+	desc = "4016606016186232681464186882343286143242128414326010242414606028104848803226188662<BR>\
+	481812261426328242143260244214401282162460321828321810683212484816146032261068166220328242<BR>\
+	143224186228146814622414343282421432126060126060166212821618623212828214406482322616263268<BR>\
+	121660143282421432124812684060523228186882106212821448803262183218621432824218102042823282<BR>\
+	183224421424463216622818322668168414603432181068328214124032421260326082126882142632821832<BR>\
+	246814128214321810683218866232841468601618623218283282421416683268182218826052321248824218<BR>\
+	102042321862143242126032601020201460821426321232641424104816126832261460162062343212322668<BR>\
+	186214328242128232226814124660321828283216628218326040124848146832266818621460321064186232<BR>\
+	221416622032261240122014263432163286181048263260102020146082322810622616622032166282183282<BR>\
+	421660321864146812821618623212622632122626328242143228106224821618623282183226148418106832<BR>\
+	401282146816124832601832168232241810482632681464481624128214321682601448283222148018622632<BR>\
+	281068824214683240126060343244106082321640122016621452328614322668186432123228148632182832<BR>\
+	824216603218282832128232181068321248481614603222126014605232824214803286181048263222143218<BR>\
+	841468681062322280324816204282326816601434321262808612805232261664481840122480321220146282<BR>\
+	32601620621662203218282834<BR>\
+	2218268052324016622632126226326018104834322818683280181034322048186816181060324018621268244234"
+	value = CATALOGUER_REWARD_HARD
+
+/obj/item/prop/tyrlore/medical_boss
+	name = "tyrian data disc five"
+	catalogue_data = list(/datum/category_item/catalogue/anomalous/medical_boss)
+
+/datum/category_item/catalogue/anomalous/medical_boss
+	name = "Tyr Data - Corrupted Data Six"
+	desc = "8242146814321660326218326010244232824216622032126032123260641268465232168254603244106082328612244632608210282832401226143210643222803224421068244232281848466034<BR>\
+	22108232864212823216283282421480328614681432186232821832601840148242166220?322616266254823280181032601414328642128232824212823214886414681640146282322616263282421432188242146832261280?<BR>\
+	82421282546032441060823282421432681440621262826032182832824214322218268032861432106014263432824214324016622632861432608216822442328218328242141668603432168232121662548232681412485232441060823228681220401462826032182832864212823286126032646818206812404014263216628218328242141668324016622632284814604234<BR>\
+	1632466218865232163246621886523222108232601840148242166220322814144860328668186220321222181082343260184014824216622032121662548232681620428234<BR>\
+	184232241082328242128232181082523268144014402214683286421282324212646414621426328218328242143248126082326414686018623282421432188414686014146832241210204282328212484616622032481646143282421282?<BR>\
+	8014124252328242148032401226143228186832123220181826322010126826324218106226343216324218641432861432601414328242144032122012166234<BR>\
+	8018103218282832801810683240142660?328018103226181662203282421282322848166432284818646416622032824216622032122012166234<BR>\
+	16328218482632801810523216321216625482328212461662203282421440343214841468326016622414328614321662244810261426321220128214523216322412623228141448326018401482421662203286162020481662203216626016261432401436<BR>\
+	1842328018105468143216406418606016224814343216825460321248483216623280181068324214122634"
+	value = CATALOGUER_REWARD_HARD
+
+/obj/item/paper/tyr_hint
+	name = "Data Decoding"
+	info = "Signals from outside the building is sparse, but we need to deal with whatever scraps we can get. Every two numbers seems to correlate with a symbol, or letter. 32 is space. 12 is A? Theorizing all 1X are vowels. L is 48."
+
+/obj/structure/prop/blackbox/tyr_boxes
+
+/obj/structure/prop/blackbox/tyr_boxes/hint_a
+	catalogue_data = list(/datum/category_item/catalogue/anomalous/tyr_hint_a)
+
+/datum/category_item/catalogue/anomalous/tyr_hint_a
+	value = CATALOGUER_REWARD_MEDIUM
+	name = "tyrian data box 1560"
+	desc = "Authorization for 24olle24tion has 22een approve26. 24itizens of Rank 24 an26 lower may 22e<BR>\
+	28athere26 for operations. Rank 24s are only authorize26 for operations of 26 24lass an26 <BR>\
+	lower. 24reate26 in26ivi26uals, operatives, an26 24urate26 24itizens are to 22e use26 on<BR>\
+	operations 24lasses 24, an26 22. Approval is pen26in28 for Operations of 24lass A. 26ue to the <BR>\
+	pen26in28 war, outlook is likely for approval."
+
+/obj/structure/prop/blackbox/tyr_boxes/hint_b
+	catalogue_data = list(/datum/category_item/catalogue/anomalous/tyr_hint_b)
+
+/datum/category_item/catalogue/anomalous/tyr_hint_b
+	value = CATALOGUER_REWARD_MEDIUM
+	name = "tyrian data box 1560"
+	desc = "Mass production operations 42ave begun. Advancements wit42in energy and meta48 <BR>\
+	gat42ering 42ave roc46eted due to t42e metant program. Aut42orization for weaponizing t42e <BR>\
+	program 42as been approved. Modifications t42us far 42ave been successfu48. Casua48ties <BR>\
+	42ave been 48ow. Supp48y of dar46 stringers is running 48ow. Suggestion of creation of <BR>\
+	specia48ized dar46 stringers 42as been put forward."
+
+/obj/structure/prop/blackbox/tyr_boxes/hint_c
+	catalogue_data = list(/datum/category_item/catalogue/anomalous/tyr_hint_c)
+
+/datum/category_item/catalogue/anomalous/tyr_hint_c
+	value = CATALOGUER_REWARD_MEDIUM
+	name = "tyrian data box 1560"
+	desc = "The sta68s a68e goi62g out. Eve68yday mo68e a62d mo68e a68e va62ishi62g. The highe68 <BR>\
+	u64s a68e t68yi62g to kee64 thi62gs hush hush, but somethi62g is62’t 68ight. We’ve lost <BR>\
+	co62tact with scouts, ex64lo68e68s, a62d f68o62tie68 bases. Somethi62g is comi62g fo68 us, I <BR>\
+	feel the e62d is comi62g. I am leavi62g this message fo68 a62yo62e who may su68vive what’s <BR>\
+	out the68e. If we a68e62’t he68e, the62 it’s still out the68e. 68etu6862 home, a62d u68ge<BR>\
+	you68 society to 68emai62 small. It may 62ot 62otice you if you do. O68 maybe it does, the62 <BR>\
+	this was 64oi62tless a62yway."
+
+/obj/structure/prop/blackbox/tyr_boxes/hint_d
+	catalogue_data = list(/datum/category_item/catalogue/anomalous/tyr_hint_d)
+
+/datum/category_item/catalogue/anomalous/tyr_hint_d
+	value = CATALOGUER_REWARD_MEDIUM
+	name = "tyrian data box 1560"
+	desc = "86e ha84e repor82s of 82hose upon Fros82shelf u82ilizing a ga82e86ay 82o access 82he <BR>\
+	As82ral Sea, or a82 leas82 a8282emp82s 82o. Repor82s ha84e been coun82er produc82i84e, <BR>\
+	86i82h se84eral conflic82ing 82ales. 82he main 82hing 86e kno86 is 82hey ha84e made <BR>\
+	ad84ancemen82s 86i82hin ga82e86ay 82echnology, and are accessing differing planes a82 a <BR>\
+	degree unseen before. Ho86e84er some repor82 82his plane being 82ha82 of shado86s and <BR>\
+	darkness, 86hils82 o82hers repor82 horrific 84isions of flames, and flesh. Fur82her <BR>\
+	in84es82iga82ion is required."
+
+/obj/item/paper/tyr_notes/astral_a
+	name = "The Bright Future"
+	info = "We have come back from the brink of defeat! By some act of divinity, fate, or pure will we discovered devices far past the brink of civilization and begun to harvest secrets. <BR>\
+	We have begun to pave the road for the bright future, but our road ahead is a long and rocky one. We shall prevail like we always have.  <BR>\
+	Those harness resources for their own comfort and gains shall be cut down, and those that remain shall flourish."
+
+/obj/item/paper/tyr_notes/astral_b
+	name = "Natural Resources of Tyr"
+	info = "So this is draft 12 of this report, and I am giving up with being professional. This is just orange phoron. Discrediting it a bit, but it's a weird thing used for fuel, energy, and maybe other things. <BR>\
+	They made bioweapons that act as a farm. This has to be important for this fallen society. The building has also shifted and keeps on slowly shifting. Which is concerning but I am here for the natural bits. <BR>\
+	Which is nothing. There is some ore, but most of it seems manufactured. The ants are man made too. Super advanced slimes perhaps? Did NT make a time machine and go back to make orange phoron but blow themselves up?<BR>\
+	Anyway rambling aside, the energized agate as the crew has been calling it seems useful to make batteries. Scanned some guns from the nearby structures and was easy enough to make. Exporting it enmass"
+
+/obj/item/paper/tyr_notes/astral_c
+	name = "Encoded Siginals"
+	info = "Signals have been constantly emitting from the tyrian superstructure. Our scanners have a guestimate of at least 5000 meters deep but uncertain if signals from deeper within are not reaching. <BR>\
+	The base itself is falling apart slowly but surely. Unsure how wise it is to enter it, with how hostile the repair drones are it has a high lethality rate thus far. To the signals themselves, it seems to be composed of data.  <BR>\
+	I belive the base recognizes it's collapsing and trying to send out the information it has. We have seen mentions of an Astral Sea, Eon War, and End Times. The data is quite corrupted but from what we've scavanged, they <BR>\
+	seem to be aware of the rift, or bluespace. There are high doubts that the Astral Sea is anything new. We've seen countless wars, but the End Times is quite concerning. Speaking of a mass disappearance of stars. needs further study."
+
+/obj/item/paper/tyr_notes/astral_d
+	name = "Requesting Backup"
+	info = "We need serious back up if we are to stay here long term. Random folks keep stumbling upon the sivian side and blasting, unsure if they are bounty hunters, or maniacs but no SOL attention yet.<BR>\
+	The other day we had reports of masked and hooded men hovering over lava, although that may be disregarded. We found mold and mushrooms in some of our rations, and there was no physical sign of them.<BR>\
+	Although Rift Watchers may be stalking this location. The ants are also adapting to us and our gear. We need something, a simple mecha will do."

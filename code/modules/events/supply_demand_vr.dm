@@ -1,9 +1,4 @@
-/var/global/running_demand_events = list()
-
-/hook/sell_shuttle/proc/supply_demand_sell_shuttle(var/area/area_shuttle)
-	for(var/datum/event/supply_demand/E in running_demand_events)
-		E.handle_sold_shuttle(area_shuttle)
-	return 1 // All hooks must return one to show success.
+GLOBAL_LIST_EMPTY_TYPED(running_demand_events, /datum/event/supply_demand)
 
 //
 // The Supply Demand Event - CentCom asks for us to put some stuff on the shuttle
@@ -19,7 +14,7 @@
 /datum/event/supply_demand/setup()
 	my_department = "[using_map.company_name] Supply Division" // Can't have company name in initial value (not const)
 	end_time = world.time + 1 HOUR + (severity * 30 MINUTES)
-	running_demand_events += src
+	GLOB.running_demand_events += src
 	// Decide what items are requried!
 	// We base this on what departmets are most active, excluding departments we don't have
 	var/list/notHaveDeptList = GLOB.metric.departments.Copy()
@@ -62,14 +57,16 @@
 		send_console_message(message, dpt);
 
 	// Also announce over main comms so people know to look
-	command_announcement.Announce("An order for the station to deliver supplies to [command_name()] has been delivered to all supply Request Consoles", my_department)
+	GLOB.command_announcement.Announce("An order for the [using_map.facility_type] to deliver supplies to [command_name()] has been delivered to all supply Request Consoles", my_department)
+	RegisterSignal(SSdcs, COMSIG_GLOB_SUPPLY_SHUTTLE_DEPART, PROC_REF(handle_supply_demand_sell_shuttle))
 
 /datum/event/supply_demand/tick()
 	if(required_items.len == 0)
 		endWhen = activeFor  // End early becuase we're done already!
 
 /datum/event/supply_demand/end()
-	running_demand_events -= src
+	GLOB.running_demand_events -= src
+	UnregisterSignal(SSdcs, COMSIG_GLOB_SUPPLY_SHUTTLE_DEPART)
 	// Check if the crew succeeded or failed!
 	if(required_items.len == 0)
 		// Success!
@@ -77,15 +74,25 @@
 		var/msg = "Great work! With those items you delivered our inventory levels all match up. "
 		msg += "[capitalize(pick(GLOB.first_names_female))] from accounting will have nothing to complain about. "
 		msg += "I think you'll find a little something in your supply account."
-		command_announcement.Announce(msg, my_department)
+		GLOB.command_announcement.Announce(msg, my_department)
 	else
 		// Fail!
 		var/datum/supply_demand_order/random = pick(required_items)
-		command_announcement.Announce("What happened? Accounting is here right now and they're already asking where that [random.name] is. Damn, I gotta go", my_department)
+		GLOB.command_announcement.Announce("What happened? Accounting is here right now and they're already asking where that [random.name] is. Damn, I gotta go", my_department)
 		var/message = "The delivery deadline was reached with the following needs outstanding:<hr>"
 		for(var/datum/supply_demand_order/req in required_items)
 			message += req.describe() + "<br>"
 		post_comm_message("'[my_department] Mission Summary'", message)
+
+/**
+ * Signal Handler for when the shuttle fires COMSIG_GLOB_SUPPLY_SHUTTLE_DEPART
+ */
+/datum/event/supply_demand/proc/handle_supply_demand_sell_shuttle(datum/source, list/area/supply_shuttle_areas)
+	SIGNAL_HANDLER
+	for(var/datum/event/supply_demand/E in GLOB.running_demand_events)
+		// I don't think multiple supply shuttles have ever been used, but retaining support regardless...
+		for(var/area/sub_area in supply_shuttle_areas)
+			E.handle_sold_shuttle(sub_area)
 /**
  * Event Handler for responding to the supply shuttle arriving at centcom.
  */
@@ -263,7 +270,7 @@
 /datum/event/supply_demand/proc/choose_chemistry_items(var/differentTypes)
 	// Checking if they show up in health analyzer is good huristic for it being a drug
 	var/list/medicineReagents = list()
-	for(var/decl/chemical_reaction/instant/CR in SSchemistry.chemical_reactions)
+	for(var/datum/decl/chemical_reaction/instant/CR in SSchemistry.chemical_reactions)
 		var/datum/reagent/R = SSchemistry.chemical_reagents[initial(CR.result)]
 		if(R && R.scannable)
 			medicineReagents += R
@@ -276,7 +283,7 @@
 
 /datum/event/supply_demand/proc/choose_bar_items(var/differentTypes)
 	var/list/drinkReagents = list()
-	for(var/decl/chemical_reaction/instant/drinks/CR in SSchemistry.chemical_reactions)
+	for(var/datum/decl/chemical_reaction/instant/drinks/CR in SSchemistry.chemical_reactions)
 		var/datum/reagent/R = SSchemistry.chemical_reagents[initial(CR.result)]
 		if(istype(R, /datum/reagent/drink) || istype(R, /datum/reagent/ethanol))
 			drinkReagents += R

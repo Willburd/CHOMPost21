@@ -215,7 +215,7 @@
 		return
 	if(istype(O, /atom/movable/screen))
 		return
-	if(user.restrained() || user.stat || user.stunned || user.paralysis || (!user.lying && !isrobot(user)) || LAZYLEN(user.grabbed_by))
+	if(user.restrained() || user.stat || user.stunned || user.paralysis || (!user.lying && !isrobot(user)) || LAZYLEN(user.grabbed_by) || user.is_paralyzed())
 		return
 	if((!(istype(O, /atom/movable)) || O.anchored || !Adjacent(user) || !Adjacent(O) || !user.Adjacent(O)))
 		return
@@ -347,7 +347,7 @@
 	return
 
 // Called when turf is hit by a thrown object
-/turf/hitby(atom/movable/source, var/speed)
+/turf/hitby(atom/movable/source, datum/thrownthing/throwingdatum)
 	if(!density)
 		return
 
@@ -356,7 +356,7 @@
 			step(source, turn(source.last_move, 180)) //This makes it float away after hitting a wall in 0G
 	if(isliving(source))
 		var/mob/living/M = source
-		M.turf_collision(src, speed)
+		M.turf_collision(src, throwingdatum?.speed)
 
 /turf/AllowDrop()
 	return TRUE
@@ -520,6 +520,8 @@
 
 	if(istype(src, /turf/simulated))
 		var/turf/simulated/T = src
+		if(T.dirt > 0)
+			SEND_GLOBAL_SIGNAL(COMSIG_GLOB_WASHED_FLOOR)
 		T.dirt = 0
 
 	for(var/am in src)
@@ -529,3 +531,14 @@
 		if(!ismopable(movable_content))
 			continue
 		movable_content.wash(clean_types)
+
+/// Used during turf_cascade subsystem to determine additional effects when spreading, and directions it may spread
+/turf/proc/conversion_cascade_act(list/already_marked_turfs)
+	var/list/expanding_turfs = list()
+
+	for(var/expand_dir in GLOB.cardinalz)
+		var/turf/next_turf = get_step(src, expand_dir)
+		if(next_turf && next_turf.type != type && !(next_turf in already_marked_turfs)) // Yes in already_marked_turfs is expensive, but less expensive than 6 dupes per turf potentially in the loop
+			expanding_turfs += next_turf
+
+	return expanding_turfs

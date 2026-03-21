@@ -77,6 +77,8 @@
 					S.use(1)
 					playsound(src, 'sound/weapons/genhit.ogg', 50, 1)
 					ChangeTurf(/turf/simulated/floor, preserve_outdoors = TRUE)
+					if(S.color)
+						color = S.color
 					return
 		else if(istype(C, /obj/item))
 			try_deconstruct_tile(C, user)
@@ -98,9 +100,9 @@
 				to_chat(user, span_warning("This section is too damaged to support anything. Use a welder to fix the damage."))
 				return
 			var/obj/item/stack/S = C
-			var/decl/flooring/use_flooring
-			for(var/flooring_type in flooring_types)
-				var/decl/flooring/F = flooring_types[flooring_type]
+			var/datum/decl/flooring/use_flooring
+			for(var/flooring_type in GLOB.flooring_types)
+				var/datum/decl/flooring/F = GLOB.flooring_types[flooring_type]
 				if(!F.build_type)
 					continue
 				if((S.type == F.build_type) || (S.build_type == F.build_type))
@@ -119,6 +121,8 @@
 				return
 			if(S.use(use_flooring.build_cost))
 				set_flooring(use_flooring)
+				if(S.color)
+					color = S.color
 				playsound(src, 'sound/items/Deconstruct.ogg', 80, 1)
 				return
 		// Plating repairs and removal

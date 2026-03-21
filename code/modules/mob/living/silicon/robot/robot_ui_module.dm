@@ -14,6 +14,8 @@
 	if(isrobot(user))
 		var/mob/living/silicon/robot/R = user
 		R.selecting_module = FALSE
+	if(!QDELETED(src))
+		qdel(src)
 
 /datum/tgui_module/robot_ui_module/tgui_interact(mob/user, datum/tgui/ui, datum/tgui/parent_ui)
 	. = ..()
@@ -41,12 +43,11 @@
 			modules.Add(R.restrict_modules_to)
 		else if(R.shell)
 			modules.Add(GLOB.robot_module_types) // CHOMPEdit
-			// CHOMPAdd Start, shell blacklist and crisis mode for shells
-			modules.Remove(GLOB.shell_module_blacklist)
 			// Outpost 21 edit begin - Admins always have ERT access
 			if(usr.client && usr.client.holder && check_rights_for(usr.client, (R_ADMIN|R_MOD)))
 				modules |= GLOB.emergency_module_types
 			// Outpost 21 edit end
+			// CHOMPAdd Start, crisis mode for shells
 			else if(R.crisis || GLOB.security_level == SEC_LEVEL_RED || R.crisis_override)
 				to_chat(src, span_red("Crisis mode active. Combat module available."))
 				modules |= GLOB.emergency_module_types
@@ -65,10 +66,7 @@
 					modules |= module_name
 	data["possible_modules"] = modules
 	data["mind_name"] = R.mind.name
-	if(R.emagged)
-		data["theme"] = "syndicate"
-	else if (R.ui_theme)
-		data["theme"] = R.ui_theme
+	data["theme"] = R.get_ui_theme()
 
 	return data
 
@@ -99,7 +97,7 @@
 				model_type = "wide"
 			if(istype(S, /datum/robot_sprite/dogborg/tall))
 				model_type = "tall"
-			available_sprites += list(list("sprite" = S.name, "belly" = S.has_vore_belly_sprites, "type" = model_type))
+			UNTYPED_LIST_ADD(available_sprites, list("sprite" = S.name, "belly" = S.has_vore_belly_sprites, "type" = model_type))
 
 		data["possible_sprites"] = available_sprites
 		data["sprite_datum"] = sprite_datum

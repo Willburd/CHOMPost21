@@ -118,7 +118,7 @@
 	icon = 'icons/obj/weapons.dmi'
 	icon_state = "eshield"
 	item_state = "eshield"
-	slot_flags = SLOT_EARS
+	// slot_flags = SLOT_EARS // Outpost 21 edit - No ear wearing
 	flags = NOCONDUCT
 	force = 3.0
 	throwforce = 5.0
@@ -154,8 +154,11 @@
 			return (base_block_chance - round(damage / 3)) //block bullets and beams using the old block chance
 	return base_block_chance
 
-/obj/item/shield/energy/attack_self(mob/living/user as mob)
-	if ((CLUMSY in user.mutations) && prob(10)) // Outpost 21 edit - Made clumsy less obnoxious
+/obj/item/shield/energy/attack_self(mob/living/user)
+	. = ..(user)
+	if(.)
+		return TRUE
+	if (CLUMSY_FAIL_CHANCE(user))
 		to_chat(user, span_warning("You beat yourself in the head with [src]."))
 		user.take_organ_damage(5)
 	active = !active
@@ -203,7 +206,7 @@
 		H.update_inv_l_hand()
 		H.update_inv_r_hand()
 
-/obj/item/shield/energy/AltClick(mob/living/user)
+/obj/item/shield/energy/click_alt(mob/living/user)
 	if(!in_range(src, user))	//Basic checks to prevent abuse
 		return
 	if(user.incapacitated() || !istype(user))
@@ -239,6 +242,9 @@
 		return 0
 */
 /obj/item/shield/riot/tele/attack_self(mob/living/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	active = !active
 	icon_state = "teleriot[active]"
 	playsound(src, 'sound/weapons/empty.ogg', 50, 1)

@@ -26,7 +26,8 @@
 			inserted_id = null
 		else
 			QDEL_NULL(inserted_id)
-	QDEL_NULL_LIST(prize_list)
+	for(var/key, value in prize_list)
+		QDEL_NULL_LIST(value)
 	. = ..()
 
 /datum/data/mining_equipment
@@ -133,10 +134,14 @@
 	)
 	prize_list["Shelter Capsules"] = list(
 		EQUIPMENT("Shelter Capsule - Shelter (5x5)",				/obj/item/survivalcapsule,									500),
+		EQUIPMENT("Shelter Capsule - Pocket Dorm (5x5)",			/obj/item/survivalcapsule/pocketdorm,						500),
+		EQUIPMENT("Shelter Capsule - Kitchen (7x7)",				/obj/item/survivalcapsule/kitchen,							3100),
 		EQUIPMENT("Shelter Capsule - Luxury Shelter (7x7)",			/obj/item/survivalcapsule/luxury,							3100),
+		EQUIPMENT("Shelter Capsule - Alt. Luxury Shelter (7x7)",	/obj/item/survivalcapsule/luxuryalt,						3100),
 		EQUIPMENT("Shelter Capsule - Redspace (7x7)",				/obj/item/survivalcapsule/randomized,						5000),
-		EQUIPMENT("Shelter Capsule - Sauna (7x7)",					/obj/item/survivalcapsule/sauna,							5000),
-		EQUIPMENT("Shelter Capsule - Rec Room + Cards Table (9x9)",	/obj/item/survivalcapsule/recroom,							7500),
+		EQUIPMENT("Shelter Capsule - Sauna (7x7)",					/obj/item/survivalcapsule/sauna,							3100),
+		EQUIPMENT("Shelter Capsule - Rec Room + Cards Table (9x9)",	/obj/item/survivalcapsule/recroom,							5000),
+		EQUIPMENT("Shelter Capsule - Luxury Rec Room (11x11)",		/obj/item/survivalcapsule/luxuryrecroom,					10000),
 		EQUIPMENT("Shelter Capsule - Bar (11x11)",					/obj/item/survivalcapsule/luxurybar,						10000),
 		EQUIPMENT("Shelter Capsule - Deluxe Cabin (11x11)",			/obj/item/survivalcapsule/luxurycabin,						10000),
 		EQUIPMENT("Shelter Capsule - Cafe (11x11)",					/obj/item/survivalcapsule/cafe,								10000),
@@ -166,6 +171,7 @@
 	if(inserted_id && !powered())
 		visible_message(span_notice("The ID slot indicator light flickers on \the [src] as it spits out a card before powering down."))
 		inserted_id.forceMove(get_turf(src))
+		inserted_id = null
 
 /obj/machinery/mineral/equipment_vendor/update_icon()
 	if(panel_open)
@@ -271,9 +277,9 @@
 				return
 
 			remove_points(inserted_id, prize.cost)
-			/*var/obj/item/I = */
+			// Outpost 21 edit begin - Let players keep their prizes, at least until security takes them away.
 			new prize.equipment_path(loc)
-			// I.persist_storable = FALSE Outpost 21 edit - Let players keep their prizes, at least until security takes them away.
+			// Outpost 21 edit end
 			flick(icon_vend, src)
 		else
 			flick(icon_deny, src)
@@ -306,6 +312,7 @@
 /obj/machinery/mineral/equipment_vendor/dismantle()
 	if(inserted_id)
 		inserted_id.forceMove(loc) //Prevents deconstructing the ORM from deleting whatever ID was inside it.
+		inserted_id = null
 	. = ..()
 
 /**

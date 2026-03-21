@@ -1,0 +1,10 @@
+GLOBAL_LIST_INIT(engineering_networks, list(
+										NETWORK_ENGINE,
+										NETWORK_SUBSTATIONS,
+										NETWORK_ENGINEERING,
+										NETWORK_ENGINEERING_OUTPOST,
+										NETWORK_ALARM_ATMOS,
+										NETWORK_ALARM_FIRE,
+										NETWORK_ALARM_POWER,
+										NETWORK_FOUNDATIONS,
+										NETWORK_WASTE))

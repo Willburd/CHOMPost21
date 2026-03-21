@@ -483,7 +483,7 @@ GLOBAL_LIST_EMPTY(PDA_Manifest)
 		hidden_general += G
 	else
 		general += G
-		// job_master.update_limit(JOB_ANOMALY, general.len) //CHOMPAdd Outpost 21 edit - Outsider job removal
+		// GLOB.job_master.update_limit(JOB_ANOMALY, general.len) //CHOMPAdd Outpost 21 edit - Outsider job removal
 
 	return G
 

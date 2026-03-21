@@ -53,10 +53,6 @@
 	pain_emote_1p = list("yelp", "whine", "bark", "growl")
 	pain_emote_3p = list("yelps", "whines", "barks", "growls")
 
-	// Outpost 21 edit begin - muriki enzyme immunity
-	enzyme_affect = FALSE
-	// Outpost 21 edit end
-
 /datum/category_item/catalogue/fauna/leopardmander
 	name = "Sivian Fauna - Va'aen Drake"
 	desc = "Classification: S Draconis uncia\
@@ -99,7 +95,7 @@
 	B.contamination_color = "grey"
 	B.contamination_flavor = "Wet"
 	B.belly_fullscreen_color = "#c47cb4"
-	B.belly_fullscreen = "anim_belly"
+	B.belly_fullscreen = "VBOanim_belly1"
 	B.emote_lists[DM_HEAL] = list(
 		"The drake's idle movement helps its stomach gently churn around you, slimily squelching against your figure.",
 		"The draconic predator takes a moment to intentionally clench its gut around you, encapsulating you in a strange, fleshy hug.",
@@ -129,7 +125,7 @@
 	B.belly_fullscreen_color = "#c47cb4"
 	B.belly_fullscreen_color2 = "#C2B4B4"
 	B.belly_fullscreen_color3 = "#FFCCFF"
-	B.belly_fullscreen = "VBO_maw5"
+	B.belly_fullscreen = "VBO_maw20"
 	B.emote_time = 1 //Short emote time, since they wont spend long here!
 	B.emote_lists[DM_HOLD] = list(
 		"The drake's thick tongue presses against your form, smothering you with thick, gooey saliva as it pushes you around in it's maw.",
@@ -196,7 +192,7 @@
 	B.contamination_flavor = "Wet"
 	B.belly_fullscreen_color = "#df3dbc"
 	B.belly_fullscreen_alpha = 240
-	B.belly_fullscreen = "anim_belly"
+	B.belly_fullscreen = "VBOanim_belly1"
 	B.emote_lists[DM_HEAL] = list(
 		"The drake's idle movement helps its stomach gently churn around you, slimily squelching against your figure.",
 		"The draconic predator takes a moment to intentionally clench its gut around you, encapsulating you in a strange, fleshy hug.",
@@ -228,7 +224,7 @@
 	B.belly_fullscreen_color2 = "#C2B4B4"
 	B.belly_fullscreen_color3 = "#8D60CE"
 	B.belly_fullscreen_color4 = "#B593F9"
-	B.belly_fullscreen = "VBO_maw5"
+	B.belly_fullscreen = "VBO_maw20"
 	B.emote_time = 1 //Short emote time, since they wont spend long here!
 	B.emote_lists[DM_HOLD] = list(
 		"The drake's thick tongue presses against your form, smothering you with thick, gooey saliva as it pushes you around in it's maw.",

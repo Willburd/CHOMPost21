@@ -1,3 +1,5 @@
+GLOBAL_LIST_EMPTY(active_autoresleevers)
+
 /obj/machinery/transhuman/autoresleever
 	name = "automatic resleever"
 	desc = "Uses advanced technology to detect when someone needs to be resleeved, and automatically prints and sleeves them into a new body. It even generates its own biomass!"
@@ -17,6 +19,14 @@
 	var/releaseturf
 	var/throw_dir = WEST
 	// Outpost 21 addition end
+
+/obj/machinery/transhuman/autoresleever/Initialize(mapload)
+	. = ..()
+	GLOB.active_autoresleevers += src
+
+/obj/machinery/transhuman/autoresleever/Destroy()
+	. = ..()
+	GLOB.active_autoresleevers -= src
 
 /obj/machinery/transhuman/autoresleever/update_icon()
 	. = ..()
@@ -39,6 +49,13 @@
 		to_chat(user, span_warning("There are no more respawn slots."))
 		return
 	if(user.mind)
+		if(islist(user.client?.prefs?.pos_traits) && (/datum/trait/positive/disposable_respawn in user.client.prefs.pos_traits))
+			var/fast_respawn = 5 MINUTES
+			if(fast_respawn <= world.time - user.timeofdeath)
+				autoresleeve(user)
+			else
+				to_chat(user, span_warning("You must wait [((fast_respawn - (world.time - user.timeofdeath)) * 0.1) / 60] minutes to use \the [src]."))
+			return
 		if(user.mind.vore_death)
 			if(vore_respawn <= world.time - user.timeofdeath)
 				autoresleeve(user)
@@ -107,7 +124,7 @@
 	//Name matching is ugly but mind doesn't persist to look at.
 	var/charjob
 	var/datum/data/record/record_found
-	record_found = find_general_record("name",ghost_client.prefs.real_name)
+	record_found = find_general_record("name", ghost_client.prefs.read_preference(/datum/preference/name/real_name))
 
 	//Found their record, they were spawned previously
 	if(record_found)
@@ -154,6 +171,8 @@
 
 	var/slot = ghost.client.prefs.default_slot
 	if(tgui_alert(ghost, "Would you like to be resleeved?", "Resleeve", list("No","Yes")) != "Yes")
+		if(respawn >= world.time - ghost.timeofdeath) //We were given the option to resleeve due to an outside event, but closed the input box (be it by typing or otherwise) so we allow clicking the autosleever to revive.
+			ghost.timeofdeath = world.time - respawn
 		return
 	//This keeps people from dying in round, clicking the autoresleever, then swapping savefiles and clicking 'yes'
 	if(slot != ghost.client.prefs.default_slot && (!equip_body || !ghost_spawns))
@@ -216,13 +235,14 @@
 			new_character.default_language = def_lang
 
 	SEND_SIGNAL(new_character, COMSIG_HUMAN_DNA_FINALIZED)
+	SEND_GLOBAL_SIGNAL(COMSIG_GLOB_RESLEEVED_MIND, new_character, new_character.mind)
 
 	//If desired, apply equipment.
 	if(equip_body)
 		if(charjob)
-			job_master.EquipRank(new_character, charjob, 1)
+			GLOB.job_master.EquipRank(new_character, charjob, 1)
 			new_character.mind.assigned_role = charjob
-			new_character.mind.role_alt_title = job_master.GetPlayerAltTitle(new_character, charjob)
+			new_character.mind.role_alt_title = GLOB.job_master.GetPlayerAltTitle(new_character, charjob)
 
 	//A redraw for good measure
 	new_character.regenerate_icons()
@@ -239,10 +259,27 @@
 		imp.post_implant(new_character)
 	*/
 
+	// Outpost 21 edit begin - Give players loadout implants
+	if(new_character?.client?.prefs && !issilicon(new_character))
+		var/list/active_gear_list = LAZYACCESS(new_character.client.prefs.gear_list, "[new_character.client.prefs.gear_slot]")
+		for(var/thing in active_gear_list)
+			var/datum/gear/G = GLOB.gear_datums[thing]
+			if(!G) //Not a real gear datum (maybe removed, as this is loaded from their savefile)
+				continue
+			if(G.whitelisted && !is_alien_whitelisted(new_character.client, GLOB.all_species[G.whitelisted]))
+				continue
+			if(G.slot != "implant")
+				continue
+			var/obj/item/implant/I = G.spawn_item(new_character, active_gear_list[G.display_name])
+			I.invisibility = INVISIBILITY_MAXIMUM
+			I.implant_loadout(new_character)
+	// Outpost 21 edit end
+
 	var/datum/transcore_db/db = SStranscore.db_by_mind_name(new_character.mind.name)
 	if(db)
+
 		var/datum/transhuman/mind_record/record = db.backed_up[new_character.mind.name]
-		if((world.time - record.last_notification) < 30 MINUTES)
+		if((world.time - record.last_notification) < 30 MINUTES && istype(get_area(src), /area/medical)) // Outpost 21 edit - Only notify if in medical
 			GLOB.global_announcer.autosay("[new_character.name] has been resleeved by the automatic resleeving system.", "TransCore Oversight", new_character.isSynthetic() ? "Engineering" : "Medical") // Outpost 21 edit - Robotics is engineering here
 
 		/* Outpost 21 edit - Nif removal

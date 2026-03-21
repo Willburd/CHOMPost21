@@ -51,6 +51,7 @@
 	set_occupant(H)
 	H.adjustCloneLoss((H.getMaxHealth() - (H.getMaxHealth()))*-0.75)
 	H.Paralyse(4)
+	H.Sleeping(4)
 	H.updatehealth()
 
 	//Machine specific stuff at the end
@@ -484,6 +485,8 @@
 		new_imp.post_implant(occupant)
 	*/
 
+	SEND_GLOBAL_SIGNAL(COMSIG_GLOB_RESLEEVED_MIND, occupant, MR.mind_ref)
+	
 	// Outpost 21 edit begin - Small edits to the flavor text. - Ignus
 	//Inform them and make them a little dizzy.
 	if(confuse_amount + blur_amount <= 16)
@@ -492,7 +495,7 @@
 		to_chat(occupant, span_warning("Your eyes wince at the light as you try to remember what happened, weren't you just in the lobby? It's disorienting."))
 	// Outpost 21 edit end
 
-	occupant.confused = max(occupant.confused, confuse_amount)
+	occupant.SetConfused(max(occupant.confused, confuse_amount))								// Apply immedeate effects
 	occupant.eye_blurry = max(occupant.eye_blurry, blur_amount)
 
 	// Vore deaths get a fake modifier labeled as such
@@ -520,9 +523,6 @@
 	var/mob/living/carbon/human/occupant = get_occupant()
 	if(!occupant)
 		return
-	if (occupant.client)
-		occupant.client.eye = occupant.client.mob
-		occupant.client.perspective = MOB_PERSPECTIVE
 	occupant.forceMove(get_turf(src))
 	set_occupant(null)
 	icon_state = "implantchair"
@@ -535,11 +535,8 @@
 	if(get_occupant())
 		to_chat(usr, span_warning("\The [src] is already occupied!"))
 		return
-	if(M.client)
-		M.client.perspective = EYE_PERSPECTIVE
-		M.client.eye = src
 	M.stop_pulling()
-	M.loc = src
+	M.forceMove(src)
 	set_occupant(M)
 	src.add_fingerprint(usr)
 	icon_state = "implantchair_on"

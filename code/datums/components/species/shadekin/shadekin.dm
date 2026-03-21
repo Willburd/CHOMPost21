@@ -26,6 +26,8 @@
 	var/doing_phase = FALSE
 	///Are we currently phased?
 	var/in_phase = FALSE
+	///If TRUE, voice is hidden when phased (shows as "Something")
+	var/hide_voice_in_phase = TRUE
 	///Chance to break lights on phase-in
 	var/flicker_break_chance = 0
 	///Color that lights will flicker to on phase-in. Off by default.
@@ -40,6 +42,14 @@
 	var/drop_items_on_phase = FALSE
 	///If cameras count as watchers for us
 	var/camera_counts_as_watcher = FALSE
+	///Phase in animation
+	var/obj/effect/temp_visual/phase_in_anim = /obj/effect/temp_visual/shadekin/phase_in
+	///Phase out animation
+	var/obj/effect/temp_visual/phase_out_anim = /obj/effect/temp_visual/shadekin/phase_out
+	//How long does it take to complete
+	var/phase_time = 0.5 SECONDS
+	//Phase sound
+	var/phase_noise = 'sound/effects/stealthoff.ogg'
 
 	//Dark Respite Vars (Unused on Virgo)
 	///If we are in dark respite or not
@@ -47,7 +57,7 @@
 	var/manual_respite = FALSE
 	var/respite_activating = FALSE
 	///If we return to The Dark upon death or not.
-	var/no_retreat = TRUE // Outpost 21 edit - No retreating
+	var/no_retreat = FALSE
 
 	//Dark Tunneling Vars (Unused on Virgo)
 	///If we have already made a dark tunnel
@@ -83,7 +93,7 @@
 								// /datum/power/shadekin/dark_tunneling) // Outpost 21 edit - No using this
 	extended_kin = TRUE
 	drop_items_on_phase = TRUE
-	camera_counts_as_watcher = TRUE
+	camera_counts_as_watcher = FALSE // Outpost 21 edit - We don't want cameras to count here
 
 /datum/component/shadekin/full/rakshasa
 	flicker_time = 0 //Rakshasa don't flicker lights when they phase in.
@@ -99,6 +109,11 @@
 		RegisterSignal(owner, COMSIG_SHADEKIN_COMPONENT, PROC_REF(handle_comp)) //Happens every species tick.
 	else
 		RegisterSignal(owner, COMSIG_LIVING_LIFE, PROC_REF(handle_comp)) //Happens every life tick (mobs)
+
+	// Register voice/name signal handlers
+	RegisterSignal(owner, COMSIG_HUMAN_GET_VOICE, PROC_REF(on_get_voice))
+	RegisterSignal(owner, COMSIG_HUMAN_GET_ALT_NAME, PROC_REF(on_get_alt_name))
+	RegisterSignal(owner, COMSIG_HUMAN_GET_VISIBLE_NAME, PROC_REF(on_get_visible_name))
 
 	//generates powers and then adds them
 	build_and_add_abilities()
@@ -117,6 +132,7 @@
 		UnregisterSignal(owner, COMSIG_SHADEKIN_COMPONENT)
 	else
 		UnregisterSignal(owner, COMSIG_LIVING_LIFE)
+	UnregisterSignal(owner, list(COMSIG_HUMAN_GET_VOICE, COMSIG_HUMAN_GET_ALT_NAME, COMSIG_HUMAN_GET_VISIBLE_NAME))
 	remove_verb(owner, /mob/living/proc/shadekin_control_panel)
 	for(var/datum/power in shadekin_ability_datums)
 		qdel(power)
@@ -152,7 +168,7 @@
 	var/dark_gains = 0
 
 	var/suit = owner.get_equipped_item(slot_wear_suit)
-	if(istype(suit, /obj/item/clothing/suit/space))
+	if(istype(suit, /obj/item/clothing/suit/space/rig))
 		if(dark_energy)
 			to_chat(owner, span_warning("You feel your energy waning and your powers being blocked from the heavy equipment you're wearing!"))
 		dark_energy = 0
@@ -165,9 +181,6 @@
 
 	var/brightness = T.get_lumcount() //Brightness in 0.0 to 1.0
 	darkness = 1-brightness //Invert
-	// outpost 21 addition begin - Haunting areas have effects
-	haunted_effect()
-	// outpost 21 addition end
 	// outpost 21 addition begin - lockers are dark and spooky!
 	if(istype(owner.loc,/obj/structure/closet)) // it's dark in here!
 		darkness = 1
@@ -190,7 +203,7 @@
 		else
 			dark_gains = energy_light
 
-	handle_nutrition_conversion(dark_gains)
+	dark_gains = handle_nutrition_conversion(dark_gains)
 
 	shadekin_adjust_energy(dark_gains)
 
@@ -228,6 +241,7 @@
 		"flicker_distance" = flicker_distance,
 		"no_retreat" = no_retreat,
 		"nutrition_energy_conversion" = nutrition_energy_conversion,
+		"hide_voice_in_phase" = hide_voice_in_phase,
 		"extended_kin" = extended_kin,
 		"savefile_selected" = correct_savefile_selected()
 	)
@@ -282,6 +296,34 @@
 			var/new_retreat = !nutrition_energy_conversion
 			nutrition_energy_conversion = !nutrition_energy_conversion
 			ui.user.write_preference_directly(/datum/preference/toggle/living/shadekin_nutrition_conversion, new_retreat, WRITE_PREF_MANUAL, save_to_played_slot = TRUE)
+		if("toggle_voice")
+			var/new_voice_hide = !hide_voice_in_phase
+			hide_voice_in_phase = !hide_voice_in_phase
+			ui.user.write_preference_directly(/datum/preference/toggle/living/shadekin_hide_voice_in_phase, new_voice_hide, WRITE_PREF_MANUAL, save_to_played_slot = TRUE)
+
+/// Signal handler for GetVoice()
+/datum/component/shadekin/proc/on_get_voice(mob/living/carbon/human/source, list/voice_data)
+	SIGNAL_HANDLER
+
+	if(in_phase && hide_voice_in_phase)
+		voice_data[1] = "Something"
+		return COMPONENT_VOICE_CHANGED
+
+/// Signal handler for GetAltName()
+/datum/component/shadekin/proc/on_get_alt_name(mob/living/carbon/human/source, list/name_data)
+	SIGNAL_HANDLER
+
+	if(in_phase && hide_voice_in_phase)
+		name_data[1] = ""
+		return COMPONENT_ALT_NAME_CHANGED
+
+/// Signal handler for get_visible_name()
+/datum/component/shadekin/proc/on_get_visible_name(mob/living/source, list/name_data)
+	SIGNAL_HANDLER
+
+	if(in_phase && hide_voice_in_phase)
+		name_data[1] = "Something"
+		return COMPONENT_VISIBLE_NAME_CHANGED
 
 /mob/living/proc/shadekin_control_panel()
 	set name = "Shadekin Control Panel"
@@ -294,22 +336,3 @@
 		return FALSE
 
 	SK.tgui_interact(src)
-
-// Outpost 21 edit begin - Haunted areas sparkle
-/datum/component/shadekin/proc/haunted_effect()
-	if(!owner.client)
-		return
-	if(prob(60))
-		return
-	var/area/A = get_area(owner)
-	if(!A || !A.haunted)
-		return
-	// Place at root turf offset from signal responder's turf using px offsets. So it will show up over visblocking.
-	var/list/icos = list("redgate_hole","slash","red_static","drain","summoning")
-	var/image/client_only/motion_echo/E = new /image/client_only/motion_echo('icons/effects/effects.dmi', get_turf(owner), pick(icos), OBFUSCATION_LAYER, SOUTH)
-	var/rand_limit = 300
-	E.pixel_x += rand(-rand_limit,rand_limit)
-	E.pixel_y += rand(-rand_limit,rand_limit)
-	E.append_client(owner.client)
-	animate(E, alpha = 0,time = 1 SECOND)
-// Outpost 21 edit end

@@ -9,6 +9,7 @@
 	opacity = FALSE
 	var/hoses_taken = 0
 	var/lit = FALSE
+	flags = REMOTEVIEW_ON_ENTER
 
 	var/mob/living/occupant // micro abuse
 
@@ -92,7 +93,6 @@
 	if(occupant != living)
 		return FALSE
 	to_chat(occupant, span_warning("You manage to pull yourself free of \the [src]."))
-	occupant.reset_view(null)
 	occupant.forceMove(get_turf(src))
 	occupant = null
 
@@ -112,14 +112,12 @@
 	if(user && prob(2))
 		str += ", and you're sucked away with them"
 		to_chat(C, span_danger("[str]!"))
-		if(user.can_be_drop_pred && user.food_vore && user.vore_selected)
+		if(user.food_vore && user.vore_selected)
 			if(!C.can_be_drop_prey || !C.food_vore)
 				to_chat(C, span_warning("You manage to pull yourself free of \the [src] at the last second!"))
-				to_chat(user, span_notice("[C] barely escapes from your mouth!"))
-				C.reset_view(null)
+				to_chat(user, span_notice("[C] barely escapes from your [user.vore_selected]!"))
 				C.forceMove(get_turf(src))
 			else
-				C.reset_view(null)
 				C.forceMove(user.vore_selected)
 			occupant = null
 	else
@@ -161,6 +159,9 @@
 	. = ..()
 
 /obj/item/hookah_pipe/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	smoke(user,user)
 
 /obj/item/hookah_pipe/proc/check_retract()
@@ -231,3 +232,102 @@
 	// to check for being dropped to turf alone, without also breaking the give verb.
 	spawn(0)
 		check_retract()
+
+
+
+// Random drug subtype
+/obj/structure/hookah/randomized_drugs
+	var/static/list/random_hookah_drug = list(
+		REAGENT_ID_ETHANOL,
+		REAGENT_ID_LITHIUM,
+		REAGENT_ID_SUGAR,
+		REAGENT_ID_NUTRIMENT,
+		REAGENT_ID_BLISS,
+		REAGENT_ID_AMBROSIAEXTRACT,
+		REAGENT_ID_PSILOCYBIN,
+		REAGENT_ID_NICOTINE,
+		REAGENT_ID_APHRODIAC_FLUID,
+		REAGENT_ID_NUMBENZYME,
+		REAGENT_ID_INAPROVALINE,
+		REAGENT_ID_ANTITOXIN,
+		REAGENT_ID_OXYCODONE,
+		REAGENT_ID_HYPERZINE,
+		REAGENT_ID_MENTHOL,
+		REAGENT_ID_MAYO,
+		REAGENT_ID_MUSTARD,
+		REAGENT_ID_CHOCOLATE,
+		REAGENT_ID_KETCHUP,
+		REAGENT_ID_VANILLA,
+		REAGENT_ID_BURNOUT,
+		REAGENT_ID_MONSTERTAMER,
+		REAGENT_ID_PINKRUSSIAN,
+		REAGENT_ID_ORIGINALSIN,
+		REAGENT_ID_NEWYORKSOUR,
+		REAGENT_ID_WINDGARITA,
+		REAGENT_ID_MUDSLIDE,
+		REAGENT_ID_GALACTICPANIC,
+		REAGENT_ID_BULLDOG,
+		REAGENT_ID_SBAGLIATO,
+		REAGENT_ID_ITALIANCRISIS,
+		REAGENT_ID_SUGARRUSH,
+		REAGENT_ID_LOTUS,
+		REAGENT_ID_SHROOMJUICE,
+		REAGENT_ID_RUSSIANROULETTE,
+		REAGENT_ID_LOVEMAKER,
+		REAGENT_ID_HONEYSHOT,
+		REAGENT_ID_APPLETINIT,
+		REAGENT_ID_GLOWINGAPPLETINI,
+		REAGENT_ID_SCSATW,
+		REAGENT_ID_CHOCCYMILK,
+		REAGENT_ID_REDSPACEFLUSH,
+		REAGENT_ID_GRAVEYARD,
+		REAGENT_ID_BIGBEER,
+		REAGENT_ID_MANAGERSUMMONER,
+		REAGENT_ID_SWEETTEA,
+		REAGENT_ID_UNSWEETTEA,
+		REAGENT_ID_HAIROFTHERAT,
+		REAGENT_ID_BEPIS,
+		REAGENT_ID_BUZZFUZZ,
+		REAGENT_ID_SPRITEDCRANBERRY,
+		REAGENT_ID_SHAMBLERS,
+		REAGENT_ID_BRAINPROTEIN,
+		REAGENT_ID_SOUP,
+		REAGENT_ID_TOMATOSOUP,
+		REAGENT_ID_MUSHROOMSOUP,
+		REAGENT_ID_CHICKENSOUP,
+		REAGENT_ID_CHICKENNOODLESOUP,
+		REAGENT_ID_ONIONSOUP,
+		REAGENT_ID_VEGETABLESOUP,
+		REAGENT_ID_BEETSOUP,
+		REAGENT_ID_HOTNSOURSOUP,
+		REAGENT_ID_NUKIEPEACH,
+		REAGENT_ID_NUKIEPEAR,
+		REAGENT_ID_NUKIECHERRY,
+		REAGENT_ID_NUKIEMELON,
+		REAGENT_ID_NUKIEBANANA,
+		REAGENT_ID_NUKIEROSE,
+		REAGENT_ID_NUKIELEMON,
+		REAGENT_ID_NUKIEFRUIT,
+		REAGENT_ID_NUKIEMEGA,
+		REAGENT_ID_NUKIEMEGASIGHT,
+		REAGENT_ID_NUKIEMEGAHEART,
+		REAGENT_ID_NUKIEMEGASLEEP,
+		REAGENT_ID_NUKIEMEGASHOCK,
+		REAGENT_ID_NUKIEMEGAFAST,
+		REAGENT_ID_NUKIEMEGAHIGH,
+		REAGENT_ID_NUKIEMEGASHRINK,
+		REAGENT_ID_NUKIEMEGAGROWTH,
+		REAGENT_ID_NUKIEONE,
+		REAGENT_ID_NUKIEFINAL,
+		REAGENT_ID_GLUE,
+		REAGENT_ID_CRAYONDUSTPURPLE,
+		REAGENT_ID_CRAYONDUSTRED,
+		REAGENT_ID_CRAYONDUSTBLUE
+	)
+
+/obj/structure/hookah/randomized_drugs/Initialize(mapload)
+	. = ..()
+	var/I = 4
+	while(I > 0)
+		I--
+		reagents.add_reagent(pick(random_hookah_drug), rand(10,30))

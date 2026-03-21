@@ -3,7 +3,7 @@
 /obj/item/pda/ai
 	icon_state = "NONE"
 	ttone = "data"
-	detonate = 0
+	detonate = FALSE
 	touch_silent = TRUE
 	programs = list(
 		new/datum/data/pda/app/main_menu,
@@ -11,14 +11,14 @@
 		new/datum/data/pda/app/news,
 		// Outpost 21 addition begin - New apps
 		new/datum/data/pda/app/weather,
-		#ifndef OUTPOST_FRIENDSHIP_MODE
 		new/datum/data/pda/app/sop,
-		#endif
 		new/datum/data/pda/app/prisoner_manager,
 		new/datum/data/pda/app/crew_records/security,
 		new/datum/data/pda/app/crew_records/medical,
 		// Outpost 21 addition end
-		new/datum/data/pda/app/messenger)
+		new/datum/data/pda/app/messenger,
+		new/datum/data/pda/app/game_launcher)
+	special_handling = TRUE
 
 /obj/item/pda/ai/proc/set_name_and_job(newname as text, newjob as text, newrank as null|text)
 	owner = newname
@@ -42,7 +42,16 @@
 /obj/item/pda/ai/can_use()
 	return 1
 
-/obj/item/pda/ai/attack_self(mob/user as mob)
+/obj/item/pda/ai/tgui_static_data(mob/user)
+	. = ..()
+	if(isrobot(loc))
+		var/mob/living/silicon/robot/robot_owner = loc
+		.["theme"] = robot_owner.get_ui_theme()
+
+/obj/item/pda/ai/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	if ((honkamt > 0) && (prob(60)))//For clown virus.
 		honkamt--
 		playsound(src, 'sound/items/bikehorn.ogg', 30, 1)

@@ -35,9 +35,9 @@
 		if(4)
 			msg = "A passing derelict ship's drone defense systems have just activated. If any are sighted in the area, use caution." //CHOMPStation Edit: Restored original message.
 		if(5)
-			msg = "We're detecting a swarm of small objects approaching your station. Most likely a bunch of drones. Please exercise caution if you see any."
+			msg = "We're detecting a swarm of small objects approaching your [using_map.facility_type].  Most likely a bunch of drones.  Please exercise caution if you see any."
 	//CHOMPStation Edit End
-	command_announcement.Announce(msg, "Rogue drone alert")
+	GLOB.command_announcement.Announce(msg, "Rogue drone alert")
 
 /datum/event/rogue_drone/end()
 	var/num_recovered = 0
@@ -52,6 +52,6 @@
 		num_recovered++
 
 	if(num_recovered > drones_list.len * 0.75)
-		command_announcement.Announce("The drones that were malfunctioning have been recovered safely.", "Rogue drone alert")
+		GLOB.command_announcement.Announce("The drones that were malfunctioning have been recovered safely.", "Rogue drone alert")
 	else
-		command_announcement.Announce("We're disappointed at the loss of the drones, but the survivors have been recovered.", "Rogue drone alert")
+		GLOB.command_announcement.Announce("We're disappointed at the loss of the drones, but the survivors have been recovered.", "Rogue drone alert")

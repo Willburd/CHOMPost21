@@ -76,7 +76,7 @@
 				qdel(src)
 	return
 
-/obj/machinery/shield/emp_act(severity)
+/obj/machinery/shield/emp_act(severity, recursive)
 	switch(severity)
 		if(1)
 			qdel(src)
@@ -91,7 +91,7 @@
 				qdel(src)
 
 
-/obj/machinery/shield/hitby(atom/movable/source)
+/obj/machinery/shield/hitby(atom/movable/source, datum/thrownthing/throwingdatum)
 	//Let everyone know we've been hit!
 	visible_message(span_danger("\The [src] was hit by [source]."))
 
@@ -243,7 +243,7 @@
 			src.checkhp()
 	return
 
-/obj/machinery/shieldgen/emp_act(severity)
+/obj/machinery/shieldgen/emp_act(severity, recursive)
 	switch(severity)
 		if(1)
 			src.health /= 2 //cut health in half

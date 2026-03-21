@@ -302,15 +302,13 @@
 	vore_standing_too = TRUE
 	unacidable = TRUE
 
-	enzyme_affect = FALSE // Outpost 21 edit - assumed to be such
-
 /mob/living/simple_mob/vore/vore_hostile/gelatinous_cube/load_default_bellies()
 	. = ..()
 	var/obj/belly/B = vore_selected
 	B.name = "interior"
 	B.desc = "An incredibly thick oozing slime surrounds you, filling in all the space around your form! It's hard to catch a breath here as the jiggling gel that makes up the body of the creature swiftly fills in the hole you made in its surface by entering. The gel is semi-transparent, and you can see your surroundings though its surface, and similarly you can be seen floating in the gel from the outside. When the cube moves, your whole body is wobbled along with it. There are clouds of still processing material floating all around you as the corrosive substance works on breaking everything down."
 	B.mode_flags = DM_FLAG_NUMBING
-	B.belly_fullscreen = "yet_another_tumby"
+	B.belly_fullscreen = "VBO_fleshs"
 	B.colorization_enabled = TRUE
 	B.belly_fullscreen_color = color
 	B.digest_brute = 2

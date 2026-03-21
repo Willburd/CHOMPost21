@@ -56,6 +56,9 @@
 		)
 //CHOMP Addition for feeder in the above list. I am paranoid about comments within lists so this is outside.
 
+	///Var for attack_self chain
+	var/special_handling = FALSE
+
 /obj/item/reagent_containers/glass/Initialize(mapload)
 	. = ..()
 	if(LAZYLEN(prefill))
@@ -77,7 +80,11 @@
 			. += span_notice("Airtight lid seals it completely.")
 
 /obj/item/reagent_containers/glass/attack_self(mob/user)
-	..()
+	. = ..(user)
+	if(.)
+		return TRUE
+	if(special_handling)
+		return FALSE
 	if(is_open_container())
 		balloon_alert(user, "lid put on \the [src]")
 		flags ^= OPENCONTAINER
@@ -336,7 +343,7 @@
 		qdel(src)
 		return
 	else if(D.has_tool_quality(TOOL_WIRECUTTER))
-		balloon_alert(user, "you cut a big hole in \the [src] with \the [D]. It's kinda useless now.")
+		to_chat(user, span_notice("You cut a big hole in \the [src] with \the [D]. It's kinda useless as a bucket now."))
 		user.put_in_hands(new /obj/item/clothing/head/helmet/bucket)
 		user.drop_from_inventory(src)
 		qdel(src)
@@ -346,16 +353,16 @@
 		if (M.use(1))
 			var/obj/item/secbot_assembly/edCLN_assembly/B = new /obj/item/secbot_assembly/edCLN_assembly
 			B.loc = get_turf(src)
-			balloon_alert(user, "armed the robot frame.")
+			to_chat(user, span_notice("You armed the robot frame."))
 			if (user.get_inactive_hand()==src)
 				user.remove_from_mob(src)
 				user.put_in_inactive_hand(B)
 			qdel(src)
 		else
-			balloon_alert(user, "one sheet of metal is needed to arm the robot frame.")
+			to_chat(user, span_warning("You need one sheet of metal to arm the robot frame."))
 	else if(istype(D, /obj/item/mop) || istype(D, /obj/item/soap) || istype(D, /obj/item/reagent_containers/glass/rag))
 		if(reagents.total_volume < 1)
-			balloon_alert(user, "\the [src] is empty!")
+			to_chat(user, span_warning("\The [src] is empty!"))
 		else
 			reagents.trans_to_obj(D, 5)
 			to_chat(user, span_notice("You wet \the [D] in \the [src]."))
@@ -437,3 +444,16 @@
 /obj/item/reagent_containers/glass/beaker/vial/sustenance
 	name = "vial (artificial sustenance)"
 	prefill = list(REAGENT_ID_ASUSTENANCE = 30)
+
+/obj/item/reagent_containers/glass/kettle
+	name = "kettle"
+	desc = "A simple kettle for brewing drinks."
+	icon_state = "kettle"
+	amount_per_transfer_from_this = 10
+	max_transfer_amount = 20
+	volume = 60
+	w_class = ITEMSIZE_SMALL
+	flags = OPENCONTAINER
+	matter = list(MAT_STEEL = 50)
+	drop_sound = 'sound/items/drop/crowbar.ogg'
+	pickup_sound = 'sound/items/pickup/drinkglass.ogg'

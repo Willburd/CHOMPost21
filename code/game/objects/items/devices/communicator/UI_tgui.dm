@@ -155,7 +155,7 @@
 	for(var/mob/observer/dead/O in known_devices)
 		if(O.client && O.client.prefs.communicator_visibility == 1 && O.exonet)
 			communicators.Add(list(list(
-				"name" = sanitize("[O.client.prefs.real_name]'s communicator"),
+				"name" = sanitize("[O.client.prefs.read_preference(/datum/preference/name/real_name)]'s communicator"),
 				"address" = O.exonet.address,
 				"ref" = "\ref[O]"
 			)))
@@ -173,7 +173,7 @@
 	for(var/mob/observer/dead/O in voice_invites)
 		if(O.exonet && O.client)
 			invites.Add(list(list(
-				"name" = sanitize("[O.client.prefs.real_name]'s communicator"),
+				"name" = sanitize("[O.client.prefs.read_preference(/datum/preference/name/real_name)]'s communicator"),
 				"address" = O.exonet.address,
 				"ref" = "\ref[O]"
 			)))
@@ -191,7 +191,7 @@
 	for(var/mob/observer/dead/O in voice_requests)
 		if(O.exonet && O.client)
 			requests.Add(list(list(
-				"name" = sanitize("[O.client.prefs.real_name]'s communicator"),
+				"name" = sanitize("[O.client.prefs.read_preference(/datum/preference/name/real_name)]'s communicator"),
 				"address" = O.exonet.address,
 				"ref" = "\ref[O]"
 			)))
@@ -257,7 +257,7 @@
 				"Low" = planet.weather_holder.current_weather.temp_low - T0C,
 				"WindDir" = planet.weather_holder.wind_dir ? dir2text(planet.weather_holder.wind_dir) : "None",
 				"WindSpeed" = planet.weather_holder.wind_speed ? "[planet.weather_holder.wind_speed > 2 ? "Severe" : "Normal"]" : "None",
-				"Forecast" = english_list(list("\[[planet.weather_holder.current_weather?.name]\]") + planet.weather_holder.forecast, and_text = "&#8594;", comma_text = "&#8594;", final_comma_text = "&#8594;") // Unicode RIGHTWARDS ARROW. Outpost 21 edit - Show current weather first
+				"Forecast" = english_list(list("\[[planet.weather_holder.current_weather?.name]\]") + planet.weather_holder.get_forecast_data(), and_text = "&#8594;", comma_text = "&#8594;", final_comma_text = "&#8594;") // Unicode RIGHTWARDS ARROW. Outpost 21 edit - Show current weather first
 				)
 			weather.Add(list(W))
 

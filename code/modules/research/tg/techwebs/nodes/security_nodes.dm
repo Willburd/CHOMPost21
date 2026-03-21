@@ -58,6 +58,7 @@
 	design_ids = list(
 		"netgun",
 		"sizenetgun",
+		"bolablaster",
 		"sickshot",
 		"pummeler",
 		"protector",
@@ -67,7 +68,7 @@
 		"riflescope",
 		"motion_tracker",
 		"hunt_trap",
-		// "recon_skimmer", // Outpost 21 edit - temporary removal
+		"recon_skimmer",
 		// "clown_firing_pin",
 		// "pin_testing",
 		// "pin_loyalty",
@@ -167,9 +168,10 @@
 		"nsfw_cell_ion",
 		"nsfw_cell_shotstun",
 		"nsfw_cell_xray",
-		// "nsfw_cell_stripper", // CHOMPRemove
+		"nsfw_cell_stripper", // Outpost 21 edit - Reenable
 	)
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_3_POINTS)
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_4_POINTS)
+	announce_channels = list(CHANNEL_SECURITY)
 
 /datum/techweb_node/phase_weapons //CHOMPEdit Start - Adds Phase Weaponry
 	id = TECHWEB_NODE_PHASE_WEAPONS
@@ -187,10 +189,11 @@
 		"marksman_rifle_frontier_phaser",
 		"handbow_frontier_phaser",
 	)
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_2_POINTS) //They mostly work on mobs.
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_3_POINTS) //They mostly work on mobs.
 	announce_channels = list(CHANNEL_SECURITY) //CHOMPEdit End - Adds Phase Weaponry
 
-/datum/techweb_node/cryogun //CHOMPEdit Start
+//CHOMPEnable Start
+/datum/techweb_node/cryogun
 	id = TECHWEB_NODE_CRYOGUN
 	display_name = "Cryogenic Gun"
 	description = "Specialized gun that allows for cooling down a target."
@@ -198,8 +201,10 @@
 	design_ids = list(
 		"cryogun",
 	)
-	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_2_POINTS) //It's actually laughably weak.
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_3_POINTS) //It's actually laughably weak.
 	announce_channels = list(CHANNEL_SECURITY)
+
+//CHOMPEnable End
 
 /datum/techweb_node/caseless_rifle
 	id = TECHWEB_NODE_CASELESS_RIFLE
@@ -208,11 +213,13 @@
 	prereq_ids = list(TECHWEB_NODE_EXOTIC_AMMO)
 	design_ids = list(
 		"caselessrifle",
+		"caselessrifle_ammo",
+		"caselessrifle_ammo_stun",
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_5_POINTS)
 	announce_channels = list(CHANNEL_SECURITY)
 
-/datum/techweb_node/metamorphosis_ray
+/datum/techweb_node/metamorphosis_ray //CHOMPEdit Start
 	id = TECHWEB_NODE_METAMORPHOSIS_RAY
 	display_name = "Metamorposis Ray"
 	description = "A Specialized weapon that allows transforming the target into various simple creatures."

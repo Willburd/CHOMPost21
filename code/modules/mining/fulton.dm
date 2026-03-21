@@ -15,6 +15,9 @@
 	. += "It has [uses_left] use\s remaining."
 
 /obj/item/extraction_pack/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	var/list/possible_beacons = list()
 	for(var/obj/structure/extraction_point/EP as anything in GLOB.total_extraction_beacons)
 		if(EP.beacon_network in beacon_networks)
@@ -25,17 +28,14 @@
 		return
 
 	else
-		var/A
-
-		A = tgui_input_list(user, "Select a beacon to connect to", "Balloon Extraction Pack", possible_beacons)
-
-		if(!A)
+		var/obj/structure/extraction_point/A = tgui_input_list(user, "Select a beacon to connect to", "Balloon Extraction Pack", possible_beacons) // Outpost 21 edit(port) - Fulton nullspace destination fix
+		if(QDELETED(A)) // Outpost 21 edit(port) - Fulton nullspace destination fix
 			return
 		beacon = A
 		to_chat(user, "You link the extraction pack to the beacon system.")
 
 /obj/item/extraction_pack/afterattack(atom/movable/A, mob/living/carbon/human/user, flag, params)
-	if(!beacon)
+	if(QDELETED(beacon)) // Outpost 21 edit(port) - Fulton nullspace destination fix
 		to_chat(user, "[src] is not linked to a beacon, and cannot be used.")
 		return
 	// Outpost 21 edit begin - No escaping redspace
@@ -50,6 +50,9 @@
 		if(redlist.len > 0)
 			warp_goal = pick(redlist)
 	// Outpost 21 edit end
+	if(!warp_goal) // Outpost 21 edit(port) - Fulton nullspace destination fix
+		beacon = null
+		return
 	if(!can_use_indoors)
 		var/turf/T = get_turf(A)
 		if(T && !T.is_outdoors())
@@ -123,6 +126,8 @@
 			var/list/flooring_near_beacon = list()
 			for(var/turf/simulated/floor/floor in orange(1, warp_goal)) // Outpost 21 edit - No escaping redspace
 				flooring_near_beacon += floor
+			if(!flooring_near_beacon.len) // Outpost 21 edit(port) - Fulton nullspace destination fix
+				flooring_near_beacon += get_turf(warp_goal)
 			holder_obj.forceMove(pick(flooring_near_beacon))
 			animate(holder_obj, pixel_z = 10, time = 50)
 			sleep(50)
@@ -155,9 +160,14 @@
 	icon_state = "extraction_pointoff"
 
 /obj/item/fulton_core/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	var/turf/T = get_turf(user)
-	var/outdoors = T.is_outdoors()
-	if(do_after(user, 15, target = user) && !QDELETED(src) && outdoors)
+	if(!T)
+		to_chat(user, span_warning("You must be standing on solid ground to deploy an extraction beacon!"))
+		return
+	if(do_after(user, 1.5 SECONDS, target = user) && !QDELETED(src))
 		new /obj/structure/extraction_point(get_turf(user))
 		qdel(src)
 
@@ -195,9 +205,6 @@
 			if(L.stat != DEAD)
 				return 1
 	return 0
-
-/obj/effect/extraction_holder/singularity_pull()
-	return
 
 /obj/effect/extraction_holder/singularity_pull()
 	return

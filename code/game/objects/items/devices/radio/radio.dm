@@ -44,6 +44,11 @@
 	var/datum/radio_frequency/radio_connection
 	var/list/datum/radio_frequency/secure_radio_connections
 
+	///If we're a syndicate beacon or not.
+	var/beacon = FALSE
+	var/electric_pack = FALSE
+	var/uplink = FALSE
+
 /obj/item/radio/proc/set_frequency(new_frequency)
 	SSradio.remove_object(src, frequency)
 	frequency = new_frequency
@@ -69,14 +74,14 @@
 /obj/item/radio/LateInitialize()
 	if(bs_tx_preload_id)
 		//Try to find a receiver
-		for(var/obj/machinery/telecomms/receiver/RX in telecomms_list)
+		for(var/obj/machinery/telecomms/receiver/RX in GLOB.telecomms_list)
 			if(RX.id == bs_tx_preload_id) //Again, bs_tx is the thing to TRANSMIT TO, so a receiver.
 				bs_tx_weakref = WEAKREF(RX)
 				RX.link_radio(src)
 				break
 		//Hmm, howabout an AIO machine
 		if(!bs_tx_weakref)
-			for(var/obj/machinery/telecomms/allinone/AIO in telecomms_list)
+			for(var/obj/machinery/telecomms/allinone/AIO in GLOB.telecomms_list)
 				if(AIO.id == bs_tx_preload_id)
 					bs_tx_weakref = WEAKREF(AIO)
 					AIO.link_radio(src)
@@ -87,14 +92,14 @@
 	if(bs_rx_preload_id)
 		var/found = 0
 		//Try to find a transmitter
-		for(var/obj/machinery/telecomms/broadcaster/TX in telecomms_list)
+		for(var/obj/machinery/telecomms/broadcaster/TX in GLOB.telecomms_list)
 			if(TX.id == bs_rx_preload_id) //Again, bs_rx is the thing to RECEIVE FROM, so a transmitter.
 				TX.link_radio(src)
 				found = 1
 				break
 		//Hmm, howabout an AIO machine
 		if(!found)
-			for(var/obj/machinery/telecomms/allinone/AIO in telecomms_list)
+			for(var/obj/machinery/telecomms/allinone/AIO in GLOB.telecomms_list)
 				if(AIO.id == bs_rx_preload_id)
 					AIO.link_radio(src)
 					found = 1
@@ -115,8 +120,12 @@
 /obj/item/radio/proc/recalculateChannels()
 	return
 
-/obj/item/radio/attack_self(mob/user as mob)
-	user.set_machine(src)
+/obj/item/radio/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
+	if(beacon || electric_pack || uplink)
+		return
 	interact(user)
 
 /obj/item/radio/interact(mob/user)
@@ -134,8 +143,14 @@
 		ui = new(user, src, "Radio", name, parent_ui)
 		ui.open()
 
+/obj/item/radio/tgui_static_data(mob/user)
+	. = ..()
+	if(isrobot(loc))
+		var/mob/living/silicon/robot/robot_owner = loc
+		.["theme"] = robot_owner.get_ui_theme()
+
 /obj/item/radio/tgui_data(mob/user)
-	var/data[0]
+	var/data = list()
 
 	data["rawfreq"] = frequency
 	data["listening"] = listening
@@ -154,7 +169,10 @@
 		data["chan_list"] = null
 
 	if(syndie)
-		data["useSyndMode"] = 1
+		data["useSyndMode"] = TRUE
+	else
+		data["useSyndMode"] = FALSE
+
 
 	data["minFrequency"] = PUBLIC_LOW_FREQ
 	data["maxFrequency"] = PUBLIC_HIGH_FREQ
@@ -460,7 +478,7 @@ GLOBAL_DATUM(autospeaker, /mob/living/silicon/ai/announcer)
 
 		// Outpost 21 edit begin - haunted areas cause compression
 		var/area/A = get_area(M)
-		if((A && A.haunted) || (prob(10) && SShaunting.station_is_haunted()))
+		if(A && A.haunted)
 			signal.data["compression"] = rand(20,70)
 			signal.data["haunted"] = TRUE
 		// Outpost 21 edit end
@@ -487,17 +505,17 @@ GLOBAL_DATUM(autospeaker, /mob/living/silicon/ai/announcer)
 
 		// Outpost 21 edit begin - haunted areas cause compression
 		var/area/A = get_area(M)
-		if((A && A.haunted) || (prob(10) && SShaunting.station_is_haunted()))
+		if(A && A.haunted)
 			signal.data["compression"] = rand(20,70)
 			signal.data["haunted"] = TRUE
 		// Outpost 21 edit end
 
 		//#### Sending the signal to all subspace receivers ####//
-		for(var/obj/machinery/telecomms/receiver/R in telecomms_list)
+		for(var/obj/machinery/telecomms/receiver/R in GLOB.telecomms_list)
 			R.receive_signal(signal)
 
 		// Allinone can act as receivers.
-		for(var/obj/machinery/telecomms/allinone/R in telecomms_list)
+		for(var/obj/machinery/telecomms/allinone/R in GLOB.telecomms_list)
 			R.receive_signal(signal)
 
 		// Receiving code can be located in Telecommunications.dm
@@ -523,22 +541,22 @@ GLOBAL_DATUM(autospeaker, /mob/living/silicon/ai/announcer)
 
 		// Outpost 21 edit begin - haunted areas cause compression
 		var/area/A = get_area(M)
-		if((A && A.haunted) || (prob(10) && SShaunting.station_is_haunted()))
+		if(A && A.haunted)
 			signal.data["compression"] = rand(20,70)
 			signal.data["haunted"] = TRUE
 		// Outpost 21 edit end
 
-		for(var/obj/machinery/telecomms/receiver/R in telecomms_list)
+		for(var/obj/machinery/telecomms/receiver/R in GLOB.telecomms_list)
 			R.receive_signal(signal)
 
 		// Allinone can act as receivers.
-		for(var/obj/machinery/telecomms/allinone/R in telecomms_list)
+		for(var/obj/machinery/telecomms/allinone/R in GLOB.telecomms_list)
 			R.receive_signal(signal)
 
-	for(var/obj/machinery/telecomms/receiver/R in telecomms_list)
+	for(var/obj/machinery/telecomms/receiver/R in GLOB.telecomms_list)
 		// Outpost 21 edit begin - haunted areas cause compression
 		var/area/A = get_area(M)
-		if((A && A.haunted) || (prob(10) && SShaunting.station_is_haunted()))
+		if(A && A.haunted)
 			signal.data["compression"] = rand(20,70)
 			signal.data["haunted"] = TRUE
 		// Outpost 21 edit end
@@ -554,7 +572,7 @@ GLOBAL_DATUM(autospeaker, /mob/living/silicon/ai/announcer)
 
 	// Outpost 21 edit begin - haunted areas cause compression
 	var/area/A = get_area(M)
-	if((A && A.haunted) || (prob(10) && SShaunting.station_is_haunted()))
+	if(A && A.haunted)
 		signal.data["compression"] = rand(20,70)
 		signal.data["haunted"] = TRUE
 	// Outpost 21 edit end
@@ -584,10 +602,10 @@ GLOBAL_DATUM(autospeaker, /mob/living/silicon/ai/announcer)
 		var/pos_z = get_z(src)
 		if(!(pos_z in level))
 			return -1
-	if(freq in ANTAG_FREQS)
+	if(freq in GLOB.antag_frequencies)
 		if(!(src.syndie))//Checks to see if it's allowed on that frequency, based on the encryption keys
 			return -1
-	if(freq in CENT_FREQS)
+	if(freq in GLOB.cent_frequencies)
 		if(!(src.centComm))//Checks to see if it's allowed on that frequency, based on the encryption keys
 			return -1
 	if (!on)
@@ -624,7 +642,6 @@ GLOBAL_DATUM(autospeaker, /mob/living/silicon/ai/announcer)
 
 /obj/item/radio/attackby(obj/item/W as obj, mob/user as mob)
 	..()
-	user.set_machine(src)
 	if (!W.has_tool_quality(TOOL_SCREWDRIVER))
 		return
 	b_stat = !( b_stat )
@@ -633,15 +650,14 @@ GLOBAL_DATUM(autospeaker, /mob/living/silicon/ai/announcer)
 			user.show_message(span_notice("\The [src] can now be attached and modified!"))
 		else
 			user.show_message(span_notice("\The [src] can no longer be modified or attached!"))
-		updateDialog()
 			//Foreach goto(83)
 		add_fingerprint(user)
 		return
 	else return
 
-/obj/item/radio/emp_act(severity)
-	broadcasting = 0
-	listening = 0
+/obj/item/radio/emp_act(severity, recursive)
+	broadcasting = FALSE
+	listening = FALSE
 	for (var/ch_name in channels)
 		channels[ch_name] = 0
 	..()
@@ -679,7 +695,6 @@ GLOBAL_DATUM(autospeaker, /mob/living/silicon/ai/announcer)
 
 /obj/item/radio/borg/attackby(obj/item/W as obj, mob/user as mob)
 //	..()
-	user.set_machine(src)
 	if (!(W.has_tool_quality(TOOL_SCREWDRIVER) || istype(W, /obj/item/encryptionkey)))
 		return
 
@@ -831,8 +846,8 @@ GLOBAL_DATUM(autospeaker, /mob/living/silicon/ai/announcer)
 				continue
 	broadcast_tiles = output
 
-/obj/item/radio/intercom/forceMove(atom/destination)
-	. = ..()
+/obj/item/radio/intercom/forceMove(atom/destination, direction, movetime)
+	. = ..(destination, direction, movetime)
 	update_broadcast_tiles()
 
 /obj/item/radio/intercom/Initialize(mapload)

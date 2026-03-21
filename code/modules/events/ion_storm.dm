@@ -23,7 +23,7 @@
 		announceWhen = endWhen + rand(250, 400)
 
 /datum/event/ionstorm/announce()
-	command_announcement.Announce("It has come to our attention that \the [location_name()] passed through an ion storm.  Please monitor all electronic equipment for malfunctions.", "Anomaly Alert")
+	GLOB.command_announcement.Announce("It has come to our attention that \the [location_name()] passed through an ion storm.  Please monitor all electronic equipment for malfunctions.", "Anomaly Alert")
 
 /datum/event/ionstorm/start()
 	for (var/mob/living/carbon/human/player in GLOB.player_list)
@@ -44,7 +44,7 @@
 		*/
 		to_chat(S, span_warning("Your integrated sensors detect an ionospheric anomaly. Your systems will be impacted as you begin a partial restart."))
 		var/ionbug = rand(3, 9)
-		S.confused += ionbug
+		S.AdjustConfused(ionbug)
 		S.eye_blurry += (ionbug - 1)
 
 	// Ionize silicon mobs
@@ -86,14 +86,13 @@
 	// CHOMPEdit End
 
 /* //VOREstation edit. Was fucking up all PDA messagess.
-	if(message_servers)
-		for (var/obj/machinery/message_server/MS in message_servers)
-			MS.spamfilter.Cut()
-			var/i
-			for (i = 1, i <= MS.spamfilter_limit, i++)
-				MS.spamfilter += pick("kitty","HONK","rev","malf","liberty","freedom","drugs", "[using_map.station_short]", \
-					"admin","ponies","heresy","meow","Pun Pun","monkey","Ian","moron","pizza","message","spam",\
-					"director", "Hello", "Hi!"," ","nuke","crate","dwarf","xeno")
+	for (var/obj/machinery/message_server/MS in GLOB.message_servers)
+		MS.spamfilter.Cut()
+		var/i
+		for (i = 1, i <= MS.spamfilter_limit, i++)
+			MS.spamfilter += pick("kitty","HONK","rev","malf","liberty","freedom","drugs", "[using_map.station_short]", \
+				"admin","ponies","heresy","meow","Pun Pun","monkey","Ian","moron","pizza","message","spam",\
+				"director", "Hello", "Hi!"," ","nuke","crate","dwarf","xeno")
 */
 /datum/event/ionstorm/tick()
 	if(botEmagChance)

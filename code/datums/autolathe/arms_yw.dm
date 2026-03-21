@@ -11,4 +11,3 @@
 /datum/category_item/autolathe/arms/shotgun_drum_empty
 	name = "shotgun 12g drum magazine (Empty)"
 	path =/obj/item/ammo_magazine/m12gdrumjack/empty
-	lethal = FALSE // Outpost 21 edit - stunonly range autolathe varient

@@ -253,7 +253,7 @@
 	B.contaminates = vore_default_contaminates
 	B.contamination_flavor = vore_default_contamination_flavor
 	B.contamination_color = vore_default_contamination_color
-	B.escapable = vore_escape_chance > 0
+	B.escapable = vore_escape_chance > 0 ? B_ESCAPABLE_DEFAULT : B_ESCAPABLE_NONE
 	B.escapechance = vore_escape_chance
 	B.escapechance_absorbed = vore_escape_chance_absorbed
 	B.digestchance = vore_digest_chance
@@ -473,7 +473,6 @@
 			H.Weaken(3)
 			return
 	var/armor_block = run_armor_check(T, "melee")
-	var/armor_soak = get_armor_soak(T, "melee")
-	T.apply_damage(20, HALLOSS,, armor_block, armor_soak)
+	T.apply_damage(20, HALLOSS, null, armor_block)
 	if(prob(75))
 		T.apply_effect(3, WEAKEN, armor_block)

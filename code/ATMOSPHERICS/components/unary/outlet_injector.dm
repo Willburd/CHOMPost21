@@ -42,12 +42,12 @@
 		icon_state = "[use_power ? "on" : "off"]"
 
 /obj/machinery/atmospherics/unary/outlet_injector/update_underlays()
-	if(..())
-		underlays.Cut()
-		var/turf/T = get_turf(src)
-		if(!istype(T))
-			return
-		add_underlay(T, node, dir)
+	..()
+	underlays.Cut()
+	var/turf/T = get_turf(src)
+	if(!istype(T))
+		return
+	add_underlay(T, node, dir)
 
 /obj/machinery/atmospherics/unary/outlet_injector/power_change()
 	var/old_stat = stat
@@ -200,7 +200,7 @@
 			"You hear a ratchet.")
 		deconstruct()
 
-/obj/machinery/atmospherics/unary/outlet_injector/CtrlClick(mob/user)
+/obj/machinery/atmospherics/unary/outlet_injector/click_ctrl(mob/user)
 	if (volume_rate == ATMOS_DEFAULT_VOLUME_PUMP + 500 || use_power == USE_POWER_OFF)
 		return ..()
 

@@ -6,15 +6,15 @@
 	. = ..()
 	if(!isobj(target))
 		return ELEMENT_INCOMPATIBLE
-	RegisterSignal(target, COMSIG_ITEM_SOLD, PROC_REF(sell))
+	RegisterSignal(target, COMSIG_ITEM_EXPORTED, PROC_REF(sell))
 	RegisterSignal(target, COMSIG_ITEM_SCAN_PROFIT, PROC_REF(calculate_sell_value))
-	RegisterSignal(target, COMSIG_PARENT_EXAMINE, PROC_REF(on_examine))
+	RegisterSignal(target, COMSIG_ATOM_EXAMINE, PROC_REF(on_examine))
 	return
 
 /datum/element/sellable/Detach(datum/source)
-	UnregisterSignal(source, COMSIG_ITEM_SOLD)
+	UnregisterSignal(source, COMSIG_ITEM_EXPORTED)
 	UnregisterSignal(source, COMSIG_ITEM_SCAN_PROFIT)
-	UnregisterSignal(source, COMSIG_PARENT_EXAMINE)
+	UnregisterSignal(source, COMSIG_ATOM_EXAMINE)
 	return ..()
 
 // Override this for sub elements that need to do complex calculations when sold
@@ -142,6 +142,11 @@
 
 /datum/element/sellable/trolley_tank/calculate_sell_value(obj/source)
 	var/obj/vehicle/train/trolley_tank/tank = source
+
+	// Outpost 21 edit(port) begin - Tank price examine fix
+	if(!length(tank.reagents.reagent_list))
+		return 0
+	// Outpost 21 end
 
 	// Update export values
 	var/datum/reagent/R = tank.reagents.reagent_list[1]

@@ -108,7 +108,7 @@ Bonus
 	var/place
 
 	for(var/mob/living/carbon/human/B in range(A.stage, mob))
-		if(B.can_be_drop_pred && mob.can_be_drop_prey && mob.devourable)
+		if(can_spontaneous_vore(B, mob))
 			destination += B.vore_selected
 
 	for(var/turf/T in range(A.stage, mob))
@@ -124,11 +124,11 @@ Bonus
 
 	var/mob/living/unlucky = locate() in place
 
-	if(unlucky && !unlucky.is_incorporeal())
-		if(unlucky.can_be_drop_pred && mob.can_be_drop_prey && mob.devourable)
+	if(unlucky)
+		if(can_spontaneous_vore(unlucky, mob))
 			place = unlucky.vore_selected
-		else if(unlucky.devourable && unlucky.can_be_drop_prey && mob.can_be_drop_pred)
-			unlucky.forceMove(mob.vore_selected)
+		else if(can_spontaneous_vore(mob, unlucky))
+			mob.vore_selected.nom_atom(unlucky)
 
 	mob.emote("sneeze")
 	do_teleport(mob, place)

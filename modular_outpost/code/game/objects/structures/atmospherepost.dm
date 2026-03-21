@@ -12,6 +12,7 @@
 /obj/structure/atmopost/examine(mob/living/user)
 	. = ..()
 
+	// Always show atmos
 	var/datum/gas_mixture/environment = loc.return_air()
 	var/pressure = environment.return_pressure()
 	var/total_moles = environment.total_moles
@@ -20,3 +21,15 @@
 		for(var/g in environment.gas)
 			. += "[GLOB.gas_data.name[g]]: [round((environment.gas[g] / total_moles) * 100)]% "
 	. += "[round(pressure,0.1)] kPa"
+
+	// Get weather
+	var/turf/T = get_turf(src)
+	if(T.z <= 0 || SSplanets.z_to_planet.len < T.z || !(SSplanets.z_to_planet[T.z]))
+		return
+	var/datum/planet/P = SSplanets.z_to_planet[T.z]
+	if(!P)
+		return
+	var/datum/weather_holder/WH = P.weather_holder
+	if(!WH && WH.current_weather)
+		return
+	. += "Current weather: [WH.current_weather.name]"

@@ -30,8 +30,7 @@
 
 /obj/machinery/gibber/autogibber/Initialize(mapload)
 	. = ..()
-	add_overlay("grjam") // Outpost 21 edit(port) - overlay runtime fix
-	// outpost 21 edit(port) - add gibber from above detection
+	add_overlay("grjam") // overlay runtime fix
 	var/obj/machinery/mineral/input/input_obj = locate( /obj/machinery/mineral/input, get_zstep(src, UP))
 	if(!input_obj)
 		for(var/i in GLOB.cardinal)
@@ -359,7 +358,7 @@
 					processtobiomass = TRUE
 		if(processtobiomass)
 			// process and destroy
-			thing.Destroy()
+			qdel(thing)
 		else
 			thing.forceMove( src.loc) // Drop it onto the turf for throwing.
 			thing.throw_at( get_edge_target_turf(thing.loc, gib_throw_dir),rand(1,3),emagged ? 100 : 50) // Being pelted with bits of meat and bone would hurt.
@@ -368,7 +367,6 @@
 	spawn(12)
 		for (var/mob/M in contents)
 			M.forceMove( src.loc) // Drop it onto the turf for throwing.
-			M.reset_view(null)
 			visible_message("<span class='notice'>\The [M] crawls out of the [src] unharmed!</span>")
 
 /obj/machinery/gibber/proc/updatesleever()

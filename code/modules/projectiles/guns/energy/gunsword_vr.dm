@@ -95,11 +95,13 @@
 	attack_verb = null
 
 
-/obj/item/cell/device/weapon/gunsword/attack_self(mob/living/user as mob)
-	var/datum/gender/TU = GLOB.gender_datums[user.get_visible_gender()]
+/obj/item/cell/device/weapon/gunsword/attack_self(mob/living/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	if (active)
-		if ((CLUMSY in user.mutations) && prob(20)) // Outpost 21 edit - Made clumsy less obnoxious
-			user.visible_message(span_danger("\The [user] accidentally cuts [TU.himself] with \the [src]."),\
+		if (CLUMSY_HARM_CHANCE(user))
+			user.visible_message(span_danger("\The [user] accidentally cuts [user.p_themselves()] with \the [src]."),\
 			span_danger("You accidentally cut yourself with \the [src]."))
 			user.take_organ_damage(5,5)
 		deactivate(user)

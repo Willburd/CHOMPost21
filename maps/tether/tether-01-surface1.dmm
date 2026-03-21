@@ -3101,6 +3101,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
 	},
+/obj/machinery/anomaly_harvester,
 /turf/simulated/floor/tiled,
 /area/rnd/hardstorage)
 "afh" = (
@@ -8602,6 +8603,7 @@
 /area/tether/surfacebase/surface_one_hall)
 "aoR" = (
 /obj/machinery/light/small,
+/obj/machinery/power/emitter,
 /turf/simulated/floor/tiled,
 /area/rnd/hardstorage)
 "aoS" = (
@@ -19443,9 +19445,7 @@
 /obj/random/action_figure,
 /obj/random/action_figure,
 /obj/random/action_figure,
-/obj/structure/closet/wardrobe/grey{
-	starts_with = list(/obj/structure/barricade/cutout/viva, /obj/item/clothing/under/color/grey = 3, /obj/item/clothing/shoes/black = 3, /obj/item/clothing/head/soft/grey = 3, /obj/item/clothing/mask/gas/wwii = 3, /obj/item/storage/toolbox/mechanical = 3, /obj/item/clothing/gloves/fyellow = 3, /obj/item/card/id/gold/captain/spare/fakespare = 3, /obj/item/soap/syndie = 3, /obj/item/storage/box/mousetraps = 3)
-	},
+/obj/structure/closet/wardrobe/grey/empty,
 /turf/simulated/floor/plating,
 /area/maintenance/lower/atmos)
 "aHh" = (
@@ -20285,9 +20285,8 @@
 /obj/structure/cable/cyan{
 	icon_state = "0-4"
 	},
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Substation - Atmospherics";
-	charge = 2e+006
+/obj/machinery/power/smes/buildable/max_charge{
+	RCon_tag = "Substation - Atmospherics"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/substation/surface_atmos)
@@ -28650,6 +28649,17 @@
 /obj/machinery/disposal,
 /turf/simulated/floor/plating,
 /area/crew_quarters/sleep/maintDorm1)
+"aYC" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/item/storage/box/anomaly{
+	pixel_y = 5
+	},
+/obj/item/storage/box/anomaly{
+	pixel_y = 0;
+	pixel_x = 5
+	},
+/turf/simulated/floor/tiled,
+/area/rnd/hardstorage)
 "aYE" = (
 /obj/structure/toilet{
 	pixel_y = 10
@@ -29385,9 +29395,8 @@
 /obj/structure/cable/green{
 	icon_state = "0-2"
 	},
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Substation - Surface Services";
-	output_attempt = 0
+/obj/machinery/power/smes/buildable/disable_output{
+	RCon_tag = "Substation - Surface Services"
 	},
 /turf/simulated/floor,
 /area/maintenance/substation/surfaceservicesubstation)
@@ -29576,9 +29585,8 @@
 /obj/structure/cable/green{
 	icon_state = "0-2"
 	},
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Substation - Medical";
-	output_attempt = 0
+/obj/machinery/power/smes/buildable/disable_output{
+	RCon_tag = "Substation - Medical"
 	},
 /turf/simulated/floor,
 /area/maintenance/substation/SurfMedsubstation)
@@ -36642,9 +36650,8 @@
 /turf/simulated/floor/tiled,
 /area/rnd/hallway)
 "sBl" = (
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Substation - Civ West";
-	output_attempt = 0
+/obj/machinery/power/smes/buildable/disable_output{
+	RCon_tag = "Substation - Civ West"
 	},
 /obj/structure/cable/green{
 	icon_state = "0-2"
@@ -45948,7 +45955,7 @@ auK
 avh
 abm
 abw
-abw
+aYC
 abw
 abv
 afA

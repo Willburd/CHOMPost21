@@ -22,7 +22,7 @@
 	name_language = LANGUAGE_LLEILL
 
 	flags =  NO_SLEEVE | NO_MINOR_CUT | NO_INFECT |  NO_HALLUCINATION
-	spawn_flags = SPECIES_IS_RESTRICTED // SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_WHITELIST_SELECTABLE Outpost 21 edit - none of these
+	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_WHITELIST_SELECTABLE
 	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_SKIN_COLOR | HAS_EYE_COLOR | HAS_UNDERWEAR
 
 	max_age = 200
@@ -105,9 +105,7 @@
 		O_SPLEEN = 		/obj/item/organ/internal/spleen,
 		O_EYES =		/obj/item/organ/internal/eyes,
 		O_STOMACH =		/obj/item/organ/internal/stomach,
-		O_INTESTINE =	/obj/item/organ/internal/intestine,
-		// Outpost 21 edit - butt
-		O_BUTT = 		/obj/item/organ/internal/butt
+		O_INTESTINE =	/obj/item/organ/internal/intestine
 		)
 
 	has_limbs = list(
@@ -142,57 +140,57 @@
 
 /datum/species/lleill/get_icobase(var/mob/living/carbon/human/H, var/get_deform)
 	if(!H) return ..(null, get_deform)
-	var/datum/species/S = GLOB.all_species[wrapped_species_by_ref["\ref[H]"]]
+	var/datum/species/S = GLOB.all_species[GLOB.wrapped_species_by_ref["\ref[H]"]]
 	if(!S || S.type == src.type) return ..(H, get_deform)
 	return S.get_icobase(H,get_deform)
 
 /datum/species/lleill/get_race_key(var/mob/living/carbon/human/H)
-	return "[..()]-[wrapped_species_by_ref["\ref[H]"]]"
+	return "[..()]-[GLOB.wrapped_species_by_ref["\ref[H]"]]"
 
 /datum/species/lleill/get_bodytype(var/mob/living/carbon/human/H)
-	var/datum/species/S = GLOB.all_species[wrapped_species_by_ref["\ref[H]"]]
+	var/datum/species/S = GLOB.all_species[GLOB.wrapped_species_by_ref["\ref[H]"]]
 	if(!H || !S) return ..()
 	if(S.type == src.type) return ..(H)
 	return S.get_bodytype(H)
 
 /datum/species/lleill/get_blood_mask(var/mob/living/carbon/human/H)
 	if(!H) return ..()
-	var/datum/species/S = GLOB.all_species[wrapped_species_by_ref["\ref[H]"]]
+	var/datum/species/S = GLOB.all_species[GLOB.wrapped_species_by_ref["\ref[H]"]]
 	if(!S || S.name == src.name)
 		return ..()
 	return S?.get_blood_mask(H)
 
 /datum/species/lleill/get_damage_mask(var/mob/living/carbon/human/H)
 	if(!H) return ..()
-	var/datum/species/S = GLOB.all_species[wrapped_species_by_ref["\ref[H]"]]
+	var/datum/species/S = GLOB.all_species[GLOB.wrapped_species_by_ref["\ref[H]"]]
 	if(!S || S.name == src.name)
 		return ..()
 	return S?.get_damage_mask(H)
 
 /datum/species/lleill/get_damage_overlays(var/mob/living/carbon/human/H)
 	if(!H) return ..()
-	var/datum/species/S = GLOB.all_species[wrapped_species_by_ref["\ref[H]"]]
+	var/datum/species/S = GLOB.all_species[GLOB.wrapped_species_by_ref["\ref[H]"]]
 	if(!S || S.name == src.name)
 		return ..()
 	return S?.get_damage_overlays(H)
 
 /datum/species/lleill/get_tail(var/mob/living/carbon/human/H)
 	if(!H) return ..()
-	var/datum/species/S = GLOB.all_species[wrapped_species_by_ref["\ref[H]"]]
+	var/datum/species/S = GLOB.all_species[GLOB.wrapped_species_by_ref["\ref[H]"]]
 	if(!S || S.name == src.name)
 		return ..()
 	return S?.get_tail(H)
 
 /datum/species/lleill/get_tail_animation(var/mob/living/carbon/human/H)
 	if(!H) return ..()
-	var/datum/species/S = GLOB.all_species[wrapped_species_by_ref["\ref[H]"]]
+	var/datum/species/S = GLOB.all_species[GLOB.wrapped_species_by_ref["\ref[H]"]]
 	if(!S || S.name == src.name)
 		return ..()
 	return S?.get_tail_animation(H)
 
 /datum/species/lleill/get_tail_hair(var/mob/living/carbon/human/H)
 	if(!H) return ..()
-	var/datum/species/S = GLOB.all_species[wrapped_species_by_ref["\ref[H]"]]
+	var/datum/species/S = GLOB.all_species[GLOB.wrapped_species_by_ref["\ref[H]"]]
 	if(!S || S.name == src.name)
 		return ..()
 	return S?.get_tail_hair(H)

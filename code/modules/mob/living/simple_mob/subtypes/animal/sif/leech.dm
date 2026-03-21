@@ -69,7 +69,7 @@
 	attack_sharp = TRUE
 	attacktext = list("nipped", "bit", "pinched")
 
-	organ_names = /decl/mob_organ_names/leech
+	organ_names = /datum/decl/mob_organ_names/leech
 
 	armor = list(
 		"melee" = 10,
@@ -79,16 +79,6 @@
 		"bomb" = 10,
 		"bio" = 100,
 		"rad" = 100
-		)
-
-	armor_soak = list(
-		"melee" = 5,
-		"bullet" = 5,
-		"laser" = 0,
-		"energy" = 0,
-		"bomb" = 0,
-		"bio" = 0,
-		"rad" = 0
 		)
 
 	say_list_type = /datum/say_list/leech
@@ -121,6 +111,8 @@
 
 	add_verb(src, /mob/living/proc/ventcrawl)
 	add_verb(src, /mob/living/proc/hide)
+
+	ADD_TRAIT(src, TRAIT_AMBIENT_PEST_MOB, ROUNDSTART_TRAIT)
 
 /mob/living/simple_mob/animal/sif/leech/get_status_tab_items()
 	. = ..()
@@ -331,8 +323,6 @@
 
 	forceMove(get_turf(host))
 
-	reset_view(null)
-
 	host = null
 
 /mob/living/simple_mob/animal/sif/leech/verb/inject_victim()
@@ -494,5 +484,5 @@
 	else
 		holder.a_intent = I_HURT
 
-/decl/mob_organ_names/leech
+/datum/decl/mob_organ_names/leech
 	hit_zones = list("mouthparts", "central segment", "tail segment")

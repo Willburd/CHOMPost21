@@ -63,6 +63,11 @@
 		if (3) //TRAIT_PREF_TYPE_STRING
 			var/new_string = instance.apply_sanitization_to_string(preference, tgui_input_text(user, "What should the new value be?", instance.has_preferences[preference][2], trait_prefs[preference], MAX_NAME_LEN))
 			trait_prefs[preference] = new_string
+		if (4) //TRAIT_PREF_TYPE_LIST
+			if(LAZYLEN(instance.multiple_choice))
+				var/new_choice = tgui_input_list(user, "Choose an option for this trait preference:", "Trait Preference", instance.multiple_choice, trait_prefs[preference])
+				if(new_choice)
+					trait_prefs[preference] = new_choice
 
 // Definition of the stuff for Ears
 /datum/category_item/player_setup_item/general/traits
@@ -381,24 +386,11 @@
 				if(trait_choice in (pref.pos_traits + pref.neu_traits + pref.neg_traits))
 					conflict = instance.name
 
-				varconflict:
-					for(var/P in (pref.pos_traits + pref.neu_traits + pref.neg_traits))
-						var/datum/trait/instance_test = GLOB.all_traits[P]
-						if(path in instance_test.excludes)
-							conflict = instance_test.name
-							break varconflict
-
-						for(var/V in instance.var_changes)
-							if(V == "flags")
-								continue
-							if(V in instance_test.var_changes)
-								conflict = instance_test.name
-								break varconflict
-
-						for(var/V in instance.var_changes_pref)
-							if(V in instance_test.var_changes_pref)
-								conflict = instance_test.name
-								break varconflict
+				for(var/P in (pref.pos_traits + pref.neu_traits + pref.neg_traits))
+					var/datum/trait/other_trait = GLOB.all_traits[P]
+					if(check_trait_conflict(instance, other_trait))
+						conflict = other_trait.name
+						break
 
 				if(conflict)
 					tgui_alert_async(user, "You cannot take this trait and [conflict] at the same time. Please remove that trait, or pick another trait to add.", "Error")
@@ -407,6 +399,23 @@
 				instance.apply_pref(pref)
 				mylist[path] = instance.get_default_prefs()
 				return TOPIC_REFRESH
+
+/// Compare traits and return TRUE if the traits alter the same vars or would conflict through some other method, such as their exclusion list.
+/proc/check_trait_conflict(datum/trait/our_trait, datum/trait/other_trait)
+	if(our_trait.type in other_trait.excludes)
+		return TRUE
+
+	for(var/V in our_trait.var_changes)
+		if(V == "flags") // Flags can stack
+			continue
+		if(V in other_trait.var_changes)
+			return TRUE
+
+	for(var/V in our_trait.var_changes_pref)
+		if(V in other_trait.var_changes_pref)
+			return TRUE
+
+	return FALSE
 
 #undef POSITIVE_MODE
 #undef NEUTRAL_MODE

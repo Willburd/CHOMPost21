@@ -84,7 +84,9 @@
 			grid[x][y] = canvas_color
 
 /obj/item/canvas/attack_self(mob/user)
-	. = ..()
+	. = ..(user)
+	if(.)
+		return TRUE
 	tgui_interact(user)
 
 /obj/item/canvas/dropped(mob/user)
@@ -349,6 +351,18 @@
 	desc = "For art pieces hung by the public."
 	desc_with_canvas = "A piece of art (or \"art\"). Anyone could've hung it."
 	persistence_id = "public"
+
+/obj/structure/sign/painting/public/north
+	pixel_y = 30
+
+/obj/structure/sign/painting/public/south
+	pixel_y = -30
+
+/obj/structure/sign/painting/public/east
+	pixel_x = 30
+
+/obj/structure/sign/painting/public/west
+	pixel_x = -30
 
 /obj/structure/sign/painting/library_secure
 	name = "\improper Curated Painting Exhibit mounting"

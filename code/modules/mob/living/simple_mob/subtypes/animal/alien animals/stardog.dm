@@ -34,7 +34,7 @@
 	ai_holder_type = /datum/ai_holder/simple_mob/woof/stardog
 
 	has_langs = list(LANGUAGE_ANIMAL, LANGUAGE_CANILUNZT, LANGUAGE_GALCOM)
-	say_list_type = /datum/say_list/softdog
+	// say_list_type = /datum/say_list/softdog // Outpost 21 edit - Softdog removal
 	swallowTime = 0.1 SECONDS
 
 	loot_list = list(/obj/random/underdark/uncertain)
@@ -47,16 +47,6 @@
 		"bomb" = 1000,
 		"bio" = 1000,
 		"rad" = 1000)
-
-	armor_soak = list(
-		"melee" = 1000,
-		"bullet" = 1000,
-		"laser" = 1000,
-		"energy" = 1000,
-		"bomb" = 1000,
-		"bio" = 1000,
-		"rad" = 1000
-		)
 
 	movement_cooldown = 5
 	copy_prefs_to_mob = FALSE
@@ -379,7 +369,7 @@
 	icon = 'icons/turf/fur.dmi'
 	icon_state = "fur0"
 	edge_blending_priority = 4
-	initial_flooring = /decl/flooring/fur
+	initial_flooring = /datum/decl/flooring/fur
 	can_dig = FALSE
 	var/tree_chance = 25
 	var/tree_color = null
@@ -513,7 +503,7 @@
 				if(M.read_preference(/datum/preference/toggle/subtle_sounds))
 					M << sound('sound/talksounds/subtle_sound.ogg', volume = 50)
 
-/decl/flooring/fur
+/datum/decl/flooring/fur
 	name = "fur"
 	desc = "Thick, silky fur!"
 	icon = 'icons/turf/fur.dmi'
@@ -586,8 +576,8 @@
 		/mob/living/simple_mob/vore/weretiger,
 		/mob/living/simple_mob/vore/wolf,
 		/mob/living/simple_mob/vore/wolf/direwolf,
-		/mob/living/simple_mob/vore/wolfgirl,
-		/mob/living/simple_mob/vore/woof
+		/mob/living/simple_mob/vore/wolfgirl
+		// /mob/living/simple_mob/vore/woof // Outpost 21 edit - Softdog removal
 	)
 
 /obj/structure/flora/tree/fur/choose_icon_state()
@@ -965,9 +955,11 @@
 	sound_env = SOUND_ENVIRONMENT_DIZZY
 
 	valid_mobs = list(	//Dog map spawns the dogs. It's not hard to understand!
+		/* // Outpost 21 edit - Softdog removal
 		list(
 			/mob/living/simple_mob/vore/woof
 			) = 100,
+		*/
 		list(
 			/mob/living/simple_mob/vore/wolf,
 			/mob/living/simple_mob/vore/wolf/direwolf,
@@ -1315,6 +1307,7 @@
 			return
 		L.stop_pulling()
 		L.Weaken(3)
+		L.reset_perspective() // Needed for food items that get gobbled with micros in them
 		GLOB.prey_eaten_roundstat++
 	if(target.reciever)		//We don't have to worry
 		AM.unbuckle_all_mobs(TRUE)
@@ -1373,7 +1366,8 @@
 		playsound(src, teleport_sound, vol = 100, vary = 1, preference = /datum/preference/toggle/eating_noises, volume_channel = VOLUME_CHANNEL_VORE)
 		visible_message(span_warning("The dog gobbles up \the [I]!"))
 		if(dog.client)
-			to_chat(dog, span_notice("[I.thrower ? "\The [I.thrower]" : "Someone"] feeds \the [I] to you!"))
+			var/mob/thrower = I.throwing?.get_thrower()
+			to_chat(dog, span_notice("[thrower ? "\The [thrower]" : "Someone"] feeds \the [I] to you!"))
 		qdel(I)
 		GLOB.items_digested_roundstat++
 
@@ -1445,7 +1439,7 @@
 		START_PROCESSING(SSturfs, src)
 		we_process = TRUE
 
-/turf/simulated/floor/water/digestive_enzymes/hitby(atom/movable/source)
+/turf/simulated/floor/water/digestive_enzymes/hitby(atom/movable/source, datum/thrownthing/throwingdatum)
 	if(digest_stuff(source) && !we_process)
 		START_PROCESSING(SSturfs, src)
 		we_process = TRUE
@@ -1454,6 +1448,11 @@
 	if(!digest_stuff())
 		we_process = FALSE
 		return PROCESS_KILL
+
+/turf/simulated/floor/water/digestive_enzymes/Destroy()
+	if(we_process)
+		STOP_PROCESSING(SSturfs, src)
+	. = ..()
 
 /turf/simulated/floor/water/digestive_enzymes/proc/can_digest(atom/movable/digest_target)
 	. = FALSE
@@ -1512,7 +1511,7 @@
 		var/mob/living/carbon/human/H = thing
 		if(!H)
 			return
-		visible_message(runemessage = "blub...")
+		balloon_alert_visible("*blub...*")
 		if(H.stat == DEAD)
 			H.unacidable = TRUE	//Don't touch this one again, we're gonna delete it in a second
 			H.release_vore_contents()
@@ -1543,7 +1542,7 @@
 		var/mob/living/L = thing
 		if(!L)
 			return
-		visible_message(runemessage = "blub...")
+		balloon_alert_visible("*blub...*")
 		if(L.stat == DEAD)
 			L.unacidable = TRUE	//Don't touch this one again, we're gonna delete it in a second
 			L.release_vore_contents()
@@ -1577,7 +1576,7 @@
 	if(!we_process)
 		START_PROCESSING(SSturfs, src)
 
-/turf/simulated/floor/flesh/mover/hitby(atom/movable/source)
+/turf/simulated/floor/flesh/mover/hitby(atom/movable/source, datum/thrownthing/throwingdatum)
 	if(!we_process)
 		START_PROCESSING(SSturfs, src)
 

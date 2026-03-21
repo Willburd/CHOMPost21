@@ -323,7 +323,7 @@ SUBSYSTEM_DEF(garbage)
 /datum/controller/subsystem/garbage/Recover()
 	InitQueues() //We first need to create the queues before recovering data
 	if (istype(SSgarbage.queues))
-		for (var/i in 1 to SSgarbage.queues.len)
+		for (var/i in 1 to length(SSgarbage.queues))
 			queues[i] |= SSgarbage.queues[i]
 
 /// Qdel Item: Holds statistics on each type that passes thru qdel
@@ -369,7 +369,7 @@ SUBSYSTEM_DEF(garbage)
 			CRASH("[to_delete.type] destroy proc was called multiple times, likely due to a qdel loop in the Destroy logic")
 		return
 
-	if (SEND_SIGNAL(to_delete, COMSIG_PARENT_PREQDELETED, force)) // Give the components a chance to prevent their parent from being deleted
+	if (SEND_SIGNAL(to_delete, COMSIG_PREQDELETED, force)) // Give the components a chance to prevent their parent from being deleted
 		return
 
 	to_delete.gc_destroyed = GC_CURRENTLY_BEING_QDELETED

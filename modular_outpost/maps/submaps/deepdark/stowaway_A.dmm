@@ -1,0 +1,336 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"b" = (
+/obj/random/junk,
+/obj/effect/auto_crayon{
+	icon_state = "air"
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"d" = (
+/obj/random/junk,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"e" = (
+/turf/template_noop,
+/area/mine/explored/muriki/cave/deepdark)
+"k" = (
+/obj/structure/bed,
+/obj/item/bedsheet/hop,
+/obj/effect/landmark/redspaceexit,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"m" = (
+/turf/template_noop,
+/area/template_noop)
+"q" = (
+/obj/structure/bed,
+/obj/item/bedsheet/craftable,
+/obj/effect/landmark/redspaceexit,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"s" = (
+/obj/structure/table/woodentable,
+/obj/random/maintenance/misc,
+/obj/random/maintenance/misc,
+/obj/random/maintenance/medical,
+/obj/random/maintenance/medical,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"A" = (
+/turf/simulated/mineral/alt/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"H" = (
+/turf/simulated/wall/stonelogs/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"J" = (
+/obj/structure/table/woodentable,
+/obj/random/maintenance/morestuff,
+/obj/random/maintenance/morestuff,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"L" = (
+/turf/template_noop,
+/area/mine/unexplored/muriki/cave/deepdark)
+"M" = (
+/obj/structure/simple_door/wood,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Q" = (
+/obj/random/junk,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"T" = (
+/obj/effect/landmark/bslocker,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"U" = (
+/obj/structure/table/woodentable,
+/obj/random/maintenance/foodstuff,
+/obj/random/maintenance/foodstuff,
+/obj/random/maintenance/foodstuff,
+/obj/random/maintenance/foodstuff,
+/obj/item/flamethrower/full,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Y" = (
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+
+(1,1,1) = {"
+m
+m
+m
+m
+m
+m
+m
+m
+m
+m
+m
+m
+m
+m
+m
+"}
+(2,1,1) = {"
+m
+L
+L
+L
+L
+L
+L
+L
+e
+e
+L
+L
+L
+L
+m
+"}
+(3,1,1) = {"
+m
+L
+L
+L
+L
+e
+e
+e
+e
+e
+e
+e
+e
+L
+m
+"}
+(4,1,1) = {"
+m
+L
+L
+e
+e
+a
+a
+a
+a
+a
+a
+a
+e
+e
+m
+"}
+(5,1,1) = {"
+m
+a
+a
+a
+a
+a
+a
+a
+a
+Q
+a
+a
+a
+a
+m
+"}
+(6,1,1) = {"
+m
+a
+A
+A
+a
+a
+a
+a
+a
+a
+A
+A
+A
+e
+m
+"}
+(7,1,1) = {"
+m
+A
+A
+A
+A
+H
+H
+H
+M
+H
+H
+A
+A
+e
+m
+"}
+(8,1,1) = {"
+m
+A
+A
+A
+A
+H
+k
+Y
+d
+U
+H
+A
+A
+e
+m
+"}
+(9,1,1) = {"
+m
+A
+A
+A
+A
+H
+T
+b
+Y
+J
+H
+A
+A
+e
+m
+"}
+(10,1,1) = {"
+m
+e
+A
+A
+A
+H
+q
+Y
+Y
+s
+H
+A
+A
+e
+m
+"}
+(11,1,1) = {"
+m
+e
+A
+A
+A
+H
+H
+H
+H
+H
+H
+A
+A
+e
+m
+"}
+(12,1,1) = {"
+m
+L
+e
+A
+A
+A
+A
+A
+A
+A
+A
+A
+A
+e
+m
+"}
+(13,1,1) = {"
+m
+L
+L
+e
+e
+A
+A
+A
+A
+A
+A
+A
+e
+L
+m
+"}
+(14,1,1) = {"
+m
+L
+L
+L
+e
+e
+e
+e
+e
+e
+e
+L
+L
+L
+m
+"}
+(15,1,1) = {"
+m
+m
+m
+m
+m
+m
+m
+m
+m
+m
+m
+m
+m
+m
+m
+"}

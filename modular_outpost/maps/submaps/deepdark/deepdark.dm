@@ -28,6 +28,7 @@
 #include "liminal_A.dmm"
 #include "liminal_B.dmm"
 #include "liminal_C.dmm"
+#include "liminal_D.dmm"
 #include "redspace_A.dmm"
 #include "redspace_B.dmm"
 #include "redspace_C.dmm"
@@ -87,6 +88,16 @@
 #include "ghost_caveG.dmm"
 #include "ghost_caveH.dmm"
 #include "submarine_A.dmm"
+#include "portal_A.dmm"
+#include "portal_B.dmm"
+#include "portal_C.dmm"
+#include "portal_D.dmm"
+#include "stowaway_A.dmm"
+#include "stowaway_B.dmm"
+#include "stowaway_C.dmm"
+#include "stowaway_D.dmm"
+#include "stowaway_E.dmm"
+#include "sinkhole_A.dmm"
 #endif
 
 /datum/map_template/outpost21/muriki/caves_deepdark
@@ -618,6 +629,13 @@
 	discard_prob = 40
 	cost = 10
 
+/datum/map_template/outpost21/muriki/caves_deepdark_huge/liminal_D
+	name = "Liminal D"
+	desc = "Random liminal space."
+	mappath = "modular_outpost/maps/submaps/deepdark/liminal_D.dmm"
+	discard_prob = 10
+	cost = 30
+
 /datum/map_template/outpost21/muriki/caves_deepdark_huge/redspace_A
 	name = "Red A"
 	desc = "Random redspace leak."
@@ -802,6 +820,85 @@
 	discard_prob = 50
 	cost = 25
 
+/datum/map_template/outpost21/muriki/caves_deepdark_huge/portal_A
+	name = "Portal A"
+	desc = "Two linked cavern portals."
+	mappath = "modular_outpost/maps/submaps/deepdark/portal_A.dmm"
+	allow_duplicates = FALSE
+	discard_prob = 20
+	cost = 25
+
+/datum/map_template/outpost21/muriki/caves_deepdark_huge/portal_B
+	name = "Portal B"
+	desc = "Two linked cavern portals."
+	mappath = "modular_outpost/maps/submaps/deepdark/portal_B.dmm"
+	allow_duplicates = FALSE
+	discard_prob = 20
+	cost = 25
+
+/datum/map_template/outpost21/muriki/caves_deepdark_huge/portal_C
+	name = "Portal C"
+	desc = "Two linked cavern portals."
+	mappath = "modular_outpost/maps/submaps/deepdark/portal_C.dmm"
+	allow_duplicates = FALSE
+	discard_prob = 20
+	cost = 25
+
+/datum/map_template/outpost21/muriki/caves_deepdark_huge/portal_D
+	name = "Portal D"
+	desc = "Two linked cavern portals."
+	mappath = "modular_outpost/maps/submaps/deepdark/portal_D.dmm"
+	allow_duplicates = FALSE
+	discard_prob = 20
+	cost = 25
+
+/datum/map_template/outpost21/muriki/caves_deepdark_huge/stowaway_A
+	name = "Stowaway A"
+	desc = "An old stowaway structure."
+	mappath = "modular_outpost/maps/submaps/deepdark/stowaway_A.dmm"
+	allow_duplicates = FALSE
+	discard_prob = 10
+	cost = 15
+
+/datum/map_template/outpost21/muriki/caves_deepdark_huge/stowaway_B
+	name = "Stowaway B"
+	desc = "An old stowaway structure."
+	mappath = "modular_outpost/maps/submaps/deepdark/stowaway_B.dmm"
+	allow_duplicates = FALSE
+	discard_prob = 10
+	cost = 15
+
+/datum/map_template/outpost21/muriki/caves_deepdark_huge/stowaway_C
+	name = "Stowaway C"
+	desc = "An old stowaway structure."
+	mappath = "modular_outpost/maps/submaps/deepdark/stowaway_C.dmm"
+	allow_duplicates = FALSE
+	discard_prob = 10
+	cost = 15
+
+/datum/map_template/outpost21/muriki/caves_deepdark_huge/stowaway_D
+	name = "Stowaway D"
+	desc = "An old stowaway structure."
+	mappath = "modular_outpost/maps/submaps/deepdark/stowaway_D.dmm"
+	allow_duplicates = FALSE
+	discard_prob = 20
+	cost = 35
+
+/datum/map_template/outpost21/muriki/caves_deepdark_huge/stowaway_E
+	name = "Stowaway E"
+	desc = "An old stowaway structure."
+	mappath = "modular_outpost/maps/submaps/deepdark/stowaway_E.dmm"
+	allow_duplicates = FALSE
+	discard_prob = 20
+	cost = 40
+
+/datum/map_template/outpost21/muriki/caves_deepdark_huge/sinkhole_A
+	name = "Sinkhole A"
+	desc = "An unstable section of cavern waiting to collapse."
+	mappath = "modular_outpost/maps/submaps/deepdark/sinkhole_A.dmm"
+	discard_prob = 40
+	cost = 30
+
 //////////////////////////////////////////////////////////////
 // Area definitions
 /area/mine/explored/muriki/cave/deepdark
@@ -809,24 +906,26 @@
 	sound_env = TUNNEL_ENCLOSED
 	icon_state = "orange"
 	always_unpowered = TRUE
-	flags = AREA_BLOCK_GHOST_SIGHT | AREA_FORBID_EVENTS
+	flags = AREA_BLOCK_GHOST_SIGHT | AREA_FORBID_EVENTS | AREA_FLAG_IS_NOT_PERSISTENT
 	haunted = TRUE
 	color_grading = COLORTINT_UNDERDARK
+	ambience = AMBIENCE_UNDERDARK
 /area/mine/unexplored/muriki/cave/deepdark
 	name = "\improper Muriki Underground"
 	sound_env = TUNNEL_ENCLOSED
 	icon_state = "yellow"
 	always_unpowered = TRUE
-	flags = AREA_BLOCK_GHOST_SIGHT | AREA_FORBID_EVENTS
+	flags = AREA_BLOCK_GHOST_SIGHT | AREA_FORBID_EVENTS | AREA_FLAG_IS_NOT_PERSISTENT
 	haunted = TRUE
 	color_grading = COLORTINT_UNDERDARK
+	ambience = AMBIENCE_UNDERDARK
 
 /area/submap/outpost21/cave_liminal_A
 	name = "\improper Come Closer"
 	icon_state = "red2"
 	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS | AREA_SECRET_NAME | AREA_BLOCK_GHOST_SIGHT
 	sound_env = SOUND_ENVIRONMENT_PSYCHOTIC
-	ambience = AMBIENCE_OTHERWORLDLY
+	ambience = AMBIENCE_UNDERDARK
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	haunted = TRUE
 	color_grading = COLORTINT_OMEN
@@ -847,12 +946,22 @@
 /area/submap/outpost21/cave_liminal_B/get_name()
 	return show_name
 
+/area/submap/outpost21/cave_liminal_D
+	name = "\improper It Hurts"
+	icon_state = "red2"
+	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS | AREA_SECRET_NAME | AREA_BLOCK_GHOST_SIGHT
+	sound_env = SOUND_ENVIRONMENT_PSYCHOTIC
+	ambience = AMBIENCE_UNDERDARK
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
+	haunted = TRUE
+	color_grading = COLORTINT_OMEN
+
 /area/submap/outpost21/cave_red_A
 	name = "\improper Our Pulsing Mass"
 	icon_state = "red2"
 	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS | AREA_SECRET_NAME | AREA_BLOCK_GHOST_SIGHT
 	sound_env = SOUND_ENVIRONMENT_CAVE
-	ambience = AMBIENCE_OTHERWORLDLY
+	ambience = AMBIENCE_UNDERDARK
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	haunted = TRUE
 	color_grading = COLORTINT_MEAT
@@ -934,7 +1043,7 @@
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	icon_state = "blue"
 	sound_env = SOUND_ENVIRONMENT_ARENA
-	ambience = AMBIENCE_GENERIC
+	ambience = AMBIENCE_UNDERDARK
 	use_emergency_overlay = FALSE
 	flags = AREA_BLOCK_GHOST_SIGHT
 	haunted = TRUE
@@ -987,22 +1096,7 @@
 			if(!AM.can_fall()) // flying checks
 				return
 		if(ismob( A))
-			var/mob/M = A
-			var/list/redexitlist = list()
-			for(var/obj/effect/landmark/R in GLOB.landmarks_list)
-				if(R.name == "redexit")
-					redexitlist += R
-
-			if(redexitlist.len > 0)
-				var/obj/effect/landmark/L = pick( redexitlist)
-				do_teleport(M, L.loc, 0,local = FALSE)
-				to_chat( A, span_danger(death_message))
-				// passout on return to reality
-				if(ishuman(M))
-					var/mob/living/carbon/human/H = M
-					H.AdjustSleeping(15)
-					H.AdjustWeakened(3)
-					H.adjustHalLoss(-9)
+			send_to_realspace(A, FALSE)
 
 /turf/simulated/deathdrop/foundation
 	death_message = "You fall into the darkness, the huge tension cables that secure the foundations of the outpost to the rock beneath it battering your body before you slam into the machinery beneath. There is nothing left of you except the bloody dent in the tensioning equipment."

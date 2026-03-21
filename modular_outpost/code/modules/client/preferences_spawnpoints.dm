@@ -8,8 +8,8 @@
 
 /datum/spawnpoint/cyborg
 	display_name = "Cyborg Storage"
-	msg = "has been activated from storage" // Outpost 21 edit - wording
-	allowed_mob_types = JOB_SILICON // Outpost 21 edit - restrictions fixed
+	msg = "has been activated from storage"
+	allowed_mob_types = JOB_SILICON
 
 /datum/spawnpoint/cyborg/New()
 	..()
@@ -19,7 +19,6 @@
 	display_name = "Cryogenic Storage"
 	msg = "has completed cryogenic revival"
 	allowed_mob_types = JOB_CARBON
-	// disallow_job = list(JOB_OUTSIDER) // Outpost 21 edit - Job removal
 
 /datum/spawnpoint/cryo/New()
 	..()

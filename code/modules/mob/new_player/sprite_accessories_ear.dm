@@ -1175,11 +1175,70 @@
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 
+/datum/sprite_accessory/ears/swepthorns
+	name = "Horns, swept back"
+	desc = ""
+	icon_state = "swept_horns"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+
+/datum/sprite_accessory/ears/swepthornsbroken
+	name = "Horns, stumps"
+	desc = ""
+	icon_state = "swept_horns_broken"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/ears/swepthornsbrokenr
+	name = "Horns, swept, right broken"
+	desc = ""
+	icon_state = "swept_horns_broken_r"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/ears/swepthornsbrokenl
+	name = "Horns, swept, left broken"
+	desc = ""
+	icon_state = "swept_horns_broken_l"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/ears/swepthornstricorn
+	name = "Horns, swept back, Tricorn"
+	desc = ""
+	icon_state = "swept_horns_tricorn"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/ears/unicorn
+	name = "Horn, unicorn"
+	desc = ""
+	icon_state = "unihorn"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+/datum/sprite_accessory/ears/fourlowears
+	name = "Four Horizontal Ears with Frills"
+	desc = ""
+	icon_state = "fourlowears"
+	extra_overlay = "fourlowears_inner"
+	extra_overlay2 = "fourlowears_frills"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
 //Dino frills
 /datum/sprite_accessory/ears/dino_frills
 	name = "triceratops frills"
 	icon_state = "triceratops_frill"
 	extra_overlay = "triceratops_frill_spikes"
+	do_colouration = 1
+	color_blend_mode = ICON_MULTIPLY
+
+//'Experimental' headspikes...
+/datum/sprite_accessory/ears/backwards_headspikes
+	name = "backwards headspikes"
+	icon_state = "backwards_headspikes"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
 

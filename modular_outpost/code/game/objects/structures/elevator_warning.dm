@@ -24,7 +24,7 @@
 /obj/machinery/elevator_warning/process()
 	if(use_power == USE_POWER_ACTIVE) // power on?
 		// check if shuttle is called, or if emagged
-		if(emagged || emergency_shuttle.online())
+		if(emagged || GLOB.emergency_shuttle.online())
 			// only trigger light updates on an actual change!
 			if(world.time > nexttrigger)
 				nexttrigger = round((world.time / lightphaselength) - 0.4) * lightphaselength

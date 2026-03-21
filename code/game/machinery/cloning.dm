@@ -30,6 +30,7 @@
 	desc = "An electronically-lockable pod for growing organic tissue."
 	density = TRUE
 	anchored = TRUE
+	flags = REMOTEVIEW_ON_ENTER
 	circuit = /obj/item/circuitboard/clonepod
 	icon = 'icons/obj/cloning.dmi'
 	icon_state = "pod_0"
@@ -123,6 +124,7 @@
 	var/damage_to_deal = H.getMaxHealth() * 1.5 //If you have 100, you get 150. Have 200? Get 300. 25hp? get 37.5
 	H.adjustCloneLoss(damage_to_deal) // New damage var so you can't eject a clone early then stab them to abuse the current damage system --NeoFite
 	H.Paralyse(4)
+	H.Sleeping(4)
 	H.updatehealth()
 	H.set_cloned_appearance()
 
@@ -131,11 +133,7 @@
 	H.ckey = BR.ckey
 	to_chat(H, span_warning(span_bold("Consciousness slowly creeps over you as your body regenerates.") + "<br>" + span_bold(span_large("Your recent memories are fuzzy, and it's hard to remember anything from today...")) + \
 		"<br>" + span_notice(span_italics("So this is what cloning feels like?"))))
-
-	// -- Mode/mind specific stuff goes here
-	callHook("clone", list(H))
-	update_antag_icons(H.mind)
-	// -- End mode specific stuff
+	SEND_GLOBAL_SIGNAL(COMSIG_GLOB_RESLEEVED_MIND, H, clonemind)
 
 	// A modifier is added which makes the new clone be unrobust.
 	// Upgraded cloners can reduce the time of the modifier, up to 80%
@@ -175,6 +173,7 @@
 
 		else if(occupant.health < heal_level && occupant.getCloneLoss() > 0)
 			occupant.Paralyse(4)
+			occupant.Sleeping(4)
 
 			//Slowly get that clone healed and finished.
 			occupant.adjustCloneLoss(-2 * heal_rate)
@@ -319,9 +318,6 @@
 	if(!(occupant))
 		return
 
-	if(occupant.client)
-		occupant.client.eye = occupant.client.mob
-		occupant.client.perspective = MOB_PERSPECTIVE
 	occupant.forceMove(get_turf(src))
 	eject_wait = 0 //If it's still set somehow.
 	if(ishuman(occupant)) //Need to be safe.
@@ -405,7 +401,7 @@
 		return
 	go_out()
 
-/obj/machinery/clonepod/emp_act(severity)
+/obj/machinery/clonepod/emp_act(severity, recursive)
 	if(prob(100/severity))
 		malfunction()
 	..()

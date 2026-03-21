@@ -44,6 +44,7 @@
 #define NETWORK_CRESCENT "Spaceport"
 // #define NETWORK_CAFE_DOCK "Cafe Dock"
 #define NETWORK_CARGO "Cargo"
+#define NETWORK_SUPPLY "Supply"
 #define NETWORK_CIRCUITS "Circuits"
 #define NETWORK_CIVILIAN "Civilian"
 // #define NETWORK_CIVILIAN_EAST "Civilian East"
@@ -83,23 +84,13 @@
 #define NETWORK_OUTSIDE "Outside"
 #define NETWORK_HALLS "Halls"
 
-// CHOMPAdd Start
-#define NETWORK_THIRD_DECK "Third Deck"
+// SC Networks
+#define NETWORK_FIRST_DECK  "First Deck"
 #define NETWORK_SECOND_DECK "Second Deck"
-#define NETWORK_FIRST_DECK "First Deck"
-#define NETWORK_SUPPLY "Supply"
+#define NETWORK_THIRD_DECK  "Third Deck"
 #define NETWORK_MAIN_OUTPOST "Main Outpost"
 #define NETWORK_CARRIER "Exploration Carrier"
 #define NETWORK_MAINT_DECK "Maintenance Deck"
-// CHHOMPAdd End
-
-// Outpost 21 edit begin
-#define NETWORK_BUNKER "Bunker"
-#define NETWORK_FOUNDATIONS "Foundations"
-// Outpost 21 edit end
-
-// Those networks can only be accessed by pre-existing terminals. AIs and new terminals can't use them.
-var/list/restricted_camera_networks = list(NETWORK_ERT,NETWORK_MERCENARY,"Secret", NETWORK_COMMUNICATORS, NETWORK_EXPLORATION)
 
 #define TRANSMISSION_WIRE		0 //Is this ever used? I don't think it is.
 #define TRANSMISSION_RADIO		1 //Radio transmissions (like airlock controller to pump)

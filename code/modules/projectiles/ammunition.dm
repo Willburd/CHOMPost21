@@ -134,7 +134,7 @@
 	if(isnull(initial_ammo))
 		initial_ammo = max_ammo
 
-	if(initial_ammo)
+	if(initial_ammo && ammo_type) // Outpost 21 edit - null ammo boxes
 		for(var/i in 1 to initial_ammo)
 			stored_ammo += new ammo_type(src)
 	update_icon()
@@ -173,6 +173,9 @@
 
 // This dumps all the bullets right on the floor
 /obj/item/ammo_magazine/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	if(can_remove_ammo)
 		if(!stored_ammo.len)
 			to_chat(user, span_notice("[src] is already empty!"))
@@ -235,7 +238,7 @@ GLOBAL_LIST_EMPTY(magazine_icondata_states)
 /proc/magazine_icondata_cache_add(var/obj/item/ammo_magazine/M)
 	var/list/icon_keys = list()
 	var/list/ammo_states = list()
-	var/list/states = cached_icon_states(M.icon)
+	var/list/states = icon_states_fast(M.icon)
 	for(var/i = 0, i <= M.max_ammo, i++)
 		var/ammo_state = "[M.icon_state]-[i]"
 		if(ammo_state in states)
@@ -265,7 +268,7 @@ GLOBAL_LIST_EMPTY(magazine_icondata_states)
 	drop_sound = 'sound/items/drop/matchbox.ogg'
 	pickup_sound = 'sound/items/pickup/matchbox.ogg'
 
-/obj/item/ammo_magazine/ammo_box/AltClick(mob/user)
+/obj/item/ammo_magazine/ammo_box/click_alt(mob/user)
 	if(can_remove_ammo)
 		if(isliving(user) && Adjacent(user))
 			if(stored_ammo.len)

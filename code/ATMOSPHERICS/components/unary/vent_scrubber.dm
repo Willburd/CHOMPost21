@@ -57,9 +57,6 @@
 	return ..()
 
 /obj/machinery/atmospherics/unary/vent_scrubber/update_icon(var/safety = 0)
-	if(!check_icon_cache())
-		return
-
 	cut_overlays()
 
 	var/scrubber_icon = "scrubber"
@@ -75,21 +72,21 @@
 	else
 		scrubber_icon += "[use_power ? "[scrubbing ? "on" : "in"]" : "off"]"
 
-	add_overlay(icon_manager.get_atmos_icon("device", , , scrubber_icon))
+	add_overlay(GLOB.icon_manager.get_atmos_icon("device", , , scrubber_icon))
 
 /obj/machinery/atmospherics/unary/vent_scrubber/update_underlays()
-	if(..())
-		underlays.Cut()
-		var/turf/T = get_turf(src)
-		if(!istype(T))
-			return
-		if(!T.is_plating() && node && node.level == 1 && istype(node, /obj/machinery/atmospherics/pipe))
-			return
+	..()
+	underlays.Cut()
+	var/turf/T = get_turf(src)
+	if(!istype(T))
+		return
+	if(!T.is_plating() && node && node.level == 1 && istype(node, /obj/machinery/atmospherics/pipe))
+		return
+	else
+		if(node)
+			add_underlay(T, node, dir, node.icon_connect_type)
 		else
-			if(node)
-				add_underlay(T, node, dir, node.icon_connect_type)
-			else
-				add_underlay(T,, dir)
+			add_underlay(T,, dir)
 
 /obj/machinery/atmospherics/unary/vent_scrubber/proc/set_frequency(new_frequency)
 	SSradio.remove_object(src, frequency)
@@ -145,12 +142,9 @@
 	//broadcast_status()
 	if(!use_power || (stat & (NOPOWER|BROKEN)))
 		return 0
-
-	// Outpost 21 edit begin - Don't do anything if welded
-	if(welded)
+	if(welded) // Don't do anything if welded
 		SSmachines.hibernate_vent(src)
 		return 0
-	// Outpost 21 edit end
 
 	var/datum/gas_mixture/environment = loc.return_air()
 
@@ -277,29 +271,27 @@
 		update_icon()
 
 /obj/machinery/atmospherics/unary/vent_scrubber/attackby(var/obj/item/W as obj, var/mob/user as mob)
-	// Outpost 21 edit(port) begin - Allow welding these shut
-	if(istype(W, /obj/item/weldingtool))
+	if(W.has_tool_quality(TOOL_WELDER))
 		var/obj/item/weldingtool/WT = W
 		if (WT.remove_fuel(0,user))
 			to_chat(user, span_notice("Now welding the vent."))
 
-			if(do_after(user, 20 * WT.toolspeed))
+			if(do_after(user, 20 * WT.toolspeed, src))
 				if(!src || !WT.isOn()) return
 				playsound(src, WT.usesound, 50, 1)
 				if(!welded)
 					user.visible_message(span_notice("<b>\The [user]</b> welds the vent shut."), span_notice("You weld the vent shut."), "You hear welding.")
-					welded = 1
+					welded = TRUE
 					update_icon()
 				else
 					user.visible_message(span_notice("[user] unwelds the vent."), span_notice("You unweld the vent."), "You hear welding.")
-					welded = 0
+					welded = FALSE
 					update_icon()
 			else
 				to_chat(user, span_notice("The welding tool needs to be on to start this task."))
 		else
 			to_chat(user, span_warning("You need more welding fuel to complete this task."))
 			return 1
-	// Outpost 21 edit end
 	if (!W.has_tool_quality(TOOL_WRENCH))
 		return ..()
 	if (!(stat & NOPOWER) && use_power)
@@ -309,11 +301,9 @@
 	if (node && node.level==1 && isturf(T) && !T.is_plating())
 		to_chat(user, span_warning("You must remove the plating first."))
 		return 1
-	// Outpost 21 edit(port) begin - Allow welding these shut
-	if (welded)
+	if(welded)
 		to_chat(user, span_warning("You cannot unwrench \the [src], it is welded down firmly."))
 		return 1
-	// Outpost 21 edit end
 	if(!can_unwrench())
 		to_chat(user, span_warning("You cannot unwrench \the [src], it is too exerted due to internal pressure."))
 		add_fingerprint(user)
@@ -333,7 +323,5 @@
 		. += "A small gauge in the corner reads [round(last_flow_rate, 0.1)] L/s; [round(last_power_draw)] W"
 	else
 		. += "You are too far away to read the gauge."
-	// Outpost 21 edit(port) begin - Allow welding these shut
 	if(welded)
-		. += "It seems welded shut."
-	// Outpost 21 edit end
+		. += "It is welded shut."

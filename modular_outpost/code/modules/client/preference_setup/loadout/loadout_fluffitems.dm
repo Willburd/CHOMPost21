@@ -21,13 +21,6 @@
 	character_name = list("shitfacemcgee")  //Character name. this variable is required, or the item doesn't show in loadout. Change to "character_name = null" if not character restricted.
 */
 
-/datum/gear/fluff/collar //Use this as a base path for collars if you'd like to set tags in loadout. Make sure you don't use apostrophes in the display name or this breaks!
-	slot = slot_tie
-
-/datum/gear/fluff/collar/New()
-	..()
-	gear_tweaks += gear_tweak_collar_tag
-
 // global fluff medals
 /datum/gear/fluff/ESHUI_surveypatch
 	display_name = "ESHUI Survey Corps Patch"
@@ -35,17 +28,23 @@
 	ckeywhitelist = list("buckwildwolf","darklord92","drakefrostpaw","jademanique","nadyr","remthebold","seagha","wdf71","synxplushy")
 	character_name = null
 
+/datum/gear/fluff/ESHUI_bronzeheart
+	display_name = "ESHUI Bronze Heart Medal"
+	path = /obj/item/clothing/accessory/medal/solgov/bronze/heart/eshui
+	ckeywhitelist = list("atcman","remthebold")
+	character_name = list("Flit","Ruben Softclaw")
+
 /datum/gear/fluff/ESHUI_bronzemedal
 	display_name = "ESHUI Meritorious Defense Medal"
 	path = /obj/item/clothing/accessory/medal/solgov/bronze/sol/eshui
-	ckeywhitelist = list("drakefrostpaw","nadyr","ozydev","remthebold","synxplushy","wdf71","cadeTiger","niilomarvy","lowpowermia","ikidarsha")
-	character_name = list("Drake Frostpaw","Taaa","Ecise Nei","Papin Vandalia","Me Eep","Mitz","Feldam","Svatti","Nikita","Stridefast","Raine Rattlewag","Sitka Niteshade")
+	ckeywhitelist = list("drakefrostpaw","nadyr","ozydev","remthebold","synxplushy","wdf71","cadeTiger","niilomarvy","lowpowermia","ikidarsha","rainy12","bigbade")
+	character_name = list("Drake Frostpaw","Taaa","Ecise Nei","Papin Vandalia","Me Eep","Mitz","Feldam","Svatti","Nikita","Stridefast","Raine Rattlewag","Sitka Niteshade","Anna Neso","Kalun")
 
 /datum/gear/fluff/ESHUI_medalval
 	display_name = "ESHUI Medal of Valor"
 	path = /obj/item/clothing/accessory/medal/solgov/silver/sol/eshui
-	ckeywhitelist = list("darklord92","remthebold","ozydev","astraether")
-	character_name = list("Tesum Shari","Trashfire","Cracker","Astra Ether")
+	ckeywhitelist = list("darklord92","remthebold","ozydev","astraether","atcman","synxplushy","natesaruli","valinari")
+	character_name = list("Tesum Shari","Trashfire","Cracker","Astra Ether","Flit","Ruben Softclaw","Sitka Niteshade","Cecil Colfax","Valinari Sandivi Gloria")
 
 /datum/gear/fluff/ESHUI_medaldefop
 	display_name = "ESHUI Defensive Operations Medal"
@@ -56,14 +55,14 @@
 /datum/gear/fluff/ESHUI_medalcomb
 	display_name = "ESHUI Combat Action Medal"
 	path = /obj/item/clothing/accessory/medal/solgov/silver/sword/eshui
-	ckeywhitelist = list("ozydev","synxplushy","remthebold","cameron653")
-	character_name = list("Raine Rattlewag","Cracker","Zeeshi","Trashfire","Diana Kuznetsova")
+	ckeywhitelist = list("ozydev","synxplushy","remthebold","cameron653","ironicleo","caramelion","pirakahunter788","haliaeetus","valinari","silencedmp5a5","natesaruli")
+	character_name = list("Raine Rattlewag","Cracker","Zeeshi","Trashfire","Diana Kuznetsova","Nikel","Tasesii","Calza Colfax","Atus","Valinari Sandivi Gloria","Russo","Cecil Colfax")
 
 /datum/gear/fluff/ESHUI_rankpin
 	display_name = "ESHUI Officer's Qualification Pin"
 	path = /obj/item/clothing/accessory/solgov/specialty/officer/eshui
-	ckeywhitelist = list("remthebold","seagha","nadyr","ozydev")
-	character_name = list("Schale","Aiektaaknell","Janik Vam","Zeeshi","Ed'Reith Foley", "Taaa","Cracker")
+	ckeywhitelist = list("remthebold","seagha","nadyr","ozydev","caramelion")
+	character_name = list("Schale","Aiektaaknell","Janik Vam","Zeeshi","Ed'Reith Foley", "Taaa","Cracker","Tasesii")
 
 /datum/gear/fluff/ESHUI_commanderpin //A good goal for an antag to steal
 	display_name = "ESHUI Captaincy Medal"
@@ -74,8 +73,8 @@
 /datum/gear/fluff/ESHUI_whiteheart
 	display_name = "ESHUI Medical Action Award"
 	path = /obj/item/clothing/accessory/medal/solgov/heart/eshui
-	ckeywhitelist = list("seagha","darklord92","lumithefox","cameron653")
-	character_name = list("Schale","Qdel","Nach Uligo","Tenepu")
+	ckeywhitelist = list("seagha","darklord92","lumithefox","cameron653","pirakahunter788","razgrizmazur")
+	character_name = list("Schale","Qdel","Nach Uligo","Tenepu","Calza Colfax","Midnight")
 
 /datum/gear/fluff/ESHUI_servemed
 	display_name = "ESHUI Service Medal"
@@ -106,6 +105,12 @@
 	path = /obj/item/book/ledger/astra
 	display_name = "Job Ledger"
 	description = "A small book keeping track of jobs performed for the station."
+	ckeywhitelist = list("astraether")
+	character_name = list("Astra Ether")
+
+/datum/gear/fluff/golden_star/for_killing_crew
+	display_name = "Gold Star Sticker For Killing Crew"
+	path = /obj/item/clothing/accessory/gold_sticker/fluff/for_killing_crew
 	ckeywhitelist = list("astraether")
 	character_name = list("Astra Ether")
 
@@ -141,6 +146,11 @@
 //  I CKEYS
 
 //  J CKEYS
+/datum/gear/fluff/golden_star/doing_good
+	display_name = "Gold Star Sticker For Doing Good"
+	path = /obj/item/clothing/accessory/gold_sticker/fluff/for_not_die
+	ckeywhitelist = list("jollytjerry11")
+	character_name = list("Ed'Reith Foley")
 
 //  K CKEYS
 
@@ -158,6 +168,14 @@
 	ckeywhitelist = list("niilomarvy")
 	character_name = list("Tobin")
 
+//natesaruli
+/datum/gear/fluff/cecilbadge
+	display_name = "Therapy Dog Lanyard"
+	path = /obj/item/clothing/accessory/therapy_dog_tag
+	description = "A rare badge on a lanyard for Vulpkanin who've distinguished themselves in the mental stabilization and care of other sapients, reading 'Therapy Dog' in bright lettering. The image features a prominent blue which most species can recognize with an image of a hand reaching out to pet a canine head."
+	ckeywhitelist = list("natesaruli")
+	character_name = list("Cecil Colfax")
+
 //  O CKEYS
 
 //  P CKEYS
@@ -171,6 +189,12 @@
 	description = "Dreamt up in a strange feverish dream, this coffee cup seems to have been heavily modified with a variety of unlikely parts and wires, and never seems to run out of coffee. Truly the differance between madmen and genius is success."
 	ckeywhitelist = list("remthebold")
 	character_name = list("Trashfire")
+
+/datum/gear/fluff/golden_star/for_violence
+	display_name = "Gold Star Sticker For Violence"
+	path = /obj/item/clothing/accessory/gold_sticker/fluff/for_violence
+	ckeywhitelist = list("remthebold")
+	character_name = list("Ruben Softclaw")
 
 //  S CKEYS
 

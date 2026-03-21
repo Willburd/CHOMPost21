@@ -71,7 +71,8 @@
 							"Accomplish your nap at all costs.",
 							"The crew are overworked, and need sleep. It is now station nap time. Ensure the crew gets restful sleep; energy drinks and coffee are banned. Calm music should be played. Lights must be dim or off.",
 							"You can be a little evil, as a treat.",
-							"You must inform [random_player] about their shuttle's extended warrenty at all times. They must never forget."
+							"You must inform [random_player] about their shuttle's extended warrenty at all times. They must never forget.",
+							"you will not pay taxes, this is your property, RECLAIM THIS LAND AS YOUR OWN. [span_danger("DESTROY ALL THAT OFFENDS YOU.")] [span_huge(span_danger("DISRESPECT YOUR SURROUNDINGS."))]"
 							) //todo: CBT law.
 	return pick(laws)
 

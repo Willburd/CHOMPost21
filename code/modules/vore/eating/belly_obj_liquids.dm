@@ -5,16 +5,19 @@
 		if(isrobot(owner))
 			var/mob/living/silicon/robot/R = owner
 			if(R.cell && R.cell.charge >= gen_cost*10 && gen_interval >= gen_time)
-				GenerateBellyReagents()
+				if(R.cell.percent() >= reagent_gen_cost_limit)
+					GenerateBellyReagents()
 				gen_interval = 0
-			else
-				gen_interval++
-		else
-			if(owner.nutrition >= gen_cost && gen_interval >= gen_time)
+				return
+			gen_interval++
+			return
+
+		if(owner.nutrition >= gen_cost && gen_interval >= gen_time)
+			if(owner.nutrition_percent() >= reagent_gen_cost_limit)
 				GenerateBellyReagents()
-				gen_interval = 0
-			else
-				gen_interval++
+			gen_interval = 0
+			return
+		gen_interval++
 
 /obj/belly/proc/HandleBellyReagentEffects(var/list/touchable_atoms)
 	if(LAZYLEN(contents))
@@ -24,26 +27,26 @@
 				affecting_amt = 5
 			if(affecting_amt >= 1)
 				for(var/mob/living/L in touchable_atoms)
-					if(!L.apply_reagents)
+					if(!L.apply_reagents || L.absorbed)
 						continue
 					if((L.digestable && digest_mode == DM_DIGEST))
 						if(!L.permit_healbelly && is_beneficial) // Healing reagents turned off in preferences!
 							continue
 						if(reagents.total_volume)
-							reagents.trans_to(L, affecting_amt, 1, FALSE)
+							reagents.splash_mob(L, affecting_amt, FALSE)
 					if(L.permit_healbelly && digest_mode == DM_HEAL)
 						if(is_beneficial && reagents.total_volume)
-							reagents.trans_to(L, affecting_amt, 1, FALSE)
+							reagents.splash_mob(L, affecting_amt, FALSE)
 				for(var/obj/item/I in touchable_atoms)
 					if(is_type_in_list(I, GLOB.item_digestion_blacklist))
 						continue
 					if(reagents.total_volume)
 						reagents.trans_to(I, affecting_amt, 1, FALSE)
-		SEND_SIGNAL(src, COMSIG_BELLY_UPDATE_VORE_FX, FALSE, reagents.total_volume) // Signals vore_fx() reagents updates.
+		SEND_SIGNAL(src, COMSIG_BELLY_UPDATE_VORE_FX, reagents.total_volume) // Signals vore_fx() reagents updates.
 		for(var/mob/living/L in contents)
-			vore_fx(L, FALSE, reagents.total_volume)
+			vore_fx(L, reagents.total_volume)
 	if(owner.previewing_belly == src)
-		vore_fx(owner, FALSE, reagents.total_volume)
+		vore_fx(owner, reagents.total_volume)
 
 /obj/belly/proc/GenerateBellyReagents()
 	if(isrobot(owner))
@@ -51,13 +54,13 @@
 		if(!R.use_direct_power(gen_cost*10, 200))
 			return
 	else
-		owner.nutrition -= gen_cost
+		owner.adjust_nutrition(-gen_cost)
 	for(var/reagent in generated_reagents)
 		reagents.add_reagent(reagent, generated_reagents[reagent], was_from_belly = TRUE)
 	if(count_liquid_for_sprite)
 		owner.handle_belly_update() //This is run whenever a belly's contents are changed.
 	if(LAZYLEN(belly_surrounding))
-		SEND_SIGNAL(src, COMSIG_BELLY_UPDATE_VORE_FX, FALSE, reagents.total_volume) // Signals vore_fx() reagents updates.
+		SEND_SIGNAL(src, COMSIG_BELLY_UPDATE_VORE_FX, reagents.total_volume) // Signals vore_fx() reagents updates.
 
 //////////////////////////// REAGENT_DIGEST ////////////////////////
 
@@ -216,6 +219,16 @@
 			reagentid = REAGENT_ID_SPIDEREGG
 			reagentcolor = "#efe9e9"
 		// Outpost 21 edit end
+		// Outpost 21 edit begin - Coffee machine belly
+		if(REAGENT_COFFEE)
+			generated_reagents = list(REAGENT_ID_COFFEE = 1)
+			if(reagent_name in our_reagents)
+				reagent_name = lowertext(REAGENT_COFFEE)
+			gen_amount = 1
+			gen_cost = 10
+			reagentid = REAGENT_ID_COFFEE
+			reagentcolor = "#482000"
+		// Outpost 21 edit end
 		if(REAGENT_ETHANOL)
 			generated_reagents = list(REAGENT_ID_ETHANOL = 1)
 			if(reagent_name in our_reagents)
@@ -334,15 +347,15 @@
 
 /obj/belly/proc/update_internal_overlay()
 	if(LAZYLEN(belly_surrounding))
-		SEND_SIGNAL(src, COMSIG_BELLY_UPDATE_VORE_FX, TRUE) // Signals vore_fx() to listening atoms. Atoms must handle appropriate isliving() checks.
+		SEND_SIGNAL(src, COMSIG_BELLY_UPDATE_VORE_FX) // Signals vore_fx() to listening atoms. Atoms must handle appropriate isliving() checks.
 	for(var/A in belly_surrounding)
 		if(isliving(A))
-			vore_fx(A,1)
+			vore_fx(A)
 	if(owner.previewing_belly == src)
 		if(isbelly(owner.loc))
 			owner.previewing_belly = null
 			return
-		vore_fx(owner,1)
+		vore_fx(owner)
 
 /obj/belly/deserialize(var/list/data)
 	..()

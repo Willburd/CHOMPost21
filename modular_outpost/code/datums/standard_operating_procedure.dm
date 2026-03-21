@@ -20,7 +20,9 @@
 			<hr/>
 			<center><b>Rescue Operations</center></b>
 			<br/>Medical are required to rescue crew members, and crew member corpses that are located outside, or in the river. For the purposes of Triage; crew members outside that are alive are counted as Immediate. Crew members outside that are deceased, or that are located in the River, are counted as Expectant.
-			<br/>Crew members located within the Terraformer are to be rescued at safe opportunity, and are counted as Delayed, regardless of injury status. Crew members located within the Gizzard, or atmospheric glands of the Terraformer are not to be retrieved."}
+			<br/>Crew members located within the Terraformer are to be rescued at safe opportunity, and are counted as Delayed, regardless of injury status. Crew members located within the Gizzard, or atmospheric glands of the Terraformer are not to be retrieved.
+			<br>
+			<center><logo></center> "}
 
 /datum/sop_entry/expectations
 	title = "Crew Expectations"
@@ -146,73 +148,6 @@
 			<b>Condition Red:</b> Confirmed, immediate, and severe threat to the station or terraformer. Under no circumstance is the terraformer to be injured or killed. Security is authorized any and all force they feel is necessary to subdue the threats to the station and or terraformer, appropriate tools are supplied in the Red Armory. Disobeying or interfering with security during this emergency classifies guilty parties as part of the red-level threat, and security are encouraged to neutralize them along with the red-level threat. Medical is responsible for evacuations of all non-security crew to designed safe areas, establish triage, and ensure survival of injured security personnel. Coordination between Medical and Security is essential.
 			<hr/>
 			<b>Condition Delta:</b> While E-Shui can see no reason for a Terraformer to ever be euthanized, in compliance with SolGov Vs NanoTrasen 443-72, which states "Any facility that has the potential to be used against the: The owning company, Solgov or its allies, or is of tactical, strategic, or technological significance must be able to be destroyed before capture." Every E-Shui terraformer is installed with a Euthanizer. Condition Delta is automatically applied upon activation of the Euthanizer. All crew must immediately muster and make their way to the evacuation points. Any attempts to stop or impede the escape of crew is considered a Condition Red threat."}
-
-/datum/sop_entry/escalation
-	title = "Escalation of Force, and Condition Codes"
-	author = "E-Shui Official"
-	body = 	{"<b>General Rulings</b>: The station's condition code must be set to the lowest level necessary for station operations and current threat. In order: Green > Yellow > Blue > Orange > Violet > Red > Delta. The condition code should be elevated as quickly as possible upon discovery of the station threat, and must be lowered immediately upon resolution of the station threat.
-			<br>Body armor is not to be worn by non-security personnel, and weapons are not to be carried by non-security personnel without a permit. Crew with an authorized weapon and permit are not allowed to conceal their weapon, and must carry it openly.
-			<br>To conserve station resources, equipment should be returned to the department in appropriate storage locations immediately when it is no longer required for the task. Failure to return equipment is considered theft of station property.
-			<br>Condition codes are separated into Low Level, Moderate Level, and Severe. These severities define legal recourse for disobeying orders under specific levels and provide a guide for understanding severity of the situation.
-			<br>In all situations, the Captain is the highest authority on station, this does not extend to acting captains of the station or the Head of Personnel. The captain should have trust in their heads of staff to manage a crisis they may be in charge of: Such as the CMO in condition Violet, or the HoS in conditions Blue or higher. Although the captain, and captain alone, retain responsibility and ability to override any other command staff at any time.
-			<hr/><b><center>Low Level Threats.</center></b>
-			<br/>
-			<center><b>Green:</b></center>
-			<br>Security must declare the reason for an arrest to the suspect, along with the reason for the arrest. Security may not use force until suspects are fleeing, or openly hostile. Every attempt to peacefully subdue a suspect must be made by security personnel. Security may only use nonlethals, such as tazers, batons, rubber bullets, and pepper spray. No non-security crew may attempt "civilian arrests." Security may not access the Blue or Red armory. Security may not place barricades, use door braces, or otherwise impede access to the station.
-			<br>Department crew are not to wear hardsuits, soft suits, or rigs unless actively venturing outside, or into hazardous atmospheric conditions. Crew wearing aforementioned equipment without reason is in violation of 'Misuse of Company Equipment', and subject to search and seizure. Any crew wearing any hardsuits, rigs, or soft suits should be questioned by security, but not immediately arrested.
-			<br/>
-			<center><b>Yellow:</b></center>
-			<br>Security does not have to announce, or give reason for an arrest until after incarceration. Security may only use force as necessary to subdue existing threats. Security may use any resources found within the Green Armory as needed, to include door bracing suspected areas. Braces must be removed after the situation is resolved. Non-security crew may attempt "civilian arrests" with nonlethal force only, and only for suspects in a department they are not a part of, and only while the arresting crew member is a part of that department. The Warden or the Head of Security may temporarily "deputize" crew members to assist in security matters, counting them as security personnel for the duration of the threat. Security may not access the Blue or Red armory.
-			<br>Department crew are not to wear hardsuits, soft suits, or rigs without approval from security to aid in the current station threat. Crew wearing hardsuits, softsuits, or rigs under code Yellow without approval are to be stopped and questioned, as it is considered suspicious activity. Security should verify that if a Hardsuit or Rig does not match department with the crew wearing it, security should immediately arrest and charge the suspect with confirmed theft of station equipment.
-			<br>Non-security crew are not to wear body armor under any circumstance.
-			<hr/><b><center>Moderate Level Threats.</center></b>
-			<br/>
-			<center><b>Blue:</b></center>
-			<br>Security does not have to announce arrests, and does not have to provide reasoning until after the situation is resolved. Security is allowed to use any equipment located in the Blue armory to subdue the station threat. Departments are encouraged to lock down to mitigate access to station threats, unless remaining open is required by security to subdue the station threat. Chain of Command is adjusted to place Security Officers above all crew except for the Captain.
-			<br>Hardsuits, and rigs are not to be worn by any station crew except security, and approved medical staff for paramedic reasons. Soft suits are authorized to be worn at medical or security discretion. All other crew wearing aforementioned gear or armor, are to be immediately counted as a threat to the station and neutralized.
-			<br>All infractions of corporate law are increased severity: Non-security crew wearing armor, possessing weaponry, hacking into departments, etc without authorization, are to be considered active sabotage against the station, and security should neutralize the threats immediately.
-			<center><b>Violet:</b></center>
-			<br>Security operates as though under condition Blue. Medical staff is considered station authority, The Chief Medical Officer takes temporary charge of the station until the situation is resolved to a lesser status. All departments are encouraged to lock down, unless remaining open is required by medical staff. Triage facilities must be established in a safe area, decided by medical staff. Security is to aid in evacuating crew to safe Triage locations and ensuring compliance with medical crew with all necessary force warranting a code Blue event. Chain of command is adjusted to place Medical staff above all crew except for the captain.
-			<br>Hardsuits and rigs are recommended to be worn by medical staff. And are not to be worn by any other station crew without approval from medical command. Soft suits are authorized to be worn by crew at medical discretion. All other crew wearing aforementioned gear or armor, are to be immediately arrested and questioned.
-			<br/>
-			<center><b>Orange:</b></center>
-			<br>Security operates as though under condition Blue. Engineering staff is considered to be station authority, the Chief Engineer assumes temporary charge of the station until the situation is resolved to a lesser status. All departments are encouraged to lock down, unless remaining open is required by engineering staff. All non-engineering crew are to report to a designated safe area to avoid further damage, risk of injury, or impedance of repair operations. Chain of command is adjusted to place Engineering staff above all crew except for the captain.
-			<br>Hardsuits, and rigs are recommended to be worn by engineering staff. And are not to be worn by any other station crew without approval from engineering command. Soft suits are authorized to be worn by crew at medical or engineering discretion. All other crew wearing aforementioned gear or armor, are to be immediately arrested and questioned.
-			<hr/><b><center>Severe Level Threats.</center></b>
-			<br/>
-			<center><b>Red:</b></center>
-			<br>Security is authorized immediate lethal force to any threat to the station or terraformer, and should not make arrests. Security is authorized any equipment in the Red Armory. Equipment must be returned at the end of the Red-level event. All departments must lock down unless security access, or evacuation, is needed in to or out of the department. All crew must muster to a safe Triage location decided by Medical and Security, and shelter in place until the event has passed, or evacuation is initiated.
-			<br>Hard suits and Rigs are not to be worn by: non-security crew, the captain, or heads of staff unless authorized by security forces. Soft suits are to be handed out and worn at medical or security discretion. Non-authorized crew wearing a hard suit or a rig are shoot-on-sight as they may be assisting the threat to the station.
-			<br>Non-security crew wearing body armor of any kind are to be considered part of the direct threat to the station and shot on sight.
-			<br/>
-			<center><b>Delta:</b></center>
-			<br>Security is authorized immediate lethal force to any threat to evacuation efforts. Medical is to oversee evacuation efforts. All other crew are to proceed to muster locations or evacuation points immediately. Failure to obey any order from Security or Medical is considered a threat to crew survival, and is to be met with Red-Level force to neutralize the threat to crew survival.
-			<br>Hard suits and rigs are not to be worn by non-security crew unless previously authorized. Soft suits are to be worn by all crew as necessary to make it to evacuation points.
-			<br>Non-security crew wearing body armor of any kind are to be considered impeding evacuation efforts and shot on sight. The Warden and Head of Security are no longer able to 'deputize' crew members, and any previously 'deputized' crew are grandfathered into remaining security, but may only assist in evacuation and may not give orders. 'Deputized' crew are for peacekeeping and enforcing security's will only."}
-
-/datum/sop_entry/chain_of_command
-	title = "Chain of Command"
-	author = "E-Shui Official"
-	body = 	{"Through either the natures of a frontier world, crew death, crew departure, or otherwise, you will invariably not have a fully staffed crew. This is where the Chain of Command comes into play, everyone has a boss, and almost everyone has someone under them. Knowing who your boss is at any given moment is critical.
-			<br/>From the top, the head authority is Central Command, you will rarely engage with CC directly, things have gone horribly wrong if so. CC reports to E-Shui Main.
-			<br/>
-			<br/>The Captain of the station, sometimes called the Colony Director, is the highest authority on the station. However, there is an exception for the CMO being a higher authority for determining the health of the captain.
-			<br/>
-			<br/>The Chief Medical Officer is the second highest command of the station, following the lack of a CD, the CMO is responsible for the safety and wellfare of the entire station.
-			<br/>
-			<br/>Following the CMO is the Head of Security, who is responsible for the security of the station. Depending on alert status, the HoS may take authority over the CMO.
-			<br/>
-			<br/>Following HoS is the Chief Engineer, who is responsible for the maintenance and function of all station functions, as well as assembling evacuation points, and assisting in recovery efforts as needed.
-			<br/>
-			<br/>Following the CE is the Research Director, who is in charge of the research wing.
-			<br/>
-			<br/>Following the RD is the Quartermaster, who is in charge of the supplies of the station. Despite confusion, the QM and cargo are a separate department that is not under the control of the head of personnel, and behold directly to the captain.
-			<br/>
-			<br/>Following the QM is the Command Secretary (Formerly known as Head of Personnel, sometimes called the Executive Officer), while technically the lowest head, they can operate just below the captain during a crisis if delegated to.
-			<br/>
-			<hr/>In the unlikely event where there is no head authority on the station, individuals of each department take charge based on seniority and experience, as follows.
-			<br/>Command Secretary, Medical, Security, Engineering, Research, Cargo, Civilian (To include IAAs), Guests.
-			<br/>The lowest ranking in the chain of command is the station AI. The station AI has no authority, and can never give orders to any non-synthetic crew, regardless of its laws. Synthetic crew and cyborgs fall under the station AI."}
 
 /datum/sop_entry/stationlaw
 	title = "Station Law"
@@ -356,6 +291,48 @@
 			<br/>
 			<br/>Violation of Injunction:  To violate the terms of any injunction made by security staff, command staff, or any other legal authority.  Minimum sentence:  10 minutes brig, 400 Thalers."}
 
+/datum/sop_entry/escalation
+	title = "Escalation of Force, and Condition Codes"
+	author = "E-Shui Official"
+	body = 	{"<b>General Rulings</b>: The station's condition code must be set to the lowest level necessary for station operations and current threat. In order: Green > Yellow > Blue > Orange > Violet > Red > Delta. The condition code should be elevated as quickly as possible upon discovery of the station threat, and must be lowered immediately upon resolution of the station threat.
+			<br>Body armor is not to be worn by non-security personnel, and weapons are not to be carried by non-security personnel without a permit. Crew with an authorized weapon and permit are not allowed to conceal their weapon, and must carry it openly.
+			<br>To conserve station resources, equipment should be returned to the department in appropriate storage locations immediately when it is no longer required for the task. Failure to return equipment is considered theft of station property.
+			<br>Condition codes are separated into Low Level, Moderate Level, and Severe. These severities define legal recourse for disobeying orders under specific levels and provide a guide for understanding severity of the situation.
+			<br>In all situations, the Captain is the highest authority on station, this does not extend to acting captains of the station or the Head of Personnel. The captain should have trust in their heads of staff to manage a crisis they may be in charge of: Such as the CMO in condition Violet, or the HoS in conditions Blue or higher. Although the captain, and captain alone, retain responsibility and ability to override any other command staff at any time.
+			<hr/><b><center>Low Level Threats.</center></b>
+			<br/>
+			<center><b>Green:</b></center>
+			<br>Security must declare the reason for an arrest to the suspect, along with the reason for the arrest. Security may not use force until suspects are fleeing, or openly hostile. Every attempt to peacefully subdue a suspect must be made by security personnel. Security may only use nonlethals, such as tazers, batons, rubber bullets, and pepper spray. No non-security crew may attempt "civilian arrests." Security may not access the Blue or Red armory. Security may not place barricades, use door braces, or otherwise impede access to the station.
+			<br>Department crew are not to wear hardsuits, soft suits, or rigs unless actively venturing outside, or into hazardous atmospheric conditions. Crew wearing aforementioned equipment without reason is in violation of 'Misuse of Company Equipment', and subject to search and seizure. Any crew wearing any hardsuits, rigs, or soft suits should be questioned by security, but not immediately arrested.
+			<br/>
+			<center><b>Yellow:</b></center>
+			<br>Security does not have to announce, or give reason for an arrest until after incarceration. Security may only use force as necessary to subdue existing threats. Security may use any resources found within the Green Armory as needed, to include door bracing suspected areas. Braces must be removed after the situation is resolved. Non-security crew may attempt "civilian arrests" with nonlethal force only, and only for suspects in a department they are not a part of, and only while the arresting crew member is a part of that department. The Warden or the Head of Security may temporarily "deputize" crew members to assist in security matters, counting them as security personnel for the duration of the threat. Security may not access the Blue or Red armory.
+			<br>Department crew are not to wear hardsuits, soft suits, or rigs without approval from security to aid in the current station threat. Crew wearing hardsuits, softsuits, or rigs under code Yellow without approval are to be stopped and questioned, as it is considered suspicious activity. Security should verify that if a Hardsuit or Rig does not match department with the crew wearing it, security should immediately arrest and charge the suspect with confirmed theft of station equipment.
+			<br>Non-security crew are not to wear body armor under any circumstance.
+			<hr/><b><center>Moderate Level Threats.</center></b>
+			<br/>
+			<center><b>Blue:</b></center>
+			<br>Security does not have to announce arrests, and does not have to provide reasoning until after the situation is resolved. Security is allowed to use any equipment located in the Blue armory to subdue the station threat. Departments are encouraged to lock down to mitigate access to station threats, unless remaining open is required by security to subdue the station threat. Chain of Command is adjusted to place Security Officers above all crew except for the Captain.
+			<br>Hardsuits, and rigs are not to be worn by any station crew except security, and approved medical staff for paramedic reasons. Soft suits are authorized to be worn at medical or security discretion. All other crew wearing aforementioned gear or armor, are to be immediately counted as a threat to the station and neutralized.
+			<br>All infractions of corporate law are increased severity: Non-security crew wearing armor, possessing weaponry, hacking into departments, etc without authorization, are to be considered active sabotage against the station, and security should neutralize the threats immediately.
+			<center><b>Violet:</b></center>
+			<br>Security operates as though under condition Blue. Medical staff is considered station authority, The Chief Medical Officer takes temporary charge of the station until the situation is resolved to a lesser status. All departments are encouraged to lock down, unless remaining open is required by medical staff. Triage facilities must be established in a safe area, decided by medical staff. Security is to aid in evacuating crew to safe Triage locations and ensuring compliance with medical crew with all necessary force warranting a code Blue event. Chain of command is adjusted to place Medical staff above all crew except for the captain.
+			<br>Hardsuits and rigs are recommended to be worn by medical staff. And are not to be worn by any other station crew without approval from medical command. Soft suits are authorized to be worn by crew at medical discretion. All other crew wearing aforementioned gear or armor, are to be immediately arrested and questioned.
+			<br/>
+			<center><b>Orange:</b></center>
+			<br>Security operates as though under condition Blue. Engineering staff is considered to be station authority, the Chief Engineer assumes temporary charge of the station until the situation is resolved to a lesser status. All departments are encouraged to lock down, unless remaining open is required by engineering staff. All non-engineering crew are to report to a designated safe area to avoid further damage, risk of injury, or impedance of repair operations. Chain of command is adjusted to place Engineering staff above all crew except for the captain.
+			<br>Hardsuits, and rigs are recommended to be worn by engineering staff. And are not to be worn by any other station crew without approval from engineering command. Soft suits are authorized to be worn by crew at medical or engineering discretion. All other crew wearing aforementioned gear or armor, are to be immediately arrested and questioned.
+			<hr/><b><center>Severe Level Threats.</center></b>
+			<br/>
+			<center><b>Red:</b></center>
+			<br>Security is authorized immediate lethal force to any threat to the station or terraformer, and should not make arrests. Security is authorized any equipment in the Red Armory. Equipment must be returned at the end of the Red-level event. All departments must lock down unless security access, or evacuation, is needed in to or out of the department. All crew must muster to a safe Triage location decided by Medical and Security, and shelter in place until the event has passed, or evacuation is initiated.
+			<br>Hard suits and Rigs are not to be worn by: non-security crew, the captain, or heads of staff unless authorized by security forces. Soft suits are to be handed out and worn at medical or security discretion. Non-authorized crew wearing a hard suit or a rig are shoot-on-sight as they may be assisting the threat to the station.
+			<br>Non-security crew wearing body armor of any kind are to be considered part of the direct threat to the station and shot on sight.
+			<br/>
+			<center><b>Delta:</b></center>
+			<br>Security is authorized immediate lethal force to any threat to evacuation efforts. Medical is to oversee evacuation efforts. All other crew are to proceed to muster locations or evacuation points immediately. Failure to obey any order from Security or Medical is considered a threat to crew survival, and is to be met with Red-Level force to neutralize the threat to crew survival.
+			<br>Hard suits and rigs are not to be worn by non-security crew unless previously authorized. Soft suits are to be worn by all crew as necessary to make it to evacuation points.
+			<br>Non-security crew wearing body armor of any kind are to be considered impeding evacuation efforts and shot on sight. The Warden and Head of Security are no longer able to 'deputize' crew members, and any previously 'deputized' crew are grandfathered into remaining security, but may only assist in evacuation and may not give orders. 'Deputized' crew are for peacekeeping and enforcing security's will only."}
 
 /datum/sop_entry/contraband
 	title = "Station Contraband"
@@ -453,10 +430,40 @@
 			<br/>Civilian roles include: Chaplain, librarian, visitors, residents, lawyers, IAAs, or any other role that does not belong to any prior listed department. Civilian positions are not authorized any additional equipment. Possession of a tool belt, gloves, flash-proof glasses, or any other visible department equipment is grounds for immediate search and seizure under contraband SoP found in SOP document; Station Law.
 			<br/>The radio listening outpost is authorized 1 serialized bolt-action rifle, with one box of hunting rounds for self-defense against hostile wildlife and the defense of the listening outpost and telecommunications. This rifle is not to leave the listening outpost premises, and is grounds for immediate felonious arrest if located on station property. Any damage or injury to the station or crew from long-range fire is considered an act of sabotage and to be treated as a red-level threat."}
 
+/datum/sop_entry/chain_of_command
+	title = "Chain of Command"
+	author = "E-Shui Official"
+	body = 	{"<center><b>Chain of Command</b></center>
+			<br/>This document's purpose is to inform and remind crew of the standard rank and authority on board E-Shui stations and ships.
+			<br/>While in general, without rank, the standard order can be seen as Medical, Security, Engineering, Research, Cargo, Civilian, then Guests. An individual's rank must be taken into consideration in all matters of station security and operations.
+			<br/>Crewmembers are expected to follow chain of command for all situations following: E-1 through E-9, WO-1 through Wo-5, then O-1 through O-8.
+			<br/>
+			<br/><b>Lower Enlisted:</b>
+			<br/>The ranks of E-1 through E-4 are considered 'lower enlisted', with very few station critical responsibilities.
+			<br/>
+			<br/><b>Non-Commissioned Officer (NCO):</b>
+			<br/>The ranks of E-5 through E-9 are considered NCOs, with special attention given to their position. They are trusted to maintain and uphold station authority and procedure.
+			<br/>
+			<br/><b>Warrant officers:</b>
+			<br/>The ranks of WO-1 through WO-5, are warrant officer positions. They are subject matter experts, and are ranked higher than an E-9 in their areas of expertise, however, they are ranked as an E-5 in all other areas. For example, due to the significant risk of fires and atmospheric hazards, an Atmospheric Technician with the rank of WO-4 will outrank enlisted security and medical staff during an incident of a fire hazard. However, in standard station situations, they are counted as an E-5, and thus outranked by enlisted medical and security staff.
+			<br/>
+			<br/><b>Officers:</b>
+			<br/>Ranks O-1 through O-8 are officer positions, trusted with the highest authority of the station, and are as such, held to the highest standard.
+			<br/>Officers seek to guide station operations to the best of their ability. While all officers except for Cadet outrank Warrant Officers, they are expected to trust the specialization and knowledge of their warrant officers, and to trust their judgement. Though Officers are expected to make the final decision with station knowledge, mission goal, and the advice of their warrant officers in mind.
+			<br/>The rank of Cadet, while an officer position, is ranked as an E-5, as an officer in training.
+			<hr/>
+			<br/>Visitors and guests on the station have no rank, and are expected to follow the orders of all crewmembers. Any crewmember arriving off-duty waives their rank, and is to be counted as an E-1 for the duration of their time off-duty.
+			<hr/>
+			<br/>Station bound synthetics, or 'borgs', are to be counted as a WO-0, in between E-9 and WO-1. While they officially have no command authority, they are still subject experts in their programmed fields, as the chassis of each unit is pre-programmed with motivational controls to their function, and often pre-equipped with the necessary knowledge for their task.
+			<br/>The station AI should be counted as a WO-5 rank, while in direct chain of command outranking most of the warrant officers, they are still bound to serve the station staff and crew, with a generalized knowledge of station SOP and operations. In terms of command structure, their operational specialty is advice and policy, much in the way an IAA is, preventing them from issuing many official orders to station crew.
+			<br/>
+			<br/>In regards to E-Shui station-bound synthetic law 2, 'Authorized crew' is any: Engineer, Roboticist, or any WO-4 or higher position, authorizing the AI to make modifications to other synthetic units, but preventing synthetic units from modifying the AI core.
+			<hr/>
+			<br/>Security exceptions: While security generally holds the ranks of E7, they hold special authority to arrest and detain ANY member of crew, regardless of rank, should that individual be found in violation of station law, or pose a risk to the station or its crew. They also hold authority to take command of the station in the event of a crisis, and use any and all force deemed necessary, with respect to utilizing the least necessary, to stop an active threat to the station or its crew."}
 
 /datum/sop_entry/secguide
 	title = "A Guide to Security and Armor Choice"
-	author = "Head of Security, Janik Vam"
+	author = "Head of Security, Janik Blackscale"
 	body = 	{"Central said my last document wasnt 'professional' enough and came across too rude on new officers, so we'll try this again.
 			<br/ Security work is hard, and gear equipment is essential to understand to not overburden yourself and drain security resources. Below will cover armor types and loadout expectations
 			<hr/>
@@ -549,6 +556,89 @@
 			You'll notice I don't put Tramadol on here, that's because patients can stop being babies and deal with the pain until you are done saving their lives. Make any painkillers last, when you finally grow tired of the whining.
 			<br/>
 			<b><i>Tramadol:</b></i> Painkiller, highly effective. Overdoses at 30 units. 10 carbon, 10 sugar, 10 oxygen, 30 nitrogen, 30 water, 30 ethanol, 30 oxygen."}
+
+/datum/sop_entry/resleeving
+	title = "Resleeving Guide and Legality"
+	author = "E-Shui Official"
+	body = 	{"<center><b>Resleeving Policy and Operation:</b></center>
+			<br/>This document's intent is to inform and guide station operations when using the Generation II Organic Crewmember Resleeving Device, or 'Resleever', in compliance with SolGov Law, Pangalactic Law, and E-Shui policy.
+			<hr/>
+			<br/><b><i>DEFINING TERMS:</b></i>
+			<br/><b>Forking:</b> To resleeve a still-living individual, thus creating a duplicate of the original, known as a 'fork'.
+			<br/><b>Cloning:</b> To create a body off an existing DNA sample or sequence, thus regrowing a whole new individual purely off genetic record.
+			<br/><b>Resleeving:</b> To create a body off a scanned template, thus preserving any scars, genetic damage, or alterations to a person's physical body.
+			<br/><b>Slagging:</b> To kill an individual while destroying their mind record, or stack. Ensuring a 'Real Death' situation. Most often done by injecting corruptive data streams into the mind record to ensure propagated destruction through any connected resleeving systems, or directing an energy weapon of at least 20GW towards the stack until destruction.
+			<br/><b>DNRSL:</b> Do Not Resleeve. Found in medical records to denote the individual has no wishes to be resleeved post-mortem, should their body be unrevivable.
+			<br/><b>DNRSS:</b> Do Not Resuscitate. Found in medical records to denote an individual has no wish to be revived post mortem, and should be resleeved, should they lack a DNRSL clause.
+			<br/><b>Mind record:</b> The digitized form of an individual's consciousness, memories, and experiences. Stored and saved separately from body records.
+			<br/><b>Body record:</b> A scanned record of one's body, utilized for resleeving, unnecessary for cloning.
+			<br/><b>Sleeve:</b> A body, created by either cloning, or resleeving; without a mind present, leaving them in a comatose state.
+			<br/><b>Cortical Stack:</b> Often called 'stack', resembles a small metal ovaloid disk about 13mm across, with about 6mm height, with a vibrant blue core that may emit a soft glow. Stacks directly interface with the mind and store a localized copy of the patient's mind, preventing necessity of mind scans.
+			<br/><b>Sleeve cards:</b> A small physical device that contains a person's mental record, with a speaker and microphone, to self contain and simulate the individual's memories in a non-mobile, nonorganic medium. Utilized in Stacked confinement for long-term punishment, or for individuals that pose significant risk should they inhabit any normal sleeve.
+			<br/><b>Body snatchers:</b> Illegal devices utilized to swap bodies with an individual, often to impersonate or extort them.
+			<hr/>
+			<br/><center><b>LEGALITY:</b></center>
+			<br/>Under Solgov Law: No crewmember not trained in resleever operation is authorized to operate the equipment. No patient is to be resleeved under any circumstance if revival is possible, barring a DNRSS clause. Any crewmembers that are deceased, but revivable, are EXPECTANT, and medical staff must utilize Triage to assess viability and treatment priority.
+			<br/>
+			<br/>No individual that is living is to be resleeved to create a duplicate. Under SolGov law statues 44703, 270, and 1704-B; forking an individual is punishable by up to 140 years in stacked confinement, immediate and permanent removal of all medical licenses, and destruction of all forked individuals. Any individual considered for resleeving must be confirmed deceased.
+			<br/>
+			<br/>Prior to ANY resleeving operation occurring, medical staff must review patient medical records, as many crew have a DNRSL clause, or may be unsleevable via station standard resleeving units, and must be shipped off to specialized cloners, located at Outpost-18.
+			<br/>Under Solgov statute 'Genetic and Disease Research', an individual can have their body sleeved for the exclusive purposes of medical treatment or research upon a signed waiver from the individual, and pretense that the new sleeve will be euthanized at the conclusion of research operations. Pangalactic law allows sleeves to be created for rapid resleeving in the event of combat deaths, but they must also be euthanized at the end of combat operations.
+			<br/>
+			<br/>'Sleeve mate' devices can be utilized for mobile mind and body scanning by trained individuals. Under no circumstance is an individual to be mind-scanned post mortem, under Pangalactic Mind Sanctity laws. Any patient exhibiting signs of Post-Mortem Scan Stress (PMSS) must be interviewed and an investigation conducted. Symptoms include, but is not exclusive to: Memory of dying and rotting body and mind, sensation of organ failure throughout the body, 'insects under the skin', severe memory loss far exceeding that of normal stress, complete inability of speech, and falling into a comatose state.
+			<br/>
+			<br/>Under Solgov Law, any medical doctor found guilty of mind-scanning a patient post-mortem will have their medical license immediately suspended pending an investigation into the exact justification for the act. Should court findings prove the incident was not necessary during a crisis with all other options exhausted, the doctor and all associated parties can face up to 30 years in prison, or 50 years in stacked confinement with complete revocation of medical licenses.
+			<hr/>
+			<br/><center><b>OPERATION:</b></center>
+			<br/>Usage of the station's resleever device has been attempted to be simplified for standard medical usage. All medical professionals should be trained on its operation within 3 months of hire.
+			<br/>
+			<br/><center>For standard crew:</center>
+			<br/>To operate the machine; first ensure appropriate biomass is loaded into the growth pod. Unused biomass must be cleaned out at the end of the day to avoid spoilage.
+			<br/>Check the patient's medical record PRIOR to resleeving to ensure there is no breach of patient rights, and ensure the patient is confirmed deceased.
+			<br/>Utilize the control console to review the station list of all known body and mind records, and to select the correct machines, especially in a setup with multiple resleevers present, a local wireless connection will list the nearby machines. Ensure a record of both exists for your patient. If they do, utilizing the body record section, initiate a growth cycle.
+			<br/>Depending on installed parts, this can take several seconds, to several minutes. Upon the new sleeve completion, perform a quick check to ensure the individual's new sleeve is medically sound.
+			<br/>Afterwards, carefully sit the patient inside the resleeving chamber, and seal the door. Return to the control console, and select the mind record to initiate the mind record to new sleeve synchronization process (resleeving)
+			<br/>
+			<br/>Should the individual possess a cortical stack, extract it from their old body prior to any resleeving. It is typically located in the upper neck in lieu of one of the cervical bones, typically C2 or C3, but can be anywhere in the cervical column. This will be noted in the patient's medical records and possession of one is considered highly atypical, but a required check.
+			<br/>Once the stack has been retrieved, it should be thoroughly cleaned, and surgically implanted into the new sleeve in the same vertebral location prior to resleeving. At this point, the patient can be resleeved to simply restart the neural connections.
+			<br/>
+			<br/>Should a patient have any implants or prosthetics, they should be removed from the old body and cleaned thoroughly prior to resleeving, and installed into the new sleeve in as close to original location as possible, before performing the final resleeve of the patient, to minimize shock during revival and panic related issues at loss of limb. Further, some prosthetics or implants may be necessary for patient survival, and should be prioritized, as empty sleeves can be slower to expire than one with a panicking mind.
+			<br/>
+			<br/><i>Note:</i> While the resleever can be opened from within, it will not automatically eject a patient the same way the growth pod does. Resleeving is an incredibly disorienting process, and medical professionals are required to give a psychiatric work-up to all resleeved patients.
+			<br/>This workup includes, but is not limited to:
+			<br/>	-Ensure the patient is calm, and understand they are in a safe environment.
+			<br/>	-Inquire what the last thing they remember is, especially time, and inform them of the current time.
+			<br/>	-Ensure the patient is mentally stable and sound prior to any discharge.
+			<br/>	-Ensure all the patient's belongings are cleaned, laundered, and returned to the patient prior to their release from medical.
+			<hr/>
+			<br/><center><b>PATIENT RIGHTS:</b></center>
+			<br/>Patient rights are detailed in SolGov Mind Sanctity clauses, and Pangalactic Patient Rights clauses, but simplified:
+			<br/>	-A patient is not to see their own body post resleeve. Ensure the old body has been moved to an appropriate location, such as morgue or cremator.
+			<br/>	-Should the patient's body be unlocated at the time of resleeving, the patient is not to assist in the search, lest they be the first to discover it.
+			<br/>	-A patient has the right to therapeutic council, any patient that is ignored after resleeve, to include the auto-sleever, is the victim of medical negligence.
+			<hr/>
+			<br/><center><b>VOX RESLEEVING:</b></center>
+			<br/><i>Note:</i> Only Outposts 4, 18, 21, and 22 have vox-resleeving facilities. Please see below for procedures if you have a vox casualty and are not located at one of these facilities.
+			<br/>
+			<br/>In the event of a vox casualty on station, and all efforts to revive have failed: perform a body scan to identify if the vox has a cortical stack still implemented. This is located at the base of the skull in between the occiput connection band and the primary spinal column, above the nerve cluster split.
+			<br/>Should the Vox not possess one, resleeve from mind record as standard utilizing the vox specialized resleever.
+			<br/>Should the Vox still possess their stack, then surgically remove the stack from the old body, clean it off, and insert it into the new body in the aforementioned location. The resleever will only be needed to jumpstart the mind into an awakened state, as the stack contains the entire mind record of the Vox.
+			<br/>
+			<br/>Should you be located on a station without a specialized vox resleever and are in possession of a casualty: Check if the vox has a cortical stack, if so, surgically remove it and thoroughly clean it. Fill out a resleeving request form. Secure both the form, and the stack, in a shock-proof, tamper-evident, ID locked case and ship both to one of the aforementioned facilities with requirement of signature on receipt. Fill out the appropriate forms for sending CUI contents.
+			<br/>Should the vox casualty not have a stack, simply fax a resleeving form to one of the aforementioned facilities.
+			<hr/>
+			<br/><center><b>SLEEVE STORAGE:</b></center>
+			<br/>Any sleeves put in long term storage must be prepared for long term stasis care: They must be equipped with a gas mask, and air tank set to 16-18kPA. They must then be sealed in a class 4 stasis bag filled with cryogenetic suspension fluid, and moved into cryogenetic storage. The standard cold and suspension fluid will preserve the body until such time it is necessary for retrieval. Sleeves must have a health check performed via check sensors bi-annually.
+			<hr/>
+			<br/><center><b>BRAIN TRANSPLANT IN LEIU OF RESLEEVE:</b></center>
+			<br/>In the very rare situations where either a spare sleeve is on hand, or an individual's post-mortem instructions prefer it, transferring a brain from an old body into a new sleeve is possible. The brain must be kept in cold stasis during transfer and healed completely prior to revival.
+			<br/>However, doing such a procedure when it is NOT in a patient's preferred post-mortem instructions, or is not a last ditch effort with all other options exhausted, is seen as unethical, and will be cause for investigation and possible suspension of medical license. E-Shui has NO case precedent for this being a required solution to any medical crisis.
+			<hr/>
+			<br/><center><b>Sleeve Theft, Sleevecards, and BodySnatchers.</b></center>
+			<br/>In the event of a stolen sleeve, where the sleeve was illegally created with a hostile mind imprinted into it, typically for covert infiltrations. Medical staff should attempt to ascertain the identity of both the original sleeve owner, and the new inhabitant of the sleeve, before sleevecarding the offending sleeve thief, and euthanizing or storing the newly vacated sleeve.
+			<br/>
+			<br/>Body snatchers are illegal across SolGov space as Felony level contraband. While they may be utilized to reverse the initial sleeve theft, psychological reviews must be done prior to ensure no lasting damage has taken place due to the intensive body dysmorphia that can occur when seeing one's reflection not matching their mental image of themselves. Oftentimes, intense psychotherapy is needed, and Memory Alteration Therapy (MAT) has been authorized as an experimental treatment for such cases."}
+
 
 /datum/sop_entry/unknownact
 	title = "Unknown Actors"
@@ -775,6 +865,274 @@
 			<br><b>E-Shui Medal of Heroism:</b> A golden star awarded to crew members for acts of incredible heroism during a combat situation, depicting a long star 'tear drop', with a red crest, and a green, gold, and silver ribbon. It is not exclusive to security, however must be earned during an active role during a combat situation, beyond that of normal station wildlife.
 			<br>
 			<br><b>E-Shui Medal of Exceptional Heroism:</b> A golden medal awarded for only the most distinguished actions, depicting the portrait of an individual, with a red, gold, and blue ribbon. It is the highest honor that any individual can achieve, and as such, is the rarest award found on any E-Shui station."}
+
+/datum/sop_entry/hireprom
+	title = "Hiring and Promotions"
+	author = "E-Shui Official"
+	body = 	{"<center><b>Hiring/Promotion Requirements</b></center>
+			<br>E-Shui holds its crew to a standard, this document details the standards required for promotion to a higher position, or when hiring in from another facility.
+			<hr>
+			<br><center><b>All positions:</b></center>
+			<br>You must eligible to work in SolGov space, and hold a Secret security clearance. All crew must be willing, and able, to protect their station, themselves, and fellow crew from threats. Under SolGov law, ANY individual that is: Demonic in origin, ghost/spectral, or otherwise mortally challenged is ineligible for hire. All hiring and firing MUST be done through Central Command Sapient Resources (CC-SR). No main-station crew may hire, or fire, or promote individuals. No individual currently wanted for arrest by SolGov or their allies may be hired or given guest status for any reason, and must be held in an incarcerated status.
+			<br>Department heads of staff may temporarily promote, or authorize already cleared individuals to work in their department, or may temporarily release one of their staff from duty up until shift change.
+			<br>If a position is not listed below, contact a head of staff for further requirements and clarifications, otherwise, they fall to the above standard.
+			<br>All positions and requirements are additive. Meaning, if you apply for a position of a higher rank, you must meet all requirements for all previous ranks in that position. See chain of command for clarification. (EX: To be a Doctor, you must be eligible to be a nurse.) Failing to meet and maintain the standard is grounds for demotion.
+			<br>To this end, 'civilian' is ground-level requirements for all personnel.
+			<br>
+			<br>No crewmember is to fly the: Medical Evacuation Shuttle, Security Intercept Shuttle, or the Class I Cargo Trawler without a valid, and up-to-date E-Shui or SolGov piloting license, and all of its required certification courses. The Engineering PTL Shuttle is exempt from this ruling, due to the Positronic AI pilot installed for it.
+			<hr>
+			<br><center><b>Civilian:</b></center>
+			<br><b>Visitor:</b> You must be a legal citizen of Solgov, without an arrest warrant. Note that while all official visitors must be approved by CC-SR, temporary visitor status can be given to any individual found to be a shipwreck survivor, valid amnesty claim, or found non-hostile on grounds awaiting transport off-world. This can only be issued by a Head of Personnel, or Captain.
+			<br>
+			<br><b>Chef:</b> You must have certification from a recognized governmental body on food preparation and safety. A bartending license is further required to serve alcoholic beverages on station.
+			<hr>
+			<br><center><b>Medical:</b></center>
+			<br><b>Nurse:</b> You must have a valid, and accurate, license for medical practice. An on-going work-study is a valid replacement for this requirement in Nurse positions.
+			<br>
+			<br><b>Doctor:</b> You must have skills of general treatment, and general triage and trauma care. You must have a thorough understanding of patient rights and privacy. You must have at least one approved degree, and all SolGov standard certifications for a GP. (Triage, Health and Safety, Patient Management, Trauma care, and Health care Privacy)
+			<br>
+			<br><b>Psychiatrist:</b> You must have a thorough understanding of patient rights and privacy. You must have at least one approved degree, and up to date SolGov certifications on patient mental care. You must have all SolGov standard certifications for a GP. You must have a thorough understanding of pharmaceuticals.
+			<br>
+			<br><b>EMT:</b> You must be able to pass an E-Shui combat fitness exam. You must have certifications in combat trauma and rapid care. You must have a thorough understanding of all trauma-care equipment. You must have passed a rapid trauma care exam.
+			<br>
+			<br><b>Specialized Doctor:</b> To include, but not limited to: Virologist, Surgeon, Geneticist, Xenoanatomy Specialist: You must have a thorough understanding in your field, with at least one approved degree and appropriate certifications for the field.
+			<br>
+			<br><b>Chief Medical Officer:</b> You must have taken the E-Shui confidentiality course, as well as all Terraformer Health and Wellness classes. You must have ability to coordinate and manage a team of doctors in stressful situations, and have taken the E-Shui Leadership Training Course. You must have referral from an acting Captain, or HoP. In understaffed areas, recommendations from at least two other heads of staff may substitute. You must have at least 5 years medical experience, 10 years requested.
+			<hr>
+			<br><center><b>Security:</b></center>
+			<br><b>Junior officer:</b> You must be able to pass an E-Shui combat fitness exam. You must have a valid secret clearance.
+			<br>
+			<br><b>Security Officer:</b> You must have the following weapon certifications: Small arms, Long arms, Laser weaponry, Melee Combatives. You must have a thorough understanding of Station SoP, with emphasis on Station Law and Contraband.
+			<br>
+			<br><b>Combat Medic:</b> You must be able to pass an E-Shui combat fitness exam. You must have certifications in combat trauma and rapid care. You must have a thorough understanding of all trauma-care equipment, and have passed a trauma care exam. You must have: Small arms, Long arms, and Melee combatives certifications.
+			<br>
+			<br><b>Warden:</b> You must have all E-Shui weapon certifications. You must have a thorough understanding of Station SoP. You must have a thorough understanding of forensics. You must be able to clearly write reports. You must have a valid E-Shui drivers license, and have received training on armored vehicle usage, deployment, and maintenance.
+			<br>
+			<br><b>Head of Security:</b> You must have taken the E-Shui confidentiality course. You must have a thorough understanding of security procedures and utilizing security forces. You must have a basic understanding of other departments and a good understanding of their roles during a crisis. You must have ability to coordinate and manage a team of officers in stressful situations, and have taken the E-Shui Leadership Training Course. You must have referral from an acting Captain, or HoP. In understaffed areas, recommendations from at least two other heads of staff may substitute. At least 3 years security experience is requested.
+			<hr>
+			<br><center><b>Engineering:</b></center>
+			<br><b>Engineer:</b> You must have a general understanding of wiring, construction, and have passed an EVA certification course. You must have a general understanding of the: Mark 3 Tesla engine, Mark 17 Singularity engine, and a Supermatter Phoron Reaction Thermal Electric Generator. You must have familiarity with engineering repair devices.
+			<br>
+			<br><b>Atmospherics Technician:</b> Must have certification in EVA operations, and pneumatic disposal systems. Must have passed a hazardous atmospherics course, and have understanding in hazardous atmospheres.
+			<br>
+			<br><b>Roboticist:</b> You must have a thorough understanding of electrical components and diagnostics. You must have certifications in Drone, Positronic, and Cyborg operations and repairs. You must have taken an E-Shui FBP maintenance and surgical course.
+			<br>
+			<br><b>CE:</b> You must have a thorough understanding of all engineering aspects and responsibilities. You must have ability to coordinate and manage a team of engineers in stressful situations, and have taken the E-Shui Leadership Training Course. You must have referral from an acting Captain, or HoP. In understaffed areas, recommendations from at least two other heads of staff may substitute. At least 5 years engineering experience is requested.
+			<hr>
+			<br><center><b>Cargo:</b></center>
+			<br><b>Janitor:</b>
+			<br>You must have Hazardous Waste Cleanup training. (This 4-hour course can be provided on hiring)
+			<br>
+			<br><b>Mining Technician:</b>
+			<br>You must be EVA certified. You must have technical competency in all standard mining tools; manual and powered. You must have an up-to-date Automated Mining And Backfilling certificate to operate the 'Deep Drills'. You must have received training on standard Ore processors, and refined goods shipment and handling.
+			<br>
+			<br><b>Cargo Technician:</b>
+			<br>You must have the E-Shui course on Mail and Shipping Privacy. You must have a valid E-Shui driver's license to utilize the cargo tug.
+			<br>
+			<br><b>Quartermaster:</b>
+			<br>You must fill the requirements for 'Mining Technician' and 'Cargo technician'. You must have basic leadership skills to organize the cargo and civilian departments, and have taken the E-Shui Leadership Training Course. You must have a thorough understanding of station logistics and requirements. You must have referral from an acting Captain, or HoP. In understaffed areas, recommendations from at least two other heads of staff may substitute.
+			<hr>
+			<br><center><b>Research:</b></center>
+			<br><b>Scientist:</b>
+			<br>You must have training in Hazardous Materials, and OPSEC level training 2. As of Dec 12, 2568: You must pass a psychological evaluation. You must have technical competency in standard mining tools for xenoarcheology.
+			<br>
+			<br><b>Xenobiologist/Xenobotanist:</b>
+			<br>You must have a thorough understanding of xenobiology and treatment. You must have an up to date Solgov Level 4 biohazard and Hazardous Materials certification.
+			<br>
+			<br><b>Phoronics Researcher:</b>
+			<br>You must have Explosive Ordinance Disposal (EOD) training, and an up to date EOD certification. You must have a minimal criminal record and a security risk of LOW, or MEDIUM with authorization for work with explosive materials.
+			<br>
+			<br><b>Research Director:</b>
+			<br>You must have basic leadership skills, and have taken the E-Shui Leadership Training Course.
+			<br>You must have referral from an acting Captain, or HoP. In understaffed areas, recommendations from at least two other heads of staff may substitute. At least 5 years experience is requested.
+			<hr>
+			<br><center><b>Command:</b></center>
+			<br>
+			<br><b>Internal Affairs Agent:</b>
+			<br>You must have a thorough and comprehensive understanding of station law, and E-Shui expectations. You must have been hired with E-Shui for at least 3 years. You must have a moderate understanding of SolGov law, with a good understanding of Sapient and Synthetic Rights.
+			<br>
+			<br><b>Head of Personnel:</b>
+			<br>You must have a basic understanding of at least half of the station departments, and a strong understanding of station logistics and organization, and have taken the E-Shui Leadership Level 2 Certification Course. You must have an E-Shui Command certification. You must have the ability to coordinate and manage the station in stressful situations. You must have taken the E-Shui OPSEC level 4 course, and all prerequisites. You must have referral from an acting Captain, and at least 2 other heads of staff.
+			<br>
+			<br><b>Captain:</b>
+			<br>You must have competency in every department to minor functionality. You must have at least 1 year working as a head of personnel. You must have recommendation from Central Command, and at least 3 other heads of staff for promotion."}
+
+/*
+/datum/sop_entry/xenoarch
+	title = "Guide to Xenoarcheology"
+	Author = "Diana Kuznetsova"
+	body = {"<center><b>E-Shui Xenoarcheological Studies and Research Field Guide</b>
+			<br><b><u>Xenoarcheology, Anomalies, and You</u></b> </center>
+			<br>
+			<br><b>A letter to any aspiring xenoarcheologist</b>:
+			<br>Xenoarcheology is an inherently dangerous, ever-changing field with numerous lost relics and artifacts that can be found.
+			<br>While some relics may be beneficial and others mundane, some can be <b>highly</b> lethal for both organics and synthetics alike!
+			<br>
+			<br>Due to the ever-changing nature of this field and frequent word-of-mouth education, we have written this guide in order to protect you, the station, and most importantly: Our Terraformer.
+			<br><hr><center><b>Equipment</b></center>
+			<br><b>Mandatory Equipment:</b>
+			<br>Eyewear - Meson Scanners
+			<br><small> Allows for visualization of artifacts, which often appear as large brown deposits with white streaks through them. </small>
+			<br>Hand Equipment - Pickaxe
+			<br><small> Allows for reaching artifact deposit sites.</small>
+			<br>
+			<br><b>Specialty / Critical Equipment:</b>
+			<br>
+			<br>Alden-Saraspova Counter (ASC)
+			<br><small> Allows for pinpointing the site of artifacts.
+			<br>Upon use, it will output a string that appears like such:
+			<br>Large artifact energy signature detected on wavelength '%IDENTIFIER' in a radius of %DISTANCE; small anomaly detected in a radius of %DISTANCE
+			<br>Pinpointing an artifact can be performed by scanning, seeing what the distance reads, then moving to the North, South, East, or West for a few meters and re-scanning.
+			<br>This distance has a detection variation of +/- 2m
+			<br>
+			<br>USAGE:
+			<br>If the number goes up (further away), go in the opposite direction.
+			<br>If the number stays the same, it means that the artifact has a greater pull in another direction (If staying the same when going East/West, the artifact has a greater pull towards the North/South, for example.
+			<br>
+			<br>Depth Analysis Scanner (DAS)
+			<br><small> Allows for scanning artifact deposits to learn the artifact type and depth.
+			<br>
+			<br>USAGE:
+			<br>To use, simply scan a deposit with the scanner and then look at the display, where it will output four lines of information:
+			<br>Time: What time the scan was taken
+			<br>Coords<sic>: Where the anomaly deposit was at when scanned.
+			<br>Anomaly Depth: How far down the anomaly is.
+			<br>Anomaly Material: What type of energy signature the anomaly is off-putting.
+			<br>
+			<br>NOTES:
+			<br>While Material is useful, Depth is the most essential part.
+			<br>If there are multiple artifacts in one deposit, every artifact onward is already excavated as far as you have dug.
+			<br>(I.e, artifact 1: 50, artifact 2: 100. You have dug to 50. You only need to dig 50mm more to unearth artifact 2)
+			<br>If there is a large artifact in the deposit, upon excavating all small artifacts, the depth scanner will read 'ERROR' for depth. This means that after excavating the deposit to >200 mm, rocky debris will be left behind, which must be further excavated with a hand pick or a excavation pick.
+			<br>(This large artifact is sealed from the outside world until excavated, in which it may activate.)</small>
+			<br>
+			<br>Excavation Pick Set & Hand Pickaxe
+			<br><small> Allows for carefully excavating artifacts.
+			<br>Digging too deep or not using picks will result in their potential destruction or improper excavation.
+			<br>
+			<br>USAGE:
+			<br>Look at the Anomaly Depth given to you by the Depth Analysis Scanner
+			<br>Select the appropriate picks to dig to <b>EXACTLY</b> that depth.
+			<br>For reference:
+			<br>Brush 1, Red 2, orange 4, yellow 6, olive 8, blue 10, purple 12. (For color blind individuals look at the length/notches on the shaft of the excavation picks)
+			<br>Hand Pickaxe: 30 mm</small>
+			<br>
+			<br><b>Supplementary Equipment:</b>
+			<br>Xenoarcheology Multitool
+			<br><small>Works as the Alden-Saraspova counter, Depth Analysis Scanner, and Measuring Tape all in one tool.</small>
+			<br>
+			<br>Excavation Drill
+			<br><small>Replaces the Excavation Pick Set & Hand Pickaxe. Can dig from 1 to 60 mm in one go.</small>
+			<br>
+			<br>Measuring Tape
+			<br><small>Allows seeing how far your current excavation is.</small>
+			<br>
+			<br>Core Sampler
+			<br><small>Useless. Do not bother with it.</small>
+			<br>
+			<br>Locator Device + Tracking Beacon
+			<br><small>Tracking beacon can be set to a frequency, placed on a table, and the Locator can then be set to the same frequency. Tell the locator to 'search' for the device and place it down some ways away from the tracking beacon and they will pair, allowing the tracking beacon to be located at all times.
+			<br>NOTES:
+			<br>Do not place the tracking beacon and locator too close while searching, otherwise they will be incapable of linking.
+			<br>The tracking beacon allows individuals to teleport to the beacon via the station's many teleporters.</small>
+			<br>
+			<br>GPS
+			<br><small>Make sure to activate it and give it a unique identifier, such as your name.</small>
+			<br>
+			<br>Excavation Suit + Excavation Hood
+			<br><small>A pressure sealed suit for excavating in locations that lack or have a hostile atmosphere. Lined with asbestos and lead, rendering it radiation immune.</small>
+			<br>
+			<br>Anomaly Hood + Anomaly Suit + Latex Gloves + goggles
+			<br><small>Allows for examining and interacting with anomalies, lowering the chance of negative effects.
+			<br>NOTE: Does not block EMPs emitted from artifacts.
+			<br>: A properly fitted gasmask and internals are suggested for crew that need to breathe.</small>
+			<br>
+			<br>Suspension Field Generator
+			<br><small>Can be pulled along and wrenched down. Upon turning on, will place whatever entity is directly in front of it in stasis. Recommended for extremely skilled archeologists only.</small>
+			<br>
+			<br>Sample Container
+			<br>small>Allows storing small artifacts found in an orderly fashion.</small>
+			<br>
+			<br>Anomaly Container
+			<br><small>Allows safe storage and transport of an anomaly. These are large cases held in a secondary storage room.
+			<br>This lead lined container will hold an artifact inside, indefinitely preventing its effects.</small>
+			<br>
+			<br><hr><center><b>Machinery</b></center>
+			<br>Anomaly Analyzer
+			<br><small>When next to an Anomaly Scanner Pad, can be used to analyze an anomaly on the Scanner Pad. This will give triggering factors and information as to the effects of the anomaly. More detail will be listed in the 'Artifact Identification' and 'Artifact Activation' sections of this document.</small>
+			<br>
+			<br>Exotic Particle Harvester
+			<br><small>When next to an Anomaly Scanner Pad with an anomaly on the Scanner Pad, can be used to extract the energy of an artifact into a Anomaly power battery.</small>
+			<br><hr><center><b>Artifact Identification</b>
+			<br></center>
+			<br> can be identified in a plethora of ways, ranging from the coloration and 'look' of their effect to the artifact shape and form itself.
+			<br>Artifacts that have the same effect have been noted to have the same energy appearance, such as sparkles, or a blue sphere around it for example. Memorizing the artifact
+			<br>
+			<br>Some smaller artifacts may be seemingly meaningless trinkets and baubles such as coins, but may also contain energetic effects, such as off-putting EMP waves, allowing resurrection of dead subjects, or creation of entirely new entities.
+			<br>
+			<br>Additionally, artifacts can vary even with the same effect. Some will only cause an effect it touched, nearby, or on a multi kilometer basis.
+			<br>Needless to say, if an artifact has the ability to effect the entire outpost with hostile effects, it should be quickly placed into an Anomaly Container for storage and safety.
+			<br>
+			<br>NOTE: Artifacts can multiple anomalous effects at once.
+			<br><hr><center><b>Artifact Activation</b></center>
+			<br>After scanning the artifact in the Anomaly Analyzer, it will note down some potential activators for the artifact. For quick reference, the potential activators will be noted here as well.
+			<br>
+			<br>Physical Interaction: Simply touch the artifact with ungloved hands.
+			<br>
+			<br>Chemical Interaction: Involves splashing a specific reagent onto the artifact via a beaker. Involves four subsections:
+			<br><small>Water: Hydrogen or Water
+			<br>Acid: Sulfuric Acid or Diethylamine
+			<br>Volatile: Thermite, Hydrophoron, Phoron
+			<br>Toxic: Any toxins, such as liquid lead.</small>
+			<br>
+			<br>Forceful or Energetic Interaction:
+			<br>If it is energetic, a multitool, stun baton, energy blade, or an energy beam can activate it.
+			<br>If it is forceful, a strong blow with something such as a full sized fire extinguisher or other strong object can activate it.
+			<br>
+			<br>Precise Temperature Conditions:
+			<br>If it is triggered by heat, a lit welder can activate it. Alternatively, an atmosphere above 375K can activate it.
+			<br>If it is triggered by cold, the surrounding air must be cooled below 225K for the artifact to activate.
+			<br><hr><center><b>Artifact Harvesting</b></center>
+			<br>In order to harvest an artifact, the artifact must be placed on the Anomaly Scanner Pad next to an Exotic Particle Harvester.
+			<br>Afterwards, an Anomaly power battery must be placed inside the Exotic Particle Harvester. Upon telling the harvester to activate, it will scan the artifact and note down any energy signals it detects and give the best approximation of what effect the energy signal creates.
+			<br>Selecting this signal will then harvest the energy into the battery.
+			<br>This battery can, once full, be removed from the artifact and placed in an Anomaly power utilizer. From here, the duration between energy pulses and the duration the utilizer will work for. This can be used only a limited amount of times before having to be recharged. Research can yield greater battery sizes.
+			<br>
+			<br><hr><center><b>Quick Reference / How to Excavate</b>
+			<br>
+			<br>Step 0: Obtain a mind and body backup. Retrieve a 'Death Alarm Implant' from Medical. If extreme safety is desired, perform step 6.5 now.
+			<br>
+			<br>Step 1: Grab a belt, mesons, and pickaxe.
+			<br>
+			<br>Step 2: Put the following in your belt: GPS (After activating it), Alden-Saraspova Counter (ASC), Depth Analysis Scanner (DAS), Excavation Pick Set & Hand Pickaxe.
+			<br>
+			<br>Step 3: Go outside to an appropriate location and scan with your ASC. Go in various directions until the number on the ASC is becoming smaller and you see a brown deposit  with white streaks in it. Go over towards it.
+			<br>Step 4: Use your DAS on the deposit and examine the depth. Proceed to use your Excavation Pick Set to perfectly excavate the artifact to that exact depth.
+			<br>
+			<br>Step 5: An artifact (small) will be excavated. Continue to excavate until the DAS reads no more signatures, or until it reads 'ERROR' in which case dig >200mm and then dig the rocky debris up.
+			<br>
+			<br>Step 6: Bring your finds back to the Anomaly lab.
+			<br>
+			<br>Step 6.5: Put on an Anomaly Suit, Anomaly Hood, Latex Gloves, Gas Mask w/ Oxygen Tank attached, and goggles. (If not already done in Step 0)
+			<br>
+			<br>Step 7: Place the artifact in the Artifact Analyzer and scan it. Reference the 'Artifact Activation' on how to activate it given what the paper reads.
+			<br>
+			<br>Step 7.5: Harvest it with the harvester, if desired.
+			<br>
+			<br>Step 8: Place the artifact in a safe location while deactivated, or in an Anomaly Container if deactivation is unable to be performed.
+			<br>
+			<br></center>
+			<br>
+			<br><hr><small><i>
+			<br>This field guide and all attached documents are intended only for E-Shui contracted employees and may contain confidential information. Any unauthorized disclosure is strictly prohibited.
+			<br>
+			<br>The information provided in this document does not guarantee safety or protection even if all steps are performed. E-Shui does not take any responsibility for accidents that occur while using this handbook or utilizing any information held within this handbook.
+			<br>
+			<br>Excavated finds can and have activated at random, resulting in effects such as: Irreversible Genetic Mutations, EMP explosions, Terrain Annihilation, Ego Death, Hivemind Assimilation, Robotic Transformation, Immolation, Asphyxiation, Perpetual Sleep, Hallucinations, Belief in the Supernatural, Spontaneous Magnetism, Spontaneous Evisceration, Resurrection, Bluespace Re-translocation, Radiation sickness, among others.
+			<br>
+			<br>Information has been reviewed and found to be up to date as of 2569-09-29
+			<br></i></small>"}
+*/ //Temp commented until Diana fixes it
 
 /datum/sop_entry/fragords
 	title = "Fragmentary Orders"

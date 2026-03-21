@@ -27,169 +27,52 @@
 		list(mode_name="shotgun", fire_delay=15, projectile_type=/obj/item/projectile/bullet/frostshotgun, charge_cost = 240),
 		)
 
-/obj/item/gun/energy/flamegun
-	name = "Flame Crystal Projector"
-	desc = "A strange gun pulsing with energy, it's touch warming you up."
-	icon = 'modular_chomp/icons/obj/guns/precursor/eclipse.dmi'
-	icon_state = "flamegun"
-	item_state = "flamegun"
-	wielded_item_state = "flame-wielded"
+/obj/item/grenade/chem_grenade/frost
+	name = "frost grenade"
+	desc = "Currently in the testing phase, pratical purposes are unknown."
+	icon_state = "foam"
+	path = 1
+	stage = 2
+	sealed = TRUE
 
-	w_class = ITEMSIZE_LARGE
+/obj/item/grenade/chem_grenade/frost/Initialize(mapload)
+	. = ..()
+	var/obj/item/reagent_containers/glass/beaker/bluespace/B1 = new(src)
+	var/obj/item/reagent_containers/glass/beaker/bluespace/B2 = new(src)
 
-	accept_cell_type = /obj/item/cell/device
-	cell_type = /obj/item/cell/device/weapon
-	projectile_type = /obj/item/projectile/energy/flamecrystal
+	B1.reagents.add_reagent(REAGENT_ID_CRYOSLURRY, 150)
+	B1.reagents.add_reagent(REAGENT_ID_POTASSIUM, 150)
+	B2.reagents.add_reagent(REAGENT_ID_PHOSPHORUS, 150)
+	B2.reagents.add_reagent(REAGENT_ID_SUGAR, 150)
 
-	matter = list(MAT_DURASTEEL = 1000, MAT_MORPHIUM = 500)
-	origin_tech = list(TECH_COMBAT = 6, TECH_POWER = 5, TECH_PRECURSOR = 3)
+	detonator = new/obj/item/assembly_holder/timer_igniter(src)
 
-	recoil_mode = 0
-	charge_meter = 1
+	beakers += B1
 
-	move_delay = 0
-
-	charge_cost = 80
-
-	reload_time = 10
-
-	firemodes = list(
-		list(mode_name="normal", fire_delay=5, projectile_type=/obj/item/projectile/energy/flamecrystal, charge_cost = 80),
-		list(mode_name="shotgun", fire_delay=15, projectile_type=/obj/item/projectile/bullet/flamegun, charge_cost = 240),
-		list(mode_name="explosive", fire_delay=10, projectile_type=/obj/item/projectile/energy/fireball, charge_cost = 160),
-		)
-
-/obj/item/gun/energy/elementalray
-	name = "Proto-type Weapon Avatar"
-	desc = "A strange gun vibrating with energy, lathered with diffrent buttons and switches."
-	icon = 'modular_chomp/icons/obj/guns/precursor/eclipse.dmi'
-	icon_state = "avatar"
-	item_state = "avatar"
-	wielded_item_state = "avatar-wielded"
-
-	accept_cell_type = /obj/item/cell/device
-	cell_type = /obj/item/cell/device/weapon
-	projectile_type = /obj/item/projectile/bullet/flamegun
-
-	matter = list(MAT_DURASTEEL = 1000, MAT_MORPHIUM = 500)
-	origin_tech = list(TECH_COMBAT = 6, TECH_POWER = 5, TECH_PRECURSOR = 3)
-
-	recoil_mode = 0
-	charge_meter = 1
-
-	move_delay = 0
-
-	charge_cost = 160
-
-	reload_time = 20
-
-	firemodes = list(
-		list(mode_name="fire", burst=1, fire_delay=15, projectile_type=/obj/item/projectile/bullet/flamegun, charge_cost = 160, modifystate="avatarfire"),
-		list(mode_name="lighting", burst=1, fire_delay=20, projectile_type=/obj/item/projectile/beam/lightingsurge, charge_cost = 480, modifystate="avatarlighting"),
-		list(mode_name="frost", burst=3, fire_delay=15, projectile_type=/obj/item/projectile/energy/frostsphere, charge_cost = 260, modifystate="avatarfrost"),
-		list(mode_name="acid", burst=1, fire_delay=0.5, projectile_type=/obj/item/projectile/energy/muckblob, charge_cost = 10, modifystate="avataracid"),
-		)
-
-/obj/item/gun/energy/elementalray/emag_act(var/remaining_charges, var/mob/user)
-	..()
-	to_chat(user, span_notice("You short circuit the internal locking mechanisms of \the [src]!"))
-	firemodes = list(
-		list(mode_name="fire", burst=1, fire_delay=15, projectile_type=/obj/item/projectile/bullet/flamegun, charge_cost = 160),
-		list(mode_name="lighting", burst=1, fire_delay=20, projectile_type=/obj/item/projectile/beam/lightingsurge, charge_cost = 480),
-		list(mode_name="frost", burst=3, fire_delay=15, projectile_type=/obj/item/projectile/energy/frostsphere, charge_cost = 160),
-		list(mode_name="acid", burst=1, fire_delay=0.5, projectile_type=/obj/item/projectile/energy/muckblob, charge_cost = 10),
-		list(mode_name="error", burst=1, fire_delay=30, projectile_type=/obj/item/projectile/bullet/errorelement, charge_cost = 1040),
-		)
-	return 1
-
-/obj/item/projectile/bullet/errorelement //You are the bullet hell
-	use_submunitions = 1
-	only_submunitions = 1
-	range = 0
-	embed_chance = 0
-	submunition_spread_max = 3600
-	submunition_spread_min = 500
-	submunitions = list(/obj/item/projectile/energy/flamecrystal = 2, /obj/item/projectile/energy/frostsphere = 2, /obj/item/projectile/beam/lightingsurge = 1, /obj/item/projectile/energy/muckblob = 5)
-	hud_state = "laser_heat"
-
-/obj/item/projectile/beam/lightingsurge //Anti-synth laser
-	damage = 60
-	light_color = "#00CCFF"
-	damage_type = ELECTROMAG
-
-/obj/item/projectile/energy/muckblob
-	damage = 4
-	damage_type = BIOACID
-	check_armour = "bio"
-	combustion = FALSE
-	modifier_type_to_apply = /datum/modifier/muck
-	modifier_duration = 5
-	speed = 0.6
-	range = 8
-
-/datum/modifier/muck
-	name = "acid covered"
-	desc = "You are covered in acid"
-	mob_overlay_state = "poisoned"
-
-	on_created_text = span_warning("You are covered in muck...")
-	on_expired_text = span_notice("You are no longer covered in muck.")
-	stacks = MODIFIER_STACK_ALLOWED
-
-	slowdown = 0.2
-
-
-/obj/item/gun/energy/pulseglove
-	name = "Strange Glove"
-	desc = "A bulky glove cladded with strange tech. It hums with energy, and the battery port is inaccessiable"
-	icon = 'modular_chomp/icons/obj/guns/precursor/eclipse.dmi'
-	icon_state = "darkglove"
-	item_state = "darkglove"
-
-	charge_cost = 380 // 13 shots
-
-	projectile_type = /obj/item/projectile/bullet/lightingburst
-	cell_type = /obj/item/cell/device/weapon/recharge/alien
-	battery_lock = 1
-
-
-/obj/item/projectile/energy/redlighting
-	name = "Flame Crystal"
-	icon = 'modular_chomp/icons/mob/eclipse.dmi' //commiting sin
-	icon_state = "redlighting"
-	damage = 20
-	armor_penetration = 20
-	hud_state = "laser_sniper"
-
-/obj/item/projectile/energy/darkmeteor
-	name = "Strange Sphere"
-	icon = 'modular_chomp/icons/mob/eclipse.dmi' //commiting sin
-	icon_state = "darkmeteor"
-	damage = 60
-	damage_type = BRUTE
-	check_armour = "melee"
-	speed = 15
-
-/obj/item/projectile/bullet/meteorstorm
-	use_submunitions = 1
-	only_submunitions = 1
-	range = 0
-	embed_chance = 0
-	submunition_spread_max = 3600
-	submunition_spread_min = 1200
-	submunitions = list(/obj/item/projectile/energy/darkmeteor = 3)
-
-/obj/item/projectile/bullet/lightingburst
+/obj/item/projectile/bullet/frostshotgun
 	use_submunitions = 1
 	only_submunitions = 1
 	range = 0
 	embed_chance = 0
 	submunition_spread_max = 1200
-	submunition_spread_min = 200
-	submunitions = list(/obj/item/projectile/energy/redlighting = 3)
-	hud_state = "laser_sniper"
+	submunition_spread_min = 500
+	submunitions = list(/obj/item/projectile/energy/frostsphere = 4)
 
+	hud_state = "plasma_sphere"
 
+/obj/item/projectile/bullet/frostshotgun/on_range()
+	qdel(src)
+
+/obj/item/projectile/energy/frostsphere
+	name = "frost sphere"
+	icon_state = "ice_2"
+	fire_sound = 'sound/weapons/pulse3.ogg'
+	damage = 20
+	modifier_type_to_apply = /datum/modifier/cryogelled
+	modifier_duration = 0.25 MINUTE
+	speed = 2.5
+	range = 12
+	hud_state = "water"
 
 /obj/item/projectile/energy/mechahack
 	name = "remote hack"
@@ -227,99 +110,69 @@
 	else
 		target_mob.electrocute_act(power, src, 0.75, BP_TORSO)
 
-/obj/item/projectile/bullet/crystaline
-	name = "crystal bullet"
-	icon = 'modular_chomp/icons/obj/guns/precursor/eclipse.dmi'
-	icon_state = "crystal"
-	damage = 30
-	armor_penetration = 20
-	embed_chance = 0
-	speed = 2
-
-/obj/item/projectile/energy/eclipse
+/obj/item/projectile/energy/eclipse_boss
 	name = "experimental laser"
 	icon = 'modular_chomp/icons/obj/guns/precursor/eclipse.dmi'
 	icon_state = "laser"
 	check_armour = "laser"
-	damage = 30
-	armor_penetration = 20
-	penetrating = 2
-	speed = 2
+	speed = 10
 	crawl_destroy = TRUE
 
-//The normal laser respects more armor, but deals more damage if you don't have it.precursor will thwack folks equally.
-/obj/item/projectile/energy/eclipse/lorge
-	damage = 60
-	armor_penetration = 30
-	icon_state = "mega_laser"
-	speed = 10
-
-/obj/item/projectile/energy/eclipse/lorgealien
-	damage = 20
-	armor_penetration = 60
-	icon_state = "mega_laser_p"
-	speed = 10
-
-/obj/item/projectile/bullet/crystalineburst
-	use_submunitions = 1
-	range = 0
-	embed_chance = 0
-	spread_submunition_damage = FALSE
-	submunition_spread_max = 120
-	submunition_spread_min = 60
-	submunitions = list(/obj/item/projectile/bullet/crystaline = 5)
-
-/obj/item/projectile/energy/eclipse/janusjavelin //This will end you
-	name = "energy javelin"
-	icon_state = "javelin"
-	damage_type = SEARING
-	check_armour = "bullet"
-	damage = 45
-	armor_penetration = 95
-	speed = 10
-
-/obj/item/projectile/energy/eclipse/chillingwind
+/obj/item/projectile/energy/eclipse_boss/chillingwind
 	name = "ice winds"
 	icon_state = "ice_wind"
 	damage = 15
 	armor_penetration = 70
-	speed = 10
 	modifier_type_to_apply = /datum/modifier/cryogelled
 	modifier_duration = 0.25 MINUTE
 
-/obj/item/projectile/energy/eclipse/mining
-	name = "drill"
-	icon_state = "drill"
+/obj/item/projectile/energy/eclipse_boss/metalsphere
+	name = "metal sphere"
+	icon_state = "metal_sphere"
 	damage_type = BRUTE
 	check_armour = "bullet"
-	damage = 40
-	armor_penetration = 30
-	speed = 10
-	excavation_amount = 100
+	damage = 20
+	agony = 10
+	armor_penetration = 50
 
-//technically not eclipse but honary
-
-/obj/item/projectile/energy/eclipse/poisonwind
-	name = "anomalous winds"
-	icon_state = "ice_wind"
-	damage = 10
-	armor_penetration = 70
-	speed = 10
-	color = "#003300"
-	modifier_type_to_apply = /datum/modifier/poisoned //main threat right here, Will two tap most players if untreated
-	modifier_duration = 1 MINUTE
-
-/obj/item/projectile/energy/eclipse/tyrjavelin //Five hits ought to end you
-	name = "energy javelin"
+/obj/item/projectile/energy/eclipse_boss/energyjavelin
+	name = "searing javelin"
 	icon_state = "javelin"
 	damage_type = SEARING
-	check_armour = "melee"
-	damage = 23
+	damage = 40
 	armor_penetration = 30
-	speed = 10
-	color = "#FF6600"
-	modifier_type_to_apply = /datum/modifier/deep_wounds //reduced healing
-	modifier_duration = 1 MINUTE
 
-/obj/item/projectile/energy/eclipse/tyrjavelin/speed
-	speed = 7
+//projectiles
+/obj/item/projectile/energy/astral_collective
+	name = "abnormal energy"
+	speed = 3
+	damage = 28 //roughly 25 with intended armour
+	damage_type = BURN //BRUTE, BURN, TOX, OXY, CLONE, HALLOSS, ELECTROCUTE, BIOACID, SEARING are the only things that should be in here
+	check_armour = "laser" //Defines what armor to use when it hits things.  Must be set to bullet, laser, energy,or bomb	//Cael - bio and rad are also valid
+
+/obj/item/projectile/energy/astral_collective/anti_mecha
+	damage_type = BIOACID
+	icon_state = "declone"
+
+/obj/item/projectile/energy/astral_collective/armour_breaker
+	damage = 10
+	dephasing = TRUE
+	hits_phased = TRUE
+	icon_state = "fuel-deuterium"
+	penetrating = 10
+	armor_penetration = 100
+
+/obj/item/projectile/energy/astral_collective/searing
+	damage_type = SEARING
+	icon_state = "bolter"
+
+/obj/item/projectile/energy/astral_collective/green
+	icon_state = "energy"
+	irradiate = 40
+
+/obj/item/projectile/energy/astral_collective/particle
+	damage = 1
+	armor_penetration = 100
+	icon_state = "particle"
+	incendiary = 1
+	flammability = 3

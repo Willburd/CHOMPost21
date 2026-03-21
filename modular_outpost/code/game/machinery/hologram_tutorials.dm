@@ -98,7 +98,7 @@
 /obj/machinery/hologram/holo_tutorial/proc/clear_holo()
 	set_light(0)			//pad lighting (hologram lighting will be handled automatically since its owner was deleted)
 	icon_state = "holopad0"
-	holo.Destroy()
+	qdel(holo)
 	holo = null
 	return 1
 

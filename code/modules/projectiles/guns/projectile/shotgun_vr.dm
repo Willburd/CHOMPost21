@@ -3,6 +3,7 @@
 	name = "\improper USDF tactical shotgun"
 	desc = "All you greenhorns who wanted to see Xenomorphs up close... this is your lucky day. Uses 12g rounds."
 	icon_state = "haloshotgun"
+	icon = 'icons/obj/gun.dmi' // Outpost 21 edit(port) - Use actual icon
 	icon_override = 'icons/obj/gun.dmi'
 	item_state = "haloshotgun_i"
 	item_icons = null

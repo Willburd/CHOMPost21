@@ -19,7 +19,8 @@ export const NoticeBoard = (props) => {
 
   return (
     <Window width={330} height={300}>
-      <Window.Content>
+      {/* Outpost 21 edit - Made scrollable */}
+      <Window.Content scrollable>
         <Section>
           {notices.length ? (
             <LabeledList>

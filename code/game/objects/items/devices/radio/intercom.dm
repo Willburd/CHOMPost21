@@ -8,7 +8,7 @@
 	anchored = TRUE
 	w_class = ITEMSIZE_LARGE
 	canhear_range = 7
-	flags = NOBLOODY
+	flags = NOBLOODY | WALL_ITEM
 	light_color = "#00ff00"
 	light_power = 0.25
 	blocks_emissive = NONE
@@ -70,13 +70,13 @@
 	name = "station intercom (Medbay)"
 	icon_state = "medintercom"
 	light_color = "#00aaff"
-	frequency = MED_FREQ // Outpost 21 edit - Use department comms not internal
+	frequency = MED_I_FREQ
 
 /obj/item/radio/intercom/department/security
 	name = "station intercom (Security)"
 	icon_state = "secintercom"
 	light_color = "#ff0000"
-	frequency = SEC_FREQ // Outpost 21 edit - Use department comms not internal
+	frequency = SEC_I_FREQ
 
 /obj/item/radio/intercom/entertainment
 	name = "entertainment intercom"
@@ -177,7 +177,7 @@
 			return -1
 	if (!src.listening)
 		return -1
-	if(freq in ANTAG_FREQS)
+	if(freq in GLOB.antag_frequencies)
 		if(!(src.syndie))
 			return -1//Prevents broadcast of messages over devices lacking the encryption
 
@@ -209,7 +209,7 @@
 			set_light_on(TRUE)
 
 //VOREStation Add Start
-/obj/item/radio/intercom/AICtrlClick(var/mob/user)
+/obj/item/radio/intercom/ctrl_click_ai(var/mob/user)
 	ToggleBroadcast()
 	to_chat(user, span_notice("\The [src]'s microphone is now <b>[broadcasting ? "enabled" : "disabled"]</b>."))
 
@@ -240,3 +240,8 @@
 /obj/item/radio/intercom/locked/confessional
 	name = "confessional intercom"
 	frequency = LOCKED_COM_FREQ
+
+/obj/item/radio/intercom/locked/entertainment
+	name = "entertainment PA"
+	frequency = ENT_FREQ
+	broadcasting = TRUE

@@ -7,8 +7,6 @@
 	var/mirrored = FALSE
 	var/tee = FALSE
 
-	var/initial_icon_updated = FALSE // Outpost 21 edit - These need to wait a bit, then do an icon update, or they won't init the icon correctly on map spawn!
-
 	var/datum/gas_mixture/air1
 	var/datum/gas_mixture/air2
 	var/datum/gas_mixture/air3
@@ -34,15 +32,15 @@
 	initialize_directions = get_initialize_directions_trinary(dir, mirrored, tee)
 
 /obj/machinery/atmospherics/trinary/update_underlays()
-	if(..())
-		underlays.Cut()
-		var/turf/T = get_turf(src)
-		if(!istype(T))
-			return
-		var/list/node_connects = get_node_connect_dirs()
-		add_underlay(T, node1, node_connects[1])
-		add_underlay(T, node2, node_connects[2])
-		add_underlay(T, node3, node_connects[3])
+	..()
+	underlays.Cut()
+	var/turf/T = get_turf(src)
+	if(!istype(T))
+		return
+	var/list/node_connects = get_node_connect_dirs()
+	add_underlay(T, node1, node_connects[1])
+	add_underlay(T, node2, node_connects[2])
+	add_underlay(T, node3, node_connects[3])
 
 /obj/machinery/atmospherics/trinary/hide(var/i)
 	update_underlays()
@@ -250,7 +248,7 @@
 	return list(node1_connect, node2_connect, node3_connect)
 
 //CHOMPEdit Start - Keybinds for EVEEERYTHING
-/obj/machinery/atmospherics/trinary/CtrlClick(mob/user)
+/obj/machinery/atmospherics/trinary/click_ctrl(mob/user)
 	user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
 	if(allowed(user))
 		update_use_power(!use_power)

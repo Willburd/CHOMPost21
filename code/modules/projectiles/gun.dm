@@ -97,7 +97,6 @@
 	var/recoil_mode = 1			//If the gun will hurt micros if shot or not. Disabled on Virgo, used downstream. //CHOMPEDIT - Enabled
 	var/mounted_gun = 0				//If the gun is mounted within a rigsuit or elsewhere. This makes it so the gun can be shot even if it's loc != a mob
 
-//VOREStation Add - /tg/ icon system
 	var/charge_sections = 4
 	var/shaded_charge = FALSE
 	var/ammo_x_offset = 2
@@ -109,7 +108,10 @@
 	var/flight_x_offset = 0
 	var/flight_y_offset = 0
 
-/obj/item/gun/CtrlClick(mob/user)
+	///Var for attack_self chain
+	var/special_handling = FALSE
+
+/obj/item/gun/item_ctrl_click(mob/user)
 	if(can_flashlight && ishuman(user) && loc == user && !user.incapacitated(INCAPACITATION_ALL))
 		toggle_flashlight()
 	else
@@ -216,14 +218,13 @@
 	if(HULK in M.mutations)
 		to_chat(M, span_danger("Your fingers are much too large for the trigger guard!"))
 		return FALSE
-	if((CLUMSY in M.mutations) && prob(10)) //Clumsy handling // Outpost 21 edit - Made clumsy less obnoxious
+	if(CLUMSY_HARM_CHANCE(M)) //Clumsy handling
 		var/obj/P = consume_next_projectile()
 		if(P)
 			if(process_projectile(P, user, user, pick(BP_L_FOOT, BP_R_FOOT)))
 				handle_post_fire(user, user)
-				var/datum/gender/TU = GLOB.gender_datums[user.get_visible_gender()]
 				user.visible_message(
-					span_danger("\The [user] shoots [TU.himself] in the foot with \the [src]!"),
+					span_danger("\The [user] shoots [user.p_themselves()] in the foot with \the [src]!"),
 					span_danger("You shoot yourself in the foot with \the [src]!")
 					)
 				M.drop_item()
@@ -235,10 +236,6 @@
 /obj/item/gun/proc/lock_explosion()
 	explosion(src, 0, 0, 3, 4)
 	QDEL_IN(src, 1)
-
-/obj/item/gun/emp_act(severity)
-	for(var/obj/O in contents)
-		O.emp_act(severity)
 
 /obj/item/gun/afterattack(atom/A, mob/living/user, adjacent, params)
 	if(adjacent) return //A is adjacent, is the user, or is on the user's person
@@ -634,6 +631,7 @@
 				damage_mult = 2.5
 			else if(grabstate >= GRAB_AGGRESSIVE)
 				damage_mult = 1.5
+	P.agony *= damage_mult
 	P.damage *= damage_mult
 
 /obj/item/gun/proc/process_accuracy(obj/projectile, mob/living/user, atom/target, var/burst, var/held_twohanded)
@@ -791,6 +789,11 @@
 	return new_mode
 
 /obj/item/gun/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
+	if(special_handling)
+		return FALSE
 	switch_firemodes(user)
 
 /* TGMC Ammo HUD Port Begin */

@@ -59,7 +59,6 @@
 	var/slowdown = 0 // How much clothing is slowing you down. Negative values speeds you up
 	var/canremove = TRUE //Mostly for Ninja code at this point but basically will not allow the item to be removed if set to 0. /N
 	var/list/armor = list("melee" = 0, "bullet" = 0, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0)
-	var/list/armorsoak = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0)
 	var/list/allowed = null //suit storage stuff.
 	var/obj/item/uplink/hidden/hidden_uplink = null // All items can have an uplink hidden inside, just remember to add the triggers.
 	var/zoomdevicename = null //name used for message when binoculars/scope is used
@@ -140,7 +139,7 @@
 	var/digest_stage = null
 	var/d_mult_old = 1 //digest stage descriptions
 	var/d_mult = 1 //digest stage descriptions
-	var/d_stage_overlay //digest stage effects
+	var/image/d_stage_overlay //digest stage effects
 	var/gurgled = FALSE
 	var/oldname
 	var/cleanname
@@ -170,6 +169,7 @@
 	M.update_held_icons()
 
 /obj/item/Destroy()
+	d_stage_overlay = null
 	if(item_tf_spawn_allowed)
 		GLOB.item_tf_spawnpoints -= src
 	if(ismob(loc))
@@ -185,6 +185,19 @@
 
 	return ..()
 
+
+/obj/item/click_ctrl(mob/user)
+	SHOULD_NOT_OVERRIDE(TRUE)
+
+	//If the item is on the ground & not anchored we allow the player to drag it
+	. = item_ctrl_click(user)
+	if(. & CLICK_ACTION_ANY)
+		return (isturf(loc) && !anchored) ? NONE : . //allow the object to get dragged on the floor
+
+/// Subtypes only override this proc for ctrl click purposes. obeys same principles as ctrl_click()
+/obj/item/proc/item_ctrl_click(mob/user)
+	SHOULD_CALL_PARENT(FALSE)
+	return NONE
 
 /// Called when an action associated with our item is deleted
 /obj/item/proc/on_action_deleted(datum/source)
@@ -321,7 +334,7 @@
 		else
 			to_chat(user, span_notice("This is anchored and you can't lift it."))
 		return // End CHOMPStation Edit
-	if (hasorgans(user))
+	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
 		var/obj/item/organ/external/temp = H.organs_by_name[BP_R_HAND]
 		if (user.hand)
@@ -343,7 +356,6 @@
 			return
 
 	src.pickup(user)
-	src.throwing = 0
 	if (src.loc == user)
 		if(!user.unEquip(src))
 			return
@@ -422,8 +434,6 @@
 // apparently called whenever an item is removed from a slot, container, or anything else.
 /obj/item/proc/dropped(mob/user)
 	SHOULD_CALL_PARENT(TRUE)
-	if(zoom)
-		zoom() //binoculars, scope, etc
 	appearance_flags &= ~NO_CLIENT_COLOR
 	// Remove any item actions we temporary gave out.
 	for(var/datum/action/action_item_has as anything in actions)
@@ -433,6 +443,7 @@
 		qdel(src)
 
 	SEND_SIGNAL(src, COMSIG_ITEM_DROPPED, user)
+	SEND_SIGNAL(user, COMSIG_MOB_DROPPED_ITEM, src)
 
 	if(my_augment && !QDELETED(src))
 		forceMove(my_augment)
@@ -440,6 +451,7 @@
 // called just as an item is picked up (loc is not yet changed)
 /obj/item/proc/pickup(mob/user)
 	SEND_SIGNAL(src, COMSIG_ITEM_PICKUP, user)
+	SEND_SIGNAL(user, COMSIG_ITEM_PICKUP, src)
 	pixel_x = 0
 	pixel_y = 0
 	return
@@ -469,7 +481,7 @@
 	user.position_hud_item(src,slot)
 	if(user.client)	user.client.screen |= src
 	if(user.pulling == src) user.stop_pulling()
-	if(("[slot]" in slot_flags_enumeration) && (slot_flags & slot_flags_enumeration["[slot]"]))
+	if(("[slot]" in GLOB.slot_flags_enumeration) && (slot_flags & GLOB.slot_flags_enumeration["[slot]"]))
 		if(equip_sound && !muffled_by_belly(user))
 			playsound(src, equip_sound, 20, preference = /datum/preference/toggle/pickup_sounds)
 		else if(!muffled_by_belly(user))
@@ -477,6 +489,12 @@
 	else if(slot == slot_l_hand || slot == slot_r_hand)
 		if(!muffled_by_belly(user))
 			playsound(src, pickup_sound, 20, preference = /datum/preference/toggle/pickup_sounds)
+	SEND_SIGNAL(src, COMSIG_ITEM_EQUIPPED, user, slot)
+	SEND_SIGNAL(user, COMSIG_MOB_EQUIPPED_ITEM, src, slot)
+	var/mob/living/M = loc
+	if(!istype(M))
+		return
+	M.update_held_icons()
 
 /// Gives one of our item actions to a mob, when equipped to a certain slot
 /obj/item/proc/give_item_action(datum/action/action, mob/to_who, slot)
@@ -501,7 +519,7 @@
 	return
 
 //Defines which slots correspond to which slot flags
-var/list/global/slot_flags_enumeration = list(
+GLOBAL_LIST_INIT(slot_flags_enumeration, list(
 	"[slot_wear_mask]" = SLOT_MASK,
 	"[slot_back]" = SLOT_BACK,
 	"[slot_wear_suit]" = SLOT_OCLOTHING,
@@ -515,7 +533,7 @@ var/list/global/slot_flags_enumeration = list(
 	"[slot_w_uniform]" = SLOT_ICLOTHING,
 	"[slot_wear_id]" = SLOT_ID,
 	"[slot_tie]" = SLOT_TIE,
-	)
+	))
 
 //the mob M is attempting to equip this item into the slot passed through as 'slot'. Return 1 if it can do this and 0 if it can't.
 //If you are making custom procs but would like to retain partial or complete functionality of this one, include a 'return ..()' to where you want this to happen.
@@ -536,8 +554,8 @@ var/list/global/slot_flags_enumeration = list(
 		return 0
 
 	//First check if the item can be equipped to the desired slot.
-	if("[slot]" in slot_flags_enumeration)
-		var/req_flags = slot_flags_enumeration["[slot]"]
+	if("[slot]" in GLOB.slot_flags_enumeration)
+		var/req_flags = GLOB.slot_flags_enumeration["[slot]"]
 		if(!(req_flags & slot_flags))
 			return 0
 
@@ -708,7 +726,7 @@ var/list/global/slot_flags_enumeration = list(
 	user.do_attack_animation(M)
 
 	src.add_fingerprint(user)
-	//if((CLUMSY in user.mutations) && prob(50))
+	//if(CLUMSY_HARM_CHANCE(user))
 	//	M = user
 		/*
 		to_chat(M, span_warning("You stab yourself in the eye."))
@@ -814,91 +832,42 @@ GLOBAL_LIST_EMPTY(blood_overlays_by_type)
 	if(I && !I.abstract)
 		I.showoff(src)
 
-/*
-For zooming with scope or binoculars. This is called from
-modules/mob/mob_movement.dm if you move you will be zoomed out
-modules/mob/living/carbon/human/life.dm if you die, you will be zoomed out.
-*/
-//Looking through a scope or binoculars should /not/ improve your periphereal vision. Still, increase viewsize a tiny bit so that sniping isn't as restricted to NSEW
-/obj/item/var/ignore_visor_zoom_restriction = FALSE
-
+/// For zooming with scope or binoculars. Uses remote_view/item component for disabling when you move or drop the item
 /obj/item/proc/zoom(var/mob/living/M, var/tileoffset = 14,var/viewsize = 9) //tileoffset is client view offset in the direction the user is facing. viewsize is how far out this thing zooms. 7 is normal view
 	SIGNAL_HANDLER
 	if(isliving(usr)) //Always prefer usr if set
 		M = usr
-
+	if(!M.client)
+		return FALSE
 	if(!isliving(M))
-		return 0
-
+		return FALSE
+	if(isbelly(M.loc) || istype(M.loc,/obj/item/dogborg/sleeper))
+		return FALSE
+	if(M.is_remote_viewing())
+		to_chat(M, span_warning("You are too distracted to do that."))
+		return FALSE
 
 	var/devicename
-
 	if(zoomdevicename)
 		devicename = zoomdevicename
 	else
 		devicename = src.name
 
-	var/cannotzoom
-
+	var/can_zoom = TRUE
 	if((M.stat && !zoom) || !(ishuman(M)))
 		to_chat(M, span_filter_notice("You are unable to focus through the [devicename]."))
-		cannotzoom = 1
+		can_zoom = FALSE
 	else if(!zoom && (GLOB.global_hud.darkMask[1] in M.client.screen))
 		to_chat(M, span_filter_notice("Your visor gets in the way of looking through the [devicename]."))
-		cannotzoom = 1
+		can_zoom = FALSE
 	else if(!zoom && M.get_active_hand() != src)
 		to_chat(M, span_filter_notice("You are too distracted to look through the [devicename], perhaps if it was in your active hand this might work better."))
-		cannotzoom = 1
+		can_zoom = FALSE
 
-	//We checked above if they are a human and returned already if they weren't.
-	var/mob/living/carbon/human/H = M
-
-	if(!zoom && !cannotzoom)
-		if(H.hud_used.hud_shown)
-			H.toggle_zoom_hud()	// If the user has already limited their HUD this avoids them having a HUD when they zoom in
-		H.set_viewsize(viewsize)
-		zoom = 1
-		H.AddComponent(/datum/component/recursive_move)
-		RegisterSignal(H, COMSIG_OBSERVER_MOVED, PROC_REF(zoom), override = TRUE)
-
-		var/tilesize = 32
-		var/viewoffset = tilesize * tileoffset
-
-		switch(H.dir)
-			if (NORTH)
-				H.client.pixel_x = 0
-				H.client.pixel_y = viewoffset
-			if (SOUTH)
-				H.client.pixel_x = 0
-				H.client.pixel_y = -viewoffset
-			if (EAST)
-				H.client.pixel_x = viewoffset
-				H.client.pixel_y = 0
-			if (WEST)
-				H.client.pixel_x = -viewoffset
-				H.client.pixel_y = 0
-
-		H.visible_message(span_filter_notice("[M] peers through the [zoomdevicename ? "[zoomdevicename] of the [src.name]" : "[src.name]"]."))
-		if(!ignore_visor_zoom_restriction)
-			H.looking_elsewhere = TRUE
-		H.handle_vision()
-
-	else
-		H.set_viewsize() // Reset to default
-		if(!H.hud_used.hud_shown)
-			H.toggle_zoom_hud()
-		zoom = 0
-		UnregisterSignal(H, COMSIG_OBSERVER_MOVED)
-
-		H.client.pixel_x = 0
-		H.client.pixel_y = 0
-		H.looking_elsewhere = FALSE
-		H.handle_vision()
-
-		if(!cannotzoom)
-			M.visible_message(span_filter_notice("[zoomdevicename ? "[M] looks up from the [src.name]" : "[M] lowers the [src.name]"]."))
-
-	return
+	if(!zoom && can_zoom)
+		M.AddComponent(/datum/component/remote_view/item_zoom, focused_on = M, vconfig_path = /datum/remote_view_config/zoomed_item, our_item = src, viewsize = viewsize, tileoffset = tileoffset, show_visible_messages = TRUE)
+		return
+	SEND_SIGNAL(src,COMSIG_REMOTE_VIEW_CLEAR)
 
 /obj/item/proc/pwr_drain()
 	return 0 // Process Kill
@@ -985,11 +954,16 @@ modules/mob/living/carbon/human/life.dm if you die, you will be zoomed out.
 	if(icon_override)
 		return icon_override
 
+	///Local var to remember if we failed the species specific sprite or not. Also stores species specific sheet - if any - for use to use the default species icon.
+	var/species_sheet
+
 	//2: species-specific sprite sheets (skipped for inhands)
 	if(LAZYLEN(sprite_sheets) && !inhands)
-		var/sheet = sprite_sheets[body_type]
-		if(sheet && icon_exists(sheet, icon_state)) //Checks to make sure our custom sheet actually HAS the icon_state
-			return sheet
+		species_sheet = sprite_sheets[body_type]
+		if(species_sheet)
+			if(icon_exists(species_sheet, icon_state)) //Checks to make sure our custom sheet actually HAS the icon_state
+				return species_sheet
+
 
 	//3: slot-specific sprite sheets
 	if(LAZYLEN(item_icons))
@@ -999,17 +973,25 @@ modules/mob/living/carbon/human/life.dm if you die, you will be zoomed out.
 			if(!icon_exists(sheet, icon_state))
 				log_debug("Item [src] is equippable on the [slot_name] but has no sprite for it!")
 			*/
-			return sheet
+			if(!species_sheet || (species_sheet && body_type != SPECIES_TESHARI && body_type != SPECIES_VOX && body_type != SPECIES_WEREBEAST)) //These three are too different to use a default slot specific sheet. Other species look fine using the standard human sprites.
+				return sheet
 
 	//4: item's default icon
 	if(default_worn_icon)
 		return default_worn_icon
 
-	//5: provided default_icon
+	//5: Use our species_sheet as a fallback if we have one. A 'default' sprite is better than nothing at all (or a misaligned sprite)
+	//We ONLY do this if our species is 'abnormally shaped' i.e. tesh/vox/werebeast.
+	//It should be noted that if this is true, we FAILED to confirm the icon exists in our file. I.E: We're going to use the 'no name' item_state in the .dmi
+	//Otherwise, the human sprite (default_icon) looks fine on MOST species.
+	if(species_sheet && (body_type == SPECIES_TESHARI || body_type == SPECIES_VOX || body_type == SPECIES_WEREBEAST))
+		return species_sheet
+
+	//6: provided default_icon
 	if(default_icon)
 		return default_icon
 
-	//6: give up
+	//7: give up
 	return
 
 //Returns the state that should be used for the worn icon

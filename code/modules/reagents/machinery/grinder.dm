@@ -111,7 +111,7 @@
 
 	if(istype(O,/obj/item/gripper))
 		var/obj/item/gripper/B = O	//B, for Borg.
-		var/obj/item/wrapped = B.get_current_pocket()
+		var/obj/item/wrapped = B.get_wrapped_item()
 		if(!wrapped)
 			to_chat(user, "\The [B] is not holding anything.")
 			return 0
@@ -136,7 +136,7 @@
 	return 0
 
 // outpost 21 (large)edit begin - removing radial menu
-/obj/machinery/reagentgrinder/AltClick(var/mob/user)
+/obj/machinery/reagentgrinder/click_alt(mob/user)
 	. = ..()
 	grind_verb()
 
@@ -259,7 +259,7 @@
 	// Reset the machine.
 	spawn(60)
 		inuse = 0
-		
+
 	grind_items_to_reagents(holdingitems,beaker.reagents)
 
 /obj/machinery/reagentgrinder/proc/replace_beaker(var/mob/living/user, var/obj/item/reagent_containers/new_beaker)
@@ -275,4 +275,3 @@
 		beaker = new_beaker
 	update_icon()
 	return TRUE
-

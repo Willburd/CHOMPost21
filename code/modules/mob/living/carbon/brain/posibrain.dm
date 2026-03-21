@@ -11,9 +11,13 @@
 	req_access = list(ACCESS_ROBOTICS)
 	locked = 0
 	mecha = null//This does not appear to be used outside of reference in mecha.dm.
+	is_digital_robot = TRUE
 
 
 /obj/item/mmi/digital/posibrain/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	if(brainmob && !brainmob.key && searching == 0)
 		//Start the process of searching for a new user.
 		to_chat(user, span_blue("You carefully locate the manual activation switch and start the positronic brain's boot process."))
@@ -85,7 +89,7 @@
 		M.show_message(span_blue("The positronic brain buzzes and beeps, and the golden lights fade away. Perhaps you could try again?"))
 	playsound(src, 'sound/misc/buzzbeep.ogg', 50, 1)
 
-/obj/item/mmi/digital/posibrain/emp_act(severity)
+/obj/item/mmi/digital/posibrain/emp_act(severity, recursive)
 	if(!src.brainmob)
 		return
 	else

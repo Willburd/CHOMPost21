@@ -13,7 +13,7 @@
 	// Looping through the player list has the added bonus of working for mobs inside containers
 	var/sound/S = sound(get_sfx(soundin))
 	var/maxdistance = (world.view + extrarange) * 2  //VOREStation Edit - 3 to 2
-	var/list/listeners = GLOB.player_list.Copy() + interior_vehicle_list.Copy()
+	var/list/listeners = GLOB.player_list.Copy() + GLOB.interior_vehicle_list.Copy()
 	// Outpost 21 edit(port) begin - Get holograms from AIs
 	var/list/holo_listeners = list() // sorry for the duped bits of code ahead, but this is somewhat required to have AI holograms listen to game sounds - Willbird
 	for(var/mob/living/silicon/ai/A in GLOB.player_list)
@@ -411,7 +411,8 @@ GLOBAL_LIST_INIT(wf_speak_vomva_sound, list ('sound/talksounds/wf/vomva_1.ogg', 
 #define spider_sounds list("cough" = null, "sneeze" = null, "scream" = list('sound/voice/spiderchitter.ogg'), "pain" = list('sound/voice/spiderchitter.ogg'), "gasp" = null, "death" = list('sound/voice/death/spider/spider_death.ogg'))
 #define mouse_sounds list("cough" = list('sound/effects/mouse_squeak.ogg'), "sneeze" = list('sound/effects/mouse_squeak.ogg'), "scream" = list('sound/effects/mouse_squeak_loud.ogg'), "pain" = list('sound/effects/mouse_squeak.ogg'), "gasp" = list('sound/effects/mouse_squeak.ogg'), "death" = list('sound/effects/mouse_squeak_loud.ogg'))
 #define lizard_sounds list("cough" = null, "sneeze" = null, "scream" = list('sound/effects/mob_effects/una_scream1.ogg','sound/effects/mob_effects/una_scream2.ogg'), "pain" = list('sound/voice/pain/lizard/lizard_pain.ogg'), "gasp" = null, "death" = list('sound/voice/death/lizard/lizard_death.ogg'))
-#define vox_sounds list("cough" = list('sound/voice/shriekcough.ogg'), "sneeze" = list('sound/voice/shrieksneeze.ogg'), "scream" = list('sound/voice/shriek1.ogg'), "pain" = list('sound/voice/shriek1.ogg'), "gasp" = null, "death" = null)
+// Outpost 21 edit - Vox sounds reduced in volume
+#define vox_sounds list("cough" = list('modular_outpost/sound/voice/shriekcough.ogg'), "sneeze" = list('modular_outpost/sound/voice/shrieksneeze.ogg'), "scream" = list('modular_outpost/sound/voice/shriek1.ogg'), "pain" = list('modular_outpost/sound/voice/shriek1.ogg'), "gasp" = null, "death" = null)
 #define slime_sounds list("cough" = list('sound/effects/slime_squish.ogg'), "sneeze" = null, "scream" = null, "pain" = null, "gasp" = null, "death" = null)
 #define xeno_sounds list("cough" = null, "sneeze" = null, "scream" = list('sound/effects/mob_effects/x_scream1.ogg','sound/effects/mob_effects/x_scream2.ogg','sound/effects/mob_effects/x_scream3.ogg'), "pain" = list('sound/voice/pain/xeno/alien_roar1.ogg', 'sound/voice/pain/xeno/alien_roar2.ogg', 'sound/voice/pain/xeno/alien_roar3.ogg', 'sound/voice/pain/xeno/alien_roar4.ogg', 'sound/voice/pain/xeno/alien_roar5.ogg', 'sound/voice/pain/xeno/alien_roar6.ogg', 'sound/voice/pain/xeno/alien_roar7.ogg', 'sound/voice/pain/xeno/alien_roar8.ogg', 'sound/voice/pain/xeno/alien_roar9.ogg', 'sound/voice/pain/xeno/alien_roar10.ogg', 'sound/voice/pain/xeno/alien_roar11.ogg', 'sound/voice/pain/xeno/alien_roar12.ogg'), "gasp" = list('sound/voice/gasp/xeno/alien_hiss1.ogg'), "death" = list('sound/voice/death/xeno/xeno_death.ogg', 'sound/voice/death/xeno/xeno_death2.ogg'))
 #define teshari_sounds list("cough" = list('sound/effects/mob_effects/tesharicougha.ogg','sound/effects/mob_effects/tesharicoughb.ogg'), "sneeze" = list('sound/effects/mob_effects/tesharisneeze.ogg'), "scream" = list('sound/effects/mob_effects/teshariscream.ogg'), "pain" = null, "gasp" = null, "death" = null)
@@ -454,7 +455,7 @@ GLOBAL_LIST_INIT(wf_speak_vomva_sound, list ('sound/talksounds/wf/vomva_1.ogg', 
 // var/list/species_sounds = list()
 
 // Global list containing all of our sound options.
-var/list/species_sound_map = list(
+GLOBAL_LIST_INIT(species_sound_map, list(
 	"Canine" = canine_sounds,
 	"Cervine" = cervine_sounds,
 	"Feline" = feline_sounds,
@@ -473,14 +474,7 @@ var/list/species_sound_map = list(
 	"Xeno" = xeno_sounds,
 	"None" = no_sounds,
 	"Unset" = use_default
-)
-
-/* // Not sure we even really need this
-/hook/startup/proc/Init_species_sounds() // The entries we're checking over MUST have unique keys.
-	for(var/i in species_sound_map)
-		species_sounds |= species_sound_map[i]
-	return 1
-*/
+))
 
 /*
  * Call this for when you need a sound from an already-identified list - IE, "Canine". pick() cannot parse procs.
@@ -494,9 +488,9 @@ var/list/species_sound_map = list(
  * get_species_sound(H.species.species_sounds_male)["emote"] // If we're male, and want an emote sound gendered correctly.
 */
 /proc/get_species_sound(var/sounds)
-	if(!islist(species_sound_map[sounds])) // We check here if this list actually has anything in it, or if we're about to return a null index
+	if(!islist(GLOB.species_sound_map[sounds])) // We check here if this list actually has anything in it, or if we're about to return a null index
 		return null // Shitty failsafe but better than rewriting an entire litany of procs rn when I'm low on time - Rykka // list('sound/voice/silence.ogg')
-	return species_sound_map[sounds] // Otherwise, successfully return our sound
+	return GLOB.species_sound_map[sounds] // Otherwise, successfully return our sound
 
 /*
  * The following helper proc will select a species' default sounds - useful for if we're set to "Unset"
@@ -508,10 +502,11 @@ var/list/species_sound_map = list(
 	if(valid.selects_bodytype == (SELECTS_BODYTYPE_CUSTOM || SELECTS_BODYTYPE_SHAPESHIFTER)) // Custom species or xenochimera handling here
 		valid = coalesce(GLOB.all_species[pref.custom_base], GLOB.all_species[pref.species])
 	// Now we start getting our sounds.
+	var/id_gender = pref.read_preference(/datum/preference/choiced/gender/identifying)
 	if(valid.gender_specific_species_sounds) // Do we have gender-specific sounds?
-		if(pref.identifying_gender == FEMALE && valid.species_sounds_female)
+		if(id_gender == FEMALE && valid.species_sounds_female)
 			return valid.species_sounds_female
-		else if(pref.identifying_gender == MALE && valid.species_sounds_male)
+		else if(id_gender == MALE && valid.species_sounds_male)
 			return valid.species_sounds_male
 		else // Failsafe. Update if there's ever gendered sounds for HERM/Neuter/etc
 			return valid.species_sounds

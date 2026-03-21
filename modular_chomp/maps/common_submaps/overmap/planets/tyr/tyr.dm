@@ -1,6 +1,6 @@
 //Atmosphere properties //CHOMP Comment: Tyr. A toasty planet. More so in lore but with the purpose of this project lessing it. Also something something anomalous site
 #define TYR_ONE_ATMOSPHERE	101.5 //kPa
-#define TYR_AVG_TEMP			323 //kelvin
+#define TYR_AVG_TEMP			303 //kelvin
 
 #define TYR_PER_N2		0.65 //percent
 #define TYR_PER_O2		0.35
@@ -33,9 +33,9 @@
 	skybox_offset_x = 128
 	skybox_offset_y = 128
 	surface_color = "#E5A76E"
-	mountain_color = "#C48C65"
-	water_color = "#51323E"
-	ice_color = "#E5A76E"
+	mountain_color = "#E5A76E"
+	water_color = "#C48C65"
+	ice_color = "#C48C65"
 	atmosphere_color = "#54c0ce"
 	icon_state = "desert"
 
@@ -56,160 +56,162 @@
 	docking_codes = null
 
 //AREAS
-/area/surface/tyr/town
-	name = "Lost Town"
+/area/planet/tyr
+	name = "Tyr Surface"
+
+/area/planet/tyr/ship_graveyard
+	name = "Tyr Ship Graveyard"
 	icon_state = "green"
 	outdoors = OUTDOORS_YES
 
 
-/area/surface/tyr/church
-	name = "Wreckage Town - Church"
-	icon_state = "away"
-	outdoors = OUTDOORS_NO
-
-/area/surface/tyr/startshuttle
-	name = "Wreckage Town - Shuttle"
-	icon_state = "blublacir"
-	outdoors = OUTDOORS_NO
-
-/area/surface/tyr/wrecked_shipA
-	name = "Wrecked Shuttle"
-	icon_state = "blublasqu"
-	outdoors = OUTDOORS_NO
-
-/area/surface/tyr/wrecked_shipB
-	name = "Demolished Shuttle"
-	icon_state = "blublatri"
-	outdoors = OUTDOORS_NO
-
-/area/surface/tyr/wrecked_shipC
-	name = "Crashed Shuttle"
-	icon_state = "cyablacir"
-	outdoors = OUTDOORS_NO
-
-/area/surface/tyr/wrecked_shipD
-	name = "Scraped Shuttle"
-	icon_state = "cyablasqu"
-	outdoors = OUTDOORS_NO
-
-/area/surface/tyr/wrecked_shipE
-	name = "Dead Shuttle"
-	icon_state = "cyablatri"
-	outdoors = OUTDOORS_NO
-
-/area/surface/tyr/wrecked_shipF
-	name = "Sleeping Shuttle"
-	icon_state = "magblacir"
-	outdoors = OUTDOORS_NO
-
-/area/surface/tyr/northern_wilderness
-	name = "Tyr Wilderness"
+/area/surface/tyr/shuttles
+	name = "Destroyed Shuttle"
 	icon_state = "green"
-	outdoors = OUTDOORS_YES
+	outdoors = OUTDOORS_NO
+
+/area/planet/tyr/shuttles/one
+
+/area/planet/tyr/shuttles/two
+
+/area/planet/tyr/shuttles/three
+
+/area/planet/tyr/shuttles/four
+
+/area/planet/tyr/shuttles/five
+
+/area/planet/tyr/shuttles/six
+
+/area/planet/tyr/shuttles/seven
+
+/area/planet/tyr/shuttles/eight
+
+/area/planet/tyr/shuttles/nine
+
+/area/planet/tyr/shuttles/ten
+
+/area/planet/tyr/shuttles/eleven
+
+/area/planet/tyr/shuttles/tweleve
+
+/area/planet/tyr/shuttles/thirteen
+
+/area/planet/tyr/shuttles/fourteen
+
+/area/planet/tyr/shuttles/fifteen
+
+/area/planet/tyr/shuttles/rock_one
+
+/area/planet/tyr/shuttles/rock_two
 
 
-/area/surface/tyr/southern_wilderness
-	name = "Tyr Wilderness"
+/area/planet/tyr/ac_mainbase
+	name = "Astral Collective - Warp Point"
 	icon_state = "green"
-	outdoors = OUTDOORS_YES
-
-/area/surface/tyr/junkyard
-	name = "Tyr Junkyard"
-	icon_state = "green"
-	outdoors = OUTDOORS_YES
-
-/area/surface/tyr/tar_lake
-	name = "Tar Lake"
-	icon_state = "bluenew"
-
-/area/surface/tyr/ancient_ruins
-	name = "Ancient Ruins"
-	icon_state = "red"
+	outdoors = OUTDOORS_NO
 	requires_power = FALSE
-	outdoors = OUTDOORS_NO
 
-/area/surface/tyr/eclipse_refinery
-	name = "Tyr refinery"
+/area/planet/tyr/ac_secondary
+	name = "Astral Collective - Watchtower"
 	icon_state = "green"
 	outdoors = OUTDOORS_NO
+	requires_power = FALSE
 
-/area/surface/tyr/ancient_ruins/puzzlea
-
-/area/surface/tyr/ancient_ruins/puzzleb
-
-/area/surface/tyr/ancient_ruins/puzzlec
-
-/area/surface/tyr/ancient_ruins/puzzled
-
-/area/surface/tyr/north_caverns
+/area/planet/tyr/caverns
 	name = "Tyr Caverns"
 	icon_state = "away"
 	outdoors = OUTDOORS_NO
 
-/area/surface/tyr/south_caverns
-	name = "Tyr Caverns"
-	icon_state = "away"
-	outdoors = OUTDOORS_NO
-
-/area/surface/tyr/eclipse_stronghold
-	name = "Base Neon"
-	icon_state = "bluenew"
-	outdoors = OUTDOORS_NO
-	requires_power = FALSE
-
-/area/surface/tyr/eclipse_stronghold/sec
-	name = "Base Neon - Security Branch"
+/area/planet/tyr/ancient_ruins
+	name = "Ark Storage"
 	icon_state = "red"
-
-/area/surface/tyr/eclipse_stronghold/engineering
-	name = "Base Neon - Enginering Branch"
-	icon_state = "yellow"
-
-/area/surface/tyr/eclipse_stronghold/science
-	name = "Base Neon - Science Branch"
-	icon_state = "purple"
-
-/area/surface/tyr/eclipse_stronghold/medical
-	name = "Base Neon - Medical Branch"
-	icon_state = "blue2"
-
-/area/surface/tyr/eclipse_stronghold/command
-	name = "Base Neon - Command Branch"
-	icon_state = "green"
-
-/area/surface/tyr/eclipse_stronghold/cargo
-	name = "Base Neon - Cargo Branch"
-	icon_state = "dark"
-
-/area/surface/tyr/eclipse_stronghold/mining
-	name = "Base Neon - Digsight"
-	icon_state = "outpost_mine_main"
-
-/area/surface/tyr/eclipse_stronghold/sectorfinale
-	name = "Precursor Ruins"
-	icon_state = "outside1"
-
-
-/area/surface/tyr/precursorruins
-	icon_state = "bluenew"
 	requires_power = FALSE
 	outdoors = OUTDOORS_NO
 
-/area/surface/tyr/precursorruins/finale
-	name = "Advanced Mass Production"
+/area/planet/tyr/ancient_ruins/one
+
+/area/planet/tyr/ancient_ruins/two
+
+/area/planet/tyr/ancient_ruins/three
+
+/area/planet/tyr/ancient_ruins/four
+
+/area/planet/tyr/ancient_ruins/five
+
+/area/planet/tyr/ancient_ruins/six
+
+/area/planet/tyr/precursorruins
+	icon_state = "bluenew"
+	requires_power = FALSE
+	outdoors = OUTDOORS_NO
+	name = "Ark Facility"
 	flags = RAD_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT | AREA_SECRET_NAME | AREA_FORBID_EVENTS | PHASE_SHIELDED
 
-/area/surface/tyr/precursorruins/southeast
-	name = "Relax Training Chamber"
+/area/planet/tyr/precursorruins/checkpoint
+	name = "Ark Facility - Checkpoint"
+	icon_state = "purple"
 
-/area/surface/tyr/precursorruins/northwest
-	name = "Perception Training Chamber"
+/area/planet/tyr/precursorruins/entryway
+	name = "Ark Facility - Entrance Hall"
+	icon_state = "dark"
 
-/area/surface/tyr/precursorruins/cliffchamber
+/area/planet/tyr/precursorruins/checkpoint
+	name = "Ark Facility - Checkpoint"
 
-/area/surface/tyr/precursorruins/airmaze
+/area/planet/tyr/precursorruins/stairwell
+	name = "Ark Facility - Stairwell"
+	icon_state = "purple"
 
-/area/surface/tyr/precursorruins/spotthediffrence
+/area/planet/tyr/precursorruins/science_branch
+	name = "Ark Facility - Science Branch"
+	icon_state = "dark"
+
+/area/planet/tyr/precursorruins/misc
+	name = "Ark Facility - Misc"
+
+/area/planet/tyr/precursorruins/swarm_staircase
+	name = "Ark Facility - Stair Spiral"
+	icon_state = "purple"
+
+/area/planet/tyr/precursorruins/swarm_boss
+	name = "Ark Facility - Swarm Container"
+	icon_state = "dark"
+
+/area/planet/tyr/precursorruins/medical_boss
+	name = "Ark Facility - Underconstruction"
+
+/area/planet/tyr/precursorruins/weather_boss
+	name = "Ark Facility - Weather Report"
+	icon_state = "purple"
+
+/area/planet/tyr/precursorruins/sec_boss
+	name = "Ark Facility - Security Watchzone"
+	icon_state = "dark"
+
+/area/planet/tyr/precursorruins/engi_boss
+	name = "Ark Facility - Engine Control"
+
+/area/planet/tyr/precursorruins/science_a
+	name = "Ark Facility - Containment A"
+	icon_state = "purple"
+
+/area/planet/tyr/precursorruins/science_b
+	name = "Ark Facility - Containment B"
+	icon_state = "dark"
+
+/area/planet/tyr/precursorruins/science_c
+	name = "Ark Facility - Containment C"
+
+/area/planet/tyr/precursorruins/science_d
+	name = "Ark Facility - Containment D"
+	icon_state = "purple"
+
+/area/planet/tyr/precursorruins/science_e
+	name = "Ark Facility - Containment E"
+	icon_state = "dark"
+
+/area/planet/tyr/precursorruins/science_f
+	name = "Ark Facility - Containment F"
 
 /turf/unsimulated/wall/planetary/normal/tyr
 	oxygen		= TYR_MOL_O2

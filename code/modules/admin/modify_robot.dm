@@ -57,6 +57,7 @@
 	var/datum/asset/spritesheet_batched/robot_icons/spritesheet = GLOB.robot_sprite_sheets[target.modtype]
 
 	if(target)
+		.["theme"] = target.get_ui_theme()
 		.["target"] = list()
 		.["target"]["name"] = target.name
 		.["target"]["ckey"] = target.ckey
@@ -225,7 +226,7 @@
 			target.module.modules.Add(add_item)
 			target.module.contents.Add(add_item)
 			spawn(0)
-				SEND_SIGNAL(add_item, COMSIG_OBSERVER_MOVED)
+				SEND_SIGNAL(add_item, COMSIG_MOVABLE_ATTEMPTED_MOVE)
 			target.hud_used?.update_robot_modules_display()
 			if(istype(add_item, /obj/item/stack/))
 				var/obj/item/stack/item_with_synth = add_item
@@ -277,6 +278,7 @@
 			target.module.emag.Remove(rem_item)
 			target.module.modules.Remove(rem_item)
 			target.module.contents.Remove(rem_item)
+			target.hud_used?.update_robot_modules_display()
 			qdel(rem_item)
 			return TRUE
 		if("swap_module")
@@ -326,7 +328,7 @@
 				U = UN
 			if(istype(U, /obj/item/borg/upgrade/restricted))
 				target.module.supported_upgrades |= new_upgrade
-			if(!U.action(target))
+			if(!U.action(ui.user, target))
 				return FALSE
 			U.loc = target
 			target.hud_used?.update_robot_modules_display()
@@ -610,7 +612,7 @@
 				target.emagged = 0
 				target.clear_supplied_laws()
 				target.clear_inherent_laws()
-				target.laws = new global.using_map.default_law_type
+				target.laws = new using_map.default_law_type
 				to_chat(target, span_danger("Laws updated!\n") + target.laws.get_formatted_laws())
 				target.hud_used?.update_robot_modules_display()
 			else

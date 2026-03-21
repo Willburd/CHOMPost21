@@ -1,7 +1,7 @@
 /obj/structure/closet/athletic_mixed
 	name = "athletic wardrobe"
 	desc = "It's a storage unit for athletic wear."
-	closet_appearance = /decl/closet_appearance/wardrobe/mixed
+	closet_appearance = /datum/decl/closet_appearance/wardrobe/mixed
 
 	starts_with = list(
 		/obj/item/clothing/under/shorts/grey,
@@ -30,7 +30,7 @@
 /obj/structure/closet/athletic_swimwear
 	name = "athletic wardrobe"
 	desc = "It's a storage unit for swimwear."
-	closet_appearance = /decl/closet_appearance/wardrobe/mixed
+	closet_appearance = /datum/decl/closet_appearance/wardrobe/mixed
 
 	starts_with = list(
 		/obj/item/clothing/under/shorts/grey,
@@ -52,7 +52,7 @@
 /obj/structure/closet/boxinggloves
 	name = "boxing gloves"
 	desc = "It's a storage unit for gloves for use in the boxing ring."
-	closet_appearance = /decl/closet_appearance/wardrobe/mixed
+	closet_appearance = /datum/decl/closet_appearance/wardrobe/mixed
 
 	starts_with = list(
 		/obj/item/clothing/gloves/boxing/blue,
@@ -63,7 +63,7 @@
 /obj/structure/closet/masks
 	name = "mask closet"
 	desc = "IT'S A STORAGE UNIT FOR FIGHTER MASKS OLE!"
-	closet_appearance = /decl/closet_appearance/wardrobe/mixed
+	closet_appearance = /datum/decl/closet_appearance/wardrobe/mixed
 
 	starts_with = list(
 		/obj/item/clothing/mask/luchador,
@@ -74,30 +74,45 @@
 /obj/structure/closet/lasertag/red
 	name = "red laser tag equipment"
 	desc = "It's a storage unit for laser tag equipment."
-	closet_appearance = /decl/closet_appearance/wardrobe/red
+	closet_appearance = /datum/decl/closet_appearance/wardrobe/red
 
 	starts_with = list(
-		/obj/item/gun/energy/lasertag/red = 4,
-		/obj/item/lasertagknife/red = 4,
-		/obj/item/clothing/suit/redtag = 4,
-		/obj/item/clothing/head/helmet/lasertag = 4) // Outpost 21 edit(port) - new lasertag kits
+		/obj/item/gun/energy/lasertag/red = 5,
+		/obj/item/clothing/suit/lasertag/redtag = 5,
+		/obj/item/lasertagknife/red = 5,
+		/obj/item/mine/lasertag/all = 5,
+		/obj/item/mine/lasertag/red = 5)
 
 
 /obj/structure/closet/lasertag/blue
 	name = "blue laser tag equipment"
 	desc = "It's a storage unit for laser tag equipment."
-	closet_appearance = /decl/closet_appearance/wardrobe/blue
+	closet_appearance = /datum/decl/closet_appearance/wardrobe/blue
 
 	starts_with = list(
-		/obj/item/gun/energy/lasertag/blue = 4,
-		/obj/item/lasertagknife/blue = 4,
-		/obj/item/clothing/suit/bluetag = 4,
-		/obj/item/clothing/head/helmet/lasertag = 4) // Outpost 21 edit(port) - new lasertag kits
+		/obj/item/gun/energy/lasertag/blue = 5,
+		/obj/item/clothing/suit/lasertag/bluetag = 5,
+		/obj/item/lasertagknife/blue = 5,
+		/obj/item/mine/lasertag/all = 5,
+		/obj/item/mine/lasertag/blue = 5)
+
+/obj/structure/closet/lasertag/omni
+	name = "universal laser tag equipment"
+	desc = "It's a storage unit for laser tag equipment."
+	closet_appearance = /datum/decl/closet_appearance/wardrobe/purple
+
+	starts_with = list(
+		/obj/item/gun/energy/lasertag/omni = 5,
+		/obj/item/clothing/head/omnitag = 5,
+		/obj/item/clothing/suit/lasertag/omni = 5,
+		/obj/item/lasertagknife = 5,
+		/obj/item/mine/lasertag/all = 5,
+		/obj/item/mine/lasertag/omni = 5)
 
 /obj/structure/closet/lasertag/red/laserdome
 	name = "red team laserdome equipment"
 	desc = "It's a storage unit for laser tag equipment."
-	closet_appearance = /decl/closet_appearance/wardrobe/red
+	closet_appearance = /datum/decl/closet_appearance/wardrobe/red
 
 	starts_with = list(
 		/obj/item/encryptionkey/ent = 3,
@@ -105,12 +120,13 @@
 		/obj/item/clothing/under/color/red = 3,
 		/obj/item/gun/energy/lasertag/red = 3,
 		/obj/item/clothing/head/redtag = 3,
-		/obj/item/clothing/suit/redtag = 3)
+		/obj/item/clothing/suit/lasertag/redtag = 3,
+		/obj/item/lasertagknife/red = 3)
 
 /obj/structure/closet/lasertag/blue/laserdome
 	name = "blue team laserdome equipment"
 	desc = "It's a storage unit for laser tag equipment."
-	closet_appearance = /decl/closet_appearance/wardrobe/blue
+	closet_appearance = /datum/decl/closet_appearance/wardrobe/blue
 
 	starts_with = list(
 		/obj/item/encryptionkey/ent = 3,
@@ -118,17 +134,19 @@
 		/obj/item/clothing/under/color/blue = 3,
 		/obj/item/gun/energy/lasertag/blue = 3,
 		/obj/item/clothing/head/bluetag = 3,
-		/obj/item/clothing/suit/bluetag = 3)
+		/obj/item/clothing/suit/lasertag/bluetag = 3,
+		/obj/item/lasertagknife/blue = 3)
 
-// Outpost 21 edit(port) begin - omni lasertag
-/obj/structure/closet/lasertag/omni
-	name = "omni laser tag equipment"
+/obj/structure/closet/lasertag/omni/laserdome
+	name = "universal laser tag equipment"
 	desc = "It's a storage unit for laser tag equipment."
-	closet_appearance = /decl/closet_appearance/wardrobe/purple
+	closet_appearance = /datum/decl/closet_appearance/wardrobe/purple
 
 	starts_with = list(
-		/obj/item/gun/energy/lasertag/omni = 4,
-		/obj/item/lasertagknife = 4,
-		/obj/item/clothing/suit/omnitag = 4,
-		/obj/item/clothing/head/helmet/lasertag = 4)
-// Outpost 21 edit end
+		/obj/item/encryptionkey/ent = 3,
+		/obj/item/gun/energy/lasertag/omni = 5,
+		/obj/item/clothing/head/omnitag = 5,
+		/obj/item/clothing/suit/lasertag/omni = 5,
+		/obj/item/lasertagknife = 5,
+		/obj/item/mine/lasertag/all = 5,
+		/obj/item/mine/lasertag/omni = 5)

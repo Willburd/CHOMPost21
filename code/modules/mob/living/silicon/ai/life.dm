@@ -7,7 +7,7 @@
 
 		if (src.stat != CONSCIOUS)
 			src.cameraFollow = null
-			src.reset_view(null)
+			src.reset_perspective()
 			disconnect_shell("Disconnecting from remote shell due to local system failure.")
 
 		src.updatehealth()
@@ -173,7 +173,7 @@
 	return ((!A.power_equip) && A.requires_power == 1 || istype(T, /turf/space)) && !istype(src.loc,/obj/item)
 
 /mob/living/silicon/ai/updatehealth()
-	if(SEND_SIGNAL(src, COMSIG_UPDATE_HEALTH) & COMSIG_UPDATE_HEALTH_GOD_MODE)
+	if(SEND_SIGNAL(src, COMSIG_LIVING_HEALTH_UPDATE) & COMSIG_LIVING_HEALTH_UPDATE_GOD_MODE)
 		health = getMaxHealth()
 		set_stat(CONSCIOUS)
 		setOxyLoss(0)

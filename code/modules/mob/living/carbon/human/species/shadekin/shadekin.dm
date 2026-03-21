@@ -36,7 +36,7 @@
 	hazard_low_pressure = -1
 
 	warning_high_pressure = 300
-	hazard_high_pressure = HAZARD_HIGH_PRESSURE // Outpost 21 edit - No, infinity is not a number patrick
+	hazard_high_pressure = INFINITY
 
 	cold_level_1 = -1	//Immune to cold
 	cold_level_2 = -1
@@ -58,7 +58,7 @@
 
 	// has_glowing_eyes = TRUE			//Applicable through neutral taits.
 
-	// death_message = "phases to somewhere far away!" Outpost 21 edit - No darkspace
+	death_message = SHADEKIN_DEATH_NOTICE // Outpost 21 edit - More obvious message that they are gone
 	speech_bubble_appearance = "ghost"
 
 	genders = list(MALE, FEMALE, PLURAL, NEUTER)
@@ -83,9 +83,7 @@
 		O_BRAIN =		/obj/item/organ/internal/brain/shadekin,
 		O_EYES =		/obj/item/organ/internal/eyes,
 		O_STOMACH =		/obj/item/organ/internal/stomach,
-		O_INTESTINE =	/obj/item/organ/internal/intestine,
-		// Outpost 21 edit - butt
-		O_BUTT = 		/obj/item/organ/internal/butt
+		O_INTESTINE =	/obj/item/organ/internal/intestine
 		)
 
 	has_limbs = list(
@@ -101,11 +99,12 @@
 		BP_L_FOOT = list("path" = /obj/item/organ/external/foot),
 		BP_R_FOOT = list("path" = /obj/item/organ/external/foot/right)
 		)
-	species_component = /datum/component/shadekin/full //CHOMPEdit: Enabling full shadekin.
+
+	species_component = list(/datum/component/shadekin/full, /datum/component/radiation_effects/radiation_immune, /datum/component/haunting_vision) //CHOMPEdit: Enabling full shadekin & no-power radiation component. // Outpost 21 edit - Haunted area vision
 	component_requires_late_recalc = TRUE
 
 /datum/species/shadekin/handle_death(var/mob/living/carbon/human/H)
-	var/special_handling = FALSE //varswitch for downstream // Outpost 21 edit - Disable
+	var/special_handling = FALSE //varswitch for downstream
 	H.clear_dark_maws() //clear dark maws on death or similar
 	var/datum/component/shadekin/SK = H.get_shadekin_component()
 	if(!special_handling || (SK && SK.no_retreat))
@@ -125,7 +124,7 @@
 			log_and_message_admins("[H] died outside of the dark but there were no valid floors to warp to")
 			return
 
-		H.visible_message("<b>\The [H.name]</b> phases to somewhere far away!")
+		H.visible_message("<b>\The [H.name]</b> [SHADEKIN_DEATH_NOTICE]") // Outpost 21 edit - More obvious message that they are gone
 		var/obj/effect/temp_visual/shadekin/phase_out/phaseanimout = new /obj/effect/temp_visual/shadekin/phase_out(H.loc)
 		phaseanimout.dir = H.dir
 		SK.respite_activating = TRUE
@@ -181,6 +180,8 @@
 			H.add_modifier(/datum/modifier/dark_respite, 10 MINUTES)
 			H.muffled = FALSE
 			H.forced_psay = FALSE
+
+			addtimer(CALLBACK(H, TYPE_PROC_REF(/mob/living, can_leave_dark)), 5 MINUTES, TIMER_DELETE_ME)
 		else
 			H.add_modifier(/datum/modifier/dark_respite, 25 MINUTES)
 

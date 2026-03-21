@@ -100,7 +100,7 @@
 		add_overlay(I)
 
 /obj/structure/bed/chair/comfy/brown/Initialize(mapload, var/new_material, var/new_padding_material)
-	. = ..(mapload, MAT_STEEL, MAT_LEATHER)
+	. = ..(mapload, MAT_STEEL, MAT_CLOTH_BROWN)
 
 /obj/structure/bed/chair/comfy/red/Initialize(mapload, var/new_material, var/new_padding_material)
 	. = ..(mapload, MAT_STEEL, MAT_CARPET)
@@ -138,10 +138,9 @@
 	icon_state = "roundedchair"
 	icon = 'icons/obj/furniture.dmi' //CHOMP Edit - These need to be base dmi, chomp's does not have them.
 	base_icon = "roundedchair"
-	icon = 'icons/obj/furniture.dmi' // Outpost 21 edit(port) - These need to be base dmi
 
 /obj/structure/bed/chair/comfy/rounded/brown/Initialize(mapload, var/new_material, var/new_padding_material)
-	. = ..(mapload, MAT_STEEL, MAT_LEATHER)
+	. = ..(mapload, MAT_STEEL, MAT_CLOTH_BROWN)
 
 /obj/structure/bed/chair/comfy/rounded/red/Initialize(mapload, var/new_material, var/new_padding_material)
 	. = ..(mapload, MAT_STEEL, MAT_CARPET)
@@ -200,8 +199,6 @@
 				for (var/mob/O in src.loc)
 					if (O != occupant)
 						Bump(O)
-			else
-				unbuckle_mob()
 
 /obj/structure/bed/chair/office/Bump(atom/A)
 	..()
@@ -213,22 +210,20 @@
 
 			var/def_zone = ran_zone()
 			var/blocked = occupant.run_armor_check(def_zone, "melee")
-			var/soaked = occupant.get_armor_soak(def_zone, "melee")
 			occupant.throw_at(A, 3, propelled)
 			occupant.apply_effect(6, STUN, blocked)
 			occupant.apply_effect(6, WEAKEN, blocked)
 			occupant.apply_effect(6, STUTTER, blocked)
-			occupant.apply_damage(10, BRUTE, def_zone, blocked, soaked)
+			occupant.apply_damage(10, BRUTE, def_zone, blocked)
 			playsound(src, 'sound/weapons/punch1.ogg', 50, 1, -1)
 			if(isliving(A))
 				var/mob/living/victim = A
 				def_zone = ran_zone()
 				blocked = victim.run_armor_check(def_zone, "melee")
-				soaked = victim.get_armor_soak(def_zone, "melee")
 				victim.apply_effect(6, STUN, blocked)
 				victim.apply_effect(6, WEAKEN, blocked)
 				victim.apply_effect(6, STUTTER, blocked)
-				victim.apply_damage(10, BRUTE, def_zone, blocked, soaked)
+				victim.apply_damage(10, BRUTE, def_zone, blocked)
 			occupant.visible_message(span_danger("[occupant] crashed into \the [A]!"))
 
 /obj/structure/bed/chair/office/light
@@ -319,7 +314,6 @@
 	icon_state = "pewmiddle"
 	icon = 'icons/obj/furniture.dmi' //CHOMP Edit - These need to be base dmi, chomp's does not have them.
 	applies_material_colour = FALSE
-	icon = 'icons/obj/furniture.dmi' // Outpost 21 edit(port) - missing icon in chomp file
 
 /obj/structure/bed/chair/sofa/pew/left
 	icon_state = "pewend_left"
@@ -339,7 +333,6 @@
 	applies_material_colour = FALSE
 	color = null
 	var/padding_color = "#CC0000"
-	icon = 'icons/obj/furniture.dmi' // Outpost 21 edit(port) - missing icon in chomp file
 
 /obj/structure/bed/chair/sofa/bench/Initialize(mapload, var/new_material, var/new_padding_material)
 	. = ..()
@@ -376,7 +369,6 @@
 	icon_state = "corp_sofamiddle"
 	icon = 'icons/obj/furniture.dmi' //CHOMP Edit - These need to be base dmi, chomp's does not have them.
 	applies_material_colour = FALSE
-	icon = 'icons/obj/furniture.dmi' // Outpost 21 edit(port) - missing icon in chomp file
 
 /obj/structure/bed/chair/sofa/corp/left
 	icon_state = "corp_sofaend_left"
@@ -397,7 +389,7 @@
 	sofa_material = MAT_CARPET
 
 /obj/structure/bed/chair/sofa/brown
-	sofa_material = MAT_LEATHER
+	sofa_material = MAT_CLOTH_BROWN
 
 /obj/structure/bed/chair/sofa/teal
 	sofa_material = MAT_CLOTH_TEAL
@@ -438,13 +430,13 @@
 	icon_state = "sofacorner"
 
 /obj/structure/bed/chair/sofa/left/brown
-	sofa_material = MAT_LEATHER
+	sofa_material = MAT_CLOTH_BROWN
 
 /obj/structure/bed/chair/sofa/right/brown
-	sofa_material = MAT_LEATHER
+	sofa_material = MAT_CLOTH_BROWN
 
 /obj/structure/bed/chair/sofa/corner/brown
-	sofa_material = MAT_LEATHER
+	sofa_material = MAT_CLOTH_BROWN
 
 /obj/structure/bed/chair/sofa/left/teal
 	sofa_material = MAT_CLOTH_TEAL

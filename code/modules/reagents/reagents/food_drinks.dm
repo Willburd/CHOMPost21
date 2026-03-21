@@ -14,6 +14,7 @@
 	affects_robots = 1	//VOREStation Edit
 	wiki_flag = WIKI_FOOD
 	coolant_modifier = -1
+	scannable = SCANNABLE_BENEFICIAL
 
 	supply_conversion_value = REFINERYEXPORT_VALUE_UNWANTED
 	industrial_use = REFINERYEXPORT_REASON_FOOD
@@ -49,7 +50,7 @@
 	affect_ingest(M, alien, removed)
 	//VOREStation Edits Start
 	if(M.isSynthetic())
-		M.adjust_nutrition((nutriment_factor * removed) * M.species.synthetic_food_coeff)
+		M.adjust_nutrition((nutriment_factor * removed) * M.species?.synthetic_food_coeff)
 	//VOREStation Edits End
 	..()
 
@@ -665,17 +666,6 @@
 	color = "#CF3600"
 	cup_prefix = "minty"
 
-// Outpost 21 edit begin - WAFER THIN
-/datum/reagent/nutriment/mint/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
-	. = ..()
-	if(M.nutrition >= (M.max_nutrition * 0.98))
-		M.max_nutrition = M.max_nutrition * 0.975 // prevent spam, they're doomed anyway
-		M.Stun(2)
-		M.emote("belch")
-		spawn(25)
-			M.gib()
-// Outpost 21 edit end
-
 /datum/reagent/lipozine // The anti-nutriment.
 	name = REAGENT_LIPOZINE
 	id = REAGENT_ID_LIPOZINE
@@ -725,6 +715,19 @@
 	ingest_met = REM
 	color = "#000000"
 	cup_prefix = "peppery"
+	wiki_flag = WIKI_FOOD
+	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
+	industrial_use = REFINERYEXPORT_REASON_FOOD
+
+/datum/reagent/mustardpods
+	name = REAGENT_MUSTARDPODS
+	id = REAGENT_ID_MUSTARDPODS
+	description = "Densely-packed seed pods from a mustard plant. Good for making mustard. Not much use for anything else."
+	taste_description = "sharp, bitter, dry mustard"
+	reagent_state = SOLID
+	ingest_met = REM
+	color = "#B2A00D"
+	cup_prefix = "mustardy"
 	wiki_flag = WIKI_FOOD
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_FOOD
@@ -878,8 +881,10 @@
 /datum/reagent/condensedcapsaicin
 	name = REAGENT_CONDENSEDCAPSAICIN
 	id = REAGENT_ID_CONDENSEDCAPSAICIN
+	scannable = SCANNABLE_ADVANCED
 	description = "A chemical agent used for self-defense and in police work."
 	taste_description = "fire"
+	dermal_absorption = 0
 	taste_mult = 10
 	reagent_state = LIQUID
 	touch_met = 50 // Get rid of it quickly
@@ -1035,6 +1040,7 @@
 	var/adj_temp = 0
 	var/nutriment_factor = 0 //CHOMPStation addition
 	var/water_based = TRUE
+	dermal_absorption = 0
 	wiki_flag = WIKI_DRINK
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_FOOD
@@ -2576,7 +2582,7 @@
 /datum/reagent/drink/dry_ramen
 	name = REAGENT_DRYRAMEN
 	id = REAGENT_ID_DRYRAMEN
-	description = "Space age food, since August 25, 1958. Contains dried noodles, vegetables, and chemicals that boil in contact with water."
+	description = "Space age food, since August 25, 1958. Contains dried noodles, vegetables, boil in water before serving."
 	taste_description = "dry cheap noodles"
 	reagent_state = SOLID
 	nutrition = 1

@@ -41,7 +41,7 @@ export const SORTING_TYPES: readonly SortType[] = [
     inDeciseconds: true,
   },
   {
-    label: 'Tick Overrun',
+    label: 'Subsystem Overtime',
     propName: 'tick_overrun',
     inDeciseconds: true,
   },

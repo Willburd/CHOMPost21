@@ -17,14 +17,14 @@ SUBSYSTEM_DEF(explosions)
 
 /datum/controller/subsystem/explosions/stat_entry(msg)
 	var/meme = ""
-	switch(resolving_explosions.len)
+	switch(length(resolving_explosions))
 		if(0 to 10000) meme = ""
 		if(10000 to 15000) meme = "- HEAVY LOAD"
 		if(15000 to 20000) meme = "- EXTREME LOAD"
 		if(20000 to 25000) meme = "- I STILL FUNCTION"
 		if(25000 to 30000) meme = "- WANNA BET?"
 		if(30000 to INFINITY) meme = "- CALL /abort() TO FORCE END"
-	msg = "E: [explosion_signals.len] | P: [pending_explosions.len] | R: [resolving_explosions.len] | CR : [currentrun.len] | CS : [currentsignals.len] - [resolve_explosions ? "RESOLVING" : currentrun.len ? "PREPARING" : "IDLING"] [meme]"
+	msg = "E: [length(explosion_signals)] | P: [length(pending_explosions)] | R: [length(resolving_explosions)] | CR : [LAZYLEN(currentrun)] | CS : [LAZYLEN(currentsignals)] - [resolve_explosions ? "RESOLVING" : LAZYLEN(currentrun) ? "PREPARING" : "IDLING"] [meme]"
 	return ..()
 
 /datum/controller/subsystem/explosions/proc/gotosleep()
@@ -38,7 +38,7 @@ SUBSYSTEM_DEF(explosions)
 	// Build both queues. The first one gets the explosion power in each turf
 	// The second queue applies that explosion power to all turfs and objects in them
 	if(!resumed)
-		if(resolve_explosions && !currentrun.len)
+		if(resolve_explosions && !LAZYLEN(currentrun))
 			end_resolve()
 		if(!resolve_explosions)
 			// Setup the explosion buffer!
@@ -46,12 +46,12 @@ SUBSYSTEM_DEF(explosions)
 			currentsignals = explosion_signals.Copy()
 			pending_explosions.Cut()
 			explosion_signals.Cut()
-	if(currentrun.len == 0 && !resolve_explosions) // Wait till we're useful if we have nothing to do!
+	if(!LAZYLEN(currentrun) && !resolve_explosions) // Wait till we're useful if we have nothing to do!
 		gotosleep()
 		return
 
 	// The heavy lifting part...
-	while(currentrun.len)
+	while(length(currentrun))
 		// Lets handle list management here instead of in each proc
 		// get the first key of the current run, use the key to get the
 		// data, use the data, than discard it from the list using the key!
@@ -63,7 +63,7 @@ SUBSYSTEM_DEF(explosions)
 		currentrun.Remove(key)
 
 		// Check if we move on to final resolution
-		if(currentrun.len == 0)
+		if(!length(currentrun))
 			if(!resolve_explosions)
 				start_resolve()
 				currentrun = resolving_explosions.Copy()
@@ -79,22 +79,22 @@ SUBSYSTEM_DEF(explosions)
 	// We've handled the actual explosions, it's time to wrap up everything else.
 	// send signals to all machines scanning for them
 	for(var/list/time_dat in currentsignals)
-		var/x0 	= time_dat[1]
-		var/y0 	= time_dat[2]
-		var/z0 	= time_dat[3]
+		var/turf/epicenter = locate(time_dat[1],time_dat[2],time_dat[3])
+		if(!epicenter)
+			continue
+		var/z_transfer			= time_dat[8]
+		if(z_transfer != (UP|DOWN)) // Only the initial explosion in a multiz explosion transfers both up and down!
+			continue
 		var/devastation_range 	= time_dat[4]
 		var/heavy_impact_range 	= time_dat[5]
 		var/light_impact_range 	= time_dat[6]
-		var/tim 				= time_dat[7]
-		for(var/i,i<=GLOB.doppler_arrays.len,i++)
-			var/obj/machinery/doppler_array/Array = GLOB.doppler_arrays[i]
-			if(Array)
-				Array.sense_explosion(x0,y0,z0,devastation_range,heavy_impact_range,light_impact_range, tim - world.time)
+		var/took 				= (world.time - time_dat[7]) / (1 SECOND) // Horrifyingly, this has always been server performance dependant. Should really only be used for cosmetic stuff.
+		SEND_GLOBAL_SIGNAL(COMSIG_GLOB_EXPLOSION, epicenter, devastation_range, heavy_impact_range, light_impact_range, took)
 	currentsignals.Cut()
 
 	// return to setup mode... Unless...
 	end_resolve()
-	if(!pending_explosions.len)
+	if(!length(pending_explosions))
 		suspend_and_invoke_deferred_subsystems()
 
 /datum/controller/subsystem/explosions/proc/fire_prepare_explosions(var/list/data)
@@ -186,7 +186,7 @@ SUBSYSTEM_DEF(explosions)
 	gotosleep()
 
 /datum/controller/subsystem/explosions/proc/abort()
-	if(!currentrun.len)
+	if(!LAZYLEN(currentrun))
 		return
 	// Removes all entries except the top most, so we enter resolution phase properly, need at least one entry to do so...
 	var/key = currentrun[1]
@@ -217,7 +217,7 @@ SUBSYSTEM_DEF(explosions)
 		currentrun["[x0].[y0].[z0]"] = list(x0,y0,z0,pwr,direction,max_starting)
 
 // Queue explosion event, call this from explosion() ONLY
-/datum/controller/subsystem/explosions/proc/append_explosion(var/turf/epicenter,var/pwr,var/devastation_range,var/heavy_impact_range,var/light_impact_range,var/flash_range)
+/datum/controller/subsystem/explosions/proc/append_explosion(turf/epicenter, pwr, devastation_range, heavy_impact_range, light_impact_range, flash_range, z_transfer)
 	SHOULD_NOT_OVERRIDE(TRUE)
 	if(pwr <= 0)
 		return
@@ -245,7 +245,7 @@ SUBSYSTEM_DEF(explosions)
 					pending_explosions["[T.x].[T.y].[T.z]"] = list(T.x,T.y,T.z,rad_power,direction,max_starting)
 
 	// send signals to dopplers
-	explosion_signals.Add(list( list(x0,y0,z0,devastation_range,heavy_impact_range,light_impact_range,world.time) )) // append a list in a list. Needed so that the data list doesn't get merged into the list of datalists
+	explosion_signals.Add(list( list(x0, y0, z0, devastation_range, heavy_impact_range, light_impact_range, world.time, z_transfer))) // append a list in a list. Needed so that the data list doesn't get merged into the list of datalists
 
 	// BOINK! Time to wake up sleeping beauty!
 	wake_and_defer_subsystem_updates(devastation_range >= 8 || heavy_impact_range >= 16 || light_impact_range >= 20)
@@ -342,4 +342,4 @@ SUBSYSTEM_DEF(explosions)
 
 	// Queue explosion event
 	var/power = devastation_range * 2 + heavy_impact_range + light_impact_range //The ranges add up, ie light 14 includes both heavy 7 and devestation 3. So this calculation means devestation counts for 4, heavy for 2 and light for 1 power, giving us a cap of 27 power.
-	SSexplosions.append_explosion(epicenter,power,devastation_range,heavy_impact_range,light_impact_range,flash_range)
+	SSexplosions.append_explosion(epicenter,power,devastation_range,heavy_impact_range,light_impact_range,flash_range,z_transfer)

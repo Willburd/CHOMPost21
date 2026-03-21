@@ -90,12 +90,13 @@
 	take_damage(damage)
 	return
 
-/turf/simulated/shuttlewalls/hitby(atom/movable/source, var/speed=THROWFORCE_SPEED_DIVISOR)
+/turf/simulated/shuttlewalls/hitby(atom/movable/source, datum/thrownthing/throwingdatum)
 	..()
 	if(ismob(source))
 		return
 
 	var/tforce = 0
+	var/speed = throwingdatum?.speed || THROWFORCE_SPEED_DIVISOR
 	if(isitem(source))
 		var/obj/item/O = source
 		tforce = O.throwforce * (speed/THROWFORCE_SPEED_DIVISOR)
@@ -306,7 +307,7 @@
 /turf/simulated/shuttlewalls/can_engrave()
 	return (material && material.hardness >= 10 && material.hardness <= 100)
 
-/turf/simulated/shuttlewalls/AltClick(mob/user)
+/turf/simulated/shuttlewalls/click_alt(mob/user)
 	if(isliving(user))
 		var/mob/living/livingUser = user
 		if(try_graffiti(livingUser, livingUser.get_active_hand()))

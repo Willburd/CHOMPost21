@@ -91,7 +91,6 @@
 
 /obj/item/radio/headset/attackby(obj/item/W as obj, mob/user as mob)
 //	..()
-	user.set_machine(src)
 	if(!(W.has_tool_quality(TOOL_SCREWDRIVER) || istype(W, /obj/item/encryptionkey)))
 		return
 
@@ -633,7 +632,7 @@
 	name = "talon bowman headset"
 	desc = "A bowman headset for communication between the crew of the ITV Talon." // CHOMPAdd
 	adhoc_fallback = TRUE
-	icon_state = "pilot_headset"
+	icon_state = "pilot_headset_alt"
 	ks2type = /obj/item/encryptionkey/talon
 
 /obj/item/radio/headset/earbud/talon

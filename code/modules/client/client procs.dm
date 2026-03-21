@@ -60,53 +60,58 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 
 	// Rate limiting
 	var/mtl = CONFIG_GET(number/minute_topic_limit)
-	if (!check_rights_for(src, R_HOLDER) && mtl)
-		var/minute = round(world.time, 600)
-		if (!topiclimiter)
-			topiclimiter = new(LIMITER_SIZE)
-		if (minute != topiclimiter[CURRENT_MINUTE])
-			topiclimiter[CURRENT_MINUTE] = minute
-			topiclimiter[MINUTE_COUNT] = 0
-		topiclimiter[MINUTE_COUNT] += 1
-		if (topiclimiter[MINUTE_COUNT] > mtl)
-			var/msg = "Your previous action was ignored because you've done too many in a minute."
-			if (minute != topiclimiter[ADMINSWARNED_AT]) //only one admin message per-minute. (if they spam the admins can just boot/ban them)
-				topiclimiter[ADMINSWARNED_AT] = minute
-				msg += " Administrators have been informed."
-				log_game("[key_name(src)] Has hit the per-minute topic limit of [mtl] topic calls in a given game minute")
-				message_admins("[ADMIN_LOOKUPFLW(usr)] [ADMIN_KICK(usr)] Has hit the per-minute topic limit of [mtl] topic calls in a given game minute")
-			to_chat(src, span_danger("[msg]"))
-			return
+	if(!bypass_topic_limit(href_list))
+		if (!check_rights_for(src, R_HOLDER) && mtl)
+			var/minute = round(world.time, 600)
+			if (!topiclimiter)
+				topiclimiter = new(LIMITER_SIZE)
+			if (minute != topiclimiter[CURRENT_MINUTE])
+				topiclimiter[CURRENT_MINUTE] = minute
+				topiclimiter[MINUTE_COUNT] = 0
+			if(href_list["window_id"] != "statbrowser")
+				topiclimiter[MINUTE_COUNT] += 1
+			if (topiclimiter[MINUTE_COUNT] > mtl)
+				var/msg = "Your previous action was ignored because you've done too many in a minute."
+				if (minute != topiclimiter[ADMINSWARNED_AT]) //only one admin message per-minute. (if they spam the admins can just boot/ban them)
+					topiclimiter[ADMINSWARNED_AT] = minute
+					msg += " Administrators have been informed."
+					log_game("[key_name(src)] Has hit the per-minute topic limit of [mtl] topic calls in a given game minute")
+					message_admins("[ADMIN_LOOKUPFLW(usr)] [ADMIN_KICK(usr)] Has hit the per-minute topic limit of [mtl] topic calls in a given game minute")
+				to_chat(src, span_danger("[msg]"))
+				return
 
-	var/stl = CONFIG_GET(number/second_topic_limit)
-	if (!check_rights_for(src, R_HOLDER) && stl && href_list["window_id"] != "statbrowser")
-		var/second = round(world.time, 10)
-		if (!topiclimiter)
-			topiclimiter = new(LIMITER_SIZE)
-		if (second != topiclimiter[CURRENT_SECOND])
-			topiclimiter[CURRENT_SECOND] = second
-			topiclimiter[SECOND_COUNT] = 0
-		topiclimiter[SECOND_COUNT] += 1
-		if (topiclimiter[SECOND_COUNT] > stl)
-			to_chat(src, span_danger("Your previous action was ignored because you've done too many in a second"))
-			return
+		var/stl = CONFIG_GET(number/second_topic_limit)
+		if (!check_rights_for(src, R_HOLDER) && stl)
+			var/second = round(world.time, 10)
+			if (!topiclimiter)
+				topiclimiter = new(LIMITER_SIZE)
+			if (second != topiclimiter[CURRENT_SECOND])
+				topiclimiter[CURRENT_SECOND] = second
+				topiclimiter[SECOND_COUNT] = 0
+			topiclimiter[SECOND_COUNT] += 1
+			if (topiclimiter[SECOND_COUNT] > stl)
+				to_chat(src, span_danger("Your previous action was ignored because you've done too many in a second"))
+				return
 
 	//search the href for script injection
-	if( findtext(href,"<script",1,0) )
+	if(findtext(href,"<script",1,0) )
 		log_world("Attempted use of scripts within a topic call, by [src]")
 		message_admins("Attempted use of scripts within a topic call, by [src]")
 		return
 
 	// Tgui Topic middleware
-	if(!tgui_Topic(href_list))
+	if(tgui_Topic(href_list))
 		return
 
 	//Admin PM
 	if(href_list["priv_msg"])
-		var/client/C = locate(href_list["priv_msg"])
+		var/passed_key = href_list["priv_msg"]
+		var/client/C = locate(passed_key)
 		if(ismob(C)) 		//Old stuff can feed-in mobs instead ofGLOB.clients
 			var/mob/M = C
 			C = M.client
+		if(!C && istext(passed_key))
+			C = passed_key
 		cmd_admin_pm(C,null)
 		return
 
@@ -266,6 +271,7 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 	if (CONFIG_GET(flag/chatlog_database_backend))
 		chatlog_token = vchatlog_generate_token(ckey, GLOB.round_id)
 
+	winset(src, null, list("browser-options" = "find,refresh"))
 	// Instantiate stat panel
 	stat_panel = new(src, "statbrowser")
 	stat_panel.subscribe(src, PROC_REF(on_stat_panel_message))
@@ -279,14 +285,14 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 	GLOB.tickets.ClientLogin(src)
 
 	//preferences datum - also holds some persistant data for the client (because we may as well keep these datums to a minimum)
-	prefs = preferences_datums[ckey]
+	prefs = GLOB.preferences_datums[ckey]
 	if(prefs)
 		prefs.client = src
 		prefs.load_savefile() // just to make sure we have the latest data
 		prefs.apply_all_client_preferences()
 	else
 		prefs = new /datum/preferences(src)
-		preferences_datums[ckey] = prefs
+		GLOB.preferences_datums[ckey] = prefs
 	prefs.last_ip = address				//these are gonna be used for banning
 	prefs.last_id = computer_id			//these are gonna be used for banning
 
@@ -352,12 +358,6 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 	connection_realtime = world.realtime
 	connection_timeofday = world.timeofday
 
-	if(GLOB.custom_event_msg && GLOB.custom_event_msg != "")
-		to_chat(src, "<h1 class='alert'>Custom Event</h1>")
-		to_chat(src, "<h2 class='alert'>A custom event is taking place. OOC Info:</h2>")
-		to_chat(src, span_alert("[GLOB.custom_event_msg]"))
-		to_chat(src, "<br>")
-
 	if(!winexists(src, "asset_cache_browser")) // The client is using a custom skin, tell them.
 		to_chat(src, span_warning("Unable to access asset cache browser, if you are using a custom skin file, please allow DS to download the updated version, if you are not, then make a bug report. This is not a critical issue but can cause issues with resource downloading, as it is impossible to know when extra resources arrived to you."))
 
@@ -375,12 +375,6 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 	if(!void)
 		void = new()
 	screen += void
-
-	if((prefs?.read_preference(/datum/preference/text/lastchangelog) != GLOB.changelog_hash) && isnewplayer(src.mob)) //bolds the changelog button on the interface so we know there are updates.
-		to_chat(src, span_info("You have unread updates in the changelog."))
-		winset(src, "rpane.changelog", "background-color=#eaeaea;font-style=bold")
-		if(CONFIG_GET(flag/aggressive_changelog))
-			src.changes()
 
 	if(CONFIG_GET(flag/paranoia_logging))
 		var/alert = FALSE //VOREStation Edit start.
@@ -423,14 +417,17 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 /client/Destroy()
 	GLOB.directory -= ckey
 	GLOB.clients -= src
-	persistent_client.set_client(null)
+	persistent_client?.set_client(null)
 
 	log_access("Logout: [key_name(src)]")
 	GLOB.tickets.ClientLogout(src)
 	if(holder)
 		holder.owner = null
 		GLOB.admins -= src
-
+	if(skybox)
+		QDEL_NULL(skybox)
+	if(fakeConversations)
+		QDEL_NULL(fakeConversations)
 	QDEL_NULL(loot_panel)
 	..()
 	return QDEL_HINT_HARDDEL_NOW
@@ -440,7 +437,6 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 // Returns null if no DB connection can be established, or -1 if the requested key was not found in the database
 
 /proc/get_player_age(key)
-	establish_db_connection()
 	if(!SSdbcore.IsConnected())
 		return null
 
@@ -461,14 +457,15 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 	if ( IsGuestKey(src.key) )
 		return
 
-	establish_db_connection()
 	if(!SSdbcore.IsConnected())
 		return
 
 	var/sql_ckey = sql_sanitize_text(src.ckey)
 
 	var/datum/db_query/query = SSdbcore.NewQuery("SELECT id, datediff(Now(),firstseen) as age FROM erro_player WHERE ckey = '[sql_ckey]'")
-	query.Execute()
+	if(!query.Execute())
+		qdel(query)
+		return
 	var/sql_id = 0
 	player_age = 0	// New players won't have an entry so knowing we have a connection we set this to zero to be updated if their is a record.
 	while(query.NextRow())
@@ -480,11 +477,17 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 	account_join_date = sanitizeSQL(findJoinDate())
 	if(account_join_date && SSdbcore.IsConnected())
 		var/datum/db_query/query_datediff = SSdbcore.NewQuery("SELECT DATEDIFF(Now(),'[account_join_date]')")
-		if(query_datediff.Execute() && query_datediff.NextRow())
+		if(!query_datediff.Execute())
+			qdel(query)
+			return
+		if(query_datediff.NextRow())
 			account_age = text2num(query_datediff.item[1])
 		qdel(query_datediff)
 
 	var/datum/db_query/query_ip = SSdbcore.NewQuery("SELECT ckey FROM erro_player WHERE ip = '[address]'")
+	if(!query_ip.Execute())
+		qdel(query)
+		return
 	query_ip.Execute()
 	related_accounts_ip = ""
 	while(query_ip.NextRow())
@@ -493,6 +496,9 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 	qdel(query_ip)
 
 	var/datum/db_query/query_cid = SSdbcore.NewQuery("SELECT ckey FROM erro_player WHERE computerid = '[computer_id]'")
+	if(!query_cid.Execute())
+		qdel(query)
+		return
 	query_cid.Execute()
 	related_accounts_cid = ""
 	while(query_cid.NextRow())
@@ -874,6 +880,22 @@ GLOBAL_LIST_INIT(blacklisted_builds, list(
 	if(check_rights_for(src, R_HOLDER))
 		holder.particle_test = new /datum/particle_editor(in_atom)
 		holder.particle_test.tgui_interact(mob)
+
+/client/proc/set_eye(new_eye)
+	if(new_eye == eye)
+		return
+	var/atom/old_eye = eye
+	eye = new_eye
+	SEND_SIGNAL(src, COMSIG_CLIENT_SET_EYE, old_eye, new_eye)
+
+/mob/proc/is_remote_viewing()
+	if(!client || !client.mob || !client.eye)
+		return FALSE
+	if(isturf(client.mob.loc) && get_turf(client.eye) == get_turf(client.mob))
+		return FALSE
+	if(ismecha(client.mob.loc) && client.eye == client.mob.loc)
+		return FALSE
+	return (client.eye != client.mob)
 
 #undef ADMINSWARNED_AT
 #undef CURRENT_MINUTE

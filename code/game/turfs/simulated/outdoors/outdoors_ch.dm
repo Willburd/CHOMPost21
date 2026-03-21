@@ -18,7 +18,7 @@
 	if(!demote_to)
 		return // Cannot demote further.
 
-	ChangeTurf(demote_to)
+	ChangeTurf(demote_to, preserve_outdoors = TRUE)
 
 /turf/simulated/floor/outdoors/grass
 	demote_to = /turf/simulated/floor/outdoors/dirt
@@ -45,7 +45,7 @@
 	icon_state = "snow"
 	edge_blending_priority = 6
 	movement_cost = 2
-	initial_flooring = /decl/flooring/snow
+	initial_flooring = /datum/decl/flooring/snow
 
 /turf/simulated/floor/outdoors/snow/sif/planetuse/Entered(atom/A)
 	if(isliving(A))
@@ -65,7 +65,7 @@
 /turf/simulated/floor/outdoors/snow/sif/planetuse/attackby(var/obj/item/W, var/mob/user)
 	if(istype(W, /obj/item/shovel))
 		to_chat(user, span_notice("You begin to remove \the [src] with your [W]."))
-		if(do_after(user, 4 SECONDS * W.toolspeed))
+		if(do_after(user, 4 SECONDS * W.toolspeed, src))
 			to_chat(user, span_notice("\The [src] has been dug up, and now lies in a pile nearby."))
 			new /obj/item/stack/material/snow(src)
 			demote()
@@ -76,14 +76,14 @@
 
 /turf/simulated/floor/outdoors/snow/sif/planetuse/attack_hand(mob/user as mob)
 	visible_message("[user] starts scooping up some snow.", "You start scooping up some snow.")
-	if(do_after(user, 1 SECOND))
+	if(do_after(user, 1 SECOND, src))
 		var/obj/S = new /obj/item/stack/material/snow(user.loc)
 		user.put_in_hands(S)
 		visible_message("[user] scoops up a pile of snow.", "You scoop up a pile of snow.")
 	return
 
 /turf/simulated/sky/moving/north/sif/planet_fall/find_planet()
-	return planet_sif
+	return GLOB.planet_sif
 
 /turf/simulated/floor/outdoors/dirt/sif
 
@@ -106,4 +106,4 @@
 /turf/simulated/floor/tiled/sif/planetuse
 
 /obj/effect/step_trigger/teleporter/planetary_fall/sif/find_planet()
-	planet = planet_sif
+	planet = GLOB.planet_sif

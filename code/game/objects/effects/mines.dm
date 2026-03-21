@@ -126,7 +126,6 @@
 /obj/effect/mine/interact(mob/living/user as mob)
 	if(!panel_open || isAI(user))
 		return
-	user.set_machine(src)
 	wires.Interact(user)
 
 /obj/effect/mine/camo
@@ -146,12 +145,11 @@
 		M.radiation += 50
 		randmutb(M)
 		domutcheck(M,null)
+		M.check_mutation_cascade_gib() // Outpost 21 edit - mutation cascade trait
 		M.UpdateAppearance()
 	visible_message("\The [src.name] flashes violently before disintegrating!")
 	SSmotiontracker.ping(src,100)
-	spawn(0)
-		qdel(s)
-		qdel(src)
+	qdel(src)
 
 /obj/effect/mine/stun
 	mineitemtype = /obj/item/mine/stun
@@ -167,9 +165,7 @@
 		M.Stun(30)
 	visible_message("\The [src.name] flashes violently before disintegrating!")
 	SSmotiontracker.ping(src,100)
-	spawn(0)
-		qdel(s)
-		qdel(src)
+	qdel(src)
 
 /obj/effect/mine/n2o
 	mineitemtype = /obj/item/mine/n2o
@@ -183,8 +179,7 @@
 			target.assume_gas(GAS_N2O, 30)
 	visible_message("\The [src.name] detonates!")
 	SSmotiontracker.ping(src,100)
-	spawn(0)
-		qdel(src)
+	qdel(src)
 
 /obj/effect/mine/phoron
 	mineitemtype = /obj/item/mine/phoron
@@ -199,8 +194,7 @@
 			target.hotspot_expose(1000, CELL_VOLUME)
 	visible_message("\The [src.name] detonates!")
 	SSmotiontracker.ping(src,100)
-	spawn(0)
-		qdel(src)
+	qdel(src)
 
 /obj/effect/mine/kick
 	mineitemtype = /obj/item/mine/kick
@@ -217,9 +211,7 @@
 		M = E.occupant
 	if(istype(M))
 		qdel(M.client)
-	spawn(0)
-		qdel(s)
-		qdel(src)
+	qdel(src)
 
 /obj/effect/mine/frag
 	mineitemtype = /obj/item/mine/frag
@@ -242,9 +234,7 @@
 	src.fragmentate(O, num_fragments, spread_range, fragment_types) //only 20 weak fragments because you're stepping directly on it
 	visible_message("\The [src.name] detonates!")
 	SSmotiontracker.ping(src,100)
-	spawn(0)
-		qdel(s)
-		qdel(src)
+	qdel(src)
 
 /obj/effect/mine/training	//Name and Desc commented out so it's possible to trick people with the training mines
 //	name = "training mine"
@@ -257,8 +247,9 @@
 	triggered = TRUE
 	visible_message("\The [src.name]'s light flashes rapidly as it 'explodes'.")
 	new src.mineitemtype(get_turf(src))
-	spawn(0)
-		qdel(src)
+	for(var/wire_color in wires.colors)
+		wires.detach_assembly(wire_color) //Kick all the signallers off!
+	qdel(src)
 
 /obj/effect/mine/emp
 	mineitemtype = /obj/item/mine/emp
@@ -273,8 +264,7 @@
 	visible_message("\The [src.name] flashes violently before disintegrating!")
 	SSmotiontracker.ping(src,100)
 	empulse(loc, 2, 4, 7, 10, 1) // As strong as an EMP grenade
-	spawn(0)
-		qdel(src)
+	qdel(src)
 
 /obj/effect/mine/emp/camo
 	camo_net = TRUE
@@ -294,8 +284,7 @@
 		M.fire_act()
 	visible_message("\The [src.name] bursts into flames!")
 	SSmotiontracker.ping(src,100)
-	spawn(0)
-		qdel(src)
+	qdel(src)
 
 /obj/effect/mine/gadget
 	mineitemtype = /obj/item/mine/gadget
@@ -335,7 +324,10 @@
 
 	var/list/allowed_gadgets = null
 
-/obj/item/mine/attack_self(mob/user as mob)	// You do not want to move or throw a land mine while priming it... Explosives + Sudden Movement = Bad Times
+/obj/item/mine/attack_self(mob/user)	// You do not want to move or throw a land mine while priming it... Explosives + Sudden Movement = Bad Times
+	. = ..(user)
+	if(.)
+		return TRUE
 	add_fingerprint(user)
 	msg_admin_attack("[key_name_admin(user)] primed \a [src]")
 	user.visible_message("[user] starts priming \the [src.name].", "You start priming \the [src.name]. Hold still!")
@@ -386,8 +378,7 @@
 		R.trap.forceMove(R)
 	if(explode_now)
 		R.explode(user)
-	spawn(0)
-		qdel(src)
+	qdel(src)
 
 /obj/item/mine/dnascramble
 	name = "radiation mine"
@@ -445,3 +436,65 @@
 	if(!(L.hovering || L.flying || L.is_incorporeal() || L.mob_size <= MOB_TINY))
 		return FALSE
 	return ..()
+
+//Lasertag mines
+
+/obj/effect/mine/lasertag
+	mineitemtype = /obj/item/mine/lasertag
+	var/beam_types = list(/obj/item/projectile/bullet/foam_dart_riot) // you fool, you baffoon, you used these, you absolute ignoramous, why did you not read this!
+	var/spread_range = 3
+
+/obj/effect/mine/lasertag/explode(var/mob/living/M)
+	if(triggered) // Prevents circular mine explosions from two mines detonating eachother
+		return
+	var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread()
+	triggered = 1
+	s.set_up(3, 1, src)
+	s.start()
+	var/turf/O = get_turf(src)
+	if(!O)
+		return
+	launch_many_projectiles(O, spread_range, beam_types)
+	visible_message("\The [src.name] detonates!")
+	qdel(src)
+
+/obj/effect/mine/lasertag/red
+	mineitemtype = /obj/item/mine/lasertag/red
+	beam_types = list(/obj/item/projectile/beam/lasertag/red)
+
+/obj/effect/mine/lasertag/blue
+	mineitemtype = /obj/item/mine/lasertag/blue
+	beam_types = list(/obj/item/projectile/beam/lasertag/blue)
+
+/obj/effect/mine/lasertag/omni
+	mineitemtype = /obj/item/mine/lasertag/omni
+	beam_types = list(/obj/item/projectile/beam/lasertag/omni)
+
+/obj/effect/mine/lasertag/all
+	mineitemtype = /obj/item/mine/lasertag/all
+	beam_types = list(/obj/item/projectile/beam/lasertag/red,/obj/item/projectile/beam/lasertag/blue,/obj/item/projectile/beam/lasertag/omni)
+
+/obj/item/mine/lasertag
+	name = "lasertag mine"
+	desc = "A small mine with 'BOOM' written on top, and an optical hazard warning on the side."
+	minetype = /obj/effect/mine/lasertag
+
+/obj/item/mine/lasertag/red
+	name = "red lasertag mine"
+	desc = "A small red mine with 'BOOM' written on top, and an optical hazard warning on the side."
+	minetype = /obj/effect/mine/lasertag/red
+
+/obj/item/mine/lasertag/blue
+	name = "blue lasertag mine"
+	desc = "A small blue mine with 'BOOM' written on top, and an optical hazard warning on the side."
+	minetype = /obj/effect/mine/lasertag/blue
+
+/obj/item/mine/lasertag/omni
+	name = "purple lasertag mine"
+	desc = "A small purple mine with 'BOOM' written on top, and an optical hazard warning on the side."
+	minetype = /obj/effect/mine/lasertag/omni
+
+/obj/item/mine/lasertag/all
+	name = "chaos lasertag mine"
+	desc = "A small grey mine with 'BOOM' written on top, and an optical hazard warning on the side."
+	minetype = /obj/effect/mine/lasertag/all

@@ -205,7 +205,7 @@
 
 			air.temperature += self_temperature_delta
 
-			// Outpost 21 edit begin - Treat planets outdoors as endless heatsinks
+			// Outpost 21 edit(port) begin - Treat planets outdoors as endless heatsinks
 			if(!(target.is_outdoors() && (target.z in using_map.forced_airmix_levels)))
 				if(modeled_location.zone)
 					modeled_location.zone.air.temperature += sharer_temperature_delta/modeled_location.zone.air.group_multiplier

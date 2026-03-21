@@ -1,3 +1,6 @@
+#define CAM_DIST 18
+#define CAM_SIZE 6
+
 /obj/item/laser_designator
 	name = "laser designator"
 	desc = "Used to call down the fist of God!"
@@ -16,6 +19,12 @@
 	var/recharging = 0
 	var/recharge_locked = 0
 
+/obj/item/laser_designator/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
+	zoom(user, CAM_DIST, CAM_SIZE) // long but small vision range
+
 /obj/item/laser_designator/attack(mob/living/M, mob/user)
 	laser_act(M, user)
 
@@ -25,9 +34,7 @@
 	laser_act(target, user)
 
 /obj/item/laser_designator/proc/laser_act(var/atom/target, var/mob/living/user)
-	if(!(user in (viewers(world.view,target))))
-		return
-	if(!(target in view(user, world.view)))
+	if(!(user in (viewers(world.view + CAM_DIST + CAM_SIZE,target))))
 		return
 	if(!(world.time - last_used_time >= cooldown))
 		return
@@ -42,9 +49,11 @@
 		to_chat(user, "<span class='notice'>You point [src] at [target], but it's still charging.</span>")
 		return
 
+	/*
 	var/choice = tgui_alert(user, "Confirm designation? Station alert level will be elevated to code blue.", "Designate target", list("YES", "NO"))
 	if(choice != "YES")
 		return
+	*/
 
 	var/turf/targloc = get_turf(target)
 
@@ -70,6 +79,7 @@
 		if(energy <= 0)
 			to_chat(user, "<span class='warning'>You've overused the battery of [src], now it needs time to recharge!</span>")
 			recharge_locked = 1
+			return
 
 	call_down_the_fist_of_god(user,target,targloc)
 	flick_overlay(I, showto, cooldown)
@@ -84,7 +94,7 @@
 
 	if(GLOB.security_level < SEC_LEVEL_RED)
 		set_security_level(SEC_LEVEL_RED)
-		command_announcement.Announce("Bluespace artillery fire detected. Brace for impact.")
+		GLOB.command_announcement.Announce("Bluespace artillery fire detected. Brace for impact.")
 	log_and_message_admins("[key_name(target)] has been hit by Bluespace Artillery fired by [key_name(user ? user : usr)]")
 
 	spawn(10 SECONDS)
@@ -101,3 +111,6 @@
 			recharge_locked = 0
 			visible_message("<span class='notice'>\The [src] has recharged!</span>")
 			..()
+
+#undef CAM_DIST
+#undef CAM_SIZE

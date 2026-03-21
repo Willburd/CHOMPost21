@@ -60,25 +60,7 @@ export const Ticket = (props) => {
   const [ticketChat, setTicketChat] = useState('');
 
   const messagesEndRef: RefObject<HTMLDivElement | null> = useRef(null);
-
-  useEffect(() => {
-    const scroll = messagesEndRef.current;
-    if (scroll) {
-      scroll.scrollTop = scroll.scrollHeight;
-    }
-  }, []);
-
-  useEffect(() => {
-    const scroll = messagesEndRef.current;
-    if (scroll) {
-      const height = scroll.scrollHeight;
-      const bottom = scroll.scrollTop + scroll.offsetHeight;
-      const scrollTracking = Math.abs(height - bottom) < 24;
-      if (scrollTracking) {
-        scroll.scrollTop = scroll.scrollHeight;
-      }
-    }
-  });
+  const inputRef: RefObject<HTMLInputElement | null> = useRef(null);
 
   const {
     id,
@@ -94,6 +76,20 @@ export const Ticket = (props) => {
     actions,
     log,
   } = data;
+
+  useEffect(() => {
+    const scroll = messagesEndRef.current;
+    if (!scroll) return;
+
+    const isAtBottom =
+      Math.abs(scroll.scrollHeight - scroll.scrollTop - scroll.offsetHeight) <
+      24;
+
+    if (isAtBottom) {
+      scroll.scrollTop = scroll.scrollHeight;
+    }
+  }, [log]);
+
   return (
     <Window width={900} height={600}>
       <Window.Content>
@@ -202,6 +198,7 @@ export const Ticket = (props) => {
                           ticket_ref: ticket_ref,
                         });
                         setTicketChat('');
+                        requestAnimationFrame(() => inputRef.current?.focus());
                       }
                     }}
                   />
@@ -214,6 +211,7 @@ export const Ticket = (props) => {
                         ticket_ref: ticket_ref,
                       });
                       setTicketChat('');
+                      requestAnimationFrame(() => inputRef.current?.focus());
                     }}
                   >
                     Send

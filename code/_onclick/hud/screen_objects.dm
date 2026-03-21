@@ -495,10 +495,16 @@
 			else if (issilicon(usr))
 				var/mob/living/silicon/u = usr
 				u.pose()
+
 		if("move upwards")
 			usr.up()
+		if("Move Up") // AI version
+			usr.zMove(UP)
+
 		if("move downwards")
 			usr.down()
+		if("Move Down") // AI version
+			usr.zMove(DOWN)
 
 		if("use held item on self")
 			var/atom/movable/screen/useself/s = src
@@ -621,6 +627,16 @@
 			if(isAI(usr))
 				var/mob/living/silicon/ai/ai_user = usr
 				ai_user.view_images()
+
+		if("Multicamera Mode")
+			if(isAI(usr))
+				var/mob/living/silicon/ai/ai_user = usr
+				ai_user.toggle_multicam()
+
+		if("New Camera")
+			if(isAI(usr))
+				var/mob/living/silicon/ai/ai_user = usr
+				ai_user.drop_new_multicam()
 
 		if("shadekin status")
 			var/turf/T = get_turf(usr)
@@ -1005,6 +1021,21 @@
 	screen_loc = ui_ammo_hud1
 	var/warned = FALSE
 	var/static/list/ammo_screen_loc_list = list(ui_ammo_hud1, ui_ammo_hud2, ui_ammo_hud3 ,ui_ammo_hud4)
+	var/datum/weakref/our_gun
+
+/atom/movable/screen/ammo/Click()
+	var/mob/user = usr
+	if(!user.checkClickCooldown())
+		return TRUE
+	if(user.stat || user.paralysis || user.stunned || user.weakened)
+		return TRUE
+	if(istype(user.loc,/obj/mecha)) // stops inventory actions in a mech
+		return TRUE
+	var/obj/item/gun/gun = our_gun.resolve()
+	if(!gun)
+		return TRUE
+	gun.switch_firemodes(user)
+	return TRUE
 
 /atom/movable/screen/ammo/proc/add_hud(var/mob/living/user, var/obj/item/gun/G)
 

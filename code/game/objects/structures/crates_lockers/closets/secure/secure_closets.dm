@@ -12,16 +12,14 @@
 	health = 200
 	anchored = 1 //CHOMPADD - Making them properly IMMOBILE. Like the Desc says? Yeah...
 
-	closet_appearance = /decl/closet_appearance/secure_closet
+	closet_appearance = /datum/decl/closet_appearance/secure_closet
 
 /obj/structure/closet/secure_closet/can_open()
 	if(locked)
 		return 0
 	return ..()
 
-/obj/structure/closet/secure_closet/emp_act(severity)
-	for(var/obj/O in src)
-		O.emp_act(severity)
+/obj/structure/closet/secure_closet/emp_act(severity, recursive)
 	if(!broken)
 		if(prob(50/severity))
 			locked = !locked
@@ -118,7 +116,7 @@
 	else
 		toggle(user)
 
-/obj/structure/closet/secure_closet/AltClick()
+/obj/structure/closet/secure_closet/click_alt()
 	..()
 	verb_togglelock()
 

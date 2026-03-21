@@ -254,14 +254,19 @@
 
 	data["designs"] = designs
 	data["fabName"] = name
-	data += materials.mat_container.tgui_static_data()
+
+	var/list/material_data = materials.mat_container?.tgui_static_data(user)
+	if(material_data)
+		data += material_data
 
 	return data
 
 /obj/machinery/rnd/production/tgui_data(mob/user)
 	var/list/data = list()
 
-	data["materials"] = materials.mat_container.tgui_data()
+	var/list/material_data = materials.mat_container?.tgui_data(user)
+	if(material_data)
+		data["materials"] = material_data
 	data["onHold"] = FALSE //materials.on_hold()
 	data["busy"] = busy
 	data["materialMaximum"] = materials.local_size
@@ -276,7 +281,7 @@
 
 	switch(action)
 		if("remove_mat")
-			var/datum/material/material = name_to_material[params["id"]]
+			var/datum/material/material = GLOB.name_to_material[params["id"]]
 			if(!istype(material))
 				return
 
@@ -448,13 +453,16 @@
 	icon_state = initial(icon_state)
 
 /obj/machinery/rnd/production/MouseDrop(atom/over, src_location, over_location, src_control, over_control, params)
-	if(!Adjacent(usr))
+	var/mob/user = usr
+	if(!Adjacent(user))
+		return
+	if(isobserver(user) || user.is_incorporeal())
 		return
 	if(busy)
-		balloon_alert(usr, "busy printing!")
+		balloon_alert(user, "busy printing!")
 		return
 	var/direction = get_dir(src, over_location)
 	if(!direction)
 		return
 	drop_direction = direction
-	balloon_alert(usr, "dropping [dir2text(drop_direction)]")
+	balloon_alert(user, "dropping [dir2text(drop_direction)]")

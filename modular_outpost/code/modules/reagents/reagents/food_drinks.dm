@@ -4,6 +4,7 @@
 	id = REAGENT_ID_NUKIEFINAL
 	color = "#14ed39"
 	taste_description = "you're not welcome in this swamp."
+	scannable = SCANNABLE_SECRETIVE
 
 /datum/reagent/drink/coffee/nukie/mega/final_nukie/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
 	if(M.get_jittery() < 500)
@@ -23,6 +24,7 @@
 	id = REAGENT_ID_THEDEW
 	description = "Mountain Wind Crystal Classic, was the hit soft drink fad in 2231. Last seen on sale in 2285..."
 	color = "#80ba80"
+	scannable = SCANNABLE_UNSCANNABLE
 
 /datum/reagent/ickypak/the_dew/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	M.druggy = max(M.druggy, 12)

@@ -8,22 +8,27 @@
 		return COMPONENT_INCOMPATIBLE
 	host = parent
 	nade = G
-	RegisterSignal(host, COMSIG_PARENT_ATTACKBY, PROC_REF(on_attackby))
-	RegisterSignal(host, COMSIG_PARENT_EXAMINE, PROC_REF(on_examine))
-	RegisterSignal(host, COMSIG_ATOM_ATTACK_HAND, PROC_REF(on_attackhand))
-	RegisterSignal(host, COMSIG_ATOM_BUMPED, PROC_REF(on_bumped))
-	RegisterSignal(host, COMSIG_QDELETING, PROC_REF(trigger_trap))
 
 /datum/component/grenadetrap/Destroy(force = FALSE)
-	UnregisterSignal(host, COMSIG_PARENT_ATTACKBY)
-	UnregisterSignal(host, COMSIG_PARENT_EXAMINE)
-	UnregisterSignal(host, COMSIG_ATOM_ATTACK_HAND)
-	UnregisterSignal(host, COMSIG_ATOM_BUMPED)
-	UnregisterSignal(host, COMSIG_QDELETING)
+	. = ..()
 	host = null
 	qdel(nade)
 	nade = null
-	. = ..()
+
+/datum/component/grenadetrap/RegisterWithParent()
+	RegisterSignal(parent, COMSIG_ATOM_ATTACKBY, PROC_REF(on_attackby))
+	RegisterSignal(parent, COMSIG_ATOM_EXAMINE, PROC_REF(on_examine))
+	RegisterSignal(parent, COMSIG_ATOM_ATTACK_HAND, PROC_REF(on_attackhand))
+	RegisterSignal(parent, COMSIG_ATOM_BUMPED, PROC_REF(on_bumped))
+	RegisterSignal(parent, COMSIG_QDELETING, PROC_REF(trigger_trap))
+
+/datum/component/grenadetrap/UnregisterFromParent()
+	UnregisterSignal(parent, COMSIG_ATOM_ATTACKBY)
+	UnregisterSignal(parent, COMSIG_ATOM_EXAMINE)
+	UnregisterSignal(parent, COMSIG_ATOM_ATTACK_HAND)
+	UnregisterSignal(parent, COMSIG_ATOM_BUMPED)
+	UnregisterSignal(parent, COMSIG_QDELETING)
+
 
 // Signal handlers
 //////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -36,12 +41,7 @@
 
 /datum/component/grenadetrap/proc/on_attackby(obj/item/source, obj/item/W, mob/user, params)
 	SIGNAL_HANDLER
-	if(nade && W.has_tool_quality(TOOL_WIRECUTTER))
-		playsound(src, W.usesound, 50, 1)
-		to_chat(user, span_warning("You cut the trap from \the [host]."))
-		nade.forceMove(get_turf(host))
-		nade = null
-		qdel(src)
+	if(!nade)
 		return
 	if(activated)
 		return
@@ -106,4 +106,14 @@
 		else
 			attach_grenade_trap(user,G)
 		return TRUE
+
+	var/datum/component/grenadetrap/GT = GetComponent(/datum/component/grenadetrap) // Awaiting upstream fix, fucking door code
+	if(GT && C.has_tool_quality(TOOL_WIRECUTTER))
+		playsound(src, C.usesound, 50, 1)
+		to_chat(user, span_warning("You cut the trap from \the [src]."))
+		GT.nade.forceMove(get_turf(user))
+		GT.nade = null
+		qdel(GT)
+		return TRUE
+
 	. = ..()

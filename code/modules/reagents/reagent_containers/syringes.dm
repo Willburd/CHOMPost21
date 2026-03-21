@@ -30,7 +30,7 @@
 	var/image/filling //holds a reference to the current filling overlay
 	var/visible_name = "a syringe"
 	var/time = 30
-	var/drawing = 0
+	var/drawing = FALSE
 	var/used = FALSE
 	var/dirtiness = 0
 	var/list/targets
@@ -55,24 +55,6 @@
 
 /obj/item/reagent_containers/syringe/on_reagent_change()
 	update_icon()
-	// Outpost 21 edit begin - Sterilization of dirty needles
-	// This should really be moved to a reagent var...
-	if(reagents.has_reagent(REAGENT_ID_SACID, 1) \
-	|| reagents.has_reagent(REAGENT_ID_PACID, 1) \
-	|| reagents.has_reagent(REAGENT_ID_CLEANER, 1) \
-	|| reagents.has_reagent(REAGENT_ID_AMMONIA, 1) \
-	|| reagents.has_reagent(REAGENT_ID_CHLORINE, 1) \
-	|| reagents.has_reagent(REAGENT_ID_ETHANOL, 1) \
-	|| reagents.has_reagent(REAGENT_ID_CHLORALHYDRATE, 1) \
-	|| reagents.has_reagent(REAGENT_ID_STERILIZINE, 1) \
-	|| reagents.has_reagent(REAGENT_ID_FLUORINE, 1) \
-	|| reagents.has_reagent(REAGENT_ID_VODKA, 1) \
-	|| reagents.has_reagent(REAGENT_ID_VODKAMARTINI, 1) \
-	|| reagents.has_reagent(REAGENT_ID_VODKATONIC, 1) \
-	|| reagents.has_reagent(REAGENT_ID_UNATHILIQUOR, 1) \
-	|| reagents.has_reagent(REAGENT_ID_PHORON, 1))
-		sterilize()
-	// Outpost 21 edit end
 
 /obj/item/reagent_containers/syringe/pickup(mob/user)
 	..()
@@ -82,7 +64,10 @@
 	..()
 	update_icon()
 
-/obj/item/reagent_containers/syringe/attack_self(mob/user as mob)
+/obj/item/reagent_containers/syringe/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	switch(mode)
 		if(SYRINGE_CAPPED)
 			mode = SYRINGE_DRAW
@@ -115,7 +100,7 @@
 		return
 
 	if(user.a_intent == I_HURT && ismob(target))
-		if((CLUMSY in user.mutations) && prob(20)) // Outpost 21 edit - Made clumsy less obnoxious
+		if(CLUMSY_HARM_CHANCE(user))
 			target = user
 		syringestab(target, user)
 		return
@@ -152,24 +137,24 @@
 						return
 
 					var/datum/reagent/B
-					drawing = 1
+					drawing = TRUE
 					if(ishuman(T))
 						var/mob/living/carbon/human/H = T
 						if(H.species && !H.should_have_organ(O_HEART))
 							H.reagents.trans_to_obj(src, amount)
 						else
 							if(ismob(H) && H != user)
-								if(!do_mob(user, target, time))
-									drawing = 0
+								if(!do_after(user, time, target))
+									drawing = FALSE
 									return
 							B = T.take_blood(src, amount)
-							drawing = 0
+							drawing = FALSE
 					else
-						if(!do_mob(user, target, time))
-							drawing = 0
+						if(!do_after(user, time, target))
+							drawing = FALSE
 							return
 						B = T.take_blood(src,amount)
-						drawing = 0
+						drawing = FALSE
 
 					if (B)
 						reagents.reagent_list += B
@@ -219,7 +204,7 @@
 				return
 			// CHOMPedit end
 
-			if(!target.is_open_container() && !ismob(target) && !istype(target, /obj/item/reagent_containers/food) && !istype(target, /obj/item/slime_extract) && !istype(target, /obj/item/clothing/mask/smokable/cigarette) && !istype(target, /obj/item/storage/fancy/cigarettes) && !istype(target, /obj/item/clothing/mask/chewable) && !istype(target, /obj/item/reagent_containers/blood/refillable)) // CHOMPEdit, Outpost 21 edit - Medical IV bags
+			if(!target.is_injectable_container() && !ismob(target))
 				to_chat(user, span_notice("You cannot directly fill this object."))
 				return
 			if(!target.reagents.get_free_space())
@@ -305,7 +290,7 @@
 
 		var/mob/living/carbon/human/H = target
 
-		var/target_zone = ran_zone(check_zone(user.zone_sel.selecting, target))
+		var/target_zone = get_zone_with_miss_chance(check_zone(user.zone_sel.selecting, target))
 		var/obj/item/organ/external/affecting = H.get_organ(target_zone)
 
 		if (!affecting || affecting.is_stump())
@@ -317,7 +302,8 @@
 		if((user != target) && H.check_shields(7, src, user, "\the [src]"))
 			return
 
-		if (target != user && H.getarmor(target_zone, "melee") > 5 && prob(50))
+		var/armor_val = H.getarmor(target_zone, "melee")
+		if(target != user && armor_val >= 5 && prob(50+armor_val)) // High armor can deflect syringe stabs
 			for(var/mob/O in viewers(world.view, user))
 				O.show_message(span_bolddanger("[user] tries to stab [target] in \the [hit_area] with [src.name], but the attack is deflected by armor!"), 1)
 			user.remove_from_mob(src)
@@ -432,25 +418,14 @@
 	//reagents.add_reagent(REAGENT_ID_ADRENALINE,5) //VOREStation Edit - No thanks.
 	reagents.add_reagent(REAGENT_ID_HYPERZINE,10)
 
-// Outpost 21 edit begin - Sterilization of dirty needles
+// Outpost 21 edit(port) begin - Sterilization of dirty needles
 /obj/item/reagent_containers/syringe/proc/sterilize()
-	var/become_sterile = FALSE
-	if(dirtiness > 0)
-		become_sterile = TRUE
-		dirtiness = 0
-	if(viruses && viruses.len > 0)
-		become_sterile = TRUE
-		QDEL_LIST_NULL(viruses)
-	if(targets && targets.len > 0)
-		become_sterile = TRUE
-		LAZYCLEARLIST(targets)
+	dirtiness = 0
+	QDEL_LIST_NULL(viruses)
+	LAZYCLEARLIST(targets)
 	if(used)
-		become_sterile = TRUE
 		used = FALSE
 		STOP_PROCESSING(SSobj, src)
-
-	if(become_sterile)
-		visible_message("\The [src] was sterilized.")
 // Outpost 21 edit end
 
 /obj/item/reagent_containers/syringe/proc/dirty(var/mob/living/carbon/human/target, var/obj/item/organ/external/eo)
@@ -468,8 +443,7 @@
 	//Grab any viruses they have
 	if(iscarbon(target) && LAZYLEN(target.IsInfected()))
 		LAZYINITLIST(viruses)
-		var/datum/disease/virus = pick(target.IsInfected())
-		viruses[hash] = virus.Copy()
+		viruses[hash] = target.GetViruses()
 
 	//Dirtiness should be very low if you're the first injectee. If you're spam-injecting 4 people in a row around you though,
 	//This gives the last one a 30% chance of infection.

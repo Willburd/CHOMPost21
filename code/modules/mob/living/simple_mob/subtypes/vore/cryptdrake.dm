@@ -59,6 +59,7 @@
 	vore_default_mode = DM_DIGEST
 	vore_pounce_maxhealth = 125
 	vore_bump_emote = "tries to devour"
+	can_be_drop_prey = FALSE
 
 // Outpost 21 edit begin - Undead reviving mobs
 /mob/living/simple_mob/vore/cryptdrake/Initialize(mapload)

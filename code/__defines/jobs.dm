@@ -26,6 +26,17 @@
 	#define JOB_ALT_BRIDGE_ASSISTANT "Bridge Assistant"
 	#define JOB_ALT_BRIDGE_OFFICER "Bridge Officer" // CHOMPAdd
 
+// Outpost 21 edit begin - command officer
+#define JOB_COMMAND_OFFICER "Command Officer"
+	#define JOB_ALT_CO_PETTY_OFFICER "Petty Officer"
+	#define JOB_ALT_CO_PETTY_CADET "Cadet"
+	#define JOB_ALT_CO_WARRANT_OFFICER "Chief Warrant Officer"
+	#define JOB_ALT_CO_ASSIST_MED_OFFICER "Assistant Medical Officer"
+	#define JOB_ALT_CO_ASSIST_SEC_OFFICER "Combat Control Officer"
+	#define JOB_ALT_CO_ASSIST_ENG_OFFICER "Engineering Specialist"
+	#define JOB_ALT_CO_ASSIST_SCI_OFFICER "Command Intelligence Officer"
+// Outpost 21 edit end
+
 #define JOB_HEAD_OF_SECURITY "Head of Security"
 	// Head of Security alt titles
 	#define JOB_ALT_SECURITY_COMMANDER "Security Commander"
@@ -33,7 +44,7 @@
 	#define JOB_ALT_SECURITY_MANAGER "Security Manager"
 
 #define JOB_CHIEF_ENGINEER "Chief Engineer"
-	// Cheif Engineer alt titles
+	// Chief Engineer alt titles
 	#define JOB_ALT_HEAD_ENGINEER "Head Engineer"
 	#define JOB_ALT_FOREMAN "Foreman"
 	#define JOB_ALT_MAINTENANCE_MANAGER "Maintenance Manager"
@@ -56,6 +67,7 @@
 	#define JOB_ALT_SUPPLY_CHIEF "Supply Chief"
 	#define JOB_ALT_LOGISTICS_MANAGER "Logistics Manager"
 	#define JOB_ALT_CARGO_SUPERVISOR "Cargo Supervisor"
+	#define JOB_ALT_CHIEF_STEWARD "Chief Steward" // Outpost 21 addition
 
 #define JOB_PATHFINDER "Pathfinder" // was Pathfinder  //CHOMP explo keep
 	// Pathfinder alt titles
@@ -114,6 +126,7 @@
 	#define JOB_ALT_SUPPLY_COURIER "Supply Courier"
 	#define JOB_ALT_DISPOSALS_SORTER "Disposals Sorter"
 	#define JOB_ALT_MAILMAN "Mailman"
+	#define JOB_ALT_DELIVERY_WORKER "Delivery Worker"
 
 #define JOB_SHAFT_MINER "Shaft Miner"
 	// Shaft Miner alt titles
@@ -197,6 +210,8 @@
 	#define JOB_ALT_FORTUNE_TELLER "Fortune Teller"
 	#define JOB_ALT_SPIRIT_HEALER "Spirit Healer"
 	#define JOB_ALT_RADIOHOST "Radio Host" // Outpost 21 addition
+	#define JOB_ALT_EDUCATOR "Educator"
+	#define JOB_ALT_INSTRUCTOR "Instructor"
 //___________________________________________________________
 
 
@@ -209,9 +224,10 @@
 	#define JOB_ALT_CONSTRUCTION_ENGINEER "Construction Engineer"
 	#define JOB_ALT_ENGINEERING_CONTRACTOR "Engineering Contractor"
 	#define JOB_ALT_SHIPBREAKER "Ship Breaker" // Outpost 21 addition
-	#define JOB_ALT_CHEMENGINEER "Chemical Engineer" // Outpost 21 addition
+	#define JOB_ALT_CHEMENGINEER "Chemical Engineer"
 	#define JOB_ALT_COMPUTER_TECHNICIAN "Computer Technician"
 	#define JOB_ALT_SALVAGE_TECHNICIAN "Salvage Technician"
+	#define JOB_ALT_DAMAGE_CONTROL_SPECIALIST "Damage Control Specialist"
 
 #define JOB_ATMOSPHERIC_TECHNICIAN "Atmospheric Technician"
 	// Atmospheric Technician alt titles
@@ -346,6 +362,8 @@
 	#define JOB_ALT_INVESTIGATOR "Investigator"
 	#define JOB_ALT_SECURITY_INSPECTOR "Security Inspector"
 	#define JOB_ALT_FORENSIC_TECHNICIAN "Forensic Technician"
+	#define JOB_ALT_LOSS_PREVENTION "Loss Prevention Officer"
+	#define JOB_ALT_HALLMONITOR "Hall Monitor" // Outpost 21 edit - joke role
 
 // CHOMPAdd
 #define JOB_BRIG_PHYSICIAN "Brig Physician"
@@ -356,6 +374,7 @@
 	#define JOB_ALT_JUNIOR_BRIGPHYS "Junior Brig Physician"
 	#define JOB_ALT_DETENTION_HEALTH_OFFICER "Detention Health Officer"
 // CHOMPAdd End
+
 //___________________________________________________________
 
 
@@ -526,7 +545,7 @@
 #define LAWYER (1<<9)
 #define CHAPLAIN (1<<10)
 #define ASSISTANT (1<<11)
-// define BRIDGE (1<<12) //Outpost 21 edit - Command sec folded into hop
+#define BRIDGE (1<<12)
 // #define PILOT (1<<13) // CHOMPRemove
 #define ENTERTAINER (1<<14)
 #define ENTREPRENEUR (1<<15)
@@ -554,6 +573,7 @@ GLOBAL_LIST_INIT(command_positions, list(
 	JOB_CHIEF_ENGINEER,
 	JOB_RESEARCH_DIRECTOR,
 	JOB_CHIEF_MEDICAL_OFFICER,
+	JOB_COMMAND_OFFICER, // Outpost 21 edit - Command officer
 	// JOB_COMMAND_SECRETARY, // Outpost 21 edit - Command sec folded into hop
 	// JOB_BLUESHIELD_GUARD // CHOMPEnable // Outpost 21 edit - Job disabled
 ))

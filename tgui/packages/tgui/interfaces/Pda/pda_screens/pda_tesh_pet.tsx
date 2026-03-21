@@ -7,7 +7,7 @@ type Data = {
   };
 };
 
-export const pda_prisoner_implant = (props) => {
+export const pda_tesh_pet = (props) => {
   const { act, data } = useBackend<Data>();
   const { teshpet_data } = data;
 

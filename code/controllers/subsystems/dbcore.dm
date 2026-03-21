@@ -44,6 +44,11 @@ SUBSYSTEM_DEF(dbcore)
 
 /datum/controller/subsystem/dbcore/Initialize()
 	Connect()
+	if(IsConnected() && CONFIG_GET(flag/database_logging))
+		var/datum/db_query/query_truncate = NewQuery("TRUNCATE erro_dialog")
+		if(!query_truncate.Execute())
+			log_sql("ERROR TRYING TO CLEAR erro_dialog: "+query_truncate.ErrorMsg())
+		qdel(query_truncate)
 	return SS_INIT_SUCCESS
 
 /datum/controller/subsystem/dbcore/stat_entry(msg)
@@ -389,7 +394,7 @@ Ignore_errors instructes mysql to continue inserting rows if some of them have e
 			if (has_col)
 				query_parts += ", "
 			if (has_question_mark[column])
-				var/name = "p[arguments.len]"
+				var/name = "p[length(arguments)]"
 				query_parts += replacetext(columns[column], "?", ":[name]")
 				arguments[name] = row[column]
 			else
@@ -526,11 +531,10 @@ Ignore_errors instructes mysql to continue inserting rows if some of them have e
 	Close()
 	status = DB_QUERY_STARTED
 	if(async)
-		/*if(!MC_RUNNING(SSdbcore.init_stage))
+		if(!MC_RUNNING(SSdbcore.init_stage))
 			SSdbcore.run_query_sync(src)
 		else
-			SSdbcore.queue_query(src)*/
-		SSdbcore.run_query_sync(src)
+			SSdbcore.queue_query(src)
 		sync()
 	else
 		var/job_result_str = rustg_sql_query_blocking(connection, sql, json_encode(arguments))
@@ -587,7 +591,7 @@ Ignore_errors instructes mysql to continue inserting rows if some of them have e
 /datum/db_query/proc/NextRow(async = TRUE)
 	Activity("NextRow")
 
-	if (rows && next_row_to_take <= rows.len)
+	if (rows && next_row_to_take <= length(rows))
 		item = rows[next_row_to_take]
 		next_row_to_take++
 		return !!item

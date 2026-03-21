@@ -84,7 +84,7 @@
 	response_disarm = "gently pushes aside"
 	response_harm   = "punches"
 
-	organ_names = /decl/mob_organ_names/spider
+	organ_names = /datum/decl/mob_organ_names/spider
 
 
 	melee_damage_lower = 18
@@ -118,9 +118,6 @@
 		/obj/item/stack/material/chitin = 1\
 		)
 
-	// Outpost 21 edit begin - muriki enzyme immunity
-	enzyme_affect = FALSE
-	// Outpost 21 edit end
 	allow_mind_transfer = TRUE
 	can_be_drop_prey = FALSE
 	species_sounds = "Spider"
@@ -219,5 +216,5 @@
 
 	set_AI_busy(FALSE)
 
-/decl/mob_organ_names/spider
+/datum/decl/mob_organ_names/spider
 	hit_zones = list("cephalothorax", "abdomen", "left forelegs", "right forelegs", "left hind legs", "right hind legs", "pedipalp", "mouthparts")

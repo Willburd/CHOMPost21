@@ -14,7 +14,7 @@
 		announcement = "Massive migration of unknown biological entities has been detected near [station_name()], please stand-by." //CHOMPStation Edit: Restore original message.
 	else
 		announcement = "Unknown biological [spawned_spider.len == 1 ? "entity has" : "entities have"] been detected near [station_name()], please stand-by." //CHOMPStation Edit: Restore original message.
-	command_announcement.Announce(announcement, "Lifesign Alert")
+	GLOB.command_announcement.Announce(announcement, "Lifesign Alert")
 
 /datum/event/spider_migration/start()
 	if(severity == EVENT_LEVEL_MAJOR)
@@ -37,7 +37,23 @@
 	while (i <= num_groups)
 		var/group_size = rand(group_size_min, group_size_max)
 		for (var/j = 1, j <= group_size, j++)
-			spawned_spider.Add(new /mob/living/simple_mob/animal/giant_spider/frost/event(spawn_locations[i]))
+			// Outpost 21 edit begin - Varied spider packs
+			var/mob_path = pick(
+				prob(90);/mob/living/simple_mob/animal/giant_spider,
+				prob(20);/mob/living/simple_mob/animal/giant_spider/electric,
+				prob(20);/mob/living/simple_mob/animal/giant_spider/frost,
+				prob(20);/mob/living/simple_mob/animal/giant_spider/hunter,
+				prob(20);/mob/living/simple_mob/animal/giant_spider/ion,
+				prob(20);/mob/living/simple_mob/animal/giant_spider/lurker,
+				prob(20);/mob/living/simple_mob/animal/giant_spider/pepper,
+				prob(10);/mob/living/simple_mob/animal/giant_spider/tunneler,
+				prob(10);/mob/living/simple_mob/animal/giant_spider/webslinger,
+				prob(5);/mob/living/simple_mob/animal/giant_spider/phorogenic,
+				prob(5);/mob/living/simple_mob/animal/giant_spider/thermic,
+				prob(1);/mob/living/simple_mob/animal/giant_spider/broodmother,
+			)
+			spawned_spider.Add(new mob_path(spawn_locations[i]))
+			// Outpost 21 edit end
 		i++
 
 /datum/event/spider_migration/end()

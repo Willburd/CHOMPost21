@@ -4,9 +4,10 @@
 
 #define STATION_PREF_NAME "Chomp" // CHOMPEdit
 #define VORE_BELLY_TAB 0
-// #define SOULCATCHER_TAB 1 // Outpost 21 edit - Disable soulgems
-#define GENERAL_TAB 1 // Outpost 21 edit - Disable soulgems
-#define PREFERENCE_TAB 2 // Outpost 21 edit - Disable soulgems
+#define VORE_INSIDE_TAB 1
+#define SOULCATCHER_TAB 2
+#define GENERAL_TAB 3
+#define PREFERENCE_TAB 4
 
 /mob
 	var/datum/vore_look/vorePanel
@@ -48,6 +49,7 @@
 	var/sc_message_subtab // our soulcatcher message subtab
 	var/aset_message_subtab
 	var/selected_message
+	var/list/preset_colors
 
 /datum/vore_look/New(mob/new_host)
 	if(istype(new_host))
@@ -58,10 +60,10 @@
 	host = null
 	. = ..()
 
-/datum/vore_look/ui_assets(mob/user)
+/datum/vore_look/tgui_close(mob/user)
+	if(user)
+		user.write_preference_directly(/datum/preference/text/preset_colors, preset_colors)
 	. = ..()
-	. += get_asset_datum(/datum/asset/spritesheet/vore)
-	. += get_asset_datum(/datum/asset/spritesheet/vore_fixed) //Either this isn't working or my cache is corrupted and won't show them.
 
 /datum/vore_look/tgui_interact(mob/user, datum/tgui/ui)
 	ui = SStgui.try_update_ui(user, src, ui)
@@ -117,6 +119,7 @@
 	)
 	data["min_belly_name"] = BELLIES_NAME_MIN
 	data["max_belly_name"] = BELLIES_NAME_MAX
+	preset_colors = user.read_preference(/datum/preference/text/preset_colors)
 
 	return data
 
@@ -130,12 +133,15 @@
 	data["unsaved_changes"] = unsaved_changes
 	data["active_tab"] = active_tab
 	data["persist_edit_mode"] = host.persistend_edit_mode
+	data["presets"] = preset_colors
 
 	// Inisde Data
 	data["inside"] = get_inside_data(host)
 	data["host_mobtype"] = null
 	data["show_pictures"] = null
 	data["icon_overflow"] = null
+	data["prey_abilities"] = null
+	data["intent_data"] = null
 	data["our_bellies"] = null
 	data["selected"] = null
 	data["soulcatcher"] = null
@@ -143,38 +149,51 @@
 	data["prefs"] = null
 	data["general_pref_data"] = null
 
-	if(active_tab == VORE_BELLY_TAB)
-		data["active_vore_tab"] = active_vore_tab
-		data["host_mobtype"] = get_host_mobtype(host)
+	switch(active_tab)
+		if(VORE_BELLY_TAB)
+			data["active_vore_tab"] = active_vore_tab
+			data["host_mobtype"] = get_host_mobtype(host)
 
-		// Content Data
-		data["show_pictures"] = show_pictures
-		data["icon_overflow"] = icon_overflow
+			// Content Data
+			data["show_pictures"] = show_pictures
+			data["icon_overflow"] = icon_overflow
 
-		// List of all our bellies
-		data["our_bellies"] = get_vorebellies(host)
+			// List of all our bellies
+			data["our_bellies"] = get_vorebellies(host)
 
-		// Selected belly data. TODO, split this into sub data per tab, we don't need all of this at once, ever!
-		data["selected"] = get_selected_data(host)
+			// Selected belly data. TODO, split this into sub data per tab, we don't need all of this at once, ever!
+			data["selected"] = get_selected_data(host)
 
-	/* Outpost 21 edit - Disable soulgems
-	if(active_tab == SOULCATCHER_TAB)
-		// Soulcatcher and abilities
-		data["our_bellies"] = get_vorebellies(host, FALSE)
-		data["soulcatcher"] = get_soulcatcher_data(host)
-		data["abilities"] = get_ability_data(host)
-	*/
+		if(VORE_INSIDE_TAB)
+			// Content Data
+			data["show_pictures"] = show_pictures
+			data["icon_overflow"] = icon_overflow
+			var/atom/hostloc = host.loc
+			// Allow VorePanel to show pred belly details even while indirectly inside
+			if(isliving(host))
+				var/mob/living/human_host = host
+				hostloc = human_host.surrounding_belly()
+			data["prey_abilities"] = get_prey_abilities(host, hostloc)
+			data["intent_data"] = get_intent_data(host, hostloc)
 
-	if(active_tab == PREFERENCE_TAB)
-		// Preference data, we only ever need that when we go to the pref page!
-		data["prefs"] = get_preference_data(host)
-		// Content Data
-		data["show_pictures"] = show_pictures
-		data["icon_overflow"] = icon_overflow
+		/* Outpost 21 edit - Disable soulgems
+		if(SOULCATCHER_TAB)
+			// Soulcatcher and abilities
+			data["our_bellies"] = get_vorebellies(host, FALSE)
+			data["soulcatcher"] = get_soulcatcher_data(host)
+			data["abilities"] = get_ability_data(host)
+		*/
 
-	if(active_tab == GENERAL_TAB)
-		data["general_pref_data"] = get_general_data(host)
-		data["our_bellies"] = get_vorebellies(host, FALSE)
+		if(PREFERENCE_TAB)
+			// Preference data, we only ever need that when we go to the pref page!
+			data["prefs"] = get_preference_data(host)
+			// Content Data
+			data["show_pictures"] = show_pictures
+			data["icon_overflow"] = icon_overflow
+
+		if(GENERAL_TAB)
+			data["general_pref_data"] = get_general_data(host)
+			data["our_bellies"] = get_vorebellies(host, FALSE)
 
 	return data
 
@@ -235,6 +254,11 @@
 		if("toggle_editmode_persistence")
 			host.persistend_edit_mode = !host.persistend_edit_mode
 			return TRUE
+
+		if("prey_ability")
+			if(!isliving(ui.user))
+				return FALSE
+			return perform_prey_ability(ui.user, params)
 
 		// Host is inside someone else, and is trying to interact with something else inside that person.
 		if("pick_from_inside")
@@ -311,7 +335,7 @@
 				var/choice = tgui_alert(ui.user, "Warning: Saving your vore panel while in the lobby will save it to the CURRENTLY LOADED character slot, and potentially overwrite it. Are you SURE you want to overwrite your current slot with these vore bellies?", "WARNING!", list("No, abort!", "Yes, save."))
 				if(choice != "Yes, save.")
 					return TRUE
-			else if(host.real_name != host.client.prefs.real_name || (!ishuman(host) && !issilicon(host)))
+			else if(host.real_name != host.client.prefs.read_preference(/datum/preference/name/real_name) || (!ishuman(host) && !issilicon(host)))
 				var/choice = tgui_alert(ui.user, "Warning: Saving your vore panel while playing what is very-likely not your normal character will overwrite whatever character you have loaded in character setup. Maybe this is your 'playing a simple mob' slot, though. Are you SURE you want to overwrite your current slot with these vore bellies?", "WARNING!", list("No, abort!", "Yes, save."))
 				if(choice != "Yes, save.")
 					return TRUE
@@ -384,6 +408,18 @@
 			host.can_be_drop_prey = !host.can_be_drop_prey
 			if(host.client.prefs_vr)
 				host.client.prefs_vr.can_be_drop_prey = host.can_be_drop_prey
+			unsaved_changes = TRUE
+			return TRUE
+		if("toggle_afk_pred")
+			host.can_be_afk_pred = !host.can_be_afk_pred
+			if(host.client.prefs_vr)
+				host.client.prefs_vr.can_be_afk_pred = host.can_be_afk_pred
+			unsaved_changes = TRUE
+			return TRUE
+		if("toggle_afk_prey")
+			host.can_be_afk_prey = !host.can_be_afk_prey
+			if(host.client.prefs_vr)
+				host.client.prefs_vr.can_be_afk_prey = host.can_be_afk_prey
 			unsaved_changes = TRUE
 			return TRUE
 		if("toggle_latejoin_vore")
@@ -488,6 +524,12 @@
 				host.client.prefs_vr.strip_pref = host.strip_pref
 			unsaved_changes = TRUE
 			return TRUE
+		if("toggle_contaminate_pref")
+			host.contaminate_pref = !host.contaminate_pref
+			if(host.client.prefs_vr)
+				host.client.prefs_vr.contaminate_pref = host.contaminate_pref
+			unsaved_changes = TRUE
+			return TRUE
 		if("toggle_allow_mind_transfer")
 			host.allow_mind_transfer = !host.allow_mind_transfer
 			if(host.client.prefs_vr)
@@ -506,7 +548,7 @@
 				host.client.prefs_vr.show_vore_fx = host.show_vore_fx
 			if (isbelly(host.loc))
 				var/obj/belly/B = host.loc
-				B.vore_fx(host, TRUE)
+				B.vore_fx(host)
 			else
 				host.clear_fullscreen("belly")
 			if(!host.hud_used.hud_shown)
@@ -524,7 +566,7 @@
 				host.client.prefs_vr.max_voreoverlay_alpha = host.max_voreoverlay_alpha
 			if (isbelly(host.loc))
 				var/obj/belly/B = host.loc
-				B.vore_fx(host, TRUE)
+				B.vore_fx(host)
 			unsaved_changes = TRUE
 			return TRUE
 		// liquid belly code
@@ -595,6 +637,8 @@
 				host.client.prefs_vr.food_vore = host.food_vore
 			unsaved_changes = TRUE
 			return TRUE
+		if("set_spont_belly")
+			return set_spont_belly(params)
 		if("toggle_consume_liquid_belly")
 			host.consume_liquid_belly = !host.consume_liquid_belly
 			if(host.client.prefs_vr)
@@ -606,11 +650,22 @@
 			unsaved_changes = TRUE
 			return TRUE
 		if("switch_selective_mode_pref")
-			host.selective_preference = tgui_input_list(ui.user, "What would you prefer happen to you with selective bellymode?","Selective Bellymode", list(DM_DEFAULT, DM_DIGEST, DM_ABSORB, DM_DRAIN))
-			if(!(host.selective_preference))
-				host.selective_preference = DM_DEFAULT
+			var/new_selective_preference = params["val"]
+			if(new_selective_preference == host.selective_preference)
+				return FALSE
+			host.selective_preference = new_selective_preference
 			if(host.client.prefs_vr)
 				host.client.prefs_vr.selective_preference = host.selective_preference
+			unsaved_changes = TRUE
+			return TRUE
+		if("switch_strip_mode_pref")
+			var/new_size_strip_pref = text2num(params["val"])
+			new_size_strip_pref = clamp(new_size_strip_pref, SIZESTRIP_NONE, SIZESTRIP_ALL)
+			if(new_size_strip_pref == host.size_strip_preference)
+				return FALSE
+			host.size_strip_preference = new_size_strip_pref
+			if(host.client.prefs_vr)
+				host.client.prefs_vr.size_strip_preference = host.size_strip_preference
 			unsaved_changes = TRUE
 			return TRUE
 		if("toggle_nutrition_ex")
@@ -625,7 +680,7 @@
 			var/belly_choice = params["attribute"]
 			if(!(belly_choice in host.vore_icon_bellies))
 				return FALSE
-			var/newcolor = tgui_color_picker(ui.user, "Choose a color.", "", host.vore_sprite_color[belly_choice])
+			var/newcolor = sanitize_hexcolor(lowertext(params["val"]))
 			if(!newcolor)
 				return FALSE
 			host.vore_sprite_color[belly_choice] = newcolor
@@ -731,10 +786,12 @@
 			var/new_size = text2num(params["new_mob_size"])
 			new_size = clamp(new_size, RESIZE_MINIMUM_DORMS, RESIZE_MAXIMUM_DORMS)
 			if(istype(host, /mob/living))
-				var/mob/living/H = host
-				if(H.nutrition >= VORE_RESIZE_COST)
-					H.adjust_nutrition(-VORE_RESIZE_COST)
-					H.resize(new_size, uncapped = host.has_large_resize_bounds(), ignore_prefs = TRUE)
+				var/mob/living/living_host = host
+				if(new_size == living_host.size_multiplier)
+					return FALSE
+				if(living_host.nutrition >= VORE_RESIZE_COST)
+					living_host.adjust_nutrition(-VORE_RESIZE_COST)
+					living_host.resize(new_size, uncapped = living_host.has_large_resize_bounds(), ignore_prefs = TRUE)
 			return TRUE
 		/* Outpost 21 edit - Disable soulgems
 		//Soulcatcher functions
@@ -862,6 +919,20 @@
 			return TRUE
 		*/
 		*/
+		if("preset")
+			var/raw_data = lowertext(params["color"])
+			var/index = lowertext(params["index"])
+			var/list/entries = splittext(preset_colors, ";")
+			while(LAZYLEN(entries) < 20)
+				entries += "#FFFFFF"
+			if(LAZYLEN(entries) > 20)
+				entries.Cut(21)
+			var/hex = sanitize_hexcolor(raw_data)
+			if (!hex || !isnum(index) || entries[index] == hex)
+				return
+			entries[index] = hex
+			preset_colors = entries.Join(";")
+			return TRUE
 
 /datum/vore_look/proc/pick_from_inside(mob/user, params)
 	var/atom/movable/target = locate(params["pick"])
@@ -874,10 +945,16 @@
 	// Only allow indirect belly viewers to examine
 	if(user in OB)
 		if(isliving(target))
-			intent = tgui_alert(user, "What do you want to do to them?","Query",list("Examine","Help Out","Devour"))
+			if(params["option"] in list("Examine","Help Out","Devour"))
+				intent = params["option"]
+			else
+				intent = tgui_alert(user, "What do you want to do to them?","Query",list("Examine","Help Out","Devour"))
 
-		else if(istype(target, /obj/item))
-			intent = tgui_alert(user, "What do you want to do to that?","Query",list("Examine","Use Hand"))
+		else if(isitem(target))
+			if(params["option"] in list("Examine","Use Hand"))
+				intent = params["option"]
+			else
+				intent = tgui_alert(user, "What do you want to do to that?","Query",list("Examine","Use Hand"))
 	//End of indirect vorefx changes
 
 	switch(intent)
@@ -946,7 +1023,7 @@
 				if(M.absorbed)
 					M.absorbed = FALSE
 					OB.handle_absorb_langs(M, OB.owner)
-				TB.nom_mob(M)
+				TB.nom_atom(M)
 
 /datum/vore_look/proc/pick_from_outside(mob/user, params)
 	var/intent
@@ -976,7 +1053,8 @@
 					to_chat(target,span_vwarning("You're squished from [host]'s [lowertext(host.vore_selected)] to their [lowertext(choice.name)]!"))
 					// Send the transfer message to indirect targets as well. Slightly different message because why not.
 					to_chat(host.vore_selected.get_belly_surrounding(target.contents),span_warning("You're squished along with [target] from [host]'s [lowertext(host.vore_selected)] to their [lowertext(choice.name)]!"))
-					host.vore_selected.transfer_contents(target, choice, 1)
+					host.vore_selected.transfer_contents(target, choice, TRUE)
+				host.vore_selected.handle_visual_update()
 				return TRUE
 		return FALSE
 
@@ -996,7 +1074,10 @@
 		if(datarget.client)
 			available_options += "Process"
 		available_options += "Health"
-	intent = tgui_input_list(user, "What would you like to do with [target]?", "Vore Pick", available_options)
+	if((params["option"] in available_options))
+		intent = params["option"]
+	else
+		intent = tgui_input_list(user, "What would you like to do with [target]?", "Vore Pick", available_options)
 	switch(intent)
 		if("Examine")
 			var/list/results = target.examine(host)
@@ -1030,14 +1111,15 @@
 			if(host.stat)
 				to_chat(user,span_warning("You can't do that in your state!"))
 				return TRUE
-			var/obj/belly/choice = tgui_input_list(user, "Move [target] where?","Select Belly", host.vore_organs)
+			var/obj/belly/choice = locate(params["targetBelly"])
+			if(!(choice in host.vore_organs))
+				choice = tgui_input_list(user, "Move [target] where?","Select Belly", host.vore_organs)
 			if(!choice || !(target in host.vore_selected))
 				return TRUE
 			to_chat(target,span_vwarning("You're squished from [host]'s [lowertext(host.vore_selected.name)] to their [lowertext(choice.name)]!"))
 			// Send the transfer message to indirect targets as well. Slightly different message because why not.
 			to_chat(host.vore_selected.get_belly_surrounding(target.contents),span_warning("You're squished along with [target] from [host]'s [lowertext(host.vore_selected)] to their [lowertext(choice.name)]!"))
 			host.vore_selected.transfer_contents(target, choice)
-
 
 		if("Transfer")
 			if(host.stat)
@@ -1089,6 +1171,7 @@
 				return FALSE
 
 			if(!H.allow_spontaneous_tf)
+				to_chat(user,span_warning("Your target can't be transformed!"))
 				return FALSE
 
 			var/datum/tgui_module/appearance_changer/vore/V = new(host, H)
@@ -1120,14 +1203,33 @@
 					var/mob/living/body_backup = T.body_backup
 					if(ishuman(body_backup))
 						var/mob/living/carbon/human/H = body_backup
-						body_backup.adjustBruteLoss(-6)
-						body_backup.adjustFireLoss(-6)
-						body_backup.setOxyLoss(0)
+						H.setOxyLoss(0)
 						if(H.isSynthetic())
 							H.adjustToxLoss(-H.getToxLoss())
 						else
-							H.adjustToxLoss(-6)
-						body_backup.adjustCloneLoss(-6)
+							H.adjustToxLoss(-25)
+						if(H.health <= -H.getMaxHealth())
+							H.adjustBruteLoss(-25)
+							H.adjustFireLoss(-25)
+							H.adjustCloneLoss(-25)
+
+							//This looks how much health we need to get to 'barely in crit'
+							//We heal up to that point here, starting with toxins and moving up to the harder to heal types.
+							//Once we heal one type, we check again to see if we're still dead. If so, we heal the next type in the list.
+							if(H.health <= -H.getMaxHealth())
+								var/barely_in_crit = -(H.get_crit_point() - 1)
+								var/adjust_health = barely_in_crit - H.health
+								if(adjust_health < 0)
+									adjust_health *= -1
+
+								H.adjustToxLoss(adjust_health)
+								if(H.health <= -H.getMaxHealth())
+									H.adjustFireLoss(adjust_health)
+								if(H.health <= -H.getMaxHealth())
+									H.adjustBruteLoss(adjust_health)
+								if(H.health <= -H.getMaxHealth())
+									H.adjustCloneLoss(adjust_health)
+
 						body_backup.updatehealth()
 						// Now we do the check to see if we should revive...
 						var/should_proceed_with_revive = TRUE
@@ -1315,6 +1417,68 @@
 				to_chat(user, span_vwarning("\The [target] is currently [condition], they will not be able to [condition_consequences]."))
 			return FALSE
 
+/datum/vore_look/proc/perform_prey_ability(mob/living/user, params)
+	var/obj/belly/OB = locate(params["belly"])
+
+	if(!(user in OB))
+		return TRUE // Aren't here anymore, need to update menu
+
+	var/ability = params["ability"]
+	if(!(ability in list("devour_as_absorbed")))
+		return FALSE
+
+	switch(ability)
+		if("devour_as_absorbed")
+			if(!(OB.mode_flags & DM_FLAG_ABSORBEDVORE))
+				return FALSE
+			user.absorb_devour()
+
+	return TRUE
+
+/datum/vore_look/proc/set_spont_belly(params)
+	switch(params["attribute"])
+		if("rear")
+			var/spont_target = html_encode(params["val"])
+			if(spont_target == "Current Selected")
+				host.spont_belly_rear = null
+			else
+				host.spont_belly_rear = spont_target
+			if(host.client.prefs_vr)
+				host.client.prefs_vr.spont_belly_rear = host.spont_belly_rear
+			unsaved_changes = TRUE
+			return TRUE
+		if("front")
+			var/spont_target = html_encode(params["val"])
+			if(spont_target == "Current Selected")
+				host.spont_belly_front = null
+			else
+				host.spont_belly_front = spont_target
+			if(host.client.prefs_vr)
+				host.client.prefs_vr.spont_belly_front = host.spont_belly_front
+			unsaved_changes = TRUE
+			return TRUE
+		if("left")
+			var/spont_target = html_encode(params["val"])
+			if(spont_target == "Current Selected")
+				host.spont_belly_left = null
+			else
+				host.spont_belly_left = spont_target
+			if(host.client.prefs_vr)
+				host.client.prefs_vr.spont_belly_left = host.spont_belly_left
+			unsaved_changes = TRUE
+			return TRUE
+		if("right")
+			var/spont_target = html_encode(params["val"])
+			if(spont_target == "Current Selected")
+				host.spont_belly_right = null
+			else
+				host.spont_belly_right = spont_target
+			if(host.client.prefs_vr)
+				host.client.prefs_vr.spont_belly_right = host.spont_belly_right
+			unsaved_changes = TRUE
+			return TRUE
+	return FALSE
+
 /datum/vore_look/proc/sanitize_fixed_list(var/list/messages, type, delim = "\n\n", limit)
 	if(!limit)
 		CRASH("[type] set message called without limit!")
@@ -1334,6 +1498,7 @@
 
 #undef STATION_PREF_NAME
 #undef VORE_BELLY_TAB
-// #undef SOULCATCHER_TAB
+#undef VORE_INSIDE_TAB
+#undef SOULCATCHER_TAB
 #undef PREFERENCE_TAB
 #undef GENERAL_TAB

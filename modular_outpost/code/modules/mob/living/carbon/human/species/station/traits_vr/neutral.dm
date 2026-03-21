@@ -10,6 +10,15 @@
 	cost = 0
 	disability = SCHIZOPHRENIA
 
+/datum/trait/neutral/gold_digger
+	name = "Gold Digger"
+	desc = "You have the uncanny ability to tell how much cash someone has in their account."
+	cost = 0
+
+/datum/trait/neutral/gold_digger/apply(datum/species/S, mob/living/carbon/human/H, trait_prefs)
+	. = ..()
+	ADD_TRAIT(H, TRAIT_GOLDDIGGER, ROUNDSTART_TRAIT)
+
 // allergen
 /datum/trait/neutral/allergy/tricord
 	name = "Allergy: " + REAGENT_TRICORDRAZINE

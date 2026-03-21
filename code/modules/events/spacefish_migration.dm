@@ -15,16 +15,8 @@
 										list(/mob/living/simple_mob/animal/space/ray,					1,	1),
 										list(/mob/living/simple_mob/animal/space/shark/event,			1,	1)
 										)
-	var/fired = FALSE //CHOMP Add
 
 /datum/event/spacefish_migration/setup()
-//CHOMP Add start
-	if(prob(15) || fired == TRUE)
-		log_game("random spacefish migration: event setup prob() failed, killing")
-		kill()
-		return
-	fired = TRUE
-//CHOMP Add end
 	announceWhen = rand(30, 60) // 1 to 2 minutes
 	endWhen += severity * 25
 	var/list/fish_config = pick(possible_fish_types)
@@ -34,7 +26,7 @@
 	fish_cap = fish_base_cap + fish_cap_mult ** severity // No more than this many at once regardless of waves. (5, 11, 29)
 
 /datum/event/spacefish_migration/start()
-	affecting_z -= global.using_map.sealed_levels // Space levels only please!
+	affecting_z -= using_map.sealed_levels // Space levels only please!
 	..()
 
 /datum/event/spacefish_migration/announce()
@@ -43,7 +35,7 @@
 		announcement = "Massive migration of unknown biological entities has been detected near [location_name()], please stand-by."
 	else
 		announcement = "Unknown biological [spawned_fish.len == 1 ? "entity has" : "entities have"] been detected near [location_name()], please stand-by."
-	command_announcement.Announce(announcement, "Lifesign Alert")
+	GLOB.command_announcement.Announce(announcement, "Lifesign Alert")
 
 /datum/event/spacefish_migration/tick()
 	if(activeFor % 5 != 0)

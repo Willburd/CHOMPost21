@@ -6,6 +6,7 @@
 	layer = ABOVE_WINDOW_LAYER
 	anchored = TRUE
 	density = FALSE
+	flags = WALL_ITEM
 	var/obj/item/extinguisher/has_extinguisher
 	var/opened = 0
 
@@ -47,7 +48,7 @@
 /obj/structure/extinguisher_cabinet/attack_hand(mob/living/user)
 	if(isrobot(user))
 		return
-	if (ishuman(user))
+	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
 		var/obj/item/organ/external/temp = H.organs_by_name[BP_R_HAND]
 		if (user.hand)

@@ -1,0 +1,299 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/template_noop,
+/area/template_noop)
+"c" = (
+/obj/effect/auto_roof{
+	roof_type = /turf/simulated/floor/plating/turfpack/muriki
+	},
+/obj/item/arrow/rod,
+/obj/structure/table/rack/shelf/steel,
+/obj/random/medical,
+/obj/random/medical,
+/obj/random/maintenance,
+/obj/random/maintenance,
+/obj/random/flashlight,
+/obj/random/flashlight,
+/obj/random/snack,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_cargocontainer)
+"d" = (
+/obj/effect/auto_roof{
+	roof_type = /turf/simulated/floor/plating/turfpack/muriki
+	},
+/obj/item/arrow/rod,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_cargocontainer)
+"k" = (
+/obj/effect/auto_roof{
+	roof_type = /turf/simulated/floor/plating/turfpack/muriki
+	},
+/obj/item/reagent_containers/food/drinks/bottle/rum,
+/obj/random/toy,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_cargocontainer)
+"m" = (
+/obj/effect/auto_roof{
+	roof_type = /turf/simulated/floor/plating/turfpack/muriki
+	},
+/obj/structure/closet/crate,
+/obj/random/mre,
+/obj/random/mre,
+/obj/random/mre,
+/obj/random/mre,
+/obj/random/mre,
+/obj/random/mre,
+/obj/random/mre,
+/obj/random/nukies_can_legal,
+/obj/random/maintenance,
+/obj/random/flashlight,
+/obj/random/flashlight,
+/obj/item/reagent_containers/food/snacks/rawcutlet,
+/obj/random/unidentified_medicine,
+/obj/random/snack,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_cargocontainer)
+"n" = (
+/obj/effect/auto_roof{
+	roof_type = /turf/simulated/floor/plating/turfpack/muriki
+	},
+/obj/structure/table/rack/shelf/steel,
+/obj/random/tool,
+/obj/random/medical,
+/obj/random/maintenance,
+/obj/random/maintenance,
+/obj/random/contraband,
+/obj/random/flashlight,
+/obj/item/melee/umbrella/random,
+/obj/item/melee/umbrella/random,
+/obj/item/melee/umbrella/random,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_cargocontainer)
+"o" = (
+/obj/effect/auto_roof{
+	roof_type = /turf/simulated/floor/plating/turfpack/muriki
+	},
+/mob/living/simple_mob/vore/alienanimals/catslug,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_cargocontainer)
+"q" = (
+/obj/effect/auto_roof{
+	roof_type = /turf/simulated/floor/plating/turfpack/muriki
+	},
+/obj/random/trash,
+/obj/random/snack,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_cargocontainer)
+"s" = (
+/obj/effect/auto_roof{
+	roof_type = /turf/simulated/floor/plating/turfpack/muriki
+	},
+/mob/living/simple_mob/vore/alienanimals/catslug,
+/obj/random/unidentified_medicine,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_cargocontainer)
+"v" = (
+/obj/effect/auto_roof{
+	roof_type = /turf/simulated/floor/plating/turfpack/muriki
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_cargocontainer)
+"y" = (
+/obj/effect/auto_roof{
+	roof_type = /turf/simulated/floor/plating/turfpack/muriki
+	},
+/mob/living/simple_mob/vore/alienanimals/catslug,
+/obj/item/arrow/rod,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_cargocontainer)
+"C" = (
+/obj/effect/auto_roof{
+	roof_type = /turf/simulated/floor/plating/turfpack/muriki
+	},
+/obj/random/trash,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_cargocontainer)
+"E" = (
+/obj/effect/auto_roof{
+	roof_type = /turf/simulated/floor/plating/turfpack/muriki
+	},
+/obj/structure/closet/crate,
+/obj/random/material/refined,
+/obj/random/material/refined,
+/obj/random/material/refined,
+/obj/random/maintenance,
+/obj/random/maintenance,
+/obj/item/reagent_containers/food/snacks/rawcutlet,
+/obj/item/reagent_containers/food/snacks/rawcutlet,
+/obj/item/reagent_containers/food/snacks/rawmeatball,
+/obj/item/reagent_containers/food/snacks/rawmeatball,
+/obj/random/snack,
+/obj/random/snack,
+/obj/random/snack,
+/obj/random/snack,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_cargocontainer)
+"F" = (
+/obj/effect/auto_roof{
+	roof_type = /turf/simulated/floor/plating/turfpack/muriki
+	},
+/turf/simulated/wall/bay/steel,
+/area/submap/outpost21/yard_cargocontainer)
+"H" = (
+/turf/template_noop,
+/area/submap/outpost21/yard_generic)
+"M" = (
+/obj/machinery/door/airlock/angled_bay/standard/color/cargo{
+	dir = 4;
+	name = "Cargo Container"
+	},
+/obj/effect/auto_roof{
+	roof_type = /turf/simulated/floor/plating/turfpack/muriki
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_cargocontainer)
+"P" = (
+/obj/effect/auto_roof{
+	roof_type = /turf/simulated/floor/plating/turfpack/muriki
+	},
+/obj/structure/table/rack/shelf/steel,
+/obj/random/tool,
+/obj/random/maintenance,
+/obj/random/flashlight,
+/obj/item/melee/umbrella/random,
+/obj/item/melee/umbrella/random,
+/obj/item/melee/umbrella/random,
+/obj/item/reagent_containers/food/drinks/cans/grape_juice,
+/obj/item/reagent_containers/food/drinks/cans/grape_juice,
+/obj/item/reagent_containers/food/snacks/rawcutlet,
+/obj/random/snack,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_cargocontainer)
+"S" = (
+/obj/effect/auto_roof{
+	roof_type = /turf/simulated/floor/plating/turfpack/muriki
+	},
+/obj/item/reagent_containers/food/snacks/sliceable/pizza/vegetablepizza,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_cargocontainer)
+"W" = (
+/obj/effect/auto_roof{
+	roof_type = /turf/simulated/floor/plating/turfpack/muriki
+	},
+/obj/structure/table/rack/shelf/steel,
+/obj/random/paicard,
+/obj/random/maintenance,
+/obj/random/maintenance,
+/obj/random/contraband,
+/obj/item/melee/umbrella/random,
+/obj/item/melee/umbrella/random,
+/obj/item/melee/umbrella/random,
+/obj/item/reagent_containers/food/drinks/bottle/small/beer/silverdragon,
+/obj/item/reagent_containers/food/drinks/cans/grape_juice,
+/obj/item/reagent_containers/food/snacks/rawcutlet,
+/obj/item/reagent_containers/food/snacks/rawcutlet,
+/obj/random/unidentified_medicine,
+/obj/random/unidentified_medicine,
+/obj/random/snack,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_cargocontainer)
+
+(1,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+a
+a
+"}
+(2,1,1) = {"
+a
+H
+F
+F
+F
+F
+F
+H
+a
+"}
+(3,1,1) = {"
+a
+H
+F
+k
+d
+n
+F
+H
+a
+"}
+(4,1,1) = {"
+a
+H
+F
+s
+q
+m
+F
+H
+a
+"}
+(5,1,1) = {"
+a
+H
+F
+c
+v
+E
+F
+H
+a
+"}
+(6,1,1) = {"
+a
+H
+F
+W
+S
+y
+F
+H
+a
+"}
+(7,1,1) = {"
+a
+H
+F
+P
+o
+C
+F
+H
+a
+"}
+(8,1,1) = {"
+a
+H
+F
+F
+M
+F
+F
+H
+a
+"}
+(9,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+a
+a
+"}

@@ -8,10 +8,11 @@ GLOBAL_VAR_INIT(hyperspeed_runtime_meows,0)
 	// small delay between meows, but if we get over 1000 errors in 5 ticks, runtime gibs
 	if(world.time < (GLOB.last_runtime_meow + (1 SECOND)))
 		GLOB.hyperspeed_runtime_meows++
-		if(GLOB.hyperspeed_runtime_meows >= 50)
+		if(GLOB.hyperspeed_runtime_meows >= 35)
 			var/mob/living/simple_mob/animal/passive/cat/runtime/C = pick(GLOB.runtimes_in_world)
 			playsound(C,'sound/voice/meow.ogg',90)
 			C.visible_message("\The [C] meows!")
+			C.gib()
 			GLOB.hyperspeed_runtime_meows = 0
 		return
 	// Normal handling

@@ -22,3 +22,21 @@
 	if(!fire_supress)
 		return
 	QDEL_NULL(fire_supress)
+
+
+// Haunted area logic
+/area/Entered(mob/M)
+	. = ..()
+
+	// Constant horror!
+	if(ishuman(M))
+		var/mob/living/carbon/human/H = M
+
+		// Regular redspace horrors are always applied if you enter here!
+		if(is_type_in_list(src, GLOB.redspace_areas))
+			H.add_modifier(/datum/modifier/redspace_drain)
+			H.AddComponent(/datum/component/haunting_vision)
+
+		else if(haunted && H.job != JOB_STOWAWAY && prob(4))
+			// Just give them sparkly haunted vision
+			H.AddComponent(/datum/component/haunting_vision)

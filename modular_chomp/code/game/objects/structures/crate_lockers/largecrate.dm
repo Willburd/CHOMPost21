@@ -6,9 +6,11 @@
 	name = "sheep crate"
 	starts_with = list(/mob/living/simple_mob/vore/sheep)
 
+/* // Outpost 21 edit - Softdog removal
 /obj/structure/largecrate/animal/woofdog
 	name = "dog crate"
 	starts_with = list(/mob/living/simple_mob/vore/woof)
+*/
 
 /obj/structure/largecrate/animal/bugsect
 	name = "Dangerous drone carrier"

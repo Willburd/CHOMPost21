@@ -26,6 +26,8 @@
 	//does it use docking codes?
 	var/use_docking_codes = TRUE
 
+	var/list/local_crash_sites // Outpost 21 edit(port) - Crash sites unique to this destination
+
 /obj/effect/shuttle_landmark/Initialize(mapload)
 	. = ..()
 	if(docking_controller)
@@ -59,7 +61,7 @@
 		if(location && location.docking_codes && use_docking_codes)
 			docking_controller.docking_codes = location.docking_codes
 
-/obj/effect/shuttle_landmark/forceMove()
+/obj/effect/shuttle_landmark/forceMove(atom/destination, direction, movetime)
 	var/obj/effect/overmap/visitable/map_origin = get_overmap_sector(z)
 	. = ..()
 	var/obj/effect/overmap/visitable/map_destination = get_overmap_sector(z)
@@ -169,7 +171,10 @@
 	light_color = "#3728ff"
 	var/active
 
-/obj/item/spaceflare/attack_self(var/mob/user)
+/obj/item/spaceflare/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	if(!active)
 		visible_message(span_notice("[user] pulls the cord, activating the [src]."))
 		activate()

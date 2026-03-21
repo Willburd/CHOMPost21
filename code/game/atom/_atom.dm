@@ -95,13 +95,6 @@
 	else
 		return null
 
-//return flags that should be added to the viewer's sight var.
-//Otherwise return a negative number to indicate that the view should be cancelled.
-/atom/proc/check_eye(user as mob)
-	if (isAI(user)) // WHYYYY
-		return 0
-	return -1
-
 /atom/proc/Bumped(AM as mob|obj)
 	set waitfor = FALSE
 
@@ -145,7 +138,14 @@
 		UnregisterSignal(T, COMSIG_OBSERVER_TURF_ENTERED)
 
 
-/atom/proc/emp_act(var/severity)
+/atom/proc/emp_act(severity, recursive)
+	recursive++
+	if(recursive > 5) //After a certain depth, we're just going to assume that it's too insulated to be EMP'd.
+		return
+	for(var/atom/A in contents)
+		if(isbelly(A)) //Prey are protected
+			continue
+		A.emp_act(severity, recursive)
 	return
 
 /atom/proc/bullet_act(obj/item/projectile/P, def_zone)
@@ -222,7 +222,7 @@
 
 	var/list/output = list("[icon2html(src,user.client)] That's [f_name] [suffix] [borg]", get_examine_desc())
 
-	SEND_SIGNAL(src, COMSIG_PARENT_EXAMINE, user, output)
+	SEND_SIGNAL(src, COMSIG_ATOM_EXAMINE, user, output)
 	return output
 
 // Don't make these call bicon or anything, these are what bicon uses. They need to return an icon.
@@ -298,9 +298,8 @@
 	return
 
 
-/atom/proc/hitby(atom/movable/source)
-	if (density)
-		source.throwing = 0
+/atom/proc/hitby(atom/movable/source, datum/thrownthing/throwingdatum)
+	SEND_SIGNAL(src, COMSIG_ATOM_HITBY, source)
 	return
 
 //returns 1 if made bloody, returns 0 otherwise
@@ -470,7 +469,7 @@
 
 /atom/Entered(atom/movable/AM, atom/old_loc)
 	. = ..()
-	SEND_SIGNAL(AM, COMSIG_OBSERVER_MOVED, old_loc, AM.loc)
+	SEND_SIGNAL(AM, COMSIG_MOVABLE_ATTEMPTED_MOVE, old_loc, AM.loc)
 	SEND_SIGNAL(src, COMSIG_ATOM_ENTERED, AM, old_loc)
 	SEND_SIGNAL(AM, COMSIG_ATOM_ENTERING, src, old_loc)
 
@@ -482,9 +481,6 @@
 /atom/Exited(atom/movable/AM, atom/new_loc)
 	. = ..()
 	SEND_SIGNAL(src, COMSIG_ATOM_EXITED, AM, new_loc)
-
-/atom/proc/get_visible_gender(mob/user, force)
-	return gender
 
 /atom/proc/interact(mob/user)
 	return
@@ -639,7 +635,6 @@ GLOBAL_LIST_EMPTY(icon_dimensions)
 	// Basically "if has washable coloration"
 	if(length(atom_colours) >= WASHABLE_COLOUR_PRIORITY && atom_colours[WASHABLE_COLOUR_PRIORITY])
 		remove_atom_colour(WASHABLE_COLOUR_PRIORITY)
-		return TRUE
 
 	forensic_data?.wash(clean_types)
 	blood_color = null

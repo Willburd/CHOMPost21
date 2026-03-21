@@ -179,6 +179,8 @@
 	has_eye_light_sprites = TRUE
 	has_rest_sprites = TRUE
 	has_vore_belly_sprites = TRUE
+	has_vore_belly_resting_sprites = TRUE
+	belly_capacity_list = list("sleeper" = 3)
 	rest_sprite_options = list("Default", "Sit")
 	sprite_decals = list("decals")
 	icon_x = 64
@@ -189,7 +191,7 @@
 // Regular sprites
 
 /datum/robot_sprite/surgical
-	module_type = "Surgeon" // Outpost 21 edit - Split surgery and crisis borgs again, was "Crisis"
+	module_type = "Crisis"
 	sprite_icon = 'icons/mob/robot/surgical.dmi'
 
 /datum/robot_sprite/surgical/toiletbot

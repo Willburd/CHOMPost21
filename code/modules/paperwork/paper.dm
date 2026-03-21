@@ -36,6 +36,9 @@
 	var/age = 0
 	var/last_modified_ckey
 
+	///Occult check. Used for do_after
+	var/occult = FALSE
+
 	var/was_maploaded = FALSE // This tracks if the paper was created on mapload.
 
 	var/const/deffont = "Verdana"
@@ -48,7 +51,7 @@
 	icon_state = "greetingcard"
 	slot_flags = null //no fun allowed!!!!
 
-/obj/item/paper/card/AltClick() //No fun allowed
+/obj/item/paper/card/click_alt() //No fun allowed
 	return
 
 /obj/item/paper/card/update_icon()
@@ -89,7 +92,7 @@
 /obj/item/paper/alien/burnpaper()
 	return
 
-/obj/item/paper/alien/AltClick() // No airplanes for me.
+/obj/item/paper/alien/click_alt() // No airplanes for me.
 	return
 
 
@@ -160,7 +163,7 @@
 	set category = "Object"
 	set src in usr
 
-	if((CLUMSY in usr.mutations) && prob(20)) // Outpost 21 edit - Made clumsy less obnoxious
+	if(CLUMSY_FAIL_CHANCE(usr))
 		to_chat(usr, span_warning("You cut yourself on the paper."))
 		return
 	var/n_name = sanitizeSafe(tgui_input_text(usr, "What would you like to label the paper?", "Paper Labelling", null, MAX_NAME_LEN, encode = FALSE), MAX_NAME_LEN)
@@ -174,7 +177,12 @@
 		add_fingerprint(usr)
 	return
 
-/obj/item/paper/attack_self(mob/living/user as mob)
+/obj/item/paper/attack_self(mob/living/user)
+	. = ..(user)
+	if(.)
+		return TRUE
+	if(occult)
+		return
 	if(user.a_intent == I_HURT)
 		if(icon_state == "scrap")
 			user.show_message(span_warning("\The [src] is already crumpled."))
@@ -346,6 +354,7 @@
 		t = replacetext(t, "\[logo\]", "<img src=\ref['html/images/eslogo.png']>")
 		t = replacetext(t, "\[eslogo\]", "<img src=\ref['html/images/eslogo.png']>")
 		t = replacetext(t, "\[ntlogo\]", "<img src=\ref['html/images/ntlogo.png']>")
+		t = replacetext(t, "\[talogo\]", "<img src=\ref['html/images/talonlogo.png']>")
 		t = replacetext(t, "\[sglogo\]", "<img src=\ref['html/images/sglogo.png']>")
 		t = replacetext(t, "\[trlogo\]", "<img src=\ref['html/images/trader.png']>")
 		t = replacetext(t, "\[pclogo\]", "<img src=\ref['html/images/pclogo.png']>") // Not available on virgo // CHOMPEnable
@@ -369,6 +378,7 @@
 		t = replacetext(t, "\[logo\]", "")
 		t = replacetext(t, "\[eslogo\]", "")
 		t = replacetext(t, "\[ntlogo\]", "")
+		t = replacetext(t, "\[talogo\]", "")
 		t = replacetext(t, "\[sglogo\]", "")
 		t = replacetext(t, "\[trlogo\]", "")
 		t = replacetext(t, "\[pclogo\]", "")
@@ -392,13 +402,12 @@
 
 /obj/item/paper/proc/burnpaper(obj/item/flame/P, mob/user)
 	var/class = "warning"
-	var/datum/gender/TU = GLOB.gender_datums[user.get_visible_gender()]
 
 	if(P.lit && !user.restrained())
 		if(istype(P, /obj/item/flame/lighter/zippo))
 			class = "rose"
 
-		user.visible_message("<span class='[class]'>[user] holds \the [P] up to \the [src], it looks like [TU.hes] trying to burn it!</span>", \
+		user.visible_message("<span class='[class]'>[user] holds \the [P] up to \the [src], it looks like [user.p_theyre()] trying to burn it!</span>", \
 		"<span class='[class]'>You hold \the [P] up to \the [src], burning it slowly.</span>")
 		playsound(src, 'sound/bureaucracy/paperburn.ogg', 50, 1)
 
@@ -549,7 +558,7 @@
 		else if (P.name != initial(P.name))
 			B.name = P.name
 		user.drop_from_inventory(P)
-		if (ishuman(user))
+		if(ishuman(user))
 			var/mob/living/carbon/human/h_user = user
 			if (h_user.r_hand == src)
 				h_user.drop_from_inventory(src)

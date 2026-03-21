@@ -305,6 +305,11 @@
 	holomap_color = HOLOMAP_AREACOLOR_CIV
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 
+/area/muriki/bathroom/vr_coop
+	name = "\improper Struggle Simulator"
+	holomap_color = HOLOMAP_AREACOLOR_CIV
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
+
 //
 // Medical ---------------------------------------------------------
 //
@@ -367,7 +372,7 @@
 	icon_state = "medbay2"
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
 	base_turf = /turf/simulated/open
-	flags = AREA_FIRE_SUPRESSION
+	flags = AREA_BLOCK_INSTANT_BUILDING | AREA_FIRE_SUPRESSION
 	lightswitch = 1
 
 /area/quartermaster/cargupbreak
@@ -392,11 +397,13 @@
 	name = "\improper The Yard"
 	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki
 	icon_state = "yelwhicir"
+	ambience = AMBIENCE_MURIKIOUTSIDE
 
 /area/muriki/station/trawler_dock
 	name = "\improper Mining trawler Landing Pad"
 	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki
 	icon_state = "orablasqu"
+	ambience = AMBIENCE_MURIKIOUTSIDE
 
 /area/maintenance/cargoupper
 	name = "Cargo Roof Maintenance"
@@ -419,7 +426,6 @@
 	use_emergency_overlay = TRUE
 	holomap_color = HOLOMAP_AREACOLOR_ARRIVALS
 	flags = AREA_FIRE_SUPRESSION
-	lightswitch = 0
 
 /area/muriki/arriveproc
 	name = "\improper Arrivals Processing"
@@ -463,7 +469,6 @@
 	base_turf = /turf/simulated/open
 	use_emergency_overlay = TRUE
 	holomap_color = HOLOMAP_AREACOLOR_ARRIVALS
-	lightswitch = 0
 
 /area/muriki/crew/
 	name = "\improper Crew Area"
@@ -558,7 +563,7 @@
 	icon_state = "medbay2"
 	sound_env = SMALL_ENCLOSED
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
-	flags = AREA_FIRE_SUPRESSION
+	flags = /area/medical/first_aid_station::flags
 
 /area/muriki/crew/baraid
 	name = "\improper Public First Aid Station"
@@ -566,7 +571,7 @@
 	sound_env = SMALL_ENCLOSED
 	base_turf = /turf/simulated/open
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
-	flags = AREA_FIRE_SUPRESSION
+	flags = /area/medical/first_aid_station::flags
 
 /area/muriki/crew/engyaid
 	name = "\improper Public Cargo First Aid Station"
@@ -574,7 +579,7 @@
 	sound_env = SMALL_ENCLOSED
 	base_turf = /turf/simulated/open
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
-	flags = AREA_FIRE_SUPRESSION
+	flags = /area/medical/first_aid_station::flags
 
 /area/chapel/chapel_music
 	name = "\improper Music Room"
@@ -630,7 +635,7 @@
 	name = "\improper Emergency Bunker"
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	icon_state = "cyawhicir"
-	flags = RAD_SHIELDED|BLUE_SHIELDED|AREA_BLOCK_PHASE_SHIFT|AREA_FIRE_SUPRESSION
+	flags = /area/muriki/crew/bunker::flags
 	color_grading = COLORTINT_DARK
 	haunted = TRUE
 
@@ -1114,6 +1119,7 @@
 	music = 'sound/ambience/ambiatm1.ogg'
 	flags = AREA_FLAG_IS_NOT_PERSISTENT
 	outdoors = TRUE
+	ambience = AMBIENCE_MURIKIOUTSIDE
 
 /area/muriki/grounds/graveyard
 	name = "\improper Facility Graveyard"
@@ -1192,12 +1198,14 @@
 	sound_env = SOUND_ENVIRONMENT_MOUNTAINS
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	music = 'sound/ambience/ambiatm1.ogg'
+	ambience = AMBIENCE_MURIKIOUTSIDE
 
 /area/mine/unexplored/muriki/surface
 	name = "\improper Facility Grounds"
 	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki
 	sound_env = SOUND_ENVIRONMENT_MOUNTAINS
 	music = 'sound/ambience/ambiatm1.ogg'
+	ambience = AMBIENCE_MURIKIOUTSIDE
 
 /area/mine/explored/muriki/cave
 	name = "\improper Facility Tunnels"
@@ -1205,6 +1213,7 @@
 	sound_env = TUNNEL_ENCLOSED
 	flags = AREA_BLOCK_GHOST_SIGHT | AREA_FLAG_IS_NOT_PERSISTENT
 	color_grading = COLORTINT_DARK
+	ambience = AMBIENCE_MURIKICAVE
 
 /area/mine/unexplored/muriki/cave
 	name = "\improper Muriki Caverns"
@@ -1212,13 +1221,16 @@
 	sound_env = TUNNEL_ENCLOSED
 	flags = AREA_BLOCK_GHOST_SIGHT | AREA_FLAG_IS_NOT_PERSISTENT
 	color_grading = COLORTINT_DARK
+	ambience = AMBIENCE_MURIKICAVE
 
 //Subdivided areas because holy crap zas hates our map.
 //Basement. Dept.
 /area/mine/explored/muriki
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
+	ambience = AMBIENCE_MURIKICAVE
 /area/mine/unexplored/muriki
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
+	ambience = AMBIENCE_MURIKICAVE
 
 /area/mine/explored/muriki/cave/eng
 	name = "\improper Facility Engineering Tunnels"
@@ -1287,7 +1299,7 @@
 
 //cavern access
 /area/mine/explored/muriki/cave/sci/west_access
-	name = "\improper Research Cavern Access West"
+	name = "\improper Research Cavern Access North" // Was west
 	sound_env = TUNNEL_ENCLOSED
 	icon_state = "purple"
 /area/mine/explored/muriki/cave/sci/east_access
@@ -1301,11 +1313,12 @@
 	name = "\improper Research Maintenance Closet"
 	icon_state = "pmaint"
 
-/area/mine/explored/muriki/cave/med/east_access
-	name = "\improper Medical Cavern Access West"
-	sound_env = TUNNEL_ENCLOSED
+/area/mine/explored/muriki/cave/med/west_access
+	name = "\improper Chemical Refinery Cavern Access"
+	sound_env = LARGE_ENCLOSED
 	icon_state = "bluenew"
 	color_grading = COLORTINT_DIM
+
 /area/mine/explored/muriki/cave/med/resleever_exit
 	name = "\improper Medical Automatic Resleeving Access"
 	sound_env = TUNNEL_ENCLOSED
@@ -1338,6 +1351,14 @@
 
 /area/maintenance/civ/east
 	name = "\improper East Civilian Maintenance"
+	sound_env = TUNNEL_ENCLOSED
+
+/area/maintenance/civ/west
+	name = "\improper West Civilian Maintenance"
+	sound_env = TUNNEL_ENCLOSED
+
+/area/maintenance/civ/south
+	name = "\improper South Civilian Maintenance"
 	sound_env = TUNNEL_ENCLOSED
 
 //fillers
@@ -1472,6 +1493,7 @@
 	outdoors = TRUE
 	dynamic_lighting = FALSE // Disable sky light
 	base_turf = /turf/simulated/open/muriki
+	ambience = AMBIENCE_MURIKIOUTSIDE
 
 /area/muriki/skyline/east
 	name = "\improper Eastern Facility Airspace"
@@ -1501,6 +1523,7 @@
 	flags = AREA_BLOCK_GHOST_SIGHT|AREA_FLAG_IS_NOT_PERSISTENT
 	icon_state = "dk_yellow"
 	color_grading = COLORTINT_UNDERDARK
+	ambience = AMBIENCE_UNDERDARK
 
 /area/mine/explored/muriki/liminaltoobs
 	name = "\improper Disposal Return Maintenance"
@@ -1509,6 +1532,7 @@
 	flags = AREA_BLOCK_GHOST_SIGHT|AREA_FLAG_IS_NOT_PERSISTENT
 	icon_state = "dk_yellow"
 	color_grading = COLORTINT_DARK
+	ambience = AMBIENCE_UNDERDARK
 
 //Moon riiiiver
 /area/mine/explored/muriki/river
@@ -1614,10 +1638,18 @@
 
 /area/maintenance/wastedisposal
 	name = "\improper Waste Disposal Maintenance"
-	base_turf = /turf/simulated/open
 	icon_state = "maint_research_shuttle"
+	base_turf = /turf/simulated/open
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 	use_emergency_overlay = TRUE
+
+/area/maintenance/wastedisposal/firstaid
+	name = "\improper Waste Department First Aid Station"
+	icon_state = "medbay2"
+	sound_env = SMALL_ENCLOSED
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
+	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
+	flags = AREA_FIRE_SUPRESSION
 
 /area/maintenance/damaged_resleeverA
 	name = "\improper Collapsed Structure"
@@ -1630,7 +1662,16 @@
 
 /area/maintenance/damaged_resleeverB
 	name = "\improper Damaged Structure"
-	base_turf = /turf/simulated/open
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
+	icon_state = "maint_research_shuttle"
+	flags = RAD_SHIELDED | AREA_BLOCK_SUIT_SENSORS | AREA_FLAG_IS_NOT_PERSISTENT | AREA_BLOCK_TRACKING | AREA_FORBID_EVENTS | AREA_BLOCK_GHOST_SIGHT
+	requires_power = FALSE
+	haunted = TRUE
+	color_grading = COLORTINT_OMEN
+
+/area/maintenance/damaged_resleeverC
+	name = "\improper Broken Structure"
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	icon_state = "maint_research_shuttle"
 	flags = RAD_SHIELDED | AREA_BLOCK_SUIT_SENSORS | AREA_FLAG_IS_NOT_PERSISTENT | AREA_BLOCK_TRACKING | AREA_FORBID_EVENTS | AREA_BLOCK_GHOST_SIGHT
 	requires_power = FALSE
@@ -1656,6 +1697,11 @@
 /area/maintenance/med
 	name = "\improper Near Medical Maintenance"
 	icon_state = "bluenew"
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
+
+/area/maintenance/med_refinery
+	name = "\improper Near Chemical Refinery Maintenance"
+	icon_state = "maint_medbay"
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 
 /area/maintenance/sci
@@ -1724,6 +1770,37 @@
 	icon = 'icons/turf/areas_vr.dmi'
 	icon_state = "deckmaint1"
 	use_emergency_overlay = TRUE
+
+
+//
+// Shadekin darkness in maintenance ------------------------------------------------------------
+//
+
+/area/maintenance/shadekin_dark
+	name = "USE SUBTYPE"
+	icon = 'icons/turf/areas_vr.dmi'
+	icon_state = "debrisexplored"
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
+	flags = RAD_SHIELDED | AREA_BLOCK_GHOST_SIGHT | AREA_FLAG_IS_NOT_PERSISTENT
+	color_grading = COLORTINT_UNDERDARK
+
+/area/maintenance/shadekin_dark/mountain
+	name = "\improper Mountainside caves"
+
+/area/maintenance/shadekin_dark/waste
+	name = "\improper Maintenance tunnels near Waste"
+
+/area/maintenance/shadekin_dark/med
+	name = "\improper Maintenance tunnels near Medical"
+
+/area/maintenance/shadekin_dark/sec
+	name = "\improper Maintenance tunnels near Security"
+
+/area/maintenance/shadekin_dark/cave
+	name = "\improper Basement caves"
+
+/area/maintenance/shadekin_dark/river
+	name = "\improper Maintenance tunnels along the river"
 
 //
 // Collapsed underdark entrances ------------------------------------------------------------
@@ -1833,7 +1910,7 @@
 
 /area/medical/evastore
 	name = "\improper Medical Hazop And Hardsuit Storage"
-	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
+	base_turf = /turf/simulated/open/muriki
 	icon_state = "locker"
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
 
@@ -1956,6 +2033,7 @@
 	music = 'sound/ambience/ambiatm1.ogg'
 	base_turf = /turf/simulated/open
 	outdoors = TRUE
+	ambience = AMBIENCE_MURIKIOUTSIDE
 
 /area/muriki/rooftop/engineering
 	name = "\improper Engineering Roof"
@@ -2127,6 +2205,11 @@
 	base_turf = /turf/simulated/open
 	color_grading = COLORTINT_DIM
 
+/area/security/uav_bay
+	name = "\improper UAV Bay"
+	sound_env = LARGE_ENCLOSED
+	base_turf = /turf/simulated/open
+
 //
 // Science-----------------------------------------------------------------------
 //
@@ -2208,6 +2291,7 @@
 	icon_state = "xeno_f_lab"
 	base_turf = /turf/simulated/open
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
+	flags = /area/rnd::flags
 
 /area/rnd/xenobiology/xenobioh
 	name = "\improper Hazardous Xenobiology Lab"
@@ -2229,6 +2313,12 @@
 	icon_state = "red2"
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 	flags = AREA_FIRE_SUPRESSION
+
+/area/rnd/anomlab
+	name = "\improper Anomaly Lab"
+	icon_state = "research_foyer_aux"
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
+	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
 
 /area/rnd/research/atmosia
 	name = "\improper Sphenoidal Atmospherics"
@@ -2323,7 +2413,7 @@
 	name = "\improper Research First aid"
 	base_turf = /turf/simulated/open
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
-	flags = AREA_FIRE_SUPRESSION
+	flags = AREA_BLOCK_INSTANT_BUILDING | AREA_FIRE_SUPRESSION
 	lightswitch = 1
 
 /area/rnd/research/roof_eva
@@ -2381,7 +2471,7 @@
 	icon_state = "redwhitri"
 	base_turf = /turf/simulated/open
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
-	flags = AREA_FLAG_IS_NOT_PERSISTENT
+	flags = AREA_BLOCK_INSTANT_BUILDING | AREA_FLAG_IS_NOT_PERSISTENT
 	use_emergency_overlay = FALSE
 
 /area/rnd/research/phoronics/med
@@ -2389,7 +2479,7 @@
 	icon_state = "blublacir"
 	base_turf = /turf/simulated/open
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
-	flags = AREA_FIRE_SUPRESSION
+	flags = AREA_BLOCK_INSTANT_BUILDING | AREA_FIRE_SUPRESSION
 
 /area/maintenance/substation/phoronics
 	name = "Phoronics Substation"
@@ -2815,7 +2905,7 @@
 	icon_state = "red2"
 	flags = AREA_FORBID_EVENTS | AREA_BLOCK_GHOST_SIGHT | RAD_SHIELDED
 	sound_env = SOUND_ENVIRONMENT_HANGAR
-	ambience = AMBIENCE_FOREBODING
+	ambience = AMBIENCE_UNDERDARK
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	color_grading = COLORTINT_DARK
 
@@ -2852,7 +2942,7 @@
 //
 /area/vehicle_interior
 	sound_env = SMALL_ENCLOSED
-	flags = RAD_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT | AREA_BLOCK_PHASE_SHIFT | BLUE_SHIELDED
+	flags = AREA_BLOCK_INSTANT_BUILDING | RAD_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT | AREA_BLOCK_PHASE_SHIFT | BLUE_SHIELDED
 	requires_power = FALSE
 	color_grading = COLORTINT_DIM
 
@@ -2882,12 +2972,20 @@
 // Specialtiy -------------------------------------------------------------------------------
 //
 
+/area/centcom/simulated/cent_sat
+	name = "\improper CentCom Satelight"
+	icon_state = "exit"
+
+/area/centcom/simulated/cent_cargo_sat
+	name = "\improper CentCom Cargo Docking"
+	icon_state = "center"
+
 /area/specialty/redspace
 	name = "\improper Unknown"
 	base_turf = /turf/simulated/floor/flesh
 	icon = 'icons/turf/areas.dmi'
 	icon_state = "blue"
-	flags = RAD_SHIELDED | AREA_BLOCK_SUIT_SENSORS | AREA_FLAG_IS_NOT_PERSISTENT | AREA_BLOCK_TRACKING | AREA_FORBID_EVENTS | AREA_BLOCK_GHOST_SIGHT | AREA_BLOCK_PHASE_SHIFT
+	flags = AREA_BLOCK_INSTANT_BUILDING | RAD_SHIELDED | AREA_BLOCK_SUIT_SENSORS | AREA_FLAG_IS_NOT_PERSISTENT | AREA_BLOCK_TRACKING | AREA_FORBID_EVENTS | AREA_BLOCK_GHOST_SIGHT | AREA_BLOCK_PHASE_SHIFT
 	sound_env = SPACE
 	ambience = AMBIENCE_MEATZONE
 	music = 'sound/ambience/approaching_planet.ogg'
@@ -2901,9 +2999,8 @@
 	base_turf = /turf/simulated/floor/weird_things/dark
 	icon = 'icons/turf/areas.dmi'
 	icon_state = "blue"
-	flags = RAD_SHIELDED | AREA_BLOCK_SUIT_SENSORS | AREA_FLAG_IS_NOT_PERSISTENT | AREA_BLOCK_TRACKING | AREA_FORBID_EVENTS | AREA_BLOCK_GHOST_SIGHT | AREA_BLOCK_PHASE_SHIFT
-	sound_env = SPACE
-	ambience = AMBIENCE_FOREBODING
+	flags = /area/specialty/redspace::flags
+	ambience = AMBIENCE_UNDERDARK
 	music = 'sound/ambience/ambisin1.ogg'
 	haunted = TRUE
 	color_grading = COLORTINT_OMEN
@@ -2924,15 +3021,50 @@
 /area/vr/spacesim/get_gravity()
 	return 0
 
+/area/vr/bloodstar //Special area for turret controls.
+	dynamic_lighting = 1 //Dynamic lights, so you can shoot out the station lights for darkness
+	requires_power = FALSE //But always has power, so doors and stuff work
+	base_turf = /turf/simulated/mineral/floor/ignore_mapgen //Needs a different base turf because otherwise stuff will get ANGRY
+	icon = 'icons/turf/areas.dmi'
+	icon_state = "blue"
+
+/area/vr/bloodstar/spacebase //Just for base turf changes
+	base_turf = /turf/space
+	icon_state = "bluenew"
+
 /area/specialty/hell
 	name = "\improper Unknown"
 	base_turf = /turf/simulated/floor/lava
 	icon = 'icons/turf/areas.dmi'
 	icon_state = "blue"
-	flags = RAD_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT | AREA_BLOCK_TRACKING | AREA_FORBID_EVENTS | AREA_BLOCK_PHASE_SHIFT
+	flags = /area/specialty/redspace::flags
 	sound_env = SPACE
 	ambience = AMBIENCE_MEATZONE
 	music = 'sound/ambience/approaching_planet.ogg'
 	requires_power = FALSE
 	dynamic_lighting = 0
 	color_grading = COLORTINT_OMEN
+
+/area/specialty/stowaway_clubhouse
+	name = "\improper Someplace"
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
+	icon = 'icons/turf/areas.dmi'
+	icon_state = "LP"
+	flags = AREA_BLOCK_INSTANT_BUILDING | RAD_SHIELDED | AREA_BLOCK_SUIT_SENSORS | AREA_FLAG_IS_NOT_PERSISTENT | AREA_BLOCK_TRACKING
+	sound_env = LARGE_SOFTFLOOR
+	ambience = AMBIENCE_GENERIC
+	color_grading = COLORTINT_DUST
+
+/area/specialty/stowaway_clubhouse/upper
+	base_turf = /turf/simulated/open
+	icon_state = "LPS"
+
+/area/specialty/expie_clubhouse
+	name = "\improper Dog House"
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
+	icon = 'icons/turf/areas.dmi'
+	icon_state = "medbay_mental"
+	flags = RAD_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT | AREA_BLOCK_INSTANT_BUILDING
+	sound_env = LARGE_SOFTFLOOR
+	ambience = AMBIENCE_GENERIC
+	color_grading = COLORTINT_COZY

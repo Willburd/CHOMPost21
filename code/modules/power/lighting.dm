@@ -282,9 +282,7 @@ GLOBAL_LIST_EMPTY(light_type_cache)
 	plane = OBJ_PLANE
 	layer = OBJ_LAYER
 	desc = "A floor lamp."
-	// Outpost 21 edit begin - why was this a large bulb? It makes fixing it manually a pain when it's mostly used as room lighting...
-	light_type = /obj/item/light/bulb //large
-	// Outpost 21 edit end
+	light_type = /obj/item/light/bulb/large
 	construct_type = /obj/machinery/light_construct/flamp
 	shows_alerts = FALSE
 	var/lamp_shade = 1
@@ -818,7 +816,7 @@ GLOBAL_LIST_EMPTY(light_type_cache)
 
 	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
-		if(H.species.can_shred(H))
+		if(H.species.can_shred(H, FALSE, 10))
 			user.setClickCooldown(user.get_attack_speed())
 			for(var/mob/M in viewers(src))
 				M.show_message(span_red("[user.name] smashed the light!"), 3, "You hear a tinkle of breaking glass", 2)
@@ -846,7 +844,7 @@ GLOBAL_LIST_EMPTY(light_type_cache)
 		else if(TK in user.mutations)
 			to_chat(user, "You telekinetically remove the light [get_fitting_name()].")
 		else
-			to_chat(user, "You try to remove the light [get_fitting_name()], but it's too hot and you don't want to burn your hand.")
+			to_chat(user, "You try to remove the [get_fitting_name()], but it's too hot and you don't want to burn your hand.")
 			return				// if burned, don't remove the light
 	else
 		to_chat(user, "You remove the light [get_fitting_name()].")
@@ -890,7 +888,7 @@ GLOBAL_LIST_EMPTY(light_type_cache)
 
 // break the light and make sparks if was on
 
-/obj/machinery/light/proc/broken(var/skip_sound_and_sparks = 0)
+/obj/machinery/light/proc/broken(var/skip_sound_and_sparks = FALSE)
 	if(status == LIGHT_EMPTY)
 		return
 
@@ -1038,6 +1036,8 @@ GLOBAL_LIST_EMPTY(light_type_cache)
 /obj/item/light/tube/large
 	w_class = ITEMSIZE_SMALL
 	name = "large light tube"
+	icon_state = "ltube_large"
+	base_state = "ltube_large"
 	brightness_range = 15
 	brightness_power = 4
 
@@ -1071,6 +1071,8 @@ GLOBAL_LIST_EMPTY(light_type_cache)
 // For 'floor lamps' in outdoor use and such
 /obj/item/light/bulb/large
 	name = "large light bulb"
+	icon_state = "lbulb_large"
+	base_state = "lbulb_large"
 	brightness_range = 7
 	brightness_power = 1.5
 

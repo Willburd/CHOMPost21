@@ -11,6 +11,11 @@
 
 	var/number_pages = 0
 
+/datum/tgui_module/player_notes/tgui_close(mob/user)
+	. = ..()
+	if(!QDELETED(src))
+		qdel(src)
+
 /datum/tgui_module/player_notes/proc/filter_ckeys(var/page, var/filter)
 	var/savefile/S=new("data/player_notes.sav")
 	var/list/note_keys
@@ -105,6 +110,11 @@
 	tgui_id = "PlayerNotesInfo"
 
 	var/key = null
+
+/datum/tgui_module/player_notes_info/tgui_close(mob/user)
+	. = ..()
+	if(!QDELETED(src))
+		qdel(src)
 
 /datum/tgui_module/player_notes_info/tgui_state(mob/user)
 	return ADMIN_STATE(R_ADMIN|R_EVENT|R_DEBUG)

@@ -58,7 +58,7 @@
 	var/evo_point = 0
 	var/evo_limit = 0
 	var/next
-	meat_type = /obj/item/toy/figure/bounty_hunter
+	meat_type = /obj/item/reagent_containers/food/snacks/metroidmeat
 
 	can_be_drop_prey = FALSE //CHOMP Add
 
@@ -71,7 +71,8 @@
 
 /mob/living/simple_mob/metroid/Initialize(mapload)
 	nutrition = 100		//Have them start off pretty hungry still.
-	add_verb(src,/mob/living/proc/ventcrawl) //CHOMPEdit TGPanel //May not do anything at the moment.
+	if(istype(src,/mob/living/simple_mob/metroid/juvenile)) // Outpost 21 edit - Lock to babys
+		add_verb(src,/mob/living/proc/ventcrawl) //CHOMPEdit TGPanel //May not do anything at the moment.
 	return ..()
 
 /datum/say_list/metroid

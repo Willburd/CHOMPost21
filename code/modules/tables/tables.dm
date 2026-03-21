@@ -1,4 +1,4 @@
-var/list/table_icon_cache = list()
+GLOBAL_LIST_EMPTY(table_icon_cache)
 
 /obj/structure/table
 	name = "table frame"
@@ -9,7 +9,7 @@ var/list/table_icon_cache = list()
 	anchored = TRUE
 	layer = TABLE_LAYER
 	throwpass = 1
-	surgery_odds = 90 // Outpost 21 edit - Buffing ghetto surgery
+	surgery_cleanliness = 50
 	var/flipped = 0
 	var/maxhealth = 10
 	var/health = 10
@@ -78,7 +78,10 @@ var/list/table_icon_cache = list()
 	update_material()
 
 	AddElement(/datum/element/climbable/table)
+
+	#ifndef OUTPOST_FRIENDSHIP_MODE
 	AddElement(/datum/element/headbonk/table) // Outpost 21 edit - Bonk!
+	#endif
 
 /obj/structure/table/Destroy()
 	material = null
@@ -337,14 +340,14 @@ var/list/table_icon_cache = list()
 
 /proc/get_table_image(var/icon/ticon,var/ticonstate,var/tdir,var/tcolor,var/talpha)
 	var/icon_cache_key = "\ref[ticon]-[ticonstate]-[tdir]-[tcolor]-[talpha]"
-	var/image/I = table_icon_cache[icon_cache_key]
+	var/image/I = GLOB.table_icon_cache[icon_cache_key]
 	if(!I)
 		I = image(icon = ticon, icon_state = ticonstate, dir = tdir)
 		if(tcolor)
 			I.color = tcolor
 		if(talpha)
 			I.alpha = talpha
-		table_icon_cache[icon_cache_key] = I
+		GLOB.table_icon_cache[icon_cache_key] = I
 
 	return I
 

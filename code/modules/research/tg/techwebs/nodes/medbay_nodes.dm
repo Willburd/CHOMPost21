@@ -8,32 +8,35 @@
 		"scan_console",
 		// "medicalbed",
 		// "defibmountdefault",
-		// "defibrillator",
+		"defibrillator",
 		// "surgical_drapes",
-		// "scalpel",
-		// "retractor",
-		// "hemostat",
-		// "cautery",
-		// "circular_saw",
-		// "surgicaldrill",
-		// "bonesetter",
+		"scalpel",
+		"retractor",
+		"hemostat",
+		"cautery",
+		"circular_saw",
+		"surgicaldrill",
+		"bonesetter",
+		"implanter",
 		// "blood_filter",
 		// "surgical_tape",
-		// "penlight",
+		"penlight",
 		// "penlight_paramedic",
 		// "stethoscope",
-		// "beaker",
-		// "large_beaker",
+		"vial",
+		"beaker",
+		"large_beaker",
 		// "chem_pack",
 		// "blood_pack",
-		// "syringe",
-		// "dropper",
-		// "pillbottle",
+		"syringe",
+		"dropper",
+		"pillbottle",
 		// "xlarge_beaker",
 		// "organ_jar",
 		// "jerrycan",
 		// "reflex_hammer",
 		// "blood_scanner",
+		"needle_cleaner_board", // Outpost 21 edit(port) - Needle cleaning centrifuge
 	)
 
 /datum/techweb_node/chem_synthesis
@@ -172,6 +175,18 @@
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_5_POINTS)
 	announce_channels = list(CHANNEL_MEDICAL)
+
+/datum/techweb_node/medigun_constant
+	id = TECHWEB_NODE_MEDIGUN_CONSTANT
+	display_name = "Medigun Backpack"
+	description = "A revised version of the ML3M series. This one features a cell-powered constant beam, and ability to charge it with chemicals."
+	prereq_ids = list(TECHWEB_NODE_MEDIGUN)
+	design_ids = list(
+		"medigun_constant"
+	)
+	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_5_POINTS)
+	announce_channels = list(CHANNEL_MEDICAL)
+	discount_experiments = list(/datum/experiment/scanning/people/hurt_medigun = TECHWEB_TIER_3_POINTS)
 
 /* Outpost 21 edit - Nif removal
 /datum/techweb_node/nif

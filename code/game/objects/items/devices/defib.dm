@@ -64,7 +64,7 @@
 
 /obj/item/defib_kit/attack_hand(mob/living/user)
 	// See important note in tethered_item.dm
-	if(SEND_SIGNAL(src,COMSIG_ITEM_ATTACK_SELF,user) & COMPONENT_NO_INTERACT)
+	if(SEND_SIGNAL(src,COMSIG_ITEM_ATTACK_SELF,user) & COMPONENT_CANCEL_ATTACK_CHAIN)
 		return TRUE
 	. = ..()
 
@@ -389,11 +389,22 @@
 		return
 
 	H.apply_damage(burn_damage_amt, BURN, BP_TORSO)
+	if(HAS_TRAIT(H, TRAIT_UNLUCKY) && prob(5))
+		make_announcement("buzzes, \"Unknown error occurred. Please try again.\"", "warning")
+		playsound(src, 'sound/machines/defib_failed.ogg', 50, FALSE)
+		return
 
 	//set oxyloss so that the patient is just barely in crit, if possible
-	var/barely_in_crit = H.get_crit_point() - 1
+	/* Outpost 21 edit begin - Disable oxycrit
+	var/barely_in_crit = -(H.get_crit_point() - 1) //Assume get_crit_point will return -50, so we take the inverse of it.
 	var/adjust_health = barely_in_crit - H.health //need to increase health by this much
+	if(adjust_health < 0) //We got a negative value. Safety in case of weird fuckery.
+		adjust_health *= -1
 	H.adjustOxyLoss(-adjust_health)
+	*/
+	H.Weaken(30)
+	H.Stun(20)
+	// Outpost 21 edit end
 
 	if(H.isSynthetic())
 		H.adjustToxLoss(-H.getToxLoss())
@@ -437,7 +448,7 @@
 	playsound(src, 'sound/weapons/egloves.ogg', 100, 1, -1)
 	set_cooldown(cooldowntime)
 
-	H.stun_effect_act(2, 120, target_zone)
+	H.stun_effect_act(2, 120, target_zone, electric = TRUE)
 	var/burn_damage = H.electrocute_act(burn_damage_amt*2, src, def_zone = target_zone)
 	if(burn_damage > 15 && H.can_feel_pain())
 		H.emote("scream")
@@ -509,7 +520,7 @@
 		update_icon()
 		return 1
 
-/obj/item/shockpaddles/emp_act(severity)
+/obj/item/shockpaddles/emp_act(severity, recursive)
 	var/new_safety = rand(0, 1)
 	if(safety != new_safety)
 		safety = new_safety
@@ -592,7 +603,7 @@
 	else
 		STOP_PROCESSING(SSobj, src)
 
-/obj/item/shockpaddles/standalone/emp_act(severity)
+/obj/item/shockpaddles/standalone/emp_act(severity, recursive)
 	..()
 	var/new_fail = 0
 	switch(severity)

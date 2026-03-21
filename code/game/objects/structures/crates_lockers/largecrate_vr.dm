@@ -56,7 +56,7 @@
 						/mob/living/simple_mob/vore/aggressive/rat/labrat, //CHOMPEdit
 						/mob/living/simple_mob/vore/zorgoia, //CHOMPstation edit
 						/mob/living/simple_mob/vore/rabbit,
-						/mob/living/simple_mob/vore/weretiger;0.5,
+						/mob/living/simple_mob/vore/weretiger;0.5
 //						/mob/living/simple_mob/vore/otie;0.5
 						))
 	return ..()

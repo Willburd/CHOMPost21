@@ -122,12 +122,6 @@
 				return
 	..()
 
-// Classic emp_act, just drains the battery
-/obj/item/ammo_magazine/smart/emp_act(severity)
-	..()
-	if(attached_cell)
-		attached_cell.emp_act(severity)
-
 // Finds the cell for the magazine, used by rechargers
 /obj/item/ammo_magazine/smart/get_cell()
 	return attached_cell
@@ -138,7 +132,7 @@
 
 // Sets how much energy is drained to make each bullet
 /obj/item/ammo_magazine/smart/proc/set_production_cost(var/obj/item/ammo_casing/A)
-	var/list/matters = ammo_repository.get_materials_from_object(A)
+	var/list/matters = GLOB.ammo_repository.get_materials_from_object(A)
 	var/tempcost
 	for(var/key in matters)
 		var/value = matters[key]

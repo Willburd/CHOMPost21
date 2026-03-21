@@ -60,11 +60,11 @@
 	var/strength = (pressure-TANK_FRAGMENT_PRESSURE)/TANK_FRAGMENT_SCALE
 	var/mult = ((faketank.volume/140)**(1/2)) * (faketank.total_moles**(2/3))/((29*0.64) **(2/3)) //Don't ask me what this is, see tanks.dm
 
-	var/dev = round((mult*strength)*0.15)
-	var/heavy = round((mult*strength)*0.35)
-	var/light = round((mult*strength)*0.80)
+	var/dev = round((mult*strength)*1)
+	var/heavy = round((mult*strength)*0.5)
+	var/light = round((mult*strength)*0.25)
 
-	return FLOOR(round(dev + (heavy/2) + (light/3),1),1)
+	return FLOOR(dev + heavy + light,1)
 
 /datum/element/sellable/transfer_valve/sell(obj/source, var/datum/exported_crate/EC, var/in_crate)
 	. = ..()
@@ -79,9 +79,10 @@
 	sale_info = "This can be sold on the cargo shuttle. It's condition and parts would greatly affects its price."
 
 /datum/element/sellable/food_snack/sell_error(obj/source)
+	var/obj/mecha/exo = source
+	exo.wreckage = null // Exo sold, remove it's lootpile on qdel, or we'll have issues in cargo....
 	var/check_val = calculate_sell_value(source)
 	if(!check_val)
-		var/obj/mecha/exo = source
 		if((exo.health / exo.maxhealth) < 0.5)
 			return "Error: The unit is too damaged to sell, and will be used as scrap. Payment rendered null under terms of agreement."
 		return "Error: The unit in its current condition has no resale value at all, and will be used as scrap. Payment rendered null under terms of agreement."

@@ -10,6 +10,11 @@
 	if(..())//Can move due to other reasons, don't use jetpack fuel
 		return 1
 
+	// Outpost 21 edit begin - Robots inherently have magboots
+	if(!istype(get_turf(src), /turf/space))
+		return TRUE
+	// Outpost 21 edit end
+
 	var/obj/item/tank/jetpack/thrust = get_jetpack()
 	if(thrust && (!check_drift || (check_drift && thrust.stabilization_on)) && thrust.do_thrust(0.01))
 		inertia_dir = 0

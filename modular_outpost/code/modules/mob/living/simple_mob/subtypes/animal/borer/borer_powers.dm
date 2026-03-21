@@ -1,4 +1,4 @@
-/mob/living/simple_mob/animal/borer/verb/taste_chemicals()
+/mob/living/simple_mob/animal/borer/verb/taste_chemicals() // Outpost 21 edit(port) - Borer fixes
 	set category = "Abilities.Borer"
 	set name = "Taste Blood"
 	set desc = "Tastes the chemicals in your host's bloodstream."

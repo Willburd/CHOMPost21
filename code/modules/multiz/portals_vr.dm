@@ -135,9 +135,9 @@
 			to_chat(M, span_notice("Something blocks your way."))
 			return
 		temptarg = pick(possible_turfs)
-		do_safe_teleport(M, temptarg, 0)
+		do_teleport(M, temptarg)
 	else if (istype(M, /atom/movable))
-		do_safe_teleport(M, target, 0)
+		do_teleport(M, target)
 
 /obj/structure/portal_event/Destroy()
 	if(target)
@@ -215,6 +215,7 @@
 					MI.forceMove(finaldest.loc)
 					sleep(1)
 					MI.Paralyse(10)
+					MI.Sleeping(10)
 					MI << 'sound/effects/bamf.ogg'
 					to_chat(MI,span_warning("You're starting to come to. You feel like you've been out for a few minutes, at least..."))
 				for(var/obj/item/I in L)
@@ -225,6 +226,7 @@
 			L.forceMove(finaldest.loc)
 			sleep(1)
 			L.Paralyse(10)
+			L.Sleeping(10)
 			L << 'sound/effects/bamf.ogg'
 			to_chat(L,span_warning("You're starting to come to. You feel like you've been out for a few minutes, at least..."))
 	return

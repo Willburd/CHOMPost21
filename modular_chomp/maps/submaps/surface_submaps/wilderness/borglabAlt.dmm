@@ -737,8 +737,7 @@
 /area/submap/BorgLab)
 "DY" = (
 /obj/item/pickaxe/plasmacutter,
-/obj/machinery/firealarm{
-	alarms_hidden = 1;
+/obj/machinery/firealarm/alarms_hidden{
 	pixel_y = 24
 	},
 /obj/effect/floor_decal/rust,
@@ -787,8 +786,7 @@
 /turf/simulated/floor/tiled,
 /area/submap/BorgLab)
 "EE" = (
-/obj/machinery/firealarm{
-	alarms_hidden = 1;
+/obj/machinery/firealarm/alarms_hidden{
 	dir = 8;
 	pixel_x = -24
 	},
@@ -991,6 +989,7 @@
 /obj/item/stack/material/phoron{
 	amount = 10
 	},
+/obj/item/prop/deconstructable/gigacell,
 /turf/simulated/floor/plating,
 /area/submap/BorgLab)
 "LA" = (
@@ -1081,7 +1080,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
-/obj/machinery/firealarm{
+/obj/machinery/firealarm/alarms_hidden{
 	pixel_y = 24
 	},
 /obj/effect/floor_decal/rust,

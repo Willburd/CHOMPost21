@@ -172,7 +172,7 @@
 	playsound(src, 'sound/machines/click.ogg', 40, 1)
 	update_icon()
 
-/obj/machinery/appliance/AICtrlClick(mob/user)
+/obj/machinery/appliance/ctrl_click_ai(mob/user)
 	attempt_toggle_power(user)
 
 /obj/machinery/appliance/proc/choose_output()
@@ -271,39 +271,31 @@
 
 	if(istype(I, /obj/item/gripper))
 		var/obj/item/gripper/GR = I
-		var/obj/item/wrap = GR.get_current_pocket()
+		var/obj/item/wrap = GR.get_wrapped_item()
 		if(wrap)
-			wrap.loc = get_turf(src)
 			var/result = can_insert(wrap, user)
 			if(!result)
-				wrap.forceMove(GR)
 				if(!(default_deconstruction_screwdriver(user, I)))
 					default_part_replacement(user, I)
-				return
+				return TRUE
+			add_content(wrap, user)
+			update_icon()
+			return FALSE
 
-			if(QDELETED(wrap))
-				GR.WR = null
+		attack_hand(user)
+		return TRUE
 
-			if(wrap.loc != src)
-				GR.drop_item_nm()
+	var/result = can_insert(I, user)
+	if(!result)
+		if(!(default_deconstruction_screwdriver(user, I)))
+			default_part_replacement(user, I)
+		return
 
-			ToCook = wrap
-		else
-			attack_hand(user)
+	if(result == 2)
+		var/obj/item/grab/G = I
+		if (G && istype(G) && G.affecting)
+			cook_mob(G.affecting, user)
 			return
-
-	else
-		var/result = can_insert(I, user)
-		if(!result)
-			if(!(default_deconstruction_screwdriver(user, I)))
-				default_part_replacement(user, I)
-			return
-
-		if(result == 2)
-			var/obj/item/grab/G = I
-			if (G && istype(G) && G.affecting)
-				cook_mob(G.affecting, user)
-				return
 
 	//From here we can start cooking food
 	add_content(ToCook, user)
@@ -661,9 +653,11 @@
 	// CHOMPAdd End
 
 	// Set off fire alarms!
-	var/obj/machinery/firealarm/FA = locate() in get_area(src)
-	if(FA)
-		FA.alarm()
+	var/area/area_to_check = get_area(src)
+	for(var/obj/machinery/firealarm/FA in area_to_check.get_contents())
+		if(FA && FA.detecting)
+			FA.alarm()
+			break
 
 /obj/machinery/appliance/attack_hand(var/mob/user)
 	if(..())

@@ -58,6 +58,7 @@
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
 
+/* Outpost 21 edit - Removed overpowered mech shields
 /datum/design_techweb/mechfab/combat_shield
 	name = "linear combat shield"
 	id = "mech_shield_droid"
@@ -78,6 +79,7 @@
 		RND_CATEGORY_EQUIPMENT
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE | DEPARTMENT_BITFLAG_SECURITY
+*/
 
 // New Stuff
 
@@ -119,7 +121,7 @@
 	name = "Phase Pistol"
 	id = "phasepistol"
 	materials = list(MAT_STEEL = 4000, MAT_GLASS = 500)
-	build_path = /obj/item/gun/energy/locked/phasegun/pistol/unlocked // Outpost 21 edit - unlock most explo guns
+	build_path = /obj/item/gun/energy/locked/phasegun/pistol
 	build_type = PROTOLATHE
 	category = list(
 		RND_CATEGORY_WEAPONS
@@ -130,7 +132,7 @@
 	name = "Phase Carbine"
 	id = "phasecarbine"
 	materials = list(MAT_STEEL = 6000, MAT_GLASS = 500)
-	build_path = /obj/item/gun/energy/locked/phasegun/unlocked // Outpost 21 edit - unlock most explo guns
+	build_path = /obj/item/gun/energy/locked/phasegun
 	build_type = PROTOLATHE
 	category = list(
 		RND_CATEGORY_WEAPONS
@@ -141,7 +143,7 @@
 	name = "Phase Rifle"
 	id = "phaserifle"
 	materials = list(MAT_STEEL = 7000, MAT_GLASS = 500, MAT_SILVER = 500)
-	build_path = /obj/item/gun/energy/locked/phasegun/rifle/unlocked // Outpost 21 edit - unlock most explo guns
+	build_path = /obj/item/gun/energy/locked/phasegun/rifle
 	build_type = PROTOLATHE
 	category = list(
 		RND_CATEGORY_WEAPONS
@@ -152,7 +154,7 @@
 	name = "Phase Cannon"
 	id = "phasecannon"
 	materials = list(MAT_STEEL = 10000, MAT_GLASS = 2000, MAT_SILVER = 2000, MAT_DIAMOND = 750)
-	build_path = /obj/item/gun/energy/locked/phasegun/cannon/unlocked // Outpost 21 edit - unlock most explo guns
+	build_path = /obj/item/gun/energy/locked/phasegun/cannon
 	build_type = PROTOLATHE
 	category = list(
 		RND_CATEGORY_WEAPONS
@@ -163,7 +165,7 @@
 	name = "Frontier Phase Pistol"
 	id = "holdout_frontier_phaser"
 	materials = list(MAT_STEEL = 6000, MAT_GLASS = 900, MAT_DURASTEEL = 100, MAT_VERDANTIUM = 100, MAT_PHORON = 1000)
-	build_path = /obj/item/gun/energy/locked/frontier/holdout/unlocked // Outpost 21 edit - unlock most explo guns
+	build_path = /obj/item/gun/energy/locked/frontier/holdout
 	build_type = PROTOLATHE
 	category = list(
 		RND_CATEGORY_WEAPONS
@@ -174,7 +176,7 @@
 	name = "Frontier Phaser"
 	id = "frontier_phaser"
 	materials = list(MAT_STEEL = 7000, MAT_GLASS = 900, MAT_DURASTEEL = 100, MAT_VERDANTIUM = 150, MAT_PHORON = 2000)
-	build_path = /obj/item/gun/energy/locked/frontier/unlocked // Outpost 21 edit - unlock most explo guns
+	build_path = /obj/item/gun/energy/locked/frontier
 	build_type = PROTOLATHE
 	category = list(
 		RND_CATEGORY_WEAPONS
@@ -185,7 +187,7 @@
 	name = "Frontier Phase Carbine"
 	id = "carbine_frontier_phaser"
 	materials = list(MAT_STEEL = 6500, MAT_GLASS = 900, MAT_DURASTEEL = 150, MAT_VERDANTIUM = 200, MAT_PHORON = 4000)
-	build_path = /obj/item/gun/energy/locked/frontier/carbine/unlocked // Outpost 21 edit - unlock most explo guns
+	build_path = /obj/item/gun/energy/locked/frontier/carbine
 	build_type = PROTOLATHE
 	category = list(
 		RND_CATEGORY_WEAPONS
@@ -196,7 +198,7 @@
 	name = "Frontier Marksman Phase Rifle"
 	id = "marksman_rifle_frontier_phaser"
 	materials = list(MAT_STEEL = 8000, MAT_GLASS = 900, MAT_DURASTEEL = 200, MAT_VERDANTIUM = 250, MAT_PHORON = 2000)
-	build_path = /obj/item/gun/energy/locked/frontier/rifle/unlocked // Outpost 21 edit - unlock most explo guns
+	build_path = /obj/item/gun/energy/locked/frontier/rifle
 	build_type = PROTOLATHE
 	category = list(
 		RND_CATEGORY_WEAPONS
@@ -207,7 +209,7 @@
 	name = "Frontier Phase Handbow"
 	id = "handbow_frontier_phaser"
 	materials = list(MAT_STEEL = 5000, MAT_GLASS = 900, MAT_DURASTEEL = 100, MAT_VERDANTIUM = 150, MAT_PHORON = 1000)
-	build_path = /obj/item/gun/energy/locked/frontier/handbow/unlocked // Outpost 21 edit - unlock most explo guns
+	build_path = /obj/item/gun/energy/locked/frontier/handbow
 	build_type = PROTOLATHE
 	category = list(
 		RND_CATEGORY_WEAPONS
@@ -215,16 +217,6 @@
 	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE | DEPARTMENT_BITFLAG_SECURITY
 
 //Leathals And any new CHOMP weapons.
-/datum/design_techweb/caselessrifle_prototype
-	name = "Caseless Rifle"
-	id = "caselessrifle"
-	materials = list(MAT_STEEL = 7000, MAT_TITANIUM = 4000)
-	build_path = /obj/item/gun/projectile/caseless/prototype
-	build_type = PROTOLATHE
-	category = list(
-		RND_CATEGORY_WEAPONS
-	)
-	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE | DEPARTMENT_BITFLAG_SECURITY
 
 /datum/design_techweb/lasercannon
 	name = "Laser Cannon"
@@ -232,18 +224,6 @@
 	id = "lasercannon"
 	materials = list(MAT_STEEL = 4000, MAT_GLASS = 1000, MAT_DIAMOND = 2000, MAT_TITANIUM = 4000, MAT_LEAD = 4000, MAT_URANIUM = 5000)
 	build_path = /obj/item/gun/energy/lasercannon
-	build_type = PROTOLATHE
-	category = list(
-		RND_CATEGORY_WEAPONS
-	)
-	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE | DEPARTMENT_BITFLAG_SECURITY
-
-/datum/design_techweb/cyrogun
-	name = "Cryo Gun"
-	desc = "An improperly researched and poorly built weapon, specialized in utlizing frost offensively.."
-	id = "cryogun"
-	materials = list(MAT_GLASS = 3000, MAT_MORPHIUM = 4000, MAT_DURASTEEL = 6000, MAT_LEAD = 6000, MAT_METALHYDROGEN = 3000)
-	build_path = /obj/item/gun/energy/freezegun
 	build_type = PROTOLATHE
 	category = list(
 		RND_CATEGORY_WEAPONS

@@ -28,7 +28,11 @@
 		anchored = FALSE
 	AddElement(/datum/element/climbable/unanchored_can_break, 3.4 SECONDS, TRUE) // It's a RAILING!
 	AddElement(/datum/element/rotatable)
+
+	#ifndef OUTPOST_FRIENDSHIP_MODE
 	AddElement(/datum/element/headbonk/railing) // Outpost 21 edit - Bonk!
+	#endif
+
 	if(src.anchored)
 		update_icon(0)
 
@@ -134,8 +138,8 @@
 					if (WEST)
 						add_overlay(image(icon, src, "[icon_modifier]mcorneroverlay", pixel_y = 32))
 
-/obj/structure/railing/handle_rotation_verbs(angle)
-	if(!can_touch(usr))
+/obj/structure/railing/handle_rotation_verbs(angle, mob/user)
+	if(!can_touch(user))
 		return FALSE
 	. = ..()
 	if(.)
@@ -149,7 +153,7 @@
 	if(usr.incapacitated())
 		return 0
 
-	if (!can_touch(usr) || ismouse(usr))
+	if (!can_touch(usr) || HAS_TRAIT(usr, TRAIT_AMBIENT_PEST_MOB))
 		return
 
 	if(anchored)
@@ -251,7 +255,9 @@
 	icon = 'icons/obj/railing.dmi'
 	icon_modifier = "hazard_"
 	icon_state = "hazard_railing0"
+	interactable = TRUE
 
 /obj/structure/railing/overhang/hazard/nanite
 	icon_modifier = "inactive_"
 	icon_state = "inactive_railing0"
+	interactable = FALSE
