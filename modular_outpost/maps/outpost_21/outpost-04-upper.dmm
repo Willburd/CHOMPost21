@@ -4216,6 +4216,14 @@
 /obj/random/medical,
 /turf/simulated/floor/carpet/blucarpet/turfpack/muriki,
 /area/specialty/expie_clubhouse)
+"akf" = (
+/obj/structure/cliff{
+	dir = 1
+	},
+/turf/simulated/floor/indoorrocks/turfpack/muriki{
+	icon_state = "rock_grey"
+	},
+/area/muriki/crystal)
 "akg" = (
 /obj/structure/closet,
 /obj/item/material/twohanded/sledgehammer/gravity/ed,
@@ -4815,6 +4823,20 @@
 /obj/structure/tanning_rack,
 /turf/simulated/floor/tiled/turfpack/muriki,
 /area/specialty/expie_clubhouse)
+"alG" = (
+/obj/structure/cliff{
+	dir = 4
+	},
+/turf/simulated/floor/indoorrocks/turfpack/muriki{
+	icon_state = "rock_grey"
+	},
+/area/muriki/crystal)
+"alH" = (
+/obj/structure/cliff,
+/turf/simulated/floor/indoorrocks/turfpack/muriki{
+	icon_state = "rock_grey"
+	},
+/area/muriki/crystal)
 "alI" = (
 /turf/simulated/wall,
 /area/medical/evastore)
@@ -111569,9 +111591,9 @@ mGY
 qOs
 qOs
 qOs
-qOs
-bMv
-bMv
+als
+als
+als
 ajb
 qOs
 oGM
@@ -111732,10 +111754,10 @@ qOs
 tBv
 qOs
 qOs
-sjq
-bMv
+als
+als
+als
 xTc
-qOs
 qOs
 qOs
 tBv
@@ -111894,10 +111916,10 @@ qOs
 qOs
 qOs
 qOs
-qOs
-bMv
-bMv
-bMv
+sjq
+als
+als
+als
 ajb
 qOs
 qOs
@@ -112057,10 +112079,10 @@ qOs
 hBO
 qOs
 ajb
-bMv
-bMv
-bMv
-bMv
+qOs
+als
+als
+als
 qOs
 qOs
 bMv
@@ -112070,7 +112092,7 @@ bMv
 bMv
 bMv
 bMv
-qOs
+alG
 bMv
 bMv
 bMv
@@ -113033,7 +113055,7 @@ rCV
 qOs
 qOs
 qOs
-bMv
+qOs
 qOs
 bMv
 bMv
@@ -113195,7 +113217,7 @@ qOs
 qOs
 qOs
 xsX
-bMv
+als
 qOs
 qOs
 ajb
@@ -113356,8 +113378,8 @@ eoT
 xYA
 qOs
 ajb
-qOs
-bMv
+alt
+als
 gQF
 gQF
 qOs
@@ -113517,14 +113539,14 @@ alu
 dzi
 qOs
 rCV
-qOs
 iCt
-bMv
-bMv
 qOs
-bMv
+als
 qOs
 qOs
+qOs
+qOs
+alH
 qOs
 qOs
 qOs
@@ -114177,7 +114199,7 @@ bMv
 bMv
 bMv
 qOs
-qOs
+akf
 qOs
 qOs
 qOs
@@ -114326,9 +114348,9 @@ qOs
 gTW
 jKp
 rFS
-qOs
-bMv
-bMv
+ajb
+als
+als
 qOs
 bMv
 bMv
@@ -114487,9 +114509,9 @@ jQz
 qOs
 qOs
 qOs
-qOs
-ajd
-bMv
+xTc
+als
+als
 bUv
 qOs
 qOs
@@ -114650,8 +114672,8 @@ qOs
 mGY
 qOs
 qOs
-bMv
-bMv
+als
+als
 ajb
 gME
 qOs
@@ -114811,8 +114833,8 @@ qOs
 qOs
 qOs
 qOs
-qOs
-bMv
+als
+als
 ajb
 qOs
 qOs
