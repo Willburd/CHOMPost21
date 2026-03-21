@@ -1822,7 +1822,7 @@
 /turf/simulated/floor/outpost_roof/turfpack/muriki,
 /area/muriki/rooftop/security)
 "aeg" = (
-/obj/machinery/door/airlock/glass_external/freezable{
+/obj/machinery/door/airlock/glass_external{
 	req_one_access = list(1)
 	},
 /obj/structure/cable/orange{
@@ -1843,7 +1843,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/security/uav_bay)
 "aei" = (
-/obj/machinery/door/airlock/glass_external/freezable{
+/obj/machinery/door/airlock/glass_external{
 	req_one_access = list(1)
 	},
 /obj/structure/cable/orange{
@@ -3502,7 +3502,7 @@
 /turf/simulated/wall,
 /area/muriki/crew/civmail)
 "ail" = (
-/obj/machinery/door/airlock/glass_external/freezable{
+/obj/machinery/door/airlock/glass_external{
 	req_one_access = null
 	},
 /obj/machinery/door/firedoor/glass,
@@ -4919,7 +4919,7 @@
 	dir = 4
 	},
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/glass_external/freezable{
+/obj/machinery/door/airlock/glass_external{
 	req_one_access = list(10)
 	},
 /turf/simulated/floor/plating,
@@ -7146,7 +7146,7 @@
 /obj/structure/cable/orange{
 	icon_state = "4-8"
 	},
-/obj/machinery/door/airlock/glass_external/freezable{
+/obj/machinery/door/airlock/glass_external{
 	req_one_access = list(5)
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -7878,7 +7878,7 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/upper)
 "bMo" = (
-/obj/machinery/door/airlock/glass_external/freezable{
+/obj/machinery/door/airlock/glass_external{
 	req_one_access = list(31);
 	name = "Overlook"
 	},
@@ -8854,7 +8854,7 @@
 /turf/simulated/wall,
 /area/maintenance/gravgen)
 "cid" = (
-/obj/machinery/door/airlock/glass_external/freezable{
+/obj/machinery/door/airlock/glass_external{
 	req_one_access = null
 	},
 /obj/machinery/door/firedoor/glass,
@@ -9783,7 +9783,7 @@
 /obj/structure/cable/orange{
 	icon_state = "1-2"
 	},
-/obj/machinery/door/airlock/glass_external/freezable{
+/obj/machinery/door/airlock/glass_external{
 	req_one_access = list(5)
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -11362,7 +11362,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/obj/machinery/door/airlock/glass_external/freezable{
+/obj/machinery/door/airlock/glass_external{
 	req_one_access = list(31)
 	},
 /obj/machinery/door/firedoor/border_only,
@@ -13656,7 +13656,7 @@
 /area/storage/tech)
 "eEs" = (
 /obj/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/glass_external/freezable{
+/obj/machinery/door/airlock/glass_external{
 	req_one_access = list(10)
 	},
 /obj/structure/cable/yellow{
@@ -15092,7 +15092,7 @@
 /area/maintenance/substation/civilian)
 "fqP" = (
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/glass_external/freezable{
+/obj/machinery/door/airlock/glass_external{
 	req_one_access = list(10)
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -19313,7 +19313,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/obj/machinery/door/airlock/glass_external/freezable{
+/obj/machinery/door/airlock/glass_external{
 	req_one_access = list(47);
 	name = "Research Backup Generator"
 	},
@@ -19448,7 +19448,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/door/airlock/glass_external/freezable{
+/obj/machinery/door/airlock/glass_external{
 	req_one_access = list(31)
 	},
 /obj/machinery/door/firedoor/glass,
@@ -20814,7 +20814,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "2-8"
 	},
-/obj/machinery/door/airlock/glass_external/freezable{
+/obj/machinery/door/airlock/glass_external{
 	req_one_access = list(1)
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -21826,7 +21826,7 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/obj/machinery/door/airlock/glass_external/freezable{
+/obj/machinery/door/airlock/glass_external{
 	req_one_access = list(1);
 	name = "Security Backup Generator"
 	},
@@ -22697,7 +22697,7 @@
 /area/hallway/muriki/civup)
 "jsr" = (
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/glass_external/freezable{
+/obj/machinery/door/airlock/glass_external{
 	req_one_access = null
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -23081,7 +23081,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/glass_external/freezable{
+/obj/machinery/door/airlock/glass_external{
 	req_one_access = list(10)
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -25675,7 +25675,7 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/obj/machinery/door/airlock/glass_external/freezable{
+/obj/machinery/door/airlock/glass_external{
 	req_one_access = null;
 	name = "Civilian Backup Generator"
 	},
@@ -26232,7 +26232,7 @@
 /obj/structure/cable/orange{
 	icon_state = "1-2"
 	},
-/obj/machinery/door/airlock/glass_external/freezable{
+/obj/machinery/door/airlock/glass_external{
 	req_one_access = list(11,24,5,10);
 	name = "Vox-Viro Substation"
 	},
@@ -26741,7 +26741,7 @@
 /obj/structure/cable/orange{
 	icon_state = "1-2"
 	},
-/obj/machinery/door/airlock/glass_external/freezable{
+/obj/machinery/door/airlock/glass_external{
 	req_one_access = list(47)
 	},
 /obj/machinery/door/firedoor/glass,
@@ -28521,7 +28521,7 @@
 /obj/structure/cable/orange{
 	icon_state = "4-8"
 	},
-/obj/machinery/door/airlock/glass_external/freezable{
+/obj/machinery/door/airlock/glass_external{
 	req_one_access = null;
 	name = "Roof Access"
 	},
@@ -29278,7 +29278,7 @@
 	},
 /area/mine/unexplored/muriki/mountaintopeast)
 "mLh" = (
-/obj/machinery/door/airlock/glass_external/freezable{
+/obj/machinery/door/airlock/glass_external{
 	req_one_access = list(47)
 	},
 /obj/machinery/door/firedoor/glass,
@@ -29862,7 +29862,7 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/obj/machinery/door/airlock/glass_external/freezable{
+/obj/machinery/door/airlock/glass_external{
 	req_one_access = list(31)
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -37833,7 +37833,7 @@
 /turf/simulated/floor/tiled/milspec,
 /area/medical/hangar)
 "rdm" = (
-/obj/machinery/door/airlock/glass_external/freezable{
+/obj/machinery/door/airlock/glass_external{
 	req_one_access = list(10)
 	},
 /obj/machinery/door/firedoor/border_only,
@@ -38646,7 +38646,7 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/obj/machinery/door/airlock/glass_external/freezable{
+/obj/machinery/door/airlock/glass_external{
 	req_one_access = null
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -39699,7 +39699,7 @@
 /turf/simulated/floor/plating,
 /area/hydroponics/gibber)
 "sbu" = (
-/obj/machinery/door/airlock/glass_external/freezable{
+/obj/machinery/door/airlock/glass_external{
 	req_one_access = list(11,24,5,10);
 	name = "Medical Backup Generator"
 	},
@@ -40984,7 +40984,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/machinery/door/airlock/glass_external/freezable{
+/obj/machinery/door/airlock/glass_external{
 	req_one_access = list(31)
 	},
 /obj/machinery/door/firedoor/border_only,
@@ -41613,7 +41613,7 @@
 /obj/machinery/atmospherics/pipe/simple/visible/blue{
 	dir = 4
 	},
-/obj/machinery/door/airlock/glass_external/freezable{
+/obj/machinery/door/airlock/glass_external{
 	req_one_access = list(12);
 	req_access = list(11)
 	},
@@ -47545,7 +47545,7 @@
 /obj/structure/cable/orange{
 	icon_state = "2-8"
 	},
-/obj/machinery/door/airlock/glass_external/freezable{
+/obj/machinery/door/airlock/glass_external{
 	req_one_access = list(47)
 	},
 /obj/machinery/door/firedoor/glass,
@@ -47629,7 +47629,7 @@
 /area/maintenance/substation/medical)
 "vRv" = (
 /obj/machinery/door/firedoor/border_only,
-/obj/machinery/door/airlock/glass_external/freezable{
+/obj/machinery/door/airlock/glass_external{
 	req_one_access = list(10)
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -48327,7 +48327,7 @@
 /turf/simulated/floor/plating,
 /area/hallway/muriki/civup)
 "wkk" = (
-/obj/machinery/door/airlock/glass_external/freezable{
+/obj/machinery/door/airlock/glass_external{
 	req_one_access = list(10)
 	},
 /obj/machinery/door/firedoor/border_only,
@@ -48958,7 +48958,7 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/obj/machinery/door/airlock/glass_external/freezable{
+/obj/machinery/door/airlock/glass_external{
 	req_one_access = list(31);
 	name = "Cargo Backup Generator"
 	},
@@ -49409,7 +49409,7 @@
 /obj/structure/cable/orange{
 	icon_state = "1-2"
 	},
-/obj/machinery/door/airlock/glass_external/freezable{
+/obj/machinery/door/airlock/glass_external{
 	req_one_access = list(11,24,5,10)
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -49636,7 +49636,7 @@
 	dir = 4
 	},
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/glass_external/freezable{
+/obj/machinery/door/airlock/glass_external{
 	req_one_access = list(10)
 	},
 /turf/simulated/floor/plating,
@@ -49748,7 +49748,7 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/phoronics)
 "wZt" = (
-/obj/machinery/door/airlock/glass_external/freezable{
+/obj/machinery/door/airlock/glass_external{
 	req_one_access = list(1)
 	},
 /obj/machinery/door/firedoor/border_only,
@@ -49801,7 +49801,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/glass_external/freezable{
+/obj/machinery/door/airlock/glass_external{
 	req_one_access = list(10)
 	},
 /turf/simulated/floor/tiled/techfloor,
