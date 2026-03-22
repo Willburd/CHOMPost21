@@ -78,7 +78,7 @@
 	needs_crate = FALSE
 	sale_info = "This can be sold on the cargo shuttle. It's condition and parts would greatly affects its price."
 
-/datum/element/sellable/food_snack/sell_error(obj/source)
+/datum/element/sellable/mecha/sell_error(obj/source)
 	var/obj/mecha/exo = source
 	exo.wreckage = null // Exo sold, remove it's lootpile on qdel, or we'll have issues in cargo....
 	var/check_val = calculate_sell_value(source)
