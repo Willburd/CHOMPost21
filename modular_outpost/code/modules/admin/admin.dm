@@ -1,14 +1,4 @@
-/datum/admins/proc/sendFax()
-	set category = "Fun.Event Kit"
-	set name = "Send Fax"
-	set desc = "Sends a fax to this machine"
-
-	if (!istype(src,/datum/admins))
-		src = usr.client.holder
-	if (!istype(src,/datum/admins))
-		to_chat(usr, "Error: you are not an admin!")
-		return
-
+ADMIN_VERB(sendFax, R_ADMIN|R_MOD|R_EVENT, "Send Fax", "Sends a fax to this machine.", ADMIN_CATEGORY_FUN_EVENT_KIT)
 	var/list/fax_machines = list()
 	for(var/obj/machinery/photocopier/faxmachine/M in GLOB.allfaxes)
 		var/area/A = get_area(M)
