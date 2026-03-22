@@ -8,8 +8,8 @@
 	// Steps that check for a target limb or organ check the machine, if they see it's an autodoc monkey
 	var/obj/machinery/auto_doc/owner_machine
 
-/mob/living/carbon/human/monkey/auto_doc/rad_act(severity)
-	return
+/mob/living/carbon/human/monkey/auto_doc/handle_radiation()
+	return ..()
 
 /mob/living/carbon/human/monkey/auto_doc/handle_disabilities()
 	return
