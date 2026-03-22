@@ -11,10 +11,9 @@ ADMIN_VERB(sendFax, R_ADMIN|R_MOD|R_EVENT, "Send Fax", "Sends a fax to this mach
 			to_chat(usr, "Error: Fax machine ceased to exist!")
 			return
 
-		var/replyorigin = tgui_input_text(src.owner, "Please specify who the fax is coming from", "Origin")
+		var/replyorigin = tgui_input_text(usr, "Please specify who the fax is coming from", "Origin")
 
 		var/obj/item/paper/admin/P = new /obj/item/paper/admin( null ) //hopefully the null loc won't cause trouble for us
-		faxreply = P
 
 		P.admindatum = src
 		P.origin = replyorigin
