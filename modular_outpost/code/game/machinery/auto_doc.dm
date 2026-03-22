@@ -8,9 +8,6 @@
 	// Steps that check for a target limb or organ check the machine, if they see it's an autodoc monkey
 	var/obj/machinery/auto_doc/owner_machine
 
-/mob/living/carbon/human/monkey/auto_doc/handle_radiation()
-	return ..()
-
 /mob/living/carbon/human/monkey/auto_doc/handle_disabilities()
 	return
 
@@ -62,6 +59,7 @@
 	doctor.owner_machine = src
 	doctor.AddElement(/datum/element/godmode)
 	doctor.species.flags &= NO_DNA | NO_HALLUCINATION | NO_PAIN | NO_INFECT // No mutation
+	AddComponent(/datum/component/radiation_effects, radiation_immunity = TRUE, glows = FALSE)
 
 /obj/machinery/auto_doc/proc/create_operations()
 	operations = list()
