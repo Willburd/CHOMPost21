@@ -15,7 +15,7 @@
 		// "foam_dart",
 		"knuckledusters",
 		"tacknife",
-		/* Unbalanced material weapons
+		// Outpost 21 edit begin - We rebalanced these weapons
 		"claymore",
 		"gladius",
 		"katana",
@@ -23,7 +23,7 @@
 		"sabre",
 		"longsword",
 		// "battleaxe", // No wielded sprite
-		*/
+		// Outpost 21 edit end
 	)
 
 // Basic pistol rounds

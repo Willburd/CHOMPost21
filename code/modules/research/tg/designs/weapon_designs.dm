@@ -992,7 +992,7 @@
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE | DEPARTMENT_BITFLAG_SECURITY
 
-/* Unbalanced material weapons
+// Outpost 21 edit begin - We rebalanced these weapons
 /datum/design_techweb/claymore
 	name = "claymore"
 	desc = "A very large sword."
@@ -1091,7 +1091,7 @@
 		RND_CATEGORY_WEAPONS + RND_SUBCATEGORY_WEAPONS_MELEE
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE | DEPARTMENT_BITFLAG_SECURITY
-*/
+// Outpost 21 edit end
 
 /datum/design_techweb/anomaly_gun
 	name = "Handheld Anomalous Particle Releaser"
