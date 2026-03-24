@@ -12542,6 +12542,16 @@
 /obj/item/material/barbedwire/start_active,
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
 /area/mine/explored/muriki/mountaineast)
+"axV" = (
+/obj/machinery/doppler_array,
+/obj/effect/floor_decal/milspec/color/purple/corner{
+	dir = 8
+	},
+/obj/effect/floor_decal/milspec/color/purple/corner{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/rnd/lab)
 "axW" = (
 /obj/structure/boulder,
 /obj/structure/simple_door/wood,
@@ -13658,23 +13668,10 @@
 /area/maintenance/secelev)
 "aAI" = (
 /obj/effect/floor_decal/milspec/color/red/half,
-/obj/machinery/power/apc{
-	name = "south bump";
-	pixel_y = -24
-	},
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/obj/structure/table/rack/gun_rack/steel{
-	pixel_x = 3;
-	pixel_y = -2
-	},
-/obj/machinery/door/window/brigdoor/northleft{
-	req_access = null;
-	req_one_access = list(3);
-	pixel_y = 3
-	},
-/obj/structure/cable/green,
+/obj/machinery/doppler_array,
 /turf/simulated/floor/tiled/milspec,
 /area/security/warden)
 "aAJ" = (
@@ -13729,9 +13726,6 @@
 /obj/structure/cable/green{
 	icon_state = "2-9"
 	},
-/obj/structure/cable/green{
-	icon_state = "2-4"
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 4;
 	icon_state = "pipe-c"
@@ -13756,15 +13750,6 @@
 "aAQ" = (
 /turf/simulated/wall/r_wall,
 /area/muriki/processor/hall)
-"aAR" = (
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/milspec,
-/area/security/warden)
 "aAS" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -13785,15 +13770,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/storage/tools)
-"aAT" = (
-/obj/structure/cable/green{
-	icon_state = "2-8"
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/milspec,
-/area/security/warden)
 "aAU" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -15050,9 +15026,6 @@
 /turf/simulated/floor/plating,
 /area/medical/reception)
 "aEE" = (
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -19652,7 +19625,9 @@
 /area/muriki/tramstation/civ)
 "bkB" = (
 /obj/effect/floor_decal/industrial/warning,
-/obj/machinery/computer/drone_control,
+/obj/machinery/computer/drone_control{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/engineering/drone_fabrication)
 "bkG" = (
@@ -26211,9 +26186,6 @@
 /turf/simulated/floor/wood,
 /area/medical/psych)
 "drr" = (
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -28253,6 +28225,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/warden)
@@ -37022,7 +36997,7 @@
 /obj/effect/floor_decal/milspec/color/red/half{
 	dir = 10
 	},
-/obj/structure/window/reinforced{
+/obj/structure/window/plastitanium{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/dark,
@@ -50741,6 +50716,9 @@
 	dir = 1;
 	pixel_y = -26
 	},
+/obj/structure/cable/green{
+	icon_state = "1-8"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/security/warden)
 "lef" = (
@@ -55964,6 +55942,9 @@
 "mJn" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
+	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/warden)
@@ -64594,7 +64575,9 @@
 /turf/simulated/floor/tiled/freezer,
 /area/muriki/bathroom/securitypub)
 "pFv" = (
-/obj/machinery/computer/drone_control,
+/obj/machinery/computer/drone_control{
+	dir = 1
+	},
 /turf/simulated/floor/plating,
 /area/engineering/drone_fabrication)
 "pFz" = (
@@ -71615,7 +71598,8 @@
 "rTp" = (
 /obj/machinery/computer/security/engineering{
 	name = "Drone Monitoring Cameras";
-	network = list("Engineering")
+	network = list("Engineering");
+	dir = 1
 	},
 /turf/simulated/floor/plating,
 /area/engineering/drone_fabrication)
@@ -71929,6 +71913,15 @@
 	dir = 10
 	},
 /obj/structure/closet/firecloset/full,
+/obj/machinery/power/apc{
+	dir = 8;
+	name = "west bump";
+	pixel_x = -24;
+	nightshift_setting = 2
+	},
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/security/warden)
 "rZw" = (
@@ -134023,7 +134016,7 @@ twe
 aBd
 iqa
 wLi
-aAR
+wLi
 gSP
 aAB
 vmL
@@ -134347,7 +134340,7 @@ ruD
 gSy
 nCh
 iwm
-aAT
+wLi
 aAI
 sQM
 neC
@@ -142406,7 +142399,7 @@ cJR
 wxz
 asF
 pDJ
-aXq
+axV
 aXq
 vgX
 vgX
