@@ -5750,6 +5750,8 @@
 #include "modular_outpost\code\game\objects\items\weapons\tape.dm"
 #include "modular_outpost\code\game\objects\items\weapons\circuitboards\frame.dm"
 #include "modular_outpost\code\game\objects\items\weapons\circuitboards\machinery\medical.dm"
+#include "modular_outpost\code\game\objects\items\weapons\circuitboards\machinery\tutorial.dm"
+#include "modular_outpost\code\game\objects\items\weapons\circuitboards\machinery\vehicle_interior_controller.dm"
 #include "modular_outpost\code\game\objects\items\weapons\grenades\dephase.dm"
 #include "modular_outpost\code\game\objects\items\weapons\grenades\grenade.dm"
 #include "modular_outpost\code\game\objects\items\weapons\grenades\projectile.dm"
