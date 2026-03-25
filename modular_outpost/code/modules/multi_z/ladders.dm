@@ -4,6 +4,7 @@
 	description_info = "alt-click to open and close, it will close automatically if left open."
 	icon = 'modular_outpost/icons/obj/structures.dmi'
 	icon_state = "hatchdown"
+	var/last_opening = 0
 	var/is_open = FALSE
 	var/hatch_timer = null
 	plane = TURF_PLANE
@@ -19,6 +20,7 @@
 	if(hatch_timer)
 		deltimer(hatch_timer)
 	hatch_timer = addtimer(CALLBACK(src, PROC_REF(close_hatch)), 10 SECONDS, TIMER_DELETE_ME|TIMER_STOPPABLE)
+	last_opening = world.time
 
 /obj/structure/ladder/top_hatch/Destroy()
 	hatch_timer = null
@@ -31,6 +33,7 @@
 	flick("hatchdown-close", src)
 	is_open = FALSE
 	update_icon()
+	last_opening = world.time
 
 /obj/structure/ladder/top_hatch/update_icon()
 	if(is_open)
@@ -40,6 +43,8 @@
 
 /obj/structure/ladder/top_hatch/click_alt(mob/user)
 	if(user.is_incorporeal())
+		return
+	if(world.time < (last_opening + 0.8 SECONDS))
 		return
 	if(!is_open)
 		open_hatch()
