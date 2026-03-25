@@ -184,7 +184,7 @@
 		// "airlock_painter",
 		// "decal_painter",
 		// "rwd",
-		// "cable_coil",
+		"cable_coil",
 		"welding_helmet",
 		"welding_tool",
 		"mini_welding_tool",
@@ -211,6 +211,10 @@
 		// "manurouter",
 		// "mailsorter",
 		"automatic_pipe_layer",
+		//CHOMPEdit Start
+		"fluor_light_bulb",
+		"fluor_light_tube",
+		//CHOMPEdit end
 	)
 
 /datum/techweb_node/emerge_power

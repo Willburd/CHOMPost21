@@ -375,7 +375,6 @@
 				soundin = pick(
 					'sound/effects/mech/powerloader_step.ogg',
 					'sound/effects/mech/powerloader_step2.ogg')
-
 			// Outpost 21 edit(port) begin - vehicle crushing
 			if ("vehicle_crush")
 				soundin = pick(
@@ -387,6 +386,10 @@
 					'sound/effects/metal_close.ogg',
 					'sound/effects/meteorimpact.ogg')
 			// Outpost 21 edit end
+			if ("sizzle")
+				soundin = pick(
+					'sound/effects/wounds/sizzle1.ogg',
+					'sound/effects/wounds/sizzle2.ogg')
 	return soundin
 
 

@@ -8,7 +8,7 @@
 	icon_keyboard = "security_key"
 	icon_screen = "cameras"
 	light_color = "#a91515"
-	circuit = /obj/item/circuitboard/security
+	circuit = /obj/item/circuitboard/vehicle_interior_console
 
 	VAR_PRIVATE/list/viewers // Weakrefs to mobs in direct-view mode.
 	var/obj/vehicle/has_interior/controller/interior_controller = null
