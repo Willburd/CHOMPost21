@@ -13782,16 +13782,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/storage/tools)
-"aAT" = (
-/obj/structure/cable/orange{
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/disposalpipe/segment,
-/obj/structure/ladder/top_hatch,
-/turf/simulated/floor/tiled,
-/area/hallway/security/main)
 "aAU" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -47399,7 +47389,6 @@
 	dir = 4;
 	pixel_x = -8
 	},
-/obj/structure/ladder/top_hatch,
 /turf/simulated/floor/wood,
 /area/security/briefing_room)
 "kaU" = (
@@ -48991,6 +48980,7 @@
 	pixel_x = 32
 	},
 /obj/structure/disposalpipe/segment,
+/obj/structure/ladder/top_hatch,
 /turf/simulated/floor/tiled,
 /area/hallway/security/armor)
 "kzL" = (
@@ -130733,7 +130723,7 @@ hmu
 fIR
 hBX
 mry
-aAT
+mry
 ngX
 aub
 vOi

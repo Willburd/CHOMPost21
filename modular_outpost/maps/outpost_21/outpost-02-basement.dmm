@@ -33121,13 +33121,17 @@
 /obj/structure/cliff/corner{
 	dir = 10
 	},
-/turf/simulated/mineral/crystal_shiny/ignore_mapgen/turfpack/muriki,
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
 /area/security/brig_hole)
 "biG" = (
 /obj/structure/cliff{
 	dir = 10
 	},
-/turf/simulated/mineral/crystal_shiny/ignore_mapgen/turfpack/muriki,
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
 /area/security/prison)
 "biH" = (
 /obj/effect/floor_decal/milspec/color/blue/half,
@@ -33506,7 +33510,9 @@
 /obj/structure/cliff{
 	dir = 10
 	},
-/turf/simulated/mineral/crystal_shiny/ignore_mapgen/turfpack/muriki,
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
 /area/security/brig_hole)
 "bjt" = (
 /obj/item/stool/padded{
@@ -34778,7 +34784,9 @@
 /obj/structure/cliff{
 	dir = 8
 	},
-/turf/simulated/mineral/crystal_shiny/ignore_mapgen/turfpack/muriki,
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
 /area/security/brig_hole)
 "blO" = (
 /obj/structure/disposalpipe/segment,
@@ -35979,19 +35987,25 @@
 /obj/structure/cliff/corner{
 	dir = 9
 	},
-/turf/simulated/mineral/crystal_shiny/ignore_mapgen/turfpack/muriki,
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
 /area/security/brig_hole)
 "bnK" = (
 /obj/structure/cliff{
 	dir = 9
 	},
-/turf/simulated/mineral/crystal_shiny/ignore_mapgen/turfpack/muriki,
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
 /area/security/brig_hole)
 "bnL" = (
 /obj/structure/cliff{
 	dir = 5
 	},
-/turf/simulated/mineral/crystal_shiny/ignore_mapgen/turfpack/muriki,
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
 /area/security/brig_hole)
 "bnM" = (
 /obj/machinery/light{
@@ -36006,7 +36020,9 @@
 /obj/structure/cliff/corner{
 	dir = 5
 	},
-/turf/simulated/mineral/crystal_shiny/ignore_mapgen/turfpack/muriki,
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
 /area/security/brig_hole)
 "bnO" = (
 /obj/effect/floor_decal/milspec/color/blue/half{
@@ -36071,6 +36087,7 @@
 /obj/item/radio/intercom/department/security{
 	pixel_y = -21
 	},
+/obj/effect/landmark/redspaceexit,
 /turf/simulated/floor,
 /area/security/riot_control)
 "bnU" = (
@@ -37211,7 +37228,9 @@
 /obj/structure/cliff{
 	dir = 1
 	},
-/turf/simulated/mineral/crystal_shiny/ignore_mapgen/turfpack/muriki,
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
 /area/security/brig_hole)
 "bql" = (
 /turf/simulated/open,
@@ -48002,7 +48021,9 @@
 /obj/structure/cliff{
 	dir = 4
 	},
-/turf/simulated/mineral/crystal_shiny/ignore_mapgen/turfpack/muriki,
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
 /area/security/brig_hole)
 "bJC" = (
 /turf/simulated/wall,
@@ -59424,6 +59445,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
 	},
+/obj/machinery/light/small{
+	dir = 8
+	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/sec)
 "cin" = (
@@ -66329,9 +66353,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
 	},
-/obj/effect/mine/claymore{
-	dir = 4
-	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/sec)
 "czU" = (
@@ -70433,6 +70454,9 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
+/obj/machinery/light/small{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/maintenance/sec)
 "cJn" = (
@@ -70451,36 +70475,6 @@
 /obj/structure/ladder/up,
 /turf/simulated/floor/plating/external/turfpack/muriki,
 /area/maintenance/civ/west)
-"cJq" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 8
-	},
-/obj/machinery/door/airlock/maintenance/sec{
-	name = "Security Maintenance";
-	req_access = list(1,12)
-	},
-/obj/item/airlock_brace,
-/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
-/area/maintenance/sec)
-"cJr" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/door/airlock/maintenance/sec{
-	name = "Security Maintenance";
-	req_access = list(1,12)
-	},
-/obj/item/airlock_brace,
-/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
-/area/maintenance/sec)
 "cJs" = (
 /obj/structure/railing,
 /turf/simulated/floor/outdoors/mud/turfpack/muriki{
@@ -70771,6 +70765,48 @@
 /obj/effect/landmark/redspaceexit,
 /turf/simulated/floor/plating,
 /area/maintenance/research)
+"cKg" = (
+/obj/effect/floor_decal/corner/red{
+	dir = 5
+	},
+/obj/machinery/vending/snack,
+/turf/simulated/floor/tiled/dark,
+/area/security/prison)
+"cKh" = (
+/obj/effect/floor_decal/corner/red/full{
+	dir = 1
+	},
+/obj/machinery/vending/foodmeat,
+/turf/simulated/floor/tiled/dark,
+/area/security/prison)
+"cKi" = (
+/obj/structure/window/maintenance_panel,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/maintenance/sec)
+"cKj" = (
+/obj/random/junk,
+/obj/effect/landmark/redspaceexit,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/sec)
+"cKk" = (
+/obj/effect/landmark/redspaceexit,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/sec)
+"cKl" = (
+/obj/machinery/door/airlock/maintenance/sec{
+	name = "Security Maintenance";
+	req_access = list(1,12)
+	},
+/obj/item/airlock_brace,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/maintenance/sec)
+"cKm" = (
+/obj/structure/bed/chair/comfy/red{
+	dir = 1
+	},
+/obj/effect/landmark/redspaceexit,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/mine/unexplored/muriki/cave/sec)
 "cLg" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -123998,7 +124034,7 @@ aHF
 aHF
 brJ
 cAt
-bls
+cKj
 bqN
 ljs
 btt
@@ -124309,7 +124345,7 @@ mGE
 mGE
 bVK
 bVG
-bVC
+cKm
 bVy
 bVo
 bVo
@@ -127559,7 +127595,7 @@ blR
 bmO
 bnS
 boD
-cJn
+blR
 bqh
 bqU
 brH
@@ -127721,7 +127757,7 @@ blR
 bmP
 bnT
 cJn
-cJn
+blR
 bqi
 bqV
 brI
@@ -127883,7 +127919,7 @@ blR
 cJn
 cJn
 cJn
-cJn
+blR
 cJl
 bqj
 bqj
@@ -128040,7 +128076,7 @@ bhW
 bhW
 bHl
 bhW
-brJ
+bhW
 brJ
 brJ
 brJ
@@ -128202,17 +128238,17 @@ bhW
 bGz
 buL
 bhW
-brJ
-cwj
-bhC
 bhW
-bES
+bls
+bhC
+bhC
 cJo
+cKl
 bhC
+cKk
 bhC
-bhC
-bhW
-btv
+cKi
+cKg
 brI
 cEe
 bva
@@ -128364,17 +128400,17 @@ ceN
 ceG
 bhW
 bGz
-cJr
+bNB
 cim
 bTV
-bhC
-bhC
-brJ
-brJ
-brJ
-bhC
 bhW
-bqi
+brJ
+brJ
+brJ
+brJ
+cwj
+bhW
+cKh
 btt
 cEe
 bqN
@@ -128526,17 +128562,17 @@ bhW
 bUV
 bVr
 buL
-brJ
+bhW
 czX
 czT
-brJ
-brJ
-brJ
-bhc
-brJ
-bJL
 bhW
-bqj
+glX
+glX
+glX
+brJ
+brJ
+brJ
+bqN
 btr
 cEa
 cEd
@@ -128688,16 +128724,16 @@ bhW
 bhW
 bhB
 bhW
-brJ
-brJ
-cJq
-brJ
+bhW
+bhW
+bEi
+bhW
 glX
 glX
 glX
-brJ
-cwj
-brJ
+glX
+glX
+glX
 bqN
 btv
 cEf
@@ -128857,9 +128893,9 @@ bhW
 glX
 glX
 glX
-brJ
-brJ
-brJ
+glX
+glX
+glX
 bqN
 bJI
 bqN
