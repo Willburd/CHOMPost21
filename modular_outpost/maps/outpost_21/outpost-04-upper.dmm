@@ -4616,6 +4616,9 @@
 	pixel_x = -5
 	},
 /obj/structure/table/steel,
+/obj/item/reagent_containers/glass/mortar_pestle{
+	pixel_x = 8
+	},
 /turf/simulated/floor/tiled/turfpack/muriki,
 /area/specialty/expie_clubhouse)
 "ali" = (
