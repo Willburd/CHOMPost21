@@ -1,4 +1,0 @@
-author: "ARGUS"
-delete-after: True
-changes:
-  - bugfix: "Small change to Codex Chef Recipe generation so materials are properly fetched"
