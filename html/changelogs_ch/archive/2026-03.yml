@@ -379,3 +379,19 @@
 2026-03-24:
   Diana:
   - bugfix: SM now gives radiation off while idle/unpowered
+2026-03-25:
+  ARGUS:
+  - bugfix: Small change to Codex Chef Recipe generation so materials are properly
+      fetched
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: NtOS ByteCrawl, An IDLE Hacking Game
+  Will:
+  - balance: chem sprayer does not require protolathe hacking to print
+  - rscadd: Lightpainter is available in the lathes
+  - rscadd: techweb disks can be used to expand autolathe designs
+  - rscadd: Most ammoboxes to the autolathe
+  - code_imp: Circuitboard unit test
+  - bugfix: multiple cryopod types have correct default circuitboard
+  - bugfix: security alert console has the correct default circuitboard
+  - bugfix: refinery filter has the correct default circuitboard
+  - bugfix: pump relay has the correct default circuitboard
