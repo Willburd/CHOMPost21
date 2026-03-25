@@ -18325,11 +18325,6 @@
 "aQK" = (
 /turf/simulated/floor/reinforced/turfpack/muriki,
 /area/shuttle/trawler)
-"aQL" = (
-/obj/structure/disposalpipe/segment,
-/obj/structure/ladder/up,
-/turf/simulated/floor/plating,
-/area/maintenance/security_port)
 "aQM" = (
 /obj/effect/floor_decal/industrial/danger{
 	dir = 1
@@ -18399,6 +18394,23 @@
 /obj/structure/cable/orange,
 /turf/simulated/floor/plating/external/turfpack/muriki,
 /area/muriki/grounds/civ)
+"aQX" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/ladder/top_hatch,
+/turf/simulated/floor/tiled,
+/area/maintenance/disposal)
+"aQY" = (
+/obj/structure/ladder/up,
+/turf/simulated/floor/plating,
+/area/maintenance/cargomid)
 "aQZ" = (
 /turf/simulated/wall/r_wall,
 /area/muriki/grounds/engi)
@@ -72409,6 +72421,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/structure/ladder/top_hatch,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/aft)
 "sdq" = (
@@ -85684,6 +85697,7 @@
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 6
 	},
+/obj/structure/ladder/top_hatch,
 /turf/simulated/floor/tiled,
 /area/medical/surgeryobs)
 "wgM" = (
@@ -88130,6 +88144,7 @@
 	pixel_x = -5;
 	pixel_y = 30
 	},
+/obj/structure/ladder/top_hatch,
 /turf/simulated/floor/tiled/dark,
 /area/rnd/stairwell)
 "wTZ" = (
@@ -90182,7 +90197,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
 	},
-/obj/structure/ladder/top_hatch,
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/otherlab)
 "xCk" = (
@@ -97689,7 +97703,7 @@ cOq
 igC
 aWB
 qXw
-klO
+aQX
 ssw
 tLi
 aQw
@@ -113219,7 +113233,7 @@ uMJ
 fIL
 uMJ
 uMJ
-prJ
+aQY
 esm
 uMJ
 uMJ
@@ -127476,7 +127490,7 @@ gQG
 juN
 liK
 kMq
-aQL
+vZN
 uYp
 aJy
 oWA

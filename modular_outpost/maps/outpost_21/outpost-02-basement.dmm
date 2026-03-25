@@ -38460,6 +38460,10 @@
 /obj/item/geiger/wall/south,
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay2)
+"bsp" = (
+/obj/structure/ladder/up,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/spine/waste)
 "bsq" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
@@ -44690,6 +44694,10 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/sec)
+"bDl" = (
+/obj/structure/ladder/up,
+/turf/simulated/floor/plating,
+/area/maintenance/spine/civ)
 "bDm" = (
 /obj/structure/cable/orange{
 	icon_state = "0-4"
@@ -45583,6 +45591,11 @@
 /obj/machinery/light,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/security/tankstore)
+"bFe" = (
+/obj/random/junk,
+/obj/effect/landmark/redspaceexit,
+/turf/simulated/floor/plating,
+/area/maintenance/spine/civ)
 "bFf" = (
 /obj/structure/grille{
 	desc = "A flimsy lattice of metal rods, with screws to secure it to the floor. This grille seems slightly more sturdy than others probably reinforced to withstand the wildlife.";
@@ -55382,6 +55395,12 @@
 /obj/random/junk,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/med)
+"bYk" = (
+/obj/machinery/door/airlock/maintenance/medical,
+/obj/item/airlock_brace,
+/obj/item/bikehorn,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/maintenance/spine/civ)
 "bYl" = (
 /obj/random/junk,
 /turf/simulated/floor/plating,
@@ -59461,6 +59480,9 @@
 /obj/item/assembly/mousetrap/armed,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/sec)
+"cir" = (
+/turf/simulated/floor/plating,
+/area/maintenance/spine/civ)
 "cis" = (
 /obj/item/assembly/mousetrap/armed,
 /turf/simulated/floor/plating/turfpack/muriki,
@@ -60721,8 +60743,7 @@
 	dir = 1;
 	icon_state = "pipe-c"
 	},
-/obj/random/junk,
-/obj/item/bikehorn,
+/obj/item/trash/namagashi,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/spine/civ)
 "cls" = (
@@ -62525,6 +62546,17 @@
 /obj/item/trash/liquidfood,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/med_refinery)
+"cqh" = (
+/obj/item/assembly/mousetrap/armed,
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/spine/civ)
+"cqi" = (
+/obj/structure/closet/firecloset,
+/turf/simulated/floor/plating,
+/area/maintenance/spine/civ)
 "cqj" = (
 /obj/structure/cable/orange{
 	icon_state = "6-10"
@@ -62836,10 +62868,11 @@
 /turf/simulated/floor/tiled/dark,
 /area/muriki/crew/vr_train)
 "cri" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
 /obj/item/trash/ratfruitcake,
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/spine/civ)
 "crj" = (
@@ -70544,6 +70577,7 @@
 /obj/structure/cable/orange{
 	icon_state = "2-4"
 	},
+/obj/effect/landmark/redspaceexit,
 /turf/simulated/floor/plating,
 /area/maintenance/civ/bunker)
 "cJG" = (
@@ -70674,6 +70708,67 @@
 	dir = 4
 	},
 /obj/random/junk,
+/turf/simulated/floor/plating,
+/area/maintenance/research)
+"cJX" = (
+/obj/random/junk,
+/turf/simulated/floor/plating,
+/area/maintenance/spine/civ)
+"cJY" = (
+/obj/structure/trash_pile,
+/turf/simulated/floor/plating,
+/area/maintenance/spine/civ)
+"cJZ" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/item/trash/tray,
+/obj/effect/landmark/step_trap,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/spine/civ)
+"cKa" = (
+/obj/random/junk,
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/spine/civ)
+"cKb" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/spine/civ)
+"cKc" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/door/airlock/maintenance/medical,
+/turf/simulated/floor/tiled/techfloor,
+/area/maintenance/spine/civ)
+"cKd" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/random/junk,
+/obj/machinery/light/small,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/spine/civ)
+"cKe" = (
+/obj/random/junk,
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/spine/civ)
+"cKf" = (
+/obj/random/junk,
+/obj/effect/landmark/redspaceexit,
 /turf/simulated/floor/plating,
 /area/maintenance/research)
 "cLg" = (
@@ -95078,7 +95173,7 @@ bop
 bwX
 bxX
 bAQ
-kMh
+bsp
 kMh
 aGo
 kMh
@@ -95240,7 +95335,7 @@ bmq
 fYc
 fYc
 dPi
-aIY
+dPi
 kMh
 czK
 czI
@@ -113047,7 +113142,7 @@ hZM
 bly
 pcp
 pge
-bhh
+ckK
 bge
 aQg
 bge
@@ -113209,7 +113304,7 @@ blz
 blz
 bnw
 pge
-ckK
+bhh
 bge
 bjq
 bge
@@ -131154,10 +131249,10 @@ aKP
 aUe
 aPN
 gsI
-aIC
-aIC
-aIC
-aIC
+axL
+axL
+axL
+axL
 aIC
 aIC
 aIC
@@ -131314,12 +131409,12 @@ aPG
 aPG
 aKP
 aKP
-cmI
+cKd
 gsI
-aIC
-aIC
-aIC
-alY
+gsI
+axL
+axL
+aKP
 alY
 alY
 alY
@@ -131477,11 +131572,11 @@ aTp
 aTD
 aKP
 rzl
+cJY
 gsI
-aIC
-aIC
-aIC
-alY
+gsI
+gsI
+gsI
 qMR
 cgx
 cgx
@@ -131639,11 +131734,11 @@ aTq
 aTE
 aKP
 cri
+cKa
+aKP
+cqh
+bDl
 gsI
-aIC
-aIC
-aIC
-alY
 cgx
 cIq
 qMR
@@ -131800,12 +131895,12 @@ aSS
 aTr
 aTF
 aKP
-cmI
+cKe
+cKb
+aKP
+cqi
+bFe
 gsI
-aIC
-aIC
-aIC
-alY
 qMR
 ciF
 qMR
@@ -131963,11 +132058,11 @@ aTs
 wxk
 aKP
 cJA
+aKP
+aKP
+aKP
+bYk
 gsI
-aIC
-aIC
-aIC
-alY
 cgx
 cgB
 cgy
@@ -132125,11 +132220,11 @@ aSU
 czE
 aKP
 rzl
+aKP
+cJY
+cJX
+cir
 gsI
-aKP
-aKP
-aKP
-aKP
 qMR
 cgy
 cgy
@@ -132287,11 +132382,11 @@ aSV
 aTG
 aKP
 eBa
-bJO
-cch
+cKc
+cJZ
 cch
 clr
-aKP
+gsI
 alY
 qMR
 cgx
@@ -132447,13 +132542,13 @@ aSq
 aRJ
 aRJ
 aTH
-gsI
-gsI
-gsI
+aKP
+aKP
+aKP
 aKP
 aKP
 cre
-aKP
+gsI
 aIC
 alY
 alY
@@ -132609,13 +132704,13 @@ aRL
 aRK
 aRK
 aTI
-gsI
+aKP
 bKB
 bKB
 cjk
 aKP
-rzl
-aKP
+bTH
+gsI
 aIC
 aIC
 aIC
@@ -132771,13 +132866,13 @@ lhc
 aRL
 aRL
 aSs
-gsI
+aKP
 bKB
 bKB
 cjk
 aKP
 cmI
-aKP
+gsI
 aIC
 aIC
 aIC
@@ -132933,13 +133028,13 @@ aRL
 aRL
 aRL
 aTJ
+aKP
+bKB
+bKB
 gsI
-bKB
-bKB
-aKP
-aKP
+gsI
 cJx
-aKP
+gsI
 aKP
 aKP
 aKP
@@ -133096,9 +133191,9 @@ aSW
 aSW
 aTK
 gsI
-aKP
+gsI
 bJQ
-aKP
+gsI
 aNG
 bHN
 aPN
@@ -135190,9 +135285,9 @@ ibs
 agP
 cqS
 amq
-amq
-bYM
-amq
+aKP
+bKB
+aKP
 aKP
 aKP
 xST
@@ -135352,10 +135447,10 @@ bLL
 pJf
 xoJ
 bYM
-bZB
-bYM
-amq
+clD
+bKB
 aKP
+cJw
 bsg
 clA
 bQZ
@@ -135514,9 +135609,9 @@ ebe
 lbn
 xoJ
 amq
-amq
-amq
-amq
+aKP
+aKP
+aKP
 aKP
 bYq
 aKP
@@ -137126,7 +137221,7 @@ agP
 cJW
 bZo
 bZo
-bZA
+cKf
 bZF
 agP
 ahC
@@ -139384,7 +139479,7 @@ xDz
 agc
 qEz
 aBh
-agc
+gTh
 apw
 upO
 akX
@@ -141338,7 +141433,7 @@ aqJ
 apw
 bDc
 agP
-agP
+ahC
 ahC
 ahC
 ahC
@@ -141499,8 +141594,8 @@ mac
 aBa
 aCn
 cJV
-cJS
 agP
+ahC
 ahC
 ahC
 ahC

@@ -5008,13 +5008,6 @@
 	icon_state = "rock_grey"
 	},
 /area/mine/unexplored/muriki/mountaintop_pathway)
-"amf" = (
-/obj/effect/floor_decal/milspec/color/red/half{
-	dir = 1
-	},
-/obj/structure/ladder/top_hatch,
-/turf/simulated/floor/tiled/milspec,
-/area/security/range)
 "amg" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 4
@@ -18657,7 +18650,6 @@
 	name = "Cargo Dinger";
 	pixel_x = -30
 	},
-/obj/effect/landmark/holiday_event_spawn,
 /turf/simulated/floor/tiled,
 /area/quartermaster/cargupbreak)
 "hkh" = (
@@ -37453,11 +37445,11 @@
 /obj/effect/floor_decal/corner/brown{
 	dir = 9
 	},
-/obj/effect/landmark/holiday_event_spawn,
 /obj/machinery/camera/network/cargo{
 	c_tag = "CRG - Upper Break West";
 	dir = 4
 	},
+/obj/structure/ladder/top_hatch,
 /turf/simulated/floor/tiled,
 /area/quartermaster/cargupbreak)
 "qPv" = (
@@ -45834,6 +45826,7 @@
 	name = "Station Intercom (General)";
 	pixel_x = -21
 	},
+/obj/effect/landmark/holiday_event_spawn,
 /turf/simulated/floor/tiled,
 /area/quartermaster/cargupbreak)
 "uRf" = (
@@ -87525,7 +87518,7 @@ aCm
 jUJ
 goV
 sXj
-amf
+dJW
 kIO
 kIO
 aqN
