@@ -43306,18 +43306,6 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/spine/waste)
-"bAp" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 8
-	},
-/obj/machinery/door/airlock/maintenance/rnd{
-	name = "Science Maintenance"
-	},
-/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
-/area/maintenance/research)
 "bAq" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/door/airlock/maintenance/common,
@@ -70462,19 +70450,21 @@
 "cJn" = (
 /turf/simulated/wall,
 /area/security/riot_control)
-"cJo" = (
-/obj/machinery/door/blast/regular/open{
-	id = "security_lockdown";
-	name = "Security Lockdown Shutters";
-	dir = 2
-	},
-/obj/effect/floor_decal/milspec/hatchmarks,
-/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
-/area/maintenance/sec)
 "cJp" = (
 /obj/structure/ladder/up,
 /turf/simulated/floor/plating/external/turfpack/muriki,
 /area/maintenance/civ/west)
+"cJq" = (
+/obj/random/junk,
+/obj/structure/railing{
+	dir = 4
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/sec)
+"cJr" = (
+/obj/structure/catwalk,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/sec)
 "cJs" = (
 /obj/structure/railing,
 /turf/simulated/floor/outdoors/mud/turfpack/muriki{
@@ -70701,7 +70691,7 @@
 /obj/machinery/light/small{
 	dir = 4
 	},
-/obj/random/junk,
+/obj/effect/recycler_vendor_beacon,
 /turf/simulated/floor/plating,
 /area/maintenance/research)
 "cJX" = (
@@ -70781,15 +70771,18 @@
 /area/security/prison)
 "cKi" = (
 /obj/structure/window/maintenance_panel,
+/obj/effect/landmark/redspaceexit,
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/maintenance/sec)
+/area/security/prison)
 "cKj" = (
 /obj/random/junk,
 /obj/effect/landmark/redspaceexit,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/sec)
 "cKk" = (
-/obj/effect/landmark/redspaceexit,
+/obj/structure/railing{
+	dir = 1
+	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/sec)
 "cKl" = (
@@ -70807,6 +70800,109 @@
 /obj/effect/landmark/redspaceexit,
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/mine/unexplored/muriki/cave/sec)
+"cKn" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/structure/trash_pile/disable_mouse_spawn,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/sec)
+"cKo" = (
+/obj/structure/ladder/up,
+/obj/structure/catwalk,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/sec)
+"cKp" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/effect/recycler_vendor_beacon,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/sec)
+"cKq" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/structure/railing{
+	dir = 1
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/sec)
+"cKr" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/structure/catwalk,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/sec)
+"cKs" = (
+/obj/structure/catwalk,
+/obj/random/junk,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/sec)
+"cKt" = (
+/obj/machinery/door/airlock/maintenance/sec{
+	name = "Security Maintenance";
+	req_access = list(1,12)
+	},
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/maintenance/sec)
+"cKu" = (
+/obj/effect/floor_decal/milspec/hatchmarks,
+/obj/machinery/door/blast/regular/open{
+	id = "security_lockdown";
+	name = "Security Lockdown Shutters";
+	dir = 2
+	},
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/maintenance/sec)
+"cKv" = (
+/obj/effect/recycler_beacon,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/mine/unexplored/muriki/cave/sec)
+"cKw" = (
+/obj/effect/recycler_vendor_beacon,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/mine/unexplored/muriki/cave/sec)
+"cKx" = (
+/obj/effect/recycler_vendor_beacon,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/maintenance/cargo)
+"cKy" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/structure/trash_pile,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/research)
+"cKz" = (
+/obj/random/junk,
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/research)
+"cKA" = (
+/obj/structure/catwalk,
+/obj/effect/recycler_vendor_beacon,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/research)
+"cKB" = (
+/obj/structure/catwalk,
+/obj/effect/landmark/redspaceexit,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/research)
+"cKC" = (
+/obj/structure/ladder/up,
+/obj/structure/catwalk,
+/obj/structure/micro_tunnel{
+	pixel_y = -32
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/research)
 "cLg" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -113971,7 +114067,7 @@ bge
 cfF
 cfs
 cfs
-cfs
+cKx
 bge
 bpz
 ayQ
@@ -123860,7 +123956,7 @@ fBh
 bVK
 bVy
 bVy
-bVy
+cKv
 bVo
 rPd
 rPd
@@ -124508,7 +124604,7 @@ mGE
 bVK
 bVy
 bVy
-bVy
+cKw
 bVo
 rPd
 bhW
@@ -128076,16 +128172,16 @@ bhW
 bhW
 bHl
 bhW
-bhW
-brJ
-brJ
-brJ
-brJ
+bhc
+bhc
+bhc
+bhc
+bhc
 brJ
 cJm
 cBh
 buX
-bhW
+bqj
 cEg
 bts
 bux
@@ -128239,12 +128335,12 @@ bGz
 buL
 bhW
 bhW
-bls
-bhC
-bhC
-cJo
-cKl
-bhC
+bhW
+bhW
+bhW
+brJ
+brJ
+cJr
 cKk
 bhC
 cKi
@@ -128403,13 +128499,13 @@ bGz
 bNB
 cim
 bTV
-bhW
-brJ
-brJ
-brJ
-brJ
+bhC
+cKl
+cKu
+cKs
+cKp
 cwj
-bhW
+bqj
 cKh
 btt
 cEe
@@ -128566,13 +128662,13 @@ bhW
 czX
 czT
 bhW
-glX
-glX
-glX
 brJ
 brJ
-brJ
-bqN
+cKt
+bhW
+bhW
+bqj
+bqj
 btr
 cEa
 cEd
@@ -128728,13 +128824,13 @@ bhW
 bhW
 bEi
 bhW
-glX
-glX
-glX
-glX
-glX
-glX
-bqN
+bhc
+brJ
+cJr
+cKq
+cKn
+cJq
+bqj
 btv
 cEf
 cEd
@@ -128890,12 +128986,12 @@ aDq
 bhW
 bVb
 bhW
-glX
-glX
-glX
-glX
-glX
-glX
+bhc
+brJ
+cKs
+cKr
+cKo
+cJr
 bqN
 bJI
 bqN
@@ -129052,15 +129148,15 @@ bhW
 bhW
 bUk
 bhW
-glX
-glX
-glX
-glX
-glX
-glX
-bhW
+bhc
+brJ
+brJ
+brJ
+brJ
+brJ
+brJ
 bJK
-bhW
+brJ
 glX
 rPd
 rPd
@@ -129214,12 +129310,12 @@ bhW
 bhW
 bEi
 bhW
-glX
-glX
-glX
-glX
-glX
-glX
+bhc
+bhc
+bhc
+bhc
+bhc
+bhc
 bhW
 bJK
 bhW
@@ -129376,12 +129472,12 @@ bhB
 cjA
 bLH
 bhW
-glX
-glX
-glX
-glX
-glX
-glX
+bhc
+bhc
+bhc
+bhc
+bhc
+bhc
 bhW
 bLh
 bhW
@@ -129539,11 +129635,11 @@ ccY
 bhW
 bhW
 bhW
-glX
-glX
-glX
-glX
-glX
+bhc
+bhc
+bhc
+bhc
+bhc
 bhW
 bhB
 bhW
@@ -129703,9 +129799,9 @@ ced
 bhW
 bhW
 bhW
-glX
-glX
-glX
+bhc
+bhc
+bhc
 bhW
 cvz
 bhW
@@ -129865,9 +129961,9 @@ bhC
 bhC
 cdT
 bhW
-glX
-glX
-glX
+bhc
+bhc
+bhc
 bhW
 bBC
 bhW
@@ -140820,7 +140916,7 @@ krP
 jpW
 apw
 amq
-bAp
+bDc
 agP
 ahC
 ahC
@@ -141146,8 +141242,8 @@ apw
 bDc
 agP
 agP
-ahC
-ahC
+agP
+agP
 ahC
 amq
 bzB
@@ -141307,9 +141403,9 @@ aAZ
 apw
 bZa
 agP
-ahC
-ahC
-ahC
+cKA
+cKy
+agP
 ahC
 amq
 chs
@@ -141469,9 +141565,9 @@ aqJ
 apw
 bDc
 agP
-ahC
-ahC
-ahC
+cKB
+cKz
+agP
 ahC
 amq
 bYO
@@ -141631,9 +141727,9 @@ aBa
 aCn
 cJV
 agP
-ahC
-ahC
-ahC
+cKC
+agP
+agP
 ahC
 amq
 agP

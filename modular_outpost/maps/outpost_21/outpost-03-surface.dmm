@@ -13782,6 +13782,10 @@
 	},
 /turf/simulated/floor/tiled,
 /area/storage/tools)
+"aAT" = (
+/obj/structure/ladder/top_hatch,
+/turf/simulated/floor/tiled/milspec,
+/area/rnd/otherlab)
 "aAU" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -42333,6 +42337,7 @@
 /obj/structure/bed/chair/bay/comfy/black{
 	dir = 4
 	},
+/obj/structure/ladder/top_hatch,
 /turf/simulated/floor/wood,
 /area/security/briefing_room)
 "izW" = (
@@ -144115,7 +144120,7 @@ dzB
 ipj
 rIY
 xCj
-ipj
+aAT
 cmk
 mgW
 jqu
