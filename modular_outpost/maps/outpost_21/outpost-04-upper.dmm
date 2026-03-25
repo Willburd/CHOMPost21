@@ -5008,6 +5008,22 @@
 	icon_state = "rock_grey"
 	},
 /area/mine/unexplored/muriki/mountaintop_pathway)
+"amf" = (
+/obj/effect/floor_decal/milspec/color/red/half{
+	dir = 1
+	},
+/obj/structure/ladder/top_hatch,
+/turf/simulated/floor/tiled/milspec,
+/area/security/range)
+"amg" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 4
+	},
+/obj/structure/table/woodentable,
+/obj/item/flashlight/lamp/green,
+/obj/item/flashlight/glowstick,
+/turf/simulated/floor/wood,
+/area/library_conference_room)
 "amE" = (
 /obj/machinery/computer/crew{
 	dir = 1
@@ -7902,7 +7918,7 @@
 /turf/simulated/floor/wood,
 /area/djstation)
 "bJm" = (
-/obj/structure/ladder,
+/obj/structure/ladder/top_hatch,
 /turf/simulated/floor/plating/external/turfpack/muriki{
 	outdoors = 0
 	},
@@ -14675,12 +14691,10 @@
 /turf/simulated/floor/tiled/monotile,
 /area/quartermaster/cargrecycle)
 "faj" = (
-/obj/structure/table/woodentable,
-/obj/item/flashlight/lamp/green,
-/obj/item/flashlight/glowstick,
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 8
 	},
+/obj/structure/ladder/top_hatch,
 /turf/simulated/floor/wood,
 /area/library_conference_room)
 "fao" = (
@@ -18665,10 +18679,10 @@
 /turf/simulated/floor/tiled,
 /area/security/vacantoffice)
 "hkB" = (
-/obj/structure/ladder,
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 8
 	},
+/obj/structure/ladder/top_hatch,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/substation/mining)
 "hkE" = (
@@ -22256,7 +22270,7 @@
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/rnd/chemistry)
 "jcg" = (
-/obj/structure/ladder,
+/obj/structure/ladder/top_hatch,
 /turf/simulated/floor/tiled/dark/turfpack/muriki,
 /area/chapel/main)
 "jch" = (
@@ -23790,7 +23804,7 @@
 /turf/simulated/floor/tiled/hydro,
 /area/hydroponics/hallway)
 "jOo" = (
-/obj/structure/ladder,
+/obj/structure/ladder/top_hatch,
 /turf/simulated/floor/plating/external/turfpack/muriki{
 	outdoors = 0
 	},
@@ -26628,6 +26642,7 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
+/obj/structure/ladder/top_hatch,
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/upper)
 "llh" = (
@@ -36932,6 +36947,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
+/obj/structure/ladder/top_hatch,
 /turf/simulated/floor/tiled/white,
 /area/medical/resleeving)
 "qBC" = (
@@ -87509,7 +87525,7 @@ aCm
 jUJ
 goV
 sXj
-dJW
+amf
 kIO
 kIO
 aqN
@@ -104495,7 +104511,7 @@ vbb
 qgV
 tBY
 tBY
-tBY
+amg
 cFW
 exW
 aCn

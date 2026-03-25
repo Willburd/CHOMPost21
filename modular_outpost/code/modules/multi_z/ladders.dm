@@ -92,7 +92,6 @@
 	if(target_up)
 		return
 	var/turf/ladder_turf = get_turf(src)
-	var/obj/structure/ladder/lower_ladder = target_down
 	target_down.target_up = null // Clear it for connection when the new hatch is created
 	target_down = null // clear it before Destroy() runs so it doesn't deconstruct the lower ladder
 	qdel(src)
