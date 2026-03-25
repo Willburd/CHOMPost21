@@ -6673,14 +6673,11 @@
 "amp" = (
 /obj/effect/floor_decal/borderfloor/corner,
 /obj/effect/floor_decal/corner/orange/bordercorner,
-/obj/structure/cable/green{
-	icon_state = "4-8"
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
 	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
-	dir = 1
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
-	dir = 1
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/trammaint)
@@ -6713,9 +6710,6 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
-	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/trammaint)
@@ -12382,9 +12376,6 @@
 /obj/structure/window/reinforced/tinted,
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/scilower)
-"awa" = (
-/turf/simulated/wall/r_wall,
-/area/quartermaster/mining/ore_silo)
 "awb" = (
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating/turfpack/muriki,
@@ -42276,9 +42267,6 @@
 /obj/machinery/power/thermoregulator/cryogaia{
 	pixel_x = 32
 	},
-/obj/structure/cable/green{
-	icon_state = "0-2"
-	},
 /turf/simulated/floor/tiled,
 /area/engineering/trammaint)
 "bzo" = (
@@ -43263,9 +43251,6 @@
 	dir = 8;
 	pixel_x = 30;
 	pixel_y = -7
-	},
-/obj/structure/cable/green{
-	icon_state = "1-8"
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/trammaint)
@@ -47178,136 +47163,29 @@
 	temperature = 80
 	},
 /area/server)
-"bJf" = (
-/obj/machinery/firealarm{
-	dir = 1;
-	pixel_y = -26
-	},
-/obj/machinery/power/apc{
-	dir = 8;
-	name = "west bump";
-	pixel_x = -24
-	},
-/obj/structure/cable/green{
-	icon_state = "0-4"
-	},
-/obj/effect/floor_decal/corner/white/full,
-/turf/simulated/floor/tiled/milspec,
-/area/quartermaster/mining/ore_silo)
-"bJg" = (
-/obj/item/radio/intercom{
-	name = "Station Intercom (General)";
-	pixel_y = -21
-	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/obj/effect/floor_decal/corner/white{
+"bJj" = (
+/obj/effect/floor_decal/borderfloor{
 	dir = 10
 	},
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 4
+/obj/effect/floor_decal/corner/orange/border{
+	dir = 10
 	},
-/turf/simulated/floor/tiled/milspec,
-/area/quartermaster/mining/ore_silo)
-"bJh" = (
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/obj/structure/extinguisher_cabinet{
-	pixel_x = 5;
-	pixel_y = -32;
-	dir = 1
-	},
-/obj/machinery/light_switch{
-	dir = 8;
-	pixel_x = 28;
-	pixel_y = 25
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 5
-	},
-/turf/simulated/floor/tiled/milspec,
-/area/quartermaster/mining/ore_silo)
-"bJi" = (
-/obj/machinery/door/airlock/command{
-	name = "OreSilo";
-	req_one_access = list(19,41)
-	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
-	},
-/obj/item/airlock_brace,
-/turf/simulated/floor/tiled/steel_grid,
-/area/quartermaster/mining/ore_silo)
-"bJj" = (
-/obj/effect/floor_decal/borderfloor,
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/obj/effect/floor_decal/corner/white/border,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+/obj/machinery/vending/fooddessert{
+	dir = 4;
+	pixel_x = -8
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/trammaint)
-"bJk" = (
-/obj/machinery/ore_silo,
-/obj/effect/floor_decal/corner/white{
-	dir = 9
-	},
-/obj/effect/floor_decal/corner/white{
-	dir = 6
-	},
-/turf/simulated/floor/tiled/milspec,
-/area/quartermaster/mining/ore_silo)
-"bJl" = (
-/obj/machinery/light{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/white{
-	dir = 5
-	},
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 4
-	},
-/obj/machinery/hologram/holopad,
-/turf/simulated/floor/tiled/milspec,
-/area/quartermaster/mining/ore_silo)
-"bJm" = (
-/obj/machinery/alarm{
-	pixel_y = 26
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 10
-	},
-/obj/effect/floor_decal/corner/white/full{
-	dir = 1
-	},
-/obj/machinery/camera/network/command{
-	c_tag = "COM - Ore Silo";
-	dir = 8
-	},
-/turf/simulated/floor/tiled/milspec,
-/area/quartermaster/mining/ore_silo)
 "bJn" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 9
 	},
-/obj/effect/floor_decal/corner/white/border{
+/obj/effect/floor_decal/corner/orange/border{
 	dir = 9
+	},
+/obj/machinery/vending/foodmeat{
+	dir = 4;
+	pixel_x = -8
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/trammaint)
@@ -86782,9 +86660,6 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
 /turf/simulated/floor/tiled,
 /area/engineering/trammaint)
 "uDz" = (
@@ -88729,24 +88604,6 @@
 	name = "reinforced floor"
 	},
 /area/maintenance/incinerator)
-"wNI" = (
-/obj/effect/floor_decal/borderfloor/corner{
-	dir = 8
-	},
-/obj/effect/floor_decal/corner/orange/bordercorner{
-	dir = 8
-	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
-	},
-/turf/simulated/floor/tiled,
-/area/engineering/trammaint)
 "wNT" = (
 /obj/effect/floor_decal/eshui/emblem/eshui_r,
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -90560,10 +90417,10 @@ cfv
 cfv
 cfv
 cfv
-awa
-awa
-awa
-awa
+cfv
+cfv
+cfv
+cfv
 cfv
 cfv
 cfv
@@ -90722,10 +90579,10 @@ cfv
 cfv
 cfv
 cfv
-awa
-bJk
-bJf
-awa
+cfv
+cfv
+cfv
+cfv
 cfv
 cfv
 cfv
@@ -90884,10 +90741,10 @@ cfv
 cfv
 cfv
 cfv
-awa
-bJl
-bJg
-awa
+cfv
+cfv
+cfv
+cfv
 cfv
 cfv
 cfv
@@ -91046,10 +90903,10 @@ bmq
 bmq
 bmq
 cfv
-awa
-bJm
-bJh
-awa
+cfv
+cfv
+cfv
+cfv
 bCY
 bCY
 bCY
@@ -91208,10 +91065,10 @@ aIl
 bxA
 bmq
 cfv
-awa
-awa
-bJi
-awa
+bmq
+bmq
+bmq
+bCY
 bCY
 tBC
 csF
@@ -91534,7 +91391,7 @@ bmq
 bzk
 bwX
 nmX
-wNI
+bxJ
 bBr
 rsk
 nld
