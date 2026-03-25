@@ -5961,7 +5961,7 @@
 #include "modular_outpost\code\modules\research\designs\weapon_designs.dm"
 #include "modular_outpost\code\modules\research\designs\weapons.dm"
 #include "modular_outpost\code\modules\research\designs\weapons_yw.dm"
-#include "modular_outpost\code\modules\research\designs\experisci\experiment\misc.dm"
+#include "modular_outpost\code\modules\research\experiments\destructive\advanced_material_studies.dm"
 #include "modular_outpost\code\modules\research\techwebs\techweb_types.dm"
 #include "modular_outpost\code\modules\research\techwebs\nodes\engi_nodes.dm"
 #include "modular_outpost\code\modules\research\techwebs\nodes\security_nodes.dm"
