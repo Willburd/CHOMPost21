@@ -125,6 +125,11 @@
 	if(incapacitated())
 		to_chat(src, span_warning("You are physically unable to climb \the [ladder]."))
 		return FALSE
+	// Outpost 21 edit begin - Hatch ladder
+	if(istype(ladder, /obj/structure/ladder/top_hatch))
+		var/obj/structure/ladder/top_hatch/hatch = ladder
+		return hatch.is_open
+	// Outpost 21 edit end
 	return TRUE
 
 /mob/observer/dead/may_climb_ladders(var/ladder)
@@ -135,6 +140,12 @@
 	M.visible_message(span_infoplain(span_bold("\The [M]") + " begins climbing [direction] \the [src]!"),
 		span_info("You begin climbing [direction] \the [src]!"),
 		span_info("You hear the grunting and clanging of a metal ladder being used."))
+
+	// Outpost 21 edit begin - Hatch ladder
+	if(istype(target_ladder, /obj/structure/ladder/top_hatch))
+		var/obj/structure/ladder/top_hatch/hatch = target_ladder
+		hatch.open_hatch() // force open it
+	// Outpost 21 edit end
 
 	target_ladder.audible_message(span_notice("You hear something coming [direction] \the [src]"), runemessage = "clank clank")
 
