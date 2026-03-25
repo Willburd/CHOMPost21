@@ -87,6 +87,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/structure/ladder/top_hatch,
 /turf/simulated/floor/tiled,
 /area/security/detectives_office)
 "aaj" = (
@@ -8925,6 +8926,7 @@
 	dir = 4
 	},
 /obj/effect/landmark/start/engineer,
+/obj/structure/ladder/top_hatch,
 /turf/simulated/floor/tiled,
 /area/engineering/corepower)
 "aoQ" = (
@@ -11831,6 +11833,7 @@
 /obj/effect/floor_decal/corner/red{
 	dir = 6
 	},
+/obj/structure/ladder/top_hatch,
 /turf/simulated/floor/tiled/old_tile/white,
 /area/security/security_equiptment_storage)
 "avU" = (
@@ -13683,6 +13686,10 @@
 /obj/effect/floor_decal/milspec/color/red/half,
 /turf/simulated/floor/tiled/dark,
 /area/security/warden)
+"aAK" = (
+/obj/structure/ladder/top_hatch,
+/turf/simulated/floor/reinforced,
+/area/muriki/tramstation/waste)
 "aAL" = (
 /obj/machinery/computer/security{
 	dir = 1;
@@ -18368,6 +18375,7 @@
 /area/rnd/hallway/main)
 "aQU" = (
 /obj/structure/ladder/up,
+/obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/plating,
 /area/maintenance/medbay_aft)
 "aQV" = (
@@ -18457,6 +18465,37 @@
 	},
 /turf/simulated/floor/tiled,
 /area/security/brig/observation)
+"aRe" = (
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/ladder/top_hatch,
+/turf/simulated/floor/tiled,
+/area/quartermaster/office)
+"aRf" = (
+/obj/structure/ladder/top_hatch,
+/turf/simulated/floor/tiled/dark,
+/area/hallway/secondary/exit)
+"aRg" = (
+/obj/structure/ladder/top_hatch,
+/turf/simulated/floor/reinforced,
+/area/muriki/tramstation/civ)
+"aRh" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/blue/border{
+	dir = 4
+	},
+/obj/structure/ladder/top_hatch,
+/turf/simulated/floor/tiled/steel,
+/area/hallway/primary/central_three)
+"aRi" = (
+/obj/structure/ladder/up,
+/turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
+/area/mine/explored/muriki/mountainnorth)
 "aRq" = (
 /obj/machinery/body_scanconsole,
 /turf/simulated/floor/tiled/old_cargo,
@@ -26611,6 +26650,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/structure/ladder/top_hatch,
 /turf/simulated/floor/wood,
 /area/security/briefing_room)
 "dwQ" = (
@@ -29842,6 +29882,7 @@
 /area/engineering/engine_room)
 "eBq" = (
 /obj/structure/ladder/updown,
+/obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/plating,
 /area/maintenance/scielev)
 "eBw" = (
@@ -31520,6 +31561,7 @@
 /turf/simulated/open,
 /area/muriki/crewstairwell)
 "fdp" = (
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled,
 /area/engineering/eva)
 "fdw" = (
@@ -41036,6 +41078,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/structure/ladder/top_hatch,
 /turf/simulated/floor/tiled,
 /area/hallway/security/main)
 "ifz" = (
@@ -45152,6 +45195,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
 	},
+/obj/structure/ladder/top_hatch,
 /turf/simulated/floor/tiled/old_tile/white,
 /area/security/security_aid_station)
 "jtp" = (
@@ -57110,13 +57154,13 @@
 /turf/simulated/floor/tiled,
 /area/hallway/security/main)
 "ndG" = (
-/obj/machinery/hologram/holopad,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
 	},
+/obj/structure/ladder/top_hatch,
 /turf/simulated/floor/tiled,
 /area/engineering/eva)
 "ndQ" = (
@@ -69230,6 +69274,7 @@
 	dir = 4
 	},
 /obj/structure/ladder/up,
+/obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/plating,
 /area/maintenance/scielev)
 "rdE" = (
@@ -83445,6 +83490,7 @@
 	dir = 4
 	},
 /obj/structure/ladder/up,
+/obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/plating,
 /area/muriki/crewstairwell)
 "vCf" = (
@@ -93304,7 +93350,7 @@ wUG
 cOq
 cOq
 cOq
-cOq
+aAK
 cOq
 wUG
 cOq
@@ -98487,7 +98533,7 @@ mWW
 fhe
 cOq
 cOq
-cOq
+aAK
 cOq
 cOq
 wUG
@@ -113869,7 +113915,7 @@ scA
 qqV
 oGN
 bdF
-cox
+aRe
 cox
 xYB
 vvI
@@ -137016,7 +137062,7 @@ vfy
 qsS
 qPZ
 qpL
-qPZ
+aRg
 qsS
 vfy
 qsS
@@ -137985,13 +138031,13 @@ vpz
 brH
 rtj
 ggo
-ggo
+aRf
 ggo
 jEo
 ggo
 ggo
 ggo
-ggo
+aRf
 jMg
 jjI
 ugo
@@ -142459,7 +142505,7 @@ aiP
 aiP
 aKW
 aKW
-aKW
+aRi
 aLE
 aKW
 aKW
@@ -143794,7 +143840,7 @@ tFF
 pGH
 fGB
 agy
-rOa
+aRh
 rOa
 wGo
 hdD
