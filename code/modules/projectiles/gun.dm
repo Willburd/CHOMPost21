@@ -145,7 +145,7 @@
 		verbs -= /obj/item/gun/verb/allow_dna
 
 	// Outpost 21 edit(port) begin - Apply custom firemodes if firemode is not default
-	if(sel_mode > 1 && sel_mode <= firemodes.len)
+	if(length(firemodes) && sel_mode <= firemodes.len)
 		var/datum/firemode/new_mode = firemodes[sel_mode]
 		new_mode.apply_to(src)
 	// Outpost 21 edit end
