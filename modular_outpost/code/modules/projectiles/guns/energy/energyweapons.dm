@@ -5,7 +5,7 @@
 	icon_state = "n71ex100"
 	item_state = null	//so the human update icon uses the icon_state instead.
 	fire_sound = 'sound/weapons/Laser.ogg'
-	charge_cost = 240
+	charge_cost = 12 // 200 shots base
 	force = 8
 	w_class = ITEMSIZE_HUGE
 	fire_delay = 6
