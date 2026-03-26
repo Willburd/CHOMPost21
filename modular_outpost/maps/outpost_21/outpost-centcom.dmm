@@ -6170,9 +6170,6 @@
 /obj/effect/floor_decal/industrial/outline/red,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/centcom/specops)
-"aob" = (
-/turf/unsimulated/mineral/muriki/basalt,
-/area/centcom/specops)
 "aok" = (
 /obj/structure/grille,
 /obj/machinery/door/firedoor/border_only,
@@ -63266,15 +63263,15 @@ uho
 uho
 uho
 uho
-aob
+uho
 hPE
 hPE
-aaQ
-aaQ
-aaQ
-aaQ
-aaQ
-aaQ
+hPE
+hPE
+hPE
+hPE
+hPE
+hPE
 hPE
 iQm
 fPz
@@ -63428,7 +63425,7 @@ uho
 uho
 uho
 uho
-aob
+uho
 hPE
 apP
 xRQ
@@ -63590,7 +63587,7 @@ uho
 uho
 uho
 uho
-aob
+uho
 hPE
 eXc
 hsz
@@ -63752,7 +63749,7 @@ uho
 uho
 uho
 uho
-aob
+uho
 hPE
 eXc
 hsz
@@ -63914,7 +63911,7 @@ uho
 uho
 uho
 uho
-aob
+uho
 hPE
 yfK
 oxi
@@ -65048,7 +65045,7 @@ uho
 uho
 uho
 uho
-aaK
+hPE
 dHx
 abN
 abw
@@ -65210,7 +65207,7 @@ uho
 uho
 uho
 uho
-aaK
+hPE
 dHx
 yid
 abL
@@ -65372,7 +65369,7 @@ uho
 uho
 uho
 uho
-aaK
+hPE
 dHx
 hsz
 hsz
@@ -65534,7 +65531,7 @@ uho
 uho
 uho
 uho
-aaK
+hPE
 dNu
 ejm
 abx
@@ -65696,7 +65693,7 @@ uho
 uho
 uho
 uho
-aaK
+hPE
 hPE
 hPE
 hPE
