@@ -383,6 +383,7 @@
 	vessel_size = SHIP_SIZE_LARGE
 	shuttle = "Interferon"
 	known = TRUE // we own this lol
+	fore_dir = EAST
 
 /obj/machinery/computer/shuttle_control/explore/specialops_overmap
 	name = "short jump console"
@@ -403,11 +404,23 @@
 	shuttle_area = list(/area/shuttle/specialops_overmap)
 	ceiling_type = /turf/simulated/shuttle/floor/black/turfpack/muriki
 
-/obj/effect/shuttle_landmark/premade/medical/specialops_overmap
+/obj/effect/shuttle_landmark/premade/specialops_overmap
 	name = "Interferon Hanger"
 	landmark_tag = "interferon_hangar"
 	base_turf = /turf/space
 	base_area = /area/space
+
+/obj/effect/shuttle_landmark/premade/specialops_overmap/airdrop_muriki
+	name = "Outpost 21 Airdrop Central"
+	landmark_tag = "interferon_airdrop_muriki_central"
+	base_turf = /turf/simulated/open/muriki
+	base_area = /area/muriki/skyline/cent
+
+/obj/effect/shuttle_landmark/premade/specialops_overmap/airdrop_muriki_alt
+	name = "Outpost 21 Airdrop South East"
+	landmark_tag = "interferon_airdrop_muriki_southeast"
+	base_turf = /turf/simulated/open/muriki
+	base_area = /area/muriki/skyline/south
 
 //////////////////////////////////////////////////////////////
 // ERT Quick Drop Shuttle
