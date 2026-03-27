@@ -9308,7 +9308,7 @@
 	dir = 1
 	},
 /obj/machinery/light/floortube,
-/obj/effect/shuttle_landmark/premade/medical/specialops_overmap,
+/obj/effect/shuttle_landmark/premade/specialops_overmap,
 /obj/effect/overmap/visitable/ship/landable/specialops_overmap,
 /turf/simulated/floor/reinforced,
 /area/shuttle/specialops_overmap)
