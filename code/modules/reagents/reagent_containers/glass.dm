@@ -52,7 +52,9 @@
 		/obj/machinery/feeder,
 		/obj/machinery/computer/pandemic,
 		/obj/machinery/chemical_synthesizer, //CHOMPedit,
-		/obj/machinery/food_replicator // CHOMPAdd
+		/obj/machinery/food_replicator, // CHOMPAdd
+		/obj/vehicle/train/trolley_tank, // TEMP TEMP TEMP
+		/obj/machinery/reagent_refinery, // TEMP TEMP TEMP
 		)
 //CHOMP Addition for feeder in the above list. I am paranoid about comments within lists so this is outside.
 
