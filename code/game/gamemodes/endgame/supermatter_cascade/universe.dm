@@ -140,4 +140,4 @@ GLOBAL_VAR_INIT(universe_has_ended, 0)
 			M.current.Weaken(10)
 			M.current.flash_eyes()
 
-		clear_antag_roles(M)
+		SSantag_job.clear_antag_roles(M)
