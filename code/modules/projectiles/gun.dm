@@ -144,6 +144,12 @@
 		verbs -= /obj/item/gun/verb/give_dna
 		verbs -= /obj/item/gun/verb/allow_dna
 
+	// Outpost 21 edit(port) begin - Apply custom firemodes if firemode is not default
+	if(length(firemodes) && sel_mode <= firemodes.len)
+		var/datum/firemode/new_mode = firemodes[sel_mode]
+		new_mode.apply_to(src)
+	// Outpost 21 edit end
+
 	AddElement(/datum/element/sellable/gun)
 
 /obj/item/gun/update_twohanding()

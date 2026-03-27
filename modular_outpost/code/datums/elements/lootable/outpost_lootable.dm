@@ -44,7 +44,8 @@ GLOBAL_VAR_INIT(spawned_theta,FALSE) // Only one a ROUND
 		/obj/item/organ/internal/augment/armmounted/apc_connector,
 		/obj/item/reagent_containers/food/drinks/cans/crystal_classic_wind,
 		/obj/item/rectape/anna_lore,
-		/obj/item/card/emag
+		/obj/item/card/emag,
+		/obj/random/design_disks,
 	)
 
 
