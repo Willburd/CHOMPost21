@@ -493,7 +493,7 @@ GLOBAL_DATUM(autospeaker, /mob/living/silicon/ai/announcer)
 		if(jamming)
 			var/distance = 0
 			var/area/our_area = get_area(src)
-			if(our_area.no_comms)
+			if(our_area.no_comms || !islist(jamming)) // Outpost 21 edit begin - Disable phased shadekin radios
 				distance = 99
 			else
 				distance = jamming["distance"]
