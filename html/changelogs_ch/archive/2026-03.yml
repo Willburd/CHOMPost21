@@ -409,3 +409,10 @@
       20 for non-ai operators )
   - bugfix: paicard typeB can be inserted into rigs that allow AI control
   - balance: AI core counts as a lonely major comfort mob
+2026-03-27:
+  Diana:
+  - code_imp: Cleans up some code about trays.
+  - bugfix: Trays will now properly stun the target if you target the head.
+  - qol: Treat Organ surgery's detection logic now includes infected organs
+  Will:
+  - rscadd: Xenobotany machines can be researched and constructed in round
