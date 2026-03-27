@@ -27,6 +27,8 @@ SUBSYSTEM_DEF(emergency_shuttle)
 	VAR_PRIVATE/datum/announcement/priority/emergency_shuttle_recalled
 	VAR_PRIVATE/list/current_run
 
+	var/admin_override_mode = FALSE // Outpost 21 edit - Lets not end the round
+
 /datum/controller/subsystem/emergency_shuttle/Initialize()
 	emergency_shuttle_docked = new(0, new_sound = sound('sound/AI/shuttledock.ogg'))
 	emergency_shuttle_called = new(0, new_sound = sound('sound/AI/shuttlecalled.ogg'))
@@ -225,6 +227,13 @@ SUBSYSTEM_DEF(emergency_shuttle)
 //returns 1 if the shuttle has gone to the station and come back at least once,
 //used for game completion checking purposes
 /datum/controller/subsystem/emergency_shuttle/proc/returned()
+	// Outpost 21 edit begin - Don't end the round if we manually control the shuttle
+	if(admin_override_mode && departed && shuttle.moving_status == SHUTTLE_IDLE && shuttle.location == FERRY_LOCATION_OFFSITE)
+		admin_override_mode = FALSE
+		autopilot = TRUE
+		departed = FALSE
+		evac = FALSE
+	// Outpost 21 edit end
 	return (departed && shuttle.moving_status == SHUTTLE_IDLE && shuttle.location)	//we've gone to the station at least once, no longer in transit and are idle back at centcom
 
 //returns 1 if the shuttle is not idle at centcom

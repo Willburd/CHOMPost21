@@ -29,15 +29,15 @@ ADMIN_VERB(spawn_bad_body, R_EVENT, "Spawn Badbody", "Spawns a badbody haunting 
 		qdel(env)
 
 ADMIN_VERB(escape_shuttle_force, R_EVENT, "Safely Move Escape Shuttle", "Forces the escape shuttle to move to and from the station without triggering round end.", ADMIN_CATEGORY_EVENTS)
-	if(GLOB.emergency_shuttle.shuttle.moving_status == SHUTTLE_INTRANSIT)
+	if(SSemergency_shuttle.shuttle.moving_status == SHUTTLE_INTRANSIT)
 		to_chat(usr,"The shuttle is moving, please wait till it arrives to send it back with this verb.")
 		return
 
 	// MUST be called to avoid round-end
-	GLOB.emergency_shuttle.admin_override_mode = TRUE
-	GLOB.emergency_shuttle.evac = FALSE
-	GLOB.emergency_shuttle.autopilot = FALSE
-	GLOB.emergency_shuttle.shuttle.launch(usr)
+	SSemergency_shuttle.admin_override_mode = TRUE
+	SSemergency_shuttle.evac = FALSE
+	SSemergency_shuttle.autopilot = FALSE
+	SSemergency_shuttle.shuttle.launch(usr)
 
 ADMIN_VERB(make_red_exit, R_EVENT, "Make Redspace Exit Portal", "Allows players to escape from redspace. Spawns at your location", ADMIN_CATEGORY_EVENTS)
 	var/turf/epicenter = usr.loc
