@@ -120,7 +120,7 @@
 		"gps_exp",
 		// "automated_announcement",
 		"bankmachine",
-		// "account_console",
+		"account_console",
 		"idcard",
 		"idrestore_console",
 		"guestpass",
