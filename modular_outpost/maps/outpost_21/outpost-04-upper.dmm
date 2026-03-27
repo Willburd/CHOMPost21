@@ -5011,6 +5011,15 @@
 	icon_state = "rock_grey"
 	},
 /area/mine/unexplored/muriki/mountaintop_pathway)
+"amf" = (
+/obj/structure/window/maintenance_panel{
+	dir = 8
+	},
+/obj/structure/window/maintenance_panel{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/chapel/office)
 "amg" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 4
@@ -17592,9 +17601,6 @@
 	name = "Confessionary Request";
 	pixel_x = -32
 	},
-/obj/machinery/light{
-	dir = 8
-	},
 /turf/simulated/floor/lino,
 /area/chapel/office)
 "gIv" = (
@@ -22264,10 +22270,6 @@
 	},
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/rnd/chemistry)
-"jcg" = (
-/obj/structure/ladder/top_hatch,
-/turf/simulated/floor/tiled/dark/turfpack/muriki,
-/area/chapel/main)
 "jch" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -25868,6 +25870,9 @@
 /obj/structure/table/woodentable,
 /obj/machinery/chemical_dispenser/kettle/full{
 	pixel_y = 2
+	},
+/obj/machinery/light{
+	dir = 4
 	},
 /turf/simulated/floor/lino,
 /area/chapel/office)
@@ -38992,6 +38997,9 @@
 	pixel_x = -25;
 	id = "chapelwin"
 	},
+/obj/machinery/light{
+	dir = 8
+	},
 /turf/simulated/floor/lino,
 /area/chapel/office)
 "rDe" = (
@@ -50237,9 +50245,6 @@
 /obj/item/storage/fancy/whitecandle_box,
 /obj/item/storage/fancy/blackcandle_box,
 /obj/item/storage/fancy/candle_box,
-/obj/machinery/light{
-	dir = 4
-	},
 /obj/item/flame/lighter/zippo/black,
 /obj/item/flame/candle/candelabra,
 /obj/item/flame/candle/candelabra,
@@ -103890,7 +103895,7 @@ idO
 idO
 kQW
 ugl
-ugl
+amf
 ugl
 qQa
 qQa
@@ -104052,7 +104057,7 @@ qUf
 idO
 pid
 ugl
-jcg
+uqI
 esS
 afm
 afm

@@ -12376,6 +12376,9 @@
 /obj/structure/window/reinforced/tinted,
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/scilower)
+"awa" = (
+/turf/simulated/wall/r_wall,
+/area/muriki/crew/sauna1)
 "awb" = (
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating/turfpack/muriki,
@@ -31364,6 +31367,7 @@
 /area/crew_quarters/pool)
 "bfd" = (
 /obj/structure/closet/athletic_mixed,
+/mob/living/simple_mob/vore/alienanimals/jil,
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/pool)
 "bfe" = (
@@ -32148,7 +32152,7 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/dorm)
 "bgF" = (
-/obj/machinery/floodlight,
+/obj/random/maintenance/misc,
 /turf/simulated/floor/plating,
 /area/maintenance/civ)
 "bgG" = (
@@ -32430,12 +32434,22 @@
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/maintenance/cargo)
 "bhp" = (
-/mob/living/simple_mob/vore/alienanimals/jil,
+/obj/structure/cable/green{
+	icon_state = "4-10"
+	},
+/obj/effect/landmark/redspaceexit,
 /turf/simulated/floor/plating,
 /area/maintenance/civ)
 "bhq" = (
-/obj/machinery/door/airlock/maintenance/common,
 /obj/machinery/door/firedoor,
+/obj/structure/cable/green{
+	icon_state = "6-8"
+	},
+/obj/machinery/door/airlock/maintenance/command{
+	name = "Command Maintenance Access"
+	},
+/obj/effect/floor_decal/milspec/hatchmarks,
+/obj/item/airlock_brace,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/civ)
 "bhr" = (
@@ -32586,22 +32600,18 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/dorm)
 "bhI" = (
-/obj/machinery/power/apc{
-	dir = 8;
-	name = "west bump";
-	pixel_x = -24
-	},
+/obj/structure/ladder/up,
+/obj/effect/floor_decal/industrial/outline/grey,
 /obj/structure/cable/green{
-	icon_state = "0-2"
+	icon_state = "2-5"
 	},
-/obj/effect/landmark/event_spawn/maintpred,
 /turf/simulated/floor/plating,
 /area/maintenance/civ)
 "bhJ" = (
-/obj/machinery/pipedispenser/disposal,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 9
 	},
+/obj/machinery/floodlight,
 /turf/simulated/floor/plating,
 /area/maintenance/civ)
 "bhK" = (
@@ -32617,6 +32627,9 @@
 /obj/structure/extinguisher_cabinet{
 	dir = 4;
 	pixel_x = -30
+	},
+/obj/structure/cable/green{
+	icon_state = "4-9"
 	},
 /turf/simulated/floor/tiled/steel,
 /area/hallway/muriki/dorm)
@@ -32636,6 +32649,9 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals_central7{
 	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "1-8"
 	},
 /turf/simulated/floor/tiled/steel,
 /area/hallway/muriki/dorm)
@@ -32837,20 +32853,19 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/dorm)
 "bib" = (
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
-/obj/structure/micro_tunnel{
+/obj/machinery/power/apc{
 	dir = 8;
-	pixel_x = -32
+	name = "west bump";
+	pixel_x = -24
 	},
+/obj/structure/cable/green,
 /turf/simulated/floor/plating,
 /area/maintenance/civ)
 "bic" = (
-/obj/machinery/pipedispenser,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
+/obj/machinery/floodlight,
 /turf/simulated/floor/plating,
 /area/maintenance/civ)
 "bid" = (
@@ -33043,13 +33058,6 @@
 /obj/structure/window/maintenance_panel,
 /turf/simulated/floor/tiled/techfloor,
 /area/muriki/bathroom/dorm)
-"biw" = (
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
-/obj/structure/window/maintenance_panel,
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/crew_quarters/locker)
 "bix" = (
 /turf/simulated/wall,
 /area/crew_quarters/locker)
@@ -33234,9 +33242,6 @@
 /turf/simulated/floor/tiled/steel,
 /area/crew_quarters/locker)
 "biS" = (
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
 	},
@@ -33686,15 +33691,12 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 1
 	},
-/obj/effect/catwalk_plated,
-/obj/structure/cable/green{
-	icon_state = "1-4"
-	},
 /obj/structure/disposalpipe/sortjunction/flipped{
 	dir = 8;
 	name = "Locker Room";
 	sortType = "Locker Room"
 	},
+/obj/effect/catwalk_plated,
 /turf/simulated/floor/plating,
 /area/crew_quarters/locker)
 "bjH" = (
@@ -33848,14 +33850,14 @@
 /obj/item/soap,
 /obj/item/towel/random,
 /turf/simulated/floor/tiled/kafel_full,
-/area/crew_quarters/sleep/Dorm_1)
+/area/maintenance/civ)
 "bjP" = (
 /obj/structure/toilet,
 /obj/machinery/light/small{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/kafel_full,
-/area/crew_quarters/sleep/Dorm_1)
+/area/maintenance/civ)
 "bjQ" = (
 /obj/structure/curtain/open/shower,
 /obj/machinery/door/window/southright{
@@ -33872,7 +33874,7 @@
 	icon_state = "spline_plain_full"
 	},
 /turf/simulated/floor/tiled/freezer,
-/area/crew_quarters/sleep/Dorm_1)
+/area/maintenance/civ)
 "bjR" = (
 /obj/structure/closet/secure_closet/personal,
 /obj/effect/floor_decal/spline/fancy/wood{
@@ -34504,19 +34506,9 @@
 	layer = 4;
 	pixel_y = -32
 	},
-/obj/structure/table/glass,
 /obj/machinery/light,
-/obj/item/towel/random,
-/obj/item/towel/random,
-/turf/simulated/floor/tiled/freezer,
-/area/crew_quarters/pool)
-"blh" = (
 /obj/item/stool/padded{
 	dir = 8
-	},
-/obj/machinery/firealarm{
-	dir = 1;
-	pixel_y = -26
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/pool)
@@ -34537,6 +34529,10 @@
 	dir = 1
 	},
 /obj/structure/sign/poster,
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -26
+	},
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/pool)
 "blk" = (
@@ -46305,7 +46301,6 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
-/obj/effect/landmark/vermin,
 /turf/simulated/floor/plating,
 /area/maintenance/civ)
 "bHl" = (
@@ -47163,6 +47158,25 @@
 	temperature = 80
 	},
 /area/server)
+"bJf" = (
+/turf/simulated/wall/r_wall,
+/area/muriki/crew/sauna2)
+"bJg" = (
+/obj/structure/catwalk,
+/obj/structure/closet/emcloset,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/civ/west)
+"bJh" = (
+/obj/structure/catwalk,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/civ/west)
+"bJi" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/structure/trash_pile,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/civ/west)
 "bJj" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 10
@@ -47176,6 +47190,31 @@
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/trammaint)
+"bJk" = (
+/obj/structure/catwalk,
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/civ/west)
+"bJl" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/civ/west)
+"bJm" = (
+/obj/machinery/door/blast/regular{
+	density = 0;
+	dir = 2;
+	icon_state = "pdoor0";
+	id = "bridge blast";
+	name = "Bridge Blast Doors";
+	opacity = 0
+	},
+/obj/effect/floor_decal/milspec/hatchmarks,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/maintenance/civ/west)
 "bJn" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 9
@@ -58944,6 +58983,10 @@
 	},
 /turf/simulated/floor/tiled,
 /area/maintenance/oldbridge)
+"ciL" = (
+/obj/random/maintenance/security,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/civ/west)
 "ciM" = (
 /obj/structure/reagent_dispensers/watertank,
 /turf/simulated/floor/plating,
@@ -70192,6 +70235,12 @@
 /obj/effect/landmark/redspaceexit,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/research)
+"cKC" = (
+/obj/machinery/door/airlock/maintenance/command{
+	name = "Command Maintenance Access"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/civ/west)
 "cKD" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 8
@@ -70897,6 +70946,52 @@
 	},
 /turf/simulated/open/muriki,
 /area/mine/unexplored/muriki/cave/underdark_pit/central_eng)
+"cLZ" = (
+/obj/machinery/light/small,
+/obj/structure/catwalk,
+/turf/simulated/floor/plating/external/turfpack/muriki,
+/area/maintenance/civ/west)
+"cMa" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/random/junk,
+/turf/simulated/floor/plating/external/turfpack/muriki,
+/area/maintenance/civ/west)
+"cMb" = (
+/turf/simulated/wall/r_wall,
+/area/crew_quarters/pool)
+"cMc" = (
+/obj/machinery/door/blast/regular{
+	density = 0;
+	dir = 8;
+	icon_state = "pdoor0";
+	id = "bridge blast";
+	name = "Bridge Blast Doors";
+	opacity = 0
+	},
+/obj/effect/floor_decal/milspec/hatchmarks,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/maintenance/civ/west)
+"cMd" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/structure/catwalk,
+/turf/simulated/floor/plating/external/turfpack/muriki,
+/area/maintenance/civ/west)
+"cMe" = (
+/turf/simulated/wall/r_wall,
+/area/maintenance/civ)
+"cMf" = (
+/obj/structure/window/maintenance_panel{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/maintenance/civ)
 "cNe" = (
 /obj/structure/table/glass,
 /obj/item/towel/random,
@@ -71100,6 +71195,7 @@
 /area/medical/autosleever)
 "cYn" = (
 /obj/structure/ladder/up,
+/obj/structure/catwalk,
 /obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/plating,
 /area/maintenance/civ/west)
@@ -83962,12 +84058,6 @@
 	},
 /turf/simulated/floor,
 /area/engineering/refinery/tankstorage)
-"rxz" = (
-/obj/structure/window/maintenance_panel{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/muriki/bathroom/dorm)
 "rxA" = (
 /obj/structure/loot_pile/surface/medicine_cabinet,
 /turf/simulated/floor/tiled,
@@ -84868,6 +84958,10 @@
 /area/medical/medbay2)
 "stx" = (
 /obj/effect/landmark/late_antag/synx,
+/obj/structure/urinal{
+	dir = 8;
+	pixel_x = 32
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/dorm)
 "suQ" = (
@@ -139481,10 +139575,10 @@ byC
 bWf
 aOU
 cnU
-cnU
-cnU
-cnU
-cnU
+boz
+boz
+kiD
+boz
 cnU
 cnU
 cdY
@@ -139643,10 +139737,10 @@ cnU
 cnU
 ayD
 cnU
-cnU
-vka
-vka
-cnU
+boz
+cqw
+cLZ
+boz
 ceg
 cea
 cdZ
@@ -139804,11 +139898,11 @@ cnU
 ceX
 cnU
 aOU
-cnU
-vka
-vka
-vka
-cnU
+bLI
+boz
+cqw
+cMa
+boz
 ceh
 cea
 cea
@@ -139966,11 +140060,11 @@ cnU
 aOU
 ceT
 bLI
-cnU
-vka
-vka
-vka
-cnU
+boz
+boz
+cMc
+boz
+boz
 cnU
 cnU
 cnU
@@ -140128,10 +140222,10 @@ cnU
 aOU
 cnU
 cnU
-cnU
-vka
-vka
-vka
+boz
+cLw
+cMd
+boz
 vka
 vka
 vka
@@ -140290,10 +140384,10 @@ cnU
 bNR
 cnU
 beA
-beA
-beA
-beA
-beA
+cMb
+cMb
+cMb
+cMb
 blS
 blS
 blS
@@ -140941,7 +141035,7 @@ bgy
 biI
 bjv
 bkn
-bff
+blf
 blT
 bmV
 bqc
@@ -141103,7 +141197,7 @@ bgz
 biJ
 bjv
 bkn
-blf
+bhj
 blT
 bmW
 bob
@@ -141266,12 +141360,12 @@ biK
 bjv
 bkn
 blg
-blS
-blS
-blS
-blS
-blS
-blS
+awa
+awa
+awa
+awa
+awa
+awa
 aIt
 cdF
 cdF
@@ -141427,16 +141521,16 @@ bgA
 biK
 bjw
 bkl
-blh
-beA
-cor
-boz
-boz
+bff
+cKC
+bJm
+bJh
+bJk
+bJg
 boz
 cov
 cov
 cot
-cov
 cov
 cnU
 cos
@@ -141590,14 +141684,14 @@ biK
 bjv
 bkn
 bli
-beA
-cor
+boz
+boz
 boz
 cYn
-kiD
+bJh
+boz
 cov
 coz
-cox
 cox
 cov
 cou
@@ -141752,14 +141846,14 @@ biL
 bjx
 bkm
 blj
-beA
-cor
 boz
+ciL
 boz
+bJl
+bJi
 boz
 cnU
 cnU
-cox
 cox
 cnU
 cnU
@@ -141914,12 +142008,12 @@ biL
 bjv
 bkn
 blk
-blW
-blW
-blW
-blW
-blW
-blW
+bJf
+bJf
+bJf
+bJf
+bJf
+bJf
 cdF
 cdF
 cdF
@@ -143525,11 +143619,11 @@ beH
 mQU
 beH
 gSR
-beH
-rxz
-beH
-beH
-beH
+cMe
+cMe
+cMe
+cMe
+cMe
 biR
 bjF
 bkv
@@ -143685,13 +143779,13 @@ beH
 beH
 beH
 beH
-beH
-beH
-beH
+jjx
+cMf
+cMe
 bHk
 bhI
 bib
-biw
+cMe
 biS
 bjG
 bkw
@@ -143847,13 +143941,13 @@ beJ
 beJ
 beJ
 beJ
-beJ
+jjx
 bgF
-bgF
+cMe
 bhp
 bhJ
 bic
-bix
+cMe
 biT
 bjH
 bkx
@@ -144009,13 +144103,13 @@ ycU
 bfk
 bfB
 bfV
-beJ
 jjx
 jjx
+cMe
 bhq
-jjx
-jjx
-bix
+cMe
+cMe
+cMe
 biN
 bjI
 biN
