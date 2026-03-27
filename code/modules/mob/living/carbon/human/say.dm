@@ -180,7 +180,7 @@
 /mob/living/carbon/human/handle_message_mode(message_mode, list/message_pieces, verb, used_radios)
 	switch(message_mode)
 		if("intercom")
-			if(!restrained())
+			if(!restrained() && !is_incorporeal()) // Outpost 21 edit(port) - Disable phased shadekin radios
 				for(var/obj/item/radio/intercom/I in view(1))
 					I.talk_into(src, message_pieces, null, verb)
 					I.add_fingerprint(src)

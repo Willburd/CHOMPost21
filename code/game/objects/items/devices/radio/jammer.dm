@@ -4,6 +4,16 @@ GLOBAL_LIST_EMPTY(active_radio_jammers)
 	var/turf/Tr = get_turf(radio)
 	if(!Tr) return 0 //Nullspace radios don't get jammed.
 
+	// Outpost 21 edit begin - Disable phased shadekin radios
+	var/atom/find_top_mob = radio.loc
+	while(find_top_mob && !isturf(find_top_mob))
+		if(ismob(find_top_mob))
+			var/mob/found_mob = find_top_mob
+			if(found_mob.is_incorporeal())
+				return TRUE
+		find_top_mob = find_top_mob.loc
+	// Outpost 21 edit end
+
 	var/area/our_area = get_area(Tr)
 
 	if(our_area.no_comms)

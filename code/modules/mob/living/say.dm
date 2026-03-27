@@ -132,7 +132,7 @@ GLOBAL_LIST_EMPTY(channel_to_radio_key)
 	message_data[3] = whispering
 
 /mob/living/proc/handle_message_mode(message_mode, list/message_pieces, verb, used_radios)
-	if(message_mode == "intercom")
+	if(message_mode == "intercom" && !is_incorporeal()) // Outpost 21 edit(port) - Disable phased shadekin radios
 		for(var/obj/item/radio/intercom/I in view(1, null))
 			I.talk_into(src, message_pieces, verb)
 			used_radios += I
