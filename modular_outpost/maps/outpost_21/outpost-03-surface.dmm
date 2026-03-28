@@ -18496,16 +18496,123 @@
 /obj/structure/ladder/up,
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
 /area/mine/explored/muriki/mountainnorth)
+"aRj" = (
+/turf/simulated/wall/r_wall,
+/area/maintenance/research/north)
+"aRk" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/random/junk,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/research/north)
+"aRl" = (
+/obj/structure/ladder/up,
+/obj/structure/catwalk,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/research/north)
+"aRm" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/structure/trash_pile/disable_mouse_spawn,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/research/north)
+"aRn" = (
+/turf/simulated/wall,
+/area/maintenance/research/north)
+"aRo" = (
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/door/blast/regular{
+	density = 0;
+	icon_state = "pdoor0";
+	id = "phoronic_lockdown";
+	name = "Phoronics Lockdown";
+	opacity = 0
+	},
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/maintenance/research/north)
+"aRp" = (
+/obj/structure/catwalk,
+/obj/machinery/light/small{
+	dir = 8
+	},
+/obj/random/junk,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/research/north)
 "aRq" = (
 /obj/machinery/body_scanconsole,
 /turf/simulated/floor/tiled/old_cargo,
 /area/medical/sleeper)
+"aRr" = (
+/obj/structure/catwalk,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/research/north)
+"aRs" = (
+/obj/machinery/door/airlock/maintenance/rnd,
+/obj/item/airlock_brace,
+/turf/simulated/floor,
+/area/maintenance/research/north)
+"aRt" = (
+/obj/structure/catwalk,
+/obj/random/junk,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/research/north)
+"aRu" = (
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/door/blast/regular{
+	density = 0;
+	icon_state = "pdoor0";
+	id = "phoronic_lockdown";
+	name = "Phoronics Lockdown";
+	opacity = 0;
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/maintenance/research/north)
+"aRv" = (
+/obj/machinery/door/airlock/maintenance/rnd,
+/turf/simulated/floor,
+/area/maintenance/research/north)
+"aRw" = (
+/obj/structure/catwalk,
+/obj/structure/ladder,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/research/north)
+"aRx" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/structure/railing,
+/obj/effect/auto_crayon{
+	icon_state = "x"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/research/north)
 "aRy" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/otherlab)
+"aRz" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/machinery/light/small{
+	dir = 8
+	},
+/obj/structure/railing,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/research/north)
+"aRA" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/structure/railing,
+/obj/structure/trash_pile/disable_mouse_spawn,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/research/north)
 "aRB" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -18513,6 +18620,47 @@
 /obj/structure/window/maintenance_panel,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/substation/security)
+"aRC" = (
+/obj/structure/railing,
+/obj/structure/railing{
+	dir = 4
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/research/north)
+"aRD" = (
+/obj/structure/railing,
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/research/north)
+"aRE" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/structure/railing,
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/research/north)
+"aRF" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/research/north)
+"aRG" = (
+/obj/machinery/door/airlock/maintenance/int,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/maintenance/research/north)
+"aRH" = (
+/obj/structure/foamedmetal,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/research/north)
 "aRI" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -18525,6 +18673,15 @@
 /obj/structure/disposalpipe/junction,
 /turf/simulated/floor/tiled/white,
 /area/medical/virology/prep)
+"aRJ" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/research/north)
+"aRK" = (
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/research/north)
 "aRL" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/polarized{
@@ -18551,6 +18708,10 @@
 	},
 /turf/simulated/floor,
 /area/bridge/meeting_room)
+"aRM" = (
+/obj/structure/trailblazer/yellow,
+/turf/simulated/floor/water/turfpack/muriki,
+/area/mine/unexplored/muriki/mountainnorth)
 "aSh" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4;
@@ -134879,9 +135040,9 @@ wrH
 wrH
 wrH
 awI
-aiP
-aiP
-aiP
+dMj
+dMj
+dMj
 aiP
 aiP
 aiP
@@ -135043,7 +135204,7 @@ aQz
 awI
 aiP
 aiP
-aiP
+dMj
 aiP
 aiP
 aiP
@@ -135205,9 +135366,9 @@ awI
 awI
 awI
 aiP
-aiP
-aiP
-aiP
+dMj
+dMj
+dMj
 oeQ
 oeQ
 oeQ
@@ -135368,8 +135529,8 @@ rvX
 awI
 awI
 aiP
-aiP
-aiP
+dMj
+dMj
 oeQ
 oeQ
 oeQ
@@ -135531,7 +135692,7 @@ cCs
 awI
 aiP
 aiP
-aiP
+dMj
 aiP
 oeQ
 aiP
@@ -135693,7 +135854,7 @@ bvc
 awI
 aiP
 aiP
-aiP
+dMj
 aiP
 oeQ
 aiP
@@ -135854,8 +136015,8 @@ rvS
 hDz
 awI
 aiP
-aiP
-aiP
+dMj
+dMj
 aiP
 oeQ
 aiP
@@ -136017,9 +136178,9 @@ aYb
 awI
 aiP
 aiP
-aiP
-aiP
-oeQ
+dMj
+dMj
+dMj
 aiP
 aiP
 aiP
@@ -136181,8 +136342,8 @@ aiP
 aiP
 aiP
 aiP
-oeQ
-aiP
+dMj
+dMj
 aiP
 aiP
 aiP
@@ -136343,8 +136504,8 @@ aiP
 aiP
 aiP
 aiP
-oeQ
-oeQ
+dMj
+dMj
 aiP
 aiP
 aiP
@@ -136505,7 +136666,7 @@ aiP
 aiP
 aiP
 aiP
-oeQ
+dMj
 oeQ
 aiP
 aiP
@@ -136667,7 +136828,7 @@ aiP
 aiP
 aiP
 aiP
-oeQ
+dMj
 aiP
 aiP
 aiP
@@ -136828,8 +136989,8 @@ aiP
 aiP
 aiP
 aiP
-aiP
-aiP
+dMj
+dMj
 aiP
 aiP
 aiP
@@ -136989,8 +137150,8 @@ aiP
 aiP
 aiP
 aiP
-aiP
-aiP
+dMj
+dMj
 aiP
 aiP
 aiP
@@ -137152,7 +137313,7 @@ aiP
 aiP
 aiP
 aiP
-aiP
+dMj
 aiP
 aiP
 aiP
@@ -137314,9 +137475,9 @@ aiP
 aiP
 aiP
 aiP
-aiP
-aiP
-aiP
+dMj
+dMj
+dMj
 aiP
 aiP
 aiP
@@ -137468,6 +137629,8 @@ aiP
 aiP
 aiP
 aiP
+dMj
+dMj
 aiP
 aiP
 aiP
@@ -137475,10 +137638,8 @@ aiP
 aiP
 aiP
 aiP
-aiP
-aiP
-oeQ
-aiP
+dMj
+dMj
 aiP
 aiP
 aiP
@@ -137629,17 +137790,17 @@ aiP
 aiP
 aiP
 aiP
+dMj
+dMj
+dMj
+dMj
 aiP
 aiP
-aiP
-aiP
-aiP
-aiP
-aiP
-aiP
-aiP
-aiP
-oeQ
+dMj
+dMj
+dMj
+dMj
+dMj
 aiP
 aiP
 aiP
@@ -137791,13 +137952,13 @@ aiP
 aiP
 aiP
 aiP
+dMj
+dMj
 aiP
-aiP
-aiP
-aiP
-aiP
-aiP
-aiP
+dMj
+dMj
+dMj
+dMj
 aiP
 aiP
 aiP
@@ -137952,9 +138113,9 @@ aiP
 aiP
 aiP
 aiP
-aiP
-aiP
-aiP
+dMj
+dMj
+dMj
 aiP
 aiP
 aiP
@@ -138115,6 +138276,8 @@ aiP
 aiP
 aiP
 aiP
+dMj
+dMj
 aiP
 aiP
 aiP
@@ -138123,11 +138286,9 @@ aiP
 aiP
 aiP
 aiP
-aiP
-aiP
-aiP
-aiP
-aiP
+aRj
+aRj
+aRj
 aiP
 aiP
 aiP
@@ -138278,18 +138439,18 @@ aiP
 aiP
 aiP
 aiP
-aiP
+dMj
 aiP
 aiP
 aiP
 aiP
 oeQ
-oeQ
-aiP
-aiP
-aiP
-aiP
-aiP
+aRj
+aRj
+aRj
+aRj
+aRk
+aRj
 aiP
 aiP
 aiP
@@ -138440,18 +138601,18 @@ aiP
 aiP
 aiP
 aiP
-aiP
+dMj
 aiP
 aiP
 aiP
 aiP
 oeQ
-oeQ
-aiP
-aiP
-aiP
-aiP
-aiP
+aRj
+aRw
+aRp
+aRo
+aRl
+aRj
 aiP
 aiP
 aiP
@@ -138602,18 +138763,18 @@ aiP
 aiP
 aiP
 aiP
+dMj
 aiP
 aiP
 aiP
-aiP
-aiP
-aiP
-aiP
-aiP
-aiP
-aiP
-aiP
-aiP
+dMj
+aRn
+aRj
+aRx
+aRr
+aRj
+aRm
+aRj
 aiP
 aiP
 aiP
@@ -138764,18 +138925,18 @@ aiP
 aiP
 aiP
 aiP
-aiP
-aiP
-aiP
-aiP
-aiP
-aiP
-aiP
-aiP
-aiP
-aiP
-aiP
-aiP
+dMj
+dMj
+dMj
+dMj
+dMj
+aRK
+aRj
+aRj
+aRs
+aRj
+aRj
+aRj
 aiP
 aiP
 aiP
@@ -138927,16 +139088,16 @@ aiP
 aiP
 aiP
 aiP
-aiP
-aiP
+dMj
+dMj
 eLt
 eLt
-aiP
-aiP
-aiP
-aiP
-aiP
-aiP
+aRK
+aRn
+aRz
+aRt
+aRn
+aRn
 aiP
 aiP
 aiP
@@ -139093,11 +139254,11 @@ eLt
 aMw
 eLt
 aMq
-eLt
-aiP
-aiP
-aiP
-aiP
+aRK
+aRG
+aRr
+aRr
+aRn
 aiP
 aiP
 amU
@@ -139254,12 +139415,12 @@ aiP
 aMq
 eLt
 aMv
-eLt
-aiP
-aiP
-aiP
-aiP
-aiP
+aRM
+aRn
+aRn
+aRA
+aRr
+aRn
 aiP
 aiP
 aiP
@@ -139418,10 +139579,10 @@ eLt
 eLt
 aiP
 aiP
-aiP
-aiP
-aiP
-aiP
+aRn
+aRC
+aRr
+aRn
 aiP
 aiP
 aiP
@@ -139580,10 +139741,10 @@ aMw
 aiP
 aiP
 aiP
-aiP
-aiP
-aiP
-aiP
+aRn
+aRw
+aRr
+aRn
 aiP
 aiP
 aiP
@@ -139742,10 +139903,10 @@ aiP
 aiP
 aiP
 aiP
-aiP
-aiP
-aiP
-aiP
+aRn
+aRD
+aRr
+aRn
 aiP
 aiP
 aiP
@@ -139903,11 +140064,11 @@ aiP
 aiP
 aiP
 aiP
-aiP
-aiP
-aiP
-aiP
-aiP
+aRj
+aRj
+aRj
+aRu
+aRj
 aiP
 aiP
 aiP
@@ -140065,11 +140226,11 @@ aiP
 aiP
 aiP
 aiP
-aiP
-aiP
-aiP
-aiP
-aiP
+aRj
+aRH
+aRj
+aRv
+aRj
 aiP
 aiP
 aiP
@@ -140227,11 +140388,11 @@ aiP
 aiP
 aiP
 aiP
-aiP
-aiP
-aiP
-aiP
-aiP
+aRj
+aRJ
+aRE
+aRt
+aRj
 aiP
 aiP
 arq
@@ -140389,11 +140550,11 @@ aiP
 aiP
 aiP
 aiP
-aiP
-aiP
-aiP
-aiP
-aiP
+aRj
+aRr
+aRl
+aRr
+aRj
 aiP
 aiP
 arq
@@ -140551,11 +140712,11 @@ aiP
 aiP
 aiP
 aiP
-aiP
-aiP
-aiP
-aiP
-aiP
+aRj
+aRj
+aRF
+aRm
+aRj
 aiP
 aiP
 arq
@@ -140714,10 +140875,10 @@ aiP
 aiP
 aiP
 aiP
-aiP
-aiP
-aiP
-aiP
+aRj
+aRj
+aRj
+aRj
 aiP
 aiP
 arq
