@@ -2300,15 +2300,25 @@
 /turf/simulated/shuttle/floor/darkred,
 /area/shuttle/mercenary)
 "fB" = (
-/obj/item/clothing/under/tactical,
-/obj/item/clothing/under/tactical,
-/obj/item/clothing/under/tactical,
-/obj/item/clothing/under/tactical,
-/obj/item/clothing/under/tactical,
-/obj/item/clothing/under/tactical,
 /obj/structure/closet,
-/obj/item/clothing/accessory/holster/leg/black,
-/obj/item/clothing/accessory/holster/leg/black,
+/obj/item/clothing/under/tactical{
+	sensor_mode = 0
+	},
+/obj/item/clothing/under/tactical{
+	sensor_mode = 0
+	},
+/obj/item/clothing/under/tactical{
+	sensor_mode = 0
+	},
+/obj/item/clothing/under/tactical{
+	sensor_mode = 0
+	},
+/obj/item/clothing/under/tactical{
+	sensor_mode = 0
+	},
+/obj/item/clothing/under/tactical{
+	sensor_mode = 0
+	},
 /obj/item/clothing/accessory/holster/leg/black,
 /obj/item/clothing/accessory/holster/leg/black,
 /obj/item/clothing/accessory/holster/leg/black,
