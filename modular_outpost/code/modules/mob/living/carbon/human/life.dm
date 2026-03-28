@@ -73,6 +73,10 @@
 	if(feels_gross < threshold)
 		return
 
+	// Dirtking unaffected, unbothered, in their element
+	if(species && (/datum/trait/neutral/mudking in species.traits))
+		return
+
 	// Wash your damn ass
 	if(feels_gross == threshold + 10)
 		to_chat(src,span_warning("You feel like you should take a shower..."))

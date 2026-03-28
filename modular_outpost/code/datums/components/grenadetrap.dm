@@ -50,6 +50,8 @@
 
 /datum/component/grenadetrap/proc/on_bumped(datum/source, atom/A)
 	SIGNAL_HANDLER
+	if(HAS_TRAIT(A, TRAIT_AMBIENT_PEST_MOB)) // Miniture things don't set off the trap
+		return
 	if(activated)
 		return
 	activated = TRUE

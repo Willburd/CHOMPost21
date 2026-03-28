@@ -176,4 +176,5 @@
 
 // Outpost 21 edit begin - Outpost unique techwebs
 #define TECHWEB_NODE_OUTPOST_AMMO "outpost_ammo"
+#define TECHWEB_NODE_OUTPOST_TSCIBEACONS "outpost_tscibeacons"
 // Outpost 21 edit end
