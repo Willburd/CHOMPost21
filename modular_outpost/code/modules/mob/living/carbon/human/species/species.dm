@@ -8,6 +8,7 @@
 /datum/species/shadekin
 	// No inf pressure shadekin here
 	hazard_high_pressure = HAZARD_HIGH_PRESSURE
+	vision_flags = SEE_SELF // No innate thermals
 
 /datum/species/skrell
 	// Deepsea creatures get deep sea resistances!
