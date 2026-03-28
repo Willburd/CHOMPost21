@@ -449,7 +449,7 @@
 	// Outpost 21 edit begin - Unwashed
 	if(feels_gross >= 10)
 		if(feels_gross >= 50)
-			msg += span_danger("[p_They()] [p_are()] a monument to filth. The dirt beneath [p_them()] cowers with fear, for its god walks amoungst it.")
+			msg += span_danger("[p_They()] [p_are()] a monument to filth. The dirt beneath [p_them()] cowers with fear, for its god walks amongst it.")
 		else if(feels_gross >= 20)
 			msg += span_warning("[p_They()] really need[p_s()] a shower, it's uncomfortable to even look at [p_them()].")
 		else
