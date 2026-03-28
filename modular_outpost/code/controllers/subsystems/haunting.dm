@@ -47,7 +47,8 @@ SUBSYSTEM_DEF(haunting)
 		/datum/station_haunt/chills,
 		/datum/station_haunt/lurker,
 		/datum/station_haunt/distant_alarm,
-		/datum/station_haunt/camera_stare
+		/datum/station_haunt/camera_stare,
+		/datum/station_haunt/deck_hatch_open
 		)
 	hauntings["[MODE_CONCERN]"] = list(
 		/datum/station_haunt/light_flicker,
@@ -61,7 +62,8 @@ SUBSYSTEM_DEF(haunting)
 		/datum/station_haunt/vent_crawler,
 		/datum/station_haunt/shuttle_move,
 		/datum/station_haunt/change_nearby_display,
-		/datum/station_haunt/camera_stare
+		/datum/station_haunt/camera_stare,
+		/datum/station_haunt/deck_hatch_open
 		)
 	hauntings["[MODE_UNNERVING]"] = list(
 		/datum/station_haunt/light_flicker,
@@ -87,7 +89,8 @@ SUBSYSTEM_DEF(haunting)
 		/datum/station_haunt/shuttle_move,
 		/datum/station_haunt/lurker/can_appear,
 		/datum/station_haunt/change_nearby_display,
-		/datum/station_haunt/camera_stare
+		/datum/station_haunt/camera_stare,
+		/datum/station_haunt/deck_hatch_open
 		)
 	hauntings["[MODE_SPOOKY]"] = list(
 		/datum/station_haunt/light_flicker,
@@ -112,7 +115,8 @@ SUBSYSTEM_DEF(haunting)
 		/datum/station_haunt/shuttle_move,
 		/datum/station_haunt/lurker/can_appear,
 		/datum/station_haunt/change_nearby_display,
-		/datum/station_haunt/camera_stare
+		/datum/station_haunt/camera_stare,
+		/datum/station_haunt/deck_hatch_open
 		)
 	hauntings["[MODE_SCARY]"] = list(
 		/datum/station_haunt/ghost_write,
@@ -137,7 +141,9 @@ SUBSYSTEM_DEF(haunting)
 		/datum/station_haunt/blood_rain,
 		/datum/station_haunt/lurker/can_appear,
 		/datum/station_haunt/lurker/pyromanic,
-		/datum/station_haunt/camera_stare
+		/datum/station_haunt/camera_stare,
+		/datum/station_haunt/deck_hatch_open,
+		/datum/station_haunt/deck_hatch_clown
 		)
 	hauntings["[MODE_SUPERSPOOKY]"] = list(
 		/datum/station_haunt/ghost_write,
@@ -159,7 +165,8 @@ SUBSYSTEM_DEF(haunting)
 		/datum/station_haunt/tesh_encircle,
 		/datum/station_haunt/shuttle_sabotage,
 		/datum/station_haunt/entity_spawn,
-		/datum/station_haunt/tcomms_sabotage
+		/datum/station_haunt/tcomms_sabotage,
+		/datum/station_haunt/deck_hatch_clown
 		)
 
 	next_haunt_time = world.time + (rand(15,30) MINUTES) // No instant ghosts

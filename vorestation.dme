@@ -5649,7 +5649,6 @@
 #include "modular_outpost\code\datums\elements\sellable.dm"
 #include "modular_outpost\code\datums\elements\lootable\mecha.dm"
 #include "modular_outpost\code\datums\elements\lootable\outpost_lootable.dm"
-#include "modular_outpost\code\datums\haunted_station\entity_angel.dm"
 #include "modular_outpost\code\datums\haunted_station\entity_badbody.dm"
 #include "modular_outpost\code\datums\haunted_station\entity_badmorgue.dm"
 #include "modular_outpost\code\datums\haunted_station\entity_fleshspiders.dm"

@@ -481,6 +481,39 @@
 	end()
 
 
+// open deck hatch
+/datum/station_haunt/deck_hatch_open
+	name = "Deck hatch open"
+
+/datum/station_haunt/deck_hatch_open/fire()
+	var/mob/M = SShaunting.get_player_target()
+	if(M)
+		var/turf/T = get_turf(M)
+		var/obj/structure/ladder/top_hatch/hatch = locate() in orange(8,T)
+		if(hatch)
+			hatch.open_hatch()
+	end()
+
+
+// open deck hatch CLOWN!
+/datum/station_haunt/deck_hatch_clown
+	name = "Deck hatch clown"
+
+/datum/station_haunt/deck_hatch_clown/fire()
+	var/mob/M = SShaunting.get_player_target()
+	if(M)
+		var/turf/T = get_turf(M)
+		var/obj/structure/ladder/top_hatch/hatch = locate() in orange(8,T)
+		if(hatch)
+			hatch.open_hatch()
+			if(!M.away_from_keyboard) // Lets not be an asshole
+				hatch.audible_message(span_notice("You hear something coming up \the [hatch]"), runemessage = "clank clank")
+				var/turf/spawn_at = get_turf(hatch)
+				spawn(2 SECONDS)
+					new /mob/living/simple_mob/clowns/big/normal(spawn_at)
+	end()
+
+
 // heavy breathing, quiet
 /datum/station_haunt/heavy_breath
 	name = "Heavy Breathing"
