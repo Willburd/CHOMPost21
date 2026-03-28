@@ -5592,6 +5592,15 @@
 	},
 /turf/space/transit/east,
 /area/space)
+"ll" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	dir = 4
+	},
+/obj/structure/handrail{
+	dir = 1
+	},
+/turf/simulated/floor/reinforced,
+/area/shuttle/specialops_overmap)
 "lm" = (
 /obj/structure/bed/chair/bay/shuttle{
 	dir = 1
@@ -5614,6 +5623,14 @@
 	req_one_access = list(101,103)
 	},
 /turf/simulated/floor/reinforced/airless,
+/area/shuttle/specialops_overmap)
+"lp" = (
+/obj/effect/floor_decal/borderfloorblack,
+/obj/effect/floor_decal/corner/red/border,
+/obj/structure/handrail{
+	dir = 1
+	},
+/turf/simulated/floor/reinforced,
 /area/shuttle/specialops_overmap)
 "lq" = (
 /obj/effect/floor_decal/industrial/stand_clear/red{
@@ -5880,7 +5897,7 @@
 /obj/machinery/atmospherics/unary/engine/bigger{
 	dir = 4
 	},
-/turf/simulated/floor/airless,
+/turf/simulated/shuttle/plating/airless/carry,
 /area/shuttle/specialops_overmap)
 "md" = (
 /turf/simulated/floor/airless,
@@ -5953,6 +5970,9 @@
 	},
 /obj/effect/floor_decal/corner/red/border{
 	dir = 10
+	},
+/obj/structure/handrail{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
@@ -6211,6 +6231,9 @@
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 8
 	},
+/obj/structure/handrail{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/milspec/sterile,
 /area/shuttle/specialops_overmap)
 "mR" = (
@@ -6370,6 +6393,9 @@
 	},
 /obj/effect/floor_decal/corner/red/border{
 	dir = 10
+	},
+/obj/structure/handrail{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
@@ -8532,6 +8558,7 @@
 /obj/effect/floor_decal/corner/red/border{
 	dir = 9
 	},
+/obj/structure/handrail,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -8797,6 +8824,7 @@
 /obj/effect/floor_decal/corner/red/border{
 	dir = 1
 	},
+/obj/structure/handrail,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -8862,8 +8890,9 @@
 /obj/effect/floor_decal/corner/white/border{
 	dir = 8
 	},
-/obj/machinery/computer/shuttle_control/explore/specialops_overmap{
-	dir = 4
+/obj/machinery/computer/ship/engines{
+	dir = 4;
+	pixel_x = -4
 	},
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
@@ -9240,7 +9269,8 @@
 	pixel_x = 8;
 	pixel_y = -25;
 	id = "inter_backdoor";
-	dir = 1
+	dir = 1;
+	name = "Rear blast door control"
 	},
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/corner/white/border,
@@ -9506,6 +9536,9 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/red/border,
+/obj/structure/handrail{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -9563,6 +9596,9 @@
 /obj/structure/extinguisher_cabinet/old{
 	pixel_y = 32;
 	pixel_x = -6
+	},
+/obj/structure/handrail{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
@@ -9641,11 +9677,12 @@
 	},
 /area/shuttle/specialops_overmap)
 "tS" = (
-/obj/machinery/computer/ship/helm/adv{
-	dir = 8
-	},
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 4
+	},
+/obj/machinery/computer/shuttle_control/explore/specialops_overmap{
+	dir = 8;
+	pixel_x = 4
 	},
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
@@ -9718,6 +9755,7 @@
 /obj/effect/floor_decal/corner/red/border{
 	dir = 1
 	},
+/obj/structure/handrail,
 /turf/simulated/floor/reinforced,
 /area/shuttle/specialops_overmap)
 "tZ" = (
@@ -9819,6 +9857,7 @@
 /obj/effect/floor_decal/corner/lightorange/border{
 	dir = 1
 	},
+/obj/structure/handrail,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -10102,9 +10141,6 @@
 	},
 /area/shuttle/specialops_overmap)
 "uC" = (
-/obj/machinery/computer/ship/engines/adv{
-	dir = 8
-	},
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 5
 	},
@@ -10114,6 +10150,9 @@
 /obj/machinery/status_display{
 	layer = 4;
 	pixel_x = 32
+	},
+/obj/machinery/computer/ship/helm/adv{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
@@ -10228,6 +10267,9 @@
 "uQ" = (
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/corner/red/border,
+/obj/structure/handrail{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -10525,6 +10567,9 @@
 	},
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 8
+	},
+/obj/structure/handrail{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
@@ -10997,6 +11042,9 @@
 	},
 /obj/effect/floor_decal/corner/red/border{
 	dir = 9
+	},
+/obj/structure/handrail{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
@@ -32065,7 +32113,7 @@ nf
 mN
 mN
 iO
-mb
+mN
 mN
 mN
 mN
@@ -32077,7 +32125,7 @@ ss
 mN
 mN
 mN
-mb
+mN
 iO
 mN
 mN
@@ -32227,7 +32275,7 @@ nf
 mN
 mN
 iO
-md
+mb
 vM
 mN
 mN
@@ -32720,7 +32768,7 @@ rM
 iO
 tY
 rs
-sM
+lp
 iO
 rM
 iO
@@ -34020,7 +34068,7 @@ Xh
 iO
 rQ
 qW
-qW
+ll
 iO
 iO
 iO
