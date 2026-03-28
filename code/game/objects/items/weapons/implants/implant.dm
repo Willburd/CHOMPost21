@@ -572,6 +572,10 @@ the implant may become unstable and either pre-maturely inject the subject or si
 /obj/item/implant/death_alarm/activate(var/cause)
 	var/mob/M = imp_in
 	var/area/t = get_area(M)
+	if(!t) // Outpost 21 edit(port) - Gibbing safety
+		qdel(a)
+		STOP_PROCESSING(SSobj, src)
+		return
 	switch (cause)
 		if("death")
 			var/obj/item/radio/headset/a = new /obj/item/radio/headset/heads/captain(null)
