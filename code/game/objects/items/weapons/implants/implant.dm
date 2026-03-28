@@ -573,7 +573,6 @@ the implant may become unstable and either pre-maturely inject the subject or si
 	var/mob/M = imp_in
 	var/area/t = get_area(M)
 	if(!t) // Outpost 21 edit(port) - Gibbing safety
-		qdel(a)
 		STOP_PROCESSING(SSobj, src)
 		return
 	switch (cause)
