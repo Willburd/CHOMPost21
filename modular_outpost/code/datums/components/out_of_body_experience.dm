@@ -4,6 +4,8 @@
 	VAR_PRIVATE/cached_key
 	VAR_PROTECTED/leave_body = TRUE
 	VAR_PROTECTED/landmark_id = "badbody"
+	VAR_PROTECTED/min_time = 10 SECONDS
+	VAR_PROTECTED/max_time = 20 SECONDS
 
 // Leaves no badbody behind
 /datum/component/out_of_body_experience/no_bad_body
@@ -12,6 +14,8 @@
 // Special evil one
 /datum/component/out_of_body_experience/no_bad_body/shadow_realm
 	landmark_id = "halluspawn"
+	VAR_PROTECTED/min_time = 15 SECONDS
+	VAR_PROTECTED/max_time = 35 SECONDS
 
 /datum/component/out_of_body_experience/Initialize()
 	if(!ishuman(parent))
@@ -45,7 +49,7 @@
 		badbody.revive() // UGH
 		qdel(env)
 		log_world("## DEBUG: successfully spawned out of body experience [badbody.real_name] at [T.x] [T.y] [T.z].")
-		addtimer(CALLBACK(src, PROC_REF(return_to_original)), rand(12, 28) SECONDS, TIMER_DELETE_ME)
+		addtimer(CALLBACK(src, PROC_REF(return_to_original)), rand(min_time, max_time), TIMER_DELETE_ME)
 
 /datum/component/out_of_body_experience/Destroy(force)
 	. = ..()
