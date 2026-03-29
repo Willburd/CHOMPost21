@@ -29,6 +29,7 @@
 				visible_message("[src] flashes and refuses to generate a singularity while on [P.name]!")
 				return
 		// Outpost 21 edit end - Prevent atmo griefing
+		SEND_SIGNAL(src, COMSIG_ATOM_ENGINE_ONLINE) // Outpost 21 edit - Engine startup signal
 		new creation_type(T, 50)
 		if(src) qdel(src)
 

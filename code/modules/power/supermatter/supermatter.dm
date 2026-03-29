@@ -343,6 +343,11 @@
 	if(!istype(L)) 	//We are in a crate or somewhere that isn't turf, if we return to turf resume processing but for now.
 		return  //Yeah just stop.
 
+	// Outpost 21 edit begin - Engine startup signal
+	if(power >= 400)
+		SEND_SIGNAL(src, COMSIG_ATOM_ENGINE_ONLINE)
+	// Outpost 21 edit end
+
 	if(damage > explosion_point)
 		if(!exploded)
 			if(!istype(L, /turf/space))
