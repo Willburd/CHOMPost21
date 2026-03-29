@@ -44854,7 +44854,7 @@
 /obj/machinery/door/airlock/command{
 	id_tag = "HoSdoor";
 	name = "Head of Security";
-	req_one_access = list(52,58)
+	req_one_access = list(19,58)
 	},
 /obj/structure/cable/green{
 	icon_state = "2-4"
@@ -49269,7 +49269,7 @@
 "kAr" = (
 /obj/machinery/door/airlock{
 	name = "Custodial Closet";
-	req_one_access = list(26)
+	req_one_access = list(26,40)
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -53876,7 +53876,7 @@
 /obj/machinery/door/airlock/glass_mining{
 	id_tag = "cargodoor";
 	name = "Cargo Office";
-	req_one_access = list(26,31,40)
+	req_one_access = list(26,31,40,48)
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -83523,7 +83523,7 @@
 /obj/effect/floor_decal/industrial/warning,
 /obj/machinery/door/airlock/glass_engineering{
 	name = "Engineering Hallway";
-	req_one_access = list(10,40)
+	req_one_access = list(10,24,29,40)
 	},
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled/steel_grid,
@@ -90489,6 +90489,7 @@
 	name = "nukeitem"
 	},
 /obj/item/clothing/accessory/bodycam,
+/obj/item/universal_translator/ear,
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/heads/hos)
 "xHg" = (
@@ -90586,7 +90587,7 @@
 "xIw" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/glass_mining{
-	req_one_access = list(1,5,10,31,47,48,52)
+	req_one_access = list(1,5,10,19,31,47,48,52)
 	},
 /obj/structure/cable/green{
 	icon_state = "1-2"
