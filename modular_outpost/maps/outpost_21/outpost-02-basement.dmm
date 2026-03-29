@@ -9283,6 +9283,10 @@
 	dir = 10
 	},
 /obj/structure/table/glass,
+/obj/item/ano_scanner,
+/obj/item/anodevice{
+	pixel_x = -15
+	},
 /turf/simulated/floor/tiled,
 /area/rnd/research/anomaly)
 "aqO" = (
@@ -10461,6 +10465,7 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
+/obj/effect/floor_decal/corner/purple,
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/lowmain)
 "asT" = (
@@ -18808,6 +18813,9 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "2-8"
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/rnd/research/anomaly)
@@ -71055,6 +71063,24 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/research/north)
+"cMq" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/rnd/research/anomaly)
 "cNe" = (
 /obj/structure/table/glass,
 /obj/item/towel/random,
@@ -71790,10 +71816,11 @@
 /turf/simulated/floor/tiled/dark/turfpack/muriki,
 /area/maintenance/cave)
 "dDH" = (
-/obj/machinery/artifact_analyser,
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/structure/table/standard,
+/obj/item/anomaly_scanner,
 /turf/simulated/floor/tiled/dark,
 /area/rnd/research/isolation_a)
 "dDP" = (
@@ -72369,6 +72396,7 @@
 	pixel_x = 28;
 	pixel_y = -27
 	},
+/obj/effect/floor_decal/corner/purple,
 /turf/simulated/floor/tiled,
 /area/rnd/research/anomaly)
 "eeB" = (
@@ -77798,7 +77826,7 @@
 /turf/simulated/floor/wood/alt,
 /area/maintenance/oldbridge)
 "ktu" = (
-/obj/machinery/artifact_scanpad,
+/obj/machinery/anomaly_harvester,
 /turf/simulated/floor/tiled/dark,
 /area/rnd/research/isolation_a)
 "kuq" = (
@@ -84740,6 +84768,9 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/rnd/research/anomaly)
 "sfj" = (
@@ -88017,7 +88048,18 @@
 /area/maintenance/oldbridge)
 "vYT" = (
 /obj/structure/table/standard,
-/obj/item/flashlight/lamp,
+/obj/item/anomaly_releaser{
+	pixel_y = -5
+	},
+/obj/item/anomaly_releaser{
+	pixel_y = -5
+	},
+/obj/item/anomaly_releaser/science,
+/obj/item/anomaly_releaser/science,
+/obj/item/anomaly_neutralizer{
+	pixel_x = 5;
+	pixel_y = 14
+	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/research/isolation_a)
 "vZe" = (
@@ -144106,7 +144148,7 @@ afe
 axY
 alq
 amH
-kbE
+cMq
 edw
 aqR
 arX

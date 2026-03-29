@@ -5044,6 +5044,38 @@
 /obj/structure/ladder/top_hatch,
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/phoronics/burn)
+"amk" = (
+/obj/effect/auto_crayon{
+	icon_state = "night"
+	},
+/turf/simulated/floor/tiled/turfpack/muriki,
+/area/specialty/expie_clubhouse)
+"aml" = (
+/obj/machinery/cryopod,
+/turf/simulated/floor/tiled/turfpack/muriki,
+/area/specialty/expie_clubhouse)
+"amm" = (
+/obj/structure/cryofeed{
+	dir = 4
+	},
+/obj/structure/window/basic,
+/obj/structure/window/basic{
+	dir = 8
+	},
+/obj/machinery/computer/cryopod{
+	pixel_x = 32
+	},
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/turfpack/muriki,
+/area/specialty/expie_clubhouse)
+"amn" = (
+/obj/effect/auto_crayon{
+	icon_state = "night"
+	},
+/turf/simulated/floor/carpet/blucarpet/turfpack/muriki,
+/area/specialty/expie_clubhouse)
 "amE" = (
 /obj/machinery/computer/crew{
 	dir = 1
@@ -115382,7 +115414,7 @@ ajR
 ajR
 ajR
 ajR
-hIk
+luR
 luR
 luR
 luR
@@ -115542,9 +115574,9 @@ akc
 akc
 akb
 ajR
-hIk
-hIk
-hIk
+ajR
+ajR
+ajR
 luR
 luR
 luR
@@ -115702,11 +115734,11 @@ akc
 akc
 akc
 akc
-akc
+amn
+ali
+amk
+ajQ
 ajR
-hIk
-hIk
-luR
 luR
 luR
 luR
@@ -115866,9 +115898,9 @@ akj
 akc
 akd
 ajR
-hIk
-hIk
-luR
+aml
+ajQ
+ajR
 luR
 luR
 luR
@@ -116028,9 +116060,9 @@ akc
 akc
 ake
 ajR
-hIk
-hIk
-luR
+amm
+ajQ
+ajR
 luR
 luR
 luR
@@ -116190,9 +116222,9 @@ akc
 akc
 ake
 ajR
-hIk
-hIk
-luR
+ajR
+ajR
+ajR
 luR
 luR
 luR
