@@ -464,3 +464,8 @@
   - bugfix: Trolley tankers drain correctly into reagent containers
   - bugfix: refinery machines drain correctly into reagent containers
   - code_imp: reagent container can_be_placed_into moved to global list handling
+2026-03-29:
+  Diana:
+  - bugfix: All sources of teslazap is no longer explosive
+  - bugfix: Lightning can only jump to a nearby thing once.
+  - code_imp: tesla_zap args more clear.
