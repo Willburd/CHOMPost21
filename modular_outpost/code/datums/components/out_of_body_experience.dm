@@ -45,7 +45,7 @@
 		badbody.revive() // UGH
 		qdel(env)
 		log_world("## DEBUG: successfully spawned out of body experience [badbody.real_name] at [T.x] [T.y] [T.z].")
-		addtimer(CALLBACK(src, PROC_REF(return_to_original)), rand(9, 18) SECONDS, TIMER_DELETE_ME)
+		addtimer(CALLBACK(src, PROC_REF(return_to_original)), rand(12, 28) SECONDS, TIMER_DELETE_ME)
 
 /datum/component/out_of_body_experience/Destroy(force)
 	. = ..()
