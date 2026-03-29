@@ -67247,9 +67247,6 @@
 	name = "Less-Lethal Grenades";
 	req_access = list(1)
 	},
-/obj/structure/sign/directions/ladder_down{
-	pixel_y = -28
-	},
 /obj/item/storage/box/syndie_kit/concussion_grenade{
 	name = "Concussion Grenades"
 	},
