@@ -18712,6 +18712,22 @@
 /obj/structure/trailblazer/yellow,
 /turf/simulated/floor/water/turfpack/muriki,
 /area/mine/unexplored/muriki/mountainnorth)
+"aRN" = (
+/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 4
+	},
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/blue/bordercorner{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/blue/bordercorner{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/reception)
 "aSh" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4;
@@ -137029,7 +137045,7 @@ ttI
 dNv
 tzN
 ryQ
-tky
+aRN
 tky
 tky
 tky
