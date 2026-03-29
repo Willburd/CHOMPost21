@@ -14,8 +14,14 @@
 // Special evil one
 /datum/component/out_of_body_experience/no_bad_body/shadow_realm
 	landmark_id = "halluspawn"
-	VAR_PROTECTED/min_time = 15 SECONDS
-	VAR_PROTECTED/max_time = 35 SECONDS
+	min_time = 15 SECONDS
+	max_time = 35 SECONDS
+
+// Nightmare man
+/datum/component/out_of_body_experience/no_bad_body/nightmare_man
+	landmark_id = "halluspawn"
+	min_time = 25 SECONDS
+	max_time = 45 SECONDS
 
 /datum/component/out_of_body_experience/Initialize()
 	if(!ishuman(parent))
