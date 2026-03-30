@@ -44,6 +44,11 @@ GLOBAL_LIST_EMPTY(active_autoresleevers)
 	if(!allow_ghosts_to_trigger)
 		return
 	// Outpost 21 addition end
+	// Outpost 21 edit begin - Coredump prevents scans
+	if(SStranscore.default_db?.core_dumped)
+		to_chat(user, span_warning("Resleeving database is dumped and offline."))
+		return
+	// Outpost 21 edit end
 	update_icon()
 	if(spawn_slots == 0)
 		to_chat(user, span_warning("There are no more respawn slots."))
@@ -91,8 +96,13 @@ GLOBAL_LIST_EMPTY(active_autoresleevers)
 	if(stat) // Outpost 21 edit - We prefer our autosleever to not work in a powerout, was:  & (BROKEN | MAINT | EMPED)) // Let it still work when power is just off, it has it's own backup reserve or something.
 		to_chat(ghost, span_warning("This machine is not functioning..."))
 		return
+	// Outpost 21 edit begin - Coredump prevents scans
+	if(SStranscore.default_db?.core_dumped)
+		to_chat(ghost, span_warning("Resleeving database is dumped and offline."))
+		return
+	// Outpost 21 edit end
 	if(!isobserver(ghost))
-		to_chat(ghost, "<span class='warning'>Auto-resleever has recieved your ID. Unfortunately you are inhabiting an animal and cannot be auto-resleeved. You may click the auto-resleever to resleeve yourself when your death timer has ended.</span>") // Outpost 21 edit - actually inform players
+		to_chat(ghost, span_warning("Auto-resleever has recieved your ID. Unfortunately you are inhabiting an animal and cannot be auto-resleeved. You may click the auto-resleever to resleeve yourself when your death timer has ended.")) // Outpost 21 edit - actually inform players
 		return
 	if(ghost.mind && ghost.mind.current && ghost.mind.current.stat != DEAD && ghost.mind.current.enabled == TRUE) //CHOMPEdit - Disabled body shouldn't block this.
 		if(istype(ghost.mind.current.loc, /obj/item/mmi))
@@ -323,6 +333,12 @@ GLOBAL_LIST_EMPTY(active_autoresleevers)
 
 /obj/machinery/transhuman/autoresleever/proc/get_id_trigger(var/obj/item/card/id/D)
 	if(stat || isnull(releaseturf))
+		return
+
+	// Can't use resleever now
+	if(SStranscore.default_db?.core_dumped)
+		src.visible_message("[src] flashes 'Database Safety Interlock Failure', and lets out a loud incorrect sounding beep!")
+		playsound(src, 'sound/machines/defib_failed.ogg', 50, 0)
 		return
 
 	// what even happened?
