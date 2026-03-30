@@ -22,7 +22,7 @@ GLOBAL_DATUM(synxes, /datum/antagonist/synx)
 
 /datum/antagonist/synx/New()
 	..()
-	synxes = src
+	GLOB.synxes = src
 
 /datum/antagonist/synx/create_objectives(var/datum/mind/synx)
 	if(!..())

@@ -22,7 +22,7 @@ GLOBAL_DATUM(hungryones, /datum/antagonist/hungers)
 
 /datum/antagonist/hungers/New()
 	..()
-	hungryones = src
+	GLOB.hungryones = src
 
 /datum/antagonist/hungers/create_objectives(var/datum/mind/hunger)
 	if(!..())

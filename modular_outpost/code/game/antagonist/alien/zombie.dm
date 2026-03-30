@@ -26,7 +26,7 @@ GLOBAL_DATUM(zombies, /datum/antagonist/zombie)
 
 /datum/antagonist/zombie/New()
 	..()
-	zombies = src
+	GLOB.zombies = src
 	infestationminimum = rand(13,26);
 	infestationglobalgoal = rand(5,8); // lowpop
 

@@ -23,7 +23,7 @@ GLOBAL_DATUM(chus, /datum/antagonist/chu)
 
 /datum/antagonist/chu/New()
 	. = ..()
-	chus = src
+	GLOB.chus = src
 	infestationglobalgoal = rand(15,25); // lowpop
 
 /datum/antagonist/chu/create_objectives(var/datum/mind/chu)

@@ -1,4 +1,4 @@
-var/datum/antagonist/rustdrone/rust_drones
+GLOBAL_DATUM(rust_drones, /datum/antagonist/rustdrone)
 
 /datum/antagonist/rustdrone
 	id = MODE_RUSTDRONE
@@ -19,7 +19,7 @@ var/datum/antagonist/rustdrone/rust_drones
 
 /datum/antagonist/rustdrone/New()
 	..()
-	rust_drones = src
+	GLOB.rust_drones = src
 
 /datum/antagonist/rustdrone/update_antag_mob(var/datum/mind/drone)
 	..()
