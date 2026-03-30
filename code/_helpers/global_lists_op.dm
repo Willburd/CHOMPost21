@@ -1,2 +1,4 @@
 GLOBAL_LIST_EMPTY(allisclean_list)
 GLOBAL_LIST_EMPTY(all_books)
+GLOBAL_LIST_EMPTY(phones_on_station)
+GLOBAL_LIST_EMPTY(outpost_rocket_pods)
