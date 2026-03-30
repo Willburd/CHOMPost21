@@ -1,4 +1,4 @@
-var/datum/antagonist/zombie/zombies
+GLOBAL_DATUM(zombies, /datum/antagonist/zombie)
 
 // Inherits most of its vars from the base datum.
 /datum/antagonist/zombie

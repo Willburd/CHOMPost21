@@ -418,6 +418,7 @@
 #include "code\_helpers\gender.dm"
 #include "code\_helpers\generators.dm"
 #include "code\_helpers\global_lists.dm"
+#include "code\_helpers\global_lists_op.dm"
 #include "code\_helpers\global_lists_vr.dm"
 #include "code\_helpers\guid.dm"
 #include "code\_helpers\icons.dm"

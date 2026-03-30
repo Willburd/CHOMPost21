@@ -1,0 +1,2 @@
+GLOBAL_LIST_EMPTY(allisclean_list)
+GLOBAL_LIST_EMPTY(all_books)

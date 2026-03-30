@@ -10,11 +10,10 @@
 
 #define INVPAGESIZE 6
 #define INVPAGESIZEPUBLIC 7
-var/global/list/all_books // moved to global list so it can be shared by public comps
 
 // Moved to a hook instead of in initilize. The whole pre-packaged book inventory is fully static and isn't meant to be changed anyway
 /hook/roundstart/proc/assemble_library_inventory()
-	global.all_books = list()
+	GLOB.all_books = list()
 	var/list/base_genre_books = list(
 		/obj/item/book/custom_library/fiction,
 		/obj/item/book/custom_library/nonfiction,
@@ -28,15 +27,15 @@ var/global/list/all_books // moved to global list so it can be shared by public 
 
 	for(var/path in subtypesof(/obj/item/book/codex/lore))
 		var/obj/item/book/C = new path(null)
-		global.all_books[C.name] = C
+		GLOB.all_books[C.name] = C
 
 	for(var/path in subtypesof(/obj/item/book/custom_library) - base_genre_books)
 		var/obj/item/book/B = new path(null)
-		global.all_books[B.title] = B
+		GLOB.all_books[B.title] = B
 
 	for(var/path in subtypesof(/obj/item/book/bundle/custom_library) - base_genre_books)
 		var/obj/item/book/M = new path(null)
-		global.all_books[M.title] = M
+		GLOB.all_books[M.title] = M
 
 	return TRUE
 
@@ -91,15 +90,15 @@ var/global/list/all_books // moved to global list so it can be shared by public 
 				if(token)
 					inv += list(tgui_add_library_token(token))
 		if("publiconline") // internal archive (hardcoded books)
-			if(inventory_page + 1 >= global.all_books.len / INVPAGESIZEPUBLIC)
+			if(inventory_page + 1 >= GLOB.all_books.len / INVPAGESIZEPUBLIC)
 				inv_right = FALSE
-			for(var/BP in global.all_books)
+			for(var/BP in GLOB.all_books)
 				entry_count++
 				if(entry_count < start_entry)
 					continue
 				if(entry_count >= start_entry + INVPAGESIZEPUBLIC)
 					break
-				var/obj/item/book/B = global.all_books[BP]
+				var/obj/item/book/B = GLOB.all_books[BP]
 				if(B)
 					inv += list(tgui_add_library_book(B))
 	data["inventory"] = inv
@@ -131,7 +130,7 @@ var/global/list/all_books // moved to global list so it can be shared by public 
 				if("publicarchive") // external archive (SSpersistance database)
 					siz = SSpersistence.all_books.len / INVPAGESIZEPUBLIC
 				if("publiconline") // internal archive (hardcoded books)
-					siz = global.all_books.len / INVPAGESIZEPUBLIC
+					siz = GLOB.all_books.len / INVPAGESIZEPUBLIC
 			if(inventory_page + 1 >= siz)
 				inventory_page-- // go back
 	if(.)
@@ -198,15 +197,15 @@ var/global/list/all_books // moved to global list so it can be shared by public 
 				if(B)
 					inv += list(tgui_add_library_book(B))
 		if("online") // internal archive (hardcoded books)
-			if(inventory_page + 1 >= global.all_books.len / INVPAGESIZE)
+			if(inventory_page + 1 >= GLOB.all_books.len / INVPAGESIZE)
 				inv_right = FALSE
-			for(var/BP in global.all_books)
+			for(var/BP in GLOB.all_books)
 				entry_count++
 				if(entry_count < start_entry)
 					continue
 				if(entry_count >= start_entry + INVPAGESIZE)
 					break
-				var/obj/item/book/B = global.all_books[BP]
+				var/obj/item/book/B = GLOB.all_books[BP]
 				if(B)
 					inv += list(tgui_add_library_book(B))
 		if("archive") // external archive (SSpersistance database)
@@ -391,7 +390,7 @@ var/global/list/all_books // moved to global list so it can be shared by public 
 				if("inventory") // barcode scanned books for checkout
 					siz = inventory.len / INVPAGESIZE
 				if("online") // internal archive (hardcoded books)
-					siz = global.all_books.len / INVPAGESIZE
+					siz = GLOB.all_books.len / INVPAGESIZE
 				if("archive") // external archive (SSpersistance database)
 					siz = SSpersistence.all_books.len / INVPAGESIZE
 				if("checkedout") // books checked out of the library
