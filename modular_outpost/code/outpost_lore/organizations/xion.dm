@@ -1,1 +1,1 @@
-/datum/category_item/catalogue/information/organization/xion
+/datum/lore/organization/tsc/xion
