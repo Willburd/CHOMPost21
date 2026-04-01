@@ -1,0 +1,9 @@
+author: "FluffMedic"
+delete-after: True
+changes:
+  - rscadd: "Prismatic Fireflies readded to tyr."
+  - balance: "gold ant no longer has lightning on it's melee. Delayed short ranged EMP on death"
+  - balance: "silver ants no longer reflect lasers. Now slightly transparent"
+  - balance: "Mhydro ant's damage is halved. Now must be clicked on to be shot. Can exist in other ant spaces"
+  - balance: "The gatekeeper is reduced to a single projectile"
+  - maptweak: "Hidden Tyr entrance is altered, alongside the tyr tunnels in general"
