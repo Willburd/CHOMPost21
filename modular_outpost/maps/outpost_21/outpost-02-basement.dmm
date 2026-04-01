@@ -25277,9 +25277,10 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay2)
 "aUa" = (
-/obj/structure/disposalpipe/junction{
+/obj/structure/disposalpipe/sortjunction/flipped{
 	dir = 8;
-	icon_state = "pipe-j2"
+	name = "Chemical Storage";
+	sortType = "Locker Room"
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay2)
@@ -25529,9 +25530,6 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/medicelevbasement)
 "aUy" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
@@ -25543,6 +25541,10 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "1-8"
+	},
+/obj/structure/disposalpipe/junction{
+	dir = 8;
+	icon_state = "pipe-j2"
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay2)
@@ -25761,11 +25763,12 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/obj/structure/disposalpipe/junction{
-	dir = 4
-	},
 /obj/effect/floor_decal/steeldecal/steel_decals_central7{
 	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay2)
@@ -26514,7 +26517,7 @@
 /area/crew_quarters/pool)
 "aWb" = (
 /obj/effect/floor_decal/corner/blue/full,
-/obj/structure/closet/firecloset/full,
+/obj/structure/closet/firecloset/full/double,
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay2)
 "aWc" = (
@@ -26568,7 +26571,9 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/machinery/door/airlock/glass_outpost_refinery,
+/obj/machinery/door/airlock/glass_outpost_refinery{
+	name = "Chemical Storage"
+	},
 /turf/simulated/floor/tiled/old_cargo/white,
 /area/medical/chem_storage)
 "aWg" = (
@@ -26625,9 +26630,10 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 8
 	},
-/obj/machinery/disposal/wall{
+/obj/machinery/disposal/wall/mail_reciever{
 	dir = 8;
-	pixel_x = 32
+	pixel_x = 32;
+	name = "disposal mail destination(Chemical Storage)"
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/chem_storage)
@@ -27091,14 +27097,14 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 10
 	},
-/obj/structure/closet/firecloset/full/double,
+/obj/structure/closet/radiation,
 /turf/simulated/floor/tiled/dark,
 /area/medical/chem_storage)
 "aWW" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 6
 	},
-/obj/structure/closet/radiation,
+/obj/machinery/chemical_synthesizer,
 /turf/simulated/floor/tiled/dark,
 /area/medical/chem_storage)
 "aWX" = (
@@ -83860,7 +83866,7 @@
 	dir = 9
 	},
 /obj/structure/disposalpipe/trunk{
-	dir = 4
+	dir = 1
 	},
 /obj/machinery/disposal/wall{
 	dir = 4;
