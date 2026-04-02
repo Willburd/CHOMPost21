@@ -189,7 +189,7 @@
 /obj/item/clothing/accessory/rank_eshui/borg
 	name = "\improper (WO-0) Station Synthetic"
 	rank = "(WO-0) Station Synthetic"
-	icon_state = "rank_cadot"
+	icon_state = "rank_rodot"
 	rank_level_index = RANK_BORG
 
 /obj/item/clothing/accessory/rank_eshui/ai
