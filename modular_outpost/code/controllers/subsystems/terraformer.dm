@@ -59,23 +59,25 @@ SUBSYSTEM_DEF(terraformer)
 		shuffle_inplace(current_run)
 
 	// Irritation spawns macrophages
-	if(prob(30) && length(irritated_turfs))
+	if(prob(20) && length(irritated_turfs))
 		// Spawn then at recently irritated turfs
 		while(irritation)
-			var/turf/spawn_turf = pick(irritated_turfs)
-			spawn_turf.visible_message(span_danger("Something seeps out of \the [spawn_turf]!"))
-			var/mob/living/simple_mob/vore/aggressive/macrophage/goober = new /mob/living/simple_mob/vore/aggressive/macrophage(spawn_turf)
-			goober.name = "neutrophil"
-			goober.desc = "An immune system cell that attacks hostile intruders."
-			addtimer(CALLBACK(goober, TYPE_PROC_REF(/mob/living/simple_mob/vore/aggressive/macrophage, deathcheck)), rand(1,3) MINUTES)
 			irritation--
+			if(prob(50)) // Sometimes we calm down without spawning anything
+				var/turf/spawn_turf = pick(irritated_turfs)
+				spawn_turf.visible_message(span_danger("Something seeps out of \the [spawn_turf]!"))
+				var/mob/living/simple_mob/vore/aggressive/macrophage/goober = new /mob/living/simple_mob/vore/aggressive/macrophage(spawn_turf)
+				goober.name = "neutrophil"
+				goober.desc = "An immune system cell that attacks hostile intruders."
+				addtimer(CALLBACK(goober, TYPE_PROC_REF(/mob/living/simple_mob/vore/aggressive/macrophage, deathcheck)), rand(1,3) MINUTES)
 			if(prob(60)) // Don't dump our whole load at once!
 				break
 			if(MC_TICK_CHECK)
 				return
-		// No longer irritated, clear memory
-		if(!irritation)
-			irritated_turfs.Cut()
+
+	// No longer irritated, clear memory
+	if(!irritation)
+		irritated_turfs.Cut()
 
 	// Update healing
 	while(length(current_run))
