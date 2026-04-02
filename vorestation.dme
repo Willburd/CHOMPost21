@@ -5755,6 +5755,7 @@
 #include "modular_outpost\code\game\objects\effects\posters\willlewd.dm"
 #include "modular_outpost\code\game\objects\items\candybowl.dm"
 #include "modular_outpost\code\game\objects\items\crayons.dm"
+#include "modular_outpost\code\game\objects\items\stentkit.dm"
 #include "modular_outpost\code\game\objects\items\whoopiecushion.dm"
 #include "modular_outpost\code\game\objects\items\devices\claymore.dm"
 #include "modular_outpost\code\game\objects\items\devices\laserdesignator.dm"
