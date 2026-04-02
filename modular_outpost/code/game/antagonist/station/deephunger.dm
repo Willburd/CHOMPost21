@@ -1,4 +1,4 @@
-var/datum/antagonist/hungers/hungryones
+GLOBAL_DATUM(hungryones, /datum/antagonist/hungers)
 
 // Inherits most of its vars from the base datum.
 /datum/antagonist/hungers
@@ -22,7 +22,7 @@ var/datum/antagonist/hungers/hungryones
 
 /datum/antagonist/hungers/New()
 	..()
-	hungryones = src
+	GLOB.hungryones = src
 
 /datum/antagonist/hungers/create_objectives(var/datum/mind/hunger)
 	if(!..())

@@ -1,1 +1,1 @@
-/datum/category_item/catalogue/information/organization/zeng_hu
+/datum/lore/organization/tsc/zeng_hu

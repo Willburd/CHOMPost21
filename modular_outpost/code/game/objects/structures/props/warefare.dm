@@ -1,11 +1,9 @@
-var/global/list/outpost_rocket_pods = list()
-
 /obj/structure/prop/war/tgmc_missile_rack/Initialize(mapload)
 	. = ..()
-	global.outpost_rocket_pods += src
+	GLOB.outpost_rocket_pods += src
 
 /obj/structure/prop/war/tgmc_missile_rack/Destroy()
-	global.outpost_rocket_pods -= src
+	GLOB.outpost_rocket_pods -= src
 	. = ..()
 
 /obj/structure/prop/war/tgmc_missile_rack/proc/fire_rocket()
@@ -25,4 +23,4 @@ var/global/list/outpost_rocket_pods = list()
 	sparks.set_up(3, 0, loc)
 	sparks.start()
 
-	global.outpost_rocket_pods -= src // Used up!
+	GLOB.outpost_rocket_pods -= src // Used up!

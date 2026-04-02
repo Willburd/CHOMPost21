@@ -1,4 +1,4 @@
-var/datum/antagonist/zombie/zombies
+GLOBAL_DATUM(zombies, /datum/antagonist/zombie)
 
 // Inherits most of its vars from the base datum.
 /datum/antagonist/zombie
@@ -26,7 +26,7 @@ var/datum/antagonist/zombie/zombies
 
 /datum/antagonist/zombie/New()
 	..()
-	zombies = src
+	GLOB.zombies = src
 	infestationminimum = rand(13,26);
 	infestationglobalgoal = rand(5,8); // lowpop
 

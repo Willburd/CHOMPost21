@@ -53,4 +53,31 @@
 		/obj/item/prop/deconstructable/gigacell = 2
 	)
 
+// Bluespace tech
+/datum/experiment/scanning/points/bluespace_containing_items
+	name = "Bluespace Pocket Folding"
+	description = "Some objects naturally contain pockets of unstable folded bluespace. Destructively analyze these rare naturally created objects to understand their properties."
+	required_points = 2
+	allowed_experimentors = DESTRUCTIVE_DEVICES
+	traits = EXPERIMENT_TRAIT_DESTRUCTIVE
+	exp_tag = EXPERIMENT_TAG_PHYSICAL
+	required_atoms = list(
+		/obj/item/reagent_containers/food/snacks/grown = 1,
+		/obj/item/slime_extract/bluespace = 1,
+		/obj/item/anobattery = 1,
+		/obj/item/assembly/signaler/anomaly/bluespace = 1,
+		/obj/item/organ/internal/malignant/tumor/bluespace = 1,
+	)
+
+/datum/experiment/scanning/points/bluespace_containing_items/final_contributing_index_checks(datum/component/experiment_handler/experiment_handler, atom/target, typepath)
+	if(istype(target, /obj/item/reagent_containers/food/snacks/grown))
+		var/obj/item/reagent_containers/food/snacks/grown/to_check = target
+		if(!to_check.seed?.get_trait(TRAIT_TELEPORTING))
+			return FALSE
+	if(istype(target, /obj/item/anobattery))
+		var/obj/item/anobattery/to_check = target
+		if(to_check.battery_effect?.effect_type != EFFECT_TELEPORT)
+			return FALSE
+	return TRUE
+
 #undef DESTRUCTIVE_DEVICES

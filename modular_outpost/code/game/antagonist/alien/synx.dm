@@ -1,4 +1,4 @@
-var/datum/antagonist/synx/synxes
+GLOBAL_DATUM(synxes, /datum/antagonist/synx)
 
 // Inherits most of its vars from the base datum.
 /datum/antagonist/synx
@@ -22,7 +22,7 @@ var/datum/antagonist/synx/synxes
 
 /datum/antagonist/synx/New()
 	..()
-	synxes = src
+	GLOB.synxes = src
 
 /datum/antagonist/synx/create_objectives(var/datum/mind/synx)
 	if(!..())

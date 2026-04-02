@@ -1,4 +1,4 @@
-var/datum/antagonist/chu/chus
+GLOBAL_DATUM(chus, /datum/antagonist/chu)
 
 // Inherits most of its vars from the base datum.
 /datum/antagonist/chu
@@ -23,7 +23,7 @@ var/datum/antagonist/chu/chus
 
 /datum/antagonist/chu/New()
 	. = ..()
-	chus = src
+	GLOB.chus = src
 	infestationglobalgoal = rand(15,25); // lowpop
 
 /datum/antagonist/chu/create_objectives(var/datum/mind/chu)

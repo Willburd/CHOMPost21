@@ -229,6 +229,12 @@ GLOBAL_DATUM(sleevemate_mob, /mob/living/carbon/human/dummy/mannequin)
 			to_chat(usr,span_warning("Target seems totally braindead."))
 			return
 
+		// Outpost 21 edit begin - Coredump prevents scans
+		if(SStranscore.default_db?.core_dumped)
+			to_chat(usr,span_danger("Transcore safety interlock failure. Resleeving database is dumped and offline."))
+			return
+		// Outpost 21 edit end
+
 		/* Outpost 21 edit - Nif removal
 		var/nif
 		if(ishuman(target))
@@ -266,6 +272,12 @@ GLOBAL_DATUM(sleevemate_mob, /mob/living/carbon/human/dummy/mannequin)
 		if(!ishuman(target))
 			to_chat(usr,span_warning("Target is not of an acceeptable body type."))
 			return
+
+		// Outpost 21 edit begin - Coredump prevents scans
+		if(SStranscore.default_db?.core_dumped)
+			to_chat(usr,span_danger("Transcore safety interlock failure. Resleeving database is dumped and offline."))
+			return
+		// Outpost 21 edit end
 
 		var/mob/living/carbon/human/H = target
 

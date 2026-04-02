@@ -5044,6 +5044,59 @@
 /obj/structure/ladder/top_hatch,
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/phoronics/burn)
+"amk" = (
+/obj/effect/auto_crayon{
+	icon_state = "night"
+	},
+/turf/simulated/floor/tiled/turfpack/muriki,
+/area/specialty/expie_clubhouse)
+"aml" = (
+/obj/machinery/cryopod,
+/turf/simulated/floor/tiled/turfpack/muriki,
+/area/specialty/expie_clubhouse)
+"amm" = (
+/obj/structure/cryofeed{
+	dir = 4
+	},
+/obj/structure/window/basic,
+/obj/structure/window/basic{
+	dir = 8
+	},
+/obj/machinery/computer/cryopod{
+	pixel_x = 32
+	},
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/turfpack/muriki,
+/area/specialty/expie_clubhouse)
+"amn" = (
+/obj/effect/auto_crayon{
+	icon_state = "night"
+	},
+/turf/simulated/floor/carpet/blucarpet/turfpack/muriki,
+/area/specialty/expie_clubhouse)
+"amo" = (
+/turf/simulated/flesh/indestructable,
+/area/muriki/processor/gland/co2)
+"amp" = (
+/turf/simulated/flesh/indestructable,
+/area/muriki/processor)
+"amq" = (
+/turf/simulated/flesh/indestructable,
+/area/muriki/processor/hall)
+"amr" = (
+/turf/simulated/flesh/indestructable,
+/area/muriki/processor/pools/antrum)
+"ams" = (
+/turf/simulated/flesh/indestructable,
+/area/muriki/processor/gland/space)
+"amt" = (
+/turf/simulated/flesh/indestructable,
+/area/muriki/processor/pools/pylorus)
+"amu" = (
+/turf/simulated/flesh/indestructable,
+/area/muriki/processor/pools/eastfund)
 "amE" = (
 /obj/machinery/computer/crew{
 	dir = 1
@@ -52468,9 +52521,9 @@ hxn
 hxn
 hxn
 hxn
-hxn
-hxn
-hxn
+amp
+amp
+amp
 wlx
 wlx
 wlx
@@ -52482,15 +52535,15 @@ hxn
 hxn
 hxn
 hxn
+ams
+ams
 plZ
 plZ
+ams
+ams
+ams
 plZ
 plZ
-plZ
-plZ
-plZ
-plZ
-plZ
 hxn
 hxn
 hxn
@@ -52512,13 +52565,13 @@ hxn
 hxn
 hxn
 hxn
+amo
+amo
 sSm
 sSm
 sSm
-sSm
-sSm
-sSm
-sSm
+amo
+amo
 hxn
 hxn
 hxn
@@ -52609,21 +52662,21 @@ kPb
 (3,1,1) = {"
 dXn
 hxn
-hxn
+amp
+amt
 ssD
 ssD
 ssD
-ssD
-ssD
+amt
 ssD
 fqq
 fqq
 qYo
 qYo
 ssD
-ssD
-ssD
-ssD
+amt
+amt
+amt
 ssD
 ssD
 hxn
@@ -52653,9 +52706,9 @@ aaF
 aaF
 aaF
 plZ
-plZ
-plZ
-plZ
+ams
+ams
+ams
 plZ
 fQF
 fQF
@@ -52680,7 +52733,7 @@ aaH
 aaH
 aaH
 aaH
-sSm
+amo
 sSm
 sSm
 hxn
@@ -52771,12 +52824,12 @@ kPb
 (4,1,1) = {"
 dXn
 hxn
-hxn
+amp
 ssD
 ssD
 ssD
-ssD
-ssD
+amt
+amt
 fqq
 fqq
 qYo
@@ -52785,7 +52838,7 @@ qYo
 qYo
 qYo
 qYo
-ssD
+amt
 ssD
 ssD
 ssD
@@ -52806,7 +52859,7 @@ wlx
 cgR
 oBz
 wlx
-plZ
+ams
 aaF
 aaF
 aaF
@@ -52834,8 +52887,8 @@ fQF
 fQF
 hxn
 hxn
+amo
 sSm
-sSm
 aaH
 aaH
 aaH
@@ -52844,7 +52897,7 @@ aaH
 aaH
 aaH
 aaH
-sSm
+amo
 hxn
 dWV
 dWV
@@ -52953,7 +53006,7 @@ fqq
 fqq
 ssD
 wlx
-wlx
+amq
 hxn
 wlx
 wlx
@@ -52968,19 +53021,19 @@ wlx
 cgR
 wlx
 wlx
+ams
+aaF
+aaF
+aaF
+aaF
+aaF
+aaF
+aaF
+aaF
+aaF
+aaF
+ams
 plZ
-aaF
-aaF
-aaF
-aaF
-aaF
-aaF
-aaF
-aaF
-aaF
-aaF
-plZ
-plZ
 fQF
 fQF
 fQF
@@ -52996,7 +53049,7 @@ hxn
 hxn
 hxn
 hxn
-sSm
+amo
 aaH
 aaH
 aaH
@@ -53006,7 +53059,7 @@ aaH
 aaH
 aaH
 aaH
-sSm
+amo
 hxn
 dWV
 dWV
@@ -53115,7 +53168,7 @@ gNR
 fqq
 ssD
 wlx
-wlx
+amq
 wlx
 wlx
 wlx
@@ -53140,8 +53193,8 @@ aaF
 aaF
 aaF
 plZ
-plZ
-plZ
+ams
+ams
 hxn
 hxn
 hxn
@@ -53276,8 +53329,8 @@ fqq
 fqq
 fqq
 ssD
-wlx
-wlx
+amq
+amq
 wlx
 wlx
 wlx
@@ -53298,7 +53351,7 @@ tsg
 xLQ
 lWd
 plZ
-plZ
+ams
 aaF
 aaF
 plZ
@@ -53433,8 +53486,8 @@ qYo
 qYo
 qYo
 qYo
-ssD
-ssD
+amt
+amt
 fqq
 fqq
 ssD
@@ -53460,9 +53513,9 @@ cgR
 cgR
 qhm
 cgR
-wlx
-plZ
-plZ
+amq
+ams
+ams
 wlx
 cgR
 awf
@@ -53474,8 +53527,8 @@ wlx
 wlx
 wlx
 wlx
-wlx
-wlx
+amq
+amq
 wlx
 cgR
 vIQ
@@ -53493,7 +53546,7 @@ aaH
 aaH
 aaH
 aaH
-sSm
+amo
 dWV
 dWV
 dWV
@@ -53635,8 +53688,8 @@ cgR
 tTT
 cgR
 wlx
-wlx
-wlx
+amq
+amq
 wlx
 wlx
 cgR
@@ -53655,7 +53708,7 @@ aaH
 aaH
 aaH
 aaH
-sSm
+amo
 dWV
 dWV
 dWV
@@ -53807,9 +53860,9 @@ cgR
 wlx
 wlx
 sSm
-sSm
-sSm
-sSm
+amo
+amo
+amo
 aaH
 eFA
 aaH
@@ -53817,7 +53870,7 @@ aaH
 aaH
 aaH
 sSm
-hxn
+amp
 dWV
 dWV
 dWV
@@ -53972,8 +54025,8 @@ wlx
 wlx
 wlx
 wlx
-sSm
-sSm
+amo
+amo
 aaH
 aaH
 aaH
@@ -54110,9 +54163,9 @@ wlx
 cgR
 cgR
 wlx
-wlx
-wlx
-wlx
+amq
+amq
+amq
 wlx
 cgR
 cgR
@@ -54140,7 +54193,7 @@ wlx
 aaH
 aaH
 aaH
-sSm
+amo
 hxn
 dWV
 dWV
@@ -54253,8 +54306,8 @@ cgR
 qMg
 cgR
 wlx
-wlx
-wlx
+amq
+amq
 wlx
 wlx
 cgR
@@ -54271,8 +54324,8 @@ wri
 cgR
 cgR
 wlx
-wlx
-wlx
+amq
+amq
 wlx
 wlx
 wlx
@@ -54285,8 +54338,8 @@ wlx
 wlx
 wlx
 wlx
-wlx
-wlx
+amq
+amq
 wlx
 cgR
 cgR
@@ -54301,8 +54354,8 @@ cgR
 wlx
 wlx
 sSm
-sSm
-sSm
+amo
+amo
 hxn
 dWV
 dWV
@@ -54394,10 +54447,10 @@ hxn
 fQF
 hxn
 hxn
-hxn
+amp
 fqq
 fqq
-ssD
+amt
 yks
 qYo
 qYo
@@ -54416,7 +54469,7 @@ cgR
 cgR
 wlx
 wlx
-wlx
+amq
 cgR
 wlx
 cgR
@@ -54433,7 +54486,7 @@ gQJ
 cgR
 wlx
 wlx
-wlx
+amq
 wlx
 wlx
 wlx
@@ -54446,16 +54499,16 @@ nxs
 uGI
 wlx
 wlx
-wlx
-wlx
+amq
+amq
 wlx
 wlx
 tTT
 wlx
 wlx
 cgR
-wlx
-wlx
+amq
+amq
 wlx
 cgR
 cgR
@@ -54556,7 +54609,7 @@ hxn
 fQF
 hxn
 hxn
-hxn
+amp
 ssD
 fqq
 fqq
@@ -54617,7 +54670,7 @@ wlx
 wlx
 cgR
 wlx
-wlx
+amq
 wlx
 wlx
 cgR
@@ -54893,7 +54946,7 @@ qYo
 qYo
 gcn
 qYo
-ssD
+amt
 fqq
 ssD
 wlx
@@ -55038,8 +55091,8 @@ kPb
 "}
 (18,1,1) = {"
 dXn
-hxn
-hxn
+amp
+amp
 fQF
 fQF
 hxn
@@ -55048,8 +55101,8 @@ fqq
 fqq
 ssD
 ssD
-ssD
-ssD
+amt
+amt
 ssD
 fqq
 fqq
@@ -55201,7 +55254,7 @@ kPb
 (19,1,1) = {"
 dXn
 hxn
-hxn
+amp
 hxn
 fQF
 hxn
@@ -55224,8 +55277,8 @@ wlx
 cgR
 cgR
 wlx
-wlx
-wlx
+amq
+amq
 fbz
 wlx
 wlx
@@ -55266,7 +55319,7 @@ wlx
 cgR
 cgR
 wlx
-wlx
+amq
 wlx
 cgR
 cgR
@@ -55386,7 +55439,7 @@ dZJ
 iqr
 dZJ
 wlx
-wlx
+amq
 wlx
 hxn
 hxn
@@ -55421,14 +55474,14 @@ xbQ
 xbQ
 nxs
 nxs
-wlx
+amq
 wlx
 wlx
 wlx
 cgR
 wlx
-wlx
-wlx
+amq
+amq
 wlx
 wFV
 wlx
@@ -55528,8 +55581,8 @@ hxn
 hxn
 fQF
 fQF
-hxn
-wlx
+amp
+amq
 cgR
 cgR
 wlx
@@ -55583,13 +55636,13 @@ xbQ
 xbQ
 xbQ
 nxs
-wlx
-wlx
+amq
+amq
 dZJ
 wlx
 cgR
 wlx
-wlx
+amq
 wlx
 cgR
 cgR
@@ -55690,7 +55743,7 @@ hxn
 hxn
 hxn
 fQF
-hxn
+amp
 wlx
 wlx
 cgR
@@ -56079,8 +56132,8 @@ wlx
 wlx
 wlx
 wlx
-wlx
-wlx
+amq
+amq
 wlx
 fQF
 hxn
@@ -56173,7 +56226,7 @@ kPb
 (25,1,1) = {"
 dXn
 hxn
-hxn
+amp
 hxn
 fQF
 fQF
@@ -56188,14 +56241,14 @@ wlx
 cgR
 cgR
 wlx
-wlx
-wlx
+amq
+amq
 cgR
 cXh
 cgR
 cgR
-wlx
-wlx
+amq
+amq
 wlx
 hxn
 fQF
@@ -56238,7 +56291,7 @@ cgR
 cgR
 wlx
 dZJ
-wlx
+amq
 wlx
 cgR
 cgR
@@ -56335,7 +56388,7 @@ kPb
 (26,1,1) = {"
 dXn
 hxn
-hxn
+amp
 hxn
 hxn
 fQF
@@ -56350,7 +56403,7 @@ cgR
 wlx
 wlx
 wlx
-wlx
+amq
 wlx
 cgR
 cgR
@@ -56497,8 +56550,8 @@ kPb
 (27,1,1) = {"
 dXn
 hxn
-hxn
-hxn
+amp
+amp
 hxn
 fQF
 fQF
@@ -56566,8 +56619,8 @@ wlx
 tTT
 wlx
 wlx
-wlx
-wlx
+amq
+amq
 hxn
 dWV
 dWV
@@ -56718,17 +56771,17 @@ uGI
 uGI
 cgR
 cgR
+amq
+amq
 wlx
 wlx
-wlx
-wlx
-wlx
+amq
 wlx
 wlx
 cgR
 wlx
 wlx
-wlx
+amq
 wlx
 dWV
 dWV
@@ -56839,8 +56892,8 @@ cgR
 cgR
 cgR
 wlx
-wlx
-wlx
+amq
+amq
 wlx
 wlx
 hxn
@@ -57002,7 +57055,7 @@ wlx
 wlx
 wlx
 wlx
-hxn
+amp
 fQF
 fQF
 fQF
@@ -57047,8 +57100,8 @@ iWS
 iWS
 dYq
 dYq
-dYq
-dYq
+amr
+amr
 iWS
 iWS
 dYq
@@ -57367,7 +57420,7 @@ wlx
 cgR
 iWS
 iWS
-dYq
+amr
 pXL
 pXL
 pXL
@@ -57655,8 +57708,8 @@ cgR
 tTT
 cgR
 wlx
-wlx
-wlx
+amq
+amq
 cgR
 wlx
 wlx
@@ -57686,7 +57739,7 @@ wlx
 wlx
 wlx
 wlx
-wlx
+amq
 wlx
 dYq
 dYq
@@ -58337,7 +58390,7 @@ cgR
 tTT
 iWS
 dYq
-dYq
+amr
 pXL
 pXL
 pXL
@@ -58789,15 +58842,15 @@ wlx
 wlx
 wlx
 wlx
-wlx
-wlx
+amq
+amq
 wlx
 wlx
 cgR
 cgR
 cgR
-wlx
-wlx
+amq
+amq
 wlx
 wlx
 aeL
@@ -58827,8 +58880,8 @@ obe
 obe
 dYq
 dYq
-dYq
-dYq
+amr
+amr
 dYq
 dYq
 dWV
@@ -58947,9 +59000,9 @@ cgR
 cgR
 wlx
 wlx
-wlx
-wlx
-wlx
+amq
+amq
+amq
 wlx
 fQF
 hxn
@@ -59302,7 +59355,7 @@ wlx
 cgR
 wlx
 wlx
-wlx
+amq
 wlx
 wlx
 wlx
@@ -59627,7 +59680,7 @@ wlx
 cgR
 cgR
 cgR
-wlx
+amq
 wlx
 wlx
 cgR
@@ -59793,7 +59846,7 @@ cgR
 wlx
 wlx
 wlx
-wlx
+amq
 wlx
 wlx
 cgR
@@ -59900,7 +59953,7 @@ kPb
 dXn
 hxn
 hxn
-hxn
+amp
 hxn
 hxn
 hxn
@@ -59950,13 +60003,13 @@ fQF
 wlx
 cgR
 wlx
-wlx
+amq
 cgR
 cgR
 wlx
 wlx
-wlx
-wlx
+amq
+amq
 wlx
 cgR
 wlx
@@ -60062,9 +60115,9 @@ kPb
 dXn
 hxn
 hxn
-hxn
-hxn
-hxn
+amp
+amp
+amp
 hxn
 wlx
 cgR
@@ -60256,8 +60309,8 @@ wlx
 hxn
 fQF
 hxn
-hxn
-hxn
+amp
+amp
 hxn
 fQF
 fQF
@@ -60441,7 +60494,7 @@ cgR
 wlx
 wlx
 wlx
-hxn
+amp
 hxn
 hxn
 dWV
@@ -60601,9 +60654,9 @@ rVJ
 cgR
 wlx
 wlx
-wlx
-wlx
-hxn
+amq
+amq
+amp
 hxn
 dWV
 dWV
@@ -60721,7 +60774,7 @@ wlx
 tTT
 wlx
 wlx
-wlx
+amq
 cgR
 cgR
 cgR
@@ -60763,7 +60816,7 @@ dZJ
 cgR
 wlx
 hxn
-hxn
+amp
 hxn
 hxn
 dWV
@@ -60882,8 +60935,8 @@ cPO
 cgR
 cgR
 wlx
-wlx
-wlx
+amq
+amq
 wlx
 wlx
 cgR
@@ -60895,7 +60948,7 @@ wlx
 wlx
 hxn
 hxn
-hxn
+amp
 hxn
 wlx
 cgR
@@ -60918,9 +60971,9 @@ aeL
 wlx
 wlx
 cgR
-wlx
-wlx
-wlx
+amq
+amq
+amq
 wlx
 cgR
 wlx
@@ -61054,10 +61107,10 @@ wlx
 wlx
 hxn
 hxn
-hxn
-hxn
-hxn
-hxn
+amp
+amp
+amp
+amp
 wlx
 wlx
 cgR
@@ -61080,7 +61133,7 @@ aeL
 wlx
 cgR
 cgR
-wlx
+amq
 wlx
 wlx
 wlx
@@ -61531,7 +61584,7 @@ wlx
 cgR
 cgR
 wlx
-wlx
+amq
 wlx
 wlx
 wlx
@@ -61693,16 +61746,16 @@ wlx
 wlx
 cgR
 wlx
-wlx
-wlx
+amq
+amq
 wlx
 wlx
 cgR
 cgR
 cgR
 hxn
-hxn
-hxn
+amp
+amp
 hxn
 hxn
 wlx
@@ -61848,8 +61901,8 @@ hxn
 hxn
 caM
 caM
-caM
-caM
+amu
+amu
 caM
 caM
 dZJ
@@ -61864,8 +61917,8 @@ wlx
 wlx
 hxn
 hxn
-hxn
-hxn
+amp
+amp
 tZX
 tZX
 jUy
@@ -62006,8 +62059,8 @@ kPb
 dXn
 hxn
 hxn
-hxn
-caM
+amp
+amu
 caM
 caM
 vCd
@@ -62024,7 +62077,7 @@ tTT
 cgR
 hxn
 hxn
-hxn
+amp
 hxn
 hxn
 hxn
@@ -62167,8 +62220,8 @@ kPb
 (62,1,1) = {"
 dXn
 hxn
-hxn
-caM
+amp
+amu
 caM
 vCd
 vCd
@@ -62186,9 +62239,9 @@ wlx
 wlx
 wlx
 wlx
-wlx
-wlx
-wlx
+amq
+amq
+amq
 hxn
 iuW
 jUy
@@ -62666,7 +62719,7 @@ tfr
 tfr
 tfr
 vCd
-caM
+amu
 wlx
 wlx
 cgR
@@ -62685,7 +62738,7 @@ cgR
 cgR
 wlx
 wlx
-wlx
+amq
 wlx
 wlx
 cgR
@@ -62828,7 +62881,7 @@ tfr
 tfr
 tfr
 vCd
-caM
+amu
 wlx
 cgR
 cgR
@@ -62847,7 +62900,7 @@ wlx
 cgR
 cgR
 wlx
-wlx
+amq
 cgR
 cgR
 cgR
@@ -62990,7 +63043,7 @@ tfr
 tfr
 tfr
 vCd
-caM
+amu
 hxn
 wlx
 cgR
@@ -63636,7 +63689,7 @@ tfr
 tfr
 vCd
 vCd
-caM
+amu
 caM
 hxn
 hxn
@@ -63797,8 +63850,8 @@ vCd
 vCd
 vCd
 vCd
-caM
-caM
+amu
+amu
 hxn
 hxn
 hxn
@@ -63956,8 +64009,8 @@ vCd
 caM
 caM
 caM
-caM
-caM
+amu
+amu
 caM
 caM
 hxn
@@ -64117,8 +64170,8 @@ cKy
 hsL
 ojd
 hxn
-hxn
-hxn
+amp
+amp
 hxn
 fQF
 fQF
@@ -115382,7 +115435,7 @@ ajR
 ajR
 ajR
 ajR
-hIk
+luR
 luR
 luR
 luR
@@ -115542,9 +115595,9 @@ akc
 akc
 akb
 ajR
-hIk
-hIk
-hIk
+ajR
+ajR
+ajR
 luR
 luR
 luR
@@ -115702,11 +115755,11 @@ akc
 akc
 akc
 akc
-akc
+amn
+ali
+amk
+ajQ
 ajR
-hIk
-hIk
-luR
 luR
 luR
 luR
@@ -115866,9 +115919,9 @@ akj
 akc
 akd
 ajR
-hIk
-hIk
-luR
+aml
+ajQ
+ajR
 luR
 luR
 luR
@@ -116028,9 +116081,9 @@ akc
 akc
 ake
 ajR
-hIk
-hIk
-luR
+amm
+ajQ
+ajR
 luR
 luR
 luR
@@ -116190,9 +116243,9 @@ akc
 akc
 ake
 ajR
-hIk
-hIk
-luR
+ajR
+ajR
+ajR
 luR
 luR
 luR

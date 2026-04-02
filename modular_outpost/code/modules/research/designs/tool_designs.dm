@@ -14,3 +14,15 @@
 
 /datum/design_techweb/nanopaste
 	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE | DEPARTMENT_BITFLAG_ENGINEERING
+
+/datum/design_techweb/stent_kit
+	name = "stent kit"
+	desc = "Metal rods designed to interlock and pry something open. Authorization to enter maximum-security areas must be obtained before entering the terraforming unit."
+	id = "stentkit"
+	build_type = PROTOLATHE | AUTOLATHE
+	materials = list(MAT_STEEL = 4500)
+	build_path = /obj/item/stent_kit
+	category = list(
+		RND_CATEGORY_INITIAL,
+		RND_CATEGORY_TOOLS + RND_SUBCATEGORY_TOOLS_MEDICAL
+	)

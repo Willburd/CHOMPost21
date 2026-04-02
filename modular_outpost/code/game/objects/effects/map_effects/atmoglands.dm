@@ -16,8 +16,7 @@
 		T.air = new/datum/gas_mixture
 		T.air.temperature = air_contents.temperature
 		T.air.adjust_multi(GAS_O2, 0, GAS_CO2, 0, GAS_N2, 0, GAS_PHORON, 0, GAS_CH4, 0)
-		T.air.group_multiplier = air_contents.group_multiplier
-		T.air.volume = air_contents.volume
+		T.air.update_values()
 	#endif
 
 /obj/effect/map_effect/interval/atmogland/airmix
@@ -42,8 +41,7 @@
 		T.air = new/datum/gas_mixture
 		T.air.temperature = air_contents.temperature
 		T.air.adjust_multi(GAS_O2, 0, GAS_CO2, 0, GAS_N2, ONE_ATMOSPHERE, GAS_PHORON, 0, GAS_CH4, 0)
-		T.air.group_multiplier = air_contents.group_multiplier
-		T.air.volume = air_contents.volume
+		T.air.update_values()
 	#endif
 
 /obj/effect/map_effect/interval/atmogland/carbo
@@ -57,8 +55,7 @@
 		T.air = new/datum/gas_mixture
 		T.air.temperature = air_contents.temperature
 		T.air.adjust_multi(GAS_O2, 0, GAS_CO2, ONE_ATMOSPHERE, GAS_N2, 0, GAS_PHORON, 0, GAS_CH4, 0)
-		T.air.group_multiplier = air_contents.group_multiplier
-		T.air.volume = air_contents.volume
+		T.air.update_values()
 	#endif
 
 /obj/effect/map_effect/interval/atmogland/phoron
@@ -72,8 +69,7 @@
 		T.air = new/datum/gas_mixture
 		T.air.temperature = air_contents.temperature
 		T.air.adjust_multi(GAS_O2, 0, GAS_CO2, 0, GAS_N2, 0, GAS_PHORON, ONE_ATMOSPHERE, GAS_CH4, 0)
-		T.air.group_multiplier = air_contents.group_multiplier
-		T.air.volume = air_contents.volume
+		T.air.update_values()
 	#endif
 
 /obj/effect/map_effect/interval/atmogland/methane
@@ -87,8 +83,7 @@
 		T.air = new/datum/gas_mixture
 		T.air.temperature = air_contents.temperature
 		T.air.adjust_multi(GAS_O2, 0, GAS_CO2, 0, GAS_N2, 0, GAS_PHORON, 0, GAS_CH4, ONE_ATMOSPHERE)
-		T.air.group_multiplier = air_contents.group_multiplier
-		T.air.volume = air_contents.volume
+		T.air.update_values()
 	#endif
 
 /obj/effect/map_effect/interval/atmogland/bodyheat
@@ -105,4 +100,5 @@
 		if(air_contents.temperature > TERRAFORMER_BODY_TEMP + 5)
 			air_contents.temperature -= 2
 		T.air = air_contents;
+		T.air.update_values()
 	#endif

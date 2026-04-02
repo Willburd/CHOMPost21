@@ -39,6 +39,7 @@
 		// "reflex_hammer",
 		// "blood_scanner",
 		"needle_cleaner_board", // Outpost 21 edit(port) - Needle cleaning centrifuge
+		"stentkit", // Outpost 21 edit - Stent kits
 		"sleevecard",
 		"body_record_disk",
 		"scanner_console",

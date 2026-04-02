@@ -1,4 +1,3 @@
-var/global/list/allisclean_list = list()
 /obj/singularity/allisclean //Moving narsie to its own file for the sake of being clearer
 	name = "All-Is-Clean"
 	desc = "Mr.Clean gets rid of dirt and grime, and grease in just a minute."
@@ -18,7 +17,7 @@ var/global/list/allisclean_list = list()
 
 /obj/singularity/allisclean/Initialize(mapload, ...)
 	. = ..()
-	allisclean_list.Add(src)
+	GLOB.allisclean_list.Add(src)
 
 	for(var/obj/machinery/atmospherics/unary/vent_pump/temp_vent in SSmachines.all_machines)
 		if(temp_vent.loc.z in using_map.event_levels)
@@ -27,7 +26,7 @@ var/global/list/allisclean_list = list()
 				vents += WEAKREF(temp_vent)
 
 /obj/singularity/allisclean/Destroy()
-	allisclean_list.Remove(src)
+	GLOB.allisclean_list.Remove(src)
 	..()
 
 /obj/singularity/allisclean/process()

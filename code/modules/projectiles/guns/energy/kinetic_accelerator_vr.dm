@@ -343,6 +343,14 @@
 	if(ismineralturf(target_turf))
 		var/turf/simulated/mineral/M = target_turf
 		M.GetDrilled(TRUE)
+	// Outpost 21 edit begin - Flesh rework
+	if(istype(target_turf, /turf/simulated/flesh))
+		var/turf/simulated/flesh/meat_wall = target_turf
+		meat_wall.beat_the_meat(70)
+	if(istype(target_turf, /turf/simulated/floor/flesh))
+		var/turf/simulated/floor/flesh/meat_floor = target_turf
+		meat_floor.destroy_meat()
+	// Outpost 21 edit end
 	var/obj/effect/temp_visual/kinetic_blast/K = new /obj/effect/temp_visual/kinetic_blast(target_turf)
 	K.color = color
 

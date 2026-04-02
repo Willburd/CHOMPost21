@@ -93,7 +93,7 @@ GLOBAL_VAR_INIT(photo_count, 0)
 	addtimer(CALLBACK(src, PROC_REF(statue_spawn)), t)
 
 /obj/item/photo/proc/statue_spawn()
-	if(statue_photos_allowed <= 0)
+	if(GLOB.statue_photos_allowed <= 0)
 		return
 	if(!QDELETED(src))
 		var/turf/T = get_turf(src)
@@ -114,7 +114,7 @@ GLOBAL_VAR_INIT(photo_count, 0)
 					T = get_turf(src)
 					if(isturf(T))
 						new /mob/living/simple_mob/animal/statue(T)
-						statue_photos_allowed--
+						GLOB.statue_photos_allowed--
 					desc += span_cult("Part of the photo is smeared unnaturally.")
 // Outpost 21 edit end
 
