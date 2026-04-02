@@ -399,6 +399,8 @@
 /datum/unit_test/pipes_and_wires_may_not_be_under_walls
 
 /datum/unit_test/pipes_and_wires_may_not_be_under_walls/Run()
+	set background=1
+
 	var/failures = 0
 
 	for(var/obj/structure/disposalpipe/P in world)
