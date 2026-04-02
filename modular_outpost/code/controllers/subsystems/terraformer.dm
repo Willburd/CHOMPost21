@@ -15,6 +15,7 @@ SUBSYSTEM_DEF(terraformer)
 	var/nutrition = 0
 	var/healing_points = 500
 	var/last_inhaled_mix = null
+	var/arteries_burst = 0
 
 	var/list/healing_turfs = list()
 	var/list/current_run = list()
@@ -37,7 +38,7 @@ SUBSYSTEM_DEF(terraformer)
 	healing_points += amount
 
 /datum/controller/subsystem/terraformer/stat_entry(msg)
-	msg = "Health: [health]/[total_health]([(health/total_health) * 100]%) | REGEN: [healing_points] | HT: [length(healing_turfs)] | CR: [length(current_run)]"
+	msg = "Health: [health]/[total_health]([(health/total_health) * 100]%) | REGEN: [healing_points] | HT: [length(healing_turfs)] | CR: [length(current_run)] | BA: [arteries_burst]"
 	return ..()
 
 /datum/controller/subsystem/terraformer/fire(resumed)
@@ -99,6 +100,11 @@ SUBSYSTEM_DEF(terraformer)
 	healing_turfs -= meat
 	meat.heal_into_wall()
 	health++
+
+/datum/controller/subsystem/terraformer/proc/hemorage_triggered()
+	message_admins("Terraformer artery burst: [stationtime2text()]")
+	arteries_burst++
+	return
 
 /datum/controller/subsystem/terraformer/proc/Sound(var/sound, var/list/zlevels)
 	if(!sound)

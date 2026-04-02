@@ -12,3 +12,12 @@
 
 /datum/techweb_node/applied_bluespace
 	required_experiments = list(/datum/experiment/scanning/points/bluespace_containing_items)
+
+/datum/techweb_node/ghost_basic
+	hidden = FALSE
+
+/datum/techweb_node/ghost_advanced
+	hidden = FALSE
+
+/datum/techweb_node/ghost_rounds
+	hidden = FALSE

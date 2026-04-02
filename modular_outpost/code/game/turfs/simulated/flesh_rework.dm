@@ -30,6 +30,9 @@
 	new_wall.update_icon(1)
 	new_wall.check_underside_turf(old_plating_state)
 
+/turf/simulated/floor/flesh/rcd_act(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
+	return
+
 /turf/simulated/floor/flesh/ex_act(severity)
 	if(severity == 1)
 		destroy_meat()
@@ -148,6 +151,9 @@
 	playsound(src, 'sound/effects/meatslap.ogg', 90, 1)
 	beat_the_meat(W.force)
 
+/turf/simulated/flesh/rcd_act(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
+	return
+
 /turf/simulated/flesh/bullet_act(obj/item/projectile/P, def_zone)
 	. = ..()
 	if(P.nodamage || P.taser_effect)
@@ -171,7 +177,7 @@
 /turf/simulated/flesh/proc/beat_the_meat(damage)
 	health -= damage
 	if((health <= 0 && prob(20)) || (damage > 10 && prob(damage / 2)))
-		new /obj/effect/gibspawner/human(src)
+		new /obj/effect/gibspawner/small_gore(src)
 	if(health > 0)
 		return
 	var/old_plating_state = break_tile_to_plating
@@ -211,9 +217,6 @@
 /turf/simulated/flesh/indestructable/ex_act(severity)
 	return
 
-/turf/simulated/flesh/indestructable/rcd_act(mob/living/user, obj/item/rcd/the_rcd, passed_mode)
-	return
-
 /turf/simulated/flesh/indestructable/beat_the_meat(damage)
 	return
 
@@ -221,3 +224,151 @@
 	. = ..()
 	var/image/bone_overlay = image('modular_outpost/icons/turf/stomach.dmi', "bone_[bone_iconstate]")
 	add_overlay(bone_overlay)
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Arteries
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+GLOBAL_LIST_EMPTY(terraformer_arteries)
+
+/turf/simulated/flesh/artery
+	name = "artery"
+	desc = "A large blood filled artery of a massive organism."
+	var/junction_id = ""
+	icon_state = "fleshartery"
+	description_info = "It can be cut into with a sharp object, and repaired with bandages or something hot to cauterize it back together."
+	var/heals_at_time // Prevent bleeding all shift once cut
+	var/blockage = FALSE
+	var/static/list/blockage_items = list(
+		/obj/item/kinetic_crusher,
+		/obj/item/material/twohanded/fireaxe,
+		/obj/item/stack/material/plasteel,
+		/obj/item/tank/oxygen,
+		/obj/item/tank/phoron,
+		/obj/item/clothing/head/helmet/space/syndicate,
+		/obj/item/clothing/suit/space/syndicate,
+		/obj/item/clothing/head/helmet/space/skrell,
+		/obj/item/clothing/suit/space/skrell,
+		/obj/item/mop/advanced,
+		/obj/item/reagent_containers/glass/beaker/large,
+		/obj/item/reagent_containers/glass/beaker/bluespace,
+		/obj/item/bluespace_harpoon,
+		/obj/item/tool/crowbar/brace_jack,
+		/obj/item/clothing/glasses/graviton,
+		/obj/item/perfect_tele,
+		/obj/item/rig/robotics,
+		/obj/item/rig/hazard,
+		/obj/item/rig/industrial,
+		/obj/item/inducer,
+		/obj/item/rcd/advanced,
+	)
+	var/list/valid_treatments = list(
+		/obj/item/stack/medical/crude_pack,
+		/obj/item/stack/medical/bruise_pack,
+		/obj/item/stack/medical/advanced,
+		/obj/item/surgical/cautery
+	)
+
+/turf/simulated/flesh/artery/Initialize(mapload)
+	. = ..()
+	icon_state = /turf/simulated/flesh::icon_state
+	GLOB.terraformer_arteries += src
+	junction_id = "JNC-[rand(1000,9999)]:[pick(list("A","B","D","M","L","R","W","X","P","LB","CL","RM"))]"
+
+/turf/simulated/flesh/artery/Destroy()
+	GLOB.terraformer_arteries -= src
+	STOP_PROCESSING(SSobj, src)
+	. = ..()
+
+/turf/simulated/flesh/artery/examine(mob/user)
+	. = ..()
+	. += span_info("It is tattooed with \"[junction_id]\".")
+
+/turf/simulated/flesh/artery/attackby(obj/item/W, mob/user)
+	if(is_sharp(W) && density) // Cutting
+		user.visible_message("\The [user] begins cutting into \the [src]!")
+		if(do_after(user, W.toolspeed * 5 SECONDS, target = src))
+			user.visible_message("\The [user] slices open \the [src]!")
+			cut_open()
+		return
+
+	if((is_type_in_list(W,valid_treatments) || is_hot(W)) && !density) // Closing
+		user.visible_message("\The [user] begins sealing \the [src]!")
+		if(do_after(user, W.toolspeed * 5 SECONDS, target = src))
+			user.visible_message("\The [user] seals up \the [src]!")
+			seal_up()
+		return
+
+/turf/simulated/flesh/artery/ex_act(severity)
+	if(severity == 1)
+		cut_open()
+		return
+	if(severity == 2 && prob(10))
+		cut_open()
+		return
+
+/turf/simulated/flesh/artery/beat_the_meat(damage)
+	if(density && damage > 30 && prob(20))
+		cut_open()
+
+/turf/simulated/flesh/artery/update_icon(var/update_neighbors)
+	. = ..()
+	var/image/artery_overlay = image('modular_outpost/icons/turf/stomach.dmi', "artery_[density]") // TODO - future artery art types
+	add_overlay(artery_overlay)
+
+/turf/simulated/flesh/artery/proc/cause_blockage()
+	if(!density)
+		return
+	blockage = TRUE
+	addtimer(CALLBACK(src, PROC_REF(hemorage)), rand(30,60) MINUTES, TIMER_DELETE_ME)
+
+/turf/simulated/flesh/artery/proc/hemorage()
+	if(!density || !blockage) // Burst if we ignore treating this blockage
+		return
+	blockage = FALSE
+	cut_open()
+	SSterraformer.hemorage_triggered()
+
+/turf/simulated/flesh/artery/proc/cut_open()
+	if(!density)
+		return
+	density = FALSE
+	update_icon()
+	START_PROCESSING(SSobj, src)
+	// Spawn blockage item now that we are cured
+	if(blockage)
+		blockage = FALSE
+		var/path_spawn = pick(blockage_items)
+		new path_spawn(src)
+		addtimer(CALLBACK(src, PROC_REF(blockage_cleared_alert)), rand(30,35) SECONDS, TIMER_DELETE_ME)
+	heals_at_time = world.time + rand(40,60) SECONDS
+	gore_pump()
+
+/turf/simulated/flesh/artery/proc/seal_up()
+	if(density)
+		return
+	wash(CLEAN_ALL)
+	density = TRUE
+	update_icon()
+	STOP_PROCESSING(SSobj, src)
+	heals_at_time = 0
+
+// Bleeding mode
+/turf/simulated/flesh/artery/process()
+	gore_pump()
+	if(world.time > heals_at_time)
+		seal_up()
+
+/turf/simulated/flesh/artery/proc/gore_pump()
+	playsound(src, 'sound/effects/squelch1.ogg', 100, 1)
+	new /obj/effect/gibspawner/small_gore(src)
+
+/turf/simulated/flesh/artery/proc/blockage_cleared_alert()
+	var/str = "Flow corrected in junction \"[junction_id]\" the blockage has been cleared."
+	if(!density)
+		str += " Flow rate is low, was the junction left open?"
+		SSterraformer.hemorage_triggered() // If they want to be lazy then so be it
+
+	GLOB.global_announcer.autosay(str, "Terraformer System Monitor", CHANNEL_COMMAND)
+	GLOB.global_announcer.autosay(str, "Terraformer System Monitor", CHANNEL_MEDICAL)
+	GLOB.global_announcer.autosay(str, "Terraformer System Monitor", CHANNEL_ENGINEERING)

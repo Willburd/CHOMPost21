@@ -101,7 +101,8 @@
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Electrical Storm",	/datum/event/electrical_storm				,2	, null, FALSE),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Septic Explosion",	/datum/event/septic_explosion				,1	, null, TRUE, min_jobs = list(DEPARTMENT_ENGINEERING = 1)),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Hostile Runtime", 	/datum/event/hostile_runtime				,2  , null, FALSE, min_jobs = list(DEPARTMENT_ENGINEERING = 1)),
-		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Random Borg Laws",	/datum/event/law_reset						,2	, null, FALSE, min_jobs = list(JOB_CYBORG = 1))
+		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Random Borg Laws",	/datum/event/law_reset						,2	, null, FALSE, min_jobs = list(JOB_CYBORG = 1)),
+		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Blocked Artery",		/datum/event/blocked_artery					,1	, null, FALSE, min_jobs = list(DEPARTMENT_MEDICAL = 1, DEPARTMENT_ENGINEERING = 1, DEPARTMENT_COMMAND = 1)),
 	)
 	add_disabled_events(list(
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "All Is Clean",		/datum/event/allisclean,					 0  , list(), TRUE, min_jobs = list(DEPARTMENT_SECURITY = 99)),
