@@ -11349,7 +11349,6 @@
 /obj/machinery/firealarm{
 	pixel_y = 26
 	},
-/obj/effect/floor_decal/industrial/outline/grey,
 /obj/machinery/alarm{
 	dir = 4;
 	pixel_x = -26
@@ -11366,6 +11365,7 @@
 /obj/item/ammo_magazine/m44,
 /obj/item/gun/projectile/deagle,
 /obj/item/gun/projectile/deagle,
+/obj/effect/floor_decal/corner/red/borderfull,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/security/tactical)
 "avg" = (
@@ -21464,9 +21464,6 @@
 /area/crew_quarters/heads/hop)
 "bKL" = (
 /obj/structure/table/rack,
-/obj/effect/floor_decal/corner/green/full{
-	dir = 8
-	},
 /obj/structure/window/reinforced{
 	dir = 1
 	},
@@ -21510,6 +21507,9 @@
 	},
 /obj/item/ammo_magazine/type901/ap{
 	pixel_x = 6
+	},
+/obj/effect/floor_decal/corner/red/full{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/security/tactical)
@@ -22143,7 +22143,6 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/obj/effect/floor_decal/corner/green/full,
 /obj/machinery/door/window/brigdoor/northleft{
 	name = "Ammo"
 	},
@@ -22160,6 +22159,7 @@
 /obj/item/ammo_magazine/ammo_box/b12g,
 /obj/item/ammo_magazine/ammo_box/b12g,
 /obj/item/ammo_magazine/ammo_box/b12g,
+/obj/effect/floor_decal/corner/red/full,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/security/tactical)
 "bTH" = (
@@ -33700,6 +33700,7 @@
 /obj/item/plastique,
 /obj/item/plastique,
 /obj/item/plastique,
+/obj/effect/floor_decal/corner/red/borderfull,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/security/tactical)
 "fLQ" = (
@@ -42629,14 +42630,14 @@
 /obj/machinery/door/window/brigdoor/northright{
 	name = "Ammo"
 	},
-/obj/effect/floor_decal/corner/green/full{
-	dir = 4
-	},
 /obj/structure/window/reinforced{
 	dir = 4
 	},
 /obj/item/gun/projectile/shotgun/pump/USDF,
 /obj/item/gun/projectile/shotgun/pump/USDF,
+/obj/effect/floor_decal/corner/red/full{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/security/tactical)
 "iBg" = (
@@ -46488,6 +46489,7 @@
 	name = "Station Intercom (General)";
 	pixel_y = 32
 	},
+/obj/structure/window/reinforced,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/security/tactical)
 "jJx" = (
@@ -48290,17 +48292,18 @@
 /area/medical/virology/quarantine_airlock)
 "kkj" = (
 /obj/structure/table/rack,
-/obj/effect/floor_decal/corner/blue/full{
-	dir = 1
-	},
-/obj/structure/window/reinforced{
-	dir = 1
-	},
 /obj/machinery/door/window/brigdoor/westright{
 	name = "Energy"
 	},
 /obj/item/gun/energy/sniperrifle{
 	pixel_x = -10
+	},
+/obj/item/gun/energy/sniperrifle{
+	pixel_x = -10
+	},
+/obj/structure/window/reinforced,
+/obj/effect/floor_decal/corner/red/full{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/security/tactical)
@@ -55557,21 +55560,51 @@
 /obj/structure/fireaxecabinet{
 	pixel_x = -32
 	},
-/obj/item/grenade/dephasing,
-/obj/item/grenade/dephasing,
-/obj/item/grenade/dephasing,
-/obj/item/grenade/dephasing,
-/obj/item/grenade/dephasing,
-/obj/item/grenade/dephasing,
-/obj/item/grenade/dephasing,
-/obj/item/grenade/dephasing,
-/obj/item/grenade/dephasing,
-/obj/item/grenade/dephasing,
-/obj/item/grenade/dephasing,
-/obj/item/grenade/dephasing,
-/obj/item/grenade/dephasing,
-/obj/item/grenade/dephasing,
-/obj/item/grenade/dephasing,
+/obj/item/grenade/dephasing{
+	pixel_x = -7
+	},
+/obj/item/grenade/dephasing{
+	pixel_x = -7
+	},
+/obj/item/grenade/dephasing{
+	pixel_x = -7
+	},
+/obj/item/grenade/dephasing{
+	pixel_x = -7
+	},
+/obj/item/grenade/dephasing{
+	pixel_x = -7
+	},
+/obj/item/grenade/dephasing{
+	pixel_x = -7
+	},
+/obj/item/grenade/dephasing{
+	pixel_x = -7
+	},
+/obj/item/grenade/dephasing{
+	pixel_x = -7
+	},
+/obj/item/grenade/dephasing{
+	pixel_x = -7
+	},
+/obj/item/grenade/dephasing{
+	pixel_x = -7
+	},
+/obj/item/grenade/chem_grenade/metalfoam{
+	pixel_x = 5
+	},
+/obj/item/grenade/chem_grenade/metalfoam{
+	pixel_x = 5
+	},
+/obj/item/grenade/chem_grenade/metalfoam{
+	pixel_x = 5
+	},
+/obj/item/grenade/chem_grenade/metalfoam{
+	pixel_x = 5
+	},
+/obj/item/grenade/chem_grenade/metalfoam{
+	pixel_x = 5
+	},
 /turf/simulated/floor/tiled/dark,
 /area/security/tactical)
 "myU" = (
@@ -62380,12 +62413,12 @@
 /obj/machinery/door/window/brigdoor/northright{
 	name = "Anti-Material"
 	},
-/obj/effect/floor_decal/corner/red/full{
-	dir = 4
-	},
 /obj/machinery/camera/motion/security{
 	c_tag = "SEC - Red Armory (M)";
 	dir = 1
+	},
+/obj/effect/floor_decal/corner/black/full{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/security/tactical)
@@ -62884,10 +62917,6 @@
 	},
 /area/muriki/grounds/tramborder)
 "oTw" = (
-/obj/structure/table/rack,
-/obj/effect/floor_decal/corner/blue/full{
-	dir = 4
-	},
 /obj/structure/window/reinforced{
 	health = 1e+006
 	},
@@ -62897,7 +62926,72 @@
 /obj/machinery/door/window/brigdoor/westleft{
 	name = "Energy"
 	},
-/obj/item/gun/energy/lasercannon,
+/obj/structure/closet/crate/secure/large/reinforced{
+	name = "Thermal Grenades"
+	},
+/obj/effect/floor_decal/corner/red/full{
+	dir = 4
+	},
+/obj/item/grenade/chem_grenade/incendiary{
+	pixel_x = -6
+	},
+/obj/item/grenade/chem_grenade/incendiary{
+	pixel_x = -6
+	},
+/obj/item/grenade/chem_grenade/incendiary{
+	pixel_x = -6
+	},
+/obj/item/grenade/chem_grenade/incendiary{
+	pixel_x = -6
+	},
+/obj/item/grenade/chem_grenade/incendiary{
+	pixel_x = -6
+	},
+/obj/item/grenade/chem_grenade/incendiary{
+	pixel_x = -6
+	},
+/obj/item/grenade/chem_grenade/incendiary{
+	pixel_x = -6
+	},
+/obj/item/grenade/chem_grenade/incendiary{
+	pixel_x = -6
+	},
+/obj/item/grenade/chem_grenade/incendiary{
+	pixel_x = -6
+	},
+/obj/item/grenade/chem_grenade/incendiary{
+	pixel_x = -6
+	},
+/obj/item/grenade/chem_grenade/frost{
+	pixel_x = 6
+	},
+/obj/item/grenade/chem_grenade/frost{
+	pixel_x = 6
+	},
+/obj/item/grenade/chem_grenade/frost{
+	pixel_x = 6
+	},
+/obj/item/grenade/chem_grenade/frost{
+	pixel_x = 6
+	},
+/obj/item/grenade/chem_grenade/frost{
+	pixel_x = 6
+	},
+/obj/item/grenade/chem_grenade/frost{
+	pixel_x = 6
+	},
+/obj/item/grenade/chem_grenade/frost{
+	pixel_x = 6
+	},
+/obj/item/grenade/chem_grenade/frost{
+	pixel_x = 6
+	},
+/obj/item/grenade/chem_grenade/frost{
+	pixel_x = 6
+	},
+/obj/item/grenade/chem_grenade/frost{
+	pixel_x = 6
+	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/security/tactical)
 "oTO" = (
@@ -66860,11 +66954,10 @@
 	name = "nukeitem"
 	},
 /obj/item/personal_shield_generator/belt/melee/loaded,
-/obj/item/personal_shield_generator/belt/melee/loaded,
-/obj/item/personal_shield_generator/belt/melee/loaded,
 /obj/item/melee/energy/spear,
-/obj/item/melee/energy/spear,
-/obj/item/melee/energy/spear,
+/obj/effect/floor_decal/corner/red/full{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/security/tactical)
 "qmt" = (
@@ -70250,7 +70343,6 @@
 	dir = 8;
 	health = 1e+006
 	},
-/obj/effect/floor_decal/corner/yellow/full,
 /obj/machinery/door/window/brigdoor/northleft{
 	name = "Combat Armor";
 	req_access = null;
@@ -70268,6 +70360,7 @@
 /obj/item/clothing/head/helmet/combat,
 /obj/item/clothing/head/helmet/combat,
 /obj/item/clothing/head/helmet/combat,
+/obj/effect/floor_decal/corner/red/full,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/security/tactical)
 "rtd" = (
@@ -78423,7 +78516,7 @@
 /obj/machinery/door/window/brigdoor/northleft{
 	name = "Anti-Material"
 	},
-/obj/effect/floor_decal/corner/red/full,
+/obj/effect/floor_decal/corner/black/full,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/security/tactical)
 "tXr" = (
@@ -88067,7 +88160,6 @@
 /area/medical/virology)
 "wTA" = (
 /obj/structure/table/rack,
-/obj/effect/floor_decal/corner/green/full,
 /obj/structure/window/reinforced{
 	health = 1e+006
 	},
@@ -88100,6 +88192,7 @@
 /obj/item/ammo_magazine/m16,
 /obj/item/ammo_magazine/m16,
 /obj/item/ammo_magazine/m16,
+/obj/effect/floor_decal/corner/red/full,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/security/tactical)
 "wTD" = (
@@ -88479,6 +88572,9 @@
 /obj/item/ammo_magazine/mg42,
 /obj/item/ammo_magazine/mg42,
 /obj/item/gun/projectile/automatic/mg42,
+/obj/effect/floor_decal/corner/red/full{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/security/tactical)
 "wYW" = (
@@ -88715,6 +88811,7 @@
 	req_access = null;
 	req_one_access = list(1)
 	},
+/obj/effect/floor_decal/corner/red/borderfull,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/security/tactical)
 "xcu" = (
@@ -91898,9 +91995,6 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/obj/effect/floor_decal/corner/yellow/full{
-	dir = 4
-	},
 /obj/machinery/door/window/brigdoor/northright{
 	name = "Combat Armor";
 	req_access = null;
@@ -91918,6 +92012,9 @@
 /obj/item/clothing/head/helmet/combat,
 /obj/item/clothing/head/helmet/combat,
 /obj/item/clothing/head/helmet/combat,
+/obj/effect/floor_decal/corner/red/full{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/security/tactical)
 "yhr" = (
