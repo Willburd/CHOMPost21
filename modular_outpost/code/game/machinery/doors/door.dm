@@ -40,7 +40,7 @@
 	if(!stented)
 		return
 	user.visible_message("\the [user] pulls out the stent!")
-	new /obj/item/stent_kit(get_turf(src))
+	user.put_in_active_hand(new /obj/item/stent_kit(get_turf(src)))
 	stented = FALSE
 	update_icon()
 	close() // Reflexive

@@ -194,6 +194,8 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /turf/simulated/flesh/indestructable
+	name = "bone wall"
+	desc = "Flesh filled with bones. They look very durable."
 	icon_state = "bonewall"
 	var/bone_iconstate = 1
 	explosion_resistance = 100
