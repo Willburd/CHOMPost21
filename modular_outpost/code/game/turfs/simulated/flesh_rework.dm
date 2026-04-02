@@ -39,7 +39,7 @@
 		destroy_meat()
 
 /turf/simulated/floor/flesh/fire_act(datum/gas_mixture/air, exposed_temperature, exposed_volume)
-	if(temperature < 200)
+	if(temperature < (T0C + 200))
 		return
 	if(prob(5)) // burninate
 		destroy_meat()
@@ -163,7 +163,7 @@
 		beat_the_meat(rand(10,50))
 
 /turf/simulated/flesh/adjacent_fire_act(turf/simulated/floor/adj_turf, datum/gas_mixture/adj_air, adj_temp, adj_volume)
-	if(adj_temp < 200)
+	if(adj_temp < (T0C + 200))
 		return
 	if(prob(15)) // burninate
 		beat_the_meat(adj_temp / 10)
