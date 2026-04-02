@@ -12,10 +12,13 @@ SUBSYSTEM_DEF(terraformer)
 	var/health
 	var/total_health
 
-	var/nutrition = 0
-	var/healing_points = 500
+	var/list/irritated_turfs = list()
+	var/irritation = 0 // macrophages to spawn
+	var/arteries_burst = 0 // Number of times an artery has hermoraged
+
+	var/nutrition = 0 // every 10 nutrition gives 1 healing point
+	var/healing_points = 1000 // Regenerates turfs over time
 	var/last_inhaled_mix = null
-	var/arteries_burst = 0
 
 	var/list/healing_turfs = list()
 	var/list/current_run = list()
@@ -38,7 +41,7 @@ SUBSYSTEM_DEF(terraformer)
 	healing_points += amount
 
 /datum/controller/subsystem/terraformer/stat_entry(msg)
-	msg = "Health: [health]/[total_health]([(health/total_health) * 100]%) | REGEN: [healing_points] | HT: [length(healing_turfs)] | CR: [length(current_run)] | BA: [arteries_burst]"
+	msg = "Health: [health]/[total_health]([(health/total_health) * 100]%) | REGEN: [healing_points] | HT: [length(healing_turfs)] | CR: [length(current_run)] | BA: [arteries_burst] | I: [irritation] | IT:[length(irritated_turfs)]"
 	return ..()
 
 /datum/controller/subsystem/terraformer/fire(resumed)
@@ -55,11 +58,30 @@ SUBSYSTEM_DEF(terraformer)
 		current_run = healing_turfs.Copy()
 		shuffle_inplace(current_run)
 
+	// Irritation spawns macrophages
+	if(prob(30) && length(irritated_turfs))
+		// Spawn then at recently irritated turfs
+		while(irritation)
+			var/turf/spawn_turf = pick(irritated_turfs)
+			spawn_turf.visible_message(span_danger("Something seeps out of \the [spawn_turf]!"))
+			var/mob/living/simple_mob/vore/aggressive/macrophage/goober = new /mob/living/simple_mob/vore/aggressive/macrophage(spawn_turf)
+			goober.name = "neutrophil"
+			goober.desc = "An immune system cell that attacks hostile intruders."
+			addtimer(CALLBACK(goober, TYPE_PROC_REF(/mob/living/simple_mob/vore/aggressive/macrophage, deathcheck)), rand(1,3) MINUTES)
+			irritation--
+			if(prob(60)) // Don't dump our whole load at once!
+				break
+			if(MC_TICK_CHECK)
+				return
+		// No longer irritated, clear memory
+		if(!irritation)
+			irritated_turfs.Cut()
+
 	// Update healing
 	while(length(current_run))
 		if(MC_TICK_CHECK)
 			return
-		if(prob(90))
+		if(prob(60))
 			current_run.len--
 			continue
 		if(healing_points <= 0)
@@ -92,6 +114,7 @@ SUBSYSTEM_DEF(terraformer)
 	meat.can_heal = TRUE
 	healing_turfs += meat
 	health--
+	irritate_tissue(meat)
 
 /datum/controller/subsystem/terraformer/proc/heal_meat(turf/simulated/floor/flesh/meat)
 	SHOULD_NOT_OVERRIDE(TRUE)
@@ -101,10 +124,16 @@ SUBSYSTEM_DEF(terraformer)
 	meat.heal_into_wall()
 	health++
 
-/datum/controller/subsystem/terraformer/proc/hemorage_triggered()
+/datum/controller/subsystem/terraformer/proc/hemorage_triggered(turf/simulated/flesh/artery/toob)
 	message_admins("Terraformer artery burst: [stationtime2text()]")
 	arteries_burst++
-	return
+	irritate_tissue(toob)
+
+/datum/controller/subsystem/terraformer/proc/irritate_tissue(turf/at_pos)
+	irritation += CLAMP(1 + arteries_burst, 1, 3)
+	irritation += rand(1,2)
+	irritation = CLAMP(irritation,0,20)
+	irritated_turfs += at_pos
 
 /datum/controller/subsystem/terraformer/proc/Sound(var/sound, var/list/zlevels)
 	if(!sound)
