@@ -189,7 +189,6 @@
 	w_class = ITEMSIZE_NORMAL
 	requires_wield = FALSE
 
-
 /obj/item/kinetic_crusher/machete
 	// general purpose. cleaves though
 	name = "proto-kinetic machete"
@@ -213,9 +212,6 @@
 	thrown_bonus = 20 // 160
 	update_item_state = FALSE
 	slot_flags = SLOT_BELT
-
-
-
 
 /obj/item/kinetic_crusher/machete/gauntlets
 	// did someone say single target damage
