@@ -5097,6 +5097,21 @@
 "amu" = (
 /turf/simulated/flesh/indestructable,
 /area/muriki/processor/pools/eastfund)
+"amv" = (
+/turf/simulated/flesh/artery,
+/area/muriki/processor/hall)
+"amw" = (
+/turf/simulated/flesh/artery,
+/area/muriki/processor/pools/antrum)
+"amx" = (
+/turf/simulated/flesh/artery,
+/area/muriki/processor/pools/pylorus)
+"amy" = (
+/turf/simulated/flesh/artery,
+/area/muriki/processor/gland/nitrogen)
+"amz" = (
+/turf/simulated/flesh/artery,
+/area/muriki/processor/pools/eastfund)
 "amE" = (
 /obj/machinery/computer/crew{
 	dir = 1
@@ -53162,7 +53177,7 @@ qYo
 qYo
 qYo
 qYo
-ssD
+amx
 fqq
 gNR
 fqq
@@ -53671,7 +53686,7 @@ wlx
 dZJ
 wlx
 wlx
-wlx
+amv
 wlx
 dZJ
 cgR
@@ -54004,7 +54019,7 @@ tTT
 cgR
 wlx
 wlx
-wlx
+amv
 cgR
 cgR
 cgR
@@ -54023,7 +54038,7 @@ wlx
 wlx
 wlx
 wlx
-wlx
+amv
 wlx
 amo
 amo
@@ -54309,7 +54324,7 @@ wlx
 amq
 amq
 wlx
-wlx
+amv
 cgR
 cgR
 cgR
@@ -54661,7 +54676,7 @@ nxs
 nxs
 nxs
 nxs
-wlx
+amv
 wlx
 wlx
 cgR
@@ -55261,7 +55276,7 @@ hxn
 ssD
 nzI
 ssD
-ssD
+amx
 ssD
 gcn
 fqq
@@ -55924,7 +55939,7 @@ cgR
 cgR
 wlx
 wlx
-wlx
+amv
 cgR
 cgR
 wlx
@@ -56292,7 +56307,7 @@ cgR
 wlx
 dZJ
 amq
-wlx
+amv
 cgR
 cgR
 cgR
@@ -57063,7 +57078,7 @@ wlx
 cgR
 cgR
 cgR
-wlx
+amv
 wlx
 aeK
 aeK
@@ -57581,7 +57596,7 @@ cgR
 cgR
 iWS
 dYq
-dYq
+amw
 dYq
 pXL
 pXL
@@ -57695,7 +57710,7 @@ wlx
 wlx
 wlx
 wlx
-wlx
+amv
 cgR
 wlx
 wlx
@@ -58496,7 +58511,7 @@ dXn
 icG
 aaC
 icG
-icG
+amy
 icG
 icG
 aaC
@@ -58992,7 +59007,7 @@ gCP
 icG
 tTT
 wlx
-wlx
+amv
 cgR
 awf
 cgR
@@ -59522,7 +59537,7 @@ cgR
 tTT
 cgR
 cgR
-wlx
+amv
 cgR
 wlx
 wlx
@@ -60446,7 +60461,7 @@ wqX
 hxn
 hxn
 wlx
-wlx
+amv
 cgR
 wlx
 wlx
@@ -61136,7 +61151,7 @@ cgR
 amq
 wlx
 wlx
-wlx
+amv
 cgR
 wlx
 hxn
@@ -61438,7 +61453,7 @@ cgR
 tTT
 cgR
 cgR
-wlx
+amv
 wlx
 wlx
 wlx
@@ -62721,7 +62736,7 @@ tfr
 vCd
 amu
 wlx
-wlx
+amv
 cgR
 cgR
 cXh
@@ -63193,7 +63208,7 @@ kPb
 dXn
 hxn
 fQF
-caM
+amz
 vCd
 tfr
 tfr

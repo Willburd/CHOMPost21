@@ -71108,6 +71108,18 @@
 "cMx" = (
 /turf/simulated/flesh/indestructable,
 /area/muriki/processor/pools/eastfund)
+"cMy" = (
+/turf/simulated/flesh/artery,
+/area/muriki/processor/hall)
+"cMz" = (
+/turf/simulated/flesh/artery,
+/area/muriki/processor/gland/airmix)
+"cMA" = (
+/turf/simulated/flesh/artery,
+/area/muriki/processor)
+"cMB" = (
+/turf/simulated/flesh/artery,
+/area/muriki/processor/pools/eastfund)
 "cNe" = (
 /obj/structure/table/glass,
 /obj/item/towel/random,
@@ -90403,7 +90415,7 @@ axj
 avw
 avw
 cMs
-avw
+cMy
 cMs
 avw
 ugO
@@ -90527,7 +90539,7 @@ kJx
 kJx
 kJx
 aJe
-avw
+cMy
 cMr
 aac
 ugO
@@ -90710,7 +90722,7 @@ avw
 aac
 cMr
 cMr
-avw
+cMy
 axj
 axj
 axj
@@ -90731,7 +90743,7 @@ qnS
 qnS
 cMt
 qnS
-qnS
+cMz
 qnS
 cMt
 qnS
@@ -90754,7 +90766,7 @@ avw
 axj
 avw
 axj
-avw
+cMy
 avw
 ugO
 aac
@@ -91508,7 +91520,7 @@ avw
 axj
 aEm
 axj
-avw
+cMy
 avw
 aCO
 aCO
@@ -91659,7 +91671,7 @@ nRl
 nRl
 sJS
 sJS
-avw
+cMy
 axj
 axj
 avw
@@ -91880,7 +91892,7 @@ pdq
 bsf
 gYq
 gYq
-qnS
+cMz
 axj
 yfm
 axj
@@ -92968,7 +92980,7 @@ avy
 eAl
 avy
 axj
-avw
+cMy
 axj
 gPG
 axj
@@ -93347,7 +93359,7 @@ avw
 cMs
 czg
 avw
-avw
+cMy
 cMr
 aad
 aad
@@ -94246,7 +94258,7 @@ nbn
 (27,1,1) = {"
 aaa
 aac
-avw
+cMy
 axj
 czg
 axj
@@ -94586,7 +94598,7 @@ axj
 avw
 eGs
 avw
-avw
+cMy
 avw
 sJS
 sJS
@@ -94800,7 +94812,7 @@ gYq
 gYq
 qnS
 axj
-avw
+cMy
 avw
 avw
 aac
@@ -95875,7 +95887,7 @@ nRl
 nRl
 sJS
 cMw
-avw
+cMy
 axj
 axj
 cMs
@@ -95928,7 +95940,7 @@ gYq
 gYq
 gYq
 gYq
-qnS
+cMz
 cMs
 avw
 axj
@@ -97015,7 +97027,7 @@ axj
 avw
 avw
 avw
-avw
+cMy
 mWT
 xZo
 vZY
@@ -97187,7 +97199,7 @@ axj
 axj
 axj
 cMs
-avw
+cMy
 avw
 axj
 avw
@@ -97385,7 +97397,7 @@ aJe
 aJe
 avw
 avw
-avw
+cMy
 avw
 aac
 aad
@@ -97811,7 +97823,7 @@ nbn
 aaa
 aac
 aac
-aac
+cMA
 tHM
 mWT
 vyQ
@@ -98019,7 +98031,7 @@ cMs
 avw
 aac
 cMs
-avw
+cMy
 kJx
 kJx
 kJx
@@ -98159,7 +98171,7 @@ avw
 avw
 axj
 cMs
-avw
+cMy
 avw
 avw
 avw
@@ -98336,7 +98348,7 @@ czg
 axj
 avw
 axj
-avw
+cMy
 avw
 avw
 axj
@@ -98487,7 +98499,7 @@ avw
 cMs
 avw
 axj
-avw
+cMy
 axj
 axj
 axj
@@ -99947,7 +99959,7 @@ aPP
 avy
 avw
 avw
-avw
+cMy
 ayj
 axj
 avw
@@ -100603,7 +100615,7 @@ eGs
 cMr
 aac
 aac
-aac
+cMA
 aac
 aNd
 cxS
@@ -101388,7 +101400,7 @@ mpk
 kzm
 tQZ
 tQZ
-ogx
+cMB
 aac
 aac
 ugO
@@ -101862,7 +101874,7 @@ aaa
 cMr
 aac
 avw
-ogx
+cMB
 ogx
 tQZ
 tQZ

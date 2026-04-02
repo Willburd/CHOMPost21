@@ -18752,6 +18752,18 @@
 "aRV" = (
 /turf/simulated/flesh/indestructable,
 /area/muriki/processor/pools/crop)
+"aRW" = (
+/turf/simulated/flesh/artery,
+/area/muriki/processor/hall)
+"aRX" = (
+/turf/simulated/flesh/artery,
+/area/muriki/processor/gland/airmix)
+"aRY" = (
+/turf/simulated/flesh/artery,
+/area/muriki/processor/pools/cropbig)
+"aRZ" = (
+/turf/simulated/flesh/artery,
+/area/muriki/processor/pools/eastfund)
 "aSh" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4;
@@ -93578,7 +93590,7 @@ aRQ
 aRQ
 aRQ
 frJ
-frJ
+aRX
 frJ
 usG
 usG
@@ -93593,7 +93605,7 @@ aRP
 nyl
 kES
 ixt
-nyl
+aRW
 cFt
 ixt
 dsu
@@ -94853,7 +94865,7 @@ qUB
 nyl
 aAQ
 nyl
-nyl
+aRW
 nyl
 ixt
 ixt
@@ -95164,7 +95176,7 @@ deD
 ixt
 nyl
 aRP
-nyl
+aRW
 ixt
 nyl
 ixt
@@ -96188,7 +96200,7 @@ tmI
 frJ
 ixt
 ixt
-nyl
+aRW
 ixt
 ixt
 ixt
@@ -97435,7 +97447,7 @@ deD
 ixt
 ixt
 nyl
-nyl
+aRW
 ixt
 ixt
 nyl
@@ -98289,7 +98301,7 @@ frJ
 frJ
 frJ
 frJ
-frJ
+aRX
 frJ
 usG
 usG
@@ -99412,7 +99424,7 @@ aAQ
 nyl
 gtF
 nyl
-nyl
+aRW
 aVz
 kWD
 klM
@@ -99867,7 +99879,7 @@ eQU
 eQU
 xHC
 eQU
-xHC
+aRY
 nyl
 nyl
 ixt
@@ -101515,7 +101527,7 @@ auW
 ixt
 nyl
 ixt
-nyl
+aRW
 ixt
 nyl
 nyl
@@ -102140,7 +102152,7 @@ eQU
 eQU
 kxu
 xHC
-nyl
+aRW
 ixt
 ixt
 hHz
@@ -103104,7 +103116,7 @@ wWZ
 wWZ
 xBx
 xBx
-nyl
+ixt
 nyl
 ixt
 nyl
@@ -103427,7 +103439,7 @@ wWZ
 wWZ
 wWZ
 xBx
-tpG
+aRZ
 nyl
 nyl
 nyl

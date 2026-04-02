@@ -2808,6 +2808,9 @@
 "agR" = (
 /turf/simulated/flesh/indestructable,
 /area/muriki/processor/depths)
+"agS" = (
+/turf/simulated/flesh/artery,
+/area/muriki/processor/depths)
 "amr" = (
 /obj/effect/map_effect/interval/atmogland/bodyheat,
 /obj/effect/mist,
@@ -3407,7 +3410,7 @@ aac
 xVp
 xVp
 aac
-aac
+agS
 aac
 aac
 agR
@@ -3447,7 +3450,7 @@ aac
 agR
 agR
 aac
-aac
+agS
 aac
 aac
 agR
@@ -3577,7 +3580,7 @@ aac
 aac
 aac
 aac
-aac
+agS
 xVp
 xVp
 xVp
@@ -3870,7 +3873,7 @@ aac
 xVp
 fdT
 xVp
-aac
+agS
 aac
 pvd
 aac
@@ -3878,7 +3881,7 @@ aac
 fdT
 aac
 aac
-aac
+agS
 xVp
 xVp
 fdT
@@ -4069,7 +4072,7 @@ aac
 xVp
 xVp
 agR
-aac
+agS
 fdT
 aac
 aac
@@ -4204,7 +4207,7 @@ aac
 agR
 aac
 aac
-aac
+agS
 xVp
 fdT
 xVp
@@ -4227,7 +4230,7 @@ aac
 fdT
 xVp
 xVp
-aac
+agS
 aac
 fdT
 agR
@@ -4534,7 +4537,7 @@ aac
 aac
 aac
 aac
-aac
+agS
 aac
 xVp
 xVp
@@ -4578,7 +4581,7 @@ aac
 aac
 aac
 xVp
-aac
+agS
 aac
 aac
 agR
@@ -4853,7 +4856,7 @@ xVp
 xVp
 aac
 xVp
-aac
+agS
 aac
 aac
 xVp
@@ -5036,7 +5039,7 @@ xVp
 xVp
 xVp
 aac
-aac
+agS
 aac
 aac
 xVp
@@ -5059,7 +5062,7 @@ aac
 aac
 agR
 agR
-aac
+agS
 xVp
 xVp
 xVp
@@ -5230,7 +5233,7 @@ agR
 aac
 xVp
 xVp
-aac
+agS
 aac
 aac
 aad
@@ -5317,7 +5320,7 @@ ihb
 aaa
 aac
 aac
-aac
+agS
 xVp
 fdT
 xVp
@@ -5377,7 +5380,7 @@ aac
 aac
 aac
 aac
-aac
+agS
 aac
 fdT
 aac
@@ -5548,7 +5551,7 @@ agR
 aac
 xVp
 xVp
-aac
+agS
 aac
 xVp
 aac
@@ -5983,7 +5986,7 @@ aac
 pvd
 aac
 aac
-aac
+agS
 xVp
 xVp
 aac
@@ -6163,7 +6166,7 @@ pvd
 aac
 aac
 aac
-aac
+agS
 xVp
 aac
 aac
@@ -6171,7 +6174,7 @@ aac
 xVp
 fdT
 xVp
-aac
+agS
 xVp
 xVp
 aac
@@ -6343,7 +6346,7 @@ agR
 aac
 aac
 aac
-aac
+agS
 xVp
 fdT
 xVp
@@ -6362,7 +6365,7 @@ aac
 aac
 aac
 xVp
-aac
+agS
 aac
 agR
 agR
@@ -6628,7 +6631,7 @@ aac
 aac
 xVp
 xVp
-aac
+agS
 agR
 agR
 aac
@@ -6774,7 +6777,7 @@ ihb
 (24,1,1) = {"
 aaa
 aac
-aac
+agS
 xVp
 aac
 cpg
@@ -6795,7 +6798,7 @@ aac
 agR
 aac
 aac
-aac
+agS
 xVp
 xVp
 aac
@@ -6840,7 +6843,7 @@ fdT
 aac
 agR
 aac
-aac
+agS
 xVp
 fdT
 xVp
@@ -7168,7 +7171,7 @@ aac
 agR
 agR
 aac
-aac
+agS
 xVp
 fdT
 xVp
@@ -7304,7 +7307,7 @@ pvd
 aac
 aac
 xVp
-aac
+agS
 aac
 aac
 agR
@@ -7495,7 +7498,7 @@ agR
 agR
 agR
 aac
-aac
+agS
 aac
 aac
 aad
@@ -7598,7 +7601,7 @@ aac
 pvd
 pvd
 aac
-agR
+agS
 xVp
 xVp
 fdT
@@ -7945,7 +7948,7 @@ xVp
 xVp
 xVp
 xVp
-aac
+agS
 aac
 aac
 agR
@@ -8133,13 +8136,13 @@ aac
 xVp
 aac
 aac
-aac
+agS
 aac
 aac
 aac
 aac
 xVp
-aac
+agS
 aac
 aac
 pvd
@@ -8251,7 +8254,7 @@ aac
 agR
 agR
 aac
-aac
+agS
 aac
 aac
 xVp
@@ -8280,7 +8283,7 @@ aac
 xVp
 xVp
 xVp
-aac
+agS
 aac
 aac
 xVp
@@ -8559,7 +8562,7 @@ aac
 aac
 xVp
 xVp
-aac
+agS
 aac
 cpg
 cpg
@@ -8750,7 +8753,7 @@ aac
 aac
 aac
 aac
-aac
+agS
 xVp
 xVp
 aac
@@ -9229,7 +9232,7 @@ aac
 xVp
 xVp
 xVp
-aac
+agS
 aac
 aac
 aac
@@ -9404,7 +9407,7 @@ pvd
 pvd
 pvd
 pvd
-aac
+agS
 aac
 aac
 aac
@@ -9425,7 +9428,7 @@ agR
 agR
 agR
 aac
-aac
+agS
 xVp
 aac
 agR
@@ -9916,7 +9919,7 @@ aac
 aac
 aac
 fdT
-aac
+agS
 aac
 aac
 pvd
@@ -10052,7 +10055,7 @@ aac
 agR
 agR
 aac
-aac
+agS
 pvd
 pvd
 pvd
@@ -10505,10 +10508,10 @@ aac
 aac
 xVp
 xVp
+agS
 aac
 aac
 aac
-aac
 vDd
 vDd
 vDd
@@ -10523,7 +10526,7 @@ vDd
 vDd
 aac
 aac
-aac
+agS
 aac
 aac
 aac
@@ -11182,13 +11185,13 @@ xVp
 agR
 aac
 xVp
-aac
+agS
 aac
 xVp
 aac
 fdT
 aac
-aac
+agS
 xVp
 xVp
 aac
@@ -11527,7 +11530,7 @@ xVp
 fdT
 xVp
 xVp
-aac
+agS
 aac
 xVp
 xVp
@@ -11963,7 +11966,7 @@ aac
 xVp
 xVp
 aac
-aac
+agS
 xVp
 fdT
 vDd
@@ -11985,7 +11988,7 @@ vDd
 vDd
 aac
 xVp
-aac
+agS
 aac
 aac
 xVp
@@ -12498,7 +12501,7 @@ pvd
 pvd
 aac
 xVp
-aac
+agS
 aac
 aac
 aad
@@ -13281,7 +13284,7 @@ aac
 aac
 aac
 fdT
-aac
+agS
 fdT
 xVp
 xVp
@@ -13581,7 +13584,7 @@ aac
 aac
 xVp
 xVp
-aac
+agS
 aac
 aac
 aac
@@ -13625,7 +13628,7 @@ aac
 aac
 aac
 aac
-aac
+agS
 xVp
 xVp
 aac
@@ -13769,7 +13772,7 @@ aac
 aac
 pvd
 aac
-aac
+agS
 aac
 xVp
 xVp
@@ -14074,7 +14077,7 @@ aac
 aac
 aac
 aac
-aac
+agS
 xVp
 fdT
 aac
@@ -15044,7 +15047,7 @@ aac
 xVp
 xVp
 xVp
-aac
+agS
 aac
 xVp
 xVp

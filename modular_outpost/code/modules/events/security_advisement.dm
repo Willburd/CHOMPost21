@@ -83,5 +83,5 @@
 					)
 	str += " Ensure to thoroughly interview the suspect about their activities and whereabouts over the past 48 hours, and fax a report containing interview contents and all identified contraband on their person, before releasing them if no offences were noted."
 
-	GLOB.global_announcer.autosay(str, "Security Advisement", "Command")
-	GLOB.global_announcer.autosay(str, "Security Advisement", "Security")
+	GLOB.global_announcer.autosay(str, "Security Advisement", CHANNEL_COMMAND)
+	GLOB.global_announcer.autosay(str, "Security Advisement", CHANNEL_SECURITY)
