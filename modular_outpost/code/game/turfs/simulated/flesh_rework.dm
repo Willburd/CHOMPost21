@@ -261,6 +261,15 @@ GLOBAL_LIST_EMPTY(terraformer_arteries)
 		/obj/item/rig/industrial,
 		/obj/item/inducer,
 		/obj/item/rcd/advanced,
+		/obj/item/stock_parts/capacitor/omni,
+		/obj/item/stock_parts/manipulator/omni,
+		/obj/item/stock_parts/micro_laser/omni,
+		/obj/item/stock_parts/scanning_module/omni,
+		/obj/item/stock_parts/subspace/amplifier,
+		/obj/item/stock_parts/subspace/analyzer,
+		/obj/item/stock_parts/subspace/ansible,
+		/obj/item/smes_coil/super_capacity/hyper,
+		/obj/item/smes_coil/super_io/hyper,
 	)
 	var/list/valid_treatments = list(
 		/obj/item/stack/medical/crude_pack,
