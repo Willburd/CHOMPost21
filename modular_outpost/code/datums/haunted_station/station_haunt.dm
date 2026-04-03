@@ -835,6 +835,10 @@
 	var/ent = pick(ent_list)
 	entity = WEAKREF(new ent())
 
+/datum/station_haunt/entity_spawn/Destroy(force)
+	entity = null
+	. = ..()
+
 /datum/station_haunt/entity_spawn/fire()
 	if(entity?.resolve()) // Still active
 		return
@@ -881,6 +885,7 @@
 	message_admins("Haunting Entity: [name]")
 
 /datum/haunting_entity/Destroy(force)
+	target_mob = null
 	STOP_PROCESSING(SSfastprocess, src)
 	. = ..()
 

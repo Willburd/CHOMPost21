@@ -75,6 +75,10 @@ GLOBAL_VAR_INIT(statue_photos_allowed, 3) // Photos can spawn statues... Lets no
 	var/player_has_activated = FALSE // if true, allows it to start going to random places if bored
 	var/bordom_counter = 500
 
+/mob/living/simple_mob/animal/statue/Destroy()
+	cached_watcher = null
+	. = ..()
+
 // Cannot talk
 /mob/living/simple_mob/animal/statue/say(var/message, var/datum/language/speaking = null, var/whispering = 0)
 	return 0
