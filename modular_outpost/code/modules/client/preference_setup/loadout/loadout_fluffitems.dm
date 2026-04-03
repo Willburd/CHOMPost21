@@ -55,8 +55,8 @@
 /datum/gear/fluff/ESHUI_medalcomb
 	display_name = "ESHUI Combat Action Medal"
 	path = /obj/item/clothing/accessory/medal/solgov/silver/sword/eshui
-	ckeywhitelist = list("ozydev","synxplushy","remthebold","cameron653","ironicleo","caramelion","pirakahunter788","haliaeetus","valinari","silencedmp5a5","natesaruli")
-	character_name = list("Raine Rattlewag","Cracker","Zeeshi","Trashfire","Diana Kuznetsova","Nikel","Tasesii","Calza Colfax","Atus","Valinari Sandivi Gloria","Russo","Cecil Colfax")
+	ckeywhitelist = list("ozydev","synxplushy","remthebold","cameron653","ironicleo","caramelion","pirakahunter788","haliaeetus","valinari","silencedmp5a5","natesaruli","spectralriot")
+	character_name = list("Raine Rattlewag","Cracker","Zeeshi","Trashfire","Diana Kuznetsova","Nikel","Tasesii","Calza Colfax","Atus","Valinari Sandivi Gloria","Russo","Cecil Colfax","Victim","ES-HASD #408")
 
 /datum/gear/fluff/ESHUI_rankpin
 	display_name = "ESHUI Officer's Qualification Pin"
