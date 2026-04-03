@@ -58965,6 +58965,9 @@
 	dir = 4
 	},
 /obj/item/trash/pretzel,
+/obj/structure/sign/warning/secure_area{
+	pixel_y = 32
+	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/spine/waste)
 "ciD" = (
@@ -71197,6 +71200,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
+/obj/structure/sign/warning/high_voltage{
+	pixel_y = 32
+	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/spine/waste)
 "cMM" = (
@@ -71231,59 +71237,63 @@
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/maintenance/substation/tram_control)
 "cMP" = (
-/obj/structure/catwalk,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 6
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/substation/tram_control)
-"cMQ" = (
-/obj/structure/closet/firecloset,
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 8
-	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/catwalk,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/substation/tram_control)
 "cMR" = (
-/obj/structure/cable/orange,
-/obj/structure/catwalk,
-/obj/machinery/power/apc/high{
-	dir = 8;
-	name = "west bump";
-	pixel_x = -24
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
 	},
+/obj/structure/catwalk,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/substation/tram_control)
 "cMS" = (
-/obj/structure/catwalk,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 6
-	},
 /obj/structure/cable/heavyduty{
 	icon_state = "0-2"
 	},
 /obj/structure/cable/orange{
 	icon_state = "0-5"
 	},
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/substation/tram_control)
-"cMT" = (
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 8
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
 	},
 /obj/structure/catwalk,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/substation/tram_control)
-"cMU" = (
-/obj/structure/cable/orange{
-	icon_state = "2-4"
+"cMT" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
 	},
+/obj/structure/catwalk,
+/obj/effect/landmark/redspaceexit,
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/substation/tram_control)
+"cMU" = (
 /obj/structure/railing,
+/obj/machinery/power/apc{
+	dir = 1;
+	name = "north bump";
+	pixel_y = 24;
+	nightshift_setting = 2
+	},
+/obj/structure/cable/orange{
+	icon_state = "0-4"
+	},
+/obj/machinery/camera/motion/command{
+	dir = 4;
+	c_tag = "COM - Tram Control Breaker"
+	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/substation/tram_control)
 "cMV" = (
@@ -71292,22 +71302,25 @@
 	RCon_tag = "Atmospherics Substation Bypass";
 	name = "Tram Control Breaker"
 	},
-/obj/structure/cable/orange{
-	icon_state = "0-8"
-	},
-/obj/structure/cable/orange{
-	icon_state = "0-4"
-	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/substation/tram_control)
 "cMW" = (
 /obj/structure/railing,
-/obj/machinery/light/small{
-	dir = 4
-	},
 /obj/structure/cable/orange{
 	icon_state = "8-10"
 	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/substation/tram_control)
+"cMX" = (
+/turf/simulated/wall,
+/area/maintenance/substation/tram_control)
+"cMY" = (
+/obj/machinery/computer/shuttle_control/multi{
+	name = "tram control console";
+	shuttle_tag = "Station Tram";
+	dir = 1
+	},
+/obj/structure/catwalk,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/substation/tram_control)
 "cNe" = (
@@ -102643,7 +102656,7 @@ cMN
 cMN
 cMN
 cMN
-kMh
+cMN
 aLS
 kMh
 aIY
@@ -102804,7 +102817,7 @@ kwU
 cMN
 cMU
 cMR
-cMN
+cMY
 cMN
 ciC
 kMh
@@ -103128,7 +103141,7 @@ kwU
 cMN
 cMW
 cMT
-cMQ
+cMN
 cMN
 cML
 kMh
@@ -103291,7 +103304,7 @@ cMN
 cMN
 cMN
 cMN
-cMN
+cMX
 cMM
 kMh
 kMh
