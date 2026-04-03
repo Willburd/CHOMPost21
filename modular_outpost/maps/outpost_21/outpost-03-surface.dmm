@@ -12095,9 +12095,6 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/muriki/processor/euth)
 "awE" = (
-/obj/effect/mine/claymore{
-	dir = 4
-	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/muriki/processor/euth)
 "awF" = (
@@ -12142,10 +12139,6 @@
 	},
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
 /area/muriki/grounds/terraform)
-"awL" = (
-/obj/effect/mine/claymore,
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/muriki/processor/euth)
 "awM" = (
 /turf/simulated/wall/durasteel/turfpack/muriki,
 /area/muriki/processor/euth)
@@ -18764,6 +18757,40 @@
 "aRZ" = (
 /turf/simulated/flesh/artery,
 /area/muriki/processor/pools/eastfund)
+"aSa" = (
+/obj/structure/lattice,
+/obj/structure/ladder,
+/turf/simulated/open/indoor/turfpack/muriki,
+/area/muriki/processor/hall)
+"aSb" = (
+/turf/simulated/flesh/artery,
+/area/muriki/processor)
+"aSc" = (
+/obj/structure/ladder/up,
+/obj/effect/mist,
+/turf/simulated/floor/flesh/turfpack/muriki,
+/area/muriki/processor/hall)
+"aSd" = (
+/obj/machinery/door/airlock/highsecurity/red{
+	name = "Terraformer Access";
+	req_one_access = list(40,53,52)
+	},
+/obj/machinery/door/firedoor,
+/turf/simulated/floor/redgrid/off,
+/area/muriki/processor/euth)
+"aSe" = (
+/obj/effect/map_effect/interval/atmogland/bodyheat,
+/obj/effect/mist,
+/turf/simulated/floor/flesh/turfpack/muriki,
+/area/muriki/processor/hall)
+"aSf" = (
+/turf/simulated/flesh/indestructable,
+/area/muriki/processor/gland/space)
+"aSg" = (
+/obj/effect/mist,
+/obj/structure/ladder/up,
+/turf/simulated/floor/flesh/turfpack/muriki,
+/area/muriki/processor/hall)
 "aSh" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4;
@@ -18771,6 +18798,22 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/security_port)
+"aSi" = (
+/obj/effect/mist,
+/turf/simulated/floor/flesh/turfpack/muriki,
+/area/muriki/processor/pools/crop)
+"aSj" = (
+/obj/structure/ladder/up,
+/obj/effect/mist,
+/turf/simulated/floor/flesh/turfpack/muriki,
+/area/muriki/processor/hall/waterway_upper)
+"aSk" = (
+/obj/effect/mist,
+/turf/simulated/floor/flesh/turfpack/muriki,
+/area/muriki/processor/hall/waterway_upper)
+"aSl" = (
+/turf/simulated/flesh/artery,
+/area/muriki/processor/hall/waterway_upper)
 "aSz" = (
 /obj/structure/table/glass,
 /obj/item/tool/wrench,
@@ -21779,6 +21822,7 @@
 /area/muriki/tramstation/waste)
 "bNB" = (
 /obj/structure/lattice,
+/obj/structure/ladder,
 /turf/simulated/open/indoor/turfpack/muriki,
 /area/muriki/processor/gland/airmix)
 "bNN" = (
@@ -36569,7 +36613,7 @@
 	},
 /obj/machinery/door/airlock/external{
 	name = "Neural Trunk Access Duct";
-	req_one_access = list(53,52)
+	req_one_access = list(40,52,53)
 	},
 /obj/machinery/door/firedoor,
 /obj/effect/landmark/step_trap,
@@ -45066,6 +45110,7 @@
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/cargomid)
 "joV" = (
+/obj/effect/mist,
 /turf/simulated/floor/water/acidic/shoreline/shoreline_flesh/indoor/turfpack/muriki{
 	dir = 1
 	},
@@ -52861,6 +52906,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/security/evidence_storage)
 "lFh" = (
+/obj/effect/mist,
 /turf/simulated/floor/water/acidic/shoreline/corner/corner_flesh/indoor/turfpack/muriki{
 	dir = 8
 	},
@@ -64753,7 +64799,6 @@
 /turf/simulated/floor/tiled,
 /area/engineering/corepower)
 "pBX" = (
-/obj/effect/map_effect/interval/effect_emitter/smoke/mist/passive,
 /turf/simulated/floor/water/acidic/shoreline/shoreline_flesh/indoor/turfpack/muriki{
 	dir = 10
 	},
@@ -72592,6 +72637,7 @@
 /obj/effect/floor_decal/flesh{
 	dir = 4
 	},
+/obj/effect/mist,
 /turf/simulated/floor/plating,
 /area/muriki/processor/hall)
 "scu" = (
@@ -74433,11 +74479,11 @@
 /turf/simulated/floor/plating,
 /area/muriki/tramstation/waste)
 "sJg" = (
-/obj/machinery/door/airlock/highsecurity/red{
-	name = "Euthanizer Access";
-	req_one_access = list(53,52)
-	},
 /obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/highsecurity/red{
+	name = "Terraformer Access";
+	req_one_access = list(40,53,52)
+	},
 /turf/simulated/floor/redgrid/off,
 /area/muriki/processor/euth)
 "sJm" = (
@@ -75540,6 +75586,7 @@
 /turf/simulated/wall/r_wall,
 /area/muriki/tramstation/waste)
 "taT" = (
+/obj/effect/mist,
 /turf/simulated/floor/water/acidic/shoreline/shoreline_flesh/indoor/turfpack/muriki{
 	dir = 8
 	},
@@ -75645,7 +75692,8 @@
 /area/maintenance/bar)
 "tcU" = (
 /obj/machinery/door/airlock/vault{
-	name = "Neural Trunk Access Duct"
+	name = "Neural Trunk Access Duct";
+	req_one_access = list(40,53)
 	},
 /obj/machinery/door/firedoor,
 /obj/item/airlock_brace,
@@ -77014,6 +77062,7 @@
 /area/bridge)
 "tAc" = (
 /obj/effect/map_effect/interval/atmogland/bodyheat,
+/obj/effect/mist,
 /turf/simulated/floor/flesh/turfpack/muriki,
 /area/muriki/processor/pools/crop)
 "tAf" = (
@@ -92759,7 +92808,7 @@ eJe
 nyl
 nyl
 aAQ
-nyl
+aRW
 nyl
 eJe
 ykH
@@ -93113,7 +93162,7 @@ ykH
 ykH
 eJe
 eJe
-nyl
+aRW
 ixt
 ixt
 nyl
@@ -93452,7 +93501,7 @@ nyl
 nyl
 ixt
 ixt
-kES
+aSa
 ixt
 nyl
 eJe
@@ -94222,12 +94271,12 @@ vVO
 ixt
 ixt
 ixt
-kES
+aSa
 ixt
 nyl
 nyl
 frJ
-frJ
+aRX
 usG
 usG
 tmI
@@ -94374,7 +94423,7 @@ eJe
 nyl
 nyl
 ajF
-ajF
+aSg
 ajF
 ixt
 dsy
@@ -94544,7 +94593,7 @@ nyl
 ixt
 ixt
 ixt
-nyl
+aRW
 nyl
 nyl
 ixt
@@ -94583,7 +94632,7 @@ alg
 alg
 nyl
 ixt
-ixt
+ajF
 aAQ
 ixt
 ixt
@@ -94745,7 +94794,7 @@ gdl
 alg
 nyl
 nyl
-ixt
+ajF
 scs
 ixt
 nyl
@@ -94841,7 +94890,7 @@ aad
 eJe
 ykH
 eJe
-lAk
+aSl
 ngI
 ngI
 bti
@@ -95396,7 +95445,7 @@ ixt
 ixt
 ixt
 ixt
-nyl
+aRW
 eJe
 eJe
 jms
@@ -95713,7 +95762,7 @@ tmI
 tmI
 usG
 ixt
-ixt
+ajF
 ixt
 ixt
 ixt
@@ -95822,7 +95871,7 @@ ixt
 ixt
 ixt
 nyl
-kES
+aSa
 nyl
 aRP
 ixt
@@ -95875,7 +95924,7 @@ dYS
 dYS
 oNA
 ixt
-ixt
+aSc
 ixt
 ixt
 ixt
@@ -96037,7 +96086,7 @@ tmI
 tmI
 frJ
 ixt
-ixt
+ajF
 ixt
 ixt
 ixt
@@ -96156,7 +96205,7 @@ nyl
 nyl
 nyl
 aRP
-ajr
+wiT
 ajr
 ajr
 ajr
@@ -97113,7 +97162,7 @@ deD
 ngI
 ngI
 deD
-deD
+aSk
 ngI
 ngI
 lAk
@@ -97276,7 +97325,7 @@ deD
 ngI
 lAk
 deD
-deD
+aSj
 ngI
 ngI
 deD
@@ -97336,7 +97385,7 @@ frJ
 dwQ
 dwQ
 dwQ
-eJe
+aSb
 eJe
 eJe
 jms
@@ -98093,7 +98142,7 @@ uZc
 xfg
 xfg
 nyl
-ixt
+ajF
 nyl
 nyl
 ixt
@@ -98255,7 +98304,7 @@ mxR
 uZc
 uZc
 xfg
-ixt
+ajF
 nyl
 nyl
 dsu
@@ -98428,7 +98477,7 @@ nyl
 ixt
 dsy
 aMu
-aMu
+aSf
 aMu
 nyl
 nyl
@@ -98453,7 +98502,7 @@ auS
 usG
 usG
 usG
-frJ
+aRX
 frJ
 kZq
 frJ
@@ -98574,7 +98623,7 @@ uZc
 lmU
 jaN
 sIi
-sIi
+aSi
 sIi
 wTw
 mxR
@@ -98592,11 +98641,11 @@ aAQ
 aMu
 ajv
 aMu
+aRP
+aRP
 nyl
 nyl
-nyl
-nyl
-nyl
+aRP
 auU
 auU
 auU
@@ -98618,7 +98667,7 @@ frJ
 frJ
 nyl
 nyl
-nyl
+aRW
 ixt
 ixt
 ixt
@@ -98754,7 +98803,7 @@ aMu
 aMu
 ajv
 ajv
-aMu
+aSf
 awM
 awM
 awM
@@ -98898,7 +98947,7 @@ uZc
 wIk
 sIi
 sIi
-sIi
+aSi
 sIi
 lOK
 mER
@@ -99213,7 +99262,7 @@ wyS
 (43,1,1) = {"
 aad
 eJe
-lAk
+aSl
 ngI
 lAk
 lAk
@@ -99722,7 +99771,7 @@ ixt
 nyl
 ixt
 wmx
-aMu
+aSf
 ajv
 ajv
 awM
@@ -99918,7 +99967,7 @@ nlq
 nlq
 chu
 ixt
-nyl
+aRW
 nyl
 eJe
 eJe
@@ -100048,7 +100097,7 @@ dsu
 nyl
 ixt
 ixt
-nyl
+aRP
 awM
 awM
 awM
@@ -100211,7 +100260,7 @@ ixt
 ixt
 nyl
 nyl
-nyl
+aRP
 awM
 awM
 awM
@@ -100372,17 +100421,17 @@ ixt
 ixt
 nyl
 nyl
+nyl
+nyl
 aRP
-nyl
-nyl
 awM
 awM
 awM
 awM
 awM
-nyl
-nyl
-nyl
+aRP
+aRP
+aRP
 awM
 awM
 awM
@@ -100393,7 +100442,7 @@ avM
 miq
 ixt
 nyl
-nyl
+aRW
 nyl
 nyl
 nyl
@@ -100535,13 +100584,13 @@ dsy
 ixt
 nyl
 aRP
+nyl
+nyl
+nyl
+aRW
+aRW
 aRP
-nyl
-nyl
-nyl
-nyl
-nyl
-nyl
+aRP
 aAQ
 nyl
 nyl
@@ -100697,7 +100746,7 @@ aAQ
 nQv
 aAQ
 nyl
-nyl
+aRP
 nyl
 nyl
 nyl
@@ -101004,7 +101053,7 @@ lAk
 ngI
 ngI
 nyl
-nyl
+aRW
 dsy
 ixt
 nyl
@@ -101360,13 +101409,13 @@ auU
 auU
 auU
 auW
-kES
+aSa
 auW
 nyl
 nyl
 nyl
-ixt
-ixt
+aSc
+ajF
 ixt
 ixt
 ixt
@@ -101511,7 +101560,7 @@ nyl
 ixt
 nyl
 ixt
-uHC
+aSe
 ixt
 cFt
 ixt
@@ -101672,9 +101721,9 @@ aRP
 nyl
 dsu
 nyl
-ixt
-ixt
-ixt
+ajF
+ajF
+ajF
 ixt
 ixt
 nyl
@@ -101697,7 +101746,7 @@ eJe
 eJe
 jms
 nLl
-awL
+awE
 ecA
 jsm
 ecA
@@ -102024,7 +102073,7 @@ jms
 jms
 nLl
 awF
-sJg
+aSd
 vRJ
 cnb
 aIt
@@ -102795,7 +102844,7 @@ xBx
 nyl
 nyl
 nyl
-ixt
+ajF
 nyl
 ixt
 nyl
@@ -102957,7 +103006,7 @@ xBx
 nyl
 nyl
 ixt
-ixt
+aSc
 nyl
 ixt
 nyl
@@ -103118,7 +103167,7 @@ xBx
 xBx
 ixt
 nyl
-ixt
+ajF
 nyl
 nyl
 ixt

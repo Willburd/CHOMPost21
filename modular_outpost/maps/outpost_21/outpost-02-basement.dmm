@@ -62384,6 +62384,7 @@
 	},
 /obj/effect/floor_decal/flesh,
 /obj/effect/mist,
+/obj/structure/ladder/up,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/muriki/processor/hall)
 "crD" = (
@@ -71120,6 +71121,44 @@
 "cMB" = (
 /turf/simulated/flesh/artery,
 /area/muriki/processor/pools/eastfund)
+"cMC" = (
+/obj/effect/mist,
+/obj/structure/ladder/up,
+/turf/simulated/floor/flesh/turfpack/muriki,
+/area/muriki/processor/hall)
+"cMD" = (
+/obj/structure/lattice,
+/obj/structure/ladder,
+/obj/effect/mist,
+/turf/simulated/open/indoor/turfpack/muriki,
+/area/muriki/processor/hall)
+"cME" = (
+/mob/living/simple_mob/vore/alienanimals/jil,
+/obj/effect/mist,
+/turf/simulated/floor/flesh/turfpack/muriki,
+/area/muriki/processor/hall)
+"cMF" = (
+/obj/effect/mist,
+/turf/simulated/floor/flesh/turfpack/muriki,
+/area/muriki/processor/hall/waterway_low)
+"cMG" = (
+/turf/simulated/flesh/artery,
+/area/muriki/processor/pools/gizzard)
+"cMH" = (
+/obj/machinery/door/flesh,
+/obj/effect/mist,
+/obj/effect/mist,
+/turf/simulated/floor/water/digestive_enzymes/turfpack/muriki,
+/area/muriki/processor/pools/gizzard)
+"cMI" = (
+/obj/structure/ladder/up,
+/obj/effect/mist,
+/turf/simulated/floor/flesh/turfpack/muriki,
+/area/muriki/processor/hall)
+"cMJ" = (
+/obj/effect/mist,
+/turf/simulated/floor/water/digestive_enzymes/turfpack/muriki,
+/area/muriki/processor/pools/gizzard)
 "cNe" = (
 /obj/structure/table/glass,
 /obj/item/towel/random,
@@ -73741,6 +73780,7 @@
 /area/engineering/refinery/main)
 "fEw" = (
 /obj/structure/lattice,
+/obj/structure/ladder,
 /turf/simulated/open/indoor/turfpack/muriki,
 /area/muriki/processor/hall)
 "fEQ" = (
@@ -80067,6 +80107,7 @@
 	},
 /obj/structure/catwalk,
 /obj/effect/mist,
+/obj/structure/ladder/up,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/muriki/processor/gland/airmix)
 "mWT" = (
@@ -81627,6 +81668,7 @@
 /area/rnd/hallway/xeno)
 "oWx" = (
 /obj/structure/lattice,
+/obj/structure/ladder,
 /turf/simulated/open/indoor/turfpack/muriki,
 /area/muriki/processor)
 "oWD" = (
@@ -83575,6 +83617,7 @@
 	dir = 4
 	},
 /obj/structure/lattice,
+/obj/structure/ladder,
 /turf/simulated/open/indoor/turfpack/muriki,
 /area/muriki/processor/hall)
 "qVG" = (
@@ -85059,6 +85102,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/red,
 /obj/effect/mist,
+/obj/structure/ladder/up,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/muriki/processor/hall)
 "ssD" = (
@@ -90725,7 +90769,7 @@ cMr
 cMy
 axj
 axj
-axj
+crB
 axj
 axj
 czg
@@ -90887,7 +90931,7 @@ avw
 axj
 axj
 avw
-fEw
+cMD
 lNV
 axj
 avw
@@ -90895,7 +90939,7 @@ avw
 qnS
 qnS
 duS
-qnS
+cMz
 qnS
 gYq
 gYq
@@ -91353,8 +91397,8 @@ gsF
 axj
 avw
 avw
-axj
-axj
+crB
+crB
 axj
 avy
 axj
@@ -92495,7 +92539,7 @@ aCO
 aCO
 avw
 avw
-avw
+cMy
 avy
 avw
 axj
@@ -93297,7 +93341,7 @@ cMw
 avw
 avw
 avw
-axj
+crB
 axj
 axj
 czg
@@ -93459,7 +93503,7 @@ nRl
 sJS
 avw
 avw
-axj
+cMI
 aDx
 avw
 avw
@@ -96267,7 +96311,7 @@ cMt
 qnS
 avw
 czg
-crB
+cMC
 crD
 ehk
 xJd
@@ -96386,7 +96430,7 @@ nRl
 nLL
 mWT
 axj
-axj
+crB
 axj
 axj
 axj
@@ -96547,8 +96591,8 @@ sJS
 iCF
 nLL
 mWT
-iHJ
-mlD
+crD
+cME
 axj
 axj
 axj
@@ -96708,10 +96752,10 @@ avw
 dPl
 oQK
 nLL
-mWT
-axj
-axj
-axj
+cMF
+crB
+crB
+crB
 axj
 axj
 avw
@@ -96872,7 +96916,7 @@ sJS
 fDb
 mWT
 axj
-dWL
+axj
 axj
 axj
 cMs
@@ -97995,9 +98039,9 @@ jzW
 nRl
 sJS
 lSC
-pbc
+cMJ
+cMH
 crJ
-aNe
 cMv
 avw
 axj
@@ -98158,7 +98202,7 @@ nRl
 sJS
 cMv
 aNe
-aNe
+crJ
 aNe
 aNe
 lSC
@@ -98326,7 +98370,7 @@ aNe
 aNe
 lSC
 cMv
-lSC
+cMG
 cMv
 lSC
 lSC
@@ -98972,7 +99016,7 @@ aNe
 aNe
 aNe
 aNe
-aNe
+crJ
 aNe
 aNe
 aNe
@@ -99127,15 +99171,15 @@ nRl
 nRl
 nRl
 cMw
-lSC
+cMG
 pbc
 kku
 aNe
 aNe
 pbc
-aNe
+crJ
 mfT
-aNe
+crJ
 aNe
 kku
 aNe
@@ -99296,7 +99340,7 @@ aNe
 aNe
 aNe
 aNe
-aNe
+crJ
 aNe
 aNe
 aNe
@@ -100915,7 +100959,7 @@ mpk
 coW
 nBC
 tQZ
-ogx
+cMB
 avw
 aac
 ugO

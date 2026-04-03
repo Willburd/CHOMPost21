@@ -5112,6 +5112,11 @@
 "amz" = (
 /turf/simulated/flesh/artery,
 /area/muriki/processor/pools/eastfund)
+"amA" = (
+/obj/structure/lattice,
+/obj/structure/ladder,
+/turf/simulated/open/indoor/turfpack/muriki,
+/area/muriki/processor/hall)
 "amE" = (
 /obj/machinery/computer/crew{
 	dir = 1
@@ -54318,7 +54323,7 @@ qYo
 fqq
 ssD
 cgR
-qMg
+amA
 cgR
 wlx
 amq
@@ -55819,7 +55824,7 @@ gEN
 cgR
 cgR
 wlx
-qMg
+amA
 cgR
 cgR
 wlx
@@ -57220,7 +57225,7 @@ icG
 wlx
 cgR
 cgR
-qMg
+amA
 cXh
 cgR
 cgR
@@ -61309,7 +61314,7 @@ aeL
 aeL
 wlx
 cgR
-qMg
+amA
 cgR
 cgR
 wlx
@@ -62901,7 +62906,7 @@ wlx
 cgR
 cgR
 cgR
-qMg
+amA
 rfo
 wFV
 jUy
