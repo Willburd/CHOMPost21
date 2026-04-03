@@ -618,6 +618,10 @@
 	name = "Arrivals Substation"
 	base_turf = /turf/simulated/open
 
+/area/maintenance/substation/tram_control
+	name = "Tram Control Substation"
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
+
 /area/muriki/crew/bunker
 	name = "\improper Emergency Bunker Access"
 	base_turf = /turf/simulated/open
@@ -2844,6 +2848,25 @@
 	icon_state = "shuttlegrn"
 	base_turf = /turf/simulated/floor/plating
 	use_emergency_overlay = TRUE
+	requires_power = FALSE
+
+/area/shuttle/tram/Initialize(mapload)
+	. = ..()
+	START_PROCESSING(SSobj, src)
+
+// We want to look at another area to decide our power actually, but we are a bit cheaty
+/area/shuttle/tram/process()
+	var/area/tram_control = GLOB.areas_by_type[/area/maintenance/substation/tram_control]
+	if(!tram_control || !tram_control.power_equip || !tram_control.power_environ || !tram_control.power_light)
+		if(!always_unpowered) // Turn off
+			requires_power = TRUE
+			always_unpowered = TRUE
+			power_change()
+	else
+		if(always_unpowered) // Turn on
+			requires_power = FALSE
+			always_unpowered = FALSE
+			power_change()
 
 /area/muriki/tramstation
 	name = "\improper Tram Station"

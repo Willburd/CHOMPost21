@@ -292,12 +292,12 @@
 
 /datum/station_haunt/trip_apc/fire()
 	var/area/targ_area = SShaunting.get_haunt_area()
-	if(targ_area)
-		if(targ_area.apc)
-			targ_area.apc.locked = FALSE
-			targ_area.apc.toggle_breaker()
-			targ_area.apc.visible_message("clicks","clicks")
-			SSmotiontracker.ping(targ_area.apc,100)
+	var/obj/machinery/power/apc/check_apc = targ_area?.get_apc()
+	if(check_apc)
+		check_apc.locked = FALSE
+		check_apc.toggle_breaker()
+		check_apc.visible_message("clicks","clicks")
+		SSmotiontracker.ping(check_apc,100)
 	end()
 
 

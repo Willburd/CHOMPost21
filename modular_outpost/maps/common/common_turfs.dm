@@ -172,7 +172,7 @@
 	icon = 'icons/turf/flooring/maglevs.dmi'
 	icon_state = "maglevup"
 
-	var/area/shock_area = /area/engineering/engine_smes // engine power hue hue hue
+	var/area/shock_area = /area/maintenance/substation/tram_control // Unique apc for the tram
 
 /turf/simulated/floor/maglev/Initialize()
 	. = ..()
