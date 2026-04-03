@@ -1,6 +1,6 @@
 /datum/element/hiccups
-	var/cure_chance = 3
-	var/hiccup_chance = 7
+	var/cure_chance = 2
+	var/hiccup_chance = 5
 
 /datum/element/hiccups/Attach(atom/target)
 	. = ..()
