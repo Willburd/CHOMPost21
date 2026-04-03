@@ -2811,6 +2811,17 @@
 "agS" = (
 /turf/simulated/flesh/artery,
 /area/muriki/processor/depths)
+"agT" = (
+/obj/effect/mist,
+/obj/structure/ladder/up,
+/turf/simulated/floor/flesh/turfpack/muriki,
+/area/muriki/processor/depths)
+"agU" = (
+/obj/effect/map_effect/interval/atmogland/bodyheat,
+/obj/effect/mist,
+/obj/structure/ladder/up,
+/turf/simulated/floor/flesh/turfpack/muriki,
+/area/muriki/processor/depths)
 "amr" = (
 /obj/effect/map_effect/interval/atmogland/bodyheat,
 /obj/effect/mist,
@@ -3892,7 +3903,7 @@ xVp
 xVp
 xVp
 xVp
-fuP
+agT
 amr
 xVp
 xVp
@@ -8626,7 +8637,7 @@ pvd
 aac
 aac
 fuP
-fuP
+agT
 aac
 agR
 aac
@@ -9111,7 +9122,7 @@ aac
 aac
 pvd
 aac
-fuP
+agT
 aac
 aac
 pvd
@@ -11314,7 +11325,7 @@ ihb
 aaa
 aac
 aac
-fuP
+agT
 xVp
 aac
 aac
@@ -11655,7 +11666,7 @@ vDd
 vDd
 vDd
 vDd
-vDd
+gTI
 vDd
 vDd
 vDd
@@ -11816,9 +11827,9 @@ vDd
 vDd
 vDd
 vDd
-vDd
 gTI
-vDd
+gTI
+gTI
 vDd
 vDd
 vDd
@@ -11972,15 +11983,15 @@ fdT
 vDd
 vDd
 vDd
+gTI
 vDd
 vDd
 vDd
 vDd
 vDd
 vDd
-vDd
-vDd
-vDd
+gTI
+gTI
 vDd
 vDd
 vDd
@@ -12133,17 +12144,17 @@ aac
 aac
 vDd
 vDd
-vDd
 gTI
-vDd
+gTI
+gTI
 vDd
 vDd
 vDd
 tcm
 vDd
-vDd
 gTI
-vDd
+gTI
+gTI
 vDd
 vDd
 vDd
@@ -12296,6 +12307,7 @@ aac
 vDd
 vDd
 vDd
+gTI
 vDd
 vDd
 vDd
@@ -12303,8 +12315,7 @@ vDd
 vDd
 vDd
 vDd
-vDd
-vDd
+gTI
 vDd
 vDd
 vDd
@@ -13295,7 +13306,7 @@ aac
 aac
 aac
 fuP
-amr
+agU
 aac
 aac
 agR
