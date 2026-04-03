@@ -71200,9 +71200,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/obj/structure/sign/warning/high_voltage{
-	pixel_y = 32
-	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/spine/waste)
 "cMM" = (
@@ -71333,6 +71330,56 @@
 /obj/structure/catwalk,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/substation/tram_control)
+"cMZ" = (
+/obj/structure/sign/directions/cargo{
+	pixel_y = 11
+	},
+/obj/structure/sign/directions/outpost/robotics{
+	dir = 9;
+	pixel_y = 5
+	},
+/obj/structure/sign/directions/engineering/atmospherics{
+	dir = 9;
+	pixel_y = -1
+	},
+/turf/simulated/wall,
+/area/maintenance/tug)
+"cNa" = (
+/obj/structure/sign/warning/high_voltage{
+	name = "\improper Tram Substation"
+	},
+/obj/structure/sign/directions/tram{
+	dir = 8;
+	pixel_y = -9;
+	name = "\improper Tram Substation"
+	},
+/turf/simulated/wall,
+/area/maintenance/spine/waste)
+"cNb" = (
+/obj/structure/sign/warning/high_voltage{
+	name = "\improper Tram Substation"
+	},
+/obj/structure/sign/directions/tram{
+	dir = 8;
+	pixel_y = -9;
+	name = "\improper Tram Substation"
+	},
+/turf/simulated/wall,
+/area/maintenance/spine/eng)
+"cNc" = (
+/obj/structure/sign/directions/cargo{
+	pixel_y = 11
+	},
+/obj/structure/sign/directions/outpost/robotics{
+	dir = 8;
+	pixel_y = 5
+	},
+/obj/structure/sign/directions/engineering/atmospherics{
+	dir = 8;
+	pixel_y = -1
+	},
+/turf/simulated/wall,
+/area/maintenance/atmos_control)
 "cNe" = (
 /obj/structure/table/glass,
 /obj/item/towel/random,
@@ -103487,7 +103534,7 @@ kMh
 kMh
 kMh
 kMh
-kMh
+cNa
 bUu
 bOO
 aFD
@@ -107696,7 +107743,7 @@ bMZ
 bMZ
 gWL
 gWL
-gWL
+cNb
 bPk
 bJz
 gWL
@@ -109803,7 +109850,7 @@ gWL
 oBW
 cjw
 dLY
-gWL
+cNb
 gWL
 gWL
 gWL
@@ -113844,7 +113891,7 @@ wRc
 bLQ
 adu
 adu
-adu
+cNc
 aZy
 aZU
 aFC
@@ -113859,7 +113906,7 @@ rdU
 beQ
 bfq
 aXg
-aXN
+cMZ
 aXN
 bpz
 bpz
