@@ -71,6 +71,7 @@
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Hallucination Anomaly",	/datum/event/anomaly/hallucination,		1,		null, TRUE),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Flux Anomaly",				/datum/event/anomaly/flux,				1,		null, TRUE),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Weather Anomaly",			/datum/event/anomaly/weather,			1,		null, TRUE),
+		new /datum/event_meta(EVENT_LEVEL_MODERATE, "hiccups",					/datum/event/hiccups,					1,		null, TRUE),
 	)
 	add_disabled_events(list(
 	))
