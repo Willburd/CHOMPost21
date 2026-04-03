@@ -50007,10 +50007,18 @@
 	dir = 2;
 	icon_state = "pipe-c"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/cable/heavyduty{
-	icon_state = "1-2"
+	icon_state = "0-2"
+	},
+/obj/structure/cable/heavyduty,
+/obj/structure/cable/heavyduty{
+	icon_state = "0-8"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/spine/waste)
@@ -71159,6 +71167,149 @@
 /obj/effect/mist,
 /turf/simulated/floor/water/digestive_enzymes/turfpack/muriki,
 /area/muriki/processor/pools/gizzard)
+"cMK" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/item/bikehorn,
+/obj/structure/cable/heavyduty{
+	icon_state = "0-4"
+	},
+/obj/structure/cable/heavyduty,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/spine/waste)
+"cML" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/spine/waste)
+"cMM" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/door/airlock/maintenance/int,
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/maintenance/spine/waste)
+"cMN" = (
+/turf/simulated/wall/r_wall,
+/area/maintenance/substation/tram_control)
+"cMO" = (
+/obj/machinery/door/airlock/maintenance/engi{
+	name = "Tram Control Substation"
+	},
+/obj/item/airlock_brace,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/maintenance/substation/tram_control)
+"cMP" = (
+/obj/structure/catwalk,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/substation/tram_control)
+"cMQ" = (
+/obj/structure/closet/firecloset,
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/obj/structure/catwalk,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/substation/tram_control)
+"cMR" = (
+/obj/structure/cable/orange,
+/obj/structure/catwalk,
+/obj/machinery/power/apc/high{
+	dir = 8;
+	name = "west bump";
+	pixel_x = -24
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/substation/tram_control)
+"cMS" = (
+/obj/structure/catwalk,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "0-2"
+	},
+/obj/structure/cable/orange{
+	icon_state = "0-5"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/substation/tram_control)
+"cMT" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
+/obj/structure/catwalk,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/substation/tram_control)
+"cMU" = (
+/obj/structure/cable/orange{
+	icon_state = "2-4"
+	},
+/obj/structure/railing,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/substation/tram_control)
+"cMV" = (
+/obj/structure/railing,
+/obj/machinery/power/breakerbox/activated{
+	RCon_tag = "Atmospherics Substation Bypass";
+	name = "Tram Control Breaker"
+	},
+/obj/structure/cable/orange{
+	icon_state = "0-8"
+	},
+/obj/structure/cable/orange{
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/substation/tram_control)
+"cMW" = (
+/obj/structure/railing,
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/structure/cable/orange{
+	icon_state = "8-10"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/substation/tram_control)
 "cNe" = (
 /obj/structure/table/glass,
 /obj/item/towel/random,
@@ -102488,10 +102639,10 @@ kwU
 kwU
 kwU
 kwU
-kwU
-kwU
-kwU
-kwU
+cMN
+cMN
+cMN
+cMN
 kMh
 aLS
 kMh
@@ -102650,11 +102801,11 @@ kwU
 kwU
 kwU
 kwU
-kwU
-kwU
-kwU
-kwU
-kMh
+cMN
+cMU
+cMR
+cMN
+cMN
 ciC
 kMh
 kMh
@@ -102812,12 +102963,12 @@ kwU
 kwU
 kwU
 kwU
-kwU
-kwU
-kwU
-kwU
-kMh
-ckt
+cMN
+cMV
+cMS
+cMP
+cMO
+cMK
 kMh
 ccU
 cfj
@@ -102974,12 +103125,12 @@ kwU
 kwU
 kwU
 kwU
-kwU
-kwU
-kwU
-kwU
-kMh
-aLS
+cMN
+cMW
+cMT
+cMQ
+cMN
+cML
 kMh
 ccU
 aSa
@@ -103136,12 +103287,12 @@ kwU
 kwU
 kwU
 kwU
-kwU
-kwU
-kwU
-kMh
-kMh
-aDo
+cMN
+cMN
+cMN
+cMN
+cMN
+cMM
 kMh
 kMh
 cfk

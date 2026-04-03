@@ -78,9 +78,24 @@
 	crash_message = "Tram system derailment detected."
 	crash_locations = list("tram_crash_red")
 
+/datum/shuttle/autodock/multi/tram/can_launch()
+	var/area/cur_area = shuttle_area[1]
+	if(cur_area.always_unpowered)
+		return FALSE
+	. = ..()
+
+/datum/shuttle/autodock/multi/tram/can_force()
+	var/area/cur_area = shuttle_area[1]
+	if(cur_area.always_unpowered)
+		return FALSE
+	. = ..()
 
 /datum/shuttle/autodock/multi/tram/should_crash(var/obj/effect/shuttle_landmark/intended_destination)
 	if(emagged_crash)
+		return TRUE
+	// Crash due to powerloss on move
+	var/area/cur_area = shuttle_area[1]
+	if(cur_area.always_unpowered)
 		return TRUE
 	// If on highest level of spooky let the tram crash happen
 	if(SShaunting.get_world_haunt() >= 5)
