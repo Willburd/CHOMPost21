@@ -68,6 +68,10 @@ OL|IL|OL
 	var/t_rate = 0.75 // Only used in generator
 	var/datum/weakref/origin_machine = null
 
+/datum/confinement_pulse_data/Destroy(force)
+	origin_machine = null
+	. = ..()
+
 /datum/confinement_pulse_data/proc/clone_from(var/datum/confinement_pulse_data/source)
 	for(var/A in vars - list(BLACKLISTED_COPY_VARS))
 		vars[A] = source.vars[A]
@@ -172,6 +176,7 @@ OL|IL|OL
 	AddElement(/datum/element/rotatable)
 
 /obj/structure/confinement_beam_generator/Destroy()
+	cached_controlbox = null
 	construction_state = 0
 	. = ..()
 

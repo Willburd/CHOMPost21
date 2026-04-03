@@ -21,6 +21,10 @@
 	var/visual_only = TRUE
 	var/datum/weakref/confinement_data = null
 
+/obj/item/projectile/beam/confinement/Destroy()
+	confinement_data = null
+	. = ..()
+
 /obj/item/projectile/beam/confinement/on_hit(atom/target, blocked, def_zone)
 	var/datum/confinement_pulse_data/data = confinement_data?.resolve()
 	if(!visual_only && data) // Forward the beam to the next lens
@@ -78,6 +82,10 @@
 /obj/effect/confinment_beam_incoming/Initialize(mapload)
 	. = ..()
 	addtimer(CALLBACK(src, PROC_REF(move), 1), 1, TIMER_DELETE_ME)
+
+/obj/effect/confinment_beam_incoming/Destroy()
+	confinement_data = null
+	. = ..()
 
 /obj/effect/confinment_beam_incoming/Bump(atom/A)
 	if(isobserver(A))
