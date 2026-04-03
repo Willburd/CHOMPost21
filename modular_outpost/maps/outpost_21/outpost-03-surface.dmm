@@ -37611,7 +37611,14 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 6
 	},
-/obj/item/geiger/wall/east,
+/obj/machinery/turretid/lethal{
+	check_all = 1;
+	control_area = "\improper Facility Terraformer Base";
+	name = "Euthanization Chamber Turret Control";
+	pixel_x = 32;
+	req_access = list(1);
+	req_one_access = list(1,40)
+	},
 /turf/simulated/floor/carpet/tealcarpet,
 /area/crew_quarters/captain)
 "hcT" = (
@@ -38303,7 +38310,7 @@
 /obj/machinery/door/window/southright{
 	dir = 1;
 	name = "Captain's Desk Door";
-	req_access = list(20)
+	req_one_access = list(20,40)
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/captain)
@@ -41826,7 +41833,7 @@
 	},
 /obj/machinery/door/airlock/highsecurity/red{
 	name = "Bridge Holdout Automatic Door";
-	req_one_access = list(1,20,53,58)
+	req_one_access = list(1,19,20,53,58)
 	},
 /obj/machinery/door/firedoor/border_only,
 /turf/simulated/floor/tiled/steel_grid,
@@ -45947,7 +45954,7 @@
 "jym" = (
 /obj/machinery/door/airlock/command{
 	name = "Colony Director's Quarters";
-	req_access = list(20)
+	req_one_access = list(19,20,40)
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/effect/floor_decal/spline/fancy/wood{
@@ -56781,13 +56788,7 @@
 	dir = 5
 	},
 /obj/structure/displaycase,
-/obj/machinery/turretid/lethal{
-	check_all = 1;
-	control_area = "\improper Facility Terraformer Base";
-	name = "Euthanization Chamber Turret Control";
-	pixel_x = 32;
-	req_access = list(1)
-	},
+/obj/item/geiger/wall/east,
 /turf/simulated/floor/carpet/tealcarpet,
 /area/crew_quarters/captain)
 "mSR" = (
@@ -64133,7 +64134,7 @@
 /obj/machinery/door/airlock/command{
 	id_tag = "captaindoor";
 	name = "Colony Director's Office";
-	req_one_access = list(20)
+	req_one_access = list(20,40)
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4

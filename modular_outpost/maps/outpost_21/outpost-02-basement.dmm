@@ -13040,7 +13040,7 @@
 	id = "procatmodoor";
 	name = "Core Maintenance Cavity Access";
 	pixel_y = 32;
-	req_one_access = list(56)
+	req_one_access = list(40,56)
 	},
 /obj/effect/floor_decal/flesh{
 	dir = 1
@@ -13075,7 +13075,7 @@
 	name = "Terraformer Gas Return Defenses";
 	req_access = null;
 	pixel_y = -32;
-	req_one_access = list(56)
+	req_one_access = list(40,56)
 	},
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/muriki/processor/hall/entrance)
@@ -14143,7 +14143,8 @@
 /obj/machinery/button/remote/blast_door{
 	id = "procatmodoor";
 	name = "Core Maintenance Cavity Exit";
-	pixel_y = -32
+	pixel_y = -32;
+	req_one_access = list(40,56)
 	},
 /obj/effect/map_effect/interval/atmogland/bodyheat,
 /turf/simulated/floor/flesh/turfpack/muriki,
