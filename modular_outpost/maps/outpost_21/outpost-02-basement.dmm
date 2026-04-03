@@ -71245,6 +71245,16 @@
 /obj/structure/catwalk,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/substation/tram_control)
+"cMQ" = (
+/obj/machinery/atmospherics/binary/pump/on{
+	target_pressure = 15000;
+	dir = 1
+	},
+/obj/structure/cable/orange{
+	icon_state = "9-10"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/incinerator)
 "cMR" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
@@ -72504,6 +72514,9 @@
 /obj/random/maintenance/engineering,
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
 	dir = 1
+	},
+/obj/structure/cable/orange{
+	icon_state = "2-9"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/incinerator)
@@ -74920,6 +74933,12 @@
 /obj/effect/floor_decal/industrial/outline/grey,
 /obj/structure/railing{
 	dir = 8
+	},
+/obj/structure/cable/orange{
+	icon_state = "0-5"
+	},
+/obj/structure/cable/orange{
+	icon_state = "16-0"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/incinerator)
@@ -80498,6 +80517,9 @@
 /obj/machinery/meter,
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
 	dir = 1
+	},
+/obj/structure/cable/orange{
+	icon_state = "1-6"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/incinerator)
@@ -87522,9 +87544,6 @@
 /turf/simulated/floor/wood,
 /area/quartermaster/breakroom)
 "vfu" = (
-/obj/structure/cable/orange{
-	icon_state = "1-2"
-	},
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
@@ -87543,6 +87562,9 @@
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 5
+	},
+/obj/structure/cable/orange{
+	icon_state = "1-6"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/incinerator)
@@ -92815,7 +92837,7 @@ bCx
 alX
 bxI
 amW
-rHM
+cMQ
 rrp
 bCY
 cfv

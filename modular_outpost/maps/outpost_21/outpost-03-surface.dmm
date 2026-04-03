@@ -11817,6 +11817,12 @@
 	},
 /obj/effect/floor_decal/industrial/outline/grey,
 /obj/random/junk,
+/obj/structure/cable/orange{
+	icon_state = "0-9"
+	},
+/obj/structure/cable/orange{
+	icon_state = "16-0"
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/wastedisposal)
 "avR" = (
@@ -12139,6 +12145,16 @@
 	},
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
 /area/muriki/grounds/terraform)
+"awL" = (
+/obj/machinery/atmospherics/pipe/simple/visible/blue,
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 1
+	},
+/obj/structure/cable/orange{
+	icon_state = "1-6"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/wastedisposal)
 "awM" = (
 /turf/simulated/wall/durasteel/turfpack/muriki,
 /area/muriki/processor/euth)
@@ -18814,6 +18830,14 @@
 "aSl" = (
 /turf/simulated/flesh/artery,
 /area/muriki/processor/hall/waterway_upper)
+"aSm" = (
+/obj/machinery/atmospherics/pipe/zpipe/down,
+/obj/structure/lattice,
+/obj/structure/cable/orange{
+	icon_state = "32-2"
+	},
+/turf/simulated/open,
+/area/maintenance/wastedisposal)
 "aSz" = (
 /obj/structure/table/glass,
 /obj/item/tool/wrench,
@@ -94858,8 +94882,8 @@ sDg
 aIs
 cQj
 qxd
-vrt
-wXG
+aSm
+awL
 vgu
 cos
 nEv
