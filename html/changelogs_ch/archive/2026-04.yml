@@ -23,3 +23,6 @@
   - bugfix: more cetus fixes
   - maptweak: cetus cargo expanded and reworked
   - maptweak: implemented body sorting on cetus, disposals are now safer to use
+2026-04-03:
+  Diana:
+  - rscadd: ghostbusting
