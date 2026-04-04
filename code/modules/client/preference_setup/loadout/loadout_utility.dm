@@ -13,6 +13,7 @@
 	path = /obj/item/text_to_speech
 	cost = 0
 
+/* Outpost 21 edit - Communicator removal
 /datum/gear/utility/communicator
 	display_name = "communicator selection"
 	path = /obj/item/communicator
@@ -24,6 +25,7 @@
 	for(var/obj/item/communicator_type as anything in typesof(/obj/item/communicator)/* Outpost 21 edit - Nif removal: - list(/obj/item/communicator/integrated,/obj/item/communicator/commlink)*/) //VOREStation Edit - Remove Commlink
 		communicators[initial(communicator_type.name)] = communicator_type
 	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(communicators))
+*/
 
 /datum/gear/utility/camera
 	display_name = "camera"
