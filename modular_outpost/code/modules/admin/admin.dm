@@ -4,19 +4,22 @@ ADMIN_VERB(sendFax, R_ADMIN|R_MOD|R_EVENT, "Send Fax", "Sends a fax to this mach
 		var/area/A = get_area(M)
 		fax_machines["[A]"] = M
 
-	var/selected = tgui_input_list(usr, "Choose a fax", "Fax", fax_machines)
-	if(selected)
-		var/obj/machinery/photocopier/faxmachine/sendto = fax_machines[selected]
-		if(QDELETED(sendto))
-			to_chat(usr, "Error: Fax machine ceased to exist!")
-			return
+	var/selected = tgui_input_list(user, "Choose a fax", "Fax", fax_machines)
+	if(!selected)
+		return
 
-		var/replyorigin = tgui_input_text(usr, "Please specify who the fax is coming from", "Origin")
+	var/obj/machinery/photocopier/faxmachine/sendto = fax_machines[selected]
+	if(QDELETED(sendto))
+		to_chat(user, "Error: Fax machine ceased to exist!")
+		return
 
-		var/obj/item/paper/admin/P = new /obj/item/paper/admin( null ) //hopefully the null loc won't cause trouble for us
+	var/replyorigin = tgui_input_text(user, "Please specify who the fax is coming from", "Origin")
 
-		P.admindatum = src
-		P.origin = replyorigin
-		P.destination = sendto
+	var/obj/item/paper/admin/P = new /obj/item/paper/admin(null) //hopefully the null loc won't cause trouble for us
+	user.holder.faxreply = P
 
-		P.adminbrowse()
+	P.admindatum = user.holder
+	P.origin = replyorigin
+	P.destination = sendto
+
+	P.adminbrowse()
