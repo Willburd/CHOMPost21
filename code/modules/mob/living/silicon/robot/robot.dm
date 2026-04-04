@@ -434,7 +434,7 @@
 	setup_PDA()
 
 	// as well as our communicator registration
-	setup_communicator()
+	// setup_communicator() // Outpost 21 edit - Communicator removal
 
 	//We also need to update name of internal camera.
 	if (camera)

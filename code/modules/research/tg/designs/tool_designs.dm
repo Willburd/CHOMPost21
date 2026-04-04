@@ -434,6 +434,7 @@
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_ENGINEERING | DEPARTMENT_BITFLAG_SCIENCE
 
+/* Outpost 21 edit - Communicator removal
 /datum/design_techweb/communicator
 	name = "Communicator"
 	desc = "A personal device used to enable long range dialog between two people."
@@ -445,6 +446,7 @@
 		RND_CATEGORY_TOOLS + RND_SUBCATEGORY_TOOLS_MISC
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_ENGINEERING | DEPARTMENT_BITFLAG_SCIENCE
+*/
 
 /datum/design_techweb/inducer_sci
 	name = "Inducer (Scientific)"
