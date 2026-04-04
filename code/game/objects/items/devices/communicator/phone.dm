@@ -272,6 +272,7 @@
 			mob.show_message(rendered)
 	..()
 
+/* Outpost 21 edit- Communicator removal
 // Verb: join_as_voice()
 // Parameters: None
 // Description: Allows ghosts to call communicators, if they meet all the requirements.
@@ -328,6 +329,7 @@
 			O.exonet.send_message(chosen_communicator.exonet.address, "voice")
 
 			to_chat(src, "A communications request has been sent to [chosen_communicator].  Now you need to wait until someone answers.")
+*/
 
 // Proc: connect_video()
 // Parameters: user - the mob doing the viewing of video, comm - the communicator at the far end
