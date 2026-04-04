@@ -23,3 +23,9 @@
   - bugfix: more cetus fixes
   - maptweak: cetus cargo expanded and reworked
   - maptweak: implemented body sorting on cetus, disposals are now safer to use
+2026-04-03:
+  Diana:
+  - rscadd: ghostbusting
+2026-04-04:
+  Will:
+  - bugfix: Fixed accidental looting debug flag being left enabled on trash piles
