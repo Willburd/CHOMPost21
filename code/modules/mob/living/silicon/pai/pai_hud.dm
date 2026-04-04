@@ -228,7 +228,7 @@
 	using.alpha = ui_alpha
 	hud_elements |= using
 
-/* Communicator removal
+/* Outpost 21 edit - Communicator removal
 	//Communicator button
 	using = new /atom/movable/screen/pai()
 	using.name = "communicator"
