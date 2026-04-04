@@ -228,6 +228,7 @@
 	using.alpha = ui_alpha
 	hud_elements |= using
 
+/* Communicator removal
 	//Communicator button
 	using = new /atom/movable/screen/pai()
 	using.name = "communicator"
@@ -236,6 +237,7 @@
 	using.color = ui_color
 	using.alpha = ui_alpha
 	hud_elements |= using
+*/
 
 	//Language button
 	using = new /atom/movable/screen/pai()
