@@ -41742,6 +41742,10 @@
 /obj/item/extinguisher/mini,
 /obj/item/extinguisher/mini,
 /obj/structure/table/reinforced,
+/obj/item/storage/box/metalfoam{
+	pixel_x = -8;
+	pixel_y = 13
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/engineering/storage)
 "ilv" = (
@@ -55673,50 +55677,39 @@
 /obj/structure/fireaxecabinet{
 	pixel_x = -32
 	},
-/obj/item/grenade/dephasing{
-	pixel_x = -7
+/obj/item/storage/box/metalfoam{
+	pixel_x = -8;
+	pixel_y = 3
 	},
 /obj/item/grenade/dephasing{
-	pixel_x = -7
+	pixel_x = 7
 	},
 /obj/item/grenade/dephasing{
-	pixel_x = -7
+	pixel_x = 7
 	},
 /obj/item/grenade/dephasing{
-	pixel_x = -7
+	pixel_x = 7
 	},
 /obj/item/grenade/dephasing{
-	pixel_x = -7
+	pixel_x = 7
 	},
 /obj/item/grenade/dephasing{
-	pixel_x = -7
+	pixel_x = 7
 	},
 /obj/item/grenade/dephasing{
-	pixel_x = -7
+	pixel_x = 7
 	},
 /obj/item/grenade/dephasing{
-	pixel_x = -7
+	pixel_x = 7
 	},
 /obj/item/grenade/dephasing{
-	pixel_x = -7
+	pixel_x = 7
 	},
 /obj/item/grenade/dephasing{
-	pixel_x = -7
+	pixel_x = 7
 	},
-/obj/item/grenade/chem_grenade/metalfoam{
-	pixel_x = 5
-	},
-/obj/item/grenade/chem_grenade/metalfoam{
-	pixel_x = 5
-	},
-/obj/item/grenade/chem_grenade/metalfoam{
-	pixel_x = 5
-	},
-/obj/item/grenade/chem_grenade/metalfoam{
-	pixel_x = 5
-	},
-/obj/item/grenade/chem_grenade/metalfoam{
-	pixel_x = 5
+/obj/item/grenade/dephasing{
+	pixel_x = 7
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/tactical)
