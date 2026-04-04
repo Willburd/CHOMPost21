@@ -45,3 +45,27 @@
 		RND_CATEGORY_HACKED,
 		RND_SUBCATEGORY_WEAPONS_AMMO + RND_SUBCATEGORY_WEAPONS_AMMO_RIFLE
 	)
+
+/datum/design_techweb/type901_standard
+	SET_AMMO_DESIGN_NAMEDESC("rifle magazine (T901-7.62mm)")
+	id = "type901_standard"
+	materials = list(MAT_STEEL = 2400)
+	build_type = AUTOLATHE
+	build_path =  /obj/item/ammo_magazine/type901
+	category = list(
+		RND_CATEGORY_INITIAL,
+		RND_CATEGORY_HACKED,
+		RND_SUBCATEGORY_WEAPONS_AMMO + RND_SUBCATEGORY_WEAPONS_AMMO_RIFLE
+	)
+
+/datum/design_techweb/type901_ap
+	SET_AMMO_DESIGN_NAMEDESC("rifle magazine (T901-7.62mm armor piercing)")
+	id = "type901_ap"
+	materials = list(MAT_STEEL = 3000, MAT_PLASTEEL = 1200)
+	build_type = AUTOLATHE
+	build_path =  /obj/item/ammo_magazine/type901/ap
+	category = list(
+		RND_CATEGORY_INITIAL,
+		RND_CATEGORY_HACKED,
+		RND_SUBCATEGORY_WEAPONS_AMMO + RND_SUBCATEGORY_WEAPONS_AMMO_RIFLE
+	)

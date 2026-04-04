@@ -8,4 +8,6 @@
 		"awp_338_ap",
 		"hectate",
 		"hectate_ap",
+		"type901_standard",
+		"type901_ap"
 	)
