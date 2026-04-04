@@ -112,7 +112,7 @@
 		card.pai = src
 
 	sradio = new(src)
-	communicator = new(src)
+	// communicator = new(src) Outpost 21 edit - Communicator removal
 	pai_ui_chassis = new(src)
 	if(card)
 		if(!card.radio)
