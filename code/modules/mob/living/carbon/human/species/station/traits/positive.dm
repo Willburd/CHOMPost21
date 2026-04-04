@@ -666,7 +666,7 @@
 /datum/trait/positive/heavyweight/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
 	H.mob_size = MOB_LARGE
-	H.mob_bump_flag = HEAVY
+	// H.mob_bump_flag = HEAVY // Outpost 21 edit - Removed bump flag
 
 /datum/trait/positive/grappling_expert
 	name = "Grappling Expert"
