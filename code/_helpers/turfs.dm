@@ -167,11 +167,11 @@
 			if(z_level_change) // The objects still need to know if their z-level changed.
 				O.onTransitZ(T.z, X.z)
 			// Outpost 21 edit(port) begin - Shuttle updates interior capable vehicles properly on movement
-			if(istype(O,/obj/vehicle/has_interior/controller))
+			if(istype(O,/obj/vehicle/has_interior))
 				// kinda hacky... but this is the only thing that has had issues.
 				// Because the shuttle doesn't actually call move(),
 				// and if you move on the same Z level then onTransitZ() doesn't work either!
-				var/obj/vehicle/has_interior/controller/V = O
+				var/obj/vehicle/has_interior/V = O
 				V.update_weapons_location(V.loc)
 				V.update_exit_pos()
 			// Outpost 21 edit end

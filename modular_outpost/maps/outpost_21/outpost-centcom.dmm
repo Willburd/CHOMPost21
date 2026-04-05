@@ -3282,7 +3282,7 @@
 /turf/unsimulated/floor/reinforced,
 /area/centcom/specops)
 "ahF" = (
-/obj/vehicle/has_interior/controller/heavyarmor_tank{
+/obj/vehicle/has_interior/heavyarmor_tank{
 	dir = 8;
 	interior_area = /area/vehicle_interior/heavyarmor_tank_B
 	},
@@ -3331,7 +3331,7 @@
 /turf/unsimulated/floor/reinforced,
 /area/centcom/specops)
 "ahL" = (
-/obj/vehicle/has_interior/controller/heavyarmor_carrier{
+/obj/vehicle/has_interior/heavyarmor_carrier{
 	dir = 8;
 	interior_area = /area/vehicle_interior/heavyarmor_carrier_B;
 	weapons_equiped = list(/obj/structure/vehicle_interior_weapon/hmg)

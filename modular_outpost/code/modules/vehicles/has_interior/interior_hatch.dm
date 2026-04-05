@@ -11,7 +11,7 @@
 	density = TRUE
 	icon_state = "door_closed"
 	light_range = 1 // so visible in dark interiors
-	var/obj/vehicle/has_interior/controller/interior_controller = null
+	var/obj/vehicle/has_interior/interior_controller = null
 	var/denied_sound = 'sound/machines/deniedbeep.ogg'
 	var/bolt_up_sound = 'sound/machines/door/boltsup.ogg'
 	var/bolt_down_sound = 'sound/machines/door/boltsdown.ogg'

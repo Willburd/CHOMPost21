@@ -65,13 +65,13 @@
 			H.master.playsound_local(turf_source, soundin, vol, vary, frequency, falloff, is_global, channel, pressure_affected, S, preference, volume_channel, T)
 		// Outpost 21 addition end
 		// Outpost 21 addition begin - Forward sounds to the insides of vehicles
-		else if(istype(U,/obj/vehicle/has_interior/controller))
+		else if(istype(U,/obj/vehicle/has_interior))
 			// Already a sound forwarded to the interior of a vehicle, ignore me!
 			// Globals are heard over all maps anyway, so don't forward either!
 			if(is_global || istype(source,/obj/machinery/computer/vehicle_interior_console))
 				continue
 
-			var/obj/vehicle/has_interior/controller/V = U
+			var/obj/vehicle/has_interior/V = U
 			var/turf/T = get_turf(V)
 			if(!T)
 				continue

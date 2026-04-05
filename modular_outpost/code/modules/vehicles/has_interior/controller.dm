@@ -1,4 +1,4 @@
-/obj/vehicle/has_interior/controller
+/obj/vehicle/has_interior
 	/*=================================================================
 	Explaination:
 		This is the core of the vehicle's code. It handles multi-tile movement,
@@ -79,7 +79,7 @@
 //-------------------------------------------
 // Standard procs
 //-------------------------------------------
-/obj/vehicle/has_interior/controller/Initialize(mapload)
+/obj/vehicle/has_interior/Initialize(mapload)
 	. = ..()
 
 	cell = new /obj/item/cell/high(src)
@@ -143,7 +143,7 @@
 		// load all interior parts as components of vehicle!
 		log_world("## DEBUG: Interior vehicle [name] setting up...")
 
-/obj/vehicle/has_interior/controller/ex_act(severity)
+/obj/vehicle/has_interior/ex_act(severity)
 	// noise!
 	playsound(entrance_hatch, get_sfx("vehicle_crush"), 50, 1)
 
@@ -163,7 +163,7 @@
 		if(1)
 			take_damage(30)
 
-/obj/vehicle/has_interior/controller/relaymove(mob/user, direction)
+/obj/vehicle/has_interior/relaymove(mob/user, direction)
 	if(stat || !on)
 		return FALSE
 
@@ -227,7 +227,7 @@
 	start_move_sound()
 	return TRUE
 
-/obj/vehicle/has_interior/controller/Moved(atom/old_loc, direction, forced = FALSE, movetime)
+/obj/vehicle/has_interior/Moved(atom/old_loc, direction, forced = FALSE, movetime)
 	. = ..()
 	// Always update weapon location after move
 	update_weapons_location(loc)
@@ -236,12 +236,12 @@
 	if(dir == reverse_direction(cached_dir))
 		dir = cached_dir // hold direction...
 
-/obj/vehicle/has_interior/controller/proc/shake_cab()
+/obj/vehicle/has_interior/proc/shake_cab()
 	for(var/mob/living/M in intarea)
 		if(!M.buckled)
 			shake_camera(M, 0.5, 0.1)
 
-/obj/vehicle/has_interior/controller/Bump(atom/Obstacle)
+/obj/vehicle/has_interior/Bump(atom/Obstacle)
 	if(!istype(Obstacle, /atom/movable))
 		return
 
@@ -261,7 +261,7 @@
 			else
 				A.Move(T)	  //bump things away when hit
 
-/obj/vehicle/has_interior/controller/update_icon()
+/obj/vehicle/has_interior/update_icon()
 	. = ..()
 	update_weapons_location(loc)
 	// Handle destruction
@@ -272,7 +272,7 @@
 	for(var/obj/structure/vehicle_interior_weapon/W in internal_weapons_list)
 		W.update_icon()
 
-/obj/vehicle/has_interior/controller/proc/update_weapons_location(var/newloc)
+/obj/vehicle/has_interior/proc/update_weapons_location(var/newloc)
 	for(var/obj/structure/vehicle_interior_weapon/W in internal_weapons_list)
 		if(istype(W,/obj/structure/vehicle_interior_weapon) && W.weapon_index != -1)
 			W.loc = newloc
@@ -281,7 +281,7 @@
 			W.pixel_x = offsetxylist[1]
 			W.pixel_y = offsetxylist[2]
 
-/obj/vehicle/has_interior/controller/Destroy()
+/obj/vehicle/has_interior/Destroy()
 	update_weapons_location(loc)
 	if(on)
 		remote_turn_off()
@@ -292,25 +292,25 @@
 	. = ..()
 	GLOB.interior_vehicle_list -= src;
 
-/obj/vehicle/has_interior/controller/proc/start_move_sound()
+/obj/vehicle/has_interior/proc/start_move_sound()
 	if(move_loop)
 		move_loop.start(src,TRUE)
 
-/obj/vehicle/has_interior/controller/proc/stop_move_sound()
+/obj/vehicle/has_interior/proc/stop_move_sound()
 	if(move_loop)
 		move_loop.stop(src,TRUE)
 
 //-------------------------------------------
 // Violence!
 //-------------------------------------------
-/obj/vehicle/has_interior/controller/proc/smash_at_loc(var/newloc)
+/obj/vehicle/has_interior/proc/smash_at_loc(var/newloc)
 	if(istype(newloc,/turf/))
 		var/turf/T = newloc
 		for(var/atom/A in T.contents)
 			smash_things(A) // what is in the turf
 		smash_things(T) // turf itself
 
-/obj/vehicle/has_interior/controller/proc/smash_things(var/target)
+/obj/vehicle/has_interior/proc/smash_things(var/target)
 	var/severity = pick(2,2,3,3,3)
 	if(has_breaking_speed)
 		severity = 2 // first smash always best
@@ -462,13 +462,13 @@
 				return 1
 	return 0
 
-/obj/vehicle/has_interior/controller/proc/crush_mobs_at_loc(var/newloc)
+/obj/vehicle/has_interior/proc/crush_mobs_at_loc(var/newloc)
 	if(istype(newloc,/turf/))
 		var/turf/T = newloc
 		for(var/mob/M in T.contents)
 			crush_mobs(M)
 
-/obj/vehicle/has_interior/controller/proc/crush_mobs(var/target)
+/obj/vehicle/has_interior/proc/crush_mobs(var/target)
 	var/move_damage = 33 / move_delay
 	if(isliving(target))
 		var/mob/living/M = target
@@ -487,7 +487,7 @@
 //-------------------------------------------
 // Vehicle procs
 //-------------------------------------------
-/obj/vehicle/has_interior/controller/explode()
+/obj/vehicle/has_interior/explode()
 	src.visible_message(span_red("<B>[src] blows apart!</B>"), 1)
 	playsound(src, 'sound/effects/explosions/vehicleexplosion.ogg', 100, 8, 3) //CHOMPedit: New sound effects.
 	SEND_SIGNAL(src,COMSIG_REMOTE_VIEW_CLEAR)
@@ -496,7 +496,7 @@
 //-------------------------------------------
 // Interaction procs
 //-------------------------------------------
-/obj/vehicle/has_interior/controller/MouseDrop_T(var/atom/movable/C, mob/user as mob)
+/obj/vehicle/has_interior/MouseDrop_T(var/atom/movable/C, mob/user as mob)
 	if(user.buckled || user.stat || user.restrained() || !Adjacent(user) || !user.Adjacent(C) || !istype(C) || (user == C && !user.canmove))
 		return 0
 	if(!Adjacent(user))
@@ -510,14 +510,14 @@
 	flick("door_deny", entrance_hatch)
 	playsound(entrance_hatch, entrance_hatch.denied_sound, 50, 0, 3)
 
-/obj/vehicle/has_interior/controller/attack_hand(mob/user as mob)
+/obj/vehicle/has_interior/attack_hand(mob/user as mob)
 	// nothing YET, used for attacks
 
-/obj/vehicle/has_interior/controller/attack_generic(mob/user as mob)
+/obj/vehicle/has_interior/attack_generic(mob/user as mob)
 	// aliens/borers
 	attack_hand(user)
 
-/obj/vehicle/has_interior/controller/proc/enter_interior(var/atom/movable/C)
+/obj/vehicle/has_interior/proc/enter_interior(var/atom/movable/C)
 	// moves atom to interior access point of tank
 	if(!istype(entrypos,/turf/))
 		C.visible_message("<span class='notice'>Interior inaccessible...</span>")
@@ -532,13 +532,13 @@
 			return
 	transfer_to( C, entrypos)
 
-/obj/vehicle/has_interior/controller/proc/update_exit_pos()
+/obj/vehicle/has_interior/proc/update_exit_pos()
 	var/ang = dir2angle(dir)
 	ang += dir2angle(exit_door_direction)
 	var/direx = angle2dir(ang)
 	exitpos = get_step(get_step(loc,direx),direx)
 
-/obj/vehicle/has_interior/controller/proc/exit_interior(var/atom/movable/C)
+/obj/vehicle/has_interior/proc/exit_interior(var/atom/movable/C)
 	// moves atom to interior access point of tank
 	if(!istype(exitpos))
 		C.visible_message("<span class='notice'>Exterior inaccessible...</span>")
@@ -552,7 +552,7 @@
 			return
 	transfer_to( C, exitpos)
 
-/obj/vehicle/has_interior/controller/proc/transfer_to(var/atom/movable/C, var/turf/dest)
+/obj/vehicle/has_interior/proc/transfer_to(var/atom/movable/C, var/turf/dest)
 	// handles pulling code too
 	if(!ismob(C))
 		C.forceMove(dest)
@@ -571,10 +571,10 @@
 		M.stop_pulling() // sanity...
 		M.start_pulling(pulledobj)
 
-/obj/vehicle/has_interior/controller/load(var/atom/movable/C, var/mob/user)
+/obj/vehicle/has_interior/load(var/atom/movable/C, var/mob/user)
 	return 0
 
-/obj/vehicle/has_interior/controller/proc/light_set()
+/obj/vehicle/has_interior/proc/light_set()
 	playsound(src, 'sound/machines/button.ogg', 100, 1, 0) // VOREStation Edit
 	intarea.lightswitch = on
 	intarea.update_icon()
@@ -587,12 +587,12 @@
 	intarea.power_change()
 	GLOB.lights_switched_on_roundstat++
 
-/obj/vehicle/has_interior/controller/doMove(atom/destination, direction, movetime)
+/obj/vehicle/has_interior/doMove(atom/destination, direction, movetime)
 	. = ..(destination,direction,movetime)
 	update_weapons_location(loc)
 	update_exit_pos()
 
-/obj/vehicle/has_interior/controller/proc/remote_turn_on()
+/obj/vehicle/has_interior/proc/remote_turn_on()
 	if(stat)
 		return
 	if(!key)
@@ -621,7 +621,7 @@
 	light_set()
 	update_icon()
 
-/obj/vehicle/has_interior/controller/proc/remote_turn_off()
+/obj/vehicle/has_interior/proc/remote_turn_off()
 	turn_off()
 	if(interior_helm)
 		SEND_SIGNAL(src,COMSIG_REMOTE_VIEW_CLEAR)

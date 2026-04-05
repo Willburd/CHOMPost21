@@ -11,7 +11,7 @@
 	circuit = /obj/item/circuitboard/vehicle_interior_console
 
 	VAR_PRIVATE/list/viewers // Weakrefs to mobs in direct-view mode.
-	var/obj/vehicle/has_interior/controller/interior_controller = null
+	var/obj/vehicle/has_interior/interior_controller = null
 	var/controls_weapon_index = 0 // if above 0, controls weapons in interior_controller.internal_weapon_list
 
 /obj/machinery/computer/vehicle_interior_console/Destroy()

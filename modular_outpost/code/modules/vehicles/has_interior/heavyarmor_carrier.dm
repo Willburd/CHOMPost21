@@ -1,4 +1,4 @@
-/obj/vehicle/has_interior/controller/heavyarmor_carrier
+/obj/vehicle/has_interior/heavyarmor_carrier
 	name = "armored personal carrier"
 	move_delay = 2
 
