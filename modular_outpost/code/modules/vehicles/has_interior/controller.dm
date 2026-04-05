@@ -272,7 +272,7 @@
 	for(var/obj/structure/vehicle_interior_weapon/W in internal_weapons_list)
 		W.update_icon()
 
-/obj/vehicle/has_interior/proc/update_weapons_location(var/newloc)
+/obj/vehicle/has_interior/proc/update_weapons_location(newloc)
 	for(var/obj/structure/vehicle_interior_weapon/W in internal_weapons_list)
 		if(istype(W,/obj/structure/vehicle_interior_weapon) && W.weapon_index != -1)
 			W.loc = newloc
@@ -303,14 +303,14 @@
 //-------------------------------------------
 // Violence!
 //-------------------------------------------
-/obj/vehicle/has_interior/proc/smash_at_loc(var/newloc)
+/obj/vehicle/has_interior/proc/smash_at_loc(newloc)
 	if(istype(newloc,/turf/))
 		var/turf/T = newloc
 		for(var/atom/A in T.contents)
 			smash_things(A) // what is in the turf
 		smash_things(T) // turf itself
 
-/obj/vehicle/has_interior/proc/smash_things(var/target)
+/obj/vehicle/has_interior/proc/smash_things(target)
 	var/severity = pick(2,2,3,3,3)
 	if(has_breaking_speed)
 		severity = 2 // first smash always best
@@ -462,13 +462,13 @@
 				return 1
 	return 0
 
-/obj/vehicle/has_interior/proc/crush_mobs_at_loc(var/newloc)
+/obj/vehicle/has_interior/proc/crush_mobs_at_loc(newloc)
 	if(istype(newloc,/turf/))
 		var/turf/T = newloc
 		for(var/mob/M in T.contents)
 			crush_mobs(M)
 
-/obj/vehicle/has_interior/proc/crush_mobs(var/target)
+/obj/vehicle/has_interior/proc/crush_mobs(target)
 	var/move_damage = 33 / move_delay
 	if(isliving(target))
 		var/mob/living/M = target
@@ -496,7 +496,7 @@
 //-------------------------------------------
 // Interaction procs
 //-------------------------------------------
-/obj/vehicle/has_interior/MouseDrop_T(var/atom/movable/C, mob/user as mob)
+/obj/vehicle/has_interior/MouseDrop_T(atom/movable/C, mob/user)
 	if(user.buckled || user.stat || user.restrained() || !Adjacent(user) || !user.Adjacent(C) || !istype(C) || (user == C && !user.canmove))
 		return 0
 	if(!Adjacent(user))
@@ -510,10 +510,10 @@
 	flick("door_deny", entrance_hatch)
 	playsound(entrance_hatch, entrance_hatch.denied_sound, 50, 0, 3)
 
-/obj/vehicle/has_interior/attack_hand(mob/user as mob)
+/obj/vehicle/has_interior/attack_hand(mob/user)
 	// nothing YET, used for attacks
 
-/obj/vehicle/has_interior/attack_generic(mob/user as mob)
+/obj/vehicle/has_interior/attack_generic(mob/user)
 	// aliens/borers
 	attack_hand(user)
 
@@ -538,7 +538,7 @@
 	var/direx = angle2dir(ang)
 	exitpos = get_step(get_step(loc,direx),direx)
 
-/obj/vehicle/has_interior/proc/exit_interior(var/atom/movable/C)
+/obj/vehicle/has_interior/proc/exit_interior(atom/movable/C)
 	// moves atom to interior access point of tank
 	if(!istype(exitpos))
 		C.visible_message("<span class='notice'>Exterior inaccessible...</span>")
@@ -552,7 +552,7 @@
 			return
 	transfer_to( C, exitpos)
 
-/obj/vehicle/has_interior/proc/transfer_to(var/atom/movable/C, var/turf/dest)
+/obj/vehicle/has_interior/proc/transfer_to(atom/movable/C, turf/dest)
 	// handles pulling code too
 	if(!ismob(C))
 		C.forceMove(dest)
@@ -571,7 +571,7 @@
 		M.stop_pulling() // sanity...
 		M.start_pulling(pulledobj)
 
-/obj/vehicle/has_interior/load(var/atom/movable/C, var/mob/user)
+/obj/vehicle/has_interior/load(atom/movable/C, mob/user)
 	return 0
 
 /obj/vehicle/has_interior/proc/light_set()

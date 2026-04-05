@@ -21,7 +21,7 @@
 	visible_message( span_danger("[src.name] was hit by [AM], with no visible effect."))
 	. = ..()
 
-/obj/structure/vehicle_interior_hatch/MouseDrop_T(var/atom/movable/C, mob/user as mob)
+/obj/structure/vehicle_interior_hatch/MouseDrop_T(atom/movable/C, mob/user)
 	attack_hand( user)
 
 /obj/structure/vehicle_interior_hatch/attackby(obj/item/I, mob/user)

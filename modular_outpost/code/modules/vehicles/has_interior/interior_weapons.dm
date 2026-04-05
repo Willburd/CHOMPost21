@@ -26,12 +26,12 @@
 /obj/structure/vehicle_interior_weapon/RepelAirflowDest(n) // airflow does not push it around!
 	return
 
-/obj/structure/vehicle_interior_weapon/proc/action_checks(var/atom/target)
+/obj/structure/vehicle_interior_weapon/proc/action_checks(atom/target)
 	if(projectiles <= 0)
 		return FALSE
 	return TRUE
 
-/obj/structure/vehicle_interior_weapon/proc/solve_aim_angle(var/endx, var/endy)
+/obj/structure/vehicle_interior_weapon/proc/solve_aim_angle(endx, endy)
 	var/ev = control_console.interior_controller.extra_view
 
 	// is just /proc/Get_Angle(atom/movable/start,atom/movable/end) but with X/Y on the screen from its center...
@@ -50,7 +50,7 @@
 
 	return returnangle
 
-/obj/structure/vehicle_interior_weapon/proc/action(var/atom/target, var/params, var/mob/user_calling)
+/obj/structure/vehicle_interior_weapon/proc/action(atom/target, params, mob/user_calling)
 	if(!action_checks(target))
 		return
 
@@ -122,13 +122,13 @@
 	projectiles = projectiles_per_shot
 	return TRUE
 
-/obj/structure/vehicle_interior_weapon/proc/get_pilot_zone_sel(var/mob/user)
+/obj/structure/vehicle_interior_weapon/proc/get_pilot_zone_sel(mob/user)
 	if(!user.zone_sel || user.stat)
 		return BP_TORSO
 
 	return user.zone_sel.selecting
 
-/obj/structure/vehicle_interior_weapon/proc/Fire(var/atom/A, var/atom/target, var/params, var/mob/user, var/angle_override)
+/obj/structure/vehicle_interior_weapon/proc/Fire(atom/A, atom/target, params, mob/user, angle_override)
 	if(istype(A, /obj/item/projectile))	// Sanity.
 		var/obj/item/projectile/P = A
 		P.plane = MOB_PLANE
@@ -142,7 +142,7 @@
 		var/atom/movable/AM = A
 		AM.throw_at(target, 7, 1, control_console.interior_controller)
 
-/obj/structure/vehicle_interior_weapon/proc/process_accuracy(var/obj/projectile, var/mob/living/user, var/atom/target)
+/obj/structure/vehicle_interior_weapon/proc/process_accuracy(obj/projectile, mob/living/user, atom/target)
 	var/obj/item/projectile/P = projectile
 	if(!istype(P))
 		return
@@ -165,7 +165,7 @@
 /obj/structure/vehicle_interior_weapon/attack_hand(mob/user)
 	// ignore
 
-/obj/structure/vehicle_interior_weapon/proc/update_weapon_turn(var/goaldir)
+/obj/structure/vehicle_interior_weapon/proc/update_weapon_turn(goaldir)
 	// find current direction's angle, find rotation direction, add 45+1 to it, then return the new dir we want to be!
 	var/startdir = dir2angle(dir)
 	dir = angle2dir(360 + startdir + (SIGN(closer_angle_difference(startdir,dir2angle(goaldir))) * 46))
@@ -247,7 +247,8 @@
 	density = TRUE
 	var/weapon_index = -1 // set by the init!
 	var/ammo_path = /obj/item/tank_shell
-	var/loaded = FALSE
+	var/loaded = 0
+	var/loaded_max = 1
 
 /obj/machinery/ammo_loader/Initialize(mapload)
 	. = ..()
@@ -256,32 +257,38 @@
 /obj/machinery/ammo_loader/ex_act(severity)
 	return 0 // no explosive act
 
-/obj/machinery/ammo_loader/attackby(obj/item/I as obj, mob/user as mob)
+/obj/machinery/ammo_loader/attackby(obj/item/I, mob/user)
 	if(!istype(I,ammo_path))
 		return
-	if(loaded)
-		to_chat( user, "A shell is already loaded.")
+	if(loaded >= loaded_max)
+		if(loaded_max == 1)
+			to_chat( user, "A shell is already loaded.")
+		else
+			to_chat( user, "The autoloader is full.")
 		return
 	if(do_after(user, 2 SECONDS, target = src) && !loaded)
-		loaded = TRUE
+		loaded += 1
 		user.visible_message("[user] loads a shell into \the [src].", "You load a shell into \the [src].")
 		qdel(I)
 		playsound(src, 'sound/machines/turrets/turret_deploy.ogg', 100, 1)
 		update_icon()
 
 /obj/machinery/ammo_loader/MouseDrop(atom/over)
+	if(!loaded)
+		to_chat(usr, "There is nothing loaded.")
+		return
 	if(!CanMouseDrop(over, usr))
 		return
 	if(over == usr)
 		usr.visible_message("[usr] unloads \the [src].", "You unload \the [src].")
-		loaded = FALSE
+		loaded -= 1
 		var/obj/item/thing = new ammo_path(usr.loc)
 		usr.put_in_hands(thing)
 		playsound(src, 'sound/items/electronic_assembly_empty.ogg', 100, 1)
 		update_icon()
 
 /obj/machinery/ammo_loader/proc/fire()
-	loaded = FALSE
+	loaded -= 1
 	update_icon()
 	flick("loader_fire",src)
 	var/datum/effect/effect/system/spark_spread/sparks = new /datum/effect/effect/system/spark_spread()
@@ -292,12 +299,11 @@
 	playsound(src, 'sound/machines/machine_die_short.ogg', 100, 1)
 
 /obj/machinery/ammo_loader/update_icon()
-	. = ..()
+	cut_overlays()
 	if(!loaded)
 		icon_state = "loader"
 	else
 		icon_state = "loader_loaded"
-	overlays.Cut()
 	add_overlay("loader_top")
 
 
@@ -313,4 +319,3 @@
 	throwforce = 15.0
 	throw_speed = 2
 	throw_range = 4
-	origin_tech = list(TECH_MATERIAL = 3, TECH_ENGINEERING = 4)

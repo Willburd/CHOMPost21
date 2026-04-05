@@ -63,12 +63,12 @@
 		view_type = /datum/remote_view_config/interior_vehicle/helm
 	start_coordinated_remoteview(user, interior_controller, viewers, view_type)
 
-/obj/machinery/computer/vehicle_interior_console/look(var/mob/user)
+/obj/machinery/computer/vehicle_interior_console/look(mob/user)
 	if(!interior_controller)
 		return
 	user.set_viewsize(world.view + interior_controller.extra_view)
 
-/obj/machinery/computer/vehicle_interior_console/unlook(var/mob/user)
+/obj/machinery/computer/vehicle_interior_console/unlook(mob/user)
 	interior_controller.stop_move_sound()
 	user.set_viewsize() // reset to default
 
@@ -79,13 +79,11 @@
 	return // nothing
 
 /obj/machinery/computer/vehicle_interior_console/update_icon()
-	if(!interior_controller?.on)
-		// power off in vehicle
-		cut_overlays()
-		if(icon_keyboard)
-			return add_overlay("[icon_keyboard]_off")
-	else
-		. = ..()
+	cut_overlays()
+	if(!interior_controller?.on) // power off in vehicle
+		add_overlay("[icon_keyboard]_off")
+		return
+	. = ..()
 
 //-------------------------------------------
 // Click through procs, for when you click in vehicle view!
@@ -122,7 +120,7 @@
 		return
 	..()
 
-/obj/machinery/computer/vehicle_interior_console/helm/click_ctrl(var/mob/user)
+/obj/machinery/computer/vehicle_interior_console/helm/click_ctrl(mob/user)
 	// helm expects pilot seat
 	if(!Adjacent(user))
 		return ..()
@@ -132,7 +130,7 @@
 	start_engine()
 	return CLICK_ACTION_SUCCESS
 
-/obj/machinery/computer/vehicle_interior_console/helm/click_alt(var/mob/user)
+/obj/machinery/computer/vehicle_interior_console/helm/click_alt(mob/user)
 	// helm expects pilot seat
 	if(!Adjacent(user))
 		return ..()
