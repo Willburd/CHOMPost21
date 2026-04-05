@@ -63,7 +63,8 @@ SUBSYSTEM_DEF(haunting)
 		/datum/station_haunt/shuttle_move,
 		/datum/station_haunt/change_nearby_display,
 		/datum/station_haunt/camera_stare,
-		/datum/station_haunt/deck_hatch_open
+		/datum/station_haunt/deck_hatch_open,
+		/datum/station_haunt/terraformer_song
 		)
 	hauntings["[MODE_UNNERVING]"] = list(
 		/datum/station_haunt/light_flicker,
