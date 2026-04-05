@@ -130,8 +130,10 @@ GLOBAL_LIST_INIT(ai_verbs_default, list(
 	canmove = 0
 	density = TRUE
 
+	/* Outpost 21 edit - Communicator removal
 	if(!is_dummy)
 		aiCommunicator = new /obj/item/communicator/integrated(src)
+	*/
 
 	holo_icon = getHologramIcon(icon('icons/mob/AI.dmi',"holo1"))
 

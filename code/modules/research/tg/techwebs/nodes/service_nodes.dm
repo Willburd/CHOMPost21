@@ -4,7 +4,7 @@
 	display_name = "Office Equipment"
 	description = "Nanotrasen's finest in ergonomic office tech, ensuring station admin stays productive and compliant with corporate policies — because even in space, paperwork never stops."
 	design_ids = list(
-		"communicator",
+		// "communicator", // Outpost 21 edit - Communicator removal
 		"laser_pointer",
 		"translator",
 		"ear_translator",
