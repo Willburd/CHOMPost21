@@ -68,11 +68,12 @@
 	var/turf/targloc = get_turf(target)
 	if(!curloc || !targloc)
 		return FALSE
+	// stop thinking darkness is bottom left of the map, just don't allow firing...
 	if(targloc.x == 0 && targloc.y == 0)
-		// stop thinking darkness is bottom left of the map, just don't allow firing...
 		return FALSE
+
+	// turn toward!
 	if(dir != angledir)
-		// turn toward!
 		update_weapon_turn( angledir)
 		return FALSE
 
@@ -81,16 +82,15 @@
 		to_chat(user_calling, "<span class='warning'>You refrain from firing the mounted \the [src] as your intent is set to help.</span>")
 		return FALSE
 
-	// check if loaded
-	var/obj/machinery/ammo_loader/L
+	// check if it uses a loader, and is loaded
+	var/obj/machinery/ammo_loader/loader
 	if(weapon_index <= control_console.interior_controller.internal_loaders_list.len)
-		L = control_console.interior_controller.internal_loaders_list[weapon_index]
-	if(L)
-		if(!L.loaded)
+		loader = control_console.interior_controller.internal_loaders_list[weapon_index]
+	if(loader)
+		if(!loader.loaded)
 			to_chat(user_calling, "<span class='warning'>You are unable to fire \the [src] as there is no shell loaded.</span>")
 			return FALSE
-		else
-			L.fire()
+		loader.fire()
 
 	// ACTUALLY fire
 	control_console.interior_controller.visible_message("<span class='warning'>[user_calling] fires [src]!</span>")

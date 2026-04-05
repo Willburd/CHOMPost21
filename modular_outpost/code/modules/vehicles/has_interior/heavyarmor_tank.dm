@@ -57,7 +57,7 @@
 	deviation = 0.1
 	fire_cooldown = 6
 
-	freeaim = FALSE
+	//freeaim = FALSE
 
 
 // basically just meaner /obj/item/projectile/bullet/srmrocket
