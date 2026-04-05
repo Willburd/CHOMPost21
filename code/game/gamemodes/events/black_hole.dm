@@ -17,7 +17,7 @@
 		qdel(src)
 		return
 
-	if(prob(5))
+	if(prob(15)) // Outpost 21 edit - Higher chance to fizzle
 		visible_message(span_warning("\The [src] fizzles out and collapses."))
 		qdel(src)
 		return
