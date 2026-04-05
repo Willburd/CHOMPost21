@@ -54,7 +54,7 @@
 	// Cannot share map locations either.
 	// DO NOT SET IN CHILD OBJECTS, this is for MAPPERS to set!
 	var/interior_area = null
-	var/list/weapons_equiped = null // /obj/item/vehicle_interior_weapon type list that populates internal_weapons_list
+	var/list/weapons_equiped = null // /obj/structure/vehicle_interior_weapon type list that populates internal_weapons_list
 	var/list/weapons_draw_offset = null // format is weaponarray[ DIR[x,y] ]
 
 	var/exit_door_direction = SOUTH // if vehicle is facing north, what direction do things leaving it go in? They appear outside the collision box, and only if they can stand there.
@@ -63,7 +63,7 @@
 	var/area/intarea = null
 	var/turf/entrypos = null // where to place atoms that enter the interior
 	var/turf/exitpos = null // where to place atoms that enter the interior
-	var/obj/machinery/door/vehicle_interior_hatch/entrance_hatch = null
+	var/obj/structure/vehicle_interior_hatch/entrance_hatch = null
 	var/obj/machinery/computer/vehicle_interior_console/interior_helm = null // driving console
 	var/list/internal_weapons_list = list()
 	var/list/internal_loaders_list = list() // ammo is put into this and used up by mainguns
@@ -92,6 +92,7 @@
 		camera = new /obj/machinery/camera(src)
 		camera.c_tag = "[name] ([rand(1000,9999)])" // camera bullshit needs unique name
 		camera.replace_networks(list(NETWORK_DEFAULT,NETWORK_ROBOTS))
+
 	GLOB.interior_vehicle_list += src
 
 	// find interior entrypos
@@ -106,7 +107,7 @@
 			if(istype( locate(/obj/effect/landmark/vehicle_interior/entrypos) in T.contents, /obj/effect/landmark/vehicle_interior/entrypos))
 				entrypos = T
 			// scan for exit door
-			for(var/obj/machinery/door/vehicle_interior_hatch/R in T.contents)
+			for(var/obj/structure/vehicle_interior_hatch/R in T.contents)
 				R.interior_controller = src // set controller so we can leave this vehicle!
 				entrance_hatch = R
 			// scan for consoles
@@ -122,7 +123,7 @@
 					break
 
 				if(C.controls_weapon_index > 0)
-					var/obj/item/vehicle_interior_weapon/W = internal_weapons_list[C.controls_weapon_index]
+					var/obj/structure/vehicle_interior_weapon/W = internal_weapons_list[C.controls_weapon_index]
 					W.weapon_index = C.controls_weapon_index
 					W.control_console = C // link weapon to console
 					// rotate weapon to facing angle of vehicle
@@ -268,12 +269,12 @@
 	if(health <= 0)
 		dest_state = "_dest"
 	icon_state = "[base_icon][dest_state]"
-	for(var/obj/item/vehicle_interior_weapon/W in internal_weapons_list)
+	for(var/obj/structure/vehicle_interior_weapon/W in internal_weapons_list)
 		W.update_icon()
 
 /obj/vehicle/has_interior/controller/proc/update_weapons_location(var/newloc)
-	for(var/obj/item/vehicle_interior_weapon/W in internal_weapons_list)
-		if(istype(W,/obj/item/vehicle_interior_weapon) && W.weapon_index != -1)
+	for(var/obj/structure/vehicle_interior_weapon/W in internal_weapons_list)
+		if(istype(W,/obj/structure/vehicle_interior_weapon) && W.weapon_index != -1)
 			W.loc = newloc
 			var/list/dirlist = weapons_draw_offset[W.weapon_index] // get sublist, sorted by directions
 			var/list/offsetxylist = dirlist["[dir]"] // get subsublist with x and y inside
@@ -505,9 +506,9 @@
 		if(do_after(user, 2 SECONDS, target = src))
 			if(Adjacent(user))
 				enter_interior(user)
-	else
-		entrance_hatch.do_animate("deny")
-		playsound(src, entrance_hatch.denied_sound, 50, 0, 3)
+		return
+	flick("door_deny", entrance_hatch)
+	playsound(entrance_hatch, entrance_hatch.denied_sound, 50, 0, 3)
 
 /obj/vehicle/has_interior/controller/attack_hand(mob/user as mob)
 	// nothing YET, used for attacks
@@ -518,18 +519,18 @@
 
 /obj/vehicle/has_interior/controller/proc/enter_interior(var/atom/movable/C)
 	// moves atom to interior access point of tank
-	if(istype(entrypos,/turf/))
-		var/turf/T = entrypos
-		if(!T.CanPass( C, entrypos))
-			to_chat(C, "<span class='notice'>Entrance is blocked by \the [T]!</span>")
-			return
-		for(var/atom/A in T.contents)
-			if(!A.CanPass( C, entrypos) && !istype( C, /mob/living))
-				to_chat(C, "<span class='notice'>Entrance is blocked by \the [A]!</span>")
-				return
-		transfer_to( C, entrypos)
-	else
+	if(!istype(entrypos,/turf/))
 		C.visible_message("<span class='notice'>Interior inaccessible...</span>")
+		return
+	var/turf/T = entrypos
+	if(!T.CanPass( C, entrypos))
+		to_chat(C, "<span class='notice'>Entrance is blocked by \the [T]!</span>")
+		return
+	for(var/atom/A in T.contents)
+		if(!A.CanPass( C, entrypos) && !istype( C, /mob/living))
+			to_chat(C, "<span class='notice'>Entrance is blocked by \the [A]!</span>")
+			return
+	transfer_to( C, entrypos)
 
 /obj/vehicle/has_interior/controller/proc/update_exit_pos()
 	var/ang = dir2angle(dir)
@@ -539,36 +540,36 @@
 
 /obj/vehicle/has_interior/controller/proc/exit_interior(var/atom/movable/C)
 	// moves atom to interior access point of tank
-	if(istype(exitpos,/turf/))
-		var/turf/T = exitpos
-		if(!T.CanPass( C, exitpos))
-			to_chat(C, "<span class='notice'>Exit is blocked by \the [T]!</span>")
-			return
-		for(var/atom/A in T.contents)
-			if(!A.CanPass( C, exitpos) && !istype( C, /mob/living))
-				to_chat(C, "<span class='notice'>Exit is blocked by \the [A]!</span>")
-				return
-		transfer_to( C, exitpos)
-	else
+	if(!istype(exitpos))
 		C.visible_message("<span class='notice'>Exterior inaccessible...</span>")
+		return
+	if(!exitpos.CanPass( C, exitpos))
+		to_chat(C, "<span class='notice'>Exit is blocked by \the [exitpos]!</span>")
+		return
+	for(var/atom/A in exitpos.contents)
+		if(!A.CanPass( C, exitpos) && !istype( C, /mob/living))
+			to_chat(C, "<span class='notice'>Exit is blocked by \the [A]!</span>")
+			return
+	transfer_to( C, exitpos)
 
-/obj/vehicle/has_interior/controller/proc/transfer_to(var/atom/movable/C,var/turf/dest)
+/obj/vehicle/has_interior/controller/proc/transfer_to(var/atom/movable/C, var/turf/dest)
 	// handles pulling code too
-	if(istype(C,/mob))
-		var/atom/movable/pulledobj = null
-		var/mob/M = C
-		if(M.pulling)
-			pulledobj = M.pulling;
-			M.pulling.forceMove(dest)
-			M.stop_pulling() // sanity...
-
-		M.forceMove(dest)
-
-		if(pulledobj != null)
-			M.stop_pulling() // sanity...
-			M.start_pulling(pulledobj)
-	else
+	if(!ismob(C))
 		C.forceMove(dest)
+		return
+
+	var/atom/movable/pulledobj = null
+	var/mob/M = C
+	if(M.pulling)
+		pulledobj = M.pulling;
+		M.pulling.forceMove(dest)
+		M.stop_pulling() // sanity...
+
+	M.forceMove(dest)
+
+	if(pulledobj != null)
+		M.stop_pulling() // sanity...
+		M.start_pulling(pulledobj)
 
 /obj/vehicle/has_interior/controller/load(var/atom/movable/C, var/mob/user)
 	return 0
@@ -598,25 +599,25 @@
 		return
 	if(!cell)
 		return
-	else
-		turn_on()
-		update_stats()
 
-		if(interior_helm)
-			interior_helm.verbs -= /obj/machinery/computer/vehicle_interior_console/helm/verb/stop_engine
-			interior_helm.verbs -= /obj/machinery/computer/vehicle_interior_console/helm/verb/start_engine
-			interior_helm.verbs -= /obj/machinery/computer/vehicle_interior_console/helm/verb/headlights_on
-			interior_helm.verbs -= /obj/machinery/computer/vehicle_interior_console/helm/verb/headlights_off
+	turn_on()
+	update_stats()
 
-			if(on)
-				interior_helm.verbs += /obj/machinery/computer/vehicle_interior_console/helm/verb/stop_engine
-			else
-				interior_helm.verbs += /obj/machinery/computer/vehicle_interior_console/helm/verb/start_engine
+	if(interior_helm)
+		interior_helm.verbs -= /obj/machinery/computer/vehicle_interior_console/helm/verb/stop_engine
+		interior_helm.verbs -= /obj/machinery/computer/vehicle_interior_console/helm/verb/start_engine
+		interior_helm.verbs -= /obj/machinery/computer/vehicle_interior_console/helm/verb/headlights_on
+		interior_helm.verbs -= /obj/machinery/computer/vehicle_interior_console/helm/verb/headlights_off
 
-			if(headlights_enabled)
-				interior_helm.verbs += /obj/machinery/computer/vehicle_interior_console/helm/verb/headlights_off
-			else
-				interior_helm.verbs += /obj/machinery/computer/vehicle_interior_console/helm/verb/headlights_on
+		if(on)
+			interior_helm.verbs += /obj/machinery/computer/vehicle_interior_console/helm/verb/stop_engine
+		else
+			interior_helm.verbs += /obj/machinery/computer/vehicle_interior_console/helm/verb/start_engine
+
+		if(headlights_enabled)
+			interior_helm.verbs += /obj/machinery/computer/vehicle_interior_console/helm/verb/headlights_off
+		else
+			interior_helm.verbs += /obj/machinery/computer/vehicle_interior_console/helm/verb/headlights_on
 	light_set()
 	update_icon()
 

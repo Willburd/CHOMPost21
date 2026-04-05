@@ -3334,7 +3334,7 @@
 /obj/vehicle/has_interior/controller/heavyarmor_carrier{
 	dir = 8;
 	interior_area = /area/vehicle_interior/heavyarmor_carrier_B;
-	weapons_equiped = list(/obj/item/vehicle_interior_weapon/hmg)
+	weapons_equiped = list(/obj/structure/vehicle_interior_weapon/hmg)
 	},
 /turf/unsimulated/floor/reinforced,
 /area/centcom/specops)
@@ -8260,7 +8260,7 @@
 /turf/simulated/floor/tiled/white,
 /area/centcom/medical)
 "bsM" = (
-/obj/machinery/door/vehicle_interior_hatch,
+/obj/structure/vehicle_interior_hatch,
 /turf/simulated/floor,
 /area/vehicle_interior/heavyarmor_tank_B)
 "bsS" = (
@@ -8574,7 +8574,7 @@
 /turf/simulated/floor/tiled/milspec/sterile,
 /area/specialty/redspace)
 "byC" = (
-/obj/machinery/door/vehicle_interior_hatch,
+/obj/structure/vehicle_interior_hatch,
 /turf/simulated/floor,
 /area/vehicle_interior/heavyarmor_carrier_A)
 "byK" = (
@@ -8868,7 +8868,7 @@
 /turf/unsimulated/floor/steel,
 /area/centcom/main_hall)
 "bHL" = (
-/obj/machinery/door/vehicle_interior_hatch,
+/obj/structure/vehicle_interior_hatch,
 /turf/simulated/floor,
 /area/vehicle_interior/heavyarmor_carrier_B)
 "bIf" = (
@@ -8979,7 +8979,7 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/vehicle_interior/heavyarmor_medic_recovery)
 "bKC" = (
-/obj/machinery/door/vehicle_interior_hatch,
+/obj/structure/vehicle_interior_hatch,
 /turf/simulated/floor,
 /area/vehicle_interior/heavyarmor_medic_recovery)
 "bKJ" = (
@@ -14068,7 +14068,7 @@
 /turf/simulated/floor/tiled/white,
 /area/specialty/redspace)
 "eEJ" = (
-/obj/machinery/door/vehicle_interior_hatch,
+/obj/structure/vehicle_interior_hatch,
 /turf/simulated/floor,
 /area/vehicle_interior/heavyarmor_tank_A)
 "eEQ" = (
@@ -34092,7 +34092,7 @@
 /turf/simulated/floor/tiled/neutral,
 /area/specialty/redspace)
 "qhw" = (
-/obj/machinery/door/vehicle_interior_hatch,
+/obj/structure/vehicle_interior_hatch,
 /turf/simulated/floor,
 /area/vehicle_interior/heavyarmor_tank_C)
 "qhx" = (

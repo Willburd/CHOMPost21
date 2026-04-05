@@ -74659,7 +74659,7 @@
 	dir = 8;
 	haskey = 0;
 	interior_area = /area/vehicle_interior/heavyarmor_carrier_A;
-	weapons_equiped = list(/obj/item/vehicle_interior_weapon/pacify)
+	weapons_equiped = list(/obj/structure/vehicle_interior_weapon/pacify)
 	},
 /turf/simulated/floor,
 /area/security/tankstore)

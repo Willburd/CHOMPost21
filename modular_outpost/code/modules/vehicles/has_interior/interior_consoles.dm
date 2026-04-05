@@ -93,7 +93,7 @@
 /obj/machinery/computer/vehicle_interior_console/proc/click_action(atom/target,mob/user, params)
 	if(controls_weapon_index <= 0)
 		return FALSE
-	var/obj/item/vehicle_interior_weapon/W = interior_controller.internal_weapons_list[controls_weapon_index]
+	var/obj/structure/vehicle_interior_weapon/W = interior_controller.internal_weapons_list[controls_weapon_index]
 	if(!W || interior_controller.health <= 0)
 		to_chat(user, span_warning("Weapon is inoperable!"))
 		return FALSE
