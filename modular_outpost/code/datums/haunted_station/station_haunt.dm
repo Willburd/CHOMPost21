@@ -544,7 +544,7 @@
 		var/turf/T = locate(goal_turf.x + xx,goal_turf.y + yy,goal_turf.z)
 		if(T)
 			M.playsound_local(T, 'sound/goonstation/spooky/Void_Song.ogg', 75)
-			to_chat(M, span_alien("You hear a low, feminine voice echoing in your mind... Humming some alien lullaby with soft spoken words of an unknown tongue. The quiet song fills you with a sense of near peace, not unlike a mother reassuring her child..."))
+			to_chat(M, span_alien("You hear a low feminine voice echoing in your mind. Humming an alien lullaby that fills you with a sense of peace; like a mother reassuring her child. You can't make out any words or meaning in the hymn, just the understanding of peace, and protection..."))
 	end()
 
 
