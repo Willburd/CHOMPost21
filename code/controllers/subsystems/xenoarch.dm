@@ -1,5 +1,5 @@
 #define XENOARCH_SPAWN_CHANCE 0.5
-#define DIGSITESIZE_LOWER 4
+#define DIGSITESIZE_LOWER 2 //OP edit, was 4
 #define DIGSITESIZE_UPPER 4 //OP edit. Was 12
 #define ARTIFACTSPAWNNUM_LOWER 18 	//This used to be 6-12 when xenoarch was performed on mostly a single Z level: The mining asteroid.
 #define ARTIFACTSPAWNNUM_UPPER 36 	//Due to the increasing complexity of the game, that number resulted in current-day xenaorcheologists possibly being able to find one or maybe two artifacts a Z level.
