@@ -65499,10 +65499,7 @@
 /turf/simulated/floor/tiled/steel,
 /area/hallway/muriki/bunkerhall)
 "czD" = (
-/obj/vehicle/has_interior/heavyarmor_medic{
-	haskey = 0;
-	interior_area = /area/vehicle_interior/heavyarmor_medic_recovery
-	},
+/obj/vehicle/has_interior/heavyarmor_medic/bradley,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/medical/tankstore)
 "czE" = (
@@ -74655,11 +74652,8 @@
 /turf/simulated/floor/tiled/dark,
 /area/server)
 "gvf" = (
-/obj/vehicle/has_interior/heavyarmor_carrier{
-	dir = 8;
-	haskey = 0;
-	interior_area = /area/vehicle_interior/heavyarmor_carrier_A;
-	weapons_equiped = list(/obj/structure/vehicle_interior_weapon/pacify)
+/obj/vehicle/has_interior/heavyarmor_carrier/garage_apc{
+	dir = 8
 	},
 /turf/simulated/floor,
 /area/security/tankstore)
@@ -85223,10 +85217,8 @@
 /turf/simulated/floor/tiled/dark/turfpack/muriki,
 /area/mine/explored/muriki/cave/waste)
 "snl" = (
-/obj/vehicle/has_interior/heavyarmor_tank{
-	dir = 8;
-	haskey = 0;
-	interior_area = /area/vehicle_interior/heavyarmor_tank_A
+/obj/vehicle/has_interior/heavyarmor_tank/garage_tank{
+	dir = 8
 	},
 /turf/simulated/floor,
 /area/security/tankstore)

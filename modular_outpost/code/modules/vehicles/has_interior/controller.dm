@@ -50,17 +50,18 @@
 	var/headlights_enabled = FALSE
 	var/extra_view = 4 // how much the view is increased by when the mob is in tank view
 
-	// area needed for each unique vehicle interior!
-	// Cannot share map locations either.
-	// DO NOT SET IN CHILD OBJECTS, this is for MAPPERS to set!
-	var/interior_area = null
-	var/list/weapons_equiped = null // /obj/structure/vehicle_interior_weapon type list that populates internal_weapons_list
-	var/list/weapons_draw_offset = null // format is weaponarray[ DIR[x,y] ]
+	/// area needed for each unique vehicle interior!
+	var/area/interior_area = null
+
+	/// /obj/structure/vehicle_interior_weapon type list that populates internal_weapons_list
+	var/list/weapons_equiped = null
+
+	/// format is weaponarray[ DIR[x,y] ]
+	var/list/weapons_draw_offset = null
 
 	var/exit_door_direction = SOUTH // if vehicle is facing north, what direction do things leaving it go in? They appear outside the collision box, and only if they can stand there.
 
 	// set AUTOMAGICALLY by init! DO NOT SET
-	var/area/intarea = null
 	var/turf/entrypos = null // where to place atoms that enter the interior
 	var/turf/exitpos = null // where to place atoms that enter the interior
 	var/obj/structure/vehicle_interior_hatch/entrance_hatch = null
@@ -93,66 +94,76 @@
 		camera.c_tag = "[name] ([rand(1000,9999)])" // camera bullshit needs unique name
 		camera.replace_networks(list(NETWORK_DEFAULT,NETWORK_ROBOTS))
 
-	GLOB.interior_vehicle_list += src
+	if(!interior_area)
+		log_world("## DEBUG: Interior vehicle [src] did not have an interior_area set.")
+		return INITIALIZE_HINT_QDEL
 
-	// find interior entrypos
-	for(var/area/A)
-		if(!istype(A, interior_area))
-			continue
-		intarea = A // become reference...
-		for(var/turf/T in intarea.get_contents())
-			if(!istype(T))
-				continue
-			// scan for interior drop location
-			if(istype( locate(/obj/effect/landmark/vehicle_interior/entrypos) in T.contents, /obj/effect/landmark/vehicle_interior/entrypos))
-				entrypos = T
-			// scan for exit door
-			for(var/obj/structure/vehicle_interior_hatch/R in T.contents)
-				R.interior_controller = src // set controller so we can leave this vehicle!
-				entrance_hatch = R
-			// scan for consoles
-			for(var/obj/machinery/computer/vehicle_interior_console/C in T.contents)
-				C.desc = "Used to pilot the [name]. Use ctrl-click to quickly toggle the engine if you're adjacent. Alt-click will grab the keys, if present."
-				C.interior_controller = src
-				if(istype(C,/obj/machinery/computer/vehicle_interior_console/helm))
-					remote_turn_off()		//so engine verbs are correctly set
-					interior_helm = C 		// update vehicle, we found the pilot seat, so we know which console is the drivers!
+	interior_area = locate(interior_area)
+	if(!interior_area)
+		log_world("## DEBUG: Interior vehicle [src] could not find the [interior_area] in world.")
+		return INITIALIZE_HINT_QDEL
 
-				for(var/obj/structure/bed/chair/S in get_step(C.loc,C.dir))
-					S.name = C.name + " Seat"
-					break
+	// scan for interior drop location
+	var/obj/effect/landmark/vehicle_interior/entrypos/entry = locate() in interior_area.contents
+	if(!entry)
+		log_world("## DEBUG: Interior vehicle [src] was missing a /obj/effect/landmark/vehicle_interior/entrypos.")
+		return INITIALIZE_HINT_QDEL
+	entrypos = get_turf(entry)
 
-				if(C.controls_weapon_index > 0)
-					var/obj/structure/vehicle_interior_weapon/W = internal_weapons_list[C.controls_weapon_index]
-					W.weapon_index = C.controls_weapon_index
-					W.control_console = C // link weapon to console
-					// rotate weapon to facing angle of vehicle
-					W.dir = dir
+	// scan for exit door
+	var/obj/structure/vehicle_interior_hatch/door = locate() in interior_area.contents
+	if(!door)
+		log_world("## DEBUG: Interior vehicle [src] was missing a /obj/structure/vehicle_interior_hatch.")
+		return INITIALIZE_HINT_QDEL
+	door.interior_controller = src // set controller so we can leave this vehicle!
+	entrance_hatch = door
 
-			// scan for loaders
-			for(var/obj/machinery/ammo_loader/L in T.contents)
-				internal_loaders_list[L.weapon_index] = L
+	// scan for consoles
+	for(var/obj/machinery/computer/vehicle_interior_console/C in interior_area.contents)
+		C.desc = "Used to pilot \the [src]. Use ctrl-click to quickly toggle the engine if you're adjacent. Alt-click will grab the keys, if present."
+		C.interior_controller = src
+		if(istype(C,/obj/machinery/computer/vehicle_interior_console/helm))
+			remote_turn_off()		//so engine verbs are correctly set
+			interior_helm = C 		// update vehicle, we found the pilot seat, so we know which console is the drivers!
+
+		for(var/obj/structure/bed/chair/S in get_step(C.loc,C.dir))
+			S.name = C.name + " Seat"
+			break
+
+		if(C.controls_weapon_index > 0)
+			var/obj/structure/vehicle_interior_weapon/W = internal_weapons_list[C.controls_weapon_index]
+			W.weapon_index = C.controls_weapon_index
+			W.control_console = C // link weapon to console
+			// rotate weapon to facing angle of vehicle
+			W.dir = dir
+
+	// scan for loaders
+	for(var/obj/machinery/ammo_loader/L in interior_area.contents)
+		internal_loaders_list[L.weapon_index] = L
 
 	// set exit pos
 	update_exit_pos()
 	cached_dir = dir
 
-	if(!istype(intarea))
-		log_world("## DEBUG: Interior vehicle [name] was missing a defined area! Could not init...")
-	else
-		// load all interior parts as components of vehicle!
-		log_world("## DEBUG: Interior vehicle [name] setting up...")
+	// load all interior parts as components of vehicle!
+	log_world("## DEBUG: Interior vehicle [src] setting up...")
+	GLOB.interior_vehicle_list += src
+
+/obj/vehicle/has_interior/Destroy()
+	update_weapons_location(loc)
+	if(on)
+		remote_turn_off()
+	if(move_loop)
+		stop_move_sound()
+		qdel(move_loop)
+		move_loop = null
+	. = ..()
+	GLOB.interior_vehicle_list -= src;
 
 /obj/vehicle/has_interior/ex_act(severity)
 	// noise!
-	playsound(entrance_hatch, get_sfx("vehicle_crush"), 50, 1)
-
-	// make a smaller explosion inside
-	for(var/D in GLOB.cardinal)
-		var/turf/T = get_step(src, D)
-		if(istype(T,/turf/simulated/floor))
-			explosion(entrance_hatch, 0, 0, 6, 8)
-			break
+	playsound(entrypos, get_sfx("vehicle_crush"), 50, 1)
+	explosion(entrypos, 0, 0, 6, 8)
 
 	// disable ex_act destruction, would lead to gamebreaking behaviors
 	switch(severity)
@@ -237,7 +248,7 @@
 		dir = cached_dir // hold direction...
 
 /obj/vehicle/has_interior/proc/shake_cab()
-	for(var/mob/living/M in intarea)
+	for(var/mob/living/M in interior_area)
 		if(!M.buckled)
 			shake_camera(M, 0.5, 0.1)
 
@@ -251,10 +262,10 @@
 		if(istype(A, /obj))//Then we check for regular obstacles.
 			/* I'm not sure if this works with portals at all due to chaining shenanigans, I'm only fixing stairs here, TODO?
 			if(istype(A, /obj/effect/portal))	//derpfix
-				src.anchored = 0				// Portals can only move unanchored objects.
+				anchored = 0				// Portals can only move unanchored objects.
 				A.Crossed(src)
 				spawn(0)//countering portal teleport spawn(0), hurr
-					src.anchored = 1
+					anchored = 1
 			*/
 			if(A.anchored)
 				A.Bumped(src) //bonk
@@ -280,17 +291,6 @@
 			var/list/offsetxylist = dirlist["[dir]"] // get subsublist with x and y inside
 			W.pixel_x = offsetxylist[1]
 			W.pixel_y = offsetxylist[2]
-
-/obj/vehicle/has_interior/Destroy()
-	update_weapons_location(loc)
-	if(on)
-		remote_turn_off()
-	if(move_loop)
-		stop_move_sound()
-		qdel(move_loop)
-		move_loop = null
-	. = ..()
-	GLOB.interior_vehicle_list -= src;
 
 /obj/vehicle/has_interior/proc/start_move_sound()
 	if(move_loop)
@@ -488,7 +488,7 @@
 // Vehicle procs
 //-------------------------------------------
 /obj/vehicle/has_interior/explode()
-	src.visible_message(span_red("<B>[src] blows apart!</B>"), 1)
+	visible_message(span_red("<B>[src] blows apart!</B>"), 1)
 	playsound(src, 'sound/effects/explosions/vehicleexplosion.ogg', 100, 8, 3) //CHOMPedit: New sound effects.
 	SEND_SIGNAL(src,COMSIG_REMOTE_VIEW_CLEAR)
 	update_icon()
@@ -576,15 +576,15 @@
 
 /obj/vehicle/has_interior/proc/light_set()
 	playsound(src, 'sound/machines/button.ogg', 100, 1, 0) // VOREStation Edit
-	intarea.lightswitch = on
-	intarea.update_icon()
+	interior_area.lightswitch = on
+	interior_area.update_icon()
 	if(!on)
 		light_range = 0
 	if(!headlights_enabled)
 		light_range = headlight_maxrange
 	else
 		light_range = 6
-	intarea.power_change()
+	interior_area.power_change()
 	GLOB.lights_switched_on_roundstat++
 
 /obj/vehicle/has_interior/doMove(atom/destination, direction, movetime)

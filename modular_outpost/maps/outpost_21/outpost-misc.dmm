@@ -5543,6 +5543,12 @@
 	},
 /turf/simulated/shuttle/floor/voidcraft,
 /area/shuttle/supply)
+"ld" = (
+/obj/vehicle/has_interior/heavyarmor_carrier/ert_apc{
+	dir = 4
+	},
+/turf/unsimulated/floor/reinforced,
+/area/centcom/simulated/cent_sat)
 "le" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
 	pixel_x = 25;
@@ -31100,7 +31106,7 @@ nL
 nL
 nL
 oZ
-oZ
+ld
 oZ
 kj
 mN
@@ -31423,9 +31429,9 @@ vu
 vu
 nL
 nL
-nL
-nL
-nL
+oZ
+oZ
+oZ
 kj
 mN
 mN

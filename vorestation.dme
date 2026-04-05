@@ -6029,6 +6029,7 @@
 #include "modular_outpost\code\modules\vehicles\has_interior\interior_consoles.dm"
 #include "modular_outpost\code\modules\vehicles\has_interior\interior_hatch.dm"
 #include "modular_outpost\code\modules\vehicles\has_interior\interior_weapons.dm"
+#include "modular_outpost\code\modules\vehicles\has_interior\prefabs.dm"
 #include "modular_outpost\code\modules\xenobio\items\extracts.dm"
 #include "modular_outpost\code\outpost_lore\crashed_ships.dm"
 #include "modular_outpost\code\outpost_lore\cultists.dm"

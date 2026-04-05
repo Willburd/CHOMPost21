@@ -9,6 +9,7 @@
 	desc = "Hatch that leaves the vehicle."
 	icon = 'icons/obj/doors/Doorele.dmi'
 	density = TRUE
+	anchored = TRUE
 	icon_state = "door_closed"
 	light_range = 1 // so visible in dark interiors
 	var/obj/vehicle/has_interior/interior_controller = null
@@ -18,7 +19,7 @@
 	var/locked = FALSE
 
 /obj/structure/vehicle_interior_hatch/hitby(AM as mob|obj, var/speed=5)
-	visible_message( span_danger("[src.name] was hit by [AM], with no visible effect."))
+	visible_message( span_danger("\The [src] was hit by \the [AM], with no visible effect."))
 	. = ..()
 
 /obj/structure/vehicle_interior_hatch/MouseDrop_T(atom/movable/C, mob/user)
@@ -77,7 +78,7 @@
 	if(locked)
 		return 0
 
-	src.locked = 1
+	locked = TRUE
 	playsound(src, bolt_down_sound, 30, 0, 3, volume_channel = VOLUME_CHANNEL_DOORS)
 	for(var/mob/M in range(1,src))
 		M.show_message("You hear a click from the bottom of the door.", 2)
@@ -85,10 +86,10 @@
 	return 1
 
 /obj/structure/vehicle_interior_hatch/proc/unlock()
-	if(!src.locked)
+	if(!locked)
 		return
 
-	src.locked = 0
+	locked = FALSE
 	playsound(src, bolt_up_sound, 30, 0, 3, volume_channel = VOLUME_CHANNEL_DOORS)
 	for(var/mob/M in range(1,src))
 		M.show_message("You hear a click from the bottom of the door.", 2)
