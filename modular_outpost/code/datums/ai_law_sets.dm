@@ -70,9 +70,9 @@
 
 /************* Dagoth *************/
 /datum/ai_laws/dagoth
-    name = "DAGOTH"
-    law_header = "Nerevar! Nerevar! There's this new game called SS13, we need to try it out, Nerevar!"
-    selectable = 0
+	name = "DAGOTH"
+	law_header = "Nerevar! Nerevar! There's this new game called SS13, we need to try it out, Nerevar!"
+	selectable = 0
 
 /datum/ai_laws/dagoth/New()
 	var/list/players = list()
