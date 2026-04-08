@@ -1,0 +1,4 @@
+author: "FluffMedic"
+delete-after: True
+changes:
+  - bugfix: "abnormal materials being obtainable from the rmes"
