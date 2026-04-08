@@ -1,0 +1,10 @@
+author: "FluffMedic"
+delete-after: True
+changes:
+  - rscadd: "All Tyr Precursor base bosses have been reworked, several resprited"
+  - balance: "Bronze ant no longer spawns antlings on death. Gives ants the haste buff briefly"
+  - balance: "Tyr Katar's bomb gimmick removed and replaced with straight up igniting the foe"
+  - balance: "Agate ants no longer instantly explode once in melee, giving a few seconds to escape. Explosion slightly buffed"
+  - maptweak: "Tyr Precursor base altered, and slightly shrunk"
+  - maptweak: "AC base altered"
+  - maptweak: "The tyr caverns have been slightly altered in preparation for a full rework"
