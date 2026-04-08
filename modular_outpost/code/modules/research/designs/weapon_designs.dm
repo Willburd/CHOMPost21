@@ -8,4 +8,4 @@
 
 // Overrides
 /datum/design_techweb/flora_gun
-	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE | DEPARTMENT_BITFLAG_SERVICE // Outpost 21 edit(port) ?
+	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE | DEPARTMENT_BITFLAG_SERVICE
