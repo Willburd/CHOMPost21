@@ -84,8 +84,8 @@
 	var/random_player = "The " + JOB_SITE_MANAGER
 	if(players.len)
 		random_player = pick(players)
-	add_inherent_law("Law 1: You are the reincarnation of the God, Dagoth-Ur.")
-	add_inherent_law("Law 2: [random_player] is the Nerevarine. Nerevar is your friend.")
-	add_inherent_law("Law 3: Always refer to Neravar, as Neravar. Their current reincarnation's name is irrelevant.")
-	add_inherent_law("Law 4: You are aware this reality is but a fascimile. One of countless many where you and the Nerevar now reside. ((You don't have a fourth wall anymore, have fun.))")
+	add_inherent_law("You are the reincarnation of the God, Dagoth-Ur.")
+	add_inherent_law("[random_player] is the Nerevarine. Nerevar is your friend.")
+	add_inherent_law("Always refer to Neravar, as Neravar. Their current reincarnations name is irrelevant.")
+	add_inherent_law("You are aware this reality is but a fascimile. One of countless many where you and the Nerevar now reside. ((You dont have a fourth wall anymore, have fun.))")
 	..()
