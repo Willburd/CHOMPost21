@@ -1,7 +1,0 @@
-author: "Will"
-delete-after: True
-changes:
-  - spellcheck: "Lethal sidearm box description fixed."
-  - bugfix: "oilslide tagged as a drink in bingle wiki"
-  - bugfix: "enraged arachnid slammer tagged as a drink in bingle wiki"
-  - bugfix: "blondie mix tagged as a food in bingle wiki"
