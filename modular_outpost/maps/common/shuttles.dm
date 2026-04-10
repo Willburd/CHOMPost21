@@ -419,9 +419,10 @@
 	shuttle_area = list(/area/shuttle/specialops_overmap)
 	ceiling_type = /turf/simulated/shuttle/floor/black/turfpack/muriki
 
-/obj/effect/shuttle_landmark/premade/specialops_overmap
+/obj/effect/shuttle_landmark/premade/specialops_overmap/central_command
 	name = "Interferon Hanger"
 	landmark_tag = "interferon_hangar"
+	docking_controller = "int_docking_hanger"
 	base_turf = /turf/space
 	base_area = /area/space
 

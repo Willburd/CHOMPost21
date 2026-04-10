@@ -62,6 +62,13 @@
 			H.emote("scream")
 		return
 
+	if(prob(10))
+		to_chat(user, span_danger("Both \the [stored_item] and \the [bag_holding] collapse violently into a singularity!"))
+		new /obj/effect/bhole(get_turf(stored_item))
+		qdel(bag_holding)
+		qdel(stored_item)
+		return
+
 	to_chat(user, span_warning("The Bluespace interfaces of the two devices conflict and malfunction."))
 	qdel(stored_item)
 	return

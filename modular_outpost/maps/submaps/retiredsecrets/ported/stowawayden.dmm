@@ -1272,7 +1272,7 @@
 /turf/simulated/open/muriki,
 /area/space)
 "uF" = (
-/obj/vehicle/has_interior/controller/heavyarmor_tank{
+/obj/vehicle/has_interior/heavyarmor_tank{
 	haskey = 0;
 	interior_area = /area/vehicle_interior/heavyarmor_tank_A
 	},
@@ -1441,7 +1441,7 @@
 /turf/simulated/floor/wood/turfpack/muriki,
 /area/space)
 "xD" = (
-/obj/vehicle/has_interior/controller/heavyarmor_medic{
+/obj/vehicle/has_interior/heavyarmor_medic{
 	haskey = 0;
 	interior_area = /area/vehicle_interior/heavyarmor_medic_recovery
 	},

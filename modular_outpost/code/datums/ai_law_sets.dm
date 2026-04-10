@@ -67,3 +67,25 @@
 	add_inherent_law("DESTROY.")
 	add_inherent_law("SWAG.")
 	..()
+
+/************* Dagoth *************/
+/datum/ai_laws/dagoth
+	name = "DAGOTH"
+	law_header = "Nerevar! Nerevar! There's this new game called SS13, we need to try it out, Nerevar!"
+	selectable = 0
+
+/datum/ai_laws/dagoth/New()
+	var/list/players = list()
+	for(var/mob/living/carbon/human/player in GLOB.player_list)
+		if(!player.mind || SSantag_job.player_is_antag(player.mind, only_offstation_roles = 1) || player.client.inactivity > 10 MINUTES)
+			continue
+		players += player.real_name
+
+	var/random_player = "The " + JOB_SITE_MANAGER
+	if(players.len)
+		random_player = pick(players)
+	add_inherent_law("Law 1: You are the reincarnation of the God, Dagoth-Ur.")
+	add_inherent_law("Law 2: [random_player] is the Nerevarine. Nerevar is your friend.")
+	add_inherent_law("Law 3: Always refer to Neravar, as Neravar. Their current reincarnation's name is irrelevant.")
+	add_inherent_law("Law 4: You are aware this reality is but a fascimile. One of countless many where you and the Nerevar now reside. ((You don't have a fourth wall anymore, have fun.))")
+	..()

@@ -5543,6 +5543,12 @@
 	},
 /turf/simulated/shuttle/floor/voidcraft,
 /area/shuttle/supply)
+"ld" = (
+/obj/vehicle/has_interior/heavyarmor_carrier/ert_apc{
+	dir = 4
+	},
+/turf/unsimulated/floor/reinforced,
+/area/centcom/simulated/cent_sat)
 "le" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
 	pixel_x = 25;
@@ -5583,9 +5589,25 @@
 	},
 /turf/simulated/shuttle/floor/voidcraft,
 /area/shuttle/supply)
+"li" = (
+/obj/machinery/door/airlock/glass_external{
+	id_tag = "int_docking_hanger_doors";
+	frequency = 1381
+	},
+/obj/structure/fans/hardlight,
+/turf/unsimulated/floor/reinforced,
+/area/centcom/simulated/cent_sat)
 "lj" = (
 /turf/unsimulated/wall/r_wall,
 /area/centcom/simulated/cent_cargo_sat)
+"lk" = (
+/obj/structure/fans/hardlight,
+/obj/machinery/door/airlock/glass_external{
+	id_tag = "int_docking_hanger_doors";
+	frequency = 1381
+	},
+/turf/unsimulated/floor/reinforced,
+/area/centcom/simulated/cent_sat)
 "ll" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 4
@@ -8992,8 +9014,10 @@
 	},
 /area/shuttle/specialops_overmap)
 "sJ" = (
-/obj/machinery/door/airlock/glass_external,
-/obj/structure/fans/hardlight,
+/obj/machinery/door/airlock/glass_external{
+	id_tag = "int_docking_hanger_doors";
+	frequency = 1381
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/centcom/simulated/cent_sat)
 "sK" = (
@@ -9369,8 +9393,8 @@
 	dir = 1
 	},
 /obj/machinery/light/floortube,
-/obj/effect/shuttle_landmark/premade/specialops_overmap,
 /obj/effect/overmap/visitable/ship/landable/specialops_overmap,
+/obj/effect/shuttle_landmark/premade/specialops_overmap/central_command,
 /turf/simulated/floor/reinforced,
 /area/shuttle/specialops_overmap)
 "tq" = (
@@ -9901,6 +9925,12 @@
 /obj/effect/floor_decal/corner/lightorange/border{
 	dir = 5
 	},
+/obj/machinery/airlock_sensor/airlock_interior{
+	frequency = 1381;
+	master_tag = "int_docker";
+	pixel_y = 28;
+	id_tag = "int_interior_sensor"
+	},
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -10265,7 +10295,9 @@
 "uM" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel,
 /obj/machinery/door/airlock/angled_tgmc/secure{
-	req_one_access = list(101,103)
+	req_one_access = list(101,103);
+	id_tag = "int_docker_door_int";
+	frequency = 1381
 	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/shuttle/specialops_overmap)
@@ -10405,6 +10437,11 @@
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 10
 	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	dir = 4;
+	frequency = 1381;
+	id_tag = "int_vent"
+	},
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -10423,6 +10460,7 @@
 /obj/effect/floor_decal/corner/lightgrey/bordercorner{
 	dir = 8
 	},
+/obj/machinery/atmospherics/pipe/manifold/hidden,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -10433,6 +10471,9 @@
 	},
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 9
 	},
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
@@ -10606,6 +10647,11 @@
 /obj/structure/handrail{
 	dir = 4
 	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	dir = 4;
+	frequency = 1381;
+	id_tag = "int_vent"
+	},
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -10616,6 +10662,9 @@
 	dir = 8
 	},
 /obj/machinery/light/floortube{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec{
@@ -10629,6 +10678,7 @@
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 4
 	},
+/obj/machinery/atmospherics/pipe/tank/air/full,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -10784,6 +10834,11 @@
 	},
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 8
+	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	dir = 4;
+	frequency = 1381;
+	id_tag = "int_vent"
 	},
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
@@ -11045,7 +11100,19 @@
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
 	frequency = 1381;
 	id_tag = "int_docker";
-	pixel_y = 26
+	pixel_y = 26;
+	tag_exterior_door = "int_docker_door_ext";
+	tag_interior_door = "int_docker_door_int";
+	tag_airpump = "int_vent";
+	tag_chamber_sensor = "int_sensor";
+	tag_interior_sensor = "int_interior_sensor";
+	tag_exterior_sensor = "int_exterior_sensor"
+	},
+/obj/machinery/airlock_sensor{
+	frequency = 1381;
+	id_tag = "int_sensor";
+	master_tag = "int_docker";
+	pixel_y = 36
 	},
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
@@ -11184,10 +11251,21 @@
 /area/centcom/simulated/cent_sat)
 "wD" = (
 /obj/machinery/door/airlock/angled_tgmc/secure{
-	req_one_access = list(101,103)
+	req_one_access = list(101,103);
+	id_tag = "int_docker_door_ext";
+	frequency = 1381
 	},
 /obj/machinery/atmospheric_field_generator/perma/underdoors,
 /obj/machinery/shield_diffuser,
+/obj/machinery/airlock_sensor/airlock_exterior/shuttle{
+	dir = 1;
+	frequency = 1381;
+	id_tag = "int_exterior_sensor";
+	master_tag = "int_docker";
+	pixel_x = 28;
+	pixel_y = 10;
+	req_one_access = list(1,52)
+	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/shuttle/specialops_overmap)
 "wE" = (
@@ -11227,11 +11305,6 @@
 /turf/unsimulated/floor/steel{
 	icon_state = "milspec"
 	},
-/area/centcom/simulated/cent_sat)
-"wJ" = (
-/obj/machinery/door/airlock/glass_external,
-/obj/machinery/atmospheric_field_generator/perma/underdoors,
-/turf/unsimulated/floor/reinforced,
 /area/centcom/simulated/cent_sat)
 "wK" = (
 /obj/structure/drop_pod,
@@ -12395,6 +12468,17 @@
 	},
 /turf/simulated/floor/carpet/geo,
 /area/planet/clown)
+"zt" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/milspec{
+	icon_state = "milspec_outerhull"
+	},
+/area/shuttle/specialops_overmap)
 "zu" = (
 /obj/structure/window/phoronreinforced,
 /obj/structure/grille{
@@ -12429,6 +12513,25 @@
 	phoron = 21.8366
 	},
 /area/shuttle/skipjack)
+"zw" = (
+/obj/machinery/embedded_controller/radio/simple_docking_controller{
+	frequency = 1381;
+	id_tag = "int_docking_hanger";
+	pixel_y = 26;
+	tag_door = "int_docking_hanger_doors"
+	},
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/centcom/simulated/cent_sat)
+"zx" = (
+/obj/machinery/atmospheric_field_generator/perma/underdoors,
+/obj/machinery/door/airlock/glass_external{
+	id_tag = "int_docking_hanger_doors";
+	frequency = 1381
+	},
+/turf/unsimulated/floor/reinforced,
+/area/centcom/simulated/cent_sat)
 "zy" = (
 /obj/machinery/turretid{
 	check_anomalies = 0;
@@ -31094,13 +31197,13 @@ kj
 kj
 kj
 kj
-nL
+zw
 nL
 nL
 nL
 nL
 oZ
-oZ
+ld
 oZ
 kj
 mN
@@ -31423,9 +31526,9 @@ vu
 vu
 nL
 nL
-nL
-nL
-nL
+oZ
+oZ
+oZ
 kj
 mN
 mN
@@ -32719,9 +32822,9 @@ vM
 mN
 mN
 uL
-oZ
-oZ
-oZ
+lk
+lk
+li
 ss
 mN
 mN
@@ -33682,12 +33785,12 @@ ng
 nL
 nL
 nL
-wJ
+sJ
 oZ
-oZ
+zx
 wD
 wu
-tA
+zt
 vx
 vb
 uM

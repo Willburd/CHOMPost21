@@ -4,44 +4,34 @@
 	name = "interior entrypos"
 
 
-/obj/machinery/door/vehicle_interior_hatch			// click door to exit vehicle
+/obj/structure/vehicle_interior_hatch			// click door to exit vehicle
 	name = "vehicle exit"
 	desc = "Hatch that leaves the vehicle."
 	icon = 'icons/obj/doors/Doorele.dmi'
+	density = TRUE
+	anchored = TRUE
 	icon_state = "door_closed"
 	light_range = 1 // so visible in dark interiors
-	var/obj/vehicle/has_interior/controller/interior_controller = null
+	var/obj/vehicle/has_interior/interior_controller = null
 	var/denied_sound = 'sound/machines/deniedbeep.ogg'
 	var/bolt_up_sound = 'sound/machines/door/boltsup.ogg'
 	var/bolt_down_sound = 'sound/machines/door/boltsdown.ogg'
 	var/locked = FALSE
 
-/obj/machinery/door/vehicle_interior_hatch/inoperable(var/additional_flags = 0)
-	// always works
-	return FALSE
+/obj/structure/vehicle_interior_hatch/hitby(AM as mob|obj, var/speed=5)
+	visible_message( span_danger("\The [src] was hit by \the [AM], with no visible effect."))
+	. = ..()
 
-/obj/machinery/door/vehicle_interior_hatch/can_open()
-	return FALSE // Never opens
-
-/obj/machinery/door/vehicle_interior_hatch/Bumped(atom/AM)
-	// do nothing
-
-/obj/machinery/door/vehicle_interior_hatch/bullet_act(var/obj/item/projectile/Proj)
-	// no damage
-
-/obj/machinery/door/vehicle_interior_hatch/hitby(AM as mob|obj, var/speed=5)
-	// no damage
-	visible_message( span_danger("[src.name] was hit by [AM], with no visible effect."))
-
-/obj/machinery/door/vehicle_interior_hatch/MouseDrop_T(var/atom/movable/C, mob/user as mob)
+/obj/structure/vehicle_interior_hatch/MouseDrop_T(atom/movable/C, mob/user)
 	attack_hand( user)
 
-/obj/machinery/door/vehicle_interior_hatch/attackby(obj/item/I, mob/user)
+/obj/structure/vehicle_interior_hatch/attackby(obj/item/I, mob/user)
 	attack_hand( user)
 
-/obj/machinery/door/vehicle_interior_hatch/attack_hand(mob/user)
+/obj/structure/vehicle_interior_hatch/attack_hand(mob/user)
 	if(locked)
-		do_animate("deny")
+		flick("door_deny", src)
+		playsound(src, denied_sound, 50, 0, 3)
 		return
 	if(!Adjacent(user))
 		return
@@ -52,81 +42,54 @@
 		if(Adjacent(user))
 			interior_controller.exit_interior(user)
 
-/obj/machinery/door/vehicle_interior_hatch/attack_robot(mob/living/user)
+/obj/structure/vehicle_interior_hatch/attack_robot(mob/living/user)
 	attack_hand( user)
 
-/obj/machinery/door/vehicle_interior_hatch/attack_ai(mob/user)
-	return
-	// no behavior
-
-/obj/machinery/door/vehicle_interior_hatch/attack_generic(mob/user as mob)
+/obj/structure/vehicle_interior_hatch/attack_generic(mob/user as mob)
 	// aliens/borers
 	attack_hand( user)
 
-/obj/machinery/door/vehicle_interior_hatch/emag_act(var/remaining_charges)
+/obj/structure/vehicle_interior_hatch/attack_ai(mob/user)
 	return
 	// no behavior
 
-/obj/machinery/door/vehicle_interior_hatch/emp_act(severity, recursive)
+/obj/structure/vehicle_interior_hatch/emp_act(severity, recursive)
 	return
 	// immune to
 
-/obj/machinery/door/vehicle_interior_hatch/take_damage(damage)
+/obj/structure/vehicle_interior_hatch/ex_act(severity)
 	return
 	// immune to
 
-/obj/machinery/door/vehicle_interior_hatch/ex_act(severity)
-	return
-	// immune to
-
-/obj/machinery/door/vehicle_interior_hatch/blob_act()
+/obj/structure/vehicle_interior_hatch/blob_act()
 	return
 	// even you bob
 
-/obj/machinery/door/vehicle_interior_hatch/requiresID()
-	return FALSE
+/obj/structure/vehicle_interior_hatch/attack_ghost(mob/user)
+	user.forceMove(interior_controller.exitpos) // Ghosts warp out
 
-/obj/machinery/door/vehicle_interior_hatch/examine(mob/user)
-	src.health = src.maxhealth // force heal, never show status
-	. = ..()
+/obj/structure/vehicle_interior_hatch/update_icon()
+	if(locked)
+		icon_state = "door_locked"
+		return
+	icon_state = "door_closed"
 
-/obj/machinery/door/vehicle_interior_hatch/process()
-	return PROCESS_KILL
-
-/obj/machinery/door/vehicle_interior_hatch/update_icon()
-	if(density)
-		if(locked)
-			icon_state = "door_locked"
-		else
-			icon_state = "door_closed"
-	else
-		icon_state = "door_open"
-	return
-
-/obj/machinery/door/vehicle_interior_hatch/do_animate(animation)
-	switch(animation)
-		if("deny")
-			if(density)
-				flick("door_deny", src)
-				playsound(src, denied_sound, 50, 0, 3)
-	return
-
-/obj/machinery/door/vehicle_interior_hatch/proc/lock()
+/obj/structure/vehicle_interior_hatch/proc/lock()
 	if(locked)
 		return 0
 
-	src.locked = 1
+	locked = TRUE
 	playsound(src, bolt_down_sound, 30, 0, 3, volume_channel = VOLUME_CHANNEL_DOORS)
 	for(var/mob/M in range(1,src))
 		M.show_message("You hear a click from the bottom of the door.", 2)
 	update_icon()
 	return 1
 
-/obj/machinery/door/vehicle_interior_hatch/proc/unlock()
-	if(!src.locked)
+/obj/structure/vehicle_interior_hatch/proc/unlock()
+	if(!locked)
 		return
 
-	src.locked = 0
+	locked = FALSE
 	playsound(src, bolt_up_sound, 30, 0, 3, volume_channel = VOLUME_CHANNEL_DOORS)
 	for(var/mob/M in range(1,src))
 		M.show_message("You hear a click from the bottom of the door.", 2)

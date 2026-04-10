@@ -531,6 +531,23 @@
 	end()
 
 
+// terraformer song
+/datum/station_haunt/terraformer_song
+	name = "Terraformer Song"
+
+/datum/station_haunt/terraformer_song/fire()
+	var/mob/M = SShaunting.get_player_target()
+	if(M && !issilicon(M))
+		var/turf/goal_turf = get_turf(M)
+		var/xx = rand(5,10) * (prob(50) ? 1 : -1)
+		var/yy = rand(5,10) * (prob(50) ? 1 : -1)
+		var/turf/T = locate(goal_turf.x + xx,goal_turf.y + yy,goal_turf.z)
+		if(T)
+			M.playsound_local(T, 'sound/goonstation/spooky/Void_Song.ogg', 75)
+			to_chat(M, span_alien("You hear a low feminine voice echoing in your mind. Humming an alien lullaby that fills you with a sense of peace; like a mother reassuring her child. You can't make out any words or meaning in the hymn, just the understanding of peace, and protection..."))
+	end()
+
+
 // small item thrown
 /datum/station_haunt/throw_item
 	name = "Throw Item"

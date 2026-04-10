@@ -2960,36 +2960,6 @@
 	name = "\improper Foundation Block B"
 	holomap_color = HOLOMAP_AREACOLOR_COMMAND
 
-//
-// Vehicle interiors ---------------------------------------------------------------------
-//
-/area/vehicle_interior
-	sound_env = SMALL_ENCLOSED
-	flags = AREA_BLOCK_INSTANT_BUILDING | RAD_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT | AREA_BLOCK_PHASE_SHIFT | BLUE_SHIELDED
-	requires_power = FALSE
-	color_grading = COLORTINT_DIM
-
-
-/area/vehicle_interior/heavyarmor_carrier_A
-	name = "\improper Carrier A"
-
-/area/vehicle_interior/heavyarmor_carrier_B
-	name = "\improper Carrier A"
-
-
-/area/vehicle_interior/heavyarmor_tank_A
-	name = "\improper Tank A"
-
-/area/vehicle_interior/heavyarmor_tank_B
-	name = "\improper Tank B"
-
-/area/vehicle_interior/heavyarmor_tank_C
-	name = "\improper Tank C"
-
-
-/area/vehicle_interior/heavyarmor_medic_recovery
-	name = "\improper Medic Recovery Vehicle"
-
 
 //
 // Specialtiy -------------------------------------------------------------------------------
