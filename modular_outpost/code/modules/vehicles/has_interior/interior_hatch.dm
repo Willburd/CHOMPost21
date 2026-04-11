@@ -53,10 +53,6 @@
 	return
 	// no behavior
 
-/obj/structure/vehicle_interior_hatch/emp_act(severity, recursive)
-	return
-	// immune to
-
 /obj/structure/vehicle_interior_hatch/ex_act(severity)
 	return
 	// immune to
