@@ -21,6 +21,7 @@
 	var/area/A = get_area(body)
 	if(istype(A, /area/specialty)) // Redspace returns don't lunge
 		can_lunge = FALSE
+	body.can_be_afk_prey = TRUE // force allow
 
 /datum/component/badbody/Destroy(force = FALSE)
 	. = ..()
@@ -28,20 +29,56 @@
 
 /datum/component/badbody/RegisterWithParent()
 	RegisterSignal(parent, COMSIG_LIVING_LIFE, PROC_REF(process_component))
+	RegisterSignal(parent, COMSIG_ATOM_ATTACKBY, PROC_REF(process_hit_by))
 
 /datum/component/badbody/UnregisterFromParent()
 	UnregisterSignal(parent, COMSIG_LIVING_LIFE)
-
+	UnregisterSignal(parent, COMSIG_ATOM_ATTACKBY)
 
 // Signal handlers
 //////////////////////////////////////////////////////////////////////////////////////////////////////
+/datum/component/badbody/proc/process_hit_by(datum/source, obj/item/target, mob/living/user)
+	SIGNAL_HANDLER
+	if(QDELETED(src))
+		return 0
+	if(user?.mind?.assigned_role == JOB_CHAPLAIN)
+		if(istype(target, /obj/item/nullrod) || istype(target, /obj/item/storage/bible))
+			bless_body(TRUE)
+			return COMPONENT_CANCEL_ATTACK_CHAIN
+	return 0
+
+/datum/component/badbody/proc/bless_body(chappy_check)
+	body.visible_message( span_danger("\The [body] [pick("shudders","cracks","snaps","crunches","twitches")] and screams!"))
+	deadsay("*scream")
+	playsound(body, 'sound/misc/demondeath.ogg', 100, 1)
+	var/turf/simulated/floor/check_singe = get_turf(body)
+	if(istype(check_singe))
+		check_singe.break_tile()
+		if(prob(30) && !chappy_check)
+			check_singe.lingering_fire(0.7)
+	if(chappy_check)
+		body.ash()
+	else
+		body.gib()
+	SShaunting.influence(HAUNTING_BLESSING)
+
 /datum/component/badbody/proc/process_component()
+	SIGNAL_HANDLER
 	if(QDELETED(src))
 		return
+
 	if(body.stat != DEAD)
 		SShaunting.reset_world_haunt() // Clean out for now
 		body.UnsetSpecialVoice()
 		qdel(src)
+		return
+
+	var/turf/check_holy = get_turf(body)
+	var/holywater = body.touching.has_reagent(REAGENT_ID_HOLYWATER) || body.bloodstr.has_reagent(REAGENT_ID_HOLYWATER) || body.ingested.has_reagent(REAGENT_ID_HOLYWATER)
+	var/blessed_turf = (check_holy?.blessed && prob(5))
+	var/is_chapel = istype(get_area(body), /area/chapel)
+	if(holywater || blessed_turf || is_chapel)
+		bless_body(FALSE)
 		return
 
 	var/speak = ""
@@ -104,7 +141,10 @@
 /datum/component/badbody/proc/deadsay(var/speak)
 	if(isbelly(body.loc))
 		var/obj/belly/B = body.loc
-		B.owner.say(speak, whispering = prob(80))
+		if(copytext(speak, 1, 2) == "*")
+			B.owner.emote(copytext(speak, 2))
+		else
+			B.owner.direct_say(speak, whispering = prob(80))
 		// Get REAL nasty
 		if(prob(40))
 			// Haunting
@@ -136,7 +176,11 @@
 		body.stuttering = 100
 	else
 		body.stuttering = 0
-	body.say(speak, whispering = prob(80))
+	// handle say and emotes
+	if(copytext(speak, 1, 2) == "*")
+		body.emote(copytext(speak, 2))
+	else
+		body.direct_say(speak, whispering = prob(80))
 	body.stat = old_stat
 // End hacky
 
@@ -189,13 +233,18 @@
 				var/obj/structure/morgue/M = body.loc
 				M.open()
 			else if(istype( body.loc, /obj/structure/closet) )
-				var/obj/structure/closet/C = body.loc
-				if(C.req_breakout())
-					C.container_resist(body)
-				else
-					C.toggle()
+				if(prob(10))
+					var/obj/structure/closet/C = body.loc
+					if(C.sealed)
+						if(prob(98))
+							C.visible_message(span_danger("\The [src] shakes violently!"))
+							playsound(C, C.breakout_sound, 100, 1)
+						else
+							C.break_open()
+					else
+						C.toggle()
 			else if(body.buckled)
-				body.resist()
+				body.buckled.unbuckle_mob(body)
 			else
 				body.IMove(get_step(body.loc,pick(GLOB.cardinal)))
 			return world.time + rand(100,500)
