@@ -22,7 +22,7 @@
 		"rapier",
 		"sabre",
 		"longsword",
-		// "battleaxe", // No wielded sprite
+		"battleaxe", // No wielded sprite
 		// Outpost 21 edit end
 	)
 
