@@ -27,12 +27,10 @@
 		named = 1
 		*/
 
-	// Outpost 21 edit(port) begin - Talking indicator while typing with TTS
 	user.client?.start_thinking()
 	user.client?.start_typing()
 	var/message = tgui_input_text(user,"Choose a message to relay to those around you.", "", "", MAX_MESSAGE_LEN)
 	user.client?.stop_thinking()
-	// Outpost 21 edit end
 
 	if(message)
 		audible_message("[icon2html(src, user.client)] \The [src.name] states, \"[message]\"", runemessage = "synthesized speech")
