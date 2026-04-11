@@ -67,7 +67,7 @@
 		// Outpost 21 addition begin - Forward sounds to the insides of vehicles
 		if(istype(hearer,/obj/machinery/computer/vehicle_interior_console))
 			// Replay the sound inside from the helm
-			playsound(hearer, soundin, vol * 0.5 * (1 - (distance / maxdistance)), vary, -5, falloff, FALSE, frequency, channel, pressure_affected, TRUE, preference, volume_channel)
+			playsound(hearer, soundin, vol * 0.5 * (1 - (get_dist(T, turf_source) / maxdistance)), vary, -5, falloff, FALSE, frequency, channel, pressure_affected, TRUE, preference, volume_channel)
 			return
 		// Outpost 21 addition end
 
