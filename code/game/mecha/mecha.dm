@@ -42,7 +42,7 @@
 	var/list/proc_res = list() 			//Stores proc owners, like proc_res["functionname"] = owner reference
 	var/datum/effect/effect/system/spark_spread/spark_system
 	var/lights = 0
-	var/lights_power = 6
+	var/lights_power = 4 // Outpost 21 edit - Light range nerf
 	var/force = 0
 	var/damage_type = BRUTE
 

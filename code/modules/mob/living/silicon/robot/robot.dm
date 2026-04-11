@@ -26,7 +26,7 @@
 	var/sprite_name = null // The name of the borg, for the purposes of custom icon sprite indexing.
 	var/crisis //Admin-settable for combat module use.
 	var/crisis_override = 0
-	var/integrated_light_power = 6
+	var/integrated_light_power = 4 // Outpost 21 edit - Light range nerf
 	var/list/robotdecal_on = list()
 	var/glowy_enabled = FALSE
 	var/datum/wires/robot/wires
