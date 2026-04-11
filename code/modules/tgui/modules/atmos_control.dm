@@ -73,6 +73,7 @@
 
 	var/z = get_z(user)
 	var/list/map_levels = using_map.get_map_levels(z)
+	map_levels -= using_map.deadly_fall_levels // Outpost 21 edit - Forbid deepdark
 	data["map_levels"] = map_levels
 
 	return data

@@ -1,5 +1,5 @@
 /datum/element/hiccups
-	var/cure_chance = 2
+	var/cure_chance = 1
 	var/hiccup_chance = 5
 
 /datum/element/hiccups/Attach(atom/target)
