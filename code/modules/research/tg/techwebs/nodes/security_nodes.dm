@@ -23,6 +23,7 @@
 		"sabre",
 		"longsword",
 		"battleaxe", // No wielded sprite
+		"sledgehammer",
 		// Outpost 21 edit end
 	)
 
