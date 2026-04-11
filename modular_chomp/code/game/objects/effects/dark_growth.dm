@@ -38,6 +38,7 @@
 	cut_overlays()
 	if(prob(5))
 		add_glow()
+	/* Outpost 21 edit(port) - Regen in dark tiles over time
 	if(istype(O, /mob/living/carbon/human))
 		var/mob/living/carbon/human/L = O
 		if(istype(L.species, /datum/species/crew_shadekin))
@@ -54,6 +55,7 @@
 		else if(prob(0.25))
 			to_chat(L, span_danger("The darkness seethes under your feet..."))
 			L.hallucination += 50
+	*/
 
 /obj/effect/dark/proc/light_check()
 	var/turf/T = get_turf(src)
