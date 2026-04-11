@@ -41,6 +41,11 @@
 	if(human_parent.stat)
 		discomfort = 0
 		return TRUE
+	// Outpost 21 edit begin - VR stops lonely
+	if(human_parent.virtual_reality_mob)
+		calm_discomfort()
+		return TRUE
+	// Outpost 21 edit end
 	// No point processing if we're already stressing the hell out.
 	if(human_parent.hallucination >= hallucination_cap && discomfort >= warning_cap)
 		discomfort = warning_cap
