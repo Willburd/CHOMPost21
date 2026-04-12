@@ -4128,6 +4128,15 @@
 	},
 /turf/simulated/floor/plating,
 /area/quartermaster/mining/secpi)
+"ajO" = (
+/obj/structure/table/steel,
+/obj/item/storage/firstaid/surgery,
+/obj/item/cell/slime{
+	pixel_y = 10;
+	pixel_x = -8
+	},
+/turf/simulated/floor/carpet/blucarpet/turfpack/muriki,
+/area/specialty/expie_clubhouse)
 "ajP" = (
 /turf/simulated/wall{
 	can_open = 1
@@ -116291,7 +116300,7 @@ akA
 akA
 akD
 ajR
-all
+ajO
 alj
 akc
 akc
