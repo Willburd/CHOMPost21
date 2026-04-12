@@ -1,0 +1,4 @@
+author: "FluffMedic"
+delete-after: True
+changes:
+  - balance: "removes material weapon dulling as a base things (can still be flicked on)"
