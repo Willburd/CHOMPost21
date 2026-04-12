@@ -303,7 +303,8 @@
 /obj/item/material/twohanded/sledgehammer/gravity/ed //Renamed and given flavor text for our poor boi, so he can keep the unique description on lockbox saves when he gets back from deployment.
 	name = "Ed'reith's Hammer"
 	desc = "A specialized sledgehammer, dented and damaged from some great battle. Engraved on the handle is 'Ed'reith Foley'. The handle's leather is surprisingly light and strong, and bears a strangely sweet scent like mangoes and grapes. A soft, energic hum can be felt through the haft when its held."
-//	material = durasteel //I dunno if this works?
+	default_material = MAT_PLASTITANIUM
+	named_from_material = 0 //Should make sure it's not "plas ed'reith's hammer, and should JUST use its name"
 
 // TEMP DEFINITIONS SOME NOT MEANT FOR HERE! These exist purely to placate loadout code's typechecks
 /obj/item/toy/plushie/fluff
