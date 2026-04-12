@@ -9290,7 +9290,7 @@
 /obj/effect/floor_decal/corner/white/border{
 	dir = 8
 	},
-/obj/structure/table/steel_reinforced,
+/obj/machinery/pointdefense_control,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -10153,6 +10153,9 @@
 	},
 /obj/structure/table/steel_reinforced,
 /obj/item/bluespaceradio/outpost_prelinked,
+/obj/structure/panic_button{
+	pixel_x = -30
+	},
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -11306,6 +11309,14 @@
 	icon_state = "milspec"
 	},
 /area/centcom/simulated/cent_sat)
+"wJ" = (
+/obj/machinery/pointdefense,
+/obj/item/stock_parts/capacitor/omni,
+/obj/item/stock_parts/capacitor/omni,
+/obj/item/stock_parts/manipulator/omni,
+/obj/item/stock_parts/manipulator/omni,
+/turf/simulated/floor/reinforced/airless,
+/area/shuttle/specialops_overmap)
 "wK" = (
 /obj/structure/drop_pod,
 /turf/unsimulated/floor/steel{
@@ -32815,7 +32826,7 @@ nL
 nL
 nf
 mN
-mN
+wJ
 iO
 mb
 vM
@@ -32831,7 +32842,7 @@ mN
 mH
 mc
 iO
-mN
+wJ
 mN
 mN
 mN
@@ -35084,7 +35095,7 @@ mN
 mN
 mN
 mN
-Nb
+wJ
 iO
 vZ
 rs
@@ -35098,7 +35109,7 @@ qY
 qY
 qY
 iO
-Nb
+wJ
 mN
 mN
 mN
@@ -37677,7 +37688,7 @@ mN
 mN
 mN
 mN
-mN
+wJ
 iO
 iO
 ue
@@ -37689,7 +37700,7 @@ sC
 sc
 iO
 iO
-mN
+wJ
 mN
 mN
 mN
@@ -39137,7 +39148,7 @@ mN
 mN
 mN
 mN
-mN
+wJ
 iO
 iO
 uE
@@ -39145,7 +39156,7 @@ sS
 tn
 iO
 iO
-mN
+wJ
 mN
 mN
 mN
