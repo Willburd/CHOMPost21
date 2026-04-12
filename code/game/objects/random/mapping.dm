@@ -357,7 +357,7 @@
 			),
 			prob(2);list(
 				/obj/item/rig/industrial/equipped,
-				/obj/item/storage/bag/ore,
+				/obj/item/ore_bag,
 				/obj/structure/closet/crate/engineering
 			),
 			prob(2);list(
@@ -416,43 +416,43 @@
 			),
 			prob(2);list(
 				/obj/item/pickaxe/silver,
-				/obj/item/storage/bag/ore,
+				/obj/item/ore_bag,
 				/obj/item/clothing/glasses/material,
 				/obj/structure/closet/crate/engineering
 			),
 			prob(2);list(
 				/obj/item/pickaxe/advdrill,
-				/obj/item/storage/bag/ore,
+				/obj/item/ore_bag,
 				/obj/item/clothing/glasses/material,
 				/obj/structure/closet/crate/engineering
 			),
 			prob(2);list(
 				/obj/item/pickaxe/jackhammer,
-				/obj/item/storage/bag/ore,
+				/obj/item/ore_bag,
 				/obj/item/clothing/glasses/material,
 				/obj/structure/closet/crate/engineering
 			),
 			prob(2);list(
 				/obj/item/pickaxe/diamond,
-				/obj/item/storage/bag/ore,
+				/obj/item/ore_bag,
 				/obj/item/clothing/glasses/material,
 				/obj/structure/closet/crate/engineering
 			),
 			prob(2);list(
 				/obj/item/pickaxe/diamonddrill,
-				/obj/item/storage/bag/ore,
+				/obj/item/ore_bag,
 				/obj/item/clothing/glasses/material,
 				/obj/structure/closet/crate/engineering
 			),
 			prob(2);list(
 				/obj/item/pickaxe/gold,
-				/obj/item/storage/bag/ore,
+				/obj/item/ore_bag,
 				/obj/item/clothing/glasses/material,
 				/obj/structure/closet/crate/engineering
 			),
 			prob(2);list(
 				/obj/item/pickaxe/plasmacutter,
-				/obj/item/storage/bag/ore,
+				/obj/item/ore_bag,
 				/obj/item/clothing/glasses/material,
 				/obj/structure/closet/crate/engineering
 			),
@@ -1627,7 +1627,7 @@
 /obj/random/multiple/underdark/ores/item_to_spawn()
 	return pick(
 				prob(9);list(
-							/obj/item/storage/bag/ore,
+							/obj/item/ore_bag,
 							/obj/item/shovel,
 							/obj/item/ore/glass,
 							/obj/item/ore/glass,
@@ -1647,7 +1647,7 @@
 							/obj/item/ore/hydrogen
 							),
 				prob(7);list(
-							/obj/item/storage/bag/ore,
+							/obj/item/ore_bag,
 							/obj/item/pickaxe,
 							/obj/item/ore/osmium,
 							/obj/item/ore/osmium,
