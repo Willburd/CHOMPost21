@@ -57,6 +57,7 @@
 /obj/machinery/door/flesh/emp_act(severity, recursive)
 	// immune to
 	health = maxhealth
+	. = ..()
 
 /obj/machinery/door/flesh/ex_act(severity)
 	// immune to
