@@ -3497,6 +3497,9 @@
 /area/maintenance/damaged_resleeverC)
 "aii" = (
 /obj/machinery/transhuman/autoresleever/rogue,
+/obj/machinery/camera/network/outside{
+	c_tag = "EXT - Expie Sleever"
+	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/damaged_resleeverC)
 "aij" = (
