@@ -55,9 +55,10 @@
 	// no behavior
 
 /obj/machinery/door/flesh/emp_act(severity, recursive)
-	// immune to
-	health = maxhealth
 	. = ..()
+	if (. & EMP_PROTECT_SELF || (stat & (BROKEN|NOPOWER)))
+		return
+	health = maxhealth
 
 /obj/machinery/door/flesh/ex_act(severity)
 	// immune to
