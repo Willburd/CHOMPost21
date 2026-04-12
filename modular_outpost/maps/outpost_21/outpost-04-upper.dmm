@@ -4128,9 +4128,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/quartermaster/mining/secpi)
-"ajO" = (
-/turf/simulated/mineral/alt/turfpack/muriki,
-/area/specialty/expie_clubhouse)
 "ajP" = (
 /turf/simulated/wall{
 	can_open = 1
@@ -5171,6 +5168,10 @@
 	},
 /turf/simulated/floor/outpost_roof/turfpack/muriki,
 /area/muriki/rooftop/disposal)
+"amG" = (
+/obj/structure/inflatable,
+/turf/simulated/floor/tiled/turfpack/muriki,
+/area/specialty/expie_clubhouse)
 "amI" = (
 /obj/structure/cable/green{
 	icon_state = "32-2"
@@ -114678,7 +114679,7 @@ ajQ
 ajQ
 ajQ
 ajR
-ajO
+ajR
 aaY
 avC
 avC
@@ -114839,8 +114840,8 @@ akh
 ajQ
 ajQ
 ajQ
+amG
 ajR
-ajU
 aiD
 avC
 avC
@@ -115001,8 +115002,8 @@ akh
 ajQ
 ajQ
 ajY
+ajt
 ajP
-ajU
 ajr
 avC
 avC
@@ -115164,7 +115165,7 @@ ajQ
 ajQ
 ajQ
 ajR
-ajO
+ajR
 aaY
 avC
 avC
