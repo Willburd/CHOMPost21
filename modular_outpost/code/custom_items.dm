@@ -304,7 +304,10 @@
 	name = "Ed'reith's Hammer"
 	desc = "A specialized sledgehammer, dented and damaged from some great battle. Engraved on the handle is 'Ed'reith Foley'. The handle's leather is surprisingly light and strong, and bears a strangely sweet scent like mangoes and grapes. A soft, energic hum can be felt through the haft when its held."
 	default_material = MAT_PLASTITANIUM
-	named_from_material = 0 //Should make sure it's not "plas ed'reith's hammer, and should JUST use its name"
+	slowdown = 0.4 //default is 1.2
+	force_divisor = 0.8 //Default is 0.4
+	thrown_force_divisor = 1.2 //default is 0.6
+	named_from_material = 0 //Makes sure it's not "plas ed'reith's hammer, and should JUST use its name"
 
 // TEMP DEFINITIONS SOME NOT MEANT FOR HERE! These exist purely to placate loadout code's typechecks
 /obj/item/toy/plushie/fluff
