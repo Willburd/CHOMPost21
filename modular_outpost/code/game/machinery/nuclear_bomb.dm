@@ -3,6 +3,7 @@
 	name = "self-destruct terminal"
 	desc = "For when it all gets too much to bear. Do not taunt."
 	icon = 'icons/obj/machines/nuke_station.dmi'
+	resistance_flags = INDESTRUCTIBLE
 	icon_state = "idle"
 	anchored = TRUE
 	deployable = 1
