@@ -115,3 +115,19 @@
   - bugfix: Guns with nonstandard firemode selection properly set firemode properties
       during init
   - spellcheck: tape roll lathe entry
+2026-04-13:
+  Diana, Kash.:
+  - qol: The fryer now tells you how much oil is remaining in it.
+  - qol: The fryer now alerts you if the fryer is underfilled or overfilled on oil
+  - qol: Tankers can now be attached to the fryer to fill it.
+  - bugfix: Fryer works properly and adds oil to food
+  - bugfix: Fryer and trays no longer show 'phantom items' overlay.
+  - bugfix: You can now insert oil into the fryer with any reagent container.
+  - code_imp: Recipes are now a global list instead of a per-item list
+  FluffMedic:
+  - balance: removes material weapon dulling as a base things (can still be flicked
+      on)
+  Will:
+  - bugfix: Drawing blood with syringes and IV stands works properly again.
+  zeskorion:
+  - rscadd: shapeshifter trait
