@@ -569,9 +569,15 @@ SUBSYSTEM_DEF(job)
 				else
 					spawn_in_storage += thing
 
+		// Outpost 21 edit(port) begin - initialize internal tanks, doing last for maximum safety
+		human_mob.equip_survival_tanks(FALSE)
+		// Outpost 21 edit - end
+
+		/* CHOMPRemove Start
 		//Give new players a welcome guide!
 		if(isnum(human_mob.client?.player_age) && human_mob.client.player_age < 10)
 			human_mob.equip_to_slot_or_del(new /obj/item/book/manual/virgo_pamphlet(human_mob), slot_r_hand)
+		*/// CHOMPRemove End
 	else
 		to_chat(human_mob, span_filter_notice("Your job is [rank] and the game just can't handle it! Please report this bug to an administrator."))
 
@@ -653,6 +659,7 @@ SUBSYSTEM_DEF(job)
 	if(job.req_admin_notify)
 		to_chat(human_mob, span_filter_notice(span_bold("You are playing a job that is important for Game Progression. If you have to disconnect, please notify the admins via adminhelp.")))
 
+	/* Outpost 21 edit - Removed modular computers
 	// EMAIL GENERATION
 	// Email addresses will be created under this domain name. Mostly for the looks.
 	var/domain = "freemail.nt"
@@ -677,6 +684,11 @@ SUBSYSTEM_DEF(job)
 		to_chat(human_mob, span_filter_notice("Your email account address is " + span_bold("[user_mail_acc.login]") + " and the password is " + span_bold("[user_mail_acc.password]") + ". This information has also been placed into your notes."))
 		human_mob.mind.store_memory("Your email account address is [user_mail_acc.login] and the password is [user_mail_acc.password].")
 	// END EMAIL GENERATION
+	*/
+
+	// Outpost 21 edit begin - initialize internal tanks, doing last for maximum safety
+	human_mob.equip_disability_items()
+	// Outpost 21 edit end
 
 	//Gives glasses to the vision impaired
 	if(human_mob.disabilities & NEARSIGHTED)
@@ -1020,7 +1032,24 @@ SUBSYSTEM_DEF(job)
 		.["carrier"] = item_carrier
 		.["vorgans"] = vorgans
 		.["itemtf"] = item_to_be
+	// Outpost 21 edit begin - Stowaway cancels standard spawns
+	if(rank == JOB_STOWAWAY)
+		var/list/safespawns = list();
+		var/list/spawnlist = list();
+		for(var/obj/effect/landmark/start/S in GLOB.landmarks_list)
+			if(S.name == JOB_STOWAWAY)
+				spawnlist += S
+				var/mob/living/scan = (locate() in view("7x7", S.loc))
+				if(!scan)
+					safespawns += S
+		if(safespawns.len > 0)
+			var/spawning = pick(safespawns)
+			.["turf"] = get_turf(spawning)
+			.["msg"] = "will arrive at the station shortly"
+			return // If successful end here, otherwise fail over to standard spawning
+	// Outpost 21 edit end
 	if(spawnpos && istype(spawnpos) && length(spawnpos.turfs))
+		SShaunting.influence(HAUNTING_RESLEEVE) // Outpost 21 edit - IT DA SPOOKY STATION! Comforting new crew!
 		if(spawnpos.check_job_spawning(rank))
 			.["turf"] = spawnpos.get_spawn_position()
 			.["msg"] = spawnpos.msg
