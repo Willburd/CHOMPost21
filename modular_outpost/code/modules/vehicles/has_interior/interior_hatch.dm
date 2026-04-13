@@ -8,6 +8,7 @@
 	name = "vehicle exit"
 	desc = "Hatch that leaves the vehicle."
 	icon = 'icons/obj/doors/Doorele.dmi'
+	resistance_flags = INDESTRUCTIBLE
 	density = TRUE
 	anchored = TRUE
 	icon_state = "door_closed"

@@ -2,6 +2,7 @@
 	name = "nuclear cylinder storage"
 	desc = "It's a secure, armored storage unit embedded into the floor for storing the nuclear cylinders."
 	icon = 'icons/obj/machines/self_destruct.dmi'
+	resistance_flags = INDESTRUCTIBLE
 	icon_state = "base"
 	anchored = TRUE
 	density = FALSE

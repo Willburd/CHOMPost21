@@ -6,6 +6,7 @@
 	plane = MOB_PLANE
 	layer = ABOVE_MOB_LAYER+0.1
 	w_class = ITEMSIZE_COST_NO_CONTAINER
+	resistance_flags = INDESTRUCTIBLE
 
 	var/base_icon = "" // For destruction
 
@@ -189,6 +190,7 @@
 	desc = "It's a secure, armored storage unit embedded into the floor. Shells must be dragged out manually."
 	icon = 'icons/obj/machines/vehicle_weapons.dmi'
 	icon_state = "storage"
+	resistance_flags = INDESTRUCTIBLE
 	anchored = TRUE
 	density = FALSE
 	var/ammo_path = /obj/item/tank_shell
@@ -242,6 +244,7 @@
 	name = "ammunition loader"
 	desc = "Loading mechanism for vehicle mounted weapon."
 	icon = 'icons/obj/machines/vehicle_weapons.dmi'
+	resistance_flags = INDESTRUCTIBLE
 	icon_state = "loader"
 	anchored = TRUE
 	density = TRUE

@@ -4,6 +4,7 @@
 	icon_state = "holopad0"
 	show_messages = 1
 	circuit = /obj/item/circuitboard/tutorial_pad
+	resistance_flags = INDESTRUCTIBLE
 	plane = TURF_PLANE
 	layer = ABOVE_TURF_LAYER
 	idle_power_usage = 0

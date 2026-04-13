@@ -3,6 +3,7 @@
 	desc = "It controls objects, remotely and with extreme prejudice."
 	icon = 'icons/obj/door_release.dmi'
 	icon_state = "doorctrl0"
+	resistance_flags = INDESTRUCTIBLE
 
 /obj/machinery/button/remote/admin_only/attack_ai(mob/user as mob)
 	return attack_hand(user)
