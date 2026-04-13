@@ -1,4 +1,4 @@
-/mob/new_player/proc/equip_robot_accessories(mob/living/silicon/robot/bot)
+/proc/equip_robot_accessories(mob/living/silicon/robot/bot)
 	if(!(bot?.client?.prefs))
 		return
 	// Add rank
