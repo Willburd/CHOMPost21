@@ -12,7 +12,7 @@
 
 	var/tie_msg = "Attached to it is"
 	var/list/accessory_descs = list()
-	for(var/obj/item/clothing/accessory/A in U.accessories)
+	for(var/obj/item/clothing/accessory/A in accessories)
 		if(!A.show_examine)
 			continue
 		accessory_descs += "<a href='byond://?src=\ref[src];lookitem_desc_only=\ref[A]'>\a [A]</a>"

@@ -183,17 +183,20 @@
 /obj/item/clothing/accessory/rank_eshui/drone
 	name = "\improper (E-0) Station Drone"
 	rank = "(E-0) Drone"
+	desc = "A small strip of cloth denoting the rank of E-0, Technical Enlisted. This rank is specific to station bound drones, and has no authority."
 	icon_state = "rank_cadot"
 	rank_level_index = RANK_DRONE
 
 /obj/item/clothing/accessory/rank_eshui/borg
 	name = "\improper (WO-0) Station Synthetic"
 	rank = "(WO-0) Station Synthetic"
+	desc = "A small strip of cloth denoting the rank of WO-0, Technical Warrant Officer. Specialists in their trade, expected to have a deep and thorough understanding of their specialty. This rank is specific to station bound synthetics."
 	icon_state = "rank_rodot"
 	rank_level_index = RANK_BORG
 
 /obj/item/clothing/accessory/rank_eshui/ai
 	name = "\improper (WO-5) Station AI"
+	desc = "A small strip of cloth denoting the rank of WO-5, Chief Warrant Officer. The bridge between Central Command, and the station. They respond to the Major, and are masters of station SOP and Law. This specific one is for a station bound AI core."
 	rank = "(WO-5) Station AI"
 	icon_state = "rank_wo5"
 	rank_level_index = RANK_AI
