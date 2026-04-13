@@ -17,7 +17,7 @@
 /turf/simulated/flesh
 	name = "flesh wall"
 	desc = "The fleshy surface of this wall squishes nicely under your touch but looks and feels extremly strong"
-	icon = 'modular_outpost/icons/turf/stomach.dmi' // Outpost 21 edit - Flesh terrain tweaked
+	icon = 'icons/turf/stomach_vr.dmi'
 	icon_state = "flesh"
 	opacity = 1
 	density = TRUE
@@ -45,31 +45,14 @@ GLOBAL_LIST_EMPTY(flesh_overlay_cache)
 	cut_overlays()
 
 	if(density)
-		icon = 'modular_outpost/icons/turf/stomach.dmi' // Outpost 21 edit - Flesh terrain tweaked
+		icon = 'icons/turf/stomach_vr.dmi'
 		icon_state = "flesh"
 		for(var/direction in GLOB.cardinal)
 			var/turf/T = get_step(src,direction)
 			if(istype(T) && !T.density)
 				var/place_dir = turn(direction, 180)
-				var/offset = 32
 				if(!GLOB.flesh_overlay_cache["flesh_side_[place_dir]"])
-					GLOB.flesh_overlay_cache["flesh_side_[place_dir]"] = image('modular_outpost/icons/turf/stomach.dmi', "flesh_side", dir = place_dir) // Outpost 21 edit - Flesh terrain tweaked
-					// Outpost 21 edit begin - Offset edge of flesh tiles to actually overhang other tiles
-					var/image/cache = null
-					switch(direction)
-						if(NORTH)
-							cache = GLOB.flesh_overlay_cache["flesh_side_[place_dir]"]
-							cache.pixel_y = offset
-						if(SOUTH)
-							cache = GLOB.flesh_overlay_cache["flesh_side_[place_dir]"]
-							cache.pixel_y = -offset
-						if(EAST)
-							cache = GLOB.flesh_overlay_cache["flesh_side_[place_dir]"]
-							cache.pixel_x = offset
-						if(WEST)
-							cache = GLOB.flesh_overlay_cache["flesh_side_[place_dir]"]
-							cache.pixel_x = -offset
-					// Outpost 21 edit end
+					GLOB.flesh_overlay_cache["flesh_side_[place_dir]"] = image('icons/turf/stomach_vr.dmi', "flesh_side", dir = place_dir)
 				add_overlay(GLOB.flesh_overlay_cache["flesh_side_[place_dir]"])
 
 	if(update_neighbors)
@@ -238,6 +221,33 @@ GLOBAL_LIST_EMPTY(flesh_overlay_cache)
 /turf/simulated/wall/uranium
 	icon_state = "uranium"
 	icon = 'icons/turf/wall_masks_vr.dmi'
+	var/last_event = 0
+
+/turf/simulated/wall/uranium/Initialize(mapload)
+	. = ..()
+	RegisterSignal(src, COMSIG_ATOM_PROPAGATE_RAD_PULSE, PROC_REF(radiate))
+
+/turf/simulated/wall/uranium/Destroy()
+	UnregisterSignal(src, COMSIG_ATOM_PROPAGATE_RAD_PULSE)
+	. = ..()
+
+/turf/simulated/wall/uranium/radiate()
+	if(active)
+		return
+	if(world.time <= last_event + 1.5 SECONDS)
+		return
+	active = TRUE
+	radiation_pulse(
+		src,
+		max_range = 3,
+		threshold = RAD_LIGHT_INSULATION,
+		chance = URANIUM_IRRADIATION_CHANCE,
+		minimum_exposure_time = URANIUM_RADIATION_MINIMUM_EXPOSURE_TIME,
+		strength = 5
+	)
+	propagate_radiation_pulse()
+	last_event = world.time
+	active = FALSE
 
 /turf/simulated/wall/virgo2
 	icon_state = "virgo2"
@@ -276,14 +286,14 @@ GLOBAL_LIST_EMPTY(flesh_overlay_cache)
 	icon = 'icons/turf/wall_masks_vr.dmi'
 
 /turf/simulated/wall/stonebricks/Initialize(mapload)
-	. = ..(mapload, MAT_CONCRETE)
+		. = ..(mapload, MAT_CONCRETE)
 
 /turf/simulated/wall/stonelogs
 	icon_state = "stonelogs"
 	icon = 'icons/turf/wall_masks_vr.dmi'
 
 /turf/simulated/wall/stonelogs/Initialize(mapload)
-	. = ..(mapload, MAT_CONCRETE,MAT_LOG)
+			. = ..(mapload, MAT_CONCRETE,MAT_LOG)
 
 /turf/simulated/wall/glass
 	icon = 'icons/obj/structures_vr.dmi'

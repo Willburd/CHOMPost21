@@ -112,7 +112,7 @@
 		card.pai = src
 
 	sradio = new(src)
-	communicator = new(src)
+	// communicator = new(src) Outpost 21 edit - Communicator removal
 	pai_ui_chassis = new(src)
 	if(card)
 		if(!card.radio)
@@ -432,6 +432,9 @@
 	..()
 
 /mob/living/silicon/pai/emp_act(severity, recursive)
+	. = ..()
+	if (. & EMP_PROTECT_SELF)
+		return
 	// Silence for 2 minutes
 	// 20% chance to damage critical components
 	// 50% chance to damage a non critical component

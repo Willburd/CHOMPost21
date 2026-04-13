@@ -2,7 +2,7 @@
 //Weeping angels/SCP-173 hype
 //Horrible shitcoding and stolen code adaptations below. You have been warned.
 //Above comment has been cleaned by the holy light of someone who knows vaguely what they are doing, and was told their ideas were pretty neato. - Willbird
-var/global/statue_photos_allowed = 3 // Photos can spawn statues... Lets not let this be easily abused! Admins can manually set this if they want more during a round...
+GLOBAL_VAR_INIT(statue_photos_allowed, 3) // Photos can spawn statues... Lets not let this be easily abused! Admins can manually set this if they want more during a round...
 
 // fake mob-like statue
 /obj/structure/prop/statue/jumpscare
@@ -74,6 +74,10 @@ var/global/statue_photos_allowed = 3 // Photos can spawn statues... Lets not let
 
 	var/player_has_activated = FALSE // if true, allows it to start going to random places if bored
 	var/bordom_counter = 500
+
+/mob/living/simple_mob/animal/statue/Destroy()
+	cached_watcher = null
+	. = ..()
 
 // Cannot talk
 /mob/living/simple_mob/animal/statue/say(var/message, var/datum/language/speaking = null, var/whispering = 0)

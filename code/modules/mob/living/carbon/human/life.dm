@@ -47,39 +47,38 @@
 
 	voice = GetVoice()
 
-	var/stasis = inStasisNow()
+	var/stasis = (inStasisNow())
 	if(getStasis() > 2)
 		Sleeping(20)
 
 	//No need to update all of these procs if the guy is dead.
 	fall() //Prevents people from floating
-	if(stat != DEAD && !stasis)
-		//Updates the number of stored chemicals for powers
-		handle_changeling()
+	if(!stasis)
+		if(stat != DEAD)
+			//Updates the number of stored chemicals for powers
+			handle_changeling()
 
-		//Organs and blood
-		handle_organs()
-		stabilize_body_temperature() //Body temperature adjusts itself (self-regulation)
-		weightgain()
-		handle_shock()
+			//Organs and blood
+			handle_organs()
+			stabilize_body_temperature() //Body temperature adjusts itself (self-regulation)
+			weightgain()
+			handle_shock()
 
-		handle_pain()
+			handle_pain()
 
-		SEND_SIGNAL(src,COMSIG_HANDLE_ALLERGENS, chem_effects[CE_ALLERGEN])
+			SEND_SIGNAL(src,COMSIG_HANDLE_ALLERGENS, chem_effects[CE_ALLERGEN])
 
-		handle_medical_side_effects()
+			handle_medical_side_effects()
 
-		handle_heartbeat()
+			handle_heartbeat()
+			// handle_nif() // Outpost 21 edit - Nif removal
+			if(phobias)
+				handle_phobias()
+			if(!client)
+				species.handle_npc(src)
 
-		// handle_nif() // Outpost 21 edit - Nif removal
-
-		if(phobias)
-			handle_phobias()
-		if(!client)
-			species.handle_npc(src)
-
-	else if(stat == DEAD && !stasis)
-		handle_defib_timer()
+		else if(stat == DEAD)
+			handle_defib_timer()
 
 	//Handle any species related components we may have. Ex: Shadekin, Xenochimera, etc. Not STAT checked because those do statchecks in their own code.
 	handle_species_components()
@@ -268,11 +267,12 @@
 	accumulated_rads = CLAMP(accumulated_rads,0,RADIATION_CAP) //Max of 100Gy as well. You should never get higher than this. You will be dead before you can reach this.
 	var/obj/item/organ/internal/I = null //Used for further down below when an organ is picked.
 	if(!radiation)
+		clear_alert("irradiated")
 		if(accumulated_rads)
 			accumulated_rads -= RADIATION_SPEED_COEFFICIENT //Accumulated rads slowly dissipate very slowly. Get to medical to get it treated!
 	else if(((life_tick % 5 == 0) && radiation) || (radiation > 600)) //Radiation is a slow, insidious killer. Unless you get a massive dose, then the onset is sudden!
 
-		if(reagents.has_reagent(REAGENT_ID_PRUSSIANBLUE)) //Prussian Blue temporarily stops radiation effects.
+		if(HAS_TRAIT(src, TRAIT_HALT_RADIATION_EFFECTS)) //If we have a trait that halts radiation effects, then we just stop here. No need to do any of the checks below.
 			return
 
 		var/damage = 0
@@ -346,6 +346,7 @@
 
 
 		else if (radiation >= GLOB.radiation_levels[species.rad_levels]["danger_3"] && radiation < GLOB.radiation_levels[species.rad_levels]["danger_4"]) //Equivalent of 8.0 to 30 Gy.
+			throw_alert("irradiated", /atom/movable/screen/alert/irradiated)
 			damage = 10
 			radiation -= 100 * RADIATION_SPEED_COEFFICIENT * species.rad_removal_mod
 			accumulated_rads += 100 * RADIATION_SPEED_COEFFICIENT
@@ -549,11 +550,6 @@
 			adjustOxyLoss(HUMAN_MAX_OXYLOSS)
 		else
 			adjustOxyLoss(HUMAN_CRIT_MAX_OXYLOSS)
-
-		if(breath && should_have_organ(O_LUNGS))
-			var/obj/item/organ/internal/lungs/L = internal_organs_by_name[O_LUNGS]
-			if(!L.is_bruised())
-				rupture_lung(TRUE)
 
 		throw_alert("oxy", /atom/movable/screen/alert/not_enough_atmos)
 		return 0
@@ -1005,9 +1001,10 @@
 
 	if(adjusted_pressure >= species.hazard_high_pressure)
 		var/pressure_damage = min( ( (adjusted_pressure / species.hazard_high_pressure) -1 )*PRESSURE_DAMAGE_COEFFICIENT , MAX_HIGH_PRESSURE_DAMAGE)
-		if(stat==DEAD)
+		if(stat == DEAD)
 			pressure_damage = pressure_damage/2
-		take_overall_damage(brute=pressure_damage, used_weapon = "High Pressure")
+		if(!istype(loc, /obj/structure/closet/body_bag/cryobag))
+			take_overall_damage(brute=pressure_damage, used_weapon = "High Pressure")
 		throw_alert("pressure", /atom/movable/screen/alert/highpressure, 2)
 	else if(adjusted_pressure >= species.warning_high_pressure)
 		throw_alert("pressure", /atom/movable/screen/alert/highpressure, 1)
@@ -1016,7 +1013,7 @@
 	else if(adjusted_pressure >= species.hazard_low_pressure)
 		throw_alert("pressure", /atom/movable/screen/alert/lowpressure, 1)
 	else
-		if( !(COLD_RESISTANCE in mutations))
+		if( !(COLD_RESISTANCE in mutations) && !istype(loc, /obj/structure/closet/body_bag/cryobag))
 			if(!isSynthetic()) // Outpost 21 edit - Nif removal: || !nif || !nif.flag_check(NIF_O_PRESSURESEAL,NIF_FLAGS_OTHER)) // NIF pressure seals
 				var/pressure_damage = LOW_PRESSURE_DAMAGE
 				if(stat==DEAD)
@@ -1472,7 +1469,7 @@
 	if(!.)
 		return
 
-	client.screen.Remove(GLOB.global_hud.blurry, GLOB.global_hud.druggy, GLOB.global_hud.vimpaired, GLOB.global_hud.darkMask, GLOB.global_hud.nvg, GLOB.global_hud.thermal, GLOB.global_hud.meson, GLOB.global_hud.science, GLOB.global_hud.material, GLOB.global_hud.whitense)
+	client.screen.Remove(GLOB.global_hud.blurry, GLOB.global_hud.druggy, GLOB.global_hud.vimpaired, GLOB.global_hud.darkMask, GLOB.global_hud.nvg, GLOB.global_hud.thermal, GLOB.global_hud.meson, GLOB.global_hud.science, GLOB.global_hud.material, GLOB.global_hud.whitense, GLOB.global_hud.heavy_whitense)
 
 	if(istype(client.eye,/obj/machinery/camera))
 		var/obj/machinery/camera/cam = client.eye

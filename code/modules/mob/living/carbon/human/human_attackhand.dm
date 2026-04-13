@@ -590,9 +590,15 @@
 
 	// standard CPR ahead, adjust oxy and refresh health
 	if(health > get_crit_point() && prob(10))
+		/* Outpost 21 edit begin - Allow cpr to revive, but still block one life
 		if(species.flags & NO_DEFIB) //TODO: Changee the NO_DEFIB species flag into a HAS_TRAIT() sometime.
 			to_chat(reviver, span_danger("You get the feeling [src] can't be revived by CPR alone."))
 			return // Handle no-defib species flag.
+		*/
+		if((/datum/trait/negative/onelife in species.traits) || (/datum/trait/negative/nodefib in species.traits))
+			to_chat(reviver, span_danger("You get the feeling [src] can't be revived by CPR alone."))
+			return // Handle no-defib species flag
+		// Outpost 21 edit end
 		if(get_xenochimera_component())
 			visible_message(span_danger("\The [src]'s body twitches and gurgles a bit."))
 			to_chat(reviver, span_danger("You get the feeling [src] can't be revived by CPR alone."))

@@ -21,18 +21,7 @@
 	name = "flesh"
 	desc = "This slick flesh ripples and squishes under your touch"
 	icon_state = "flesh_floor"
-// Outpost 21 edit begin - Flesh terrain tweaked
-	icon = 'modular_outpost/icons/turf/stomach.dmi'
-	temperature = TERRAFORMER_BODY_TEMP
-	initial_flooring = /datum/decl/flooring/flesh
-
-/turf/simulated/floor/flesh/Initialize(mapload)
-	. = ..()
-	if(prob(30))
-		// alt puddles
-		flooring_override = pickweight(list("flesh_floor_puddle0","flesh_floor_puddle1","flesh_floor_puddle2","flesh_floor_puddle3"))
-	update_icon()
-// Outpost 21 edit end
+	icon = 'icons/turf/stomach_vr.dmi'
 
 /turf/simulated/floor/flesh/colour
 	name = "flesh"

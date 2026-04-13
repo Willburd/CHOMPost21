@@ -417,7 +417,7 @@
 			if(affecting.splinted)
 				balloon_alert(user, "[M]'s [limb] is already splinted!")
 				return
-			if(M == user && prob(75))
+			if(M == user && prob(15)) // Outpost 21 edit - Self splint failure from 75% to 15%
 				user.balloon_alert_visible("\the [user] fumbles [src].", "fumbling [src].", "You hear something being wrapped.")
 				return
 			if(ishuman(user))

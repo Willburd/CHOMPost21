@@ -336,10 +336,16 @@
 	return problem_text
 
 /obj/machinery/medical_kiosk/proc/do_backup_scan(mob/living/carbon/human/user)
+	// Outpost 21 edit begin - Coredump prevents scans
+	if(SStranscore.default_db?.core_dumped)
+		return "<br>" + span_danger("Transcore interlock safety failure. DBcore safety needs central command restart. Resleeving database offline.")
+	// Outpost 21 edit end
+
 	if(!istype(user))
 		return "<br>" + span_warning("Unable to perform full scan. Please see a medical professional.")
 	if(!user.mind)
 		return "<br>" + span_warning("Unable to perform full scan. Please see a medical professional.")
+
 	// Outpost 21 edit begin - VR kiosks tutorial
 	if(istype(get_area(src), /area/vr))
 		return "<br>" + span_warning("Backup simulation performed. Remember to backup when you leave virtual reality!")
@@ -402,6 +408,8 @@
 	return
 
 /obj/machinery/medical_kiosk/proc/halu_text(mob/living/target)
+	if(prob(75) && SStranscore.default_db?.core_dumped)
+		return "Error: No one will leave here alive."
 	if(prob(15))
 		return "You're not who you say you are."
 	if(prob(15))
@@ -427,6 +435,8 @@
 	return "Your body is wrong."
 
 /obj/machinery/medical_kiosk/proc/advert_text()
+	if(SStranscore.default_db?.core_dumped)
+		return "Error: Transcore interlock safety failure. Resleeving database offline."
 	if(prob(15))
 		return "Cherish the memories you have, save the ones you could lose"
 	if(prob(15))

@@ -78,9 +78,24 @@
 	crash_message = "Tram system derailment detected."
 	crash_locations = list("tram_crash_red")
 
+/datum/shuttle/autodock/multi/tram/can_launch()
+	var/area/cur_area = shuttle_area[1]
+	if(cur_area.always_unpowered)
+		return FALSE
+	. = ..()
+
+/datum/shuttle/autodock/multi/tram/can_force()
+	var/area/cur_area = shuttle_area[1]
+	if(cur_area.always_unpowered)
+		return FALSE
+	. = ..()
 
 /datum/shuttle/autodock/multi/tram/should_crash(var/obj/effect/shuttle_landmark/intended_destination)
 	if(emagged_crash)
+		return TRUE
+	// Crash due to powerloss on move
+	var/area/cur_area = shuttle_area[1]
+	if(cur_area.always_unpowered)
 		return TRUE
 	// If on highest level of spooky let the tram crash happen
 	if(SShaunting.get_world_haunt() >= 5)
@@ -383,6 +398,7 @@
 	vessel_size = SHIP_SIZE_LARGE
 	shuttle = "Interferon"
 	known = TRUE // we own this lol
+	fore_dir = EAST
 
 /obj/machinery/computer/shuttle_control/explore/specialops_overmap
 	name = "short jump console"
@@ -403,11 +419,24 @@
 	shuttle_area = list(/area/shuttle/specialops_overmap)
 	ceiling_type = /turf/simulated/shuttle/floor/black/turfpack/muriki
 
-/obj/effect/shuttle_landmark/premade/medical/specialops_overmap
+/obj/effect/shuttle_landmark/premade/specialops_overmap/central_command
 	name = "Interferon Hanger"
 	landmark_tag = "interferon_hangar"
+	docking_controller = "int_docking_hanger"
 	base_turf = /turf/space
 	base_area = /area/space
+
+/obj/effect/shuttle_landmark/premade/specialops_overmap/airdrop_muriki
+	name = "Outpost 21 Airdrop Central"
+	landmark_tag = "interferon_airdrop_muriki_central"
+	base_turf = /turf/simulated/open/muriki
+	base_area = /area/muriki/skyline/cent
+
+/obj/effect/shuttle_landmark/premade/specialops_overmap/airdrop_muriki_alt
+	name = "Outpost 21 Airdrop South East"
+	landmark_tag = "interferon_airdrop_muriki_southeast"
+	base_turf = /turf/simulated/open/muriki
+	base_area = /area/muriki/skyline/south
 
 //////////////////////////////////////////////////////////////
 // ERT Quick Drop Shuttle

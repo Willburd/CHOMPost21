@@ -13,6 +13,12 @@
 #define TECHWEB_NODE_AUGMENTATION "augmentation"
 #define TECHWEB_NODE_AUS_SECURITY "aus_security"
 #define TECHWEB_NODE_BASIC_ARMS "basic_arms"
+#define TECHWEB_NODE_PISTOL_AMMO "pistol_ammo"
+#define TECHWEB_NODE_PISTOL_SPECIAL "pistol_special"
+#define TECHWEB_NODE_RIFLE_AMMO "rifle_ammo"
+#define TECHWEB_NODE_RIFLE_SPECIAL "rifle_special"
+#define TECHWEB_NODE_SHOTGUN_AMMO "shotgun_ammo"
+#define TECHWEB_NODE_SPEEDLOADERS "speedloaders"
 #define TECHWEB_NODE_BCI "bci"
 #define TECHWEB_NODE_BEAM_WEAPONS "beam_weapons"
 #define TECHWEB_NODE_BIO_SCAN "bio_scan"
@@ -34,6 +40,7 @@
 #define TECHWEB_NODE_COMBAT_IMPLANTS "combat_implants"
 #define TECHWEB_NODE_CONSOLES "consoles"
 #define TECHWEB_NODE_CONSTRUCTION "construction"
+#define TECHWEB_NODE_EMERGPOWER "emergency_power"
 #define TECHWEB_NODE_CRYOGUN "cryogun"
 #define TECHWEB_NODE_CRYOSTASIS "cryostasis"
 #define TECHWEB_NODE_CYBER_IMPLANTS "cyber_implants"
@@ -93,7 +100,6 @@
 #define TECHWEB_NODE_MINING "mining"
 #define TECHWEB_NODE_MINING_ADV "mining_adv"
 #define TECHWEB_NODE_MINELIGHTS "mine_lighting"
-#define TECHWEB_NODE_DEBRISREMOVAL "debris_removal"
 #define TECHWEB_NODE_MOD_ANOMALY "mod_anomaly"
 #define TECHWEB_NODE_MOD_SUPPLY "mod_supply"
 #define TECHWEB_NODE_MOD_ENGI "mod_engi"
@@ -153,12 +159,25 @@
 #define TECHWEB_NODE_XENOBIOLOGY "xenobiology"
 #define TECHWEB_NODE_TELEPORTER "teleporter"
 #define TECHWEB_NODE_CONFETTI "confetti"
+#define TECHWEB_NODE_RSF "rapid_service_fab"
+#define TECHWEB_NODE_MATERIALSHEETS "material_sheets"
+#define TECHWEB_NODE_SMARTFRIDGES "smartfridges"
+#define TECHWEB_NODE_GHOST_BASIC "ghost_basics"
+#define TECHWEB_NODE_GHOST_ADVANCED "ghost_advanced"
+#define TECHWEB_NODE_GHOST_ROUNDS "ghost_rounds"
 
 //CHOMPEDIT Start - Chomp Specific techwebs.
+#define TECHWEB_NODE_CHOMP_AMMO "chomp_ammo" //CHOMPEDIT ADD - Adds Chomp unique ammo for autolathe
 #define TECHWEB_NODE_PHASE_WEAPONS "phase_weapons" //CHOMPEDIT ADD - Adds Phase Weaponry
 #define TECHWEB_NODE_METAMORPHOSIS_RAY "metamorphosis_ray" //CHOMPEDIT Add - Adds Caseless Rifle
 #define TECHWEB_NODE_MOD_ANOMALY_SUIT "mod_anomaly_suit" //CHOMPEDIT Add - Adds Anomaly RIGs
 #define TECHWEB_NODE_MECH_SHIELDS "mech_shields" //CHOMPEDIT Add - Adds Mech Shields
 #define TECHWEB_NODE_TYRGOODS "tyrian tech" //CHOMPEDIT Add - Adds Craftable Tyr Loot
 #define TECHWEB_NODE_PRECUSORTOOLS "precursor tools" //CHOMPEDIT Add - Adds craftable precursor items
+#define TECHWEB_NODE_PARADOX_RIFT "paradox rift" //CHOMPEDIT Add - Adds Paradox Rift.
 //CHOMPEDIT End - Chomp Specific techwebs.
+
+// Outpost 21 edit begin - Outpost unique techwebs
+#define TECHWEB_NODE_OUTPOST_AMMO "outpost_ammo"
+#define TECHWEB_NODE_OUTPOST_TSCIBEACONS "outpost_tscibeacons"
+// Outpost 21 edit end

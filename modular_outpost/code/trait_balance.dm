@@ -118,6 +118,13 @@
 /datum/modifier/adrenaline // Adrenaline Rush trait's modifier
 	slowdown = -4 //Base -11
 
+/datum/trait/positive/heavyweight
+	desc = "You are heavyweight or otherwise more sturdy than most species. Making you more resistant to being pushed around."
+	var_changes = null
+
+/datum/trait/positive/shapeshifting
+	hidden = TRUE // Changeling gameplay infringement
+
 /////////////////////////////////////////////////////////////////////////////////////////////////
 /// NEUTRAL
 /////////////////////////////////////////////////////////////////////////////////////////////////

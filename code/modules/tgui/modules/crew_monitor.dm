@@ -54,6 +54,7 @@
 
 	var/z = get_z(user)
 	var/list/map_levels = uniqueList(using_map.get_map_levels(z, TRUE, om_range = DEFAULT_OVERMAP_RANGE))
+	map_levels -= using_map.deadly_fall_levels // Outpost 21 edit - Forbid deepdark
 	data["map_levels"] = map_levels
 
 	var/list/crewmembers = list()

@@ -68,12 +68,3 @@
 				shootAt(target)
 			return TRUE
 	return FALSE
-
-//This seems hacky as fuck, taken from the alien turrets.
-/obj/machinery/porta_turret/heavy/emp_act(severity, recursive) // This is overrided to give an EMP resistance as well as avoid scambling the turret settings.
-	if(prob(75)) // seems to just disable it for a time?
-		return
-	enabled = FALSE
-	spawn(rand(1 MINUTE, 2 MINUTES))
-		if(!enabled)
-			enabled = TRUE

@@ -416,6 +416,47 @@ GLOBAL_LIST_INIT(obtainable_chemical_blacklist, list(
 	REAGENT_ID_SUPERMATTER
 	))
 
+GLOBAL_LIST_INIT(reagent_containers_can_be_placed_into, list(
+	REAGENT_CONTAINER_CAN_BE_PLACED_INTO_DEFAULT = list(
+		/obj/machinery/chem_master,
+		/obj/machinery/chemical_dispenser,
+		/obj/machinery/reagentgrinder,
+		/obj/structure/table,
+		/obj/structure/closet,
+		/obj/structure/sink,
+		/obj/item/storage,
+		/obj/machinery/atmospherics/unary/cryo_cell,
+		/obj/machinery/dna_scannernew,
+		/obj/item/grenade/chem_grenade,
+		/mob/living/bot/medbot,
+		/obj/item/storage/secure/safe,
+		/obj/machinery/iv_drip,
+		/obj/structure/medical_stand,
+		/obj/machinery/disposal,
+		/mob/living/simple_mob/animal/passive/cow,
+		/mob/living/simple_mob/animal/goat,
+		/obj/machinery/sleeper,
+		/obj/machinery/smartfridge,
+		/obj/machinery/biogenerator,
+		/obj/structure/frame,
+		/obj/machinery/radiocarbon_spectrometer,
+		/obj/machinery/portable_atmospherics/powered/reagent_distillery,
+		/obj/machinery/computer/pandemic,
+		/obj/machinery/reagent_refinery,
+		/obj/vehicle/train/trolley_tank,
+		/obj/machinery/feeder, //CHOMPedit,
+		/obj/machinery/chemical_synthesizer, //CHOMPedit,
+		/obj/machinery/food_replicator // CHOMPAdd
+	),
+	REAGENT_CONTAINER_CAN_BE_PLACED_INTO_WATERCOOLER = list(
+		/obj/structure/table,
+		/obj/structure/closet,
+		/obj/structure/sink
+	),
+	REAGENT_CONTAINER_CAN_BE_PLACED_INTO_NONE = list(
+	),
+))
+
 GLOBAL_LIST_EMPTY(item_tf_spawnpoints) // Global variable tracking which items are item tf spawnpoints
 
 // Options for transforming into a different mob in virtual reality.
@@ -1269,9 +1310,9 @@ GLOBAL_LIST_INIT(description_icons, list(
 	"stunbaton" = image(icon='icons/obj/weapons.dmi',icon_state="stunbaton_active"),
 	"slimebaton" = image(icon='icons/obj/weapons.dmi',icon_state="slimebaton_active"),
 
-	"power cell" = image(icon='icons/obj/power.dmi',icon_state="hcell"),
-	"device cell" = image(icon='icons/obj/power.dmi',icon_state="dcell"),
-	"weapon cell" = image(icon='icons/obj/power.dmi',icon_state="wcell"),
+	"power cell" = image(icon='icons/obj/power_cells.dmi',icon_state="b_st"), //CHOMPEdit
+	"device cell" = image(icon='icons/obj/power_cells.dmi',icon_state="m_st"), //CHOMPEdit
+	"weapon cell" = image(icon='icons/obj/power_cells.dmi',icon_state="m_sup"), //CHOMPEdit
 
 	"hatchet" = image(icon='icons/obj/weapons.dmi',icon_state="hatchet"),
 	))
@@ -1376,8 +1417,8 @@ GLOBAL_LIST_INIT(robot_modules, list(
 	"Exploration"	= /obj/item/robot_module/robot/exploration,
 	"Engineering"	= /obj/item/robot_module/robot/engineering,
 	"Janitor" 		= /obj/item/robot_module/robot/janitor,
-	"Gravekeeper"	= /obj/item/robot_module/robot/gravekeeper,
-	"Lost"			= /obj/item/robot_module/robot/lost,
+	"Gravekeeper"	= /obj/item/robot_module/robot/malf/gravekeeper,
+	"Lost"			= /obj/item/robot_module/robot/malf/lost,
 	"Protector" 	= /obj/item/robot_module/robot/syndicate/protector,
 	"Mechanist" 	= /obj/item/robot_module/robot/syndicate/mechanist,
 	"Combat Medic"	= /obj/item/robot_module/robot/syndicate/combat_medic,

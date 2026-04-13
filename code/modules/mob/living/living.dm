@@ -32,7 +32,6 @@
 		return name
 
 /mob/living/Destroy()
-	SSradiation.listeners -= src
 	remove_all_modifiers(TRUE)
 	QDEL_NULL(say_list)
 
@@ -1372,7 +1371,7 @@
 	item.throw_at(target, throw_range, item.throw_speed, src)
 	return TRUE
 
-/mob/living/get_sound_env(var/pressure_factor)
+/mob/living/get_sound_env(var/spot, var/pressure_factor)
 	if (hallucination)
 		return SOUND_ENVIRONMENT_PSYCHOTIC
 	else if (druggy)

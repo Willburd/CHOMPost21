@@ -441,9 +441,19 @@
 	if(HAS_TRAIT(user, TRAIT_GOLDDIGGER))
 		var/datum/preferences/P = client?.prefs
 		if(P)
-			msg += "They look like they're [lowertext(P.economic_status)] economically."
+			msg += "[p_They()] look like [p_theyre()] [lowertext(P.economic_status)] economically."
 		else
-			msg += "You can't get a sense of how well off they are..."
+			msg += "You can't get a sense of how well off [p_they()] are..."
+	// Outpost 21 edit end
+
+	// Outpost 21 edit begin - Unwashed
+	if(feels_gross >= 10)
+		if(feels_gross >= 50)
+			msg += span_danger("[p_They()] [p_are()] a monument to filth. The dirt beneath [p_them()] cowers with fear, for its god walks amongst it.")
+		else if(feels_gross >= 20)
+			msg += span_warning("[p_They()] really need[p_s()] a shower, it's uncomfortable to even look at [p_them()].")
+		else
+			msg += "[p_They()] look unwashed."
 	// Outpost 21 edit end
 
 	var/flavor_text = print_flavor_text()

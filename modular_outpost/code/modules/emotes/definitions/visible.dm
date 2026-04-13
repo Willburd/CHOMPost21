@@ -19,3 +19,7 @@
 /datum/decl/emote/visible/dab/New()
 	emote_message_3p_target = span_warning("dabs on TARGET.")
 	emote_message_3p = span_warning("dabs.")
+
+/datum/decl/emote/visible/async_blink
+	key = "ablink"
+	emote_message_3p = "blinks asynchronously, not a thought in their head."

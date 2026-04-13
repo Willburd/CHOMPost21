@@ -29,10 +29,6 @@
 	else if(activeFor == leaveBelt)
 		GLOB.command_announcement.Announce("The [using_map.facility_type] has passed the radiation belt. Please allow for up to one minute while radiation levels dissipate, and report to medbay if you experience any unusual symptoms. Maintenance will lose all access again shortly.", "Anomaly Alert") //CHOMPEdit: Restored original message
 /datum/event/radiation_storm/proc/radiate()
-	var/radiation_level = rand(15, 35)
-	for(var/z in using_map.event_levels)
-		SSradiation.z_radiate(locate(1, 1, z), radiation_level, 1)
-
 	for(var/mob/living/carbon/C in GLOB.living_mob_list)
 		if(!(C.z in using_map.event_levels) || C.isSynthetic() || isbelly(C.loc))
 			continue
@@ -41,6 +37,13 @@
 			continue
 		if(A.flag_check(RAD_SHIELDED))
 			continue
+		radiation_pulse(
+			get_turf(C),
+			max_range = 1,
+			threshold = RAD_LIGHT_INSULATION,
+			chance = URANIUM_IRRADIATION_CHANCE * 5,
+			strength = rand(15, 35)
+		)
 		if(ishuman(C))
 			var/mob/living/carbon/human/H = C
 			var/chance = 5.0
@@ -57,11 +60,10 @@
 				if (prob(75))
 					randmutb(H) // Applies bad mutation
 					domutcheck(H,null,MUTCHK_FORCED)
-					H.check_mutation_cascade_gib() // Outpost 21 edit - mutation cascade trait
 				else
 					randmutg(H) // Applies good mutation
 					domutcheck(H,null,MUTCHK_FORCED)
-					H.check_mutation_cascade_gib() // Outpost 21 edit - mutation cascade trait
+				H.check_mutation_cascade_gib() // Outpost 21 edit - mutation cascade trait
 				H.UpdateAppearance()
 
 /datum/event/radiation_storm/end()

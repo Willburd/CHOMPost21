@@ -135,9 +135,11 @@ FIRE ALARM
 	return alarm()
 
 /obj/machinery/firealarm/emp_act(severity, recursive)
+	. = ..()
+	if (. & EMP_PROTECT_SELF)
+		return
 	if(prob(50 / severity))
 		alarm(rand(30 / severity, 60 / severity))
-	..()
 
 /obj/machinery/firealarm/attackby(obj/item/W as obj, mob/user as mob)
 	add_fingerprint(user)
@@ -256,7 +258,7 @@ Just a object used in constructing fire alarms
 	icon_state = "door_electronics"
 	desc = "A circuit. It has a label on it, it says \"Can handle heat levels up to 40 degrees celsius!\""
 	w_class = ITEMSIZE_SMALL
-	matter = list(MAT_STEEL = 50, MAT_GLASS = 50)
+	matter = RECYCLE_CIRCUIT_MATERIALS
 */
 /obj/machinery/partyalarm
 	name = "\improper PARTY BUTTON"

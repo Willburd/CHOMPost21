@@ -1,3 +1,20 @@
+// Water fixes
+/turf/simulated/floor/water
+
+/turf/simulated/floor/water/ex_act(severity)
+	return
+
+/turf/simulated/floor/water/fire_act(datum/gas_mixture/air, exposed_temperature, exposed_volume)
+	return
+
+/turf/simulated/floor/water/break_tile_to_plating()
+	return
+
+/turf/simulated/floor/water/break_tile()
+	return
+
+// Outpost unique water
+
 /turf/simulated/floor/water/acidic
 	name = "acidic shallows"
 	desc = "Water contaminated by the terraforming process. Highly unpleasant to most organic creatures."

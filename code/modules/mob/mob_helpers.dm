@@ -747,11 +747,11 @@ GLOBAL_DATUM_INIT(backplane, /image, generate_backplane())
 
 	return backplane
 
-/mob/proc/get_sound_env(var/spot, var/pressure_factor) // Outpost 21 edit(port) - AI can hear through holograms
+/mob/proc/get_sound_env(var/spot, var/pressure_factor)
 	if (pressure_factor < 0.5)
 		return SPACE
 	else
-		var/area/A = get_area(spot) // Outpost 21 edit(port) - AI can hear through holograms, src -> spot
+		var/area/A = get_area(spot)
 		return A.sound_env
 
 /mob/proc/position_hud_item(var/obj/item/item, var/slot)

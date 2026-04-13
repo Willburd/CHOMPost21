@@ -3,7 +3,9 @@
 	AddElement(/datum/element/climbable)
 
 /obj/structure/prop/rock/CanPass(atom/movable/mover, turf/target)
-	return !density || (mover.z > z) // Allow falling from above
+	if(mover.z > z) // Allow falling from above
+		return TRUE
+	. = ..()
 
 /obj/structure/prop/rock/small/Initialize(mapload)
 	. = ..()

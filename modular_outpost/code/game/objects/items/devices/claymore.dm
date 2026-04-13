@@ -99,6 +99,10 @@
 	. = ..()
 	update_icon()
 
+/obj/effect/step_trigger/claymore_laser/Destroy()
+	owner = null
+	. = ..()
+
 /obj/effect/step_trigger/claymore_laser/Trigger(atom/movable/A)
 	if(istype(A,/obj/effect))
 		return

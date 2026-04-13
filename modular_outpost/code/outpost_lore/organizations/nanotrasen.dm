@@ -1,1 +1,1 @@
-/datum/category_item/catalogue/information/organization/nanotrasen
+/datum/lore/organization/tsc/nanotrasen

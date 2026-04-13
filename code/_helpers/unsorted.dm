@@ -7,13 +7,6 @@
 //Checks if all high bits in req_mask are set in bitfield
 #define BIT_TEST_ALL(bitfield, req_mask) ((~(bitfield) & (req_mask)) == 0)
 
-//supposedly the fastest way to do this according to https://gist.github.com/Giacom/be635398926bb463b42a
-#define RANGE_TURFS(RADIUS, CENTER) \
-	block( \
-		locate(max(CENTER.x-(RADIUS),1),          max(CENTER.y-(RADIUS),1),          CENTER.z), \
-		locate(min(CENTER.x+(RADIUS),world.maxx), min(CENTER.y+(RADIUS),world.maxy), CENTER.z) \
-	)
-
 //Returns the middle-most value
 /proc/dd_range(var/low, var/high, var/num)
 	return max(low,min(high,num))
@@ -1657,3 +1650,59 @@ GLOBAL_DATUM(dview_mob, /mob/dview)
 			final_material_list[mat] = mat_per_item[index]
 		object.set_custom_materials(final_material_list, multiplier)
 		index += 1
+
+/proc/spiral_range(dist = 0, center = usr, orange = FALSE)
+	var/list/atom_list = list()
+	var/turf/t_center = get_turf(center)
+	if(!t_center)
+		return list()
+
+	if(!orange)
+		atom_list += t_center
+		atom_list += t_center.contents
+
+	if(!dist)
+		return atom_list
+
+
+	var/turf/checked_turf
+	var/y
+	var/x
+	var/c_dist = 1
+
+
+	while( c_dist <= dist )
+		y = t_center.y + c_dist
+		x = t_center.x - c_dist + 1
+		for(x in x to t_center.x + c_dist)
+			checked_turf = locate(x, y, t_center.z)
+			if(checked_turf)
+				atom_list += checked_turf
+				atom_list += checked_turf.contents
+
+		y = t_center.y + c_dist - 1
+		x = t_center.x + c_dist
+		for(y in t_center.y - c_dist to y)
+			checked_turf = locate(x, y, t_center.z)
+			if(checked_turf)
+				atom_list += checked_turf
+				atom_list += checked_turf.contents
+
+		y = t_center.y - c_dist
+		x = t_center.x + c_dist - 1
+		for(x in t_center.x - c_dist to x)
+			checked_turf = locate(x, y, t_center.z)
+			if(checked_turf)
+				atom_list += checked_turf
+				atom_list += checked_turf.contents
+
+		y = t_center.y - c_dist + 1
+		x = t_center.x - c_dist
+		for(y in y to t_center.y + c_dist)
+			checked_turf = locate(x, y, t_center.z)
+			if(checked_turf)
+				atom_list += checked_turf
+				atom_list += checked_turf.contents
+		c_dist++
+
+	return atom_list

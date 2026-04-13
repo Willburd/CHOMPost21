@@ -67,3 +67,9 @@
 /datum/trait/positive/naturaltunneler/apply(datum/species/S, mob/living/carbon/human/H, trait_prefs)
 	. = ..()
 	ADD_TRAIT(H, TRAIT_NATURALTUNNELER, ROUNDSTART_TRAIT)
+
+/datum/trait/positive/fortitude
+	name = "Fortitude"
+	cost = 2
+	desc = "You are more sturdy than most species, and as such, more resistant to stuns."
+	var_changes = list("stun_mod" = 0.6, "weaken_mod" = 0.6)

@@ -23,6 +23,15 @@
 	var/datum/job/J = GLOB.job_master.GetJob(rank)
 	if(J)
 		C.access = J.get_access()
+	// Outpost 21 edit begin - Alt titles with unique access added
+	var/datum/job/rank_job = GLOB.joblist[rank]
+	if(assignment in rank_job.alt_titles)
+		var/typepath = rank_job.alt_titles[assignment]
+		var/datum/alt_title/alt_dat = new typepath()
+		if(length(alt_dat.additional_access))
+			C.access |= alt_dat.additional_access
+		qdel(alt_dat)
+	// Outpost 21 edit end
 	if(H.mind)
 		var/datum/mind/M = H.mind
 		if(M.initial_account)

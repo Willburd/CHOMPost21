@@ -205,6 +205,12 @@
 
 	dark_gains = handle_nutrition_conversion(dark_gains)
 
+	// Outpost 21 edit(port) begin - Regen in dark tiles over time
+	if(istype(T,/turf/simulated/floor/weird_things/dark) || istype(T,/turf/unsimulated/floor/dark))
+		dark_gains *= 3
+		dark_gains += 2
+	// Outpost 21 edit end
+
 	shadekin_adjust_energy(dark_gains)
 
 	//Update huds
@@ -314,6 +320,11 @@
 	SIGNAL_HANDLER
 
 	if(in_phase && hide_voice_in_phase)
+		name_data[1] = ""
+		return COMPONENT_ALT_NAME_CHANGED
+
+	// Suppress "(as Unknown)" for shadekin with voice changers, or no identification.
+	if(source.name != source.GetVoice())
 		name_data[1] = ""
 		return COMPONENT_ALT_NAME_CHANGED
 

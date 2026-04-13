@@ -27,8 +27,8 @@
 				spawn_locations.Add(M)
 	else
 		for(var/obj/effect/landmark/C in GLOB.landmarks_list)
-			if(C.name == "badbody" && (C.z in using_map.event_levels))
-				spawn_locations.Add(C.loc)
+			if(C.name == "badbody")
+				spawn_locations.Add(get_turf(C))
 
 	if(!spawn_locations.len)
 		log_world("## DEBUG: Badbody had no spawn points.")
@@ -73,21 +73,31 @@
 /datum/event/badbody/start()
 	return
 
+/proc/meets_badbody_criteria(client/picked_client)
+	// check validity before spawn
+	var/datum/preferences/P = picked_client.prefs;
+	if(!P)
+		return FALSE
+
+	var/species_key = P.read_preference(/datum/preference/choiced/species);
+	if(species_key == SPECIES_DIONA || species_key == SPECIES_SHADEKIN || species_key == SPECIES_PROMETHEAN || species_key == SPECIES_PROTEAN) // species that don't leave bodies
+		return FALSE
+	var/list/organ_data = P.read_preference(/datum/preference/organ_data)
+	if(!organ_data || organ_data[BP_TORSO] == "cyborg") // no FBP, too easy to "repair"
+		return FALSE
+	if(P.job_engsec_high & CYBORG || P.job_engsec_high & AI_DEPT) // No borgs! If they don't have it as their high job, they spawn as something else anyway, or are abusing code diving to cheese this... Hello by the way.
+		return FALSE
+
+	return TRUE
+
 /datum/event/badbody/proc/spawn_body(client/picked_client,var/turf/spawnloc)
 	// A terrible clone of /client/proc/respawn_character() but with fixed choices.
 	if(!spawnloc || !istype(picked_client))
 		return
 
-	// check validity before spawn
-	var/datum/preferences/P = picked_client.prefs;
-	if(!P)
+	if(!meets_badbody_criteria(picked_client))
 		return
-	if(P.species == SPECIES_DIONA || P.species == SPECIES_SHADEKIN || P.species == SPECIES_PROMETHEAN || P.species == SPECIES_PROTEAN) // species that don't leave bodies
-		return
-	if(P.organ_data[BP_TORSO] == "cyborg") // no FBP, too easy to "repair"
-		return
-	if(P.job_engsec_high & CYBORG || P.job_engsec_high & AI_DEPT) // No borgs! If they don't have it as their high job, they spawn as something else anyway, or are abusing code diving to cheese this... Hello by the way.
-		return
+
 	var/mob/living/carbon/human/new_character = new(spawnloc)
 	anim(spawnloc,new_character,'icons/mob/mob.dmi',,"phasein",,new_character.dir)
 	if(!new_character)
@@ -108,5 +118,5 @@
 
 	//A redraw for good measure
 	new_character.regenerate_icons()
-	new_character.update_transform() //VOREStation Edit
+	new_character.update_transform()
 	return new_character

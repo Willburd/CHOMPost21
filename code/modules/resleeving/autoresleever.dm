@@ -44,6 +44,11 @@ GLOBAL_LIST_EMPTY(active_autoresleevers)
 	if(!allow_ghosts_to_trigger)
 		return
 	// Outpost 21 addition end
+	// Outpost 21 edit begin - Coredump prevents scans
+	if(SStranscore.default_db?.core_dumped)
+		to_chat(user, span_warning("Resleeving database is dumped and offline."))
+		return
+	// Outpost 21 edit end
 	update_icon()
 	if(spawn_slots == 0)
 		to_chat(user, span_warning("There are no more respawn slots."))
@@ -91,8 +96,13 @@ GLOBAL_LIST_EMPTY(active_autoresleevers)
 	if(stat) // Outpost 21 edit - We prefer our autosleever to not work in a powerout, was:  & (BROKEN | MAINT | EMPED)) // Let it still work when power is just off, it has it's own backup reserve or something.
 		to_chat(ghost, span_warning("This machine is not functioning..."))
 		return
+	// Outpost 21 edit begin - Coredump prevents scans
+	if(SStranscore.default_db?.core_dumped)
+		to_chat(ghost, span_warning("Resleeving database is dumped and offline."))
+		return
+	// Outpost 21 edit end
 	if(!isobserver(ghost))
-		to_chat(ghost, "<span class='warning'>Auto-resleever has recieved your ID. Unfortunately you are inhabiting an animal and cannot be auto-resleeved. You may click the auto-resleever to resleeve yourself when your death timer has ended.</span>") // Outpost 21 edit - actually inform players
+		to_chat(ghost, span_warning("Auto-resleever has recieved your ID. Unfortunately you are inhabiting an animal and cannot be auto-resleeved. You may click the auto-resleever to resleeve yourself when your death timer has ended.")) // Outpost 21 edit - actually inform players
 		return
 	if(ghost.mind && ghost.mind.current && ghost.mind.current.stat != DEAD && ghost.mind.current.enabled == TRUE) //CHOMPEdit - Disabled body shouldn't block this.
 		if(istype(ghost.mind.current.loc, /obj/item/mmi))
@@ -106,15 +116,16 @@ GLOBAL_LIST_EMPTY(active_autoresleevers)
 
 	var/client/ghost_client = ghost.client
 
-	if(!is_alien_whitelisted(ghost.client, GLOB.all_species[ghost_client?.prefs?.species]) && !check_rights(R_ADMIN, 0)) // Prevents a ghost ghosting in on a slot and spawning via a resleever with race they're not whitelisted for, getting around normal join restrictions.
+	if(!is_alien_whitelisted(ghost.client, GLOB.all_species[ghost_client?.prefs?.read_preference(/datum/preference/choiced/species)]) && !check_rights(R_ADMIN, 0)) // Prevents a ghost ghosting in on a slot and spawning via a resleever with race they're not whitelisted for, getting around normal join restrictions.
 		to_chat(ghost, span_warning("You are not whitelisted to spawn as this species!"))
 		return
 
 	// CHOMPedit start
 
 	var/datum/species/chosen_species
-	if(ghost.client.prefs.species) // In case we somehow don't have a species set here.
-		chosen_species = GLOB.all_species[ghost_client.prefs.species]
+	var/pref_species = ghost.client.prefs.read_preference(/datum/preference/choiced/species)
+	if(pref_species) // In case we somehow don't have a species set here.
+		chosen_species = GLOB.all_species[pref_species]
 
 	if((chosen_species.spawn_flags & SPECIES_IS_WHITELISTED) || (chosen_species.spawn_flags & SPECIES_IS_RESTRICTED) || (chosen_species.flags & NO_SLEEVE) || (locate(/datum/trait/negative/noresleeve) in ghost.client.prefs.neg_traits)) // Outpost 21 edit - No sleeve
 		to_chat(ghost, span_warning("This species cannot be resleeved!"))
@@ -212,7 +223,7 @@ GLOBAL_LIST_EMPTY(active_autoresleevers)
 	if(new_character.mind)
 		new_character.mind.loaded_from_ckey = picked_ckey
 		new_character.mind.loaded_from_slot = picked_slot
-		var/datum/antagonist/antag_data = get_antag_data(new_character.mind.special_role)
+		var/datum/antagonist/antag_data = SSantag_job.get_antag_data(new_character.mind.special_role)
 		if(antag_data)
 			antag_data.add_antagonist(new_character.mind)
 			antag_data.place_mob(new_character)
@@ -322,6 +333,12 @@ GLOBAL_LIST_EMPTY(active_autoresleevers)
 
 /obj/machinery/transhuman/autoresleever/proc/get_id_trigger(var/obj/item/card/id/D)
 	if(stat || isnull(releaseturf))
+		return
+
+	// Can't use resleever now
+	if(SStranscore.default_db?.core_dumped)
+		src.visible_message("[src] flashes 'Database Safety Interlock Failure', and lets out a loud incorrect sounding beep!")
+		playsound(src, 'sound/machines/defib_failed.ogg', 50, 0)
 		return
 
 	// what even happened?

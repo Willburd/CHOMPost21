@@ -13,88 +13,66 @@
 	// Looping through the player list has the added bonus of working for mobs inside containers
 	var/sound/S = sound(get_sfx(soundin))
 	var/maxdistance = (world.view + extrarange) * 2  //VOREStation Edit - 3 to 2
-	var/list/listeners = GLOB.player_list.Copy() + GLOB.interior_vehicle_list.Copy()
-	// Outpost 21 edit(port) begin - Get holograms from AIs
-	var/list/holo_listeners = list() // sorry for the duped bits of code ahead, but this is somewhat required to have AI holograms listen to game sounds - Willbird
-	for(var/mob/living/silicon/ai/A in GLOB.player_list)
+	var/list/listeners = GLOB.player_list.Copy() + GLOB.interior_vehicle_list.Copy() // Outpost 21 edit(port) begin - Forward sounds to the insides of vehicles
+
+	// Get AI holograms of active AIs too
+	var/list/holo_listeners = list()
+	for(var/mob/living/silicon/ai/A in listeners)
 		if(A.holo && istype(A.holo.masters[A],/obj/effect/overlay/aiholo/))
 			holo_listeners += A.holo.masters[A]
 	listeners += holo_listeners
-	// Outpost 21 edit end
+
 	for(var/atom/U as anything in listeners)
+		var/turf/T = get_turf(U)
+		var/mob/hearer = null
+		// Normal mobs
 		if(istype(U,/mob))
 			var/mob/M = U
 			if(!M || !M.client)
 				continue
-			var/turf/T = get_turf(M)
-			if(!T)
-				continue
-			var/area/A = T.loc
-			if((A.flag_check(AREA_SOUNDPROOF) || area_source.flag_check(AREA_SOUNDPROOF)) && (A != area_source))
-				continue
-			//var/distance = get_dist(T, turf_source) Save get_dist for later because it's more expensive
-
-			if(!T || T.z != turf_source.z) //^ +1
-				continue
-			if(get_dist(T, turf_source) > maxdistance)
-				continue
-			if(!ignore_walls && !can_see(turf_source, T, length = maxdistance * 2))
-				continue
-
-			M.playsound_local(turf_source, soundin, vol, vary, frequency, falloff, is_global, channel, pressure_affected, S, preference, volume_channel)
-
-		// Outpost 21 addition begin - holograms can hear things
+			hearer = M
+		// Holograms need to hear too
 		if(istype(U,/obj/effect/overlay/aiholo))
 			var/obj/effect/overlay/aiholo/H = U
-			if(!H.master || !H.master.client)
+			if(!H || !H.master || !H.master.client)
 				continue
-			var/turf/T = get_turf(H)
-			if(!T)
-				continue
-			var/area/A = T.loc
-			if((A.flag_check(AREA_SOUNDPROOF) || area_source.flag_check(AREA_SOUNDPROOF)) && (A != area_source))
-				continue
+			hearer = H.master
 
-			if(!T || T.z != turf_source.z) //^ +1
-				continue
-			if(get_dist(T, turf_source) > maxdistance)
-				continue
-			if(!ignore_walls && !can_see(turf_source, T, length = maxdistance * 2))
-				continue
-
-			H.master.playsound_local(turf_source, soundin, vol, vary, frequency, falloff, is_global, channel, pressure_affected, S, preference, volume_channel, T)
-		// Outpost 21 addition end
 		// Outpost 21 addition begin - Forward sounds to the insides of vehicles
-		else if(istype(U,/obj/vehicle/has_interior/controller))
+		if(istype(U,/obj/vehicle/has_interior))
 			// Already a sound forwarded to the interior of a vehicle, ignore me!
 			// Globals are heard over all maps anyway, so don't forward either!
-			if(is_global || istype(source,/obj/machinery/computer/vehicle_interior_console))
+			if(is_global || istype(source, /obj/machinery/computer/vehicle_interior_console) || vol <= 0)
 				continue
-
-			var/obj/vehicle/has_interior/controller/V = U
-			var/turf/T = get_turf(V)
-			if(!T)
+			var/obj/vehicle/has_interior/V = U
+			if(V.interior_helm == null)
 				continue
-
-			var/area/A = T.loc
-			if((A.flag_check(AREA_SOUNDPROOF) || area_source.flag_check(AREA_SOUNDPROOF)) && (A != area_source))
-				continue
-
-			if(!T || T.z != turf_source.z) //^ +1
-				continue
-
-			var/distance = get_dist(T, turf_source)
-			if(distance > maxdistance)
-				continue
-			if(!ignore_walls && !can_see(turf_source, T, length = maxdistance * 2))
-				continue
-
-			if(V.interior_helm != null && vol > 0)
-				playsound(V.interior_helm,soundin, vol * 0.5 * (1 - (distance / maxdistance)), vary, -5, falloff, FALSE, frequency, channel, pressure_affected, TRUE, preference, volume_channel)
+			hearer = V.interior_helm
 		// Outpost 21 addition end
 
-		SSmotiontracker.ping(source,vol) // Nearly everything pings this, the quieter the less likely
+		if(!T || !hearer)
+			continue
+		var/area/A = T.loc
+		if((A.flag_check(AREA_SOUNDPROOF) || area_source.flag_check(AREA_SOUNDPROOF)) && (A != area_source))
+			continue
+		//var/distance = get_dist(T, turf_source) Save get_dist for later because it's more expensive
 
+		if(!T || T.z != turf_source.z) //^ +1
+			continue
+		if(get_dist(T, turf_source) > maxdistance)
+			continue
+		if(!ignore_walls && !can_see(turf_source, T, length = maxdistance * 2))
+			continue
+
+		// Outpost 21 addition begin - Forward sounds to the insides of vehicles
+		if(istype(hearer,/obj/machinery/computer/vehicle_interior_console))
+			// Replay the sound inside from the helm
+			playsound(hearer, soundin, vol * 0.5 * (1 - (get_dist(T, turf_source) / maxdistance)), vary, -5, falloff, FALSE, frequency, channel, pressure_affected, TRUE, preference, volume_channel)
+			return
+		// Outpost 21 addition end
+
+		hearer.playsound_local(turf_source, soundin, vol, vary, frequency, falloff, is_global, channel, pressure_affected, S, preference, volume_channel, T)
+		SSmotiontracker.ping(source,vol) // Nearly everything pings this, the quieter the less likely
 
 /mob/proc/check_sound_preference(list/preference)
 	if(!islist(preference))
@@ -133,17 +111,16 @@
 		else
 			S.frequency = get_rand_frequency()
 
-	// Outpost 21 edit(port) begin - AI hologram can hear things
+	// Check if an AI is listening through hologram...
 	var/turf/T = get_turf(src)
-	var/listener_position = T // used exclusively for sound_env stuff
+	var/listener_position = T
 	if(isAI(src))
-		// AI is silly, and we'd be doing a distance check across the station. Make it use the hologram's location... even if it makes more sense to use the emitter's. - Willbird
 		var/mob/living/silicon/ai/A = src
 		if(A.holo && istype(A.holo.masters[A],/obj/effect/overlay/aiholo))
 			T = get_turf(A.holo.masters[A])
 			listener_position = A.holo.masters[A]
+
 	if(isturf(turf_source))
-	// Outpost 21 end
 		//sound volume falloff with distance
 		var/distance = get_dist(T, turf_source)
 
@@ -174,7 +151,7 @@
 
 		//Apply a sound environment.
 		if(!is_global)
-			S.environment = get_sound_env(listener_position,pressure_factor) // Outpost 21 edit - ai can hear sounds through hologram
+			S.environment = get_sound_env(listener_position,pressure_factor)
 
 		var/dx = turf_source.x - T.x // Hearing from the right/left
 		S.x = dx
@@ -375,7 +352,6 @@
 				soundin = pick(
 					'sound/effects/mech/powerloader_step.ogg',
 					'sound/effects/mech/powerloader_step2.ogg')
-
 			// Outpost 21 edit(port) begin - vehicle crushing
 			if ("vehicle_crush")
 				soundin = pick(
@@ -387,6 +363,10 @@
 					'sound/effects/metal_close.ogg',
 					'sound/effects/meteorimpact.ogg')
 			// Outpost 21 edit end
+			if ("sizzle")
+				soundin = pick(
+					'sound/effects/wounds/sizzle1.ogg',
+					'sound/effects/wounds/sizzle2.ogg')
 	return soundin
 
 
@@ -498,9 +478,10 @@ GLOBAL_LIST_INIT(species_sound_map, list(
 */
 /proc/select_default_species_sound(var/datum/preferences/pref) // Called in character setup. This is similar to check_gendered_sounds, except here we pull from the prefs.
 	// First, we determine if we're custom-choosing a body or if we're a base game species.
-	var/datum/species/valid = GLOB.all_species[pref.species]
+	var/pref_species = pref.read_preference(/datum/preference/choiced/species)
+	var/datum/species/valid = GLOB.all_species[pref_species]
 	if(valid.selects_bodytype == (SELECTS_BODYTYPE_CUSTOM || SELECTS_BODYTYPE_SHAPESHIFTER)) // Custom species or xenochimera handling here
-		valid = coalesce(GLOB.all_species[pref.custom_base], GLOB.all_species[pref.species])
+		valid = coalesce(GLOB.all_species[pref.custom_base], GLOB.all_species[pref_species])
 	// Now we start getting our sounds.
 	var/id_gender = pref.read_preference(/datum/preference/choiced/gender/identifying)
 	if(valid.gender_specific_species_sounds) // Do we have gender-specific sounds?

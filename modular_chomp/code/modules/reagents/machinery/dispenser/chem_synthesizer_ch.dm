@@ -82,6 +82,7 @@
 			add_cartridge(new type(src))
 		panel_open = FALSE
 
+	/* Outpost 12 edit - No NT tutorial please
 	var/obj/item/paper/P = new /obj/item/paper(get_turf(src))
 	P.name = "Synthesizer Instructions"
 	P.desc = "A photocopy of a handwritten note."
@@ -113,6 +114,7 @@
 	<BR><BR> Name: Dylovene (60u) \
 	<BR> Number of steps: 3 \
 	<BR> Recipe string: Silicon,20,Nitrogen,20,Potassium,20"}
+	*/
 
 /obj/machinery/chemical_synthesizer/examine(mob/user)
 	. = ..()

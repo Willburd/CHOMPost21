@@ -14,7 +14,6 @@
 	var/traitor_frequency = 0 //tune to frequency to unlock traitor supplies
 	var/canhear_range = 3 // the range which mobs can hear this radio from
 	var/loudspeaker = TRUE // Allows borgs to disable canhear_range.
-	var/datum/wires/radio/wires = null
 	var/b_stat = 0
 	var/broadcasting = FALSE
 	var/listening = TRUE
@@ -64,7 +63,7 @@
 	for (var/ch_name in channels)
 		secure_radio_connections[ch_name] = SSradio.add_object(src, GLOB.radiochannels[ch_name],  RADIO_CHAT)
 
-	wires = new(src)
+	set_wires(new /datum/wires/radio(src))
 	internal_channels = GLOB.default_internal_channels.Copy()
 	GLOB.listening_objects += src
 
@@ -298,7 +297,7 @@ GLOBAL_DATUM(autospeaker, /mob/living/silicon/ai/announcer)
 	if(!GLOB.autospeaker)
 		return
 	var/datum/radio_frequency/connection = null
-	if(channel && channels && channels.len > 0)
+	if(channel && channels && LAZYLEN(channels))
 		if(channel == "department")
 			channel = channels[1]
 		connection = secure_radio_connections[channel]
@@ -325,7 +324,7 @@ GLOBAL_DATUM(autospeaker, /mob/living/silicon/ai/announcer)
 		return radio_connection
 
 	// Otherwise, if a channel is specified, look for it.
-	if(channels && channels.len > 0)
+	if(channels && LAZYLEN(channels))
 		if (message_mode == "department") // Department radio shortcut
 			message_mode = channels[1]
 
@@ -493,7 +492,7 @@ GLOBAL_DATUM(autospeaker, /mob/living/silicon/ai/announcer)
 		if(jamming)
 			var/distance = 0
 			var/area/our_area = get_area(src)
-			if(our_area.no_comms)
+			if(our_area.no_comms || !islist(jamming)) // Outpost 21 edit begin - Disable phased shadekin radios
 				distance = 99
 			else
 				distance = jamming["distance"]
@@ -656,11 +655,13 @@ GLOBAL_DATUM(autospeaker, /mob/living/silicon/ai/announcer)
 	else return
 
 /obj/item/radio/emp_act(severity, recursive)
+	. = ..()
+	if (. & EMP_PROTECT_SELF)
+		return
 	broadcasting = FALSE
 	listening = FALSE
 	for (var/ch_name in channels)
 		channels[ch_name] = 0
-	..()
 
 /obj/item/radio/start_off
 	listening = FALSE
@@ -794,11 +795,11 @@ GLOBAL_DATUM(autospeaker, /mob/living/silicon/ai/announcer)
 // Outpost 21 edit begin - Track these if they exist
 /obj/item/radio/phone/Initialize(mapload)
 	. = ..()
-	phones_on_station.Add(src)
+	GLOB.phones_on_station.Add(src)
 
 /obj/item/radio/phone/Destroy()
 	. = ..()
-	phones_on_station.Remove(src)
+	GLOB.phones_on_station.Remove(src)
 // Outpost 21 edit end
 
 /obj/item/radio/phone/medbay

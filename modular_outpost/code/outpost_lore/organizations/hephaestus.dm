@@ -1,1 +1,1 @@
-/datum/category_item/catalogue/information/organization/hephaestus
+/datum/lore/organization/tsc/hephaestus

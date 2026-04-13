@@ -1,4 +1,5 @@
-var/datum/planet/muriki/planet_muriki = null
+GLOBAL_DATUM(planet_muriki, /datum/planet/muriki)
+
 //Dev note: This entire file handles weather and planetary effects. File name subject to change pending planet name finalization.
 /datum/time/muriki
 	seconds_in_day = 18 HOURS
@@ -16,7 +17,7 @@ var/datum/planet/muriki/planet_muriki = null
 
 /datum/planet/muriki/New()
 	..()
-	planet_muriki = src
+	GLOB.planet_muriki = src
 	weather_holder = new /datum/weather_holder/muriki(src)
 
 // This code is horrible.
@@ -118,8 +119,8 @@ var/datum/planet/muriki/planet_muriki = null
 
 // Returns the time datum of muriki.
 /proc/get_muriki_time()
-	if(planet_muriki)
-		return planet_muriki.current_time
+	if(GLOB.planet_muriki)
+		return GLOB.planet_muriki.current_time
 
 /datum/weather/muriki
 	var/next_lightning_strike = 0 // world.time when lightning will strike.

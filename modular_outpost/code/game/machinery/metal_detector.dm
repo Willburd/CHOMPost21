@@ -66,6 +66,8 @@
 	if(AM.is_incorporeal() || istype(AM,/mob/observer)) // ectoplasm begone
 		if(prob(98))
 			return
+	if(istype(AM, /obj/effect/abstract))
+		return
 	if(stat & (NOPOWER|BROKEN) || !anchored)
 		return
 	if(world.time >= cooldown)
