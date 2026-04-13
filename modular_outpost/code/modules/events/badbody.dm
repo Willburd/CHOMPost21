@@ -114,7 +114,6 @@
 		if(chosen_language)
 			if(is_lang_whitelisted(picked_client,chosen_language) || (new_character.species && (chosen_language.name in new_character.species.secondary_langs)))
 				new_character.add_language(lang)
-	// job_master.EquipRank(new_character, JOB_STOWAWAY, 1, FALSE) // This has outplayed it's use... Not really that good?
 
 	//A redraw for good measure
 	new_character.regenerate_icons()
