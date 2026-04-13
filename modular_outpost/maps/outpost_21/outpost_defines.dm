@@ -478,15 +478,15 @@
 	initial_restricted_waypoints = list( "Mining Trawler" = list("confinementbeam_trawler"), "Security Carrier" = list("confinementbeam_security", "aisat_security"), "Mining Trawler" = list("trawler_yard"))
 	levels_for_distress = list(Z_LEVEL_OUTPOST_SURFACE)
 
-/obj/effect/overmap/visitable/sector/murkiki_space/confinementbeam/Crossed(var/atom/movable/AM)
+/obj/effect/overmap/visitable/sector/murkiki_space/orbital_facility/Crossed(var/atom/movable/AM)
 	. = ..()
 	announce_atc(AM,going = FALSE)
 
-/obj/effect/overmap/visitable/sector/murkiki_space/confinementbeam/Uncrossed(var/atom/movable/AM)
+/obj/effect/overmap/visitable/sector/murkiki_space/orbital_facility/Uncrossed(var/atom/movable/AM)
 	. = ..()
 	announce_atc(AM,going = TRUE)
 
-/obj/effect/overmap/visitable/sector/murkiki_space/confinementbeam/announce_atc(var/atom/movable/AM, var/going = FALSE)
+/obj/effect/overmap/visitable/sector/murkiki_space/orbital_facility/announce_atc(var/atom/movable/AM, var/going = FALSE)
 	var/message = "Sensor contact for vessel '[AM.name]' has [going ? "left" : "entered"] ATC control area."
 	//For landables, we need to see if their shuttle is cloaked
 	if(istype(AM, /obj/effect/overmap/visitable/ship/landable))
@@ -499,7 +499,7 @@
 	else if(istype(AM, /obj/effect/overmap/visitable/ship))
 		SSatc.msg(message)
 
-/obj/effect/overmap/visitable/sector/murkiki_space/confinementbeam/get_space_zlevels()
+/obj/effect/overmap/visitable/sector/murkiki_space/orbital_facility/get_space_zlevels()
 	return list(Z_LEVEL_OUTPOST_ORBITAL_LOWER, Z_LEVEL_OUTPOST_ORBITAL_UPPER)
 
 

@@ -38,6 +38,10 @@
 	},
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/storage)
+"af" = (
+/obj/effect/overmap/visitable/sector/murkiki_space/orbital_facility,
+/turf/space,
+/area/offworld/asteroidyard/external)
 "ag" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/grille,
@@ -17323,7 +17327,7 @@ dk
 dk
 dk
 dk
-dk
+af
 "}
 (2,1,1) = {"
 sC
