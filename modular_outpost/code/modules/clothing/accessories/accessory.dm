@@ -40,8 +40,5 @@
 /obj/item/clothing/accessory/pride
 	allow_borg = TRUE
 
-/datum/gear/accessory/pilotpin
-	allow_borg = TRUE
-
 /obj/item/clothing/accessory/armband
 	allow_borg = TRUE
