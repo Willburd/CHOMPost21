@@ -2693,9 +2693,6 @@
 	holomap_color = HOLOMAP_AREACOLOR_COMMAND
 	color_grading = COLORTINT_DIM
 
-//
-//-----------------------------------------------------------------------
-//Confinement beam
 /area/offworld/confinementbeam/station
 	sound_env = SMALL_ENCLOSED
 	ambience = AMBIENCE_MAINTENANCE
@@ -2837,6 +2834,69 @@
 	icon_state = "blue"
 	sound_env = SMALL_SOFTFLOOR
 	ambience = AMBIENCE_GENERIC
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+
+/area/offworld/confinementbeam/station/rust_core
+	name = "\improper RUST Engine Core"
+	icon_state = "engine"
+	sound_env = LARGE_ENCLOSED
+	ambience = AMBIENCE_ENGINEERING
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+
+/area/offworld/confinementbeam/station/rust_tool_storage
+	name = "\improper RUST Tool Storage"
+	icon_state = "orange"
+	sound_env = SMALL_ENCLOSED
+	ambience = AMBIENCE_ENGINEERING
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+
+/area/offworld/confinementbeam/station/rust_control
+	name = "\improper RUST Engine Control Room"
+	icon_state = "engine_monitoring"
+	sound_env = SMALL_ENCLOSED
+	ambience = AMBIENCE_ENGINEERING
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+
+/area/offworld/confinementbeam/station/ai_transit_hub
+	name = "\improper AI Core Transit Hub"
+	icon_state = "teleporter"
+	sound_env = LARGE_ENCLOSED
+	ambience = AMBIENCE_ENGINEERING
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+
+/area/offworld/confinementbeam/station/ptl_core
+	name = "\improper Confinement Beam PTL Core"
+	icon_state = "LP"
+	sound_env = LARGE_ENCLOSED
+	ambience = AMBIENCE_ENGINEERING
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+
+/area/offworld/confinementbeam/station/atmos_sublevel
+	name = "\improper Confinement Beam Lower Atmospherics"
+	icon_state = "engineering_workshop"
+	sound_env = LARGE_ENCLOSED
+	ambience = AMBIENCE_ENGINEERING
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+
+/area/offworld/confinementbeam/station/atmos_primary
+	name = "\improper Confinement Beam Primary Atmospherics"
+	icon_state = "toxtest"
+	sound_env = LARGE_ENCLOSED
+	ambience = AMBIENCE_ENGINEERING
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+
+/area/offworld/confinementbeam/station/lower_hallway
+	name = "\improper Confinement Beam Lower Hallway"
+	icon_state = "yellow"
+	sound_env = LARGE_ENCLOSED
+	ambience = AMBIENCE_ENGINEERING
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+
+/area/offworld/confinementbeam/station/aux_power
+	name = "\improper Confinement Beam Auxilery Power"
+	icon_state = "engine_smes"
+	sound_env = SMALL_ENCLOSED
+	ambience = AMBIENCE_ENGINEERING
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 
 //
