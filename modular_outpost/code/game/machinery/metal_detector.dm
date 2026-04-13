@@ -119,7 +119,7 @@
 	if(!thing)
 		return -1
 	if(isitem(thing))
-		var/item/itm = thing
+		var/obj/item/itm = thing
 		if(itm.item_flags & ABSTRACT)
 			return
 	var/alert_lev = 0
