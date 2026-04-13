@@ -465,6 +465,9 @@
 	return list() //None!
 
 
+/obj/effect/landmark/map_data/muriki_orbital_facility
+	height = 2
+
 /obj/effect/overmap/visitable/sector/murkiki_space/orbital_facility
 	initial_generic_waypoints = list("orbitalyard_civ","orbitalyard_north","orbitalyard_south","orbitalyard_east","orbitalyard_west")
 	name = "Orbital Facility Platform"
