@@ -416,7 +416,7 @@
 	//Handle job slot/tater cleanup.
 	var/job = mind.assigned_role
 
-	GLOB.job_master.FreeRole(job)
+	SSjob.free_role(job)
 
 	if(mind.objectives.len)
 		qdel(mind.objectives)
