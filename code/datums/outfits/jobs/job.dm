@@ -24,9 +24,8 @@
 	if(J)
 		C.access = J.get_access()
 	// Outpost 21 edit begin - Alt titles with unique access added
-	var/datum/job/rank_job = GLOB.joblist[rank]
-	if(assignment in rank_job.alt_titles)
-		var/typepath = rank_job.alt_titles[assignment]
+	if(assignment in J.alt_titles)
+		var/typepath = J.alt_titles[assignment]
 		var/datum/alt_title/alt_dat = new typepath()
 		if(length(alt_dat.additional_access))
 			C.access |= alt_dat.additional_access
