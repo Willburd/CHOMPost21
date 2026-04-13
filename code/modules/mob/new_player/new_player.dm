@@ -307,6 +307,10 @@
 
 	// Equip our custom items only AFTER deploying to spawn points eh?
 	equip_custom_items(character)	//CHOMPEdit readded to enable custom_item.txt
+	// Outpost 21 edit begin - Borg accessories
+	if(istype(character, /mob/living/silicon/robot))
+		equip_robot_accessories(character)
+	// Outpost 21 edit end
 
 	// Moving wheelchair if they have one
 	if(character.buckled && istype(character.buckled, /obj/structure/bed/chair/wheelchair))
