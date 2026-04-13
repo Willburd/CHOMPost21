@@ -72,7 +72,7 @@
 	usable_email_tlds = list("internalmail.es")
 	allowed_spawns = list("Elevator", "Cryogenic Storage", "Cyborg Storage", "On-Site Dorms")
 	default_skybox = /datum/skybox_settings/outpost21
-	unit_test_z_levels = list(Z_LEVEL_OUTPOST_DEEPDARK,Z_LEVEL_OUTPOST_BASEMENT,Z_LEVEL_OUTPOST_SURFACE,Z_LEVEL_OUTPOST_UPPER,Z_LEVEL_OUTPOST_ASTEROID,Z_LEVEL_OUTPOST_CONFINEMENTBEAM)
+	unit_test_z_levels = list(Z_LEVEL_OUTPOST_DEEPDARK,Z_LEVEL_OUTPOST_BASEMENT,Z_LEVEL_OUTPOST_SURFACE,Z_LEVEL_OUTPOST_UPPER,Z_LEVEL_OUTPOST_ORBITAL_LOWER,Z_LEVEL_OUTPOST_ORBITAL_UPPER)
 	unit_test_exempt_areas = list()
 	unit_test_exempt_from_atmos = list(	/area/muriki/processor,
 										/area/muriki/processor/hall,
@@ -270,8 +270,8 @@
 			Z_LEVEL_OUTPOST_BASEMENT,
 			Z_LEVEL_OUTPOST_SURFACE,
 			Z_LEVEL_OUTPOST_UPPER,
-			Z_LEVEL_OUTPOST_ASTEROID,
-			Z_LEVEL_OUTPOST_CONFINEMENTBEAM
+			Z_LEVEL_OUTPOST_ORBITAL_LOWER,
+			Z_LEVEL_OUTPOST_ORBITAL_UPPER
 		)
 
 	ai_shell_restricted = TRUE
@@ -281,26 +281,26 @@
 		Z_LEVEL_OUTPOST_BASEMENT,
 		Z_LEVEL_OUTPOST_SURFACE,
 		Z_LEVEL_OUTPOST_UPPER,
-		Z_LEVEL_OUTPOST_CONFINEMENTBEAM
+		Z_LEVEL_OUTPOST_ORBITAL_LOWER,
+		Z_LEVEL_OUTPOST_ORBITAL_UPPER
 		)
 
 	confinement_beam_z_levels = list(
 		// Z_LEVEL_OUTPOST_DEEPDARK,
 		Z_LEVEL_OUTPOST_BASEMENT,
 		Z_LEVEL_OUTPOST_SURFACE,
-		Z_LEVEL_OUTPOST_UPPER,
-		Z_LEVEL_OUTPOST_ASTEROID
+		Z_LEVEL_OUTPOST_UPPER
 	)
 
 	// Zlevels with rare ores
 	rare_ore_levels = list(
-		Z_LEVEL_OUTPOST_ASTEROID,
-		Z_LEVEL_OUTPOST_CONFINEMENTBEAM,
+		Z_LEVEL_OUTPOST_ORBITAL_LOWER,
+		Z_LEVEL_OUTPOST_ORBITAL_UPPER,
 		Z_NAME_OUTPOST_ROGUEMINE_1,
 		Z_NAME_OUTPOST_ROGUEMINE_2
 	)
 
-	belter_docked_z = 		list(Z_LEVEL_OUTPOST_ASTEROID)
+	belter_docked_z = 		list(Z_LEVEL_OUTPOST_ORBITAL_UPPER)
 	belter_transit_z =	 	list(Z_NAME_ALIAS_CENTCOM)
 	belter_belt_z = 		list(Z_NAME_OUTPOST_ROGUEMINE_1,
 									Z_NAME_OUTPOST_ROGUEMINE_2)
@@ -309,8 +309,8 @@
 	rare_ores = list(ORE_MARBLE = 5, ORE_QUARTZ = 15, ORE_COPPER = 20, ORE_TIN = 15, ORE_BAUXITE = 5, ORE_URANIUM = 25, ORE_PLATINUM = 25, ORE_HEMATITE = 15, ORE_RUTILE = 20, ORE_CARBON = 25, ORE_DIAMOND = 8, ORE_GOLD = 25, ORE_SILVER = 10, ORE_PHORON = 25, ORE_LEAD = 15, ORE_VOPAL = 1, ORE_VERDANTIUM = 3, ORE_PAINITE = 1)
 
 /datum/map/outpost/perform_map_generation()
-	seed_submaps(list(Z_LEVEL_OUTPOST_ASTEROID), 220, /area/offworld/asteroidyard/external/yardzone, /datum/map_template/outpost21/space/orbitalyard_huge)
-	seed_submaps(list(Z_LEVEL_OUTPOST_ASTEROID), 220, /area/offworld/asteroidyard/external/yardzone, /datum/map_template/outpost21/space/orbitalyard)
+	seed_submaps(list(Z_LEVEL_OUTPOST_ORBITAL_UPPER), 220, /area/offworld/asteroidyard/external/yardzone, /datum/map_template/outpost21/space/orbitalyard_huge)
+	seed_submaps(list(Z_LEVEL_OUTPOST_ORBITAL_UPPER), 220, /area/offworld/asteroidyard/external/yardzone, /datum/map_template/outpost21/space/orbitalyard)
 
 	seed_submaps(list(Z_LEVEL_OUTPOST_SURFACE), 150, /area/muriki/yard, /datum/map_template/outpost21/muriki/cargoyard_huge)
 	seed_submaps(list(Z_LEVEL_OUTPOST_SURFACE), 200, /area/muriki/yard, /datum/map_template/outpost21/muriki/cargoyard)
@@ -330,8 +330,12 @@
 	new /datum/random_map/automata/cave_system(null, 1, 1, Z_LEVEL_OUTPOST_UPPER, world.maxx, world.maxy) // Create the mining Z-level.
 	new /datum/random_map/noise/ore(null, 1, 1, Z_LEVEL_OUTPOST_UPPER, world.maxx, world.maxy)         // Create the mining ore distribution map.
 
-	new /datum/random_map/automata/cave_system(null, 128, 1,  Z_LEVEL_OUTPOST_ASTEROID, world.maxx, world.maxy) // Create the mining Z-level.
-	new /datum/random_map/noise/ore(null, 1, 1, Z_LEVEL_OUTPOST_ASTEROID, world.maxx, world.maxy)         // Create the mining ore distribution map.
+	new /datum/random_map/automata/cave_system(null, 128, 1,  Z_LEVEL_OUTPOST_ORBITAL_LOWER, world.maxx, world.maxy) // Create the mining Z-level.
+	new /datum/random_map/noise/ore(null, 1, 1, Z_LEVEL_OUTPOST_ORBITAL_LOWER, world.maxx, world.maxy)         // Create the mining ore distribution map.
+
+	new /datum/random_map/automata/cave_system(null, 128, 1,  Z_LEVEL_OUTPOST_ORBITAL_UPPER, world.maxx, world.maxy) // Create the mining Z-level.
+	new /datum/random_map/noise/ore(null, 1, 1, Z_LEVEL_OUTPOST_ORBITAL_UPPER, world.maxx, world.maxy)         // Create the mining ore distribution map.
+
 	return 1
 
 /datum/planet/muriki
@@ -397,17 +401,17 @@
 	holomap_legend_x = 140
 	holomap_legend_y = 240
 
-/datum/map_z_level/outpost/confinementbeam
-	z = Z_LEVEL_OUTPOST_CONFINEMENTBEAM
-	name = "Confinementbeam"
+/datum/map_z_level/outpost/orbital_facility_lower
+	z = Z_LEVEL_OUTPOST_ORBITAL_LOWER
+	name = "Orbital Facility Lower"
 	transit_chance = 40
 	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_CONSOLES|MAP_LEVEL_BELOW_BLOCKED|MAP_LEVEL_PERSIST|MAP_LEVEL_MAPPABLE|MAP_LEVEL_VORESPAWN
 
 /datum/map_z_level/outpost/asteroid_mine
-	z = Z_LEVEL_OUTPOST_ASTEROID
-	name = "Asteroid"
+	z = Z_LEVEL_OUTPOST_ORBITAL_UPPER
+	name = "Orbital Facility Upper"
 	transit_chance = 40
-	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_PERSIST|MAP_LEVEL_BELOW_BLOCKED|MAP_LEVEL_MAPPABLE|MAP_LEVEL_EVENTS|MAP_LEVEL_VORESPAWN
+	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_CONSOLES|MAP_LEVEL_PERSIST|MAP_LEVEL_MAPPABLE|MAP_LEVEL_VORESPAWN
 
 /datum/map_z_level/outpost/vr
 	z = Z_LEVEL_OUTPOST_VR
@@ -461,57 +465,17 @@
 	return list() //None!
 
 
-
-/obj/effect/overmap/visitable/sector/murkiki_space/orbital_yard
+/obj/effect/overmap/visitable/sector/murkiki_space/orbital_facility
 	initial_generic_waypoints = list("orbitalyard_civ","orbitalyard_north","orbitalyard_south","orbitalyard_east","orbitalyard_west")
-	initial_restricted_waypoints = list("Mining Trawler" = list("trawler_yard"))
-	name = "Orbital Reclamation Yard"
+	name = "Orbital Facility Platform"
 	icon_state = "htu_cruiser"
-	scanner_desc = @{"[i]Registration[/i]: ES Orbital 21-03
-[i]Class[/i]: Installation
-[i]Transponder[/i]: Transmitting (CIV), ESHUI IFF
-[b]Notice[/b]: ESHUI Base, authorized personnel only"}
-	map_z = list(Z_LEVEL_OUTPOST_ASTEROID)
-	extra_z_levels = list()
-	levels_for_distress = list(Z_LEVEL_OUTPOST_SURFACE)
-
-/obj/effect/overmap/visitable/sector/murkiki_space/orbital_yard/Crossed(var/atom/movable/AM)
-	. = ..()
-	announce_atc(AM,going = FALSE)
-
-/obj/effect/overmap/visitable/sector/murkiki_space/orbital_yard/Uncrossed(var/atom/movable/AM)
-	. = ..()
-	announce_atc(AM,going = TRUE)
-
-/obj/effect/overmap/visitable/sector/murkiki_space/orbital_yard/announce_atc(var/atom/movable/AM, var/going = FALSE)
-	var/message = "Sensor contact for vessel '[AM.name]' has [going ? "left" : "entered"] ATC control area."
-	//For landables, we need to see if their shuttle is cloaked
-	if(istype(AM, /obj/effect/overmap/visitable/ship/landable))
-		var/obj/effect/overmap/visitable/ship/landable/SL = AM //Phew
-		var/datum/shuttle/autodock/multi/shuttle = SSshuttles.shuttles[SL.shuttle]
-		if(!istype(shuttle) || !shuttle.cloaked) //Not a multishuttle (the only kind that can cloak) or not cloaked
-			SSatc.msg(message)
-
-	//For ships, it's safe to assume they're big enough to not be sneaky
-	else if(istype(AM, /obj/effect/overmap/visitable/ship))
-		SSatc.msg(message)
-
-/obj/effect/overmap/visitable/sector/murkiki_space/orbital_yard/get_space_zlevels()
-	return list(Z_LEVEL_OUTPOST_ASTEROID)
-
-
-
-/obj/effect/overmap/visitable/sector/murkiki_space/confinementbeam
-	initial_generic_waypoints = list("confinementbeam_civ")
-	name = "Confinement Beam Platform"
-	icon_state = "htu_cruiser"
-	scanner_desc = @{"[i]Registration[/i]: ES Orbital 21-04
+	scanner_desc = @{"[i]Registration[/i]: ES Orbital 21-05
 [i]Class[/i]: Confinement Beam
 [i]Transponder[/i]: Transmitting (ENG), ESHUI IFF
 [b]Notice[/b]: ESHUI Base, authorized personnel only"}
-	map_z = list(Z_LEVEL_OUTPOST_CONFINEMENTBEAM)
+	map_z = list(Z_LEVEL_OUTPOST_ORBITAL_LOWER, Z_LEVEL_OUTPOST_ORBITAL_UPPER)
 	extra_z_levels = list()
-	initial_restricted_waypoints = list( "Mining Trawler" = list("confinementbeam_trawler"), "Security Carrier" = list("confinementbeam_security", "aisat_security"), "Medical Rescue" = list("confinementbeam_medical"))
+	initial_restricted_waypoints = list( "Mining Trawler" = list("confinementbeam_trawler"), "Security Carrier" = list("confinementbeam_security", "aisat_security"), "Mining Trawler" = list("trawler_yard"))
 	levels_for_distress = list(Z_LEVEL_OUTPOST_SURFACE)
 
 /obj/effect/overmap/visitable/sector/murkiki_space/confinementbeam/Crossed(var/atom/movable/AM)
@@ -536,7 +500,7 @@
 		SSatc.msg(message)
 
 /obj/effect/overmap/visitable/sector/murkiki_space/confinementbeam/get_space_zlevels()
-	return list(Z_LEVEL_OUTPOST_CONFINEMENTBEAM)
+	return list(Z_LEVEL_OUTPOST_ORBITAL_LOWER, Z_LEVEL_OUTPOST_ORBITAL_UPPER)
 
 
 

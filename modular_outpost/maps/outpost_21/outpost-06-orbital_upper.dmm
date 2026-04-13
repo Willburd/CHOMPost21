@@ -8608,12 +8608,6 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/asteroidyard/station/observation)
-"Aj" = (
-/obj/effect/overmap/visitable/sector/murkiki_space/orbital_yard{
-	docking_codes = "YZMB"
-	},
-/turf/space,
-/area/offworld/asteroidyard/external)
 "Ak" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -14000,7 +13994,7 @@
 	dir = 8;
 	pixel_x = 26
 	},
-/obj/machinery/telecomms/relay/preset/outpost/confinementbeam,
+/obj/machinery/telecomms/relay/preset/outpost/recyard,
 /turf/simulated/floor/greengrid,
 /area/ai_server_room)
 "QT" = (
@@ -17490,7 +17484,7 @@ dk
 dk
 dk
 dk
-Aj
+dk
 dk
 "}
 (3,1,1) = {"

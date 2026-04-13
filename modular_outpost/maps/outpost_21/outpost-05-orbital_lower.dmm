@@ -2142,6 +2142,10 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/space)
+"mm" = (
+/obj/effect/overmap/visitable/sector/murkiki_space/orbital_facility,
+/turf/space,
+/area/space)
 "mo" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/black{
 	dir = 8
@@ -8959,7 +8963,7 @@ xM
 xM
 xM
 xM
-xM
+mm
 "}
 (2,1,1) = {"
 xM
