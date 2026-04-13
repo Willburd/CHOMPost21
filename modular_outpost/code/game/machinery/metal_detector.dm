@@ -118,22 +118,32 @@
 /obj/machinery/metal_detector/proc/slot_scan(var/atom/thing)
 	if(!thing)
 		return -1
+	if(isitem(thing))
+		var/item/itm = thing
+		if(itm.item_flags & ABSTRACT)
+			return
 	var/alert_lev = 0
 	alert_lev = obj_check(thing)
 	// mmmm recursion, I can't see how this will go wrong at all!
 	for(var/obj/item/I in thing.contents)
+		if(I.item_flags & ABSTRACT)
+			continue
 		if(I != thing) // should never happen, but lets be safe...
 			alert_lev = max( alert_lev, slot_scan(I))
 	return alert_lev
 
 /obj/machinery/metal_detector/proc/obj_check(var/obj/item/thing)
+
 	if(!thing)
+		return -1
+	if(thing.item_flags & ABSTRACT)
 		return -1
 	if( \
 		istype(thing,/obj/item/tool/prybar) || \
 		istype(thing,/obj/item/tank/emergency) || \
 		istype(thing,/obj/item/melee/umbrella) || \
-		istype(thing,/obj/item/grenade/chem_grenade/cleaner) \
+		istype(thing,/obj/item/grenade/chem_grenade/cleaner) || \
+		istype(thing,/obj/item/storage/toolbox/lunchbox) \
 	)
 		return 0
 	else if( \
@@ -180,7 +190,6 @@
 	)
 		return 2
 	else if( \
-		istype(thing,/obj/item/tank) || \
 		istype(thing,/obj/item/tank) || \
 		istype(thing,/obj/item/disk) || \
 		istype(thing,/obj/item/storage/pill_bottle) || \
