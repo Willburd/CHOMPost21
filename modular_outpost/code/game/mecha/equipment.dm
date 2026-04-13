@@ -16,7 +16,7 @@
 	icon_state = "mecha_honker"
 	energy_drain = 200
 	equip_cooldown = 15 SECONDS
-	range = MELEE|RANGED
+	range = MECH_MELEE|RANGED
 	equip_type = EQUIP_WEAPON
 
 /obj/item/mecha_parts/mecha_equipment/weapon/honker/action(target)

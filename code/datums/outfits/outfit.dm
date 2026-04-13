@@ -92,7 +92,7 @@ GLOBAL_DATUM_INIT(outfits_decls_root, /datum/decl/hierarchy/outfit, new) // Rewu
 
 	// Outpost 21 edit begin - Give your rank pin
 	var/pin_path = null
-	var/datum/job/rank_job = GLOB.joblist[rank]
+	var/datum/job/rank_job = SSjob.get_job(rank)
 	pin_path = rank_job.rank_pin
 	if(assignment in rank_job.alt_titles)
 		var/datum/alt_title/alt = rank_job.alt_titles[assignment]

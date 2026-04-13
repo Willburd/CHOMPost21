@@ -1101,6 +1101,14 @@
 		subsystem_alarm_monitor()
 		return 1
 
+	// Outpost 21 edit begin - Borg accessories
+	if (href_list["lookitem_desc_only"])
+		var/obj/item/I = locate(href_list["lookitem_desc_only"])
+		if(!I || !(I in accessories))
+			return
+		usr.examinate(I, 1)
+	// Outpost 21 edit end
+
 /mob/living/silicon/robot/proc/radio_menu()
 	radio.interact(src)//Just use the radio's Topic() instead of bullshit special-snowflake code
 
