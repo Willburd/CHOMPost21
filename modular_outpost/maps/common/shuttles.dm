@@ -11,6 +11,7 @@
 	landmark_transition = "escape_transit"
 	move_time = SHUTTLE_TRANSIT_DURATION_RETURN
 	ceiling_type = /turf/simulated/shuttle/floor/black/turfpack/muriki
+	bluespace = FALSE // not a bluespace shuttle
 
 /obj/effect/shuttle_landmark/premade/escape/centcom
 	name = "ESCC Bunker"

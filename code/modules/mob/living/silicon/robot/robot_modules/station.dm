@@ -676,6 +676,7 @@
 	L.lit = 1
 	src.modules += L
 
+	src.modules += new /obj/item/material/kitchen/rollingpin/cyborg(src) // Outpost 21 edit(port) - Service borg rolling pin
 	src.modules += new /obj/item/tray/robotray(src)
 	src.modules += new /obj/item/reagent_containers/borghypo/service(src)
 	var/obj/item/reagent_containers/food/drinks/bottle/small/beer/PB = new /obj/item/reagent_containers/food/drinks/bottle/small/beer(src)
@@ -724,6 +725,7 @@
 	L.lit = 1
 	src.modules += L
 
+	src.modules += new /obj/item/material/kitchen/rollingpin/cyborg(src) // Outpost 21 edit(port) - Service borg rolling pin
 	src.modules += new /obj/item/tray/robotray(src)
 	src.modules += new /obj/item/reagent_containers/borghypo/service(src)
 

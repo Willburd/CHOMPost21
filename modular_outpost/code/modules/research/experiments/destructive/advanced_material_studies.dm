@@ -57,7 +57,7 @@
 /datum/experiment/scanning/points/bluespace_containing_items
 	name = "Bluespace Pocket Folding"
 	description = "Some objects naturally contain pockets of unstable folded bluespace. Destructively analyze these rare naturally created objects to understand their properties."
-	required_points = 2
+	required_points = 1
 	allowed_experimentors = DESTRUCTIVE_DEVICES
 	traits = EXPERIMENT_TRAIT_DESTRUCTIVE
 	exp_tag = EXPERIMENT_TAG_PHYSICAL
