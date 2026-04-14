@@ -10,3 +10,17 @@
 	. = ..()
 	bcamera.network = list(NETWORK_THUNDER)
 	bradio.set_frequency(ENT_FREQ)
+
+
+/obj/item/clothing/accessory/bodycam/raidercast
+	name = "Raidercast Camera"
+	desc = "A modified Yobro camera for sharing those special final moments with your merry band of mercs."
+	channel = "Raidercast Feed"
+	icon = 'modular_outpost/icons/obj/weapons.dmi'
+	icon_state = "yobro"
+	item_state = "yobro"
+
+/obj/item/clothing/accessory/bodycam/raidercast/Initialize(mapload)
+	. = ..()
+	bcamera.network = list(NETWORK_MERCENARY)
+	bradio.set_frequency(SYND_FREQ)
