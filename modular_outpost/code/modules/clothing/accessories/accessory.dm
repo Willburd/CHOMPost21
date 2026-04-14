@@ -42,3 +42,18 @@
 
 /obj/item/clothing/accessory/armband
 	allow_borg = TRUE
+
+/obj/item/clothing/accessory/sash
+	allow_borg = TRUE
+
+/obj/item/clothing/accessory/gaiter
+	allow_borg = TRUE
+
+/obj/item/clothing/accessory/poncho
+	allow_borg = TRUE
+
+/obj/item/clothing/accessory/tropical
+	allow_borg = TRUE
+
+/obj/item/clothing/accessory/hawaiian
+	allow_borg = TRUE
