@@ -80026,10 +80026,13 @@
 	},
 /obj/item/borg/upgrade/utility/reset,
 /obj/item/borg/upgrade/utility/reset,
-/obj/item/borg/upgrade/utility/reset,
-/obj/item/sticky_pad/random{
-	pixel_x = 2;
-	pixel_y = 9
+/obj/item/aiModule/eshui_standard{
+	pixel_x = 1;
+	pixel_y = 6
+	},
+/obj/item/aiModule/reset{
+	pixel_y = 6;
+	pixel_x = 1
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/medical/robotics)
@@ -84122,6 +84125,10 @@
 /obj/item/flash,
 /obj/effect/floor_decal/milspec/color/orange/half{
 	dir = 4
+	},
+/obj/item/sticky_pad/random{
+	pixel_x = 2;
+	pixel_y = 9
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/medical/robotics)

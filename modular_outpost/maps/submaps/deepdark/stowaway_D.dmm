@@ -114,6 +114,7 @@
 /obj/item/reagent_containers/glass/rag,
 /obj/item/reagent_containers/glass/rag,
 /obj/item/reagent_containers/glass/rag,
+/obj/item/ore_bag/holding,
 /turf/simulated/floor/wood/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "nW" = (
@@ -273,7 +274,6 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
-/obj/item/storage/bag/ore/holding,
 /turf/simulated/floor/wood/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "Ea" = (

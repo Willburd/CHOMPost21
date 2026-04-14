@@ -8,6 +8,7 @@
 	name = "vehicle exit"
 	desc = "Hatch that leaves the vehicle."
 	icon = 'icons/obj/doors/Doorele.dmi'
+	resistance_flags = INDESTRUCTIBLE
 	density = TRUE
 	anchored = TRUE
 	icon_state = "door_closed"
@@ -52,10 +53,6 @@
 /obj/structure/vehicle_interior_hatch/attack_ai(mob/user)
 	return
 	// no behavior
-
-/obj/structure/vehicle_interior_hatch/emp_act(severity, recursive)
-	return
-	// immune to
 
 /obj/structure/vehicle_interior_hatch/ex_act(severity)
 	return

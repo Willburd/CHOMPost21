@@ -49,8 +49,8 @@
 /datum/gear/fluff/ESHUI_medaldefop
 	display_name = "ESHUI Defensive Operations Medal"
 	path = /obj/item/clothing/accessory/medal/solgov/iron/star/eshui
-	ckeywhitelist = list("jollytjerry11","synxplushy","darklord92","niilomarvy")
-	character_name = list("Ed'Reith Foley","Zeeshi","Vi'Akit","Ral'Hathamee")
+	ckeywhitelist = list("jollytjerry11","synxplushy","darklord92","niilomarvy","thewatcherxacol")
+	character_name = list("Ed'Reith Foley","Zeeshi","Vi'Akit","Ral'Hathamee","Krae Anraschia")
 
 /datum/gear/fluff/ESHUI_medalcomb
 	display_name = "ESHUI Combat Action Medal"

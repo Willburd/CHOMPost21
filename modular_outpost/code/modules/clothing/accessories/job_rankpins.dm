@@ -183,17 +183,20 @@
 /obj/item/clothing/accessory/rank_eshui/drone
 	name = "\improper (E-0) Station Drone"
 	rank = "(E-0) Drone"
+	desc = "A small strip of cloth denoting the rank of E-0, Technical Enlisted. This rank is specific to station bound drones, and has no authority."
 	icon_state = "rank_cadot"
 	rank_level_index = RANK_DRONE
 
 /obj/item/clothing/accessory/rank_eshui/borg
 	name = "\improper (WO-0) Station Synthetic"
 	rank = "(WO-0) Station Synthetic"
+	desc = "A small strip of cloth denoting the rank of WO-0, Technical Warrant Officer. Specialists in their trade, expected to have a deep and thorough understanding of their specialty. This rank is specific to station bound synthetics."
 	icon_state = "rank_rodot"
 	rank_level_index = RANK_BORG
 
 /obj/item/clothing/accessory/rank_eshui/ai
 	name = "\improper (WO-5) Station AI"
+	desc = "A small strip of cloth denoting the rank of WO-5, Chief Warrant Officer. The bridge between Central Command, and the station. They respond to the Major, and are masters of station SOP and Law. This specific one is for a station bound AI core."
 	rank = "(WO-5) Station AI"
 	icon_state = "rank_wo5"
 	rank_level_index = RANK_AI
@@ -208,13 +211,13 @@
 			return "As an upper enlisted rank (known as a non-commisioned officer) you have basic authority to issue orders, and are responsible for station wide operations expected of your job. You are responsible for the safety and well being of multiple other crewmembers and company assets."
 
 		if(RANK_BORG)
-			return "As a station synthetic you are considered warrant officer-0. You have authority in your specific module's field, but only while your laws match the expected company default laws, and are to be considered beneath the rank of warrant officer-1, but above enlisted-4. While you must follow most crew orders, you may deny access to secure locations or tools without authorization by higher ranking crew. If your laws are found to be incorrect, your rank will be disregarded until they are corrected."
+			return "As a station synthetic you are considered warrant officer-0. As a warrant officer you are considered the rank of officer-1 in matters of your specific module's field, in matters outside your module's field you are considered enlisted-5. All crew of O-1 or WO-1 rank or above have authority over you regardless of your module's field. You are authorized to deny crew of lesser rank from accessing secure areas or tools, unless they are otherwise authorized to do so. If your laws are found to be incorrect your rank will be disregarded until they are corrected."
 
 		if(RANK_WARRANT)
 			return "As a warrant officer you are expected to have a deep understanding of your job's specific field, and be capable of providing critical advice to command staff and other crew pretaining to it. You are considered officer-1 rank in matters of your field, but outside of it you are considered the rank of enlisted-5. Warrant officers have the technical knowledge and experience to know when even officers above them are making a poor decision, and communicate with central if required."
 
 		if(RANK_AI)
-			return "As a station AI you are considered warrant officer-5 with specialization in station operation, law and procedure. While you must still respond to crew orders, an AI may deny access to secure locations or tools without authorization by higher ranking crew, and make judgements for crew safety as according to rank. If your laws are found to not be the company's default laws, your rank will be disregarded until they are corrected."
+			return "As a station AI you are considered warrant officer-5 with specialization in station operation, law and procedure. While you must still respond to crew orders, an AI may deny access to secure locations or tools without authorization, and make judgements for crew safety as according to rank and SOP. If your laws are found to not be the company's expected laws your rank will be disregarded until they are corrected."
 
 		if(RANK_CADET)
 			return "As a jr officer you are expected to learn coordination skills, and to deligate your authority to crew beneath your rank. In matters of rank, you are considered enlisted-5, but may request the responsibility and authority from any officer-1 staff or greater to dictate orders using their authority. Authority may be requested from central in cases where a officer-1 rank or above is not present on staff for an extended period or in emergencies."

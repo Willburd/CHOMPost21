@@ -3497,6 +3497,9 @@
 /area/maintenance/damaged_resleeverC)
 "aii" = (
 /obj/machinery/transhuman/autoresleever/rogue,
+/obj/machinery/camera/network/outside{
+	c_tag = "EXT - Expie Sleever"
+	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/damaged_resleeverC)
 "aij" = (
@@ -4129,7 +4132,13 @@
 /turf/simulated/floor/plating,
 /area/quartermaster/mining/secpi)
 "ajO" = (
-/turf/simulated/mineral/alt/turfpack/muriki,
+/obj/structure/table/steel,
+/obj/item/storage/firstaid/surgery,
+/obj/item/cell/slime{
+	pixel_y = 10;
+	pixel_x = -8
+	},
+/turf/simulated/floor/carpet/blucarpet/turfpack/muriki,
 /area/specialty/expie_clubhouse)
 "ajP" = (
 /turf/simulated/wall{
@@ -5171,6 +5180,10 @@
 	},
 /turf/simulated/floor/outpost_roof/turfpack/muriki,
 /area/muriki/rooftop/disposal)
+"amG" = (
+/obj/structure/inflatable,
+/turf/simulated/floor/tiled/turfpack/muriki,
+/area/specialty/expie_clubhouse)
 "amI" = (
 /obj/structure/cable/green{
 	icon_state = "32-2"
@@ -114678,7 +114691,7 @@ ajQ
 ajQ
 ajQ
 ajR
-ajO
+ajR
 aaY
 avC
 avC
@@ -114839,8 +114852,8 @@ akh
 ajQ
 ajQ
 ajQ
+amG
 ajR
-ajU
 aiD
 avC
 avC
@@ -115001,8 +115014,8 @@ akh
 ajQ
 ajQ
 ajY
+ajt
 ajP
-ajU
 ajr
 avC
 avC
@@ -115164,7 +115177,7 @@ ajQ
 ajQ
 ajQ
 ajR
-ajO
+ajR
 aaY
 avC
 avC
@@ -116290,7 +116303,7 @@ akA
 akA
 akD
 ajR
-all
+ajO
 alj
 akc
 akc

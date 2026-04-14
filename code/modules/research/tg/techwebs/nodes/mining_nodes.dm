@@ -15,6 +15,7 @@
 		// "stack_machine",
 		// "stack_console",
 		"retail_scanner", // Outpost 21 edit - Scanner
+		"hoist_kit",
 	)
 
 /datum/techweb_node/mining

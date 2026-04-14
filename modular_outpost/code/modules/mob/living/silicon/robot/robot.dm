@@ -1,5 +1,24 @@
 /mob/living/silicon/robot
 	var/haunted = FALSE
+	var/list/accessories = list()
+
+/mob/living/silicon/robot/Destroy()
+	QDEL_NULL_LIST(accessories)
+	. = ..()
+
+/mob/living/silicon/robot/proc/formatted_accessories_examine()
+	if(!length(accessories))
+		return null
+
+	var/tie_msg = "Attached to it is"
+	var/list/accessory_descs = list()
+	for(var/obj/item/clothing/accessory/A in accessories)
+		if(!A.show_examine)
+			continue
+		accessory_descs += "<a href='byond://?src=\ref[src];lookitem_desc_only=\ref[A]'>\a [A]</a>"
+	tie_msg += " [lowertext(english_list(accessory_descs))]."
+
+	return tie_msg
 
 /mob/living/silicon/robot/proc/update_haunt(var/assign_law = FALSE)
 	if(istype(src,/mob/living/silicon/robot/ai_shell) || istype(src,/mob/living/silicon/robot/drone))

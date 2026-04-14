@@ -52,6 +52,12 @@
 	rank_pin = RANK_PIN_PATH
 /datum/alt_title/security_contractor
 	rank_pin = RANK_PIN_PATH
+/datum/alt_title/logistics_contractor
+	rank_pin = RANK_PIN_PATH
+/datum/alt_title/mining_contractor
+	rank_pin = RANK_PIN_PATH
+/datum/alt_title/research_contractor
+	rank_pin = RANK_PIN_PATH
 #undef RANK_PIN_PATH
 
 

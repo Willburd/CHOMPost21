@@ -58,7 +58,7 @@ What Borgs are available is sadly handled in the above file in the proc
 	//src.modules += new /obj/item/storage/bag/plants(src)
 	//src.modules += new /obj/item/robot_harvester(src)
 	src.modules += new /obj/item/material/knife(src)
-	src.modules += new /obj/item/material/kitchen/rollingpin(src)
+	src.modules += new /obj/item/material/kitchen/rollingpin/cyborg(src)
 	src.modules += new /obj/item/multitool(src) //to freeze trays
 	src.modules += new /obj/item/dogborg/jaws/small(src)
 	src.modules += new /obj/item/dogborg/boop_module(src)

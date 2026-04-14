@@ -30,6 +30,12 @@
 		if(UNCONSCIOUS)		. += span_warning("It doesn't seem to be responding.")
 		if(DEAD)			. += span_deadsay("It looks completely unsalvageable.")
 
+	// Outpost 21 edit begin - Borg accessories
+	var/list/accessory_data = formatted_accessories_examine()
+	if(accessory_data)
+		. += accessory_data
+	// Outpost 21 edit end
+
 	. += formatted_vore_examine()
 
 	. += ""

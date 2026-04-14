@@ -29,7 +29,6 @@
 	var/integrated_light_power = 4 // Outpost 21 edit - Light range nerf
 	var/list/robotdecal_on = list()
 	var/glowy_enabled = FALSE
-	var/datum/wires/robot/wires
 
 	can_be_antagged = TRUE
 
@@ -153,7 +152,7 @@
 	add_language(LANGUAGE_GALCOM, 1)
 	add_language(LANGUAGE_EAL, 1)
 
-	wires = new(src)
+	set_wires(new /datum/wires/robot(src))
 
 	robot_modules_background = new()
 	robot_modules_background.icon_state = "block"
@@ -1102,6 +1101,14 @@
 		subsystem_alarm_monitor()
 		return 1
 
+	// Outpost 21 edit begin - Borg accessories
+	if (href_list["lookitem_desc_only"])
+		var/obj/item/I = locate(href_list["lookitem_desc_only"])
+		if(!I || !(I in accessories))
+			return
+		usr.examinate(I, 1)
+	// Outpost 21 edit end
+
 /mob/living/silicon/robot/proc/radio_menu()
 	radio.interact(src)//Just use the radio's Topic() instead of bullshit special-snowflake code
 
@@ -1620,10 +1627,8 @@
 		return has_upgrade_module(/obj/item/borg/sight/meson)
 	if(given_type == /obj/item/borg/upgrade/no_prod/vision_material)
 		return has_upgrade_module(/obj/item/borg/sight/material)
-	/* //ChompEDIT START - disable for now
 	if(given_type == /obj/item/borg/upgrade/no_prod/vision_anomalous)
 		return has_upgrade_module(/obj/item/borg/sight/anomalous)
-	*/ //ChompEDIT END
 	return null
 
 /mob/living/silicon/robot/proc/has_upgrade(var/given_type)
