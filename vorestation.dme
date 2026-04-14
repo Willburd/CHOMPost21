@@ -5659,6 +5659,7 @@
 #include "modular_outpost\code\datums\components\health_hud_blocker.dm"
 #include "modular_outpost\code\datums\components\hear_dead.dm"
 #include "modular_outpost\code\datums\components\out_of_body_experience.dm"
+#include "modular_outpost\code\datums\components\radio_jamming.dm"
 #include "modular_outpost\code\datums\components\undead_revival.dm"
 #include "modular_outpost\code\datums\components\antags\changeling\powers\flesh_spiders.dm"
 #include "modular_outpost\code\datums\components\reagent_hose\connector.dm"
