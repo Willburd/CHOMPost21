@@ -1735,12 +1735,6 @@
 	},
 /turf/simulated/floor/outpost_roof/turfpack/muriki,
 /area/muriki/rooftop/engineering)
-"adR" = (
-/obj/effect/shuttle_landmark/premade/mercenary/station_n{
-	name = "OP21 - Mountainside"
-	},
-/turf/simulated/open/muriki,
-/area/muriki/skyline/north)
 "adS" = (
 /obj/machinery/portable_atmospherics/hydroponics/soil,
 /obj/item/shovel/spade,
@@ -5184,6 +5178,12 @@
 /obj/structure/inflatable,
 /turf/simulated/floor/tiled/turfpack/muriki,
 /area/specialty/expie_clubhouse)
+"amH" = (
+/obj/effect/shuttle_landmark/premade/mercenary/station_n{
+	name = "OP21 - Mountainside"
+	},
+/turf/simulated/open/muriki,
+/area/muriki/skyline/cent)
 "amI" = (
 /obj/structure/cable/green{
 	icon_state = "32-2"
@@ -5198,6 +5198,48 @@
 	},
 /turf/simulated/open,
 /area/maintenance/substation/virology)
+"amJ" = (
+/obj/structure/table/rack,
+/obj/fiftyspawner/uranium,
+/obj/fiftyspawner/uranium,
+/obj/fiftyspawner/uranium,
+/obj/fiftyspawner/uranium,
+/turf/simulated/floor/plating,
+/area/muriki/rooftop/medgen)
+"amK" = (
+/obj/structure/table/rack,
+/obj/fiftyspawner/uranium,
+/obj/fiftyspawner/uranium,
+/obj/fiftyspawner/uranium,
+/obj/fiftyspawner/uranium,
+/obj/machinery/light/small,
+/turf/simulated/floor/plating,
+/area/muriki/rooftop/medgen)
+"amL" = (
+/obj/machinery/door/airlock/glass_external{
+	req_one_access = list(11,24,5,10);
+	name = "Medical Backup Generator"
+	},
+/obj/structure/cable/green{
+	icon_state = "4-10"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/muriki/rooftop/medgen)
+"amM" = (
+/obj/structure/cable/green{
+	icon_state = "1-10"
+	},
+/obj/structure/cable/green{
+	icon_state = "4-10"
+	},
+/turf/simulated/floor/plating,
+/area/muriki/rooftop/medgen)
+"amN" = (
+/obj/machinery/power/breakerbox{
+	name = "Virology backup toggle"
+	},
+/turf/simulated/floor/plating,
+/area/muriki/rooftop/medgen)
 "amW" = (
 /obj/structure/table/reinforced,
 /turf/simulated/floor/tiled/techfloor,
@@ -13357,11 +13399,9 @@
 /turf/simulated/floor/plating,
 /area/rnd/misc_lab)
 "epO" = (
-/obj/structure/cable/green{
-	icon_state = "0-8"
-	},
-/obj/machinery/power/port_gen/pacman/super{
-	anchored = 1
+/obj/machinery/camera/network/medbay{
+	c_tag = "MED - Backup Generators";
+	dir = 8
 	},
 /turf/simulated/floor/plating,
 /area/muriki/rooftop/medgen)
@@ -36636,6 +36676,9 @@
 /obj/structure/cable/green{
 	icon_state = "0-4"
 	},
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
 /turf/simulated/floor/plating,
 /area/muriki/rooftop/medgen)
 "qqK" = (
@@ -40018,11 +40061,13 @@
 /turf/simulated/floor/plating,
 /area/hydroponics/gibber)
 "sbu" = (
-/obj/machinery/door/airlock/glass_external{
-	req_one_access = list(11,24,5,10);
-	name = "Medical Backup Generator"
+/obj/structure/cable/green{
+	icon_state = "5-8"
 	},
-/turf/simulated/floor/tiled/techfloor,
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/plating,
 /area/muriki/rooftop/medgen)
 "sbv" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -48131,14 +48176,13 @@
 /turf/simulated/floor/wood,
 /area/crew_quarters/medbreak)
 "vVM" = (
-/obj/structure/table/rack,
-/obj/machinery/light/small{
-	dir = 4
+/obj/structure/cable/green{
+	icon_state = "0-8"
 	},
-/obj/fiftyspawner/uranium,
-/obj/fiftyspawner/uranium,
-/obj/fiftyspawner/uranium,
-/obj/fiftyspawner/uranium,
+/obj/machinery/power/port_gen/pacman/super{
+	anchored = 1
+	},
+/obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/plating,
 /area/muriki/rooftop/medgen)
 "vVO" = (
@@ -48669,15 +48713,10 @@
 /turf/simulated/floor/plating,
 /area/tcommsat/powercontrol)
 "wlq" = (
-/obj/structure/table/rack,
-/obj/machinery/camera/network/medbay{
-	c_tag = "MED - Backup Generators";
-	dir = 8
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/cable/green{
+	icon_state = "0-8"
 	},
-/obj/fiftyspawner/uranium,
-/obj/fiftyspawner/uranium,
-/obj/fiftyspawner/uranium,
-/obj/fiftyspawner/uranium,
 /turf/simulated/floor/plating,
 /area/muriki/rooftop/medgen)
 "wlx" = (
@@ -52177,12 +52216,6 @@
 	},
 /turf/simulated/wall,
 /area/security/vacantoffice2)
-"ygH" = (
-/obj/structure/cable/green{
-	icon_state = "4-10"
-	},
-/turf/simulated/floor/outpost_roof/turfpack/muriki,
-/area/muriki/rooftop/medical)
 "yhc" = (
 /turf/simulated/wall/r_wall,
 /area/muriki/rooftop/medgen)
@@ -80001,7 +80034,7 @@ rBk
 rBk
 rBk
 rBk
-rBk
+amH
 rBk
 rBk
 rBk
@@ -83838,7 +83871,7 @@ ovc
 aiI
 hci
 kxr
-adR
+kxr
 kxr
 kxr
 kxr
@@ -93419,8 +93452,8 @@ adh
 pVn
 adh
 adh
-ygH
-adh
+inE
+acx
 adh
 agx
 adh
@@ -93577,12 +93610,12 @@ aDZ
 adh
 adh
 adh
-adh
-pVn
-adh
-adh
-pVn
-acx
+yhc
+pAA
+uNN
+amL
+uNN
+yhc
 adh
 agx
 adk
@@ -93740,10 +93773,10 @@ adh
 adh
 adh
 yhc
-pAA
-uNN
+amN
+xmc
 sbu
-pAA
+amJ
 yhc
 adh
 agx
@@ -93903,9 +93936,9 @@ adh
 adh
 yhc
 qqE
-xmc
-xmc
+amM
 rZQ
+amK
 yhc
 adh
 agx
@@ -94064,7 +94097,7 @@ adh
 adh
 adh
 yhc
-epO
+vVM
 vVM
 wlq
 epO
