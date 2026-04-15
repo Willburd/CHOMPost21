@@ -277,7 +277,7 @@ GLOBAL_LIST_INIT(announcer_library, list(
 			ANNOUNCER_MSG_AURORA_END = null,
 
 			ANNOUNCER_MSG_POWER_OFF = 'modular_outpost/sound/AI/power_out.ogg',
-			ANNOUNCER_MSG_POWER_ON = 'modular_outpost/sound/AI/power_restore.ogg',
+			ANNOUNCER_MSG_POWER_ON = 'modular_outpost/sound/AI/power_restored.ogg',
 
 			ANNOUNCER_MSG_GRAVITY_OFF = null,
 			ANNOUNCER_MSG_GRAVITY_ON = null,
