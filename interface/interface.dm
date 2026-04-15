@@ -1,3 +1,4 @@
+/* Outpost 21 edit - Use ours
 //Please use mob or src (not usr) in these procs. This way they can be called in the same fashion as procs.
 /client/verb/wiki(query as text)
 	set name = "wiki"
@@ -15,6 +16,7 @@
 	else
 		to_chat(src, span_warning("The wiki URL is not set in the server configuration."))
 		return
+*/
 
 /client/verb/forum()
 	set name = "forum"
