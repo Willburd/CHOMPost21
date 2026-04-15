@@ -1,7 +1,7 @@
 /datum/event/disposal_damage/announce()
 	if(severity < EVENT_LEVEL_MAJOR)
 		return
-	GLOB.command_announcement.Announce("A sudden drop in the disposal network's pressure has been detected. Verify all disposal units are functioning correctly.", "Structural Alert")
+	GLOB.command_announcement.Announce("A sudden drop in the disposal network's pressure has been detected. Verify all disposal units are functioning correctly.", "Structural Alert", new_sound = ANNOUNCER_MSG_DISPOSAL_FAIL)
 
 /datum/event/disposal_damage/start()
 	if(!GLOB.machines.len)

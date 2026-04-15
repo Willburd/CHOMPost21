@@ -38,7 +38,7 @@
 			var/estimated_time = round(SSemergency_shuttle.estimate_arrival_time()/60,1)
 			if(!SSemergency_shuttle.admin_override_mode) // Outpost 21 edit - Only message if not admin controlled
 				if (SSemergency_shuttle.evac)
-					GLOB.priority_announcement.Announce(replacetext(replacetext(using_map.emergency_shuttle_leaving_dock, "%dock_name%", "[using_map.dock_name]"),  "%ETA%", "[estimated_time] minute\s"))
+					GLOB.priority_announcement.Announce(replacetext(replacetext(using_map.emergency_shuttle_leaving_dock, "%dock_name%", "[using_map.dock_name]"),  "%ETA%", "[estimated_time] minute\s"), new_sound = ANNOUNCER_MSG_SHUTTLE_EMERG_RETURNING) // Outpost 21 edit - New announcements
 				else
 					GLOB.priority_announcement.Announce(replacetext(replacetext(using_map.shuttle_leaving_dock, "%dock_name%", "[using_map.dock_name]"),  "%ETA%", "[estimated_time] minute\s"), new_sound = ANNOUNCER_MSG_SHUTTLE_ENDROUND_RETURNING)
 	..()

@@ -41,14 +41,14 @@
 /proc/announcer_airlock_message(context)
 	switch(context)
 		if(AIRLOCK_MSG_IN)
-			return 'sound/AI/airlockin.ogg'
+			return 'modular_outpost/sound/AI/interior_cycle.ogg' //'sound/AI/airlockin.ogg' // Outpost 21 edit - Use our announcer
 		if(AIRLOCK_MSG_OUT)
-			return 'sound/AI/airlockout.ogg'
+			return 'modular_outpost/sound/AI/exterior_cycle.ogg' //'sound/AI/airlockout.ogg' // Outpost 21 edit - Use our announcer
 
 		if(AIRLOCK_MSG_BEEP)
 			return 'sound/machines/2beep.ogg'
 
 		if(AIRLOCK_MSG_END_OUT)
-			return 'sound/AI/airlockdone.ogg'
+			return 'modular_outpost/sound/AI/exterior_complete.ogg' //'sound/AI/airlockdone.ogg' // Outpost 21 edit - Use our announcer
 		if(AIRLOCK_MSG_END_IN)
-			return 'sound/AI/airlockdone.ogg'
+			return 'modular_outpost/sound/AI/interior_complete.ogg' //'sound/AI/airlockdone.ogg' // Outpost 21 edit - Use our announcer

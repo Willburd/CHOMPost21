@@ -3,6 +3,7 @@
 #define ANNOUNCER_VOICE_SILENT "announcer_silent"
 #define ANNOUNCER_VOICE_VIRGO "announcer_virgo"
 #define ANNOUNCER_VOICE_CHOMP "announcer_chomp" //CHOMPEdit - Adds CHOMP Announcer
+#define ANNOUNCER_VOICE_OUTPOST "announcer_outpost" // Outpost 21 edit - Outpost announcer
 
 // Announcements
 #define ANNOUNCER_MSG_ROUND_START "announcer_msg_round_start"
@@ -71,8 +72,17 @@
 #define ANNOUNCER_MSG_SUPPLYORDER "announcer_msg_supplyorder"
 #define ANNOUNCER_MSG_WEATHER_ALERT "announcer_msg_weather_alert"
 
+// Outpost 21 edit begin - New announcements
+#define ANNOUNCER_MSG_SHUTTLE_EMERG_RETURNING "announcer_msg_emergency_shuttle_return"
+#define ANNOUNCER_MSG_TRAM_BREAKER "announcer_msg_tram_breaker"
+#define ANNOUNCER_MSG_SEPTIC_EXPLOSION "announcer_msg_septic_explosion"
+#define ANNOUNCER_MSG_EARTHQUAKE "announcer_msg_earthquake"
+#define ANNOUNCER_MSG_DISPOSAL_FAIL "announcer_msg_disposal_fail"
+#define ANNOUNCER_MSG_STS_COUNTER "announcer_msg_sts_counter"
+// Outpost 21 edit end
+
 // Sets the current voice for the station PA
-GLOBAL_VAR_INIT(current_announcer_voice, ANNOUNCER_VOICE_CHOMP) //CHOMPEdit - Use our announcer
+GLOBAL_VAR_INIT(current_announcer_voice, ANNOUNCER_VOICE_OUTPOST) // Outpost 21 edit - Use our announcer
 
 // Set sound paths to null to explicitly disable a message from falling back to SS13 default
 GLOBAL_LIST_INIT(announcer_library, list(
@@ -142,6 +152,14 @@ GLOBAL_LIST_INIT(announcer_library, list(
 		ANNOUNCER_MSG_WALLROT = null,
 		ANNOUNCER_MSG_SUPPLYORDER = null,
 		ANNOUNCER_MSG_WEATHER_ALERT = null,
+		// Outpost 21 edit begin - New announcements
+		ANNOUNCER_MSG_SHUTTLE_EMERG_RETURNING = null,
+		ANNOUNCER_MSG_TRAM_BREAKER = null,
+		ANNOUNCER_MSG_SEPTIC_EXPLOSION = null,
+		ANNOUNCER_MSG_EARTHQUAKE = null,
+		ANNOUNCER_MSG_DISPOSAL_FAIL = null,
+		ANNOUNCER_MSG_STS_COUNTER = null,
+		// Outpost 21 edit end
 	),
 	ANNOUNCER_VOICE_VIRGO = list(
 		ANNOUNCER_MSG_ROUND_START = 'sound/AI/welcome_virgo.ogg', // Skie
@@ -225,6 +243,81 @@ GLOBAL_LIST_INIT(announcer_library, list(
 //		ANNOUNCER_MSG_SUPPLYORDER = null,
 //		ANNOUNCER_MSG_WEATHER_ALERT = null,
 		), //CHOMPEdit End
+		// Outpost 21 edit begin - Outpost announcer
+		ANNOUNCER_VOICE_OUTPOST = list(
+			ANNOUNCER_MSG_ROUND_START = 'modular_outpost/sound/AI/welcome.ogg',
+
+			ANNOUNCER_MSG_SHUTTLE_ENDROUND_DOCK = 'modular_outpost/sound/AI/shuttle_arrive.ogg',
+			ANNOUNCER_MSG_SHUTTLE_ENDROUND_CALLED = 'modular_outpost/sound/AI/shuttle_called.ogg',
+			ANNOUNCER_MSG_SHUTTLE_ENDROUND_RETURNING = 'modular_outpost/sound/AI/shuttle_leave.ogg',
+
+			ANNOUNCER_MSG_SHUTTLE_EMERG_DOCK = 'modular_outpost/sound/AI/emergency_arrive.ogg',
+			ANNOUNCER_MSG_SHUTTLE_EMERG_CALLED = 'modular_outpost/sound/AI/emergency_called.ogg',
+			ANNOUNCER_MSG_SHUTTLE_EMERG_RETURNING = 'modular_outpost/sound/AI/emergency_leave.ogg',
+			ANNOUNCER_MSG_SHUTTLE_EMERG_RECALLED = 'modular_outpost/sound/AI/emergency_cancel.ogg',
+
+			ANNOUNCER_MSG_NIGHTSHIFT_START = 'modular_outpost/sound/AI/nightshift.ogg',
+			ANNOUNCER_MSG_NIGHTSHIFT_END = 'modular_outpost/sound/AI/dayshift.ogg',
+
+			ANNOUNCER_MSG_NEW_AI = 'modular_outpost/sound/AI/new_ai.ogg',
+			ANNOUNCER_MSG_NEW_COMMAND_REPORT = 'modular_outpost/sound/AI/command_report.ogg',
+			ANNOUNCER_MSG_SECURITY_ADVISEMENT = 'modular_outpost/sound/AI/security_advisement.ogg',
+
+			ANNOUNCER_MSG_UNIDENTIFIED_LIFESIGNS = 'modular_outpost/sound/AI/alien_lifesigns.ogg',
+			ANNOUNCER_MSG_BIOHAZARD_LOW = null,
+			ANNOUNCER_MSG_BIOHAZARD_FIVE = 'modular_outpost/sound/AI/level_five.ogg',
+			ANNOUNCER_MSG_BIOHAZARD_SEVEN = 'modular_outpost/sound/AI/level_seven.ogg',
+			ANNOUNCER_MSG_RADIATION = 'modular_outpost/sound/AI/solar_storm.ogg',
+			ANNOUNCER_MSG_SPACETIME_ANOMS = 'modular_outpost/sound/AI/spacetime_anom.ogg',
+			ANNOUNCER_MSG_GRAV_ANOMS = 'modular_outpost/sound/AI/grav_anom.ogg',
+			ANNOUNCER_MSG_IONSTORM = 'modular_outpost/sound/AI/ionstorm.ogg',
+			ANNOUNCER_MSG_METEORS = 'modular_outpost/sound/AI/meteors.ogg',
+
+			ANNOUNCER_MSG_AURORA_START = null,
+			ANNOUNCER_MSG_AURORA_END = null,
+
+			ANNOUNCER_MSG_POWER_OFF = 'modular_outpost/sound/AI/power_out.ogg',
+			ANNOUNCER_MSG_POWER_ON = 'modular_outpost/sound/AI/power_restore.ogg',
+
+			ANNOUNCER_MSG_GRAVITY_OFF = null,
+			ANNOUNCER_MSG_GRAVITY_ON = null,
+
+			ANNOUNCER_MSG_WIRING_FAULT_START = null,
+			ANNOUNCER_MSG_WIRING_FAULT_END = null,
+
+			ANNOUNCER_MSG_STRIKETEAM_SUCCESS = null,
+			ANNOUNCER_MSG_STRIKETEAM_FAIL = null,
+
+			ANNOUNCER_MSG_DEBRISFIELD_START = 'modular_outpost/sound/AI/meteors.ogg',
+			ANNOUNCER_MSG_DEBRISFIELD_END = null,
+
+			ANNOUNCER_MSG_ELECTRICAL_STORM = null,
+			ANNOUNCER_MSG_DISTRESS_SIGNAL = 'sound/AI/sos_ch.ogg',
+			ANNOUNCER_MSG_IANSTORM = null,
+			ANNOUNCER_MSG_SUPERMATTER_CASCADE = null,
+			ANNOUNCER_MSG_CLANG = 'modular_outpost/sound/AI/clang.ogg',
+			ANNOUNCER_MSG_BLUESPACE_ANOM = 'modular_outpost/sound/AI/bluespace_anom.ogg',
+			ANNOUNCER_MSG_DIMENSIONAL_ANOM = 'modular_outpost/sound/AI/dimensional_anom.ogg',
+			ANNOUNCER_MSG_BSA_FIRED = 'modular_outpost/sound/AI/shelling_confirmed.ogg',
+			ANNOUNCER_MSG_GASLEAK = null,
+			ANNOUNCER_MSG_VENDORVIRUS = 'modular_outpost/sound/AI/comp_virus.ogg',
+			ANNOUNCER_MSG_COMMSBLACKOUT = 'sound/misc/interference.ogg',
+			ANNOUNCER_MSG_DRONEPOD = null,
+			ANNOUNCER_MSG_SHUTTLE_CRASHED = 'modular_outpost/sound/AI/shuttle_crash.ogg',
+			ANNOUNCER_MSG_POWERSPIKE = null,
+			ANNOUNCER_MSG_WINDOWBREAK = null,
+			ANNOUNCER_MSG_GREYTIDEVIRUS = 'modular_outpost/sound/AI/comp_virus.ogg',
+			ANNOUNCER_MSG_VERMIN_INFESTATION = null,
+			ANNOUNCER_MSG_WALLROT = null,
+			ANNOUNCER_MSG_SUPPLYORDER = null,
+			ANNOUNCER_MSG_WEATHER_ALERT = 'modular_outpost/sound/soundbible/asian_air_raid_siren_fadesout.ogg',
+			ANNOUNCER_MSG_TRAM_BREAKER = 'modular_outpost/sound/AI/tram_breaker.ogg',
+			ANNOUNCER_MSG_SEPTIC_EXPLOSION = 'modular_outpost/sound/AI/septic_explosion.ogg',
+			ANNOUNCER_MSG_EARTHQUAKE = 'modular_outpost/sound/AI/earthquake.ogg',
+			ANNOUNCER_MSG_DISPOSAL_FAIL = 'modular_outpost/sound/AI/disposal_fail.ogg',
+			ANNOUNCER_MSG_STS_COUNTER = 'modular_outpost/sound/AI/surface_to_space_counter.ogg',
+		),
+		// Outpost 21 edit end
 ))
 
 #define AIRLOCK_MSG_OUT "airlock_out"
