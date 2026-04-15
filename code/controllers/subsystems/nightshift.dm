@@ -31,7 +31,7 @@ SUBSYSTEM_DEF(nightshift)
 		announce_z = pick(using_map.station_levels)
 	//VOREStation Edit - TTS
 	var/pickedsound
-	if(!high_security_mode)
+	if(SSticker.times_fired >= 15 && !high_security_mode) // Outpost 21 edit(port) - Stop spamming nightshift overtop of roundstart
 		if(nightshift_active)
 			pickedsound = ANNOUNCER_MSG_NIGHTSHIFT_START
 		else
