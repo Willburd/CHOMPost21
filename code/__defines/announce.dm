@@ -245,7 +245,7 @@ GLOBAL_LIST_INIT(announcer_library, list(
 		), //CHOMPEdit End
 		// Outpost 21 edit begin - Outpost announcer
 		ANNOUNCER_VOICE_OUTPOST = list(
-			ANNOUNCER_MSG_ROUND_START = 'modular_outpost/sound/AI/welcome.ogg',
+			ANNOUNCER_MSG_ROUND_START = 'modular_outpost/sound/AI/welcome_mix.ogg',
 
 			ANNOUNCER_MSG_SHUTTLE_ENDROUND_DOCK = 'modular_outpost/sound/AI/shuttle_arrive.ogg',
 			ANNOUNCER_MSG_SHUTTLE_ENDROUND_CALLED = 'modular_outpost/sound/AI/shuttle_called.ogg',
