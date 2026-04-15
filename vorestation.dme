@@ -5889,6 +5889,7 @@
 #include "modular_outpost\code\modules\events\mouse_assault.dm"
 #include "modular_outpost\code\modules\events\phone_spiders.dm"
 #include "modular_outpost\code\modules\events\psychic_screach.dm"
+#include "modular_outpost\code\modules\events\rare_pa_message.dm"
 #include "modular_outpost\code\modules\events\redspacefissure.dm"
 #include "modular_outpost\code\modules\events\security_advisement.dm"
 #include "modular_outpost\code\modules\events\septic_explosion.dm"

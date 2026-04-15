@@ -25,7 +25,8 @@
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Wallrot",			/datum/event/wallrot, 			3,	null, FALSE),
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Disposal Damage",	/datum/event/disposal_damage,	1, 	null, FALSE),
 		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Manifest Spirit",	/datum/event/ghost_manifest,	2, 	null, FALSE),
-		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Launch Rocket",		/datum/event/launch_rocket,		2)
+		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Launch Rocket",		/datum/event/launch_rocket,		2),
+		new /datum/event_meta(EVENT_LEVEL_MUNDANE, "Rare PA Message",	/datum/event/rare_pa_message,	1, 	null, TRUE)
 	)
 	add_disabled_events(list(
 	))
