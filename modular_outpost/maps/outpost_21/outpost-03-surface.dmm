@@ -13722,6 +13722,9 @@
 /obj/machinery/door/firedoor/glass,
 /obj/structure/window/reinforced/full,
 /obj/structure/cable/green,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/security/kennels)
 "aAN" = (
@@ -13839,6 +13842,9 @@
 /obj/structure/cable/green{
 	icon_state = "0-2"
 	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/security/kennels)
 "aAZ" = (
@@ -13864,12 +13870,14 @@
 /obj/structure/cable/green{
 	icon_state = "0-2"
 	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/security/kennels)
 "aBc" = (
 /obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
-/obj/structure/window/reinforced/full,
 /obj/structure/cable/green{
 	icon_state = "0-4"
 	},
@@ -13882,12 +13890,18 @@
 	id = "security_lockdown";
 	name = "Security Lockdown"
 	},
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
 /turf/simulated/floor/plating,
 /area/security/warden)
 "aBd" = (
 /obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
-/obj/structure/window/reinforced/full,
 /obj/structure/cable/green{
 	icon_state = "0-8"
 	},
@@ -13899,6 +13913,10 @@
 	icon_state = "shutter2_0";
 	id = "security_lockdown";
 	name = "Security Lockdown"
+	},
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
 	},
 /turf/simulated/floor/plating,
 /area/security/warden)
@@ -57020,7 +57038,6 @@
 "mVP" = (
 /obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
-/obj/structure/window/reinforced/full,
 /obj/structure/cable/green{
 	icon_state = "0-8"
 	},
@@ -57029,6 +57046,13 @@
 	icon_state = "shutter2_0";
 	id = "security_lockdown";
 	name = "Security Lockdown"
+	},
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/security/warden)
