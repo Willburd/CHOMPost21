@@ -1675,10 +1675,8 @@
 /area/centcom/medical)
 "adP" = (
 /obj/structure/window/reinforced/tinted/full,
-/obj/effect/floor_decal/corner/blue{
-	dir = 10
-	},
-/turf/simulated/floor/tiled/white,
+/obj/structure/grille,
+/turf/simulated/floor/plating,
 /area/centcom/medical)
 "adQ" = (
 /obj/machinery/computer/transhuman/resleeving{
@@ -1722,10 +1720,6 @@
 	dir = 5
 	},
 /obj/structure/closet/secure_closet/medical3,
-/turf/simulated/floor/tiled/white,
-/area/centcom/medical)
-"adV" = (
-/obj/structure/window/reinforced/tinted/full,
 /turf/simulated/floor/tiled/white,
 /area/centcom/medical)
 "adW" = (
@@ -1827,22 +1821,8 @@
 /obj/machinery/vending/fitness,
 /turf/simulated/floor/tiled/white,
 /area/centcom/medical)
-"aej" = (
-/obj/structure/window/reinforced/tinted/full,
-/obj/effect/floor_decal/corner/blue{
-	dir = 9
-	},
-/turf/simulated/floor/tiled/white,
-/area/centcom/medical)
 "aek" = (
 /obj/structure/curtain/open/bed,
-/turf/simulated/floor/tiled/white,
-/area/centcom/medical)
-"ael" = (
-/obj/structure/window/reinforced/tinted/full,
-/obj/effect/floor_decal/corner/blue{
-	dir = 6
-	},
 /turf/simulated/floor/tiled/white,
 /area/centcom/medical)
 "aem" = (
@@ -12478,7 +12458,7 @@
 /obj/machinery/ion_engine{
 	name = "Gravity Driver Assister"
 	},
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/floor/plating,
 /area/shuttle/escape)
 "dxG" = (
 /obj/effect/floor_decal/spline/plain{
@@ -12527,7 +12507,7 @@
 	name = "Cooling Assister";
 	dir = 2
 	},
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/floor/plating,
 /area/shuttle/escape)
 "dyB" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
@@ -12712,7 +12692,7 @@
 	name = "Gravity Driver Assister";
 	dir = 1
 	},
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/floor/plating,
 /area/shuttle/escape)
 "dEH" = (
 /obj/structure/table/rack,
@@ -17998,7 +17978,7 @@
 	name = "Cooling Assister";
 	dir = 1
 	},
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/floor/plating,
 /area/shuttle/escape)
 "gpa" = (
 /obj/effect/floor_decal/spline/plain,
@@ -35297,7 +35277,7 @@
 /obj/machinery/atmospherics/unary/engine{
 	dir = 1
 	},
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/floor/plating,
 /area/shuttle/escape)
 "qzC" = (
 /obj/structure/filingcabinet/chestdrawer,
@@ -48189,7 +48169,7 @@
 /area/centcom/control)
 "ybf" = (
 /obj/machinery/atmospherics/unary/engine,
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/floor/plating,
 /area/shuttle/escape)
 "ybr" = (
 /obj/structure/window/reinforced/tinted/frosted,
@@ -67228,7 +67208,7 @@ aeu
 aaM
 wvA
 vWP
-aej
+adP
 aea
 jdG
 adL
@@ -67552,7 +67532,7 @@ iPN
 aaM
 dgj
 vWP
-adV
+adP
 aec
 vWP
 adN
@@ -67714,7 +67694,7 @@ aev
 aaM
 aep
 vWP
-adV
+adP
 aec
 vWP
 adO
@@ -67876,9 +67856,9 @@ iPN
 aaM
 aep
 vWP
-adV
-adV
-adV
+adP
+adP
+adP
 adP
 aaM
 uho
@@ -68038,7 +68018,7 @@ aev
 aaM
 aeq
 vWP
-adV
+adP
 aec
 vWP
 adO
@@ -68200,7 +68180,7 @@ iPN
 aaM
 aer
 vWP
-adV
+adP
 aec
 vWP
 adN
@@ -68524,7 +68504,7 @@ aew
 aaM
 aes
 iXj
-ael
+adP
 aed
 iXj
 adQ
