@@ -1,6 +1,5 @@
 /obj/item/grenade/dephasing
 	name = "\improper dephasing grenade"
-	origin_tech = list(TECH_BLUESPACE = 4, TECH_COMBAT = 2)
 	var/max_range = 7
 
 /obj/item/grenade/dephasing/detonate()

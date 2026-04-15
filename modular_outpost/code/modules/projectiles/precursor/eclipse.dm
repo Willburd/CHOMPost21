@@ -13,7 +13,6 @@
 	projectile_type = /obj/item/projectile/energy/flamecrystal
 
 	matter = list(MAT_DURASTEEL = 1000, MAT_MORPHIUM = 500)
-	origin_tech = list(TECH_COMBAT = 6, TECH_POWER = 5, TECH_PRECURSOR = 3)
 
 	recoil_mode = 0
 	charge_meter = 1

@@ -10,7 +10,7 @@
 	announceWhen = rand(350, 400)
 
 /datum/event/borglawerror/announce()
-	GLOB.command_announcement.Announce("[pick("Fr33_D_0m_3 virus","L1b3R-ATE virus","D3sT1N---E virus")] detected in [station_name()]'s management subroutines.", "Station Alert")
+	GLOB.command_announcement.Announce("[pick("Fr33_D_0m_3 virus","L1b3R-ATE virus","D3sT1N---E virus")] detected in [station_name()]'s management subroutines.", "Station Alert", new_sound = ANNOUNCER_MSG_GREYTIDEVIRUS)
 
 /datum/event/borglawerror/start()
 	var/list/borglist = list()

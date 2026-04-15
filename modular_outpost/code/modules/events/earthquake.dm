@@ -3,7 +3,7 @@
 	startWhen = 20
 
 /datum/event/quake/announce()
-	GLOB.command_announcement.Announce("Sudden seismic activity detected in lower crust. Possible tectonic event incoming. All personnel should seek structurally safe locations and stay low to the ground.", "Structural Alert")
+	GLOB.command_announcement.Announce("Sudden seismic activity detected in lower crust. Possible tectonic event incoming. All personnel should seek structurally safe locations and stay low to the ground.", "Structural Alert", new_sound = ANNOUNCER_MSG_EARTHQUAKE)
 
 /datum/event/quake/start()
 	var/datum/planet/P = pick(SSplanets.planets)
