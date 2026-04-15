@@ -116,12 +116,7 @@ GLOBAL_DATUM_INIT(command_announcement, /datum/announcement/priority/command, ne
 			if(zlevels && !(M.z in zlevels))
 				continue
 			if(!isnewplayer(M) && !isdeaf(M))
-				// Outpost 21 edit(port) begin - Announcer should respect volume
-				var/sound/S = sound(preamble_sound)
-				if(M.client)
-					S.volume *= M.client.get_preference_volume_channel(VOLUME_CHANNEL_MASTER)
-				SEND_SOUND(M, S)
-				// Outpost 21 edit end
+				SEND_SOUND(M, preamble_sound)
 
 	if(!message_sound)
 		return
@@ -134,13 +129,7 @@ GLOBAL_DATUM_INIT(command_announcement, /datum/announcement/priority/command, ne
 		if(zlevels && !(M.z in zlevels))
 			continue
 		if(!isnewplayer(M) && !isdeaf(M))
-			// Outpost 21 edit(port) begin - Announcer should respect volume
-			var/sound/S = sound(message_sound)
-			S.volume = 0.8 // lower volume
-			if(M.client)
-				S.volume *= M.client.get_preference_volume_channel(VOLUME_CHANNEL_MASTER)
-			SEND_SOUND(M, S)
-			// Outpost 21 edit end
+			SEND_SOUND(M, message_sound)
 
 /datum/announcement/proc/Sound(var/message_sound, var/list/zlevels)
 	PlaySound(message_sound, zlevels)
