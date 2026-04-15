@@ -454,6 +454,11 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/tram)
+"be" = (
+/obj/machinery/mech_recharger,
+/obj/mecha/combat/phazon/janus,
+/turf/unsimulated/floor/reinforced,
+/area/centcom/simulated/cent_sat)
 "bf" = (
 /obj/machinery/atmospherics/pipe/manifold/visible{
 	dir = 1
@@ -31858,8 +31863,8 @@ kj
 qq
 pD
 qg
-pL
-pD
+qg
+be
 pb
 pl
 lI

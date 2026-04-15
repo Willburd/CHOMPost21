@@ -1722,6 +1722,10 @@
 /obj/structure/closet/secure_closet/medical3,
 /turf/simulated/floor/tiled/white,
 /area/centcom/medical)
+"adV" = (
+/obj/machinery/status_display,
+/turf/simulated/wall/rplastitanium,
+/area/shuttle/escape)
 "adW" = (
 /obj/item/flashlight/lamp/green,
 /obj/structure/table/fancyblack,
@@ -1821,10 +1825,41 @@
 /obj/machinery/vending/fitness,
 /turf/simulated/floor/tiled/white,
 /area/centcom/medical)
+"aej" = (
+/obj/structure/grille{
+	name = "Reinforced Grille";
+	desc = "A flimsy lattice of metal rods, with screws to secure it to the floor. This grille seems slightly more sturdy than others probably reinforced to withstand the wildlife.";
+	health = 25
+	},
+/obj/structure/window/plastitanium{
+	dir = 4
+	},
+/obj/structure/window/plastitanium{
+	dir = 8
+	},
+/obj/structure/window/plastitanium,
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/plating,
+/area/shuttle/escape)
 "aek" = (
 /obj/structure/curtain/open/bed,
 /turf/simulated/floor/tiled/white,
 /area/centcom/medical)
+"ael" = (
+/obj/effect/floor_decal/corner/black{
+	dir = 10
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 8
+	},
+/obj/machinery/deployable/barrier{
+	name = "ERT barrier";
+	req_access = list(101)
+	},
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/centcom/specops)
 "aem" = (
 /obj/effect/floor_decal/corner/black{
 	dir = 9
@@ -3367,25 +3402,10 @@
 	},
 /area/centcom/specops)
 "ahR" = (
-/obj/effect/floor_decal/corner/black{
-	dir = 9
+/obj/machinery/door/airlock/centcom{
+	name = "Special Operations";
+	req_access = list(103)
 	},
-/obj/effect/floor_decal/corner/red{
-	dir = 8
-	},
-/obj/structure/fans/hardlight,
-/turf/unsimulated/floor/steel{
-	icon_state = "milspec"
-	},
-/area/centcom/specops)
-"ahS" = (
-/obj/effect/floor_decal/corner/black{
-	dir = 6
-	},
-/obj/effect/floor_decal/corner/red{
-	dir = 4
-	},
-/obj/structure/fans/hardlight,
 /turf/unsimulated/floor/steel{
 	icon_state = "milspec"
 	},
@@ -3790,10 +3810,6 @@
 	color = "#385e60"
 	},
 /area/centcom/living)
-"aiO" = (
-/obj/effect/step_trigger/dephase_shadekin,
-/turf/simulated/shuttle/wall/dark,
-/area/centcom)
 "aiP" = (
 /turf/unsimulated/wall/fakeglass,
 /area/centcom/main_hall)
@@ -6117,43 +6133,12 @@
 	icon_state = "milspec"
 	},
 /area/centcom/specops)
-"anS" = (
-/obj/structure/fans/hardlight,
-/turf/unsimulated/floor/steel{
-	icon_state = "milspec"
-	},
-/area/centcom/specops)
-"anT" = (
+"anU" = (
 /obj/effect/floor_decal/corner/black{
-	dir = 9
+	dir = 10
 	},
 /obj/effect/floor_decal/corner/red{
 	dir = 8
-	},
-/obj/effect/floor_decal/industrial/warning{
-	dir = 1
-	},
-/turf/unsimulated/floor/steel{
-	icon_state = "milspec"
-	},
-/area/centcom/specops)
-"anU" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 1
-	},
-/turf/unsimulated/floor/steel{
-	icon_state = "milspec"
-	},
-/area/centcom/specops)
-"anV" = (
-/obj/effect/floor_decal/corner/black{
-	dir = 6
-	},
-/obj/effect/floor_decal/corner/red{
-	dir = 4
-	},
-/obj/effect/floor_decal/industrial/warning{
-	dir = 1
 	},
 /turf/unsimulated/floor/steel{
 	icon_state = "milspec"
@@ -6505,9 +6490,6 @@
 /obj/effect/floor_decal/industrial/arrows,
 /turf/unsimulated/floor/steel,
 /area/centcom/main_hall)
-"aoX" = (
-/turf/simulated/shuttle/wall/dark/hard_corner,
-/area/centcom)
 "aoY" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 8
@@ -6562,20 +6544,8 @@
 /turf/unsimulated/floor/steel,
 /area/centcom/main_hall)
 "apf" = (
-/obj/structure/grille{
-	name = "Reinforced Grille";
-	desc = "A flimsy lattice of metal rods, with screws to secure it to the floor. This grille seems slightly more sturdy than others probably reinforced to withstand the wildlife.";
-	health = 25
-	},
-/obj/structure/window/plastitanium{
-	dir = 4
-	},
-/obj/structure/window/plastitanium{
-	dir = 8
-	},
-/obj/structure/window/plastitanium,
-/obj/machinery/door/firedoor/glass,
-/turf/simulated/shuttle/floor/black,
+/obj/machinery/ai_status_display,
+/turf/simulated/wall/rplastitanium,
 /area/shuttle/escape)
 "apg" = (
 /obj/machinery/hologram/holopad,
@@ -6631,7 +6601,7 @@
 	dir = 8
 	},
 /obj/machinery/door/firedoor/glass,
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/floor/plating,
 /area/shuttle/escape)
 "apo" = (
 /obj/structure/disposalpipe/segment{
@@ -6831,8 +6801,51 @@
 	dir = 8
 	},
 /obj/machinery/door/firedoor/glass,
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/floor/plating,
 /area/shuttle/escape)
+"apM" = (
+/obj/effect/floor_decal/corner/black/full{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 4
+	},
+/obj/machinery/deployable/barrier{
+	name = "ERT barrier";
+	req_access = list(101)
+	},
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/centcom/specops)
+"apN" = (
+/obj/effect/floor_decal/corner/black{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 8
+	},
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/centcom/specops)
+"apO" = (
+/obj/effect/floor_decal/corner/black/full{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 8
+	},
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/centcom/specops)
 "apP" = (
 /obj/structure/table/rack{
 	dir = 4
@@ -6854,6 +6867,114 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/centcom/specops)
+"apQ" = (
+/obj/effect/floor_decal/industrial/outline/red,
+/obj/machinery/deployable/barrier{
+	name = "ERT barrier";
+	req_access = list(101)
+	},
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/centcom/specops)
+"apR" = (
+/obj/effect/floor_decal/corner/black{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/outline/red,
+/obj/machinery/deployable/barrier{
+	name = "ERT barrier";
+	req_access = list(101)
+	},
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/centcom/specops)
+"apS" = (
+/obj/structure/fans/hardlight,
+/obj/machinery/door/airlock/glass_centcom{
+	req_one_access = list(101,103);
+	name = "Special Operations"
+	},
+/turf/simulated/floor/tiled/milspec/raised,
+/area/centcom/specops)
+"apT" = (
+/obj/effect/floor_decal/corner/black/full{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 8
+	},
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/centcom/specops)
+"apU" = (
+/obj/effect/floor_decal/corner/black/full{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 4
+	},
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/centcom/specops)
+"apV" = (
+/turf/unsimulated/mineral/muriki/basalt,
+/area/centcom/specops)
+"apW" = (
+/obj/effect/floor_decal/corner/black/full{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 4
+	},
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/centcom/specops)
+"apX" = (
+/obj/machinery/deployable/barrier{
+	name = "ERT barrier";
+	req_access = list(101)
+	},
+/obj/effect/floor_decal/corner/black{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/outline/red,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/centcom/specops)
+"apY" = (
+/obj/effect/floor_decal/corner/black{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/outline/red,
+/obj/machinery/deployable/barrier{
+	name = "ERT barrier";
+	req_access = list(101)
+	},
 /turf/unsimulated/floor/steel{
 	icon_state = "milspec"
 	},
@@ -6880,6 +7001,22 @@
 	},
 /turf/simulated/floor/tiled/steel,
 /area/specialty/redspace)
+"aqb" = (
+/obj/effect/floor_decal/corner/black/full{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/outline/red,
+/obj/machinery/deployable/barrier{
+	name = "ERT barrier";
+	req_access = list(101)
+	},
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/centcom/specops)
 "aqp" = (
 /obj/machinery/button/remote/blast_door{
 	name = "Bridge Blastdoors";
@@ -12665,7 +12802,7 @@
 /area/specialty/redspace)
 "dDw" = (
 /obj/effect/step_trigger/dephase_shadekin,
-/turf/simulated/shuttle/wall/dark/hard_corner,
+/turf/unsimulated/wall/r_wall,
 /area/centcom)
 "dDx" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -13302,9 +13439,6 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/obj/machinery/ai_status_display{
-	pixel_x = 32
-	},
 /obj/effect/floor_decal/corner/white/full{
 	dir = 4
 	},
@@ -13938,7 +14072,7 @@
 	dir = 1
 	},
 /obj/machinery/door/firedoor/glass,
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/floor/plating,
 /area/shuttle/escape)
 "enz" = (
 /obj/machinery/door/window/brigdoor/southleft{
@@ -15688,9 +15822,6 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/obj/machinery/status_display{
-	pixel_x = 32
-	},
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 4
 	},
@@ -15862,7 +15993,7 @@
 	},
 /obj/structure/window/plastitanium,
 /obj/machinery/door/firedoor/glass,
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/floor/plating,
 /area/shuttle/escape)
 "fky" = (
 /obj/machinery/door/airlock{
@@ -30279,9 +30410,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 1
 	},
-/obj/machinery/status_display{
-	pixel_x = 32
-	},
 /obj/effect/floor_decal/corner/white{
 	dir = 6
 	},
@@ -30332,7 +30460,7 @@
 	dir = 4
 	},
 /obj/machinery/door/firedoor/glass,
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/floor/plating,
 /area/shuttle/escape)
 "nBt" = (
 /turf/unsimulated/elevator_shaft{
@@ -35879,7 +36007,7 @@
 	dir = 8
 	},
 /obj/machinery/door/firedoor/glass,
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/floor/plating,
 /area/shuttle/escape)
 "qQP" = (
 /obj/structure/table/rack,
@@ -36393,7 +36521,7 @@
 	dir = 4
 	},
 /obj/machinery/door/firedoor/glass,
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/floor/plating,
 /area/shuttle/escape)
 "rgu" = (
 /obj/effect/floor_decal/industrial/danger{
@@ -37390,7 +37518,7 @@
 	dir = 8
 	},
 /obj/machinery/door/firedoor/glass,
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/floor/plating,
 /area/shuttle/escape)
 "rGt" = (
 /obj/structure/table/standard,
@@ -39855,7 +39983,7 @@
 /obj/structure/sign/deck3{
 	name = "DECK III - Crew Habitation, Recreation, Legal, Security, Medical."
 	},
-/turf/simulated/shuttle/wall/dark,
+/turf/unsimulated/wall/r_wall,
 /area/centcom)
 "thW" = (
 /obj/effect/floor_decal/industrial/arrows/blue{
@@ -47643,9 +47771,6 @@
 /obj/effect/floor_decal/corner_kafel/white/diagonal,
 /turf/simulated/floor/tiled/kafel_full,
 /area/specialty/redspace)
-"xNS" = (
-/turf/simulated/shuttle/wall/dark,
-/area/centcom)
 "xNY" = (
 /obj/effect/floor_decal/corner/blue{
 	dir = 6
@@ -67962,7 +68087,7 @@ iNq
 hsz
 fPz
 esY
-alP
+xzD
 alW
 alW
 amd
@@ -68124,7 +68249,7 @@ esY
 iQm
 fPz
 vjk
-acP
+xzD
 kzR
 kzR
 aBu
@@ -69084,14 +69209,14 @@ uho
 uho
 uho
 uho
-uho
-uho
-uho
-uho
 hPE
-anX
-bsU
-anT
+apW
+apN
+apN
+apN
+apN
+apN
+apN
 ahR
 ahQ
 amq
@@ -69246,16 +69371,16 @@ uho
 uho
 uho
 uho
-uho
-uho
-uho
-uho
 hPE
-anY
-anW
-anU
-anS
+apX
+apQ
 hsz
+apQ
+apQ
+apQ
+anU
+esY
+iQm
 hsz
 hsz
 hsz
@@ -69408,19 +69533,19 @@ uho
 uho
 uho
 uho
-uho
-uho
-uho
-uho
 hPE
-aoa
-bsU
-anV
-ahS
-anR
+apY
+apQ
+hsz
+apQ
+apQ
+apQ
+anU
+rah
+iQm
+hsz
+hsz
 anQ
-ahP
-ahP
 ahP
 ahP
 ahN
@@ -69570,19 +69695,19 @@ uho
 uho
 uho
 uho
-uho
-uho
-uho
-uho
 hPE
-hPE
-hPE
-hPE
-rWp
-akR
-akR
-rWp
-hPE
+aqb
+apR
+ahP
+apR
+apR
+apR
+apO
+vjk
+iQm
+hsz
+hsz
+ael
 hPE
 mbH
 hPE
@@ -69732,19 +69857,19 @@ uho
 uho
 uho
 uho
-uho
-uho
-uho
-uho
-uho
-uho
-uho
 hPE
-bsU
-bsU
-bsU
-bsU
 hPE
+hPE
+hPE
+hPE
+hPE
+hPE
+hPE
+hPE
+iQm
+hsz
+hsz
+ael
 hPE
 kzR
 kzR
@@ -69759,24 +69884,24 @@ hPE
 hPE
 hPE
 dDw
-aiO
-aiO
-aiO
-aiO
-aiO
-aoX
+dDw
+dDw
+dDw
+dDw
+dDw
+aaK
 hVx
 hVx
 hVx
 hVx
 hVx
 hVx
-aoX
+aaK
 thA
-xNS
-aiO
-aiO
-aiO
+aaK
+dDw
+dDw
+dDw
 dDw
 uho
 uho
@@ -69894,19 +70019,19 @@ uho
 uho
 uho
 uho
-uho
-uho
-uho
-uho
-uho
-uho
-uho
+apV
+apV
+apV
 hPE
-bwh
-bsU
-nIf
-bsU
-hPE
+apT
+apN
+apN
+apN
+apN
+ahQ
+hsz
+hsz
+ael
 hPE
 cpp
 kzR
@@ -69920,7 +70045,7 @@ xzD
 hPE
 uho
 uho
-aiO
+dDw
 qQW
 qQW
 qQW
@@ -69939,7 +70064,7 @@ qQW
 qQW
 qQW
 qQW
-aiO
+dDw
 uho
 uho
 wBs
@@ -70056,19 +70181,19 @@ uho
 uho
 uho
 uho
-uho
-uho
-uho
-uho
-uho
-uho
-uho
+apV
+apV
+apV
 hPE
-bsU
-rjb
-ism
-dQW
-hPE
+apU
+hsz
+ahP
+ahP
+ahP
+anR
+anQ
+ahP
+apM
 hPE
 cpp
 kzR
@@ -70082,7 +70207,7 @@ ahE
 hPE
 uho
 uho
-aiO
+dDw
 qQW
 qzx
 ftH
@@ -70101,7 +70226,7 @@ fjl
 ftH
 ybf
 qQW
-aiO
+dDw
 uho
 uho
 uho
@@ -70218,18 +70343,18 @@ uho
 uho
 uho
 uho
-uho
-uho
-uho
-uho
-uho
-uho
-uho
+apV
+apV
+apV
 hPE
+rWp
+apS
+rWp
 hPE
-hPE
-hPE
-hPE
+rWp
+akR
+akR
+rWp
 hPE
 hPE
 cpp
@@ -70244,7 +70369,7 @@ hOH
 hPE
 uho
 uho
-aiO
+dDw
 qQW
 qzx
 ftH
@@ -70263,7 +70388,7 @@ aHd
 ftH
 ybf
 qQW
-aiO
+dDw
 uho
 uho
 uho
@@ -70380,19 +70505,19 @@ uho
 uho
 uho
 uho
-uho
-uho
-uho
-uho
-uho
-uho
-uho
-uho
-uho
-uho
-uho
-uho
-uho
+apV
+apV
+apV
+hPE
+bsU
+bsU
+bsU
+hPE
+bsU
+bsU
+bsU
+bsU
+hPE
 hPE
 cpp
 kzR
@@ -70406,7 +70531,7 @@ hOH
 hPE
 uho
 uho
-aiO
+dDw
 qQW
 dxC
 qQW
@@ -70425,7 +70550,7 @@ pLA
 qQW
 dEp
 qQW
-aiO
+dDw
 uho
 uho
 uho
@@ -70542,19 +70667,19 @@ uho
 uho
 uho
 uho
-uho
-uho
-uho
-uho
-uho
-uho
-uho
-uho
-uho
-uho
-uho
-uho
-uho
+apV
+apV
+apV
+hPE
+bsU
+anW
+bsU
+hPE
+bwh
+bsU
+nIf
+bsU
+hPE
 hPE
 cpp
 kzR
@@ -70568,7 +70693,7 @@ hOH
 hPE
 uho
 uho
-aiO
+dDw
 qQW
 dyu
 qQW
@@ -70587,7 +70712,7 @@ pLA
 qQW
 gos
 qQW
-aiO
+dDw
 uho
 uho
 uho
@@ -70704,19 +70829,19 @@ uho
 uho
 uho
 uho
-uho
-uho
-uho
-uho
-uho
-uho
-uho
-uho
-uho
-uho
-uho
-uho
-uho
+apV
+apV
+apV
+hPE
+anX
+anY
+aoa
+hPE
+bsU
+rjb
+ism
+dQW
+hPE
 hPE
 cpp
 kzR
@@ -70730,7 +70855,7 @@ hOH
 hPE
 uho
 uho
-aiO
+dDw
 qQW
 dxC
 qQW
@@ -70749,7 +70874,7 @@ pLA
 qQW
 dEp
 qQW
-aiO
+dDw
 uho
 uho
 uho
@@ -70866,19 +70991,9 @@ uho
 uho
 uho
 uho
-uho
-uho
-uho
-uho
-uho
-uho
-uho
-uho
-uho
-uho
-uho
-uho
-uho
+apV
+apV
+apV
 hPE
 hPE
 hPE
@@ -70890,9 +71005,19 @@ hPE
 hPE
 hPE
 hPE
+hPE
+hPE
+hPE
+hPE
+hPE
+hPE
+hPE
+hPE
+hPE
+hPE
 uho
 uho
-aiO
+dDw
 qQW
 dyu
 qQW
@@ -70911,7 +71036,7 @@ fjX
 qQW
 gos
 qQW
-aiO
+dDw
 uho
 uho
 uho
@@ -71054,7 +71179,7 @@ uho
 uho
 uho
 uho
-aiO
+dDw
 qQW
 dyu
 qQW
@@ -71073,7 +71198,7 @@ ffF
 qQW
 gos
 qQW
-aiO
+dDw
 uho
 uho
 uho
@@ -71216,26 +71341,26 @@ uho
 uho
 uho
 uho
-aiO
+dDw
 qQW
 dxC
 qQW
 apn
-apf
+aej
 xuq
-enp
+adV
 apf
 eGU
-apn
-apn
-apf
+qQW
+qQW
+qQW
 kxd
 enp
 fke
 qQW
 dEp
 qQW
-aiO
+dDw
 uho
 uho
 uho
@@ -71378,7 +71503,7 @@ uho
 uho
 uho
 uho
-aiO
+dDw
 qQW
 dyu
 qQW
@@ -71397,7 +71522,7 @@ gMV
 qQW
 gos
 qQW
-aiO
+dDw
 uho
 uho
 uho
@@ -71540,7 +71665,7 @@ uho
 uho
 uho
 uho
-aiO
+dDw
 qQW
 dxC
 qQW
@@ -71559,7 +71684,7 @@ psU
 qQW
 dEp
 qQW
-aiO
+dDw
 uho
 uho
 uho
@@ -71702,7 +71827,7 @@ uho
 uho
 uho
 uho
-aiO
+dDw
 qQW
 qzx
 ftH
@@ -71721,7 +71846,7 @@ xEf
 ftH
 ybf
 qQW
-aiO
+dDw
 uho
 uho
 uho
@@ -71864,7 +71989,7 @@ uho
 uho
 uho
 uho
-aiO
+dDw
 qQW
 qzx
 ftH
@@ -71883,7 +72008,7 @@ jvV
 ftH
 ybf
 qQW
-aiO
+dDw
 uho
 uho
 uho
@@ -72026,7 +72151,7 @@ uho
 uho
 uho
 uho
-aiO
+dDw
 qQW
 qQW
 qQW
@@ -72045,7 +72170,7 @@ qQW
 qQW
 qQW
 qQW
-aiO
+dDw
 uho
 uho
 uho
@@ -72189,24 +72314,24 @@ uho
 uho
 uho
 dDw
-aiO
-aiO
-aiO
-aiO
-aiO
-aiO
-aiO
-aiO
-aiO
-aiO
-aiO
-aiO
-aiO
-aiO
-aiO
-aiO
-aiO
-aiO
+dDw
+dDw
+dDw
+dDw
+dDw
+dDw
+dDw
+dDw
+dDw
+dDw
+dDw
+dDw
+dDw
+dDw
+dDw
+dDw
+dDw
+dDw
 dDw
 uho
 uho
