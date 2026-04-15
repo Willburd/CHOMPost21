@@ -20880,12 +20880,6 @@
 /area/muriki/rooftop/medical)
 "inL" = (
 /obj/structure/table/steel_reinforced,
-/obj/item/radio/intercom/syndicate{
-	desc = "Talk through this.";
-	layer = 2;
-	name = "station intercom (General)";
-	pixel_y = -9
-	},
 /turf/simulated/floor/wood,
 /area/djstation)
 "iog" = (
