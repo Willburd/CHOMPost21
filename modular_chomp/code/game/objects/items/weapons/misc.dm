@@ -4,7 +4,6 @@
 	icon_state = "curator_whip"
 	force = 5
 	throwforce = 5
-	origin_tech = list(TECH_COMBAT = 2)
 
 /obj/item/melee/chainofcommand/jingle_bells/Initialize(mapload)
 	. = ..()

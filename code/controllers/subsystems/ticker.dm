@@ -236,13 +236,7 @@ SUBSYSTEM_DEF(ticker)
 	INVOKE_ASYNC(SSdbcore, TYPE_PROC_REF(/datum/controller/subsystem/dbcore,SetRoundStart))
 
 	to_chat(world, span_notice(span_bold("Welcome to [station_name()], enjoy your stay!")))
-	// Outpost 21 edit - Restore yawn intro
-	if(prob(95))
-		world << sound('sound/AI/welcome.ogg') // Skie
-	else
-		world << sound('sound/AI/yawn/welcome_secret.ogg')
-	// Outpost 21 edit end
-	//SEND_SOUND(world, sound(SSstation.announcer.get_rand_welcome_sound()))
+	play_simple_announcement(world, prob(95) ? ANNOUNCER_MSG_ROUND_START : 'sound/AI/yawn/welcome_secret.ogg') // Outpost 21 edit - Restore yawn intro
 
 	current_state = GAME_STATE_PLAYING
 	Master.SetRunLevel(RUNLEVEL_GAME)

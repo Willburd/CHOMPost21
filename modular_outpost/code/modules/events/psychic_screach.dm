@@ -6,7 +6,7 @@
 	announceWhen = endWhen + rand( 20, 30)
 
 /datum/event/psychic_screach/announce()
-	GLOB.command_announcement.Announce("We just received readings that an unknown energy emission just passed through \the [location_name()]. Electrical systems appear to have been affected. Is anyone reading this?", "Anomaly Alert")
+	GLOB.command_announcement.Announce("We just received readings that an unknown energy emission just passed through \the [location_name()]. Electrical systems appear to have been affected. Is anyone reading this?", "Anomaly Alert", new_sound = ANNOUNCER_MSG_COMMSBLACKOUT)
 
 /datum/event/psychic_screach/start()
 	// SCARY
