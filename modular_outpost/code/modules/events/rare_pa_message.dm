@@ -60,6 +60,8 @@
 GLOBAL_VAR_INIT(last_outpost_announcer_voice, 0)
 
 /proc/area_is_outpost_announcer_valid(area/in_area)
+	if(GLOB.current_announcer_voice != ANNOUNCER_VOICE_OUTPOST)
+		return FALSE // We don't want to hear this voice
 	if(!in_area)
 		return FALSE
 	return in_area.holomap_color == HOLOMAP_AREACOLOR_ARRIVALS || in_area.holomap_color == HOLOMAP_AREACOLOR_CIV || in_area.holomap_color == HOLOMAP_AREACOLOR_ENGINEERING || in_area.holomap_color == HOLOMAP_AREACOLOR_MEDICAL || in_area.holomap_color == HOLOMAP_AREACOLOR_SCIENCE || in_area.holomap_color == HOLOMAP_AREACOLOR_SECURITY || in_area.holomap_color == HOLOMAP_AREACOLOR_COMMAND || in_area.holomap_color == HOLOMAP_AREACOLOR_CARGO || in_area.holomap_color == HOLOMAP_AREACOLOR_HALLWAYS || in_area.holomap_color == HOLOMAP_AREACOLOR_HYDROPONICS
