@@ -17,14 +17,25 @@
 			"Outpost 18" = 'modular_outpost/code/books/wiki/setting/outpost18.html',
 		),
 		"Species" = list(
-			"Humans" = 'modular_outpost/code/books/wiki/species/humans.html',
-			"Vox" = 'modular_outpost/code/books/wiki/species/vox.html',
-			"Shadekin" = 'modular_outpost/code/books/wiki/species/shadekin.html',
-			"Zorren" = 'modular_outpost/code/books/wiki/species/zorren.html',
-			"Skrell" = 'modular_outpost/code/books/wiki/species/skrell.html',
+			"Akula" = 'modular_outpost/code/books/wiki/species/akula.html',
+			"Alrune" = 'modular_outpost/code/books/wiki/species/alrune.html',
 			"Altevians" = 'modular_outpost/code/books/wiki/species/altevian.html',
-			"Sergals" = 'modular_outpost/code/books/wiki/species/sergal.html',
+			"Diona" = 'modular_outpost/code/books/wiki/species/diona.html',
+			"Humans" = 'modular_outpost/code/books/wiki/species/humans.html',
 			"Nevreans" = 'modular_outpost/code/books/wiki/species/nevrean.html',
+			"Promethean" = 'modular_outpost/code/books/wiki/species/promethean.html',
+			"Rapala" = 'modular_outpost/code/books/wiki/species/rapala.html',
+			"Sergals" = 'modular_outpost/code/books/wiki/species/sergal.html',
+			"Shadekin" = 'modular_outpost/code/books/wiki/species/shadekin.html',
+			"Skrell" = 'modular_outpost/code/books/wiki/species/skrell.html',
+			"Tajara" = 'modular_outpost/code/books/wiki/species/tajara.html',
+			"Teshari" = 'modular_outpost/code/books/wiki/species/teshari.html',
+			"Unathi" = 'modular_outpost/code/books/wiki/species/unathi.html',
+			"Vox" = 'modular_outpost/code/books/wiki/species/vox.html',
+			"Vulpkanin" = 'modular_outpost/code/books/wiki/species/vulpkanin.html',
+			"Xenochimera" = 'modular_outpost/code/books/wiki/species/xenochimera.html',
+			"Zaddat" = 'modular_outpost/code/books/wiki/species/zaddat.html',
+			"Zorren" = 'modular_outpost/code/books/wiki/species/zorren.html',
 		),
 		"Gameplay" = list(
 			"Basics" = 'modular_outpost/code/books/wiki/gameplay/basics.html',
@@ -60,10 +71,11 @@
 		"}
 		// List of pages
 		for(var/title_text in wiki_pages)
-			index_html += "<h1>[title_text]</h1>"
+			index_html += "<h1>[title_text]</h1><ul>"
 			var/list/page_list = wiki_pages[title_text]
 			for(var/page_text in page_list)
-				index_html += "<a href='byond://?src=[REF(src)];section=[title_text];page=[page_text]'>[page_text]</a><br>"
+				index_html += "<li><a href='byond://?src=[REF(src)];section=[title_text];page=[page_text]'>[page_text]</a></li>"
+			index_html += "</ul>"
 		// End
 		index_html += {"
 			</body>
