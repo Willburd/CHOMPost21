@@ -743,6 +743,10 @@
 /obj/structure/sign/secure_eshui_facility_highsec{
 	pixel_y = 32
 	},
+/obj/machinery/porta_turret/heavy/lmg{
+	enabled = 0
+	},
+/obj/effect/floor_decal/industrial/outline/red,
 /turf/unsimulated/floor/steel{
 	icon_state = "milspec"
 	},
@@ -1671,10 +1675,8 @@
 /area/centcom/medical)
 "adP" = (
 /obj/structure/window/reinforced/tinted/full,
-/obj/effect/floor_decal/corner/blue{
-	dir = 10
-	},
-/turf/simulated/floor/tiled/white,
+/obj/structure/grille,
+/turf/simulated/floor/plating,
 /area/centcom/medical)
 "adQ" = (
 /obj/machinery/computer/transhuman/resleeving{
@@ -1718,10 +1720,6 @@
 	dir = 5
 	},
 /obj/structure/closet/secure_closet/medical3,
-/turf/simulated/floor/tiled/white,
-/area/centcom/medical)
-"adV" = (
-/obj/structure/window/reinforced/tinted/full,
 /turf/simulated/floor/tiled/white,
 /area/centcom/medical)
 "adW" = (
@@ -1823,28 +1821,15 @@
 /obj/machinery/vending/fitness,
 /turf/simulated/floor/tiled/white,
 /area/centcom/medical)
-"aej" = (
-/obj/structure/window/reinforced/tinted/full,
-/obj/effect/floor_decal/corner/blue{
-	dir = 9
-	},
-/turf/simulated/floor/tiled/white,
-/area/centcom/medical)
 "aek" = (
 /obj/structure/curtain/open/bed,
-/turf/simulated/floor/tiled/white,
-/area/centcom/medical)
-"ael" = (
-/obj/structure/window/reinforced/tinted/full,
-/obj/effect/floor_decal/corner/blue{
-	dir = 6
-	},
 /turf/simulated/floor/tiled/white,
 /area/centcom/medical)
 "aem" = (
 /obj/effect/floor_decal/corner/black{
 	dir = 9
 	},
+/obj/machinery/medical_kiosk,
 /turf/unsimulated/floor/steel{
 	icon_state = "dark"
 	},
@@ -3125,6 +3110,7 @@
 /obj/machinery/bluespace_denier{
 	anchored = 1
 	},
+/obj/effect/floor_decal/industrial/bot_outline/red,
 /turf/unsimulated/floor/steel,
 /area/centcom/main_hall)
 "ahl" = (
@@ -3870,6 +3856,9 @@
 	dir = 8
 	},
 /obj/effect/step_trigger/dephase_shadekin,
+/obj/effect/floor_decal/industrial/arrows{
+	dir = 1
+	},
 /turf/unsimulated/floor/steel,
 /area/centcom/main_hall)
 "aja" = (
@@ -4060,6 +4049,9 @@
 /obj/structure/disposalpipe/junction{
 	dir = 8
 	},
+/obj/effect/floor_decal/industrial/arrows/blue{
+	dir = 8
+	},
 /turf/unsimulated/floor/steel,
 /area/centcom/main_hall)
 "aju" = (
@@ -4176,15 +4168,15 @@
 /turf/unsimulated/floor/steel,
 /area/centcom/main_hall)
 "ajH" = (
-/obj/machinery/porta_turret/heavy{
-	enabled = 0
-	},
 /obj/structure/window/plastitanium,
 /obj/structure/window/plastitanium{
 	dir = 8
 	},
 /obj/structure/window/plastitanium{
 	dir = 1
+	},
+/obj/machinery/porta_turret/heavy/disabler{
+	enabled = 0
 	},
 /turf/unsimulated/floor/steel{
 	icon_state = "milspec"
@@ -4236,6 +4228,9 @@
 	},
 /obj/effect/floor_decal/corner/red{
 	dir = 5
+	},
+/obj/effect/floor_decal/industrial/arrows/yellow{
+	dir = 8
 	},
 /turf/unsimulated/floor/steel,
 /area/centcom/main_hall)
@@ -6439,6 +6434,58 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/specialty/redspace)
+"aoO" = (
+/obj/effect/floor_decal/corner/black{
+	dir = 10
+	},
+/obj/effect/floor_decal/industrial/arrows{
+	dir = 8
+	},
+/turf/unsimulated/floor/steel,
+/area/centcom/main_hall)
+"aoP" = (
+/obj/effect/floor_decal/industrial/arrows{
+	dir = 1
+	},
+/turf/unsimulated/floor/steel,
+/area/centcom/main_hall)
+"aoQ" = (
+/obj/effect/floor_decal/corner/black{
+	dir = 9
+	},
+/obj/effect/floor_decal/industrial/arrows{
+	dir = 1
+	},
+/turf/unsimulated/floor/steel,
+/area/centcom/main_hall)
+"aoR" = (
+/obj/effect/floor_decal/industrial/bot_outline/red,
+/obj/machinery/bluespace_denier{
+	anchored = 1
+	},
+/turf/unsimulated/floor/steel,
+/area/centcom/main_hall)
+"aoS" = (
+/obj/effect/floor_decal/corner/black{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/bot_outline,
+/turf/unsimulated/floor/steel,
+/area/centcom/main_hall)
+"aoT" = (
+/obj/effect/floor_decal/corner/black{
+	dir = 6
+	},
+/obj/effect/floor_decal/industrial/arrows,
+/turf/unsimulated/floor/steel,
+/area/centcom/main_hall)
+"aoU" = (
+/obj/effect/floor_decal/corner/black{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/bot_outline,
+/turf/unsimulated/floor/steel,
+/area/centcom/main_hall)
 "aoV" = (
 /obj/structure/table/rack,
 /obj/item/flamethrower/full,
@@ -6454,12 +6501,35 @@
 	icon_state = "milspec"
 	},
 /area/centcom/specops)
+"aoW" = (
+/obj/effect/floor_decal/industrial/arrows,
+/turf/unsimulated/floor/steel,
+/area/centcom/main_hall)
+"aoX" = (
+/turf/simulated/shuttle/wall/dark/hard_corner,
+/area/centcom)
 "aoY" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/neutral,
 /area/specialty/redspace)
+"aoZ" = (
+/obj/structure/bed/roller/adv,
+/obj/structure/closet/emergsuit_wall{
+	dir = 4;
+	pixel_x = 32
+	},
+/obj/effect/floor_decal/corner/blue{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/kafel_full/turfpack,
+/area/shuttle/escape)
+"apa" = (
+/obj/effect/floor_decal/corner/blue,
+/obj/effect/floor_decal/industrial/arrows/blue,
+/turf/unsimulated/floor/steel,
+/area/centcom/main_hall)
 "apb" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 4
@@ -6467,6 +6537,302 @@
 /obj/item/bedsheet/pillow/orange,
 /turf/simulated/floor/carpet/oracarpet,
 /area/centcom/living)
+"apc" = (
+/obj/effect/floor_decal/corner/blue{
+	dir = 10
+	},
+/obj/effect/floor_decal/industrial/arrows/blue{
+	dir = 8
+	},
+/turf/unsimulated/floor/steel,
+/area/centcom/main_hall)
+"apd" = (
+/obj/effect/floor_decal/industrial/arrows/blue{
+	dir = 8
+	},
+/turf/unsimulated/floor/steel,
+/area/centcom/main_hall)
+"ape" = (
+/obj/effect/floor_decal/corner/black{
+	dir = 6
+	},
+/obj/effect/floor_decal/industrial/arrows/blue{
+	dir = 8
+	},
+/turf/unsimulated/floor/steel,
+/area/centcom/main_hall)
+"apf" = (
+/obj/structure/grille{
+	name = "Reinforced Grille";
+	desc = "A flimsy lattice of metal rods, with screws to secure it to the floor. This grille seems slightly more sturdy than others probably reinforced to withstand the wildlife.";
+	health = 25
+	},
+/obj/structure/window/plastitanium{
+	dir = 4
+	},
+/obj/structure/window/plastitanium{
+	dir = 8
+	},
+/obj/structure/window/plastitanium,
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/shuttle/floor/black,
+/area/shuttle/escape)
+"apg" = (
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/tiled/kafel_full/turfpack,
+/area/shuttle/escape)
+"aph" = (
+/obj/effect/floor_decal/industrial/arrows{
+	dir = 8
+	},
+/turf/unsimulated/floor/steel,
+/area/centcom/main_hall)
+"api" = (
+/obj/effect/floor_decal/corner/black{
+	dir = 6
+	},
+/obj/effect/floor_decal/industrial/arrows{
+	dir = 8
+	},
+/turf/unsimulated/floor/steel,
+/area/centcom/main_hall)
+"apj" = (
+/obj/effect/floor_decal/milspec/monotile,
+/obj/effect/floor_decal/eshui/emblem/eshui_l,
+/turf/simulated/floor/tiled/milspec,
+/area/shuttle/escape)
+"apk" = (
+/obj/effect/floor_decal/milspec/monotile,
+/obj/effect/floor_decal/eshui/emblem/eshui_c,
+/turf/simulated/floor/tiled/milspec,
+/area/shuttle/escape)
+"apl" = (
+/obj/effect/floor_decal/milspec/monotile,
+/obj/effect/floor_decal/eshui/emblem/eshui_r,
+/turf/simulated/floor/tiled/milspec,
+/area/shuttle/escape)
+"apm" = (
+/obj/effect/floor_decal/milspec/monotile,
+/obj/effect/floor_decal/industrial/stand_clear/red{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/shuttle/escape)
+"apn" = (
+/obj/structure/grille{
+	name = "Reinforced Grille";
+	desc = "A flimsy lattice of metal rods, with screws to secure it to the floor. This grille seems slightly more sturdy than others probably reinforced to withstand the wildlife.";
+	health = 25
+	},
+/obj/structure/window/plastitanium{
+	dir = 4
+	},
+/obj/structure/window/plastitanium{
+	dir = 8
+	},
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/shuttle/floor/black,
+/area/shuttle/escape)
+"apo" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/arrows/blue{
+	dir = 8
+	},
+/turf/unsimulated/floor/steel,
+/area/centcom/main_hall)
+"app" = (
+/obj/structure/disposalpipe/junction{
+	dir = 8;
+	icon_state = "pipe-j2"
+	},
+/obj/effect/floor_decal/industrial/arrows{
+	dir = 1
+	},
+/turf/unsimulated/floor/steel,
+/area/centcom/main_hall)
+"apq" = (
+/obj/effect/floor_decal/milspec/monotile,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/arrows{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/shuttle/escape)
+"apr" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel,
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/escape)
+"aps" = (
+/obj/effect/floor_decal/corner/red{
+	dir = 5
+	},
+/obj/effect/floor_decal/industrial/arrows/blue{
+	dir = 8
+	},
+/turf/unsimulated/floor/steel,
+/area/centcom/main_hall)
+"apt" = (
+/obj/machinery/metal_detector,
+/obj/effect/floor_decal/industrial/arrows/yellow{
+	dir = 1
+	},
+/turf/unsimulated/floor/steel,
+/area/centcom/main_hall)
+"apu" = (
+/obj/machinery/metal_detector,
+/obj/effect/floor_decal/industrial/arrows/red{
+	dir = 1
+	},
+/turf/unsimulated/floor/steel,
+/area/centcom/main_hall)
+"apv" = (
+/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/industrial/arrows{
+	dir = 8
+	},
+/turf/unsimulated/floor/steel,
+/area/centcom/main_hall)
+"apw" = (
+/obj/effect/floor_decal/industrial/arrows/red{
+	dir = 1
+	},
+/turf/unsimulated/floor/steel,
+/area/centcom/main_hall)
+"apx" = (
+/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/industrial/arrows/blue,
+/turf/simulated/floor/tiled/steel_grid,
+/area/centcom/main_hall)
+"apy" = (
+/obj/effect/floor_decal/industrial/arrows/yellow{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/arrows/blue{
+	dir = 8
+	},
+/turf/unsimulated/floor/steel,
+/area/centcom/main_hall)
+"apz" = (
+/obj/effect/floor_decal/industrial/arrows/red{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/arrows/blue{
+	dir = 8
+	},
+/turf/unsimulated/floor/steel,
+/area/centcom/main_hall)
+"apA" = (
+/obj/effect/floor_decal/corner/black{
+	dir = 6
+	},
+/obj/effect/floor_decal/industrial/arrows/red{
+	dir = 8
+	},
+/turf/unsimulated/floor/steel,
+/area/centcom/main_hall)
+"apB" = (
+/obj/structure/bed/chair/bay/shuttle{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/white/border{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/escape)
+"apC" = (
+/obj/effect/floor_decal/corner/red{
+	dir = 5
+	},
+/obj/effect/floor_decal/industrial/arrows/red{
+	dir = 8
+	},
+/turf/unsimulated/floor/steel,
+/area/centcom/main_hall)
+"apD" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel,
+/obj/effect/floor_decal/milspec/monotile,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/structure/handrail,
+/turf/simulated/floor/tiled/milspec,
+/area/shuttle/escape)
+"apE" = (
+/obj/effect/floor_decal/milspec/monotile,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/shuttle/escape)
+"apF" = (
+/obj/effect/floor_decal/milspec/monotile,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/structure/handrail,
+/turf/simulated/floor/tiled/milspec,
+/area/shuttle/escape)
+"apG" = (
+/obj/effect/floor_decal/corner/white/bordercorner,
+/obj/effect/floor_decal/corner/white/bordercorner{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/stand_clear{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/escape)
+"apH" = (
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/tiled/kafel_full/beige,
+/area/shuttle/escape)
+"apI" = (
+/obj/effect/floor_decal/corner/red/border{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/escape)
+"apJ" = (
+/obj/structure/handrail{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/white/border{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/escape)
+"apK" = (
+/obj/structure/bed/chair/bay/shuttle{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/kafel_full/beige,
+/area/shuttle/escape)
+"apL" = (
+/obj/structure/grille{
+	name = "Reinforced Grille";
+	desc = "A flimsy lattice of metal rods, with screws to secure it to the floor. This grille seems slightly more sturdy than others probably reinforced to withstand the wildlife.";
+	health = 25
+	},
+/obj/structure/window/plastitanium{
+	dir = 1
+	},
+/obj/structure/window/plastitanium{
+	dir = 4
+	},
+/obj/structure/window/plastitanium{
+	dir = 8
+	},
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/shuttle/floor/black,
+/area/shuttle/escape)
 "apP" = (
 /obj/structure/table/rack{
 	dir = 4
@@ -6905,7 +7271,7 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel,
-/turf/simulated/shuttle/floor/darkred,
+/turf/simulated/floor/tiled/techfloor,
 /area/shuttle/escape)
 "aDF" = (
 /obj/effect/floor_decal/borderfloor/corner{
@@ -7106,7 +7472,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/fuel{
 	dir = 1
 	},
-/turf/simulated/shuttle/floor/darkred,
+/turf/simulated/floor/tiled/techfloor,
 /area/shuttle/escape)
 "aHx" = (
 /obj/effect/floor_decal/borderfloor{
@@ -7418,11 +7784,14 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/vehicle_interior/heavyarmor_tank_C)
 "aQi" = (
-/obj/structure/handrail{
-	dir = 8
-	},
 /obj/structure/closet/firecloset/full,
-/turf/simulated/shuttle/floor/white,
+/obj/machinery/ai_status_display{
+	pixel_x = 32
+	},
+/obj/effect/floor_decal/corner/blue{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/kafel_full/turfpack,
 /area/shuttle/escape)
 "aQQ" = (
 /obj/effect/floor_decal/borderfloor,
@@ -7522,7 +7891,12 @@
 /obj/machinery/light/floortube{
 	dir = 1
 	},
-/turf/simulated/shuttle/floor/voidcraft,
+/obj/structure/handrail,
+/obj/effect/floor_decal/milspec/monotile,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
 /area/shuttle/escape)
 "aTS" = (
 /obj/machinery/computer/vehicle_interior_console/helm{
@@ -8314,7 +8688,7 @@
 /area/vehicle_interior/heavyarmor_tank_B)
 "bqo" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/fuel,
-/turf/simulated/shuttle/wall/voidcraft,
+/turf/simulated/wall/rplastitanium,
 /area/shuttle/escape)
 "bqq" = (
 /obj/structure/bed/chair/wood/wings{
@@ -8837,16 +9211,6 @@
 	},
 /turf/unsimulated/floor/steel,
 /area/centcom/control)
-"bDE" = (
-/obj/structure/bed/chair/bay/shuttle{
-	dir = 1
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
-	dir = 4
-	},
-/obj/machinery/light,
-/turf/simulated/shuttle/floor/darkred,
-/area/shuttle/escape)
 "bEl" = (
 /obj/machinery/button/remote/blast_door{
 	name = "Door lock";
@@ -9183,7 +9547,10 @@
 /obj/structure/bed/chair/bay/shuttle{
 	dir = 1
 	},
-/turf/simulated/shuttle/floor,
+/obj/effect/floor_decal/corner/white{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/kafel_full/beige,
 /area/shuttle/escape)
 "bOb" = (
 /obj/structure/window/reinforced{
@@ -9670,10 +10037,14 @@
 /turf/simulated/floor/tiled/milspec,
 /area/specialty/redspace)
 "ced" = (
+/obj/effect/floor_decal/milspec/monotile,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
-/turf/simulated/shuttle/floor/voidcraft,
+/obj/effect/floor_decal/industrial/stand_clear/red{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
 /area/shuttle/escape)
 "cel" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
@@ -9975,16 +10346,12 @@
 /turf/unsimulated/floor/steel,
 /area/centcom/main_hall)
 "cmn" = (
-/obj/structure/bed/chair/bay/shuttle,
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel,
-/turf/simulated/shuttle/floor/darkred,
+/obj/structure/bed/chair/bay/shuttle,
+/turf/simulated/floor/tiled/kafel_full/red,
 /area/shuttle/escape)
 "cnc" = (
-/obj/structure/bed/chair/bay/shuttle{
-	dir = 1
-	},
-/obj/structure/railing,
-/turf/simulated/shuttle/floor/darkred,
+/turf/simulated/floor/tiled/kafel_full/red,
 /area/shuttle/escape)
 "cni" = (
 /obj/structure/table/rack,
@@ -11052,6 +11419,9 @@
 /obj/effect/floor_decal/corner/black{
 	dir = 4
 	},
+/obj/effect/floor_decal/industrial/arrows{
+	dir = 4
+	},
 /turf/unsimulated/floor/steel,
 /area/centcom/main_hall)
 "cSQ" = (
@@ -11492,6 +11862,9 @@
 /obj/effect/floor_decal/steeldecal/steel_decals10{
 	dir = 10
 	},
+/obj/effect/floor_decal/industrial/arrows{
+	dir = 1
+	},
 /turf/unsimulated/floor/steel,
 /area/centcom/main_hall)
 "dgV" = (
@@ -11500,7 +11873,7 @@
 	dir = 1;
 	flags = null
 	},
-/turf/simulated/shuttle/floor/darkred,
+/turf/simulated/floor/tiled/techfloor,
 /area/shuttle/escape)
 "dgW" = (
 /obj/structure/toilet,
@@ -12085,7 +12458,7 @@
 /obj/machinery/ion_engine{
 	name = "Gravity Driver Assister"
 	},
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/floor/plating,
 /area/shuttle/escape)
 "dxG" = (
 /obj/effect/floor_decal/spline/plain{
@@ -12134,17 +12507,17 @@
 	name = "Cooling Assister";
 	dir = 2
 	},
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/floor/plating,
 /area/shuttle/escape)
 "dyB" = (
-/obj/structure/bed/chair/bay/shuttle,
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 1
 	},
+/obj/structure/bed/chair/bay/shuttle,
 /obj/machinery/light{
 	dir = 8
 	},
-/turf/simulated/shuttle/floor/darkred,
+/turf/simulated/floor/tiled/kafel_full/red,
 /area/shuttle/escape)
 "dyN" = (
 /obj/effect/floor_decal/spline/fancy/wood{
@@ -12319,7 +12692,7 @@
 	name = "Gravity Driver Assister";
 	dir = 1
 	},
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/floor/plating,
 /area/shuttle/escape)
 "dEH" = (
 /obj/structure/table/rack,
@@ -12536,7 +12909,7 @@
 /area/specialty/redspace)
 "dMx" = (
 /obj/structure/bed/chair/bay/shuttle,
-/turf/simulated/shuttle/floor,
+/turf/simulated/floor/tiled/kafel_full/beige,
 /area/shuttle/escape)
 "dMC" = (
 /obj/effect/floor_decal/eshui/emblem/eshui_l,
@@ -12929,7 +13302,13 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/turf/simulated/shuttle/floor,
+/obj/machinery/ai_status_display{
+	pixel_x = 32
+	},
+/obj/effect/floor_decal/corner/white/full{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/kafel_full/beige,
 /area/shuttle/escape)
 "dVV" = (
 /obj/effect/floor_decal/steeldecal/steel_decals10{
@@ -13109,15 +13488,20 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 1
 	},
-/obj/machinery/embedded_controller/radio/simple_docking_controller{
+/obj/structure/extinguisher_cabinet{
 	dir = 8;
-	pixel_x = 25;
-	frequency = 1381;
-	req_one_access = list(13);
-	id_tag = "escape_shuttle";
-	tag_door = "escape_shuttle_hatch"
+	pixel_x = 30;
+	pixel_y = -7
 	},
-/turf/simulated/shuttle/floor,
+/obj/structure/extinguisher_cabinet{
+	dir = 8;
+	pixel_x = 30;
+	pixel_y = 8
+	},
+/obj/effect/floor_decal/corner/white{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/kafel_full/beige,
 /area/shuttle/escape)
 "eaU" = (
 /obj/structure/bed/chair/bay/chair/padded/purple{
@@ -13513,30 +13897,47 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/centcom/living)
 "emj" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 8
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 1
 	},
 /obj/machinery/light/floortube{
 	dir = 1
 	},
-/turf/simulated/shuttle/floor/voidcraft,
+/obj/structure/handrail,
+/obj/effect/floor_decal/milspec/monotile,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 9
+	},
+/obj/effect/floor_decal/industrial/arrows/red{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
 /area/shuttle/escape)
 "emp" = (
 /obj/structure/bed/chair/bay/shuttle{
 	dir = 8
 	},
-/turf/simulated/shuttle/floor/darkred,
+/obj/effect/floor_decal/corner/blue/border{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
 /area/shuttle/escape)
 "enp" = (
-/obj/structure/shuttle/window,
 /obj/structure/grille{
 	name = "Reinforced Grille";
 	desc = "A flimsy lattice of metal rods, with screws to secure it to the floor. This grille seems slightly more sturdy than others probably reinforced to withstand the wildlife.";
 	health = 25
 	},
+/obj/structure/window/plastitanium{
+	dir = 4
+	},
+/obj/structure/window/plastitanium{
+	dir = 8
+	},
+/obj/structure/window/plastitanium{
+	dir = 1
+	},
+/obj/machinery/door/firedoor/glass,
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/escape)
 "enz" = (
@@ -13783,17 +14184,23 @@
 	},
 /area/centcom/specops)
 "euc" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 8
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 1
 	},
-/turf/simulated/shuttle/floor/voidcraft,
+/obj/effect/floor_decal/milspec/monotile,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/stand_clear/red{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
 /area/shuttle/escape)
 "euf" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel,
-/turf/simulated/shuttle/floor/voidcraft,
+/obj/effect/floor_decal/milspec/monotile,
+/obj/effect/floor_decal/eshui/emblem/eshui_l,
+/turf/simulated/floor/tiled/milspec,
 /area/shuttle/escape)
 "euh" = (
 /obj/structure/table/rack,
@@ -13819,8 +14226,9 @@
 	dir = 4
 	},
 /obj/machinery/portable_atmospherics/canister/phoron,
+/obj/effect/floor_decal/corner/white/full,
 /obj/effect/floor_decal/industrial/outline/red,
-/turf/simulated/shuttle/floor,
+/turf/simulated/floor/tiled/kafel_full/beige,
 /area/shuttle/escape)
 "euW" = (
 /obj/structure/table/standard,
@@ -14159,14 +14567,15 @@
 /turf/simulated/floor/tiled,
 /area/specialty/redspace)
 "eDz" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 8
-	},
 /obj/effect/shuttle_landmark/premade/escape/centcom,
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 5
 	},
-/turf/simulated/shuttle/floor/voidcraft,
+/obj/effect/floor_decal/milspec/monotile,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
 /area/shuttle/escape)
 "eDD" = (
 /obj/item/reagent_containers/food/drinks/britcup,
@@ -14197,13 +14606,15 @@
 /area/specialty/redspace)
 "eDW" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/fuel,
-/turf/simulated/shuttle/floor/voidcraft,
+/obj/effect/floor_decal/milspec/monotile,
+/turf/simulated/floor/tiled/milspec,
 /area/shuttle/escape)
 "eEr" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 4
 	},
-/turf/simulated/shuttle/floor/voidcraft,
+/obj/effect/floor_decal/milspec/monotile,
+/turf/simulated/floor/tiled/milspec,
 /area/shuttle/escape)
 "eEF" = (
 /obj/structure/extinguisher_cabinet{
@@ -14239,7 +14650,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/fuel{
 	dir = 1
 	},
-/turf/simulated/shuttle/floor/darkred,
+/turf/simulated/floor/tiled/techfloor,
 /area/shuttle/escape)
 "eGk" = (
 /obj/effect/floor_decal/corner/blue/border,
@@ -14268,7 +14679,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 4
 	},
-/turf/simulated/shuttle/wall/voidcraft/hard_corner,
+/turf/simulated/wall/rplastitanium,
 /area/shuttle/escape)
 "eHc" = (
 /obj/effect/floor_decal/borderfloor,
@@ -14368,6 +14779,7 @@
 	enabled = 0
 	},
 /obj/effect/step_trigger/dephase_shadekin,
+/obj/effect/floor_decal/industrial/outline/red,
 /turf/unsimulated/floor/steel,
 /area/centcom/main_hall)
 "eIC" = (
@@ -14412,10 +14824,10 @@
 /obj/structure/bed/chair/bay/shuttle{
 	dir = 1
 	},
-/obj/structure/handrail{
-	dir = 4
+/obj/effect/floor_decal/corner/blue{
+	dir = 9
 	},
-/turf/simulated/shuttle/floor/white,
+/turf/simulated/floor/tiled/kafel_full/turfpack,
 /area/shuttle/escape)
 "eJV" = (
 /obj/effect/floor_decal/spline/plain{
@@ -14434,6 +14846,9 @@
 /obj/structure/disposalpipe/segment{
 	dir = 8;
 	icon_state = "pipe-c"
+	},
+/obj/effect/floor_decal/industrial/arrows{
+	dir = 8
 	},
 /turf/unsimulated/floor/steel,
 /area/centcom/main_hall)
@@ -14657,7 +15072,8 @@
 /turf/simulated/floor/tiled/freezer,
 /area/centcom/living)
 "ePr" = (
-/turf/simulated/shuttle/floor/voidcraft,
+/obj/effect/floor_decal/milspec/monotile,
+/turf/simulated/floor/tiled/milspec,
 /area/shuttle/escape)
 "ePU" = (
 /obj/machinery/door/blast/regular{
@@ -14692,7 +15108,10 @@
 /obj/machinery/status_display{
 	pixel_x = 32
 	},
-/turf/simulated/shuttle/floor/white,
+/obj/effect/floor_decal/corner/blue{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/kafel_full/turfpack,
 /area/shuttle/escape)
 "eQr" = (
 /obj/structure/flora/skeleton{
@@ -14767,10 +15186,10 @@
 /turf/simulated/floor/lino,
 /area/specialty/redspace)
 "eSZ" = (
-/obj/machinery/porta_turret/crescent{
-	density = 1
-	},
 /obj/effect/floor_decal/industrial/outline/red,
+/obj/machinery/porta_turret/heavy/lmg{
+	enabled = 0
+	},
 /turf/unsimulated/floor/steel,
 /area/centcom/main_hall)
 "eTl" = (
@@ -14778,7 +15197,7 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel,
-/turf/simulated/shuttle/floor/darkred,
+/turf/simulated/floor/tiled/techfloor,
 /area/shuttle/escape)
 "eTs" = (
 /obj/effect/floor_decal/corner_techfloor_grid{
@@ -14958,6 +15377,7 @@
 /obj/effect/floor_decal/steeldecal/steel_decals10{
 	dir = 5
 	},
+/obj/effect/floor_decal/industrial/arrows,
 /turf/unsimulated/floor/steel,
 /area/centcom/main_hall)
 "eYV" = (
@@ -15120,7 +15540,10 @@
 /obj/structure/bed/chair/bay/shuttle{
 	dir = 4
 	},
-/turf/simulated/shuttle/floor/white,
+/obj/effect/floor_decal/corner/blue{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/kafel_full/turfpack,
 /area/shuttle/escape)
 "feb" = (
 /obj/machinery/disposal,
@@ -15199,7 +15622,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 4
 	},
-/turf/simulated/shuttle/floor/darkred,
+/obj/effect/floor_decal/corner/blue/border{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
 /area/shuttle/escape)
 "ffV" = (
 /obj/effect/floor_decal/industrial/danger/corner{
@@ -15265,7 +15691,10 @@
 /obj/machinery/status_display{
 	pixel_x = 32
 	},
-/turf/simulated/shuttle/floor/darkred,
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
 /area/shuttle/escape)
 "fgB" = (
 /obj/structure/sign/warning/acid{
@@ -15358,16 +15787,13 @@
 /turf/simulated/floor/wood,
 /area/specialty/redspace)
 "fjl" = (
-/obj/structure/bed/chair/bay/shuttle{
-	dir = 1
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 6
 	},
 /obj/machinery/light{
 	dir = 8
 	},
-/turf/simulated/shuttle/floor/darkred,
+/turf/simulated/floor/tiled/techfloor,
 /area/shuttle/escape)
 "fjx" = (
 /obj/machinery/portable_atmospherics/canister/oxygen/prechilled,
@@ -15411,12 +15837,15 @@
 /turf/simulated/floor,
 /area/vehicle_interior/heavyarmor_tank_C)
 "fjX" = (
-/obj/structure/closet/emcloset,
 /obj/machinery/atmospherics/pipe/manifold/hidden/fuel,
-/turf/simulated/shuttle/floor/darkred,
+/obj/machinery/light,
+/obj/structure/closet/emergsuit_wall{
+	dir = 1;
+	pixel_y = -32
+	},
+/turf/simulated/floor/tiled/techfloor,
 /area/shuttle/escape)
 "fke" = (
-/obj/structure/shuttle/window,
 /obj/structure/grille{
 	name = "Reinforced Grille";
 	desc = "A flimsy lattice of metal rods, with screws to secure it to the floor. This grille seems slightly more sturdy than others probably reinforced to withstand the wildlife.";
@@ -15425,6 +15854,14 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 4
 	},
+/obj/structure/window/plastitanium{
+	dir = 4
+	},
+/obj/structure/window/plastitanium{
+	dir = 8
+	},
+/obj/structure/window/plastitanium,
+/obj/machinery/door/firedoor/glass,
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/escape)
 "fky" = (
@@ -15646,6 +16083,7 @@
 /obj/effect/floor_decal/corner/red{
 	dir = 9
 	},
+/obj/effect/floor_decal/industrial/arrows/blue,
 /turf/unsimulated/floor/steel,
 /area/centcom/main_hall)
 "fsx" = (
@@ -15681,7 +16119,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 1
 	},
-/turf/simulated/shuttle/wall/voidcraft,
+/turf/simulated/wall/rplastitanium,
 /area/shuttle/escape)
 "fui" = (
 /obj/effect/floor_decal/corner/orange{
@@ -16770,20 +17208,10 @@
 /turf/simulated/floor/carpet,
 /area/specialty/redspace)
 "fSV" = (
-/obj/effect/floor_decal/industrial/warning/corner{
-	dir = 8
-	},
-/obj/structure/handrail{
-	dir = 4
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 1
 	},
-/obj/structure/extinguisher_cabinet/old{
-	dir = 4;
-	pixel_x = -32
-	},
-/turf/simulated/shuttle/floor/darkred,
+/turf/simulated/floor/tiled/kafel_full/red,
 /area/shuttle/escape)
 "fSY" = (
 /obj/structure/sign/warning/ionizing,
@@ -16864,11 +17292,16 @@
 /turf/simulated/floor/tiled/milspec,
 /area/specialty/redspace)
 "fWh" = (
-/obj/structure/bed/chair/bay/shuttle,
 /obj/machinery/light{
 	dir = 1
 	},
-/turf/simulated/shuttle/floor/darkred,
+/obj/structure/closet/emergsuit_wall{
+	pixel_y = 32
+	},
+/obj/effect/floor_decal/corner/red/border{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor,
 /area/shuttle/escape)
 "fWn" = (
 /obj/structure/salvageable/computer,
@@ -17545,7 +17978,7 @@
 	name = "Cooling Assister";
 	dir = 1
 	},
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/floor/plating,
 /area/shuttle/escape)
 "gpa" = (
 /obj/effect/floor_decal/spline/plain,
@@ -18342,7 +18775,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 4
 	},
-/turf/simulated/shuttle/floor/white,
+/obj/effect/floor_decal/corner/blue/full,
+/turf/simulated/floor/tiled/kafel_full/turfpack,
 /area/shuttle/escape)
 "gMZ" = (
 /obj/effect/floor_decal/corner/orange{
@@ -19548,7 +19982,14 @@
 /obj/machinery/atmospherics/binary/pump/fuel{
 	dir = 4
 	},
-/turf/simulated/shuttle/floor,
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -26
+	},
+/obj/effect/floor_decal/corner/white{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/kafel_full/beige,
 /area/shuttle/escape)
 "hur" = (
 /obj/structure/disposalpipe/segment,
@@ -19642,7 +20083,10 @@
 	pixel_x = -4
 	},
 /obj/item/tool/wrench,
-/turf/simulated/shuttle/floor/white,
+/obj/effect/floor_decal/corner/blue/full{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/kafel_full/turfpack,
 /area/shuttle/escape)
 "hxa" = (
 /obj/machinery/conveyor{
@@ -20255,16 +20699,6 @@
 	},
 /turf/simulated/floor/wood,
 /area/centcom/living)
-"hKx" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 1
-	},
-/obj/effect/floor_decal/eshui/emblem/eshui_l,
-/obj/structure/handrail{
-	dir = 1
-	},
-/turf/simulated/shuttle/floor/darkred,
-/area/shuttle/escape)
 "hKD" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 5
@@ -21083,7 +21517,7 @@
 /area/centcom/main_hall)
 "ilW" = (
 /obj/machinery/atmospherics/pipe/manifold/visible,
-/turf/simulated/shuttle/floor/white,
+/turf/simulated/floor/tiled/kafel_full/turfpack,
 /area/shuttle/escape)
 "iml" = (
 /obj/machinery/shower{
@@ -21498,7 +21932,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 1
 	},
-/turf/simulated/shuttle/floor,
+/turf/simulated/floor/tiled/kafel_full/beige,
 /area/shuttle/escape)
 "ivO" = (
 /obj/structure/simple_door/wood,
@@ -21653,6 +22087,9 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals10,
+/obj/effect/floor_decal/industrial/arrows{
+	dir = 8
+	},
 /turf/unsimulated/floor/steel,
 /area/centcom/main_hall)
 "iAs" = (
@@ -22019,6 +22456,9 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals10{
 	dir = 6
+	},
+/obj/effect/floor_decal/industrial/arrows{
+	dir = 1
 	},
 /turf/unsimulated/floor/steel,
 /area/centcom/main_hall)
@@ -23102,7 +23542,7 @@
 /area/specialty/redspace)
 "jlE" = (
 /obj/structure/bed/chair/bay/shuttle,
-/turf/simulated/shuttle/floor/darkred,
+/turf/simulated/floor/tiled/kafel_full/red,
 /area/shuttle/escape)
 "jlO" = (
 /obj/machinery/door/blast/regular{
@@ -23154,10 +23594,13 @@
 /turf/simulated/floor/tiled/milspec,
 /area/specialty/redspace)
 "joi" = (
-/obj/effect/floor_decal/industrial/warning/corner{
+/obj/effect/floor_decal/corner/red/border{
 	dir = 8
 	},
-/turf/simulated/shuttle/floor/darkred,
+/obj/structure/handrail{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
 /area/shuttle/escape)
 "jom" = (
 /obj/effect/step_trigger/lost_in_space,
@@ -23373,7 +23816,10 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/turf/simulated/shuttle/floor/white,
+/obj/effect/floor_decal/corner/blue/full{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/kafel_full/turfpack,
 /area/shuttle/escape)
 "jwh" = (
 /obj/structure/table/rack{
@@ -23812,7 +24258,14 @@
 /turf/simulated/floor/carpet/green,
 /area/centcom/living)
 "jHF" = (
-/turf/simulated/shuttle/floor/darkred,
+/obj/effect/floor_decal/corner/blue/bordercorner{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/blue/bordercorner,
+/obj/effect/floor_decal/industrial/stand_clear/blue{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor,
 /area/shuttle/escape)
 "jHK" = (
 /obj/effect/floor_decal/spline/plain{
@@ -24088,7 +24541,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 9
 	},
-/turf/simulated/shuttle/wall/voidcraft,
+/turf/simulated/wall/rplastitanium,
 /area/shuttle/escape)
 "jRR" = (
 /obj/structure/grille,
@@ -24139,7 +24592,10 @@
 /area/specialty/redspace)
 "jSP" = (
 /obj/machinery/computer/station_alert,
-/turf/simulated/shuttle/floor,
+/obj/effect/floor_decal/corner/white{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/kafel_full/beige,
 /area/shuttle/escape)
 "jSW" = (
 /obj/structure/sign/department/telecoms,
@@ -24474,16 +24930,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/specialty/redspace)
-"kdy" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 1
-	},
-/obj/effect/floor_decal/eshui/emblem/eshui_r,
-/obj/structure/handrail{
-	dir = 1
-	},
-/turf/simulated/shuttle/floor/darkred,
-/area/shuttle/escape)
 "kec" = (
 /obj/machinery/disposal/deliveryChute{
 	dir = 8
@@ -24865,17 +25311,10 @@
 /turf/simulated/floor/tiled/white,
 /area/specialty/redspace)
 "kqL" = (
-/obj/effect/floor_decal/industrial/warning/corner{
-	dir = 1
-	},
 /obj/structure/handrail{
 	dir = 4
 	},
-/obj/structure/extinguisher_cabinet/old{
-	dir = 4;
-	pixel_x = -32
-	},
-/turf/simulated/shuttle/floor/darkred,
+/turf/simulated/floor/tiled/techfloor,
 /area/shuttle/escape)
 "kri" = (
 /obj/structure/bed/chair/sofa/bench/right{
@@ -25097,7 +25536,8 @@
 /area/specialty/redspace)
 "kxd" = (
 /obj/machinery/door/airlock/glass_medical,
-/turf/simulated/shuttle/floor/white,
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/tiled/kafel_full/turfpack,
 /area/shuttle/escape)
 "kxs" = (
 /obj/effect/floor_decal/milspec/color/emerald/half{
@@ -25131,7 +25571,8 @@
 /area/specialty/redspace)
 "kza" = (
 /obj/machinery/light/floortube,
-/turf/simulated/shuttle/floor/voidcraft,
+/obj/effect/floor_decal/milspec/monotile,
+/turf/simulated/floor/tiled/milspec,
 /area/shuttle/escape)
 "kzK" = (
 /obj/item/radio/intercom{
@@ -26348,7 +26789,10 @@
 "lkP" = (
 /obj/machinery/portable_atmospherics/canister/oxygen/prechilled,
 /obj/machinery/atmospherics/portables_connector,
-/turf/simulated/shuttle/floor/white,
+/obj/effect/floor_decal/corner/blue{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/kafel_full/turfpack,
 /area/shuttle/escape)
 "lkW" = (
 /obj/effect/floor_decal/industrial/warning,
@@ -27259,7 +27703,18 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 1
 	},
-/turf/simulated/shuttle/floor,
+/obj/machinery/embedded_controller/radio/simple_docking_controller{
+	dir = 8;
+	pixel_x = 25;
+	frequency = 1381;
+	req_one_access = list(13);
+	id_tag = "escape_shuttle";
+	tag_door = "escape_shuttle_hatch"
+	},
+/obj/effect/floor_decal/corner/white/full{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/kafel_full/beige,
 /area/shuttle/escape)
 "lUH" = (
 /obj/item/bedsheet/pillow/red,
@@ -27787,7 +28242,10 @@
 /area/specialty/redspace)
 "mnK" = (
 /obj/machinery/atmospherics/unary/freezer,
-/turf/simulated/shuttle/floor/white,
+/obj/effect/floor_decal/corner/blue{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/kafel_full/turfpack,
 /area/shuttle/escape)
 "mnV" = (
 /obj/effect/floor_decal/spline/fancy/wood/corner{
@@ -28216,16 +28674,6 @@
 /obj/item/storage/box/mousetraps,
 /turf/simulated/floor/flesh,
 /area/specialty/redspace)
-"mFa" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 1
-	},
-/obj/effect/floor_decal/eshui/emblem/eshui_c,
-/obj/structure/handrail{
-	dir = 1
-	},
-/turf/simulated/shuttle/floor/darkred,
-/area/shuttle/escape)
 "mFu" = (
 /obj/machinery/door/airlock/centcom/nameddorm{
 	name = "Taaa's Abode";
@@ -28962,6 +29410,9 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals10,
+/obj/effect/floor_decal/industrial/arrows{
+	dir = 4
+	},
 /turf/unsimulated/floor/steel,
 /area/centcom/main_hall)
 "ncj" = (
@@ -29525,7 +29976,10 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/turf/simulated/shuttle/floor/white,
+/obj/effect/floor_decal/corner/blue/full{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/kafel_full/turfpack,
 /area/shuttle/escape)
 "nsy" = (
 /obj/structure/urinal{
@@ -29605,7 +30059,7 @@
 /turf/simulated/floor/wood,
 /area/specialty/redspace)
 "nuA" = (
-/turf/simulated/shuttle/floor,
+/turf/simulated/floor/tiled/kafel_full/beige,
 /area/shuttle/escape)
 "nvB" = (
 /obj/effect/floor_decal/corner/red{
@@ -29828,7 +30282,10 @@
 /obj/machinery/status_display{
 	pixel_x = 32
 	},
-/turf/simulated/shuttle/floor,
+/obj/effect/floor_decal/corner/white{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/kafel_full/beige,
 /area/shuttle/escape)
 "nBc" = (
 /obj/machinery/sleeper{
@@ -29865,10 +30322,17 @@
 /turf/simulated/floor/tiled/dark,
 /area/specialty/redspace)
 "nBn" = (
-/obj/effect/floor_decal/industrial/warning,
-/obj/effect/floor_decal/eshui/emblem/eshui_r,
-/obj/structure/handrail,
-/turf/simulated/shuttle/floor/darkred,
+/obj/structure/grille{
+	name = "Reinforced Grille";
+	desc = "A flimsy lattice of metal rods, with screws to secure it to the floor. This grille seems slightly more sturdy than others probably reinforced to withstand the wildlife.";
+	health = 25
+	},
+/obj/structure/window/plastitanium,
+/obj/structure/window/plastitanium{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/shuttle/floor/black,
 /area/shuttle/escape)
 "nBt" = (
 /turf/unsimulated/elevator_shaft{
@@ -30051,9 +30515,19 @@
 /area/specialty/redspace)
 "nIc" = (
 /obj/effect/floor_decal/industrial/warning{
-	dir = 9
+	dir = 1
 	},
-/turf/simulated/shuttle/floor/darkred,
+/obj/structure/extinguisher_cabinet{
+	dir = 4;
+	pixel_x = -30;
+	pixel_y = -7
+	},
+/obj/structure/extinguisher_cabinet{
+	dir = 4;
+	pixel_x = -30;
+	pixel_y = 8
+	},
+/turf/simulated/floor/tiled/techfloor,
 /area/shuttle/escape)
 "nIf" = (
 /obj/item/perfect_tele_beacon/stationary{
@@ -30362,11 +30836,15 @@
 /turf/simulated/floor/tiled/white,
 /area/centcom/medical)
 "nQS" = (
+/obj/machinery/light/floortube,
+/obj/effect/floor_decal/milspec/monotile,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
-/obj/machinery/light/floortube,
-/turf/simulated/shuttle/floor/voidcraft,
+/obj/effect/floor_decal/industrial/arrows/blue{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
 /area/shuttle/escape)
 "nRz" = (
 /obj/machinery/button/remote/blast_door{
@@ -31393,7 +31871,7 @@
 /area/centcom/bathroom)
 "ovz" = (
 /obj/structure/bed/roller/adv,
-/turf/simulated/shuttle/floor/white,
+/turf/simulated/floor/tiled/kafel_full/turfpack,
 /area/shuttle/escape)
 "owu" = (
 /obj/structure/sign/department/eng{
@@ -32727,7 +33205,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 1
 	},
-/turf/simulated/shuttle/floor,
+/obj/effect/floor_decal/corner/white{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/kafel_full/beige,
 /area/shuttle/escape)
 "pnx" = (
 /obj/effect/floor_decal/corner/red{
@@ -32963,11 +33444,20 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 4
 	},
-/obj/structure/extinguisher_cabinet/old{
-	dir = 1;
-	pixel_y = -32
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 7;
+	pixel_y = -32;
+	dir = 1
 	},
-/turf/simulated/shuttle/floor/white,
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -8;
+	pixel_y = -32;
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/blue{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/kafel_full/turfpack,
 /area/shuttle/escape)
 "pta" = (
 /obj/structure/sign/atmosplaque{
@@ -33155,7 +33645,10 @@
 /obj/structure/bed/chair/bay/shuttle{
 	dir = 8
 	},
-/turf/simulated/shuttle/floor/white,
+/obj/effect/floor_decal/corner/blue{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/kafel_full/turfpack,
 /area/shuttle/escape)
 "pAd" = (
 /obj/effect/floor_decal/corner/white{
@@ -33553,17 +34046,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 4
 	},
-/obj/structure/extinguisher_cabinet{
-	dir = 1;
-	pixel_x = 8;
-	pixel_y = -32
-	},
-/obj/structure/extinguisher_cabinet{
-	dir = 1;
-	pixel_x = -6;
-	pixel_y = -32
-	},
-/turf/simulated/shuttle/floor/darkred,
+/turf/simulated/floor/tiled/techfloor,
 /area/shuttle/escape)
 "pLH" = (
 /obj/structure/closet/secure_closet/miner,
@@ -33917,7 +34400,10 @@
 /obj/structure/handrail{
 	dir = 8
 	},
-/turf/simulated/shuttle/floor/darkred,
+/obj/effect/floor_decal/corner/blue/border{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
 /area/shuttle/escape)
 "pVY" = (
 /obj/structure/filingcabinet/chestdrawer,
@@ -34098,12 +34584,8 @@
 /turf/simulated/floor/tiled,
 /area/specialty/redspace)
 "qdL" = (
-/obj/structure/bed/chair/bay/shuttle{
-	dir = 1
-	},
-/obj/structure/railing,
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel,
-/turf/simulated/shuttle/floor/darkred,
+/turf/simulated/floor/tiled/kafel_full/red,
 /area/shuttle/escape)
 "qdN" = (
 /obj/effect/floor_decal/spline/plain{
@@ -34185,7 +34667,7 @@
 /obj/structure/handrail{
 	dir = 1
 	},
-/turf/simulated/shuttle/floor/darkred,
+/turf/simulated/floor/tiled/techfloor,
 /area/shuttle/escape)
 "qez" = (
 /obj/effect/floor_decal/corner/purple{
@@ -34778,12 +35260,6 @@
 /obj/structure/table/steel,
 /turf/simulated/floor/tiled/techfloor,
 /area/specialty/redspace)
-"qzk" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
-	dir = 4
-	},
-/turf/simulated/shuttle/wall/voidcraft,
-/area/shuttle/escape)
 "qzw" = (
 /obj/effect/floor_decal/corner/white/full{
 	dir = 1
@@ -34801,7 +35277,7 @@
 /obj/machinery/atmospherics/unary/engine{
 	dir = 1
 	},
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/floor/plating,
 /area/shuttle/escape)
 "qzC" = (
 /obj/structure/filingcabinet/chestdrawer,
@@ -35390,10 +35866,20 @@
 /turf/simulated/floor/tiled/dark,
 /area/specialty/redspace)
 "qQx" = (
-/obj/effect/floor_decal/industrial/warning,
-/obj/effect/floor_decal/eshui/emblem/eshui_c,
-/obj/structure/handrail,
-/turf/simulated/shuttle/floor/darkred,
+/obj/structure/grille{
+	name = "Reinforced Grille";
+	desc = "A flimsy lattice of metal rods, with screws to secure it to the floor. This grille seems slightly more sturdy than others probably reinforced to withstand the wildlife.";
+	health = 25
+	},
+/obj/structure/window/plastitanium,
+/obj/structure/window/plastitanium{
+	dir = 1
+	},
+/obj/structure/window/plastitanium{
+	dir = 8
+	},
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/shuttle/floor/black,
 /area/shuttle/escape)
 "qQP" = (
 /obj/structure/table/rack,
@@ -35422,7 +35908,7 @@
 /turf/simulated/floor/tiled/freezer,
 /area/centcom/living)
 "qQW" = (
-/turf/simulated/shuttle/wall/voidcraft/hard_corner,
+/turf/simulated/wall/rplastitanium,
 /area/shuttle/escape)
 "qRC" = (
 /obj/structure/dispenser{
@@ -35855,9 +36341,6 @@
 	icon_state = "milspec"
 	},
 /area/centcom/control)
-"rff" = (
-/turf/simulated/shuttle/wall/voidcraft,
-/area/shuttle/escape)
 "rfo" = (
 /obj/effect/floor_decal/borderfloor/corner,
 /obj/effect/floor_decal/borderfloor/corner{
@@ -35896,10 +36379,21 @@
 /turf/simulated/floor/wood,
 /area/specialty/redspace)
 "rgt" = (
-/obj/effect/floor_decal/industrial/warning,
+/obj/structure/grille{
+	name = "Reinforced Grille";
+	desc = "A flimsy lattice of metal rods, with screws to secure it to the floor. This grille seems slightly more sturdy than others probably reinforced to withstand the wildlife.";
+	health = 25
+	},
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel,
-/obj/structure/handrail,
-/turf/simulated/shuttle/floor/darkred,
+/obj/structure/window/plastitanium,
+/obj/structure/window/plastitanium{
+	dir = 1
+	},
+/obj/structure/window/plastitanium{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/shuttle/floor/black,
 /area/shuttle/escape)
 "rgu" = (
 /obj/effect/floor_decal/industrial/danger{
@@ -36730,7 +37224,7 @@
 /area/specialty/redspace)
 "rCs" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel,
-/turf/simulated/shuttle/floor/darkred,
+/turf/simulated/floor/tiled/techfloor,
 /area/shuttle/escape)
 "rCM" = (
 /obj/effect/floor_decal/spline/plain{
@@ -36749,10 +37243,12 @@
 /turf/simulated/floor/flesh,
 /area/specialty/redspace)
 "rDE" = (
-/obj/effect/floor_decal/industrial/warning,
-/obj/effect/floor_decal/eshui/emblem/eshui_l,
-/obj/structure/handrail,
-/turf/simulated/shuttle/floor/darkred,
+/obj/machinery/door/airlock/glass_security{
+	name = "Transfer Cell";
+	req_one_access = list(1,2)
+	},
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/tiled/kafel_full/red,
 /area/shuttle/escape)
 "rDH" = (
 /obj/effect/floor_decal/spline/fancy/wood{
@@ -36880,13 +37376,21 @@
 /turf/simulated/floor/tiled/white,
 /area/specialty/redspace)
 "rGr" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 10
+/obj/structure/grille{
+	name = "Reinforced Grille";
+	desc = "A flimsy lattice of metal rods, with screws to secure it to the floor. This grille seems slightly more sturdy than others probably reinforced to withstand the wildlife.";
+	health = 25
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel,
+/obj/structure/window/plastitanium,
+/obj/structure/window/plastitanium{
 	dir = 1
 	},
-/turf/simulated/shuttle/floor/darkred,
+/obj/structure/window/plastitanium{
+	dir = 8
+	},
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/shuttle/floor/black,
 /area/shuttle/escape)
 "rGt" = (
 /obj/structure/table/standard,
@@ -37882,7 +38386,10 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/fuel{
 	dir = 4
 	},
-/turf/simulated/shuttle/floor,
+/obj/effect/floor_decal/corner/white{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/kafel_full/beige,
 /area/shuttle/escape)
 "skG" = (
 /obj/structure/table/woodentable,
@@ -38314,10 +38821,10 @@
 /turf/simulated/floor/tiled/milspec,
 /area/specialty/redspace)
 "syR" = (
-/obj/machinery/porta_turret/crescent{
-	density = 1
-	},
 /obj/effect/floor_decal/industrial/outline/red,
+/obj/machinery/porta_turret/heavy/sniper{
+	enabled = 0
+	},
 /turf/unsimulated/floor/steel{
 	icon_state = "milspec"
 	},
@@ -38345,7 +38852,7 @@
 /obj/machinery/atmospherics/pipe/simple/visible{
 	dir = 5
 	},
-/turf/simulated/shuttle/floor/white,
+/turf/simulated/floor/tiled/kafel_full/turfpack,
 /area/shuttle/escape)
 "szB" = (
 /obj/machinery/door/airlock/medical{
@@ -39348,9 +39855,12 @@
 /obj/structure/sign/deck3{
 	name = "DECK III - Crew Habitation, Recreation, Legal, Security, Medical."
 	},
-/turf/simulated/shuttle/wall/dark/hard_corner,
+/turf/simulated/shuttle/wall/dark,
 /area/centcom)
 "thW" = (
+/obj/effect/floor_decal/industrial/arrows/blue{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/centcom/main_hall)
 "tiE" = (
@@ -39847,7 +40357,10 @@
 /area/specialty/redspace)
 "twy" = (
 /obj/item/flag/eshui,
-/turf/simulated/shuttle/floor,
+/obj/effect/floor_decal/corner/white{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/kafel_full/beige,
 /area/shuttle/escape)
 "twH" = (
 /obj/effect/floor_decal/corner/purple/full,
@@ -39923,7 +40436,10 @@
 /obj/structure/fireaxecabinet{
 	pixel_x = 32
 	},
-/turf/simulated/shuttle/floor,
+/obj/effect/floor_decal/corner/white{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/kafel_full/beige,
 /area/shuttle/escape)
 "tyZ" = (
 /obj/effect/floor_decal/corner/blue/full{
@@ -40160,7 +40676,10 @@
 /obj/structure/handrail{
 	dir = 4
 	},
-/turf/simulated/shuttle/floor/white,
+/obj/effect/floor_decal/corner/blue{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/kafel_full/turfpack,
 /area/shuttle/escape)
 "tGU" = (
 /obj/effect/floor_decal/corner_techfloor_grid{
@@ -40907,7 +41426,10 @@
 /area/specialty/redspace)
 "ufn" = (
 /obj/machinery/computer/secure_data,
-/turf/simulated/shuttle/floor,
+/obj/effect/floor_decal/corner/white/full{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/kafel_full/beige,
 /area/shuttle/escape)
 "ugj" = (
 /obj/effect/floor_decal/corner/paleblue{
@@ -41433,7 +41955,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 1
 	},
-/turf/simulated/shuttle/floor,
+/turf/simulated/floor/tiled/kafel_full/beige,
 /area/shuttle/escape)
 "uxq" = (
 /turf/simulated/floor/carpet/purcarpet,
@@ -41945,7 +42467,7 @@
 /turf/simulated/floor/tiled/white,
 /area/specialty/redspace)
 "uOR" = (
-/turf/simulated/shuttle/floor/white,
+/turf/simulated/floor/tiled/kafel_full/turfpack,
 /area/shuttle/escape)
 "uOW" = (
 /obj/effect/floor_decal/borderfloor{
@@ -43821,15 +44343,6 @@
 	},
 /turf/unsimulated/floor/steel,
 /area/centcom/main_hall)
-"vVX" = (
-/obj/structure/bed/chair/bay/shuttle{
-	dir = 1
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
-	dir = 4
-	},
-/turf/simulated/shuttle/floor/darkred,
-/area/shuttle/escape)
 "vWw" = (
 /obj/structure/bed/chair/sofa/corner/purp{
 	dir = 4
@@ -43951,6 +44464,9 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals10{
 	dir = 10
+	},
+/obj/effect/floor_decal/industrial/arrows{
+	dir = 8
 	},
 /turf/unsimulated/floor/steel,
 /area/centcom/main_hall)
@@ -44638,7 +45154,18 @@
 /area/centcom/living)
 "wvS" = (
 /obj/structure/closet/firecloset/full,
-/turf/simulated/shuttle/floor/darkred,
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -8;
+	pixel_y = 30
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 7;
+	pixel_y = 30
+	},
+/obj/effect/floor_decal/corner/white/border{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
 /area/shuttle/escape)
 "wvV" = (
 /obj/structure/table/rack{
@@ -45001,6 +45528,9 @@
 /obj/effect/floor_decal/corner/red{
 	dir = 1
 	},
+/obj/effect/floor_decal/industrial/arrows/blue{
+	dir = 8
+	},
 /turf/unsimulated/floor/steel,
 /area/centcom/main_hall)
 "wEM" = (
@@ -45266,7 +45796,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
-/turf/simulated/shuttle/floor/darkred,
+/turf/simulated/floor/tiled/techfloor,
 /area/shuttle/escape)
 "wLW" = (
 /obj/structure/bed/chair/bay/chair{
@@ -46476,7 +47006,8 @@
 	name = "Escape Shuttle Cockpit";
 	req_access = list(19)
 	},
-/turf/simulated/shuttle/floor,
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/tiled/kafel_full/beige,
 /area/shuttle/escape)
 "xuM" = (
 /obj/structure/grille,
@@ -46776,7 +47307,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 1
 	},
-/turf/simulated/shuttle/floor,
+/turf/simulated/floor/tiled/kafel_full/beige,
 /area/shuttle/escape)
 "xCJ" = (
 /obj/structure/window/plastitanium{
@@ -46840,7 +47371,10 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/fuel{
 	dir = 1
 	},
-/turf/simulated/shuttle/floor/white,
+/obj/effect/floor_decal/corner/blue{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/kafel_full/turfpack,
 /area/shuttle/escape)
 "xEr" = (
 /turf/unsimulated/wall/fakeglass{
@@ -47090,6 +47624,9 @@
 /area/specialty/redspace)
 "xMy" = (
 /obj/effect/floor_decal/corner/black,
+/obj/effect/floor_decal/industrial/arrows{
+	dir = 4
+	},
 /turf/unsimulated/floor/steel,
 /area/centcom/main_hall)
 "xNm" = (
@@ -47632,7 +48169,7 @@
 /area/centcom/control)
 "ybf" = (
 /obj/machinery/atmospherics/unary/engine,
-/turf/simulated/shuttle/floor/black,
+/turf/simulated/floor/plating,
 /area/shuttle/escape)
 "ybr" = (
 /obj/structure/window/reinforced/tinted/frosted,
@@ -66475,7 +67012,7 @@ akk
 cAq
 ajU
 ajE
-ajE
+apx
 hur
 ajr
 yaJ
@@ -66641,7 +67178,7 @@ vVE
 bwr
 rRh
 yaJ
-yaJ
+aXA
 ajb
 dzR
 vWP
@@ -66671,7 +67208,7 @@ aeu
 aaM
 wvA
 vWP
-aej
+adP
 aea
 jdG
 adL
@@ -66800,10 +67337,10 @@ tpV
 ajV
 ajJ
 ogh
-bwr
-rRh
-yaJ
-yaJ
+aps
+apo
+apd
+apa
 oDk
 rsN
 vWP
@@ -66995,7 +67532,7 @@ iPN
 aaM
 dgj
 vWP
-adV
+adP
 aec
 vWP
 adN
@@ -67127,7 +67664,7 @@ fst
 wEy
 ajt
 jdl
-eqO
+apc
 tjK
 aaK
 aaK
@@ -67157,7 +67694,7 @@ aev
 aaM
 aep
 vWP
-adV
+adP
 aec
 vWP
 adO
@@ -67285,9 +67822,9 @@ bOi
 bOi
 bOi
 ajM
-yaJ
-yaJ
-aju
+apy
+apt
+app
 sCq
 eqO
 vVE
@@ -67319,9 +67856,9 @@ iPN
 aaM
 aep
 vWP
-adV
-adV
-adV
+adP
+adP
+adP
 adP
 aaM
 uho
@@ -67446,12 +67983,12 @@ sAJ
 ewy
 ewy
 hhw
-bwr
-ajG
-yaJ
-aju
+apC
+apz
+apu
+app
 ajk
-eqO
+apc
 ogh
 aiY
 ahH
@@ -67481,7 +68018,7 @@ aev
 aaM
 aeq
 vWP
-adV
+adP
 aec
 vWP
 adO
@@ -67643,7 +68180,7 @@ iPN
 aaM
 aer
 vWP
-adV
+adP
 aec
 vWP
 adN
@@ -67772,7 +68309,7 @@ bFs
 yai
 huZ
 jRk
-hur
+apv
 eKr
 jdl
 eqO
@@ -67937,7 +68474,7 @@ ajH
 ajv
 ajv
 rJh
-eqO
+apc
 sBo
 aiX
 aaK
@@ -67967,7 +68504,7 @@ aew
 aaM
 aes
 iXj
-ael
+adP
 aed
 iXj
 adQ
@@ -68433,9 +68970,9 @@ wVP
 sVU
 gge
 gge
-hwv
-yaJ
-cml
+aoU
+aoP
+aoS
 gge
 gge
 ilU
@@ -68447,13 +68984,13 @@ gge
 gge
 gge
 gge
-gge
+aoQ
 gge
 gge
 gge
 hwv
-yaJ
-yaJ
+ajn
+aoP
 hRS
 tjK
 uho
@@ -68582,10 +69119,10 @@ ffc
 ajZ
 ajO
 yaJ
-yaJ
-yaJ
-yaJ
-yaJ
+aph
+aph
+aph
+apd
 yaJ
 yaJ
 yaJ
@@ -68603,7 +69140,7 @@ yaJ
 bHB
 wVP
 dVV
-yaJ
+aoR
 yaJ
 yaJ
 yaJ
@@ -68743,12 +69280,12 @@ abX
 akg
 ajZ
 ajO
+apw
+apw
 yaJ
 yaJ
 yaJ
-yaJ
-yaJ
-yaJ
+aoW
 yaJ
 yaJ
 aiT
@@ -68758,7 +69295,7 @@ hyp
 fot
 fot
 fot
-fot
+aoT
 fot
 fot
 fot
@@ -68778,7 +69315,7 @@ fot
 fot
 cSN
 yaJ
-hRS
+aoO
 tjK
 uho
 uho
@@ -68906,10 +69443,10 @@ ffc
 ajZ
 ajO
 yaJ
-yaJ
-yaJ
-yaJ
-yaJ
+aph
+aph
+aph
+apd
 yaJ
 yaJ
 yaJ
@@ -69066,12 +69603,12 @@ kaF
 bOi
 eIz
 ajd
-fot
-fot
-fot
-fot
-fot
-fot
+apA
+apA
+api
+api
+api
+ape
 ajd
 aja
 aiV
@@ -69226,15 +69763,15 @@ aiO
 aiO
 aiO
 aiO
-dDw
+aiO
+aoX
 hVx
 hVx
 hVx
 hVx
 hVx
 hVx
-hVx
-hVx
+aoX
 thA
 xNS
 aiO
@@ -69385,9 +69922,10 @@ uho
 uho
 aiO
 qQW
-rff
-rff
-rff
+qQW
+qQW
+qQW
+qQW
 qQW
 mGd
 mGd
@@ -69395,12 +69933,11 @@ mGd
 mGd
 mGd
 mGd
-mGd
-mGd
 qQW
-rff
-rff
-rff
+qQW
+qQW
+qQW
+qQW
 qQW
 aiO
 uho
@@ -69546,7 +70083,7 @@ hPE
 uho
 uho
 aiO
-rff
+qQW
 qzx
 ftH
 dyB
@@ -69555,7 +70092,7 @@ rGr
 emj
 euc
 eDz
-ced
+apq
 ced
 nQS
 nIc
@@ -69563,7 +70100,7 @@ kqL
 fjl
 ftH
 ybf
-rff
+qQW
 aiO
 uho
 uho
@@ -69708,24 +70245,24 @@ hPE
 uho
 uho
 aiO
-rff
+qQW
 qzx
 ftH
 cmn
 qdL
 rgt
-euf
+apD
 euf
 eDW
 ePr
-ePr
+apj
 ePr
 qey
 dgV
 aHd
 ftH
 ybf
-rff
+qQW
 aiO
 uho
 uho
@@ -69740,17 +70277,17 @@ izY
 jOo
 nbu
 tjK
-aaK
-aaK
-aaK
-aaK
-aaK
-aaK
-aaK
-aaK
-aaK
-uho
-uho
+tjK
+tjK
+tjK
+tjK
+tjK
+tjK
+tjK
+tjK
+tjK
+adY
+adY
 adY
 uho
 uho
@@ -69870,24 +70407,24 @@ hPE
 uho
 uho
 aiO
-rff
+qQW
 dxC
-rff
+qQW
 jlE
 cnc
 rDE
-ePr
-ePr
+apE
+apk
 eEr
 ePr
+apk
 ePr
-ePr
-hKx
+qey
 dgV
 pLA
-rff
+qQW
 dEp
-rff
+qQW
 aiO
 uho
 uho
@@ -70032,24 +70569,24 @@ hPE
 uho
 uho
 aiO
-rff
+qQW
 dyu
-rff
+qQW
 jlE
 cnc
 qQx
-ePr
-ePr
+apF
+apl
 eEr
 ePr
+apl
 ePr
-ePr
-mFa
+qey
 dgV
-vVX
-rff
+pLA
+qQW
 gos
-rff
+qQW
 aiO
 uho
 uho
@@ -70058,7 +70595,7 @@ uho
 uho
 wBs
 tjK
-eSZ
+ahw
 gge
 cyj
 cyj
@@ -70194,24 +70731,24 @@ hPE
 uho
 uho
 aiO
-rff
+qQW
 dxC
-rff
-jlE
-cnc
+qQW
+apL
+apn
 nBn
 aTN
-ePr
+apm
 eEr
 ePr
-ePr
+apm
 kza
-kdy
+qey
 dgV
-bDE
-rff
+pLA
+qQW
 dEp
-rff
+qQW
 aiO
 uho
 uho
@@ -70356,24 +70893,24 @@ hPE
 uho
 uho
 aiO
-rff
+qQW
 dyu
-rff
+qQW
 fWh
-jHF
+apI
 joi
 wLT
 wLT
 eFA
-eTl
+apr
 eTl
 eTl
 aDA
 rCs
 fjX
-rff
+qQW
 gos
-rff
+qQW
 aiO
 uho
 uho
@@ -70518,14 +71055,14 @@ uho
 uho
 uho
 aiO
-rff
+qQW
 dyu
-rff
+qQW
 wvS
-pVB
-jHF
-emp
-emp
+apJ
+apG
+apB
+apB
 fgt
 emp
 emp
@@ -70533,9 +71070,9 @@ emp
 jHF
 pVB
 ffF
-rff
+qQW
 gos
-rff
+qQW
 aiO
 uho
 uho
@@ -70680,24 +71217,24 @@ uho
 uho
 uho
 aiO
-rff
+qQW
 dxC
-rff
-enp
-enp
+qQW
+apn
+apf
 xuq
 enp
-enp
+apf
 eGU
-enp
-enp
-enp
+apn
+apn
+apf
 kxd
 enp
 fke
-rff
+qQW
 dEp
-rff
+qQW
 aiO
 uho
 uho
@@ -70842,24 +71379,24 @@ uho
 uho
 uho
 aiO
-rff
+qQW
 dyu
-rff
+qQW
 ufn
 bNB
 nuA
 twy
 euL
-qzk
+eGU
 hwJ
 eJO
 tGl
 uOR
 fdT
 gMV
-rff
+qQW
 gos
-rff
+qQW
 aiO
 uho
 uho
@@ -71004,24 +71541,24 @@ uho
 uho
 uho
 aiO
-rff
+qQW
 dxC
-rff
+qQW
 jSP
-bNB
-nuA
+apK
+apH
 dMx
 hug
-qzk
+eGU
 lkP
 szw
-uOR
+apg
 uOR
 uOR
 psU
-rff
+qQW
 dEp
-rff
+qQW
 aiO
 uho
 uho
@@ -71166,7 +71703,7 @@ uho
 uho
 uho
 aiO
-rff
+qQW
 qzx
 ftH
 pnl
@@ -71183,7 +71720,7 @@ uOR
 xEf
 ftH
 ybf
-rff
+qQW
 aiO
 uho
 uho
@@ -71328,7 +71865,7 @@ uho
 uho
 uho
 aiO
-rff
+qQW
 qzx
 ftH
 lUz
@@ -71340,12 +71877,12 @@ jRl
 nsg
 eQg
 aQi
-ovz
+aoZ
 pzQ
 jvV
 ftH
 ybf
-rff
+qQW
 aiO
 uho
 uho
@@ -71491,22 +72028,22 @@ uho
 uho
 aiO
 qQW
-rff
-rff
-rff
-rff
-rff
-rff
-rff
-rff
-rff
-rff
-rff
-rff
-rff
-rff
-rff
-rff
+qQW
+qQW
+qQW
+qQW
+qQW
+qQW
+qQW
+qQW
+qQW
+qQW
+qQW
+qQW
+qQW
+qQW
+qQW
+qQW
 qQW
 aiO
 uho

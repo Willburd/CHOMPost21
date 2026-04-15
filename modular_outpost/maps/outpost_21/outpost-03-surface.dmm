@@ -8182,7 +8182,6 @@
 /turf/simulated/floor/tiled,
 /area/muriki/tramstation/civ)
 "ane" = (
-/obj/structure/medical_stand,
 /obj/effect/floor_decal/corner/blue{
 	dir = 5
 	},
@@ -8190,6 +8189,7 @@
 	name = "Emergency NanoMed";
 	pixel_y = 32
 	},
+/obj/structure/medical_stand/anesthetic,
 /turf/simulated/floor/tiled/dark,
 /area/medical/sleeper)
 "anf" = (
@@ -13722,6 +13722,9 @@
 /obj/machinery/door/firedoor/glass,
 /obj/structure/window/reinforced/full,
 /obj/structure/cable/green,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/security/kennels)
 "aAN" = (
@@ -13839,6 +13842,9 @@
 /obj/structure/cable/green{
 	icon_state = "0-2"
 	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/security/kennels)
 "aAZ" = (
@@ -13864,12 +13870,14 @@
 /obj/structure/cable/green{
 	icon_state = "0-2"
 	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/security/kennels)
 "aBc" = (
 /obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
-/obj/structure/window/reinforced/full,
 /obj/structure/cable/green{
 	icon_state = "0-4"
 	},
@@ -13882,12 +13890,18 @@
 	id = "security_lockdown";
 	name = "Security Lockdown"
 	},
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
 /turf/simulated/floor/plating,
 /area/security/warden)
 "aBd" = (
 /obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
-/obj/structure/window/reinforced/full,
 /obj/structure/cable/green{
 	icon_state = "0-8"
 	},
@@ -13899,6 +13913,10 @@
 	icon_state = "shutter2_0";
 	id = "security_lockdown";
 	name = "Security Lockdown"
+	},
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
 	},
 /turf/simulated/floor/plating,
 /area/security/warden)
@@ -18838,6 +18856,26 @@
 	},
 /turf/simulated/open,
 /area/maintenance/wastedisposal)
+"aSn" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/danger{
+	dir = 4
+	},
+/obj/machinery/elevator_warning/inverted,
+/turf/simulated/floor/tiled/dark,
+/area/hallway/secondary/exit)
+"aSo" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/danger{
+	dir = 4
+	},
+/obj/machinery/elevator_warning,
+/turf/simulated/floor/tiled/dark,
+/area/hallway/secondary/exit)
 "aSz" = (
 /obj/structure/table/glass,
 /obj/item/tool/wrench,
@@ -30445,7 +30483,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
 	},
-/obj/machinery/elevator_warning/inverted,
 /turf/simulated/floor/tiled/dark,
 /area/hallway/secondary/exit)
 "eFD" = (
@@ -32022,20 +32059,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/engineering_hallway)
-"ffU" = (
-/obj/effect/floor_decal/industrial/stand_clear/yellow{
-	dir = 8
-	},
-/obj/machinery/door/airlock/voidcraft{
-	frequency = 1381;
-	icon_state = "door_locked";
-	id_tag = "escape_dock";
-	locked = 1;
-	name = "\improper Emergency Elevator Access";
-	req_one_access = list(13)
-	},
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/hallway/secondary/exit)
 "ffV" = (
 /turf/simulated/floor/tiled/dark,
 /area/security/tactical)
@@ -33636,15 +33659,6 @@
 	dir = 5
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
-/obj/machinery/embedded_controller/radio/simple_docking_controller{
-	dir = 8;
-	frequency = 1381;
-	id_tag = "escape_dock";
-	name = "docking port controller";
-	pixel_x = 25;
-	req_one_access = list(13);
-	tag_door = "escape_dock"
-	},
 /obj/effect/landmark/holiday_event_spawn,
 /turf/simulated/floor/tiled/dark,
 /area/hallway/secondary/exit)
@@ -40580,10 +40594,10 @@
 	name = "Station Intercom (General)";
 	pixel_y = 21
 	},
-/obj/machinery/iv_drip,
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 1
 	},
+/obj/structure/medical_stand/anesthetic,
 /obj/item/reagent_containers/blood/prelabeled/OMinus,
 /turf/simulated/floor/tiled/milspec/sterile,
 /area/medical/surgery2)
@@ -51948,6 +51962,7 @@
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/item/gun/energy/bolagun,
 /turf/simulated/floor/tiled/dark,
 /area/security/warden)
 "lrG" = (
@@ -57020,7 +57035,6 @@
 "mVP" = (
 /obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
-/obj/structure/window/reinforced/full,
 /obj/structure/cable/green{
 	icon_state = "0-8"
 	},
@@ -57029,6 +57043,13 @@
 	icon_state = "shutter2_0";
 	id = "security_lockdown";
 	name = "Security Lockdown"
+	},
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/security/warden)
@@ -74486,7 +74507,15 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
 	},
-/obj/machinery/elevator_warning,
+/obj/machinery/embedded_controller/radio/simple_docking_controller{
+	dir = 8;
+	frequency = 1381;
+	id_tag = "escape_dock";
+	name = "docking port controller";
+	pixel_x = 25;
+	req_one_access = list(13);
+	tag_door = "escape_dock"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/secondary/exit)
 "sIO" = (
@@ -138728,14 +138757,14 @@ hXX
 ybW
 fIX
 sIG
+aSo
 erg
-oHX
 cAd
 oHX
 oHX
 cAd
-oHX
 pMe
+aSn
 eFs
 iZR
 bYO
@@ -138889,17 +138918,17 @@ lLo
 lLo
 lLo
 oHZ
+oHZ
 iUr
 vQy
-ffU
 vQy
 iAJ
 iAJ
 vQy
-ffU
 vQy
 iUr
 uGk
+oHZ
 lLo
 lLo
 lLo

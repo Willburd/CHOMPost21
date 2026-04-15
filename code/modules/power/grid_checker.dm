@@ -66,7 +66,7 @@
 		the station's power will be shut off for an indeterminate duration while the powernet monitor restarts automatically, or \
 		when Engineering can manually resolve the issue.", //CHOMPEdit
 		"Critical Power Failure",
-		new_sound = 'sound/AI/poweroff.ogg')
+		new_sound = ANNOUNCER_MSG_POWER_OFF)
 		SShaunting.influence(HAUNTING_GHOSTS) // Outpost 21 edit - IT DA SPOOKY STATION!
 	power_failing = TRUE
 	if(powernet)
@@ -96,7 +96,7 @@
 	if(announce)
 		GLOB.command_announcement.Announce("Power has been restored to [station_name()]. We apologize for the inconvenience.",
 		"Power Systems Nominal",
-		new_sound = 'sound/AI/poweron.ogg')
+		new_sound = ANNOUNCER_MSG_POWER_ON)
 	power_failing = FALSE
 	update_icon()
 

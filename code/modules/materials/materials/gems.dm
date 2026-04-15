@@ -7,7 +7,6 @@
 	icon_colour = "#FC2BC5"
 	shard_type = SHARD_SHARD
 	hardness = 30
-	stack_origin_tech = list(TECH_MATERIAL = 2, TECH_PHORON = 2)
 	door_icon_base = "stone"
 	sheet_singular_name = "crystal"
 	sheet_plural_name = "crystals"
@@ -44,7 +43,6 @@
 	shard_type = SHARD_SHARD
 	tableslam_noise = 'sound/effects/Glasshit.ogg'
 	hardness = 100
-	stack_origin_tech = list(TECH_MATERIAL = 6)
 	supply_conversion_value = 8
 	icon_base = "stone"
 	table_icon_base = "stone"
@@ -90,7 +88,6 @@
 	shard_type = SHARD_SHARD
 	tableslam_noise = 'sound/effects/Glasshit.ogg'
 	hardness = 100
-	stack_origin_tech = list(TECH_ARCANE = 1, TECH_MATERIAL = 6)
 	sheet_singular_name = "gem"
 	sheet_plural_name = "gems"
 	supply_conversion_value = 30	// These are hilariously rare.
@@ -115,7 +112,6 @@
 	reflectivity = 0.5
 	radiation_resistance = 20
 	spatial_instability = 30
-	stack_origin_tech = list(TECH_MATERIAL = 7, TECH_PHORON = 5, TECH_BLUESPACE = 5)
 	sheet_singular_name = "gem"
 	sheet_plural_name = "gems"
 	icon_base = "stone"
@@ -138,7 +134,6 @@
 	conductivity = 60
 	reflectivity = 0.3
 	radiation_resistance = 5
-	stack_origin_tech = list(TECH_MATERIAL = 6, TECH_POWER = 5, TECH_BIO = 4)
 	sheet_singular_name = "sheet"
 	sheet_plural_name = "sheets"
 	supply_conversion_value = 8
@@ -163,7 +158,6 @@
 	explosion_resistance = 85
 	reflectivity = 0.2
 	radiation_resistance = 10
-	stack_origin_tech = list(TECH_MATERIAL = 8, TECH_ILLEGAL = 1, TECH_PHORON = 4, TECH_BLUESPACE = 4, TECH_ARCANE = 1) //CHOMP Edit
 	supply_conversion_value = 13
 	icon_base = "stone"
 	table_icon_base = "stone"
@@ -186,7 +180,6 @@
 	explosion_resistance = 20
 	reflectivity = 1
 	radiation_resistance = 100
-	stack_origin_tech = list(TECH_MATERIAL = 4, TECH_BLUESPACE = 8)
 	supply_conversion_value = 15
 	icon_base = "stone"
 	table_icon_base = "stone"

@@ -21,6 +21,9 @@
 /obj/machinery/camera/motion/ai_sat
 	network = list(NETWORK_AISAT)
 
+/obj/machinery/camera/network/rogue_sleevers
+	network = list(NETWORK_ROGUE_SLEEVERS)
+
 // Do not put unique items, structures, or anything else in here. Only variations of existing stuff.
 /obj/structure/window/reinforced/polarized/full
 	dir = SOUTHWEST
