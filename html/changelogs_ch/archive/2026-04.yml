@@ -154,3 +154,6 @@
       them in certain situations.
   - code_imp: Instead of things having their own specialty /deconstruct proc, they
       all now share a /atom_deconstruct proc
+2026-04-15:
+  Diana:
+  - code_imp: Removed origin_tech
