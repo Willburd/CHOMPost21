@@ -42,13 +42,13 @@
 			// Outpost 21 edit begin - Redspace portals
 			if(!redspace)
 				//All ready. Announce that bad juju is afoot.
-				GLOB.command_announcement.Announce("Space-time anomalies detected on the station. There is no additional data.", "Anomaly Alert", new_sound = 'sound/AI/spanomalies.ogg')
+				GLOB.command_announcement.Announce("Space-time anomalies detected on the station. There is no additional data.", "Anomaly Alert", new_sound = ANNOUNCER_MSG_SPACETIME_ANOMS)
 			else
 				//All ready. Announce that bad bad bad things are happening
 				if(prob(30)) // It's getting smarter...
-					GLOB.command_announcement.Announce("%&(£&%@%(*$&£/{}detected near the [station_name()]. Please£&?*(%RUN&(*RUN$%RUN&({}AI-controlled equipment£%@%(*RUN$%&RUNRUNRUN(£&?RUN*(%&£/{}RUNRUNerrorsRUN.RUN.RUN.RUN.", "Anomaly Alert", new_sound = 'sound/AI/ionstorm.ogg')
+					GLOB.command_announcement.Announce("%&(£&%@%(*$&£/{}detected near the [station_name()]. Please£&?*(%RUN&(*RUN$%RUN&({}AI-controlled equipment£%@%(*RUN$%&RUNRUNRUN(£&?RUN*(%&£/{}RUNRUNerrorsRUN.RUN.RUN.RUN.", "Anomaly Alert", new_sound = ANNOUNCER_MSG_SPACETIME_ANOMS)
 				else
-					GLOB.command_announcement.Announce("An ion storm was Detected within proximitY tO \the [station_name()] recently. Check All AI conTrolled equipment for Corruption.", "Anomaly Alert", new_sound = 'sound/AI/ionstorm.ogg')
+					GLOB.command_announcement.Announce("An ion storm was Detected within proximitY tO \the [station_name()] recently. Check All AI conTrolled equipment for Corruption.", "Anomaly Alert", new_sound = ANNOUNCER_MSG_SPACETIME_ANOMS)
 			// Outpost 21 edit end
 
 			//prob(20) can be approximated to 1 wormhole every 5 turfs!
