@@ -6,7 +6,7 @@
 	if(!GLOB.outpost_rocket_pods.len)
 		return
 	var/list/targets = list(" chunk of orbital debris"," rogue asteroid","n incoming dronepod","n enemy kinetic weapon","n enemy reconnaissance device")
-	GLOB.command_announcement.Announce("A[pick(targets)]'s trajectory has been discovered on short-range scanners. Launching surface-to-space countermeasures.", "Artillery Subsystem")
+	GLOB.command_announcement.Announce("A[pick(targets)]'s trajectory has been discovered on short-range scanners. Launching surface-to-space countermeasures.", "Artillery Subsystem", new_sound = ANNOUNCER_MSG_STS_COUNTER)
 
 /datum/event/launch_rocket/start()
 	if(!GLOB.outpost_rocket_pods.len)
