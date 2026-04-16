@@ -1,5 +1,6 @@
 "Primer" = {"
 <h1>Primer</h1>
+<img class='_wikiimage' src=\ref['html/images/eslogo.png']>
 <p>Outpost 21 is an E-Shui owned terraforming facility on the planet Muriki, on the edge of Solgov space. Acting as a high security para-military facility, access to the station is tightly restricted, and visits by outside civilians are rare. The surface facity was built to support and protect the main terraforming unit; A massive durasteel plated structure to the north west that dwarfs all other buildings on the outpost.</p>
 
 <p>Beneath Outpost 21 is the central command bunker. Connected to the top side facility by a 14 kilometer deep elevator shaft. In game, most of your shift will be at the top side facility. However, all characters employed by the company have dorms, and more routine work at the central command bunker. Working topside is done in four shifts through the week. A, B, C, and D.</p>

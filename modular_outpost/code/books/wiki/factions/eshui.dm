@@ -1,6 +1,6 @@
 "Eshui" = {"
 <h1>TEMP</h1>
-<img src=\ref['html/images/eslogo.png']>
+<img class='_wikiimage' src=\ref['html/images/eslogo.png']>
 
 TEMP
 "},

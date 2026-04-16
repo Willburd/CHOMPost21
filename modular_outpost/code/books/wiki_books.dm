@@ -69,7 +69,8 @@
 			</style>
 		</head>
 		<body>
-		<p>The Outpost 21 guidebook to the setting, species, lore and gameplay. This guide is written in an OOC perspective, and is used to build a foundation of knowledge for new players.</p>
+		<h1>The Outpost 21 Handbook</h1>
+		<p>This guide is written in an OOC perspective, and is used to build a foundation of knowledge for new players about the setting, playable species, lore and gameplay.</p>
 		"}
 		// List of pages
 		for(var/title_text in wiki_pages)
