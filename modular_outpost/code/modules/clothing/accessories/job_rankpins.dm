@@ -245,12 +245,16 @@
 	var/list/ranked_job_list = list()
 
 	for(var/datum/job/jb in SSjob.occupations)
-		if(jb.rank_pin == rank_path)
+		if(jb.rank_pin && jb.rank_pin == rank_path)
 			ranked_job_list += jb.title
 		if(jb.alt_titles)
-			for(var/datum/alt_title/alt in jb.alt_titles)
-				if(alt.rank_pin == rank_path)
-					ranked_job_list += alt.title
+			for(var/atitle in jb.alt_titles)
+				var/datum/alt_title/alt = jb.alt_titles[atitle]
+				if(initial(alt.title) == "GENERIC ALT TITLE") // TEMP
+					stack_trace("Alt title datum does not exist is is misconfigured: [atitle] > [alt]")
+					continue
+				if(initial(alt.rank_pin) && initial(alt.rank_pin) == rank_path)
+					ranked_job_list += initial(alt.title)
 
 	if(!length(ranked_job_list))
 		return "This rank is not playable."

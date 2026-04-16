@@ -5,61 +5,63 @@
 
 	var/dat = ""
 	var/static/index_html
-	var/static/list/wiki_pages = list(
-		"Setting" = list(
-			#include "wiki/setting/primer.dm"
-			#include "wiki/setting/recent.dm"
-			#include "wiki/setting/solgovlaw.dm"
-			#include "wiki/setting/localarea.dm"
-			#include "wiki/setting/muriki.dm"
-			#include "wiki/setting/outpost21.dm"
-			#include "wiki/setting/outpost22.dm"
-			#include "wiki/setting/outpost18.dm"
-			#include "wiki/setting/nifpro.dm"
-		),
-		"Gameplay" = list(
-			#include "wiki/gameplay/basics.dm"
-			#include "wiki/gameplay/resleeving.dm"
-			#include "wiki/gameplay/positronic.dm"
-			#include "wiki/gameplay/rank.dm"
-		),
-		"Species" = list(
-			#include "wiki/species/akula.dm"
-			#include "wiki/species/alrune.dm"
-			#include "wiki/species/altevian.dm"
-			#include "wiki/species/diona.dm"
-			#include "wiki/species/humans.dm"
-			#include "wiki/species/nevrean.dm"
-			#include "wiki/species/promethean.dm"
-			#include "wiki/species/rapala.dm"
-			#include "wiki/species/sergal.dm"
-			#include "wiki/species/shadekin.dm"
-			#include "wiki/species/skrell.dm"
-			#include "wiki/species/tajara.dm"
-			#include "wiki/species/teshari.dm"
-			#include "wiki/species/unathi.dm"
-			#include "wiki/species/vox.dm"
-			#include "wiki/species/vulpkanin.dm"
-			#include "wiki/species/xenochimera.dm"
-			#include "wiki/species/zaddat.dm"
-			#include "wiki/species/zorren.dm"
-			#include "wiki/species/custom.dm"
-		),
-		"Factions" = list(
-			#include "wiki/factions/eshui.dm"
-			#include "wiki/factions/solgov.dm"
-			#include "wiki/factions/nt.dm"
-			#include "wiki/factions/syndicate.dm"
-			#include "wiki/factions/vesper.dm"
-			#include "wiki/factions/blackhole.dm"
-		),
-	)
+	var/static/list/wiki_pages
 
 /obj/item/outpost_wiki/proc/open_wiki(mob/user)
 	change_page(user)
 
 /obj/item/outpost_wiki/Initialize(mapload)
 	. = ..()
+	if(!wiki_pages)
+		wiki_pages = list(
+			"Setting" = list(
+				#include "wiki/setting/primer.dm"
+				#include "wiki/setting/recent.dm"
+				#include "wiki/setting/solgovlaw.dm"
+				#include "wiki/setting/localarea.dm"
+				#include "wiki/setting/muriki.dm"
+				#include "wiki/setting/outpost21.dm"
+				#include "wiki/setting/outpost22.dm"
+				#include "wiki/setting/outpost18.dm"
+				#include "wiki/setting/nifpro.dm"
+			),
+			"Gameplay" = list(
+				#include "wiki/gameplay/basics.dm"
+				#include "wiki/gameplay/resleeving.dm"
+				#include "wiki/gameplay/positronic.dm"
+				#include "wiki/gameplay/rank.dm"
+			),
+			"Species" = list(
+				#include "wiki/species/akula.dm"
+				#include "wiki/species/alrune.dm"
+				#include "wiki/species/altevian.dm"
+				#include "wiki/species/diona.dm"
+				#include "wiki/species/humans.dm"
+				#include "wiki/species/nevrean.dm"
+				#include "wiki/species/promethean.dm"
+				#include "wiki/species/rapala.dm"
+				#include "wiki/species/sergal.dm"
+				#include "wiki/species/shadekin.dm"
+				#include "wiki/species/skrell.dm"
+				#include "wiki/species/tajara.dm"
+				#include "wiki/species/teshari.dm"
+				#include "wiki/species/unathi.dm"
+				#include "wiki/species/vox.dm"
+				#include "wiki/species/vulpkanin.dm"
+				#include "wiki/species/xenochimera.dm"
+				#include "wiki/species/zaddat.dm"
+				#include "wiki/species/zorren.dm"
+				#include "wiki/species/custom.dm"
+			),
+			"Factions" = list(
+				#include "wiki/factions/eshui.dm"
+				#include "wiki/factions/solgov.dm"
+				#include "wiki/factions/nt.dm"
+				#include "wiki/factions/syndicate.dm"
+				#include "wiki/factions/vesper.dm"
+				#include "wiki/factions/blackhole.dm"
+			),
+		)
 	if(!index_html)
 		index_html = {"<html>
 		<head>

@@ -46,13 +46,13 @@
 <p>[station_rank_guide(/obj/item/clothing/accessory/rank_eshui/commissioned2::rank_level_index)]</p>
 <h3>Jobs:</h3>
 <ul>
-	<li><img class='_rankimage' src=\ref['html/images/outpost/O2.png'] title='[/obj/item/clothing/accessory/rank_eshui/commissioned2::rank]'>: [station_rank_job_list(/obj/item/clothing/accessory/rank_eshui/commissioned1)]</li>
+	<li><img class='_rankimage' src=\ref['html/images/outpost/O2.png'] title='[/obj/item/clothing/accessory/rank_eshui/commissioned2::rank]'>: [station_rank_job_list(/obj/item/clothing/accessory/rank_eshui/commissioned2)]</li>
 </ul>
 
 <h2>"O3" Captain</h2>
 <p>[station_rank_guide(/obj/item/clothing/accessory/rank_eshui/commissioned3::rank_level_index)]</p>
 <ul>
-	<li><img class='_rankimage' src=\ref['html/images/outpost/O3.png'] title='[/obj/item/clothing/accessory/rank_eshui/commissioned3::rank]'>: [station_rank_job_list(/obj/item/clothing/accessory/rank_eshui/commissioned1)]</li>
+	<li><img class='_rankimage' src=\ref['html/images/outpost/O3.png'] title='[/obj/item/clothing/accessory/rank_eshui/commissioned3::rank]'>: [station_rank_job_list(/obj/item/clothing/accessory/rank_eshui/commissioned3)]</li>
 </ul>
 
 <h2>"O4 - O8" Major</h2>
