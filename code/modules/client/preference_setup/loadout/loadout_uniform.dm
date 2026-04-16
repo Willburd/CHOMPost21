@@ -678,7 +678,7 @@
 /datum/gear/suit/job_fed/sec
 	display_name = "fed uniform, sec"
 	path = /obj/item/clothing/suit/storage/fluff/fedcoat
-	allowed_roles = list(JOB_HEAD_OF_SECURITY, JOB_WARDEN, /* JOB_DETECTIVE,*/ JOB_SECURITY_OFFICER, JOB_BLUESHIELD_GUARD, JOB_SECURITY_PILOT) //YW ADDITIONS// Outpost 21 edit - Detective is officer now
+	allowed_roles = list(JOB_HEAD_OF_SECURITY, JOB_WARDEN, /* JOB_DETECTIVE,*/ JOB_SECURITY_OFFICER, JOB_BLUESHIELD_GUARD, JOB_BRIG_PHYSICIAN, JOB_SECURITY_PILOT) //YW ADDITIONS// Outpost 21 edit - Detective is officer now
 	cost = 2
 
 /datum/gear/suit/job_fed/medsci
@@ -699,7 +699,7 @@
 						JOB_CHIEF_MEDICAL_OFFICER,JOB_MEDICAL_DOCTOR,JOB_CHEMIST,JOB_PARAMEDIC,JOB_GENETICIST,
 						JOB_SCIENTIST,JOB_ROBOTICIST,JOB_XENOBIOLOGIST,JOB_XENOBOTANIST,JOB_ATMOSPHERIC_TECHNICIAN,
 						JOB_ENGINEER,JOB_WARDEN, /*JOB_DETECTIVE,*/ JOB_SECURITY_OFFICER,
-						JOB_PATHFINDER,JOB_EXPLORER,JOB_FIELD_MEDIC,JOB_BLUESHIELD_GUARD,JOB_SECURITY_PILOT) //YW ADDITIONS  //CHOMP keep explo // Outpost 21 edit - Detective is officer now
+						JOB_PATHFINDER,JOB_EXPLORER,JOB_FIELD_MEDIC,JOB_BLUESHIELD_GUARD,JOB_SECURITY_PILOT, JOB_BRIG_PHYSICIAN) //YW ADDITIONS  //CHOMP keep explo // Outpost 21 edit - Detective is officer now, Brig medic accessible
 
 /*
 Swimsuits
