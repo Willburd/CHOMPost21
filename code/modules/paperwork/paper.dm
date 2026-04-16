@@ -352,8 +352,8 @@
 		t = replacetext(t, "\[cell\]", "<td>")
 		t = replacetext(t, "\[/cell\]", "")
 		// Outpost 21 edit begin - use our logo
-		t = replacetext(t, "\[logo\]", "<img src=\ref['html/images/eslogo.png']>")
-		t = replacetext(t, "\[eslogo\]", "<img src=\ref['html/images/eslogo.png']>")
+		t = replacetext(t, "\[logo\]", "<img src=\ref['html/images/outpost/eslogo.png']>")
+		t = replacetext(t, "\[eslogo\]", "<img src=\ref['html/images/outpost/eslogo.png']>")
 		t = replacetext(t, "\[ntlogo\]", "<img src=\ref['html/images/ntlogo.png']>")
 		t = replacetext(t, "\[talogo\]", "<img src=\ref['html/images/talonlogo.png']>")
 		t = replacetext(t, "\[sglogo\]", "<img src=\ref['html/images/sglogo.png']>")

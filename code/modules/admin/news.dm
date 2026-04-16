@@ -75,7 +75,7 @@ ADMIN_VERB(modify_server_news, R_SERVER|R_EVENT, "Modify Public News", "Modify t
 	text = replacetext(text, "\[row\]", "</td><tr>")
 	text = replacetext(text, "\[cell\]", "<td>")
 	// outpost 21 begin - extended logos
-	text = replacetext(text, "\[logo\]", "<img src=\ref['html/images/eslogo.png']>")
+	text = replacetext(text, "\[logo\]", "<img src=\ref['html/images/outpost/eslogo.png']>")
 	text = replacetext(text, "\[eslogo\]", "<img src=\ref['html/images/eslogo.png']>")
 	text = replacetext(text, "\[ntlogo\]", "<img src=\ref['html/images/ntlogo.png']>") // Not sure if these would get used but why not
 	text = replacetext(text, "\[talogo\]", "<img src=\ref['html/images/talonlogo.png']>")
@@ -119,8 +119,8 @@ ADMIN_VERB(modify_server_news, R_SERVER|R_EVENT, "Modify Public News", "Modify t
 	text = replacetext(text, "</td><tr>", "\[row\]")
 	text = replacetext(text, "<td>", "\[cell\]")
 	// Outpost 21 edit begin - Extended logos
-	text = replacetext(text, "<img src =\ref['html/images/eslogo.png']>", "\[logo\]")
-	text = replacetext(text, "<img src =\ref['html/images/eslogo.png']>", "\[eslogo\]")
+	text = replacetext(text, "<img src =\ref['html/images/outpost/eslogo.png']>", "\[logo\]")
+	text = replacetext(text, "<img src =\ref['html/images/outpost/eslogo.png']>", "\[eslogo\]")
 	text = replacetext(text, "<img src =\ref['html/images/ntlogo.png']>", "\[ntlogo\]") // Not sure if these would get used but why not
 	text = replacetext(text, "<img src=\ref['html/images/talonlogo.png']>", "\[talogo\]")
 	text = replacetext(text, "<img src =\ref['html/images/sglogo.png']>", "\[sglogo\]")
