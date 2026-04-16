@@ -76,7 +76,7 @@ ADMIN_VERB(modify_server_news, R_SERVER|R_EVENT, "Modify Public News", "Modify t
 	text = replacetext(text, "\[cell\]", "<td>")
 	// outpost 21 begin - extended logos
 	text = replacetext(text, "\[logo\]", "<img src=\ref['html/images/outpost/eslogo.png']>")
-	text = replacetext(text, "\[eslogo\]", "<img src=\ref['html/images/eslogo.png']>")
+	text = replacetext(text, "\[eslogo\]", "<img src=\ref['html/images/outpost/eslogo.png']>")
 	text = replacetext(text, "\[ntlogo\]", "<img src=\ref['html/images/ntlogo.png']>") // Not sure if these would get used but why not
 	text = replacetext(text, "\[talogo\]", "<img src=\ref['html/images/talonlogo.png']>")
 	text = replacetext(text, "\[sglogo\]", "<img src=\ref['html/images/sglogo.png']>")

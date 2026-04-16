@@ -184,7 +184,7 @@
 	name = "\improper (E-0) Station Drone"
 	rank = "(E-0) Drone"
 	desc = "A small strip of cloth denoting the rank of E-0, Technical Enlisted. This rank is specific to station bound drones, and has no authority."
-	icon_state = "rank_cadot"
+	icon_state = "rank_drots"
 	rank_level_index = RANK_DRONE
 
 /obj/item/clothing/accessory/rank_eshui/borg
@@ -202,7 +202,7 @@
 	rank_level_index = RANK_AI
 
 // Rank tutorial
-/proc/station_rank_guide(var/rank_index)
+/proc/station_rank_guide(rank_index)
 	switch(rank_index)
 		if(RANK_ENLISTED)
 			return "As a lower enlisted rank you have meager authority on station with low responsibility. You are expected to perform the labor entailed of your job, and not much more."
@@ -238,6 +238,25 @@
 			return "As a drone you have no authority. You are incapable of critical thought, and must perform your laws and designated task as designed."
 
 	return ""
+
+
+/// Get all jobs with a specific rank badge
+/proc/station_rank_job_list(rank_path)
+	var/list/ranked_job_list = list()
+
+	for(var/datum/job/jb in SSjob.occupations)
+		if(jb.rank_pin == rank_path)
+			ranked_job_list += jb.title
+		if(jb.alt_titles)
+			for(var/datum/alt_title/alt in jb.alt_titles)
+				if(alt.rank_pin == rank_path)
+					ranked_job_list += alt.title
+
+	if(!length(ranked_job_list))
+		return "This rank is not playable."
+
+	return english_list(ranked_job_list)
+
 
 #undef RANK_ENLISTED
 #undef RANK_NCO

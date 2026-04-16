@@ -56,3 +56,10 @@ img._wikiimage {
 	min-width: 135px;
 	background-color: rgba(0, 21, 255, 0.06);
 }
+
+img._rankimage {
+	border-style: outset;
+	border-radius: 1;
+	max-width: 32px;
+	min-width: 32px;
+}
