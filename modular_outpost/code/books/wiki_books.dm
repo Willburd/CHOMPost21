@@ -15,6 +15,13 @@
 			"Outpost 21" = 'modular_outpost/code/books/wiki/setting/outpost21.html',
 			"Outpost 22" = 'modular_outpost/code/books/wiki/setting/outpost22.html',
 			"Outpost 18" = 'modular_outpost/code/books/wiki/setting/outpost18.html',
+			"The NIF Incident" = 'modular_outpost/code/books/wiki/setting/nifpro.html',
+		),
+		"Gameplay" = list(
+			"Basics" = 'modular_outpost/code/books/wiki/gameplay/basics.html',
+			"Resleeving" = 'modular_outpost/code/books/wiki/gameplay/resleeving.html',
+			"Positronics" = 'modular_outpost/code/books/wiki/gameplay/positronic.html',
+			"Rank" = 'modular_outpost/code/books/wiki/gameplay/rank.html',
 		),
 		"Species" = list(
 			"Akula" = 'modular_outpost/code/books/wiki/species/akula.html',
@@ -36,12 +43,7 @@
 			"Xenochimera" = 'modular_outpost/code/books/wiki/species/xenochimera.html',
 			"Zaddat" = 'modular_outpost/code/books/wiki/species/zaddat.html',
 			"Zorren" = 'modular_outpost/code/books/wiki/species/zorren.html',
-		),
-		"Gameplay" = list(
-			"Basics" = 'modular_outpost/code/books/wiki/gameplay/basics.html',
-			"Resleeving" = 'modular_outpost/code/books/wiki/gameplay/resleeving.html',
-			"Positronics" = 'modular_outpost/code/books/wiki/gameplay/positronic.html',
-			"Rank" = 'modular_outpost/code/books/wiki/gameplay/rank.html',
+			"Other Exotic Species" = 'modular_outpost/code/books/wiki/species/custom.html',
 		),
 		"Factions" = list(
 			"Eshui" = 'modular_outpost/code/books/wiki/factions/eshui.html',
@@ -71,11 +73,11 @@
 		"}
 		// List of pages
 		for(var/title_text in wiki_pages)
-			index_html += "<h1>[title_text]</h1><ul>"
+			index_html += "<div class='_dimmer'><h1>[title_text]</h1><ul>"
 			var/list/page_list = wiki_pages[title_text]
 			for(var/page_text in page_list)
 				index_html += "<li><a href='byond://?src=[REF(src)];section=[title_text];page=[page_text]'>[page_text]</a></li>"
-			index_html += "</ul>"
+			index_html += "</ul></div><br>"
 		// End
 		index_html += {"
 			</body>

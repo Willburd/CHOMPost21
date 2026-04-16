@@ -419,6 +419,17 @@ About the new airlock wires panel:
 			if(density && arePowerSystemsOn())
 				flick("door_deny", src)
 				playsound(src, denied_sound, 50, 0, 3)
+				// Outpost 21 edit begin - Rare door announcer
+				var/area/in_area = get_area(src)
+				if(secured_wires && prob(10) && world.time >= GLOB.last_outpost_announcer_voice + (20 SECONDS) && area_is_outpost_announcer_valid(in_area))
+					GLOB.last_outpost_announcer_voice = world.time
+					if(prob(90))
+						audible_message("No entry, without authorization.")
+						playsound(src, 'modular_outpost/sound/AI/distant/no_entry.ogg', 45, 0, 0)
+					else
+						audible_message("No matter how many time you press that button, your authorization will not let you through that door.")
+						playsound(src, 'modular_outpost/sound/AI/distant/aggressive_door.ogg', 45, 0, 0)
+				// Outpost 21 edit end
 	return
 
 /obj/machinery/door/airlock/attack_ai(mob/user)

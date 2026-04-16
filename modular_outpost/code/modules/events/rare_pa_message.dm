@@ -44,12 +44,24 @@
 		var/area/in_area = get_area(player)
 		if(!player.client)
 			continue
-		if(!in_area)
+		if(world.time < GLOB.last_outpost_announcer_voice + (20 SECONDS))
 			continue
 		if(prob(30))
 			continue
-		if(in_area.holomap_color == HOLOMAP_AREACOLOR_ARRIVALS || in_area.holomap_color == HOLOMAP_AREACOLOR_CIV || in_area.holomap_color == HOLOMAP_AREACOLOR_ENGINEERING || in_area.holomap_color == HOLOMAP_AREACOLOR_MEDICAL || in_area.holomap_color == HOLOMAP_AREACOLOR_SCIENCE || in_area.holomap_color == HOLOMAP_AREACOLOR_SECURITY || in_area.holomap_color == HOLOMAP_AREACOLOR_COMMAND || in_area.holomap_color == HOLOMAP_AREACOLOR_CARGO)
+		if(area_is_outpost_announcer_valid(in_area))
 			var/sound/our_message = new(message)
 			our_message.volume = 2 * player.client.get_preference_volume_channel(VOLUME_CHANNEL_MASTER)
 			our_message.environment = SOUND_ENVIRONMENT_SEWER_PIPE
 			SEND_SOUND(player, our_message)
+			GLOB.last_outpost_announcer_voice = world.time
+
+
+// Don't spam it
+GLOBAL_VAR_INIT(last_outpost_announcer_voice, 0)
+
+/proc/area_is_outpost_announcer_valid(area/in_area)
+	if(GLOB.current_announcer_voice != ANNOUNCER_VOICE_OUTPOST)
+		return FALSE // We don't want to hear this voice
+	if(!in_area)
+		return FALSE
+	return in_area.holomap_color == HOLOMAP_AREACOLOR_ARRIVALS || in_area.holomap_color == HOLOMAP_AREACOLOR_CIV || in_area.holomap_color == HOLOMAP_AREACOLOR_ENGINEERING || in_area.holomap_color == HOLOMAP_AREACOLOR_MEDICAL || in_area.holomap_color == HOLOMAP_AREACOLOR_SCIENCE || in_area.holomap_color == HOLOMAP_AREACOLOR_SECURITY || in_area.holomap_color == HOLOMAP_AREACOLOR_COMMAND || in_area.holomap_color == HOLOMAP_AREACOLOR_CARGO || in_area.holomap_color == HOLOMAP_AREACOLOR_HALLWAYS || in_area.holomap_color == HOLOMAP_AREACOLOR_HYDROPONICS
