@@ -15,6 +15,7 @@
 			"Outpost 21" = 'modular_outpost/code/books/wiki/setting/outpost21.html',
 			"Outpost 22" = 'modular_outpost/code/books/wiki/setting/outpost22.html',
 			"Outpost 18" = 'modular_outpost/code/books/wiki/setting/outpost18.html',
+			"The NIF Incident" = 'modular_outpost/code/books/wiki/setting/nifpro.html',
 		),
 		"Gameplay" = list(
 			"Basics" = 'modular_outpost/code/books/wiki/gameplay/basics.html',
@@ -42,6 +43,7 @@
 			"Xenochimera" = 'modular_outpost/code/books/wiki/species/xenochimera.html',
 			"Zaddat" = 'modular_outpost/code/books/wiki/species/zaddat.html',
 			"Zorren" = 'modular_outpost/code/books/wiki/species/zorren.html',
+			"Other Exotic Species" = 'modular_outpost/code/books/wiki/species/custom.html',
 		),
 		"Factions" = list(
 			"Eshui" = 'modular_outpost/code/books/wiki/factions/eshui.html',
