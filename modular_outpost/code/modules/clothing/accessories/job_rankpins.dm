@@ -245,15 +245,22 @@
 	var/list/ranked_job_list = list()
 
 	for(var/datum/job/jb in SSjob.occupations)
-		if(jb.rank_pin && jb.rank_pin == rank_path)
+		var/base_job_rank = jb.rank_pin
+		if(base_job_rank && base_job_rank == rank_path)
 			ranked_job_list += jb.title
+
 		if(jb.alt_titles)
 			for(var/atitle in jb.alt_titles)
 				var/datum/alt_title/alt = jb.alt_titles[atitle]
 				if(initial(alt.title) == "GENERIC ALT TITLE") // TEMP
 					stack_trace("Alt title datum does not exist is is misconfigured: [atitle] > [alt]")
 					continue
-				if(initial(alt.rank_pin) && initial(alt.rank_pin) == rank_path)
+
+				if(initial(alt.rank_pin))
+					if(initial(alt.rank_pin) == rank_path)
+						ranked_job_list += initial(alt.title)
+
+				else if(base_job_rank && base_job_rank == rank_path)
 					ranked_job_list += initial(alt.title)
 
 	if(!length(ranked_job_list))
