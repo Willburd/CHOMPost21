@@ -161,6 +161,9 @@
 	category = TRAIT_TYPE_NEUTRAL
 	cost = 0
 
+/datum/trait/neutral/bloodsucker_freeform
+	hidden = TRUE //Base false, this is literally just a neutral version of of the positive bloodsucker trait with no cost and even less downside? Why does this exist?
+
 /////////////////////////////////////////////////////////////////////////////////////////////////
 /// NEGATIVE
 /////////////////////////////////////////////////////////////////////////////////////////////////
@@ -187,9 +190,11 @@
 
 /datum/trait/negative/haemophilia
 	cost = -3 //Base -2. This is ROUGH in gameplay, especially with our traps.
+	banned_species = list(SPECIES_PROMETHEAN, SPECIES_ALRAUNE, SPECIES_DIONA)
 
 /datum/trait/negative/haemophilia_plus
 	cost = -5 //Base -3. This means you die REALLY fast. You can legit die in seconds from a beartrap.
+	banned_species = list(SPECIES_PROMETHEAN, SPECIES_ALRAUNE, SPECIES_DIONA)
 
 /datum/trait/negative/lightweight
 	cost = -3 //Base -2. Combat is a big part, this makes it brutal, and EVERY DIPSHIT walking around on harm intent crushes you under foot.
