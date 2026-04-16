@@ -25,36 +25,42 @@
 	desc = "You're highly allergic to " + REAGENT_TRICORDRAZINE + " and " + REAGENT_TRICORLIDAZE + ", be sure to write that in your medical record! NB: By taking this trait, you acknowledge there is a significant risk your character may suffer a fatal reaction if exposed to this substance."
 	cost = -1
 	allergen = ALLERGEN_TRICORD
+	category = TRAIT_TYPE_NEGATIVE
 
 /datum/trait/neutral/allergy/bicard
 	name = "Allergy: " + REAGENT_BICARIDINE
 	desc = "You're highly allergic to " + REAGENT_BICARIDINE + " and " + REAGENT_BICARIDAZE + ", be sure to write that in your medical record! NB: By taking this trait, you acknowledge there is a significant risk your character may suffer a fatal reaction if exposed to this substance."
 	cost = -1
 	allergen = ALLERGEN_BICARD
+	category = TRAIT_TYPE_NEGATIVE
 
 /datum/trait/neutral/allergy/dylo
 	name = "Allergy: " + REAGENT_ANTITOXIN
 	desc = "You're highly allergic to " + REAGENT_ANTITOXIN + ", be sure to write that in your medical record! NB: By taking this trait, you acknowledge there is a significant risk your character may suffer a fatal reaction if exposed to this substance."
 	cost = -2
 	allergen = ALLERGEN_DYLO
+	category = TRAIT_TYPE_NEGATIVE
 
 /datum/trait/neutral/allergy/spacacillin
 	name = "Allergy: " + REAGENT_SPACEACILLIN
 	desc = "You're highly allergic to " + REAGENT_SPACEACILLIN + ", be sure to write that in your medical record! NB: By taking this trait, you acknowledge there is a significant risk your character may suffer a fatal reaction if exposed to this substance."
 	cost = -1
 	allergen = ALLERGEN_SPACACIL
+	category = TRAIT_TYPE_NEGATIVE
 
 /datum/trait/neutral/allergy/peridaxon
 	name = "Allergy: " + REAGENT_PERIDAXON
 	desc = "You're highly allergic to " + REAGENT_PERIDAXON + ", be sure to write that in your medical record! NB: By taking this trait, you acknowledge there is a significant risk your character may suffer a fatal reaction if exposed to this substance."
 	cost = -2
 	allergen = ALLERGEN_PERIDAX
+	category = TRAIT_TYPE_NEGATIVE
 
 /datum/trait/neutral/allergy/kelotane
 	name = "Allergy: " + REAGENT_KELOTANE
 	desc = "You're highly allergic to " + REAGENT_KELOTANE + ", be sure to write that in your medical record! NB: By taking this trait, you acknowledge there is a significant risk your character may suffer a fatal reaction if exposed to this substance."
 	cost = -1
 	allergen = ALLERGEN_KELOTANE
+	category = TRAIT_TYPE_NEGATIVE
 
 // addiction
 /datum/trait/neutral/addiction_tricord
