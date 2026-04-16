@@ -38,3 +38,8 @@ body {
 div._dimmer {
 	background-color: rgba(0, 0, 0, 0.135);
 }
+
+img._wikiimage {
+	border-style: outset;
+	border-radius: 4;
+}
