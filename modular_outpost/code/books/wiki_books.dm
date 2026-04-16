@@ -54,12 +54,14 @@
 				#include "wiki/species/custom.dm"
 			),
 			"Factions" = list(
+				#include "wiki/factions/blackhole.dm"
+				#include "wiki/factions/clowns.dm"
 				#include "wiki/factions/eshui.dm"
-				#include "wiki/factions/solgov.dm"
 				#include "wiki/factions/nt.dm"
+				#include "wiki/factions/solgov.dm"
 				#include "wiki/factions/syndicate.dm"
 				#include "wiki/factions/vesper.dm"
-				#include "wiki/factions/blackhole.dm"
+				#include "wiki/factions/wizard.dm"
 			),
 		)
 	if(!index_html)

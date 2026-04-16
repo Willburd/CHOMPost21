@@ -252,6 +252,9 @@
 		if(jb.alt_titles)
 			for(var/atitle in jb.alt_titles)
 				var/datum/alt_title/alt = jb.alt_titles[atitle]
+				if(!initial(alt.title)) // TEMP
+					stack_trace("Alt title datum has no title: [atitle] > [alt]")
+					continue
 				if(initial(alt.title) == "GENERIC ALT TITLE") // TEMP
 					stack_trace("Alt title datum does not exist is is misconfigured: [atitle] > [alt]")
 					continue

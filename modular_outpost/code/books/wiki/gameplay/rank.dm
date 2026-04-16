@@ -30,7 +30,7 @@
 
 <h2>"WO1 - WO5" Warrant Officers</h2>
 <p>[station_rank_guide(/obj/item/clothing/accessory/rank_eshui/warrant1::rank_level_index)]</p>
-<p>The individual ranks within warrant officer itself are to allow for other more dangerous or critical roles to overrule the orders of lower ranking warrant officers. For example, a WO3 atmospherics technician refusing to let the chemist enter their department and make medication for patients, because the chemistry lab is currently on fire. Despite both roles in that situation having a technical O1 rank for the purpose of their work, their warrant officer rank decides who has authority when situations conflict.</p>
+<p>The individual ranks within warrant officer itself are to allow for other more dangerous or critical roles to overrule the orders of lower ranking warrant officers. For example, a WO3 atmospherics technician refusing to let the WO1 chemist enter their department and make medication for patients, because the chemistry lab is currently on fire. Despite both roles in that situation having a technical O1 rank for the purpose of their work, their warrant officer rank decides who has authority when situations conflict.</p>
 <h3>Jobs:</h3>
 <ul>
 	<li><img class='_rankimage' src=\ref['html/images/outpost/W1.png'] title='[/obj/item/clothing/accessory/rank_eshui/warrant1::rank]'>: [station_rank_job_list(/obj/item/clothing/accessory/rank_eshui/warrant1)]</li>
@@ -65,19 +65,21 @@
 
 <h2>"O4 - O8" Major</h2>
 <p>[station_rank_guide(/obj/item/clothing/accessory/rank_eshui/commissioned4::rank_level_index)]</p>
+<p>Ranks above captain do not appear during a shift under normal circumstances. While a captain has authority of the surface facility while they are stationed at it. Multiple crew with a captain rank are present at central, as such there are ranks above a captain. Pertaining to levels of authority in the company itself.</p>
+
 <h3>Jobs:</h3>
 <ul>
-	<li><img class='_rankimage' src=\ref['html/images/outpost/O4.png'] title='[/obj/item/clothing/accessory/rank_eshui/commissioned4::rank]'>: This rank is not playable.</li>
-	<li><img class='_rankimage' src=\ref['html/images/outpost/O5.png'] title='[/obj/item/clothing/accessory/rank_eshui/commissioned5::rank]'>: This rank is not playable.</li>
-	<li><img class='_rankimage' src=\ref['html/images/outpost/O6.png'] title='[/obj/item/clothing/accessory/rank_eshui/commissioned6::rank]'>: This rank is not playable.</li>
-	<li><img class='_rankimage' src=\ref['html/images/outpost/O7.png'] title='[/obj/item/clothing/accessory/rank_eshui/commissioned7::rank]'>: This rank is not playable.</li>
-	<li><img class='_rankimage' src=\ref['html/images/outpost/O8.png'] title='[/obj/item/clothing/accessory/rank_eshui/commissioned8::rank]'>: This rank is not playable.</li>
+	<li><img class='_rankimage' src=\ref['html/images/outpost/O4.png'] title='[/obj/item/clothing/accessory/rank_eshui/commissioned4::rank]'>: The major is the highest authority in a central command facility, such as the Central Command Bunker under Outpost 21.</li>
+	<li><img class='_rankimage' src=\ref['html/images/outpost/O5.png'] title='[/obj/item/clothing/accessory/rank_eshui/commissioned5::rank]'>: The commander is responsible for the operation of multiple facilities, and is usually assigned to a specific planet and it's orbital structures.</li>
+	<li><img class='_rankimage' src=\ref['html/images/outpost/O6.png'] title='[/obj/item/clothing/accessory/rank_eshui/commissioned6::rank]'>: A colonel has authority over multiple E-Shui managed planets. Coordinating multiple facilities over several planets and sectors to ensure efficient movement of resources.</li>
+	<li><img class='_rankimage' src=\ref['html/images/outpost/O7.png'] title='[/obj/item/clothing/accessory/rank_eshui/commissioned7::rank]'>: A vice-admiral's authority is not bound to specific planets or facilities, instead they are in charge of E-Shui's small naval fleet of asset protection warships. Rarely concerning themselves with the operation of specific facilities. Their role is largely strategic rather than hands on.</li>
+	<li><img class='_rankimage' src=\ref['html/images/outpost/O8.png'] title='[/obj/item/clothing/accessory/rank_eshui/commissioned8::rank]'>: The admiral of E-Shui is a single position that sits on the board of company directors. They are responsible for all facility and naval assets of the entire company. They answer directly, and only, to the company president. There are no E-Shui ranks beyond this point, and any higher authority would enter into Solgov's governmental jurisdiction and authority over paramilitary corporations.</li>
 </ul>
 
 
 <h1>Provisional Ranks</h1>
 
-<p>Rank explaination basics. TODO</p>
+<p>Under specific circumstances, non-standard crew ranks will be present on shift. The most common form of this is synthetic crew, such as borgs, the AI and drones. As well, in-training command staff also have unique restrictions to their authority. While uncommon, these ranks still have authority that respects the standard rank structure.</p>
 
 <h2>"E5+" Cadet</h2>
 <p>[station_rank_guide(/obj/item/clothing/accessory/rank_eshui/cadet::rank_level_index)]</p>
@@ -85,8 +87,6 @@
 <ul>
 	<li><img class='_rankimage' src=\ref['html/images/outpost/cadot.png'] title='[/obj/item/clothing/accessory/rank_eshui/cadet::rank]'>: [station_rank_job_list(/obj/item/clothing/accessory/rank_eshui/cadet)]</li>
 </ul>
-
-<h1>Synthetic Ranks</h1>
 
 <h2>"E0" Drones</h2>
 <p>[station_rank_guide(/obj/item/clothing/accessory/rank_eshui/drone::rank_level_index)]</p>

@@ -18,4 +18,6 @@
 
 <p>Being along the border of Solgov, Skrell, and Unathi space, Mukiri experiences occasional diplomatic tensions between the rivaling galactic factions. Especially with the Skrell Hegemony's often less than ethical methods of influencing its neighbours.</p>
 
+<p>Due to the ongoing terraforming process, the planet's weather is highly enzymatic. Dissolving organic materials on contact. It is advised to treat outdoor travel as if it was an EVA activity, and inform others if you need to step outside in case of any accidents.</p>
+
 "},
