@@ -3470,18 +3470,6 @@
 	icon_state = "dark"
 	},
 /area/syndicate_mothership)
-"hn" = (
-/obj/structure/table/rack,
-/obj/item/melee/energy/sword/color,
-/obj/item/melee/energy/sword/color,
-/obj/item/melee/energy/sword/color,
-/obj/item/melee/energy/sword/color,
-/obj/item/melee/energy/sword/color,
-/obj/item/melee/energy/sword/color,
-/turf/unsimulated/floor{
-	icon_state = "dark"
-	},
-/area/syndicate_mothership)
 "ho" = (
 /obj/structure/table/rack,
 /obj/item/melee/energy/sword/ionic_rapier/lance,
@@ -57402,15 +57390,15 @@ mN
 mN
 mN
 mN
+bu
+bu
+bu
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
+bu
+bu
+bu
 mN
 mN
 mN
@@ -59945,7 +59933,7 @@ sg
 kQ
 hp
 ho
-hn
+kQ
 hf
 hf
 sg
