@@ -252,11 +252,15 @@
 		if(jb.alt_titles)
 			for(var/atitle in jb.alt_titles)
 				var/datum/alt_title/alt = jb.alt_titles[atitle]
+				if(!alt) // Slot removals
+					continue
 				if(!initial(alt.title)) // TEMP
 					stack_trace("Alt title datum has no title: [atitle] > [alt]")
 					continue
 				if(initial(alt.title) == "GENERIC ALT TITLE") // TEMP
 					stack_trace("Alt title datum does not exist is is misconfigured: [atitle] > [alt]")
+					continue
+				if(initial(alt.rank_pin) == 0) // disabled rank explictly
 					continue
 
 				if(initial(alt.rank_pin))

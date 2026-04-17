@@ -63,7 +63,7 @@
 	<li><img class='_rankimage' src=\ref['html/images/outpost/O3.png'] title='[/obj/item/clothing/accessory/rank_eshui/commissioned3::rank]'>: [station_rank_job_list(/obj/item/clothing/accessory/rank_eshui/commissioned3)]</li>
 </ul>
 
-<h2>"O4 - O8" Major</h2>
+<h2>"O4 - O8" Central Command</h2>
 <p>[station_rank_guide(/obj/item/clothing/accessory/rank_eshui/commissioned4::rank_level_index)]</p>
 <p>Ranks above captain do not appear during a shift under normal circumstances. While a captain has authority of the surface facility while they are stationed at it. Multiple crew with a captain rank are present at central, as such there are ranks above a captain. Pertaining to levels of authority in the company itself.</p>
 
