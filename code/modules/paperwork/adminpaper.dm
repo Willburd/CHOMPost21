@@ -50,7 +50,7 @@
 		logo = "html/images/ntlogo.png"
 	//Outpost 21 Edit/Add
 	else if(logo == "Eshui")
-		logo = "html/images/eslogo.png"
+		logo = "html/images/outpost/eslogo.png"
 	else if(logo == "Paragon")
 		logo = "html/images/pclogo.png"
 	else if(logo == "Talon")

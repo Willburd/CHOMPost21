@@ -431,7 +431,7 @@
 /datum/gear/suit/wintercoat/security
 	display_name = "winter coat, security"
 	path = /obj/item/clothing/suit/storage/hooded/wintercoat/security
-	allowed_roles = list(JOB_SECURITY_OFFICER, JOB_HEAD_OF_SECURITY, JOB_WARDEN /*, JOB_DETECTIVE*/, JOB_BLUESHIELD_GUARD, JOB_SECURITY_PILOT) //YW ADDITIONS // Outpost 21 edit - Detective is officer now
+	allowed_roles = list(JOB_SECURITY_OFFICER, JOB_HEAD_OF_SECURITY, JOB_WARDEN /*, JOB_DETECTIVE*/, JOB_BLUESHIELD_GUARD, JOB_BRIG_PHYSICIAN, JOB_SECURITY_PILOT) //YW ADDITIONS // Outpost 21 edit - Detective is officer now
 	show_roles = FALSE
 
 /datum/gear/suit/wintercoat/security/hos
@@ -684,13 +684,13 @@
 /datum/gear/suit/snowsuit/security
 	display_name = "snowsuit, security"
 	path = /obj/item/clothing/suit/storage/hooded/wintercoat/snowsuit/security // CHOMPEdit
-	allowed_roles = list(JOB_SECURITY_OFFICER, JOB_HEAD_OF_SECURITY, JOB_WARDEN /*, JOB_DETECTIVE*/, JOB_BLUESHIELD_GUARD, JOB_SECURITY_PILOT) //YW ADDITIONS // Outpost 21 edit - Detective is officer now
+	allowed_roles = list(JOB_SECURITY_OFFICER, JOB_HEAD_OF_SECURITY, JOB_WARDEN /*, JOB_DETECTIVE*/, JOB_BLUESHIELD_GUARD, JOB_BRIG_PHYSICIAN, JOB_SECURITY_PILOT) //YW ADDITIONS // Outpost 21 edit - Detective is officer now, Brig medic accessible
 	show_roles = FALSE
 
 /datum/gear/suit/snowsuit/medical
 	display_name = "snowsuit, medical"
 	path = /obj/item/clothing/suit/storage/hooded/wintercoat/snowsuit/medical // CHOMPEdit
-	allowed_roles = list(JOB_MEDICAL_DOCTOR,JOB_CHIEF_MEDICAL_OFFICER,JOB_CHEMIST,JOB_PARAMEDIC,JOB_GENETICIST, JOB_PSYCHIATRIST, JOB_SEARCH_AND_RESCUE) // CHOMPEdit
+	allowed_roles = list(JOB_MEDICAL_DOCTOR,JOB_CHIEF_MEDICAL_OFFICER,JOB_CHEMIST,JOB_PARAMEDIC,JOB_GENETICIST, JOB_PSYCHIATRIST, JOB_BRIG_PHYSICIAN, JOB_SEARCH_AND_RESCUE) // CHOMPEdit // Outpost 21 edit - Brig medic accessible
 	show_roles = FALSE
 
 /datum/gear/suit/snowsuit/science

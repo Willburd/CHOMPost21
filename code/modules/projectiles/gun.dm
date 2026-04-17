@@ -819,8 +819,6 @@
 
 	return ..()
 
-/obj/item/gun/dropped(mob/living/user) // Ditto as above, we remove the HUD. Pending porting TGMC code to clean up this fucking nightmare of spaghetti.
-	if(user.hud_used) // Outpost 21 edit - runtime fix for simple mobs that pick up guns
-		user.hud_used.remove_ammo_hud(user, src)
-
+/obj/item/gun/dropped(mob/user, equipping, slot) // Ditto as above, we remove the HUD. Pending porting TGMC code to clean up this fucking nightmare of spaghetti.
+	user.hud_used?.remove_ammo_hud(user, src) // Outpost 21 edit - runtime fix for simple mobs that pick up guns
 	..()

@@ -1,18 +1,29 @@
 h1 {
-	font-size: 18px;
+	font-size: 24px;
 	margin: 15px 0px 5px;
 	background-color: rgba(0, 0, 0, 0.151);
 }
 
 h2 {
-	font-size: 15px;
+	font-size: 20px;
 	margin: 15px 0px 5px;
 	background-color: rgba(0, 0, 0, 0.058);
 }
 
 h3 {
-	font-size: 13px;
+	font-size: 17px;
 	margin: 15px 0px 5px;
+}
+
+body {
+	font-size: 15px;
+	font-family: Verdana;
+	text-shadow: #ffffff4d 1px 0 5px;
+	background-image: linear-gradient(
+		to bottom,
+		rgb(163, 216, 216),
+		rgb(103, 163, 185)
+	);
 }
 
 li {
@@ -29,12 +40,26 @@ ol {
 	padding: 0px 15px;
 }
 
-body {
-	font-size: 14px;
-	font-family: Verdana;
-	background-color: rgb(163, 216, 216);
+p {
+	text-indent: 24px;
 }
 
 div._dimmer {
 	background-color: rgba(0, 0, 0, 0.135);
+}
+
+img._wikiimage {
+	border-style: outset;
+	border-radius: 4;
+	float: right;
+	max-width: 135px;
+	min-width: 135px;
+	background-color: rgba(0, 21, 255, 0.06);
+}
+
+img._rankimage {
+	border-style: outset;
+	border-radius: 1;
+	max-width: 32px;
+	min-width: 32px;
 }
