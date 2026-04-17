@@ -157,3 +157,6 @@
 2026-04-15:
   Diana:
   - code_imp: Removed origin_tech
+2026-04-16:
+  Will:
+  - rscadd: Station announcer voice now supports customization without extensive editing
