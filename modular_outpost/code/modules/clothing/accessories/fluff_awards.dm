@@ -114,3 +114,33 @@ badges
 	name = "representative's badge"
 	desc = "A leather-backed plastic badge with a variety of information printed on it. Belongs to a representative of E-Shui Central Command."
 	badge_string = "E-Shui Central Command"
+
+/*****
+Internal confinement medals
+*****/
+
+/obj/item/clothing/accessory/medal/internal_confinement_medal
+	name = "internal confinement grade 1 medal"
+	desc = "vorny medal."
+	icon = 'modular_outpost/icons/inventory/accessory/item.dmi'
+	icon_state = "esic_1"
+
+/obj/item/clothing/accessory/medal/internal_confinement_medal/g2
+	name = "internal confinement grade 2 medal"
+	icon_state = "esic_2"
+
+/obj/item/clothing/accessory/medal/internal_confinement_medal/g3
+	name = "internal confinement grade 3 medal"
+	icon_state = "esic_3"
+
+/obj/item/clothing/accessory/medal/internal_confinement_medal/enhanced
+	name = "enhanced internal confinement medal"
+	icon_state = "esic_4"
+
+/obj/item/clothing/accessory/medal/internal_confinement_medal/enhanced/g2
+	name = "enhanced internal confinement grade 2 medal"
+	icon_state = "esic_5"
+
+/obj/item/clothing/accessory/medal/internal_confinement_medal/enhanced/g3
+	name = "enhanced internal confinement grade 3 medal"
+	icon_state = "esic_6"
