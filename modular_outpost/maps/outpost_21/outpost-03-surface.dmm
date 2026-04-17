@@ -20569,6 +20569,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/effect/landmark/start,
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/dark,
 /area/muriki/arriveelev)
 "brS" = (
@@ -41119,7 +41120,6 @@
 /obj/effect/landmark{
 	name = "JoinLateElevator"
 	},
-/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/dark,
 /area/muriki/arriveelev)
 "ibA" = (
