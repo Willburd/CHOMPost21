@@ -120,27 +120,32 @@ Internal confinement medals
 *****/
 
 /obj/item/clothing/accessory/medal/internal_confinement_medal
-	name = "internal confinement grade 1 medal"
-	desc = "vorny medal."
+	name = "internal confinement medal - bronze"
+	desc = "A small pin denoting the crewmember as a safe predator for internal confinement or 'belly brigging'. The bronze is awarded for grades 1-4."
 	icon = 'modular_outpost/icons/inventory/accessory/item.dmi'
 	icon_state = "esic_1"
 
 /obj/item/clothing/accessory/medal/internal_confinement_medal/g2
-	name = "internal confinement grade 2 medal"
+	name = "internal confinement medal - silver"
+	desc = "A small pin denoting the crewmember as a safe predator for internal confinement or 'belly brigging'. The silver is awarded for grades 5-15."
 	icon_state = "esic_2"
 
 /obj/item/clothing/accessory/medal/internal_confinement_medal/g3
-	name = "internal confinement grade 3 medal"
+	name = "internal confinement medal - gold"
+	desc = "A small pin denoting the crewmember as a safe predator for internal confinement or 'belly brigging'. The gold is awarded for grade 16, or 'indefinite.' Making the award the first true mark of a safe predator, this is awarded by default to all FBPs and Borgs."
 	icon_state = "esic_3"
 
 /obj/item/clothing/accessory/medal/internal_confinement_medal/enhanced
-	name = "enhanced internal confinement medal"
+	name = "enhanced internal confinement medal - ruby"
+	desc = "A small pin awarded to crew with exceptional control of their insides, marking them as exceptionally safe to remain within during 'belly brigging.' The Ruby is awarded for enhanced grades 1-4."
 	icon_state = "esic_4"
 
 /obj/item/clothing/accessory/medal/internal_confinement_medal/enhanced/g2
-	name = "enhanced internal confinement grade 2 medal"
+	name = "enhanced internal confinement medal - sapphire"
+	desc = "A small pin awarded to crew with exceptional control of their insides, marking them as exceptionally safe to remain within during 'belly brigging.' The Sapphire is awarded for enhanced grades 5-15."
 	icon_state = "esic_5"
 
 /obj/item/clothing/accessory/medal/internal_confinement_medal/enhanced/g3
-	name = "enhanced internal confinement grade 3 medal"
+	name = "enhanced internal confinement medal - emerald"
+	desc = "A small pin awarded to crew with exceptional control of their insides, marking them as exceptionally safe to remain within during 'belly brigging.' The Emerald is awarded for enhanced grade 16, or indefinite. Making them one of the safest places you can stay, possibly even safer than staying outside of them."
 	icon_state = "esic_6"
