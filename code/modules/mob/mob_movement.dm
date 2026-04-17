@@ -265,6 +265,10 @@
 	if(my_mob.pulledby || my_mob.buckled) // Wheelchair driving!
 		if(isspace(loc))
 			return // No wheelchair driving in space
+		// Outpost 21 edit begin - Skateboard
+		if(istype(my_mob.buckled, /obj/item/skateboard))
+			return my_mob.buckled.relaymove(my_mob, direct)
+		// Outpost 21 edit end
 		if(istype(my_mob.pulledby, /obj/structure/bed/chair/wheelchair))
 			total_delay += 3
 		else if(istype(my_mob.buckled, /obj/structure/bed/chair/wheelchair))
