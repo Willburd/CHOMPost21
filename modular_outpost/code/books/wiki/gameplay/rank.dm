@@ -5,6 +5,8 @@
 
 <p>In rare situations, someone's rank may be temporarily stripped. Such as when a crew member becomes wanted for a crime. A command officer murdering crew in cold blood directly in front of a lower ranking security officer, is not immune from arrest because of their rank alone. Rank is not a shield of immunity for one's actions. With rank comes the responsibility to wield it; And when all else fails, an upset warrant officer can always fax central that the captain is being stupid.</p>
 
+<p>While higher ranking crew are expected to organize and compromise with other officers of the same rank to achieve station goals. There may be situations where the station will become paralyzed by multiple crew of the same authority arguing. In these situations, conflicts are resolved by department priority of: Command, medical, security, engineering, research, and finally cargo.</p>
+
 <h2>"E1 - E4" Lower Enlisted</h2>
 <p>[station_rank_guide(/obj/item/clothing/accessory/rank_eshui::rank_level_index)]</p>
 <p>There is very little reason for ranks this low to give orders to other crew, except in situations of preserving safety or emergency. Such as an engineering technician or scientist ordering crew out of an area due to an anomaly or atmospheric hazard.</p>
