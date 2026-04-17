@@ -5760,6 +5760,7 @@
 #include "modular_outpost\code\game\objects\effects\landmarks.dm"
 #include "modular_outpost\code\game\objects\effects\mines.dm"
 #include "modular_outpost\code\game\objects\effects\portals.dm"
+#include "modular_outpost\code\game\objects\effects\skateboard.dm"
 #include "modular_outpost\code\game\objects\effects\spiders.dm"
 #include "modular_outpost\code\game\objects\effects\step_triggers.dm"
 #include "modular_outpost\code\game\objects\effects\map_effects\atmoglands.dm"
