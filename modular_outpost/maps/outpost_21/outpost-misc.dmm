@@ -574,6 +574,9 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/tram)
+"bu" = (
+/turf/simulated/wall/rplastitanium,
+/area/ninja_dojo/dojo)
 "bv" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -1101,6 +1104,11 @@
 	phoron = 21.8366
 	},
 /area/syndicate_mothership)
+"cH" = (
+/obj/item/clothing/suit/kimono,
+/obj/item/clothing/under/qipao_colorable,
+/turf/simulated/floor/tiled/dark,
+/area/ninja_dojo/dojo)
 "cI" = (
 /obj/machinery/light{
 	dir = 4
@@ -1210,6 +1218,9 @@
 	},
 /turf/simulated/shuttle/plating,
 /area/planet/clown)
+"cS" = (
+/turf/simulated/floor/tiled/dark,
+/area/ninja_dojo/dojo)
 "cT" = (
 /obj/structure/window/reinforced,
 /obj/machinery/door/blast/shutters{
@@ -1350,6 +1361,10 @@
 	phoron = 21.8366
 	},
 /area/syndicate_mothership)
+"dh" = (
+/obj/structure/bed/padded,
+/turf/simulated/floor/tiled/dark,
+/area/ninja_dojo/dojo)
 "di" = (
 /obj/machinery/porta_turret/stationary/syndie{
 	req_access = list(150)
@@ -1358,6 +1373,12 @@
 	icon_state = "dark"
 	},
 /area/syndicate_mothership)
+"dj" = (
+/obj/structure/toilet/prison{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark,
+/area/ninja_dojo/dojo)
 "dk" = (
 /obj/structure/window/phoronreinforced,
 /obj/structure/grille{
@@ -1463,6 +1484,9 @@
 	},
 /turf/unsimulated/floor/steel,
 /area/tdome/tdomeobserve)
+"dv" = (
+/turf/simulated/shuttle/floor/voidcraft/dark/turfpack/airless,
+/area/shuttle/ninja)
 "dw" = (
 /obj/structure/table/rack,
 /obj/item/storage/backpack/saddlebag_common/robust,
@@ -1566,6 +1590,12 @@
 	icon_state = "dark"
 	},
 /area/syndicate_mothership)
+"dF" = (
+/obj/machinery/door/airlock/silver{
+	req_one_access = list(150)
+	},
+/turf/simulated/floor/tiled/dark,
+/area/ninja_dojo/dojo)
 "dG" = (
 /obj/structure/table/alien,
 /obj/machinery/microwave/advanced,
@@ -1574,12 +1604,43 @@
 	phoron = 21.8366
 	},
 /area/syndicate_mothership)
+"dH" = (
+/turf/simulated/wall/acaciawood,
+/area/ninja_dojo/dojo)
+"dI" = (
+/obj/machinery/door/morgue{
+	dir = 2
+	},
+/turf/simulated/floor/carpet/graycarpet,
+/area/ninja_dojo/dojo)
+"dJ" = (
+/obj/effect/forcefield{
+	desc = "You can't get in. Heh.";
+	invisibility = 60;
+	layer = 1;
+	name = "Blocker"
+	},
+/turf/simulated/floor/carpet/graycarpet,
+/area/ninja_dojo/dojo)
 "dK" = (
 /obj/effect/landmark{
 	name = "tdome1"
 	},
 /turf/unsimulated/floor/techfloor_grid,
 /area/tdome/tdome1)
+"dL" = (
+/turf/simulated/floor/carpet/graycarpet,
+/area/ninja_dojo/dojo)
+"dM" = (
+/obj/machinery/door/airlock/silver{
+	req_one_access = list(108)
+	},
+/turf/simulated/floor/carpet/graycarpet,
+/area/ninja_dojo/dojo)
+"dN" = (
+/obj/structure/simple_door/birchwood,
+/turf/simulated/floor/carpet/graycarpet,
+/area/ninja_dojo/dojo)
 "dO" = (
 /obj/structure/bed/double/padded,
 /obj/item/bedsheet/rddouble,
@@ -1588,17 +1649,52 @@
 	icon_state = "vault"
 	},
 /area/wizard_station)
+"dP" = (
+/obj/structure/table/darkglass,
+/turf/simulated/floor/carpet/graycarpet,
+/area/ninja_dojo/dojo)
+"dQ" = (
+/turf/simulated/floor/wood/acacia,
+/area/ninja_dojo/dojo)
+"dR" = (
+/obj/structure/shuttle/engine/propulsion{
+	icon_state = "propulsion_r";
+	dir = 8
+	},
+/turf/simulated/shuttle/plating/airless/carry,
+/area/shuttle/ninja)
 "dS" = (
 /turf/unsimulated/wall/fakeglass{
 	dir = 1
 	},
 /area/syndicate_mothership)
+"dT" = (
+/obj/structure/shuttle/engine/heater{
+	dir = 8
+	},
+/obj/structure/window/maintenance_panel{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	dir = 4
+	},
+/obj/structure/window/maintenance_panel{
+	dir = 1
+	},
+/turf/simulated/shuttle/wall/voidcraft/green,
+/area/shuttle/ninja)
 "dU" = (
 /mob/living/simple_mob/vore/wolf/direwolf/syndicate/black,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
 /area/syndicate_mothership)
+"dV" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	dir = 9
+	},
+/turf/simulated/shuttle/wall/voidcraft/green,
+/area/shuttle/ninja)
 "dW" = (
 /obj/effect/floor_decal/corner/white{
 	dir = 6
@@ -1610,6 +1706,9 @@
 	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/shuttle/mercenary)
+"dX" = (
+/turf/simulated/shuttle/wall/voidcraft/green,
+/area/shuttle/ninja)
 "dY" = (
 /obj/structure/table/alien,
 /obj/item/storage/box/glasses/square{
@@ -1621,6 +1720,33 @@
 	phoron = 21.8366
 	},
 /area/syndicate_mothership)
+"dZ" = (
+/turf/simulated/floor/tiled,
+/area/ninja_dojo/dojo)
+"ea" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/fuel{
+	dir = 8
+	},
+/obj/structure/fuel_port/heavy{
+	dir = 1;
+	pixel_y = -32
+	},
+/obj/item/tank/phoron{
+	pixel_x = 8
+	},
+/obj/structure/table/darkglass,
+/obj/item/perfect_tele{
+	pixel_x = -8;
+	pixel_y = 5
+	},
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/shuttle/ninja)
+"eb" = (
+/obj/machinery/atmospherics/pipe/tank/phoron/full{
+	dir = 8
+	},
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/shuttle/ninja)
 "ec" = (
 /turf/unsimulated/floor{
 	icon_state = "lino"
@@ -1681,6 +1807,39 @@
 	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/shuttle/mercenary)
+"ek" = (
+/obj/structure/cable/orange{
+	icon_state = "0-4"
+	},
+/obj/machinery/power/apc/alarms_hidden{
+	pixel_y = -24;
+	nightshift_setting = 3
+	},
+/obj/item/storage/firstaid/adv{
+	pixel_x = 8;
+	pixel_y = 8
+	},
+/obj/item/storage/firstaid/adv{
+	pixel_x = 8;
+	pixel_y = 8
+	},
+/obj/item/storage/firstaid/combat{
+	pixel_x = -8;
+	pixel_y = 8
+	},
+/obj/item/storage/firstaid/combat{
+	pixel_x = -8;
+	pixel_y = 8
+	},
+/obj/item/storage/pouch/ifak,
+/obj/item/storage/pouch/ifak,
+/obj/item/cell/slime{
+	pixel_x = -11;
+	pixel_y = -4
+	},
+/obj/structure/table/darkglass,
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/shuttle/ninja)
 "el" = (
 /obj/effect/map_effect/interval/effect_emitter/smoke/fire,
 /turf/simulated/floor/indoorrocks,
@@ -1734,6 +1893,21 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
+"eq" = (
+/obj/machinery/power/rtg/advanced,
+/obj/item/stock_parts/micro_laser/hyper,
+/obj/item/stock_parts/capacitor/hyper,
+/obj/structure/cable/orange{
+	icon_state = "0-8"
+	},
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/shuttle/ninja)
+"er" = (
+/obj/machinery/computer/ship/sensors{
+	dir = 1
+	},
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/shuttle/ninja)
 "es" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel,
 /obj/machinery/door/firedoor/glass,
@@ -1743,6 +1917,30 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/mercenary)
+"et" = (
+/obj/machinery/door/airlock/glass_external{
+	req_one_access = list(150)
+	},
+/turf/simulated/floor/tiled,
+/area/ninja_dojo/dojo)
+"eu" = (
+/obj/machinery/door/airlock/glass_external{
+	req_one_access = list(150)
+	},
+/obj/structure/fans/hardlight/colorable{
+	color = "#1cb52d"
+	},
+/turf/simulated/floor/tiled,
+/area/ninja_dojo/dojo)
+"ev" = (
+/obj/machinery/door/airlock/glass_external{
+	req_one_access = list(150)
+	},
+/obj/structure/fans/hardlight/colorable{
+	color = "#1cb52d"
+	},
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/shuttle/ninja)
 "ew" = (
 /turf/unsimulated/floor{
 	icon_state = "freezerfloor"
@@ -1804,6 +2002,17 @@
 	icon_state = "vault"
 	},
 /area/wizard_station)
+"eB" = (
+/obj/machinery/recharger/wallcharger{
+	pixel_x = 4;
+	pixel_y = 23
+	},
+/obj/machinery/recharger/wallcharger{
+	pixel_x = 4;
+	pixel_y = 32
+	},
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/shuttle/ninja)
 "eC" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel,
 /obj/effect/floor_decal/corner/lightgrey/border{
@@ -1868,6 +2077,10 @@
 /obj/machinery/atmospherics/pipe/manifold4w/hidden,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
+"eH" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel,
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/shuttle/ninja)
 "eI" = (
 /turf/unsimulated/beach/coastline,
 /area/beach)
@@ -1920,6 +2133,16 @@
 /obj/item/flag,
 /turf/simulated/floor/indoorrocks,
 /area/specialty/hell)
+"eQ" = (
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/shuttle/ninja)
+"eR" = (
+/obj/machinery/light/floortube{
+	dir = 1
+	},
+/obj/machinery/light/floortube,
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/shuttle/ninja)
 "eS" = (
 /obj/item/reagent_containers/chem_canister/chlorine{
 	pixel_x = -7;
@@ -2017,6 +2240,16 @@
 /obj/effect/floor_decal/industrial/bot_outline/red,
 /turf/simulated/floor/reinforced,
 /area/shuttle/mercenary)
+"eZ" = (
+/obj/effect/landmark{
+	name = "ninjastart"
+	},
+/obj/item/clothing/mask/balaclava,
+/obj/structure/bed/chair/bay/shuttle{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/shuttle/ninja)
 "fa" = (
 /obj/structure/grille{
 	desc = "A flimsy lattice of metal rods, with screws to secure it to the floor. This grille seems slightly more sturdy than others probably reinforced to withstand the wildlife.";
@@ -2054,6 +2287,32 @@
 	icon_state = "vault"
 	},
 /area/wizard_station)
+"fc" = (
+/obj/machinery/computer/ship/helm{
+	dir = 8;
+	pixel_x = 4
+	},
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/shuttle/ninja)
+"fd" = (
+/obj/machinery/computer/teleporter{
+	dir = 2
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel,
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/shuttle/ninja)
+"fe" = (
+/obj/machinery/teleport/station,
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/shuttle/ninja)
+"ff" = (
+/obj/machinery/teleport/hub,
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/shuttle/ninja)
+"fg" = (
+/obj/machinery/computer/ship/engines,
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/shuttle/ninja)
 "fh" = (
 /turf/unsimulated/floor{
 	icon_state = "dark"
@@ -2072,9 +2331,49 @@
 /obj/structure/bed/double,
 /turf/simulated/floor/carpet/geo,
 /area/planet/clown)
+"fk" = (
+/obj/machinery/computer/ship/navigation,
+/obj/structure/mirror/raider{
+	pixel_x = 32
+	},
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/shuttle/ninja)
+"fl" = (
+/obj/structure/shuttle/engine/heater{
+	dir = 8
+	},
+/obj/structure/window/maintenance_panel{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	dir = 4
+	},
+/obj/structure/window/maintenance_panel,
+/turf/simulated/shuttle/wall/voidcraft/green,
+/area/shuttle/ninja)
+"fm" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	dir = 10
+	},
+/turf/simulated/shuttle/wall/voidcraft/green,
+/area/shuttle/ninja)
+"fn" = (
+/obj/machinery/door/airlock/silver{
+	req_one_access = list(150)
+	},
+/turf/simulated/floor/carpet/graycarpet,
+/area/ninja_dojo/dojo)
 "fo" = (
 /turf/simulated/wall/rplastitanium,
 /area/shuttle/mercenary)
+"fp" = (
+/obj/item/clothing/under/qipao2_colorable,
+/obj/item/clothing/under/qipao,
+/obj/item/clothing/under/qipao/red,
+/obj/item/clothing/under/qipao/white,
+/obj/structure/closet/cabinet,
+/turf/simulated/floor/wood/acacia,
+/area/ninja_dojo/dojo)
 "fq" = (
 /obj/structure/table/standard,
 /obj/item/clothing/glasses/sunglasses/prescription,
@@ -2120,6 +2419,16 @@
 	icon_state = "fakewindows2"
 	},
 /area/syndicate_mothership)
+"fv" = (
+/obj/structure/table/darkglass,
+/obj/item/material/sword/katana{
+	default_material = "durasteel"
+	},
+/obj/item/material/sword/katana{
+	default_material = "durasteel"
+	},
+/turf/simulated/floor/wood/acacia,
+/area/ninja_dojo/dojo)
 "fw" = (
 /obj/structure/table/standard,
 /turf/unsimulated/floor{
@@ -2136,6 +2445,34 @@
 	},
 /turf/simulated/floor/reinforced,
 /area/shuttle/mercenary)
+"fy" = (
+/obj/structure/table/darkglass,
+/obj/item/material/sword/katana{
+	default_material = "plasteel"
+	},
+/obj/item/material/sword/katana{
+	default_material = "plasteel"
+	},
+/turf/simulated/floor/wood/acacia,
+/area/ninja_dojo/dojo)
+"fz" = (
+/obj/item/clothing/suit/kimono/blue,
+/obj/item/clothing/suit/kimono/earth,
+/obj/item/clothing/suit/kimono/green,
+/obj/item/clothing/suit/kimono/orange,
+/obj/item/clothing/suit/kimono/pink,
+/obj/item/clothing/suit/kimono/purple,
+/obj/item/clothing/suit/kimono/red,
+/obj/item/clothing/suit/kimono/violet,
+/obj/item/clothing/suit/kimono/yellow,
+/obj/structure/closet/cabinet,
+/turf/simulated/floor/wood/acacia,
+/area/ninja_dojo/dojo)
+"fA" = (
+/obj/item/clothing/suit/kamishimo,
+/obj/structure/closet/cabinet,
+/turf/simulated/floor/wood/acacia,
+/area/ninja_dojo/dojo)
 "fB" = (
 /obj/structure/closet,
 /obj/item/clothing/under/tactical{
@@ -2179,6 +2516,12 @@
 /obj/effect/landmark/start/clown,
 /turf/simulated/floor/carpet/geo,
 /area/planet/clown)
+"fE" = (
+/obj/structure/table/darkglass,
+/obj/item/material/sword/katana,
+/obj/item/material/sword/katana,
+/turf/simulated/floor/wood/acacia,
+/area/ninja_dojo/dojo)
 "fF" = (
 /obj/structure/table/rack,
 /obj/item/universal_translator/ear,
@@ -16677,7 +17020,7 @@
 	},
 /area/syndicate_mothership)
 "Ja" = (
-/obj/structure/reagent_dispensers/fueltank/high,
+/obj/structure/reagent_dispensers/poly_acid_tank,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -16761,9 +17104,6 @@
 	icon_state = "vault"
 	},
 /area/wizard_station)
-"JR" = (
-/turf/simulated/shuttle/wall,
-/area/syndicate_mothership)
 "JT" = (
 /obj/structure/undies_wardrobe,
 /turf/unsimulated/floor{
@@ -16771,23 +17111,6 @@
 	icon_state = "vault"
 	},
 /area/wizard_station)
-"JU" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/turf/simulated/shuttle/plating,
-/area/syndicate_mothership)
-"JW" = (
-/turf/simulated/shuttle/wall/hard_corner,
-/area/syndicate_mothership)
 "JX" = (
 /obj/structure/table/standard,
 /turf/unsimulated/floor{
@@ -16901,27 +17224,6 @@
 	icon_state = "steel"
 	},
 /area/syndicate_mothership)
-"KH" = (
-/obj/structure/table/steel_reinforced,
-/obj/structure/mirror,
-/turf/simulated/shuttle/floor{
-	icon_state = "floor_red"
-	},
-/area/syndicate_mothership)
-"KI" = (
-/obj/structure/table/steel_reinforced,
-/obj/item/clothing/mask/balaclava/tactical,
-/obj/item/clothing/mask/balaclava,
-/turf/simulated/shuttle/floor{
-	icon_state = "floor_red"
-	},
-/area/syndicate_mothership)
-"KK" = (
-/obj/structure/undies_wardrobe,
-/turf/simulated/shuttle/floor{
-	icon_state = "floor_red"
-	},
-/area/syndicate_mothership)
 "KL" = (
 /obj/structure/closet/wardrobe/yellow,
 /turf/unsimulated/floor{
@@ -16946,19 +17248,6 @@
 	},
 /turf/simulated/floor/carpet/geo,
 /area/planet/clown)
-"KU" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/turf/simulated/shuttle/plating,
-/area/syndicate_mothership)
 "KV" = (
 /obj/machinery/computer/pod{
 	id = "thunderdome";
@@ -16966,11 +17255,6 @@
 	},
 /turf/unsimulated/floor/steel,
 /area/tdome/tdomeadmin)
-"KX" = (
-/turf/simulated/shuttle/floor{
-	icon_state = "floor_red"
-	},
-/area/syndicate_mothership)
 "Lc" = (
 /obj/item/paper,
 /turf/simulated/floor/indoorrocks,
@@ -16989,17 +17273,6 @@
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
-	},
-/area/syndicate_mothership)
-"Le" = (
-/obj/structure/bed/chair{
-	dir = 1
-	},
-/obj/effect/landmark{
-	name = "ninjastart"
-	},
-/turf/simulated/shuttle/floor{
-	icon_state = "floor_red"
 	},
 /area/syndicate_mothership)
 "Lm" = (
@@ -17038,16 +17311,6 @@
 /obj/machinery/computer/security/telescreen,
 /turf/unsimulated/floor/steel,
 /area/tdome/tdomeobserve)
-"Ls" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/turf/simulated/shuttle/plating,
-/area/syndicate_mothership)
 "Lt" = (
 /obj/machinery/door/blast/shutters{
 	dir = 8;
@@ -17128,17 +17391,6 @@
 /obj/machinery/light,
 /turf/simulated/floor/carpet/geo,
 /area/planet/clown)
-"Mk" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/turf/simulated/shuttle/plating,
-/area/syndicate_mothership)
 "Ml" = (
 /obj/machinery/door/airlock/multi_tile/glass{
 	req_access = list(160)
@@ -17153,24 +17405,6 @@
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
-	},
-/area/syndicate_mothership)
-"MD" = (
-/obj/machinery/computer/teleporter,
-/turf/simulated/shuttle/floor{
-	icon_state = "floor_red"
-	},
-/area/syndicate_mothership)
-"ME" = (
-/obj/machinery/teleport/station,
-/turf/simulated/shuttle/floor{
-	icon_state = "floor_red"
-	},
-/area/syndicate_mothership)
-"MG" = (
-/obj/machinery/teleport/hub,
-/turf/simulated/shuttle/floor{
-	icon_state = "floor_red"
 	},
 /area/syndicate_mothership)
 "MI" = (
@@ -17194,13 +17428,6 @@
 /turf/unsimulated/floor{
 	icon_state = "white"
 	},
-/area/syndicate_mothership)
-"MK" = (
-/obj/structure/shuttle/engine/heater,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/turf/simulated/floor/airless,
 /area/syndicate_mothership)
 "MM" = (
 /obj/structure/table/standard,
@@ -17257,27 +17484,11 @@
 	},
 /turf/unsimulated/floor/techfloor_grid,
 /area/tdome/tdome1)
-"Nn" = (
-/obj/structure/shuttle/engine/propulsion{
-	icon_state = "propulsion_l"
-	},
-/turf/space,
-/area/syndicate_mothership)
 "Nq" = (
 /obj/structure/table/alien,
 /obj/item/toy/figure/clown,
 /turf/simulated/floor/carpet/geo,
 /area/planet/clown)
-"Nr" = (
-/obj/structure/shuttle/engine/propulsion,
-/turf/space,
-/area/syndicate_mothership)
-"Nu" = (
-/obj/structure/shuttle/engine/propulsion{
-	icon_state = "propulsion_r"
-	},
-/turf/space,
-/area/syndicate_mothership)
 "ND" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
 	frequency = 1381;
@@ -17555,6 +17766,7 @@
 /area/shuttle/trade/centcom)
 "Pk" = (
 /obj/machinery/light,
+/obj/structure/reagent_dispensers/lube_tank,
 /turf/simulated/floor/carpet/geo,
 /area/planet/clown)
 "Pn" = (
@@ -57352,15 +57564,15 @@ mN
 mN
 mN
 mN
+bu
+dJ
+bu
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
+bu
+dJ
+bu
 mN
 mN
 mN
@@ -57514,15 +57726,15 @@ mN
 mN
 mN
 mN
+bu
+dL
+bu
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
+bu
+dL
+bu
 mN
 mN
 mN
@@ -57676,15 +57888,15 @@ mN
 mN
 mN
 mN
+bu
+dL
+bu
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
+bu
+dL
+bu
 mN
 mN
 mN
@@ -57837,17 +58049,17 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+bu
+bu
+dM
+bu
+bu
+bu
+bu
+bu
+dM
+bu
+bu
 mN
 mN
 mN
@@ -57999,21 +58211,21 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+bu
+dH
+dN
+dH
+dH
+dH
+dH
+dH
+dN
+dH
+bu
+bu
+bu
+bu
+bu
 mN
 mN
 mN
@@ -58157,25 +58369,25 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+bu
+bu
+bu
+bu
+bu
+dH
+dL
+dL
+dL
+dL
+dL
+dL
+dL
+dH
+bu
+cS
+cS
+cH
+bu
 mN
 mN
 mN
@@ -58319,25 +58531,25 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+bu
+fz
+dQ
+fp
+bu
+dH
+dL
+dQ
+dQ
+dQ
+dQ
+dQ
+dL
+dI
+dF
+cS
+cS
+cS
+bu
 mN
 mN
 mN
@@ -58481,25 +58693,25 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+bu
+fA
+dQ
+dQ
+bu
+dH
+dL
+dQ
+dQ
+dQ
+dQ
+dQ
+dL
+dH
+bu
+dj
+cS
+dh
+bu
 mN
 mN
 mN
@@ -58643,25 +58855,25 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+bu
+dQ
+dQ
+dQ
+fn
+dN
+dL
+dQ
+dQ
+dQ
+dQ
+dQ
+dL
+dH
+bu
+bu
+bu
+bu
+bu
 mN
 mN
 mN
@@ -58805,25 +59017,25 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+bu
+dQ
+dQ
+dQ
+bu
+dH
+dL
+dQ
+dQ
+dQ
+dQ
+dQ
+dL
+dH
+bu
+cS
+cS
+cH
+bu
 mN
 mN
 mN
@@ -58967,25 +59179,25 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+bu
+fE
+fy
+fv
+bu
+dH
+dL
+dQ
+dQ
+dQ
+dQ
+dQ
+dL
+dI
+dF
+cS
+cS
+cS
+bu
 mN
 mN
 mN
@@ -59129,25 +59341,25 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+bu
+bu
+bu
+bu
+bu
+dH
+dP
+dL
+dL
+dL
+dL
+dL
+dP
+dH
+bu
+dj
+cS
+dh
+bu
 mN
 mN
 mN
@@ -59295,21 +59507,21 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+bu
+dH
+dH
+dH
+dH
+dN
+dH
+dH
+dH
+dH
+bu
+bu
+bu
+bu
+bu
 mN
 mN
 mN
@@ -59457,17 +59669,17 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+bu
+bu
+bu
+bu
+bu
+et
+bu
+bu
+bu
+bu
+bu
 mN
 mN
 mN
@@ -59622,11 +59834,11 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
+bu
+dZ
+dZ
+dZ
+bu
 mN
 mN
 mN
@@ -59784,11 +59996,11 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
+bu
+dZ
+dZ
+dZ
+bu
 mN
 mN
 mN
@@ -59946,11 +60158,11 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
+bu
+bu
+eu
+bu
+bu
 mN
 mN
 mN
@@ -60108,11 +60320,11 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
+dR
+dX
+ev
+dX
+dR
 mN
 mN
 mN
@@ -60266,19 +60478,19 @@ mN
 mN
 mN
 mN
+dv
+dv
 mN
 mN
+fl
+dX
+eB
+dX
+dT
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+dv
+dv
 mN
 mN
 mN
@@ -60429,17 +60641,17 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+dv
+dv
+dv
+fm
+fd
+eH
+ea
+dV
+dv
+dv
+dv
 mN
 mN
 mN
@@ -60592,15 +60804,15 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+dv
+dv
+dX
+fe
+eQ
+eb
+dX
+dv
+dv
 mN
 mN
 mN
@@ -60755,13 +60967,13 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+dv
+dX
+ff
+eQ
+ek
+dX
+dv
 mN
 mN
 mN
@@ -60918,11 +61130,11 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
+dX
+fg
+eR
+eq
+dX
 mN
 mN
 mN
@@ -61080,11 +61292,11 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
+dX
+fk
+eZ
+er
+dX
 mN
 mN
 mN
@@ -61242,11 +61454,11 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
+dX
+dX
+fc
+dX
+dX
 mN
 mN
 mN
@@ -61405,9 +61617,9 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
+dX
+dX
+dX
 mN
 mN
 mN
@@ -78641,15 +78853,15 @@ mN
 mN
 mN
 mN
-JR
-JW
-KU
-Ls
-Ls
-Mk
-JW
-JW
-JR
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
 mN
 mN
 mN
@@ -78803,15 +79015,15 @@ mN
 mN
 mN
 mN
-JW
-KH
-KX
-KX
-KX
-KX
-MD
-MK
-Nn
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
 mN
 mN
 mN
@@ -78965,15 +79177,15 @@ mN
 mN
 mN
 mN
-JU
-KI
-Le
-KX
-KX
-KX
-ME
-MK
-Nr
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
 mN
 mN
 mN
@@ -79127,15 +79339,15 @@ mN
 mN
 mN
 mN
-JW
-KK
-KX
-KX
-KX
-KX
-MG
-MK
-Nu
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
 mN
 mN
 mN
@@ -79289,15 +79501,15 @@ mN
 mN
 mN
 mN
-JR
-JW
-KU
-Ls
-Ls
-Mk
-JW
-JW
-JR
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
 mN
 mN
 mN
