@@ -150,7 +150,6 @@
 #include "code\__defines\mobs.dm"
 #include "code\__defines\mobs_yw.dm"
 #include "code\__defines\movement.dm"
-#include "code\__defines\nifsoft.dm"
 #include "code\__defines\obj_flags.dm"
 #include "code\__defines\objects.dm"
 #include "code\__defines\observer.dm"
