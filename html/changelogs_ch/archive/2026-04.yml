@@ -166,3 +166,6 @@
   - bugfix: Gloves will no longer delete whatever it's put over.
   - bugfix: Changeling armblades properly pass their message, now.
   - code_imp: Gets rid of some X as mob / X as obj
+2026-04-18:
+  CHOMPStation2StaffMirrorBot:
+  - bugfix: Fixed throwing items/mobs at yourself not triggering spont vore
