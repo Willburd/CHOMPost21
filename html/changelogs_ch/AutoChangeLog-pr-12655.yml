@@ -1,0 +1,4 @@
+author: "FluffMedic"
+delete-after: True
+changes:
+  - bugfix: "The Tyr AC base being lightless and the problematic anomaly upon it was swapped"
