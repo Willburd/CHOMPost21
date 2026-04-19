@@ -45,6 +45,7 @@
 	flags = AREA_BLOCK_INSTANT_BUILDING | RAD_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT | AREA_BLOCK_PHASE_SHIFT | BLUE_SHIELDED
 	requires_power = FALSE
 	color_grading = COLORTINT_DIM
+	base_turf = /turf/simulated/floor/plating
 
 /area/vehicle_interior/heavyarmor_carrier_A
 	name = "\improper Carrier A"
