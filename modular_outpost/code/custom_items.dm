@@ -302,7 +302,7 @@
 // Tools, wares, and weapons, all for mapping at fair places. - These are for custom map easter eggs or secrets.
 /obj/item/material/twohanded/sledgehammer/gravity/ed //Renamed and given flavor text for our poor boi, so he can keep the unique description on lockbox saves when he gets back from deployment.
 	name = "Ed'reith's Hammer"
-	desc = "A specialized sledgehammer, dented and damaged from some great battle. Engraved on the handle is 'Ed'reith Foley'. The handle's leather is surprisingly light and strong, and bears a strangely sweet scent like mangoes and grapes. A soft, energic hum can be felt through the haft when its held."
+	desc = "A specialized sledgehammer, dented and damaged from some great battle. Engraved on the handle is 'Ed'reith Foley'. The handle's leather is surprisingly light and strong, with bits of black fur sticking through the leather, and bears a strangely sweet scent like mangoes and grapes, with a harsher undertone of garlic and dog fur. A soft, energic hum can be felt through the haft when its held. It has a small golden earring dangling from just underneath the head."
 	default_material = MAT_PLASTITANIUM
 	applies_material_colour = FALSE
 	slowdown = 0.4 //default is 1.2
