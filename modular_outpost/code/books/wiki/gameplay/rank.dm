@@ -52,7 +52,7 @@
 
 <h2>"O2" Department Heads</h2>
 <p>[station_rank_guide(/obj/item/clothing/accessory/rank_eshui/commissioned2::rank_level_index)]</p>
-<p>Officer 2 is the authority of a department head. You are expected to have a near full understanding of your department, and responsible for the actions of that department. Like O1, its authority is no conditional, and heads may order all enlisted, warrant officers, and officer 1 crew to perform actions.</p>
+<p>Officer 2 is the authority of a department head. You are expected to have a near full understanding of your department, and responsible for the actions of that department. Like O1, its authority is not conditional, and heads may order all enlisted, warrant officers, and officer 1 crew to perform actions.</p>
 <h3>Jobs:</h3>
 <ul>
 	<li><img class='_rankimage' src=\ref['html/images/outpost/O2.png'] title='[/obj/item/clothing/accessory/rank_eshui/commissioned2::rank]'>: [station_rank_job_list(/obj/item/clothing/accessory/rank_eshui/commissioned2)]</li>
