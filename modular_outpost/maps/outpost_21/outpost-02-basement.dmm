@@ -20386,6 +20386,11 @@
 	pixel_x = 26
 	},
 /obj/item/reagent_containers/hypospray/science,
+/obj/item/implanter/blood_sugar,
+/obj/item/implanter/blood_sugar,
+/obj/item/implanter/blood_sugar,
+/obj/item/implanter/blood_sugar,
+/obj/item/implanter/blood_sugar,
 /turf/simulated/floor/tiled/dark,
 /area/medical/biostorage)
 "aKO" = (
