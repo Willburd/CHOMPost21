@@ -7,7 +7,7 @@
 			to_chat(user, span_notice("You need more fuel to complete this task."))
 			return
 		playsound(src, WT.usesound, 50, 1)
-		if(do_after(user, 5 SECONDS))
+		if(do_after(user, 5 SECONDS, target = src))
 			visible_message("\The [user] welds \the [src] shut.")
 			qdel(src)
 			return
