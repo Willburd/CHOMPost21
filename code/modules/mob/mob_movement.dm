@@ -373,14 +373,16 @@
 //Important to note: world.time is always in deciseconds. Higher tickrates mean more subdivisions of world.time (20fps = 0.5, 40fps = 0.25)
 /client
 	var/is_leaving_belly = FALSE
-	var/incorporeal_speed = 0.5
+	var/incorporeal_speed = MIN_INCORP_DELAY
 
+/* Outpost 21 edit - Disable this, we all use a set speed
 /client/verb/set_incorporeal_speed()
 	set category = "OOC.Game Settings"
 	set name = "Set Incorporeal Speed"
 
-	var/input = tgui_input_number(usr, "Set an incorporeal movement delay between 0 (fastest) and 5 (slowest)", "Incorporeal movement speed", (0.5/world.tick_lag), 5, 0)
+	var/input = tgui_input_number(usr, "Set an incorporeal movement delay between [MIN_INCORP_DELAY] (fastest) and [MAX_INCORP_DELAY] (slowest)", "Incorporeal movement speed", (MIN_INCORP_DELAY/world.tick_lag), MAX_INCORP_DELAY, MIN_INCORP_DELAY)
 	incorporeal_speed = input * world.tick_lag
+*/
 
 ///Process_Incorpmove
 ///Called by client/Move()

@@ -118,6 +118,7 @@
 #include "code\__defines\html_assistant.dm"
 #include "code\__defines\hud.dm"
 #include "code\__defines\implant.dm"
+#include "code\__defines\incorporal_move_op.dm"
 #include "code\__defines\input.dm"
 #include "code\__defines\instruments.dm"
 #include "code\__defines\integrated_circuits.dm"
