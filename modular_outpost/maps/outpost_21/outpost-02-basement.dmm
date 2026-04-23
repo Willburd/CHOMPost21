@@ -24605,16 +24605,6 @@
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 9
 	},
-/obj/item/reagent_containers/food/snacks/carpmeat,
-/obj/item/reagent_containers/food/snacks/carpmeat,
-/obj/item/reagent_containers/food/snacks/carpmeat,
-/obj/item/reagent_containers/food/snacks/carpmeat,
-/obj/item/reagent_containers/food/snacks/carpmeat,
-/obj/item/reagent_containers/food/snacks/carpmeat,
-/obj/item/reagent_containers/food/snacks/carpmeat,
-/obj/item/reagent_containers/food/snacks/carpmeat,
-/obj/item/reagent_containers/food/snacks/carpmeat,
-/obj/item/reagent_containers/food/snacks/carpmeat,
 /obj/structure/disposalpipe/trunk{
 	dir = 4
 	},
@@ -24622,15 +24612,6 @@
 	dir = 4;
 	pixel_x = -32
 	},
-/obj/item/reagent_containers/food/snacks/xenomeat/spidermeat,
-/obj/item/reagent_containers/food/snacks/xenomeat/spidermeat,
-/obj/item/reagent_containers/food/snacks/xenomeat/spidermeat,
-/obj/item/reagent_containers/food/snacks/xenomeat/spidermeat,
-/obj/item/reagent_containers/food/snacks/xenomeat/spidermeat,
-/obj/item/reagent_containers/food/snacks/xenomeat/spidermeat,
-/obj/item/reagent_containers/food/snacks/xenomeat/spidermeat,
-/obj/item/reagent_containers/food/snacks/xenomeat/spidermeat,
-/obj/item/reagent_containers/food/snacks/xenomeat/spidermeat,
 /turf/simulated/floor/tiled/freezer/cold,
 /area/medical/surgery_storage)
 "aSP" = (
