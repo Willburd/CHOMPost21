@@ -190,6 +190,6 @@
 	return
 
 // Outpost 21 edit(port) begin - Disposal pipe dropping
-obj/structure/disposalholder/AllowDrop()
+/obj/structure/disposalholder/AllowDrop()
 	return TRUE
 // Outpost 21 edit end
