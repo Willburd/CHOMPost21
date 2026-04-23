@@ -188,3 +188,8 @@
 /obj/structure/disposalholder/proc/vent_gas(atom/location)
 	location.assume_air(gas)  // vent all gas to turf
 	return
+
+// Outpost 21 edit(port) begin - Disposal pipe dropping
+obj/structure/disposalholder/AllowDrop()
+	return TRUE
+// Outpost 21 edit end
