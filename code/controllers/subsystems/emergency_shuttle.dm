@@ -255,7 +255,7 @@ SUBSYSTEM_DEF(emergency_shuttle)
 	return shuttle && (shuttle.direction && shuttle.moving_status != SHUTTLE_IDLE)
 
 /datum/controller/subsystem/emergency_shuttle/proc/get_status_panel_eta()
-	if(online())
+	if(online() && !admin_override_mode) // Outpost 21 edit - Lets not end the round
 		if(shuttle.has_arrive_time())
 			var/timeleft = SSemergency_shuttle.estimate_arrival_time()
 			return "ETA-[(timeleft / 60) % 60]:[add_zero(num2text(timeleft % 60), 2)]"
