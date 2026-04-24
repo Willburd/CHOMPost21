@@ -2167,14 +2167,14 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/shuttle/trawler)
 "acU" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
+	},
+/obj/structure/disposalpipe/junction{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/security)
@@ -4613,6 +4613,7 @@
 	name = "Toilet"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/sanitorium)
 "agC" = (
@@ -7992,6 +7993,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/door/firedoor/glass,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/old_cargo/white,
 /area/muriki/bathroom/sciupper)
 "amL" = (
@@ -8378,9 +8380,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
+/obj/structure/disposalpipe/junction{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/rnd/lockers)
@@ -9082,6 +9083,9 @@
 /obj/effect/floor_decal/steeldecal/steel_decals3{
 	dir = 8
 	},
+/obj/structure/disposalpipe/trunk{
+	dir = 2
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/virology)
 "aph" = (
@@ -9222,6 +9226,9 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals3{
 	dir = 10
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/bridge)
@@ -9951,12 +9958,14 @@
 "arF" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/disposalpipe/segment,
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
 /obj/structure/cable/green{
 	icon_state = "1-4"
+	},
+/obj/structure/disposalpipe/junction{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/steel,
 /area/bridge/hallway)
@@ -9972,6 +9981,9 @@
 	},
 /obj/effect/mine/n2o{
 	camo_net = 1
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/crew_quarters/captain)
@@ -11292,6 +11304,9 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/hologram/holopad,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/main)
 "auS" = (
@@ -13263,6 +13278,9 @@
 /obj/machinery/light/small{
 	dir = 4
 	},
+/obj/structure/disposalpipe/trunk{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/securitypub)
 "azY" = (
@@ -13286,6 +13304,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/security)
 "aAa" = (
@@ -13297,6 +13318,10 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 4
+	},
+/obj/structure/disposalpipe/junction{
+	dir = 1;
+	icon_state = "pipe-j2"
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/security)
@@ -13366,6 +13391,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/door/firedoor/border_only,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/securitypub)
 "aAi" = (
@@ -13767,6 +13793,7 @@
 	dir = 9
 	},
 /obj/structure/ladder/top_hatch,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/securitypub)
 "aAS" = (
@@ -18876,6 +18903,47 @@
 /obj/machinery/elevator_warning,
 /turf/simulated/floor/tiled/dark,
 /area/hallway/secondary/exit)
+"aSp" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled,
+/area/hallway/primary/aft)
+"aSq" = (
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/lightgrey/bordercorner{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled,
+/area/hallway/primary/aft)
+"aSr" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/hologram/holopad,
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled,
+/area/hallway/primary/aft)
+"aSs" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled,
+/area/hallway/primary/aft)
 "aSz" = (
 /obj/structure/table/glass,
 /obj/item/tool/wrench,
@@ -19048,6 +19116,9 @@
 /obj/effect/floor_decal/steeldecal/steel_decals3{
 	dir = 5
 	},
+/obj/structure/disposalpipe/trunk{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/engineering)
 "aVx" = (
@@ -19103,16 +19174,16 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 4
 	},
-/obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
-	},
 /obj/structure/cable/green{
 	icon_state = "2-8"
 	},
 /obj/machinery/firealarm{
 	dir = 4;
 	pixel_x = 26
+	},
+/obj/structure/disposalpipe/junction{
+	dir = 1;
+	icon_state = "pipe-j2"
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/kitchen)
@@ -19505,6 +19576,9 @@
 	},
 /obj/effect/floor_decal/corner/white{
 	dir = 10
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/bridge)
@@ -20104,9 +20178,9 @@
 	pixel_x = 28;
 	pixel_y = 27
 	},
-/obj/structure/disposalpipe/junction{
-	dir = 8;
-	icon_state = "pipe-j2"
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/muriki/research/showers)
@@ -22164,6 +22238,7 @@
 	dir = 8;
 	pixel_x = -32
 	},
+/obj/structure/disposalpipe/trunk,
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/sciupper)
 "bRe" = (
@@ -22717,6 +22792,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/green,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/muriki/bathroom/virology)
 "bZC" = (
@@ -23428,6 +23504,9 @@
 	name = "Cargo Lockdown"
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/maintenance/cargomid)
 "cnn" = (
@@ -23632,6 +23711,9 @@
 	dir = 8
 	},
 /obj/structure/ladder/top_hatch,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/muriki/bathroom/sciupper)
 "cpv" = (
@@ -23746,6 +23828,7 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 6
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/main)
 "crk" = (
@@ -24353,6 +24436,9 @@
 	icon_state = "1-8"
 	},
 /obj/effect/catwalk_plated,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor,
 /area/engineering/foyer)
 "cDC" = (
@@ -24434,7 +24520,7 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/obj/structure/disposalpipe/segment{
+/obj/structure/disposalpipe/junction{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/kafel_full,
@@ -25522,6 +25608,7 @@
 /obj/effect/floor_decal/corner/blue{
 	dir = 1
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/white,
 /area/medical/virology/quarantine_quarantine)
 "cWJ" = (
@@ -25745,6 +25832,9 @@
 /obj/machinery/camera/motion/command{
 	c_tag = "COM - Colony Director's Office (M)";
 	dir = 1
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/captain)
@@ -26018,9 +26108,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
 	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/muriki/research/showers)
 "dfw" = (
@@ -26071,6 +26158,9 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/firedoor/glass,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/muriki/bathroom/engsingle)
 "dgg" = (
@@ -26179,6 +26269,10 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals3{
 	dir = 9
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/bridge)
@@ -26791,6 +26885,9 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals3{
 	dir = 8
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 2
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/virology)
@@ -27811,6 +27908,7 @@
 /obj/effect/floor_decal/spline/plain/corner{
 	dir = 1
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/carpet/tealcarpet,
 /area/crew_quarters/captain)
 "dKl" = (
@@ -28998,6 +29096,7 @@
 /obj/effect/floor_decal/corner/blue{
 	dir = 1
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/white,
 /area/medical/virology/quarantine_quarantine)
 "efa" = (
@@ -29254,6 +29353,9 @@
 /obj/effect/floor_decal/steeldecal/steel_decals3{
 	dir = 10
 	},
+/obj/structure/disposalpipe/trunk{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/sanitorium)
 "ekd" = (
@@ -29310,6 +29412,9 @@
 	},
 /obj/machinery/firealarm{
 	pixel_y = 26
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/muriki/bathroom/cargo)
@@ -29370,6 +29475,9 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
 	dir = 4
 	},
 /turf/simulated/floor/carpet/tealcarpet,
@@ -30158,7 +30266,8 @@
 	dir = 4
 	},
 /obj/structure/disposalpipe/segment{
-	dir = 4
+	dir = 1;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled/steel,
 /area/hallway/primary/aft)
@@ -30528,6 +30637,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/medical)
 "eGb" = (
@@ -30637,6 +30750,7 @@
 /obj/effect/floor_decal/corner/blue{
 	dir = 1
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/white,
 /area/medical/virology/quarantine_quarantine)
 "eGG" = (
@@ -30712,8 +30826,9 @@
 /obj/effect/floor_decal/steeldecal/steel_decals3{
 	dir = 10
 	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
+/obj/structure/disposalpipe/junction{
+	dir = 4;
+	icon_state = "pipe-j2"
 	},
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/muriki/bathroom/sciupper)
@@ -30947,6 +31062,9 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals3{
 	dir = 4
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/kitchen)
@@ -31919,6 +32037,10 @@
 	dir = 6
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals3,
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/kitchen)
 "fed" = (
@@ -32190,12 +32312,12 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
 /obj/effect/floor_decal/steeldecal/steel_decals3,
 /obj/effect/floor_decal/steeldecal/steel_decals3{
 	dir = 6
+	},
+/obj/structure/disposalpipe/junction{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/securitypub)
@@ -32366,6 +32488,9 @@
 	},
 /obj/machinery/keycard_auth{
 	pixel_y = -24
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/captain)
@@ -32683,6 +32808,10 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 9
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/cargomid)
 "frJ" = (
@@ -32981,6 +33110,7 @@
 	dir = 1
 	},
 /obj/effect/landmark/redspaceexit,
+/obj/structure/disposalpipe/trunk,
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/sciupper)
 "fzJ" = (
@@ -33491,6 +33621,7 @@
 /obj/effect/floor_decal/corner/black{
 	dir = 8
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/white,
 /area/medical/virology/quarantine_quarantine)
 "fGM" = (
@@ -35237,6 +35368,9 @@
 	name = "Station Intercom (General)";
 	pixel_y = 21
 	},
+/obj/structure/disposalpipe/trunk{
+	dir = 2
+	},
 /turf/simulated/floor/tiled/freezer,
 /area/muriki/bathroom/captain)
 "glV" = (
@@ -35360,6 +35494,10 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals3{
 	dir = 10
+	},
+/obj/structure/disposalpipe/junction{
+	dir = 4;
+	icon_state = "pipe-j2"
 	},
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/muriki/bathroom/cargo)
@@ -35493,12 +35631,6 @@
 	},
 /area/quartermaster/office)
 "gqJ" = (
-/obj/effect/floor_decal/steeldecal/steel_decals3{
-	dir = 5
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals3{
-	dir = 4
-	},
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/muriki/research/showers)
 "gqN" = (
@@ -36165,7 +36297,6 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/steeldecal/steel_decals3,
 /obj/effect/floor_decal/steeldecal/steel_decals3{
 	dir = 6
@@ -36173,6 +36304,9 @@
 /obj/machinery/light_switch{
 	pixel_x = 24;
 	pixel_y = 28
+	},
+/obj/structure/disposalpipe/junction{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/engineering)
@@ -36422,10 +36556,6 @@
 /turf/simulated/wall,
 /area/quartermaster/foyer)
 "gIm" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
-	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 8
 	},
@@ -36434,6 +36564,10 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 1
+	},
+/obj/structure/disposalpipe/junction{
+	dir = 2;
+	icon_state = "pipe-j2"
 	},
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/muriki/bathroom/cargo)
@@ -37849,6 +37983,9 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/engineering/foyer)
 "heL" = (
@@ -38319,6 +38456,9 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/carpet/tealcarpet,
 /area/crew_quarters/captain)
 "hmt" = (
@@ -38475,11 +38615,11 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
 /obj/effect/landmark{
 	name = "lightsout"
+	},
+/obj/structure/disposalpipe/junction{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/securitypub)
@@ -38956,6 +39096,9 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
+/obj/structure/disposalpipe/trunk{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/muriki/bathroom/engsingle)
 "hws" = (
@@ -39361,6 +39504,10 @@
 	pixel_x = -30;
 	pixel_y = 9
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/main)
 "hDf" = (
@@ -39425,6 +39572,10 @@
 	dir = 6
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals3,
+/obj/structure/disposalpipe/junction{
+	dir = 2;
+	icon_state = "pipe-j2"
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/bar)
 "hDI" = (
@@ -40380,6 +40531,9 @@
 /obj/effect/floor_decal/steeldecal/steel_decals3{
 	dir = 9
 	},
+/obj/structure/disposalpipe/junction{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/bridge)
 "hRn" = (
@@ -40681,6 +40835,9 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/engineering/foyer)
@@ -41795,6 +41952,7 @@
 /obj/effect/floor_decal/corner/blue{
 	dir = 1
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/white,
 /area/medical/virology/quarantine_quarantine)
 "ima" = (
@@ -41984,6 +42142,10 @@
 /obj/structure/extinguisher_cabinet{
 	pixel_x = 5;
 	pixel_y = -32
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/sanitorium)
@@ -42595,6 +42757,7 @@
 /obj/effect/floor_decal/steeldecal/steel_decals3{
 	dir = 9
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/virology)
 "iya" = (
@@ -43280,14 +43443,14 @@
 /obj/effect/floor_decal/steeldecal/steel_decals3{
 	dir = 10
 	},
+/obj/structure/disposalpipe/junction{
+	dir = 4;
+	icon_state = "pipe-j2"
+	},
 /obj/machinery/light_switch{
 	dir = 1;
 	pixel_x = -27;
 	pixel_y = -29
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/muriki/bathroom/sciupper)
@@ -43921,6 +44084,9 @@
 /obj/effect/floor_decal/steeldecal/steel_decals3{
 	dir = 8
 	},
+/obj/structure/disposalpipe/trunk{
+	dir = 2
+	},
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/muriki/bathroom/cargo)
 "iUl" = (
@@ -43932,6 +44098,10 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/main)
@@ -44227,6 +44397,9 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/engineering/foyer)
@@ -44674,11 +44847,7 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/structure/disposalpipe/sortjunction{
-	dir = 1;
-	name = "Arrivals";
-	sortType = "Arrivals"
-	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/steel,
 /area/hallway/primary/aft)
 "jgV" = (
@@ -45152,9 +45321,12 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
-/obj/structure/disposalpipe/segment,
 /obj/structure/cable/green{
 	icon_state = "1-2"
+	},
+/obj/structure/disposalpipe/sortjunction/bodies/flipped{
+	name = "Septic";
+	sortType = "Septic"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/cargomid)
@@ -45906,6 +46078,10 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/bridge)
 "jxr" = (
@@ -45986,6 +46162,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/wood,
 /area/crew_quarters/captain)
 "jyr" = (
@@ -46239,6 +46416,7 @@
 /area/muriki/crewstairwell)
 "jEi" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/security)
 "jEo" = (
@@ -47232,6 +47410,9 @@
 /obj/effect/floor_decal/steeldecal/steel_decals3{
 	dir = 6
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/freezer,
 /area/muriki/bathroom/captain)
 "jTl" = (
@@ -47559,6 +47740,9 @@
 /obj/effect/floor_decal/steeldecal/steel_decals3,
 /obj/structure/handrail{
 	dir = 1
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/security)
@@ -47996,6 +48180,9 @@
 	dir = 6
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals3,
+/obj/structure/disposalpipe/junction{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/kitchen)
 "kff" = (
@@ -48125,6 +48312,9 @@
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/kafel_full,
@@ -48808,6 +48998,9 @@
 /obj/effect/floor_decal/steeldecal/steel_decals3{
 	dir = 4
 	},
+/obj/structure/disposalpipe/trunk{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/bar)
 "kqu" = (
@@ -48832,6 +49025,7 @@
 /obj/structure/cable/green{
 	icon_state = "2-8"
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/medical)
 "kqI" = (
@@ -49228,6 +49422,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/muriki/bathroom/captain)
 "kwP" = (
@@ -49247,6 +49444,7 @@
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/aft)
 "kxb" = (
@@ -49420,6 +49618,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/green,
 /obj/machinery/door/firedoor/glass,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/virology)
 "kAK" = (
@@ -49607,13 +49806,13 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
 	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
 /obj/effect/floor_decal/corner/black{
 	dir = 10
 	},
 /obj/effect/floor_decal/corner/blue,
+/obj/structure/disposalpipe/junction{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virology/quarantine_quarantine)
 "kES" = (
@@ -49748,6 +49947,9 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals3{
 	dir = 8
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 2
 	},
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/muriki/bathroom/cargo)
@@ -50108,10 +50310,6 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 8
 	},
-/obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
-	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 4
 	},
@@ -50123,6 +50321,9 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
+	},
+/obj/structure/disposalpipe/junction{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/bridge)
@@ -50464,6 +50665,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 8
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/sanitorium)
 "kRv" = (
@@ -50757,10 +50959,6 @@
 "kXm" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/muriki/research/showers)
@@ -51363,6 +51561,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/door/firedoor/glass,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/bridge)
 "liu" = (
@@ -52895,6 +53094,7 @@
 	pixel_x = -32
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/security)
 "lDM" = (
@@ -53399,10 +53599,6 @@
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/engineering_hallway)
 "lNN" = (
-/obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/cable/green{
@@ -53413,6 +53609,7 @@
 	pixel_x = -26;
 	pixel_y = -28
 	},
+/obj/structure/disposalpipe/junction,
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/medical)
 "lOa" = (
@@ -53502,6 +53699,9 @@
 /obj/structure/closet/firecloset/full,
 /obj/structure/cable/green{
 	icon_state = "4-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/steel,
 /area/bridge/hallway)
@@ -53645,6 +53845,9 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/structure/cable/green{
 	icon_state = "4-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/engineering/foyer)
@@ -53859,6 +54062,9 @@
 /obj/machinery/light,
 /obj/structure/cable/green{
 	icon_state = "1-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/captain)
@@ -54692,7 +54898,6 @@
 	pixel_x = -27;
 	pixel_y = 28
 	},
-/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/muriki/research/showers)
 "mgs" = (
@@ -54757,6 +54962,10 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals3{
 	dir = 10
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/muriki/bathroom/cargo)
@@ -54868,6 +55077,10 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals3{
 	dir = 10
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/muriki/bathroom/sciupper)
@@ -55197,6 +55410,9 @@
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/spline/plain/corner{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
 	dir = 4
 	},
 /turf/simulated/floor/carpet/tealcarpet,
@@ -55809,6 +56025,9 @@
 /obj/effect/floor_decal/steeldecal/steel_decals3{
 	dir = 4
 	},
+/obj/structure/disposalpipe/trunk{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/bar)
 "mAB" = (
@@ -56054,6 +56273,10 @@
 /obj/effect/floor_decal/steeldecal/steel_decals3{
 	dir = 10
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/muriki/bathroom/cargo)
 "mDc" = (
@@ -56135,6 +56358,7 @@
 	dir = 8;
 	pixel_x = 32
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/main)
 "mFd" = (
@@ -56175,6 +56399,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/medical)
 "mFT" = (
@@ -56202,6 +56430,7 @@
 	pixel_x = -27;
 	pixel_y = 28
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/white,
 /area/medical/virology/quarantine_quarantine)
 "mGb" = (
@@ -57201,11 +57430,12 @@
 /turf/simulated/floor/tiled/milspec,
 /area/engineering/storage)
 "mYK" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
+	},
+/obj/structure/disposalpipe/junction{
+	dir = 4;
+	icon_state = "pipe-j2"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/cargomid)
@@ -59364,6 +59594,7 @@
 /obj/effect/floor_decal/steeldecal/steel_decals3{
 	dir = 9
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/securitypub)
 "nFw" = (
@@ -59770,6 +60001,10 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals3{
 	dir = 9
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/sanitorium)
@@ -60706,6 +60941,9 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
 	},
+/obj/structure/disposalpipe/trunk{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/medical)
 "ofQ" = (
@@ -60733,6 +60971,9 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_ridged,
@@ -61576,6 +61817,10 @@
 	dir = 1;
 	pixel_x = -22;
 	pixel_y = -24
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/captain)
@@ -62946,6 +63191,9 @@
 /obj/effect/floor_decal/steeldecal/steel_decals3{
 	dir = 10
 	},
+/obj/structure/disposalpipe/trunk{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/bridge)
 "oSP" = (
@@ -63768,6 +64016,7 @@
 /obj/machinery/door/airlock/silver{
 	name = "Toilet"
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/securitypub)
 "pgv" = (
@@ -65569,6 +65818,10 @@
 /obj/structure/cable/green{
 	icon_state = "1-8"
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/bar)
 "pOP" = (
@@ -65754,6 +66007,9 @@
 	},
 /obj/effect/floor_decal/corner/white{
 	dir = 10
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/bridge)
@@ -66255,6 +66511,10 @@
 	dir = 9
 	},
 /obj/machinery/light,
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/security)
 "pYq" = (
@@ -67428,6 +67688,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/medical)
 "qrZ" = (
@@ -67675,6 +67938,7 @@
 	pixel_x = 26
 	},
 /obj/effect/landmark/event_spawn/dronepod_landing,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/bar)
 "qwu" = (
@@ -68835,6 +69099,9 @@
 	dir = 4
 	},
 /obj/machinery/door/firedoor/glass,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/old_cargo/white,
 /area/muriki/bathroom/kitchen)
 "qOH" = (
@@ -70299,6 +70566,9 @@
 /obj/item/clothing/head/helmet/space/void/captain,
 /obj/effect/floor_decal/spline/fancy/wood,
 /obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
 	dir = 4
 	},
 /turf/simulated/floor/wood,
@@ -72151,6 +72421,10 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 1
+	},
+/obj/structure/disposalpipe/junction{
+	dir = 8;
+	icon_state = "pipe-j2"
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/medical)
@@ -74051,6 +74325,9 @@
 	dir = 1;
 	pixel_y = 32
 	},
+/obj/structure/disposalpipe/trunk{
+	dir = 2
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/cargopub)
 "sCg" = (
@@ -74209,10 +74486,11 @@
 /turf/simulated/floor/tiled,
 /area/muriki/arriveproc)
 "sFg" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
 /obj/effect/floor_decal/corner/purple,
+/obj/structure/disposalpipe/junction{
+	dir = 8;
+	icon_state = "pipe-j2"
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/main)
 "sFk" = (
@@ -74858,6 +75136,7 @@
 "sPo" = (
 /obj/effect/floor_decal/borderfloor/corner,
 /obj/effect/floor_decal/corner/lightgrey/bordercorner,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/steel,
 /area/hallway/primary/aft)
 "sPs" = (
@@ -74898,6 +75177,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/item/bananapeel,
 /obj/machinery/door/firedoor/glass,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/bridge)
 "sPE" = (
@@ -74974,6 +75254,9 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -75078,10 +75361,6 @@
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/research/testingrange)
 "sTy" = (
-/obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
-	},
 /obj/effect/floor_decal/steeldecal/steel_decals3{
 	dir = 4
 	},
@@ -75101,6 +75380,9 @@
 	dir = 1;
 	pixel_x = -10;
 	pixel_y = -25
+	},
+/obj/structure/disposalpipe/junction{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/bar)
@@ -75653,9 +75935,13 @@
 "tbE" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/disposalpipe/segment,
 /obj/structure/cable/green{
 	icon_state = "1-2"
+	},
+/obj/structure/disposalpipe/sortjunction{
+	dir = 1;
+	name = "Arrivals";
+	sortType = "Arrivals"
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/aft)
@@ -76776,6 +77062,10 @@
 	dir = 1;
 	pixel_y = -26
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled/freezer,
 /area/muriki/bathroom/captain)
 "tvp" = (
@@ -77175,6 +77465,9 @@
 /area/medical/reception)
 "tBn" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/kafel_full,
@@ -77862,6 +78155,10 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals3{
 	dir = 1
+	},
+/obj/structure/disposalpipe/junction{
+	dir = 2;
+	icon_state = "pipe-j2"
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/virology)
@@ -78672,6 +78969,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/green{
 	dir = 4
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/virology)
 "tXJ" = (
@@ -78800,6 +79100,9 @@
 	},
 /obj/structure/dogbed,
 /mob/living/simple_mob/animal/passive/fox/renault,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/captain)
 "tZi" = (
@@ -78841,6 +79144,10 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals3{
 	dir = 1
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/virology)
@@ -79235,6 +79542,7 @@
 	icon_state = "0-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/bar)
 "ugM" = (
@@ -79330,6 +79638,10 @@
 	dir = 6
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals3,
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/bar)
 "uhk" = (
@@ -79753,6 +80065,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/steel,
 /area/hallway/primary/aft)
 "uoS" = (
@@ -81551,9 +81864,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/hallway/secondary/engineering_hallway)
 "uPO" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
@@ -81562,6 +81872,9 @@
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/aft)
@@ -82534,6 +82847,9 @@
 /obj/item/perfect_tele{
 	name = "Director's translocator"
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/captain)
 "vhk" = (
@@ -82558,6 +82874,9 @@
 /obj/structure/extinguisher_cabinet{
 	pixel_y = -30;
 	dir = 1
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/bridge)
@@ -82661,6 +82980,9 @@
 /obj/item/ammo_magazine/ammo_box/b762/surplus/blank,
 /obj/item/ammo_magazine/ammo_box/b762/surplus/blank,
 /obj/item/gun/projectile/shotgun/pump/rifle/ceremonial,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/captain)
 "viM" = (
@@ -82804,6 +83126,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/kitchen)
 "vlv" = (
@@ -84101,6 +84424,10 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 6
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/main)
 "vGR" = (
@@ -84798,9 +85125,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
+/obj/structure/disposalpipe/junction{
+	dir = 4;
+	icon_state = "pipe-j2"
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/engineering/foyer)
@@ -86282,6 +86609,9 @@
 /obj/effect/floor_decal/steeldecal/steel_decals3{
 	dir = 4
 	},
+/obj/structure/disposalpipe/trunk{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/kitchen)
 "wkQ" = (
@@ -86296,6 +86626,7 @@
 	name = "Station Intercom (General)";
 	pixel_y = 21
 	},
+/obj/structure/disposalpipe/junction/yjunction,
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/muriki/bathroom/cargo)
 "wkX" = (
@@ -87146,6 +87477,7 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/structure/disposalpipe/trunk,
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/sciupper)
 "wyS" = (
@@ -87178,6 +87510,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/green{
 	dir = 8
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/white,
 /area/medical/virology/quarantine_quarantine)
 "wAv" = (
@@ -87406,6 +87739,9 @@
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals_central7{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
@@ -88238,6 +88574,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/engineering)
 "wTq" = (
@@ -88343,6 +88682,9 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals3{
 	dir = 5
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/engineering)
@@ -88825,6 +89167,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/bar)
 "xaP" = (
@@ -89033,6 +89376,10 @@
 	dir = 6
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals3,
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/muriki/bathroom/engsingle)
 "xdL" = (
@@ -89092,15 +89439,15 @@
 /turf/simulated/floor,
 /area/bridge/meeting_room)
 "xek" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
 /obj/item/geiger/wall/south,
 /obj/effect/floor_decal/steeldecal/steel_decals3{
 	dir = 4
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals3{
 	dir = 5
+	},
+/obj/structure/disposalpipe/junction{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/cargopub)
@@ -89235,6 +89582,9 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -89386,10 +89736,6 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/effect/floor_decal/steeldecal/steel_decals3{
@@ -89397,6 +89743,9 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals3{
 	dir = 10
+	},
+/obj/structure/disposalpipe/junction{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/sanitorium)
@@ -89841,6 +90190,9 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 1
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/rnd/lockers)
@@ -90638,6 +90990,9 @@
 /obj/effect/floor_decal/steeldecal/steel_decals_central7{
 	dir = 4
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/rnd/lockers)
 "xGo" = (
@@ -91188,6 +91543,7 @@
 	pixel_y = 8;
 	dir = 4
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/security)
 "xRe" = (
@@ -91521,10 +91877,12 @@
 /obj/effect/landmark{
 	name = "blobstart"
 	},
-/obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/steeldecal/steel_decals3,
 /obj/effect/floor_decal/steeldecal/steel_decals3{
 	dir = 6
+	},
+/obj/structure/disposalpipe/junction{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/engineering)
@@ -91628,6 +91986,7 @@
 /area/mine/unexplored/muriki/mountaineast)
 "xWC" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/sanitorium)
 "xXo" = (
@@ -91635,6 +91994,7 @@
 	name = "Toilet"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/medical)
 "xXs" = (
@@ -91937,6 +92297,10 @@
 	dir = 9
 	},
 /obj/machinery/light,
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/carpet/tealcarpet,
 /area/crew_quarters/captain)
 "ycx" = (
@@ -92324,6 +92688,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/door/firedoor/glass,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/muriki/bathroom/cargo)
 "ykn" = (
@@ -138251,16 +138616,16 @@ cNA
 axs
 uhE
 scY
-mOT
-xTA
+aSs
+aSr
 sPo
 kwR
-cke
-mms
+aSp
+aSq
 uoN
-cke
+aSp
 kwR
-cke
+aSp
 eAg
 fEV
 cke
