@@ -35,10 +35,6 @@
 /mob/living/simple_mob/vore/wolftaur/syndicate/alt2,
 /turf/simulated/floor/reinforced,
 /area/space)
-"ai" = (
-/obj/machinery/door/airlock/maintenance_hatch,
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/space)
 "aj" = (
 /obj/structure/droppod_door{
 	dir = 8
@@ -71,67 +67,8 @@
 "ao" = (
 /turf/unsimulated/wall/fakeglass,
 /area/space)
-"ap" = (
-/obj/random/maintenance/engineering,
-/turf/space,
-/area/space)
-"aq" = (
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
-/area/space)
-"ar" = (
-/obj/effect/landmark/step_trap,
-/turf/space,
-/area/space)
-"as" = (
-/obj/random/cutout,
-/turf/space,
-/area/space)
-"at" = (
-/obj/random/landmine,
-/turf/space,
-/area/space)
-"au" = (
-/obj/effect/mine/claymore,
-/turf/space,
-/area/space)
-"av" = (
-/obj/structure/cliff_end{
-	dir = 1
-	},
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
-/area/space)
 "aw" = (
 /turf/simulated/floor/wood,
-/area/space)
-"ax" = (
-/obj/effect/landmark/event_spawn/maintpred,
-/turf/space,
-/area/space)
-"ay" = (
-/obj/effect/landmark/vermin,
-/turf/space,
-/area/space)
-"az" = (
-/obj/effect/landmark/dangerous_situation,
-/turf/space,
-/area/space)
-"aA" = (
-/obj/structure/closet/crate/mimic/cointoss,
-/obj/random/contraband,
-/obj/random/contraband,
-/turf/simulated/mineral/alt/turfpack/muriki,
-/area/space)
-"aB" = (
-/obj/effect/recycler_beacon,
-/turf/space,
-/area/space)
-"aC" = (
-/obj/effect/recycler_vendor_beacon,
-/turf/space,
 /area/space)
 "aD" = (
 /obj/machinery/recharge_station,
@@ -205,12 +142,6 @@
 	icon_state = "milspec"
 	},
 /area/space)
-"aK" = (
-/obj/random/maintenance/cargo,
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
-/area/space)
 "aL" = (
 /obj/structure/table/rack,
 /obj/item/storage/belt/utility,
@@ -225,10 +156,6 @@
 /turf/unsimulated/floor/steel{
 	icon_state = "milspec"
 	},
-/area/space)
-"aM" = (
-/obj/machinery/door/airlock/maintenance/int,
-/turf/simulated/floor/plating/turfpack/muriki,
 /area/space)
 "aN" = (
 /obj/structure/table/rack,
@@ -272,18 +199,6 @@
 	dir = 1
 	},
 /area/space)
-"aR" = (
-/obj/structure/trash_pile,
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/space)
-"aS" = (
-/obj/structure/cliff{
-	dir = 6
-	},
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
-/area/space)
 "aT" = (
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/space)
@@ -325,25 +240,6 @@
 	icon_state = "milspec"
 	},
 /area/space)
-"aZ" = (
-/obj/item/flame/candle/everburn,
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/space)
-"ba" = (
-/obj/effect/decal/cleanable/blood,
-/obj/machinery/light/small{
-	dir = 4
-	},
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/space)
-"bb" = (
-/obj/structure/cliff/corner{
-	dir = 6
-	},
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
-/area/space)
 "bc" = (
 /obj/structure/table/steel_reinforced,
 /obj/structure/reagent_dispensers/acid{
@@ -356,24 +252,6 @@
 "bd" = (
 /obj/machinery/rnd/production/circuit_imprinter,
 /turf/unsimulated/floor/techfloor_grid,
-/area/space)
-"be" = (
-/obj/machinery/transhuman/autoresleever,
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/space)
-"bf" = (
-/obj/machinery/gibber/autogibber{
-	emagged = 1
-	},
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/space)
-"bg" = (
-/obj/structure/cliff{
-	dir = 4
-	},
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
 /area/space)
 "bh" = (
 /obj/machinery/computer/mecha{
@@ -412,12 +290,6 @@
 /obj/machinery/mech_recharger,
 /obj/mecha/combat/phazon,
 /turf/unsimulated/shuttle/plating,
-/area/space)
-"bn" = (
-/obj/effect/decal/cleanable/blood/oil,
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
 /area/space)
 "bo" = (
 /obj/structure/table/steel_reinforced,
@@ -527,18 +399,6 @@
 	icon_state = "milspec"
 	},
 /area/space)
-"bv" = (
-/obj/structure/cliff_end{
-	dir = 1
-	},
-/turf/simulated/mineral/alt/turfpack/muriki,
-/area/space)
-"bw" = (
-/obj/item/broken_device/random,
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
-/area/space)
 "bx" = (
 /obj/structure/table/reinforced,
 /obj/effect/floor_decal/corner/black{
@@ -638,14 +498,6 @@
 "bF" = (
 /obj/structure/table/steel_reinforced,
 /turf/unsimulated/floor/techfloor_grid,
-/area/space)
-"bG" = (
-/obj/structure/cliff{
-	dir = 8
-	},
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
 /area/space)
 "bH" = (
 /obj/structure/table/steel_reinforced,
@@ -749,12 +601,6 @@
 /obj/machinery/mecha_part_fabricator_tg,
 /turf/unsimulated/floor/techfloor_grid,
 /area/space)
-"bV" = (
-/obj/vehicle/train/trolley,
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
-/area/space)
 "bW" = (
 /obj/structure/sign/directions/eva{
 	dir = 4;
@@ -835,18 +681,6 @@
 /obj/structure/table/reinforced,
 /obj/item/pinpointer/advpinpointer,
 /turf/simulated/floor/wood,
-/area/space)
-"ce" = (
-/obj/item/circuitboard/broken,
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
-/area/space)
-"cf" = (
-/obj/structure/cliff,
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
 /area/space)
 "cg" = (
 /obj/structure/table/reinforced,
@@ -1105,14 +939,6 @@
 	icon_state = "milspec"
 	},
 /area/space)
-"cx" = (
-/obj/item/broken_device/random,
-/obj/item/circuitboard/broken,
-/obj/effect/decal/cleanable/blood/oil,
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
-/area/space)
 "cy" = (
 /obj/structure/table/rack,
 /obj/effect/floor_decal/corner/black{
@@ -1334,12 +1160,6 @@
 	icon_state = "milspec"
 	},
 /area/space)
-"cJ" = (
-/obj/structure/outcrop/silver,
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
-/area/space)
 "cK" = (
 /obj/structure/table/rack,
 /obj/item/tank/phoron,
@@ -1397,13 +1217,6 @@
 	},
 /turf/unsimulated/floor/steel{
 	icon_state = "milspec"
-	},
-/area/space)
-"cN" = (
-/obj/effect/decal/cleanable/blood/oil,
-/obj/item/circuitboard/broken,
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
 	},
 /area/space)
 "cO" = (
@@ -1539,9 +1352,6 @@
 	icon_state = "milspec"
 	},
 /area/space)
-"cV" = (
-/turf/simulated/mineral/alt/ignore_mapgen/turfpack/muriki,
-/area/space)
 "cW" = (
 /obj/structure/table/reinforced,
 /turf/unsimulated/floor/steel{
@@ -1565,26 +1375,11 @@
 /obj/item/clothing/suit/armor/swat/officer,
 /turf/simulated/floor/wood,
 /area/space)
-"cZ" = (
-/obj/random/maintenance/cargo,
-/obj/effect/decal/cleanable/blood/oil,
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
-/area/space)
 "da" = (
 /obj/structure/table/rack,
 /obj/item/clothing/suit/armor/vest/ert/command,
 /obj/item/storage/backpack/ert/commander,
 /turf/simulated/floor/wood,
-/area/space)
-"db" = (
-/obj/structure/cliff/corner{
-	dir = 9
-	},
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
 /area/space)
 "dc" = (
 /obj/item/personal_shield_generator/belt/adminbus,
@@ -1658,14 +1453,6 @@
 	icon_state = "milspec"
 	},
 /area/space)
-"dh" = (
-/obj/structure/cliff{
-	dir = 1
-	},
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
-/area/space)
 "di" = (
 /obj/structure/table/rack,
 /obj/item/material/knife/machete/durahull,
@@ -1692,14 +1479,6 @@
 /obj/item/gun/energy/pulse_rifle/carbine,
 /turf/unsimulated/floor/steel{
 	icon_state = "milspec"
-	},
-/area/space)
-"dk" = (
-/obj/structure/cliff{
-	dir = 9
-	},
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
 	},
 /area/space)
 "dl" = (
@@ -1751,14 +1530,6 @@
 	icon_state = "milspec"
 	},
 /area/space)
-"dp" = (
-/obj/structure/cliff{
-	dir = 5
-	},
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
-/area/space)
 "dq" = (
 /obj/structure/table/rack,
 /obj/item/bodybag/cryobag,
@@ -1774,14 +1545,6 @@
 	},
 /turf/unsimulated/floor/steel{
 	icon_state = "milspec"
-	},
-/area/space)
-"dr" = (
-/obj/structure/cliff/corner{
-	dir = 5
-	},
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
 	},
 /area/space)
 "ds" = (
@@ -1851,12 +1614,6 @@
 /turf/unsimulated/floor/steel{
 	icon_state = "milspec"
 	},
-/area/space)
-"dx" = (
-/obj/structure/cliff/corner{
-	dir = 5
-	},
-/turf/simulated/mineral/alt/ignore_mapgen/turfpack/muriki,
 /area/space)
 "dy" = (
 /obj/structure/table/rack,
@@ -1974,14 +1731,6 @@
 	icon_state = "milspec"
 	},
 /area/space)
-"dH" = (
-/obj/structure/cliff/corner{
-	dir = 10
-	},
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
-/area/space)
 "dI" = (
 /obj/item/stack/material/glass{
 	amount = 50
@@ -2063,14 +1812,6 @@
 	icon_state = "milspec"
 	},
 /area/space)
-"dJ" = (
-/obj/structure/cliff{
-	dir = 10
-	},
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
-/area/space)
 "dK" = (
 /obj/item/clothing/glasses/welding/superior,
 /obj/item/clothing/glasses/welding/superior,
@@ -2108,13 +1849,6 @@
 /obj/item/gun/projectile/automatic/serdy/m41a,
 /turf/unsimulated/floor/steel{
 	icon_state = "milspec"
-	},
-/area/space)
-"dM" = (
-/obj/effect/decal/cleanable/blood/oil,
-/obj/structure/cliff,
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
 	},
 /area/space)
 "dN" = (
@@ -2244,12 +1978,6 @@
 	icon_state = "milspec"
 	},
 /area/space)
-"dW" = (
-/obj/random/maintenance/misc,
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
-/area/space)
 "dX" = (
 /obj/item/circuitboard/aiupload,
 /obj/item/circuitboard/borgupload,
@@ -2310,14 +2038,6 @@
 	icon_state = "milspec"
 	},
 /area/space)
-"ea" = (
-/obj/structure/cliff_end{
-	dir = 8
-	},
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
-/area/space)
 "eb" = (
 /obj/structure/table/rack,
 /obj/item/clothing/glasses/omni,
@@ -2347,12 +2067,6 @@
 /obj/item/gun/energy/gun/burst/mg42,
 /turf/unsimulated/floor/steel{
 	icon_state = "milspec"
-	},
-/area/space)
-"ee" = (
-/obj/structure/cliff_end,
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
 	},
 /area/space)
 "ef" = (
@@ -2515,13 +2229,6 @@
 	icon_state = "milspec"
 	},
 /area/space)
-"ep" = (
-/obj/item/broken_device/random,
-/obj/structure/ladder/up,
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
-/area/space)
 "eq" = (
 /obj/item/stack/material/phoron,
 /obj/structure/table/rack,
@@ -2534,10 +2241,6 @@
 /turf/unsimulated/floor/steel{
 	icon_state = "milspec"
 	},
-/area/space)
-"er" = (
-/obj/item/stolenpackage,
-/turf/space,
 /area/space)
 "es" = (
 /obj/item/smes_coil,
@@ -2822,12 +2525,6 @@
 "fh" = (
 /turf/simulated/open/muriki,
 /area/mine/explored/muriki/liminaltoobs)
-"fi" = (
-/obj/random/outcrop,
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
-/area/space)
 "fj" = (
 /obj/structure/disposalpipe/broken,
 /turf/simulated/open/muriki,
@@ -3073,10 +2770,6 @@
 /obj/random/junk,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/liminaltoobs)
-"fS" = (
-/obj/random/maintenance/medical,
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/space)
 "fT" = (
 /obj/structure/disposalpipe/segment{
 	dir = 1;
@@ -3200,13 +2893,6 @@
 /area/space)
 "hm" = (
 /turf/space,
-/area/space)
-"mj" = (
-/turf/simulated/wall/r_wall,
-/area/space)
-"Ml" = (
-/obj/effect/decal/cleanable/blood,
-/turf/simulated/floor/plating/turfpack/muriki,
 /area/space)
 
 (1,1,1) = {"
@@ -11451,11 +11137,11 @@ hm
 hm
 hm
 hm
-mj
-mj
-mj
-mj
-mj
+hm
+hm
+hm
+hm
+hm
 hm
 hm
 hm
@@ -11708,11 +11394,11 @@ hm
 hm
 hm
 hm
-mj
-Ml
-aZ
-aR
-mj
+hm
+hm
+hm
+hm
+hm
 hm
 hm
 hm
@@ -11965,11 +11651,11 @@ hm
 hm
 hm
 hm
-mj
-be
-aT
-aT
-aM
+hm
+hm
+hm
+hm
+hm
 hm
 hm
 hm
@@ -12222,11 +11908,11 @@ hm
 hm
 hm
 hm
-mj
-bf
-ba
-fS
-mj
+hm
+hm
+hm
+hm
+hm
 hm
 hm
 hm
@@ -12479,11 +12165,11 @@ hm
 hm
 hm
 hm
-mj
-mj
-mj
-mj
-mj
+hm
+hm
+hm
+hm
+hm
 hm
 hm
 hm
@@ -13752,33 +13438,33 @@ hm
 hm
 hm
 hm
-mj
-mj
-mj
-mj
-mj
-mj
-mj
-mj
-mj
-mj
-bk
-bk
-bk
-bk
-bk
-mj
-mj
-mj
-mj
-mj
-mj
-mj
-bk
-bk
-bk
-bk
-bk
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
 hm
 hm
 hm
@@ -14009,33 +13695,33 @@ hm
 hm
 hm
 hm
-mj
-bk
-bk
-bk
-bk
-bk
-bk
-bk
-bk
-bk
-bk
-bk
-bk
-bk
-bk
-bk
-bk
-bk
-bk
-bk
-bk
-mj
-mj
-bk
-bk
-bk
-bk
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
 hm
 hm
 hm
@@ -14266,33 +13952,33 @@ hm
 hm
 hm
 hm
-mj
-bk
-bk
-cV
-cV
-cV
-cV
-cV
-cV
-cV
-cV
-cV
-cV
-cV
-cV
-cV
-cV
-cV
-cV
-bk
-bk
-bk
-mj
-mj
-bk
-bk
-bk
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
 hm
 hm
 hm
@@ -14523,33 +14209,33 @@ hm
 hm
 hm
 hm
-mj
-bk
-bk
-ee
-bG
-bG
-bG
-dH
-cV
-cV
-cV
-cV
-cV
-cV
-cV
-cV
-cV
-cV
-cV
-bk
-bk
-bk
-bk
-mj
-bk
-bk
-bk
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
 hm
 hm
 hm
@@ -14780,33 +14466,33 @@ hm
 hm
 hm
 hm
-mj
-bk
-bk
-aq
-aq
-aq
-aK
-dJ
-dH
-cV
-cV
-cV
-cV
-cV
-cV
-db
-bG
-bG
-bv
-bk
-bk
-bk
-bk
-mj
-mj
-bk
-bk
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
 hm
 hm
 hm
@@ -15037,33 +14723,33 @@ hm
 hm
 hm
 hm
-mj
-bk
-bk
-aq
-bn
-aq
-aq
-aq
-cf
-cV
-cV
-cV
-cV
-cV
-cV
-dh
-cx
-bV
-bk
-bk
-bk
-bk
-bk
-bk
-mj
-mj
-bk
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
 hm
 hm
 hm
@@ -15294,33 +14980,6 @@ hm
 hm
 hm
 hm
-mj
-bk
-bk
-ep
-ce
-aq
-aq
-aS
-bb
-cV
-cV
-cV
-cV
-cV
-cV
-dh
-ce
-bk
-bk
-bk
-bk
-bk
-bk
-bk
-bk
-mj
-bk
 hm
 hm
 hm
@@ -15332,8 +14991,35 @@ hm
 hm
 hm
 hm
-ax
-ap
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
 hm
 hm
 hm
@@ -15551,33 +15237,6 @@ hm
 hm
 hm
 hm
-mj
-aq
-bk
-aq
-aK
-bw
-aq
-cf
-cV
-cV
-cV
-cV
-cV
-cV
-cV
-dh
-aK
-ce
-bw
-bk
-bk
-bk
-bk
-bk
-bk
-mj
-mj
 hm
 hm
 hm
@@ -15589,8 +15248,35 @@ hm
 hm
 hm
 hm
-ay
-ar
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
 hm
 hm
 hm
@@ -15808,33 +15494,6 @@ hm
 hm
 hm
 hm
-mj
-aT
-aq
-aq
-aq
-aq
-aq
-cf
-cV
-cV
-cV
-cV
-cV
-cV
-db
-dk
-aq
-ce
-aq
-aq
-bk
-bk
-bk
-bk
-bk
-bk
-mj
 hm
 hm
 hm
@@ -15846,8 +15505,35 @@ hm
 hm
 hm
 hm
-az
-as
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
 hm
 hm
 hm
@@ -16065,33 +15751,6 @@ hm
 hm
 hm
 hm
-ai
-aT
-aq
-bV
-aq
-aq
-dW
-dM
-cV
-cV
-cV
-cV
-cV
-cV
-dh
-aq
-aq
-aq
-aq
-bn
-aq
-bk
-bk
-bk
-bk
-bk
-mj
 hm
 hm
 hm
@@ -16103,8 +15762,35 @@ hm
 hm
 hm
 hm
-aA
-at
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
 hm
 hm
 hm
@@ -16322,33 +16008,6 @@ hm
 hm
 hm
 hm
-mj
-aT
-aq
-fi
-ce
-aq
-bw
-cf
-cV
-cV
-cV
-cV
-cV
-cV
-dh
-aq
-aq
-aq
-aq
-aq
-aq
-aq
-aq
-bk
-bk
-bk
-mj
 hm
 hm
 hm
@@ -16360,8 +16019,35 @@ hm
 hm
 hm
 hm
-aB
-au
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
 hm
 hm
 hm
@@ -16579,33 +16265,6 @@ hm
 hm
 hm
 hm
-mj
-bk
-aq
-aq
-aq
-cN
-aq
-cf
-cV
-cV
-cV
-cV
-cV
-cV
-dr
-dp
-aq
-aq
-aq
-aq
-aq
-aq
-aq
-bk
-bk
-bk
-mj
 hm
 hm
 hm
@@ -16617,9 +16276,36 @@ hm
 hm
 hm
 hm
-aC
 hm
-er
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
 hm
 hm
 hm
@@ -16836,33 +16522,33 @@ hm
 hm
 hm
 hm
-mj
-bk
-bk
-bk
-aq
-aq
-aq
-cf
-cV
-cV
-cV
-cV
-cV
-cV
-cV
-dh
-aq
-aq
-aq
-aq
-aq
-aq
-aq
-aq
-aq
-aT
-mj
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
 hm
 hm
 hm
@@ -17093,33 +16779,33 @@ hm
 hm
 hm
 hm
-mj
-bk
-bk
-aq
-aq
-aq
-aq
-cf
-cV
-cV
-cV
-cV
-cV
-cV
-cV
-dh
-bn
-aq
-aq
-aq
-aq
-aq
-aq
-aq
-aq
-aT
-ai
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
 hm
 hm
 hm
@@ -17350,33 +17036,33 @@ hm
 hm
 hm
 hm
-mj
-bk
-bk
-aq
-bw
-aq
-aq
-dJ
-dH
-cV
-cV
-cV
-cV
-cV
-cV
-dh
-aq
-aq
-aq
-aq
-aq
-aq
-aq
-aq
-aq
-aT
-mj
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
 hm
 hm
 hm
@@ -17607,33 +17293,33 @@ hm
 hm
 hm
 hm
-mj
-bk
-bk
-aq
-bV
-aq
-aq
-aq
-cf
-cV
-cV
-cV
-cV
-cV
-db
-dk
-cJ
-aq
-aq
-aq
-aq
-aq
-aq
-bk
-bk
-bk
-mj
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
 hm
 hm
 hm
@@ -17864,33 +17550,33 @@ hm
 hm
 hm
 hm
-mj
-bk
-bk
-bk
-bk
-aq
-aS
-bg
-bb
-cV
-cV
-cV
-cV
-cV
-dr
-dp
-aq
-aq
-bw
-aq
-aq
-aK
-bk
-bk
-bk
-bk
-mj
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
 hm
 hm
 hm
@@ -18121,33 +17807,33 @@ hm
 hm
 hm
 hm
-mj
-bk
-bk
-bk
-bk
-aq
-ea
-cV
-cV
-cV
-cV
-cV
-cV
-cV
-cV
-dh
-cN
-aq
-aq
-aq
-aq
-aS
-av
-bk
-bk
-bk
-mj
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
 hm
 hm
 hm
@@ -18378,33 +18064,33 @@ hm
 hm
 hm
 hm
-mj
-bk
-bk
-bk
-bk
-bk
-cV
-cV
-cV
-cV
-cV
-cV
-cV
-cV
-db
-dk
-bw
-aq
-aq
-aS
-bg
-bb
-bk
-bk
-bk
-bk
-mj
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
 hm
 hm
 hm
@@ -18635,33 +18321,33 @@ hm
 hm
 hm
 hm
-mj
-bk
-bk
-bk
-bk
-bk
-bk
-cV
-cV
-cV
-cV
-cV
-cV
-cV
-dh
-aq
-aq
-aq
-aS
-bb
-bk
-bk
-bk
-bk
-bk
-bk
-mj
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
 hm
 hm
 hm
@@ -18892,33 +18578,33 @@ hm
 hm
 hm
 hm
-mj
-bk
-bk
-bk
-bk
-bk
-cV
-cV
-cV
-cV
-cV
-cV
-cV
-cV
-dh
-aq
-aq
-aS
-bb
-bk
-bk
-bk
-bk
-bk
-bk
-mj
-mj
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
 hm
 hm
 hm
@@ -19149,33 +18835,33 @@ hm
 hm
 hm
 hm
-mj
-mj
-mj
-mj
-bk
-bk
-bk
-cV
-cV
-cV
-cV
-cV
-cV
-cV
-dh
-aq
-aq
-cf
-bk
-bk
-bk
-bk
-bk
-bk
-mj
-mj
-bk
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
 hm
 hm
 hm
@@ -19406,33 +19092,33 @@ hm
 hm
 hm
 hm
-bk
-bk
-bk
-mj
-mj
-bk
-bk
-bk
-bk
-cV
-cV
-cV
-cV
-cV
-dx
-dp
-cZ
-cf
-bk
-bk
-bk
-bk
-bk
-bk
-mj
-bk
-bk
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
 hm
 hm
 hm
@@ -19663,33 +19349,33 @@ hm
 hm
 hm
 hm
-aq
-aq
-bk
-bk
-mj
-mj
-bk
-bk
-cV
-cV
-cV
-cV
-cV
-cV
-cV
-dr
-bg
-bb
-bk
-bk
-bk
-bk
-bk
-mj
-mj
-bk
-bk
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
 hm
 hm
 hm
@@ -19920,33 +19606,33 @@ hm
 hm
 hm
 hm
-aq
-aq
-aq
-bk
-bk
-mj
-mj
-mj
-cV
-cV
-cV
-cV
-cV
-cV
-cV
-cV
-cV
-cV
-bk
-bk
-bk
-bk
-mj
-mj
-bk
-bk
-bk
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
 hm
 hm
 hm
@@ -20177,33 +19863,33 @@ hm
 hm
 hm
 hm
-aq
-aq
-aq
-bk
-cV
-cV
-cV
-mj
-mj
-cV
-cV
-cV
-cV
-cV
-cV
-cV
-cV
-cV
-bk
-bk
-bk
-bk
-mj
-mj
-bk
-bk
-bk
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
 hm
 hm
 hm
@@ -20434,33 +20120,33 @@ hm
 hm
 hm
 hm
-aq
-aq
-bk
-bk
-cV
-cV
-cV
-cV
-mj
-cV
-cV
-cV
-cV
-cV
-cV
-mj
-mj
-mj
-mj
-mj
-mj
-mj
-mj
-bk
-bk
-bk
-bk
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
+hm
 hm
 hm
 hm
