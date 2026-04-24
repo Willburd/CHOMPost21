@@ -3,6 +3,10 @@
 	selection_color = "#aaaaaa"
 	sorting_order = 2
 
+/datum/job/hydro/New()
+	. = ..()
+	alt_titles |= list(JOB_ALT_XENOHYDROPONICIST = /datum/alt_title/xenohydroponicist, JOB_ALT_XENOFLORIST = /datum/alt_title/xenoflorist)
+
 
 /datum/job/bartender
 	supervisors = "the " + JOB_QUARTERMASTER
