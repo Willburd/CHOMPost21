@@ -7069,6 +7069,10 @@
 	pixel_x = 26;
 	pixel_y = 28
 	},
+/obj/structure/extinguisher_cabinet{
+	dir = 4;
+	pixel_x = -30
+	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/research/anomaly_storage)
 "aqc" = (
@@ -20431,9 +20435,6 @@
 /area/medical/genetics)
 "gYm" = (
 /obj/machinery/door/firedoor/border_only,
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/disposalpipe/segment,
@@ -33541,6 +33542,11 @@
 	dir = 10
 	},
 /obj/effect/floor_decal/industrial/outline/grey,
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 8;
+	pixel_y = -32;
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/research/anomaly_storage)
 "nPk" = (
