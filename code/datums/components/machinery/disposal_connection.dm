@@ -91,6 +91,12 @@
 	packet.active = TRUE
 	packet.set_dir(DOWN)
 	packet.move()
+
+	// Outpost 21 edit begin - Septic tank tags toilet flushed things
+	if(istype(disposal_owner, /obj/structure/toilet))
+		packet.destinationTag = "Septic"
+	// Outpost 21 edit end
+
 	return TRUE
 
 

@@ -5317,10 +5317,45 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/chapel_hallway)
+"amU" = (
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled/monotile{
+	color = "#999999"
+	},
+/area/chapel/main)
+"amV" = (
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled/monotile{
+	color = "#999999"
+	},
+/area/chapel/main)
 "amW" = (
 /obj/structure/table/reinforced,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/substation/arrivals)
+"amX" = (
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/tiled/monotile{
+	color = "#999999"
+	},
+/area/chapel/main)
+"amY" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 8
+	},
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled,
+/area/hallway/secondary/chapel_hallway)
 "anH" = (
 /obj/structure/bookcase{
 	name = "Forbidden Knowledge"
@@ -9817,7 +9852,10 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/structure/disposalpipe/segment,
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled/monotile{
 	color = "#999999"
 	},
@@ -15370,6 +15408,7 @@
 	name = "Chapel"
 	},
 /obj/machinery/door/firedoor/glass,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/steel_grid,
 /area/chapel/main)
 "fmI" = (
@@ -17973,10 +18012,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/disposalpipe/sortjunction{
+/obj/structure/disposalpipe/segment{
 	dir = 1;
-	name = "Chapel";
-	sortType = "Chapel"
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled/monotile{
 	color = "#999999"
@@ -23445,7 +23483,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/steeldecal/steel_decals_central7{
 	dir = 4
 	},
@@ -35827,10 +35864,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/structure/disposalpipe/segment{
+/obj/machinery/hologram/holopad,
+/obj/structure/disposalpipe/junction{
 	dir = 4
 	},
-/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/chapel_hallway)
 "pMB" = (
@@ -46491,6 +46528,7 @@
 /obj/effect/floor_decal/corner/lightgrey/bordercorner{
 	dir = 8
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/chapel_hallway)
 "vaD" = (
@@ -105181,15 +105219,15 @@ clj
 hNF
 pMg
 uZV
-hNF
-hNF
-hNF
-hNF
+amY
+amY
+amY
+amY
 fmD
-scq
-scq
-scq
-scq
+amV
+amV
+amV
+amU
 cej
 scq
 scq
@@ -105349,7 +105387,7 @@ uKu
 dmc
 vhH
 gMY
-ctA
+amX
 jyO
 ctA
 tUs
