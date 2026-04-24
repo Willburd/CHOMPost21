@@ -9,8 +9,8 @@
 	icon_state = "med_tank"
 	base_icon = "med_tank"
 
-	health = 800
-	maxhealth = 800
+	health = 1300
+	maxhealth = 1300
 	fire_dam_coeff = 0.2
 	brute_dam_coeff = 0.4
 	breakwalls = TRUE

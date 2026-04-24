@@ -9,8 +9,8 @@
 	icon_state = "sec_tank"
 	base_icon = "sec_tank"
 
-	health = 1200
-	maxhealth = 1200
+	health = 2200
+	maxhealth = 2200
 	fire_dam_coeff = 0.5
 	brute_dam_coeff = 0.4
 	breakwalls = TRUE
