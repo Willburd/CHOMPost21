@@ -230,3 +230,17 @@
   - code_imp: Cleanup weakref references that were lingering after Destroy()
   - bugfix: resleeving pod no longer runtime the resleeving console forever if containers
       are inside it when it is qdeleted
+2026-04-24:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: Added much more in depth toilet gameplay.
+  - rscadd: existing toilets on station maps have been made into bluespace toilets,
+      to mirror preexisting behavior.
+  - code_imp: Removed disposal components automatically handling expelling if it had
+      no trunk to flush into. This means if you add a disposal component to something
+      you need to handle failed flushes on the object, but everything using it (one
+      thing) already tried to handle it this way, so nothing existing needed to be
+      changed for this.
+  Guti:
+  - rscadd: Added the ability for cyborgs to pick up and wear hats
+  Will:
+  - code_imp: Slug mob uses weakrefs
