@@ -8,8 +8,8 @@
 	icon_state = "sec_apc"
 	base_icon = "sec_apc"
 
-	health = 900
-	maxhealth = 900
+	health = 1800
+	maxhealth = 1800
 	fire_dam_coeff = 0.5
 	brute_dam_coeff = 0.4
 	breakwalls = FALSE

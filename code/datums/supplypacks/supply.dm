@@ -211,7 +211,7 @@
 					/obj/item/cartridge/explorer,
 					/obj/item/gps/explorer,
 					/obj/item/clothing/under/explorer,
-					/obj/item/radio/headset/explorer,
+					// /obj/item/radio/headset/explorer, // Outpost 21 edit - No explo headsets
 					/obj/item/clothing/shoes/boots/winter/explorer,
 					/obj/item/material/knife/tacknife/survival,
 					/obj/item/material/knife/machete,

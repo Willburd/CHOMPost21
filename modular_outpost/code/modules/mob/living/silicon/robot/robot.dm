@@ -84,3 +84,28 @@
 		sparks.start()
 
 		addtimer(CALLBACK(src, PROC_REF(self_destruct)), 1 SECONDS, TIMER_DELETE_ME)
+
+/mob/living/silicon/robot/verb/remove_accessory()
+	set name = "Remove chassis accessory"
+	set desc = "Removes an accessory from your classis"
+	set category = "Abilities.Silicon"
+
+	if(stat != CONSCIOUS)
+		return
+
+	if(!length(accessories))
+		to_chat(usr,span_warning("You are not wearing any accessories!"))
+		return
+
+	var/list/choose_list = list()
+	for(var/obj/item/clothing/accessory/A in accessories)
+		choose_list["[A.name]"] = A
+	var/keycheck = tgui_input_list(usr, "Select an accessory to remove.", "Remove Accessory", choose_list)
+	if(!(keycheck in choose_list))
+		return
+	var/obj/item/clothing/accessory/select = choose_list[keycheck]
+	if(!istype(select) || stat != CONSCIOUS)
+		return
+
+	select.forceMove(loc)
+	accessories -= select

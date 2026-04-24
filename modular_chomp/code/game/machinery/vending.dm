@@ -25,8 +25,8 @@
 					/obj/item/storage/pouch/flares/full_flare = 10,
 					/obj/item/storage/pouch/holster = 5,
 				// Misc
-					/obj/item/radio/headset/explorer = 10,
-					/obj/item/radio/headset/alt/explorer = 10,
+					// /obj/item/radio/headset/explorer = 10, // Outpost 21 edit - No explo headsets
+					// /obj/item/radio/headset/alt/explorer = 10, // Outpost 21 edit - No explo headsets
 					/obj/item/clothing/mask/gas/explorer = 10,
 					/obj/item/storage/backpack/satchel/explorer = 10,
 					/obj/item/storage/backpack/dufflebag/explorer = 10,

@@ -513,9 +513,15 @@
 /obj/vehicle/has_interior/attack_hand(mob/user)
 	// nothing YET, used for attacks
 
-/obj/vehicle/has_interior/attack_generic(mob/user)
-	// aliens/borers
-	attack_hand(user)
+/obj/vehicle/has_interior/attack_generic(var/mob/user, var/damage, var/attack_message)
+	if(user.client && user.a_intent == I_HELP)
+		attack_hand(user)
+		return
+	if(!locked && prob(6))
+		if(do_after(user, 1 SECOND, target = src))
+			enter_interior(user)
+		return
+	. = ..()
 
 /obj/vehicle/has_interior/proc/enter_interior(var/atom/movable/C)
 	// moves atom to interior access point of tank

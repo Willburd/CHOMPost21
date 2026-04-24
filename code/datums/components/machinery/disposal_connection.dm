@@ -79,19 +79,24 @@
 /datum/component/disposal_system_connection/proc/handle_flush(list/flushed_items, datum/gas_mixture/flush_gas)
 	PROTECTED_PROC(TRUE)
 	SHOULD_CALL_PARENT(TRUE)
+	// if no trunk connected, return false
+	if(!connected_trunk)
+		return FALSE
+
 	var/obj/structure/disposalholder/packet = new()	// virtual holder object which actually travels through the pipes.
 	packet.init(flushed_items, flush_gas)
-
-	// if no trunk connected, expel immediately
-	if(!connected_trunk)
-		handle_expel(packet)
-		return TRUE
 
 	// start the holder processing movement
 	packet.forceMove(connected_trunk)
 	packet.active = TRUE
 	packet.set_dir(DOWN)
 	packet.move()
+
+	// Outpost 21 edit begin - Septic tank tags toilet flushed things
+	if(istype(disposal_owner, /obj/structure/toilet))
+		packet.destinationTag = "Septic"
+	// Outpost 21 edit end
+
 	return TRUE
 
 

@@ -6367,24 +6367,9 @@
 	},
 /turf/simulated/shuttle/floor/voidcraft/dark,
 /area/shuttle/darktransit)
-"aoF" = (
-/turf/simulated/wall/fancy_shuttle/low{
-	fancy_shuttle_tag = "hell"
-	},
-/area/specialty/redspace)
 "aoG" = (
 /turf/simulated/shuttle/wall/dark/hard_corner,
 /area/vehicle_interior/heavyarmor_tank_B)
-"aoH" = (
-/turf/simulated/wall/fancy_shuttle{
-	fancy_shuttle_tag = "hell"
-	},
-/area/specialty/redspace)
-"aoI" = (
-/turf/simulated/wall/fancy_shuttle/window{
-	fancy_shuttle_tag = "hell"
-	},
-/area/specialty/redspace)
 "aoJ" = (
 /obj/structure/bed/chair/wood/wings{
 	dir = 8
@@ -79336,7 +79321,7 @@ aom
 ylH
 ylH
 epa
-aoF
+ydR
 xQn
 idz
 xzs
@@ -79498,7 +79483,7 @@ aom
 ylH
 ylH
 epa
-aoH
+xQn
 bRA
 knB
 mNE
@@ -79660,7 +79645,7 @@ aom
 ylH
 epa
 epa
-aoH
+xQn
 xQn
 ffe
 xQn
@@ -79822,7 +79807,7 @@ aom
 ylH
 epa
 epa
-aoI
+tEO
 qoV
 knB
 nPP
@@ -79984,7 +79969,7 @@ ylH
 ylH
 epa
 epa
-aoI
+tEO
 typ
 knB
 kri
@@ -80146,7 +80131,7 @@ ylH
 ylH
 epa
 epa
-aoH
+xQn
 ajm
 knB
 pdr
@@ -80308,7 +80293,7 @@ ylH
 ylH
 epa
 epa
-aoI
+tEO
 aoE
 knB
 nPP
@@ -80470,7 +80455,7 @@ ylH
 ylH
 ylH
 epa
-aoI
+tEO
 typ
 knB
 kri
@@ -80632,7 +80617,7 @@ ylH
 ylH
 ylH
 epa
-aoH
+xQn
 xQn
 ffe
 xQn
@@ -80794,7 +80779,7 @@ aom
 ylH
 ylH
 epa
-aoH
+xQn
 bRA
 knB
 knB
