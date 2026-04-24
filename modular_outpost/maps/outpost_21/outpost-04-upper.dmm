@@ -213,6 +213,13 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/genetics)
+"aav" = (
+/obj/structure/extinguisher_cabinet{
+	dir = 4;
+	pixel_x = -30
+	},
+/turf/simulated/floor/reinforced,
+/area/rnd/supermatter)
 "aaw" = (
 /obj/random/cutout,
 /turf/simulated/floor,
@@ -2295,7 +2302,7 @@
 	},
 /obj/effect/catwalk_plated/techfloor,
 /turf/simulated/floor,
-/area/rnd/chemistry)
+/area/rnd/supermatter_prepare)
 "afe" = (
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/unexplored/muriki/mountaintopeast)
@@ -2329,6 +2336,10 @@
 	},
 /turf/simulated/floor/plating,
 /area/muriki/elevator/secupper)
+"afi" = (
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/tiled/purple,
+/area/rnd/supermatter_prepare)
 "afj" = (
 /obj/machinery/power/apc{
 	dir = 4;
@@ -2402,6 +2413,13 @@
 /obj/effect/zone_divider,
 /turf/simulated/floor/outpost_roof/turfpack/muriki,
 /area/muriki/rooftop/security)
+"afu" = (
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/reinforced,
+/area/rnd/supermatter)
 "afv" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/machinery/camera/network/medbay{
@@ -3514,6 +3532,10 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/damaged_resleeverC)
+"aik" = (
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/tiled/dark,
+/area/rnd/research/anomaly_storage)
 "ail" = (
 /obj/machinery/atmospherics/portables_connector{
 	dir = 1
@@ -6286,7 +6308,7 @@
 	dir = 5
 	},
 /turf/simulated/floor/tiled/purple,
-/area/rnd/chemistry)
+/area/rnd/supermatter_prepare)
 "apa" = (
 /turf/simulated/floor/outpost_roof/turfpack/muriki,
 /area/rnd/research/roof_eva)
@@ -8378,7 +8400,7 @@
 	dir = 10
 	},
 /turf/simulated/floor/tiled/purple,
-/area/rnd/chemistry)
+/area/rnd/supermatter_prepare)
 "bbY" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -13455,7 +13477,7 @@
 	dir = 6
 	},
 /turf/simulated/floor/tiled/purple,
-/area/rnd/chemistry)
+/area/rnd/supermatter_prepare)
 "dDY" = (
 /obj/structure/lattice,
 /obj/structure/cable/orange{
@@ -16180,7 +16202,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/purple,
-/area/rnd/chemistry)
+/area/rnd/supermatter_prepare)
 "eUO" = (
 /obj/structure/prop/war/tgmc_30mm/loaded,
 /turf/simulated/floor/outpost_roof/turfpack/muriki,
@@ -17744,7 +17766,7 @@
 /area/muriki/processor)
 "fQL" = (
 /turf/simulated/floor/tiled/purple,
-/area/rnd/chemistry)
+/area/rnd/supermatter_prepare)
 "fQO" = (
 /obj/structure/railing,
 /obj/machinery/power/tesla_coil/pre_mapped,
@@ -18845,7 +18867,7 @@
 	dir = 10
 	},
 /turf/simulated/floor/tiled/purple,
-/area/rnd/chemistry)
+/area/rnd/supermatter_prepare)
 "gwz" = (
 /obj/structure/table/reinforced,
 /obj/effect/floor_decal/industrial/warning,
@@ -20000,7 +20022,7 @@
 	dir = 10
 	},
 /turf/simulated/floor/tiled/purple,
-/area/rnd/chemistry)
+/area/rnd/supermatter_prepare)
 "hdw" = (
 /obj/machinery/firealarm{
 	dir = 8;
@@ -23521,7 +23543,7 @@
 	dir = 10
 	},
 /turf/simulated/floor/tiled/purple,
-/area/rnd/chemistry)
+/area/rnd/supermatter_prepare)
 "iUx" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
@@ -23820,7 +23842,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/purple,
-/area/rnd/chemistry)
+/area/rnd/supermatter_prepare)
 "jch" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -24289,7 +24311,7 @@
 	dir = 5
 	},
 /turf/simulated/floor/tiled/purple,
-/area/rnd/chemistry)
+/area/rnd/supermatter_prepare)
 "joj" = (
 /obj/structure/cable/orange{
 	icon_state = "5-8"
@@ -25778,7 +25800,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/purple,
-/area/rnd/chemistry)
+/area/rnd/supermatter_prepare)
 "kbp" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -26930,7 +26952,7 @@
 	name = "Particle Lab Entryway"
 	},
 /turf/simulated/floor/tiled/steel_ridged,
-/area/rnd/chemistry)
+/area/rnd/supermatter_prepare)
 "kDA" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
@@ -27748,7 +27770,7 @@
 /obj/item/geiger/wall/south,
 /obj/effect/floor_decal/industrial/warning/full,
 /turf/simulated/floor/tiled/purple,
-/area/rnd/chemistry)
+/area/rnd/supermatter_prepare)
 "lci" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/hatch{
@@ -28166,7 +28188,7 @@
 /obj/structure/window/reinforced/full,
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
-/area/rnd/chemistry)
+/area/rnd/supermatter_prepare)
 "loH" = (
 /obj/machinery/camera/network/outside{
 	c_tag = "EXT - Sci Roof North";
@@ -32492,10 +32514,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/server)
 "nDJ" = (
-/obj/structure/extinguisher_cabinet{
-	dir = 4;
-	pixel_x = -30
-	},
 /obj/structure/table/rack/shelf/steel,
 /obj/fiftyspawner/phoronrglass{
 	pixel_x = -4
@@ -33858,7 +33876,7 @@
 /area/maintenance/substation/medical)
 "osx" = (
 /turf/simulated/wall/r_lead,
-/area/rnd/chemistry)
+/area/rnd/supermatter_prepare)
 "osA" = (
 /obj/effect/step_trigger/dephase_shadekin,
 /turf/unsimulated/wall/planetary/muriki,
@@ -50572,7 +50590,7 @@
 	icon_state = "1-10"
 	},
 /turf/simulated/floor/tiled/purple,
-/area/rnd/chemistry)
+/area/rnd/supermatter_prepare)
 "wUV" = (
 /obj/effect/floor_decal/corner/blue/full{
 	dir = 8
@@ -51627,7 +51645,7 @@
 "xvC" = (
 /obj/effect/floor_decal/industrial/rad_floor/yellow,
 /turf/simulated/floor/tiled/purple,
-/area/rnd/chemistry)
+/area/rnd/supermatter_prepare)
 "xvT" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/effect/floor_decal/steeldecal/steel_decals3{
@@ -100235,7 +100253,7 @@ qge
 uaV
 nDJ
 eEG
-qfN
+aav
 qfN
 dPP
 rBk
@@ -100720,7 +100738,7 @@ qxf
 uat
 xWU
 xDa
-eXT
+afu
 qfN
 hRF
 oZI
@@ -102341,7 +102359,7 @@ uNV
 hJB
 loF
 jnM
-fQL
+afi
 iUq
 cwU
 afa
@@ -103791,7 +103809,7 @@ rGN
 apH
 apT
 apQ
-apH
+aik
 apx
 qyw
 apq

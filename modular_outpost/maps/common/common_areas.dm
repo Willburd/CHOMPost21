@@ -2238,6 +2238,12 @@
 	base_turf = /turf/simulated/open
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
 
+/area/rnd/supermatter_prepare
+	name = "\improper Particle Lab Preperation"
+	icon_state = "chem"
+	base_turf = /turf/simulated/open
+	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
+
 /area/rnd/breakroom
 	name = "\improper Research Breakroom"
 	icon_state = "locker"
@@ -2370,7 +2376,7 @@
 
 /area/rnd/research/anomaly_storage
 	name = "\improper Xenolab Anomalous Storage"
-	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
+	base_turf = /turf/simulated/open
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
 
 /area/rnd/research/anomaly_analysis
