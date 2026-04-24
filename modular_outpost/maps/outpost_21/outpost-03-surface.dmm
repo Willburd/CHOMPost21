@@ -14356,12 +14356,20 @@
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
 /area/mine/explored/muriki/mountaineast)
 "aCo" = (
-/obj/structure/lightpost,
 /obj/effect/zone_divider,
+/obj/structure/dancepole{
+	name = "roof support";
+	pixel_x = -7;
+	pixel_y = 1
+	},
+/obj/item/toy/gnome,
 /turf/simulated/floor/outdoors/sidewalk/slab/turfpack/muriki,
 /area/muriki/grounds/shutt)
 "aCp" = (
 /obj/effect/zone_divider,
+/obj/machinery/light/small{
+	dir = 1
+	},
 /turf/simulated/floor/outdoors/sidewalk/slab/turfpack/muriki,
 /area/muriki/grounds/shutt)
 "aCq" = (
@@ -18941,6 +18949,10 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/aft)
+"aSt" = (
+/obj/structure/lightpost,
+/turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
+/area/muriki/grounds/shutt)
 "aSz" = (
 /obj/structure/table/glass,
 /obj/item/tool/wrench,
@@ -28045,8 +28057,8 @@
 /turf/simulated/floor/tiled,
 /area/hallway/security/main)
 "dLQ" = (
-/obj/item/toy/gnome,
 /obj/effect/zone_divider,
+/obj/structure/lightpost,
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
 /area/muriki/grounds/shutt)
 "dLX" = (
@@ -41676,13 +41688,9 @@
 	dir = 6;
 	pixel_y = 4
 	},
-/obj/structure/sign/directions/science/xenoflora{
-	dir = 5;
-	pixel_y = -2
-	},
 /obj/structure/sign/directions/outpost/phoronics{
 	dir = 5;
-	pixel_y = -8
+	pixel_y = -2
 	},
 /turf/simulated/wall,
 /area/rnd/hallway/main)
@@ -56064,7 +56072,11 @@
 /turf/simulated/floor/tiled,
 /area/quartermaster/qm)
 "mBP" = (
-/obj/structure/lightpost,
+/obj/structure/dancepole{
+	name = "roof support";
+	pixel_x = 7;
+	pixel_y = 1
+	},
 /turf/simulated/floor/outdoors/sidewalk/slab/turfpack/muriki,
 /area/muriki/grounds/shutt)
 "mBV" = (
@@ -138763,7 +138775,7 @@ dOJ
 qIt
 nGZ
 mBP
-apP
+aSt
 apP
 apP
 apP
