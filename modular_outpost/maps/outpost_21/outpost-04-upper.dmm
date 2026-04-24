@@ -1735,6 +1735,13 @@
 	},
 /turf/simulated/floor/outpost_roof/turfpack/muriki,
 /area/muriki/rooftop/engineering)
+"adR" = (
+/obj/effect/floor_decal/spline/fancy/wood,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/monotile,
+/area/hydroponics/publicgarden)
 "adS" = (
 /obj/machinery/portable_atmospherics/hydroponics/soil,
 /obj/item/shovel/spade,
@@ -2677,6 +2684,9 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/coffee_shop)
 "agh" = (
@@ -2986,6 +2996,7 @@
 /obj/structure/railing{
 	dir = 8
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/monotile,
 /area/hydroponics/publicgarden)
 "agZ" = (
@@ -3217,6 +3228,7 @@
 	dir = 8
 	},
 /obj/item/geiger/wall/west,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/chapel_hallway)
 "ahB" = (
@@ -3226,6 +3238,9 @@
 	},
 /obj/machinery/door/firedoor/multi_tile/glass{
 	dir = 2
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/crew_quarters/coffee_shop)
@@ -3284,6 +3299,7 @@
 	dir = 4;
 	pixel_x = -26
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/chapel_hallway)
 "ahI" = (
@@ -3384,6 +3400,7 @@
 /obj/structure/cable/green{
 	icon_state = "0-4"
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/chapel_hallway)
 "ahS" = (
@@ -5240,10 +5257,105 @@
 	},
 /turf/simulated/floor/plating,
 /area/muriki/rooftop/medgen)
+"amO" = (
+/obj/structure/catwalk,
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor,
+/area/hydroponics/publicgarden)
+"amP" = (
+/obj/structure/grille,
+/obj/machinery/door/firedoor/glass,
+/obj/structure/window/reinforced/full,
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/plating,
+/area/crew_quarters/coffee_shop)
+"amQ" = (
+/obj/effect/floor_decal/corner/brown/diagonal,
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/coffee_shop)
+"amR" = (
+/obj/effect/floor_decal/corner/brown/diagonal,
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/coffee_shop)
+"amS" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 8
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled,
+/area/hallway/secondary/chapel_hallway)
+"amT" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 8
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled,
+/area/hallway/secondary/chapel_hallway)
+"amU" = (
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled/monotile{
+	color = "#999999"
+	},
+/area/chapel/main)
+"amV" = (
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled/monotile{
+	color = "#999999"
+	},
+/area/chapel/main)
 "amW" = (
 /obj/structure/table/reinforced,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/substation/arrivals)
+"amX" = (
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/tiled/monotile{
+	color = "#999999"
+	},
+/area/chapel/main)
+"amY" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 8
+	},
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled,
+/area/hallway/secondary/chapel_hallway)
 "anH" = (
 /obj/structure/bookcase{
 	name = "Forbidden Knowledge"
@@ -5394,6 +5506,9 @@
 	dir = 5
 	},
 /obj/effect/floor_decal/spline/fancy/wood,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/monotile,
 /area/hydroponics/publicgarden)
 "arT" = (
@@ -6607,11 +6722,13 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
 	},
-/obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/steeldecal/steel_decals3{
 	dir = 10
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals3{
+	dir = 1
+	},
+/obj/structure/disposalpipe/junction{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/kafel_full,
@@ -8283,11 +8400,13 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 8
 	},
-/obj/structure/disposalpipe/junction{
-	dir = 1
-	},
 /obj/structure/cable/green{
 	icon_state = "1-4"
+	},
+/obj/structure/disposalpipe/sortjunction{
+	dir = 1;
+	name = "Cafe";
+	sortType = "Cafe"
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/chapel_hallway)
@@ -9400,6 +9519,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/wood,
 /area/rnd/research/phoronics/breakroom)
 "cli" = (
@@ -9730,7 +9852,10 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/structure/disposalpipe/segment,
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled/monotile{
 	color = "#999999"
 	},
@@ -11022,6 +11147,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/door/firedoor/glass,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/medupper)
 "dfg" = (
@@ -11136,6 +11262,7 @@
 /obj/effect/floor_decal/steeldecal/steel_decals3{
 	dir = 9
 	},
+/obj/structure/disposalpipe/trunk,
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/phoronics)
 "diw" = (
@@ -11715,6 +11842,10 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals_central7{
 	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/wood,
 /area/rnd/research/phoronics/breakroom)
@@ -12989,6 +13120,9 @@
 	dir = 8
 	},
 /obj/effect/landmark/redspaceexit,
+/obj/structure/disposalpipe/trunk{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/chapel)
 "eer" = (
@@ -13735,6 +13869,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
+/obj/structure/disposalpipe/junction{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/phoronics)
 "exh" = (
@@ -13744,11 +13881,8 @@
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 8
 	},
-/obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
-	},
 /obj/machinery/hologram/holopad,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/hallway/muriki/civup)
 "exp" = (
@@ -14710,6 +14844,9 @@
 /obj/effect/floor_decal/steeldecal/steel_decals3{
 	dir = 5
 	},
+/obj/structure/disposalpipe/junction{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/phoronics)
 "eUo" = (
@@ -15271,6 +15408,7 @@
 	name = "Chapel"
 	},
 /obj/machinery/door/firedoor/glass,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/steel_grid,
 /area/chapel/main)
 "fmI" = (
@@ -15702,6 +15840,7 @@
 	c_tag = "CIV - Cafe";
 	dir = 1
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/coffee_shop)
 "fzl" = (
@@ -17873,8 +18012,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/disposalpipe/junction{
-	dir = 1
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled/monotile{
 	color = "#999999"
@@ -18010,6 +18150,9 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals3{
 	dir = 9
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 2
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/medupper)
@@ -18206,10 +18349,7 @@
 /obj/effect/floor_decal/spline/fancy/wood/corner{
 	dir = 8
 	},
-/obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
-	},
+/obj/structure/disposalpipe/junction,
 /turf/simulated/floor/wood,
 /area/rnd/research/phoronics/breakroom)
 "gWk" = (
@@ -20069,6 +20209,10 @@
 /turf/simulated/floor/tiled/milspec,
 /area/quartermaster/mining/expl)
 "hRq" = (
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/chapel)
 "hRE" = (
@@ -21915,14 +22059,12 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/phoronics)
 "iPH" = (
-/obj/structure/toilet{
-	icon_state = "toilet10"
-	},
 /obj/structure/handrail,
 /obj/structure/micro_tunnel{
 	dir = 1;
 	pixel_y = 32
 	},
+/obj/structure/toilet/teleplumbed,
 /turf/simulated/floor/tiled/kafel_full,
 /area/djstation)
 "iPJ" = (
@@ -22191,6 +22333,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/door/firedoor/glass,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/phoronics)
 "iVr" = (
@@ -23269,6 +23412,9 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/coffee_shop)
 "jxV" = (
@@ -23337,7 +23483,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/steeldecal/steel_decals_central7{
 	dir = 4
 	},
@@ -24518,9 +24663,9 @@
 /obj/effect/catwalk_plated,
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
-/obj/structure/disposalpipe/junction{
-	dir = 1;
-	icon_state = "pipe-j2"
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor,
 /area/hallway/secondary/chapel_hallway)
@@ -24930,6 +25075,7 @@
 /obj/effect/floor_decal/spline/fancy/wood/corner{
 	dir = 4
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/monotile,
 /area/hydroponics/publicgarden)
 "koV" = (
@@ -25163,6 +25309,7 @@
 /obj/effect/floor_decal/steeldecal/steel_decals3{
 	dir = 10
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/phoronics)
 "kub" = (
@@ -27667,8 +27814,10 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/machinery/disposal,
 /obj/structure/disposalpipe/trunk,
+/obj/machinery/disposal/mail_reciever{
+	name = "disposal mail destination(Cafe)"
+	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/coffee_shop)
 "lJY" = (
@@ -28295,6 +28444,9 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/spline/fancy/wood,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/monotile,
 /area/hydroponics/publicgarden)
 "mcv" = (
@@ -28447,6 +28599,9 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals3{
 	dir = 9
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 2
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/medupper)
@@ -29168,6 +29323,9 @@
 	dir = 9
 	},
 /obj/effect/landmark/late_antag/chu,
+/obj/structure/disposalpipe/trunk{
+	dir = 2
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/medupper)
 "mzt" = (
@@ -29523,6 +29681,10 @@
 	},
 /obj/machinery/light{
 	dir = 8
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/hallway/secondary/chapel_hallway)
@@ -30550,6 +30712,10 @@
 	pixel_x = -3;
 	specialfunctions = 4;
 	pixel_y = 29
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/chapel)
@@ -31914,6 +32080,7 @@
 /obj/effect/floor_decal/steeldecal/steel_decals3{
 	dir = 9
 	},
+/obj/structure/disposalpipe/trunk,
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/phoronics)
 "nUU" = (
@@ -33772,6 +33939,10 @@
 /obj/effect/floor_decal/spline/fancy/wood/corner{
 	dir = 8
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled/monotile,
 /area/hydroponics/publicgarden)
 "oQO" = (
@@ -34223,6 +34394,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/phoronics)
@@ -34755,9 +34929,13 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/borderfloor/corner,
 /obj/effect/floor_decal/corner/lightgrey/bordercorner,
+/obj/structure/disposalpipe/sortjunction{
+	dir = 1;
+	name = "Chapel";
+	sortType = "Chapel"
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/chapel_hallway)
 "pqz" = (
@@ -35007,6 +35185,9 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/kafel_full,
@@ -35683,10 +35864,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/structure/disposalpipe/segment{
+/obj/machinery/hologram/holopad,
+/obj/structure/disposalpipe/junction{
 	dir = 4
 	},
-/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/chapel_hallway)
 "pMB" = (
@@ -37191,9 +37372,11 @@
 	},
 /area/muriki/rooftop/medical)
 "qDe" = (
-/obj/machinery/disposal,
 /obj/structure/disposalpipe/trunk{
 	dir = 8
+	},
+/obj/machinery/disposal/mail_reciever{
+	name = "disposal mail destination(Chapel)"
 	},
 /turf/simulated/floor/tiled/monotile{
 	color = "#999999"
@@ -38560,6 +38743,10 @@
 "rly" = (
 /obj/effect/floor_decal/corner/brown/diagonal,
 /obj/machinery/hologram/holopad,
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/coffee_shop)
 "rlW" = (
@@ -40232,11 +40419,12 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 8
 	},
-/obj/structure/disposalpipe/junction{
-	dir = 4
-	},
 /obj/structure/cable/green{
 	icon_state = "1-4"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor,
 /area/hallway/muriki/civup)
@@ -40582,6 +40770,7 @@
 	dir = 1
 	},
 /obj/effect/landmark/holiday_event_spawn,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/monotile,
 /area/hydroponics/publicgarden)
 "smG" = (
@@ -41134,6 +41323,10 @@
 	dir = 9
 	},
 /obj/structure/table/standard,
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/phoronics)
 "sDG" = (
@@ -43771,7 +43964,10 @@
 /obj/effect/floor_decal/corner/lightgrey/bordercorner,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/disposalpipe/segment,
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/chapel_hallway)
 "tPp" = (
@@ -44275,14 +44471,15 @@
 /area/hallway/security/upper)
 "ubf" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
 /obj/effect/floor_decal/steeldecal/steel_decals3{
 	dir = 10
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals3{
 	dir = 1
+	},
+/obj/structure/disposalpipe/junction{
+	dir = 4;
+	icon_state = "pipe-j2"
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/medupper)
@@ -45529,15 +45726,14 @@
 /area/quartermaster/mining/expl)
 "uHh" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
-	},
 /obj/effect/floor_decal/steeldecal/steel_decals3{
 	dir = 10
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals3{
 	dir = 1
+	},
+/obj/structure/disposalpipe/junction/yjunction{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/medupper)
@@ -45558,6 +45754,9 @@
 	name = "Arboretum"
 	},
 /obj/machinery/door/firedoor/glass,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/hydroponics/publicgarden)
 "uHw" = (
@@ -46329,6 +46528,7 @@
 /obj/effect/floor_decal/corner/lightgrey/bordercorner{
 	dir = 8
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/chapel_hallway)
 "vaD" = (
@@ -46395,6 +46595,9 @@
 /obj/effect/floor_decal/spline/fancy/wood/corner,
 /obj/effect/floor_decal/spline/fancy/wood/corner{
 	dir = 1
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/simulated/floor/wood,
 /area/rnd/research/phoronics/breakroom)
@@ -50223,6 +50426,9 @@
 	dir = 4
 	},
 /obj/machinery/door/firedoor/glass,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/muriki/bathroom/phoronics)
 "xcD" = (
@@ -50992,6 +51198,7 @@
 /obj/effect/floor_decal/steeldecal/steel_decals3{
 	dir = 10
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/phoronics)
 "xwh" = (
@@ -51374,9 +51581,12 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 4
+	},
+/obj/structure/disposalpipe/junction{
+	dir = 1;
+	icon_state = "pipe-j2"
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/hallway/secondary/chapel_hallway)
@@ -104993,8 +105203,8 @@ hlz
 rUX
 rCT
 exh
-uuo
-clj
+amT
+amS
 ahR
 ahH
 ahA
@@ -105009,15 +105219,15 @@ clj
 hNF
 pMg
 uZV
-hNF
-hNF
-hNF
-hNF
+amY
+amY
+amY
+amY
 fmD
-scq
-scq
-scq
-scq
+amV
+amV
+amV
+amU
 cej
 scq
 scq
@@ -105177,7 +105387,7 @@ uKu
 dmc
 vhH
 gMY
-ctA
+amX
 jyO
 ctA
 tUs
@@ -105494,7 +105704,7 @@ hwE
 vsI
 dPr
 bNW
-hwm
+adR
 gWD
 umS
 umS
@@ -105645,8 +105855,8 @@ ahf
 lJB
 gmz
 skc
-bUS
-bUS
+amR
+amQ
 abM
 ahf
 aha
@@ -105972,13 +106182,13 @@ ahK
 iEe
 rly
 fyX
-ahg
+amP
 smx
 agY
-kkf
-kkf
-kkf
-ugh
+amO
+amO
+amO
+amO
 koP
 oPN
 qgv
