@@ -61,7 +61,7 @@ const rank2icon = {
   Engineer: 'toolbox',
   'Maintenance Technician': 'wrench',
   'Engine Technician': 'toolbox',
-  'Ship Breaker': 'rocket', // Outpost 21 addition
+  'Ship Breaker': 'rocket', // outpost 21 edit
   'Chemical Engineer': ['mortar-pestle', 'wrench'],
   Electrician: 'screwdriver',
   'Construction Engineer': 'trowel-bricks',
@@ -80,7 +80,7 @@ const rank2icon = {
   Physician: 'suitcase-medical',
   'Medical Practitioner': 'suitcase-medical',
   Surgeon: 'syringe',
-  'Xenoanatomy Specialist': ['syringe', 'bugs'], // Outpost 21 addition
+  'Xenoanatomy Specialist': ['syringe', 'bugs'], // outpost 21 edit
   'Emergency Physician': 'suitcase-medical',
   Nurse: 'user-nurse',
   Orderly: 'book-medical',
@@ -98,8 +98,8 @@ const rank2icon = {
   Psychotherapist: 'couch',
   // Genetecist
   Geneticist: 'dna',
-  'Gene Therapist': ['dna', 'screwdriver'], // Outpost 21 addition
-  'Sleeve Engineer': ['dna', 'wrench'], // Outpost 21 addition
+  'Gene Therapist': ['dna', 'screwdriver'], // outpost 21 edit
+  'Sleeve Engineer': ['dna', 'wrench'], // outpost 21 edit
   // Brig Physician
   'Brig Physician': ['kit-medical', 'shield-halved'],
   'Security Medic': ['kit-medical', 'shield-halved'],
@@ -215,7 +215,7 @@ const rank2icon = {
   Tragedian: 'face-sad-tear',
   Artist: 'smile-beam',
   'Game Master': 'dice',
-  'Radio Host': 'radio', // Outpost 21 addition
+  'Radio Host': 'radio', // outpost 21 edit
   // Entrepreneur
   Entrepreneur: 'building',
   Lawyer: 'gavel',
@@ -249,7 +249,7 @@ const rank2icon = {
   'Research Assistant"': ['school', 'flask'],
   Visitor: 'user',
   Resident: 'user',
-  Spacer: 'user', // Outpost 21 addition
+  Spacer: 'user', // outpost 21 edit
   // IAA
   'Internal Affairs Agent': 'balance-scale',
   'Internal Affairs Liaison': 'balance-scale',
@@ -385,7 +385,7 @@ const rank2color = {
   Engineer: 'orange',
   'Maintenance Technician': 'orange',
   'Engine Technician': 'orange',
-  'Ship Breaker': 'orange', // Outpost 21 addition
+  'Ship Breaker': 'orange', // outpost 21 edit
   'Chemical Engineer': 'orange',
   Electrician: 'orange',
   'Construction Engineer': 'orange',
@@ -421,8 +421,8 @@ const rank2color = {
   Psychotherapist: 'teal',
   // Genetecist
   Geneticist: 'teal',
-  'Gene Therapist': 'teal', // Outpost 21 addition
-  'Sleeve Engineer': 'teal', // Outpost 21 addition
+  'Gene Therapist': 'teal', // outpost 21 edit
+  'Sleeve Engineer': 'teal', // outpost 21 edit
   // Brig Physician
   'Brig Physician': 'teal',
   'Security Medic': 'teal',
@@ -538,7 +538,7 @@ const rank2color = {
   Tragedian: 'green',
   Artist: 'green',
   'Game Master': 'green',
-  'Radio Host': 'green', // Outpost 21 addition
+  'Radio Host': 'green', // outpost 21 edit
   // Entrepreneur
   Entrepreneur: 'green',
   Lawyer: 'green',
@@ -572,7 +572,7 @@ const rank2color = {
   'Research Assistant"': 'green',
   Visitor: 'green',
   Resident: 'green',
-  Spacer: 'green', // Outpost 21 addition
+  Spacer: 'green', // outpost 21 edit
   // IAA
   'Internal Affairs Agent': 'blue',
   'Internal Affairs Liaison': 'blue',

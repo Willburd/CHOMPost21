@@ -248,10 +248,10 @@
 	var/rad_levels = NORMAL_RADIATION_RESISTANCE			//For handle_radiation
 	var/rad_removal_mod = 1
 
-	// Outpost 21 addition begin
+	// outpost 21 edit begin
 	var/phoron_contact_mod = 1								// Affects skin contact poisoning from phoron
 	var/enzyme_contact_mod = 1								// Multiplies probability of enzyme damage rolls... basically only used by the enzyme immunity trait(outpost 21)
-	// Outpost 21 addition end
+	// outpost 21 edit end
 
 	var/ambulant_blood = FALSE								// Force changeling blood effects
 

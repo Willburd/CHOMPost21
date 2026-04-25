@@ -45,10 +45,10 @@
 		new/datum/data/pda/app/notekeeper,
 		new/datum/data/pda/app/timeclock, //CHOMPEdit: Add the timeclock to default apps
 		new/datum/data/pda/app/news,
-		// Outpost 21 addition begin - New apps
+		// outpost 21 edit begin - New apps
 		new/datum/data/pda/app/weather,
 		new/datum/data/pda/app/sop,
-		// Outpost 21 addition end
+		// outpost 21 edit end
 		new/datum/data/pda/app/messenger,
 		new/datum/data/pda/app/manifest,
 		new/datum/data/pda/app/atmos_scanner,

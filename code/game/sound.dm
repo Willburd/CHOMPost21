@@ -38,7 +38,7 @@
 				continue
 			hearer = H.master
 
-		// Outpost 21 addition begin - Forward sounds to the insides of vehicles
+		// outpost 21 edit begin - Forward sounds to the insides of vehicles
 		if(istype(U,/obj/vehicle/has_interior))
 			// Already a sound forwarded to the interior of a vehicle, ignore me!
 			// Globals are heard over all maps anyway, so don't forward either!
@@ -48,7 +48,7 @@
 			if(V.interior_helm == null)
 				continue
 			hearer = V.interior_helm
-		// Outpost 21 addition end
+		// outpost 21 edit end
 
 		if(!T || !hearer)
 			continue
@@ -64,12 +64,12 @@
 		if(!ignore_walls && !can_see(turf_source, T, length = maxdistance * 2))
 			continue
 
-		// Outpost 21 addition begin - Forward sounds to the insides of vehicles
+		// outpost 21 edit begin - Forward sounds to the insides of vehicles
 		if(istype(hearer,/obj/machinery/computer/vehicle_interior_console))
 			// Replay the sound inside from the helm
 			playsound(hearer, soundin, vol * 0.5 * (1 - (get_dist(T, turf_source) / maxdistance)), vary, -5, falloff, FALSE, frequency, channel, pressure_affected, TRUE, preference, volume_channel)
 			return
-		// Outpost 21 addition end
+		// outpost 21 edit end
 
 		hearer.playsound_local(turf_source, soundin, vol, vary, frequency, falloff, is_global, channel, pressure_affected, S, preference, volume_channel, T)
 		SSmotiontracker.ping(source,vol) // Nearly everything pings this, the quieter the less likely

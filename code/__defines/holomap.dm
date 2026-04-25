@@ -66,8 +66,8 @@
 #define HOLOMAP_AREACOLOR_DORMS			"#CCCC0099"
 // #define HOLOMAP_AREACOLOR_CIV			"#3ea800" Outpost 21 edit - changed color
 #define HOLOMAP_AREACOLOR_CIV 			"#a2a2a27a"
-#define HOLOMAP_AREACOLOR_JANITOR		"#eb56c373" 	// Outpost 21 Addition
-#define HOLOMAP_AREACOLOR_HYDROPONICS	"#1b9b267b" 	// Outpost 21 Addition
+#define HOLOMAP_AREACOLOR_JANITOR		"#eb56c373" 	// outpost 21 edit
+#define HOLOMAP_AREACOLOR_HYDROPONICS	"#1b9b267b" 	// outpost 21 edit
 
 #define LIST_NUMERIC_SET(L, I, V) if(!L) { L = list(); } if (L.len < I) { L.len = I; } L[I] = V
 
