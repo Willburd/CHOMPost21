@@ -244,3 +244,11 @@
   - rscadd: Added the ability for cyborgs to pick up and wear hats
   Will:
   - code_imp: Slug mob uses weakrefs
+2026-04-25:
+  Diana:
+  - bugfix: Shield gens now properly fill gaps.
+  - bugfix: EMPing circuitry bags no longer cause problems.
+  - qol: Circuitry bag starts with wirer, debugger, and detailer.
+  - qol: Circuitry bag all starts with a detailer.
+  - sound: Soundloops have been added for fridges, tcomms, and shield generators.
+  - code_imp: Falloff variable added for looping sounds.
