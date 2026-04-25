@@ -1,5 +1,4 @@
 /mob/living/simple_mob/vore/aggressive/corrupthound/swoopie
-	faction = FACTION_STATION
 	shock_resist = 1 // borg
 
 /mob/living/simple_mob/vore/aggressive/corrupthound/swoopie/get_effective_size(var/micro = FALSE)
