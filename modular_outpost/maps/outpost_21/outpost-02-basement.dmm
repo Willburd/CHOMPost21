@@ -5654,6 +5654,7 @@
 /obj/structure/cable/green{
 	icon_state = "0-2"
 	},
+/obj/item/geiger/wall/west,
 /turf/simulated/floor/tiled/white,
 /area/muriki/research/isolation_hall)
 "alA" = (
