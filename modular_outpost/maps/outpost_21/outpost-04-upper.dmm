@@ -5611,13 +5611,13 @@
 /obj/effect/floor_decal/corner/lime{
 	dir = 10
 	},
+/obj/machinery/light,
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/xenobiology/xenoflora)
 "anv" = (
 /obj/effect/floor_decal/corner/lime{
 	dir = 10
 	},
-/obj/machinery/light,
 /obj/machinery/firealarm{
 	dir = 1;
 	pixel_y = -26
