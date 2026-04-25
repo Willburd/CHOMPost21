@@ -88,7 +88,8 @@
 		/obj/item/reagent_scanner,
 		/obj/item/lightpainter,
 		/obj/item/anomaly_releaser,
-		/obj/item/anomaly_scanner
+		/obj/item/anomaly_scanner,
+		/obj/item/grenade/chem_grenade/metalfoam // Outpost 21 edit - Allow metal foam nades in toolbelt
 		)
 
 /obj/item/storage/belt/utility/full
