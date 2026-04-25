@@ -1,7 +1,7 @@
 /datum/component/burninlight
 	// This is a merge of the old shadow species light burning life code, and Zaddat's handle_environment_special() proc.
 	// It handles both cases, but shadows behave more like Zaddat do now. By default this code follows Zaddat damage with no healing.
-	var/threshold = 0.2 // percent from 0 to 1
+	var/threshold = 0.05 // percent from 0 to 1 // Outpost 21 edit - Lower threshold
 	// Damage or healing per life tick
 	var/damage_rate = 1.25
 	var/heal_rate = 0
@@ -42,6 +42,11 @@
 		var/turf/T = owner.loc
 		light_amount = T.get_lumcount(0,1)
 	// outpost 21 addition end
+
+	// outpost 21 edit(port) begin - More intense gradiant
+	if(light_amount)
+		light_amount = light_amount ** 3
+	// outpost 21 edit end
 
 	// Apply damage if beyond the minimum light threshold, actually makes zaddat SLIGHTLY more forgiving!
 	if(light_amount > 0 && light_amount > threshold) // Checks light_amount, as threshold of 0 can pass 0s to the damage procs otherwise.

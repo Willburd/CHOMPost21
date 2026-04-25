@@ -524,6 +524,7 @@
 	)
 	inherent_verbs = list(/mob/living/carbon/human/proc/tie_hair)
 
+/* Outpost 21 edit - Use ours
 /datum/species/zaddat/equip_survival_gear(var/mob/living/carbon/human/H)
 	..()
 	if(H.wear_suit) //get rid of job labcoats so they don't stop us from equipping the Shroud
@@ -535,6 +536,7 @@
 
 	H.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/zaddat/(H), slot_wear_mask) // mask has to come first or Shroud helmet will get in the way
 	H.equip_to_slot_or_del(new /obj/item/clothing/suit/space/void/zaddat/(H), slot_wear_suit)
+*/
 
 /datum/species/diona
 
