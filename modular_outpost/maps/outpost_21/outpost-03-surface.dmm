@@ -13232,7 +13232,6 @@
 	dir = 1;
 	icon_state = "spline_plain_full"
 	},
-/obj/structure/plushie/tesh/gold,
 /turf/simulated/floor/tiled/freezer,
 /area/muriki/bathroom/securitypub)
 "azU" = (
@@ -45560,11 +45559,6 @@
 /obj/effect/floor_decal/corner/blue{
 	dir = 9
 	},
-/obj/item/radio/intercom/department/medbay{
-	dir = 8;
-	pixel_x = -22;
-	pixel_y = -4
-	},
 /obj/item/radio/intercom{
 	dir = 8;
 	name = "Station Intercom (General)";
@@ -51069,10 +51063,6 @@
 /obj/effect/floor_decal/corner/blue{
 	dir = 9
 	},
-/obj/item/radio/intercom/department/medbay{
-	dir = 8;
-	pixel_x = -21
-	},
 /obj/item/radio/intercom{
 	dir = 8;
 	name = "Station Intercom (General)";
@@ -51243,10 +51233,6 @@
 "lbc" = (
 /obj/machinery/computer/operating{
 	pixel_y = 2
-	},
-/obj/item/radio/intercom/department/medbay{
-	dir = 1;
-	pixel_y = 21
 	},
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 1
@@ -68017,10 +68003,6 @@
 	pixel_x = 26
 	},
 /obj/machinery/disposal,
-/obj/item/radio/intercom/department/medbay{
-	dir = 1;
-	pixel_y = 21
-	},
 /obj/item/radio/intercom{
 	dir = 1;
 	name = "Station Intercom (General)";
@@ -71034,10 +71016,6 @@
 	name = "Station Intercom (General)";
 	pixel_y = 32
 	},
-/obj/item/radio/intercom/department/medbay{
-	dir = 1;
-	pixel_y = 21
-	},
 /turf/simulated/floor/tiled/white,
 /area/medical/exam_room)
 "rwp" = (
@@ -73191,10 +73169,6 @@
 /turf/simulated/floor/plating/external/turfpack/muriki,
 /area/mine/unexplored/muriki/mountaineast)
 "sgi" = (
-/obj/item/radio/intercom/department/medbay{
-	dir = 8;
-	pixel_x = -21
-	},
 /obj/item/radio/intercom{
 	dir = 8;
 	name = "Station Intercom (General)";
@@ -85583,10 +85557,6 @@
 "vYd" = (
 /obj/machinery/computer/operating{
 	pixel_y = 2
-	},
-/obj/item/radio/intercom/department/medbay{
-	dir = 1;
-	pixel_y = 21
 	},
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 1
