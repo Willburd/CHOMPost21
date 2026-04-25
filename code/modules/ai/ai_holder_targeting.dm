@@ -37,7 +37,7 @@
 	. = ohearers(vision_range, holder) - holder // CHOMPEdit Remove ourselves to prevent suicidal decisions. ~ SRC is the ai_holder.
 	. -= GLOB.dview_mob // Not the dview mob!
 
-	var/static/list/hostile_machines = typecacheof(list(/obj/machinery/porta_turret, /obj/mecha, /obj/vehicle)) // Outpost 21 edit - Mobs attack vehicles
+	var/static/list/hostile_machines = typecacheof(list(/obj/machinery/porta_turret, /obj/mecha, /obj/vehicle/has_interior)) // Outpost 21 edit - Mobs attack vehicles
 	var/static/list/ignore = typecacheof(list(/mob/observer))
 
 	for(var/HM in typecache_filter_list(range(vision_range, holder), hostile_machines))

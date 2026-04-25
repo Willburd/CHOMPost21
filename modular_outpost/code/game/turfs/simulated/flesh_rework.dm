@@ -42,7 +42,7 @@
 		destroy_meat()
 
 /turf/simulated/floor/flesh/fire_act(datum/gas_mixture/air, exposed_temperature, exposed_volume)
-	if(temperature < (T0C + 200))
+	if(temperature < T0C) // It was at 200c, but that wasn't fun
 		return
 	if(prob(5)) // burninate
 		destroy_meat()
@@ -71,8 +71,9 @@
 	// Cut it out
 	visible_message("\the [user] begins to cut away the meat with \a [W]!")
 	if(do_after(user, W.toolspeed * 6 SECONDS, target = src))
-		visible_message("\the [user] tears the meat away!")
-		destroy_meat()
+		if(istype(src, /turf/simulated/floor/flesh))
+			visible_message("\the [user] tears the meat away!")
+			destroy_meat()
 
 /turf/simulated/floor/flesh/proc/check_underside_turf(old_plating_state)
 	break_tile_to_plating = old_plating_state

@@ -7760,6 +7760,7 @@
 /obj/effect/floor_decal/corner/red{
 	dir = 9
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled,
 /area/security/detectives_office)
 "amr" = (
@@ -13231,7 +13232,6 @@
 	dir = 1;
 	icon_state = "spline_plain_full"
 	},
-/obj/structure/plushie/tesh/gold,
 /turf/simulated/floor/tiled/freezer,
 /area/muriki/bathroom/securitypub)
 "azU" = (
@@ -14356,12 +14356,20 @@
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
 /area/mine/explored/muriki/mountaineast)
 "aCo" = (
-/obj/structure/lightpost,
 /obj/effect/zone_divider,
+/obj/structure/dancepole{
+	name = "roof support";
+	pixel_x = -7;
+	pixel_y = 1
+	},
+/obj/item/toy/gnome,
 /turf/simulated/floor/outdoors/sidewalk/slab/turfpack/muriki,
 /area/muriki/grounds/shutt)
 "aCp" = (
 /obj/effect/zone_divider,
+/obj/machinery/light/small{
+	dir = 1
+	},
 /turf/simulated/floor/outdoors/sidewalk/slab/turfpack/muriki,
 /area/muriki/grounds/shutt)
 "aCq" = (
@@ -18941,6 +18949,43 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/aft)
+"aSt" = (
+/obj/structure/lightpost,
+/turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
+/area/muriki/grounds/shutt)
+"aSu" = (
+/obj/machinery/alarm{
+	dir = 1;
+	pixel_y = -26
+	},
+/turf/simulated/floor/glass,
+/area/security/brig/observation)
+"aSv" = (
+/obj/machinery/alarm{
+	dir = 1;
+	pixel_y = -26
+	},
+/turf/simulated/floor/tiled,
+/area/security/brig/observation)
+"aSw" = (
+/obj/machinery/alarm{
+	dir = 4;
+	pixel_x = -26
+	},
+/turf/simulated/floor/glass,
+/area/security/brig/observation)
+"aSx" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/security/brig/observation)
+"aSy" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/security/brig/observation)
 "aSz" = (
 /obj/structure/table/glass,
 /obj/item/tool/wrench,
@@ -18970,6 +19015,28 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/engineering/storage)
+"aSB" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/security/brig/observation)
+"aSC" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/tiled,
+/area/security/brig/observation)
+"aSD" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/floor_decal/milspec/color/purple/half,
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/light,
+/obj/structure/ladder/top_hatch,
+/turf/simulated/floor/tiled/milspec,
+/area/rnd/research/testingrange)
 "aSF" = (
 /obj/machinery/light_switch{
 	dir = 4;
@@ -27474,11 +27541,13 @@
 /area/maintenance/bar)
 "dCT" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/security/brig/observation)
 "dCZ" = (
@@ -28045,8 +28114,8 @@
 /turf/simulated/floor/tiled,
 /area/hallway/security/main)
 "dLQ" = (
-/obj/item/toy/gnome,
 /obj/effect/zone_divider,
+/obj/structure/lightpost,
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
 /area/muriki/grounds/shutt)
 "dLX" = (
@@ -41676,13 +41745,9 @@
 	dir = 6;
 	pixel_y = 4
 	},
-/obj/structure/sign/directions/science/xenoflora{
-	dir = 5;
-	pixel_y = -2
-	},
 /obj/structure/sign/directions/outpost/phoronics{
 	dir = 5;
-	pixel_y = -8
+	pixel_y = -2
 	},
 /turf/simulated/wall,
 /area/rnd/hallway/main)
@@ -45493,11 +45558,6 @@
 "jsc" = (
 /obj/effect/floor_decal/corner/blue{
 	dir = 9
-	},
-/obj/item/radio/intercom/department/medbay{
-	dir = 8;
-	pixel_x = -22;
-	pixel_y = -4
 	},
 /obj/item/radio/intercom{
 	dir = 8;
@@ -51003,10 +51063,6 @@
 /obj/effect/floor_decal/corner/blue{
 	dir = 9
 	},
-/obj/item/radio/intercom/department/medbay{
-	dir = 8;
-	pixel_x = -21
-	},
 /obj/item/radio/intercom{
 	dir = 8;
 	name = "Station Intercom (General)";
@@ -51177,10 +51233,6 @@
 "lbc" = (
 /obj/machinery/computer/operating{
 	pixel_y = 2
-	},
-/obj/item/radio/intercom/department/medbay{
-	dir = 1;
-	pixel_y = 21
 	},
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 1
@@ -51823,6 +51875,10 @@
 "lnx" = (
 /obj/machinery/camera/network/security{
 	c_tag = "SEC - Brig Overview North"
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 7;
+	pixel_y = 30
 	},
 /turf/simulated/floor/glass,
 /area/security/brig/observation)
@@ -56064,7 +56120,11 @@
 /turf/simulated/floor/tiled,
 /area/quartermaster/qm)
 "mBP" = (
-/obj/structure/lightpost,
+/obj/structure/dancepole{
+	name = "roof support";
+	pixel_x = 7;
+	pixel_y = 1
+	},
 /turf/simulated/floor/outdoors/sidewalk/slab/turfpack/muriki,
 /area/muriki/grounds/shutt)
 "mBV" = (
@@ -58859,6 +58919,7 @@
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled,
 /area/security/detectives_office)
 "nuL" = (
@@ -63086,6 +63147,7 @@
 /obj/machinery/door/airlock/glass_security{
 	name = "Brig Observation"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/steel_grid,
 /area/security/detectives_office)
 "oRx" = (
@@ -67941,10 +68003,6 @@
 	pixel_x = 26
 	},
 /obj/machinery/disposal,
-/obj/item/radio/intercom/department/medbay{
-	dir = 1;
-	pixel_y = 21
-	},
 /obj/item/radio/intercom{
 	dir = 1;
 	name = "Station Intercom (General)";
@@ -70958,10 +71016,6 @@
 	name = "Station Intercom (General)";
 	pixel_y = 32
 	},
-/obj/item/radio/intercom/department/medbay{
-	dir = 1;
-	pixel_y = 21
-	},
 /turf/simulated/floor/tiled/white,
 /area/medical/exam_room)
 "rwp" = (
@@ -73115,10 +73169,6 @@
 /turf/simulated/floor/plating/external/turfpack/muriki,
 /area/mine/unexplored/muriki/mountaineast)
 "sgi" = (
-/obj/item/radio/intercom/department/medbay{
-	dir = 8;
-	pixel_x = -21
-	},
 /obj/item/radio/intercom{
 	dir = 8;
 	name = "Station Intercom (General)";
@@ -81016,6 +81066,9 @@
 /obj/machinery/door/airlock/glass_security{
 	name = "Brig Observation"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/security/brig/observation)
 "uEB" = (
@@ -83211,8 +83264,8 @@
 /obj/effect/floor_decal/corner/red{
 	dir = 9
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 5
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/security/detectives_office)
@@ -85504,10 +85557,6 @@
 "vYd" = (
 /obj/machinery/computer/operating{
 	pixel_y = 2
-	},
-/obj/item/radio/intercom/department/medbay{
-	dir = 1;
-	pixel_y = 21
 	},
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 1
@@ -126772,7 +126821,7 @@ dHT
 dHT
 dHT
 cqt
-dHT
+aSw
 dHT
 dHT
 dHT
@@ -128226,8 +128275,8 @@ amq
 nuG
 amq
 oRo
-iXR
-iXR
+aSC
+aSB
 pOj
 dHT
 dHT
@@ -128390,7 +128439,7 @@ oxG
 bLr
 dHT
 dHT
-iXR
+aSx
 dHT
 dHT
 dHT
@@ -128552,12 +128601,12 @@ aWa
 hnb
 dHT
 dHT
-iXR
+aSy
 dHT
 dHT
 dHT
 dHT
-dHT
+aSu
 vEe
 vwv
 xgD
@@ -128714,7 +128763,7 @@ jYw
 hnb
 dHT
 dHT
-iXR
+aSy
 dHT
 dHT
 dHT
@@ -129038,7 +129087,7 @@ pYn
 hnb
 aRa
 iXR
-iXR
+aSy
 iXR
 iXR
 iXR
@@ -129200,7 +129249,7 @@ tVq
 hnb
 aRb
 iXR
-iXR
+aSy
 iXR
 iXR
 iXR
@@ -129362,7 +129411,7 @@ uoc
 hnb
 iXR
 iXR
-iXR
+aSy
 vyK
 iXR
 iXR
@@ -129524,7 +129573,7 @@ fIs
 hnb
 eTP
 iXR
-iXR
+aSy
 pOj
 iXR
 wrd
@@ -129686,12 +129735,12 @@ aWa
 hnb
 aRc
 iXR
+aSy
 iXR
 iXR
 iXR
 iXR
-iXR
-iXR
+aSv
 vEe
 aqj
 fgn
@@ -138763,7 +138812,7 @@ dOJ
 qIt
 nGZ
 mBP
-apP
+aSt
 apP
 apP
 apP
@@ -145802,7 +145851,7 @@ fiw
 fiw
 fiw
 fiw
-jnk
+aSD
 fjo
 fjo
 fjo

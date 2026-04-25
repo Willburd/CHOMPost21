@@ -3,7 +3,9 @@
 	var/list/accessories = list()
 
 /mob/living/silicon/robot/Destroy()
-	QDEL_NULL_LIST(accessories)
+	for(var/obj/item/dropping in accessories)
+		dropping.forceMove(get_turf(src))
+	accessories.Cut()
 	. = ..()
 
 /mob/living/silicon/robot/proc/formatted_accessories_examine()

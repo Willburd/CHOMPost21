@@ -502,7 +502,7 @@
 	name = "\improper Bartender Backroom"
 	icon_state = "cyawhicir"
 	base_turf = /turf/simulated/open
-	holomap_color = HOLOMAP_AREACOLOR_CIV
+	holomap_color = HOLOMAP_AREACOLOR_HYDROPONICS
 	color_grading = COLORTINT_WARM
 
 /area/muriki/crew/arcade/lasertag
@@ -602,7 +602,7 @@
 	name = "\improper Civilian Mail Room"
 	icon_state = "orablasqu"
 	base_turf = /turf/simulated/open
-	holomap_color = HOLOMAP_AREACOLOR_CIV
+	holomap_color = HOLOMAP_AREACOLOR_CARGO
 	color_grading = COLORTINT_DIM
 
 /area/library_office
@@ -1092,7 +1092,7 @@
 	name = "Science Sublevel 1"
 	base_turf = /turf/simulated/floor/plating
 	lift_floor_label = "Research Basement"
-	lift_floor_name = "Xenobio, Particle lab, Xenoarch, Cavern Access"
+	lift_floor_name = "Xenobio, Xenoarch, Anomaly Lab, Cavern Access"
 	lift_announce_str = "Arriving at Basement."
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
 
@@ -1100,7 +1100,7 @@
 	name = "Science First Floor"
 	base_turf = /turf/simulated/open
 	lift_floor_label = "Research First Floor"
-	lift_floor_name = "RnD, Telesci, Laboratory."
+	lift_floor_name = "RnD, Telesci, Laboratory, Firing Range."
 	lift_announce_str = "Arriving at First Floor."
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
 
@@ -1108,7 +1108,7 @@
 	name = "Science Second Floor"
 	base_turf = /turf/simulated/open
 	lift_floor_label = "Research Second Floor"
-	lift_floor_name = "Xenoflora, Chemistry, Phoronics, RD."
+	lift_floor_name = "Particle lab, Server, Tool Storage, Phoronics, RD."
 	lift_announce_str = "Arriving at Second Floor."
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
 
@@ -2238,6 +2238,12 @@
 	base_turf = /turf/simulated/open
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
 
+/area/rnd/supermatter_prepare
+	name = "\improper Particle Lab Preperation"
+	icon_state = "chem"
+	base_turf = /turf/simulated/open
+	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
+
 /area/rnd/breakroom
 	name = "\improper Research Breakroom"
 	icon_state = "locker"
@@ -2370,7 +2376,7 @@
 
 /area/rnd/research/anomaly_storage
 	name = "\improper Xenolab Anomalous Storage"
-	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
+	base_turf = /turf/simulated/open
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
 
 /area/rnd/research/anomaly_analysis
@@ -2428,6 +2434,7 @@
 /area/rnd/research/xenoflora_storage
 	name = "\improper Xenoflora Storage"
 	base_turf = /turf/simulated/open
+	holomap_color = HOLOMAP_AREACOLOR_HYDROPONICS
 
 /area/rnd/research/phoronics
 	name = "\improper Phoronics"
