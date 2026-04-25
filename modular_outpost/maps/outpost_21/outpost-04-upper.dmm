@@ -25825,9 +25825,6 @@
 /obj/machinery/power/emitter{
 	dir = 8
 	},
-/obj/machinery/light/small{
-	dir = 4
-	},
 /obj/structure/cable/yellow{
 	icon_state = "0-2"
 	},
