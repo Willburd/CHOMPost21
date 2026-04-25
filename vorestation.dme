@@ -5870,6 +5870,7 @@
 #include "modular_outpost\code\modules\clothing\accessories\job_rankpins.dm"
 #include "modular_outpost\code\modules\clothing\accessories\neoclothing.dm"
 #include "modular_outpost\code\modules\clothing\glasses\glasses.dm"
+#include "modular_outpost\code\modules\clothing\spacesuits\rig\modules\vision.dm"
 #include "modular_outpost\code\modules\clothing\suits\miscellaneous.dm"
 #include "modular_outpost\code\modules\clothing\under\xenos\vox.dm"
 #include "modular_outpost\code\modules\economy\price_list.dm"
