@@ -6,7 +6,7 @@
 					LANGUAGE_SIIK		= 1,
 					LANGUAGE_SKRELLIAN	= 1,
 					LANGUAGE_ROOTLOCAL	= 0,
-					LANGUAGE_GUTTER		= 0,
+					// LANGUAGE_GUTTER		= 0, // Outpost 21 edit - Not for borgs
 					LANGUAGE_SCHECHI	= 1,
 					LANGUAGE_EAL		= 1,
 					LANGUAGE_SIGN		= 0,
