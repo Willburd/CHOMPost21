@@ -49,6 +49,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/rnd/research/anomaly_storage)
 "aaf" = (
@@ -2283,10 +2284,6 @@
 /turf/simulated/floor/tiled,
 /area/security/brig/lowobservation)
 "afd" = (
-/obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
-	},
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
@@ -2304,6 +2301,10 @@
 	dir = 4
 	},
 /obj/effect/catwalk_plated/techfloor,
+/obj/structure/disposalpipe/junction{
+	dir = 1;
+	icon_state = "pipe-j2"
+	},
 /turf/simulated/floor,
 /area/rnd/supermatter_prepare)
 "afe" = (
@@ -6490,6 +6491,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 8
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/rnd/supermatter)
 "aoX" = (
@@ -6623,6 +6627,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-6"
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/upper)
 "aph" = (
@@ -6709,6 +6714,13 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "1-2"
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 2
+	},
+/obj/machinery/disposal/wall{
+	dir = 4;
+	pixel_x = -32
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/research/anomaly_storage)
@@ -7440,6 +7452,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/reinforced,
 /area/rnd/supermatter)
 "aqJ" = (
@@ -7448,6 +7463,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/simulated/floor/reinforced,
 /area/rnd/supermatter)
@@ -7474,6 +7492,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 8
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/reinforced,
 /area/rnd/supermatter)
 "aqM" = (
@@ -7482,6 +7503,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 8
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/purple,
 /area/rnd/supermatter_prepare)
@@ -7574,6 +7598,13 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/upper)
+"aqX" = (
+/obj/structure/disposalpipe/trunk{
+	dir = 1
+	},
+/obj/machinery/disposal,
+/turf/simulated/floor/reinforced,
+/area/rnd/supermatter)
 "aqY" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -7591,6 +7622,32 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/chapel_hallway)
+"aqZ" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/reinforced,
+/area/rnd/supermatter)
+"ara" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/reinforced,
+/area/rnd/supermatter)
+"arb" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 10
+	},
+/obj/structure/disposalpipe/junction{
+	dir = 4;
+	icon_state = "pipe-j2"
+	},
+/turf/simulated/floor/tiled/white,
+/area/rnd/hallway/upper)
 "arq" = (
 /obj/effect/floor_decal/corner/brown{
 	dir = 4
@@ -24079,6 +24136,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 8
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/reinforced,
 /area/rnd/supermatter)
 "iRR" = (
@@ -25824,9 +25884,6 @@
 "jMq" = (
 /obj/machinery/power/emitter{
 	dir = 8
-	},
-/obj/machinery/light/small{
-	dir = 4
 	},
 /obj/structure/cable/yellow{
 	icon_state = "0-2"
@@ -39748,6 +39805,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 8
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/reinforced,
 /area/rnd/supermatter)
 "raP" = (
@@ -42763,6 +42823,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 8
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/simulated/floor/reinforced,
 /area/rnd/supermatter)
@@ -51308,6 +51371,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled/purple,
 /area/rnd/supermatter_prepare)
 "wUV" = (
@@ -52383,6 +52450,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 8
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/purple,
 /area/rnd/supermatter_prepare)
@@ -101005,7 +101075,7 @@ uaV
 nDJ
 eEG
 aav
-qfN
+lIT
 dPP
 rBk
 rBk
@@ -101166,8 +101236,8 @@ tyZ
 tyZ
 niv
 qfN
-qfN
-lIT
+aqZ
+aqX
 dPP
 rBk
 rBk
@@ -101328,7 +101398,7 @@ qfN
 qfN
 xDa
 rQc
-qfN
+ara
 woz
 dPP
 rBk
@@ -104241,7 +104311,7 @@ apw
 apr
 aae
 apg
-kiQ
+arb
 uxI
 pvl
 hwy
