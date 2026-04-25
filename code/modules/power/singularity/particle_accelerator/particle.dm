@@ -94,6 +94,13 @@
 		if(!step(src,dir))
 			src.loc = get_step(src,dir)
 	movement_range--
+
+	// Outpost 21 edit begin - Radiation resistance makes the PA beam lose power faster
+	if(iswall(loc))
+		var/turf/simulated/wall/check_wall = loc
+		movement_range -= (10 - (10 * check_wall.rad_insulation))
+	// Outpost 21 edit end
+
 	if(movement_range <= 0)
 		qdel(src)
 		return
