@@ -1,6 +1,6 @@
 /datum/job/hydro
 	supervisors = "the " + JOB_QUARTERMASTER
-	selection_color = "#aaaaaa"
+	selection_color = "#7a4f33"
 	sorting_order = 2
 
 /datum/job/hydro/New()
@@ -10,13 +10,13 @@
 
 /datum/job/bartender
 	supervisors = "the " + JOB_QUARTERMASTER
-	selection_color = "#aaaaaa"
+	selection_color = "#7a4f33"
 	sorting_order = 1
 
 
 /datum/job/chef
 	supervisors = "the " + JOB_QUARTERMASTER
-	selection_color = "#aaaaaa"
+	selection_color = "#7a4f33"
 	sorting_order = 1
 
 
