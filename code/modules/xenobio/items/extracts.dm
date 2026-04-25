@@ -970,15 +970,15 @@
 
 	// Outpost 21 edit begin - Remove chomp slimes from default set
 	slime_types -= list(
-		/obj/item/slime_extract/sepia,
-        /obj/item/slime_extract/redspace,
-        /obj/item/slime_extract/dark,
-        /obj/item/slime_extract/plague,
-        /obj/item/slime_extract/oceanic,
-        /obj/item/slime_extract/nuclear,
-        /obj/item/slime_extract/dream,
-        /obj/item/slime_extract/nightmare,
-        /obj/item/slime_extract/sound
+		/mob/living/simple_mob/slime/xenobio/sepia,
+        /mob/living/simple_mob/slime/xenobio/redspace,
+        /mob/living/simple_mob/slime/xenobio/dark,
+        /mob/living/simple_mob/slime/xenobio/plague,
+        /mob/living/simple_mob/slime/xenobio/oceanic,
+        /mob/living/simple_mob/slime/xenobio/nuclear,
+        /mob/living/simple_mob/slime/xenobio/dream,
+        /mob/living/simple_mob/slime/xenobio/nightmare,
+        /mob/living/simple_mob/slime/xenobio/sound
 	)
 	// Outpost 21 edit end
 
