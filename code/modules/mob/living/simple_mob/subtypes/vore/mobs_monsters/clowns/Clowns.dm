@@ -16,7 +16,7 @@
 	melee_damage_lower = 5
 	melee_damage_upper = 30
 
-	ai_holder_type = /datum/ai_holder/simple_mob/melee/clowns
+	ai_holder_type = /datum/ai_holder/simple_mob/melee/angryclowns // Outpost 21 edit - Base clown is also angry
 
 	loot_list = list(/obj/item/bikehorn = 100)
 
