@@ -67,24 +67,46 @@
 "aao" = (
 /turf/simulated/wall/r_wall,
 /area/maintenance/tug)
+"aap" = (
+/obj/machinery/door/airlock/maintenance/rnd{
+	name = "Science Maintenance"
+	},
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/maintenance/research)
+"aaq" = (
+/obj/random/junk,
+/turf/simulated/floor/plating,
+/area/maintenance/research/closet)
 "aar" = (
 /obj/effect/floor_decal/corner/purple/full{
 	dir = 8
 	},
-/turf/simulated/floor/tiled,
-/area/rnd/research/anomaly)
-"aas" = (
+/obj/item/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -21
+	},
 /obj/machinery/light{
 	dir = 1
 	},
+/turf/simulated/floor/tiled,
+/area/rnd/research/anomaly)
+"aas" = (
 /obj/effect/floor_decal/corner/purple{
 	dir = 5
 	},
 /obj/effect/floor_decal/industrial/loading{
 	dir = 4
 	},
+/obj/machinery/alarm{
+	pixel_y = 24
+	},
 /turf/simulated/floor/tiled,
 /area/rnd/research/anomaly)
+"aat" = (
+/obj/structure/catwalk,
+/turf/simulated/floor/plating,
+/area/maintenance/research/closet)
 "aau" = (
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/reinforced,
@@ -371,6 +393,38 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/xenobiology/xenobioh)
+"aaN" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/research/closet)
+"aaO" = (
+/obj/structure/ladder/up,
+/obj/structure/catwalk,
+/turf/simulated/floor/plating,
+/area/maintenance/research/closet)
+"aaP" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/random/junk,
+/turf/simulated/floor/plating,
+/area/maintenance/research/closet)
+"aaQ" = (
+/obj/effect/floor_decal/corner/purple{
+	dir = 5
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -6;
+	pixel_y = 30
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 7;
+	pixel_y = 30
+	},
+/turf/simulated/floor/tiled,
+/area/rnd/research/anomaly)
 "aaR" = (
 /obj/machinery/conveyor{
 	dir = 1;
@@ -386,6 +440,10 @@
 /obj/item/camera,
 /obj/effect/floor_decal/corner/purple{
 	dir = 10
+	},
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -26
 	},
 /turf/simulated/floor/tiled,
 /area/rnd/research/anomaly)
@@ -9074,7 +9132,7 @@
 	dir = 8
 	},
 /obj/machinery/camera/network/research{
-	c_tag = "SCI - Xenoarchaeology Spectrometry lab";
+	c_tag = "SCI - Xenoarch Gas Storage";
 	dir = 4
 	},
 /obj/machinery/firealarm{
@@ -15108,6 +15166,10 @@
 /obj/machinery/light,
 /obj/effect/floor_decal/corner/purple{
 	dir = 10
+	},
+/obj/item/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -22
 	},
 /turf/simulated/floor/tiled,
 /area/rnd/research/anomaly)
@@ -28227,7 +28289,8 @@
 	dir = 1
 	},
 /obj/structure/mirror{
-	pixel_y = -30
+	pixel_y = -30;
+	dir = 1
 	},
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/muriki/bathroom/scilower)
@@ -31137,6 +31200,7 @@
 /obj/effect/floor_decal/industrial/loading{
 	dir = 1
 	},
+/obj/item/geiger/wall/west,
 /turf/simulated/floor/tiled,
 /area/rnd/research/anomaly)
 "biF" = (
@@ -56858,6 +56922,10 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 10
 	},
+/obj/structure/extinguisher_cabinet{
+	pixel_y = -30;
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/rnd/research/anomaly)
 "cjv" = (
@@ -69433,6 +69501,7 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
+/obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/maintenance/research/closet)
 "cOq" = (
@@ -69747,6 +69816,10 @@
 	dir = 6
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/camera/network/research{
+	c_tag = "SCI - Xenoarch North";
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/rnd/research/anomaly)
 "cOY" = (
@@ -76208,6 +76281,10 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 10
 	},
+/obj/machinery/camera/network/research{
+	c_tag = "SCI - Xenoarch South";
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/rnd/research/anomaly)
 "kqS" = (
@@ -81895,6 +81972,11 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 6
 	},
+/obj/structure/extinguisher_cabinet{
+	dir = 8;
+	pixel_x = 30;
+	pixel_y = -4
+	},
 /turf/simulated/floor/tiled,
 /area/rnd/research/anomaly)
 "raN" = (
@@ -87388,7 +87470,8 @@
 	dir = 1
 	},
 /obj/structure/mirror{
-	pixel_y = -30
+	pixel_y = -30;
+	dir = 1
 	},
 /obj/machinery/light,
 /turf/simulated/floor/tiled/kafel_full/white,
@@ -135878,7 +135961,7 @@ bJG
 bUL
 bUU
 aqQ
-rAL
+aaQ
 fNv
 leR
 aqO
@@ -136064,7 +136147,7 @@ ahC
 ahC
 agP
 bYM
-bZB
+aap
 cqv
 bYM
 agP
@@ -136382,7 +136465,7 @@ adE
 bZS
 bZI
 abw
-bZB
+aap
 bZo
 amq
 bSW
@@ -141074,10 +141157,10 @@ ahd
 amC
 cOB
 ajL
-aGu
+aat
 cOp
-aGu
-aGu
+aaO
+aat
 uEM
 uEM
 rOS
@@ -141236,10 +141319,10 @@ ahd
 anV
 apC
 ajL
-aGu
+aaN
 uEM
-aGu
-aGu
+aaP
+aaN
 cOj
 aod
 aNH
@@ -141564,7 +141647,7 @@ aqQ
 asO
 uEM
 aGu
-aGu
+aaq
 uEM
 uEM
 cOg
@@ -141887,7 +141970,7 @@ kvB
 aqQ
 uEM
 aGu
-aGu
+aaq
 aGu
 uEM
 aGu

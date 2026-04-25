@@ -12,7 +12,8 @@
 	outdoors = TRUE
 
 /area/rnd/supermatter
-	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
+	name = "\improper Particle Lab"
+	base_turf = /turf/simulated/open/muriki
 
 /area/constructionsite/science
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
@@ -139,7 +140,7 @@
 
 /area/server
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
-	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
+	base_turf = /turf/simulated/open
 	use_emergency_overlay = TRUE
 	color_grading = COLORTINT_COLD
 

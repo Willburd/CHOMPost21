@@ -1,18 +1,22 @@
 /datum/job/hydro
 	supervisors = "the " + JOB_QUARTERMASTER
-	selection_color = "#aaaaaa"
+	selection_color = "#7a4f33"
 	sorting_order = 2
+
+/datum/job/hydro/New()
+	. = ..()
+	alt_titles |= list(JOB_ALT_XENOHYDROPONICIST = /datum/alt_title/xenohydroponicist, JOB_ALT_XENOFLORIST = /datum/alt_title/xenoflorist)
 
 
 /datum/job/bartender
 	supervisors = "the " + JOB_QUARTERMASTER
-	selection_color = "#aaaaaa"
+	selection_color = "#7a4f33"
 	sorting_order = 1
 
 
 /datum/job/chef
 	supervisors = "the " + JOB_QUARTERMASTER
-	selection_color = "#aaaaaa"
+	selection_color = "#7a4f33"
 	sorting_order = 1
 
 
