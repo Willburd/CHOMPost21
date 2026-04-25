@@ -968,6 +968,20 @@
 	var/mob/living/simple_mob/slime/xenobio/S
 	var/list/slime_types = typesof(/mob/living/simple_mob/slime/xenobio)
 
+	// Outpost 21 edit begin - Remove chomp slimes from default set
+	slime_types -= list(
+		/obj/item/slime_extract/sepia,
+        /obj/item/slime_extract/redspace,
+        /obj/item/slime_extract/dark,
+        /obj/item/slime_extract/plague,
+        /obj/item/slime_extract/oceanic,
+        /obj/item/slime_extract/nuclear,
+        /obj/item/slime_extract/dream,
+        /obj/item/slime_extract/nightmare,
+        /obj/item/slime_extract/sound
+	)
+	// Outpost 21 edit end
+
 	while(slime_types.len)
 		S = pick(slime_types)
 		if(initial(S.rainbow_core_candidate) == TRUE)
