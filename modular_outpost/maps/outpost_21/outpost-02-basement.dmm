@@ -9132,7 +9132,7 @@
 	dir = 8
 	},
 /obj/machinery/camera/network/research{
-	c_tag = "SCI - Xenoarchaeology Spectrometry lab";
+	c_tag = "SCI - Xenoarch Gas Storage";
 	dir = 4
 	},
 /obj/machinery/firealarm{
@@ -69816,6 +69816,10 @@
 	dir = 6
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/camera/network/research{
+	c_tag = "SCI - Xenoarch North";
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/rnd/research/anomaly)
 "cOY" = (
@@ -76276,6 +76280,10 @@
 /obj/item/analyzer,
 /obj/effect/floor_decal/corner/purple{
 	dir = 10
+	},
+/obj/machinery/camera/network/research{
+	c_tag = "SCI - Xenoarch South";
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/rnd/research/anomaly)
