@@ -1738,6 +1738,7 @@
 	base_turf = /turf/simulated/open
 	icon_state = "blue"
 	color_grading = COLORTINT_DIM
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 
 /area/maintenance/oldbridge
 	name = "\improper Abandoned Bridge"
@@ -2077,6 +2078,7 @@
 	icon_state = "blue"
 	outdoors = FALSE
 	color_grading = COLORTINT_DIM
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 
 /area/muriki/rooftop/scigen
 	name = "\improper Research Backup Generator"
@@ -2085,6 +2087,7 @@
 	icon_state = "blue"
 	outdoors = FALSE
 	color_grading = COLORTINT_DIM
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 
 /area/muriki/rooftop/civgen
 	name = "\improper Civilian Backup Generator"
@@ -2093,6 +2096,7 @@
 	icon_state = "blue"
 	outdoors = FALSE
 	color_grading = COLORTINT_DIM
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 
 /area/muriki/rooftop/secgen
 	name = "\improper Security Backup Generator"
@@ -2101,6 +2105,7 @@
 	icon_state = "blue"
 	outdoors = FALSE
 	color_grading = COLORTINT_DIM
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 
 /area/muriki/rooftop/comgen
 	name = "\improper Command Backup Generator"
@@ -2109,6 +2114,7 @@
 	icon_state = "blue"
 	outdoors = FALSE
 	color_grading = COLORTINT_DIM
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 
 /area/muriki/rooftop/cargen
 	name = "\improper Cargo Backup Generator"
@@ -2117,6 +2123,7 @@
 	icon_state = "blue"
 	outdoors = FALSE
 	color_grading = COLORTINT_DIM
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 
 //
 // Security-----------------------------------------------------------------------

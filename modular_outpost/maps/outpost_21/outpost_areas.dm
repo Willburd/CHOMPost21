@@ -139,7 +139,7 @@
 	color_grading = COLORTINT_COLD
 
 /area/server
-	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
+	holomap_color = HOLOMAP_AREACOLOR_COMMAND
 	base_turf = /turf/simulated/open
 	use_emergency_overlay = TRUE
 	color_grading = COLORTINT_COLD
@@ -541,6 +541,7 @@
 
 /area/maintenance/engineering
 	base_turf = /turf/simulated/open
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 
 /area/maintenance/engi_engine
 	base_turf = /turf/simulated/open
@@ -563,6 +564,9 @@
 
 /area/maintenance/medbay_fore
 	base_turf = /turf/simulated/open
+
+/area/maintenance/substation
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 
 /area/maintenance/substation/medical
 	base_turf = /turf/simulated/open
