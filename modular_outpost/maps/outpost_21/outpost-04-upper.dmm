@@ -11541,11 +11541,11 @@
 	dir = 4;
 	pixel_x = -4
 	},
-/obj/structure/sign/yessmoking_1{
-	pixel_x = -32
-	},
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 8
+	},
+/obj/machinery/computer/security/telescreen/entertainment{
+	pixel_x = -32
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/medbreak)
