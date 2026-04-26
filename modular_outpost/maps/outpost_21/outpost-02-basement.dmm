@@ -69596,6 +69596,9 @@
 /obj/structure/cable/green{
 	icon_state = "4-9"
 	},
+/obj/structure/cable/green{
+	icon_state = "2-9"
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/lowmain)
 "cOB" = (
