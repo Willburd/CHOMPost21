@@ -40,6 +40,7 @@
 /datum/decl/emote/audible/kweh_sad/get_emote_sound(mob/living/user)
 	return list(
 			"sound" = pick('modular_zubbers/code/modules/emotes/sound/raptor/raptor_2.ogg',
-				'modular_zubbers/code/modules/emotes/sound/raptor/raptor_3.ogg'),
+				'modular_zubbers/code/modules/emotes/sound/raptor/raptor_3.ogg',
+				'modular_zubbers/code/modules/emotes/sound/raptor/raptor_6.ogg'),
 			"vol" =   emote_volume
 		)
