@@ -63,6 +63,7 @@
 	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_DRUG
+	medallergen_type = MEDALLERGEN_BICARD
 
 	allergen_type = ALLERGEN_BICARD // Outpost 21 edit(port) - Medical allergies
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
@@ -105,6 +106,7 @@
 	can_overdose_touch = TRUE
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
+	medallergen_type = MEDALLERGEN_BICARD
 
 	allergen_type = ALLERGEN_BICARD // Outpost 21 edit(port) - Medical allergies
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
@@ -158,6 +160,7 @@
 	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_DRUG
+	medallergen_type = MEDALLERGEN_KELOTANE
 
 	allergen_type = ALLERGEN_KELOTANE // Outpost 21 edit(port) - Medical allergies
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
@@ -184,6 +187,7 @@
 	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_DRUG
+	medallergen_type = MEDALLERGEN_KELOTANE
 
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
@@ -208,6 +212,7 @@
 	can_overdose_touch = TRUE
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
+	medallergen_type = MEDALLERGEN_KELOTANE
 
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
@@ -237,6 +242,7 @@
 	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_DRUG
+	medallergen_type = MEDALLERGEN_DYLO
 
 	allergen_type = ALLERGEN_DYLO // Outpost 21 edit(port) - Medical allergies
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
@@ -367,6 +373,7 @@
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_DRUG
+	medallergen_type = MEDALLERGEN_TRICORD
 
 	allergen_type = ALLERGEN_TRICORD // Outpost 21 edit(port) - Medical allergies
 
@@ -399,6 +406,7 @@
 	can_overdose_touch = TRUE
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
+	medallergen_type = MEDALLERGEN_TRICORD
 
 	allergen_type = ALLERGEN_TRICORD // Outpost 21 edit(port) - Medical allergies
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
@@ -809,6 +817,7 @@
 	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
+	medallergen_type = MEDALLERGEN_PERIDAX
 
 	allergen_type = ALLERGEN_PERIDAX // Outpost 21 edit(port) - Medical allergies
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
@@ -1318,6 +1327,7 @@
 	data = 0
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_DRUG
+	medallergen_type = MEDALLERGEN_SPACACIL
 
 	allergen_type = ALLERGEN_SPACACIL // Outpost 21 edit(port) - Medical allergies
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
