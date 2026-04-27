@@ -252,3 +252,14 @@
   - qol: Circuitry bag all starts with a detailer.
   - sound: Soundloops have been added for fridges, tcomms, and shield generators.
   - code_imp: Falloff variable added for looping sounds.
+2026-04-27:
+  Diana:
+  - bugfix: Borg grippers work again
+  - qol: You can drag-drop plastic into the autoinjector printer.
+  Will:
+  - rscadd: tricord allergy negative trait
+  - rscadd: bicardine allergy negative trait
+  - rscadd: kelotane allergy negative trait
+  - rscadd: dylovene allergy negative trait
+  - rscadd: spacacillin allergy negative trait
+  - rscadd: peridaxon allergy negative trait
