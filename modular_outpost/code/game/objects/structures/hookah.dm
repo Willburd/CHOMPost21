@@ -191,8 +191,9 @@
 
 /obj/item/hookah_pipe/attack(mob/living/carbon/M as mob, mob/living/carbon/user as mob)
 	if(!istype(M, /mob))
-		return
+		return ITEM_INTERACT_FAILURE
 	smoke(M,user)
+	return ITEM_INTERACT_SUCCESS
 
 /obj/item/hookah_pipe/proc/smoke(mob/target, mob/user)
 	if(check_retract())
