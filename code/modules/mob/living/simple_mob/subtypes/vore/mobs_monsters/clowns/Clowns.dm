@@ -32,8 +32,6 @@
 	maxbodytemp = 700
 
 /datum/ai_holder/simple_mob/melee/clowns
-	can_breakthrough = TRUE // Outpost 21 edit - ANGRY CLOWNS
-	violent_breakthrough = TRUE // Outpost 21 edit - ANGRY CLOWNS
 	hostile = FALSE // The majority of simplemobs are hostile, gaslamps are nice.
 	cooperative = FALSE
 	retaliate = TRUE //so the monster can attack back
