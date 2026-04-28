@@ -293,4 +293,8 @@
 	is_genetrait = TRUE // Base FALSE, We want it to be a gene...
 	hidden = TRUE // Base FAlSE, ...Because taking it from the start is too disruptive to ling gameplay
 
+/datum/trait/negative/medical_allergy
+	is_genetrait = TRUE // Base FALSE
+	activation_message = "Something feels odd..."
+
 #endif

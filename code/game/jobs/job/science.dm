@@ -237,7 +237,6 @@
 /datum/alt_title/assembly_tech
 	title = JOB_ALT_ASSEMBLY_TECHNICIAN
 
-/* Outpost 21 edit - Xenobotanist removal
 //////////////////////////////////
 //			Xenobotanist
 //////////////////////////////////
@@ -262,7 +261,6 @@
 	job_description = "A " + JOB_XENOBOTANIST + " grows and cares for a variety of abnormal, custom made, and frequently dangerous plant life. When the products of these plants \
 					are both safe and beneficial to the station, they may choose to introduce it to the rest of the crew."
 	alt_titles = list(JOB_ALT_XENOHYDROPONICIST = /datum/alt_title/xenohydroponicist, JOB_ALT_XENOFLORIST = /datum/alt_title/xenoflorist)
-*/
 
 /datum/alt_title/xenoflorist
 	title = JOB_ALT_XENOFLORIST
