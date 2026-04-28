@@ -16,7 +16,7 @@
 	melee_damage_lower = 5
 	melee_damage_upper = 30
 
-	ai_holder_type = /datum/ai_holder/simple_mob/melee/angryclowns // Outpost 21 edit - Base clown is also angry
+	ai_holder_type = /datum/ai_holder/simple_mob/melee/clowns
 
 	loot_list = list(/obj/item/bikehorn = 100)
 
@@ -29,12 +29,7 @@
 	min_n2 = 0
 	max_n2 = 0
 	minbodytemp = 0
-	// maxbodytemp = 700 // Outpost 21 edit - Die normally to fire
-
-	// Outpost 21 edit begin - Clown butchering
-	meat_amount = 5
-	meat_type = /obj/item/reagent_containers/food/snacks/meat/human
-	// Outpost 21 edit end
+	maxbodytemp = 700
 
 /datum/ai_holder/simple_mob/melee/clowns
 	can_breakthrough = TRUE // Outpost 21 edit - ANGRY CLOWNS
