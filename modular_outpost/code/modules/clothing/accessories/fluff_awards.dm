@@ -149,3 +149,22 @@ Internal confinement medals
 	name = "enhanced internal confinement medal - emerald"
 	desc = "A small pin awarded to crew with exceptional control of their insides, marking them as exceptionally safe to remain within during 'belly brigging.' The Emerald is awarded for enhanced grade 16, or indefinite. Making them one of the safest places you can stay, possibly even safer than staying outside of them."
 	icon_state = "esic_6"
+
+
+/*****
+Dogtags
+*****/
+/obj/item/accessory/dtag
+	name = "Identification Tag"
+	desc = "A small medal ID plate with important information regarding the owner. Often called 'dogtags', despite allegations of specism from the vulpkanin. "
+	icon_state = "dtags"
+
+/obj/item/accessory/dtag/medical
+	name = "Medical Information Tag"
+	desc = "A small metal ID plate colored blue to identify patient worries. Containing blood type, and any DNR information."
+	icon_state = "dtags_med"
+
+/obj/item/accessory/dtag/allergy
+	name = "Allergy Information Tag"
+	desc = "A small metal ID plate colored bright red to warn medical staff of a potentially hazardous allergy in the patient."
+	icon_state = "dtags_aller"
