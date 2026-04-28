@@ -69,11 +69,12 @@
 		to_chat(user, span_notice("You hit the floor with the [src]."))
 		call(/obj/effect/rune/proc/revealrunes)(src)
 	// Outpost 21 edit begin - Dephase shadekin with nullrod
-	for(var/mob/living/living in range(2, get_turf(src)))
-		var/datum/component/shadekin/SK = living.get_shadekin_component()
-		if(SK && SK.in_phase)
-			SK.attack_dephase(null, src)
-			to_chat(living, span_danger("An unyielding force of will alone drags you into reality!"))
+	if(user.mind?.assigned_role == JOB_CHAPLAIN)
+		for(var/mob/living/living in range(2, get_turf(src)))
+			var/datum/component/shadekin/SK = living.get_shadekin_component()
+			if(SK && SK.in_phase)
+				SK.attack_dephase(null, src)
+				to_chat(living, span_danger("An unyielding force of will alone drags you into reality!"))
 	// Outpost 21 edit end
 
 /obj/item/energy_net
