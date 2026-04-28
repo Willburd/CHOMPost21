@@ -14,11 +14,11 @@ GLOBAL_LIST_EMPTY(active_autoresleevers)
 	var/respawn = 15 MINUTES			//The time to wait if you didn't die from vore // Outpost 21 edit - 15 mins
 	var/spawn_slots = -1				//How many people can be spawned from this? If -1 it's unlimited
 	var/spawntype						//The kind of mob that will be spawned, if set.
-	// Outpost 21 addition begin - Our resleever works different
+	// outpost 21 edit begin - Our resleever works different
 	var/allow_ghosts_to_trigger = TRUE // If true, enables standard behavior
 	var/releaseturf
 	var/throw_dir = WEST
-	// Outpost 21 addition end
+	// outpost 21 edit end
 
 /obj/machinery/transhuman/autoresleever/Initialize(mapload)
 	. = ..()
@@ -40,10 +40,10 @@ GLOBAL_LIST_EMPTY(active_autoresleevers)
 	update_icon()
 
 /obj/machinery/transhuman/autoresleever/attack_ghost(mob/observer/dead/user as mob)
-	// Outpost 21 addition begin - Our resleever works different
+	// outpost 21 edit begin - Our resleever works different
 	if(!allow_ghosts_to_trigger)
 		return
-	// Outpost 21 addition end
+	// outpost 21 edit end
 	// Outpost 21 edit begin - Coredump prevents scans
 	if(SStranscore.default_db?.core_dumped)
 		to_chat(user, span_warning("Resleeving database is dumped and offline."))
@@ -82,10 +82,10 @@ GLOBAL_LIST_EMPTY(active_autoresleevers)
 		to_chat(user, span_warning("You need to have been spawned in order to respawn here."))
 
 /obj/machinery/transhuman/autoresleever/attackby(var/mob/user)	//Let's not let people mess with this.
-	// Outpost 21 addition begin - Our resleever works different
+	// outpost 21 edit begin - Our resleever works different
 	if(!allow_ghosts_to_trigger)
 		return
-	// Outpost 21 addition end
+	// outpost 21 edit end
 	update_icon()
 	if(isobserver(user))
 		attack_ghost(user)
@@ -430,4 +430,4 @@ GLOBAL_LIST_EMPTY(active_autoresleevers)
 	spawn(5 SECONDS)
 		new_character.forceMove(spawnloc)
 		new_character.throw_at(get_edge_target_turf(src.loc, throw_dir), 1,5)
-// Outpost 21 addition end
+// outpost 21 edit end

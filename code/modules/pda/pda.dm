@@ -45,10 +45,10 @@
 		new/datum/data/pda/app/notekeeper,
 		new/datum/data/pda/app/timeclock, //CHOMPEdit: Add the timeclock to default apps
 		new/datum/data/pda/app/news,
-		// Outpost 21 addition begin - New apps
+		// outpost 21 edit begin - New apps
 		new/datum/data/pda/app/weather,
 		new/datum/data/pda/app/sop,
-		// Outpost 21 addition end
+		// outpost 21 edit end
 		new/datum/data/pda/app/messenger,
 		new/datum/data/pda/app/manifest,
 		new/datum/data/pda/app/atmos_scanner,
@@ -461,9 +461,10 @@
 			add_overlay("pda-pen")
 	return
 
-/obj/item/pda/attack(mob/living/C, mob/living/user)
-	if (istype(C, /mob/living/carbon) && scanmode)
-		scanmode.scan_mob(C, user)
+/obj/item/pda/attack(mob/living/M, mob/living/user, target_zone, attack_modifier)
+	if(istype(M, /mob/living/carbon) && scanmode)
+		scanmode.scan_mob(M, user)
+		return ITEM_INTERACT_SUCCESS
 
 /obj/item/pda/afterattack(atom/A, mob/user, proximity)
 	if(proximity && scanmode)

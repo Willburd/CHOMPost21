@@ -54,6 +54,7 @@
 
 	var/taste_sensitivity = TASTE_NORMAL							// How sensitive the species is to minute tastes.
 	var/allergens = null									// Things that will make this species very sick
+	var/medallergens = null									// Medication that will makes this species very sick
 	var/allergen_reaction = AG_TOX_DMG|AG_OXY_DMG|AG_EMOTE|AG_PAIN|AG_BLURRY|AG_CONFUSE	// What type of reactions will you have? These the 'main' options and are intended to approximate anaphylactic shock at high doses.
 	var/allergen_damage_severity = 2.5							// How bad are reactions to the allergen? Touch with extreme caution.
 	var/allergen_disable_severity = 10							// Whilst this determines how long nonlethal effects last and how common emotes are.
@@ -248,10 +249,10 @@
 	var/rad_levels = NORMAL_RADIATION_RESISTANCE			//For handle_radiation
 	var/rad_removal_mod = 1
 
-	// Outpost 21 addition begin
+	// outpost 21 edit begin
 	var/phoron_contact_mod = 1								// Affects skin contact poisoning from phoron
 	var/enzyme_contact_mod = 1								// Multiplies probability of enzyme damage rolls... basically only used by the enzyme immunity trait(outpost 21)
-	// Outpost 21 addition end
+	// outpost 21 edit end
 
 	var/ambulant_blood = FALSE								// Force changeling blood effects
 
@@ -859,7 +860,7 @@
 	if(H.species.has_vibration_sense)
 		H.motiontracker_subscribe()
 
-	if(H.species.allergens)
+	if(H.species.allergens || H.species.medallergens)
 		H.AddElement(/datum/element/allergy)
 	else
 		H.RemoveElement(/datum/element/allergy)

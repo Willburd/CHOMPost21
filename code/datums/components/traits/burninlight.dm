@@ -34,14 +34,14 @@
 	if(owner.inStasisNow())
 		return
 
-	// outpost 21 addition begin - lockers are dark and spooky!
+	// outpost 21 edit begin - lockers are dark and spooky!
 	var/light_amount = 0 //how much light there is in the place, affects damage
 	if(istype(owner.loc,/obj/structure/closet))
 		light_amount = 0 // it's dark in here!
 	else if(isturf(owner.loc)) //else, there's considered to be no light
 		var/turf/T = owner.loc
 		light_amount = T.get_lumcount(0,1)
-	// outpost 21 addition end
+	// outpost 21 edit end
 
 	// outpost 21 edit(port) begin - More intense gradiant
 	if(light_amount)

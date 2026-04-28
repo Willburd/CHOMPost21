@@ -129,7 +129,6 @@
 					if(WEST)
 						cache = GLOB.flesh_overlay_cache["flesh_side_[place_dir]"]
 						cache.pixel_x = -offset
-				// Outpost 21 edit end
 			add_overlay(GLOB.flesh_overlay_cache["flesh_side_[place_dir]"])
 
 	if(update_neighbors)

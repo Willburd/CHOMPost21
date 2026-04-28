@@ -31,9 +31,17 @@
 		JOB_ALT_SOFTWARE_ENGINEER = /datum/alt_title/software_engi)
 
 
+/datum/job/xenobotanist
+	supervisors = "the " + JOB_QUARTERMASTER + " and " + JOB_RESEARCH_DIRECTOR
+	departments = list(DEPARTMENT_RESEARCH, DEPARTMENT_CIVILIAN)
+	outfit_type = /datum/decl/hierarchy/outfit/job/science/xenobotanist
+
 /datum/job/xenobotanist/New()
 	. = ..()
 	access -= list(ACCESS_ROBOTICS)
+	access |= list(ACCESS_HYDROPONICS, ACCESS_KITCHEN)
+	minimal_access -= list(ACCESS_ROBOTICS)
+	minimal_access |= list(ACCESS_HYDROPONICS, ACCESS_KITCHEN)
 
 
 // Alt titles

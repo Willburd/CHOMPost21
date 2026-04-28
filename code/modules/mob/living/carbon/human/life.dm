@@ -1385,11 +1385,11 @@
 		if(species.vision_organ)
 			vision = internal_organs_by_name[species.vision_organ]
 
-		// outpost 21 addition addition - lockers are dark and spooky!
+		// outpost 21 edit addition - lockers are dark and spooky!
 		if(istype(loc,/obj/structure/closet))
 			SetBlinded(1)
 			blinded =    1
-		// outpost 21 addition end
+		// outpost 21 edit end
 		if(!species.vision_organ) // Presumably if a species has no vision organs, they see via some other means.
 			SetBlinded(0)
 			blinded =    0

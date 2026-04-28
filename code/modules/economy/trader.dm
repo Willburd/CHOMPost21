@@ -326,7 +326,7 @@
 		/obj/item/chameleon = 25,
 		// /obj/item/gun/energy/sizegun = 25, // outpost 21 no easy sizeguns
 		// /obj/item/slow_sizegun = 25, // outpost 21 no easy sizeguns
-		/obj/item/implanter/loyalty, // Outpost 21 addition - Kinda evil drops
+		/obj/item/implanter/loyalty, // outpost 21 edit - Kinda evil drops
 		/obj/item/clothing/accessory/collar/shock/bluespace = 25,
 		/obj/item/implant/sizecontrol = 25,
 		/obj/item/clothing/under/hyperfiber/bluespace = 25,

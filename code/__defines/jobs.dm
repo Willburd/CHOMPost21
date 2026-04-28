@@ -67,7 +67,7 @@
 	#define JOB_ALT_SUPPLY_CHIEF "Supply Chief"
 	#define JOB_ALT_LOGISTICS_MANAGER "Logistics Manager"
 	#define JOB_ALT_CARGO_SUPERVISOR "Cargo Supervisor"
-	#define JOB_ALT_CHIEF_STEWARD "Chief Steward" // Outpost 21 addition
+	#define JOB_ALT_CHIEF_STEWARD "Chief Steward" // outpost 21 edit
 
 #define JOB_PATHFINDER "Pathfinder" // was Pathfinder  //CHOMP explo keep
 	// Pathfinder alt titles
@@ -92,7 +92,7 @@
 		#define JOB_ALT_RESEARCH_ASSISTANT "Research Assistant"
 		#define JOB_ALT_VISITOR "Visitor"
 		#define JOB_ALT_RESIDENT "Resident"
-		#define JOB_ALT_SPACER "Spacer" // Outpost 21 addition
+		#define JOB_ALT_SPACER "Spacer" // outpost 21 edit
 //___________________________________________________________
 
 
@@ -211,7 +211,7 @@
 	#define JOB_ALT_FISHER "Fisher"
 	#define JOB_ALT_FORTUNE_TELLER "Fortune Teller"
 	#define JOB_ALT_SPIRIT_HEALER "Spirit Healer"
-	#define JOB_ALT_RADIOHOST "Radio Host" // Outpost 21 addition
+	#define JOB_ALT_RADIOHOST "Radio Host" // outpost 21 edit
 	#define JOB_ALT_EDUCATOR "Educator"
 	#define JOB_ALT_INSTRUCTOR "Instructor"
 //___________________________________________________________
@@ -225,7 +225,7 @@
 	#define JOB_ALT_ELECTRICIAN "Electrician"
 	#define JOB_ALT_CONSTRUCTION_ENGINEER "Construction Engineer"
 	#define JOB_ALT_ENGINEERING_CONTRACTOR "Engineering Contractor"
-	#define JOB_ALT_SHIPBREAKER "Ship Breaker" // Outpost 21 addition
+	#define JOB_ALT_SHIPBREAKER "Ship Breaker" // outpost 21 edit
 	#define JOB_ALT_CHEMENGINEER "Chemical Engineer"
 	#define JOB_ALT_COMPUTER_TECHNICIAN "Computer Technician"
 	#define JOB_ALT_SALVAGE_TECHNICIAN "Salvage Technician"
@@ -267,7 +267,7 @@
 	#define JOB_ALT_ORDERLY "Orderly"
 	#define JOB_ALT_VIROLOGIST "Virologist"
 	#define JOB_ALT_MEDICAL_CONTRACTOR "Medical Contractor"
-	#define JOB_ALT_XENOSPECIALIST "Xenoanatomy Specialist" // Outpost 21 addition
+	#define JOB_ALT_XENOSPECIALIST "Xenoanatomy Specialist" // outpost 21 edit
 	#define JOB_ALT_CORONER "Coroner"
 
 
@@ -290,8 +290,8 @@
 #define JOB_SEARCH_AND_RESCUE "Search and Rescue" // CHOMPEdit, actual JOB here
 
 #define JOB_GENETICIST "Geneticist" //Disabled atm
-	#define JOB_ALT_GENE_THERAPIST "Gene Therapist" // Outpost 21 addition
-	#define JOB_ALT_SLEEVE_ENGINEER "Sleeve Engineer" // Outpost 21 addition
+	#define JOB_ALT_GENE_THERAPIST "Gene Therapist" // outpost 21 edit
+	#define JOB_ALT_SLEEVE_ENGINEER "Sleeve Engineer" // outpost 21 edit
 //___________________________________________________________
 
 

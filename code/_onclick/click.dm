@@ -117,14 +117,14 @@
 		throw_mode_off()
 		return TRUE
 
-	// Outpost 21 addition begin - Clicking while driving a interior controlled vehicle
+	// outpost 21 edit begin - Clicking while driving a interior controlled vehicle
 	var/datum/component/remote_view/R = GetComponent(/datum/component/remote_view)
 	if(!is_incorporeal() && R && (isturf(A) || isturf(A.loc)))
 		if(istype(R.get_coordinator(), /obj/machinery/computer/vehicle_interior_console))
 			var/obj/machinery/computer/vehicle_interior_console/C = R.get_coordinator()
 			if(C)
 				return C.click_action(A, src, params)
-	// Outpost 21 addition end
+	// outpost 21 edit end
 
 	var/obj/item/W = get_active_hand()
 

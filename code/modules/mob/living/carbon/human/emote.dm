@@ -217,6 +217,8 @@ GLOBAL_LIST_INIT(human_default_emotes, list(
 	/datum/decl/emote/audible/synth/rberr,
 	/datum/decl/emote/audible/synth/rbpos,
 	/datum/decl/emote/visible/async_blink,
+	/datum/decl/emote/audible/kweh,
+	/datum/decl/emote/audible/kweh_sad,
 	//outpost 21 add end
 ))
 
@@ -388,6 +390,8 @@ GLOBAL_LIST_INIT(simple_mob_default_emotes, list(
 	/datum/decl/emote/audible/synth/rberr,
 	/datum/decl/emote/audible/synth/rbpos,
 	/datum/decl/emote/visible/async_blink,
+	/datum/decl/emote/audible/kweh,
+	/datum/decl/emote/audible/kweh_sad,
 	//outpost 21 add end
 	))
 

@@ -20,7 +20,7 @@
 	return TRUE
 
 /mob/living/carbon/human/proc/getlightlevel() //easier than having the same code in like three places
-	// outpost 21 addition begin - lockers are dark and spooky!
+	// outpost 21 edit begin - lockers are dark and spooky!
 	if(istype(src.loc,/obj/structure/closet))
 		return 0 // it's dark in here!
 	else if(isturf(src.loc)) //else, there's considered to be no light
@@ -28,7 +28,7 @@
 		return T.get_lumcount() * 5
 	else
 		return 0
-	// outpost 21 addition end
+	// outpost 21 edit end
 
 /mob/living/carbon/human/proc/bloodsuck()
 	set name = "Partially Drain prey of blood"

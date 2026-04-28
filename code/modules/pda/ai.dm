@@ -9,13 +9,13 @@
 		new/datum/data/pda/app/main_menu,
 		new/datum/data/pda/app/notekeeper,
 		new/datum/data/pda/app/news,
-		// Outpost 21 addition begin - New apps
+		// outpost 21 edit begin - New apps
 		new/datum/data/pda/app/weather,
 		new/datum/data/pda/app/sop,
 		new/datum/data/pda/app/prisoner_manager,
 		new/datum/data/pda/app/crew_records/security,
 		new/datum/data/pda/app/crew_records/medical,
-		// Outpost 21 addition end
+		// outpost 21 edit end
 		new/datum/data/pda/app/messenger,
 		new/datum/data/pda/app/game_launcher)
 	special_handling = TRUE

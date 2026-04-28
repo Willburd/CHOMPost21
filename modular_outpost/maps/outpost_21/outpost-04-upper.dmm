@@ -197,20 +197,31 @@
 /obj/machinery/computer/transhuman/designer{
 	dir = 1
 	},
-/obj/effect/floor_decal/corner/blue/diagonal,
-/turf/simulated/floor/wmarble,
+/obj/effect/floor_decal/corner/blue{
+	dir = 10
+	},
+/obj/effect/floor_decal/corner/purple,
+/turf/simulated/floor/tiled/white,
 /area/medical/genetics)
 "aat" = (
 /obj/machinery/status_display{
 	layer = 4;
 	pixel_x = -32
 	},
-/obj/effect/floor_decal/corner/blue/diagonal,
-/turf/simulated/floor/wmarble,
-/area/medical/genetics)
-"aau" = (
 /obj/effect/floor_decal/corner/blue/full{
 	dir = 8
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/genetics)
+"aau" = (
+/obj/effect/floor_decal/corner/blue{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/genetics)
@@ -997,6 +1008,9 @@
 	dir = 2;
 	icon_state = "pipe-c"
 	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/patient_wing)
 "acf" = (
@@ -1151,6 +1165,9 @@
 	dir = 5
 	},
 /obj/machinery/light{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/purple{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
@@ -3560,12 +3577,13 @@
 /obj/effect/floor_decal/corner/lime{
 	dir = 10
 	},
-/obj/effect/floor_decal/industrial/bot_outline/red,
 /obj/machinery/light,
 /obj/machinery/firealarm{
 	dir = 1;
 	pixel_y = -26
 	},
+/obj/effect/floor_decal/corner/purple,
+/obj/effect/floor_decal/industrial/bot_outline/red,
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/xenobiology/xenoflora)
 "aim" = (
@@ -3585,12 +3603,18 @@
 	dir = 4;
 	pixel_x = -30
 	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/xenobiology/xenoflora)
 "aio" = (
 /obj/machinery/reagent_refinery/grinder,
 /obj/effect/floor_decal/corner/lime{
 	dir = 9
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/xenobiology/xenoflora)
@@ -4828,6 +4852,7 @@
 	pixel_y = -32;
 	dir = 1
 	},
+/obj/effect/floor_decal/corner/purple,
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/xenobiology/xenoflora)
 "aly" = (
@@ -5588,7 +5613,6 @@
 /obj/effect/floor_decal/corner/lime{
 	dir = 10
 	},
-/obj/effect/floor_decal/industrial/bot_outline/red,
 /obj/machinery/alarm{
 	dir = 1;
 	pixel_y = -26
@@ -5597,6 +5621,8 @@
 	c_tag = "CIV - Xenoflora Hazard South";
 	dir = 1
 	},
+/obj/effect/floor_decal/corner/purple,
+/obj/effect/floor_decal/industrial/bot_outline/red,
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/xenobiology/xenoflora)
 "ant" = (
@@ -5606,6 +5632,10 @@
 	pixel_y = -21
 	},
 /obj/machinery/chemical_analyzer,
+/obj/effect/floor_decal/corner/purple{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/purple,
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/xenobiology/xenoflora)
 "anu" = (
@@ -5613,6 +5643,7 @@
 	dir = 10
 	},
 /obj/machinery/light,
+/obj/effect/floor_decal/corner/purple,
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/xenobiology/xenoflora)
 "anv" = (
@@ -5623,6 +5654,7 @@
 	dir = 1;
 	pixel_y = -26
 	},
+/obj/effect/floor_decal/corner/purple,
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/xenobiology/xenoflora)
 "anw" = (
@@ -5644,6 +5676,7 @@
 	dir = 1
 	},
 /obj/machinery/light,
+/obj/effect/floor_decal/corner/purple,
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/xenobiology/xenoflora)
 "any" = (
@@ -5654,6 +5687,7 @@
 /obj/structure/table/standard{
 	name = "plastic table frame"
 	},
+/obj/effect/floor_decal/corner/purple,
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/xenobiology/xenoflora)
 "anz" = (
@@ -5673,6 +5707,7 @@
 	dir = 1;
 	pixel_y = -26
 	},
+/obj/effect/floor_decal/corner/purple,
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/xenobiology/xenoflora)
 "anA" = (
@@ -5699,6 +5734,7 @@
 /obj/effect/floor_decal/corner/lime{
 	dir = 6
 	},
+/obj/effect/floor_decal/corner/purple,
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/xenobiology/xenoflora)
 "anD" = (
@@ -5709,6 +5745,9 @@
 	name = "hydroponics chemical tanker"
 	},
 /obj/machinery/reagent_refinery/hub{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/purple{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/hydro,
@@ -5729,6 +5768,7 @@
 /obj/effect/floor_decal/corner/lime{
 	dir = 6
 	},
+/obj/effect/floor_decal/corner/purple,
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/xenobiology/xenoflora)
 "anF" = (
@@ -5743,6 +5783,9 @@
 	dir = 8;
 	name = "Station Intercom (General)";
 	pixel_x = -22
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/xenobiology/xenoflora)
@@ -5794,6 +5837,7 @@
 /obj/effect/floor_decal/corner/lime{
 	dir = 6
 	},
+/obj/effect/floor_decal/corner/purple,
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/xenobiology/xenoflora)
 "anL" = (
@@ -5846,11 +5890,15 @@
 	pixel_x = 30;
 	pixel_y = -4
 	},
+/obj/effect/floor_decal/corner/purple,
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/xenobiology/xenoflora)
 "anP" = (
 /obj/effect/floor_decal/corner/lime{
 	dir = 9
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/xenobiology/xenoflora)
@@ -5875,6 +5923,7 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
 	},
+/obj/effect/floor_decal/corner/purple,
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/xenobiology/xenoflora)
 "anS" = (
@@ -5930,6 +5979,7 @@
 /obj/effect/floor_decal/corner/lime{
 	dir = 6
 	},
+/obj/effect/floor_decal/corner/purple,
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/xenobiology/xenoflora)
 "anW" = (
@@ -5948,6 +5998,9 @@
 	},
 /obj/effect/floor_decal/corner/lime{
 	dir = 9
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 1
 	},
 /obj/effect/floor_decal/industrial/outline/cut_corners/blue,
 /turf/simulated/floor/tiled/hydro,
@@ -5983,6 +6036,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 8
 	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/xenobiology/xenoflora)
 "aoc" = (
@@ -6000,6 +6056,7 @@
 /obj/effect/floor_decal/corner/lime{
 	dir = 6
 	},
+/obj/effect/floor_decal/corner/purple,
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/xenobiology/xenoflora)
 "aoe" = (
@@ -6024,6 +6081,10 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
+/obj/effect/floor_decal/corner/purple,
+/obj/effect/floor_decal/corner/purple{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/research/xenoflora_storage)
 "aof" = (
@@ -6042,6 +6103,7 @@
 	dir = 1;
 	pixel_y = -26
 	},
+/obj/effect/floor_decal/corner/purple,
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/research/xenoflora_storage)
 "aog" = (
@@ -6054,6 +6116,7 @@
 /obj/effect/floor_decal/corner/lime{
 	dir = 10
 	},
+/obj/effect/floor_decal/corner/purple,
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/research/xenoflora_storage)
 "aoh" = (
@@ -6071,6 +6134,7 @@
 	name = "Station Intercom (General)";
 	pixel_y = -21
 	},
+/obj/effect/floor_decal/corner/purple,
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/research/xenoflora_storage)
 "aoi" = (
@@ -6089,6 +6153,7 @@
 	dir = 1;
 	pixel_y = -26
 	},
+/obj/effect/floor_decal/corner/purple,
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/research/xenoflora_storage)
 "aoj" = (
@@ -6116,6 +6181,7 @@
 /obj/effect/floor_decal/corner/lime{
 	dir = 6
 	},
+/obj/effect/floor_decal/corner/purple,
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/xenobiology/xenoflora)
 "aon" = (
@@ -6126,6 +6192,9 @@
 	dir = 9
 	},
 /obj/machinery/portable_atmospherics/hydroponics,
+/obj/effect/floor_decal/corner/purple{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/xenobiology/xenoflora)
 "aoo" = (
@@ -6224,6 +6293,7 @@
 /obj/effect/floor_decal/corner/lime{
 	dir = 6
 	},
+/obj/effect/floor_decal/corner/purple,
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/research/xenoflora_storage)
 "aow" = (
@@ -6272,6 +6342,9 @@
 /obj/effect/floor_decal/corner/lime/full{
 	dir = 8
 	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 1
+	},
 /obj/effect/floor_decal/industrial/outline/cut_corners/blue,
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/xenobiology/xenoflora)
@@ -6281,6 +6354,9 @@
 	},
 /obj/effect/floor_decal/corner/lime{
 	dir = 5
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 1
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/hydro,
@@ -6297,6 +6373,9 @@
 	name = "Kitchen Bell";
 	pixel_y = 32
 	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/xenobiology/xenoflora)
 "aoC" = (
@@ -6304,6 +6383,9 @@
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/corner/lime{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/purple{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/hydro,
@@ -6322,6 +6404,9 @@
 /obj/machinery/camera/network/civilian{
 	c_tag = "CIV - Xenoflora Main North"
 	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/xenobiology/xenoflora)
 "aoF" = (
@@ -6336,6 +6421,9 @@
 /obj/effect/floor_decal/corner/lime{
 	dir = 5
 	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/xenobiology/xenoflora)
 "aoH" = (
@@ -6346,6 +6434,9 @@
 	dir = 5
 	},
 /obj/machinery/vending/hydronutrients,
+/obj/effect/floor_decal/corner/purple{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/xenobiology/xenoflora)
 "aoI" = (
@@ -6353,6 +6444,9 @@
 	dir = 5
 	},
 /obj/machinery/smartfridge/drying_rack,
+/obj/effect/floor_decal/corner/purple{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/xenobiology/xenoflora)
 "aoJ" = (
@@ -6361,6 +6455,10 @@
 	},
 /obj/machinery/smartfridge/drying_rack,
 /obj/item/geiger/wall/east,
+/obj/effect/floor_decal/corner/purple{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/purple,
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/xenobiology/xenoflora)
 "aoK" = (
@@ -6377,6 +6475,9 @@
 	icon_state = "0-2"
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/effect/floor_decal/corner/purple{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/research/xenoflora_storage)
 "aoL" = (
@@ -6392,6 +6493,9 @@
 /obj/structure/cable/orange{
 	icon_state = "1-2"
 	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/research/xenoflora_storage)
 "aoM" = (
@@ -6400,6 +6504,9 @@
 /obj/item/storage/belt/utility,
 /obj/effect/floor_decal/corner/lime{
 	dir = 5
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/research/xenoflora_storage)
@@ -6410,6 +6517,10 @@
 /obj/effect/floor_decal/corner/lime/full{
 	dir = 1
 	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/purple,
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/research/xenoflora_storage)
 "aoO" = (
@@ -6437,12 +6548,19 @@
 	dir = 1
 	},
 /obj/machinery/portable_atmospherics/canister/carbon_dioxide,
+/obj/effect/floor_decal/corner/purple{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/purple,
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/xenobiology/xenoflora)
 "aoR" = (
 /obj/machinery/botany/precisioneditor,
 /obj/effect/floor_decal/corner/lime/full{
 	dir = 8
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/xenobiology/xenoflora)
@@ -6454,6 +6572,9 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/xenobiology/xenoflora)
 "aoT" = (
@@ -6461,6 +6582,9 @@
 	dir = 5
 	},
 /obj/machinery/seed_extractor,
+/obj/effect/floor_decal/corner/purple{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/xenobiology/xenoflora)
 "aoU" = (
@@ -6468,6 +6592,10 @@
 	dir = 1
 	},
 /obj/machinery/seed_storage/xenobotany,
+/obj/effect/floor_decal/corner/purple{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/purple,
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/xenobiology/xenoflora)
 "aoV" = (
@@ -7206,6 +7334,7 @@
 	dir = 10
 	},
 /obj/effect/landmark/holiday_event_spawn,
+/obj/effect/floor_decal/corner/purple,
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/xenobiology/xenoflora)
 "aqo" = (
@@ -7240,6 +7369,9 @@
 	},
 /obj/structure/disposalpipe/trunk{
 	dir = 4
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/xenobiology/xenoflora)
@@ -7291,11 +7423,14 @@
 /obj/effect/floor_decal/corner/lime{
 	dir = 9
 	},
-/obj/effect/floor_decal/industrial/outline/cut_corners/blue,
 /obj/structure/extinguisher_cabinet{
 	dir = 4;
 	pixel_x = -30
 	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/outline/cut_corners/blue,
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/xenobiology/xenoflora)
 "aqy" = (
@@ -7648,6 +7783,15 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/upper)
+"arc" = (
+/obj/effect/floor_decal/corner/blue{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/patient_wing)
 "arq" = (
 /obj/effect/floor_decal/corner/brown{
 	dir = 4
@@ -8018,8 +8162,11 @@
 /obj/structure/table/standard,
 /obj/item/roller,
 /obj/item/sleevemate,
-/obj/effect/floor_decal/corner/blue/diagonal,
-/turf/simulated/floor/wmarble,
+/obj/effect/floor_decal/corner/blue{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/purple,
+/turf/simulated/floor/tiled/white,
 /area/medical/genetics)
 "aAN" = (
 /obj/structure/grille,
@@ -8377,8 +8524,11 @@
 	},
 /area/muriki/rooftop/cargo)
 "aJt" = (
-/obj/effect/floor_decal/corner/blue/diagonal,
-/turf/simulated/floor/wmarble,
+/obj/effect/floor_decal/corner/blue{
+	dir = 10
+	},
+/obj/effect/floor_decal/corner/purple,
+/turf/simulated/floor/tiled/white,
 /area/medical/genetics)
 "aKf" = (
 /obj/structure/grille,
@@ -9138,6 +9288,10 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/lime/full,
+/obj/effect/floor_decal/corner/purple{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/purple,
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/xenobiology/xenoflora)
 "beg" = (
@@ -9824,7 +9978,7 @@
 /area/rnd/hallway/upper)
 "bxW" = (
 /obj/machinery/computer/scan_consolenew,
-/obj/effect/floor_decal/corner/blue/diagonal,
+/obj/effect/floor_decal/corner/purple/diagonal,
 /turf/simulated/floor/wmarble,
 /area/medical/genetics)
 "bzn" = (
@@ -11028,7 +11182,6 @@
 /turf/simulated/floor/plating,
 /area/hydroponics/hallway)
 "bZu" = (
-/obj/effect/floor_decal/corner/blue/diagonal,
 /obj/machinery/camera/network/medbay{
 	c_tag = "MED - Genetics West";
 	dir = 4
@@ -11038,7 +11191,13 @@
 	pixel_x = -32;
 	id_tag = "medding"
 	},
-/turf/simulated/floor/wmarble,
+/obj/effect/floor_decal/corner/blue{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
 /area/medical/genetics)
 "bZE" = (
 /obj/structure/disposalpipe/segment{
@@ -13012,7 +13171,7 @@
 /area/comms)
 "cZL" = (
 /obj/machinery/clonepod/transhuman,
-/obj/effect/floor_decal/corner/blue/diagonal,
+/obj/effect/floor_decal/corner/purple/diagonal,
 /turf/simulated/floor/wmarble,
 /area/medical/genetics)
 "dad" = (
@@ -15299,11 +15458,15 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/obj/effect/floor_decal/borderfloor/corner,
-/obj/effect/floor_decal/corner/lightgrey/bordercorner,
 /obj/machinery/status_display{
 	layer = 4;
 	pixel_x = 32
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/lime/border{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/muriki/civup)
@@ -15662,12 +15825,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/substation/mining)
-"erN" = (
-/obj/effect/floor_decal/corner/blue/full{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/white,
-/area/medical/genetics)
 "erP" = (
 /turf/simulated/floor/plating,
 /area/security/hangar)
@@ -17547,12 +17704,6 @@
 	},
 /turf/simulated/floor/outpost_roof/turfpack/muriki,
 /area/muriki/rooftop/cargo)
-"fps" = (
-/obj/effect/floor_decal/corner/blue{
-	dir = 10
-	},
-/turf/simulated/floor/tiled/white,
-/area/medical/genetics)
 "fpt" = (
 /obj/structure/sign/directions/outpost/phoronics{
 	dir = 1;
@@ -17719,7 +17870,6 @@
 /turf/simulated/floor/tiled/monotile,
 /area/hydroponics/publicgarden)
 "fuz" = (
-/obj/effect/floor_decal/corner/blue/full,
 /turf/simulated/floor/tiled/white,
 /area/medical/genetics)
 "fuJ" = (
@@ -18088,7 +18238,6 @@
 	pixel_x = 26
 	},
 /obj/structure/table/standard,
-/obj/effect/floor_decal/corner/blue/diagonal,
 /obj/machinery/light{
 	dir = 4
 	},
@@ -18099,7 +18248,11 @@
 	pixel_x = 3;
 	pixel_y = 10
 	},
-/turf/simulated/floor/wmarble,
+/obj/effect/floor_decal/corner/blue/full{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/purple,
+/turf/simulated/floor/tiled/white,
 /area/medical/genetics)
 "fHN" = (
 /obj/structure/sign/yessmoking_1{
@@ -18409,14 +18562,17 @@
 /turf/simulated/open/muriki,
 /area/muriki/processor/gland/airmix)
 "fPh" = (
-/obj/effect/floor_decal/corner/blue{
-	dir = 5
-	},
 /obj/structure/bed/chair/office/dark{
 	dir = 1
 	},
 /obj/effect/landmark/start{
 	name = "Geneticist"
+	},
+/obj/effect/floor_decal/corner/blue{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/genetics)
@@ -20486,9 +20642,15 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 8
 	},
-/obj/effect/floor_decal/corner/blue/diagonal,
 /obj/machinery/disposal/burn_pit,
-/turf/simulated/floor/wmarble,
+/obj/effect/floor_decal/corner/blue/full{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/purple,
+/obj/effect/floor_decal/corner/purple{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
 /area/medical/genetics)
 "gYm" = (
 /obj/machinery/door/firedoor/border_only,
@@ -22541,9 +22703,6 @@
 	name = "Geneticist"
 	},
 /obj/structure/bed/chair/office/dark,
-/obj/effect/floor_decal/corner/blue/full{
-	dir = 4
-	},
 /turf/simulated/floor/tiled/white,
 /area/medical/genetics)
 "ibb" = (
@@ -24521,8 +24680,13 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/effect/floor_decal/corner/blue/diagonal,
-/turf/simulated/floor/wmarble,
+/obj/effect/floor_decal/corner/blue{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
 /area/medical/genetics)
 "jbV" = (
 /obj/structure/disposalpipe/segment{
@@ -24797,7 +24961,6 @@
 /area/hydroponics/publicgarden)
 "jjW" = (
 /obj/structure/table/standard,
-/obj/effect/floor_decal/corner/blue/diagonal,
 /obj/machinery/camera/network/medbay{
 	c_tag = "MED - Genetics East";
 	dir = 8
@@ -24811,7 +24974,11 @@
 /obj/item/gene_scanner,
 /obj/item/gene_scanner,
 /obj/item/gene_scanner,
-/turf/simulated/floor/wmarble,
+/obj/effect/floor_decal/corner/blue{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/purple,
+/turf/simulated/floor/tiled/white,
 /area/medical/genetics)
 "jkL" = (
 /obj/effect/floor_decal/corner/brown{
@@ -25054,8 +25221,11 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
-/obj/effect/floor_decal/corner/blue/diagonal,
-/turf/simulated/floor/wmarble,
+/obj/effect/floor_decal/corner/blue{
+	dir = 10
+	},
+/obj/effect/floor_decal/corner/purple,
+/turf/simulated/floor/tiled/white,
 /area/medical/genetics)
 "jqQ" = (
 /obj/structure/window/maintenance_panel{
@@ -25348,12 +25518,15 @@
 /obj/item/bodybag/cryobag,
 /obj/item/bodybag/cryobag,
 /obj/item/bodybag/cryobag,
-/obj/effect/floor_decal/corner/blue/diagonal,
 /obj/item/storage/box/injectors{
 	pixel_x = -5;
 	pixel_y = 1
 	},
-/turf/simulated/floor/wmarble,
+/obj/effect/floor_decal/corner/blue{
+	dir = 10
+	},
+/obj/effect/floor_decal/corner/purple,
+/turf/simulated/floor/tiled/white,
 /area/medical/genetics)
 "jyl" = (
 /obj/effect/floor_decal/corner/purple{
@@ -27191,6 +27364,9 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/patient_wing)
 "kuM" = (
@@ -27630,9 +27806,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
-	},
-/obj/effect/floor_decal/corner/blue{
-	dir = 10
 	},
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -29239,6 +29412,9 @@
 /obj/machinery/camera/network/civilian{
 	c_tag = "CIV - Xenoflora Hazard North"
 	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/xenobiology/xenoflora)
 "lyV" = (
@@ -30493,6 +30669,9 @@
 	dir = 5
 	},
 /obj/machinery/biogenerator,
+/obj/effect/floor_decal/corner/purple{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/xenobiology/xenoflora)
 "mjb" = (
@@ -31115,6 +31294,7 @@
 	c_tag = "CIV - Xenoflora Main South";
 	dir = 1
 	},
+/obj/effect/floor_decal/corner/purple,
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/xenobiology/xenoflora)
 "mAk" = (
@@ -38123,7 +38303,6 @@
 	name = "Station Intercom (General)";
 	pixel_y = 32
 	},
-/obj/effect/floor_decal/corner/blue/diagonal,
 /obj/structure/closet,
 /obj/item/storage/box/body_record_disk,
 /obj/item/storage/box/body_record_disk,
@@ -38139,6 +38318,7 @@
 /obj/item/storage/box/monkeycubes,
 /obj/item/storage/box/monkeycubes,
 /obj/item/storage/box/monkeycubes,
+/obj/effect/floor_decal/corner/purple/diagonal,
 /turf/simulated/floor/wmarble,
 /area/medical/genetics)
 "qhZ" = (
@@ -39461,7 +39641,6 @@
 "qRb" = (
 /obj/structure/closet/wardrobe/genetics_white,
 /obj/item/tabloid,
-/obj/effect/floor_decal/corner/blue/diagonal,
 /obj/machinery/light{
 	dir = 8
 	},
@@ -39470,7 +39649,12 @@
 	pixel_x = -26
 	},
 /obj/item/geiger/wall/south,
-/turf/simulated/floor/wmarble,
+/obj/effect/floor_decal/corner/blue/full,
+/obj/effect/floor_decal/corner/purple{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/purple,
+/turf/simulated/floor/tiled/white,
 /area/medical/genetics)
 "qRi" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
@@ -40149,7 +40333,6 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/effect/floor_decal/corner/blue/diagonal,
 /obj/structure/table/standard,
 /obj/item/implantcase/loyalty,
 /obj/item/implantcase/loyalty,
@@ -40166,7 +40349,13 @@
 	pixel_x = 6;
 	pixel_y = 9
 	},
-/turf/simulated/floor/wmarble,
+/obj/effect/floor_decal/corner/blue{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
 /area/medical/genetics)
 "riS" = (
 /obj/effect/floor_decal/corner/orange{
@@ -43856,10 +44045,10 @@
 /obj/structure/cable/green{
 	icon_state = "2-8"
 	},
-/obj/effect/floor_decal/borderfloor/corner{
+/obj/effect/floor_decal/borderfloor{
 	dir = 4
 	},
-/obj/effect/floor_decal/corner/purple/bordercorner{
+/obj/effect/floor_decal/corner/purple/border{
 	dir = 4
 	},
 /obj/effect/floor_decal/industrial/warning{
@@ -44035,7 +44224,7 @@
 /area/muriki/rooftop/civilian)
 "thE" = (
 /obj/machinery/dna_scannernew,
-/obj/effect/floor_decal/corner/blue/diagonal,
+/obj/effect/floor_decal/corner/purple/diagonal,
 /turf/simulated/floor/wmarble,
 /area/medical/genetics)
 "thK" = (
@@ -48779,6 +48968,7 @@
 /obj/effect/floor_decal/corner/lime{
 	dir = 10
 	},
+/obj/effect/floor_decal/corner/purple,
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/xenobiology/xenoflora)
 "vwQ" = (
@@ -49812,12 +50002,6 @@
 	},
 /turf/simulated/floor/outpost_roof/turfpack/muriki,
 /area/muriki/rooftop/disposal)
-"vYI" = (
-/obj/effect/floor_decal/corner/blue{
-	dir = 5
-	},
-/turf/simulated/floor/tiled/white,
-/area/medical/genetics)
 "vYL" = (
 /obj/structure/ladder,
 /turf/simulated/floor/plating,
@@ -50238,6 +50422,9 @@
 	},
 /obj/effect/floor_decal/corner/blue{
 	dir = 5
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/patient_wing)
@@ -51493,6 +51680,7 @@
 	dir = 4
 	},
 /obj/structure/reagent_dispensers/watertank,
+/obj/effect/floor_decal/corner/purple,
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/xenobiology/xenoflora)
 "wXr" = (
@@ -52820,7 +53008,6 @@
 	},
 /obj/item/reagent_containers/spray/cleaner,
 /obj/item/reagent_containers/glass/bottle/biomass,
-/obj/effect/floor_decal/corner/blue/diagonal,
 /obj/machinery/power/apc{
 	name = "south bump";
 	pixel_y = -24
@@ -52831,7 +53018,11 @@
 /obj/structure/cable/green{
 	icon_state = "1-8"
 	},
-/turf/simulated/floor/wmarble,
+/obj/effect/floor_decal/corner/blue{
+	dir = 10
+	},
+/obj/effect/floor_decal/corner/purple,
+/turf/simulated/floor/tiled/white,
 /area/medical/genetics)
 "xFK" = (
 /obj/effect/floor_decal/borderfloor{
@@ -96857,11 +97048,11 @@ xEU
 euJ
 kIi
 thE
-vYI
-fps
+aau
+fuz
 jqv
 kIi
-hQk
+arc
 hem
 vgu
 oJY
@@ -97343,11 +97534,11 @@ lJq
 dSn
 kIi
 riz
-vYI
-fps
+fuz
+fuz
 jyj
 kIi
-hQk
+arc
 lOa
 uIJ
 vgu
@@ -97505,7 +97696,7 @@ gyj
 xEU
 kIi
 jbI
-erN
+fuz
 iad
 aas
 kIi
@@ -97671,7 +97862,7 @@ aAi
 jjW
 fHI
 kIi
-hQk
+arc
 etX
 nmF
 dTu
