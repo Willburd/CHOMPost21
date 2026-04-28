@@ -9,3 +9,11 @@
 	. = ..()
 	if(user?.mind?.assigned_role == JOB_CHAPLAIN && istype(O, /obj/item/nullrod))
 		exorcise_demon(TRUE, src)
+
+
+/mob/living/simple_mob/clowns/big
+	meat_amount = 10
+
+/mob/living/simple_mob/clowns/big/Initialize(mapload)
+	. = ..()
+	AddComponent(/datum/component/undead_revival, rev_time = 35 SECONDS, rev_chance = 60, rev_hppercent = 70)
