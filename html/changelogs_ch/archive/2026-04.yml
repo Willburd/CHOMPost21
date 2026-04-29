@@ -263,3 +263,6 @@
   - rscadd: dylovene allergy negative trait
   - rscadd: spacacillin allergy negative trait
   - rscadd: peridaxon allergy negative trait
+2026-04-28:
+  Diana:
+  - bugfix: Borgs can use material sheets in their grippers once again.
