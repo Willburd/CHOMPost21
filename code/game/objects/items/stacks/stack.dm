@@ -11,7 +11,6 @@
 
 /obj/item/stack
 	gender = PLURAL
-	origin_tech = list(TECH_MATERIAL = 1)
 	icon = 'icons/obj/stacks_ch.dmi' //CHOMPedit - materials update
 	randpixel = 7
 	center_of_mass_x = 0
@@ -30,6 +29,10 @@
 	var/pass_color = FALSE // Will the item pass its own color var to the created item? Dyed cloth, wood, etc.
 	var/strict_color_stacking = FALSE // Will the stack merge with other stacks that are different colors? (Dyed cloth, wood, etc)
 	var/is_building = FALSE
+
+	var/custom_handling = FALSE
+	var/beacons = FALSE
+	var/sandbags = FALSE
 
 /obj/item/stack/Initialize(mapload, var/starting_amount)
 	. = ..()
@@ -84,6 +87,11 @@
 		. += get_examine_string()
 
 /obj/item/stack/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
+	if(custom_handling)
+		return FALSE
 	tgui_interact(user)
 
 /obj/item/stack/tgui_interact(mob/user, datum/tgui/ui, datum/tgui/parent_ui)
@@ -443,23 +451,26 @@
 	if(istype(W, /obj/item/gripper))
 		var/obj/item/gripper/G = W
 		G.consolidate_stacks(src)
+		if(QDELETED(src))
+			return
 
 	else if(istype(W, /obj/item/stack))
 		var/obj/item/stack/S = W
 		src.transfer_to(S)
+		if(QDELETED(src))
+			return
 
-		spawn(0) //give the stacks a chance to delete themselves if necessary
-			if (S && user.check_current_machine(S))
-				S.interact(user)
-			if (src && user.check_current_machine(src))
-				src.interact(user)
+		if (S && user.check_current_machine(S))
+			S.interact(user)
+		if (src && user.check_current_machine(src))
+			src.interact(user)
 	else
 		return ..()
 
 /obj/item/stack/proc/combine_in_loc()
 	return //STUBBED for now, as it seems to randomly delete stacks
 
-/obj/item/stack/dropped(atom/old_loc)
+/obj/item/stack/dropped(mob/user, equipping, slot)
 	. = ..()
 	if(isturf(loc))
 		combine_in_loc()

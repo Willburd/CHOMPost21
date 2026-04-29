@@ -45,20 +45,24 @@
 		new/datum/data/pda/app/notekeeper,
 		new/datum/data/pda/app/timeclock, //CHOMPEdit: Add the timeclock to default apps
 		new/datum/data/pda/app/news,
-		// Outpost 21 addition begin - New apps
+		// outpost 21 edit begin - New apps
 		new/datum/data/pda/app/weather,
 		new/datum/data/pda/app/sop,
-		// Outpost 21 addition end
+		// outpost 21 edit end
 		new/datum/data/pda/app/messenger,
 		new/datum/data/pda/app/manifest,
 		new/datum/data/pda/app/atmos_scanner,
 		new/datum/data/pda/app/nerdle,
+		new/datum/data/pda/app/game_launcher,
 		new/datum/data/pda/utility/scanmode/notes,
 		new/datum/data/pda/utility/flashlight)
 	var/list/shortcut_cache = list()
 	var/list/shortcut_cat_order = list()
 	var/list/notifying_programs = list()
 	var/retro_mode = 0
+
+	///Var for attack_self chain
+	var/special_handling = FALSE
 
 /obj/item/pda/examine(mob/user)
 	. = ..()
@@ -109,8 +113,7 @@
 
 /obj/item/pda/Initialize(mapload)
 	. = ..()
-	PDAs += src
-	PDAs = sort_names(PDAs)
+	GLOB.PDAs += src
 	update_programs()
 	if(default_cartridge)
 		cartridge = new default_cartridge(src)
@@ -179,7 +182,7 @@
 /obj/item/pda/GetID()
 	return id
 
-/obj/item/pda/MouseDrop(obj/over_object as obj, src_location, over_location)
+/obj/item/pda/MouseDrop(obj/over_object, src_location, over_location)
 	var/mob/M = usr
 	if((!istype(over_object, /atom/movable/screen)) && can_use(usr))
 		return attack_self(M)
@@ -188,7 +191,12 @@
 /obj/item/pda/proc/close(mob/user)
 	SStgui.close_uis(src)
 
-/obj/item/pda/attack_self(mob/user as mob)
+/obj/item/pda/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
+	if(special_handling)
+		return FALSE
 	if(active_uplink_check(user))
 		return
 
@@ -386,7 +394,7 @@
 	start_program(find_program(/datum/data/pda/app/main_menu))
 
 
-/obj/item/pda/proc/id_check(mob/user as mob, choice as num)//To check for IDs; 1 for in-pda use, 2 for out of pda use.
+/obj/item/pda/proc/id_check(mob/user, choice)//To check for IDs; 1 for in-pda use, 2 for out of pda use.
 	if(choice == 1)
 		if (id)
 			remove_id()
@@ -408,7 +416,7 @@
 	return 0
 
 // access to status display signals
-/obj/item/pda/attackby(obj/item/C as obj, mob/user)
+/obj/item/pda/attackby(obj/item/C, mob/user)
 	..()
 	if(istype(C, /obj/item/cartridge) && !cartridge)
 		cartridge = C
@@ -453,11 +461,12 @@
 			add_overlay("pda-pen")
 	return
 
-/obj/item/pda/attack(mob/living/C as mob, mob/living/user as mob)
-	if (istype(C, /mob/living/carbon) && scanmode)
-		scanmode.scan_mob(C, user)
+/obj/item/pda/attack(mob/living/M, mob/living/user, target_zone, attack_modifier)
+	if(istype(M, /mob/living/carbon) && scanmode)
+		scanmode.scan_mob(M, user)
+		return ITEM_INTERACT_SUCCESS
 
-/obj/item/pda/afterattack(atom/A as mob|obj|turf|area, mob/user as mob, proximity)
+/obj/item/pda/afterattack(atom/A, mob/user, proximity)
 	if(proximity && scanmode)
 		scanmode.scan_atom(A, user)
 
@@ -470,7 +479,7 @@
 	return
 
 /obj/item/pda/Destroy()
-	PDAs -= src
+	GLOB.PDAs -= src
 	if (id && !delete_id && id.loc == src)
 		id.forceMove(get_turf(loc))
 	else

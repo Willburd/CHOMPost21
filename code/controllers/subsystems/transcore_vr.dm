@@ -57,8 +57,8 @@ SUBSYSTEM_DEF(transcore)
 				src.current_run[imp] = db
 
 	var/list/current_run = src.current_run
-	while(current_run.len)
-		var/obj/item/implant/backup/imp = current_run[current_run.len]
+	while(length(current_run))
+		var/obj/item/implant/backup/imp = current_run[length(current_run)]
 		var/datum/transcore_db/db = current_run[imp]
 		current_run.len--
 
@@ -100,8 +100,8 @@ SUBSYSTEM_DEF(transcore)
 				src.current_run[mr] = db
 
 	var/list/current_run = src.current_run
-	while(current_run.len)
-		var/datum/transhuman/mind_record/curr_MR = current_run[current_run.len]
+	while(length(current_run))
+		var/datum/transhuman/mind_record/curr_MR = current_run[length(current_run)]
 		var/datum/transcore_db/db = current_run[curr_MR]
 		current_run.len--
 
@@ -136,13 +136,13 @@ SUBSYSTEM_DEF(transcore)
 	msg += "BK:[round(cost_backups,1)]"
 	msg += "} "
 	msg += "#:{"
-	msg += "DB:[databases.len]|"
+	msg += "DB:[length(databases)]|"
 	if(!default_db)
 		msg += "DEFAULT DB MISSING"
 	else
-		msg += "DFM:[default_db.backed_up.len]|"
-		msg += "DFB:[default_db.body_scans.len]|"
-		// msg += "DFI:[default_db.implants.len]" // Outpost 21 edit - Remove backup implants
+		msg += "DFM:[length(default_db.backed_up)]|"
+		msg += "DFB:[length(default_db.body_scans)]|"
+		// msg += "DFI:[length(default_db.implants)]" // Outpost 21 edit - Remove backup implants
 	msg += "} "
 	return ..()
 
@@ -276,13 +276,6 @@ SUBSYSTEM_DEF(transcore)
 	backed_up[MR.mindname] = MR
 	backed_up = sortAssoc(backed_up)
 
-// Outpost 21 edit begin - Remove a mind record from list, without preventing recreation
-/datum/transcore_db/proc/removed_mind(var/datum/transhuman/mind_record/MR)
-	ASSERT(MR)
-	backed_up.Remove("[MR.mindname]")
-	log_world("## DEBUG: Removed [MR.mindname] from transcore DB.")
-// Outpost 21 edit end
-
 // Remove a mind_record from the backup-checking list.  Keeps track of it in has_left // Why do we do that? ~Leshana
 /datum/transcore_db/proc/stop_backup(var/datum/transhuman/mind_record/MR)
 	ASSERT(MR)
@@ -306,13 +299,15 @@ SUBSYSTEM_DEF(transcore)
 // Moves all mind records from the databaes into the disk and shuts down all backup canary processing.
 /datum/transcore_db/proc/core_dump(var/obj/item/disk/transcore/disk)
 	ASSERT(disk)
-	GLOB.global_announcer.autosay("An emergency core dump has been initiated!", "TransCore Oversight", "Command")
-	GLOB.global_announcer.autosay("An emergency core dump has been initiated!", "TransCore Oversight", "Medical")
+	// Outpost 21 edit(port) begin - Updated transcore dump process
+	GLOB.global_announcer.autosay("An emergency core dump has been completed!", "TransCore Oversight", "Command")
+	GLOB.global_announcer.autosay("An emergency core dump has been completed!", "TransCore Oversight", "Medical")
+	// Outpost 21 edit(port) end
 
 	disk.stored += backed_up
 	backed_up.Cut()
 	core_dumped = TRUE
-	return disk.stored.len
+	return length(disk.stored)
 
 #undef SSTRANSCORE_BACKUPS
 #undef SSTRANSCORE_IMPLANTS

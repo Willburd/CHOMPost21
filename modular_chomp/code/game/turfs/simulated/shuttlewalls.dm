@@ -90,12 +90,13 @@
 	take_damage(damage)
 	return
 
-/turf/simulated/shuttlewalls/hitby(atom/movable/source, var/speed=THROWFORCE_SPEED_DIVISOR)
+/turf/simulated/shuttlewalls/hitby(atom/movable/source, datum/thrownthing/throwingdatum)
 	..()
 	if(ismob(source))
 		return
 
 	var/tforce = 0
+	var/speed = throwingdatum?.speed || THROWFORCE_SPEED_DIVISOR
 	if(isitem(source))
 		var/obj/item/O = source
 		tforce = O.throwforce * (speed/THROWFORCE_SPEED_DIVISOR)
@@ -290,7 +291,14 @@
 	if(!total_radiation)
 		return
 
-	SSradiation.radiate(src, total_radiation)
+	radiation_pulse(
+		src,
+		max_range = 5,
+		threshold = RAD_MEDIUM_INSULATION,
+		chance = total_radiation,
+		minimum_exposure_time = URANIUM_RADIATION_MINIMUM_EXPOSURE_TIME,
+		strength = total_radiation
+	)
 	return total_radiation
 
 /turf/simulated/shuttlewalls/proc/burn(temperature)

@@ -11,6 +11,7 @@
 	landmark_transition = "escape_transit"
 	move_time = SHUTTLE_TRANSIT_DURATION_RETURN
 	ceiling_type = /turf/simulated/shuttle/floor/black/turfpack/muriki
+	bluespace = FALSE // not a bluespace shuttle
 
 /obj/effect/shuttle_landmark/premade/escape/centcom
 	name = "ESCC Bunker"
@@ -78,9 +79,24 @@
 	crash_message = "Tram system derailment detected."
 	crash_locations = list("tram_crash_red")
 
+/datum/shuttle/autodock/multi/tram/can_launch()
+	var/area/cur_area = shuttle_area[1]
+	if(cur_area.always_unpowered)
+		return FALSE
+	. = ..()
+
+/datum/shuttle/autodock/multi/tram/can_force()
+	var/area/cur_area = shuttle_area[1]
+	if(cur_area.always_unpowered)
+		return FALSE
+	. = ..()
 
 /datum/shuttle/autodock/multi/tram/should_crash(var/obj/effect/shuttle_landmark/intended_destination)
 	if(emagged_crash)
+		return TRUE
+	// Crash due to powerloss on move
+	var/area/cur_area = shuttle_area[1]
+	if(cur_area.always_unpowered)
 		return TRUE
 	// If on highest level of spooky let the tram crash happen
 	if(SShaunting.get_world_haunt() >= 5)
@@ -375,12 +391,61 @@
 	base_turf = /turf/space
 
 //////////////////////////////////////////////////////////////
-// ERT Shuttle
+// ERT Overmap Shuttle
+/obj/effect/overmap/visitable/ship/landable/specialops_overmap
+	name = "Interferon"
+	desc = "Eshui aligned Interceptor usually carrying the ERT to the station."
+	vessel_mass = 3500
+	vessel_size = SHIP_SIZE_LARGE
+	shuttle = "Interferon"
+	known = TRUE // we own this lol
+	fore_dir = EAST
+
+/obj/machinery/computer/shuttle_control/explore/specialops_overmap
+	name = "short jump console"
+	shuttle_tag = "Interferon"
+	req_one_access = list(ACCESS_CENT_GENERAL, ACCESS_CENT_SPECOPS)
+
+/area/shuttle/specialops_overmap
+	name = "\improper Interferon"
+	icon_state = "shuttle2"
+	requires_power = 1
+	base_turf = /turf/space
+
+/datum/shuttle/autodock/overmap/specialops_overmap
+	name = "Interferon"
+	warmup_time = 0
+	current_location = "interferon_hangar"
+	docking_controller_tag = "int_docker"
+	shuttle_area = list(/area/shuttle/specialops_overmap)
+	ceiling_type = /turf/simulated/shuttle/floor/black/turfpack/muriki
+
+/obj/effect/shuttle_landmark/premade/specialops_overmap/central_command
+	name = "Interferon Hanger"
+	landmark_tag = "interferon_hangar"
+	docking_controller = "int_docking_hanger"
+	base_turf = /turf/space
+	base_area = /area/space
+
+/obj/effect/shuttle_landmark/premade/specialops_overmap/airdrop_muriki
+	name = "Outpost 21 Airdrop Central"
+	landmark_tag = "interferon_airdrop_muriki_central"
+	base_turf = /turf/simulated/open/muriki
+	base_area = /area/muriki/skyline/cent
+
+/obj/effect/shuttle_landmark/premade/specialops_overmap/airdrop_muriki_alt
+	name = "Outpost 21 Airdrop South East"
+	landmark_tag = "interferon_airdrop_muriki_southeast"
+	base_turf = /turf/simulated/open/muriki
+	base_area = /area/muriki/skyline/south
+
+//////////////////////////////////////////////////////////////
+// ERT Quick Drop Shuttle
 /datum/shuttle/autodock/ferry/specialops
 	name = "Special Operations"
 	location = FERRY_LOCATION_STATION
 	warmup_time = 10
-	shuttle_area = /area/shuttle/specops
+	shuttle_area = /area/shuttle/specops/centcom
 	landmark_station = "specops_cc"
 	landmark_offsite = "specops_station"
 	docking_controller_tag = "specops_shuttle_port"
@@ -396,8 +461,9 @@
 /obj/effect/shuttle_landmark/premade/specops/station
 	name = "ES Outpost 21"
 	landmark_tag = "specops_station"
-	docking_controller = "specops_dock_airlock"
-	special_dock_targets = list("Special Operations" = "specops_shuttle_fore")
+	docking_controller = "specops_station_dock"
+	base_area = /area/muriki/skyline/east
+	base_turf = /turf/simulated/open/muriki
 
 //////////////////////////////////////////////////////////////
 // Medical shuttle

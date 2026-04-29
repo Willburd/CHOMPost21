@@ -25,17 +25,17 @@
 		transform = transform.Turn(-45)
 	transform = transform.Translate(-16,0)
 
-/obj/item/gun/projectile/automatic/serdy/equipped()
+/obj/item/gun/projectile/automatic/serdy/equipped(mob/living/user, slot)
 	. = ..()
 	is_picked_up = TRUE
 	update_transform()
 
-/obj/item/gun/projectile/automatic/serdy/pickup()
+/obj/item/gun/projectile/automatic/serdy/pickup(mob/user)
 	. = ..()
 	is_picked_up = TRUE
 	update_transform()
 
-/obj/item/gun/projectile/automatic/serdy/dropped()
+/obj/item/gun/projectile/automatic/serdy/dropped(mob/user, equipping, slot)
 	. = ..()
 	is_picked_up = FALSE
 	update_transform()
@@ -919,7 +919,7 @@
 /obj/item/gun/projectile/automatic/serdy/kord/afteratt(atom/A, mob/living/user, adjacent, params)
 	if(user.size_multiplier <= 0.5) //They're 50% or lower. If they fire this gun, they're gonna get obliterated.
 		to_chat(user,span_warning("You struggle to reach the trigger. Maybe shooting such a big gun isn't such a good idea..."))
-		if(do_after(user, 5 SECONDS)) //Give them a chance to take it back.
+		if(do_after(user, 5 SECONDS, src)) //Give them a chance to take it back.
 			. = ..() //RIP
 
 /obj/item/gun/projectile/automatic/serdy/kord/handle_post_fire(mob/living/user, atom/target, var/pointblank=0, var/reflex=0)
@@ -1380,17 +1380,17 @@
 	if(is64x32)
 		update_transform()
 
-/obj/item/gun/projectile/shotgun/pump/equipped()
+/obj/item/gun/projectile/shotgun/pump/equipped(mob/living/user, slot)
 	. = ..()
 	is_picked_up = TRUE
 	update_transform()
 
-/obj/item/gun/projectile/shotgun/pump/pickup()
+/obj/item/gun/projectile/shotgun/pump/pickup(mob/user)
 	. = ..()
 	is_picked_up = TRUE
 	update_transform()
 
-/obj/item/gun/projectile/shotgun/pump/dropped()
+/obj/item/gun/projectile/shotgun/pump/dropped(mob/user, equipping, slot)
 	. = ..()
 	is_picked_up = FALSE
 	update_transform()
@@ -1444,7 +1444,7 @@
 			Fire_userless(user)
 			burst = burstsetting
 			return
-		if(do_after(user, 30))	//SHIT IS STEALTHY EYYYYY
+		if(do_after(user, 30, src))	//SHIT IS STEALTHY EYYYYY
 			icon_state = "sawnshotgun"
 			item_state = "sawnshotgun"
 
@@ -1480,17 +1480,17 @@
 			transform = transform.Turn(-45)
 		transform = transform.Translate(-16,0)
 
-/obj/item/gun/projectile/shotgun/doublebarrel/equipped()
+/obj/item/gun/projectile/shotgun/doublebarrel/equipped(mob/living/user, slot)
 	. = ..()
 	is_picked_up = TRUE
 	update_transform()
 
-/obj/item/gun/projectile/shotgun/doublebarrel/pickup()
+/obj/item/gun/projectile/shotgun/doublebarrel/pickup(mob/user)
 	. = ..()
 	is_picked_up = TRUE
 	update_transform()
 
-/obj/item/gun/projectile/shotgun/doublebarrel/dropped()
+/obj/item/gun/projectile/shotgun/doublebarrel/dropped(mob/user, equipping, slot)
 	. = ..()
 	is_picked_up = FALSE
 	update_transform()

@@ -1,18 +1,18 @@
 /datum/job/hydro
 	supervisors = "the " + JOB_QUARTERMASTER
-	selection_color = "#aaaaaa"
+	selection_color = "#7a4f33"
 	sorting_order = 2
 
 
 /datum/job/bartender
 	supervisors = "the " + JOB_QUARTERMASTER
-	selection_color = "#aaaaaa"
+	selection_color = "#7a4f33"
 	sorting_order = 1
 
 
 /datum/job/chef
 	supervisors = "the " + JOB_QUARTERMASTER
-	selection_color = "#aaaaaa"
+	selection_color = "#7a4f33"
 	sorting_order = 1
 
 
@@ -20,6 +20,11 @@
 	departments = list(DEPARTMENT_CARGO)
 	supervisors = "the " + JOB_QUARTERMASTER
 	selection_color = "#7a4f33"
+
+/datum/job/janitor/New()
+	. = ..()
+	access |= list(ACCESS_CARGO, ACCESS_MAILSORTING)
+	minimal_access |= list(ACCESS_CARGO, ACCESS_MAILSORTING)
 
 
 /datum/job/lawyer
@@ -36,3 +41,9 @@
 /datum/alt_title/radiohost
 	title = JOB_ALT_RADIOHOST
 	title_blurb = "A " + JOB_ALT_RADIOHOST + "'s job includes playing music, singing songs, tell stories, or reading your favorite fanfic. You are the radiowave gremlin of the station make sure everyone else knows that!"
+
+
+// Chaplain component stuff letting them see EVIL
+/datum/job/chaplain/equip(mob/living/carbon/human/H, alt_title, ask_questions)
+	. = ..()
+	H.AddComponent(/datum/component/haunting_vision)

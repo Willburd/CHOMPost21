@@ -14,7 +14,7 @@
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 	if(coverage_check(user, target, affected, tool))
 		return 0
-	return affected && affected.open == (affected.encased ? 3 : 2) && !(affected.status & ORGAN_BLEEDING)
+	return affected && affected.open == (affected.encased ? 3 : 2)
 
 /datum/surgery_step/cavity/proc/get_max_wclass(var/obj/item/organ/external/affected)
 	switch (affected.organ_tag)
@@ -51,9 +51,9 @@
 	surgery_name = "Create Cavity"
 	allowed_tools = list(
 		/obj/item/surgical/surgicaldrill = 100,	\
-		/obj/item/pen = 95,	\
-		/obj/item/stack/rods = 70
-	) // Outpost 21 edit - Buffing ghetto surgery
+		/obj/item/pen = 75,	\
+		/obj/item/stack/rods = 50
+	)
 
 	min_duration = 60
 	max_duration = 60  //CHOMPedit
@@ -87,10 +87,10 @@
 	priority = 2
 	allowed_tools = list(
 		/obj/item/surgical/cautery = 100,			\
-		/obj/item/clothing/mask/smokable/cigarette = 95,	\
-		/obj/item/flame/lighter = 90,			\
-		/obj/item/weldingtool = 85
-	) // Outpost 21 edit - Buffing ghetto surgery
+		/obj/item/clothing/mask/smokable/cigarette = 75,	\
+		/obj/item/flame/lighter = 50,			\
+		/obj/item/weldingtool = 25
+	)
 
 	min_duration = 30 //CHOMPedit
 	max_duration = 30 //CHOMPedit
@@ -135,7 +135,7 @@
 		if(istype(user,/mob/living/silicon/robot))
 			if(istype(tool, /obj/item/gripper))
 				var/obj/item/gripper/gripper = tool
-				var/obj/item/wrapped = gripper.get_current_pocket()
+				var/obj/item/wrapped = gripper.get_wrapped_item()
 				if(wrapped)
 					tool = wrapped
 				else
@@ -154,7 +154,7 @@
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 	if(isrobot(user) && istype(tool, /obj/item/gripper))
 		var/obj/item/gripper/G = tool
-		tool = G.get_current_pocket()
+		tool = G.get_wrapped_item()
 	user.visible_message(span_notice("[user] starts putting \the [tool] inside [target]'s [get_cavity(affected)] cavity."), \
 	span_notice("You start putting \the [tool] inside [target]'s [get_cavity(affected)] cavity.") ) //Nobody will probably ever see this, but I made these two blue. ~CK
 	user.balloon_alert_visible("starts putting \the [tool] inside [target]'s [get_cavity(affected)]", "putting \the [tool] inside \the [get_cavity(affected)]")
@@ -165,7 +165,7 @@
 	var/obj/item/organ/external/chest/affected = target.get_organ(target_zone)
 	if(isrobot(user) && istype(tool, /obj/item/gripper))
 		var/obj/item/gripper/G = tool
-		tool = G.get_current_pocket()
+		tool = G.get_wrapped_item()
 		G.drop_item_nm()
 	else
 		user.drop_item()
@@ -176,6 +176,8 @@
 		to_chat(user, span_danger(" You tear some blood vessels trying to fit such a big object in this cavity."))
 		var/datum/wound/internal_bleeding/I = new (10)
 		affected.wounds += I
+		affected.update_damages()
+		affected.owner.handle_organs(TRUE) //Force an update so we start processing the internal bleeding.
 		affected.owner.custom_pain("You feel something rip in your [affected.name]!", 1)
 	affected.implants += tool
 	tool.loc = affected
@@ -201,12 +203,7 @@
 	max_duration = 50 //CHOMPedit
 
 /datum/surgery_step/cavity/implant_removal/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
-	var/obj/item/organ/external/affected = target.get_organ(target_zone)
-	if(affected.organ_tag == BP_HEAD)
-		var/obj/item/organ/internal/brain/sponge = target.internal_organs_by_name[O_BRAIN]
-		return ..() && (!sponge || !sponge.damage)
-	else
-		return ..()
+	return ..()
 
 /datum/surgery_step/cavity/implant_removal/begin_step(mob/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)

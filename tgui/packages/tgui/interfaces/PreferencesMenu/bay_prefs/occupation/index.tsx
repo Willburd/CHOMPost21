@@ -40,7 +40,8 @@ export const OccupationContent = (props: {
   const second_half: Job[] = [];
 
   for (let i = 0; i < departments.length; i++) {
-    if (i <= departments.length / 2) {
+    // Outpost 21 edit - Shift the job layout slightly
+    if (i <= departments.length / 3) {
       first_half.push(...jobs[departments[i]]);
     } else {
       second_half.push(...jobs[departments[i]]);

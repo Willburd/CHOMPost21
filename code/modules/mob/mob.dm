@@ -26,6 +26,7 @@
 	QDEL_NULL(hud_used)
 	for(var/key in alerts) //clear out alerts
 		clear_alert(key)
+	QDEL_NULL_LIST(viruses)
 	if(pulling)
 		stop_pulling() //TG does this on atom/movable but our stop_pulling proc is here so whatever
 
@@ -43,6 +44,7 @@
 	previewing_belly = null // from code/modules/vore/eating/mob_ch.dm
 	vore_selected = null // from code/modules/vore/eating/mob_vr
 	focus = null
+	LAssailant = null
 
 	motiontracker_unsubscribe(TRUE) // Force unsubscribe
 
@@ -210,6 +212,9 @@
 /mob/proc/is_deaf()
 	return ((sdisabilities & DEAF) || ear_deaf || incapacitated(INCAPACITATION_KNOCKOUT))
 
+/mob/proc/is_paralyzed()
+	return paralysis
+
 /mob/proc/is_physically_disabled()
 	return incapacitated(INCAPACITATION_DISABLED)
 
@@ -217,13 +222,13 @@
 	return incapacitated(INCAPACITATION_KNOCKDOWN)
 
 /mob/proc/incapacitated(var/incapacitation_flags = INCAPACITATION_DEFAULT)
-	if ((incapacitation_flags & INCAPACITATION_STUNNED) && stunned)
+	if((incapacitation_flags & INCAPACITATION_STUNNED) && stunned)
 		return 1
 
-	if ((incapacitation_flags & INCAPACITATION_FORCELYING) && (weakened || resting))
+	if((incapacitation_flags & INCAPACITATION_FORCELYING) && (weakened || resting))
 		return 1
 
-	if ((incapacitation_flags & INCAPACITATION_KNOCKOUT) && (stat || paralysis || sleeping || (status_flags & FAKEDEATH)))
+	if((incapacitation_flags & INCAPACITATION_KNOCKOUT) && (stat || sleeping))
 		return 1
 
 	if((incapacitation_flags & INCAPACITATION_RESTRAINED) && restrained())
@@ -305,11 +310,11 @@
 	var/datum/component/remote_view/remote_comp = GetComponent(/datum/component/remote_view)
 	if(remote_comp?.looking_at_target_already(loc))
 		return FALSE
-	if(isitem(loc) || isbelly(loc)) // Requires more careful handling than structures because they are held by mobs
-		AddComponent(/datum/component/remote_view/mob_holding_item, focused_on = loc, vconfig_path = /datum/remote_view_config/inside_object)
+	if(isitem(loc) || isbelly(loc) || ismecha(loc)) // Requires more careful handling than structures because they are held by mobs
+		AddComponent(/datum/component/remote_view/mob_holding_item, focused_on = loc, viewsize = null, vconfig_path = /datum/remote_view_config/inside_object)
 		return TRUE
 	if(loc.flags & REMOTEVIEW_ON_ENTER) // Handle atoms that begin a remote view upon entering them.
-		AddComponent(/datum/component/remote_view, focused_on = loc, vconfig_path = /datum/remote_view_config/inside_object)
+		AddComponent(/datum/component/remote_view, focused_on = loc, viewsize = null, vconfig_path = /datum/remote_view_config/inside_object)
 		return TRUE
 	return FALSE
 
@@ -466,7 +471,7 @@
 
 				//Job slot cleanup
 				var/job = mind.assigned_role
-				job_master.FreeRole(job)
+				SSjob.free_role(job)
 
 				//Their objectives cleanup
 				if(mind.objectives.len)
@@ -564,7 +569,7 @@
 	var/mob/mob_eye = targets[eye_name]
 
 	if(client && mob_eye)
-		AddComponent(/datum/component/remote_view, focused_on = mob_eye, vconfig_path = null)
+		AddComponent(/datum/component/remote_view, focused_on = mob_eye, viewsize = null, vconfig_path = null)
 		if(is_admin)
 			client.adminobs = TRUE
 			if(mob_eye == client.mob || !is_remote_viewing())
@@ -1069,6 +1074,8 @@
 		if(prob(selection.w_class * 5) && (affected.robotic < ORGAN_ROBOT)) //I'M SO ANEMIC I COULD JUST -DIE-.
 			var/datum/wound/internal_bleeding/I = new (min(selection.w_class * 5, 15))
 			affected.wounds += I
+			affected.update_damages()
+			H.handle_organs(TRUE) //Force an update so we start processing the internal bleeding.
 			H.custom_pain("Something tears wetly in your [affected] as [selection] is pulled free!", 50)
 
 		if (ishuman(U))
@@ -1450,6 +1457,7 @@ GLOBAL_LIST_EMPTY_TYPED(living_players_by_zlevel, /list)
 	//VV_DROPDOWN_OPTION(VV_HK_GIVE_AI_SPEECH, "Give Random AI Speech")
 	VV_DROPDOWN_OPTION(VV_HK_GIVE_SPELL, "Give Spell")
 	VV_DROPDOWN_OPTION(VV_HK_REMOVE_SPELL, "Remove Spell")
+	VV_DROPDOWN_OPTION(VV_HK_GIVE_MODIFIER, "Give Modifier")
 	VV_DROPDOWN_OPTION(VV_HK_ADDLANGUAGE, "Add Language")
 	VV_DROPDOWN_OPTION(VV_HK_REMOVELANGUAGE, "Remove Language")
 	VV_DROPDOWN_OPTION(VV_HK_ADDVERB, "Add Verb")
@@ -1488,12 +1496,12 @@ GLOBAL_LIST_EMPTY_TYPED(living_players_by_zlevel, /list)
 		regenerate_icons()
 
 	if(href_list[VV_HK_PLAYER_PANEL])
-		return SSadmin_verbs.dynamic_invoke_verb(usr, /datum/admin_verb/show_player_panel, src)
+		return SSadmin_verbs.dynamic_invoke_verb(usr.client, /datum/admin_verb/show_player_panel, src)
 
 	if(href_list[VV_HK_GODMODE])
 		if(!check_rights(R_ADMIN))
 			return
-		usr.client.cmd_admin_godmode(src)
+		SSadmin_verbs.dynamic_invoke_verb(usr.client, /datum/admin_verb/cmd_admin_godmode, src)
 
 	if(href_list[VV_HK_ADDLANGUAGE])
 		if(!check_rights(R_SPAWN))
@@ -1689,6 +1697,9 @@ GLOBAL_LIST_EMPTY_TYPED(living_players_by_zlevel, /list)
 
 	if(href_list[VV_HK_REMOVE_SPELL])
 		return SSadmin_verbs.dynamic_invoke_verb(usr, /datum/admin_verb/remove_spell, src)
+
+	if(href_list[VV_HK_GIVE_MODIFIER])
+		return SSadmin_verbs.dynamic_invoke_verb(usr, /datum/admin_verb/admin_give_modifier, src)
 
 	//if(href_list[VV_HK_GIVE_DISEASE])
 	//	return SSadmin_verbs.dynamic_invoke_verb(usr, /datum/admin_verb/give_disease, src)

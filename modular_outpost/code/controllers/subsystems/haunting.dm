@@ -47,7 +47,8 @@ SUBSYSTEM_DEF(haunting)
 		/datum/station_haunt/chills,
 		/datum/station_haunt/lurker,
 		/datum/station_haunt/distant_alarm,
-		/datum/station_haunt/camera_stare
+		/datum/station_haunt/camera_stare,
+		/datum/station_haunt/deck_hatch_open
 		)
 	hauntings["[MODE_CONCERN]"] = list(
 		/datum/station_haunt/light_flicker,
@@ -61,7 +62,9 @@ SUBSYSTEM_DEF(haunting)
 		/datum/station_haunt/vent_crawler,
 		/datum/station_haunt/shuttle_move,
 		/datum/station_haunt/change_nearby_display,
-		/datum/station_haunt/camera_stare
+		/datum/station_haunt/camera_stare,
+		/datum/station_haunt/deck_hatch_open,
+		/datum/station_haunt/terraformer_song
 		)
 	hauntings["[MODE_UNNERVING]"] = list(
 		/datum/station_haunt/light_flicker,
@@ -87,7 +90,8 @@ SUBSYSTEM_DEF(haunting)
 		/datum/station_haunt/shuttle_move,
 		/datum/station_haunt/lurker/can_appear,
 		/datum/station_haunt/change_nearby_display,
-		/datum/station_haunt/camera_stare
+		/datum/station_haunt/camera_stare,
+		/datum/station_haunt/deck_hatch_open
 		)
 	hauntings["[MODE_SPOOKY]"] = list(
 		/datum/station_haunt/light_flicker,
@@ -112,7 +116,8 @@ SUBSYSTEM_DEF(haunting)
 		/datum/station_haunt/shuttle_move,
 		/datum/station_haunt/lurker/can_appear,
 		/datum/station_haunt/change_nearby_display,
-		/datum/station_haunt/camera_stare
+		/datum/station_haunt/camera_stare,
+		/datum/station_haunt/deck_hatch_open
 		)
 	hauntings["[MODE_SCARY]"] = list(
 		/datum/station_haunt/ghost_write,
@@ -137,7 +142,9 @@ SUBSYSTEM_DEF(haunting)
 		/datum/station_haunt/blood_rain,
 		/datum/station_haunt/lurker/can_appear,
 		/datum/station_haunt/lurker/pyromanic,
-		/datum/station_haunt/camera_stare
+		/datum/station_haunt/camera_stare,
+		/datum/station_haunt/deck_hatch_open,
+		/datum/station_haunt/deck_hatch_clown
 		)
 	hauntings["[MODE_SUPERSPOOKY]"] = list(
 		/datum/station_haunt/ghost_write,
@@ -158,14 +165,16 @@ SUBSYSTEM_DEF(haunting)
 		/datum/station_haunt/camera_stare,
 		/datum/station_haunt/tesh_encircle,
 		/datum/station_haunt/shuttle_sabotage,
-		/datum/station_haunt/entity_spawn
+		/datum/station_haunt/entity_spawn,
+		/datum/station_haunt/tcomms_sabotage,
+		/datum/station_haunt/deck_hatch_clown
 		)
 
 	next_haunt_time = world.time + (rand(15,30) MINUTES) // No instant ghosts
 	return SS_INIT_SUCCESS
 
 /datum/controller/subsystem/haunting/stat_entry(msg)
-	msg = "Score: [haunt_score] | Mode: [world_mode] | Change: [new_score] | Who: [current_player_target?.resolve()] | Event: [last_event][current_haunt ? "" : "(finished)"] | Total: [total_haunts]/[prior_haunts.len]"
+	msg = "Score: [haunt_score] | Mode: [world_mode] | Change: [new_score] | Who: [current_player_target?.resolve()] | Event: [last_event][current_haunt ? "" : "(finished)"] | Total: [total_haunts]/[length(prior_haunts)]"
 	return ..()
 
 /datum/controller/subsystem/haunting/fire()
@@ -241,7 +250,7 @@ SUBSYSTEM_DEF(haunting)
 
 /datum/controller/subsystem/haunting/proc/get_random_player()
 	SHOULD_NOT_OVERRIDE(TRUE)
-	if(!GLOB.player_list.len)
+	if(!length(GLOB.player_list))
 		return null
 	return pick(GLOB.player_list)
 
@@ -302,7 +311,7 @@ SUBSYSTEM_DEF(haunting)
 			return
 		if(world.time < next_haunt_time)
 			return
-		next_haunt_time = world.time + (rand(40,400) SECONDS)
+		next_haunt_time = world.time + (rand(300,600) SECONDS)
 		var/skip_prob = 80
 		if(world_mode >= MODE_UNNERVING)
 			skip_prob = 85

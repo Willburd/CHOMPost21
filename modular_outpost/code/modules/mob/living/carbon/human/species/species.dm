@@ -8,6 +8,7 @@
 /datum/species/shadekin
 	// No inf pressure shadekin here
 	hazard_high_pressure = HAZARD_HIGH_PRESSURE
+	vision_flags = SEE_SELF // No innate thermals
 
 /datum/species/skrell
 	// Deepsea creatures get deep sea resistances!
@@ -63,6 +64,14 @@
 
 /datum/species/shadekin/New()
 	has_organ[O_BUTT] = /obj/item/organ/internal/butt
+	. = ..()
+
+/datum/species/shadekin/handle_death(mob/living/carbon/human/H)
+	for(var/mob/living/carbon/human/player in GLOB.player_list)
+		if(player == H)
+			continue
+		if(player.species && (player.species.name == SPECIES_SHADEKIN || player.species.name == SPECIES_SHADEKIN_CREW))
+			to_chat(player, span_alien("You feel a powerful sensation of dread as the emotional presence of another like you is ripped from this reality..."))
 	. = ..()
 
 /datum/species/skrell/New()

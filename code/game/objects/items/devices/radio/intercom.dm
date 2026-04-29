@@ -8,7 +8,7 @@
 	anchored = TRUE
 	w_class = ITEMSIZE_LARGE
 	canhear_range = 7
-	flags = NOBLOODY
+	flags = NOBLOODY | WALL_ITEM
 	light_color = "#00ff00"
 	light_power = 0.25
 	blocks_emissive = NONE
@@ -81,6 +81,10 @@
 /obj/item/radio/intercom/entertainment
 	name = "entertainment intercom"
 	frequency = ENT_FREQ
+
+/obj/item/radio/intercom/science
+	name = "station intercom (Science)"
+	channels=list("Science")
 
 /obj/item/radio/intercom/omni
 	name = "global announcer"
@@ -163,7 +167,7 @@
 		A.anchored = TRUE
 		A.state = 2
 		A.update_icon()
-		M.deconstruct(src)
+		M.atom_deconstruct(TRUE, src)
 		qdel(src)
 	else
 		src.attack_hand(user)
@@ -177,7 +181,7 @@
 			return -1
 	if (!src.listening)
 		return -1
-	if(freq in ANTAG_FREQS)
+	if(freq in GLOB.antag_frequencies)
 		if(!(src.syndie))
 			return -1//Prevents broadcast of messages over devices lacking the encryption
 
@@ -240,3 +244,8 @@
 /obj/item/radio/intercom/locked/confessional
 	name = "confessional intercom"
 	frequency = LOCKED_COM_FREQ
+
+/obj/item/radio/intercom/locked/entertainment
+	name = "entertainment PA"
+	frequency = ENT_FREQ
+	broadcasting = TRUE

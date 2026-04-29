@@ -10,7 +10,6 @@
 	slot_flags = SLOT_BELT
 	matter = list(MAT_GLASS = 500, MAT_STEEL = 500)
 	w_class = 2 //Increased to 2, because diodes are w_class 2. Conservation of matter.
-	origin_tech = list(TECH_MAGNET = 2, TECH_COMBAT = 1)
 	var/turf/pointer_loc
 	var/energy = 3
 	var/max_energy = 3
@@ -20,10 +19,14 @@
 	var/recharge_locked = 0
 
 /obj/item/laser_designator/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	zoom(user, CAM_DIST, CAM_SIZE) // long but small vision range
 
 /obj/item/laser_designator/attack(mob/living/M, mob/user)
 	laser_act(M, user)
+	return ITEM_INTERACT_SUCCESS
 
 /obj/item/laser_designator/afterattack(var/atom/target, var/mob/living/user, flag, params)
 	if(flag)	//we're placing the object on a table or in backpack
@@ -36,19 +39,21 @@
 	if(!(world.time - last_used_time >= cooldown))
 		return
 	if (!user.IsAdvancedToolUser())
-		to_chat(user, "<span class='warning'>You don't have the dexterity to do this!</span>")
+		to_chat(user, span_warning("You don't have the dexterity to do this!"))
 		return
 
 	add_fingerprint(user)
 
 	//nothing happens if the battery is drained
 	if(recharge_locked)
-		to_chat(user, "<span class='notice'>You point [src] at [target], but it's still charging.</span>")
+		to_chat(user, span_notice("You point [src] at [target], but it's still charging."))
 		return
 
+	/*
 	var/choice = tgui_alert(user, "Confirm designation? Station alert level will be elevated to code blue.", "Designate target", list("YES", "NO"))
 	if(choice != "YES")
 		return
+	*/
 
 	var/turf/targloc = get_turf(target)
 
@@ -63,7 +68,7 @@
 	I.pixel_x = target.pixel_x + rand(-5,5)
 	I.pixel_y = target.pixel_y + rand(-5,5)
 
-	user.visible_message("<span class='info'>[user] points [src] at [target].</span>", "<span class='info'>You point [src] at [target].</span>")
+	user.visible_message("[user] points [src] at [target].", "You point [src] at [target].")
 
 	last_used_time = world.time
 	energy -= 1
@@ -72,8 +77,9 @@
 			recharging = 1
 			START_PROCESSING(SSobj, src)
 		if(energy <= 0)
-			to_chat(user, "<span class='warning'>You've overused the battery of [src], now it needs time to recharge!</span>")
+			to_chat(user, span_warning("You've overused the battery of [src], now it needs time to recharge!"))
 			recharge_locked = 1
+			return
 
 	call_down_the_fist_of_god(user,target,targloc)
 	flick_overlay(I, showto, cooldown)
@@ -88,7 +94,7 @@
 
 	if(GLOB.security_level < SEC_LEVEL_RED)
 		set_security_level(SEC_LEVEL_RED)
-		command_announcement.Announce("Bluespace artillery fire detected. Brace for impact.")
+		GLOB.command_announcement.Announce("Bluespace artillery fire detected. Brace for impact.")
 	log_and_message_admins("[key_name(target)] has been hit by Bluespace Artillery fired by [key_name(user ? user : usr)]")
 
 	spawn(10 SECONDS)
@@ -103,7 +109,7 @@
 			energy = max_energy
 			recharging = 0
 			recharge_locked = 0
-			visible_message("<span class='notice'>\The [src] has recharged!</span>")
+			visible_message(span_notice("\The [src] has recharged!"))
 			..()
 
 #undef CAM_DIST

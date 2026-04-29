@@ -56,3 +56,6 @@
 
 	// failed
 	return -1
+
+/mob/living/proc/handle_outpost_hygene()
+	return

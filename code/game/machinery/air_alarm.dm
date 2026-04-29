@@ -68,6 +68,7 @@
 	clickvol = 30
 	blocks_emissive = NONE
 	light_power = 0.25
+	flags = WALL_ITEM
 	var/alarm_id = null
 	var/breach_detection = 1 // Whether to use automatic breach detection or not
 	var/frequency = PUMPS_FREQ
@@ -81,8 +82,6 @@
 	var/aidisabled = 0
 	var/shorted = 0
 	circuit = /obj/item/circuitboard/airalarm
-
-	var/datum/wires/alarm/wires
 
 	var/mode = AALARM_MODE_SCRUBBING
 	var/screen = AALARM_SCREEN_MAIN
@@ -136,8 +135,7 @@
 	set_frequency(frequency)
 	if(!pixel_x && !pixel_y)
 		offset_airalarm()
-	if(!wires)
-		wires = new(src)
+	set_wires(new /datum/wires/alarm(src))
 	alarm_area.air_alarms += src
 	if(!alarm_area.main_air_alarm_is_operating()) // select main alarm
 		alarm_area.elect_main_air_alarm()
@@ -167,7 +165,7 @@
 	TLV[GAS_CH4] = 		list(-1.0, -1.0, 0, 0.5) // Partial pressure, kpa
 	TLV["other"] =			list(-1.0, -1.0, 0.5, 1.0) // Partial pressure, kpa
 	TLV["pressure"] =		list(ONE_ATMOSPHERE * 0.80, ONE_ATMOSPHERE * 0.90, ONE_ATMOSPHERE * 1.10, ONE_ATMOSPHERE * 1.20) /* kpa */
-	TLV["temperature"] =	list(T0C - 26, T0C, T0C + 40, T0C + 66) // K
+	TLV["temperature"] =	list(T0C - 30, T0C - 15, T0C + 60, T0C + 80) // K // Outpost 21 edit - Much wider temp spread due to planet atmos
 
 	update_icon()
 

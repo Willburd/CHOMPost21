@@ -53,3 +53,36 @@
 	. = ..()
 	if(!(/mob/living/proc/super_fart in S.inherent_verbs))
 		remove_verb(H, /mob/living/proc/super_fart)
+
+/datum/trait/positive/disposable_respawn
+	name = "Disposable Body"
+	desc = "Autosleever respawn time reduced to 5 minutes regardless of what caused death."
+	cost = 12 // You really should know what this means by now
+
+/datum/trait/positive/naturaltunneler
+	name = "Natural Tunneler"
+	desc = "Using strong claws or inhuman strength you have the ability to carve your way through rough stone walls."
+	cost = 7
+
+/datum/trait/positive/naturaltunneler/apply(datum/species/S, mob/living/carbon/human/H, trait_prefs)
+	. = ..()
+	ADD_TRAIT(H, TRAIT_NATURALTUNNELER, ROUNDSTART_TRAIT)
+
+/datum/trait/positive/fortitude
+	name = "Fortitude"
+	cost = 2
+	desc = "You are more sturdy than most species, and as such, more resistant to stuns."
+	var_changes = list("stun_mod" = 0.6, "weaken_mod" = 0.6)
+
+/datum/trait/positive/radio_jammer
+	name = "Signal Disruptor"
+	desc = "Radios and PDAs near you do not function properly, including your own. Other machines that rely on radio frequencies may also be affected."
+	cost = 6
+
+/datum/trait/positive/radio_jammer/apply(datum/species/S, mob/living/carbon/human/H, trait_prefs)
+	. = ..()
+	H.AddComponent(/datum/component/radio_jammer)
+
+/datum/trait/positive/radio_jammer/unapply(datum/species/S, mob/living/carbon/human/H, trait_prefs)
+	. = ..()
+	qdel(H.GetComponent(/datum/component/radio_jammer))

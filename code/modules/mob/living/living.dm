@@ -3,7 +3,8 @@
 
 	//Prime this list if we need it.
 	if(has_huds)
-		add_overlay(backplane,TRUE) //Strap this on here, to block HUDs from appearing in rightclick menus: http://www.byond.com/forum/?post=2336679
+		// Note, this should be refactored to drop priority overlays
+		add_overlay(GLOB.backplane,TRUE) //Strap this on here, to block HUDs from appearing in rightclick menus: http://www.byond.com/forum/?post=2336679
 		hud_list = list()
 		hud_list.len = TOTAL_HUDS
 		make_hud_overlays()
@@ -21,16 +22,16 @@
 	AddElement(/datum/element/spontaneous_vore)
 
 /mob/living/proc/get_visible_name()
-	var/datum/component/shadekin/SK = get_shadekin_component()
-	if(SK && SK.in_phase)
-		return "Something"
+	var/list/name_data = list(null)
+	if(SEND_SIGNAL(src, COMSIG_HUMAN_GET_VISIBLE_NAME, name_data) & COMPONENT_VISIBLE_NAME_CHANGED)
+		return name_data[1]
+
 	if(real_name)
 		return real_name
 	else
 		return name
 
 /mob/living/Destroy()
-	SSradiation.listeners -= src
 	remove_all_modifiers(TRUE)
 	QDEL_NULL(say_list)
 
@@ -77,12 +78,7 @@
 			tf_mob_holder.forceMove(get_dat_turf)
 		QDEL_LIST_NULL(tf_mob_holder.vore_organs)
 		tf_mob_holder.vore_organs = list()
-		for(var/obj/belly/B as anything in vore_organs)
-			B.loc = tf_mob_holder
-			B.forceMove(tf_mob_holder)
-			B.owner = tf_mob_holder
-			tf_mob_holder.vore_organs |= B
-			vore_organs -= B
+		tf_mob_holder.mob_belly_transfer(src)
 	if(tf_mob_holder)
 		tf_mob_holder = null
 	QDEL_NULL_LIST(hud_list)
@@ -105,7 +101,7 @@
 			if(isobj(OR))
 				qdel(OR)
 
-	cultnet.updateVisibility(src, 0)
+	GLOB.cultnet.updateVisibility(src, 0)
 
 	if(aiming)
 		qdel(aiming)
@@ -119,7 +115,7 @@
 	set name = "Pull"
 	set category = "Object"
 
-	if(AM.Adjacent(src))
+	if(istype(AM) && AM.Adjacent(src))
 		src.start_pulling(AM)
 
 	return
@@ -830,7 +826,7 @@
 	set name = "Resist"
 	set category = "IC.Game"
 
-	if(!incapacitated(INCAPACITATION_KNOCKOUT) && (last_resist_time + RESIST_COOLDOWN < world.time))
+	if(!incapacitated(INCAPACITATION_KNOCKOUT) && !is_paralyzed() && (last_resist_time + RESIST_COOLDOWN < world.time))
 		last_resist_time = world.time
 		resist_grab()
 		if(!weakened)
@@ -911,6 +907,9 @@
 
 /mob/living/proc/has_eyes()
 	return 1
+
+/mob/living/proc/has_lungs()
+	return TRUE
 
 /mob/living/proc/get_restraining_bolt()
 	var/obj/item/implant/restrainingbolt/RB = locate() in src
@@ -1088,40 +1087,44 @@
 
 /mob/living/update_canmove()
 	if(!resting && cannot_stand() && can_stand_overridden())
-		lying = 0
-		canmove = 1
+		lying = FALSE
+		canmove = TRUE
 	else
 		if(istype(buckled, /obj/vehicle))
 			var/obj/vehicle/V = buckled
 			if(is_physically_disabled())
-				lying = 0
-				canmove = 1
+				lying = FALSE
+				canmove = TRUE
 				if(!V.riding_datum) // If it has a riding datum, the datum handles moving the pixel_ vars.
 					pixel_y = V.mob_offset_y - 5
 			else
 				if(buckled.buckle_lying != -1)
 					lying = buckled.buckle_lying
-				canmove = 1
+				canmove = TRUE
 				if(!V.riding_datum) // If it has a riding datum, the datum handles moving the pixel_ vars.
 					pixel_y = V.mob_offset_y
 		else if(buckled)
 			anchored = TRUE
-			canmove = 1 //The line above already makes the chair not swooce away if the sitter presses a button. No need to incapacitate them as a criminally large amount of mechanics read this var as a type of stun.
+			canmove = TRUE //The line above already makes the chair not swooce away if the sitter presses a button. No need to incapacitate them as a criminally large amount of mechanics read this var as a type of stun.
 			if(istype(buckled))
 				if(buckled.buckle_lying != -1)
 					lying = buckled.buckle_lying
 					canmove = buckled.buckle_movable
 				if(buckled.buckle_movable)
 					anchored = FALSE
-					canmove = 1
+					canmove = TRUE
 		else
 			lying = incapacitated(INCAPACITATION_KNOCKDOWN)
 			canmove = !incapacitated(INCAPACITATION_DISABLED)
 
 	if(incapacitated(INCAPACITATION_KNOCKOUT) || incapacitated(INCAPACITATION_STUNNED)) // Making sure we're in good condition to crawl
-		canmove = 0
+		canmove = FALSE
 	else
-		canmove = 1
+		canmove = TRUE
+
+	if(is_paralyzed())
+		lying = TRUE
+		canmove = FALSE
 
 	if(lying)
 		density = FALSE
@@ -1323,7 +1326,6 @@
 				src.inertia_dir = get_dir(target, src)
 				step(src, inertia_dir)
 			item.throw_at(target, throw_range, item.throw_speed, src)
-			item.throwing = 1 //Small edit so thrown interactions actually work!
 			return TRUE
 		else
 			return FALSE
@@ -1332,7 +1334,7 @@
 		return FALSE //Grab processing has a chance of returning null
 
 	// Help intent + Adjacent = pass item to other
-	if(a_intent == I_HELP && Adjacent(target) && isitem(item) && ishuman(target))
+	if(a_intent == I_HELP && Adjacent(target) && isitem(item) && ishuman(target) && target != src)
 		var/obj/item/I = item
 		var/mob/living/carbon/human/H = target
 		if(H.in_throw_mode && H.a_intent == I_HELP && unEquip(I))
@@ -1369,7 +1371,7 @@
 	item.throw_at(target, throw_range, item.throw_speed, src)
 	return TRUE
 
-/mob/living/get_sound_env(var/pressure_factor)
+/mob/living/get_sound_env(var/spot, var/pressure_factor)
 	if (hallucination)
 		return SOUND_ENVIRONMENT_PSYCHOTIC
 	else if (druggy)
@@ -1415,6 +1417,9 @@
 
 /mob/living/proc/adjust_nutrition(amount)
 	nutrition = between(0, nutrition + amount, max_nutrition)
+
+/mob/living/proc/nutrition_percent()
+	return 100 * nutrition / max_nutrition
 
 /mob/living/vv_get_header()
 	. = ..()
@@ -1468,6 +1473,8 @@
 	if(screen_icon)
 		owner?.client?.screen -= screen_icon
 		UnregisterSignal(screen_icon, COMSIG_CLICK)
+		var/datum/hud/HUD = owner?.hud_used
+		LAZYREMOVE(HUD?.other_important, screen_icon)
 		QDEL_NULL(screen_icon)
 
 /datum/component/character_setup/proc/create_mob_button(mob/user)

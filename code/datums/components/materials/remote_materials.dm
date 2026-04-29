@@ -162,16 +162,20 @@ handles linking back and forth.
 	if(istype(target, /obj/item/multitool))
 		return OnMultitool(source, user, target)
 
-	// Outpost 21 edit(port) begin - Forensics items cannot be used on remote material component things
 	if(istype(target, /obj/item/forensics))
-		return
-	// Outpost 21 edit end
+		return FALSE
 
 	if(mat_container_flags & MATCONTAINER_NO_INSERT)
-		return
+		return FALSE
 
 	if(istype(target, /obj/item/storage/bag/sheetsnatcher))
-		return mat_container.OnSheetSnatcher(source, target, user)
+		return mat_container.OnSheetSnatcher(source, user, target)
+
+	if(istype(target, /obj/item/gripper))
+		var/obj/item/gripper/robot_gripper = target
+		target = robot_gripper.get_wrapped_item()
+		attempt_insert(user, target)
+		return FALSE
 
 	return attempt_insert(user, target)
 

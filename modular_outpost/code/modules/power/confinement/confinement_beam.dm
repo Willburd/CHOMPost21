@@ -68,9 +68,15 @@ OL|IL|OL
 	var/t_rate = 0.75 // Only used in generator
 	var/datum/weakref/origin_machine = null
 
-/datum/confinement_pulse_data/proc/clone_from(var/datum/confinement_pulse_data/source)
-	for(var/A in vars - list(BLACKLISTED_COPY_VARS))
-		vars[A] = source.vars[A]
+/datum/confinement_pulse_data/New(datum/confinement_pulse_data/clone_from = null)
+	. = ..()
+	if(clone_from)
+		for(var/A in vars - list(BLACKLISTED_COPY_VARS))
+			vars[A] = clone_from.vars[A]
+
+/datum/confinement_pulse_data/Destroy(force)
+	origin_machine = null
+	. = ..()
 
 /datum/confinement_pulse_data/proc/transmit_beam_to_z(var/fake_beam)
 	SHOULD_NOT_OVERRIDE(TRUE)
@@ -92,8 +98,7 @@ OL|IL|OL
 	var/turf/T = CB.aim_turf(target_z)
 	if(!T || !(T.z in using_map.confinement_beam_z_levels))
 		return
-	var/obj/effect/confinment_beam_incoming/I = new /obj/effect/confinment_beam_incoming(T)
-	I.confinement_data = WEAKREF(src)
+	var/obj/effect/confinment_beam_incoming/I = new /obj/effect/confinment_beam_incoming(T, src)
 	I.visual_only = fake_beam
 
 /datum/confinement_pulse_data/proc/transmit_beam_to_centcom()
@@ -172,6 +177,7 @@ OL|IL|OL
 	AddElement(/datum/element/rotatable)
 
 /obj/structure/confinement_beam_generator/Destroy()
+	cached_controlbox = null
 	construction_state = 0
 	. = ..()
 
@@ -271,10 +277,10 @@ OL|IL|OL
 /obj/structure/confinement_beam_generator/proc/is_valid_state()
 	return get_turf(src) && construction_state == 3
 
-/obj/structure/confinement_beam_generator/proc/pulse(var/datum/weakref/WF)
+/obj/structure/confinement_beam_generator/proc/pulse(datum/confinement_pulse_data/data)
 	return
 
-/obj/structure/confinement_beam_generator/proc/fire_narrow_beam(var/datum/confinement_pulse_data/data)
+/obj/structure/confinement_beam_generator/proc/fire_narrow_beam(datum/confinement_pulse_data/data)
 	SHOULD_NOT_OVERRIDE(TRUE)
 	playsound(src, 'sound/weapons/emitter.ogg', 25, 1)
 	if(prob(35))
@@ -286,10 +292,9 @@ OL|IL|OL
 	B.firer = src
 	B.fire(dir2angle(data.dir))
 
-/obj/structure/confinement_beam_generator/proc/fire_wide_beam(var/turf/pos,var/datum/weakref/WF)
+/obj/structure/confinement_beam_generator/proc/fire_wide_beam(turf/pos, datum/confinement_pulse_data/data)
 	SHOULD_NOT_OVERRIDE(TRUE)
 	PROTECTED_PROC(TRUE)
-	var/datum/confinement_pulse_data/data = WF?.resolve()
 	if(!data)
 		return
 	var/turf/start = get_turf(src)
@@ -308,23 +313,11 @@ OL|IL|OL
 		if(WEST)
 			range = start.x - 2
 	if(range)
-		subshot_fire(start,range,angle,damage,WF,NUMBER_OF_PROJECTILES)
-
-/obj/structure/confinement_beam_generator/proc/subshot_fire(var/turf/start,var/range,var/angle,var/damage,var/datum/weakref/WF,var/number_of_shots)
-	SHOULD_NOT_OVERRIDE(TRUE)
-	PRIVATE_PROC(TRUE)
-	var/obj/item/projectile/beam/confinement/B = new(start)
-	B.visual_only = !(number_of_shots == NUMBER_OF_PROJECTILES) // This just controls if it sends data. It's still lethal.
-	B.firer = src
-	B.range = range
-	B.confinement_data = WF
-	B.damage = damage
-	// fire the actual beam
-	B.fire(angle)
-	// Next!
-	number_of_shots -= 1
-	if(number_of_shots > 0)
-		addtimer(CALLBACK(src, PROC_REF(subshot_fire), start,range,angle,damage,WF,number_of_shots), PROJECTILE_DELAY, TIMER_DELETE_ME)
+		var/obj/item/projectile/beam/confinement/B = new(start, data)
+		B.firer = src
+		B.range = range
+		B.damage = damage
+		B.fire(angle)
 
 /obj/structure/confinement_beam_generator/proc/find_highest_z() // collector and computer use this
 	SHOULD_NOT_OVERRIDE(TRUE)

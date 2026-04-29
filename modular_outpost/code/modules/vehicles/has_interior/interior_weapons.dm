@@ -1,11 +1,12 @@
 ////////////////////////////////////////////////////////////////////////////////
 // Vehicle weaponry
 
-/obj/item/vehicle_interior_weapon
+/obj/structure/vehicle_interior_weapon
 	name = "vehicle weapon"
 	plane = MOB_PLANE
 	layer = ABOVE_MOB_LAYER+0.1
 	w_class = ITEMSIZE_COST_NO_CONTAINER
+	resistance_flags = INDESTRUCTIBLE
 
 	var/base_icon = "" // For destruction
 
@@ -20,18 +21,18 @@
 	var/freeaim = TRUE //If false, the weapon only aims in 8 directions
 	var/obj/machinery/computer/vehicle_interior_console/control_console = null
 
-/obj/item/vehicle_interior_weapon/GotoAirflowDest(n) // weapon is rooted to tank...
+/obj/structure/vehicle_interior_weapon/GotoAirflowDest(n) // weapon is rooted to tank...
 	return
 
-/obj/item/vehicle_interior_weapon/RepelAirflowDest(n) // airflow does not push it around!
+/obj/structure/vehicle_interior_weapon/RepelAirflowDest(n) // airflow does not push it around!
 	return
 
-/obj/item/vehicle_interior_weapon/proc/action_checks(var/atom/target)
+/obj/structure/vehicle_interior_weapon/proc/action_checks(atom/target)
 	if(projectiles <= 0)
 		return FALSE
 	return TRUE
 
-/obj/item/vehicle_interior_weapon/proc/solve_aim_angle(var/endx, var/endy)
+/obj/structure/vehicle_interior_weapon/proc/solve_aim_angle(endx, endy)
 	var/ev = control_console.interior_controller.extra_view
 
 	// is just /proc/Get_Angle(atom/movable/start,atom/movable/end) but with X/Y on the screen from its center...
@@ -50,7 +51,7 @@
 
 	return returnangle
 
-/obj/item/vehicle_interior_weapon/proc/action(var/atom/target, var/params, var/mob/user_calling)
+/obj/structure/vehicle_interior_weapon/proc/action(atom/target, params, mob/user_calling)
 	if(!action_checks(target))
 		return
 
@@ -68,11 +69,12 @@
 	var/turf/targloc = get_turf(target)
 	if(!curloc || !targloc)
 		return FALSE
+	// stop thinking darkness is bottom left of the map, just don't allow firing...
 	if(targloc.x == 0 && targloc.y == 0)
-		// stop thinking darkness is bottom left of the map, just don't allow firing...
 		return FALSE
+
+	// turn toward!
 	if(dir != angledir)
-		// turn toward!
 		update_weapon_turn( angledir)
 		return FALSE
 
@@ -81,16 +83,15 @@
 		to_chat(user_calling, "<span class='warning'>You refrain from firing the mounted \the [src] as your intent is set to help.</span>")
 		return FALSE
 
-	// check if loaded
-	var/obj/machinery/ammo_loader/L
+	// check if it uses a loader, and is loaded
+	var/obj/machinery/ammo_loader/loader
 	if(weapon_index <= control_console.interior_controller.internal_loaders_list.len)
-		L = control_console.interior_controller.internal_loaders_list[weapon_index]
-	if(L)
-		if(!L.loaded)
+		loader = control_console.interior_controller.internal_loaders_list[weapon_index]
+	if(loader)
+		if(!loader.loaded)
 			to_chat(user_calling, "<span class='warning'>You are unable to fire \the [src] as there is no shell loaded.</span>")
 			return FALSE
-		else
-			L.fire()
+		loader.fire()
 
 	// ACTUALLY fire
 	control_console.interior_controller.visible_message("<span class='warning'>[user_calling] fires [src]!</span>")
@@ -122,13 +123,13 @@
 	projectiles = projectiles_per_shot
 	return TRUE
 
-/obj/item/vehicle_interior_weapon/proc/get_pilot_zone_sel(var/mob/user)
+/obj/structure/vehicle_interior_weapon/proc/get_pilot_zone_sel(mob/user)
 	if(!user.zone_sel || user.stat)
 		return BP_TORSO
 
 	return user.zone_sel.selecting
 
-/obj/item/vehicle_interior_weapon/proc/Fire(var/atom/A, var/atom/target, var/params, var/mob/user, var/angle_override)
+/obj/structure/vehicle_interior_weapon/proc/Fire(atom/A, atom/target, params, mob/user, angle_override)
 	if(istype(A, /obj/item/projectile))	// Sanity.
 		var/obj/item/projectile/P = A
 		P.plane = MOB_PLANE
@@ -136,11 +137,13 @@
 		P.dispersion = deviation
 		process_accuracy(P, user, target)
 		P.launch_projectile_from_turf(target, get_pilot_zone_sel(user), user, params, angle_override)
-	else if(istype(A, /atom/movable))
+		return
+
+	if(istype(A, /atom/movable))
 		var/atom/movable/AM = A
 		AM.throw_at(target, 7, 1, control_console.interior_controller)
 
-/obj/item/vehicle_interior_weapon/proc/process_accuracy(var/obj/projectile, var/mob/living/user, var/atom/target)
+/obj/structure/vehicle_interior_weapon/proc/process_accuracy(obj/projectile, mob/living/user, atom/target)
 	var/obj/item/projectile/P = projectile
 	if(!istype(P))
 		return
@@ -160,18 +163,18 @@
 			P.accuracy += H.species.gun_accuracy_mod
 			P.dispersion = max(P.dispersion + H.species.gun_accuracy_dispersion_mod, 0)
 
-/obj/item/vehicle_interior_weapon/attack_hand(mob/user)
+/obj/structure/vehicle_interior_weapon/attack_hand(mob/user)
 	// ignore
 
-/obj/item/vehicle_interior_weapon/proc/update_weapon_turn(var/goaldir)
+/obj/structure/vehicle_interior_weapon/proc/update_weapon_turn(goaldir)
 	// find current direction's angle, find rotation direction, add 45+1 to it, then return the new dir we want to be!
 	var/startdir = dir2angle(dir)
 	dir = angle2dir(360 + startdir + (SIGN(closer_angle_difference(startdir,dir2angle(goaldir))) * 46))
 
-/obj/item/vehicle_interior_weapon/ex_act(severity)
+/obj/structure/vehicle_interior_weapon/ex_act(severity)
 	return // No damage
 
-/obj/item/vehicle_interior_weapon/update_icon()
+/obj/structure/vehicle_interior_weapon/update_icon()
 	. = ..()
 	var/dest_state = "";
 	if(control_console.interior_controller.health <= 0)
@@ -187,6 +190,7 @@
 	desc = "It's a secure, armored storage unit embedded into the floor. Shells must be dragged out manually."
 	icon = 'icons/obj/machines/vehicle_weapons.dmi'
 	icon_state = "storage"
+	resistance_flags = INDESTRUCTIBLE
 	anchored = TRUE
 	density = FALSE
 	var/ammo_path = /obj/item/tank_shell
@@ -195,30 +199,33 @@
 /obj/machinery/ammo_storage/MouseDrop(atom/over)
 	if(!CanMouseDrop(over, usr))
 		return
-	if(over == usr)
-		if(ammo_count > 0)
-			usr.visible_message("[usr] begins to extract a shell.", "You begin to extract a shell.")
-			playsound(src, 'sound/items/electronic_assembly_empty.ogg', 100, 1)
-			if(do_after(usr, 6 SECONDS, target = src) && ammo_count > 0)
-				ammo_count--
-				var/obj/item/thing = new ammo_path(usr.loc)
-				usr.visible_message("[usr] picks up \the [thing].", "You pick up \the [thing].")
-				usr.put_in_hands(thing)
-		else
-			to_chat( usr, "No shells remain!")
-		add_fingerprint(usr)
+	if(over != usr)
+		return
+	if(ammo_count <= 0)
+		to_chat( usr, "No shells remain!")
+		return
+
+	add_fingerprint(usr)
+	usr.visible_message("[usr] begins to extract a shell.", "You begin to extract a shell.")
+	playsound(src, 'sound/items/electronic_assembly_empty.ogg', 100, 1)
+	if(do_after(usr, 6 SECONDS, target = src) && ammo_count > 0)
+		ammo_count--
+		var/obj/item/thing = new ammo_path(usr.loc)
+		usr.visible_message("[usr] picks up \the [thing].", "You pick up \the [thing].")
+		usr.put_in_hands(thing)
+
 
 /obj/machinery/ammo_storage/ex_act(severity)
 	return // no explosive act
 
 /obj/machinery/ammo_storage/attack_hand(mob/user)
-	if(ammo_count > 0)
-		if(ammo_count == 1)
-			to_chat( usr, "A single shell remains!")
-		else
-			to_chat( usr, "[ammo_count] shells remain!")
-	else
+	if(ammo_count <= 0)
 		to_chat( usr, "No shells remain!")
+		return
+	if(ammo_count == 1)
+		to_chat( usr, "A single shell remains!")
+		return
+	to_chat( usr, "[ammo_count] shells remain!")
 
 /obj/machinery/ammo_storage/attackby(obj/item/I as obj, mob/user as mob)
 	if(istype(I,ammo_path))
@@ -237,12 +244,14 @@
 	name = "ammunition loader"
 	desc = "Loading mechanism for vehicle mounted weapon."
 	icon = 'icons/obj/machines/vehicle_weapons.dmi'
+	resistance_flags = INDESTRUCTIBLE
 	icon_state = "loader"
 	anchored = TRUE
 	density = TRUE
 	var/weapon_index = -1 // set by the init!
 	var/ammo_path = /obj/item/tank_shell
-	var/loaded = FALSE
+	var/loaded = 0
+	var/loaded_max = 1
 
 /obj/machinery/ammo_loader/Initialize(mapload)
 	. = ..()
@@ -251,31 +260,38 @@
 /obj/machinery/ammo_loader/ex_act(severity)
 	return 0 // no explosive act
 
-/obj/machinery/ammo_loader/attackby(obj/item/I as obj, mob/user as mob)
-	if(istype(I,ammo_path))
-		if(loaded)
+/obj/machinery/ammo_loader/attackby(obj/item/I, mob/user)
+	if(!istype(I,ammo_path))
+		return
+	if(loaded >= loaded_max)
+		if(loaded_max == 1)
 			to_chat( user, "A shell is already loaded.")
-			return
-		else if(do_after(user, 2 SECONDS, target = src) && !loaded)
-			loaded = TRUE
-			user.visible_message("[user] loads a shell into \the [src].", "You load a shell into \the [src].")
-			qdel(I)
-			playsound(src, 'sound/machines/turrets/turret_deploy.ogg', 100, 1)
-			update_icon()
+		else
+			to_chat( user, "The autoloader is full.")
+		return
+	if(do_after(user, 2 SECONDS, target = src) && !loaded)
+		loaded += 1
+		user.visible_message("[user] loads a shell into \the [src].", "You load a shell into \the [src].")
+		qdel(I)
+		playsound(src, 'sound/machines/turrets/turret_deploy.ogg', 100, 1)
+		update_icon()
 
 /obj/machinery/ammo_loader/MouseDrop(atom/over)
+	if(!loaded)
+		to_chat(usr, "There is nothing loaded.")
+		return
 	if(!CanMouseDrop(over, usr))
 		return
 	if(over == usr)
 		usr.visible_message("[usr] unloads \the [src].", "You unload \the [src].")
-		loaded = FALSE
+		loaded -= 1
 		var/obj/item/thing = new ammo_path(usr.loc)
 		usr.put_in_hands(thing)
 		playsound(src, 'sound/items/electronic_assembly_empty.ogg', 100, 1)
 		update_icon()
 
 /obj/machinery/ammo_loader/proc/fire()
-	loaded = FALSE
+	loaded -= 1
 	update_icon()
 	flick("loader_fire",src)
 	var/datum/effect/effect/system/spark_spread/sparks = new /datum/effect/effect/system/spark_spread()
@@ -286,12 +302,11 @@
 	playsound(src, 'sound/machines/machine_die_short.ogg', 100, 1)
 
 /obj/machinery/ammo_loader/update_icon()
-	. = ..()
+	cut_overlays()
 	if(!loaded)
 		icon_state = "loader"
 	else
 		icon_state = "loader_loaded"
-	overlays.Cut()
 	add_overlay("loader_top")
 
 
@@ -307,4 +322,3 @@
 	throwforce = 15.0
 	throw_speed = 2
 	throw_range = 4
-	origin_tech = list(TECH_MATERIAL = 3, TECH_ENGINEERING = 4)

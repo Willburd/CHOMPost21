@@ -58,7 +58,7 @@
 	holder_type = /obj/item/holder/protoblob
 	var/hiding = FALSE
 	vore_icons = TRUE
-	vore_active = TRUE
+	vore_active = FALSE
 
 	plane = ABOVE_MOB_PLANE	//Necessary for overlay based icons
 
@@ -190,8 +190,8 @@
 	return TRUE // yup
 
 /mob/living/simple_mob/protean_blob/get_available_emotes()
-	var/list/fulllist = global._robot_default_emotes.Copy()
-	fulllist |= global._human_default_emotes //they're living nanites, they can make whatever sounds they want
+	var/list/fulllist = GLOB.robot_default_emotes.Copy()
+	fulllist |= GLOB.human_default_emotes //they're living nanites, they can make whatever sounds they want
 	return fulllist
 
 /mob/living/simple_mob/protean_blob/update_misc_tabs()
@@ -298,22 +298,15 @@
 		return ..()
 
 /mob/living/simple_mob/protean_blob/emp_act(severity, recursive)
+	. = ..()
+	if (. & EMP_PROTECT_SELF)
+		return
 	if(humanform)
 		return humanform.emp_act(severity, recursive)
-	else
-		return ..()
 
 /mob/living/simple_mob/protean_blob/ex_act(severity)
 	if(humanform)
 		return humanform.ex_act(severity)
-	else
-		return ..()
-
-/mob/living/simple_mob/protean_blob/rad_act(severity)
-	if(istype(loc, /obj/item/rig))
-		return	//Don't irradiate us while we're in rig mode
-	if(humanform)
-		return humanform.rad_act(severity)
 	else
 		return ..()
 
@@ -388,7 +381,7 @@
 				if(can_spontaneous_vore(src, target))
 					if(target.buckled)
 						target.buckled.unbuckle_mob(target, force = TRUE)
-					target.forceMove(vore_selected)
+					vore_selected.nom_atom(target)
 					to_chat(target,span_warning("\The [src] quickly engulfs you, [vore_selected.vore_verb]ing you into their [vore_selected.get_belly_name()]!"))
 	update_canmove()
 
@@ -574,6 +567,7 @@
 
 		if(blob.mob_radio)
 			blob.mob_radio.forceMove(src)
+			equip_to_appropriate_slot(blob.mob_radio) // Actually put it back on the mob in a slot
 			blob.mob_radio = null
 		if(blob.myid)
 			blob.myid = null

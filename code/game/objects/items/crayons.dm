@@ -42,7 +42,10 @@
 	colourName = "mime"
 	uses = 0
 
-/obj/item/pen/crayon/mime/attack_self(mob/living/user as mob) //inversion
+/obj/item/pen/crayon/mime/attack_self(mob/living/user) //inversion
+	. = ..(user)
+	if(.)
+		return TRUE
 	if(colour != "#FFFFFF" && shadeColour != "#000000")
 		colour = "#FFFFFF"
 		shadeColour = "#000000"
@@ -61,6 +64,9 @@
 	uses = 0
 
 /obj/item/pen/crayon/rainbow/attack_self(mob/living/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	var/new_colour = tgui_color_picker(user, "Please select the main colour.", "Crayon colour", colour)
 	if(new_colour)
 		colour = new_colour
@@ -72,7 +78,7 @@
 /obj/item/pen/crayon/afterattack(atom/target, mob/user, proximity, click_parameters)
 	if(!proximity) return
 	if(istype(target,/turf/simulated/floor))
-		var/drawtype = tgui_input_list(user, "Choose what you'd like to draw.", "Crayon scribbles", list("graffiti","rune","letter","arrow"))
+		var/drawtype = tgui_input_list(user, "Choose what you'd like to draw.", "Crayon scribbles", list("graffiti","rune","letter","arrow","scavmarks"))
 		if(!drawtype)
 			return
 		if(get_dist(target, user) > 1 || !(user.z == target.z))
@@ -98,6 +104,13 @@
 				if(!drawtype || get_dist(target, user) > 1 || !(user.z == target.z))
 					return
 				to_chat(user, "You start drawing an arrow on the [target.name].")
+			//Outpost 21 edit begin - New marking subtype to avoid conflicts
+			if("scavmarks")
+				drawtype = tgui_input_list(user, "Choose the marking.", "Crayon scribbles", list("one_wrath", "two_lust", "three_trade", "four_greed", "five_life", "six_tranquility", "seven_resolve", "eight_decision", "nine_removal", "ten_death", "shelter", "agony", "suspicious", "cant_find", "wander", "violence", "desire", "companion", "food", "survival", "stomach", "pill", "skull", "travel", "intersection", "beach", "market", "marsh", "depart", "light", "dark", "air", "water", "fire", "earth", "chaos", "day", "night", "cog"))
+				if(!drawtype || get_dist(target, user) > 1 || !(user.z == target.z))
+					return
+				to_chat(user, "You start drawing a marking on the [target.name].")
+				//Outpost 21 edit end
 		if(instant || do_after(user, 5 SECONDS, target = src))
 			var/list/mouse_control = params2list(click_parameters)
 			var/p_x = 0
@@ -124,7 +137,7 @@
 					qdel(src)
 	return
 
-/obj/item/pen/crayon/attack(mob/living/M as mob, mob/living/user as mob)
+/obj/item/pen/crayon/attack(mob/living/M, mob/living/user, target_zone, attack_modifier)
 	if(M == user)
 		to_chat(user, "You take a bite of the crayon and swallow it.")
 		user.nutrition += 1
@@ -138,6 +151,7 @@
 			if(uses <= 0)
 				to_chat(user, span_warning("You ate your crayon!"))
 				qdel(src)
+		return ITEM_INTERACT_SUCCESS
 	else
 		..()
 
@@ -192,6 +206,9 @@
 	uses = 0
 
 /obj/item/pen/crayon/marker/mime/attack_self(mob/living/user) //inversion
+	. = ..(user)
+	if(.)
+		return TRUE
 	if(colour != "#FFFFFF" && shadeColour != "#000000")
 		colour = "#FFFFFF"
 		shadeColour = "#000000"
@@ -210,6 +227,9 @@
 	uses = 0
 
 /obj/item/pen/crayon/marker/rainbow/attack_self(mob/living/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	var/new_colour = tgui_color_picker(user, "Please select the main colour.", "Marker colour", colour)
 	if(new_colour)
 		colour = new_colour
@@ -218,7 +238,7 @@
 		shadeColour = new_colour
 	return
 
-/obj/item/pen/crayon/marker/attack(mob/living/M, mob/living/user)
+/obj/item/pen/crayon/marker/attack(mob/living/M, mob/living/user, target_zone, attack_modifier)
 	if(M == user)
 		to_chat(user, "You take a bite of the marker and swallow it.")
 		user.nutrition += 1
@@ -232,8 +252,6 @@
 			if(uses <= 0)
 				to_chat(user, span_warning("You ate the marker!"))
 				qdel(src)
+		return ITEM_INTERACT_SUCCESS
 	else
 		..()
-
-/obj/item/pen/crayon/attack_self(var/mob/user)
-	return

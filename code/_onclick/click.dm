@@ -43,9 +43,11 @@
 	* mob/RangedAttack(atom,params) - used only ranged, only used for tk and laser eyes but could be changed
 */
 /mob/proc/ClickOn(atom/A, params)
-	if(world.time <= next_click)
+	if(!checkClickCooldown()) return
+	setClickCooldown(1) //1/10 of a second, 10 clicks allowed per second.
+
+	if(check_click_intercept(params,A) || HAS_TRAIT(src, TRAIT_NO_TRANSFORM))
 		return
-	next_click = world.time + 1
 
 	if(client && client.buildmode)
 		build_click(src, client.buildmode, params, A)
@@ -84,7 +86,7 @@
 		CtrlClickOn(A)
 		return
 
-	//Replaces thee old 'stat||paralysis||stunned' check
+	//Replaces the old 'stat||paralysis||stunned' check
 	//Not fully implemented yet.
 	if(INCAPACITATED_IGNORING(src, INCAPABLE_RESTRAINTS|INCAPABLE_STASIS))
 		return
@@ -115,22 +117,28 @@
 		throw_mode_off()
 		return TRUE
 
-	// Outpost 21 addition begin - Clicking while driving a interior controlled vehicle
+	// outpost 21 edit begin - Clicking while driving a interior controlled vehicle
 	var/datum/component/remote_view/R = GetComponent(/datum/component/remote_view)
 	if(!is_incorporeal() && R && (isturf(A) || isturf(A.loc)))
 		if(istype(R.get_coordinator(), /obj/machinery/computer/vehicle_interior_console))
 			var/obj/machinery/computer/vehicle_interior_console/C = R.get_coordinator()
 			if(C)
 				return C.click_action(A, src, params)
-	// Outpost 21 addition end
+	// outpost 21 edit end
 
 	var/obj/item/W = get_active_hand()
 
 	if(!currently_restrained && W == A) // Handle attack_self
-		W.attack_self(src)
-		trigger_aiming(TARGET_CAN_CLICK)
-		update_inv_active_hand(0)
-		return 1
+		if(LAZYACCESS(modifiers, RIGHT_CLICK))
+			W.attack_self_secondary(src, modifiers)
+			trigger_aiming(TARGET_CAN_CLICK)
+			update_inv_active_hand(0)
+			return TRUE
+		else
+			W.attack_self(src, modifiers)
+			trigger_aiming(TARGET_CAN_CLICK)
+			update_inv_active_hand(0)
+			return TRUE
 
 	//Atoms on your person
 	// A is your location but is not a turf; or is on you (backpack); or is on something on you (box in backpack); sdepth is needed here because contents depth does not equate inventory storage depth.
@@ -138,7 +146,8 @@
 	if(!currently_restrained && ((!isturf(A) && A == loc) || (sdepth <= MAX_STORAGE_REACH)))
 		if(W)
 			var/resolved = W.resolve_attackby(A, src, click_parameters = params)
-			if(!resolved && A && W)
+			//If we got a 'SUCCESS' it means resolve_attackby did something. Don't do afterattack in that case.
+			if((resolved != ITEM_INTERACT_SUCCESS) && A && W)
 				W.afterattack(A, src, 1, params) // 1 indicates adjacency
 		else
 			if(ismob(A)) // No instant mob attacking
@@ -151,7 +160,7 @@
 	if(!currently_restrained && isbelly(loc) && (loc == A.loc))
 		if(W)
 			var/resolved = W.resolve_attackby(A,src)
-			if(!resolved && A && W)
+			if((resolved != ITEM_INTERACT_SUCCESS) && A && W)
 				W.afterattack(A, src, 1, params) // 1: clicking something Adjacent
 		else
 			if(ismob(A)) // No instant mob attacking
@@ -177,7 +186,7 @@
 				if(W && !restrained())
 					// Return 1 in attackby() to prevent afterattack() effects (when safely moving items for example)
 					var/resolved = W.resolve_attackby(A,src, click_parameters = params)
-					if(!resolved && A && W)
+					if((resolved != ITEM_INTERACT_SUCCESS) && A && W)
 						W.afterattack(A, src, 1, params) // 1: clicking something Adjacent
 				else
 					if(ismob(A)) // No instant mob attacking
@@ -247,7 +256,7 @@
 */
 /mob/proc/RangedAttack(var/atom/A, var/params)
 	if(!mutations.len) return
-	if((LASER in mutations) && a_intent == I_HURT)
+	if((LASER_EYES in mutations) && a_intent == I_HURT)
 		LaserEyes(A) // moved into a proc below
 	else if(has_telegrip())
 		if(get_dist(src, A) > TK_MAXRANGE)
@@ -326,21 +335,32 @@
 		to_chat(src, span_warning("You're out of energy!  You need food!"))
 
 // Simple helper to face what you clicked on, in case it should be needed in more than one place
-/mob/proc/face_atom(var/atom/A)
-	if(!A || !x || !y || !A.x || !A.y) return
-	var/dx = A.x - x
-	var/dy = A.y - y
-	if(!dx && !dy) return
+/mob/proc/face_atom(atom/atom_to_face)
+	if(buckled || stat != CONSCIOUS || !atom_to_face || !x || !y || !atom_to_face.x || !atom_to_face.y)
+		return
+	var/dx = atom_to_face.x - x
+	var/dy = atom_to_face.y - y
+	if(!dx && !dy) // Wall items are graphically shifted but on the floor
+		if(atom_to_face.pixel_y > 16)
+			set_dir(NORTH)
+		else if(atom_to_face.pixel_y < -16)
+			set_dir(SOUTH)
+		else if(atom_to_face.pixel_x > 16)
+			set_dir(EAST)
+		else if(atom_to_face.pixel_x < -16)
+			set_dir(WEST)
+		return
 
-	var/direction
 	if(abs(dx) < abs(dy))
-		if(dy > 0)	direction = NORTH
-		else		direction = SOUTH
+		if(dy > 0)
+			set_dir(NORTH)
+		else
+			set_dir(SOUTH)
 	else
-		if(dx > 0)	direction = EAST
-		else		direction = WEST
-	if(direction != dir)
-		facedir(direction)
+		if(dx > 0)
+			set_dir(EAST)
+		else
+			set_dir(WEST)
 
 /atom/movable/screen/click_catcher
 	name = "" // Empty string names don't show up in context menu clicks
@@ -362,14 +382,29 @@
 		C.swap_hand()
 	else
 		var/list/P = params2list(params)
-		var/turf/T = screen_loc2turf(P["screen-loc"], get_turf(usr))
+		var/turf/T = get_turf(usr)
 		if(T)
-			if(LAZYACCESS(modifiers, SHIFT_CLICK))
-				usr.face_atom(T)
-				return 1
-			T.Click(location, control, params)
+			T = screen_loc2turf(P["screen-loc"], T)
+			if(T)
+				if(LAZYACCESS(modifiers, SHIFT_CLICK))
+					usr.face_atom(T)
+					return 1
+				T.Click(location, control, params)
 	return 1
 
 /// MouseWheelOn
 /mob/proc/MouseWheelOn(atom/A, delta_x, delta_y, params)
 	SEND_SIGNAL(src, COMSIG_MOUSE_SCROLL_ON, A, delta_x, delta_y, params)
+
+/mob/proc/check_click_intercept(params,A)
+	//Client level intercept
+	if(client?.click_intercept)
+		if(call(client.click_intercept, "InterceptClickOn")(src, params, A))
+			return TRUE
+
+	//Mob level intercept
+	if(click_intercept)
+		if(call(click_intercept, "InterceptClickOn")(src, params, A))
+			return TRUE
+
+	return FALSE

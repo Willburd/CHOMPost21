@@ -103,7 +103,7 @@
 		explosion(epicenter, 0, boomsize / 3, boomsize, boomsize*2)
 	// Outpost 21 edit begin - Better shuttle crashing
 	moving_status = SHUTTLE_CRASHED
-	command_announcement.Announce("[crash_message]", "Shuttle Alert")
+	GLOB.command_announcement.Announce("[crash_message]", "Shuttle Alert", ANNOUNCER_MSG_SHUTTLE_CRASHED)
 
 	// Put people back
 	for(var/mob/living/L as anything in victims)

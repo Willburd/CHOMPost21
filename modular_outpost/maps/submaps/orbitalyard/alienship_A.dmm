@@ -1,4 +1,91 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/obj/machinery/porta_turret/alien/destroyed,
+/turf/simulated/shuttle/floor/alienplating/vacuum,
+/area/submap/outpost21/structure_generic/alienshipa)
+"ab" = (
+/obj/machinery/porta_turret/alien{
+	check_all = 0;
+	check_anomalies = 0;
+	check_arrest = 0;
+	check_records = 0;
+	faction = "synthtide";
+	use_power = 0;
+	maxhealth = 500;
+	health = 500
+	},
+/turf/simulated/shuttle/floor/alienplating/blue{
+	oxygen = 0;
+	phoron = 21.8366
+	},
+/area/submap/outpost21/structure_generic/alienshipa)
+"ac" = (
+/obj/machinery/door/airlock/alien/blue/public{
+	name = "alien airlock"
+	},
+/obj/effect/mine/lube{
+	camo_net = 1
+	},
+/obj/structure/fans/hardlight/colorable/abductor,
+/turf/simulated/shuttle/floor/alien/blue{
+	oxygen = 0;
+	phoron = 21.8366
+	},
+/area/submap/outpost21/structure_generic/alienshipa)
+"ad" = (
+/obj/effect/mine/claymore{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor/alienplating/blue{
+	oxygen = 0;
+	phoron = 21.8366
+	},
+/area/submap/outpost21/structure_generic/alienshipa)
+"ae" = (
+/obj/machinery/porta_turret/alien/destroyed,
+/turf/simulated/shuttle/floor/alienplating/blue{
+	oxygen = 0;
+	phoron = 21.8366
+	},
+/area/submap/outpost21/structure_generic/alienshipa)
+"af" = (
+/obj/effect/mine/stun{
+	camo_net = 1
+	},
+/turf/simulated/shuttle/floor/alien/blue{
+	oxygen = 0;
+	phoron = 21.8366
+	},
+/area/submap/outpost21/structure_generic/alienshipa)
+"ag" = (
+/obj/effect/mine/stun{
+	camo_net = 1
+	},
+/turf/simulated/shuttle/floor/alienplating/blue{
+	oxygen = 0;
+	phoron = 21.8366
+	},
+/area/submap/outpost21/structure_generic/alienshipa)
+"ah" = (
+/obj/structure/bed/alien,
+/mob/living/simple_mob/mechanical/cyber_horror/vox,
+/turf/simulated/shuttle/floor/alienplating/blue{
+	oxygen = 0;
+	phoron = 21.8366
+	},
+/area/submap/outpost21/structure_generic/alienshipa)
+"ai" = (
+/obj/item/clothing/shoes/magboots/vox,
+/obj/item/clothing/under/vox/vox_casual,
+/obj/item/clothing/under/vox/vox_robes,
+/obj/item/tank/vox,
+/obj/item/clothing/mask/breath,
+/obj/structure/closet/alien,
+/turf/simulated/shuttle/floor/alienplating/blue{
+	oxygen = 0;
+	phoron = 21.8366
+	},
+/area/submap/outpost21/structure_generic/alienshipa)
 "aA" = (
 /obj/machinery/portable_atmospherics/canister/nitrophoric_oxide,
 /obj/item/tank/phoroanesthetic,
@@ -6,10 +93,6 @@
 	oxygen = 0;
 	phoron = 21.8366
 	},
-/area/submap/outpost21/structure_generic/alienshipa)
-"aM" = (
-/obj/structure/meteorite,
-/turf/simulated/shuttle/floor/alienplating/vacuum,
 /area/submap/outpost21/structure_generic/alienshipa)
 "aP" = (
 /obj/machinery/chemical_dispenser/ert/specialops/abductor{
@@ -79,15 +162,6 @@
 	phoron = 21.8366
 	},
 /area/submap/outpost21/structure_generic/alienshipa)
-"fc" = (
-/obj/machinery/porta_turret/alien{
-	check_all = 0;
-	check_anomalies = 0;
-	check_arrest = 0;
-	check_records = 0
-	},
-/turf/simulated/shuttle/floor/alienplating/vacuum,
-/area/submap/outpost21/structure_generic/alienshipa)
 "ft" = (
 /obj/structure/lattice,
 /obj/structure/meteorite,
@@ -95,17 +169,6 @@
 /area/submap/outpost21/structure_generic/alienshipa)
 "fX" = (
 /turf/simulated/shuttle/floor/alien/blue{
-	oxygen = 0;
-	phoron = 21.8366
-	},
-/area/submap/outpost21/structure_generic/alienshipa)
-"hH" = (
-/obj/structure/bed/alien,
-/mob/living/simple_mob/mechanical/cyber_horror/vox{
-	ID_provided = 1;
-	myid_access = list(300)
-	},
-/turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
 	},
@@ -185,6 +248,7 @@
 	name = "alien airlock";
 	req_one_access = list(801)
 	},
+/obj/structure/fans/hardlight/colorable/abductor,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -212,7 +276,10 @@
 /area/submap/outpost21/structure_generic/alienshipa)
 "ra" = (
 /obj/structure/table/alien,
-/obj/machinery/turretid/lethal,
+/obj/machinery/turretid/lethal{
+	control_area = "\improper Alien Vessel";
+	req_access = list(803)
+	},
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -251,6 +318,7 @@
 	name = "alien airlock";
 	req_one_access = list(803)
 	},
+/obj/structure/fans/hardlight/colorable/abductor,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -289,6 +357,7 @@
 	name = "bridge";
 	req_one_access = list(802)
 	},
+/obj/structure/fans/hardlight/colorable/abductor,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -331,8 +400,7 @@
 	},
 /area/submap/outpost21/structure_generic/alienshipa)
 "yT" = (
-/obj/structure/meteorite,
-/obj/item/prop/alien/junk,
+/mob/living/simple_mob/mechanical/cyber_horror/vox,
 /turf/simulated/shuttle/floor/alienplating/vacuum,
 /area/submap/outpost21/structure_generic/alienshipa)
 "zk" = (
@@ -366,6 +434,7 @@
 /obj/machinery/door/airlock/alien/blue/public{
 	name = "alien airlock"
 	},
+/obj/structure/fans/hardlight/colorable/abductor,
 /turf/simulated/shuttle/floor/alien/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -412,7 +481,6 @@
 	},
 /area/submap/outpost21/structure_generic/alienshipa)
 "Gg" = (
-/obj/structure/fans/hardlight/colorable/abductor,
 /obj/machinery/door/airlock/alien/blue{
 	name = "Exterior";
 	req_one_access = list(801)
@@ -420,6 +488,7 @@
 /obj/effect/mine/dnascramble{
 	camo_net = 1
 	},
+/obj/structure/fans/hardlight/colorable/abductor,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -445,17 +514,21 @@
 	name = "alien airlock";
 	req_one_access = list(803)
 	},
+/obj/structure/fans/hardlight/colorable/abductor,
 /turf/simulated/shuttle/floor/alien/blue{
 	oxygen = 0;
 	phoron = 21.8366
 	},
 /area/submap/outpost21/structure_generic/alienshipa)
 "JE" = (
-/obj/structure/fans/hardlight/colorable/abductor,
 /obj/machinery/door/airlock/alien/blue{
 	name = "Exterior";
 	req_one_access = list(801)
 	},
+/obj/effect/mine/frag{
+	camo_net = 1
+	},
+/obj/structure/fans/hardlight/colorable/abductor,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -470,8 +543,7 @@
 /area/submap/outpost21/structure_generic/alienshipa)
 "KD" = (
 /obj/structure/table/alien,
-/obj/item/prop/alien/junk,
-/obj/item/prop/alien/junk,
+/obj/item/prop/deconstructable/gigacell,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -495,10 +567,7 @@
 	},
 /area/submap/outpost21/structure_generic/alienshipa)
 "LT" = (
-/mob/living/simple_mob/mechanical/cyber_horror/vox{
-	ID_provided = 1;
-	myid_access = list(300)
-	},
+/mob/living/simple_mob/mechanical/cyber_horror/vox,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -518,6 +587,8 @@
 /obj/structure/window/phoronreinforced{
 	dir = 4
 	},
+/obj/structure/fans/hardlight/colorable/abductor,
+/obj/structure/grille/rustic,
 /turf/simulated/shuttle/floor/alienplating/vacuum,
 /area/submap/outpost21/structure_generic/alienshipa)
 "NI" = (
@@ -528,6 +599,8 @@
 	dir = 4
 	},
 /obj/structure/window/phoronreinforced,
+/obj/structure/fans/hardlight/colorable/abductor,
+/obj/structure/grille/rustic,
 /turf/simulated/shuttle/floor/alienplating/vacuum,
 /area/submap/outpost21/structure_generic/alienshipa)
 "Ov" = (
@@ -570,18 +643,6 @@
 	phoron = 21.8366
 	},
 /area/submap/outpost21/structure_generic/alienshipa)
-"PS" = (
-/obj/machinery/porta_turret/alien{
-	check_all = 0;
-	check_anomalies = 0;
-	check_arrest = 0;
-	check_records = 0
-	},
-/turf/simulated/shuttle/floor/alienplating/blue{
-	oxygen = 0;
-	phoron = 21.8366
-	},
-/area/submap/outpost21/structure_generic/alienshipa)
 "Qg" = (
 /turf/template_noop,
 /area/template_noop)
@@ -599,10 +660,6 @@
 	oxygen = 0;
 	phoron = 21.8366
 	},
-/area/submap/outpost21/structure_generic/alienshipa)
-"Rd" = (
-/obj/structure/meteorite,
-/turf/simulated/shuttle/plating/airless,
 /area/submap/outpost21/structure_generic/alienshipa)
 "RB" = (
 /obj/structure/loot_pile/surface/alien/medical,
@@ -624,6 +681,7 @@
 /obj/machinery/door/airlock/alien/blue/public{
 	name = "alien airlock"
 	},
+/obj/structure/fans/hardlight/colorable/abductor,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -654,10 +712,7 @@
 "VX" = (
 /obj/item/card/id/keycard,
 /obj/item/digestion_remains/skull/vox,
-/mob/living/simple_mob/mechanical/cyber_horror/vox{
-	ID_provided = 1;
-	myid_access = list(300)
-	},
+/mob/living/simple_mob/mechanical/cyber_horror/vox,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -666,13 +721,6 @@
 "We" = (
 /obj/structure/loot_pile/surface/alien,
 /turf/simulated/shuttle/floor/alienplating/blue{
-	oxygen = 0;
-	phoron = 21.8366
-	},
-/area/submap/outpost21/structure_generic/alienshipa)
-"Wh" = (
-/obj/effect/mine/emp/camo,
-/turf/simulated/shuttle/floor/alien/blue{
 	oxygen = 0;
 	phoron = 21.8366
 	},
@@ -704,6 +752,8 @@
 /obj/structure/window/phoronreinforced{
 	dir = 1
 	},
+/obj/structure/fans/hardlight/colorable/abductor,
+/obj/structure/grille/rustic,
 /turf/simulated/shuttle/floor/alienplating/vacuum,
 /area/submap/outpost21/structure_generic/alienshipa)
 "ZB" = (
@@ -1050,7 +1100,7 @@ Qg
 Iv
 Iv
 qv
-hH
+ah
 zk
 qv
 qv
@@ -1116,7 +1166,7 @@ Iv
 qv
 zk
 vy
-zk
+ae
 zk
 vy
 qv
@@ -1157,26 +1207,26 @@ qv
 kK
 pE
 kK
-PS
+ab
 qv
+qv
+qv
+qv
+qv
+qv
+Iv
+qv
+zk
+zk
+zk
+zk
+zk
 qv
 Iv
 qv
 qv
 qv
-Iv
 qv
-zk
-zk
-zk
-zk
-zk
-qv
-Iv
-qv
-qv
-qv
-Iv
 qv
 qv
 Au
@@ -1206,15 +1256,15 @@ Qg
 Iv
 Iv
 qv
-zk
+ab
 zk
 zk
 zk
 zk
 qv
-qv
-qv
-PS
+kK
+ab
+zk
 kK
 JE
 qv
@@ -1226,9 +1276,9 @@ Vb
 qv
 Gg
 kK
-PS
-qv
-qv
+zk
+ab
+kK
 qv
 Px
 zk
@@ -1367,25 +1417,25 @@ qv
 kK
 zk
 fX
-qv
+kK
 fX
 zk
-qv
-zk
+kK
+ag
 zk
 qv
 wT
-Wh
+fX
 fX
 fX
 wT
 qv
 zk
 zk
-qv
+kK
 zk
 fX
-qv
+kK
 fX
 LT
 zk
@@ -1414,8 +1464,8 @@ Qg
 Iv
 Iv
 qv
-oD
-kG
+ai
+ah
 St
 zk
 fX
@@ -1425,13 +1475,13 @@ fX
 qv
 zk
 zk
-qv
+kK
 qv
 kK
 pE
 kK
 qv
-qv
+kK
 zk
 zk
 qv
@@ -1471,7 +1521,7 @@ qv
 qv
 qv
 qv
-qv
+kK
 CA
 CA
 qv
@@ -1489,7 +1539,7 @@ zk
 qv
 CA
 CA
-qv
+kK
 qv
 qv
 qv
@@ -1532,18 +1582,18 @@ fX
 zk
 zk
 zk
-zk
+LT
 zk
 zk
 zk
 fX
 fX
 qv
-Yb
+cN
 Yb
 Yb
 cN
-cN
+Yb
 Yb
 dp
 qv
@@ -1580,24 +1630,24 @@ zk
 zk
 qv
 CA
+ac
+kK
+qv
+qv
+qv
+qv
+qv
+kK
 CA
-qv
-qv
-qv
-qv
-qv
-qv
-qv
-CA
-CA
+ac
 qv
 Yb
 yT
-cN
-Rd
 Yb
 Fh
 Yb
+Fh
+aa
 qv
 Iv
 Iv
@@ -1636,7 +1686,7 @@ fX
 qv
 Eo
 zk
-PS
+ab
 zk
 Eo
 qv
@@ -1695,11 +1745,11 @@ qv
 zk
 zk
 qv
-aM
+Yb
 Yb
 ft
 Yb
-Rd
+Fh
 Iu
 qv
 Iv
@@ -1889,7 +1939,7 @@ Iv
 Iv
 qv
 qv
-PS
+ab
 qv
 zk
 zk
@@ -1903,7 +1953,7 @@ qv
 zk
 zk
 qv
-fc
+aa
 qv
 Iu
 Iv
@@ -1995,17 +2045,17 @@ Iv
 Iv
 qv
 qv
+OY
 zk
-zk
-PS
+ab
 qv
-qv
+kK
 Jz
+kK
 qv
-qv
-PS
+ab
 zk
-zk
+OY
 qv
 qv
 Iv
@@ -2047,7 +2097,7 @@ Iv
 Iv
 Iv
 qv
-zk
+qv
 zk
 zk
 zk
@@ -2057,7 +2107,7 @@ fX
 zk
 zk
 zk
-zk
+qv
 qv
 Iv
 Iv
@@ -2099,7 +2149,7 @@ Iv
 Iv
 Iv
 qv
-zk
+qv
 zk
 zk
 zk
@@ -2109,7 +2159,7 @@ fX
 zk
 zk
 zk
-zk
+qv
 qv
 Iv
 Iv
@@ -2151,17 +2201,17 @@ Iv
 Iv
 Iv
 qv
+ad
 zk
-zk
-PS
+ab
 qv
-qv
+kK
 Jz
+kK
 qv
-qv
-PS
+ab
 zk
-zk
+ad
 qv
 Iv
 Iv
@@ -2261,7 +2311,7 @@ qv
 ne
 zk
 rU
-zk
+LT
 ot
 qv
 zk
@@ -2363,9 +2413,9 @@ zk
 zk
 qv
 mv
-zk
+LT
 lx
-zk
+LT
 wh
 qv
 zk
@@ -2675,9 +2725,9 @@ zk
 zk
 qv
 qv
-PS
+zk
 BR
-PS
+zk
 qv
 qv
 zk
@@ -2828,7 +2878,7 @@ Iv
 Iv
 Iv
 qv
-PS
+ab
 zk
 zk
 fX
@@ -2836,7 +2886,7 @@ fX
 fX
 zk
 zk
-PS
+ab
 qv
 Iv
 Iv
@@ -2883,9 +2933,9 @@ qv
 qv
 qv
 qv
-qv
+kK
 uG
-qv
+kK
 qv
 qv
 qv
@@ -2932,15 +2982,15 @@ Qg
 Iv
 Iv
 qv
-PS
+ab
 cr
 zk
 fX
-fX
+af
 fX
 zk
 zk
-PS
+ab
 qv
 Iv
 Iv

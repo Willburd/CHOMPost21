@@ -8,10 +8,6 @@
 	w_class = ITEMSIZE_HUGE
 	slot_flags = SLOT_BACK
 	unacidable = TRUE
-	origin_tech = list(
-		TECH_MATERIAL = 8, TECH_ENGINEERING = 8, TECH_POWER = 8, TECH_BLUESPACE = 10,
-		TECH_COMBAT = 7, TECH_MAGNET = 9, TECH_DATA = 5
-		)
 	sprite_sheets = list(
 		SPECIES_TESHARI = 'icons/inventory/back/mob_teshari.dmi'
 		)
@@ -54,7 +50,7 @@
 	..()
 
 // Removes the spell buttons from the HUD.
-/obj/item/technomancer_core/dropped(mob/user)
+/obj/item/technomancer_core/dropped(mob/user, equipping, slot)
 	for(var/atom/movable/screen/ability/obj_based/technomancer/A in wearer.ability_master.ability_objects)
 		wearer.ability_master.remove_ability(A)
 	wearer = null
@@ -89,7 +85,7 @@
 	if(world.time % 5 == 0) // Maintaining fat lists is expensive, I imagine.
 		maintain_summon_list()
 	if(wearer && wearer.mind)
-		if(!(technomancers.is_antagonist(wearer.mind)) && !universal) // In case someone tries to wear a stolen core. //VOREStation Edit - Add universal cores
+		if(!(GLOB.technomancers.is_antagonist(wearer.mind)) && !universal) // In case someone tries to wear a stolen core. //VOREStation Edit - Add universal cores
 			wearer.adjust_instability(20)
 	if(!wearer || wearer.stat == DEAD) // Unlock if we're dead or not worn.
 		canremove = TRUE

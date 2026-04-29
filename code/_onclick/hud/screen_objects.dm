@@ -640,14 +640,14 @@
 
 		if("shadekin status")
 			var/turf/T = get_turf(usr)
-			// outpost 21 addition begin - lockers are dark and spooky!
+			// outpost 21 edit begin - lockers are dark and spooky!
 			var/darkness = 0
 			if(T)
 				darkness = round(1 - T.get_lumcount(),0.1)
 				to_chat(usr,span_notice(span_bold("Darkness:") + " [darkness]"))
 			if(istype(usr.loc,/obj/structure/closet)) // it's dark in here!
 				darkness = 1
-			// outpost 21 addition end
+			// outpost 21 edit end
 			var/mob/living/H = usr
 			if(ismob(H))
 				var/datum/component/shadekin/SK = H.get_shadekin_component()
@@ -684,14 +684,14 @@
 						feral_passing = FALSE
 					if(feral_passing)
 						var/turf/T = get_turf(H)
-						// outpost 21 addition begin - lockers are dark and spooky!
+						// outpost 21 edit begin - lockers are dark and spooky!
 						var/darkness = 0
 						if(T)
 							darkness = round(1 - T.get_lumcount(),0.1)
 						if(istype(H.loc,/obj/structure/closet))
 							darkness = 1 // it's dark in here!
 						if(darkness <= 0.1)
-						// outpost 21 addition end
+						// outpost 21 edit end
 							to_chat(usr, span_notice("You are slowly calming down in darkness' safety..."))
 						else if(isbelly(H.loc)) // Safety message for if inside a belly.
 							to_chat(usr, span_notice("You are slowly calming down within the darkness of something's belly, listening to their body as it moves around you. ...safe..."))
@@ -1021,6 +1021,25 @@
 	screen_loc = ui_ammo_hud1
 	var/warned = FALSE
 	var/static/list/ammo_screen_loc_list = list(ui_ammo_hud1, ui_ammo_hud2, ui_ammo_hud3 ,ui_ammo_hud4)
+	var/datum/weakref/our_gun
+
+/atom/movable/screen/ammo/Destroy()
+	. = ..()
+	our_gun = null
+
+/atom/movable/screen/ammo/Click()
+	var/mob/user = usr
+	if(!user.checkClickCooldown())
+		return TRUE
+	if(user.stat || user.paralysis || user.stunned || user.weakened)
+		return TRUE
+	if(istype(user.loc,/obj/mecha)) // stops inventory actions in a mech
+		return TRUE
+	var/obj/item/gun/gun = our_gun.resolve()
+	if(!gun)
+		return TRUE
+	gun.switch_firemodes(user)
+	return TRUE
 
 /atom/movable/screen/ammo/proc/add_hud(var/mob/living/user, var/obj/item/gun/G)
 

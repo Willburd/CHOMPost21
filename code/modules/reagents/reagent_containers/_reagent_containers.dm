@@ -34,9 +34,6 @@
 			WARNING("[src]([src.type]) starts with more reagents than it has total volume")
 		starts_with = null // it should gc, since it's just strings and numbers
 
-/obj/item/reagent_containers/attack_self(mob/user as mob)
-	return
-
 /obj/item/reagent_containers/afterattack(obj/target, mob/user, flag)
 	return
 
@@ -152,7 +149,8 @@
 
 	var/trans = reagents.trans_to(target, amount_per_transfer_from_this)
 	balloon_alert(user, "transfered [trans] units to [target]")
-	target.reagents.ppe_affect(user) // Outpost 21 edit - Check PPE
+	if(!QDELETED(target) && target.reagents) // Outpost 21 edit - Check PPE
+		target.reagents.ppe_affect(user)
 	return 1
 
 /obj/item/reagent_containers/proc/liquid_belly_check()

@@ -11,7 +11,7 @@
 	w_class = ITEMSIZE_SMALL //CHOMP Add because something so small, trivial, and used for silly RP should not be practically gigantic.
 
 /obj/item/ticket_printer/attack_self(mob/user)
-	. = ..()
+	. = ..(user)
 	if(last_print + print_cooldown <= world.time)
 		print_a_ticket(user)
 	else
@@ -59,7 +59,7 @@
 
 	var/turf/our_turf = get_turf(user)
 
-	var/final = "<head><style>body {font-family: Verdana; background-color: #C1BDA3;}</style></head><center><h3>Eshui Security Citation</h3><hr>This security citation has been issued to <br><big>[capitalize(ticket_name)]</big></center><b>Reason</b>:<br><i>[details]</i><hr><center><small>See your local representative at Central Command after the shift is over to resolve this issue.</small><br><img src=\ref['html/images/eslogo.png']></center>" // Outpost 21 edit - use ES logo, citation
+	var/final = "<head><style>body {font-family: Verdana; background-color: #C1BDA3;}</style></head><center><h3>Eshui Security Citation</h3><hr>This security citation has been issued to <br><big>[capitalize(ticket_name)]</big></center><b>Reason</b>:<br><i>[details]</i><hr><center><small>See your local representative at Central Command after the shift is over to resolve this issue.</small><br><img src=\ref['html/images/outpost/eslogo.png']></center>" // Outpost 21 edit - use ES logo, citation
 
 	var/obj/item/paper/sec_ticket/p = new /obj/item/paper/sec_ticket(our_turf)
 

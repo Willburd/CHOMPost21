@@ -6,7 +6,7 @@
 					LANGUAGE_SIIK		= 1,
 					LANGUAGE_SKRELLIAN	= 1,
 					LANGUAGE_ROOTLOCAL	= 0,
-					LANGUAGE_GUTTER		= 0,
+					// LANGUAGE_GUTTER		= 0, // Outpost 21 edit - Not for borgs
 					LANGUAGE_SCHECHI	= 1,
 					LANGUAGE_EAL		= 1,
 					LANGUAGE_SIGN		= 0,
@@ -52,6 +52,7 @@
 	..()
 
 /datum/robot_sprite/dogborg/command
+	sprite_hud_icon_state = "clerical"
 	name = "Commandhound V2"
 	sprite_icon_state = "kcom"
 	has_eye_light_sprites = TRUE
@@ -62,15 +63,22 @@
 	name = "Borgi"
 	sprite_icon_state = "borgi"
 	has_eye_light_sprites = TRUE
+	hat_offset = BORGI_HAT_OFFSET
 
 /datum/robot_sprite/dogborg/tall/command
+	sprite_hud_icon_state = "clerical"
 	module_type = "Command"
+
+/datum/robot_sprite/dogborg/tall/command/tall
 	sprite_icon = 'icons/mob/robot/tallrobot/tallrobots.dmi'
+	icon_x = 32
 	pixel_x = 0
 
 /datum/robot_sprite/dogborg/raptor/command
+	sprite_hud_icon_state = "clerical"
 	module_type = "Command"
 	sprite_icon = 'icons/mob/robot/raptor.dmi'
+	hat_offset = RAPTOR_HAT_OFFSET
 
 /datum/robot_sprite/dogborg/raptor/command/raptor
 	name = "Raptor"
@@ -80,34 +88,34 @@
 	rest_sprite_options = list("Default", "Bellyup")
 	icon_y = 64
 	vis_height = 64
+	hat_offset = RAPTOR_HAT_OFFSET
 
-/datum/robot_sprite/dogborg/tall/command/meka
+/datum/robot_sprite/dogborg/tall/command/tall/meka
 	name = "MEKA"
 	sprite_icon_state = "mekaunity"
 	has_eye_light_sprites = TRUE
 	has_custom_open_sprites = FALSE
 	has_vore_belly_sprites = TRUE
 	rest_sprite_options = list("Default", "Sit")
-	icon_x = 32
+	hat_offset = MEKA_HAT_OFFSET
 
-
-/datum/robot_sprite/dogborg/tall/command/mmeka
+/datum/robot_sprite/dogborg/tall/command/tall/mmeka
 	name = "NIKO"
 	sprite_icon_state = "mmekaunity"
 	has_eye_light_sprites = TRUE
 	has_custom_open_sprites = FALSE
 	has_vore_belly_sprites = TRUE
 	rest_sprite_options = list("Default", "Sit")
-	icon_x = 32
+	hat_offset = MEKA_HAT_OFFSET
 
-/datum/robot_sprite/dogborg/tall/command/fmeka
+/datum/robot_sprite/dogborg/tall/command/tall/fmeka
 	name = "NIKA"
 	sprite_icon_state = "fmekaunity"
 	has_eye_light_sprites = TRUE
 	has_custom_open_sprites = FALSE
 	has_vore_belly_sprites = TRUE
 	rest_sprite_options = list("Default", "Sit")
-	icon_x = 32
+	hat_offset = MEKA_HAT_OFFSET
 
 /datum/robot_sprite/dogborg/command/smolraptor
 	name = "Small Raptor"
@@ -117,6 +125,7 @@
 	has_vore_belly_sprites = TRUE
 	has_dead_sprite_overlay = FALSE
 	rest_sprite_options = list("Default", "Sit", "Bellyup")
+	hat_offset = SMOL_RAPTOR_HAT_OFFSET
 
 /datum/robot_sprite/dogborg/tall/command/dullataurcommand
 	name = "Dullataur"
@@ -132,3 +141,4 @@
 	sprite_decals = list("breastplate", "maidoutfit")
 	icon_x = 64
 	pixel_x = -16
+	hat_offset = DULLAHAN_TAUR_HAT_OFFSET

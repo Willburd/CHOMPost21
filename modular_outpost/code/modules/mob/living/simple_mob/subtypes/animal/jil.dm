@@ -62,8 +62,7 @@
 	melee_attack_delay = 0	// For some reason, having a delay makes item pick-up not work.
 
 /mob/living/simple_mob/vore/alienanimals/jil/jillilah
-	name = "jillilah"
-	real_name = "jillilah"
+	name = "\proper jillilah"
 	desc = "When you stare deep in her beady little eyes, you can feel an intense desire to declare independence..."
 	tt_desc = "Crinitus Latrunculus"
 
@@ -77,8 +76,7 @@
 	icon_rest = "jil_cargo_sleep"
 
 /mob/living/simple_mob/vore/alienanimals/jil/bean
-	name = "jilly-bean"
-	real_name = "jilly-bean"
+	name = "\proper jilly-bean"
 	desc = "They smell like diet cherry bepis..."
 	tt_desc = "Crinitus Latrunculus"
 
@@ -118,6 +116,10 @@
 	icon_splat = "jil_big_splat"
 	icon_rest = "jil_big_sleep"
 
+/mob/living/simple_mob/vore/alienanimals/jil/jillioth/Initialize(mapload)
+	. = ..()
+	status_flags &= !(CANSTUN|CANWEAKEN) // Jillioths laugh at your puny battons
+
 /mob/living/simple_mob/vore/alienanimals/jil/jillioth/jillord
 	name = "jillord"
 	real_name = "jillord"
@@ -133,10 +135,8 @@
 	melee_damage_upper = 40
 
 	voice_freq = 22500
-
-/mob/living/simple_mob/vore/alienanimals/jil/jillioth/jillord/Initialize(mapload)
-	. = ..()
-	resize(3, animate = FALSE, ignore_prefs = TRUE)
+	icon_scale_x = 3
+	icon_scale_y = 3
 
 /mob/living/simple_mob/vore/alienanimals/jil/Initialize(mapload)
 	. = ..()

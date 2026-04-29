@@ -1,14 +1,14 @@
 /datum/job/rd/New()
 	. = ..()
-	access -= list(ACCESS_ROBOTICS)
+	access -= list(ACCESS_ROBOTICS,ACCESS_AI_UPLOAD)
 	access |= list(ACCESS_MAINT_TUNNELS, ACCESS_CHANGE_IDS)
-	minimal_access -= list(ACCESS_ROBOTICS)
+	minimal_access -= list(ACCESS_ROBOTICS,ACCESS_AI_UPLOAD)
 	minimal_access |= list(ACCESS_MAINT_TUNNELS, ACCESS_CHANGE_IDS)
 
 
 /datum/job/scientist/New()
 	. = ..()
-	access -= list(ACCESS_ROBOTICS)
+	access -= list(ACCESS_ROBOTICS, ACCESS_ATMOSPHERICS)
 	alt_titles -= list(JOB_ALT_CIRCUIT_DESIGNER, JOB_ALT_CIRCUIT_PROGRAMMER)
 
 
@@ -19,8 +19,8 @@
 	supervisors = "the " + JOB_CHIEF_ENGINEER
 	selection_color = "#5B4D20"
 	pto_type = PTO_ENGINEERING
-	outfit_type = /decl/hierarchy/outfit/job/engineering/roboticist
-	access = list(ACCESS_ROBOTICS, ACCESS_EVA, ACCESS_ENGINE, ACCESS_ENGINE_EQUIP, ACCESS_TECH_STORAGE, ACCESS_MAINT_TUNNELS, ACCESS_EXTERNAL_AIRLOCKS, ACCESS_CONSTRUCTION, ACCESS_EXTERNAL_AIRLOCKS)
+	outfit_type = /datum/decl/hierarchy/outfit/job/engineering/roboticist
+	access = list(ACCESS_ROBOTICS, ACCESS_EVA, ACCESS_ENGINE, ACCESS_ENGINE_EQUIP, ACCESS_TECH_STORAGE, ACCESS_MAINT_TUNNELS, ACCESS_EXTERNAL_AIRLOCKS, ACCESS_CONSTRUCTION, ACCESS_EXTERNAL_AIRLOCKS, ACCESS_ATMOSPHERICS)
 	minimal_access = list(ACCESS_ROBOTICS, ACCESS_EVA, ACCESS_ENGINE, ACCESS_MAINT_TUNNELS, ACCESS_EMERGENCY_STORAGE, ACCESS_CONSTRUCTION, ACCESS_EXTERNAL_AIRLOCKS)
 	alt_titles = list(
 		JOB_ALT_ASSEMBLY_TECHNICIAN = /datum/alt_title/assembly_tech,
@@ -31,9 +31,17 @@
 		JOB_ALT_SOFTWARE_ENGINEER = /datum/alt_title/software_engi)
 
 
+/datum/job/xenobotanist
+	supervisors = "the " + JOB_QUARTERMASTER + " and " + JOB_RESEARCH_DIRECTOR
+	departments = list(DEPARTMENT_RESEARCH, DEPARTMENT_CIVILIAN)
+	outfit_type = /datum/decl/hierarchy/outfit/job/science/xenobotanist
+
 /datum/job/xenobotanist/New()
 	. = ..()
 	access -= list(ACCESS_ROBOTICS)
+	access |= list(ACCESS_HYDROPONICS, ACCESS_KITCHEN)
+	minimal_access -= list(ACCESS_ROBOTICS)
+	minimal_access |= list(ACCESS_HYDROPONICS, ACCESS_KITCHEN)
 
 
 // Alt titles

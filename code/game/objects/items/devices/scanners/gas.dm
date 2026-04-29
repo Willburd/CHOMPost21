@@ -12,10 +12,12 @@
 
 	matter = list(MAT_STEEL = 30,MAT_GLASS = 20)
 
-	origin_tech = list(TECH_MAGNET = 1, TECH_ENGINEERING = 1)
 
 	pickup_sound = 'sound/items/pickup/device.ogg'
 	drop_sound = 'sound/items/drop/device.ogg'
+
+	///Var for attack_self chain
+	var/special_handling = FALSE
 
 /obj/item/analyzer/atmosanalyze(var/mob/user)
 	var/air = user.return_air()
@@ -24,7 +26,12 @@
 
 	return atmosanalyzer_scan(src, air, user)
 
-/obj/item/analyzer/attack_self(mob/user as mob)
+/obj/item/analyzer/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
+	if(special_handling)
+		return FALSE
 	if (user.stat)
 		return
 	if (!user.IsAdvancedToolUser())

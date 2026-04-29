@@ -13,7 +13,6 @@ GLOBAL_LIST_BOILERPLATE(all_brain_organs, /obj/item/organ/internal/brain)
 	throwforce = 1.0
 	throw_speed = 3
 	throw_range = 5
-	origin_tech = list(TECH_BIO = 3)
 	attack_verb = list("attacked", "slapped", "whacked")
 	var/clone_source = FALSE
 	var/mob/living/carbon/brain/brainmob = null
@@ -283,6 +282,7 @@ GLOBAL_LIST_BOILERPLATE(all_brain_organs, /obj/item/organ/internal/brain)
 	H.adjustBruteLoss(40)
 	H.adjustFireLoss(40)
 	H.Paralyse(4)
+	H.Sleeping(4)
 	H.updatehealth()
 	for(var/obj/item/organ/external/E in H.organs) //They've still gotta congeal, but it's faster than the clone sickness they'd normally get.
 		if(E && E.organ_tag == BP_L_ARM || E.organ_tag == BP_R_ARM || E.organ_tag == BP_L_LEG || E.organ_tag == BP_R_LEG)
@@ -304,19 +304,19 @@ GLOBAL_LIST_BOILERPLATE(all_brain_organs, /obj/item/organ/internal/brain)
 	qdel(src)
 	return 1
 
-/decl/chemical_reaction/instant/promethean_brain_revival
+/datum/decl/chemical_reaction/instant/promethean_brain_revival
 	name = "Promethean Revival"
 	id = "prom_revival"
 	result = null
 	required_reagents = list(REAGENT_ID_PHORON = 40)
 	result_amount = 1
 
-/decl/chemical_reaction/instant/promethean_brain_revival/can_happen(var/datum/reagents/holder)
+/datum/decl/chemical_reaction/instant/promethean_brain_revival/can_happen(var/datum/reagents/holder)
 	if(holder.my_atom && istype(holder.my_atom, /obj/item/organ/internal/brain/slime))
 		return ..()
 	return FALSE
 
-/decl/chemical_reaction/instant/promethean_brain_revival/on_reaction(var/datum/reagents/holder)
+/datum/decl/chemical_reaction/instant/promethean_brain_revival/on_reaction(var/datum/reagents/holder)
 	var/obj/item/organ/internal/brain/slime/brain = holder.my_atom
 	if(brain.reviveBody())
 		brain.visible_message(span_notice("[brain] bubbles, surrounding itself with a rapidly expanding mass of slime!"))

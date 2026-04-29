@@ -174,6 +174,9 @@
 	attack_verb = list("nibbled", "bit", "gnawed", "chomped", "nommed")
 	var/emagged = 0
 /obj/item/melee/robotic/jaws/small/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	var/mob/living/silicon/robot/R = user
 	if(R.emagged || R.emag_items)
 		emagged = !emagged
@@ -242,7 +245,7 @@
 		return TRUE
 	return null
 
-/obj/item/melee/robotic/borg_combat_shocker/attack(mob/M, mob/user)
+/obj/item/melee/robotic/borg_combat_shocker/attack(mob/living/M, mob/living/user, target_zone, attack_modifier)
 	deductcharge(600)
 	return ..()
 
@@ -301,6 +304,9 @@
 	var/lcolor = "#38e541"
 
 /obj/item/melee/robotic/blade/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	if(active) //turning off
 		playsound(src, 'sound/weapons/saberoff.ogg', 50, 1)
 		force = 0
@@ -412,7 +418,6 @@
 	w_class = ITEMSIZE_NORMAL
 	drop_sound = 'sound/items/drop/metalweapon.ogg'
 	pickup_sound = 'sound/items/pickup/metalweapon.ogg'
-	origin_tech = list(TECH_COMBAT = 2)
 	attack_verb = list("beaten")
 	var/stunforce = 0
 	var/agonyforce = 60
@@ -440,6 +445,9 @@
 	return
 
 /obj/item/melee/robotic/baton/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	status = !status
 	to_chat(user, span_notice("[src] is now [status ? "on" : "off"]."))
 	playsound(src, "sparks", 75, 1, -1)
@@ -459,7 +467,7 @@
 		return TRUE
 	return null
 
-/obj/item/melee/robotic/baton/attack(mob/M, mob/user)
+/obj/item/melee/robotic/baton/attack(mob/living/M, mob/living/user, target_zone, attack_modifier)
 	if(status)
 		deductcharge(hitcost)
 	return ..()
@@ -535,7 +543,7 @@
 	hitcost = 48	//Less zap for less cost
 
 
-/obj/item/melee/robotic/baton/slime/attack(mob/living/L, mob/user, hit_zone)
+/obj/item/melee/robotic/baton/slime/attack(mob/living/L, mob/living/user, target_zone, attack_modifier)
 	if(!istype(L))
 		return ..()
 

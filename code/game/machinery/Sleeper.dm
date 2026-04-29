@@ -119,7 +119,6 @@
 	beaker = new /obj/item/reagent_containers/glass/beaker/large(src)
 	default_apply_parts()
 	update_icon()
-	AddComponent(/datum/component/hose_connector/output/medical_sleeper) // Outpost 21 edit(port) - Experimental sleepers with hose outputs
 
 /obj/machinery/sleeper/Destroy()
 	if(console)
@@ -429,6 +428,10 @@
 	go_out()
 
 /obj/machinery/sleeper/emp_act(severity, recursive)
+	. = ..()
+	if (. & EMP_PROTECT_SELF)
+		return
+
 	if(filtering)
 		toggle_filter()
 
@@ -442,7 +445,6 @@
 	if(occupant)
 		go_out()
 
-	..(severity, recursive)
 /obj/machinery/sleeper/proc/toggle_filter()
 	if(!occupant || !beaker)
 		filtering = 0

@@ -46,7 +46,7 @@
 /turf/simulated/floor/tiled/techmaint/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "fo" = (
-/obj/machinery/trailblazer/yellow,
+/obj/structure/trailblazer/yellow,
 /turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "fs" = (

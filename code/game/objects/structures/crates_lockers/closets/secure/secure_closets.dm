@@ -12,7 +12,7 @@
 	health = 200
 	anchored = 1 //CHOMPADD - Making them properly IMMOBILE. Like the Desc says? Yeah...
 
-	closet_appearance = /decl/closet_appearance/secure_closet
+	closet_appearance = /datum/decl/closet_appearance/secure_closet
 
 /obj/structure/closet/secure_closet/can_open()
 	if(locked)
@@ -20,6 +20,9 @@
 	return ..()
 
 /obj/structure/closet/secure_closet/emp_act(severity, recursive)
+	. = ..()
+	if (. & EMP_PROTECT_SELF)
+		return
 	if(!broken)
 		if(prob(50/severity))
 			locked = !locked
@@ -29,8 +32,7 @@
 				open()
 			else
 				req_access = list()
-				req_access += pick(get_all_station_access())
-	..()
+				req_access += pick(SSaccess.get_all_station_access())
 
 /obj/structure/closet/secure_closet/proc/togglelock(mob/user as mob)
 	if(opened)

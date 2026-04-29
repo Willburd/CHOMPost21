@@ -27,8 +27,12 @@
 	name = "engagement ring"
 	desc = "An engagement ring. It certainly looks expensive."
 	icon_state = "diamond"
+	special_handling = TRUE
 
 /obj/item/clothing/accessory/ring/engagement/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	user.visible_message(span_warning("\The [user] gets down on one knee, presenting \the [src]."),span_warning("You get down on one knee, presenting \the [src]."))
 
 /obj/item/clothing/accessory/ring/cti
@@ -47,7 +51,6 @@
 
 /obj/item/clothing/accessory/ring/reagent
 	flags = OPENCONTAINER
-	origin_tech = list(TECH_MATERIAL = 2, TECH_ILLEGAL = 4)
 
 /obj/item/clothing/accessory/ring/reagent/Initialize(mapload)
 	. = ..()
@@ -70,7 +73,6 @@
 	name = "silver ring"
 	desc = "A ring made from what appears to be silver."
 	icon_state = "material"
-	origin_tech = list(TECH_MATERIAL = 2, TECH_ILLEGAL = 5)
 
 /obj/item/clothing/accessory/ring/reagent/sleepy/Initialize(mapload)
 	. = ..()
@@ -97,8 +99,12 @@
 	desc = "A signet ring, for when you're too sophisticated to sign letters."
 	icon_state = "seal-signet"
 	var/nameset = FALSE
+	special_handling = TRUE
 
 /obj/item/clothing/accessory/ring/seal/signet/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	if(nameset)
 		to_chat(user, span_notice("The [src] has already been claimed!"))
 		return
@@ -118,8 +124,12 @@
 	icon_state = "wedring_g"
 	item_state = "wedring_g"
 	var/partnername = ""
+	special_handling = TRUE
 
 /obj/item/clothing/accessory/ring/wedding/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	var/input = tgui_input_text(user, "Would you like to change the holoengraving on the ring?", "Name your spouse", "Bae", MAX_NAME_LEN)
 	if(!input)
 		return

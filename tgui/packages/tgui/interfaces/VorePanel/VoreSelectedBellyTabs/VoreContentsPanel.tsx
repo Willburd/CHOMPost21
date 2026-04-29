@@ -15,11 +15,14 @@ import type { BooleanLike } from 'tgui-core/react';
 import { createSearch } from 'tgui-core/string';
 import { stats } from '../constants';
 import { ourTypeToOptions } from '../functions';
-import type { contentData, DropdownEntry } from '../types';
+import type { ContentData, DropdownEntry, IntentData } from '../types';
+import { VoreContentIntent } from './ContentTab/VoreContentIntent';
 
 export const VoreContentsPanel = (props: {
-  contents?: contentData[] | null;
+  contents?: ContentData[] | null;
+  intent_data?: IntentData | null;
   targetBelly?: string;
+  allow_absorbed_devour?: BooleanLike;
   onTargetBely?: React.Dispatch<React.SetStateAction<string>>;
   bellyDropdownNames?: DropdownEntry[];
   belly?: string;
@@ -28,11 +31,12 @@ export const VoreContentsPanel = (props: {
   icon_overflow: BooleanLike;
 }) => {
   const { act } = useBackend();
-  const [selectedAtom, setSelectedAtom] = useState<contentData | null>(null);
+  const [selectedAtom, setSelectedAtom] = useState<ContentData | null>(null);
   const [contentSearchText, setContentSearchText] = useState<string>('');
 
   const {
     contents = [],
+    intent_data,
     targetBelly = '',
     onTargetBely,
     bellyDropdownNames,
@@ -52,23 +56,13 @@ export const VoreContentsPanel = (props: {
   }, [contents]);
 
   function bellyValueToName(value: string) {
-    const bellyName = bellyDropdownNames
-      ?.map((entry) => {
-        if (entry.value === value) {
-          return entry.displayText;
-        }
-        return undefined;
-      })
-      .filter((value) => value !== undefined);
-    if (Array.isArray(bellyName) && bellyName.length) {
-      return bellyName[0];
-    }
-    return '';
+    const entry = bellyDropdownNames?.find((entry) => entry.value === value);
+    return entry ? entry.displayText : '';
   }
 
-  const contentSearch = createSearch(
+  const contentSearch = createSearch<ContentData>(
     contentSearchText,
-    (content: contentData) => content.name,
+    (content) => content.name,
   );
   const displayedContents = contents?.filter(contentSearch);
 
@@ -78,6 +72,7 @@ export const VoreContentsPanel = (props: {
       title="Contents"
       buttons={
         <Stack>
+          {!!intent_data && <VoreContentIntent intent_data={intent_data} />}
           <Stack.Item>
             <Input
               width="200px"

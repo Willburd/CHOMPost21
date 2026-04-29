@@ -84,10 +84,12 @@
 			grid[x][y] = canvas_color
 
 /obj/item/canvas/attack_self(mob/user)
-	. = ..()
+	. = ..(user)
+	if(.)
+		return TRUE
 	tgui_interact(user)
 
-/obj/item/canvas/dropped(mob/user)
+/obj/item/canvas/dropped(mob/user, equipping, slot)
 	pixel_x = initial(pixel_x)
 	pixel_y = initial(pixel_y)
 	return ..()

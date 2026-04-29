@@ -3,7 +3,7 @@
 
 /datum/event/security_drill/announce()
 	if(GLOB.security_level != SEC_LEVEL_GREEN) // If during peace
-		command_announcement.Announce("A command issued drill scheduled at this hour has been cancelled due to a heightened alert level on station.", "Security Advisement")
+		GLOB.command_announcement.Announce("A command issued drill scheduled at this hour has been cancelled due to a heightened alert level on station.", "Security Advisement", new_sound = ANNOUNCER_MSG_SECURITY_ADVISEMENT)
 		return
 
 	// Basic security drill
@@ -83,5 +83,5 @@
 					)
 	str += " Ensure to thoroughly interview the suspect about their activities and whereabouts over the past 48 hours, and fax a report containing interview contents and all identified contraband on their person, before releasing them if no offences were noted."
 
-	GLOB.global_announcer.autosay(str, "Security Advisement", "Command")
-	GLOB.global_announcer.autosay(str, "Security Advisement", "Security")
+	GLOB.global_announcer.autosay(str, "Security Advisement", CHANNEL_COMMAND)
+	GLOB.global_announcer.autosay(str, "Security Advisement", CHANNEL_SECURITY)

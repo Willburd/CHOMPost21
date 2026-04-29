@@ -164,7 +164,7 @@ GLOBAL_LIST_BOILERPLATE(all_tracking_implants, /obj/item/implant/tracking)
 				malfunction = MALFUNCTION_PERMANENT
 				STOP_PROCESSING(SSobj, src)
 		// Outpost 21 edit begin - Tracking implant notifications
-		else
+		else if(!is_vore_jammed(src))
 			var/area/A = get_area(implant_mob)
 			if(A && is_type_in_list(A,forbidden_areas))
 				if(!in_secure_area)
@@ -193,7 +193,8 @@ Implant Specifics:<BR>"}
 	return dat
 
 /obj/item/implant/tracking/emp_act(severity, recursive)
-	if (malfunction)	//no, dawg, you can't malfunction while you are malfunctioning
+	. = ..()
+	if (. & EMP_PROTECT_SELF || malfunction) //no, dawg, you can't malfunction while you are malfunctioning
 		return
 	malfunction = MALFUNCTION_TEMPORARY
 
@@ -339,7 +340,8 @@ Implant Specifics:<BR>"}
 	to_chat(usr, "The implanted explosive implant in [source] can be activated by saying something containing the phrase ''[src.phrase]'', <B>say [src.phrase]</B> to attempt to activate.")
 
 /obj/item/implant/explosive/emp_act(severity, recursive)
-	if (malfunction)
+	. = ..()
+	if (. & EMP_PROTECT_SELF || malfunction)
 		return
 	malfunction = MALFUNCTION_TEMPORARY
 	switch (severity)
@@ -443,7 +445,8 @@ the implant may become unstable and either pre-maturely inject the subject or si
 	return
 
 /obj/item/implant/chem/emp_act(severity, recursive)
-	if (malfunction)
+	. = ..()
+	if (. & EMP_PROTECT_SELF || malfunction)
 		return
 	malfunction = MALFUNCTION_TEMPORARY
 
@@ -490,14 +493,14 @@ the implant may become unstable and either pre-maturely inject the subject or si
 	if(!ishuman(M))
 		. = FALSE
 	var/mob/living/carbon/human/H = M
-	var/datum/antagonist/antag_data = get_antag_data(H.mind.special_role)
+	var/datum/antagonist/antag_data = SSantag_job.get_antag_data(H.mind.special_role)
 	if(antag_data && (antag_data.flags & ANTAG_IMPLANT_IMMUNE))
 		H.visible_message("[H] seems to resist the implant!", "You feel the corporate tendrils of [using_map.company_name] try to invade your mind!")
 		. = FALSE
 
 /obj/item/implant/loyalty/post_implant(mob/M)
 	var/mob/living/carbon/human/H = M
-	clear_antag_roles(H.mind, 1)
+	SSantag_job.clear_antag_roles(H.mind, 1)
 	to_chat(H, span_notice("You feel a surge of loyalty towards [using_map.company_name]."))
 
 //////////////////////////////
@@ -543,7 +546,6 @@ the implant may become unstable and either pre-maturely inject the subject or si
 /obj/item/implant/death_alarm
 	name = "death alarm implant"
 	desc = "An alarm which monitors host vital signs and transmits a radio message upon death."
-	origin_tech = list(TECH_MATERIAL = 1, TECH_BIO = 2, TECH_DATA = 1)
 	known_implant = TRUE
 	var/mobname = "Will Robinson"
 
@@ -560,6 +562,10 @@ the implant may become unstable and either pre-maturely inject the subject or si
 "} + span_bold("Integrity:") + {"Implant will occasionally be degraded by the body's immune system and thus will occasionally malfunction."}
 	return dat
 
+/obj/item/implant/death_alarm/Destroy()
+	STOP_PROCESSING(SSobj, src)
+	. = ..()
+
 /obj/item/implant/death_alarm/process()
 	if (!implanted) return
 	var/mob/M = imp_in
@@ -572,6 +578,9 @@ the implant may become unstable and either pre-maturely inject the subject or si
 /obj/item/implant/death_alarm/activate(var/cause)
 	var/mob/M = imp_in
 	var/area/t = get_area(M)
+	if(!t) // Failsafe
+		STOP_PROCESSING(SSobj, src)
+		return
 	switch (cause)
 		if("death")
 			var/obj/item/radio/headset/a = new /obj/item/radio/headset/heads/captain(null)
@@ -602,7 +611,8 @@ the implant may become unstable and either pre-maturely inject the subject or si
 			STOP_PROCESSING(SSobj, src)
 
 /obj/item/implant/death_alarm/emp_act(severity, recursive)			//for some reason alarms stop going off in case they are emp'd, even without this
-	if (malfunction)		//so I'm just going to add a meltdown chance here
+	. = ..()
+	if (. & EMP_PROTECT_SELF || malfunction) //so I'm just going to add a meltdown chance here
 		return
 	malfunction = MALFUNCTION_TEMPORARY
 	if(prob(40)) //CHOMPEDIT: Make the malfunction a probability because annoying
@@ -630,7 +640,6 @@ the implant may become unstable and either pre-maturely inject the subject or si
 	icon_state = "implant_evil"
 	var/activation_emote = "sigh"
 	var/obj/item/scanned = null
-	origin_tech = list(TECH_MATERIAL = 4, TECH_BIO = 2, TECH_ILLEGAL = 2)
 
 /obj/item/implant/compressed/get_data()
 	var/dat = {"

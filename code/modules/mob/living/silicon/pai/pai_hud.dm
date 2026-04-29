@@ -1,6 +1,3 @@
-/mob/living/silicon/pai
-	var/atom/movable/screen/pai/pai_fold_display = null
-
 /atom/movable/screen/pai
 	icon = 'icons/mob/pai_hud.dmi'
 	var/base_state
@@ -231,6 +228,7 @@
 	using.alpha = ui_alpha
 	hud_elements |= using
 
+/* Outpost 21 edit - Communicator removal
 	//Communicator button
 	using = new /atom/movable/screen/pai()
 	using.name = "communicator"
@@ -239,6 +237,7 @@
 	using.color = ui_color
 	using.alpha = ui_alpha
 	hud_elements |= using
+*/
 
 	//Language button
 	using = new /atom/movable/screen/pai()
@@ -404,7 +403,7 @@
 	if(!. || !healths)
 		return
 
-	if(stat == DEAD)
+	if(stat == DEAD || (status_flags & FAKEDEATH))
 		healths.icon_state = "health7"
 		return
 

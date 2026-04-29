@@ -69,7 +69,7 @@
 #define DET_AUTO		0x04
 
 //Returns a newline-separated list that counts equal-ish items, outputting count and item names, optionally with icons and specific determiners
-/proc/counting_english_list(var/list/input, var/mob/user, output_icons = TRUE, determiners = DET_NONE, nothing_text = "nothing", line_prefix = "\t", first_item_prefix = "\n", last_item_suffix = "\n", and_text = "\n", comma_text = "\n", final_comma_text = ",") //CHOMPEdit
+/proc/counting_english_list(client/viewer, var/list/input, output_icons = TRUE, determiners = DET_NONE, nothing_text = "nothing", line_prefix = "\t", first_item_prefix = "\n", last_item_suffix = "\n", and_text = "\n", comma_text = "\n", final_comma_text = ",")
 	var/list/counts = list() // counted input items
 	var/list/items = list() // actual objects for later reference (for icons and formatting)
 
@@ -96,7 +96,7 @@
 			// atoms/items/objects can be pretty and whatnot
 			var/atom/A = item
 			if(output_icons && isicon(A.icon) && !ismob(A)) // mobs tend to have unusable icons
-				item_str += "[icon2html(A,user)]&nbsp;" //CHOMPEdit
+				item_str += "[icon2html(A, viewer)]&nbsp;"
 			switch(determiners)
 				if(DET_NONE) item_str += A.name
 				if(DET_DEFINITE) item_str += "\the [A]"
@@ -118,8 +118,8 @@
 	return english_list(out, nothing_text, and_text, comma_text, final_comma_text)
 
 //A "preset" for counting_english_list that displays the list "inline" (comma separated)
-/proc/inline_counting_english_list(var/list/input, output_icons = TRUE, determiners = DET_NONE, nothing_text = "nothing", and_text = " and ", comma_text = ", ", final_comma_text = "", line_prefix = "", first_item_prefix = "", last_item_suffix = "")
-	return counting_english_list(input, output_icons, determiners, nothing_text, and_text, comma_text, final_comma_text)
+/proc/inline_counting_english_list(client/viewer, var/list/input, output_icons = TRUE, determiners = DET_NONE, nothing_text = "nothing", and_text = " and ", comma_text = ", ", final_comma_text = "", line_prefix = "", first_item_prefix = "", last_item_suffix = "")
+	return counting_english_list(viewer, input, output_icons, determiners, nothing_text, and_text, comma_text, final_comma_text)
 
 //Returns list element or null. Should prevent "index out of bounds" error.
 /proc/listgetindex(var/list/list,index)
@@ -151,9 +151,17 @@
 	return 0
 
 //Checks for specific paths in a list
-/proc/is_path_in_list(var/atom/A, var/list/L)
+/**
+ * Arguments:
+ * A : Typepath to check
+ * L : A list of typepath to check A against
+ * zebra: Wether to use the value of the path in the list instead of just returning TRUE when a match is found
+ */
+/proc/is_path_in_list(var/atom/A, var/list/L, zebra = FALSE)
 	for(var/path in L)
 		if(ispath(A, path))
+			if(ispath(A, path))
+				return !zebra || L[path]
 			return 1
 	return 0
 
@@ -336,14 +344,6 @@ Checks if a list has the same entries and values as an element of big.
 /*
  * Sorting
  */
-
-//Reverses the order of items in the list
-/proc/reverselist(list/L)
-	var/list/output = list()
-	if(L)
-		for(var/i = L.len; i >= 1; i--)
-			output += L[i]
-	return output
 
 //Randomize: Return the list in a random order
 /proc/shuffle(var/list/L)
@@ -600,7 +600,7 @@ Checks if a list has the same entries and values as an element of big.
 	//to_world_log("descending len input: [L.len]")
 	var/list/out = insertion_sort_numeric_list_ascending(L)
 	//to_world_log("	output: [out.len]")
-	return reverselist(out)
+	return reverseList(out)
 
 /proc/dd_sortedObjectList(var/list/L, var/cache=list())
 	if(L.len < 2)
@@ -1066,7 +1066,6 @@ GLOBAL_LIST_EMPTY(json_cache)
 		retval += to_flatten[i]
 	return retval
 
-//CHOMPAdd start
 /proc/pick_weight(list/list_to_pick)
 	var/total = 0
 	var/item
@@ -1082,22 +1081,3 @@ GLOBAL_LIST_EMPTY(json_cache)
 			return item
 
 	return null
-
-///Converts a bitfield to a list of numbers (or words if a wordlist is provided)
-/proc/bitfield_to_list(bitfield = 0, list/wordlist)
-	var/list/return_list = list()
-	if(islist(wordlist))
-		var/max = min(wordlist.len, 24)
-		var/bit = 1
-		for(var/i in 1 to max)
-			if(bitfield & bit)
-				return_list += wordlist[i]
-			bit = bit << 1
-	else
-		for(var/bit_number = 0 to 23)
-			var/bit = 1 << bit_number
-			if(bitfield & bit)
-				return_list += bit
-
-	return return_list
-//CHOMPAdd end

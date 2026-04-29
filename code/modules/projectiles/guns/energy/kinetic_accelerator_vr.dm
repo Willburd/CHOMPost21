@@ -180,7 +180,7 @@
 	if(power_supply.charge < charge_cost)
 		attempt_reload()
 
-/obj/item/gun/energy/kinetic_accelerator/dropped(mob/user)
+/obj/item/gun/energy/kinetic_accelerator/dropped(mob/user, equipping, slot)
 	. = ..()
 	if(!QDELING(src) && !holds_charge)
 		// Put it on a delay because moving item from slot to hand
@@ -210,9 +210,6 @@
 
 	deltimer(recharge_timerid)
 	recharge_timerid = addtimer(CALLBACK(src, PROC_REF(reload)), recharge_time * carried, TIMER_STOPPABLE)
-
-/obj/item/gun/energy/kinetic_accelerator/emp_act(severity, recursive)
-	return
 
 /obj/item/gun/energy/kinetic_accelerator/proc/reload()
 	power_supply.give(power_supply.maxcharge)
@@ -343,6 +340,14 @@
 	if(ismineralturf(target_turf))
 		var/turf/simulated/mineral/M = target_turf
 		M.GetDrilled(TRUE)
+	// Outpost 21 edit begin - Flesh rework
+	if(istype(target_turf, /turf/simulated/flesh))
+		var/turf/simulated/flesh/meat_wall = target_turf
+		meat_wall.beat_the_meat(70)
+	if(istype(target_turf, /turf/simulated/floor/flesh))
+		var/turf/simulated/floor/flesh/meat_floor = target_turf
+		meat_floor.destroy_meat()
+	// Outpost 21 edit end
 	var/obj/effect/temp_visual/kinetic_blast/K = new /obj/effect/temp_visual/kinetic_blast(target_turf)
 	K.color = color
 
@@ -727,6 +732,9 @@
 	desc = "Causes kinetic accelerator bolts to have an adjustable-colored tracer trail and explosion. Use in-hand to change color."
 
 /obj/item/borg/upgrade/modkit/tracer/adjustable/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	bolt_color = tgui_color_picker(user,"","Choose Color",bolt_color)
 
 #undef KA_ENVIRO_TYPE_COLD

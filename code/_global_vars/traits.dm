@@ -96,6 +96,11 @@ GLOBAL_LIST_INIT(traits_by_type, list(
 		"TRAIT_UNSTABLE" = TRAIT_UNSTABLE,
 		"TRAIT_OIL_FRIED" = TRAIT_OIL_FRIED
 		*/
+		// Outpost 21 edit begin - Custom traits
+		"TRAIT_GOLDDIGGER" = TRAIT_GOLDDIGGER,
+		"TRAIT_MUTATIONCASCADE" = TRAIT_MUTATIONCASCADE,
+		"TRAIT_NATURALTUNNELER" = TRAIT_NATURALTUNNELER,
+		// Outpost 21 edit end
 	),
 	/*
 	/obj/item/bodypart = list(

@@ -292,12 +292,12 @@
 
 /datum/station_haunt/trip_apc/fire()
 	var/area/targ_area = SShaunting.get_haunt_area()
-	if(targ_area)
-		if(targ_area.apc)
-			targ_area.apc.locked = FALSE
-			targ_area.apc.toggle_breaker()
-			targ_area.apc.visible_message("clicks","clicks")
-			SSmotiontracker.ping(targ_area.apc,100)
+	var/obj/machinery/power/apc/check_apc = targ_area?.get_apc()
+	if(check_apc)
+		check_apc.locked = FALSE
+		check_apc.toggle_breaker()
+		check_apc.visible_message("clicks","clicks")
+		SSmotiontracker.ping(check_apc,100)
 	end()
 
 
@@ -410,7 +410,7 @@
 		var/yy = rand(5,10) * (prob(50) ? 1 : -1)
 		var/turf/T = locate(goal_turf.x + xx,goal_turf.y + yy,goal_turf.z)
 		if(T)
-			var/screm = pick(list('sound/voice/shriek1.ogg','sound/voice/teshscream.ogg','sound/voice/malescream_2.ogg','sound/hallucinations/far_noise.ogg'))
+			var/screm = pick(list('modular_outpost/sound/voice/shriek1.ogg','sound/voice/teshscream.ogg','sound/voice/malescream_2.ogg','sound/hallucinations/far_noise.ogg'))
 			M.playsound_local(T, screm, 40)
 	end()
 
@@ -481,6 +481,39 @@
 	end()
 
 
+// open deck hatch
+/datum/station_haunt/deck_hatch_open
+	name = "Deck hatch open"
+
+/datum/station_haunt/deck_hatch_open/fire()
+	var/mob/M = SShaunting.get_player_target()
+	if(M)
+		var/turf/T = get_turf(M)
+		var/obj/structure/ladder/top_hatch/hatch = locate() in orange(8,T)
+		if(hatch)
+			hatch.open_hatch()
+	end()
+
+
+// open deck hatch CLOWN!
+/datum/station_haunt/deck_hatch_clown
+	name = "Deck hatch clown"
+
+/datum/station_haunt/deck_hatch_clown/fire()
+	var/mob/M = SShaunting.get_player_target()
+	if(M)
+		var/turf/T = get_turf(M)
+		var/obj/structure/ladder/top_hatch/hatch = locate() in orange(8,T)
+		if(hatch)
+			hatch.open_hatch()
+			if(!M.away_from_keyboard) // Lets not be an asshole
+				hatch.audible_message(span_notice("You hear something coming up \the [hatch]"), runemessage = "clank clank")
+				var/turf/spawn_at = get_turf(hatch)
+				spawn(2 SECONDS)
+					new /mob/living/simple_mob/clowns/big/normal(spawn_at)
+	end()
+
+
 // heavy breathing, quiet
 /datum/station_haunt/heavy_breath
 	name = "Heavy Breathing"
@@ -495,6 +528,23 @@
 		if(T)
 			var/screm = pick(list('sound/goonstation/spooky/Meatzone_BreathingSlow.ogg','sound/goonstation/spooky/Meatzone_BreathingFast.ogg'))
 			M.playsound_local(T, screm, 65)
+	end()
+
+
+// terraformer song
+/datum/station_haunt/terraformer_song
+	name = "Terraformer Song"
+
+/datum/station_haunt/terraformer_song/fire()
+	var/mob/M = SShaunting.get_player_target()
+	if(M && !issilicon(M))
+		var/turf/goal_turf = get_turf(M)
+		var/xx = rand(5,10) * (prob(50) ? 1 : -1)
+		var/yy = rand(5,10) * (prob(50) ? 1 : -1)
+		var/turf/T = locate(goal_turf.x + xx,goal_turf.y + yy,goal_turf.z)
+		if(T)
+			M.playsound_local(T, 'sound/goonstation/spooky/Void_Song.ogg', 75)
+			to_chat(M, span_alien("You hear a low feminine voice echoing in your mind. Humming an alien lullaby that fills you with a sense of peace; like a mother reassuring her child. You can't make out any words or meaning in the hymn, just the understanding of peace, and protection..."))
 	end()
 
 
@@ -770,6 +820,22 @@
 	qdel(ghost)
 	. = ..()
 
+// turn off tcomms
+/datum/station_haunt/tcomms_sabotage
+	name = "Tcomms Sabotage"
+
+/datum/station_haunt/tcomms_sabotage/fire()
+	for(var/obj/machinery/power/apc/A in GLOB.apcs)
+		if(istype(A.area, /area/comms))
+			A.locked = FALSE
+			A.toggle_breaker()
+			A.visible_message("clicks","clicks")
+			SSmotiontracker.ping(A,100)
+			SShaunting.reduce_world_haunt() // Cause this is pretty annoying
+		end()
+		return
+	end()
+
 //////////////////////////////////////////////////////////////////////////////////////
 // HAUNTING ENITIES, Things that go bump in the night!
 //////////////////////////////////////////////////////////////////////////////////////
@@ -785,6 +851,10 @@
 		return
 	var/ent = pick(ent_list)
 	entity = WEAKREF(new ent())
+
+/datum/station_haunt/entity_spawn/Destroy(force)
+	entity = null
+	. = ..()
 
 /datum/station_haunt/entity_spawn/fire()
 	if(entity?.resolve()) // Still active
@@ -832,6 +902,7 @@
 	message_admins("Haunting Entity: [name]")
 
 /datum/haunting_entity/Destroy(force)
+	target_mob = null
 	STOP_PROCESSING(SSfastprocess, src)
 	. = ..()
 

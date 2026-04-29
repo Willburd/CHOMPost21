@@ -1,8 +1,9 @@
 /datum/asset/simple/generic
 	assets = list(
 		"loading.gif" = 'html/images/loading.gif',
-		"eslogo.png" = 'html/images/eslogo.png', // Outpost 21 edit - Missing asset
+		"eslogo.png" = 'html/images/outpost/eslogo.png', // Outpost 21 edit - Missing asset
 		"ntlogo.png" = 'html/images/ntlogo.png',
+		"talonlogo.png" = 'html/images/talonlogo.png',
 		"sglogo.png" = 'html/images/sglogo.png',
 		"talisman.png" = 'html/images/talisman.png',
 		"paper_bg.png" = 'html/images/paper_bg.png',

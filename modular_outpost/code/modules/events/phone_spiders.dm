@@ -1,5 +1,3 @@
-/var/global/list/phones_on_station = list()
-
 /datum/event/phone_spiders
 	announceWhen	= 90
 	var/spawncount = 1
@@ -9,11 +7,11 @@
 	spawncount = rand(20, 32)
 
 /datum/event/phone_spiders/announce()
-	command_announcement.Announce("Anti-spam counter-measures have been redirected toward station communication systems.", "Firewall Notice")
+	GLOB.command_announcement.Announce("Anti-spam counter-measures have been redirected toward station communication systems.", "Firewall Notice")
 
 /datum/event/phone_spiders/start()
-	while((spawncount >= 1) && phones_on_station.len)
-		var/obj/phone = pick(phones_on_station)
+	while((spawncount >= 1) && GLOB.phones_on_station.len)
+		var/obj/phone = pick(GLOB.phones_on_station)
 		var/sub = rand(5,8)
 		var/first = TRUE
 		while(sub >= 1)

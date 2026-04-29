@@ -4,8 +4,7 @@
 	icon_state = "gen"
 	base_icon = "gen"
 
-/obj/structure/confinement_beam_generator/gen/pulse(var/datum/weakref/WF)
-	var/datum/confinement_pulse_data/data = WF?.resolve()
+/obj/structure/confinement_beam_generator/gen/pulse(datum/confinement_pulse_data/data)
 	if(!data)
 		return
 	if(data.dir != dir) // must be facing same direction as incoming direction
@@ -22,7 +21,7 @@
 	data.power_level = total_power
 	var/obj/structure/confinement_beam_generator/focus/F = locate() in get_step(src,data.dir)
 	if(F && F.is_valid_state())
-		F.pulse(WF)
+		F.pulse(data)
 	else
 		fire_narrow_beam(data)
 

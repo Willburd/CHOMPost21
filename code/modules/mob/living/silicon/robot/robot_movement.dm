@@ -10,6 +10,11 @@
 	if(..())//Can move due to other reasons, don't use jetpack fuel
 		return 1
 
+	// Outpost 21 edit begin - Robots inherently have magboots
+	if(!istype(get_turf(src), /turf/space))
+		return TRUE
+	// Outpost 21 edit end
+
 	var/obj/item/tank/jetpack/thrust = get_jetpack()
 	if(thrust && (!check_drift || (check_drift && thrust.stabilization_on)) && thrust.do_thrust(0.01))
 		inertia_dir = 0
@@ -45,19 +50,6 @@
 
 	if(!module)
 		return
-
-	//Borgs and drones can use their mining bags ~automagically~ if they're deployed in a slot. Only mining bags, as they're optimized for mass use.
-	if(istype(module_state_1, /obj/item/storage/bag/ore) || istype(module_state_2, /obj/item/storage/bag/ore) || istype(module_state_3, /obj/item/storage/bag/ore))
-		var/obj/item/storage/bag/ore/B = null
-		if(istype(module_state_1, /obj/item/storage/bag/ore)) //First orebag has priority, if they for some reason have multiple.
-			B = module_state_1
-		else if(istype(module_state_2, /obj/item/storage/bag/ore))
-			B = module_state_2
-		else if(istype(module_state_3, /obj/item/storage/bag/ore))
-			B = module_state_3
-		var/turf/tile = loc
-		if(isturf(tile))
-			B.gather_all(tile, src, 1) //Shhh, unless the bag fills, don't spam the borg's chat with stuff that's going on every time they move!
 
 	if(scrubbing && isturf(loc))
 		var/turf/tile = loc

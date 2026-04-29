@@ -14,13 +14,20 @@
 	revive_text = rev_text
 	revive_chance = rev_chance
 	health_percent_revive_at = rev_hppercent
-	RegisterSignal(host, COMSIG_MOB_DEATH, PROC_REF(on_mob_death))
 
 /datum/component/undead_revival/Destroy(force = FALSE)
-	UnregisterSignal(host, COMSIG_MOB_DEATH)
-	host = null
 	. = ..()
+	host = null
 
+/datum/component/undead_revival/RegisterWithParent()
+	RegisterSignal(parent, COMSIG_MOB_DEATH, PROC_REF(on_mob_death))
+
+/datum/component/undead_revival/UnregisterFromParent()
+	UnregisterSignal(parent, COMSIG_MOB_DEATH)
+
+
+// Signal handlers
+//////////////////////////////////////////////////////////////////////////////////////////////////////
 /datum/component/undead_revival/proc/on_mob_death(datum/source, gibbed)
 	SIGNAL_HANDLER
 	if(gibbed) // No need to bother

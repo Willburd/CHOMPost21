@@ -5,7 +5,6 @@
 	icon = 'icons/obj/device_alt.dmi'
 	icon_state = "hand_tele"
 	w_class = ITEMSIZE_SMALL
-	origin_tech = list(TECH_MAGNET = 5, TECH_BLUESPACE = 5, TECH_ILLEGAL = 7)
 
 	var/cell_type = /obj/item/cell/device/weapon
 	var/obj/item/cell/power_source
@@ -33,6 +32,9 @@
 
 	pickup_sound = 'sound/items/pickup/device.ogg'
 	drop_sound = 'sound/items/drop/device.ogg'
+
+	///Var for attack_self chain
+	var/special_handling = FALSE
 
 /obj/item/perfect_tele/Initialize(mapload)
 	. = ..()
@@ -114,7 +116,12 @@
 		return FALSE
 	return TRUE
 
-/obj/item/perfect_tele/attack_self(mob/user, var/radial_menu_anchor = src)
+/obj/item/perfect_tele/attack_self(mob/user, list/modifiers, var/radial_menu_anchor = src)
+	. = ..(user)
+	if(.)
+		return TRUE
+	if(special_handling)
+		return FALSE
 	if(loc_network)
 		for(var/obj/item/perfect_tele_beacon/stationary/nb in GLOB.premade_tele_beacons)
 			if(nb.tele_network == loc_network)
@@ -277,31 +284,39 @@ This device records all warnings given and teleport events for admin review in c
 			for(var/rider in L.buckled_mobs)
 				R.force_dismount(rider)
 
-	//Failure chance
-	if (!ignore_fail_chance)
-		if(prob(failure_chance) && beacons.len >= 2)
-			var/list/wrong_choices = beacons - destination.tele_name
-			var/wrong_name = pick(wrong_choices)
-			destination = beacons[wrong_name]
-			to_chat(user,span_warning("\The [src] malfunctions and sends you to the wrong beacon!"))
-
 	// Outpost 21 edit begin - Teleport redspace chance
-	else if(prob(1))
+	var/atom/movable/dest_beacon = destination
+	var/area/current_area = get_area(target)
+	var/chance = 1
+	if(current_area?.haunted)
+		chance = 10
+	if(prob(chance) || istype(current_area,/area/specialty/redspace))
 		var/list/redlist = list()
 		for(var/obj/effect/landmark/R in GLOB.landmarks_list)
 			if(R.name == "redentrance")
 				redlist += R
 		if(redlist.len > 0)
 			// if teleport worked, drop out... otherwise just teleport normally, it means there was no redspace spawns!
-			destination = pick(redlist)
+			dest_beacon = pick(redlist)
 			to_chat(user,span_danger("Something feels wrong..."))
+	//Failure chance
+	else if (!ignore_fail_chance)
+	// Outpost 21 edit end
+		if(prob(failure_chance) && beacons.len >= 2)
+			var/list/wrong_choices = beacons - destination.tele_name
+			var/wrong_name = pick(wrong_choices)
+			dest_beacon = beacons[wrong_name]
+			to_chat(user,span_warning("\The [src] malfunctions and sends you to the wrong beacon!"))
+
+	// Outpost 21 edit begin - Swap beacon with teleporter now
+	var/atom/movable/before_teleport_loc = get_turf(src)
 	// Outpost 21 edit end
 
 	//Destination beacon vore checking
-	var/turf/dT = get_turf(destination)
+	var/turf/dT = get_turf(dest_beacon) // Outpost 21 edit - Teleport redspace chance
 	var/atom/real_dest = dT
 
-	var/atom/real_loc = destination.loc
+	var/atom/real_loc = dest_beacon.loc // Outpost 21 edit - Teleport redspace chance
 	if(isbelly(real_loc))
 		real_dest = real_loc
 	if(isliving(real_loc))
@@ -346,6 +361,11 @@ This device records all warnings given and teleport events for admin review in c
 
 			//Phase-in effect for grabbed person
 			phase_in(G.affecting,get_turf(G.affecting))
+
+	// Outpost 21 edit begin - Swap beacon with teleporter now
+	if(istype(dest_beacon, /obj/item/perfect_tele_beacon) && !dest_beacon.anchored)
+		dest_beacon.forceMove(before_teleport_loc)
+	// Outpost 21 edit end
 
 	update_icon()
 	spawn(30 SECONDS)
@@ -417,6 +437,9 @@ not carry this around."}, "OOC Warning", list("Take It","Leave It"))
 GLOBAL_LIST_BOILERPLATE(premade_tele_beacons, /obj/item/perfect_tele_beacon/stationary)
 
 /obj/item/perfect_tele_beacon/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	if(!isliving(user))
 		return
 	var/mob/living/L = user
@@ -437,7 +460,6 @@ GLOBAL_LIST_BOILERPLATE(premade_tele_beacons, /obj/item/perfect_tele_beacon/stat
 	icon_state = "minitrans"
 	beacons_left = 1 //Just one
 	cell_type = /obj/item/cell/device
-	origin_tech = list(TECH_MAGNET = 5, TECH_BLUESPACE = 5)
 
 /*
 /obj/item/perfect_tele/one_beacon/teleport_checks(mob/living/target,mob/living/user)

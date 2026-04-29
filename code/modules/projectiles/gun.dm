@@ -46,7 +46,6 @@
 	throw_range = 5
 	force = 5
 	preserve_item = 1
-	origin_tech = list(TECH_COMBAT = 1)
 	attack_verb = list("struck", "hit", "bashed")
 	zoomdevicename = "scope"
 	drop_sound = 'sound/items/drop/gun.ogg'
@@ -97,7 +96,6 @@
 	var/recoil_mode = 1			//If the gun will hurt micros if shot or not. Disabled on Virgo, used downstream. //CHOMPEDIT - Enabled
 	var/mounted_gun = 0				//If the gun is mounted within a rigsuit or elsewhere. This makes it so the gun can be shot even if it's loc != a mob
 
-//VOREStation Add - /tg/ icon system
 	var/charge_sections = 4
 	var/shaded_charge = FALSE
 	var/ammo_x_offset = 2
@@ -108,6 +106,9 @@
 	var/light_brightness = 4
 	var/flight_x_offset = 0
 	var/flight_y_offset = 0
+
+	///Var for attack_self chain
+	var/special_handling = FALSE
 
 /obj/item/gun/item_ctrl_click(mob/user)
 	if(can_flashlight && ishuman(user) && loc == user && !user.incapacitated(INCAPACITATION_ALL))
@@ -142,7 +143,9 @@
 		verbs -= /obj/item/gun/verb/give_dna
 		verbs -= /obj/item/gun/verb/allow_dna
 
-	AddElement(/datum/element/sellable/gun)
+	if(sel_mode <= length(firemodes))
+		var/datum/firemode/new_mode = firemodes[sel_mode]
+		new_mode.apply_to(src)
 
 /obj/item/gun/update_twohanding()
 	if(one_handed_penalty)
@@ -216,7 +219,7 @@
 	if(HULK in M.mutations)
 		to_chat(M, span_danger("Your fingers are much too large for the trigger guard!"))
 		return FALSE
-	if((CLUMSY in M.mutations) && prob(10)) //Clumsy handling // Outpost 21 edit - Made clumsy less obnoxious
+	if(CLUMSY_HARM_CHANCE(M)) //Clumsy handling
 		var/obj/P = consume_next_projectile()
 		if(P)
 			if(process_projectile(P, user, user, pick(BP_L_FOOT, BP_R_FOOT)))
@@ -271,15 +274,17 @@
 	Fire(A,user,params) //Otherwise, fire normally.
 */
 
-/obj/item/gun/attack(atom/A, mob/living/user, def_zone)
+/obj/item/gun/attack(mob/living/A, mob/living/user, target_zone, attack_modifier)
 	if (A == user && user.zone_sel.selecting == O_MOUTH && !mouthshoot)
 		handle_suicide(user)
+		return ITEM_INTERACT_SUCCESS
 	else if(user.a_intent == I_HURT) //point blank shooting
 		if(user && user.client && user.aiming && user.aiming.active && user.aiming.aiming_at != A && A != user)
 			PreFire(A,user) //They're using the new gun system, locate what they're aiming at.
-			return
+			return ITEM_INTERACT_SUCCESS
 		else
 			Fire(A, user, pointblank=1)
+			return ITEM_INTERACT_SUCCESS
 	else
 		return ..() //Pistolwhippin'
 
@@ -787,6 +792,11 @@
 	return new_mode
 
 /obj/item/gun/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
+	if(special_handling)
+		return FALSE
 	switch_firemodes(user)
 
 /* TGMC Ammo HUD Port Begin */
@@ -811,8 +821,6 @@
 
 	return ..()
 
-/obj/item/gun/dropped(mob/living/user) // Ditto as above, we remove the HUD. Pending porting TGMC code to clean up this fucking nightmare of spaghetti.
-	if(user.hud_used) // Outpost 21 edit - runtime fix for simple mobs that pick up guns
-		user.hud_used.remove_ammo_hud(user, src)
-
+/obj/item/gun/dropped(mob/user, equipping, slot) // Ditto as above, we remove the HUD. Pending porting TGMC code to clean up this fucking nightmare of spaghetti.
+	user.hud_used?.remove_ammo_hud(user, src) // Outpost 21 edit - runtime fix for simple mobs that pick up guns
 	..()

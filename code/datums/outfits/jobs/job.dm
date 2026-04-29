@@ -1,6 +1,6 @@
-/decl/hierarchy/outfit/job
+/datum/decl/hierarchy/outfit/job
 	name = "Standard Gear"
-	hierarchy_type = /decl/hierarchy/outfit/job
+	hierarchy_type = /datum/decl/hierarchy/outfit/job
 
 	uniform = /obj/item/clothing/under/color/grey
 	shoes = /obj/item/clothing/shoes/black
@@ -16,15 +16,21 @@
 	headset_alt = /obj/item/radio/headset/alt
 	headset_earbud = /obj/item/radio/headset/earbud
 
-/decl/hierarchy/outfit/job/equip_id(mob/living/carbon/human/H, rank, assignment)
+/datum/decl/hierarchy/outfit/job/equip_id(mob/living/carbon/human/H, rank, assignment)
 	var/obj/item/card/id/C = ..()
 	if(!C)
 		return
-	var/datum/job/J = job_master.GetJob(rank)
-	if(!C)	// Outpost 21 edit - Stowaways have no ID
-		return
+	var/datum/job/J = SSjob.get_job(rank)
 	if(J)
 		C.access = J.get_access()
+	// Outpost 21 edit begin - Alt titles with unique access added
+	if(assignment in J.alt_titles)
+		var/typepath = J.alt_titles[assignment]
+		var/datum/alt_title/alt_dat = new typepath()
+		if(length(alt_dat.additional_access))
+			C.access |= alt_dat.additional_access
+		qdel(alt_dat)
+	// Outpost 21 edit end
 	if(H.mind)
 		var/datum/mind/M = H.mind
 		if(M.initial_account)

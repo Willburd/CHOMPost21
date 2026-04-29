@@ -164,6 +164,14 @@
 		to_chat(user, span_warning("Linked pad is not responding to ping."))
 		return
 	src.add_fingerprint(user)
+
+	// Outpost 21 edit begin - Incase anyone is a smartass
+	if(istype(get_area(src),/area/specialty/redspace))
+		explosion(get_turf(src),3,3,2,1)
+		qdel(src)
+		return
+	// Outpost 21 edit end
+
 	doteleport(user)
 
 /*CHOMP Remove. Teleport code changed slightly making this obsolete

@@ -33,10 +33,10 @@
 	explanation_text = "Not yet init."
 
 /datum/objective/chuinfestation/New()
-	. = ..("Infest the crew, and spread your happiness by making them chus like you! Have no less than [chus.infestationglobalgoal] chus alive by the end of the round.")
+	. = ..("Infest the crew, and spread your happiness by making them chus like you! Have no less than [GLOB.chus.infestationglobalgoal] chus alive by the end of the round.")
 
 /datum/objective/chuinfestation/check_completion()
-	if(isnull(chus))
+	if(isnull(GLOB.chus))
 		return FALSE // wat
 
 	var/infestedchus = 0
@@ -44,7 +44,7 @@
 		if(C.stat != DEAD)
 			infestedchus++
 
-	return infestedchus > chus.infestationglobalgoal
+	return infestedchus > GLOB.chus.infestationglobalgoal
 
 
 
@@ -54,10 +54,10 @@
 	explanation_text = "Not yet init."
 
 /datum/objective/zombieinfestation/New()
-	. = ..("BRAAAIINNSSS! Infect the crew, shamble, and moan! At least [zombies.infestationminimum + zombies.infestationglobalgoal] zombies must be still shambling around by the end of the round!")
+	. = ..("BRAAAIINNSSS! Infect the crew, shamble, and moan! At least [GLOB.zombies.infestationminimum + GLOB.zombies.infestationglobalgoal] zombies must be still shambling around by the end of the round!")
 
 /datum/objective/zombieinfestation/check_completion()
-	if(isnull(chus))
+	if(isnull(GLOB.zombies))
 		return FALSE // wat
 
 	var/zombiecount = 0
@@ -65,4 +65,4 @@
 		if(C.stat != DEAD)
 			zombiecount++
 
-	return zombiecount > (zombies.infestationminimum + chus.infestationglobalgoal)
+	return zombiecount > (GLOB.zombies.infestationminimum + GLOB.zombies.infestationglobalgoal)

@@ -33,7 +33,7 @@
 	healthcheck()
 	return
 
-/obj/structure/alien/hitby(atom/movable/source)
+/obj/structure/alien/hitby(atom/movable/source, datum/thrownthing/throwingdatum)
 	..()
 	visible_message(span_danger("\The [src] was hit by \the [source]."))
 	var/tforce
@@ -88,7 +88,7 @@
 					healthcheck()
 					return
 				if(locate(/obj/item/organ/internal/xenos/resinspinner/replicant) in M.internal_organs)
-					if(!do_after(M, 3 SECONDS))
+					if(!do_after(M, 3 SECONDS, src))
 						return
 					visible_message (span_warning("[usr] strokes the [name] and it melts away!"), 1)
 					health = 0

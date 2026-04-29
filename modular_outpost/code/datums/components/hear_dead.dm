@@ -6,15 +6,22 @@
 	if(!ismob(parent))
 		return COMPONENT_INCOMPATIBLE
 	our_listener = parent
-	RegisterSignal(SSdcs, COMSIG_GLOB_DEAD_SAY, PROC_REF(hear_dead))
 	tgui_alert(our_listener, "At first it begins as a whisper, then a raging torrent of voices, before silence... Yet the whispers persist in the back of your mind, as if they have become a piece of you... (OOC: You can now hear deadchat nearby. This has been gifted to you by admemes, and should be treated as some kind of whispering insanity IC. Either voices in your mind, or hearing the ramblings of demons or ghosts. Ghost chat also likes to meme and talk about ooc things. Try to keep stuff as IC as reasonable, you're absolute allowed to lie about what they're saying too! It's likely only you that hears them.)", "Voices beyond the veil reach out", list("Awaken Your Mind"))
 
 /datum/component/hear_dead/Destroy(force)
-	UnregisterSignal(SSdcs, COMSIG_GLOB_DEAD_SAY)
+	. = ..()
 	to_chat(our_listener, span_cult("The voices fall silent. You are now alone in your head once more. (OOC: You will no longer hear deadchat messages.)"))
 	our_listener = null
-	. = ..()
 
+/datum/component/hear_dead/RegisterWithParent()
+	RegisterSignal(SSdcs, COMSIG_GLOB_DEAD_SAY, PROC_REF(hear_dead))
+
+/datum/component/hear_dead/UnregisterFromParent()
+	UnregisterSignal(SSdcs, COMSIG_GLOB_DEAD_SAY)
+
+
+// Signal handlers
+//////////////////////////////////////////////////////////////////////////////////////////////////////
 /datum/component/hear_dead/proc/hear_dead(datum/source, mob/subject, message)
 	SIGNAL_HANDLER
 	var/turf/our_turf = get_turf(our_listener)

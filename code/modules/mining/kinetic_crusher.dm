@@ -65,12 +65,14 @@
 /obj/item/kinetic_crusher/Destroy()
 	return ..()
 
+/* Outpost 21 edit - Absolutely not
 /obj/item/kinetic_crusher/emag_act()
 	. = ..()
 	if(emagged)
 		return
 	emagged = TRUE
 	desc = desc + " The destabilizer module occasionally sparks and glows a menacing red."
+*/
 
 /obj/item/kinetic_crusher/proc/can_mark(mob/living/victim)
 	if(emagged)
@@ -90,10 +92,10 @@
 	. += span_notice("Mark a[emagged ? "nything": " creature"] with the destabilizing force, then hit them in melee to do <b>[force + detonation_damage]</b> damage.")
 	. += span_notice("Does <b>[force + detonation_damage + backstab_bonus]</b> damage if the target is backstabbed, instead of <b>[force + detonation_damage]</b>.")
 
-/obj/item/kinetic_crusher/attack(mob/living/target, mob/living/carbon/user)
+/obj/item/kinetic_crusher/attack(mob/living/target, mob/living/user, target_zone, attack_modifier)
 	if(!wielded && requires_wield)
 		to_chat(user, span_warning("[src] is too heavy to use with one hand."))
-		return
+		return ITEM_INTERACT_FAILURE
 	..()
 
 /obj/item/kinetic_crusher/afterattack(atom/target, mob/living/user, proximity_flag, clickparams)
@@ -139,13 +141,13 @@
 		else
 			L.apply_damage(detonation_damage + thrown_bonus, BRUTE, blocked = def_check)
 
-/obj/item/kinetic_crusher/throw_impact(atom/hit_atom, speed)
+/obj/item/kinetic_crusher/throw_impact(atom/hit_atom, datum/thrownthing/throwingdatumd)
 	. = ..()
 	if(!isliving(hit_atom))
 		return
 	var/mob/living/L = hit_atom
 	if(L.has_modifier_of_type(/datum/modifier/crusher_mark))
-		detonate(L, thrower, TRUE)
+		detonate(L, throwingdatumd?.get_thrower(), TRUE)
 
 /obj/item/kinetic_crusher/proc/Recharge()
 	if(!charged)
@@ -187,7 +189,6 @@
 	w_class = ITEMSIZE_NORMAL
 	requires_wield = FALSE
 
-
 /obj/item/kinetic_crusher/machete
 	// general purpose. cleaves though
 	name = "proto-kinetic machete"
@@ -211,9 +212,6 @@
 	thrown_bonus = 20 // 160
 	update_item_state = FALSE
 	slot_flags = SLOT_BELT
-
-
-
 
 /obj/item/kinetic_crusher/machete/gauntlets
 	// did someone say single target damage
@@ -239,7 +237,7 @@
 	. = ..()
 	START_PROCESSING(SSprocessing, src)
 
-/obj/item/kinetic_crusher/machete/gauntlets/dropped(mob/user)
+/obj/item/kinetic_crusher/machete/gauntlets/dropped(mob/user, equipping, slot)
 	ready_toggle(TRUE)
 	STOP_PROCESSING(SSprocessing, src)
 	. = ..()
@@ -249,6 +247,9 @@
 	STOP_PROCESSING(SSprocessing, src)
 
 /obj/item/kinetic_crusher/machete/gauntlets/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	ready_toggle()
 
 /obj/item/kinetic_crusher/machete/gauntlets/process()
@@ -294,7 +295,7 @@
 /obj/item/offhand/crushergauntlets
 	var/obj/item/kinetic_crusher/machete/gauntlets/linked
 
-/obj/item/offhand/crushergauntlets/dropped(mob/user)
+/obj/item/offhand/crushergauntlets/dropped(mob/user, equipping, slot)
 	SHOULD_CALL_PARENT(FALSE)
 	if(linked.wielded)
 		linked.ready_toggle(TRUE)
@@ -303,7 +304,7 @@
 	name = "\improper mounted proto-kinetic gear"
 	var/obj/item/rig_module/gauntlets/storing_module
 
-/obj/item/kinetic_crusher/machete/gauntlets/rig/dropped(mob/user)
+/obj/item/kinetic_crusher/machete/gauntlets/rig/dropped(mob/user, equipping, slot)
 	. = ..(user)
 	if(storing_module)
 		src.forceMove(storing_module)
@@ -368,5 +369,5 @@
 	if(isliving(target))
 		var/mob/living/L = target
 		if(hammer_synced.can_mark(L))
-			L.add_modifier(/datum/modifier/crusher_mark, 30 SECONDS, firer, TRUE)
+			L.add_modifier(/datum/modifier/crusher_mark, 5 SECONDS, firer, TRUE) // Outpost 21 edit - 30 seconds to 5
 	..()

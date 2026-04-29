@@ -16,8 +16,8 @@
 	return INITIALIZE_HINT_LATELOAD
 
 /obj/effect/map_effect/interval/redspaceexitcontroller/LateInitialize()
-	// Lets only do this once
-	redexitlist.Cut()
+	if(redexitlist.len) // Lets only do this once
+		return
 	for(var/obj/effect/landmark/R in GLOB.landmarks_list)
 		if(R.name == "redentrance")
 			redexitlist += get_turf(R)

@@ -100,7 +100,7 @@
 		BP_R_FOOT = list("path" = /obj/item/organ/external/foot/right)
 		)
 
-	species_component = list(/datum/component/shadekin/full, /datum/component/radiation_effects/shadekin) //CHOMPEdit: Enabling full shadekin.
+	species_component = list(/datum/component/shadekin/full, /datum/component/radiation_effects/radiation_immune, /datum/component/haunting_vision) //CHOMPEdit: Enabling full shadekin & no-power radiation component. // Outpost 21 edit - Haunted area vision
 	component_requires_late_recalc = TRUE
 
 /datum/species/shadekin/handle_death(var/mob/living/carbon/human/H)
@@ -180,6 +180,8 @@
 			H.add_modifier(/datum/modifier/dark_respite, 10 MINUTES)
 			H.muffled = FALSE
 			H.forced_psay = FALSE
+
+			addtimer(CALLBACK(H, TYPE_PROC_REF(/mob/living, can_leave_dark)), 5 MINUTES, TIMER_DELETE_ME)
 		else
 			H.add_modifier(/datum/modifier/dark_respite, 25 MINUTES)
 

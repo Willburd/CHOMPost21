@@ -4,7 +4,6 @@
 	icon = 'icons/mecha/mech_component.dmi'
 	icon_state = "component"
 	w_class = ITEMSIZE_HUGE
-	origin_tech = list(TECH_DATA = 2, TECH_ENGINEERING = 2)
 
 	var/component_type = null
 
@@ -17,7 +16,7 @@
 
 	var/integrity
 	var/integrity_danger_mod = 0.5	// Multiplier for comparison to max_integrity before problems start.
-	var/max_integrity = 100
+	max_integrity = 100
 
 	var/step_delay = 0
 
@@ -55,13 +54,18 @@
 
 // Damage code.
 
-/obj/item/mecha_parts/component/emp_act(severity = 4, recursive)
-	if(severity + emp_resistance > 4)
+/* Outpost 21 edit - Use ours
+/obj/item/mecha_parts/component/emp_act(severity = EMP_HARMLESS, recursive)
+	. = ..()
+	if (. & EMP_PROTECT_SELF)
+		return
+	if(severity + emp_resistance >= EMP_NONE)
 		return
 
 	severity = clamp(severity + emp_resistance, 1, 4)
 
 	take_damage((4 - severity) * round(integrity * 0.1, 0.1))
+*/
 
 /obj/item/mecha_parts/component/proc/adjust_integrity(var/amt = 0)
 	integrity = clamp(integrity + amt, 0, max_integrity)

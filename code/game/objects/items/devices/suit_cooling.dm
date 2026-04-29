@@ -15,7 +15,6 @@
 	actions_types = list(/datum/action/item_action/toggle_heatsink)
 
 	matter = list(MAT_STEEL = 15000, MAT_GLASS = 3500)
-	origin_tech = list(TECH_MAGNET = 2, TECH_MATERIAL = 2)
 
 	var/on = 0				//is it turned on?
 	var/cover_open = 0		//is the cover open?
@@ -123,7 +122,10 @@
 	STOP_PROCESSING(SSobj, src)
 	update_icon()
 
-/obj/item/suit_cooling_unit/attack_self(var/mob/user)
+/obj/item/suit_cooling_unit/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	if(cover_open && cell)
 		if(ishuman(user))
 			user.put_in_hands(cell)

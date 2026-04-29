@@ -8,7 +8,6 @@
 	fire_sound = 'sound/weapons/wave.ogg'
 	charge_cost = 240
 	projectile_type = /obj/item/projectile/beam/mouselaser
-	origin_tech = list(TECH_BLUESPACE = 4)
 	battery_lock = 1
 	firemodes = list()
 	force = 0 //CHOMPEdit
@@ -24,7 +23,9 @@
 		)
 
 /obj/item/gun/energy/mouseray/attack_self(mob/user)
-	. = ..()
+	. = ..(user)
+	if(.)
+		return TRUE
 	if(tf_allow_select)
 		pick_type(user)
 
@@ -92,40 +93,7 @@
 			return
 	M.drop_both_hands()
 	if(M.tf_mob_holder && M.tf_mob_holder.loc == M)
-		new /obj/effect/effect/teleport_greyscale(M.loc)
-		var/mob/living/ourmob = M.tf_mob_holder
-		if(ourmob.ai_holder)
-			var/datum/ai_holder/our_AI = ourmob.ai_holder
-			our_AI.set_stance(STANCE_IDLE)
-		M.tf_mob_holder = null
-		var/turf/get_dat_turf = get_turf(target)
-		ourmob.loc = get_dat_turf
-		ourmob.forceMove(get_dat_turf)
-		if(!M.tf_form_ckey)
-			ourmob.vore_selected = M.vore_selected
-			M.vore_selected = null
-			ourmob.mob_belly_transfer(M)
-			ourmob.nutrition = M.nutrition
-			// M.soulgem.transfer_self(ourmob) //CHOMPAdd Soulcatcher Outpost 21 edit - Disable soulgems
-
-		ourmob.ckey = M.ckey
-
-		ourmob.Life(1)
-		if(ishuman(M))
-			for(var/obj/item/W in M)
-				//if(istype(W, /obj/item/implant/backup) || istype(W, /obj/item/nif)) // Outpost 21 edit - Remove backup implants, nif removal
-				//	continue
-				M.drop_from_inventory(W)
-
-		if(M.tf_form == ourmob)
-			if(M.tf_form_ckey)
-				M.ckey = M.tf_form_ckey
-			else
-				M.mind = null
-			ourmob.tf_form = M
-			M.forceMove(ourmob)
-		else
-			qdel(target)
+		M.revert_mob_tf()
 		return
 	else
 		if(M.stat == DEAD)	//We can let it undo the TF, because the person will be dead, but otherwise things get weird.
@@ -190,44 +158,7 @@
 			firer.visible_message(span_warning("\The [src] buzzes impolitely."))
 			return
 	if(M.tf_mob_holder)
-		var/mob/living/ourmob = M.tf_mob_holder
-		if(ourmob.ai_holder)
-			var/datum/ai_holder/our_AI = ourmob.ai_holder
-			our_AI.set_stance(STANCE_IDLE)
-		M.tf_mob_holder = null
-		var/turf/get_dat_turf = get_turf(target)
-		ourmob.loc = get_dat_turf
-		ourmob.forceMove(get_dat_turf)
-		if(!M.tf_form_ckey)
-			ourmob.vore_selected = M.vore_selected
-			M.vore_selected = null
-			for(var/obj/belly/B as anything in M.vore_organs)
-				B.loc = ourmob
-				B.forceMove(ourmob)
-				B.owner = ourmob
-				M.vore_organs -= B
-				ourmob.vore_organs += B
-			ourmob.nutrition = M.nutrition
-			// M.soulgem.transfer_self(ourmob) //CHOMPAdd Soulcatcher Outpost 21 edit - Disable soulgems
-		ourmob.ckey = M.ckey
-
-		ourmob.Life(1)
-
-		if(ishuman(M))
-			for(var/obj/item/W in M)
-				//if(istype(W, /obj/item/implant/backup) || istype(W, /obj/item/nif)) // Outpost 21 edit - Remove backup implants, nif removal
-				//	continue
-				M.drop_from_inventory(W)
-
-		if(M.tf_form == ourmob)
-			if(M.tf_form_ckey)
-				M.ckey = M.tf_form_ckey
-			else
-				M.mind = null
-			ourmob.tf_form = M
-			M.forceMove(ourmob)
-		else
-			qdel(target)
+		M.revert_mob_tf()
 		firer.visible_message(span_notice("\The [shot_from] boops pleasantly."))
 		return
 	else
@@ -248,7 +179,7 @@
 		"mouse" = /mob/living/simple_mob/animal/passive/mouse,
 		"rat" = /mob/living/simple_mob/animal/passive/mouse/rat,
 		"dust jumper" = /mob/living/simple_mob/vore/alienanimals/dustjumper,
-		"woof" = /mob/living/simple_mob/vore/woof,
+		// "woof" = /mob/living/simple_mob/vore/woof, // Outpost 21 edit - Softdog removal
 		"corgi" = /mob/living/simple_mob/animal/passive/dog/corgi,
 		"cat" = /mob/living/simple_mob/animal/passive/cat,
 		"chicken" = /mob/living/simple_mob/animal/passive/chicken,
@@ -274,7 +205,7 @@
 		"rat" = /mob/living/simple_mob/animal/passive/mouse/rat,
 		"giant rat" = /mob/living/simple_mob/vore/aggressive/rat,
 		"dust jumper" = /mob/living/simple_mob/vore/alienanimals/dustjumper,
-		"woof" = /mob/living/simple_mob/vore/woof,
+		// "woof" = /mob/living/simple_mob/vore/woof, // Outpost 21 edit - Softdog removal
 		"corgi" = /mob/living/simple_mob/animal/passive/dog/corgi,
 		"cat" = /mob/living/simple_mob/animal/passive/cat,
 		"chicken" = /mob/living/simple_mob/animal/passive/chicken,
@@ -322,21 +253,37 @@
 		"leopardmander" = /mob/living/simple_mob/vore/leopardmander
 		)
 
+
 /obj/item/gun/energy/mouseray/metamorphosis/advanced/random
 	name = "unstable metamorphosis ray"
 	tf_allow_select = FALSE
+
+/obj/item/gun/energy/mouseray/metamorphosis/advanced/random/attackby(var/obj/item/A as obj, mob/user as mob)
+	if(A.has_tool_quality(TOOL_MULTITOOL))
+		if(tf_allow_select)
+			to_chat(user, span_warning("You scramble the stored data on \the [src], making it less reliable."))
+			tf_allow_select = FALSE
+			name = "unstable metamorphosis ray"
+		else
+			to_chat(user, span_warning("You repair the damage to the \the [src]."))
+			tf_allow_select = TRUE
+			name = "stable metamorphosis ray"
+	..()
 
 /obj/item/gun/energy/mouseray/metamorphosis/advanced/random/Fire(atom/target, mob/living/user, clickparams, pointblank, reflex)
 	if(world.time < cooldown)
 		to_chat(user, span_warning("\The [src] isn't ready yet."))
 		return
-	var/choice = pick(tf_possible_types)
-	tf_type = tf_possible_types[choice]
+	if(!tf_allow_select) //Keep a repaired gun from re-randomizing
+		var/choice = pick(tf_possible_types)
+		tf_type = tf_possible_types[choice]
 	. = ..()
 
+/* // Outpost 21 edit - Softdog removal
 /obj/item/gun/energy/mouseray/woof
 	name = "woof ray"
 	tf_type = /mob/living/simple_mob/vore/woof
+*/
 
 /obj/item/gun/energy/mouseray/corgi
 	name = "corgi ray"
@@ -406,7 +353,7 @@
 /obj/random/mouseray/item_to_spawn()
 	return pick(prob(300);/obj/item/gun/energy/mouseray,
 				prob(50);/obj/item/gun/energy/mouseray/corgi,
-				prob(50);/obj/item/gun/energy/mouseray/woof,
+				// prob(50);/obj/item/gun/energy/mouseray/woof, // Outpost 21 edit - Softdog removal
 				prob(50);/obj/item/gun/energy/mouseray/cat,
 				prob(50);/obj/item/gun/energy/mouseray/chicken,
 				prob(50);/obj/item/gun/energy/mouseray/lizard,

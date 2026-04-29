@@ -49,7 +49,7 @@
 	to_spawn =	list(
 			/obj/item/gun/energy/mouseray=300,
 			/obj/item/gun/energy/mouseray/corgi=50,
-			/obj/item/gun/energy/mouseray/woof=50,
+			// /obj/item/gun/energy/mouseray/woof=50, // Outpost 21 edit - Softdog removal
 			/obj/item/gun/energy/mouseray/cat=50,
 			/obj/item/gun/energy/mouseray/chicken=50,
 			/obj/item/gun/energy/mouseray/lizard =50,

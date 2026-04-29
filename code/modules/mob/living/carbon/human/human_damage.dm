@@ -111,6 +111,8 @@
 	for(var/obj/item/organ/external/O in organs)
 		if(O.robotic >= ORGAN_ROBOT)
 			continue //robot limbs don't count towards shock and crit
+		if(!O.organ_can_feel_pain())
+			continue //Limbs that can't feel pain don't count towards shock.
 		amount += O.brute_dam
 	return amount
 
@@ -133,6 +135,8 @@
 	for(var/obj/item/organ/external/O in organs)
 		if(O.robotic >= ORGAN_ROBOT)
 			continue //robot limbs don't count towards shock and crit
+		if(!O.organ_can_feel_pain())
+			continue //Limbs that can't feel pain don't count towards shock.
 		amount += O.burn_dam
 	return amount
 
@@ -281,7 +285,7 @@
 
 /mob/living/carbon/human/inStasisNow()
 	var/stasisValue = getStasis()
-	if(stasisValue && (life_tick % stasisValue))
+	if(stasisValue && (life_tick % stasisValue) || HAS_TRAIT(src, TRAIT_STASIS))
 		return 1
 
 	return 0

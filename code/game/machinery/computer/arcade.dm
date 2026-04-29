@@ -62,8 +62,8 @@
 
 
 /obj/machinery/computer/arcade/emp_act(severity, recursive)
-	if(stat & (NOPOWER|BROKEN))
-		..(severity, recursive)
+	. = ..()
+	if (. & EMP_PROTECT_SELF || (stat & (NOPOWER|BROKEN)))
 		return
 	var/empprize = null
 	var/num_of_prizes = 0
@@ -79,8 +79,6 @@
 	for(num_of_prizes; num_of_prizes > 0; num_of_prizes--)
 		empprize = pickweight(prizes)
 		new empprize(src.loc)
-
-	..(severity, recursive)
 
 ///////////////////
 //  BATTLE HERE  //
@@ -1047,6 +1045,9 @@
 			. += span_notice("There's a little switch on the bottom. It's flipped up.")
 
 /obj/item/orion_ship/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	if(active)
 		return
 

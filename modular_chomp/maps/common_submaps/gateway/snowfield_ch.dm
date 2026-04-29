@@ -455,7 +455,6 @@
 	)
 	auto_loading_type = CLOSED_BOLT | LOCK_OPEN_EMPTY | LOCK_SLAPPABLE
 	load_method = MAGAZINE
-	muzzle_velocity = 880
 	w_class = ITEMSIZE_HUGE
 	actions_types = list(/datum/action/item_action/use_scope)
 	accuracy = 10
@@ -487,7 +486,6 @@
 	throw_range = 10
 	force = 5.0
 	slot_flags = 0
-	origin_tech = list(TECH_COMBAT = 8, TECH_MATERIAL = 5)
 	fire_sound = 'sound/weapons/rpg.ogg'
 
 	release_force = 15

@@ -21,10 +21,6 @@
 
 	var/created_for
 
-/mob/new_player/Initialize(mapload)
-	. = ..()
-	add_verb(src, /mob/proc/insidePanel)
-
 /mob/new_player/Destroy()
 	GLOB.new_player_list -= src
 	if(manifest_dialog)
@@ -71,7 +67,6 @@
 	if(!client)	return 0
 
 	if(href_list["privacy_poll"])
-		establish_db_connection()
 		if(!SSdbcore.IsConnected())
 			return
 		var/voted = 0
@@ -209,7 +204,7 @@
 	return timer - world.time
 
 /mob/new_player/proc/IsJobAvailable(rank)
-	var/datum/job/job = job_master.GetJob(rank)
+	var/datum/job/job = SSjob.get_job(rank)
 	if(!job)
 		return 0
 	if(!job.is_position_available())
@@ -227,7 +222,7 @@
 	return 1
 
 
-/mob/new_player/proc/AttemptLateSpawn(rank,var/spawning_at)
+/mob/new_player/proc/AttemptLateSpawn(rank)
 	if (src != usr)
 		return 0
 	if(!SSticker || SSticker.current_state != GAME_STATE_PLAYING)
@@ -244,7 +239,7 @@
 		return 0
 
 	//Find our spawning point.
-	var/list/join_props = job_master.LateSpawn(client, rank)
+	var/list/join_props = SSjob.late_spawn(client, rank)
 
 	if(!join_props)
 		return
@@ -283,10 +278,10 @@
 			qdel(src)
 			return
 
-	job_master.AssignRole(src, rank, 1)
+	SSjob.assign_role(src, rank, 1)
 
 	var/mob/living/character = create_character(T)	//creates the human and transfers vars and mind
-	character = job_master.EquipRank(character, rank, 1)					//equips the human
+	character = SSjob.equip_rank(character, rank, 1)					//equips the human
 	UpdateFactionList(character)
 
 	var/datum/job/J = SSjob.get_job(rank)
@@ -411,8 +406,9 @@
 
 	var/use_species_name
 	var/datum/species/chosen_species
-	if(client.prefs.species)
-		chosen_species = GLOB.all_species[client.prefs.species]
+	var/pref_species = client.prefs.read_preference(/datum/preference/choiced/species)
+	if(pref_species)
+		chosen_species = GLOB.all_species[pref_species]
 		use_species_name = chosen_species.get_station_variant() //Only used by pariahs atm.
 
 	if(chosen_species && use_species_name)
@@ -425,7 +421,7 @@
 
 	if(CONFIG_GET(flag/force_random_names))
 		new_character.gender = pick(MALE, FEMALE)
-		client.prefs.real_name = random_name(new_character.gender)
+		client.prefs.update_preference_by_type(/datum/preference/name/real_name, random_name(new_character.gender))
 	else
 		client.prefs.copy_to(new_character, icon_updates = TRUE)
 
@@ -494,8 +490,9 @@
 
 /mob/new_player/get_species()
 	var/datum/species/chosen_species
-	if(client.prefs.species)
-		chosen_species = GLOB.all_species[client.prefs.species]
+	var/pref_species = client.prefs.read_preference(/datum/preference/choiced/species)
+	if(pref_species)
+		chosen_species = GLOB.all_species[pref_species]
 
 	if(!chosen_species)
 		return SPECIES_HUMAN
@@ -507,7 +504,7 @@
 
 /mob/new_player/get_gender()
 	if(!client || !client.prefs) ..()
-	return client.prefs.biological_gender
+	return client.prefs.read_preference(/datum/preference/choiced/gender/biological)
 
 /mob/new_player/is_ready()
 	return ready && ..()
@@ -530,4 +527,4 @@
 	return
 
 /mob/new_player/MayRespawn()
-	return 1
+	return TRUE

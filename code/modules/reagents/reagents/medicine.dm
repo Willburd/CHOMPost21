@@ -9,7 +9,8 @@
 	color = "#00BFFF"
 	overdose = REAGENTS_OVERDOSE * 2
 	metabolism = REM * 0.2
-	scannable = 1
+	dermal_absorption = 0.2
+	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_DRUG
 
@@ -30,7 +31,7 @@
 	color = "#00BFFF"
 	overdose = REAGENTS_OVERDOSE * 2
 	metabolism = REM * 0.2
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	touch_met = REM * 0.3
 	can_overdose_touch = TRUE
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
@@ -58,11 +59,12 @@
 	color = "#BF0000"
 	overdose = REAGENTS_OVERDOSE
 	overdose_mod = 0.25
-	scannable = 1
+	dermal_absorption = 0.2
+	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_DRUG
+	medallergen_type = MEDALLERGEN_BICARD
 
-	allergen_type = ALLERGEN_BICARD // Outpost 21 edit(port) - Medical allergies
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
 /datum/reagent/bicaridine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
@@ -98,13 +100,13 @@
 	reagent_state = LIQUID
 	color = "#BF0000"
 	overdose = REAGENTS_OVERDOSE * 0.75
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	touch_met = REM * 0.75
 	can_overdose_touch = TRUE
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
+	medallergen_type = MEDALLERGEN_BICARD
 
-	allergen_type = ALLERGEN_BICARD // Outpost 21 edit(port) - Medical allergies
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
 /datum/reagent/bicaridine/topical/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
@@ -128,10 +130,11 @@
 	description = "Calcium carbonate is a calcium salt commonly used as an antacid."
 	taste_description = "chalk"
 	reagent_state = SOLID
+	dermal_absorption = 0 //Solids don't penetrate.
 	color = "#eae6e3"
 	overdose = REAGENTS_OVERDOSE * 0.8
 	metabolism = REM * 0.4
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_DRUG
 
@@ -149,13 +152,14 @@
 	description = REAGENT_KELOTANE + " is a drug used to treat burns."
 	taste_description = "bitterness"
 	reagent_state = LIQUID
+	dermal_absorption = 0.2
 	color = "#FFA800"
 	overdose = REAGENTS_OVERDOSE
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_DRUG
+	medallergen_type = MEDALLERGEN_KELOTANE
 
-	allergen_type = ALLERGEN_KELOTANE // Outpost 21 edit(port) - Medical allergies
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
 /datum/reagent/kelotane/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
@@ -174,11 +178,13 @@
 	taste_description = "bitterness"
 	taste_mult = 1.5
 	reagent_state = LIQUID
+	dermal_absorption = 0.2
 	color = "#FF8000"
 	overdose = REAGENTS_OVERDOSE * 0.5
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_DRUG
+	medallergen_type = MEDALLERGEN_KELOTANE
 
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
@@ -198,11 +204,12 @@
 	reagent_state = LIQUID
 	color = "#FF8000"
 	overdose = REAGENTS_OVERDOSE * 0.4
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	touch_met = REM * 0.75
 	can_overdose_touch = TRUE
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
+	medallergen_type = MEDALLERGEN_KELOTANE
 
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
@@ -227,12 +234,13 @@
 	description = REAGENT_ANTITOXIN + " is a broad-spectrum antitoxin."
 	taste_description = "a roll of gauze"
 	reagent_state = LIQUID
+	dermal_absorption = 0.2
 	color = "#00A000"
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_DRUG
+	medallergen_type = MEDALLERGEN_DYLO
 
-	allergen_type = ALLERGEN_DYLO // Outpost 21 edit(port) - Medical allergies
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
 /datum/reagent/dylovene/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
@@ -253,8 +261,9 @@
 	id = REAGENT_ID_CARTHATOLINE
 	description = REAGENT_CARTHATOLINE + " is strong evacuant used to treat severe poisoning."
 	reagent_state = LIQUID
+	dermal_absorption = 0.2
 	color = "#225722"
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	overdose = REAGENTS_OVERDOSE * 0.5
 	overdose_mod = 0 // Not used, but it shouldn't deal toxin damage anyways. Carth heals toxins!
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
@@ -293,9 +302,10 @@
 	description = REAGENT_DEXALIN + " is used in the treatment of oxygen deprivation."
 	taste_description = "bitterness"
 	reagent_state = LIQUID
+	dermal_absorption = 0.2
 	color = "#0080FF"
 	overdose = REAGENTS_OVERDOSE
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	metabolism = REM * 0.25
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_DRUG
@@ -303,7 +313,7 @@
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
 /datum/reagent/dexalin/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	if(alien == IS_VOX)
+	if(alien == IS_VOX || M?.species.poison_type == GAS_O2) // Outpost 21 edit - If oxygen is toxic, this is deadly
 		M.adjustToxLoss(removed * 24)
 	else if(alien == IS_SLIME && dose >= 15)
 		M.add_chemical_effect(CE_PAINKILLER, 15 * M.species.chem_strength_pain)
@@ -322,17 +332,18 @@
 	description = REAGENT_DEXALINP + " is used in the treatment of oxygen deprivation. It is highly effective."
 	taste_description = "bitterness"
 	reagent_state = LIQUID
+	dermal_absorption = 0.2
 	color = "#0040FF"
 	overdose = REAGENTS_OVERDOSE * 0.5
 	overdose_mod = 1.25
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
 
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
 /datum/reagent/dexalinp/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	if(alien == IS_VOX)
+	if(alien == IS_VOX || M?.species.poison_type == GAS_O2) // Outpost 21 edit - If oxygen is toxic, this is deadly
 		M.adjustToxLoss(removed * 9)
 	else if(alien == IS_SLIME && dose >= 10)
 		M.add_chemical_effect(CE_PAINKILLER, 25 * M.species.chem_strength_pain)
@@ -351,17 +362,14 @@
 	description = REAGENT_TRICORDRAZINE + " is a highly potent stimulant, originally derived from cordrazine. Can be used to treat a wide range of injuries."
 	taste_description = "bitterness"
 	reagent_state = LIQUID
+	dermal_absorption = 0.2
 	color = "#8040FF"
-	scannable = 1
-
+	overdose = REAGENTS_OVERDOSE * 8 //240 overdose // Outpost 21 edit - raised overdose
+	scannable = SCANNABLE_BENEFICIAL
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_DRUG
-
-	allergen_type = ALLERGEN_TRICORD // Outpost 21 edit(port) - Medical allergies
-
-	//YW ADDITIONS START
-	overdose = REAGENTS_OVERDOSE * 8 //240 overdose // Outpost 21 edit - raised overdose
+	medallergen_type = MEDALLERGEN_TRICORD
 
 /datum/reagent/tricordrazine/overdose(var/mob/living/carbon/M, var/alien) //YW EDIT START
 	..()
@@ -388,12 +396,12 @@
 	taste_description = "bitterness"
 	reagent_state = SOLID
 	color = "#B060FF"
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	can_overdose_touch = TRUE
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
+	medallergen_type = MEDALLERGEN_TRICORD
 
-	allergen_type = ALLERGEN_TRICORD // Outpost 21 edit(port) - Medical allergies
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
 /datum/reagent/tricorlidaze/affect_touch(var/mob/living/carbon/M, var/alien, var/removed)
@@ -428,10 +436,11 @@
 	description = "A chemical mixture with almost magical healing powers. Its main limitation is that the targets body temperature must be under 170K for it to metabolise correctly."
 	taste_description = "overripe bananas"
 	reagent_state = LIQUID
+	dermal_absorption = 0.2
 	color = "#8080FF"
 	metabolism = REM * 0.5
 	mrate_static = TRUE
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_CLONEDRUG
 
@@ -457,10 +466,11 @@
 	description = "A liquid compound similar to that used in the cloning process. Can be used to 'finish' the cloning process when used in conjunction with a cryo tube."
 	taste_description = "rotten bananas"
 	reagent_state = LIQUID
+	dermal_absorption = 0.2
 	color = "#80BFFF"
 	metabolism = REM * 0.5
 	mrate_static = TRUE
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_CLONEDRUG
 
@@ -487,11 +497,12 @@
 	description = "A liquid compound based upon those used in cloning. Utilized in cases of toxic shock. May cause liver damage."
 	taste_description = "meat"
 	reagent_state = LIQUID
+	dermal_absorption = 0.2
 	color = "#6b4de3"
 	metabolism = REM * 0.5
 	mrate_static = TRUE
 	affects_dead = FALSE //Clarifying this here since the original intent was this ONLY works on people that have the bloodpump_corpse modifier.
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_MASSINDUSTRY
 	industrial_use = REFINERYEXPORT_REASON_CLONEDRUG
 
@@ -528,10 +539,11 @@
 	description = "A liquid compound based upon that which is used in the cloning process. Utilized primarily in severe cases of toxic shock."
 	taste_description = "meat"
 	reagent_state = LIQUID
+	dermal_absorption = 0.2
 	color = "#94B21C"
 	metabolism = REM * 0.5
 	mrate_static = TRUE
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	affects_dead = TRUE
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_CLONEDRUG
@@ -567,10 +579,11 @@
 	description = "Most probably know this as Tylenol, but this chemical is a mild, simple painkiller."
 	taste_description = "bitterness"
 	reagent_state = LIQUID
+	dermal_absorption = 0.2
 	color = "#C8A5DC"
 	overdose = REAGENTS_OVERDOSE * 2
 	overdose_mod = 0.75
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	metabolism = 0.02
 	mrate_static = TRUE
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
@@ -596,10 +609,11 @@
 	description = "A simple, yet effective painkiller."
 	taste_description = "sourness"
 	reagent_state = LIQUID
+	dermal_absorption = 0.2
 	color = "#CB68FC"
 	overdose = REAGENTS_OVERDOSE
 	overdose_mod = 0.75
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	metabolism = 0.02
 	mrate_static = TRUE
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
@@ -624,10 +638,11 @@
 	description = "An effective and very addictive painkiller."
 	taste_description = "bitterness"
 	reagent_state = LIQUID
+	dermal_absorption = 0.2
 	color = "#800080"
 	overdose = 20
 	overdose_mod = 0.75
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	metabolism = 0.02
 	mrate_static = TRUE
 	supply_conversion_value = REFINERYEXPORT_VALUE_MASSINDUSTRY
@@ -642,6 +657,7 @@
 		M.stuttering = min(50, max(0, M.stuttering + 5)) //If you can't feel yourself, and your main mode of speech is resonation, there's a problem.
 	M.add_chemical_effect(CE_PAINKILLER, 200 * chem_effective)
 	M.add_chemical_effect(CE_SLOWDOWN, 1)
+	M.add_chemical_effect(CE_NARCOTICS, 1)
 	M.eye_blurry = min(M.eye_blurry + 10, 250 * chem_effective)
 
 /datum/reagent/oxycodone/overdose(var/mob/living/carbon/M, var/alien)
@@ -657,10 +673,12 @@
 	description = REAGENT_SYNAPTIZINE + " is used to treat various diseases."
 	taste_description = "bitterness"
 	reagent_state = LIQUID
+	dermal_absorption = 0.2
 	color = "#99CCFF"
 	metabolism = REM * 0.05
+	mrate_static = TRUE
 	overdose = REAGENTS_OVERDOSE
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_DRUG
 
@@ -691,8 +709,10 @@
 	description = REAGENT_HYPERZINE + " is a highly effective, long lasting, muscle stimulant."
 	taste_description = "bitterness"
 	reagent_state = LIQUID
+	dermal_absorption = 0.2
 	color = "#FF3300"
 	overdose = REAGENTS_OVERDOSE * 0.5
+	scannable = SCANNABLE_ADVANCED
 	overdose_mod = 0.25
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_COMSTIM
@@ -725,10 +745,11 @@
 	description = REAGENT_ALKYSINE + " is a drug used to lessen the damage to neurological tissue after a catastrophic injury. Can heal brain tissue."
 	taste_description = "bitterness"
 	reagent_state = LIQUID
+	dermal_absorption = 0.2
 	color = "#FFFF66"
 	metabolism = REM * 0.25
 	overdose = REAGENTS_OVERDOSE
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
 
@@ -753,9 +774,10 @@
 	description = "Heals eye damage"
 	taste_description = "dull toxin"
 	reagent_state = LIQUID
+	dermal_absorption = 0.2
 	color = "#C8A5DC"
 	overdose = REAGENTS_OVERDOSE
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
 
@@ -781,14 +803,15 @@
 	description = "Used to encourage recovery of internal organs and nervous systems. Medicate cautiously."
 	taste_description = "bitterness"
 	reagent_state = LIQUID
+	dermal_absorption = 0.2
 	color = "#561EC3"
 	overdose = 10
 	overdose_mod = 1.5
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
+	medallergen_type = MEDALLERGEN_PERIDAX
 
-	allergen_type = ALLERGEN_PERIDAX // Outpost 21 edit(port) - Medical allergies
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
 /datum/reagent/peridaxon/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
@@ -818,11 +841,12 @@
 	id = REAGENT_ID_OSTEODAXON
 	description = "An experimental drug used to heal bone fractures."
 	reagent_state = LIQUID
+	dermal_absorption = 0.2
 	color = "#C9BCE3"
 	metabolism = REM * 0.5
 	overdose = REAGENTS_OVERDOSE * 0.5
 	overdose_mod = 1.5
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_MASSINDUSTRY
 	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
 
@@ -854,11 +878,12 @@
 	id = REAGENT_ID_MYELAMINE
 	description = "Used to rapidly clot hemorrhages by increasing the effectiveness of platelets. An ideal dosage of 10 units will fully heal any internal hemorrhages."
 	reagent_state = LIQUID
+	dermal_absorption = 0.2
 	color = "#4246C7"
 	metabolism = REM * 0.75
 	overdose = REAGENTS_OVERDOSE * 0.5
 	overdose_mod = 1.5
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	var/repair_strength = 6
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
@@ -906,11 +931,12 @@
 	description = "Used to repair the tissue of the lungs and similar organs."
 	taste_description = "metallic"
 	reagent_state = LIQUID
+	dermal_absorption = 0.2
 	color = "#4444FF"
 	metabolism = REM * 1.5
 	overdose = 10
 	overdose_mod = 1.75
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
 
@@ -942,11 +968,12 @@
 	description = "Used to repair the tissues of the digestive system."
 	taste_description = "chalk"
 	reagent_state = LIQUID
+	dermal_absorption = 0.2
 	color = "#8B4513"
 	metabolism = REM * 1.5
 	overdose = 10
 	overdose_mod = 1.75
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
 
@@ -978,11 +1005,12 @@
 	description = "Used to repair the common tissues involved in filtration."
 	taste_description = "glue"
 	reagent_state = LIQUID
+	dermal_absorption = 0.2
 	color = "#D2691E"
 	metabolism = REM * 1.5
 	overdose = 10
 	overdose_mod = 1.75
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
 
@@ -1016,11 +1044,12 @@
 	description = "Used to repair the specialized tissues involved in the circulatory system."
 	taste_description = "rust"
 	reagent_state = LIQUID
+	dermal_absorption = 0.2
 	color = "#FF4444"
 	metabolism = REM * 1.5
 	overdose = 10
 	overdose_mod = 1.75
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
 
@@ -1049,10 +1078,11 @@
 	description = "An experimental powder believed to have the ability to prevent any organ rejection."
 	taste_description = "flesh"
 	reagent_state = SOLID
+	dermal_absorption = 0
 	color = "#7B4D4F"
 	overdose = 20
 	overdose_mod = 1.5
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	metabolism = REM * 0.06
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
@@ -1108,11 +1138,12 @@
 	description = "A strange, oily powder used by Malish-Katish to prevent organ rejection."
 	taste_description = "mordant"
 	reagent_state = SOLID
+	dermal_absorption = 0
 	color = "#84B2B0"
 	metabolism = REM * 0.06
 	overdose = 20
 	overdose_mod = 1.5
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
 
@@ -1153,6 +1184,8 @@
 	description = REAGENT_RYETALYN + " can cure DNA, Cloning, and genetic damage via a catalytic process."
 	taste_description = "acid"
 	reagent_state = SOLID
+	dermal_absorption = 0
+	scannable = SCANNABLE_BENEFICIAL
 	color = "#004000"
 	overdose = REAGENTS_OVERDOSE
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
@@ -1190,6 +1223,8 @@
 	description = "A powerful oxidizer that reacts with ethanol."
 	taste_description = "bitterness"
 	reagent_state = SOLID
+	dermal_absorption = 0
+	scannable = SCANNABLE_BENEFICIAL
 	color = "#605048"
 	overdose = REAGENTS_OVERDOSE
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
@@ -1227,10 +1262,11 @@
 	description = REAGENT_HYRONALIN + " is a medicinal drug used to counter the effect of radiation poisoning."
 	taste_description = "bitterness"
 	reagent_state = LIQUID
+	dermal_absorption = 0.2
 	color = "#408000"
 	metabolism = REM * 0.25
 	overdose = REAGENTS_OVERDOSE
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
 
@@ -1248,11 +1284,12 @@
 	description = REAGENT_ARITHRAZINE + " is an unstable medication used for the most extreme cases of radiation poisoning."
 	taste_description = "bitterness"
 	reagent_state = LIQUID
+	dermal_absorption = 0.2
 	color = "#008000"
 	metabolism = REM * 0.25
 	overdose = REAGENTS_OVERDOSE
 	overdose_mod = 1.25
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_CLONEDRUG
 
@@ -1273,16 +1310,17 @@
 	description = "An all-purpose antiviral agent."
 	taste_description = "bitterness"
 	reagent_state = LIQUID
+	dermal_absorption = 0.2
 	color = "#C1C1C1"
 	metabolism = REM * 0.25
 	mrate_static = TRUE
 	overdose = REAGENTS_OVERDOSE
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	data = 0
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_DRUG
+	medallergen_type = MEDALLERGEN_SPACACIL
 
-	allergen_type = ALLERGEN_SPACACIL // Outpost 21 edit(port) - Medical allergies
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
 /datum/reagent/spaceacillin/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
@@ -1307,11 +1345,12 @@
 	description = "A wide-spectrum antibiotic drug. Powerful and uncomfortable in equal doses."
 	taste_description = "burnt toast"
 	reagent_state = LIQUID
+	dermal_absorption = 0.2
 	color = "#FFB0B0"
 	mrate_static = TRUE
 	overdose = 10
 	overdose_mod = 1.5
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	data = 0
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_DRUG
@@ -1379,11 +1418,12 @@
 	description = "An all-purpose painkilling antibiotic gel."
 	taste_description = "oil"
 	reagent_state = SOLID
+	dermal_absorption = 0
 	color = "#C1C1C8"
 	metabolism = REM * 0.4
 	mrate_static = TRUE
 	overdose = REAGENTS_OVERDOSE
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	data = 0
 	can_overdose_touch = TRUE
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
@@ -1399,7 +1439,6 @@
 	affect_blood(M, alien, removed * 0.8)
 
 /datum/reagent/spacomycaze/affect_touch(var/mob/living/carbon/M, var/alien, var/removed)
-	..()
 	if(alien == IS_SLIME)
 		if(volume <= 0.1 && data != -1)
 			data = -1
@@ -1432,7 +1471,9 @@
 	description = "Sterilizes wounds in preparation for surgery and thoroughly removes blood. Can additionally be used to prepare a surface for surgery to lower risk of infection."
 	taste_description = "bitterness"
 	reagent_state = LIQUID
+	dermal_absorption = 0 //Custom touch handling.
 	color = "#C8A5DC"
+	scannable = SCANNABLE_BENEFICIAL
 	touch_met = 5
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_CLEAN
@@ -1486,9 +1527,10 @@
 	description = "Leporazine can be use to stabilize an individuals body temperature."
 	taste_description = "bitterness"
 	reagent_state = LIQUID
+	dermal_absorption = 0.2
 	color = "#C8A5DC"
 	overdose = REAGENTS_OVERDOSE
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_CLONEDRUG
 	coolant_modifier = 0.5 // Okay substitute coolant
@@ -1514,10 +1556,11 @@
 	description = "A powder with almost magical properties, this substance can effectively treat genetic damage in humanoids, though excessive consumption has side effects."
 	taste_description = "bitterness"
 	reagent_state = SOLID
+	dermal_absorption = 0 //solid powder
 	color = "#669900"
 	overdose = REAGENTS_OVERDOSE
 	overdose_mod = 2
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_MASSINDUSTRY
 	industrial_use = REFINERYEXPORT_REASON_CLONEDRUG
 
@@ -1567,7 +1610,7 @@
 	reagent_state = SOLID
 	color = "#555555"
 	metabolism = REM * 4 // Nanomachines gotta go fast.
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	affects_robots = TRUE
 	wiki_flag = WIKI_SPOILER
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
@@ -1588,7 +1631,7 @@
 	color = "#80af9c"
 	metabolism = REM * 0.002
 	overdose = REAGENTS_OVERDOSE
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_FOOD
 
@@ -1599,11 +1642,12 @@
 	description = "A rare plant extract with immense, almost magical healing capabilities. Induces a potent psychoactive state, damaging neurons with prolonged use."
 	taste_description = "honey and sunlight"
 	reagent_state = LIQUID
+	dermal_absorption = 0.25
 	color = "#ffb500"
 	overdose = REAGENTS_OVERDOSE * 0.50
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_DRUG
-
+	scannable = SCANNABLE_BENEFICIAL
 
 /datum/reagent/earthsblood/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	M.heal_organ_damage (4 * removed, 4 * removed)
@@ -1623,10 +1667,11 @@
 	description = "A drug used to stablize vat grown bodies. Often used to control the lifespan of biological experiments." // Who else remembers Cybersix?
 	taste_description = "burning metal"
 	reagent_state = LIQUID
+	dermal_absorption = 0.2
 	color = "#31d422"
 	overdose = 15
 	overdose_mod = 1.2
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_DRUG
 
@@ -1683,6 +1728,8 @@
 	id = REAGENT_ID_TERCOZOLAM
 	color = "#afeb17"
 	metabolism = 0.05
+	scannable = SCANNABLE_BENEFICIAL
+	dermal_absorption = 0.2
 	description = "A well respected drug used for treatment of schizophrenia in specific."
 	overdose = REAGENTS_OVERDOSE * 2
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED

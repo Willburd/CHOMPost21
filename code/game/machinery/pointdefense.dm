@@ -139,6 +139,11 @@ GLOBAL_LIST_BOILERPLATE(pointdefense_turrets, /obj/machinery/pointdefense)
 	. = ..()
 	default_apply_parts()
 	update_icon()
+	apply_mapped_upgrades() // Outpost 21 edit(port) - Apply Mapped upgrades
+
+/obj/machinery/pointdefense/Destroy(force, ...)
+	. = ..()
+	engaging = null
 
 /obj/machinery/pointdefense/get_description_interaction()
 	. = ..()

@@ -431,7 +431,7 @@
 					/obj/item/clothing/glasses/sunglasses = 1,
 					/obj/item/radio/headset/syndicate = 1,
 					/obj/item/pda = 1,
-					/obj/item/communicator = 1,
+					// /obj/item/communicator = 1, // Outpost 21 edit - Communicator removal
 					/obj/item/tape_roll = 2,
 					/obj/item/handcuffs = 4,
 					/obj/item/handcuffs/legcuffs = 4,
@@ -1324,8 +1324,8 @@
 					/obj/item/clothing/ears/circuitry = 1,
 					/obj/item/text_to_speech = 5,
 					/obj/item/paicard = 5,
-					/obj/item/communicator = 10,
-					/obj/item/communicator/watch = 10,
+					// /obj/item/communicator = 10, // Outpost 21 edit - Communicator removal
+					// /obj/item/communicator/watch = 10, // Outpost 21 edit - Communicator removal
 					/obj/item/radio = 10,
 					/obj/item/camera = 5,
 					/obj/item/taperecorder = 5,
@@ -1351,8 +1351,8 @@
 					/obj/item/clothing/ears/circuitry = 100,
 					/obj/item/text_to_speech = 300,
 					/obj/item/paicard = 100,
-					/obj/item/communicator = 100,
-					/obj/item/communicator/watch = 100,
+					// /obj/item/communicator = 100, // Outpost 21 edit - Communicator removal
+					// /obj/item/communicator/watch = 100, // Outpost 21 edit - Communicator removal
 					/obj/item/radio = 100,
 					/obj/item/camera = 100,
 					/obj/item/taperecorder = 100,
@@ -1387,8 +1387,8 @@
 					/obj/item/clothing/ears/circuitry = 1,
 					/obj/item/text_to_speech = 5,
 					/obj/item/paicard = 5,
-					/obj/item/communicator = 10,
-					/obj/item/communicator/watch = 10,
+					// /obj/item/communicator = 10, // Outpost 21 edit - Communicator removal
+					// /obj/item/communicator/watch = 10, // Outpost 21 edit - Communicator removal
 					/obj/item/radio = 10,
 					/obj/item/camera = 5,
 					/obj/item/taperecorder = 5,
@@ -1703,6 +1703,10 @@
 					/obj/item/clothing/mask/gas/plaguedoctor/fluff = 3,
 					/obj/item/clothing/under/owl = 3,
 					/obj/item/clothing/mask/gas/owl_mask = 3,
+					/obj/item/clothing/mask/masquerade = 3,
+					/obj/item/clothing/mask/masquerade/feathered = 3,
+					/obj/item/clothing/mask/masquerade/two_colors = 3,
+					/obj/item/clothing/mask/masquerade/two_colors/feathered = 3,
 					/obj/item/clothing/under/waiter = 3,
 					/obj/item/clothing/suit/storage/apron = 3,
 					/obj/item/clothing/under/pirate = 3,
@@ -1789,6 +1793,10 @@
 					/obj/item/clothing/mask/gas/plaguedoctor/fluff = 600,
 					/obj/item/clothing/under/owl = 400,
 					/obj/item/clothing/mask/gas/owl_mask = 400,
+					/obj/item/clothing/mask/masquerade = 100,
+					/obj/item/clothing/mask/masquerade/feathered = 100,
+					/obj/item/clothing/mask/masquerade/two_colors = 100,
+					/obj/item/clothing/mask/masquerade/two_colors/feathered = 100,
 					/obj/item/clothing/under/waiter = 100,
 					/obj/item/clothing/suit/storage/apron = 200,
 					/obj/item/clothing/under/pirate = 300,
@@ -1865,8 +1873,8 @@
 					/obj/item/clothing/ears/circuitry = 1,
 					/obj/item/text_to_speech = 5,
 					/obj/item/paicard = 5,
-					/obj/item/communicator = 10,
-					/obj/item/communicator/watch = 10,
+					// /obj/item/communicator = 10, // Outpost 21 edit - Communicator removal
+					// /obj/item/communicator/watch = 10, // Outpost 21 edit - Communicator removal
 					/obj/item/radio = 10,
 					/obj/item/camera = 5,
 					/obj/item/taperecorder = 5,
@@ -1892,8 +1900,8 @@
 					/obj/item/clothing/ears/circuitry = 100,
 					/obj/item/text_to_speech = 300,
 					/obj/item/paicard = 100,
-					/obj/item/communicator = 100,
-					/obj/item/communicator/watch = 100,
+					// /obj/item/communicator = 100, // Outpost 21 edit - Communicator removal
+					// /obj/item/communicator/watch = 100, // Outpost 21 edit - Communicator removal
 					/obj/item/radio = 100,
 					/obj/item/camera = 100,
 					/obj/item/taperecorder = 100,
@@ -2727,8 +2735,8 @@
 					/obj/item/clothing/ears/circuitry = 1,
 					/obj/item/text_to_speech = 5,
 					/obj/item/paicard = 5,
-					/obj/item/communicator = 10,
-					/obj/item/communicator/watch = 10,
+					// /obj/item/communicator = 10, // Outpost 21 edit - Communicator removal
+					// /obj/item/communicator/watch = 10, // Outpost 21 edit - Communicator removal
 					/obj/item/radio = 10,
 					/obj/item/camera = 5,
 					/obj/item/taperecorder = 5,

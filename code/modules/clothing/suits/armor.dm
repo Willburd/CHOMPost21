@@ -9,8 +9,9 @@
 	heat_protection = CHEST
 	max_heat_protection_temperature = ARMOR_MAX_HEAT_PROTECTION_TEMPERATURE
 	siemens_coefficient = 0.6
+	resistance_flags = FIRE_PROOF
 
-/obj/item/clothing/suit/mob_can_equip(var/mob/living/carbon/human/H, slot, disable_warning = FALSE)
+/obj/item/clothing/suit/mob_can_equip(mob/living/carbon/human/H, slot, disable_warning = FALSE, ignore_obstruction, go_over_slot = FALSE)
 	if(..()) //This will only run if no other problems occured when equiping.
 		for(var/obj/item/clothing/I in list(H.gloves, H.shoes))
 			if(I && (src.body_parts_covered & ARMS && I.body_parts_covered & ARMS) )
@@ -160,7 +161,8 @@
 	body_parts_covered = CHEST
 	armor = list(melee = 40, bullet = 30, laser = 30, energy = 10, bomb = 10, bio = 0, rad = 0)
 
-
+// Ooold, old reactive armor.
+/*
 //Reactive armor
 //When the wearer gets hit, this armor will teleport the user a short distance away (to safety or to more danger, no one knows. That's the fun of it!)
 /obj/item/clothing/suit/armor/reactive
@@ -172,6 +174,7 @@
 	blood_overlay_type = "armor"
 	slowdown = 1
 	armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
+	special_handling = TRUE
 
 /obj/item/clothing/suit/armor/reactive/handle_shield(mob/user, var/damage, atom/damage_source = null, mob/attacker = null, var/def_zone = null, var/attack_text = "the attack")
 	if(prob(50))
@@ -196,8 +199,11 @@
 		return PROJECTILE_FORCE_MISS
 	return 0
 
-/obj/item/clothing/suit/armor/reactive/attack_self(mob/user as mob)
-	active = !( active )
+/obj/item/clothing/suit/armor/reactive/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
+	active = !active
 	if (active)
 		to_chat(user, span_blue("The reactive armor is now active."))
 		icon_state = "reactive"
@@ -211,7 +217,7 @@
 	active = FALSE
 	icon_state = "reactiveoff"
 	..()
-
+*/
 // Alien armor has a chance to completely block attacks.
 /obj/item/clothing/suit/armor/alien
 	name = "alien enhancement vest"
@@ -535,7 +541,7 @@
 		|ACCESSORY_SLOT_ARMBAND)	//CHOMPEdit - let pcarriers have fashion
 	blood_overlay_type = "armor"
 
-/obj/item/clothing/suit/armor/pcarrier/mob_can_equip(var/mob/living/carbon/human/H, slot, disable_warning = FALSE)
+/obj/item/clothing/suit/armor/pcarrier/mob_can_equip(mob/living/carbon/human/H, slot, disable_warning = FALSE, ignore_obstruction, go_over_slot = FALSE)
 	if(..()) //This will only run if no other problems occured when equiping.
 		if(H.gloves)
 			if(H.gloves.body_parts_covered & ARMS)

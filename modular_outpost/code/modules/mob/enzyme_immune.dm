@@ -52,3 +52,19 @@
 
 /mob/living/simple_mob/vore/gryphon
 	enzyme_affect = FALSE
+
+/mob/living/simple_mob/mechanical/mecha //Captures all mechs because... duh? They're mechs?
+	enzyme_affect = FALSE
+
+//Black hole bois, just grouping them a bit.
+/mob/living/simple_mob/vore/blackhole
+	enzyme_affect = FALSE
+
+/mob/living/simple_mob/vore/blackhole_obelisk
+	enzyme_affect = FALSE
+
+/mob/living/simple_mob/humanoid/merc/ranged/sniper/blackhole
+	enzyme_affect = FALSE
+
+/mob/living/simple_mob/vore/otie/syndicate/blackhole
+	enzyme_affect = FALSE

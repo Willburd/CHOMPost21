@@ -13,7 +13,6 @@
 	throw_speed = 1
 	throw_range = 5
 	w_class = ITEMSIZE_NORMAL
-	origin_tech = list(TECH_ENGINEERING = 4, TECH_MATERIAL = 2)
 	matter = list(DEFAULT_WALL_MATERIAL = 50000)
 	preserve_item = TRUE // RCDs are pretty important.
 	var/datum/effect/effect/system/spark_spread/spark_system
@@ -67,8 +66,11 @@
 	return ..()
 */
 // Changes which mode it is on.
-/obj/item/rcd/attack_self(mob/living/user)
-/* VOREStation Removal - Moved to VR
+/*/obj/item/rcd/attack_self(mob/living/user)
+	. = ..(user)
+	if(.)
+		return TRUE
+	//VOREStation Removal - Moved to VR
 	if(mode_index >= modes.len) // Shouldn't overflow unless someone messes with it in VV poorly but better safe than sorry.
 		mode_index = 1
 	else
@@ -310,7 +312,6 @@
 	icon_state = "rcd"
 	item_state = "rcdammo"
 	w_class = ITEMSIZE_SMALL
-	origin_tech = list(TECH_MATERIAL = 2)
 	matter = list(DEFAULT_WALL_MATERIAL = 30000,MAT_GLASS = 15000)
 	var/remaining = RCD_MAX_CAPACITY / 0.75	//CHOMPEdit
 
@@ -318,5 +319,4 @@
 	name = "high-capacity matter cartridge"
 	desc = "Do not ingest."
 	matter = list(DEFAULT_WALL_MATERIAL = 45000,MAT_GLASS = 22500)
-	origin_tech = list(TECH_MATERIAL = 4)
 	remaining = RCD_MAX_CAPACITY * 2	//CHOMPEdit

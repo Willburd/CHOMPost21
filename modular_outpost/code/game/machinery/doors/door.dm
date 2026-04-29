@@ -3,6 +3,7 @@
 	desc = "Organic structure that opens on its own."
 	icon = 'modular_outpost/icons/turf/stomach.dmi'
 	icon_state = "door1"
+	var/stented = FALSE
 
 /obj/machinery/door/flesh/Initialize(mapload)
 	// randomize openclose
@@ -20,17 +21,29 @@
 
 /obj/machinery/door/flesh/bullet_act(var/obj/item/projectile/Proj)
 	// no damage
-	src.health = src.maxhealth
+	health = maxhealth
 
 /obj/machinery/door/flesh/hitby(AM as mob|obj, var/speed=5)
 	// no damage
-	visible_message(span_danger("[src.name] was hit by [AM], with no visible effect."))
+	visible_message(span_danger("[name] was hit by [AM], with no visible effect."))
 
-/obj/machinery/door/flesh/attackby(obj/item/I as obj, mob/user as mob)
-	// no interaction
+/obj/machinery/door/flesh/attackby(obj/item/I as obj, mob/user)
+	if(istype(I, /obj/item/stent_kit))
+		user.visible_message("\the [user] begins stenting \the [src] open!")
+		if(do_after(user, 8 SECONDS, target = src))
+			user.drop_from_inventory(I)
+			qdel(I)
+			apply_stent()
+		return
 
 /obj/machinery/door/flesh/attack_hand(mob/user)
-	// no interaction
+	if(!stented)
+		return
+	user.visible_message("\the [user] pulls out the stent!")
+	user.put_in_active_hand(new /obj/item/stent_kit(get_turf(src)))
+	stented = FALSE
+	update_icon()
+	close() // Reflexive
 
 /obj/machinery/door/flesh/attack_generic(mob/user, damage)
 	attack_hand(user)
@@ -42,28 +55,59 @@
 	// no behavior
 
 /obj/machinery/door/flesh/emp_act(severity, recursive)
-	// immune to
-	src.health = src.maxhealth
+	. = ..()
+	if (. & EMP_PROTECT_SELF || (stat & (BROKEN|NOPOWER)))
+		return
+	health = maxhealth
 
 /obj/machinery/door/flesh/ex_act(severity)
 	// immune to
-	src.health = src.maxhealth
+	health = maxhealth
 
 /obj/machinery/door/flesh/blob_act()
 	// even you bob
-	src.health = src.maxhealth
+	health = maxhealth
 
 /obj/machinery/door/flesh/requiresID()
 	return FALSE
 
 /obj/machinery/door/flesh/next_close_wait()
-	return rand(5,60) SECONDS
+	return rand(5,40) SECONDS
 
 /obj/machinery/door/flesh/proc/handle_living()
-	if(!src.density)
-		addtimer(CALLBACK(src, PROC_REF(close)), 1)
+	if(!stented)
+		if(!density)
+			addtimer(CALLBACK(src, PROC_REF(close)), 1)
+		else
+			addtimer(CALLBACK(src, PROC_REF(open)), 1)
 	else
-		addtimer(CALLBACK(src, PROC_REF(open)), 1)
+		playsound(src, 'sound/machines/door/airlock_creaking.ogg', 100, 1)
+		if(prob(20)) // KABLAM!
+			addtimer(CALLBACK(src, PROC_REF(break_stent)), rand(2,4) SECONDS)
+			return
+	addtimer(CALLBACK(src, PROC_REF(handle_living)), next_close_wait())
+
+/obj/machinery/door/flesh/proc/apply_stent()
+	stented = TRUE
+	update_icon()
+	if(density)
+		open()
+
+/obj/machinery/door/flesh/proc/break_stent()
+	if(stented) // just incase
+		stented = FALSE
+		update_icon()
+		playsound(src, 'sound/machines/door/airlockforced.ogg', 70, 1)
+		// Throw some rods around
+		var/obj/item/stack/rods/throw_rod = (new /obj/item/stack/rods(get_turf(src)))
+		throw_rod.throw_at(get_edge_target_turf(src, pick(GLOB.alldirs)), 3, 1)
+		throw_rod = new /obj/item/stack/rods(get_turf(src))
+		throw_rod.throw_at(get_edge_target_turf(src, pick(GLOB.alldirs)), 3, 1)
+		if(prob(10))
+			throw_rod = new /obj/item/stack/rods(get_turf(src))
+			throw_rod.throw_at(get_edge_target_turf(src, pick(GLOB.alldirs)), 3, 1)
+	// Scrunch
+	close()
 	addtimer(CALLBACK(src, PROC_REF(handle_living)), next_close_wait())
 
 /obj/machinery/door/flesh/process()
@@ -78,29 +122,34 @@
 		if(istype(T) && !T.density)
 			var/place_dir = turn(direction, 180)
 			var/offset = 32
-			if(!flesh_overlay_cache["flesh_side_[place_dir]"])
-				flesh_overlay_cache["flesh_side_[place_dir]"] = image('icons/turf/stomach_vr.dmi', "flesh_side", dir = place_dir)
+			if(!GLOB.flesh_overlay_cache["flesh_side_[place_dir]"])
+				GLOB.flesh_overlay_cache["flesh_side_[place_dir]"] = image('icons/turf/stomach_vr.dmi', "flesh_side", dir = place_dir)
 				var/image/cache = null
 				switch(direction)
 					if(NORTH)
-						cache = flesh_overlay_cache["flesh_side_[place_dir]"]
+						cache = GLOB.flesh_overlay_cache["flesh_side_[place_dir]"]
 						cache.pixel_y = offset
 					if(SOUTH)
-						cache = flesh_overlay_cache["flesh_side_[place_dir]"]
+						cache = GLOB.flesh_overlay_cache["flesh_side_[place_dir]"]
 						cache.pixel_y = -offset
 					if(EAST)
-						cache = flesh_overlay_cache["flesh_side_[place_dir]"]
+						cache = GLOB.flesh_overlay_cache["flesh_side_[place_dir]"]
 						cache.pixel_x = offset
 					if(WEST)
-						cache = flesh_overlay_cache["flesh_side_[place_dir]"]
+						cache = GLOB.flesh_overlay_cache["flesh_side_[place_dir]"]
 						cache.pixel_x = -offset
-			add_overlay(flesh_overlay_cache["flesh_side_[place_dir]"])
+			add_overlay(GLOB.flesh_overlay_cache["flesh_side_[place_dir]"])
+
+	if(stented)
+		add_overlay(image('modular_outpost/icons/turf/stomach.dmi', "stent"))
 
 /obj/machinery/door/flesh/open()
 	playsound(src, 'sound/effects/blobattack.ogg', 100, 1)
 	. = ..()
 
 /obj/machinery/door/flesh/close()
+	if(stented)
+		return
 	playsound(src, 'sound/effects/squelch1.ogg', 100, 1)
 	for(var/turf/turf in locs)
 		for(var/atom/movable/AM in turf)

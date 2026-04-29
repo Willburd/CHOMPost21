@@ -4,6 +4,7 @@
 	wrenchable = 1
 	icon_state = "drying_rack"
 	icon_base = "drying_rack"
+	circuit = /obj/item/circuitboard/smartfridge/drying
 
 /obj/machinery/smartfridge/drying_rack/Initialize(mapload)
 	. = ..()
@@ -73,3 +74,10 @@
 			WL.wetness = max(0, WL.wetness - rand(1, 3))
 
 	return
+
+// Outpost 21 edit(port) begin - Fix error overlay on drying racks
+/obj/machinery/smartfridge/drying_rack/power_change()
+	. = ..()
+	cut_overlays()
+	update_icon()
+// Outpost 21 edit(port) end

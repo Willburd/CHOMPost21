@@ -24,6 +24,7 @@
 	qdel(radio)
 	camera = null
 	radio = null
+	showing = null
 	. = ..()
 
 /obj/item/tvcamera/examine()
@@ -48,6 +49,9 @@
 	. = ..()
 
 /obj/item/tvcamera/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	add_fingerprint(user)
 	user.set_machine(src)
 	show_ui(user)
@@ -176,6 +180,7 @@
 	var/obj/item/radio/bradio
 	var/datum/weakref/showing
 	var/showing_name
+	special_handling = TRUE
 
 /obj/item/clothing/accessory/bodycam/Initialize(mapload)
 	. = ..()
@@ -211,6 +216,9 @@
 	. = ..()
 
 /obj/item/clothing/accessory/bodycam/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	add_fingerprint(user)
 	//user.set_machine(src)
 	show_bodycam_ui(user)
@@ -314,12 +322,6 @@
 
 /obj/item/clothing/accessory/bodycam/update_icon()
 	..()
-	if(bcamera.status)
-		icon_state = "eshield"
-		item_state = "eshield"
-	else
-		icon_state = "eshield"
-		item_state = "eshield"
 	var/mob/living/carbon/human/H = loc
 	if(istype(H))
 		H.update_inv_r_hand()

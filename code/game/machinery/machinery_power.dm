@@ -76,14 +76,12 @@
 // Do not do power stuff in New/Initialize until after ..()
 /obj/machinery/Initialize(mapload)
 	. = ..()
-
 	//ChompEDIT START -- only add this if we init on a non-turf (and non-null)
 	if(!recursive_set && loc && !isturf(loc))
 		recursive_set = TRUE
 		AddComponent(/datum/component/recursive_move)
 		RegisterSignal(src, COMSIG_MOVABLE_ATTEMPTED_MOVE, PROC_REF(update_power_on_move)) //we only need this for recursive moving
 	//ChompEDIT END
-
 	var/power = POWER_CONSUMPTION
 	REPORT_POWER_CONSUMPTION_CHANGE(0, power)
 	power_init_complete = TRUE

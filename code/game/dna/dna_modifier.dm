@@ -841,6 +841,7 @@
 			//testing("Random bad mut!")
 			randmutb(WC)
 			domutcheck(WC,null,MUTCHK_FORCED)
+			WC.check_mutation_cascade_gib() // Outpost 21 edit - mutation cascade trait
 			WC.UpdateAppearance()
 	// Traitgenes Do gene updates here, and more comprehensively
 	if(ishuman(WC))
@@ -865,6 +866,7 @@
 			if(prob(95))
 				randmutg(WC)
 		domutcheck(WC,null,MUTCHK_FORCED)
+		WC.check_mutation_cascade_gib() // Outpost 21 edit - mutation cascade trait
 		WC.UpdateAppearance()
 	// Traitgenes Do gene updates here, and more comprehensively
 	if(ishuman(WC))

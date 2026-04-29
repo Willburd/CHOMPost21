@@ -3,6 +3,7 @@
 	siemens_coefficient = 0.9
 	drop_sound = 'sound/items/drop/clothing.ogg'
 	pickup_sound = 'sound/items/pickup/clothing.ogg'
+	resistance_flags = FLAMMABLE
 	var/list/species_restricted = null //Only these species can wear this kit.
 
 	var/list/accessories
@@ -57,11 +58,11 @@
 	..()
 	if(enables_planes)
 		user.recalculate_vis()
-	if(("[slot]" in slot_flags_enumeration) && (slot_flags & slot_flags_enumeration["[slot]"]))
+	if(("[slot]" in GLOB.slot_flags_enumeration) && (slot_flags & GLOB.slot_flags_enumeration["[slot]"]))
 		for(var/trait in clothing_traits)
 			ADD_CLOTHING_TRAIT(user, trait)
 
-/obj/item/clothing/dropped(mob/user)
+/obj/item/clothing/dropped(mob/user, equipping, slot)
 	..()
 	if(enables_planes)
 		user.recalculate_vis()
@@ -69,7 +70,7 @@
 		REMOVE_CLOTHING_TRAIT(user, trait)
 
 //BS12: Species-restricted clothing check.
-/obj/item/clothing/mob_can_equip(M as mob, slot, disable_warning = FALSE)
+/obj/item/clothing/mob_can_equip(mob/M, slot, disable_warning = FALSE, ignore_obstruction, go_over_slot)
 
 	//if we can't equip the item anyway, don't bother with species_restricted (cuts down on spam)
 	if (!..())
@@ -97,7 +98,7 @@
 					wearable = FALSE
 
 				///Prevent us from from wearing clothing if we ARE a teshari or werebeast. This is due to these two having different anatomy that don't fix most clothing.
-				else if((our_species == SPECIES_TESHARI || our_species == SPECIES_WEREBEAST) && !sprite_sheets[our_species]) //teshari and werebeasts must have their own sprites. Vox can get away...somewhat
+				else if((our_species == SPECIES_TESHARI || our_species == SPECIES_WEREBEAST) && !LAZYACCESS(sprite_sheets, our_species)) //teshari and werebeasts must have their own sprites. Vox can get away...somewhat
 					wearable = FALSE
 				else
 					wearable = TRUE
@@ -374,55 +375,71 @@
 	transfer_blood = 0
 	update_icon()
 
-/obj/item/clothing/gloves/mob_can_equip(mob/user, slot, disable_warning = FALSE)
+/obj/item/clothing/gloves/mob_can_equip(mob/user, slot, disable_warning = FALSE, ignore_obstruction, go_over_slot = TRUE)
 	var/mob/living/carbon/human/H = user
 
 	if(slot && slot == slot_gloves)
 		var/obj/item/clothing/G = H.gloves
-		if(istype(G))
-			ring = H.gloves
+		//Check glove_level, which both accessories and gloves share.
+		if(istype(G, /obj/item/clothing/accessory) || istype(G, /obj/item/clothing/gloves))
+			ring = H.gloves //Ring or gloves both work here. They both have the glove_level var.
 			if(ring.glove_level >= src.glove_level)
-				to_chat(user, "You are unable to wear \the [src] as \the [H.gloves] are in the way.")
 				ring = null
-				return 0
-			else
-				H.drop_from_inventory(ring)	//Remove the ring (or other under-glove item in the hand slot?) so you can put on the gloves.
-				ring.forceMove(src)
-				to_chat(user, "You slip \the [src] on over \the [src.ring].")
-				if(!(flags & THICKMATERIAL))
-					punch_force += ring.punch_force
-		else
+				return FALSE
 			ring = null
 
-	if(!..())
-		if(ring) //Put the ring back on if the check fails.
-			if(H.equip_to_slot_if_possible(ring, slot_gloves))
-				src.ring = null
-		punch_force = initial(punch_force)
-		return 0
+		//Check overgloves, which only gloves have.
+		if(istype(G, /obj/item/clothing/gloves))
+			gloves = H.gloves
+			if(gloves.overgloves)
+				gloves = null
+				return FALSE
+			gloves = null
 
-	wearer = WEAKREF(H)
-	return 1
+	return ..()
 
-/obj/item/clothing/gloves/dropped(mob/user)
+/obj/item/clothing/gloves/equipped(mob/user, slot)
+	wearer = WEAKREF(user)
+	return ..()
+
+/obj/item/clothing/gloves/dropped(mob/user, equipping, slot)
 	..()
 
 	punch_force = initial(punch_force)
 	wearer = null
 	if(!ishuman(user))
 		return
-
 	var/mob/living/carbon/human/H = user
-	if(gloves) //We have nested gloves! Gloves under our gloves!
+
+	//Equipping to our glove slot? Cover our former gloves, if applicable.
+	if(equipping && slot && slot == slot_gloves)
+		var/obj/item/clothing/G = H.gloves
+		if(istype(G))
+			to_chat(user, "You slip \the [src] on over \the [H.gloves].")
+			if(istype(G, /obj/item/clothing/gloves))
+				gloves = H.gloves
+			else if(istype(G, /obj/item/clothing/accessory))
+				ring = H.gloves
+			else
+				gloves = H.gloves //Fallback
+			H.unEquip(H.gloves, TRUE, src)
+			if(!(flags & THICKMATERIAL))
+				if(istype(G, /obj/item/clothing/gloves) || istype(G, /obj/item/clothing/accessory)) //Because sometimes you can wear non-glove items on your hands.
+					punch_force += ring.punch_force
+		return
+
+	//Taking our gloves off? Put our former gloves / ring on.
+	if(gloves)
 		if(!H.equip_to_slot_if_possible(gloves, slot_gloves))
 			gloves.forceMove(get_turf(src))
-		if(ring)
-			gloves.ring = ring
-		src.gloves = null
-	else if(ring && istype(H)) //We do NOT have gloves under our gloves but have a ring under our glove instead!
+		gloves = null
+		return
+
+	if(ring) //We do NOT have gloves under our gloves but have a ring under our glove instead!
 		if(!H.equip_to_slot_if_possible(ring, slot_gloves))
 			ring.forceMove(get_turf(src))
-		src.ring = null
+		ring = null
+		return
 
 /obj/item/clothing/gloves
 	var/datum/unarmed_attack/special_attack = null //do the gloves have a special unarmed attack?
@@ -478,16 +495,20 @@
 		)
 	drop_sound = 'sound/items/drop/hat.ogg'
 	pickup_sound = 'sound/items/pickup/hat.ogg'
+	helmet_handling = TRUE
 
-/obj/item/clothing/head/attack_self(mob/user)
+/obj/item/clothing/head/attack_self(mob/user, callback)
+	. = ..(user)
+	if(.)
+		return TRUE
+	if(special_handling && !callback)
+		return FALSE
 	if(light_range)
 		if(!isturf(user.loc))
 			to_chat(user, "You cannot toggle the light while in this [user.loc]")
 			return
 		update_flashlight(user)
 		to_chat(user, "You [light_on ? "enable" : "disable"] the helmet light.")
-	else
-		return ..(user)
 
 /obj/item/clothing/head/proc/update_flashlight(var/mob/user = null)
 	set_light_on(!light_on)
@@ -745,7 +766,7 @@
 	if(holding)
 		add_overlay("[icon_state]_knife")
 	if(contaminated)
-		add_overlay(contamination_overlay)
+		add_overlay(GLOB.contamination_overlay)
 	if(gurgled) //VOREStation Edit Start
 		wash(CLEAN_ALL)
 		gurgle_contaminate() //VOREStation Edit End
@@ -755,6 +776,8 @@
 
 /obj/item/clothing/shoes/wash()
 	. = ..()
+	blood_color = null
+	track_blood = 0
 	update_icon()
 
 /obj/item/clothing/shoes/proc/handle_movement(var/turf/walking, var/running, var/mob/living/carbon/human/pred)
@@ -781,7 +804,7 @@
 	// I_HELP: No painful description, messages only sent to prey. Similar to inshoe steppies from before.
 	// I_DISARM: Painful yet harmless descriptions, weaken on walk. Attack logs on weaken.
 	// I_GRAB: Grabby/Squishing descriptions, weaken on walk. Attack logs on weaken.
-	// I_HARM: Rand .5-1.5 multiplied by .25 min or 1.75 max, multiplied by 3.5 on walk. Ranges from .125 min to 9.1875 max damage to each limb
+	// I_HURT: Rand .5-1.5 multiplied by .25 min or 1.75 max, multiplied by 3.5 on walk. Ranges from .125 min to 9.1875 max damage to each limb
 	var/message_pred = null
 	var/message_prey = null
 
@@ -863,15 +886,16 @@
 		var/mob/M = src.loc
 		M.update_inv_shoes()
 
-/obj/item/clothing/shoes/attack_self(var/mob/user)
+/obj/item/clothing/shoes/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	for(var/mob/M in src)
 		if(isvoice(M)) //Don't knock voices out!
 			continue
 		M.forceMove(get_turf(user))
 		to_chat(M, span_warning("[user] shakes you out of \the [src]!"))
 		to_chat(user, span_notice("You shake [M] out of \the [src]!"))
-
-	..()
 
 /obj/item/clothing/shoes/container_resist(mob/living/micro)
 	var/mob/living/carbon/human/macro = loc
@@ -974,7 +998,7 @@
 		RemoveHood()
 	..()
 
-/obj/item/clothing/suit/dropped(mob/user)
+/obj/item/clothing/suit/dropped(mob/user, equipping, slot)
 	RemoveHood()
 	..()
 
@@ -1403,7 +1427,7 @@
 
 				// only override icon if a corresponding digitigrade replacement icon_state exists
 				// otherwise, keep the old non-digi icon_define (or nothing)
-				if(icon_state && cached_icon_states(update_icon_define_digi):Find(icon_state)) //Unsure what to do to this seeing as it does :Find()
+				if(icon_state && icon_states_fast(update_icon_define_digi):Find(icon_state)) //Unsure what to do to this seeing as it does :Find()
 					update_icon_define = update_icon_define_digi
 
 
@@ -1451,3 +1475,21 @@
 	if(istype(wearer))
 		for(var/new_trait in trait_or_traits)
 			REMOVE_CLOTHING_TRAIT(wearer, new_trait)
+
+/obj/item/clothing/head/attack(mob/living/M, mob/living/user, target_zone, attack_modifier)
+	. = ..()
+
+
+/obj/item/clothing/head/attack_robot(mob/living/silicon/robot/user)
+	. = ..()
+
+	if(!Adjacent(user))
+		return
+
+	balloon_alert(user, "picking up hat...")
+	if(!do_after(user, 3 SECONDS, src))
+		return
+	if(QDELETED(src) || !Adjacent(user) || user.incapacitated)
+		return
+	user.place_on_head(src)
+	balloon_alert(user, "picked up hat")

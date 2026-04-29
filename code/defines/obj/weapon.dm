@@ -39,7 +39,30 @@
 	throw_speed = 3
 	throw_range = 15
 	attack_verb = list("HONKED")
-	var/spam_flag = 0
+	var/honk_sound = 'sound/items/bikehorn.ogg'
+	var/cooldown = 0
+	var/honk_text = FALSE
+	///Var for attack_self chain
+	var/special_handling = FALSE
+
+/obj/item/bikehorn/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
+	if(special_handling)
+		return FALSE
+	if(cooldown <= world.time)
+		cooldown = (world.time + 2 SECONDS)
+		playsound(src, honk_sound, 50, 1)
+		add_fingerprint(user)
+		if(honk_text)
+			audible_message(span_maroon("[honk_text]"))
+
+/obj/item/bikehorn/Crossed(atom/movable/AM as mob|obj)
+	if(AM.is_incorporeal())
+		return
+	if(isliving(AM))
+		playsound(src, honk_sound, 50, 1)
 
 /obj/item/c_tube
 	name = "cardboard tube"
@@ -50,6 +73,7 @@
 	w_class = ITEMSIZE_SMALL
 	throw_speed = 4
 	throw_range = 5
+	resistance_flags = FLAMMABLE
 
 /obj/item/disk
 	name = "disk"
@@ -63,6 +87,7 @@
 	icon_state = "nucleardisk"
 	item_state = "card-id"
 	w_class = ITEMSIZE_SMALL
+	resistance_flags = INDESTRUCTIBLE | FIRE_PROOF
 
 /*
 /obj/item/game_kit
@@ -80,12 +105,13 @@
 /obj/item/gift
 	name = "gift"
 	desc = "A wrapped item."
-	icon = 'icons/obj/items.dmi'
+	icon = 'icons/obj/gifts.dmi'
 	icon_state = "gift3"
 	var/size = 3.0
 	var/obj/item/gift = null
 	item_state = "gift"
 	w_class = ITEMSIZE_LARGE
+	resistance_flags = FLAMMABLE
 
 /*/obj/item/syndicate_uplink
 	name = "station bounced radio"
@@ -103,8 +129,7 @@
 	item_state = "radio"
 	throw_speed = 4
 	throw_range = 20
-	matter = list(MAT_STEEL = 100)
-	origin_tech = list(TECH_MAGNET = 2, TECH_ILLEGAL = 3)*/
+	matter = list(MAT_STEEL = 100)*/
 
 /obj/item/SWF_uplink
 	name = "station-bounced radio"
@@ -123,7 +148,6 @@
 	throw_speed = 4
 	throw_range = 20
 	matter = list(MAT_STEEL = 100)
-	origin_tech = list(TECH_MAGNET = 1)
 	drop_sound = 'sound/items/drop/device.ogg'
 	pickup_sound = 'sound/items/pickup/device.ogg'
 
@@ -187,7 +211,7 @@
 	icon_state = "power_mod"
 	item_state = "std_mod"
 	desc = "Heavy-duty switching circuits for power control."
-	matter = list(MAT_STEEL = 50, MAT_GLASS = 50)
+	matter = RECYCLE_CIRCUIT_MATERIALS
 
 /obj/item/module/id_auth
 	name = "\improper ID authentication module"
@@ -215,12 +239,15 @@
 	throw_speed = 4
 	throw_range = 20
 
-/obj/item/camera_bug/attack_self(mob/user as mob)
+/obj/item/camera_bug/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	if(in_use)
 		return
 
 	var/list/cameras = new/list()
-	for (var/obj/machinery/camera/C in cameranet.cameras)
+	for (var/obj/machinery/camera/C in GLOB.cameranet.cameras)
 		if (C.bugged && C.status)
 			cameras.Add(C)
 	if (length(cameras) == 0)
@@ -297,14 +324,12 @@
 	name = "console screen"
 	desc = "Used in the construction of computers and other devices with a interactive console."
 	icon_state = "screen"
-	origin_tech = list(TECH_MATERIAL = 1)
 	matter = list(MAT_GLASS = 200)
 
 /obj/item/stock_parts/capacitor
 	name = "capacitor"
 	desc = "A basic capacitor used in the construction of a variety of devices."
 	icon_state = "capacitor"
-	origin_tech = list(TECH_POWER = 1)
 	matter = list(MAT_STEEL = 50,MAT_GLASS = 50)
 
 	var/charge = 0
@@ -329,28 +354,24 @@
 	name = "scanning module"
 	desc = "A compact, high resolution scanning module used in the construction of certain devices."
 	icon_state = "scan_module"
-	origin_tech = list(TECH_MAGNET = 1)
 	matter = list(MAT_STEEL = 50,MAT_GLASS = 20)
 
 /obj/item/stock_parts/manipulator
 	name = "micro-manipulator"
 	desc = "A tiny little manipulator used in the construction of certain devices."
 	icon_state = "micro_mani"
-	origin_tech = list(TECH_MATERIAL = 1, TECH_DATA = 1)
 	matter = list(MAT_STEEL = 30)
 
 /obj/item/stock_parts/micro_laser
 	name = "micro-laser"
 	desc = "A tiny laser used in certain devices."
 	icon_state = "micro_laser"
-	origin_tech = list(TECH_MAGNET = 1)
 	matter = list(MAT_STEEL = 10,MAT_GLASS = 20)
 
 /obj/item/stock_parts/matter_bin
 	name = "matter bin"
 	desc = "A container for hold compressed matter awaiting re-construction."
 	icon_state = "matter_bin"
-	origin_tech = list(TECH_MATERIAL = 1)
 	matter = list(MAT_STEEL = 80)
 
 //Rank 2
@@ -359,7 +380,6 @@
 	name = "advanced capacitor"
 	desc = "An advanced capacitor used in the construction of a variety of devices."
 	icon_state = "capacitor_adv"
-	origin_tech = list(TECH_POWER = 3)
 	rating = 2
 	matter = list(MAT_STEEL = 50,MAT_GLASS = 50)
 
@@ -367,7 +387,6 @@
 	name = "advanced scanning module"
 	desc = "A compact, high resolution scanning module used in the construction of certain devices."
 	icon_state = "scan_module_adv"
-	origin_tech = list(TECH_MAGNET = 3)
 	rating = 2
 	matter = list(MAT_STEEL = 50,MAT_GLASS = 20)
 
@@ -375,7 +394,6 @@
 	name = "nano-manipulator"
 	desc = "A tiny little manipulator used in the construction of certain devices."
 	icon_state = "nano_mani"
-	origin_tech = list(TECH_MATERIAL = 3, TECH_DATA = 2)
 	rating = 2
 	matter = list(MAT_STEEL = 30)
 
@@ -383,7 +401,6 @@
 	name = "high-power micro-laser"
 	desc = "A tiny laser used in certain devices."
 	icon_state = "high_micro_laser"
-	origin_tech = list(TECH_MAGNET = 3)
 	rating = 2
 	matter = list(MAT_STEEL = 10,MAT_GLASS = 20)
 
@@ -391,7 +408,6 @@
 	name = "advanced matter bin"
 	desc = "A container for hold compressed matter awaiting re-construction."
 	icon_state = "advanced_matter_bin"
-	origin_tech = list(TECH_MATERIAL = 3)
 	rating = 2
 	matter = list(MAT_STEEL = 80)
 
@@ -401,7 +417,6 @@
 	name = "super capacitor"
 	desc = "A super-high capacity capacitor used in the construction of a variety of devices."
 	icon_state = "capacitor_super"
-	origin_tech = list(TECH_POWER = 5, TECH_MATERIAL = 4)
 	rating = 3
 	matter = list(MAT_STEEL = 50,MAT_GLASS = 50)
 
@@ -409,7 +424,6 @@
 	name = "phasic scanning module"
 	desc = "A compact, high resolution phasic scanning module used in the construction of certain devices."
 	icon_state = "scan_module_phasic"
-	origin_tech = list(TECH_MAGNET = 5)
 	rating = 3
 	matter = list(MAT_STEEL = 50,MAT_GLASS = 20)
 
@@ -417,7 +431,6 @@
 	name = "pico-manipulator"
 	desc = "A tiny little manipulator used in the construction of certain devices."
 	icon_state = "pico_mani"
-	origin_tech = list(TECH_MATERIAL = 5, TECH_DATA = 2)
 	rating = 3
 	matter = list(MAT_STEEL = 30)
 
@@ -425,7 +438,6 @@
 	name = "ultra-high-power micro-laser"
 	icon_state = "ultra_high_micro_laser"
 	desc = "A tiny laser used in certain devices."
-	origin_tech = list(TECH_MAGNET = 5)
 	rating = 3
 	matter = list(MAT_STEEL = 10,MAT_GLASS = 20)
 
@@ -433,7 +445,6 @@
 	name = "super matter bin"
 	desc = "A container for hold compressed matter awaiting re-construction."
 	icon_state = "super_matter_bin"
-	origin_tech = list(TECH_MATERIAL = 5)
 	rating = 3
 	matter = list(MAT_STEEL = 80)
 
@@ -443,7 +454,6 @@
 	name = "hyper capacitor"
 	desc = "A hyper-capacity capacitor used in the construction of a variety of devices."
 	icon_state = "capacitor_hyper"
-	origin_tech = list(TECH_POWER = 6, TECH_MATERIAL = 5, TECH_BLUESPACE = 1, TECH_ARCANE = 1)
 	rating = 4
 	matter = list(MAT_STEEL = 80, MAT_GLASS = 40)
 
@@ -451,7 +461,6 @@
 	name = "quantum scanning module"
 	desc = "A compact, near-perfect resolution quantum scanning module used in the construction of certain devices."
 	icon_state = "scan_module_hyper"
-	origin_tech = list(TECH_MAGNET = 6, TECH_BLUESPACE = 1, TECH_ARCANE = 1)
 	rating = 4
 	matter = list(MAT_STEEL = 100,MAT_GLASS = 40)
 
@@ -459,7 +468,6 @@
 	name = "planck-manipulator"
 	desc = "A miniscule manipulator used in the construction of certain devices."
 	icon_state = "hyper_mani"
-	origin_tech = list(TECH_MATERIAL = 6, TECH_DATA = 3, TECH_ARCANE = 1)
 	rating = 4
 	matter = list(MAT_STEEL = 30)
 
@@ -467,7 +475,6 @@
 	name = "hyper-power micro-laser"
 	icon_state = "hyper_micro_laser"
 	desc = "A tiny laser used in certain devices."
-	origin_tech = list(TECH_MAGNET = 6, TECH_ARCANE = 1)
 	rating = 4
 	matter = list(MAT_STEEL = 30, MAT_GLASS = 40)
 
@@ -475,7 +482,6 @@
 	name = "hyper matter bin"
 	desc = "A container for holding compressed matter awaiting re-construction."
 	icon_state = "hyper_matter_bin"
-	origin_tech = list(TECH_MATERIAL = 6, TECH_ARCANE = 1)
 	rating = 4
 	matter = list(MAT_STEEL = 100)
 
@@ -485,7 +491,6 @@
 	name = "omni-capacitor"
 	desc = "A capacitor of immense capacity used in the construction of a variety of devices."
 	icon_state = "capacitor_omni"
-	origin_tech = list(TECH_POWER = 7, TECH_MATERIAL = 6, TECH_BLUESPACE = 3, TECH_PRECURSOR  = 1)
 	rating = 5
 	matter = list(MAT_STEEL = 80, MAT_GLASS = 40)
 
@@ -493,7 +498,6 @@
 	name = "omni-scanning module"
 	desc = "A compact, perfect resolution temporospatial scanning module used in the construction of certain devices."
 	icon_state = "scan_module_omni"
-	origin_tech = list(TECH_MAGNET = 7, TECH_BLUESPACE = 3, TECH_PRECURSOR = 1)
 	rating = 5
 	matter = list(MAT_STEEL = 100,MAT_GLASS = 40)
 
@@ -501,7 +505,6 @@
 	name = "omni-manipulator"
 	desc = "A strange, infinitesimal manipulator used in the construction of certain devices."
 	icon_state = "omni_mani"
-	origin_tech = list(TECH_MATERIAL = 7, TECH_DATA = 4, TECH_PRECURSOR  = 1)
 	rating = 5
 	matter = list(MAT_STEEL = 30)
 
@@ -509,7 +512,6 @@
 	name = "omni-power micro-laser"
 	icon_state = "omni_micro_laser"
 	desc = "A strange laser used in certain devices."
-	origin_tech = list(TECH_MAGNET = 7, TECH_PRECURSOR  = 1)
 	rating = 5
 	matter = list(MAT_STEEL = 30, MAT_GLASS = 40)
 
@@ -517,7 +519,6 @@
 	name = "omni-matter bin"
 	desc = "A strange container for holding compressed matter awaiting re-construction."
 	icon_state = "omni_matter_bin"
-	origin_tech = list(TECH_MATERIAL = 7, TECH_PRECURSOR  = 1)
 	rating = 5
 	matter = list(MAT_STEEL = 100)
 
@@ -528,49 +529,42 @@
 	name = "subspace ansible"
 	icon_state = "subspace_ansible"
 	desc = "A compact module capable of sensing extradimensional activity."
-	origin_tech = list(TECH_DATA = 3, TECH_MAGNET = 5 ,TECH_MATERIAL = 4, TECH_BLUESPACE = 2)
 	matter = list(MAT_STEEL = 30,MAT_GLASS = 10)
 
 /obj/item/stock_parts/subspace/sub_filter
 	name = "hyperwave filter"
 	icon_state = "hyperwave_filter"
 	desc = "A tiny device capable of filtering and converting super-intense radiowaves."
-	origin_tech = list(TECH_DATA = 4, TECH_MAGNET = 2)
 	matter = list(MAT_STEEL = 30,MAT_GLASS = 10)
 
 /obj/item/stock_parts/subspace/amplifier
 	name = "subspace amplifier"
 	icon_state = "subspace_amplifier"
 	desc = "A compact micro-machine capable of amplifying weak subspace transmissions."
-	origin_tech = list(TECH_DATA = 3, TECH_MAGNET = 4, TECH_MATERIAL = 4, TECH_BLUESPACE = 2)
 	matter = list(MAT_STEEL = 30,MAT_GLASS = 10)
 
 /obj/item/stock_parts/subspace/treatment
 	name = "subspace treatment disk"
 	icon_state = "treatment_disk"
 	desc = "A compact micro-machine capable of stretching out hyper-compressed radio waves."
-	origin_tech = list(TECH_DATA = 3, TECH_MAGNET = 2, TECH_MATERIAL = 5, TECH_BLUESPACE = 2)
 	matter = list(MAT_STEEL = 30,MAT_GLASS = 10)
 
 /obj/item/stock_parts/subspace/analyzer
 	name = "subspace wavelength analyzer"
 	icon_state = "wavelength_analyzer"
 	desc = "A sophisticated analyzer capable of analyzing cryptic subspace wavelengths."
-	origin_tech = list(TECH_DATA = 3, TECH_MAGNET = 4, TECH_MATERIAL = 4, TECH_BLUESPACE = 2)
 	matter = list(MAT_STEEL = 30,MAT_GLASS = 10)
 
 /obj/item/stock_parts/subspace/crystal
 	name = "ansible crystal"
 	icon_state = "ansible_crystal"
 	desc = "A crystal made from pure glass used to transmit laser databursts to subspace."
-	origin_tech = list(TECH_MAGNET = 4, TECH_MATERIAL = 4, TECH_BLUESPACE = 2)
 	matter = list(MAT_GLASS = 50)
 
 /obj/item/stock_parts/subspace/transmitter
 	name = "subspace transmitter"
 	icon_state = "subspace_transmitter"
 	desc = "A large piece of equipment used to open a window into the subspace dimension."
-	origin_tech = list(TECH_MAGNET = 5, TECH_MATERIAL = 5, TECH_BLUESPACE = 3)
 	matter = list(MAT_STEEL = 50)
 
 /obj/item/ectoplasm
@@ -580,13 +574,6 @@
 	icon = 'icons/obj/wizard.dmi'
 	icon_state = "ectoplasm2"
 
-/obj/item/research
-	name = "research debugging device"
-	desc = "Instant research tool. For testing purposes only."
-	icon = 'icons/obj/stock_parts.dmi'
-	icon_state = "smes_coil"
-	origin_tech = list(TECH_MATERIAL = 19, TECH_ENGINEERING = 19, TECH_PHORON = 19, TECH_POWER = 19, TECH_BLUESPACE = 19, TECH_BIO = 19, TECH_COMBAT = 19, TECH_MAGNET = 19, TECH_DATA = 19, TECH_ILLEGAL = 19, TECH_ARCANE = 19, TECH_PRECURSOR = 19)
-
 // Additional construction stock parts
 
 /obj/item/stock_parts/gear
@@ -594,7 +581,6 @@
 	desc = "A gear used for construction."
 	icon = 'icons/obj/stock_parts.dmi'
 	icon_state = "gear"
-	origin_tech = list(TECH_ENGINEERING = 1)
 	matter = list(MAT_STEEL = 50)
 
 /obj/item/stock_parts/motor
@@ -602,7 +588,6 @@
 	desc = "A motor used for construction."
 	icon = 'icons/obj/stock_parts.dmi'
 	icon_state = "motor"
-	origin_tech = list(TECH_ENGINEERING = 1)
 	matter = list(MAT_STEEL = 60, MAT_GLASS = 10)
 
 /obj/item/stock_parts/spring
@@ -610,7 +595,6 @@
 	desc = "A spring used for construction."
 	icon = 'icons/obj/stock_parts.dmi'
 	icon_state = "spring"
-	origin_tech = list(TECH_ENGINEERING = 1)
 	matter = list(MAT_STEEL = 40)
 
 /obj/effect/spawner/parts

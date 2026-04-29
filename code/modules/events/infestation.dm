@@ -173,7 +173,7 @@
 
 
 /datum/event/infestation/announce()
-	command_announcement.Announce("Bioscans indicate that [vermstring] have been breeding in [locstring]. Clear them out, before this starts to affect productivity.", "Vermin infestation")
+	GLOB.command_announcement.Announce("Bioscans indicate that [vermstring] have been breeding in [locstring]. Clear them out, before this starts to affect productivity.", "Vermin infestation", ANNOUNCER_MSG_VERMIN_INFESTATION)
 
 #undef LOC_KITCHEN
 #undef LOC_ATMOS
@@ -186,7 +186,6 @@
 // #undef LOC_HANGAR3
 #undef LOC_MEDICAL
 #undef LOC_VAULT
-
 #undef VERM_MICE
 #undef VERM_LIZARDS
 #undef VERM_SPIDERS // Chomp EDIT

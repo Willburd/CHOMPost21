@@ -67,7 +67,6 @@
 	throw_speed = 1
 	throw_range = 4
 	w_class = ITEMSIZE_LARGE
-	origin_tech = list(TECH_MATERIAL = 2)
 	matter = list(MAT_GLASS = 7500, MAT_STEEL = 1000)
 	attack_verb = list("shoved", "bashed")
 	base_block_chance = 70 // Outpost 21 edit - Buffed riot shield blocking chance
@@ -128,7 +127,6 @@
 	var/lrange = 1.5
 	var/lpower = 1.5
 	var/lcolor = "#006AFF"
-	origin_tech = list(TECH_MATERIAL = 4, TECH_MAGNET = 3, TECH_ILLEGAL = 4)
 	attack_verb = list("shoved", "bashed")
 	var/active = 0
 	item_icons = list(
@@ -154,8 +152,11 @@
 			return (base_block_chance - round(damage / 3)) //block bullets and beams using the old block chance
 	return base_block_chance
 
-/obj/item/shield/energy/attack_self(mob/living/user as mob)
-	if ((CLUMSY in user.mutations) && prob(10)) // Outpost 21 edit - Made clumsy less obnoxious
+/obj/item/shield/energy/attack_self(mob/living/user)
+	. = ..(user)
+	if(.)
+		return TRUE
+	if (CLUMSY_FAIL_CHANCE(user))
 		to_chat(user, span_warning("You beat yourself in the head with [src]."))
 		user.take_organ_damage(5)
 	active = !active
@@ -239,6 +240,9 @@
 		return 0
 */
 /obj/item/shield/riot/tele/attack_self(mob/living/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	active = !active
 	icon_state = "teleriot[active]"
 	playsound(src, 'sound/weapons/empty.ogg', 50, 1)

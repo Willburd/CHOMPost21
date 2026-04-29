@@ -4,8 +4,6 @@
 	if(can_open == WALL_OPENING)
 		return
 
-	SSradiation.resistance_cache.Remove(src)
-
 	if(density)
 		can_open = WALL_OPENING
 		//flick("[material.icon_base]fwall_opening", src)
@@ -138,7 +136,7 @@
 
 	user.setClickCooldown(user.get_attack_speed(W))
 
-	// Outpost 21 addition begin - Slamming heads into walls
+	// outpost 21 edit begin - Slamming heads into walls
 	if(isliving(user) && istype(W,/obj/item/grab))
 		var/mob/living/L = user
 		var/damage_done = L.slam_grabbed_mob_against_thing(W)
@@ -154,7 +152,7 @@
 					to_chat(L, span_danger("Slammed [throw_mob] by the head into the wall"))
 					if(damage_done >= STRUCTURE_MIN_DAMAGE_THRESHOLD * 2) attack_generic(L,damage_done,"slammed")
 		return
-	// Outpost 21 addition end
+	// outpost 21 edit end
 
 /*
 //As with the floors, only this time it works AND tries pushing the wall after it's done.

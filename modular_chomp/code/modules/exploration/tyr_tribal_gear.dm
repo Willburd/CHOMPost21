@@ -86,19 +86,10 @@
 	w_class = ITEMSIZE_SMALL
 
 	var/static/list/possible_states = list("crystal", "generator","core", "hilt")
-	var/static/list/possible_tech = list(TECH_MATERIAL, TECH_ENGINEERING, TECH_PHORON, TECH_POWER, TECH_BIO, TECH_COMBAT, TECH_MAGNET, TECH_DATA)
 
 /obj/item/prop/alien/prototype/Initialize(mapload)
 	. = ..()
 	icon_state = pick(possible_states)
-	var/list/techs = possible_tech.Copy()
-	origin_tech = list()
-	for(var/i = 1 to rand(1, 4))
-		var/new_tech = pick(techs)
-		techs -= new_tech
-		origin_tech[new_tech] = rand(3, 11)
-
-	origin_tech[TECH_PRECURSOR] = rand(0,3)
 
 /* Yoinked for refrence
 /obj/item/arrow/standard
@@ -267,7 +258,8 @@
 	name = "tyrian scout katar"
 	slot_flags = SLOT_BELT | SLOT_BACK
 	desc = "A forgien blade made via techniques formly lost. Gains a diffrent effect base off your stance."
-	description_info = "Attacking whilst on grab intent will plant a heat bomb, attacking whilst on disarm will increase your speed for a brief moment, and attacking whilst on harm will phase out your foe's armor."
+	description_info = "Attacking whilst on grab intent will light a fire, attacking whilst on disarm will increase your speed for a brief moment, and attacking whilst on harm will phase out your foe's armor."
+	lcolor = null
 	colorable = FALSE
 	attackspeed = 4
 	active_force = 5
@@ -292,23 +284,12 @@
 		. = ..()
 		switch(user.a_intent)
 			if(I_GRAB)
-				target.add_modifier(/datum/modifier/agate_bomb, 8 SECONDS)
+				target.adjust_fire_stacks(7)
+				target.ignite_mob()
 			if(I_DISARM)
 				user.add_modifier(/datum/modifier/technomancer/haste, 2 SECONDS)
 			if(I_HURT)
 				target.add_modifier(/datum/modifier/phase_armor, 5 SECONDS)
-
-/datum/modifier/agate_bomb
-	name = "Agate Bomb"
-	desc = "The bomb has been planted."
-
-	on_created_text = span_notice("A strange substance is applied to your form.")
-	on_expired_text = span_warning("The substance explodes.")
-	stacks = MODIFIER_STACK_ALLOWED
-
-/datum/modifier/agate_bomb/on_expire()
-	if(holder.stat != DEAD)
-		holder.inflict_heat_damage(20)
 
 /datum/modifier/phase_armor
 	name = "Phased Armor"
@@ -324,10 +305,11 @@
 	name = "tyrian guardian hammer"
 	slot_flags = SLOT_BELT | SLOT_BACK
 	desc = "A strange hammer made via techniques formly lost. Gains a diffrent effect base off your stance."
-	description_info = "Attacking whilst on grab intent weakens the target's healing, attacking whilst on disarm weakens the target's melee potential, and attacking whilst on harm has a 2% chance to deal guaranteed massive damage."
+	description_info = "Attacking whilst on grab intent restore the wielder's health, attacking whilst on disarm weakens the target and attacking whilst on harm can throw back the target."
+	lcolor = null
 	colorable = FALSE
 
-	active_force = 20
+	active_force = 35
 	active_armourpen = 40
 
 	attackspeed = 20

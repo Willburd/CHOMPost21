@@ -80,6 +80,11 @@
 			var/obj/structure/catwalk/catwalk = locate() in destination.contents
 
 			if(lattice)
+				// Outpost 21 edit begin - deadly fall z levels are too high to climb up from
+				if(start.z in using_map.deadly_fall_levels)
+					to_chat(src, span_danger("\The [lattice] is too far above you to climb."))
+					return 0
+				// Outpost 21 edit end
 				var/pull_up_time = max((5 SECONDS + (src.movement_delay() * 10) * climb_modifier), 1)
 				to_chat(src, span_notice("You grab \the [lattice] and start pulling yourself upward..."))
 				src.audible_message(span_notice("[src] begins climbing up \the [lattice]."), runemessage = "clank clang")
@@ -100,6 +105,11 @@
 					return 0
 
 			else if(catwalk?.hatch_open)
+				// Outpost 21 edit begin - deadly fall z levels are too high to climb up from
+				if(start.z in using_map.deadly_fall_levels)
+					to_chat(src, span_danger("\The [catwalk] is too far above you to climb."))
+					return 0
+				// Outpost 21 edit end
 				var/pull_up_time = max((5 SECONDS + (src.movement_delay() * 10) * climb_modifier), 1)
 				to_chat(src, span_notice("You grab the edge of \the [catwalk] and start pulling yourself upward..."))
 				var/old_dest = destination

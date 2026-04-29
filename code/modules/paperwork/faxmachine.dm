@@ -1,5 +1,5 @@
 GLOBAL_LIST_EMPTY_TYPED(allfaxes, /obj/machinery/photocopier/faxmachine)
-var/list/admin_departments = list("[using_map.boss_name]", "Solar Central Government", "Central Command Job Boards", "Supply") // YW EDIT
+GLOBAL_LIST_INIT(admin_departments, list("[using_map.boss_name]", "Solar Central Government", "Central Command Job Boards", "Supply")) //CHOMPEdit
 GLOBAL_LIST_EMPTY(alldepartments)
 GLOBAL_VAR(last_fax_role_request)
 
@@ -32,10 +32,10 @@ GLOBAL_LIST_EMPTY(adminfaxes)	//cache for faxes that have been sent to admins
 	. = ..()
 	GLOB.allfaxes += src
 	if(!destination) destination = "[using_map.boss_name]"
-	if( !(("[department]" in GLOB.alldepartments) || ("[department]" in admin_departments)) )
+	if( !(("[department]" in GLOB.alldepartments) || ("[department]" in GLOB.admin_departments)) )
 		GLOB.alldepartments |= department
 
-/obj/machinery/photocopier/faxmachine/attack_hand(mob/user as mob)
+/obj/machinery/photocopier/faxmachine/attack_hand(mob/user)
 	if(issilicon(user)) //CHOMPEdit Start this allows borgs to use fax machines, meant for the Unity and Clerical modules.
 		authenticated = user.name
 		tgui_interact(user)
@@ -164,7 +164,7 @@ GLOBAL_LIST_EMPTY(adminfaxes)	//cache for faxes that have been sent to admins
 	data["rank"] = rank
 	data["isAI"] = isAI(user)
 	data["isRobot"] = isrobot(user)
-	data["adminDepartments"] = admin_departments
+	data["adminDepartments"] = GLOB.admin_departments
 
 	data["bossName"] = using_map.boss_name
 	data["copyItem"] = copyitem
@@ -238,7 +238,7 @@ GLOBAL_LIST_EMPTY(adminfaxes)	//cache for faxes that have been sent to admins
 				copyitem.name = new_name
 		if("send")
 			if(copyitem)
-				if (destination in admin_departments)
+				if (destination in GLOB.admin_departments)
 					if(check_if_default_title_and_rename(ui.user))
 						return
 					send_admin_fax(ui.user, destination)
@@ -251,7 +251,7 @@ GLOBAL_LIST_EMPTY(adminfaxes)	//cache for faxes that have been sent to admins
 
 		if("dept")
 			var/lastdestination = destination
-			destination = tgui_input_list(ui.user, "Which department?", "Choose a department", (GLOB.alldepartments + admin_departments))
+			destination = tgui_input_list(ui.user, "Which department?", "Choose a department", (GLOB.alldepartments + GLOB.admin_departments))
 			if(!destination)
 				destination = lastdestination
 
@@ -302,7 +302,7 @@ Extracted to its own procedure for easier logic handling with paper bundles.
 			to_chat(user, "No input found. Please hang up and try your call again.")
 			return
 		department = input
-		if( !(("[department]" in GLOB.alldepartments) || ("[department]" in admin_departments)) && !(department == "Unknown"))
+		if( !(("[department]" in GLOB.alldepartments) || ("[department]" in GLOB.admin_departments)) && !(department == "Unknown"))
 			GLOB.alldepartments |= department
 	else if(istype(O, /obj/item/toner))
 		if(toner <= 10) //allow replacing when low toner is affecting the print darkness
@@ -392,10 +392,14 @@ Extracted to its own procedure for easier logic handling with paper bundles.
 		message_admins(sender, "Solar Central Government FAX", rcvdcopy, "CentComFaxReply", "#1F66A0") // Vorestation Edit //CHOMPedit
 	else if(destination == "Supply")
 		message_admins(sender, "[uppertext(using_map.boss_short)] SUPPLY FAX", rcvdcopy, "CentComFaxReply", "#5F4519")
+	else if(destination == "Talon Headquarters")
+		message_admins(sender, "TALON HEADQUARTERS FAX", rcvdcopy, "CentComFaxReply", "#e96046")
 	else
 		message_admins(sender, "[uppertext(destination)] FAX", rcvdcopy, "UNKNOWN")
 
+	#ifdef OUTPOST_FRIENDSHIP_MODE
 	sendcooldown = 1800
+	#endif
 	sleep(50)
 	visible_message("[src] beeps, \"Message transmitted successfully.\"")
 
@@ -442,14 +446,6 @@ Extracted to its own procedure for easier logic handling with paper bundles.
 	if(length(summary) > webhook_length_limit)
 		summary = copytext(summary, 1, webhook_length_limit + 1)
 		summary += "\n\[Truncated\]"
-
-	SSwebhooks.send(
-		WEBHOOK_FAX_SENT,
-		list(
-			"name" = "[faxname] '[sent.name]' sent from [key_name(sender)]",
-			"body" = summary
-		)
-	)
 
 /*
 								#####						####

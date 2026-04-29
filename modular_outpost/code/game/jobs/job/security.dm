@@ -17,12 +17,18 @@
 	alt_titles |= list(	JOB_ALT_DETECTIVE = /datum/alt_title/detective,
 						JOB_ALT_INVESTIGATOR = /datum/alt_title/investigator,
 						JOB_ALT_SECURITY_INSPECTOR = /datum/alt_title/security_inspector,
-						JOB_ALT_FORENSIC_TECHNICIAN = /datum/alt_title/forensic_tech)
+						JOB_ALT_FORENSIC_TECHNICIAN = /datum/alt_title/forensic_tech,
+						JOB_ALT_HALLMONITOR = /datum/alt_title/hall_monitor)
 
 // Alt titles
 /datum/alt_title/detective
+	title = JOB_ALT_DETECTIVE
 	title_blurb = "A " + JOB_ALT_DETECTIVE + " works to help Security find criminals who have not properly been identified, through interviews and forensic work. \
 						For crimes only witnessed after the fact, or those with no survivors, they attempt to piece together what they can from pure evidence."
 
 /datum/alt_title/forensic_tech
 	title_blurb = "A " + JOB_ALT_FORENSIC_TECHNICIAN + " works more with hard evidence and labwork than a " + JOB_ALT_DETECTIVE + ", but they share the purpose of solving crimes."
+
+/datum/alt_title/hall_monitor
+	title = JOB_ALT_HALLMONITOR
+	title_blurb = "A " + JOB_ALT_HALLMONITOR + " is a junior security officer, but commands even less respect and authority."

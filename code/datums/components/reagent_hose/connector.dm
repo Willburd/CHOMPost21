@@ -13,7 +13,7 @@
 
 /datum/component/hose_connector/Initialize(var/set_unique_name = null)
 	carrier = parent
-	reagents = new /datum/reagents( 60, src)
+	reagents = new /datum/reagents(60, src)
 	// Handle uniquely named connectors
 	if(set_unique_name)
 		name = set_unique_name
@@ -274,9 +274,23 @@
 	var/mob/living/simple_mob/animal/passive/cow/C = carrier
 	return C.udder
 
+/// Only allows oil to be inserted
+/datum/component/hose_connector/input/fryer
+	name = "Oil Storage"
+	force_name = TRUE
 
-// Outpost 21 edit(port) begin - Experimental sleepers with hose outputs
-/datum/component/hose_connector/output/medical_sleeper/connected_reagents()
-	var/obj/machinery/sleeper/S = carrier
-	return S.beaker?.reagents
-// Outpost 21 edit end
+/datum/component/hose_connector/input/fryer/handle_pump(var/datum/reagents/oil_reagents/connected_to)
+	ASSERT(connected_to)
+	if(connected_to.total_volume >= connected_to.optimal_oil) //Don't overfill it.
+		return
+	for(var/datum/reagent/reagent_to_add in reagents.reagent_list)
+		if(istype(reagent_to_add, /datum/reagent/nutriment/triglyceride/oil)) //So we can transfer ALL oil types.
+			var/old_oil_amount = connected_to.total_volume
+			connected_to.add_reagent(reagent_to_add.id, rand(1,reagent_to_add.volume))
+			reagents.remove_reagent(reagent_to_add.id, connected_to.total_volume - old_oil_amount, 1) //Ex: Old was 100. We added 10u. Total_volume is now 110u. 110u-100u = 10u
+			if(connected_to.total_volume >= connected_to.optimal_oil)
+				break
+
+/datum/component/hose_connector/input/fryer/connected_reagents()
+	var/obj/machinery/appliance/cooker/fryer/our_fryer = carrier
+	return our_fryer.oil

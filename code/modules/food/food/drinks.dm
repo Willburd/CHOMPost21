@@ -16,8 +16,13 @@
 	var/cant_open = 0
 	var/cant_chance = 1 // Outpost 21 edit - This is genuinely just kinda funny
 
+	var/is_can = FALSE
+
 	/// Yims
 	food_can_insert_micro = TRUE
+
+	///Var for attack_self chain
+	var/special_handling = FALSE
 
 /obj/item/reagent_containers/food/drinks/Initialize(mapload)
 	. = ..()
@@ -108,9 +113,6 @@
 			if(!can_food_vore(eater, micro))
 				continue
 
-			if(!can_animal_vore(eater, micro)) //If the one doing the eating is a simple mob controlled by AI, check mob vore prefs
-				continue
-
 			var/do_nom = FALSE
 
 			if(!reagents.total_volume)
@@ -121,7 +123,7 @@
 					do_nom = TRUE
 
 			if(do_nom)
-				micro.forceMove(eater.vore_selected)
+				eater.vore_selected.nom_atom(micro)
 				food_inserted_micros -= micro
 
 	if(!reagents.total_volume && changed)
@@ -139,8 +141,13 @@
 /obj/item/reagent_containers/food/drinks/on_rag_wipe(var/obj/item/reagent_containers/glass/rag/R)
 	wash(CLEAN_SCRUB)
 
-/obj/item/reagent_containers/food/drinks/attack_self(mob/user as mob)
-	if(!is_open_container())
+/obj/item/reagent_containers/food/drinks/attack_self(mob/user, special_pass)
+	. = ..(user)
+	if(.)
+		return TRUE
+	if(special_handling && !special_pass)
+		return FALSE
+	if(!is_open_container() && !(is_can && user.a_intent == I_HURT))
 		open(user)
 
 /obj/item/reagent_containers/food/drinks/proc/open(mob/user)
@@ -154,14 +161,14 @@
 		to_chat(user, span_warning("...wait a second, this one doesn't have a ring pull. It's not a <b>can</b>, it's a <b>can't!</b>"))
 		name = "\improper can't of [initial(name)]"	//don't update the name until they try to open it
 
-/obj/item/reagent_containers/food/drinks/attack(mob/M as mob, mob/user as mob, def_zone)
+/obj/item/reagent_containers/food/drinks/attack(mob/living/M, mob/living/user, target_zone, attack_modifier)
 	if(force && !(flags & NOBLUDGEON) && user.a_intent == I_HURT)
 		return ..()
 
 	if(standard_feed_mob(user, M))
-		return
+		return ITEM_INTERACT_SUCCESS
 
-	return FALSE
+	return ITEM_INTERACT_FAILURE
 
 /obj/item/reagent_containers/food/drinks/afterattack(obj/target, mob/user, proximity)
 	if(!proximity) return

@@ -67,6 +67,10 @@
 	network = list(NETWORK_THUNDER)
 	density = FALSE
 	circuit = null
+	flags = WALL_ITEM
+
+/obj/machinery/computer/security/telescreen/allow_pai_interaction(mob/living/silicon/pai/user, proximity_flag)
+	return proximity_flag
 
 GLOBAL_LIST_EMPTY(entertainment_screens)
 GLOBAL_LIST_EMPTY(bodycamera_screens) // CHOMPEdit
@@ -118,6 +122,8 @@ GLOBAL_LIST_EMPTY(bodycamera_screens) // CHOMPEdit
 	radio.canhear_range = world.view // Same as default sight range.
 	power_change()
 
+	toggle() // Outpost 21 edit - Toggle entertainment off by default
+
 /obj/machinery/computer/security/telescreen/entertainment/Destroy()
 	GLOB.entertainment_screens -= src
 	if(showing)
@@ -125,6 +131,7 @@ GLOBAL_LIST_EMPTY(bodycamera_screens) // CHOMPEdit
 	vis_contents.Cut()
 	QDEL_NULL(pinboard)
 	QDEL_NULL(radio)
+	showing = null
 	return ..()
 
 /obj/machinery/computer/security/telescreen/entertainment/proc/toggle()

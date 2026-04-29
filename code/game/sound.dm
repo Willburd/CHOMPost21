@@ -13,88 +13,66 @@
 	// Looping through the player list has the added bonus of working for mobs inside containers
 	var/sound/S = sound(get_sfx(soundin))
 	var/maxdistance = (world.view + extrarange) * 2  //VOREStation Edit - 3 to 2
-	var/list/listeners = GLOB.player_list.Copy() + interior_vehicle_list.Copy()
-	// Outpost 21 edit(port) begin - Get holograms from AIs
-	var/list/holo_listeners = list() // sorry for the duped bits of code ahead, but this is somewhat required to have AI holograms listen to game sounds - Willbird
-	for(var/mob/living/silicon/ai/A in GLOB.player_list)
+	var/list/listeners = GLOB.player_list.Copy() + GLOB.interior_vehicle_list.Copy() // Outpost 21 edit(port) begin - Forward sounds to the insides of vehicles
+
+	// Get AI holograms of active AIs too
+	var/list/holo_listeners = list()
+	for(var/mob/living/silicon/ai/A in listeners)
 		if(A.holo && istype(A.holo.masters[A],/obj/effect/overlay/aiholo/))
 			holo_listeners += A.holo.masters[A]
 	listeners += holo_listeners
-	// Outpost 21 edit end
+
 	for(var/atom/U as anything in listeners)
+		var/turf/T = get_turf(U)
+		var/mob/hearer = null
+		// Normal mobs
 		if(istype(U,/mob))
 			var/mob/M = U
 			if(!M || !M.client)
 				continue
-			var/turf/T = get_turf(M)
-			if(!T)
-				continue
-			var/area/A = T.loc
-			if((A.flag_check(AREA_SOUNDPROOF) || area_source.flag_check(AREA_SOUNDPROOF)) && (A != area_source))
-				continue
-			//var/distance = get_dist(T, turf_source) Save get_dist for later because it's more expensive
-
-			if(!T || T.z != turf_source.z) //^ +1
-				continue
-			if(get_dist(T, turf_source) > maxdistance)
-				continue
-			if(!ignore_walls && !can_see(turf_source, T, length = maxdistance * 2))
-				continue
-
-			M.playsound_local(turf_source, soundin, vol, vary, frequency, falloff, is_global, channel, pressure_affected, S, preference, volume_channel)
-
-		// Outpost 21 addition begin - holograms can hear things
+			hearer = M
+		// Holograms need to hear too
 		if(istype(U,/obj/effect/overlay/aiholo))
 			var/obj/effect/overlay/aiholo/H = U
-			if(!H.master || !H.master.client)
+			if(!H || !H.master || !H.master.client)
 				continue
-			var/turf/T = get_turf(H)
-			if(!T)
-				continue
-			var/area/A = T.loc
-			if((A.flag_check(AREA_SOUNDPROOF) || area_source.flag_check(AREA_SOUNDPROOF)) && (A != area_source))
-				continue
+			hearer = H.master
 
-			if(!T || T.z != turf_source.z) //^ +1
-				continue
-			if(get_dist(T, turf_source) > maxdistance)
-				continue
-			if(!ignore_walls && !can_see(turf_source, T, length = maxdistance * 2))
-				continue
-
-			H.master.playsound_local(turf_source, soundin, vol, vary, frequency, falloff, is_global, channel, pressure_affected, S, preference, volume_channel, T)
-		// Outpost 21 addition end
-		// Outpost 21 addition begin - Forward sounds to the insides of vehicles
-		else if(istype(U,/obj/vehicle/has_interior/controller))
+		// outpost 21 edit begin - Forward sounds to the insides of vehicles
+		if(istype(U,/obj/vehicle/has_interior))
 			// Already a sound forwarded to the interior of a vehicle, ignore me!
 			// Globals are heard over all maps anyway, so don't forward either!
-			if(is_global || istype(source,/obj/machinery/computer/vehicle_interior_console))
+			if(is_global || istype(source, /obj/machinery/computer/vehicle_interior_console) || vol <= 0)
 				continue
-
-			var/obj/vehicle/has_interior/controller/V = U
-			var/turf/T = get_turf(V)
-			if(!T)
+			var/obj/vehicle/has_interior/V = U
+			if(V.interior_helm == null)
 				continue
+			hearer = V.interior_helm
+		// outpost 21 edit end
 
-			var/area/A = T.loc
-			if((A.flag_check(AREA_SOUNDPROOF) || area_source.flag_check(AREA_SOUNDPROOF)) && (A != area_source))
-				continue
+		if(!T || !hearer)
+			continue
+		var/area/A = T.loc
+		if((A.flag_check(AREA_SOUNDPROOF) || area_source.flag_check(AREA_SOUNDPROOF)) && (A != area_source))
+			continue
+		//var/distance = get_dist(T, turf_source) Save get_dist for later because it's more expensive
 
-			if(!T || T.z != turf_source.z) //^ +1
-				continue
+		if(!T || T.z != turf_source.z) //^ +1
+			continue
+		if(get_dist(T, turf_source) > maxdistance)
+			continue
+		if(!ignore_walls && !can_see(turf_source, T, length = maxdistance * 2))
+			continue
 
-			var/distance = get_dist(T, turf_source)
-			if(distance > maxdistance)
-				continue
-			if(!ignore_walls && !can_see(turf_source, T, length = maxdistance * 2))
-				continue
+		// outpost 21 edit begin - Forward sounds to the insides of vehicles
+		if(istype(hearer,/obj/machinery/computer/vehicle_interior_console))
+			// Replay the sound inside from the helm
+			playsound(hearer, soundin, vol * 0.5 * (1 - (get_dist(T, turf_source) / maxdistance)), vary, -5, falloff, FALSE, frequency, channel, pressure_affected, TRUE, preference, volume_channel)
+			return
+		// outpost 21 edit end
 
-			if(V.interior_helm != null && vol > 0)
-				playsound(V.interior_helm,soundin, vol * 0.5 * (1 - (distance / maxdistance)), vary, -5, falloff, FALSE, frequency, channel, pressure_affected, TRUE, preference, volume_channel)
-		// Outpost 21 addition end
-
+		hearer.playsound_local(turf_source, soundin, vol, vary, frequency, falloff, is_global, channel, pressure_affected, S, preference, volume_channel, T)
 		SSmotiontracker.ping(source,vol) // Nearly everything pings this, the quieter the less likely
-
 
 /mob/proc/check_sound_preference(list/preference)
 	if(!islist(preference))
@@ -133,17 +111,16 @@
 		else
 			S.frequency = get_rand_frequency()
 
-	// Outpost 21 edit(port) begin - AI hologram can hear things
+	// Check if an AI is listening through hologram...
 	var/turf/T = get_turf(src)
-	var/listener_position = T // used exclusively for sound_env stuff
+	var/listener_position = T
 	if(isAI(src))
-		// AI is silly, and we'd be doing a distance check across the station. Make it use the hologram's location... even if it makes more sense to use the emitter's. - Willbird
 		var/mob/living/silicon/ai/A = src
 		if(A.holo && istype(A.holo.masters[A],/obj/effect/overlay/aiholo))
 			T = get_turf(A.holo.masters[A])
 			listener_position = A.holo.masters[A]
+
 	if(isturf(turf_source))
-	// Outpost 21 end
 		//sound volume falloff with distance
 		var/distance = get_dist(T, turf_source)
 
@@ -174,7 +151,7 @@
 
 		//Apply a sound environment.
 		if(!is_global)
-			S.environment = get_sound_env(listener_position,pressure_factor) // Outpost 21 edit - ai can hear sounds through hologram
+			S.environment = get_sound_env(listener_position,pressure_factor)
 
 		var/dx = turf_source.x - T.x // Hearing from the right/left
 		S.x = dx
@@ -375,7 +352,6 @@
 				soundin = pick(
 					'sound/effects/mech/powerloader_step.ogg',
 					'sound/effects/mech/powerloader_step2.ogg')
-
 			// Outpost 21 edit(port) begin - vehicle crushing
 			if ("vehicle_crush")
 				soundin = pick(
@@ -387,6 +363,10 @@
 					'sound/effects/metal_close.ogg',
 					'sound/effects/meteorimpact.ogg')
 			// Outpost 21 edit end
+			if ("sizzle")
+				soundin = pick(
+					'sound/effects/wounds/sizzle1.ogg',
+					'sound/effects/wounds/sizzle2.ogg')
 	return soundin
 
 
@@ -411,7 +391,8 @@ GLOBAL_LIST_INIT(wf_speak_vomva_sound, list ('sound/talksounds/wf/vomva_1.ogg', 
 #define spider_sounds list("cough" = null, "sneeze" = null, "scream" = list('sound/voice/spiderchitter.ogg'), "pain" = list('sound/voice/spiderchitter.ogg'), "gasp" = null, "death" = list('sound/voice/death/spider/spider_death.ogg'))
 #define mouse_sounds list("cough" = list('sound/effects/mouse_squeak.ogg'), "sneeze" = list('sound/effects/mouse_squeak.ogg'), "scream" = list('sound/effects/mouse_squeak_loud.ogg'), "pain" = list('sound/effects/mouse_squeak.ogg'), "gasp" = list('sound/effects/mouse_squeak.ogg'), "death" = list('sound/effects/mouse_squeak_loud.ogg'))
 #define lizard_sounds list("cough" = null, "sneeze" = null, "scream" = list('sound/effects/mob_effects/una_scream1.ogg','sound/effects/mob_effects/una_scream2.ogg'), "pain" = list('sound/voice/pain/lizard/lizard_pain.ogg'), "gasp" = null, "death" = list('sound/voice/death/lizard/lizard_death.ogg'))
-#define vox_sounds list("cough" = list('sound/voice/shriekcough.ogg'), "sneeze" = list('sound/voice/shrieksneeze.ogg'), "scream" = list('sound/voice/shriek1.ogg'), "pain" = list('sound/voice/shriek1.ogg'), "gasp" = null, "death" = null)
+// Outpost 21 edit - Vox sounds reduced in volume
+#define vox_sounds list("cough" = list('modular_outpost/sound/voice/shriekcough.ogg'), "sneeze" = list('modular_outpost/sound/voice/shrieksneeze.ogg'), "scream" = list('modular_outpost/sound/voice/shriek1.ogg'), "pain" = list('modular_outpost/sound/voice/shriek1.ogg'), "gasp" = null, "death" = null)
 #define slime_sounds list("cough" = list('sound/effects/slime_squish.ogg'), "sneeze" = null, "scream" = null, "pain" = null, "gasp" = null, "death" = null)
 #define xeno_sounds list("cough" = null, "sneeze" = null, "scream" = list('sound/effects/mob_effects/x_scream1.ogg','sound/effects/mob_effects/x_scream2.ogg','sound/effects/mob_effects/x_scream3.ogg'), "pain" = list('sound/voice/pain/xeno/alien_roar1.ogg', 'sound/voice/pain/xeno/alien_roar2.ogg', 'sound/voice/pain/xeno/alien_roar3.ogg', 'sound/voice/pain/xeno/alien_roar4.ogg', 'sound/voice/pain/xeno/alien_roar5.ogg', 'sound/voice/pain/xeno/alien_roar6.ogg', 'sound/voice/pain/xeno/alien_roar7.ogg', 'sound/voice/pain/xeno/alien_roar8.ogg', 'sound/voice/pain/xeno/alien_roar9.ogg', 'sound/voice/pain/xeno/alien_roar10.ogg', 'sound/voice/pain/xeno/alien_roar11.ogg', 'sound/voice/pain/xeno/alien_roar12.ogg'), "gasp" = list('sound/voice/gasp/xeno/alien_hiss1.ogg'), "death" = list('sound/voice/death/xeno/xeno_death.ogg', 'sound/voice/death/xeno/xeno_death2.ogg'))
 #define teshari_sounds list("cough" = list('sound/effects/mob_effects/tesharicougha.ogg','sound/effects/mob_effects/tesharicoughb.ogg'), "sneeze" = list('sound/effects/mob_effects/tesharisneeze.ogg'), "scream" = list('sound/effects/mob_effects/teshariscream.ogg'), "pain" = null, "gasp" = null, "death" = null)
@@ -454,7 +435,7 @@ GLOBAL_LIST_INIT(wf_speak_vomva_sound, list ('sound/talksounds/wf/vomva_1.ogg', 
 // var/list/species_sounds = list()
 
 // Global list containing all of our sound options.
-var/list/species_sound_map = list(
+GLOBAL_LIST_INIT(species_sound_map, list(
 	"Canine" = canine_sounds,
 	"Cervine" = cervine_sounds,
 	"Feline" = feline_sounds,
@@ -473,7 +454,7 @@ var/list/species_sound_map = list(
 	"Xeno" = xeno_sounds,
 	"None" = no_sounds,
 	"Unset" = use_default
-)
+))
 
 /*
  * Call this for when you need a sound from an already-identified list - IE, "Canine". pick() cannot parse procs.
@@ -487,9 +468,9 @@ var/list/species_sound_map = list(
  * get_species_sound(H.species.species_sounds_male)["emote"] // If we're male, and want an emote sound gendered correctly.
 */
 /proc/get_species_sound(var/sounds)
-	if(!islist(species_sound_map[sounds])) // We check here if this list actually has anything in it, or if we're about to return a null index
+	if(!islist(GLOB.species_sound_map[sounds])) // We check here if this list actually has anything in it, or if we're about to return a null index
 		return null // Shitty failsafe but better than rewriting an entire litany of procs rn when I'm low on time - Rykka // list('sound/voice/silence.ogg')
-	return species_sound_map[sounds] // Otherwise, successfully return our sound
+	return GLOB.species_sound_map[sounds] // Otherwise, successfully return our sound
 
 /*
  * The following helper proc will select a species' default sounds - useful for if we're set to "Unset"
@@ -497,14 +478,16 @@ var/list/species_sound_map = list(
 */
 /proc/select_default_species_sound(var/datum/preferences/pref) // Called in character setup. This is similar to check_gendered_sounds, except here we pull from the prefs.
 	// First, we determine if we're custom-choosing a body or if we're a base game species.
-	var/datum/species/valid = GLOB.all_species[pref.species]
+	var/pref_species = pref.read_preference(/datum/preference/choiced/species)
+	var/datum/species/valid = GLOB.all_species[pref_species]
 	if(valid.selects_bodytype == (SELECTS_BODYTYPE_CUSTOM || SELECTS_BODYTYPE_SHAPESHIFTER)) // Custom species or xenochimera handling here
-		valid = coalesce(GLOB.all_species[pref.custom_base], GLOB.all_species[pref.species])
+		valid = coalesce(GLOB.all_species[pref.custom_base], GLOB.all_species[pref_species])
 	// Now we start getting our sounds.
+	var/id_gender = pref.read_preference(/datum/preference/choiced/gender/identifying)
 	if(valid.gender_specific_species_sounds) // Do we have gender-specific sounds?
-		if(pref.identifying_gender == FEMALE && valid.species_sounds_female)
+		if(id_gender == FEMALE && valid.species_sounds_female)
 			return valid.species_sounds_female
-		else if(pref.identifying_gender == MALE && valid.species_sounds_male)
+		else if(id_gender == MALE && valid.species_sounds_male)
 			return valid.species_sounds_male
 		else // Failsafe. Update if there's ever gendered sounds for HERM/Neuter/etc
 			return valid.species_sounds

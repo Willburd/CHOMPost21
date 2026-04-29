@@ -55,12 +55,12 @@
 	if (prob(75))
 		pixel_y = rand(0, 16)
 
-/obj/item/tool/screwdriver/attack(mob/living/carbon/M as mob, mob/living/carbon/user as mob)
+/obj/item/tool/screwdriver/attack(mob/living/M, mob/living/user, target_zone, attack_modifier)
 	if(!istype(M) || user.a_intent == I_HELP)
 		return ..()
 	if(user.zone_sel.selecting != O_EYES && user.zone_sel.selecting != BP_HEAD)
 		return ..()
-	if((CLUMSY in user.mutations) && prob(10)) // Outpost 21 edit - Made clumsy less obnoxious
+	if(CLUMSY_HARM_CHANCE(user))
 		M = user
 	return eyestab(M,user)
 
@@ -93,7 +93,6 @@
 	desc = "A strange conglomerate of a screwdriver."
 	icon_state = "hybscrewdriver"
 	item_state = "screwdriver_black"
-	origin_tech = list(TECH_MATERIAL = 3, TECH_ENGINEERING = 3)
 	w_class = ITEMSIZE_NORMAL
 	usesound = 'sound/effects/uncloak.ogg'
 	toolspeed = 0.4

@@ -39,17 +39,10 @@
 /obj/item/reagent_containers/cooking_container/attackby(var/obj/item/I as obj, var/mob/user as mob)
 	if(istype(I, /obj/item/gripper))
 		var/obj/item/gripper/GR = I
-		var/obj/item/wrapped = GR.get_current_pocket()
+		var/obj/item/wrapped = GR.get_wrapped_item()
 		if(wrapped)
-			wrapped.forceMove(get_turf(src))
 			attackby(wrapped, user)
-			if(QDELETED(wrapped))
-				wrapped = null
-
-			else if(wrapped.loc != src)
-				wrapped = null
-
-			return
+			return FALSE
 
 	for (var/possible_type in insertable)
 		if (istype(I, possible_type))
@@ -162,7 +155,7 @@
 	if (total > 0)
 		for (var/obj/item/I in contents)
 			if (weights[I])
-				holder.trans_to(I, weights[I] / total)
+				holder.trans_to_obj(I, weights[I] / total)
 
 /obj/item/reagent_containers/cooking_container/update_icon()
 	overlays.Cut()

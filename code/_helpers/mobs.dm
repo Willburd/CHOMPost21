@@ -102,16 +102,6 @@
 	else
 		return current_species.get_random_name(gender)
 
-/proc/random_skin_tone()
-	switch(pick(60;"caucasian", 15;"afroamerican", 10;"african", 10;"latino", 5;"albino"))
-		if("caucasian")		. = -10
-		if("afroamerican")	. = -115
-		if("african")		. = -165
-		if("latino")		. = -55
-		if("albino")		. = 34
-		else				. = rand(-185,34)
-	return min(max( .+rand(-25, 25), -185),34)
-
 /proc/skintone2racedescription(tone)
 	switch (tone)
 		if(30 to INFINITY)		return "albino"
@@ -138,7 +128,7 @@
 		else				return "unknown"
 
 /proc/RoundHealth(health)
-	var/list/icon_states = cached_icon_states(GLOB.ingame_hud_med)
+	var/list/icon_states = icon_states_fast(GLOB.ingame_hud_med)
 	for(var/icon_state in icon_states)
 		if(health >= text2num(icon_state))
 			return icon_state
@@ -161,13 +151,8 @@ Proc for attack log creation, because really why not
 			add_attack_logs(user,M,what_done,admin_notify)
 		return
 
-	var/user_str = key_name(user)
 	var/target_str = key_name(target)
 
-	if(ismob(user))
-		user.attack_log += text("\[[time_stamp()]\] [span_red("Attacked [target_str]: [what_done]")]")
-	if(ismob(target))
-		target.attack_log += text("\[[time_stamp()]\] [span_orange("Attacked by [user_str]: [what_done]")]")
 	log_combat(user, target, what_done)
 	if(admin_notify)
 		msg_admin_attack("[key_name_admin(user)] vs [target_str]: [what_done]")

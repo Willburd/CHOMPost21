@@ -23,20 +23,20 @@
 
 	var/list/access_rights
 	var/obj/item/card/id/idcard
-	var/idcard_type = /obj/item/card/id/synthetic
 
 	var/sensor_type = 0 //VOREStation add - silicon omni "is sensor on or nah"
 
 	var/hudmode = null
 	fire_stack_decay_rate = -0.55
+	var/idcard_type = /obj/item/card/id/synthetic
 
 /mob/living/silicon/Initialize(mapload, is_decoy = FALSE)
 	. = ..()
 	GLOB.silicon_mob_list += src
 	if(!is_decoy)
+		init_id(idcard_type)
 		add_language(LANGUAGE_GALCOM)
 		apply_default_language(GLOB.all_languages[LANGUAGE_GALCOM])
-		init_id()
 		init_subsystems()
 
 		AddElement(/datum/element/footstep, FOOTSTEP_MOB_SHOE, 1, -6)
@@ -55,7 +55,9 @@
 	clear_subsystems()
 	return ..()
 
-/mob/living/silicon/proc/init_id()
+/mob/living/silicon/proc/init_id(idcard_type)
+	if(!idcard_type)
+		return
 	if(idcard)
 		return
 	idcard = new idcard_type(src)
@@ -72,7 +74,8 @@
 	return
 
 /mob/living/silicon/emp_act(severity, recursive)
-	if(SEND_SIGNAL(src, COMSIG_SILICON_EMP_ACT, severity) & COMPONENT_BLOCK_EMP)
+	. = ..()
+	if (. & EMP_PROTECT_SELF || SEND_SIGNAL(src, COMSIG_SILICON_EMP_ACT, severity) & COMPONENT_BLOCK_EMP)
 		return
 	switch(severity)
 		if(1)
@@ -90,7 +93,6 @@
 	flash_eyes(affect_silicon = 1)
 	to_chat(src, span_bolddanger("*BZZZT*"))
 	to_chat(src, span_danger("Warning: Electromagnetic pulse detected."))
-	..()
 
 /mob/living/silicon/stun_effect_act(var/stun_amount, var/agony_amount, var/def_zone, var/used_weapon=null, var/electric = FALSE)
 	return	//immune
@@ -130,12 +132,12 @@
 	return 2
 
 /mob/living/silicon/apply_effect(var/effect = 0,var/effecttype = STUN, var/blocked = 0, var/check_protection = 1)
-	// outpost 21 addition begin - radiation and haunting affects borg vision
+	// outpost 21 edit begin - radiation and haunting affects borg vision
 	switch(effecttype)
 		if(IRRADIATE)
 			radiation += max(effect, 0)
 			radiation = min(radiation,10) // Cap duration, synths are not really affected by it all that much
-	// outpost 21 addition end
+	// outpost 21 edit end
 	return 0//The only effect that can hit them atm is flashes and they still directly edit so this works for now
 
 
@@ -162,8 +164,8 @@
 
 // this function displays the shuttles ETA in the status panel if the shuttle has been called
 /mob/living/silicon/proc/show_emergency_shuttle_eta()
-	if(emergency_shuttle)
-		var/eta_status = emergency_shuttle.get_status_panel_eta()
+	if(SSemergency_shuttle)
+		var/eta_status = SSemergency_shuttle.get_status_panel_eta()
 		if(eta_status)
 			. = "[eta_status]"
 
@@ -388,10 +390,10 @@
 
 
 /mob/living/silicon/proc/is_traitor()
-	return mind && (mind in traitors.current_antagonists)
+	return mind && (mind in GLOB.traitors.current_antagonists)
 
 /mob/living/silicon/proc/is_malf()
-	return mind && (mind in malf.current_antagonists)
+	return mind && (mind in GLOB.malf.current_antagonists)
 
 /mob/living/silicon/proc/is_malf_or_traitor()
 	return is_traitor() || is_malf()
@@ -414,13 +416,13 @@
 	//Handle job slot/tater cleanup.
 	var/job = mind.assigned_role
 
-	job_master.FreeRole(job)
+	SSjob.free_role(job)
 
 	if(mind.objectives.len)
 		qdel(mind.objectives)
 		mind.special_role = null
 
-	clear_antag_roles(mind)
+	SSantag_job.clear_antag_roles(mind)
 
 	ghostize(0)
 	qdel(src)

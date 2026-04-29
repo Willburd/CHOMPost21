@@ -21,6 +21,7 @@
 	var/apply_colour //temp pending icon rewrite
 	drop_sound = 'sound/items/drop/axe.ogg'
 	pickup_sound = 'sound/items/pickup/axe.ogg'
+	custom_handling = TRUE
 
 /obj/item/stack/material/Initialize(mapload)
 	. = ..()
@@ -36,8 +37,6 @@
 
 	recipes = material.get_recipes()
 	stacktype = material.stack_type
-	if(islist(material.stack_origin_tech))
-		origin_tech = material.stack_origin_tech.Copy()
 
 	if(apply_colour)
 		color = material.icon_colour
@@ -90,9 +89,12 @@
 		M.update_strings()
 	return transfer
 
-/obj/item/stack/material/attack_self(var/mob/user)
+/obj/item/stack/material/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	if(!material.build_windows(user, src))
-		..()
+		tgui_interact(user)
 
 /obj/item/stack/material/attackby(var/obj/item/W, var/mob/user)
 	if(istype(W,/obj/item/stack/cable_coil))

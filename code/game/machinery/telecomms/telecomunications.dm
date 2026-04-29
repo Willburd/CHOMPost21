@@ -36,8 +36,8 @@
 	var/hide = 0				// Is it a hidden machine?
 	var/listening_level = 0	// 0 = auto set in New() - this is the z level that the machine is listening to.
 
-	// var/datum/looping_sound/tcomms/soundloop // CHOMPStation Add: Hummy noises // Outpost 21 edit - silence noises
-	var/noisy = TRUE // CHOMPStation Add: Hummy noises, this starts on
+	var/datum/looping_sound/tcomms/soundloop
+	var/noisy = TRUE
 
 /obj/machinery/telecomms/proc/relay_information(datum/signal/signal, filter, copysig, amount = 20)
 	// relay signal to all linked machinery that are of type [filter]. If signal has been sent [amount] times, stop sending
@@ -120,7 +120,7 @@
 
 
 /obj/machinery/telecomms/Initialize(mapload)
-	telecomms_list += src
+	GLOB.telecomms_list += src
 	..()
 	default_apply_parts()
 	return INITIALIZE_HINT_LATELOAD
@@ -139,10 +139,8 @@
 			for(var/obj/machinery/telecomms/T in orange(20, src))
 				add_link(T)
 		else
-			for(var/obj/machinery/telecomms/T in telecomms_list)
+			for(var/obj/machinery/telecomms/T in GLOB.telecomms_list)
 				add_link(T)
-	/* Outpost 21 edit - silence noises
-	// CHOMPAdd: TComms humming
 	soundloop = new(list(src), FALSE)
 	if(prob(60)) // 60% chance to change the midloop
 		if(prob(40))
@@ -155,15 +153,13 @@
 			soundloop.mid_sounds = list('sound/machines/tcomms/tcomms_04.ogg' = 1)
 			soundloop.mid_length = 30
 	soundloop.start()
-	// CHOMPAdd End
-	*/
 
 /obj/machinery/telecomms/Destroy()
-	telecomms_list -= src
-	for(var/obj/machinery/telecomms/comm in telecomms_list)
+	GLOB.telecomms_list -= src
+	for(var/obj/machinery/telecomms/comm in GLOB.telecomms_list)
 		comm.links -= src
 	links = list()
-	// QDEL_NULL(soundloop) // CHOMPAdd: Tcomms noises  // Outpost 21 edit - silence noises
+	QDEL_NULL(soundloop)
 	. = ..()
 
 // Used in auto linking
@@ -186,17 +182,17 @@
 
 	if(toggled)
 		if(stat & (BROKEN|NOPOWER|EMPED) || integrity <= 0) // if powered, on. if not powered, off. if too damaged, off
-			on = 0
-			//soundloop.stop() // CHOMPAdd: Tcomms noises // Outpost 21 edit - silence noises
+			on = FALSE
+			soundloop.stop()
 			noisy = FALSE
 		else
-			on = 1
+			on = TRUE
 	else
-		on = 0
-		//soundloop.stop() // CHOMPAdd: Tcomms noises // Outpost 21 edit - silence noises
+		on = FALSE
+		soundloop.stop()
 		noisy = FALSE
-	if(!noisy) // CHOMPAdd: Tcomms noises
-		//soundloop.start() // CHOMPAdd: Tcomms noises // Outpost 21 edit - silence noises
+	if(!noisy)
+		soundloop.start()
 		noisy = TRUE
 
 /obj/machinery/telecomms/process()
@@ -212,14 +208,16 @@
 		traffic -= netspeed
 
 /obj/machinery/telecomms/emp_act(severity, recursive)
+	. = ..()
+	if (. & EMP_PROTECT_SELF)
+		return
 	if(prob(100/severity))
 		if(!(stat & EMPED))
 			stat |= EMPED
-			playsound(src, 'sound/machines/tcomms/tcomms_pulse.ogg', 70, 1, 30) // CHOMPAdd: Tcomms noises
+			playsound(src, 'sound/machines/tcomms/tcomms_pulse.ogg', 70, 1, 30)
 			var/duration = (300 * 10)/severity
 			spawn(rand(duration - 20, duration + 20)) // Takes a long time for the machines to reboot.
 				stat &= ~EMPED
-	..()
 
 /obj/machinery/telecomms/proc/checkheat()
 	if(QDELETED(src))
@@ -415,8 +413,8 @@
 	var/broadcasting = 1
 	var/receiving = 1
 
-/obj/machinery/telecomms/relay/forceMove(var/newloc)
-	. = ..(newloc)
+/obj/machinery/telecomms/relay/forceMove(atom/destination, direction, movetime)
+	. = ..(destination, direction, movetime)
 	listening_level = z
 
 /obj/machinery/telecomms/relay/receive_information(datum/signal/signal, obj/machinery/telecomms/machine_from)

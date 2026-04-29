@@ -67,7 +67,8 @@
 							NETWORK_COMMUNICATORS,
 							NETWORK_ALARM_ATMOS,
 							NETWORK_ALARM_POWER,
-							NETWORK_ALARM_FIRE
+							NETWORK_ALARM_FIRE,
+							NETWORK_ROGUE_SLEEVERS
 							)
 	usable_email_tlds = list("internalmail.es")
 	allowed_spawns = list("Elevator", "Cryogenic Storage", "Cyborg Storage", "On-Site Dorms")
@@ -178,8 +179,16 @@
 										/area/rnd/xenobiology/lost,
 										/area/maintenance/damaged_resleeverA,
 										/area/maintenance/damaged_resleeverB,
+										/area/maintenance/damaged_resleeverC,
 										/area/security/brig_hole,
-										/area/muriki/crew/bunker)
+										/area/muriki/crew/bunker,
+										// Shadekin exclusions
+										/area/maintenance/shadekin_dark/waste,
+										/area/maintenance/shadekin_dark/sec,
+										/area/maintenance/shadekin_dark/river,
+										/area/maintenance/shadekin_dark/med,
+										/area/maintenance/shadekin_dark/cave,
+										/area/maintenance/shadekin_dark/mountain)
 
 	unit_test_exempt_from_apc = list(	/area/muriki/processor,
 										/area/muriki/processor/hall,
@@ -235,9 +244,18 @@
 										/area/muriki/lowerelev,
 										/area/muriki/lowerevac,
 										/area/muriki/crystal,
+										/area/rnd/xenobiology/lost,
 										/area/maintenance/damaged_resleeverA,
 										/area/maintenance/damaged_resleeverB,
-										/area/security/brig_hole)
+										/area/maintenance/damaged_resleeverC,
+										/area/security/brig_hole,
+										// Shadekin exclusions
+										/area/maintenance/shadekin_dark/waste,
+										/area/maintenance/shadekin_dark/sec,
+										/area/maintenance/shadekin_dark/river,
+										/area/maintenance/shadekin_dark/med,
+										/area/maintenance/shadekin_dark/cave,
+										/area/maintenance/shadekin_dark/mountain)
 
 	planet_datums_to_make = list(/datum/planet/muriki)
 
@@ -399,12 +417,13 @@
 
 
 /obj/effect/landmark/map_data/muriki
-    height = 4
+	height = 4
 
 // Overmap represetation of muriki
 /obj/effect/overmap/visitable/sector/muriki
 	name = "Muriki"
 	desc = "What a terrible place to call home."
+	icon_state = "ruined"
 	scanner_desc = @{"[i]Registration[/i]: ES Outpost 21-00
 [i]Class[/i]: Planetary Installation
 [i]Transponder[/i]: Transmitting (CIV), ESHUI IFF
@@ -414,7 +433,7 @@
 	icon_state = "globe"
 	color = "#7be313"
 	initial_generic_waypoints = list("outpost_landing_pad","outpost_engineering_pad")
-	initial_restricted_waypoints = list( "Mining Trawler" = list("outpost_trawler_pad"), "Security Carrier" = list("outpost_security_hangar"), "Medical Rescue" = list("outpost_medical_hangar"))
+	initial_restricted_waypoints = list( "Mining Trawler" = list("outpost_trawler_pad"), "Security Carrier" = list("outpost_security_hangar"), "Medical Rescue" = list("outpost_medical_hangar"), "Interferon" = list("interferon_airdrop_muriki_central", "interferon_airdrop_muriki_southeast"))
 	//Despite not being in the multi-z complex, these levels are part of the overmap sector
 	extra_z_levels = list()
 
@@ -433,11 +452,11 @@
 		var/obj/effect/overmap/visitable/ship/landable/SL = AM //Phew
 		var/datum/shuttle/autodock/multi/shuttle = SSshuttles.shuttles[SL.shuttle]
 		if(!istype(shuttle) || !shuttle.cloaked) //Not a multishuttle (the only kind that can cloak) or not cloaked
-			atc.msg(message)
+			SSatc.msg(message)
 
 	//For ships, it's safe to assume they're big enough to not be sneaky
 	else if(istype(AM, /obj/effect/overmap/visitable/ship))
-		atc.msg(message)
+		SSatc.msg(message)
 
 /obj/effect/overmap/visitable/sector/muriki/get_space_zlevels()
 	return list() //None!
@@ -448,6 +467,7 @@
 	initial_generic_waypoints = list("orbitalyard_civ","orbitalyard_north","orbitalyard_south","orbitalyard_east","orbitalyard_west")
 	initial_restricted_waypoints = list("Mining Trawler" = list("trawler_yard"))
 	name = "Orbital Reclamation Yard"
+	icon_state = "htu_cruiser"
 	scanner_desc = @{"[i]Registration[/i]: ES Orbital 21-03
 [i]Class[/i]: Installation
 [i]Transponder[/i]: Transmitting (CIV), ESHUI IFF
@@ -471,11 +491,11 @@
 		var/obj/effect/overmap/visitable/ship/landable/SL = AM //Phew
 		var/datum/shuttle/autodock/multi/shuttle = SSshuttles.shuttles[SL.shuttle]
 		if(!istype(shuttle) || !shuttle.cloaked) //Not a multishuttle (the only kind that can cloak) or not cloaked
-			atc.msg(message)
+			SSatc.msg(message)
 
 	//For ships, it's safe to assume they're big enough to not be sneaky
 	else if(istype(AM, /obj/effect/overmap/visitable/ship))
-		atc.msg(message)
+		SSatc.msg(message)
 
 /obj/effect/overmap/visitable/sector/murkiki_space/orbital_yard/get_space_zlevels()
 	return list(Z_LEVEL_OUTPOST_ASTEROID)
@@ -485,6 +505,7 @@
 /obj/effect/overmap/visitable/sector/murkiki_space/confinementbeam
 	initial_generic_waypoints = list("confinementbeam_civ")
 	name = "Confinement Beam Platform"
+	icon_state = "htu_cruiser"
 	scanner_desc = @{"[i]Registration[/i]: ES Orbital 21-04
 [i]Class[/i]: Confinement Beam
 [i]Transponder[/i]: Transmitting (ENG), ESHUI IFF
@@ -509,11 +530,26 @@
 		var/obj/effect/overmap/visitable/ship/landable/SL = AM //Phew
 		var/datum/shuttle/autodock/multi/shuttle = SSshuttles.shuttles[SL.shuttle]
 		if(!istype(shuttle) || !shuttle.cloaked) //Not a multishuttle (the only kind that can cloak) or not cloaked
-			atc.msg(message)
+			SSatc.msg(message)
 
 	//For ships, it's safe to assume they're big enough to not be sneaky
 	else if(istype(AM, /obj/effect/overmap/visitable/ship))
-		atc.msg(message)
+		SSatc.msg(message)
 
 /obj/effect/overmap/visitable/sector/murkiki_space/confinementbeam/get_space_zlevels()
 	return list(Z_LEVEL_OUTPOST_CONFINEMENTBEAM)
+
+
+
+/obj/effect/overmap/visitable/sector/murkiki_space/distant_gateway
+	name = "Sector Gateway"
+	icon_state = "ring"
+	scanner_desc = @{"[i]Registration[/i]: SOLGOV GATE SB323
+[i]Class[/i]: Longjump Bluespace Gateway
+[i]Transponder[/i]: Transmitting (CIV), SOLGOV IFF
+[b]Notice[/b]: Solgov Transport Facility"}
+	map_z = list(Z_NAME_ALIAS_MISC)
+	initial_restricted_waypoints = list("Interferon" = list("interferon_hangar"))
+
+/obj/effect/overmap/visitable/sector/murkiki_space/distant_gateway/get_space_zlevels()
+	return list() //None!

@@ -47,13 +47,6 @@
 
 	var/static/list/crew_creatures = list(	/mob/living/simple_mob/protean_blob,
 											/mob/living/simple_mob/slime/promethean)
-	var/static/list/pest_creatures = list(	/mob/living/simple_mob/animal/passive/mouse,
-											/mob/living/simple_mob/animal/passive/lizard,
-											/mob/living/simple_mob/animal/passive/cockroach,
-											// Outpost 21 edit begin - outpost creatures, note: uses EXACT types, no inheretance!
-											/mob/living/simple_mob/vore/alienanimals/jil,
-											/mob/living/simple_mob/vore/alienanimals/jil/jillioth)
-											// Outpost 21 edit end
 	var/obj/item/vac_attachment/swoopie/Vac
 
 /mob/living/simple_mob/vore/aggressive/corrupthound/swoopie/Initialize(mapload)
@@ -63,13 +56,13 @@
 		init_vore()
 	Vac = new /obj/item/vac_attachment/swoopie(src)
 	if(istype(Vac))
-		Vac.output_dest = vore_selected
+		Vac.output_dest = WEAKREF(vore_selected)
 		Vac.vac_power = 3
 		Vac.vac_owner = src
 
 /mob/living/simple_mob/vore/aggressive/corrupthound/swoopie/IIsAlly(mob/living/L)
 	. = ..()
-	if(L?.type in pest_creatures) // If they're a pest, swoop no matter what!
+	if(L && HAS_TRAIT(L, TRAIT_AMBIENT_PEST_MOB)) // If they're a pest, swoop no matter what!
 		return FALSE
 	if(!.) // Outside the faction and not in friends, are they crew
 		return L?.type in crew_creatures
@@ -103,10 +96,18 @@
 	B.digest_burn = 3
 	B.fancy_vore = 1
 	B.vore_sound = "Stomach Move"
-	B.belly_fullscreen = "VBO_trash"
-	B.belly_fullscreen_color = "#555B34"
+	B.belly_fullscreen = "VBOanim_belly9"
+	B.belly_fullscreen_color = "#202020"
 	B.sound_volume = 25
 	B.count_items_for_sprite = TRUE
+	B.show_liquids = TRUE
+	B.reagentbellymode = TRUE
+	B.reagent_mode_flags = DM_FLAG_REAGENTSDIGEST
+	B.reagentid = "biomass"
+	B.reagent_chosen = "Biomass"
+	B.reagent_name = "caustic trash-sludge"
+	B.custom_reagentcolor = "#3c3030"
+	B.reagent_touches = FALSE
 
 	B = new /obj/belly/longneck(src)
 	B.affects_vore_sprites = FALSE
@@ -119,7 +120,7 @@
 	B.belly_fullscreen_color2 = "#1C1C1C"
 	B.belly_fullscreen_color3 = "#292929"
 	B.belly_fullscreen_color4 = "#CCFFFF"
-	B.belly_fullscreen = "VBO_maw8" //Swoopies have beaks!!
+	B.belly_fullscreen = "VBO_maw25" //Swoopies have beaks!!
 
 	vore_selected = B
 
@@ -127,7 +128,7 @@
 	B.affects_vore_sprites = TRUE
 	B.belly_sprite_to_affect = "neck1"
 	B.name = "vacuum hose"
-	B.autotransferlocation = "vacuum hose 2"
+	B.autotransferlocation = "upper vacuum hose"
 	B.fancy_vore = 1
 	B.vore_sound = "Stomach Move"
 	B.sound_volume = 100
@@ -135,8 +136,8 @@
 	B = new /obj/belly/longneck(src)
 	B.affects_vore_sprites = TRUE
 	B.belly_sprite_to_affect = "neck2"
-	B.name = "vacuum hose 2"
-	B.autotransferlocation = "vacuum hose 3"
+	B.name = "upper vacuum hose"
+	B.autotransferlocation = "midway vacuum hose"
 	B.desc = "It feels very tight in here..."
 	B.fancy_vore = 1
 	B.vore_sound = "Stomach Move"
@@ -145,8 +146,8 @@
 	B = new /obj/belly/longneck(src)
 	B.affects_vore_sprites = TRUE
 	B.belly_sprite_to_affect = "neck3"
-	B.name = "vacuum hose 3"
-	B.autotransferlocation = "vacuum hose 4"
+	B.name = "midway vacuum hose"
+	B.autotransferlocation = "lower vacuum hose"
 	B.desc = "Looks like it's gonna be all downhill from here..."
 	B.fancy_vore = 1
 	B.vore_sound = "Stomach Move"
@@ -155,7 +156,7 @@
 	B = new /obj/belly/longneck(src)
 	B.affects_vore_sprites = TRUE
 	B.belly_sprite_to_affect = "neck4"
-	B.name = "vacuum hose 4"
+	B.name = "lower vacuum hose"
 	B.autotransferlocation = "Churno-Vac"
 	B.desc = "Thank you for your biofuel contribution~"
 	B.fancy_vore = 1
@@ -182,7 +183,7 @@
 	autotransferlocation = "Churno-Vac"
 	vore_verb = "suck"
 	belly_fullscreen_color = "#4d4d4d"
-	belly_fullscreen = "a_tumby"
+	belly_fullscreen = "VBOanim_gullet1"
 	human_prey_swallow_time = 1
 	nonhuman_prey_swallow_time = 1
 	autotransfer_max_amount = 2
@@ -206,9 +207,10 @@
 					L.remove_from_mob(Vac, src)
 				else
 					Vac.forceMove(src)
-		if(!Vac.output_dest)
+		var/atom/movable/vac_output = Vac.output_dest?.resolve()
+		if(!vac_output)
 			if(isbelly(vore_selected))
-				Vac.output_dest = vore_selected
+				Vac.output_dest = WEAKREF(vore_selected)
 	if(!istype(T) || !istype(Vac) || !has_AI() || Vac.loc != src || stat)
 		return
 	if(istype(T, /turf/simulated))
@@ -224,27 +226,6 @@
 		if(!L.anchored && L.devourable && !L == src && !L.buckled && L.can_be_drop_prey)
 			Vac.afterattack(L, src, 1)
 			return
-
-// Outpost 21 edit begin - size modifier for swoopies
-/mob/living/get_effective_size(var/micro = FALSE)
-	return size_multiplier + 0.55 // Lets teshari get scooped running under it
-// Outpost 21 edit end
-
-// Outpost 21 edit(port) begin - Ejection lever
-/mob/living/simple_mob/vore/aggressive/corrupthound/swoopie/verb/eject_switch()
-	set name = "Eject CHURNO-VAC"
-	set desc = "Releases the contents of the SWOOPIE's CHURNO-VAC."
-	set category = "Object"
-	set src in oview(1)
-
-	if(do_after(usr, 40, target = src))
-		usr.visible_message(span_info("[usr] pulls \The [src]'s ejection switch!"))
-		release_vore_contents()
-		for(var/mob/living/L in living_mobs(0)) //add everyone on the tile to the do-not-eat list for a while
-			if(!(LAZYFIND(prey_excludes, L))) // Unless they're already on it, just to avoid fuckery.
-				LAZYSET(prey_excludes, L, world.time)
-				addtimer(CALLBACK(src, PROC_REF(removeMobFromPreyExcludes), WEAKREF(L)), 30 SECONDS)
-// Outpost 21 edit end
 
 /datum/say_list/swoopie
 	speak = list("Scanning for debris...", "Scanning for dirt...", "Scanning for pests...", "Squawk!")
@@ -345,7 +326,7 @@
 			to_chat(usr, "You press a button on \the [src], [ai.swoop_pests ? "" : "de"]activating it's pest seeking routines!")
 		if("Swoop Trash")
 			ai.swoop_trash = !ai.swoop_trash // invert the option
-			to_chat(usr, "you press a button on \the [src], [ai.swoop_trash ? "" : "de"]activating it's pest seeking routines!")
+			to_chat(usr, "you press a button on \the [src], [ai.swoop_trash ? "" : "de"]activating it's trash seeking routines!")
 
 
 /mob/living/simple_mob/vore/aggressive/corrupthound/swoopie/Login()
@@ -359,7 +340,7 @@
 	icon = 'icons/mob/vacpack_swoop.dmi'
 	item_state = null
 
-/obj/item/vac_attachment/swoopie/dropped(mob/user) //This should fix it sitting on the ground until the next life() tick
+/obj/item/vac_attachment/swoopie/dropped(mob/user, equipping, slot) //This should fix it sitting on the ground until the next life() tick
 	. = ..()
 	if(!vac_owner)
 		return

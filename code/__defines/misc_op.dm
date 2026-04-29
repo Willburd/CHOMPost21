@@ -5,7 +5,4 @@
 
 #define JOB_STOWAWAY            "Stowaway"
 
-// area bitflag
-#define AREA_FIRE_SUPRESSION		0x10000	// Outpost 21 edit(port) - Fire sprinklers
-
 #define SHADEKIN_DEATH_NOTICE "gasps and falls backwards, flickering as they fall unconscious and phase out, leaving behind fur and lingering blood... they very likely won't be coming back for a long while."

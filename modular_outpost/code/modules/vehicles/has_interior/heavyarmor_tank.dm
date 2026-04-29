@@ -1,4 +1,4 @@
-/obj/vehicle/has_interior/controller/heavyarmor_tank
+/obj/vehicle/has_interior/heavyarmor_tank
 	name = "K72-4"
 	desc = "Kylos model 72 varient 4, heavy asset reclaimation vehicle. For when lesser force has failed."
 	move_delay = 3 //was 4. Slight speed buff to make it more worthwhile to use
@@ -9,13 +9,13 @@
 	icon_state = "sec_tank"
 	base_icon = "sec_tank"
 
-	health = 1200
-	maxhealth = 1200
+	health = 2200
+	maxhealth = 2200
 	fire_dam_coeff = 0.5
 	brute_dam_coeff = 0.4
 	breakwalls = TRUE
 
-	weapons_equiped = list(/obj/item/vehicle_interior_weapon/mainturret)
+	weapons_equiped = list(/obj/structure/vehicle_interior_weapon/mainturret)
 	// list of weapons, with a sublist containing directions, with a subsub list of x and ys
 	weapons_draw_offset = list(list("1" = list(-96,-96),"2" = list(-96,-96),"4" = list(-96,-96),"8" = list(-96,-96)) )
 	move_loop = new /datum/looping_sound/tank_move_loop()
@@ -36,7 +36,7 @@
 	icon_state = "sec_tank"
 	w_class = ITEMSIZE_TINY
 
-/obj/item/vehicle_interior_weapon/mainturret
+/obj/structure/vehicle_interior_weapon/mainturret
 	name = "\improper TD Type-L Accelerator"
 	desc = "Tandem Logistics Linear-Type Heavy-Ordinance Magnetic Accelerator."
 
@@ -57,7 +57,7 @@
 	deviation = 0.1
 	fire_cooldown = 6
 
-	freeaim = FALSE
+	//freeaim = FALSE
 
 
 // basically just meaner /obj/item/projectile/bullet/srmrocket
@@ -73,7 +73,7 @@
 	hud_state = "rocket_he"
 	hud_state_empty = "rocket_empty"
 
-#define SHELL_EXPLOSION explosion(get_turf(src), 1, 2, 3, 4)
+#define SHELL_EXPLOSION explosion(get_turf(src), 1, 1, 2, 3)
 #define SHELL_FRAGMENTS fragmentate(get_turf(src), 12, 7, list(/obj/item/projectile/bullet/pellet/fragment))
 /obj/item/projectile/bullet/kyshell/on_hit(atom/target, blocked=0)
 	SHELL_FRAGMENTS

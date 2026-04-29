@@ -17,7 +17,7 @@
 		if(SPIDERS)
 			log_world("## DEBUG: Hord event, spiders selected.")
 			spawncount = rand(4 * severity, 10 * severity)
-			sent_spiders_to_station = 0
+			GLOB.sent_spiders_to_station = FALSE
 
 		if(TROIDS)
 			log_world("## DEBUG: Horde event, metroids selected.")
@@ -29,9 +29,9 @@
 
 /datum/event/horde_infestation/announce()
 	if(spawning == SPIDERS || spawning == SLIMES)
-		command_announcement.Announce("Unidentified lifesigns detected coming aboard [station_name()]. Secure any exterior access, including ducting and ventilation.", "Lifesign Alert", new_sound = 'sound/AI/aliens.ogg')
+		GLOB.command_announcement.Announce("Unidentified lifesigns detected coming aboard [station_name()]. Secure any exterior access, including ducting and ventilation.", "Lifesign Alert", new_sound = ANNOUNCER_MSG_UNIDENTIFIED_LIFESIGNS)
 	if(spawning == TROIDS)
-		command_announcement.Announce("High-energy lifeforms detected coming aboard [station_name()]. All crew members, stay alert, and listen to security instructions.", "Lifesign Alert", new_sound = 'sound/misc/alarm1.ogg')
+		GLOB.command_announcement.Announce("High-energy lifeforms detected coming aboard [station_name()]. All crew members, stay alert, and listen to security instructions.", "Lifesign Alert", new_sound = 'sound/misc/alarm1.ogg')
 
 /datum/event/horde_infestation/start()
 	var/list/vents = list()
@@ -109,7 +109,7 @@
 			area_names |= metroid_area.name
 		if(area_names.len)
 			var/english_list = english_list(area_names)
-			command_announcement.Announce("Sensors have narrowed down remaining lifeforms to the followng areas: [english_list]", "Lifesign Alert")
+			GLOB.command_announcement.Announce("Sensors have narrowed down remaining lifeforms to the following areas: [english_list]", "Lifesign Alert")
 
 #undef SPIDERS
 #undef TROIDS

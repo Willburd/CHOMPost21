@@ -632,7 +632,7 @@
 	name = "talon bowman headset"
 	desc = "A bowman headset for communication between the crew of the ITV Talon." // CHOMPAdd
 	adhoc_fallback = TRUE
-	icon_state = "pilot_headset"
+	icon_state = "pilot_headset_alt"
 	ks2type = /obj/item/encryptionkey/talon
 
 /obj/item/radio/headset/earbud/talon
@@ -651,25 +651,21 @@
 // Special Antag/Admin/Event/Other headsets
 
 /obj/item/radio/headset/syndicate
-	origin_tech = list(TECH_ILLEGAL = 3)
 	icon_state = "syndie_headset"
 	syndie = 1
 	ks1type = /obj/item/encryptionkey/syndicate
 
 /obj/item/radio/headset/alt/syndicate
-	origin_tech = list(TECH_ILLEGAL = 3)
 	icon_state = "syndie_headset_alt"
 	syndie = 1
 	ks1type = /obj/item/encryptionkey/syndicate
 
 /obj/item/radio/headset/earbud/syndicate
-	origin_tech = list(TECH_ILLEGAL = 3)
 	icon_state = "syndie_earbud"
 	syndie = 1
 	ks1type = /obj/item/encryptionkey/syndicate
 
 /obj/item/radio/headset/raider
-	origin_tech = list(TECH_ILLEGAL = 2)
 	icon_state = "syndie_headset"
 	syndie = 1
 	ks1type = /obj/item/encryptionkey/raider
@@ -679,7 +675,6 @@
 	set_frequency(RAID_FREQ)
 
 /obj/item/radio/headset/binary
-	origin_tech = list(TECH_ILLEGAL = 3)
 	ks1type = /obj/item/encryptionkey/binary
 
 /obj/item/radio/headset/omni		//Only for the admin intercoms

@@ -20,7 +20,7 @@
 	return TRUE
 
 /mob/living/carbon/human/proc/getlightlevel() //easier than having the same code in like three places
-	// outpost 21 addition begin - lockers are dark and spooky!
+	// outpost 21 edit begin - lockers are dark and spooky!
 	if(istype(src.loc,/obj/structure/closet))
 		return 0 // it's dark in here!
 	else if(isturf(src.loc)) //else, there's considered to be no light
@@ -28,7 +28,7 @@
 		return T.get_lumcount() * 5
 	else
 		return 0
-	// outpost 21 addition end
+	// outpost 21 edit end
 
 /mob/living/carbon/human/proc/bloodsuck()
 	set name = "Partially Drain prey of blood"
@@ -745,7 +745,7 @@
 		target.visible_message(span_vwarning("\The [target] suddenly disappears, being dragged into the water!"),\
 			span_vdanger("You are dragged below the water and feel yourself slipping directly into \the [src]'s [vore_selected.get_belly_name()]!"))
 		to_chat(src, span_vnotice("You successfully drag \the [target] into the water, slipping them into your [vore_selected.get_belly_name()]."))
-		target.forceMove(src.vore_selected)
+		vore_selected.nom_atom(target)
 
 /mob/living/carbon/human/proc/toggle_pain_module()
 	set name = "Toggle pain simulation."
@@ -1059,10 +1059,11 @@
 
 	var/list/choices = list("Inject")
 
-	if(trait_injection_reagents.len > 1) //Should never happen, but who knows!
-		choices += "Change reagent"
-	else if(!trait_injection_selected)
-		trait_injection_selected = trait_injection_reagents[1]
+	if(!trait_injection_selected) // Outpost 21 edit - Only allow setting it once
+		if(trait_injection_reagents.len > 1) //Should never happen, but who knows!
+			choices += "Change reagent"
+		else if(!trait_injection_selected)
+			trait_injection_selected = trait_injection_reagents[1]
 
 	choices += "Change amount"
 	choices += "Change verb"
@@ -1074,7 +1075,7 @@
 		return
 
 	if(choice == "Change reagent")
-		var/reagent_choice = tgui_input_list(src, "Choose which reagent to inject!", "Select reagent", trait_injection_reagents)
+		var/reagent_choice = tgui_input_list(src, "Choose which reagent to inject! You can only do this once, so be sure!", "Select reagent", trait_injection_reagents) // Outpost 21 edit - Only allow setting it once
 		if(reagent_choice)
 			trait_injection_selected = reagent_choice
 		to_chat(src, span_notice("You prepare to inject [trait_injection_amount] units of [trait_injection_selected ? "[trait_injection_selected]" : "...nothing. Select a reagent before trying to inject anything."]"))
@@ -1256,7 +1257,7 @@
 	description = "A unknown liquid, it smells sweet"
 	metabolism = REM * 0.8
 	color = "#8A0829"
-	scannable = 0
+	scannable = SCANNABLE_ADVANCED
 	wiki_flag = WIKI_SPOILER
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_MATSCI
@@ -1275,7 +1276,7 @@
 	description = "A unknown liquid, it doesn't smell"
 	metabolism = REM * 0.5
 	color = "#41029B"
-	scannable = 0
+	scannable = SCANNABLE_ADVANCED
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_MATSCI
 	wiki_flag = WIKI_SPOILER // Outpost 21 edit - Secret reagent
@@ -1296,7 +1297,7 @@
 	description = "A unknown liquid, it doesn't smell"
 	metabolism= REM * 0.5
 	color = "#41029B"
-	scannable = 0
+	scannable = SCANNABLE_ADVANCED
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_MATSCI
 	wiki_flag = WIKI_SPOILER // Outpost 21 edit - Secret reagent
@@ -1308,11 +1309,6 @@
 	if(prob(10))
 		M.show_message(span_warning("You lose sensation of your body."))
 	return
-
-
-//egglaying
-var/eggs = 0
-
 
 /mob/living/proc/mobegglaying()
 	set name = "Egg laying"
@@ -1377,3 +1373,82 @@ var/eggs = 0
 	src.visible_message(span_infoplain(span_red("[src] sinks their stinger into [T]!")))
 	T.bloodstr.add_reagent(REAGENT_ID_CONDENSEDCAPSAICINV,3)
 	last_special = world.time + (5 SECONDS) // Many little jabs instead of one big one
+
+/mob/living/proc/absorb_devour()
+	if(!absorbed || !isbelly(loc))
+		return
+	if(!isliving(loc.loc))
+		return
+	var/mob/living/pred = loc.loc
+	var/obj/belly/belly = loc
+	var/list/targets = list()
+	for(var/mob/living/potentialtarget in range(1, pred))
+		if(!isliving(potentialtarget)) //Don't eat anything that isn't mob/living. Failsafe.
+			continue
+		if(potentialtarget == pred)
+			continue
+		if(potentialtarget.devourable)
+			targets += potentialtarget
+	if(!(targets.len))
+		to_chat(src, span_notice("No eligible targets found."))
+		return
+	var/mob/living/target = tgui_input_list(src, "Please select a target.", "Victim", targets)
+	if(!absorbed || !isbelly(loc))
+		return
+	if(!isliving(loc.loc))
+		return
+	if(!target)
+		return
+	if(!isliving(target)) //Safety.
+		to_chat(src, span_warning("You need to select a living target!"))
+		return
+	if (get_dist(src,target) >= 2)
+		to_chat(src, span_warning("You need to be closer to do that."))
+		return
+	target.visible_message(span_vnotice("\The [pred]'s [belly] seems interested in \the [target]."),\
+			span_vwarning("\The [pred]'s [belly] threatens to [lowertext(belly.vore_verb)] you!"))
+	to_chat(pred, span_vnotice("Your [belly] tries to [lowertext(belly.vore_verb)] \the [target].")) //people who want this will often be unaware pred players, so I'm making the warning a bit smaller text for them
+	to_chat(pred, span_vwarning("You look for a chance to [lowertext(belly.vore_verb)] \the [target]."))
+	var/starting_loc = target.loc
+	if(do_after(src, 5 SECONDS, target))
+		if(target.loc != starting_loc)
+			to_chat(src, span_notice("\The [target] is no longer within reach."))
+			return
+		if(target.buckled)
+			target.buckled.unbuckle_mob()
+		to_chat(src, span_vwarning("You manage to [lowertext(belly.vore_verb)] \the [target]!"))
+		to_chat(pred, span_vnotice("Your [belly] manages to [lowertext(belly.vore_verb)] \the [target]."))
+		to_chat(target, span_vwarning("You are [lowertext(belly.vore_verb)]ed by \The [pred]'s [belly]!"))
+		return pred.begin_instant_nom(src, target, pred, belly, FALSE)
+
+/mob/living/proc/name_change_verb()
+	set name = "Change Name"
+	set desc = "Change your name. Notifies admins."
+	set category = "Abilities.Superpower"
+
+	if(last_special > world.time)
+		return
+
+	var/chosen_name = tgui_input_text(src, "What would you like your name to become?", "Name change", name, MAX_NAME_LEN)
+
+	if(!chosen_name || !length(chosen_name))
+		return
+
+	last_special = world.time + (5 SECONDS) //don't spam check the global list pls
+	for(var/mob/checkplayer in GLOB.player_list)
+		if(checkplayer == src)
+			continue
+		if(!checkplayer.client) //no client, no problem
+			continue
+		if(checkplayer.name == chosen_name)
+			if(checkplayer.client.prefs.resleeve_lock)
+				to_chat(src, span_notice("\The [checkplayer]'s preferences forbid you from impersonating them."))
+				log_and_message_admins("[key_name(src)] attempted to impersonate [key_name(checkplayer)], but preferences prevented it.", src)
+				return
+			log_and_message_admins("[key_name(src)] impersonated [key_name(checkplayer)]!", src)
+
+	log_and_message_admins("[key_name(src)] set their name to [chosen_name]", src)
+	if(dna)
+		dna.real_name = chosen_name
+	real_name = chosen_name
+	name = chosen_name

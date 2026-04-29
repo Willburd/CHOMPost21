@@ -30,6 +30,9 @@
 
 /datum/trait/positive/photosynth
 	cost = 1 //Base: 3. Can't get fat, kinda doodoo overall. It's fine.
+	is_genetrait = TRUE
+	activation_message="You feel reinvigorated in the light."
+	primitive_expression_messages = list("stands in the light.")
 
 /datum/trait/positive/trauma_tolerance
 	cost = 3 //Base 2: Grit is REALLY strong, and hyper abusable if you use it right.
@@ -42,6 +45,7 @@
 
 /datum/trait/positive/melee_attack
 	cost = 0 //Base 1: Literally every species except prommies and humans has this by default, no real advantage in combat. It's fair to have it at 0
+	category = TRAIT_TYPE_NEUTRAL
 
 /datum/trait/positive/melee_attack_fangs
 	cost = 1 //Base 2: Balances with the above.
@@ -102,40 +106,63 @@
 
 /datum/trait/positive/hardy_extreme
 	banned_species = list(SPECIES_ALRAUNE, SPECIES_TESHARI, SPECIES_UNATHI, SPECIES_DIONA, SPECIES_PROMETHEAN, SPECIES_PROTEAN) //These species can't take the other two hardies, why can they take this one? Make it make sense.
+	cost = 12 //fuck you cost of points, for being IMMUNE to all slowdown of armor, hardsuits, etc. Which is a major balancing factor, Will: Lowered from 20 to 12 mirroring onelife. 20 is a bit much.
 
 /datum/trait/positive/sonar
 	cost = 0 //This trait is el barbagio. It needs to be free.
+	category = TRAIT_TYPE_NEUTRAL
 
 /datum/trait/positive/toxin_gut
 	cost = 4 //Immunities should not be cheap.
 
+/datum/modifier/adrenaline // Adrenaline Rush trait's modifier
+	slowdown = -4 //Base -11
+
+/datum/trait/positive/heavyweight
+	desc = "You are heavyweight or otherwise more sturdy than most species. Making you more resistant to being pushed around."
+	var_changes = null
+
+/datum/trait/positive/shapeshifting
+	hidden = TRUE // Changeling gameplay infringement
+
 /////////////////////////////////////////////////////////////////////////////////////////////////
 /// NEUTRAL
 /////////////////////////////////////////////////////////////////////////////////////////////////
-/* NOTE: Until neutral traits actually give or cost points, these are not even usable...
+//You need to redefine the trait. change it from TRAIT_TYPE_NEUTRAL to  TRAIT_TYPE_NEGATIVE or TRAIT_TYPE_POSITIVE
 /datum/trait/neutral/allergy_reaction/gibbing // Sploot gives some bonus points
 	cost = -2 // upstream is: 0
 
 /datum/trait/neutral/venom_bite
 	cost = 2 // Base 0. Lets you give various toxins for mechanical benefit, too stronk for free.
+	category = TRAIT_TYPE_POSITIVE
 
 /datum/trait/neutral/long_vore
 	cost = 1 //Base 0. Free ranged spontaneous vore with a 5 tile range? Wuh?
+	category = TRAIT_TYPE_POSITIVE
 
 /datum/trait/neutral/allergen_increased_effect
-	cost = -1 //Base 0: A lot of reactions can HURT. This feels fair.
+	cost = -2 //Base 0: A lot of reactions can HURT. This feels fair.
+	category = TRAIT_TYPE_NEGATIVE
 
 /datum/trait/neutral/colorblind/mono
-	cost = -1 //Base 0: No colors makes the game HELL, and it affects wire hacking.
+	cost = -3 //Base 0: No colors makes the game HELL, and it affects wire hacking.
+	category = TRAIT_TYPE_NEGATIVE
 
 /datum/trait/neutral/colorblind/para_vulp
 	cost = -1 //Base 0: All colorblindness makes things harder, and it effects wires and various mechanics.
+	category = TRAIT_TYPE_NEGATIVE
 
 /datum/trait/neutral/colorblind/para_taj
 	cost = -1 //Base 0. Ibid.
-*/
+	category = TRAIT_TYPE_NEGATIVE
+
 /datum/trait/neutral/strongimmunesystem
-	hidden = TRUE //Base False. This is virus immunity reflavored. Fukkin why?
+	hidden = TRUE //Base False. Apparently all this does is make you not get a dormant virus.
+	category = TRAIT_TYPE_NEUTRAL
+	cost = 0
+
+/datum/trait/neutral/bloodsucker_freeform
+	hidden = TRUE //Base false, this is literally just a neutral version of of the positive bloodsucker trait with no cost and even less downside? Why does this exist?
 
 /////////////////////////////////////////////////////////////////////////////////////////////////
 /// NEGATIVE
@@ -163,9 +190,11 @@
 
 /datum/trait/negative/haemophilia
 	cost = -3 //Base -2. This is ROUGH in gameplay, especially with our traps.
+	banned_species = list(SPECIES_PROMETHEAN, SPECIES_ALRAUNE, SPECIES_DIONA)
 
 /datum/trait/negative/haemophilia_plus
 	cost = -5 //Base -3. This means you die REALLY fast. You can legit die in seconds from a beartrap.
+	banned_species = list(SPECIES_PROMETHEAN, SPECIES_ALRAUNE, SPECIES_DIONA)
 
 /datum/trait/negative/lightweight
 	cost = -3 //Base -2. Combat is a big part, this makes it brutal, and EVERY DIPSHIT walking around on harm intent crushes you under foot.
@@ -263,5 +292,9 @@
 /datum/trait/negative/ambulant_blood
 	is_genetrait = TRUE // Base FALSE, We want it to be a gene...
 	hidden = TRUE // Base FAlSE, ...Because taking it from the start is too disruptive to ling gameplay
+
+/datum/trait/negative/medical_allergy
+	is_genetrait = TRUE // Base FALSE
+	activation_message = "Something feels odd..."
 
 #endif

@@ -87,14 +87,12 @@
 		if("bluespacerift")
 			GLOB.endgame_exits += loc
 			delete_me = TRUE
-		//VOREStation Add Start
 		if("vinestart")
 			GLOB.vinestart += loc
 			delete_me = TRUE
-		//VORE Station Add End
 		// outpost 21 edit begin - nuke item random spawns
 		if("nukeitem")
-			nukeitems += loc
+			GLOB.nukeitems += loc
 			delete_me = TRUE
 		// outpost 21 edit end
 
@@ -104,7 +102,7 @@
 		GLOB.landmarks_list += src
 
 /obj/effect/landmark/Destroy(var/force = FALSE)
-	if(force)
+	if(delete_me || force)
 		GLOB.landmarks_list -= src
 		return ..()
 	return QDEL_HINT_LETMELIVE

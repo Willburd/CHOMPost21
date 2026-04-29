@@ -8,7 +8,6 @@
 	w_class = ITEMSIZE_SMALL
 	throw_speed = 4
 	throw_range = 10
-	origin_tech = list(TECH_MAGNET = 2, TECH_COMBAT = 1)
 
 	///Number of times it's been used.
 	var/times_used = 0
@@ -27,6 +26,9 @@
 	var/can_break = TRUE
 	/// If the flash can be repaired or not.
 	var/can_repair = TRUE
+
+	/// If the flash can only be used once before breaking
+	var/one_use = FALSE
 
 	var/safe_flashes = 2 // How many flashes are kept in 1% breakchance?
 
@@ -91,7 +93,7 @@
 	return null
 
 /obj/item/flash/proc/clown_check(var/mob/user)
-	if(user && (CLUMSY in user.mutations) && prob(50))
+	if(user && CLUMSY_FAIL_CHANCE(user))
 		to_chat(user, span_warning("\The [src] slips out of your hand."))
 		user.drop_item()
 		return 0
@@ -120,7 +122,7 @@
 	update_icon()
 
 // Returns true if the device can flash.
-/obj/item/flash/proc/check_capacitor(var/mob/user)
+/obj/item/flash/proc/check_capacitor(mob/user)
 	//spamming the flash before it's fully charged (60 seconds) increases the chance of it breaking
 	//It will never break on the first use.
 	var/obj/item/cell/battery = power_supply
@@ -130,6 +132,12 @@
 
 	if(times_used <= max_flashes && battery && battery.charge >= charge_cost)
 		last_used = world.time
+		if(one_use)
+			broken = TRUE
+			if(user)
+				to_chat(user, span_warning("The bulb has burnt out!"))
+			update_icon()
+			return TRUE
 		if(prob( max(0, times_used - safe_flashes) * 2 + (times_used >= safe_flashes)) && can_break)	//if you use it 10 times in a minute it has a 30% chance to break.
 			broken = TRUE
 			if(user)
@@ -152,23 +160,25 @@
 		return TRUE
 
 //attack_as_weapon
-/obj/item/flash/attack(mob/living/target, mob/living/user, var/target_zone)
-	if(!user || !target)	return	//sanity
+/obj/item/flash/attack(mob/living/target, mob/living/user, target_zone, attack_modifier)
+	if(!user || !target || target.is_incorporeal())
+		return ITEM_INTERACT_FAILURE //sanity
 
 	add_attack_logs(user,target,"Flashed (attempt) with [src]")
 
 	user.setClickCooldown(user.get_attack_speed(src))
 	user.do_attack_animation(target)
 
-	if(!clown_check(user))	return
+	if(!clown_check(user))
+		return ITEM_INTERACT_FAILURE
 	if(broken)
 		to_chat(user, span_warning("\The [src] is broken."))
-		return
+		return ITEM_INTERACT_FAILURE
 
 	flash_recharge()
 
 	if(!check_capacitor(user))
-		return
+		return ITEM_INTERACT_FAILURE
 
 	playsound(src, 'sound/weapons/flash.ogg', 100, 1)
 
@@ -187,10 +197,10 @@
 			user.visible_message(span_notice("[user] overloads [target]'s sensors with the flash!"))
 		else
 			user.visible_message(span_disarm("[user] blinds [target] with the flash!"))
-		return
+		return ITEM_INTERACT_SUCCESS
 	//fail message
 	user.visible_message(span_notice("[user] fails to blind [target] with the flash!"))
-	return
+	return ITEM_INTERACT_FAILURE
 
 /// Sees if we can flash the target and if so, does the effects of it.
 /// Returns TRUE if the flash went through, FALSE otherwise.
@@ -198,6 +208,8 @@
 	if(!istype(target))
 		return FALSE
 	if(target.stat == DEAD) //no point, they're already gone.
+		return FALSE
+	if(target.is_incorporeal()) // SHADEEEKINNNNNNN
 		return FALSE
 	if(FLASHPROOF in target.mutations)
 		return FALSE
@@ -244,7 +256,10 @@
 	return TRUE
 
 
-/obj/item/flash/attack_self(mob/living/carbon/user as mob, flag = 0, emp = 0)
+/obj/item/flash/attack_self(mob/living/carbon/user, flag = 0, emp = 0)
+	. = ..(user)
+	if(.)
+		return TRUE
 	if(!user || !clown_check(user)) 	return
 
 	user.setClickCooldown(user.get_attack_speed(src))
@@ -278,7 +293,9 @@
 	return
 
 /obj/item/flash/emp_act(severity, recursive)
-	if(broken)	return
+	. = ..()
+	if (. & EMP_PROTECT_SELF || broken)
+		return
 	flash_recharge()
 	if(!check_capacitor())
 		return
@@ -296,24 +313,9 @@
 	name = "synthetic flash"
 	desc = "When a problem arises, SCIENCE is the solution."
 	icon_state = "sflash"
-	origin_tech = list(TECH_MAGNET = 2, TECH_COMBAT = 1)
 	base_icon = "sflash"
 	can_repair = FALSE
-
-//attack_as_weapon
-/obj/item/flash/synthetic/attack(mob/living/M, mob/living/user, var/target_zone)
-	..()
-	if(!broken)
-		broken = 1
-		to_chat(user, span_warning("The bulb has burnt out!"))
-		update_icon()
-
-/obj/item/flash/synthetic/attack_self(mob/living/carbon/user as mob, flag = 0, emp = 0)
-	..()
-	if(!broken)
-		broken = 1
-		to_chat(user, span_warning("The bulb has burnt out!"))
-		update_icon()
+	one_use = TRUE
 
 /obj/item/flash/robot
 	name = "mounted flash"

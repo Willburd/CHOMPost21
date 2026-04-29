@@ -1,4 +1,4 @@
-var/datum/antagonist/borer/borers
+GLOBAL_DATUM(borers, /datum/antagonist/borer)
 
 /datum/antagonist/borer
 	id = MODE_BORER
@@ -22,12 +22,12 @@ var/datum/antagonist/borer/borers
 
 	spawn_announcement = "Unidentified lifesigns detected coming aboard the station. Secure any exterior access, including ducting and ventilation."
 	spawn_announcement_title = "Lifesign Alert"
-	spawn_announcement_sound = 'sound/AI/aliens.ogg'
+	spawn_announcement_sound = ANNOUNCER_MSG_UNIDENTIFIED_LIFESIGNS
 	spawn_announcement_delay = 5000
 
 /datum/antagonist/borer/New()
 	..(1)
-	borers = src
+	GLOB.borers = src
 
 /datum/antagonist/xenos/borer/get_extra_panel_options(var/datum/mind/player)
 	return "<a href='byond://?src=\ref[src];[HrefToken()];move_to_spawn=\ref[player.current]'>\[put in host\]</a>"

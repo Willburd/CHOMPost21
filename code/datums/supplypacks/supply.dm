@@ -34,6 +34,19 @@
 	containertype = /obj/structure/closet/crate/freezer/centauri
 	containername = "Artisanal food crate"
 
+/datum/supply_pack/supply/condiments
+	name = "Cooking seasonings crate"
+	desc = "Essential seasonings and spices for cooking."
+	contains = list(
+			/obj/item/reagent_containers/food/condiment/small/saltshaker = 6,
+			/obj/item/reagent_containers/food/condiment/small/peppermill = 6,
+			/obj/item/reagent_containers/food/condiment/spacespice = 3,
+			/obj/item/reagent_containers/food/condiment/sugar = 3,
+			)
+	cost = 30
+	containertype = /obj/structure/closet/crate/freezer/centauri
+	containername = "Cooking seasonings crate"
+
 
 /datum/supply_pack/supply/toner
 	name = "Toner cartridges"
@@ -61,7 +74,7 @@
 			/obj/item/reagent_containers/spray/cleaner,
 			/obj/item/reagent_containers/glass/rag,
 			/obj/item/grenade/chem_grenade/cleaner = 3,
-			/obj/item/vac_attachment, //CHOMPAdd
+			/obj/item/vac_attachment,
 			/obj/item/clothing/glasses/hud/janitor,
 			/obj/structure/mopbucket
 			)
@@ -133,7 +146,7 @@
 			/obj/item/clothing/gloves/black,
 			/obj/item/clothing/shoes/black,
 			/obj/item/analyzer,
-			/obj/item/storage/bag/ore,
+			/obj/item/ore_bag,
 			/obj/item/flashlight/lantern,
 			/obj/item/shovel,
 			/obj/item/pickaxe,
@@ -198,7 +211,7 @@
 					/obj/item/cartridge/explorer,
 					/obj/item/gps/explorer,
 					/obj/item/clothing/under/explorer,
-					/obj/item/radio/headset/explorer,
+					// /obj/item/radio/headset/explorer, // Outpost 21 edit - No explo headsets
 					/obj/item/clothing/shoes/boots/winter/explorer,
 					/obj/item/material/knife/tacknife/survival,
 					/obj/item/material/knife/machete,

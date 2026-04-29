@@ -14,6 +14,7 @@
 	affects_robots = 1	//VOREStation Edit
 	wiki_flag = WIKI_FOOD
 	coolant_modifier = -1
+	scannable = SCANNABLE_BENEFICIAL
 
 	supply_conversion_value = REFINERYEXPORT_VALUE_UNWANTED
 	industrial_use = REFINERYEXPORT_REASON_FOOD
@@ -49,7 +50,7 @@
 	affect_ingest(M, alien, removed)
 	//VOREStation Edits Start
 	if(M.isSynthetic())
-		M.adjust_nutrition((nutriment_factor * removed) * M.species.synthetic_food_coeff)
+		M.adjust_nutrition((nutriment_factor * removed) * M.species?.synthetic_food_coeff)
 	//VOREStation Edits End
 	..()
 
@@ -61,7 +62,7 @@
 	if(issmall(M)) removed *= 2 // Small bodymass, more effect from lower volume.
 	//VOREStation Edits Start
 	if(!M.isSynthetic())
-		if(!(M.species.allergens & allergen_type))	//assuming it doesn't cause a horrible reaction, we'll be ok!
+		if(!(M.species.allergens & allergen_type) && !(M.species.medallergens & medallergen_type))	//assuming it doesn't cause a horrible reaction, we'll be ok!
 			M.heal_organ_damage(0.5 * removed, 0)
 			M.adjust_nutrition(((nutriment_factor + M.food_preference(allergen_type)) * removed) * M.species.organic_food_coeff) //RS edit
 			M.add_chemical_effect(CE_BLOODRESTORE, 4 * removed)
@@ -665,17 +666,6 @@
 	color = "#CF3600"
 	cup_prefix = "minty"
 
-// Outpost 21 edit begin - WAFER THIN
-/datum/reagent/nutriment/mint/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
-	. = ..()
-	if(M.nutrition >= (M.max_nutrition * 0.98))
-		M.max_nutrition = M.max_nutrition * 0.975 // prevent spam, they're doomed anyway
-		M.Stun(2)
-		M.emote("belch")
-		spawn(25)
-			M.gib()
-// Outpost 21 edit end
-
 /datum/reagent/lipozine // The anti-nutriment.
 	name = REAGENT_LIPOZINE
 	id = REAGENT_ID_LIPOZINE
@@ -725,6 +715,19 @@
 	ingest_met = REM
 	color = "#000000"
 	cup_prefix = "peppery"
+	wiki_flag = WIKI_FOOD
+	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
+	industrial_use = REFINERYEXPORT_REASON_FOOD
+
+/datum/reagent/mustardpods
+	name = REAGENT_MUSTARDPODS
+	id = REAGENT_ID_MUSTARDPODS
+	description = "Densely-packed seed pods from a mustard plant. Good for making mustard. Not much use for anything else."
+	taste_description = "sharp, bitter, dry mustard"
+	reagent_state = SOLID
+	ingest_met = REM
+	color = "#B2A00D"
+	cup_prefix = "mustardy"
 	wiki_flag = WIKI_FOOD
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_FOOD
@@ -878,8 +881,10 @@
 /datum/reagent/condensedcapsaicin
 	name = REAGENT_CONDENSEDCAPSAICIN
 	id = REAGENT_ID_CONDENSEDCAPSAICIN
+	scannable = SCANNABLE_ADVANCED
 	description = "A chemical agent used for self-defense and in police work."
 	taste_description = "fire"
+	dermal_absorption = 0
 	taste_mult = 10
 	reagent_state = LIQUID
 	touch_met = 50 // Get rid of it quickly
@@ -1035,6 +1040,7 @@
 	var/adj_temp = 0
 	var/nutriment_factor = 0 //CHOMPStation addition
 	var/water_based = TRUE
+	dermal_absorption = 0
 	wiki_flag = WIKI_DRINK
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_FOOD
@@ -1048,7 +1054,7 @@
 	return
 
 /datum/reagent/drink/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
-	if(!(M.species.allergens & allergen_type))
+	if(!(M.species.allergens & allergen_type) && !(M.species.medallergens & medallergen_type))
 		var/bonus = M.food_preference(allergen_type)
 		M.adjust_nutrition((nutrition + bonus) * removed)
 	M.make_dizzy(adj_dizzy)
@@ -2561,6 +2567,7 @@
 	glass_name = REAGENT_DOCTORSDELIGHT
 	glass_desc = "A healthy mixture of juices, guaranteed to keep you healthy until the next toolboxing takes place."
 	allergen_type = ALLERGEN_FRUIT|ALLERGEN_DAIRY //Made from several fruit juices, and cream.
+	medallergen_type = MEDALLERGEN_TRICORD // this too!
 
 /datum/reagent/drink/doctor_delight/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
@@ -4157,6 +4164,19 @@
 	glass_desc = "A simple, yet superb mixture of Vodka and orange juice. Just the thing for the tired engineer."
 
 	allergen_type = ALLERGEN_FRUIT|ALLERGEN_GRAINS //Made from vodka(grains) and orange juice(fruit)
+
+/datum/reagent/ethanol/screwdrivercocktail/on_mob_life(mob/living/carbon/drinker, seconds_per_tick, metabolization_ratio)
+	. = ..()
+//	var/obj/item/organ/internal/liver/liver = drinker.internal_organs_by_name[O_LIVER]
+//	if(HAS_TRAIT(liver, TRAIT_ENGINEER_METABOLISM))
+	ADD_TRAIT(drinker, TRAIT_HALT_RADIATION_EFFECTS, "[type]")
+	if (HAS_TRAIT(drinker, TRAIT_IRRADIATED))
+		if(drinker.adjustToxLoss(-2 * metabolization_ratio * seconds_per_tick))
+			return //UPDATE_MOB_HEALTH
+
+/datum/reagent/ethanol/screwdrivercocktail/on_mob_end_metabolize(mob/living/drinker)
+	. = ..()
+	REMOVE_TRAIT(drinker, TRAIT_HALT_RADIATION_EFFECTS, "[type]")
 
 /datum/reagent/ethanol/silencer
 	name = REAGENT_SILENCER

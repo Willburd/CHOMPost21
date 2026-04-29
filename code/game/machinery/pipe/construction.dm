@@ -66,7 +66,7 @@ Buildable meters
 	if(make_from.mirrored)
 		do_a_flip()
 
-/obj/item/pipe/dropped(mob/user)
+/obj/item/pipe/dropped(mob/user, equipping, slot)
 	if(loc)
 		setPipingLayer(piping_layer)
 	return ..()
@@ -122,7 +122,7 @@ Buildable meters
 	var/obj/machinery/atmospherics/fakeA = pipe_type
 	icon_state = "[initial(fakeA.pipe_state)][mirrored ? "m" : ""]"
 
-/obj/item/pipe/handle_rotation_verbs(angle)
+/obj/item/pipe/handle_rotation_verbs(angle, mob/user)
 	. = ..()
 	if(.)
 		fixdir()
@@ -149,6 +149,9 @@ Buildable meters
 		set_dir(turn(dir, 45))
 
 /obj/item/pipe/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	set_dir(turn(dir,-90))
 	fixdir()
 
@@ -268,7 +271,7 @@ Buildable meters
 	to_chat(user, span_notice("You fasten the meter to the pipe."))
 	qdel(src)
 
-/obj/item/pipe_meter/dropped(mob/user)
+/obj/item/pipe_meter/dropped(mob/user, equipping, slot)
 	. = ..()
 	if(loc)
 		setAttachLayer(piping_layer)

@@ -52,8 +52,6 @@
 	icon_state = "utility"
 	can_hold = list(
 		///obj/item/combitool,
-		/obj/item/reagent_scanner, 		// Outpost 21 edit(port) - for industrial refinery
-		/obj/item/reagent_scanner/adv,	// Outpost 21 edit(port) - for industrial refinery
 		/obj/item/tool/crowbar,
 		/obj/item/tool/screwdriver,
 		/obj/item/weldingtool,
@@ -88,7 +86,10 @@
 		/obj/item/stack/nanopaste,
 		/obj/item/geiger,
 		/obj/item/reagent_scanner,
-		/obj/item/lightpainter
+		/obj/item/lightpainter,
+		/obj/item/anomaly_releaser,
+		/obj/item/anomaly_scanner,
+		/obj/item/grenade/chem_grenade/metalfoam // Outpost 21 edit - Allow metal foam nades in toolbelt
 		)
 
 /obj/item/storage/belt/utility/full
@@ -233,7 +234,6 @@
 		/obj/item/stack/material/steel,
 		/obj/item/stack/material/glass,
 		/obj/item/lightreplacer,
-		/obj/item/lightpainter, // Outpost 21 edit(port) - Light painter in belt
 		/obj/item/pickaxe/plasmacutter,
 		/obj/item/holosign_creator/combifan,
 		/obj/item/reagent_scanner,
@@ -558,7 +558,8 @@
 		/obj/item/pickaxe/hand,
 		/obj/item/xenoarch_multi_tool,
 		/obj/item/pickaxe/excavationdrill,
-		/obj/item/storage/sample_container
+		/obj/item/storage/sample_container,
+		/obj/item/storage/bag/fossils
 		)
 
 /obj/item/storage/belt/fannypack
@@ -744,7 +745,7 @@
 		/obj/item/melee,
 		/obj/item/kinetic_crusher,
 		/obj/item/mining_scanner,
-		/obj/item/storage/bag/ore,
+		/obj/item/ore_bag,
 		/obj/item/storage/sample_container
 		)
 		//Pretty much, if it's in the mining vendor, they should be able to put it on the belt.

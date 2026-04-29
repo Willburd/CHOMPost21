@@ -1,7 +1,7 @@
 /obj/structure/closet/secure_closet/cargotech
 	name = "cargo technician's locker"
 	req_access = list(ACCESS_CARGO)
-	closet_appearance = /decl/closet_appearance/secure_closet/cargo
+	closet_appearance = /datum/decl/closet_appearance/secure_closet/cargo
 
 	starts_with = list(
 		/obj/item/clothing/under/rank/cargotech,
@@ -30,7 +30,7 @@
 /obj/structure/closet/secure_closet/quartermaster
 	name = "quartermaster's locker"
 	req_access = list(ACCESS_QM)
-	closet_appearance = /decl/closet_appearance/secure_closet/cargo/qm
+	closet_appearance = /datum/decl/closet_appearance/secure_closet/cargo/qm
 
 	starts_with = list(
 		/obj/item/clothing/under/rank/cargo,
@@ -72,7 +72,7 @@
 /obj/structure/closet/secure_closet/miner
 	name = "miner's equipment"
 	req_access = list(ACCESS_MINING)
-	closet_appearance = /decl/closet_appearance/secure_closet/mining
+	closet_appearance = /datum/decl/closet_appearance/secure_closet/mining
 
 	starts_with = list(
 		/obj/item/radio/headset/miner,
@@ -80,12 +80,12 @@
 		/obj/item/clothing/gloves/black,
 		/obj/item/clothing/shoes/black,
 		/obj/item/analyzer,
-		/obj/item/storage/bag/ore,
+		/obj/item/ore_bag,
 		/obj/item/storage/belt/miner,
 		/obj/item/flashlight/lantern,
 		/obj/item/shovel,
 		/obj/item/pickaxe/drill,
-		/obj/item/kinetic_crusher,
+//		/obj/item/kinetic_crusher, // Outpost 21 edit - Removed roundstart PKs
 		/obj/item/clothing/glasses/material,
 		/obj/item/clothing/suit/storage/hooded/wintercoat/miner,
 		/obj/item/clothing/shoes/boots/winter/mining,
@@ -105,7 +105,7 @@
 /obj/structure/closet/lumber
 	name = "Lumberjack's equipment"
 	desc = "It's a storage unit for Lumberjack equpiment, though it seems the lock is broken."
-	closet_appearance = /decl/closet_appearance/secure_closet/lumber
+	closet_appearance = /datum/decl/closet_appearance/secure_closet/lumber
 
 	starts_with = list(
 		/obj/item/radio/headset/miner,

@@ -7,7 +7,6 @@
 	icon_state = "mmi_empty"
 	w_class = ITEMSIZE_NORMAL
 	can_speak = 1
-	origin_tech = list(TECH_BIO = 3)
 
 	req_access = list(ACCESS_ROBOTICS)
 
@@ -19,6 +18,9 @@
 	var/obj/mecha = null//This does not appear to be used outside of reference in mecha.dm.
 	var/obj/item/radio/headset/mmi_radio/radio = null//Let's give it a radio.
 	var/mob/living/body_backup = null //add reforming
+
+	///Var for attack_self chain
+	var/special_handling = FALSE
 
 /obj/item/mmi/Initialize(mapload)
 	. = ..()
@@ -98,7 +100,12 @@
 	..()
 
 //TODO: ORGAN REMOVAL UPDATE. Make the brain remain in the MMI so it doesn't lose organ data.
-/obj/item/mmi/attack_self(mob/user as mob)
+/obj/item/mmi/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
+	if(special_handling)
+		return FALSE
 	if(!brainmob)
 		to_chat(user, span_warning("You upend the MMI, but there's nothing in it."))
 	else if(locked)
@@ -162,22 +169,20 @@
 /obj/item/mmi/radio_enabled
 	name = "radio-enabled man-machine interface"
 	desc = "The Warrior's bland acronym, MMI, obscures the true horror of this monstrosity. This one comes with a built-in radio. Wait, don't they all?"
-	origin_tech = list(TECH_BIO = 4)
 
 /obj/item/mmi/emp_act(severity, recursive)
-	if(!brainmob)
+	. = ..()
+	if (. & EMP_PROTECT_SELF || !brainmob)
 		return
-	else
-		switch(severity)
-			if(1)
-				brainmob.emp_damage += rand(20,30)
-			if(2)
-				brainmob.emp_damage += rand(10,20)
-			if(3)
-				brainmob.emp_damage += rand(5,10)
-			if(4)
-				brainmob.emp_damage += rand(0,5)
-	..()
+	switch(severity)
+		if(EMP_HEAVY)
+			brainmob.emp_damage += rand(20,30)
+		if(EMP_MEDIUM)
+			brainmob.emp_damage += rand(10,20)
+		if(EMP_LIGHT)
+			brainmob.emp_damage += rand(5,10)
+		if(EMP_HARMLESS)
+			brainmob.emp_damage += rand(0,5)
 
 /obj/item/mmi/digital
 	var/searching = 0
@@ -187,6 +192,9 @@
 	mecha = null//This does not appear to be used outside of reference in mecha.dm.
 	var/ghost_query_type = null
 	var/datum/ghost_query/Q //This is used so we can unregister ourself.
+	special_handling = TRUE
+	///Var for attack_self chain
+	var/is_digital_robot = FALSE
 
 /obj/item/mmi/digital/Initialize(mapload)
 	. = ..()
@@ -226,7 +234,12 @@
 		H.mind.transfer_to(brainmob)
 	return
 
-/obj/item/mmi/digital/attack_self(mob/user as mob)
+/obj/item/mmi/digital/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
+	if(is_digital_robot)
+		return FALSE
 	if(brainmob && !brainmob.key && searching == 0)
 		//Start the process of searching for a new user.
 		to_chat(user, span_blue("You carefully locate the manual activation switch and start the [src]'s boot process."))
@@ -286,8 +299,8 @@
 	icon = 'icons/obj/module.dmi'
 	icon_state = "mainboard"
 	w_class = ITEMSIZE_NORMAL
-	origin_tech = list(TECH_ENGINEERING = 4, TECH_MATERIAL = 3, TECH_DATA = 4)
 	ghost_query_type = /datum/ghost_query/drone_brain
+	is_digital_robot = TRUE
 
 /obj/item/mmi/digital/robot/Initialize(mapload)
 	. = ..()
@@ -308,7 +321,6 @@
 	icon = 'icons/obj/assemblies.dmi'
 	icon_state = "posibrain"
 	w_class = ITEMSIZE_NORMAL
-	origin_tech = list(TECH_ENGINEERING = 4, TECH_MATERIAL = 4, TECH_BLUESPACE = 2, TECH_DATA = 4)
 	ghost_query_type = /datum/ghost_query/posi_brain
 
 /obj/item/mmi/digital/posibrain/request_player()
@@ -348,4 +360,3 @@
 	icon = 'icons/obj/module.dmi'
 	icon_state = "mainboard"
 	w_class = ITEMSIZE_NORMAL
-	origin_tech = list(TECH_ENGINEERING = 2, TECH_MATERIAL = 2, TECH_BLUESPACE = 2, TECH_DATA = 3)

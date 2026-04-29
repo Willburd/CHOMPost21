@@ -54,6 +54,7 @@
 
 	var/taste_sensitivity = TASTE_NORMAL							// How sensitive the species is to minute tastes.
 	var/allergens = null									// Things that will make this species very sick
+	var/medallergens = null									// Medication that will makes this species very sick
 	var/allergen_reaction = AG_TOX_DMG|AG_OXY_DMG|AG_EMOTE|AG_PAIN|AG_BLURRY|AG_CONFUSE	// What type of reactions will you have? These the 'main' options and are intended to approximate anaphylactic shock at high doses.
 	var/allergen_damage_severity = 2.5							// How bad are reactions to the allergen? Touch with extreme caution.
 	var/allergen_disable_severity = 10							// Whilst this determines how long nonlethal effects last and how common emotes are.
@@ -221,7 +222,6 @@
 	var/spawn_flags = 0										// Flags that specify who can spawn as this species
 
 	var/slowdown = 0										// Passive movement speed malus (or boost, if negative)
-	var/unusual_running = 0									// Trait var to change movement speed in human_movement.dm when nothing in hands
 	var/obj/effect/decal/cleanable/blood/tracks/move_trail = /obj/effect/decal/cleanable/blood/tracks/footprints // What marks are left when walking
 	var/list/skin_overlays = list()
 	var/has_floating_eyes = 0								// Whether the eyes can be shown above other icons
@@ -249,10 +249,10 @@
 	var/rad_levels = NORMAL_RADIATION_RESISTANCE			//For handle_radiation
 	var/rad_removal_mod = 1
 
-	// Outpost 21 addition begin
+	// outpost 21 edit begin
 	var/phoron_contact_mod = 1								// Affects skin contact poisoning from phoron
 	var/enzyme_contact_mod = 1								// Multiplies probability of enzyme damage rolls... basically only used by the enzyme immunity trait(outpost 21)
-	// Outpost 21 addition end
+	// outpost 21 edit end
 
 	var/ambulant_blood = FALSE								// Force changeling blood effects
 
@@ -463,7 +463,7 @@
 	else
 		H.equip_to_slot_or_del(box, slot_in_backpack)
 
-/datum/species/proc/create_organs(var/mob/living/carbon/human/H) //Handles creation of mob organs.
+/datum/species/proc/create_organs(mob/living/carbon/human/H) //Handles creation of mob organs.
 
 	H.mob_size = mob_size
 	for(var/obj/item/organ/organ in H.contents)
@@ -640,20 +640,25 @@
 /datum/species/proc/can_understand(var/mob/other)
 	return
 
-// Called when using the shredding behavior.
-/datum/species/proc/can_shred(var/mob/living/carbon/human/H, var/ignore_intent)
+// Called when using the shredding behavior, returning unarmed damage value
+//CheckHighDamage returns the damage value of the attack if it meets at least the noted value
+/datum/species/proc/can_shred(var/mob/living/carbon/human/H, var/ignore_intent, var/checkhighdamage = 0)
 
 	if(!ignore_intent && H.a_intent != I_HURT)
 		return 0
-	if(shredding)
-		return 1
+
+	var/damage = 0
+	var/shreds = (shredding * 5)
+
 	for(var/datum/unarmed_attack/attack in unarmed_attacks)
 		if(!attack.is_usable(H))
 			continue
+		damage = max(damage, attack.get_unarmed_damage(H) + 5)
 		if(attack.shredding)
-			return 1
-
-	return 0
+			shreds = 5
+	if((checkhighdamage && damage >= checkhighdamage) || shreds)
+		shreds += damage
+	return shreds
 
 // Called in life() when the mob has no client.
 /datum/species/proc/handle_npc(var/mob/living/carbon/human/H)
@@ -855,7 +860,7 @@
 	if(H.species.has_vibration_sense)
 		H.motiontracker_subscribe()
 
-	if(H.species.allergens)
+	if(H.species.allergens || H.species.medallergens)
 		H.AddElement(/datum/element/allergy)
 	else
 		H.RemoveElement(/datum/element/allergy)

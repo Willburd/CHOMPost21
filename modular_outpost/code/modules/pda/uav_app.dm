@@ -10,6 +10,10 @@
 	var/signal_strength = 0 //Our last signal strength report (cached for a few seconds)
 	var/list/viewers //Who's viewing a UAV through us
 
+/datum/data/pda/app/uav_control/Destroy()
+	our_uav = null
+	. = ..()
+
 /datum/data/pda/app/uav_control/update_ui(mob/user as mob, list/data)
 	var/list/uav_data = list()
 	uav_data["current_uav"] = null

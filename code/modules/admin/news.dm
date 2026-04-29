@@ -9,31 +9,18 @@
 		return TRUE
 	return FALSE
 
-/client/proc/modify_server_news()
-	set name = "Modify Public News"
-	set category = "Server.Game"
-
-	if(!check_rights(0))
-		return
-
+ADMIN_VERB(modify_server_news, R_SERVER|R_EVENT, "Modify Public News", "Modify the public news message.", ADMIN_CATEGORY_SERVER_GAME)
 	var/savefile/F = new(NEWSFILE)
 	if(F)
-		//ChompEDIT start - handle reads correctly
-		var/title
-		F["title"] >> title //This is done twice on purpose. For some reason BYOND misses the first read, if performed before the world starts
-		F["title"] >> title
-		var/body
-		F["body"] >> body
-		body = html2paper_markup(body)
-		//ChompEDIT end
-
-		var/new_title = tgui_input_text(src,"Write a good title for the news update.  Note: HTML is NOT supported.","Write News", title, MAX_MESSAGE_LEN)
+		var/title = F["title"]
+		var/body = html2paper_markup(F["body"])
+		var/new_title = tgui_input_text(user, "Write a good title for the news update. Note: HTML is NOT supported.", "Write News", title, MAX_MESSAGE_LEN)
 		if(!new_title)
 			return
-		var/new_body = tgui_input_text(src,"Write the body of the news update here. Note: HTML is NOT supported, however paper markup is supported.  \n\
+		var/new_body = tgui_input_text(user, "Write the body of the news update here. Note: HTML is NOT supported, however paper markup is supported.  \n\
 		Hitting enter will automatically add a line break.  \n\
 		Valid markup includes: \[b\], \[i\], \[u\], \[large\], \[h1\], \[h2\], \[h3\]\ \[*\], \[hr\], \[small\], \[list\], \[table\], \[grid\], \
-		\[row\], \[cell\], \[logo\], \[sglogo\].","Write News", body, MAX_MESSAGE_LEN, TRUE, prevent_enter = TRUE)
+		\[row\], \[cell\], \[logo\], \[talogo\], \[sglogo\].","Write News", body, MAX_MESSAGE_LEN, TRUE, prevent_enter = TRUE)
 
 		new_body = paper_markup2html(new_body)
 
@@ -42,9 +29,9 @@
 		GLOB.servernews_hash = md5("[new_title]" + "[new_body]") //ChompADD - update the servernews hash global
 		F["title"] << new_title
 		F["body"] << new_body
-		F["author"] << key
+		F["author"] << user.key
 		F["timestamp"] << time2text(world.realtime, "DDD, MMM DD YYYY")
-		message_admins("[key] modified the news to read:<br>[new_title]<br>[new_body]")
+		message_admins("[user.key] modified the news to read:<br>[new_title]<br>[new_body]")
 
 /client/proc/get_server_news() //ChompEDIT - child of /client/
 	var/savefile/F = new(NEWSFILE)
@@ -88,9 +75,10 @@
 	text = replacetext(text, "\[row\]", "</td><tr>")
 	text = replacetext(text, "\[cell\]", "<td>")
 	// outpost 21 begin - extended logos
-	text = replacetext(text, "\[logo\]", "<img src=\ref['html/images/eslogo.png']>")
-	text = replacetext(text, "\[eslogo\]", "<img src=\ref['html/images/eslogo.png']>")
+	text = replacetext(text, "\[logo\]", "<img src=\ref['html/images/outpost/eslogo.png']>")
+	text = replacetext(text, "\[eslogo\]", "<img src=\ref['html/images/outpost/eslogo.png']>")
 	text = replacetext(text, "\[ntlogo\]", "<img src=\ref['html/images/ntlogo.png']>") // Not sure if these would get used but why not
+	text = replacetext(text, "\[talogo\]", "<img src=\ref['html/images/talonlogo.png']>")
 	text = replacetext(text, "\[sglogo\]", "<img src=\ref['html/images/sglogo.png']>")
 	text = replacetext(text, "\[trlogo\]", "<img src=\ref['html/images/trader.png']>")
 	text = replacetext(text, "\[pclogo\]", "<img src=\ref['html/images/pclogo.png']>")
@@ -131,9 +119,10 @@
 	text = replacetext(text, "</td><tr>", "\[row\]")
 	text = replacetext(text, "<td>", "\[cell\]")
 	// Outpost 21 edit begin - Extended logos
-	text = replacetext(text, "<img src =\ref['html/images/eslogo.png']>", "\[logo\]")
-	text = replacetext(text, "<img src =\ref['html/images/eslogo.png']>", "\[eslogo\]")
+	text = replacetext(text, "<img src =\ref['html/images/outpost/eslogo.png']>", "\[logo\]")
+	text = replacetext(text, "<img src =\ref['html/images/outpost/eslogo.png']>", "\[eslogo\]")
 	text = replacetext(text, "<img src =\ref['html/images/ntlogo.png']>", "\[ntlogo\]") // Not sure if these would get used but why not
+	text = replacetext(text, "<img src=\ref['html/images/talonlogo.png']>", "\[talogo\]")
 	text = replacetext(text, "<img src =\ref['html/images/sglogo.png']>", "\[sglogo\]")
 	text = replacetext(text, "<img src =\ref['html/images/trader.png']>", "\[trlogo\]")
 	text = replacetext(text, "<img src =\ref['html/images/pclogo.png']>", "\[pclogo\]")

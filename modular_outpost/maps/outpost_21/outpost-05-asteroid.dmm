@@ -475,6 +475,7 @@
 	dir = 1;
 	pixel_y = -26
 	},
+/obj/item/circuitboard/telecomms/relay,
 /turf/simulated/floor/bluegrid,
 /area/offworld/asteroidyard/station/telecomms)
 "bd" = (
@@ -522,13 +523,13 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/asteroidyard/station/halls)
 "bi" = (
-/obj/machinery/telecomms/relay/preset/outpost/recyard,
 /obj/item/radio/intercom{
 	dir = 8;
 	name = "Station Intercom (General)";
 	pixel_x = -21;
 	listening = 1
 	},
+/obj/structure/frame,
 /turf/simulated/floor/bluegrid,
 /area/offworld/asteroidyard/station/telecomms)
 "bj" = (
@@ -608,7 +609,7 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/asteroidyard/station/halls)
 "bq" = (
-/obj/machinery/trailblazer/yellow,
+/obj/structure/trailblazer/yellow,
 /turf/simulated/floor/airless,
 /area/offworld/asteroidyard/external)
 "br" = (
@@ -1130,7 +1131,7 @@
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 1
 	},
-/obj/machinery/trailblazer/yellow,
+/obj/structure/trailblazer/yellow,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/asteroidyard/station/cave)
 "cq" = (
@@ -1496,6 +1497,12 @@
 	},
 /turf/simulated/floor/plating,
 /area/offworld/asteroidyard/station/halls)
+"cW" = (
+/obj/item/perfect_tele_beacon/stationary{
+	tele_name = "Rec Yard"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/asteroidyard/station/dockingbay)
 "da" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 1
@@ -4559,7 +4566,7 @@
 /area/offworld/asteroidyard/station/cave)
 "tg" = (
 /obj/structure/lattice,
-/obj/machinery/trailblazer/red,
+/obj/structure/trailblazer/red,
 /turf/space,
 /area/offworld/asteroidyard/external)
 "ti" = (
@@ -5677,7 +5684,7 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/asteroidyard/station/halls_bar)
 "yZ" = (
-/obj/machinery/trailblazer/yellow,
+/obj/structure/trailblazer/yellow,
 /turf/simulated/mineral/floor/cave{
 	ignore_cavegen = 1
 	},
@@ -7046,7 +7053,7 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/asteroidyard/station/access_shaft)
 "FP" = (
-/obj/machinery/trailblazer/red,
+/obj/structure/trailblazer/red,
 /obj/structure/lattice,
 /turf/space,
 /area/offworld/asteroidyard/external)
@@ -9085,7 +9092,7 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/asteroidyard/station/halls_storage)
 "PM" = (
-/obj/machinery/trailblazer/blue,
+/obj/structure/trailblazer/blue,
 /turf/simulated/mineral/floor/cave{
 	ignore_cavegen = 1
 	},
@@ -9530,7 +9537,7 @@
 /turf/simulated/floor/tiled/kafel_full/beige,
 /area/offworld/asteroidyard/station/washing)
 "RM" = (
-/obj/machinery/trailblazer/yellow,
+/obj/structure/trailblazer/yellow,
 /turf/simulated/mineral/floor/cave{
 	ignore_cavegen = 1
 	},
@@ -24503,7 +24510,7 @@ pp
 Tb
 Tb
 Tb
-Tb
+cW
 AK
 Tb
 Tb

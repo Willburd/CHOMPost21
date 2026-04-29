@@ -11,8 +11,7 @@
 					LANGUAGE_SKRELLIANFAR = 0,
 					LANGUAGE_ROOTLOCAL	= 0,
 					LANGUAGE_TRADEBAND	= 1,
-					// Outpost 21 edit - Not for borgs
-					LANGUAGE_GUTTER		= 0,
+					// LANGUAGE_GUTTER		= 0, // Outpost 21 edit - Not for borgs
 					LANGUAGE_SCHECHI	= 1,
 					LANGUAGE_EAL		= 1,
 					LANGUAGE_TERMINUS	= 1,
@@ -21,6 +20,7 @@
 
 /obj/item/robot_module/robot/exploration
 	can_be_pushed = 0
+	idcard_type = /obj/item/card/id/synthetic/borg
 
 /obj/item/robot_module/robot/exploration/create_equipment(mob/living/silicon/robot/robot)
 	..()
@@ -33,6 +33,11 @@
 	src.modules += new /obj/item/shield_projector/line/exploborg(src)
 	src.modules += new /obj/item/roller_holder(src)
 	src.modules += new /obj/item/self_repair_system(src)
-	src.modules += new /obj/item/card/id/exploration/borg(src)
+
+	var/obj/item/card/id/robot_id = robot.idcard
+	robot_id.name = "\improper Synthetic Exploration ID"
+	robot_id.initial_sprite_stack = list("base-stamp", "top-olive", "stamp-n")
+	robot_id.reset_icon()
+	robot_id.forceMove(src)
 
 	src.emag += new /obj/item/melee/robotic/jaws/big/explojaws(src)

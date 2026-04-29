@@ -17,6 +17,9 @@
 /datum/species/xenomorph_hybrid
 	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_WHITELIST_SELECTABLE // Was going to be restricted, but made whitelist instead
 
+/datum/species/diona
+	spawn_flags = SPECIES_CAN_JOIN // Allow unrestricted diona
+
 /////////////////////////////////////////////////////////////////////////////////
 // Disabled section
 /////////////////////////////////////////////////////////////////////////////////

@@ -104,7 +104,7 @@
 			for(var/mob/living/carbon/brain/caught_soul/CS as anything in brainmobs)
 				to_chat(CS, message)
 
-	sender.log_talk("NSAY (NIF:[owner.real_name]): [message]", LOG_SAY)
+	sender.log_talk("NSAY (SC:[owner.real_name]): [message]", LOG_SAY, color="#ff006f")
 
 // Forwards the emotes of captured souls
 /obj/soulgem/proc/use_emote(var/message, var/mob/living/sender, var/mob/eyeobj, var/whisper)
@@ -127,7 +127,7 @@
 			for(var/mob/living/carbon/brain/caught_soul/CS as anything in brainmobs)
 				to_chat(CS, message)
 
-	sender.log_message("NME (NIF:[owner.real_name]): [message]", LOG_EMOTE)
+	sender.log_message("NME (SC:[owner.real_name]): [message]", LOG_EMOTE, color="#ff006f")
 
 // The capture function which transfers the given mob's mind into the soulcatcher
 /obj/soulgem/proc/catch_mob(var/mob/M, var/custom_name)
@@ -192,7 +192,7 @@
 
 	//Announce to host and other minds
 	notify_holder("New mind loaded: [brainmob.name]")
-	show_vore_fx(brainmob, TRUE)
+	show_vore_fx(brainmob)
 	brainmob.copy_from_prefs_vr(bellies = FALSE)
 	return TRUE
 
@@ -251,7 +251,7 @@
 /obj/soulgem/proc/toggle_setting(var/flag)
 	setting_flags ^= flag
 	if(flag & SOULGEM_SHOW_VORE_SFX)
-		soulgem_show_vfx(TRUE)
+		soulgem_show_vfx()
 		soulgem_vfx()
 	if(flag & NIF_SC_BACKUPS)
 		soulgem_backup()
@@ -330,22 +330,22 @@
 		RegisterSignal(linked_belly, COMSIG_BELLY_UPDATE_VORE_FX, PROC_REF(soulgem_show_vfx))
 
 // Handles the vore fx updates for the captured souls
-/obj/soulgem/proc/soulgem_show_vfx(var/update, var/severity = 0)
+/obj/soulgem/proc/soulgem_show_vfx(var/severity = 0)
 	SIGNAL_HANDLER
 	if(linked_belly)
 		for(var/mob/living/L in brainmobs)
 			if(flag_check(SOULGEM_SHOW_VORE_SFX))
-				show_vore_fx(L, update, severity)
+				show_vore_fx(L, severity)
 			else
 				clear_vore_fx(L)
 
 // Function to show the vore fx overlay
-/obj/soulgem/proc/show_vore_fx(var/mob/living/L, var/update, var/severity = 0)
+/obj/soulgem/proc/show_vore_fx(var/mob/living/L, var/severity = 0)
 	if(!linked_belly || !flag_check(SOULGEM_SHOW_VORE_SFX))
 		return
 	if(!istype(L) || L.eyeobj)
 		return
-	linked_belly.vore_fx(L, update, severity)
+	linked_belly.vore_fx(L, severity)
 
 // Function to clear the vore fx overlay
 /obj/soulgem/proc/clear_vore_fx(var/mob/M)

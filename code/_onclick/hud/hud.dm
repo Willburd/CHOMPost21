@@ -8,6 +8,7 @@ GLOBAL_LIST_INIT(global_huds, list(
 		GLOB.global_hud.druggy,
 		GLOB.global_hud.blurry,
 		GLOB.global_hud.whitense,
+		GLOB.global_hud.heavy_whitense,
 		GLOB.global_hud.vimpaired,
 		GLOB.global_hud.darkMask,
 		GLOB.global_hud.centermarker,
@@ -28,6 +29,7 @@ GLOBAL_LIST_INIT(global_huds, list(
 	var/atom/movable/screen/druggy
 	var/atom/movable/screen/blurry
 	var/atom/movable/screen/whitense
+	var/atom/movable/screen/heavy_whitense
 	var/list/vimpaired
 	var/list/darkMask
 	var/atom/movable/screen/centermarker
@@ -69,6 +71,11 @@ GLOBAL_LIST_INIT(global_huds, list(
 	whitense = new /atom/movable/screen/global_screen()
 	whitense.icon = 'icons/effects/static.dmi'
 	whitense.icon_state = "1 light"
+
+	//static overlay effect for cameras and the like
+	heavy_whitense = new /atom/movable/screen/global_screen()
+	heavy_whitense.icon = 'icons/effects/static.dmi'
+	heavy_whitense.icon_state = "1 heavy"
 
 	//darksight 'hanger' for attached icons
 	darksight = new /atom/movable/screen()
@@ -392,9 +399,9 @@ GLOBAL_LIST_INIT(global_huds, list(
 
 	if(UI_style_new)
 		if(isrobot(src))
-			ic = all_ui_styles_robot[UI_style_new]
+			ic = GLOB.all_ui_styles_robot[UI_style_new]
 		else
-			ic = all_ui_styles[UI_style_new]
+			ic = GLOB.all_ui_styles[UI_style_new]
 		hud_used.ui_style = ic
 	else
 		ic = hud_used.ui_style
@@ -583,6 +590,7 @@ GLOBAL_LIST_INIT(global_huds, list(
 	var/atom/movable/screen/ammo/ammo_hud = new
 	ammo_hud_list[G] = ammo_hud
 	ammo_hud.screen_loc = ammo_hud.ammo_screen_loc_list[length(ammo_hud_list)]
+	ammo_hud.our_gun = WEAKREF(G)
 	ammo_hud.add_hud(user, G)
 	ammo_hud.update_hud(user, G)
 
@@ -591,6 +599,7 @@ GLOBAL_LIST_INIT(global_huds, list(
 	var/atom/movable/screen/ammo/ammo_hud = ammo_hud_list[G]
 	if(isnull(ammo_hud))
 		return
+	ammo_hud.our_gun = null
 	ammo_hud.remove_hud(user, G)
 	qdel(ammo_hud)
 	ammo_hud_list -= G

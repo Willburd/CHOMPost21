@@ -29,30 +29,10 @@
 /datum/supply_pack/med/bloodpack
 	name = "BloodPack crate"
 	desc = "Three boxes of filled bloodbags."
-	contains = list(/obj/item/storage/box/bloodpacks_full = 3) // Outpost 21 edit(port) - Actual blood packs
-	cost = 10
-	containertype = /obj/structure/closet/crate/medical/blood
-	containername = "BloodPack crate"
-
-// Outpost 21 edit(port) begin - Actual blood packs
-/datum/supply_pack/med/bloodpack_empty
-	name = "Empty BloodPack crate"
-	desc = "Three boxes of empty bloodbags."
 	contains = list(/obj/item/storage/box/bloodpacks = 3)
 	cost = 10
 	containertype = /obj/structure/closet/crate/medical/blood
 	containername = "BloodPack crate"
-// Outpost 21 edit end
-
-// Outpost 21 edit begin - Medical IV bags
-/datum/supply_pack/med/iv_medpacks
-	name = "Medication IV Bags crate"
-	desc = "Three boxes of IV medication bags."
-	contains = list(/obj/item/storage/box/iv_medpacks = 3)
-	cost = 10
-	containertype = /obj/structure/closet/crate/medical/blood
-	containername = "Medication IV Bags crate"
-// Outpost 21 edit end
 
 /datum/supply_pack/med/synthplas
 	name = "BloodPack (Synthplas) crate"

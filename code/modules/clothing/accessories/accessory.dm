@@ -332,7 +332,7 @@
 							sound = "anything"
 
 				user.visible_message("[user] places [src] against [M]'s [body_part] and listens attentively.", "You place [src] against [their] [body_part]. You [sound_strength] [sound]. [message_holder] [message_holder2]") //Chomp edit. ([message holder] & [message_holder2])
-				return
+				return ITEM_INTERACT_SUCCESS
 
 	return ..(M,user)
 
@@ -493,6 +493,7 @@
 	var/breath_masked = FALSE
 	var/obj/item/clothing/mask/breath/breathmask
 	actions_types = list(/datum/action/item_action/pull_on_gaiter)
+	special_handling = TRUE
 
 /obj/item/clothing/accessory/gaiter/update_clothing_icon()
 	. = ..()
@@ -521,6 +522,9 @@
 		item_flags |= FLEXIBLEMATERIAL
 
 /obj/item/clothing/accessory/gaiter/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	var/gaiterstring = "You pull [src] "
 	if(src.icon_state == initial(icon_state))
 		src.icon_state = "[icon_state]_up"

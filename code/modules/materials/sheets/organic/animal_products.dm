@@ -35,7 +35,6 @@
 /datum/material/fur
 	name = MAT_FUR
 	icon_colour = "#fff2d3"
-	stack_origin_tech = list(TECH_MATERIAL = 2)
 	display_name = MAT_FUR
 	icon_base = "sheet-fabric"
 	stack_type = /obj/item/stack/material/fur
@@ -158,9 +157,13 @@
 	desc = "A collar made out of pliable material."
 	icon_state = "collar_handmade"
 	var/given_name
+	special_handling = TRUE
 /obj/item/clothing/glasses/sunglasses/blindfold/whiteblindfold/craftable
 	name = "handmade blindfold"
 	desc = "A handmade blindfold that covers the eyes, preventing sight."
 
-/obj/item/clothing/accessory/collar/craftable/attack_self(mob/living/user)
+/obj/item/clothing/accessory/collar/craftable/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	given_name = sanitizeSafe(tgui_input_text(user, "What would you like to label the collar?", "Collar Labelling", null, MAX_NAME_LEN, encode = FALSE), MAX_NAME_LEN)

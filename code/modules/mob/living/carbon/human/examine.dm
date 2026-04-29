@@ -95,6 +95,8 @@
 
 	var/list/msg = list("This is [icon2html(src, user.client)] <EM>[src.name]</EM>[name_ender]")
 
+	var/list/ranks_items = list() // Outpost 21 edit - Eshui ranks
+
 	//uniform
 	if(w_uniform && !(skip_gear & EXAMINE_SKIPJUMPSUIT) && w_uniform.show_examine)
 		//Ties
@@ -106,11 +108,15 @@
 				var/list/accessory_descs = list()
 				if(skip_gear & EXAMINE_SKIPHOLSTER)
 					for(var/obj/item/clothing/accessory/A in U.accessories)
-						if(A.show_examine && !istype(A, /obj/item/clothing/accessory/holster)) // If we're supposed to skip holsters, actually skip them
+						if(istype(A, /obj/item/clothing/accessory/rank_eshui)) // Outpost 21 edit - Eshui ranks
+							ranks_items += A
+						else if(A.show_examine && !istype(A, /obj/item/clothing/accessory/holster)) // If we're supposed to skip holsters, actually skip them
 							accessory_descs += "\a [A]"
 				else
 					for(var/obj/item/clothing/accessory/A in U.accessories)
-						if(A.concealed_holster == 0 && A.show_examine)
+						if(istype(A, /obj/item/clothing/accessory/rank_eshui)) // Outpost 21 edit - Eshui ranks
+							ranks_items += A
+						else if(A.concealed_holster == 0 && A.show_examine)
 							accessory_descs += "<a href='byond://?src=\ref[src];lookitem_desc_only=\ref[A]'>\a [A]</a>"
 
 				tie_msg += " [lowertext(english_list(accessory_descs))]."
@@ -125,6 +131,12 @@
 			msg += span_warning("[p_Theyre()] wearing [icon2html(head,user.client)] [head.gender==PLURAL?"some":"a"] [(head.blood_color != "#030303") ? "blood" : "oil"]-stained <a href='byond://?src=\ref[src];lookitem_desc_only=\ref[head]'>[head.name]</a> on [p_their()] head!")
 		else
 			msg += "[p_Theyre()] wearing [icon2html(head,user.client)] <a href='byond://?src=\ref[src];lookitem_desc_only=\ref[head]'>\a [head]</a> on [p_their()] head."
+
+	// Outpost 21 edit begin - Eshui ranks
+	if(LAZYLEN(ranks_items))
+		for(var/obj/item/clothing/accessory/rank_eshui/pin in ranks_items)
+			msg += "[p_They()] [p_have()] the rank of [span_underline(span_bold(pin.rank))]."
+	// Outpost 21 edit end
 
 	//suit/armour
 	if(wear_suit)
@@ -284,10 +296,10 @@
 	if(mSmallsize in mutations)
 		msg += "[p_Theyre()] very short!"
 
-	if (src.stat)
-		msg += span_warning("[p_Theyre()] not responding to anything around [p_they()] and seems to be asleep.")
+	if (src.stat || (status_flags & FAKEDEATH))
+		msg += span_warning("[p_Theyre()] not responding to anything around [p_them()] and seems to be asleep.")
 		var/obj/item/organ/internal/lungs/L = internal_organs_by_name[O_LUNGS]
-		if(((stat == 2 || src.losebreath) || !L) && get_dist(user, src) <= 3)
+		if(((stat == DEAD || losebreath || !L || (status_flags & FAKEDEATH)) && get_dist(user, src) <= 3))
 			msg += span_warning("[p_They()] [user.p_do()] not appear to be breathing.")
 		if(ishuman(user) && !user.stat && Adjacent(user))
 			user.visible_message(span_infoplain(span_bold("[user]") + " checks [src]'s pulse."), span_infoplain("You check [src]'s pulse."))
@@ -304,7 +316,7 @@
 		msg += span_warning("[p_Theyre()] on fire!.")
 
 	var/ssd_msg = species.get_ssd(src)
-	if(ssd_msg && (!should_have_organ(O_BRAIN) || has_brain()) && stat != DEAD)
+	if(ssd_msg && (!should_have_organ(O_BRAIN) || has_brain()) && stat != DEAD && !(status_flags & FAKEDEATH))
 		if(!key)
 			msg += span_deadsay("[p_Theyre()] [ssd_msg]. It doesn't look like [p_theyre()] waking up anytime soon.")
 		else if(!client)
@@ -356,17 +368,17 @@
 			else
 				wound_flavor_text["[temp.name]"] = ""
 			if(temp.dislocated == 1)
-				wound_flavor_text["[temp.name]"] += span_warning("[user.p_Their()] [temp.joint] is dislocated!")
+				wound_flavor_text["[temp.name]"] += span_warning("[p_Their()] [temp.joint] is dislocated!")
 			if(temp.brute_dam > temp.min_broken_damage || (temp.status & (ORGAN_BROKEN | ORGAN_MUTATED)))
-				wound_flavor_text["[temp.name]"] += span_warning("[user.p_Their()] [temp.name] is dented and swollen!")
+				wound_flavor_text["[temp.name]"] += span_warning("[p_Their()] [temp.name] is dented and swollen!")
 
 			if(temp.germ_level > INFECTION_LEVEL_TWO && !(temp.status & ORGAN_DEAD))
-				wound_flavor_text["[temp.name]"] += span_warning("[user.p_Their()] [temp.name] looks very infected!")
+				wound_flavor_text["[temp.name]"] += span_warning("[p_Their()] [temp.name] looks very infected!")
 			else if(temp.status & ORGAN_DEAD)
-				wound_flavor_text["[temp.name]"] += span_warning("[user.p_Their()] [temp.name] looks rotten!")
+				wound_flavor_text["[temp.name]"] += span_warning("[p_Their()] [temp.name] looks rotten!")
 
 			if(temp.status & ORGAN_BLEEDING)
-				is_bleeding["[temp.name]"] += span_danger("[user.p_Their()] [temp.name] is bleeding!")
+				is_bleeding["[temp.name]"] += span_danger("[p_Their()] [temp.name] is bleeding!")
 
 			if(temp.applied_pressure == src)
 				applying_pressure = span_info("[p_They()] is applying pressure to [p_their()] [temp.name].")
@@ -425,6 +437,24 @@
 	if(hasHUD(user,"best"))
 		msg += "Employment records: <a href='byond://?src=\ref[src];emprecord=`'>\[View\]</a> <a href='byond://?src=\ref[src];emprecordadd=`'>\[Add comment\]</a>"
 
+	// Outpost 21 edit begin - Gold digger trait
+	if(HAS_TRAIT(user, TRAIT_GOLDDIGGER))
+		var/datum/preferences/P = client?.prefs
+		if(P)
+			msg += "[p_They()] look like [p_theyre()] [lowertext(P.economic_status)] economically."
+		else
+			msg += "You can't get a sense of how well off [p_they()] are..."
+	// Outpost 21 edit end
+
+	// Outpost 21 edit begin - Unwashed
+	if(feels_gross >= 10)
+		if(feels_gross >= 50)
+			msg += span_danger("[p_They()] [p_are()] a monument to filth. The dirt beneath [p_them()] cowers with fear, for its god walks amongst it.")
+		else if(feels_gross >= 20)
+			msg += span_warning("[p_They()] really need[p_s()] a shower, it's uncomfortable to even look at [p_them()].")
+		else
+			msg += "[p_They()] look unwashed."
+	// Outpost 21 edit end
 
 	var/flavor_text = print_flavor_text()
 	if(flavor_text)

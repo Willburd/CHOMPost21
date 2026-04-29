@@ -310,6 +310,12 @@
 #define COMSIG_GHOST_QUERY_COMPLETE "ghost_query_complete"
 /// COMSIG used to get messages where they need to go
 #define COMSIG_VISIBLE_MESSAGE "visible_message"
-#define COMSIG_OBSERVER_MOB_EQUIPPED "observer_mob_equipped"
 ///from end of revival_healing_action(): ()
 #define COMSIG_LIVING_AHEAL "living_post_aheal"
+
+///from /mob/living/carbon/human/GetVoice(): (list/voice_data) - voice_data[1] contains the voice name
+#define COMSIG_HUMAN_GET_VOICE "human_get_voice"
+	#define COMPONENT_VOICE_CHANGED (1<<0)
+///from /mob/living/carbon/human/GetAltName(): (list/name_data) - name_data[1] contains the alt name
+#define COMSIG_HUMAN_GET_ALT_NAME "human_get_alt_name"
+	#define COMPONENT_ALT_NAME_CHANGED (1<<0)

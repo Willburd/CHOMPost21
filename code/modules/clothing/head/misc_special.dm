@@ -31,8 +31,13 @@
 	tint = TINT_HEAVY
 	drop_sound = 'sound/items/drop/helm.ogg'
 	pickup_sound = 'sound/items/pickup/helm.ogg'
+	special_handling = TRUE
+	resistance_flags = FIRE_PROOF
 
-/obj/item/clothing/head/welding/attack_self()
+/obj/item/clothing/head/welding/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	toggle()
 
 
@@ -126,6 +131,7 @@
 	icon_state = "cake0"
 	var/onfire = 0
 	body_parts_covered = HEAD
+	special_handling = TRUE
 
 /obj/item/clothing/head/cakehat/process()
 	if(!onfire)
@@ -141,7 +147,10 @@
 	if (istype(location, /turf))
 		location.hotspot_expose(700, 1)
 
-/obj/item/clothing/head/cakehat/attack_self(mob/user as mob)
+/obj/item/clothing/head/cakehat/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	onfire = !(onfire)
 	if (onfire)
 		force = 3
@@ -163,8 +172,12 @@
 	desc = "Perfect for those cold winter nights."
 	icon_state = "ushankadown"
 	flags_inv = HIDEEARS
+	special_handling = TRUE
 
-/obj/item/clothing/head/ushanka/attack_self(mob/user as mob)
+/obj/item/clothing/head/ushanka/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	if(src.icon_state == initial(icon_state))
 		src.icon_state = "[icon_state]up"
 		to_chat(user, "You raise the ear flaps on the ushanka.")
@@ -261,24 +274,30 @@
 
 /obj/item/clothing/head/psy_crown/proc/activate_ability(var/mob/living/wearer)
 	cooldown = world.time + cooldown_duration
-	to_chat(wearer, flavor_activate)
+	if(flavor_activate)
+		to_chat(wearer, flavor_activate)
 	to_chat(wearer, span_danger("The inside of your head hurts..."))
 	wearer.adjustBrainLoss(brainloss_cost)
 
-/obj/item/clothing/head/psy_crown/equipped(var/mob/living/carbon/human/H)
+/obj/item/clothing/head/psy_crown/equipped(mob/living/carbon/human/user)
 	..()
-	if(istype(H) && H.head == src && H.is_sentient())
+	if(istype(user) && user.head == src && user.is_sentient())
 		START_PROCESSING(SSobj, src)
-		to_chat(H, flavor_equip)
+		if(flavor_equip)
+			to_chat(user, flavor_equip)
 
-/obj/item/clothing/head/psy_crown/dropped(var/mob/living/carbon/human/H)
+/obj/item/clothing/head/psy_crown/dropped(mob/living/carbon/human/user, equipping, slot)
+	if(equipping || loc == user)
+		return ..()
 	..()
 	STOP_PROCESSING(SSobj, src)
-	if(H.is_sentient())
-		if(loc == H) // Still inhand.
-			to_chat(H, flavor_unequip)
-		else
-			to_chat(H, flavor_drop)
+	if(user.is_sentient())
+		if(loc == user) // Still inhand.
+			if(flavor_unequip)
+				to_chat(user, flavor_unequip)
+				return
+		if(flavor_drop)
+			to_chat(user, flavor_drop)
 
 /obj/item/clothing/head/psy_crown/Destroy()
 	STOP_PROCESSING(SSobj, src)
@@ -330,7 +349,7 @@
 	throwforce = 3
 	throw_speed = 2
 	throw_range = 5
-	w_class = 2
+	w_class = ITEMSIZE_SMALL
 	body_parts_covered = HEAD
 	attack_verb = list("warned", "cautioned", "smashed")
 	armor = list("melee" = 5, "bullet" = 0, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)

@@ -6,8 +6,6 @@
 	desc = "Allows you to move faster on average than baseline."
 	cost = 4 //CHOMPEdit
 	var_changes = list("slowdown" = -0.5)
-
-	excludes = list(/datum/trait/positive/hardy,/datum/trait/positive/hardy_extreme,/datum/trait/positive/hardy_plus)
 //	banned_species = list(SPECIES_ALRAUNE, SPECIES_SHADEKIN_CREW, SPECIES_TESHARI, SPECIES_TAJARAN, SPECIES_DIONA, SPECIES_UNATHI) //Either not applicable or buffs ruin species flavour/balance
 //	custom_only = FALSE //Keeping these in comments in case we decide to open them up in future, so the species are already organised.
 
@@ -17,17 +15,20 @@
 
 	activation_message="Your leg muscles pulsate."
 	primitive_expression_messages=list("dances around.")
-	excludes = list(/datum/trait/positive/unusual_running) // you best not be naruto running in this house
+	excludes = list(/datum/trait/positive/unusual_running, /datum/trait/positive/hardy,/datum/trait/positive/hardy_extreme,/datum/trait/positive/hardy_plus, /datum/trait/positive/strength, /datum/trait/positive/strengthplus) // you best not be naruto running in this house //ChompEDIT: Actually excludes this things, also properly excludes the strength perks, otherwise you grab haste first then strength
 
 /datum/trait/positive/unusual_running
 	name = "Unusual Gait"
 	desc = "Your method of running is unorthodox, you move faster when not holding things in your hands."
 	cost = 2
-	var_changes = list("unusual_running" = 1)
 
 	custom_only = FALSE //I think this is probably fine since it's half RP trait and half mechanical trait. also you can't have speed and use your hands so this is kinda niche outside of travel time reduction.
 	banned_species = list(SPECIES_ALRAUNE, SPECIES_SHADEKIN_CREW, SPECIES_TESHARI, SPECIES_TAJARAN, SPECIES_DIONA, SPECIES_UNATHI, SPECIES_VASILISSAN, SPECIES_XENOCHIMERA, SPECIES_VOX) //i assume if a dev made your base slowdown different then you shouldn't have this.
 	excludes = list(/datum/trait/positive/speed_fast) // olympic sprinters don't naruto run
+
+/datum/trait/positive/unusual_running/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+	..()
+	ADD_TRAIT(H, UNUSUAL_RUNNING, ROUNDSTART_TRAIT)
 
 /datum/trait/positive/punchdamage
 	name = "Strong Attacks"
@@ -115,13 +116,11 @@
 	cost = 2
 	var_changes = list("siemens_coefficient" = 0.75)
 
-
 /datum/trait/positive/nonconductive_plus
 	name = "Non-Conductive, Major"
 	desc = "Decreases your susceptibility to electric shocks by 50%."
 	cost = 3
 	var_changes = list("siemens_coefficient" = 0.5)
-
 
 	is_genetrait = TRUE
 
@@ -179,7 +178,6 @@
 	desc = "Adds 20% resistance to brute damage sources." //CHOMP Edit
 	cost = 2 //CHOMP Edit
 	var_changes = list("brute_mod" = 0.8) //CHOMP Edit
-
 	//excludes = list(/datum/trait/positive/minor_burn_resist,/datum/trait/positive/burn_resist) //CHOMP disable, this is already handled in positive_ch.dm
 
 /datum/trait/positive/minor_burn_resist
@@ -188,13 +186,11 @@
 	cost = 1 //CHOMP Edit
 	var_changes = list("burn_mod" = 0.9) //CHOMP Edit
 
-
 /datum/trait/positive/burn_resist
 	name = "Burn Resist"
 	desc = "Adds 20% resistance to burn damage sources." //CHOMP Edit
 	cost = 2 //CHOMP Edit
 	var_changes = list("burn_mod" = 0.8) //CHOMP Edit
-
 	//excludes = list(/datum/trait/positive/minor_brute_resist,/datum/trait/positive/brute_resist) //CHOMP disable, this is already handled in positive_ch.dm
 
 
@@ -231,7 +227,6 @@
 	desc = "Your saliva has especially strong antiseptic properties that can be used to heal small wounds."
 	cost = 1
 
-
 /datum/trait/positive/antiseptic_saliva/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
 	add_verb(H, /mob/living/carbon/human/proc/lick_wounds)
@@ -249,7 +244,6 @@
 	desc = "You are able to move unhindered on snow."
 	cost = 1
 	var_changes = list("snow_movement" = -2)
-
 
 /datum/trait/positive/weaver
 	name = "Weaver"
@@ -331,7 +325,7 @@
 	varchange_type = TRAIT_VARCHANGE_MORE_BETTER
 */
 
-/datum/trait/positive/trauma_tolerance //CHOMPEdit renamed because we already have pain_tolerance pathname for halloss damage resistance.
+/datum/trait/positive/trauma_tolerance
 	name = "Grit"
 	desc = "You can keep going a little longer, a little harder when you get hurt, Injuries only inflict 85% as much pain, and slowdown from pain is 85% as effective."
 	cost = 2
@@ -411,8 +405,6 @@
 	desc = "You move over or under tables with ease of a Teshari."
 	cost = 2
 
-
-
 	// Traitgenes Replacement for /datum/trait/positive/superpower_midget, made into a genetrait
 	is_genetrait = TRUE
 	hidden = FALSE
@@ -438,11 +430,6 @@
 	name = "Photosynthesis"
 	desc = "Your body is able to produce nutrition from being in light."
 	cost = 3
-	// Outpost 21 edit begin - PHOTOSYNTHASIS
-	is_genetrait = TRUE
-	activation_message="You feel reinvigorated in the light."
-	primitive_expression_messages = list("stands in the light.")
-	// Outpost 21 edit end
 	can_take = ORGANICS|SYNTHETICS //Synths actually use nutrition, just with a fancy covering.
 	added_component_path = /datum/component/photosynth
 
@@ -452,13 +439,11 @@
 	cost = 1
 	var_changes = list("radiation_mod" = 0.65, "rad_removal_mod" = 3.5, "rad_levels" = RESISTANT_RADIATION_RESISTANCE)
 
-
 /datum/trait/positive/rad_resistance_extreme
 	name = "Radiation Resistance, Major"
 	desc = "You are much more resistant to radiation, and it dissipates much faster from your body."
 	cost = 2
 	var_changes = list("radiation_mod" = 0.5, "rad_removal_mod" = 5, "rad_levels" = MAJOR_RESISTANT_RADIATION_RESISTANCE)
-
 
 /datum/trait/positive/rad_immune
 	name = "Radiation Immunity"
@@ -466,11 +451,18 @@
 	cost = 3
 	var_changes = list("radiation_mod" = 0.0, "rad_removal_mod" = 10, "rad_levels" = IMMUNITY_RADIATION_RESISTANCE)
 
-
 	// Traitgenes
 	is_genetrait = TRUE
 	hidden = FALSE
 	activation_message="Your body feels mundane."
+
+/datum/trait/positive/rad_immune/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+	..()
+	ADD_TRAIT(H, TRAIT_RADIMMUNE, ROUNDSTART_TRAIT)
+
+/datum/trait/positive/rad_immune/unapply(var/datum/species/S,var/mob/living/carbon/human/H)
+	..()
+	REMOVE_TRAIT(H, TRAIT_RADIMMUNE, ROUNDSTART_TRAIT)
 
 /datum/trait/positive/vibration_sense
 	name = "Vibration Sense"
@@ -501,6 +493,8 @@
 	cost = 2
 	custom_only = TRUE
 	var_changes = list("flags" = NO_DNA)
+	excludes = list(/datum/trait/negative/disability_deteriorating)
+	banned_species	= list(/datum/species/protean, /datum/species/shapeshifter/promethean)
 
 /datum/trait/positive/weaver/xenochimera
 	sort = TRAIT_SORT_SPECIES
@@ -586,7 +580,7 @@
 	name = "Dense Bones"
 	desc = "Your bones (or robotic limbs) are more dense or stronger then what is considered normal. It is much harder to fracture your bones, yet pain from fractures is much more intense. Bones require 50% more damage to break, and deal 2x pain on break."
 	cost = 3
-	excludes = list(/datum/trait/negative/hollow)
+	excludes = list(/datum/trait/negative/hollow, /datum/trait/negative/boneless, /datum/trait/negative/boneless/major)
 
 /datum/trait/positive/densebones/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
@@ -668,11 +662,12 @@
 	desc = "You are more heavyweight or otherwise more sturdy than most species, and as such, more resistant to knockdown effects and stuns. Stuns are only half as effective on you, and neither players nor mobs can trade places with you or bump you out of the way."
 	cost = 2
 	var_changes = list("stun_mod" = 0.5, "weaken_mod" = 0.5) // Stuns are 50% as effective - a stun of 3 seconds will be 2 seconds due to rounding up. Set to 0.5 to be in-line with the trait's description. (Weaken is used alongside stun to prevent aiming.)
+	excludes = list(/datum/trait/negative/lightweight_light, /datum/trait/negative/lightweight)
 
 /datum/trait/positive/heavyweight/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
 	H.mob_size = MOB_LARGE
-	H.mob_bump_flag = HEAVY
+	// H.mob_bump_flag = HEAVY // Outpost 21 edit - Removed bump flag
 
 /datum/trait/positive/grappling_expert
 	name = "Grappling Expert"
@@ -867,13 +862,14 @@
 
 /datum/trait/positive/toxin_gut
 	name ="Robust Gut"
-	desc = "You are immune to most ingested toxins. Does not protect from possible harm caused by other drugs, meds, allergens etc."
+	desc = "You are immune to most ingested toxins and raw food. Does not protect from possible harm caused by other drugs, meds, allergens etc."
 	cost = 1
 	custom_only = FALSE
 
 /datum/trait/positive/toxin_gut/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
 	ADD_TRAIT(H, INGESTED_TOXIN_IMMUNE, ROUNDSTART_TRAIT)
+	ADD_TRAIT(H, TRAIT_STRONG_STOMACH, ROUNDSTART_TRAIT)
 
 /datum/trait/positive/nobreathe
 	name = "Breathless"
@@ -955,6 +951,7 @@
 		G.radiation_color = trait_prefs["glow_color"]
 		G.glows = trait_prefs["glow_enabled"]
 	G.radiation_healing = TRUE
+	G.radiation_nutrition = TRUE
 
 /datum/trait/positive/radioactive_heal/unapply(var/datum/species/S,var/mob/living/carbon/human/H, var/list/trait_prefs)
 	..() //Does all the removal stuff
@@ -963,3 +960,16 @@
 	var/datum/component/radiation_effects/G = H.GetComponent(added_component_path)
 	if(G)
 		G.radiation_healing = initial(G.radiation_healing)
+		G.radiation_nutrition = initial(G.radiation_nutrition)
+
+/datum/trait/positive/shapeshifting
+	name = "Shapeshifter"
+	desc = "You're able to shift your appearance."
+	cost = 3 //this trait is functionally wholly cosmetic, but it is less flavor-restricted than cocoon, and takes less time, so it's a bit pricier
+	custom_only = FALSE
+	hidden = FALSE //CHOMPEdit - Enable
+
+/datum/trait/positive/shapeshifting/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+	..()
+	add_verb(H, /mob/living/carbon/human/proc/innate_shapeshifting)
+	add_verb(H, /mob/living/proc/name_change_verb)

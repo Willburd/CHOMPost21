@@ -73,7 +73,6 @@
 
 	var/scan_id = 1
 	var/obj/item/coin/coin
-	var/datum/wires/vending/wires = null
 
 	var/list/log = list()
 	var/req_log_access = ACCESS_CARGO //default access for checking logs is cargo
@@ -84,7 +83,7 @@
 
 /obj/machinery/vending/Initialize(mapload)
 	. = ..()
-	wires = new(src)
+	set_wires(new /datum/wires/vending(src))
 	if(product_slogans)
 		slogan_list += splittext(product_slogans, ";")
 
@@ -123,6 +122,7 @@ GLOBAL_LIST_EMPTY(vending_products)
 			var/datum/stored_item/vending_product/product = new/datum/stored_item/vending_product(src, entry)
 
 			product.price = (entry in prices) ? prices[entry] : 0
+			if(istype(get_area(src), /area/vr)) product.price = 0 // Outpost 21 edit - VR areas make things free
 			product.amount = (current_list[1][entry]) ? current_list[1][entry] : 1
 			product.category = category
 

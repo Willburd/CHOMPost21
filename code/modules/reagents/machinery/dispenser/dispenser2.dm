@@ -25,6 +25,7 @@
 	var/list/recording_recipe
 	/// Saves all the recipes recorded by the machine
 	var/list/saved_recipes = list()
+	var/import_job = JOB_CHEMIST
 
 /obj/machinery/chemical_dispenser/Initialize(mapload)
 	. = ..()
@@ -202,7 +203,13 @@
 				container = null
 			. = TRUE
 
+		/* Outpost 21 edit - NOPE NOPE NOPE NOPE NOPE FORBIDDEN, stop making chemistry even more powerful, Remove chemistry import files
 		if("import_config")
+			/* CHOMPRemve Start, skip the import_job check
+			if(import_job && (ui.user.mind.assigned_role != import_job))
+				to_chat(ui.user, span_warning("This option is only available to the job: [import_job]"))
+				return FALSE
+			*/// CHOMPRemove End
 			var/list/our_data = params["config"]
 			if(!islist(our_data))
 				return FALSE
@@ -215,6 +222,7 @@
 			if(length(new_recipes))
 				saved_recipes = new_recipes
 			. = TRUE
+		*/
 
 		if("record_recipe")
 			recording_recipe = list()

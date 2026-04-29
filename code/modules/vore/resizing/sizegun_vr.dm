@@ -11,7 +11,6 @@
 	fire_sound = 'sound/weapons/wave.ogg'
 	charge_cost = 240
 	projectile_type = /obj/item/projectile/beam/sizelaser
-	origin_tech = list(TECH_BLUESPACE = 4)
 	modifystate = "sizegun-shrink"
 	battery_lock = 1
 	var/backfire = 0
@@ -29,7 +28,9 @@
 	verbs += /obj/item/gun/energy/sizegun/proc/spin_dial
 
 /obj/item/gun/energy/sizegun/attack_self(mob/user)
-	. = ..()
+	. = ..(user)
+	if(.)
+		return TRUE
 	select_size(user)
 
 /obj/item/gun/energy/sizegun/proc/spin_dial()
@@ -150,7 +151,7 @@
 	else
 		return ..()
 
-/obj/item/gun/energy/sizegun/attack(atom/A, mob/living/user, adjacent, params)
+/obj/item/gun/energy/sizegun/attack(mob/living/A, mob/living/user, target_zone, attack_modifier)
 	if(backfire)
 		if(prob(50))
 			to_chat(user, span_notice("\The [src] backfires and consumes its entire charge!"))
@@ -159,7 +160,7 @@
 			var/mob/living/M = loc // TGMC Ammo HUD
 			if(istype(M)) // TGMC Ammo HUD
 				M?.hud_used.update_ammo_hud(M, src)
-			return
+			return ITEM_INTERACT_SUCCESS
 		else
 			return ..()
 	else
@@ -211,7 +212,7 @@
 			if(istype(H.gloves, /obj/item/clothing/gloves/bluespace))
 				M.visible_message(span_warning("\The [H]'s bracelet flashes and absorbs the beam!"),span_notice("Your bracelet flashes and absorbs the beam!"))
 				return
-		if(!M.resize(set_size, uncapped = M.has_large_resize_bounds(), ignore_prefs = ignoring_prefs))
+		if(!M.resize(set_size, uncapped = M.has_large_resize_bounds(), ignore_prefs = ignoring_prefs, allow_stripping = TRUE))
 			to_chat(M, span_blue("The beam fires into your body, changing your size!"))
 		M.update_icon()
 		return

@@ -9,8 +9,6 @@
 	var/cooldownmin = 0
 	var/cooldownmax = 0
 
-	origin_tech = list(TECH_BIO = 5)
-
 /obj/item/organ/internal/malignant/Initialize(mapload, var/internal, var/force_location = null, var/forcetag = null)
 	organ_tag = "[initial(organ_tag)]_[rand(1,9999)]"
 	if(forcetag)
@@ -271,7 +269,7 @@
 
 
 
-
+// Outpost 21 edit - reenable fun
 // pinata makes you eventually explode into candy
 /obj/item/organ/internal/malignant/tumor/pinata
 	name = "pinata gland"
@@ -345,7 +343,7 @@
 		T = get_turf(src)
 	new /obj/effect/decal/cleanable/confetti(T)
 	qdel(src)
-
+// Outpost 21 edit end
 
 // Teleports you randomly, until it gets you killed
 /obj/item/organ/internal/malignant/tumor/bluespace
@@ -425,7 +423,7 @@
 		owner.bloodstr.add_reagent( "ethanol", stage * 2)
 		cooldown = rand(cooldownmin,cooldownmax)
 
-
+/* CHOMPRemove Start - Disable gib tumors
 // Prints money until you explode
 /obj/item/organ/internal/malignant/tumor/moneyorgan
 	name = "crypto-cache"
@@ -518,7 +516,8 @@
 		spawn_money(1, T)
 
 	qdel(src)
-
+*/
+// CHOMPRemove End
 
 /****************************************************
 				Parasite varients
@@ -605,8 +604,6 @@
 	var/prepared = FALSE
 	var/chem_target = null
 	supply_conversion_value = 0
-
-	origin_tech = list(TECH_BIO = 3)
 
 /obj/item/organ/internal/malignant/engineered/lattice/Initialize(mapload, var/internal, var/force_location = null, var/forcetag = null)
 	growth_trigger = rand(150,200)

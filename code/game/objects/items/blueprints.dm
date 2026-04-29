@@ -43,9 +43,12 @@
 	var/can_expand_areas_into = AREA_SPACE	// Can expand station areas only into space.
 	var/can_rename_areas_in = AREA_STATION	// Only station areas can be reanamed
 
-/obj/item/blueprints/attack_self(mob/M as mob)
-	if (!ishuman(M))
-		to_chat(M, "This stack of blue paper means nothing to you.") //monkeys cannot into projecting
+/obj/item/blueprints/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
+	if(!ishuman(user))
+		to_chat(user, "This stack of blue paper means nothing to you.") //monkeys cannot into projecting
 		return
 	interact()
 	return
@@ -337,7 +340,7 @@
 				usr.client.images.Remove(i)
 
 // Make sure to turn off the colors when we drop the blueprints.
-/obj/item/blueprints/dropped(mob/user)
+/obj/item/blueprints/dropped(mob/user, equipping, slot)
 	if(areaColor_turfs.len)
 		seeAreaColors_remove()
 	return ..()

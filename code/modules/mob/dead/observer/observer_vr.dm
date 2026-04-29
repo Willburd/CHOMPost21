@@ -30,6 +30,7 @@
 	else
 		to_chat(src,span_warning("No backup record could be found, sorry."))
 // CHOMPEdit: Revert Removal
+/* Outpost 21 edit - This is not needed here
 /mob/observer/dead/verb/backup_delay()
 	set category = "Ghost.Settings"
 	set name = "Cancel Transcore Notification"
@@ -48,6 +49,7 @@
 			to_chat(src, span_notice("Overdue mind backup notification delayed successfully."))
 	else
 		to_chat(src,span_warning("No backup record could be found, sorry."))
+*/
 
 /mob/observer/dead/verb/findghostpod() //Moves the ghost instead of just changing the ghosts's eye -Nodrak
 	set category = "Ghost.Join"

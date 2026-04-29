@@ -185,8 +185,8 @@
 			/obj/item/clothing/suit/unathi/robe,
 			/obj/item/clothing/suit/unathi/mantle,
 			/obj/item/clothing/under/permit,
-			/obj/item/clothing/under/vox/vox_casual/station, // Outpost 21 edit - no free alien mesh
-			/obj/item/clothing/under/vox/vox_robes/station, // Outpost 21 edit - no free alien mesh
+			/obj/item/clothing/under/vox/vox_casual,
+			/obj/item/clothing/under/vox/vox_robes,
 			/obj/item/clothing/under/harness,
 			/obj/item/clothing/under/skirt/loincloth,
 			/obj/item/clothing/gloves/vox

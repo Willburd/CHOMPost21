@@ -1,4 +1,4 @@
-var/datum/antagonist/traitor/traitors
+GLOBAL_DATUM(traitors, /datum/antagonist/traitor)
 
 // Inherits most of its vars from the base datum.
 /datum/antagonist/traitor
@@ -16,7 +16,7 @@ var/datum/antagonist/traitor/traitors
 
 /datum/antagonist/traitor/New()
 	..()
-	traitors = src
+	GLOB.traitors = src
 
 /datum/antagonist/traitor/get_extra_panel_options(var/datum/mind/player)
 	return "<a href='byond://?src=\ref[player];[HrefToken()];common=crystals'>\[set crystals\]</a><a href='byond://?src=\ref[src];[HrefToken()];spawn_uplink=\ref[player.current]'>\[spawn uplink\]</a>"
@@ -102,10 +102,10 @@ var/datum/antagonist/traitor/traitors
 
 /datum/antagonist/traitor/proc/give_codewords(mob/living/traitor_mob)
 	to_chat(traitor_mob, span_underline(span_bold("Your employers provided you with the following information on how to identify possible allies:")))
-	to_chat(traitor_mob, span_bold("Code Phrase") + ": " + span_danger("[GLOB.syndicate_code_phrase]"))
-	to_chat(traitor_mob, span_bold("Code Response") + ": " + span_danger("[GLOB.syndicate_code_response]"))
-	traitor_mob.mind.store_memory(span_bold("Code Phrase") + ": [GLOB.syndicate_code_phrase]")
-	traitor_mob.mind.store_memory(span_bold("Code Response") + ": [GLOB.syndicate_code_response]")
+	to_chat(traitor_mob, span_bold("Code Phrase") + ": " + span_danger("[SSantag_job.syndicate_code_phrase]"))
+	to_chat(traitor_mob, span_bold("Code Response") + ": " + span_danger("[SSantag_job.syndicate_code_response]"))
+	traitor_mob.mind.store_memory(span_bold("Code Phrase") + ": [SSantag_job.syndicate_code_phrase]")
+	traitor_mob.mind.store_memory(span_bold("Code Response") + ": [SSantag_job.syndicate_code_response]")
 	to_chat(traitor_mob, "Use the code words, preferably in the order provided, during regular conversation, to identify other agents. Proceed with caution, however, as everyone is a potential foe.")
 
 /datum/antagonist/traitor/proc/spawn_uplink(var/mob/living/carbon/human/traitor_mob)

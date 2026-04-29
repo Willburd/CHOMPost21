@@ -342,21 +342,21 @@ GLOBAL_LIST_EMPTY(light_type_cache)
 		if(start_with_cell && !no_emergency)
 			cell = new/obj/item/cell/emergency_light(src)
 		var/obj/item/light/L = get_light_type_instance(light_type) //This is fine, but old code.
-		// Outpost 21 addition begin - Nightshift lights in maintenance tunnels are scary
+		// outpost 21 edit begin - Nightshift lights in maintenance tunnels are scary
 		var/area/A = get_area(src)
 		if(A && A.use_maint_night_color)
 			L.nightshift_color = LIGHT_COLOR_NIGHTSHIFT_MAINT
 		else
 			L.nightshift_color = LIGHT_COLOR_NIGHTSHIFT
-		// Outpost 21 addition end
+		// outpost 21 edit end
 		update_from_bulb(L)
-		// outpost 21 addition begin - redspace hell lights have a fixed broken chance, ignoring default breaking chance... also reduces lighting lag...
+		// outpost 21 edit begin - redspace hell lights have a fixed broken chance, ignoring default breaking chance... also reduces lighting lag...
 		if(A && A.broken_light_chance >= 0)
 			if(prob(A.broken_light_chance))
 				broken(1)
 		else if(prob(L.broken_chance))
 			broken(1)
-		// outpost 21 addition end
+		// outpost 21 edit end
 
 	on = powered()
 	update(0)
@@ -816,7 +816,7 @@ GLOBAL_LIST_EMPTY(light_type_cache)
 
 	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
-		if(H.species.can_shred(H))
+		if(H.species.can_shred(H, FALSE, 10))
 			user.setClickCooldown(user.get_attack_speed())
 			for(var/mob/M in viewers(src))
 				M.show_message(span_red("[user.name] smashed the light!"), 3, "You hear a tinkle of breaking glass", 2)
@@ -844,7 +844,7 @@ GLOBAL_LIST_EMPTY(light_type_cache)
 		else if(TK in user.mutations)
 			to_chat(user, "You telekinetically remove the light [get_fitting_name()].")
 		else
-			to_chat(user, "You try to remove the light [get_fitting_name()], but it's too hot and you don't want to burn your hand.")
+			to_chat(user, "You try to remove the [get_fitting_name()], but it's too hot and you don't want to burn your hand.")
 			return				// if burned, don't remove the light
 	else
 		to_chat(user, "You remove the light [get_fitting_name()].")
@@ -1144,7 +1144,7 @@ GLOBAL_LIST_EMPTY(light_type_cache)
 	if(isrobot(user))
 		I = user.get_active_hand()
 
-	if(istype(I,/obj/item/multitool))
+	if(I?.has_tool_quality(TOOL_MULTITOOL))
 		var/list/menu_list = list(
 		"Normal Range",
 		"Normal Brightness",

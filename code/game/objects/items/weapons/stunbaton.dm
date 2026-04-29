@@ -13,7 +13,6 @@
 	w_class = ITEMSIZE_NORMAL
 	drop_sound = 'sound/items/drop/metalweapon.ogg'
 	pickup_sound = 'sound/items/pickup/metalweapon.ogg'
-	origin_tech = list(TECH_COMBAT = 2)
 	attack_verb = list("beaten")
 	var/lightcolor = "#FF6A00"
 	var/stunforce = 0
@@ -23,6 +22,9 @@
 	var/hitcost = 240
 	var/grip_safety = TRUE
 	var/taped_safety = FALSE
+
+	///Var for attack_self chain
+	var/special_handling = FALSE
 
 /obj/item/melee/baton/Initialize(mapload)
 	. = ..()
@@ -95,7 +97,7 @@
 	else
 		set_light(0)
 
-/obj/item/melee/baton/dropped(mob/user)
+/obj/item/melee/baton/dropped(mob/user, equipping, slot)
 	..()
 	if(status && grip_safety && !taped_safety)
 		status = 0
@@ -153,6 +155,11 @@
 		return ..()
 
 /obj/item/melee/baton/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
+	if(special_handling)
+		return FALSE
 	if(bcell && bcell.charge >= hitcost)
 		status = !status
 		to_chat(user, span_notice("[src] is now [status ? "on" : "off"]."))
@@ -166,12 +173,12 @@
 			to_chat(user, span_warning("[src] is out of charge."))
 	add_fingerprint(user)
 
-/obj/item/melee/baton/attack(mob/M, mob/user)
-	if(status && (CLUMSY in user.mutations) && prob(10)) // Outpost 21 edit - Made clumsy less obnoxious
+/obj/item/melee/baton/attack(mob/living/M, mob/living/user, target_zone, attack_modifier)
+	if(status && CLUMSY_FAIL_CHANCE(user))
 		to_chat(user, span_danger("You accidentally hit yourself with the [src]!"))
 		user.Weaken(30)
 		deductcharge(hitcost)
-		return
+		return ITEM_INTERACT_SUCCESS
 	deductcharge(hitcost)
 	return ..()
 

@@ -15,7 +15,7 @@
 					LANGUAGE_SKRELLIANFAR = 0,
 					LANGUAGE_ROOTLOCAL	= 0,
 					LANGUAGE_TRADEBAND	= 1,
-					LANGUAGE_GUTTER		= 0,
+					// LANGUAGE_GUTTER		= 0, // Outpost 21 edit - Not for borgs
 					LANGUAGE_SCHECHI	= 1,
 					LANGUAGE_EAL		= 1,
 					LANGUAGE_TERMINUS	= 1,
@@ -42,7 +42,7 @@
 	//src.modules += new /obj/item/storage/bag/plants(src)
 	//src.modules += new /obj/item/robot_harvester(src)
 	src.modules += new /obj/item/material/knife(src)
-	src.modules += new /obj/item/material/kitchen/rollingpin(src)
+	src.modules += new /obj/item/material/kitchen/rollingpin/cyborg(src) // Outpost 21 edit(port) - Service borg rolling pin
 	src.modules += new /obj/item/multitool/cyborg(src) //to freeze trays
 	src.modules += new /obj/item/dogborg/jaws/small(src)
 	src.modules += new /obj/item/dogborg/boop_module(src)

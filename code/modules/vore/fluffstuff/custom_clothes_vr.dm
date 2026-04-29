@@ -502,7 +502,7 @@
 
 	species_restricted = null
 
-/obj/item/clothing/head/helmet/space/void/engineering/hazmat/fluff/screehelm/mob_can_equip(var/mob/living/carbon/human/H, slot, disable_warning = 0)
+/obj/item/clothing/head/helmet/space/void/engineering/hazmat/fluff/screehelm/mob_can_equip(mob/living/carbon/human/H, slot, disable_warning = FALSE, ignore_obstruction, go_over_slot = FALSE)
 	if(..())
 		if(H.ckey != "scree")
 			to_chat(H, span_warning("Your face and whoever is meant for this helmet are too different."))
@@ -524,7 +524,7 @@
 
 	species_restricted = null
 
-/obj/item/clothing/suit/space/void/engineering/hazmat/fluff/screespess/mob_can_equip(var/mob/living/carbon/human/H, slot, disable_warning = 0)
+/obj/item/clothing/suit/space/void/engineering/hazmat/fluff/screespess/mob_can_equip(mob/living/carbon/human/H, slot, disable_warning = FALSE, ignore_obstruction, go_over_slot = FALSE)
 	if(..())
 		if(H.ckey != "scree")
 			to_chat(H, span_warning("The gloves only have three fingers, not to mention the accommodation for extra limbs."))
@@ -556,7 +556,7 @@
 		slot_head_str = 'icons/vore/custom_onmob_32x48_vr.dmi'
 		)
 
-/obj/item/clothing/head/fluff/avida/mob_can_equip(var/mob/living/carbon/human/H, slot, disable_warning = 0)
+/obj/item/clothing/head/fluff/avida/mob_can_equip(mob/living/carbon/human/H, slot, disable_warning = FALSE, ignore_obstruction, go_over_slot = FALSE)
 	if(..())
 		var/static/list/allowed_ear_names = list("Bnnuy Ears", "Bnnuy Ears 2")
 		//check if wearer's ear sprite is compatible with trimmed icon
@@ -577,7 +577,7 @@
 	default_worn_icon = 'icons/vore/custom_clothes_mob.dmi'
 	item_state_slots = list(slot_r_hand_str = "alurane-vines_r", slot_l_hand_str = "alurane-vines_l")
 
-/obj/item/clothing/under/fluff/aluranevines/mob_can_equip(var/mob/living/carbon/human/H, slot, disable_warning = 0)
+/obj/item/clothing/under/fluff/aluranevines/mob_can_equip(mob/living/carbon/human/H, slot, disable_warning = FALSE, ignore_obstruction, go_over_slot = FALSE)
 	if(..())
 		if(H.ckey != "natje")
 			to_chat(H, span_warning("Wrapping vines around yourself is a quite an... Odd idea. You decide otherwise."))
@@ -669,6 +669,7 @@
 	light_system = MOVABLE_LIGHT
 
 	actions_types = list(/datum/action/item_action/toggle_pom_pom)
+	special_handling = TRUE
 
 /obj/item/clothing/head/fluff/pompom/digest_act(var/atom/movable/item_storage = null)
 	return FALSE
@@ -677,6 +678,9 @@
 	return FALSE
 
 /obj/item/clothing/head/fluff/pompom/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	//if(!isturf(user.loc)) -- doesn't seem to cause problems to allow this and it's silly not to
 	//	to_chat(user, "You cannot turn the light on while in this [user.loc]")
 	//	return
@@ -714,7 +718,7 @@
 
 	light_overlay = "helmet_light"
 
-/obj/item/clothing/head/helmet/space/fluff/joan/mob_can_equip(var/mob/living/carbon/human/H, slot, disable_warning = 0)
+/obj/item/clothing/head/helmet/space/fluff/joan/mob_can_equip(mob/living/carbon/human/H, slot, disable_warning = FALSE, ignore_obstruction, go_over_slot = FALSE)
 	if(..())
 		if(H.ckey != "joanrisu")
 			to_chat(H, span_warning("You try to fit on the helmet, but it doesn't fit."))
@@ -740,7 +744,7 @@
 
 	default_worn_icon = 'icons/vore/custom_clothes_mob.dmi'
 
-/obj/item/clothing/suit/space/fluff/joan/mob_can_equip(var/mob/living/carbon/human/H, slot, disable_warning = 0)
+/obj/item/clothing/suit/space/fluff/joan/mob_can_equip(mob/living/carbon/human/H, slot, disable_warning = FALSE, ignore_obstruction, go_over_slot = FALSE)
 	if(..())
 		if(H.ckey != "joanrisu")
 			to_chat(H, span_warning("You try to fit into the suit, to no avail."))
@@ -1144,7 +1148,7 @@ Departamental Swimsuits, for general use
 	icon = 'icons/mob/taursuits_wolf.dmi'
 	icon_state = "jessiecoat"
 
-/obj/item/clothing/suit/storage/hooded/wintercoat/jessie/mob_can_equip(var/mob/living/carbon/human/H, slot, disable_warning = 0)
+/obj/item/clothing/suit/storage/hooded/wintercoat/jessie/mob_can_equip(mob/living/carbon/human/H, slot, disable_warning = FALSE, ignore_obstruction, go_over_slot = FALSE)
 	if(..())
 		if(istype(H) && istype(H.tail_style, /datum/sprite_accessory/tail/taur/wolf))
 			return ..()
@@ -1161,7 +1165,7 @@ Departamental Swimsuits, for general use
 	icon_state = "katesuit"
 	item_state_slots = null
 
-/obj/item/clothing/suit/armor/vest/wolftaur/kate/mob_can_equip(var/mob/living/carbon/human/H, slot, disable_warning = 0)
+/obj/item/clothing/suit/armor/vest/wolftaur/kate/mob_can_equip(mob/living/carbon/human/H, slot, disable_warning = FALSE, ignore_obstruction, go_over_slot = FALSE)
 	if(..())
 		if(istype(H) && istype(H.tail_style, /datum/sprite_accessory/tail/taur/wolf))
 			return ..()
@@ -1191,7 +1195,7 @@ Departamental Swimsuits, for general use
 	light_overlay = "helmet_light"
 	species_restricted = null
 
-/obj/item/clothing/head/helmet/space/fluff/kate/mob_can_equip(var/mob/living/carbon/human/H, slot, disable_warning = 0)
+/obj/item/clothing/head/helmet/space/fluff/kate/mob_can_equip(mob/living/carbon/human/H, slot, disable_warning = FALSE, ignore_obstruction, go_over_slot = FALSE)
 	if(..())
 		if(H.ckey != "samanthafyre")
 			to_chat(H, span_warning("You try to fit on the helmet, but it doesn't fit."))
@@ -1252,12 +1256,10 @@ Departamental Swimsuits, for general use
 
 	if(unbuttoned)
 		icon_state = "[initial(icon_state)]"
-		item_state = "[initial(item_state)]"
 		unbuttoned = FALSE
 		to_chat(usr, "You button up the coat.")
 	else
 		icon_state = "[initial(icon_state)]_open"
-		item_state = "[initial(item_state)]_open"
 		unbuttoned = TRUE
 		to_chat(usr, "You unbutton the coat.")
 	usr.update_inv_wear_suit()
@@ -1517,7 +1519,7 @@ Departamental Swimsuits, for general use
 	default_worn_icon = 'icons/vore/custom_clothes_mob.dmi'
 	species_restricted = null
 
-/obj/item/clothing/head/helmet/space/void/security/hasd/mob_can_equip(var/mob/living/carbon/human/H, slot, disable_warning = 0)
+/obj/item/clothing/head/helmet/space/void/security/hasd/mob_can_equip(mob/living/carbon/human/H, slot, disable_warning = FALSE, ignore_obstruction, go_over_slot = FALSE)
 	if(..())
 		if(H.ckey != "silencedmp5a5")
 			to_chat(H, span_warning("...The faceplate is clearly not made for your anatomy, thus, does not fit."))
@@ -1534,7 +1536,7 @@ Departamental Swimsuits, for general use
 	icon_state = "hasd_suit"
 	pixel_x = -16
 
-/obj/item/clothing/suit/space/void/security/hasd/mob_can_equip(var/mob/living/carbon/human/H, slot, disable_warning = 0)
+/obj/item/clothing/suit/space/void/security/hasd/mob_can_equip(mob/living/carbon/human/H, slot, disable_warning = FALSE, ignore_obstruction, go_over_slot = FALSE)
 	if(..() && istype(H) && H.ckey == "silencedmp5a5")
 		return 1
 	else
@@ -1645,12 +1647,11 @@ Departamental Swimsuits, for general use
 
 	species_restricted = list("exclude", SPECIES_TESHARI)
 
-/obj/item/clothing/under/fluff/slime_skeleton/mob_can_equip(M as mob, slot, disable_warning = FALSE)
+/obj/item/clothing/under/fluff/slime_skeleton/mob_can_equip(mob/living/carbon/human/H, slot, disable_warning = FALSE, ignore_obstruction, go_over_slot = FALSE)
 	if(!..())
 		return 0
 
-	if(ishuman(M))
-		var/mob/living/carbon/human/H = M
+	if(ishuman(H))
 		if(!(H.get_species() == SPECIES_PROMETHEAN))	//Only wearable by slimes, since species_restricted actually checks bodytype, not species
 			return 0
 
@@ -1700,7 +1701,7 @@ Departamental Swimsuits, for general use
 		icon_override = 'icons/vore/custom_clothes_mob.dmi'
 	update_clothing_icon()
 
-/obj/item/clothing/accessory/poncho/roles/cloak/hop/fluff/pip/dropped()
+/obj/item/clothing/accessory/poncho/roles/cloak/hop/fluff/pip/dropped(mob/user, equipping, slot)
 	..()
 	icon_override = 'icons/vore/custom_clothes_mob.dmi'
 
@@ -1777,7 +1778,7 @@ Departamental Swimsuits, for general use
 	icon_state = "nikki_outfit"
 	sensor_mode = 3 // I'm a dumbass and forget these all the time please understand :(
 
-/obj/item/clothing/under/skirt/outfit/fluff/nikki/mob_can_equip(var/mob/living/carbon/human/M, slot, disable_warning = 0)
+/obj/item/clothing/under/skirt/outfit/fluff/nikki/mob_can_equip(mob/living/carbon/human/M, slot, disable_warning = FALSE, ignore_obstruction, go_over_slot = FALSE)
 	if(..())
 		if (M.ckey == "ryumi")
 			return 1
@@ -1792,7 +1793,7 @@ Departamental Swimsuits, for general use
 	default_worn_icon = 'icons/vore/custom_clothes_mob.dmi'
 	icon_state = "nikki_boots"
 
-/obj/item/clothing/shoes/fluff/nikki/mob_can_equip(var/mob/living/carbon/human/M, slot, disable_warning = 0)
+/obj/item/clothing/shoes/fluff/nikki/mob_can_equip(mob/living/carbon/human/M, slot, disable_warning = FALSE, ignore_obstruction, go_over_slot = FALSE)
 	if(..())
 		if (M.ckey == "ryumi")
 			return 1
@@ -1931,7 +1932,10 @@ Departamental Swimsuits, for general use
 		translocator_unequip(translocator, user)
 
 /obj/item/clothing/head/fluff/nikki/attack_self(mob/user)
-	..()
+	. = ..(user)
+	if(.)
+		return TRUE
+	..(user, TRUE)
 	if (translocator)
 		translocator.attack_self(user, user)
 		return
@@ -2048,7 +2052,7 @@ Departamental Swimsuits, for general use
 		icon_override = 'icons/vore/custom_clothes_mob.dmi'
 	update_clothing_icon()
 
-/obj/item/clothing/accessory/poncho/roles/cloak/fluff/cloakglowing/dropped(mob/user)
+/obj/item/clothing/accessory/poncho/roles/cloak/fluff/cloakglowing/dropped(mob/user, equipping, slot)
 	..()
 	icon_override = 'icons/vore/custom_clothes_mob.dmi'
 

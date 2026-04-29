@@ -31,6 +31,8 @@ Gunshots/explosions/opening doors/less rare audio (done)
 	if(halitem.len)
 		remove_hallucination_item()
 	our_human = null
+	halbody = null
+	halimage = null
 	. = ..()
 
 /datum/component/hallucinations/proc/make_timer()
@@ -49,7 +51,7 @@ Gunshots/explosions/opening doors/less rare audio (done)
 // Traditional hallucinations
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 /mob/living/carbon/proc/handle_hallucinations()
-	if(get_hallucination_component() || !client)
+	if(get_hallucination_component() || !client || HAS_TRAIT(src, TRAIT_MADNESS_IMMUNE))
 		return
 	LoadComponent(/datum/component/hallucinations)
 
@@ -88,8 +90,12 @@ Gunshots/explosions/opening doors/less rare audio (done)
 				event_hunger() // Hungi, meant for xenochi but this is too funny to pass up
 			else
 				event_flash_monsters()
-		if(71 to 72)
+		// Outpost 21 edit begin - Do out of body experience instead of sleeping
+		if(71)
 			event_sleeping()
+		if(72)
+			event_out_of_body()
+		// Outpost 21 edit end
 		if(73 to 75) // If you don't want hallucination beatdowns, comment this out
 			event_attacker()
 		if(76 to 80)

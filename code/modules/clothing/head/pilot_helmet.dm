@@ -20,6 +20,7 @@
 	var/list/images
 	var/list/raw_images
 	var/last_status
+	resistance_flags = FIRE_PROOF
 
 /obj/item/clothing/head/pilot/Initialize(mapload)
 	. = ..()
@@ -176,7 +177,7 @@
 		user.client.screen |= pilot_hud
 		user.client.images |= raw_images
 
-/obj/item/clothing/head/pilot/dropped(mob/user)
+/obj/item/clothing/head/pilot/dropped(mob/user, equipping, slot)
 	. = ..()
 	if(user.client)
 		user.client.screen -= pilot_hud
@@ -187,8 +188,12 @@
 	desc = "Standard pilot gear. Protects the head from impacts. This one has a retractable visor"
 	icon_state = "pilot_helmet2"
 	actions_types = list(/datum/action/item_action/toggle_visor)
+	special_handling = TRUE
 
-/obj/item/clothing/head/pilot/alt/attack_self(mob/user as mob)
+/obj/item/clothing/head/pilot/alt/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	if(src.icon_state == initial(icon_state))
 		src.icon_state = "[icon_state]up"
 		to_chat(user, "You raise the visor on the pilot helmet.")

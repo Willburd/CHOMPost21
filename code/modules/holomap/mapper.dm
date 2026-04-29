@@ -120,12 +120,15 @@
 
 	return ..()
 
-/obj/item/mapping_unit/dropped(mob/user)
+/obj/item/mapping_unit/dropped(mob/user, equipping, slot)
 	..()
 	if(loc != user) // Not just a juggle
 		hide_device()
 
 /obj/item/mapping_unit/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	if(user.stat != CONSCIOUS)
 		return
 
@@ -414,6 +417,9 @@
 		icon_state = initial(icon_state) + in_list ? "_on" : ""
 
 /obj/item/holomap_beacon/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	if(!in_list)
 		in_list = TRUE
 		GLOB.mapping_beacons += src

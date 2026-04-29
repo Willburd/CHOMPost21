@@ -13,7 +13,6 @@
 	opacity = 1							//Opaque. Menacing.
 	anchored = TRUE						//No pulling around.
 	unacidable = TRUE						//And no deleting hoomans inside
-	flags = REMOTEVIEW_ON_ENTER
 	layer = MOB_LAYER					//Icon draw layer
 	infra_luminosity = 15				//Byond implementation is bugged.
 	var/initial_icon = null				//Mech type for resetting icon. Only used for reskinning kits (see custom items)
@@ -43,7 +42,7 @@
 	var/list/proc_res = list() 			//Stores proc owners, like proc_res["functionname"] = owner reference
 	var/datum/effect/effect/system/spark_spread/spark_system
 	var/lights = 0
-	var/lights_power = 6
+	var/lights_power = 4 // Outpost 21 edit - Light range nerf
 	var/force = 0
 	var/damage_type = BRUTE
 
@@ -633,7 +632,7 @@
 		show_radial_occupant(user)
 		return
 	if(state)
-		occupant_message(span_red("Maintenance protocols in effect"))
+		occupant_message(span_warning("Maintenance protocols in effect"))
 		return
 
 	if(phasing)//Phazon and other mechs with phasing.
@@ -710,7 +709,9 @@
 /obj/mecha/relaymove(mob/user,direction)
 	if(user != src.occupant) //While not "realistic", this piece is player friendly.
 		if(istype(user,/mob/living/carbon/brain))
-			to_chat(user, span_warning("You try to move, but you are not the pilot! The exosuit doesn't respond."))
+			if(world.time - last_message > 20)
+				to_chat(user, span_warning("You try to move, but you are not the pilot! The exosuit doesn't respond."))
+				last_message = world.time
 			return 0
 		user.forceMove(get_turf(src))
 		to_chat(user, "You climb out from [src]")
@@ -718,7 +719,9 @@
 
 	var/obj/item/mecha_parts/component/hull/HC = internal_components[MECH_HULL]
 	if(!HC)
-		occupant_message(span_notice("You can't operate an exosuit that doesn't have a hull!"))
+		if(world.time - last_message > 20)
+			occupant_message(span_notice("You can't operate an exosuit that doesn't have a hull!"))
+			last_message = world.time
 		return
 
 	if(connected_port)
@@ -727,8 +730,10 @@
 			last_message = world.time
 		return 0
 	if(state)
-		occupant_message(span_warning("Maintenance protocols in effect"))
-		return
+		if(world.time - last_message > 20)
+			occupant_message(span_warning("Unable to move whilst in maintenance mode"))
+			last_message = world.time
+		return 0
 /*
 	if(zoom)
 		if(world.time - last_message > 20)
@@ -1088,19 +1093,20 @@
 
 	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
-		if(H.species.can_shred(user))
+		var/shreddamage = H.species.can_shred(user, FALSE, 13)
+		if(shreddamage)
 			if(!prob(temp_deflect_chance))
-				src.take_damage(15)	//The take_damage() proc handles armor values
-				if(prob(25))	//Why would they get free internal damage. At least make it a bit RNG.
+				src.take_damage(shreddamage)	//The take_damage() proc handles armor values
+				if(prob(shreddamage))	//Why would they get free internal damage. At least make it a bit RNG.
 					src.check_for_internal_damage(list(MECHA_INT_TEMP_CONTROL,MECHA_INT_TANK_BREACH,MECHA_INT_CONTROL_LOST))
 				playsound(src, 'sound/weapons/slash.ogg', 50, 1, -1)
-				to_chat(user, span_danger("You slash at the armored suit!"))
-				visible_message(span_danger("\The [user] slashes at [src.name]'s armor!"))
+				to_chat(user, span_danger("You attack the armored suit!"))
+				visible_message(span_danger("\The [user] attacks [src.name]'s armor!"))
 			else
 				src.log_append_to_last("Armor saved.")
 				playsound(src, 'sound/weapons/slash.ogg', 50, 1, -1)
-				to_chat(user, span_danger("Your claws had no effect!"))
-				src.occupant_message(span_notice("\The [user]'s claws are stopped by the armor."))
+				to_chat(user, span_danger("Your attack had no effect!"))
+				src.occupant_message(span_notice("\The [user]'s attack is stopped by the armor."))
 				visible_message(span_warning("\The [user] rebounds off [src.name]'s armor!"))
 		else
 			user.visible_message(span_danger("\The [user] hits \the [src]. Nothing happens."),span_danger("You hit \the [src] with no visible effect."))
@@ -1116,7 +1122,7 @@
 		src.log_append_to_last("Armor saved.")
 	return
 
-/obj/mecha/hitby(atom/movable/source) //wrapper
+/obj/mecha/hitby(atom/movable/source, datum/thrownthing/throwingdatum) //wrapper
 	..()
 	src.mecha_log_message("Hit by [source].",1)
 	call((proc_res["dynhitby"]||src), "dynhitby")(source)
@@ -1335,13 +1341,15 @@
 */
 
 /obj/mecha/emp_act(severity, recursive)
+	. = ..()
+	if (. & EMP_PROTECT_SELF)
+		return
 	if(get_charge())
 		use_power((cell.charge/2)/severity)
 		take_damage(50 / severity,"energy")
 	src.mecha_log_message("EMP detected",1)
 	if(prob(80))
 		check_for_internal_damage(list(MECHA_INT_FIRE,MECHA_INT_TEMP_CONTROL,MECHA_INT_CONTROL_LOST,MECHA_INT_SHORT_CIRCUIT),1)
-	return
 
 /obj/mecha/fire_act(datum/gas_mixture/air, exposed_temperature, exposed_volume)
 	if(exposed_temperature>src.max_temperature)
@@ -2186,8 +2194,8 @@
 						.hidden {display: none;}
 						</style>
 						<script language='javascript' type='text/javascript'>
-						[js_byjax]
-						[js_dropdowns]
+						[JS_BYJAX]
+						[JS_DROPDOWN]
 						function ticker() {
 							setInterval(function(){
 								window.location='byond://?src=\ref[src]&update_content=1';
@@ -2394,11 +2402,11 @@
 						<body>
 						<h1>Following keycodes are present in this system:</h1>"}
 	for(var/a in operation_req_access)
-		output += "[get_access_desc(a)] - <a href='byond://?src=\ref[src];del_req_access=[a];user=\ref[user];id_card=\ref[id_card]'>Delete</a><br>"
+		output += "[SSaccess.get_access_desc(a)] - <a href='byond://?src=\ref[src];del_req_access=[a];user=\ref[user];id_card=\ref[id_card]'>Delete</a><br>"
 	output += "<hr><h1>Following keycodes were detected on portable device:</h1>"
 	for(var/a in id_card.GetAccess())
 		if(a in operation_req_access) continue
-		var/a_name = get_access_desc(a)
+		var/a_name = SSaccess.get_access_desc(a)
 		if(!a_name) continue //there's some strange access without a name
 		output += "[a_name] - <a href='byond://?src=\ref[src];add_req_access=[a];user=\ref[user];id_card=\ref[id_card]'>Add</a><br>"
 	output += "<hr><a href='byond://?src=\ref[src];finish_req_access=1;user=\ref[user]'>Finish</a> " + span_red("(Warning! The ID upload panel will be locked. It can be unlocked only through Exosuit Interface.)")
@@ -2559,7 +2567,7 @@
 	if(href_list["toggle_maint_access"])
 		if(usr != src.occupant)	return
 		if(state)
-			occupant_message(span_red("Maintenance protocols in effect"))
+			occupant_message(span_warning("Maintenance protocols in effect"))
 			return
 		maint_access = !maint_access
 		send_byjax(src.occupant,"exosuit.browser","t_maint_access","[maint_access?"Forbid":"Permit"] maintenance protocols")
@@ -2799,7 +2807,7 @@
 		src.log_append_to_last("Armor saved.")
 		src.occupant_message(span_notice("\The [user]'s attack is stopped by the armor."))
 		visible_message(span_infoplain(span_bold("\The [user]") + " rebounds off [src.name]'s armor!"))
-		user.attack_log += text("\[[time_stamp()]\] [span_red("attacked [src.name]")]")
+		add_attack_logs(user, src, "attacked")
 		playsound(src, 'sound/weapons/slash.ogg', 50, 1, -1)
 
 	else if(damage < damage_minimum)//Pathetic damage levels just don't harm MECH. //CHOMPedit temp_damage_minimum -> damage_minimum
@@ -2814,7 +2822,7 @@
 		if(damage > internal_damage_minimum)	//Only decently painful attacks trigger a chance of mech damage.
 			src.check_for_internal_damage(list(MECHA_INT_TEMP_CONTROL,MECHA_INT_TANK_BREACH,MECHA_INT_CONTROL_LOST))
 		visible_message(span_danger("[user] [attack_message] [src]!"))
-		user.attack_log += text("\[[time_stamp()]\] [span_red("attacked [src.name]")]")
+		add_attack_logs(user, src, "attacked")
 
 	return 1
 

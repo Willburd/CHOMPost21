@@ -10,7 +10,6 @@
 	force = 10
 	slot_flags = SLOT_BACK
 	actions_types = list(/datum/action/item_action/use_scope)
-	origin_tech = list(TECH_COMBAT = 8, TECH_MATERIAL = 2, TECH_ILLEGAL = 8)
 	caliber = "14.5mm"
 	recoil = 5 //extra kickback
 	handle_casings = HOLD_CASINGS
@@ -22,6 +21,7 @@
 	scoped_accuracy = 75
 	one_handed_penalty = 90
 	bolt_open = 0 //CHOMP Edit
+	special_weapon_handling = TRUE
 
 /obj/item/gun/projectile/heavysniper/update_icon()
 	if(bolt_open)
@@ -29,7 +29,10 @@
 	else
 		icon_state = "heavysniper"
 
-/obj/item/gun/projectile/heavysniper/attack_self(mob/user as mob)
+/obj/item/gun/projectile/heavysniper/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	playsound(src, 'sound/weapons/flipblade.ogg', 50, 1)
 	bolt_open = !bolt_open
 	if(bolt_open)
@@ -84,7 +87,6 @@
 	force = 10
 	slot_flags = SLOT_BACK // Needs a sprite.
 	actions_types = list(/datum/action/item_action/use_scope)
-	origin_tech = list(TECH_COMBAT = 8, TECH_MATERIAL = 2, TECH_ILLEGAL = 8)
 	caliber = "7.62mm"
 	load_method = MAGAZINE
 	accuracy = -45 //shooting at the hip

@@ -206,7 +206,7 @@
 #define O_SPLEEN   "spleen"
 #define O_STOMACH  "stomach"
 #define O_INTESTINE "intestine"
-#define O_BUTT 		"butt" // Outpost 21 addition - butt
+#define O_BUTT 		"butt" // outpost 21 edit - butt
 #define O_STANDARD list(O_EYES, O_HEART, O_LUNGS, O_BRAIN, O_LIVER, O_KIDNEYS, O_SPLEEN, O_APPENDIX, O_VOICE, O_STOMACH, O_INTESTINE, O_BUTT)
 
 // Augments
@@ -532,7 +532,7 @@
 #define EXAMINE_SKIPLEGS			0x0080
 #define EXAMINE_SKIPFEET			0x0100
 
-#define MAX_NUTRITION	6000 //VOREStation Edit
+#define MAX_NUTRITION	800 //VOREStation Edit // Outpost 21 edit - Max nutrition tweaked
 
 #define FAKE_INVIS_ALPHA_THRESHOLD 64 //CHOMPEdit. 25% down from 50% // If something's alpha var is at or below this number, certain things will pretend it is invisible.
 

@@ -88,7 +88,10 @@
 		/area/ai_sat/core_external,
 		/area/offworld/confinementbeam/exterior,
 		/area/ai_sat/power_control,
-		/area/security/brig_hole
+		/area/security/brig_hole,
+		/area/specialty/stowaway_clubhouse,
+		/area/specialty/stowaway_clubhouse/upper,
+		/area/specialty/expie_clubhouse,
 		)
 
 	var/list/forced_hallway = list(
@@ -396,6 +399,8 @@
 /datum/unit_test/pipes_and_wires_may_not_be_under_walls
 
 /datum/unit_test/pipes_and_wires_may_not_be_under_walls/Run()
+	set background=1
+
 	var/failures = 0
 
 	for(var/obj/structure/disposalpipe/P in world)
@@ -574,30 +579,6 @@
 	return TRUE
 
 
-
-/datum/unit_test/all_freezing_airlocks_must_be_on_planet
-
-/datum/unit_test/all_freezing_airlocks_must_be_on_planet/Run()
-	var/failed = FALSE
-
-	for(var/obj/machinery/door/airlock/glass_external/freezable/F in world)
-		var/turf/T = get_turf(F)
-		var/area/A = get_area(F)
-		if(T.z > SSplanets.z_to_planet.len)
-			failed = TRUE
-			TEST_NOTICE(src, "Freezable airlock was not placed on a planet. Located at [T.x].[T.y].[T.z] : [A]")
-			continue
-		var/datum/planet/P = SSplanets.z_to_planet[T.z]
-		if(!P)
-			failed = TRUE
-			TEST_NOTICE(src, "Freezable airlock was not placed on a planet. Located at [T.x].[T.y].[T.z] : [A]")
-			continue
-
-	if(failed)
-		TEST_FAIL("Freezable airlock was not placed on a planet")
-
-
-
 /datum/unit_test/all_airlock_controllers_shall_have_unique_ids
 
 /datum/unit_test/all_airlock_controllers_shall_have_unique_ids/Run()
@@ -619,3 +600,28 @@
 
 	if(failed)
 		TEST_FAIL("One or more airlock controllers had an incorrect id_tag set")
+
+
+
+
+/datum/unit_test/all_tele_beacons_must_be_unique
+
+/datum/unit_test/all_tele_beacons_must_be_unique/Run()
+	var/failed = FALSE
+
+	var/list/used_tags = list()
+	for(var/obj/item/perfect_tele_beacon/beacon in world)
+		var/turf/T = get_turf(beacon)
+		var/area/A = get_area(beacon)
+		if(!beacon.tele_name)
+			failed = TRUE
+			TEST_NOTICE(src, "Telebeacon not assigned a tele_name. Located at [T.x].[T.y].[T.z] : [A]")
+			continue
+		if(beacon.tele_name in used_tags)
+			failed = TRUE
+			TEST_NOTICE(src, "Telebeacon already in use [beacon.tele_name]. Located at [T.x].[T.y].[T.z] : [A]")
+			continue
+		used_tags += beacon.tele_name
+
+	if(failed)
+		TEST_FAIL("One or more tele_beacon objects are incorrectly setup or are duplicates")

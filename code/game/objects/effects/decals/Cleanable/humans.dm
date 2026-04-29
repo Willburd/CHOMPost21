@@ -18,10 +18,6 @@
 	var/synthblood = 0
 	var/list/datum/disease/viruses = list()
 	var/amount = 5
-	// Outpost 21 addition begin
-	var/customname
-	var/customdesc
-	// Outpost 21 addition end
 	generic_filth = TRUE
 	persistent = FALSE
 	var/delete_me = FALSE
@@ -68,16 +64,7 @@
 /obj/effect/decal/cleanable/blood/update_icon()
 	if(basecolor == "rainbow") basecolor = get_random_colour(1)
 	color = basecolor
-
-	// Outpost 21 addition begin - Custom description for goop
-	if(customname)
-		name = customname
-		if(customdesc)
-			desc = customdesc
-		else
-			desc = initial(desc)
-	// Outpost 21 addition end
-	else if(basecolor == SYNTH_BLOOD_COLOUR)
+	if(basecolor == SYNTH_BLOOD_COLOUR)
 		name = "oil"
 		desc = "It's quite oily."
 	else if(synthblood)

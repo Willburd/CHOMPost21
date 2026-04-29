@@ -36,7 +36,6 @@
 	icon = 'icons/obj/gun_toy.dmi'
 	item_state = "omnitag"
 	item_state = "retro"
-	origin_tech = list(TECH_COMBAT = 1, TECH_MAGNET = 2)
 	matter = list(MAT_STEEL = 2000)
 	projectile_type = /obj/item/projectile/beam/lasertag/omni
 	cell_type = /obj/item/cell/device/weapon/recharge
@@ -129,7 +128,7 @@
 	allowed_suits = list(/obj/item/clothing/suit/lasertag/bluetag, /obj/item/clothing/suit/lasertag/omni)
 
 //We have to do this if(user) check all over the place because for some reason someone broke thrower code. Thanks.
-/obj/item/lasertagknife/attack(target, mob/user)
+/obj/item/lasertagknife/attack(mob/living/target, mob/living/user, target_zone, attack_modifier)
 	if(user)
 		user.setClickCooldown(user.get_attack_speed(src))
 		user.do_attack_animation(target)
@@ -141,12 +140,12 @@
 	else
 		user.visible_message(span_danger("[target] has been harmlessly bonked with [src] by [user]!"))
 		playsound(src, 'sound/weapons/punchmiss.ogg', 75, 1)
-	return TRUE
+	return ITEM_INTERACT_SUCCESS
 
 ///go my hack
-/obj/item/lasertagknife/throw_impact(atom/hit_atom, var/speed)
+/obj/item/lasertagknife/throw_impact(atom/hit_atom, datum/thrownthing/throwingdatum)
 	if(ismob(hit_atom))
 		//So, attacker should ALWAYS be true, but there's a problem. The code doesn't actually set 'thrower' which we used for thrown laser knives.
 		//Instead of this PR getting massively out of scope and refactoring throwing code, we're just going to have thrown knives do vest override.
-		return handle_lasertag_attack(hit_atom, thrower, tag_damage, TRUE, required_vest, allowed_suits)
+		return handle_lasertag_attack(hit_atom, throwingdatum?.get_thrower(), tag_damage, TRUE, required_vest, allowed_suits)
 	..()

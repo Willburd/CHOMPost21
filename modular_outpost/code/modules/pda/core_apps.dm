@@ -1,3 +1,7 @@
+/datum/data/pda/app/timeclock/isAllowedAreaClockout(mob/user)
+	return TRUE // Allow anywhere to clock out
+
+
 /datum/data/pda/app/weather
 	name = "Weather"
 	icon = "cloud"
@@ -21,6 +25,7 @@
 				)
 			weather.Add(list(W))
 	data["weather"] = weather
+
 
 /datum/data/pda/app/sop
 	name = "S.O.P"

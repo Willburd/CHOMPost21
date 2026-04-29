@@ -108,7 +108,7 @@
 						type = MESSAGE_TYPE_NIF,
 						html = span_nif(span_bold("\[[icon2html(nif.big_icon, CS.client)]NIF\]") + message))
 
-	sender.log_talk("NSAY (NIF:[nif.human.real_name]): [message]", LOG_SAY)
+	sender.log_talk("NSAY (NIF:[nif.human.real_name]): [message]", LOG_SAY, color="#ff00c8")
 
 /datum/nifsoft/soulcatcher/proc/emote_into(var/message, var/mob/living/sender, var/mob/eyeobj, var/whisper)
 	var/sender_name = eyeobj ? eyeobj.name : sender.name
@@ -136,7 +136,7 @@
 						type = MESSAGE_TYPE_NIF,
 						html = span_nif(span_bold("\[[icon2html(nif.big_icon,CS.client)]NIF\]") + message))
 
-	sender.log_message("NME (NIF:[nif.human.real_name]): [message]", LOG_EMOTE)
+	sender.log_message("NME (NIF:[nif.human.real_name]): [message]", LOG_EMOTE, color="#ff00c8")
 
 /datum/nifsoft/soulcatcher/proc/show_settings(var/mob/living/carbon/human/H)
 	set waitfor = FALSE
@@ -308,7 +308,7 @@
 	..()
 	plane_holder.set_vis(VIS_AUGMENTED, TRUE)
 	plane_holder.set_vis(VIS_SOULCATCHER, TRUE)
-	identifying_gender = client.prefs.identifying_gender
+	identifying_gender = client.prefs.read_preference(/datum/preference/choiced/gender/identifying)
 
 /mob/living/carbon/brain/caught_soul/Destroy()
 	/* Outpost 21 edit - Nif removal
@@ -457,7 +457,7 @@
 
 	forceMove(get_turf(parent_human))
 	parent_human.AddComponent(/datum/component/recursive_move)
-	RegisterSignal(parent_human, COMSIG_MOVABLE_MOVED, /mob/observer/eye/ar_soul/proc/human_moved)
+	RegisterSignal(parent_human, COMSIG_MOVABLE_ATTEMPTED_MOVE, /mob/observer/eye/ar_soul/proc/human_moved)
 
 	//Time to play dressup
 	if(brainmob.client.prefs)
@@ -471,7 +471,7 @@
 
 /mob/observer/eye/ar_soul/Destroy()
 	if(parent_human) //It's POSSIBLE they've been deleted before the NIF somehow
-		UnregisterSignal(parent_human, COMSIG_MOVABLE_MOVED)
+		UnregisterSignal(parent_human, COMSIG_MOVABLE_ATTEMPTED_MOVE)
 		parent_human = null
 	return ..()
 

@@ -209,20 +209,23 @@
 		// Bad tools make it less likely to succeed.
 		if(!prob(selected_surgery.tool_quality(src)))
 			success = FALSE
+
+		// Not staying still fails you too.
+		if(success)
+			var/calc_duration = rand(selected_surgery.min_duration, selected_surgery.max_duration)
+			calc_duration *= CLAMP((100-cleanliness)/10 + 1, 1, 10)
+			if(!do_after(user, calc_duration * toolspeed, M, target_zone = zone, max_distance = reach))
+				success = FALSE
+				to_chat(user, span_warning("You must remain close to and keep focused on your patient to conduct surgery."))
+				user.balloon_alert(user, "you must remain close to and keep focused on your patent to conduct surgery") // CHOMPEdit
 	// Outpost 21 edit end
 
-	// Not staying still fails you too.
-	if(success)
-		var/calc_duration = rand(selected_surgery.min_duration, selected_surgery.max_duration)
-		calc_duration *= CLAMP((100-cleanliness)/10 + 1, 1, 10)
-		if(!do_after(user, calc_duration * toolspeed, M, target_zone = zone, max_distance = reach))
-			success = FALSE
-			to_chat(user, span_warning("You must remain close to and keep focused on your patient to conduct surgery."))
-			user.balloon_alert(user, "you must remain close to and keep focused on your patent to conduct surgery") // CHOMPEdit
+	if(!affected) // If the limb was just attached, get it to adjust germ levels
+		affected = M.get_organ(zone)
 
 	if(success)
 		selected_surgery.end_step(user, M, zone, src)
-		if(prob(100-cleanliness)) //Infection chance based on cleanliness.
+		if(affected && prob(100-cleanliness)) //Infection chance based on cleanliness.
 			affected.adjust_germ_level(rand(10,20))
 	else
 		selected_surgery.fail_step(user, M, zone, src)
@@ -250,9 +253,9 @@
 				GLOB.surgery_steps.Swap(i, gap + i)
 				swapped = 1
 
-/datum/surgery_status/
-	var/eyes	=	0
-	var/face	=	0
+/datum/surgery_status
+	var/eyes = 0
+	var/face = 0
 	var/brainstem = 0
 	var/head_reattach = 0
 	var/current_organ = "organ"

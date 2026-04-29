@@ -22,7 +22,6 @@
 	pressure_resistance = 5
 //	causeerrorheresoifixthis
 	var/obj/item/master = null
-	var/list/origin_tech = null	//Used by R&D to determine what research bonuses it grants.
 	var/list/attack_verb //Used in attackby() to say how something was attacked "[x] has been [z.attack_verb] by [y] with [z]"
 	var/force = 0
 	var/damtype = BRUTE
@@ -139,7 +138,7 @@
 	var/digest_stage = null
 	var/d_mult_old = 1 //digest stage descriptions
 	var/d_mult = 1 //digest stage descriptions
-	var/d_stage_overlay //digest stage effects
+	var/image/d_stage_overlay //digest stage effects
 	var/gurgled = FALSE
 	var/oldname
 	var/cleanname
@@ -151,9 +150,6 @@
 
 	for(var/path in actions_types)
 		add_item_action(path)
-
-	if(islist(origin_tech))
-		origin_tech = typelist(NAMEOF(src, origin_tech), origin_tech)
 
 	if(embed_chance < 0)
 		if(sharp)
@@ -169,6 +165,8 @@
 	M.update_held_icons()
 
 /obj/item/Destroy()
+	d_stage_overlay = null
+	exploit_for = null
 	if(item_tf_spawn_allowed)
 		GLOB.item_tf_spawnpoints -= src
 	if(ismob(loc))
@@ -307,9 +305,9 @@
 	src.loc = T
 
 // See inventory_sizes.dm for the defines.
-/obj/item/examine(mob/user)
-	var/size
-	switch(src.w_class)
+/obj/item/examine(mob/user, infix, suffix)
+	var/size = "unknown"
+	switch(w_class)
 		if(ITEMSIZE_TINY)
 			size = "tiny"
 		if(ITEMSIZE_SMALL)
@@ -322,7 +320,12 @@
 			size = "huge"
 		if(ITEMSIZE_NO_CONTAINER)
 			size = "massive"
-	return ..(user, "", "It is a [size] item.")
+		else
+			if(w_class > ITEMSIZE_HUGE && w_class < ITEMSIZE_NO_CONTAINER)
+				size = "giant"
+			else if (w_class > ITEMSIZE_NO_CONTAINER)
+				size = "enormous"
+	return ..(user, "", "It is \a [size] item.")
 
 /obj/item/attack_hand(mob/living/user as mob)
 	if (!user) return
@@ -355,7 +358,6 @@
 			return
 
 	src.pickup(user)
-	src.throwing = 0
 	if (src.loc == user)
 		if(!user.unEquip(src))
 			return
@@ -415,7 +417,7 @@
 	else
 		return 0
 
-/obj/item/throw_impact(atom/hit_atom, var/speed)
+/obj/item/throw_impact(atom/hit_atom)
 	..()
 	if(isliving(hit_atom) && !hit_atom.is_incorporeal()) //Living mobs handle hit sounds differently.
 		var/volume = get_volume_by_throwforce_and_or_w_class()
@@ -432,18 +434,25 @@
 		playsound(src, drop_sound, 30, preference = /datum/preference/toggle/drop_sounds)
 
 // apparently called whenever an item is removed from a slot, container, or anything else.
-/obj/item/proc/dropped(mob/user)
+// TO NOTE:
+// Putting an item from your HAND into a POCKET = equipping
+// Putting an item from your HAND to ANY INVENTORY SLOT = equipping
+// DROPPING an item (from hand or inventory slot) = NOT equipping
+// Putting an item from your POCKET into a HAND = NOT equipping
+// If you have an item you want an effect when DROPPED but NOT put in the user's inventory, do a loc == user check.
+// This whole things needs to be completely replaced by tg's dropped stuff but we're a long way off from that.
+/obj/item/proc/dropped(mob/user, equipping, slot)
 	SHOULD_CALL_PARENT(TRUE)
 	appearance_flags &= ~NO_CLIENT_COLOR
 	// Remove any item actions we temporary gave out.
 	for(var/datum/action/action_item_has as anything in actions)
 		action_item_has.Remove(user)
 
-	if((item_flags & DROPDEL) && !QDELETED(src))
-		qdel(src)
-
-	SEND_SIGNAL(src, COMSIG_ITEM_DROPPED, user)
-	SEND_SIGNAL(user, COMSIG_MOB_DROPPED_ITEM, src)
+	if(!equipping) //We ONLY send these signals when we ACTUALLY drop the item. Because our item code is stupid, swapping items between your hand is 'dropping' them.
+		SEND_SIGNAL(src, COMSIG_ITEM_DROPPED, user)
+		SEND_SIGNAL(user, COMSIG_MOB_DROPPED_ITEM, src)
+		if((item_flags & DROPDEL) && loc != user && !QDELETED(src))
+			qdel(src)
 
 	if(my_augment && !QDELETED(src))
 		forceMove(my_augment)
@@ -481,7 +490,7 @@
 	user.position_hud_item(src,slot)
 	if(user.client)	user.client.screen |= src
 	if(user.pulling == src) user.stop_pulling()
-	if(("[slot]" in slot_flags_enumeration) && (slot_flags & slot_flags_enumeration["[slot]"]))
+	if(("[slot]" in GLOB.slot_flags_enumeration) && (slot_flags & GLOB.slot_flags_enumeration["[slot]"]))
 		if(equip_sound && !muffled_by_belly(user))
 			playsound(src, equip_sound, 20, preference = /datum/preference/toggle/pickup_sounds)
 		else if(!muffled_by_belly(user))
@@ -519,7 +528,7 @@
 	return
 
 //Defines which slots correspond to which slot flags
-var/list/global/slot_flags_enumeration = list(
+GLOBAL_LIST_INIT(slot_flags_enumeration, list(
 	"[slot_wear_mask]" = SLOT_MASK,
 	"[slot_back]" = SLOT_BACK,
 	"[slot_wear_suit]" = SLOT_OCLOTHING,
@@ -533,13 +542,14 @@ var/list/global/slot_flags_enumeration = list(
 	"[slot_w_uniform]" = SLOT_ICLOTHING,
 	"[slot_wear_id]" = SLOT_ID,
 	"[slot_tie]" = SLOT_TIE,
-	)
+	))
 
 //the mob M is attempting to equip this item into the slot passed through as 'slot'. Return 1 if it can do this and 0 if it can't.
 //If you are making custom procs but would like to retain partial or complete functionality of this one, include a 'return ..()' to where you want this to happen.
 //Set disable_warning to 1 if you wish it to not give you outputs.
+//Set go_over_slot to TRUE if the item can go over an item (ex: magboots going over normal boots)
 //Should probably move the bulk of this into mob code some time, as most of it is related to the definition of slots and not item-specific
-/obj/item/proc/mob_can_equip(M as mob, slot, disable_warning = FALSE, var/ignore_obstruction = FALSE)
+/obj/item/proc/mob_can_equip(mob/M, slot, disable_warning = FALSE, ignore_obstruction = FALSE, go_over_slot)
 	if(!slot) return 0
 	if(!M) return 0
 
@@ -554,13 +564,13 @@ var/list/global/slot_flags_enumeration = list(
 		return 0
 
 	//First check if the item can be equipped to the desired slot.
-	if("[slot]" in slot_flags_enumeration)
-		var/req_flags = slot_flags_enumeration["[slot]"]
+	if("[slot]" in GLOB.slot_flags_enumeration)
+		var/req_flags = GLOB.slot_flags_enumeration["[slot]"]
 		if(!(req_flags & slot_flags))
 			return 0
 
 	//Next check that the slot is free
-	if(H.get_equipped_item(slot))
+	if(H.get_equipped_item(slot) && !go_over_slot)
 		return 0
 
 	//Next check if the slot is accessible.
@@ -706,11 +716,11 @@ var/list/global/slot_flags_enumeration = list(
 			if(protection && (protection.body_parts_covered & EYES))
 				// you can't stab someone in the eyes wearing a mask!
 				to_chat(user, span_warning("You're going to need to remove the eye covering first."))
-				return
+				return ITEM_INTERACT_FAILURE
 
 	if(!M.has_eyes())
 		to_chat(user, span_warning("You cannot locate any eyes on [M]!"))
-		return
+		return ITEM_INTERACT_FAILURE
 
 	//this should absolutely trigger even if not aim-impaired in some way
 	var/hit_zone = get_zone_with_miss_chance(U.zone_sel.selecting, M, U.get_accuracy_penalty(U))
@@ -718,7 +728,7 @@ var/list/global/slot_flags_enumeration = list(
 		U.do_attack_animation(M)
 		playsound(src, 'sound/weapons/punchmiss.ogg', 25, 1, -1)
 		visible_message(span_danger("\The [U] attempts to stab \the [M] in the eyes, but misses!"))
-		return
+		return ITEM_INTERACT_FAILURE
 
 	add_attack_logs(user,M,"Attack eyes with [name]")
 
@@ -726,7 +736,7 @@ var/list/global/slot_flags_enumeration = list(
 	user.do_attack_animation(M)
 
 	src.add_fingerprint(user)
-	//if((CLUMSY in user.mutations) && prob(50))
+	//if(CLUMSY_HARM_CHANCE(user))
 	//	M = user
 		/*
 		to_chat(M, span_warning("You stab yourself in the eye."))
@@ -771,7 +781,7 @@ var/list/global/slot_flags_enumeration = list(
 	else
 		M.take_organ_damage(7)
 	M.eye_blurry += rand(3,4)
-	return
+	return ITEM_INTERACT_SUCCESS
 
 /obj/item/reveal_blood()
 	if(was_bloodied && !fluorescent)
@@ -865,7 +875,7 @@ GLOBAL_LIST_EMPTY(blood_overlays_by_type)
 		can_zoom = FALSE
 
 	if(!zoom && can_zoom)
-		M.AddComponent(/datum/component/remote_view/item_zoom, focused_on = M, vconfig_path = /datum/remote_view_config/allow_movement, our_item = src, viewsize = viewsize, tileoffset = tileoffset, show_visible_messages = TRUE)
+		M.AddComponent(/datum/component/remote_view/item_zoom, focused_on = M, vconfig_path = /datum/remote_view_config/zoomed_item, our_item = src, viewsize = viewsize, tileoffset = tileoffset, show_visible_messages = TRUE)
 		return
 	SEND_SIGNAL(src,COMSIG_REMOTE_VIEW_CLEAR)
 

@@ -26,15 +26,15 @@
 	kitchen_tag = "rodent"
 
 	faction = "chu"
-	glow_range = 2
+	glow_range = 3
 	glow_toggle = 1
 	glow_color = "#75ebeb"
 
 	can_be_antagged = TRUE
 
 	// durable...
-	maxHealth = 90
-	health = 90
+	maxHealth = 120
+	health = 120
 	enzyme_affect = FALSE
 
 	universal_understand = 1
@@ -44,21 +44,14 @@
 	attacktext = list("bit", "chomped", "scratched")
 
 	movement_cooldown = 0
-	animate_movement = SLIDE_STEPS
-
-	layer = MOB_LAYER
-
 	pass_flags = PASSTABLE
 
-	vore_default_mode = DM_HOLD
 	vore_active = TRUE
+	vore_default_mode = DM_HOLD
 	vore_standing_too = TRUE
 	vore_capacity = 2
-	vore_pounce_chance = 20
+	vore_pounce_chance = 40
 
-	nutrition = 500 // to prevent hunger issues at start
-
-	has_hands = FALSE
 	response_help  = "pets"
 	response_disarm = "pushes aside"
 	response_harm   = "stamps on"

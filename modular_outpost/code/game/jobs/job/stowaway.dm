@@ -17,11 +17,11 @@
 	offmap_spawn = TRUE // spawns in unique spots only, and doesn't show up on regular datacore
 	has_headset = FALSE
 	selection_color = "#353535"
-	total_positions = 3
-	spawn_positions = 2
+	total_positions = 4
+	spawn_positions = 4
 	economic_modifier = 1
-	alt_titles = list("Gremlin" = /datum/alt_title/gremlin, "Hunter" = /datum/alt_title/hunter, "Scavenger" = /datum/alt_title/scavenger, "Moss Collector" = /datum/alt_title/moss_collector)
-	outfit_type = /decl/hierarchy/outfit/job/stowaway
+	alt_titles = list("Gremlin" = /datum/alt_title/gremlin, "Hunter" = /datum/alt_title/hunter, "Scavenger" = /datum/alt_title/scavenger, "Moss Collector" = /datum/alt_title/moss_collector, "Penetration Tester" = /datum/alt_title/experiment)
+	outfit_type = /datum/decl/hierarchy/outfit/job/stowaway
 	access = list()
 	minimal_access = list()
 	forbid_department_account_access = TRUE
@@ -40,3 +40,8 @@
 
 /datum/alt_title/moss_collector
 	title = "Moss Collector"
+
+/datum/alt_title/experiment
+	title = "Penetration Tester"
+	title_blurb = "Unlike other stowaway roles, this title is for an authorized station penetration tester. Hired specifically to act like a stowaway as part of opposing force training with security. Your safety is not guarenteed however, as crew are not obligated to help you still."
+	title_outfit = /datum/decl/hierarchy/outfit/job/stowaway/pentester

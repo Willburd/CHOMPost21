@@ -23,7 +23,9 @@ GLOBAL_VAR_INIT(spawned_theta,FALSE) // Only one a ROUND
 		/obj/item/clothing/head/fishing,
 		/obj/item/research_sample/rare,
 		/obj/item/dnainjector/random_labeled,
-		/obj/item/dnainjector/random
+		/obj/item/dnainjector/random,
+		/obj/item/clothing/accessory/bodycam/yobro,
+		/obj/random/scavmark_paper,
 	)
 	var/static/list/outpost_rare_table = list(
 		/obj/item/reagent_containers/glass/beaker/wheymax,
@@ -42,7 +44,8 @@ GLOBAL_VAR_INIT(spawned_theta,FALSE) // Only one a ROUND
 		/obj/item/organ/internal/augment/armmounted/apc_connector,
 		/obj/item/reagent_containers/food/drinks/cans/crystal_classic_wind,
 		/obj/item/rectape/anna_lore,
-		/obj/item/card/emag
+		/obj/item/card/emag,
+		/obj/random/design_disks,
 	)
 
 

@@ -1,7 +1,6 @@
 /obj/item/cell/spike
 	name = "modified power cell"
 	desc = "A modified power cell sitting in a highly conductive chassis."
-	origin_tech = list(TECH_POWER = 2)
 	icon_state = "modded"
 	charge = 10000
 	maxcharge = 10000
@@ -36,7 +35,7 @@
 
 			if(istype(T, /turf/simulated/floor))
 				var/turf/simulated/floor/F = T
-				if(istype(F.flooring, /decl/flooring/reinforced))
+				if(istype(F.flooring, /datum/decl/flooring/reinforced))
 					conductive = TRUE
 
 			if(conductive)

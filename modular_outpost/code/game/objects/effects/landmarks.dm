@@ -44,6 +44,7 @@
 			/mob/living/simple_mob/vore/ashy,
 			/mob/living/simple_mob/vore/cryptdrake,
 			/mob/living/simple_mob/vore/demonAI,
+			/mob/living/simple_mob/mechanical/mecha/combat/honker,
 			// Cult
 			/mob/living/simple_mob/creature,
 			/mob/living/simple_mob/vore/aggressive/corrupthound,
@@ -187,7 +188,11 @@
 		prob(15);/mob/living/simple_mob/mechanical/cyber_horror/ling_cyber_horror,
 		prob(25);/mob/living/simple_mob/mechanical/cyber_horror/corgi,
 		prob(25);/mob/living/simple_mob/mechanical/cyber_horror/cat_cyber_horror,
+		// Xenobio slimes
+		prob(20);/mob/living/simple_mob/slime/xenobio,
 	)
+	if(mob_path == /mob/living/simple_mob/slime/xenobio)
+		mob_path = pick(typesof(/mob/living/simple_mob/slime/xenobio))
 	new mob_path(src.loc)
 
 
@@ -367,3 +372,115 @@
 	if(A)
 		A.wires.cut(WIRE_ELECTRIFY)
 		A.electrify()
+
+
+
+
+/obj/effect/landmark/bolt_door
+	name = "bolt door 0%"
+	var/chance = 0
+	delete_me = TRUE
+
+/obj/effect/landmark/bolt_door/five
+	name = "bolt door 5%"
+	chance = 5
+
+/obj/effect/landmark/bolt_door/ten
+	name = "bolt door 10%"
+	chance = 10
+
+/obj/effect/landmark/bolt_door/twentyfive
+	name = "bolt door 25%"
+	chance = 25
+
+/obj/effect/landmark/bolt_door/fifty
+	name = "bolt door 50%"
+	chance = 50
+
+/obj/effect/landmark/bolt_door/seventyfive
+	name = "bolt door 75%"
+	chance = 75
+
+/obj/effect/landmark/bolt_door/always_bolted
+	name = "bolt door 100%"
+	chance = 100
+
+/obj/effect/landmark/bolt_door/Initialize(mapload)
+	..()
+	return INITIALIZE_HINT_LATELOAD
+
+/obj/effect/landmark/bolt_door/LateInitialize()
+	if(!prob(chance))
+		return
+	var/obj/machinery/door/airlock/A = locate() in get_turf(src)
+	if(A) // We don't want to call signals, just treat the door as if it was already locked. So skip calling lock()
+		A.locked = TRUE
+		A.update_icon()
+
+
+
+
+// Soak floor with no end timer
+/obj/effect/landmark/wet_floor
+	name = "wet floor 0%"
+	var/chance = 0
+	delete_me = TRUE
+
+/obj/effect/landmark/wet_floor/Initialize(mapload)
+	..()
+	return INITIALIZE_HINT_LATELOAD
+
+/obj/effect/landmark/wet_floor/twentyfive
+	name = "wet floor 25%"
+	chance = 25
+
+/obj/effect/landmark/wet_floor/fifty
+	name = "wet floor 50%"
+	chance = 50
+
+/obj/effect/landmark/wet_floor/always_wet
+	name = "wet floor 100%"
+	chance = 100
+
+/obj/effect/landmark/wet_floor/LateInitialize()
+	if(!prob(chance))
+		return
+	var/turf/simulated/floor/T = get_turf(src)
+	T.wet = TURFSLIP_WET
+	if(T.wet_overlay)
+		return
+	T.wet_overlay = image('icons/effects/water.dmi', icon_state = "wet_floor")
+	T.add_overlay(T.wet_overlay)
+
+
+// lube floor with no end timer
+/obj/effect/landmark/lube_floor
+	name = "lube floor 0%"
+	var/chance = 0
+	delete_me = TRUE
+
+/obj/effect/landmark/lube_floor/Initialize(mapload)
+	..()
+	return INITIALIZE_HINT_LATELOAD
+
+/obj/effect/landmark/lube_floor/twentyfive
+	name = "lube floor 25%"
+	chance = 25
+
+/obj/effect/landmark/lube_floor/fifty
+	name = "lube floor 50%"
+	chance = 50
+
+/obj/effect/landmark/lube_floor/always_lubed
+	name = "lube floor 100%"
+	chance = 100
+
+/obj/effect/landmark/lube_floor/LateInitialize()
+	if(!prob(chance))
+		return
+	var/turf/simulated/floor/T = get_turf(src)
+	T.wet = TURFSLIP_LUBE
+	if(T.wet_overlay)
+		return
+	T.wet_overlay = image('icons/effects/water.dmi', icon_state = "wet_floor")
+	T.add_overlay(T.wet_overlay)

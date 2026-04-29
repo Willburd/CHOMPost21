@@ -99,7 +99,7 @@
 // Remove empty products from machine on final vend
 /obj/machinery/vending/delayed_vend(datum/stored_item/vending_product/R, mob/user)
 	. = ..()
-	if(R && R.instances.len <= 0)
+	if(R && !LAZYLEN(R.instances))
 		product_records.Remove(R)
 		SStgui.update_uis(src)
 

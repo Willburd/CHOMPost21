@@ -12,7 +12,7 @@
 
 /datum/gear/suit/apron_white/New()
 	..()
-	gear_tweaks += gear_tweak_free_color_choice
+	gear_tweaks += GLOB.gear_tweak_free_color_choice
 
 /datum/gear/suit/greatcoat
 	display_name = "greatcoat"
@@ -97,7 +97,7 @@
 
 /datum/gear/suit/duster/New()
 	..()
-	gear_tweaks += gear_tweak_free_color_choice
+	gear_tweaks += GLOB.gear_tweak_free_color_choice
 
 /datum/gear/suit/duster_sleeveless
 	display_name = "cowboy duster, colorable, sleeveless"
@@ -105,7 +105,7 @@
 
 /datum/gear/suit/duster_sleeveless/New()
 	..()
-	gear_tweaks += gear_tweak_free_color_choice
+	gear_tweaks += GLOB.gear_tweak_free_color_choice
 
 /datum/gear/suit/hazard_vest
 	display_name = "hazard vest selection"
@@ -148,7 +148,8 @@
 	"Pink labcoat" = /obj/item/clothing/suit/storage/toggle/labcoat/pink,
 	"Red labcoat" = /obj/item/clothing/suit/storage/toggle/labcoat/red,
 	"Yellow labcoat" = /obj/item/clothing/suit/storage/toggle/labcoat/yellow,
-	"Modern labcoat" = /obj/item/clothing/suit/storage/toggle/labcoat/modern
+	"Modern labcoat" = /obj/item/clothing/suit/storage/toggle/labcoat/modern,
+	"Long labcoat" = /obj/item/clothing/suit/storage/toggle/labcoat/neo_labcoat
 	)
 	gear_tweaks += new/datum/gear_tweak/path(labcoats)
 
@@ -168,9 +169,19 @@
 	gear_tweaks += new/datum/gear_tweak/path(labcoats)
 
 /datum/gear/suit/labcoat_emt
-	display_name = "labcoat, EMT"
+	display_name = "labcoat selection, EMT"
 	path = /obj/item/clothing/suit/storage/toggle/labcoat/emt
 	allowed_roles = list(JOB_MEDICAL_DOCTOR,JOB_CHIEF_MEDICAL_OFFICER,JOB_CHEMIST,JOB_PARAMEDIC,JOB_GENETICIST, JOB_PSYCHIATRIST)
+
+/datum/gear/suit/labcoat_emt/New()
+	..()
+	var/list/labcoats_emt = list(
+	"EMT labcoat" = /obj/item/clothing/suit/storage/toggle/labcoat/emt,
+	"Neo Highvis" = /obj/item/clothing/suit/storage/toggle/labcoat/neo_highvis,
+	"Neo Red" = /obj/item/clothing/suit/storage/toggle/labcoat/neo_redemt,
+	"Neo Blue" = /obj/item/clothing/suit/storage/toggle/labcoat/neo_blueemt
+	)
+	gear_tweaks += new/datum/gear_tweak/path(labcoats_emt)
 
 /datum/gear/suit/labcoat_rd
 	display_name = "labcoat, research director"
@@ -320,7 +331,7 @@
 
 /datum/gear/suit/cloak_custom/New()
 	..()
-	gear_tweaks += gear_tweak_free_color_choice
+	gear_tweaks += GLOB.gear_tweak_free_color_choice
 
 /datum/gear/suit/ranger_poncho
 	display_name = "ranger poncho selection"
@@ -349,7 +360,7 @@
 
 /datum/gear/suit/neo_ranger/New()
 	..()
-	gear_tweaks += gear_tweak_free_color_choice
+	gear_tweaks += GLOB.gear_tweak_free_color_choice
 
 /datum/gear/suit/unathi_robe
 	display_name = "roughspun robe"
@@ -420,7 +431,7 @@
 /datum/gear/suit/wintercoat/security
 	display_name = "winter coat, security"
 	path = /obj/item/clothing/suit/storage/hooded/wintercoat/security
-	allowed_roles = list(JOB_SECURITY_OFFICER, JOB_HEAD_OF_SECURITY, JOB_WARDEN /*, JOB_DETECTIVE*/, JOB_BLUESHIELD_GUARD, JOB_SECURITY_PILOT) //YW ADDITIONS // Outpost 21 edit - Detective is officer now
+	allowed_roles = list(JOB_SECURITY_OFFICER, JOB_HEAD_OF_SECURITY, JOB_WARDEN /*, JOB_DETECTIVE*/, JOB_BLUESHIELD_GUARD, JOB_BRIG_PHYSICIAN, JOB_SECURITY_PILOT) //YW ADDITIONS // Outpost 21 edit - Detective is officer now
 	show_roles = FALSE
 
 /datum/gear/suit/wintercoat/security/hos
@@ -608,7 +619,7 @@
 
 /datum/gear/suit/flannelrecolour/New()
 	..()
-	gear_tweaks += gear_tweak_free_color_choice
+	gear_tweaks += GLOB.gear_tweak_free_color_choice
 
 /datum/gear/suit/denim_jacket
 	display_name = "denim jacket and vest selection"
@@ -658,7 +669,7 @@
 
 /datum/gear/suit/miscellaneous/peacoat/New()
 	..()
-	gear_tweaks += gear_tweak_free_color_choice
+	gear_tweaks += GLOB.gear_tweak_free_color_choice
 
 /datum/gear/suit/snowsuit
 	display_name = "snowsuit"
@@ -673,13 +684,13 @@
 /datum/gear/suit/snowsuit/security
 	display_name = "snowsuit, security"
 	path = /obj/item/clothing/suit/storage/hooded/wintercoat/snowsuit/security // CHOMPEdit
-	allowed_roles = list(JOB_SECURITY_OFFICER, JOB_HEAD_OF_SECURITY, JOB_WARDEN /*, JOB_DETECTIVE*/, JOB_BLUESHIELD_GUARD, JOB_SECURITY_PILOT) //YW ADDITIONS // Outpost 21 edit - Detective is officer now
+	allowed_roles = list(JOB_SECURITY_OFFICER, JOB_HEAD_OF_SECURITY, JOB_WARDEN /*, JOB_DETECTIVE*/, JOB_BLUESHIELD_GUARD, JOB_BRIG_PHYSICIAN, JOB_SECURITY_PILOT) //YW ADDITIONS // Outpost 21 edit - Detective is officer now, Brig medic accessible
 	show_roles = FALSE
 
 /datum/gear/suit/snowsuit/medical
 	display_name = "snowsuit, medical"
 	path = /obj/item/clothing/suit/storage/hooded/wintercoat/snowsuit/medical // CHOMPEdit
-	allowed_roles = list(JOB_MEDICAL_DOCTOR,JOB_CHIEF_MEDICAL_OFFICER,JOB_CHEMIST,JOB_PARAMEDIC,JOB_GENETICIST, JOB_PSYCHIATRIST, JOB_SEARCH_AND_RESCUE) // CHOMPEdit
+	allowed_roles = list(JOB_MEDICAL_DOCTOR,JOB_CHIEF_MEDICAL_OFFICER,JOB_CHEMIST,JOB_PARAMEDIC,JOB_GENETICIST, JOB_PSYCHIATRIST, JOB_BRIG_PHYSICIAN, JOB_SEARCH_AND_RESCUE) // CHOMPEdit // Outpost 21 edit - Brig medic accessible
 	show_roles = FALSE
 
 /datum/gear/suit/snowsuit/science
@@ -706,7 +717,7 @@
 
 /datum/gear/suit/miscellaneous/cardigan/New()
 	..()
-	gear_tweaks += gear_tweak_free_color_choice
+	gear_tweaks += GLOB.gear_tweak_free_color_choice
 
 /datum/gear/suit/cmddressjacket
 	display_name = "command dress jacket"
@@ -720,7 +731,7 @@
 
 /datum/gear/suit/miscellaneous/kimono/New()
 	..()
-	gear_tweaks += gear_tweak_free_color_choice
+	gear_tweaks += GLOB.gear_tweak_free_color_choice
 
 /datum/gear/suit/miscellaneous/kamishimo
 	display_name = "traditional kamishimo, colorable"
@@ -728,7 +739,7 @@
 
 /datum/gear/suit/miscellaneous/kamishimo/New()
 	..()
-	gear_tweaks += gear_tweak_free_color_choice
+	gear_tweaks += GLOB.gear_tweak_free_color_choice
 
 /datum/gear/suit/miscellaneous/kimono_select
 	display_name = "kimono selection"
@@ -762,7 +773,7 @@
 		"very high cropped hoodie"=/obj/item/clothing/suit/storage/croppedhoodie/croppierer,
 		"super high cropped hoodie"=/obj/item/clothing/suit/storage/croppedhoodie/croppiest
 	)
-	gear_tweaks += gear_tweak_free_color_choice
+	gear_tweaks += GLOB.gear_tweak_free_color_choice
 	gear_tweaks += new/datum/gear_tweak/path(croppedhoodies)
 
 /datum/gear/suit/drive
@@ -822,7 +833,7 @@
 
 /datum/gear/suit/labcoat_colorable/New()
 	..()
-	gear_tweaks += gear_tweak_free_color_choice
+	gear_tweaks += GLOB.gear_tweak_free_color_choice
 
 /datum/gear/suit/labcoat_old
 	display_name = "labcoat, old-school"
@@ -928,7 +939,7 @@
 
 /datum/gear/suit/oversize/New()
 	..()
-	gear_tweaks += gear_tweak_free_color_choice
+	gear_tweaks += GLOB.gear_tweak_free_color_choice
 
 /*
 Talon winter coat
@@ -964,7 +975,7 @@ Talon winter coat
 		var/obj/item/clothing/suit/storage/toggle/hoodie/hoodie = hoodie_style
 		hoodies[initial(hoodie.name)] = hoodie
 	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(hoodies))
-	gear_tweaks += gear_tweak_free_color_choice
+	gear_tweaks += GLOB.gear_tweak_free_color_choice
 
 /datum/gear/suit/cyberpunk_recolorable
 	display_name = "cyberpunk jacket (recolorable)"
@@ -972,7 +983,7 @@ Talon winter coat
 	cost = 2 //It's got armor, yo.
 
 /datum/gear/suit/cyberpunk_recolorable/New()
-	gear_tweaks += gear_tweak_free_color_choice
+	gear_tweaks += GLOB.gear_tweak_free_color_choice
 
 /datum/gear/suit/shrine_maiden
 	display_name = "shrine maiden costume"
@@ -1002,7 +1013,7 @@ Talon winter coat
 	cost = 1
 
 /datum/gear/suit/cloak_half/New()
-	gear_tweaks += gear_tweak_free_color_choice
+	gear_tweaks += GLOB.gear_tweak_free_color_choice
 
 //Shoulder cloak
 /datum/gear/suit/cloak_shoulder
@@ -1011,7 +1022,7 @@ Talon winter coat
 	cost = 1
 
 /datum/gear/suit/cloak_shoulder/New()
-	gear_tweaks += gear_tweak_free_color_choice
+	gear_tweaks += GLOB.gear_tweak_free_color_choice
 
 /datum/gear/suit/cloak_shoulder_right
 	display_name = "cloak, shoulder right"
@@ -1019,7 +1030,7 @@ Talon winter coat
 	cost = 1
 
 /datum/gear/suit/cloak_shoulder_right/New()
-	gear_tweaks += gear_tweak_free_color_choice
+	gear_tweaks += GLOB.gear_tweak_free_color_choice
 
 //Mantles, mostly for heads of staff
 /datum/gear/suit/roles/mantle
@@ -1028,7 +1039,7 @@ Talon winter coat
 	cost = 1
 
 /datum/gear/suit/roles/mantle/New()
-	gear_tweaks += gear_tweak_free_color_choice
+	gear_tweaks += GLOB.gear_tweak_free_color_choice
 
 /datum/gear/suit/roles/mantles
 	display_name = "mantle selection"
@@ -1055,7 +1066,7 @@ Talon winter coat
 
 /datum/gear/suit/roles/boatcloak/New()
 	..()
-	gear_tweaks += gear_tweak_free_color_choice
+	gear_tweaks += GLOB.gear_tweak_free_color_choice
 
 /datum/gear/suit/roles/capboatcloak
 	display_name = "boat cloak, site manager"
@@ -1093,7 +1104,7 @@ Talon winter coat
 	path = /obj/item/clothing/accessory/poncho/roles/cloak/shroud
 
 /datum/gear/suit/roles/shroud/New()
-	gear_tweaks += gear_tweak_free_color_choice
+	gear_tweaks += GLOB.gear_tweak_free_color_choice
 
 /datum/gear/suit/roles/capshroud
 	display_name = "shroud, site manager"
@@ -1157,7 +1168,7 @@ Talon winter coat
 		"cropped hoodie"=/obj/item/clothing/suit/storage/hooded/toggle/colorable/cropped,
 		"shortsleeve hoodie"=/obj/item/clothing/suit/storage/hooded/toggle/colorable/shortsleeve
 	)
-	gear_tweaks += gear_tweak_free_color_choice
+	gear_tweaks += GLOB.gear_tweak_free_color_choice
 	gear_tweaks += new/datum/gear_tweak/path(choodies)
 
 //ABOUT TIME SOMEONE ADDED THIS TO A LOADOUT
@@ -1187,3 +1198,8 @@ Talon winter coat
 	display_name = "flowing cloak, colorable"
 	description = "A heavy cloak, suitable for recoloring."
 	path = /obj/item/clothing/accessory/poncho/roles/cloak/custom/neo_pcloak_color
+
+/datum/gear/suit/neo_medical_coat
+	display_name = "medical coat"
+	path = /obj/item/clothing/suit/neo_medical_coat
+	allowed_roles = list(JOB_CHIEF_MEDICAL_OFFICER,JOB_MEDICAL_DOCTOR,JOB_CHEMIST,JOB_PSYCHIATRIST,JOB_PARAMEDIC,JOB_TALON_DOCTOR)

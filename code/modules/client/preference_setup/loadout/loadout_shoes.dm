@@ -43,7 +43,7 @@
 
 /datum/gear/shoes/colorboots/New()
 	..()
-	gear_tweaks += gear_tweak_free_color_choice
+	gear_tweaks += GLOB.gear_tweak_free_color_choice
 
 /datum/gear/shoes/jackboots_white
 	display_name = "jackboots, white"
@@ -131,7 +131,7 @@
 
 /datum/gear/shoes/flipflops/New()
 	..()
-	gear_tweaks += gear_tweak_free_color_choice
+	gear_tweaks += GLOB.gear_tweak_free_color_choice
 
 /datum/gear/shoes/athletic
 	display_name = "athletic shoes"
@@ -139,7 +139,7 @@
 
 /datum/gear/shoes/athletic/New()
 	..()
-	gear_tweaks += gear_tweak_free_color_choice
+	gear_tweaks += GLOB.gear_tweak_free_color_choice
 
 /datum/gear/shoes/skater
 	display_name = "skater shoes"
@@ -147,7 +147,7 @@
 
 /datum/gear/shoes/skater/New()
 	..()
-	gear_tweaks += gear_tweak_free_color_choice
+	gear_tweaks += GLOB.gear_tweak_free_color_choice
 
 /datum/gear/shoes/flats
 	display_name = "flats"
@@ -155,7 +155,7 @@
 
 /datum/gear/shoes/flats/New()
 	..()
-	gear_tweaks += gear_tweak_free_color_choice
+	gear_tweaks += GLOB.gear_tweak_free_color_choice
 
 /datum/gear/shoes/cowboy
 	display_name = "cowboy boots selection"
@@ -201,7 +201,7 @@
 
 /datum/gear/shoes/heels/New()
 	..()
-	gear_tweaks += gear_tweak_free_color_choice
+	gear_tweaks += GLOB.gear_tweak_free_color_choice
 
 /datum/gear/shoes/slippers
 	display_name = "bunny slippers"
@@ -214,7 +214,7 @@
 /datum/gear/shoes/boots/winter/security
 	display_name = "security winter boots"
 	path = /obj/item/clothing/shoes/boots/winter/security
-	allowed_roles = list(JOB_SECURITY_OFFICER, JOB_HEAD_OF_SECURITY, JOB_WARDEN /*, JOB_DETECTIVE*/, JOB_BLUESHIELD_GUARD, JOB_SECURITY_PILOT) //YW ADDITIONS // Outpost 21 edit - Detective is officer now
+	allowed_roles = list(JOB_SECURITY_OFFICER, JOB_HEAD_OF_SECURITY, JOB_WARDEN /*, JOB_DETECTIVE*/, JOB_BLUESHIELD_GUARD, JOB_BRIG_PHYSICIAN, JOB_SECURITY_PILOT) //YW ADDITIONS // Outpost 21 edit - Detective is officer now
 
 /datum/gear/shoes/boots/winter/science
 	display_name = "science winter boots"
@@ -260,7 +260,7 @@
 
 /datum/gear/shoes/ballet/New()
 	..()
-	gear_tweaks += gear_tweak_free_color_choice
+	gear_tweaks += GLOB.gear_tweak_free_color_choice
 
 /datum/gear/shoes/halfmoon
 	display_name = "half moon boots"
@@ -272,7 +272,7 @@
 
 /datum/gear/shoes/sandals/New()
 	..()
-	gear_tweaks += gear_tweak_free_color_choice
+	gear_tweaks += GLOB.gear_tweak_free_color_choice
 
 /datum/gear/shoes/black/cuffs
 	display_name = "legwraps, black"
@@ -316,7 +316,7 @@
 
 /datum/gear/shoes/sandals_elegant/New()
 	..()
-	gear_tweaks += gear_tweak_free_color_choice
+	gear_tweaks += GLOB.gear_tweak_free_color_choice
 
 //CHOMP ADDITION, trying to make a no shoes shoe option
 /datum/gear/shoes/none

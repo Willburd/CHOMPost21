@@ -4,8 +4,9 @@
 	description = "A mild sedative that calms the nerves and relaxes the patient."
 	taste_description = "milk"
 	reagent_state = LIQUID
+	dermal_absorption = 0.2 //Most medication has a much weaker effect as a patch.
 	color = "#d5e2e5"
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_DRUG
 
@@ -28,7 +29,7 @@
 	metabolism = 0.1 //Lasts up to 200 seconds if you give 20u which is OD.
 	mrate_static = TRUE
 	overdose = 20 //High OD. This is to make numbing bites have somewhat of a downside if you get bit too much. Have to go to medical for dialysis.
-	scannable = 0 //Let's not have medical mechs able to make an extremely strong organic painkiller
+	scannable = SCANNABLE_ADVANCED //Let's not have medical mechs able to make an extremely strong organic painkiller
 	wiki_flag = WIKI_SPOILER
 	supply_conversion_value = REFINERYEXPORT_VALUE_RARE
 	industrial_use = REFINERYEXPORT_REASON_DRUG
@@ -53,7 +54,7 @@
 				H.losebreath = 10
 				H.adjustOxyLoss(5)
 		if(prob(2))
-			to_chat(H,span_warning("You feel a dull pain behind your eyes and at thee back of your head..."))
+			to_chat(H,span_warning("You feel a dull pain behind your eyes and at the back of your head..."))
 			H.hallucination += 20 //It messes with your mind for some reason.
 			H.eye_blurry += 20 //Groggy vision for a small bit.
 		if(prob(3))
@@ -71,9 +72,10 @@
 	taste_description = "sparkles"
 	taste_mult = 3
 	reagent_state = LIQUID
+	dermal_absorption = 0.2
 	color = "#750404"
 	overdose = REAGENTS_OVERDOSE * 0.5
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_DRUG
 
@@ -94,7 +96,7 @@
 	reagent_state = LIQUID
 	color = "#b4dcdc"
 	overdose = 5
-	scannable = 0
+	scannable = SCANNABLE_BENEFICIAL
 
 	supply_conversion_value = REFINERYEXPORT_VALUE_RARE
 	industrial_use = REFINERYEXPORT_REASON_DRUG
@@ -105,19 +107,20 @@
 */ //CHOMPStation removal end
 
 
-
 /datum/reagent/prussian_blue //We don't have iodine, so prussian blue we go.
 	name = REAGENT_PRUSSIANBLUE
 	id = REAGENT_ID_PRUSSIANBLUE
 	description = "Prussian Blue is a medication used to temporarily pause the effects of radiation poisoning to allow for treatment. Does not treat radiation sickness on its own."
 	taste_description = "salt"
 	reagent_state = SOLID
+	dermal_absorption = 0.2 //While it /is/ a solid, it's a beneficial medical reagent that should have some use if put into a patch.
 	color = "#003153" //Blue!
 	metabolism = REM * 0.25//20 ticks to do things per unit injected. This means injecting 30u will give you 10 minutes to do what you need.
 	overdose = REAGENTS_OVERDOSE
-	scannable = 1
+	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_DRUG
+	metabolized_traits = list(TRAIT_HALT_RADIATION_EFFECTS)
 
 /datum/reagent/prussian_blue/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_DIONA)
@@ -131,6 +134,8 @@
 	description = "A chemical compound that causes a dangerously powerful fat-burning reaction."
 	taste_description = "blandness"
 	reagent_state = LIQUID
+	dermal_absorption = 0.2
+	scannable = SCANNABLE_BENEFICIAL
 	color = "#47AD6D"
 	overdose = REAGENTS_OVERDOSE
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
@@ -147,7 +152,9 @@
 	description = "A chemical compound that causes a dangerously powerful fat-adding reaction."
 	taste_description = "blubber"
 	reagent_state = LIQUID
+	dermal_absorption = 0.2
 	color = "#61731C"
+	scannable = SCANNABLE_BENEFICIAL
 	overdose = REAGENTS_OVERDOSE
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_DIET
@@ -163,6 +170,7 @@
 	description = "A chemical that instantly transforms the consumer into another creature."
 	taste_description = "luck"
 	reagent_state = LIQUID
+	scannable = SCANNABLE_SECRETIVE
 	color = "#a754de"
 	scannable = 1
 	wiki_flag = WIKI_SPOILER // Outpost 21 edit - Hide this on wiki
@@ -172,7 +180,7 @@
 		"rat" = /mob/living/simple_mob/animal/passive/mouse/rat,
 		"giant rat" = /mob/living/simple_mob/vore/aggressive/rat,
 		"dust jumper" = /mob/living/simple_mob/vore/alienanimals/dustjumper,
-		"woof" = /mob/living/simple_mob/vore/woof,
+		// "woof" = /mob/living/simple_mob/vore/woof, // Outpost 21 edit - Softdog removal
 		"corgi" = /mob/living/simple_mob/animal/passive/dog/corgi,
 		"cat" = /mob/living/simple_mob/animal/passive/cat,
 		"chicken" = /mob/living/simple_mob/animal/passive/chicken,
@@ -228,29 +236,7 @@
 	if(!M.allow_spontaneous_tf)
 		return
 	if(M.tf_mob_holder)
-		var/mob/living/ourmob = M.tf_mob_holder
-		if(ourmob.ai_holder)
-			var/datum/ai_holder/our_AI = ourmob.ai_holder
-			our_AI.set_stance(STANCE_IDLE)
-		M.tf_mob_holder = null
-		ourmob.ckey = M.ckey
-		var/turf/get_dat_turf = get_turf(target)
-		ourmob.loc = get_dat_turf
-		ourmob.forceMove(get_dat_turf)
-		ourmob.vore_selected = M.vore_selected
-		M.vore_selected = null
-		ourmob.mob_belly_transfer(M)
-
-		// M.soulgem.transfer_self(ourmob) // Soulcatcher Outpost 21 edit - Disable soulgems
-
-		ourmob.Life(1)
-		if(ishuman(M))
-			for(var/obj/item/W in M)
-				//if(istype(W, /obj/item/implant/backup) || istype(W, /obj/item/nif)) // Outpost 21 edit - Remove backup implants, nif removal
-				//	continue
-				M.drop_from_inventory(W)
-
-		qdel(target)
+		M.revert_mob_tf()
 		return
 	else
 		if(M.stat == DEAD)	//We can let it undo the TF, because the person will be dead, but otherwise things get weird.
@@ -274,9 +260,10 @@
 	id = REAGENT_ID_GLAMOUR
 	description = "This material is from somewhere else, just being near produces changes."
 	taste_description = "change"
+	dermal_absorption = 1 //Magic liquid stuff. It immediately clears itself in your system the moment it touches you, so whatever.
 	reagent_state = LIQUID
 	color = "#ffffff"
-	scannable = 1
+	scannable = SCANNABLE_SECRETIVE
 
 	wiki_flag = WIKI_SPOILER // Outpost 21 edit - Hide this on wiki
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED

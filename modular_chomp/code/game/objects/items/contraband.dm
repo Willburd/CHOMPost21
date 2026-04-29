@@ -7,6 +7,9 @@
 	w_class = ITEMSIZE_HUGE
 
 /obj/item/contraband/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	var/contraband = pick(
 		/obj/item/reagent_containers/glass/beaker/vial/macrocillin,
 		/obj/item/reagent_containers/glass/beaker/vial/microcillin,
@@ -17,7 +20,7 @@
 		/obj/item/storage/fancy/cigar/havana,
 		/obj/item/card/emag_broken,
 		/obj/item/sleevemate,
-		/obj/item/implanter/loyalty, // Outpost 21 addition - Kinda evil drops
+		/obj/item/implanter/loyalty, // outpost 21 edit - Kinda evil drops
 		// /obj/item/disk/nifsoft/compliance, Outpost 21 edit - Nif removal
 		/obj/item/seeds/ambrosiadeusseed,
 		/obj/item/seeds/ambrosiavulgarisseed,

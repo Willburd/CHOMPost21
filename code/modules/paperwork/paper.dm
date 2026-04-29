@@ -36,11 +36,15 @@
 	var/age = 0
 	var/last_modified_ckey
 
+	///Occult check. Used for do_after
+	var/occult = FALSE
+
 	var/was_maploaded = FALSE // This tracks if the paper was created on mapload.
 
 	var/const/deffont = "Verdana"
 	var/const/signfont = "Times New Roman"
 	var/const/crayonfont = "Comic Sans MS"
+	resistance_flags = FLAMMABLE
 
 /obj/item/paper/card
 	name = "blank card"
@@ -160,7 +164,7 @@
 	set category = "Object"
 	set src in usr
 
-	if((CLUMSY in usr.mutations) && prob(20)) // Outpost 21 edit - Made clumsy less obnoxious
+	if(CLUMSY_FAIL_CHANCE(usr))
 		to_chat(usr, span_warning("You cut yourself on the paper."))
 		return
 	var/n_name = sanitizeSafe(tgui_input_text(usr, "What would you like to label the paper?", "Paper Labelling", null, MAX_NAME_LEN, encode = FALSE), MAX_NAME_LEN)
@@ -174,7 +178,12 @@
 		add_fingerprint(usr)
 	return
 
-/obj/item/paper/attack_self(mob/living/user as mob)
+/obj/item/paper/attack_self(mob/living/user)
+	. = ..(user)
+	if(.)
+		return TRUE
+	if(occult)
+		return
 	if(user.a_intent == I_HURT)
 		if(icon_state == "scrap")
 			user.show_message(span_warning("\The [src] is already crumpled."))
@@ -208,11 +217,12 @@
 		onclose(user, "[name]")
 	return
 
-/obj/item/paper/attack(mob/living/carbon/M as mob, mob/living/carbon/user as mob)
+/obj/item/paper/attack(mob/living/M, mob/living/user, target_zone, attack_modifier)
 	if(user.zone_sel.selecting == O_EYES)
 		user.visible_message(span_notice("You show the paper to [M]. "), \
 			span_notice(" [user] holds up a paper and shows it to [M]. "))
 		M.examinate(src)
+		return ITEM_INTERACT_SUCCESS
 
 	else if(user.zone_sel.selecting == O_MOUTH) // lipstick wiping
 		if(ishuman(M))
@@ -229,6 +239,8 @@
 											span_notice("You wipe off [H]'s lipstick."))
 					H.lip_style = null
 					H.update_icons_body()
+					return ITEM_INTERACT_SUCCESS
+				return ITEM_INTERACT_FAILURE
 
 /obj/item/paper/proc/set_content(text,title)
 	if(title)
@@ -343,9 +355,10 @@
 		t = replacetext(t, "\[cell\]", "<td>")
 		t = replacetext(t, "\[/cell\]", "")
 		// Outpost 21 edit begin - use our logo
-		t = replacetext(t, "\[logo\]", "<img src=\ref['html/images/eslogo.png']>")
-		t = replacetext(t, "\[eslogo\]", "<img src=\ref['html/images/eslogo.png']>")
+		t = replacetext(t, "\[logo\]", "<img src=\ref['html/images/outpost/eslogo.png']>")
+		t = replacetext(t, "\[eslogo\]", "<img src=\ref['html/images/outpost/eslogo.png']>")
 		t = replacetext(t, "\[ntlogo\]", "<img src=\ref['html/images/ntlogo.png']>")
+		t = replacetext(t, "\[talogo\]", "<img src=\ref['html/images/talonlogo.png']>")
 		t = replacetext(t, "\[sglogo\]", "<img src=\ref['html/images/sglogo.png']>")
 		t = replacetext(t, "\[trlogo\]", "<img src=\ref['html/images/trader.png']>")
 		t = replacetext(t, "\[pclogo\]", "<img src=\ref['html/images/pclogo.png']>") // Not available on virgo // CHOMPEnable
@@ -369,6 +382,7 @@
 		t = replacetext(t, "\[logo\]", "")
 		t = replacetext(t, "\[eslogo\]", "")
 		t = replacetext(t, "\[ntlogo\]", "")
+		t = replacetext(t, "\[talogo\]", "")
 		t = replacetext(t, "\[sglogo\]", "")
 		t = replacetext(t, "\[trlogo\]", "")
 		t = replacetext(t, "\[pclogo\]", "")

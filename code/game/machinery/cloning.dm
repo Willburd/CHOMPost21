@@ -55,6 +55,14 @@
 	default_apply_parts()
 	update_icon()
 
+/obj/machinery/clonepod/Destroy()
+	for(var/obj/container in containers)
+		container.forceMove(get_turf(src))
+	containers.Cut()
+	locked = FALSE
+	go_out()
+	. = ..()
+
 /obj/machinery/clonepod/proc/set_occupant(var/mob/living/L)
 	SHOULD_NOT_OVERRIDE(TRUE)
 	if(!L)
@@ -124,6 +132,7 @@
 	var/damage_to_deal = H.getMaxHealth() * 1.5 //If you have 100, you get 150. Have 200? Get 300. 25hp? get 37.5
 	H.adjustCloneLoss(damage_to_deal) // New damage var so you can't eject a clone early then stab them to abuse the current damage system --NeoFite
 	H.Paralyse(4)
+	H.Sleeping(4)
 	H.updatehealth()
 	H.set_cloned_appearance()
 
@@ -172,6 +181,7 @@
 
 		else if(occupant.health < heal_level && occupant.getCloneLoss() > 0)
 			occupant.Paralyse(4)
+			occupant.Sleeping(4)
 
 			//Slowly get that clone healed and finished.
 			occupant.adjustCloneLoss(-2 * heal_rate)
@@ -400,8 +410,10 @@
 	go_out()
 
 /obj/machinery/clonepod/emp_act(severity, recursive)
-	if(prob(100/severity))
-		malfunction()
+	. = ..()
+	if (. & EMP_PROTECT_SELF || !(prob(100/severity)))
+		return
+	malfunction()
 	..()
 
 /obj/machinery/clonepod/ex_act(severity)

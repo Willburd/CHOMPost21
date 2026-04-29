@@ -10,7 +10,7 @@
 // D
 
 /datum/robot_sprite/fluff/darklord92
-	name = CUSTOM_BORGSPRITE("Tangent")
+	name = CUSTOM_BORGSPRITE("T-Utility")
 	module_type = "Standard"
 
 	sprite_icon = 'modular_outpost/icons/mob/robot/fluff_wide.dmi'
@@ -26,9 +26,18 @@
 	pixel_x = -16
 	icon_x = 64
 	icon_y = 32
+	hat_offset = CUSTOMTANGENT_HAT_OFFSET
 
 	whitelist_ckey = "darklord92"
 	whitelist_charname = "Tangent"
+
+/datum/robot_sprite/fluff/darklord92/security
+	name = CUSTOM_BORGSPRITE("Tangent")
+	module_type = "Security"
+
+/datum/robot_sprite/fluff/darklord92/combat
+	name = CUSTOM_BORGSPRITE("T-Stalker")
+	module_type = "Combat"
 
 /datum/robot_sprite/fluff/darklord92/hauler
 	name = CUSTOM_BORGSPRITE("T-Hauler")

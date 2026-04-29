@@ -180,6 +180,9 @@ GLOBAL_LIST_EMPTY(unique_deployable)
 
 // CHOMPEdit Start
 /obj/item/survivalcapsule/attack_self(mob/user)
+	. = ..(user)
+	if(.)
+		return TRUE
 	//Can't grab when capsule is New() because templates aren't loaded then
 	if(istype(get_area(user), /area/vr))
 		to_chat(user, span_danger("\The [src] does not appear to work in VR! This is useless to you!"))
@@ -617,8 +620,8 @@ GLOBAL_LIST_EMPTY(unique_deployable)
 	.=..()
 	update_nearby_tiles()
 //CHOMPAdd end
-/*
-/obj/structure/fans/proc/deconstruct()
+
+/obj/structure/fans/atom_deconstruct()
 	new buildstacktype(loc,buildstackamount)
 	qdel(src)
 
@@ -627,11 +630,11 @@ GLOBAL_LIST_EMPTY(unique_deployable)
 		user.visible_message(span_warning("[user] disassembles [src]."),
 			span_notice("You start to disassemble [src]..."), "You hear clanking and banging noises.")
 		if(do_after(user, 4 SECONDS, target = src))
-			deconstruct()
+			atom_deconstruct(TRUE)
 			return TRUE
 
 	return TRUE
-*/
+
 /obj/structure/fans/tiny
 	name = "tiny fan"
 	desc = "A tiny fan, releasing a thin gust of air."
