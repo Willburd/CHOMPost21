@@ -1,5 +1,6 @@
 "Shadekin" = {"
 <h1>Shadekin</h1>
+
 <center><b>Mar!</b></center>
 
 <p>Shadekin are a furred mammalian-like species with exotic phasing capabilities. Capable of moving their bodies between the physical world, and another dimension known as the Dark. Shadekin often have darkly colored or black fur, striking brightly colored eyes, four eyes, and a large fluffy tail. They do not breathe, and are highly resistant to radiation and the vacuum of space. Shadekin also exhibit natural telepathic powers, communicating through emotional signals to other shadekin nearby. While generally rare to encounter, wild shadekin are often inexperienced with complex technology, and view the physical world as a curious novelty. Despite this ignorance, shadekin are entirely capable of understanding and being taught complex concepts and machinery if given enough time and training.</p>
@@ -28,7 +29,7 @@
 
 <h3>Green and Yellow</h3>
 
-<p>Shadekin with green or yellow eyes have a firm, but weaker attachment to the Dark's energies. Often remaining in the Dark to conserve their powers. Lingering in shadows, and places with thin barriers to the Dark. Naturally desiring to return to it for safety if needed. They are often seen as curious of the physical world, and interactions with green eye shadekin are common.</p>
+<p>Shadekin with green or yellow eyes have a firm, but weaker attachment to the Dark's energies. Often remaining in the Dark to conserve their powers. Lingering in shadows, and places with thin barriers to the Dark. Naturally desiring to return to it for safety if needed. They are often seen as curious of the physical world. Interactions with green eye shadekin are common, while yellow shadekin often prefer to remain in the Dark to conserve their power.</p>
 
 <h3>Orange and Red</h3>
 
