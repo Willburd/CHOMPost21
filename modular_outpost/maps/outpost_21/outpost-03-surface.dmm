@@ -12062,6 +12062,7 @@
 /area/security/briefing_room)
 "awv" = (
 /obj/machinery/light/small/emergency,
+/obj/effect/landmark/pengmark,
 /turf/simulated/floor/reinforced,
 /area/muriki/crew/bunker)
 "aww" = (
@@ -19037,6 +19038,10 @@
 /obj/structure/ladder/top_hatch,
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/research/testingrange)
+"aSE" = (
+/obj/effect/landmark/pengmark,
+/turf/simulated/floor/outdoors/mud/turfpack/muriki,
+/area/mine/unexplored/muriki/valleywest)
 "aSF" = (
 /obj/machinery/light_switch{
 	dir = 4;
@@ -19060,12 +19065,35 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/chemistry)
+"aSG" = (
+/obj/effect/landmark/pengmark,
+/turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
+/area/security/tactical)
+"aSH" = (
+/obj/effect/landmark/pengmark,
+/turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
+/area/muriki/grounds/waste)
+"aSI" = (
+/obj/effect/landmark/pengmark,
+/turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
+/area/muriki/grounds/terraform)
+"aSJ" = (
+/obj/structure/cliff{
+	dir = 5
+	},
+/obj/effect/landmark/pengmark,
+/turf/simulated/floor/outdoors/rocks/turfpack/muriki,
+/area/mine/explored/muriki/river/hole)
 "aSK" = (
 /obj/structure/boulder,
 /turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
 	},
 /area/mine/unexplored/muriki/mountainnorth)
+"aSL" = (
+/obj/effect/landmark/pengmark,
+/turf/simulated/floor/outdoors/mud/turfpack/muriki,
+/area/muriki/grounds/terraform)
 "aSO" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
@@ -38821,6 +38849,7 @@
 /obj/machinery/light/small{
 	dir = 4
 	},
+/obj/effect/landmark/pengmark,
 /turf/simulated/floor,
 /area/maintenance/substation/phoronics)
 "hre" = (
@@ -93406,7 +93435,7 @@ jms
 jms
 aDf
 aIt
-aIt
+aSI
 aIt
 aIt
 aIt
@@ -94105,7 +94134,7 @@ apZ
 apZ
 apZ
 apZ
-apZ
+aSH
 apZ
 apZ
 akB
@@ -94448,7 +94477,7 @@ esT
 esT
 esT
 pZv
-ajs
+aSE
 ajs
 btN
 jft
@@ -105965,7 +105994,7 @@ jms
 fZJ
 xLZ
 aOr
-aIr
+aSL
 jms
 jms
 jms
@@ -116664,7 +116693,7 @@ dMj
 tqc
 wdK
 gAH
-lhs
+aSJ
 jnX
 jnX
 jnX
@@ -132502,7 +132531,7 @@ iId
 afr
 eCt
 aqa
-aqa
+aSG
 aqa
 aqa
 aqa

@@ -5783,6 +5783,7 @@
 #include "modular_outpost\code\game\objects\effects\spawners\gibspawners.dm"
 #include "modular_outpost\code\game\objects\items\candybowl.dm"
 #include "modular_outpost\code\game\objects\items\crayons.dm"
+#include "modular_outpost\code\game\objects\items\peng.dm"
 #include "modular_outpost\code\game\objects\items\soap.dm"
 #include "modular_outpost\code\game\objects\items\stentkit.dm"
 #include "modular_outpost\code\game\objects\items\whoopiecushion.dm"

@@ -87,6 +87,9 @@ SUBSYSTEM_DEF(research)
 		/obj/item/slime_extract/nightmare = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_1_POINTS*0.75),
 		/obj/item/slime_extract/sound = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_1_POINTS),
 		// CHOMPAdd End
+		// Outpost 21 edit begin - Outpost unique research bonuses
+		/obj/item/peng = list(TECHWEB_POINT_TYPE_GENERIC = 1000),
+		// Outpost 21 edit end
 	)
 	///Allows repeated deconstruction of these items for points. These items MUST be in techweb_point_items as well.
 	var/list/techweb_repeatable_items = list(

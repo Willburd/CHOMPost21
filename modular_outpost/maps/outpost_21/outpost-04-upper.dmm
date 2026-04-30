@@ -3860,6 +3860,7 @@
 /area/maintenance/cargobay_roof)
 "aiV" = (
 /obj/structure/flora/mushroom,
+/obj/effect/landmark/pengmark,
 /turf/simulated/floor/plating,
 /area/maintenance/gravgen)
 "aiW" = (
@@ -7792,6 +7793,61 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/patient_wing)
+"ard" = (
+/obj/structure/cable/yellow,
+/obj/structure/grille,
+/obj/structure/cable/yellow{
+	icon_state = "0-8"
+	},
+/obj/effect/landmark/pengmark,
+/turf/simulated/floor/reinforced/airless,
+/area/tcommsat/computer)
+"are" = (
+/obj/effect/landmark/pengmark,
+/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/area/muriki/skyline/west)
+"arf" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/effect/landmark/pengmark,
+/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/area/muriki/rooftop/security)
+"arg" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/effect/landmark/pengmark,
+/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/area/muriki/rooftop/security)
+"arh" = (
+/obj/effect/landmark/pengmark,
+/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/area/muriki/rooftop/civilian)
+"ari" = (
+/obj/effect/landmark/pengmark,
+/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/area/muriki/processor)
+"arj" = (
+/obj/effect/landmark/pengmark,
+/turf/simulated/floor/plating,
+/area/engineering/gravgen)
+"ark" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/effect/landmark/pengmark,
+/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/area/muriki/rooftop/medical)
+"arl" = (
+/obj/effect/landmark/pengmark,
+/turf/simulated/floor/indoorrocks/turfpack/muriki{
+	icon_state = "rock_grey"
+	},
+/area/muriki/crystal)
 "arq" = (
 /obj/effect/floor_decal/corner/brown{
 	dir = 4
@@ -12132,6 +12188,7 @@
 /obj/structure/window/maintenance_panel{
 	dir = 8
 	},
+/obj/effect/landmark/pengmark,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/cargoupper)
 "cvK" = (
@@ -12173,6 +12230,7 @@
 /area/hallway/security/upper)
 "cwo" = (
 /obj/effect/floor_decal/rust,
+/obj/effect/landmark/pengmark,
 /turf/simulated/floor/outpost_roof/turfpack/muriki,
 /area/muriki/rooftop/disposal)
 "cwp" = (
@@ -17077,6 +17135,7 @@
 	icon_state = "0-2"
 	},
 /obj/structure/grille,
+/obj/effect/landmark/pengmark,
 /turf/simulated/floor/reinforced/airless,
 /area/tcommsat/powercontrol)
 "eWA" = (
@@ -54966,7 +55025,7 @@ dWV
 tWf
 tWf
 tWf
-tWf
+ari
 tWf
 ttw
 ttw
@@ -54986,7 +55045,7 @@ ttw
 sMo
 hoH
 hoH
-hoH
+are
 hoH
 hoH
 hoH
@@ -56095,7 +56154,7 @@ dWV
 dWV
 dWV
 tWf
-tWf
+ari
 tWf
 tWf
 ttw
@@ -67687,7 +67746,7 @@ kxr
 kxr
 kxr
 kxr
-tWf
+ari
 tWf
 kxr
 kxr
@@ -68491,7 +68550,7 @@ kxr
 kxr
 kxr
 tWf
-tWf
+ari
 tWf
 kxr
 kxr
@@ -87869,7 +87928,7 @@ rBk
 rBk
 rBk
 eWA
-bdd
+arf
 bdd
 bdd
 bdd
@@ -88995,7 +89054,7 @@ rBk
 rBk
 rBk
 rBk
-vTx
+arg
 wmD
 goV
 hjo
@@ -100296,7 +100355,7 @@ rBk
 rBk
 adg
 adf
-adf
+ark
 hrH
 rBk
 mbN
@@ -100964,7 +101023,7 @@ hPk
 acQ
 acQ
 rsI
-nyi
+arj
 knz
 tPU
 tPU
@@ -102920,7 +102979,7 @@ acU
 acQ
 acQ
 acU
-acQ
+arh
 acQ
 acU
 aar
@@ -115174,7 +115233,7 @@ rAt
 xYA
 wci
 qOs
-qOs
+arl
 qOs
 xsX
 als
@@ -116228,7 +116287,7 @@ pEi
 luR
 cgN
 eJU
-dLE
+ard
 xpu
 eDG
 nje
