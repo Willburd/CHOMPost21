@@ -17,7 +17,7 @@
 
 <h2>History</h2>
 
-<p>Vox are highly secretive. Their history and culture are their own, and a vox will never freely give such information. A vox will lie in a hundred new ways before they will say the truth, and only so that you do not even believe that the truth isn't just another lie. As all vox know the capabilities of their kind, and fear or respect them enough to not incur its wrath. Vox technology is highly advanced, far beyond anything created by the other known species. Where the vox came from is unknown, even to the common vox.</p>
+<p>Vox are highly secretive. Their history and culture are their own, and a vox will never freely give such information. A vox will lie in a hundred new ways before they will say the truth, and only so that you do not even believe that the truth isn't just another lie. As all vox know the capabilities of their kind, and fear or respect them enough to not incur its wrath. Vox technology is highly advanced, far beyond anything created by the other known species. Where the vox originally came from is unknown, even to the common vox.</p>
 
 <p>Vox live on colony ships. Travelling the galaxy through advanced methods of bluespace translocation. No known encounter with a vox colony ship has ever been recorded, or survived. The vox are willing to erase entire colonies and planets if it would expose their kind. It is a mercy that they avoid most of Solgov's space. Vox raiders however are another story. Vox that have been either tasked with or exiled from the colony to live a life of scavenging and piracy. Often vox raiders for small tightknit groups, and operate in packs. Three to four well armed vox could give even a wealthy corporate security team a run for their money... and often do.</p>
 
