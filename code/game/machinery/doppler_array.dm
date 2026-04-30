@@ -51,9 +51,11 @@
 	var/z0 = epicenter.z
 	if(!(z0 in GetConnectedZlevels(z)))
 		return
+	/* Outpost 21 edit - Doppler array radius removed.
 	var/turf/our_turf = get_turf(src)
 	if(our_turf.Distance(epicenter) > 100)
 		return
+	*/
 	atom_say("Explosive disturbance detected - Epicenter at: grid ([x0],[y0],[z0]). Epicenter radius: [devastation_range]. Outer radius: [heavy_impact_range]. Shockwave radius: [light_impact_range]. Temporal displacement of tachyons: [seconds_taken] seconds.")
 	SEND_SIGNAL(src, COMSIG_MACHINERY_EXPLOSION_DETECTED, epicenter, devastation_range, heavy_impact_range, light_impact_range, seconds_taken)
 	detected_explosions += list(
