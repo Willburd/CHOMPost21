@@ -1,6 +1,8 @@
 "Teshari" = {"
 <h1>Teshari</h1>
 
+<center><img class='_speciesimage' src=\ref['html/images/outpost/teshari.png']><br><b>Trill!</b></center>
+
 <p>TODO</p>
 
 <h2>Morphology</h2>

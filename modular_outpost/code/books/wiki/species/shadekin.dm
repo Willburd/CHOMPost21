@@ -1,18 +1,27 @@
 "Shadekin" = {"
 <h1>Shadekin</h1>
 
-<center><b>Mar!</b></center>
+<center><img class='_speciesimage' src=\ref['html/images/outpost/shadekin.png']><br><b>Mar!</b></center>
 
-<p>Shadekin are a furred mammalian-like species with exotic phasing capabilities. Capable of moving their bodies between the physical world, and another dimension known as the Dark. Shadekin often have darkly colored or black fur, striking brightly colored eyes, four ears, and a large fluffy tail. They do not breathe, and are highly resistant to radiation and the vacuum of space. Shadekin also exhibit natural telepathic powers, communicating through emotional signals to other shadekin nearby. While generally rare to encounter, wild shadekin are often inexperienced with complex technology, and view the physical world as a curious novelty. Despite this ignorance, shadekin are entirely capable of understanding and being taught complex concepts and machinery if given enough time and training.</p>
+<p>Shadekin are a furred mammalian-like species with exotic phasing capabilities. Capable of moving their bodies between the physical world, and another dimension known as the Dark. Shadekin often have darkly colored or black fur, striking brightly colored eyes, four ears, and a large fluffy tail. While generally rare to encounter, wild shadekin are often inexperienced with complex technology, and view the physical world as a curious novelty. Despite this ignorance, shadekin are entirely capable of understanding and being taught complex concepts and machinery if given enough time and training.</p>
 
 <p>Commonly, shadekin are encountered as stowaways. Wild shadekin simply hunting or observing the station's day to day operations. While shadekin are considered a soft-antagonist as stowaways, they are not required to attack the crew or cause any kind of harm. Nor is the station forced to kill shadekin on sight. Shadekin can interact with the crew through various means, as tricksters, scouts, hunters, and any other manner of creature hiding in the shadows. While most shadekin are creatures of the Dark, and desire to remain free, some have found a place as part of station staff.</p>
 
 <p>While more uncommon, shadekin as members of the crew must be implanted with a tracking implant, and are expected to avoid abuse of their phasing abilities. Crew shadekin entering secure areas through phasing may experience severe consequences to their future employment. Otherwise, crew shadekin are considered a similar risk assessment profile to vox or xenochimera. Capable of exotic and powerful capabilities, but restricted by crew expectations and standard operating procedure. Of course, wild shadekin have little reason to care about crew expectations, at the risk of capture or death.</p>
 
+<p>Many shadekin having a strong sense of curiosity. Known to become fixated upon novelty and the physical world. Shadekin often choose to identify themselves by these fixations. Names of objects, behaviors or sounds are common. Names such as Thump, Barrier, Dust, Shadow, Quake, Nibbles, Howl, Steel, Dynamo, River, Drips, or Statue are all examples of encountered shadekins. Wild shadekin often do not understand the concept of a species, often referring to themselves by name when asked what they are. Likely due to most shadekin interactions being with other shadekin in the Dark, leading to the belief that most other species are exactly like them. An ignorance that can be easily overcome by any shadekin desiring to integrate with station crew.</p>
+
+
+<h2>Powers</h2>
+
+<p>Shadekin do not breathe, and are highly resistant to radiation and the vacuum of space. Shadekin also exhibit natural telepathic powers, communicating through emotional signals known as empathy to other shadekin nearby. Shadekin also have a common language, for when empathic communication is not possible, commonly known as marish for the sounds made, mar! The language is uncommon outside of native shadekin speakers, but can be learned by others.</p>
+
+<p>Shadekin gain nourishment from consuming meals, and gain a separate exotic form of energy from the Dark used to fuel their powers. Significant meals can also be used to fuel a shadekin's energy. This energy is used to perform magic-like feats of energy manipulation. Such as accelerating healing, self regeneration, ensnaring others through a Dark linked portal, and phasing into their native dimension.</p>
+
 
 <h2>The Dark</h2>
 
-<p>The Dark is neither bluespace or redspace. It is not part of the physical world either. The Dark exists as the gap between dimensions, while few characters would be aware of this exact fact or the deeper mechanics of the Dark itself. Shadekin by nature are drawn to, and can phase into the Dark. While in the dark, a shadekin is unable to physically interact with most if not all objects, and even radios taken with them into the Dark will cease to function.</p>
+<p>The Dark is neither bluespace or redspace. It is not part of the physical world either. The Dark exists as the gap between dimensions, while few characters would be aware of this exact fact or the deeper mechanics of the Dark itself. Shadekin by nature are drawn to, and can phase into the Dark at will with enough energy. While in the dark, a shadekin is unable to physically interact with most if not all objects, and even radios taken with them into the Dark will cease to function.</p>
 
 <p>In the Dark there is no gravity, and no atmosphere. Various forms of radiation can bleed into the Dark, however the Dark has no natural matter itself. Matter that enters the Dark undergoes a physical change in state, becoming ethereal to the physical world. Able to perceive the stray photons of light that bleed into the Dark, as if a shadow of reality is being cast. Allowing for navigation within the Dark, and observation of the world outside of it. While scientific studies directly of the dark are difficult. A few rare observations have been made. This information is not well known by the general population.</p>
 
@@ -48,5 +57,6 @@
 
 <h2>History</h2>
 
-<p>TODO</p>
+<p>Little is known of shadekin history, or their origins. The Dark is likely to have existed for as long as the universe, bluespace, or any other dimension of reality. Ruins of structures located in the Dark, apparently drawn into it, often predate modern space travel by millennia. In rare instances entire moons have been located within the Dark, bringing into question if shadekin are natural residents of the Dark or if they were drawn into it and evolved within the otherworldly dimension. It will likely never be known, as wild shadekin appear to have little cultural interest in the preservation of their history.</p>
+
 "},
