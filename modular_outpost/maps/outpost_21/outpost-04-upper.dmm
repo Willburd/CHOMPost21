@@ -6833,9 +6833,6 @@
 /turf/simulated/floor/plating,
 /area/rnd/research/anomaly_storage)
 "apr" = (
-/obj/effect/floor_decal/corner/purple{
-	dir = 9
-	},
 /obj/machinery/light_switch{
 	dir = 1;
 	pixel_x = 25;
@@ -7201,9 +7198,6 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/upper)
 "aqb" = (
-/obj/effect/floor_decal/corner/purple{
-	dir = 9
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/light_switch{
@@ -7731,6 +7725,9 @@
 "aqW" = (
 /obj/machinery/status_display{
 	pixel_y = -32
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 10
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/upper)
