@@ -26298,6 +26298,9 @@
 /obj/structure/sign/painting/public{
 	pixel_x = 30
 	},
+/obj/structure/sign/painting/public{
+	pixel_y = 32
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/kitchen)
 "cXV" = (
@@ -63776,11 +63779,11 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/structure/sign/painting/public{
-	pixel_y = 32
-	},
 /obj/effect/floor_decal/corner/green{
 	dir = 5
+	},
+/obj/machinery/computer/guestpass{
+	pixel_y = 30
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/kitchen)

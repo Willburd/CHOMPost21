@@ -7848,6 +7848,24 @@
 	icon_state = "rock_grey"
 	},
 /area/muriki/crystal)
+"arm" = (
+/obj/effect/floor_decal/corner/lime{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/sign/painting/public{
+	pixel_y = -32
+	},
+/turf/simulated/floor/tiled/hydro,
+/area/hydroponics/hallway)
 "arq" = (
 /obj/effect/floor_decal/corner/brown{
 	dir = 4
@@ -34968,6 +34986,9 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/structure/sign/painting/public{
+	pixel_y = -32
+	},
 /turf/simulated/floor/tiled/hydro,
 /area/hydroponics/hallway)
 "owj" = (
@@ -43302,6 +43323,10 @@
 /obj/structure/disposalpipe/junction{
 	dir = 4;
 	icon_state = "pipe-j2"
+	},
+/obj/machinery/computer/guestpass{
+	pixel_y = -30;
+	dir = 1
 	},
 /turf/simulated/floor/tiled/hydro,
 /area/hydroponics/hallway)
@@ -108448,7 +108473,7 @@ hCW
 fKd
 sYb
 vtR
-kBi
+arm
 ahf
 pdE
 bMR
