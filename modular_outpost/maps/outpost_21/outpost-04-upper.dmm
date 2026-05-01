@@ -19043,7 +19043,7 @@
 /obj/machinery/door/airlock/glass{
 	name = "Hydroponics";
 	req_access = newlist();
-	req_one_access = list(35,28)
+	req_one_access = list(35,28,77)
 	},
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -34362,7 +34362,7 @@
 /obj/machinery/door/airlock/multi_tile/glass{
 	name = "Hydroponics";
 	dir = 1;
-	req_one_access = list(35,28)
+	req_one_access = list(35,28,77)
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/hydroponics/hallway)
@@ -35288,7 +35288,7 @@
 /obj/machinery/door/airlock/glass{
 	name = "Animal Pen";
 	req_access = newlist();
-	req_one_access = list(35,28)
+	req_one_access = list(35,28,77)
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -50183,7 +50183,7 @@
 /obj/machinery/door/airlock/glass{
 	name = "Animal Pen";
 	req_access = newlist();
-	req_one_access = list(35,28)
+	req_one_access = list(35,28,77)
 	},
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled/steel_grid,
@@ -52354,7 +52354,7 @@
 /obj/machinery/door/airlock/glass{
 	name = "Hydroponics";
 	req_access = newlist();
-	req_one_access = list(35,28)
+	req_one_access = list(35,28,77)
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/hydroponics)
