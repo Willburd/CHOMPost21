@@ -30804,7 +30804,7 @@
 	dir = 8
 	},
 /obj/machinery/door/airlock/glass_research{
-	name = "Public Teleporter";
+	name = "Public Teleporter Office";
 	req_one_access = list(7,47)
 	},
 /turf/simulated/floor/tiled/steel_ridged,
@@ -52585,22 +52585,17 @@
 /turf/simulated/floor/plating,
 /area/maintenance/scielev)
 "lsv" = (
-/obj/machinery/door/window/southleft{
-	dir = 1;
-	name = "Test Chamber";
-	req_one_access = list(47)
+/obj/structure/cable/green{
+	icon_state = "4-10"
 	},
-/obj/machinery/door/window/southleft{
-	name = "Test Chamber";
-	req_one_access = list(47)
+/obj/machinery/door/airlock/glass_research{
+	name = "Public Teleporter Office";
+	req_one_access = list(7,47)
 	},
 /obj/machinery/door/blast/regular{
 	id = "tscilab";
 	name = "Test Chamber Blast Doors";
 	dir = 4
-	},
-/obj/structure/cable/green{
-	icon_state = "4-10"
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/rnd/telesci)
