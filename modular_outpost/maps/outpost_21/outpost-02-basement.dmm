@@ -1639,6 +1639,8 @@
 /area/rnd/research/anomaly)
 "adz" = (
 /obj/structure/catwalk,
+/obj/structure/ladder/up,
+/obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/research)
 "adA" = (
@@ -1653,11 +1655,6 @@
 /obj/structure/disposalpipe/junction,
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/exp_prep)
-"adB" = (
-/obj/structure/ladder/up,
-/obj/effect/floor_decal/industrial/outline/grey,
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/research)
 "adC" = (
 /turf/simulated/mineral/alt/turfpack/muriki,
 /area/mine/explored/muriki/cave/sci/east_access)
@@ -139487,7 +139484,7 @@ cJT
 agP
 ahC
 ahC
-amq
+ahC
 amq
 amq
 bLy
@@ -139649,8 +139646,8 @@ agP
 agP
 agP
 agP
+ahC
 amq
-adB
 bzB
 bLz
 bRI
@@ -139811,7 +139808,7 @@ agP
 cKA
 cKy
 agP
-amq
+ahC
 amq
 chs
 amq
