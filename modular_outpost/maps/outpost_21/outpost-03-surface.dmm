@@ -33691,15 +33691,9 @@
 /turf/simulated/floor/plating,
 /area/rnd/research/mailing)
 "fxU" = (
-/obj/machinery/autolathe{
-	desc = "Your typical Autolathe. It appears to have much more options than your regular one, however...";
-	hacked = 1;
-	name = "Unlocked Autolathe"
-	},
 /obj/effect/floor_decal/milspec/color/purple/half{
 	dir = 1
 	},
-/obj/effect/floor_decal/milspec/color/purple/half,
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/lab)
 "fya" = (
@@ -42497,11 +42491,15 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/virology/quarantine_quarantine)
 "ima" = (
-/obj/machinery/partslathe,
 /obj/effect/floor_decal/milspec/color/purple/half{
 	dir = 1
 	},
 /obj/effect/floor_decal/milspec/color/purple/half,
+/obj/machinery/autolathe{
+	desc = "Your typical Autolathe. It appears to have much more options than your regular one, however...";
+	hacked = 1;
+	name = "Unlocked Autolathe"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/lab)
 "imk" = (
@@ -83313,7 +83311,7 @@
 /obj/effect/floor_decal/milspec/color/orange/half{
 	dir = 5
 	},
-/obj/machinery/partslathe,
+/obj/structure/table/reinforced,
 /turf/simulated/floor/tiled/milspec,
 /area/engineering/storage)
 "vjX" = (

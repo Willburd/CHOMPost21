@@ -60846,7 +60846,6 @@
 /turf/simulated/wall,
 /area/engineering/refinery/lab)
 "ctJ" = (
-/obj/machinery/partslathe,
 /obj/item/geiger/wall/west,
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 4
@@ -60854,6 +60853,7 @@
 /obj/structure/sign/nosmoking_1{
 	pixel_y = -32
 	},
+/obj/machinery/autolathe,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/engineering/refinery/lab)
 "ctK" = (
