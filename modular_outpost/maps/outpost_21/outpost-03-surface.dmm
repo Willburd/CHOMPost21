@@ -30803,9 +30803,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
 	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
 /obj/machinery/door/airlock/glass_research{
 	name = "Public Teleporter";
 	req_one_access = list(7,47)
