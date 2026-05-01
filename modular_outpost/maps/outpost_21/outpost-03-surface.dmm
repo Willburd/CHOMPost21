@@ -19382,7 +19382,7 @@
 	},
 /obj/structure/disposalpipe/sortjunction/flipped{
 	dir = 2;
-	sortType = "Science";
+	sortType = "TeleScience";
 	name = "TeleScience"
 	},
 /turf/simulated/floor/tiled/white,
