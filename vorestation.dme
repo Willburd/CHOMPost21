@@ -5918,6 +5918,7 @@
 #include "modular_outpost\code\modules\food\kitchen\gibber.dm"
 #include "modular_outpost\code\modules\games\cards.dm"
 #include "modular_outpost\code\modules\hydroponics\spreading\spreading.dm"
+#include "modular_outpost\code\modules\integrated_electronics\subtypes\trig.dm"
 #include "modular_outpost\code\modules\maint_recycler\hangout_entries.dm"
 #include "modular_outpost\code\modules\materials\fifty_spawner_mats.dm"
 #include "modular_outpost\code\modules\materials\materials\alien_alloy.dm"
