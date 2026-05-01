@@ -8843,14 +8843,6 @@
 	},
 /turf/simulated/floor/outpost_roof/turfpack/muriki,
 /area/muriki/rooftop/cargo)
-"aQK" = (
-/obj/structure/railing,
-/obj/structure/cable/orange{
-	icon_state = "4-8"
-	},
-/obj/machinery/power/grounding_rod/pre_mapped,
-/turf/simulated/floor/outpost_roof/turfpack/muriki,
-/area/muriki/rooftop/science)
 "aRe" = (
 /obj/machinery/alarm{
 	dir = 1;
@@ -11972,9 +11964,6 @@
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/djstation)
 "crZ" = (
-/obj/structure/railing{
-	dir = 4
-	},
 /obj/machinery/power/apc{
 	name = "south bump";
 	pixel_y = -24
@@ -30553,17 +30542,6 @@
 /obj/effect/floor_decal/eshui/emblem/eshui_r,
 /turf/simulated/floor/tiled/monotile,
 /area/hallway/secondary/secmedbridge)
-"meq" = (
-/obj/structure/railing{
-	dir = 4
-	},
-/obj/structure/railing,
-/obj/machinery/power/tesla_coil/pre_mapped,
-/obj/structure/cable/orange{
-	icon_state = "0-8"
-	},
-/turf/simulated/floor/outpost_roof/turfpack/muriki,
-/area/muriki/rooftop/science)
 "meK" = (
 /obj/effect/floor_decal/corner/lime{
 	dir = 10
@@ -106984,10 +106962,10 @@ adl
 adl
 adl
 adl
-aQK
-qQa
-qQa
-qQa
+pYM
+adl
+adl
+lfn
 qQa
 qQa
 qQa
@@ -107145,11 +107123,11 @@ adl
 adl
 adl
 sgl
+aqT
+apa
 sgl
-meq
-qQa
-qQa
-qQa
+sgl
+wTx
 qQa
 qQa
 qQa

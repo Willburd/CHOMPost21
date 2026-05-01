@@ -1637,6 +1637,10 @@
 /obj/machinery/cell_charger,
 /turf/simulated/floor/tiled,
 /area/rnd/research/anomaly)
+"adz" = (
+/obj/structure/catwalk,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/research)
 "adA" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -1649,6 +1653,11 @@
 /obj/structure/disposalpipe/junction,
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/exp_prep)
+"adB" = (
+/obj/structure/ladder/up,
+/obj/effect/floor_decal/industrial/outline/grey,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/research)
 "adC" = (
 /turf/simulated/mineral/alt/turfpack/muriki,
 /area/mine/explored/muriki/cave/sci/east_access)
@@ -139478,7 +139487,7 @@ cJT
 agP
 ahC
 ahC
-ahC
+amq
 amq
 amq
 bLy
@@ -139640,8 +139649,8 @@ agP
 agP
 agP
 agP
-ahC
 amq
+adB
 bzB
 bLz
 bRI
@@ -139802,7 +139811,7 @@ agP
 cKA
 cKy
 agP
-ahC
+amq
 amq
 chs
 amq
@@ -139971,7 +139980,7 @@ btb
 amq
 amq
 cLR
-cLQ
+adz
 amq
 aPW
 aIe
