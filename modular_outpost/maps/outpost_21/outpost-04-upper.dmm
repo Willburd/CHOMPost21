@@ -3860,6 +3860,7 @@
 /area/maintenance/cargobay_roof)
 "aiV" = (
 /obj/structure/flora/mushroom,
+/obj/effect/landmark/pengmark,
 /turf/simulated/floor/plating,
 /area/maintenance/gravgen)
 "aiW" = (
@@ -7792,6 +7793,79 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/patient_wing)
+"ard" = (
+/obj/structure/cable/yellow,
+/obj/structure/grille,
+/obj/structure/cable/yellow{
+	icon_state = "0-8"
+	},
+/obj/effect/landmark/pengmark,
+/turf/simulated/floor/reinforced/airless,
+/area/tcommsat/computer)
+"are" = (
+/obj/effect/landmark/pengmark,
+/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/area/muriki/skyline/west)
+"arf" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/effect/landmark/pengmark,
+/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/area/muriki/rooftop/security)
+"arg" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/effect/landmark/pengmark,
+/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/area/muriki/rooftop/security)
+"arh" = (
+/obj/effect/landmark/pengmark,
+/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/area/muriki/rooftop/civilian)
+"ari" = (
+/obj/effect/landmark/pengmark,
+/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/area/muriki/processor)
+"arj" = (
+/obj/effect/landmark/pengmark,
+/turf/simulated/floor/plating,
+/area/engineering/gravgen)
+"ark" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/effect/landmark/pengmark,
+/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/area/muriki/rooftop/medical)
+"arl" = (
+/obj/effect/landmark/pengmark,
+/turf/simulated/floor/indoorrocks/turfpack/muriki{
+	icon_state = "rock_grey"
+	},
+/area/muriki/crystal)
+"arm" = (
+/obj/effect/floor_decal/corner/lime{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/sign/painting/public{
+	pixel_y = -32
+	},
+/turf/simulated/floor/tiled/hydro,
+/area/hydroponics/hallway)
 "arq" = (
 /obj/effect/floor_decal/corner/brown{
 	dir = 4
@@ -8787,14 +8861,6 @@
 	},
 /turf/simulated/floor/outpost_roof/turfpack/muriki,
 /area/muriki/rooftop/cargo)
-"aQK" = (
-/obj/structure/railing,
-/obj/structure/cable/orange{
-	icon_state = "4-8"
-	},
-/obj/machinery/power/grounding_rod/pre_mapped,
-/turf/simulated/floor/outpost_roof/turfpack/muriki,
-/area/muriki/rooftop/science)
 "aRe" = (
 /obj/machinery/alarm{
 	dir = 1;
@@ -11916,9 +11982,6 @@
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/djstation)
 "crZ" = (
-/obj/structure/railing{
-	dir = 4
-	},
 /obj/machinery/power/apc{
 	name = "south bump";
 	pixel_y = -24
@@ -12132,6 +12195,7 @@
 /obj/structure/window/maintenance_panel{
 	dir = 8
 	},
+/obj/effect/landmark/pengmark,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/cargoupper)
 "cvK" = (
@@ -12173,6 +12237,7 @@
 /area/hallway/security/upper)
 "cwo" = (
 /obj/effect/floor_decal/rust,
+/obj/effect/landmark/pengmark,
 /turf/simulated/floor/outpost_roof/turfpack/muriki,
 /area/muriki/rooftop/disposal)
 "cwp" = (
@@ -17077,6 +17142,7 @@
 	icon_state = "0-2"
 	},
 /obj/structure/grille,
+/obj/effect/landmark/pengmark,
 /turf/simulated/floor/reinforced/airless,
 /area/tcommsat/powercontrol)
 "eWA" = (
@@ -30494,17 +30560,6 @@
 /obj/effect/floor_decal/eshui/emblem/eshui_r,
 /turf/simulated/floor/tiled/monotile,
 /area/hallway/secondary/secmedbridge)
-"meq" = (
-/obj/structure/railing{
-	dir = 4
-	},
-/obj/structure/railing,
-/obj/machinery/power/tesla_coil/pre_mapped,
-/obj/structure/cable/orange{
-	icon_state = "0-8"
-	},
-/turf/simulated/floor/outpost_roof/turfpack/muriki,
-/area/muriki/rooftop/science)
 "meK" = (
 /obj/effect/floor_decal/corner/lime{
 	dir = 10
@@ -34930,6 +34985,9 @@
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
+	},
+/obj/structure/sign/painting/public{
+	pixel_y = -32
 	},
 /turf/simulated/floor/tiled/hydro,
 /area/hydroponics/hallway)
@@ -43265,6 +43323,10 @@
 /obj/structure/disposalpipe/junction{
 	dir = 4;
 	icon_state = "pipe-j2"
+	},
+/obj/machinery/computer/guestpass{
+	pixel_y = -30;
+	dir = 1
 	},
 /turf/simulated/floor/tiled/hydro,
 /area/hydroponics/hallway)
@@ -54966,7 +55028,7 @@ dWV
 tWf
 tWf
 tWf
-tWf
+ari
 tWf
 ttw
 ttw
@@ -54986,7 +55048,7 @@ ttw
 sMo
 hoH
 hoH
-hoH
+are
 hoH
 hoH
 hoH
@@ -56095,7 +56157,7 @@ dWV
 dWV
 dWV
 tWf
-tWf
+ari
 tWf
 tWf
 ttw
@@ -67687,7 +67749,7 @@ kxr
 kxr
 kxr
 kxr
-tWf
+ari
 tWf
 kxr
 kxr
@@ -68491,7 +68553,7 @@ kxr
 kxr
 kxr
 tWf
-tWf
+ari
 tWf
 kxr
 kxr
@@ -87869,7 +87931,7 @@ rBk
 rBk
 rBk
 eWA
-bdd
+arf
 bdd
 bdd
 bdd
@@ -88995,7 +89057,7 @@ rBk
 rBk
 rBk
 rBk
-vTx
+arg
 wmD
 goV
 hjo
@@ -100296,7 +100358,7 @@ rBk
 rBk
 adg
 adf
-adf
+ark
 hrH
 rBk
 mbN
@@ -100964,7 +101026,7 @@ hPk
 acQ
 acQ
 rsI
-nyi
+arj
 knz
 tPU
 tPU
@@ -102920,7 +102982,7 @@ acU
 acQ
 acQ
 acU
-acQ
+arh
 acQ
 acU
 aar
@@ -106925,10 +106987,10 @@ adl
 adl
 adl
 adl
-aQK
-qQa
-qQa
-qQa
+pYM
+adl
+adl
+lfn
 qQa
 qQa
 qQa
@@ -107086,11 +107148,11 @@ adl
 adl
 adl
 sgl
+aqT
+apa
 sgl
-meq
-qQa
-qQa
-qQa
+sgl
+wTx
 qQa
 qQa
 qQa
@@ -108411,7 +108473,7 @@ hCW
 fKd
 sYb
 vtR
-kBi
+arm
 ahf
 pdE
 bMR
@@ -115174,7 +115236,7 @@ rAt
 xYA
 wci
 qOs
-qOs
+arl
 qOs
 xsX
 als
@@ -116228,7 +116290,7 @@ pEi
 luR
 cgN
 eJU
-dLE
+ard
 xpu
 eDG
 nje

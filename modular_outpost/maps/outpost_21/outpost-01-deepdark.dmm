@@ -2822,6 +2822,14 @@
 /obj/structure/ladder/up,
 /turf/simulated/floor/flesh/turfpack/muriki,
 /area/muriki/processor/depths)
+"agV" = (
+/obj/effect/landmark/pengmark,
+/turf/simulated/floor/flesh/turfpack/muriki,
+/area/muriki/processor/depths)
+"agW" = (
+/obj/effect/landmark/pengmark,
+/turf/simulated/floor/water/acidic/turfpack/muriki,
+/area/muriki/processor/depths)
 "amr" = (
 /obj/effect/map_effect/interval/atmogland/bodyheat,
 /obj/effect/mist,
@@ -4229,7 +4237,7 @@ xVp
 xVp
 xVp
 xVp
-xVp
+agV
 xVp
 xVp
 xVp
@@ -7280,7 +7288,7 @@ aac
 cpg
 cpg
 cpg
-cpg
+agW
 cpg
 cpg
 aac

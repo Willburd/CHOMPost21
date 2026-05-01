@@ -1,14 +1,16 @@
+GLOBAL_VAR_INIT(telescience_failures,0)
 
 /obj/machinery/computer/telescience/telefail()
 	COOLDOWN_START(src, teleport_cooldown, (2 SECONDS))
 
 	var/turf/pad_turf = get_turf(telepad)
-	if(!pad_turf)
+	if(!pad_turf || !length(crystals))
 		sparks()
 		visible_message(span_warning("The telepad weakly fizzles."))
 		return
 
-	switch(crystals.len > 0 ? rand(99) : 0)
+	GLOB.telescience_failures++ // Lets keep some of the major failures a punishment for abusing the tsci pad instead of literally the first failure releasing a tesla
+	switch(rand(99))
 		if(0 to 70)
 			sparks()
 			visible_message(span_warning("The telepad weakly fizzles."))
@@ -17,28 +19,37 @@
 		if(71 to 80)
 			// Irradiate everyone in telescience!
 			sparks()
-			for(var/mob/living/carbon/human/M in viewers(7, src))
-				M.apply_effect((rand(10, 20)), IRRADIATE, 0)
-				to_chat(M, span_warning("You feel strange."))
+			if(GLOB.telescience_failures > 6)
+				for(var/mob/living/carbon/human/M in viewers(7, src))
+					M.apply_effect((rand(10, 20)), IRRADIATE, 0)
+					to_chat(M, span_warning("You feel strange."))
+			else
+				visible_message(span_warning("The telepad weakly fizzles."))
 			return
 
 		if(81 to 92)
 			// EMP
 			sparks()
-			empulse(pad_turf, 4, 16)
+			if(GLOB.telescience_failures > 12)
+				empulse(pad_turf, 4, 16)
+			else
+				visible_message(span_warning("The telepad weakly fizzles."))
 			return
 
 		if(93)
 			// organ removal
 			sparks()
-			var/mob/living/carbon/human/H = locate() in range(7, src)
-			if(!ishuman(H))
-				return
-			var/obj/item/organ/O = H.get_organ(pick(O_APPENDIX, O_BUTT, O_INTESTINE, O_LIVER, O_EYES, O_SPLEEN, O_KIDNEYS, O_LUNGS))
-			if(!O)
-				return
-			O.removed()
-			O.forceMove(pad_turf)
+			if(GLOB.telescience_failures > 6)
+				var/mob/living/carbon/human/H = locate() in range(7, src)
+				if(!ishuman(H))
+					return
+				var/obj/item/organ/O = H.get_organ(pick(O_APPENDIX, O_BUTT, O_INTESTINE, O_LIVER, O_EYES, O_SPLEEN, O_KIDNEYS, O_LUNGS))
+				if(!O)
+					return
+				O.removed()
+				O.forceMove(pad_turf)
+			else
+				visible_message(span_warning("The telepad weakly fizzles."))
 			return
 
 		if(94)
@@ -56,11 +67,11 @@
 		if(96)
 			// Ladytesla
 			sparks()
-			if(prob(5))
-				new /obj/item/toy/spinningtoy(pad_turf)
-			else
+			if(prob(5) && GLOB.telescience_failures > 25) // This exists purely for anyone abusing...
 				var/obj/singularity/energy_ball/ball = new(pad_turf)
-				ball.energy = rand(10,40)
+				ball.energy = rand(5,10)
+			else
+				new /obj/item/toy/spinningtoy(pad_turf)
 			return
 
 		if(97)
@@ -74,7 +85,10 @@
 		if(98)
 			// Blast thy ass
 			sparks()
-			explosion(pad_turf, 1, 1, 2, 2)
+			if(GLOB.telescience_failures > 15)
+				explosion(pad_turf, 1, 1, 2, 2)
+			else
+				visible_message(span_warning("The telepad weakly fizzles."))
 			return
 
 		if(99)

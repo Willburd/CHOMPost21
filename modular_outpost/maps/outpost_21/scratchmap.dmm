@@ -3198,8 +3198,2430 @@
 /obj/effect/landmark/step_trap,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/space)
+"gk" = (
+/obj/structure/table/reinforced,
+/obj/machinery/door/window/brigdoor/eastright{
+	name = "Research and Development Desk";
+	req_one_access = list(47);
+	req_access = null;
+	dir = 1
+	},
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-8"
+	},
+/obj/machinery/button/doorbell{
+	desc = "A doorbell, press to get beakers thrown at you.";
+	id = "sciding";
+	name = "Research Call";
+	pixel_x = -9;
+	pixel_y = -6
+	},
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"gl" = (
+/obj/structure/grille,
+/obj/machinery/door/firedoor/glass,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/plating,
+/area/space)
+"gm" = (
+/obj/item/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -21
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/purple/border{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/steel,
+/area/space)
+"gn" = (
+/obj/structure/cable/green{
+	icon_state = "2-4"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/steel,
+/area/space)
+"go" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/obj/effect/floor_decal/borderfloor/corner,
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/blue/bordercorner,
+/obj/effect/floor_decal/corner/blue/bordercorner{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/steel,
+/area/space)
+"gp" = (
+/obj/machinery/door/airlock/glass_medical{
+	name = "First-Aid Station";
+	req_one_access = null
+	},
+/obj/machinery/door/firedoor/glass,
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/space)
+"gq" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"gr" = (
+/obj/structure/extinguisher_cabinet{
+	dir = 8;
+	pixel_x = 30
+	},
+/obj/effect/floor_decal/corner/blue{
+	dir = 6
+	},
+/obj/structure/cable/green{
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"gs" = (
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -26
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 8
+	},
+/turf/simulated/floor/wood,
+/area/space)
+"gt" = (
+/obj/structure/bed/chair/bay/chair/padded/blue{
+	dir = 1
+	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/wood,
+/area/space)
+"gu" = (
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/spline/plain,
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"gv" = (
+/obj/effect/floor_decal/milspec/color/purple/half,
+/obj/structure/table/standard,
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"gw" = (
+/obj/machinery/light,
+/obj/machinery/computer/security/telescreen/entertainment{
+	pixel_x = 32
+	},
+/obj/machinery/rnd/destructive_analyzer,
+/obj/effect/floor_decal/milspec/color/purple/half{
+	dir = 4
+	},
+/obj/effect/floor_decal/milspec/color/purple/half{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"gx" = (
+/obj/machinery/vending/fitness,
+/obj/effect/floor_decal/borderfloor{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/purple/border{
+	dir = 9
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/steel,
+/area/space)
+"gy" = (
+/obj/machinery/vending/foodfast,
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/purple/border{
+	dir = 1
+	},
+/obj/item/geiger/wall/north,
+/turf/simulated/floor/tiled/steel,
+/area/space)
+"gz" = (
+/obj/machinery/vending/snack,
+/obj/effect/floor_decal/borderfloor{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/blue/border{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/steel,
+/area/space)
+"gA" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/plating,
+/area/space)
+"gB" = (
+/obj/machinery/medical_kiosk{
+	pixel_y = 2;
+	can_dispense = 1
+	},
+/obj/effect/floor_decal/corner/blue/full{
+	dir = 8
+	},
+/obj/machinery/camera/network/medbay{
+	c_tag = "MED - Bar Medstation"
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"gC" = (
+/obj/structure/table/standard,
+/obj/effect/floor_decal/corner/blue{
+	dir = 5
+	},
+/obj/machinery/alarm{
+	pixel_y = 26
+	},
+/obj/item/stack/medical/splint,
+/obj/item/stack/medical/splint,
+/obj/item/stack/medical/splint,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"gD" = (
+/obj/structure/table/standard,
+/obj/item/storage/firstaid/fire,
+/obj/effect/floor_decal/corner/blue{
+	dir = 5
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/machinery/firealarm{
+	pixel_y = 26
+	},
+/obj/item/storage/firstaid/regular,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"gE" = (
+/obj/structure/table/standard,
+/obj/item/storage/firstaid/o2,
+/obj/item/storage/firstaid/toxin,
+/obj/effect/floor_decal/corner/blue/full{
+	dir = 1
+	},
+/obj/machinery/power/apc{
+	dir = 1;
+	name = "north bump";
+	pixel_y = 24;
+	nightshift_setting = 2
+	},
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
+/obj/item/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = 32
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"gF" = (
+/obj/structure/table/woodentable,
+/obj/item/paper_bin,
+/obj/item/pen,
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 8
+	},
+/turf/simulated/floor/wood,
+/area/space)
+"gG" = (
+/obj/machinery/computer/med_data/laptop,
+/obj/structure/table/woodentable,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/wood,
+/area/space)
+"gH" = (
+/obj/structure/table/woodentable,
+/obj/item/toy/plushie/therapy/yellow{
+	name = "Cheese"
+	},
+/obj/item/fluff/fidgetspinner,
+/turf/simulated/floor/wood,
+/area/space)
+"gI" = (
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/wood,
+/area/space)
+"gJ" = (
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"gK" = (
+/obj/structure/bed/chair/office/dark{
+	dir = 4
+	},
+/obj/effect/landmark/start/scientist,
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"gL" = (
+/obj/machinery/camera/network/research{
+	c_tag = "SCI - RnD East";
+	dir = 8
+	},
+/obj/effect/floor_decal/milspec/color/purple/half{
+	dir = 4
+	},
+/obj/machinery/status_display{
+	layer = 4;
+	pixel_x = 32
+	},
+/obj/machinery/computer/rdconsole_tg{
+	dir = 8
+	},
+/obj/effect/floor_decal/milspec/color/purple/half{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"gM" = (
+/obj/machinery/button/windowtint{
+	id = "mental_health";
+	pixel_x = -24;
+	pixel_y = 10
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 8
+	},
+/obj/structure/extinguisher_cabinet{
+	dir = 4;
+	pixel_x = -30;
+	pixel_y = -7
+	},
+/turf/simulated/floor/wood,
+/area/space)
+"gN" = (
+/obj/structure/bed/chair/office/dark{
+	dir = 4
+	},
+/obj/effect/landmark/start{
+	name = "Psychiatrist"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/wood,
+/area/space)
+"gO" = (
+/obj/structure/table/woodentable,
+/obj/item/folder,
+/turf/simulated/floor/wood,
+/area/space)
+"gP" = (
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"gQ" = (
+/obj/effect/floor_decal/milspec/color/purple/half{
+	dir = 4
+	},
+/obj/machinery/ai_status_display{
+	pixel_x = 32
+	},
+/obj/machinery/computer/supply_request_computeralt/research{
+	dir = 8
+	},
+/obj/effect/floor_decal/milspec/color/purple/half{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"gR" = (
+/obj/item/assembly/igniter,
+/obj/structure/table/standard,
+/turf/simulated/floor/reinforced,
+/area/space)
+"gS" = (
+/obj/structure/reagent_dispensers/watertank,
+/obj/machinery/light,
+/turf/simulated/floor/reinforced,
+/area/space)
+"gT" = (
+/obj/structure/reagent_dispensers/fueltank,
+/turf/simulated/floor/reinforced,
+/area/space)
+"gU" = (
+/obj/machinery/sparker{
+	id = "Xenobio";
+	pixel_y = -28
+	},
+/turf/simulated/floor/reinforced,
+/area/space)
+"gV" = (
+/obj/machinery/camera/network/research{
+	c_tag = "SCI - Miscellaneous Test Chamber";
+	dir = 1;
+	network = list("Research","Miscellaneous Reseach")
+	},
+/turf/simulated/floor/reinforced,
+/area/space)
+"gW" = (
+/turf/simulated/floor/reinforced,
+/area/space)
+"gX" = (
+/obj/machinery/light,
+/turf/simulated/floor/reinforced,
+/area/space)
+"gY" = (
+/obj/structure/stasis_cage,
+/turf/simulated/floor/reinforced,
+/area/space)
+"gZ" = (
+/obj/structure/closet/secure_closet{
+	name = "Psychiatrist's Locker";
+	req_access = list(64)
+	},
+/obj/item/clothing/suit/straight_jacket,
+/obj/item/reagent_containers/pill/methylphenidate,
+/obj/item/reagent_containers/pill/citalopram,
+/obj/item/reagent_containers/pill/citalopram,
+/obj/item/reagent_containers/pill/citalopram,
+/obj/item/reagent_containers/pill/citalopram,
+/obj/item/reagent_containers/pill/methylphenidate,
+/obj/item/reagent_containers/syringe,
+/obj/item/reagent_containers/syringe,
+/obj/item/reagent_containers/syringe,
+/obj/item/reagent_containers/glass/bottle/stoxin,
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 9
+	},
+/obj/item/clothing/suit/storage/teshari/cloak/jobs/psych,
+/obj/item/clothing/accessory/holster/hip,
+/obj/item/storage/box/syringegun,
+/obj/item/gun/launcher/syringe,
+/obj/item/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -21
+	},
+/obj/item/geiger/wall/north,
+/turf/simulated/floor/wood,
+/area/space)
+"ha" = (
+/obj/machinery/power/apc{
+	dir = 1;
+	name = "north bump";
+	pixel_y = 24
+	},
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/space)
+"hb" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/obj/structure/sign/scenery/map/left_outpost21{
+	pixel_y = 32
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/space)
+"hc" = (
+/obj/structure/sign/scenery/map/right_outpost21{
+	pixel_y = 32
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/space)
+"hd" = (
+/obj/effect/floor_decal/milspec/color/purple/half{
+	dir = 4
+	},
+/obj/item/geiger/wall/east,
+/obj/machinery/rnd/production/protolathe/department/science,
+/obj/effect/floor_decal/milspec/color/purple/half{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"he" = (
+/obj/item/stack/cable_coil,
+/obj/item/multitool,
+/obj/machinery/cell_charger,
+/obj/item/cell/high{
+	charge = 100;
+	maxcharge = 15000
+	},
+/obj/item/cell/high{
+	charge = 100;
+	maxcharge = 15000
+	},
+/obj/structure/table/standard,
+/turf/simulated/floor/reinforced,
+/area/space)
+"hf" = (
+/obj/machinery/portable_atmospherics/canister,
+/turf/simulated/floor/reinforced,
+/area/space)
+"hg" = (
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-8"
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals_central7{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"hh" = (
+/obj/effect/floor_decal/milspec/color/purple/half{
+	dir = 4
+	},
+/obj/item/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = 21
+	},
+/obj/machinery/rnd/production/circuit_imprinter,
+/obj/effect/floor_decal/milspec/color/purple/half{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"hi" = (
+/obj/structure/table/standard,
+/turf/simulated/floor/reinforced,
+/area/space)
+"hj" = (
+/obj/effect/landmark{
+	name = "blobstart"
+	},
+/turf/simulated/floor/reinforced,
+/area/space)
+"hk" = (
+/obj/machinery/atmospherics/unary/outlet_injector{
+	dir = 1;
+	frequency = 1441;
+	id = "n2_in";
+	use_power = 1
+	},
+/turf/simulated/floor/reinforced,
+/area/space)
+"hl" = (
+/obj/structure/prop/rock/watersharp,
+/turf/simulated/floor/water/acidic/deep/turfpack/muriki,
+/area/space)
 "hm" = (
 /turf/space,
+/area/space)
+"hn" = (
+/turf/simulated/floor/water/acidic/deep/turfpack/muriki,
+/area/space)
+"ho" = (
+/turf/simulated/floor/water/acidic/turfpack/muriki,
+/area/space)
+"hp" = (
+/obj/structure/flora/lily3,
+/turf/simulated/floor/water/acidic/turfpack/muriki,
+/area/space)
+"hq" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/obj/structure/cable/green{
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"hr" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"hs" = (
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
+/obj/machinery/power/apc{
+	dir = 4;
+	name = "east bump";
+	pixel_x = 24
+	},
+/obj/effect/floor_decal/milspec/color/purple/half{
+	dir = 4
+	},
+/obj/structure/table/standard,
+/obj/item/lightreplacer,
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"ht" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/reinforced,
+/area/space)
+"hu" = (
+/obj/machinery/atmospherics/pipe/simple/visible,
+/turf/simulated/floor/reinforced,
+/area/space)
+"hv" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
+	},
+/turf/simulated/floor/reinforced,
+/area/space)
+"hw" = (
+/turf/simulated/floor/outdoors/mud/turfpack/muriki,
+/area/space)
+"hx" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/light_switch{
+	pixel_x = 25;
+	pixel_y = 28
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"hy" = (
+/obj/machinery/cell_charger,
+/obj/structure/table/standard,
+/obj/item/cataloguer/compact,
+/obj/item/cell/high{
+	charge = 100;
+	maxcharge = 15000
+	},
+/obj/item/cell/high{
+	charge = 100;
+	maxcharge = 15000
+	},
+/obj/effect/floor_decal/milspec/color/purple/half{
+	dir = 1
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 5;
+	pixel_y = 32
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"hz" = (
+/obj/structure/table/standard,
+/obj/machinery/recharger{
+	pixel_x = 6
+	},
+/obj/machinery/recharger{
+	pixel_x = -5
+	},
+/obj/item/cell/device,
+/obj/item/cell/device,
+/obj/effect/floor_decal/milspec/color/purple/half{
+	dir = 5
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/machinery/alarm{
+	pixel_y = 26
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"hA" = (
+/obj/machinery/shieldwallgen{
+	anchored = 1;
+	req_access = list(47)
+	},
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
+/obj/effect/floor_decal/milspec/color/purple,
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"hB" = (
+/obj/machinery/door/blast/regular{
+	density = 0;
+	dir = 4;
+	icon_state = "pdoor0";
+	id = "misclab";
+	name = "Test Chamber Blast Doors";
+	opacity = 0
+	},
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/plating,
+/area/space)
+"hC" = (
+/obj/machinery/door/blast/regular{
+	density = 0;
+	dir = 4;
+	icon_state = "pdoor0";
+	id = "misclab";
+	name = "Test Chamber Blast Doors";
+	opacity = 0
+	},
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
+/obj/structure/cable/green,
+/turf/simulated/floor/plating,
+/area/space)
+"hD" = (
+/obj/machinery/door/blast/regular{
+	density = 0;
+	dir = 4;
+	icon_state = "pdoor0";
+	id = "misclab";
+	name = "Test Chamber Blast Doors";
+	opacity = 0
+	},
+/obj/machinery/door/window/southleft{
+	dir = 1;
+	name = "Test Chamber";
+	req_one_access = list(7,29)
+	},
+/obj/machinery/door/window/southleft{
+	name = "Test Chamber";
+	req_one_access = list(7,29)
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/old_cargo/white,
+/area/space)
+"hE" = (
+/obj/machinery/door/blast/regular{
+	density = 0;
+	dir = 4;
+	icon_state = "pdoor0";
+	id = "misclab";
+	name = "Test Chamber Blast Doors";
+	opacity = 0
+	},
+/obj/machinery/door/window/southright{
+	dir = 1;
+	name = "Test Chamber";
+	req_one_access = list(7,29)
+	},
+/obj/machinery/door/window/southright{
+	name = "Test Chamber";
+	req_one_access = list(7,29)
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/visible,
+/turf/simulated/floor/tiled/old_cargo/white,
+/area/space)
+"hF" = (
+/obj/machinery/door/blast/regular{
+	density = 0;
+	dir = 4;
+	icon_state = "pdoor0";
+	id = "misclab";
+	name = "Test Chamber Blast Doors";
+	opacity = 0
+	},
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced,
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/red,
+/turf/simulated/floor/plating,
+/area/space)
+"hG" = (
+/obj/machinery/door/blast/regular{
+	density = 0;
+	dir = 4;
+	icon_state = "pdoor0";
+	id = "misclab";
+	name = "Test Chamber Blast Doors";
+	opacity = 0
+	},
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced,
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/plating,
+/area/space)
+"hH" = (
+/obj/machinery/shieldwallgen{
+	anchored = 1;
+	req_access = list(47)
+	},
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
+/obj/effect/floor_decal/milspec/color/purple,
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"hI" = (
+/obj/machinery/door/airlock/glass_research{
+	name = "Research and Development"
+	},
+/obj/machinery/door/firedoor/glass,
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled/steel_ridged,
+/area/space)
+"hJ" = (
+/obj/effect/floor_decal/milspec/color/purple/half{
+	dir = 10
+	},
+/obj/structure/extinguisher_cabinet{
+	dir = 4;
+	pixel_x = -30;
+	pixel_y = -7
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"hK" = (
+/obj/effect/floor_decal/milspec/color/purple/half,
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"hL" = (
+/obj/structure/table/reinforced,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/item/clothing/mask/gas,
+/obj/effect/floor_decal/milspec/color/purple/half,
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"hM" = (
+/obj/machinery/atmospherics/pipe/simple/visible,
+/obj/effect/floor_decal/milspec/color/purple/half,
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"hN" = (
+/obj/structure/table/reinforced,
+/obj/item/tool/wrench,
+/obj/item/clothing/glasses/science,
+/obj/item/tool/crowbar/brass,
+/obj/machinery/atmospherics/pipe/simple/hidden/red{
+	dir = 6
+	},
+/obj/effect/floor_decal/milspec/color/purple/half,
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"hO" = (
+/obj/structure/table/reinforced,
+/obj/machinery/button/ignition{
+	id = "Xenobio";
+	pixel_x = -6;
+	pixel_y = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/red{
+	dir = 4
+	},
+/obj/effect/floor_decal/milspec/color/purple/half,
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"hP" = (
+/obj/item/stool/padded,
+/obj/machinery/atmospherics/pipe/simple/hidden/red{
+	dir = 9
+	},
+/obj/machinery/computer/security/telescreen{
+	desc = "Used to monitor the proceedings inside the test chamber.";
+	name = "Test Chamber Monitor";
+	network = list("Miscellaneous Reseach");
+	pixel_x = 32
+	},
+/obj/effect/floor_decal/milspec/color/purple/half{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"hQ" = (
+/obj/structure/disposalpipe/sortjunction/flipped{
+	dir = 8;
+	sortType = "Science";
+	name = "Science"
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"hR" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 10
+	},
+/obj/machinery/light,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"hS" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/obj/effect/floor_decal/corner/purple/full{
+	dir = 4
+	},
+/obj/item/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -21
+	},
+/obj/structure/closet/secure_closet{
+	req_one_access = list(7,47)
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"hT" = (
+/obj/structure/grille,
+/obj/machinery/door/firedoor/glass,
+/obj/structure/window/reinforced/full,
+/turf/simulated/floor/plating,
+/area/space)
+"hU" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/obj/effect/floor_decal/milspec/color/purple/half{
+	dir = 8
+	},
+/obj/machinery/light_switch{
+	dir = 4;
+	pixel_x = -28;
+	pixel_y = -27
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"hV" = (
+/obj/structure/bed/chair/office/light,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"hW" = (
+/obj/structure/ladder/top_hatch,
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"hX" = (
+/obj/machinery/atmospherics/pipe/simple/visible{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"hY" = (
+/obj/machinery/atmospherics/pipe/simple/visible{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"hZ" = (
+/obj/machinery/button/remote/blast_door{
+	id = "misclab";
+	name = "Test Chamber Blast Doors";
+	pixel_x = 6;
+	pixel_y = -30;
+	req_access = list(47)
+	},
+/obj/machinery/atmospherics/pipe/simple/visible{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"ia" = (
+/obj/machinery/atmospherics/binary/pump{
+	dir = 1;
+	name = "Research Lab Vent"
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 10
+	},
+/turf/simulated/floor/plating,
+/area/space)
+"ib" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced,
+/obj/structure/cable/green,
+/obj/machinery/door/blast/regular{
+	density = 0;
+	dir = 2;
+	icon_state = "pdoor0";
+	id = "Scilock";
+	name = "Science Lockdown";
+	opacity = 0
+	},
+/turf/simulated/floor/plating,
+/area/space)
+"ic" = (
+/obj/structure/atmopost,
+/turf/simulated/floor/outdoors/mud/turfpack/muriki,
+/area/space)
+"id" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"ie" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-8"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/effect/catwalk_plated/white,
+/turf/simulated/floor/plating,
+/area/space)
+"if" = (
+/obj/structure/disposalpipe/junction{
+	dir = 2;
+	icon_state = "pipe-j2"
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"ig" = (
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/glass_research{
+	name = "Auxillary Lab";
+	req_one_access = list(30,47,52)
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/steel_ridged,
+/area/space)
+"ih" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"ii" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"ij" = (
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "5-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals_central7{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"ik" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"il" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
+/obj/effect/landmark{
+	name = "vinestart"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"im" = (
+/obj/machinery/atmospherics/binary/pump,
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"in" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/universal,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/space)
+"io" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/cable/green,
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
+/obj/machinery/door/blast/regular{
+	density = 0;
+	dir = 2;
+	icon_state = "pdoor0";
+	id = "Scilock";
+	name = "Science Lockdown";
+	opacity = 0
+	},
+/turf/simulated/floor/plating,
+/area/space)
+"ip" = (
+/obj/structure/trailblazer/yellow,
+/turf/simulated/floor/outdoors/mud/turfpack/muriki,
+/area/space)
+"iq" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"ir" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"is" = (
+/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/corner/purple{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"it" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/effect/floor_decal/milspec/color/purple/half{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"iu" = (
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"iv" = (
+/obj/structure/cable/green{
+	icon_state = "4-10"
+	},
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"iw" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"ix" = (
+/obj/machinery/atmospherics/portables_connector,
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"iy" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 9
+	},
+/turf/simulated/floor/plating,
+/area/space)
+"iz" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
+/obj/machinery/door/blast/regular{
+	density = 0;
+	dir = 2;
+	icon_state = "pdoor0";
+	id = "Scilock";
+	name = "Science Lockdown";
+	opacity = 0
+	},
+/turf/simulated/floor/plating,
+/area/space)
+"iA" = (
+/obj/structure/flora/lily2,
+/turf/simulated/floor/water/acidic/turfpack/muriki,
+/area/space)
+"iB" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/door/firedoor/glass/hidden{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/old_cargo/white,
+/area/space)
+"iC" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/door/firedoor/glass/hidden{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/old_cargo/white,
+/area/space)
+"iD" = (
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -26
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/effect/floor_decal/milspec/color/purple/half{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"iE" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"iF" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"iG" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 10
+	},
+/obj/machinery/doorbell_chime{
+	id_tag = "sciding";
+	name = "Research Call";
+	pixel_x = 32
+	},
+/obj/effect/floor_decal/milspec/color/purple/half{
+	dir = 4
+	},
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"iH" = (
+/obj/machinery/camera/network/outside{
+	c_tag = "EXT - Sci East";
+	dir = 4
+	},
+/turf/simulated/floor/water/acidic/turfpack/muriki,
+/area/space)
+"iI" = (
+/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/corner/purple{
+	dir = 9
+	},
+/obj/machinery/station_map{
+	dir = 4;
+	pixel_x = -32
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"iJ" = (
+/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/corner/purple{
+	dir = 6
+	},
+/obj/item/radio/intercom{
+	dir = 4;
+	frequency = 1475;
+	name = "Station Intercom (Security)";
+	pixel_x = 21
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"iK" = (
+/obj/machinery/disposal,
+/obj/structure/disposalpipe/trunk{
+	dir = 4
+	},
+/obj/effect/floor_decal/milspec/color/purple/half{
+	dir = 9
+	},
+/obj/item/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -21
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"iL" = (
+/obj/machinery/newscaster{
+	pixel_x = -2;
+	pixel_y = 28
+	},
+/obj/structure/closet/crate,
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/obj/effect/floor_decal/milspec/color/purple/half{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"iM" = (
+/obj/machinery/light_switch{
+	pixel_x = -22;
+	pixel_y = 30
+	},
+/obj/structure/closet/crate,
+/obj/machinery/power/apc{
+	dir = 1;
+	name = "north bump";
+	pixel_y = 24
+	},
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
+/obj/effect/floor_decal/milspec/color/purple/half{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"iN" = (
+/obj/machinery/doorbell_chime{
+	id_tag = "sciding";
+	name = "Research Call";
+	pixel_y = 30
+	},
+/obj/effect/floor_decal/milspec/color/purple/half{
+	dir = 1
+	},
+/obj/structure/closet/secure_closet{
+	req_one_access = list(7,47)
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"iO" = (
+/obj/machinery/camera/network/research{
+	c_tag = "SCI - Miscellaneous Research"
+	},
+/obj/structure/table/reinforced,
+/obj/effect/floor_decal/milspec/color/purple/half{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"iP" = (
+/obj/machinery/alarm{
+	pixel_y = 26
+	},
+/obj/item/juke_remote{
+	autolinkareajuke_onspawn = /area/djstation
+	},
+/obj/structure/table/reinforced,
+/obj/effect/floor_decal/milspec/color/purple/half{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"iQ" = (
+/obj/item/geiger/wall{
+	pixel_y = 30
+	},
+/obj/effect/floor_decal/milspec/color/purple/half{
+	dir = 1
+	},
+/obj/structure/closet/firecloset/full,
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"iR" = (
+/obj/structure/extinguisher_cabinet{
+	dir = 8;
+	pixel_x = 30
+	},
+/obj/structure/closet/bombcloset,
+/obj/effect/floor_decal/milspec/color/purple/half{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"iS" = (
+/obj/structure/prop/rock/small/water,
+/turf/simulated/floor/water/acidic/turfpack/muriki,
+/area/space)
+"iT" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/alarm{
+	dir = 4;
+	pixel_x = -26
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"iU" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/green{
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"iV" = (
+/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/corner/purple{
+	dir = 6
+	},
+/obj/machinery/power/thermoregulator/cryogaia{
+	pixel_x = 32
+	},
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"iW" = (
+/obj/item/beartrap{
+	anchored = 1;
+	deployed = 1
+	},
+/turf/simulated/floor/outdoors/mud/turfpack/muriki,
+/area/space)
+"iX" = (
+/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/corner/purple{
+	dir = 9
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/machinery/holoposter{
+	dir = 4;
+	pixel_x = -30
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"iY" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"iZ" = (
+/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/corner/purple{
+	dir = 6
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"ja" = (
+/obj/structure/table/reinforced,
+/obj/item/storage/belt/utility/full,
+/obj/item/pen/fountain,
+/obj/machinery/doorbell_chime{
+	id_tag = "sciding";
+	name = "Research Call";
+	pixel_y = -30
+	},
+/obj/effect/floor_decal/corner/purple/full,
+/obj/item/multitool,
+/obj/item/tool/screwdriver,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"jb" = (
+/obj/structure/table/reinforced,
+/obj/item/paper_bin,
+/obj/effect/floor_decal/corner/purple{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"jc" = (
+/obj/structure/table/reinforced,
+/obj/item/storage/box/monkeycubes/wolpincubes,
+/obj/effect/floor_decal/corner/purple{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"jd" = (
+/obj/structure/closet/secure_closet{
+	req_one_access = list(7,47)
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"je" = (
+/obj/effect/floor_decal/corner/purple{
+	dir = 10
+	},
+/obj/machinery/power/thermoregulator/cryogaia{
+	pixel_y = -32
+	},
+/obj/structure/cable/green,
+/obj/structure/closet/secure_closet{
+	req_one_access = list(7,47)
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"jf" = (
+/obj/machinery/disposal,
+/obj/structure/disposalpipe/trunk{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/purple/full{
+	dir = 4
+	},
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"jg" = (
+/obj/structure/grille,
+/obj/machinery/door/blast/regular{
+	density = 0;
+	icon_state = "pdoor0";
+	id = "misclab";
+	name = "Test Chamber Blast Doors";
+	opacity = 0
+	},
+/obj/structure/window/phoronreinforced{
+	dir = 4
+	},
+/obj/structure/window/phoronreinforced{
+	dir = 8
+	},
+/obj/structure/window/phoronreinforced,
+/obj/structure/cable/green,
+/turf/simulated/floor/plating,
+/area/space)
+"jh" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/reinforced,
+/area/space)
+"ji" = (
+/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/corner/purple{
+	dir = 9
+	},
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -26
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"jj" = (
+/obj/effect/floor_decal/corner/purple{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"jk" = (
+/obj/structure/bed/chair/bay/chair/padded/purple,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"jl" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"jm" = (
+/turf/simulated/floor/tiled/white,
+/area/space)
+"jn" = (
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"jo" = (
+/obj/structure/grille,
+/obj/machinery/door/blast/regular{
+	density = 0;
+	icon_state = "pdoor0";
+	id = "misclab";
+	name = "Test Chamber Blast Doors";
+	opacity = 0
+	},
+/obj/structure/window/phoronreinforced{
+	dir = 4
+	},
+/obj/structure/window/phoronreinforced{
+	dir = 8
+	},
+/obj/structure/window/phoronreinforced{
+	dir = 1
+	},
+/obj/structure/cable/green,
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
+/turf/simulated/floor/plating,
+/area/space)
+"jp" = (
+/obj/machinery/camera/network/research{
+	c_tag = "SCI - Bluespace Lab Test Chamber";
+	dir = 8
+	},
+/turf/simulated/floor/reinforced,
+/area/space)
+"jq" = (
+/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/corner/purple{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"jr" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/cable/green{
+	icon_state = "2-4"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"js" = (
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/glass_research{
+	name = "Telescience";
+	req_one_access = list(7,47)
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/steel_ridged,
+/area/space)
+"jt" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/structure/cable/green{
+	icon_state = "1-8"
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals_central7{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"ju" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"jv" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/hologram/holopad,
+/obj/effect/landmark/redspaceexit,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"jw" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"jx" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"jy" = (
+/obj/machinery/door/blast/regular{
+	density = 0;
+	icon_state = "pdoor0";
+	id = "misclab";
+	name = "Test Chamber Blast Doors";
+	opacity = 0
+	},
+/obj/machinery/door/airlock/research{
+	req_one_access = list(7,47);
+	name = "Telescience Chamber"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/reinforced,
+/area/space)
+"jz" = (
+/obj/machinery/telepad,
+/turf/simulated/floor/reinforced,
+/area/space)
+"jA" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"jB" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 4
+	},
+/obj/effect/catwalk_plated/white,
+/turf/simulated/floor/plating,
+/area/space)
+"jC" = (
+/obj/machinery/button/remote/blast_door{
+	dir = 4;
+	id = "misclab";
+	name = "Test Chamber Blast Doors";
+	pixel_x = -30;
+	pixel_y = 6
+	},
+/obj/machinery/button/ignition{
+	id = "Telesci";
+	pixel_x = -28;
+	pixel_y = -3
+	},
+/obj/machinery/light_switch{
+	dir = 4;
+	pixel_x = -28;
+	pixel_y = -10
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"jD" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"jE" = (
+/obj/structure/bed/chair/bay/chair/padded/purple{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"jF" = (
+/obj/effect/floor_decal/corner/purple{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"jG" = (
+/obj/structure/grille,
+/obj/machinery/door/blast/regular{
+	density = 0;
+	icon_state = "pdoor0";
+	id = "misclab";
+	name = "Test Chamber Blast Doors";
+	opacity = 0
+	},
+/obj/structure/window/phoronreinforced{
+	dir = 4
+	},
+/obj/structure/window/phoronreinforced{
+	dir = 8
+	},
+/obj/structure/window/phoronreinforced,
+/obj/structure/cable/green,
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
+/turf/simulated/floor/plating,
+/area/space)
+"jH" = (
+/obj/machinery/sparker{
+	id = "Telesci";
+	pixel_x = 28
+	},
+/turf/simulated/floor/reinforced,
+/area/space)
+"jI" = (
+/obj/structure/lattice,
+/obj/structure/disposalpipe/down{
+	dir = 1
+	},
+/turf/simulated/open,
+/area/space)
+"jJ" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"jK" = (
+/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/corner/purple{
+	dir = 6
+	},
+/obj/item/radio/intercom{
+	dir = 4;
+	frequency = 1475;
+	name = "Station Intercom (Security)";
+	pixel_x = 21
+	},
+/obj/structure/closet/secure_closet{
+	req_one_access = list(7,47)
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"jL" = (
+/obj/effect/floor_decal/corner/purple/full{
+	dir = 8
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -26
+	},
+/obj/structure/table/reinforced,
+/obj/item/gps/science,
+/obj/item/gps/science,
+/obj/item/gps/science,
+/obj/item/gps/science,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"jM" = (
+/obj/item/stock_parts/subspace/crystal{
+	pixel_x = 6
+	},
+/obj/item/stock_parts/subspace/crystal{
+	pixel_x = 6
+	},
+/obj/item/stock_parts/subspace/crystal{
+	pixel_x = 6
+	},
+/obj/item/stack/telecrystal,
+/obj/item/stack/telecrystal,
+/obj/structure/table/reinforced,
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
+/obj/machinery/power/apc{
+	dir = 1;
+	name = "north bump";
+	pixel_y = 24
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"jN" = (
+/obj/structure/table/reinforced,
+/obj/item/bluespace_crystal,
+/obj/item/bluespace_crystal,
+/obj/item/bluespace_crystal,
+/obj/item/bluespace_crystal,
+/obj/item/sticky_pad/random{
+	pixel_x = -8;
+	pixel_y = 9
+	},
+/obj/machinery/alarm{
+	pixel_y = 26
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"jO" = (
+/obj/machinery/camera/network/research{
+	c_tag = "SCI - Bluespace Lab"
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 5
+	},
+/obj/item/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 21
+	},
+/obj/machinery/computer/telescience,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"jP" = (
+/obj/structure/closet/crate/science,
+/obj/item/bluespace_crystal/artificial,
+/obj/item/bluespace_crystal,
+/obj/item/bluespace_crystal,
+/obj/machinery/vending/wallmed1/public{
+	pixel_y = 30
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"jQ" = (
+/obj/effect/landmark/holiday_event_spawn,
+/obj/effect/floor_decal/corner/purple/full{
+	dir = 1
+	},
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -5;
+	pixel_y = 30
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"jR" = (
+/obj/structure/grille,
+/obj/machinery/door/blast/regular{
+	density = 0;
+	icon_state = "pdoor0";
+	id = "misclab";
+	name = "Test Chamber Blast Doors";
+	opacity = 0
+	},
+/obj/structure/window/phoronreinforced{
+	dir = 4
+	},
+/obj/structure/window/phoronreinforced{
+	dir = 8
+	},
+/obj/structure/window/phoronreinforced{
+	dir = 1
+	},
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
+/turf/simulated/floor/plating,
+/area/space)
+"jS" = (
+/obj/item/geiger/wall/north,
+/turf/simulated/floor/reinforced,
+/area/space)
+"jT" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/effect/landmark/event_spawn/maintpred,
+/turf/simulated/floor/tiled/techfloor,
+/area/space)
+"jU" = (
+/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/corner/purple{
+	dir = 9
+	},
+/obj/machinery/ai_status_display{
+	pixel_x = -32
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"jV" = (
+/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/corner/purple{
+	dir = 6
+	},
+/obj/machinery/camera/network/research{
+	c_tag = "SCI - Main Hall Northeast";
+	network = list("Research","Miscellaneous Reseach");
+	dir = 8
+	},
+/obj/structure/closet/secure_closet{
+	req_one_access = list(7,47)
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"jW" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/window/maintenance_panel{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/space)
+"jX" = (
+/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/corner/purple/full{
+	dir = 8
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/machinery/status_display{
+	layer = 4;
+	pixel_x = -32
+	},
+/obj/structure/closet{
+	name = "Winter Coats"
+	},
+/obj/item/clothing/shoes/boots/winter/science,
+/obj/item/clothing/shoes/boots/winter/science,
+/obj/item/clothing/shoes/boots/winter/science,
+/obj/item/clothing/suit/storage/hooded/wintercoat/science,
+/obj/item/clothing/suit/storage/hooded/wintercoat/science,
+/obj/item/clothing/suit/storage/hooded/wintercoat/science,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"jY" = (
+/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/corner/purple/full{
+	dir = 1
+	},
+/obj/structure/closet/secure_closet{
+	req_one_access = list(7,47)
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"jZ" = (
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/obj/machinery/doorbell_chime{
+	id_tag = "sciding";
+	name = "Research Call";
+	pixel_y = -30
+	},
+/obj/effect/floor_decal/milspec/color/purple/half{
+	dir = 10
+	},
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -26
+	},
+/obj/structure/closet/firecloset/full,
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"ka" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/floor_decal/milspec/color/purple/half,
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/item/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -21
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"kb" = (
+/obj/machinery/door/window,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/floor_decal/milspec/color/purple/half,
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/micro_tunnel{
+	pixel_y = -32
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"kc" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/floor_decal/milspec/color/purple/half,
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"kd" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/floor_decal/milspec/color/purple/half,
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/light,
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"ke" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/floor_decal/milspec/color/purple/half,
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/camera/network/research{
+	c_tag = "SCI - Firing Range Impact";
+	dir = 1;
+	network = list("Research","Miscellaneous Reseach")
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"kf" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/floor_decal/milspec/color/purple/half,
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/light,
+/obj/structure/ladder/top_hatch,
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"kg" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"kh" = (
+/obj/machinery/shieldwallgen,
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
+/obj/structure/catwalk,
+/turf/simulated/floor/plating,
+/area/space)
+"ki" = (
+/obj/structure/grille,
+/obj/machinery/door/firedoor/glass,
+/obj/structure/window/reinforced/full,
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/plating,
+/area/space)
+"kj" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/door/airlock/glass_research{
+	name = "Weapon Testing Range";
+	req_one_access = list(7,47)
+	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/tiled/steel_ridged,
+/area/space)
+"kk" = (
+/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/milspec/color/purple/half{
+	dir = 8
+	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"kl" = (
+/obj/machinery/door/window,
+/obj/structure/window/reinforced,
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"km" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"kn" = (
+/obj/structure/target_stake,
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"ko" = (
+/obj/effect/floor_decal/milspec/color/purple/half{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
 /area/space)
 "mj" = (
 /turf/simulated/wall/r_wall,
@@ -18667,29 +21089,29 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+ki
+jX
+jU
+jq
+jA
+jq
+ji
+iX
+iT
+iI
+iB
+iq
+id
+hQ
+hI
+hx
+hq
+hg
+gJ
+gJ
+gJ
+gu
+gk
 hm
 hm
 hm
@@ -18924,29 +21346,29 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+kj
+ir
+ir
+jJ
+jB
+jr
+ir
+iY
+iU
+ir
+iC
+ir
+ie
+hR
+ev
+hy
+hr
+gP
+gP
+gP
+gK
+gv
+gl
 hm
 hm
 hm
@@ -19181,29 +21603,29 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+ki
+jY
+jV
+jK
+is
+if
+is
+iZ
+iV
+iJ
+iB
+is
+if
+hS
+ev
+hz
+hs
+hh
+hd
+gQ
+gL
+gw
+mj
 hm
 hm
 hm
@@ -19438,29 +21860,29 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+ev
+ev
+ev
+ev
+ev
+js
+gA
+gA
+ev
+ev
+ev
+hT
+ig
+hT
+ev
+ev
+mj
+mj
+mj
+mj
+mj
+mj
+mj
 hm
 hm
 hm
@@ -19695,29 +22117,29 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+kk
+jZ
+ev
+jL
+jC
+id
+jj
+ja
+ev
+iK
+iD
+it
+ih
+hU
+hJ
+hA
+mj
+hi
+he
+gR
+mj
+gx
+gm
 hm
 hm
 hm
@@ -19952,29 +22374,29 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+gP
+ka
+ev
+jM
+jn
+jt
+jk
+jb
+ev
+iL
+iu
+iu
+ii
+gP
+hK
+hB
+mj
+gW
+gW
+gS
+mj
+gy
+gn
 hm
 hm
 hm
@@ -20209,29 +22631,29 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+kl
+kb
+ev
+jN
+jD
+ju
+jl
+jc
+ev
+iM
+gJ
+gJ
+ij
+hV
+hL
+hC
+ht
+gW
+gW
+gT
+mj
+gz
+go
 hm
 hm
 hm
@@ -20466,29 +22888,29 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+km
+kc
+mj
+jO
+jE
+jv
+jm
+jd
+ev
+iN
+gP
+iv
+ik
+hW
+hK
+hD
+gW
+hj
+gW
+gU
+mj
+gA
+gp
 hm
 hm
 hm
@@ -20723,29 +23145,29 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+gP
+kd
+mj
+jP
+jm
+jw
+jn
+je
+ev
+iO
+iE
+iw
+il
+hX
+hM
+hE
+hu
+hk
+gW
+gV
+mj
+gB
+gq
 hm
 hm
 hm
@@ -20980,29 +23402,29 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+gP
+kc
+mj
+jQ
+jF
+jx
+is
+jf
+ev
+iP
+iF
+hr
+gP
+hY
+hN
+hF
+hv
+gW
+gW
+gW
+mj
+gC
+gq
 hm
 hm
 hm
@@ -21237,29 +23659,29 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+gP
+kc
+mj
+jR
+jG
+jy
+jo
+jg
+mj
+iQ
+iF
+ix
+im
+hZ
+hO
+hG
+mj
+gW
+gW
+gX
+mj
+gD
+gq
 hm
 hm
 hm
@@ -21494,29 +23916,29 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+gP
+kc
+mj
+gW
+gW
+gW
+gW
+gW
+mj
+iR
+iG
+iy
+in
+ia
+hP
+hH
+mj
+hf
+hf
+gY
+mj
+gE
+gr
 hm
 hm
 hm
@@ -21751,29 +24173,29 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+gP
+kc
+mj
+jS
+gW
+gW
+gW
+gW
+mj
+mj
+mj
+iz
+io
+ib
+mj
+mj
+mj
+mj
+mj
+mj
+mj
+ev
+ev
 hm
 hm
 hm
@@ -22008,29 +24430,29 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+kn
+ke
+mj
+jh
+jH
+jz
+jp
+jh
+mj
+hn
+iH
+iA
+hw
+hw
+hw
+ho
+hn
+hl
+mj
+gZ
+gM
+gF
+gs
 hm
 hm
 hm
@@ -22265,29 +24687,29 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+gP
+kf
+mj
+mj
+mj
+mj
+mj
+mj
+mj
+ho
+ho
+ho
+ip
+ic
+ho
+ho
+ho
+hn
+mj
+ha
+gN
+gG
+gt
 hm
 hm
 hm
@@ -22522,29 +24944,29 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+gJ
+kg
+jW
+jT
+jI
+mj
+hn
+ho
+iW
+iS
+ho
+ho
+ho
+ho
+ho
+ho
+ho
+ho
+mj
+hb
+gO
+gH
+aw
 hm
 hm
 hm
@@ -22779,29 +25201,29 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+ko
+kh
+mj
+mj
+mj
+mj
+hn
+ho
+ho
+ho
+ho
+hn
+hn
+hn
+hn
+ho
+hw
+hp
+mj
+hc
+aw
+gI
+aw
 hm
 hm
 hm

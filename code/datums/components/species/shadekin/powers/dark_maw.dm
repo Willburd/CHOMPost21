@@ -168,6 +168,14 @@
 		qdel(src)
 		return
 
+	// Outpost 21 edit begin - Darkmaw cannot cross unlinked z levels
+	var/turf/owner_turf = get_turf(owner)
+	var/turf/find_ground = get_turf(src)
+	if(will_vore && isturf(find_ground) && isturf(owner_turf) && !AreConnectedZLevels(owner_turf.z, find_ground.z))
+		to_chat(owner, span_warning("You feel as thought something has set off your trap, but you were too far to claim your prize..."))
+		will_vore = 0 // Too far...
+	// Outpost 21 edit end
+
 	if(will_vore)
 		visible_message(span_warning("The shadowy tendrils grab around [L] and drag them into the floor, leaving nothing behind."))
 		target.nom_atom(L)

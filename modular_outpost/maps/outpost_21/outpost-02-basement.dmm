@@ -435,6 +435,14 @@
 	},
 /turf/simulated/floor/plating,
 /area/rnd/research/anomaly)
+"aaS" = (
+/obj/effect/landmark/pengmark,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
+/area/mine/unexplored/muriki/cave/sec)
+"aaT" = (
+/obj/effect/landmark/pengmark,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/unexplored/muriki/cave/underdark_pit/south_civ)
 "aaU" = (
 /obj/structure/table/standard,
 /obj/item/camera,
@@ -567,6 +575,20 @@
 "abi" = (
 /turf/simulated/wall/r_wall,
 /area/rnd/xenobiology/xenobiohstore)
+"abj" = (
+/obj/effect/landmark/pengmark,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/wastedisposalnear)
+"abk" = (
+/obj/effect/landmark/pengmark,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/unexplored/muriki/cave/underdark_pit/south_west_waste)
+"abl" = (
+/obj/effect/landmark/pengmark,
+/turf/simulated/floor/outdoors/mud/turfpack/muriki{
+	outdoors = 0
+	},
+/area/mine/explored/muriki/river/south)
 "abm" = (
 /obj/structure/reagent_dispensers/water_cooler/full,
 /obj/machinery/light{
@@ -599,6 +621,16 @@
 	},
 /turf/simulated/floor/wood/alt,
 /area/maintenance/oldbridge)
+"abp" = (
+/obj/effect/landmark/pengmark,
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1;
+	oxygen = 0;
+	nitrogen = 0;
+	carbon_dioxide = 0;
+	phoron = 500
+	},
+/area/mine/unexplored/muriki/cave/cargo)
 "abq" = (
 /obj/machinery/atmospherics/binary/pump{
 	dir = 8
@@ -630,6 +662,12 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/scielevbasement)
+"abu" = (
+/obj/effect/landmark/pengmark,
+/turf/simulated/floor/outdoors/mud/turfpack/muriki{
+	outdoors = 0
+	},
+/area/maintenance/civ/east)
 "abv" = (
 /obj/structure/cable/green{
 	icon_state = "2-5"
@@ -822,6 +860,11 @@
 "abS" = (
 /turf/simulated/open/muriki,
 /area/mine/unexplored/muriki/cave/underdark_pit/south_civ)
+"abT" = (
+/obj/structure/catwalk,
+/obj/effect/landmark/pengmark,
+/turf/simulated/floor/plating/external/turfpack/muriki,
+/area/maintenance/civ/west)
 "abU" = (
 /obj/machinery/atmospherics/binary/pump{
 	dir = 4
@@ -1012,6 +1055,28 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/lowmain)
+"acr" = (
+/obj/effect/landmark/pengmark,
+/turf/simulated/floor/outdoors/mud/turfpack/muriki{
+	outdoors = 0
+	},
+/area/mine/unexplored/muriki/cave/eng)
+"acs" = (
+/obj/effect/landmark/pengmark,
+/turf/simulated/floor/water/acidic/deep/turfpack/muriki,
+/area/muriki/processor/gland/airmix)
+"act" = (
+/obj/effect/landmark/pengmark,
+/turf/simulated/floor/gas_crack/methane,
+/area/engineering/coreproctunnel)
+"acu" = (
+/obj/effect/landmark/pengmark,
+/turf/simulated/floor/bluegrid/airless,
+/area/medical/voxlab/airgap)
+"acv" = (
+/obj/effect/landmark/pengmark,
+/turf/simulated/floor/reinforced/phoron,
+/area/engineering/atmos)
 "acw" = (
 /obj/structure/railing{
 	dir = 8
@@ -1030,6 +1095,10 @@
 	},
 /turf/simulated/floor/plating,
 /area/engineering/atmos)
+"acy" = (
+/obj/effect/landmark/pengmark,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
+/area/mine/unexplored/muriki/cave/terra)
 "acz" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
@@ -1320,6 +1389,16 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/atmos)
+"acZ" = (
+/obj/effect/landmark/pengmark,
+/turf/simulated/floor/outdoors/mud/turfpack/muriki{
+	outdoors = 0
+	},
+/area/mine/explored/muriki/river/north)
+"ada" = (
+/obj/effect/landmark/pengmark,
+/turf/simulated/floor/water/acidic/indoor/turfpack/muriki,
+/area/muriki/processor/pools/eastfund)
 "adb" = (
 /turf/simulated/floor/tiled/old_cargo/white,
 /area/rnd/hallway/lowmain)
@@ -1558,6 +1637,10 @@
 /obj/machinery/cell_charger,
 /turf/simulated/floor/tiled,
 /area/rnd/research/anomaly)
+"adz" = (
+/obj/structure/catwalk,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/research)
 "adA" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -1570,6 +1653,11 @@
 /obj/structure/disposalpipe/junction,
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/exp_prep)
+"adB" = (
+/obj/structure/ladder/up,
+/obj/effect/floor_decal/industrial/outline/grey,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/research)
 "adC" = (
 /turf/simulated/mineral/alt/turfpack/muriki,
 /area/mine/explored/muriki/cave/sci/east_access)
@@ -1759,6 +1847,7 @@
 /obj/structure/railing{
 	dir = 8
 	},
+/obj/effect/landmark/pengmark,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/sec)
 "aeg" = (
@@ -38027,6 +38116,7 @@
 /obj/structure/railing{
 	flags = null
 	},
+/obj/effect/landmark/pengmark,
 /turf/simulated/floor/plating,
 /area/maintenance/sec)
 "buR" = (
@@ -45283,6 +45373,7 @@
 /obj/structure/railing{
 	dir = 8
 	},
+/obj/effect/landmark/pengmark,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/civ/west)
 "bJm" = (
@@ -91926,7 +92017,7 @@ ltw
 ltw
 ltw
 ltw
-ltw
+acs
 ltw
 ltw
 ltw
@@ -93797,7 +93888,7 @@ byK
 aae
 byK
 arN
-ava
+abj
 byK
 cfv
 cfv
@@ -98850,7 +98941,7 @@ mpk
 mpk
 mpk
 mpk
-mpk
+ada
 mpk
 mpk
 mpk
@@ -102612,7 +102703,7 @@ gKH
 gKH
 bTO
 gKH
-cIT
+act
 cIT
 gKH
 bTh
@@ -102748,7 +102839,7 @@ kwU
 kwU
 kwU
 kwU
-kmW
+acy
 cJe
 kwU
 lCI
@@ -103514,7 +103605,7 @@ agW
 ccJ
 awm
 awl
-awl
+abk
 bzV
 bzV
 bzV
@@ -109400,7 +109491,7 @@ bMZ
 bDx
 adR
 acT
-afz
+acv
 afz
 asp
 aii
@@ -110298,7 +110389,7 @@ aUQ
 bge
 brt
 brt
-brt
+abp
 bpz
 bpz
 bpz
@@ -111495,7 +111586,7 @@ aqY
 aqY
 tIC
 tts
-cGy
+acZ
 bMZ
 bMZ
 bMZ
@@ -115819,7 +115910,7 @@ mGE
 fBh
 fBh
 fBh
-xpG
+abl
 cHv
 aNL
 aNL
@@ -122563,7 +122654,7 @@ bPR
 aQt
 bMZ
 bMZ
-cGH
+acr
 cGF
 cGE
 aqY
@@ -127057,7 +127148,7 @@ aPF
 bMC
 adv
 adT
-adT
+acu
 aeG
 aeG
 ahq
@@ -127236,7 +127327,7 @@ atw
 auA
 aqq
 aqq
-adT
+acu
 adv
 azH
 aAH
@@ -129649,7 +129740,7 @@ aPF
 bMC
 adv
 adT
-adT
+acu
 aeJ
 aeJ
 aeJ
@@ -129665,7 +129756,7 @@ ajF
 apq
 auO
 auO
-adT
+acu
 axK
 adv
 bLV
@@ -130416,7 +130507,7 @@ aXG
 uTK
 uTK
 aXl
-nzw
+aaS
 glX
 glX
 glX
@@ -134081,7 +134172,7 @@ aEF
 cnU
 cnU
 cLA
-cqw
+abT
 cnU
 cqw
 cLz
@@ -139396,7 +139487,7 @@ cJT
 agP
 ahC
 ahC
-ahC
+amq
 amq
 amq
 bLy
@@ -139558,8 +139649,8 @@ agP
 agP
 agP
 agP
-ahC
 amq
+adB
 bzB
 bLz
 bRI
@@ -139720,7 +139811,7 @@ agP
 cKA
 cKy
 agP
-ahC
+amq
 amq
 chs
 amq
@@ -139889,7 +139980,7 @@ btb
 amq
 amq
 cLR
-cLQ
+adz
 amq
 aPW
 aIe
@@ -144186,7 +144277,7 @@ alg
 akQ
 mpL
 auV
-azf
+aaT
 abS
 azf
 auV
@@ -145612,7 +145703,7 @@ aXy
 aXy
 aXy
 syy
-cFS
+abu
 fUK
 olM
 olM
