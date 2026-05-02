@@ -115,11 +115,14 @@
 	for(var/obj/item/clothing/accessory/A in accessories)
 		slowdown += A.slowdown
 
-/obj/item/clothing/proc/removetie_verb(mob/user)
+/obj/item/clothing/proc/removetie_verb()
 	set name = "Remove Accessory"
 	set category = "Object"
 	set src in usr
 
+	removetie_proc(usr)
+
+/obj/item/clothing/proc/removetie_proc(mob/living/user)
 	if(!user)
 		user = usr
 
