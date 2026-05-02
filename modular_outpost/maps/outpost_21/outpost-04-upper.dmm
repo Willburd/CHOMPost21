@@ -7863,6 +7863,14 @@
 	},
 /turf/simulated/floor/tiled/hydro,
 /area/hydroponics/hallway)
+"arn" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/window/reinforced/polarized/full{
+	id = "medbreak_tint"
+	},
+/obj/structure/grille,
+/turf/simulated/floor/plating,
+/area/crew_quarters/medbreak)
 "arq" = (
 /obj/effect/floor_decal/corner/brown{
 	dir = 4
@@ -43430,10 +43438,10 @@
 /area/muriki/skyline/west)
 "sMx" = (
 /obj/machinery/door/firedoor/glass,
-/obj/structure/window/reinforced/polarized/full{
-	id = "ward_tint"
-	},
 /obj/structure/grille,
+/obj/structure/window/reinforced/polarized/full{
+	id = "medbreak_tint"
+	},
 /turf/simulated/floor/plating,
 /area/crew_quarters/medbreak)
 "sMH" = (
@@ -47617,7 +47625,7 @@
 "uNA" = (
 /obj/machinery/light_switch{
 	pixel_x = -6;
-	pixel_y = 29
+	pixel_y = 26
 	},
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
@@ -47625,6 +47633,11 @@
 /obj/structure/extinguisher_cabinet{
 	pixel_x = 7;
 	pixel_y = 30
+	},
+/obj/machinery/button/windowtint/multitint{
+	id = "medbreak_tint";
+	pixel_x = -6;
+	pixel_y = 34
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/medbreak)
@@ -95461,7 +95474,7 @@ rNi
 cvM
 uLv
 bOq
-sMx
+arn
 szp
 mFG
 avz
