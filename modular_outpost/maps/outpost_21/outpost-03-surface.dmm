@@ -10952,6 +10952,16 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/security/main)
+"auc" = (
+/obj/structure/window/reinforced/tinted/frosted{
+	dir = 8
+	},
+/obj/structure/table/glass,
+/obj/effect/floor_decal/milspec/color/red/half{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/muriki/bathroom/security)
 "aud" = (
 /obj/structure/table/woodentable,
 /obj/item/toy/desk/dippingbird,
@@ -13336,6 +13346,9 @@
 	},
 /obj/structure/table/glass,
 /obj/item/bikehorn/rubberducky/red_harmless,
+/obj/effect/floor_decal/milspec/color/red/half{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/freezer,
 /area/muriki/bathroom/security)
 "aAd" = (
@@ -21738,6 +21751,9 @@
 	},
 /obj/structure/mirror{
 	pixel_y = 34
+	},
+/obj/effect/floor_decal/milspec/color/red/half{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/security)
@@ -30714,6 +30730,9 @@
 	},
 /obj/machinery/light{
 	dir = 8
+	},
+/obj/effect/floor_decal/milspec/color/red/half{
+	dir = 9
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/security)
@@ -48846,20 +48865,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virology/prep)
-"khc" = (
-/obj/effect/floor_decal/milspec/color/red/half,
-/obj/machinery/door/airlock/silver{
-	name = "Toilet"
-	},
-/obj/machinery/door/firedoor/glass,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/kafel_full,
-/area/muriki/bathroom/security)
 "khf" = (
 /obj/structure/disposalpipe/down{
 	dir = 8
@@ -51364,6 +51369,9 @@
 /obj/item/towel/random,
 /obj/item/towel/random,
 /obj/item/towel/random,
+/obj/effect/floor_decal/milspec/color/red/half{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/freezer,
 /area/muriki/bathroom/security)
 "kUi" = (
@@ -62236,6 +62244,9 @@
 /obj/item/storage/box/lights/mixed,
 /obj/item/lightreplacer,
 /obj/structure/table/glass,
+/obj/effect/floor_decal/milspec/color/red/half{
+	dir = 5
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/security)
 "ouM" = (
@@ -67026,6 +67037,7 @@
 	dir = 8;
 	icon_state = "pipe-c"
 	},
+/obj/effect/floor_decal/milspec/color/red/half,
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/security)
 "pYq" = (
@@ -67497,6 +67509,9 @@
 /obj/item/soap/red_soap,
 /obj/item/reagent_containers/spray/cleaner,
 /obj/machinery/light/floortube{
+	dir = 8
+	},
+/obj/effect/floor_decal/milspec/color/red/half{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/freezer,
@@ -76818,6 +76833,9 @@
 /obj/machinery/firealarm{
 	pixel_y = 26
 	},
+/obj/effect/floor_decal/milspec/color/red/half{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/security)
 "thO" = (
@@ -79219,6 +79237,9 @@
 	dir = 8
 	},
 /obj/structure/table/glass,
+/obj/effect/floor_decal/milspec/color/red/half{
+	dir = 10
+	},
 /turf/simulated/floor/tiled/freezer,
 /area/muriki/bathroom/security)
 "tVs" = (
@@ -80460,6 +80481,7 @@
 	pixel_y = -26
 	},
 /obj/machinery/light,
+/obj/effect/floor_decal/milspec/color/red/half,
 /turf/simulated/floor/tiled/freezer,
 /area/muriki/bathroom/security)
 "uoe" = (
@@ -129316,7 +129338,7 @@ azZ
 aWa
 azZ
 aWa
-khc
+azZ
 hnb
 mlS
 mlS
@@ -129639,7 +129661,7 @@ dYI
 kUg
 qhj
 aAc
-tVq
+auc
 tVq
 hnb
 aRb
