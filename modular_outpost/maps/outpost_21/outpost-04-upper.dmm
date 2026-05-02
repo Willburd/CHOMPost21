@@ -6833,9 +6833,6 @@
 /turf/simulated/floor/plating,
 /area/rnd/research/anomaly_storage)
 "apr" = (
-/obj/effect/floor_decal/corner/purple{
-	dir = 9
-	},
 /obj/machinery/light_switch{
 	dir = 1;
 	pixel_x = 25;
@@ -7201,9 +7198,6 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/upper)
 "aqb" = (
-/obj/effect/floor_decal/corner/purple{
-	dir = 9
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/light_switch{
@@ -7732,6 +7726,9 @@
 /obj/machinery/status_display{
 	pixel_y = -32
 	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 10
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/upper)
 "aqX" = (
@@ -7866,6 +7863,14 @@
 	},
 /turf/simulated/floor/tiled/hydro,
 /area/hydroponics/hallway)
+"arn" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/window/reinforced/polarized/full{
+	id = "medbreak_tint"
+	},
+/obj/structure/grille,
+/turf/simulated/floor/plating,
+/area/crew_quarters/medbreak)
 "arq" = (
 /obj/effect/floor_decal/corner/brown{
 	dir = 4
@@ -12199,22 +12204,6 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/cargoupper)
 "cvK" = (
-/obj/structure/closet/secure_closet/brigmedic,
-/obj/item/stack/medical/splint,
-/obj/item/storage/pouch/baton/full,
-/obj/item/storage/backpack/dufflebag/syndie/med{
-	name = "combat medic dufflebag"
-	},
-/obj/item/storage/firstaid/adv,
-/obj/item/clothing/suit/storage/vest/tactical,
-/obj/item/clothing/gloves/black,
-/obj/item/clothing/gloves/sterile/nitrile,
-/obj/item/storage/belt/medical,
-/obj/item/flash,
-/obj/item/clothing/glasses/sunglasses/medhud,
-/obj/item/reagent_containers/hypospray/autoinjector/biginjector/combat_recovery,
-/obj/item/reagent_containers/hypospray/autoinjector/biginjector/combat_recovery,
-/obj/item/reagent_containers/hypospray/autoinjector/biginjector/combat_recovery,
 /obj/effect/floor_decal/corner/blue{
 	dir = 5
 	},
@@ -13926,7 +13915,9 @@
 /area/maintenance/gravgen)
 "dsY" = (
 /obj/structure/grille,
-/obj/structure/window/reinforced/full,
+/obj/structure/window/reinforced/polarized/full{
+	id = "library_window_tint"
+	},
 /turf/simulated/floor/plating,
 /area/library)
 "dte" = (
@@ -30309,22 +30300,6 @@
 /turf/simulated/floor/wood,
 /area/rnd/research/phoronics/breakroom)
 "lWU" = (
-/obj/structure/closet/secure_closet/brigmedic,
-/obj/item/stack/medical/splint,
-/obj/item/storage/pouch/baton/full,
-/obj/item/storage/backpack/dufflebag/syndie/med{
-	name = "combat medic dufflebag"
-	},
-/obj/item/storage/firstaid/adv,
-/obj/item/clothing/suit/storage/vest/tactical,
-/obj/item/clothing/gloves/black,
-/obj/item/clothing/gloves/sterile/nitrile,
-/obj/item/storage/belt/medical,
-/obj/item/flash,
-/obj/item/clothing/glasses/sunglasses/medhud,
-/obj/item/reagent_containers/hypospray/autoinjector/biginjector/combat_recovery,
-/obj/item/reagent_containers/hypospray/autoinjector/biginjector/combat_recovery,
-/obj/item/reagent_containers/hypospray/autoinjector/biginjector/combat_recovery,
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
@@ -43465,10 +43440,10 @@
 /area/muriki/skyline/west)
 "sMx" = (
 /obj/machinery/door/firedoor/glass,
-/obj/structure/window/reinforced/polarized/full{
-	id = "ward_tint"
-	},
 /obj/structure/grille,
+/obj/structure/window/reinforced/polarized/full{
+	id = "medbreak_tint"
+	},
 /turf/simulated/floor/plating,
 /area/crew_quarters/medbreak)
 "sMH" = (
@@ -47652,7 +47627,7 @@
 "uNA" = (
 /obj/machinery/light_switch{
 	pixel_x = -6;
-	pixel_y = 29
+	pixel_y = 26
 	},
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
@@ -47660,6 +47635,11 @@
 /obj/structure/extinguisher_cabinet{
 	pixel_x = 7;
 	pixel_y = 30
+	},
+/obj/machinery/button/windowtint/multitint{
+	id = "medbreak_tint";
+	pixel_x = -6;
+	pixel_y = 34
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/medbreak)
@@ -95496,7 +95476,7 @@ rNi
 cvM
 uLv
 bOq
-sMx
+arn
 szp
 mFG
 avz

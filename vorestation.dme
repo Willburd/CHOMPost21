@@ -6047,7 +6047,6 @@
 #include "modular_outpost\code\modules\research\techwebs\nodes\mech_nodes.dm"
 #include "modular_outpost\code\modules\research\techwebs\nodes\medbay_nodes.dm"
 #include "modular_outpost\code\modules\research\techwebs\nodes\research_nodes.dm"
-#include "modular_outpost\code\modules\research\techwebs\nodes\robo_nodes.dm"
 #include "modular_outpost\code\modules\research\techwebs\nodes\security_nodes.dm"
 #include "modular_outpost\code\modules\resleeving\autoresleever.dm"
 #include "modular_outpost\code\modules\resleeving\machines.dm"

@@ -10889,6 +10889,9 @@
 /obj/structure/bed/chair/bay/comfy/black{
 	dir = 8
 	},
+/obj/effect/landmark/start{
+	name = "Security Officer"
+	},
 /turf/simulated/floor/wood,
 /area/security/briefing_room)
 "atT" = (
@@ -10950,17 +10953,15 @@
 /turf/simulated/floor/tiled,
 /area/hallway/security/main)
 "auc" = (
-/obj/effect/floor_decal/corner/red{
-	dir = 6
+/obj/structure/window/reinforced/tinted/frosted{
+	dir = 8
 	},
-/obj/structure/cable/green{
-	icon_state = "1-2"
+/obj/structure/table/glass,
+/obj/effect/floor_decal/milspec/color/red/half{
+	dir = 8
 	},
-/obj/effect/landmark/start{
-	name = "Brig Physician"
-	},
-/turf/simulated/floor/tiled,
-/area/hallway/security/main)
+/turf/simulated/floor/tiled/freezer,
+/area/muriki/bathroom/security)
 "aud" = (
 /obj/structure/table/woodentable,
 /obj/item/toy/desk/dippingbird,
@@ -13345,6 +13346,9 @@
 	},
 /obj/structure/table/glass,
 /obj/item/bikehorn/rubberducky/red_harmless,
+/obj/effect/floor_decal/milspec/color/red/half{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/freezer,
 /area/muriki/bathroom/security)
 "aAd" = (
@@ -16719,6 +16723,28 @@
 /obj/structure/flora/lily3,
 /turf/simulated/floor/water/acidic/turfpack/muriki,
 /area/engineering/engine_room)
+"aKF" = (
+/obj/effect/floor_decal/corner/red{
+	dir = 10
+	},
+/obj/structure/closet/secure_closet/brigmedic,
+/obj/item/stack/medical/splint,
+/obj/item/storage/pouch/baton/full,
+/obj/item/storage/backpack/dufflebag/syndie/med{
+	name = "combat medic dufflebag"
+	},
+/obj/item/storage/firstaid/adv,
+/obj/item/clothing/suit/storage/vest/tactical,
+/obj/item/storage/belt/medical,
+/obj/item/clothing/gloves/black,
+/obj/item/clothing/gloves/sterile/nitrile,
+/obj/item/flash,
+/obj/item/clothing/glasses/sunglasses/medhud,
+/obj/item/reagent_containers/hypospray/autoinjector/biginjector/combat_recovery,
+/obj/item/reagent_containers/hypospray/autoinjector/biginjector/combat_recovery,
+/obj/item/reagent_containers/hypospray/autoinjector/biginjector/combat_recovery,
+/turf/simulated/floor/tiled,
+/area/security/brig/observation)
 "aKG" = (
 /turf/simulated/floor/water/acidic/turfpack/muriki,
 /area/engineering/engine_room)
@@ -18444,6 +18470,13 @@
 /obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/plating,
 /area/maintenance/medbay_aft)
+"aQV" = (
+/obj/machinery/light,
+/obj/effect/floor_decal/corner/red{
+	dir = 10
+	},
+/turf/simulated/floor/tiled,
+/area/security/brig/observation)
 "aQW" = (
 /obj/structure/railing{
 	dir = 8
@@ -18474,10 +18507,12 @@
 /area/muriki/grounds/engi)
 "aRa" = (
 /obj/structure/closet/firecloset/full,
+/obj/effect/floor_decal/corner/red/full{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/security/brig/observation)
 "aRb" = (
-/obj/structure/closet/firecloset/full,
 /obj/item/radio/intercom/department/security{
 	dir = 1;
 	pixel_y = 21
@@ -18486,6 +18521,9 @@
 	dir = 1;
 	name = "Station Intercom (General)";
 	pixel_y = 32
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 5
 	},
 /turf/simulated/floor/tiled,
 /area/security/brig/observation)
@@ -18503,6 +18541,9 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "0-4"
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 5
 	},
 /turf/simulated/floor/tiled,
 /area/security/brig/observation)
@@ -18542,6 +18583,12 @@
 /obj/structure/ladder/top_hatch,
 /turf/simulated/floor/reinforced,
 /area/muriki/tramstation/civ)
+"aRh" = (
+/obj/effect/floor_decal/corner/red{
+	dir = 9
+	},
+/turf/simulated/floor/tiled,
+/area/security/brig/observation)
 "aRi" = (
 /obj/structure/ladder/up,
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
@@ -18958,6 +19005,9 @@
 	dir = 1;
 	pixel_y = -26
 	},
+/obj/effect/floor_decal/corner/red{
+	dir = 10
+	},
 /turf/simulated/floor/tiled,
 /area/security/brig/observation)
 "aSw" = (
@@ -18970,6 +19020,9 @@
 "aSx" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 10
 	},
 /turf/simulated/floor/tiled,
 /area/security/brig/observation)
@@ -19012,10 +19065,20 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
+/obj/effect/floor_decal/corner/red{
+	dir = 9
+	},
 /turf/simulated/floor/tiled,
 /area/security/brig/observation)
 "aSC" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/light_switch{
+	pixel_x = 26;
+	pixel_y = 28
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 9
+	},
 /turf/simulated/floor/tiled,
 /area/security/brig/observation)
 "aSD" = (
@@ -19382,7 +19445,7 @@
 	},
 /obj/structure/disposalpipe/sortjunction/flipped{
 	dir = 2;
-	sortType = "Science";
+	sortType = "TeleScience";
 	name = "TeleScience"
 	},
 /turf/simulated/floor/tiled/white,
@@ -19684,6 +19747,28 @@
 /obj/structure/closet/crate,
 /turf/simulated/floor/reinforced,
 /area/rnd/otherlab)
+"aTL" = (
+/obj/effect/floor_decal/corner/red{
+	dir = 9
+	},
+/obj/structure/bed/chair/bay/comfy/blue{
+	dir = 4
+	},
+/obj/effect/landmark/start{
+	name = "Brig Physician"
+	},
+/turf/simulated/floor/tiled,
+/area/security/brig/observation)
+"aTM" = (
+/obj/structure/table/woodentable,
+/turf/simulated/floor/tiled,
+/area/security/brig/observation)
+"aTN" = (
+/obj/structure/bed/chair/bay/comfy/blue{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/security/brig/observation)
 "aTO" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
@@ -19694,6 +19779,73 @@
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/tiled/steel,
 /area/hallway/primary/central_three)
+"aTP" = (
+/obj/structure/bed/chair/bay/comfy/blue{
+	dir = 8
+	},
+/obj/effect/landmark/start{
+	name = "Brig Physician"
+	},
+/turf/simulated/floor/tiled,
+/area/security/brig/observation)
+"aTQ" = (
+/obj/effect/floor_decal/corner/red{
+	dir = 9
+	},
+/obj/structure/bed/chair/bay/comfy/blue{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/security/brig/observation)
+"aTR" = (
+/obj/machinery/hologram/holopad,
+/obj/effect/floor_decal/corner/red/full,
+/turf/simulated/floor/tiled,
+/area/security/brig/observation)
+"aTS" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 10
+	},
+/turf/simulated/floor/tiled,
+/area/security/brig/observation)
+"aTT" = (
+/obj/machinery/vending/foodasian,
+/turf/simulated/floor/tiled,
+/area/security/brig/observation)
+"aTU" = (
+/obj/item/juke_remote{
+	autolinkareajuke_onspawn = /area/djstation
+	},
+/obj/structure/table/woodentable,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/security/brig/observation)
+"aTV" = (
+/obj/effect/floor_decal/corner/red{
+	dir = 5
+	},
+/obj/machinery/computer/security/telescreen/bodycamera{
+	pixel_y = 30
+	},
+/turf/simulated/floor/tiled,
+/area/security/brig/observation)
+"aTW" = (
+/obj/structure/bed/chair/backed_red{
+	dir = 1
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 8
+	},
+/obj/effect/landmark/start{
+	name = "Security Officer"
+	},
+/turf/simulated/floor/wood,
+/area/security/briefing_room)
 "aUi" = (
 /obj/machinery/computer/security/telescreen/bodycamera{
 	pixel_y = -2
@@ -20622,6 +20774,10 @@
 "bgV" = (
 /obj/effect/floor_decal/corner/red{
 	dir = 6
+	},
+/obj/machinery/vending/coffee{
+	dir = 8;
+	pixel_x = 5
 	},
 /turf/simulated/floor/tiled,
 /area/security/brig/observation)
@@ -21595,6 +21751,9 @@
 	},
 /obj/structure/mirror{
 	pixel_y = 34
+	},
+/obj/effect/floor_decal/milspec/color/red/half{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/security)
@@ -27839,22 +27998,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/obj/structure/closet/secure_closet/brigmedic,
-/obj/item/stack/medical/splint,
-/obj/item/storage/pouch/baton/full,
-/obj/item/storage/backpack/dufflebag/syndie/med{
-	name = "combat medic dufflebag"
-	},
-/obj/item/storage/firstaid/adv,
-/obj/item/clothing/suit/storage/vest/tactical,
-/obj/item/clothing/gloves/black,
-/obj/item/clothing/gloves/sterile/nitrile,
-/obj/item/storage/belt/medical,
-/obj/item/flash,
-/obj/item/clothing/glasses/sunglasses/medhud,
-/obj/item/reagent_containers/hypospray/autoinjector/biginjector/combat_recovery,
-/obj/item/reagent_containers/hypospray/autoinjector/biginjector/combat_recovery,
-/obj/item/reagent_containers/hypospray/autoinjector/biginjector/combat_recovery,
+/obj/machinery/vending/security,
 /turf/simulated/floor/tiled,
 /area/hallway/security/armor)
 "dyT" = (
@@ -30587,6 +30731,9 @@
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/effect/floor_decal/milspec/color/red/half{
+	dir = 9
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/security)
 "evb" = (
@@ -32120,6 +32267,9 @@
 /obj/machinery/disposal,
 /obj/structure/disposalpipe/trunk{
 	dir = 4
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 5
 	},
 /turf/simulated/floor/tiled,
 /area/security/brig/observation)
@@ -33691,15 +33841,9 @@
 /turf/simulated/floor/plating,
 /area/rnd/research/mailing)
 "fxU" = (
-/obj/machinery/autolathe{
-	desc = "Your typical Autolathe. It appears to have much more options than your regular one, however...";
-	hacked = 1;
-	name = "Unlocked Autolathe"
-	},
 /obj/effect/floor_decal/milspec/color/purple/half{
 	dir = 1
 	},
-/obj/effect/floor_decal/milspec/color/purple/half,
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/lab)
 "fya" = (
@@ -37406,7 +37550,7 @@
 "gLT" = (
 /obj/machinery/vending/sol{
 	dir = 8;
-	pixel_x = 7
+	pixel_x = 5
 	},
 /obj/effect/floor_decal/corner/red/full{
 	dir = 4
@@ -39570,22 +39714,7 @@
 /obj/effect/floor_decal/corner/red/full{
 	dir = 1
 	},
-/obj/structure/closet/secure_closet/brigmedic,
-/obj/item/stack/medical/splint,
-/obj/item/storage/pouch/baton/full,
-/obj/item/storage/backpack/dufflebag/syndie/med{
-	name = "combat medic dufflebag"
-	},
-/obj/item/storage/firstaid/adv,
-/obj/item/clothing/suit/storage/vest/tactical,
-/obj/item/clothing/gloves/black,
-/obj/item/clothing/gloves/sterile/nitrile,
-/obj/item/storage/belt/medical,
-/obj/item/flash,
-/obj/item/clothing/glasses/sunglasses/medhud,
-/obj/item/reagent_containers/hypospray/autoinjector/biginjector/combat_recovery,
-/obj/item/reagent_containers/hypospray/autoinjector/biginjector/combat_recovery,
-/obj/item/reagent_containers/hypospray/autoinjector/biginjector/combat_recovery,
+/obj/structure/closet/firecloset/full/double,
 /turf/simulated/floor/tiled,
 /area/hallway/security/armor)
 "huO" = (
@@ -42497,11 +42626,15 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/virology/quarantine_quarantine)
 "ima" = (
-/obj/machinery/partslathe,
 /obj/effect/floor_decal/milspec/color/purple/half{
 	dir = 1
 	},
 /obj/effect/floor_decal/milspec/color/purple/half,
+/obj/machinery/autolathe{
+	desc = "Your typical Autolathe. It appears to have much more options than your regular one, however...";
+	hacked = 1;
+	name = "Unlocked Autolathe"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/lab)
 "imk" = (
@@ -43385,6 +43518,9 @@
 	dir = 4
 	},
 /obj/structure/ladder/top_hatch,
+/obj/effect/landmark/start{
+	name = "Security Officer"
+	},
 /turf/simulated/floor/wood,
 /area/security/briefing_room)
 "izW" = (
@@ -47530,6 +47666,9 @@
 	c_tag = "SEC - Brig Overview Southeast";
 	dir = 1
 	},
+/obj/effect/floor_decal/corner/red{
+	dir = 10
+	},
 /turf/simulated/floor/tiled,
 /area/security/brig/observation)
 "jOY" = (
@@ -48726,20 +48865,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virology/prep)
-"khc" = (
-/obj/effect/floor_decal/milspec/color/red/half,
-/obj/machinery/door/airlock/silver{
-	name = "Toilet"
-	},
-/obj/machinery/door/firedoor/glass,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/kafel_full,
-/area/muriki/bathroom/security)
 "khf" = (
 /obj/structure/disposalpipe/down{
 	dir = 8
@@ -49853,6 +49978,9 @@
 	dir = 1
 	},
 /obj/item/latexballon/whoopee,
+/obj/effect/landmark/start{
+	name = "Security Officer"
+	},
 /turf/simulated/floor/wood,
 /area/security/briefing_room)
 "kwR" = (
@@ -51241,6 +51369,9 @@
 /obj/item/towel/random,
 /obj/item/towel/random,
 /obj/item/towel/random,
+/obj/effect/floor_decal/milspec/color/red/half{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/freezer,
 /area/muriki/bathroom/security)
 "kUi" = (
@@ -55320,7 +55451,8 @@
 "mgn" = (
 /obj/machinery/light_switch{
 	dir = 8;
-	pixel_x = 28
+	pixel_x = 28;
+	pixel_y = 5
 	},
 /obj/effect/floor_decal/corner/red{
 	dir = 6
@@ -60857,6 +60989,25 @@
 	name = "Station Intercom (General)";
 	pixel_y = -32
 	},
+/obj/effect/floor_decal/corner/red{
+	dir = 10
+	},
+/obj/structure/closet/secure_closet/brigmedic,
+/obj/item/stack/medical/splint,
+/obj/item/storage/pouch/baton/full,
+/obj/item/storage/backpack/dufflebag/syndie/med{
+	name = "combat medic dufflebag"
+	},
+/obj/item/storage/firstaid/adv,
+/obj/item/clothing/suit/storage/vest/tactical,
+/obj/item/storage/belt/medical,
+/obj/item/clothing/gloves/black,
+/obj/item/clothing/gloves/sterile/nitrile,
+/obj/item/flash,
+/obj/item/clothing/glasses/sunglasses/medhud,
+/obj/item/reagent_containers/hypospray/autoinjector/biginjector/combat_recovery,
+/obj/item/reagent_containers/hypospray/autoinjector/biginjector/combat_recovery,
+/obj/item/reagent_containers/hypospray/autoinjector/biginjector/combat_recovery,
 /turf/simulated/floor/tiled,
 /area/security/brig/observation)
 "nYp" = (
@@ -62093,6 +62244,9 @@
 /obj/item/storage/box/lights/mixed,
 /obj/item/lightreplacer,
 /obj/structure/table/glass,
+/obj/effect/floor_decal/milspec/color/red/half{
+	dir = 5
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/security)
 "ouM" = (
@@ -66883,6 +67037,7 @@
 	dir = 8;
 	icon_state = "pipe-c"
 	},
+/obj/effect/floor_decal/milspec/color/red/half,
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/security)
 "pYq" = (
@@ -67354,6 +67509,9 @@
 /obj/item/soap/red_soap,
 /obj/item/reagent_containers/spray/cleaner,
 /obj/machinery/light/floortube{
+	dir = 8
+	},
+/obj/effect/floor_decal/milspec/color/red/half{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/freezer,
@@ -71848,7 +72006,7 @@
 "rFf" = (
 /obj/machinery/vending/cigarette{
 	dir = 8;
-	pixel_x = 8
+	pixel_x = 5
 	},
 /obj/effect/floor_decal/corner/red{
 	dir = 6
@@ -76675,6 +76833,9 @@
 /obj/machinery/firealarm{
 	pixel_y = 26
 	},
+/obj/effect/floor_decal/milspec/color/red/half{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/security)
 "thO" = (
@@ -79076,6 +79237,9 @@
 	dir = 8
 	},
 /obj/structure/table/glass,
+/obj/effect/floor_decal/milspec/color/red/half{
+	dir = 10
+	},
 /turf/simulated/floor/tiled/freezer,
 /area/muriki/bathroom/security)
 "tVs" = (
@@ -80317,6 +80481,7 @@
 	pixel_y = -26
 	},
 /obj/machinery/light,
+/obj/effect/floor_decal/milspec/color/red/half,
 /turf/simulated/floor/tiled/freezer,
 /area/muriki/bathroom/security)
 "uoe" = (
@@ -83313,7 +83478,7 @@
 /obj/effect/floor_decal/milspec/color/orange/half{
 	dir = 5
 	},
-/obj/machinery/partslathe,
+/obj/structure/table/reinforced,
 /turf/simulated/floor/tiled/milspec,
 /area/engineering/storage)
 "vjX" = (
@@ -84225,6 +84390,9 @@
 /turf/simulated/floor/tiled/freezer,
 /area/security/detectives_office)
 "vyK" = (
+/obj/structure/bed/chair/bay/comfy/blue{
+	dir = 8
+	},
 /obj/effect/landmark/redspaceexit,
 /turf/simulated/floor/tiled,
 /area/security/brig/observation)
@@ -87176,12 +87344,6 @@
 "wqX" = (
 /turf/simulated/floor/tiled,
 /area/security/lobby)
-"wrd" = (
-/obj/item/juke_remote{
-	autolinkareajuke_onspawn = /area/djstation
-	},
-/turf/simulated/floor/tiled,
-/area/security/brig/observation)
 "wre" = (
 /obj/structure/railing{
 	dir = 1
@@ -90271,6 +90433,23 @@
 /area/hallway/primary/central_two)
 "xps" = (
 /obj/machinery/light,
+/obj/effect/floor_decal/corner/red/full,
+/obj/structure/closet/secure_closet/brigmedic,
+/obj/item/stack/medical/splint,
+/obj/item/storage/pouch/baton/full,
+/obj/item/storage/backpack/dufflebag/syndie/med{
+	name = "combat medic dufflebag"
+	},
+/obj/item/storage/firstaid/adv,
+/obj/item/clothing/suit/storage/vest/tactical,
+/obj/item/storage/belt/medical,
+/obj/item/clothing/gloves/black,
+/obj/item/clothing/gloves/sterile/nitrile,
+/obj/item/flash,
+/obj/item/clothing/glasses/sunglasses/medhud,
+/obj/item/reagent_containers/hypospray/autoinjector/biginjector/combat_recovery,
+/obj/item/reagent_containers/hypospray/autoinjector/biginjector/combat_recovery,
+/obj/item/reagent_containers/hypospray/autoinjector/biginjector/combat_recovery,
 /turf/simulated/floor/tiled,
 /area/security/brig/observation)
 "xpE" = (
@@ -128515,7 +128694,7 @@ amq
 oRo
 aSC
 aSB
-pOj
+aTR
 dHT
 dHT
 dHT
@@ -128675,8 +128854,8 @@ wRV
 wRV
 oxG
 bLr
-dHT
-dHT
+iXR
+iXR
 aSx
 dHT
 dHT
@@ -128837,9 +129016,9 @@ aWa
 aWa
 aWa
 hnb
-dHT
-dHT
-aSy
+aTT
+iXR
+aTS
 dHT
 dHT
 dHT
@@ -128999,9 +129178,9 @@ jYw
 aWa
 jYw
 hnb
-dHT
-dHT
-aSy
+aTU
+iXR
+aTS
 dHT
 dHT
 dHT
@@ -129159,7 +129338,7 @@ azZ
 aWa
 azZ
 aWa
-khc
+azZ
 hnb
 mlS
 mlS
@@ -129324,12 +129503,12 @@ jEi
 pYn
 hnb
 aRa
-iXR
+aRh
 aSy
-iXR
-iXR
-iXR
-iXR
+aTQ
+aTL
+aTL
+aRh
 xps
 vEe
 aqi
@@ -129482,15 +129661,15 @@ dYI
 kUg
 qhj
 aAc
-tVq
+auc
 tVq
 hnb
 aRb
 iXR
 aSy
-iXR
-iXR
-iXR
+aTM
+aTM
+aTM
 iXR
 nYo
 vEe
@@ -129647,14 +129826,14 @@ poe
 poe
 uoc
 hnb
-iXR
+aTV
 iXR
 aSy
 vyK
+aTP
+aTN
 iXR
-iXR
-iXR
-iXR
+aKF
 vEe
 aqk
 uWT
@@ -129814,7 +129993,7 @@ iXR
 aSy
 pOj
 iXR
-wrd
+iXR
 iXR
 jOO
 vEe
@@ -130140,7 +130319,7 @@ uXg
 iXR
 iXR
 iXR
-xps
+aQV
 vEe
 tBt
 vhk
@@ -131739,7 +131918,7 @@ gQt
 dza
 iKH
 krW
-auc
+iKH
 iKH
 dPJ
 auE
@@ -133038,7 +133217,7 @@ yim
 hMB
 eaa
 mJb
-ihg
+aTW
 vJb
 ihg
 hWJ
