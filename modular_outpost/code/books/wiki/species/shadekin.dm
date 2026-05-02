@@ -27,7 +27,6 @@
 
 <p>Native to the Dark, shadekin have an intrinsic sense of these properties, without directly understanding the physics or mathematics. The speed of light and thus time is directly proportional to the nearest dimension. To shadekin this is felt like how one would feel the flow of a river. With the physical world of light a slow stream; The compressed light of bluespace a torrential rush; and the passive stagnant tranquility of redspace's mire. Sudden changes in spatial properties can cause physical distress and even terrible harm to phased shadekin, such as the engines of bluespace shuttles.</p>
 
-
 <h2>Eye Colors and Nature</h2>
 
 <p>Shadekin eyes are a reflection of one's natural attunement to the Dark's energies. A shadekin's eyes glow with the wavelength intensity of the energies they are attuned with. With the most intense violet and blues receiving the most energy from the dark, and red receiving the least. Shadekin that receive less natural energy from the Dark often turn to more physical or exotic methods of absorbing energy. A shadekin's natural attunement can change over time, and is not fixed to their hunting behaviors.</p>
@@ -53,6 +52,17 @@
 <h3>Mixed Eyes and Others</h3>
 
 <p>Shadekin do not attune to exact colors, and instead are along a spectrum. Their behaviors are not fixed purely to their eye colors, and only reflect their current physical ability to absorb the Dark's energy. For example, a red eyed shadekin may desire to eat excessively, instead of hunting prey; Or a blue eye shadekin may simply prefer to float in the Dark despite their natural energy regeneration in the physical world. Shadekin also experience a drift in nature over time as they are exposed to the physical world and the Dark, and may become more or less attuned to it.</p>
+
+
+<h2>Death</h2>
+
+<p>While shadekin are naturally durable, and become immune to physical harm while phased, shadekin are not immune from death or in most cases near death experiences. When pushed beyond their biological limits, a shadekin's body will naturally perform an "emergency phase" into the Dark. The shadekin will be flung into the depths of the Dark, to places unknown and safe to recover. All other shadekin nearby will also experience a psychic shock upon one's emergency phase.</p>
+
+<p>This emergency phase is highly stressful, and often requires several hours or even days to recover. Even worse, the more a shadekin attempts to rush their recovery the more likely they are to experience a traumatic burnout event. Each excessive and fast recovery places a shadekin closer and closer to being unable to phase at all. Once a shadekin is incapable of phasing they will simply drop dead upon receiving mortal damage, like any other creature. While dead shadekin can be revived through crew intervention, such an option requires having crew membership or good reputation with the crew as a stowaway, and is not guaranteed. A burned out shadekin's death without body recovery or backups is a true death.</p>
+
+<p>As shadekin grow older, they continually gain energy from the dark, and experience the fatigues of age. While shadekin live exceedingly long lives, they are still vulnerable to over-exertion, stress, wounding, and all manner of situations that slowly destroy their bodies. The average life expectancy of a wild shadekin is 50 to 70 years. In extremely rare cases, a shadekin could live far beyond that, but this requires continual care and medical treatments. Even if a shadekin was placed in a perfectly safe room with all the food they could need, a shadekin is still vulnerable to heart disease, and starvation. This only becomes more and more difficult with age, and does not even factor in the depression of being locked in a box with the stressful mental toll that would take to achieve a quasi-immortality.</p>
+
+<p>Without medical assistance, a wild shadekin will eventually burn out. This may take decades, or centuries, and is highly dependent on the shadekin's lifestyle and emotional state. Simply burning out at the wrong place at the wrong time is generally accepted as the most common form of shadekin death. Starving in space, being vaporized in a sun, trapped beneath the surface of a planet, or phasing into the middle of a secure facility next to a twitchy security officer with no way back to the Dark.</p>
 
 
 <h2>History</h2>
