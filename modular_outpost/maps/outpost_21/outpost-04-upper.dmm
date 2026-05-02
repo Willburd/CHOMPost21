@@ -13915,7 +13915,9 @@
 /area/maintenance/gravgen)
 "dsY" = (
 /obj/structure/grille,
-/obj/structure/window/reinforced/full,
+/obj/structure/window/reinforced/polarized/full{
+	id = "library_window_tint"
+	},
 /turf/simulated/floor/plating,
 /area/library)
 "dte" = (
