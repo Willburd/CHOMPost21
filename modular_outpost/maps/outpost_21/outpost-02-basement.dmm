@@ -8283,6 +8283,9 @@
 /obj/structure/cable/green{
 	icon_state = "1-4"
 	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 10
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/lowmain)
 "aqK" = (

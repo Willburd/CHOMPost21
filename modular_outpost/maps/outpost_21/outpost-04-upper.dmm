@@ -12196,22 +12196,6 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/cargoupper)
 "cvK" = (
-/obj/structure/closet/secure_closet/brigmedic,
-/obj/item/stack/medical/splint,
-/obj/item/storage/pouch/baton/full,
-/obj/item/storage/backpack/dufflebag/syndie/med{
-	name = "combat medic dufflebag"
-	},
-/obj/item/storage/firstaid/adv,
-/obj/item/clothing/suit/storage/vest/tactical,
-/obj/item/clothing/gloves/black,
-/obj/item/clothing/gloves/sterile/nitrile,
-/obj/item/storage/belt/medical,
-/obj/item/flash,
-/obj/item/clothing/glasses/sunglasses/medhud,
-/obj/item/reagent_containers/hypospray/autoinjector/biginjector/combat_recovery,
-/obj/item/reagent_containers/hypospray/autoinjector/biginjector/combat_recovery,
-/obj/item/reagent_containers/hypospray/autoinjector/biginjector/combat_recovery,
 /obj/effect/floor_decal/corner/blue{
 	dir = 5
 	},
@@ -30306,22 +30290,6 @@
 /turf/simulated/floor/wood,
 /area/rnd/research/phoronics/breakroom)
 "lWU" = (
-/obj/structure/closet/secure_closet/brigmedic,
-/obj/item/stack/medical/splint,
-/obj/item/storage/pouch/baton/full,
-/obj/item/storage/backpack/dufflebag/syndie/med{
-	name = "combat medic dufflebag"
-	},
-/obj/item/storage/firstaid/adv,
-/obj/item/clothing/suit/storage/vest/tactical,
-/obj/item/clothing/gloves/black,
-/obj/item/clothing/gloves/sterile/nitrile,
-/obj/item/storage/belt/medical,
-/obj/item/flash,
-/obj/item/clothing/glasses/sunglasses/medhud,
-/obj/item/reagent_containers/hypospray/autoinjector/biginjector/combat_recovery,
-/obj/item/reagent_containers/hypospray/autoinjector/biginjector/combat_recovery,
-/obj/item/reagent_containers/hypospray/autoinjector/biginjector/combat_recovery,
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
