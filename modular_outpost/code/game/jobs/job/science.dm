@@ -8,7 +8,7 @@
 
 /datum/job/scientist/New()
 	. = ..()
-	access -= list(ACCESS_ROBOTICS, ACCESS_ATMOSPHERICS)
+	access -= list(ACCESS_ROBOTICS, ACCESS_XENOBOTANY)
 	alt_titles -= list(JOB_ALT_CIRCUIT_DESIGNER, JOB_ALT_CIRCUIT_PROGRAMMER)
 	alt_titles[JOB_ALT_TELEPORT_OPERATOR] = /datum/alt_title/teleport_operation
 
