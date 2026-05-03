@@ -233,6 +233,8 @@
 		var/trueRotation = rotation // + rotation_off // Outpost 21 edit - Remove randomized offset in Tsci
 
 		var/datum/projectile_data/proj_data = simple_projectile_trajectory(telepad.x, telepad.y, trueRotation, trueDistance)
+		if(proj_data?.time)
+			proj_data.time /= 3 // Outpost 21 edit - Decreased teleport cooldown
 		last_tele_data = proj_data
 
 		var/trueX = proj_data.dest_x
