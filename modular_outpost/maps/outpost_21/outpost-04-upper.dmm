@@ -7871,6 +7871,12 @@
 /obj/structure/grille,
 /turf/simulated/floor/plating,
 /area/crew_quarters/medbreak)
+"aro" = (
+/turf/simulated/wall,
+/area/tcomfoyer)
+"arp" = (
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/tcomfoyer)
 "arq" = (
 /obj/effect/floor_decal/corner/brown{
 	dir = 4
@@ -8129,7 +8135,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/mine/unexplored/muriki/mountaintopeast)
+/area/tcomfoyer)
 "awX" = (
 /obj/effect/floor_decal/corner/purple{
 	dir = 6
@@ -39721,10 +39727,6 @@
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/hydroponics/publicgarden)
-"qSx" = (
-/obj/structure/sign/securearea,
-/turf/simulated/wall/r_wall,
-/area/tcomfoyer)
 "qSy" = (
 /obj/structure/cable/orange{
 	icon_state = "1-2"
@@ -114338,7 +114340,7 @@ luR
 idv
 idv
 idv
-ueG
+aro
 ueG
 ueG
 ueG
@@ -114497,10 +114499,10 @@ luR
 luR
 luR
 luR
-afe
+arp
 awW
-afe
-ueG
+arp
+aro
 nHi
 owG
 mOp
@@ -114658,7 +114660,7 @@ luR
 luR
 phU
 cgN
-gro
+cgN
 jGA
 lci
 kwf
@@ -114982,7 +114984,7 @@ luR
 luR
 cgN
 ofL
-tCm
+xpu
 iVr
 hcd
 ycA
@@ -115144,7 +115146,7 @@ luR
 qll
 cgN
 ofL
-qSx
+eKE
 adu
 rzw
 adt
