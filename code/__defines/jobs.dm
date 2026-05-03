@@ -319,6 +319,7 @@
 	#define JOB_ALT_CIRCUIT_DESIGNER "Circuit Designer"
 	#define JOB_ALT_CIRCUIT_PROGRAMMER "Circuit Programmer"
 	#define JOB_ALT_RESEARCH_CONTRACTOR "Research Contractor"
+	#define JOB_ALT_TELEPORT_OPERATOR "Teleporter Operator" // Outpost 21 edit - Telesci job
 
 #define JOB_XENOBIOLOGIST "Xenobiologist"
 	// Xenobiologist alt titles

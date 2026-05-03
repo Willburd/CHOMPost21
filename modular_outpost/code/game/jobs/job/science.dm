@@ -10,6 +10,7 @@
 	. = ..()
 	access -= list(ACCESS_ROBOTICS, ACCESS_ATMOSPHERICS)
 	alt_titles -= list(JOB_ALT_CIRCUIT_DESIGNER, JOB_ALT_CIRCUIT_PROGRAMMER)
+	alt_titles[JOB_ALT_TELEPORT_OPERATOR] = /datum/alt_title/teleport_operation
 
 
 // Massive edit, so just redefined entirely to be engineering now
@@ -52,3 +53,7 @@
 /datum/alt_title/circuit_programmer
 	title_blurb = "A " + JOB_ALT_CIRCUIT_PROGRAMMER + " is a " + JOB_ENGINEER + " whose expertise is working with integrated circuits. They are familar with the workings and programming of those devices. \
 				   They work to create various useful devices using the capabilities of integrated circuitry." // engineering here
+
+/datum/alt_title/teleport_operation
+	title = JOB_ALT_TELEPORT_OPERATOR
+	title_blurb = "A " + JOB_ALT_TELEPORT_OPERATOR + " is a " + JOB_SCIENTIST + " who operates the public teleporter using telescience expertise to get crew to remote locations safely."

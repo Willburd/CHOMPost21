@@ -129,6 +129,7 @@ const rank2icon = {
   'Gas Physicist': 'microscope',
   'Circuit Designer': 'car-battery',
   'Circuit Programmer': 'laptop-file',
+  'Teleporter Operator': 'users-between-lines', // outpost 21 edit
   // Xenobiologist
   Xenobiologist: 'meteor',
   Xenozoologist: 'locust',
