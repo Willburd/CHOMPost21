@@ -518,12 +518,14 @@
 			high_type = /datum/preference/numeric/human/job_engsec_high
 			med_type = /datum/preference/numeric/human/job_engsec_med
 			low_type = /datum/preference/numeric/human/job_engsec_low
+		/* Outpost 21 edit - Disable talon
 		//VOREStation Add
 		if(TALON)
 			high_type = /datum/preference/numeric/human/job_talon_high
 			med_type = /datum/preference/numeric/human/job_talon_med
 			low_type = /datum/preference/numeric/human/job_talon_low
 		//VOREStation Add End
+		*/
 		//CHOMPStation Add
 		if(OTHER)
 			high_type = /datum/preference/numeric/human/job_other_high
