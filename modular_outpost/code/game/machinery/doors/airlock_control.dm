@@ -1,5 +1,5 @@
 // Used on the INTERIOR side like the exterior/shuttle is
-/obj/machinery/airlock_sensor/offset_facing/return_air()
+/obj/machinery/airlock_sensor/airlock_interior/shuttle/return_air()
 	var/turf/T = get_step(src, dir)
 	if(isnull(T))
 		return ..()
