@@ -123,8 +123,6 @@
 	removetie_proc(usr)
 
 /obj/item/clothing/proc/removetie_proc(mob/living/user)
-	if(!user)
-		user = usr
 
 	if(!isliving(user))
 		return
