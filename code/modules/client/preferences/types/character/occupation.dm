@@ -173,6 +173,50 @@
 	return
 // VOREStation Add End
 
+//CHOMPStation Add Start - Other job bitflags
+/datum/preference/numeric/human/job_other_high
+	savefile_key = "job_other_high"
+	savefile_identifier = PREFERENCE_CHARACTER
+	category = PREFERENCE_CATEGORY_NON_CONTEXTUAL
+	can_randomize = FALSE
+	minimum = 0
+	maximum = 65535
+
+/datum/preference/numeric/human/job_other_high/create_default_value()
+	return 0
+
+/datum/preference/numeric/human/job_other_high/apply_to_human(mob/living/carbon/human/target, value)
+	return
+
+/datum/preference/numeric/human/job_other_med
+	savefile_key = "job_other_med"
+	savefile_identifier = PREFERENCE_CHARACTER
+	category = PREFERENCE_CATEGORY_NON_CONTEXTUAL
+	can_randomize = FALSE
+	minimum = 0
+	maximum = 65535
+
+/datum/preference/numeric/human/job_other_med/create_default_value()
+	return 0
+
+/datum/preference/numeric/human/job_other_med/apply_to_human(mob/living/carbon/human/target, value)
+	return
+
+/datum/preference/numeric/human/job_other_low
+	savefile_key = "job_other_low"
+	savefile_identifier = PREFERENCE_CHARACTER
+	category = PREFERENCE_CATEGORY_NON_CONTEXTUAL
+	can_randomize = FALSE
+	minimum = 0
+	maximum = 65535
+
+/datum/preference/numeric/human/job_other_low/create_default_value()
+	return 0
+
+/datum/preference/numeric/human/job_other_low/apply_to_human(mob/living/carbon/human/target, value)
+	return
+//CHOMPStation Add End
+
 // Alternate option preference (0-2)
 
 /datum/preference/numeric/human/alternate_option
@@ -381,23 +425,6 @@
 						dat += "<br>"
 						dat += html_encode(description[2])
 
-			// Outpost 21 edit begin - Show job rank
-			dat += "<hr style='clear:left;'>"
-
-			// Check for alt-title
-			var/obj/item/clothing/accessory/rank_eshui/rank_path = job.rank_pin
-			if(job && (alt_title in job.alt_titles))
-				var/datum/alt_title/alt = job.alt_titles[alt_title]
-				if(ispath(initial(alt.rank_pin)))
-					rank_path = initial(alt.rank_pin)
-			if(ispath(rank_path))
-				var/rank_name = initial(rank_path.rank)
-				dat += "Your rank is [rank_name].<br>"
-				dat += "[station_rank_guide(initial(rank_path.rank_level_index))]<br>"
-			else
-				dat += "This job has no rank or authority on station.<br>"
-			// Outpost 21 edit end
-
 			var/datum/browser/popup = new(user, "Job Info", "[capitalize(rank)]", 430, 520, src)
 			popup.set_content(jointext(dat,"<br>"))
 			popup.open()
@@ -445,10 +472,12 @@
 	pref.write_preference_by_type(/datum/preference/numeric/human/job_medsci_med, pref.read_preference(/datum/preference/numeric/human/job_medsci_med) | pref.read_preference(/datum/preference/numeric/human/job_medsci_high))
 	pref.write_preference_by_type(/datum/preference/numeric/human/job_engsec_med, pref.read_preference(/datum/preference/numeric/human/job_engsec_med) | pref.read_preference(/datum/preference/numeric/human/job_engsec_high))
 	pref.write_preference_by_type(/datum/preference/numeric/human/job_talon_med, pref.read_preference(/datum/preference/numeric/human/job_talon_med) | pref.read_preference(/datum/preference/numeric/human/job_talon_high)) //VOREStation Add
+	pref.write_preference_by_type(/datum/preference/numeric/human/job_other_med, pref.read_preference(/datum/preference/numeric/human/job_other_med) | pref.read_preference(/datum/preference/numeric/human/job_other_high)) //CHOMPStation Add
 	pref.write_preference_by_type(/datum/preference/numeric/human/job_civilian_high, 0)
 	pref.write_preference_by_type(/datum/preference/numeric/human/job_medsci_high, 0)
 	pref.write_preference_by_type(/datum/preference/numeric/human/job_engsec_high, 0)
 	pref.write_preference_by_type(/datum/preference/numeric/human/job_talon_high, 0) //VOREStation Add
+	pref.write_preference_by_type(/datum/preference/numeric/human/job_other_high, 0) //CHOMPStation Add
 
 // Level is equal to the desired new level of the job. So for a value of 4, we want to disable the job.
 /datum/category_item/player_setup_item/occupation/proc/SetJobDepartment(var/datum/job/job, var/level)
@@ -472,14 +501,18 @@
 			high_type = /datum/preference/numeric/human/job_engsec_high
 			med_type = /datum/preference/numeric/human/job_engsec_med
 			low_type = /datum/preference/numeric/human/job_engsec_low
-		/* Outpost 21 edit - Talon removal
 		//VOREStation Add
 		if(TALON)
 			high_type = /datum/preference/numeric/human/job_talon_high
 			med_type = /datum/preference/numeric/human/job_talon_med
 			low_type = /datum/preference/numeric/human/job_talon_low
 		//VOREStation Add End
-		*/
+		//CHOMPStation Add
+		if(OTHER)
+			high_type = /datum/preference/numeric/human/job_other_high
+			med_type = /datum/preference/numeric/human/job_other_med
+			low_type = /datum/preference/numeric/human/job_other_low
+		//CHOMPStation Add End
 		else
 			return 0
 
@@ -512,13 +545,11 @@
 	pref.write_preference_by_type(/datum/preference/numeric/human/job_engsec_med, 0)
 	pref.write_preference_by_type(/datum/preference/numeric/human/job_engsec_low, 0)
 
-	/* Outpost 21 edit - Talon removal
 	//VOREStation Add
 	pref.write_preference_by_type(/datum/preference/numeric/human/job_talon_high, 0)
 	pref.write_preference_by_type(/datum/preference/numeric/human/job_talon_med, 0)
 	pref.write_preference_by_type(/datum/preference/numeric/human/job_talon_low, 0)
 	//VOREStation Add End
-	*/
 
 	pref.write_preference_by_type(/datum/preference/player_alt_titles, list())
 
@@ -553,8 +584,7 @@
 					return read_preference(/datum/preference/numeric/human/job_engsec_med)
 				if(3)
 					return read_preference(/datum/preference/numeric/human/job_engsec_low)
-		/* Outpost 21 edit - Talon removal
-		//VOREStation Add
+		/*//VOREStation Add //CHOMPEdit - Disable Start
 		if(TALON)
 			switch(level)
 				if(1)
@@ -563,6 +593,15 @@
 					return read_preference(/datum/preference/numeric/human/job_talon_med)
 				if(3)
 					return read_preference(/datum/preference/numeric/human/job_talon_low)
-		//VOREStation Add End
-		*/
+		*///VOREStation Add End //CHOMPEdit - Disable End
+		//CHOMPStation Add
+		if(OTHER)
+			switch(level)
+				if(1)
+					return read_preference(/datum/preference/numeric/human/job_other_high)
+				if(2)
+					return read_preference(/datum/preference/numeric/human/job_other_med)
+				if(3)
+					return read_preference(/datum/preference/numeric/human/job_other_low)
+		//CHOMPStation Add End
 	return 0
