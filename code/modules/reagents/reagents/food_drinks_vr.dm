@@ -878,10 +878,11 @@
 			if(nif.stat == NIF_TEMPFAIL)
 				nif.stat = NIF_INSTALLING
 			nif.repair(removed)
-		else if(prob(5))
-			M.SetConfused(max(M.confused, 20))
-			M.emote(pick("shudders", "seems lost", "blanks for a moment"))
+		else
 	*/
+	if(prob(5))
+		M.SetConfused(max(M.confused, 20))
+		M.emote(pick("shudders", "seems lost", "blanks for a moment"))
 	// Outpost 21 edit begin - makes super jittery and speedy for small time
 	var/threshold = 1 * M.species.chem_strength_tox
 	if(alien == IS_SKRELL)

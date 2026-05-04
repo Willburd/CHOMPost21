@@ -5,7 +5,7 @@
 	endWhen = rand(15, 30)
 
 /datum/event/tram_breaker/announce()
-	GLOB.command_announcement.Announce("Tram over-current protection tripped. APC breaker in Tram Control maintenance room requires manual reset.", "Tram Monitor")
+	GLOB.command_announcement.Announce("Tram over-current protection tripped. APC breaker in Tram Control maintenance room requires manual reset.", "Tram Monitor", new_sound = ANNOUNCER_MSG_TRAM_BREAKER)
 
 /datum/event/tram_breaker/start()
 	var/area/tram_control = GLOB.areas_by_type[/area/maintenance/substation/tram_control]

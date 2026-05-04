@@ -14,7 +14,6 @@
 	sheet_singular_name = "crystal"
 	sheet_plural_name = "crystals"
 	is_fusion_fuel = 1
-	stack_origin_tech = list(TECH_MATERIAL = 8, TECH_PHORON = 5, TECH_BLUESPACE = 4)
 	flags = MATERIAL_UNMELTABLE
 	supply_conversion_value = 30 // Outpost 21 edit(port) - Added supply sell price. This was missing...
 

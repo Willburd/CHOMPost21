@@ -74,12 +74,12 @@
 	if(!active)
 		return
 
-	var/noiseprob = 2 // Outpost 21 addition - disposal clunking
+	var/noiseprob = 2 // outpost 21 edit - disposal clunking
 
 	// Outpost 21 edit begin - We like our disposals to do damage
 	#ifndef OUTPOST_FRIENDSHIP_MODE
 	if(hasmob && prob(3))
-		noiseprob = 30 // Outpost 21 addition - disposal clunking
+		noiseprob = 30 // outpost 21 edit - disposal clunking
 		for(var/mob/living/H in src)
 			if(!istype(H,/mob/living/silicon/robot/drone)) //Drones use the mailing code to move through the disposal system,
 				H.take_overall_damage(20, 0, "Blunt Trauma") //horribly maim any living creature jumping down disposals.  c'est la vie
@@ -188,3 +188,8 @@
 /obj/structure/disposalholder/proc/vent_gas(atom/location)
 	location.assume_air(gas)  // vent all gas to turf
 	return
+
+// Outpost 21 edit(port) begin - Disposal pipe dropping
+/obj/structure/disposalholder/AllowDrop()
+	return TRUE
+// Outpost 21 edit end

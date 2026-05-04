@@ -28,8 +28,7 @@ What Borgs are available is sadly handled in the above file in the proc
 					LANGUAGE_SKRELLIANFAR = 0,
 					LANGUAGE_ROOTLOCAL	= 0,
 					LANGUAGE_TRADEBAND	= 1,
-					// Outpost 21 edit - Not for borgs
-					LANGUAGE_GUTTER		= 0,
+					// LANGUAGE_GUTTER		= 0, // Outpost 21 edit - Not for borgs
 					LANGUAGE_SCHECHI	= 1,
 					LANGUAGE_EAL		= 1,
 					LANGUAGE_TERMINUS	= 1,

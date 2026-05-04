@@ -9,7 +9,6 @@
 	throwforce = 0
 	throw_speed = 3
 	throw_range = 6
-	origin_tech = list(TECH_BIO = 4)
 	var/uses = 1 // uses before it goes inert
 	var/enhanced = FALSE
 	var/slime_type
@@ -1641,6 +1640,20 @@
 /datum/decl/chemical_reaction/instant/slime/rainbow_random_slime/on_reaction(var/datum/reagents/holder)
 	var/mob/living/simple_mob/slime/xenobio/S
 	var/list/slime_types = typesof(/mob/living/simple_mob/slime/xenobio)
+
+	// Outpost 21 edit begin - Remove chomp slimes from default set
+	slime_types -= list(
+		/mob/living/simple_mob/slime/xenobio/sepia,
+		/mob/living/simple_mob/slime/xenobio/redspace,
+		/mob/living/simple_mob/slime/xenobio/dark,
+		/mob/living/simple_mob/slime/xenobio/plague,
+		/mob/living/simple_mob/slime/xenobio/oceanic,
+		/mob/living/simple_mob/slime/xenobio/nuclear,
+		/mob/living/simple_mob/slime/xenobio/dream,
+		/mob/living/simple_mob/slime/xenobio/nightmare,
+		/mob/living/simple_mob/slime/xenobio/sound
+	)
+	// Outpost 21 edit end
 
 	while(slime_types.len)
 		S = pick(slime_types)

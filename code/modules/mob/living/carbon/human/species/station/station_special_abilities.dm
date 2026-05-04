@@ -20,7 +20,7 @@
 	return TRUE
 
 /mob/living/carbon/human/proc/getlightlevel() //easier than having the same code in like three places
-	// outpost 21 addition begin - lockers are dark and spooky!
+	// outpost 21 edit begin - lockers are dark and spooky!
 	if(istype(src.loc,/obj/structure/closet))
 		return 0 // it's dark in here!
 	else if(isturf(src.loc)) //else, there's considered to be no light
@@ -28,7 +28,7 @@
 		return T.get_lumcount() * 5
 	else
 		return 0
-	// outpost 21 addition end
+	// outpost 21 edit end
 
 /mob/living/carbon/human/proc/bloodsuck()
 	set name = "Partially Drain prey of blood"
@@ -1420,3 +1420,35 @@
 		to_chat(pred, span_vnotice("Your [belly] manages to [lowertext(belly.vore_verb)] \the [target]."))
 		to_chat(target, span_vwarning("You are [lowertext(belly.vore_verb)]ed by \The [pred]'s [belly]!"))
 		return pred.begin_instant_nom(src, target, pred, belly, FALSE)
+
+/mob/living/proc/name_change_verb()
+	set name = "Change Name"
+	set desc = "Change your name. Notifies admins."
+	set category = "Abilities.Superpower"
+
+	if(last_special > world.time)
+		return
+
+	var/chosen_name = tgui_input_text(src, "What would you like your name to become?", "Name change", name, MAX_NAME_LEN)
+
+	if(!chosen_name || !length(chosen_name))
+		return
+
+	last_special = world.time + (5 SECONDS) //don't spam check the global list pls
+	for(var/mob/checkplayer in GLOB.player_list)
+		if(checkplayer == src)
+			continue
+		if(!checkplayer.client) //no client, no problem
+			continue
+		if(checkplayer.name == chosen_name)
+			if(checkplayer.client.prefs.resleeve_lock)
+				to_chat(src, span_notice("\The [checkplayer]'s preferences forbid you from impersonating them."))
+				log_and_message_admins("[key_name(src)] attempted to impersonate [key_name(checkplayer)], but preferences prevented it.", src)
+				return
+			log_and_message_admins("[key_name(src)] impersonated [key_name(checkplayer)]!", src)
+
+	log_and_message_admins("[key_name(src)] set their name to [chosen_name]", src)
+	if(dna)
+		dna.real_name = chosen_name
+	real_name = chosen_name
+	name = chosen_name

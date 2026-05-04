@@ -63,8 +63,8 @@
 	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_DRUG
+	medallergen_type = MEDALLERGEN_BICARD
 
-	allergen_type = ALLERGEN_BICARD // Outpost 21 edit(port) - Medical allergies
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
 /datum/reagent/bicaridine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
@@ -105,8 +105,8 @@
 	can_overdose_touch = TRUE
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
+	medallergen_type = MEDALLERGEN_BICARD
 
-	allergen_type = ALLERGEN_BICARD // Outpost 21 edit(port) - Medical allergies
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
 /datum/reagent/bicaridine/topical/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
@@ -158,8 +158,8 @@
 	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_DRUG
+	medallergen_type = MEDALLERGEN_KELOTANE
 
-	allergen_type = ALLERGEN_KELOTANE // Outpost 21 edit(port) - Medical allergies
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
 /datum/reagent/kelotane/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
@@ -184,6 +184,7 @@
 	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_DRUG
+	medallergen_type = MEDALLERGEN_KELOTANE
 
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
@@ -208,6 +209,7 @@
 	can_overdose_touch = TRUE
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
+	medallergen_type = MEDALLERGEN_KELOTANE
 
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
@@ -237,8 +239,8 @@
 	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_DRUG
+	medallergen_type = MEDALLERGEN_DYLO
 
-	allergen_type = ALLERGEN_DYLO // Outpost 21 edit(port) - Medical allergies
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
 /datum/reagent/dylovene/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
@@ -367,8 +369,7 @@
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_DRUG
-
-	allergen_type = ALLERGEN_TRICORD // Outpost 21 edit(port) - Medical allergies
+	medallergen_type = MEDALLERGEN_TRICORD
 
 /datum/reagent/tricordrazine/overdose(var/mob/living/carbon/M, var/alien) //YW EDIT START
 	..()
@@ -399,8 +400,8 @@
 	can_overdose_touch = TRUE
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
+	medallergen_type = MEDALLERGEN_TRICORD
 
-	allergen_type = ALLERGEN_TRICORD // Outpost 21 edit(port) - Medical allergies
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
 /datum/reagent/tricorlidaze/affect_touch(var/mob/living/carbon/M, var/alien, var/removed)
@@ -809,8 +810,8 @@
 	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
+	medallergen_type = MEDALLERGEN_PERIDAX
 
-	allergen_type = ALLERGEN_PERIDAX // Outpost 21 edit(port) - Medical allergies
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
 /datum/reagent/peridaxon/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
@@ -1318,8 +1319,8 @@
 	data = 0
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_DRUG
+	medallergen_type = MEDALLERGEN_SPACACIL
 
-	allergen_type = ALLERGEN_SPACACIL // Outpost 21 edit(port) - Medical allergies
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
 /datum/reagent/spaceacillin/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)

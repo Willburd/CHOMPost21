@@ -14,8 +14,7 @@ GLOBAL_LIST_INIT(confinement_beam_collectors, list())
 	GLOB.confinement_beam_collectors -= src
 	. = ..()
 
-/obj/structure/confinement_beam_generator/collector/pulse(datum/weakref/WF)
-	var/datum/confinement_pulse_data/data = WF?.resolve()
+/obj/structure/confinement_beam_generator/collector/pulse(datum/confinement_pulse_data/data)
 	if(!data)
 		return
 	flick("collector_f",src)
@@ -24,4 +23,4 @@ GLOBAL_LIST_INIT(confinement_beam_collectors, list())
 	for(var/D in GLOB.cardinal)
 		var/obj/structure/confinement_beam_generator/inductor/I = locate() in get_step(src,D)
 		if(I && I.dir == GLOB.reverse_dir[D] && I.is_valid_state())
-			I.pulse(WF)
+			I.pulse(data)

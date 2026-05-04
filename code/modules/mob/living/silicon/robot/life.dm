@@ -13,7 +13,7 @@
 	// For some reason borg Life() doesn't call ..()
 	handle_modifiers()
 	handle_light()
-	handle_radiation() // outpost 21 addition - radiation and haunting affects vision
+	handle_radiation() // outpost 21 edit - radiation and haunting affects vision
 
 	if(client)
 		handle_regular_hud_updates()
@@ -157,10 +157,10 @@
 	else
 		blinded = 1
 
-	// outpost 21 addition begin - lockers are dark and spooky!
+	// outpost 21 edit begin - lockers are dark and spooky!
 	if(istype(loc, /obj/structure/closet))
 		blinded = 1
-	// outpost 21 addition end
+	// outpost 21 edit end
 
 	// Call parent to handle signals
 	. = ..()
@@ -400,7 +400,7 @@
 	else
 		. = ..()
 
-// outpost 21 addition begin - radiation and haunting affects borg vision
+// outpost 21 edit begin - radiation and haunting affects borg vision
 /mob/living/silicon/robot/handle_radiation()
 	. = ..()
 	if(.)
@@ -419,4 +419,4 @@
 		radiation = 0
 	else
 		client.screen |= GLOB.global_hud.whitense
-// outpost 21 addition end
+// outpost 21 edit end

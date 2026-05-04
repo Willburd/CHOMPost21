@@ -524,6 +524,7 @@
 	)
 	inherent_verbs = list(/mob/living/carbon/human/proc/tie_hair)
 
+/* Outpost 21 edit - Use ours
 /datum/species/zaddat/equip_survival_gear(var/mob/living/carbon/human/H)
 	..()
 	if(H.wear_suit) //get rid of job labcoats so they don't stop us from equipping the Shroud
@@ -535,6 +536,7 @@
 
 	H.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/zaddat/(H), slot_wear_mask) // mask has to come first or Shroud helmet will get in the way
 	H.equip_to_slot_or_del(new /obj/item/clothing/suit/space/void/zaddat/(H), slot_wear_suit)
+*/
 
 /datum/species/diona
 
@@ -689,11 +691,11 @@
 	var/obj/item/organ/internal/diona/node/light_organ = locate() in H.internal_organs
 
 	if(light_organ && !light_organ.is_broken())
-		// outpost 21 addition begin - lockers are dark and spooky!
+		// outpost 21 edit begin - lockers are dark and spooky!
 		var/light_amount = 0 //how much light there is in the place, affects receiving nutrition and healing
 		if(istype(H.loc,/obj/structure/closet))
 			light_amount = 0 // it's dark in here!
-		// outpost 21 addition end
+		// outpost 21 edit end
 		else if(isturf(H.loc)) //else, there's considered to be no light
 			var/turf/T = H.loc
 			light_amount = T.get_lumcount() * 10

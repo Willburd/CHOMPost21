@@ -1277,6 +1277,8 @@
 			set_stat(UNCONSCIOUS)
 			blinded = TRUE
 			in_crit = TRUE
+			if(!HAS_TRAIT(src, TRAIT_CRITICAL_CONDITION))
+				ADD_TRAIT(src, TRAIT_CRITICAL_CONDITION, STAT_TRAIT)
 
 		if(hallucination)
 			if(hallucination >= HALLUCINATION_THRESHOLD && !(species.flags & (NO_POISON|IS_PLANT|NO_HALLUCINATION)) && !HAS_TRAIT(src, TRAIT_MADNESS_IMMUNE))
@@ -1358,6 +1360,8 @@
 		else if(!in_crit)
 			set_stat(CONSCIOUS)
 			clear_alert("asleep")
+			if(HAS_TRAIT(src, TRAIT_CRITICAL_CONDITION))
+				REMOVE_TRAIT(src, TRAIT_CRITICAL_CONDITION, STAT_TRAIT)
 
 		//Periodically double-check embedded_flag
 		if(embedded_flag && !(life_tick % 10))
@@ -1385,11 +1389,11 @@
 		if(species.vision_organ)
 			vision = internal_organs_by_name[species.vision_organ]
 
-		// outpost 21 addition addition - lockers are dark and spooky!
+		// outpost 21 edit addition - lockers are dark and spooky!
 		if(istype(loc,/obj/structure/closet))
 			SetBlinded(1)
 			blinded =    1
-		// outpost 21 addition end
+		// outpost 21 edit end
 		if(!species.vision_organ) // Presumably if a species has no vision organs, they see via some other means.
 			SetBlinded(0)
 			blinded =    0

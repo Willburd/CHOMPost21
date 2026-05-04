@@ -1,6 +1,6 @@
 /obj/item/latexballon/whoopee
 	name = "whoopee cushion"
-	icon = 'modular_outpost/icons/obj/items.dmi'
+	icon = 'modular_outpost/icons/obj/woopie.dmi'
 	desc = "A joke as old as time."
 	icon_state = "whoopee"
 	item_icons = list(

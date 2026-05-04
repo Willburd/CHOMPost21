@@ -62,8 +62,8 @@
 		/obj/item/storage/belt/explorer,
 		/obj/item/clothing/shoes/boots/winter/explorer,
 		/obj/item/clothing/gloves/black,
-		/obj/item/radio/headset/explorer,
-		/obj/item/radio/headset/alt/explorer,
+		// /obj/item/radio/headset/explorer, // Outpost 21 edit - No explo headsets
+		// /obj/item/radio/headset/alt/explorer, // Outpost 21 edit - No explo headsets
 		/obj/item/cartridge/explorer,
 		/obj/item/flashlight,
 		/obj/item/gps/explorer,

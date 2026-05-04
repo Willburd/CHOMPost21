@@ -20,6 +20,7 @@
 	if(broken)
 		. += span_bold("It looks damaged, the ringer is stuck firmly inside.")
 
+// Outpost 21 edit begin - Remove radial menu
 /obj/item/deskbell/attack_ai(mob/user)
 	return
 
@@ -28,8 +29,9 @@
 		ring(user)
 		add_fingerprint(user)
 	..()
+// Outpost 21 edit end
 
-/obj/item/deskbell/attack(mob/target as mob, mob/living/user as mob)
+/obj/item/deskbell/attack(mob/living/M, mob/living/user, target_zone, attack_modifier)
 	if(!broken)
 		ring(user)
 		add_fingerprint(user)

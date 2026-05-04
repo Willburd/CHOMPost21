@@ -16,6 +16,9 @@
 /datum/trait/positive/rad_immune // Cannot be irradiated
 	cost = 6 // upstream is: 3
 
+/datum/trait/positive/radioactive_heal // Cannot be irradiated and gain healing from it
+	cost = 8 // upstream is: 6
+
 /datum/trait/positive/rad_resistance_extreme // like above but lesser
 	cost = 5 // upstream is: 2
 
@@ -161,6 +164,9 @@
 	category = TRAIT_TYPE_NEUTRAL
 	cost = 0
 
+/datum/trait/neutral/bloodsucker_freeform
+	hidden = TRUE //Base false, this is literally just a neutral version of of the positive bloodsucker trait with no cost and even less downside? Why does this exist?
+
 /////////////////////////////////////////////////////////////////////////////////////////////////
 /// NEGATIVE
 /////////////////////////////////////////////////////////////////////////////////////////////////
@@ -187,9 +193,11 @@
 
 /datum/trait/negative/haemophilia
 	cost = -3 //Base -2. This is ROUGH in gameplay, especially with our traps.
+	banned_species = list(SPECIES_PROMETHEAN, SPECIES_ALRAUNE, SPECIES_DIONA)
 
 /datum/trait/negative/haemophilia_plus
 	cost = -5 //Base -3. This means you die REALLY fast. You can legit die in seconds from a beartrap.
+	banned_species = list(SPECIES_PROMETHEAN, SPECIES_ALRAUNE, SPECIES_DIONA)
 
 /datum/trait/negative/lightweight
 	cost = -3 //Base -2. Combat is a big part, this makes it brutal, and EVERY DIPSHIT walking around on harm intent crushes you under foot.
@@ -287,5 +295,9 @@
 /datum/trait/negative/ambulant_blood
 	is_genetrait = TRUE // Base FALSE, We want it to be a gene...
 	hidden = TRUE // Base FAlSE, ...Because taking it from the start is too disruptive to ling gameplay
+
+/datum/trait/negative/medical_allergy
+	is_genetrait = TRUE // Base FALSE
+	activation_message = "Something feels odd..."
 
 #endif

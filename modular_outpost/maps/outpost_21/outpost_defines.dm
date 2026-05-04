@@ -67,7 +67,8 @@
 							NETWORK_COMMUNICATORS,
 							NETWORK_ALARM_ATMOS,
 							NETWORK_ALARM_POWER,
-							NETWORK_ALARM_FIRE
+							NETWORK_ALARM_FIRE,
+							NETWORK_ROGUE_SLEEVERS
 							)
 	usable_email_tlds = list("internalmail.es")
 	allowed_spawns = list("Elevator", "Cryogenic Storage", "Cyborg Storage", "On-Site Dorms")

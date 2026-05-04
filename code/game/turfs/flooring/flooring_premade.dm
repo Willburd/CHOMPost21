@@ -566,7 +566,7 @@
 /turf/simulated/floor/snow/Entered(atom/A)
 	if(isliving(A))
 		var/mob/living/L = A
-		if(L.hovering || L.flying || L.is_incorporeal()) // Flying things shouldn't make footprints. Outpost 21 addition - incorporial doesn't cost more food either
+		if(L.hovering || L.flying || L.is_incorporeal()) // Flying things shouldn't make footprints. outpost 21 edit - incorporial doesn't cost more food either
 			if(L.flying)
 				L.adjust_nutrition(-0.5)
 			return ..()

@@ -1,4 +1,3 @@
-
 /datum/reagent/water/holywater/touch_turf(var/turf/T)
 	..()
 	if(volume < 5)
@@ -18,3 +17,8 @@
 			SShaunting.reduce_world_haunt()
 		T.visible_message("\The [A] was consecrated!")
 		A.haunted = FALSE
+
+/datum/reagent/water/holywater/touch_mob(mob/living/L, amount)
+	. = ..()
+	if(istype(L, /mob/living/simple_mob/clowns))
+		exorcise_demon(FALSE, L)

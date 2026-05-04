@@ -1,4 +1,4 @@
-#define BEAM_HEAT_DIVISOR 30000 // Must be very high, or you can hook the hotline up to a thermal generator and scavenge more energy than you put in!
+#define BEAM_HEAT_DIVISOR 50000 // Must be very high, or you can hook the hotline up to a thermal generator and scavenge more energy than you put in!
 #define YIELD_MULTIPLIER 1.068 // Energy is multiplied by this every time a pulse passes through a focus.
 
 /obj/structure/confinement_beam_generator/focus
@@ -22,14 +22,13 @@
 	. = ..()
 	qdel(focus_data)
 
-/obj/structure/confinement_beam_generator/focus/pulse(var/datum/weakref/WF)
-	var/datum/confinement_pulse_data/data = WF?.resolve()
+/obj/structure/confinement_beam_generator/focus/pulse(datum/confinement_pulse_data/data)
 	if(!data)
 		return
 	var/obj/structure/confinement_beam_generator/control_box/CB = data.origin_machine?.resolve()
 	if(CB)
 		// Clone and update data
-		focus_data.clone_from(data)
+		QDEL_SWAP(focus_data, new(data))
 
 		// Update controlbox reference if it exists
 		cached_controlbox = WEAKREF(CB)
@@ -49,7 +48,7 @@
 		internal_heat += focus_data.power_level / BEAM_HEAT_DIVISOR // Apply heat
 		var/obj/structure/confinement_beam_generator/lens/inner_lens/L = locate() in get_step(src,dir)
 		if(L && L.is_valid_state())
-			L.pulse(WEAKREF(focus_data))
+			L.pulse(focus_data)
 			if(light_time < 0)
 				set_light(9,2,"#e9a40f",FALSE)
 			light_time = world.time + 3 SECONDS

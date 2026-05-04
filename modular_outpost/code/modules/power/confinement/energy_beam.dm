@@ -18,15 +18,20 @@
 
 	can_miss = FALSE
 
-	var/visual_only = TRUE
-	var/datum/weakref/confinement_data = null
+	VAR_PRIVATE/visual_only = TRUE
+	var/datum/confinement_pulse_data/data = null
+
+/obj/item/projectile/beam/confinement/Initialize(mapload, datum/confinement_pulse_data/incoming_data)
+	. = ..()
+	if(incoming_data) // Allows fake beams
+		data = new(incoming_data)
+		visual_only = FALSE
 
 /obj/item/projectile/beam/confinement/Destroy()
-	confinement_data = null
+	QDEL_NULL(data)
 	. = ..()
 
 /obj/item/projectile/beam/confinement/on_hit(atom/target, blocked, def_zone)
-	var/datum/confinement_pulse_data/data = confinement_data?.resolve()
 	if(!visual_only && data) // Forward the beam to the next lens
 		if(isliving(target))
 			var/mob/living/M = target
@@ -38,7 +43,7 @@
 				var/obj/structure/confinement_beam_generator/focus/F = locate() in get_step(L,data.dir)
 				if(F)
 					if(F.is_valid_state())
-						F.pulse(confinement_data)
+						F.pulse(data)
 					else
 						L.fire_narrow_beam(data)
 				else
@@ -47,7 +52,6 @@
 
 /obj/item/projectile/beam/confinement/on_range()
 	var/turf/T = trajectory.return_turf()
-	var/datum/confinement_pulse_data/data = confinement_data?.resolve()
 	if(data) // Send a pulse to the zlevel this is targetted at
 		var/send = FALSE
 		switch(data.dir)
@@ -75,16 +79,17 @@
 	anchored = TRUE
 	density = TRUE
 	movement_type = UNSTOPPABLE // for bumps to trigger
-	var/datum/weakref/confinement_data = null
+	var/datum/confinement_pulse_data/data = null
 	var/visual_only = TRUE
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 
-/obj/effect/confinment_beam_incoming/Initialize(mapload)
+/obj/effect/confinment_beam_incoming/Initialize(mapload, datum/confinement_pulse_data/incoming_data)
+	data = new(incoming_data)
 	. = ..()
 	addtimer(CALLBACK(src, PROC_REF(move), 1), 1, TIMER_DELETE_ME)
 
 /obj/effect/confinment_beam_incoming/Destroy()
-	confinement_data = null
+	QDEL_NULL(data)
 	. = ..()
 
 /obj/effect/confinment_beam_incoming/Bump(atom/A)
@@ -101,7 +106,6 @@
 			var/atom/target = get_edge_target_turf(AM, pick(GLOB.alldirs))
 			AM.throw_at(target, rand(100,150), 4)
 
-	var/datum/confinement_pulse_data/data = confinement_data?.resolve()
 	if(data && data.power_level > 0)
 		A.ex_act(rand(1,3))
 
@@ -110,7 +114,7 @@
 		Bump(A)
 
 /obj/effect/confinment_beam_incoming/ex_act(severity)
-	qdel(src)
+	return
 
 /obj/effect/confinment_beam_incoming/singularity_act()
 	return
@@ -132,9 +136,8 @@
 			else if(!can_fall_to(beneath))
 				var/obj/structure/confinement_beam_generator/collector/C = locate() in beneath
 				if(C && C.is_valid_state())
-					var/datum/confinement_pulse_data/data = confinement_data?.resolve()
 					if(data && !visual_only)
-						C.pulse(confinement_data)
+						C.pulse(data)
 					QDEL_IN(src,5)
 					return // picked up by collector
 				else
@@ -148,7 +151,7 @@
 				T.ex_act(rand(1,3))
 			qdel(src)
 			return
-		loc = get_step(src,DOWN)
+		forceMove(get_step(src,DOWN))
 		if(!QDELETED(src))
 			addtimer(CALLBACK(src, PROC_REF(move), lag), lag, TIMER_DELETE_ME)
 

@@ -39,10 +39,12 @@
 		owner.resize(owner.size_multiplier-0.01, animate = FALSE, uncapped = owner.has_large_resize_bounds()) //Bringing this code in line with micro and macro shrooms
 
 /datum/component/nutrition_size_change/proc/get_nutrition_multiplier()
-	if(owner.nutrition > 1000 && grow_mode == GROWMODE_GROW) //Removing the strict check against normal max/min size to support dorms/VR oversizing
+	// Outpost 21 edit(port) begin - Make thresholds make more sense 50 -> 100, and 1000 -> 700
+	if(owner.nutrition > 700 && grow_mode == GROWMODE_GROW) //Removing the strict check against normal max/min size to support dorms/VR oversizing
 		return GROW_MULTIPLIER
-	else if(owner.nutrition < 50 && grow_mode == GROWMODE_SHRINK)
+	else if(owner.nutrition < 100 && grow_mode == GROWMODE_SHRINK)
 		return SHRINK_MULTIPLIER
+	// Outpost 21 edit end
 
 /datum/component/nutrition_size_change/Destroy(force = FALSE)
 	UnregisterSignal(owner, COMSIG_LIVING_LIFE)

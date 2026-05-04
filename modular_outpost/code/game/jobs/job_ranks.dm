@@ -58,6 +58,10 @@
 	rank_pin = RANK_PIN_PATH
 /datum/alt_title/research_contractor
 	rank_pin = RANK_PIN_PATH
+/datum/job/maint_lurker
+	rank_pin = RANK_PIN_PATH
+/datum/job/vr_avatar
+	rank_pin = RANK_PIN_PATH
 #undef RANK_PIN_PATH
 
 

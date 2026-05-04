@@ -9,14 +9,14 @@
 
 
 /datum/job/geneticist
-	departments = list(DEPARTMENT_MEDICAL)
-	supervisors = "the " + JOB_CHIEF_MEDICAL_OFFICER
+	supervisors = "the " + JOB_CHIEF_MEDICAL_OFFICER + " and " + JOB_RESEARCH_DIRECTOR
+	pto_type = PTO_SCIENCE
+	selection_color = "#633D63"
+	departments = list(DEPARTMENT_RESEARCH, DEPARTMENT_MEDICAL)
 
 /datum/job/geneticist/New()
 	. = ..()
-	access -= list(ACCESS_RESEARCH)
 	access |= list(ACCESS_MEDICAL_EQUIP)
-	minimal_access -= list(ACCESS_RESEARCH)
 	minimal_access |= list(ACCESS_MEDICAL_EQUIP)
 	alt_titles = list(JOB_ALT_GENE_THERAPIST = /datum/alt_title/genetherapy, JOB_ALT_SLEEVE_ENGINEER = /datum/alt_title/sleeveengineer) // TODO if geneticist gets alt titles change to |=
 

@@ -11,7 +11,7 @@ GLOBAL_VAR_INIT(sent_jils_to_station, 0)
 	GLOB.sent_jils_to_station = 1
 
 /datum/event/jil_infestation/announce()
-	GLOB.command_announcement.Announce("A Jil hoard has been detected in [station_name()]'s vent system. Ensure station property is not stolen.", "Jil Alert", new_sound = 'sound/AI/aliens.ogg')
+	GLOB.command_announcement.Announce("A Jil hoard has been detected in [station_name()]'s vent system. Ensure station property is not stolen.", "Jil Alert", new_sound = ANNOUNCER_MSG_UNIDENTIFIED_LIFESIGNS)
 
 /datum/event/jil_infestation/start()
 	var/list/vents = list()

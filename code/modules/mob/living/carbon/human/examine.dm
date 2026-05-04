@@ -441,7 +441,7 @@
 	if(HAS_TRAIT(user, TRAIT_GOLDDIGGER))
 		var/datum/preferences/P = client?.prefs
 		if(P)
-			msg += "[p_They()] look like [p_theyre()] [lowertext(P.economic_status)] economically."
+			msg += "[p_They()] look like [p_theyre()] [P.read_preference(/datum/preference/choiced/human/economic_status)] economically."
 		else
 			msg += "You can't get a sense of how well off [p_they()] are..."
 	// Outpost 21 edit end

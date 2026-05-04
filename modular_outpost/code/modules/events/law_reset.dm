@@ -6,7 +6,7 @@
 	announceWhen = endWhen + rand(250, 400)
 
 /datum/event/law_reset/announce()
-	GLOB.command_announcement.Announce("It has come to our attention that \the [location_name()] passed through an ion storm.  Please monitor all electronic equipment for malfunctions.", "Anomaly Alert")
+	GLOB.command_announcement.Announce("It has come to our attention that \the [location_name()] passed through an ion storm.  Please monitor all electronic equipment for malfunctions.", "Anomaly Alert", new_sound = ANNOUNCER_MSG_IONSTORM)
 
 /datum/event/law_reset/start()
 	// Scare the crew a bit

@@ -40,7 +40,7 @@
 		ai_log("calculate_path() : Not using A*, Exiting.", AI_LOG_DEBUG)
 		return
 
-	get_path(get_turf(A), get_to, maximum_path_distance) // Outpost 21 addition - maximum path distance in the ai itself
+	get_path(get_turf(A), get_to, maximum_path_distance) // outpost 21 edit - maximum path distance in the ai itself
 
 	ai_log("calculate_path() : Exiting.", AI_LOG_DEBUG)
 

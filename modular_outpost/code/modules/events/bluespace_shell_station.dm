@@ -49,7 +49,7 @@
 	finalareas -= /area/muriki/crew/bunker_deep
 
 /datum/event/bluespace_shelling/announce()
-	GLOB.command_announcement.Announce("Attention [station_name()]. Bluespace shelling confirmed for [department_name]. Fire for Effect. All crew must retreat to a safe distance, seek shelter, and remain in place until the all clear is given. ETA 30 seconds.", "Bluespace Shelling")
+	GLOB.command_announcement.Announce("Attention [station_name()]. Bluespace shelling confirmed for [department_name]. Fire for Effect. All crew must retreat to a safe distance, seek shelter, and remain in place until the all clear is given. ETA 30 seconds.", "Bluespace Shelling", new_sound = ANNOUNCER_MSG_BSA_FIRED)
 	set_security_level(seclevel)
 
 /datum/event/bluespace_shelling/tick()

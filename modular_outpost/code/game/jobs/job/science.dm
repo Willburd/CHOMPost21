@@ -8,8 +8,9 @@
 
 /datum/job/scientist/New()
 	. = ..()
-	access -= list(ACCESS_ROBOTICS, ACCESS_ATMOSPHERICS)
+	access -= list(ACCESS_ROBOTICS, ACCESS_XENOBOTANY)
 	alt_titles -= list(JOB_ALT_CIRCUIT_DESIGNER, JOB_ALT_CIRCUIT_PROGRAMMER)
+	alt_titles[JOB_ALT_TELEPORT_OPERATOR] = /datum/alt_title/teleport_operation
 
 
 // Massive edit, so just redefined entirely to be engineering now
@@ -31,9 +32,17 @@
 		JOB_ALT_SOFTWARE_ENGINEER = /datum/alt_title/software_engi)
 
 
+/datum/job/xenobotanist
+	supervisors = "the " + JOB_QUARTERMASTER + " and " + JOB_RESEARCH_DIRECTOR
+	departments = list(DEPARTMENT_RESEARCH, DEPARTMENT_CIVILIAN)
+	outfit_type = /datum/decl/hierarchy/outfit/job/science/xenobotanist
+
 /datum/job/xenobotanist/New()
 	. = ..()
 	access -= list(ACCESS_ROBOTICS)
+	access |= list(ACCESS_HYDROPONICS, ACCESS_KITCHEN)
+	minimal_access -= list(ACCESS_ROBOTICS)
+	minimal_access |= list(ACCESS_HYDROPONICS, ACCESS_KITCHEN)
 
 
 // Alt titles
@@ -44,3 +53,7 @@
 /datum/alt_title/circuit_programmer
 	title_blurb = "A " + JOB_ALT_CIRCUIT_PROGRAMMER + " is a " + JOB_ENGINEER + " whose expertise is working with integrated circuits. They are familar with the workings and programming of those devices. \
 				   They work to create various useful devices using the capabilities of integrated circuitry." // engineering here
+
+/datum/alt_title/teleport_operation
+	title = JOB_ALT_TELEPORT_OPERATOR
+	title_blurb = "A " + JOB_ALT_TELEPORT_OPERATOR + " is a " + JOB_SCIENTIST + " who operates the public teleporter using telescience expertise to get crew to remote locations safely."

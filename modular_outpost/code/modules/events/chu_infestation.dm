@@ -11,7 +11,7 @@ GLOBAL_VAR_INIT(sent_chus_to_station, 0)
 	GLOB.sent_chus_to_station = 1
 
 /datum/event/chu_infestation/announce()
-	GLOB.command_announcement.Announce("Massive migration of unknown biological entities has been detected near [location_name()], please stand-by.", "Lifesign Alert")
+	GLOB.command_announcement.Announce("Massive migration of unknown biological entities has been detected near [location_name()], please stand-by.", "Lifesign Alert", new_sound = ANNOUNCER_MSG_UNIDENTIFIED_LIFESIGNS)
 
 /datum/event/chu_infestation/start()
 	var/list/vents = list()

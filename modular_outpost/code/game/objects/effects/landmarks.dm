@@ -188,7 +188,11 @@
 		prob(15);/mob/living/simple_mob/mechanical/cyber_horror/ling_cyber_horror,
 		prob(25);/mob/living/simple_mob/mechanical/cyber_horror/corgi,
 		prob(25);/mob/living/simple_mob/mechanical/cyber_horror/cat_cyber_horror,
+		// Xenobio slimes
+		prob(20);/mob/living/simple_mob/slime/xenobio,
 	)
+	if(mob_path == /mob/living/simple_mob/slime/xenobio)
+		mob_path = pick(typesof(/mob/living/simple_mob/slime/xenobio))
 	new mob_path(src.loc)
 
 

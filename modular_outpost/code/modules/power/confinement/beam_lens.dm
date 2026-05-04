@@ -46,12 +46,10 @@
 			return FALSE
 	. = ..()
 
-/obj/structure/confinement_beam_generator/lens/inner_lens/pulse(datum/weakref/WF)
-	var/datum/confinement_pulse_data/data = WF?.resolve()
+/obj/structure/confinement_beam_generator/lens/inner_lens/pulse(datum/confinement_pulse_data/data)
 	if(!data)
 		return
-	// Prevent procspamming
-	addtimer(CALLBACK(src, PROC_REF(fire_wide_beam), loc, WF), 0, TIMER_DELETE_ME) // Only this one sends energy
+	fire_wide_beam(get_turf(src), data)
 
 /obj/structure/confinement_beam_generator/focus/update_parts_icons()
 	..() // Update self

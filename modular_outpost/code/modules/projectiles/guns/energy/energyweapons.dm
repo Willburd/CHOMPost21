@@ -12,7 +12,6 @@
 	burst_delay = 0.5
 
 	projectile_type = /obj/item/projectile/beam/stun/disabler
-	origin_tech = list(TECH_COMBAT = 4, TECH_MAGNET = 2, TECH_ILLEGAL = 3)
 	modifystate = "n71ex"
 
 //	requires_two_hands = 1

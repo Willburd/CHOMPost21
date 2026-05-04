@@ -309,6 +309,7 @@
 	containertype = /obj/structure/closet/crate
 	containername = "cordless jukebox speakers crate"
 
+/* Outpost 21 edit - No explo headsets
 /datum/supply_pack/misc/explorer_headsets
 	name = "shortwave-capable headsets (x4)"
 	desc = "Four headsets with shortwave fallback capacity. Requires Exploration, EVA, or Pilot's access."
@@ -324,6 +325,7 @@
 		ACCESS_PILOT
 	)
 	one_access = TRUE
+*/
 
 /datum/supply_pack/misc/emergency_beacons
 	name = "emergency locator beacons (x4)"

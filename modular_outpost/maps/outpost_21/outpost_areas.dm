@@ -12,7 +12,8 @@
 	outdoors = TRUE
 
 /area/rnd/supermatter
-	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
+	name = "\improper Particle Lab"
+	base_turf = /turf/simulated/open/muriki
 
 /area/constructionsite/science
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
@@ -138,8 +139,8 @@
 	color_grading = COLORTINT_COLD
 
 /area/server
-	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
-	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
+	holomap_color = HOLOMAP_AREACOLOR_COMMAND
+	base_turf = /turf/simulated/open
 	use_emergency_overlay = TRUE
 	color_grading = COLORTINT_COLD
 
@@ -209,11 +210,11 @@
 	color_grading = /area/crew_quarters/sleep/Dorm_1::color_grading
 
 /area/crew_quarters/cafeteria
-	holomap_color = HOLOMAP_AREACOLOR_CIV
+	holomap_color = HOLOMAP_AREACOLOR_HYDROPONICS
 	base_turf = /turf/simulated/open
 
 /area/crew_quarters/coffee_shop
-	holomap_color = HOLOMAP_AREACOLOR_CIV
+	holomap_color = HOLOMAP_AREACOLOR_HYDROPONICS
 	base_turf = /turf/simulated/open
 
 /area/crew_quarters/kitchen
@@ -222,7 +223,7 @@
 	flags = AREA_FIRE_SUPRESSION
 
 /area/crew_quarters/bar
-	holomap_color = HOLOMAP_AREACOLOR_CIV
+	holomap_color = HOLOMAP_AREACOLOR_HYDROPONICS
 	base_turf = /turf/simulated/open
 	color_grading = COLORTINT_WARM
 
@@ -540,6 +541,7 @@
 
 /area/maintenance/engineering
 	base_turf = /turf/simulated/open
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 
 /area/maintenance/engi_engine
 	base_turf = /turf/simulated/open
@@ -563,14 +565,19 @@
 /area/maintenance/medbay_fore
 	base_turf = /turf/simulated/open
 
+/area/maintenance/substation
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+
 /area/maintenance/substation/medical
 	base_turf = /turf/simulated/open
 
 /area/rnd/xenobiology/xenoflora_storage
 	base_turf = /turf/simulated/open
+	holomap_color = HOLOMAP_AREACOLOR_HYDROPONICS
 
 /area/rnd/xenobiology/xenoflora
 	base_turf = /turf/simulated/open
+	holomap_color = HOLOMAP_AREACOLOR_HYDROPONICS
 
 /area/maintenance/substation/research
 	base_turf = /turf/simulated/open

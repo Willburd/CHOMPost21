@@ -26,6 +26,7 @@
 	pixel_x = -16
 	icon_x = 64
 	icon_y = 32
+	hat_offset = CUSTOMTANGENT_HAT_OFFSET
 
 	whitelist_ckey = "darklord92"
 	whitelist_charname = "Tangent"

@@ -151,16 +151,16 @@
 				prob(15);/obj/effect/mine/emp/camo,
 				prob(10);/obj/effect/mine/stun,
 				prob(10);/obj/effect/mine/incendiary,
-				prob(10);/obj/effect/mine/spiders, // Outpost 21 addition - you bet you know what this does
-				prob(10);/obj/effect/mine/glue, // Outpost 21 addition
-				prob(10);/obj/effect/mine/portal, // Outpost 21 addition
-				prob(10);/obj/effect/mine/lube, // Outpost 21 addition
-				prob(1);/obj/effect/mine/confetti, // Outpost 21 addition
-				prob(1);/obj/effect/mine/taarainbow, // Outpost 21 addition - CANDY
-				prob(1);/obj/effect/mine/dnascramble, // Outpost 21 addition - Genetics works again lmao
-				prob(1);/obj/item/mine/n2o, // Outpost 21 addition
-				prob(1);/obj/item/mine/phoron, // Outpost 21 addition
-				prob(1);/obj/item/mine/methane) // Outpost 21 addition - Methane mine
+				prob(10);/obj/effect/mine/spiders, // outpost 21 edit - you bet you know what this does
+				prob(10);/obj/effect/mine/glue, // outpost 21 edit
+				prob(10);/obj/effect/mine/portal, // outpost 21 edit
+				prob(10);/obj/effect/mine/lube, // outpost 21 edit
+				prob(1);/obj/effect/mine/confetti, // outpost 21 edit
+				prob(1);/obj/effect/mine/taarainbow, // outpost 21 edit - CANDY
+				prob(1);/obj/effect/mine/dnascramble, // outpost 21 edit - Genetics works again lmao
+				prob(1);/obj/item/mine/n2o, // outpost 21 edit
+				prob(1);/obj/item/mine/phoron, // outpost 21 edit
+				prob(1);/obj/item/mine/methane) // outpost 21 edit - Methane mine
 
 /obj/random/humanoidremains
 	name = "Random Humanoid Remains"

@@ -43,8 +43,7 @@
 	return draw_network.draw_power(power_draw)
 
 // Pulsed by beam_collector
-/obj/structure/confinement_beam_generator/inductor/pulse(datum/weakref/WF)
-	var/datum/confinement_pulse_data/data = WF?.resolve()
+/obj/structure/confinement_beam_generator/inductor/pulse(datum/confinement_pulse_data/data)
 	if(!data)
 		return
 

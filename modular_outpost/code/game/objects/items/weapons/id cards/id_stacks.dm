@@ -6,3 +6,6 @@
 	name = "Officers's ID"
 	initial_sprite_stack = list("base-stamp", "top-blue", "stamp-n")
 	rank = JOB_COMMAND_OFFICER
+
+/obj/item/card/id/science/xenobotanist
+	initial_sprite_stack = list("base-stamp", "top-green", "stamp-n", "stripe-purple")

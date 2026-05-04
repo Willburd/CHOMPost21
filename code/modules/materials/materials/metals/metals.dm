@@ -16,7 +16,6 @@
 	weight = 28
 	protectiveness = 60 // 75%
 	reflectivity = 0.7 // Not a perfect mirror, but close.
-	stack_origin_tech = list(TECH_MATERIAL = 8)
 	supply_conversion_value = 9
 
 /datum/material/durasteel/generate_recipes()
@@ -69,7 +68,6 @@
 	weight = 24
 	hardness = 40
 	conductivity = 41
-	stack_origin_tech = list(TECH_MATERIAL = 4)
 	sheet_singular_name = "ingot"
 	sheet_plural_name = "ingots"
 	supply_conversion_value = 2
@@ -81,7 +79,6 @@
 	weight = 22
 	hardness = 50
 	conductivity = 63
-	stack_origin_tech = list(TECH_MATERIAL = 3)
 	sheet_singular_name = "ingot"
 	sheet_plural_name = "ingots"
 	supply_conversion_value = 1 // Outpost 21 edit(port) - reduced value
@@ -92,7 +89,6 @@
 	icon_colour = "#9999FF"
 	weight = 27
 	conductivity = 9.43
-	stack_origin_tech = list(TECH_MATERIAL = 2)
 	sheet_singular_name = "ingot"
 	sheet_plural_name = "ingots"
 	supply_conversion_value = 5
@@ -105,7 +101,6 @@
 	icon_reinf = "reinf_stone"
 	icon_colour = "#007A00"
 	weight = 22
-	stack_origin_tech = list(TECH_MATERIAL = 5)
 	door_icon_base = "stone"
 	supply_conversion_value = 2
 
@@ -114,7 +109,6 @@
 	display_name = "metallic hydrogen" // Outpost 21 edit(port) - Why did this not have a pretty name?
 	stack_type = /obj/item/stack/material/mhydrogen
 	icon_colour = "#E6C5DE"
-	stack_origin_tech = list(TECH_MATERIAL = 6, TECH_POWER = 6, TECH_MAGNET = 5)
 	conductivity = 100
 	is_fusion_fuel = 1
 	supply_conversion_value = 6
@@ -123,7 +117,6 @@
 	name = MAT_DEUTERIUM
 	stack_type = /obj/item/stack/material/deuterium
 	icon_colour = "#999999"
-	stack_origin_tech = list(TECH_MATERIAL = 3)
 	sheet_singular_name = "ingot"
 	sheet_plural_name = "ingots"
 	is_fusion_fuel = 1
@@ -134,7 +127,6 @@
 	name = MAT_TRITIUM
 	stack_type = /obj/item/stack/material/tritium
 	icon_colour = "#777777"
-	stack_origin_tech = list(TECH_MATERIAL = 5)
 	sheet_singular_name = "ingot"
 	sheet_plural_name = "ingots"
 	is_fusion_fuel = 1
@@ -145,7 +137,6 @@
 	name = MAT_OSMIUM
 	stack_type = /obj/item/stack/material/osmium
 	icon_colour = "#9999FF"
-	stack_origin_tech = list(TECH_MATERIAL = 5)
 	sheet_singular_name = "ingot"
 	sheet_plural_name = "ingots"
 	conductivity = 100
@@ -166,7 +157,6 @@
 	conductivity = 18
 	melting_point = T0C+3600
 	radiation_resistance = 15
-	stack_origin_tech = list(TECH_MATERIAL = 2, TECH_MAGNET = 2)
 	supply_conversion_value = 0.5 // Outpost 21 edit(port) - Added supply sell price. This was missing...
 
 /datum/material/bronze

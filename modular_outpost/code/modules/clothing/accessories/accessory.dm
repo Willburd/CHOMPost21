@@ -1,6 +1,32 @@
 /obj/item/clothing/accessory
 	var/allow_borg = FALSE
 
+// Borgs wearing accessories
+/obj/item/clothing/accessory/attack_robot(mob/living/silicon/robot/user)
+	. = ..()
+	if(!Adjacent(user))
+		return
+	if(!allow_borg)
+		to_chat(src, span_notice("You cannot wear \the [src]"))
+		return
+	if(length(user.accessories) >= 20)
+		to_chat(src, span_danger("You are wearing too many accessories to put on another!"))
+		return
+
+	balloon_alert(user, "picking up \the [src]...")
+	if(!do_after(user, 3 SECONDS, src))
+		return
+	if(QDELETED(src) || !Adjacent(user) || user.incapacitated)
+		return
+	user.accessories += src
+	forceMove(user)
+	balloon_alert(user, "picked up \the [src]")
+
+/obj/item/clothing/accessory/examine(mob/user)
+	. = ..()
+	if(isrobot(user) && allow_borg)
+		. += span_notice("You can wear it as a chassis accessory.")
+
 /obj/item/clothing/accessory/ribbon
 	allow_borg = TRUE
 

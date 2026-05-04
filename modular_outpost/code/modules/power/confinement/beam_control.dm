@@ -46,7 +46,7 @@
 	SStgui.close_uis(src)
 	STOP_PROCESSING(SSobj, src)
 	. = ..()
-	qdel(data)
+	QDEL_NULL(data)
 
 /obj/structure/confinement_beam_generator/control_box/process()
 	pulse(null,dir) // Pulse ourselves, as we start the chain...
@@ -101,7 +101,7 @@
 		// Ready to fire?
 		if(pulse_enabled && data.target_z != -1)
 			data.dir = found_dir
-			G.pulse(WEAKREF(data))
+			G.pulse(data)
 
 /obj/structure/confinement_beam_generator/control_box/proc/check_focus_data(var/temp = T20C,var/max = T0C + 1400, var/watt = 0, var/health = 100, var/mhealth = 100)
 	SHOULD_NOT_OVERRIDE(TRUE)

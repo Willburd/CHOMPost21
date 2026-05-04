@@ -48,6 +48,7 @@
 				C.ingested.add_reagent(REAGENT_ID_CHLORALHYDRATE, 3)
 				reagents.trans_to_holder(C.ingested, 1)
 				bites++
+				update_icon() // Outpost 21 edit - Eating soap update
 				if(bites >= 5)
 					qdel(src)
 		else

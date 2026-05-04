@@ -70,7 +70,7 @@
 
 /obj/structure/disposalpipe/sortjunction/Destroy()
 	QDEL_NULL(wires)
-	if(sortType)
+	if(sortType && !istype(get_area(src), /area/vr)) // Outpost 21 edit - Ignore VR tags
 		LAZYREMOVE(GLOB.tagger_locations["[sortType]"], get_z(src))
 	. = ..()
 
@@ -86,8 +86,8 @@
 
 /obj/structure/disposalpipe/sortjunction/Initialize(mapload)
 	. = ..()
-	if(sortType)
-		LAZYADD(GLOB.tagger_locations["[sortType]"], get_z(src))
+	if(sortType && !istype(get_area(src), /area/vr))
+		LAZYADD(GLOB.tagger_locations["[sortType]"], get_z(src)) // Outpost 21 edit - Ignore VR tags
 
 	set_wires(new /datum/wires/disposals(src))
 
@@ -114,7 +114,7 @@
 	if(istype(I, /obj/item/destTagger))
 		var/obj/item/destTagger/O = I
 
-		if(O.currTag)// Tag set
+		if(O.currTag && !istype(get_area(src), /area/vr))// Tag set // Outpost 21 edit - Ignore VR tags
 			var/current_z = get_z(src)
 			if(sortType)
 				LAZYREMOVE(GLOB.tagger_locations["[sortType]"], current_z)

@@ -43,13 +43,14 @@
 		return 0
 	if(user?.mind?.assigned_role == JOB_CHAPLAIN)
 		if(istype(target, /obj/item/nullrod) || istype(target, /obj/item/storage/bible))
-			bless_body(TRUE)
+			exorcise_demon(TRUE, body)
 			return COMPONENT_CANCEL_ATTACK_CHAIN
 	return 0
 
-/datum/component/badbody/proc/bless_body(chappy_check)
+/proc/exorcise_demon(chappy_check, mob/living/body)
+	if(QDELETED(body) || body.stat != DEAD)
+		return
 	body.visible_message( span_danger("\The [body] [pick("shudders","cracks","snaps","crunches","twitches")] and screams!"))
-	deadsay("*scream")
 	playsound(body, 'sound/misc/demondeath.ogg', 100, 1)
 	var/turf/simulated/floor/check_singe = get_turf(body)
 	if(istype(check_singe))
@@ -78,7 +79,7 @@
 	var/blessed_turf = (check_holy?.blessed && prob(5))
 	var/is_chapel = istype(get_area(body), /area/chapel)
 	if(holywater || blessed_turf || is_chapel)
-		bless_body(FALSE)
+		exorcise_demon(FALSE, body)
 		return
 
 	var/speak = ""

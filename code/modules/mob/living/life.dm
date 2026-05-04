@@ -303,10 +303,10 @@
 	else if(istype(loc,/obj/item/holder)) //Poor carried teshari and whatnot should adjust appropriately
 		var/turf/T = get_turf(src)
 		brightness = T.get_lumcount()
-	// outpost 21 addition begin - lockers are dark and spooky!
+	// outpost 21 edit begin - lockers are dark and spooky!
 	else if(istype(loc,/obj/structure/closet))
 		brightness = 0 // it's dark in here!
-	// outpost 21 addition end
+	// outpost 21 edit end
 
 	var/darkness = 1-brightness					//Silly, I know, but 'alpha' and 'darkness' go the same direction on a number line
 	var/adjust_to = min(darkness,darksightedness)//Capped by how darksighted they are

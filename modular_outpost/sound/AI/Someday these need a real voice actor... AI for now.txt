@@ -1,0 +1,3 @@
+fish.audio Ishimura voice.
+
+Can be disabled by changing the announcer back to the SS13 base one if you want a AI-gen free station.

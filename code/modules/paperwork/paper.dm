@@ -217,11 +217,12 @@
 		onclose(user, "[name]")
 	return
 
-/obj/item/paper/attack(mob/living/carbon/M as mob, mob/living/carbon/user as mob)
+/obj/item/paper/attack(mob/living/M, mob/living/user, target_zone, attack_modifier)
 	if(user.zone_sel.selecting == O_EYES)
 		user.visible_message(span_notice("You show the paper to [M]. "), \
 			span_notice(" [user] holds up a paper and shows it to [M]. "))
 		M.examinate(src)
+		return ITEM_INTERACT_SUCCESS
 
 	else if(user.zone_sel.selecting == O_MOUTH) // lipstick wiping
 		if(ishuman(M))
@@ -238,6 +239,8 @@
 											span_notice("You wipe off [H]'s lipstick."))
 					H.lip_style = null
 					H.update_icons_body()
+					return ITEM_INTERACT_SUCCESS
+				return ITEM_INTERACT_FAILURE
 
 /obj/item/paper/proc/set_content(text,title)
 	if(title)
@@ -352,8 +355,8 @@
 		t = replacetext(t, "\[cell\]", "<td>")
 		t = replacetext(t, "\[/cell\]", "")
 		// Outpost 21 edit begin - use our logo
-		t = replacetext(t, "\[logo\]", "<img src=\ref['html/images/eslogo.png']>")
-		t = replacetext(t, "\[eslogo\]", "<img src=\ref['html/images/eslogo.png']>")
+		t = replacetext(t, "\[logo\]", "<img src=\ref['html/images/outpost/eslogo.png']>")
+		t = replacetext(t, "\[eslogo\]", "<img src=\ref['html/images/outpost/eslogo.png']>")
 		t = replacetext(t, "\[ntlogo\]", "<img src=\ref['html/images/ntlogo.png']>")
 		t = replacetext(t, "\[talogo\]", "<img src=\ref['html/images/talonlogo.png']>")
 		t = replacetext(t, "\[sglogo\]", "<img src=\ref['html/images/sglogo.png']>")
