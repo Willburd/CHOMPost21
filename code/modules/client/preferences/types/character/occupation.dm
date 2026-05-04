@@ -455,12 +455,14 @@
 			high_type = /datum/preference/numeric/human/job_engsec_high
 			med_type = /datum/preference/numeric/human/job_engsec_med
 			low_type = /datum/preference/numeric/human/job_engsec_low
+		/* Outpost 21 edit - Talon removal
 		//VOREStation Add
 		if(TALON)
 			high_type = /datum/preference/numeric/human/job_talon_high
 			med_type = /datum/preference/numeric/human/job_talon_med
 			low_type = /datum/preference/numeric/human/job_talon_low
 		//VOREStation Add End
+		*/
 		else
 			return 0
 
@@ -493,11 +495,13 @@
 	pref.write_preference_by_type(/datum/preference/numeric/human/job_engsec_med, 0)
 	pref.write_preference_by_type(/datum/preference/numeric/human/job_engsec_low, 0)
 
+	/* Outpost 21 edit - Talon removal
 	//VOREStation Add
 	pref.write_preference_by_type(/datum/preference/numeric/human/job_talon_high, 0)
 	pref.write_preference_by_type(/datum/preference/numeric/human/job_talon_med, 0)
 	pref.write_preference_by_type(/datum/preference/numeric/human/job_talon_low, 0)
 	//VOREStation Add End
+	*/
 
 	pref.write_preference_by_type(/datum/preference/player_alt_titles, list())
 
@@ -532,6 +536,7 @@
 					return read_preference(/datum/preference/numeric/human/job_engsec_med)
 				if(3)
 					return read_preference(/datum/preference/numeric/human/job_engsec_low)
+		/* Outpost 21 edit - Talon removal
 		//VOREStation Add
 		if(TALON)
 			switch(level)
@@ -542,4 +547,5 @@
 				if(3)
 					return read_preference(/datum/preference/numeric/human/job_talon_low)
 		//VOREStation Add End
+		*/
 	return 0
