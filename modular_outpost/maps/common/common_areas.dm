@@ -2853,6 +2853,22 @@
 	ambience = AMBIENCE_GENERIC
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 
+/area/maintenance/confinementbeam
+	name = "\improper Confinement Beam Maintenance"
+	sound_env = SMALL_ENCLOSED
+	ambience = AMBIENCE_MAINTENANCE
+	base_turf = /turf/space
+
+/area/maintenance/confinementbeam/north
+	name = "\improper Confinement Beam Maintenance North"
+	base_turf = /turf/simulated/open
+	sound_env = SMALL_ENCLOSED
+
+/area/maintenance/confinementbeam/south
+	name = "\improper Confinement Beam Maintenance South"
+	base_turf = /turf/simulated/open
+	sound_env = SMALL_ENCLOSED
+
 //
 // Tramline --------------------------------------------------
 //
