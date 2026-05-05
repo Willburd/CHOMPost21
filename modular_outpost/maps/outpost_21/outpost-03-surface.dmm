@@ -20011,7 +20011,8 @@
 	dir = 6
 	},
 /obj/machinery/station_map{
-	pixel_x = 32
+	pixel_x = 32;
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/engineering_hallway)

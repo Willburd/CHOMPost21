@@ -2300,6 +2300,18 @@
 	},
 /turf/simulated/floor/tiled,
 /area/security/brig/lowobservation)
+"afd" = (
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/disposalpipe/junction{
+	dir = 1;
+	icon_state = "pipe-j2"
+	},
+/turf/simulated/floor/tiled,
+/area/hallway/secondary/engineering_hallway)
 "afe" = (
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/unexplored/muriki/mountaintopeast)
@@ -8472,12 +8484,6 @@
 	},
 /turf/simulated/floor/reinforced,
 /area/rnd/supermatter)
-"asX" = (
-/obj/machinery/light/small{
-	dir = 4
-	},
-/turf/simulated/floor/outpost_roof/turfpack/muriki,
-/area/muriki/rooftop/engineering)
 "asY" = (
 /obj/structure/table/steel,
 /obj/item/integrated_circuit_printer,
@@ -8639,12 +8645,6 @@
 	},
 /turf/simulated/floor/reinforced,
 /area/rnd/supermatter)
-"atm" = (
-/obj/machinery/light/small{
-	dir = 8
-	},
-/turf/simulated/floor/outpost_roof/turfpack/muriki,
-/area/muriki/rooftop/engineering)
 "atn" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -8839,7 +8839,10 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 8
 	},
-/obj/structure/table/steel,
+/obj/machinery/disposal,
+/obj/structure/disposalpipe/trunk{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/engineering_hallway)
 "atC" = (
@@ -8852,6 +8855,9 @@
 	},
 /obj/effect/floor_decal/corner/purple{
 	dir = 8
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/engineering_hallway)
@@ -9518,13 +9524,6 @@
 	},
 /turf/simulated/floor,
 /area/hallway/secondary/engineering_hallway)
-"auz" = (
-/obj/structure/cable/yellow{
-	icon_state = "4-8"
-	},
-/obj/machinery/light/small,
-/turf/simulated/floor/outpost_roof/turfpack/muriki,
-/area/muriki/rooftop/engineering)
 "auA" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -9568,10 +9567,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/muriki/bathroom/engineering)
-"auE" = (
-/obj/machinery/light/small,
-/turf/simulated/floor/outpost_roof/turfpack/muriki,
-/area/muriki/rooftop/engineering)
 "auF" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
@@ -76432,13 +76427,13 @@ hEc
 hEc
 hEc
 hEc
-auz
+acY
 krn
 atY
 atH
 atw
 krn
-asX
+ucX
 acZ
 acZ
 acZ
@@ -77408,7 +77403,7 @@ acZ
 krn
 aue
 atD
-atD
+afd
 atn
 atd
 asD
@@ -77890,7 +77885,7 @@ hEc
 acZ
 arS
 adN
-acZ
+ucX
 auu
 aug
 atO
@@ -78862,7 +78857,7 @@ hEc
 acZ
 acZ
 acZ
-acZ
+ucX
 aux
 aun
 atT
@@ -79672,7 +79667,7 @@ jPy
 jPy
 jPy
 arQ
-auE
+acZ
 krn
 ufL
 ufL
@@ -79825,7 +79820,7 @@ qnY
 qnY
 qnY
 qnY
-acZ
+ucX
 acZ
 acY
 hEc
@@ -80650,7 +80645,7 @@ mUP
 mjc
 acZ
 acZ
-atm
+ucX
 adJ
 rBk
 rBk
