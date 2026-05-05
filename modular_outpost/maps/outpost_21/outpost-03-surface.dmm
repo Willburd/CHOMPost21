@@ -19908,10 +19908,6 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/obj/machinery/camera/network/engineering{
-	dir = 1;
-	c_tag = "ENG - Main Hall East Stairway Lower"
-	},
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/engineering_hallway)
 "aUd" = (
@@ -91382,6 +91378,10 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals10{
 	dir = 8
+	},
+/obj/machinery/camera/network/engineering{
+	dir = 1;
+	c_tag = "ENG - Main Hall East Stairway Lower"
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/engineering_hallway)
