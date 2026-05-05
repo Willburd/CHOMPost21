@@ -1655,6 +1655,12 @@
 /obj/structure/disposalpipe/junction,
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/exp_prep)
+"adB" = (
+/obj/effect/mine/claymore{
+	dir = 4
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/atmos_control)
 "adC" = (
 /turf/simulated/mineral/alt/turfpack/muriki,
 /area/mine/explored/muriki/cave/sci/east_access)
@@ -1741,6 +1747,22 @@
 /obj/structure/window/reinforced,
 /turf/simulated/floor/tiled/techfloor,
 /area/rnd/xenobiology/xenobioh)
+"adM" = (
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/corner/orange{
+	dir = 6
+	},
+/obj/machinery/vending/wallmed1/public{
+	dir = 8;
+	pixel_x = 30
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/engineering/atmoshall)
 "adN" = (
 /obj/machinery/atmospherics/pipe/simple/visible/supply{
 	dir = 6
@@ -1807,6 +1829,21 @@
 	},
 /turf/simulated/floor/bluegrid/airless,
 /area/medical/voxlab/airgap)
+"adV" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/door/blast/regular{
+	density = 0;
+	icon_state = "pdoor0";
+	id = "englockdown";
+	name = "Engineering Lockdown";
+	opacity = 0;
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/maintenance/eng)
 "adX" = (
 /obj/structure/disposalpipe/segment{
 	dir = 2;
@@ -21237,19 +21274,6 @@
 "aPr" = (
 /turf/simulated/wall,
 /area/mine/unexplored/muriki/cave/underdark_pit/central_eng)
-"aPs" = (
-/obj/structure/disposalpipe/segment,
-/obj/machinery/door/blast/regular{
-	density = 0;
-	icon_state = "pdoor0";
-	id = "englockdown";
-	name = "Engineering Lockdown";
-	opacity = 0;
-	dir = 4
-	},
-/obj/effect/floor_decal/industrial/hatch/yellow,
-/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
-/area/maintenance/atmos_control)
 "aPt" = (
 /obj/machinery/door/airlock/maintenance/int,
 /obj/item/grenade/concussion,
@@ -23134,13 +23158,15 @@
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/cave/waste)
 "aTA" = (
-/obj/effect/floor_decal/corner/orange{
-	dir = 9
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/sign/nosmoking_1{
 	pixel_x = -32
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/effect/floor_decal/corner/orange{
+	dir = 9
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/atmoshall)
@@ -43564,6 +43590,12 @@
 /obj/structure/cable/orange{
 	icon_state = "4-6"
 	},
+/obj/effect/auto_crayon{
+	icon_state = "x"
+	},
+/obj/effect/auto_crayon{
+	icon_state = "left"
+	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/atmos_control)
 "bFM" = (
@@ -46196,12 +46228,6 @@
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/maintenance/spine/eng)
-"bKX" = (
-/obj/effect/mine/claymore{
-	dir = 8
-	},
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/eng)
 "bKY" = (
 /obj/effect/auto_crayon{
 	icon_state = "four_greed"
@@ -70126,9 +70152,11 @@
 /obj/effect/floor_decal/corner/orange{
 	dir = 9
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/item/geiger/wall/west,
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/engineering/atmoshall)
 "dis" = (
@@ -70708,19 +70736,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/tug)
-"dKz" = (
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
-/obj/effect/floor_decal/corner/orange{
-	dir = 6
-	},
-/obj/machinery/vending/wallmed1/public{
-	dir = 8;
-	pixel_x = 30
-	},
-/turf/simulated/floor/tiled,
-/area/engineering/atmoshall)
 "dKT" = (
 /obj/item/broken_bottle,
 /turf/simulated/floor/wood/alt/parquet,
@@ -86772,6 +86787,9 @@
 /obj/machinery/status_display{
 	layer = 4;
 	pixel_x = 32
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/atmoshall)
@@ -110273,8 +110291,8 @@ hag
 aQq
 wly
 byx
-dKz
 pYY
+adM
 wSL
 gOY
 vzQ
@@ -110429,7 +110447,7 @@ aKw
 aHD
 aHD
 aHD
-aHE
+aHD
 aIw
 bRd
 aIw
@@ -110591,7 +110609,7 @@ aKx
 aLt
 aLt
 aNo
-aHE
+aHD
 bRj
 bRe
 bRc
@@ -110916,13 +110934,13 @@ aJu
 aMA
 aSl
 aHE
-cev
+aQh
+aQh
+aQh
+adV
+aQh
 aQt
 aQt
-bII
-aQh
-aQh
-aQh
 bMZ
 bMZ
 bMZ
@@ -111078,15 +111096,15 @@ aJv
 aHD
 qVG
 aHE
-bKX
+aQt
 aQt
 aQt
 bHv
 bIk
 bWS
-aQh
-bMZ
-bMZ
+aQt
+adu
+adu
 bMZ
 bMZ
 bMZ
@@ -111245,11 +111263,11 @@ clC
 bYn
 aQt
 ciN
-bIG
-aQh
-bMZ
-bMZ
-bMZ
+cqp
+cev
+adB
+bMc
+pxx
 bMZ
 bMZ
 bMZ
@@ -111401,16 +111419,16 @@ aHE
 aHE
 aHE
 clI
-aPs
+bLi
 bIm
 bYr
 bHv
 bHI
 bIm
 bWS
-aQh
-bMZ
-bMZ
+aQt
+cqf
+adu
 bMZ
 bMZ
 bMZ
@@ -111563,16 +111581,16 @@ bLA
 clL
 bLA
 bLo
-akx
-aQh
-aQh
-aQh
-aQh
-aQh
-aQh
-aQh
-bMZ
-bMZ
+adu
+aQt
+aQt
+aQt
+aQt
+aQt
+aQt
+aQt
+clv
+adu
 bMZ
 adu
 adu
@@ -111732,9 +111750,9 @@ bMZ
 bMZ
 bMZ
 bMZ
-bMZ
-bMZ
-bMZ
+adu
+bLx
+adu
 bMZ
 adu
 cbL
@@ -111894,9 +111912,9 @@ bMZ
 bMZ
 bMZ
 bMZ
-bMZ
-bMZ
-bMZ
+adu
+bLx
+adu
 bMZ
 adu
 bXJ
@@ -112056,9 +112074,9 @@ bMZ
 bMZ
 bMZ
 bMZ
-bMZ
-bMZ
-bMZ
+adu
+bLx
+adu
 bMZ
 adu
 cls
