@@ -43,11 +43,6 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	var/digitigrade = 0
 
 		//Some faction information.
-	var/home_system = "Unset"           //Current home or residence.
-	var/birthplace = "Unset"           //Location of birth.
-	var/citizenship = "None"            //Government or similar entity with which you hold citizenship.
-	var/faction = "None"                //General associated faction.
-	var/religion = "None"               //Religious association.
 	var/antag_faction = "None"			//Antag associated faction.
 	var/antag_vis = "Hidden"			//How visible antag association is to others.
 
@@ -63,22 +58,6 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 		"PMHjiggle" = "character_preview_map:102,7:107",
 	)
 
-		//Jobs, uses bitflags
-	var/job_civilian_high = 0
-	var/job_civilian_med = 0
-	var/job_civilian_low = 0
-
-	var/job_medsci_high = 0
-	var/job_medsci_med = 0
-	var/job_medsci_low = 0
-
-	var/job_engsec_high = 0
-	var/job_engsec_med = 0
-	var/job_engsec_low = 0
-
-	//Keeps track of preferrence for not getting any wanted jobs
-	var/alternate_option = 1
-
 	//character preferences
 	var/slot_randomized //keeps track of round-to-round randomization of the character slot, prevents overwriting
 
@@ -86,7 +65,6 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 	// maps each organ to either null(intact), "cyborg" or "amputated"
 	// will probably not be able to do this for head and torso ;)
-	var/list/player_alt_titles = new()		// the default name of a job like JOB_MEDICAL_DOCTOR
 
 	var/list/body_markings = list() // "name" = "#rgbcolor" //VOREStation Edit: "name" = list(BP_HEAD = list("on" = <enabled>, "color" = "#rgbcolor"), BP_TORSO = ...)
 
@@ -94,11 +72,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 	var/list/flavour_texts_robot = list()
 	var/custom_link = null
 
-	var/med_record = ""
-	var/sec_record = ""
-	var/gen_record = ""
 	var/exploit_record = ""
-	var/economic_status = "Average"
 
 	var/client/client = null
 	var/client_ckey = null
@@ -395,8 +369,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 		log_world("## ERROR Player picked [choice] slot to copy to, but that wasn't one we sent.")
 		return
 
-	var/list/rep_data = savefile.get_entry("character[default_slot]", list())
-	if(tgui_alert(user, "Are you sure you want to override the character \"[choice]\" in slot [slotnum], this will completely replace their savedata with \"[rep_data["real_name"]]\"'s from slot [default_slot]. Are you sure? This cannot be undone.", "Confirm Override", list("No", "Yes")) == "Yes")
+	if(tgui_alert(user, "Are you sure you want to override slot [slotnum], [choice]'s savedata?", "Confirm Override", list("No", "Yes")) == "Yes")
 		overwrite_character(slotnum)
 		save_character(TRUE)
 		save_preferences()

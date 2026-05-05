@@ -386,6 +386,7 @@
 		JOB_ROBOTICIST = "itg_purple",
 		JOB_SCIENTIST = "itg_purple",
 		JOB_XENOBIOLOGIST = "itg_purple",
+		JOB_ELECTROPHYSICIST = "itg_purple",
 		JOB_XENOBOTANIST = "itg_purple",
 		JOB_PATHFINDER = "itg_purple",
 		JOB_EXPLORER = "itg_purple",
@@ -416,8 +417,9 @@
 
 	if(!preset_rank)
 		var/title
-		if(user.client.prefs.player_alt_titles[user.job])
-			title = user.client.prefs.player_alt_titles[user.job]
+		var/list/alt_titles = user.client.prefs.read_preference(/datum/preference/player_alt_titles)
+		if(islist(alt_titles) && alt_titles[user.job])
+			title = alt_titles[user.job]
 		else
 			title = user.job
 		assignment = title

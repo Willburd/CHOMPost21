@@ -433,7 +433,13 @@
 	icon_state = "globe"
 	color = "#7be313"
 	initial_generic_waypoints = list("outpost_landing_pad","outpost_engineering_pad")
-	initial_restricted_waypoints = list( "Mining Trawler" = list("outpost_trawler_pad"), "Security Carrier" = list("outpost_security_hangar"), "Medical Rescue" = list("outpost_medical_hangar"), "Interferon" = list("interferon_airdrop_muriki_central", "interferon_airdrop_muriki_southeast"))
+	initial_restricted_waypoints = list(
+		"Mining Trawler" = list("outpost_trawler_pad"),
+		"Security Carrier" = list("outpost_security_hangar"),
+		"Medical Rescue" = list("outpost_medical_hangar"),
+		"Interferon" = list("airdrop_muriki_central", "airdrop_muriki_southeast"),
+		"Rokkaku-Dako" = list("dako_airdrop_muriki_central", "outpost_security_hangar", "outpost_security_hangar", "airdrop_muriki_central", "airdrop_muriki_southeast", "airdrop_muriki_southwest", "airdrop_muriki_northeast", "airdrop_muriki_northwest"),
+		"Mercenary" = list("airdrop_muriki_central", "airdrop_muriki_southeast", "airdrop_muriki_southwest", "airdrop_muriki_northeast", "airdrop_muriki_northwest"))
 	//Despite not being in the multi-z complex, these levels are part of the overmap sector
 	extra_z_levels = list()
 
@@ -549,7 +555,7 @@
 [i]Transponder[/i]: Transmitting (CIV), SOLGOV IFF
 [b]Notice[/b]: Solgov Transport Facility"}
 	map_z = list(Z_NAME_ALIAS_MISC)
-	initial_restricted_waypoints = list("Interferon" = list("interferon_hangar"))
+	initial_restricted_waypoints = list("Interferon" = list("interferon_hangar"), "Rokkaku-Dako" = list("dako_docking_hanger"))
 
 /obj/effect/overmap/visitable/sector/murkiki_space/distant_gateway/get_space_zlevels()
 	return list() //None!

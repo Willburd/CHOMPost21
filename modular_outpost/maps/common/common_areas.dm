@@ -1108,7 +1108,7 @@
 	name = "Science Second Floor"
 	base_turf = /turf/simulated/open
 	lift_floor_label = "Research Second Floor"
-	lift_floor_name = "Particle lab, Server, Tool Storage, Phoronics, RD."
+	lift_floor_name = "Server, Tool Storage, Phoronics, RD."
 	lift_announce_str = "Arriving at Second Floor."
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
 
@@ -2852,6 +2852,22 @@
 	sound_env = SMALL_SOFTFLOOR
 	ambience = AMBIENCE_GENERIC
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+
+/area/maintenance/confinementbeam
+	name = "\improper Confinement Beam Maintenance"
+	sound_env = SMALL_ENCLOSED
+	ambience = AMBIENCE_MAINTENANCE
+	base_turf = /turf/space
+
+/area/maintenance/confinementbeam/north
+	name = "\improper Confinement Beam Maintenance North"
+	base_turf = /turf/simulated/open
+	sound_env = SMALL_ENCLOSED
+
+/area/maintenance/confinementbeam/south
+	name = "\improper Confinement Beam Maintenance South"
+	base_turf = /turf/simulated/open
+	sound_env = SMALL_ENCLOSED
 
 //
 // Tramline --------------------------------------------------
