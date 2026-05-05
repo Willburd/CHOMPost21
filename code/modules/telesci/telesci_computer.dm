@@ -233,6 +233,8 @@
 		var/trueRotation = rotation // + rotation_off // Outpost 21 edit - Remove randomized offset in Tsci
 
 		var/datum/projectile_data/proj_data = simple_projectile_trajectory(telepad.x, telepad.y, trueRotation, trueDistance)
+		if(proj_data?.time)
+			proj_data.time /= 3 // Outpost 21 edit - Decreased teleport cooldown
 		last_tele_data = proj_data
 
 		var/trueX = proj_data.dest_x
@@ -382,7 +384,7 @@
 
 
 // Procedure that calculates the actual trajectory taken!
-/proc/simple_projectile_trajectory(var/src_x, var/src_y, var/rotation, var/distance)
+/proc/simple_projectile_trajectory(src_x, src_y, rotation, distance)
 	var/time = distance / 10 // 100ms per distance seems fine?
 	var/dest_x = src_x + distance*sin(rotation);
 	var/dest_y = src_y + distance*cos(rotation);

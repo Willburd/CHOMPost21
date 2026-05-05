@@ -81,7 +81,7 @@ GLOBAL_LIST_EMPTY(active_autoresleevers)
 	else
 		to_chat(user, span_warning("You need to have been spawned in order to respawn here."))
 
-/obj/machinery/transhuman/autoresleever/attackby(var/mob/user)	//Let's not let people mess with this.
+/obj/machinery/transhuman/autoresleever/attackby(mob/user)	//Let's not let people mess with this.
 	// outpost 21 edit begin - Our resleever works different
 	if(!allow_ghosts_to_trigger)
 		return
@@ -92,7 +92,7 @@ GLOBAL_LIST_EMPTY(active_autoresleevers)
 	else
 		return
 
-/obj/machinery/transhuman/autoresleever/proc/autoresleeve(var/mob/observer/dead/ghost,var/idscan = FALSE)
+/obj/machinery/transhuman/autoresleever/proc/autoresleeve(mob/observer/dead/ghost,idscan = FALSE)
 	if(stat) // Outpost 21 edit - We prefer our autosleever to not work in a powerout, was:  & (BROKEN | MAINT | EMPED)) // Let it still work when power is just off, it has it's own backup reserve or something.
 		to_chat(ghost, span_warning("This machine is not functioning..."))
 		return
@@ -326,12 +326,12 @@ GLOBAL_LIST_EMPTY(active_autoresleevers)
 		return
 
 // Outpost 21 edit begin - our resleever works different
-/obj/machinery/transhuman/autoresleever/proc/link_gibber(var/obj/machinery/gibber/G)
+/obj/machinery/transhuman/autoresleever/proc/link_gibber(obj/machinery/gibber/G)
 	G.sleevelink = src
 	releaseturf = get_turf(G)
 	throw_dir = G.gib_throw_dir
 
-/obj/machinery/transhuman/autoresleever/proc/get_id_trigger(var/obj/item/card/id/D)
+/obj/machinery/transhuman/autoresleever/proc/get_id_trigger(obj/item/card/id/D)
 	if(stat || isnull(releaseturf))
 		return
 
@@ -402,7 +402,7 @@ GLOBAL_LIST_EMPTY(active_autoresleevers)
 			to_chat(ghost, "<span class='warning'>Your ID has arrived at the autosleever!</span>")
 			autoresleeve(ghost,TRUE)
 
-/obj/machinery/transhuman/autoresleever/proc/outpost_post_sleeve(var/idscan, var/mob/living/carbon/human/new_character, var/spawnloc)
+/obj/machinery/transhuman/autoresleever/proc/outpost_post_sleeve(idscan, mob/living/carbon/human/new_character, spawnloc)
 	var/confuse_amount = rand(8,26)
 	var/blur_amount = rand(8,56)
 	var/sickness_duration = rand(20,30) MINUTES

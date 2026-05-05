@@ -45,7 +45,7 @@
 		to_chat(src, "<span class='notice'>Placing \the [perscrip] in your [Bag.name]!</span>")
 		Bag.contents += perscrip
 
-/mob/living/carbon/human/proc/equip_survival_tanks(var/forceback = FALSE)
+/mob/living/carbon/human/proc/equip_survival_tanks(forceback = FALSE)
 	if(!species)
 		return
 

@@ -2,7 +2,7 @@
 	name = "shadekin dephaser"
 	affect_ghosts = 1
 
-/obj/effect/step_trigger/dephase_shadekin/Trigger(var/atom/movable/A)
+/obj/effect/step_trigger/dephase_shadekin/Trigger(atom/movable/A)
 	if(isobserver(A))
 		return
 	if(ishuman(A))

@@ -89,7 +89,7 @@
 	if(!linked_node)
 		qdel(src)
 
-/obj/effect/dark/floor/Initialize(mapload, check_glow, var/node)
+/obj/effect/dark/floor/Initialize(mapload, check_glow, node)
 	. = ..(mapload, !isspace(loc))
 
 	if(isspace(loc))

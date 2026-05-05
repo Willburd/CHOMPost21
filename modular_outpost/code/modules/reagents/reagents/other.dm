@@ -1,4 +1,4 @@
-/datum/reagent/water/holywater/touch_turf(var/turf/T)
+/datum/reagent/water/holywater/touch_turf(turf/T)
 	..()
 	if(volume < 5)
 		return

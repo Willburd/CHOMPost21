@@ -18,7 +18,7 @@
 	activate()
 
 
-/obj/machinery/elevator_warning/attackby(var/obj/item/O as obj, var/mob/user as mob)
+/obj/machinery/elevator_warning/attackby(obj/item/O as obj, mob/user as mob)
 	. = ..()
 
 /obj/machinery/elevator_warning/process()

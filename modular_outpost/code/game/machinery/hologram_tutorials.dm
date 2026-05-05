@@ -28,7 +28,7 @@
 	attack_hand(user)
 	return
 
-/obj/machinery/hologram/holo_tutorial/attack_hand(var/mob/living/carbon/human/user) //Carn: Hologram requests.
+/obj/machinery/hologram/holo_tutorial/attack_hand(mob/living/carbon/human/user) //Carn: Hologram requests.
 	if(!istype(user))
 		return
 	loop_requests = 1

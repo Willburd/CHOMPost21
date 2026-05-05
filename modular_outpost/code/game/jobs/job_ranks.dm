@@ -196,6 +196,8 @@
 	rank_pin = RANK_PIN_PATH
 /datum/alt_title/engine_tech
 	rank_pin = RANK_PIN_PATH
+/datum/job/electro_physicist
+	rank_pin = RANK_PIN_PATH
 #undef RANK_PIN_PATH
 
 

@@ -9,7 +9,7 @@
 	if(C && !C.opened)
 		src.forceMove(C)
 
-/mob/living/proc/slam_grabbed_mob_against_thing(var/obj/item/grab/G)
+/mob/living/proc/slam_grabbed_mob_against_thing(obj/item/grab/G)
 	// null checking for my own sanity, only aggressive grabs headsmash
 	var/mob/living/throw_mob = G.throw_held()
 	if(throw_mob && a_intent == I_HURT && G.state >= GRAB_NECK)

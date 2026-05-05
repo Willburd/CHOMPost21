@@ -80,7 +80,7 @@
 			GLOB.command_announcement.Announce("Cease Fire. Cease Fire. Bluespace artillery shelling has finalized. Assess damage, and begin repair operations.", "Bluespace Shelling")
 		spawncount--
 
-/datum/event/bluespace_shelling/proc/boom(var/mult)
+/datum/event/bluespace_shelling/proc/boom(mult)
 	var/hitsize = rand(1,2) * mult
 	if(spawncount <= 0)
 		hitsize = rand(2,5) * mult // final shots

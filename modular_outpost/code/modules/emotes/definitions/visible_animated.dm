@@ -87,7 +87,7 @@
 		if(H.get_jittery() < 180)
 			H.make_jittery(195)
 
-/datum/decl/emote/visible/floorspin/tantrum/spin_dir(var/mob/user)
+/datum/decl/emote/visible/floorspin/tantrum/spin_dir(mob/user)
 	set waitfor = FALSE
 	for(var/i in spin_dirs_tantrum)
 		user.set_dir(i)
@@ -95,7 +95,7 @@
 		if(QDELETED(user))
 			return
 
-/datum/decl/emote/visible/floorspin/tantrum/spin_anim(var/mob/user)
+/datum/decl/emote/visible/floorspin/tantrum/spin_anim(mob/user)
 	set waitfor = FALSE
 	sleep(1)
 	if(!QDELETED(user))

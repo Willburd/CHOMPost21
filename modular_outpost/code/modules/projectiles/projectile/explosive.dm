@@ -13,7 +13,7 @@
 	EXPLOSION_EVENT
 	return 1
 
-/obj/item/projectile/bullet/srmrocket/throw_impact(atom/target, var/speed)
+/obj/item/projectile/bullet/srmrocket/throw_impact(atom/target, speed)
 	EXPLOSION_EVENT
 	qdel(src)
 #undef EXPLOSION_EVENT
@@ -28,7 +28,7 @@
 	EXPLOSION_EVENT
 	return 1
 
-/obj/item/projectile/bullet/srmrocket/weak/throw_impact(atom/target, var/speed)
+/obj/item/projectile/bullet/srmrocket/weak/throw_impact(atom/target, speed)
 	EXPLOSION_EVENT
 	qdel(src)
 #undef EXPLOSION_EVENT

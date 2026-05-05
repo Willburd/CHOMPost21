@@ -433,19 +433,25 @@
 	icon_state = "globe"
 	color = "#7be313"
 	initial_generic_waypoints = list("outpost_landing_pad","outpost_engineering_pad")
-	initial_restricted_waypoints = list( "Mining Trawler" = list("outpost_trawler_pad"), "Security Carrier" = list("outpost_security_hangar"), "Medical Rescue" = list("outpost_medical_hangar"), "Interferon" = list("interferon_airdrop_muriki_central", "interferon_airdrop_muriki_southeast"))
+	initial_restricted_waypoints = list(
+		"Mining Trawler" = list("outpost_trawler_pad"),
+		"Security Carrier" = list("outpost_security_hangar"),
+		"Medical Rescue" = list("outpost_medical_hangar"),
+		"Interferon" = list("airdrop_muriki_central", "airdrop_muriki_southeast"),
+		"Rokkaku-Dako" = list("dako_airdrop_muriki_central", "outpost_security_hangar", "outpost_security_hangar", "airdrop_muriki_central", "airdrop_muriki_southeast", "airdrop_muriki_southwest", "airdrop_muriki_northeast", "airdrop_muriki_northwest"),
+		"Mercenary" = list("airdrop_muriki_central", "airdrop_muriki_southeast", "airdrop_muriki_southwest", "airdrop_muriki_northeast", "airdrop_muriki_northwest"))
 	//Despite not being in the multi-z complex, these levels are part of the overmap sector
 	extra_z_levels = list()
 
-/obj/effect/overmap/visitable/sector/muriki/Crossed(var/atom/movable/AM)
+/obj/effect/overmap/visitable/sector/muriki/Crossed(atom/movable/AM)
 	. = ..()
 	announce_atc(AM,going = FALSE)
 
-/obj/effect/overmap/visitable/sector/muriki/Uncrossed(var/atom/movable/AM)
+/obj/effect/overmap/visitable/sector/muriki/Uncrossed(atom/movable/AM)
 	. = ..()
 	announce_atc(AM,going = TRUE)
 
-/obj/effect/overmap/visitable/sector/muriki/announce_atc(var/atom/movable/AM, var/going = FALSE)
+/obj/effect/overmap/visitable/sector/muriki/announce_atc(atom/movable/AM, going = FALSE)
 	var/message = "Sensor contact for vessel '[AM.name]' has [going ? "left" : "entered"] ATC control area."
 	//For landables, we need to see if their shuttle is cloaked
 	if(istype(AM, /obj/effect/overmap/visitable/ship/landable))
@@ -476,15 +482,15 @@
 	extra_z_levels = list()
 	levels_for_distress = list(Z_LEVEL_OUTPOST_SURFACE)
 
-/obj/effect/overmap/visitable/sector/murkiki_space/orbital_yard/Crossed(var/atom/movable/AM)
+/obj/effect/overmap/visitable/sector/murkiki_space/orbital_yard/Crossed(atom/movable/AM)
 	. = ..()
 	announce_atc(AM,going = FALSE)
 
-/obj/effect/overmap/visitable/sector/murkiki_space/orbital_yard/Uncrossed(var/atom/movable/AM)
+/obj/effect/overmap/visitable/sector/murkiki_space/orbital_yard/Uncrossed(atom/movable/AM)
 	. = ..()
 	announce_atc(AM,going = TRUE)
 
-/obj/effect/overmap/visitable/sector/murkiki_space/orbital_yard/announce_atc(var/atom/movable/AM, var/going = FALSE)
+/obj/effect/overmap/visitable/sector/murkiki_space/orbital_yard/announce_atc(atom/movable/AM, going = FALSE)
 	var/message = "Sensor contact for vessel '[AM.name]' has [going ? "left" : "entered"] ATC control area."
 	//For landables, we need to see if their shuttle is cloaked
 	if(istype(AM, /obj/effect/overmap/visitable/ship/landable))
@@ -515,15 +521,15 @@
 	initial_restricted_waypoints = list( "Mining Trawler" = list("confinementbeam_trawler"), "Security Carrier" = list("confinementbeam_security", "aisat_security"), "Medical Rescue" = list("confinementbeam_medical"))
 	levels_for_distress = list(Z_LEVEL_OUTPOST_SURFACE)
 
-/obj/effect/overmap/visitable/sector/murkiki_space/confinementbeam/Crossed(var/atom/movable/AM)
+/obj/effect/overmap/visitable/sector/murkiki_space/confinementbeam/Crossed(atom/movable/AM)
 	. = ..()
 	announce_atc(AM,going = FALSE)
 
-/obj/effect/overmap/visitable/sector/murkiki_space/confinementbeam/Uncrossed(var/atom/movable/AM)
+/obj/effect/overmap/visitable/sector/murkiki_space/confinementbeam/Uncrossed(atom/movable/AM)
 	. = ..()
 	announce_atc(AM,going = TRUE)
 
-/obj/effect/overmap/visitable/sector/murkiki_space/confinementbeam/announce_atc(var/atom/movable/AM, var/going = FALSE)
+/obj/effect/overmap/visitable/sector/murkiki_space/confinementbeam/announce_atc(atom/movable/AM, going = FALSE)
 	var/message = "Sensor contact for vessel '[AM.name]' has [going ? "left" : "entered"] ATC control area."
 	//For landables, we need to see if their shuttle is cloaked
 	if(istype(AM, /obj/effect/overmap/visitable/ship/landable))
@@ -549,7 +555,7 @@
 [i]Transponder[/i]: Transmitting (CIV), SOLGOV IFF
 [b]Notice[/b]: Solgov Transport Facility"}
 	map_z = list(Z_NAME_ALIAS_MISC)
-	initial_restricted_waypoints = list("Interferon" = list("interferon_hangar"))
+	initial_restricted_waypoints = list("Interferon" = list("interferon_hangar"), "Rokkaku-Dako" = list("dako_docking_hanger"))
 
 /obj/effect/overmap/visitable/sector/murkiki_space/distant_gateway/get_space_zlevels()
 	return list() //None!

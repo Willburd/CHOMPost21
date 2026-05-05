@@ -26,7 +26,7 @@
 
 
 //This proc is responsible for ore generation on surface turfs
-/turf/simulated/mineral/turfpack/muriki/make_ore(var/rare_ore)
+/turf/simulated/mineral/turfpack/muriki/make_ore(rare_ore)
 	if(mineral || ignore_mapgen)
 		return
 
@@ -65,7 +65,7 @@
 		UpdateMineral()
 	update_icon()
 
-/turf/simulated/mineral/rich/turfpack/muriki/make_ore(var/rare_ore)
+/turf/simulated/mineral/rich/turfpack/muriki/make_ore(rare_ore)
 	if(mineral || ignore_mapgen)
 		return
 
@@ -179,18 +179,18 @@
 	shock_area = locate(shock_area)
 
 // Walking on maglev tracks will shock you! Horray!
-/turf/simulated/floor/maglev/Entered(var/atom/movable/AM, var/atom/old_loc)
+/turf/simulated/floor/maglev/Entered(atom/movable/AM, atom/old_loc)
 	if(!isliving(AM) || prob(50))
 		return
 	if(locate(/obj/structure/catwalk) in src) // safe to walk over as a bridge!
 		return
 	track_zap(AM)
 
-/turf/simulated/floor/maglev/attack_hand(var/mob/user)
+/turf/simulated/floor/maglev/attack_hand(mob/user)
 	if(prob(75))
 		track_zap(user)
 
-/turf/simulated/floor/maglev/proc/track_zap(var/mob/living/user)
+/turf/simulated/floor/maglev/proc/track_zap(mob/living/user)
 	if(!istype(user) || user.is_incorporeal())
 		return
 	if (electrocute_mob(user, shock_area, src))

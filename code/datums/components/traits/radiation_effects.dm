@@ -221,11 +221,24 @@
 			living_guy.radiation -= rads_to_utilize
 			living_guy.accumulated_rads -= rads_to_utilize
 			rads_to_utilize = CLAMP(rads_to_utilize, 1, 10) //Only heal up to 10 rads.
-			living_guy.adjustBruteLoss(-rads_to_utilize)
-			living_guy.adjustFireLoss(-rads_to_utilize)
-			living_guy.adjustOxyLoss(-rads_to_utilize)
-			living_guy.adjustToxLoss(-rads_to_utilize)
-			living_guy.updatehealth()
+			// Outpost 21 edit begin - Divide by amount of damage types
+			var/divisor = 0
+			if(living_guy.bruteloss)
+				divisor++
+			if(living_guy.fireloss)
+				divisor++
+			if(living_guy.oxyloss)
+				divisor++
+			if(living_guy.toxloss)
+				divisor++
+			if(divisor)
+				var/heal_amount = -rads_to_utilize / divisor
+				living_guy.adjustBruteLoss(heal_amount)
+				living_guy.adjustFireLoss(heal_amount)
+				living_guy.adjustOxyLoss(heal_amount)
+				living_guy.adjustToxLoss(heal_amount)
+				living_guy.updatehealth()
+			// Outpost 21 edit end
 
 		else if(radiation_dissipation)
 			living_guy.radiation -= rads_to_utilize
@@ -249,7 +262,7 @@
 		living_guy.accumulated_rads = CLAMP(living_guy.accumulated_rads, 0, RADIATION_CAP)
 		return COMPONENT_BLOCK_LIVING_RADIATION
 
-/datum/component/radiation_effects/proc/handle_irradiate_effect(var/mob/living/living_guy, var/effect, var/effecttype, var/blocked, var/check_protection, var/rad_protection)
+/datum/component/radiation_effects/proc/handle_irradiate_effect(mob/living/living_guy, effect, effecttype, blocked, check_protection, rad_protection)
 	SIGNAL_HANDLER
 	///If we're not contaminating, don't worry about this. Proceed like normal.
 	if(!contamination || (contamination && living_guy.radiation < contamination_threshold))

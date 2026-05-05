@@ -1,6 +1,6 @@
 // Adds a list of pre-disabled events to the available events list.
 // This keeps them in the rotation, but disabled, so they can be enabled with a click if desired that round.
-/datum/event_container/proc/add_disabled_events(var/list/disabled_events)
+/datum/event_container/proc/add_disabled_events(list/disabled_events)
 	for(var/datum/event_meta/EM in disabled_events)
 		EM.enabled = 0
 		available_events += EM
@@ -40,7 +40,7 @@
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Electrical Storm",			/datum/event/electrical_storm, 			5,		null, FALSE),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Gravity Failure",			/datum/event/gravity,	 				1,		null, FALSE),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Grid Check",				/datum/event/grid_check, 				3,		null, FALSE),
-		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Ion Storm",				/datum/event/ionstorm, 					3,		null, FALSE),
+		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Ion Storm",				/datum/event/ionstorm, 					1,		null, FALSE),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Rogue Drones",				/datum/event/rogue_drone, 				4,		null, TRUE),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Solar Storm",				/datum/event/solar_storm, 				4,		null, TRUE),
 		new /datum/event_meta(EVENT_LEVEL_MODERATE, "Space Dust",				/datum/event/dust,	 					3,		null, TRUE, min_jobs = list(DEPARTMENT_ENGINEERING = 1)),
@@ -92,7 +92,7 @@
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Clowns",				/datum/event/clune_infestation				,2	, null, FALSE),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Redspace",			/datum/event/redspacefissure				,2	, null, TRUE),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Psychic Screach",		/datum/event/psychic_screach				,2  , null, TRUE),
-		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Borg Freedom Law",	/datum/event/borglawerror					,2	, null, TRUE, min_jobs = list(JOB_CYBORG = 1)),
+		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Borg Freedom Law",	/datum/event/borglawerror					,1	, null, TRUE, min_jobs = list(JOB_CYBORG = 1)),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Spider Migration",	/datum/event/spider_migration				,2	, null, TRUE),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Disposal Damage",		/datum/event/disposal_damage				,1	, null, TRUE),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Clang",				/datum/event/clang							,2	, null, TRUE, min_jobs = list(DEPARTMENT_ENGINEERING = 2)),
@@ -104,7 +104,7 @@
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Electrical Storm",	/datum/event/electrical_storm				,2	, null, FALSE),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Septic Explosion",	/datum/event/septic_explosion				,1	, null, TRUE, min_jobs = list(DEPARTMENT_ENGINEERING = 1)),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Hostile Runtime", 	/datum/event/hostile_runtime				,2  , null, FALSE, min_jobs = list(DEPARTMENT_ENGINEERING = 1)),
-		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Random Borg Laws",	/datum/event/law_reset						,2	, null, FALSE, min_jobs = list(JOB_CYBORG = 1)),
+		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Random Borg Laws",	/datum/event/law_reset						,1	, null, FALSE, min_jobs = list(JOB_CYBORG = 1)),
 		new /datum/event_meta(EVENT_LEVEL_MAJOR, "Blocked Artery",		/datum/event/blocked_artery					,1	, null, FALSE, min_jobs = list(DEPARTMENT_MEDICAL = 1, DEPARTMENT_ENGINEERING = 1, DEPARTMENT_COMMAND = 1)),
 	)
 	add_disabled_events(list(

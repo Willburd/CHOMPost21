@@ -85,12 +85,14 @@
 	var/list/organ_data = P.read_preference(/datum/preference/organ_data)
 	if(!organ_data || organ_data[BP_TORSO] == "cyborg") // no FBP, too easy to "repair"
 		return FALSE
-	if(P.job_engsec_high & CYBORG || P.job_engsec_high & AI_DEPT) // No borgs! If they don't have it as their high job, they spawn as something else anyway, or are abusing code diving to cheese this... Hello by the way.
+
+	var/flagcheck = P.read_preference(/datum/preference/numeric/human/job_engsec_high)
+	if(flagcheck & CYBORG || flagcheck & AI_DEPT) // No borgs! If they don't have it as their high job, they spawn as something else anyway, or are abusing code diving to cheese this... Hello by the way.
 		return FALSE
 
 	return TRUE
 
-/datum/event/badbody/proc/spawn_body(client/picked_client,var/turf/spawnloc)
+/datum/event/badbody/proc/spawn_body(client/picked_client,turf/spawnloc)
 	// A terrible clone of /client/proc/respawn_character() but with fixed choices.
 	if(!spawnloc || !istype(picked_client))
 		return

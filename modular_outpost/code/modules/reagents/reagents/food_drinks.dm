@@ -6,7 +6,7 @@
 	taste_description = "you're not welcome in this swamp."
 	scannable = SCANNABLE_SECRETIVE
 
-/datum/reagent/drink/coffee/nukie/mega/final_nukie/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/drink/coffee/nukie/mega/final_nukie/affect_ingest(mob/living/carbon/M, alien, removed)
 	if(M.get_jittery() < 500)
 		to_chat(M, span_critical("You have a seizure!"))
 		M.Paralyse(10)
@@ -26,7 +26,7 @@
 	color = "#80ba80"
 	scannable = SCANNABLE_UNSCANNABLE
 
-/datum/reagent/ickypak/the_dew/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/ickypak/the_dew/affect_blood(mob/living/carbon/M, alien, removed)
 	M.druggy = max(M.druggy, 12)
 	M.make_dizzy(1)
 	M.adjustHalLoss(2)

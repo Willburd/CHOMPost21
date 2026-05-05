@@ -16,6 +16,9 @@
 /datum/trait/positive/rad_immune // Cannot be irradiated
 	cost = 6 // upstream is: 3
 
+/datum/trait/positive/radioactive_heal // Cannot be irradiated and gain healing from it
+	cost = 8 // upstream is: 6
+
 /datum/trait/positive/rad_resistance_extreme // like above but lesser
 	cost = 5 // upstream is: 2
 

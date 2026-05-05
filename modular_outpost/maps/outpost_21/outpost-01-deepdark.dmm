@@ -2822,6 +2822,26 @@
 /obj/structure/ladder/up,
 /turf/simulated/floor/flesh/turfpack/muriki,
 /area/muriki/processor/depths)
+"agV" = (
+/obj/effect/landmark/pengmark,
+/turf/simulated/floor/flesh/turfpack/muriki,
+/area/muriki/processor/depths)
+"agW" = (
+/obj/effect/landmark/pengmark,
+/turf/simulated/floor/water/acidic/turfpack/muriki,
+/area/muriki/processor/depths)
+"agX" = (
+/obj/structure/sign/warning/falling{
+	name = "\improper ELEVATOR SHAFT"
+	},
+/turf/simulated/wall/plastitanium,
+/area/muriki/lowerelev)
+"agY" = (
+/obj/structure/sign/warning/falling{
+	name = "\improper ELEVATOR SHAFT"
+	},
+/turf/simulated/wall/plastitanium,
+/area/muriki/lowerevac)
 "amr" = (
 /obj/effect/map_effect/interval/atmogland/bodyheat,
 /obj/effect/mist,
@@ -4229,7 +4249,7 @@ xVp
 xVp
 xVp
 xVp
-xVp
+agV
 xVp
 xVp
 xVp
@@ -7280,7 +7300,7 @@ aac
 cpg
 cpg
 cpg
-cpg
+agW
 cpg
 cpg
 aac
@@ -49020,7 +49040,7 @@ tWu
 gvh
 gvh
 gvh
-gvh
+agX
 gvh
 gvh
 gvh
@@ -49473,6 +49493,7 @@ tWu
 oKr
 oKr
 oKr
+agY
 oKr
 oKr
 oKr
@@ -49485,8 +49506,7 @@ oKr
 oKr
 oKr
 oKr
-oKr
-oKr
+agY
 oKr
 oKr
 oKr
@@ -49992,7 +50012,7 @@ tWu
 gvh
 gvh
 gvh
-gvh
+agX
 gvh
 gvh
 gvh
@@ -51903,6 +51923,7 @@ tWu
 oKr
 oKr
 oKr
+agY
 oKr
 oKr
 oKr
@@ -51915,8 +51936,7 @@ oKr
 oKr
 oKr
 oKr
-oKr
-oKr
+agY
 oKr
 oKr
 oKr

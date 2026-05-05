@@ -234,7 +234,7 @@
 	var_changes = list("organic_food_coeff" = 0, "bloodsucker" = TRUE) //The verb is given in human.dm
 	excludes = list(/datum/trait/neutral/bloodsucker_freeform, /datum/trait/positive/bloodsucker_plus) //YW edit
 
-/datum/trait/neutral/bloodsucker/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+/datum/trait/neutral/bloodsucker/apply(datum/species/S,mob/living/carbon/human/H)
 	..()
 	add_verb(H, /mob/living/carbon/human/proc/bloodsuck)
 
@@ -255,7 +255,7 @@
 	var_changes = list("bloodsucker" = TRUE)
 	excludes = list(/datum/trait/neutral/bloodsucker, /datum/trait/positive/bloodsucker_plus) //YW edit
 
-/datum/trait/neutral/bloodsucker_freeform/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+/datum/trait/neutral/bloodsucker_freeform/apply(datum/species/S,mob/living/carbon/human/H)
 	..()
 	add_verb(H, /mob/living/carbon/human/proc/bloodsuck)
 
@@ -269,7 +269,7 @@
 	custom_only = FALSE
 	excludes = list(/datum/trait/neutral/electrovore_freeform)
 
-/datum/trait/neutral/electrovore/apply(var/datum/species/S, var/mob/living/carbon/human/human)
+/datum/trait/neutral/electrovore/apply(datum/species/S, mob/living/carbon/human/human)
 	..()
 	ADD_TRAIT(human, TRAIT_ELECTROVORE, ROUNDSTART_TRAIT)
 	ADD_TRAIT(human, TRAIT_ELECTROVORE_OBLIGATE, ROUNDSTART_TRAIT)
@@ -284,7 +284,7 @@
 	custom_only = FALSE
 	excludes = list(/datum/trait/neutral/electrovore)
 
-/datum/trait/neutral/electrovore_freeform/apply(var/datum/species/S, var/mob/living/carbon/human/human)
+/datum/trait/neutral/electrovore_freeform/apply(datum/species/S, mob/living/carbon/human/human)
 	..()
 	ADD_TRAIT(human, TRAIT_ELECTROVORE, ROUNDSTART_TRAIT)
 
@@ -294,7 +294,7 @@
 	cost = 0
 	custom_only = FALSE
 
-/datum/trait/neutral/succubus_drain/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+/datum/trait/neutral/succubus_drain/apply(datum/species/S,mob/living/carbon/human/H)
 	..()
 	add_verb(H, /mob/living/carbon/human/proc/succubus_drain)
 	add_verb(H, /mob/living/carbon/human/proc/succubus_drain_finalize)
@@ -325,7 +325,7 @@
 	cost = 0
 	custom_only = FALSE
 
-/datum/trait/neutral/venom_bite/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+/datum/trait/neutral/venom_bite/apply(datum/species/S,mob/living/carbon/human/H)
 	..()
 	add_verb(H, /mob/living/proc/injection)
 //	H.trait_injection_reagents += REAGENT_ID_MICROCILLIN		// get small 	//Outpost 21 Edit: Rebalancing
@@ -358,7 +358,7 @@
 	"appendage_alt_setting" = list(TRAIT_PREF_TYPE_BOOLEAN, "Throw yourself?", TRAIT_VAREDIT_TARGET_MOB, FALSE),)
 	custom_only = FALSE
 
-/datum/trait/neutral/long_vore/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+/datum/trait/neutral/long_vore/apply(datum/species/S,mob/living/carbon/human/H)
 	..()
 	add_verb(H, /mob/living/proc/long_vore)
 
@@ -368,7 +368,7 @@
 	cost = 0
 	custom_only = FALSE
 
-/datum/trait/neutral/feeder/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+/datum/trait/neutral/feeder/apply(datum/species/S,mob/living/carbon/human/H)
 	..()
 	add_verb(H, /mob/living/carbon/human/proc/slime_feed)
 
@@ -379,7 +379,7 @@
 	custom_only = FALSE
 	has_preferences = list("stuffing_feeder" = list(TRAIT_PREF_TYPE_BOOLEAN, "Default", TRAIT_VAREDIT_TARGET_MOB, FALSE))
 
-/datum/trait/neutral/stuffing_feeder/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+/datum/trait/neutral/stuffing_feeder/apply(datum/species/S,mob/living/carbon/human/H)
 	..()
 	add_verb(H, /mob/living/proc/toggle_stuffing_mode)
 
@@ -389,7 +389,7 @@
 	cost = 0
 	custom_only = FALSE
 
-/datum/trait/neutral/hard_vore/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+/datum/trait/neutral/hard_vore/apply(datum/species/S,mob/living/carbon/human/H)
 	..()
 	add_verb(H, /mob/living/proc/shred_limb)
 
@@ -414,7 +414,7 @@
 	activation_message="Your stomach feels strange."
 	primitive_expression_messages=list("eats something off the ground.")
 
-/datum/trait/neutral/trashcan/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+/datum/trait/neutral/trashcan/apply(datum/species/S,mob/living/carbon/human/H)
 	..()
 	add_verb(H, /mob/living/proc/eat_trash)
 	add_verb(H, /mob/living/proc/toggle_trash_catching)
@@ -441,7 +441,7 @@
 	activation_message="Your stomach feels strange."
 	primitive_expression_messages=list("picks up and eats something shiny off the ground.")
 
-/datum/trait/neutral/gem_eater/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+/datum/trait/neutral/gem_eater/apply(datum/species/S,mob/living/carbon/human/H)
 	..()
 	add_verb(H, /mob/living/proc/eat_minerals)
 
@@ -491,12 +491,12 @@
 	activation_message="Your eyes feel brighter."
 	primitive_expression_messages=list("eyes twinkle.")
 
-/datum/trait/neutral/glowing_eyes/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+/datum/trait/neutral/glowing_eyes/apply(datum/species/S,mob/living/carbon/human/H)
 	..()
 	add_verb(H, /mob/living/carbon/human/proc/toggle_eye_glow)
 
 // Traitgenes Made into a genetrait
-/datum/trait/neutral/glowing_eyes/unapply(var/datum/species/S,var/mob/living/carbon/human/H)
+/datum/trait/neutral/glowing_eyes/unapply(datum/species/S,mob/living/carbon/human/H)
 	..()
 	if(!(/mob/living/carbon/human/proc/toggle_eye_glow in S.inherent_verbs))
 		remove_verb(H,/mob/living/carbon/human/proc/toggle_eye_glow)
@@ -516,13 +516,13 @@
 	activation_message="You feel enlightened."
 	primitive_expression_messages=list("shines and sparkles.")
 
-/datum/trait/neutral/glowing_body/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+/datum/trait/neutral/glowing_body/apply(datum/species/S,mob/living/carbon/human/H)
 	..()
 	add_verb(H, /mob/living/proc/glow_toggle)
 	add_verb(H, /mob/living/proc/glow_color)
 
 // Traitgenes Made into a genetrait
-/datum/trait/neutral/glowing_body/unapply(var/datum/species/S,var/mob/living/carbon/human/H)
+/datum/trait/neutral/glowing_body/unapply(datum/species/S,mob/living/carbon/human/H)
 	..()
 	if(!(/mob/living/proc/glow_toggle in S.inherent_verbs))
 		remove_verb(H,/mob/living/proc/glow_toggle)
@@ -543,12 +543,12 @@
 
 	activation_message="Something feels odd..."
 
-/datum/trait/neutral/allergy/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+/datum/trait/neutral/allergy/apply(datum/species/S,mob/living/carbon/human/H)
 	S.allergens |= allergen
 	..()
 
 // Traitgenes edit begin - Made ALL ALLERGYS into gene traits
-/datum/trait/neutral/allergy/unapply(var/datum/species/S,var/mob/living/carbon/human/H)
+/datum/trait/neutral/allergy/unapply(datum/species/S,mob/living/carbon/human/H)
 	S.allergens &= ~allergen
 	..()
 // Traitgenes edit end
@@ -644,7 +644,7 @@
 	custom_only = FALSE
 	var/reaction = AG_TOX_DMG
 
-/datum/trait/neutral/allergy_reaction/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+/datum/trait/neutral/allergy_reaction/apply(datum/species/S,mob/living/carbon/human/H)
 	S.allergen_reaction ^= reaction
 	..()
 
@@ -872,12 +872,12 @@
 
 	activation_message="Your eyes feel strange..."
 
-/datum/trait/neutral/colorblind/mono/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+/datum/trait/neutral/colorblind/mono/apply(datum/species/S,mob/living/carbon/human/H)
 	..()
 	H.add_modifier(/datum/modifier/trait/colorblind_monochrome)
 
 // Traitgenes Made into a gene trait
-/datum/trait/neutral/colorblind/mono/unapply(var/datum/species/S,var/mob/living/carbon/human/H)
+/datum/trait/neutral/colorblind/mono/unapply(datum/species/S,mob/living/carbon/human/H)
 	..()
 	H.remove_a_modifier_of_type(/datum/modifier/trait/colorblind_monochrome)
 
@@ -893,12 +893,12 @@
 
 	activation_message="Your eyes feel strange..."
 
-/datum/trait/neutral/colorblind/para_vulp/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+/datum/trait/neutral/colorblind/para_vulp/apply(datum/species/S,mob/living/carbon/human/H)
 	..()
 	H.add_modifier(/datum/modifier/trait/colorblind_vulp)
 
 // Traitgenes Made into a gene trait
-/datum/trait/neutral/colorblind/para_vulp/unapply(var/datum/species/S,var/mob/living/carbon/human/H)
+/datum/trait/neutral/colorblind/para_vulp/unapply(datum/species/S,mob/living/carbon/human/H)
 	..()
 	H.remove_a_modifier_of_type(/datum/modifier/trait/colorblind_vulp)
 
@@ -914,12 +914,12 @@
 
 	activation_message="Your eyes feel strange..."
 
-/datum/trait/neutral/colorblind/para_taj/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+/datum/trait/neutral/colorblind/para_taj/apply(datum/species/S,mob/living/carbon/human/H)
 	..()
 	H.add_modifier(/datum/modifier/trait/colorblind_taj)
 
 // Traitgenes Made into a gene trait
-/datum/trait/neutral/colorblind/para_taj/unapply(var/datum/species/S,var/mob/living/carbon/human/H)
+/datum/trait/neutral/colorblind/para_taj/unapply(datum/species/S,mob/living/carbon/human/H)
 	..()
 	H.remove_a_modifier_of_type(/datum/modifier/trait/colorblind_taj)
 
@@ -933,7 +933,7 @@
 	var_changes = list("icon_scale_y" = 1.09)
 	excludes = list(/datum/trait/neutral/tall, /datum/trait/neutral/tallest, /datum/trait/neutral/short, /datum/trait/neutral/shorter, /datum/trait/neutral/shortest)
 
-/datum/trait/neutral/taller/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+/datum/trait/neutral/taller/apply(datum/species/S,mob/living/carbon/human/H)
 	..()
 	H.update_transform()
 
@@ -946,7 +946,7 @@
 	var_changes = list("icon_scale_y" = 1.05)
 	excludes = list(/datum/trait/neutral/taller, /datum/trait/neutral/tallest, /datum/trait/neutral/short, /datum/trait/neutral/shorter, /datum/trait/neutral/shortest)
 
-/datum/trait/neutral/tall/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+/datum/trait/neutral/tall/apply(datum/species/S,mob/living/carbon/human/H)
 	..()
 	H.update_transform()
 
@@ -959,7 +959,7 @@
 	var_changes = list("icon_scale_y" = 1.15)
 	excludes = list(/datum/trait/neutral/tall, /datum/trait/neutral/taller, /datum/trait/neutral/short, /datum/trait/neutral/shorter, /datum/trait/neutral/shortest)
 
-/datum/trait/neutral/tallest/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+/datum/trait/neutral/tallest/apply(datum/species/S,mob/living/carbon/human/H)
 	..()
 	H.update_transform()
 
@@ -972,7 +972,7 @@
 	var_changes = list("icon_scale_y" = 0.95)
 	excludes = list(/datum/trait/neutral/taller, /datum/trait/neutral/tall, /datum/trait/neutral/tallest, /datum/trait/neutral/shorter, /datum/trait/neutral/shortest)
 
-/datum/trait/neutral/short/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+/datum/trait/neutral/short/apply(datum/species/S,mob/living/carbon/human/H)
 	..()
 	H.update_transform()
 
@@ -985,7 +985,7 @@
 	var_changes = list("icon_scale_y" = 0.915)
 	excludes = list(/datum/trait/neutral/taller, /datum/trait/neutral/tall, /datum/trait/neutral/tallest, /datum/trait/neutral/short, /datum/trait/neutral/shortest)
 
-/datum/trait/neutral/shorter/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+/datum/trait/neutral/shorter/apply(datum/species/S,mob/living/carbon/human/H)
 	..()
 	H.update_transform()
 
@@ -998,7 +998,7 @@
 	var_changes = list("icon_scale_y" = 0.85)
 	excludes = list(/datum/trait/neutral/taller, /datum/trait/neutral/tall, /datum/trait/neutral/tallest, /datum/trait/neutral/short, /datum/trait/neutral/shorter)
 
-/datum/trait/neutral/shortest/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+/datum/trait/neutral/shortest/apply(datum/species/S,mob/living/carbon/human/H)
 	..()
 	H.update_transform()
 
@@ -1011,7 +1011,7 @@
 	var_changes = list("icon_scale_x" = 1.095)
 	excludes = list(/datum/trait/neutral/fat, /datum/trait/neutral/thin, /datum/trait/neutral/thinner)
 
-/datum/trait/neutral/obese/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+/datum/trait/neutral/obese/apply(datum/species/S,mob/living/carbon/human/H)
 	..()
 	H.update_transform()
 
@@ -1024,7 +1024,7 @@
 	var_changes = list("icon_scale_x" = 1.054)
 	excludes = list(/datum/trait/neutral/obese, /datum/trait/neutral/thin, /datum/trait/neutral/thinner)
 
-/datum/trait/neutral/fat/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+/datum/trait/neutral/fat/apply(datum/species/S,mob/living/carbon/human/H)
 	..()
 	H.update_transform()
 
@@ -1037,7 +1037,7 @@
 	var_changes = list("icon_scale_x" = 0.945)
 	excludes = list(/datum/trait/neutral/fat, /datum/trait/neutral/obese, /datum/trait/neutral/thinner)
 
-/datum/trait/neutral/thin/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+/datum/trait/neutral/thin/apply(datum/species/S,mob/living/carbon/human/H)
 	..()
 	H.update_transform()
 
@@ -1050,7 +1050,7 @@
 	var_changes = list("icon_scale_x" = 0.905)
 	excludes = list(/datum/trait/neutral/fat, /datum/trait/neutral/obese, /datum/trait/neutral/thin)
 
-/datum/trait/neutral/thinner/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+/datum/trait/neutral/thinner/apply(datum/species/S,mob/living/carbon/human/H)
 	..()
 	H.update_transform()
 
@@ -1066,7 +1066,7 @@
 
 	activation_message="Your mind feels more powerful."
 
-/datum/trait/neutral/dominate_predator/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+/datum/trait/neutral/dominate_predator/apply(datum/species/S,mob/living/carbon/human/H)
 	..()
 	add_verb(H, /mob/proc/dominate_predator)
 
@@ -1088,7 +1088,7 @@
 
 	activation_message="Your mind feels more powerful."
 
-/datum/trait/neutral/dominate_prey/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+/datum/trait/neutral/dominate_prey/apply(datum/species/S,mob/living/carbon/human/H)
 	..()
 	add_verb(H, /mob/living/proc/dominate_prey)
 
@@ -1110,7 +1110,7 @@
 
 	activation_message="Your mind feels more fluid."
 
-/datum/trait/neutral/submit_to_prey/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+/datum/trait/neutral/submit_to_prey/apply(datum/species/S,mob/living/carbon/human/H)
 	..()
 	add_verb(H, /mob/living/proc/lend_prey_control)
 
@@ -1126,7 +1126,7 @@
 	cost = 0
 	custom_only = FALSE
 
-/datum/trait/neutral/vertical_nom/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+/datum/trait/neutral/vertical_nom/apply(datum/species/S,mob/living/carbon/human/H)
 	..()
 	add_verb(H, /mob/living/proc/vertical_nom)
 
@@ -1222,7 +1222,7 @@
 	can_take = SYNTHETICS
 	has_preferences = list("pain" = list(TRAIT_PREF_TYPE_BOOLEAN, "Enabled on spawn", TRAIT_VAREDIT_TARGET_MOB, FALSE))
 
-/datum/trait/neutral/synth_cosmetic_pain/apply(var/datum/species/S,var/mob/living/carbon/human/H, var/trait_prefs = null)
+/datum/trait/neutral/synth_cosmetic_pain/apply(datum/species/S,mob/living/carbon/human/H, trait_prefs = null)
 	..()
 	add_verb(H, /mob/living/carbon/human/proc/toggle_pain_module)
 
@@ -1463,7 +1463,7 @@
 	cost = 0
 	custom_only = FALSE
 
-/datum/trait/neutral/nyctophobia/apply(var/datum/species/S,var/mob/living/carbon/human/H, var/trait_prefs = null)
+/datum/trait/neutral/nyctophobia/apply(datum/species/S,mob/living/carbon/human/H, trait_prefs = null)
 	..()
 	H.phobias |= NYCTOPHOBIA
 
@@ -1473,7 +1473,7 @@
 	cost = 0
 	custom_only = FALSE
 
-/datum/trait/neutral/arachnophobia/apply(var/datum/species/S,var/mob/living/carbon/human/H, var/trait_prefs = null)
+/datum/trait/neutral/arachnophobia/apply(datum/species/S,mob/living/carbon/human/H, trait_prefs = null)
 	..()
 	H.phobias |= ARACHNOPHOBIA
 
@@ -1483,7 +1483,7 @@
 	cost = 0
 	custom_only = FALSE
 
-/datum/trait/neutral/hemophobia/apply(var/datum/species/S,var/mob/living/carbon/human/H, var/trait_prefs = null)
+/datum/trait/neutral/hemophobia/apply(datum/species/S,mob/living/carbon/human/H, trait_prefs = null)
 	..()
 	H.phobias |= HEMOPHOBIA
 
@@ -1493,7 +1493,7 @@
 	cost = 0
 	custom_only = FALSE
 
-/datum/trait/neutral/thalassophobia/apply(var/datum/species/S,var/mob/living/carbon/human/H, var/trait_prefs = null)
+/datum/trait/neutral/thalassophobia/apply(datum/species/S,mob/living/carbon/human/H, trait_prefs = null)
 	..()
 	H.phobias |= THALASSOPHOBIA
 
@@ -1503,7 +1503,7 @@
 	cost = 0
 	custom_only = FALSE
 
-/datum/trait/neutral/clasutrophobia_minor/apply(var/datum/species/S,var/mob/living/carbon/human/H, var/trait_prefs = null)
+/datum/trait/neutral/clasutrophobia_minor/apply(datum/species/S,mob/living/carbon/human/H, trait_prefs = null)
 	..()
 	H.phobias |= CLAUSTROPHOBIA_MINOR
 
@@ -1513,7 +1513,7 @@
 	cost = 0
 	custom_only = FALSE
 
-/datum/trait/neutral/clasutrophobia_major/apply(var/datum/species/S,var/mob/living/carbon/human/H, var/trait_prefs = null)
+/datum/trait/neutral/clasutrophobia_major/apply(datum/species/S,mob/living/carbon/human/H, trait_prefs = null)
 	..()
 	H.phobias |= CLAUSTROPHOBIA_MAJOR
 
@@ -1523,7 +1523,7 @@
 	cost = 0
 	custom_only = FALSE
 
-/datum/trait/neutral/anatidaephobia/apply(var/datum/species/S,var/mob/living/carbon/human/H, var/trait_prefs = null)
+/datum/trait/neutral/anatidaephobia/apply(datum/species/S,mob/living/carbon/human/H, trait_prefs = null)
 	..()
 	H.phobias |= ANATIDAEPHOBIA
 
@@ -1533,7 +1533,7 @@
 	cost = 0
 	custom_only = FALSE
 
-/datum/trait/neutral/agraviaphobia/apply(var/datum/species/S,var/mob/living/carbon/human/H, var/trait_prefs = null)
+/datum/trait/neutral/agraviaphobia/apply(datum/species/S,mob/living/carbon/human/H, trait_prefs = null)
 	..()
 	H.phobias |= AGRAVIAPHOBIA
 
@@ -1550,7 +1550,7 @@
 							"pickupable" = list(TRAIT_PREF_TYPE_BOOLEAN, "Can be picked up", TRAIT_NO_VAREDIT_TARGET, FALSE)*/)
 	added_component_path = /datum/component/gargoyle
 
-/datum/trait/neutral/gargoyle/apply(var/datum/species/S,var/mob/living/carbon/human/H, var/list/trait_prefs)
+/datum/trait/neutral/gargoyle/apply(datum/species/S,mob/living/carbon/human/H, list/trait_prefs)
 	..()
 	var/datum/component/gargoyle/G = H.GetComponent(added_component_path)
 	if(trait_prefs)
@@ -1559,7 +1559,7 @@
 		G.identifier = lowertext(trait_prefs["identifier"])
 		G.adjective = lowertext(trait_prefs["adjective"])
 
-/datum/trait/neutral/gargoyle/apply_sanitization_to_string(var/pref, var/input)
+/datum/trait/neutral/gargoyle/apply_sanitization_to_string(pref, input)
 	if (has_preferences[pref][1] != TRAIT_PREF_TYPE_STRING || length(input) <= 0)
 		return
 	input = sanitizeSafe(input, 25)
@@ -1611,7 +1611,7 @@
 	custom_only = FALSE
 	has_preferences = list("biting_toggle" = list(TRAIT_PREF_TYPE_BOOLEAN, "Enabled on spawn", TRAIT_NO_VAREDIT_TARGET, TRUE))
 
-/datum/trait/neutral/patting_defence/apply(var/datum/species/S, var/mob/living/carbon/human/H, var/list/trait_prefs)
+/datum/trait/neutral/patting_defence/apply(datum/species/S, mob/living/carbon/human/H, list/trait_prefs)
 	..()
 	if(trait_prefs && trait_prefs["biting_toggle"])
 		H.touch_reaction_flags |= SPECIES_TRAIT_PATTING_DEFENCE
@@ -1625,7 +1625,7 @@
 	has_preferences = list("bubble_toggle" = list(TRAIT_PREF_TYPE_BOOLEAN, "Dodge physical contact on spawn", TRAIT_NO_VAREDIT_TARGET, TRUE),
 						"pickup_dodge_toggle" = list(TRAIT_PREF_TYPE_BOOLEAN, "Dodge pickup attempts on spawn", TRAIT_NO_VAREDIT_TARGET, TRUE))
 
-/datum/trait/neutral/personal_space/apply(var/datum/species/S, var/mob/living/carbon/human/H, var/list/trait_prefs)
+/datum/trait/neutral/personal_space/apply(datum/species/S, mob/living/carbon/human/H, list/trait_prefs)
 	..()
 	if(trait_prefs && trait_prefs["bubble_toggle"])
 		H.touch_reaction_flags |= SPECIES_TRAIT_PERSONAL_BUBBLE
@@ -1642,7 +1642,7 @@
 	multiple_choice = list(REAGENT_ID_ETHANOL, REAGENT_ID_CAPSAICIN, REAGENT_ID_SODIUMCHLORIDE, REAGENT_ID_STOXIN, REAGENT_ID_RAINBOWTOXIN, REAGENT_ID_PARALYSISTOXIN, REAGENT_ID_PAINENZYME)
 	has_preferences = list("Reagent" = list(TRAIT_PREF_TYPE_LIST, "Skin Reagent", TRAIT_NO_VAREDIT_TARGET, REAGENT_ID_ETHANOL))
 
-/datum/trait/neutral/skin_reagents/apply(var/datum/species/S, var/mob/living/carbon/human/H, var/list/trait_prefs)
+/datum/trait/neutral/skin_reagents/apply(datum/species/S, mob/living/carbon/human/H, list/trait_prefs)
 	..()
 	if(trait_prefs && trait_prefs["Reagent"])
 		H.skin_reagent = trait_prefs["Reagent"]
@@ -1654,7 +1654,7 @@
 	custom_only = FALSE
 	banned_species = list(SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW)
 
-/datum/trait/neutral/colour_changing_eyes/apply(var/datum/species/S, var/mob/living/carbon/human/H, var/list/trait_prefs)
+/datum/trait/neutral/colour_changing_eyes/apply(datum/species/S, mob/living/carbon/human/H, list/trait_prefs)
 	..()
 	add_verb(H, /mob/living/carbon/human/proc/shapeshifter_select_eye_colour)
 
@@ -1828,7 +1828,7 @@
 	has_preferences = list("waddler" = list(TRAIT_PREF_TYPE_BOOLEAN, "Waddle on Spawn", TRAIT_NO_VAREDIT_TARGET, TRUE))
 	added_component_path = /datum/component/waddle_trait
 
-/datum/trait/neutral/waddle/apply(var/datum/species/S,var/mob/living/carbon/human/H, var/list/trait_prefs)
+/datum/trait/neutral/waddle/apply(datum/species/S,mob/living/carbon/human/H, list/trait_prefs)
 	..()
 	var/datum/component/waddle_trait/G = H.GetComponent(added_component_path)
 	if(trait_prefs)
@@ -1877,7 +1877,7 @@
 	cost = 0
 	custom_only = FALSE
 
-/datum/trait/neutral/hide/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+/datum/trait/neutral/hide/apply(datum/species/S,mob/living/carbon/human/H)
 	..()
 	add_verb(H,/mob/living/proc/hide)
 
@@ -1922,7 +1922,7 @@
 	desc = "Your reflexes are quick enough to react to slippery surfaces. You are not immune though."
 	cost = 0
 
-/datum/trait/neutral/slip_reflex/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+/datum/trait/neutral/slip_reflex/apply(datum/species/S,mob/living/carbon/human/H)
 	..()
 	ADD_TRAIT(H, SLIP_REFLEX_TRAIT, ROUNDSTART_TRAIT)
 
@@ -1934,7 +1934,7 @@
 	added_component_path = /datum/component/radiation_effects
 	excludes = list(/datum/trait/positive/radioactive_heal)
 
-/datum/trait/neutral/glowing_radiation/apply(var/datum/species/S,var/mob/living/carbon/human/H, var/list/trait_prefs)
+/datum/trait/neutral/glowing_radiation/apply(datum/species/S,mob/living/carbon/human/H, list/trait_prefs)
 	..()
 	var/datum/component/radiation_effects/G = H.GetComponent(added_component_path)
 	if(trait_prefs)
@@ -1964,7 +1964,7 @@
 	cost = 0
 	custom_only = FALSE
 
-/datum/trait/neutral/slobber/apply(var/datum/species/S, var/mob/living/carbon/human/human)
+/datum/trait/neutral/slobber/apply(datum/species/S, mob/living/carbon/human/human)
 	..()
 	ADD_TRAIT(human, TRAIT_SLOBBER, ROUNDSTART_TRAIT)
 
