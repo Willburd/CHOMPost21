@@ -19874,6 +19874,16 @@
 /turf/simulated/floor,
 /area/constructionsite/engineering)
 "aTZ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/disposalpipe/segment,
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/tiled,
+/area/hallway/secondary/engineering_hallway)
+"aUa" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
 	},
@@ -19882,7 +19892,7 @@
 	},
 /turf/simulated/floor,
 /area/constructionsite/engineering)
-"aUa" = (
+"aUb" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
 	},
@@ -19891,7 +19901,7 @@
 	},
 /turf/simulated/floor,
 /area/constructionsite/engineering)
-"aUb" = (
+"aUc" = (
 /obj/effect/floor_decal/corner/orange/full{
 	dir = 4
 	},
@@ -19904,7 +19914,7 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/engineering_hallway)
-"aUc" = (
+"aUd" = (
 /obj/random/junk,
 /obj/machinery/light_switch{
 	dir = 4;
@@ -19915,11 +19925,11 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor,
 /area/constructionsite/engineering)
-"aUd" = (
+"aUe" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor,
 /area/constructionsite/engineering)
-"aUe" = (
+"aUf" = (
 /obj/effect/floor_decal/steeldecal/steel_decals10{
 	dir = 8
 	},
@@ -19934,7 +19944,7 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/engineering_hallway)
-"aUf" = (
+"aUg" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
 	},
@@ -19943,7 +19953,7 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/engineering_hallway)
-"aUg" = (
+"aUh" = (
 /obj/machinery/door/airlock/maintenance/engi{
 	name = "Engineering"
 	},
@@ -19958,12 +19968,6 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/constructionsite/engineering)
-"aUh" = (
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/turf/simulated/floor,
-/area/constructionsite/engineering)
 "aUi" = (
 /obj/machinery/computer/security/telescreen/bodycamera{
 	pixel_y = -2
@@ -19971,6 +19975,12 @@
 /turf/simulated/wall,
 /area/security/briefing_room)
 "aUj" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor,
+/area/constructionsite/engineering)
+"aUk" = (
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "north bump";
@@ -19981,7 +19991,7 @@
 	},
 /turf/simulated/floor,
 /area/constructionsite/engineering)
-"aUk" = (
+"aUl" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 6
 	},
@@ -19993,7 +20003,7 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/engineering_hallway)
-"aUl" = (
+"aUm" = (
 /obj/machinery/doorbell_chime{
 	id_tag = "engdinger";
 	name = "Engineering Dinger";
@@ -20001,16 +20011,6 @@
 	},
 /turf/simulated/wall,
 /area/constructionsite/engineering)
-"aUm" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
-/obj/structure/disposalpipe/segment,
-/obj/machinery/hologram/holopad,
-/turf/simulated/floor/tiled,
-/area/hallway/secondary/engineering_hallway)
 "aUp" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "0-2"
@@ -114719,7 +114719,7 @@ vzM
 aHJ
 wvZ
 xjq
-aUm
+aTZ
 ygk
 qaR
 aYq
@@ -117957,7 +117957,7 @@ tbH
 sut
 iNM
 lfj
-aUe
+aUf
 xBS
 bWF
 aTX
@@ -118118,9 +118118,9 @@ pvU
 vGx
 akQ
 nIk
-aUk
-aUf
-aUb
+aUl
+aUg
+aUc
 bWF
 avW
 oNd
@@ -118280,8 +118280,8 @@ pvU
 uPB
 age
 uPB
-aUl
-aUg
+aUm
+aUh
 bWF
 bWF
 oNd
@@ -118444,8 +118444,8 @@ ucJ
 qMN
 bWF
 alD
-aUc
-aTZ
+aUd
+aUa
 avW
 alr
 hts
@@ -118605,9 +118605,9 @@ jRM
 sut
 ehh
 bWF
-aUh
-aUd
-aUa
+aUj
+aUe
+aUb
 aTY
 oNd
 hts
@@ -118767,7 +118767,7 @@ amp
 rSp
 amp
 hts
-aUj
+aUk
 oNd
 alB
 oNd

@@ -1656,11 +1656,20 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/exp_prep)
 "adB" = (
-/obj/effect/mine/claymore{
+/obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/atmos_control)
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/door/blast/regular{
+	density = 0;
+	icon_state = "pdoor0";
+	id = "englockdown";
+	name = "Engineering Lockdown";
+	opacity = 0;
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/maintenance/eng)
 "adC" = (
 /turf/simulated/mineral/alt/turfpack/muriki,
 /area/mine/explored/muriki/cave/sci/east_access)
@@ -1747,22 +1756,6 @@
 /obj/structure/window/reinforced,
 /turf/simulated/floor/tiled/techfloor,
 /area/rnd/xenobiology/xenobioh)
-"adM" = (
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
-/obj/effect/floor_decal/corner/orange{
-	dir = 6
-	},
-/obj/machinery/vending/wallmed1/public{
-	dir = 8;
-	pixel_x = 30
-	},
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 8
-	},
-/turf/simulated/floor/tiled,
-/area/engineering/atmoshall)
 "adN" = (
 /obj/machinery/atmospherics/pipe/simple/visible/supply{
 	dir = 6
@@ -1829,21 +1822,6 @@
 	},
 /turf/simulated/floor/bluegrid/airless,
 /area/medical/voxlab/airgap)
-"adV" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/machinery/door/blast/regular{
-	density = 0;
-	icon_state = "pdoor0";
-	id = "englockdown";
-	name = "Engineering Lockdown";
-	opacity = 0;
-	dir = 4
-	},
-/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
-/area/maintenance/eng)
 "adX" = (
 /obj/structure/disposalpipe/segment{
 	dir = 2;
@@ -70736,6 +70714,15 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/tug)
+"dKz" = (
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/corner/orange{
+	dir = 6
+	},
+/turf/simulated/floor/tiled,
+/area/engineering/atmoshall)
 "dKT" = (
 /obj/item/broken_bottle,
 /turf/simulated/floor/wood/alt/parquet,
@@ -72525,6 +72512,12 @@
 /obj/structure/railing,
 /turf/simulated/floor/plating,
 /area/maintenance/cave)
+"fTo" = (
+/obj/effect/mine/claymore{
+	dir = 4
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/atmos_control)
 "fUd" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -80912,6 +80905,13 @@
 	},
 /obj/effect/floor_decal/corner/orange{
 	dir = 6
+	},
+/obj/machinery/vending/wallmed1/public{
+	dir = 8;
+	pixel_x = 30
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/atmoshall)
@@ -110291,8 +110291,8 @@ hag
 aQq
 wly
 byx
+dKz
 pYY
-adM
 wSL
 gOY
 vzQ
@@ -110937,7 +110937,7 @@ aHE
 aQh
 aQh
 aQh
-adV
+adB
 aQh
 aQt
 aQt
@@ -111265,7 +111265,7 @@ aQt
 ciN
 cqp
 cev
-adB
+fTo
 bMc
 pxx
 bMZ
