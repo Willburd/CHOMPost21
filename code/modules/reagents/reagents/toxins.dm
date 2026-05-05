@@ -16,8 +16,6 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_PRECURSOR
 
-	ppe_flags = REAGENT_PPE_GAS|REAGENT_PPE_SQUIRTS|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
-
 /datum/reagent/toxin/affect_blood(mob/living/carbon/M, alien, removed)
 	var/poison_strength = strength * M.species.chem_strength_tox
 	if(strength && alien != IS_DIONA)
@@ -53,8 +51,6 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_PRECURSOR
 
-	ppe_flags = REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
-
 /datum/reagent/toxin/amatoxin/affect_blood(mob/living/carbon/M, alien, removed)
 	// Trojan horse. Waits until most of the toxin has gone through the body before dealing the bulk of it in one big strike.
 	if(volume < max_dose * 0.1)
@@ -72,8 +68,6 @@
 	strength = 10
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_PRECURSOR
-
-	ppe_flags = REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
 /datum/reagent/toxin/carpotoxin/affect_blood(mob/living/carbon/M, alien, removed)
 	..()
@@ -115,8 +109,6 @@
 	var/fire_mult = 30
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_PRECURSOR
-
-	ppe_flags = REAGENT_PPE_PHORONGAS|REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
 /datum/reagent/toxin/hydrophoron/touch_mob(mob/living/L, amount)
 	..()
@@ -165,7 +157,6 @@
 	color = "#2CE893"
 	strength = 5
 
-	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_MEDSCI
 
@@ -175,7 +166,6 @@
 	description = "A weaker toxin produced by giant spiders applied only in warning bites, known to slow a people down a lot."
 	color = "#2CE893"
 	strength = 1
-	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
 /datum/reagent/toxin/warningtoxin/affect_blood(mob/living/carbon/M, alien, removed)
 	var/poison_strength = strength * M.species.chem_strength_tox
@@ -198,8 +188,6 @@
 	supply_conversion_value = 5 SHEET_TO_REAGENT_EQUIVILENT // has sheet value
 	industrial_use = REFINERYEXPORT_REASON_PHORON
 	coolant_modifier = 0.85
-
-	ppe_flags = REAGENT_PPE_PHORONGAS|REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
 /datum/reagent/toxin/phoron/touch_mob(mob/living/L, amount)
 	..()
@@ -243,8 +231,6 @@
 	metabolism = REM * 0.5
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_PRECURSOR
-
-	ppe_flags = REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
 /datum/reagent/toxin/cyanide/affect_blood(mob/living/carbon/M, alien, removed)
 	..()
@@ -396,8 +382,6 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_MEDSCI
 
-	ppe_flags = REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
-
 /datum/reagent/toxin/zombiepowder/affect_blood(mob/living/carbon/M, alien, removed)
 	..()
 	if(alien == IS_DIONA)
@@ -429,8 +413,6 @@
 	scannable = SCANNABLE_SECRETIVE
 	supply_conversion_value = REFINERYEXPORT_VALUE_MASSINDUSTRY
 	industrial_use = REFINERYEXPORT_REASON_MEDSCI
-
-	ppe_flags = REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
 /datum/reagent/lichpowder/affect_touch(mob/living/carbon/M, alien, removed)
 	if(alien == IS_DIONA)
@@ -507,8 +489,6 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_PRECURSOR
 
-	ppe_flags = REAGENT_PPE_GAS|REAGENT_PPE_SQUIRTS|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
-
 /datum/reagent/toxin/plantbgone/touch_turf(turf/T)
 	..()
 	if(istype(T, /turf/simulated/wall))
@@ -581,8 +561,6 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_INDUSTRY
 
-	ppe_flags = REAGENT_PPE_GAS|REAGENT_PPE_SQUIRTS|REAGENT_PPE_BUBBLES|REAGENT_PPE_BURNS|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
-
 /datum/reagent/acid/digestive
 	name = REAGENT_STOMACID
 	id = REAGENT_ID_STOMACID
@@ -597,8 +575,6 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_NO
 	industrial_use = REFINERYEXPORT_REASON_BIOHAZARD
 
-	ppe_flags = REAGENT_PPE_GAS|REAGENT_PPE_SQUIRTS|REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
-
 /datum/reagent/acid/diet_digestive
 	name = REAGENT_DIETSTOMACID
 	id = REAGENT_ID_DIETSTOMACID
@@ -611,8 +587,6 @@
 	wiki_flag = WIKI_SPOILER
 	supply_conversion_value = REFINERYEXPORT_VALUE_NO
 	industrial_use = REFINERYEXPORT_REASON_BIOHAZARD
-
-	ppe_flags = REAGENT_PPE_GAS|REAGENT_PPE_SQUIRTS|REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
 /datum/reagent/thermite/venom
 	name = REAGENT_THERMITEV
@@ -650,8 +624,6 @@
 	wiki_flag = WIKI_SPOILER
 	supply_conversion_value = REFINERYEXPORT_VALUE_UNWANTED
 	industrial_use = REFINERYEXPORT_REASON_BIOHAZARD
-
-	ppe_flags = REAGENT_PPE_GAS|REAGENT_PPE_SQUIRTS|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
 /datum/reagent/condensedcapsaicin/venom/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien == IS_DIONA)

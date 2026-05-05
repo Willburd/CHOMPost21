@@ -15,7 +15,6 @@
 	glass_name = "tomato juice"
 	glass_desc = "Are you sure this is tomato juice?"
 
-	ppe_flags = REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_BIOHAZARD
 	coolant_modifier = 0.25
@@ -254,7 +253,6 @@
 	glass_name = REAGENT_ID_WATER
 	glass_desc = "The father of all refreshments."
 
-	ppe_flags = REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 	supply_conversion_value = REFINERYEXPORT_VALUE_NO
 	industrial_use = REFINERYEXPORT_REASON_RAW
 	coolant_modifier = 1 // Water!
@@ -357,7 +355,6 @@
 	glass_name = "welder fuel"
 	glass_desc = "Unless you are an industrial tool, this is probably not safe for consumption."
 
-	ppe_flags = REAGENT_PPE_SPLASH|REAGENT_PPE_PHORONGAS // Outpost 21 edit - PPE reagents
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_RAW
 	coolant_modifier = 0.15

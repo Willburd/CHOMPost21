@@ -16,8 +16,6 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_GODTIER
 	industrial_use = REFINERYEXPORT_REASON_MEDSCI
 
-	ppe_flags = REAGENT_PPE_SPLASH|REAGENT_PPE_BUBBLES // Outpost 21 edit - PPE reagents
-
 /datum/reagent/macrocillin/affect_blood(mob/living/carbon/M, alien, removed)
 	var/new_size = clamp((M.size_multiplier + 0.01), RESIZE_MINIMUM_DORMS, RESIZE_MAXIMUM_DORMS)
 	M.resize(new_size, animate = FALSE, uncapped = M.has_large_resize_bounds()) //Incrrease 1% per tick. //CHOMP Edit: don't do fancy animates. Unnecessary on 1% changes. Laggy.
@@ -35,8 +33,6 @@
 	mrate_static = TRUE
 	supply_conversion_value = REFINERYEXPORT_VALUE_GODTIER
 	industrial_use = REFINERYEXPORT_REASON_MEDSCI
-
-	ppe_flags = REAGENT_PPE_SPLASH|REAGENT_PPE_BUBBLES // Outpost 21 edit - PPE reagents
 
 /datum/reagent/microcillin/affect_blood(mob/living/carbon/M, alien, removed)
 	var/new_size = clamp((M.size_multiplier - 0.01), RESIZE_MINIMUM_DORMS, RESIZE_MAXIMUM_DORMS)
@@ -57,8 +53,6 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_GODTIER
 	industrial_use = REFINERYEXPORT_REASON_MEDSCI
 
-	ppe_flags = REAGENT_PPE_SPLASH|REAGENT_PPE_BUBBLES // Outpost 21 edit - PPE reagents
-
 /datum/reagent/normalcillin/affect_blood(mob/living/carbon/M, alien, removed)
 	if(M.size_multiplier > RESIZE_NORMAL)
 		M.resize(M.size_multiplier-0.01, FALSE) //Decrease by 1% size per tick. //CHOMP Edit: don't do fancy animates. Unnecessary on 1% changes. Laggy.
@@ -77,8 +71,6 @@
 	overdose = REAGENTS_OVERDOSE
 	supply_conversion_value = REFINERYEXPORT_VALUE_PEAK
 	industrial_use = REFINERYEXPORT_REASON_MEDSCI
-
-	ppe_flags = REAGENT_PPE_SPLASH|REAGENT_PPE_BUBBLES // Outpost 21 edit - PPE reagents
 
 /datum/reagent/sizeoxadone/affect_blood(mob/living/carbon/M, alien, removed)
 	M.make_dizzy(1)
@@ -99,8 +91,6 @@
 	overdose = REAGENTS_OVERDOSE
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_WEAPONS
-
-	ppe_flags = REAGENT_PPE_SPLASH|REAGENT_PPE_BUBBLES // Outpost 21 edit - PPE reagents
 
 /datum/reagent/ickypak/affect_blood(mob/living/carbon/M, alien, removed)
 	M.make_dizzy(1)
@@ -126,8 +116,6 @@
 	overdose = REAGENTS_OVERDOSE
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_MEDSCI
-
-	ppe_flags = REAGENT_PPE_SPLASH|REAGENT_PPE_BUBBLES // Outpost 21 edit - PPE reagents
 
 /datum/reagent/unsorbitol/affect_blood(mob/living/carbon/M, alien, removed)
 	M.make_dizzy(1)
