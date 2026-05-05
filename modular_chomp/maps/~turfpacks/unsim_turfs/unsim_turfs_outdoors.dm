@@ -110,10 +110,10 @@
 
 
 /* Outpost 21 edit(port) - Ice respects slipcode
-/turf/unsimulated/floor/outdoors/ice/Entered(var/mob/living/M)
+/turf/unsimulated/floor/outdoors/ice/Entered(mob/living/M)
 	addtimer(CALLBACK(src, PROC_REF(do_slip), M), (1 * world.tick_lag), TIMER_DELETE_ME)
 
-/turf/unsimulated/floor/outdoors/ice/proc/do_slip(var/mob/living/M)
+/turf/unsimulated/floor/outdoors/ice/proc/do_slip(mob/living/M)
 	if(istype(M, /mob/living))
 		if(M.stunned == 0)
 			to_chat(M, span_warning("You slide across the ice!"))

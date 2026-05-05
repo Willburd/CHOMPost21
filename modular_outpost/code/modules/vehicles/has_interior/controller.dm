@@ -513,7 +513,7 @@
 /obj/vehicle/has_interior/attack_hand(mob/user)
 	// nothing YET, used for attacks
 
-/obj/vehicle/has_interior/attack_generic(var/mob/user, var/damage, var/attack_message)
+/obj/vehicle/has_interior/attack_generic(mob/user, damage, attack_message)
 	if(user.client && user.a_intent == I_HELP)
 		attack_hand(user)
 		return
@@ -523,7 +523,7 @@
 		return
 	. = ..()
 
-/obj/vehicle/has_interior/proc/enter_interior(var/atom/movable/C)
+/obj/vehicle/has_interior/proc/enter_interior(atom/movable/C)
 	// moves atom to interior access point of tank
 	if(!istype(entrypos,/turf/))
 		C.visible_message("<span class='notice'>Interior inaccessible...</span>")

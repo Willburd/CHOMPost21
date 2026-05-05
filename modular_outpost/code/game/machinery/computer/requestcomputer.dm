@@ -20,7 +20,7 @@
 	QDEL_NULL(internal_console)
 	. = ..()
 
-/obj/machinery/computer/supply_request_computeralt/attackby(var/obj/item/O as obj, var/mob/user as mob)
+/obj/machinery/computer/supply_request_computeralt/attackby(obj/item/O as obj, mob/user as mob)
 	if(istype(O, /obj/item/multitool) || istype(O, /obj/item/card/id) || istype(O, /obj/item/stamp))
 		// Forward these to the internal console
 		return internal_console.attackby(O,user)
@@ -67,7 +67,7 @@
 		loc.update_icon()
 	. = ..()
 
-/obj/machinery/requests_console/audible_message(var/message, var/deaf_message, var/hearing_distance, var/radio_message, var/runemessage)
+/obj/machinery/requests_console/audible_message(message, deaf_message, hearing_distance, radio_message, runemessage)
 	if(istype(loc,/obj/machinery/computer/supply_request_computeralt))
 		return loc.audible_message(message, deaf_message, hearing_distance, radio_message, runemessage)
 	. = ..()

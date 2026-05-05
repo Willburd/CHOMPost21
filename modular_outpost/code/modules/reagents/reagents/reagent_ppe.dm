@@ -1,4 +1,4 @@
-/datum/reagents/proc/ppe_affect(var/mob/living/user)
+/datum/reagents/proc/ppe_affect(mob/living/user)
 	if(QDELETED(user))
 		return
 	if(QDELETED(my_atom))

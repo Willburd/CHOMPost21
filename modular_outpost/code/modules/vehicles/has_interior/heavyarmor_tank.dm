@@ -80,7 +80,7 @@
 	SHELL_EXPLOSION
 	return 1
 
-/obj/item/projectile/bullet/kyshell/throw_impact(atom/target, var/speed)
+/obj/item/projectile/bullet/kyshell/throw_impact(atom/target, speed)
 	SHELL_FRAGMENTS
 	SHELL_EXPLOSION
 	qdel(src)

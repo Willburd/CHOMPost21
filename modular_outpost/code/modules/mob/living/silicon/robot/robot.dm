@@ -22,7 +22,7 @@
 
 	return tie_msg
 
-/mob/living/silicon/robot/proc/update_haunt(var/assign_law = FALSE)
+/mob/living/silicon/robot/proc/update_haunt(assign_law = FALSE)
 	if(istype(src,/mob/living/silicon/robot/ai_shell) || istype(src,/mob/living/silicon/robot/drone))
 		return
 	if(assign_law) // we add a timer to callback this proc with assign_law as true, instead of having two haunting procs

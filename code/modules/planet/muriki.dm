@@ -127,7 +127,7 @@ GLOBAL_DATUM(planet_muriki, /datum/planet/muriki)
 	var/min_lightning_cooldown = 0
 	var/max_lightning_cooldown = 0
 
-/datum/weather/muriki/proc/fill_vats(var/global_chance,var/single_chance,var/amount)
+/datum/weather/muriki/proc/fill_vats(global_chance,single_chance,amount)
 	if(!prob(global_chance))
 		return
 	for(var/obj/machinery/reagent_refinery/vat/V in GLOB.vats_to_rain_into)
@@ -138,7 +138,7 @@ GLOBAL_DATUM(planet_muriki, /datum/planet/muriki)
 			if(prob(single_chance))
 				V.reagents.add_reagent(REAGENT_ID_WATER,amount)
 
-/datum/weather/muriki/proc/wet_plating(var/chance)
+/datum/weather/muriki/proc/wet_plating(chance)
 	if(holder.our_planet.planet_floors.len)
 		var/i = rand(6,18)
 		while(i-- > 0)
@@ -1014,7 +1014,7 @@ GLOBAL_DATUM(planet_muriki, /datum/planet/muriki)
 /mob/living/
 	var/enzyme_affect = TRUE
 
-/proc/muriki_enzyme_affect_mob( var/mob/living/L, var/multiplier, var/mist, var/submerged)
+/proc/muriki_enzyme_affect_mob( mob/living/L, multiplier, mist, submerged)
 	// drop out early if no damage anyway
 	if(multiplier <= 0)
 		return

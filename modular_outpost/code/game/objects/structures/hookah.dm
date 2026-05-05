@@ -89,7 +89,7 @@
 		return
 	. = ..()
 
-/obj/structure/hookah/container_resist(var/mob/living)
+/obj/structure/hookah/container_resist(mob/living)
 	if(occupant != living)
 		return FALSE
 	to_chat(occupant, span_warning("You manage to pull yourself free of \the [src]."))
@@ -131,7 +131,7 @@
 		visible_message(span_warning("\The [src] extinguishes!"))
 	update_icon()
 
-/obj/structure/hookah/examine(var/mob/user)
+/obj/structure/hookah/examine(mob/user)
 	. = ..()
 	if(get_dist(user, src) <= 2)
 		if(reagents && reagents.reagent_list.len)

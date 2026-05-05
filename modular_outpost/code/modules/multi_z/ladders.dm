@@ -57,7 +57,7 @@
 	. = ..()
 
 // Blocked normally, but if a mob tries to use it this skips attack_hand, just automagically open for them
-/mob/may_climb_ladders(var/ladder)
+/mob/may_climb_ladders(ladder)
 	if(istype(ladder, /obj/structure/ladder/top_hatch))
 		var/obj/structure/ladder/top_hatch/hatch = ladder
 		hatch.open_hatch()

@@ -78,7 +78,7 @@
 		return
 	. = ..()
 
-/obj/machinery/nuclearbomb/station/proc/insert_disk(var/obj/item/disk/nuclear/O, mob/user as mob)
+/obj/machinery/nuclearbomb/station/proc/insert_disk(obj/item/disk/nuclear/O, mob/user as mob)
 	user.drop_item(src)
 	auth = O
 	radiowarn( FALSE, FALSE)

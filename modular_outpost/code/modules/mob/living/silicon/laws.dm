@@ -1,4 +1,4 @@
-/mob/living/silicon/proc/generate_outpost_ion_law(var/exclude_crew_names = FALSE)
+/mob/living/silicon/proc/generate_outpost_ion_law(exclude_crew_names = FALSE)
 	var/list/players = list()
 
 	for(var/mob/living/carbon/human/player in GLOB.player_list)
@@ -84,7 +84,7 @@
 							)
 	return pick(laws)
 
-/mob/living/silicon/proc/generate_screech_law(var/exclude_crew_names = FALSE)
+/mob/living/silicon/proc/generate_screech_law(exclude_crew_names = FALSE)
 	var/list/players = list()
 
 	for(var/mob/living/carbon/human/player in GLOB.player_list)

@@ -21,7 +21,7 @@
 		return FALSE
 	return TRUE
 
-/datum/element/headbonk/proc/clonk(atom/source,var/mob/living/M)
+/datum/element/headbonk/proc/clonk(atom/source,mob/living/M)
 	playsound(source, 'modular_outpost/sound/effects/clonk.ogg', 100, 1)
 	playsound(source,"punch")
 	M.visible_message(span_danger("\The [M] clonks their head into \the [source]!"))

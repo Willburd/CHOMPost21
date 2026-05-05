@@ -16,7 +16,7 @@
 /datum/map_z_level/outpost_lateload
 	z = 0
 
-/datum/map_z_level/outpost_lateload/New(var/datum/map/map, mapZ)
+/datum/map_z_level/outpost_lateload/New(datum/map/map, mapZ)
 	if(mapZ && !z)
 		z = mapZ
 	return ..(map)

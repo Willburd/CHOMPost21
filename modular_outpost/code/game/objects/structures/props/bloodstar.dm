@@ -8,7 +8,7 @@
 	density = FALSE
 	unacidable = TRUE
 
-/obj/structure/prop/fake_status_display/proc/display_alert(var/newlevel)
+/obj/structure/prop/fake_status_display/proc/display_alert(newlevel)
 	switch(newlevel)
 		if("green")	set_light(l_range = 2, l_power = 0.25, l_color = "#00ff00")
 		if("yellow")	set_light(l_range = 2, l_power = 0.25, l_color = "#ffff00")
