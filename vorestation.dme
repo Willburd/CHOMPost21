@@ -6025,6 +6025,7 @@
 #include "modular_outpost\code\modules\reagents\reagents\reagent_ppe.dm"
 #include "modular_outpost\code\modules\recycling\disposal.dm"
 #include "modular_outpost\code\modules\recycling\packagewrap.dm"
+#include "modular_outpost\code\modules\research\reconsole.dm"
 #include "modular_outpost\code\modules\research\design_disks\cargo.dm"
 #include "modular_outpost\code\modules\research\design_disks\engineering.dm"
 #include "modular_outpost\code\modules\research\design_disks\medical.dm"

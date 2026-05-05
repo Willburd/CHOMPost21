@@ -13,7 +13,7 @@
 
 /area/rnd/supermatter
 	name = "\improper Particle Lab"
-	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 	base_turf = /turf/simulated/open/muriki
 
 /area/constructionsite/science
@@ -608,7 +608,7 @@
 
 /area/rnd/workshop
 	name = "\improper Circuitry Lab"
-	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 	base_turf = /turf/simulated/open/muriki
 
 /area/security/vacantoffice

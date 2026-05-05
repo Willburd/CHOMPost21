@@ -5642,11 +5642,9 @@
 /obj/effect/floor_decal/corner/lime{
 	dir = 10
 	},
-/obj/machinery/botany/editor,
-/obj/structure/table/standard{
-	name = "plastic table frame"
-	},
 /obj/effect/floor_decal/corner/purple,
+/obj/item/stool/padded,
+/obj/effect/landmark/start/xenobot,
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/xenobiology/xenoflora)
 "anz" = (
@@ -5656,17 +5654,14 @@
 /obj/structure/cable/green{
 	icon_state = "1-4"
 	},
-/obj/structure/table/standard{
-	name = "plastic table frame"
-	},
-/obj/item/juke_remote{
-	autolinkareajuke_onspawn = /area/djstation
-	},
 /obj/machinery/alarm{
 	dir = 1;
 	pixel_y = -26
 	},
 /obj/effect/floor_decal/corner/purple,
+/obj/machinery/computer/rdconsole_tg/remote_locked{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/xenobiology/xenoflora)
 "anA" = (
@@ -5728,6 +5723,9 @@
 	dir = 6
 	},
 /obj/effect/floor_decal/corner/purple,
+/obj/structure/table/standard{
+	name = "plastic table frame"
+	},
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/xenobiology/xenoflora)
 "anF" = (
@@ -5837,7 +5835,6 @@
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/xenobiology/xenoflora)
 "anO" = (
-/obj/machinery/portable_atmospherics/hydroponics,
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
@@ -5850,6 +5847,10 @@
 	pixel_y = -4
 	},
 /obj/effect/floor_decal/corner/purple,
+/obj/machinery/botany/editor,
+/obj/structure/table/standard{
+	name = "plastic table frame"
+	},
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/xenobiology/xenoflora)
 "anP" = (
@@ -5928,7 +5929,6 @@
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/xenobiology/xenoflora)
 "anV" = (
-/obj/machinery/portable_atmospherics/hydroponics,
 /obj/structure/sign/hydrostorage{
 	pixel_x = 32
 	},
@@ -5939,6 +5939,7 @@
 	dir = 6
 	},
 /obj/effect/floor_decal/corner/purple,
+/obj/machinery/portable_atmospherics/hydroponics,
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/xenobiology/xenoflora)
 "anW" = (
@@ -6016,6 +6017,7 @@
 	dir = 6
 	},
 /obj/effect/floor_decal/corner/purple,
+/obj/machinery/portable_atmospherics/hydroponics,
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/xenobiology/xenoflora)
 "aoe" = (
@@ -6334,6 +6336,9 @@
 	},
 /obj/effect/floor_decal/corner/purple{
 	dir = 1
+	},
+/obj/item/juke_remote{
+	autolinkareajuke_onspawn = /area/djstation
 	},
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/xenobiology/xenoflora)
@@ -8128,6 +8133,9 @@
 /obj/effect/floor_decal/milspec/color/purple/corner{
 	dir = 8
 	},
+/obj/machinery/computer/rdconsole_tg/remote_locked{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/workshop)
 "aso" = (
@@ -8148,6 +8156,10 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
+/obj/structure/bed/chair/office/dark{
+	dir = 8
+	},
+/obj/effect/landmark/start/electrophysicist,
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/workshop)
 "asq" = (
@@ -10432,6 +10444,8 @@
 	dir = 10
 	},
 /obj/effect/floor_decal/corner/purple,
+/obj/structure/closet/wardrobe/genetics_white,
+/obj/item/tabloid,
 /turf/simulated/floor/tiled/white,
 /area/medical/genetics)
 "aKf" = (
@@ -13079,6 +13093,10 @@
 	},
 /obj/effect/floor_decal/corner/purple{
 	dir = 1
+	},
+/obj/structure/bed/chair/office/dark,
+/obj/effect/landmark/start{
+	name = "Geneticist"
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/genetics)
@@ -41202,8 +41220,6 @@
 /turf/simulated/floor,
 /area/rnd/misc_lab)
 "qRb" = (
-/obj/structure/closet/wardrobe/genetics_white,
-/obj/item/tabloid,
 /obj/machinery/light{
 	dir = 8
 	},
@@ -41217,6 +41233,9 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/purple,
+/obj/machinery/computer/rdconsole_tg/remote_locked{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/genetics)
 "qRi" = (
@@ -76909,7 +76928,7 @@ asZ
 arW
 asC
 asp
-arW
+asC
 arB
 fri
 oUl
