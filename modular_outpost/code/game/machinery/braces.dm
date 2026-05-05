@@ -100,7 +100,7 @@
 				to_chat(user, "You repair some dents on \the [src].")
 
 
-/obj/item/airlock_brace/proc/lock_brace(var/obj/machinery/door/airlock/airlk)
+/obj/item/airlock_brace/proc/lock_brace(obj/machinery/door/airlock/airlk)
 	if(!airlk || airlock)
 		// airlock doesn't exist, or already on an airlock!
 		return
@@ -127,7 +127,7 @@
 	update_icon()
 
 
-/obj/item/airlock_brace/proc/unlock_brace(var/mob/user)
+/obj/item/airlock_brace/proc/unlock_brace(mob/user)
 	if(!airlock)
 		return
 	playsound( src, 'sound/machines/door/airlockforced.ogg', 50, 1)

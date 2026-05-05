@@ -1,5 +1,5 @@
 // Override/Replace me downstream if you need different chatter, call parent at end if you want this dialog too! Returns a subtype path of /datum/atc_chatter!
-/datum/atc_chatter_type/proc/chatter_box(var/org_type,var/org_type2)
+/datum/atc_chatter_type/proc/chatter_box(var/org_type,org_type2)
 	// Outpost 21 edit begin - Rarely call the artillery for secure areas
 	if(prob(4) || (org_type2 == "pirate") && prob(12))
 		return /datum/atc_chatter/outpost_artillery

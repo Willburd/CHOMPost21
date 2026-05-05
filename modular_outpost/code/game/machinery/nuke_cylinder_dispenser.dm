@@ -18,7 +18,7 @@
 		new /obj/item/nuclear_cylinder(src)
 	update_icon()
 
-/obj/machinery/nuke_cylinder_dispenser/emag_act(var/remaining_charges, var/mob/user)
+/obj/machinery/nuke_cylinder_dispenser/emag_act(var/remaining_charges, mob/user)
 	to_chat(user, span_notice("The card fails to do anything. It seems this device has an advanced encryption system."))
 	return 0
 

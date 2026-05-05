@@ -103,7 +103,7 @@
 	species_restricted = null
 
 /*	CHOMPEdit - Replaced with squeak component
-/obj/item/clothing/shoes/clown_shoes/handle_movement(var/turf/walking, var/running)
+/obj/item/clothing/shoes/clown_shoes/handle_movement(var/turf/walking, running)
 	if(running)
 		if(footstep >= 2)
 			footstep = 0

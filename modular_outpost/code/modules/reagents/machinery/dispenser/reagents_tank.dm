@@ -93,7 +93,7 @@
 	. = ..()
 	update_icon()
 
-/obj/structure/reagent_dispensers/souppot/attackby(var/obj/item/O as obj, var/mob/user as mob)
+/obj/structure/reagent_dispensers/souppot/attackby(var/obj/item/O as obj, mob/user as mob)
 	. = ..()
 	if(.)
 		return

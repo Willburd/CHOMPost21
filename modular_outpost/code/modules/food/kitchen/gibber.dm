@@ -64,7 +64,7 @@
 	input_plate = null
 	return ..()
 
-/obj/machinery/gibber/autogibber/Bumped(var/atom/A)
+/obj/machinery/gibber/autogibber/Bumped(atom/A)
 	if(!input_plate)
 		return
 	if(stat & (NOPOWER|BROKEN))
@@ -131,12 +131,12 @@
 	. = ..()
 	. += "The safety guard is [emagged ? "<span class='danger'>disabled</span>" : "enabled"]."
 
-/obj/machinery/gibber/emag_act(var/remaining_charges, var/mob/user)
+/obj/machinery/gibber/emag_act(var/remaining_charges, mob/user)
 	emagged = !emagged
 	to_chat(user, "<span class='danger'>You [emagged ? "disable" : "enable"] the gibber safety guard.</span>")
 	return 1
 
-/obj/machinery/gibber/attackby(var/obj/item/W, var/mob/user)
+/obj/machinery/gibber/attackby(var/obj/item/W, mob/user)
 	var/obj/item/grab/G = W
 
 	if(default_unfasten_wrench(user, W, 40))
@@ -157,7 +157,7 @@
 		return
 	move_into_gibber(user,target)
 
-/obj/machinery/gibber/proc/move_into_gibber(var/mob/user,var/mob/living/victim)
+/obj/machinery/gibber/proc/move_into_gibber(var/mob/user,mob/living/victim)
 
 	if(src.occupant)
 		to_chat(user, "<span class='danger'>The gibber is full, empty it first!</span>")
@@ -319,7 +319,7 @@
 		processcontents()
 		update_icon()
 
-/obj/machinery/gibber/proc/preprocessmob(var/mob/M)
+/obj/machinery/gibber/proc/preprocessmob(mob/M)
 	// transfer items
 	for(var/obj/item/I in M)
 		M.drop_from_inventory(I,src)
@@ -330,7 +330,7 @@
 		L.release_vore_contents(silent = TRUE)
 
 
-/obj/machinery/gibber/proc/scanforid(var/obj/thing)
+/obj/machinery/gibber/proc/scanforid(obj/thing)
 	// Scan for ID
 	if(!isnull(sleevelink))
 		var/list/checks = list()

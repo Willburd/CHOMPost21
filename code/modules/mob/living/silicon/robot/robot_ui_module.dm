@@ -164,7 +164,7 @@
 			close_ui()
 			return TRUE
 
-/mob/living/silicon/robot/proc/apply_name(var/new_name)
+/mob/living/silicon/robot/proc/apply_name(new_name)
 	if(!custom_name)
 		if (new_name)
 			custom_name = new_name
@@ -174,7 +174,7 @@
 			real_name = new_name
 			// Outpost 21 edit end
 
-/mob/living/silicon/robot/proc/apply_module(var/datum/robot_sprite/new_datum, var/new_module)
+/mob/living/silicon/robot/proc/apply_module(var/datum/robot_sprite/new_datum, new_module)
 	icon_selected = TRUE
 	var/module_type = GLOB.robot_modules[new_module]
 	if(modtype != new_module || !module)

@@ -28,7 +28,7 @@
 	allow_short_crashes = TRUE
 	crash_message = "Major impact detected, likely large vehicle impact. Please ensure functionality of all shuttles, and begin rescue operations."
 
-/datum/shuttle/autodock/multi/beamtransit/should_crash(var/obj/effect/shuttle_landmark/intended_destination)
+/datum/shuttle/autodock/multi/beamtransit/should_crash(obj/effect/shuttle_landmark/intended_destination)
 	if(!intended_destination.local_crash_sites?.len)
 		return FALSE
 	if(emagged_crash)

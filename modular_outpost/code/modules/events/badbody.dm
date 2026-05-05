@@ -92,7 +92,7 @@
 
 	return TRUE
 
-/datum/event/badbody/proc/spawn_body(client/picked_client,var/turf/spawnloc)
+/datum/event/badbody/proc/spawn_body(client/picked_client,turf/spawnloc)
 	// A terrible clone of /client/proc/respawn_character() but with fixed choices.
 	if(!spawnloc || !istype(picked_client))
 		return

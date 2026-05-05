@@ -384,7 +384,7 @@
 	character.client.init_verbs()
 	qdel(src) // Delete new_player mob
 
-/mob/new_player/proc/AnnounceCyborg(var/mob/living/character, var/rank, var/join_message, var/channel, var/zlevel)
+/mob/new_player/proc/AnnounceCyborg(var/mob/living/character, var/rank, var/join_message, var/channel, zlevel)
 	if (SSticker.current_state == GAME_STATE_PLAYING)
 		var/list/zlevels = zlevel ? using_map.get_map_levels(zlevel, TRUE, om_range = DEFAULT_OVERMAP_RANGE) : null
 		if(character.mind.role_alt_title)
@@ -397,7 +397,7 @@
 		late_choices_dialog = new(src)
 	late_choices_dialog.tgui_interact(src)
 
-/mob/new_player/proc/create_character(var/turf/T)
+/mob/new_player/proc/create_character(turf/T)
 	SHOULD_NOT_SLEEP(TRUE)
 	spawning = 1
 	close_spawn_windows()
@@ -510,13 +510,13 @@
 	return ready && ..()
 
 // Prevents lobby players from seeing say, even with ghostears
-/mob/new_player/hear_say(var/list/message_pieces, var/verb = "says", var/italics = 0, var/mob/speaker = null)
+/mob/new_player/hear_say(var/list/message_pieces, var/verb = "says", var/italics = 0, mob/speaker = null)
 	return
 
-/mob/new_player/hear_holopad_talk(list/message_pieces, var/verb = "says", var/mob/speaker = null)
+/mob/new_player/hear_holopad_talk(list/message_pieces, var/verb = "says", mob/speaker = null)
 	return
 
-/mob/new_player/hear_holopad_talk(list/message_pieces, var/verb = "says", var/mob/speaker = null)
+/mob/new_player/hear_holopad_talk(list/message_pieces, var/verb = "says", mob/speaker = null)
 	return
 
 // Prevents lobby players from seeing emotes, even with ghosteyes

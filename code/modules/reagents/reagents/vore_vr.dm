@@ -18,7 +18,7 @@
 
 	ppe_flags = REAGENT_PPE_SPLASH|REAGENT_PPE_BUBBLES // Outpost 21 edit - PPE reagents
 
-/datum/reagent/macrocillin/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/macrocillin/affect_blood(var/mob/living/carbon/M, var/alien, removed)
 	var/new_size = clamp((M.size_multiplier + 0.01), RESIZE_MINIMUM_DORMS, RESIZE_MAXIMUM_DORMS)
 	M.resize(new_size, animate = FALSE, uncapped = M.has_large_resize_bounds()) //Incrrease 1% per tick. //CHOMP Edit: don't do fancy animates. Unnecessary on 1% changes. Laggy.
 	return
@@ -38,7 +38,7 @@
 
 	ppe_flags = REAGENT_PPE_SPLASH|REAGENT_PPE_BUBBLES // Outpost 21 edit - PPE reagents
 
-/datum/reagent/microcillin/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/microcillin/affect_blood(var/mob/living/carbon/M, var/alien, removed)
 	var/new_size = clamp((M.size_multiplier - 0.01), RESIZE_MINIMUM_DORMS, RESIZE_MAXIMUM_DORMS)
 	M.resize(new_size, animate = FALSE, uncapped = M.has_large_resize_bounds()) //Decrease 1% per tick. //CHOMP Edit: don't do fancy animates. Unnecessary on 1% changes. Laggy.
 	return
@@ -59,7 +59,7 @@
 
 	ppe_flags = REAGENT_PPE_SPLASH|REAGENT_PPE_BUBBLES // Outpost 21 edit - PPE reagents
 
-/datum/reagent/normalcillin/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/normalcillin/affect_blood(var/mob/living/carbon/M, var/alien, removed)
 	if(M.size_multiplier > RESIZE_NORMAL)
 		M.resize(M.size_multiplier-0.01, FALSE) //Decrease by 1% size per tick. //CHOMP Edit: don't do fancy animates. Unnecessary on 1% changes. Laggy.
 	else if(M.size_multiplier < RESIZE_NORMAL)
@@ -80,7 +80,7 @@
 
 	ppe_flags = REAGENT_PPE_SPLASH|REAGENT_PPE_BUBBLES // Outpost 21 edit - PPE reagents
 
-/datum/reagent/sizeoxadone/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/sizeoxadone/affect_blood(var/mob/living/carbon/M, var/alien, removed)
 	M.make_dizzy(1)
 	if(!M.confused) M.confused = 1
 	M.confused = max(M.confused, 20)
@@ -102,7 +102,7 @@
 
 	ppe_flags = REAGENT_PPE_SPLASH|REAGENT_PPE_BUBBLES // Outpost 21 edit - PPE reagents
 
-/datum/reagent/ickypak/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/ickypak/affect_blood(var/mob/living/carbon/M, var/alien, removed)
 	M.make_dizzy(1)
 	M.adjustHalLoss(2)
 
@@ -129,7 +129,7 @@
 
 	ppe_flags = REAGENT_PPE_SPLASH|REAGENT_PPE_BUBBLES // Outpost 21 edit - PPE reagents
 
-/datum/reagent/unsorbitol/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/unsorbitol/affect_blood(var/mob/living/carbon/M, var/alien, removed)
 	M.make_dizzy(1)
 	M.adjustHalLoss(1)
 	M.SetConfused(max(M.confused, 20))
@@ -172,7 +172,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_MEDSCI
 
-/datum/reagent/androrovir/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/androrovir/affect_blood(var/mob/living/carbon/M, var/alien, removed)
 	if(!(M.allow_spontaneous_tf))
 		return
 	if(ishuman(M))
@@ -196,7 +196,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_MEDSCI
 
-/datum/reagent/gynorovir/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/gynorovir/affect_blood(var/mob/living/carbon/M, var/alien, removed)
 	if(!(M.allow_spontaneous_tf))
 		return
 	if(ishuman(M))
@@ -220,7 +220,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_MEDSCI
 
-/datum/reagent/androgynorovir/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/androgynorovir/affect_blood(var/mob/living/carbon/M, var/alien, removed)
 	if(!(M.allow_spontaneous_tf))
 		return
 	if(ishuman(M))
@@ -245,7 +245,7 @@
 	taste_mult = 0.8 //You ARE going to taste this!
 	scannable = 1	//Sure! If you manage to milk a snake for some of this, go ahead and scan it and mass produce it. Your local club will love you!
 
-/datum/reagent/drugs/rainbow_toxin/affect_blood(mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/drugs/rainbow_toxin/affect_blood(mob/living/carbon/M, var/alien, removed)
 	..()
 	var/drug_strength = 20
 	if(M.species.chem_strength_tox > 0)
@@ -254,7 +254,7 @@
 		drug_strength *= 0.15 //~ 1/6
 	M.druggy = max(M.druggy, drug_strength)
 
-/datum/reagent/drugs/rainbow_toxin/overdose(var/mob/living/M as mob)
+/datum/reagent/drugs/rainbow_toxin/overdose(mob/living/M as mob)
 	if(prob_proc == TRUE && prob(20))
 		M.hallucination = max(M.hallucination, 5)
 		prob_proc = FALSE
@@ -279,7 +279,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_WEAPONS
 
-/datum/reagent/paralysis_toxin/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/paralysis_toxin/affect_blood(var/mob/living/carbon/M, var/alien, removed)
 	if(M.weakened < 50 || M.stunned <50 ) //Let's not leave them PERMA stuck, after all. //CHOMPedit, stun accounting for crawl
 		M.AdjustWeakened(5) //Stand in for paralyze so you can still talk/emote/see
 		M.AdjustStunned(5) //CHOMPadd, stun accounting for crawl
@@ -301,7 +301,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_WEAPONS
 
-/datum/reagent/pain_enzyme/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/pain_enzyme/affect_blood(var/mob/living/carbon/M, var/alien, removed)
 	M.add_chemical_effect(CE_PAINKILLER, -200)
 	if(prob(0.01)) //1 in 10000 chance per tick. Extremely rare.
 		to_chat(M,span_warning("Your body feels as though it's on fire!"))
@@ -319,7 +319,7 @@
 	industrial_use = REFINERYEXPORT_REASON_DRUG
 
 
-/datum/reagent/aphrodisiac/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/aphrodisiac/affect_blood(var/mob/living/carbon/M, var/alien, removed)
 	if(!M)	return
 
 	if(prob(3))

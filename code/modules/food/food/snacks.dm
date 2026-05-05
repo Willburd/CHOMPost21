@@ -60,7 +60,7 @@
 		reagents.add_reagent(REAGENT_ID_NUTRIMENT,(nutriment_amt*2),nutriment_desc)
 
 //Placeholder for effect that trigger on eating that aren't tied to reagents.
-/obj/item/reagent_containers/food/snacks/proc/On_Consume(var/mob/living/eater, var/mob/living/feeder)
+/obj/item/reagent_containers/food/snacks/proc/On_Consume(var/mob/living/eater, mob/living/feeder)
 	SEND_SIGNAL(src, COMSIG_FOOD_EATEN, eater, feeder)
 	if(food_inserted_micros && food_inserted_micros.len)
 		for(var/mob/living/micro in food_inserted_micros)
@@ -474,7 +474,7 @@
 ////////////////////////////////////////////////////////////////////////////////
 /// FOOD END
 ////////////////////////////////////////////////////////////////////////////////
-/obj/item/reagent_containers/food/snacks/attack_generic(var/mob/living/user)
+/obj/item/reagent_containers/food/snacks/attack_generic(mob/living/user)
 	if(!isanimal(user) && !isalien(user))
 		return
 	user.visible_message(span_infoplain(span_bold("[user]") + " nibbles away at \the [src]."),span_info("You nibble away at \the [src]."))
@@ -1490,7 +1490,7 @@
 	. = ..()
 	reagents.add_reagent("protein", 2) // needed to call On_Consume()... Is this actually an issue?
 
-/obj/item/reagent_containers/food/snacks/clownburger/On_Consume(var/mob/living/user)
+/obj/item/reagent_containers/food/snacks/clownburger/On_Consume(mob/living/user)
 	if(user && ishuman(user) && prob(3))
 		var/mob/living/carbon/human/H = user
 		H.malignant_organ_spawn( /obj/item/organ/internal/malignant/parasite/honker )
@@ -2081,7 +2081,7 @@
 	flags |= OPENCONTAINER
 	return
 
-/obj/item/reagent_containers/food/snacks/monkeycube/On_Consume(var/mob/M)
+/obj/item/reagent_containers/food/snacks/monkeycube/On_Consume(mob/M)
 	// Outpost 21 edit begin - Remove vore change, keep chest bursting
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
@@ -5238,7 +5238,7 @@
 	return . = ..()
 
 //This proc handles drawing coatings out of a container when this food is dipped into it
-/obj/item/reagent_containers/food/snacks/proc/apply_coating(var/datum/reagent/nutriment/coating/C, var/mob/user)
+/obj/item/reagent_containers/food/snacks/proc/apply_coating(var/datum/reagent/nutriment/coating/C, mob/user)
 	if (coating)
 		to_chat(user, "The [src] is already coated in [coating.name]!")
 		return 0
@@ -5333,7 +5333,7 @@
 			C.data["cooked"] = 1
 			C.name = C.cooked_name
 
-/obj/item/reagent_containers/food/snacks/proc/on_consume(var/mob/eater, var/mob/feeder = null)
+/obj/item/reagent_containers/food/snacks/proc/on_consume(var/mob/eater, mob/feeder = null)
 	if(!reagents.total_volume)
 		eater.visible_message(span_notice("[eater] finishes eating \the [src]."),span_notice("You finish eating \the [src]."))
 
@@ -7707,197 +7707,4 @@
 	icon_state = "brainzsnaxred"
 	desc = "A can of grey matter marketed for xenochimeras. This one has added tomato sauce."
 	description_fluff = "As the cartoonish brain with limbs proudly proclaims, \"It's meat. Eat it!\" On the can is printed \"Yummy red stuff!\" and \
-	under that in infinitely small letters, \"Warning, product must be eaten within two hours of opening. May contain prion disease. \
-	GrubCo LTD is not liable for any brain damage occurring after consumption of product.\""
-	trash = /obj/item/trash/brainzsnaxred
-	canned_open_state = "brainzsnaxred-open"
-	filling_color = "#a6898d"
-	center_of_mass_x = 15
-	center_of_mass_y = 9
-	bitesize = 2
-	brainmeat = REAGENT_ID_REDBRAINPROTEIN
-
-//////////////Packaged Food - break open and eat//////////////
-
-/obj/item/reagent_containers/food/snacks/packaged
-	icon = 'icons/obj/food_package.dmi'
-	opening_sound = 'sound/effects/packagedfoodopen.ogg'
-	package = TRUE
-
-//////////////Lunar Cakes - proof of concept//////////////
-
-/obj/item/reagent_containers/food/snacks/packaged/lunacake
-	name = "\improper Lunar Cake"
-	icon_state = "lunacake"
-	desc = "Now with 20% less lawsuit enabling rhegolith!"
-	package_trash = /obj/item/trash/lunacakewrap
-	package_open_state = "lunacake_open"
-	filling_color = "#ffffff"
-	center_of_mass_x = 15
-	center_of_mass_y = 9
-	nutriment_amt = 6
-	nutriment_desc = list("sweetness" = 4, REAGENT_ID_VANILLA = 1)
-	bitesize = 2
-
-/obj/item/reagent_containers/food/snacks/packaged/darklunacake
-	name = "\improper Dark Lunar Cake"
-	icon_state = "mooncake"
-	desc = "Explore the dark side! May contain trace amounts of reconstituted cocoa."
-	package_trash = /obj/item/trash/mooncakewrap
-	package_open_state = "lunacake_open"
-	filling_color = "#ffffff"
-	center_of_mass_x = 15
-	center_of_mass_y = 9
-	nutriment_amt = 6
-	nutriment_desc = list("sweetness" = 4, REAGENT_ID_CHOCOLATE = 1)
-	bitesize = 2
-
-/obj/item/reagent_containers/food/snacks/packaged/mochicake
-	name = "\improper Mochi Cake"
-	icon_state = "mochicake"
-	desc = "A sweet little cake originating from the Sol system, made from sweet rice flour. \
-	Traditionally prepared in a ceremony known as mochitsuki, in which a community would gather grind the rice for special occasions. \
-	However this particular treat was no doubt mashed together in a factory."
-	package_trash = /obj/item/trash/mochicakewrap
-	package_open_state = "lunacake_open"
-	filling_color = "#ffffff"
-	center_of_mass_x = 15
-	center_of_mass_y = 9
-	nutriment_amt = 6
-	nutriment_desc = list("sweetness" = 4, REAGENT_ID_RICE = 1)
-	bitesize = 2
-
-//////////////Advanced Package Foods//////////////
-
-/obj/item/reagent_containers/food/snacks/packaged/spacetwinkie
-	name = "\improper Spacer Snack Cake"
-	icon_state = "spacercake"
-	desc = "Guaranteed to survive longer than you will."
-	description_fluff = "Despite Spacer advertisements consistently portraying their snack cakes as life-saving, \
-	tear-jerking survival food for spacers in all kinds of dramatic scenarios, the Spacer Snack Cake has been \
-	statistically proven to lower survival rates on all missions where it is present."
-	package_trash = /obj/item/trash/spacer_cake_wrap
-	package_open_state = "spacercake_open"
-	filling_color = "#FFE591"
-	center_of_mass_x = 15
-	center_of_mass_y = 11
-	nutriment_amt = 4
-	nutriment_desc = list("sweetness" = 4, "cake" = 2)
-	bitesize = 2
-
-/obj/item/reagent_containers/food/snacks/packaged/spacetwinkie/Initialize(mapload)
-	. = ..()
-	reagents.add_reagent(REAGENT_ID_SUGAR, 4)
-
-/obj/item/reagent_containers/food/snacks/packaged/genration
-	name = "generic ration"
-	icon_state = "genration"
-	desc = "The most basic form of ration - meant to barely sustain life."
-	trash = /obj/item/trash/genration
-	package_open_state = "genration_open"
-	filling_color = "#FFFFFF"
-	center_of_mass_x = 15
-	center_of_mass_y = 11
-	nutriment_amt = 4
-	nutriment_desc = list("chalk" = 6)
-	bitesize = 2
-
-/obj/item/reagent_containers/food/snacks/packaged/meatration
-	name = "meat ration"
-	icon_state = "meatration"
-	desc = "A meat flavored ration. Emphasis on 'meat flavored' as there is likely no real meat in this."
-	trash = /obj/item/trash/meatration
-	package_open_state = "meatration_open"
-	filling_color = "#FFFFFF"
-	center_of_mass_x = 15
-	center_of_mass_y = 11
-	nutriment_amt = 4
-	nutriment_desc = list("chalk" = 3, "meat" = 3)
-	bitesize = 2
-
-/obj/item/reagent_containers/food/snacks/packaged/meatration/Initialize(mapload)
-	. = ..()
-	reagents.add_reagent(REAGENT_ID_PROTEIN, 4)
-
-/obj/item/reagent_containers/food/snacks/packaged/vegration
-	name = "veggie ration"
-	icon_state = "vegration"
-	desc = "Dried veggies in a bag. Depressing and near flavorless."
-	trash = /obj/item/trash/vegration
-	package_open_state = "vegration_open"
-	filling_color = "#FFFFFF"
-	center_of_mass_x = 15
-	center_of_mass_y = 11
-	nutriment_amt = 4
-	nutriment_desc = list("sadness" = 3, "veggie" = 3)
-	bitesize = 2
-
-/obj/item/reagent_containers/food/snacks/packaged/sweetration
-	name = "desert ration"
-	icon_state = "baseration"
-	desc = "A rare ration from an era gone by filled with a sweet tasty treat that no modern company has been able to recreate."
-	trash = /obj/item/trash/sweetration
-	package_open_state = "baseration_open"
-	filling_color = "#FFFFFF"
-	center_of_mass_x = 15
-	center_of_mass_y = 11
-	nutriment_amt = 4
-	nutriment_desc = list("sweetness" = 5, "cake" = 1)
-	bitesize = 2
-
-/obj/item/reagent_containers/food/snacks/packaged/sweetration/Initialize(mapload)
-	. = ..()
-	reagents.add_reagent(REAGENT_ID_SUGAR, 6)
-
-/obj/item/reagent_containers/food/snacks/packaged/vendburger
-	name = "packaged burger"
-	icon_state = "smolburger"
-	desc = "A burger stored in a plastic wrapping for vending machine distribution. Surely it tastes fine!"
-	package_trash = /obj/item/trash/smolburger
-	package_open_state = "smolburger_open"
-	nutriment_amt = 3
-	nutriment_desc = list("stale burger" = 3)
-
-/obj/item/reagent_containers/food/snacks/packaged/vendburger/Initialize(mapload)
-	. = ..()
-	reagents.add_reagent(REAGENT_ID_SODIUMCHLORIDE, 1)
-
-/obj/item/reagent_containers/food/snacks/packaged/vendhotdog
-	name = "packaged hotdog"
-	icon_state = "smolhotdog"
-	desc = "A hotdog stored in a plastic wrapping for vending machine distribution. Surely it tastes fine!"
-	package_trash = /obj/item/trash/smolhotdog
-	package_open_state = "smolhotdog_open"
-	nutriment_amt = 3
-	nutriment_desc = list("stale hotdog" = 3)
-
-/obj/item/reagent_containers/food/snacks/packaged/vendhotdog/Initialize(mapload)
-	. = ..()
-	reagents.add_reagent(REAGENT_ID_SODIUMCHLORIDE, 1)
-
-/obj/item/reagent_containers/food/snacks/packaged/vendburrito
-	name = "packaged burrito"
-	icon_state = "smolburrito"
-	desc = "A burrito stored in a plastic wrapping for vending machine distribution. Surely it tastes fine!"
-	package_trash = /obj/item/trash/smolburrito
-	package_open_state = "smolburrito_open"
-	nutriment_amt = 3
-	nutriment_desc = list("stale burrito" = 3)
-
-/obj/item/reagent_containers/food/snacks/packaged/vendburrito/Initialize(mapload)
-	. = ..()
-	reagents.add_reagent(REAGENT_ID_SODIUMCHLORIDE, 1)
-
-/obj/item/reagent_containers/food/snacks/churro
-	name = "churro"
-	desc = "Dough, deep fried in olive oil. No toppings on it!"
-	icon_state = "churro"
-	trash = /obj/item/paper/crumpled
-	filling_color = "#F5B951"
-	bitesize = 2
-	nutriment_desc = list("deep fried dough" = 2)
-	nutriment_amt = 2
-
-/obj/item/reagent_containers/food/snacks/churro/Initialize(mapload)
-	. = ..()
-	reagents.add_reagent(REAGENT_ID_COOKINGOIL, 1)
+	under that in infinitely small lette

@@ -6,7 +6,7 @@
 /obj/effect/mine/spiders
 	mineitemtype = /obj/item/mine/spiders
 
-/obj/effect/mine/spiders/explode(var/mob/living/M)
+/obj/effect/mine/spiders/explode(mob/living/M)
 	if(triggered) // Prevents circular mine explosions from two mines detonating eachother
 		return
 	var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread()
@@ -40,7 +40,7 @@
 /obj/effect/mine/glue
 	mineitemtype = /obj/item/mine/glue
 
-/obj/effect/mine/glue/explode(var/mob/living/M)
+/obj/effect/mine/glue/explode(mob/living/M)
 	if(triggered) // Prevents circular mine explosions from two mines detonating eachother
 		return
 	var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread()
@@ -70,7 +70,7 @@
 /obj/effect/mine/portal
 	mineitemtype = /obj/item/mine/portal
 
-/obj/effect/mine/portal/explode(var/mob/living/M)
+/obj/effect/mine/portal/explode(mob/living/M)
 	if(triggered) // Prevents circular mine explosions from two mines detonating eachother
 		return
 	var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread()
@@ -115,7 +115,7 @@
 /obj/effect/mine/confetti
 	mineitemtype = /obj/item/mine/confetti
 
-/obj/effect/mine/confetti/explode(var/mob/living/M)
+/obj/effect/mine/confetti/explode(mob/living/M)
 	if(triggered) // Prevents circular mine explosions from two mines detonating eachother
 		return
 	var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread()
@@ -140,7 +140,7 @@
 /obj/effect/mine/taarainbow // same as above, but makes candy
 	mineitemtype = /obj/item/mine/taarainbow
 
-/obj/effect/mine/taarainbow/explode(var/mob/living/M)
+/obj/effect/mine/taarainbow/explode(mob/living/M)
 	if(triggered) // Prevents circular mine explosions from two mines detonating eachother
 		return
 	var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread()
@@ -171,7 +171,7 @@
 /obj/effect/mine/lube
 	mineitemtype = /obj/item/mine/lube
 
-/obj/effect/mine/lube/explode(var/mob/living/M)
+/obj/effect/mine/lube/explode(mob/living/M)
 	if(triggered) // Prevents circular mine explosions from two mines detonating eachother
 		return
 	var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread()
@@ -200,7 +200,7 @@
 /obj/effect/mine/methane
 	mineitemtype = /obj/item/mine/methane
 
-/obj/effect/mine/methane/explode(var/mob/living/M)
+/obj/effect/mine/methane/explode(mob/living/M)
 	if(triggered) // Prevents circular mine explosions from two mines detonating eachother
 		return
 	triggered = TRUE

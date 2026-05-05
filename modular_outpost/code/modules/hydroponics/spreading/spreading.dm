@@ -1,5 +1,5 @@
 // A weaker, slower, version of spacevines
-/proc/spacemoss_infestation(var/potency_min=10, var/potency_max=40, var/maturation_min=50, var/maturation_max=150)
+/proc/spacemoss_infestation(var/potency_min=10, var/potency_max=40, var/maturation_min=50, maturation_max=150)
 	spawn() //to stop the secrets panel hanging
 		var/turf/simulated/floor/T = pick(GLOB.vinestart)
 		if(T)

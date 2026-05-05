@@ -119,7 +119,7 @@
 /obj/effect/confinment_beam_incoming/singularity_act()
 	return
 
-/obj/effect/confinment_beam_incoming/proc/move(var/lag)
+/obj/effect/confinment_beam_incoming/proc/move(lag)
 	PRIVATE_PROC(TRUE)
 	var/turf/T = get_turf(src)
 	if(T)

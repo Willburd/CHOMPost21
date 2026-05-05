@@ -12,7 +12,7 @@ GLOBAL_LIST_EMPTY(job_whitelist)
 	else
 		GLOB.job_whitelist = splittext(text, "\n")
 
-/proc/is_job_whitelisted(mob/M, var/rank)
+/proc/is_job_whitelisted(mob/M, rank)
 	// Outpost 21 edit being - ERT/Centcom is not public access now
 	var/datum/job/job = job_master.GetJob(rank)
 	var/is_admin_whitelisted = check_rights_for(M.client, R_ADMIN) || check_rights_for(M.client, R_EVENT) || check_rights_for(M.client, R_DEBUG)

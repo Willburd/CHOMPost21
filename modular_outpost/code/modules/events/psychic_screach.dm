@@ -100,7 +100,7 @@
 			engine.power_spike(80,TRUE,TRUE)
 			break // Just one engine, please.
 
-/datum/event/psychic_screach/proc/Sound(var/sound, var/list/zlevels)
+/datum/event/psychic_screach/proc/Sound(var/sound, list/zlevels)
 	if(!sound)
 		return
 

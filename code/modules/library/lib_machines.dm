@@ -136,7 +136,7 @@
 	if(.)
 		SStgui.update_uis(src)
 
-/obj/machinery/librarypubliccomp/attack_hand(var/mob/user as mob)
+/obj/machinery/librarypubliccomp/attack_hand(mob/user as mob)
 	usr.set_machine(src)
 	add_fingerprint(usr)
 	tgui_interact(user)
@@ -268,7 +268,7 @@
 	return data
 
 // shared with public pc
-/proc/tgui_add_library_book(var/obj/item/book/B)
+/proc/tgui_add_library_book(obj/item/book/B)
 	var/list/book = list()
 	book["id"] = B.type
 	book["title"] = B.name
@@ -284,7 +284,7 @@
 	book["type"] = "[B.type]"
 	return book
 
-/proc/tgui_add_library_token(var/list/token)
+/proc/tgui_add_library_token(list/token)
 	var/list/book = list()
 	book["id"] = token["uid"]
 	book["title"] = token["title"]
@@ -483,12 +483,12 @@
 	if(.)
 		SStgui.update_uis(src)
 
-/obj/machinery/librarycomp/attack_hand(var/mob/user as mob)
+/obj/machinery/librarycomp/attack_hand(mob/user as mob)
 	usr.set_machine(src)
 	add_fingerprint(usr)
 	tgui_interact(user)
 
-/obj/machinery/librarycomp/emag_act(var/remaining_charges, var/mob/user)
+/obj/machinery/librarycomp/emag_act(var/remaining_charges, mob/user)
 	if (src.density && !src.emagged)
 		src.emagged = 1
 		return 1
@@ -515,7 +515,7 @@
 	density = TRUE
 	var/obj/item/book/cache		// Last scanned book
 
-/obj/machinery/libraryscanner/attackby(var/obj/O as obj, var/mob/user as mob)
+/obj/machinery/libraryscanner/attackby(var/obj/O as obj, mob/user as mob)
 	if(cache) // Prevent stacking books in here, unlike the original code.
 		to_chat(user,span_warning("\The [src] already has a book inside it!"))
 		return
@@ -525,7 +525,7 @@
 		cache = O
 		visible_message(span_notice("\The [O] was inserted into \the [src]."))
 
-/obj/machinery/libraryscanner/attack_hand(var/mob/user as mob)
+/obj/machinery/libraryscanner/attack_hand(mob/user as mob)
 	if(cache) // Prevent stacking books in here
 		cache = null
 		for(var/obj/item/book/B in contents) // The old code allowed stacking, if multiple things end up in here somehow we may as well drop them all out too.
@@ -550,7 +550,7 @@
 	. = ..()
 	AddElement(/datum/element/climbable)
 
-/obj/machinery/bookbinder/attackby(var/obj/O as obj, var/mob/user as mob)
+/obj/machinery/bookbinder/attackby(var/obj/O as obj, mob/user as mob)
 	if(istype(O, /obj/item/paper) || istype(O, /obj/item/paper_bundle))
 		if(istype(O, /obj/item/paper))
 			user.drop_item()

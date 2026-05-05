@@ -115,7 +115,7 @@
 							s.set_up(5, 1, src)
 							s.start()
 
-/obj/machinery/metal_detector/proc/slot_scan(var/atom/thing)
+/obj/machinery/metal_detector/proc/slot_scan(atom/thing)
 	if(!thing)
 		return -1
 	if(isitem(thing))
@@ -132,7 +132,7 @@
 			alert_lev = max( alert_lev, slot_scan(I))
 	return alert_lev
 
-/obj/machinery/metal_detector/proc/obj_check(var/obj/item/thing)
+/obj/machinery/metal_detector/proc/obj_check(obj/item/thing)
 
 	if(!thing)
 		return -1

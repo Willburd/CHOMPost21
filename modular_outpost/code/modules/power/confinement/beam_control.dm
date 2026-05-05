@@ -65,7 +65,7 @@
 	if(hps.len > record_size)
 		hps.Cut(1, 2)
 
-/obj/structure/confinement_beam_generator/control_box/pulse(var/datum/weakref/WF)
+/obj/structure/confinement_beam_generator/control_box/pulse(datum/weakref/WF)
 	// If in a valid state, attempt to pulse the beam's machinery
 	has_gen = FALSE
 	var/turf/T = get_turf(src)
@@ -103,7 +103,7 @@
 			data.dir = found_dir
 			G.pulse(data)
 
-/obj/structure/confinement_beam_generator/control_box/proc/check_focus_data(var/temp = T20C,var/max = T0C + 1400, var/watt = 0, var/health = 100, var/mhealth = 100)
+/obj/structure/confinement_beam_generator/control_box/proc/check_focus_data(var/temp = T20C,var/max = T0C + 1400, var/watt = 0, var/health = 100, mhealth = 100)
 	SHOULD_NOT_OVERRIDE(TRUE)
 	if(temp >= 0)
 		FLOOR(last_temp = temp,1)
@@ -116,7 +116,7 @@
 	if(watt >= 0)
 		last_watt = val_to_watts(FLOOR(watt,1))
 
-/obj/structure/confinement_beam_generator/control_box/proc/val_to_watts(var/watt)
+/obj/structure/confinement_beam_generator/control_box/proc/val_to_watts(watt)
 	SHOULD_NOT_OVERRIDE(TRUE)
 	PRIVATE_PROC(TRUE)
 	var/units = ""
@@ -143,7 +143,7 @@
 	if(G)
 		G.update_parts_icons()
 
-/obj/structure/confinement_beam_generator/control_box/process_tool_hit(var/obj/item/O, var/mob/user)
+/obj/structure/confinement_beam_generator/control_box/process_tool_hit(var/obj/item/O, mob/user)
 	. = ..()
 	// force deactivate some stuff
 	has_gen = FALSE
@@ -224,13 +224,13 @@
 
 	return tgui_data
 
-/obj/structure/confinement_beam_generator/control_box/proc/validate_turf(var/turf/T)
+/obj/structure/confinement_beam_generator/control_box/proc/validate_turf(turf/T)
 	SHOULD_NOT_OVERRIDE(TRUE)
 	PRIVATE_PROC(TRUE)
 	var/area/A = get_area(T)
 	return (T.z in using_map.confinement_beam_z_levels) && !istype(A,/area/shuttle) && !istype(A,/area/turbolift)
 
-/obj/structure/confinement_beam_generator/control_box/proc/format_z_id(var/obj/structure/confinement_beam_generator/collector/C)
+/obj/structure/confinement_beam_generator/control_box/proc/format_z_id(obj/structure/confinement_beam_generator/collector/C)
 	SHOULD_NOT_OVERRIDE(TRUE)
 	PRIVATE_PROC(TRUE)
 	var/turf/T = get_turf(C)
@@ -309,7 +309,7 @@
 	PRIVATE_PROC(TRUE)
 	set_new_target(0,0,-1)
 
-/obj/structure/confinement_beam_generator/control_box/proc/set_new_target(var/x,var/y,var/z)
+/obj/structure/confinement_beam_generator/control_box/proc/set_new_target(var/x,var/y,z)
 	SHOULD_NOT_OVERRIDE(TRUE)
 	PRIVATE_PROC(TRUE)
 	data.target_x = x
@@ -318,7 +318,7 @@
 	current_x = data.target_x
 	current_y = data.target_y
 
-/obj/structure/confinement_beam_generator/control_box/proc/aim_beam(var/target_x,var/target_y)
+/obj/structure/confinement_beam_generator/control_box/proc/aim_beam(var/target_x,target_y)
 	SHOULD_NOT_OVERRIDE(TRUE)
 	// Move beam location slowly toward target instead of instantly
 	if(prob(40))
@@ -334,12 +334,12 @@
 	current_x = CLAMP(current_x, 1, world.maxx)
 	current_y = CLAMP(current_y, 1, world.maxy)
 
-/obj/structure/confinement_beam_generator/control_box/proc/aim_turf(var/at_z)
+/obj/structure/confinement_beam_generator/control_box/proc/aim_turf(at_z)
 	SHOULD_NOT_OVERRIDE(TRUE)
 	var/turf/T = locate(current_x,current_y,at_z)
 	return T
 
-/obj/structure/confinement_beam_generator/control_box/proc/on_target(var/target_x,var/target_y)
+/obj/structure/confinement_beam_generator/control_box/proc/on_target(var/target_x,target_y)
 	SHOULD_NOT_OVERRIDE(TRUE)
 	return current_x != target_x || current_y != target_y
 

@@ -16,7 +16,7 @@
 			if(!CheckTokenSanity(token))
 				SSpersistence.all_books -= token
 
-/datum/persistent/library_books/CheckTokenSanity(var/list/token)
+/datum/persistent/library_books/CheckTokenSanity(list/token)
 	return ( \
 		!isnull(token["uid"]) && \
 		!isnull(token["title"]) && \
@@ -25,7 +25,7 @@
 		!isnull(token["protected"])
 	)
 
-/datum/persistent/library_books/proc/CheckBookSanity(var/list/token)
+/datum/persistent/library_books/proc/CheckBookSanity(list/token)
 	return ( \
 		!isnull(token["uid"]) && \
 		!isnull(token["name"]) && \
@@ -75,7 +75,7 @@
 	to_file(file(filename), json_encode(output_list))
 	SSpersistence.all_books = output_list // Update list, for manual debugging
 
-/datum/persistent/library_books/proc/add_new_book(var/obj/item/book/B)
+/datum/persistent/library_books/proc/add_new_book(obj/item/book/B)
 	var/search_id = "[B.name]_[B.author]_[B.libcategory]"
 	var/replacing = null
 
@@ -120,7 +120,7 @@
 			return 3 // Error
 		return 1 // new saved
 
-/datum/persistent/library_books/proc/get_stored_book(var/uid,var/location,var/unique = TRUE)
+/datum/persistent/library_books/proc/get_stored_book(var/uid,var/location,unique = TRUE)
 	if(!uid) // somehow null ui, possibly bad data used
 		return null
 	var/hash_key = md5(uid)
@@ -153,7 +153,7 @@
 	NewBook.unique = unique
 	return NewBook
 
-/datum/persistent/library_books/proc/delete_stored_book(var/uid)
+/datum/persistent/library_books/proc/delete_stored_book(uid)
 	if(!uid) // somehow null ui, possibly bad data used
 		return FALSE
 	var/hash_key = md5(uid)
@@ -168,7 +168,7 @@
 	token["deleted"] = TRUE // We remove books during Shutdown, so admins can undelete books using VV before round ends
 	return TRUE
 
-/datum/persistent/library_books/proc/restore_stored_book(var/uid)
+/datum/persistent/library_books/proc/restore_stored_book(uid)
 	if(!uid) // somehow null ui, possibly bad data used
 		return FALSE
 	var/hash_key = md5(uid)
@@ -180,7 +180,7 @@
 	token["deleted"] = FALSE
 	return TRUE
 
-/datum/persistent/library_books/proc/protect_stored_book(var/uid)
+/datum/persistent/library_books/proc/protect_stored_book(uid)
 	if(!uid) // somehow null ui, possibly bad data used
 		return FALSE
 	var/hash_key = md5(uid)
@@ -193,7 +193,7 @@
 	token["deleted"] = FALSE
 	return TRUE
 
-/datum/persistent/library_books/proc/save_book_to_file(var/obj/item/book/B)
+/datum/persistent/library_books/proc/save_book_to_file(obj/item/book/B)
 	var/search_id = "[B.name]_[B.author]_[B.libcategory]"
 	var/list/data = list(
 							"uid" = search_id,
@@ -228,7 +228,7 @@
 		ready_to_write = TRUE
 	return fexists(filecheck) // Check if write failed due to bad encode
 
-/datum/persistent/library_books/proc/load_book_from_file(var/token)
+/datum/persistent/library_books/proc/load_book_from_file(token)
 	if(!token)
 		return
 	if(!CheckTokenSanity(token))

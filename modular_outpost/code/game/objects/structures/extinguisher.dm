@@ -8,7 +8,7 @@
 	// slowly refill it with the foam
 	has_extinguisher.reagents.add_reagent(REAGENT_ID_FIREFOAM, 1)
 
-/obj/structure/extinguisher_cabinet/proc/connected_extinguisher(var/mob/user, var/obj/item/extinguisher/O)
+/obj/structure/extinguisher_cabinet/proc/connected_extinguisher(var/mob/user, obj/item/extinguisher/O)
 	O.safety = TRUE // Don't spray if put back in
 	O.update_icon()
 	user.remove_from_mob(O)

@@ -12,7 +12,7 @@
 	var/structural_integrity = 100
 	var/safety_system = TRUE
 
-/obj/item/organ/internal/butt/set_dna(var/datum/dna/new_dna)
+/obj/item/organ/internal/butt/set_dna(datum/dna/new_dna)
 	. = ..()
 	var/mob/living/carbon/human/H = owner
 	if(!owner || !istype(H) || !isnull(H.species.greater_form)) // Kinda hacky monkey check
@@ -47,7 +47,7 @@
 		visible_message(span_warning("BZZzZZzZZzZT"))
 	return TRUE
 
-/obj/item/organ/internal/butt/proc/assblasted(mob/living/user,var/fling = FALSE)
+/obj/item/organ/internal/butt/proc/assblasted(mob/living/user,fling = FALSE)
 	// wizard spells, super fart
 	structural_integrity = 0 // If they get it reattached, their next toot will be their last! Nyeheheheh!
 	removed(user)

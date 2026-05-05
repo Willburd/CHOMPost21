@@ -41,7 +41,7 @@
 	cost = 0
 	custom_only = FALSE
 
-/datum/trait/neutral/mobegglaying/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+/datum/trait/neutral/mobegglaying/apply(var/datum/species/S,mob/living/carbon/human/H)
 	..()
 	add_verb(H,/mob/living/proc/mobegglaying)
 
@@ -51,7 +51,7 @@
 	cost = 0
 	custom_only = FALSE
 
-/datum/trait/neutral/succubus_bite/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+/datum/trait/neutral/succubus_bite/apply(var/datum/species/S,mob/living/carbon/human/H)
 	..()
 	add_verb(H,/mob/living/proc/succubus_bite)
 

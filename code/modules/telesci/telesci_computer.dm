@@ -384,7 +384,7 @@
 
 
 // Procedure that calculates the actual trajectory taken!
-/proc/simple_projectile_trajectory(var/src_x, var/src_y, var/rotation, var/distance)
+/proc/simple_projectile_trajectory(var/src_x, var/src_y, var/rotation, distance)
 	var/time = distance / 10 // 100ms per distance seems fine?
 	var/dest_x = src_x + distance*sin(rotation);
 	var/dest_y = src_y + distance*cos(rotation);

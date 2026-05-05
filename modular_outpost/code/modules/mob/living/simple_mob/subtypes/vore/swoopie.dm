@@ -1,7 +1,7 @@
 /mob/living/simple_mob/vore/aggressive/corrupthound/swoopie
 	shock_resist = 1 // borg
 
-/mob/living/simple_mob/vore/aggressive/corrupthound/swoopie/get_effective_size(var/micro = FALSE)
+/mob/living/simple_mob/vore/aggressive/corrupthound/swoopie/get_effective_size(micro = FALSE)
 	return size_multiplier + 0.55 // Lets teshari get scooped running under it
 
 /mob/living/simple_mob/vore/aggressive/corrupthound/swoopie/verb/eject_switch()

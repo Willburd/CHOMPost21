@@ -19,7 +19,7 @@
 	var/bolt_down_sound = 'sound/machines/door/boltsdown.ogg'
 	var/locked = FALSE
 
-/obj/structure/vehicle_interior_hatch/hitby(AM as mob|obj, var/speed=5)
+/obj/structure/vehicle_interior_hatch/hitby(AM as mob|obj, speed=5)
 	visible_message( span_danger("\The [src] was hit by \the [AM], with no visible effect."))
 	. = ..()
 

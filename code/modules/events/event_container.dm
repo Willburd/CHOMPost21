@@ -43,7 +43,7 @@
 		next_event_time += (60 * 10)
 
 
-/datum/event_container/proc/acquire_event(var/test_mode = FALSE)
+/datum/event_container/proc/acquire_event(test_mode = FALSE)
 	if(available_events.len == 0)
 		return
 
@@ -78,7 +78,7 @@
 	available_events -= picked_event
 	return picked_event
 
-/datum/event_container/proc/get_weight(var/datum/event_meta/EM, var/list/active_with_role)
+/datum/event_container/proc/get_weight(var/datum/event_meta/EM, list/active_with_role)
 	if(!EM.enabled)
 		return 0
 
