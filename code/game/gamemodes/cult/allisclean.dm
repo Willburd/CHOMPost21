@@ -44,7 +44,7 @@
 				C.stage = 2
 				C.detonate( FALSE )
 
-/obj/singularity/allisclean/move(var/force_move = 0)
+/obj/singularity/allisclean/move(force_move = 0)
 	if(!move_self)
 		return 0
 

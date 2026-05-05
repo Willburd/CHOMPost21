@@ -63,7 +63,7 @@
 
 	. = ..()
 
-/obj/machinery/door/airlock/can_open(var/forced=0)
+/obj/machinery/door/airlock/can_open(forced=0)
 	if(brace)
 		return FALSE
 	. = ..()
@@ -74,7 +74,7 @@
 		return FALSE
 	. = ..()
 
-/obj/machinery/door/airlock/take_damage(var/damage)
+/obj/machinery/door/airlock/take_damage(damage)
 	if(brace)
 		brace.cur_health = clamp(brace.cur_health - damage, 0, brace.max_health)
 		if(brace.cur_health <= 0)

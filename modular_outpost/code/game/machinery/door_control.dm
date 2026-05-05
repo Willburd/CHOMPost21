@@ -17,7 +17,7 @@
 /obj/machinery/button/remote/admin_only/attackby(obj/item/W, mob/user as mob)
 	return attack_hand(user)
 
-/obj/machinery/button/remote/admin_only/emag_act(var/remaining_charges, var/mob/user)
+/obj/machinery/button/remote/admin_only/emag_act(remaining_charges, mob/user)
 	return
 
 /obj/machinery/button/remote/admin_only/ex_act(severity)

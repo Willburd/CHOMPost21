@@ -30,7 +30,7 @@ GLOBAL_DATUM(zombies, /datum/antagonist/zombie)
 	infestationminimum = rand(13,26);
 	infestationglobalgoal = rand(5,8); // lowpop
 
-/datum/antagonist/zombie/create_objectives(var/datum/mind/zombie)
+/datum/antagonist/zombie/create_objectives(datum/mind/zombie)
 	if(!..())
 		return
 
@@ -41,7 +41,7 @@ GLOBAL_DATUM(zombies, /datum/antagonist/zombie)
 	// TODO zombie infestation objectives
 
 
-/datum/antagonist/zombie/equip(var/mob/living/carbon/human/zombie_mob)
+/datum/antagonist/zombie/equip(mob/living/carbon/human/zombie_mob)
 	if(!..())
 		return 0
 	// what would a zombie even get?

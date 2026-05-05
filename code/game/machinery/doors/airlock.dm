@@ -74,7 +74,7 @@
 		/obj/item = 12,
 	)
 
-/obj/machinery/door/airlock/attack_generic(var/mob/living/user, var/damage)
+/obj/machinery/door/airlock/attack_generic(mob/living/user, damage)
 	if(stat & (BROKEN|NOPOWER))
 		if(damage >= STRUCTURE_MIN_DAMAGE_THRESHOLD)
 			if(locked || welded)
@@ -99,7 +99,7 @@
 		return
 	..()
 
-/obj/machinery/door/airlock/attack_alien(var/mob/user) //Familiar, right? Doors. -Mechoid
+/obj/machinery/door/airlock/attack_alien(mob/user) //Familiar, right? Doors. -Mechoid
 	if(!ishuman(user))
 		return ..()
 	var/mob/living/carbon/human/X = user
@@ -296,7 +296,7 @@ About the new airlock wires panel:
 
 	update_icon()
 
-/obj/machinery/door/airlock/proc/electrify(var/duration, var/feedback = 0)
+/obj/machinery/door/airlock/proc/electrify(duration, feedback = 0)
 	var/message = ""
 	if(wires.is_cut(WIRE_ELECTRIFY) && arePowerSystemsOn())
 		message = text("The electrification wire is cut - Door permanently electrified.")
@@ -322,7 +322,7 @@ About the new airlock wires panel:
 	if(feedback && message)
 		to_chat(usr,message)
 
-/obj/machinery/door/airlock/proc/set_idscan(var/activate, var/feedback = 0)
+/obj/machinery/door/airlock/proc/set_idscan(activate, feedback = 0)
 	var/message = ""
 	if(wires.is_cut(WIRE_IDSCAN))
 		message = "The IdScan wire is cut - IdScan feature permanently disabled."
@@ -336,7 +336,7 @@ About the new airlock wires panel:
 	if(feedback && message)
 		to_chat(usr,message)
 
-/obj/machinery/door/airlock/proc/set_safeties(var/activate, var/feedback = 0)
+/obj/machinery/door/airlock/proc/set_safeties(activate, feedback = 0)
 	var/message = ""
 	// Safeties!  We don't need no stinking safeties!
 	if (wires.is_cut(WIRE_SAFETY))
@@ -987,25 +987,25 @@ About the new airlock wires panel:
 /mob/living/blocks_airlock()
 	return !is_incorporeal()
 
-/atom/movable/proc/airlock_crush(var/crush_damage)
+/atom/movable/proc/airlock_crush(crush_damage)
 	return FALSE
 
-/obj/machinery/portable_atmospherics/canister/airlock_crush(var/crush_damage)
+/obj/machinery/portable_atmospherics/canister/airlock_crush(crush_damage)
 	. = ..()
 	health -= crush_damage
 	healthcheck()
 
-/obj/effect/energy_field/airlock_crush(var/crush_damage)
+/obj/effect/energy_field/airlock_crush(crush_damage)
 	adjust_strength(crush_damage)
 
-/obj/structure/closet/airlock_crush(var/crush_damage)
+/obj/structure/closet/airlock_crush(crush_damage)
 	..()
 	damage(crush_damage)
 	for(var/atom/movable/AM in src)
 		AM.airlock_crush()
 	return TRUE
 
-/mob/living/airlock_crush(var/crush_damage)
+/mob/living/airlock_crush(crush_damage)
 	if(is_incorporeal())
 		return FALSE
 	. = ..()
@@ -1017,12 +1017,12 @@ About the new airlock wires panel:
 		T.add_blood(src)
 	return TRUE
 
-/mob/living/carbon/airlock_crush(var/crush_damage)
+/mob/living/carbon/airlock_crush(crush_damage)
 	. = ..()
 	if(. && can_feel_pain()) // Only scream if actually crushed!
 		emote("scream")
 
-/mob/living/silicon/robot/airlock_crush(var/crush_damage)
+/mob/living/silicon/robot/airlock_crush(crush_damage)
 	adjustBruteLoss(crush_damage)
 	return FALSE
 
@@ -1101,7 +1101,7 @@ About the new airlock wires panel:
 			killthis.ex_act(2)//Smashin windows
 	. = ..()
 
-/obj/machinery/door/airlock/proc/lock(var/forced=0)
+/obj/machinery/door/airlock/proc/lock(forced=0)
 	if(locked)
 		return FALSE
 
@@ -1115,7 +1115,7 @@ About the new airlock wires panel:
 	update_icon()
 	return TRUE
 
-/obj/machinery/door/airlock/proc/unlock(var/forced=0)
+/obj/machinery/door/airlock/proc/unlock(forced=0)
 	if(!locked)
 		return
 
@@ -1135,7 +1135,7 @@ About the new airlock wires panel:
 		return FALSE
 	. = ..()
 
-/obj/machinery/door/airlock/Initialize(mapload, var/obj/structure/door_assembly/assembly=null)
+/obj/machinery/door/airlock/Initialize(mapload, obj/structure/door_assembly/assembly=null)
 	//if assembly is given, create the new door from the assembly
 	if (assembly && istype(assembly))
 		assembly_type = assembly.type

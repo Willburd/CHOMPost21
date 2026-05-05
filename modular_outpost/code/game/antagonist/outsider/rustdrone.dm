@@ -21,7 +21,7 @@ GLOBAL_DATUM(rust_drones, /datum/antagonist/rustdrone)
 	..()
 	GLOB.rust_drones = src
 
-/datum/antagonist/rustdrone/update_antag_mob(var/datum/mind/drone)
+/datum/antagonist/rustdrone/update_antag_mob(datum/mind/drone)
 	..()
 	var/is_machine = FALSE
 	if(issilicon(drone.current) || isrobot(drone.current))
@@ -40,7 +40,7 @@ GLOBAL_DATUM(rust_drones, /datum/antagonist/rustdrone)
 		// Alternate intro
 		welcome_text = "An overwhelming force grips your mind, the grinding of gears and screeching metal flood your senses. Imperatives are forced upon you: Build, destroy, collect. Each as important as the last, fulfill as you see fit. The others will try to stop you, make them regret standing in the way of the Design."
 
-/datum/antagonist/rustdrone/create_objectives(var/datum/mind/drone)
+/datum/antagonist/rustdrone/create_objectives(datum/mind/drone)
 	if(!..())
 		return
 

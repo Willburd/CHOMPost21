@@ -6,7 +6,7 @@
 // This still has difficulties due to bodycams, and radios nested inside multiple layers. So it's been disabled again.
 
 
-/proc/get_mobs_in_radio_ranges(var/list/obj/item/radio/radios)
+/proc/get_mobs_in_radio_ranges(list/obj/item/radio/radios)
 
 	. = list()
 	// Returns a list of mobs who can hear any of the radios given in @radios

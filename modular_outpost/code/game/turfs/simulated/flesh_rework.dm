@@ -104,7 +104,7 @@
 	. = ..()
 	update_icon(1)
 
-/turf/simulated/flesh/update_icon(var/update_neighbors)
+/turf/simulated/flesh/update_icon(update_neighbors)
 	cut_overlays()
 	icon = 'modular_outpost/icons/turf/stomach.dmi'
 	icon_state = "flesh"
@@ -220,7 +220,7 @@
 /turf/simulated/flesh/indestructable/beat_the_meat(damage)
 	return
 
-/turf/simulated/flesh/indestructable/update_icon(var/update_neighbors)
+/turf/simulated/flesh/indestructable/update_icon(update_neighbors)
 	. = ..()
 	var/image/bone_overlay = image('modular_outpost/icons/turf/stomach.dmi', "bone_[bone_iconstate]")
 	add_overlay(bone_overlay)
@@ -320,7 +320,7 @@ GLOBAL_LIST_EMPTY(terraformer_arteries)
 	if(density && damage > 30 && prob(20))
 		cut_open()
 
-/turf/simulated/flesh/artery/update_icon(var/update_neighbors)
+/turf/simulated/flesh/artery/update_icon(update_neighbors)
 	. = ..()
 	var/image/artery_overlay = image('modular_outpost/icons/turf/stomach.dmi', "artery_[density]") // TODO - future artery art types
 	add_overlay(artery_overlay)

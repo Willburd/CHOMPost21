@@ -230,7 +230,14 @@
 	dir = 4;
 	pixel_x = -30
 	},
-/turf/simulated/floor/reinforced,
+/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/milspec/color/orange/half{
+	dir = 8
+	},
+/obj/effect/floor_decal/milspec/color/purple/corner{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
 /area/rnd/supermatter)
 "aaw" = (
 /obj/random/cutout,
@@ -2300,6 +2307,11 @@
 	},
 /turf/simulated/floor/tiled,
 /area/security/brig/lowobservation)
+"afd" = (
+/obj/effect/floor_decal/industrial/warning,
+/obj/machinery/particle_accelerator/control_box,
+/turf/simulated/floor/reinforced,
+/area/rnd/supermatter)
 "afe" = (
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/unexplored/muriki/mountaintopeast)
@@ -2415,6 +2427,11 @@
 /obj/effect/zone_divider,
 /turf/simulated/floor/outpost_roof/turfpack/muriki,
 /area/muriki/rooftop/security)
+"afu" = (
+/obj/effect/floor_decal/industrial/warning,
+/obj/effect/floor_decal/industrial/rad_floor/red,
+/turf/simulated/floor/reinforced,
+/area/rnd/supermatter)
 "afv" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/machinery/camera/network/medbay{
@@ -2658,6 +2675,12 @@
 /obj/effect/zone_divider,
 /turf/simulated/floor/outpost_roof/turfpack/muriki,
 /area/muriki/rooftop/engineering)
+"agc" = (
+/obj/structure/cable/yellow{
+	icon_state = "6-9"
+	},
+/turf/simulated/floor/reinforced,
+/area/rnd/supermatter)
 "agd" = (
 /obj/structure/railing{
 	dir = 4
@@ -6493,6 +6516,18 @@
 /obj/fiftyspawner/tritium,
 /obj/fiftyspawner/tritium,
 /obj/fiftyspawner/tritium,
+/obj/effect/floor_decal/milspec/color/orange/half{
+	dir = 1
+	},
+/obj/effect/floor_decal/milspec/color/purple/corner{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/rnd/supermatter)
+"aoP" = (
+/obj/structure/cable/yellow{
+	icon_state = "4-9"
+	},
 /turf/simulated/floor/reinforced,
 /area/rnd/supermatter)
 "aoQ" = (
@@ -6608,6 +6643,13 @@
 	},
 /turf/simulated/floor/plating,
 /area/rnd/xenobiology/xenoflora)
+"aoZ" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/rad_floor/red,
+/turf/simulated/floor/reinforced,
+/area/rnd/supermatter)
 "apa" = (
 /obj/structure/railing{
 	dir = 4
@@ -6620,7 +6662,10 @@
 /area/muriki/rooftop/science)
 "apb" = (
 /obj/structure/cable/yellow{
-	icon_state = "1-2"
+	icon_state = "1-8"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/reinforced,
 /area/rnd/supermatter)
@@ -6694,6 +6739,24 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/upper)
+"aph" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/structure/cable/yellow{
+	icon_state = "6-9"
+	},
+/turf/simulated/floor/reinforced,
+/area/rnd/supermatter)
+"api" = (
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/rnd/supermatter)
 "apj" = (
 /obj/structure/cable/yellow{
 	icon_state = "0-8"
@@ -6704,6 +6767,12 @@
 	},
 /turf/simulated/floor/solarpanel/turfpack/muriki,
 /area/muriki/rooftop/security)
+"apk" = (
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/rnd/supermatter)
 "apl" = (
 /turf/simulated/wall/r_wall,
 /area/server)
@@ -6756,6 +6825,21 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/research/anomaly_storage)
+"aps" = (
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/milspec/color/orange/half{
+	dir = 8
+	},
+/obj/effect/floor_decal/milspec/color/purple/corner{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/rnd/supermatter)
+"apt" = (
+/turf/simulated/floor/tiled/milspec,
+/area/rnd/supermatter)
 "apu" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -7463,6 +7547,12 @@
 	},
 /turf/simulated/floor/outpost_roof/turfpack/muriki,
 /area/muriki/rooftop/science)
+"aqJ" = (
+/obj/structure/cable/yellow{
+	icon_state = "2-5"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/rnd/supermatter)
 "aqK" = (
 /obj/effect/floor_decal/corner/lime{
 	dir = 10
@@ -7486,6 +7576,14 @@
 /obj/structure/prop/war/tgmc_missile_rack/banshee,
 /turf/simulated/floor/outpost_roof/turfpack/muriki,
 /area/muriki/rooftop/science)
+"aqM" = (
+/obj/structure/railing{
+	dir = 1;
+	flags = null
+	},
+/obj/machinery/light,
+/turf/simulated/floor/plating,
+/area/hallway/secondary/engineering_hallway)
 "aqN" = (
 /obj/effect/floor_decal/industrial/warning/corner,
 /turf/simulated/floor/tiled/milspec,
@@ -7505,6 +7603,20 @@
 	},
 /turf/simulated/floor/plating,
 /area/rnd/xenobiology/xenoflora)
+"aqP" = (
+/obj/structure/railing{
+	dir = 1;
+	flags = null
+	},
+/obj/effect/landmark/pengmark,
+/turf/simulated/floor/plating,
+/area/hallway/secondary/engineering_hallway)
+"aqQ" = (
+/obj/machinery/camera/network/engineering{
+	c_tag = "ENG - Upper Hallway East"
+	},
+/turf/simulated/open,
+/area/hallway/secondary/engineering_hallway)
 "aqT" = (
 /obj/structure/railing{
 	dir = 4
@@ -7517,7 +7629,14 @@
 	dir = 8;
 	pixel_x = -28
 	},
-/turf/simulated/floor/reinforced,
+/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/milspec/color/orange/half{
+	dir = 8
+	},
+/obj/effect/floor_decal/milspec/color/purple/corner{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
 /area/rnd/supermatter)
 "aqV" = (
 /obj/effect/floor_decal/corner/purple{
@@ -7831,51 +7950,56 @@
 /turf/simulated/wall,
 /area/rnd/workshop)
 "arH" = (
-/obj/structure/disposalpipe/trunk{
-	dir = 4
-	},
 /obj/machinery/disposal,
 /obj/item/geiger/wall/west,
-/turf/simulated/floor/reinforced,
+/obj/structure/disposalpipe/trunk{
+	dir = 1
+	},
+/obj/effect/floor_decal/milspec/color/orange/half{
+	dir = 10
+	},
+/obj/effect/floor_decal/milspec/color/purple/corner{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
 /area/rnd/supermatter)
 "arI" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
 /obj/machinery/light,
-/turf/simulated/floor/reinforced,
+/obj/effect/floor_decal/milspec/color/orange/half,
+/obj/effect/floor_decal/milspec/color/purple/corner{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
 /area/rnd/supermatter)
 "arJ" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
 /obj/machinery/camera/network/engineering{
 	c_tag = "ENG - Particle Lab South";
 	dir = 1
 	},
+/obj/effect/floor_decal/milspec/color/orange/half,
+/obj/effect/floor_decal/milspec/color/purple/corner{
+	dir = 8
+	},
 /obj/effect/floor_decal/industrial/warning/corner,
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/tiled/milspec,
 /area/rnd/supermatter)
 "arK" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
 /obj/effect/floor_decal/industrial/warning,
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/tiled/milspec,
 /area/rnd/supermatter)
 "arL" = (
-/obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
-	},
 /obj/item/radio/intercom{
 	name = "Station Intercom (General)";
 	pixel_y = -25
 	},
+/obj/effect/floor_decal/milspec/color/orange/half,
+/obj/effect/floor_decal/milspec/color/purple/corner{
+	dir = 8
+	},
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 8
 	},
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/tiled/milspec,
 /area/rnd/supermatter)
 "arM" = (
 /obj/machinery/doorbell_chime{
@@ -7883,7 +8007,11 @@
 	name = "Engineering Dinger";
 	pixel_y = -30
 	},
-/turf/simulated/floor/reinforced,
+/obj/effect/floor_decal/milspec/color/orange/half,
+/obj/effect/floor_decal/milspec/color/purple/corner{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
 /area/rnd/supermatter)
 "arN" = (
 /obj/structure/closet/radiation,
@@ -7895,7 +8023,11 @@
 /obj/item/clothing/suit/radiation/teshari,
 /obj/item/clothing/head/radiation/teshari,
 /obj/item/clothing/head/radiation/teshari,
-/turf/simulated/floor/reinforced,
+/obj/effect/floor_decal/milspec/color/orange/half,
+/obj/effect/floor_decal/milspec/color/purple/corner{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
 /area/rnd/supermatter)
 "arO" = (
 /obj/structure/closet/radiation,
@@ -7904,15 +8036,29 @@
 /obj/item/clothing/suit/radiation/teshari,
 /obj/item/clothing/head/radiation/teshari,
 /obj/item/clothing/head/radiation/teshari,
-/turf/simulated/floor/reinforced,
+/obj/effect/floor_decal/milspec/color/orange/half,
+/obj/effect/floor_decal/milspec/color/purple/corner{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
 /area/rnd/supermatter)
 "arP" = (
 /obj/item/geiger/wall/east,
 /obj/machinery/power/rad_collector,
+/obj/effect/floor_decal/milspec/color/orange/half{
+	dir = 6
+	},
+/obj/effect/floor_decal/milspec/color/purple/corner{
+	dir = 8
+	},
+/obj/effect/floor_decal/milspec/color/purple/corner{
+	dir = 4
+	},
 /obj/structure/cable/yellow{
 	icon_state = "0-1"
 	},
-/turf/simulated/floor/reinforced,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/simulated/floor/tiled/milspec,
 /area/rnd/supermatter)
 "arQ" = (
 /obj/structure/cable/yellow{
@@ -8010,7 +8156,9 @@
 /obj/effect/floor_decal/milspec/color/purple/corner{
 	dir = 4
 	},
-/obj/item/geiger/wall/east,
+/obj/machinery/computer/security/telescreen/entertainment{
+	pixel_x = 32
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/workshop)
 "asb" = (
@@ -8027,7 +8175,6 @@
 /obj/structure/particle_accelerator/particle_emitter/right{
 	dir = 4
 	},
-/obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 6
 	},
@@ -8035,69 +8182,41 @@
 /area/rnd/supermatter)
 "ase" = (
 /obj/effect/floor_decal/industrial/stand_clear/red,
-/obj/structure/cable/yellow{
-	icon_state = "1-4"
-	},
-/obj/effect/floor_decal/industrial/warning,
-/turf/simulated/floor/reinforced,
-/area/rnd/supermatter)
-"asf" = (
-/obj/structure/cable/yellow{
-	icon_state = "4-8"
-	},
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/reinforced,
 /area/rnd/supermatter)
 "asg" = (
-/obj/structure/cable/yellow{
-	icon_state = "4-8"
-	},
 /obj/effect/floor_decal/industrial/warning,
 /obj/structure/cable/yellow{
-	icon_state = "2-8"
+	icon_state = "2-9"
 	},
 /turf/simulated/floor/reinforced,
 /area/rnd/supermatter)
 "ash" = (
-/obj/structure/cable/yellow{
-	icon_state = "4-8"
-	},
 /obj/structure/window/plastitanium/full,
 /obj/structure/grille,
+/obj/machinery/door/blast/regular{
+	density = 0;
+	icon_state = "pdoor0";
+	id = "particlelab_lockdown";
+	name = "Chamber Blastdoor";
+	opacity = 0
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/rnd/supermatter)
 "asi" = (
 /obj/effect/floor_decal/industrial/rad_floor/red,
-/obj/structure/cable/yellow{
-	icon_state = "4-8"
-	},
-/obj/structure/cable/yellow{
-	icon_state = "1-8"
-	},
 /turf/simulated/floor/reinforced,
 /area/rnd/supermatter)
 "asj" = (
 /obj/effect/floor_decal/industrial/stand_clear/red,
-/obj/structure/cable/yellow{
-	icon_state = "4-8"
-	},
 /obj/machinery/light,
 /turf/simulated/floor/reinforced,
 /area/rnd/supermatter)
 "ask" = (
-/obj/structure/cable/yellow{
-	icon_state = "4-8"
-	},
 /obj/structure/extinguisher_cabinet{
 	pixel_y = -30;
 	dir = 1
-	},
-/turf/simulated/floor/reinforced,
-/area/rnd/supermatter)
-"asl" = (
-/obj/effect/floor_decal/industrial/rad_floor/red,
-/obj/structure/cable/yellow{
-	icon_state = "1-8"
 	},
 /turf/simulated/floor/reinforced,
 /area/rnd/supermatter)
@@ -8204,6 +8323,9 @@
 /obj/effect/floor_decal/milspec/color/purple/corner{
 	dir = 4
 	},
+/obj/machinery/ai_status_display{
+	pixel_x = 32
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/workshop)
 "asu" = (
@@ -8231,7 +8353,6 @@
 /obj/structure/particle_accelerator/particle_emitter/center{
 	dir = 4
 	},
-/obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
@@ -8243,7 +8364,14 @@
 	req_one_access = list(10,51)
 	},
 /obj/structure/cable/yellow{
-	icon_state = "1-2"
+	icon_state = "4-8"
+	},
+/obj/machinery/door/blast/regular{
+	density = 0;
+	icon_state = "pdoor0";
+	id = "particlelab_lockdown";
+	name = "Chamber Blastdoor";
+	opacity = 0
 	},
 /turf/simulated/floor/reinforced,
 /area/rnd/supermatter)
@@ -8251,7 +8379,7 @@
 /obj/effect/floor_decal/industrial/hatch/red,
 /obj/machinery/particle_smasher,
 /obj/structure/cable/yellow{
-	icon_state = "1-2"
+	icon_state = "1-8"
 	},
 /turf/simulated/floor/reinforced,
 /area/rnd/supermatter)
@@ -8302,18 +8430,14 @@
 /obj/effect/floor_decal/milspec/color/purple/corner{
 	dir = 4
 	},
+/obj/machinery/status_display{
+	pixel_x = 32
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/workshop)
 "asE" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 9
-	},
-/turf/simulated/floor/reinforced,
-/area/rnd/supermatter)
-"asF" = (
-/obj/machinery/particle_accelerator/control_box,
-/obj/effect/floor_decal/industrial/warning{
-	dir = 1
 	},
 /turf/simulated/floor/reinforced,
 /area/rnd/supermatter)
@@ -8327,7 +8451,6 @@
 /obj/structure/particle_accelerator/particle_emitter/left{
 	dir = 4
 	},
-/obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 5
 	},
@@ -8335,11 +8458,11 @@
 /area/rnd/supermatter)
 "asI" = (
 /obj/effect/floor_decal/industrial/stand_clear/red,
-/obj/structure/cable/yellow{
-	icon_state = "1-2"
-	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
+	},
+/obj/structure/cable/yellow{
+	icon_state = "1-6"
 	},
 /turf/simulated/floor/reinforced,
 /area/rnd/supermatter)
@@ -8347,6 +8470,9 @@
 /obj/effect/floor_decal/industrial/rad_floor/red,
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
 	},
 /turf/simulated/floor/reinforced,
 /area/rnd/supermatter)
@@ -8408,15 +8534,28 @@
 /obj/structure/cable/yellow{
 	icon_state = "1-4"
 	},
-/turf/simulated/floor/reinforced,
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/obj/effect/floor_decal/milspec/color/orange/half{
+	dir = 8
+	},
+/obj/effect/floor_decal/milspec/color/purple/corner{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
 /area/rnd/supermatter)
 "asQ" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
-/obj/structure/disposalpipe/segment,
 /obj/machinery/hologram/holopad,
-/turf/simulated/floor/reinforced,
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled/milspec,
 /area/rnd/supermatter)
 "asR" = (
 /obj/structure/cable/yellow{
@@ -8426,41 +8565,54 @@
 	icon_state = "5-8"
 	},
 /obj/structure/cable/yellow{
+	icon_state = "6-8"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "1-8"
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals_central7{
+	dir = 4
+	},
+/obj/structure/cable/yellow{
 	icon_state = "2-8"
 	},
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/tiled/milspec,
 /area/rnd/supermatter)
 "asS" = (
-/obj/machinery/camera/network/research{
-	dir = 8;
-	c_tag = "SCI - Particle Lab East"
-	},
 /obj/machinery/power/rad_collector,
 /obj/structure/cable/yellow{
 	icon_state = "0-8"
 	},
-/turf/simulated/floor/reinforced,
+/obj/effect/floor_decal/milspec/color/orange/half{
+	dir = 4
+	},
+/obj/effect/floor_decal/milspec/color/purple/corner{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/simulated/floor/tiled/milspec,
 /area/rnd/supermatter)
 "asT" = (
 /obj/machinery/power/thermoregulator,
 /obj/structure/cable/yellow{
 	icon_state = "0-2"
 	},
-/turf/simulated/floor/reinforced,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/simulated/floor/tiled/milspec,
 /area/rnd/supermatter)
 "asU" = (
 /obj/machinery/light{
 	dir = 1
 	},
 /obj/structure/table/glass,
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/tiled/milspec,
 /area/rnd/supermatter)
 "asV" = (
 /obj/item/geiger/wall/north,
 /obj/machinery/camera/network/engineering{
 	c_tag = "ENG - Particle Lab Chamber"
 	},
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/tiled/milspec,
 /area/rnd/supermatter)
 "asW" = (
 /obj/machinery/power/emitter,
@@ -8470,7 +8622,8 @@
 /obj/machinery/camera/network/research{
 	c_tag = "SCI - Particle Lab North"
 	},
-/turf/simulated/floor/reinforced,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/simulated/floor/tiled/milspec,
 /area/rnd/supermatter)
 "asX" = (
 /obj/structure/table/steel,
@@ -8576,11 +8729,12 @@
 	dir = 4
 	},
 /obj/structure/table/steel,
+/obj/item/geiger/wall/east,
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/workshop)
 "ate" = (
 /obj/effect/landmark/start/electrophysicist,
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/tiled/milspec,
 /area/rnd/supermatter)
 "atf" = (
 /obj/structure/extinguisher_cabinet{
@@ -8602,36 +8756,55 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/tiled/milspec,
 /area/rnd/supermatter)
 "ath" = (
-/obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
 	},
-/turf/simulated/floor/reinforced,
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled/milspec,
 /area/rnd/supermatter)
 "ati" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/tiled/milspec,
 /area/rnd/supermatter)
 "atj" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-10"
 	},
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/tiled/milspec,
 /area/rnd/supermatter)
 "atk" = (
 /obj/machinery/power/rad_collector,
 /obj/structure/cable/yellow{
 	icon_state = "0-8"
 	},
-/turf/simulated/floor/reinforced,
+/obj/machinery/camera/network/research{
+	dir = 8;
+	c_tag = "SCI - Particle Lab East"
+	},
+/obj/effect/floor_decal/milspec/color/orange/half{
+	dir = 4
+	},
+/obj/effect/floor_decal/milspec/color/purple/corner{
+	dir = 4
+	},
+/obj/machinery/button/remote/blast_door{
+	desc = "A remote control-switch for shutters.";
+	id = "particlelab_lockdown";
+	name = "Chamber Panic Shutter";
+	pixel_x = 24;
+	dir = 8;
+	pixel_y = -7
+	},
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/simulated/floor/tiled/milspec,
 /area/rnd/supermatter)
 "atl" = (
 /obj/structure/cable/green{
@@ -8652,6 +8825,15 @@
 	RCon_tag = "Research Particle Lab Bypass";
 	name = "Research PA Bypass"
 	},
+/obj/effect/floor_decal/milspec/color/orange/half{
+	dir = 9
+	},
+/obj/effect/floor_decal/milspec/color/purple/corner{
+	dir = 4
+	},
+/obj/effect/floor_decal/milspec/color/purple/corner{
+	dir = 8
+	},
 /turf/simulated/floor/reinforced,
 /area/rnd/supermatter)
 "atn" = (
@@ -8666,7 +8848,13 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/turf/simulated/floor/reinforced,
+/obj/effect/floor_decal/milspec/color/orange/half{
+	dir = 1
+	},
+/obj/effect/floor_decal/milspec/color/purple/corner{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
 /area/rnd/supermatter)
 "ato" = (
 /obj/structure/table/glass,
@@ -8683,7 +8871,13 @@
 	icon_state = "4-8"
 	},
 /obj/item/geiger/wall/north,
-/turf/simulated/floor/reinforced,
+/obj/effect/floor_decal/milspec/color/orange/half{
+	dir = 1
+	},
+/obj/effect/floor_decal/milspec/color/purple/corner{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
 /area/rnd/supermatter)
 "atp" = (
 /obj/item/weldingtool,
@@ -8704,7 +8898,14 @@
 	pixel_y = 24;
 	nightshift_setting = 2
 	},
-/turf/simulated/floor/reinforced,
+/obj/item/tool/wirecutters,
+/obj/effect/floor_decal/milspec/color/orange/half{
+	dir = 1
+	},
+/obj/effect/floor_decal/milspec/color/purple/corner{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
 /area/rnd/supermatter)
 "atq" = (
 /obj/structure/cable/green{
@@ -8718,7 +8919,7 @@
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/tiled/milspec,
 /area/rnd/supermatter)
 "atr" = (
 /obj/structure/table/rack/shelf/steel,
@@ -8728,7 +8929,13 @@
 /obj/fiftyspawner/plastitanium_glass{
 	pixel_x = 4
 	},
-/turf/simulated/floor/reinforced,
+/obj/effect/floor_decal/milspec/color/orange/half{
+	dir = 1
+	},
+/obj/effect/floor_decal/milspec/color/purple/corner{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
 /area/rnd/supermatter)
 "ats" = (
 /obj/item/radio/intercom{
@@ -8740,7 +8947,16 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/turf/simulated/floor/reinforced,
+/obj/effect/floor_decal/milspec/color/orange/half{
+	dir = 1
+	},
+/obj/effect/floor_decal/milspec/color/purple/corner{
+	dir = 4
+	},
+/obj/structure/cable/yellow{
+	icon_state = "4-10"
+	},
+/turf/simulated/floor/tiled/milspec,
 /area/rnd/supermatter)
 "att" = (
 /obj/machinery/power/port_gen/pacman/mrs,
@@ -8749,7 +8965,17 @@
 	name = "Engineering Dinger";
 	pixel_y = 32
 	},
-/turf/simulated/floor/reinforced,
+/obj/effect/floor_decal/milspec/color/orange/half{
+	dir = 5
+	},
+/obj/effect/floor_decal/milspec/color/purple/corner{
+	dir = 4
+	},
+/obj/structure/cable/yellow{
+	icon_state = "0-8"
+	},
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/simulated/floor/tiled/milspec,
 /area/rnd/supermatter)
 "atu" = (
 /obj/machinery/door/firedoor/glass,
@@ -8764,7 +8990,6 @@
 /turf/simulated/floor,
 /area/hallway/secondary/engineering_hallway)
 "atv" = (
-/obj/machinery/light,
 /obj/effect/floor_decal/corner/orange/full,
 /obj/effect/floor_decal/corner/purple{
 	dir = 8
@@ -8773,6 +8998,7 @@
 	dir = 1;
 	pixel_y = -1
 	},
+/obj/item/geiger/wall/south,
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/engineering_hallway)
 "atw" = (
@@ -8831,6 +9057,7 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 4
 	},
+/obj/machinery/light,
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/engineering_hallway)
 "atA" = (
@@ -8859,6 +9086,9 @@
 	dir = 1;
 	icon_state = "pipe-j2"
 	},
+/obj/effect/floor_decal/steeldecal/steel_decals_central7{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/engineering_hallway)
 "atC" = (
@@ -8881,6 +9111,10 @@
 	},
 /obj/effect/floor_decal/corner/purple{
 	dir = 8
+	},
+/obj/item/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -22
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/engineering_hallway)
@@ -8950,16 +9184,6 @@
 /obj/effect/floor_decal/corner/orange,
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/engineering_hallway)
-"atN" = (
-/obj/machinery/light,
-/obj/effect/floor_decal/corner/orange{
-	dir = 10
-	},
-/obj/effect/floor_decal/corner/purple{
-	dir = 8
-	},
-/turf/simulated/floor/tiled,
-/area/hallway/secondary/engineering_hallway)
 "atO" = (
 /obj/structure/extinguisher_cabinet{
 	pixel_y = -30;
@@ -8990,6 +9214,10 @@
 	dir = 8
 	},
 /obj/effect/landmark/start/electrophysicist,
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -26
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/engineering_hallway)
 "atR" = (
@@ -9015,10 +9243,6 @@
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/engineering_hallway)
 "atT" = (
-/obj/machinery/camera/network/engineering{
-	c_tag = "ENG - Upper Hallway East";
-	dir = 1
-	},
 /obj/effect/floor_decal/corner/orange{
 	dir = 10
 	},
@@ -9029,7 +9253,6 @@
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/engineering_hallway)
 "atU" = (
-/obj/machinery/light,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
 	},
@@ -9038,6 +9261,10 @@
 	},
 /obj/effect/floor_decal/corner/purple{
 	dir = 8
+	},
+/obj/item/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -22
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/engineering_hallway)
@@ -9281,6 +9508,9 @@
 	},
 /obj/effect/floor_decal/corner/purple{
 	dir = 4
+	},
+/obj/machinery/light{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/engineering_hallway)
@@ -9587,6 +9817,9 @@
 /obj/structure/railing{
 	dir = 4
 	},
+/obj/machinery/light/small{
+	dir = 1
+	},
 /turf/simulated/open,
 /area/muriki/bathroom/engineering)
 "auE" = (
@@ -9606,9 +9839,6 @@
 /obj/structure/disposalpipe/segment{
 	dir = 2;
 	icon_state = "pipe-c"
-	},
-/obj/machinery/light/small{
-	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/muriki/bathroom/engineering)
@@ -23867,6 +24097,9 @@
 /area/rnd/hallway/phoronicsmainhall)
 "hKz" = (
 /obj/effect/floor_decal/industrial/stand_clear/red,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
 /turf/simulated/floor/reinforced,
 /area/rnd/supermatter)
 "hKE" = (
@@ -32551,6 +32784,13 @@
 "moo" = (
 /obj/structure/grille,
 /obj/structure/window/plastitanium/full,
+/obj/machinery/door/blast/regular{
+	density = 0;
+	icon_state = "pdoor0";
+	id = "particlelab_lockdown";
+	name = "Chamber Blastdoor";
+	opacity = 0
+	},
 /turf/simulated/floor/plating,
 /area/rnd/supermatter)
 "moB" = (
@@ -47490,7 +47730,14 @@
 /obj/machinery/ai_status_display{
 	pixel_x = -32
 	},
-/turf/simulated/floor/reinforced,
+/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/milspec/color/orange/half{
+	dir = 8
+	},
+/obj/effect/floor_decal/milspec/color/purple/corner{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
 /area/rnd/supermatter)
 "uaY" = (
 /obj/machinery/meter{
@@ -77888,7 +78135,7 @@ adN
 ucX
 aut
 auf
-atN
+atP
 dPP
 dPP
 dPP
@@ -78053,7 +78300,7 @@ aug
 atO
 dPP
 atm
-apb
+aps
 asP
 uaV
 aqU
@@ -78215,8 +78462,8 @@ auh
 atP
 dPP
 atn
-qfN
-eXT
+apt
+api
 asE
 asu
 asb
@@ -78378,10 +78625,10 @@ atQ
 dPP
 ato
 ate
-eXT
-asF
+api
+asG
 asv
-asc
+afd
 arJ
 arv
 oUl
@@ -78531,7 +78778,7 @@ ybr
 ybr
 ybr
 acZ
-auG
+auu
 auF
 auB
 auv
@@ -78540,7 +78787,7 @@ atP
 dPP
 atp
 atg
-eXT
+api
 asG
 asw
 asc
@@ -78694,7 +78941,7 @@ jPy
 arQ
 acZ
 auu
-auu
+auG
 auu
 auu
 aul
@@ -78864,10 +79111,10 @@ atS
 aPK
 aoO
 ati
-eXT
-asG
+apk
+aoZ
 qfN
-asc
+afu
 arM
 amH
 oUl
@@ -79025,10 +79272,10 @@ aun
 atT
 tfG
 atr
-qfN
+aqJ
 asR
 asI
-apb
+qfN
 ase
 arN
 amH
@@ -79188,10 +79435,10 @@ atU
 dPP
 ats
 atj
-eXT
-asG
-qfN
-asf
+apk
+aph
+agc
+asc
 arO
 dPP
 acZ
@@ -79352,7 +79599,7 @@ att
 atk
 asS
 asG
-qfN
+aoP
 asg
 arP
 dPP
@@ -79512,7 +79759,7 @@ atW
 dPP
 dPP
 oxg
-oxg
+moo
 moo
 asy
 ash
@@ -79671,7 +79918,7 @@ acZ
 krn
 ufL
 ufL
-krn
+aqM
 dPP
 oxg
 asT
@@ -79831,14 +80078,14 @@ hEc
 hEc
 acZ
 krn
+aqQ
 ufL
-ufL
-krn
+aqP
 dPP
 oxg
 asU
 hKz
-qfN
+eXT
 asj
 oxg
 dPP
@@ -79999,8 +80246,8 @@ krn
 dPP
 oxg
 asV
-qfN
-qfN
+asG
+eXT
 ask
 oxg
 dPP
@@ -80163,7 +80410,7 @@ oxg
 asW
 asJ
 asz
-asl
+asi
 oxg
 dPP
 eoF

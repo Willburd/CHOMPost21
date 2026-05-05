@@ -47,7 +47,7 @@
 				D = pick(disposals)
 
 // For admin abuse
-/area/proc/cult_spam( var/list/text_set = null, var/turf/T = null)
+/area/proc/cult_spam( list/text_set = null, turf/T = null)
 	if(T)
 		var/num_doodles = 0
 		for(var/obj/effect/decal/cleanable/blood/writing/W in T)
@@ -101,7 +101,7 @@
 			T.dirt += rand(90,160)
 		T.update_dirt()
 
-/obj/effect/effect/smoke/bad/disposal_dust/affect(var/mob/living/L) // This stuff is extra-vile.
+/obj/effect/effect/smoke/bad/disposal_dust/affect(mob/living/L) // This stuff is extra-vile.
 	if (!..())
 		return 0
 	if(L.needs_to_breathe())

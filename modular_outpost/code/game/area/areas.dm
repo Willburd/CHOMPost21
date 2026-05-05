@@ -11,7 +11,7 @@
 /area/mine
 	use_maint_night_color = TRUE
 
-/area/proc/fire_supression_set(var/enable)
+/area/proc/fire_supression_set(enable)
 	if(enable)
 		// spawn supression
 		if(fire_supress)

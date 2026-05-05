@@ -26,7 +26,7 @@ GLOBAL_DATUM(chus, /datum/antagonist/chu)
 	GLOB.chus = src
 	infestationglobalgoal = rand(15,25); // lowpop
 
-/datum/antagonist/chu/create_objectives(var/datum/mind/chu)
+/datum/antagonist/chu/create_objectives(datum/mind/chu)
 	if(!..())
 		return
 
@@ -34,7 +34,7 @@ GLOBAL_DATUM(chus, /datum/antagonist/chu)
 	chu_objective.owner = chu
 	chu.objectives += chu_objective
 
-/datum/antagonist/chu/equip(var/mob/living/carbon/human/chu_mob)
+/datum/antagonist/chu/equip(mob/living/carbon/human/chu_mob)
 	if(!..())
 		return 0
 	// what would a chu even get?

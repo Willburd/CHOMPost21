@@ -24,7 +24,7 @@ GLOBAL_DATUM(hungryones, /datum/antagonist/hungers)
 	..()
 	GLOB.hungryones = src
 
-/datum/antagonist/hungers/create_objectives(var/datum/mind/hunger)
+/datum/antagonist/hungers/create_objectives(datum/mind/hunger)
 	if(!..())
 		return
 
@@ -36,7 +36,7 @@ GLOBAL_DATUM(hungryones, /datum/antagonist/hungers)
 	consume_objective.owner = hunger
 	hunger.objectives += consume_objective
 
-/datum/antagonist/hungers/equip(var/mob/living/carbon/human/hunger_mob)
+/datum/antagonist/hungers/equip(mob/living/carbon/human/hunger_mob)
 	if(issilicon(hunger_mob)) // this needs to be here because ..() returns false if the mob isn't human
 		add_law_zero(hunger_mob)
 		return 1

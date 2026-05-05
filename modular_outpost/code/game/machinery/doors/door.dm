@@ -12,18 +12,18 @@
 	addtimer(CALLBACK(src,PROC_REF(handle_living)),next_close_wait())
 	#endif
 
-/obj/machinery/door/flesh/inoperable(var/additional_flags = 0)
+/obj/machinery/door/flesh/inoperable(additional_flags = 0)
 	// always works
 	return FALSE
 
 /obj/machinery/door/flesh/Bumped(atom/AM)
 	// do nothing
 
-/obj/machinery/door/flesh/bullet_act(var/obj/item/projectile/Proj)
+/obj/machinery/door/flesh/bullet_act(obj/item/projectile/Proj)
 	// no damage
 	health = maxhealth
 
-/obj/machinery/door/flesh/hitby(AM as mob|obj, var/speed=5)
+/obj/machinery/door/flesh/hitby(AM as mob|obj, speed=5)
 	// no damage
 	visible_message(span_danger("[name] was hit by [AM], with no visible effect."))
 
@@ -51,7 +51,7 @@
 /obj/machinery/door/flesh/attack_alien(mob/user)
 	attack_hand(user)
 
-/obj/machinery/door/flesh/emag_act(var/remaining_charges)
+/obj/machinery/door/flesh/emag_act(remaining_charges)
 	// no behavior
 
 /obj/machinery/door/flesh/emp_act(severity, recursive)
@@ -113,7 +113,7 @@
 /obj/machinery/door/flesh/process()
 	return PROCESS_KILL // not needed, we handle fleshdoors with timers
 
-/obj/machinery/door/flesh/update_icon(var/update_neighbors)
+/obj/machinery/door/flesh/update_icon(update_neighbors)
 	cut_overlays()
 	. = ..()
 
