@@ -1484,9 +1484,6 @@
 	},
 /turf/unsimulated/floor/steel,
 /area/tdome/tdomeobserve)
-"dv" = (
-/turf/simulated/shuttle/floor/voidcraft/dark/turfpack/airless,
-/area/shuttle/ninja)
 "dw" = (
 /obj/structure/table/rack,
 /obj/item/storage/backpack/saddlebag_common/robust,
@@ -1656,45 +1653,17 @@
 "dQ" = (
 /turf/simulated/floor/wood/acacia,
 /area/ninja_dojo/dojo)
-"dR" = (
-/obj/structure/shuttle/engine/propulsion{
-	icon_state = "propulsion_r";
-	dir = 8
-	},
-/turf/simulated/shuttle/plating/airless/carry,
-/area/shuttle/ninja)
 "dS" = (
 /turf/unsimulated/wall/fakeglass{
 	dir = 1
 	},
 /area/syndicate_mothership)
-"dT" = (
-/obj/structure/shuttle/engine/heater{
-	dir = 8
-	},
-/obj/structure/window/maintenance_panel{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
-	dir = 4
-	},
-/obj/structure/window/maintenance_panel{
-	dir = 1
-	},
-/turf/simulated/shuttle/wall/voidcraft/green,
-/area/shuttle/ninja)
 "dU" = (
 /mob/living/simple_mob/vore/wolf/direwolf/syndicate/black,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
 /area/syndicate_mothership)
-"dV" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
-	dir = 9
-	},
-/turf/simulated/shuttle/wall/voidcraft/green,
-/area/shuttle/ninja)
 "dW" = (
 /obj/effect/floor_decal/corner/white{
 	dir = 6
@@ -1706,9 +1675,6 @@
 	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/shuttle/mercenary)
-"dX" = (
-/turf/simulated/shuttle/wall/voidcraft/green,
-/area/shuttle/ninja)
 "dY" = (
 /obj/structure/table/alien,
 /obj/item/storage/box/glasses/square{
@@ -1723,30 +1689,6 @@
 "dZ" = (
 /turf/simulated/floor/tiled,
 /area/ninja_dojo/dojo)
-"ea" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden/fuel{
-	dir = 8
-	},
-/obj/structure/fuel_port/heavy{
-	dir = 1;
-	pixel_y = -32
-	},
-/obj/item/tank/phoron{
-	pixel_x = 8
-	},
-/obj/structure/table/darkglass,
-/obj/item/perfect_tele{
-	pixel_x = -8;
-	pixel_y = 5
-	},
-/turf/simulated/shuttle/floor/voidcraft/dark,
-/area/shuttle/ninja)
-"eb" = (
-/obj/machinery/atmospherics/pipe/tank/phoron/full{
-	dir = 8
-	},
-/turf/simulated/shuttle/floor/voidcraft/dark,
-/area/shuttle/ninja)
 "ec" = (
 /turf/unsimulated/floor{
 	icon_state = "lino"
@@ -1807,39 +1749,6 @@
 	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/shuttle/mercenary)
-"ek" = (
-/obj/structure/cable/orange{
-	icon_state = "0-4"
-	},
-/obj/machinery/power/apc/alarms_hidden{
-	pixel_y = -24;
-	nightshift_setting = 3
-	},
-/obj/item/storage/firstaid/adv{
-	pixel_x = 8;
-	pixel_y = 8
-	},
-/obj/item/storage/firstaid/adv{
-	pixel_x = 8;
-	pixel_y = 8
-	},
-/obj/item/storage/firstaid/combat{
-	pixel_x = -8;
-	pixel_y = 8
-	},
-/obj/item/storage/firstaid/combat{
-	pixel_x = -8;
-	pixel_y = 8
-	},
-/obj/item/storage/pouch/ifak,
-/obj/item/storage/pouch/ifak,
-/obj/item/cell/slime{
-	pixel_x = -11;
-	pixel_y = -4
-	},
-/obj/structure/table/darkglass,
-/turf/simulated/shuttle/floor/voidcraft/dark,
-/area/shuttle/ninja)
 "el" = (
 /obj/effect/map_effect/interval/effect_emitter/smoke/fire,
 /turf/simulated/floor/indoorrocks,
@@ -1893,21 +1802,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
-"eq" = (
-/obj/machinery/power/rtg/advanced,
-/obj/item/stock_parts/micro_laser/hyper,
-/obj/item/stock_parts/capacitor/hyper,
-/obj/structure/cable/orange{
-	icon_state = "0-8"
-	},
-/turf/simulated/shuttle/floor/voidcraft/dark,
-/area/shuttle/ninja)
-"er" = (
-/obj/machinery/computer/ship/sensors{
-	dir = 1
-	},
-/turf/simulated/shuttle/floor/voidcraft/dark,
-/area/shuttle/ninja)
 "es" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel,
 /obj/machinery/door/firedoor/glass,
@@ -1917,30 +1811,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/mercenary)
-"et" = (
-/obj/machinery/door/airlock/glass_external{
-	req_one_access = list(150)
-	},
-/turf/simulated/floor/tiled,
-/area/ninja_dojo/dojo)
-"eu" = (
-/obj/machinery/door/airlock/glass_external{
-	req_one_access = list(150)
-	},
-/obj/structure/fans/hardlight/colorable{
-	color = "#1cb52d"
-	},
-/turf/simulated/floor/tiled,
-/area/ninja_dojo/dojo)
-"ev" = (
-/obj/machinery/door/airlock/glass_external{
-	req_one_access = list(150)
-	},
-/obj/structure/fans/hardlight/colorable{
-	color = "#1cb52d"
-	},
-/turf/simulated/shuttle/floor/voidcraft/dark,
-/area/shuttle/ninja)
 "ew" = (
 /turf/unsimulated/floor{
 	icon_state = "freezerfloor"
@@ -2002,17 +1872,6 @@
 	icon_state = "vault"
 	},
 /area/wizard_station)
-"eB" = (
-/obj/machinery/recharger/wallcharger{
-	pixel_x = 4;
-	pixel_y = 23
-	},
-/obj/machinery/recharger/wallcharger{
-	pixel_x = 4;
-	pixel_y = 32
-	},
-/turf/simulated/shuttle/floor/voidcraft/dark,
-/area/shuttle/ninja)
 "eC" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel,
 /obj/effect/floor_decal/corner/lightgrey/border{
@@ -2077,10 +1936,6 @@
 /obj/machinery/atmospherics/pipe/manifold4w/hidden,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
-"eH" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/fuel,
-/turf/simulated/shuttle/floor/voidcraft/dark,
-/area/shuttle/ninja)
 "eI" = (
 /turf/unsimulated/beach/coastline,
 /area/beach)
@@ -2133,16 +1988,6 @@
 /obj/item/flag,
 /turf/simulated/floor/indoorrocks,
 /area/specialty/hell)
-"eQ" = (
-/turf/simulated/shuttle/floor/voidcraft/dark,
-/area/shuttle/ninja)
-"eR" = (
-/obj/machinery/light/floortube{
-	dir = 1
-	},
-/obj/machinery/light/floortube,
-/turf/simulated/shuttle/floor/voidcraft/dark,
-/area/shuttle/ninja)
 "eS" = (
 /obj/item/reagent_containers/chem_canister/chlorine{
 	pixel_x = -7;
@@ -2240,16 +2085,6 @@
 /obj/effect/floor_decal/industrial/bot_outline/red,
 /turf/simulated/floor/reinforced,
 /area/shuttle/mercenary)
-"eZ" = (
-/obj/effect/landmark{
-	name = "ninjastart"
-	},
-/obj/item/clothing/mask/balaclava,
-/obj/structure/bed/chair/bay/shuttle{
-	dir = 4
-	},
-/turf/simulated/shuttle/floor/voidcraft/dark,
-/area/shuttle/ninja)
 "fa" = (
 /obj/structure/grille{
 	desc = "A flimsy lattice of metal rods, with screws to secure it to the floor. This grille seems slightly more sturdy than others probably reinforced to withstand the wildlife.";
@@ -2287,32 +2122,6 @@
 	icon_state = "vault"
 	},
 /area/wizard_station)
-"fc" = (
-/obj/machinery/computer/ship/helm{
-	dir = 8;
-	pixel_x = 4
-	},
-/turf/simulated/shuttle/floor/voidcraft/dark,
-/area/shuttle/ninja)
-"fd" = (
-/obj/machinery/computer/teleporter{
-	dir = 2
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/fuel,
-/turf/simulated/shuttle/floor/voidcraft/dark,
-/area/shuttle/ninja)
-"fe" = (
-/obj/machinery/teleport/station,
-/turf/simulated/shuttle/floor/voidcraft/dark,
-/area/shuttle/ninja)
-"ff" = (
-/obj/machinery/teleport/hub,
-/turf/simulated/shuttle/floor/voidcraft/dark,
-/area/shuttle/ninja)
-"fg" = (
-/obj/machinery/computer/ship/engines,
-/turf/simulated/shuttle/floor/voidcraft/dark,
-/area/shuttle/ninja)
 "fh" = (
 /turf/unsimulated/floor{
 	icon_state = "dark"
@@ -2331,32 +2140,6 @@
 /obj/structure/bed/double,
 /turf/simulated/floor/carpet/geo,
 /area/planet/clown)
-"fk" = (
-/obj/machinery/computer/ship/navigation,
-/obj/structure/mirror/raider{
-	pixel_x = 32
-	},
-/turf/simulated/shuttle/floor/voidcraft/dark,
-/area/shuttle/ninja)
-"fl" = (
-/obj/structure/shuttle/engine/heater{
-	dir = 8
-	},
-/obj/structure/window/maintenance_panel{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
-	dir = 4
-	},
-/obj/structure/window/maintenance_panel,
-/turf/simulated/shuttle/wall/voidcraft/green,
-/area/shuttle/ninja)
-"fm" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
-	dir = 10
-	},
-/turf/simulated/shuttle/wall/voidcraft/green,
-/area/shuttle/ninja)
 "fn" = (
 /obj/machinery/door/airlock/silver{
 	req_one_access = list(150)
@@ -2585,6 +2368,13 @@
 /obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/wall/alien/blue/hard_corner,
 /area/shuttle/skipjack)
+"fL" = (
+/obj/structure/bed/chair/shuttle_padded{
+	dir = 8;
+	name = "Co-pilot seat"
+	},
+/turf/simulated/floor/tiled/milspec/raised,
+/area/shuttle/mercenary)
 "fM" = (
 /obj/structure/bed/chair/bay/comfy/black{
 	dir = 4
@@ -2606,6 +2396,12 @@
 /obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced/airless,
 /area/shuttle/mercenary)
+"fP" = (
+/obj/machinery/pointdefense{
+	id_tag = "pd_dako"
+	},
+/turf/simulated/shuttle/floor/voidcraft/dark/turfpack/airless,
+/area/shuttle/ninja_overmap)
 "fQ" = (
 /obj/structure/table/alien,
 /obj/item/champagne,
@@ -2615,6 +2411,13 @@
 /obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/wall/rplastitanium,
 /area/shuttle/mercenary)
+"fS" = (
+/turf/simulated/shuttle/floor/voidcraft/dark/turfpack/airless,
+/area/shuttle/ninja_overmap)
+"fT" = (
+/obj/machinery/shipsensors,
+/turf/simulated/shuttle/floor/voidcraft/dark/turfpack/airless,
+/area/shuttle/ninja_overmap)
 "fU" = (
 /obj/structure/table/rack,
 /obj/item/storage/pouch,
@@ -2687,6 +2490,12 @@
 	icon_state = "dark"
 	},
 /area/syndicate_mothership)
+"fZ" = (
+/obj/effect/landmark{
+	name = "ninjastart"
+	},
+/turf/simulated/floor/carpet/graycarpet,
+/area/ninja_dojo/dojo)
 "ga" = (
 /obj/machinery/portable_atmospherics/canister/phoron,
 /obj/machinery/atmospherics/portables_connector/fuel{
@@ -2698,6 +2507,9 @@
 /obj/effect/floor_decal/industrial/bot_outline/yellow,
 /turf/simulated/floor/reinforced,
 /area/shuttle/mercenary)
+"gb" = (
+/turf/simulated/shuttle/wall/voidcraft/green,
+/area/shuttle/ninja_overmap)
 "gc" = (
 /obj/item/radio/intercom{
 	desc = "Talk through this. Evilly";
@@ -2713,6 +2525,9 @@
 	icon_state = "vault"
 	},
 /area/wizard_station)
+"gd" = (
+/turf/simulated/shuttle/wall/voidcraft/hard_corner/green,
+/area/shuttle/ninja_overmap)
 "ge" = (
 /obj/structure/table/steel_reinforced,
 /obj/machinery/cell_charger,
@@ -2721,6 +2536,12 @@
 	icon_state = "vault"
 	},
 /area/wizard_station)
+"gf" = (
+/obj/effect/landmark{
+	name = "ninjastart"
+	},
+/turf/simulated/floor/wood/acacia,
+/area/ninja_dojo/dojo)
 "gg" = (
 /obj/item/flag/xcom,
 /turf/unsimulated/floor{
@@ -2760,6 +2581,31 @@
 	name = "plating"
 	},
 /area/syndicate_mothership)
+"gl" = (
+/turf/unsimulated/wall/fakeglass{
+	dir = 8
+	},
+/area/ninja_dojo/dojo)
+"gm" = (
+/turf/unsimulated/wall/fakeglass{
+	dir = 4
+	},
+/area/ninja_dojo/dojo)
+"gn" = (
+/obj/machinery/atmospherics/unary/engine{
+	dir = 4
+	},
+/turf/simulated/shuttle/plating/airless/carry,
+/area/shuttle/ninja_overmap)
+"go" = (
+/obj/structure/shuttle/engine/heater{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	dir = 4
+	},
+/turf/simulated/shuttle/wall/voidcraft/green,
+/area/shuttle/ninja_overmap)
 "gp" = (
 /obj/item/storage/backpack/dufflebag/syndie,
 /obj/item/storage/backpack/dufflebag/syndie,
@@ -2841,6 +2687,19 @@
 	icon_state = "dark"
 	},
 /area/syndicate_mothership)
+"gw" = (
+/obj/structure/window/maintenance_panel{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/fuel,
+/obj/machinery/power/rtg/advanced,
+/obj/item/stock_parts/micro_laser/hyper,
+/obj/item/stock_parts/capacitor/hyper,
+/obj/structure/cable/orange{
+	icon_state = "0-5"
+	},
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/shuttle/ninja_overmap)
 "gx" = (
 /obj/structure/medical_stand,
 /turf/unsimulated/floor{
@@ -2969,6 +2828,15 @@
 	icon_state = "dark"
 	},
 /area/syndicate_mothership)
+"gH" = (
+/obj/structure/window/maintenance_panel{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/tank/phoron/full{
+	dir = 8
+	},
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/shuttle/ninja_overmap)
 "gI" = (
 /obj/machinery/door/airlock/centcom{
 	req_access = list(150);
@@ -3087,6 +2955,24 @@
 	icon_state = "dark"
 	},
 /area/syndicate_mothership)
+"gL" = (
+/obj/structure/fuel_port/heavy{
+	dir = 8;
+	pixel_x = -32
+	},
+/obj/item/tank/phoron{
+	pixel_x = 8
+	},
+/obj/structure/table/darkglass,
+/obj/item/perfect_tele{
+	pixel_x = -8;
+	pixel_y = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	dir = 9
+	},
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/shuttle/ninja_overmap)
 "gM" = (
 /obj/structure/table/rack,
 /obj/item/gun/projectile/automatic/serdy/ak74,
@@ -3382,10 +3268,6 @@
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/trade/centcom)
 "hh" = (
-/obj/machinery/computer/ship/navigation{
-	dir = 8;
-	pixel_x = 4
-	},
 /obj/effect/floor_decal/corner/white{
 	dir = 6
 	},
@@ -3394,6 +3276,10 @@
 	name = "Hostile bodycamera monitor";
 	pixel_x = 32;
 	pixel_y = -3
+	},
+/obj/machinery/computer/ship/sensors{
+	dir = 8;
+	pixel_x = 5
 	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/shuttle/mercenary)
@@ -3441,6 +3327,22 @@
 	icon_state = "dark"
 	},
 /area/syndicate_mothership)
+"hk" = (
+/obj/structure/table/darkglass,
+/obj/item/storage/pouch/ifak,
+/obj/item/storage/pouch/ifak,
+/obj/item/cell/slime{
+	pixel_x = -11;
+	pixel_y = -4
+	},
+/obj/structure/cable/orange{
+	icon_state = "4-10"
+	},
+/obj/structure/cable/orange{
+	icon_state = "1-4"
+	},
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/shuttle/ninja_overmap)
 "hl" = (
 /obj/effect/floor_decal/corner/white/full{
 	dir = 4
@@ -3470,6 +3372,33 @@
 	icon_state = "dark"
 	},
 /area/syndicate_mothership)
+"hn" = (
+/obj/machinery/power/apc/alarms_hidden{
+	pixel_y = -24;
+	nightshift_setting = 3
+	},
+/obj/item/storage/firstaid/adv{
+	pixel_x = 8;
+	pixel_y = 8
+	},
+/obj/item/storage/firstaid/adv{
+	pixel_x = 8;
+	pixel_y = 8
+	},
+/obj/item/storage/firstaid/combat{
+	pixel_x = -8;
+	pixel_y = 8
+	},
+/obj/item/storage/firstaid/combat{
+	pixel_x = -8;
+	pixel_y = 8
+	},
+/obj/structure/table/darkglass,
+/obj/structure/cable/orange{
+	icon_state = "0-8"
+	},
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/shuttle/ninja_overmap)
 "ho" = (
 /obj/structure/table/rack,
 /obj/item/melee/energy/sword/ionic_rapier/lance,
@@ -3620,6 +3549,10 @@
 /obj/effect/floor_decal/industrial/bot_outline,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
+"hC" = (
+/obj/structure/table/darkglass,
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/shuttle/ninja_overmap)
 "hD" = (
 /obj/structure/table/rack,
 /obj/item/storage/pouch/eng_supply,
@@ -3665,6 +3598,12 @@
 	icon_state = "dark"
 	},
 /area/syndicate_mothership)
+"hF" = (
+/obj/machinery/computer/ship/sensors{
+	dir = 1
+	},
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/shuttle/ninja_overmap)
 "hG" = (
 /obj/item/card/data/clown,
 /obj/structure/table/alien,
@@ -3724,6 +3663,13 @@
 /obj/effect/floor_decal/industrial/bot_outline/yellow,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
+"hN" = (
+/obj/machinery/door/airlock/glass_external{
+	req_one_access = list(150);
+	id_tag = "dako_docking_hanger_doors"
+	},
+/turf/simulated/floor/tiled,
+/area/ninja_dojo/dojo)
 "hO" = (
 /obj/structure/ship_munition/disperser_charge/emp,
 /obj/effect/floor_decal/corner/red{
@@ -3732,6 +3678,16 @@
 /obj/effect/floor_decal/industrial/bot_outline/blue,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
+"hP" = (
+/obj/machinery/door/airlock/glass_external{
+	req_one_access = list(150);
+	id_tag = "dako_docking_hanger_doors"
+	},
+/obj/structure/fans/hardlight/colorable{
+	color = "#1cb52d"
+	},
+/turf/simulated/floor/tiled,
+/area/ninja_dojo/dojo)
 "hQ" = (
 /obj/effect/landmark{
 	name = "Nuclear-Code"
@@ -3859,6 +3815,21 @@
 	icon_state = "dark"
 	},
 /area/syndicate_mothership)
+"id" = (
+/obj/machinery/door/airlock/glass_external{
+	req_one_access = list(150);
+	frequency = 1381;
+	id_tag = "dako_door_ext"
+	},
+/obj/machinery/airlock_sensor/airlock_exterior/shuttle{
+	pixel_y = 24;
+	pixel_x = -9;
+	dir = 8;
+	id_tag = "dako_sensor_ext";
+	master_tag = "dako_docker"
+	},
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/shuttle/ninja_overmap)
 "ie" = (
 /obj/structure/table/rack,
 /obj/item/flame/lighter/zippo,
@@ -3919,6 +3890,23 @@
 	icon_state = "dark"
 	},
 /area/syndicate_mothership)
+"ik" = (
+/obj/machinery/recharger/wallcharger{
+	pixel_x = 4;
+	pixel_y = 23
+	},
+/obj/machinery/recharger/wallcharger{
+	pixel_x = 4;
+	pixel_y = 32
+	},
+/obj/effect/shuttle_landmark/premade/ninja_overmap/homebase,
+/obj/effect/overmap/visitable/ship/landable/ninja_overmap,
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/shuttle/ninja_overmap)
+"il" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel,
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/shuttle/ninja_overmap)
 "im" = (
 /obj/structure/table/rack,
 /obj/item/rig/merc/empty,
@@ -3947,6 +3935,12 @@
 	icon_state = "dark"
 	},
 /area/syndicate_mothership)
+"ip" = (
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/shuttle/ninja_overmap)
 "iq" = (
 /obj/structure/safe,
 /turf/simulated/shuttle/floor/alienplating/blue{
@@ -3954,6 +3948,16 @@
 	phoron = 21.8366
 	},
 /area/syndicate_mothership)
+"ir" = (
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/shuttle/ninja_overmap)
+"is" = (
+/obj/machinery/light/floortube{
+	dir = 1
+	},
+/obj/machinery/light/floortube,
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/shuttle/ninja_overmap)
 "it" = (
 /obj/machinery/computer/message_monitor{
 	dir = 8;
@@ -4017,6 +4021,20 @@
 	icon_state = "dark"
 	},
 /area/syndicate_mothership)
+"iz" = (
+/obj/item/clothing/mask/balaclava,
+/obj/structure/bed/chair/bay/shuttle{
+	dir = 4
+	},
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/shuttle/ninja_overmap)
+"iA" = (
+/obj/machinery/computer/ship/helm{
+	dir = 8;
+	pixel_x = 4
+	},
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/shuttle/ninja_overmap)
 "iB" = (
 /obj/structure/table/rack,
 /obj/item/clothing/shoes/magboots,
@@ -4030,12 +4048,60 @@
 	icon_state = "dark"
 	},
 /area/syndicate_mothership)
+"iC" = (
+/obj/machinery/computer/teleporter{
+	dir = 2
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel,
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/shuttle/ninja_overmap)
+"iD" = (
+/obj/machinery/teleport/station,
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/shuttle/ninja_overmap)
+"iE" = (
+/obj/machinery/teleport/hub,
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/shuttle/ninja_overmap)
+"iF" = (
+/obj/machinery/computer/ship/engines,
+/obj/machinery/embedded_controller/radio/simple_docking_controller{
+	frequency = 1381;
+	id_tag = "dako_docker";
+	pixel_y = 26;
+	tag_door = "dako_door_ext"
+	},
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/shuttle/ninja_overmap)
+"iG" = (
+/obj/structure/mirror/raider{
+	pixel_x = 32
+	},
+/obj/machinery/computer/shuttle_control/explore/ninja_overmap,
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/shuttle/ninja_overmap)
 "iH" = (
 /mob/living/simple_mob/vore/wolf/direwolf/syndicate,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
 /area/syndicate_mothership)
+"iI" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
+	dir = 10
+	},
+/obj/structure/window/maintenance_panel,
+/obj/machinery/power/rtg/advanced,
+/obj/item/stock_parts/capacitor/hyper,
+/obj/item/stock_parts/micro_laser/hyper,
+/obj/structure/cable/orange{
+	icon_state = "0-4"
+	},
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/shuttle/ninja_overmap)
 "iJ" = (
 /obj/machinery/door/airlock/silver{
 	name = "Toilet"
@@ -4044,6 +4110,16 @@
 	icon_state = "freezerfloor"
 	},
 /area/syndicate_mothership)
+"iK" = (
+/obj/machinery/pointdefense_control{
+	id_tag = "pd_dako"
+	},
+/obj/structure/window/maintenance_panel,
+/obj/structure/cable/orange{
+	icon_state = "2-8"
+	},
+/turf/simulated/shuttle/floor/voidcraft/dark,
+/area/shuttle/ninja_overmap)
 "iL" = (
 /obj/item/reagent_containers/chem_canister/hydrogen{
 	pixel_x = -7;
@@ -4129,6 +4205,15 @@
 "iO" = (
 /turf/simulated/wall/rplastitanium,
 /area/shuttle/specialops_overmap)
+"iP" = (
+/obj/machinery/embedded_controller/radio/simple_docking_controller{
+	frequency = 1381;
+	id_tag = "dako_docking_hanger";
+	pixel_y = 26;
+	tag_door = "dako_docking_hanger_doors"
+	},
+/turf/simulated/floor/carpet/graycarpet,
+/area/ninja_dojo/dojo)
 "iQ" = (
 /obj/effect/overmap/visitable/sector/murkiki_space/distant_gateway,
 /turf/space,
@@ -4174,6 +4259,15 @@
 	icon_state = "dark"
 	},
 /area/syndicate_mothership)
+"iS" = (
+/obj/machinery/shipsensors{
+	dir = 1
+	},
+/turf/simulated/shuttle/floor/voidcraft/dark/turfpack/airless,
+/area/shuttle/ninja_overmap)
+"iT" = (
+/turf/unsimulated/wall/fakeglass,
+/area/ninja_dojo/dojo)
 "iU" = (
 /turf/unsimulated/floor/techfloor_grid,
 /area/tdome/tdome1)
@@ -4186,6 +4280,14 @@
 	},
 /turf/simulated/floor/reinforced,
 /area/shuttle/mercenary)
+"iW" = (
+/turf/unsimulated/wall/fakeglass2,
+/area/ninja_dojo/dojo)
+"iX" = (
+/turf/unsimulated/wall/fakeglass{
+	dir = 1
+	},
+/area/ninja_dojo/dojo)
 "ja" = (
 /obj/item/aicard,
 /obj/structure/table/alien,
@@ -5672,9 +5774,6 @@
 	},
 /turf/unsimulated/floor/steel,
 /area/tdome/tdomeadmin)
-"mu" = (
-/turf/space,
-/area/syndicate_mothership)
 "mv" = (
 /obj/structure/artilleryplaceholder/decorative{
 	icon_state = "7"
@@ -8925,14 +9024,15 @@
 	},
 /area/shuttle/specialops_overmap)
 "tl" = (
-/obj/machinery/computer/ship/sensors/adv{
-	dir = 8
-	},
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 6
 	},
 /obj/effect/floor_decal/corner/white/border{
 	dir = 6
+	},
+/obj/machinery/computer/ship/sensors{
+	dir = 8;
+	pixel_x = 4
 	},
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
@@ -9810,8 +9910,9 @@
 	layer = 4;
 	pixel_x = 32
 	},
-/obj/machinery/computer/ship/helm/adv{
-	dir = 8
+/obj/machinery/computer/ship/helm{
+	dir = 8;
+	pixel_x = 4
 	},
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
@@ -12756,13 +12857,10 @@
 	},
 /area/wizard_station)
 "AG" = (
-/obj/machinery/computer/ship/sensors{
-	dir = 8;
-	pixel_x = 5
-	},
 /obj/effect/floor_decal/corner/white{
 	dir = 6
 	},
+/obj/structure/table/steel_reinforced,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/shuttle/mercenary)
 "AH" = (
@@ -12797,12 +12895,12 @@
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/trade/centcom)
 "AK" = (
-/obj/machinery/computer/shuttle_control/multi/syndicate{
-	dir = 4;
-	pixel_x = -5
-	},
 /obj/effect/floor_decal/corner/white{
 	dir = 9
+	},
+/obj/machinery/computer/shuttle_control/explore/mercenary_overmap{
+	dir = 4;
+	pixel_x = -4
 	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/shuttle/mercenary)
@@ -12835,13 +12933,6 @@
 	phoron = 21.8366
 	},
 /area/shuttle/skipjack)
-"AO" = (
-/obj/structure/bed/chair/shuttle_padded{
-	dir = 4;
-	name = "Pilot Seat"
-	},
-/turf/simulated/floor/tiled/milspec/raised,
-/area/shuttle/mercenary)
 "AP" = (
 /obj/effect/floor_decal/corner/black/border{
 	dir = 4
@@ -13083,10 +13174,6 @@
 /obj/effect/floor_decal/corner/white{
 	dir = 5
 	},
-/obj/structure/bed/chair/shuttle_padded{
-	dir = 8;
-	name = "Co-pilot seat"
-	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/shuttle/mercenary)
 "Bm" = (
@@ -13113,6 +13200,10 @@
 	pixel_y = 28;
 	id = "vali_backdoor";
 	name = "Rear hatch control"
+	},
+/obj/structure/bed/chair/shuttle_padded{
+	dir = 4;
+	name = "Pilot Seat"
 	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/shuttle/mercenary)
@@ -13496,12 +13587,6 @@
 	icon_state = "dark"
 	},
 /area/syndicate_mothership)
-"Cc" = (
-/obj/structure/window/maintenance_panel{
-	dir = 1
-	},
-/turf/space,
-/area/syndicate_mothership)
 "Cd" = (
 /obj/item/robot_parts/chest,
 /obj/item/robot_parts/head,
@@ -13526,7 +13611,7 @@
 	dir = 1
 	},
 /turf/space,
-/area/syndicate_mothership)
+/area/space)
 "Cg" = (
 /obj/machinery/porta_turret/heavy{
 	req_one_access = list(150)
@@ -13954,7 +14039,7 @@
 "CZ" = (
 /obj/machinery/door/airlock/glass_external{
 	frequency = 1331;
-	id_tag = "a_merc_shuttle_inner";
+	id_tag = "merc_shuttle_doors";
 	req_access = list(150);
 	req_one_access = null
 	},
@@ -14312,6 +14397,7 @@
 /area/shuttle/mercenary)
 "DL" = (
 /obj/effect/shuttle_landmark/premade/mercenary/base,
+/obj/effect/overmap/visitable/ship/landable/mercenary_overmap,
 /turf/simulated/floor/reinforced,
 /area/shuttle/mercenary)
 "DM" = (
@@ -14613,7 +14699,7 @@
 	},
 /obj/machinery/door/airlock/glass_external{
 	frequency = 1331;
-	id_tag = "f_merc_shuttle_inner";
+	id_tag = "merc_shuttle_doors";
 	req_access = list(150);
 	req_one_access = null
 	},
@@ -14668,7 +14754,7 @@
 "Es" = (
 /obj/machinery/door/airlock/external{
 	frequency = 1331;
-	id_tag = "f_merc_shuttle_outer";
+	id_tag = "merc_shuttle_doors";
 	name = "Ship External Access";
 	req_access = list(150)
 	},
@@ -15057,16 +15143,15 @@
 /turf/simulated/floor/reinforced,
 /area/shuttle/mercenary)
 "Fd" = (
-/obj/machinery/embedded_controller/radio/airlock/docking_port{
-	frequency = 1331;
-	id_tag = "merc_shuttle";
-	pixel_x = -8;
-	pixel_y = 25;
-	req_access = list(150)
-	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume,
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 1
+	},
+/obj/machinery/embedded_controller/radio/simple_docking_controller{
+	frequency = 1331;
+	id_tag = "merc_shuttle";
+	pixel_y = 26;
+	tag_door = "merc_shuttle_doors"
 	},
 /turf/simulated/floor/reinforced,
 /area/shuttle/mercenary)
@@ -15115,10 +15200,6 @@
 	phoron = 21.8366
 	},
 /area/shuttle/skipjack)
-"Fk" = (
-/obj/structure/window/maintenance_panel,
-/turf/space,
-/area/syndicate_mothership)
 "Fl" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
 	frequency = 1331;
@@ -15151,7 +15232,7 @@
 "Fo" = (
 /obj/structure/window/reinforced/survival_pod,
 /turf/space,
-/area/syndicate_mothership)
+/area/space)
 "Fp" = (
 /obj/machinery/porta_turret/heavy{
 	req_one_access = list(150)
@@ -56539,21 +56620,21 @@ gI
 Iq
 Io
 jC
-mu
-mu
-mu
-mu
-mu
-mu
-mu
-mu
-mu
-mu
-Fk
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+uL
 CR
 CR
 CR
-Cc
+ss
 mN
 mN
 mN
@@ -56701,16 +56782,16 @@ gI
 Iq
 sg
 Hc
-mu
-mu
-mu
-mu
+mN
+mN
+mN
+mN
 fo
-mu
-mu
-mu
-mu
-mu
+mN
+mN
+mN
+mN
+mN
 Fo
 Ey
 DJ
@@ -56863,21 +56944,21 @@ yb
 Iq
 sg
 Hc
-mu
-mu
-mu
-mu
+mN
+mN
+mN
+mN
 fo
-mu
-mu
-mu
-mu
-mu
-Fk
+mN
+mN
+mN
+mN
+mN
+uL
 CR
 CR
 CR
-Cc
+ss
 mN
 mN
 mN
@@ -57025,16 +57106,16 @@ yb
 sg
 sg
 Hc
-mu
-mu
+mN
+mN
 bn
 iN
 fo
-mu
-mu
-mu
-mu
-mu
+mN
+mN
+mN
+mN
+mN
 Fo
 Ey
 DJ
@@ -57187,21 +57268,21 @@ yb
 sg
 Io
 jF
-mu
-mu
+mN
+mN
 fO
 fO
 fR
 AH
 fR
 As
-mu
-mu
-Fk
+mN
+mN
+uL
 CR
 CR
 CR
-Cc
+ss
 mN
 mN
 As
@@ -57349,7 +57430,7 @@ dl
 sg
 sg
 yb
-mu
+mN
 fR
 zX
 Ae
@@ -57357,8 +57438,8 @@ fo
 fo
 fo
 fR
-mu
-mu
+mN
+mN
 fR
 Ez
 DK
@@ -57390,15 +57471,15 @@ mN
 mN
 mN
 mN
-bu
-bu
-bu
 mN
 mN
 mN
-bu
-bu
-bu
+mN
+mN
+mN
+mN
+mN
+mN
 mN
 mN
 mN
@@ -57552,15 +57633,15 @@ mN
 mN
 mN
 mN
-bu
-dJ
-bu
 mN
 mN
 mN
-bu
-dJ
-bu
+mN
+mN
+mN
+mN
+mN
+mN
 mN
 mN
 mN
@@ -57714,15 +57795,15 @@ mN
 mN
 mN
 mN
-bu
-dL
-bu
 mN
 mN
 mN
-bu
-dL
-bu
+mN
+mN
+mN
+mN
+mN
+mN
 mN
 mN
 mN
@@ -57876,15 +57957,15 @@ mN
 mN
 mN
 mN
-bu
-dL
-bu
 mN
 mN
 mN
-bu
-dL
-bu
+mN
+mN
+mN
+mN
+mN
+mN
 mN
 mN
 mN
@@ -58037,17 +58118,17 @@ mN
 mN
 mN
 mN
-bu
-bu
-dM
-bu
-bu
-bu
-bu
-bu
-dM
-bu
-bu
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
 mN
 mN
 mN
@@ -58199,21 +58280,21 @@ mN
 mN
 mN
 mN
-bu
-dH
-dN
-dH
-dH
-dH
-dH
-dH
-dN
-dH
-bu
-bu
-bu
-bu
-bu
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
 mN
 mN
 mN
@@ -58357,25 +58438,25 @@ mN
 mN
 mN
 mN
-bu
-bu
-bu
-bu
-bu
-dH
-dL
-dL
-dL
-dL
-dL
-dL
-dL
-dH
-bu
-cS
-cS
-cH
-bu
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
 mN
 mN
 mN
@@ -58519,25 +58600,25 @@ mN
 mN
 mN
 mN
-bu
-fz
-dQ
-fp
-bu
-dH
-dL
-dQ
-dQ
-dQ
-dQ
-dQ
-dL
-dI
-dF
-cS
-cS
-cS
-bu
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
 mN
 mN
 mN
@@ -58664,7 +58745,7 @@ BU
 ey
 fo
 Bl
-An
+fL
 AE
 An
 ej
@@ -58681,25 +58762,25 @@ mN
 mN
 mN
 mN
-bu
-fA
-dQ
-dQ
-bu
-dH
-dL
-dQ
-dQ
-dQ
-dQ
-dQ
-dL
-dH
-bu
-dj
-cS
-dh
-bu
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
 mN
 mN
 mN
@@ -58826,7 +58907,7 @@ fo
 BI
 fo
 Bn
-AO
+An
 An
 An
 ej
@@ -58843,25 +58924,25 @@ mN
 mN
 mN
 mN
-bu
-dQ
-dQ
-dQ
-fn
-dN
-dL
-dQ
-dQ
-dQ
-dQ
-dQ
-dL
-dH
-bu
-bu
-bu
-bu
-bu
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
 mN
 mN
 mN
@@ -59005,25 +59086,25 @@ mN
 mN
 mN
 mN
-bu
-dQ
-dQ
-dQ
-bu
-dH
-dL
-dQ
-dQ
-dQ
-dQ
-dQ
-dL
-dH
-bu
-cS
-cS
-cH
-bu
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
 mN
 mN
 mN
@@ -59167,25 +59248,25 @@ mN
 mN
 mN
 mN
-bu
-fE
-fy
-fv
-bu
-dH
-dL
-dQ
-dQ
-dQ
-dQ
-dQ
-dL
-dI
-dF
-cS
-cS
-cS
-bu
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
 mN
 mN
 mN
@@ -59293,9 +59374,9 @@ dl
 sg
 sg
 yb
-mu
-mu
-mu
+mN
+mN
+mN
 As
 fR
 Hq
@@ -59329,25 +59410,25 @@ mN
 mN
 mN
 mN
-bu
-bu
-bu
-bu
-bu
-dH
-dP
-dL
-dL
-dL
-dL
-dL
-dP
-dH
-bu
-dj
-cS
-dh
-bu
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
 mN
 mN
 mN
@@ -59455,10 +59536,10 @@ yb
 sg
 sg
 jC
-mu
-mu
-mu
-mu
+mN
+mN
+mN
+mN
 fR
 fR
 fo
@@ -59495,21 +59576,21 @@ mN
 mN
 mN
 mN
-bu
-dH
-dH
-dH
-dH
-dN
-dH
-dH
-dH
-dH
-bu
-bu
-bu
-bu
-bu
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
 mN
 mN
 mN
@@ -59617,11 +59698,11 @@ dl
 sg
 sg
 Hc
-mu
-mu
-mu
-mu
-mu
+mN
+mN
+mN
+mN
+mN
 fR
 GW
 GB
@@ -59657,17 +59738,17 @@ mN
 mN
 mN
 mN
-bu
-bu
-bu
-bu
-bu
-et
-bu
-bu
-bu
-bu
-bu
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
 mN
 mN
 mN
@@ -59779,11 +59860,11 @@ he
 sg
 sg
 Hc
-mu
-mu
-mu
-mu
-mu
+mN
+mN
+mN
+mN
+mN
 Ge
 GX
 GC
@@ -59822,11 +59903,11 @@ mN
 mN
 mN
 mN
-bu
-dZ
-dZ
-dZ
-bu
+mN
+mN
+mN
+mN
+mN
 mN
 mN
 mN
@@ -59941,11 +60022,11 @@ jC
 sg
 Io
 Hc
-mu
-mu
-mu
-mu
-mu
+mN
+mN
+mN
+mN
+mN
 Hs
 GY
 GD
@@ -59984,11 +60065,11 @@ mN
 mN
 mN
 mN
-bu
-dZ
-dZ
-dZ
-bu
+mN
+mN
+mN
+mN
+mN
 mN
 mN
 mN
@@ -60103,11 +60184,11 @@ jF
 Iq
 sg
 jF
-mu
-mu
-mu
-mu
-mu
+mN
+mN
+mN
+mN
+mN
 AU
 GZ
 GE
@@ -60146,11 +60227,11 @@ mN
 mN
 mN
 mN
-bu
-bu
-eu
-bu
-bu
+mN
+mN
+mN
+mN
+mN
 mN
 mN
 mN
@@ -60265,11 +60346,11 @@ he
 sg
 sg
 yb
-mu
-mu
-mu
-mu
-mu
+mN
+mN
+mN
+mN
+mN
 fR
 Ha
 GF
@@ -60308,11 +60389,11 @@ mN
 mN
 mN
 mN
-dR
-dX
-ev
-dX
-dR
+mN
+mN
+mN
+mN
+mN
 mN
 mN
 mN
@@ -60427,11 +60508,11 @@ dl
 sg
 sg
 jC
-mu
-mu
-mu
-mu
-mu
+mN
+mN
+mN
+mN
+mN
 fR
 fR
 GG
@@ -60466,19 +60547,19 @@ mN
 mN
 mN
 mN
-dv
-dv
 mN
 mN
-fl
-dX
-eB
-dX
-dT
 mN
 mN
-dv
-dv
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
 mN
 mN
 mN
@@ -60589,12 +60670,12 @@ yb
 sg
 sg
 Hc
-mu
-mu
-mu
-mu
-mu
-mu
+mN
+mN
+mN
+mN
+mN
+mN
 As
 GL
 fR
@@ -60629,17 +60710,17 @@ mN
 mN
 mN
 mN
-dv
-dv
-dv
-fm
-fd
-eH
-ea
-dV
-dv
-dv
-dv
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
 mN
 mN
 mN
@@ -60751,14 +60832,14 @@ dl
 sg
 sg
 Hc
-mu
-mu
-mu
-mu
-mu
-mu
-mu
-mu
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
 fR
 Gb
 FC
@@ -60792,15 +60873,15 @@ mN
 mN
 mN
 mN
-dv
-dv
-dX
-fe
-eQ
-eb
-dX
-dv
-dv
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
 mN
 mN
 mN
@@ -60913,14 +60994,14 @@ kR
 sg
 sg
 Hc
-mu
-mu
-mu
-mu
-mu
-mu
-mu
-mu
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
 fR
 Gc
 FA
@@ -60955,13 +61036,13 @@ mN
 mN
 mN
 mN
-dv
-dX
-ff
-eQ
-ek
-dX
-dv
+mN
+mN
+mN
+mN
+mN
+mN
+mN
 mN
 mN
 mN
@@ -61075,14 +61156,14 @@ jC
 sg
 Io
 jF
-mu
-mu
-mu
-mu
-mu
-mu
-mu
-mu
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
 fR
 Gd
 jg
@@ -61118,11 +61199,11 @@ mN
 mN
 mN
 mN
-dX
-fg
-eR
-eq
-dX
+mN
+mN
+mN
+mN
+mN
 mN
 mN
 mN
@@ -61237,14 +61318,14 @@ jF
 Iq
 sg
 yb
-mu
-mu
-mu
-mu
-mu
-mu
-mu
-mu
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
 fR
 fo
 FE
@@ -61280,11 +61361,11 @@ mN
 mN
 mN
 mN
-dX
-fk
-eZ
-er
-dX
+mN
+mN
+mN
+mN
+mN
 mN
 mN
 mN
@@ -61399,14 +61480,14 @@ kR
 sg
 sg
 jC
-mu
-mu
-mu
-mu
-mu
-mu
-mu
-mu
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
 fG
 fR
 FF
@@ -61442,11 +61523,11 @@ mN
 mN
 mN
 mN
-dX
-dX
-fc
-dX
-dX
+mN
+mN
+mN
+mN
+mN
 mN
 mN
 mN
@@ -61561,15 +61642,15 @@ dl
 sg
 sg
 Hc
-mu
-mu
-mu
-mu
-mu
-mu
-mu
-mu
-mu
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
 Ge
 FG
 ER
@@ -61605,9 +61686,9 @@ mN
 mN
 mN
 mN
-dX
-dX
-dX
+mN
+mN
+mN
 mN
 mN
 mN
@@ -61723,15 +61804,15 @@ yb
 sg
 sg
 Hc
-mu
-mu
-mu
-mu
-mu
-mu
-mu
-mu
-mu
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
 AU
 FI
 ET
@@ -61885,15 +61966,15 @@ dl
 sg
 sg
 jF
-mu
-mu
-mu
-mu
-mu
-mu
-mu
-mu
-mu
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
+mN
 fR
 FJ
 ET
@@ -62054,8 +62135,8 @@ fu
 fu
 dx
 yb
-mu
-mu
+mN
+mN
 fR
 FK
 EU
@@ -62216,8 +62297,8 @@ km
 hc
 jk
 jC
-mu
-mu
+mN
+mN
 fR
 fo
 EW
@@ -62378,8 +62459,8 @@ HJ
 hc
 jl
 Hc
-mu
-mu
+mN
+mN
 Gg
 fR
 Fb
@@ -62540,9 +62621,9 @@ HL
 hc
 jn
 Hc
-mu
-mu
-mu
+mN
+mN
+mN
 fR
 Fc
 Eo
@@ -62702,9 +62783,9 @@ dB
 hc
 jp
 Hc
-mu
-mu
-mu
+mN
+mN
+mN
 fR
 Fd
 Eq
@@ -62864,9 +62945,9 @@ jI
 hc
 jr
 Hc
-mu
-mu
-mu
+mN
+mN
+mN
 fR
 Fi
 Er
@@ -63026,9 +63107,9 @@ hc
 hc
 js
 Hc
-mu
-mu
-mu
+mN
+mN
+mN
 fR
 fR
 Es
@@ -63188,14 +63269,14 @@ GM
 hc
 jt
 jF
-mu
-mu
-mu
-mu
-Fk
+mN
+mN
+mN
+mN
+uL
 CR
-Cc
-mu
+ss
+mN
 mN
 mN
 TW
@@ -76763,30 +76844,30 @@ TW
 TW
 TW
 TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
+Sg
+Sg
+Sg
+Sg
+Sg
+Sg
+Sg
+Sg
+Sg
+Sg
+Sg
+Sg
+Sg
+Sg
+Sg
+Sg
+Sg
+Sg
+Sg
+Sg
+Sg
+Sg
+Sg
+Sg
 Sg
 TW
 wR
@@ -76925,7 +77006,7 @@ TW
 TW
 TW
 TW
-TW
+Sg
 TW
 TW
 TW
@@ -77087,7 +77168,7 @@ TW
 TW
 TW
 TW
-TW
+Sg
 TW
 TW
 TW
@@ -77249,6 +77330,7 @@ TW
 TW
 TW
 TW
+Sg
 TW
 TW
 TW
@@ -77256,16 +77338,15 @@ TW
 TW
 TW
 TW
+bu
+bu
+bu
 TW
 TW
 TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
+bu
+bu
+bu
 TW
 TW
 TW
@@ -77411,6 +77492,7 @@ TW
 TW
 TW
 TW
+Sg
 TW
 TW
 TW
@@ -77418,16 +77500,15 @@ TW
 TW
 TW
 TW
+bu
+dJ
+bu
 TW
 TW
 TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
+bu
+dJ
+bu
 TW
 TW
 TW
@@ -77573,6 +77654,7 @@ TW
 TW
 TW
 TW
+Sg
 TW
 TW
 TW
@@ -77580,16 +77662,15 @@ TW
 TW
 TW
 TW
+bu
+dL
+bu
 TW
 TW
 TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
+bu
+dL
+bu
 TW
 TW
 TW
@@ -77735,6 +77816,7 @@ TW
 TW
 TW
 TW
+Sg
 TW
 TW
 TW
@@ -77742,16 +77824,15 @@ TW
 TW
 TW
 TW
+bu
+dL
+bu
 TW
 TW
 TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
+bu
+dL
+bu
 TW
 TW
 TW
@@ -77897,24 +77978,24 @@ TW
 TW
 TW
 TW
+Sg
 TW
 TW
 TW
 TW
 TW
 TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
+bu
+bu
+dM
+bu
+bu
+bu
+bu
+bu
+dM
+bu
+bu
 TW
 TW
 TW
@@ -78059,28 +78140,28 @@ TW
 TW
 TW
 TW
+Sg
 TW
 TW
 TW
 TW
 TW
 TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
+bu
+dH
+dN
+dH
+dH
+dH
+dH
+dH
+dN
+dH
+bu
+bu
+bu
+bu
+bu
 TW
 TW
 Sg
@@ -78221,28 +78302,28 @@ TW
 TW
 TW
 TW
+Sg
 TW
 TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
+bu
+bu
+bu
+bu
+bu
+dH
+fZ
+dL
+dL
+fZ
+dL
+dL
+fZ
+dH
+bu
+cS
+cS
+cH
+bu
 TW
 TW
 Sg
@@ -78383,28 +78464,28 @@ mN
 TW
 TW
 TW
+Sg
 TW
 TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
+bu
+fz
+dQ
+fp
+bu
+dH
+dL
+gf
+dQ
+dQ
+dQ
+gf
+dL
+dI
+dF
+cS
+cS
+cS
+bu
 TW
 TW
 Sg
@@ -78545,28 +78626,28 @@ mN
 mN
 mN
 TW
+Sg
 TW
 TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
+bu
+fA
+dQ
+dQ
+bu
+dH
+dL
+dQ
+dQ
+gf
+dQ
+dQ
+dL
+dH
+bu
+dj
+cS
+dh
+bu
 TW
 TW
 Sg
@@ -78706,29 +78787,29 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+TW
+Sg
 TW
 TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
+bu
+dQ
+dQ
+dQ
+fn
+dN
+dL
+gf
+dQ
+dQ
+dQ
+gf
+dL
+dH
+bu
+bu
+bu
+bu
+bu
 TW
 TW
 Sg
@@ -78869,28 +78950,28 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+ab
 TW
 TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
+bu
+dQ
+dQ
+dQ
+bu
+dH
+fZ
+dQ
+dQ
+gf
+dQ
+dQ
+fZ
+dH
+bu
+cS
+cS
+cH
+bu
 TW
 TW
 Sg
@@ -79031,28 +79112,28 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+ab
 mN
 TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
+bu
+fE
+fy
+fv
+bu
+dH
+iP
+gf
+dQ
+dQ
+dQ
+gf
+dL
+dI
+dF
+cS
+cS
+cS
+bu
 TW
 TW
 Sg
@@ -79193,28 +79274,28 @@ mN
 mN
 mN
 mN
+ab
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
+bu
+iX
+iW
+iT
+bu
+dH
+dP
+fZ
+dL
+fZ
+dL
+fZ
+dP
+dH
+bu
+dj
+cS
+dh
+bu
 TW
 TW
 ab
@@ -79355,31 +79436,31 @@ mN
 mN
 mN
 mN
+ab
 mN
 mN
 mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+bu
+dH
+dH
+dH
+dH
+dN
+dH
+dH
+dH
+dH
+bu
+bu
+bu
+bu
+bu
 TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
-TW
 mN
-mN
+ab
 mN
 mN
 mN
@@ -79517,31 +79598,31 @@ mN
 mN
 mN
 mN
+ab
 mN
 mN
 mN
 mN
 mN
 mN
+bu
+bu
+bu
+bu
+bu
+hN
+bu
+bu
+bu
+bu
+bu
 mN
 mN
 mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+ab
 mN
 mN
 mN
@@ -79679,6 +79760,7 @@ mN
 mN
 mN
 mN
+ab
 mN
 mN
 mN
@@ -79688,6 +79770,11 @@ mN
 mN
 mN
 mN
+gl
+dZ
+dZ
+dZ
+gl
 mN
 mN
 mN
@@ -79697,13 +79784,7 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+ab
 mN
 mN
 mN
@@ -79841,6 +79922,7 @@ mN
 mN
 mN
 mN
+ab
 mN
 mN
 mN
@@ -79850,6 +79932,11 @@ mN
 mN
 mN
 mN
+gm
+dZ
+dZ
+dZ
+gm
 mN
 mN
 mN
@@ -79859,13 +79946,7 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+ab
 mN
 mN
 mN
@@ -80003,6 +80084,7 @@ mN
 mN
 mN
 mN
+ab
 mN
 mN
 mN
@@ -80012,6 +80094,11 @@ mN
 mN
 mN
 mN
+bu
+bu
+hP
+bu
+bu
 mN
 mN
 mN
@@ -80021,13 +80108,7 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+ab
 mN
 mN
 mN
@@ -80165,6 +80246,7 @@ mN
 mN
 mN
 mN
+ab
 mN
 mN
 mN
@@ -80174,6 +80256,11 @@ mN
 mN
 mN
 mN
+gn
+gd
+id
+gd
+gn
 mN
 mN
 mN
@@ -80183,13 +80270,7 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+ab
 mN
 mN
 mN
@@ -80327,31 +80408,31 @@ mN
 mN
 mN
 mN
+ab
 mN
 mN
 mN
 mN
 mN
+fP
+fS
+mN
+gb
+go
+gd
+ik
+gd
+go
+gb
+mN
+fS
+fP
 mN
 mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+ab
 mN
 mN
 mN
@@ -80489,31 +80570,31 @@ mN
 mN
 mN
 mN
+ab
 mN
 mN
 mN
 mN
 mN
 mN
+fS
+iS
+gd
+iI
+iC
+il
+gL
+gw
+gd
+fT
+fS
 mN
 mN
 mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+ab
 mN
 mN
 mN
@@ -80651,6 +80732,7 @@ mN
 mN
 mN
 mN
+ab
 mN
 mN
 mN
@@ -80658,6 +80740,15 @@ mN
 mN
 mN
 mN
+fS
+gd
+iK
+iD
+ip
+hk
+gH
+gd
+fS
 mN
 mN
 mN
@@ -80665,17 +80756,7 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+ab
 mN
 mN
 mN
@@ -80813,6 +80894,7 @@ mN
 mN
 mN
 mN
+ab
 mN
 mN
 mN
@@ -80821,6 +80903,13 @@ mN
 mN
 mN
 mN
+gb
+gd
+iE
+ir
+hn
+gd
+gb
 mN
 mN
 mN
@@ -80829,15 +80918,7 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+ab
 mN
 mN
 mN
@@ -80975,6 +81056,7 @@ mN
 mN
 mN
 mN
+ab
 mN
 mN
 mN
@@ -80984,6 +81066,11 @@ mN
 mN
 mN
 mN
+gb
+iF
+is
+hC
+gb
 mN
 mN
 mN
@@ -80993,13 +81080,7 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+ab
 mN
 mN
 mN
@@ -81137,6 +81218,7 @@ mN
 mN
 mN
 mN
+ab
 mN
 mN
 mN
@@ -81146,6 +81228,11 @@ mN
 mN
 mN
 mN
+gb
+iG
+iz
+hF
+gb
 mN
 mN
 mN
@@ -81155,13 +81242,7 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+ab
 mN
 mN
 mN
@@ -81299,6 +81380,7 @@ mN
 mN
 mN
 mN
+ab
 mN
 mN
 mN
@@ -81308,6 +81390,11 @@ mN
 mN
 mN
 mN
+gb
+gd
+iA
+gd
+gb
 mN
 mN
 mN
@@ -81317,13 +81404,7 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+ab
 mN
 mN
 mN
@@ -81461,6 +81542,7 @@ mN
 mN
 mN
 mN
+ab
 mN
 mN
 mN
@@ -81471,6 +81553,9 @@ mN
 mN
 mN
 mN
+gb
+gb
+gb
 mN
 mN
 mN
@@ -81481,11 +81566,7 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
+ab
 mN
 mN
 mN
@@ -81623,6 +81704,7 @@ mN
 mN
 mN
 mN
+ab
 mN
 mN
 mN
@@ -81646,8 +81728,7 @@ mN
 mN
 mN
 mN
-mN
-mN
+ab
 mN
 mN
 mN
@@ -81785,6 +81866,7 @@ mN
 mN
 mN
 mN
+ab
 mN
 mN
 mN
@@ -81808,8 +81890,7 @@ mN
 mN
 mN
 mN
-mN
-mN
+ab
 mN
 mN
 mN
@@ -81947,6 +82028,7 @@ mN
 mN
 mN
 mN
+ab
 mN
 mN
 mN
@@ -81970,8 +82052,7 @@ mN
 mN
 mN
 mN
-mN
-mN
+ab
 mN
 mN
 mN
@@ -82109,6 +82190,7 @@ mN
 mN
 mN
 mN
+ab
 mN
 mN
 mN
@@ -82132,8 +82214,7 @@ mN
 mN
 mN
 mN
-mN
-mN
+ab
 mN
 mN
 mN
@@ -82271,6 +82352,7 @@ mN
 mN
 mN
 mN
+ab
 mN
 mN
 mN
@@ -82294,8 +82376,7 @@ mN
 mN
 mN
 mN
-mN
-mN
+ab
 mN
 mN
 mN
@@ -82433,6 +82514,7 @@ mN
 mN
 mN
 mN
+ab
 mN
 mN
 mN
@@ -82456,8 +82538,7 @@ mN
 mN
 mN
 mN
-mN
-mN
+ab
 mN
 mN
 mN
@@ -82595,6 +82676,7 @@ mN
 mN
 mN
 mN
+ab
 mN
 mN
 mN
@@ -82618,8 +82700,7 @@ mN
 mN
 mN
 mN
-mN
-mN
+ab
 mN
 mN
 mN
@@ -82757,6 +82838,7 @@ mN
 mN
 mN
 mN
+ab
 mN
 mN
 mN
@@ -82780,8 +82862,7 @@ mN
 mN
 mN
 mN
-mN
-mN
+ab
 mN
 mN
 mN
@@ -82919,6 +83000,7 @@ mN
 mN
 mN
 mN
+ab
 mN
 mN
 mN
@@ -82942,8 +83024,7 @@ mN
 mN
 mN
 mN
-mN
-mN
+ab
 mN
 mN
 mN
@@ -83081,6 +83162,7 @@ mN
 mN
 mN
 mN
+ab
 mN
 mN
 mN
@@ -83104,8 +83186,7 @@ mN
 mN
 mN
 mN
-mN
-mN
+ab
 mN
 mN
 mN
@@ -83243,6 +83324,7 @@ mN
 mN
 mN
 mN
+ab
 mN
 mN
 mN
@@ -83266,8 +83348,7 @@ mN
 mN
 mN
 mN
-mN
-mN
+ab
 mN
 mN
 mN
@@ -83405,31 +83486,31 @@ mN
 mN
 mN
 mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
-mN
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
+ab
 mN
 mN
 mN

@@ -908,12 +908,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled,
 /area/offworld/asteroidyard/station/cave)
-"bS" = (
-/obj/effect/shuttle_landmark/premade/mercenary/station_s{
-	name = "OP21 - Rec Yard West"
-	},
-/turf/space,
-/area/offworld/asteroidyard/external)
 "bT" = (
 /obj/machinery/meter,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -13609,7 +13603,7 @@ dk
 dk
 dk
 dk
-bS
+dk
 dk
 dk
 dk

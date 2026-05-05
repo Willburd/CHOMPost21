@@ -1522,12 +1522,6 @@
 /obj/effect/shuttle_landmark/premade/generic/crash_ptl_enginenorth,
 /turf/space,
 /area/offworld/confinementbeam/exterior)
-"dd" = (
-/obj/effect/shuttle_landmark/premade/mercenary/station_sw{
-	name = "OP-21 PTL SouthWest"
-	},
-/turf/space,
-/area/offworld/confinementbeam/exterior)
 "de" = (
 /obj/structure/bed/chair/sofa/corp/left{
 	dir = 8
@@ -1540,12 +1534,6 @@
 "df" = (
 /obj/structure/particle_accelerator/particle_emitter/right,
 /turf/simulated/floor/airless,
-/area/offworld/confinementbeam/exterior)
-"dg" = (
-/obj/effect/shuttle_landmark/premade/mercenary/station_se{
-	name = "OP21 - PTL-AI"
-	},
-/turf/space,
 /area/offworld/confinementbeam/exterior)
 "dh" = (
 /obj/effect/floor_decal/corner/green{
@@ -26937,7 +26925,7 @@ Po
 rc
 Po
 Po
-dg
+Po
 Po
 Po
 Po
@@ -36552,7 +36540,7 @@ Po
 Po
 Po
 Po
-dd
+Po
 Po
 Po
 Po
