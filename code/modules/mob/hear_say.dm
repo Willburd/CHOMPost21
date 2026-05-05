@@ -193,11 +193,12 @@
 	return tagged_message
 
 /mob/proc/hear_radio(list/message_pieces, verb = "says", part_a, part_b, part_c, part_d, part_e, mob/speaker = null, hard_to_hear = 0, vname = "")
+	if(!client)
+		return
+
 	// Outpost 21 edit(port) begin - Translators hear through radios
 	translator_proxy_hear(message_pieces,verb,speaker)
 	// Outpost 21 edit end
-	if(!client)
-		return
 
 	var/list/combined = combine_message(message_pieces, verb, speaker, always_stars = hard_to_hear, radio = TRUE)
 	var/message = combined["formatted"]

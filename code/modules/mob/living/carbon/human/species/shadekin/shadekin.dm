@@ -104,7 +104,7 @@
 	component_requires_late_recalc = TRUE
 
 /datum/species/shadekin/handle_death(mob/living/carbon/human/H)
-	var/special_handling = FALSE //varswitch for downstream
+	var/special_handling = FALSE //varswitch for downstream // Outpost 21 edit - Disable
 	H.clear_dark_maws() //clear dark maws on death or similar
 	var/datum/component/shadekin/SK = H.get_shadekin_component()
 	if(!special_handling || (SK && SK.no_retreat))

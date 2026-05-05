@@ -79,8 +79,6 @@
 	industrial_use = REFINERYEXPORT_REASON_RAW
 	coolant_modifier = 0.15
 
-	ppe_flags = REAGENT_PPE_GAS|REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH|REAGENT_PPE_BURNS // Outpost 21 edit - PPE reagents
-
 /datum/reagent/chlorine/affect_blood(mob/living/carbon/M, alien, removed)
 	M.take_organ_damage(1*REM, 0)
 
@@ -317,8 +315,6 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_RAW
 
-	ppe_flags = REAGENT_PPE_GAS|REAGENT_PPE_SQUIRTS|REAGENT_PPE_BUBBLES|REAGENT_PPE_BURNS|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
-
 /datum/reagent/fluorine/affect_blood(mob/living/carbon/M, alien, removed)
 	M.adjustToxLoss(removed)
 
@@ -335,8 +331,6 @@
 	color = "#808080"
 	supply_conversion_value = REFINERYEXPORT_VALUE_NO
 	industrial_use = REFINERYEXPORT_REASON_PRECURSOR
-
-	ppe_flags = REAGENT_PPE_BURNS|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
 /datum/reagent/iron
 	name = REAGENT_IRON
@@ -361,8 +355,6 @@
 	industrial_use = REFINERYEXPORT_REASON_PRECURSOR
 	coolant_modifier = 0.15
 
-	ppe_flags = REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
-
 /datum/reagent/lithium/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien != IS_DIONA)
 		if(M.canmove && !M.restrained() && istype(M.loc, /turf/space) && !M.resting) // Outpost 21 edit - Resting stops drug movement
@@ -380,8 +372,6 @@
 	color = "#484848"
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_PRECURSOR
-
-	ppe_flags = REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
 /datum/reagent/mercury/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien != IS_DIONA)
@@ -415,8 +405,6 @@
 	industrial_use = REFINERYEXPORT_REASON_RAW
 	coolant_modifier = 0.25
 
-	ppe_flags = REAGENT_PPE_BURNS|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
-
 /datum/reagent/oxygen/affect_blood(mob/living/carbon/M, alien, removed)
 	if(M.species.poison_type == GAS_O2) // outpost 21 edit, changed from alien == IS_VOX to be consistant with poison oxygen behavior
 		M.adjustToxLoss(removed * 3)
@@ -431,8 +419,6 @@
 	color = "#832828"
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_RAW
-
-	ppe_flags = REAGENT_PPE_GAS|REAGENT_PPE_SQUIRTS|REAGENT_PPE_BUBBLES|REAGENT_PPE_BURNS|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
 /datum/reagent/potassium
 	name = REAGENT_POTASSIUM
@@ -455,8 +441,6 @@
 	color = "#C7C7C7"
 	supply_conversion_value = REFINERYEXPORT_VALUE_RARE
 	industrial_use = REFINERYEXPORT_REASON_PRECURSOR
-
-	ppe_flags = REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
 /datum/reagent/radium/affect_blood(mob/living/carbon/M, alien, removed)
 	if(issmall(M)) removed *= 2
@@ -482,8 +466,6 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_RARE
 	industrial_use = REFINERYEXPORT_REASON_PRECURSOR
 
-	ppe_flags = REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
-
 /datum/reagent/radium/affect_blood(mob/living/carbon/M, alien, removed)
 	if(issmall(M)) removed *= 2
 	M.apply_effect(10 * removed, IRRADIATE, 0) // Radium may increase your chances to cure a disease
@@ -508,8 +490,6 @@
 	affects_robots = TRUE //CHOMPedit, it's acid! Still eats metal!
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_PRECURSOR
-
-	ppe_flags = REAGENT_PPE_GAS|REAGENT_PPE_SQUIRTS|REAGENT_PPE_BUBBLES|REAGENT_PPE_BURNS|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
 /datum/reagent/acid/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien == IS_GREY) //ywedit

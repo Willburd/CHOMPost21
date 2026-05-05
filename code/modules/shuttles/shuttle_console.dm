@@ -166,6 +166,14 @@
 			to_chat(user, "You short out the shuttles's launch systems. It won't last long now...")
 			return 1
 	return 0
+	/*
+	if (!hacked)
+		req_access = list()
+		req_one_access = list()
+		hacked = 1
+		to_chat(user, "You short out the console's ID checking system. It's now available to everyone!")
+		return 1
+	*/
 	// Outpost 21 edit end
 
 /obj/machinery/computer/shuttle_control/bullet_act(obj/item/projectile/Proj)

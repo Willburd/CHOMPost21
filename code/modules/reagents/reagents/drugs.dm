@@ -26,7 +26,6 @@
 	mrate_static = TRUE
 	overdose = REAGENTS_OVERDOSE
 
-	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_ILLDRUG
 

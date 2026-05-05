@@ -14,6 +14,10 @@ GLOBAL_LIST_EMPTY(job_whitelist)
 
 /proc/is_job_whitelisted(mob/M, rank)
 	// Outpost 21 edit being - ERT/Centcom is not public access now
+	/*
+	if(!CONFIG_GET(flag/use_jobwhitelist)) // CHOMPedit
+		return 1 // CHOMPedit
+	*/
 	var/datum/job/job = job_master.GetJob(rank)
 	var/is_admin_whitelisted = check_rights_for(M.client, R_ADMIN) || check_rights_for(M.client, R_EVENT) || check_rights_for(M.client, R_DEBUG)
 	if(!CONFIG_GET(flag/use_jobwhitelist)) // CHOMPedit

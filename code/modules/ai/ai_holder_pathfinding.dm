@@ -45,7 +45,7 @@
 	ai_log("calculate_path() : Exiting.", AI_LOG_DEBUG)
 
 //A* now, try to a path to a target
-/datum/ai_holder/proc/get_path(turf/target,get_to = 1, max_distance = 0)
+/datum/ai_holder/proc/get_path(turf/target,get_to = 1, max_distance = world.view*6) // Outpost 21 edit - Default maximum distance
 	ai_log("get_path() : Entering.",AI_LOG_DEBUG)
 	forget_path()
 	var/path_dist = max_distance
