@@ -60,7 +60,7 @@
 
 	return tgui_interact(user)
 
-/obj/machinery/power/grid_checker/proc/power_failure(announce = TRUE,extended = FALSE)
+/obj/machinery/power/grid_checker/proc/power_failure(announce = TRUE, extended = FALSE) // Outpost 21 edit - Extend blackout if given the argument to do so!
 	if(announce)
 		GLOB.command_announcement.Announce("Abnormal activity detected in [station_name()]'s powernet. As a precautionary measure, \
 		the station's power will be shut off for an indeterminate duration while the powernet monitor restarts automatically, or \

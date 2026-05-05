@@ -168,13 +168,13 @@
 	"Public" procs
 */
 // Queue shuttle for undock and launch by shuttle subsystem.
-/datum/shuttle/autodock/proc/launch(mob/user)
+/datum/shuttle/autodock/proc/launch(mob/user) //Outpost 21 edit - set type
 	if (!can_launch()) return
 
 	in_use = user	//obtain an exclusive lock on the shuttle
 
 	//Outpost 21 edit begin - AHAHAHAHAHAHAHA
-	if(user)
+	if(ismob(user))
 		if(HAS_TRAIT(user, TRAIT_UNLUCKY) && prob(0.5))
 			emagged_crash = 1
 		var/area/A = get_area(user)

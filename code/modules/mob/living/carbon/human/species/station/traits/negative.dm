@@ -144,7 +144,6 @@
 	cost = -2 //I feel like this should be higher, but let's see where it goes
 	excludes = list(/datum/trait/negative/boneless, /datum/trait/negative/boneless/major, /datum/trait/positive/densebones)
 
-
 /datum/trait/negative/hollow/apply(datum/species/S,mob/living/carbon/human/H)
 	..()
 	for(var/obj/item/organ/external/O in H.organs)
@@ -364,7 +363,6 @@
 	desc = "Your body is very fragile. Reduces your maximum hitpoints to 25. Beware sneezes. You require only 50 damage in total to die, compared to 200 normally. You will go into crit after losing 25 HP, compared to crit at 100 HP."
 	cost = -12 // Similar to Very Low Endurance, this straight up will require you NEVER getting in a fight. This is extremely crippling. I salute the madlad that takes this.
 	var_changes = list("total_health" = 25)
-
 
 /datum/trait/negative/endurance_glass/apply(datum/species/S,mob/living/carbon/human/H)
 	..()

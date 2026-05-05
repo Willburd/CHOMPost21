@@ -1537,7 +1537,6 @@
 
 	ppe_flags = REAGENT_PPE_BURNS|REAGENT_PPE_FREEZES // Outpost 21 edit - PPE reagents
 
-
 /datum/reagent/leporazine/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien == IS_DIONA)
 		return
