@@ -1263,7 +1263,7 @@
 	industrial_use = REFINERYEXPORT_REASON_MATSCI
 	wiki_flag = WIKI_SPOILER // Outpost 21 edit - Secret reagent
 
-/datum/reagent/succubi_aphrodisiac/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/succubi_aphrodisiac/affect_blood(mob/living/carbon/M, alien, removed)
 	if(prob(3))
 		M.show_message(span_warning("You feel funny, and fall in love with the person in front of you"))
 		M.say(pick("!blushes", "!moans", "!giggles", "!turns visibly red")) //using mob say so we dont have to define this dumb one time use emote that equates to just blushing -shark
@@ -1281,7 +1281,7 @@
 	industrial_use = REFINERYEXPORT_REASON_MATSCI
 	wiki_flag = WIKI_SPOILER // Outpost 21 edit - Secret reagent
 
-/datum/reagent/succubi_numbing/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/succubi_numbing/affect_blood(mob/living/carbon/M, alien, removed)
 
 
 	M.eye_blurry = max(M.eye_blurry, 10)
@@ -1302,7 +1302,7 @@
 	industrial_use = REFINERYEXPORT_REASON_MATSCI
 	wiki_flag = WIKI_SPOILER // Outpost 21 edit - Secret reagent
 
-/datum/reagent/succubi_paralize/affect_blood(var/mob/living/carbon/M, alien, removed) //will first keep it like that.  lets see what it changes. if nothing, than I will rework the effect again
+/datum/reagent/succubi_paralize/affect_blood(mob/living/carbon/M, alien, removed) //will first keep it like that.  lets see what it changes. if nothing, than I will rework the effect again
 
 	M.Weaken(20)
 	M.eye_blurry = max(M.eye_blurry, 10)

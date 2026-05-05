@@ -18,7 +18,7 @@
 /datum/dna/gene/basic/remoteview/New()
 	block=REMOTEVIEWBLOCK
 
-/datum/dna/gene/basic/remoteview/activate(var/mob/M, connected, flags)
+/datum/dna/gene/basic/remoteview/activate(mob/M, connected, flags)
 	..(M,connected,flags)
 	add_verb(M, /mob/living/carbon/human/proc/remoteobserve)
 
@@ -46,7 +46,7 @@
 /datum/dna/gene/basic/remotetalk/New()
 	block=REMOTETALKBLOCK
 
-/datum/dna/gene/basic/remotetalk/activate(var/mob/M, connected, flags)
+/datum/dna/gene/basic/remotetalk/activate(mob/M, connected, flags)
 	..(M,connected,flags)
 	add_verb(M, /mob/living/carbon/human/proc/remotesay)
 
@@ -77,7 +77,7 @@
 	if(probinj(_prob,(flags&MUTCHK_FORCED)))
 		return 1
 
-/datum/dna/gene/basic/cold_resist/OnDrawUnderlays(var/mob/M,g,fat)
+/datum/dna/gene/basic/cold_resist/OnDrawUnderlays(mob/M,g,fat)
 	return "fire[fat]_s"
 
 /datum/dna/gene/basic/noprints
@@ -110,11 +110,11 @@
 		return 0
 	return ..(M,flags)
 
-/datum/dna/gene/basic/midget/activate(var/mob/M, connected, flags)
+/datum/dna/gene/basic/midget/activate(mob/M, connected, flags)
 	..(M,connected,flags)
 	M.pass_flags |= 1
 
-/datum/dna/gene/basic/midget/deactivate(var/mob/M, connected, flags)
+/datum/dna/gene/basic/midget/deactivate(mob/M, connected, flags)
 	..(M,connected,flags)
 	M.pass_flags &= ~1 //This may cause issues down the track, but offhand I can't think of any other way for humans to get passtable short of varediting so it should be fine. ~Z
 
@@ -132,7 +132,7 @@
 		return 0
 	return ..(M,flags)
 
-/datum/dna/gene/basic/hulk/OnDrawUnderlays(var/mob/M,g,fat)
+/datum/dna/gene/basic/hulk/OnDrawUnderlays(mob/M,g,fat)
 	if(fat)
 		return "hulk_[fat]_s"
 	else
@@ -163,5 +163,5 @@
 
 /datum/dna/gene/basic/tk/New()
 	block=TELEBLOCK
-/datum/dna/gene/basic/tk/OnDrawUnderlays(var/mob/M,g,fat)
+/datum/dna/gene/basic/tk/OnDrawUnderlays(mob/M,g,fat)
 	return "telekinesishead[fat]_s"

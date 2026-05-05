@@ -117,7 +117,7 @@ Quick adjacency (to turf):
 	This is defined as any dense ON_BORDER object, or any dense object without throwpass.
 	The border_only flag allows you to not objects (for source and destination squares)
 */
-/turf/proc/ClickCross(var/target_dir, border_only, target_atom = null)
+/turf/proc/ClickCross(target_dir, border_only, target_atom = null)
 	for(var/obj/O in src)
 		if( !O.density || O == target_atom || O.throwpass) continue // throwpass is used for anything you can click through
 

@@ -73,7 +73,7 @@
 /datum/persistent/storage/proc/create_item(path)
 	return new path()
 
-/datum/persistent/storage/GetAdminDataStringFor(var/thing, can_modify, mob/user)
+/datum/persistent/storage/GetAdminDataStringFor(thing, can_modify, mob/user)
 	var/atom/T = thing
 	if(!istype(T))
 		return "<td><Missing entry><td>"

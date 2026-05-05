@@ -1,7 +1,7 @@
 #define DEFAULT_SEED PLANT_GLOWSHROOM
 #define VINE_GROWTH_STAGES 5
 
-/proc/spacevine_infestation(var/potency_min=70, var/potency_max=100, maturation_min=5, maturation_max=15)
+/proc/spacevine_infestation(var/potency_min=70, potency_max=100, maturation_min=5, maturation_max=15)
 	spawn() //to stop the secrets panel hanging
 		/* Outpost 21 edit begin - Use landmarks instead of area checks
 		var/list/turf/simulated/floor/turfs = list() //list of all the empty floor turfs in the hallway areas //CHOMPedit start: keeping old method over upstream's landmark method

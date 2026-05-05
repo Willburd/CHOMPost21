@@ -158,7 +158,7 @@
 			T.make_plating(!(T.broken || T.burnt))
 	return new_turf.is_plating()
 
-/obj/machinery/pipelayer/proc/layPipe(var/turf/w_turf,M_Dir,old_dir)
+/obj/machinery/pipelayer/proc/layPipe(turf/w_turf,M_Dir,old_dir)
 	if(!on || !(M_Dir in list(NORTH, SOUTH, EAST, WEST)) || M_Dir==old_dir)
 		return reset()
 	if(!use_metal(pipe_cost))

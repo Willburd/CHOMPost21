@@ -140,7 +140,7 @@
 		to_chat(user, span_warning("You can't repair \the [src]."))
 		return
 
-/obj/item/material/proc/sharpen(var/material, sharpen_time, kit, mob/living/M)
+/obj/item/material/proc/sharpen(material, sharpen_time, kit, mob/living/M)
 	if(!fragile && src.material.can_sharpen)
 		if(health < initial(health))
 			to_chat(M, "You should repair [src] first. Try using [kit] on it.")

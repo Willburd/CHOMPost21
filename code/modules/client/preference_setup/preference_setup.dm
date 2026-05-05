@@ -218,7 +218,7 @@
 /datum/category_item/player_setup_item/CanUseTopic(mob/user)
 	return 1
 
-/datum/category_item/player_setup_item/proc/OnTopic(var/href,list/href_list, mob/user)
+/datum/category_item/player_setup_item/proc/OnTopic(href,list/href_list, mob/user)
 	return TOPIC_NOACTION
 
 /datum/category_item/player_setup_item/proc/preference_mob()

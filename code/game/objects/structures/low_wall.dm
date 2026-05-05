@@ -72,7 +72,7 @@
 		else
 			to_chat(user, span_danger("It's nearly falling to pieces."))
 
-/obj/structure/low_wall/attackby(var/obj/item/W, var/mob/user, hit_modifier, click_parameters)
+/obj/structure/low_wall/attackby(var/obj/item/W, mob/user, hit_modifier, click_parameters)
 	src.add_fingerprint(user)
 
 	// Making grilles (only works on Bay ones currently)
@@ -276,7 +276,7 @@
 	if(health <= 0)
 		dismantle()
 
-/obj/structure/low_wall/attack_generic(var/mob/user, damage, attack_verb)
+/obj/structure/low_wall/attack_generic(mob/user, damage, attack_verb)
 	visible_message(span_danger("[user] [attack_verb] the [src]!"))
 	user.do_attack_animation(src)
 	take_damage(damage)

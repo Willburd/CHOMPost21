@@ -10,7 +10,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_DRUG
 
-/datum/reagent/adranol/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/adranol/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien == IS_DIONA)
 		return
 	if(M.confused)
@@ -34,7 +34,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_RARE
 	industrial_use = REFINERYEXPORT_REASON_DRUG
 
-/datum/reagent/numbing_enzyme/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/numbing_enzyme/affect_blood(mob/living/carbon/M, alien, removed)
 	M.add_chemical_effect(CE_PAINKILLER, 200)
 	if(prob(0.01)) //1 in 10000 chance per tick. Extremely rare.
 		to_chat(M,span_warning("Your body feels numb as a light, tingly sensation spreads throughout it, like some odd warmth."))
@@ -79,7 +79,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_DRUG
 
-/datum/reagent/vermicetol/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/vermicetol/affect_blood(mob/living/carbon/M, alien, removed)
 	var/chem_effective = 1 * M.species.chem_strength_heal //YW EDIT
 	if(alien == IS_SLIME)
 		chem_effective = 0.75
@@ -101,7 +101,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_RARE
 	industrial_use = REFINERYEXPORT_REASON_DRUG
 
-/datum/reagent/sleevingcure/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/sleevingcure/affect_blood(mob/living/carbon/M, alien, removed)
 	M.remove_a_modifier_of_type(/datum/modifier/resleeving_sickness)
 	M.remove_a_modifier_of_type(/datum/modifier/faux_resleeving_sickness)
 */ //CHOMPStation removal end
@@ -122,7 +122,7 @@
 	industrial_use = REFINERYEXPORT_REASON_DRUG
 	metabolized_traits = list(TRAIT_HALT_RADIATION_EFFECTS)
 
-/datum/reagent/prussian_blue/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/prussian_blue/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien == IS_DIONA)
 		return
 	if(prob(10)) //Miniscule chance of removing some toxins.
@@ -141,7 +141,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_DIET
 
-/datum/reagent/lipozilase/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/lipozilase/affect_blood(mob/living/carbon/M, alien, removed)
 	M.adjust_nutrition(-20 * removed)
 	if(M.weight > 50)
 		M.weight -= 0.3
@@ -159,7 +159,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_DIET
 
-/datum/reagent/lipostipo/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/lipostipo/affect_blood(mob/living/carbon/M, alien, removed)
 	M.adjust_nutrition(-20 * removed)
 	if(M.weight < 500)
 		M.weight += 0.3

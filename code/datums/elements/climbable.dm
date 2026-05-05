@@ -71,7 +71,7 @@
 	return TRUE
 
 /// Performs the wait and any remaining checks before the climb resolves.
-/datum/element/climbable/proc/do_climb(var/obj/climbed_thing, mob/living/user, delay_time)
+/datum/element/climbable/proc/do_climb(obj/climbed_thing, mob/living/user, delay_time)
 	if(QDELETED(user) || QDELETED(climbed_thing))
 		return
 

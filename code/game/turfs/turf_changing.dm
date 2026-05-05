@@ -27,7 +27,7 @@
 	return HAS_VALID_ZONE(T)
 
 //Creates a new turf
-/turf/proc/ChangeTurf(var/turf/N, var/tell_universe=1, force_lighting_update = 0, preserve_outdoors = FALSE)
+/turf/proc/ChangeTurf(var/turf/N, tell_universe=1, force_lighting_update = 0, preserve_outdoors = FALSE)
 	if (!N)
 		return
 

@@ -11,7 +11,7 @@
 
 //Compute how to fire.....
 //Return 1 if a target was found, 0 otherwise.
-/obj/item/gun/proc/PreFire(var/atom/A, mob/living/user, params)
+/obj/item/gun/proc/PreFire(atom/A, mob/living/user, params)
 	if(!user.aiming)
 		user.aiming = new(user)
 	user.face_atom(A)

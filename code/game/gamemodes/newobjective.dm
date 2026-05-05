@@ -53,7 +53,7 @@
 	return missions
 
 
-/proc/SelectObjectives(var/job,datum/mind/traitor,hijack = 0)
+/proc/SelectObjectives(job,datum/mind/traitor,hijack = 0)
 	var/list/chosenobjectives = list()
 	var/list/theftobjectives = GenerateTheft(job,traitor)		//Separated all the objective types so they can be picked independantly of each other.
 	var/list/killobjectives = GenerateAssassinate(job,traitor)

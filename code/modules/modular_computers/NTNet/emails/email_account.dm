@@ -36,7 +36,7 @@
 /datum/computer_file/data/email_account/proc/all_emails()
 	return (inbox | spam | deleted)
 
-/datum/computer_file/data/email_account/proc/send_mail(var/recipient_address, datum/computer_file/data/email_message/message, relayed = 0)
+/datum/computer_file/data/email_account/proc/send_mail(recipient_address, datum/computer_file/data/email_message/message, relayed = 0)
 	var/datum/computer_file/data/email_account/recipient
 	for(var/datum/computer_file/data/email_account/account in GLOB.ntnet_global.email_accounts)
 		if(account.login == recipient_address)

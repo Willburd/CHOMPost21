@@ -702,7 +702,7 @@
 	var/input_type = "Speech File"
 
 //Generic telecomm connectivity test proc
-/proc/can_telecomm(var/atom/A, atom/B, ad_hoc = FALSE)
+/proc/can_telecomm(atom/A, atom/B, ad_hoc = FALSE)
 	if(!A || !B)
 		log_mapping("can_telecomm(): Undefined endpoints!")
 		return FALSE

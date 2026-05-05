@@ -158,7 +158,7 @@
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|FEET|ARMS|HANDS //Head be vunerable but cloak covers the other bits.
 	var/block_chance = 20
 
-/obj/item/clothing/suit/armor/tyrtribalcloak/handle_shield(mob/user, var/damage, atom/damage_source = null, mob/attacker = null, def_zone = null, attack_text = "the attack")
+/obj/item/clothing/suit/armor/tyrtribalcloak/handle_shield(mob/user, damage, atom/damage_source = null, mob/attacker = null, def_zone = null, attack_text = "the attack")
 	if(prob(block_chance))
 		user.visible_message(span_danger("\The [src] completely deflects [attack_text]!"))
 		return TRUE
@@ -389,7 +389,7 @@
 	attack_verb = list("shoved", "bashed")
 	base_block_chance = 15
 
-/obj/item/shield/tyr_shield/handle_shield(mob/user, var/damage, atom/damage_source = null, mob/attacker = null, def_zone = null, attack_text = "the attack")
+/obj/item/shield/tyr_shield/handle_shield(mob/user, damage, atom/damage_source = null, mob/attacker = null, def_zone = null, attack_text = "the attack")
 	if(user.incapacitated())
 		return 0
 	var/bad_arc = reverse_direction(user.dir) //arc of directions from which we cannot block

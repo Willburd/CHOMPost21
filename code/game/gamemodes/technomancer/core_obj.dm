@@ -137,7 +137,7 @@
 	var/obj/item/technomancer_core/core = null
 	var/ability_icon_state = null
 
-/obj/spellbutton/Initialize(mapload, var/path, new_name, new_icon_state)
+/obj/spellbutton/Initialize(mapload, path, new_name, new_icon_state)
 	. = ..()
 	src.core = loc
 	if(!path || !ispath(path) || !istype(core))
@@ -174,7 +174,7 @@
 		for(var/obj/spellbutton/button in core.spells)
 			. += button
 
-/obj/item/technomancer_core/proc/add_spell(var/path, new_name, ability_icon_state)
+/obj/item/technomancer_core/proc/add_spell(path, new_name, ability_icon_state)
 	if(!path || !ispath(path))
 		message_admins("ERROR: /obj/item/technomancer_core/add_spell() was not given a proper path!  \
 		The path supplied was [path].")

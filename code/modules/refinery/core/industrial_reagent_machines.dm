@@ -93,7 +93,7 @@
 		update_icon()
 
 /// Transfers reagents from us to the next machine. Calls handle_transfer() on any target machines to check if they can accept reagents.
-/obj/machinery/reagent_refinery/proc/transfer_tank( var/datum/reagents/RT, var/obj/machinery/reagent_refinery/target, source_forward_dir, filter_id = "")
+/obj/machinery/reagent_refinery/proc/transfer_tank( var/datum/reagents/RT, obj/machinery/reagent_refinery/target, source_forward_dir, filter_id = "")
 	PROTECTED_PROC(TRUE)
 	if(RT.total_volume <= 0 || !anchored || !target.anchored)
 		return 0
@@ -107,7 +107,7 @@
 	return transfered
 
 /// Handles reagent recieving from transfer_tank(), returns how much reagent was transfered if successful. Overriden to prevent access from certain sides or for filtering.
-/obj/machinery/reagent_refinery/proc/handle_transfer(var/atom/origin_machine, var/datum/reagents/RT, var/source_forward_dir, transfer_rate, filter_id = "") // Handle transfers in an override, instead of one monster function that typechecks like transfer_tank() used to be
+/obj/machinery/reagent_refinery/proc/handle_transfer(var/atom/origin_machine, var/datum/reagents/RT, source_forward_dir, transfer_rate, filter_id = "") // Handle transfers in an override, instead of one monster function that typechecks like transfer_tank() used to be
 	// Transfer to target in amounts every process tick!
 	if(filter_id == "")
 		var/amount = RT.trans_to_obj(src, transfer_rate)

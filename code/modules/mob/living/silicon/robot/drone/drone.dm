@@ -1,6 +1,6 @@
 GLOBAL_LIST_EMPTY(mob_hat_cache)
 
-/proc/get_hat_icon(var/obj/item/hat, offset_x = 0, offset_y = 0)
+/proc/get_hat_icon(obj/item/hat, offset_x = 0, offset_y = 0)
 	var/t_state = hat.icon_state
 	if(LAZYACCESS(hat.item_state_slots, slot_head_str))
 		t_state = hat.item_state_slots[slot_head_str]

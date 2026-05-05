@@ -315,7 +315,7 @@
 // When exact is false, extraneous ingredients are ignored
 // When exact is true, extraneous ingredients will fail the recipe
 // In both cases, the full set of required ingredients is still needed
-/proc/select_recipe(var/list/datum/recipe/available_recipes, obj/obj as obj, exact)
+/proc/select_recipe(list/datum/recipe/available_recipes, obj/obj as obj, exact)
 	var/highest_count = 0
 	var/count = 0
 	for (var/datum/recipe/recipe in available_recipes)

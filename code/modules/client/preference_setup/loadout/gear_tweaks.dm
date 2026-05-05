@@ -32,7 +32,7 @@
 /datum/gear_tweak/color/get_default()
 	return valid_colors ? valid_colors[1] : COLOR_GRAY
 
-/datum/gear_tweak/color/get_metadata(var/user, metadata, title = "Character Preference")
+/datum/gear_tweak/color/get_metadata(user, metadata, title = "Character Preference")
 	if(valid_colors)
 		return tgui_input_list(user, "Choose a color.", title, valid_colors, metadata)
 	return tgui_color_picker(user, "Choose a color.", title, metadata)

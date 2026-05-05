@@ -233,7 +233,7 @@
 	else
 		ourborg.icon_state = booze_options[ourborg.sprite_extra_customization["boozehound"]]
 
-/datum/robot_sprite/dogborg/service/booze/get_belly_overlay(var/mob/living/silicon/robot/ourborg, size = 1, b_class)
+/datum/robot_sprite/dogborg/service/booze/get_belly_overlay(mob/living/silicon/robot/ourborg, size = 1, b_class)
 	if(!("boozehound" in ourborg.sprite_extra_customization) || !ourborg.sprite_extra_customization["boozehound"] || b_class != "sleeper")
 		return ..()
 	else

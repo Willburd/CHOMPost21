@@ -25,7 +25,7 @@ D [1]/  ||
 	var/list/linked = list()
 	var/io_type = DATA_CHANNEL
 
-/datum/integrated_io/New(var/newloc, name, new_data)
+/datum/integrated_io/New(newloc, name, new_data)
 	..()
 	src.name = name
 	if(!isnull(new_data))

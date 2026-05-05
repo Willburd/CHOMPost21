@@ -33,7 +33,7 @@
 	direction = !location // Heading away from where we currently are
 	. = ..()
 
-/datum/shuttle/autodock/ferry/long_jump(var/destination, obj/effect/shuttle_landmark/interim, travel_time)
+/datum/shuttle/autodock/ferry/long_jump(destination, obj/effect/shuttle_landmark/interim, travel_time)
 	direction = !location // Heading away from where we currently are
 	. = ..()
 

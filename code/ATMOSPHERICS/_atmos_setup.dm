@@ -38,7 +38,7 @@
 /datum/pipe_icon_manager/New()
 	check_icons()
 
-/datum/pipe_icon_manager/proc/get_atmos_icon(var/device, var/dir, color, state)
+/datum/pipe_icon_manager/proc/get_atmos_icon(var/device, dir, color, state)
 	check_icons()
 
 	device = "[device]"

@@ -43,7 +43,7 @@
 		client.screen.Remove(GLOB.global_hud.whitense)
 
 // Say proc for captures souls
-/mob/living/carbon/brain/caught_soul/vore/say(var/message, datum/language/speaking = null, whispering = 0)
+/mob/living/carbon/brain/caught_soul/vore/say(message, datum/language/speaking = null, whispering = 0)
 	if(silent) return FALSE
 	gem.use_speech(message, src, eyeobj)
 

@@ -303,7 +303,7 @@ SUBSYSTEM_DEF(supply)
 	return
 
 // Will generate a new, requested order, for the given supply pack type
-/datum/controller/subsystem/supply/proc/create_order(var/datum/supply_pack/S, mob/user, reason)
+/datum/controller/subsystem/supply/proc/create_order(datum/supply_pack/S, mob/user, reason)
 	var/datum/supply_order/new_order = new()
 	var/datum/supply_order/adm_order = new() // Admin-recorded order must be a separate copy in memory, or user-made edits will corrupt it
 

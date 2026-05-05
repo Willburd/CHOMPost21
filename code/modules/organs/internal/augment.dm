@@ -123,7 +123,7 @@
  * cling_to_organ is a reference to the organ object itself, so they can easily return to their organ when removed by any means.
  */
 
-/mob/living/carbon/human/proc/equip_augment_item(var/slot, var/obj/item/equipping = null, make_sound = TRUE, obj/item/organ/cling_to_organ = null)
+/mob/living/carbon/human/proc/equip_augment_item(var/slot, obj/item/equipping = null, make_sound = TRUE, obj/item/organ/cling_to_organ = null)
 	if(!ishuman(src))
 		return 0
 

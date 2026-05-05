@@ -116,7 +116,7 @@
 	update_nearby_tiles() //Force ZAS update
 	update_explosion_resistance()
 
-/obj/effect/shield/attack_generic(var/source, damage, emote)
+/obj/effect/shield/attack_generic(source, damage, emote)
 	take_damage(damage, SHIELD_DAMTYPE_PHYSICAL)
 	if(gen.check_flag(MODEFLAG_OVERCHARGE) && istype(source, /mob/living/))
 		overcharge_shock(source)
@@ -159,7 +159,7 @@
 /obj/effect/shield/attack_hand(user)
 	flash_adjacent_segments(3)
 
-/obj/effect/shield/take_damage(var/damage, damtype, hitby)
+/obj/effect/shield/take_damage(damage, damtype, hitby)
 	if(!gen)
 		qdel(src)
 		return

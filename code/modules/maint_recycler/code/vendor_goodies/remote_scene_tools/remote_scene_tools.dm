@@ -75,13 +75,13 @@ why aren't these accessories?
 	transmit_emote(src, "\The [src]'s wearer has returned from SSD!")
 	linked?.linked_updated()
 
-/obj/item/remote_scene_tool/see_emote(var/mob/M as mob, text, emote_type)
+/obj/item/remote_scene_tool/see_emote(mob/M as mob, text, emote_type)
 	//to_world_log("emote: [text] from [M] to [linked]")
 	if(M == getWearer())
 		//we're the one doing the emote
 		transmit_emote(src, text,emote_type)
 
-/obj/item/remote_scene_tool/proc/transmit_emote(var/mob/M as mob, text, emote_type)
+/obj/item/remote_scene_tool/proc/transmit_emote(mob/M as mob, text, emote_type)
 	if(linked == null) return
 	if(ismob(linked.getWearer()))
 		var/mob/m = linked.getWearer()

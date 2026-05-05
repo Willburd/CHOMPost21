@@ -11,7 +11,7 @@
 	Returns
 	A number between 0 and 100, with higher numbers resulting in less damage taken.
 */
-/mob/living/proc/run_armor_check(var/def_zone = null, var/attack_flag = "melee", var/armour_pen = 0, absorb_text = null, soften_text = null)
+/mob/living/proc/run_armor_check(var/def_zone = null, var/attack_flag = "melee", armour_pen = 0, absorb_text = null, soften_text = null)
 	if(GLOB.Debug2)
 		log_world("## DEBUG: getarmor() was called.")
 
@@ -138,7 +138,7 @@
 //	return absorb
 
 //Handles the effects of "stun" weapons
-/mob/living/proc/stun_effect_act(var/stun_amount, var/agony_amount, var/def_zone, used_weapon=null, electric = FALSE)
+/mob/living/proc/stun_effect_act(var/stun_amount, var/agony_amount, def_zone, used_weapon=null, electric = FALSE)
 	flash_pain()
 	SEND_SIGNAL(src, COMSIG_STUN_EFFECT_ACT, stun_amount, agony_amount, def_zone, used_weapon, electric)
 
@@ -153,7 +153,7 @@
 		apply_effect(STUTTER, agony_amount/10)
 		apply_effect(EYE_BLUR, agony_amount/10)
 
-/mob/living/proc/electrocute_act(var/shock_damage, var/obj/source, var/siemens_coeff = 1.0, def_zone = null, stun = 1)
+/mob/living/proc/electrocute_act(var/shock_damage, var/obj/source, siemens_coeff = 1.0, def_zone = null, stun = 1)
 	  return 0 //only carbon liveforms have this proc
 
 /mob/living/emp_act(severity, recursive)
@@ -230,7 +230,7 @@
 	return blocked
 
 //returns 0 if the effects failed to apply for some reason, 1 otherwise.
-/mob/living/proc/standard_weapon_hit_effects(obj/item/I, mob/living/user, var/effective_force, blocked, hit_zone)
+/mob/living/proc/standard_weapon_hit_effects(obj/item/I, mob/living/user, effective_force, blocked, hit_zone)
 	if(!effective_force || blocked >= 100)
 		return 0
 	//Apply weapon damage
@@ -341,7 +341,7 @@
 
 // End BS12 momentum-transfer code.
 
-/mob/living/attack_generic(var/mob/user, damage, attack_message)
+/mob/living/attack_generic(mob/user, damage, attack_message)
 	if(istype(user,/mob/living))
 		var/mob/living/L = user
 		if(touch_reaction_flags & SPECIES_TRAIT_THORNS)
@@ -458,7 +458,7 @@
 	if(amount > 0)
 		adjustToxLoss(amount)
 
-/mob/living/proc/can_inject(var/mob/user, var/error_msg, target_zone, ignore_thickness = FALSE)
+/mob/living/proc/can_inject(var/mob/user, error_msg, target_zone, ignore_thickness = FALSE)
 	return 1
 
 /mob/living/proc/get_organ_target()
@@ -476,7 +476,7 @@
 	src.updatehealth()
 
 // damage ONE external organ, organ gets randomly selected from damaged ones.
-/mob/living/proc/take_organ_damage(var/brute, burn, emp=0)
+/mob/living/proc/take_organ_damage(brute, burn, emp=0)
 	adjustBruteLoss(brute)
 	adjustFireLoss(burn)
 	src.updatehealth()
@@ -488,7 +488,7 @@
 	src.updatehealth()
 
 // damage MANY external organs, in random order
-/mob/living/proc/take_overall_damage(var/brute, burn, used_weapon = null)
+/mob/living/proc/take_overall_damage(brute, burn, used_weapon = null)
 	adjustBruteLoss(brute)
 	adjustFireLoss(burn)
 	src.updatehealth()

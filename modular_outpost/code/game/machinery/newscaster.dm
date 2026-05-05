@@ -33,7 +33,7 @@
 			var/datum/feed_message/load_from_file/scanmessage = new(subjson)
 			net.insert_message_in_channel(src, scanmessage) //Adding message to the network's appropriate feed_channel
 
-/datum/feed_network/proc/CreateFeedChannel_FromFile(var/channel_name, author, server_file_path)
+/datum/feed_network/proc/CreateFeedChannel_FromFile(channel_name, author, server_file_path)
 	var/datum/feed_channel/load_from_file/newChannel = new /datum/feed_channel/load_from_file(server_file_path,src)
 	newChannel.channel_name = channel_name
 	newChannel.author = author

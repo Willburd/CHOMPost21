@@ -126,7 +126,7 @@
 			plant.pixel_y = 0
 		plant.update_neighbors()
 
-/turf/simulated/wall/ChangeTurf(var/turf/N, var/tell_universe, force_lighting_update, preserve_outdoors)
+/turf/simulated/wall/ChangeTurf(var/turf/N, tell_universe, force_lighting_update, preserve_outdoors)
 	clear_plants()
 	. = ..(N, tell_universe, force_lighting_update, preserve_outdoors)
 
@@ -196,7 +196,7 @@
 
 	return ..()
 
-/turf/simulated/wall/proc/dismantle_wall(var/devastated, explode, no_product)
+/turf/simulated/wall/proc/dismantle_wall(devastated, explode, no_product)
 
 	playsound(src, 'sound/items/Welder.ogg', 100, 1)
 	if(!no_product)

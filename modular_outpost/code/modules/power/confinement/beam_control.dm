@@ -103,7 +103,7 @@
 			data.dir = found_dir
 			G.pulse(data)
 
-/obj/structure/confinement_beam_generator/control_box/proc/check_focus_data(var/temp = T20C,var/max = T0C + 1400, var/watt = 0, health = 100, mhealth = 100)
+/obj/structure/confinement_beam_generator/control_box/proc/check_focus_data(var/temp = T20C,var/max = T0C + 1400, watt = 0, health = 100, mhealth = 100)
 	SHOULD_NOT_OVERRIDE(TRUE)
 	if(temp >= 0)
 		FLOOR(last_temp = temp,1)
@@ -309,7 +309,7 @@
 	PRIVATE_PROC(TRUE)
 	set_new_target(0,0,-1)
 
-/obj/structure/confinement_beam_generator/control_box/proc/set_new_target(var/x,y,z)
+/obj/structure/confinement_beam_generator/control_box/proc/set_new_target(x,y,z)
 	SHOULD_NOT_OVERRIDE(TRUE)
 	PRIVATE_PROC(TRUE)
 	data.target_x = x

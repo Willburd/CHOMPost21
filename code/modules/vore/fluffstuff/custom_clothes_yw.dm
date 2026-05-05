@@ -1263,7 +1263,7 @@
 			to_chat(H,span_warning("You need to have a kentauri half to wear this."))
 			return 0
 
-/obj/item/clothing/suit/armor/vest/harpsong/make_worn_icon(var/body_type,var/slot_name,var/inhands,var/default_icon,default_layer = 0, icon/clip_mask = null)
+/obj/item/clothing/suit/armor/vest/harpsong/make_worn_icon(var/body_type,var/slot_name,var/inhands,default_icon,default_layer = 0, icon/clip_mask = null)
 	var/image/result = ..()
 	result.pixel_x = -16
 	result.layer = BODY_LAYER + 15
@@ -1633,7 +1633,7 @@
 		update_clothing_icon()
 		usr.update_action_buttons()
 
-/obj/item/clothing/glasses/fluff/avigoggles_yw/get_worn_icon_file(var/body_type,var/slot_name,default_icon,inhands)
+/obj/item/clothing/glasses/fluff/avigoggles_yw/get_worn_icon_file(var/body_type,slot_name,default_icon,inhands)
 	if(body_type == SPECIES_TESHARI)
 		if(!inhands)
 			return 'icons/vore/custom_clothes_yw_special.dmi'

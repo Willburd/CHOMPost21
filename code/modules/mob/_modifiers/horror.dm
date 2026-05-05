@@ -659,7 +659,7 @@ GLOBAL_LIST_INIT(redspace_areas, list(
 		qdel(blade) //failed, sad.
 
 //shamelessly stolen from changeling/armor.dm
-/datum/modifier/redspace_corruption/proc/equip_flesh_armor(var/armor_type, var/helmet_type, boot_type, glove_type)
+/datum/modifier/redspace_corruption/proc/equip_flesh_armor(var/armor_type, helmet_type, boot_type, glove_type)
 
 	var/mob/living/carbon/human/M = unfortunate_soul
 

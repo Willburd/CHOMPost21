@@ -112,7 +112,7 @@
 				return FALSE
 	return TRUE
 
-/obj/item/clothing/handle_shield(mob/user, var/damage, atom/damage_source = null, mob/attacker = null, def_zone = null, attack_text = "the attack")
+/obj/item/clothing/handle_shield(mob/user, damage, atom/damage_source = null, mob/attacker = null, def_zone = null, attack_text = "the attack")
 	. = ..()
 	if((. == 0) && LAZYLEN(accessories))
 		for(var/obj/item/I in accessories)
@@ -784,7 +784,7 @@
 	track_blood = 0
 	update_icon()
 
-/obj/item/clothing/shoes/proc/handle_movement(var/turf/walking, running, mob/living/carbon/human/pred)
+/obj/item/clothing/shoes/proc/handle_movement(turf/walking, running, mob/living/carbon/human/pred)
 	if(!recent_squish && istype(pred))
 		recent_squish = 1
 		VARSET_IN(src, recent_squish, FALSE, 4 SECONDS) // Reset the recent squish timer
@@ -1086,7 +1086,7 @@
 		taurized = FALSE
 
 // Taur suits need to be shifted so its centered on their taur half.
-/obj/item/clothing/suit/make_worn_icon(var/body_type,var/slot_name,var/inhands,var/default_icon,default_layer = 0,icon/clip_mask)
+/obj/item/clothing/suit/make_worn_icon(var/body_type,var/slot_name,var/inhands,default_icon,default_layer = 0,icon/clip_mask)
 	var/image/standing = ..()
 	if(taurized) //Special snowflake var on suits
 		standing.pixel_x = -16

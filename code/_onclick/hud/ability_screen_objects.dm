@@ -314,7 +314,7 @@
 //		else
 //			message_admins("ERROR: activate() on [ability_master.my_mob]'s [src] failed the hascall([object_used],[verb_to_call]) check.")
 
-/atom/movable/screen/movable/ability_master/proc/add_verb_ability(var/object_given, var/verb_given, var/name_given, ability_icon_given, arguments)
+/atom/movable/screen/movable/ability_master/proc/add_verb_ability(var/object_given, var/verb_given, name_given, ability_icon_given, arguments)
 	if(!object_given)
 		message_admins("ERROR: add_verb_ability() was not given an object in its arguments.")
 	if(!verb_given)
@@ -338,7 +338,7 @@
 	icon_state = "ling_spell_base"
 	background_base_state = "ling"
 
-/atom/movable/screen/movable/ability_master/proc/add_ling_ability(var/object_given, var/verb_given, var/name_given, ability_icon_given, arguments)
+/atom/movable/screen/movable/ability_master/proc/add_ling_ability(var/object_given, var/verb_given, name_given, ability_icon_given, arguments)
 	if(!object_given)
 		message_admins("ERROR: add_ling_ability() was not given an object in its arguments.")
 	if(!verb_given)

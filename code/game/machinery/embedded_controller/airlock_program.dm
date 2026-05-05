@@ -318,7 +318,7 @@
 	signal.data["command"] = command
 	post_signal(signal, RADIO_AIRLOCK)
 
-/datum/embedded_program/airlock/proc/signalPump(var/tag, var/power, direction, pressure)
+/datum/embedded_program/airlock/proc/signalPump(var/tag, power, direction, pressure)
 	var/datum/signal/signal = new
 	signal.data = list(
 		"tag" = tag,
@@ -372,7 +372,7 @@ Only sends a command if it is needed, i.e. if the door is
 already open, passing an open command to this proc will not
 send an additional command to open the door again.
 ----------------------------------------------------------*/
-/datum/embedded_program/airlock/proc/toggleDoor(var/list/doorStatus, var/doorTag, secure, command)
+/datum/embedded_program/airlock/proc/toggleDoor(var/list/doorStatus, doorTag, secure, command)
 	var/doorCommand = null
 
 	if(command == "toggle")

@@ -24,7 +24,7 @@
 	var/end_time					//Used to set when this alarm should clear, in case the origin is lost.
 	var/hidden = FALSE				//If this alarm can be seen from consoles or other things.
 
-/datum/alarm/New(var/atom/origin, var/atom/source, var/duration, severity, hidden)
+/datum/alarm/New(var/atom/origin, var/atom/source, duration, severity, hidden)
 	src.origin = origin
 
 	cameras()	// Sets up both cameras and last alarm area.
@@ -45,7 +45,7 @@
 
 #undef ALARM_RESET_DELAY
 
-/datum/alarm/proc/set_source_data(var/atom/source, var/duration, severity, hidden)
+/datum/alarm/proc/set_source_data(var/atom/source, duration, severity, hidden)
 	var/datum/alarm_source/AS = sources_assoc[source]
 	if(!AS)
 		AS = new/datum/alarm_source(source)

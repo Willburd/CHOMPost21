@@ -220,7 +220,7 @@
 
 
 
-/obj/item/blueprints/proc/set_area_machinery_title(var/area/A,title,oldtitle)
+/obj/item/blueprints/proc/set_area_machinery_title(area/A,title,oldtitle)
 	if (!oldtitle) // or replacetext goes to infinite loop
 		return
 

@@ -34,7 +34,7 @@ GLOBAL_DATUM(malf, /datum/antagonist/rogue_ai)
 
 
 // Ensures proper reset of all malfunction related things.
-/datum/antagonist/rogue_ai/remove_antagonist(var/datum/mind/player, show_message, implanted)
+/datum/antagonist/rogue_ai/remove_antagonist(datum/mind/player, show_message, implanted)
 	if(..(player,show_message,implanted))
 		var/mob/living/silicon/ai/p = player.current
 		if(istype(p))

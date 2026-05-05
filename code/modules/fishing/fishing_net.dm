@@ -29,7 +29,7 @@
 	. = ..()
 	update_icon()
 
-/obj/item/material/fishing_net/afterattack(var/atom/A, mob/user, proximity)
+/obj/item/material/fishing_net/afterattack(atom/A, mob/user, proximity)
 	if(get_dist(get_turf(src), A) > reach)
 		return
 
@@ -139,7 +139,7 @@
 
 	special_handling = TRUE
 
-/obj/item/material/fishing_net/butterfly_net/afterattack(var/atom/A, mob/user, proximity)
+/obj/item/material/fishing_net/butterfly_net/afterattack(atom/A, mob/user, proximity)
 	if(get_dist(get_turf(src), A) > reach)
 		return
 

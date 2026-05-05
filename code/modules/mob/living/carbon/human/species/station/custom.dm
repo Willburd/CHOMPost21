@@ -81,7 +81,7 @@
 	var/datum/species/real = GLOB.all_species[base_species]
 	return real.race_key
 
-/datum/species/custom/produceCopy(var/list/traits, var/mob/living/carbon/human/H, custom_base, reset_dna = TRUE)
+/datum/species/custom/produceCopy(var/list/traits, mob/living/carbon/human/H, custom_base, reset_dna = TRUE)
 	. = ..(traits, H, custom_base,reset_dna)
 	H.maxHealth = H.species.total_health
 	H.hunger_rate = H.species.hunger_factor
@@ -94,7 +94,7 @@
 	return ..()
 
 //Called when spawning to equip them with special things.
-/datum/species/custom/equip_survival_gear(var/mob/living/carbon/human/H, extendedtank = 0, comprehensive = 0)
+/datum/species/custom/equip_survival_gear(mob/living/carbon/human/H, extendedtank = 0, comprehensive = 0)
 	. = ..()
 
 	/* Outpost 21 edit(port) - we use our own tank code

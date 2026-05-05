@@ -202,7 +202,7 @@
 			return TRUE
 	return FALSE
 
-/mob/living/silicon/robot/proc/is_type_in_modules(var/type, list/modules, explicit = FALSE)
+/mob/living/silicon/robot/proc/is_type_in_modules(type, list/modules, explicit = FALSE)
 	for(var/atom/module in modules)
 		if(explicit && isatom(module))
 			if(module.type == type)

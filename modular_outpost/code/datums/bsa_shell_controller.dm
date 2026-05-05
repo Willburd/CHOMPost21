@@ -43,7 +43,7 @@
 	cur_delay += rand(7 SECONDS, 9 SECONDS)
 	addtimer(CALLBACK(src, PROC_REF(finish_message)), cur_delay, TIMER_DELETE_ME)
 
-/datum/bsa_shell_controller/proc/announce(var/x,var/y,z, first_shot = TRUE)
+/datum/bsa_shell_controller/proc/announce(var/x,y,z, first_shot = TRUE)
 	if(first_shot)
 		var/message = "Requesting a precision artillery strike on coordinates: [x], [y], [z]."
 		GLOB.global_announcer.autosay(message, "Outpost-22 Fire Control", "Command")
@@ -57,7 +57,7 @@
 		GLOB.global_announcer.autosay(message, "Outpost-22 Fire Control", "Common")
 	addtimer(CALLBACK(src, PROC_REF(shelling), x, y, z), rand(4 SECONDS, 6 SECONDS), TIMER_DELETE_ME)
 
-/datum/bsa_shell_controller/proc/shelling(var/x,y,z)
+/datum/bsa_shell_controller/proc/shelling(x,y,z)
 	var/turf/T = locate(x,y,z)
 	if(!T)
 		return

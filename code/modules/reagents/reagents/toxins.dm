@@ -18,7 +18,7 @@
 
 	ppe_flags = REAGENT_PPE_GAS|REAGENT_PPE_SQUIRTS|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
-/datum/reagent/toxin/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/toxin/affect_blood(mob/living/carbon/M, alien, removed)
 	var/poison_strength = strength * M.species.chem_strength_tox
 	if(strength && alien != IS_DIONA)
 		if(issmall(M)) removed *= 2 // Small bodymass, more effect from lower volume.
@@ -55,7 +55,7 @@
 
 	ppe_flags = REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
-/datum/reagent/toxin/amatoxin/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/toxin/amatoxin/affect_blood(mob/living/carbon/M, alien, removed)
 	// Trojan horse. Waits until most of the toxin has gone through the body before dealing the bulk of it in one big strike.
 	if(volume < max_dose * 0.1)
 		M.adjustToxLoss(max_dose * strength) //Get hit all at once.
@@ -75,7 +75,7 @@
 
 	ppe_flags = REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
-/datum/reagent/toxin/carpotoxin/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/toxin/carpotoxin/affect_blood(mob/living/carbon/M, alien, removed)
 	..()
 	M.adjustBrainLoss(strength / 4 * removed)
 
@@ -92,7 +92,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_NO
 	industrial_use = REFINERYEXPORT_REASON_BIOHAZARD
 
-/datum/reagent/toxin/neurotoxic_protein/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/toxin/neurotoxic_protein/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien == IS_CHIMERA)
 		return
 	..()
@@ -123,7 +123,7 @@
 	if(istype(L))
 		L.adjust_fire_stacks(amount / fire_mult)
 
-/datum/reagent/toxin/hydrophoron/affect_touch(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/toxin/hydrophoron/affect_touch(mob/living/carbon/M, alien, removed)
 	M.take_organ_damage(0, removed * 0.1) //being splashed directly with hydrophoron causes minor chemical burns
 	if(prob(10 * fire_mult))
 		M.pl_effects()
@@ -139,7 +139,7 @@
 		spawn (0) target_tile.hotspot_expose(700, 400)
 	remove_self(volume)
 
-/datum/reagent/toxin/hydrophoron/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/toxin/hydrophoron/affect_blood(mob/living/carbon/M, alien, removed)
 	..()
 	if(alien == IS_SLIME)
 		M.adjust_fire_stacks(removed * 10)
@@ -177,7 +177,7 @@
 	strength = 1
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
-/datum/reagent/toxin/warningtoxin/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/toxin/warningtoxin/affect_blood(mob/living/carbon/M, alien, removed)
 	var/poison_strength = strength * M.species.chem_strength_tox
 	if(strength && alien != IS_DIONA)
 		M.adjustToxLoss(poison_strength * removed)
@@ -206,7 +206,7 @@
 	if(istype(L))
 		L.adjust_fire_stacks(amount / 5)
 
-/datum/reagent/toxin/phoron/affect_touch(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/toxin/phoron/affect_touch(mob/living/carbon/M, alien, removed)
 	..()
 	M.adjust_fire_stacks(removed / 5)
 	if(alien == IS_VOX || M.species.phoron_contact_mod == 0)
@@ -215,7 +215,7 @@
 	if(prob(50))
 		M.pl_effects()
 
-/datum/reagent/toxin/phoron/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/toxin/phoron/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien == IS_VOX)
 		M.adjustOxyLoss(-100 * removed) //5 oxyloss healed per tick.
 		return //You're wasting plasma (a semi-limited chemical) to save someone, so it might as well be somewhat strong.
@@ -246,7 +246,7 @@
 
 	ppe_flags = REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
-/datum/reagent/toxin/cyanide/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/toxin/cyanide/affect_blood(mob/living/carbon/M, alien, removed)
 	..()
 	M.adjustOxyLoss(10 * removed)
 	M.AdjustLosebreath(5) //Adjusting oxyloss with no losebreath adjustment is useless.
@@ -265,7 +265,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_NO
 	industrial_use = REFINERYEXPORT_REASON_BIOHAZARD
 
-/datum/reagent/toxin/mold/affect_ingest(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/toxin/mold/affect_ingest(mob/living/carbon/M, alien, removed)
 	..()
 	if(prob(5))
 		M.vomit()
@@ -283,12 +283,12 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_NO
 	industrial_use = REFINERYEXPORT_REASON_BIOHAZARD
 
-/datum/reagent/toxin/expired_medicine/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/toxin/expired_medicine/affect_blood(mob/living/carbon/M, alien, removed)
 	..()
 	if(prob(5))
 		M.vomit()
 
-/datum/reagent/toxin/expired_medicine/affect_ingest(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/toxin/expired_medicine/affect_ingest(mob/living/carbon/M, alien, removed)
 	affect_blood(M, alien, removed * 0.66)
 
 
@@ -307,7 +307,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_BIOHAZARD
 
-/datum/reagent/toxin/stimm/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/toxin/stimm/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien == IS_TAJARA)
 		removed *= 1.25
 	..()
@@ -318,7 +318,7 @@
 		M.take_organ_damage(6 * removed, 0)
 	M.add_chemical_effect(CE_SPEEDBOOST, 1)
 
-/datum/reagent/toxin/stimm/overdose(var/mob/living/carbon/M, alient, removed)
+/datum/reagent/toxin/stimm/overdose(mob/living/carbon/M, alient, removed)
 	..()
 	if(prob(10)) // 1 in 10. This thing's made with welder fuel and fertilizer, what do you expect?
 		var/obj/item/organ/internal/heart/ht = M.internal_organs_by_name[O_HEART]
@@ -340,7 +340,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_MEDSCI
 
-/datum/reagent/toxin/potassium_chloride/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/toxin/potassium_chloride/affect_blood(mob/living/carbon/M, alien, removed)
 	..()
 	if(alien == IS_SLIME)
 		M.adjustFireLoss(removed * 2)
@@ -369,7 +369,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_MEDSCI
 
-/datum/reagent/toxin/potassium_chlorophoride/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/toxin/potassium_chlorophoride/affect_blood(mob/living/carbon/M, alien, removed)
 	..()
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
@@ -398,7 +398,7 @@
 
 	ppe_flags = REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
-/datum/reagent/toxin/zombiepowder/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/toxin/zombiepowder/affect_blood(mob/living/carbon/M, alien, removed)
 	..()
 	if(alien == IS_DIONA)
 		return
@@ -432,7 +432,7 @@
 
 	ppe_flags = REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
-/datum/reagent/lichpowder/affect_touch(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/lichpowder/affect_touch(mob/living/carbon/M, alien, removed)
 	if(alien == IS_DIONA)
 		return
 	if(!(M.status_flags & FAKEDEATH))
@@ -527,11 +527,11 @@
 		alien_weeds.health -= rand(15, 35)
 		alien_weeds.healthcheck()
 
-/datum/reagent/toxin/plantbgone/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/toxin/plantbgone/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien == IS_DIONA)
 		M.adjustToxLoss(50 * removed)
 
-/datum/reagent/toxin/plantbgone/affect_touch(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/toxin/plantbgone/affect_touch(mob/living/carbon/M, alien, removed)
 	if(alien == IS_DIONA)
 		M.adjustToxLoss(50 * removed)
 
@@ -548,7 +548,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_PRECURSOR
 
-/datum/reagent/toxin/sifslurry/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/toxin/sifslurry/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien == IS_DIONA) // Symbiotic bacteria.
 		M.adjust_nutrition(strength * removed)
 		return
@@ -556,7 +556,7 @@
 		M.add_modifier(/datum/modifier/slow_pulse, 30 SECONDS)
 	..()
 
-/datum/reagent/toxin/sifslurry/overdose(var/mob/living/carbon/M, alien, removed) // Overdose effect.
+/datum/reagent/toxin/sifslurry/overdose(mob/living/carbon/M, alien, removed) // Overdose effect.
 	if(alien == IS_DIONA)
 		return
 	if(ishuman(M))
@@ -565,7 +565,7 @@
 	M.apply_effect(2 * removed,IRRADIATE, 0, 0)
 	M.apply_effect(5 * removed,DROWSY, 0, 0)
 
-/datum/reagent/toxin/sifslurry/affect_ingest(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/toxin/sifslurry/affect_ingest(mob/living/carbon/M, alien, removed)
 	affect_blood(M, alien, removed * 0.7)
 
 /datum/reagent/acid/polyacid
@@ -627,7 +627,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_UNWANTED
 	industrial_use = REFINERYEXPORT_REASON_BIOHAZARD
 
-/datum/reagent/thermite/venom/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/thermite/venom/affect_blood(mob/living/carbon/M, alien, removed)
 	M.adjustFireLoss(3 * removed)
 	if(M.fire_stacks <= 1.5)
 		M.adjust_fire_stacks(0.15)
@@ -653,7 +653,7 @@
 
 	ppe_flags = REAGENT_PPE_GAS|REAGENT_PPE_SQUIRTS|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
-/datum/reagent/condensedcapsaicin/venom/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/condensedcapsaicin/venom/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien == IS_DIONA)
 		return
 	if(prob(50))
@@ -680,7 +680,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_MEDSCI
 
-/datum/reagent/lexorin/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/lexorin/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien == IS_DIONA)
 		return
 	if(alien == IS_SLIME)
@@ -706,15 +706,15 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_MEDSCI
 
-/datum/reagent/mutagen/affect_touch(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/mutagen/affect_touch(mob/living/carbon/M, alien, removed)
 	if(prob(33))
 		affect_blood(M, alien, removed)
 
-/datum/reagent/mutagen/affect_ingest(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/mutagen/affect_ingest(mob/living/carbon/M, alien, removed)
 	if(prob(67))
 		affect_blood(M, alien, removed)
 
-/datum/reagent/mutagen/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/mutagen/affect_blood(mob/living/carbon/M, alien, removed)
 
 	if(M.isSynthetic())
 		return
@@ -776,7 +776,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_MATSCI
 
-/datum/reagent/slimejelly/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/slimejelly/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien == IS_DIONA)
 		return
 	if(alien == IS_SLIME) //Partially made of the stuff. Why would it hurt them?
@@ -806,7 +806,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_MEDSCI
 
-/datum/reagent/soporific/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/soporific/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien == IS_DIONA)
 		return
 
@@ -858,7 +858,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_MEDSCI
 
-/datum/reagent/chloralhydrate/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/chloralhydrate/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien == IS_DIONA)
 		return
 
@@ -893,7 +893,7 @@
 	if(effective_dose > 1 * threshold)
 		M.adjustToxLoss(removed)
 
-/datum/reagent/chloralhydrate/overdose(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/chloralhydrate/overdose(mob/living/carbon/M, alien, removed)
 	..()
 	M.SetLosebreath(10)
 	M.adjustOxyLoss(removed * overdose_mod)
@@ -927,7 +927,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_MEDSCI
 
-/datum/reagent/serotrotium/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/serotrotium/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien == IS_DIONA)
 		return
 	if(prob(7))
@@ -943,7 +943,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_UNWANTED
 	industrial_use = REFINERYEXPORT_REASON_BIOHAZARD
 
-/datum/reagent/serotrotium/venom/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/serotrotium/venom/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien == IS_DIONA)
 		return
 	if(prob(30))
@@ -965,7 +965,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_MEDSCI
 
-/datum/reagent/cryptobiolin/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/cryptobiolin/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien == IS_DIONA)
 		return
 	var/drug_strength = 4
@@ -991,7 +991,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_WEAPONS
 
-/datum/reagent/impedrezene/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/impedrezene/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien == IS_DIONA)
 		return
 	M.make_jittery(-5)
@@ -1015,7 +1015,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_WEAPONS
 
-/datum/reagent/mindbreaker/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/mindbreaker/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien == IS_DIONA)
 		return
 
@@ -1044,7 +1044,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_MATSCI
 
-/datum/reagent/slimetoxin/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/slimetoxin/affect_blood(mob/living/carbon/M, alien, removed)
 	if(M.isSynthetic())
 		return
 
@@ -1075,7 +1075,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_MATSCI
 
-/datum/reagent/aslimetoxin/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/aslimetoxin/affect_blood(mob/living/carbon/M, alien, removed)
 	if(M.isSynthetic())
 		return
 
@@ -1113,7 +1113,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_NO
 	industrial_use = REFINERYEXPORT_REASON_BIOHAZARD
 
-/datum/reagent/shredding_nanites/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/shredding_nanites/affect_blood(mob/living/carbon/M, alien, removed)
 	M.adjustBruteLoss(4 * removed)
 	M.adjustOxyLoss(4 * removed)
 
@@ -1131,7 +1131,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_NO
 	industrial_use = REFINERYEXPORT_REASON_BIOHAZARD
 
-/datum/reagent/irradiated_nanites/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/irradiated_nanites/affect_blood(mob/living/carbon/M, alien, removed)
 	//SSradiation.radiate(get_turf(M), 20)	// Irradiate people around you. //TODO
 	M.radiation = max(M.radiation + 5 * removed, 0)	// Irradiate you. Because it's inside you.
 
@@ -1150,7 +1150,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_NO
 	industrial_use = REFINERYEXPORT_REASON_BIOHAZARD
 
-/datum/reagent/neurophage_nanites/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/neurophage_nanites/affect_blood(mob/living/carbon/M, alien, removed)
 	M.adjustBrainLoss(2 * removed)	// Their job is to give you a bad time.
 	M.adjustBruteLoss(2 * removed)
 

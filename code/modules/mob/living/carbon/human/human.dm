@@ -381,7 +381,7 @@
 
 //Removed the horrible safety parameter. It was only being used by ninja code anyways.
 //Now checks siemens_coefficient of the affected area by default
-/mob/living/carbon/human/electrocute_act(var/shock_damage, var/obj/source, var/siemens_coeff = 1.0, def_zone = null, stun)
+/mob/living/carbon/human/electrocute_act(var/shock_damage, var/obj/source, siemens_coeff = 1.0, def_zone = null, stun)
 
 	if(SEND_SIGNAL(src, COMSIG_BEING_ELECTROCUTED, shock_damage, source, siemens_coeff, def_zone, stun) & COMPONENT_CARBON_CANCEL_ELECTROCUTE)
 		return 0	// Cancelled by a component
@@ -1393,7 +1393,7 @@
 		W.message = message
 		W.add_fingerprint(src)
 
-/mob/living/carbon/human/can_inject(var/mob/user, var/error_msg, target_zone, ignore_thickness = FALSE)
+/mob/living/carbon/human/can_inject(var/mob/user, error_msg, target_zone, ignore_thickness = FALSE)
 	. = 1
 
 	if(!target_zone)

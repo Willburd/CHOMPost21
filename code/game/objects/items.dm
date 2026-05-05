@@ -698,7 +698,7 @@ GLOBAL_LIST_INIT(slot_flags_enumeration, list(
 //If a negative value is returned, it should be treated as a special return value for bullet_act() and handled appropriately.
 //For non-projectile attacks this usually means the attack is blocked.
 //Otherwise should return 0 to indicate that the attack is not affected in any way.
-/obj/item/proc/handle_shield(mob/user, var/damage, atom/damage_source = null, mob/attacker = null, def_zone = null, attack_text = "the attack")
+/obj/item/proc/handle_shield(mob/user, damage, atom/damage_source = null, mob/attacker = null, def_zone = null, attack_text = "the attack")
 	return 0
 
 /obj/item/proc/get_loc_turf()
@@ -843,7 +843,7 @@ GLOBAL_LIST_EMPTY(blood_overlays_by_type)
 		I.showoff(src)
 
 /// For zooming with scope or binoculars. Uses remote_view/item component for disabling when you move or drop the item
-/obj/item/proc/zoom(var/mob/living/M, tileoffset = 14,viewsize = 9) //tileoffset is client view offset in the direction the user is facing. viewsize is how far out this thing zooms. 7 is normal view
+/obj/item/proc/zoom(mob/living/M, tileoffset = 14,viewsize = 9) //tileoffset is client view offset in the direction the user is facing. viewsize is how far out this thing zooms. 7 is normal view
 	SIGNAL_HANDLER
 	if(isliving(usr)) //Always prefer usr if set
 		M = usr
@@ -884,7 +884,7 @@ GLOBAL_LIST_EMPTY(blood_overlays_by_type)
 
 // Used for non-adjacent melee attacks with specific weapons capable of reaching more than one tile.
 // This uses changeling range string A* but for this purpose its also applicable.
-/obj/item/proc/attack_can_reach(var/atom/us, atom/them, range)
+/obj/item/proc/attack_can_reach(atom/us, atom/them, range)
 	if(us.Adjacent(them))
 		return TRUE // Already adjacent.
 	if(AStar(get_turf(us), get_turf(them), /turf/proc/AdjacentTurfsRangedSting, /turf/proc/Distance, max_nodes=25, max_node_depth=range))
@@ -909,7 +909,7 @@ GLOBAL_LIST_EMPTY(blood_overlays_by_type)
 		return FALSE
 
 //Worn icon generation for on-mob sprites
-/obj/item/proc/make_worn_icon(var/body_type,var/slot_name,var/inhands,var/default_icon,default_layer,icon/clip_mask = null)
+/obj/item/proc/make_worn_icon(var/body_type,var/slot_name,var/inhands,default_icon,default_layer,icon/clip_mask = null)
 	//Get the required information about the base icon
 	var/icon/icon2use = get_worn_icon_file(body_type = body_type, slot_name = slot_name, default_icon = default_icon, inhands = inhands)
 	var/state2use = get_worn_icon_state(slot_name = slot_name)
@@ -958,7 +958,7 @@ GLOBAL_LIST_EMPTY(blood_overlays_by_type)
 	return standing
 
 //Returns the icon object that should be used for the worn icon
-/obj/item/proc/get_worn_icon_file(var/body_type,var/slot_name,default_icon,inhands)
+/obj/item/proc/get_worn_icon_file(var/body_type,slot_name,default_icon,inhands)
 
 	//1: icon_override var
 	if(icon_override)

@@ -26,7 +26,7 @@
 	. = ..()
 	update_icon()
 
-/obj/item/glass_jar/afterattack(var/atom/A, mob/user, proximity)
+/obj/item/glass_jar/afterattack(atom/A, mob/user, proximity)
 	if(!proximity || contains)
 		return
 	if(can_fill && !filled)

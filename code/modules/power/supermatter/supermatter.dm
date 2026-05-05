@@ -638,7 +638,7 @@
 		strength = 200
 	)
 
-/proc/supermatter_pull(var/atom/target, pull_range = 255, pull_power = STAGE_FIVE)
+/proc/supermatter_pull(atom/target, pull_range = 255, pull_power = STAGE_FIVE)
 	for(var/atom/A in range(pull_range, target))
 		A.singularity_pull(target, pull_power)
 

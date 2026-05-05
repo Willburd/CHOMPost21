@@ -131,7 +131,7 @@ SUBSYSTEM_DEF(radio)
 			send_to_filter(source, signal, next_filter, start_point, range)
 
 //Sends a signal to all machines belonging to a given filter. Should be called by post_signal()
-/datum/radio_frequency/proc/send_to_filter(obj/source, datum/signal/signal, var/radio_filter, turf/start_point = null, range = null)
+/datum/radio_frequency/proc/send_to_filter(obj/source, datum/signal/signal, radio_filter, turf/start_point = null, range = null)
 	if (range && !start_point)
 		return
 

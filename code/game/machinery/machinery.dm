@@ -355,7 +355,7 @@ Class Procs:
 	return
 
 // Default behavior for wrenching down machines.  Supports both delay and instant modes.
-/obj/machinery/proc/default_unfasten_wrench(var/mob/user, obj/item/W, time = 0)
+/obj/machinery/proc/default_unfasten_wrench(mob/user, obj/item/W, time = 0)
 	if(!W.has_tool_quality(TOOL_WRENCH))
 		return FALSE
 	if(panel_open)

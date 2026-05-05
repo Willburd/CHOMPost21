@@ -326,7 +326,7 @@
 	else
 		return
 
-/obj/item/gun/magnetic/fuelrod/proc/blitzed(var/turf/T, var/mob/living/carbon/M, max_range, banglet)					// Added a new proc called 'bang' that takes a location and a person to be banged.
+/obj/item/gun/magnetic/fuelrod/proc/blitzed(var/turf/T, mob/living/carbon/M, max_range, banglet)					// Added a new proc called 'bang' that takes a location and a person to be banged.
 	to_chat(M, span_danger("BANG"))						// Called during the loop that bangs people in lockers/containers and when banging
 	playsound(src, 'sound/effects/bang.ogg', 50, 1, 30)		// people in normal view.  Could theroetically be called during other explosions.
 

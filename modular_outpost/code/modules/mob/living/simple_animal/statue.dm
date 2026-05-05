@@ -80,7 +80,7 @@ GLOBAL_VAR_INIT(statue_photos_allowed, 3) // Photos can spawn statues... Lets no
 	. = ..()
 
 // Cannot talk
-/mob/living/simple_mob/animal/statue/say(var/message, datum/language/speaking = null, whispering = 0)
+/mob/living/simple_mob/animal/statue/say(message, datum/language/speaking = null, whispering = 0)
 	return 0
 
 // Turn to dust when killed

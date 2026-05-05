@@ -74,7 +74,7 @@ Deployable items
 		explode()
 	return
 
-/obj/machinery/deployable/barrier/attack_generic(var/mob/user, damage, attack_verb)
+/obj/machinery/deployable/barrier/attack_generic(mob/user, damage, attack_verb)
 	visible_message(span_danger("[user] [attack_verb] the [src]!"))
 	playsound(src, 'sound/weapons/smash.ogg', 50, 1)
 	user.do_attack_animation(src)

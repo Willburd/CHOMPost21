@@ -64,7 +64,7 @@
 		return FALSE
 	return TRUE
 
-/obj/machinery/petrification/proc/popup_msg(var/mob/user, message, notice = TRUE)
+/obj/machinery/petrification/proc/popup_msg(mob/user, message, notice = TRUE)
 	if (notice)
 		message = "A notice pops up on the interface: \"[message]\""
 	if (target)

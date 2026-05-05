@@ -141,7 +141,7 @@
 		else continue
 		side = "right"
 
-/obj/item/reagent_containers/food/drinks/glass2/afterattack(var/obj/target, mob/user, proximity)
+/obj/item/reagent_containers/food/drinks/glass2/afterattack(obj/target, mob/user, proximity)
 	if(user.a_intent == I_HURT) //We only want splashing to be done if they are on harm intent.
 		if(!is_open_container() || !proximity)
 			return TRUE

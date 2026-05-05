@@ -72,7 +72,7 @@
 						available_jobs[job.title] += alt_job
 	return available_jobs
 
-/datum/data/pda/app/timeclock/proc/isOpenOnDutyJob(var/mob/user, department, datum/job/job)
+/datum/data/pda/app/timeclock/proc/isOpenOnDutyJob(mob/user, department, datum/job/job)
 	return job \
 		   && job.is_position_available() \
 		   && !job.whitelist_only \

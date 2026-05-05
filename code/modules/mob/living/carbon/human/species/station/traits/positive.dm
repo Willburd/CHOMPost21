@@ -257,7 +257,7 @@
 	added_component_path = /datum/component/weaver
 	excludes = list(/datum/trait/positive/cocoon_tf)
 
-/datum/trait/positive/weaver/apply(var/datum/species/S,mob/living/carbon/human/H, list/trait_prefs)
+/datum/trait/positive/weaver/apply(datum/species/S,mob/living/carbon/human/H, list/trait_prefs)
 	..()
 	var/datum/component/weaver/W = H.GetComponent(added_component_path)
 	if(S.get_bodytype() == SPECIES_VASILISSAN)
@@ -412,7 +412,7 @@
 
 	has_preferences = list("pass_table" = list(TRAIT_PREF_TYPE_BOOLEAN, "On spawn", TRAIT_NO_VAREDIT_TARGET, TRUE))
 
-/datum/trait/positive/table_passer/apply(var/datum/species/S,mob/living/carbon/human/H, list/trait_prefs)
+/datum/trait/positive/table_passer/apply(datum/species/S,mob/living/carbon/human/H, list/trait_prefs)
 	..()
 	if(trait_prefs?["pass_table"] || !trait_prefs)
 		H.pass_flags |= PASSTABLE
@@ -944,7 +944,7 @@
 	added_component_path = /datum/component/radiation_effects
 	excludes = list(/datum/trait/neutral/glowing_radiation, /datum/trait/positive/rad_resistance, /datum/trait/positive/rad_resistance_extreme, /datum/trait/positive/rad_immune, /datum/trait/negative/rad_weakness)
 
-/datum/trait/positive/radioactive_heal/apply(var/datum/species/S,mob/living/carbon/human/H, list/trait_prefs)
+/datum/trait/positive/radioactive_heal/apply(datum/species/S,mob/living/carbon/human/H, list/trait_prefs)
 	..()
 	var/datum/component/radiation_effects/G = H.GetComponent(added_component_path)
 	if(trait_prefs)
@@ -953,7 +953,7 @@
 	G.radiation_healing = TRUE
 	G.radiation_nutrition = TRUE
 
-/datum/trait/positive/radioactive_heal/unapply(var/datum/species/S,mob/living/carbon/human/H, list/trait_prefs)
+/datum/trait/positive/radioactive_heal/unapply(datum/species/S,mob/living/carbon/human/H, list/trait_prefs)
 	..() //Does all the removal stuff
 	//We then check to see if we still have the radiation component (such as we have a species componennt of it)
 	//If so, we remove the healing effect.

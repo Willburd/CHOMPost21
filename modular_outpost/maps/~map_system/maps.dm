@@ -257,7 +257,7 @@ var/list/all_maps = list()
 
 // Get a list of 'nearby' or 'connected' zlevels.
 // You should at least return a list with the given z if nothing else.
-/datum/map/proc/get_map_levels(var/srcz, long_range = FALSE, om_range = -1)
+/datum/map/proc/get_map_levels(srcz, long_range = FALSE, om_range = -1)
 	//Get what sector we're in
 	var/obj/effect/overmap/visitable/O = get_overmap_sector(srcz)
 	if(istype(O))

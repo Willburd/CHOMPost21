@@ -1,4 +1,4 @@
-/proc/gibs(atom/location, var/datum/dna/MobDNA, gibber_type = /obj/effect/gibspawner/generic, fleshcolor, bloodcolor)
+/proc/gibs(atom/location, datum/dna/MobDNA, gibber_type = /obj/effect/gibspawner/generic, fleshcolor, bloodcolor)
 	new gibber_type(location,MobDNA,fleshcolor,bloodcolor)
 
 /obj/effect/gibspawner
@@ -12,7 +12,7 @@
 	icon = 'icons/effects/map_effects.dmi'
 	icon_state = "gibspawn"
 
-/obj/effect/gibspawner/Initialize(mapload, var/datum/dna/MobDNA, fleshcolor, bloodcolor)
+/obj/effect/gibspawner/Initialize(mapload, datum/dna/MobDNA, fleshcolor, bloodcolor)
 	. = ..()
 
 	if(fleshcolor) src.fleshcolor = fleshcolor

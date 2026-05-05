@@ -53,7 +53,7 @@
 	if(isnull(val)) val = 0
 	return "[val]"
 
-/datum/random_map/noise/proc/subdivide(var/iteration,var/x,y,input_size)
+/datum/random_map/noise/proc/subdivide(var/iteration,x,y,input_size)
 
 	var/isize = input_size
 	var/hsize = round(input_size/2)

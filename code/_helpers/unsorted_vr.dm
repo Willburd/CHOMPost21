@@ -42,7 +42,7 @@
 	return list(part1, part2, part3)
 
 //Sender is optional
-/proc/admin_chat_message(var/message = "Debug Message", color = "#FFFFFF", sender)
+/proc/admin_chat_message(message = "Debug Message", color = "#FFFFFF", sender)
 	if (!CONFIG_GET(string/chat_webhook_url) || !message)
 		return
 	spawn(0)
@@ -54,7 +54,7 @@
 			query_string += "&from=[url_encode(sender)]"
 		world.Export("[CONFIG_GET(string/chat_webhook_url)]?[query_string]")
 
-/proc/admin_action_message(var/admin = "INVALID", var/user = "INVALID", var/action = "INVALID", reason = "INVALID", time = "INVALID")
+/proc/admin_action_message(var/admin = "INVALID", var/user = "INVALID", action = "INVALID", reason = "INVALID", time = "INVALID")
 	if (!CONFIG_GET(string/chat_webhook_url) || !action)
 		return
 	spawn(0)

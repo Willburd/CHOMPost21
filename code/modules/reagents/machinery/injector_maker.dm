@@ -246,7 +246,7 @@
 				update_icon()
 
 
-/obj/machinery/injector_maker/proc/make_injector(var/size, var/amount, new_name, material, mob/user)
+/obj/machinery/injector_maker/proc/make_injector(var/size, amount, new_name, material, mob/user)
 	if(!beaker)
 		return
 	var/amount_per_injector = null

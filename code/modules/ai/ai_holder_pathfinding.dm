@@ -45,7 +45,7 @@
 	ai_log("calculate_path() : Exiting.", AI_LOG_DEBUG)
 
 //A* now, try to a path to a target
-/datum/ai_holder/proc/get_path(var/turf/target,get_to = 1, max_distance = 0)
+/datum/ai_holder/proc/get_path(turf/target,get_to = 1, max_distance = 0)
 	ai_log("get_path() : Entering.",AI_LOG_DEBUG)
 	forget_path()
 	var/path_dist = max_distance

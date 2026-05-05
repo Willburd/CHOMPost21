@@ -25,7 +25,7 @@
 	if(standard_feed_mob(user, M))
 		return
 
-/obj/item/reagent_containers/food/condiment/afterattack(var/obj/target, mob/user, flag)
+/obj/item/reagent_containers/food/condiment/afterattack(obj/target, mob/user, flag)
 	if(!user.Adjacent(target))
 		return
 	if(standard_dispenser_refill(user, target))

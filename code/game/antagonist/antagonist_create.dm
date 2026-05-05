@@ -1,4 +1,4 @@
-/datum/antagonist/proc/create_antagonist(var/datum/mind/target, var/move, gag_announcement, preserve_appearance)
+/datum/antagonist/proc/create_antagonist(var/datum/mind/target, move, gag_announcement, preserve_appearance)
 
 	if(!target)
 		return
@@ -32,7 +32,7 @@
 	add_antagonist(M.mind, 1, 0, 1) // Equip them and move them to spawn.
 	return M
 
-/datum/antagonist/proc/create_id(var/assignment, mob/living/carbon/human/player, equip = 1)
+/datum/antagonist/proc/create_id(assignment, mob/living/carbon/human/player, equip = 1)
 
 	var/obj/item/card/id/W = new id_type(player)
 	if(!W) return

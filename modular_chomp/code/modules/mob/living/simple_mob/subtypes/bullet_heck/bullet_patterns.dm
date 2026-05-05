@@ -675,7 +675,7 @@
 	attackcycle = next_cycle
 
 //random
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/random_firing(atom/target, var/amount, next_cycle, fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/random_firing(atom/target, amount, next_cycle, fire_delay)
 	var/rngx = rand(-7,7)
 	var/rngy = rand(-7,7)
 	if(!target)
@@ -688,7 +688,7 @@
 		attackcycle = next_cycle
 
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/quad_random_firing(atom/target, var/amount, next_cycle, fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/quad_random_firing(atom/target, amount, next_cycle, fire_delay)
 	var/rngx = rand(-7,7)
 	var/rngy = rand(-7,7)
 	var/rngxx = rand(-7,7)
@@ -942,7 +942,7 @@
 	bullet_heck(target, -7, -5)
 	attackcycle = next_cycle
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/gattlingfire(atom/target, var/next_cycle, amount, fire_delay)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/gattlingfire(atom/target, next_cycle, amount, fire_delay)
 	if(!target)
 		return
 	var/obj/item/projectile/P = new specialattackprojectile(get_turf(src))
@@ -1025,7 +1025,7 @@
 	bullet_heck(target, 7, -7)
 	attackcycle = next_cycle
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/cutoff(atom/target, var/next_cycle, fire_delay, amount)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/cutoff(atom/target, next_cycle, fire_delay, amount)
 	if(!target)
 		return
 	bullet_heck(target, 7, 0)
@@ -1038,7 +1038,7 @@
 	else
 		attackcycle = next_cycle
 
-/mob/living/simple_mob/mechanical/mecha/eclipse/proc/cutoff_ulti(atom/target, var/next_cycle, fire_delay, amount)
+/mob/living/simple_mob/mechanical/mecha/eclipse/proc/cutoff_ulti(atom/target, next_cycle, fire_delay, amount)
 	if(!target)
 		return
 	bullet_heck(target, 7, 0)

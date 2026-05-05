@@ -26,7 +26,7 @@
 	edge = TRUE
 	sharp = TRUE
 
-/obj/item/material/twohanded/saber/handle_shield(mob/user, var/damage, atom/damage_source = null, mob/attacker = null, def_zone = null, attack_text = "the attack")
+/obj/item/material/twohanded/saber/handle_shield(mob/user, damage, atom/damage_source = null, mob/attacker = null, def_zone = null, attack_text = "the attack")
 	if (src.wielded == 1)
 		if(unique_parry_check(user, attacker, damage_source) && prob(50))
 			user.visible_message(span_danger("\The [user] parries [attack_text] with \the [src]!"))
@@ -59,7 +59,7 @@
 	edge = FALSE
 	sharp = FALSE
 
-/obj/item/material/twohanded/staff/handle_shield(mob/user, var/damage, atom/damage_source = null, mob/attacker = null, def_zone = null, attack_text = "the attack")
+/obj/item/material/twohanded/staff/handle_shield(mob/user, damage, atom/damage_source = null, mob/attacker = null, def_zone = null, attack_text = "the attack")
 	var/parry_chance
 	if(istype(damage_source, /obj/item/projectile))	//can't block ranged attacks, only melee!
 		return 0

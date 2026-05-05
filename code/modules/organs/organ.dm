@@ -565,7 +565,7 @@
 
 	return FALSE
 
-/obj/item/organ/proc/butcher(var/obj/item/O, mob/living/user, atom/newtarget)
+/obj/item/organ/proc/butcher(obj/item/O, mob/living/user, atom/newtarget)
 
 	if(user)
 		to_chat(user, span_danger("You are preparing to butcher \the [src]!"))

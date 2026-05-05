@@ -31,7 +31,7 @@ GLOBAL_DATUM_INIT(ingame_hud_med_vr, /icon, icon('icons/mob/hud_med_vr.dmi'))
 		update_icons_body()
 	return success
 
-/mob/living/carbon/human/proc/change_priority_of_marking(var/datum/sprite_accessory/marking/mark_datum, move_down, swap = TRUE) //move_down should be true/false
+/mob/living/carbon/human/proc/change_priority_of_marking(datum/sprite_accessory/marking/mark_datum, move_down, swap = TRUE) //move_down should be true/false
 	if (!mark_datum)
 		return FALSE
 	var/change = move_down ? 1 : -1
@@ -119,7 +119,7 @@ GLOBAL_DATUM_INIT(ingame_hud_med_vr, /icon, icon('icons/mob/hud_med_vr.dmi'))
 	//does not really need to happen, that kinda thing will only happen when putting another person's limb onto your own body
 	return sorted
 
-/mob/living/carbon/human/proc/transform_into_other_human(var/mob/living/carbon/human/character, var/copy_name, var/copy_flavour = TRUE, convert_to_prosthetics = FALSE, apply_bloodtype = TRUE)
+/mob/living/carbon/human/proc/transform_into_other_human(var/mob/living/carbon/human/character, var/copy_name, copy_flavour = TRUE, convert_to_prosthetics = FALSE, apply_bloodtype = TRUE)
 	/*
 	name, nickname, flavour, OOC notes
 	gender, sex

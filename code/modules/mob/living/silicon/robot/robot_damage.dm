@@ -41,7 +41,7 @@
 	else
 		heal_overall_damage(0, -amount)
 
-/mob/living/silicon/robot/proc/get_damaged_components(var/brute, burn, destroyed = 0)
+/mob/living/silicon/robot/proc/get_damaged_components(brute, burn, destroyed = 0)
 	var/list/datum/robot_component/parts = list()
 	for(var/V in components)
 		var/datum/robot_component/C = components[V]
@@ -71,7 +71,7 @@
 	var/datum/robot_component/picked = pick(parts)
 	picked.heal_damage(brute,burn)
 
-/mob/living/silicon/robot/take_organ_damage(var/brute = 0, var/burn = 0, var/sharp = FALSE, edge = FALSE, emp = 0)
+/mob/living/silicon/robot/take_organ_damage(var/brute = 0, var/burn = 0, sharp = FALSE, edge = FALSE, emp = 0)
 	var/list/components = get_damageable_components()
 	if(!components.len)
 		return
@@ -117,7 +117,7 @@
 
 		parts -= picked
 
-/mob/living/silicon/robot/take_overall_damage(var/brute = 0, var/burn = 0, sharp = FALSE, used_weapon = null)
+/mob/living/silicon/robot/take_overall_damage(var/brute = 0, burn = 0, sharp = FALSE, used_weapon = null)
 	if(SEND_SIGNAL(src, COMSIG_CHECK_FOR_GODMODE) & COMSIG_GODMODE_CANCEL) //Normally we'd let this proc continue on, but it's much less time consumptive to just do a godmode check here.
 		return 0	// Cancelled by a component
 	var/list/datum/robot_component/parts = get_damageable_components()

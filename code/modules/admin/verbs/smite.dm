@@ -327,7 +327,7 @@ GLOBAL_VAR(redspace_abduction_z)
 	*/
 	// Outpost 21 edit end
 
-/proc/fake_autosave(var/mob/living/target, client/user, wide)
+/proc/fake_autosave(mob/living/target, client/user, wide)
 	if(!istype(target) || !target.client)
 		to_chat(user, span_warning("Skipping [target] because they are not a /mob/living or have no client."))
 		return

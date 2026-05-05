@@ -1,6 +1,6 @@
 // Procs for living mobs based around mob transformation. Initially made for the mouseray, they are now used in various other places and the main procs are now called from here.
 
-/mob/living/proc/tf_into(var/A, allow_emotes = FALSE, object_name)
+/mob/living/proc/tf_into(A, allow_emotes = FALSE, object_name)
 	if(isliving(A))
 		var/mob/living/M = A
 		transform_into_mob(M, FALSE)

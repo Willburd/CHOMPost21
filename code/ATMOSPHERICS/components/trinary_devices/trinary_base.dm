@@ -195,7 +195,7 @@
 
 // Trinary init_dir() logic in a separate proc so it can be referenced from "trinary-ish" places like T-Valves
 // TODO - Someday refactor those places under atmospherics/trinary
-/proc/get_initialize_directions_trinary(var/dir, mirrored = FALSE, tee = FALSE)
+/proc/get_initialize_directions_trinary(dir, mirrored = FALSE, tee = FALSE)
 	if(tee)
 		switch(dir)
 			if(NORTH)
@@ -228,7 +228,7 @@
 				return WEST|NORTH|EAST
 
 // Trinary get_node_connect_dirs() logic in a separate proc so it can be referenced from "trinary-ish" places like T-Valves
-/proc/get_node_connect_dirs_trinary(var/dir, mirrored = FALSE, tee = FALSE)
+/proc/get_node_connect_dirs_trinary(dir, mirrored = FALSE, tee = FALSE)
 	var/node1_connect
 	var/node2_connect
 	var/node3_connect

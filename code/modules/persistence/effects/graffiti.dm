@@ -49,7 +49,7 @@
 	LAZYADDASSOC(., "pixel_x", "[save_graffiti.pixel_x]")
 	LAZYADDASSOC(., "pixel_y", "[save_graffiti.pixel_y]")
 
-/datum/persistent/graffiti/GetAdminDataStringFor(var/thing, can_modify, mob/user)
+/datum/persistent/graffiti/GetAdminDataStringFor(thing, can_modify, mob/user)
 	var/obj/effect/decal/writing/save_graffiti = thing
 	if(can_modify)
 		. = "<td colspan = 2>[save_graffiti.message]</td><td>[save_graffiti.author]</td><td><a href='byond://?src=\ref[src];[HrefToken()];caller=\ref[user];remove_entry=\ref[thing]'>Destroy</a></td>"

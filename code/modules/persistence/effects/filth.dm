@@ -4,7 +4,7 @@
 	var/saves_dirt = TRUE //VOREStation edit
 	has_admin_data = TRUE
 
-/datum/persistent/filth/GetAdminDataStringFor(var/thing, can_modify, mob/user)
+/datum/persistent/filth/GetAdminDataStringFor(thing, can_modify, mob/user)
 	if(istype(thing, /obj/effect/decal/cleanable/crayon))
 		var/obj/effect/decal/cleanable/crayon/CRAY = thing
 		if(can_modify)

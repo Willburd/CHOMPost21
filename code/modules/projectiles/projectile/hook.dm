@@ -71,7 +71,7 @@
 			chain.Draw()
 	return
 
-/obj/item/projectile/energy/hook/on_hit(var/atom/target, blocked = 0, def_zone = null)
+/obj/item/projectile/energy/hook/on_hit(atom/target, blocked = 0, def_zone = null)
 	if(..())
 		perform_intent_unique(target)
 

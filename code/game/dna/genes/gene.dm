@@ -25,14 +25,14 @@
 	return 0
 
 // Called when the gene activates.  Do your magic here.
-/datum/gene/proc/activate(var/mob/M, connected, mut_flags) // Traitgenes edit - Removed /dna/ from path. mut_flags instead of flags for clarity
+/datum/gene/proc/activate(mob/M, connected, mut_flags) // Traitgenes edit - Removed /dna/ from path. mut_flags instead of flags for clarity
 	return
 
 /**
 * Called when the gene deactivates.  Undo your magic here.
 * Only called when the block is deactivated.
 */
-/datum/gene/proc/deactivate(var/mob/M, connected, mut_flags) // Traitgenes edit - Removed /dna/ from path. mut_flags instead of flags for clarity
+/datum/gene/proc/deactivate(mob/M, connected, mut_flags) // Traitgenes edit - Removed /dna/ from path. mut_flags instead of flags for clarity
 	return
 
 // Traitgenes edit - Genes are linked to traits now. Because no one bothered to maintain genes, and instead jumped through two different trait systems to avoid them. So here we are. - Willbird
@@ -108,7 +108,7 @@
 
 	return has_conflict
 
-/datum/gene/trait/activate(var/mob/M, connected, mut_flags)
+/datum/gene/trait/activate(mob/M, connected, mut_flags)
 	if(linked_trait && ishuman(M))
 		var/mob/living/carbon/human/H = M
 		if(H.species) // Lets avoid runtime assertions
@@ -123,7 +123,7 @@
 			if(!(mut_flags & MUTCHK_HIDEMSG))
 				linked_trait.send_message( H, TRUE)
 
-/datum/gene/trait/deactivate(var/mob/M, connected, mut_flags)
+/datum/gene/trait/deactivate(mob/M, connected, mut_flags)
 	if(linked_trait && ishuman(M))
 		var/mob/living/carbon/human/H = M
 		if(H.species) // Lets avoid runtime assertions

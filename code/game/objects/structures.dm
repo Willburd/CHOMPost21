@@ -60,7 +60,7 @@
 		return 0
 	return 1
 
-/obj/structure/attack_generic(var/mob/user, damage, attack_verb)
+/obj/structure/attack_generic(mob/user, damage, attack_verb)
 	if(!breakable || damage < STRUCTURE_MIN_DAMAGE_THRESHOLD)
 		return 0
 	visible_message(span_danger("[user] [attack_verb] the [src] apart!"))

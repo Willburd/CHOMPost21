@@ -41,7 +41,7 @@
 	analyze_gases(src, user)
 	return
 
-/obj/item/analyzer/afterattack(var/obj/O, mob/user, proximity)
+/obj/item/analyzer/afterattack(obj/O, mob/user, proximity)
 	if(proximity)
 		analyze_gases(O, user)
 	return

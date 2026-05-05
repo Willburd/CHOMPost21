@@ -1,7 +1,7 @@
 /turf/simulated/wall/diona/Initialize(mapload)
 	. = ..(mapload, MAT_BIOMASS)
 
-/turf/simulated/wall/diona/attack_generic(var/mob/user, damage, attack_message)
+/turf/simulated/wall/diona/attack_generic(mob/user, damage, attack_message)
 	if(istype(user, /mob/living/carbon/alien/diona))
 		if(can_open == WALL_OPENING)
 			return
@@ -65,7 +65,7 @@
 	floor_type = /turf/simulated/floor/diona
 
 // This is disgusting.
-/datum/random_map/automata/diona/proc/search_neighbors_for(var/search_val, x, y)
+/datum/random_map/automata/diona/proc/search_neighbors_for(search_val, x, y)
 	var/current_cell = get_map_cell(x-1,y-1)
 	if(current_cell && map[current_cell] == search_val) return 1
 	current_cell = get_map_cell(x-1,y)

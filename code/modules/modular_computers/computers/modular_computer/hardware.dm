@@ -1,5 +1,5 @@
 // Attempts to install the hardware into apropriate slot.
-/obj/item/modular_computer/proc/try_install_component(var/mob/living/user, obj/item/computer_hardware/H, found = 0)
+/obj/item/modular_computer/proc/try_install_component(mob/living/user, obj/item/computer_hardware/H, found = 0)
 	// "USB" flash drive.
 	if(istype(H, /obj/item/computer_hardware/hard_drive/portable))
 		if(portable_drive)
@@ -57,7 +57,7 @@
 		update_verbs()
 
 // Uninstalls component. Found and Critical vars may be passed by parent types, if they have additional hardware.
-/obj/item/modular_computer/proc/uninstall_component(var/mob/living/user, var/obj/item/computer_hardware/H, found = 0, critical = 0)
+/obj/item/modular_computer/proc/uninstall_component(var/mob/living/user, obj/item/computer_hardware/H, found = 0, critical = 0)
 	if(portable_drive == H)
 		portable_drive = null
 		found = 1

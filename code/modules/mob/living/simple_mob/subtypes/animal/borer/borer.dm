@@ -316,7 +316,7 @@
 /mob/living/simple_mob/animal/borer/cannot_use_vents()
 	return host || stat
 
-/mob/living/simple_mob/animal/borer/extra_huds(var/datum/hud/hud,icon/ui_style,list/hud_elements)
+/mob/living/simple_mob/animal/borer/extra_huds(datum/hud/hud,icon/ui_style,list/hud_elements)
 	// Chem hud
 	borer_chem_display = new /atom/movable/screen/borer/chems()
 	borer_chem_display.screen_loc = ui_ling_chemical_display
@@ -330,7 +330,7 @@
 	. = ..()
 
 // This is awful but its literally say code.
-/mob/living/simple_mob/animal/borer/say(var/message, datum/language/speaking = null, whispering = 0)
+/mob/living/simple_mob/animal/borer/say(message, datum/language/speaking = null, whispering = 0)
 	message = sanitize(message)
 	message = capitalize(message)
 

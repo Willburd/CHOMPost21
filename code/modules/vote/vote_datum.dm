@@ -20,7 +20,7 @@
 	// For how long will it be up
 	var/vote_time = 60 SECONDS
 
-/datum/vote/New(var/_initiator, _question, list/_choices, _is_custom = FALSE)
+/datum/vote/New(_initiator, _question, list/_choices, _is_custom = FALSE)
 	if(SSvote.active_vote)
 		CRASH("Attempted to start another vote with one already in progress!")
 
@@ -63,7 +63,7 @@
 	return calculate_vote_result(voted, choices, vote_result_type)
 
 
-/datum/vote/proc/calculate_vote_result(var/list/voted, list/choices, vote_result_type)
+/datum/vote/proc/calculate_vote_result(list/voted, list/choices, vote_result_type)
 	var/list/results = list()
 
 	for(var/ck in voted)

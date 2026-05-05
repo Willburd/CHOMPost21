@@ -11,7 +11,7 @@
 		standing.add_overlay(bloodsies)
 
 //HELMET: May have a lighting overlay
-/obj/item/clothing/head/make_worn_icon(var/body_type,var/slot_name,var/inhands,var/default_icon,default_layer = 0,icon/clip_mask = null)
+/obj/item/clothing/head/make_worn_icon(var/body_type,var/slot_name,var/inhands,default_icon,default_layer = 0,icon/clip_mask = null)
 	var/image/standing = ..()
 	if(light_on && slot_name == slot_head_str)
 		var/cache_key = "[light_overlay][LAZYACCESS(sprite_sheets, body_type) ? "_[body_type]" : ""]"

@@ -163,7 +163,7 @@
 	sparring_variant_type = /datum/unarmed_attack/holopugilism
 	is_punch = TRUE
 
-/datum/unarmed_attack/holopugilism/unarmed_override(var/mob/living/carbon/human/user,mob/living/carbon/human/target,zone)
+/datum/unarmed_attack/holopugilism/unarmed_override(mob/living/carbon/human/user,mob/living/carbon/human/target,zone)
 	user.do_attack_animation(src)
 	var/damage = rand(0, 9)
 	if(!damage)
@@ -316,7 +316,7 @@
 /obj/item/holo/esword/red
 	lcolor = "#FF0000"
 
-/obj/item/holo/esword/handle_shield(mob/user, var/damage, atom/damage_source = null, mob/attacker = null, def_zone = null, attack_text = "the attack")
+/obj/item/holo/esword/handle_shield(mob/user, damage, atom/damage_source = null, mob/attacker = null, def_zone = null, attack_text = "the attack")
 	if(active && default_parry_check(user, attacker, damage_source) && prob(50))
 		user.visible_message(span_danger("\The [user] parries [attack_text] with \the [src]!"))
 

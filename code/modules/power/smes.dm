@@ -65,7 +65,7 @@ GLOBAL_LIST_EMPTY(smeses)
 	// Outpost 21 edit - critical smes to avoid powerouts on admin power drain
 	var/is_critical = FALSE
 
-/obj/machinery/power/smes/drain_power(var/drain_check, surge, amount = 0)
+/obj/machinery/power/smes/drain_power(drain_check, surge, amount = 0)
 
 	if(drain_check)
 		return 1
@@ -315,7 +315,7 @@ GLOBAL_LIST_EMPTY(smeses)
 		return 0
 	return 1
 
-/obj/machinery/power/smes/proc/check_terminal_exists(var/turf/location, mob/user, direction)
+/obj/machinery/power/smes/proc/check_terminal_exists(turf/location, mob/user, direction)
 	for(var/obj/machinery/power/terminal/term in location)
 		if(term.dir == direction)
 			to_chat(user, span_filter_notice(span_notice("There is already a terminal here.")))

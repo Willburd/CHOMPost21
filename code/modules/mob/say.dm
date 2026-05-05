@@ -1,8 +1,8 @@
-/mob/proc/say(var/message, datum/language/speaking = null, whispering = 0)
+/mob/proc/say(message, datum/language/speaking = null, whispering = 0)
 	return
 
 // MUST BE NON-BLOCKING, signals can call this
-/mob/proc/direct_say(var/message, datum/language/speaking = null, whispering = 0)
+/mob/proc/direct_say(message, datum/language/speaking = null, whispering = 0)
 	SHOULD_NOT_SLEEP(TRUE)
 	return
 

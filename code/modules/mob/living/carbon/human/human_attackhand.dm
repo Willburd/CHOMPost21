@@ -106,7 +106,7 @@
 /// This condenses them and makes it less of a cluster.
 
 ///Help Intent
-/mob/living/carbon/human/proc/attack_hand_help_intent(var/mob/living/carbon/human/H, mob/living/M, has_hands)
+/mob/living/carbon/human/proc/attack_hand_help_intent(mob/living/carbon/human/H, mob/living/M, has_hands)
 	PRIVATE_PROC(TRUE)
 	SHOULD_NOT_OVERRIDE(TRUE)
 	if(M.restrained()) //If we're restrained, we can't help them. If you want to add snowflake stuff that you can do while restrained, add it here.
@@ -152,7 +152,7 @@
 	return TRUE
 
 //Disarm Intent
-/mob/living/carbon/human/proc/attack_hand_disarm_intent(var/mob/living/carbon/human/H, mob/living/M as mob, has_hands)
+/mob/living/carbon/human/proc/attack_hand_disarm_intent(mob/living/carbon/human/H, mob/living/M as mob, has_hands)
 	PRIVATE_PROC(TRUE)
 	SHOULD_NOT_OVERRIDE(TRUE)
 	if(M.restrained()) //If we're restrained, we can't disarm them. If you want to add snowflake stuff that you can do while restrained, add it here.
@@ -236,7 +236,7 @@
 	else
 		visible_message(span_filter_combat("[span_red(span_bold("[M] attempted to disarm [src]!"))]"))
 //Grab Intent
-/mob/living/carbon/human/proc/attack_hand_grab_intent(var/mob/living/carbon/human/H, mob/living/M as mob, has_hands)
+/mob/living/carbon/human/proc/attack_hand_grab_intent(mob/living/carbon/human/H, mob/living/M as mob, has_hands)
 	PRIVATE_PROC(TRUE)
 	SHOULD_NOT_OVERRIDE(TRUE)
 	if(M.restrained()) //If we're restrained, we can't grab them. If you want to add snowflake stuff that you can do while restrained, add it here.
@@ -266,7 +266,7 @@
 	playsound(src, 'sound/weapons/thudswoosh.ogg', 50, 1, -1)
 	visible_message(span_warning("[M] has grabbed [src] [(M.zone_sel.selecting == BP_L_HAND || M.zone_sel.selecting == BP_R_HAND)? "by [(gender==FEMALE)? "her" : ((gender==MALE)? "his": "their")] hands": "passively"]!"))
 //Harm Intent
-/mob/living/carbon/human/proc/attack_hand_harm_intent(var/mob/living/carbon/human/H, mob/living/M as mob, has_hands)
+/mob/living/carbon/human/proc/attack_hand_harm_intent(mob/living/carbon/human/H, mob/living/M as mob, has_hands)
 	PRIVATE_PROC(TRUE)
 	SHOULD_NOT_OVERRIDE(TRUE)
 	//As a note: This intentionally doesn't immediately return if has_hands is false. This is because you can attack with kicks/bites!
@@ -418,7 +418,7 @@
 /mob/living/carbon/human/proc/afterattack(atom/target as mob|obj|turf|area, mob/living/user as mob|obj, inrange, params)
 	return
 
-/mob/living/carbon/human/attack_generic(var/mob/user, var/damage, var/attack_message, var/armor_type = "melee", var/armor_pen = 0, a_sharp = 0, a_edge = 0)
+/mob/living/carbon/human/attack_generic(var/mob/user, var/damage, var/attack_message, var/armor_type = "melee", armor_pen = 0, a_sharp = 0, a_edge = 0)
 	if(istype(user,/mob/living))
 		var/mob/living/L = user
 		if(touch_reaction_flags & SPECIES_TRAIT_THORNS)

@@ -95,7 +95,7 @@
 	health = (displaced_health - round(current_damage / 4))
 	cover = 25
 
-/obj/structure/girder/attack_generic(var/mob/user, damage, attack_message = "smashes apart")
+/obj/structure/girder/attack_generic(mob/user, damage, attack_message = "smashes apart")
 	if(damage < STRUCTURE_MIN_DAMAGE_THRESHOLD)
 		return 0
 	user.do_attack_animation(src)

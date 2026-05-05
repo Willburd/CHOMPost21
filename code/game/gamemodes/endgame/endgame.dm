@@ -63,7 +63,7 @@
 /datum/universal_state/proc/OverlayAndAmbientSet()
 	return
 
-/proc/SetUniversalState(var/newstate,on_exit=1, on_enter=1)
+/proc/SetUniversalState(newstate,on_exit=1, on_enter=1)
 	if(on_exit)
 		GLOB.universe.OnExit()
 	GLOB.universe = new newstate

@@ -16,7 +16,7 @@
 
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
-/datum/reagent/inaprovaline/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/inaprovaline/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien != IS_DIONA)
 		M.add_chemical_effect(CE_STABLE, 15)
 		M.add_chemical_effect(CE_PAINKILLER, 10 * M.species.chem_strength_pain)
@@ -39,12 +39,12 @@
 
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
-/datum/reagent/inaprovaline/topical/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/inaprovaline/topical/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien != IS_DIONA)
 		..()
 		M.adjustToxLoss(2 * removed)
 
-/datum/reagent/inaprovaline/topical/affect_touch(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/inaprovaline/topical/affect_touch(mob/living/carbon/M, alien, removed)
 	if(alien != IS_DIONA)
 		M.add_chemical_effect(CE_STABLE, 20)
 		M.add_chemical_effect(CE_PAINKILLER, 12 * M.species.chem_strength_pain)
@@ -67,14 +67,14 @@
 
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
-/datum/reagent/bicaridine/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/bicaridine/affect_blood(mob/living/carbon/M, alien, removed)
 	var/chem_effective = 1 * M.species.chem_strength_heal
 	if(alien == IS_SLIME)
 		chem_effective = 0.75
 	if(alien != IS_DIONA)
 		M.heal_organ_damage(4 * removed * chem_effective, 0)
 
-/datum/reagent/bicaridine/overdose(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/bicaridine/overdose(mob/living/carbon/M, alien, removed)
 	..()
 	var/wound_heal = 2.5 * removed
 	M.eye_blurry = min(M.eye_blurry + wound_heal, 250)
@@ -109,7 +109,7 @@
 
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
-/datum/reagent/bicaridine/topical/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/bicaridine/topical/affect_blood(mob/living/carbon/M, alien, removed)
 	var/chem_effective = 1 * M.species.chem_strength_heal
 	if(alien == IS_SLIME)
 		chem_effective = 0.75
@@ -117,7 +117,7 @@
 		..(M, alien, removed * chem_effective)
 		M.adjustToxLoss(2 * removed)
 
-/datum/reagent/bicaridine/topical/affect_touch(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/bicaridine/topical/affect_touch(mob/living/carbon/M, alien, removed)
 	var/chem_effective = 1 * M.species.chem_strength_heal
 	if(alien == IS_SLIME)
 		chem_effective = 0.75
@@ -138,11 +138,11 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_DRUG
 
-/datum/reagent/calciumcarbonate/affect_blood(var/mob/living/carbon/M, alien, removed) // Why would you inject this.
+/datum/reagent/calciumcarbonate/affect_blood(mob/living/carbon/M, alien, removed) // Why would you inject this.
 	if(alien != IS_DIONA)
 		M.adjustToxLoss(3 * removed)
 
-/datum/reagent/calciumcarbonate/affect_ingest(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/calciumcarbonate/affect_ingest(mob/living/carbon/M, alien, removed)
 	if(alien != IS_DIONA)
 		M.add_chemical_effect(CE_ANTACID, 3)
 
@@ -162,7 +162,7 @@
 
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
-/datum/reagent/kelotane/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/kelotane/affect_blood(mob/living/carbon/M, alien, removed)
 	var/chem_effective = 1 * M.species.chem_strength_heal
 	if(alien == IS_SLIME)
 		chem_effective = 0.5
@@ -188,7 +188,7 @@
 
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
-/datum/reagent/dermaline/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/dermaline/affect_blood(mob/living/carbon/M, alien, removed)
 	var/chem_effective = 1 * M.species.chem_strength_heal
 	if(alien == IS_SLIME)
 		chem_effective = 0.75
@@ -213,7 +213,7 @@
 
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
-/datum/reagent/dermaline/topical/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/dermaline/topical/affect_blood(mob/living/carbon/M, alien, removed)
 	var/chem_effective = 1 * M.species.chem_strength_heal
 	if(alien == IS_SLIME)
 		chem_effective = 0.75
@@ -221,7 +221,7 @@
 		..(M, alien, removed * chem_effective)
 		M.adjustToxLoss(2 * removed)
 
-/datum/reagent/dermaline/topical/affect_touch(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/dermaline/topical/affect_touch(mob/living/carbon/M, alien, removed)
 	var/chem_effective = 1 * M.species.chem_strength_heal
 	if(alien == IS_SLIME)
 		chem_effective = 0.75
@@ -243,7 +243,7 @@
 
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
-/datum/reagent/dylovene/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/dylovene/affect_blood(mob/living/carbon/M, alien, removed)
 	var/chem_effective = 1 * M.species.chem_strength_heal
 	if(alien == IS_SLIME)
 		chem_effective = 0.66
@@ -271,7 +271,7 @@
 
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
-/datum/reagent/carthatoline/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/carthatoline/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien == IS_DIONA)
 		return
 	if(M.getToxLoss() && prob(10))
@@ -290,7 +290,7 @@
 		if(alien == IS_SLIME)
 			H.druggy = max(M.druggy, 5)
 
-/datum/reagent/carthatoline/overdose(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/carthatoline/overdose(mob/living/carbon/M, alien, removed)
 	M.adjustHalLoss(2)
 	var/mob/living/carbon/human/H = M
 	var/obj/item/organ/internal/stomach/st = H.internal_organs_by_name[O_STOMACH]
@@ -312,7 +312,7 @@
 
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
-/datum/reagent/dexalin/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/dexalin/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien == IS_VOX || M?.species.poison_type == GAS_O2) // Outpost 21 edit - If oxygen is toxic, this is deadly
 		M.adjustToxLoss(removed * 24)
 	else if(alien == IS_SLIME && dose >= 15)
@@ -342,7 +342,7 @@
 
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
-/datum/reagent/dexalinp/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/dexalinp/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien == IS_VOX || M?.species.poison_type == GAS_O2) // Outpost 21 edit - If oxygen is toxic, this is deadly
 		M.adjustToxLoss(removed * 9)
 	else if(alien == IS_SLIME && dose >= 10)
@@ -376,7 +376,7 @@
 	M.druggy = max(M.druggy, 5)
 	M.Confuse(5) //YW EDIT END
 
-/datum/reagent/tricordrazine/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/tricordrazine/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien != IS_DIONA)
 		var/chem_effective = 1 * M.species.chem_strength_heal
 		if(alien == IS_SLIME)
@@ -385,7 +385,7 @@
 		M.heal_organ_damage(1.5 * removed, 1.5 * removed * chem_effective)
 		M.adjustToxLoss(-1.5 * removed * chem_effective)
 
-/datum/reagent/tricordrazine/affect_touch(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/tricordrazine/affect_touch(mob/living/carbon/M, alien, removed)
 	if(alien != IS_DIONA)
 		affect_blood(M, alien, removed * 0.4)
 
@@ -404,7 +404,7 @@
 
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
-/datum/reagent/tricorlidaze/affect_touch(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/tricorlidaze/affect_touch(mob/living/carbon/M, alien, removed)
 	if(alien != IS_DIONA)
 		var/chem_effective = 1 * M.species.chem_strength_heal
 		if(alien == IS_SLIME)
@@ -413,7 +413,7 @@
 		M.heal_organ_damage(1 * removed, 1 * removed * chem_effective)
 		M.adjustToxLoss(-2 * removed * chem_effective)
 
-/datum/reagent/tricorlidaze/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/tricorlidaze/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien != IS_DIONA)
 		M.adjustToxLoss(3 * removed)
 
@@ -446,7 +446,7 @@
 
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH|REAGENT_PPE_FREEZES // Outpost 21 edit - PPE reagents
 
-/datum/reagent/cryoxadone/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/cryoxadone/affect_blood(mob/living/carbon/M, alien, removed)
 	if(M.bodytemperature < 170)
 		var/chem_effective = 1 * M.species.chem_strength_heal
 		if(alien == IS_SLIME)
@@ -476,7 +476,7 @@
 
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH|REAGENT_PPE_FREEZES // Outpost 21 edit - PPE reagents
 
-/datum/reagent/clonexadone/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/clonexadone/affect_blood(mob/living/carbon/M, alien, removed)
 	if(M.bodytemperature < 170)
 		var/chem_effective = 1 * M.species.chem_strength_heal
 		if(alien == IS_SLIME)
@@ -506,10 +506,10 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_MASSINDUSTRY
 	industrial_use = REFINERYEXPORT_REASON_CLONEDRUG
 
-/datum/reagent/mortiferin/on_mob_life(var/mob/living/carbon/M, alien, datum/reagents/metabolism/location)
+/datum/reagent/mortiferin/on_mob_life(mob/living/carbon/M, alien, datum/reagents/metabolism/location)
 	. = ..(M, alien, location)
 
-/datum/reagent/mortiferin/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/mortiferin/affect_blood(mob/living/carbon/M, alien, removed)
 	if(M.bodytemperature < (T0C - 10) || (M.stat == DEAD))
 		var/chem_effective = 1 * M.species.chem_strength_heal
 		if(alien == IS_SLIME)
@@ -550,7 +550,7 @@
 
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH|REAGENT_PPE_FREEZES // Outpost 21 edit - PPE reagents
 
-/datum/reagent/necroxadone/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/necroxadone/affect_blood(mob/living/carbon/M, alien, removed)
 	var/chem_effective = 1 * M.species.chem_strength_heal
 	if(M.bodytemperature < 170 || (M.stat == DEAD && M.has_modifier_of_type(/datum/modifier/bloodpump_corpse)))
 		if(alien == IS_SLIME)
@@ -591,7 +591,7 @@
 
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
-/datum/reagent/paracetamol/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/paracetamol/affect_blood(mob/living/carbon/M, alien, removed)
 	var/chem_effective = 1 * M.species.chem_strength_pain
 	if(alien == IS_SLIME)
 		chem_effective = 0.75
@@ -621,7 +621,7 @@
 
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
-/datum/reagent/tramadol/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/tramadol/affect_blood(mob/living/carbon/M, alien, removed)
 	var/chem_effective = 1 * M.species.chem_strength_pain
 	if(alien == IS_SLIME)
 		chem_effective = 0.8
@@ -650,7 +650,7 @@
 
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
-/datum/reagent/oxycodone/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/oxycodone/affect_blood(mob/living/carbon/M, alien, removed)
 	var/chem_effective = 1 * M.species.chem_strength_pain
 	if(alien == IS_SLIME)
 		chem_effective = 0.75
@@ -684,7 +684,7 @@
 
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
-/datum/reagent/synaptizine/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/synaptizine/affect_blood(mob/living/carbon/M, alien, removed)
 	var/chem_effective = 1 * M.species.chem_strength_heal
 	if(alien == IS_DIONA)
 		return
@@ -719,7 +719,7 @@
 
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
-/datum/reagent/hyperzine/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/hyperzine/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien == IS_TAJARA)
 		removed *= 1.25
 	if(alien == IS_SLIME)
@@ -731,7 +731,7 @@
 		M.emote(pick("twitch", "blink_r", "shiver"))
 	M.add_chemical_effect(CE_SPEEDBOOST, 1)
 
-/datum/reagent/hyperzine/overdose(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/hyperzine/overdose(mob/living/carbon/M, alien, removed)
 	..()
 	if(prob(5)) // 1 in 20
 		var/mob/living/carbon/human/H = M
@@ -755,7 +755,7 @@
 
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
-/datum/reagent/alkysine/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/alkysine/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien == IS_DIONA)
 		return
 	var/chem_effective = 1 * M.species.chem_strength_heal
@@ -783,7 +783,7 @@
 
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
-/datum/reagent/imidazoline/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/imidazoline/affect_blood(mob/living/carbon/M, alien, removed)
 	M.eye_blurry = max(M.eye_blurry - 5, 0)
 	M.AdjustBlinded(-5)
 	if(ishuman(M))
@@ -814,7 +814,7 @@
 
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
-/datum/reagent/peridaxon/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/peridaxon/affect_blood(mob/living/carbon/M, alien, removed)
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
 		for(var/obj/item/organ/I in H.internal_organs)
@@ -831,7 +831,7 @@
 			if(prob(33))
 				H.Confuse(10)
 
-/datum/reagent/peridaxon/overdose(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/peridaxon/overdose(mob/living/carbon/M, alien, removed)
 	..()
 	M.adjustHalLoss(5)
 	M.hallucination = max(M.hallucination, 10)
@@ -852,7 +852,7 @@
 
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
-/datum/reagent/osteodaxon/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/osteodaxon/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien == IS_DIONA)
 		return
 	M.heal_organ_damage(3 * removed, 0)	//Gives the bones a chance to set properly even without other meds
@@ -890,7 +890,7 @@
 
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
-/datum/reagent/myelamine/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/myelamine/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien == IS_DIONA)
 		return
 	M.eye_blurry = min(M.eye_blurry + (repair_strength * removed), 250)
@@ -913,7 +913,7 @@
 					W.damage = 0
 					O.wounds -= W
 
-/datum/reagent/myelamine/overdose(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/myelamine/overdose(mob/living/carbon/M, alien, removed)
 	//Heals slightly faster at the cost of high toxins. Honestly you should never do this, but whatever.
 	..()
 	if(ishuman(M))
@@ -942,7 +942,7 @@
 
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
-/datum/reagent/respirodaxon/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/respirodaxon/affect_blood(mob/living/carbon/M, alien, removed)
 	var/repair_strength = 1 * M.species.chem_strength_heal
 	if(alien == IS_SLIME)
 		repair_strength = 0.6
@@ -979,7 +979,7 @@
 
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
-/datum/reagent/gastirodaxon/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/gastirodaxon/affect_blood(mob/living/carbon/M, alien, removed)
 	var/repair_strength = 1 * M.species.chem_strength_heal
 	if(alien == IS_SLIME)
 		repair_strength = 0.6
@@ -1016,7 +1016,7 @@
 
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
-/datum/reagent/hepanephrodaxon/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/hepanephrodaxon/affect_blood(mob/living/carbon/M, alien, removed)
 	var/repair_strength = 1 * M.species.chem_strength_heal
 	if(alien == IS_SLIME)
 		repair_strength = 0.4
@@ -1055,7 +1055,7 @@
 
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
-/datum/reagent/cordradaxon/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/cordradaxon/affect_blood(mob/living/carbon/M, alien, removed)
 	var/repair_strength = 1 * M.species.chem_strength_heal
 	if(alien == IS_SLIME)
 		repair_strength = 0.6
@@ -1089,7 +1089,7 @@
 
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
-/datum/reagent/immunosuprizine/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/immunosuprizine/affect_blood(mob/living/carbon/M, alien, removed)
 	var/strength_mod = 1 // * M.species.chem_strength_heal //Just removing the chem strength adjustment. It'd require division, which is best avoided.
 
 	if(alien == IS_DIONA)	// It's a tree.
@@ -1147,7 +1147,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_SPECIALDRUG
 
-/datum/reagent/skrellimmuno/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/skrellimmuno/affect_blood(mob/living/carbon/M, alien, removed)
 	var/strength_mod = 0.5 * M.species.chem_strength_heal
 
 	if(ishuman(M))
@@ -1193,7 +1193,7 @@
 
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
-/datum/reagent/ryetalyn/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/ryetalyn/affect_blood(mob/living/carbon/M, alien, removed)
 	//Ryetalyn is for genetics damage curing not resetting mutations, breaks traitgenes
 	if(alien == IS_DIONA)
 		return
@@ -1210,7 +1210,7 @@
 	mrate_static = TRUE
 	overdose = REAGENTS_OVERDOSE * 0.5
 
-/datum/reagent/hyperzine/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/hyperzine/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien == IS_DIONA)
 		return
 	if(prob(5))
@@ -1232,7 +1232,7 @@
 
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
-/datum/reagent/ethylredoxrazine/affect_ingest(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/ethylredoxrazine/affect_ingest(mob/living/carbon/M, alien, removed)
 	if(alien == IS_DIONA)
 		return
 	M.clear_dizzy()
@@ -1244,7 +1244,7 @@
 			if(istype(R, /datum/reagent/ethanol))
 				R.remove_self(removed * 30)
 
-/datum/reagent/ethylredoxrazine/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/ethylredoxrazine/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien == IS_DIONA)
 		return
 	M.clear_dizzy()
@@ -1272,7 +1272,7 @@
 
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
-/datum/reagent/hyronalin/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/hyronalin/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien == IS_DIONA)
 		return
 	M.radiation = max(M.radiation - 30 * removed * M.species.chem_strength_heal, 0)
@@ -1295,7 +1295,7 @@
 
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
-/datum/reagent/arithrazine/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/arithrazine/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien == IS_DIONA)
 		return
 	M.radiation = max(M.radiation - 70 * removed * M.species.chem_strength_heal, 0)
@@ -1323,7 +1323,7 @@
 
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
-/datum/reagent/spaceacillin/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/spaceacillin/affect_blood(mob/living/carbon/M, alien, removed)
 	..()
 	if(alien == IS_SLIME)
 		if(volume <= 0.1 && data != -1)
@@ -1336,7 +1336,7 @@
 				to_chat(M, span_warning("Your senses feel unfocused, and divided."))
 	M.add_chemical_effect(CE_ANTIBIOTIC, dose >= overdose ? ANTIBIO_OD : ANTIBIO_NORM)
 
-/datum/reagent/spaceacillin/affect_touch(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/spaceacillin/affect_touch(mob/living/carbon/M, alien, removed)
 	affect_blood(M, alien, removed * 0.8) // Not 100% as effective as injections, though still useful.
 
 /datum/reagent/corophizine
@@ -1357,7 +1357,7 @@
 
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
-/datum/reagent/corophizine/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/corophizine/affect_blood(mob/living/carbon/M, alien, removed)
 	..()
 	M.add_chemical_effect(CE_ANTIBIOTIC, ANTIBIO_SUPER)
 
@@ -1431,14 +1431,14 @@
 
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
-/datum/reagent/spacomycaze/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/spacomycaze/affect_blood(mob/living/carbon/M, alien, removed)
 	M.add_chemical_effect(CE_PAINKILLER, 10 * M.species.chem_strength_pain)
 	M.adjustToxLoss(3 * removed)
 
-/datum/reagent/spacomycaze/affect_ingest(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/spacomycaze/affect_ingest(mob/living/carbon/M, alien, removed)
 	affect_blood(M, alien, removed * 0.8)
 
-/datum/reagent/spacomycaze/affect_touch(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/spacomycaze/affect_touch(mob/living/carbon/M, alien, removed)
 	if(alien == IS_SLIME)
 		if(volume <= 0.1 && data != -1)
 			data = -1
@@ -1480,13 +1480,13 @@
 
 	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH|REAGENT_PPE_BURNS|REAGENT_PPE_GAS|REAGENT_PPE_SQUIRTS // Outpost 21 edit - PPE reagents
 
-/datum/reagent/sterilizine/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/sterilizine/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien == IS_SLIME)
 		M.adjustFireLoss(removed)
 		M.adjustToxLoss(2 * removed)
 	return
 
-/datum/reagent/sterilizine/affect_touch(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/sterilizine/affect_touch(mob/living/carbon/M, alien, removed)
 	M.germ_level -= min(removed*20, M.germ_level)
 	for(var/obj/item/I in M.contents)
 		I.was_bloodied = null
@@ -1538,7 +1538,7 @@
 	ppe_flags = REAGENT_PPE_BURNS|REAGENT_PPE_FREEZES // Outpost 21 edit - PPE reagents
 
 
-/datum/reagent/leporazine/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/leporazine/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien == IS_DIONA)
 		return
 	var/temp = 310
@@ -1564,7 +1564,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_MASSINDUSTRY
 	industrial_use = REFINERYEXPORT_REASON_CLONEDRUG
 
-/datum/reagent/rezadone/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/rezadone/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien == IS_DIONA)
 		return
 	var/strength_mod = 1 * M.species.chem_strength_heal
@@ -1616,7 +1616,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_DRUG
 
-/datum/reagent/healing_nanites/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/healing_nanites/affect_blood(mob/living/carbon/M, alien, removed)
 	M.heal_organ_damage(2 * removed, 2 * removed)
 	M.adjustOxyLoss(-4 * removed)
 	M.adjustToxLoss(-2 * removed)
@@ -1649,7 +1649,7 @@
 	industrial_use = REFINERYEXPORT_REASON_DRUG
 	scannable = SCANNABLE_BENEFICIAL
 
-/datum/reagent/earthsblood/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/earthsblood/affect_blood(mob/living/carbon/M, alien, removed)
 	M.heal_organ_damage (4 * removed, 4 * removed)
 	M.adjustOxyLoss(-10 * removed)
 	M.adjustToxLoss(-4 * removed)
@@ -1675,7 +1675,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_DRUG
 
-/datum/reagent/acid/artificial_sustenance/affect_ingest(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/acid/artificial_sustenance/affect_ingest(mob/living/carbon/M, alien, removed)
 	// You need me...
 	if(M.get_addiction_to_reagent(REAGENT_ID_ASUSTENANCE))
 		return

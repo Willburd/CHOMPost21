@@ -206,7 +206,7 @@
 	health -= damage
 	healthcheck()
 
-/obj/effect/alien/weeds/attack_generic(var/mob/user, damage, attack_verb)
+/obj/effect/alien/weeds/attack_generic(mob/user, damage, attack_verb)
 	visible_message(span_danger("[user] [attack_verb] the [src]!"))
 	user.do_attack_animation(src)
 	health -= damage

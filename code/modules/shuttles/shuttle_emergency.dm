@@ -19,7 +19,7 @@
 
 	SSemergency_shuttle.shuttle_arrived()
 
-/datum/shuttle/autodock/ferry/emergency/long_jump(var/destination, interim, travel_time)
+/datum/shuttle/autodock/ferry/emergency/long_jump(destination, interim, travel_time)
 	if (!location)
 		travel_time = SHUTTLE_TRANSIT_DURATION_RETURN
 	else

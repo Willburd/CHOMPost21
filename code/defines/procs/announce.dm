@@ -12,27 +12,27 @@ GLOBAL_DATUM_INIT(command_announcement, /datum/announcement/priority/command, ne
 	var/channel_name = "Station Announcements"
 	var/announcement_type = "Announcement"
 
-/datum/announcement/New(var/do_log = 0, new_sound = null, do_newscast = 0)
+/datum/announcement/New(do_log = 0, new_sound = null, do_newscast = 0)
 	sound = new_sound
 	log = do_log
 	newscast = do_newscast
 
-/datum/announcement/priority/New(var/do_log = 1, new_sound = 'sound/misc/notice2.ogg', do_newscast = 0)
+/datum/announcement/priority/New(do_log = 1, new_sound = 'sound/misc/notice2.ogg', do_newscast = 0)
 	..(do_log, new_sound, do_newscast)
 	title = "Priority Announcement"
 	announcement_type = "Priority Announcement"
 
-/datum/announcement/priority/command/New(var/do_log = 1, new_sound = 'sound/misc/notice2.ogg', do_newscast = 0)
+/datum/announcement/priority/command/New(do_log = 1, new_sound = 'sound/misc/notice2.ogg', do_newscast = 0)
 	..(do_log, new_sound, do_newscast)
 	title = "[command_name()] Update"
 	announcement_type = "[command_name()] Update"
 
-/datum/announcement/priority/security/New(var/do_log = 1, new_sound = 'sound/misc/notice2.ogg', do_newscast = 0)
+/datum/announcement/priority/security/New(do_log = 1, new_sound = 'sound/misc/notice2.ogg', do_newscast = 0)
 	..(do_log, new_sound, do_newscast)
 	title = "Security Announcement"
 	announcement_type = "Security Announcement"
 
-/datum/announcement/proc/Announce(var/message as text, var/new_title = "", var/new_sound = null, var/do_newscast = newscast, msg_sanitized = 0, zlevel)
+/datum/announcement/proc/Announce(var/message as text, var/new_title = "", var/new_sound = null, do_newscast = newscast, msg_sanitized = 0, zlevel)
 	if(!message)
 		return
 
@@ -88,13 +88,13 @@ GLOBAL_DATUM_INIT(command_announcement, /datum/announcement/priority/command, ne
 		if(!isnewplayer(M) && !isdeaf(M))
 			to_chat(M, command)
 
-/datum/announcement/priority/Message(var/message as text, message_title as text, list/zlevels)
+/datum/announcement/priority/Message(message as text, message_title as text, list/zlevels)
 	GLOB.global_announcer.autosay(span_alert("[message_title]:") + " [message]", announcer ? announcer : ANNOUNCER_NAME, channel = "Common", zlevels = zlevels)
 
-/datum/announcement/priority/command/Message(var/message as text, message_title as text, list/zlevels)
+/datum/announcement/priority/command/Message(message as text, message_title as text, list/zlevels)
 	GLOB.global_announcer.autosay(span_alert("[command_name()] - [message_title]:") + " [message]", ANNOUNCER_NAME, channel = "Common", zlevels = zlevels)
 
-/datum/announcement/priority/security/Message(var/message as text, message_title as text, list/zlevels)
+/datum/announcement/priority/security/Message(message as text, message_title as text, list/zlevels)
 	GLOB.global_announcer.autosay(span_alert("[message_title]:") + " [message]", ANNOUNCER_NAME, channel = "Common", zlevels = zlevels)
 
 /datum/announcement/proc/NewsCast(message as text, message_title as text)
@@ -149,12 +149,12 @@ GLOBAL_DATUM_INIT(command_announcement, /datum/announcement/priority/command, ne
 /proc/ion_storm_announcement()
 	GLOB.command_announcement.Announce("It has come to our attention that \the [station_name()] passed through an ion storm.  Please monitor all electronic equipment for malfunctions.", "Anomaly Alert")
 
-/proc/AnnounceArrival(var/mob/living/carbon/human/character, var/rank, var/join_message, channel = "Common", zlevel)
+/proc/AnnounceArrival(var/mob/living/carbon/human/character, var/rank, join_message, channel = "Common", zlevel)
 	if (SSticker.current_state == GAME_STATE_PLAYING)
 		var/list/zlevels = zlevel ? using_map.get_map_levels(zlevel, TRUE, om_range = DEFAULT_OVERMAP_RANGE) : null
 		if(character.mind.role_alt_title)
 			rank = character.mind.role_alt_title
 		AnnounceArrivalSimple(character.real_name, rank, join_message, channel, zlevels)
 
-/proc/AnnounceArrivalSimple(var/name, var/rank = "visitor", var/join_message = "will arrive at the station shortly", channel = "Common", list/zlevels)
+/proc/AnnounceArrivalSimple(var/name, var/rank = "visitor", join_message = "will arrive at the station shortly", channel = "Common", list/zlevels)
 	GLOB.global_announcer.autosay("[name], [rank], [join_message].", "Arrivals Announcement Computer", channel, zlevels)

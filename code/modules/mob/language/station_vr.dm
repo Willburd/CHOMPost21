@@ -196,7 +196,7 @@
 	machine_understands = FALSE
 	flags = WHITELISTED
 
-/datum/language/echosong/broadcast(var/mob/living/speaker, message, speaker_mask)
+/datum/language/echosong/broadcast(mob/living/speaker, message, speaker_mask)
 	speaker.log_talk("(INAUDIBLE) [message]", LOG_SAY)
 	speaker.say_signlang(format_message(message), pick(signlang_verb), pick(signlang_verb_understood), src, 2)
 

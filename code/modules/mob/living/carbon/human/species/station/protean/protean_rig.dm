@@ -73,7 +73,7 @@
 	. = ..()
 
 
-/obj/item/rig/proc/AssimilateBag(var/mob/living/carbon/human/P, spawned, obj/item/storage/backpack/B)
+/obj/item/rig/proc/AssimilateBag(mob/living/carbon/human/P, spawned, obj/item/storage/backpack/B)
 	if(istype(B,/obj/item/storage/backpack))
 		if(spawned)
 			B = P.back

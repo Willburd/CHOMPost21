@@ -1,4 +1,4 @@
-/proc/AverageColor(var/icon/I, accurate = 0, ignoreGreyscale = 0)
+/proc/AverageColor(icon/I, accurate = 0, ignoreGreyscale = 0)
 //Accurate: Use more accurate color averaging, usually has better results and prevents muddied or overly dark colors. Mad thanks to wwjnc.
 //ignoreGreyscale: Excempts greyscale colors from the color list, useful for filtering outlines or plate overlays.
 	var/list/colors = ListColors(I, ignoreGreyscale)

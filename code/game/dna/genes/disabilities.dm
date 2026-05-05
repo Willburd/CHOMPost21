@@ -27,7 +27,7 @@
 /datum/dna/gene/disability/can_activate(mob/M,flags)
 	return 1 // Always set!
 
-/datum/dna/gene/disability/activate(var/mob/M, connected, flags)
+/datum/dna/gene/disability/activate(mob/M, connected, flags)
 	if(mutation && !(mutation in M.mutations))
 		M.mutations.Add(mutation)
 	if(disability)
@@ -39,7 +39,7 @@
 	else
 		testing("[name] has no activation message.")
 
-/datum/dna/gene/disability/deactivate(var/mob/M, connected, flags)
+/datum/dna/gene/disability/deactivate(mob/M, connected, flags)
 	if(mutation && (mutation in M.mutations))
 		M.mutations.Remove(mutation)
 	if(disability)
@@ -116,7 +116,7 @@
 /datum/dna/gene/disability/deaf/New()
 	block=DEAFBLOCK
 
-/datum/dna/gene/disability/deaf/activate(var/mob/M, connected, flags)
+/datum/dna/gene/disability/deaf/activate(mob/M, connected, flags)
 	..(M,connected,flags)
 	M.ear_deaf = 1
 	var/mob/living/mL = M // CHOMPStation Add: Ear Ringing/Deafness

@@ -106,7 +106,7 @@
 
 	try_touch(user, rotting)
 
-/turf/simulated/shuttlewalls/attack_generic(var/mob/user, damage, attack_message)
+/turf/simulated/shuttlewalls/attack_generic(mob/user, damage, attack_message)
 
 	radiate()
 	user.setClickCooldown(user.get_attack_speed())

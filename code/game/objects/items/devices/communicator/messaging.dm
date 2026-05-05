@@ -53,7 +53,7 @@
 // Parameters: 3 (candidate - the communicator wanting to message the device, origin_address - the address of the sender, text - the message)
 // Description: Response to a communicator trying to message the device.
 //				Adds them to the list of people that have messaged this device and adds the message to the message list.
-/obj/item/communicator/proc/request_im(var/atom/candidate, origin_address, text)
+/obj/item/communicator/proc/request_im(atom/candidate, origin_address, text)
 	var/who = null
 	if(isobserver(candidate))
 		var/mob/observer/dead/ghost = candidate

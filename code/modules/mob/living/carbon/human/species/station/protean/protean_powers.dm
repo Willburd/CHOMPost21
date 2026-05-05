@@ -833,7 +833,7 @@
 /obj/effect/protean_ability/proc/atom_button_text()
 	return src
 
-/obj/effect/protean_ability/Click(var/location, control, params)
+/obj/effect/protean_ability/Click(location, control, params)
 	var/list/clickprops = params2list(params)
 	var/opts = clickprops["shift"]
 

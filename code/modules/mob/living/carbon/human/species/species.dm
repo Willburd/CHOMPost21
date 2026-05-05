@@ -420,7 +420,7 @@
 /datum/species/proc/sanitize_name(name, robot = 0)
 	return sanitizeName(name, MAX_NAME_LEN, robot)
 
-/datum/species/proc/equip_survival_gear(var/mob/living/carbon/human/H,extendedtank = 0,comprehensive = 0)
+/datum/species/proc/equip_survival_gear(mob/living/carbon/human/H,extendedtank = 0,comprehensive = 0)
 	var/boxtype = /obj/item/storage/box/survival //Default survival box
 
 	var/synth = H.isSynthetic()
@@ -642,7 +642,7 @@
 
 // Called when using the shredding behavior, returning unarmed damage value
 //CheckHighDamage returns the damage value of the attack if it meets at least the noted value
-/datum/species/proc/can_shred(var/mob/living/carbon/human/H, ignore_intent, checkhighdamage = 0)
+/datum/species/proc/can_shred(mob/living/carbon/human/H, ignore_intent, checkhighdamage = 0)
 
 	if(!ignore_intent && H.a_intent != I_HURT)
 		return 0
@@ -821,7 +821,7 @@
 		for(var/component in species_component)
 			H.LoadComponent(component)
 
-/datum/species/proc/produceCopy(var/list/traits, var/mob/living/carbon/human/H, custom_base, reset_dna = TRUE) // Traitgenes reset_dna flag required, or genes get reset on resleeve
+/datum/species/proc/produceCopy(var/list/traits, mob/living/carbon/human/H, custom_base, reset_dna = TRUE) // Traitgenes reset_dna flag required, or genes get reset on resleeve
 	ASSERT(src)
 	ASSERT(istype(H))
 	var/datum/species/new_copy = new src.type()

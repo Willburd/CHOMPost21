@@ -192,7 +192,7 @@ GLOBAL_LIST_EMPTY(mining_overlay_cache)
 		if(SSair)
 			SSair.mark_for_update(src)
 
-/turf/simulated/mineral/proc/get_cached_border(var/cache_id, var/direction, var/icon_file, icon_state, offset = 32)
+/turf/simulated/mineral/proc/get_cached_border(var/cache_id, var/direction, icon_file, icon_state, offset = 32)
 	//Cache miss
 	if(!GLOB.mining_overlay_cache["[cache_id]_[direction]"])
 		var/image/new_cached_image = image(icon_state, dir = direction, layer = ABOVE_TURF_LAYER)

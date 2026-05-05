@@ -125,7 +125,7 @@
 			else
 				to_chat(user,span_notice("this doesn't look like the right tool for the job..."))
 
-/obj/structure/event_collector_blocker/proc/pre_repair_handling(var/obj/item/O,toolType,mob/user) //can we use this tool?
+/obj/structure/event_collector_blocker/proc/pre_repair_handling(obj/item/O,toolType,mob/user) //can we use this tool?
 	switch(toolType)
 		if(TOOL_WELDER)
 			var/obj/item/weldingtool/welder = O.get_welder()
@@ -150,7 +150,7 @@
 					return FALSE
 	return TRUE
 
-/obj/structure/event_collector_blocker/proc/post_repair_handling(var/obj/item/O,toolType,mob/user)
+/obj/structure/event_collector_blocker/proc/post_repair_handling(obj/item/O,toolType,mob/user)
 	switch(toolType) //snowflake code time
 		if(TOOL_WELDER)
 			var/obj/item/weldingtool/welder = O.get_welder()

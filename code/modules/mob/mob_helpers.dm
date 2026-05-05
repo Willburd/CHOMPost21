@@ -579,19 +579,19 @@ It's fairly easy to fix if dealing with single letters but not so much with comp
 	return 1
 
 #define SAFE_PERP -50
-/mob/living/proc/assess_perp(var/obj/access_obj, var/check_access, var/auth_weapons, check_records, check_arrest)
+/mob/living/proc/assess_perp(var/obj/access_obj, var/check_access, auth_weapons, check_records, check_arrest)
 	if(stat == DEAD)
 		return SAFE_PERP
 
 	return 0
 
-/mob/living/carbon/assess_perp(var/obj/access_obj, var/check_access, var/auth_weapons, check_records, check_arrest)
+/mob/living/carbon/assess_perp(var/obj/access_obj, var/check_access, auth_weapons, check_records, check_arrest)
 	if(handcuffed)
 		return SAFE_PERP
 
 	return ..()
 
-/mob/living/carbon/human/assess_perp(var/obj/access_obj, var/check_access, var/auth_weapons, check_records, check_arrest)
+/mob/living/carbon/human/assess_perp(var/obj/access_obj, var/check_access, auth_weapons, check_records, check_arrest)
 	var/threatcount = ..()
 	if(. == SAFE_PERP)
 		return SAFE_PERP
@@ -641,7 +641,7 @@ It's fairly easy to fix if dealing with single letters but not so much with comp
 
 	return threatcount
 
-/mob/living/simple_mob/assess_perp(var/obj/access_obj, var/check_access, var/auth_weapons, check_records, check_arrest)
+/mob/living/simple_mob/assess_perp(var/obj/access_obj, var/check_access, auth_weapons, check_records, check_arrest)
 	var/threatcount = ..()
 	if(. == SAFE_PERP)
 		return SAFE_PERP
@@ -651,7 +651,7 @@ It's fairly easy to fix if dealing with single letters but not so much with comp
 	return threatcount
 
 // Beepsky will (try to) only beat 'bad' slimes.
-/mob/living/simple_mob/slime/xenobio/assess_perp(var/obj/access_obj, var/check_access, var/auth_weapons, check_records, check_arrest)
+/mob/living/simple_mob/slime/xenobio/assess_perp(var/obj/access_obj, var/check_access, auth_weapons, check_records, check_arrest)
 	var/threatcount = 0
 
 	if(stat == DEAD)
@@ -779,7 +779,7 @@ GLOBAL_DATUM_INIT(backplane, /image, generate_backplane())
 	return TRUE
 
 
-/atom/proc/living_mobs_in_view(var/range = world.view, count_held = FALSE, needs_client = FALSE)
+/atom/proc/living_mobs_in_view(range = world.view, count_held = FALSE, needs_client = FALSE)
 	var/list/viewers = oviewers(src, range)
 	if(count_held)
 		viewers = viewers(src,range)

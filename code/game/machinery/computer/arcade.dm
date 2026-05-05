@@ -1173,7 +1173,7 @@
 		to_chat(user, span_info("It doesn't seem to accept that! Seem you'll need to swipe a valid ID."))
 
 ///// ID
-/obj/machinery/computer/arcade/clawmachine/proc/pay_with_card(var/obj/item/card/id/I, obj/item/ID_container, mob/user)
+/obj/machinery/computer/arcade/clawmachine/proc/pay_with_card(obj/item/card/id/I, obj/item/ID_container, mob/user)
 	if(I==ID_container || ID_container == null)
 		visible_message(span_info("\The [user] swipes \the [I] through \the [src]."))
 	else

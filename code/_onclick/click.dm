@@ -16,12 +16,12 @@
 	Note that this proc can be overridden, and is in the case of screen objects.
 */
 
-/atom/Click(var/location, control, params) // This is their reaction to being clicked on (standard proc)
+/atom/Click(location, control, params) // This is their reaction to being clicked on (standard proc)
 	if(src)
 		SEND_SIGNAL(src, COMSIG_CLICK, location, control, params, usr)
 		usr.ClickOn(src, params)
 
-/atom/DblClick(var/location, control, params)
+/atom/DblClick(location, control, params)
 	if(src)
 		usr.DblClickOn(src, params)
 

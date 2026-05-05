@@ -107,7 +107,7 @@
 /datum/component/hose_connector/proc/connect(datum/hose/H = null)
 	my_hose = H
 
-/datum/component/hose_connector/proc/setup_hoses(var/datum/component/hose_connector/target, distancetonode, mob/user)
+/datum/component/hose_connector/proc/setup_hoses(datum/component/hose_connector/target, distancetonode, mob/user)
 	if(!target || QDELETED(target))
 		to_chat(user,span_danger("What you were connecting to has stopped existing! Ohno!"))
 		return FALSE

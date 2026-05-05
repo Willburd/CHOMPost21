@@ -66,7 +66,7 @@
 #undef TELECOMMS_RECEPTION_RECEIVER
 #undef TELECOMMS_RECEPTION_BOTH
 
-/proc/get_reception(var/atom/sender, var/receiver, message = "", do_sleep = 1)
+/proc/get_reception(var/atom/sender, receiver, message = "", do_sleep = 1)
 	var/datum/reception/reception = new
 
 	// check if telecomms I/O route 1459 is stable
@@ -79,7 +79,7 @@
 
 	return reception
 
-/proc/get_receptions(var/atom/sender, list/atom/receivers, do_sleep = 1)
+/proc/get_receptions(atom/sender, list/atom/receivers, do_sleep = 1)
 	var/datum/receptions/receptions = new
 	receptions.message_server = get_message_server()
 

@@ -111,7 +111,7 @@
 		var/datum/stock/S = stock
 		S.process()
 
-/datum/stockMarket/proc/add_log(var/log_type, var/user, var/company_name, var/stocks, shareprice, money)
+/datum/stockMarket/proc/add_log(var/log_type, var/user, var/company_name, stocks, shareprice, money)
 	var/datum/stock_log/L = new log_type
 	L.user_name = user
 	L.company_name = company_name
@@ -123,7 +123,7 @@
 
 GLOBAL_DATUM_INIT(stockExchange, /datum/stockMarket, new)
 
-/proc/plotBarGraph(var/list/points, var/base_text, width=400, height=400)
+/proc/plotBarGraph(var/list/points, base_text, width=400, height=400)
 	var/output = "<table style='border:1px solid black; border-collapse: collapse; width: [width]px; height: [height]px'>"
 	if (points.len && height > 20 && width > 20)
 		var/min = points[1]

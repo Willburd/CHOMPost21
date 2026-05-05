@@ -25,7 +25,7 @@
 	var/can_revert = TRUE
 	var/was_rayed = FALSE
 
-/obj/structure/gargoyle/Initialize(mapload, var/mob/living/carbon/human/H, var/ident_ovr, var/mat_ovr, var/adj_ovr, var/tint_ovr, revert = TRUE, discard_clothes)
+/obj/structure/gargoyle/Initialize(mapload, var/mob/living/carbon/human/H, var/ident_ovr, var/mat_ovr, var/adj_ovr, tint_ovr, revert = TRUE, discard_clothes)
 	. = ..()
 	if(isspace(loc) || isopenspace(loc))
 		anchored = FALSE
@@ -244,7 +244,7 @@
 /obj/structure/gargoyle/take_damage(damage)
 	damage(damage)
 
-/obj/structure/gargoyle/attack_generic(var/mob/user, damage, attack_message = "hits")
+/obj/structure/gargoyle/attack_generic(mob/user, damage, attack_message = "hits")
 	user.do_attack_animation(src)
 	visible_message(span_danger("[user] [attack_message] the [src]!"))
 	damage(damage)

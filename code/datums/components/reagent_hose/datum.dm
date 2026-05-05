@@ -57,7 +57,7 @@
 		initial_distance = 0
 	update_beam()
 
-/datum/hose/proc/set_hose(var/datum/component/hose_connector/target1, datum/component/hose_connector/target2, distancetonode)
+/datum/hose/proc/set_hose(datum/component/hose_connector/target1, datum/component/hose_connector/target2, distancetonode)
 	if(target1 && target2)
 		node1 = target1
 		node2 = target2

@@ -133,7 +133,7 @@
 			else
 				choice.forceMove(get_turf(src))
 
-/obj/structure/biowaste_tank/emag_act(var/remaining_charges, mob/user, emag_source)
+/obj/structure/biowaste_tank/emag_act(remaining_charges, mob/user, emag_source)
 	if(muffinmonster && muffin_mode)
 		muffinmonster.name = "Muffin Monster"
 		muffinmonster.forceMove(get_turf(src))

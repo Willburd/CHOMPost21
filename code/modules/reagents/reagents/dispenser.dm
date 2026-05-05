@@ -23,7 +23,7 @@
 	industrial_use = REFINERYEXPORT_REASON_RAW
 
 //VOREStation Edit
-/datum/reagent/calcium/affect_ingest(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/calcium/affect_ingest(mob/living/carbon/M, alien, removed)
 	if(ishuman(M) && rand(1,10000) == 1)
 		var/mob/living/carbon/human/H = M
 		for(var/obj/item/organ/external/O in H.bad_external_organs)
@@ -47,7 +47,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_UNWANTED
 	industrial_use = REFINERYEXPORT_REASON_PRECURSOR
 
-/datum/reagent/carbon/affect_ingest(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/carbon/affect_ingest(mob/living/carbon/M, alien, removed)
 	if(alien == IS_DIONA)
 		return
 	if(M.ingested && M.ingested.reagent_list.len > 1) // Need to have at least 2 reagents - cabon and something to remove
@@ -81,10 +81,10 @@
 
 	ppe_flags = REAGENT_PPE_GAS|REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH|REAGENT_PPE_BURNS // Outpost 21 edit - PPE reagents
 
-/datum/reagent/chlorine/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/chlorine/affect_blood(mob/living/carbon/M, alien, removed)
 	M.take_organ_damage(1*REM, 0)
 
-/datum/reagent/chlorine/affect_touch(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/chlorine/affect_touch(mob/living/carbon/M, alien, removed)
 	M.take_organ_damage(1*REM, 0)
 
 /datum/reagent/copper
@@ -133,7 +133,7 @@
 	if(istype(L))
 		L.adjust_fire_stacks(amount / 15)
 
-/datum/reagent/ethanol/affect_blood(var/mob/living/carbon/M, alien, removed) //This used to do just toxin. That's boring. Let's make this FUN.
+/datum/reagent/ethanol/affect_blood(mob/living/carbon/M, alien, removed) //This used to do just toxin. That's boring. Let's make this FUN.
 	if(issmall(M))
 		removed *= 2
 
@@ -172,7 +172,7 @@
 		if(halluci)
 			M.hallucination = max(M.hallucination, halluci*3 * ALCOHOLIC_EFFECT_MULTIPLIER) // Outpost 21 edit - Booze code
 
-/datum/reagent/ethanol/affect_ingest(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/ethanol/affect_ingest(mob/living/carbon/M, alien, removed)
 	var/ep_base_power = 60	//base nutrition gain for ethanol-processing synthetics, reduced by alcohol strength
 	var/ep_final_mod = 30	//final divisor on nutrition gain
 	if(issmall(M))
@@ -319,10 +319,10 @@
 
 	ppe_flags = REAGENT_PPE_GAS|REAGENT_PPE_SQUIRTS|REAGENT_PPE_BUBBLES|REAGENT_PPE_BURNS|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
-/datum/reagent/fluorine/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/fluorine/affect_blood(mob/living/carbon/M, alien, removed)
 	M.adjustToxLoss(removed)
 
-/datum/reagent/fluorine/affect_touch(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/fluorine/affect_touch(mob/living/carbon/M, alien, removed)
 	M.adjustToxLoss(removed)
 
 /datum/reagent/hydrogen
@@ -363,7 +363,7 @@
 
 	ppe_flags = REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
-/datum/reagent/lithium/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/lithium/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien != IS_DIONA)
 		if(M.canmove && !M.restrained() && istype(M.loc, /turf/space) && !M.resting) // Outpost 21 edit - Resting stops drug movement
 			step(M, pick(GLOB.cardinal))
@@ -383,7 +383,7 @@
 
 	ppe_flags = REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
-/datum/reagent/mercury/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/mercury/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien != IS_DIONA)
 		if(M.canmove && !M.restrained() && istype(M.loc, /turf/space) && !M.resting) // Outpost 21 edit - Resting stops drug movement
 			step(M, pick(GLOB.cardinal))
@@ -417,7 +417,7 @@
 
 	ppe_flags = REAGENT_PPE_BURNS|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
-/datum/reagent/oxygen/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/oxygen/affect_blood(mob/living/carbon/M, alien, removed)
 	if(M.species.poison_type == GAS_O2) // outpost 21 edit, changed from alien == IS_VOX to be consistant with poison oxygen behavior
 		M.adjustToxLoss(removed * 3)
 
@@ -458,7 +458,7 @@
 
 	ppe_flags = REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
-/datum/reagent/radium/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/radium/affect_blood(mob/living/carbon/M, alien, removed)
 	if(issmall(M)) removed *= 2
 	M.apply_effect(10 * removed, IRRADIATE, 0)
 
@@ -484,11 +484,11 @@
 
 	ppe_flags = REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
-/datum/reagent/radium/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/radium/affect_blood(mob/living/carbon/M, alien, removed)
 	if(issmall(M)) removed *= 2
 	M.apply_effect(10 * removed, IRRADIATE, 0) // Radium may increase your chances to cure a disease
 
-/datum/reagent/radium/affect_touch(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/radium/affect_touch(mob/living/carbon/M, alien, removed)
 	if(issmall(M)) removed *= 2
 	M.apply_effect(10 * removed, IRRADIATE, 0) // Radium may increase your chances to cure a disease
 
@@ -511,13 +511,13 @@
 
 	ppe_flags = REAGENT_PPE_GAS|REAGENT_PPE_SQUIRTS|REAGENT_PPE_BUBBLES|REAGENT_PPE_BURNS|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
-/datum/reagent/acid/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/acid/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien == IS_GREY) //ywedit
 		return
 	if(issmall(M)) removed *= 2
 	M.take_organ_damage(0, removed * power * 2)
 
-/datum/reagent/acid/affect_touch(var/mob/living/carbon/M, alien, removed) // This is the most interesting
+/datum/reagent/acid/affect_touch(mob/living/carbon/M, alien, removed) // This is the most interesting
 	if(alien == IS_GREY) //ywedit
 		return
 	if(ishuman(M) && !isbelly(M.loc)) //CHOMPEdit Start
@@ -673,7 +673,7 @@
 	industrial_use = REFINERYEXPORT_REASON_FOOD
 	coolant_modifier = -0.25
 
-/datum/reagent/sugar/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/sugar/affect_blood(mob/living/carbon/M, alien, removed)
 	M.adjust_nutrition(removed * 3)
 
 	var/effective_dose = dose

@@ -402,7 +402,7 @@ GLOBAL_LIST_EMPTY(active_autoresleevers)
 			to_chat(ghost, "<span class='warning'>Your ID has arrived at the autosleever!</span>")
 			autoresleeve(ghost,TRUE)
 
-/obj/machinery/transhuman/autoresleever/proc/outpost_post_sleeve(var/idscan, mob/living/carbon/human/new_character, spawnloc)
+/obj/machinery/transhuman/autoresleever/proc/outpost_post_sleeve(idscan, mob/living/carbon/human/new_character, spawnloc)
 	var/confuse_amount = rand(8,26)
 	var/blur_amount = rand(8,56)
 	var/sickness_duration = rand(20,30) MINUTES

@@ -87,7 +87,7 @@
 /datum/seed/proc/get_trash_type()
 	return trash_type
 
-/datum/seed/proc/set_trait(var/trait,var/nval,var/ubound,lbound, degrade)
+/datum/seed/proc/set_trait(var/trait,var/nval,ubound,lbound, degrade)
 	if(!isnull(degrade)) nval *= degrade
 	if(!isnull(ubound))  nval = min(nval,ubound)
 	if(!isnull(lbound))  nval = max(nval,lbound)
@@ -113,7 +113,7 @@
 	S.start()
 
 // Does brute damage to a target.
-/datum/seed/proc/do_thorns(var/mob/living/carbon/human/target, obj/item/fruit, target_limb)
+/datum/seed/proc/do_thorns(mob/living/carbon/human/target, obj/item/fruit, target_limb)
 
 	if(!get_trait(TRAIT_CARNIVOROUS))
 		return
@@ -222,7 +222,7 @@
 					R.add_reagent(chem,min(5,max(1,get_trait(TRAIT_POTENCY)/3)))
 
 //Applies an effect to a target atom.
-/datum/seed/proc/thrown_at(var/obj/item/thrown,atom/target, force_explode)
+/datum/seed/proc/thrown_at(obj/item/thrown,atom/target, force_explode)
 
 	var/splatted
 	var/turf/origin_turf = get_turf(target)
@@ -289,7 +289,7 @@
 			origin_turf.visible_message(span_danger("The [thrown.name] splatters against [target]!"))
 		qdel(thrown)
 
-/datum/seed/proc/handle_environment(var/turf/current_turf, var/datum/gas_mixture/environment, light_supplied, check_only)
+/datum/seed/proc/handle_environment(var/turf/current_turf, datum/gas_mixture/environment, light_supplied, check_only)
 
 	var/health_change = 0
 	// Handle gas consumption.
@@ -772,7 +772,7 @@
 	return (P ? P : 0)
 
 //Place the plant products at the feet of the user.
-/datum/seed/proc/harvest(var/mob/user,var/yield_mod,var/harvest_sample,var/force_amount,reagent_mod,reagent_mod_amount)
+/datum/seed/proc/harvest(var/mob/user,var/yield_mod,var/harvest_sample,force_amount,reagent_mod,reagent_mod_amount)
 
 	if(!user)
 		return

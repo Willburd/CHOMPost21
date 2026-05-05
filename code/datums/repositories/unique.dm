@@ -44,7 +44,7 @@ GLOBAL_DATUM_INIT(uniqueness_repository, /datum/repository/unique, new)
 	..()
 	ids_by_key = list()
 
-/datum/uniqueness_generator/id_random/Generate(var/key, min, max)
+/datum/uniqueness_generator/id_random/Generate(key, min, max)
 	var/list/ids = ids_by_key[key]
 	if(!ids)
 		ids = list()

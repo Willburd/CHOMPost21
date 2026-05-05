@@ -12,7 +12,7 @@
 	if(user.toggle_tail(message = 1))
 		return ..()
 
-/datum/decl/emote/helper/vwag/get_emote_message_3p(var/mob/living/carbon/human/user, atom/target, extra_params)
+/datum/decl/emote/helper/vwag/get_emote_message_3p(mob/living/carbon/human/user, atom/target, extra_params)
 	return "[user.wagging ? "starts" : "stops"] wagging USER_THEIR tail."
 
 
@@ -29,5 +29,5 @@
 	if(user.toggle_wing(message = 1))
 		return ..()
 
-/datum/decl/emote/helper/vflap/get_emote_message_3p(var/mob/living/carbon/human/user, atom/target, extra_params)
+/datum/decl/emote/helper/vflap/get_emote_message_3p(mob/living/carbon/human/user, atom/target, extra_params)
 	return "[user.flapping ? "starts" : "stops"] flapping USER_THEIR wings."

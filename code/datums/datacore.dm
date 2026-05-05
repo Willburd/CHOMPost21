@@ -302,7 +302,7 @@ GLOBAL_LIST_EMPTY(PDA_Manifest)
 			manifest_inject(H)
 		return
 
-/datum/datacore/proc/manifest_modify(var/name, assignment, rank)
+/datum/datacore/proc/manifest_modify(name, assignment, rank)
 	ResetPDAManifest()
 	var/datum/data/record/foundrecord
 	var/real_title = assignment
@@ -441,7 +441,7 @@ GLOBAL_LIST_EMPTY(PDA_Manifest)
 /proc/generate_record_id()
 	return add_zero(num2hex(rand(1, 65535), 5), 4)	//no point generating higher numbers because of the limitations of num2hex
 
-/datum/datacore/proc/CreateGeneralRecord(var/mob/living/carbon/human/H, id, hidden)
+/datum/datacore/proc/CreateGeneralRecord(mob/living/carbon/human/H, id, hidden)
 	ResetPDAManifest()
 	var/icon/front
 	var/icon/side
@@ -487,7 +487,7 @@ GLOBAL_LIST_EMPTY(PDA_Manifest)
 
 	return G
 
-/datum/datacore/proc/CreateSecurityRecord(var/name, id, hidden)
+/datum/datacore/proc/CreateSecurityRecord(name, id, hidden)
 	ResetPDAManifest()
 	var/datum/data/record/R = new /datum/data/record()
 	R.name = "Security Record #[id]"
@@ -508,7 +508,7 @@ GLOBAL_LIST_EMPTY(PDA_Manifest)
 
 	return R
 
-/datum/datacore/proc/CreateMedicalRecord(var/name, id, hidden)
+/datum/datacore/proc/CreateMedicalRecord(name, id, hidden)
 	ResetPDAManifest()
 	var/datum/data/record/M = new()
 	M.name = "Medical Record #[id]"

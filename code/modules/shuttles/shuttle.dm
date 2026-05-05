@@ -153,7 +153,7 @@
 		make_sounds(HYPERSPACE_END)
 
 // TODO - Far Future - Would be great if this was driven by process too.
-/datum/shuttle/proc/long_jump(var/obj/effect/shuttle_landmark/destination, obj/effect/shuttle_landmark/interim, travel_time)
+/datum/shuttle/proc/long_jump(obj/effect/shuttle_landmark/destination, obj/effect/shuttle_landmark/interim, travel_time)
 	//to_world("shuttle/long_jump: current_location=[current_location], destination=[destination], interim=[interim], travel_time=[travel_time]")
 	if(moving_status != SHUTTLE_IDLE)
 		return

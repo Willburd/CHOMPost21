@@ -1222,7 +1222,7 @@
 	can_take = SYNTHETICS
 	has_preferences = list("pain" = list(TRAIT_PREF_TYPE_BOOLEAN, "Enabled on spawn", TRAIT_VAREDIT_TARGET_MOB, FALSE))
 
-/datum/trait/neutral/synth_cosmetic_pain/apply(var/datum/species/S,mob/living/carbon/human/H, trait_prefs = null)
+/datum/trait/neutral/synth_cosmetic_pain/apply(datum/species/S,mob/living/carbon/human/H, trait_prefs = null)
 	..()
 	add_verb(H, /mob/living/carbon/human/proc/toggle_pain_module)
 
@@ -1463,7 +1463,7 @@
 	cost = 0
 	custom_only = FALSE
 
-/datum/trait/neutral/nyctophobia/apply(var/datum/species/S,mob/living/carbon/human/H, trait_prefs = null)
+/datum/trait/neutral/nyctophobia/apply(datum/species/S,mob/living/carbon/human/H, trait_prefs = null)
 	..()
 	H.phobias |= NYCTOPHOBIA
 
@@ -1473,7 +1473,7 @@
 	cost = 0
 	custom_only = FALSE
 
-/datum/trait/neutral/arachnophobia/apply(var/datum/species/S,mob/living/carbon/human/H, trait_prefs = null)
+/datum/trait/neutral/arachnophobia/apply(datum/species/S,mob/living/carbon/human/H, trait_prefs = null)
 	..()
 	H.phobias |= ARACHNOPHOBIA
 
@@ -1483,7 +1483,7 @@
 	cost = 0
 	custom_only = FALSE
 
-/datum/trait/neutral/hemophobia/apply(var/datum/species/S,mob/living/carbon/human/H, trait_prefs = null)
+/datum/trait/neutral/hemophobia/apply(datum/species/S,mob/living/carbon/human/H, trait_prefs = null)
 	..()
 	H.phobias |= HEMOPHOBIA
 
@@ -1493,7 +1493,7 @@
 	cost = 0
 	custom_only = FALSE
 
-/datum/trait/neutral/thalassophobia/apply(var/datum/species/S,mob/living/carbon/human/H, trait_prefs = null)
+/datum/trait/neutral/thalassophobia/apply(datum/species/S,mob/living/carbon/human/H, trait_prefs = null)
 	..()
 	H.phobias |= THALASSOPHOBIA
 
@@ -1503,7 +1503,7 @@
 	cost = 0
 	custom_only = FALSE
 
-/datum/trait/neutral/clasutrophobia_minor/apply(var/datum/species/S,mob/living/carbon/human/H, trait_prefs = null)
+/datum/trait/neutral/clasutrophobia_minor/apply(datum/species/S,mob/living/carbon/human/H, trait_prefs = null)
 	..()
 	H.phobias |= CLAUSTROPHOBIA_MINOR
 
@@ -1513,7 +1513,7 @@
 	cost = 0
 	custom_only = FALSE
 
-/datum/trait/neutral/clasutrophobia_major/apply(var/datum/species/S,mob/living/carbon/human/H, trait_prefs = null)
+/datum/trait/neutral/clasutrophobia_major/apply(datum/species/S,mob/living/carbon/human/H, trait_prefs = null)
 	..()
 	H.phobias |= CLAUSTROPHOBIA_MAJOR
 
@@ -1523,7 +1523,7 @@
 	cost = 0
 	custom_only = FALSE
 
-/datum/trait/neutral/anatidaephobia/apply(var/datum/species/S,mob/living/carbon/human/H, trait_prefs = null)
+/datum/trait/neutral/anatidaephobia/apply(datum/species/S,mob/living/carbon/human/H, trait_prefs = null)
 	..()
 	H.phobias |= ANATIDAEPHOBIA
 
@@ -1533,7 +1533,7 @@
 	cost = 0
 	custom_only = FALSE
 
-/datum/trait/neutral/agraviaphobia/apply(var/datum/species/S,mob/living/carbon/human/H, trait_prefs = null)
+/datum/trait/neutral/agraviaphobia/apply(datum/species/S,mob/living/carbon/human/H, trait_prefs = null)
 	..()
 	H.phobias |= AGRAVIAPHOBIA
 
@@ -1550,7 +1550,7 @@
 							"pickupable" = list(TRAIT_PREF_TYPE_BOOLEAN, "Can be picked up", TRAIT_NO_VAREDIT_TARGET, FALSE)*/)
 	added_component_path = /datum/component/gargoyle
 
-/datum/trait/neutral/gargoyle/apply(var/datum/species/S,mob/living/carbon/human/H, list/trait_prefs)
+/datum/trait/neutral/gargoyle/apply(datum/species/S,mob/living/carbon/human/H, list/trait_prefs)
 	..()
 	var/datum/component/gargoyle/G = H.GetComponent(added_component_path)
 	if(trait_prefs)
@@ -1611,7 +1611,7 @@
 	custom_only = FALSE
 	has_preferences = list("biting_toggle" = list(TRAIT_PREF_TYPE_BOOLEAN, "Enabled on spawn", TRAIT_NO_VAREDIT_TARGET, TRUE))
 
-/datum/trait/neutral/patting_defence/apply(var/datum/species/S, mob/living/carbon/human/H, list/trait_prefs)
+/datum/trait/neutral/patting_defence/apply(datum/species/S, mob/living/carbon/human/H, list/trait_prefs)
 	..()
 	if(trait_prefs && trait_prefs["biting_toggle"])
 		H.touch_reaction_flags |= SPECIES_TRAIT_PATTING_DEFENCE
@@ -1625,7 +1625,7 @@
 	has_preferences = list("bubble_toggle" = list(TRAIT_PREF_TYPE_BOOLEAN, "Dodge physical contact on spawn", TRAIT_NO_VAREDIT_TARGET, TRUE),
 						"pickup_dodge_toggle" = list(TRAIT_PREF_TYPE_BOOLEAN, "Dodge pickup attempts on spawn", TRAIT_NO_VAREDIT_TARGET, TRUE))
 
-/datum/trait/neutral/personal_space/apply(var/datum/species/S, mob/living/carbon/human/H, list/trait_prefs)
+/datum/trait/neutral/personal_space/apply(datum/species/S, mob/living/carbon/human/H, list/trait_prefs)
 	..()
 	if(trait_prefs && trait_prefs["bubble_toggle"])
 		H.touch_reaction_flags |= SPECIES_TRAIT_PERSONAL_BUBBLE
@@ -1642,7 +1642,7 @@
 	multiple_choice = list(REAGENT_ID_ETHANOL, REAGENT_ID_CAPSAICIN, REAGENT_ID_SODIUMCHLORIDE, REAGENT_ID_STOXIN, REAGENT_ID_RAINBOWTOXIN, REAGENT_ID_PARALYSISTOXIN, REAGENT_ID_PAINENZYME)
 	has_preferences = list("Reagent" = list(TRAIT_PREF_TYPE_LIST, "Skin Reagent", TRAIT_NO_VAREDIT_TARGET, REAGENT_ID_ETHANOL))
 
-/datum/trait/neutral/skin_reagents/apply(var/datum/species/S, mob/living/carbon/human/H, list/trait_prefs)
+/datum/trait/neutral/skin_reagents/apply(datum/species/S, mob/living/carbon/human/H, list/trait_prefs)
 	..()
 	if(trait_prefs && trait_prefs["Reagent"])
 		H.skin_reagent = trait_prefs["Reagent"]
@@ -1654,7 +1654,7 @@
 	custom_only = FALSE
 	banned_species = list(SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW)
 
-/datum/trait/neutral/colour_changing_eyes/apply(var/datum/species/S, mob/living/carbon/human/H, list/trait_prefs)
+/datum/trait/neutral/colour_changing_eyes/apply(datum/species/S, mob/living/carbon/human/H, list/trait_prefs)
 	..()
 	add_verb(H, /mob/living/carbon/human/proc/shapeshifter_select_eye_colour)
 
@@ -1828,7 +1828,7 @@
 	has_preferences = list("waddler" = list(TRAIT_PREF_TYPE_BOOLEAN, "Waddle on Spawn", TRAIT_NO_VAREDIT_TARGET, TRUE))
 	added_component_path = /datum/component/waddle_trait
 
-/datum/trait/neutral/waddle/apply(var/datum/species/S,mob/living/carbon/human/H, list/trait_prefs)
+/datum/trait/neutral/waddle/apply(datum/species/S,mob/living/carbon/human/H, list/trait_prefs)
 	..()
 	var/datum/component/waddle_trait/G = H.GetComponent(added_component_path)
 	if(trait_prefs)
@@ -1934,7 +1934,7 @@
 	added_component_path = /datum/component/radiation_effects
 	excludes = list(/datum/trait/positive/radioactive_heal)
 
-/datum/trait/neutral/glowing_radiation/apply(var/datum/species/S,mob/living/carbon/human/H, list/trait_prefs)
+/datum/trait/neutral/glowing_radiation/apply(datum/species/S,mob/living/carbon/human/H, list/trait_prefs)
 	..()
 	var/datum/component/radiation_effects/G = H.GetComponent(added_component_path)
 	if(trait_prefs)

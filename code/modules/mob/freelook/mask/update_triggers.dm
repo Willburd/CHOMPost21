@@ -39,7 +39,7 @@
 	if(src == GLOB.cult)
 		GLOB.cultnet.updateVisibility(player.current, 0)
 
-/datum/antagonist/remove_antagonist(var/datum/mind/player, show_message, implanted)
+/datum/antagonist/remove_antagonist(datum/mind/player, show_message, implanted)
 	..()
 	if(src == GLOB.cult)
 		GLOB.cultnet.updateVisibility(player.current, 0)

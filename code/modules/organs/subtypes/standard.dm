@@ -297,7 +297,7 @@
 		cannot_gib = FALSE
 	return ..()
 
-/obj/item/organ/external/head/robotize(var/company, skip_prosthetics, keep_organs)
+/obj/item/organ/external/head/robotize(company, skip_prosthetics, keep_organs)
 	. = ..(company, skip_prosthetics, 1)
 	if(model)
 		var/datum/robolimb/robohead = GLOB.all_robolimbs[model]

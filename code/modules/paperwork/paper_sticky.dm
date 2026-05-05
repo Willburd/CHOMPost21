@@ -121,7 +121,7 @@
 	if(!istype(loc, /turf))
 		reset_persistence_tracking()
 
-/obj/item/paper/sticky/afterattack(var/A, var/mob/user, flag, params)
+/obj/item/paper/sticky/afterattack(var/A, mob/user, flag, params)
 
 	if(!in_range(user, A) || istype(A, /obj/machinery/door) || icon_state == "scrap")
 		return

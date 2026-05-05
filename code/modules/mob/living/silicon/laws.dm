@@ -96,7 +96,7 @@
 
 	dostatelaws(lawchannel, prefix, laws)
 
-/mob/living/silicon/proc/dostatelaws(var/method, prefix, datum/ai_laws/laws)
+/mob/living/silicon/proc/dostatelaws(method, prefix, datum/ai_laws/laws)
 	if(stating_laws[prefix])
 		to_chat(src, span_notice("[method]: Already stating laws using this communication method."))
 		return

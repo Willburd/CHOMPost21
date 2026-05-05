@@ -41,7 +41,7 @@
 				slot_r_hand_str = 'icons/mob/items/righthand_melee.dmi',
 				)
 
-/obj/item/shield/handle_shield(mob/user, var/damage, atom/damage_source = null, mob/attacker = null, def_zone = null, attack_text = "the attack")
+/obj/item/shield/handle_shield(mob/user, damage, atom/damage_source = null, mob/attacker = null, def_zone = null, attack_text = "the attack")
 	if(user.incapacitated())
 		return 0
 
@@ -72,7 +72,7 @@
 	base_block_chance = 70 // Outpost 21 edit - Buffed riot shield blocking chance
 	var/cooldown = 0 //shield bash cooldown. based on world.time
 
-/obj/item/shield/riot/handle_shield(mob/user, var/damage, atom/damage_source = null, mob/attacker = null, def_zone = null, attack_text = "the attack")
+/obj/item/shield/riot/handle_shield(mob/user, damage, atom/damage_source = null, mob/attacker = null, def_zone = null, attack_text = "the attack")
 	if(user.incapacitated())
 		return 0
 

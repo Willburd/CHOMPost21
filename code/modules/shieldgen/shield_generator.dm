@@ -246,7 +246,7 @@
 	//Phew, update our own icon
 	update_icon()
 
-/obj/machinery/power/shield_generator/proc/do_corner_shield(var/obj/effect/shield/S, new_dir, force_outside)
+/obj/machinery/power/shield_generator/proc/do_corner_shield(obj/effect/shield/S, new_dir, force_outside)
 	S.enabled_icon_state = "blank"
 	S.set_dir(new_dir)
 	var/inside = force_outside ? FALSE : isspace(get_step(S, new_dir))

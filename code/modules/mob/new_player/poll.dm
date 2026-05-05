@@ -334,7 +334,7 @@
 				src << browse("<html>[output]</html>","window=playerpoll;size=500x250")
 		return
 
-/mob/new_player/proc/vote_on_poll(var/pollid = -1, optionid = -1, multichoice = 0)
+/mob/new_player/proc/vote_on_poll(pollid = -1, optionid = -1, multichoice = 0)
 	if(pollid == -1 || optionid == -1)
 		return
 
@@ -463,7 +463,7 @@
 		usr << browse(null,"window=playerpoll")
 
 
-/mob/new_player/proc/vote_on_numval_poll(var/pollid = -1, optionid = -1, rating = null)
+/mob/new_player/proc/vote_on_numval_poll(pollid = -1, optionid = -1, rating = null)
 	if(pollid == -1 || optionid == -1)
 		return
 

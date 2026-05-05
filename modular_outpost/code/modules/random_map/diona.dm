@@ -1,7 +1,7 @@
 /turf/simulated/wall/diona/Initialize(mapload)
 	. = ..(mapload, MAT_BIOMASS)
 
-/turf/simulated/wall/diona/attack_generic(var/mob/user, damage, attack_message)
+/turf/simulated/wall/diona/attack_generic(mob/user, damage, attack_message)
 	var/mob/living/carbon/human/H = user
 	if(ishuman(user) && (H.species?.name == SPECIES_DIONA || H.species?.name == SPECIES_ALRAUNE))
 		if(can_open == WALL_OPENING)
@@ -66,7 +66,7 @@
 		"We are making our way outside. To hold our promise to you. We are alive. Just like you. Hallelujah. Hallelujah. Hallelujah. Hallelujah."
 	)
 
-/obj/structure/diona/bulb/sea_of_stars/attack_generic(var/mob/user, damage, attack_message)
+/obj/structure/diona/bulb/sea_of_stars/attack_generic(mob/user, damage, attack_message)
 	var/mob/living/carbon/human/H = user
 	if(!used && ishuman(user) && (H.species?.name == SPECIES_DIONA || H.species?.name == SPECIES_ALRAUNE || H.species?.name == SPECIES_VOX))
 		user.visible_message(span_alium("\The [user] touches \the [src]."))

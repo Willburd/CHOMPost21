@@ -9,7 +9,7 @@
 	var/list/instances		//What items are actually stored
 	var/stored				//The thing holding it is
 
-/datum/stored_item/New(var/stored, var/path, name = null, amount = 0)
+/datum/stored_item/New(var/stored, path, name = null, amount = 0)
 	src.item_path = path
 
 	if(!name)

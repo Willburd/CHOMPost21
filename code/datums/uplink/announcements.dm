@@ -24,7 +24,7 @@
 		return
 	return list("title" = title, "message" = message)
 
-/datum/uplink_item/abstract/announcements/fake_centcom/get_goods(var/obj/item/uplink/U, var/location, mob/user, list/arguments)
+/datum/uplink_item/abstract/announcements/fake_centcom/get_goods(var/obj/item/uplink/U, location, mob/user, list/arguments)
 	post_comm_message(arguments["title"], replacetext(arguments["message"], "\n", "<br/>"))
 	GLOB.command_announcement.Announce(arguments["message"], arguments["title"])
 	return 1
@@ -34,7 +34,7 @@
 	desc = "Creates a fake crew arrival announcement as well as fake crew records, using your current appearance (including held items!) and worn id card. Trigger with care!"
 	item_cost = 15
 
-/datum/uplink_item/abstract/announcements/fake_crew_arrival/get_goods(var/obj/item/uplink/U, var/location, mob/user, list/arguments)
+/datum/uplink_item/abstract/announcements/fake_crew_arrival/get_goods(var/obj/item/uplink/U, location, mob/user, list/arguments)
 	if(!user)
 		return 0
 

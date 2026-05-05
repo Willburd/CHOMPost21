@@ -104,7 +104,7 @@ SUBSYSTEM_DEF(robot_sprites)
 
 	return chosen_sprite
 
-/datum/controller/subsystem/robot_sprites/proc/get_whitelisted_sprites(var/ckey, spritename, module)
+/datum/controller/subsystem/robot_sprites/proc/get_whitelisted_sprites(ckey, spritename, module)
 	. = list()
 
 	// ckey = null // CHOMPDisable, removing custom robot sprites // Outpost 21 edit - Allow custom borgos

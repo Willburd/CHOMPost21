@@ -27,7 +27,7 @@
 	var/cooldown = null // world.time of when this was last triggered.
 	var/cooldown_duration = 2 MINUTES
 
-/obj/item/clothing/suit/space/rig/ch/tyrprecursor/handle_shield(mob/user, var/damage, atom/damage_source = null, mob/attacker = null, def_zone = null, attack_text = "the attack")
+/obj/item/clothing/suit/space/rig/ch/tyrprecursor/handle_shield(mob/user, damage, atom/damage_source = null, mob/attacker = null, def_zone = null, attack_text = "the attack")
 	if(shieldhealth < 75)
 		user.visible_message(span_danger("\The [src] completely absorbs [attack_text]!"))
 		shieldhealth -= damage
@@ -68,7 +68,7 @@
 	var/cooldown = null // world.time of when this was last triggered.
 	var/cooldown_duration = 2 MINUTES
 
-/obj/item/clothing/head/helmet/space/rig/ch/tyrprecursor/handle_shield(mob/user, var/damage, atom/damage_source = null, mob/attacker = null, def_zone = null, attack_text = "the attack")
+/obj/item/clothing/head/helmet/space/rig/ch/tyrprecursor/handle_shield(mob/user, damage, atom/damage_source = null, mob/attacker = null, def_zone = null, attack_text = "the attack")
 	if(shieldhealth < 75)
 		user.visible_message(span_danger("\The [src] completely absorbs [attack_text]!"))
 		shieldhealth -= damage
@@ -108,7 +108,7 @@
 	var/cooldown = null // world.time of when this was last triggered.
 	var/cooldown_duration = 2 MINUTES
 
-/obj/item/clothing/gloves/gauntlets/rig/ch/tyrprecursor/handle_shield(mob/user, var/damage, atom/damage_source = null, mob/attacker = null, def_zone = null, attack_text = "the attack")
+/obj/item/clothing/gloves/gauntlets/rig/ch/tyrprecursor/handle_shield(mob/user, damage, atom/damage_source = null, mob/attacker = null, def_zone = null, attack_text = "the attack")
 	if(shieldhealth < 75)
 		user.visible_message(span_danger("\The [src] completely absorbs [attack_text]!"))
 		shieldhealth -= damage
@@ -148,7 +148,7 @@
 	var/cooldown = null // world.time of when this was last triggered.
 	var/cooldown_duration = 2 MINUTES
 
-/obj/item/clothing/shoes/magboots/rig/ch/tyrprecursor/handle_shield(mob/user, var/damage, atom/damage_source = null, mob/attacker = null, def_zone = null, attack_text = "the attack")
+/obj/item/clothing/shoes/magboots/rig/ch/tyrprecursor/handle_shield(mob/user, damage, atom/damage_source = null, mob/attacker = null, def_zone = null, attack_text = "the attack")
 	if(shieldhealth < 75)
 		user.visible_message(span_danger("\The [src] completely absorbs [attack_text]!"))
 		shieldhealth -= damage

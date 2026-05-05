@@ -13,7 +13,7 @@
 /mob/living/can_emote(emote_type)
 	return (..() && !(silent && emote_type == AUDIBLE_MESSAGE))
 
-/mob/proc/emote(var/act, m_type, message)
+/mob/proc/emote(act, m_type, message)
 	set waitfor = FALSE
 	// s-s-snowflake
 	if(src.stat == DEAD && act != "deathgasp")
@@ -163,7 +163,7 @@
 	return list("pretext" = pretext, "nametext" = nametext, "subtext" = subtext)
 
 // Specific mob type exceptions below.
-/mob/living/silicon/ai/emote(var/act, type, message)
+/mob/living/silicon/ai/emote(act, type, message)
 	var/obj/machinery/hologram/holopad/T = src.holo
 	if(T && T.masters[src]) //Is the AI using a holopad?
 		src.holopad_emote(message)

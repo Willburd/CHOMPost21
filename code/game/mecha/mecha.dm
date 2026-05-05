@@ -2781,7 +2781,7 @@
 	return 0
 
 //This is for mobs mostly.
-/obj/mecha/attack_generic(var/mob/user, damage, attack_message)
+/obj/mecha/attack_generic(mob/user, damage, attack_message)
 
 	var/obj/item/mecha_parts/component/armor/ArmC = internal_components[MECH_ARMOR]
 

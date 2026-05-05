@@ -37,7 +37,7 @@
 
 	var/one_time = FALSE
 
-/datum/transhuman/mind_record/New(var/datum/mind/mind, var/mob/living/carbon/human/M, var/add_to_db = TRUE, one_time = FALSE, database_key)
+/datum/transhuman/mind_record/New(var/datum/mind/mind, var/mob/living/carbon/human/M, add_to_db = TRUE, one_time = FALSE, database_key)
 	ASSERT(mind)
 
 	src.one_time = one_time
@@ -103,7 +103,7 @@
 	var/aflags
 	var/breath_type = GAS_O2
 
-/datum/transhuman/body_record/New(var/copyfrom, add_to_db = 0, ckeylock = 0)
+/datum/transhuman/body_record/New(copyfrom, add_to_db = 0, ckeylock = 0)
 	..()
 	if(istype(copyfrom, /datum/transhuman/body_record))
 		init_from_br(copyfrom)
@@ -120,7 +120,7 @@
 	..()
 	return QDEL_HINT_HARDDEL // For now at least there is no easy way to clear references to this in GLOB.machines etc.
 
-/datum/transhuman/body_record/proc/init_from_mob(var/mob/living/carbon/human/M, var/add_to_db = 0, ckeylock = 0, database_key)
+/datum/transhuman/body_record/proc/init_from_mob(var/mob/living/carbon/human/M, add_to_db = 0, ckeylock = 0, database_key)
 	ASSERT(!QDELETED(M))
 	ASSERT(istype(M))
 
@@ -247,7 +247,7 @@
  */
 
 /// The core of resleeving, creates a mob based on the current record
-/datum/transhuman/body_record/proc/produce_human_mob(var/location, var/is_synthfab, force_unlock, backup_name)
+/datum/transhuman/body_record/proc/produce_human_mob(var/location, is_synthfab, force_unlock, backup_name)
 	// These are broken up into steps, otherwise the proc gets massive and hard to read.
 	var/mob/living/carbon/human/H = internal_producebody(location,backup_name)
 	internal_producebody_handlesleevelock(H,force_unlock)
@@ -373,7 +373,7 @@
 /**
  * Specialty revival procs. Uses the BR for data, but needs to handle some weird logic for xenochi/slimes
  */
-/datum/transhuman/body_record/proc/revive_xenochimera(var/mob/living/carbon/human/H,heal_robot_limbs,from_save_slot)
+/datum/transhuman/body_record/proc/revive_xenochimera(mob/living/carbon/human/H,heal_robot_limbs,from_save_slot)
 	// Boy this one is complex, but what do we expect when trying to heal damage and organ loss in this game!
 	if(!H || QDELETED(H)) // Someone, somewhere, will call this without any safety. I feel it in my bones cappin'
 		return

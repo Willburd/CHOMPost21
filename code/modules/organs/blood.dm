@@ -452,7 +452,7 @@ BLOOD_VOLUME_SURVIVE = 40
 		//AB is a universal receiver.
 	return 0
 
-/proc/blood_splatter(var/target,datum/reagent/blood/source,large)
+/proc/blood_splatter(target,datum/reagent/blood/source,large)
 
 	//Vorestation Edit Start - We're not going to splatter at all because we're in something and that's silly.
 	if(istype(source,/atom/movable))

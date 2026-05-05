@@ -1,5 +1,5 @@
 //TODO: Convert this over for languages.
-/mob/living/carbon/brain/say(var/message, datum/language/speaking = null, whispering = 0)
+/mob/living/carbon/brain/say(message, datum/language/speaking = null, whispering = 0)
 	if(silent)
 		return
 

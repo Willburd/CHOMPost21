@@ -24,7 +24,7 @@
 //////////////////////////////
 
 // common helper procs for all power machines
-/obj/machinery/power/drain_power(var/drain_check, surge, amount = 0)
+/obj/machinery/power/drain_power(drain_check, surge, amount = 0)
 	if(drain_check)
 		return 1
 
@@ -109,7 +109,7 @@
 	return
 
 // Power machinery should also connect/disconnect from the network.
-/obj/machinery/power/default_unfasten_wrench(var/mob/user, obj/item/W, time = 20)
+/obj/machinery/power/default_unfasten_wrench(mob/user, obj/item/W, time = 20)
 	if((. = ..()))
 		if(anchored)
 			connect_to_network()
@@ -185,7 +185,7 @@
 // returns a list of all power-related objects (nodes, cable, junctions) in turf,
 // excluding source, that match the direction d
 // if unmarked==1, only return those with no powernet
-/proc/power_list(var/turf/T, var/source, var/d, unmarked=0, cable_only = 0)
+/proc/power_list(var/turf/T, var/source, d, unmarked=0, cable_only = 0)
 	. = list()
 
 	var/reverse = d ? GLOB.reverse_dir[d] : 0
@@ -272,7 +272,7 @@
 //power_source is a source of electricity, can be powercell, area, apc, cable, powernet or null
 //source is an object caused electrocuting (airlock, grille, etc)
 //No animations will be performed by this proc.
-/proc/electrocute_mob(mob/living/M as mob, var/power_source, obj/source, siemens_coeff = 1.0)
+/proc/electrocute_mob(mob/living/M as mob, power_source, obj/source, siemens_coeff = 1.0)
 	if(istype(M.loc,/obj/mecha))	return 0	//feckin mechs are dumb
 	if(issilicon(M))	return 0	//No more robot shocks from machinery
 	var/area/source_area

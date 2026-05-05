@@ -1,4 +1,4 @@
-/proc/wormhole_event(var/set_duration = 5 MINUTES, wormhole_duration_modifier = 1, redspace = FALSE)
+/proc/wormhole_event(set_duration = 5 MINUTES, wormhole_duration_modifier = 1, redspace = FALSE)
 	spawn()
 	/* Outpost 21 edit begin - Dechomp this
 	// CHOMPEdit Start - Only allowing these to go to the station
@@ -95,7 +95,7 @@
 
 
 //maybe this proc can even be used as an admin tool for teleporting players without ruining immulsions?
-/proc/create_wormhole(var/turf/enter as turf, var/atom/exit, min_duration = 30 SECONDS, max_duration = 60 SECONDS) // CHOMPEdit
+/proc/create_wormhole(var/turf/enter as turf, atom/exit, min_duration = 30 SECONDS, max_duration = 60 SECONDS) // CHOMPEdit
 	set waitfor = FALSE
 	var/obj/effect/portal/P = new /obj/effect/portal( enter )
 	P.target = exit

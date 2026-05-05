@@ -84,7 +84,7 @@ GLOBAL_DATUM_INIT(uplink, /datum/uplink, new)
 	return desc
 
 // get_goods does not necessarily return physical objects, it is simply a way to acquire the uplink item without paying
-/datum/uplink_item/proc/get_goods(var/obj/item/uplink/U, location, mob/user)
+/datum/uplink_item/proc/get_goods(obj/item/uplink/U, location, mob/user)
 	return FALSE
 
 /datum/uplink_item/proc/log_icon()
@@ -179,7 +179,7 @@ GLOBAL_DATUM_INIT(uplink, /datum/uplink, new)
 /****************
 * Support procs *
 ****************/
-/proc/get_random_uplink_items(var/obj/item/uplink/U, remaining_TC, location)
+/proc/get_random_uplink_items(obj/item/uplink/U, remaining_TC, location)
 	var/list/bought_items = list()
 	while(remaining_TC)
 		var/datum/uplink_item/I = GLOB.default_uplink_selection.get_random_item(remaining_TC, U, bought_items)
@@ -190,7 +190,7 @@ GLOBAL_DATUM_INIT(uplink, /datum/uplink, new)
 
 	return bought_items
 
-/proc/get_surplus_items(var/obj/item/uplink/U, remaining_TC, location)
+/proc/get_surplus_items(obj/item/uplink/U, remaining_TC, location)
 	var/list/bought_items = list()
 	var/override = TRUE
 	while(remaining_TC)

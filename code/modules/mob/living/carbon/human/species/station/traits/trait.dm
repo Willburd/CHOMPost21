@@ -47,7 +47,7 @@
 
 
 //Proc can be overridden lower to include special changes, make sure to call up though for the vars changes
-/datum/trait/proc/apply(var/datum/species/S,mob/living/carbon/human/H, trait_prefs = null)
+/datum/trait/proc/apply(datum/species/S,mob/living/carbon/human/H, trait_prefs = null)
 	ASSERT(S)
 	if(var_changes)
 		for(var/V in var_changes)
@@ -80,7 +80,7 @@
 	return
 
 // Traitgenes Disabling traits, genes can be turned off after all!
-/datum/trait/proc/unapply(var/datum/species/S,mob/living/carbon/human/H, trait_prefs = null)
+/datum/trait/proc/unapply(datum/species/S,mob/living/carbon/human/H, trait_prefs = null)
 	ASSERT(S)
 	if(var_changes)
 		for(var/V in var_changes)

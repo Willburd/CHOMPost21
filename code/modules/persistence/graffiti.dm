@@ -15,7 +15,7 @@
 	var/graffiti_age = 0
 	var/author = "unknown"
 
-/obj/effect/decal/writing/Initialize(mapload, var/_age, _message, _author)
+/obj/effect/decal/writing/Initialize(mapload, _age, _message, _author)
 	. = ..()
 	if(!isnull(_age))
 		graffiti_age = _age

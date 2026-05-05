@@ -105,7 +105,7 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Hallucination attackers with AI behaviors
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
-/mob/proc/create_hallucination_attacker(var/turf/T = null,mob/living/carbon/human/clone = null, forced_type = null)
+/mob/proc/create_hallucination_attacker(turf/T = null,mob/living/carbon/human/clone = null, forced_type = null)
 	SHOULD_NOT_OVERRIDE(TRUE)
 	if(!client)
 		return null

@@ -243,7 +243,7 @@ GLOBAL_LIST_EMPTY(dispenser_presets)
 			choices[choice] = G
 	return choices
 
-/obj/machinery/gear_dispenser/proc/dispense(var/datum/gear_disp/S,mob/living/carbon/human/user,greet=TRUE)
+/obj/machinery/gear_dispenser/proc/dispense(datum/gear_disp/S,mob/living/carbon/human/user,greet=TRUE)
 	if(!S.amount && !(dispenser_flags & GD_UNLIMITED))
 		to_chat(user,span_warning("There are no more [S.name]s left!"))
 		dispenser_flags &= ~GD_BUSY
@@ -348,7 +348,7 @@ GLOBAL_LIST_EMPTY(dispenser_presets)
 		return
 	return ..()
 
-/obj/machinery/gear_dispenser/suit_fancy/dispense(var/datum/gear_disp/S,mob/living/carbon/human/user,greet=TRUE)
+/obj/machinery/gear_dispenser/suit_fancy/dispense(datum/gear_disp/S,mob/living/carbon/human/user,greet=TRUE)
 	if(!S.amount && !(dispenser_flags & GD_UNLIMITED))
 		to_chat(user,span_warning("There are no more [S.name]s left!"))
 		dispenser_flags &= ~GD_BUSY

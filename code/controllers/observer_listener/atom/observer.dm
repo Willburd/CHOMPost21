@@ -12,7 +12,7 @@
 
 	return ..()
 
-/atom/proc/register(var/event, procOwner, proc_call)
+/atom/proc/register(event, procOwner, proc_call)
 	var/list/listeners = get_listener_list_from_event(event)
 	listeners[procOwner] = proc_call
 

@@ -250,7 +250,7 @@ GLOBAL_LIST_INIT(name_to_material, populate_material_list())
 	var/wiki_flag = 0
 
 // Placeholders for light tiles and rglass.
-/datum/material/proc/build_rod_product(var/mob/user, obj/item/stack/used_stack, obj/item/stack/target_stack)
+/datum/material/proc/build_rod_product(mob/user, obj/item/stack/used_stack, obj/item/stack/target_stack)
 	if(!rod_product)
 		to_chat(user, span_warning("You cannot make anything out of \the [target_stack]"))
 		return
@@ -263,7 +263,7 @@ GLOBAL_LIST_INIT(name_to_material, populate_material_list())
 	S.add_fingerprint(user)
 	S.add_to_stacks(user)
 
-/datum/material/proc/build_wired_product(var/mob/living/user, obj/item/stack/used_stack, obj/item/stack/target_stack)
+/datum/material/proc/build_wired_product(mob/living/user, obj/item/stack/used_stack, obj/item/stack/target_stack)
 	if(!wire_product)
 		to_chat(user, span_warning("You cannot make anything out of \the [target_stack]"))
 		return
@@ -323,7 +323,7 @@ GLOBAL_LIST_INIT(name_to_material, populate_material_list())
 	wiki_flag = WIKI_SPOILER
 
 // Places a girder object when a wall is dismantled, also applies reinforced material.
-/datum/material/proc/place_dismantled_girder(var/turf/target, datum/material/reinf_material, datum/material/girder_material)
+/datum/material/proc/place_dismantled_girder(turf/target, datum/material/reinf_material, datum/material/girder_material)
 	var/obj/structure/girder/G = new(target)
 	if(reinf_material)
 		G.reinf_material = reinf_material

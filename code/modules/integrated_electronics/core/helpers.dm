@@ -1,4 +1,4 @@
-/obj/item/integrated_circuit/proc/setup_io(var/list/io_list, io_type, list/io_default_list)
+/obj/item/integrated_circuit/proc/setup_io(list/io_list, io_type, list/io_default_list)
 	var/list/io_list_copy = io_list.Copy()
 	io_list.Cut()
 	var/i = 1
@@ -29,7 +29,7 @@
 	var/datum/integrated_io/pin = get_pin_ref(pin_type, pin_number)
 	return pin.get_data()
 
-/obj/item/integrated_circuit/proc/get_pin_data_as_type(var/pin_type, pin_number, as_type)
+/obj/item/integrated_circuit/proc/get_pin_data_as_type(pin_type, pin_number, as_type)
 	var/datum/integrated_io/pin = get_pin_ref(pin_type, pin_number)
 	return pin.data_as_type(as_type)
 

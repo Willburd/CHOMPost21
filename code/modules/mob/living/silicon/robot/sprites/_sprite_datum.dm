@@ -104,7 +104,7 @@
 					ourborg.add_overlay("[sprite_icon_state]-melee")
 					continue
 
-/datum/robot_sprite/proc/get_belly_overlay(var/mob/living/silicon/robot/ourborg, size = 1, b_class)
+/datum/robot_sprite/proc/get_belly_overlay(mob/living/silicon/robot/ourborg, size = 1, b_class)
 	//Size
 	if(has_sleeper_light_indicator || belly_light_list.len)
 		if(belly_light_list.len)
@@ -126,7 +126,7 @@
 			return "[sprite_icon_state]-[b_class]-[size]-[sleeperColor]"
 	return "[sprite_icon_state]-[b_class]-[size]"
 
-/datum/robot_sprite/proc/get_belly_resting_overlay(var/mob/living/silicon/robot/ourborg, size = 1, b_class)
+/datum/robot_sprite/proc/get_belly_resting_overlay(mob/living/silicon/robot/ourborg, size = 1, b_class)
 	if(!(ourborg.rest_style in rest_sprite_options))
 		ourborg.rest_style = "Default"
 	switch(ourborg.rest_style)

@@ -399,7 +399,7 @@ GLOBAL_LIST_EMPTY(additional_antag_types)
 /datum/game_mode/proc/check_win() //universal trigger to be called at mob death, nuke explosion, etc. To be called from everywhere.
 	return 0
 
-/datum/game_mode/proc/get_players_for_role(var/role, antag_id, ghosts_only)
+/datum/game_mode/proc/get_players_for_role(role, antag_id, ghosts_only)
 	var/list/players = list()
 	var/list/candidates = list()
 

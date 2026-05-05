@@ -111,7 +111,7 @@
 		nif.notify("New commlink call from [who]. (<a href='byond://?src=\ref[nifsoft];open=1'>Open</a>)")
 
 //Similar reason
-/obj/item/communicator/commlink/request_im(var/atom/candidate, origin_address, text)
+/obj/item/communicator/commlink/request_im(atom/candidate, origin_address, text)
 	var/who = null
 	if(isobserver(candidate))
 		var/mob/observer/dead/ghost = candidate

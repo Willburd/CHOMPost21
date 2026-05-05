@@ -56,7 +56,7 @@
 	reagent_ids = list(REAGENT_ID_HEALINGNANITES, REAGENT_ID_HYPERZINE, REAGENT_ID_TRAMADOL, REAGENT_ID_OXYCODONE, REAGENT_ID_SPACEACILLIN, REAGENT_ID_PERIDAXON, REAGENT_ID_OSTEODAXON, REAGENT_ID_MYELAMINE, REAGENT_ID_SYNTHBLOOD)
 
 /// Performs a single reagent addition. Returns its success (or error) status at doing so.
-/obj/item/reagent_containers/borghypo/proc/try_add_reagent(var/datum/reagents/target_reagents, var/mob/user, reagent_id, amount)
+/obj/item/reagent_containers/borghypo/proc/try_add_reagent(var/datum/reagents/target_reagents, mob/user, reagent_id, amount)
 	var/reagent_volume = reagent_volumes[reagent_id]
 	if(!reagent_volume || reagent_volume < amount)
 		return BORGHYPO_STATUS_NOCHARGE
@@ -402,7 +402,7 @@
 /obj/item/reagent_containers/borghypo/service/attack(mob/living/M, mob/living/user, target_zone, attack_modifier)
 	return NONE
 
-/obj/item/reagent_containers/borghypo/service/afterattack(var/obj/target, mob/user, proximity)
+/obj/item/reagent_containers/borghypo/service/afterattack(obj/target, mob/user, proximity)
 	if(!proximity)
 		return
 

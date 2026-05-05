@@ -28,7 +28,7 @@
 	. = ..()
 
 //Places the poster on a wall
-/obj/item/contraband/poster/afterattack(var/atom/A, var/mob/user, adjacent, clickparams)
+/obj/item/contraband/poster/afterattack(var/atom/A, mob/user, adjacent, clickparams)
 	if (!adjacent)
 		return
 
@@ -137,7 +137,7 @@
 	var/roll_type
 	var/poster_set = FALSE
 
-/obj/structure/sign/poster/Initialize(mapload, var/placement_dir=null, serial=null, itemtype = /obj/item/contraband/poster)
+/obj/structure/sign/poster/Initialize(mapload, placement_dir=null, serial=null, itemtype = /obj/item/contraband/poster)
 	. = ..()
 
 	if(!serial)
@@ -226,7 +226,7 @@
 /obj/structure/sign/poster/nanotrasen
 	roll_type = /obj/item/contraband/poster/nanotrasen
 
-/obj/structure/sign/poster/nanotrasen/Initialize(mapload, var/placement_dir=null, serial=null, itemtype = /obj/item/contraband/poster/nanotrasen)
+/obj/structure/sign/poster/nanotrasen/Initialize(mapload, placement_dir=null, serial=null, itemtype = /obj/item/contraband/poster/nanotrasen)
 	if(!serial)
 		serial = rand(1, NT_poster_designs.len)
 

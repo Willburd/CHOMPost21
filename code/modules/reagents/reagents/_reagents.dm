@@ -80,7 +80,7 @@
 	SEND_SIGNAL(T, COMSIG_REAGENT_EXPOSE_TURF, src, amount)
 	return
 
-/datum/reagent/proc/on_mob_life(var/mob/living/carbon/M, alien, datum/reagents/metabolism/location) // Currently, on_mob_life is called on carbons. Any interaction with non-carbon mobs (lube) will need to be done in touch_mob.
+/datum/reagent/proc/on_mob_life(mob/living/carbon/M, alien, datum/reagents/metabolism/location) // Currently, on_mob_life is called on carbons. Any interaction with non-carbon mobs (lube) will need to be done in touch_mob.
 	if(!istype(M))
 		return
 	if(!affects_dead && M.stat == DEAD && !M.has_modifier_of_type(/datum/modifier/bloodpump_corpse))
@@ -204,20 +204,20 @@
 	remove_self(removed)
 	return
 
-/datum/reagent/proc/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/proc/affect_blood(mob/living/carbon/M, alien, removed)
 	return
 
-/datum/reagent/proc/affect_ingest(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/proc/affect_ingest(mob/living/carbon/M, alien, removed)
 	M.bloodstr.add_reagent(id, removed)
 	if(src.id == M.species.blood_reagents)
 		M.add_chemical_effect(CE_BLOODRESTORE, 8 * removed)
 	return
 
-/datum/reagent/proc/affect_touch(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/proc/affect_touch(mob/living/carbon/M, alien, removed)
 	M.bloodstr.add_reagent(id, removed * dermal_absorption)
 	return
 
-/datum/reagent/proc/overdose(var/mob/living/carbon/M, alien, removed) // Overdose effect.
+/datum/reagent/proc/overdose(mob/living/carbon/M, alien, removed) // Overdose effect.
 	if(alien == IS_DIONA)
 		return
 	if(ishuman(M))

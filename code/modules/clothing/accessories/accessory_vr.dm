@@ -336,7 +336,7 @@
 
 	to_chat(user,span_notice("You need a pen or a screwdriver to edit the tag on this collar."))
 
-/obj/item/clothing/accessory/collar/proc/update_collartag(mob/user, obj/item/I, var/erasemethod, erasing, writemethod)
+/obj/item/clothing/accessory/collar/proc/update_collartag(mob/user, obj/item/I, erasemethod, erasing, writemethod)
 	if(!(istype(user.get_active_hand(),I)) || !(istype(user.get_inactive_hand(),src)) || (user.stat))
 		return
 

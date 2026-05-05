@@ -142,7 +142,7 @@
 	to_chat(user, span_notice("You transfer [S.evidence.len] [S.evidence.len > 1 ? "[evidence_type]s" : "[evidence_type]"] to \the [S]."))
 	SEND_GLOBAL_SIGNAL(COMSIG_GLOB_FORENSICS_COLLECTED, supplied, user)
 
-/obj/item/forensics/sample_kit/afterattack(var/atom/A, mob/user, proximity)
+/obj/item/forensics/sample_kit/afterattack(atom/A, mob/user, proximity)
 	if(!proximity)
 		return
 	add_fingerprint(user)

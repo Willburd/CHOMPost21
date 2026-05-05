@@ -48,7 +48,7 @@
 	name = "solid rock"
 	desc = "This rock seems dense, impossible to drill."
 
-/turf/simulated/wall/solidrock/proc/get_cached_border(var/cache_id, var/direction, var/icon_file, icon_state, offset = 32)
+/turf/simulated/wall/solidrock/proc/get_cached_border(var/cache_id, var/direction, icon_file, icon_state, offset = 32)
 	if(!GLOB.mining_overlay_cache["[cache_id]_[direction]"])
 		var/image/new_cached_image = image(icon_state, dir = direction, layer = ABOVE_TURF_LAYER)
 		switch(direction)

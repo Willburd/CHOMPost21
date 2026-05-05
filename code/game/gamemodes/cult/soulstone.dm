@@ -238,7 +238,7 @@
 			Z.cancel_camera()
 			qdel(src)
 
-/obj/item/soulstone/proc/transfer_soul(var/choice as text, target, mob/U as mob)
+/obj/item/soulstone/proc/transfer_soul(choice as text, target, mob/U as mob)
 	switch(choice)
 		if("VICTIM")
 			transfer_human(target,U)

@@ -81,7 +81,7 @@
 				log_admin("[user]/[user.ckey] set their custom link to [pref.custom_link]")
 
 // README: This must stay for SetFlavorText to work!
-/datum/category_item/player_setup_item/general/flavor/OnTopic(var/href,list/href_list, mob/user)
+/datum/category_item/player_setup_item/general/flavor/OnTopic(href,list/href_list, mob/user)
 	if(href_list["flavor_text"])
 		switch(href_list["flavor_text"])
 			if("open")

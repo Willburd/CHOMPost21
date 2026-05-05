@@ -96,7 +96,7 @@
 // Proc: ability_prechecks()
 // Parameters 2 - (user - User which used this ability check_price - If different than 0 checks for ability CPU price too. Does NOT use the CPU time!)
 // Description: This is pre-check proc used to determine if the AI can use the ability.
-/proc/ability_prechecks(var/mob/living/silicon/ai/user = null, check_price = 0, override = 0)
+/proc/ability_prechecks(mob/living/silicon/ai/user = null, check_price = 0, override = 0)
 	if(!user)
 		return 0
 	if(!istype(user))

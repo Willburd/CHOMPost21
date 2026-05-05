@@ -514,7 +514,7 @@
 		beaker = null
 		toggle_filter()
 
-/obj/machinery/sleeper/proc/inject_chemical(var/mob/living/user, chemical, amount)
+/obj/machinery/sleeper/proc/inject_chemical(mob/living/user, chemical, amount)
 	if(stat & (BROKEN|NOPOWER))
 		return
 	if(!(amount in amounts))

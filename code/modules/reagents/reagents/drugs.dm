@@ -146,7 +146,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED // bonus
 	industrial_use = REFINERYEXPORT_REASON_ILLDRUG
 
-/datum/reagent/drugs/psilocybin/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/drugs/psilocybin/affect_blood(mob/living/carbon/M, alien, removed)
 	..()
 
 	var/threshold = 1
@@ -201,7 +201,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_ILLDRUG
 
-/datum/reagent/drugs/talum_quem/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/drugs/talum_quem/affect_blood(mob/living/carbon/M, alien, removed)
 	..()
 
 	var/drug_strength = 29
@@ -295,7 +295,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_DRUG
 
-/datum/reagent/drugs/citalopram/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/drugs/citalopram/affect_blood(mob/living/carbon/M, alien, removed)
 	..()
 
 	M.fear = max((M.fear - 3),0)
@@ -346,7 +346,7 @@
 	industrial_use = REFINERYEXPORT_REASON_DRUG
 
 // Outpost 21 edit begin - calm anxiety
-/datum/reagent/drugs/qerr_quem/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/drugs/qerr_quem/affect_blood(mob/living/carbon/M, alien, removed)
 	..()
 
 	M.fear = max((M.fear - 3),0)

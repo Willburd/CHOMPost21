@@ -1198,7 +1198,7 @@
 	return TRUE
 
 //Autotransfer filter
-/obj/belly/proc/autotransfer_filter(var/atom/movable/prey, whitelist, blacklist)
+/obj/belly/proc/autotransfer_filter(atom/movable/prey, whitelist, blacklist)
 	if(ismob(prey))
 		if(blacklist & autotransfer_flags_list["Absorbed"])
 			if(isliving(prey))

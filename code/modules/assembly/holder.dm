@@ -13,7 +13,7 @@
 	var/obj/item/assembly/a_right = null
 	var/obj/special_assembly = null
 
-/obj/item/assembly_holder/proc/attach(var/obj/item/assembly/D, obj/item/assembly/D2, mob/user)
+/obj/item/assembly_holder/proc/attach(obj/item/assembly/D, obj/item/assembly/D2, mob/user)
 	if(!D || !D2)
 		return FALSE
 

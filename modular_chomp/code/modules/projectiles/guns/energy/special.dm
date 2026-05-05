@@ -66,7 +66,7 @@
 	hud_state = "rocket_thermobaric"
 	speed = 0.2
 
-/obj/item/projectile/bullet/magnetic/supercannon/on_hit(var/atom/target, blocked = 0, def_zone = null)
+/obj/item/projectile/bullet/magnetic/supercannon/on_hit(atom/target, blocked = 0, def_zone = null)
 	if(istype(target,/turf/simulated/wall) || istype(target,/mob/living))
 		target.visible_message(span_danger("The [src] burns a perfect hole through \the [target] with a blinding flash!"))
 		playsound(target, 'sound/effects/teleport.ogg', 40, 0)

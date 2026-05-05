@@ -62,7 +62,7 @@
 		return zap(usr, A, proximity)
 	return 0
 
-/obj/item/clothing/gloves/ring/buzzer/toy/zap(var/mob/living/carbon/human/user, atom/movable/target, proximity)
+/obj/item/clothing/gloves/ring/buzzer/toy/zap(mob/living/carbon/human/user, atom/movable/target, proximity)
 	. = FALSE
 	if(user.a_intent == I_HELP && battery.percent() >= 50)
 		if(isliving(target))

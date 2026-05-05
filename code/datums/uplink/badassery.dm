@@ -35,7 +35,7 @@
 /datum/uplink_item/item/badassery/random_many/cost(obj/item/uplink/U, telecrystals)
 	return max(1, telecrystals)
 
-/datum/uplink_item/item/badassery/random_many/get_goods(var/obj/item/uplink/U, location, mob/M)
+/datum/uplink_item/item/badassery/random_many/get_goods(obj/item/uplink/U, location, mob/M)
 	var/list/bought_items = list()
 	for(var/datum/uplink_item/UI in get_random_uplink_items(U, M.mind.tcrystals, location))
 		UI.purchase_log(U)

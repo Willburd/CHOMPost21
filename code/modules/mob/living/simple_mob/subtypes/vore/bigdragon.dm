@@ -805,7 +805,7 @@ I think I covered everything.
 	chargetimer = addtimer(CALLBACK(src, PROC_REF(chargeend), A), charge_warmup, TIMER_STOPPABLE)
 
 
-/mob/living/simple_mob/vore/bigdragon/proc/chargeend(var/atom/A, explicit = 0, gentle = 0)
+/mob/living/simple_mob/vore/bigdragon/proc/chargeend(atom/A, explicit = 0, gentle = 0)
 	//make sure our target still exists and is on a turf
 	if(QDELETED(A) || !isturf(get_turf(A)))
 		set_AI_busy(FALSE)

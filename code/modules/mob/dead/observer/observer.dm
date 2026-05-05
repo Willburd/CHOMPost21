@@ -1023,7 +1023,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 
 // Lets a ghost know someone's trying to bring them back, and for them to get into their body.
 // Mostly the same as TG's sans the hud element, since we don't have TG huds.
-/mob/observer/dead/proc/notify_revive(var/message, sound, flashwindow = TRUE, atom/source)
+/mob/observer/dead/proc/notify_revive(message, sound, flashwindow = TRUE, atom/source)
 	if((last_revive_notification + 2 MINUTES) > world.time)
 		return
 	last_revive_notification = world.time

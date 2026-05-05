@@ -95,7 +95,7 @@
 	key = "l"
 	flags = WHITELISTED | SIGNLANG | NO_STUTTER //nonverbal define was not needed here, and i need to use it ~Layne
 
-/datum/language/tajsign/broadcast(var/mob/living/speaker, message, speaker_mask)
+/datum/language/tajsign/broadcast(mob/living/speaker, message, speaker_mask)
 	speaker.log_talk("(SIGN) [message]", LOG_SAY)
 	var/verb_to_use = pick(signlang_verb)
 	speaker.say_signlang(message, verb_to_use, verb_to_use, src)

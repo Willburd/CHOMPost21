@@ -51,7 +51,7 @@
 	M.dna.SetSEState(T.block, TRUE)
 
 // Scramble UI or SE.
-/proc/scramble(var/UI, mob/M, prob)
+/proc/scramble(UI, mob/M, prob)
 	if(!M || !(M.dna))	return
 	// Traitgenes edit begin - NO_DNA and Synthetics cannot be mutated
 	if(M.isSynthetic())

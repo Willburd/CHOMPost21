@@ -234,7 +234,7 @@ GLOBAL_LIST_EMPTY(all_blobs)
 	qdel(src)
 	return B
 
-/obj/structure/blob/attack_generic(var/mob/user, damage, attack_verb)
+/obj/structure/blob/attack_generic(mob/user, damage, attack_verb)
 	visible_message(span_danger("[user] [attack_verb] the [src]!"))
 	playsound(src, 'sound/effects/attackblob.ogg', 100, 1)
 	user.do_attack_animation(src)

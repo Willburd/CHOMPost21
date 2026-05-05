@@ -147,7 +147,7 @@
 	var/icon_state
 	var/color
 
-/datum/nail_polish/New(var/_icon, _icon_state, _color)
+/datum/nail_polish/New(_icon, _icon_state, _color)
 	icon = _icon
 	icon_state = _icon_state
 	color = _color

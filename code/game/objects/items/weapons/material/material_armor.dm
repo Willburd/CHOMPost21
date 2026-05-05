@@ -99,7 +99,7 @@ Protectiveness | Armor %
 	qdel(src)
 
 // Might be best to make ablative vests a material armor using a new material to cut down on this copypaste.
-/obj/item/clothing/suit/armor/handle_shield(mob/user, var/damage, atom/damage_source = null, mob/attacker = null, def_zone = null, attack_text = "the attack")
+/obj/item/clothing/suit/armor/handle_shield(mob/user, damage, atom/damage_source = null, mob/attacker = null, def_zone = null, attack_text = "the attack")
 	if(!material) // No point checking for reflection.
 		return ..()
 

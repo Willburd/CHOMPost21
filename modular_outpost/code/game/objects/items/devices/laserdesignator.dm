@@ -86,7 +86,7 @@
 	spawn(cooldown)
 		icon_state = item_state
 
-/obj/item/laser_designator/proc/call_down_the_fist_of_god(var/mob/user, atom/target,turf/hithere)
+/obj/item/laser_designator/proc/call_down_the_fist_of_god(mob/user, atom/target,turf/hithere)
 	if(target && !istype(hithere))
 		hithere = get_turf(target)
 	if(!target && !hithere)

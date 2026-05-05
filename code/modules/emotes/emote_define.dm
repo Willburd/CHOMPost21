@@ -49,7 +49,7 @@
 	if(key)
 		LAZYSET(GLOB.emotes_by_key, key, src)
 
-/datum/decl/emote/proc/get_emote_message_1p(var/atom/user, atom/target, extra_params)
+/datum/decl/emote/proc/get_emote_message_1p(atom/user, atom/target, extra_params)
 	if(target)
 		if(emote_message_synthetic_1p_target && check_synthetic(user))
 			return emote_message_synthetic_1p_target
@@ -58,7 +58,7 @@
 		return emote_message_synthetic_1p
 	return emote_message_1p
 
-/datum/decl/emote/proc/get_emote_message_3p(var/atom/user, atom/target, extra_params)
+/datum/decl/emote/proc/get_emote_message_3p(atom/user, atom/target, extra_params)
 	if(target)
 		if(emote_message_synthetic_3p_target && check_synthetic(user))
 			return emote_message_synthetic_3p_target

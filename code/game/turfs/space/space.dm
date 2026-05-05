@@ -260,5 +260,5 @@
 					A.loc.Entered(A)
 	return
 
-/turf/space/ChangeTurf(var/turf/N, var/tell_universe, force_lighting_update, preserve_outdoors)
+/turf/space/ChangeTurf(var/turf/N, tell_universe, force_lighting_update, preserve_outdoors)
 	return ..(N, tell_universe, 1, preserve_outdoors)

@@ -14,7 +14,7 @@ GLOBAL_LIST(fusion_reactions)
 /datum/decl/fusion_reaction/proc/handle_reaction_special(obj/effect/fusion_em_field/holder)
 	return 0
 
-/proc/get_fusion_reaction(var/p_react, s_react, m_energy)
+/proc/get_fusion_reaction(p_react, s_react, m_energy)
 	if(!GLOB.fusion_reactions)
 		GLOB.fusion_reactions = list()
 		for(var/rtype in subtypesof(/datum/decl/fusion_reaction))

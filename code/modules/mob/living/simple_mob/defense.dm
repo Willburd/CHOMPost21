@@ -192,7 +192,7 @@
 	. = min(., 1.0)
 
 // Electricity
-/mob/living/simple_mob/electrocute_act(var/shock_damage, var/obj/source, var/siemens_coeff = 1.0, def_zone = null, stun = 1)
+/mob/living/simple_mob/electrocute_act(var/shock_damage, var/obj/source, siemens_coeff = 1.0, def_zone = null, stun = 1)
 	shock_damage *= siemens_coeff
 	if(shock_damage < 1)
 		return 0
@@ -218,7 +218,7 @@
 	. = min(., 1.0)
 
 // Shot with taser/stunvolver
-/mob/living/simple_mob/stun_effect_act(var/stun_amount, var/agony_amount, var/def_zone, used_weapon=null, electric = FALSE)
+/mob/living/simple_mob/stun_effect_act(var/stun_amount, var/agony_amount, def_zone, used_weapon=null, electric = FALSE)
 	if(taser_kill)
 		//var/stunDam = 0
 		//var/agonyDam = 0

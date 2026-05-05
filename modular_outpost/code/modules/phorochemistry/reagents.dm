@@ -71,7 +71,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_MATSCI
 
-/datum/reagent/oxyphoromin/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/oxyphoromin/affect_blood(mob/living/carbon/M, alien, removed)
 	M.add_chemical_effect(CE_PAINKILLER, 600)
 	M.eye_blurry = min(M.eye_blurry + 10, 250)
 	M.Confuse(5)
@@ -91,7 +91,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_MATSCI
 
-/datum/reagent/extreme_mutagen/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/extreme_mutagen/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien == IS_DIONA)
 		return
 	if(ishuman(M))
@@ -136,7 +136,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_MATSCI
 
-/datum/reagent/genedrazine/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/genedrazine/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien == IS_DIONA)
 		return
 	var/healedDamage = 0
@@ -167,7 +167,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_MATSCI
 
-/datum/reagent/expulsicol/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/expulsicol/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien == IS_DIONA)
 		return
 	if(!message_given)

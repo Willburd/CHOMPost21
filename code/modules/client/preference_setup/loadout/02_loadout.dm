@@ -173,7 +173,7 @@ GLOBAL_LIST_EMPTY_TYPED(gear_datums, /datum/gear)
 		. = tweak.get_default()
 		metadata["[tweak]"] = .
 
-/datum/category_item/player_setup_item/loadout/loadout/proc/set_tweak_metadata(var/datum/gear/G, datum/gear_tweak/tweak, new_metadata)
+/datum/category_item/player_setup_item/loadout/loadout/proc/set_tweak_metadata(datum/gear/G, datum/gear_tweak/tweak, new_metadata)
 	var/list/metadata = get_gear_metadata(G)
 	metadata["[tweak]"] = new_metadata
 

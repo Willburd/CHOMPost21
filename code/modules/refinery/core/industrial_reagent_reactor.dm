@@ -77,7 +77,7 @@
 			add_overlay(dot)
 		update_input_connection_overlays("reactor_intakes")
 
-/obj/machinery/reagent_refinery/reactor/handle_transfer(var/atom/origin_machine, var/datum/reagents/RT, var/source_forward_dir, transfer_rate, filter_id = "")
+/obj/machinery/reagent_refinery/reactor/handle_transfer(var/atom/origin_machine, var/datum/reagents/RT, source_forward_dir, transfer_rate, filter_id = "")
 	// no back/forth, filters don't use just their forward, they send the side too!
 	if(dir == GLOB.reverse_dir[source_forward_dir])
 		return 0

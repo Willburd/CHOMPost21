@@ -110,7 +110,7 @@
 	reagents.add_reagent(reagent, amount)
 	return ITEM_INTERACT_SUCCESS
 
-/obj/item/reagent_containers/glass/afterattack(var/obj/target, mob/user, proximity)
+/obj/item/reagent_containers/glass/afterattack(obj/target, mob/user, proximity)
 	if(!proximity || !is_open_container()) //Is the container open & are they next to whatever they're clicking?
 		return 1 //If not, do nothing.
 	for(var/type in GLOB.reagent_containers_can_be_placed_into[container_can_be_placed_into]) //Is it something it can be placed into?

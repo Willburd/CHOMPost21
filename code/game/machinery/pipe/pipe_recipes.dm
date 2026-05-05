@@ -165,7 +165,7 @@ GLOBAL_LIST_INIT(disposal_pipe_recipes, list(
 /datum/pipe_recipe/disposal
 	var/subtype			// subtype is one of the DISPOSAL_SORT_ constants.
 
-/datum/pipe_recipe/disposal/New(var/label, var/ptype, state, dt=PIPE_DIRECTIONAL, sort=0)
+/datum/pipe_recipe/disposal/New(var/label, ptype, state, dt=PIPE_DIRECTIONAL, sort=0)
 	name = label
 	icon_state = state
 	pipe_type = ptype

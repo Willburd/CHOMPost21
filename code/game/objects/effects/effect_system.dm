@@ -215,7 +215,7 @@ would spawn and follow the beaker, even if it is carried or thrown.
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "sparks"
 
-/obj/effect/effect/smoke/illumination/Initialize(mapload, var/lifetime=10, var/range=null, power=null, color=null)
+/obj/effect/effect/smoke/illumination/Initialize(mapload, var/lifetime=10, range=null, power=null, color=null)
 	time_to_live=lifetime
 	. = ..()
 	set_light(range, power, color)

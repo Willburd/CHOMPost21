@@ -151,7 +151,7 @@ GLOBAL_VAR_INIT(Recycled_Items, 0)
 			playsound(src, 'sound/items/electronic_assembly_emptying.ogg', 50, 1)
 			playsound(src, 'sound/effects/metalscrape2.ogg', 50, 1)
 
-/obj/machinery/v_garbosystem/emag_act(var/remaining_charges, mob/user, emag_source)
+/obj/machinery/v_garbosystem/emag_act(remaining_charges, mob/user, emag_source)
 	emagged = !emagged
 	update()
 

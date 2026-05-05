@@ -79,7 +79,7 @@ SUBSYSTEM_DEF(motiontracker)
 // We get this back from anything that handles the signal, and queues up a turf to draw the echo on
 // The logic is in the SIGNAL HANDLER for if it does anything at all with the signal instead of assuming
 // everything wants effects drawn, for example the motion tracker item just flicks() and doesn't call this.
-/datum/controller/subsystem/motiontracker/proc/queue_echo(var/turf/Rt,var/turf/At,echo_count = 1,datum/weakref/client)
+/datum/controller/subsystem/motiontracker/proc/queue_echo(var/turf/Rt,turf/At,echo_count = 1,datum/weakref/client)
 	if(!Rt || !At || !client)
 		return
 	var/rfe = REF(At)

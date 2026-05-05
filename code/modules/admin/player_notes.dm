@@ -1,5 +1,5 @@
 //Hijacking this file for BS12 playernotes functions. I like this ^ one systemm alright, but converting sounds too bothersome~ Chinsky.
-/proc/notes_add(var/key, note, mob/user)
+/proc/notes_add(key, note, mob/user)
 	if (!key || !note)
 		return
 

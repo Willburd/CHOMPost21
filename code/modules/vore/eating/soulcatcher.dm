@@ -79,7 +79,7 @@
 		to_chat(CS, message)
 
 // Forwards the speech of captured souls
-/obj/soulgem/proc/use_speech(var/message, var/mob/living/sender, mob/eyeobj, whisper)
+/obj/soulgem/proc/use_speech(var/message, mob/living/sender, mob/eyeobj, whisper)
 	var/sender_name = eyeobj ? eyeobj.name : sender.name
 
 	//AR Projecting
@@ -107,7 +107,7 @@
 	sender.log_talk("NSAY (SC:[owner.real_name]): [message]", LOG_SAY, color="#ff006f")
 
 // Forwards the emotes of captured souls
-/obj/soulgem/proc/use_emote(var/message, var/mob/living/sender, mob/eyeobj, whisper)
+/obj/soulgem/proc/use_emote(var/message, mob/living/sender, mob/eyeobj, whisper)
 	var/sender_name = eyeobj ? eyeobj.name : sender.name
 
 	//AR Projecting

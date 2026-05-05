@@ -50,7 +50,7 @@
 		var/obj/effect/decal/cleanable/blood/B = blood_splatter(T, src, 1)
 		B.add_blooddna(null,null)
 
-/datum/reagent/blood/affect_ingest(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/blood/affect_ingest(mob/living/carbon/M, alien, removed)
 
 	var/effective_dose = dose
 	if(issmall(M)) effective_dose *= 2
@@ -90,7 +90,7 @@
 					continue
 				D.try_infect(M)
 
-/datum/reagent/blood/affect_touch(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/blood/affect_touch(mob/living/carbon/M, alien, removed)
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
 		if(H.isSynthetic())
@@ -155,7 +155,7 @@
 
 		data["viruses"] = preserve
 
-/datum/reagent/blood/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/blood/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien == IS_SLIME)	//They don't have blood, so it seems weird that they would instantly 'process' the chemical like another species does.
 		affect_ingest(M, alien, removed)
 		return
@@ -234,7 +234,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_RARE
 	industrial_use = REFINERYEXPORT_REASON_MEDSCI
 
-/datum/reagent/antibodies/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/antibodies/affect_blood(mob/living/carbon/M, alien, removed)
 	if(src.data)
 		M.antibodies |= src.data[REAGENT_ID_ANTIBODIES]
 	..()
@@ -325,19 +325,19 @@
 						H.visible_message(span_notice("[H]\'s [S.name] is put out."))
 
 //YWedit start, readds promethean damage that was removed by vorestation.
-/datum/reagent/water/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/water/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien == IS_SLIME)
 		M.adjustToxLoss(6 * removed)
 	else
 		..()
 
-/datum/reagent/water/affect_ingest(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/water/affect_ingest(mob/living/carbon/M, alien, removed)
 	if(alien == IS_SLIME)
 		M.adjustToxLoss(6 * removed)
 	else
 		..()
 
-/datum/reagent/water/affect_touch(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/water/affect_touch(mob/living/carbon/M, alien, removed)
 	if(alien == IS_SLIME && prob(10))
 		M.visible_message(span_warning("[M]'s flesh sizzles where the water touches it!"), span_danger("Your flesh burns in the water!"))
 	..()
@@ -368,7 +368,7 @@
 	remove_self(amount)
 	return
 
-/datum/reagent/fuel/affect_blood(var/mob/living/carbon/M, alien, removed)
+/datum/reagent/fuel/affect_blood(mob/living/carbon/M, alien, removed)
 	if(issmall(M)) removed *= 2
 	M.adjustToxLoss(4 * removed)
 

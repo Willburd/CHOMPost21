@@ -31,7 +31,7 @@
 	// Test to see if rand_seed() can be used reliably.
 	var/priority_process
 
-/datum/random_map/New(var/seed, var/tx, var/ty, var/tz, var/tlx, var/tly, var/do_not_apply, do_not_announce, admin_map)
+/datum/random_map/New(var/seed, var/tx, var/ty, var/tz, var/tlx, var/tly, do_not_apply, do_not_announce, admin_map)
 	if(!isnum(tz))
 		var/old_tz = tz
 		tz = GLOB.map_templates_loaded[tz]
@@ -153,7 +153,7 @@
 /datum/random_map/proc/check_map_sanity()
 	return 1
 
-/datum/random_map/proc/set_origins(var/tx, ty, tz)
+/datum/random_map/proc/set_origins(tx, ty, tz)
 	origin_x = tx ? tx : 1
 	origin_y = ty ? ty : 1
 	origin_z = tz ? tz : 1
@@ -198,7 +198,7 @@
 /datum/random_map/proc/cleanup()
 	return
 
-/datum/random_map/proc/overlay_with(var/datum/random_map/target_map, tx, ty)
+/datum/random_map/proc/overlay_with(datum/random_map/target_map, tx, ty)
 	if(!map.len || !istype(target_map))
 		return
 	tx-- // Update origin so that x/y index
@@ -216,5 +216,5 @@
 	handle_post_overlay_on(target_map,tx,ty)
 
 
-/datum/random_map/proc/handle_post_overlay_on(var/datum/random_map/target_map, tx, ty)
+/datum/random_map/proc/handle_post_overlay_on(datum/random_map/target_map, tx, ty)
 	return
