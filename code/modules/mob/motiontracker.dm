@@ -22,7 +22,7 @@
 	. = ..()
 
 // For COMSIG_MOVABLE_MOTIONTRACKER
-/mob/proc/handle_motion_tracking(mob/source, var/datum/weakref/RW, turf/T)
+/mob/proc/handle_motion_tracking(mob/source, datum/weakref/RW, turf/T)
 	SIGNAL_HANDLER
 	SHOULD_NOT_OVERRIDE(TRUE)
 	PRIVATE_PROC(TRUE)

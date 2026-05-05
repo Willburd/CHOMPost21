@@ -91,7 +91,7 @@
 		return TRUE
 	return FALSE
 
-/datum/species/xenos/hug(var/mob/living/carbon/human/H,mob/living/target)
+/datum/species/xenos/hug(mob/living/carbon/human/H,mob/living/target)
 	H.visible_message(span_notice("[H] caresses [target] with its scythe-like arm."), \
 					span_notice("You caress [target] with your scythe-like arm."))
 

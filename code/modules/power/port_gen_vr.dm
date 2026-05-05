@@ -378,7 +378,7 @@
 /obj/machinery/power/rtg/reg/Destroy()
 	. = ..()
 
-/obj/machinery/power/rtg/reg/user_buckle_mob(mob/living/M, mob/user, var/forced = FALSE, silent = TRUE)
+/obj/machinery/power/rtg/reg/user_buckle_mob(mob/living/M, mob/user, forced = FALSE, silent = TRUE)
 	. = ..()
 	M.pixel_y = 8
 	M.visible_message(span_notice("\The [M], hops up onto \the [src] and begins running!"))
@@ -529,7 +529,7 @@
 	else
 		sheet_left -= needed_sheets
 
-/obj/machinery/power/port_gen/large_altevian/attackby(var/obj/item/O as obj, mob/user as mob)
+/obj/machinery/power/port_gen/large_altevian/attackby(obj/item/O as obj, mob/user as mob)
 	if(istype(O, sheet_path))
 		var/obj/item/stack/addstack = O
 		var/amount = min((max_sheets - sheets), addstack.get_amount())

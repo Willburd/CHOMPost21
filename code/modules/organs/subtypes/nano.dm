@@ -131,7 +131,7 @@
 		return 0
 	return materials[material] || 0
 
-/obj/item/organ/internal/nano/refactory/proc/add_stored_material(var/material,amt)
+/obj/item/organ/internal/nano/refactory/proc/add_stored_material(material,amt)
 	if(status & ORGAN_DEAD)
 		return 0
 	var/increase = min(amt,max(max_storage-materials[material],0))
@@ -142,7 +142,7 @@
 
 	return increase
 
-/obj/item/organ/internal/nano/refactory/proc/use_stored_material(var/material,amt)
+/obj/item/organ/internal/nano/refactory/proc/use_stored_material(material,amt)
 	if(status & ORGAN_DEAD)
 		return 0
 

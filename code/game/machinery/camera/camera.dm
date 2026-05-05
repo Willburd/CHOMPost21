@@ -275,7 +275,7 @@
 		playsound(src, 'sound/items/Wirecutter.ogg', 100, 1)
 		icon_state = initial(icon_state)
 
-/obj/machinery/camera/take_damage(var/force, message)
+/obj/machinery/camera/take_damage(force, message)
 	//prob(25) gives an average of 3-4 hits
 	if (force >= toughness && (force > toughness*4 || prob(25)))
 		destroy()
@@ -373,7 +373,7 @@
 
 	return null
 
-/obj/machinery/camera/proc/weld(var/obj/item/weldingtool/WT, mob/user)
+/obj/machinery/camera/proc/weld(obj/item/weldingtool/WT, mob/user)
 	WT = WT.get_welder()
 
 	if(busy)

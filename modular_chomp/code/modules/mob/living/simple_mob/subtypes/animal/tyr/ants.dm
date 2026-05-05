@@ -466,7 +466,7 @@ ANT STRUCTURES
 	density = FALSE
 	var/health = 15 //1 thwack with sword, 2 with spear
 
-/obj/effect/ant_structure/attackby(var/obj/item/W, mob/user)
+/obj/effect/ant_structure/attackby(obj/item/W, mob/user)
 	user.setClickCooldown(user.get_attack_speed(W))
 
 	if(LAZYLEN(W.attack_verb))

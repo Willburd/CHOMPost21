@@ -126,7 +126,7 @@
 		if(slot_wear_mask) return wear_mask
 	return null
 
-/mob/living/ret_grab(var/list/L, mobchain_limit = 5)
+/mob/living/ret_grab(list/L, mobchain_limit = 5)
 	// We're the first!
 	if(!L)
 		L = list()

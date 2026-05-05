@@ -1,6 +1,6 @@
 
 //Either pass the mob you wish to ban in the 'banned_mob' attribute, or the banckey, banip and bancid variables. If both are passed, the mob takes priority! If a mob is not passed, banckey is the minimum that needs to be passed! banip and bancid are optional.
-/datum/admins/proc/DB_ban_record(var/bantype, var/mob/banned_mob, var/duration = -1, var/reason, var/job = "", var/rounds = 0, var/banckey = null, var/banip = null, bancid = null)
+/datum/admins/proc/DB_ban_record(var/bantype, var/mob/banned_mob, var/duration = -1, var/reason, var/job = "", var/rounds = 0, var/banckey = null, banip = null, bancid = null)
 
 	if(!check_rights(R_MOD,0) && !check_rights(R_BAN))	return
 
@@ -88,7 +88,7 @@
 	qdel(query_insert)
 
 
-/datum/admins/proc/DB_ban_unban(var/ckey, var/bantype, job = "")
+/datum/admins/proc/DB_ban_unban(var/ckey, bantype, job = "")
 
 	if(!check_rights(R_BAN))
 		return
@@ -153,7 +153,7 @@
 
 	DB_ban_unban_by_id(ban_id)
 
-/datum/admins/proc/DB_ban_edit(client/user, var/banid = null, param = null)
+/datum/admins/proc/DB_ban_edit(client/user, banid = null, param = null)
 
 	if(!check_rights_for(user, R_BAN))
 		return

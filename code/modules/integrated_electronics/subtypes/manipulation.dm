@@ -29,7 +29,7 @@
 	installed_gun = null // It will be qdel'd by ..() if still in our contents
 	return ..()
 
-/obj/item/integrated_circuit/manipulation/weapon_firing/attackby(var/obj/O, mob/user)
+/obj/item/integrated_circuit/manipulation/weapon_firing/attackby(obj/O, mob/user)
 	if(istype(O, /obj/item/gun))
 		var/obj/item/gun/gun = O
 		if(installed_gun)
@@ -181,7 +181,7 @@
 	detach_grenade()
 	. =..()
 
-/obj/item/integrated_circuit/manipulation/grenade/attackby(var/obj/item/grenade/G, mob/user)
+/obj/item/integrated_circuit/manipulation/grenade/attackby(obj/item/grenade/G, mob/user)
 	if(istype(G))
 		if(attached_grenade)
 			to_chat(user, span_warning("There is already a grenade attached!"))

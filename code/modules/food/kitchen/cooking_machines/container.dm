@@ -36,7 +36,7 @@
 		. += span_notice("It contains [reagents.total_volume]u of reagents.")
 
 
-/obj/item/reagent_containers/cooking_container/attackby(var/obj/item/I as obj, mob/user as mob)
+/obj/item/reagent_containers/cooking_container/attackby(obj/item/I as obj, mob/user as mob)
 	if(istype(I, /obj/item/gripper))
 		var/obj/item/gripper/GR = I
 		var/obj/item/wrapped = GR.get_wrapped_item()
@@ -111,7 +111,7 @@
 	if (reagents)
 		reagents.clear_reagents()
 
-/obj/item/reagent_containers/cooking_container/proc/label(var/number, CT = null)
+/obj/item/reagent_containers/cooking_container/proc/label(number, CT = null)
 	//This returns something like "Fryer basket 1 - empty"
 	//The latter part is a brief reminder of contents
 	//This is used in the removal menu

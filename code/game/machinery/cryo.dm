@@ -166,7 +166,7 @@
 
 	add_fingerprint(ui.user)
 
-/obj/machinery/atmospherics/unary/cryo_cell/attackby(var/obj/item/G as obj, mob/user as mob)
+/obj/machinery/atmospherics/unary/cryo_cell/attackby(obj/item/G as obj, mob/user as mob)
 	if(istype(G, /obj/item/reagent_containers/glass))
 		if(beaker)
 			to_chat(user, span_warning("A beaker is already loaded into the machine."))
@@ -193,7 +193,7 @@
 
 	return
 
-/obj/machinery/atmospherics/unary/cryo_cell/MouseDrop_T(var/mob/target, mob/user) //Allows borgs to put people into cryo without external assistance
+/obj/machinery/atmospherics/unary/cryo_cell/MouseDrop_T(mob/target, mob/user) //Allows borgs to put people into cryo without external assistance
 	if(user.stat || user.lying || !Adjacent(user) || !target.Adjacent(user)|| !ishuman(target))
 		return
 	put_mob(target)

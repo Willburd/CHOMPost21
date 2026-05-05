@@ -1,5 +1,5 @@
 //Returns 1 if the turf is dense, or if there's dense objects/mobs on it, unless told to ignore them.
-/turf/proc/check_density(var/ignore_objs = FALSE, ignore_mobs = FALSE)
+/turf/proc/check_density(ignore_objs = FALSE, ignore_mobs = FALSE)
 	if(density)
 		return TRUE
 	if(!ignore_objs || !ignore_mobs)
@@ -35,7 +35,7 @@
 			return FALSE
 	return TRUE
 
-/obj/item/spell/proc/within_range(var/atom/target, max_range = 7) // Beyond 7 is off the screen.
+/obj/item/spell/proc/within_range(atom/target, max_range = 7) // Beyond 7 is off the screen.
 	if(target in view(max_range, owner))
 		return TRUE
 	return FALSE

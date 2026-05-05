@@ -37,7 +37,7 @@
 	icon = 'icons/obj/weapons.dmi'
 	icon_state = "autoharvester"
 
-/obj/item/robot_harvester/afterattack(var/atom/target, mob/living/user, proximity)
+/obj/item/robot_harvester/afterattack(atom/target, mob/living/user, proximity)
 	if(!target)
 		return
 	if(!proximity)
@@ -578,7 +578,7 @@
 	mode = !mode
 	to_chat(user, span_filter_notice("You set \the [src] to deploy [mode ? "doors" : "walls"]."))
 
-/obj/item/inflatable_dispenser/afterattack(var/atom/A, mob/user)
+/obj/item/inflatable_dispenser/afterattack(atom/A, mob/user)
 	..(A, user)
 	if(!user)
 		return
@@ -590,7 +590,7 @@
 	if(istype(A, /obj/item/inflatable) || istype(A, /obj/structure/inflatable))
 		pick_up(A, user)
 
-/obj/item/inflatable_dispenser/proc/try_deploy_inflatable(var/turf/T, mob/living/user)
+/obj/item/inflatable_dispenser/proc/try_deploy_inflatable(turf/T, mob/living/user)
 	if(mode) // Door deployment
 		if(!stored_doors)
 			to_chat(user, span_filter_notice("\The [src] is out of doors!"))
@@ -612,7 +612,7 @@
 	playsound(T, 'sound/items/zip.ogg', 75, 1)
 	to_chat(user, span_filter_notice("You deploy the inflatable [mode ? "door" : "wall"]!"))
 
-/obj/item/inflatable_dispenser/proc/pick_up(var/obj/A, mob/living/user)
+/obj/item/inflatable_dispenser/proc/pick_up(obj/A, mob/living/user)
 	if(istype(A, /obj/structure/inflatable))
 		if(!istype(A, /obj/structure/inflatable/door))
 			if(stored_walls >= max_walls)

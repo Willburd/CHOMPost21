@@ -21,7 +21,7 @@
 	QDEL_NULL(monitor)
 	. = ..()
 
-/obj/machinery/computer/fusion_core_control/attackby(var/obj/item/thing, mob/user)
+/obj/machinery/computer/fusion_core_control/attackby(obj/item/thing, mob/user)
 	..()
 	if(istype(thing, /obj/item/multitool))
 		var/new_ident = sanitize_text(tgui_input_text(user, "Enter a new ident tag.", "Core Control", monitor.core_tag))

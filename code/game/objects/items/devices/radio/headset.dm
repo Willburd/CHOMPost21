@@ -184,7 +184,7 @@
 
 	handle_finalize_recalculatechannels(setDescription, TRUE)
 
-/obj/item/radio/headset/proc/handle_finalize_recalculatechannels(var/setDescription = FALSE, initial_run = FALSE)
+/obj/item/radio/headset/proc/handle_finalize_recalculatechannels(setDescription = FALSE, initial_run = FALSE)
 	PRIVATE_PROC(TRUE)
 	SHOULD_NOT_OVERRIDE(TRUE)
 	if(!SSradio && initial_run)

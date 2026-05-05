@@ -77,7 +77,7 @@
 				html = span_nif(span_bold("\[[icon2html(nif.big_icon, CS.client)]NIF\]") + message))
 		CS << sound
 
-/datum/nifsoft/soulcatcher/proc/say_into(var/message, var/mob/living/sender, var/mob/eyeobj, whisper)
+/datum/nifsoft/soulcatcher/proc/say_into(var/message, var/mob/living/sender, mob/eyeobj, whisper)
 	var/sender_name = eyeobj ? eyeobj.name : sender.name
 
 	//AR Projecting
@@ -110,7 +110,7 @@
 
 	sender.log_talk("NSAY (NIF:[nif.human.real_name]): [message]", LOG_SAY, color="#ff00c8")
 
-/datum/nifsoft/soulcatcher/proc/emote_into(var/message, var/mob/living/sender, var/mob/eyeobj, whisper)
+/datum/nifsoft/soulcatcher/proc/emote_into(var/message, var/mob/living/sender, mob/eyeobj, whisper)
 	var/sender_name = eyeobj ? eyeobj.name : sender.name
 
 	//AR Projecting
@@ -399,12 +399,12 @@
 	if(silent) return FALSE
 	soulcatcher.say_into(message,src,eyeobj,TRUE)
 
-/mob/living/carbon/brain/caught_soul/say(var/message, var/datum/language/speaking = null, whispering = 0)
+/mob/living/carbon/brain/caught_soul/say(var/message, datum/language/speaking = null, whispering = 0)
 	if(silent) return FALSE
 	soulcatcher.say_into(message,src,eyeobj)
 */
 
-/mob/living/carbon/brain/caught_soul/emote(var/act,var/m_type=1,message = null)
+/mob/living/carbon/brain/caught_soul/emote(var/act,m_type=1,message = null)
 	if(silent) return FALSE
 	if (act == "me")
 		if(silent)
@@ -422,7 +422,7 @@
 		return FALSE
 
 /* Outpost 21 edit - Nif removal
-/mob/living/carbon/brain/caught_soul/custom_emote(var/m_type, message)
+/mob/living/carbon/brain/caught_soul/custom_emote(m_type, message)
 	if(silent) return FALSE
 	soulcatcher.emote_into(message,src,eyeobj)
 */

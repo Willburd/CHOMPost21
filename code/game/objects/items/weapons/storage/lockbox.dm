@@ -56,7 +56,7 @@
 		..()
 	return
 
-/obj/item/storage/lockbox/emag_act(var/remaining_charges, var/mob/user, var/emag_source, var/visual_feedback = "", audible_feedback = "")
+/obj/item/storage/lockbox/emag_act(var/remaining_charges, var/mob/user, var/emag_source, visual_feedback = "", audible_feedback = "")
 	if(!broken)
 		if(visual_feedback)
 			visual_feedback = span_warning("[visual_feedback]")

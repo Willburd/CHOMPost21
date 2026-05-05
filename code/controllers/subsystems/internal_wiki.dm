@@ -75,7 +75,7 @@ SUBSYSTEM_DEF(internal_wiki)
 ///////////////////////////////////////////////////////////////////////////////////
 // Donation system, for the joke of course
 ///////////////////////////////////////////////////////////////////////////////////
-/datum/controller/subsystem/internal_wiki/proc/pay_with_card( var/obj/item/card/id/I, var/mob/M, var/obj/device, paying_amount)
+/datum/controller/subsystem/internal_wiki/proc/pay_with_card( var/obj/item/card/id/I, var/mob/M, obj/device, paying_amount)
 	SHOULD_NOT_OVERRIDE(TRUE)
 	if(!purchase_with_id_card(I, M, "Bingle.Co.LLC.UK.M.XM.WMP.AVI.COM", device.name, "Donation", paying_amount))
 		return FALSE
@@ -236,7 +236,7 @@ SUBSYSTEM_DEF(internal_wiki)
 	highest_cached_donator = update_highest_donator(FALSE)
 	return get_donor_value(highest_cached_donator)
 // Helpers for formatting wiki data for tgui pages
-/datum/controller/subsystem/internal_wiki/proc/assemble_reaction_data(var/list/data, datum/reagent/R)
+/datum/controller/subsystem/internal_wiki/proc/assemble_reaction_data(list/data, datum/reagent/R)
 	var/list/reaction_list = SSchemistry.chemical_reactions_by_product[R.id]
 	var/list/distilled_list = SSchemistry.distilled_reactions_by_product[R.id]
 
@@ -409,7 +409,7 @@ SUBSYSTEM_DEF(internal_wiki)
 		return "OH GOD WHY!?"
 	return sinter
 
-/datum/controller/subsystem/internal_wiki/proc/add_icon(var/list/data, var/ic, var/is, col)
+/datum/controller/subsystem/internal_wiki/proc/add_icon(var/list/data, var/ic, is, col)
 	var/load_data = list()
 	load_data["icon"] = ic // dmi path
 	load_data["state"] = is // string

@@ -270,7 +270,7 @@
 	if(old_stat != stat)
 		update_icon()
 
-/obj/machinery/atmospherics/unary/vent_scrubber/attackby(var/obj/item/W as obj, mob/user as mob)
+/obj/machinery/atmospherics/unary/vent_scrubber/attackby(obj/item/W as obj, mob/user as mob)
 	if(W.has_tool_quality(TOOL_WELDER))
 		var/obj/item/weldingtool/WT = W
 		if (WT.remove_fuel(0,user))

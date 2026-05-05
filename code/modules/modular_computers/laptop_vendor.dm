@@ -274,7 +274,7 @@
 	return ..()
 
 // Simplified payment processing, returns 1 on success.
-/obj/machinery/lapvend/proc/process_payment(mob/user, var/obj/item/card/id/I, obj/item/ID_container)
+/obj/machinery/lapvend/proc/process_payment(mob/user, obj/item/card/id/I, obj/item/ID_container)
 	if(I==ID_container || ID_container == null)
 		visible_message(span_info("\The [user] swipes \the [I] through \the [src]."))
 	else

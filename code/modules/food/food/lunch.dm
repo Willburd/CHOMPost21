@@ -185,7 +185,7 @@ GLOBAL_LIST_INIT(lunchables_ethanol_reagents, list(/datum/reagent/ethanol/acid_s
 		.[name] = O
 	return sortAssoc(.)
 
-/proc/init_lunchable_reagent_list(var/list/banned_reagents, reagent_types)
+/proc/init_lunchable_reagent_list(list/banned_reagents, reagent_types)
 	. = list()
 	for(var/reagent_type in subtypesof(reagent_types))
 		if(reagent_type in banned_reagents)

@@ -47,7 +47,7 @@
 	custom_only = FALSE
 	banned_species = list(SPECIES_TESHARI, SPECIES_SHADEKIN_CREW) //These are already this weak.
 
-/datum/trait/negative/endurance_low/apply(var/datum/species/S,mob/living/carbon/human/H)
+/datum/trait/negative/endurance_low/apply(datum/species/S,mob/living/carbon/human/H)
 	..()
 	H.setMaxHealth(S.total_health)
 
@@ -59,7 +59,7 @@
 	custom_only = FALSE
 	banned_species = list(SPECIES_TESHARI) //These are already this weak.
 
-/datum/trait/negative/endurance_very_low/apply(var/datum/species/S,mob/living/carbon/human/H)
+/datum/trait/negative/endurance_very_low/apply(datum/species/S,mob/living/carbon/human/H)
 	..()
 	H.setMaxHealth(S.total_health)
 
@@ -145,7 +145,7 @@
 	excludes = list(/datum/trait/negative/boneless, /datum/trait/negative/boneless/major, /datum/trait/positive/densebones)
 
 
-/datum/trait/negative/hollow/apply(var/datum/species/S,mob/living/carbon/human/H)
+/datum/trait/negative/hollow/apply(datum/species/S,mob/living/carbon/human/H)
 	..()
 	for(var/obj/item/organ/external/O in H.organs)
 		O.min_broken_damage *= 0.5
@@ -366,7 +366,7 @@
 	var_changes = list("total_health" = 25)
 
 
-/datum/trait/negative/endurance_glass/apply(var/datum/species/S,mob/living/carbon/human/H)
+/datum/trait/negative/endurance_glass/apply(datum/species/S,mob/living/carbon/human/H)
 	..()
 	H.setMaxHealth(S.total_health)
 
@@ -501,7 +501,7 @@
 	custom_only = FALSE
 	excludes = list(/datum/trait/negative/bad_shooter)
 
-/datum/trait/negative/thick_digits/apply(var/datum/species/S,mob/living/carbon/human/H)
+/datum/trait/negative/thick_digits/apply(datum/species/S,mob/living/carbon/human/H)
 	..()
 	H.add_modifier(/datum/modifier/trait/thickdigits)
 
@@ -670,7 +670,7 @@
 	limb_health = 0.5
 	excludes = list(/datum/trait/negative/hollow, /datum/trait/positive/densebones, /datum/trait/negative/boneless)
 
-/datum/trait/negative/boneless/apply(var/datum/species/S,mob/living/carbon/human/H)
+/datum/trait/negative/boneless/apply(datum/species/S,mob/living/carbon/human/H)
 	..()
 	for(var/obj/item/organ/external/ex_organ in H.organs)
 		ex_organ.cannot_break = TRUE
@@ -719,7 +719,7 @@
 	var_changes = list("emp_dmg_mod" = 1.3, "emp_stun_mod" = 1.3, "emp_sensitivity" = (EMP_BLIND | EMP_DEAFEN | EMP_BRUTE_DMG | EMP_BURN_DMG | EMP_CONFUSE))
 	excludes = list(/datum/trait/negative/poorconstruction, /datum/trait/positive/emp_resist, /datum/trait/positive/emp_resist_major)
 
-/datum/trait/negative/faultwires/apply(var/datum/species/S,mob/living/carbon/human/H)
+/datum/trait/negative/faultwires/apply(datum/species/S,mob/living/carbon/human/H)
 	..()
 	H.add_modifier(/datum/modifier/trait/empweakness)
 
@@ -732,7 +732,7 @@
 	var_changes = list("emp_dmg_mod" = 1.6, "emp_stun_mod" = 1.6, "emp_sensitivity" = (EMP_BLIND | EMP_DEAFEN | EMP_BRUTE_DMG | EMP_BURN_DMG | EMP_CONFUSE | EMP_WEAKEN))
 	excludes = list(/datum/trait/negative/faultwires, /datum/trait/positive/emp_resist, /datum/trait/positive/emp_resist_major)
 
-/datum/trait/negative/poorconstruction/apply(var/datum/species/S,mob/living/carbon/human/H)
+/datum/trait/negative/poorconstruction/apply(datum/species/S,mob/living/carbon/human/H)
 	..()
 	H.add_modifier(/datum/modifier/trait/majorempweakness)
 
@@ -809,11 +809,11 @@
 	activation_message="Something feels odd..."
 	*/
 
-/datum/trait/negative/medical_allergy/apply(var/datum/species/S,mob/living/carbon/human/H)
+/datum/trait/negative/medical_allergy/apply(datum/species/S,mob/living/carbon/human/H)
 	S.medallergens |= medallergen
 	..()
 
-/datum/trait/negative/medical_allergy/unapply(var/datum/species/S,mob/living/carbon/human/H)
+/datum/trait/negative/medical_allergy/unapply(datum/species/S,mob/living/carbon/human/H)
 	S.medallergens &= ~medallergen
 	..()
 

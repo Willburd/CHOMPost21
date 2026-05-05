@@ -54,7 +54,7 @@
 		add_blood()
 	. = ..()
 
-/obj/item/clothing/equipped(var/mob/user,slot)
+/obj/item/clothing/equipped(mob/user,slot)
 	..()
 	if(enables_planes)
 		user.recalculate_vis()
@@ -112,7 +112,7 @@
 				return FALSE
 	return TRUE
 
-/obj/item/clothing/handle_shield(mob/user, var/damage, atom/damage_source = null, mob/attacker = null, var/def_zone = null, attack_text = "the attack")
+/obj/item/clothing/handle_shield(mob/user, var/damage, atom/damage_source = null, mob/attacker = null, def_zone = null, attack_text = "the attack")
 	. = ..()
 	if((. == 0) && LAZYLEN(accessories))
 		for(var/obj/item/I in accessories)
@@ -352,7 +352,7 @@
 		M.update_inv_gloves()
 
 // Called just before an attack_hand(), in mob/UnarmedAttack()
-/obj/item/clothing/gloves/proc/Touch(var/atom/A, proximity)
+/obj/item/clothing/gloves/proc/Touch(atom/A, proximity)
 	return 0 // return 1 to cancel attack_hand()
 
 /*/obj/item/clothing/gloves/attackby(obj/item/W, mob/user)
@@ -738,7 +738,7 @@
 		return
 	..()
 
-/obj/item/clothing/shoes/attackby(var/obj/item/I, mob/user)
+/obj/item/clothing/shoes/attackby(obj/item/I, mob/user)
 	if((can_hold_knife == 1) && (istype(I, /obj/item/material/shard) || \
 		istype(I, /obj/item/material/butterfly) || \
 		istype(I, /obj/item/material/kitchen/utensil) || \
@@ -784,7 +784,7 @@
 	track_blood = 0
 	update_icon()
 
-/obj/item/clothing/shoes/proc/handle_movement(var/turf/walking, var/running, mob/living/carbon/human/pred)
+/obj/item/clothing/shoes/proc/handle_movement(var/turf/walking, running, mob/living/carbon/human/pred)
 	if(!recent_squish && istype(pred))
 		recent_squish = 1
 		VARSET_IN(src, recent_squish, FALSE, 4 SECONDS) // Reset the recent squish timer
@@ -797,7 +797,7 @@
 	return
 
 //In shoe steppies!
-/obj/item/clothing/shoes/proc/handle_inshoe_stepping(var/mob/living/carbon/human/pred, mob/living/carbon/human/prey)
+/obj/item/clothing/shoes/proc/handle_inshoe_stepping(mob/living/carbon/human/pred, mob/living/carbon/human/prey)
 	if(!istype(pred)) return //Sorry, inshoe steppies only for carbon/human/ for now. Based on the regular stepping mechanics
 	if(!istype(prey)) return
 	if(!pred.canmove || pred.buckled) return //We can't be stepping on anyone if buckled or incapable of moving
@@ -1060,7 +1060,7 @@
 		var/mob/M = src.loc
 		M.update_inv_wear_suit()
 
-/obj/item/clothing/suit/equipped(var/mob/user, slot)
+/obj/item/clothing/suit/equipped(mob/user, slot)
 	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
 		var/taurtail = istaurtail(H.tail_style)
@@ -1086,7 +1086,7 @@
 		taurized = FALSE
 
 // Taur suits need to be shifted so its centered on their taur half.
-/obj/item/clothing/suit/make_worn_icon(var/body_type,var/slot_name,var/inhands,var/default_icon,var/default_layer = 0,icon/clip_mask)
+/obj/item/clothing/suit/make_worn_icon(var/body_type,var/slot_name,var/inhands,var/default_icon,default_layer = 0,icon/clip_mask)
 	var/image/standing = ..()
 	if(taurized) //Special snowflake var on suits
 		standing.pixel_x = -16
@@ -1448,15 +1448,15 @@
 				else
 					update_icon_define = null
 
-/obj/item/clothing/shoes/equipped(var/mob/user, slot)
+/obj/item/clothing/shoes/equipped(mob/user, slot)
 	. = ..()
 	handle_digitigrade(user)
 
-/obj/item/clothing/suit/equipped(var/mob/user, slot)
+/obj/item/clothing/suit/equipped(mob/user, slot)
 	. = ..()
 	handle_digitigrade(user)
 
-/obj/item/clothing/under/equipped(var/mob/user, slot)
+/obj/item/clothing/under/equipped(mob/user, slot)
 	. = ..()
 	handle_digitigrade(user)
 

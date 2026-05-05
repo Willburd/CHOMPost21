@@ -16,7 +16,7 @@
 	var/locked = 1
 	var/emagged = 0
 
-/obj/item/airlock_electronics/emag_act(var/remaining_charges, mob/user)
+/obj/item/airlock_electronics/emag_act(remaining_charges, mob/user)
 	if(!emagged)
 		emagged = 1
 		to_chat(user, span_notice("You remove the access restrictions on [src]!"))
@@ -150,6 +150,6 @@
 	desc = "designed to be somewhat more resistant to hacking than standard electronics."
 	secure = 1
 
-/obj/item/airlock_electronics/secure/emag_act(var/remaining_charges, mob/user)
+/obj/item/airlock_electronics/secure/emag_act(remaining_charges, mob/user)
 	to_chat(user, span_warning("You don't appear to be able to bypass this hardened device!"))
 	return -1

@@ -371,7 +371,7 @@
 	. = ..()
 	announce_atc(AM,going = TRUE)
 
-/obj/effect/overmap/visitable/sector/virgo3b/announce_atc(var/atom/movable/AM, going = FALSE)
+/obj/effect/overmap/visitable/sector/virgo3b/announce_atc(atom/movable/AM, going = FALSE)
 	if(istype(AM, /obj/effect/overmap/visitable/ship/simplemob))
 		if(world.time < mob_announce_cooldown)
 			return

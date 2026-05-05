@@ -61,7 +61,7 @@
 	paired_uavs.Cut()
 	return ..()
 
-/obj/item/modular_computer/emag_act(var/remaining_charges, mob/user)
+/obj/item/modular_computer/emag_act(remaining_charges, mob/user)
 	if(computer_emagged)
 		to_chat(user, "\The [src] was already emagged.")
 		return //NO_EMAG_ACT

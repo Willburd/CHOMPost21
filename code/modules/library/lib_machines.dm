@@ -488,7 +488,7 @@
 	add_fingerprint(usr)
 	tgui_interact(user)
 
-/obj/machinery/librarycomp/emag_act(var/remaining_charges, mob/user)
+/obj/machinery/librarycomp/emag_act(remaining_charges, mob/user)
 	if (src.density && !src.emagged)
 		src.emagged = 1
 		return 1
@@ -515,7 +515,7 @@
 	density = TRUE
 	var/obj/item/book/cache		// Last scanned book
 
-/obj/machinery/libraryscanner/attackby(var/obj/O as obj, mob/user as mob)
+/obj/machinery/libraryscanner/attackby(obj/O as obj, mob/user as mob)
 	if(cache) // Prevent stacking books in here, unlike the original code.
 		to_chat(user,span_warning("\The [src] already has a book inside it!"))
 		return
@@ -550,7 +550,7 @@
 	. = ..()
 	AddElement(/datum/element/climbable)
 
-/obj/machinery/bookbinder/attackby(var/obj/O as obj, mob/user as mob)
+/obj/machinery/bookbinder/attackby(obj/O as obj, mob/user as mob)
 	if(istype(O, /obj/item/paper) || istype(O, /obj/item/paper_bundle))
 		if(istype(O, /obj/item/paper))
 			user.drop_item()

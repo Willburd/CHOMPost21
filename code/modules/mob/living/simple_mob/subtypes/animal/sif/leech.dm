@@ -227,7 +227,7 @@
 
 	do_infest(src)
 
-/mob/living/simple_mob/animal/sif/leech/proc/do_infest(var/mob/living/user, mob/living/target = null)
+/mob/living/simple_mob/animal/sif/leech/proc/do_infest(mob/living/user, mob/living/target = null)
 	if(host)
 		to_chat(user, span_alien("We are already within a host."))
 		return
@@ -352,7 +352,7 @@
 
 	poison_inject(src, M)
 
-/mob/living/simple_mob/animal/sif/leech/proc/poison_inject(var/mob/living/user, mob/living/carbon/L)
+/mob/living/simple_mob/animal/sif/leech/proc/poison_inject(mob/living/user, mob/living/carbon/L)
 	if(!L || !Adjacent(L) || stat)
 		return
 

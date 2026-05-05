@@ -24,7 +24,7 @@
 	var/sound_chamber = 'sound/weapons/ballistics/pistol_chamber.ogg'
 	special_handling = TRUE
 
-/obj/item/gun/projectile/handle_post_fire(mob/user, atom/target, var/pointblank=0, reflex=0)
+/obj/item/gun/projectile/handle_post_fire(mob/user, atom/target, pointblank=0, reflex=0)
 	if(fire_anim)
 		flick(fire_anim, src)
 

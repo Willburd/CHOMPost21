@@ -185,7 +185,7 @@
 
 	return
 
-/obj/machinery/door/window/emag_act(var/remaining_charges, mob/user)
+/obj/machinery/door/window/emag_act(remaining_charges, mob/user)
 	if (density && operable())
 		operating = -1
 		flick("[src.base_state]spark", src)

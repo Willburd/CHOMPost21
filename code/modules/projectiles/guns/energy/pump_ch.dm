@@ -92,7 +92,7 @@
 	else
 		return ..()
 
-/obj/item/gun/energy/locked/emag_act(var/remaining_charges,mob/user)
+/obj/item/gun/energy/locked/emag_act(remaining_charges,mob/user)
 	..()
 	if(lockable)
 		locked = !locked

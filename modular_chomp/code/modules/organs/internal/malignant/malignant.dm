@@ -9,7 +9,7 @@
 	var/cooldownmin = 0
 	var/cooldownmax = 0
 
-/obj/item/organ/internal/malignant/Initialize(mapload, var/internal, var/force_location = null, forcetag = null)
+/obj/item/organ/internal/malignant/Initialize(mapload, var/internal, force_location = null, forcetag = null)
 	organ_tag = "[initial(organ_tag)]_[rand(1,9999)]"
 	if(forcetag)
 		organ_tag = forcetag
@@ -39,7 +39,7 @@
 			parent_organ = force_location
 	return ..(mapload, internal)
 
-/mob/living/carbon/human/proc/random_malignant_organ( var/allowtumors = TRUE, var/allowparasites = TRUE, allowengineered = TRUE)
+/mob/living/carbon/human/proc/random_malignant_organ( var/allowtumors = TRUE, allowparasites = TRUE, allowengineered = TRUE)
 	// get a list of valid malignant organs and spawn one
 	var/list/paths = list()
 	if(allowtumors)
@@ -135,7 +135,7 @@
 	surgeryAllowedSites = list(BP_GROIN, BP_TORSO) // Lets keep these a little more restricted, due to size and complexity
 	supply_conversion_value = 100
 
-/obj/item/organ/internal/malignant/engineered/proc/update_degeneration(var/degradechance, intensity)
+/obj/item/organ/internal/malignant/engineered/proc/update_degeneration(degradechance, intensity)
 	if(degradechance == 0)
 		return FALSE
 	if(prob(degradechance))
@@ -605,7 +605,7 @@
 	var/chem_target = null
 	supply_conversion_value = 0
 
-/obj/item/organ/internal/malignant/engineered/lattice/Initialize(mapload, var/internal, var/force_location = null, forcetag = null)
+/obj/item/organ/internal/malignant/engineered/lattice/Initialize(mapload, var/internal, force_location = null, forcetag = null)
 	growth_trigger = rand(150,200)
 	return ..(mapload, internal, force_location, forcetag)
 

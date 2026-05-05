@@ -486,7 +486,7 @@ GLOBAL_VAR_INIT(teppi_count, 0)	// How mant teppi DO we have?
 	add_overlay(skin_image)
 	/////HIGHEST LAYER/////
 
-/mob/living/simple_mob/vore/alienanimals/teppi/attackby(var/obj/item/O as obj, mob/user as mob)
+/mob/living/simple_mob/vore/alienanimals/teppi/attackby(obj/item/O as obj, mob/user as mob)
 	if(stat == DEAD)
 		return ..()
 	/////GRABS AND HOLDERS/////

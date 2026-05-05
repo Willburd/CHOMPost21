@@ -18,14 +18,14 @@
 	center_of_mass_y = 6
 	volume = 50
 
-/obj/item/reagent_containers/food/condiment/attackby(var/obj/item/W as obj, mob/user as mob)
+/obj/item/reagent_containers/food/condiment/attackby(obj/item/W as obj, mob/user as mob)
 	return
 
 /obj/item/reagent_containers/food/condiment/attack(mob/living/M, mob/living/user, target_zone, attack_modifier)
 	if(standard_feed_mob(user, M))
 		return
 
-/obj/item/reagent_containers/food/condiment/afterattack(var/obj/target, var/mob/user, flag)
+/obj/item/reagent_containers/food/condiment/afterattack(var/obj/target, mob/user, flag)
 	if(!user.Adjacent(target))
 		return
 	if(standard_dispenser_refill(user, target))

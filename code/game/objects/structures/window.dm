@@ -51,7 +51,7 @@
 /obj/structure/window/examine_icon()
 	return icon(icon=initial(icon),icon_state=initial(icon_state))
 
-/obj/structure/window/take_damage(var/damage = 0,  sound_effect = 1)
+/obj/structure/window/take_damage(damage = 0,  sound_effect = 1)
 	var/initialhealth = health
 
 	if(silicate)
@@ -231,7 +231,7 @@
 							"You hear a knocking sound.")
 	return
 
-/obj/structure/window/attack_generic(var/mob/user, damage)
+/obj/structure/window/attack_generic(mob/user, damage)
 	user.setClickCooldown(user.get_attack_speed())
 	if(!damage)
 		return
@@ -361,7 +361,7 @@
 		..()
 	return
 
-/obj/structure/window/proc/hit(var/damage, sound_effect = 1)
+/obj/structure/window/proc/hit(damage, sound_effect = 1)
 	if(damage < force_threshold || force_threshold < 0)
 		return
 	if(reinf) damage *= 0.5
@@ -430,7 +430,7 @@
 /obj/structure/window/proc/is_fulltile()
 	return fulltile
 
-/obj/structure/window/is_between_turfs(var/turf/origin, turf/target)
+/obj/structure/window/is_between_turfs(turf/origin, turf/target)
 	if(is_fulltile())
 		return TRUE
 	return ..()

@@ -45,7 +45,7 @@
 	var/list/scramble_cache = list()
 
 /* CHOMPEdit: moved to modular_chomp because it was edited so much.
-/datum/language/proc/scramble(var/input, list/known_languages)
+/datum/language/proc/scramble(input, list/known_languages)
 	var/understand_chance = 0
 	for(var/datum/language/L in known_languages)
 		if(partial_understanding && partial_understanding[L.name])
@@ -129,7 +129,7 @@
 	// if you yell, you'll be heard from two tiles over instead of one
 	return (copytext(message, length(message)) == "!") ? 2 : 1
 
-/datum/language/proc/broadcast(var/mob/living/speaker,var/message,speaker_mask)
+/datum/language/proc/broadcast(var/mob/living/speaker,message,speaker_mask)
 	speaker.log_talk("(HIVE) [message]", LOG_SAY)
 
 	add_verb(speaker, /mob/proc/adjust_hive_range)
@@ -154,15 +154,15 @@
 			player.hear_broadcast(src, speaker, speaker_mask, message)
 	//VOREStation Edit End
 
-/mob/proc/hear_broadcast(var/datum/language/language, var/mob/speaker, var/speaker_name, message)
+/mob/proc/hear_broadcast(var/datum/language/language, var/mob/speaker, speaker_name, message)
 	if((language in languages) && language.check_special_condition(src))
 		var/msg = span_hivemind("[language.name], " + span_name("[speaker_name]") + " [message]")
 		to_chat(src,msg)
 
-/mob/new_player/hear_broadcast(var/datum/language/language, var/mob/speaker, var/speaker_name, message)
+/mob/new_player/hear_broadcast(var/datum/language/language, var/mob/speaker, speaker_name, message)
 	return
 
-/mob/observer/dead/hear_broadcast(var/datum/language/language, var/mob/speaker, var/speaker_name, message)
+/mob/observer/dead/hear_broadcast(var/datum/language/language, var/mob/speaker, speaker_name, message)
 	if(speaker.name == speaker_name || antagHUD)
 		to_chat(src, span_hivemind("[language.name], " + span_name("[speaker_name]") + " ([ghost_follow_link(speaker, src)]) [message]"))
 	else
@@ -324,7 +324,7 @@
 	else
 		return ..()
 
-/proc/transfer_languages(var/mob/source, var/mob/target, except_flags)
+/proc/transfer_languages(var/mob/source, mob/target, except_flags)
 	for(var/datum/language/L in source.languages)
 		if(L.flags & except_flags)
 			continue
@@ -334,7 +334,7 @@
 				if(!(key in target.language_keys))
 					target.language_keys[key] = L
 
-/proc/get_custom_prefix_by_lang(var/mob/our_mob, language)
+/proc/get_custom_prefix_by_lang(mob/our_mob, language)
 	if(!our_mob || !our_mob.language_keys.len || !language)
 		return
 

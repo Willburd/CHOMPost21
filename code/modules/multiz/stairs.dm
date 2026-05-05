@@ -57,7 +57,7 @@
 	return TRUE
 
 // Used to actually move stuff up/down stairs. Removed from Crossed for special cases
-/obj/structure/stairs/proc/use_stairs(var/atom/movable/AM, atom/oldloc)
+/obj/structure/stairs/proc/use_stairs(atom/movable/AM, atom/oldloc)
 	return
 
 /obj/structure/stairs/proc/use_stairs_instant(atom/movable/AM)
@@ -134,14 +134,14 @@
 	// Out of the dir check, we have no valid neighbors, and thus are not complete.
 	return FALSE
 
-/obj/structure/stairs/bottom/Crossed(var/atom/movable/AM, atom/oldloc)
+/obj/structure/stairs/bottom/Crossed(atom/movable/AM, atom/oldloc)
 	if(isliving(AM))
 		var/mob/living/L = AM
 		if(L.has_AI())
 			use_stairs(AM, oldloc)
 	..()
 
-/obj/structure/stairs/bottom/use_stairs(var/atom/movable/AM, atom/oldloc)
+/obj/structure/stairs/bottom/use_stairs(atom/movable/AM, atom/oldloc)
 	// If we're coming from the top of the stairs, don't trap us in an infinite staircase
 	// Or if we fell down the openspace
 	if((top in oldloc) || oldloc == GetAbove(src))
@@ -390,7 +390,7 @@
 	// Out of the dir check, we have no valid neighbors, and thus are not complete. `.` was set by ..()
 	return
 
-/obj/structure/stairs/top/Crossed(var/atom/movable/AM, atom/oldloc)
+/obj/structure/stairs/top/Crossed(atom/movable/AM, atom/oldloc)
 	if(isliving(AM))
 		var/mob/living/L = AM
 		if(L.has_AI())
@@ -403,7 +403,7 @@
 		use_stairs_instant(AM)
 		return
 
-/obj/structure/stairs/top/use_stairs(var/atom/movable/AM, atom/oldloc)
+/obj/structure/stairs/top/use_stairs(atom/movable/AM, atom/oldloc)
 	// If we're coming from the bottom of the stairs, don't trap us in an infinite staircase
 	// Or if we climb up the middle
 	if((bottom in oldloc) || oldloc == GetBelow(src))

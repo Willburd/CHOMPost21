@@ -314,7 +314,7 @@
 ////
 //	Rig Transform
 ////
-/mob/living/carbon/human/proc/nano_rig_transform(var/forced, devour = FALSE)
+/mob/living/carbon/human/proc/nano_rig_transform(forced, devour = FALSE)
 	set name = "Modify Form - Hardsuit"
 	set desc = "Allows a protean to retract its mass into its hardsuit module at will."
 	//set category = "Abilities.Protean"
@@ -833,7 +833,7 @@
 /obj/effect/protean_ability/proc/atom_button_text()
 	return src
 
-/obj/effect/protean_ability/Click(var/location, var/control, params)
+/obj/effect/protean_ability/Click(var/location, control, params)
 	var/list/clickprops = params2list(params)
 	var/opts = clickprops["shift"]
 

@@ -401,7 +401,7 @@
 	icon_state = "blade_tosser"
 	icon_living = "blade_tosser"
 
-/mob/living/simple_mob/humanoid/astral_collective/body/dagger/attackby(var/obj/item/O as obj, mob/user as mob)
+/mob/living/simple_mob/humanoid/astral_collective/body/dagger/attackby(obj/item/O as obj, mob/user as mob)
 	if(prob(50))
 		teleport_attack(src)
 	..()
@@ -442,7 +442,7 @@
 	special_attack_cooldown = 10 SECONDS
 
 //Gravity shield. Hit it with melee, and a sudden gravity surge may tear your weapon to the ground
-/mob/living/simple_mob/humanoid/astral_collective/mind/gravity/attackby(var/obj/item/O as obj, mob/user as mob)
+/mob/living/simple_mob/humanoid/astral_collective/mind/gravity/attackby(obj/item/O as obj, mob/user as mob)
 	if(O.force)
 		if(prob(30))
 			visible_message(span_boldwarning(span_orange("[O] is pulled to the ground!.")))

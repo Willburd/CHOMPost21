@@ -51,7 +51,7 @@
 
 	return TRUE
 
-/datum/decl/chemical_reaction/proc/calc_reaction_progress(var/datum/reagents/holder, reaction_limit)
+/datum/decl/chemical_reaction/proc/calc_reaction_progress(datum/reagents/holder, reaction_limit)
 	var/progress = reaction_limit * reaction_rate //simple exponential progression
 
 	//calculate yield
@@ -79,7 +79,7 @@
 
 	return progress
 
-/datum/decl/chemical_reaction/process(var/datum/reagents/holder, belly_reagent)
+/datum/decl/chemical_reaction/process(datum/reagents/holder, belly_reagent)
 	//determine how far the reaction can proceed
 	var/list/reaction_limits = list()
 	for(var/reactant in required_reagents)
@@ -112,7 +112,7 @@
 	return reaction_progress
 
 //called when a reaction processes
-/datum/decl/chemical_reaction/proc/on_reaction(var/datum/reagents/holder, created_volume)
+/datum/decl/chemical_reaction/proc/on_reaction(datum/reagents/holder, created_volume)
 	return
 
 //called after processing reactions, if they occurred
@@ -128,5 +128,5 @@
 
 //obtains any special data that will be provided to the reaction products
 //this is called just before reactants are removed.
-/datum/decl/chemical_reaction/proc/send_data(var/datum/reagents/holder, reaction_limit)
+/datum/decl/chemical_reaction/proc/send_data(datum/reagents/holder, reaction_limit)
 	return null

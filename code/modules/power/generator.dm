@@ -239,7 +239,7 @@ GLOBAL_LIST_EMPTY(all_turbines)
 	..()
 	update_icon()
 
-/obj/machinery/power/generator/power_spike(var/announce_prob = 30, var/forced = FALSE, extend_blackout = FALSE)
+/obj/machinery/power/generator/power_spike(var/announce_prob = 30, forced = FALSE, extend_blackout = FALSE)
 	if(!(effective_gen >= max_power / 2 && powernet) && !forced) // Don't make a spike if we're not making a whole lot of power.
 		return
 

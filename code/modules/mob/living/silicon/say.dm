@@ -44,7 +44,7 @@
 #define IS_ROBOT 2
 #define IS_PAI 3
 
-/mob/living/silicon/say_understands(var/other, datum/language/speaking = null)
+/mob/living/silicon/say_understands(other, datum/language/speaking = null)
 	//These only pertain to common. Languages are handled by mob/say_understands()
 	if(!speaking)
 		if(iscarbon(other))
@@ -115,7 +115,7 @@
 		return 0
 	return 1
 
-/mob/living/silicon/ai/emote(var/act, var/m_type, message)
+/mob/living/silicon/ai/emote(var/act, m_type, message)
 	var/obj/machinery/hologram/holopad/T = holo
 	if(T && T.masters[src]) //Is the AI using a holopad?
 		. = holopad_emote(message)

@@ -226,7 +226,7 @@
 // Making it so emagging the weapon it comes with would also be a good idea. Different modes, perhaps?
 
 /*
-/obj/item/personal_shield_generator/emag_act(var/remaining_charges, mob/user)
+/obj/item/personal_shield_generator/emag_act(remaining_charges, mob/user)
 	if(active_weapon)
 		. = active_weapon.emag_act(user)
 		update_icon()

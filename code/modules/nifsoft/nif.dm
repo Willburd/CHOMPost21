@@ -68,7 +68,7 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 	var/list/planes_visible = list()
 
 //Constructor comes with a free AR HUD
-/obj/item/nif/Initialize(mapload,var/wear,list/load_data)
+/obj/item/nif/Initialize(mapload,wear,list/load_data)
 	. = ..()
 
 	//First one to spawn in the game, make a big icon
@@ -396,7 +396,7 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 			return FALSE
 
 //Prints 'AR' messages to the user
-/obj/item/nif/proc/notify(var/message,alert = 0)
+/obj/item/nif/proc/notify(message,alert = 0)
 	if(!human || stat == NIF_TEMPFAIL) return
 
 	last_notification = message // TGUI Hook
@@ -547,7 +547,7 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 			NS.deactivate()
 
 //Add a flag to one of the holders
-/obj/item/nif/proc/set_flag(var/flag,hint)
+/obj/item/nif/proc/set_flag(flag,hint)
 	ASSERT(flag != null && hint)
 
 	switch(hint)
@@ -563,7 +563,7 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 			CRASH("Not a valid NIF set_flag hint: [hint]")
 
 //Clear a flag from one of the holders
-/obj/item/nif/proc/clear_flag(var/flag,hint)
+/obj/item/nif/proc/clear_flag(flag,hint)
 	ASSERT(flag != null && hint)
 
 	switch(hint)
@@ -591,7 +591,7 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 		return entry
 
 //Check for a set flag
-/obj/item/nif/proc/flag_check(var/flag,hint)
+/obj/item/nif/proc/flag_check(flag,hint)
 	if(stat != NIF_WORKING) return FALSE
 
 	ASSERT(flag && hint)

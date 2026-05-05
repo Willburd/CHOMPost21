@@ -227,7 +227,7 @@
 	emote_message_3p = "shakes hands with USER_SELF."
 	check_range = 1
 
-/datum/decl/emote/visible/handshake/get_emote_message_3p(var/atom/user, var/atom/target, extra_params)
+/datum/decl/emote/visible/handshake/get_emote_message_3p(var/atom/user, atom/target, extra_params)
 	if(target && !user.Adjacent(target))
 		return "holds out USER_THEIR hand out to TARGET."
 	return ..()
@@ -238,7 +238,7 @@
 	emote_message_3p = "signals."
 	check_restraints = TRUE
 
-/datum/decl/emote/visible/signal/get_emote_message_3p(var/mob/living/user, var/atom/target, extra_params)
+/datum/decl/emote/visible/signal/get_emote_message_3p(var/mob/living/user, atom/target, extra_params)
 	if(istype(user) && (!user.get_active_hand() || !user.get_inactive_hand()))
 		var/t1 = round(text2num(extra_params))
 		if(isnum(t1) && t1 <= 5)

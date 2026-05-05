@@ -119,7 +119,7 @@
 			LAZYREMOVE(addictions,C)
 			LAZYREMOVE(addiction_counters,C)
 
-/mob/living/carbon/proc/addict_to_reagent(var/reagentid, round_start)
+/mob/living/carbon/proc/addict_to_reagent(reagentid, round_start)
 	PRIVATE_PROC(TRUE)
 	SHOULD_NOT_OVERRIDE(TRUE)
 	if(isSynthetic()) // Should this be allowed? I guess you can roleplay Bender as an FBP? Trait in the future?

@@ -267,7 +267,7 @@
 			else
 				return ..()
 
-/obj/item/pipe_dispenser/proc/build_effect(var/obj/P, time = 1.5)
+/obj/item/pipe_dispenser/proc/build_effect(obj/P, time = 1.5)
 	set waitfor = FALSE
 	P.filters += filter(type = "angular_blur", size = 30)
 	animate(P.filters[P.filters.len], size = 0, time = time)
@@ -277,7 +277,7 @@
 	P.filters -= outline
 	P.filters -= filter(type = "angular_blur", size = 0)
 
-/obj/item/pipe_dispenser/proc/animate_deletion(var/obj/P, time = 1.5)
+/obj/item/pipe_dispenser/proc/animate_deletion(obj/P, time = 1.5)
 	set waitfor = FALSE
 	P.filters += filter(type = "angular_blur", size = 0)
 	animate(P.filters[P.filters.len], size = 30, time = time)

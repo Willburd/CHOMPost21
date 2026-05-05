@@ -9,7 +9,7 @@
 	var/descendx
 	var/descendy
 
-/obj/structure/prop/tyr_elevator/attackby(var/obj/item/W as obj, mob/user as mob)
+/obj/structure/prop/tyr_elevator/attackby(obj/item/W as obj, mob/user as mob)
 	if (do_after(user, 30, target = src))
 		do_teleport(user, locate(descendx,descendy,src.z), channel = TELEPORT_CHANNEL_QUANTUM)
 
@@ -112,7 +112,7 @@
 
 	var/mob/living/carbon/occupant = null
 
-/obj/machinery/restoration_cell/attackby(var/obj/item/G as obj, mob/user as mob)
+/obj/machinery/restoration_cell/attackby(obj/item/G as obj, mob/user as mob)
 	if(istype(G, /obj/item/grab))
 		var/obj/item/grab/grab = G
 		if(!ismob(grab.affecting))

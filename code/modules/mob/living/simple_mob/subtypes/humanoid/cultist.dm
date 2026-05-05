@@ -493,7 +493,7 @@
 
 	ai_holder_type = /datum/ai_holder/simple_mob/melee
 
-/mob/living/simple_mob/humanoid/cultist/elite/attackby(var/obj/item/O as obj, mob/user as mob)
+/mob/living/simple_mob/humanoid/cultist/elite/attackby(obj/item/O as obj, mob/user as mob)
 	if(O.force)
 		if(prob(30))
 			visible_message(span_danger("\The [src] blocks \the [O] with its shield!"))

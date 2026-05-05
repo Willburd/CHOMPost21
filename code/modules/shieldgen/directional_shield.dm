@@ -121,7 +121,7 @@
 	SIGNAL_HANDLER
 	update_shield_positions()
 
-/obj/item/shield_projector/proc/create_shield(var/newloc, new_dir)
+/obj/item/shield_projector/proc/create_shield(newloc, new_dir)
 	var/obj/effect/directional_shield/S = new(newloc, src)
 	S.dir = new_dir
 	active_shields += S

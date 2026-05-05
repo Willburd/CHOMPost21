@@ -489,7 +489,7 @@
 		return 1
 	return 0
 
-/obj/mecha/proc/enter_after(delay as num, var/mob/user as mob, numticks = 5)
+/obj/mecha/proc/enter_after(delay as num, mob/user as mob, numticks = 5)
 	var/delayfraction = delay/numticks
 
 	var/turf/T = user.loc
@@ -671,7 +671,7 @@
 		return 1
 	return 0
 
-/obj/mecha/contents_tgui_distance(var/src_object, mob/living/user)
+/obj/mecha/contents_tgui_distance(src_object, mob/living/user)
 	. = user.shared_living_tgui_distance(src_object) //allow them to interact with anything they can interact with normally.
 	if(. != STATUS_INTERACTIVE)
 		//Allow interaction with the mecha or anything that is part of the mecha
@@ -963,7 +963,7 @@
 ///////////////////////////////////
 
 //ATM, the ignore_threshold is literally only used for the pulse rifles beams used mostly by deathsquads.
-/obj/mecha/proc/check_for_internal_damage(var/list/possible_int_damage,ignore_threshold=null)
+/obj/mecha/proc/check_for_internal_damage(list/possible_int_damage,ignore_threshold=null)
 	if(!islist(possible_int_damage) || isemptylist(possible_int_damage)) return
 	if(prob(30))
 		if(ignore_threshold || src.health*100/initial(src.health) < src.internal_damage_threshold)
@@ -1023,7 +1023,7 @@
 		log_append_to_last("Took [damage] points of damage. Damage type: \"[type]\".",1)
 	return
 
-/obj/mecha/proc/components_handle_damage(var/damage, type = BRUTE)
+/obj/mecha/proc/components_handle_damage(damage, type = BRUTE)
 	var/obj/item/mecha_parts/component/armor/AC = internal_components[MECH_ARMOR]
 
 	if(AC)
@@ -2781,7 +2781,7 @@
 	return 0
 
 //This is for mobs mostly.
-/obj/mecha/attack_generic(var/mob/user, var/damage, attack_message)
+/obj/mecha/attack_generic(var/mob/user, damage, attack_message)
 
 	var/obj/item/mecha_parts/component/armor/ArmC = internal_components[MECH_ARMOR]
 

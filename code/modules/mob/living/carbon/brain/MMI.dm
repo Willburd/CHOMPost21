@@ -46,7 +46,7 @@
 	else
 		to_chat (usr, "You were unable to toggle the [src]'s radio.")
 
-/obj/item/mmi/attackby(var/obj/item/O as obj, mob/user as mob)
+/obj/item/mmi/attackby(obj/item/O as obj, mob/user as mob)
 	if(istype(O,/obj/item/organ/internal/brain) && !brainmob) //Time to stick a brain in it --NEO
 
 		var/obj/item/organ/internal/brain/B = O
@@ -146,7 +146,7 @@
 	locked = 1
 	return
 
-/obj/item/mmi/relaymove(var/mob/user, direction)
+/obj/item/mmi/relaymove(mob/user, direction)
 	if(user.stat || user.stunned)
 		return
 	var/obj/item/rig/rig = src.get_rig()
@@ -208,7 +208,7 @@
 	src.brainmob.silent = 0
 	GLOB.dead_mob_list -= src.brainmob
 
-/obj/item/mmi/digital/attackby(var/obj/item/O as obj, mob/user as mob)
+/obj/item/mmi/digital/attackby(obj/item/O as obj, mob/user as mob)
 	return	//Doesn't do anything right now because none of the things that can be done to a regular MMI make any sense for these
 
 /obj/item/mmi/digital/examine(mob/user)

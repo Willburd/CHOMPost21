@@ -34,7 +34,7 @@
 
 	do_command(cur_command)
 
-/obj/machinery/door/airlock/proc/check_completion(var/do_lock, delayed_status)
+/obj/machinery/door/airlock/proc/check_completion(do_lock, delayed_status)
 	PRIVATE_PROC(TRUE)
 	SHOULD_NOT_OVERRIDE(TRUE)
 	if(do_lock)
@@ -128,7 +128,7 @@
 	if(!surpress_send) send_status()
 
 
-/obj/machinery/door/airlock/close(var/forced= FALSE, var/ignore_safties = FALSE, crush_damage = DOOR_CRUSH_DAMAGE)
+/obj/machinery/door/airlock/close(var/forced= FALSE, ignore_safties = FALSE, crush_damage = DOOR_CRUSH_DAMAGE)
 	. = ..()
 	if(!forced) send_status()
 

@@ -5,7 +5,7 @@
 	real_name = "host brain"
 	universal_understand = 1
 
-/mob/living/captive_brain/say(var/message, var/datum/language/speaking = null, whispering = 0)
+/mob/living/captive_brain/say(var/message, datum/language/speaking = null, whispering = 0)
 
 	if(client)
 		if(client.prefs.muted & MUTE_IC)

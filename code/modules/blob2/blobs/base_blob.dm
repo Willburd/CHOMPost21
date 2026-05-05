@@ -234,7 +234,7 @@ GLOBAL_LIST_EMPTY(all_blobs)
 	qdel(src)
 	return B
 
-/obj/structure/blob/attack_generic(var/mob/user, var/damage, attack_verb)
+/obj/structure/blob/attack_generic(var/mob/user, damage, attack_verb)
 	visible_message(span_danger("[user] [attack_verb] the [src]!"))
 	playsound(src, 'sound/effects/attackblob.ogg', 100, 1)
 	user.do_attack_animation(src)
@@ -318,7 +318,7 @@ GLOBAL_LIST_EMPTY(all_blobs)
 	else
 		attack_generic(M, rand(1,10), "bashed")
 
-/obj/structure/blob/attackby(var/obj/item/W, mob/user)
+/obj/structure/blob/attackby(obj/item/W, mob/user)
 	user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
 	playsound(src, 'sound/effects/attackblob.ogg', 50, 1)
 	visible_message(span_danger("\The [src] has been attacked with \the [W][(user ? " by [user]." : ".")]"))

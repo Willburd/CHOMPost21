@@ -190,27 +190,27 @@ SUBSYSTEM_DEF(transcore)
 			return db
 
 // These are now just interfaces to databases
-/datum/controller/subsystem/transcore/proc/m_backup(var/datum/mind/mind, var/nif /* Outpost 21 edit - Nif removal var/obj/item/nif/nif*/ , var/one_time = FALSE, database_key)
+/datum/controller/subsystem/transcore/proc/m_backup(var/datum/mind/mind, var/nif /* Outpost 21 edit - Nif removal var/obj/item/nif/nif*/ , one_time = FALSE, database_key)
 	var/datum/transcore_db/db = db_by_key(database_key)
 	db.m_backup(mind=mind, nif=nif, one_time=one_time)
 
-/datum/controller/subsystem/transcore/proc/add_backup(var/datum/transhuman/mind_record/MR, database_key)
+/datum/controller/subsystem/transcore/proc/add_backup(datum/transhuman/mind_record/MR, database_key)
 	var/datum/transcore_db/db = db_by_key(database_key)
 	db.add_backup(MR=MR)
 
-/datum/controller/subsystem/transcore/proc/stop_backup(var/datum/transhuman/mind_record/MR, database_key)
+/datum/controller/subsystem/transcore/proc/stop_backup(datum/transhuman/mind_record/MR, database_key)
 	var/datum/transcore_db/db = db_by_key(database_key)
 	db.stop_backup(MR=MR)
 
-/datum/controller/subsystem/transcore/proc/add_body(var/datum/transhuman/body_record/BR, database_key)
+/datum/controller/subsystem/transcore/proc/add_body(datum/transhuman/body_record/BR, database_key)
 	var/datum/transcore_db/db = db_by_key(database_key)
 	db.add_body(BR=BR)
 
-/datum/controller/subsystem/transcore/proc/remove_body(var/datum/transhuman/body_record/BR, database_key)
+/datum/controller/subsystem/transcore/proc/remove_body(datum/transhuman/body_record/BR, database_key)
 	var/datum/transcore_db/db = db_by_key(database_key)
 	db.remove_body(BR=BR)
 
-/datum/controller/subsystem/transcore/proc/core_dump(var/obj/item/disk/transcore/disk, database_key)
+/datum/controller/subsystem/transcore/proc/core_dump(obj/item/disk/transcore/disk, database_key)
 	var/datum/transcore_db/db = db_by_key(database_key)
 	db.core_dump(disk=disk)
 
@@ -224,7 +224,7 @@ SUBSYSTEM_DEF(transcore)
 	var/core_dumped = FALSE
 	var/key // Key for this DB
 
-/datum/transcore_db/proc/m_backup(var/datum/mind/mind, var/nif /* Outpost 21 edit - Nif removal var/obj/item/nif/nif*/, one_time = FALSE)
+/datum/transcore_db/proc/m_backup(var/datum/mind/mind, var/nif /* Outpost 21 edit - Nif removal obj/item/nif/nif*/, one_time = FALSE)
 	ASSERT(mind)
 	if(!mind.name || core_dumped)
 		return 0

@@ -152,7 +152,7 @@
 
 	return 0
 
-/obj/machinery/appliance/cooker/add_content(var/obj/item/I, mob/user)
+/obj/machinery/appliance/cooker/add_content(obj/item/I, mob/user)
 	var/datum/cooking_item/CI = ..()
 	if(istype(CI) && CI.combine_target)
 		to_chat(user, span_filter_notice("\The [I] will be used to make a [selected_option]. Output selection is returned to default for future items."))

@@ -24,7 +24,7 @@
 	return pick(finalpick)
 
 // Clone of list[]
-/proc/n_listpos(var/list/L, var/pos, value)
+/proc/n_listpos(var/list/L, pos, value)
 	if(!istype(L, /list)) return
 	if(isnum(pos))
 		if(!value)
@@ -40,7 +40,7 @@
 			L[pos] = value
 
 // Clone of list.Copy()
-/proc/n_listcopy(var/list/L, var/start, end)
+/proc/n_listcopy(var/list/L, start, end)
 	if(!istype(L, /list)) return
 	return L.Copy(start, end)
 
@@ -73,18 +73,18 @@
 				chosenlist.Remove(e)
 
 // Clone of list.Cut()
-/proc/n_listcut(var/list/L, var/start, end)
+/proc/n_listcut(var/list/L, start, end)
 	if(!istype(L, /list)) return
 	return L.Cut(start, end)
 
 // Clone of list.Swap()
-/proc/n_listswap(var/list/L, var/firstindex, secondindex)
+/proc/n_listswap(var/list/L, firstindex, secondindex)
 	if(!istype(L, /list)) return
 	if(L.len >= secondindex && L.len >= firstindex)
 		return L.Swap(firstindex, secondindex)
 
 // Clone of list.Insert()
-/proc/n_listinsert(var/list/L, var/index, element)
+/proc/n_listinsert(var/list/L, index, element)
 	if(!istype(L, /list)) return
 	return L.Insert(index, element)
 
@@ -99,7 +99,7 @@
 	return prob(chance)
 
 // Merge of list.Find() and findtext()
-/proc/smartfind(var/haystack, var/needle, var/start = 1, end = 0)
+/proc/smartfind(var/haystack, var/needle, start = 1, end = 0)
 	if(haystack && needle)
 		if(isobject(haystack))
 			if(istype(haystack, /list))
@@ -113,7 +113,7 @@
 					return findtext(haystack, needle, start, end)
 
 // Clone of copytext()
-/proc/docopytext(var/string, var/start = 1, end = 0)
+/proc/docopytext(var/string, start = 1, end = 0)
 	if(istext(string) && isnum(start) && isnum(end))
 		if(start > 0)
 			return copytext(string, start, end)
@@ -146,7 +146,7 @@
 
 	return L
 
-/proc/string_explode(var/string, separator)
+/proc/string_explode(string, separator)
 	if(istext(string))
 		if(istext(separator) && separator == "")
 			return string_tolist(string)
@@ -165,11 +165,11 @@
 
 Just found out there was already a string explode function, did some benchmarking, and that function were a bit faster, sticking to that.
 */
-/proc/string_explode(var/string, separator)
+/proc/string_explode(string, separator)
 	if(istext(string) && istext(separator))
 		return splittext(string, separator)
 
-/proc/n_repeat(var/string, amount)
+/proc/n_repeat(string, amount)
 	if(istext(string) && isnum(amount))
 		var/i
 		var/newstring = ""
@@ -231,7 +231,7 @@ Just found out there was already a string explode function, did some benchmarkin
 		return n_ceil(num)
 
 // Clamps N between min and max
-/proc/n_clamp(var/num, var/min=-1, max=1)
+/proc/n_clamp(var/num, min=-1, max=1)
 	if(isnum(num)&&isnum(min)&&isnum(max))
 		if(num<=min)
 			return min
@@ -240,14 +240,14 @@ Just found out there was already a string explode function, did some benchmarkin
 		return num
 
 // Returns 1 if N is inbetween Min and Max
-/proc/n_inrange(var/num, var/min=-1, max=1)
+/proc/n_inrange(var/num, min=-1, max=1)
 	if(isnum(num)&&isnum(min)&&isnum(max))
 		return ((min <= num) && (num <= max))
 // END OF BY DONKIE :(
 
 // Non-recursive
 // Imported from Mono string.ReplaceUnchecked
-/proc/string_replacetext(var/haystack,var/a,b)
+/proc/string_replacetext(var/haystack,a,b)
 	if(istext(haystack)&&istext(a)&&istext(b))
 		var/i = 1
 		var/lenh=length(haystack)

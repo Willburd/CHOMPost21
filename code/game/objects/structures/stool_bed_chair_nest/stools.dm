@@ -18,7 +18,7 @@
 /obj/item/stool/padded
 	icon_state = "stool_padded_preview" //set for the map
 
-/obj/item/stool/Initialize(mapload, var/new_material, new_padding_material)
+/obj/item/stool/Initialize(mapload, new_material, new_padding_material)
 	. = ..()
 	if(!new_material)
 		new_material = MAT_STEEL

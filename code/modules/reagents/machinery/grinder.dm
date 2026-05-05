@@ -54,7 +54,7 @@
 	icon_state = "juicer"+num2text(!isnull(beaker))
 	return
 
-/obj/machinery/reagentgrinder/attackby(var/obj/item/O, mob/user)
+/obj/machinery/reagentgrinder/attackby(obj/item/O, mob/user)
 	if(beaker)
 		if(default_deconstruction_screwdriver(user, O))
 			return
@@ -262,7 +262,7 @@
 
 	grind_items_to_reagents(holdingitems,beaker.reagents)
 
-/obj/machinery/reagentgrinder/proc/replace_beaker(var/mob/living/user, obj/item/reagent_containers/new_beaker)
+/obj/machinery/reagentgrinder/proc/replace_beaker(mob/living/user, obj/item/reagent_containers/new_beaker)
 	if(!user)
 		return FALSE
 	if(beaker)

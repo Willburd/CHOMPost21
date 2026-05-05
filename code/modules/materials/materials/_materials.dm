@@ -250,7 +250,7 @@ GLOBAL_LIST_INIT(name_to_material, populate_material_list())
 	var/wiki_flag = 0
 
 // Placeholders for light tiles and rglass.
-/datum/material/proc/build_rod_product(var/mob/user, var/obj/item/stack/used_stack, obj/item/stack/target_stack)
+/datum/material/proc/build_rod_product(var/mob/user, obj/item/stack/used_stack, obj/item/stack/target_stack)
 	if(!rod_product)
 		to_chat(user, span_warning("You cannot make anything out of \the [target_stack]"))
 		return
@@ -263,7 +263,7 @@ GLOBAL_LIST_INIT(name_to_material, populate_material_list())
 	S.add_fingerprint(user)
 	S.add_to_stacks(user)
 
-/datum/material/proc/build_wired_product(var/mob/living/user, var/obj/item/stack/used_stack, obj/item/stack/target_stack)
+/datum/material/proc/build_wired_product(var/mob/living/user, obj/item/stack/used_stack, obj/item/stack/target_stack)
 	if(!wire_product)
 		to_chat(user, span_warning("You cannot make anything out of \the [target_stack]"))
 		return
@@ -288,7 +288,7 @@ GLOBAL_LIST_INIT(name_to_material, populate_material_list())
 		shard_icon = shard_type
 
 // This is a placeholder for proper integration of windows/windoors into the system.
-/datum/material/proc/build_windows(var/mob/living/user, obj/item/stack/used_stack)
+/datum/material/proc/build_windows(mob/living/user, obj/item/stack/used_stack)
 	return 0
 
 // Weapons handle applying a divisor for this value locally.
@@ -323,7 +323,7 @@ GLOBAL_LIST_INIT(name_to_material, populate_material_list())
 	wiki_flag = WIKI_SPOILER
 
 // Places a girder object when a wall is dismantled, also applies reinforced material.
-/datum/material/proc/place_dismantled_girder(var/turf/target, var/datum/material/reinf_material, datum/material/girder_material)
+/datum/material/proc/place_dismantled_girder(var/turf/target, datum/material/reinf_material, datum/material/girder_material)
 	var/obj/structure/girder/G = new(target)
 	if(reinf_material)
 		G.reinf_material = reinf_material
@@ -334,7 +334,7 @@ GLOBAL_LIST_INIT(name_to_material, populate_material_list())
 
 // General wall debris product placement.
 // Not particularly necessary aside from snowflakey cult girders.
-/datum/material/proc/place_dismantled_product(var/turf/target, amount = 1) //Added an amount var to this. Lets multi-dropped walls to drop all of their sheets together. Woo!
+/datum/material/proc/place_dismantled_product(turf/target, amount = 1) //Added an amount var to this. Lets multi-dropped walls to drop all of their sheets together. Woo!
 	place_sheet(target, amount)
 
 // Debris product. Used ALL THE TIME.
@@ -352,11 +352,11 @@ GLOBAL_LIST_INIT(name_to_material, populate_material_list())
 /datum/material/proc/is_brittle()
 	return !!(flags & MATERIAL_BRITTLE)
 
-/datum/material/proc/combustion_effect(var/turf/T, temperature)
+/datum/material/proc/combustion_effect(turf/T, temperature)
 	return
 
 // Used by walls to do on-touch things, after checking for crumbling and open-ability.
-/datum/material/proc/wall_touch_special(var/turf/simulated/wall/W, mob/living/L)
+/datum/material/proc/wall_touch_special(turf/simulated/wall/W, mob/living/L)
 	return
 
 /datum/material/proc/get_recipes()

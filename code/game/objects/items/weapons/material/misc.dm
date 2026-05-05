@@ -158,7 +158,7 @@
 
 	..()
 
-/obj/item/material/whip/proc/ranged_disarm(var/mob/living/carbon/human/H, mob/living/user)
+/obj/item/material/whip/proc/ranged_disarm(mob/living/carbon/human/H, mob/living/user)
 	if(istype(H))
 		var/list/holding = list(H.get_active_hand() = 40, H.get_inactive_hand() = 20)
 

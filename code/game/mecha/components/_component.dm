@@ -71,7 +71,7 @@
 	integrity = clamp(integrity + amt, 0, max_integrity)
 	return
 
-/obj/item/mecha_parts/component/proc/damage_part(var/dam_amt = 0, type = BRUTE)
+/obj/item/mecha_parts/component/proc/damage_part(dam_amt = 0, type = BRUTE)
 	if(dam_amt <= 0)
 		return FALSE
 
@@ -95,7 +95,7 @@
 
 // Attach/Detach code.
 
-/obj/item/mecha_parts/component/proc/attach(var/obj/mecha/target, mob/living/user)
+/obj/item/mecha_parts/component/proc/attach(obj/mecha/target, mob/living/user)
 	if(target)
 		if(!(component_type in target.internal_components))
 			if(user)

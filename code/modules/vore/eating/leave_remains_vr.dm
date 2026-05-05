@@ -139,7 +139,7 @@
 	drop_sound = 'sound/items/drop/device.ogg'   //not organic bones, so they get different sounds
 	pickup_sound = 'sound/items/pickup/device.ogg'
 
-/obj/item/digestion_remains/Initialize(mapload, var/mob/living/pred, mob/living/prey)
+/obj/item/digestion_remains/Initialize(mapload, mob/living/pred, mob/living/prey)
 	. = ..()
 	if(!mapload)
 		pred_ckey = pred?.ckey

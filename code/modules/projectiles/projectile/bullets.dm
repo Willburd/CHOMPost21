@@ -17,12 +17,12 @@
 
 	muzzle_type = /obj/effect/projectile/muzzle/bullet
 
-/obj/item/projectile/bullet/on_hit(var/atom/target, blocked = 0)
+/obj/item/projectile/bullet/on_hit(atom/target, blocked = 0)
 	..(target, blocked)
 		//var/mob/living/L = target
 		//shake_camera(L, 3, 2) CHOMPEDIT - "Muh realism". The screenshake is obnoxious for gameplay. TODO: Replace with blood splatter indicator.
 
-/obj/item/projectile/bullet/attack_mob(var/mob/living/target_mob, var/distance, miss_modifier)
+/obj/item/projectile/bullet/attack_mob(var/mob/living/target_mob, distance, miss_modifier)
 	if(penetrating > 0 && damage > 20 && prob(damage))
 		mob_passthrough_check = 1
 	else
@@ -193,7 +193,7 @@
 
 	combustion = FALSE
 
-/obj/item/projectile/bullet/shotgun/ion/on_hit(var/atom/target, blocked = 0)
+/obj/item/projectile/bullet/shotgun/ion/on_hit(atom/target, blocked = 0)
 	..()
 	empulse(target, 0, 0, 0, 0)	//Only affects what it hits
 	return 1
@@ -303,7 +303,7 @@
 	edge = TRUE
 	hud_state = "pistol_fire"
 
-/obj/item/projectile/bullet/burstbullet/on_hit(var/atom/target, blocked = 0)
+/obj/item/projectile/bullet/burstbullet/on_hit(atom/target, blocked = 0)
 	if(isturf(target))
 		explosion(target, -1, 0, 2)
 	..()
@@ -452,7 +452,7 @@
 		new /obj/item/ammo_casing/afoam_dart(get_turf(loc))
 
 ///Doesn't give a damn about what faction you're on, hits you anyway.
-/obj/item/projectile/bullet/foam_dart/on_hit(var/atom/target, blocked = 0)
+/obj/item/projectile/bullet/foam_dart/on_hit(atom/target, blocked = 0)
 	handle_lasertag_attack(target, firer, tag_damage = 1, vest_override = TRUE)
 
 /obj/item/projectile/bullet/foam_dart/on_range(atom/A)
@@ -490,5 +490,5 @@
 	if(istype(T))
 		new /obj/item/ammo_casing/afoam_dart/riot(get_turf(loc))
 
-/obj/item/projectile/bullet/foam_dart_riot/on_hit(var/atom/target, blocked = 0)
+/obj/item/projectile/bullet/foam_dart_riot/on_hit(atom/target, blocked = 0)
 	handle_lasertag_attack(target, firer, 5, vest_override = TRUE) //Insult to injury.

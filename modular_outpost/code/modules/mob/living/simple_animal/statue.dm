@@ -80,7 +80,7 @@ GLOBAL_VAR_INIT(statue_photos_allowed, 3) // Photos can spawn statues... Lets no
 	. = ..()
 
 // Cannot talk
-/mob/living/simple_mob/animal/statue/say(var/message, var/datum/language/speaking = null, whispering = 0)
+/mob/living/simple_mob/animal/statue/say(var/message, datum/language/speaking = null, whispering = 0)
 	return 0
 
 // Turn to dust when killed
@@ -134,7 +134,7 @@ GLOBAL_VAR_INIT(statue_photos_allowed, 3) // Photos can spawn statues... Lets no
 			if(prob(40))
 				L.broken()
 
-/mob/living/simple_mob/animal/statue/attackby(var/obj/item/O as obj, mob/user as mob) //banishing the statue is a risky job
+/mob/living/simple_mob/animal/statue/attackby(obj/item/O as obj, mob/user as mob) //banishing the statue is a risky job
 	if(istype(O, /obj/item/nullrod))
 		visible_message("<span class='warning'>[user] tries to banish [src] with [O]!</span>")
 		if(do_after(user, 2 SECONDS, target = src))
@@ -340,7 +340,7 @@ GLOBAL_VAR_INIT(statue_photos_allowed, 3) // Photos can spawn statues... Lets no
 		S.bordom_counter = 0 // Zoop
 	return
 
-/datum/ai_holder/simple_mob/intentional/statue/proc/blind_target(var/mob/L,show_messages = TRUE)
+/datum/ai_holder/simple_mob/intentional/statue/proc/blind_target(mob/L,show_messages = TRUE)
 	if(ishuman(L))
 		var/mob/living/carbon/human/H = L
 		if (H.species == SPECIES_DIONA || H.species == SPECIES_PROMETHEAN || H.species == SPECIES_PROTEAN) // can't blink and organic

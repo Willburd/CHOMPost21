@@ -106,7 +106,7 @@ GLOBAL_LIST_EMPTY(overminds)
 			if(!auto_factory() && !auto_resource())
 				auto_node()
 
-/mob/observer/blob/say(var/message, var/datum/language/speaking = null, whispering = 0)
+/mob/observer/blob/say(var/message, datum/language/speaking = null, whispering = 0)
 	message = sanitize(message)
 
 	if(!message)

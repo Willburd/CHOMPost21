@@ -101,7 +101,7 @@
 	else
 		return ..()
 
-/obj/item/defib_kit/emag_act(var/remaining_charges, mob/user)
+/obj/item/defib_kit/emag_act(remaining_charges, mob/user)
 	var/obj/item/shockpaddles/linked/paddles = get_paddles()
 	if(paddles)
 		. = paddles.emag_act(user)
@@ -503,7 +503,7 @@
 
 	H.setBrainLoss(brain_damage)
 
-/obj/item/shockpaddles/proc/make_announcement(var/message, msg_class)
+/obj/item/shockpaddles/proc/make_announcement(message, msg_class)
 	audible_message(span_bold(span_info("\The [src]") + " [message]"), span_info("\The [src] vibrates slightly."), runemessage = "buzz")
 
 /obj/item/shockpaddles/emag_act(mob/user)
@@ -573,7 +573,7 @@
 	var/obj/item/defib_kit/base_unit = tethered_host_item
 	return (base_unit.bcell && base_unit.bcell.checked_use(charge_amt))
 
-/obj/item/shockpaddles/linked/make_announcement(var/message, msg_class)
+/obj/item/shockpaddles/linked/make_announcement(message, msg_class)
 	var/obj/item/defib_kit/base_unit = tethered_host_item
 	base_unit.audible_message(span_infoplain(span_bold("\The [base_unit]") + " [message]"), span_info("\The [base_unit] vibrates slightly."))
 

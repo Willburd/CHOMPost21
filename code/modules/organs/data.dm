@@ -70,7 +70,7 @@
 	SHOULD_NOT_OVERRIDE(TRUE)
 	SETUP_SPECIES_CHECK("bodytype",SP.get_bodytype(H))
 
-/datum/organ_data/proc/get_species_icobase(var/mob/living/carbon/human/H, get_deform)
+/datum/organ_data/proc/get_species_icobase(mob/living/carbon/human/H, get_deform)
 	SHOULD_NOT_OVERRIDE(TRUE)
 	SETUP_SPECIES_CHECK("icobase",SP.get_icobase(H,get_deform))
 

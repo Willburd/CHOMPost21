@@ -69,7 +69,7 @@
 				changeling.objectives += survive_objective
 	return
 
-/datum/antagonist/changeling/can_become_antag(var/datum/mind/player, ignore_role)
+/datum/antagonist/changeling/can_become_antag(datum/mind/player, ignore_role)
 	if(!..())
 		return 0
 	if(player.current)

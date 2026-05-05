@@ -77,7 +77,7 @@
 
 	return ITEM_INTERACT_FAILURE
 
-/obj/item/reagent_containers/glass/standard_feed_mob(var/mob/user, mob/target)
+/obj/item/reagent_containers/glass/standard_feed_mob(mob/user, mob/target)
 	if(user.a_intent == I_HURT)
 		return 1
 	return ..()
@@ -110,7 +110,7 @@
 	reagents.add_reagent(reagent, amount)
 	return ITEM_INTERACT_SUCCESS
 
-/obj/item/reagent_containers/glass/afterattack(var/obj/target, var/mob/user, proximity)
+/obj/item/reagent_containers/glass/afterattack(var/obj/target, mob/user, proximity)
 	if(!proximity || !is_open_container()) //Is the container open & are they next to whatever they're clicking?
 		return 1 //If not, do nothing.
 	for(var/type in GLOB.reagent_containers_can_be_placed_into[container_can_be_placed_into]) //Is it something it can be placed into?

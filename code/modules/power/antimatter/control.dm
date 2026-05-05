@@ -178,7 +178,7 @@
 	return
 
 
-/obj/machinery/power/am_control_unit/proc/add_shielding(var/obj/machinery/am_shielding/AMS, AMS_linking = 0)
+/obj/machinery/power/am_control_unit/proc/add_shielding(obj/machinery/am_shielding/AMS, AMS_linking = 0)
 	if(!istype(AMS)) return 0
 	if(!anchored) return 0
 	if(!AMS_linking && !AMS.link_control(src)) return 0

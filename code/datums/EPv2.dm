@@ -118,7 +118,7 @@ GLOBAL_LIST_EMPTY(all_exonet_connections)
 // Parameters: 3 (target_address - the desired address to send the message to, data_type - text stating what the content is meant to be used for,
 // 		content - the actual 'message' being sent to the address)
 // Description: Sends the message to target_address, by calling receive_message() on the desired datum.  Returns true if the message is recieved.
-/datum/exonet_protocol/proc/send_message(var/target_address, var/data_type, content)
+/datum/exonet_protocol/proc/send_message(var/target_address, data_type, content)
 	if(!address)
 		return FALSE
 	var/obj/machinery/exonet_node/node = get_exonet_node()
@@ -133,12 +133,12 @@ GLOBAL_LIST_EMPTY(all_exonet_connections)
 // Parameters: 4 (origin_atom - the origin datum's holder, origin_address - the address the message originated from,
 // 		data_type - text stating what the content is meant to be used for, content - the actual 'message' being sent from origin_atom)
 // Description: Called when send_message() successfully reaches the intended datum.  By default, calls receive_exonet_message() on the holder atom.
-/datum/exonet_protocol/proc/receive_message(var/atom/origin_atom, var/origin_address, var/data_type, content)
+/datum/exonet_protocol/proc/receive_message(var/atom/origin_atom, var/origin_address, data_type, content)
 	holder.receive_exonet_message(origin_atom, origin_address, data_type, content)
 	return TRUE // for send_message()
 
 // Proc: receive_exonet_message()
 // Parameters: 3 (origin_atom - the origin datum's holder, origin_address - the address the message originated from, message - the message that was sent)
 // Description: Override this to make your atom do something when a message is received.
-/atom/proc/receive_exonet_message(var/atom/origin_atom, var/origin_address, var/message, text)
+/atom/proc/receive_exonet_message(var/atom/origin_atom, var/origin_address, message, text)
 	return

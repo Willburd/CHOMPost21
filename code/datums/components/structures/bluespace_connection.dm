@@ -62,7 +62,7 @@
 	playsound(exit_point, exit_sound, 50, TRUE)
 	addtimer(CALLBACK(src, PROC_REF(exit_connection), exit_point, assigned_closet.contents), 1.3 SECONDS)
 
-/datum/component/bluespace_connection/proc/exit_connection(var/atom/exit_point, list/contents)
+/datum/component/bluespace_connection/proc/exit_connection(atom/exit_point, list/contents)
 	// Nope, must be closed.
 	if(assigned_closet.opened)
 		return

@@ -44,7 +44,7 @@
 	linked_belly = null
 	owner.recalculate_vis()
 
-/obj/soulgem/proc/apply_stored_belly(var/belly_string, skip_unreg = FALSE)
+/obj/soulgem/proc/apply_stored_belly(belly_string, skip_unreg = FALSE)
 	for(var/obj/belly in owner.vore_organs)
 		if(belly.name == belly_string)
 			update_linked_belly(belly, TRUE)
@@ -79,7 +79,7 @@
 		to_chat(CS, message)
 
 // Forwards the speech of captured souls
-/obj/soulgem/proc/use_speech(var/message, var/mob/living/sender, var/mob/eyeobj, whisper)
+/obj/soulgem/proc/use_speech(var/message, var/mob/living/sender, mob/eyeobj, whisper)
 	var/sender_name = eyeobj ? eyeobj.name : sender.name
 
 	//AR Projecting
@@ -107,7 +107,7 @@
 	sender.log_talk("NSAY (SC:[owner.real_name]): [message]", LOG_SAY, color="#ff006f")
 
 // Forwards the emotes of captured souls
-/obj/soulgem/proc/use_emote(var/message, var/mob/living/sender, var/mob/eyeobj, whisper)
+/obj/soulgem/proc/use_emote(var/message, var/mob/living/sender, mob/eyeobj, whisper)
 	var/sender_name = eyeobj ? eyeobj.name : sender.name
 
 	//AR Projecting
@@ -130,7 +130,7 @@
 	sender.log_message("NME (SC:[owner.real_name]): [message]", LOG_EMOTE, color="#ff006f")
 
 // The capture function which transfers the given mob's mind into the soulcatcher
-/obj/soulgem/proc/catch_mob(var/mob/M, custom_name)
+/obj/soulgem/proc/catch_mob(mob/M, custom_name)
 	if(!(M.soulcatcher_pref_flags & SOULCATCHER_ALLOW_CAPTURE) && !isobserver(M)) return // Bypass pref check for observer join
 	if(!M.mind)	return
 	if(isbrain(owner)) return
@@ -224,7 +224,7 @@
 	qdel(self)
 
 // Sets the custom messages depending on the input
-/obj/soulgem/proc/set_custom_message(var/message, target)
+/obj/soulgem/proc/set_custom_message(message, target)
 	message = sanitize(message, VORE_SC_MAX, FALSE, TRUE, FALSE)
 	switch(target)
 		if(SC_CAPTURE_MEESAGE)
@@ -265,7 +265,7 @@
 		owner.recalculate_vis()
 
 // Checks a single flag, or if all combined flags are true
-/obj/soulgem/proc/flag_check(var/flag, match_all = FALSE)
+/obj/soulgem/proc/flag_check(flag, match_all = FALSE)
 	if(match_all)
 		return (setting_flags & flag) == flag
 	return setting_flags & flag
@@ -312,7 +312,7 @@
 // VORE FX Section
 
 // Updates the vore FX signal links to the new given belly
-/obj/soulgem/proc/update_linked_belly(var/obj/belly, skip_unreg = FALSE)
+/obj/soulgem/proc/update_linked_belly(obj/belly, skip_unreg = FALSE)
 	if(!belly && linked_belly)
 		UnregisterSignal(linked_belly, COMSIG_BELLY_UPDATE_VORE_FX)
 		linked_belly = null
@@ -340,7 +340,7 @@
 				clear_vore_fx(L)
 
 // Function to show the vore fx overlay
-/obj/soulgem/proc/show_vore_fx(var/mob/living/L, severity = 0)
+/obj/soulgem/proc/show_vore_fx(mob/living/L, severity = 0)
 	if(!linked_belly || !flag_check(SOULGEM_SHOW_VORE_SFX))
 		return
 	if(!istype(L) || L.eyeobj)
@@ -446,7 +446,7 @@
 	transfer_mob_selector(selected_soul, target)
 
 // Transfer selector proc
-/obj/soulgem/proc/transfer_mob_selector(var/mob/M, obj/target)
+/obj/soulgem/proc/transfer_mob_selector(mob/M, obj/target)
 	if(!M || !target) return
 	if(istype(target, /obj/soulgem))
 		transfer_mob_soulcatcher(M, target)
@@ -454,7 +454,7 @@
 	transfer_mob(M, target)
 
 // Transfers a captured soul to a valid object (sleevemate, mmi)
-/obj/soulgem/proc/transfer_mob(var/mob/M, obj/target)
+/obj/soulgem/proc/transfer_mob(mob/M, obj/target)
 	if(is_taken_over()) return
 	if(!M || !target) return
 	if(istype(target, /obj/item/sleevemate))
@@ -483,7 +483,7 @@
 	qdel(M)
 
 // Transfers a captured soul to another soulcatcher
-/obj/soulgem/proc/transfer_mob_soulcatcher(var/mob/living/carbon/brain/caught_soul/vore/M, obj/soulgem/gem)
+/obj/soulgem/proc/transfer_mob_soulcatcher(mob/living/carbon/brain/caught_soul/vore/M, obj/soulgem/gem)
 	if(is_taken_over()) return
 	if(!istype(M) || !gem) return
 	if(!gem.owner) return

@@ -87,7 +87,7 @@
 	shock_area = locate(shock_area)
 
 // Walking on maglev tracks will shock you! Horray!
-/turf/simulated/floor/maglev/Entered(var/atom/movable/AM, atom/old_loc)
+/turf/simulated/floor/maglev/Entered(atom/movable/AM, atom/old_loc)
 	if(isliving(AM) && prob(50))
 		track_zap(AM)
 /turf/simulated/floor/maglev/attack_hand(mob/user)
@@ -535,7 +535,7 @@
 	density = 0
 	anchored = 1
 
-/obj/structure/dancepole/attackby(var/obj/item/O as obj, mob/user as mob)
+/obj/structure/dancepole/attackby(obj/item/O as obj, mob/user as mob)
 	if(O.is_wrench())
 		anchored = !anchored
 		playsound(src.loc, 'sound/items/Deconstruct.ogg', 50, 1)

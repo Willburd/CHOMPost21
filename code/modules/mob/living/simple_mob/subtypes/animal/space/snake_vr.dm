@@ -177,7 +177,7 @@
 	else
 		..()
 
-/mob/living/simple_mob/animal/passive/snake/python/noodle/attackby(var/obj/item/O, mob/user)
+/mob/living/simple_mob/animal/passive/snake/python/noodle/attackby(obj/item/O, mob/user)
 	if(istype(O, /obj/item/reagent_containers/food/snacks/snakesnack))
 		visible_message(span_notice("[user] feeds \the [O] to [src]."))
 		adjust_nutrition(100) //It's sugar!

@@ -258,7 +258,7 @@ default behaviour is:
 	if(s_active && !(s_active in contents) && get_turf(s_active) != get_turf(src))	//check !( s_active in contents ) first so we hopefully don't have to call get_turf() so much.
 		s_active.close(src)
 
-/mob/living/proc/dragged(var/mob/living/dragger, oldloc, forced)
+/mob/living/proc/dragged(mob/living/dragger, oldloc, forced)
 	var/area/A = get_area(src)
 	if(forced || (lying && !buckled && pull_damage() && A.get_gravity() && (prob(getBruteLoss() * 200 / maxHealth))))
 		adjustBruteLoss(2)

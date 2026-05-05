@@ -44,7 +44,7 @@
 	else
 		return buf.dna.GetUIState(real_block)
 
-/obj/item/dnainjector/proc/SetState(var/on, selblock=0)
+/obj/item/dnainjector/proc/SetState(on, selblock=0)
 	var/real_block=GetRealBlock(selblock)
 	if(buf.types&DNA2_BUF_SE)
 		return buf.dna.SetSEState(real_block,on)
@@ -58,7 +58,7 @@
 	else
 		return buf.dna.GetUIValue(real_block)
 
-/obj/item/dnainjector/proc/SetValue(var/val,selblock=0)
+/obj/item/dnainjector/proc/SetValue(val,selblock=0)
 	var/real_block=GetRealBlock(selblock)
 	if(buf.types&DNA2_BUF_SE)
 		return buf.dna.SetSEValue(real_block,val)
@@ -146,7 +146,7 @@
 
 // Traitgenes Injectors are randomized now due to no hardcoded genes. Split into good or bad, and then versions that specify what they do on the label.
 // Otherwise scroll down further for how to make unique injectors
-/obj/item/dnainjector/proc/pick_block(var/datum/gene/trait/G, var/labeled, var/allow_disable, force_disable = FALSE)
+/obj/item/dnainjector/proc/pick_block(var/datum/gene/trait/G, var/labeled, allow_disable, force_disable = FALSE)
 	if(G)
 		block = G.block
 		datatype = DNA2_BUF_SE

@@ -225,7 +225,7 @@
 		return pick("Well.. No one is around you anymore...","Well.. You're alone now...","You suddenly feel alone...")
 	. = ..()
 
-/datum/component/crowd_detection/lonely/calm_discomfort(var/amount = 4, message)
+/datum/component/crowd_detection/lonely/calm_discomfort(amount = 4, message)
 	if(!message && !get_calm())
 		message = span_infoplain("The nearby company calms you down...")
 	. = ..(amount, message)

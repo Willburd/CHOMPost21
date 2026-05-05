@@ -115,7 +115,7 @@ GLOBAL_LIST_INIT(flooring_types, populate_flooring_types())
 /datum/decl/flooring/proc/get_plating_type(turf/T)
 	return plating_type
 
-/datum/decl/flooring/proc/get_flooring_overlay(var/cache_key, var/icon_base, var/icon_dir = 0, layer = BUILTIN_DECAL_LAYER)
+/datum/decl/flooring/proc/get_flooring_overlay(var/cache_key, var/icon_base, icon_dir = 0, layer = BUILTIN_DECAL_LAYER)
 	if(!LAZYACCESS(flooring_cache, cache_key))
 		var/image/I = image(icon = icon, icon_state = icon_base, dir = icon_dir)
 		I.layer = layer

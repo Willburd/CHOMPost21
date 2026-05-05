@@ -34,7 +34,7 @@ GLOBAL_LIST_INIT(alphabet_upper, list("A","B","C","D","E","F","G","H","I","J","K
 		return html_encode(txt)
 
 //Simply removes < and > and limits the length of the message
-/proc/strip_html_simple(var/t,limit=MAX_MESSAGE_LEN)
+/proc/strip_html_simple(t,limit=MAX_MESSAGE_LEN)
 	var/list/strip_chars = list("<",">")
 	t = copytext(t,1,limit)
 	for(var/char in strip_chars)
@@ -46,11 +46,11 @@ GLOBAL_LIST_INIT(alphabet_upper, list("A","B","C","D","E","F","G","H","I","J","K
 
 //Runs byond's sanitization proc along-side strip_html_simple
 //I believe strip_html_simple() is required to run first to prevent '<' from displaying as '&lt;' that html_encode() would cause
-/proc/adminscrub(var/t,limit=MAX_MESSAGE_LEN)
+/proc/adminscrub(t,limit=MAX_MESSAGE_LEN)
 	return copytext((html_encode(strip_html_simple(t))),1,limit)
 
 //Used for preprocessing entered text
-/proc/sanitize(var/input, var/max_length = MAX_MESSAGE_LEN, var/encode = 1, var/trim = 1, extra = 1)
+/proc/sanitize(var/input, var/max_length = MAX_MESSAGE_LEN, var/encode = 1, trim = 1, extra = 1)
 	if(!input)
 		return
 
@@ -84,11 +84,11 @@ GLOBAL_LIST_INIT(alphabet_upper, list("A","B","C","D","E","F","G","H","I","J","K
 //Best used for sanitize object names, window titles.
 //If you have a problem with sanitize() in chat, when quotes and >, < are displayed as html entites -
 //this is a problem of double-encode(when & becomes &amp;), use sanitize() with encode=0, but not the sanitizeSafe()!
-/proc/sanitizeSafe(var/input, var/max_length = MAX_MESSAGE_LEN, var/encode = 1, var/trim = 1, extra = 1)
+/proc/sanitizeSafe(var/input, var/max_length = MAX_MESSAGE_LEN, var/encode = 1, trim = 1, extra = 1)
 	return sanitize(replace_characters(input, list(">"=" ","<"=" ", "\""="'")), max_length, encode, trim, extra)
 
 //Filters out undesirable characters from names
-/proc/sanitizeName(var/input, var/max_length = MAX_NAME_LEN, allow_numbers = 0)
+/proc/sanitizeName(var/input, max_length = MAX_NAME_LEN, allow_numbers = 0)
 	if(!input || length(input) > max_length)
 		return //Rejects the input if it is null or if it is longer then the max length allowed
 
@@ -179,7 +179,7 @@ GLOBAL_LIST_INIT(alphabet_upper, list("A","B","C","D","E","F","G","H","I","J","K
 
 
 //Old variant. Haven't dared to replace in some places.
-/proc/sanitize_old(var/t,list/repl_chars = list("\n"="#","\t"="#"))
+/proc/sanitize_old(t,list/repl_chars = list("\n"="#","\t"="#"))
 	return html_encode(replace_characters(t,repl_chars))
 
 
@@ -231,7 +231,7 @@ GLOBAL_LIST_INIT(alphabet_upper, list("A","B","C","D","E","F","G","H","I","J","K
 /*
  * Text modification
  */
-/proc/replace_characters(var/t,list/repl_chars)
+/proc/replace_characters(t,list/repl_chars)
 	for(var/char in repl_chars)
 		t = replacetext(t, char, repl_chars[char])
 	return t
@@ -308,7 +308,7 @@ GLOBAL_LIST_INIT(alphabet_upper, list("A","B","C","D","E","F","G","H","I","J","K
 //This proc fills in all spaces with the "replace" var (* by default) with whatever
 //is in the other string at the same spot (assuming it is not a replace char).
 //This is used for fingerprints
-/proc/stringmerge(var/text,compare,replace = "*")
+/proc/stringmerge(text,compare,replace = "*")
 	var/newtext = text
 	if(length(text) != length(compare))
 		return 0
@@ -346,7 +346,7 @@ GLOBAL_LIST_INIT(alphabet_upper, list("A","B","C","D","E","F","G","H","I","J","K
 
 //Used in preferences' SetFlavorText and human's set_flavor verb
 //Previews a string of len or less length
-/proc/TextPreview(var/string,len=40)
+/proc/TextPreview(string,len=40)
 	if(length(string) <= len)
 		if(!length(string))
 			return "\[...\]"
@@ -356,7 +356,7 @@ GLOBAL_LIST_INIT(alphabet_upper, list("A","B","C","D","E","F","G","H","I","J","K
 		return "[copytext_preserve_html(string, 1, len - 3)]..."
 
 //alternative copytext() for encoded text, doesn't break html entities (&#34; and other)
-/proc/copytext_preserve_html(var/text, var/first, last)
+/proc/copytext_preserve_html(var/text, first, last)
 	return html_encode(copytext(html_decode(text), first, last))
 
 //For generating neat chat tag-images
@@ -365,7 +365,7 @@ GLOBAL_LIST_INIT(alphabet_upper, list("A","B","C","D","E","F","G","H","I","J","K
 GLOBAL_VAR_INIT(text_tag_icons, 'icons/chattags.dmi')
 GLOBAL_LIST_EMPTY(text_tag_cache)
 
-/proc/create_text_tag(var/tagname, var/tagdesc = tagname, client/C = null)
+/proc/create_text_tag(var/tagname, tagdesc = tagname, client/C = null)
 	if(!(C && C.prefs?.read_preference(/datum/preference/toggle/chat_tags)))
 		return tagdesc
 	if(!GLOB.text_tag_cache[tagname])
@@ -375,7 +375,7 @@ GLOBAL_LIST_EMPTY(text_tag_cache)
 		return "<IMG src='\ref[GLOB.text_tag_icons]' class='text_tag' iconstate='[tagname]'" + (tagdesc ? " alt='[tagdesc]'" : "") + ">"
 	return GLOB.text_tag_cache[tagname]
 
-/proc/create_text_tag_old(var/tagname, var/tagdesc = tagname, client/C = null)
+/proc/create_text_tag_old(var/tagname, tagdesc = tagname, client/C = null)
 	if(!(C && C.prefs?.read_preference(/datum/preference/toggle/chat_tags)))
 		return tagdesc
 	return "<IMG src='\ref[GLOB.text_tag_icons]' class='text_tag' iconstate='[tagname]'" + (tagdesc ? " alt='[tagdesc]'" : "") + ">"

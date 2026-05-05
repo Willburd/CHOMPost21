@@ -15,7 +15,7 @@ GLOBAL_VAR_INIT(client_record_update_lock, FALSE)
 	return null
 
 
-/proc/client_update_record(var/obj/machinery/computer/COM, user)
+/proc/client_update_record(obj/machinery/computer/COM, user)
 	if(!COM || QDELETED(COM))
 		return "Invalid console"
 

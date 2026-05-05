@@ -31,7 +31,7 @@
 		return FALSE
 	return TRUE
 
-/obj/item/megaphone/proc/do_broadcast(var/mob/living/user, message)
+/obj/item/megaphone/proc/do_broadcast(mob/living/user, message)
 	if(emagged)
 		if(insults)
 			var/insult = pick(insultmsg)
@@ -57,7 +57,7 @@
 	spamcheck = world.time + 20
 	do_broadcast(user, message)
 
-/obj/item/megaphone/emag_act(var/remaining_charges, mob/user)
+/obj/item/megaphone/emag_act(remaining_charges, mob/user)
 	if(!emagged)
 		to_chat(user, span_warning("You overload [src]'s voice synthesizer."))
 		emagged = TRUE
@@ -78,7 +78,7 @@
 
 	insultmsg = list("HONK?!", "HONK!", "HOOOOOOOONK!", "...!", "HUNK.", "Honk?")
 
-/obj/item/megaphone/super/emag_act(var/remaining_charges, mob/user)
+/obj/item/megaphone/super/emag_act(remaining_charges, mob/user)
 	..()
 	if(emagged)
 		if(!(11 in volume_options))
@@ -135,7 +135,7 @@
 	if(new_color && Adjacent(user))
 		broadcast_color = new_color
 
-/obj/item/megaphone/super/do_broadcast(var/mob/living/user, message)
+/obj/item/megaphone/super/do_broadcast(mob/living/user, message)
 	if(emagged)
 		if(insults)
 			var/insult = pick(insultmsg)

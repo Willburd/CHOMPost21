@@ -123,7 +123,7 @@
 	if(mytape && recording)
 		mytape.record_noise("[strip_html_properly(recordedtext)]")
 
-/obj/item/taperecorder/emag_act(var/remaining_charges, mob/user)
+/obj/item/taperecorder/emag_act(remaining_charges, mob/user)
 	if(emagged == 0)
 		emagged = 1
 		recording = 0

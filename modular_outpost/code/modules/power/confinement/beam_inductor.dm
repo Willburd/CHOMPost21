@@ -33,7 +33,7 @@
 		return null
 	return C.powernet
 
-/obj/structure/confinement_beam_generator/inductor/proc/get_network_power(var/datum/powernet/draw_network, draw_rate)
+/obj/structure/confinement_beam_generator/inductor/proc/get_network_power(datum/powernet/draw_network, draw_rate)
 	SHOULD_NOT_OVERRIDE(TRUE)
 	if(!draw_network)
 		return 0

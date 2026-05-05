@@ -140,12 +140,12 @@
 	catalogue_data = list(/datum/category_item/catalogue/fauna/opossum)
 	meat_amount = 2
 
-/mob/living/simple_mob/animal/passive/opossum/adjustBruteLoss(var/amount,include_robo)
+/mob/living/simple_mob/animal/passive/opossum/adjustBruteLoss(amount,include_robo)
 	. = ..()
 	if(amount >= 3)
 		respond_to_damage()
 
-/mob/living/simple_mob/animal/passive/opossum/adjustFireLoss(var/amount,include_robo)
+/mob/living/simple_mob/animal/passive/opossum/adjustFireLoss(amount,include_robo)
 	. = ..()
 	if(amount >= 3)
 		respond_to_damage()

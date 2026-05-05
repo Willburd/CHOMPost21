@@ -378,7 +378,7 @@
 		return 1
 	return 0
 
-/obj/machinery/telecomms/proc/set_temp(var/text, color = "average")
+/obj/machinery/telecomms/proc/set_temp(text, color = "average")
 	temp = list("color" = color, "text" = text)
 
 #undef TELECOMM_Z

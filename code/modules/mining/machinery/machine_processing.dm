@@ -39,7 +39,7 @@
 		return
 	tgui_interact(user)
 
-/obj/machinery/mineral/processing_unit_console/attackby(var/obj/item/I, mob/user)
+/obj/machinery/mineral/processing_unit_console/attackby(obj/item/I, mob/user)
 	if(istype(I, /obj/item/card/id))
 		if(!powered())
 			return

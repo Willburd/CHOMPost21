@@ -162,7 +162,7 @@
 // Randomizes and spawns the smoke effect.
 // Also handles deleting the smoke once the effect is finished.
 //------------------------------------------
-/datum/effect/effect/system/smoke_spread/chem/proc/spawnSmoke(var/turf/T, var/icon/I, var/dist = 1, obj/effect/effect/smoke/chem/passed_smoke)
+/datum/effect/effect/system/smoke_spread/chem/proc/spawnSmoke(var/turf/T, var/icon/I, dist = 1, obj/effect/effect/smoke/chem/passed_smoke)
 
 	var/obj/effect/effect/smoke/chem/smoke
 	if(passed_smoke)
@@ -183,12 +183,12 @@
 	var/lifespan = 150 + rand(0, 20)
 	addtimer(CALLBACK(src, PROC_REF(fadeOut), smoke), lifespan)
 
-/datum/effect/effect/system/smoke_spread/chem/spores/spawnSmoke(var/turf/T, var/icon/I, dist = 1)
+/datum/effect/effect/system/smoke_spread/chem/spores/spawnSmoke(var/turf/T, icon/I, dist = 1)
 	var/obj/effect/effect/smoke/chem/spores = new /obj/effect/effect/smoke/chem(location)
 	spores.name = "cloud of [seed.seed_name] [seed.seed_noun]"
 	..(T, I, dist, spores)
 
-/datum/effect/effect/system/smoke_spread/chem/proc/fadeOut(var/atom/A, frames = 16) // Fades out the smoke smoothly using it's alpha variable.
+/datum/effect/effect/system/smoke_spread/chem/proc/fadeOut(atom/A, frames = 16) // Fades out the smoke smoothly using it's alpha variable.
 	A.set_opacity(0)		// lighting and view range updates
 	if(A.alpha == 0) //Handle already transparent case
 		qdel(A)

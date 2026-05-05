@@ -11,7 +11,7 @@
 	qdel(src)
 	return
 
-/obj/effect/weaversilk/attackby(var/obj/item/W, mob/user)
+/obj/effect/weaversilk/attackby(obj/item/W, mob/user)
 	user.setClickCooldown(user.get_attack_speed(W))
 
 	if(W.force)

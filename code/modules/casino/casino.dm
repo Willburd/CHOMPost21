@@ -243,7 +243,7 @@
 		. += " with [trapped.name] trapped within"
 	return
 
-/obj/item/roulette_ball/hollow/attackby(var/obj/item/W, mob/user)
+/obj/item/roulette_ball/hollow/attackby(obj/item/W, mob/user)
 	if(trapped)
 		to_chat(user, span_notice("This ball already has something trapped in it!"))
 		return
@@ -778,7 +778,7 @@
 	sentient_prize.tf_into(newitem, TRUE, item_name)
 	return newitem
 
-/obj/machinery/casinosentientprize_handler/proc/insert_chip(var/obj/item/spacecasinocash/cashmoney, mob/user, buystate)
+/obj/machinery/casinosentientprize_handler/proc/insert_chip(obj/item/spacecasinocash/cashmoney, mob/user, buystate)
 	if(cashmoney.worth < casinosentientprize_price)
 		to_chat(user,span_notice("You dont have enough chips to pay for the sentient prize!"))
 		return

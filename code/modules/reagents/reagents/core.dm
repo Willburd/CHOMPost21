@@ -50,7 +50,7 @@
 		var/obj/effect/decal/cleanable/blood/B = blood_splatter(T, src, 1)
 		B.add_blooddna(null,null)
 
-/datum/reagent/blood/affect_ingest(var/mob/living/carbon/M, var/alien, removed)
+/datum/reagent/blood/affect_ingest(var/mob/living/carbon/M, alien, removed)
 
 	var/effective_dose = dose
 	if(issmall(M)) effective_dose *= 2
@@ -90,7 +90,7 @@
 					continue
 				D.try_infect(M)
 
-/datum/reagent/blood/affect_touch(var/mob/living/carbon/M, var/alien, removed)
+/datum/reagent/blood/affect_touch(var/mob/living/carbon/M, alien, removed)
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
 		if(H.isSynthetic())
@@ -155,7 +155,7 @@
 
 		data["viruses"] = preserve
 
-/datum/reagent/blood/affect_blood(var/mob/living/carbon/M, var/alien, removed)
+/datum/reagent/blood/affect_blood(var/mob/living/carbon/M, alien, removed)
 	if(alien == IS_SLIME)	//They don't have blood, so it seems weird that they would instantly 'process' the chemical like another species does.
 		affect_ingest(M, alien, removed)
 		return
@@ -234,7 +234,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_RARE
 	industrial_use = REFINERYEXPORT_REASON_MEDSCI
 
-/datum/reagent/antibodies/affect_blood(var/mob/living/carbon/M, var/alien, removed)
+/datum/reagent/antibodies/affect_blood(var/mob/living/carbon/M, alien, removed)
 	if(src.data)
 		M.antibodies |= src.data[REAGENT_ID_ANTIBODIES]
 	..()
@@ -287,7 +287,7 @@
 
 	T.apply_fire_protection() // CHOMPAdd - Apply fire protection so fires can actually be put out.
 
-/datum/reagent/water/touch_obj(var/obj/O, amount)
+/datum/reagent/water/touch_obj(obj/O, amount)
 	..()
 	if(istype(O, /obj/item/reagent_containers/food/snacks/monkeycube))
 		var/obj/item/reagent_containers/food/snacks/monkeycube/cube = O
@@ -299,7 +299,7 @@
 	else
 		O.water_act(amount / 5)
 
-/datum/reagent/water/touch_mob(var/mob/living/L, amount)
+/datum/reagent/water/touch_mob(mob/living/L, amount)
 	..()
 	if(istype(L))
 		// First, kill slimes.
@@ -325,19 +325,19 @@
 						H.visible_message(span_notice("[H]\'s [S.name] is put out."))
 
 //YWedit start, readds promethean damage that was removed by vorestation.
-/datum/reagent/water/affect_blood(var/mob/living/carbon/M, var/alien, removed)
+/datum/reagent/water/affect_blood(var/mob/living/carbon/M, alien, removed)
 	if(alien == IS_SLIME)
 		M.adjustToxLoss(6 * removed)
 	else
 		..()
 
-/datum/reagent/water/affect_ingest(var/mob/living/carbon/M, var/alien, removed)
+/datum/reagent/water/affect_ingest(var/mob/living/carbon/M, alien, removed)
 	if(alien == IS_SLIME)
 		M.adjustToxLoss(6 * removed)
 	else
 		..()
 
-/datum/reagent/water/affect_touch(var/mob/living/carbon/M, var/alien, removed)
+/datum/reagent/water/affect_touch(var/mob/living/carbon/M, alien, removed)
 	if(alien == IS_SLIME && prob(10))
 		M.visible_message(span_warning("[M]'s flesh sizzles where the water touches it!"), span_danger("Your flesh burns in the water!"))
 	..()
@@ -362,17 +362,17 @@
 	industrial_use = REFINERYEXPORT_REASON_RAW
 	coolant_modifier = 0.15
 
-/datum/reagent/fuel/touch_turf(var/turf/T, amount)
+/datum/reagent/fuel/touch_turf(turf/T, amount)
 	..()
 	new /obj/effect/decal/cleanable/liquid_fuel(T, amount, FALSE)
 	remove_self(amount)
 	return
 
-/datum/reagent/fuel/affect_blood(var/mob/living/carbon/M, var/alien, removed)
+/datum/reagent/fuel/affect_blood(var/mob/living/carbon/M, alien, removed)
 	if(issmall(M)) removed *= 2
 	M.adjustToxLoss(4 * removed)
 
-/datum/reagent/fuel/touch_mob(var/mob/living/L, amount)
+/datum/reagent/fuel/touch_mob(mob/living/L, amount)
 	..()
 	if(istype(L))
 		L.adjust_fire_stacks(amount / 10) // Splashing people with welding fuel to make them easy to ignite!

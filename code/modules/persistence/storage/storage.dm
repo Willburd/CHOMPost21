@@ -55,7 +55,7 @@
 /datum/persistent/storage/proc/find_specific_instance(turf/T)
 	return locate(target_type) in T
 
-/datum/persistent/storage/CheckTurfContents(var/turf/T, list/token)
+/datum/persistent/storage/CheckTurfContents(turf/T, list/token)
 	return istype(find_specific_instance(T), target_type)
 
 /datum/persistent/storage/proc/generate_items(list/L)
@@ -73,7 +73,7 @@
 /datum/persistent/storage/proc/create_item(path)
 	return new path()
 
-/datum/persistent/storage/GetAdminDataStringFor(var/thing, var/can_modify, mob/user)
+/datum/persistent/storage/GetAdminDataStringFor(var/thing, can_modify, mob/user)
 	var/atom/T = thing
 	if(!istype(T))
 		return "<td><Missing entry><td>"

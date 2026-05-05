@@ -51,7 +51,7 @@
 	M.dna.SetSEState(T.block, TRUE)
 
 // Scramble UI or SE.
-/proc/scramble(var/UI, var/mob/M, prob)
+/proc/scramble(var/UI, mob/M, prob)
 	if(!M || !(M.dna))	return
 	// Traitgenes edit begin - NO_DNA and Synthetics cannot be mutated
 	if(M.isSynthetic())
@@ -163,5 +163,5 @@
 	species.post_spawn_special(src)
 
 // Used below, simple injection modifier.
-/proc/probinj(var/pr, inj)
+/proc/probinj(pr, inj)
 	return prob(pr+inj*pr)

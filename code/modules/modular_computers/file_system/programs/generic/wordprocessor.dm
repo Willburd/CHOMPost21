@@ -52,7 +52,7 @@
 	is_edited = 0
 	return TRUE
 
-/datum/computer_file/program/wordprocessor/proc/create_file(var/newname, data = "")
+/datum/computer_file/program/wordprocessor/proc/create_file(newname, data = "")
 	if(!newname)
 		return
 	var/obj/item/computer_hardware/hard_drive/HDD = computer.hard_drive

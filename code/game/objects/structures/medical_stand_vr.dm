@@ -252,7 +252,7 @@
 			breather = C
 			return TRUE
 
-/obj/structure/medical_stand/proc/can_apply_to_target(var/mob/living/carbon/human/target, mob/user)
+/obj/structure/medical_stand/proc/can_apply_to_target(mob/living/carbon/human/target, mob/user)
 	if(!user)
 		user = target
 	// Check target validity
@@ -289,7 +289,7 @@
 		return
 	return 1
 
-/obj/structure/medical_stand/attackby(var/obj/item/W, mob/user)
+/obj/structure/medical_stand/attackby(obj/item/W, mob/user)
 	if(istype (W, /obj/item/tool))
 		if (valve_opened)
 			to_chat(user, span_warning("Close the valve first."))

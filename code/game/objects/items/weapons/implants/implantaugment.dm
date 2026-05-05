@@ -95,7 +95,7 @@
 			qdel(NewOrgan)
 			to_chat(H, span_warning("You feel a pinching sensation in your [part]. The implant remains."))
 
-/obj/item/implant/organ/limbaugment/proc/setup_augment_slots(var/mob/living/carbon/human/H, obj/item/organ/internal/augment/armmounted/I)
+/obj/item/implant/organ/limbaugment/proc/setup_augment_slots(mob/living/carbon/human/H, obj/item/organ/internal/augment/armmounted/I)
 	var/list/Choices = possible_targets.Copy()
 
 	for(var/targ in possible_targets)

@@ -17,12 +17,12 @@
 	if(!battery)
 		battery = new battery_type(src)
 
-/obj/item/clothing/gloves/ring/buzzer/Touch(var/atom/A, proximity)
+/obj/item/clothing/gloves/ring/buzzer/Touch(atom/A, proximity)
 	if(proximity && istype(usr, /mob/living/carbon/human))
 		return zap(usr, A, proximity)
 	return 0
 
-/obj/item/clothing/gloves/ring/buzzer/proc/zap(var/mob/living/carbon/human/user, var/atom/movable/target, proximity)
+/obj/item/clothing/gloves/ring/buzzer/proc/zap(var/mob/living/carbon/human/user, atom/movable/target, proximity)
 	. = FALSE
 	if(user.a_intent == I_HURT && battery.percent() >= 50)
 		if(isliving(target))

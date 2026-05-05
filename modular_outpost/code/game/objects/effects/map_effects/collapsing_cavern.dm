@@ -45,7 +45,7 @@ GLOBAL_LIST_EMPTY(collapsing_cave_effects)
 /obj/effect/map_effect/interval/collapsing_cavern/ex_act()
 	collapse()
 
-/obj/effect/map_effect/interval/collapsing_cavern/proc/breaking_turf(var/turf/T,turf/under)
+/obj/effect/map_effect/interval/collapsing_cavern/proc/breaking_turf(turf/T,turf/under)
 	if(prob(40))
 		T.visible_message(pick(list("\The [T] creaks...","\The [T] groans...","\The [T] twists under tension...")))
 		if(prob(70))

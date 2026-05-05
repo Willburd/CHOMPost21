@@ -76,7 +76,7 @@ GLOBAL_LIST_EMPTY(limb_icon_cache)
 
 	return res
 
-/obj/item/organ/external/proc/get_icon(var/skeletal, can_apply_transparency = TRUE)
+/obj/item/organ/external/proc/get_icon(skeletal, can_apply_transparency = TRUE)
 	var/digitigrade = 0
 
 	cut_overlays()

@@ -27,7 +27,7 @@
 	required_reagents = list(REAGENT_ID_TITANIUMDIOX = 1, REAGENT_ID_CHLORINE = 4, REAGENT_ID_PHOSPHORUS= 1)
 	result_amount = 0.4
 
-/datum/decl/chemical_reaction/instant/riotsmoke/on_reaction(var/datum/reagents/holder, created_volume)
+/datum/decl/chemical_reaction/instant/riotsmoke/on_reaction(datum/reagents/holder, created_volume)
 	var/location = get_turf(holder.my_atom)
 	var/datum/effect/effect/system/smoke_spread/bad/S = new /datum/effect/effect/system/smoke_spread/bad
 	S.attach(location)

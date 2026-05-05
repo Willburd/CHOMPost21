@@ -644,7 +644,7 @@
 	AM.vis_flags = contents_vis_flags
 	AM.pixel_y = contents_original_pixel_y
 
-/obj/structure/prop/machine/nt_pod/MouseDrop_T(var/atom/movable/AM, mob/user)
+/obj/structure/prop/machine/nt_pod/MouseDrop_T(atom/movable/AM, mob/user)
 	if(contents.len)
 		return
 	if(!ismovable(AM))
@@ -694,7 +694,7 @@
 
 // Old Virology stuff
 
-/obj/structure/prop/machine/nt_pod/proc/delayed_flick(var/obj/effect/overlay/ovrl, var/icon_state, var/flicked, get_out_time)
+/obj/structure/prop/machine/nt_pod/proc/delayed_flick(var/obj/effect/overlay/ovrl, var/icon_state, flicked, get_out_time)
 	ovrl.icon_state = icon_state
 	flick(flicked, ovrl)
 	// GET OUT

@@ -286,7 +286,7 @@
 		playsound(src, 'sound/effects/light_flicker.ogg', 50, 1)
 	addtimer(CALLBACK(src, PROC_REF(do_flicker), amount, flicker_color, original_color, original_on, OL, ++ticker), rand(5,15), TIMER_DELETE_ME)
 
-/obj/item/flashlight/proc/finish_flicker(var/original_color, var/original_on, datum/component/overlay_lighting/OL)
+/obj/item/flashlight/proc/finish_flicker(var/original_color, original_on, datum/component/overlay_lighting/OL)
 	set_light_color(original_color)
 	OL.directional_atom?.color = original_color
 	on = original_on

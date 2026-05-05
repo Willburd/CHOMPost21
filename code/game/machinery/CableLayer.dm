@@ -24,7 +24,7 @@
 	user.visible_message("\The [user] [!on?"dea":"a"]ctivates \the [src].", "You switch [src] [on? "on" : "off"]")
 	return
 
-/obj/machinery/cablelayer/attackby(var/obj/item/O as obj, mob/user as mob)
+/obj/machinery/cablelayer/attackby(obj/item/O as obj, mob/user as mob)
 	if(istype(O, /obj/item/stack/cable_coil))
 
 		var/result = load_cable(O)
@@ -86,7 +86,7 @@
 			T.make_plating(!(T.broken || T.burnt))
 	return new_turf.is_plating()
 
-/obj/machinery/cablelayer/proc/layCable(var/turf/new_turf,M_Dir)
+/obj/machinery/cablelayer/proc/layCable(turf/new_turf,M_Dir)
 	if(!on)
 		return reset()
 	else

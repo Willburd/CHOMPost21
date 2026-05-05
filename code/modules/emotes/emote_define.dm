@@ -49,7 +49,7 @@
 	if(key)
 		LAZYSET(GLOB.emotes_by_key, key, src)
 
-/datum/decl/emote/proc/get_emote_message_1p(var/atom/user, var/atom/target, extra_params)
+/datum/decl/emote/proc/get_emote_message_1p(var/atom/user, atom/target, extra_params)
 	if(target)
 		if(emote_message_synthetic_1p_target && check_synthetic(user))
 			return emote_message_synthetic_1p_target
@@ -58,7 +58,7 @@
 		return emote_message_synthetic_1p
 	return emote_message_1p
 
-/datum/decl/emote/proc/get_emote_message_3p(var/atom/user, var/atom/target, extra_params)
+/datum/decl/emote/proc/get_emote_message_3p(var/atom/user, atom/target, extra_params)
 	if(target)
 		if(emote_message_synthetic_3p_target && check_synthetic(user))
 			return emote_message_synthetic_3p_target
@@ -79,7 +79,7 @@
 			"vol" =   emote_volume
 		)
 
-/datum/decl/emote/proc/do_emote(var/atom/user, extra_params)
+/datum/decl/emote/proc/do_emote(atom/user, extra_params)
 	if(ismob(user) && check_restraints)
 		var/mob/M = user
 		if(M.transforming) //Transforming acts as a stasis.
@@ -149,7 +149,7 @@
 	do_sound(user)
 	SEND_GLOBAL_SIGNAL(COMSIG_GLOB_EMOTE_PERFORMED, user, extra_params)
 
-/datum/decl/emote/proc/replace_target_tokens(var/msg, atom/target)
+/datum/decl/emote/proc/replace_target_tokens(msg, atom/target)
 	. = msg
 	if(istype(target))
 		. = replacetext(., "TARGET_THEM",  target.p_them())
@@ -157,7 +157,7 @@
 		. = replacetext(., "TARGET_SELF",  target.p_themselves())
 		. = replacetext(., "TARGET",       span_bold("\the [target]"))
 
-/datum/decl/emote/proc/replace_user_tokens(var/msg, atom/user)
+/datum/decl/emote/proc/replace_user_tokens(msg, atom/user)
 	. = msg
 	if(istype(user))
 		. = replacetext(., "USER_THEM",  user.p_them())
@@ -170,7 +170,7 @@
 		return emote_message_radio_synthetic
 	return emote_message_radio
 
-/datum/decl/emote/proc/do_extra(var/atom/user, atom/target)
+/datum/decl/emote/proc/do_extra(atom/user, atom/target)
 	return
 
 /datum/decl/emote/proc/do_sound(atom/user)

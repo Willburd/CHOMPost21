@@ -151,7 +151,7 @@
 	color = newdata
 	return
 
-/datum/reagent/paint/mix_data(var/newdata, newamount)
+/datum/reagent/paint/mix_data(newdata, newamount)
 	var/list/colors = list(0, 0, 0, 0)
 	var/tot_w = 0
 
@@ -198,10 +198,10 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = "how did you get this?"
 
-/datum/reagent/adminordrazine/affect_touch(var/mob/living/carbon/M, var/alien, removed)
+/datum/reagent/adminordrazine/affect_touch(var/mob/living/carbon/M, alien, removed)
 	affect_blood(M, alien, removed)
 
-/datum/reagent/adminordrazine/affect_blood(var/mob/living/carbon/M, var/alien, removed)
+/datum/reagent/adminordrazine/affect_blood(var/mob/living/carbon/M, alien, removed)
 	M.heal_organ_damage(40,40)
 	M.adjustCloneLoss(-40)
 	M.adjustToxLoss(-40)
@@ -296,10 +296,10 @@
 	supply_conversion_value = 2 SHEET_TO_REAGENT_EQUIVILENT // has sheet value
 	industrial_use = REFINERYEXPORT_REASON_PRECURSOR
 
-/datum/reagent/uranium/affect_touch(var/mob/living/carbon/M, var/alien, removed)
+/datum/reagent/uranium/affect_touch(var/mob/living/carbon/M, alien, removed)
 	affect_ingest(M, alien, removed)
 
-/datum/reagent/uranium/affect_blood(var/mob/living/carbon/M, var/alien, removed)
+/datum/reagent/uranium/affect_blood(var/mob/living/carbon/M, alien, removed)
 	M.apply_effect(5 * removed, IRRADIATE, 0)
 
 /datum/reagent/uranium/touch_turf(turf/T)
@@ -391,7 +391,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_MEDSCI
 
-/datum/reagent/adrenaline/affect_blood(var/mob/living/carbon/M, var/alien, removed)
+/datum/reagent/adrenaline/affect_blood(var/mob/living/carbon/M, alien, removed)
 	if(alien == IS_DIONA)
 		return
 	M.SetParalysis(0)
@@ -417,7 +417,7 @@
 	coolant_modifier = 1 // It's water
 	var/failed_message = FALSE
 
-/datum/reagent/water/holywater/affect_ingest(var/mob/living/carbon/M, var/alien, removed)
+/datum/reagent/water/holywater/affect_ingest(var/mob/living/carbon/M, alien, removed)
 	..()
 	if(ishuman(M)) // Any location
 		if(M.mind && GLOB.cult.is_antagonist(M.mind) && prob(10))
@@ -437,7 +437,7 @@
 				to_chat(M, span_notice("The power of the holy water courses through you, but seems to have failed to cure your ailments. Perhaps a larger dose is needed?"))
 				failed_message = TRUE
 
-/datum/reagent/water/holywater/affect_blood(var/mob/living/carbon/M, var/alien, removed)
+/datum/reagent/water/holywater/affect_blood(var/mob/living/carbon/M, alien, removed)
 	..()
 	if(ishuman(M)) // Any location
 		if(M.mind && GLOB.cult.is_antagonist(M.mind) && prob(5))
@@ -544,12 +544,12 @@
 			remove_self(5)
 	return
 
-/datum/reagent/thermite/touch_mob(var/mob/living/L, amount)
+/datum/reagent/thermite/touch_mob(mob/living/L, amount)
 	..()
 	if(istype(L))
 		L.adjust_fire_stacks(amount / 5)
 
-/datum/reagent/thermite/affect_blood(var/mob/living/carbon/M, var/alien, removed)
+/datum/reagent/thermite/affect_blood(var/mob/living/carbon/M, alien, removed)
 	M.adjustFireLoss(3 * removed)
 
 /datum/reagent/space_cleaner
@@ -598,7 +598,7 @@
 
 	T.apply_fire_protection() // CHOMPAdd - Apply fire protection
 
-/datum/reagent/space_cleaner/affect_touch(var/mob/living/carbon/M, var/alien, removed)
+/datum/reagent/space_cleaner/affect_touch(var/mob/living/carbon/M, alien, removed)
 	if(M.r_hand)
 		M.r_hand.wash(CLEAN_SCRUB)
 	if(M.l_hand)
@@ -627,7 +627,7 @@
 			return
 	M.wash(CLEAN_SCRUB)
 
-/datum/reagent/space_cleaner/affect_ingest(var/mob/living/carbon/M, var/alien, removed)
+/datum/reagent/space_cleaner/affect_ingest(var/mob/living/carbon/M, alien, removed)
 	if(alien == IS_SLIME)
 		M.adjustToxLoss(6 * removed)
 	else
@@ -635,7 +635,7 @@
 		if(prob(5))
 			M.vomit()
 
-/datum/reagent/space_cleaner/touch_mob(var/mob/living/L, amount)
+/datum/reagent/space_cleaner/touch_mob(mob/living/L, amount)
 	..()
 	if(ishuman(L))
 		var/mob/living/carbon/human/H = L
@@ -721,7 +721,7 @@
 	industrial_use = REFINERYEXPORT_REASON_INDUSTRY
 	coolant_modifier = 2 // In the name
 
-/datum/reagent/coolant/affect_blood(var/mob/living/carbon/M, var/alien, removed)
+/datum/reagent/coolant/affect_blood(var/mob/living/carbon/M, alien, removed)
 	if(M.isSynthetic() && ishuman(M))
 		var/mob/living/carbon/human/H = M
 
@@ -816,7 +816,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_NO
 	industrial_use = REFINERYEXPORT_REASON_BIOHAZARD
 
-/datum/reagent/defective_nanites/affect_blood(var/mob/living/carbon/M, var/alien, removed)
+/datum/reagent/defective_nanites/affect_blood(var/mob/living/carbon/M, alien, removed)
 	M.take_organ_damage(2 * removed, 2 * removed)
 	M.adjustOxyLoss(4 * removed)
 	M.adjustToxLoss(2 * removed)

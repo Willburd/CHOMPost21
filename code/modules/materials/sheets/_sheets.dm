@@ -78,7 +78,7 @@
 		return
 	update_strings()
 
-/obj/item/stack/material/transfer_to(obj/item/stack/S, var/tamount=null, type_verified)
+/obj/item/stack/material/transfer_to(obj/item/stack/S, tamount=null, type_verified)
 	var/obj/item/stack/material/M = S
 	if(!istype(M) || material.name != M.material.name)
 		return 0
@@ -96,7 +96,7 @@
 	if(!material.build_windows(user, src))
 		tgui_interact(user)
 
-/obj/item/stack/material/attackby(var/obj/item/W, mob/user)
+/obj/item/stack/material/attackby(obj/item/W, mob/user)
 	if(istype(W,/obj/item/stack/cable_coil))
 		material.build_wired_product(user, W, src)
 		return

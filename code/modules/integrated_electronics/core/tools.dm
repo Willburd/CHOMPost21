@@ -224,7 +224,7 @@
 	update_icon()
 
 
-/obj/item/multitool/proc/unwire(var/datum/integrated_io/io1, datum/integrated_io/io2, mob/user)
+/obj/item/multitool/proc/unwire(datum/integrated_io/io1, datum/integrated_io/io2, mob/user)
 	if(!io1.linked.len || !io2.linked.len)
 		to_chat(user, span_warning("There is nothing connected to the data channel."))
 		return

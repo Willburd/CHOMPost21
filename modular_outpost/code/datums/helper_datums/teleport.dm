@@ -1,4 +1,4 @@
-/proc/bluespace_bag_malfunction( var/mob/user, var/obj/item/bag_holding, obj/item/stored_item )
+/proc/bluespace_bag_malfunction( var/mob/user, obj/item/bag_holding, obj/item/stored_item )
 	if(prob(10))
 		to_chat(user, span_danger("\The [stored_item] violently explodes as it is inserted into \the [bag_holding]!"))
 		explosion(get_turf(stored_item),1,1,2,3)

@@ -281,7 +281,7 @@
 	return 42
 
 //If atom stands under open space, it can prevent fall, or not
-/atom/proc/can_prevent_fall(var/atom/movable/mover, turf/coming_from)
+/atom/proc/can_prevent_fall(atom/movable/mover, turf/coming_from)
 	return (!CanPass(mover, coming_from))
 
 ////////////////////////////
@@ -479,7 +479,7 @@
 		return species.fall_impact_special(src, A)
 	return FALSE
 
-/atom/movable/proc/find_fall_target(var/turf/oldloc, turf/landing)
+/atom/movable/proc/find_fall_target(turf/oldloc, turf/landing)
 	if(isopenspace(oldloc))
 		oldloc.visible_message(span_notice("\The [src] falls down through \the [oldloc]!"), span_notice("You hear something falling through the air."))
 
@@ -555,14 +555,14 @@
 // If silent is True, the proc won't play sound or give a message.
 // If planetary is True, it's harder to stop the fall damage
 
-/atom/movable/proc/fall_impact(var/atom/hit_atom, var/damage_min = 0, var/damage_max = 10, var/silent = FALSE, planetary = FALSE)
+/atom/movable/proc/fall_impact(var/atom/hit_atom, var/damage_min = 0, var/damage_max = 10, silent = FALSE, planetary = FALSE)
 	if(!silent)
 		visible_message("\The [src] falls from above and slams into \the [hit_atom]!", "You hear something slam into \the [hit_atom].")
 	for(var/atom/movable/A in src.contents)
 		A.fall_impact(hit_atom, damage_min, damage_max, silent = TRUE)
 
 // Take damage from falling and hitting the ground
-/mob/living/fall_impact(var/atom/hit_atom, var/damage_min = 1, var/damage_max = 5, var/silent = FALSE, planetary = FALSE) // Outpost 21 edit(port) - At least 1 damage from falls
+/mob/living/fall_impact(var/atom/hit_atom, var/damage_min = 1, var/damage_max = 5, silent = FALSE, planetary = FALSE) // Outpost 21 edit(port) - At least 1 damage from falls
 	var/turf/landing = get_turf(hit_atom)
 	var/safe_fall = FALSE
 	if(src.softfall || (isanimal(src) && src.mob_size <= MOB_SMALL))
@@ -675,7 +675,7 @@
 	// Then call parent to have us actually fall
 	return ..()
 
-/obj/mecha/fall_impact(var/atom/hit_atom, var/damage_min = 15, var/damage_max = 30, var/silent = FALSE, planetary = FALSE)
+/obj/mecha/fall_impact(var/atom/hit_atom, var/damage_min = 15, var/damage_max = 30, silent = FALSE, planetary = FALSE)
 	// Anything on the same tile as the landing tile is gonna have a bad day.
 	for(var/mob/living/L in hit_atom.contents)
 		L.visible_message(span_danger("\The [src] crushes \the [L] as it lands on them!"))

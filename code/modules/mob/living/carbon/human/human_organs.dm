@@ -193,7 +193,7 @@
 		O.trace_chemicals[A.name] = 100
 
 // Traitgenes Init genes based on the traits currently active
-/mob/living/carbon/human/proc/sync_dna_traits(var/refresh_traits, hide_message = TRUE)
+/mob/living/carbon/human/proc/sync_dna_traits(refresh_traits, hide_message = TRUE)
 	SHOULD_NOT_OVERRIDE(TRUE) //Don't. Even. /Think/. About. It.
 	if(!dna || !species)
 		return

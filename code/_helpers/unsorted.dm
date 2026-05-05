@@ -8,11 +8,11 @@
 #define BIT_TEST_ALL(bitfield, req_mask) ((~(bitfield) & (req_mask)) == 0)
 
 //Returns the middle-most value
-/proc/dd_range(var/low, var/high, num)
+/proc/dd_range(var/low, high, num)
 	return max(low,min(high,num))
 
 //Returns whether or not A is the middle most value
-/proc/InRange(var/A, var/lower, upper)
+/proc/InRange(var/A, lower, upper)
 	if(A < lower) return 0
 	if(A > upper) return 0
 	return 1
@@ -239,7 +239,7 @@ Turf and target are seperate in case you want to teleport some distance from a t
 	return 1
 
 //Ensure the frequency is within bounds of what it should be sending/recieving at
-/proc/sanitize_frequency(var/f, var/low = PUBLIC_LOW_FREQ, high = PUBLIC_HIGH_FREQ)
+/proc/sanitize_frequency(var/f, low = PUBLIC_LOW_FREQ, high = PUBLIC_HIGH_FREQ)
 	f = round(f)
 	f = max(low, f)
 	f = min(high, f)
@@ -260,7 +260,7 @@ Turf and target are seperate in case you want to teleport some distance from a t
 
 //This will update a mob's name, real_name, mind.name, data_core records, pda and id
 //Calling this proc without an oldname will only update the mob and skip updating the pda, id and records ~Carn
-/mob/proc/fully_replace_character_name(var/oldname,newname)
+/mob/proc/fully_replace_character_name(oldname,newname)
 	if(!newname)	return 0
 	real_name = newname
 	name = newname
@@ -304,7 +304,7 @@ Turf and target are seperate in case you want to teleport some distance from a t
 
 //Generalised helper proc for letting mobs rename themselves. Used to be clname() and ainame()
 //Last modified by Carn
-/mob/proc/rename_self(var/role, allow_numbers=0)
+/mob/proc/rename_self(role, allow_numbers=0)
 	spawn(0)
 		var/oldname = real_name
 
@@ -508,7 +508,7 @@ Turf and target are seperate in case you want to teleport some distance from a t
 
 // returns the turf located at the map edge in the specified direction relative to A
 // used for mass driver
-/proc/get_edge_target_turf(var/atom/A, direction)
+/proc/get_edge_target_turf(atom/A, direction)
 
 	var/turf/target = locate(A.x, A.y, A.z)
 	if(!A || !target)
@@ -532,7 +532,7 @@ Turf and target are seperate in case you want to teleport some distance from a t
 // result is bounded to map size
 // note range is non-pythagorean
 // used for disposal system
-/proc/get_ranged_target_turf(var/atom/A, var/direction, range)
+/proc/get_ranged_target_turf(var/atom/A, direction, range)
 
 	var/x = A.x
 	var/y = A.y
@@ -550,7 +550,7 @@ Turf and target are seperate in case you want to teleport some distance from a t
 
 // returns turf relative to A offset in dx and dy tiles
 // bound to map limits
-/proc/get_offset_target_turf(var/atom/A, var/dx, dy)
+/proc/get_offset_target_turf(var/atom/A, dx, dy)
 	var/x = min(world.maxx, max(1, A.x + dx))
 	var/y = min(world.maxy, max(1, A.y + dy))
 	return locate(x,y,A.z)
@@ -566,7 +566,7 @@ Turf and target are seperate in case you want to teleport some distance from a t
 	return sigma*y*sqrt(-2*log(rsq)/rsq)
 
 //returns random gauss number, rounded to 'roundto'
-/proc/GaussRandRound(var/sigma,roundto)
+/proc/GaussRandRound(sigma,roundto)
 	return round(GaussRand(sigma),roundto)
 
 //Will return the contents of an atom recursivly to a depth of 'searchDepth'
@@ -581,7 +581,7 @@ Turf and target are seperate in case you want to teleport some distance from a t
 	return toReturn
 
 //Step-towards method of determining whether one atom can see another. Similar to viewers()
-/proc/can_see(var/atom/source, var/atom/target, length=5) // I couldn't be arsed to do actual raycasting :I This is horribly inaccurate.
+/proc/can_see(var/atom/source, atom/target, length=5) // I couldn't be arsed to do actual raycasting :I This is horribly inaccurate.
 	var/turf/current = get_turf(source)
 	var/turf/target_turf = get_turf(target)
 	var/steps = 0
@@ -610,7 +610,7 @@ Turf and target are seperate in case you want to teleport some distance from a t
 /* //If you uncomment and use this I will assimilate you. -C.L.
 //Takes: Anything that could possibly have variables and a varname to check.
 //Returns: 1 if found, 0 if not.
-/proc/hasvar(var/datum/A, varname)
+/proc/hasvar(datum/A, varname)
 	if(A.vars.Find(lowertext(varname))) return 1
 	else return 0
 */
@@ -688,7 +688,7 @@ Turf and target are seperate in case you want to teleport some distance from a t
 	var/y_pos = null
 	var/z_pos = null
 
-/area/proc/move_contents_to(var/area/A, var/turftoleave=null, direction = null)
+/area/proc/move_contents_to(var/area/A, turftoleave=null, direction = null)
 	//Takes: Area. Optional: turf type to leave behind.
 	//Returns: Nothing.
 	//Notes: Attempts to move the contents of one area to another area.
@@ -813,7 +813,7 @@ Turf and target are seperate in case you want to teleport some distance from a t
 					refined_trg -= B
 					continue moving
 
-/proc/DuplicateObject(obj/original, var/perfectcopy = 0 , sameloc = 0)
+/proc/DuplicateObject(obj/original, perfectcopy = 0 , sameloc = 0)
 	if(!original)
 		return null
 
@@ -833,7 +833,7 @@ Turf and target are seperate in case you want to teleport some distance from a t
 	return O
 
 
-/area/proc/copy_contents_to(var/area/A , platingRequired = 0 )
+/area/proc/copy_contents_to(area/A , platingRequired = 0 )
 	//Takes: Area. Optional: If it should copy to areas that don't have plating
 	//Returns: Nothing.
 	//Notes: Attempts to move the contents of one area to another area.
@@ -1164,12 +1164,12 @@ GLOBAL_LIST_INIT(common_tools, list(
 				return 1
 	return 0
 
-/proc/topic_link(var/datum/D, var/arglist, content)
+/proc/topic_link(var/datum/D, arglist, content)
 	if(istype(arglist,/list))
 		arglist = list2params(arglist)
 	return "<a href='byond://?src=\ref[D];[arglist]'>[content]</a>"
 
-/proc/get_random_colour(var/simple, var/lower=0, upper=255)
+/proc/get_random_colour(var/simple, lower=0, upper=255)
 	var/colour
 	if(simple)
 		colour = pick(list("FF0000","FF7F00","FFFF00","00FF00","0000FF","4B0082","8F00FF"))
@@ -1188,7 +1188,7 @@ GLOBAL_LIST_INIT(common_tools, list(
 GLOBAL_DATUM(dview_mob, /mob/dview)
 
 //Version of view() which ignores darkness, because BYOND doesn't have it.
-/proc/dview(var/range = world.view, var/center, invis_flags = 0)
+/proc/dview(var/range = world.view, center, invis_flags = 0)
 	if(!center)
 		return
 	if(!GLOB.dview_mob) //VOREStation Add: Debugging
@@ -1248,7 +1248,7 @@ GLOBAL_DATUM(dview_mob, /mob/dview)
 	return locate(tX, tY, tZ)
 
 // Displays something as commonly used (non-submultiples) SI units.
-/proc/format_SI(var/number, symbol)
+/proc/format_SI(number, symbol)
 	switch(round(abs(number)))
 		if(0 to 1000-1)
 			return "[number] [symbol]"
@@ -1341,7 +1341,7 @@ GLOBAL_DATUM(dview_mob, /mob/dview)
 
 // Returns direction-string, rounded to multiples of 22.5, from the first parameter to the second
 // N, NNE, NE, ENE, E, ESE, SE, SSE, S, SSW, SW, WSW, W, WNW, NW, NNW
-/proc/get_adir(var/turf/A, turf/B)
+/proc/get_adir(turf/A, turf/B)
 	var/degree = Get_Angle(A, B)
 	switch(round(degree%360, 22.5))
 		if(0)

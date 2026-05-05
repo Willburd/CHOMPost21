@@ -65,7 +65,7 @@
 			continue
 		.[instance.name] = instance
 
-/datum/preferences/proc/mass_edit_marking_list(var/marking, var/change_on = TRUE, var/change_color = TRUE, var/marking_value = null, var/on = TRUE, color = "#000000")
+/datum/preferences/proc/mass_edit_marking_list(var/marking, var/change_on = TRUE, var/change_color = TRUE, var/marking_value = null, on = TRUE, color = "#000000")
 	var/datum/sprite_accessory/marking/mark_datum = GLOB.body_marking_styles_list[marking]
 	var/list/new_marking = marking_value||mark_datum.body_parts
 	for (var/NM in new_marking)
@@ -239,7 +239,7 @@
 				O.markings[M] = list("color" = pref.body_markings[M][BP]["color"], "datum" = mark_datum, "priority" = priority, "on" = pref.body_markings[M][BP]["on"])
 	character.markings_len = priority
 
-/datum/category_item/player_setup_item/general/body/proc/has_flag(var/datum/species/mob_species, flag)
+/datum/category_item/player_setup_item/general/body/proc/has_flag(datum/species/mob_species, flag)
 	return mob_species && (mob_species.appearance_flags & flag)
 
 /datum/category_item/player_setup_item/general/body/proc/reset_limbs()

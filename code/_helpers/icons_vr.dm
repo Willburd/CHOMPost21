@@ -1,4 +1,4 @@
-/proc/AverageColor(var/icon/I, var/accurate = 0, ignoreGreyscale = 0)
+/proc/AverageColor(var/icon/I, accurate = 0, ignoreGreyscale = 0)
 //Accurate: Use more accurate color averaging, usually has better results and prevents muddied or overly dark colors. Mad thanks to wwjnc.
 //ignoreGreyscale: Excempts greyscale colors from the color list, useful for filtering outlines or plate overlays.
 	var/list/colors = ListColors(I, ignoreGreyscale)
@@ -26,7 +26,7 @@
 		final_average = rgb(colorsum[1]/total, colorsum[2]/total, colorsum[3]/total)
 	return final_average
 
-/proc/ListColors(var/icon/I, ignoreGreyscale = 0)
+/proc/ListColors(icon/I, ignoreGreyscale = 0)
 	var/list/colors = list()
 	for(var/x_pixel = 1 to I.Width())
 		for(var/y_pixel = 1 to I.Height())

@@ -103,7 +103,7 @@
 
 	return ..()
 
-/obj/item/reagent_containers/food/drinks/proc/On_Consume(var/mob/living/eater, var/mob/feeder, changed = FALSE)
+/obj/item/reagent_containers/food/drinks/proc/On_Consume(var/mob/living/eater, mob/feeder, changed = FALSE)
 	SEND_SIGNAL(src, COMSIG_GLASS_DRANK, eater, feeder)
 	if(!feeder)
 		feeder = eater
@@ -179,7 +179,7 @@
 		return
 	return ..()
 
-/obj/item/reagent_containers/food/drinks/standard_feed_mob(var/mob/user, mob/target)
+/obj/item/reagent_containers/food/drinks/standard_feed_mob(mob/user, mob/target)
 	if(!is_open_container())
 		to_chat(user, span_notice("You need to open [src]!"))
 		return TRUE
@@ -189,13 +189,13 @@
 	On_Consume(target, user, changed)
 	return
 
-/obj/item/reagent_containers/food/drinks/standard_dispenser_refill(var/mob/user, obj/structure/reagent_dispensers/target)
+/obj/item/reagent_containers/food/drinks/standard_dispenser_refill(mob/user, obj/structure/reagent_dispensers/target)
 	if(!is_open_container())
 		to_chat(user, span_notice("You need to open [src]!"))
 		return TRUE
 	return ..()
 
-/obj/item/reagent_containers/food/drinks/standard_pour_into(var/mob/user, atom/target)
+/obj/item/reagent_containers/food/drinks/standard_pour_into(mob/user, atom/target)
 	if(!is_open_container())
 		to_chat(user, span_notice("You need to open [src]!"))
 		return TRUE

@@ -257,7 +257,7 @@ update_flag
 		healthcheck()
 	..()
 
-/obj/machinery/portable_atmospherics/canister/attackby(var/obj/item/W as obj, mob/user as mob)
+/obj/machinery/portable_atmospherics/canister/attackby(obj/item/W as obj, mob/user as mob)
 	if(W.has_tool_quality(TOOL_WELDER)) //Vorestart: Deconstructable Canisters
 		var/obj/item/weldingtool/WT = W.get_welder()
 		if(!WT.remove_fuel(0, user))

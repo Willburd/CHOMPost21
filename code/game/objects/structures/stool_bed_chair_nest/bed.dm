@@ -24,7 +24,7 @@
 	var/override_name = FALSE // Outpost 21 edit - Keep set map names
 	var/flippable = TRUE
 
-/obj/structure/bed/Initialize(mapload, var/new_material, new_padding_material)
+/obj/structure/bed/Initialize(mapload, new_material, new_padding_material)
 	..()
 	color = null
 	if(!new_material)

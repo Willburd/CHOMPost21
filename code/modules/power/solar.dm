@@ -230,7 +230,7 @@ GLOBAL_LIST_EMPTY(solars_list)
 	if(!anchored || !isturf(loc)) // You can't pick it up
 		..()
 
-/obj/item/solar_assembly/attackby(var/obj/item/W, mob/user)
+/obj/item/solar_assembly/attackby(obj/item/W, mob/user)
 	if (!isturf(loc))
 		return 0
 	if(!anchored)

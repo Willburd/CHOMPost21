@@ -30,14 +30,14 @@
 
 	update_icon()
 
-/obj/structure/noticeboard/proc/add_paper(var/atom/movable/paper, skip_icon_update)
+/obj/structure/noticeboard/proc/add_paper(atom/movable/paper, skip_icon_update)
 	if(istype(paper))
 		LAZYDISTINCTADD(notices, paper)
 		paper.forceMove(src)
 		if(!skip_icon_update)
 			update_icon()
 
-/obj/structure/noticeboard/proc/remove_paper(var/atom/movable/paper, skip_icon_update)
+/obj/structure/noticeboard/proc/remove_paper(atom/movable/paper, skip_icon_update)
 	if(istype(paper) && paper.loc == src)
 		paper.dropInto(loc)
 		LAZYREMOVE(notices, paper)

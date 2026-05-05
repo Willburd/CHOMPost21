@@ -46,7 +46,7 @@
 
 	var/update_adjacent_tiles = TRUE
 
-/obj/machinery/door/attack_generic(var/mob/user, damage)
+/obj/machinery/door/attack_generic(mob/user, damage)
 	if(isanimal(user))
 		var/mob/living/simple_mob/S = user
 		if(damage >= STRUCTURE_MIN_DAMAGE_THRESHOLD)
@@ -534,7 +534,7 @@
 		open_speed = 15
 	return (normalspeed ? open_speed : 5)
 
-/obj/machinery/door/proc/close(var/forced = 0, var/ignore_safties = FALSE, crush_damage = DOOR_CRUSH_DAMAGE)
+/obj/machinery/door/proc/close(var/forced = 0, ignore_safties = FALSE, crush_damage = DOOR_CRUSH_DAMAGE)
 	if(!can_close(forced))
 		return
 	operating = 1

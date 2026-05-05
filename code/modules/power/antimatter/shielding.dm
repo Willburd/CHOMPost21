@@ -199,7 +199,7 @@
 	throw_range = 2
 	matter = list(MAT_STEEL = 100)
 
-/obj/item/am_shielding_container/attackby(var/obj/item/I, mob/user)
+/obj/item/am_shielding_container/attackby(obj/item/I, mob/user)
 	if(istype(I, /obj/item/multitool) && istype(src.loc,/turf))
 		new/obj/machinery/am_shielding(src.loc)
 		qdel(src)

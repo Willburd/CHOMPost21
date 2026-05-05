@@ -104,7 +104,7 @@ GLOBAL_VAR_INIT(dynamic_sector_master, null)
 			return i
 	return 0
 
-/obj/effect/overmap/visitable/dynamic/proc/is_empty(var/index, mob/observer)
+/obj/effect/overmap/visitable/dynamic/proc/is_empty(index, mob/observer)
 	if(!LAZYLEN(map_z))
 		log_and_message_admins("CANARY: [src] tried to check is_empty, but map_z is `[map_z || "null"]`")
 		return TRUE
@@ -321,7 +321,7 @@ GLOBAL_VAR_INIT(dynamic_sector_master, null)
 	base_area = /area/space
 	base_turf = /turf/space
 
-/obj/effect/shuttle_landmark/om_poi/Initialize(mapload, var/new_name, new_tag)
+/obj/effect/shuttle_landmark/om_poi/Initialize(mapload, new_name, new_tag)
 	name = new_name
 	landmark_tag = new_tag
 	. = ..()

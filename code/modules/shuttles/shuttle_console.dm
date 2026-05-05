@@ -68,7 +68,7 @@
 
 // This is a subset of the actual checks; contains those that give messages to the user.
 // This enables us to give nice error messages as well as not even bother proceeding if we can't.
-/obj/machinery/computer/shuttle_control/proc/can_move(var/datum/shuttle/autodock/shuttle, user)
+/obj/machinery/computer/shuttle_control/proc/can_move(datum/shuttle/autodock/shuttle, user)
 	var/cannot_depart = shuttle.current_location.cannot_depart(shuttle)
 	if(cannot_depart)
 		to_chat(user, span_warning("[cannot_depart]"))
@@ -138,7 +138,7 @@
 	shuttle_tag = new_shuttle_tag
 	return TRUE
 
-/obj/machinery/computer/shuttle_control/emag_act(var/remaining_charges, mob/user)
+/obj/machinery/computer/shuttle_control/emag_act(remaining_charges, mob/user)
 	// Outpost 21 edit begin - Crash it or hack it
 	var/choice = tgui_input_list(user,"Hack this console to unlock it or cause the shuttle to crash on its next flight.", "Emagged",list("Hack","Crash"))
 	if(!Adjacent(user))

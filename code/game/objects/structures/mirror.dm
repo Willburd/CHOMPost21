@@ -12,7 +12,7 @@
 	var/glass = 1
 	var/datum/tgui_module/appearance_changer/mirror/M
 
-/obj/structure/mirror/Initialize(mapload, var/dir, building = 0)
+/obj/structure/mirror/Initialize(mapload, dir, building = 0)
 	. = ..()
 	M = new(src, null)
 	if(building)
@@ -107,7 +107,7 @@
 		visible_message(span_warning("[user] hits [src] with [I]!"))
 		playsound(src, 'sound/effects/Glasshit.ogg', 70, 1)
 
-/obj/structure/mirror/attack_generic(var/mob/user, damage)
+/obj/structure/mirror/attack_generic(mob/user, damage)
 
 	user.do_attack_animation(src)
 	if(shattered && glass)

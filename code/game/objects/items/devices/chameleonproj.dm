@@ -102,7 +102,7 @@
 	var/can_move = 1
 	var/obj/item/chameleon/master = null
 
-/obj/effect/dummy/chameleon/proc/activate(var/obj/O, var/mob/M, new_icon, new_iconstate, new_overlays, obj/item/chameleon/C)
+/obj/effect/dummy/chameleon/proc/activate(var/obj/O, mob/M, new_icon, new_iconstate, new_overlays, obj/item/chameleon/C)
 	name = O.name
 	desc = O.desc
 	icon = new_icon

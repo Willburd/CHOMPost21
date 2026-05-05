@@ -384,7 +384,7 @@
 	character.client.init_verbs()
 	qdel(src) // Delete new_player mob
 
-/mob/new_player/proc/AnnounceCyborg(var/mob/living/character, var/rank, var/join_message, var/channel, zlevel)
+/mob/new_player/proc/AnnounceCyborg(var/mob/living/character, var/rank, var/join_message, channel, zlevel)
 	if (SSticker.current_state == GAME_STATE_PLAYING)
 		var/list/zlevels = zlevel ? using_map.get_map_levels(zlevel, TRUE, om_range = DEFAULT_OVERMAP_RANGE) : null
 		if(character.mind.role_alt_title)
@@ -510,13 +510,13 @@
 	return ready && ..()
 
 // Prevents lobby players from seeing say, even with ghostears
-/mob/new_player/hear_say(var/list/message_pieces, var/verb = "says", var/italics = 0, mob/speaker = null)
+/mob/new_player/hear_say(var/list/message_pieces, var/verb = "says", italics = 0, mob/speaker = null)
 	return
 
-/mob/new_player/hear_holopad_talk(list/message_pieces, var/verb = "says", mob/speaker = null)
+/mob/new_player/hear_holopad_talk(list/message_pieces, verb = "says", mob/speaker = null)
 	return
 
-/mob/new_player/hear_holopad_talk(list/message_pieces, var/verb = "says", mob/speaker = null)
+/mob/new_player/hear_holopad_talk(list/message_pieces, verb = "says", mob/speaker = null)
 	return
 
 // Prevents lobby players from seeing emotes, even with ghosteyes

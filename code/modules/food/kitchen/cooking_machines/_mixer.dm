@@ -120,7 +120,7 @@ fundamental differences
 	playsound(src, 'sound/machines/click.ogg', 40, 1)
 	update_icon()
 
-/obj/machinery/appliance/mixer/can_insert(var/obj/item/I, mob/user)
+/obj/machinery/appliance/mixer/can_insert(obj/item/I, mob/user)
 	if(!stat)
 		to_chat(user, span_warning(",You can't add items while \the [src] is running. Wait for it to finish or turn the power off to abort."))
 		return 0

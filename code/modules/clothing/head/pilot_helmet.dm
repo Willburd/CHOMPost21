@@ -171,7 +171,7 @@
 	qdel(pilot_hud)
 	return ..()
 
-/obj/item/clothing/head/pilot/equipped(var/mob/user,slot)
+/obj/item/clothing/head/pilot/equipped(mob/user,slot)
 	. = ..()
 	if(slot == slot_head && user.client)
 		user.client.screen |= pilot_hud

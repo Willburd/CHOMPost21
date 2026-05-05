@@ -270,7 +270,7 @@
 	else
 		..()
 
-/obj/machinery/clonepod/emag_act(var/remaining_charges, mob/user)
+/obj/machinery/clonepod/emag_act(remaining_charges, mob/user)
 	if(isnull(get_occupant()))
 		return
 	to_chat(user, "You force an emergency ejection.")

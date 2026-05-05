@@ -22,7 +22,7 @@
 	// No need to do anything else in our power scheme.
 
 // Defining directly here to avoid conflicts with existing set_broken procs in our codebase that behave differently.
-/obj/machinery/atmospherics/unary/engine/proc/set_broken(var/new_state, cause)
+/obj/machinery/atmospherics/unary/engine/proc/set_broken(new_state, cause)
 	if(!(stat & BROKEN) == !new_state)
 		return // Nothing changed
 	stat ^= BROKEN

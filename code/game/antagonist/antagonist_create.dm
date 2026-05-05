@@ -1,4 +1,4 @@
-/datum/antagonist/proc/create_antagonist(var/datum/mind/target, var/move, var/gag_announcement, preserve_appearance)
+/datum/antagonist/proc/create_antagonist(var/datum/mind/target, var/move, gag_announcement, preserve_appearance)
 
 	if(!target)
 		return
@@ -32,7 +32,7 @@
 	add_antagonist(M.mind, 1, 0, 1) // Equip them and move them to spawn.
 	return M
 
-/datum/antagonist/proc/create_id(var/assignment, var/mob/living/carbon/human/player, equip = 1)
+/datum/antagonist/proc/create_id(var/assignment, mob/living/carbon/human/player, equip = 1)
 
 	var/obj/item/card/id/W = new id_type(player)
 	if(!W) return
@@ -42,7 +42,7 @@
 	if(equip) player.equip_to_slot_or_del(W, slot_wear_id)
 	return W
 
-/datum/antagonist/proc/create_radio(var/freq, mob/living/carbon/human/player)
+/datum/antagonist/proc/create_radio(freq, mob/living/carbon/human/player)
 	var/obj/item/radio/R
 
 	switch(freq)
@@ -57,7 +57,7 @@
 	player.equip_to_slot_or_del(R, slot_l_ear)
 	return R
 
-/datum/antagonist/proc/create_nuke(var/atom/paper_spawn_loc, datum/mind/code_owner)
+/datum/antagonist/proc/create_nuke(atom/paper_spawn_loc, datum/mind/code_owner)
 
 	// Decide on a code.
 	var/obj/effect/landmark/nuke_spawn = locate(nuke_spawn_loc ? nuke_spawn_loc : "landmark*Nuclear-Bomb")

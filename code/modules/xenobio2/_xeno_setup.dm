@@ -54,7 +54,7 @@
 	var/list/chems = list()
 	var/source = "unknown"
 
-/datum/xeno/traits/proc/set_trait(var/trait, newval)
+/datum/xeno/traits/proc/set_trait(trait, newval)
 	traits["[trait]"] = newval
 	return
 

@@ -24,7 +24,7 @@ GLOBAL_VAR_INIT(floorIsLava, 0)
 						html = msg,
 						confidential = TRUE)
 
-/proc/admin_notice(var/message, rights)
+/proc/admin_notice(message, rights)
 	for(var/mob/M in GLOB.mob_list)
 		var/C = M.client
 
@@ -1223,7 +1223,7 @@ ADMIN_VERB(toggleguests, R_HOST, "Toggle guests", "Guests can't enter.", ADMIN_C
 
 //Returns 1 to let the dragdrop code know we are trapping this event
 //Returns 0 if we don't plan to trap the event
-/datum/admins/proc/cmd_ghost_drag(var/mob/observer/dead/frommob, mob/living/tomob)
+/datum/admins/proc/cmd_ghost_drag(mob/observer/dead/frommob, mob/living/tomob)
 	if(!istype(frommob))
 		return //Extra sanity check to make sure only observers are shoved into things
 
@@ -1322,7 +1322,7 @@ ADMIN_VERB(sendFax, R_ADMIN|R_MOD|R_EVENT, "Send Fax", "Sends a fax to this mach
 
 /datum/admins/var/obj/item/paper/admin/faxreply // var to hold fax replies in
 
-/datum/admins/proc/faxCallback(var/obj/item/paper/admin/P, obj/machinery/photocopier/faxmachine/destination)
+/datum/admins/proc/faxCallback(obj/item/paper/admin/P, obj/machinery/photocopier/faxmachine/destination)
 	var/customname = tgui_input_text(src.owner, "Pick a title for the report", "Title")
 
 	P.name = "[P.origin] - [customname]"

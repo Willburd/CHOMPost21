@@ -157,20 +157,20 @@
 			healths.icon_state = "health7"
 
 // All the damage and such to the blob translates to the human
-/mob/living/simple_mob/slime/promethean/apply_effect(var/effect = 0, var/effecttype = STUN, var/blocked = 0, check_protection = 1)
+/mob/living/simple_mob/slime/promethean/apply_effect(var/effect = 0, var/effecttype = STUN, blocked = 0, check_protection = 1)
 	if(humanform)
 		return humanform.apply_effect(effect, effecttype, blocked, check_protection)
 	else
 		return ..()
 
-/mob/living/simple_mob/slime/promethean/adjustBruteLoss(var/amount,include_robo)
+/mob/living/simple_mob/slime/promethean/adjustBruteLoss(amount,include_robo)
 	amount *= 0.75
 	if(humanform)
 		return humanform.adjustBruteLoss(amount)
 	else
 		return ..()
 
-/mob/living/simple_mob/slime/promethean/adjustFireLoss(var/amount,include_robo)
+/mob/living/simple_mob/slime/promethean/adjustFireLoss(amount,include_robo)
 	amount *= 2
 	if(humanform)
 		return humanform.adjustFireLoss(amount)
@@ -524,7 +524,7 @@
 	if(hat)
 		. += "They are wearing \a [hat]."
 
-/mob/living/simple_mob/slime/promethean/say_understands(var/mob/other, datum/language/speaking = null)
+/mob/living/simple_mob/slime/promethean/say_understands(mob/other, datum/language/speaking = null)
 	if(speaking?.name == LANGUAGE_PROMETHEAN)	//Promethean and sign are both nonverbal, so won't work with the same trick as below, so let's check for them
 		return TRUE
 	else if(speaking?.name == LANGUAGE_SIGN)

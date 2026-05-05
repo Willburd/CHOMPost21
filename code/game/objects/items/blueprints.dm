@@ -199,7 +199,7 @@
 		interact()
 	return
 
-/obj/item/blueprints/proc/move_turfs_to_area(var/list/turf/turfs, area/A)
+/obj/item/blueprints/proc/move_turfs_to_area(list/turf/turfs, area/A)
 	for(var/T in turfs)
 		ChangeArea(T, A)
 
@@ -220,7 +220,7 @@
 
 
 
-/obj/item/blueprints/proc/set_area_machinery_title(var/area/A,var/title,oldtitle)
+/obj/item/blueprints/proc/set_area_machinery_title(var/area/A,title,oldtitle)
 	if (!oldtitle) // or replacetext goes to infinite loop
 		return
 
@@ -246,7 +246,7 @@
  *  Note: The first turf is always allowed, and turfs in its area.
  * @return On success, a list of turfs included in the room.  On failure will return a ROOM_ERR_* constant.
 */
-/obj/item/blueprints/proc/detect_room_ex(var/turf/first, allowedAreas = AREA_SPACE)
+/obj/item/blueprints/proc/detect_room_ex(turf/first, allowedAreas = AREA_SPACE)
 	if(!istype(first))
 		return ROOM_ERR_LOLWAT
 	var/list/turf/found = list()

@@ -219,7 +219,7 @@
 	// HUD update time
 	update_xenochimera_hud(danger, feral_state)
 
-/datum/component/xenochimera/proc/update_xenochimera_hud(var/danger, feral)
+/datum/component/xenochimera/proc/update_xenochimera_hud(danger, feral)
 	if(owner.xenochimera_danger_display)
 		owner.xenochimera_danger_display.invisibility = INVISIBILITY_NONE
 		if(danger && feral)
@@ -233,7 +233,7 @@
 
 	return
 
-/datum/component/xenochimera/proc/go_feral(var/stress, cause)
+/datum/component/xenochimera/proc/go_feral(stress, cause)
 	// Going feral due to hunger
 	if(cause == "hunger")
 		to_chat(owner,span_danger(span_large("Something in your mind flips, your instincts taking over, no longer able to fully comprehend your surroundings as survival becomes your primary concern - you must feed, survive, there is nothing else. Hunt. Eat. Hide. Repeat.")))

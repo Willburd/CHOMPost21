@@ -130,7 +130,7 @@
 				to_chat(user, "\The [src] stops supporting your [E.name].")
 		supporting_limbs.Cut()
 
-/obj/item/clothing/suit/space/proc/handle_fracture(var/mob/living/carbon/human/user, obj/item/organ/external/E)
+/obj/item/clothing/suit/space/proc/handle_fracture(mob/living/carbon/human/user, obj/item/organ/external/E)
 	if(!istype(user) || isnull(supporting_limbs))
 		return
 	if(E.is_broken() && E.apply_splint(src))

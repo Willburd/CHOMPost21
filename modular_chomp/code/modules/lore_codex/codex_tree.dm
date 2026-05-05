@@ -8,7 +8,7 @@
 	var/list/indexed_pages = list() // Assoc list with search terms pointing to a ref of the page.  It's created on New().
 	var/list/history = list() // List of pages we previously visited. // now a 2D list
 
-/datum/codex_tree/New(var/new_holder, new_root_type)
+/datum/codex_tree/New(new_holder, new_root_type)
 	holder = new_holder
 	root_type = new_root_type
 	generate_pages()
@@ -26,7 +26,7 @@
 		current_page["[user]"] = D.parent
 
 // Changes current_page to a specific page or category.
-/datum/codex_tree/proc/go_to_page(var/datum/lore/codex/new_page, var/dont_record_history = FALSE, mob/user)
+/datum/codex_tree/proc/go_to_page(var/datum/lore/codex/new_page, dont_record_history = FALSE, mob/user)
 	var/datum/lore/codex/D = current_page["[user]"]
 	if(new_page && istype(D)) // Make sure we're not going to a null page for whatever reason.
 		current_page["[user]"] = new_page
@@ -37,7 +37,7 @@
 			H.Add(new_page)
 			history["[user]"] = H
 
-/datum/codex_tree/proc/quick_link(var/search_word, mob/user)
+/datum/codex_tree/proc/quick_link(search_word, mob/user)
 	for(var/word in indexed_pages)
 		if(lowertext(search_word) == lowertext(word)) // Exact matches unfortunately limit our ability to perform SEOs.
 			go_to_page(indexed_pages[word], FALSE, user)

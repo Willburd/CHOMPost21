@@ -28,7 +28,7 @@
 /obj/machinery/button/remote/attackby(obj/item/W, mob/user as mob)
 	return attack_hand(user)
 
-/obj/machinery/button/remote/emag_act(var/remaining_charges, mob/user)
+/obj/machinery/button/remote/emag_act(remaining_charges, mob/user)
 	if(LAZYLEN(req_access) || LAZYLEN(req_one_access))
 		LAZYCLEARLIST(req_access)
 		LAZYCLEARLIST(req_one_access)

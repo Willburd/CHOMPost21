@@ -99,7 +99,7 @@
 	access = 999 //Prevents anyone from buying it without an emag.
 	var/laws = "Be nice to people!"
 
-/datum/nifsoft/compliance/New(var/newloc,newlaws)
+/datum/nifsoft/compliance/New(newloc,newlaws)
 	laws = newlaws //Sanitize before this (the disk does)
 	..(newloc)
 

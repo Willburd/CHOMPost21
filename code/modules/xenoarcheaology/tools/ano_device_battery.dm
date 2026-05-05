@@ -73,11 +73,11 @@
 	last_user_touched = null
 	. = ..()
 
-/obj/item/anodevice/equipped(var/mob/user, slot)
+/obj/item/anodevice/equipped(mob/user, slot)
 	last_user_touched = user
 	..()
 
-/obj/item/anodevice/attackby(var/obj/I as obj, mob/user as mob)
+/obj/item/anodevice/attackby(obj/I as obj, mob/user as mob)
 	if(istype(I, /obj/item/anobattery))
 		if(!inserted_battery)
 			to_chat(user, span_blue("You insert the battery."))

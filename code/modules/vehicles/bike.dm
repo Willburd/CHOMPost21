@@ -112,14 +112,14 @@
 	kickstand = !kickstand
 	anchored = (kickstand || on)
 
-/obj/vehicle/bike/load(var/atom/movable/C, mob/user as mob)
+/obj/vehicle/bike/load(atom/movable/C, mob/user as mob)
 	var/mob/living/M = C
 	if(!istype(C)) return 0
 	if(M.buckled || M.restrained() || !Adjacent(M) || !M.Adjacent(src))
 		return 0
 	return ..(M, user)
 
-/obj/vehicle/bike/MouseDrop_T(var/atom/movable/C, mob/user as mob)
+/obj/vehicle/bike/MouseDrop_T(atom/movable/C, mob/user as mob)
 	if(!load(C, user))
 		to_chat(user, span_warning(" You were unable to load \the [C] onto \the [src]."))
 		return

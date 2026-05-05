@@ -27,7 +27,7 @@
 	// Run list comparisons
 	return has_access(req_access, req_one_access, L)
 
-/proc/has_access(var/list/req_access, var/list/req_one_access, list/accesses)
+/proc/has_access(var/list/req_access, list/req_one_access, list/accesses)
 	// req_access list has priority if set
 	// Requires at least every access in list
 	for(var/req in req_access)

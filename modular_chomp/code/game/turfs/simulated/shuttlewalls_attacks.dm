@@ -72,7 +72,7 @@
 	spawn(1)
 		dismantle_wall(1)
 
-/turf/simulated/shuttlewalls/proc/try_touch(var/mob/user, rotting)
+/turf/simulated/shuttlewalls/proc/try_touch(mob/user, rotting)
 
 	if(rotting)
 		if(reinf_material)
@@ -106,7 +106,7 @@
 
 	try_touch(user, rotting)
 
-/turf/simulated/shuttlewalls/attack_generic(var/mob/user, var/damage, attack_message)
+/turf/simulated/shuttlewalls/attack_generic(var/mob/user, damage, attack_message)
 
 	radiate()
 	user.setClickCooldown(user.get_attack_speed())
@@ -125,7 +125,7 @@
 		return success_smash(user)
 	return fail_smash(user)
 
-/turf/simulated/shuttlewalls/attackby(var/obj/item/W, mob/user)
+/turf/simulated/shuttlewalls/attackby(obj/item/W, mob/user)
 
 	user.setClickCooldown(user.get_attack_speed(W))
 

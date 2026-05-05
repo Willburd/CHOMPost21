@@ -44,7 +44,7 @@
 	return pick(available_turfs)
 
 // Picks a turf that is clearance tiles away from the map edge given by dir, on z-level Z
-/proc/pick_random_edge_turf(var/dir, var/Z, clearance = TRANSITIONEDGE + 1)
+/proc/pick_random_edge_turf(var/dir, Z, clearance = TRANSITIONEDGE + 1)
 	if(!dir)
 		return
 	switch(dir)
@@ -84,7 +84,7 @@
 
 	return turf_map
 
-/proc/translate_turfs(var/list/translation, var/area/base_area = null, turf/base_turf)
+/proc/translate_turfs(var/list/translation, area/base_area = null, turf/base_turf)
 	for(var/turf/source in translation)
 
 		var/turf/target = translation[source]
@@ -102,7 +102,7 @@
 // Parmaters for stupid historical reasons are:
 // T - Origin
 // B - Destination
-/proc/translate_turf(var/turf/T, var/turf/B, turftoleave = null)
+/proc/translate_turf(var/turf/T, turf/B, turftoleave = null)
 
 	//You can stay, though.
 	if(istype(T,/turf/space))
@@ -199,7 +199,7 @@
 
 //Used for border objects. This returns true if this atom is on the border between the two specified turfs
 //This assumes that the atom is located inside the target turf
-/atom/proc/is_between_turfs(var/turf/origin, turf/target)
+/atom/proc/is_between_turfs(turf/origin, turf/target)
 	if (flags & ON_BORDER)
 		var/testdir = get_dir(target, origin)
 		return (dir & testdir)

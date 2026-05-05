@@ -338,7 +338,7 @@ GLOBAL_LIST_EMPTY(table_icon_cache)
 		return TRUE
 	..()
 
-/proc/get_table_image(var/icon/ticon,var/ticonstate,var/tdir,var/tcolor,talpha)
+/proc/get_table_image(var/icon/ticon,var/ticonstate,var/tdir,tcolor,talpha)
 	var/icon_cache_key = "\ref[ticon]-[ticonstate]-[tdir]-[tcolor]-[talpha]"
 	var/image/I = GLOB.table_icon_cache[icon_cache_key]
 	if(!I)

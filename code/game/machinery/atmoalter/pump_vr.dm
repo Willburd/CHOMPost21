@@ -81,7 +81,7 @@
 		use_power(power_draw)
 		update_connected_network()
 
-/obj/machinery/portable_atmospherics/powered/pump/huge/attackby(var/obj/item/I, mob/user)
+/obj/machinery/portable_atmospherics/powered/pump/huge/attackby(obj/item/I, mob/user)
 	if(I.has_tool_quality(TOOL_WRENCH))
 		if(on)
 			to_chat(user, span_warning("Turn \the [src] off first!"))
@@ -109,7 +109,7 @@
 /obj/machinery/portable_atmospherics/powered/pump/huge/stationary
 	name = "Stationary Air Pump"
 
-/obj/machinery/portable_atmospherics/powered/pump/huge/stationary/attackby(var/obj/item/I, mob/user)
+/obj/machinery/portable_atmospherics/powered/pump/huge/stationary/attackby(obj/item/I, mob/user)
 	if(I.has_tool_quality(TOOL_WRENCH))
 		to_chat(user, span_warning("The bolts are too tight for you to unscrew!"))
 		return

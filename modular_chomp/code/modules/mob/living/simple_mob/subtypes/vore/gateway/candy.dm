@@ -632,7 +632,7 @@
 	maxHealth = 10
 	health = 10
 
-/mob/living/simple_mob/vore/candy/peppermint/attackby(var/obj/item/O as obj, mob/user as mob)
+/mob/living/simple_mob/vore/candy/peppermint/attackby(obj/item/O as obj, mob/user as mob)
 	if(O.force)
 		if(prob(80))
 			visible_message(span_danger("\The [src] deflects \the [O] with its shell!"))

@@ -51,7 +51,7 @@ GLOBAL_LIST_EMPTY(gyrotrons)
 	else
 		icon_state = "emitter-off"
 
-/obj/machinery/power/emitter/gyrotron/attackby(var/obj/item/W, mob/user)
+/obj/machinery/power/emitter/gyrotron/attackby(obj/item/W, mob/user)
 	if(istype(W, /obj/item/multitool))
 		var/new_ident = tgui_input_text(user, "Enter a new ident tag.", "Gyrotron", id_tag, MAX_NAME_LEN)
 		if(new_ident && user.Adjacent(src))

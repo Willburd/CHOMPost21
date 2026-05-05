@@ -51,7 +51,7 @@
 /obj/machinery/reagent_refinery/pump/attack_hand(mob/user)
 	set_APTFT()
 
-/obj/machinery/reagent_refinery/pump/handle_transfer(var/atom/origin_machine, var/datum/reagents/RT, var/source_forward_dir, var/transfer_rate, filter_id = "")
+/obj/machinery/reagent_refinery/pump/handle_transfer(var/atom/origin_machine, var/datum/reagents/RT, var/source_forward_dir, transfer_rate, filter_id = "")
 	// pumps, furnaces, splitters and filters can only be FED in a straight line
 	if(source_forward_dir != dir)
 		return 0

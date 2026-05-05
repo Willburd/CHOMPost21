@@ -17,7 +17,7 @@
 	communications = new(src)
 	communications.comm_console = src // Outpost 21 edit - use the comm's console access
 
-/obj/machinery/computer/communications/emag_act(var/remaining_charges, mob/user)
+/obj/machinery/computer/communications/emag_act(remaining_charges, mob/user)
 	if(!emagged)
 		emagged = TRUE
 		communications.emagged = TRUE

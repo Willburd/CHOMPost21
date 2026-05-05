@@ -37,7 +37,7 @@
 	if(busy)
 		busy = MEDIGUN_CANCELLED
 
-/obj/item/bork_medigun/linked/proc/should_stop(var/mob/living/target, var/mob/living/user, active_hand)
+/obj/item/bork_medigun/linked/proc/should_stop(var/mob/living/target, mob/living/user, active_hand)
 	if(!target || !user || (!active_hand && medigun_base_unit.is_twohanded()) || !istype(target) || !istype(user) || busy < MEDIGUN_BUSY)
 		return TRUE
 

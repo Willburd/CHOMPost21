@@ -366,7 +366,7 @@
 			adjust_germ_level(-antibiotics)	// You waited this long to get treated, you don't really deserve this organ
 
 //Adds autopsy data for used_weapon.
-/obj/item/organ/proc/add_autopsy_data(var/used_weapon, damage)
+/obj/item/organ/proc/add_autopsy_data(used_weapon, damage)
 	var/datum/autopsy_data/W = autopsy_data[used_weapon]
 	if(!W)
 		W = new()
@@ -471,7 +471,7 @@
 	owner = null
 
 
-/obj/item/organ/proc/replaced(var/mob/living/carbon/human/target,obj/item/organ/external/affected)
+/obj/item/organ/proc/replaced(mob/living/carbon/human/target,obj/item/organ/external/affected)
 
 	if(!istype(target)) return
 
@@ -549,7 +549,7 @@
 			return
 	return ..()
 
-/obj/item/organ/proc/can_butcher(var/obj/item/O, mob/living/user)
+/obj/item/organ/proc/can_butcher(obj/item/O, mob/living/user)
 	if(butcherable && meat_type)
 
 		if(istype(O, /obj/machinery/gibber))	// The great equalizer.
@@ -565,7 +565,7 @@
 
 	return FALSE
 
-/obj/item/organ/proc/butcher(var/obj/item/O, var/mob/living/user, atom/newtarget)
+/obj/item/organ/proc/butcher(var/obj/item/O, mob/living/user, atom/newtarget)
 
 	if(user)
 		to_chat(user, span_danger("You are preparing to butcher \the [src]!"))

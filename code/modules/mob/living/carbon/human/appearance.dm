@@ -102,7 +102,7 @@
 
 	update_hair()
 
-/mob/living/carbon/human/proc/change_eye_color(var/red, var/green, blue)
+/mob/living/carbon/human/proc/change_eye_color(var/red, green, blue)
 	if(red == r_eyes && green == g_eyes && blue == b_eyes)
 		return
 
@@ -114,7 +114,7 @@
 	update_icons_body()
 	return 1
 
-/mob/living/carbon/human/proc/change_hair_color(var/red, var/green, blue)
+/mob/living/carbon/human/proc/change_hair_color(var/red, green, blue)
 	if(red == r_hair && green == g_hair && blue == b_hair)
 		return
 
@@ -125,7 +125,7 @@
 	update_hair()
 	return 1
 
-/mob/living/carbon/human/proc/change_grad_color(var/red, var/green, blue)
+/mob/living/carbon/human/proc/change_grad_color(var/red, green, blue)
 	if(red == r_grad && green == g_grad && blue == b_grad)
 		return
 
@@ -136,7 +136,7 @@
 	update_hair()
 	return 1
 
-/mob/living/carbon/human/proc/change_facial_hair_color(var/red, var/green, blue)
+/mob/living/carbon/human/proc/change_facial_hair_color(var/red, green, blue)
 	if(red == r_facial && green == g_facial && blue == b_facial)
 		return
 
@@ -147,7 +147,7 @@
 	update_hair()
 	return 1
 
-/mob/living/carbon/human/proc/change_skin_color(var/red, var/green, blue)
+/mob/living/carbon/human/proc/change_skin_color(var/red, green, blue)
 	if(red == r_skin && green == g_skin && blue == b_skin || !(species.appearance_flags & HAS_SKIN_COLOR))
 		return
 
@@ -174,7 +174,7 @@
 	dna.ResetUIFrom(src) // Do not call ready_dna here: it resets ALL SE blocks, wiping trait gene state
 	sync_organ_dna()
 
-/mob/living/carbon/human/proc/generate_valid_species(var/check_whitelist = 1, list/whitelist = list(), var/list/blacklist = list())
+/mob/living/carbon/human/proc/generate_valid_species(check_whitelist = 1, list/whitelist = list(), var/list/blacklist = list())
 	var/list/valid_species = new()
 	for(var/current_species_name in GLOB.all_species)
 		var/datum/species/current_species = GLOB.all_species[current_species_name]

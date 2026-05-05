@@ -116,7 +116,7 @@
 	update_nearby_tiles() //Force ZAS update
 	update_explosion_resistance()
 
-/obj/effect/shield/attack_generic(var/source, var/damage, emote)
+/obj/effect/shield/attack_generic(var/source, damage, emote)
 	take_damage(damage, SHIELD_DAMTYPE_PHYSICAL)
 	if(gen.check_flag(MODEFLAG_OVERCHARGE) && istype(source, /mob/living/))
 		overcharge_shock(source)
@@ -124,7 +124,7 @@
 
 
 // Fails shield segments in specific range. Range of 1 affects the shielded turf only.
-/obj/effect/shield/proc/fail_adjacent_segments(var/range, hitby = null)
+/obj/effect/shield/proc/fail_adjacent_segments(range, hitby = null)
 	if(hitby)
 		visible_message(span_danger("\The [src] flashes a bit as \the [hitby] collides with it, eventually fading out in a rain of sparks!"))
 	else
@@ -159,7 +159,7 @@
 /obj/effect/shield/attack_hand(user)
 	flash_adjacent_segments(3)
 
-/obj/effect/shield/take_damage(var/damage, var/damtype, hitby)
+/obj/effect/shield/take_damage(var/damage, damtype, hitby)
 	if(!gen)
 		qdel(src)
 		return
@@ -193,7 +193,7 @@
 
 
 // As we have various shield modes, this handles whether specific things can pass or not.
-/obj/effect/shield/CanPass(var/atom/movable/mover, turf/target)
+/obj/effect/shield/CanPass(atom/movable/mover, turf/target)
 	// Somehow we don't have a generator. This shouldn't happen. Delete the shield.
 	if(!gen)
 		qdel(src)
@@ -243,7 +243,7 @@
 
 
 // Attacks with hand tools. Blocked by Hyperkinetic flag.
-/obj/effect/shield/attackby(var/obj/item/I as obj, mob/user as mob)
+/obj/effect/shield/attackby(obj/item/I as obj, mob/user as mob)
 	user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
 	user.do_attack_animation(src)
 

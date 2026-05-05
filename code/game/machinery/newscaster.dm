@@ -59,7 +59,7 @@
 	var/list/datum/feed_channel/network_channels = list()
 	var/datum/feed_message/wanted_issue
 
-/datum/feed_network/proc/CreateFeedChannel(var/channel_name, var/author, var/locked, var/adminChannel = 0, announcement_message)
+/datum/feed_network/proc/CreateFeedChannel(var/channel_name, var/author, var/locked, adminChannel = 0, announcement_message)
 	var/datum/feed_channel/newChannel = new /datum/feed_channel
 	newChannel.channel_name = channel_name
 	newChannel.author = author
@@ -71,7 +71,7 @@
 		newChannel.announcement = "Breaking news from [channel_name]!"
 	network_channels += newChannel
 
-/datum/feed_network/proc/SubmitArticle(var/msg, var/author, var/channel_name, var/obj/item/photo/photo, var/adminMessage = 0, var/message_type = "", title)
+/datum/feed_network/proc/SubmitArticle(var/msg, var/author, var/channel_name, var/obj/item/photo/photo, var/adminMessage = 0, message_type = "", title)
 	var/datum/feed_message/newMsg = new /datum/feed_message
 	newMsg.author = author
 	newMsg.body = msg
@@ -92,7 +92,7 @@
 			insert_message_in_channel(FC, newMsg) //Adding message to the network's appropriate feed_channel
 			break
 
-/datum/feed_network/proc/insert_message_in_channel(var/datum/feed_channel/FC, datum/feed_message/newMsg)
+/datum/feed_network/proc/insert_message_in_channel(datum/feed_channel/FC, datum/feed_message/newMsg)
 	FC.messages += newMsg
 	newMsg.parent_channel = FC
 	FC.update()
@@ -631,7 +631,7 @@ GLOBAL_LIST_BOILERPLATE(allCasters, /obj/machinery/newscaster)
 	var/is_synth = 0
 	var/obj/item/photo/photo = null
 
-/datum/news_photo/New(var/obj/item/photo/p, synth)
+/datum/news_photo/New(obj/item/photo/p, synth)
 	is_synth = synth
 	photo = p
 

@@ -34,7 +34,7 @@ GLOBAL_DATUM(malf, /datum/antagonist/rogue_ai)
 
 
 // Ensures proper reset of all malfunction related things.
-/datum/antagonist/rogue_ai/remove_antagonist(var/datum/mind/player, var/show_message, implanted)
+/datum/antagonist/rogue_ai/remove_antagonist(var/datum/mind/player, show_message, implanted)
 	if(..(player,show_message,implanted))
 		var/mob/living/silicon/ai/p = player.current
 		if(istype(p))
@@ -81,7 +81,7 @@ GLOBAL_DATUM(malf, /datum/antagonist/rogue_ai)
 		to_chat(malf, "Good luck!")
 
 
-/datum/antagonist/rogue_ai/update_antag_mob(var/datum/mind/player, preserve_appearance)
+/datum/antagonist/rogue_ai/update_antag_mob(datum/mind/player, preserve_appearance)
 
 	// Get the mob.
 	if((flags & ANTAG_OVERRIDE_MOB) && (!player.current || (mob_path && !istype(player.current, mob_path))))

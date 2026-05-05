@@ -67,7 +67,7 @@
 	However, when lifeforms exist nearby, these oddly curvaceous devils spring to life, lighting up and attempting to devour all living things. We assume they reduce their targets to biofuel to sustain themselves, but they have been known to break their disguise when attacked to defend themselves."
 	value = CATALOGUER_REWARD_HARD
 
-/mob/living/simple_mob/vore/devil/PounceTarget(var/mob/living/M, successrate = 100)
+/mob/living/simple_mob/vore/devil/PounceTarget(mob/living/M, successrate = 100)
 	vore_pounce_cooldown = world.time + 1 SECONDS // don't attempt another pounce for a while
 	if(prob(successrate)) // pounce success!
 		M.Weaken(5)

@@ -1563,7 +1563,7 @@
 	icon_state = "flag"
 	flagtype = /obj/item/flag
 
-/obj/item/flag/afterattack(var/atom/A, var/mob/user, var/adjacent, clickparams)
+/obj/item/flag/afterattack(var/atom/A, var/mob/user, adjacent, clickparams)
 	if (!adjacent)
 		return
 

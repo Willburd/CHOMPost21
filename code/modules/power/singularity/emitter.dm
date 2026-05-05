@@ -243,7 +243,7 @@
 	..()
 	return
 
-/obj/machinery/power/emitter/emag_act(var/remaining_charges, mob/user)
+/obj/machinery/power/emitter/emag_act(remaining_charges, mob/user)
 	if(!emagged)
 		locked = 0
 		emagged = 1

@@ -292,7 +292,7 @@
 	..() // call parent because we moved behavior to parent
 
 // Get rank from ID, ID inside PDA, PDA, ID in wallet, etc.
-/mob/living/carbon/human/proc/get_authentification_rank(var/if_no_id = "No id", if_no_job = "No job")
+/mob/living/carbon/human/proc/get_authentification_rank(if_no_id = "No id", if_no_job = "No job")
 	var/obj/item/pda/pda = wear_id
 	if (istype(pda))
 		if (pda.id)
@@ -308,7 +308,7 @@
 
 //gets assignment from ID or ID inside PDA or PDA itself
 //Useful when player do something with computers
-/mob/living/carbon/human/proc/get_assignment(var/if_no_id = "No id", if_no_job = "No job")
+/mob/living/carbon/human/proc/get_assignment(if_no_id = "No id", if_no_job = "No job")
 	var/obj/item/pda/pda = wear_id
 	if (istype(pda))
 		if (pda.id)
@@ -381,7 +381,7 @@
 
 //Removed the horrible safety parameter. It was only being used by ninja code anyways.
 //Now checks siemens_coefficient of the affected area by default
-/mob/living/carbon/human/electrocute_act(var/shock_damage, var/obj/source, var/siemens_coeff = 1.0, var/def_zone = null, stun)
+/mob/living/carbon/human/electrocute_act(var/shock_damage, var/obj/source, var/siemens_coeff = 1.0, def_zone = null, stun)
 
 	if(SEND_SIGNAL(src, COMSIG_BEING_ELECTROCUTED, shock_damage, source, siemens_coeff, def_zone, stun) & COMPONENT_CARBON_CANCEL_ELECTROCUTE)
 		return 0	// Cancelled by a component
@@ -821,7 +821,7 @@
 
 //Used by various things that knock people out by applying blunt trauma to the head.
 //Checks that the species has a "head" (brain containing organ) and that hit_zone refers to it.
-/mob/living/carbon/human/proc/headcheck(var/target_zone, brain_tag = O_BRAIN)
+/mob/living/carbon/human/proc/headcheck(target_zone, brain_tag = O_BRAIN)
 
 	var/obj/item/organ/affecting = internal_organs_by_name[brain_tag]
 
@@ -1393,7 +1393,7 @@
 		W.message = message
 		W.add_fingerprint(src)
 
-/mob/living/carbon/human/can_inject(var/mob/user, var/error_msg, var/target_zone, ignore_thickness = FALSE)
+/mob/living/carbon/human/can_inject(var/mob/user, var/error_msg, target_zone, ignore_thickness = FALSE)
 	. = 1
 
 	if(!target_zone)
@@ -1559,7 +1559,7 @@
 		to_chat(S, span_danger("[U] pops your [current_limb.joint] back in!"))
 	current_limb.relocate()
 
-/mob/living/carbon/human/drop_from_inventory(var/obj/item/W, atom/target = null)
+/mob/living/carbon/human/drop_from_inventory(obj/item/W, atom/target = null)
 	if(W in organs)
 		return FALSE
 	if(isnull(target) && isdisposalpacket(src.loc))
@@ -1817,7 +1817,7 @@
 
 
 // Drag damage is handled in a parent
-/mob/living/carbon/human/dragged(var/mob/living/dragger, oldloc, trigged_bleeding)
+/mob/living/carbon/human/dragged(mob/living/dragger, oldloc, trigged_bleeding)
 	if(..())
 		if(species?.flags & NO_BLOOD)
 			return

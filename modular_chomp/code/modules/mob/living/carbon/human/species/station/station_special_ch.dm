@@ -3,7 +3,7 @@
 	var/datum/species/S = GLOB.all_species[base_species]
 	return S.get_bodytype(H)
 
-/datum/species/xenochimera/get_icobase(var/mob/living/carbon/human/H, get_deform)
+/datum/species/xenochimera/get_icobase(mob/living/carbon/human/H, get_deform)
 	if(!H || base_species == name) return ..()
 	var/datum/species/S = GLOB.all_species[base_species]
 	return S.get_icobase(H, get_deform)

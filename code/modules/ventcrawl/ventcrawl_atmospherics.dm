@@ -30,7 +30,7 @@
 		return
 	ventcrawl_to(user,findConnecting(direction, user.ventcrawl_layer),direction)
 
-/obj/machinery/atmospherics/proc/ventcrawl_to(var/mob/living/user, var/obj/machinery/atmospherics/target_move, direction)
+/obj/machinery/atmospherics/proc/ventcrawl_to(var/mob/living/user, obj/machinery/atmospherics/target_move, direction)
 	if(target_move)
 		if(is_type_in_list(target_move, GLOB.ventcrawl_machinery) && target_move.can_crawl_through())
 			user.remove_ventcrawl()

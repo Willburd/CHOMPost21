@@ -86,7 +86,7 @@ VIRGO3B_TURF_CREATE(/turf/simulated/floor/outdoors/rocks)
 	shock_area = locate(shock_area)
 
 // Walking on maglev tracks will shock you! Horray!
-/turf/simulated/floor/maglev/Entered(var/atom/movable/AM, atom/old_loc)
+/turf/simulated/floor/maglev/Entered(atom/movable/AM, atom/old_loc)
 	if(isliving(AM) && !(AM.is_incorporeal()) && prob(50))
 		track_zap(AM)
 /turf/simulated/floor/maglev/attack_hand(mob/user)

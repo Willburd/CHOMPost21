@@ -64,7 +64,7 @@
 
 	var/wiki_flag = 0
 
-/datum/recipe/proc/check_reagents(var/datum/reagents/avail_reagents, exact = FALSE)
+/datum/recipe/proc/check_reagents(datum/reagents/avail_reagents, exact = FALSE)
 	if(!reagents || !reagents.len)
 		return TRUE
 
@@ -83,7 +83,7 @@
 		return FALSE
 	return TRUE
 
-/datum/recipe/proc/check_fruit(var/obj/container, exact = FALSE)
+/datum/recipe/proc/check_fruit(obj/container, exact = FALSE)
 	if (!fruit || !fruit.len)
 		return TRUE
 
@@ -106,7 +106,7 @@
 					break
 	return .
 
-/datum/recipe/proc/check_items(var/obj/container as obj, exact = FALSE)
+/datum/recipe/proc/check_items(obj/container as obj, exact = FALSE)
 	if(!items || !items.len)
 		return TRUE
 
@@ -147,7 +147,7 @@
 	return .
 
 //This is called on individual items within the container.
-/datum/recipe/proc/check_coating(var/obj/O, exact = FALSE)
+/datum/recipe/proc/check_coating(obj/O, exact = FALSE)
 	if(!istype(O,/obj/item/reagent_containers/food/snacks))
 		return TRUE //Only snacks can be battered
 
@@ -315,7 +315,7 @@
 // When exact is false, extraneous ingredients are ignored
 // When exact is true, extraneous ingredients will fail the recipe
 // In both cases, the full set of required ingredients is still needed
-/proc/select_recipe(var/list/datum/recipe/available_recipes, var/obj/obj as obj, exact)
+/proc/select_recipe(var/list/datum/recipe/available_recipes, obj/obj as obj, exact)
 	var/highest_count = 0
 	var/count = 0
 	for (var/datum/recipe/recipe in available_recipes)

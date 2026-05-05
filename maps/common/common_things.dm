@@ -100,7 +100,7 @@
 	shock_area = locate(shock_area)
 
 // Walking on maglev tracks will shock you! Horray!
-/turf/simulated/floor/maglev/Entered(var/atom/movable/AM, atom/old_loc)
+/turf/simulated/floor/maglev/Entered(atom/movable/AM, atom/old_loc)
 	if(!isliving(AM) || prob(50))
 		return
 	if(locate(/obj/structure/catwalk) in src) // safe to walk over as a bridge!

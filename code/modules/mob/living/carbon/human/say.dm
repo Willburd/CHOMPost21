@@ -67,7 +67,7 @@
 	// NORMIE
 	return ..()
 
-/mob/living/carbon/human/say_understands(var/mob/other, datum/language/speaking = null)
+/mob/living/carbon/human/say_understands(mob/other, datum/language/speaking = null)
 	if(has_brain_worms()) //Brain worms translate everything. Even mice and alien speak.
 		return TRUE
 

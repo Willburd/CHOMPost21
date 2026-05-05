@@ -589,7 +589,7 @@
 	return result
 
 //Helper proc used by various tools for repairing robot limbs
-/obj/item/organ/external/proc/robo_repair(var/repair_amount, var/damage_type, damage_desc, obj/item/tool, mob/living/user)
+/obj/item/organ/external/proc/robo_repair(var/repair_amount, damage_type, damage_desc, obj/item/tool, mob/living/user)
 	if((src.robotic < ORGAN_ROBOT))
 		return 0
 
@@ -697,7 +697,7 @@ This function completely restores a damaged organ to perfect condition.
 		I.remove_rejuv()
 	..()
 
-/obj/item/organ/external/proc/createwound(var/type = CUT, damage)
+/obj/item/organ/external/proc/createwound(type = CUT, damage)
 	if(damage == 0) return
 
 	//moved this before the open_wound check so that having many small wounds for example doesn't somehow protect you from taking internal damage (because of the return)
@@ -1014,7 +1014,7 @@ Note that amputating the affected organ does in fact remove the infection from t
 ****************************************************/
 
 //Handles dismemberment
-/obj/item/organ/external/proc/droplimb(var/clean, var/disintegrate = DROPLIMB_EDGE, ignore_children = null)
+/obj/item/organ/external/proc/droplimb(var/clean, disintegrate = DROPLIMB_EDGE, ignore_children = null)
 
 	if(cannot_amputate || !owner)
 		return
@@ -1307,7 +1307,7 @@ Note that amputating the affected organ does in fact remove the infection from t
 		return 1
 	return 0
 
-/obj/item/organ/external/robotize(var/company, var/skip_prosthetics = 0, keep_organs = 0)
+/obj/item/organ/external/robotize(var/company, skip_prosthetics = 0, keep_organs = 0)
 
 	if(robotic >= ORGAN_ROBOT)
 		return
@@ -1389,7 +1389,7 @@ Note that amputating the affected organ does in fact remove the infection from t
 /obj/item/organ/external/proc/is_malfunctioning()
 	return ((robotic >= ORGAN_ROBOT) && (brute_dam + burn_dam) >= min_broken_damage*0.83 && prob(brute_dam + burn_dam)) //VOREStation Edit - Makes robotic limb damage scalable
 
-/obj/item/organ/external/proc/embed(var/obj/item/W, silent = 0)
+/obj/item/organ/external/proc/embed(obj/item/W, silent = 0)
 	if(!owner || loc != owner)
 		return
 	if(SEND_SIGNAL(owner, COMSIG_EMBED_OBJECT) & COMSIG_CANCEL_EMBED) //Normally we'd let this proc continue on, but it's much less time consumptive to just do a godmode check here.
@@ -1406,7 +1406,7 @@ Note that amputating the affected organ does in fact remove the infection from t
 		H.drop_from_inventory(W)
 	W.loc = owner
 
-/obj/item/organ/external/removed(var/mob/living/user, ignore_children = 0)
+/obj/item/organ/external/removed(mob/living/user, ignore_children = 0)
 	if(!owner)
 		return
 	var/is_robotic = robotic >= ORGAN_ROBOT

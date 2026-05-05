@@ -149,7 +149,7 @@
 	return
 
 //Called when installed from a disk
-/datum/nifsoft/proc/disk_install(var/mob/living/carbon/human/target,mob/living/carbon/human/user)
+/datum/nifsoft/proc/disk_install(mob/living/carbon/human/target,mob/living/carbon/human/user)
 	return TRUE
 
 //Status text for menu

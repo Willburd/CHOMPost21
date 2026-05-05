@@ -51,7 +51,7 @@
 
 	name = "Mulebot #[suffix]"
 
-/mob/living/bot/mulebot/MouseDrop_T(var/atom/movable/C, mob/user)
+/mob/living/bot/mulebot/MouseDrop_T(atom/movable/C, mob/user)
 	if(user.stat)
 		return
 
@@ -140,7 +140,7 @@
 			safety = !safety
 			. = TRUE
 
-/mob/living/bot/mulebot/attackby(var/obj/item/O, mob/user)
+/mob/living/bot/mulebot/attackby(obj/item/O, mob/user)
 	..()
 	update_icons()
 
@@ -166,7 +166,7 @@
 		if("Stop")
 			paused = 1
 
-/mob/living/bot/mulebot/emag_act(var/remaining_charges, user)
+/mob/living/bot/mulebot/emag_act(remaining_charges, user)
 	locked = !locked
 	to_chat(user, span_notice("You [locked ? "lock" : "unlock"] the mulebot's controls!"))
 	flick("mulebot-emagged", src)
@@ -243,7 +243,7 @@
 
 		blood_splatter(src, M, 1)
 
-/mob/living/bot/mulebot/relaymove(var/mob/user, direction)
+/mob/living/bot/mulebot/relaymove(mob/user, direction)
 	if(load == user)
 		unload(direction)
 

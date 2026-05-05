@@ -680,7 +680,7 @@
 				logs--
 				break
 
-/obj/machinery/telecomms/server/proc/add_entry(var/content, input)
+/obj/machinery/telecomms/server/proc/add_entry(content, input)
 	var/datum/comm_log_entry/log = new
 	var/identifier = num2text( rand(-1000,1000) + world.time )
 	log.name = "[input] ([md5(identifier)])"
@@ -702,7 +702,7 @@
 	var/input_type = "Speech File"
 
 //Generic telecomm connectivity test proc
-/proc/can_telecomm(var/atom/A, var/atom/B, ad_hoc = FALSE)
+/proc/can_telecomm(var/atom/A, atom/B, ad_hoc = FALSE)
 	if(!A || !B)
 		log_mapping("can_telecomm(): Undefined endpoints!")
 		return FALSE

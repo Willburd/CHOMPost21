@@ -274,7 +274,7 @@
 //
 //	Proc for applying vore preferences, given bellies
 //
-/mob/proc/copy_from_prefs_vr(var/bellies = TRUE, full_vorgans = FALSE) // full_vorgans var to bypass 1-belly load optimization.
+/mob/proc/copy_from_prefs_vr(bellies = TRUE, full_vorgans = FALSE) // full_vorgans var to bypass 1-belly load optimization.
 	if(!client || !client.prefs_vr)
 		to_chat(src,span_warning("You attempted to apply your vore prefs but somehow you're in this character without a client.prefs_vr variable. Tell a dev."))
 		return FALSE
@@ -379,7 +379,7 @@
 //
 // Release everything in every vore organ
 //
-/mob/living/proc/release_vore_contents(var/include_absorbed = TRUE, silent = FALSE)
+/mob/living/proc/release_vore_contents(include_absorbed = TRUE, silent = FALSE)
 	for(var/obj/belly/B as anything in vore_organs)
 		B.release_all_contents(include_absorbed, silent)
 
@@ -781,7 +781,7 @@
 	gas = list(
 		GAS_CH4 = 100)
 
-/mob/living/proc/feed_grabbed_to_self_falling_nom(var/mob/living/user, mob/living/prey)
+/mob/living/proc/feed_grabbed_to_self_falling_nom(mob/living/user, mob/living/prey)
 	if(user.is_incorporeal())
 		return FALSE
 	var/belly = user.vore_selected

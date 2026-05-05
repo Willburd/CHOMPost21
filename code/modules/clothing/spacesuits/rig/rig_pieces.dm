@@ -88,7 +88,7 @@
 		return
 	..()
 
-/obj/item/clothing/suit/space/rig/attackby(var/obj/item/I, mob/living/M)
+/obj/item/clothing/suit/space/rig/attackby(obj/item/I, mob/living/M)
 	if(istype(I, /obj/item/material/knife/tacknife))
 		if(tacknife)
 			return
@@ -104,7 +104,7 @@
 /obj/item/clothing/head/helmet/space/rig/proc/prevent_track()
 	return 0
 
-/obj/item/clothing/gloves/gauntlets/rig/Touch(var/atom/A, proximity)
+/obj/item/clothing/gloves/gauntlets/rig/Touch(atom/A, proximity)
 
 	if(!A || !proximity)
 		return 0

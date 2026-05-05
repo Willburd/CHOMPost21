@@ -47,7 +47,7 @@
 				D = pick(disposals)
 
 // For admin abuse
-/area/proc/cult_spam( var/list/text_set = null, turf/T = null)
+/area/proc/cult_spam( list/text_set = null, turf/T = null)
 	if(T)
 		var/num_doodles = 0
 		for(var/obj/effect/decal/cleanable/blood/writing/W in T)

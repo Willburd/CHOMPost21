@@ -108,7 +108,7 @@ GLOBAL_LIST_BOILERPLATE(all_singularities, /obj/singularity)
 	else
 		dissipate_track++
 
-/obj/singularity/proc/expand(var/force_size = 0, growing = 1)
+/obj/singularity/proc/expand(force_size = 0, growing = 1)
 	if(current_size == STAGE_SUPER)//if this is happening, this is an error
 		message_admins("expand() was called on a super singulo. This should not happen. Contact a coder immediately!")
 		return
@@ -307,7 +307,7 @@ GLOBAL_LIST_BOILERPLATE(all_singularities, /obj/singularity)
 		last_failed_movement = movement_dir
 	return 0
 
-/obj/singularity/proc/check_turfs_in(var/direction = 0, step = 0)
+/obj/singularity/proc/check_turfs_in(direction = 0, step = 0)
 	if(!direction)
 		return 0
 	var/steps = 0

@@ -377,7 +377,7 @@
 /turf/proc/can_engrave()
 	return FALSE
 
-/turf/proc/try_graffiti(var/mob/vandal, obj/item/tool, click_parameters)
+/turf/proc/try_graffiti(mob/vandal, obj/item/tool, click_parameters)
 
 	if(!tool || !tool.sharp || !can_engrave()) //CHOMP Edit
 		return FALSE

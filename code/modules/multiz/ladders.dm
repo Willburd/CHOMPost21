@@ -135,7 +135,7 @@
 /mob/observer/dead/may_climb_ladders(ladder)
 	return TRUE
 
-/obj/structure/ladder/proc/climbLadder(var/mob/M, obj/target_ladder)
+/obj/structure/ladder/proc/climbLadder(mob/M, obj/target_ladder)
 	var/direction = (target_ladder == target_up ? "up" : "down")
 	M.visible_message(span_infoplain(span_bold("\The [M]") + " begins climbing [direction] \the [src]!"),
 		span_info("You begin climbing [direction] \the [src]!"),

@@ -1,4 +1,4 @@
-/obj/proc/analyze_gases(var/atom/A, mob/user)
+/obj/proc/analyze_gases(atom/A, mob/user)
 	if(src != A)
 		user.visible_message(span_notice("\The [user] has used \an [src] on \the [A]"))
 
@@ -13,7 +13,7 @@
 	to_chat(user, span_warning("Your [src] flashes a red light as it fails to analyze \the [A]."))
 	return 0
 
-/proc/atmosanalyzer_scan(var/atom/target, var/datum/gas_mixture/mixture, mob/user)
+/proc/atmosanalyzer_scan(var/atom/target, datum/gas_mixture/mixture, mob/user)
 	var/list/results = list()
 
 	if(mixture && mixture.total_moles > 0)

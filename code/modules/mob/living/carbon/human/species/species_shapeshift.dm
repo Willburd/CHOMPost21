@@ -20,7 +20,7 @@ GLOBAL_LIST_EMPTY(wrapped_species_by_ref)
 /datum/species/shapeshifter/get_valid_shapeshifter_forms(mob/living/carbon/human/H)
 	return list(vanity_base_fit)|valid_transform_species
 
-/datum/species/shapeshifter/get_icobase(var/mob/living/carbon/human/H, get_deform)
+/datum/species/shapeshifter/get_icobase(mob/living/carbon/human/H, get_deform)
 	if(!H) return ..(null, get_deform)
 	var/datum/species/S = GLOB.all_species[GLOB.wrapped_species_by_ref["\ref[H]"]]
 	return S.get_icobase(H, get_deform)
@@ -559,7 +559,7 @@ GLOBAL_LIST_EMPTY(wrapped_species_by_ref)
 	update_icons_body()
 	update_hair()
 
-/mob/living/carbon/human/proc/shapeshifter_change_shape(var/new_species = null, visible = TRUE) //not sure if this needs to be moved to a separate file but
+/mob/living/carbon/human/proc/shapeshifter_change_shape(new_species = null, visible = TRUE) //not sure if this needs to be moved to a separate file but
 	if(!new_species)
 		return
 

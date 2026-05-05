@@ -81,7 +81,7 @@
 		return 1
 	return 0
 
-/obj/item/gun/energy/particle/proc/pressuremalfunction(severity, var/mob/user, turf/T)
+/obj/item/gun/energy/particle/proc/pressuremalfunction(severity, mob/user, turf/T)
 	if (severity <= 10) // just doesn't fire. 10% chance in 100 atmo.
 		user.visible_message(span_warning("*click*"), span_danger("\The [src] jams."))
 		playsound(src, 'sound/weapons/empty.ogg', 100, 1)

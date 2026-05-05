@@ -172,7 +172,7 @@
 		update_icon()
 		card.setEmotion(card.current_emotion)
 
-/mob/living/silicon/pai/proc/hug(var/mob/living/silicon/pai/H, mob/living/target)
+/mob/living/silicon/pai/proc/hug(mob/living/silicon/pai/H, mob/living/target)
 
 	var/t_him = "them"
 	if(ishuman(target))

@@ -78,7 +78,7 @@
 	init_forensic_data().add_hiddenprints(M)
 
 /// Forensics: Adds blood dna to an object, this also usually gives the object a bloody overlay, but that is handled by the object itself. Returns true if this is the first time this dna is being added to this object.
-/atom/proc/add_blooddna(var/datum/dna/dna_data,mob/M)
+/atom/proc/add_blooddna(datum/dna/dna_data,mob/M)
 	SHOULD_NOT_OVERRIDE(TRUE)
 	return init_forensic_data().add_blooddna(dna_data,M)
 

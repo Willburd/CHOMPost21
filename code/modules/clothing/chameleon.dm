@@ -20,7 +20,7 @@
 
 	return copy //for inheritance
 
-/proc/generate_chameleon_choices(var/basetype, blacklist=list())
+/proc/generate_chameleon_choices(basetype, blacklist=list())
 	. = list()
 
 	var/i = 1 //in case there is a collision with both name AND icon_state

@@ -71,7 +71,7 @@ GLOBAL_LIST_EMPTY(station_waypoints) //Create global list for station waypoints,
 	. = ..()
 	announce_atc(AM,going = TRUE)
 
-/obj/effect/overmap/visitable/sector/Soluna_Nexus/announce_atc(var/atom/movable/AM, going = FALSE)
+/obj/effect/overmap/visitable/sector/Soluna_Nexus/announce_atc(atom/movable/AM, going = FALSE)
 	if(istype(AM, /obj/effect/overmap/visitable/ship/simplemob))
 		if(world.time < mob_announce_cooldown)
 			return
@@ -155,7 +155,7 @@ GLOBAL_LIST_EMPTY(station_waypoints) //Create global list for station waypoints,
 	. = ..()
 	announce_atc(AM,going = TRUE)
 
-/obj/effect/overmap/visitable/sector/Southern_Cross/announce_atc(var/atom/movable/AM, going = FALSE)
+/obj/effect/overmap/visitable/sector/Southern_Cross/announce_atc(atom/movable/AM, going = FALSE)
 	if(istype(AM, /obj/effect/overmap/visitable/ship/simplemob))
 		if(world.time < mob_announce_cooldown)
 			return
@@ -243,7 +243,7 @@ GLOBAL_LIST_EMPTY(station_waypoints) //Create global list for station waypoints,
 	. = ..()
 	announce_atc(AM,going = TRUE)
 
-/obj/effect/overmap/visitable/sector/Cetus/announce_atc(var/atom/movable/AM, going = FALSE)
+/obj/effect/overmap/visitable/sector/Cetus/announce_atc(atom/movable/AM, going = FALSE)
 	if(istype(AM, /obj/effect/overmap/visitable/ship/simplemob))
 		if(world.time < mob_announce_cooldown)
 			return

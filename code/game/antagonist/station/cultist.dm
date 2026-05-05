@@ -101,7 +101,7 @@ GLOBAL_DATUM(cult, /datum/antagonist/cultist)
 	to_chat(cult_mob, span_warning("You remember one thing from the dark teachings of your master... [wordexp]"))
 	cult_mob.mind.store_memory("You remember that <B>[wordexp]</B>", 0, 0)
 
-/datum/antagonist/cultist/remove_antagonist(var/datum/mind/player, var/show_message, implanted)
+/datum/antagonist/cultist/remove_antagonist(var/datum/mind/player, show_message, implanted)
 	if(!..())
 		return 0
 	to_chat(player.current, span_danger("An unfamiliar white light flashes through your mind, cleansing the taint of the dark-one and the memories of your time as his servant with it."))
@@ -116,7 +116,7 @@ GLOBAL_DATUM(cult, /datum/antagonist/cultist)
 		if(player.current && !istype(player.current, /mob/living/simple_mob/construct))
 			player.current.add_language(LANGUAGE_CULT)
 
-/datum/antagonist/cultist/remove_antagonist(var/datum/mind/player, var/show_message, implanted)
+/datum/antagonist/cultist/remove_antagonist(var/datum/mind/player, show_message, implanted)
 	. = ..()
 	if(. && player.current && !istype(player.current, /mob/living/simple_mob/construct))
 		player.current.remove_language(LANGUAGE_CULT)

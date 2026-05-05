@@ -21,7 +21,7 @@
 	channel_name="remember to set your name!"
 	announcement = null
 
-/datum/feed_channel/load_from_file/New(var/server_file_path,datum/feed_network/net)
+/datum/feed_channel/load_from_file/New(server_file_path,datum/feed_network/net)
 	// File path to HTML file that will be loaded on server start. Example: 'news_feed/filename.html'. Use the /news_feed/ folder!
 	..()
 	var/stored_data = file2text(server_file_path)
@@ -33,7 +33,7 @@
 			var/datum/feed_message/load_from_file/scanmessage = new(subjson)
 			net.insert_message_in_channel(src, scanmessage) //Adding message to the network's appropriate feed_channel
 
-/datum/feed_network/proc/CreateFeedChannel_FromFile(var/channel_name, var/author, server_file_path)
+/datum/feed_network/proc/CreateFeedChannel_FromFile(var/channel_name, author, server_file_path)
 	var/datum/feed_channel/load_from_file/newChannel = new /datum/feed_channel/load_from_file(server_file_path,src)
 	newChannel.channel_name = channel_name
 	newChannel.author = author

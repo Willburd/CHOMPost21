@@ -107,7 +107,7 @@
 	if(wrapped)
 		return wrapped.attack_self(user)
 
-/obj/item/gripper/attackby(var/obj/item/O, mob/user)
+/obj/item/gripper/attackby(obj/item/O, mob/user)
 	if(is_in_use(user))
 		return FALSE
 

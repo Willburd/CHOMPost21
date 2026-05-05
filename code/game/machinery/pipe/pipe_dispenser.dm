@@ -109,7 +109,7 @@
 				VARSET_IN(src, wait, FALSE, 15)
 
 
-/obj/machinery/pipedispenser/attackby(var/obj/item/W as obj, mob/user as mob)
+/obj/machinery/pipedispenser/attackby(obj/item/W as obj, mob/user as mob)
 	src.add_fingerprint(user)
 	if (istype(W, /obj/item/pipe) || istype(W, /obj/item/pipe_meter))
 		to_chat(user, span_notice("You put [W] back in [src]."))

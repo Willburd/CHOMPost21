@@ -22,7 +22,7 @@
 	health = maxHealth
 	update_icon()
 
-/obj/effect/blob/CanPass(var/atom/movable/mover, turf/target)
+/obj/effect/blob/CanPass(atom/movable/mover, turf/target)
 	return FALSE
 
 /obj/effect/blob/ex_act(severity)
@@ -108,7 +108,7 @@
 		return
 	new expandType(T, min(health, 30))
 
-/obj/effect/blob/proc/pulse(var/forceLeft, list/dirs)
+/obj/effect/blob/proc/pulse(forceLeft, list/dirs)
 	regen()
 	animate(src, color = "#FF0000", time=1)
 	animate(color = "#FFFFFF", time=4, easing=ELASTIC_EASING)
@@ -133,7 +133,7 @@
 			take_damage(Proj.damage / fire_resist)
 	return 0
 
-/obj/effect/blob/attackby(var/obj/item/W, mob/user)
+/obj/effect/blob/attackby(obj/item/W, mob/user)
 	user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
 	playsound(src, 'sound/effects/attackblob.ogg', 50, 1)
 	visible_message(span_danger("\The [src] has been attacked with \the [W][(user ? " by [user]." : ".")]"))
@@ -205,5 +205,5 @@
 	else
 		icon_state = "blob_damaged"
 
-/obj/effect/blob/shield/CanPass(var/atom/movable/mover, turf/target)
+/obj/effect/blob/shield/CanPass(atom/movable/mover, turf/target)
 	return !density

@@ -177,7 +177,7 @@
 			hunger = 0
 			food = null
 
-/mob/living/simple_mob/vore/aggressive/rat/tame/attackby(var/obj/item/O, mob/user) // Feed the rat your food to satisfy it.
+/mob/living/simple_mob/vore/aggressive/rat/tame/attackby(obj/item/O, mob/user) // Feed the rat your food to satisfy it.
 	if(istype(O, /obj/item/reagent_containers/food/snacks))
 		qdel(O)
 		playsound(src,'sound/items/eatfood.ogg', rand(10,50), 1)

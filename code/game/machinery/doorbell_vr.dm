@@ -93,7 +93,7 @@
 	var/delay_time = 0 // Outpost 21 edit - Dinger delay
 	flags = WALL_ITEM
 
-/obj/machinery/button/doorbell/Initialize(mapload, var/dir, building = FALSE)
+/obj/machinery/button/doorbell/Initialize(mapload, dir, building = FALSE)
 	. = ..()
 	if(building)
 		pixel_x = (dir & 3)? 0 : (dir == 4 ? -32 : 32)

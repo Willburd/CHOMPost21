@@ -42,7 +42,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/landmark/map_data)
 	for(var/level = z, HasAbove(level), level++)
 		. |= level+1
 
-/proc/AreConnectedZLevels(var/zA, zB)
+/proc/AreConnectedZLevels(zA, zB)
 	return zA == zB || (zB in GetConnectedZlevels(zA))
 
 /proc/get_zstep(ref, dir)

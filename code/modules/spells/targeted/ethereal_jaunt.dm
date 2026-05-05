@@ -57,11 +57,11 @@
 			qdel(animation)
 			qdel(holder)
 
-/datum/spell/targeted/ethereal_jaunt/proc/jaunt_disappear(var/atom/movable/overlay/animation, mob/living/target)
+/datum/spell/targeted/ethereal_jaunt/proc/jaunt_disappear(atom/movable/overlay/animation, mob/living/target)
 	animation.icon_state = "liquify"
 	flick("liquify",animation)
 
-/datum/spell/targeted/ethereal_jaunt/proc/jaunt_reappear(var/atom/movable/overlay/animation, mob/living/target)
+/datum/spell/targeted/ethereal_jaunt/proc/jaunt_reappear(atom/movable/overlay/animation, mob/living/target)
 	flick("reappear",animation)
 
 /datum/spell/targeted/ethereal_jaunt/proc/jaunt_steam(mobloc)

@@ -83,7 +83,7 @@
 	if(prob(23))
 		H.drop_item()
 
-/datum/element/allergy/proc/allergy_gib(var/mob/living/carbon/human/H,remaining)
+/datum/element/allergy/proc/allergy_gib(mob/living/carbon/human/H,remaining)
 	SHOULD_NOT_OVERRIDE(TRUE)
 	PRIVATE_PROC(TRUE)
 	if(remaining > 0)

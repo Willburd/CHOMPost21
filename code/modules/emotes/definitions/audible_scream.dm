@@ -14,13 +14,13 @@
 				"volchannel" = VOLUME_CHANNEL_SPECIES_SOUNDS
 			)
 
-/datum/decl/emote/audible/scream/get_emote_message_1p(var/atom/user, var/atom/target, extra_params)
+/datum/decl/emote/audible/scream/get_emote_message_1p(var/atom/user, atom/target, extra_params)
 	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
 		return "You [H.species.scream_verb_1p]!"
 	. = ..()
 
-/datum/decl/emote/audible/scream/get_emote_message_3p(var/atom/user, var/atom/target, extra_params)
+/datum/decl/emote/audible/scream/get_emote_message_3p(var/atom/user, atom/target, extra_params)
 	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
 		return "[H.species.scream_verb_3p]!"

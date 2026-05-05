@@ -174,7 +174,7 @@
 		healing.expire()
 	return ..()
 
-/mob/living/simple_mob/protean_blob/say_understands(var/mob/other, datum/language/speaking = null)
+/mob/living/simple_mob/protean_blob/say_understands(mob/other, datum/language/speaking = null)
 	// The parent of this proc and its parent are SHAMS and should be rewritten, but I'm not up to it right now.
 	if(!speaking)
 		return TRUE // can understand common, they're like, a normal person thing
@@ -249,19 +249,19 @@
 			healths.icon_state = "health7"
 
 // All the damage and such to the blob translates to the human
-/mob/living/simple_mob/protean_blob/apply_effect(var/effect = 0, var/effecttype = STUN, var/blocked = 0, check_protection = 1)
+/mob/living/simple_mob/protean_blob/apply_effect(var/effect = 0, var/effecttype = STUN, blocked = 0, check_protection = 1)
 	if(humanform)
 		return humanform.apply_effect(effect, effecttype, blocked, check_protection)
 	else
 		return ..()
 
-/mob/living/simple_mob/protean_blob/adjustBruteLoss(var/amount,include_robo)
+/mob/living/simple_mob/protean_blob/adjustBruteLoss(amount,include_robo)
 	if(humanform)
 		return humanform.adjustBruteLoss(amount)
 	else
 		return ..()
 
-/mob/living/simple_mob/protean_blob/adjustFireLoss(var/amount,include_robo)
+/mob/living/simple_mob/protean_blob/adjustFireLoss(amount,include_robo)
 	if(humanform)
 		return humanform.adjustFireLoss(amount)
 	else
@@ -392,7 +392,7 @@
 	else
 		..()
 
-/mob/living/simple_mob/protean_blob/attackby(var/obj/item/O, mob/user)
+/mob/living/simple_mob/protean_blob/attackby(obj/item/O, mob/user)
 	if(refactory && istype(O,/obj/item/stack/material))
 		var/obj/item/stack/material/S = O
 		var/substance = S.material.name
@@ -522,7 +522,7 @@
 		to_chat(src, span_warning("You must remain still to blobform!"))
 
 //For some reason, there's no way to force drop all the mobs grabbed. This ought to fix that. And be moved elsewhere. Call with caution, doesn't handle cycles.
-/proc/remove_micros(var/source, mob/root)
+/proc/remove_micros(source, mob/root)
 	for(var/obj/item/I in source)
 		remove_micros(I, root) //Recursion. I'm honestly depending on there being no containment loop, but at the cost of performance that can be fixed too.
 		if(istype(I, /obj/item/holder))
@@ -633,7 +633,7 @@
 	if(C)
 		C.statpanel = "Protean"
 
-/mob/living/simple_mob/protean_blob/ClickOn(var/atom/A, params)
+/mob/living/simple_mob/protean_blob/ClickOn(atom/A, params)
 	if(istype(loc, /obj/item/rig/protean))
 		HardsuitClickOn(A)
 	..()
@@ -641,7 +641,7 @@
 /mob/living/simple_mob/protean_blob/can_use_rig()
 	return 1
 
-/mob/living/simple_mob/protean_blob/HardsuitClickOn(var/atom/A, alert_ai = 0)
+/mob/living/simple_mob/protean_blob/HardsuitClickOn(atom/A, alert_ai = 0)
 	if(istype(loc, /obj/item/rig/protean))
 		var/obj/item/rig/protean/prig = loc
 		if(istype(prig) && !prig.offline && prig.selected_module)

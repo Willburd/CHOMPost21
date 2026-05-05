@@ -23,7 +23,7 @@ GLOBAL_LIST_EMPTY(env_messages)
 	for(var/tckey in message_list)
 		. += message_list[tckey]
 
-/obj/effect/env_message/proc/add_message(var/tckey, message)
+/obj/effect/env_message/proc/add_message(tckey, message)
 	message_list[tckey] = message
 	update_message()
 

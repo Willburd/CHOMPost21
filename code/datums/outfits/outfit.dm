@@ -87,7 +87,7 @@ GLOBAL_DATUM_INIT(outfits_decls_root, /datum/decl/hierarchy/outfit, new) // Rewu
 		J.toggle()
 		J.toggle_valve()
 
-/datum/decl/hierarchy/outfit/proc/equip(mob/living/carbon/human/H, var/rank, assignment)
+/datum/decl/hierarchy/outfit/proc/equip(mob/living/carbon/human/H, rank, assignment)
 	equip_base(H)
 
 	// Outpost 21 edit begin - Give your rank pin

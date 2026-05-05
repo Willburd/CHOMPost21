@@ -110,7 +110,7 @@
 			if(can_transition_to(state == UAV_PAIRING ? UAV_OFF : UAV_PAIRING, user))
 				return toggle_pairing(user)
 
-/obj/item/uav/attackby(var/obj/item/I, mob/user)
+/obj/item/uav/attackby(obj/item/I, mob/user)
 	// Outpost 21 edit begin - PDA pairing
 	if(istype(I, /obj/item/pda) && state == UAV_PAIRING)
 		var/obj/item/pda/P = I
@@ -162,7 +162,7 @@
 	else
 		return ..()
 
-/obj/item/uav/proc/can_transition_to(var/new_state, mob/user)
+/obj/item/uav/proc/can_transition_to(new_state, mob/user)
 	switch(state) //Current one
 		if(UAV_ON)
 			if(new_state == UAV_OFF || new_state == UAV_PACKED)
@@ -346,7 +346,7 @@
 	CheckHealth()
 	return
 
-/obj/item/uav/attack_generic(var/mob/user, var/damage, attack_verb)
+/obj/item/uav/attack_generic(var/mob/user, damage, attack_verb)
 	visible_message(span_danger("[user] [attack_verb] the [src]!"))
 	playsound(src, 'sound/weapons/smash.ogg', 50, 1)
 	user.do_attack_animation(src)

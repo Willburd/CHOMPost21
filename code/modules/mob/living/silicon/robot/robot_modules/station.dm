@@ -115,7 +115,7 @@
 		for(var/datum/matter_synth/S in synths)
 			S.emp_act(severity, recursive)
 
-/obj/item/robot_module/proc/respawn_consumable(var/mob/living/silicon/robot/R, rate)
+/obj/item/robot_module/proc/respawn_consumable(mob/living/silicon/robot/R, rate)
 	SHOULD_CALL_PARENT(TRUE)
 	if(!LAZYLEN(synths))
 		return
@@ -369,7 +369,7 @@
 	src.modules += new /obj/item/dogborg/sleeper/trauma(src)
 	src.emag += new /obj/item/dogborg/pounce(src)
 
-/obj/item/robot_module/robot/medical/surgeon/respawn_consumable(var/mob/living/silicon/robot/R, amount)
+/obj/item/robot_module/robot/medical/surgeon/respawn_consumable(mob/living/silicon/robot/R, amount)
 
 	var/obj/item/reagent_containers/syringe/S = locate() in src.modules
 	if(S.mode == 2)
@@ -440,7 +440,7 @@
 	src.modules += new /obj/item/dogborg/sleeper(src)
 	src.emag += new /obj/item/dogborg/pounce(src) //Pounce
 
-/obj/item/robot_module/robot/medical/crisis/respawn_consumable(var/mob/living/silicon/robot/R, amount)
+/obj/item/robot_module/robot/medical/crisis/respawn_consumable(mob/living/silicon/robot/R, amount)
 
 	var/obj/item/reagent_containers/syringe/S = locate() in src.modules
 	if(S.mode == 2)
@@ -540,7 +540,7 @@
 	src.modules += new /obj/item/dogborg/sleeper/K9(src) //Eat criminals. Bring them to the brig.
 	src.modules += new /obj/item/dogborg/pounce(src) //Pounce
 
-/obj/item/robot_module/robot/security/respawn_consumable(var/mob/living/silicon/robot/R, amount)
+/obj/item/robot_module/robot/security/respawn_consumable(mob/living/silicon/robot/R, amount)
 	..()
 	var/obj/item/flash/F = locate() in src.modules
 	if(F.broken)
@@ -618,7 +618,7 @@
 
 	src.emag += new /obj/item/dogborg/pounce(src) //Pounce
 
-/obj/item/robot_module/robot/janitor/respawn_consumable(var/mob/living/silicon/robot/R, amount)
+/obj/item/robot_module/robot/janitor/respawn_consumable(mob/living/silicon/robot/R, amount)
 	..()
 	var/obj/item/lightreplacer/LR = locate() in src.modules
 	LR.Charge(R, amount)
@@ -693,7 +693,7 @@
 
 	src.emag += new /obj/item/dogborg/pounce(src) //Pounce
 
-/obj/item/robot_module/robot/clerical/butler/respawn_consumable(var/mob/living/silicon/robot/R, amount)
+/obj/item/robot_module/robot/clerical/butler/respawn_consumable(mob/living/silicon/robot/R, amount)
 	..()
 	var/obj/item/reagent_containers/food/drinks/bottle/small/beer/PB = locate() in src.emag
 	if(PB)
@@ -737,7 +737,7 @@
 	LS.name = "Lube spray"
 	..()
 
-/obj/item/robot_module/robot/clerical/honkborg/respawn_consumable(var/mob/living/silicon/robot/R, amount)
+/obj/item/robot_module/robot/clerical/honkborg/respawn_consumable(mob/living/silicon/robot/R, amount)
 	..()
 	var/obj/item/reagent_containers/spray/LS = locate() in src.emag
 	if(LS)
@@ -852,7 +852,7 @@
 	src.modules += new /obj/item/robotic_multibelt/materials(src)
 	src.emag += new /obj/item/dogborg/pounce(src)
 
-/obj/item/robot_module/robot/research/respawn_consumable(var/mob/living/silicon/robot/R, amount)
+/obj/item/robot_module/robot/research/respawn_consumable(mob/living/silicon/robot/R, amount)
 
 	var/obj/item/reagent_containers/syringe/S = locate() in src.modules
 	if(S.mode == 2)
@@ -949,7 +949,7 @@
 	..()
 	src.modules += new /obj/item/rcd/electric/mounted/borg/lesser(src)
 
-/obj/item/robot_module/drone/respawn_consumable(var/mob/living/silicon/robot/R, amount)
+/obj/item/robot_module/drone/respawn_consumable(mob/living/silicon/robot/R, amount)
 	var/obj/item/lightreplacer/LR = locate() in src.modules
 	LR.Charge(R, amount)
 	..()

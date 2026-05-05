@@ -150,7 +150,7 @@
 
 	add_fingerprint(ui.user)
 
-/obj/machinery/computer/HolodeckControl/emag_act(var/remaining_charges, mob/user as mob)
+/obj/machinery/computer/HolodeckControl/emag_act(remaining_charges, mob/user as mob)
 	playsound(src, 'sound/effects/sparks4.ogg', 75, 1)
 	last_to_emag = user //emag again to change the owner
 	if (!emagged)
@@ -232,7 +232,7 @@
 				T.ex_act(3)
 				T.hotspot_expose(1000,500,1)
 
-/obj/machinery/computer/HolodeckControl/proc/derez(var/obj/obj , silent = 1)
+/obj/machinery/computer/HolodeckControl/proc/derez(obj/obj , silent = 1)
 	holographic_objs.Remove(obj)
 
 	if(obj == null)
@@ -269,7 +269,7 @@
 		update_use_power(USE_POWER_IDLE)
 
 
-/obj/machinery/computer/HolodeckControl/proc/loadProgram(var/prog, check_delay = 1)
+/obj/machinery/computer/HolodeckControl/proc/loadProgram(prog, check_delay = 1)
 	if(!prog)
 		return
 

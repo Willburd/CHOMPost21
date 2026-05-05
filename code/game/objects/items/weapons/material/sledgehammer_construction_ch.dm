@@ -7,7 +7,7 @@
 
 	var/construction_stage = 1
 
-/obj/item/hammer_head/attackby(var/obj/item/thing, mob/user)
+/obj/item/hammer_head/attackby(obj/item/thing, mob/user)
 
 	if(istype(thing, /obj/item/stack/rods) && construction_stage == 1)
 		var/obj/item/stack/rods = thing

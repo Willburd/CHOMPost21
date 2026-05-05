@@ -210,7 +210,7 @@
 #define XENO_DNA "UNKNOWN DNA STRUCTURE"
 #define NOT_HUMAN_DNA "Non-human DNA"
 /// Adds the mob's bloodtype to a UE keyed list, returns true if the key was not present in the list before.
-/datum/forensics_crime/proc/add_blooddna(var/datum/dna/dna_data,mob/M)
+/datum/forensics_crime/proc/add_blooddna(datum/dna/dna_data,mob/M)
 	if(!blood_DNA)
 		blood_DNA = list()
 	// Special alien handling
@@ -252,7 +252,7 @@
 	return TRUE
 
 /// Merges data from another forensics crime datum into this one. Entries with the same key will be merged. Does nothing if the origin datum's list is empty. Supports merging from a list directly as well.
-/datum/forensics_crime/proc/merge_blooddna(var/datum/forensics_crime/origin, list/raw_list = null)
+/datum/forensics_crime/proc/merge_blooddna(datum/forensics_crime/origin, list/raw_list = null)
 	// Copying from a list, blood on a mob's feet is stored as a list outside of forensics data
 	if(raw_list)
 		LAZYOR(blood_DNA,raw_list)

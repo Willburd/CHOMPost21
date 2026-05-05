@@ -14,7 +14,7 @@
 	var/delay_to_try_again = 0 // How long to wait if first attempt fails.  Set to 0 to never try again.
 
 // Call this to get a ghost volunteer.
-/obj/structure/ghost_pod/proc/trigger(var/alert, adminalert)
+/obj/structure/ghost_pod/proc/trigger(alert, adminalert)
 	if(!ghost_query_type)
 		return FALSE
 	if(busy)

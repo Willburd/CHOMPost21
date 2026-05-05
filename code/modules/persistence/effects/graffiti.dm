@@ -8,12 +8,12 @@
 	token["pixel_y"] = istext(token["pixel_y"]) ? text2num(token["pixel_y"]) : token["pixel_y"]
 	return ..() && isnum(token["pixel_x"]) && isnum(token["pixel_y"])
 
-/datum/persistent/graffiti/GetValidTurf(var/turf/T, list/token)
+/datum/persistent/graffiti/GetValidTurf(turf/T, list/token)
 	var/turf/checking_turf = ..()
 	if(istype(checking_turf) && checking_turf.can_engrave())
 		return checking_turf
 
-/datum/persistent/graffiti/CheckTurfContents(var/turf/T, list/token)
+/datum/persistent/graffiti/CheckTurfContents(turf/T, list/token)
 	var/too_much_graffiti = 0
 	for(var/obj/effect/decal/writing/W in .)
 		too_much_graffiti++
@@ -21,7 +21,7 @@
 			return FALSE
 	return TRUE
 
-/datum/persistent/graffiti/CreateEntryInstance(var/turf/creating, list/token)
+/datum/persistent/graffiti/CreateEntryInstance(turf/creating, list/token)
 	var/obj/effect/decal/writing/inst = new /obj/effect/decal/writing(creating, token["age"]+1, token["message"], token["author"])
 	if(token["icon_state"])
 		inst.icon_state = token["icon_state"]
@@ -40,7 +40,7 @@
 	var/obj/effect/decal/writing/save_graffiti = entry
 	return save_graffiti.graffiti_age
 
-/datum/persistent/graffiti/CompileEntry(var/atom/entry, write_file)
+/datum/persistent/graffiti/CompileEntry(atom/entry, write_file)
 	. = ..()
 	var/obj/effect/decal/writing/save_graffiti = entry
 	LAZYADDASSOC(., "author", "[save_graffiti.author ? save_graffiti.author : "unknown"]")
@@ -49,7 +49,7 @@
 	LAZYADDASSOC(., "pixel_x", "[save_graffiti.pixel_x]")
 	LAZYADDASSOC(., "pixel_y", "[save_graffiti.pixel_y]")
 
-/datum/persistent/graffiti/GetAdminDataStringFor(var/thing, var/can_modify, mob/user)
+/datum/persistent/graffiti/GetAdminDataStringFor(var/thing, can_modify, mob/user)
 	var/obj/effect/decal/writing/save_graffiti = thing
 	if(can_modify)
 		. = "<td colspan = 2>[save_graffiti.message]</td><td>[save_graffiti.author]</td><td><a href='byond://?src=\ref[src];[HrefToken()];caller=\ref[user];remove_entry=\ref[thing]'>Destroy</a></td>"

@@ -406,7 +406,7 @@
 	else
 		icon_state = "idle"
 
-/proc/autodoc_surgery_step_select( var/user, var/list/available_surgeries, var/window_desc, window_title )
+/proc/autodoc_surgery_step_select( var/user, var/list/available_surgeries, window_desc, window_title )
 	if(!istype(user,/mob/living/carbon/human/monkey/auto_doc))
 		//More than one possible? Ask them which one.
 		if(available_surgeries.len > 1)
@@ -424,7 +424,7 @@
 				return surgery
 		return null
 
-/proc/autodoc_organ_select( var/user, var/mob/living/carbon/human/target, var/list/named_organ_to_tag_list, var/window_desc, window_title )
+/proc/autodoc_organ_select( var/user, var/mob/living/carbon/human/target, var/list/named_organ_to_tag_list, window_desc, window_title )
 	// named_organ_to_tag_list is in the format "organ's name" -> organ_tag. EX: "Liver" -> "liver"
 	if(istype(user,/mob/living/carbon/human/monkey/auto_doc))
 		var/mob/living/carbon/human/monkey/auto_doc/D = user

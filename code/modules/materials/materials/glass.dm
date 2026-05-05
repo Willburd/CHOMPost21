@@ -20,7 +20,7 @@
 	rod_product = /obj/item/stack/material/glass/reinforced
 	supply_conversion_value = 0.25 // Outpost 21 edit(port) - Added supply sell price. This was missing...
 
-/datum/material/glass/build_windows(var/mob/living/user, obj/item/stack/used_stack)
+/datum/material/glass/build_windows(mob/living/user, obj/item/stack/used_stack)
 
 	if(!user || !used_stack || !created_window || !created_fulltile_window || !window_options.len)
 		return 0

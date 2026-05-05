@@ -1,4 +1,4 @@
-/datum/antagonist/proc/can_become_antag(var/datum/mind/player, ignore_role)
+/datum/antagonist/proc/can_become_antag(datum/mind/player, ignore_role)
 	if(player.current)
 		if(jobban_isbanned(player.current, bantype))
 			return FALSE

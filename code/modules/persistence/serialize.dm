@@ -73,10 +73,10 @@ in their list
 /proc/object_to_json(atom/movable/thing)
 	return json_encode(thing.serialize())
 
-/proc/json_to_object(var/json_data, loc)
+/proc/json_to_object(json_data, loc)
 	return list_to_object(json_decode(json_data), loc)
 
-/proc/list_to_object(var/list/data, loc)
+/proc/list_to_object(list/data, loc)
 	if(!islist(data))
 		throw EXCEPTION("You didn't give me a list, bucko")
 	if(!("type" in data))

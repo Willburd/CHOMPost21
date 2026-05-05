@@ -105,7 +105,7 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Hallucination attackers with AI behaviors
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////
-/mob/proc/create_hallucination_attacker(var/turf/T = null,var/mob/living/carbon/human/clone = null, forced_type = null)
+/mob/proc/create_hallucination_attacker(var/turf/T = null,mob/living/carbon/human/clone = null, forced_type = null)
 	SHOULD_NOT_OVERRIDE(TRUE)
 	if(!client)
 		return null
@@ -151,7 +151,7 @@
 	VAR_PROTECTED/datum/weakref/target = null
 	var/requires_hallucinating = TRUE // Mob will qdel if the target is not hallucinating if this is true
 
-/obj/effect/fake_attacker/human/Initialize(mapload,var/mob/targeting_mob,atom/clone_appearance_from)
+/obj/effect/fake_attacker/human/Initialize(mapload,mob/targeting_mob,atom/clone_appearance_from)
 	. = ..()
 	START_PROCESSING(SSobj, src)
 	set_target(targeting_mob)

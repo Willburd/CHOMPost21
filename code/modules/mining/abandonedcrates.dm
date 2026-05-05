@@ -185,7 +185,7 @@ vorestation edit end */
 			explosion(T, 0, 0, 1, 2)
 			qdel(src)
 
-/obj/structure/closet/crate/secure/loot/emag_act(var/remaining_charges, mob/user)
+/obj/structure/closet/crate/secure/loot/emag_act(remaining_charges, mob/user)
 	if (locked)
 		to_chat(user, span_notice("The crate unlocks!"))
 		locked = 0

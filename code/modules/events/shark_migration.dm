@@ -28,7 +28,7 @@
 	if(count_spawned_sharks() < shark_cap)
 		spawn_fish(rand(3, 3 + severity * 2) - 1, 1, severity + 2)
 
-/datum/event/shark_migration/proc/spawn_fish(var/num_groups, var/group_size_min, var/group_size_max, dir)
+/datum/event/shark_migration/proc/spawn_fish(var/num_groups, var/group_size_min, group_size_max, dir)
 	if(isnull(dir))
 		dir = (victim && prob(80)) ? victim.fore_dir : pick(GLOB.cardinal)
 

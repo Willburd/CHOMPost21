@@ -155,7 +155,7 @@
 			CL = C
 	return CL
 
-/obj/machinery/power/smes/batteryrack/proc/insert_cell(var/obj/item/cell/C, mob/user)
+/obj/machinery/power/smes/batteryrack/proc/insert_cell(obj/item/cell/C, mob/user)
 	if(!istype(C))
 		return 0
 
@@ -213,7 +213,7 @@
 		internal_cells -= C
 	return ..()
 
-/obj/machinery/power/smes/batteryrack/attackby(var/obj/item/W as obj, mob/user as mob)
+/obj/machinery/power/smes/batteryrack/attackby(obj/item/W as obj, mob/user as mob)
 	if(istype(W, /obj/item/cell)) // ID Card, try to insert it.
 		if(insert_cell(W, user))
 			to_chat(user, span_filter_notice("You insert \the [W] into \the [src]."))

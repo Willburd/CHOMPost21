@@ -357,7 +357,7 @@ GLOBAL_LIST_INIT(all_technomancer_assistance, subtypesof(/datum/technomancer/ass
 							break
 		attack_self(H)
 
-/obj/item/technomancer_catalog/attackby(var/atom/movable/AM, mob/user)
+/obj/item/technomancer_catalog/attackby(atom/movable/AM, mob/user)
 	var/turf/T = get_turf(user)
 	if(T.z in using_map.player_levels)
 		to_chat(user, span_danger("You can only refund at your base, it's too late now!"))

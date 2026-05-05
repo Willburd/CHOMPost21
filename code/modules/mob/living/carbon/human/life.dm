@@ -825,7 +825,7 @@
 	breath.update_values()
 	return 1
 
-/mob/living/carbon/human/proc/play_inhale(var/mob/living/M, exhale)
+/mob/living/carbon/human/proc/play_inhale(mob/living/M, exhale)
 	var/suit_inhale_sound
 	if(species.suit_inhale_sound)
 		suit_inhale_sound = species.suit_inhale_sound

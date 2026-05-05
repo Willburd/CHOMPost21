@@ -174,7 +174,7 @@
 			real_name = new_name
 			// Outpost 21 edit end
 
-/mob/living/silicon/robot/proc/apply_module(var/datum/robot_sprite/new_datum, new_module)
+/mob/living/silicon/robot/proc/apply_module(datum/robot_sprite/new_datum, new_module)
 	icon_selected = TRUE
 	var/module_type = GLOB.robot_modules[new_module]
 	if(modtype != new_module || !module)

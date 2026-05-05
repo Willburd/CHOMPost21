@@ -416,7 +416,7 @@
 	else
 		icon_state = "closed_unlocked[sealed ? "_welded" : ""]"
 
-/obj/structure/closet/attack_generic(var/mob/user, var/damage, attack_message = "destroys")
+/obj/structure/closet/attack_generic(var/mob/user, damage, attack_message = "destroys")
 	if(damage < STRUCTURE_MIN_DAMAGE_THRESHOLD)
 		return
 	user.do_attack_animation(src)

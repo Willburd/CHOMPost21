@@ -83,7 +83,7 @@
 	created_name = "ED-209 Security Robot"
 	var/lasercolor = ""
 
-/obj/item/secbot_assembly/ed209_assembly/attackby(var/obj/item/W, mob/user)
+/obj/item/secbot_assembly/ed209_assembly/attackby(obj/item/W, mob/user)
 	..()
 
 	if(istype(W, /obj/item/pen))

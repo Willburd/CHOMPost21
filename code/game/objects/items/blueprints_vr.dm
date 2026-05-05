@@ -666,12 +666,12 @@
 		interact()
 	return
 
-/proc/move_turfs_to_area(var/list/turf/turfs, area/A)
+/proc/move_turfs_to_area(list/turf/turfs, area/A)
 	for(var/T in turfs)
 		ChangeArea(T, A)
 
 
-/obj/item/areaeditor/proc/detect_room_ex(var/turf/first, var/allowedAreas = AREA_SPACE, list/forbiddenAreas = list(), var/visual)
+/obj/item/areaeditor/proc/detect_room_ex(var/turf/first, allowedAreas = AREA_SPACE, list/forbiddenAreas = list(), var/visual)
 	if(!istype(first))
 		return ROOM_ERR_LOLWAT
 	if(!visual && forbiddenAreas[first.loc.type] || forbiddenAreas[first.type]) //Is the area of the starting turf a banned area? Is the turf a banned area?
@@ -818,7 +818,7 @@
 	return 0 //If it's not a buildable area, don't let them build in it.
 
 
-/proc/detect_new_area(var/turf/first, user) //Heavily simplified version for creating an area yourself.
+/proc/detect_new_area(turf/first, user) //Heavily simplified version for creating an area yourself.
 	if(!istype(first)) //Not on a turf.
 		to_chat(usr, span_warning("You can not create a room here."))
 		return

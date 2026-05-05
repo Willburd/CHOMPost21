@@ -33,7 +33,7 @@
 		choices = choices.Copy()
 	return choices
 
-/datum/category_item/player_setup_item/general/traits/proc/get_pref_choice_from_trait(var/mob/user, var/datum/trait/trait, preference)
+/datum/category_item/player_setup_item/general/traits/proc/get_pref_choice_from_trait(var/mob/user, datum/trait/trait, preference)
 	if (!trait || !preference)
 		return
 	var/list/trait_prefs

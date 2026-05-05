@@ -277,7 +277,7 @@ GLOBAL_DATUM(raiders, /datum/antagonist/raider)
 		else
 			player.put_in_any_hand_if_possible(holster)
 
-/datum/antagonist/raider/proc/equip_ammo(var/mob/living/carbon/human/player, obj/item/gun/gun)
+/datum/antagonist/raider/proc/equip_ammo(mob/living/carbon/human/player, obj/item/gun/gun)
 	if(istype(gun, /obj/item/gun/projectile))
 		var/obj/item/gun/projectile/bullet_thrower = gun
 		if(bullet_thrower.magazine_type)

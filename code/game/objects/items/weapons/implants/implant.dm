@@ -23,7 +23,7 @@
 	return
 
 // Moves the implant where it needs to go, and tells it if there's more to be done in post_implant
-/obj/item/implant/proc/handle_implant(var/mob/source, target_zone = BP_TORSO)
+/obj/item/implant/proc/handle_implant(mob/source, target_zone = BP_TORSO)
 	. = TRUE
 	imp_in = source
 	implanted = TRUE

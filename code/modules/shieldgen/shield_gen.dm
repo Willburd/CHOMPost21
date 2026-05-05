@@ -51,7 +51,7 @@
 	QDEL_NULL(shield_hum)
 	return ..()
 
-/obj/machinery/shield_gen/emag_act(var/remaining_charges, mob/user)
+/obj/machinery/shield_gen/emag_act(remaining_charges, mob/user)
 	if(prob(75))
 		src.locked = !src.locked
 		to_chat(user, "Controls are now [src.locked ? "locked." : "unlocked."]")

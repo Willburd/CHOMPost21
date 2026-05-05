@@ -32,7 +32,7 @@ General message handling stuff
 	GLOB.last_message_id = GLOB.last_message_id + 1
 	return GLOB.last_message_id
 
-/proc/post_comm_message(var/message_title, message_text)
+/proc/post_comm_message(message_title, message_text)
 	var/list/message = list()
 	message["id"] = get_comm_message_id()
 	message["title"] = message_title

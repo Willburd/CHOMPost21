@@ -40,7 +40,7 @@
 	B.visible_message(span_danger("The blob ruptures, spraying the area with liquid!"))
 	wet_surroundings(B, 50)
 
-/datum/blob_type/pressurized_slime/proc/wet_surroundings(var/obj/structure/blob/B, probability = 50)
+/datum/blob_type/pressurized_slime/proc/wet_surroundings(obj/structure/blob/B, probability = 50)
 	for(var/turf/simulated/T in range(1, get_turf(B)))
 		if(prob(probability))
 			T.wet_floor()

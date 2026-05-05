@@ -60,7 +60,7 @@
 	return
 
 //Required for the riding datum to behave:
-/obj/vehicle/train/engine/quadbike/snowmobile/MouseDrop_T(var/atom/movable/C, mob/user as mob)
+/obj/vehicle/train/engine/quadbike/snowmobile/MouseDrop_T(atom/movable/C, mob/user as mob)
 	if(ismob(C))
 		if(C in buckled_mobs)
 			user_unbuckle_mob(C, user)

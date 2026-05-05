@@ -773,7 +773,7 @@ I think I covered everything.
 	playsound(src, "sound/weapons/punchmiss.ogg", 50, 1)
 
 //Split repulse into two parts so I can recycle this later
-/mob/living/simple_mob/vore/bigdragon/proc/yeet(var/atom/movable/AM, gentle = 0)
+/mob/living/simple_mob/vore/bigdragon/proc/yeet(atom/movable/AM, gentle = 0)
 	var/maxthrow = 7
 	var/atom/throwtarget
 	var/distfromcaster
@@ -805,7 +805,7 @@ I think I covered everything.
 	chargetimer = addtimer(CALLBACK(src, PROC_REF(chargeend), A), charge_warmup, TIMER_STOPPABLE)
 
 
-/mob/living/simple_mob/vore/bigdragon/proc/chargeend(var/atom/A, var/explicit = 0, gentle = 0)
+/mob/living/simple_mob/vore/bigdragon/proc/chargeend(var/atom/A, explicit = 0, gentle = 0)
 	//make sure our target still exists and is on a turf
 	if(QDELETED(A) || !isturf(get_turf(A)))
 		set_AI_busy(FALSE)
@@ -918,7 +918,7 @@ I think I covered everything.
 	else
 		. = ..()
 
-/mob/living/simple_mob/vore/bigdragon/do_tame(var/obj/O, mob/user)
+/mob/living/simple_mob/vore/bigdragon/do_tame(obj/O, mob/user)
 	if(!user)
 		return
 	if(faction == FACTION_NEUTRAL)

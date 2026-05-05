@@ -123,7 +123,7 @@
 	else
 		return FALSE
 
-/obj/machinery/appliance/cooker/oven/can_insert(var/obj/item/I, mob/user)
+/obj/machinery/appliance/cooker/oven/can_insert(obj/item/I, mob/user)
 	if(!open && !manip(I))
 		to_chat(user, span_warning("You can't put anything in while the door is closed!"))
 		return 0
@@ -163,7 +163,7 @@
 		..()
 
 
-/obj/machinery/appliance/cooker/oven/attackby(var/obj/item/O as obj, mob/user as mob)
+/obj/machinery/appliance/cooker/oven/attackby(obj/item/O as obj, mob/user as mob)
 	if(default_deconstruction_screwdriver(user, O)) //CHOMPedit - Allows for deconstruction
 		return
 	if(default_deconstruction_crowbar(user, O))

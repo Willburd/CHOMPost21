@@ -382,7 +382,7 @@
 
 // Allow card inhabited machines to be interacted with
 // This has to override ClickOn because of storage depth nonsense with how pAIs are in cards in GLOB.machines
-/mob/living/silicon/pai/ClickOn(var/atom/A, params)
+/mob/living/silicon/pai/ClickOn(atom/A, params)
 	if(istype(A, /obj/machinery))
 		var/obj/machinery/M = A
 		if(M.paicard == card)
@@ -391,7 +391,7 @@
 	return ..()
 
 // Handle being picked up.
-/mob/living/silicon/pai/get_scooped(var/mob/living/carbon/grabber, self_drop)
+/mob/living/silicon/pai/get_scooped(mob/living/carbon/grabber, self_drop)
 	var/obj/item/holder/H = ..(grabber, self_drop)
 	if(!istype(H))
 		return

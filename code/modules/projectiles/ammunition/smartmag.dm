@@ -64,7 +64,7 @@
 		icon_state = "smartmag-empty"
 
 // Emagging lets you remove bullets from your bullet-making magazine
-/obj/item/ammo_magazine/smart/emag_act(var/remaining_charges, mob/user)
+/obj/item/ammo_magazine/smart/emag_act(remaining_charges, mob/user)
 	if(!emagged)
 		to_chat(user, span_notice("You overload \the [src]'s security measures causing widespread destabilisation. It is likely you could empty \the [src] now."))
 		emagged = TRUE

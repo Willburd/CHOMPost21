@@ -44,7 +44,7 @@
 	. = ..()
 
 
-/obj/machinery/appliance/mixer/candy/attackby(var/obj/item/O as obj, mob/user as mob)
+/obj/machinery/appliance/mixer/candy/attackby(obj/item/O as obj, mob/user as mob)
 	if(default_deconstruction_screwdriver(user, O)) //CHOMPedit - Allows for deconstruction
 		return
 	if(default_deconstruction_crowbar(user, O))

@@ -32,7 +32,7 @@
 
 	bag_material = MAT_SYNCLOTH
 
-/obj/item/stack/sandbags/Initialize(mapload, var/amt, bag_mat)
+/obj/item/stack/sandbags/Initialize(mapload, amt, bag_mat)
 	. = ..(mapload, amt)
 	recipes = GLOB.sandbag_recipes
 	update_icon()
@@ -130,7 +130,7 @@
 	var/bag_material = MAT_CLOTH
 	custom_handling = TRUE
 
-/obj/item/stack/emptysandbag/Initialize(mapload, var/amt, bag_mat)
+/obj/item/stack/emptysandbag/Initialize(mapload, amt, bag_mat)
 	. = ..(mapload, amt)
 	if(bag_mat)
 		bag_material = bag_mat

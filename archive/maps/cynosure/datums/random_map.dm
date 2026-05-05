@@ -28,7 +28,7 @@
 /datum/random_map/noise/sif/get_appropriate_path(value)
 	return /turf/simulated/floor/outdoors/snow/sif/planetuse
 
-/datum/random_map/noise/sif/get_additional_spawns(var/value, turf/T)
+/datum/random_map/noise/sif/get_additional_spawns(value, turf/T)
 	if(prob(45) || T.check_density())
 		return
 	switch(value)
@@ -69,7 +69,7 @@
 /datum/random_map/noise/sif/forest/get_appropriate_path(value)
 	return /turf/simulated/floor/outdoors/snow/sif/planetuse
 
-/datum/random_map/noise/sif/forest/get_additional_spawns(var/value, turf/T)
+/datum/random_map/noise/sif/forest/get_additional_spawns(value, turf/T)
 	if(prob(25) || T.check_density())
 		return
 	switch(value)
@@ -108,7 +108,7 @@
 		if(3 to 4)
 			return /turf/simulated/floor/outdoors/dirt/sif/planetuse
 
-/datum/random_map/noise/sif/underground/get_additional_spawns(var/value, turf/T)
+/datum/random_map/noise/sif/underground/get_additional_spawns(value, turf/T)
 	if(value <= 1 && prob(30)) // Mud is very fun-gy.
 		new /obj/structure/flora/mushroom(T)
 	else if(!prob(30))

@@ -132,7 +132,7 @@
 	loot_list = list(/obj/item/melee/energy/sword = 100, /obj/item/shield/energy = 100)
 
 // They have a shield, so they try to block
-/mob/living/simple_mob/humanoid/merc/melee/sword/attackby(var/obj/item/O as obj, mob/user as mob)
+/mob/living/simple_mob/humanoid/merc/melee/sword/attackby(obj/item/O as obj, mob/user as mob)
 	if(O.force)
 		if(prob(20))
 			visible_message(span_danger("\The [src] blocks \the [O] with its shield!"))
@@ -550,7 +550,7 @@
 	grenade_timer = 30 // well, look what you've done, you've grouped up
 
 // being Actual Professionals, they have better (read: player-level) blocking chances
-/mob/living/simple_mob/humanoid/merc/ranged/space/suppressor/attackby(var/obj/item/O, mob/user)
+/mob/living/simple_mob/humanoid/merc/ranged/space/suppressor/attackby(obj/item/O, mob/user)
 	if(O.force)
 		if(prob(50))
 			visible_message(span_danger("\The [src] blocks \the [O] with its shield!"))

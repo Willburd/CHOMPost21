@@ -16,7 +16,7 @@
 		arg = "'[arg]'"
 	return arg
 
-/proc/ext_python(var/script, var/arguments, scriptsprefix = 1)
+/proc/ext_python(var/script, arguments, scriptsprefix = 1)
 	return  // VOREStation Edit - Can't exploit shell if we never call shell!
 	/* Unreachable with above vorestation edit
 	if(scriptsprefix)

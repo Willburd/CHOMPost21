@@ -140,7 +140,7 @@
 	if(count_spawned_vermin() < vermin_cap)
 		spawn_vermin(rand(4,10), prep_size_min, prep_size_max)
 
-/datum/event/infestation/proc/spawn_vermin(var/num_groups, var/group_size_min, group_size_max)
+/datum/event/infestation/proc/spawn_vermin(var/num_groups, group_size_min, group_size_max)
 	if(spawn_locations.len) // Okay we've got landmarks, lets use those!
 		shuffle_inplace(spawn_locations)
 		num_groups = min(num_groups, spawn_locations.len)

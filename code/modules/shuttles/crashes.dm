@@ -76,7 +76,7 @@
 	//SHAKA SHAKA SHAKA
 	addtimer(CALLBACK(src, PROC_REF(after_crash), victims, target), 2 SECONDS)
 
-/datum/shuttle/proc/after_crash(var/list/victims, obj/effect/shuttle_landmark/target)
+/datum/shuttle/proc/after_crash(list/victims, obj/effect/shuttle_landmark/target)
 	PRIVATE_PROC(TRUE)
 	SHOULD_NOT_OVERRIDE(TRUE)
 

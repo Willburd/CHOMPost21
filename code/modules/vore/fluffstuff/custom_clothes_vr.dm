@@ -1841,7 +1841,7 @@ Departamental Swimsuits, for general use
 	set src in usr
 	translocator_unequip(translocator, usr)
 
-/obj/item/clothing/head/fluff/nikki/proc/translocator_equip(var/obj/item/perfect_tele/T, mob/living/carbon/human/user)
+/obj/item/clothing/head/fluff/nikki/proc/translocator_equip(obj/item/perfect_tele/T, mob/living/carbon/human/user)
 	if (do_after(user, 2 SECONDS, target = T))
 		user.unEquip(T)
 		translocator_unequip(translocator, user)
@@ -1850,7 +1850,7 @@ Departamental Swimsuits, for general use
 		user.show_message("[icon2html(src, user.client)]*click!*")
 		playsound(src, 'sound/machines/click.ogg', 30, 1)
 
-/obj/item/clothing/head/fluff/nikki/proc/translocator_unequip(var/obj/item/perfect_tele/T, mob/living/carbon/human/user)
+/obj/item/clothing/head/fluff/nikki/proc/translocator_unequip(obj/item/perfect_tele/T, mob/living/carbon/human/user)
 	if (translocator)
 		if (user)
 			user.put_in_hands(T)

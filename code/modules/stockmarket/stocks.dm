@@ -248,7 +248,7 @@
 		return 1
 	return 0
 
-/datum/stock/proc/borrow(var/datum/borrow/B, who)
+/datum/stock/proc/borrow(datum/borrow/B, who)
 	if (B.lease_expires)
 		return 0
 	B.lease_expires = world.time + B.lease_time
@@ -273,7 +273,7 @@
 		GLOB.FrozenAccounts[who] += B
 	return 1
 
-/datum/stock/proc/buyShares(var/who, howmany)
+/datum/stock/proc/buyShares(who, howmany)
 	if (howmany <= 0)
 		return
 	howmany = round(howmany)
@@ -289,7 +289,7 @@
 		return 1
 	return 0
 
-/datum/stock/proc/sellShares(var/whose, howmany)
+/datum/stock/proc/sellShares(whose, howmany)
 	if (howmany < 0)
 		return
 	howmany = round(howmany)

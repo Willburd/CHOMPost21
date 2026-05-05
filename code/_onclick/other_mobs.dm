@@ -8,7 +8,7 @@
 
 	Otherwise pretty standard.
 */
-/mob/living/carbon/human/UnarmedAttack(var/atom/A, proximity)
+/mob/living/carbon/human/UnarmedAttack(atom/A, proximity)
 
 	if(!..())
 		return
@@ -73,7 +73,7 @@
 /mob/living/carbon/alien/RestrainedClickOn(atom/A)
 	return
 
-/mob/living/carbon/alien/UnarmedAttack(var/atom/A, proximity)
+/mob/living/carbon/alien/UnarmedAttack(atom/A, proximity)
 
 	if(!..())
 		return 0

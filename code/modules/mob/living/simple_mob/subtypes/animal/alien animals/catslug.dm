@@ -127,7 +127,7 @@
 		drop_hat()
 	return ..()
 
-/mob/living/simple_mob/vore/alienanimals/catslug/attackby(var/obj/item/reagent_containers/food/snacks/O as obj, mob/user as mob)
+/mob/living/simple_mob/vore/alienanimals/catslug/attackby(obj/item/reagent_containers/food/snacks/O as obj, mob/user as mob)
 	if(istype(O, /obj/item/clothing/head)) // Handle hat simulator.
 		give_hat(O, user)
 		return
@@ -223,7 +223,7 @@
 		I.blend_mode = BLEND_OVERLAY
 		add_overlay(I)
 
-/mob/living/simple_mob/vore/alienanimals/catslug/proc/give_hat(var/obj/item/clothing/head/new_hat, mob/living/user)
+/mob/living/simple_mob/vore/alienanimals/catslug/proc/give_hat(obj/item/clothing/head/new_hat, mob/living/user)
 	if(!istype(new_hat))
 		to_chat(user, span_warning("\The [new_hat] isn't a hat."))
 		return

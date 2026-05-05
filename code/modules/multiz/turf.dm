@@ -76,7 +76,7 @@ GLOBAL_DATUM_INIT(openspace_backdrop_one_for_all, /atom/movable/openspace_backdr
 	AddElement(/datum/element/turf_z_transparency, FALSE)
 	update_icon()
 
-/turf/simulated/open/Entered(var/atom/movable/mover, atom/oldloc)
+/turf/simulated/open/Entered(atom/movable/mover, atom/oldloc)
 	..()
 	mover.fall()
 

@@ -590,7 +590,7 @@ ADMIN_VERB_AND_CONTEXT_MENU(modify_robot, R_ADMIN|R_FUN|R_VAREDIT|R_EVENT, "Modi
 		target_items += list(list("name" = item.name, "ref" = "\ref[item]", "icon" = icon2html(item, user, sourceonly=TRUE), "desc" = item.desc))
 	return target_items
 
-/datum/eventkit/modify_robot/proc/get_module_source(var/mob/user, datum/asset/spritesheet_batched/robot_icons/spritesheet)
+/datum/eventkit/modify_robot/proc/get_module_source(mob/user, datum/asset/spritesheet_batched/robot_icons/spritesheet)
 	var/list/source_list = list()
 	source_list["model"] = source.module
 	source_list["sprite"] = sanitize_css_class_name("[source.sprite_datum.type]")
@@ -791,7 +791,7 @@ ADMIN_VERB_AND_CONTEXT_MENU(modify_robot, R_ADMIN|R_FUN|R_VAREDIT|R_EVENT, "Modi
 		components += list(list("name" = C.name, "ref" = "\ref[C]", "brute_damage" = C.brute_damage, "electronics_damage" = C.electronics_damage, "max_damage" = C.max_damage, "idle_usage" = C.idle_usage, "active_usage" = C.active_usage, "installed" = C.installed, "exists" = (C.wrapped ? TRUE : FALSE)))
 	return components
 
-/datum/eventkit/modify_robot/proc/package_laws(var/list/data, var/field, list/datum/ai_law/laws)
+/datum/eventkit/modify_robot/proc/package_laws(var/list/data, field, list/datum/ai_law/laws)
 	var/list/packaged_laws = list()
 	for(var/datum/ai_law/AL in laws)
 		packaged_laws[++packaged_laws.len] = list("law" = AL.law, "index" = AL.get_index(), "state" = target.laws.get_state_law(AL), "ref" = "\ref[AL]")

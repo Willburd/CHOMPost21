@@ -100,7 +100,7 @@
 	if(get_dist(user, src) <= 2)
 		. += span_notice("Used to extract geological core samples - this one is [sampled_turf ? "full" : "empty"], and has [num_stored_bags] bag[num_stored_bags != 1 ? "s" : ""] remaining.")
 
-/obj/item/core_sampler/attackby(var/obj/item/I, mob/living/user)
+/obj/item/core_sampler/attackby(obj/item/I, mob/living/user)
 	if(istype(I, /obj/item/evidencebag))
 		if(I.contents.len)
 			to_chat(user, span_warning("\The [I] is full."))
@@ -114,7 +114,7 @@
 	else
 		return ..()
 
-/obj/item/core_sampler/proc/sample_item(var/item_to_sample, mob/user)
+/obj/item/core_sampler/proc/sample_item(item_to_sample, mob/user)
 	var/datum/geosample/geo_data
 
 	if(ismineralturf(item_to_sample))

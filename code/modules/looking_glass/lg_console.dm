@@ -114,7 +114,7 @@
 
 	add_fingerprint(ui.user)
 
-/obj/machinery/computer/looking_glass/emag_act(var/remaining_charges, mob/user as mob)
+/obj/machinery/computer/looking_glass/emag_act(remaining_charges, mob/user as mob)
 	if (!emagged)
 		playsound(src, 'sound/effects/sparks4.ogg', 75, 1)
 		emagged = 1

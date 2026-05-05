@@ -201,7 +201,7 @@
 
 	return dat
 
-/obj/item/radio/proc/has_channel_access(var/mob/user, freq)
+/obj/item/radio/proc/has_channel_access(mob/user, freq)
 	if(!user)
 		return FALSE
 
@@ -217,7 +217,7 @@
 /mob/observer/dead/has_internal_radio_channel_access(list/req_one_accesses)
 	return can_admin_interact()
 
-/obj/item/radio/proc/text_sec_channel(var/chan_name, chan_stat)
+/obj/item/radio/proc/text_sec_channel(chan_name, chan_stat)
 	var/list = !!(chan_stat&FREQ_LISTENING)!=0
 	return {"
 			<B>[chan_name]</B><br>
@@ -293,7 +293,7 @@
 
 GLOBAL_DATUM(autospeaker, /mob/living/silicon/ai/announcer)
 
-/obj/item/radio/proc/autosay(var/message, var/from, var/channel, var/list/zlevels, states)
+/obj/item/radio/proc/autosay(var/message, var/from, var/channel, list/zlevels, states)
 
 	if(!GLOB.autospeaker)
 		return

@@ -79,7 +79,7 @@
 		)
 	// CHOMPadd end
 
-/obj/machinery/organ_printer/attackby(var/obj/item/O, mob/user)
+/obj/machinery/organ_printer/attackby(obj/item/O, mob/user)
 	if(default_deconstruction_screwdriver(user, O))
 		return
 	if(default_deconstruction_crowbar(user, O))
@@ -236,7 +236,7 @@
 
 	return biomass_count
 
-/obj/machinery/organ_printer/proc/can_print(var/choice, masscount = 0)
+/obj/machinery/organ_printer/proc/can_print(choice, masscount = 0)
 	var/biomass = get_biomass_volume()
 	if(biomass < masscount)
 		visible_message(span_infoplain(span_bold("\The [src]") + " displays a warning: 'Not enough biomass. [biomass] stored and [masscount] needed.'"))
@@ -380,7 +380,7 @@
 	audible_message(span_info("\The [src] dings, then spits out \a [O]."))
 	return O
 
-/obj/machinery/organ_printer/robot/attackby(var/obj/item/W, mob/user)
+/obj/machinery/organ_printer/robot/attackby(obj/item/W, mob/user)
 	if(istype(W, /obj/item/stack/material) && W.get_material_name() == matter_type)
 		if((max_stored_matter-stored_matter) < matter_amount_per_sheet)
 			to_chat(user, span_warning("\The [src] is too full."))

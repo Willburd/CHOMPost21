@@ -31,7 +31,7 @@
 
 	monitor.tgui_interact(user)
 
-/obj/machinery/computer/gyrotron_control/attackby(var/obj/item/W, mob/user)
+/obj/machinery/computer/gyrotron_control/attackby(obj/item/W, mob/user)
 	..()
 	if(istype(W, /obj/item/multitool))
 		var/new_ident = tgui_input_text(user, "Enter a new ident tag.", "Gyrotron Control", monitor.gyro_tag, MAX_NAME_LEN)

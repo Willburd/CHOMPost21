@@ -876,7 +876,7 @@
 	owner = null
 	return ..()
 
-/atom/movable/screen/movable/mapper_holder/proc/update(var/atom/movable/screen/mapper/map, atom/movable/screen/mapper/extras_holder/extras, ping = FALSE)
+/atom/movable/screen/movable/mapper_holder/proc/update(atom/movable/screen/mapper/map, atom/movable/screen/mapper/extras_holder/extras, ping = FALSE)
 	if(!running)
 		running = TRUE
 		if(ping)
@@ -1048,7 +1048,7 @@
 	gun.switch_firemodes(user)
 	return TRUE
 
-/atom/movable/screen/ammo/proc/add_hud(var/mob/living/user, obj/item/gun/G)
+/atom/movable/screen/ammo/proc/add_hud(mob/living/user, obj/item/gun/G)
 
 	if(!user?.client)
 		return
@@ -1069,7 +1069,7 @@
 /atom/movable/screen/ammo/proc/remove_hud(mob/living/user)
 	user?.client?.screen -= src
 
-/atom/movable/screen/ammo/proc/update_hud(var/mob/living/user, obj/item/gun/G)
+/atom/movable/screen/ammo/proc/update_hud(mob/living/user, obj/item/gun/G)
 	if(!user?.client?.screen.Find(src))
 		return
 

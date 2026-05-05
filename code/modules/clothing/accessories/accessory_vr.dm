@@ -29,7 +29,7 @@
 		icon_override = sprite_sheets[H.species.get_bodytype(H)]
 		update_clothing_icon()
 
-/obj/item/clothing/accessory/choker/on_attached(var/obj/item/clothing/S, mob/user)
+/obj/item/clothing/accessory/choker/on_attached(obj/item/clothing/S, mob/user)
 	if(!istype(S))
 		return
 	has_suit = S
@@ -67,7 +67,7 @@
 		icon_override = sprite_sheets[H.species.get_bodytype(H)]
 		update_clothing_icon()
 
-/obj/item/clothing/accessory/collar/on_attached(var/obj/item/clothing/S, mob/user)
+/obj/item/clothing/accessory/collar/on_attached(obj/item/clothing/S, mob/user)
 	if(!istype(S))
 		return
 	has_suit = S
@@ -87,7 +87,7 @@
 	..()
 	setUniqueSpeciesSprite()
 
-/obj/item/clothing/accessory/collar/on_attached(var/obj/item/clothing/S, mob/user)
+/obj/item/clothing/accessory/collar/on_attached(obj/item/clothing/S, mob/user)
 	if(!istype(S))
 		return
 	has_suit = S
@@ -336,7 +336,7 @@
 
 	to_chat(user,span_notice("You need a pen or a screwdriver to edit the tag on this collar."))
 
-/obj/item/clothing/accessory/collar/proc/update_collartag(mob/user, obj/item/I, var/erasemethod, var/erasing, writemethod)
+/obj/item/clothing/accessory/collar/proc/update_collartag(mob/user, obj/item/I, var/erasemethod, erasing, writemethod)
 	if(!(istype(user.get_active_hand(),I)) || !(istype(user.get_inactive_hand(),src)) || (user.stat))
 		return
 
@@ -437,7 +437,7 @@
 			s.start()
 	return
 
-/obj/item/clothing/accessory/collar/shock/bluespace/relaymove(var/mob/living/user,direction)
+/obj/item/clothing/accessory/collar/shock/bluespace/relaymove(mob/living/user,direction)
 	return //For some reason equipping this item was triggering this proc, putting the wearer inside of the collars belly for some reason.
 
 /obj/item/clothing/accessory/collar/shock/bluespace/attackby(obj/item/component, mob/user as mob)

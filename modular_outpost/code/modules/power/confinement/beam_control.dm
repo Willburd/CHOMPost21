@@ -103,7 +103,7 @@
 			data.dir = found_dir
 			G.pulse(data)
 
-/obj/structure/confinement_beam_generator/control_box/proc/check_focus_data(var/temp = T20C,var/max = T0C + 1400, var/watt = 0, var/health = 100, mhealth = 100)
+/obj/structure/confinement_beam_generator/control_box/proc/check_focus_data(var/temp = T20C,var/max = T0C + 1400, var/watt = 0, health = 100, mhealth = 100)
 	SHOULD_NOT_OVERRIDE(TRUE)
 	if(temp >= 0)
 		FLOOR(last_temp = temp,1)
@@ -143,7 +143,7 @@
 	if(G)
 		G.update_parts_icons()
 
-/obj/structure/confinement_beam_generator/control_box/process_tool_hit(var/obj/item/O, mob/user)
+/obj/structure/confinement_beam_generator/control_box/process_tool_hit(obj/item/O, mob/user)
 	. = ..()
 	// force deactivate some stuff
 	has_gen = FALSE
@@ -309,7 +309,7 @@
 	PRIVATE_PROC(TRUE)
 	set_new_target(0,0,-1)
 
-/obj/structure/confinement_beam_generator/control_box/proc/set_new_target(var/x,var/y,z)
+/obj/structure/confinement_beam_generator/control_box/proc/set_new_target(var/x,y,z)
 	SHOULD_NOT_OVERRIDE(TRUE)
 	PRIVATE_PROC(TRUE)
 	data.target_x = x
@@ -318,7 +318,7 @@
 	current_x = data.target_x
 	current_y = data.target_y
 
-/obj/structure/confinement_beam_generator/control_box/proc/aim_beam(var/target_x,target_y)
+/obj/structure/confinement_beam_generator/control_box/proc/aim_beam(target_x,target_y)
 	SHOULD_NOT_OVERRIDE(TRUE)
 	// Move beam location slowly toward target instead of instantly
 	if(prob(40))
@@ -339,7 +339,7 @@
 	var/turf/T = locate(current_x,current_y,at_z)
 	return T
 
-/obj/structure/confinement_beam_generator/control_box/proc/on_target(var/target_x,target_y)
+/obj/structure/confinement_beam_generator/control_box/proc/on_target(target_x,target_y)
 	SHOULD_NOT_OVERRIDE(TRUE)
 	return current_x != target_x || current_y != target_y
 

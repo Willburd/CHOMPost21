@@ -25,7 +25,7 @@
 	var/can_revert = TRUE
 	var/was_rayed = FALSE
 
-/obj/structure/gargoyle/Initialize(mapload, var/mob/living/carbon/human/H, var/ident_ovr, var/mat_ovr, var/adj_ovr, var/tint_ovr, var/revert = TRUE, discard_clothes)
+/obj/structure/gargoyle/Initialize(mapload, var/mob/living/carbon/human/H, var/ident_ovr, var/mat_ovr, var/adj_ovr, var/tint_ovr, revert = TRUE, discard_clothes)
 	. = ..()
 	if(isspace(loc) || isopenspace(loc))
 		anchored = FALSE
@@ -182,7 +182,7 @@
 		. += stored_examine
 	return
 
-/obj/structure/gargoyle/proc/unpetrify(var/deal_damage = TRUE, deleting = FALSE)
+/obj/structure/gargoyle/proc/unpetrify(deal_damage = TRUE, deleting = FALSE)
 	var/mob/living/carbon/human/gargoyle = WR_gargoyle.resolve()
 	if(!gargoyle)
 		return
@@ -244,12 +244,12 @@
 /obj/structure/gargoyle/take_damage(damage)
 	damage(damage)
 
-/obj/structure/gargoyle/attack_generic(var/mob/user, var/damage, attack_message = "hits")
+/obj/structure/gargoyle/attack_generic(var/mob/user, damage, attack_message = "hits")
 	user.do_attack_animation(src)
 	visible_message(span_danger("[user] [attack_message] the [src]!"))
 	damage(damage)
 
-/obj/structure/gargoyle/attackby(var/obj/item/W as obj, mob/living/user as mob)
+/obj/structure/gargoyle/attackby(obj/item/W as obj, mob/living/user as mob)
 	var/mob/living/carbon/human/gargoyle = WR_gargoyle.resolve()
 	if(W.is_wrench())
 		if(isspace(loc) || isopenspace(loc))

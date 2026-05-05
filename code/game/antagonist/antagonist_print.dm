@@ -40,7 +40,7 @@
 	// Display the results.
 	to_chat(world, text)
 
-/datum/antagonist/proc/print_objective(var/datum/objective/O, var/num, append_success)
+/datum/antagonist/proc/print_objective(var/datum/objective/O, num, append_success)
 	var/text = "<br>" + span_bold("Objective [num]:") + " [O.explanation_text] "
 	if(append_success)
 		if(O.check_completion())

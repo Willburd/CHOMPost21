@@ -58,7 +58,7 @@
 /datum/tgui_module/alarm_monitor/security/ntos
 	ntos = TRUE
 
-/datum/tgui_module/alarm_monitor/proc/register_alarm(var/object, procName)
+/datum/tgui_module/alarm_monitor/proc/register_alarm(object, procName)
 	for(var/datum/alarm_handler/AH in alarm_handlers)
 		AH.register_alarm(object, procName)
 

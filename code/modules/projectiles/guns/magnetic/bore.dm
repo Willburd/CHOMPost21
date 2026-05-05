@@ -84,7 +84,7 @@
 		return span_warning("It\'s out of [ammo_material]!")
 
 
-/obj/item/gun/magnetic/matfed/attackby(var/obj/item/thing, mob/user)
+/obj/item/gun/magnetic/matfed/attackby(obj/item/thing, mob/user)
 	. = ..()
 	update_rating_mod()
 	if(removable_components)

@@ -5,7 +5,7 @@
 		return DEFAULT_TALK_SOUNDS
 	return SSsounds.talk_sound_map[voice_sound]
 
-/proc/rlist(var/list/keys,list/values) //short for reversible list generator
+/proc/rlist(list/keys,list/values) //short for reversible list generator
 	var/list/rlist = list(list(),list(),FALSE,0)
 	var/i = 0
 	for(i = 1, i <= LAZYLEN(keys), i++)

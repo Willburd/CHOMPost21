@@ -207,7 +207,7 @@
 						if (R.id == our_oil.id)
 							I.reagents.remove_reagent(R.id, R.volume*portion)
 
-/obj/machinery/appliance/cooker/fryer/cook_mob(var/mob/living/victim, mob/user)
+/obj/machinery/appliance/cooker/fryer/cook_mob(mob/living/victim, mob/user)
 
 	if(!istype(victim))
 		return
@@ -277,7 +277,7 @@
 
 	fry_loop.stop()
 
-/obj/machinery/appliance/cooker/fryer/attackby(var/obj/item/I, mob/user)
+/obj/machinery/appliance/cooker/fryer/attackby(obj/item/I, mob/user)
 	if(istype(I, /obj/item/reagent_containers) && !istype(I, /obj/item/reagent_containers/food) && I.reagents)
 		if(istype(I, /obj/item/reagent_containers/glass)) //Scooping stuff out with a glass.
 			if(I.reagents.total_volume <= 0 && oil)

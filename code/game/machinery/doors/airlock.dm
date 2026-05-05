@@ -74,7 +74,7 @@
 		/obj/item = 12,
 	)
 
-/obj/machinery/door/airlock/attack_generic(var/mob/living/user, damage)
+/obj/machinery/door/airlock/attack_generic(mob/living/user, damage)
 	if(stat & (BROKEN|NOPOWER))
 		if(damage >= STRUCTURE_MIN_DAMAGE_THRESHOLD)
 			if(locked || welded)
@@ -296,7 +296,7 @@ About the new airlock wires panel:
 
 	update_icon()
 
-/obj/machinery/door/airlock/proc/electrify(var/duration, feedback = 0)
+/obj/machinery/door/airlock/proc/electrify(duration, feedback = 0)
 	var/message = ""
 	if(wires.is_cut(WIRE_ELECTRIFY) && arePowerSystemsOn())
 		message = text("The electrification wire is cut - Door permanently electrified.")
@@ -322,7 +322,7 @@ About the new airlock wires panel:
 	if(feedback && message)
 		to_chat(usr,message)
 
-/obj/machinery/door/airlock/proc/set_idscan(var/activate, feedback = 0)
+/obj/machinery/door/airlock/proc/set_idscan(activate, feedback = 0)
 	var/message = ""
 	if(wires.is_cut(WIRE_IDSCAN))
 		message = "The IdScan wire is cut - IdScan feature permanently disabled."
@@ -336,7 +336,7 @@ About the new airlock wires panel:
 	if(feedback && message)
 		to_chat(usr,message)
 
-/obj/machinery/door/airlock/proc/set_safeties(var/activate, feedback = 0)
+/obj/machinery/door/airlock/proc/set_safeties(activate, feedback = 0)
 	var/message = ""
 	// Safeties!  We don't need no stinking safeties!
 	if (wires.is_cut(WIRE_SAFETY))

@@ -275,7 +275,7 @@
 		lawsync()
 		photosync()
 
-/mob/living/silicon/robot/drain_power(var/drain_check, var/surge, amount = 0)
+/mob/living/silicon/robot/drain_power(var/drain_check, surge, amount = 0)
 
 	if(drain_check)
 		return 1
@@ -383,7 +383,7 @@
 
 	return ..()
 
-/mob/living/silicon/robot/drop_from_inventory(var/obj/item/W, atom/target = null)
+/mob/living/silicon/robot/drop_from_inventory(obj/item/W, atom/target = null)
 	if(module_active && istype(module_active,/obj/item/gripper))
 		var/obj/item/gripper/robot_gripper = module_active
 		robot_gripper.drop_item_nm(target)
@@ -979,7 +979,7 @@
 							return
 
 //Robots take half damage from basic attacks.
-/mob/living/silicon/robot/attack_generic(var/mob/user, var/damage, attack_message)
+/mob/living/silicon/robot/attack_generic(var/mob/user, damage, attack_message)
 	return ..(user,FLOOR(damage/2, 1),attack_message)
 
 /mob/living/silicon/robot/proc/allowed(mob/M)
@@ -1248,7 +1248,7 @@
 
 // Function to directly drain power from the robot's cell, allows to set a minimum level beneath which
 // abilities can no longer be used
-/mob/living/silicon/robot/proc/use_direct_power(var/amount = 0, lower_limit = 0)
+/mob/living/silicon/robot/proc/use_direct_power(amount = 0, lower_limit = 0)
 	// No cell inserted
 	if(!cell)
 		return FALSE
@@ -1270,7 +1270,7 @@
 		return 1
 	return 0
 
-/mob/living/silicon/robot/proc/notify_ai(var/notifytype, var/first_arg, second_arg)
+/mob/living/silicon/robot/proc/notify_ai(var/notifytype, first_arg, second_arg)
 	if(!connected_ai)
 		return
 	if(shell && notifytype != ROBOT_NOTIFICATION_AI_SHELL)
@@ -1303,7 +1303,7 @@
 		notify_ai(ROBOT_NOTIFICATION_NEW_UNIT)
 		sync()
 
-/mob/living/silicon/robot/emag_act(var/remaining_charges, mob/user)
+/mob/living/silicon/robot/emag_act(remaining_charges, mob/user)
 	if(!opened)//Cover is closed
 		if(locked)
 			if(prob(90))
@@ -1533,7 +1533,7 @@
 	if(buckle_mob(M))
 		visible_message(span_notice("[M] starts riding [name]!"))
 
-/mob/living/silicon/robot/get_scooped(var/mob/living/carbon/grabber, self_drop)
+/mob/living/silicon/robot/get_scooped(mob/living/carbon/grabber, self_drop)
 	var/obj/item/holder/H = ..(grabber, self_drop)
 	if(!istype(H))
 		return

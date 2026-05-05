@@ -262,7 +262,7 @@
 		return
 	..()
 
-/obj/machinery/casino_prize_dispenser/proc/pay_with_chips(var/obj/item/spacecasinocash/cashmoney, mob/user, price)
+/obj/machinery/casino_prize_dispenser/proc/pay_with_chips(obj/item/spacecasinocash/cashmoney, mob/user, price)
 	//"cashmoney_:[cashmoney] user:[user] currently_vending:[currently_vending]"
 	if(price > cashmoney.worth)
 		to_chat(user, "[icon2html(cashmoney, user.client)] " + span_warning("That is not enough chips."))

@@ -21,7 +21,7 @@
 
 	return TRUE
 
-/obj/item/clothing/attackby(var/obj/item/I, mob/user)
+/obj/item/clothing/attackby(obj/item/I, mob/user)
 	if(istype(I, /obj/item/clothing/accessory))
 		var/obj/item/clothing/accessory/A = I
 		if(attempt_attach_accessory(A, user))

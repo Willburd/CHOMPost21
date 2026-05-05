@@ -158,7 +158,7 @@
 
 	return data
 
-/datum/tgui_module/law_manager/proc/package_laws(var/list/data, var/field, list/datum/ai_law/laws)
+/datum/tgui_module/law_manager/proc/package_laws(var/list/data, field, list/datum/ai_law/laws)
 	var/list/packaged_laws = list()
 	for(var/datum/ai_law/AL in laws)
 		packaged_laws[++packaged_laws.len] = list("law" = AL.law, "index" = AL.get_index(), "state" = owner.laws.get_state_law(AL), "ref" = "\ref[AL]")

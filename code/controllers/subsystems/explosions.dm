@@ -195,7 +195,7 @@ SUBSYSTEM_DEF(explosions)
 	currentrun[key] = data
 
 // INTERNAL explosion proc, meant for GROWING a currently processing blast.
-/datum/controller/subsystem/explosions/proc/append_currentrun(var/x0,var/y0,var/z0,var/pwr,var/direction,starting_power)
+/datum/controller/subsystem/explosions/proc/append_currentrun(var/x0,var/y0,var/z0,var/pwr,direction,starting_power)
 	SHOULD_NOT_OVERRIDE(TRUE)
 	PRIVATE_PROC(TRUE)
 	if(pwr <= 0)
@@ -251,7 +251,7 @@ SUBSYSTEM_DEF(explosions)
 	wake_and_defer_subsystem_updates(devastation_range >= 8 || heavy_impact_range >= 16 || light_impact_range >= 20)
 
 // Collect prepared explosions for BLAST PROCESSING
-/datum/controller/subsystem/explosions/proc/finalize_explosion(var/x0,var/y0,var/z0,var/pwr,max_starting)
+/datum/controller/subsystem/explosions/proc/finalize_explosion(var/x0,var/y0,var/z0,pwr,max_starting)
 	SHOULD_NOT_OVERRIDE(TRUE)
 	PRIVATE_PROC(TRUE)
 	if(pwr <= 0)

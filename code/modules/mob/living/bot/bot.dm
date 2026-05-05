@@ -119,7 +119,7 @@
 /mob/living/bot/death()
 	explode()
 
-/mob/living/bot/attackby(var/obj/item/O, mob/user)
+/mob/living/bot/attackby(obj/item/O, mob/user)
 	if(O.GetID())
 		if(access_scanner.allowed(user) && !open)
 			locked = !locked
@@ -184,7 +184,7 @@
 /mob/living/bot/attack_ai(mob/user)
 	return attack_hand(user)
 
-/mob/living/bot/say_quote(var/message, datum/language/speaking = null)
+/mob/living/bot/say_quote(message, datum/language/speaking = null)
 	return "beeps"
 
 /mob/living/bot/speech_bubble_appearance()
@@ -198,7 +198,7 @@
 	else
 		..()
 
-/mob/living/bot/emag_act(var/remaining_charges, mob/user)
+/mob/living/bot/emag_act(remaining_charges, mob/user)
 	return 0
 
 /mob/living/bot/proc/handleAI()
@@ -507,7 +507,7 @@
 
 // Returns true if direction is blocked from loc
 // Checks doors against access with given ID
-/proc/DirBlockedWithAccess(turf/loc,var/dir,obj/item/card/id/ID)
+/proc/DirBlockedWithAccess(turf/loc,dir,obj/item/card/id/ID)
 	for(var/obj/structure/window/D in loc)
 		if(!D.density)			continue
 		if(D.dir == SOUTHWEST)	return 1

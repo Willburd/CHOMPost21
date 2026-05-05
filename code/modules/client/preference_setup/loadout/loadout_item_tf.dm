@@ -15,7 +15,7 @@ GLOBAL_DATUM_INIT(gear_tweak_item_tf_spawn, /datum/gear_tweak/item_tf_spawn, new
 	.["state"] = "Not Enabled"
 	.["valid"] = list()
 
-/datum/gear_tweak/item_tf_spawn/get_metadata(var/user, list/metadata)
+/datum/gear_tweak/item_tf_spawn/get_metadata(user, list/metadata)
 	. = get_default()
 	metadata = islist(metadata) ? metadata : .
 	var/entry = tgui_input_list(user, "Choose an entry.", "Character Preference", list("Not Enabled", "Anyone", "Only Specific Players"), metadata["state"])
@@ -29,7 +29,7 @@ GLOBAL_DATUM_INIT(gear_tweak_item_tf_spawn, /datum/gear_tweak/item_tf_spawn, new
 	else
 		return metadata
 
-/datum/gear_tweak/item_tf_spawn/tweak_item(var/obj/item/I, metadata)
+/datum/gear_tweak/item_tf_spawn/tweak_item(obj/item/I, metadata)
 	if(!islist(metadata))
 		return
 	if(metadata["state"] == "Not Enabled")
@@ -53,10 +53,10 @@ GLOBAL_DATUM_INIT(gear_tweak_item_tf_spawn, /datum/gear_tweak/item_tf_spawn, new
 /datum/gear_tweak/simplemob_picker/get_default()
 	return simplemob_list[1]
 
-/datum/gear_tweak/simplemob_picker/get_metadata(var/user, metadata)
+/datum/gear_tweak/simplemob_picker/get_metadata(user, metadata)
 	return tgui_input_list(user, "Choose a type.", "Character Preference", simplemob_list, metadata)
 
-/datum/gear_tweak/simplemob_picker/tweak_item(var/obj/item/capture_crystal/I, metadata)
+/datum/gear_tweak/simplemob_picker/tweak_item(obj/item/capture_crystal/I, metadata)
 	if(!(metadata in simplemob_list))
 		return
 	if(!istype(I))

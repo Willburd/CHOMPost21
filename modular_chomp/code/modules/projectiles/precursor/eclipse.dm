@@ -99,7 +99,7 @@
 	speed = 2
 	var/power = 20				//How hard it will hit for with electrocute_act(), decreases with each bounce.
 
-/obj/item/projectile/energy/lightingspark/attack_mob(var/mob/living/target_mob, var/distance, miss_modifier=0)
+/obj/item/projectile/energy/lightingspark/attack_mob(var/mob/living/target_mob, distance, miss_modifier=0)
 	//First we shock the guy we just hit.
 	if(ishuman(target_mob))
 		var/mob/living/carbon/human/H = target_mob

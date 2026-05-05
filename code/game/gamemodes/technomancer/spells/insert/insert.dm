@@ -20,7 +20,7 @@
 	var/mob/living/host = null
 	var/spell_power_at_creation = 1.0 // This is here because the spell object that made this object probably won't exist.
 
-/obj/item/inserted_spell/Initialize(mapload, var/user, obj/item/spell/insert/inserter)
+/obj/item/inserted_spell/Initialize(mapload, user, obj/item/spell/insert/inserter)
 	. = ..()
 	host = loc
 	origin = user
@@ -31,7 +31,7 @@
 /obj/item/inserted_spell/proc/on_insert()
 	return
 
-/obj/item/inserted_spell/proc/looped_insert(var/remaining_callbacks, mob/living/carbon/human/H)
+/obj/item/inserted_spell/proc/looped_insert(remaining_callbacks, mob/living/carbon/human/H)
 	PROTECTED_RPOC(TRUE)
 	return
 

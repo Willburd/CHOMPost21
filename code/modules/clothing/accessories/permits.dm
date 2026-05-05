@@ -27,7 +27,7 @@
 		src.name += " ([new_name])"
 		desc += " It belongs to [new_name]."
 
-/obj/item/clothing/accessory/permit/emag_act(var/remaining_charges, mob/user)
+/obj/item/clothing/accessory/permit/emag_act(remaining_charges, mob/user)
 	to_chat(user, "You reset the naming locks on [src]!")
 	owner = 0
 

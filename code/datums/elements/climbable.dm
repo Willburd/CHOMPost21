@@ -7,7 +7,7 @@
 	VAR_PRIVATE/climb_delay = 3.5 SECONDS
 	VAR_PRIVATE/climb_to_adjacent_turf = FALSE // for railings
 
-/datum/element/climbable/Attach(obj/target, var/climb_delay = 3.5 SECONDS, vaulting = FALSE)
+/datum/element/climbable/Attach(obj/target, climb_delay = 3.5 SECONDS, vaulting = FALSE)
 	. = ..()
 	if(!isobj(target))
 		return ELEMENT_INCOMPATIBLE
@@ -44,7 +44,7 @@
 		addtimer(CALLBACK(src, PROC_REF(do_climb), climbed_thing, user, climb_delay), 0, TIMER_DELETE_ME) // Isolate from signal handler
 
 /// Check if the mob is in any condition to climb the object, if the destination is blocked, and how to climb it
-/datum/element/climbable/proc/can_climb(var/obj/climbed_thing, mob/living/user, post_climb_check=0)
+/datum/element/climbable/proc/can_climb(obj/climbed_thing, mob/living/user, post_climb_check=0)
 	if(user.is_incorporeal()) // No! Bad shadekin!
 		return FALSE
 
@@ -71,7 +71,7 @@
 	return TRUE
 
 /// Performs the wait and any remaining checks before the climb resolves.
-/datum/element/climbable/proc/do_climb(var/obj/climbed_thing, var/mob/living/user, delay_time)
+/datum/element/climbable/proc/do_climb(var/obj/climbed_thing, mob/living/user, delay_time)
 	if(QDELETED(user) || QDELETED(climbed_thing))
 		return
 
@@ -90,14 +90,14 @@
 	LAZYREMOVEASSOC(current_climbers, climbed_thing, user)
 
 /// Resolve the climb by moving the mob to its final destination.
-/datum/element/climbable/proc/climb_to(var/obj/climbed_thing, mob/living/user)
+/datum/element/climbable/proc/climb_to(obj/climbed_thing, mob/living/user)
 	if(climb_to_adjacent_turf && get_turf(user) == get_turf(climbed_thing))
 		user.forceMove(get_step(climbed_thing, climbed_thing.dir))
 	else
 		user.forceMove(get_turf(climbed_thing))
 
 /// Check if a mob is capable of climbing at all
-/datum/element/climbable/proc/can_touch(var/obj/climbed_thing, mob/user)
+/datum/element/climbable/proc/can_touch(obj/climbed_thing, mob/user)
 	if (!user)
 		return 0
 	if(!climbed_thing.Adjacent(user))
@@ -119,7 +119,7 @@
 		shaken(climbed_thing, null)
 
 /// Shakes an object, if anyone is climbing it, causes them to fall off it.
-/datum/element/climbable/proc/shaken(var/obj/climbed_thing, mob/user)
+/datum/element/climbable/proc/shaken(obj/climbed_thing, mob/user)
 	SIGNAL_HANDLER
 	var/list/climbers = LAZYACCESS(current_climbers, climbed_thing)
 	// You cannot shake yourself
@@ -178,7 +178,7 @@
 	// Outpost 21 edit end
 	. = ..(climbed_thing, user, delay_time)
 
-/datum/element/climbable/cliff/can_climb(var/obj/climbed_thing, mob/living/user, post_climb_check=0)
+/datum/element/climbable/cliff/can_climb(obj/climbed_thing, mob/living/user, post_climb_check=0)
 	// Outpost 21 edit begin - Cliff always climbable
 	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
@@ -194,7 +194,7 @@
 
 
 // Breaks if climbed while unanchored, railings.
-/datum/element/climbable/unanchored_can_break/climb_to(var/obj/climbed_thing, mob/living/user)
+/datum/element/climbable/unanchored_can_break/climb_to(obj/climbed_thing, mob/living/user)
 	. = ..()
 	if(!climbed_thing.anchored)
 		climbed_thing.take_damage(9999) // Fatboy, was originally maxhealth, but that var doesn't exist on everything

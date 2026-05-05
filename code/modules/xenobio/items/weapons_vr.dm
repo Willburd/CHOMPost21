@@ -107,7 +107,7 @@
 	var/monkeys_recycled = 0
 	description_info = "Click a monkey or slime to begin processing."
 
-/obj/item/slime_grinder/proc/extract(var/atom/movable/AM, mob/living/user)
+/obj/item/slime_grinder/proc/extract(atom/movable/AM, mob/living/user)
 	processing = TRUE
 	if(istype(AM, /mob/living/simple_mob/slime))
 		var/mob/living/simple_mob/slime/S = AM

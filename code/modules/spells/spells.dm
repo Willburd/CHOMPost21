@@ -29,7 +29,7 @@
 // 				if(Sp_HOLDVAR)
 // 					statpanel(S.panel,"[S.holder_var_type] [S.holder_var_amount]",S.connected_button)
 
-/mob/proc/add_spell(var/datum/spell/spell_to_add, var/spell_base = "wiz_spell_ready", master_type = /atom/movable/screen/movable/spell_master)
+/mob/proc/add_spell(var/datum/spell/spell_to_add, spell_base = "wiz_spell_ready", master_type = /atom/movable/screen/movable/spell_master)
 	if(!spell_masters)
 		spell_masters = list()
 

@@ -67,7 +67,7 @@
 	CouldNotUseTopic(usr)
 	return 1
 
-/obj/CanUseTopic(var/mob/user, datum/tgui_state/state = GLOB.tgui_default_state)
+/obj/CanUseTopic(mob/user, datum/tgui_state/state = GLOB.tgui_default_state)
 	if(user.CanUseObjTopic(src))
 		return ..()
 	to_chat(user, span_danger("[icon2html(src, user.client)]Access Denied!"))

@@ -114,10 +114,10 @@
 	else
 		icon_state = initial(icon_state)
 
-/obj/vehicle/train/rover/trolley/insert_cell(var/obj/item/cell/C, mob/living/carbon/human/H)
+/obj/vehicle/train/rover/trolley/insert_cell(obj/item/cell/C, mob/living/carbon/human/H)
 	return
 
-/obj/vehicle/train/rover/engine/insert_cell(var/obj/item/cell/C, mob/living/carbon/human/H)
+/obj/vehicle/train/rover/engine/insert_cell(obj/item/cell/C, mob/living/carbon/human/H)
 	..()
 	update_stats()
 
@@ -304,7 +304,7 @@
 		buckle_mob(C)
 		C.alpha = 0
 
-/obj/vehicle/train/rover/engine/unload(var/mob/user, direction)
+/obj/vehicle/train/rover/engine/unload(mob/user, direction)
 	var/mob/living/carbon/human/C = load
 
 
@@ -345,7 +345,7 @@
 		C.pixel_y = initial(C.pixel_y)
 		C.layer = initial(C.layer)
 
-/obj/vehicle/train/rover/trolley/unload(var/mob/user, direction)
+/obj/vehicle/train/rover/trolley/unload(mob/user, direction)
 	if(istype(load, /datum/vehicle_dummy_load))
 		var/datum/vehicle_dummy_load/dummy_load = load
 		load = dummy_load.actual_load
@@ -385,7 +385,7 @@
 // more engines increases this limit by car_limit per
 // engine.
 //-------------------------------------------------------
-/obj/vehicle/train/rover/engine/update_car(var/train_length, active_engines)
+/obj/vehicle/train/rover/engine/update_car(train_length, active_engines)
 	src.train_length = train_length
 	src.active_engines = active_engines
 
@@ -398,7 +398,7 @@
 		move_delay += 1 														//base reference speed //CHOMPedit: Move-delay from server config (2) to 1.
 		move_delay *= 1.1																	//makes cargo trains 10% slower than running when not overweight
 
-/obj/vehicle/train/rover/trolley/update_car(var/train_length, active_engines)
+/obj/vehicle/train/rover/trolley/update_car(train_length, active_engines)
 	src.train_length = train_length
 	src.active_engines = active_engines
 

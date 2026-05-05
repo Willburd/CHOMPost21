@@ -66,7 +66,7 @@
 
 	return FLOOR(dev + heavy + light,1)
 
-/datum/element/sellable/transfer_valve/sell(obj/source, var/datum/exported_crate/EC, in_crate)
+/datum/element/sellable/transfer_valve/sell(obj/source, datum/exported_crate/EC, in_crate)
 	. = ..()
 	if(. && EC.contents[EC.contents.len]["value"] > 0)
 		SSsupply.warheads_sold++

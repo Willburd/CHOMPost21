@@ -141,7 +141,7 @@
 	icon_state = "nymph"
 	organ_tag = "special" // Turns into a nymph instantly, no transplanting possible.
 
-/obj/item/organ/internal/diona/removed(var/mob/living/user, skip_nymph)
+/obj/item/organ/internal/diona/removed(mob/living/user, skip_nymph)
 	if(robotic >= ORGAN_ROBOT)
 		return ..()
 	var/mob/living/carbon/human/H = owner
@@ -225,7 +225,7 @@
 /obj/item/organ/internal/brain/cephalon/digitize()
 	return
 
-/obj/item/organ/internal/brain/cephalon/removed(var/mob/living/user, skip_nymph)
+/obj/item/organ/internal/brain/cephalon/removed(mob/living/user, skip_nymph)
 	if(robotic >= ORGAN_ROBOT)
 		return ..()
 	var/mob/living/carbon/human/H = owner

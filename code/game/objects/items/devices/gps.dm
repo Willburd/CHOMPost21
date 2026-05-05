@@ -101,7 +101,7 @@ GLOBAL_LIST_EMPTY(GPS_list)
 	QDEL_NULL(compass)
 	. = ..()
 
-/obj/item/gps/proc/can_track(var/obj/item/gps/other, reachable_z_levels)
+/obj/item/gps/proc/can_track(obj/item/gps/other, reachable_z_levels)
 	if(!other.tracking || other.emped || other.hide_signal || is_vore_jammed(other))
 		return FALSE
 	var/turf/origin = get_turf(src)

@@ -85,7 +85,7 @@
 		if(edited_entry)
 			target_entry = edited_entry
 
-/datum/integrated_io/list/proc/swap_inside_list(mob/user, var/first_target, second_target)
+/datum/integrated_io/list/proc/swap_inside_list(mob/user, first_target, second_target)
 	var/list/my_list = data
 	if(my_list.len <= 1)
 		to_chat(user, span_warning("The list is empty, or too small to do any meaningful swapping."))

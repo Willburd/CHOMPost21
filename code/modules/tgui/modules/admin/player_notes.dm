@@ -16,7 +16,7 @@
 	if(!QDELETED(src))
 		qdel(src)
 
-/datum/tgui_module/player_notes/proc/filter_ckeys(var/page, filter)
+/datum/tgui_module/player_notes/proc/filter_ckeys(page, filter)
 	var/savefile/S=new("data/player_notes.sav")
 	var/list/note_keys
 	S >> note_keys

@@ -32,7 +32,7 @@
 	hack_state = null
 	return ..()
 
-/obj/item/multitool/hacktool/attackby(var/obj/item/W, mob/user)
+/obj/item/multitool/hacktool/attackby(obj/item/W, mob/user)
 	if(W.has_tool_quality(TOOL_SCREWDRIVER))
 		in_hack_mode = !in_hack_mode
 		playsound(src, W.usesound, 50, 1)
@@ -68,7 +68,7 @@
 			D.close()
 	return 1
 
-/obj/item/multitool/hacktool/proc/attempt_hack(var/mob/user, atom/target)
+/obj/item/multitool/hacktool/proc/attempt_hack(mob/user, atom/target)
 	if(is_hacking)
 		to_chat(user, span_warning("You are already hacking!"))
 		return 0

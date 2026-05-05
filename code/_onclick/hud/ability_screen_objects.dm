@@ -314,7 +314,7 @@
 //		else
 //			message_admins("ERROR: activate() on [ability_master.my_mob]'s [src] failed the hascall([object_used],[verb_to_call]) check.")
 
-/atom/movable/screen/movable/ability_master/proc/add_verb_ability(var/object_given, var/verb_given, var/name_given, var/ability_icon_given, arguments)
+/atom/movable/screen/movable/ability_master/proc/add_verb_ability(var/object_given, var/verb_given, var/name_given, ability_icon_given, arguments)
 	if(!object_given)
 		message_admins("ERROR: add_verb_ability() was not given an object in its arguments.")
 	if(!verb_given)
@@ -338,7 +338,7 @@
 	icon_state = "ling_spell_base"
 	background_base_state = "ling"
 
-/atom/movable/screen/movable/ability_master/proc/add_ling_ability(var/object_given, var/verb_given, var/name_given, var/ability_icon_given, arguments)
+/atom/movable/screen/movable/ability_master/proc/add_ling_ability(var/object_given, var/verb_given, var/name_given, ability_icon_given, arguments)
 	if(!object_given)
 		message_admins("ERROR: add_ling_ability() was not given an object in its arguments.")
 	if(!verb_given)
@@ -374,7 +374,7 @@
 	icon_state = "wiz_spell_base"
 	background_base_state = "wiz"
 
-/atom/movable/screen/movable/ability_master/proc/add_technomancer_ability(var/obj/object_given, ability_icon_given)
+/atom/movable/screen/movable/ability_master/proc/add_technomancer_ability(obj/object_given, ability_icon_given)
 	if(!object_given)
 		message_admins("ERROR: add_technomancer_ability() was not given an object in its arguments.")
 	if(get_ability_by_instance(object_given))

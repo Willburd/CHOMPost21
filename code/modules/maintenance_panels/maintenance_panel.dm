@@ -44,7 +44,7 @@
 	. = ..()
 
 
-/obj/structure/window/maintenance_panel/take_damage(var/damage = 0,  sound_effect = 1)
+/obj/structure/window/maintenance_panel/take_damage(damage = 0,  sound_effect = 1)
 	var/initialhealth = health
 	health = max(0, health - damage)
 	if(health <= 0)

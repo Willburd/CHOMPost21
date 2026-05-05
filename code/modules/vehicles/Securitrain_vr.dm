@@ -113,10 +113,10 @@
 	else
 		icon_state = initial(icon_state)
 
-/obj/vehicle/train/security/trolley/insert_cell(var/obj/item/cell/C, mob/living/carbon/human/H)
+/obj/vehicle/train/security/trolley/insert_cell(obj/item/cell/C, mob/living/carbon/human/H)
 	return
 
-/obj/vehicle/train/security/engine/insert_cell(var/obj/item/cell/C, mob/living/carbon/human/H)
+/obj/vehicle/train/security/engine/insert_cell(obj/item/cell/C, mob/living/carbon/human/H)
 	..()
 	update_stats()
 
@@ -326,7 +326,7 @@
 		C.pixel_y = initial(C.pixel_y)
 		C.layer = initial(C.layer)
 
-/obj/vehicle/train/security/trolley/unload(var/mob/user, direction)
+/obj/vehicle/train/security/trolley/unload(mob/user, direction)
 	if(istype(load, /datum/vehicle_dummy_load))
 		var/datum/vehicle_dummy_load/dummy_load = load
 		load = dummy_load.actual_load
@@ -366,7 +366,7 @@
 // more engines increases this limit by car_limit per
 // engine.
 //-------------------------------------------------------
-/obj/vehicle/train/security/engine/update_car(var/train_length, active_engines)
+/obj/vehicle/train/security/engine/update_car(train_length, active_engines)
 	src.train_length = train_length
 	src.active_engines = active_engines
 
@@ -379,7 +379,7 @@
 		move_delay += CONFIG_GET(number/run_speed) 											//base reference speed // CHOMPEdit
 		move_delay *= 1.1																	//makes cargo trains 10% slower than running when not overweight
 
-/obj/vehicle/train/security/trolley/update_car(var/train_length, active_engines)
+/obj/vehicle/train/security/trolley/update_car(train_length, active_engines)
 	src.train_length = train_length
 	src.active_engines = active_engines
 

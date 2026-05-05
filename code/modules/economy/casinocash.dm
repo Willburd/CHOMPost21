@@ -95,7 +95,7 @@
 		src.overlays += banknote
 	src.desc = "They are worth [worth] casino credits."
 
-/obj/item/spacecasinocash/proc/adjust_worth(var/adjust_worth = 0, update = 1)
+/obj/item/spacecasinocash/proc/adjust_worth(adjust_worth = 0, update = 1)
 	worth += adjust_worth
 	if(worth > 0)
 		if(update)
@@ -105,7 +105,7 @@
 		qdel(src)
 		return 0
 
-/obj/item/spacecasinocash/proc/set_worth(var/new_worth = 0, update = 1)
+/obj/item/spacecasinocash/proc/set_worth(new_worth = 0, update = 1)
 	worth = max(0, new_worth)
 	if(update)
 		update_icon()
@@ -276,7 +276,7 @@
 		src.overlays += banknote
 	src.desc = "They are worth [worth] replica casino credits."
 
-/obj/item/spacecasinocash_fake/proc/adjust_worth(var/adjust_worth = 0, update = 1)
+/obj/item/spacecasinocash_fake/proc/adjust_worth(adjust_worth = 0, update = 1)
 	worth += adjust_worth
 	if(worth > 0)
 		if(update)
@@ -286,7 +286,7 @@
 		qdel(src)
 		return 0
 
-/obj/item/spacecasinocash_fake/proc/set_worth(var/new_worth = 0, update = 1)
+/obj/item/spacecasinocash_fake/proc/set_worth(new_worth = 0, update = 1)
 	worth = max(0, new_worth)
 	if(update)
 		update_icon()

@@ -80,7 +80,7 @@
 	..()
 
 // Hat simulator
-/mob/living/simple_mob/animal/passive/armadillo/proc/give_hat(var/obj/item/clothing/head/new_hat, mob/living/user)
+/mob/living/simple_mob/animal/passive/armadillo/proc/give_hat(obj/item/clothing/head/new_hat, mob/living/user)
 	if(!istype(new_hat))
 		to_chat(user, span_warning("\The [new_hat] isn't a hat."))
 		return

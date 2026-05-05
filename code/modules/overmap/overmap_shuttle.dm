@@ -10,7 +10,7 @@
 
 	category = /datum/shuttle/autodock/overmap
 
-/datum/shuttle/autodock/overmap/New(var/_name, obj/effect/shuttle_landmark/start_waypoint)
+/datum/shuttle/autodock/overmap/New(_name, obj/effect/shuttle_landmark/start_waypoint)
 	..(_name, start_waypoint)
 	refresh_fuel_ports_list()
 

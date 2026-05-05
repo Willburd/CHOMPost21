@@ -1,4 +1,4 @@
-/proc/create_redspace_wormhole(var/turf/enter as turf, var/turf/exit as turf, var/is_return_portal, var/min_duration = 30 SECONDS, max_duration = 60 SECONDS)
+/proc/create_redspace_wormhole(var/turf/enter as turf, var/turf/exit as turf, var/is_return_portal, min_duration = 30 SECONDS, max_duration = 60 SECONDS)
 	set waitfor = FALSE
 	var/obj/effect/portal/portal_redspace/P = new /obj/effect/portal/portal_redspace( enter )
 	P.target = exit

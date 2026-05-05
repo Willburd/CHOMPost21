@@ -26,7 +26,7 @@
 	try_latespawn(character.mind)
 	return 0
 
-/datum/game_mode/proc/try_latespawn(var/datum/mind/player, latejoin_only)
+/datum/game_mode/proc/try_latespawn(datum/mind/player, latejoin_only)
 
 	if(SSemergency_shuttle.departed || !round_autoantag)
 		return

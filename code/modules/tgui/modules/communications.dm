@@ -452,7 +452,7 @@
 
 	return
 
-/proc/init_shift_change(var/mob/user, force = 0)
+/proc/init_shift_change(mob/user, force = 0)
 	if ((!( SSticker ) || !SSemergency_shuttle.location()))
 		return
 

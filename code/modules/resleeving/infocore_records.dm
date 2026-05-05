@@ -37,7 +37,7 @@
 
 	var/one_time = FALSE
 
-/datum/transhuman/mind_record/New(var/datum/mind/mind, var/mob/living/carbon/human/M, var/add_to_db = TRUE, var/one_time = FALSE, database_key)
+/datum/transhuman/mind_record/New(var/datum/mind/mind, var/mob/living/carbon/human/M, var/add_to_db = TRUE, one_time = FALSE, database_key)
 	ASSERT(mind)
 
 	src.one_time = one_time
@@ -103,7 +103,7 @@
 	var/aflags
 	var/breath_type = GAS_O2
 
-/datum/transhuman/body_record/New(var/copyfrom, var/add_to_db = 0, ckeylock = 0)
+/datum/transhuman/body_record/New(var/copyfrom, add_to_db = 0, ckeylock = 0)
 	..()
 	if(istype(copyfrom, /datum/transhuman/body_record))
 		init_from_br(copyfrom)
@@ -120,7 +120,7 @@
 	..()
 	return QDEL_HINT_HARDDEL // For now at least there is no easy way to clear references to this in GLOB.machines etc.
 
-/datum/transhuman/body_record/proc/init_from_mob(var/mob/living/carbon/human/M, var/add_to_db = 0, var/ckeylock = 0, database_key)
+/datum/transhuman/body_record/proc/init_from_mob(var/mob/living/carbon/human/M, var/add_to_db = 0, ckeylock = 0, database_key)
 	ASSERT(!QDELETED(M))
 	ASSERT(istype(M))
 
@@ -247,7 +247,7 @@
  */
 
 /// The core of resleeving, creates a mob based on the current record
-/datum/transhuman/body_record/proc/produce_human_mob(var/location, var/is_synthfab, var/force_unlock, backup_name)
+/datum/transhuman/body_record/proc/produce_human_mob(var/location, var/is_synthfab, force_unlock, backup_name)
 	// These are broken up into steps, otherwise the proc gets massive and hard to read.
 	var/mob/living/carbon/human/H = internal_producebody(location,backup_name)
 	internal_producebody_handlesleevelock(H,force_unlock)
@@ -258,7 +258,7 @@
 	return H
 
 /// Creates a human mob with the correct species, name, and a stable state.
-/datum/transhuman/body_record/proc/internal_producebody(var/location,backup_name)
+/datum/transhuman/body_record/proc/internal_producebody(location,backup_name)
 	SHOULD_NOT_OVERRIDE(TRUE)
 	PRIVATE_PROC(TRUE)
 
@@ -276,7 +276,7 @@
 	return H
 
 /// Sets the new body's sleevelock status, to prevent impersonation by transfering an incorrect mind.
-/datum/transhuman/body_record/proc/internal_producebody_handlesleevelock(var/mob/living/carbon/human/H,force_unlock)
+/datum/transhuman/body_record/proc/internal_producebody_handlesleevelock(mob/living/carbon/human/H,force_unlock)
 	SHOULD_NOT_OVERRIDE(TRUE)
 	PRIVATE_PROC(TRUE)
 	if(locked && !force_unlock)
@@ -287,7 +287,7 @@
 			H.resleeve_lock = "@badckey"
 
 /// Either converts limbs to robotics or prosthetic states, or removes them entirely based off record.
-/datum/transhuman/body_record/proc/internal_producebody_updatelimbandorgans(var/mob/living/carbon/human/H,is_synthfab)
+/datum/transhuman/body_record/proc/internal_producebody_updatelimbandorgans(mob/living/carbon/human/H,is_synthfab)
 	SHOULD_NOT_OVERRIDE(TRUE)
 	PRIVATE_PROC(TRUE)
 
@@ -327,7 +327,7 @@
 			I.digitize()
 
 /// Transfers dna data to mob, and reinits traits and appearance from it
-/datum/transhuman/body_record/proc/internal_producebody_updatednastate(var/mob/living/carbon/human/H,is_synthfab)
+/datum/transhuman/body_record/proc/internal_producebody_updatednastate(mob/living/carbon/human/H,is_synthfab)
 	SHOULD_NOT_OVERRIDE(TRUE)
 	PRIVATE_PROC(TRUE)
 
@@ -373,7 +373,7 @@
 /**
  * Specialty revival procs. Uses the BR for data, but needs to handle some weird logic for xenochi/slimes
  */
-/datum/transhuman/body_record/proc/revive_xenochimera(var/mob/living/carbon/human/H,var/heal_robot_limbs,from_save_slot)
+/datum/transhuman/body_record/proc/revive_xenochimera(var/mob/living/carbon/human/H,heal_robot_limbs,from_save_slot)
 	// Boy this one is complex, but what do we expect when trying to heal damage and organ loss in this game!
 	if(!H || QDELETED(H)) // Someone, somewhere, will call this without any safety. I feel it in my bones cappin'
 		return

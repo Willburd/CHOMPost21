@@ -92,7 +92,7 @@ GLOBAL_LIST_EMPTY(active_autoresleevers)
 	else
 		return
 
-/obj/machinery/transhuman/autoresleever/proc/autoresleeve(var/mob/observer/dead/ghost,idscan = FALSE)
+/obj/machinery/transhuman/autoresleever/proc/autoresleeve(mob/observer/dead/ghost,idscan = FALSE)
 	if(stat) // Outpost 21 edit - We prefer our autosleever to not work in a powerout, was:  & (BROKEN | MAINT | EMPED)) // Let it still work when power is just off, it has it's own backup reserve or something.
 		to_chat(ghost, span_warning("This machine is not functioning..."))
 		return
@@ -402,7 +402,7 @@ GLOBAL_LIST_EMPTY(active_autoresleevers)
 			to_chat(ghost, "<span class='warning'>Your ID has arrived at the autosleever!</span>")
 			autoresleeve(ghost,TRUE)
 
-/obj/machinery/transhuman/autoresleever/proc/outpost_post_sleeve(var/idscan, var/mob/living/carbon/human/new_character, spawnloc)
+/obj/machinery/transhuman/autoresleever/proc/outpost_post_sleeve(var/idscan, mob/living/carbon/human/new_character, spawnloc)
 	var/confuse_amount = rand(8,26)
 	var/blur_amount = rand(8,56)
 	var/sickness_duration = rand(20,30) MINUTES

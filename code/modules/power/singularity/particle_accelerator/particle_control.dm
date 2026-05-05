@@ -169,7 +169,7 @@
 
 
 
-/obj/machinery/particle_accelerator/control_box/proc/check_part(var/turf/T, type)
+/obj/machinery/particle_accelerator/control_box/proc/check_part(turf/T, type)
 	if(!(T)||!(type))
 		return 0
 

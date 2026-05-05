@@ -1818,7 +1818,7 @@
 	if(mind && mind.current)
 		return "|<A href='byond://?[source];[HrefToken(TRUE)];adminplayerobservejump=\ref[mind.current]'>BDY</A>"
 
-/proc/admin_jump_link(var/atom/target, source)
+/proc/admin_jump_link(atom/target, source)
 	if(!target) return
 	// The way admin jump links handle their src is weirdly inconsistent...
 	if(istype(source, /datum/admins))

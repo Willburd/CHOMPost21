@@ -82,7 +82,7 @@
 	CheckHealth()
 	return
 
-/obj/structure/barricade/attack_generic(var/mob/user, var/damage, attack_verb)
+/obj/structure/barricade/attack_generic(var/mob/user, damage, attack_verb)
 	visible_message(span_danger("[user] [attack_verb] the [src]!"))
 	if(material == get_material_by_name(MAT_RESIN))
 		playsound(src, 'sound/effects/attackblob.ogg', 100, 1)

@@ -124,7 +124,7 @@
 
 
 
-/obj/machinery/maint_recycler/fall_apart(var/severity = 3, scatter = TRUE)
+/obj/machinery/maint_recycler/fall_apart(severity = 3, scatter = TRUE)
 	return FALSE //don't fall apart
 
 /obj/machinery/maint_recycler/dismantle()
@@ -264,7 +264,7 @@
 
 	visible_message("\The [source] bounces off of the rim of \the [src]'s processing compartment!")
 
-/obj/machinery/maint_recycler/proc/deny_act(var/obj/item/O,mob/user)
+/obj/machinery/maint_recycler/proc/deny_act(obj/item/O,mob/user)
 	set_screen_state("screen_deny",10)
 	to_chat(user, span_warning("\The [src] rejects \the [O]!"))
 	if(prob(99))
@@ -274,7 +274,7 @@
 		playsound(src, 'code/modules/maint_recycler/sfx/voice/mad/denied.ogg', 75)
 
 //add people to the evil list, and be mean to them
-/obj/machinery/maint_recycler/proc/evil_act(var/obj/item/O,mob/user)
+/obj/machinery/maint_recycler/proc/evil_act(obj/item/O,mob/user)
 	var/isRepeat = is_user_hostile(user)
 	if(!isRepeat && user.key)
 		hostile_towards |= user.key
@@ -320,7 +320,7 @@
 		hatch.icon_state = "door closed"
 
 
-/obj/machinery/maint_recycler/proc/shoot_at(var/mob/victim, burst = 3)
+/obj/machinery/maint_recycler/proc/shoot_at(mob/victim, burst = 3)
 	if(victim == null) return
 	for(var/i = 1 to burst)
 		addtimer(CALLBACK(src, PROC_REF(shoot), victim), (0.3 * i SECONDS))
@@ -484,7 +484,7 @@ TGUI PROCS
 UTILITY PROCS
 */
 
-/obj/machinery/maint_recycler/proc/credit_user(var/mob/user, amount)
+/obj/machinery/maint_recycler/proc/credit_user(mob/user, amount)
 	if(!user || !user.client || !user.client.prefs) return
 	var/currentValue = 	user.client?.prefs?.read_preference(/datum/preference/numeric/recycler_points)
 	user.client?.prefs?.write_preference_by_type(/datum/preference/numeric/recycler_points, min(currentValue + amount,999))
@@ -497,7 +497,7 @@ UTILITY PROCS
 /obj/machinery/maint_recycler/proc/user_balance(mob/user)
 	return user.client?.prefs?.read_preference(/datum/preference/numeric/recycler_points)
 
-/obj/machinery/maint_recycler/proc/canRecycle(var/mob/user, potentialValue)
+/obj/machinery/maint_recycler/proc/canRecycle(mob/user, potentialValue)
 	if(!user.key) return FALSE
 	if(granted_points[user.key]+potentialValue > point_cap) return FALSE
 	return TRUE
@@ -548,7 +548,7 @@ UTILITY PROCS
 	if(stat & NOPOWER)
 		set_on_state(FALSE)
 
-/obj/machinery/maint_recycler/proc/set_screen_state(var/state, duration = 10)
+/obj/machinery/maint_recycler/proc/set_screen_state(state, duration = 10)
 	if(!is_on) return
 	monitor_screen.icon_state = state
 	addtimer(CALLBACK(src, PROC_REF(reset_screen_state)), duration)

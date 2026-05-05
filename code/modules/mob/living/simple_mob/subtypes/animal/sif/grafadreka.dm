@@ -84,7 +84,7 @@ Field studies suggest analytical abilities on par with some species of cepholapo
 	emote_cooldown = 20 SECONDS
 	broadcast_distance = 90
 
-/datum/decl/emote/audible/drake_howl/broadcast_emote_to(var/send_sound, var/mob/target, direction)
+/datum/decl/emote/audible/drake_howl/broadcast_emote_to(var/send_sound, mob/target, direction)
 	if((. = ..()))
 		to_chat(target, span_notice("You hear an eerie howl from somewhere to the [dir2text(direction)]."))
 
@@ -291,7 +291,7 @@ GLOBAL_LIST_EMPTY(wounds_being_tended_by_drakes)
 		return ..()
 	return 0.25 // Quarter nutrition from non-meat.
 
-/mob/living/simple_mob/animal/sif/grafadreka/handle_reagent_transfer(var/datum/reagents/holder, var/amount = 1, var/chem_type = CHEM_BLOOD, var/multiplier = 1, copy = 0)
+/mob/living/simple_mob/animal/sif/grafadreka/handle_reagent_transfer(var/datum/reagents/holder, var/amount = 1, var/chem_type = CHEM_BLOOD, multiplier = 1, copy = 0)
 	return holder.trans_to_holder(reagents, amount, multiplier, copy)
 
 /mob/living/simple_mob/animal/sif/grafadreka/Life()
@@ -411,7 +411,7 @@ GLOBAL_LIST_EMPTY(wounds_being_tended_by_drakes)
 /mob/living/simple_mob/animal/sif/grafadreka/get_eye_color()
 	return eye_colour
 
-/mob/living/simple_mob/animal/sif/grafadreka/do_tame(var/obj/O, mob/user)
+/mob/living/simple_mob/animal/sif/grafadreka/do_tame(obj/O, mob/user)
 	. = ..()
 	attacked_by_neutral = FALSE
 

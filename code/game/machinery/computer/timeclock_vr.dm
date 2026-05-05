@@ -149,7 +149,7 @@
 			update_icon()
 			return TRUE
 
-/obj/machinery/computer/timeclock/proc/getOpenOnDutyJobs(var/mob/user, department)
+/obj/machinery/computer/timeclock/proc/getOpenOnDutyJobs(mob/user, department)
 	var/list/available_jobs = list()
 	for(var/datum/job/job in SSjob.occupations)
 		if(isOpenOnDutyJob(user, department, job))
@@ -160,7 +160,7 @@
 						available_jobs[job.title] += alt_job
 	return available_jobs
 
-/obj/machinery/computer/timeclock/proc/isOpenOnDutyJob(var/mob/user, var/department, datum/job/job)
+/obj/machinery/computer/timeclock/proc/isOpenOnDutyJob(var/mob/user, department, datum/job/job)
 	return job \
 		&& job.is_position_available() \
 		&& !job.whitelist_only \
@@ -171,7 +171,7 @@
 		&& !job.disallow_jobhop \
 		&& job.timeoff_factor > 0
 
-/obj/machinery/computer/timeclock/proc/makeOnDuty(var/newrank, var/newassignment, mob/user)
+/obj/machinery/computer/timeclock/proc/makeOnDuty(var/newrank, newassignment, mob/user)
 	var/datum/job/oldjob = SSjob.get_job(card.rank)
 	var/datum/job/newjob = SSjob.get_job(newrank)
 	if(!oldjob || !isOpenOnDutyJob(user, oldjob.pto_type, newjob))

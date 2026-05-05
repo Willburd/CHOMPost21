@@ -130,7 +130,7 @@
 					onMajorChunkChange(c, choice, chunk)
 					chunk.hasChanged()
 
-/datum/visualnet/proc/onMajorChunkChange(atom/c, var/choice, datum/chunk/chunk)
+/datum/visualnet/proc/onMajorChunkChange(atom/c, choice, datum/chunk/chunk)
 
 // Will check if a mob is on a viewable turf. Returns 1 if it is, otherwise returns 0.
 

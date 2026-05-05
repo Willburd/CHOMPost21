@@ -138,7 +138,7 @@
 /datum/species/lleill/get_valid_shapeshifter_forms(mob/living/carbon/human/H)
 	return valid_transform_species
 
-/datum/species/lleill/get_icobase(var/mob/living/carbon/human/H, get_deform)
+/datum/species/lleill/get_icobase(mob/living/carbon/human/H, get_deform)
 	if(!H) return ..(null, get_deform)
 	var/datum/species/S = GLOB.all_species[GLOB.wrapped_species_by_ref["\ref[H]"]]
 	if(!S || S.type == src.type) return ..(H, get_deform)

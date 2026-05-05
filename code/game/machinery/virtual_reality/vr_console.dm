@@ -86,7 +86,7 @@
 
 	return 1
 
-/obj/machinery/vr_sleeper/attackby(var/obj/item/I, mob/user)
+/obj/machinery/vr_sleeper/attackby(obj/item/I, mob/user)
 	add_fingerprint(user)
 
 	if(occupant && (istype(I, /obj/item/healthanalyzer) || istype(I, /obj/item/robotanalyzer)))
@@ -103,7 +103,7 @@
 		return
 
 
-/obj/machinery/vr_sleeper/MouseDrop_T(var/mob/target, mob/user)
+/obj/machinery/vr_sleeper/MouseDrop_T(mob/target, mob/user)
 	if(user.stat || user.lying || !Adjacent(user) || !target.Adjacent(user)|| !isliving(target))
 		return
 	go_in(target, user)
@@ -163,7 +163,7 @@
 		return 0 //maybe they should be able to get out with cuffs, but whatever
 	perform_exit()
 
-/obj/machinery/vr_sleeper/proc/go_in(var/mob/M, mob/user)
+/obj/machinery/vr_sleeper/proc/go_in(mob/M, mob/user)
 	if(!M)
 		return
 	if(stat & (BROKEN|NOPOWER))

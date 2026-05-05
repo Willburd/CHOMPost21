@@ -52,7 +52,7 @@ SUBSYSTEM_DEF(planets)
 			P.planet_floors += T
 			P.weather_holder.apply_to_turf(T)
 
-/datum/controller/subsystem/planets/proc/removeTurf(var/turf/T,is_edge)
+/datum/controller/subsystem/planets/proc/removeTurf(turf/T,is_edge)
 	if(length(z_to_planet) >= T.z)
 		var/datum/planet/P = z_to_planet[T.z]
 		if(!P)

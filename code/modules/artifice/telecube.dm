@@ -125,7 +125,7 @@
 		update_icon()
 		return 1
 
-/obj/item/telecube/proc/teleport_to_mate(var/atom/movable/A, areaporting = FALSE)
+/obj/item/telecube/proc/teleport_to_mate(atom/movable/A, areaporting = FALSE)
 	. = FALSE
 
 	if(!istype(A))

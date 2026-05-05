@@ -33,7 +33,7 @@
 	user.visible_message(span_notice("[user] has [!on?"de":""]activated \the [src]."), span_notice("You [!on?"de":""]activate \the [src]."))
 	return
 
-/obj/machinery/floorlayer/attackby(var/obj/item/W as obj, mob/user as mob)
+/obj/machinery/floorlayer/attackby(obj/item/W as obj, mob/user as mob)
 	if(W.has_tool_quality(TOOL_WRENCH))
 		var/m = tgui_input_list(user, "Choose work mode", "Mode", mode)
 		mode[m] = !mode[m]

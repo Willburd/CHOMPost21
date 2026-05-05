@@ -181,7 +181,7 @@
 	to_chat(user, span_notice("You prepare \the [src] to make \a [selected_option] with the next thing you put in. Try putting several ingredients in a container!"))
 
 //Handles all validity checking and error messages for inserting things
-/obj/machinery/appliance/proc/can_insert(var/obj/item/I, mob/user)
+/obj/machinery/appliance/proc/can_insert(obj/item/I, mob/user)
 	if(istype(I.loc, /mob/living/silicon))
 		return 0
 	else if (istype(I.loc, /obj/item/rig_module))
@@ -234,7 +234,7 @@
 
 	return TRUE
 
-/obj/machinery/appliance/attackby(var/obj/item/I, mob/user)
+/obj/machinery/appliance/attackby(obj/item/I, mob/user)
 	if(!cook_type || (stat & (BROKEN)))
 		to_chat(user, span_warning("\The [src] is not working."))
 		return FALSE
@@ -274,7 +274,7 @@
 	update_icon()
 
 //Override for container mechanics
-/obj/machinery/appliance/proc/add_content(var/obj/item/I, mob/user)
+/obj/machinery/appliance/proc/add_content(obj/item/I, mob/user)
 	if(!user.unEquip(I) && !isturf(I.loc))
 		return
 
@@ -332,7 +332,7 @@
 	CI.max_cookwork += buffer*multiplier
 
 //Just a helper to save code duplication in the above
-/obj/machinery/appliance/proc/cookwork_by_item(var/obj/item/I, datum/cooking_item/CI)
+/obj/machinery/appliance/proc/cookwork_by_item(obj/item/I, datum/cooking_item/CI)
 	var/obj/item/reagent_containers/food/snacks/S = I
 	var/work = 0
 	if (istype(S))
@@ -581,7 +581,7 @@
 	return result
 
 //Helper proc for standard modification cooking
-/obj/machinery/appliance/proc/modify_cook(var/obj/item/input, datum/cooking_item/CI)
+/obj/machinery/appliance/proc/modify_cook(obj/item/input, datum/cooking_item/CI)
 	var/obj/item/reagent_containers/food/snacks/result
 	if (istype(input, /obj/item/holder))
 		result = create_mob_food(input, CI)
@@ -724,7 +724,7 @@
 
 	return TRUE
 
-/obj/machinery/appliance/proc/eject(var/datum/cooking_item/CI, mob/user = null)
+/obj/machinery/appliance/proc/eject(datum/cooking_item/CI, mob/user = null)
 	var/obj/item/thing
 	var/delete = 1
 	var/status = CI.container.check_contents()
@@ -764,15 +764,15 @@
 		if(cooked_sound)
 			playsound(get_turf(src), cooked_sound, 50, 1)
 
-/obj/machinery/appliance/proc/cook_mob(var/mob/living/victim, mob/user)
+/obj/machinery/appliance/proc/cook_mob(mob/living/victim, mob/user)
 	return
 
-/obj/machinery/appliance/proc/change_product_strings(var/obj/item/reagent_containers/food/snacks/product, datum/cooking_item/CI)
+/obj/machinery/appliance/proc/change_product_strings(obj/item/reagent_containers/food/snacks/product, datum/cooking_item/CI)
 	product.name = "[cook_type] [product.name]"
 	product.desc = "[product.desc]\nIt has been [cook_type]."
 
 
-/obj/machinery/appliance/proc/change_product_appearance(var/obj/item/reagent_containers/food/snacks/product, datum/cooking_item/CI)
+/obj/machinery/appliance/proc/change_product_appearance(obj/item/reagent_containers/food/snacks/product, datum/cooking_item/CI)
 	if (!product.coating) //Coatings change colour through a new sprite
 		product.color = food_color
 	product.filling_color = food_color
@@ -804,7 +804,7 @@
 		src.composition_reagent_quantity = size_reagent
 
 //This function creates a food item which represents a dead mob
-/obj/machinery/appliance/proc/create_mob_food(var/obj/item/holder/H, datum/cooking_item/CI)
+/obj/machinery/appliance/proc/create_mob_food(obj/item/holder/H, datum/cooking_item/CI)
 	if (!istype(H) || !H.held_mob)
 		qdel(H)
 		return null

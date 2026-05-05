@@ -198,7 +198,7 @@
 		to_eat.forceMove(belly)
 		log_admin("VORE: [hound] used their [src] to swallow [to_eat].")
 
-/obj/item/dogborg/sleeper/proc/ingest_living(var/mob/living/victim, obj/belly/belly)
+/obj/item/dogborg/sleeper/proc/ingest_living(mob/living/victim, obj/belly/belly)
 	if (victim.devourable && is_vore_predator(hound))
 		belly.nom_atom(victim, hound)
 		add_attack_logs(hound, victim, "Eaten via [belly.name]")

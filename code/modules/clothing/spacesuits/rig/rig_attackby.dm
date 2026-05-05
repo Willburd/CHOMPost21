@@ -188,7 +188,7 @@
 			return
 	..()
 
-/obj/item/rig/emag_act(var/remaining_charges, mob/user)
+/obj/item/rig/emag_act(remaining_charges, mob/user)
 	if(!subverted)
 		LAZYCLEARLIST(req_access)
 		LAZYCLEARLIST(req_one_access)

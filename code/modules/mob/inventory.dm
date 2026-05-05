@@ -97,7 +97,7 @@ GLOBAL_LIST_INIT(slot_equipment_priority, list(
 	return equip_to_slot_if_possible(W, slot, 1, 1, 0)
 
 //Checks if a given slot can be accessed at this time, either to equip or unequip I
-/mob/proc/slot_is_accessible(var/slot, obj/item/I, mob/user=null)
+/mob/proc/slot_is_accessible(slot, obj/item/I, mob/user=null)
 	return 1
 
 //puts the item "W" into an appropriate slot in a human's inventory
@@ -170,7 +170,7 @@ GLOBAL_LIST_INIT(slot_equipment_priority, list(
 // Removes an item from inventory and places it in the target atom.
 // If canremove or other conditions need to be checked then use unEquip instead.
 
-/mob/proc/drop_from_inventory(var/obj/item/W, atom/target)
+/mob/proc/drop_from_inventory(obj/item/W, atom/target)
 	if(!W)
 		return FALSE
 	if(isnull(target) && isdisposalpacket(src.loc))
@@ -249,7 +249,7 @@ GLOBAL_LIST_INIT(slot_equipment_priority, list(
 	return SLOT_BACK
 
 //Attemps to remove an object on a mob.
-/mob/proc/remove_from_mob(var/obj/item_dropping, atom/target)
+/mob/proc/remove_from_mob(obj/item_dropping, atom/target)
 	if(!item_dropping) // Nothing to remove, so we succeed.
 		return 1
 	src.u_equip(item_dropping)

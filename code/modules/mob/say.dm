@@ -1,8 +1,8 @@
-/mob/proc/say(var/message, var/datum/language/speaking = null, whispering = 0)
+/mob/proc/say(var/message, datum/language/speaking = null, whispering = 0)
 	return
 
 // MUST BE NON-BLOCKING, signals can call this
-/mob/proc/direct_say(var/message, var/datum/language/speaking = null, whispering = 0)
+/mob/proc/direct_say(var/message, datum/language/speaking = null, whispering = 0)
 	SHOULD_NOT_SLEEP(TRUE)
 	return
 
@@ -68,7 +68,7 @@
 
 	say_dead_direct("[pick("complains","moans","whines","laments","blubbers")], " + span_message("\"[message]\""), src)
 
-/mob/proc/say_understands(var/mob/other, datum/language/speaking = null)
+/mob/proc/say_understands(mob/other, datum/language/speaking = null)
 	if(stat == DEAD)
 		return TRUE
 
@@ -124,7 +124,7 @@
 
 	return FALSE
 
-/mob/proc/say_quote(var/message, datum/language/speaking = null)
+/mob/proc/say_quote(message, datum/language/speaking = null)
 	var/verb = "says"
 	var/ending = copytext(message, length(message))
 
@@ -156,7 +156,7 @@
 //parses the message mode code (e.g. :h, :w) from text, such as that supplied to say.
 //returns the message mode string or null for no message mode.
 //standard mode is the mode returned for the special ';' radio code.
-/mob/proc/parse_message_mode(var/message, standard_mode = "headset")
+/mob/proc/parse_message_mode(message, standard_mode = "headset")
 	if(length(message) >= 1 && copytext(message, 1, 2) == ";")
 		return standard_mode
 
@@ -275,7 +275,7 @@
 /proc/message_to_multilingual(message, datum/language/speaking = null)
 	. = list(new /datum/multilingual_say_piece(speaking, message))
 
-/proc/multilingual_to_message(list/message_pieces, var/requires_machine_understands = FALSE, with_capitalization = FALSE)
+/proc/multilingual_to_message(list/message_pieces, requires_machine_understands = FALSE, with_capitalization = FALSE)
 	. = ""
 	for(var/datum/multilingual_say_piece/S in message_pieces)
 		var/message_to_append = S.message

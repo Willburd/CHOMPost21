@@ -32,7 +32,7 @@ somewhere on that shuttle. Subtypes of these can be then used to perform ship ov
 		if((. = .(candidate)))
 			return
 
-/obj/machinery/computer/ship/proc/display_reconnect_dialog(var/mob/user, flavor)
+/obj/machinery/computer/ship/proc/display_reconnect_dialog(mob/user, flavor)
 	var/datum/browser/popup = new (user, "[src]", "[src]")
 	if(viewing_overmap(user))
 		user.reset_perspective()

@@ -236,7 +236,7 @@
 	. = ..()
 	redspace = GLOB.all_languages[LANGUAGE_REDSPACE]
 
-/obj/item/organ/internal/voicebox/horror/replaced(var/mob/living/carbon/human/target,obj/item/organ/external/affected)
+/obj/item/organ/internal/voicebox/horror/replaced(mob/living/carbon/human/target,obj/item/organ/external/affected)
 	..()
 	target.add_language(LANGUAGE_REDSPACE)
 	target.default_language = redspace

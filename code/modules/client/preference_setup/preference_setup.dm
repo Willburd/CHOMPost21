@@ -81,7 +81,7 @@
 	dat += "<a href='byond://?src=\ref[src];game_prefs=1'>Game Options</a>"
 	return dat
 
-/datum/category_collection/player_setup_collection/Topic(var/href,list/href_list)
+/datum/category_collection/player_setup_collection/Topic(href,list/href_list)
 	if(..())
 		return 1
 	var/mob/user = usr
@@ -198,7 +198,7 @@
 /datum/category_item/player_setup_item/proc/sanitize_preferences()
 	return
 
-/datum/category_item/player_setup_item/Topic(var/href,list/href_list)
+/datum/category_item/player_setup_item/Topic(href,list/href_list)
 	if(..())
 		return 1
 	var/mob/pref_mob = preference_mob()
@@ -218,7 +218,7 @@
 /datum/category_item/player_setup_item/CanUseTopic(mob/user)
 	return 1
 
-/datum/category_item/player_setup_item/proc/OnTopic(var/href,var/list/href_list, mob/user)
+/datum/category_item/player_setup_item/proc/OnTopic(var/href,list/href_list, mob/user)
 	return TOPIC_NOACTION
 
 /datum/category_item/player_setup_item/proc/preference_mob()

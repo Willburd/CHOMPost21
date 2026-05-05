@@ -166,7 +166,7 @@
 	var/datum/species/S = GLOB.all_species[base_species]
 	return S.get_bodytype(H)
 
-/datum/species/protean/get_icobase(var/mob/living/carbon/human/H, get_deform)
+/datum/species/protean/get_icobase(mob/living/carbon/human/H, get_deform)
 	if(!H || base_species == name) return ..(null, get_deform)
 	var/datum/species/S = GLOB.all_species[base_species]
 	return S.get_icobase(H, get_deform)
@@ -235,7 +235,7 @@
 		*/
 		new /obj/item/rig/protean(H,H)
 
-/datum/species/protean/hug(var/mob/living/carbon/human/H, mob/living/target)
+/datum/species/protean/hug(mob/living/carbon/human/H, mob/living/target)
 	return ..() //Wut
 
 /datum/species/protean/get_blood_colour(mob/living/carbon/human/H)

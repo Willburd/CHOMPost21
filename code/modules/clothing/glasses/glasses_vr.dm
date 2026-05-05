@@ -19,7 +19,7 @@
 	icon_state = "modkit"
 	var/scrip_loaded = 0
 
-/obj/item/glasses_kit/afterattack(var/target, var/mob/living/carbon/human/user, proximity)
+/obj/item/glasses_kit/afterattack(var/target, mob/living/carbon/human/user, proximity)
 	if(!proximity)
 		return
 	if(!istype(user))

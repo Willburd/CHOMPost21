@@ -25,7 +25,7 @@
 		return TRUE
 	return FALSE
 
-/datum/material/resin/wall_touch_special(var/turf/simulated/wall/W, mob/living/L)
+/datum/material/resin/wall_touch_special(turf/simulated/wall/W, mob/living/L)
 	var/mob/living/carbon/M = L
 	if(istype(M) && locate(/obj/item/organ/internal/xenos/hivenode) in M.internal_organs)
 		to_chat(M, "\The [W] shudders under your touch, starting to become porous.")

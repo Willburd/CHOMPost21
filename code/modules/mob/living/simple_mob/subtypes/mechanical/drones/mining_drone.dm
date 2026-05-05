@@ -137,12 +137,12 @@
 		if(ai_holder)
 			ai_holder.add_attacker(L)
 
-/mob/living/simple_mob/mechanical/mining_drone/bullet_act(var/obj/item/projectile/P, def_zone)
+/mob/living/simple_mob/mechanical/mining_drone/bullet_act(obj/item/projectile/P, def_zone)
 	..()
 	if(ai_holder && P.firer)
 		ai_holder.add_attacker(P.firer)
 
-/mob/living/simple_mob/mechanical/mining_drone/hit_with_weapon(obj/item/I, mob/living/user, var/effective_force, hit_zone)
+/mob/living/simple_mob/mechanical/mining_drone/hit_with_weapon(obj/item/I, mob/living/user, effective_force, hit_zone)
 	..()
 	if(ai_holder)
 		ai_holder.add_attacker(user)

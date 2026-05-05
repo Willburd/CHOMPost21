@@ -375,7 +375,7 @@
 	Striking a lesser robotic entity will compel it to attack you, as well.  It also does extra burn damage to robotic entities, but it does \
 	very little damage to purely organic targets."
 
-/obj/item/melee/robotic/blade/ionic/afterattack(var/atom/movable/AM, var/mob/living/user, proximity)
+/obj/item/melee/robotic/blade/ionic/afterattack(var/atom/movable/AM, mob/living/user, proximity)
 	if(istype(AM, /obj) && proximity)
 		// EMP stuff.
 		var/obj/O = AM

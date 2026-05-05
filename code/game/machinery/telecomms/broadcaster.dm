@@ -562,7 +562,7 @@ GLOBAL_VAR_INIT(message_delay, 0) // To make sure restarting the recentmessages 
 
 	return 1
 
-/proc/Broadcast_SimpleMessage(var/source, var/frequency, list/message_pieces, var/data, var/mob/M, var/compression, var/level, list/forced_radios)
+/proc/Broadcast_SimpleMessage(var/source, var/frequency, list/message_pieces, var/data, var/mob/M, var/compression, level, list/forced_radios)
 	var/text = multilingual_to_message(message_pieces)
 	/* ###### Prepare the radio connection ###### */
 

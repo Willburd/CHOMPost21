@@ -56,7 +56,7 @@
 ///////////////////////////////
 ///// Asteroid Generation /////
 ///////////////////////////////
-/datum/rogue/zonemaster/proc/generate_asteroid(var/core_min = 2, core_max = 5)
+/datum/rogue/zonemaster/proc/generate_asteroid(core_min = 2, core_max = 5)
 	//Chance for a predefined structure instead, more common later
 	if(prob(GLOB.rm_controller.diffstep*4))
 		GLOB.rm_controller.dbg("ZM(ga): Fell into prefab asteroid chance.")
@@ -114,7 +114,7 @@
 	GLOB.rm_controller.dbg("ZM(ga): Asteroid generation done.")
 	return A
 
-/datum/rogue/zonemaster/proc/place_asteroid(var/datum/rogue/asteroid/A,obj/asteroid_spawner/SP)
+/datum/rogue/zonemaster/proc/place_asteroid(datum/rogue/asteroid/A,obj/asteroid_spawner/SP)
 	ASSERT(SP && A)
 
 	GLOB.rm_controller.dbg("ZM(pa): Placing at point [SP.x],[SP.y],[SP.z].")

@@ -57,7 +57,7 @@
 	QDEL_LIST_NULL(plane_masters) //Goodbye my children, be free
 	return ..()
 
-/datum/plane_holder/proc/set_vis(var/which = null, state = FALSE)
+/datum/plane_holder/proc/set_vis(which = null, state = FALSE)
 	ASSERT(which)
 	var/atom/movable/screen/plane_master/PM = plane_masters[which]
 	if(!PM)
@@ -73,21 +73,21 @@
 	else if(!state && (plane in my_mob.planes_visible))
 		LAZYREMOVE(my_mob.planes_visible, plane)
 
-/datum/plane_holder/proc/set_desired_alpha(var/which = null, new_alpha)
+/datum/plane_holder/proc/set_desired_alpha(which = null, new_alpha)
 	ASSERT(which)
 	var/atom/movable/screen/plane_master/PM = plane_masters[which]
 	if(!PM)
 		stack_trace("Tried to alter [which] in plane_holder on [my_mob]!")
 	PM.set_desired_alpha(new_alpha)
 
-/datum/plane_holder/proc/set_ao(var/which = null, enabled = FALSE)
+/datum/plane_holder/proc/set_ao(which = null, enabled = FALSE)
 	ASSERT(which)
 	var/atom/movable/screen/plane_master/PM = plane_masters[which]
 	if(!PM)
 		stack_trace("Tried to set_ao [which] in plane_holder on [my_mob]!")
 	PM.set_ambient_occlusion(enabled)
 
-/datum/plane_holder/proc/alter_values(var/which = null, list/values = null)
+/datum/plane_holder/proc/alter_values(which = null, list/values = null)
 	ASSERT(which)
 	var/atom/movable/screen/plane_master/PM = plane_masters[which]
 	if(!PM)

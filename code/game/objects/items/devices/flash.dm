@@ -49,7 +49,7 @@
 	. = ..()
 	power_supply = new cell_type(src)
 
-/obj/item/flash/attackby(var/obj/item/W, mob/user)
+/obj/item/flash/attackby(obj/item/W, mob/user)
 	if(W.has_tool_quality(TOOL_SCREWDRIVER) && broken)
 		user.visible_message(span_infoplain(span_bold("\The [user]") + " starts trying to repair \the [src]'s bulb."))
 		if(do_after(user, (40 SECONDS + rand(0, 20 SECONDS)) * W.toolspeed, target = src) && can_repair)

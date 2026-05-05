@@ -71,7 +71,7 @@ SUBSYSTEM_DEF(events)
 
 	log_game("Event '[EM.name]' has completed at [stationtime2text()].")
 
-/datum/controller/subsystem/events/proc/delay_events(var/severity, delay)
+/datum/controller/subsystem/events/proc/delay_events(severity, delay)
 	var/datum/event_container/EC = event_containers[severity]
 	EC.next_event_time += delay
 

@@ -65,7 +65,7 @@ GLOBAL_LIST_EMPTY(smeses)
 	// Outpost 21 edit - critical smes to avoid powerouts on admin power drain
 	var/is_critical = FALSE
 
-/obj/machinery/power/smes/drain_power(var/drain_check, var/surge, amount = 0)
+/obj/machinery/power/smes/drain_power(var/drain_check, surge, amount = 0)
 
 	if(drain_check)
 		return 1
@@ -182,7 +182,7 @@ GLOBAL_LIST_EMPTY(smeses)
 /obj/machinery/power/smes/proc/chargedisplay()
 	return round(5.5*charge/(capacity ? capacity : 5e6))
 
-/obj/machinery/power/smes/proc/input_power(var/percentage, obj/machinery/power/terminal/term)
+/obj/machinery/power/smes/proc/input_power(percentage, obj/machinery/power/terminal/term)
 	var/to_input = target_load * (percentage/100)
 	to_input = between(0, to_input, target_load)
 	if(percentage == 100)
@@ -315,7 +315,7 @@ GLOBAL_LIST_EMPTY(smeses)
 		return 0
 	return 1
 
-/obj/machinery/power/smes/proc/check_terminal_exists(var/turf/location, var/mob/user, direction)
+/obj/machinery/power/smes/proc/check_terminal_exists(var/turf/location, mob/user, direction)
 	for(var/obj/machinery/power/terminal/term in location)
 		if(term.dir == direction)
 			to_chat(user, span_filter_notice(span_notice("There is already a terminal here.")))
@@ -342,7 +342,7 @@ GLOBAL_LIST_EMPTY(smeses)
 	tgui_interact(user)
 
 
-/obj/machinery/power/smes/attackby(var/obj/item/W as obj, mob/user as mob)
+/obj/machinery/power/smes/attackby(obj/item/W as obj, mob/user as mob)
 	if(default_deconstruction_screwdriver(user, W))
 		return FALSE
 
@@ -617,7 +617,7 @@ GLOBAL_LIST_EMPTY(smeses)
 	var/recharge_rate = 10000
 	var/overlay_icon = 'icons/obj/power_vr.dmi'
 
-/obj/machinery/power/smes/buildable/hybrid/attackby(var/obj/item/W as obj, mob/user as mob)
+/obj/machinery/power/smes/buildable/hybrid/attackby(obj/item/W as obj, mob/user as mob)
 	if(W.has_tool_quality(TOOL_SCREWDRIVER) || W.has_tool_quality(TOOL_WIRECUTTER))
 		to_chat(user,span_warning("\The [src] full of weird alien technology that's best not messed with."))
 		return 0

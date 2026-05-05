@@ -74,7 +74,7 @@
 	user.visible_message(span_notice("[user] has [!on?"de":""]activated \the [src]."), span_notice("You [!on?"de":""]activate \the [src]."))
 	return
 
-/obj/machinery/pipelayer/attackby(var/obj/item/W as obj, mob/user as mob)
+/obj/machinery/pipelayer/attackby(obj/item/W as obj, mob/user as mob)
 	if(default_deconstruction_screwdriver(user, W))
 		return
 	if(default_deconstruction_crowbar(user, W))
@@ -158,7 +158,7 @@
 			T.make_plating(!(T.broken || T.burnt))
 	return new_turf.is_plating()
 
-/obj/machinery/pipelayer/proc/layPipe(var/turf/w_turf,var/M_Dir,old_dir)
+/obj/machinery/pipelayer/proc/layPipe(var/turf/w_turf,M_Dir,old_dir)
 	if(!on || !(M_Dir in list(NORTH, SOUTH, EAST, WEST)) || M_Dir==old_dir)
 		return reset()
 	if(!use_metal(pipe_cost))

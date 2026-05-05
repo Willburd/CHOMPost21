@@ -6,7 +6,7 @@
 	effect_state = "shield2"
 	effect_color = "#a824c9"
 
-/datum/artifact_effect/poltergeist/proc/throw_at_mob(var/mob/living/target, damage = 20)
+/datum/artifact_effect/poltergeist/proc/throw_at_mob(mob/living/target, damage = 20)
 	var/list/valid_targets = list()
 
 	for(var/obj/O in oview(world.view, target))

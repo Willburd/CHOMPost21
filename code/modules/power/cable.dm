@@ -60,7 +60,7 @@ GLOBAL_LIST_INIT(possible_cable_coil_colours, list(
 	var/obj/machinery/power/breakerbox/breaker_box
 	var/broken = FALSE // Outpost 21 edit(port) - broken wire trap
 
-/obj/structure/cable/drain_power(var/drain_check, var/surge, amount = 0)
+/obj/structure/cable/drain_power(var/drain_check, surge, amount = 0)
 	if(drain_check)
 		return 1
 
@@ -687,7 +687,7 @@ GLOBAL_LIST_INIT(possible_cable_coil_colours, list(
 		icon_state = "coil"
 		name = initial(name)
 
-/obj/item/stack/cable_coil/proc/set_cable_color(var/selected_color, user)
+/obj/item/stack/cable_coil/proc/set_cable_color(selected_color, user)
 	if(!selected_color)
 		return
 

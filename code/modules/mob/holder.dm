@@ -299,7 +299,7 @@
 	hitsound = 'sound/effects/slime_squish.ogg'
 	slot_flags = SLOT_HOLSTER
 
-/obj/item/holder/fish/afterattack(var/atom/target, mob/living/user, proximity)
+/obj/item/holder/fish/afterattack(atom/target, mob/living/user, proximity)
 	if(!target)
 		return
 	if(!proximity)
@@ -334,7 +334,7 @@
 		return
 	return ..()
 
-/mob/living/proc/get_scooped(var/mob/living/carbon/grabber, self_grab)
+/mob/living/proc/get_scooped(mob/living/carbon/grabber, self_grab)
 
 	if(!holder_type || buckled || pinned.len)
 		return

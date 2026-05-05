@@ -9,7 +9,7 @@
 	source:Topic(href, href_list)
 	return null
 
-/proc/is_on_same_plane_or_station(var/z1, z2)
+/proc/is_on_same_plane_or_station(z1, z2)
 	if(z1 == z2)
 		return 1
 	if((z1 in using_map.station_levels) &&	(z2 in using_map.station_levels))
@@ -58,7 +58,7 @@
 
 // Like view but bypasses luminosity check
 
-/proc/hear(var/range, atom/source)
+/proc/hear(range, atom/source)
 
 	var/lum = source.luminosity
 	source.luminosity = 6
@@ -162,7 +162,7 @@
 // It will keep doing this until it checks every content possible. This will fix any problems with mobs, that are inside objects,
 // being unable to hear people due to being in a box within a bag.
 
-/proc/recursive_content_check(var/atom/O,  list/L = list(), var/recursion_limit = 3, var/client_check = 1, var/sight_check = 1, var/include_mobs = 1, var/include_objects = 1, var/ignore_show_messages = 0)
+/proc/recursive_content_check(atom/O,  list/L = list(), var/recursion_limit = 3, var/client_check = 1, var/sight_check = 1, var/include_mobs = 1, var/include_objects = 1, var/ignore_show_messages = 0)
 
 	if(!recursion_limit)
 		return L
@@ -192,7 +192,7 @@
 
 // Returns a list of mobs and/or objects in range of R from source. Used in radio and say code.
 
-/proc/get_mobs_or_objects_in_view(var/R, var/atom/source, var/include_mobs = 1, include_objects = 1)
+/proc/get_mobs_or_objects_in_view(var/R, var/atom/source, include_mobs = 1, include_objects = 1)
 
 	var/turf/T = get_turf(source)
 	var/list/hear = list()
@@ -260,7 +260,7 @@
 // then adds additional mobs or objects if they are in range 'smartly',
 // based on their presence in lists of players or registered objects
 // Type: 1-audio, 2-visual, 0-neither
-/proc/get_mobs_and_objs_in_view_fast(var/turf/T, var/range, var/type = 1, remote_ghosts = TRUE)
+/proc/get_mobs_and_objs_in_view_fast(var/turf/T, var/range, type = 1, remote_ghosts = TRUE)
 	var/list/mobs = list()
 	var/list/objs = list()
 
@@ -398,7 +398,7 @@
 /area/flick_overlay_view_atom(mutable_appearance/display, duration)
 	return
 
-/proc/isInSight(var/atom/A, atom/B)
+/proc/isInSight(atom/A, atom/B)
 	var/turf/Aturf = get_turf(A)
 	var/turf/Bturf = get_turf(B)
 
@@ -500,7 +500,7 @@
 	src.dest_x = dest_x
 	src.dest_y = dest_y
 
-/proc/projectile_trajectory(var/src_x, var/src_y, var/rotation, var/angle, power)
+/proc/projectile_trajectory(var/src_x, var/src_y, var/rotation, angle, power)
 
 	// returns the destination (Vx,y) that a projectile shot at [src_x], [src_y], with an angle of [angle],
 	// rotated at [rotation] and with the power of [power]
@@ -550,7 +550,7 @@
 	var/b = mixOneColor(weights, blues)
 	return rgb(r,g,b)
 
-/proc/mixOneColor(var/list/weight, list/color)
+/proc/mixOneColor(list/weight, list/color)
 	if (!weight || !color || length(weight)!=length(color))
 		return 0
 
@@ -604,7 +604,7 @@
 /proc/convert_c2k(temp)
 	return ((temp + T0C))
 
-/proc/getCardinalAirInfo(var/turf/loc, list/stats=list("temperature"))
+/proc/getCardinalAirInfo(turf/loc, list/stats=list("temperature"))
 	var/list/temps = new/list(4)
 	for(var/dir in GLOB.cardinal)
 		var/direction
@@ -674,7 +674,7 @@
 // It will keep doing this until it checks every content possible. This will fix any problems with mobs, that are inside objects,
 // being unable to hear people due to being in a box within a bag.
 
-/proc/recursive_mob_check(var/atom/O,  list/L = list(), var/recursion_limit = 3, var/client_check = 1, var/sight_check = 1, var/include_radio = 1)
+/proc/recursive_mob_check(atom/O,  list/L = list(), var/recursion_limit = 3, var/client_check = 1, var/sight_check = 1, var/include_radio = 1)
 
 	if(!recursion_limit)
 		return L
@@ -702,7 +702,7 @@
 // The old system would loop through lists for a total of 5000 per function call, in an empty server.
 // This new system will loop at around 1000 in an empty server.
 
-/proc/get_mobs_in_view(var/R, var/atom/source, include_clientless = FALSE)
+/proc/get_mobs_in_view(var/R, atom/source, include_clientless = FALSE)
 	// Returns a list of mobs in range of R from source. Used in radio and say code.
 
 	var/turf/T = get_turf(source)
@@ -739,7 +739,7 @@
 		return loc_check
 	return null
 
-/proc/get_all_prey_recursive(var/mob/living/L, client_check = 1)			// returns all prey inside the target as well all prey of target's prey, as well as all prey inside target's prey, etc.
+/proc/get_all_prey_recursive(mob/living/L, client_check = 1)			// returns all prey inside the target as well all prey of target's prey, as well as all prey inside target's prey, etc.
 	var/list/result = list()
 
 	if(!istype(L) || !(L.vore_organs) || !(L.vore_organs.len))

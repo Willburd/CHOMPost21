@@ -97,7 +97,7 @@
 	return
 
 
-/obj/item/paper/Initialize(mapload, var/text, title)
+/obj/item/paper/Initialize(mapload, text, title)
 	. = ..()
 
 	if(istext(title))
@@ -151,7 +151,7 @@
 	else
 		. += span_notice("You have to go closer if you want to read it.")
 
-/obj/item/paper/proc/show_content(var/mob/user, forceshow=0)
+/obj/item/paper/proc/show_content(mob/user, forceshow=0)
 	if(!(forceshow || (ishuman(user) || isobserver(user) || issilicon(user) || (istype(user) && user.universal_understand))))
 		user << browse("<HTML><HEAD><TITLE>[name]</TITLE></HEAD><BODY>[stars(info)][stamps]</BODY></HTML>", "window=[name]")
 		onclose(user, "[name]")
@@ -251,7 +251,7 @@
 	update_space(info)
 	updateinfolinks()
 
-/obj/item/paper/proc/addtofield(var/id, var/text, links = 0)
+/obj/item/paper/proc/addtofield(var/id, text, links = 0)
 	var/locid = 0
 	var/laststart = 1
 	var/textindex = 1
@@ -310,7 +310,7 @@
 		return P.get_signature(user)
 	return (user && user.real_name) ? user.real_name : "Anonymous"
 
-/obj/item/paper/proc/parsepencode(var/t, var/obj/item/pen/P, mob/user as mob, iscrayon = 0)
+/obj/item/paper/proc/parsepencode(var/t, obj/item/pen/P, mob/user as mob, iscrayon = 0)
 //	t = copytext(sanitize(t),1,MAX_MESSAGE_LEN)
 
 	t = replacetext(t, "\[center\]", "<center>")

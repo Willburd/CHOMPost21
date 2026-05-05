@@ -240,7 +240,7 @@
 
 	. -= holder.contents
 
-/datum/ai_holder/simple_mob/intentional/sakimm/find_target(var/list/possible_targets, has_targets_list = FALSE)
+/datum/ai_holder/simple_mob/intentional/sakimm/find_target(list/possible_targets, has_targets_list = FALSE)
 	var/can_pick_mobs = TRUE
 
 	if(!hostile)

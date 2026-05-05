@@ -201,7 +201,7 @@ These should come standard with the Protean rigsuit, unless you want them to wor
 			deactivate()
 			return
 
-/obj/item/rig_module/protean/healing/accepts_item(var/obj/item/stack/material/steel/S, mob/living/user)
+/obj/item/rig_module/protean/healing/accepts_item(obj/item/stack/material/steel/S, mob/living/user)
 
 	if(!istype(S) || !istype(user))
 		return 0

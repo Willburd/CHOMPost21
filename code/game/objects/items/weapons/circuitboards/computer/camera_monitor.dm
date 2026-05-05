@@ -64,7 +64,7 @@
 	if (..(C))
 		network = C.network.Copy()
 
-/obj/item/circuitboard/security/emag_act(var/remaining_charges, mob/user)
+/obj/item/circuitboard/security/emag_act(remaining_charges, mob/user)
 	if(emagged)
 		to_chat(user, "Circuit lock is already removed.")
 		return

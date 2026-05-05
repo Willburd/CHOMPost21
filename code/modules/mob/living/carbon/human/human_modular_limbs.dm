@@ -57,7 +57,7 @@
 // Human mob procs:
 // Checks the organ list for limbs meeting a predicate. Way overengineered for such a limited use
 // case but I can see it being expanded in the future if meat limbs or doona limbs use it.
-/mob/living/carbon/human/proc/get_modular_limbs(var/return_first_found = FALSE, validate_proc)
+/mob/living/carbon/human/proc/get_modular_limbs(return_first_found = FALSE, validate_proc)
 	for(var/obj/item/organ/external/E in organs)
 		if(!validate_proc || call(E, validate_proc)(src) > MODULAR_BODYPART_INVALID)
 			LAZYADD(., E)

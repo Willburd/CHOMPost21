@@ -227,7 +227,7 @@
 		return
 	return ..()
 
-/obj/structure/closet/crate/secure/emag_act(var/remaining_charges, mob/user)
+/obj/structure/closet/crate/secure/emag_act(remaining_charges, mob/user)
 	if(!broken)
 		playsound(src, "sparks", 60, 1)
 		locked = 0

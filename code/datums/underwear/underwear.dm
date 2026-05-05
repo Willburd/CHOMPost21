@@ -63,7 +63,7 @@
 /datum/category_item/underwear/proc/is_default(gender)
 	return is_default
 
-/datum/category_item/underwear/proc/generate_image(var/list/metadata, var/layer = FLOAT_LAYER, digitigrade = FALSE)
+/datum/category_item/underwear/proc/generate_image(var/list/metadata, layer = FLOAT_LAYER, digitigrade = FALSE)
 	if(!icon_state)
 		return
 

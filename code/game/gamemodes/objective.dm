@@ -568,7 +568,7 @@ GLOBAL_LIST_EMPTY(all_objectives)
 	return 1
 
 
-/datum/objective/absorb/proc/gen_amount_goal(var/lowbound = 4, highbound = 6)
+/datum/objective/absorb/proc/gen_amount_goal(lowbound = 4, highbound = 6)
 	target_amount = rand (lowbound,highbound)
 	if (SSticker)
 		var/n_p = 1 //autowin

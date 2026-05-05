@@ -73,7 +73,7 @@
 	. = ..()
 
 
-/obj/item/rig/proc/AssimilateBag(var/mob/living/carbon/human/P, var/spawned, obj/item/storage/backpack/B)
+/obj/item/rig/proc/AssimilateBag(var/mob/living/carbon/human/P, spawned, obj/item/storage/backpack/B)
 	if(istype(B,/obj/item/storage/backpack))
 		if(spawned)
 			B = P.back
@@ -373,7 +373,7 @@
 		if(istype(W,/obj/item/storage/backpack))
 			AssimilateBag(user,0,W)
 
-/obj/item/rig/protean/proc/make_alive(var/mob/living/carbon/human/H, partial)
+/obj/item/rig/protean/proc/make_alive(mob/living/carbon/human/H, partial)
 	if(H)
 		H.setToxLoss(0)
 		H.setOxyLoss(0)

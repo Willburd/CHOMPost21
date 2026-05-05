@@ -97,25 +97,25 @@ GLOBAL_LIST_INIT(gurgled_overlays, list(
 		desc = "This soggy box is about to fall apart any time."
 
 //Storages that contaminate contents
-/obj/item/storage/backpack/gurgle_contaminate(var/atom/movable/item_storage = null, var/contamination_flavor = "Generic", contamination_color = "green")
+/obj/item/storage/backpack/gurgle_contaminate(var/atom/movable/item_storage = null, contamination_flavor = "Generic", contamination_color = "green")
 	if(contents)
 		for(var/obj/item/O in contents)
 			O.gurgle_contaminate(item_storage, contamination_flavor, contamination_color)
 	..()
 
-/obj/item/storage/belt/gurgle_contaminate(var/atom/movable/item_storage = null, var/contamination_flavor = "Generic", contamination_color = "green")
+/obj/item/storage/belt/gurgle_contaminate(var/atom/movable/item_storage = null, contamination_flavor = "Generic", contamination_color = "green")
 	if(contents)
 		for(var/obj/item/O in contents)
 			O.gurgle_contaminate(item_storage, contamination_flavor, contamination_color)
 	..()
 
-/obj/item/storage/belt/gurgle_contaminate(var/atom/movable/item_storage = null, var/contamination_flavor = "Generic", contamination_color = "green")
+/obj/item/storage/belt/gurgle_contaminate(var/atom/movable/item_storage = null, contamination_flavor = "Generic", contamination_color = "green")
 	if(contents)
 		for(var/obj/item/O in contents)
 			O.gurgle_contaminate(item_storage, contamination_flavor, contamination_color)
 	..()
 
-/obj/item/clothing/suit/storage/gurgle_contaminate(var/atom/movable/item_storage = null, var/contamination_flavor = "Generic", contamination_color = "green")
+/obj/item/clothing/suit/storage/gurgle_contaminate(var/atom/movable/item_storage = null, contamination_flavor = "Generic", contamination_color = "green")
 	if(pockets)
 		if(pockets.contents)
 			for(var/obj/item/O in pockets.contents)

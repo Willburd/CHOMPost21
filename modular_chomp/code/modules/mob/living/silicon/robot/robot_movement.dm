@@ -8,7 +8,7 @@
 		check_vorefootstep(I_RUN, T) //CHOMPstation edit: sloshing reagent belly walk system
 
 // Handle footstep sounds
-/mob/living/silicon/robot/handle_vorefootstep(var/m_intent, turf/T)
+/mob/living/silicon/robot/handle_vorefootstep(m_intent, turf/T)
 
 	if(!CONFIG_GET(number/vorefootstep_volume) || !T.vorefootstep_sounds || !T.vorefootstep_sounds.len || !vore_footstep_volume)
 		return

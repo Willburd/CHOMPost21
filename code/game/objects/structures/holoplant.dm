@@ -27,7 +27,7 @@
 	else
 		deactivate()
 
-/obj/machinery/holoplant/attackby(var/obj/item/O as obj, mob/user as mob)
+/obj/machinery/holoplant/attackby(obj/item/O as obj, mob/user as mob)
 	if(default_unfasten_wrench(user, O, 10))
 		deactivate()
 		return

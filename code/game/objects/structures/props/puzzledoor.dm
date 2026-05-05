@@ -88,7 +88,7 @@
 			qdel(C)
 			return 0
 
-/obj/machinery/door/blast/puzzle/attack_generic(var/mob/user, damage)
+/obj/machinery/door/blast/puzzle/attack_generic(mob/user, damage)
 	if(check_locks())
 		force_toggle(1, user)
 

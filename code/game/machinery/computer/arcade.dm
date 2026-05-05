@@ -274,7 +274,7 @@
 	return
 
 
-/obj/machinery/computer/arcade/battle/emag_act(var/charges, mob/user)
+/obj/machinery/computer/arcade/battle/emag_act(charges, mob/user)
 	if(!emagged)
 		to_chat(user, span_notice("You override the cheat code menu and skip to Cheat #[rand(1, 50)]: Hyper-Lethal Mode."))
 
@@ -987,7 +987,7 @@
 		alive++
 	return newcrew
 
-/obj/machinery/computer/arcade/orion_trail/proc/remove_crewmember(var/specific = "", dont_remove = "")
+/obj/machinery/computer/arcade/orion_trail/proc/remove_crewmember(specific = "", dont_remove = "")
 	var/list/safe2remove = settlers
 	var/removed = ""
 	if(dont_remove)
@@ -1157,7 +1157,7 @@
 
 
 ///// Ewallet
-/obj/machinery/computer/arcade/clawmachine/proc/pay_with_ewallet(var/obj/item/spacecash/ewallet/wallet, mob/user)
+/obj/machinery/computer/arcade/clawmachine/proc/pay_with_ewallet(obj/item/spacecash/ewallet/wallet, mob/user)
 	if(!emagged)
 		visible_message(span_info("\The [user] swipes \the [wallet] through \the [src]."))
 		playsound(src, 'sound/machines/id_swipe.ogg', 50, 1)
@@ -1173,7 +1173,7 @@
 		to_chat(user, span_info("It doesn't seem to accept that! Seem you'll need to swipe a valid ID."))
 
 ///// ID
-/obj/machinery/computer/arcade/clawmachine/proc/pay_with_card(var/obj/item/card/id/I, var/obj/item/ID_container, mob/user)
+/obj/machinery/computer/arcade/clawmachine/proc/pay_with_card(var/obj/item/card/id/I, obj/item/ID_container, mob/user)
 	if(I==ID_container || ID_container == null)
 		visible_message(span_info("\The [user] swipes \the [I] through \the [src]."))
 	else

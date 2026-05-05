@@ -9,7 +9,7 @@
 
 	toolspeed = 2 //It is now used in surgery as a not awful, but probably dangerous option, due to speed.
 
-/obj/item/tape_roll/proc/can_place(var/mob/living/carbon/human/H, mob/user)
+/obj/item/tape_roll/proc/can_place(mob/living/carbon/human/H, mob/user)
 	if(isrobot(user) || user == H)
 		return TRUE
 
@@ -151,7 +151,7 @@
 	overlays = null
 	qdel(src)
 
-/obj/item/ducttape/attackby(var/obj/item/I, mob/user)
+/obj/item/ducttape/attackby(obj/item/I, mob/user)
 	if(!(istype(src, /obj/item/handcuffs/cable/tape) || istype(src, /obj/item/clothing/mask/muzzle/tape)))
 		return ..()
 	else

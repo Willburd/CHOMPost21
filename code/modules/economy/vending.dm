@@ -184,7 +184,7 @@ GLOBAL_LIST_EMPTY(vending_products)
 				return
 	return
 
-/obj/machinery/vending/emag_act(var/remaining_charges, mob/user)
+/obj/machinery/vending/emag_act(remaining_charges, mob/user)
 	if(!emagged)
 		emagged = 1
 		to_chat(user, span_filter_notice("You short out \the [src]'s product lock."))
@@ -694,7 +694,7 @@ GLOBAL_LIST_EMPTY(vending_products)
  * Checks if item is vendable in this machine should be performed before
  * calling. W is the item being inserted, R is the associated vending_product entry.
  */
-/obj/machinery/vending/proc/stock(obj/item/W, var/datum/stored_item/vending_product/R, mob/user)
+/obj/machinery/vending/proc/stock(obj/item/W, datum/stored_item/vending_product/R, mob/user)
 	if(!user.unEquip(W))
 		return
 

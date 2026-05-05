@@ -4,7 +4,7 @@
 	var/saves_dirt = TRUE //VOREStation edit
 	has_admin_data = TRUE
 
-/datum/persistent/filth/GetAdminDataStringFor(var/thing, var/can_modify, mob/user)
+/datum/persistent/filth/GetAdminDataStringFor(var/thing, can_modify, mob/user)
 	if(istype(thing, /obj/effect/decal/cleanable/crayon))
 		var/obj/effect/decal/cleanable/crayon/CRAY = thing
 		if(can_modify)
@@ -22,7 +22,7 @@
 	token["pixel_y"] = istext(token["pixel_y"]) ? text2num(token["pixel_y"]) : token["pixel_y"]
 	return ..() && ispath(token["path"]) && (!saves_dirt || isnum(token["dirt"])) && isnum(token["pixel_x"]) && isnum(token["pixel_y"])
 
-/datum/persistent/filth/CheckTurfContents(var/turf/T, list/token)
+/datum/persistent/filth/CheckTurfContents(turf/T, list/token)
 	var/_path = token["path"]
 	// return (locate(_path) in T) ? FALSE : TRUE
 	if(!ispath(_path, /obj/effect/decal/cleanable/crayon))
@@ -36,7 +36,7 @@
 			return FALSE
 	return TRUE
 
-/datum/persistent/filth/CreateEntryInstance(var/turf/creating, list/token)
+/datum/persistent/filth/CreateEntryInstance(turf/creating, list/token)
 	var/_path = token["path"]
 	if (isspace(creating) || iswall(creating) ||isopenspace(creating))
 		return

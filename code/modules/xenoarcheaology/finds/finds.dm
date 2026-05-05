@@ -4,7 +4,7 @@
 	var/view_range = 200			//how close excavation has to come to show an overlay on the turf
 	var/prob_delicate = 0			//probability it requires an active suspension field to not insta-crumble. Set to 0 to nullify the need for suspension field.
 
-/datum/find/New(var/digsite, exc_req)
+/datum/find/New(digsite, exc_req)
 	excavation_required = exc_req
 	find_type = get_random_find_type(digsite)
 
@@ -47,7 +47,7 @@
 			else	//if we somehow glitched
 				return	//do nothing
 
-/obj/item/strangerock/attackby(var/obj/item/I, mob/user)
+/obj/item/strangerock/attackby(obj/item/I, mob/user)
 	if(istype(I, /obj/item/pickaxe)) //Whatever, if you use a hand pick it should work just like a brush. No reason for otherwise.
 		var/obj/item/inside = locate() in src
 		if(inside)

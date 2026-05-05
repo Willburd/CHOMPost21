@@ -17,7 +17,7 @@
 		return FALSE
 	inflate(user,user.loc)
 
-/obj/item/inflatable/afterattack(var/atom/A, mob/user)
+/obj/item/inflatable/afterattack(atom/A, mob/user)
 	..(A, user)
 	if(!user)
 		return
@@ -90,7 +90,7 @@
 		..()
 	return
 
-/obj/structure/inflatable/proc/hit(var/damage, sound_effect = 1)
+/obj/structure/inflatable/proc/hit(damage, sound_effect = 1)
 	health = max(0, health - damage)
 	if(sound_effect)
 		playsound(src, 'sound/effects/Glasshit.ogg', 75, 1)
@@ -100,7 +100,7 @@
 /obj/structure/inflatable/click_ctrl()
 	hand_deflate()
 
-/obj/item/inflatable/proc/inflate(var/mob/user,location)
+/obj/item/inflatable/proc/inflate(mob/user,location)
 	playsound(location, 'sound/items/zip.ogg', 75, 1)
 	to_chat(user, span_notice("You inflate [src]."))
 	var/obj/structure/inflatable/R = new deploy_path(location)
@@ -135,7 +135,7 @@
 	verbs -= /obj/structure/inflatable/verb/hand_deflate
 	deflate()
 
-/obj/structure/inflatable/attack_generic(var/mob/user, var/damage, attack_verb)
+/obj/structure/inflatable/attack_generic(var/mob/user, damage, attack_verb)
 	health -= damage
 	user.do_attack_animation(src)
 	if(health <= 0)

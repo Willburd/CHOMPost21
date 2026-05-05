@@ -63,7 +63,7 @@
 	icon = 'icons/obj/Shadekin_powers.dmi'
 	icon_state = "dark_maw_waiting"
 
-/obj/effect/abstract/dark_maw/Initialize(mapload, var/mob/user, trigger_now = FALSE)
+/obj/effect/abstract/dark_maw/Initialize(mapload, mob/user, trigger_now = FALSE)
 	. = ..()
 	if(!isturf(loc))
 		return INITIALIZE_HINT_QDEL
@@ -143,7 +143,7 @@
 	icon_state = "dark_maw_used"
 	qdel(src)
 
-/obj/effect/abstract/dark_maw/proc/triggered_by(var/mob/living/L, triggered_instantly = 0)
+/obj/effect/abstract/dark_maw/proc/triggered_by(mob/living/L, triggered_instantly = 0)
 	STOP_PROCESSING(SSobj, src)
 	icon_state = "dark_maw_used"
 	flick("dark_maw_tr", src)

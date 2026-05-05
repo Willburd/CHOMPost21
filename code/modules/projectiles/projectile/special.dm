@@ -47,7 +47,7 @@
 	edge = TRUE
 	hud_state = "rocket_fire"
 
-/obj/item/projectile/bullet/gyro/on_hit(var/atom/target, blocked = 0)
+/obj/item/projectile/bullet/gyro/on_hit(atom/target, blocked = 0)
 	explosion(target, -1, 0, 2, 0, 0) //CHOMPEdit - Don't spam admins
 	..()
 
@@ -151,7 +151,7 @@
 	combustion = FALSE
 	hud_state = "electrothermal"
 
-/obj/item/projectile/energy/floramut/on_hit(var/atom/target, blocked = 0)
+/obj/item/projectile/energy/floramut/on_hit(atom/target, blocked = 0)
 	var/mob/living/M = target
 	if(ishuman(target))
 		var/mob/living/carbon/human/H = M
@@ -211,7 +211,7 @@
 	var/lasermod = 0
 	hud_state = "electrothermal"
 
-/obj/item/projectile/energy/florayield/on_hit(var/atom/target, blocked = 0)
+/obj/item/projectile/energy/florayield/on_hit(atom/target, blocked = 0)
 	var/mob/living/M = target
 	if(ishuman(target)) //These rays make plantmen fat.
 		var/mob/living/carbon/human/H = M
@@ -237,7 +237,7 @@
 	var/lasermod = 0
 	hud_state = "electrothermal"
 
-/obj/item/projectile/energy/floraprune/on_hit(var/atom/target, blocked = 0)
+/obj/item/projectile/energy/floraprune/on_hit(atom/target, blocked = 0)
 	var/mob/living/M = target
 	if(ishuman(target)) //Make plantpeople thin, seeing as we're removing reagents from actual plants
 		var/mob/living/carbon/human/H = M
@@ -255,7 +255,7 @@
 	combustion = FALSE
 	hud_state = "electrothermal"
 
-/obj/item/projectile/beam/mindflayer/on_hit(var/atom/target, blocked = 0)
+/obj/item/projectile/beam/mindflayer/on_hit(atom/target, blocked = 0)
 	if(ishuman(target))
 		var/mob/living/carbon/human/M = target
 		M.Confuse(rand(5,8))
@@ -282,7 +282,7 @@
 
 	combustion = FALSE
 
-/obj/item/projectile/bola/on_hit(var/atom/target, blocked = 0)
+/obj/item/projectile/bola/on_hit(atom/target, blocked = 0)
 	if(ishuman(target))
 		var/mob/living/carbon/human/human_target = target
 		var/obj/item/handcuffs/legcuffs/bola/B = new(src.loc)
@@ -310,7 +310,7 @@
 	hud_state = "monkey"
 	combustion = FALSE
 
-/obj/item/projectile/webball/on_hit(var/atom/target, blocked = 0)
+/obj/item/projectile/webball/on_hit(atom/target, blocked = 0)
 	if(isturf(target.loc))
 		var/obj/effect/spider/stickyweb/W = locate() in get_turf(target)
 		if(!W && prob(75))
@@ -335,7 +335,7 @@
 	tracer_type = /obj/effect/projectile/tracer/tungsten
 	impact_type = /obj/effect/projectile/impact/tungsten
 
-/obj/item/projectile/beam/tungsten/on_hit(var/atom/target, blocked = 0)
+/obj/item/projectile/beam/tungsten/on_hit(atom/target, blocked = 0)
 	if(isliving(target))
 		var/mob/living/L = target
 		L.add_modifier(/datum/modifier/grievous_wounds, 30 SECONDS)

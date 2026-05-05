@@ -64,13 +64,13 @@
 		return FALSE
 	return TRUE
 
-/obj/machinery/petrification/proc/popup_msg(var/mob/user, var/message, notice = TRUE)
+/obj/machinery/petrification/proc/popup_msg(var/mob/user, message, notice = TRUE)
 	if (notice)
 		message = "A notice pops up on the interface: \"[message]\""
 	if (target)
 		to_chat(user, span_notice("[message]"))
 
-/obj/machinery/petrification/proc/petrify(var/mob/user, obj/item/petrifier/petrifier = null)
+/obj/machinery/petrification/proc/petrify(mob/user, obj/item/petrifier/petrifier = null)
 	. = FALSE
 	var/mat = material
 	var/idt = identifier

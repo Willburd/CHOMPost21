@@ -25,7 +25,7 @@
 /datum/species/proc/get_examine_name(mob/living/carbon/human/H)
 	return name
 
-/datum/species/proc/get_icobase(var/mob/living/carbon/human/H, get_deform)
+/datum/species/proc/get_icobase(mob/living/carbon/human/H, get_deform)
 	if(base_species == name) //We don't have a custom base_species? Return the normal icobase.
 		return (get_deform ? deform : icobase)
 	else
@@ -84,7 +84,7 @@
 /datum/species/proc/get_flesh_colour(mob/living/carbon/human/H)
 	return ((H && H.isSynthetic()) ? SYNTH_FLESH_COLOUR : flesh_color)
 
-/datum/species/proc/get_environment_discomfort(var/mob/living/carbon/human/H, msg_type)
+/datum/species/proc/get_environment_discomfort(mob/living/carbon/human/H, msg_type)
 
 	/* // Commented out because clothes should not prevent you from feeling cold if your body temperature has already dropped. You can absolutely feel cold through clothing, and feel too warm without clothing. ???
 	var/covered = 0 // Basic coverage can help.

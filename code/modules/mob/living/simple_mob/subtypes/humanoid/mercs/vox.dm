@@ -95,7 +95,7 @@
 	loot_list = list(/obj/item/melee/energy/sword = 100)
 
 // They're good with the swords? I dunno. I like the idea they can deflect.
-/mob/living/simple_mob/humanoid/merc/voxpirate/boarder/attackby(var/obj/item/O, mob/user)
+/mob/living/simple_mob/humanoid/merc/voxpirate/boarder/attackby(obj/item/O, mob/user)
 	if(O.force)
 		if(prob(20))
 			visible_message(span_danger("\The [src] blocks \the [O] with its sword!"))

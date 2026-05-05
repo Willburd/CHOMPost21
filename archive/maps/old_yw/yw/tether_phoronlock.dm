@@ -127,7 +127,7 @@ obj/machinery/airlock_sensor/phoron/airlock_exterior
 /obj/machinery/embedded_controller/radio/airlock/phoron
 	name = "Phoron Lock Controller"
 
-/obj/machinery/embedded_controller/radio/airlock/phoron/ui_interact(mob/user, ui_key = "main", var/datum/nanoui/ui = null, force_open = 1)
+/obj/machinery/embedded_controller/radio/airlock/phoron/ui_interact(mob/user, ui_key = "main", datum/nanoui/ui = null, force_open = 1)
 	var/data[0]
 
 	data = list(
@@ -292,7 +292,7 @@ obj/machinery/airlock_sensor/phoron/airlock_exterior
 	signalPump(tag_airpump, 0)
 	signalScrubber(tag_scrubber, 0)
 
-/datum/computer/file/embedded_program/airlock/phoron/proc/signalScrubber(var/tag, power)
+/datum/computer/file/embedded_program/airlock/phoron/proc/signalScrubber(tag, power)
 	var/datum/signal/signal = new
 	signal.data = list(
 		"tag" = tag,

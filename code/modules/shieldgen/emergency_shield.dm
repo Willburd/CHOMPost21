@@ -298,7 +298,7 @@
 			to_chat(user, "The device must first be secured to the floor.")
 	return
 
-/obj/machinery/shieldgen/emag_act(var/remaining_charges, mob/user)
+/obj/machinery/shieldgen/emag_act(remaining_charges, mob/user)
 	if(!malfunction)
 		malfunction = TRUE
 		update_icon()

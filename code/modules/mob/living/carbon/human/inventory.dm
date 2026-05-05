@@ -374,7 +374,7 @@ This saves us from having to call add_fingerprint() any time something is put in
 	return 1
 
 //Checks if a given slot can be accessed at this time, either to equip or unequip I
-/mob/living/carbon/human/slot_is_accessible(var/slot, obj/item/I, mob/user=null)
+/mob/living/carbon/human/slot_is_accessible(slot, obj/item/I, mob/user=null)
 	var/obj/item/covering = null
 	var/check_flags = 0
 

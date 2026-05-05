@@ -513,7 +513,7 @@
 /obj/vehicle/has_interior/attack_hand(mob/user)
 	// nothing YET, used for attacks
 
-/obj/vehicle/has_interior/attack_generic(var/mob/user, var/damage, attack_message)
+/obj/vehicle/has_interior/attack_generic(var/mob/user, damage, attack_message)
 	if(user.client && user.a_intent == I_HELP)
 		attack_hand(user)
 		return

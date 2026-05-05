@@ -63,7 +63,7 @@
 /mob/living/bot/floorbot/attack_hand(mob/user)
 	tgui_interact(user)
 
-/mob/living/bot/floorbot/emag_act(var/remaining_charges, mob/user)
+/mob/living/bot/floorbot/emag_act(remaining_charges, mob/user)
 	. = ..()
 	if(!emagged)
 		emagged = 1
@@ -193,7 +193,7 @@
 	var/turf/simulated/floor/T = A
 	return (istype(T) && (T.broken || T.burnt || (improvefloors && !T.flooring)) && (get_turf(T) == loc || prob(40)))
 
-/mob/living/bot/floorbot/UnarmedAttack(var/atom/A, proximity)
+/mob/living/bot/floorbot/UnarmedAttack(atom/A, proximity)
 	if(!..())
 		return
 

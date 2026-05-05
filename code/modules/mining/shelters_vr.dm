@@ -22,7 +22,7 @@
 	return SHELTER_DEPLOY_ALLOWED
 
 /// Checks a single given turf to see if it is a valid turf to deploy a shelter onto.
-/datum/map_template/shelter/proc/get_turf_deployability(var/turf/T, is_ship)
+/datum/map_template/shelter/proc/get_turf_deployability(turf/T, is_ship)
 	var/area/A = get_area(T)
 	if(is_type_in_typecache(A, banned_areas) || (A.flags & AREA_BLOCK_INSTANT_BUILDING))
 		return SHELTER_DEPLOY_BAD_AREA

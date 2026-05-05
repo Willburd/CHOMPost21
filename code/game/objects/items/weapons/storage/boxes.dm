@@ -448,7 +448,7 @@
 	drop_sound = 'sound/items/drop/matchbox.ogg'
 	pickup_sound =  'sound/items/pickup/matchbox.ogg'
 
-/obj/item/storage/box/matches/attackby(var/obj/item/flame/match/W, mob/user)
+/obj/item/storage/box/matches/attackby(obj/item/flame/match/W, mob/user)
 	if(istype(W) && !W.lit && !W.burnt)
 		if(prob(25))
 			W.light(user)

@@ -36,7 +36,7 @@
 		departmental_activity = departmental_activity / departmental_size // Average it out.
 	return departmental_activity
 
-/datum/metric/proc/assess_all_departments(var/cutoff_number = 3, list/department_blacklist = list())
+/datum/metric/proc/assess_all_departments(cutoff_number = 3, list/department_blacklist = list())
 	var/list/activity = list()
 	for(var/department in departments)
 		activity[department] = assess_department(department)

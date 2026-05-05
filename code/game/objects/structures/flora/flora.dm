@@ -52,7 +52,7 @@
 /obj/structure/flora/proc/get_harvestable_desc()
 	return span_notice("\The [src] seems to have something hanging from it.")
 
-/obj/structure/flora/attackby(var/obj/item/W, mob/living/user)
+/obj/structure/flora/attackby(obj/item/W, mob/living/user)
 
 	if(can_harvest(W))
 		var/harvest_spawn = pickweight(harvest_loot)
@@ -78,7 +78,7 @@
 		. = TRUE
 	return .
 
-/obj/structure/flora/proc/spawn_harvest(var/path = null, mob/user = null)
+/obj/structure/flora/proc/spawn_harvest(path = null, mob/user = null)
 	if(!ispath(path))
 		return 0
 
@@ -129,7 +129,7 @@
 	min_harvests = 1
 	max_harvests = 3
 
-/obj/structure/flora/ausbushes/spawn_harvest(var/path = null, mob/user = null)
+/obj/structure/flora/ausbushes/spawn_harvest(path = null, mob/user = null)
 	. = ..()
 	if(. && prob(15))
 		var/static/list/possibleseeds = list(

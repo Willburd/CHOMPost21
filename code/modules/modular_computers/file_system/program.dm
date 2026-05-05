@@ -71,7 +71,7 @@
 		return computer.add_log(text)
 	return 0
 
-/datum/computer_file/program/proc/is_supported_by_hardware(var/hardware_flag = 0, var/loud = 0, mob/user = null)
+/datum/computer_file/program/proc/is_supported_by_hardware(var/hardware_flag = 0, loud = 0, mob/user = null)
 	if(!(hardware_flag & usage_flags))
 		if(loud && computer && user)
 			to_chat(user, span_warning("\The [computer] flashes: \"Hardware Error - Incompatible software\"."))
@@ -102,7 +102,7 @@
 // User has to wear their ID or have it inhand for ID Scan to work.
 // Can also be called manually, with optional parameter being access_to_check to scan the user's ID.
 // explicit_card can be passed by callers that already have a card reference (e.g. the laptop's inserted card).
-/datum/computer_file/program/proc/can_run(var/mob/living/user, var/loud = 0, var/access_to_check, obj/item/card/id/explicit_card)
+/datum/computer_file/program/proc/can_run(var/mob/living/user, var/loud = 0, access_to_check, obj/item/card/id/explicit_card)
 	// Defaults to required_access
 	if(!access_to_check)
 		access_to_check = required_access

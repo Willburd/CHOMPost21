@@ -3,16 +3,16 @@
 /datum/gear_tweak/proc/get_contents(metadata)
 	return
 
-/datum/gear_tweak/proc/get_metadata(var/user, metadata)
+/datum/gear_tweak/proc/get_metadata(user, metadata)
 	return
 
 /datum/gear_tweak/proc/get_default()
 	return
 
-/datum/gear_tweak/proc/tweak_gear_data(var/metadata, datum/gear_data)
+/datum/gear_tweak/proc/tweak_gear_data(metadata, datum/gear_data)
 	return
 
-/datum/gear_tweak/proc/tweak_item(var/obj/item/I, metadata)
+/datum/gear_tweak/proc/tweak_item(obj/item/I, metadata)
 	return
 
 /*
@@ -32,12 +32,12 @@
 /datum/gear_tweak/color/get_default()
 	return valid_colors ? valid_colors[1] : COLOR_GRAY
 
-/datum/gear_tweak/color/get_metadata(var/user, var/metadata, title = "Character Preference")
+/datum/gear_tweak/color/get_metadata(var/user, metadata, title = "Character Preference")
 	if(valid_colors)
 		return tgui_input_list(user, "Choose a color.", title, valid_colors, metadata)
 	return tgui_color_picker(user, "Choose a color.", title, metadata)
 
-/datum/gear_tweak/color/tweak_item(var/obj/item/I, metadata)
+/datum/gear_tweak/color/tweak_item(obj/item/I, metadata)
 	if(valid_colors && !(metadata in valid_colors))
 		return
 	if(!metadata || (metadata == "#ffffff"))
@@ -103,10 +103,10 @@ GLOBAL_DATUM_INIT(gear_tweak_free_matrix_recolor, /datum/gear_tweak/matrix_recol
 /datum/gear_tweak/path/get_default()
 	return valid_paths[1]
 
-/datum/gear_tweak/path/get_metadata(var/user, metadata)
+/datum/gear_tweak/path/get_metadata(user, metadata)
 	return tgui_input_list(user, "Choose a type.", "Character Preference", valid_paths, metadata)
 
-/datum/gear_tweak/path/tweak_gear_data(var/metadata, datum/gear_data/gear_data)
+/datum/gear_tweak/path/tweak_gear_data(metadata, datum/gear_data/gear_data)
 	if(!(metadata in valid_paths))
 		return
 	gear_data.path = valid_paths[metadata]
@@ -130,7 +130,7 @@ GLOBAL_DATUM_INIT(gear_tweak_free_matrix_recolor, /datum/gear_tweak/matrix_recol
 	for(var/i = 1 to valid_contents.len)
 		. += "Random"
 
-/datum/gear_tweak/contents/get_metadata(var/user, list/metadata)
+/datum/gear_tweak/contents/get_metadata(user, list/metadata)
 	. = list()
 	for(var/i = metadata.len to valid_contents.len)
 		metadata += "Random"
@@ -141,7 +141,7 @@ GLOBAL_DATUM_INIT(gear_tweak_free_matrix_recolor, /datum/gear_tweak/matrix_recol
 		else
 			return metadata
 
-/datum/gear_tweak/contents/tweak_item(var/obj/item/I, list/metadata)
+/datum/gear_tweak/contents/tweak_item(obj/item/I, list/metadata)
 	if(metadata.len != valid_contents.len)
 		return
 	for(var/i = 1 to valid_contents.len)
@@ -178,12 +178,12 @@ GLOBAL_DATUM_INIT(gear_tweak_free_matrix_recolor, /datum/gear_tweak/matrix_recol
 /datum/gear_tweak/reagents/get_default()
 	return "Random"
 
-/datum/gear_tweak/reagents/get_metadata(var/user, list/metadata)
+/datum/gear_tweak/reagents/get_metadata(user, list/metadata)
 	. = tgui_input_list(user, "Choose an entry.", "Character Preference", valid_reagents + list("Random", "None"), metadata)
 	if(!.)
 		return metadata
 
-/datum/gear_tweak/reagents/tweak_item(var/obj/item/I, list/metadata)
+/datum/gear_tweak/reagents/tweak_item(obj/item/I, list/metadata)
 	if(metadata == "None")
 		return
 	if(metadata == "Random")
@@ -215,7 +215,7 @@ GLOBAL_DATUM_INIT(gear_tweak_free_name, /datum/gear_tweak/custom_name, new)
 /datum/gear_tweak/custom_name/get_default()
 	return ""
 
-/datum/gear_tweak/custom_name/get_metadata(var/user, metadata)
+/datum/gear_tweak/custom_name/get_metadata(user, metadata)
 	if(jobban_isbanned(user, LOADOUT_BAN_STRING))
 		to_chat(user, span_warning("You are banned from using custom loadout names/descriptions."))
 		return
@@ -229,7 +229,7 @@ GLOBAL_DATUM_INIT(gear_tweak_free_name, /datum/gear_tweak/custom_name, new)
 		return metadata
 	return san_input ? san_input : get_default()
 
-/datum/gear_tweak/custom_name/tweak_item(var/obj/item/I, metadata)
+/datum/gear_tweak/custom_name/tweak_item(obj/item/I, metadata)
 	if(!metadata)
 		return I.name
 	I.name = metadata
@@ -252,7 +252,7 @@ GLOBAL_DATUM_INIT(gear_tweak_free_desc, /datum/gear_tweak/custom_desc, new)
 /datum/gear_tweak/custom_desc/get_default()
 	return ""
 
-/datum/gear_tweak/custom_desc/get_metadata(var/user, metadata)
+/datum/gear_tweak/custom_desc/get_metadata(user, metadata)
 	if(jobban_isbanned(user, LOADOUT_BAN_STRING))
 		to_chat(user, span_warning("You are banned from using custom loadout names/descriptions."))
 		return
@@ -266,7 +266,7 @@ GLOBAL_DATUM_INIT(gear_tweak_free_desc, /datum/gear_tweak/custom_desc, new)
 		return metadata
 	return san_input ? san_input : get_default()
 
-/datum/gear_tweak/custom_desc/tweak_item(var/obj/item/I, metadata)
+/datum/gear_tweak/custom_desc/tweak_item(obj/item/I, metadata)
 	if(!metadata)
 		return I.desc
 	I.desc = metadata
@@ -285,7 +285,7 @@ GLOBAL_DATUM_INIT(gear_tweak_free_digestable, /datum/gear_tweak/toggle_digestabl
 /datum/gear_tweak/toggle_digestable/get_default()
 	return TRUE
 
-/datum/gear_tweak/toggle_digestable/get_metadata(var/user, metadata)
+/datum/gear_tweak/toggle_digestable/get_metadata(user, metadata)
 	var/san_input = tgui_alert(user, "Turn digestable on or off", "Toggle Digestable", list("Enable", "Disable", "Cancel"))
 	switch(san_input)
 		if("Enable")
@@ -294,7 +294,7 @@ GLOBAL_DATUM_INIT(gear_tweak_free_digestable, /datum/gear_tweak/toggle_digestabl
 			return FALSE
 	return metadata
 
-/datum/gear_tweak/toggle_digestable/tweak_item(var/obj/item/I, metadata)
+/datum/gear_tweak/toggle_digestable/tweak_item(obj/item/I, metadata)
 	if(isnull(metadata))
 		return I.digestable
 	I.digestable = metadata
@@ -335,7 +335,7 @@ GLOBAL_DATUM_INIT(gear_tweak_free_digestable, /datum/gear_tweak/toggle_digestabl
 		names += initial(O.name)
 	return "[english_list(names, and_text = ", ")]"
 
-/datum/gear_tweak/tablet/get_metadata(var/user, metadata)
+/datum/gear_tweak/tablet/get_metadata(user, metadata)
 	. = list()
 
 	var/list/names = list()
@@ -425,7 +425,7 @@ GLOBAL_DATUM_INIT(gear_tweak_free_digestable, /datum/gear_tweak/toggle_digestabl
 /datum/gear_tweak/tablet/get_default()
 	return list(1, 1, 1, 1, 1, 1, 1)
 
-/datum/gear_tweak/tablet/tweak_item(var/obj/item/modular_computer/tablet/I, list/metadata)
+/datum/gear_tweak/tablet/tweak_item(obj/item/modular_computer/tablet/I, list/metadata)
 	if(ValidProcessors[metadata[1]])
 		var/t = ValidProcessors[metadata[1]]
 		I.processor_unit = new t(I)
@@ -484,7 +484,7 @@ GLOBAL_DATUM_INIT(gear_tweak_free_digestable, /datum/gear_tweak/toggle_digestabl
 		names += initial(O.name)
 	return "[english_list(names, and_text = ", ")]"
 
-/datum/gear_tweak/laptop/get_metadata(var/user, metadata)
+/datum/gear_tweak/laptop/get_metadata(user, metadata)
 	. = list()
 
 	var/list/names = list()
@@ -574,7 +574,7 @@ GLOBAL_DATUM_INIT(gear_tweak_free_digestable, /datum/gear_tweak/toggle_digestabl
 /datum/gear_tweak/laptop/get_default()
 	return list(1, 1, 1, 1, 1, 1, 1)
 
-/datum/gear_tweak/laptop/tweak_item(var/obj/item/modular_computer/laptop/preset/I, list/metadata)
+/datum/gear_tweak/laptop/tweak_item(obj/item/modular_computer/laptop/preset/I, list/metadata)
 	if(ValidProcessors[metadata[1]])
 		var/t = ValidProcessors[metadata[1]]
 		I.processor_unit = new t(I)
@@ -630,14 +630,14 @@ GLOBAL_DATUM_INIT(gear_tweak_free_digestable, /datum/gear_tweak/toggle_digestabl
 /datum/gear_tweak/implant_location/get_default()
 	return bodypart_names_to_tokens[1]
 
-/datum/gear_tweak/implant_location/tweak_item(var/obj/item/implant/I, metadata)
+/datum/gear_tweak/implant_location/tweak_item(obj/item/implant/I, metadata)
 	if(istype(I))
 		I.initialize_loc = bodypart_names_to_tokens[metadata] || BP_TORSO
 
 /datum/gear_tweak/implant_location/get_contents(metadata)
 	return "Location: [metadata]"
 
-/datum/gear_tweak/implant_location/get_metadata(var/user, metadata)
+/datum/gear_tweak/implant_location/get_metadata(user, metadata)
 	var/list_input = tgui_input_list(user, "Select a bodypart for the implant to be implanted inside.", "Implant Location", bodypart_names_to_tokens || bodypart_tokens_to_names[BP_TORSO])
 	if(isnull(list_input))
 		return metadata
@@ -649,13 +649,13 @@ GLOBAL_DATUM_INIT(gear_tweak_free_digestable, /datum/gear_tweak/toggle_digestabl
 /datum/gear_tweak/collar_tag/get_default()
 	return ""
 
-/datum/gear_tweak/collar_tag/get_metadata(var/user, metadata)
+/datum/gear_tweak/collar_tag/get_metadata(user, metadata)
 	var/text_input = tgui_input_text(user, "Choose the tag text.", "Character Preference", metadata, MAX_NAME_LEN)
 	if(isnull(text_input))
 		return metadata
 	return text_input
 
-/datum/gear_tweak/collar_tag/tweak_item(var/obj/item/clothing/accessory/collar/C, metadata)
+/datum/gear_tweak/collar_tag/tweak_item(obj/item/clothing/accessory/collar/C, metadata)
 	if(metadata == "")
 		return ..()
 	else

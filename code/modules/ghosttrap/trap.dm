@@ -36,7 +36,7 @@ GLOBAL_LIST(ghost_traps)
 	return 1
 
 // Print a message to all ghosts with the right prefs/lack of bans.
-/datum/ghosttrap/proc/request_player(var/mob/target, request_string)
+/datum/ghosttrap/proc/request_player(mob/target, request_string)
 	if(!target)
 		return
 	for(var/mob/observer/dead/O in GLOB.player_list)
@@ -65,7 +65,7 @@ GLOBAL_LIST(ghost_traps)
 		return 1
 
 // Shunts the ckey/mind into the target mob.
-/datum/ghosttrap/proc/transfer_personality(var/mob/candidate, mob/target)
+/datum/ghosttrap/proc/transfer_personality(mob/candidate, mob/target)
 	if(!assess_candidate(candidate))
 		return 0
 	target.ckey = candidate.ckey

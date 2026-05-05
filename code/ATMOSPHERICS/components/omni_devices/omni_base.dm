@@ -80,7 +80,7 @@
 	if(old_stat != stat)
 		update_icon()
 
-/obj/machinery/atmospherics/omni/attackby(var/obj/item/W as obj, mob/user as mob)
+/obj/machinery/atmospherics/omni/attackby(obj/item/W as obj, mob/user as mob)
 	if(!W.has_tool_quality(TOOL_WRENCH))
 		return ..()
 

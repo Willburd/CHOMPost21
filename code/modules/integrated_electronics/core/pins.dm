@@ -25,7 +25,7 @@ D [1]/  ||
 	var/list/linked = list()
 	var/io_type = DATA_CHANNEL
 
-/datum/integrated_io/New(var/newloc, var/name, new_data)
+/datum/integrated_io/New(var/newloc, name, new_data)
 	..()
 	src.name = name
 	if(!isnull(new_data))
@@ -146,7 +146,7 @@ list[](
 		//Now that we're removed from them, we gotta remove them from us.
 		src.linked.Remove(their_io)
 
-/datum/integrated_io/proc/ask_for_data_type(mob/user, var/default, list/allowed_data_types = list("string","number","null"))
+/datum/integrated_io/proc/ask_for_data_type(mob/user, default, list/allowed_data_types = list("string","number","null"))
 	var/type_to_use = tgui_input_list(user, "Please choose a type to use.","[src] type setting", allowed_data_types)
 	if(!holder.check_interactivity(user))
 		return

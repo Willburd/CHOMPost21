@@ -428,7 +428,7 @@
 		STOP_PROCESSING(SSobj, src)
 // Outpost 21 edit end
 
-/obj/item/reagent_containers/syringe/proc/dirty(var/mob/living/carbon/human/target, obj/item/organ/external/eo)
+/obj/item/reagent_containers/syringe/proc/dirty(mob/living/carbon/human/target, obj/item/organ/external/eo)
 	if(!ishuman(loc))
 		return //Avoid borg syringe problems.
 	LAZYINITLIST(targets)

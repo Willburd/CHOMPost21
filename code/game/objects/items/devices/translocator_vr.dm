@@ -378,7 +378,7 @@ This device records all warnings given and teleport events for admin review in c
 
 	logged_events["[world.time]"] = "[user] teleported [target] to [real_dest] [televored ? "(Belly: [lowertext(real_dest.name)])" : null]"
 
-/obj/item/perfect_tele/proc/phase_out(var/mob/M,turf/T)
+/obj/item/perfect_tele/proc/phase_out(mob/M,turf/T)
 
 	if(!M || !T)
 		return
@@ -388,7 +388,7 @@ This device records all warnings given and teleport events for admin review in c
 	playsound(T, "sparks", 50, 1)
 	anim(T,M,'icons/mob/mob.dmi',,"phaseout",,M.dir)
 
-/obj/item/perfect_tele/proc/phase_in(var/mob/M,turf/T)
+/obj/item/perfect_tele/proc/phase_in(mob/M,turf/T)
 
 	if(!M || !T)
 		return

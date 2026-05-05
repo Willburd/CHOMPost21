@@ -19,7 +19,7 @@
 
 	SSemergency_shuttle.shuttle_arrived()
 
-/datum/shuttle/autodock/ferry/emergency/long_jump(var/destination, var/interim, travel_time)
+/datum/shuttle/autodock/ferry/emergency/long_jump(var/destination, interim, travel_time)
 	if (!location)
 		travel_time = SHUTTLE_TRANSIT_DURATION_RETURN
 	else
@@ -180,7 +180,7 @@
 
 	return 1
 
-/obj/machinery/computer/shuttle_control/emergency/emag_act(var/remaining_charges, mob/user)
+/obj/machinery/computer/shuttle_control/emergency/emag_act(remaining_charges, mob/user)
 	if (!emagged)
 		to_chat(user, span_notice("You short out \the [src]'s authorization protocols."))
 		emagged = 1

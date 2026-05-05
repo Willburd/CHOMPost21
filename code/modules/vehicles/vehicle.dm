@@ -290,7 +290,7 @@
 		turn_on()
 		return
 
-/obj/vehicle/proc/insert_cell(var/obj/item/cell/C, mob/living/carbon/human/H)
+/obj/vehicle/proc/insert_cell(obj/item/cell/C, mob/living/carbon/human/H)
 	if(!mechanical)
 		return
 	if(cell)
@@ -326,7 +326,7 @@
 // the vehicle load() definition before
 // calling this parent proc.
 //-------------------------------------------
-/obj/vehicle/proc/load(var/atom/movable/C, mob/living/user)
+/obj/vehicle/proc/load(atom/movable/C, mob/living/user)
 	//This loads objects onto the vehicle so they can still be interacted with.
 	//Define allowed items for loading in specific vehicle definitions.
 	if(!isturf(C.loc)) //To prevent loading things from someone's inventory, which wouldn't get handled properly.
@@ -359,7 +359,7 @@
 	return 1
 
 
-/obj/vehicle/proc/unload(var/mob/user, direction)
+/obj/vehicle/proc/unload(mob/user, direction)
 	if(!load)
 		return
 
@@ -415,7 +415,7 @@
 /obj/vehicle/proc/update_stats()
 	return
 
-/obj/vehicle/attack_generic(var/mob/user, var/damage, attack_message)
+/obj/vehicle/attack_generic(var/mob/user, damage, attack_message)
 	if(!damage)
 		return
 	visible_message(span_danger("[user] [attack_message] the [src]!"))

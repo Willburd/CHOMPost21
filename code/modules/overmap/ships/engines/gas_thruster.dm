@@ -189,7 +189,7 @@
 	light_color = "#ed9200"
 	anchored = TRUE
 
-/obj/effect/engine_exhaust/Initialize(mapload, var/ndir, flame)
+/obj/effect/engine_exhaust/Initialize(mapload, ndir, flame)
 	. = ..()
 	if(flame)
 		icon_state = "exhaust"

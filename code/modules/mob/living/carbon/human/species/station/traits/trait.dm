@@ -47,7 +47,7 @@
 
 
 //Proc can be overridden lower to include special changes, make sure to call up though for the vars changes
-/datum/trait/proc/apply(var/datum/species/S,var/mob/living/carbon/human/H, trait_prefs = null)
+/datum/trait/proc/apply(var/datum/species/S,mob/living/carbon/human/H, trait_prefs = null)
 	ASSERT(S)
 	if(var_changes)
 		for(var/V in var_changes)
@@ -80,7 +80,7 @@
 	return
 
 // Traitgenes Disabling traits, genes can be turned off after all!
-/datum/trait/proc/unapply(var/datum/species/S,var/mob/living/carbon/human/H, trait_prefs = null)
+/datum/trait/proc/unapply(var/datum/species/S,mob/living/carbon/human/H, trait_prefs = null)
 	ASSERT(S)
 	if(var_changes)
 		for(var/V in var_changes)
@@ -121,7 +121,7 @@
 			qdel(C)
 	return
 
-/datum/trait/proc/send_message(var/mob/living/carbon/human/H, enabled)
+/datum/trait/proc/send_message(mob/living/carbon/human/H, enabled)
 	if(enabled)
 		if(!activation_message)
 			return
@@ -176,7 +176,7 @@
 			return ""
 	return
 
-/datum/trait/proc/apply_sanitization_to_string(var/pref, input)
+/datum/trait/proc/apply_sanitization_to_string(pref, input)
 	if (has_preferences[pref][1] != TRAIT_PREF_TYPE_STRING || length(input) <= 0)
 		return default_value_for_pref(pref)
 	input = sanitizeSafe(input, MAX_NAME_LEN)

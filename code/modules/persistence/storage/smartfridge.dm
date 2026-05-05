@@ -6,7 +6,7 @@
 	for(var/datum/stored_item/I in entry.item_records)
 		.[I.item_path] = I.get_amount()
 
-/datum/persistent/storage/smartfridge/CreateEntryInstance(var/turf/creating, list/token)
+/datum/persistent/storage/smartfridge/CreateEntryInstance(turf/creating, list/token)
 	var/obj/machinery/smartfridge/S = find_specific_instance(creating)
 	var/list/L = generate_items(token["items"])
 	for(var/atom/A in L)

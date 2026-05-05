@@ -176,7 +176,7 @@
 		. = ..()
 
 // callback to terminate leap mode. Reset passflag if passflag = 0 (Mob doesn't already have it)
-/mob/living/simple_mob/proc/pouncefinish(var/pt, var/pm, atom/T)
+/mob/living/simple_mob/proc/pouncefinish(var/pt, pm, atom/T)
 	if(status_flags & LEAPING)
 		status_flags &= ~LEAPING
 		flying = 0
@@ -331,7 +331,7 @@
 		addtimer(CALLBACK(src, PROC_REF(speen_throw), am), 1)
 	playsound(src, "sound/weapons/punchmiss.ogg", 50, 1)
 
-/mob/living/simple_mob/proc/speen_throw(var/atom/movable/AM, var/gentle = 0, damage = 10)
+/mob/living/simple_mob/proc/speen_throw(var/atom/movable/AM, gentle = 0, damage = 10)
 	var/maxthrow = 7
 	var/atom/throwtarget
 	throwtarget = get_edge_target_turf(src, get_dir(src, get_step_away(AM, src)))

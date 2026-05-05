@@ -151,7 +151,7 @@ GLOBAL_LIST_EMPTY(channel_to_radio_key)
 		return "asks"
 	return verb
 
-/mob/living/say(var/message, var/datum/language/speaking = null, whispering = 0)
+/mob/living/say(var/message, datum/language/speaking = null, whispering = 0)
 	//If you're muted for IC chat
 	if(client)
 		if(message)
@@ -174,7 +174,7 @@ GLOBAL_LIST_EMPTY(channel_to_radio_key)
 		if("^") return custom_emote(VISIBLE_MESSAGE, copytext(message, 2))
 	direct_say(message, speaking, whispering)
 
-/mob/living/direct_say(var/message, var/datum/language/speaking = null, whispering = 0)
+/mob/living/direct_say(var/message, datum/language/speaking = null, whispering = 0)
 	// Handle automatic whispering mode
 	if(autowhisper)
 		whispering = 1
@@ -472,7 +472,7 @@ GLOBAL_LIST_EMPTY(channel_to_radio_key)
 #undef BLOOPER_MAX_BLOOPERS
 #undef BLOOPER_MAX_TIME
 
-/mob/living/proc/say_signlang(var/message, var/verb="gestures", var/verb_understood="gestures", var/datum/language/language, type = 1)
+/mob/living/proc/say_signlang(var/message, var/verb="gestures", var/verb_understood="gestures", datum/language/language, type = 1)
 	var/turf/T = get_turf(src)
 	//We're in something, gesture to people inside the same thing
 	if(loc != T && !istype(loc, /obj/item/holder)) // Partially fixes sign language while being held.

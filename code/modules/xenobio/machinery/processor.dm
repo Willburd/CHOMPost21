@@ -48,7 +48,7 @@
 		AM.forceMove(get_turf(src))
 
 // Ejects all the things out of the machine.
-/obj/machinery/processor/proc/insert(var/atom/movable/AM, mob/living/user)
+/obj/machinery/processor/proc/insert(atom/movable/AM, mob/living/user)
 	if(!Adjacent(AM))
 		return
 	if(!can_insert(AM))
@@ -112,7 +112,7 @@
 		return TRUE
 	return FALSE
 
-/obj/machinery/processor/MouseDrop_T(var/atom/movable/AM, mob/living/user)
+/obj/machinery/processor/MouseDrop_T(atom/movable/AM, mob/living/user)
 	if(user.stat || user.incapacitated(INCAPACITATION_DISABLED) || !istype(user))
 		return
 	insert(AM, user)

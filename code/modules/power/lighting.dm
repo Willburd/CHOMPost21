@@ -31,7 +31,7 @@ GLOBAL_LIST_EMPTY(light_type_cache)
 
 	var/cell_connectors = TRUE
 
-/obj/machinery/light_construct/Initialize(mapload, var/newdir, var/building = 0, var/datum/frame/frame_types/frame_type, obj/machinery/light/fixture = null)
+/obj/machinery/light_construct/Initialize(mapload, var/newdir, var/building = 0, datum/frame/frame_types/frame_type, obj/machinery/light/fixture = null)
 	. = ..()
 	if(fixture)
 		fixture_type = fixture.type
@@ -521,7 +521,7 @@ GLOBAL_LIST_EMPTY(light_type_cache)
 		nightshift_enabled = state
 		update(FALSE)
 
-/obj/machinery/light/attack_generic(var/mob/user, damage)
+/obj/machinery/light/attack_generic(mob/user, damage)
 	if(!damage)
 		return
 	if(status == LIGHT_EMPTY||status == LIGHT_BROKEN)
@@ -1139,7 +1139,7 @@ GLOBAL_LIST_EMPTY(light_type_cache)
 
 // attack bulb/tube with object
 // if a syringe, can inject phoron to make it explode
-/obj/item/light/attackby(var/obj/item/I, mob/user)
+/obj/item/light/attackby(obj/item/I, mob/user)
 	..()
 	if(isrobot(user))
 		I = user.get_active_hand()

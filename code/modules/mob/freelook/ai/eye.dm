@@ -20,7 +20,7 @@
 	visualnet = null
 	. = ..()
 
-/mob/observer/eye/aiEye/setLoc(var/T, cancel_tracking = 1)
+/mob/observer/eye/aiEye/setLoc(T, cancel_tracking = 1)
 	if(owner)
 		T = get_turf(T)
 		loc = T

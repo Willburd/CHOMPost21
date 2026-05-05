@@ -156,7 +156,7 @@
 	go_out()
 	return
 
-/obj/machinery/recharge_station/attackby(var/obj/item/O as obj, mob/user as mob)
+/obj/machinery/recharge_station/attackby(obj/item/O as obj, mob/user as mob)
 	if(!occupant)
 		if(default_deconstruction_screwdriver(user, O))
 			return
@@ -173,7 +173,7 @@
 
 	..()
 
-/obj/machinery/recharge_station/MouseDrop_T(var/mob/target, mob/user)
+/obj/machinery/recharge_station/MouseDrop_T(mob/target, mob/user)
 	if(user.stat || user.lying || !Adjacent(user) || !target.Adjacent(user))
 		return
 

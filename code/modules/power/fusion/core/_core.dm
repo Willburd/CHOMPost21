@@ -107,7 +107,7 @@ GLOBAL_LIST_EMPTY(fusion_cores)
 		owned_field = null
 	update_use_power(USE_POWER_IDLE)
 
-/obj/machinery/power/fusion_core/proc/AddParticles(var/name, quantity = 1)
+/obj/machinery/power/fusion_core/proc/AddParticles(name, quantity = 1)
 	if(owned_field)
 		owned_field.AddParticles(name, quantity)
 		. = 1
@@ -132,7 +132,7 @@ GLOBAL_LIST_EMPTY(fusion_cores)
 	if(owned_field)
 		Shutdown()
 
-/obj/machinery/power/fusion_core/attackby(var/obj/item/W, mob/user)
+/obj/machinery/power/fusion_core/attackby(obj/item/W, mob/user)
 
 	if(owned_field)
 		to_chat(user,span_warning("Shut \the [src] off first!"))

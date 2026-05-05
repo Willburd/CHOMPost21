@@ -69,7 +69,7 @@
 	update_icon()
 	to_chat(user, "You turn \the [src] [enabled ? "on" : "off"].")
 
-/obj/machinery/shield_diffuser/attackby(var/obj/item/W, mob/user)
+/obj/machinery/shield_diffuser/attackby(obj/item/W, mob/user)
 	if(default_deconstruction_screwdriver(user, W))
 		return
 	if(default_deconstruction_crowbar(user, W))

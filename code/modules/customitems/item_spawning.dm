@@ -94,7 +94,7 @@ GLOBAL_LIST_INIT(custom_items, load_custom_items())
 	item.item_icons = new_item_icons
 
 //this has to mirror the way update_inv_*_hand() selects the state
-/datum/custom_item/proc/get_state(var/obj/item/item, var/slot_str, hand_str)
+/datum/custom_item/proc/get_state(var/obj/item/item, slot_str, hand_str)
 	var/t_state
 	if(LAZYACCESS(item.item_state_slots, slot_str))
 		t_state = item.item_state_slots[slot_str]
@@ -107,7 +107,7 @@ GLOBAL_LIST_INIT(custom_items, load_custom_items())
 	return t_state
 
 //this has to mirror the way update_inv_*_hand() selects the icon
-/datum/custom_item/proc/get_icon(var/obj/item/item, var/slot_str, icon/hand_icon)
+/datum/custom_item/proc/get_icon(var/obj/item/item, slot_str, icon/hand_icon)
 	var/icon/t_icon
 	if(item.icon_override)
 		t_icon = item.icon_override

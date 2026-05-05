@@ -573,7 +573,7 @@
 	qdel(to_despawn)
 	set_occupant(null)
 
-/obj/machinery/cryopod/attackby(var/obj/item/G as obj, mob/user as mob)
+/obj/machinery/cryopod/attackby(obj/item/G as obj, mob/user as mob)
 
 	if(istype(G, /obj/item/grab))
 
@@ -697,12 +697,12 @@
 	if(occupant)
 		name = "[name] ([occupant])"
 
-/obj/machinery/cryopod/MouseDrop_T(var/mob/target, mob/user)
+/obj/machinery/cryopod/MouseDrop_T(mob/target, mob/user)
 	if(user.stat || user.lying || !Adjacent(user) || !target.Adjacent(user))
 		return
 	go_in(target, user)
 
-/obj/machinery/cryopod/proc/go_in(var/mob/M, mob/user)
+/obj/machinery/cryopod/proc/go_in(mob/M, mob/user)
 	if(!check_occupant_allowed(M))
 		return
 	if(!M)

@@ -1462,7 +1462,7 @@ GLOBAL_LIST_EMPTY(damage_icon_parts) //see UpdateDamageIcon()
 			struggle_anim_taur = FALSE
 			update_vore_tail_sprite()
 
-/mob/living/carbon/human/proc/GetAppearanceFromPrefs(var/flavourtext, oocnotes)
+/mob/living/carbon/human/proc/GetAppearanceFromPrefs(flavourtext, oocnotes)
 	/* Jank code that effectively creates the client's mob from save, then copies its appearance to our current mob.
 	Intended to be used with shapeshifter species so we don't reset their organs in doing so.*/
 	if(client.prefs)

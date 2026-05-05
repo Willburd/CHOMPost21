@@ -159,7 +159,7 @@ GLOBAL_LIST_EMPTY(apcs)
 	if(terminal)
 		terminal.connect_to_network()
 
-/obj/machinery/power/apc/drain_power(var/drain_check, var/surge, amount = 0)
+/obj/machinery/power/apc/drain_power(var/drain_check, surge, amount = 0)
 
 	if(drain_check)
 		return 1
@@ -701,7 +701,7 @@ GLOBAL_LIST_EMPTY(apcs)
 	..()
 	togglelock(user)
 
-/obj/machinery/power/apc/emag_act(var/remaining_charges, mob/user)
+/obj/machinery/power/apc/emag_act(remaining_charges, mob/user)
 	if(!(emagged || hacker))		// trying to unlock with an emag card
 		if(opened)
 			to_chat(user, "You must close the cover to do that.")
@@ -1170,7 +1170,7 @@ GLOBAL_LIST_EMPTY(apcs)
 // val 0=off, 1=off(auto) 2=on 3=on(auto)
 // on 0=off, 1=on, 2=autooff
 // defines a state machine, returns the new state
-/obj/machinery/power/apc/proc/autoset(var/cur_state, on)
+/obj/machinery/power/apc/proc/autoset(cur_state, on)
 	switch(cur_state)
 		//if(POWERCHAN_OFF); //autoset will never turn on a channel set to off
 		if(POWERCHAN_OFF_AUTO)

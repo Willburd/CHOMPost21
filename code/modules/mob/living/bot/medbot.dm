@@ -249,7 +249,7 @@
 		ui = new(user, src, "Medbot", name)
 		ui.open()
 
-/mob/living/bot/medbot/attackby(var/obj/item/O, mob/user)
+/mob/living/bot/medbot/attackby(obj/item/O, mob/user)
 	if(istype(O, /obj/item/reagent_containers/glass))
 		if(locked)
 			to_chat(user, span_notice("You cannot insert a beaker because the panel is locked."))
@@ -312,7 +312,7 @@
 			declare_treatment = !declare_treatment
 			. = TRUE
 
-/mob/living/bot/medbot/emag_act(var/remaining_uses, mob/user)
+/mob/living/bot/medbot/emag_act(remaining_uses, mob/user)
 	. = ..()
 	if(!emagged)
 		if(user)

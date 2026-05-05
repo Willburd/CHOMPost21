@@ -22,7 +22,7 @@
 // Is the snake hunting a specific atom? (Will always try to meander toward this target.)
 	var/atom/hunting
 
-/obj/effect/temporary_effect/pulse/snake/Initialize(mapload, var/atom/hunt_target, atom/Creator)
+/obj/effect/temporary_effect/pulse/snake/Initialize(mapload, atom/hunt_target, atom/Creator)
 	. = ..()
 	if(hunt_target)
 		hunting = hunt_target

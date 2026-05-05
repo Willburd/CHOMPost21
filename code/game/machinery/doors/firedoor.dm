@@ -220,7 +220,7 @@
 			return
 	..()
 
-/obj/machinery/door/firedoor/attack_generic(var/mob/living/user, damage)
+/obj/machinery/door/firedoor/attack_generic(mob/living/user, damage)
 	if(stat & (BROKEN|NOPOWER))
 		if(damage >= STRUCTURE_MIN_DAMAGE_THRESHOLD)
 			var/time_to_force = (2 + (2 * blocked)) * 5

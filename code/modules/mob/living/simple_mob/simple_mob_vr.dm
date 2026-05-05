@@ -168,7 +168,7 @@
 		return max(0,(vore_pounce_successrate - (vore_pounce_falloff * TargetHealthPercent)))
 
 
-/mob/living/simple_mob/proc/PounceTarget(var/mob/living/M, successrate = 100)
+/mob/living/simple_mob/proc/PounceTarget(mob/living/M, successrate = 100)
 	vore_pounce_cooldown = world.time + 20 SECONDS // don't attempt another pounce for a while
 	if(prob(successrate)) // pounce success!
 		M.Weaken(5)

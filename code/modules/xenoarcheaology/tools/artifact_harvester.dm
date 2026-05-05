@@ -47,7 +47,7 @@
 				if(5)
 					harvesting_speed += 100
 
-/obj/machinery/artifact_harvester/attackby(var/obj/I as obj, mob/user as mob)
+/obj/machinery/artifact_harvester/attackby(obj/I as obj, mob/user as mob)
 	if(istype(I,/obj/item/anobattery))
 		if(!inserted_battery)
 			to_chat(user, span_blue("You insert [I] into [src]."))

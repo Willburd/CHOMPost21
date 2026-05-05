@@ -30,7 +30,7 @@
 	update_icon()
 
 
-/turf/simulated/shuttlewalls/proc/set_material(var/datum/material/newmaterial, var/datum/material/newrmaterial, datum/material/newgmaterial)
+/turf/simulated/shuttlewalls/proc/set_material(var/datum/material/newmaterial, datum/material/newrmaterial, datum/material/newgmaterial)
 	material = newmaterial
 	reinf_material = newrmaterial
 	if(!newgmaterial)

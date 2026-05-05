@@ -264,7 +264,7 @@
 	return getBruteLoss()
 
 //'include_robo' only applies to healing, for legacy purposes, as all damage typically hurts both types of organs
-/mob/living/proc/adjustBruteLoss(var/amount,include_robo)
+/mob/living/proc/adjustBruteLoss(amount,include_robo)
 	if(SEND_SIGNAL(src, COMSIG_TAKING_BRUTE_DAMAGE, amount) & COMSIG_CANCEL_BRUTE_DAMAGE)
 		return 0	// Cancelled by a component
 
@@ -361,7 +361,7 @@
 	return getFireLoss()
 
 //'include_robo' only applies to healing, for legacy purposes, as all damage typically hurts both types of organs
-/mob/living/proc/adjustFireLoss(var/amount,include_robo)
+/mob/living/proc/adjustFireLoss(amount,include_robo)
 	if(SEND_SIGNAL(src, COMSIG_TAKING_FIRE_DAMAGE, amount) & COMSIG_CANCEL_FIRE_DAMAGE)
 		return 0	// Cancelled by a component
 	if(amount > 0)
@@ -922,7 +922,7 @@
 /mob/living/proc/slip(slipped_on,stun_duration=8)
 	return 0
 
-/mob/living/carbon/drop_from_inventory(var/obj/item/W, atom/target = null)
+/mob/living/carbon/drop_from_inventory(obj/item/W, atom/target = null)
 	return !(W in internal_organs) && ..()
 
 /mob/living/proc/drop_both_hands()
@@ -953,7 +953,7 @@
 	..()
 
 //damage/heal the mob ears and adjust the deaf amount
-/mob/living/adjustEarDamage(var/damage, deaf)
+/mob/living/adjustEarDamage(damage, deaf)
 	ear_damage = max(0, ear_damage + damage)
 	ear_deaf = max(0, ear_deaf + deaf)
 	if(ear_deaf > 0) //CHOMPStaiton Enable: Ear Ringing/Deafness
@@ -962,7 +962,7 @@
 		deaf_loop.stop() // CHOMPStation Add: Ear Ringing/Deafness - Not sure if we need this, but, safety.
 
 //pass a negative argument to skip one of the variable
-/mob/living/setEarDamage(var/damage, deaf)
+/mob/living/setEarDamage(damage, deaf)
 	if(damage >= 0)
 		ear_damage = damage
 	if(deaf >= 0)
@@ -1371,7 +1371,7 @@
 	item.throw_at(target, throw_range, item.throw_speed, src)
 	return TRUE
 
-/mob/living/get_sound_env(var/spot, pressure_factor)
+/mob/living/get_sound_env(spot, pressure_factor)
 	if (hallucination)
 		return SOUND_ENVIRONMENT_PSYCHOTIC
 	else if (druggy)
@@ -1528,7 +1528,7 @@
 	if(toggled_sleeping)
 		Sleeping(1)
 
-/mob/living/proc/set_metainfo_favs(var/mob/user, reopen = TRUE)
+/mob/living/proc/set_metainfo_favs(mob/user, reopen = TRUE)
 	if(user != src)
 		return
 	var/new_metadata = strip_html_simple(tgui_input_text(user, "Enter any information you'd like others to see relating to your FAVOURITE roleplay preferences. This will not be saved permanently unless you click save in the OOC notes panel! Type \"!clear\" to empty.", "Game Preference" , html_decode(ooc_notes_favs), multiline = TRUE,  prevent_enter = TRUE))
@@ -1542,7 +1542,7 @@
 		if(reopen)
 			ooc_notes_window(user)
 
-/mob/living/proc/set_metainfo_maybes(var/mob/user, reopen = TRUE)
+/mob/living/proc/set_metainfo_maybes(mob/user, reopen = TRUE)
 	if(user != src)
 		return
 	var/new_metadata = strip_html_simple(tgui_input_text(user, "Enter any information you'd like others to see relating to your MAYBE roleplay preferences. This will not be saved permanently unless you click save in the OOC notes panel! Type \"!clear\" to empty.", "Game Preference" , html_decode(ooc_notes_maybes), multiline = TRUE,  prevent_enter = TRUE))
@@ -1556,7 +1556,7 @@
 		if(reopen)
 			ooc_notes_window(user)
 
-/mob/living/proc/set_metainfo_ooc_style(var/mob/user, reopen = TRUE)
+/mob/living/proc/set_metainfo_ooc_style(mob/user, reopen = TRUE)
 	if(user != src)
 		return
 	ooc_notes_style = !ooc_notes_style

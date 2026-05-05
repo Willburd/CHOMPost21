@@ -173,7 +173,7 @@
 		to_chat(user, span_notice("\The [src] smartly refuses [O]."))
 		return TRUE
 
-/obj/machinery/smartfridge/secure/emag_act(var/remaining_charges, mob/user)
+/obj/machinery/smartfridge/secure/emag_act(remaining_charges, mob/user)
 	if(!emagged)
 		emagged = 1
 		locked = -1

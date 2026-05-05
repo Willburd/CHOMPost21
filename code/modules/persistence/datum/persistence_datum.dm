@@ -28,11 +28,11 @@
 				tokens -= token
 		ProcessAndApplyTokens(tokens)
 
-/datum/persistent/proc/GetValidTurf(var/turf/T, list/token)
+/datum/persistent/proc/GetValidTurf(turf/T, list/token)
 	if(T && CheckTurfContents(T, token))
 		return T
 
-/datum/persistent/proc/CheckTurfContents(var/turf/T, list/token)
+/datum/persistent/proc/CheckTurfContents(turf/T, list/token)
 	return TRUE
 
 /datum/persistent/proc/CheckTokenSanity(list/token)
@@ -45,7 +45,7 @@
 	)
 
 // Restores saved data to world
-/datum/persistent/proc/CreateEntryInstance(var/turf/creating, list/token)
+/datum/persistent/proc/CreateEntryInstance(turf/creating, list/token)
 	return
 
 /datum/persistent/proc/ProcessAndApplyTokens(list/tokens)
@@ -117,7 +117,7 @@
 /datum/persistent/proc/RemoveValue(atom/value)
 	qdel(value)
 
-/datum/persistent/proc/GetAdminSummary(var/mob/user, can_modify)
+/datum/persistent/proc/GetAdminSummary(mob/user, can_modify)
 	var/list/my_tracks = SSpersistence.tracking_values[type]
 	if(!my_tracks?.len)
 		return
@@ -133,13 +133,13 @@
 	. += "<tr><td colspan = 4><hr></td></tr>"
 
 
-/datum/persistent/proc/GetAdminDataStringFor(var/thing, var/can_modify, mob/user)
+/datum/persistent/proc/GetAdminDataStringFor(var/thing, can_modify, mob/user)
 	if(can_modify)
 		. = "<td colspan = 3>[thing]</td><td><a href='byond://?src=\ref[src];[HrefToken()];caller=\ref[user];remove_entry=\ref[thing]'>Destroy</a></td>"
 	else
 		. = "<td colspan = 4>[thing]</td>"
 
-/datum/persistent/Topic(var/href, href_list)
+/datum/persistent/Topic(href, href_list)
 	. = ..()
 	if(!.)
 		if(href_list["remove_entry"])

@@ -284,7 +284,7 @@
 		to_chat(src, span_warning("I have not evolved enough to reproduce yet..."))
 
 // Used when reproducing or dying.
-/mob/living/simple_mob/slime/xenobio/proc/make_new_slime(var/desired_type, no_step)
+/mob/living/simple_mob/slime/xenobio/proc/make_new_slime(desired_type, no_step)
 	var/t = src.type
 	if(desired_type)
 		t = desired_type

@@ -40,7 +40,7 @@
 	tgui_interact(user)
 	return
 
-/obj/machinery/computer/supplycomp/emag_act(var/remaining_charges, mob/user)
+/obj/machinery/computer/supplycomp/emag_act(remaining_charges, mob/user)
 	if(!can_order_contraband)
 		to_chat(user, span_notice("Special supplies unlocked."))
 		authorization |= SUP_CONTRABAND

@@ -174,5 +174,5 @@
 		addtimer(CALLBACK(src, PROC_REF(animate_charge), P, color_overlay), timer)
 		timer += teleport_cooldown/8
 
-/obj/machinery/hyperpad/centre/proc/animate_charge(var/obj/machinery/hyperpad/Pad, mutable_appearance/color)
+/obj/machinery/hyperpad/centre/proc/animate_charge(obj/machinery/hyperpad/Pad, mutable_appearance/color)
 	Pad.add_overlay(color)

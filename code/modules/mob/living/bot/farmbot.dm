@@ -70,7 +70,7 @@
 		return
 	tgui_interact(user)
 
-/mob/living/bot/farmbot/emag_act(var/remaining_charges, mob/user)
+/mob/living/bot/farmbot/emag_act(remaining_charges, mob/user)
 	. = ..()
 	if(!emagged)
 		if(user)
@@ -171,7 +171,7 @@
 	makeStep(target_path)
 	return
 
-/mob/living/bot/farmbot/UnarmedAttack(var/atom/A, proximity)
+/mob/living/bot/farmbot/UnarmedAttack(atom/A, proximity)
 	if(!..())
 		return
 

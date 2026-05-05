@@ -359,7 +359,7 @@ BLOOD_VOLUME_SURVIVE = 40
 	remove_blood(amount) // Removes blood if human
 
 //Transfers blood from container ot vessels
-/mob/living/carbon/proc/inject_blood(var/datum/reagent/blood/injected, amount)
+/mob/living/carbon/proc/inject_blood(datum/reagent/blood/injected, amount)
 	if (!injected || !istype(injected))
 		return
 	var/list/sniffles = injected.data["viruses"]
@@ -379,7 +379,7 @@ BLOOD_VOLUME_SURVIVE = 40
 	reagents.update_total()
 
 //Transfers blood from reagents to vessel, respecting blood types compatability.
-/mob/living/carbon/human/inject_blood(var/datum/reagent/blood/injected, amount)
+/mob/living/carbon/human/inject_blood(datum/reagent/blood/injected, amount)
 
 	if(!should_have_organ(O_HEART))
 		reagents.add_reagent(REAGENT_ID_BLOOD, amount, injected.data)
@@ -452,7 +452,7 @@ BLOOD_VOLUME_SURVIVE = 40
 		//AB is a universal receiver.
 	return 0
 
-/proc/blood_splatter(var/target,var/datum/reagent/blood/source,large)
+/proc/blood_splatter(var/target,datum/reagent/blood/source,large)
 
 	//Vorestation Edit Start - We're not going to splatter at all because we're in something and that's silly.
 	if(istype(source,/atom/movable))

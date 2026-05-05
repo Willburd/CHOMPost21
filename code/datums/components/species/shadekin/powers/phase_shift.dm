@@ -101,7 +101,7 @@
 	else
 		phase_out(T, SK)
 
-/mob/living/proc/phase_in(var/turf/T, datum/component/shadekin/SK)
+/mob/living/proc/phase_in(turf/T, datum/component/shadekin/SK)
 	//In case we're not passed args, do it ourself.
 	if(!T)
 		T = get_turf(src)
@@ -156,7 +156,7 @@
 		addtimer(CALLBACK(src, PROC_REF(shadekin_complete_phase_in), original_canmove, SK), SK.phase_time, TIMER_DELETE_ME)
 
 
-/mob/living/proc/shadekin_complete_phase_in(var/original_canmove, datum/component/shadekin/SK)
+/mob/living/proc/shadekin_complete_phase_in(original_canmove, datum/component/shadekin/SK)
 	canmove = original_canmove
 	alpha = initial(alpha)
 	remove_modifiers_of_type(/datum/modifier/shadekin_phase_vision)

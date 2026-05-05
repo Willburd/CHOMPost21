@@ -37,7 +37,7 @@
 	else
 		failure_chance = 75 // You can't even use it if there's no scanmod, but why not.
 
-/obj/item/bluespace_harpoon/attackby(var/obj/item/I, mob/living/user)
+/obj/item/bluespace_harpoon/attackby(obj/item/I, mob/living/user)
 	if(!istype(user))
 		return
 

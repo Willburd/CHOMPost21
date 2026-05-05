@@ -215,7 +215,7 @@
 
 /*  -- Actual language proc code --  */
 
-/datum/signal/proc/mem(var/address, value)
+/datum/signal/proc/mem(address, value)
 
 	if(istext(address))
 		var/obj/machinery/telecomms/server/S = data["server"]
@@ -227,7 +227,7 @@
 			S.memory[address] = value
 
 
-/datum/signal/proc/tcombroadcast(var/message, var/freq, var/source, job)
+/datum/signal/proc/tcombroadcast(var/message, var/freq, source, job)
 
 	var/datum/signal/newsign = new
 	var/obj/machinery/telecomms/server/S = data["server"]

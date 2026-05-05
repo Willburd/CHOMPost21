@@ -79,7 +79,7 @@
 /mob/proc/stop_all_music()
 	client?.media.stop_music()
 
-/mob/proc/force_music(var/url, var/start, volume=1)
+/mob/proc/force_music(var/url, start, volume=1)
 	if (client?.media)
 		if(url == "")
 			client.media.forced = 0
@@ -138,7 +138,7 @@
 	MP_DEBUG(span_green("Sending update to mediapanel ([url], [(world.time - start_time) / 10], [volume * source_volume])..."))
 	owner << output(list2params(list(url, (world.time - start_time) / 10, volume * source_volume)), "[WINDOW_ID]:SetMusic")
 
-/datum/media_manager/proc/push_music(var/targetURL, var/targetStartTime, targetVolume)
+/datum/media_manager/proc/push_music(var/targetURL, targetStartTime, targetVolume)
 	if (url != targetURL || abs(targetStartTime - start_time) > 1 || abs(targetVolume - source_volume) > 0.1 /* 10% */)
 		url = targetURL
 		start_time = targetStartTime

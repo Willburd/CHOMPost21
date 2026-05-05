@@ -246,7 +246,7 @@
 	//Phew, update our own icon
 	update_icon()
 
-/obj/machinery/power/shield_generator/proc/do_corner_shield(var/obj/effect/shield/S, var/new_dir, force_outside)
+/obj/machinery/power/shield_generator/proc/do_corner_shield(var/obj/effect/shield/S, new_dir, force_outside)
 	S.enabled_icon_state = "blank"
 	S.set_dir(new_dir)
 	var/inside = force_outside ? FALSE : isspace(get_step(S, new_dir))
@@ -537,7 +537,7 @@
 
 
 // Takes specific amount of damage
-/obj/machinery/power/shield_generator/proc/deal_shield_damage(var/damage, shield_damtype)
+/obj/machinery/power/shield_generator/proc/deal_shield_damage(damage, shield_damtype)
 	var/energy_to_use = damage * ENERGY_PER_HP
 	if(check_flag(MODEFLAG_MODULATE))
 		mitigation_em -= MITIGATION_HIT_LOSS

@@ -327,7 +327,7 @@ GLOBAL_LIST(construction_frame_floor)
 	for(var/obj/ct as anything in req_components)
 		req_component_names[ct] = initial(ct.name)
 
-/obj/structure/frame/Initialize(mapload, var/dir, var/building = 0, datum/frame/frame_types/type, mob/user as mob)
+/obj/structure/frame/Initialize(mapload, var/dir, building = 0, datum/frame/frame_types/type, mob/user as mob)
 	. = ..()
 	if(building)
 		frame_type = type
@@ -647,7 +647,7 @@ GLOBAL_LIST(construction_frame_floor)
 
 	update_icon()
 
-/obj/structure/frame/proc/install_part(var/mob/user, var/obj/item/P, defer_feedback = FALSE)
+/obj/structure/frame/proc/install_part(var/mob/user, obj/item/P, defer_feedback = FALSE)
 	var/installed_part = FALSE
 	for(var/I in req_components)
 		if(!istype(P, I) || (req_components[I] == 0))
@@ -687,7 +687,7 @@ GLOBAL_LIST(construction_frame_floor)
 	to_chat(user, span_warning("You cannot add that component to the machine!"))
 	return FALSE
 
-/obj/structure/frame/proc/mass_install_parts(var/mob/user, obj/item/storage/S)
+/obj/structure/frame/proc/mass_install_parts(mob/user, obj/item/storage/S)
 	var/installed_part = FALSE
 	for(var/obj/item/P in S.contents)
 		installed_part |= install_part(user, P, TRUE)

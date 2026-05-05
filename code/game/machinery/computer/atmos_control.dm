@@ -33,7 +33,7 @@
 		return 1
 	tgui_interact(user)
 
-/obj/machinery/computer/atmoscontrol/emag_act(var/remaining_carges, mob/user)
+/obj/machinery/computer/atmoscontrol/emag_act(remaining_carges, mob/user)
 	if(!emagged)
 		user.visible_message(span_warning("\The [user] does something \the [src], causing the screen to flash!"),\
 			span_warning("You cause the screen to flash as you gain full control."),\

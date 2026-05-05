@@ -20,7 +20,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_NO
 	industrial_use = REFINERYEXPORT_REASON_BIOHAZARD
 
-/datum/reagent/liquidspideregg/affect_blood(var/mob/living/carbon/M, var/alien, removed)
+/datum/reagent/liquidspideregg/affect_blood(var/mob/living/carbon/M, alien, removed)
 	if(prob(1))
 		M.custom_pain("You can feel movement within your body!",45)
 	amount_grown += rand(min_growth,max_growth)
@@ -114,7 +114,7 @@
 	//..()
 	return
 
-/datum/reagent/benzilate/affect_blood(var/mob/living/carbon/M, var/alien, removed)
+/datum/reagent/benzilate/affect_blood(var/mob/living/carbon/M, alien, removed)
 	if(alien == IS_DIONA)
 		return
 	var/drug_strength = 12

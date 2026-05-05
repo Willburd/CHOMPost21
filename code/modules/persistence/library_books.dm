@@ -120,7 +120,7 @@
 			return 3 // Error
 		return 1 // new saved
 
-/datum/persistent/library_books/proc/get_stored_book(var/uid,var/location,unique = TRUE)
+/datum/persistent/library_books/proc/get_stored_book(var/uid,location,unique = TRUE)
 	if(!uid) // somehow null ui, possibly bad data used
 		return null
 	var/hash_key = md5(uid)

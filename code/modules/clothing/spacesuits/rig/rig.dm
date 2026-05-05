@@ -224,7 +224,7 @@
 				M.unEquip(piece)
 			piece.forceMove(src)
 
-/obj/item/rig/get_worn_icon_file(var/body_type,var/slot_name,var/default_icon,inhands)
+/obj/item/rig/get_worn_icon_file(var/body_type,var/slot_name,default_icon,inhands)
 	if(!inhands && (slot_name == slot_back_str || slot_name == slot_belt_str))
 		if(body_type == SPECIES_TESHARI || body_type == SPECIES_WEREBEAST) //Until teshari get proper sprites for rigs, they can default to not having the sprite.
 			return null //All other species are 'humanoid enough' to wear the default rig sprite.
@@ -251,7 +251,7 @@
 // Updates pressure protection
 // Seal = 1 sets protection
 // Seal = 0 unsets protection
-/obj/item/rig/proc/update_airtight(var/obj/item/piece, seal = 0)
+/obj/item/rig/proc/update_airtight(obj/item/piece, seal = 0)
 	if(seal == 1)
 		piece.min_pressure_protection = rigsuit_min_pressure
 		piece.max_pressure_protection = rigsuit_max_pressure
@@ -445,7 +445,7 @@
 	to_chat(user, span_notice("You switch \the [src]'s cooling system on."))
 
 
-/obj/item/rig/proc/turn_cooling_off(var/mob/user, failed)
+/obj/item/rig/proc/turn_cooling_off(mob/user, failed)
 	if(failed)
 		visible_message("\The [src]'s cooling system clicks and whines as it powers down.")
 	else
@@ -581,7 +581,7 @@
 	for(var/obj/item/rig_module/module in installed_modules)
 		cell.use(module.process()*10)
 
-/obj/item/rig/proc/check_power_cost(var/mob/living/user, var/cost, var/use_unconcious, var/obj/item/rig_module/mod, user_is_ai)
+/obj/item/rig/proc/check_power_cost(var/mob/living/user, var/cost, var/use_unconcious, obj/item/rig_module/mod, user_is_ai)
 
 	if(!istype(user))
 		return 0
@@ -642,7 +642,7 @@
 		wearer.update_inv_back()
 	return
 
-/obj/item/rig/proc/check_suit_access(var/mob/living/carbon/human/user, do_message = TRUE)
+/obj/item/rig/proc/check_suit_access(mob/living/carbon/human/user, do_message = TRUE)
 
 	if(!security_check_enabled)
 		return 1
@@ -698,7 +698,7 @@
 		wearer.wearing_rig = src
 		update_icon()
 
-/obj/item/rig/proc/toggle_piece(var/piece, var/mob/living/carbon/human/H, var/deploy_mode, forced = FALSE)
+/obj/item/rig/proc/toggle_piece(var/piece, var/mob/living/carbon/human/H, deploy_mode, forced = FALSE)
 
 	if((sealing || !cell || !cell.charge) && !forced)
 		return
@@ -897,7 +897,7 @@
 		return 1
 	return 0
 
-/obj/item/rig/proc/ai_can_move_suit(var/mob/user, var/check_user_module = 0, check_for_ai = 0)
+/obj/item/rig/proc/ai_can_move_suit(var/mob/user, check_user_module = 0, check_for_ai = 0)
 
 	if(check_for_ai)
 		if(!(locate(/obj/item/rig_module/ai_container) in contents))
@@ -940,7 +940,7 @@
 	wearer.lay_down()
 	to_chat(user, span_notice("\The [wearer] is now [wearer.resting ? "resting" : "getting up"]."))
 
-/obj/item/rig/proc/forced_move(var/direction, var/mob/user, ai_moving = TRUE)
+/obj/item/rig/proc/forced_move(var/direction, mob/user, ai_moving = TRUE)
 
 	// Why is all this shit in client/Move()? Who knows?
 	if(world.time < wearer_move_delay)

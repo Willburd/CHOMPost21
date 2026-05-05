@@ -100,10 +100,10 @@
 		icon_state = initial(icon_state)
 */
 
-/obj/vehicle/train/trolley/insert_cell(var/obj/item/cell/C, mob/living/carbon/human/H)
+/obj/vehicle/train/trolley/insert_cell(obj/item/cell/C, mob/living/carbon/human/H)
 	return
 
-/obj/vehicle/train/engine/insert_cell(var/obj/item/cell/C, mob/living/carbon/human/H)
+/obj/vehicle/train/engine/insert_cell(obj/item/cell/C, mob/living/carbon/human/H)
 	..()
 	update_stats()
 
@@ -288,7 +288,7 @@
 //-------------------------------------------
 // Loading/unloading procs
 //-------------------------------------------
-/obj/vehicle/train/trolley/load(var/atom/movable/C, mob/user)
+/obj/vehicle/train/trolley/load(atom/movable/C, mob/user)
 	if(ismob(C) && !passenger_allowed)
 		return 0
 	if(!istype(C,/obj/machinery) && !istype(C,/obj/structure/closet) && !istype(C,/obj/structure/largecrate) && !istype(C,/obj/structure/reagent_dispensers) && !istype(C,/obj/structure/ore_box) && !ishuman(C))
@@ -304,7 +304,7 @@
 	if(load)
 		return 1
 
-/obj/vehicle/train/engine/load(var/atom/movable/C, mob/user)
+/obj/vehicle/train/engine/load(atom/movable/C, mob/user)
 	if(!ishuman(C))
 		return 0
 
@@ -340,7 +340,7 @@
 		C.pixel_y = initial(C.pixel_y)
 		C.layer = initial(C.layer)
 
-/obj/vehicle/train/trolley/unload(var/mob/user, direction)
+/obj/vehicle/train/trolley/unload(mob/user, direction)
 	if(istype(load, /datum/vehicle_dummy_load))
 		var/datum/vehicle_dummy_load/dummy_load = load
 		load = dummy_load.actual_load
@@ -380,7 +380,7 @@
 // more engines increases this limit by car_limit per
 // engine.
 //-------------------------------------------------------
-/obj/vehicle/train/engine/update_car(var/train_length, active_engines)
+/obj/vehicle/train/engine/update_car(train_length, active_engines)
 	src.train_length = train_length
 	src.active_engines = active_engines
 
@@ -393,7 +393,7 @@
 		move_delay += CONFIG_GET(number/run_speed) 											//base reference speed
 		move_delay *= speed_mod																//makes cargo trains 10% slower than running when not overweight
 
-/obj/vehicle/train/trolley/update_car(var/train_length, active_engines)
+/obj/vehicle/train/trolley/update_car(train_length, active_engines)
 	src.train_length = train_length
 	src.active_engines = active_engines
 
@@ -435,7 +435,7 @@
 	AddElement(/datum/element/climbable)
 	AddElement(/datum/element/sellable/trolley_tank)
 
-/obj/vehicle/train/trolley_tank/insert_cell(var/obj/item/cell/C, mob/living/carbon/human/H)
+/obj/vehicle/train/trolley_tank/insert_cell(obj/item/cell/C, mob/living/carbon/human/H)
 	return
 
 /obj/vehicle/train/trolley_tank/Bump(atom/Obstacle)
@@ -457,7 +457,7 @@
 	if(istype(C,/obj/vehicle/train)) // Only allow latching
 		. = ..()
 
-/obj/vehicle/train/trolley_tank/load(var/atom/movable/C, mob/living/user)
+/obj/vehicle/train/trolley_tank/load(atom/movable/C, mob/living/user)
 	return FALSE // Cannot load anything onto this
 
 /obj/vehicle/train/trolley_tank/RunOver(mob/living/M)
@@ -502,7 +502,7 @@
 
 	. = ..()
 
-/obj/vehicle/train/trolley_tank/update_car(var/train_length, active_engines)
+/obj/vehicle/train/trolley_tank/update_car(train_length, active_engines)
 	src.train_length = train_length
 	src.active_engines = active_engines
 

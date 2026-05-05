@@ -55,7 +55,7 @@
 	#endif
 	return 1
 
-/datum/random_map/automata/cave_system/apply_to_turf(var/x,y)
+/datum/random_map/automata/cave_system/apply_to_turf(x,y)
 	var/current_cell = get_map_cell(x,y)
 	if(!current_cell)
 		return 0

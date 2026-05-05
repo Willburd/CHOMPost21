@@ -68,7 +68,7 @@
 
 	return ..()
 
-/datum/decl/chemical_reaction/distilling/on_reaction(var/datum/reagents/holder, created_volume)
+/datum/decl/chemical_reaction/distilling/on_reaction(datum/reagents/holder, created_volume)
 	// Handle gas consumption
 	var/datum/gas_mixture/GM = holder.my_atom.return_air()
 	if(consumes_xgm_gas != 0 && GM)
@@ -215,7 +215,7 @@
 	temp_range = list(T0C + 600, T0C + 700)
 	temp_shift = 4
 
-/datum/decl/chemical_reaction/distilling/berserkjuice/on_reaction(var/datum/reagents/holder, created_volume)
+/datum/decl/chemical_reaction/distilling/berserkjuice/on_reaction(datum/reagents/holder, created_volume)
 	..()
 
 	if(prob(1))
@@ -234,7 +234,7 @@
 	temp_range = list(T0C + 10, T20C + 15) //CHOMPedit: I know this doesn't make sense, and this is a baindaid fix but distiller code refuses to go this low, even with correct variables
 	temp_shift = 20
 
-/datum/decl/chemical_reaction/distilling/cryogel/on_reaction(var/datum/reagents/holder, created_volume)
+/datum/decl/chemical_reaction/distilling/cryogel/on_reaction(datum/reagents/holder, created_volume)
 	..()
 
 	if(prob(1))

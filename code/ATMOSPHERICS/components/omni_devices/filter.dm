@@ -215,7 +215,7 @@
 		else
 			return null
 
-/obj/machinery/atmospherics/omni/atmos_filter/proc/switch_filter(var/dir, mode)
+/obj/machinery/atmospherics/omni/atmos_filter/proc/switch_filter(dir, mode)
 	//check they aren't trying to disable the input or output ~this can only happen if they hack the cached tmpl file
 	for(var/datum/omni_port/P in ports)
 		if(P.dir == dir)
@@ -224,7 +224,7 @@
 
 	switch_mode(dir, mode)
 
-/obj/machinery/atmospherics/omni/atmos_filter/proc/switch_mode(var/port, mode)
+/obj/machinery/atmospherics/omni/atmos_filter/proc/switch_mode(port, mode)
 	if(mode == null || !port)
 		return
 	var/datum/omni_port/target_port = null

@@ -167,7 +167,7 @@
 /datum/ai_holder/simple_mob/ysbryd
 	var/find_target_cooldown = 1 MINUTE
 
-/datum/ai_holder/simple_mob/ysbryd/find_target(var/list/possible_targets, has_targets_list = FALSE)
+/datum/ai_holder/simple_mob/ysbryd/find_target(list/possible_targets, has_targets_list = FALSE)
 	ai_log("find_target() : Entered.", AI_LOG_TRACE)
 	if(world.time <= (find_target_cooldown + last_target_time))
 		return

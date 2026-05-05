@@ -138,7 +138,7 @@ GLOBAL_LIST_EMPTY_TYPED(running_demand_events, /datum/event/supply_demand)
  * @param to_department - Name of department to deliver to, or null to send to all departments.
  * @return 1 if successful, 0 if couldn't send.
  */
-/datum/event/supply_demand/proc/send_console_message(var/message, to_department)
+/datum/event/supply_demand/proc/send_console_message(message, to_department)
 	for(var/obj/machinery/message_server/MS in world)
 		if(!MS.active) continue
 		MS.send_rc_message(to_department ? to_department : "All Departments", my_department, message, "", "", 2)
@@ -168,7 +168,7 @@ GLOBAL_LIST_EMPTY_TYPED(running_demand_events, /datum/event/supply_demand)
 /datum/supply_demand_order/thing
 	var/atom/type_path // Type path of the item required
 
-/datum/supply_demand_order/thing/New(var/qty, atom/type_path)
+/datum/supply_demand_order/thing/New(qty, atom/type_path)
 	..()
 	src.type_path = type_path
 	src.name = initial(type_path.name)
@@ -194,7 +194,7 @@ GLOBAL_LIST_EMPTY_TYPED(running_demand_events, /datum/event/supply_demand)
 /datum/supply_demand_order/reagent
 	var/reagent_id
 
-/datum/supply_demand_order/reagent/New(var/qty, datum/reagent/R)
+/datum/supply_demand_order/reagent/New(qty, datum/reagent/R)
 	..()
 	name = R.name
 	reagent_id = R.id

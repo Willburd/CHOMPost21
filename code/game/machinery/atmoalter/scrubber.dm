@@ -216,7 +216,7 @@
 		use_power(power_draw)
 		update_connected_network()
 
-/obj/machinery/portable_atmospherics/powered/scrubber/huge/attackby(var/obj/item/I as obj, mob/user as mob)
+/obj/machinery/portable_atmospherics/powered/scrubber/huge/attackby(obj/item/I as obj, mob/user as mob)
 	if(I.has_tool_quality(TOOL_WRENCH))
 		if(on)
 			to_chat(user, span_warning("Turn \the [src] off first!"))
@@ -248,7 +248,7 @@
 	. = ..()
 	desc += "This one seems to be tightly secured with large bolts."
 
-/obj/machinery/portable_atmospherics/powered/scrubber/huge/stationary/attackby(var/obj/item/I as obj, mob/user as mob)
+/obj/machinery/portable_atmospherics/powered/scrubber/huge/stationary/attackby(obj/item/I as obj, mob/user as mob)
 	if(I.has_tool_quality(TOOL_WRENCH))
 		to_chat(user, span_warning("The bolts are too tight for you to unscrew!"))
 		return

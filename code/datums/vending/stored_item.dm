@@ -9,7 +9,7 @@
 	var/list/instances		//What items are actually stored
 	var/stored				//The thing holding it is
 
-/datum/stored_item/New(var/stored, var/path, var/name = null, amount = 0)
+/datum/stored_item/New(var/stored, var/path, name = null, amount = 0)
 	src.item_path = path
 
 	if(!name)
@@ -80,7 +80,7 @@
 		if(istype(S))
 			amount += S.get_amount()
 
-/datum/stored_item/stack/get_product(var/product_location, count)
+/datum/stored_item/stack/get_product(product_location, count)
 	if(!LAZYLEN(instances))
 		return null // Shouldn't happen, but will loudly complain if it breaks
 

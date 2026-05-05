@@ -603,7 +603,7 @@
 		visible_message(span_infoplain(span_bold("\The [L]") + " bonks \the [src]'s casing!"))
 	return ..()
 
-/obj/machinery/porta_turret/emag_act(var/remaining_charges, mob/user)
+/obj/machinery/porta_turret/emag_act(remaining_charges, mob/user)
 	if(!emagged)
 		//Emagging the turret makes it go bonkers and stun everyone. It also makes
 		//the turret shoot much, much faster.
@@ -892,7 +892,7 @@
 	set_raised_raising(0, 0)
 	update_icon()
 
-/obj/machinery/porta_turret/proc/set_raised_raising(var/incoming_raised, incoming_raising)
+/obj/machinery/porta_turret/proc/set_raised_raising(incoming_raised, incoming_raising)
 	raised = incoming_raised
 	raising = incoming_raising
 	density = raised || raising

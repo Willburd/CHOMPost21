@@ -54,7 +54,7 @@
 	if(sleeper)
 		return tgui_interact(user)
 
-/obj/machinery/sleep_console/attackby(var/obj/item/I, mob/user)
+/obj/machinery/sleep_console/attackby(obj/item/I, mob/user)
 	if(computer_deconstruction_screwdriver(user, I))
 		return
 	else
@@ -372,7 +372,7 @@
 /obj/machinery/sleeper/update_icon()
 	icon_state = "sleeper_[occupant ? "1" : "0"]"
 
-/obj/machinery/sleeper/attackby(var/obj/item/I, mob/user)
+/obj/machinery/sleeper/attackby(obj/item/I, mob/user)
 	add_fingerprint(user)
 	if(istype(I, /obj/item/grab))
 		var/obj/item/grab/G = I
@@ -416,7 +416,7 @@
 		go_out()
 	add_fingerprint(usr)
 
-/obj/machinery/sleeper/MouseDrop_T(var/mob/target, mob/user)
+/obj/machinery/sleeper/MouseDrop_T(mob/target, mob/user)
 	if(user.stat || user.lying || !Adjacent(user) || !target.Adjacent(user) || !ishuman(target))
 		return
 	go_in(target, user)
@@ -457,7 +457,7 @@
 		return
 	pumping = !pumping
 
-/obj/machinery/sleeper/proc/go_in(var/mob/M, mob/user)
+/obj/machinery/sleeper/proc/go_in(mob/M, mob/user)
 	if(!M)
 		return
 	if(stat & (BROKEN|NOPOWER))
@@ -514,7 +514,7 @@
 		beaker = null
 		toggle_filter()
 
-/obj/machinery/sleeper/proc/inject_chemical(var/mob/living/user, var/chemical, amount)
+/obj/machinery/sleeper/proc/inject_chemical(var/mob/living/user, chemical, amount)
 	if(stat & (BROKEN|NOPOWER))
 		return
 	if(!(amount in amounts))

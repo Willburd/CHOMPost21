@@ -109,7 +109,7 @@
 	icon_state = "xenode"
 	organ_tag = O_HIVE
 
-/obj/item/organ/internal/xenos/hivenode/replaced(var/mob/living/carbon/human/target,obj/item/organ/external/affected)
+/obj/item/organ/internal/xenos/hivenode/replaced(mob/living/carbon/human/target,obj/item/organ/external/affected)
 	..()
 	target.add_language(LANGUAGE_HIVEMIND) //You need this to speak the language, so...
 

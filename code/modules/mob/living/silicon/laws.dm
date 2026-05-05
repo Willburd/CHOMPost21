@@ -10,7 +10,7 @@
 /mob/living/silicon/proc/has_zeroth_law()
 	return laws.zeroth_law != null
 
-/mob/living/silicon/proc/set_zeroth_law(var/law, law_borg, notify = TRUE)
+/mob/living/silicon/proc/set_zeroth_law(law, law_borg, notify = TRUE)
 	throw_alert("newlaw", /atom/movable/screen/alert/newlaw)
 	laws_sanity_check()
 	laws.set_zeroth_law(law, law_borg)
@@ -18,7 +18,7 @@
 		notify_of_law_change(law||law_borg ? "NEW ZEROTH LAW: <b>[isrobot(src) && law_borg ? law_borg : law]</b>" : null)
 	log_and_message_admins("has given [src] the zeroth laws: [law]/[law_borg ? law_borg : "N/A"]")
 
-/mob/living/silicon/robot/set_zeroth_law(var/law, law_borg, notify = TRUE)
+/mob/living/silicon/robot/set_zeroth_law(law, law_borg, notify = TRUE)
 	..()
 	if(tracking_entities)
 		to_chat(src, span_warning("Internal camera is currently being accessed."))
@@ -37,7 +37,7 @@
 		notify_of_law_change("NEW CORE LAW: <b>[law]</b>")
 	log_and_message_admins("has given [src] the inherent law: [law]")
 
-/mob/living/silicon/proc/add_supplied_law(var/number, law, notify = TRUE)
+/mob/living/silicon/proc/add_supplied_law(number, law, notify = TRUE)
 	laws_sanity_check()
 	laws.add_supplied_law(number, law)
 	if(notify)
@@ -96,7 +96,7 @@
 
 	dostatelaws(lawchannel, prefix, laws)
 
-/mob/living/silicon/proc/dostatelaws(var/method, var/prefix, datum/ai_laws/laws)
+/mob/living/silicon/proc/dostatelaws(var/method, prefix, datum/ai_laws/laws)
 	if(stating_laws[prefix])
 		to_chat(src, span_notice("[method]: Already stating laws using this communication method."))
 		return

@@ -10,7 +10,7 @@ GLOBAL_LIST_EMPTY(floor_decals)
 	layer = DECAL_LAYER
 	var/supplied_dir
 
-/obj/effect/floor_decal/Initialize(mapload, var/newdir, newcolour)
+/obj/effect/floor_decal/Initialize(mapload, newdir, newcolour)
 	supplied_dir = newdir
 	if(newcolour)
 		color = newcolour

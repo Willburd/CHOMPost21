@@ -30,7 +30,7 @@
 			B.forceMove(T) // Swap places.
 	return ..()
 
-/datum/blob_type/shifting_fragments/on_expand(var/obj/structure/blob/B, var/obj/structure/blob/new_B, var/turf/T, mob/observer/blob/O)
+/datum/blob_type/shifting_fragments/on_expand(var/obj/structure/blob/B, var/obj/structure/blob/new_B, turf/T, mob/observer/blob/O)
 	if(istype(B, /obj/structure/blob/normal) || (istype(B, /obj/structure/blob/shield) && prob(25)))
 		new_B.forceMove(get_turf(B))
 		B.forceMove(T)

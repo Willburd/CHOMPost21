@@ -204,7 +204,7 @@
 
 	update_icon()
 
-/obj/machinery/atmospherics/omni/mixer/proc/switch_mode(var/port = NORTH, mode = ATM_NONE)
+/obj/machinery/atmospherics/omni/mixer/proc/switch_mode(port = NORTH, mode = ATM_NONE)
 	if(mode != ATM_INPUT && mode != ATM_OUTPUT)
 		switch(mode)
 			if("in")

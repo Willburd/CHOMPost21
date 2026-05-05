@@ -81,7 +81,7 @@
 	LAZYREMOVE(compass_waypoints, id)
 	rebuild_overlay_lists(TRUE)
 
-/obj/compass_holder/proc/set_waypoint(var/id, var/label, var/heading_x, var/heading_y, var/heading_z, label_color)
+/obj/compass_holder/proc/set_waypoint(var/id, var/label, var/heading_x, var/heading_y, heading_z, label_color)
 	var/datum/compass_waypoint/wp = LAZYACCESS(compass_waypoints, id)
 	if(!wp)
 		wp = new /datum/compass_waypoint()

@@ -76,7 +76,7 @@
 	if(can_start_activated && prob(50))
 		ToggleActivate(TRUE, TRUE)
 
-/datum/artifact_effect/proc/ToggleActivate(var/reveal_toggle = TRUE, spawn_toggle = FALSE)
+/datum/artifact_effect/proc/ToggleActivate(reveal_toggle = TRUE, spawn_toggle = FALSE)
 	//so that other stuff happens first
 	set waitfor = FALSE
 

@@ -64,7 +64,7 @@
 	else
 		return PROCESS_KILL
 
-/obj/item/cell/drain_power(var/drain_check, var/surge, power = 0)
+/obj/item/cell/drain_power(var/drain_check, surge, power = 0)
 
 	if(drain_check)
 		return 1

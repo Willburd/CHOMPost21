@@ -52,7 +52,7 @@
 	pickup_sound = 'sound/items/pickup/device.ogg'
 	drop_sound = 'sound/items/drop/device.ogg'
 
-/obj/item/floor_painter/afterattack(var/atom/A, mob/user, proximity, params)
+/obj/item/floor_painter/afterattack(atom/A, mob/user, proximity, params)
 	if(!proximity)
 		return
 

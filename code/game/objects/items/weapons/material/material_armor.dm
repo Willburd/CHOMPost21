@@ -61,11 +61,11 @@ Protectiveness | Armor %
 
 // This is called when someone wearing the object gets hit in some form (melee, bullet_act(), etc).
 // Note that this cannot change if someone gets hurt, as it merely reacts to being hit.
-/obj/item/clothing/proc/clothing_impact(var/obj/source, damage)
+/obj/item/clothing/proc/clothing_impact(obj/source, damage)
 	if(material && damage)
 		material_impact(source, damage)
 
-/obj/item/clothing/proc/material_impact(var/obj/source, damage)
+/obj/item/clothing/proc/material_impact(obj/source, damage)
 	if(!material || unbreakable)
 		return
 
@@ -99,7 +99,7 @@ Protectiveness | Armor %
 	qdel(src)
 
 // Might be best to make ablative vests a material armor using a new material to cut down on this copypaste.
-/obj/item/clothing/suit/armor/handle_shield(mob/user, var/damage, atom/damage_source = null, mob/attacker = null, var/def_zone = null, attack_text = "the attack")
+/obj/item/clothing/suit/armor/handle_shield(mob/user, var/damage, atom/damage_source = null, mob/attacker = null, def_zone = null, attack_text = "the attack")
 	if(!material) // No point checking for reflection.
 		return ..()
 

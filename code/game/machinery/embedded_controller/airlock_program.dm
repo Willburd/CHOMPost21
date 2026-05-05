@@ -312,13 +312,13 @@
 	var/int_closed = check_interior_door_secured()
 	return (ext_closed && int_closed)
 
-/datum/embedded_program/airlock/proc/signalDoor(var/tag, command)
+/datum/embedded_program/airlock/proc/signalDoor(tag, command)
 	var/datum/signal/signal = new
 	signal.data["tag"] = tag
 	signal.data["command"] = command
 	post_signal(signal, RADIO_AIRLOCK)
 
-/datum/embedded_program/airlock/proc/signalPump(var/tag, var/power, var/direction, pressure)
+/datum/embedded_program/airlock/proc/signalPump(var/tag, var/power, direction, pressure)
 	var/datum/signal/signal = new
 	signal.data = list(
 		"tag" = tag,
@@ -346,7 +346,7 @@
 			signalDoor(tag_exterior_door, command)
 			signalDoor(tag_interior_door, command)
 
-/datum/embedded_program/airlock/proc/signal_mech_sensor(var/command, sensor)
+/datum/embedded_program/airlock/proc/signal_mech_sensor(command, sensor)
 	var/datum/signal/signal = new
 	signal.data["tag"] = sensor
 	signal.data["command"] = command
@@ -372,7 +372,7 @@ Only sends a command if it is needed, i.e. if the door is
 already open, passing an open command to this proc will not
 send an additional command to open the door again.
 ----------------------------------------------------------*/
-/datum/embedded_program/airlock/proc/toggleDoor(var/list/doorStatus, var/doorTag, var/secure, command)
+/datum/embedded_program/airlock/proc/toggleDoor(var/list/doorStatus, var/doorTag, secure, command)
 	var/doorCommand = null
 
 	if(command == "toggle")

@@ -23,7 +23,7 @@
 	if(written_text)
 		icon_state = "[icon_state]_writing"
 
-/obj/item/sticky_pad/attackby(var/obj/item/thing, mob/user)
+/obj/item/sticky_pad/attackby(obj/item/thing, mob/user)
 	if(istype(thing, /obj/item/pen))
 
 		if(jobban_isbanned(user, JOB_GRAFFITI))
@@ -121,7 +121,7 @@
 	if(!istype(loc, /turf))
 		reset_persistence_tracking()
 
-/obj/item/paper/sticky/afterattack(var/A, var/mob/user, var/flag, params)
+/obj/item/paper/sticky/afterattack(var/A, var/mob/user, flag, params)
 
 	if(!in_range(user, A) || istype(A, /obj/machinery/door) || icon_state == "scrap")
 		return

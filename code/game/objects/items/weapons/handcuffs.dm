@@ -51,7 +51,7 @@
 			to_chat(user, span_danger("You need to have a firm grip on [C] before you can put \the [src] on!"))
 			return ITEM_INTERACT_FAILURE
 
-/obj/item/handcuffs/proc/can_place(var/mob/target, mob/user)
+/obj/item/handcuffs/proc/can_place(mob/target, mob/user)
 	if(user == target)
 		return 1
 	if(isrobot(user))
@@ -63,7 +63,7 @@
 				return 1
 	return 0
 
-/obj/item/handcuffs/proc/attempt_to_cuff(var/mob/living/carbon/victim, mob/user)
+/obj/item/handcuffs/proc/attempt_to_cuff(mob/living/carbon/victim, mob/user)
 	if(SEND_SIGNAL(victim, COMSIG_CARBON_CUFF_ATTEMPTED, user) & COMSIG_CARBON_CUFF_PREVENT)
 		victim.balloon_alert(user, "can't be handcuffed!")
 		return
@@ -111,7 +111,7 @@
 	victim.stop_pulling()
 	return 1
 
-/obj/item/handcuffs/equipped(var/mob/living/user,slot)
+/obj/item/handcuffs/equipped(mob/living/user,slot)
 	. = ..()
 	if(slot == slot_handcuffed)
 		user.drop_r_hand()
@@ -243,7 +243,7 @@
 			to_chat(user, span_danger("You need to have a firm grip on [C] before you can put \the [src] on!"))
 			return ITEM_INTERACT_FAILURE
 
-/obj/item/handcuffs/legcuffs/proc/place_legcuffs(var/mob/living/carbon/target, mob/user)
+/obj/item/handcuffs/legcuffs/proc/place_legcuffs(mob/living/carbon/target, mob/user)
 	playsound(src, cuff_sound, 30, 1, -2)
 
 	var/mob/living/carbon/human/H = target
@@ -289,7 +289,7 @@
 			target.hud_used.move_intent.icon_state = "walking"
 	return 1
 
-/obj/item/handcuffs/legcuffs/equipped(var/mob/living/user,slot)
+/obj/item/handcuffs/legcuffs/equipped(mob/living/user,slot)
 	. = ..()
 	if(slot == slot_legcuffed)
 		if(user.m_intent != I_WALK)
@@ -307,7 +307,7 @@
 	cuff_sound = 'sound/weapons/towelwipe.ogg' //Is there anything this sound can't do?
 	item_flags = DROPDEL
 
-/obj/item/handcuffs/legcuffs/bola/can_place(var/mob/target, mob/user)
+/obj/item/handcuffs/legcuffs/bola/can_place(mob/target, mob/user)
 	if(user) //A ranged legcuff, until proper implementation as items it remains a projectile-only thing.
 		return 1
 
@@ -317,7 +317,7 @@
 	..()
 	visible_message(span_infoplain(span_bold("\The [src]") + " falls apart!"))
 
-/obj/item/handcuffs/legcuffs/bola/place_legcuffs(var/mob/living/carbon/target, mob/user)
+/obj/item/handcuffs/legcuffs/bola/place_legcuffs(mob/living/carbon/target, mob/user)
 	playsound(src, cuff_sound, 30, 1, -2)
 
 	var/mob/living/carbon/human/H = target

@@ -6,7 +6,7 @@
 	var/sender = "Unspecified" //name of the sender
 	var/message = "Blank" //transferred message
 
-/datum/data_pda_msg/New(var/param_rec = "",var/param_sender = "",param_message = "")
+/datum/data_pda_msg/New(var/param_rec = "",param_sender = "",param_message = "")
 
 	if(param_rec)
 		recipient = param_rec
@@ -23,7 +23,7 @@
 	var/id_auth = "Unauthenticated"
 	var/priority = "Normal"
 
-/datum/data_rc_msg/New(var/param_rec = "",var/param_sender = "",var/param_message = "",var/param_stamp = "",var/param_id_auth = "",param_priority)
+/datum/data_rc_msg/New(var/param_rec = "",var/param_sender = "",var/param_message = "",var/param_stamp = "",param_id_auth = "",param_priority)
 	if(param_rec)
 		rec_dpt = param_rec
 	if(param_sender)
@@ -120,7 +120,7 @@
 	update_icon()
 	return
 
-/obj/machinery/message_server/proc/send_pda_message(var/recipient = "",var/sender = "",message = "")
+/obj/machinery/message_server/proc/send_pda_message(var/recipient = "",sender = "",message = "")
 	var/result
 	for (var/token in spamfilter)
 		if (findtextEx(message,token))
@@ -129,7 +129,7 @@
 	pda_msgs += new/datum/data_pda_msg(recipient,sender,message)
 	return result
 
-/obj/machinery/message_server/proc/send_rc_message(var/recipient = "",var/sender = "",var/message = "",var/stamp = "", var/id_auth = "", priority = 1)
+/obj/machinery/message_server/proc/send_rc_message(var/recipient = "",var/sender = "",var/message = "",var/stamp = "", id_auth = "", priority = 1)
 	rc_msgs += new/datum/data_rc_msg(recipient,sender,message,stamp,id_auth)
 	var/authmsg = "[message]\n"
 	if (id_auth)
@@ -203,7 +203,7 @@
 		return FALSE
 	return ..()
 
-/datum/feedback_variable/New(var/param_variable,param_value = 0)
+/datum/feedback_variable/New(param_variable,param_value = 0)
 	variable = param_variable
 	value = param_value
 
@@ -393,7 +393,7 @@ GLOBAL_DATUM(blackbox, /obj/machinery/blackbox_recorder)
 	text = replacetext(text, "&", "")
 	return text
 
-/proc/feedback_set(var/variable,value)
+/proc/feedback_set(variable,value)
 	if(!GLOB.blackbox) return
 
 	variable = sql_sanitize_text(variable)
@@ -404,7 +404,7 @@ GLOBAL_DATUM(blackbox, /obj/machinery/blackbox_recorder)
 
 	FV.set_value(value)
 
-/proc/feedback_inc(var/variable,value)
+/proc/feedback_inc(variable,value)
 	if(!GLOB.blackbox) return
 
 	variable = sql_sanitize_text(variable)
@@ -415,7 +415,7 @@ GLOBAL_DATUM(blackbox, /obj/machinery/blackbox_recorder)
 
 	FV.inc(value)
 
-/proc/feedback_dec(var/variable,value)
+/proc/feedback_dec(variable,value)
 	if(!GLOB.blackbox) return
 
 	variable = sql_sanitize_text(variable)
@@ -426,7 +426,7 @@ GLOBAL_DATUM(blackbox, /obj/machinery/blackbox_recorder)
 
 	FV.dec(value)
 
-/proc/feedback_set_details(var/variable,details)
+/proc/feedback_set_details(variable,details)
 	if(!GLOB.blackbox) return
 
 	variable = sql_sanitize_text(variable)
@@ -438,7 +438,7 @@ GLOBAL_DATUM(blackbox, /obj/machinery/blackbox_recorder)
 
 	FV.set_details(details)
 
-/proc/feedback_add_details(var/variable,details)
+/proc/feedback_add_details(variable,details)
 	if(!GLOB.blackbox) return
 
 	variable = sql_sanitize_text(variable)

@@ -36,7 +36,7 @@
 		. = TRUE
 	return .
 
-/obj/structure/flora/tree/attackby(var/obj/item/W, mob/living/user)
+/obj/structure/flora/tree/attackby(obj/item/W, mob/living/user)
 	if(can_harvest(W))
 		..(W, user)
 		return
@@ -81,7 +81,7 @@
 	animate(transform=M, pixel_x=init_px, time=6, easing=ELASTIC_EASING)
 
 // Used when the tree gets hurt.
-/obj/structure/flora/tree/proc/adjust_health(var/amount, damage_wood = FALSE)
+/obj/structure/flora/tree/proc/adjust_health(amount, damage_wood = FALSE)
 	if(is_stump || indestructable)
 		return
 

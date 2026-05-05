@@ -137,7 +137,7 @@ SUBSYSTEM_DEF(terraformer)
 	irritation = CLAMP(irritation,0,20)
 	irritated_turfs += at_pos
 
-/datum/controller/subsystem/terraformer/proc/Sound(var/sound, list/zlevels)
+/datum/controller/subsystem/terraformer/proc/Sound(sound, list/zlevels)
 	if(!sound)
 		return
 

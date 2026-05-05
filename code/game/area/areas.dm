@@ -75,7 +75,7 @@ GLOBAL_LIST_EMPTY(areas_by_type)
 
 // Changes the area of T to A. Do not do this manually.
 // Area is expected to be a non-null instance.
-/proc/ChangeArea(var/turf/T, area/A)
+/proc/ChangeArea(turf/T, area/A)
 	if(!istype(A))
 		CRASH("Area change attempt failed: invalid area supplied.")
 	var/area/old_area = get_area(T)
@@ -279,7 +279,7 @@ GLOBAL_LIST_EMPTY(areas_by_type)
 	if (fire || eject || party)
 		update_icon()
 
-/area/proc/usage(var/chan, include_static = TRUE)
+/area/proc/usage(chan, include_static = TRUE)
 	var/used = 0
 	switch(chan)
 		if(LIGHT)
@@ -301,7 +301,7 @@ GLOBAL_LIST_EMPTY(areas_by_type)
 	oneoff_environ = 0
 
 // Use this for a one-time power draw from the area, typically for non-machines.
-/area/proc/use_power_oneoff(var/amount, chan)
+/area/proc/use_power_oneoff(amount, chan)
 	switch(chan)
 		if(EQUIP)
 			oneoff_equip += amount
@@ -316,7 +316,7 @@ GLOBAL_LIST_EMPTY(areas_by_type)
 	use_power_static(new_amount - old_amount, chan) // Simultaneously subtract old_amount and add new_amount.
 
 // Not a proc you want to use directly unless you know what you are doing; see use_power_oneoff above instead.
-/area/proc/use_power_static(var/amount, chan)
+/area/proc/use_power_static(amount, chan)
 	switch(chan)
 		if(EQUIP)
 			static_equip += amount
@@ -564,7 +564,7 @@ GLOBAL_DATUM(spoiler_obfuscation_image, /image)
 	else
 		cut_overlay(GLOB.spoiler_obfuscation_image)
 
-/area/proc/flag_check(var/flag, match_all = FALSE)
+/area/proc/flag_check(flag, match_all = FALSE)
 	if(match_all)
 		return (flags & flag) == flag
 	return flags & flag

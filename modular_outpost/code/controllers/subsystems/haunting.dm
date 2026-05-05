@@ -254,7 +254,7 @@ SUBSYSTEM_DEF(haunting)
 		return null
 	return pick(GLOB.player_list)
 
-/datum/controller/subsystem/haunting/proc/get_world_haunt_attention(var/mob/M,notice_chance)
+/datum/controller/subsystem/haunting/proc/get_world_haunt_attention(mob/M,notice_chance)
 	SHOULD_NOT_OVERRIDE(TRUE)
 	if(isnewplayer(M))
 		return
@@ -425,7 +425,7 @@ SUBSYSTEM_DEF(haunting)
 	current_haunt = new path()
 	total_haunts++
 
-/datum/controller/subsystem/haunting/proc/log_haunting(var/LE,notify_admin = FALSE)
+/datum/controller/subsystem/haunting/proc/log_haunting(LE,notify_admin = FALSE)
 	SHOULD_NOT_OVERRIDE(TRUE)
 	var/mob/M = current_player_target?.resolve()
 	if(M)

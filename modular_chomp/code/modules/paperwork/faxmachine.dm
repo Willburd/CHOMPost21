@@ -77,7 +77,7 @@
 	return FALSE
 
 
-/obj/machinery/photocopier/faxmachine/message_chat_admins(var/mob/sender, var/faxname, var/obj/item/sent, faxid, font_colour="#006100")
+/obj/machinery/photocopier/faxmachine/message_chat_admins(var/mob/sender, var/faxname, obj/item/sent, faxid, font_colour="#006100")
 	var/faxmsg
 	if(faxid && fexists("[CONFIG_GET(string/fax_export_dir)]/fax_[faxid].html"))
 		faxmsg = file2text("[CONFIG_GET(string/fax_export_dir)]/fax_[faxid].html")
@@ -88,7 +88,7 @@
 		fax_discord_message("A fax; '[faxname]' was sent.\nSender: [sender.name]\nFax name: [sent.name]\nFax ID: **[faxid]**")
 
 
-/obj/machinery/photocopier/faxmachine/message_chat_rolerequest(var/font_colour="#006100", var/role_to_ping, var/reason, jobname)
+/obj/machinery/photocopier/faxmachine/message_chat_rolerequest(var/font_colour="#006100", var/role_to_ping, reason, jobname)
 	var/roleid = get_discord_role_id_from_department(role_to_ping)
 
 	if(roleid)

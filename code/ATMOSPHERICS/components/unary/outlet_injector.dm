@@ -161,7 +161,7 @@
 	update_use_power(injecting ? USE_POWER_IDLE : USE_POWER_OFF)
 	update_icon()
 
-/obj/machinery/atmospherics/unary/outlet_injector/attackby(var/obj/item/W as obj, mob/user as mob)
+/obj/machinery/atmospherics/unary/outlet_injector/attackby(obj/item/W as obj, mob/user as mob)
 	if (W.has_tool_quality(TOOL_MULTITOOL))
 		var/list/options = list("Frequency", "ID Tag", "-SAVE TO BUFFER-", "Cancel")
 		var/answer = tgui_alert(user, "[src] has an ID of \"[id]\" and a frequency of [frequency]. What would you like to change?", "Options!", options)

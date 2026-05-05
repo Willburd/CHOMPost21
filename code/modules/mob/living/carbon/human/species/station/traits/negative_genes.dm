@@ -117,7 +117,7 @@
 /datum/trait/negative/disability_deaf/handle_environment_special(mob/living/carbon/human/H)
 	H.sdisabilities |= sdisability 		// In space, I can't hear shit
 
-/datum/trait/negative/disability_deaf/apply(var/datum/species/S,mob/living/carbon/human/H)
+/datum/trait/negative/disability_deaf/apply(datum/species/S,mob/living/carbon/human/H)
 	. = ..()
 	H.ear_deaf = 1
 	/* //Not used here, used downstream.

@@ -78,7 +78,7 @@
 			flick("partslathe-lidopen", src)
 		icon_state = "partslathe-idle"
 
-/obj/machinery/partslathe/attackby(var/obj/item/O, mob/user)
+/obj/machinery/partslathe/attackby(obj/item/O, mob/user)
 	if(busy)
 		to_chat(user, span_notice("\The [src] is busy. Please wait for completion of previous operation."))
 		return 1
@@ -110,7 +110,7 @@
 		return
 
 // Attept to load materials.  Returns 0 if item wasn't a stack of materials, otherwise 1 (even if failed to load)
-/obj/machinery/partslathe/proc/try_load_materials(var/mob/user, obj/item/stack/material/S)
+/obj/machinery/partslathe/proc/try_load_materials(mob/user, obj/item/stack/material/S)
 	if(!istype(S))
 		return 0
 	if(!(S.material.name in materials))
@@ -195,7 +195,7 @@
 					new_item.matter[i] = CEILING((new_item.matter[i] * mat_efficiency), 1)
 
 // 0 amount = 0 means ejecting a full stack; -1 means eject everything
-/obj/machinery/partslathe/proc/eject_materials(var/material, amount)
+/obj/machinery/partslathe/proc/eject_materials(material, amount)
 	var/recursive = amount == -1 ? TRUE : FALSE
 	material = lowertext(material)
 	var/mattype

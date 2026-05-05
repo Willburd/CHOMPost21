@@ -11,7 +11,7 @@
 				num++
 	return num
 
-/datum/metric/proc/count_all_space_mobs(var/cutoff = 75, respect_z = TRUE)
+/datum/metric/proc/count_all_space_mobs(cutoff = 75, respect_z = TRUE)
 	var/num = 0
 	for(var/mob/living/L in GLOB.player_list)
 		var/turf/T = get_turf(L)

@@ -24,7 +24,7 @@ GLOBAL_LIST_EMPTY(dispenser_presets)
 
 	return 1
 
-/datum/gear_disp/proc/spawn_gear(var/turf/T, mob/living/carbon/human/user)
+/datum/gear_disp/proc/spawn_gear(turf/T, mob/living/carbon/human/user)
 	var/list/spawned = list()
 	for(var/O in to_spawn)
 		spawned += new O(T)
@@ -60,7 +60,7 @@ GLOBAL_LIST_EMPTY(dispenser_presets)
 	var/life_support = TRUE // try to spawn a tank or suit cooler
 	var/refit = TRUE // should we adapt this to the user's species
 
-/datum/gear_disp/voidsuit/spawn_gear(var/turf/T, mob/living/carbon/human/user)
+/datum/gear_disp/voidsuit/spawn_gear(turf/T, mob/living/carbon/human/user)
 	ASSERT(voidsuit_type)
 	. = ..()
 	if(voidsuit_type && !ispath(voidsuit_type, /obj/item/clothing/suit/space/void))
@@ -243,7 +243,7 @@ GLOBAL_LIST_EMPTY(dispenser_presets)
 			choices[choice] = G
 	return choices
 
-/obj/machinery/gear_dispenser/proc/dispense(var/datum/gear_disp/S,var/mob/living/carbon/human/user,greet=TRUE)
+/obj/machinery/gear_dispenser/proc/dispense(var/datum/gear_disp/S,mob/living/carbon/human/user,greet=TRUE)
 	if(!S.amount && !(dispenser_flags & GD_UNLIMITED))
 		to_chat(user,span_warning("There are no more [S.name]s left!"))
 		dispenser_flags &= ~GD_BUSY
@@ -348,7 +348,7 @@ GLOBAL_LIST_EMPTY(dispenser_presets)
 		return
 	return ..()
 
-/obj/machinery/gear_dispenser/suit_fancy/dispense(var/datum/gear_disp/S,var/mob/living/carbon/human/user,greet=TRUE)
+/obj/machinery/gear_dispenser/suit_fancy/dispense(var/datum/gear_disp/S,mob/living/carbon/human/user,greet=TRUE)
 	if(!S.amount && !(dispenser_flags & GD_UNLIMITED))
 		to_chat(user,span_warning("There are no more [S.name]s left!"))
 		dispenser_flags &= ~GD_BUSY
@@ -747,7 +747,7 @@ GLOBAL_LIST_EMPTY(dispenser_presets)
 	to_spawn = list()
 	amount = 4
 
-/datum/gear_disp/voidsuit/random/spawn_gear(var/turf/T, mob/living/carbon/user)
+/datum/gear_disp/voidsuit/random/spawn_gear(turf/T, mob/living/carbon/user)
 	// I copied these from the /obj/random/multiple/voidsuit, but added the "suit" and "helmet"
 	var/list/choice = pick(
 		prob(5);list(
@@ -848,7 +848,7 @@ GLOBAL_LIST_EMPTY(dispenser_presets)
 	name = "Weapon"
 	amount = 2
 
-/datum/gear_disp/randomweapons/spawn_gear(var/turf/T, mob/living/carbon/user)
+/datum/gear_disp/randomweapons/spawn_gear(turf/T, mob/living/carbon/user)
 	var/choice = pick(
 					prob(3);/obj/random/multiple/gun/projectile/handgun,
 					prob(2);/obj/random/multiple/gun/projectile/smg,
@@ -925,7 +925,7 @@ GLOBAL_LIST_EMPTY(dispenser_presets)
 	name = "Ranged Weapon"
 	amount = 1
 //from /obj/random/projectile/random
-/datum/gear_disp/adventure_box/weapon/spawn_gear(var/turf/T, mob/living/carbon/user)
+/datum/gear_disp/adventure_box/weapon/spawn_gear(turf/T, mob/living/carbon/user)
 	var/choice = pick(
 					prob(3);/obj/random/multiple/gun/projectile/handgun,
 					prob(2);/obj/random/multiple/gun/projectile/smg,

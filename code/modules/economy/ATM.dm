@@ -64,7 +64,7 @@ log transactions
 			playsound(src, 'sound/items/polaroid2.ogg', 50, 1)
 		break
 
-/obj/machinery/atm/emag_act(var/remaining_charges, mob/user)
+/obj/machinery/atm/emag_act(remaining_charges, mob/user)
 	if(emagged)
 		return
 

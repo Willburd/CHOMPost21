@@ -64,7 +64,7 @@
 
 		Cmd(command, modifier)
 
-/obj/machinery/magnetic_module/proc/Cmd(var/command, modifier)
+/obj/machinery/magnetic_module/proc/Cmd(command, modifier)
 	if(command)
 		switch(command)
 			if("set-electriclevel")

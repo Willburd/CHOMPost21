@@ -6,7 +6,7 @@
 	adjacency code.
 */
 
-/mob/living/silicon/robot/ClickOn(var/atom/A, params)
+/mob/living/silicon/robot/ClickOn(atom/A, params)
 	if(!checkClickCooldown())
 		return
 

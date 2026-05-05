@@ -31,6 +31,6 @@
 /mob/living/simple_mob/construct/shade/seen_cult_turfs()
 	return view(2, src)
 
-/proc/seen_turfs_in_range(var/source, range)
+/proc/seen_turfs_in_range(source, range)
 	var/turf/pos = get_turf(source)
 	return hear(range, pos)

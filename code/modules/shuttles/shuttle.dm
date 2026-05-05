@@ -102,12 +102,12 @@
 
 // If you need an event to occur when the shuttle jumps in short or long jump, override this.
 // Keep in mind that destination is the intended destination, the shuttle may or may not actually reach it.s
-/datum/shuttle/proc/on_shuttle_departure(var/obj/effect/shuttle_landmark/origin, obj/effect/shuttle_landmark/destination)
+/datum/shuttle/proc/on_shuttle_departure(obj/effect/shuttle_landmark/origin, obj/effect/shuttle_landmark/destination)
 	return
 
 // Similar to above, but when it finishes moving to the target. Short jump generally makes this occur immediately after the above proc.
 // Keep in mind we might not actually have gotten to destination. Check current_location to be sure where we ended up.
-/datum/shuttle/proc/on_shuttle_arrival(var/obj/effect/shuttle_landmark/origin, obj/effect/shuttle_landmark/destination)
+/datum/shuttle/proc/on_shuttle_arrival(obj/effect/shuttle_landmark/origin, obj/effect/shuttle_landmark/destination)
 	return
 
 /datum/shuttle/proc/short_jump(obj/effect/shuttle_landmark/destination)
@@ -153,7 +153,7 @@
 		make_sounds(HYPERSPACE_END)
 
 // TODO - Far Future - Would be great if this was driven by process too.
-/datum/shuttle/proc/long_jump(var/obj/effect/shuttle_landmark/destination, var/obj/effect/shuttle_landmark/interim, travel_time)
+/datum/shuttle/proc/long_jump(var/obj/effect/shuttle_landmark/destination, obj/effect/shuttle_landmark/interim, travel_time)
 	//to_world("shuttle/long_jump: current_location=[current_location], destination=[destination], interim=[interim], travel_time=[travel_time]")
 	if(moving_status != SHUTTLE_IDLE)
 		return
@@ -247,7 +247,7 @@
 
 // Move the shuttle to destination if possible.
 // Returns TRUE if we actually moved, otherwise FALSE.
-/datum/shuttle/proc/attempt_move(var/obj/effect/shuttle_landmark/destination, interim = FALSE)
+/datum/shuttle/proc/attempt_move(obj/effect/shuttle_landmark/destination, interim = FALSE)
 	if(current_location == destination)
 		if(debug_logging)
 			log_shuttle("Shuttle [src] attempted to move to [destination] but is already there!")
@@ -288,7 +288,7 @@
 //just moves the shuttle from A to B
 //A note to anyone overriding move in a subtype. perform_shuttle_move() must absolutely not, under any circumstances, fail to move the shuttle.
 //If you want to conditionally cancel shuttle launches, that logic must go in short_jump() or long_jump()
-/datum/shuttle/proc/perform_shuttle_move(var/obj/effect/shuttle_landmark/destination, list/turf_translation)
+/datum/shuttle/proc/perform_shuttle_move(obj/effect/shuttle_landmark/destination, list/turf_translation)
 	if(debug_logging)
 		log_shuttle("perform_shuttle_move() current=[current_location] destination=[destination]")
 	//to_world("move_shuttle() called for [name] leaving [origin] en route to [destination].")

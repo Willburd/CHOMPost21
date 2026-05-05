@@ -9,7 +9,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_MASSINDUSTRY
 	industrial_use = REFINERYEXPORT_REASON_MATSCI
 
-/datum/reagent/advmutationtoxin/affect_blood(var/mob/living/carbon/M, var/alien, removed)
+/datum/reagent/advmutationtoxin/affect_blood(var/mob/living/carbon/M, alien, removed)
 	if(!(M.allow_spontaneous_tf))
 		return
 	if(ishuman(M))
@@ -53,7 +53,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_RARE
 	industrial_use = REFINERYEXPORT_REASON_MATSCI
 
-/datum/reagent/nif_repair_nanites/affect_blood(var/mob/living/carbon/M, var/alien, removed)
+/datum/reagent/nif_repair_nanites/affect_blood(var/mob/living/carbon/M, alien, removed)
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
 		if(H.nif)
@@ -127,7 +127,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_UNWANTED
 	industrial_use = REFINERYEXPORT_REASON_PRECURSOR
 
-/datum/reagent/liquid_protean/affect_blood(var/mob/living/carbon/M, var/alien, removed)
+/datum/reagent/liquid_protean/affect_blood(var/mob/living/carbon/M, alien, removed)
 	if(alien != IS_DIONA)
 		var/chem_effective = 1
 		if(alien == IS_SLIME)
@@ -159,5 +159,5 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_PRECURSOR
 
-/datum/reagent/grubshock/affect_blood(var/mob/living/carbon/M, var/alien, removed)
+/datum/reagent/grubshock/affect_blood(var/mob/living/carbon/M, alien, removed)
 	M.take_organ_damage(0, removed * power * 0.2)

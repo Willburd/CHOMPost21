@@ -88,7 +88,7 @@
 	if(L in spawned_mobs)
 		spawned_mobs.Remove(L)
 
-/obj/structure/mob_spawner/attackby(var/obj/item/I, mob/living/user)
+/obj/structure/mob_spawner/attackby(obj/item/I, mob/living/user)
 	if(!I.force || I.flags & NOBLUDGEON || !destructible)
 		return
 

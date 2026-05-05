@@ -43,7 +43,7 @@
 
 	hud_state = "const_floor"
 
-/datum/spell/aoe_turf/conjure/floor/conjure_animation(var/atom/movable/overlay/animation, turf/target)
+/datum/spell/aoe_turf/conjure/floor/conjure_animation(atom/movable/overlay/animation, turf/target)
 	animation.icon_state = "cultfloor"
 	flick("cultfloor",animation)
 	QDEL_IN(animation, 1 SECOND)
@@ -61,7 +61,7 @@
 
 	hud_state = "const_wall"
 
-/datum/spell/aoe_turf/conjure/wall/conjure_animation(var/atom/movable/overlay/animation, turf/target)
+/datum/spell/aoe_turf/conjure/wall/conjure_animation(atom/movable/overlay/animation, turf/target)
 	animation.icon_state = "cultwall"
 	flick("cultwall",animation)
 	QDEL_IN(animation, 1 SECOND)
@@ -220,12 +220,12 @@
 
 	hud_state = "const_shift"
 
-/datum/spell/targeted/ethereal_jaunt/shift/jaunt_disappear(var/atom/movable/overlay/animation, mob/living/target)
+/datum/spell/targeted/ethereal_jaunt/shift/jaunt_disappear(atom/movable/overlay/animation, mob/living/target)
 	animation.icon_state = "phase_shift"
 	animation.dir = target.dir
 	flick("phase_shift",animation)
 
-/datum/spell/targeted/ethereal_jaunt/shift/jaunt_reappear(var/atom/movable/overlay/animation, mob/living/target)
+/datum/spell/targeted/ethereal_jaunt/shift/jaunt_reappear(atom/movable/overlay/animation, mob/living/target)
 	animation.icon_state = "phase_shift2"
 	animation.dir = target.dir
 	flick("phase_shift2",animation)
@@ -835,7 +835,7 @@
 	tracer_type = /obj/effect/projectile/tracer/tungsten
 	impact_type = /obj/effect/projectile/impact/tungsten
 
-/obj/item/projectile/beam/force_beam/on_hit(var/atom/movable/target, blocked = 0)
+/obj/item/projectile/beam/force_beam/on_hit(atom/movable/target, blocked = 0)
 	if(isliving(target))
 		var/mob/living/L = target
 		if(prob(40) && !blocked)

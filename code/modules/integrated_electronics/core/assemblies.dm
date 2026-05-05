@@ -268,7 +268,7 @@
 		. += part.size
 
 // Returns true if the circuit made it inside.
-/obj/item/electronic_assembly/proc/add_circuit(var/obj/item/integrated_circuit/IC, mob/user)
+/obj/item/electronic_assembly/proc/add_circuit(obj/item/integrated_circuit/IC, mob/user)
 	if(!opened)
 		to_chat(user, span_warning("\The [src] isn't opened, so you can't put anything inside.  Try using a crowbar."))
 		return FALSE
@@ -313,7 +313,7 @@
 	for(var/obj/item/integrated_circuit/input/reference_grabber/G in contents)
 		G.afterattack(target, user, proximity, null)
 
-/obj/item/electronic_assembly/attackby(var/obj/item/I, mob/user)
+/obj/item/electronic_assembly/attackby(obj/item/I, mob/user)
 	if(can_anchor && I.has_tool_quality(TOOL_WRENCH))
 		anchored = !anchored
 		to_chat(user, span_notice("You've [anchored ? "" : "un"]secured \the [src] to \the [get_turf(src)]."))

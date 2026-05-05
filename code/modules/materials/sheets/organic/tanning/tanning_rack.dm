@@ -34,7 +34,7 @@
 		else
 			add_overlay("leather_dry")
 
-/obj/structure/tanning_rack/attackby(var/atom/A, mob/user)
+/obj/structure/tanning_rack/attackby(atom/A, mob/user)
 	if(istype(A, /obj/item/stack/wetleather))
 		if(!drying) // If not drying anything, start drying the thing
 			if(user.unEquip(A, target = src))

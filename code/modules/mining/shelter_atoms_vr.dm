@@ -67,7 +67,7 @@ GLOBAL_LIST_EMPTY(unique_deployable)
 	return ret
 
 /// Creates and shows to the user a preview of the pod's shape, like the admin load template verb does. However, this one shows valid deploy turfs in blue, and invalid turfs in red.
-/obj/item/survivalcapsule/proc/preview_template(var/mob/user, var/turf/deploy_turf, show_doors = FALSE)
+/obj/item/survivalcapsule/proc/preview_template(var/mob/user, turf/deploy_turf, show_doors = FALSE)
 	if(!deploy_turf)
 		return
 	var/preview_render = list()
@@ -97,7 +97,7 @@ GLOBAL_LIST_EMPTY(unique_deployable)
 	user.client.images += preview_render
 	return preview_render
 
-/obj/item/survivalcapsule/proc/remove_preview(var/mob/user, var/list/preview_render, fade_time = 1 SECOND)
+/obj/item/survivalcapsule/proc/remove_preview(var/mob/user, list/preview_render, fade_time = 1 SECOND)
 	if(fade_time > 0)
 		for(var/image/I in preview_render)
 			animate(I, alpha = 0, fade_time)
@@ -105,10 +105,10 @@ GLOBAL_LIST_EMPTY(unique_deployable)
 	else
 		delete_preview_render(user, preview_render)
 
-/obj/item/survivalcapsule/proc/delete_preview_render(var/mob/user, list/preview_render)
+/obj/item/survivalcapsule/proc/delete_preview_render(mob/user, list/preview_render)
 	user.client.images -= preview_render
 
-/obj/item/survivalcapsule/proc/can_deploy(var/turf/deploy_location, turf/above_location)
+/obj/item/survivalcapsule/proc/can_deploy(turf/deploy_location, turf/above_location)
 	var/status = template.check_deploy(deploy_location, is_ship)
 	switch(status)
 		//Not allowed due to /area technical reasons

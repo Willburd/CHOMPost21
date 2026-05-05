@@ -88,7 +88,7 @@ GLOBAL_LIST_EMPTY(simple_portals)
 						break
 	. = ..()
 
-/obj/effect/simple_portal/linked/proc/valid_destination(var/turf/dest,atom/movable/AM)
+/obj/effect/simple_portal/linked/proc/valid_destination(turf/dest,atom/movable/AM)
 	if(!dest)
 		return FALSE
 	if(dest.density)

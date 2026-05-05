@@ -165,7 +165,7 @@
 			declare_arrests = !declare_arrests
 			. = TRUE
 
-/mob/living/bot/secbot/emag_act(var/remaining_uses, mob/user)
+/mob/living/bot/secbot/emag_act(remaining_uses, mob/user)
 	. = ..()
 	if(!emagged)
 		if(user)
@@ -177,7 +177,7 @@
 	else
 		to_chat(user, span_notice("\The [src] is already corrupt."))
 
-/mob/living/bot/secbot/attackby(var/obj/item/O, mob/user)
+/mob/living/bot/secbot/attackby(obj/item/O, mob/user)
 	var/curhealth = health
 	. = ..()
 	if(health < curhealth && on == TRUE)
@@ -309,7 +309,7 @@
 		can_next_insult = world.time + 5 SECONDS
 
 
-/mob/living/bot/secbot/UnarmedAttack(var/mob/M, proximity)
+/mob/living/bot/secbot/UnarmedAttack(mob/M, proximity)
 	if(!..())
 		return
 
@@ -358,7 +358,7 @@
 		visible_message(span_warning("\The [M] was beaten by \the [src] with a stun baton!"))
 		insult(L)
 
-/mob/living/bot/secbot/slime/UnarmedAttack(var/mob/living/L, proximity)
+/mob/living/bot/secbot/slime/UnarmedAttack(mob/living/L, proximity)
 	..()
 
 	if(istype(L, /mob/living/simple_mob/slime/xenobio))
@@ -438,7 +438,7 @@
 	var/build_step = 0
 	var/created_name = "Securitron"
 
-/obj/item/secbot_assembly/attackby(var/obj/item/W, mob/user)
+/obj/item/secbot_assembly/attackby(obj/item/W, mob/user)
 	..()
 	if(W.has_tool_quality(TOOL_WELDER) && !build_step)
 		var/obj/item/weldingtool/WT = W.get_welder()

@@ -21,18 +21,18 @@
 
 // Return 1 if we can activate.
 // HANDLE MUTCHK_FORCED HERE!
-/datum/gene/proc/can_activate(var/mob/M, mut_flags) // Traitgenes edit - Removed /dna/ from path. mut_flags instead of flags for clarity
+/datum/gene/proc/can_activate(mob/M, mut_flags) // Traitgenes edit - Removed /dna/ from path. mut_flags instead of flags for clarity
 	return 0
 
 // Called when the gene activates.  Do your magic here.
-/datum/gene/proc/activate(var/mob/M, var/connected, mut_flags) // Traitgenes edit - Removed /dna/ from path. mut_flags instead of flags for clarity
+/datum/gene/proc/activate(var/mob/M, connected, mut_flags) // Traitgenes edit - Removed /dna/ from path. mut_flags instead of flags for clarity
 	return
 
 /**
 * Called when the gene deactivates.  Undo your magic here.
 * Only called when the block is deactivated.
 */
-/datum/gene/proc/deactivate(var/mob/M, var/connected, mut_flags) // Traitgenes edit - Removed /dna/ from path. mut_flags instead of flags for clarity
+/datum/gene/proc/deactivate(var/mob/M, connected, mut_flags) // Traitgenes edit - Removed /dna/ from path. mut_flags instead of flags for clarity
 	return
 
 // Traitgenes edit - Genes are linked to traits now. Because no one bothered to maintain genes, and instead jumped through two different trait systems to avoid them. So here we are. - Willbird
@@ -70,7 +70,7 @@
 		return linked_trait.desc
 	return desc
 
-/datum/gene/trait/can_activate(var/mob/M,mut_flags)
+/datum/gene/trait/can_activate(mob/M,mut_flags)
 	return TRUE // We don't do probability checks for trait genes, due to the spiderweb of logic they are with conflicting genes. Check has_conflicts() for how conflicting traits are handled.
 
 /**
@@ -86,7 +86,7 @@
  * has_conflict(traits_to_check = list(trait_path))
  * ```
  */
-/datum/gene/trait/proc/has_conflict(var/list/traits_to_check, quick_scan = TRUE)
+/datum/gene/trait/proc/has_conflict(list/traits_to_check, quick_scan = TRUE)
 	var/has_conflict = FALSE
 	var/path = linked_trait.type
 	for(var/P in traits_to_check)
@@ -108,7 +108,7 @@
 
 	return has_conflict
 
-/datum/gene/trait/activate(var/mob/M, var/connected, mut_flags)
+/datum/gene/trait/activate(var/mob/M, connected, mut_flags)
 	if(linked_trait && ishuman(M))
 		var/mob/living/carbon/human/H = M
 		if(H.species) // Lets avoid runtime assertions
@@ -123,7 +123,7 @@
 			if(!(mut_flags & MUTCHK_HIDEMSG))
 				linked_trait.send_message( H, TRUE)
 
-/datum/gene/trait/deactivate(var/mob/M, var/connected, mut_flags)
+/datum/gene/trait/deactivate(var/mob/M, connected, mut_flags)
 	if(linked_trait && ishuman(M))
 		var/mob/living/carbon/human/H = M
 		if(H.species) // Lets avoid runtime assertions

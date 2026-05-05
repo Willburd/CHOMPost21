@@ -57,7 +57,7 @@
 	update_icon()
 	return secured
 
-/obj/item/assembly/proc/attach_assembly(var/obj/item/assembly/A, mob/user)
+/obj/item/assembly/proc/attach_assembly(obj/item/assembly/A, mob/user)
 	holder = new/obj/item/assembly_holder(get_turf(src))
 	if(holder.attach(A,src,user))
 		to_chat(user, span_notice("You attach \the [A] to \the [src]!"))

@@ -113,7 +113,7 @@
 // Parameters: 3 (user - the user who initiated the disconnect, target - the mob or device being disconnected, reason - string shown when disconnected)
 // Description: Deletes specific voice_mobs or disconnects communicators, and shows a message to everyone when doing so.  If target is null, all communicators
 //				and voice mobs are removed.
-/obj/item/communicator/proc/close_connection(mob/user, var/atom/target, reason)
+/obj/item/communicator/proc/close_connection(mob/user, atom/target, reason)
 	if(voice_mobs.len == 0 && communicating.len == 0)
 		return
 

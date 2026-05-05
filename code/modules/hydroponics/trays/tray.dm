@@ -510,7 +510,7 @@
 
 	return
 
-/obj/machinery/portable_atmospherics/hydroponics/attackby(var/obj/item/O as obj, mob/user as mob)
+/obj/machinery/portable_atmospherics/hydroponics/attackby(obj/item/O as obj, mob/user as mob)
 
 	if(O.is_open_container())
 		return 0

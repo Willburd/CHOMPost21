@@ -89,7 +89,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/fancy_shuttle)
 	return ..()
 
 // No girders, and Eris plating
-/turf/simulated/wall/fancy_shuttle/dismantle_wall(var/devastated, var/explode, no_product)
+/turf/simulated/wall/fancy_shuttle/dismantle_wall(var/devastated, explode, no_product)
 
 	playsound(src, 'sound/items/Welder.ogg', 100, 1)
 	if(!no_product && !devastated)

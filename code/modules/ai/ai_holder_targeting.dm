@@ -47,7 +47,7 @@
 //CHOMPEdit End
 
 // Step 2, filter down possible targets to things we actually care about.
-/datum/ai_holder/proc/find_target(var/list/possible_targets, has_targets_list = FALSE)
+/datum/ai_holder/proc/find_target(list/possible_targets, has_targets_list = FALSE)
 	ai_log("find_target() : Entered.", AI_LOG_TRACE)
 	if(!hostile) // So retaliating mobs only attack the thing that hit it.
 		return null

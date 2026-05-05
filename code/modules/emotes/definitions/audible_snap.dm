@@ -27,7 +27,7 @@
 	var/lastsnapemotetime = 0
 // Outpost 21 edit end
 
-/datum/decl/emote/audible/snap/do_emote(var/atom/user, extra_params)
+/datum/decl/emote/audible/snap/do_emote(atom/user, extra_params)
 	if(!can_snap(user))
 		to_chat(user, span_warning("You need at least one working hand to snap your fingers."))
 		return FALSE

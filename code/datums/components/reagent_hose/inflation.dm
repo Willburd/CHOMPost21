@@ -43,7 +43,7 @@
 	. = ..()
 
 // Succ command center
-/datum/component/hose_connector/inflation/proc/inflation_setup(var/mob/user,datum/component/hose_connector/other)
+/datum/component/hose_connector/inflation/proc/inflation_setup(mob/user,datum/component/hose_connector/other)
 	if(!other || QDELETED(other))
 		to_chat(user,span_danger("You couldn't connect the hose, as the connection stopped existing! Ohno!"))
 		return FALSE

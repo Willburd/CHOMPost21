@@ -58,7 +58,7 @@
 /datum/embedded_program/docking/airlock
 	var/datum/embedded_program/airlock/docking/airlock_program
 
-/datum/embedded_program/docking/airlock/New(var/obj/machinery/embedded_controller/M, datum/embedded_program/airlock/docking/A)
+/datum/embedded_program/docking/airlock/New(obj/machinery/embedded_controller/M, datum/embedded_program/airlock/docking/A)
 	..(M)
 	airlock_program = A
 	airlock_program.master_prog = src
@@ -152,7 +152,7 @@
 	set src in view(1)
 	src.program:print_state()
 
-/obj/machinery/embedded_controller/radio/airlock/docking_port/verb/spoof_signal(var/command as text, sender as text)
+/obj/machinery/embedded_controller/radio/airlock/docking_port/verb/spoof_signal(command as text, sender as text)
 	set category = "Debug"
 	set src in view(1)
 	var/datum/signal/signal = new

@@ -171,12 +171,12 @@
 	src.icon_dead = icon_splat
 	src.icon_state = icon_splat
 
-/mob/living/simple_mob/vore/alienanimals/jil/proc/bonk(var/mob/M, sound_play)
+/mob/living/simple_mob/vore/alienanimals/jil/proc/bonk(mob/M, sound_play)
 	// bonk noise
 	if(sound_play && sound_play)
 		M.say("*merp")
 
-/mob/living/simple_mob/vore/alienanimals/jil/proc/scream(var/mob/M, sound_play)
+/mob/living/simple_mob/vore/alienanimals/jil/proc/scream(mob/M, sound_play)
 	// screaming noise
 	if(sound_play)
 		to_chat(M, pick("Squee!","Squeee!","Squeak!","Eeeee!"))
@@ -232,7 +232,7 @@
 				lying = FALSE
 				update_icon()
 
-/mob/living/simple_mob/vore/alienanimals/jil/attackby(var/obj/item/O as obj, mob/user as mob)
+/mob/living/simple_mob/vore/alienanimals/jil/attackby(obj/item/O as obj, mob/user as mob)
 	if(stat == DEAD)
 		return ..()
 	if(istype(O, /obj/item/grab))
@@ -531,7 +531,7 @@
 		*/
 	. -= holder.contents
 
-/datum/ai_holder/simple_mob/intentional/jil/find_target(var/list/possible_targets, has_targets_list = FALSE)
+/datum/ai_holder/simple_mob/intentional/jil/find_target(list/possible_targets, has_targets_list = FALSE)
 	if(!hoard_items)
 		return
 

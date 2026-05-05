@@ -9,7 +9,7 @@
 
 	combustion = TRUE
 
-/obj/item/projectile/energy/fireball/on_hit(var/atom/target, blocked = 0)
+/obj/item/projectile/energy/fireball/on_hit(atom/target, blocked = 0)
 	new /obj/effect/explosion(get_turf(target))
 	explosion(target, -1, 0, 2, 0, 0) //CHOMPEdit - Don't spam admins
 	..()

@@ -145,7 +145,7 @@
 		only_sun_SE = null
 		return
 
-/datum/sunlight_handler/proc/turf_update(var/old_density, var/turf/new_turf, above)
+/datum/sunlight_handler/proc/turf_update(var/old_density, turf/new_turf, above)
 	if(above)
 		sunlight_check()
 		sunlight_update()

@@ -371,7 +371,7 @@
 	movement_target = null
 
 
-/mob/living/simple_mob/say_quote(var/message, datum/language/speaking = null)
+/mob/living/simple_mob/say_quote(message, datum/language/speaking = null)
 	if(speak_emote.len)
 		. = pick(speak_emote)
 	else if(speaking)
@@ -392,7 +392,7 @@
 	add_overlay(hud_list)
 
 //Makes it so that simplemobs can understand galcomm without being able to speak it.
-/mob/living/simple_mob/say_understands(var/mob/other, datum/language/speaking = null)
+/mob/living/simple_mob/say_understands(mob/other, datum/language/speaking = null)
 	if(understands_common && (speaking?.name == LANGUAGE_GALCOM || !speaking))
 		return TRUE
 	return ..()

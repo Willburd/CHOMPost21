@@ -281,7 +281,7 @@
 	overdose = REAGENTS_OVERDOSE * 4 //But takes a lot to OD
 	wiki_flag = WIKI_SPOILER // Outpost 21 edit - Hide this on the wiki
 
-/datum/reagent/inaprovaline/synxchem/affect_blood(var/mob/living/carbon/M, var/alien, removed)
+/datum/reagent/inaprovaline/synxchem/affect_blood(var/mob/living/carbon/M, alien, removed)
 	if(alien != IS_DIONA)
 		if(prob(8))
 			M.custom_pain("You [pick("feel numb!","feel dizzy and heavy.","feel strange!")]",60)
@@ -302,7 +302,7 @@
 	overdose = REAGENTS_OVERDOSE * 20 //it's all fake. But having nanomachines move through you is not good at a certain amount.
 	wiki_flag = WIKI_SPOILER // Outpost 21 edit - Hide this on the wiki
 
-/datum/reagent/inaprovaline/synxchem/holo/affect_blood(var/mob/living/carbon/M, var/alien, removed)
+/datum/reagent/inaprovaline/synxchem/holo/affect_blood(var/mob/living/carbon/M, alien, removed)
 	if(alien != IS_DIONA)
 		if(prob(5))
 			M.custom_pain("You feel no pain!",60)
@@ -325,7 +325,7 @@
 	overdose = REAGENTS_OVERDOSE * 200
 	wiki_flag = WIKI_SPOILER // Outpost 21 edit - Hide this on the wiki
 
-/datum/reagent/inaprovaline/synxchem/clown/affect_blood(var/mob/living/carbon/M, var/alien, removed)
+/datum/reagent/inaprovaline/synxchem/clown/affect_blood(var/mob/living/carbon/M, alien, removed)
 	M.adjustToxLoss(0.01)
 	playsound(M.loc, 'sound/items/bikehorn.ogg', 50, 1)
 	M.adjustBruteLoss(-2)//healing brute
@@ -353,7 +353,7 @@
 		//Since Halloss is not "real" damage this should not cause death
 */
 
-/datum/reagent/inaprovaline/synxchem/overdose(var/mob/living/carbon/M, var/alien, removed)
+/datum/reagent/inaprovaline/synxchem/overdose(var/mob/living/carbon/M, alien, removed)
 	..()
 	if(alien != IS_DIONA)
 		M.make_dizzy(10)
@@ -363,10 +363,10 @@
 			M.AdjustParalysis(1)
 
 
-/datum/reagent/inaprovaline/synxchem/holo/overdose(var/mob/living/carbon/M, var/alien, removed)
+/datum/reagent/inaprovaline/synxchem/holo/overdose(var/mob/living/carbon/M, alien, removed)
 	return
 
-/datum/reagent/inaprovaline/synxchem/clown/overdose(var/mob/living/carbon/M, var/alien, removed)
+/datum/reagent/inaprovaline/synxchem/clown/overdose(var/mob/living/carbon/M, alien, removed)
 	return
 
 

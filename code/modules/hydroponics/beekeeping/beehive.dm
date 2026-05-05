@@ -39,7 +39,7 @@
 	if(!closed)
 		. += "The lid is open."
 
-/obj/machinery/beehive/attackby(var/obj/item/I, mob/user)
+/obj/machinery/beehive/attackby(obj/item/I, mob/user)
 	if(I.has_tool_quality(TOOL_CROWBAR))
 		closed = !closed
 		user.visible_message(span_notice("[user] [closed ? "closes" : "opens"] \the [src]."), span_notice("You [closed ? "close" : "open"] \the [src]."))
@@ -212,7 +212,7 @@
 	if(processing)
 		icon_state = "[icon_state]_moving"
 
-/obj/machinery/honey_extractor/attackby(var/obj/item/I, mob/user)
+/obj/machinery/honey_extractor/attackby(obj/item/I, mob/user)
 	if(processing)
 		to_chat(user, span_notice("\The [src] is currently spinning, wait until it's finished."))
 		return

@@ -1,7 +1,7 @@
 /*
 	Animals
 */
-/mob/living/simple_mob/UnarmedAttack(var/atom/A, proximity)
+/mob/living/simple_mob/UnarmedAttack(atom/A, proximity)
 	if(!(. = ..()))
 		return
 

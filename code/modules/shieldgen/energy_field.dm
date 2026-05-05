@@ -138,7 +138,7 @@
 
 
 // Small visual effect, makes the shield tiles brighten up by becoming more opaque for a moment, and spreads to nearby shields.
-/obj/effect/energy_field/proc/impact_effect(var/i, list/affected_shields = list())
+/obj/effect/energy_field/proc/impact_effect(i, list/affected_shields = list())
 	i = between(1, i, 10)
 	alpha = 200
 	animate(src, alpha = initial(alpha), time = 1 SECOND)

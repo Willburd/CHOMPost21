@@ -21,7 +21,7 @@
 		evidence = fibre_data.Copy()
 		supplied.forensic_data.clear_fibres()
 
-/obj/item/sample/proc/merge_evidence(var/obj/item/sample/supplied, mob/user)
+/obj/item/sample/proc/merge_evidence(obj/item/sample/supplied, mob/user)
 	if(!supplied.evidence || !supplied.evidence.len)
 		return 0
 	evidence |= supplied.evidence
@@ -29,7 +29,7 @@
 	to_chat(user, span_notice("You transfer the contents of \the [supplied] into \the [src]."))
 	return 1
 
-/obj/item/sample/print/merge_evidence(var/obj/item/sample/supplied, mob/user)
+/obj/item/sample/print/merge_evidence(obj/item/sample/supplied, mob/user)
 	if(!supplied.evidence || !supplied.evidence.len)
 		return 0
 	for(var/print in supplied.evidence)
@@ -41,7 +41,7 @@
 	to_chat(user, span_notice("You overlay \the [src] and \the [supplied], combining the print records."))
 	return 1
 
-/obj/item/sample/attackby(var/obj/O, mob/user)
+/obj/item/sample/attackby(obj/O, mob/user)
 	if(O.type == src.type)
 		user.unEquip(O)
 		if(merge_evidence(O, user))
@@ -134,15 +134,15 @@
 	var/evidence_type = "fiber"
 	var/evidence_path = /obj/item/sample/fibers
 
-/obj/item/forensics/sample_kit/proc/can_take_sample(var/mob/user, atom/supplied)
+/obj/item/forensics/sample_kit/proc/can_take_sample(mob/user, atom/supplied)
 	return supplied.forensic_data?.has_fibres()
 
-/obj/item/forensics/sample_kit/proc/take_sample(var/mob/user, atom/supplied)
+/obj/item/forensics/sample_kit/proc/take_sample(mob/user, atom/supplied)
 	var/obj/item/sample/S = new evidence_path(get_turf(user), supplied)
 	to_chat(user, span_notice("You transfer [S.evidence.len] [S.evidence.len > 1 ? "[evidence_type]s" : "[evidence_type]"] to \the [S]."))
 	SEND_GLOBAL_SIGNAL(COMSIG_GLOB_FORENSICS_COLLECTED, supplied, user)
 
-/obj/item/forensics/sample_kit/afterattack(var/atom/A, var/mob/user, proximity)
+/obj/item/forensics/sample_kit/afterattack(var/atom/A, mob/user, proximity)
 	if(!proximity)
 		return
 	add_fingerprint(user)
@@ -160,5 +160,5 @@
 	evidence_type = "fingerprint"
 	evidence_path = /obj/item/sample/print
 
-/obj/item/forensics/sample_kit/powder/can_take_sample(var/mob/user, atom/supplied)
+/obj/item/forensics/sample_kit/powder/can_take_sample(mob/user, atom/supplied)
 	return supplied.forensic_data?.has_prints()

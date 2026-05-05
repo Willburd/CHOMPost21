@@ -124,7 +124,7 @@
 		sharp = FALSE
 		edge = FALSE
 
-/obj/item/material/proc/repair(var/repair_amount, repair_time, mob/living/user)
+/obj/item/material/proc/repair(repair_amount, repair_time, mob/living/user)
 	if(!fragile)
 		if(health < initial(health))
 			user.visible_message("[user] begins repairing \the [src].", "You begin repairing \the [src].")
@@ -140,7 +140,7 @@
 		to_chat(user, span_warning("You can't repair \the [src]."))
 		return
 
-/obj/item/material/proc/sharpen(var/material, var/sharpen_time, kit, mob/living/M)
+/obj/item/material/proc/sharpen(var/material, sharpen_time, kit, mob/living/M)
 	if(!fragile && src.material.can_sharpen)
 		if(health < initial(health))
 			to_chat(M, "You should repair [src] first. Try using [kit] on it.")

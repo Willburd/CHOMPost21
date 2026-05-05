@@ -68,7 +68,7 @@
 		return ITEM_INTERACT_SUCCESS
 	return ITEM_INTERACT_FAILURE
 
-/obj/item/forensics/swab/afterattack(var/atom/A, var/mob/user, proximity)
+/obj/item/forensics/swab/afterattack(var/atom/A, mob/user, proximity)
 
 	if(!proximity || istype(A, /obj/machinery/dnaforensics))
 		return
@@ -116,7 +116,7 @@
 		set_used(sample_type, A)
 		SEND_GLOBAL_SIGNAL(COMSIG_GLOB_FORENSICS_COLLECTED, A, user)
 
-/obj/item/forensics/swab/proc/set_used(var/sample_str, atom/source)
+/obj/item/forensics/swab/proc/set_used(sample_str, atom/source)
 	name = "[initial(name)] ([sample_str] - [source])"
 	desc = "[initial(desc)] The label on the vial reads 'Sample of [sample_str] from [source].'."
 	icon_state = "swab_used"

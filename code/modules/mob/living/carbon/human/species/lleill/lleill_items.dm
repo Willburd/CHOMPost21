@@ -25,7 +25,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_RARE
 	industrial_use = REFINERYEXPORT_REASON_MATSCI
 
-/datum/reagent/glamour_transparent/affect_blood(var/mob/living/carbon/target, removed)
+/datum/reagent/glamour_transparent/affect_blood(mob/living/carbon/target, removed)
 	if(!target.cloaked)
 		target.visible_message(span_infoplain(span_bold("\The [target]") + " vanishes from sight."))
 		target.cloak()
@@ -64,7 +64,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_RARE
 	industrial_use = REFINERYEXPORT_REASON_MATSCI
 
-/datum/reagent/glamour_scaling/affect_blood(var/mob/living/carbon/target, removed)
+/datum/reagent/glamour_scaling/affect_blood(mob/living/carbon/target, removed)
 	if(!(/mob/living/proc/set_size in target.verbs))
 		to_chat(target, span_warning("You feel as though you could change size at any moment."))
 		add_verb(target, /mob/living/proc/set_size)
@@ -98,7 +98,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_RARE
 	industrial_use = REFINERYEXPORT_REASON_MATSCI
 
-/datum/reagent/glamour_twinkling/affect_blood(var/mob/living/carbon/human/target, removed)
+/datum/reagent/glamour_twinkling/affect_blood(mob/living/carbon/human/target, removed)
 	if(target.species.darksight < 10)
 		to_chat(target, span_warning("You can suddenly see much better than before."))
 		target.species.darksight = 10

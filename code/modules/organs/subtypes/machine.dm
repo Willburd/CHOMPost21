@@ -48,7 +48,7 @@
 		stored_mmi = null
 	return ..()
 
-/obj/item/organ/internal/mmi_holder/Initialize(mapload, var/internal, obj/item/mmi/installed)
+/obj/item/organ/internal/mmi_holder/Initialize(mapload, internal, obj/item/mmi/installed)
 	. = ..(mapload, internal)
 	if(!ishuman(loc) || ismannequin(loc))
 		return

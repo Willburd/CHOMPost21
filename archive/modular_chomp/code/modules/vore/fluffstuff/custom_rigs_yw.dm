@@ -37,7 +37,7 @@
 	update_icon()
 	return 1
 
-/obj/item/clothing/suit/space/rig/fluff/sheri/make_worn_icon(var/body_type,var/slot_name,var/inhands,var/default_icon,var/default_layer = 0,icon/clip_mask = null)
+/obj/item/clothing/suit/space/rig/fluff/sheri/make_worn_icon(var/body_type,var/slot_name,var/inhands,var/default_icon,default_layer = 0,icon/clip_mask = null)
 	var/image/result = ..()
 	result.pixel_x = -16
 	result.layer = BODY_LAYER + 15

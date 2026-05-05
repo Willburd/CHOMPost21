@@ -25,7 +25,7 @@
 	QDEL_NULL(cerealmaker_loop)
 
 /*
-/obj/machinery/appliance/mixer/cereal/change_product_strings(var/obj/item/reagent_containers/food/snacks/product, datum/cooking_item/CI)
+/obj/machinery/appliance/mixer/cereal/change_product_strings(obj/item/reagent_containers/food/snacks/product, datum/cooking_item/CI)
 	. = ..()
 	product.name = "box of [CI.object.name] cereal"
 
@@ -86,7 +86,7 @@
 		result.overlays += images[i]
 
 
-/obj/machinery/appliance/mixer/cereal/attackby(var/obj/item/O as obj, mob/user as mob)
+/obj/machinery/appliance/mixer/cereal/attackby(obj/item/O as obj, mob/user as mob)
 	if(default_deconstruction_screwdriver(user, O)) //CHOMPedit - Allows for deconstruction
 		return
 	if(default_deconstruction_crowbar(user, O))

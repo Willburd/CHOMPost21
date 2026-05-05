@@ -134,7 +134,7 @@
 			return
 		turn_on(user)
 
-/obj/item/modular_computer/attackby(var/obj/item/W, mob/user)
+/obj/item/modular_computer/attackby(obj/item/W, mob/user)
 	if(istype(W, /obj/item/card/id)) // ID Card, try to insert it.
 		var/obj/item/card/id/I = W
 		if(!card_slot)

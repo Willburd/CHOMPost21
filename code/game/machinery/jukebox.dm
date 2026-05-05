@@ -286,7 +286,7 @@
 		return
 	return ..()
 
-/obj/machinery/media/jukebox/emag_act(var/remaining_charges, mob/user)
+/obj/machinery/media/jukebox/emag_act(remaining_charges, mob/user)
 	if(!emagged)
 		emagged = 1
 		StopPlaying()

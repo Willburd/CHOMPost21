@@ -6,7 +6,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_MATSCI
 
-/datum/reagent/sapoformator/touch_turf(var/turf/T, volume)
+/datum/reagent/sapoformator/touch_turf(turf/T, volume)
 	if(holder && holder.my_atom)
 		if(volume >= 25)
 			holder.my_atom.visible_message("The solution begins to fizzle.")
@@ -54,7 +54,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_MATSCI
 
-/datum/reagent/obscuritol/touch_turf(var/turf/T, volume) //-round(-x) = Ceiling(x)
+/datum/reagent/obscuritol/touch_turf(turf/T, volume) //-round(-x) = Ceiling(x)
 	for(var/obj/machinery/light/light in orange(-round(-1 * (volume / 10)), T))
 		light.broken()
 	for(var/obj/machinery/light/light in orange(-round(-1 * (volume / 6)), T))
@@ -71,12 +71,12 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_MATSCI
 
-/datum/reagent/oxyphoromin/affect_blood(var/mob/living/carbon/M, var/alien, removed)
+/datum/reagent/oxyphoromin/affect_blood(var/mob/living/carbon/M, alien, removed)
 	M.add_chemical_effect(CE_PAINKILLER, 600)
 	M.eye_blurry = min(M.eye_blurry + 10, 250)
 	M.Confuse(5)
 
-/datum/reagent/oxyphoromin/overdose(var/mob/living/carbon/M, alien)
+/datum/reagent/oxyphoromin/overdose(mob/living/carbon/M, alien)
 	..()
 	M.druggy = max(M.druggy, 60)
 	M.hallucination = max(M.hallucination, 3)
@@ -91,7 +91,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_MATSCI
 
-/datum/reagent/extreme_mutagen/affect_blood(var/mob/living/carbon/M, var/alien, removed)
+/datum/reagent/extreme_mutagen/affect_blood(var/mob/living/carbon/M, alien, removed)
 	if(alien == IS_DIONA)
 		return
 	if(ishuman(M))
@@ -110,7 +110,7 @@
 	M.reagents.add_reagent(REAGENT_ID_TOXIN, volume / 4) //add toxin damage over time
 	holder.remove_reagent(id, volume) //instant use
 
-/datum/reagent/extreme_mutagen/overdose(var/mob/living/carbon/M, alien)
+/datum/reagent/extreme_mutagen/overdose(mob/living/carbon/M, alien)
 	..()
 	if(alien == IS_DIONA)
 		return
@@ -136,7 +136,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_MATSCI
 
-/datum/reagent/genedrazine/affect_blood(var/mob/living/carbon/M, var/alien, removed)
+/datum/reagent/genedrazine/affect_blood(var/mob/living/carbon/M, alien, removed)
 	if(alien == IS_DIONA)
 		return
 	var/healedDamage = 0
@@ -167,7 +167,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_MATSCI
 
-/datum/reagent/expulsicol/affect_blood(var/mob/living/carbon/M, var/alien, removed)
+/datum/reagent/expulsicol/affect_blood(var/mob/living/carbon/M, alien, removed)
 	if(alien == IS_DIONA)
 		return
 	if(!message_given)

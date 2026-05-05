@@ -127,7 +127,7 @@
 	return
 
 //Register listeners on turfs in a certain range
-/atom/proc/sense_proximity(var/range = 1, callback)
+/atom/proc/sense_proximity(range = 1, callback)
 	ASSERT(callback)
 	ASSERT(isturf(loc))
 	var/list/turfs = trange(range, src)
@@ -136,7 +136,7 @@
 
 //Unregister from prox listening in a certain range. You should do this BEFORE you move, but if you
 // really can't, then you can set the center where you moved from.
-/atom/proc/unsense_proximity(var/range = 1, var/callback, center)
+/atom/proc/unsense_proximity(var/range = 1, callback, center)
 	ASSERT(isturf(center) || isturf(loc))
 	var/list/turfs = trange(range, center ? center : src)
 	for(var/turf/T as anything in turfs)
@@ -207,7 +207,7 @@
 	return desc
 
 //All atoms
-/atom/proc/examine(mob/user, var/infix = "", suffix = "")
+/atom/proc/examine(mob/user, infix = "", suffix = "")
 	SHOULD_CALL_PARENT(TRUE)
 	//This reformat names to get a/an properly working on item descriptions when they are bloody
 	var/f_name = "\a [src][infix]."
@@ -273,7 +273,7 @@
 /atom/proc/ex_act(strength = 3)
 	return (SEND_SIGNAL(src, COMSIG_ATOM_EX_ACT, strength, src) & COMPONENT_IGNORE_EXPLOSION)
 
-/atom/proc/emag_act(var/remaining_charges, var/mob/user, emag_source)
+/atom/proc/emag_act(var/remaining_charges, mob/user, emag_source)
 	return -1
 
 /**
@@ -369,7 +369,7 @@
 // Use for objects performing visible actions
 // message is output to anyone who can see, e.g. "The [src] does something!"
 // blind_message (optional) is what blind people will hear e.g. "You hear something!"
-/atom/proc/visible_message(var/message, var/blind_message, var/list/exclude_mobs, var/range = world.view, runemessage = "<span style='font-size: 1.5em'>👁</span>")
+/atom/proc/visible_message(var/message, var/blind_message, var/list/exclude_mobs, range = world.view, runemessage = "<span style='font-size: 1.5em'>👁</span>")
 
 	//VOREStation Edit
 	var/list/see
@@ -400,7 +400,7 @@
 // message is the message output to anyone who can hear.
 // deaf_message (optional) is what deaf people will see.
 // hearing_distance (optional) is the range, how many tiles away the message can be heard.
-/atom/proc/audible_message(var/message, var/deaf_message, var/hearing_distance, var/radio_message, runemessage)
+/atom/proc/audible_message(var/message, var/deaf_message, var/hearing_distance, radio_message, runemessage)
 
 	var/range = hearing_distance || world.view
 	var/list/hear = get_mobs_and_objs_in_view_fast(get_turf(src),range,remote_ghosts = FALSE)

@@ -23,7 +23,7 @@
 		else
 			. += span_notice("It is empty.")
 
-/obj/item/reagent_containers/dropper/afterattack(var/obj/target, var/mob/user, proximity)
+/obj/item/reagent_containers/dropper/afterattack(var/obj/target, mob/user, proximity)
 	if(!target.reagents || !proximity) return
 
 	if(reagents.total_volume)
