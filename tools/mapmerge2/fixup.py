@@ -68,7 +68,7 @@ def main(repo : pygit2.Repository):
 
     # Read the HEAD and ancestor commits.
     head_commit = repo[repo.head.target]
-    if repo.remotes["upstream"].url != "https://github.com/Willburd/CHOMPost21.git": # Outpost 21 edit
+    if not repo.remotes["upstream"].url.endswith("github.com/Willburd/CHOMPost21.git"): # Outpost 21 edit
         print(f"Upstream is {repo.remotes["upstream"].url}. Attempting origin instead...") # Outpost 21 edit
         repo.remotes["origin"].fetch() # Outpost 21 edit
         ancestor = repo.merge_base(repo.head.target, repo.revparse_single("refs/remotes/origin/master").id) # Outpost 21 edit
