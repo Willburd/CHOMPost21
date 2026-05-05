@@ -5284,7 +5284,6 @@
 /obj/machinery/station_map{
 	pixel_y = 32
 	},
-/obj/structure/reagent_dispensers/water_cooler/full,
 /turf/simulated/floor/tiled,
 /area/muriki/tramstation/cargeng)
 "ahx" = (
@@ -20007,6 +20006,15 @@
 	},
 /turf/simulated/wall,
 /area/constructionsite/engineering)
+"aUn" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 6
+	},
+/obj/machinery/station_map{
+	pixel_x = 32
+	},
+/turf/simulated/floor/tiled,
+/area/hallway/secondary/engineering_hallway)
 "aUp" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "0-2"
@@ -117951,7 +117959,7 @@ sut
 anA
 vbq
 miP
-cch
+aUn
 cch
 tbH
 sut
