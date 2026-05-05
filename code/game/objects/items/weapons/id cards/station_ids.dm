@@ -386,6 +386,7 @@
 		JOB_ROBOTICIST = "itg_purple",
 		JOB_SCIENTIST = "itg_purple",
 		JOB_XENOBIOLOGIST = "itg_purple",
+		JOB_ELECTROPHYSICIST = "itg_purple",
 		JOB_XENOBOTANIST = "itg_purple",
 		JOB_PATHFINDER = "itg_purple",
 		JOB_EXPLORER = "itg_purple",

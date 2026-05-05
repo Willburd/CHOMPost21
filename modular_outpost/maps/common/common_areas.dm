@@ -1108,7 +1108,7 @@
 	name = "Science Second Floor"
 	base_turf = /turf/simulated/open
 	lift_floor_label = "Research Second Floor"
-	lift_floor_name = "Particle lab, Server, Tool Storage, Phoronics, RD."
+	lift_floor_name = "Server, Tool Storage, Phoronics, RD."
 	lift_announce_str = "Arriving at Second Floor."
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
 

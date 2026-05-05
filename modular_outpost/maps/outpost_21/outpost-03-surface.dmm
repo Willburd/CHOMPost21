@@ -10452,7 +10452,7 @@
 	name = "Engineering East Airlock";
 	pixel_y = -24;
 	dir = 1;
-	req_one_access = list(10)
+	req_one_access = list(10,51)
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/engineering_hallway)
@@ -34429,7 +34429,8 @@
 "fFW" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/engineering{
-	name = "Engineering Latrine"
+	name = "Engineering Latrine";
+	req_one_access = list(10,51)
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -48933,7 +48934,8 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/engineering{
-	name = "Engineering Latrine"
+	name = "Engineering Latrine";
+	req_one_access = list(10,51)
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -66465,7 +66467,7 @@
 	name = "Engineering West Airlock";
 	pixel_y = 24;
 	pixel_x = 24;
-	req_one_access = list(10)
+	req_one_access = list(10,51)
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/eva)
@@ -74046,7 +74048,7 @@
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/glass_engineeringatmos{
 	name = "Engineering EVA Storage";
-	req_one_access = list(11,24)
+	req_one_access = list(11,24,51)
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/engineering/hardsuitstore)
@@ -74241,7 +74243,7 @@
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/glass_engineeringatmos{
 	name = "Engineering EVA Storage";
-	req_one_access = list(11,24)
+	req_one_access = list(11,24,51)
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/engineering/hardsuitstore)
@@ -82099,7 +82101,8 @@
 /area/hallway/primary/aft)
 "uKK" = (
 /obj/machinery/door/airlock/engineering{
-	name = "Engineering Den"
+	name = "Engineering Den";
+	req_one_access = list(10,51)
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/effect/floor_decal/spline/fancy/wood{
@@ -84701,7 +84704,7 @@
 /obj/effect/floor_decal/industrial/warning,
 /obj/machinery/door/airlock/glass_engineering{
 	name = "Engineering Hallway";
-	req_one_access = list(10,24,29,40)
+	req_one_access = list(10,24,29,40,51)
 	},
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled/steel_grid,
@@ -88142,7 +88145,7 @@
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/glass_engineeringatmos{
 	name = "Engineering Locker Room";
-	req_one_access = list(10)
+	req_one_access = list(10,51)
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
