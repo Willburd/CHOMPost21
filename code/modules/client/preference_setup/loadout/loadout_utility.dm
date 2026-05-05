@@ -289,7 +289,7 @@ modular computers
 
 /datum/gear/utility/dufflebag/sci
 	display_name = "science dufflebag"
-	allowed_roles = list(JOB_RESEARCH_DIRECTOR,JOB_SCIENTIST,JOB_ROBOTICIST,JOB_XENOBIOLOGIST,JOB_XENOBOTANIST)
+	allowed_roles = list(JOB_RESEARCH_DIRECTOR,JOB_SCIENTIST,JOB_ROBOTICIST,JOB_XENOBIOLOGIST,JOB_XENOBOTANIST, JOB_ELECTROPHYSICIST)
 	path = /obj/item/storage/backpack/dufflebag/sci
 
 /datum/gear/utility/dufflebag/explorer
