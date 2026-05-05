@@ -12,5 +12,5 @@
 
 /obj/item/card/id/science/electrophysicist
 	name = JOB_ELECTROPHYSICIST + "'s ID"
-	initial_sprite_stack = list("base-stamp-dark", "top-dark", "stamp-silhouette", "pips-orange", "stripe-purple")
+	initial_sprite_stack = list("base-stamp", "top-orange", "stamp-n", "stripe-purple")
 	rank = JOB_ELECTROPHYSICIST
