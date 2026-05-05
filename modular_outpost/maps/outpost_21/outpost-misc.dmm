@@ -14039,7 +14039,7 @@
 "CZ" = (
 /obj/machinery/door/airlock/glass_external{
 	frequency = 1331;
-	id_tag = "a_merc_shuttle_inner";
+	id_tag = "merc_shuttle_doors";
 	req_access = list(150);
 	req_one_access = null
 	},
@@ -14699,7 +14699,7 @@
 	},
 /obj/machinery/door/airlock/glass_external{
 	frequency = 1331;
-	id_tag = "f_merc_shuttle_inner";
+	id_tag = "merc_shuttle_doors";
 	req_access = list(150);
 	req_one_access = null
 	},
@@ -14754,7 +14754,7 @@
 "Es" = (
 /obj/machinery/door/airlock/external{
 	frequency = 1331;
-	id_tag = "f_merc_shuttle_outer";
+	id_tag = "merc_shuttle_doors";
 	name = "Ship External Access";
 	req_access = list(150)
 	},
@@ -15143,16 +15143,15 @@
 /turf/simulated/floor/reinforced,
 /area/shuttle/mercenary)
 "Fd" = (
-/obj/machinery/embedded_controller/radio/airlock/docking_port{
-	frequency = 1331;
-	id_tag = "merc_shuttle";
-	pixel_x = -8;
-	pixel_y = 25;
-	req_access = list(150)
-	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume,
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 1
+	},
+/obj/machinery/embedded_controller/radio/simple_docking_controller{
+	frequency = 1331;
+	id_tag = "merc_shuttle";
+	pixel_y = 26;
+	tag_door = "merc_shuttle_doors"
 	},
 /turf/simulated/floor/reinforced,
 /area/shuttle/mercenary)
