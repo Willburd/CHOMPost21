@@ -31,7 +31,7 @@
 	// Test to see if rand_seed() can be used reliably.
 	var/priority_process
 
-/datum/random_map/New(var/seed, var/tx, var/ty, var/tz, var/tlx, var/tly, do_not_apply, do_not_announce, admin_map)
+/datum/random_map/New(seed, tx, ty, tz, tlx, tly, do_not_apply, do_not_announce, admin_map)
 	if(!isnum(tz))
 		var/old_tz = tz
 		tz = GLOB.map_templates_loaded[tz]

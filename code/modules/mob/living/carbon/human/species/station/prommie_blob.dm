@@ -157,7 +157,7 @@
 			healths.icon_state = "health7"
 
 // All the damage and such to the blob translates to the human
-/mob/living/simple_mob/slime/promethean/apply_effect(var/effect = 0, effecttype = STUN, blocked = 0, check_protection = 1)
+/mob/living/simple_mob/slime/promethean/apply_effect(effect = 0, effecttype = STUN, blocked = 0, check_protection = 1)
 	if(humanform)
 		return humanform.apply_effect(effect, effecttype, blocked, check_protection)
 	else

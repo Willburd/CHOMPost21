@@ -65,7 +65,7 @@
 			continue
 		.[instance.name] = instance
 
-/datum/preferences/proc/mass_edit_marking_list(var/marking, var/change_on = TRUE, var/change_color = TRUE, marking_value = null, on = TRUE, color = "#000000")
+/datum/preferences/proc/mass_edit_marking_list(marking, change_on = TRUE, change_color = TRUE, marking_value = null, on = TRUE, color = "#000000")
 	var/datum/sprite_accessory/marking/mark_datum = GLOB.body_marking_styles_list[marking]
 	var/list/new_marking = marking_value||mark_datum.body_parts
 	for (var/NM in new_marking)

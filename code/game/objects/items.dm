@@ -909,7 +909,7 @@ GLOBAL_LIST_EMPTY(blood_overlays_by_type)
 		return FALSE
 
 //Worn icon generation for on-mob sprites
-/obj/item/proc/make_worn_icon(var/body_type,var/slot_name,var/inhands,default_icon,default_layer,icon/clip_mask = null)
+/obj/item/proc/make_worn_icon(body_type,slot_name,inhands,default_icon,default_layer,icon/clip_mask = null)
 	//Get the required information about the base icon
 	var/icon/icon2use = get_worn_icon_file(body_type = body_type, slot_name = slot_name, default_icon = default_icon, inhands = inhands)
 	var/state2use = get_worn_icon_state(slot_name = slot_name)
@@ -958,7 +958,7 @@ GLOBAL_LIST_EMPTY(blood_overlays_by_type)
 	return standing
 
 //Returns the icon object that should be used for the worn icon
-/obj/item/proc/get_worn_icon_file(var/body_type,slot_name,default_icon,inhands)
+/obj/item/proc/get_worn_icon_file(body_type,slot_name,default_icon,inhands)
 
 	//1: icon_override var
 	if(icon_override)

@@ -241,7 +241,7 @@
 
 	H.health = H.getMaxHealth()
 
-/datum/species/shadekin/produceCopy(var/list/traits, mob/living/carbon/human/H, custom_base, reset_dna = TRUE) // Traitgenes reset_dna flag required, or genes get reset on resleeve
+/datum/species/shadekin/produceCopy(list/traits, mob/living/carbon/human/H, custom_base, reset_dna = TRUE) // Traitgenes reset_dna flag required, or genes get reset on resleeve
 	var/datum/species/shadekin/new_copy = ..()
 	new_copy.total_health = total_health
 

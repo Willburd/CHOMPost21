@@ -43,7 +43,7 @@
 		return damage
 	return damage + user.species.unarmed_bonus
 
-/datum/unarmed_attack/proc/apply_effects(var/mob/living/carbon/human/user,var/mob/living/carbon/human/target,armour,attack_damage,zone)
+/datum/unarmed_attack/proc/apply_effects(mob/living/carbon/human/user,mob/living/carbon/human/target,armour,attack_damage,zone)
 
 	var/stun_chance = rand(0, 100)
 
@@ -89,7 +89,7 @@
 			target.visible_message(span_danger("[target] has been weakened!"))
 		target.apply_effect(3, WEAKEN, armour)
 
-/datum/unarmed_attack/proc/show_attack(var/mob/living/carbon/human/user, mob/living/carbon/human/target, zone, attack_damage)
+/datum/unarmed_attack/proc/show_attack(mob/living/carbon/human/user, mob/living/carbon/human/target, zone, attack_damage)
 	var/obj/item/organ/external/affecting = target.get_organ(zone)
 	user.visible_message(span_warning("[user] [pick(attack_verb)] [target] in the [affecting.name]!"))
 	playsound(user, attack_sound, 25, 1, -1)
@@ -138,7 +138,7 @@
 
 /datum/unarmed_attack/punch/event1
 
-/datum/unarmed_attack/punch/show_attack(var/mob/living/carbon/human/user, mob/living/carbon/human/target, zone, attack_damage)
+/datum/unarmed_attack/punch/show_attack(mob/living/carbon/human/user, mob/living/carbon/human/target, zone, attack_damage)
 	var/obj/item/organ/external/affecting = target.get_organ(zone)
 	var/organ = affecting.name
 
@@ -214,7 +214,7 @@
 		return damage + (shoes ? shoes.force : 0)
 	return user.species.unarmed_bonus + damage + (shoes ? shoes.force : 0)
 
-/datum/unarmed_attack/kick/show_attack(var/mob/living/carbon/human/user, mob/living/carbon/human/target, zone, attack_damage)
+/datum/unarmed_attack/kick/show_attack(mob/living/carbon/human/user, mob/living/carbon/human/target, zone, attack_damage)
 	var/obj/item/organ/external/affecting = target.get_organ(zone)
 	var/organ = affecting.name
 
@@ -261,7 +261,7 @@
 		return damage + (shoes ? shoes.force : 0)
 	return user.species.unarmed_bonus + damage + (shoes ? shoes.force : 0)
 
-/datum/unarmed_attack/stomp/show_attack(var/mob/living/carbon/human/user, mob/living/carbon/human/target, zone, attack_damage)
+/datum/unarmed_attack/stomp/show_attack(mob/living/carbon/human/user, mob/living/carbon/human/target, zone, attack_damage)
 	var/obj/item/organ/external/affecting = target.get_organ(zone)
 	var/organ = affecting.name
 	var/obj/item/clothing/shoes = user.shoes

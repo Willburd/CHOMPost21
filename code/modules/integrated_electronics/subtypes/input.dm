@@ -558,7 +558,7 @@
 				message = "text"
 			exonet.send_message(target_address, message, text)
 
-/obj/item/integrated_circuit/input/receive_exonet_message(var/atom/origin_atom, origin_address, message, text)
+/obj/item/integrated_circuit/input/receive_exonet_message(atom/origin_atom, origin_address, message, text)
 	set_pin_data(IC_OUTPUT, 1, origin_address)
 	set_pin_data(IC_OUTPUT, 2, message)
 	set_pin_data(IC_OUTPUT, 3, text)

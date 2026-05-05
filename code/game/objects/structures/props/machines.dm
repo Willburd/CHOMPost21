@@ -694,7 +694,7 @@
 
 // Old Virology stuff
 
-/obj/structure/prop/machine/nt_pod/proc/delayed_flick(var/obj/effect/overlay/ovrl, icon_state, flicked, get_out_time)
+/obj/structure/prop/machine/nt_pod/proc/delayed_flick(obj/effect/overlay/ovrl, icon_state, flicked, get_out_time)
 	ovrl.icon_state = icon_state
 	flick(flicked, ovrl)
 	// GET OUT

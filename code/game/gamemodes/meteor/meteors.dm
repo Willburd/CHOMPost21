@@ -42,7 +42,7 @@ GLOBAL_LIST_INIT(meteors_catastrophic, list(
 //Meteor spawning global procs
 ///////////////////////////////
 
-/proc/spawn_meteors(var/number = 10, list/meteortypes, startSide, zlevel)
+/proc/spawn_meteors(number = 10, list/meteortypes, startSide, zlevel)
 	log_game("Spawning [number] meteors on the [dir2text(startSide)] of [zlevel]")
 	for(var/i = 0; i < number; i++)
 		spawn_meteor(meteortypes, startSide, zlevel)

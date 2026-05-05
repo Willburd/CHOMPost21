@@ -224,7 +224,7 @@
 				M.unEquip(piece)
 			piece.forceMove(src)
 
-/obj/item/rig/get_worn_icon_file(var/body_type,slot_name,default_icon,inhands)
+/obj/item/rig/get_worn_icon_file(body_type,slot_name,default_icon,inhands)
 	if(!inhands && (slot_name == slot_back_str || slot_name == slot_belt_str))
 		if(body_type == SPECIES_TESHARI || body_type == SPECIES_WEREBEAST) //Until teshari get proper sprites for rigs, they can default to not having the sprite.
 			return null //All other species are 'humanoid enough' to wear the default rig sprite.
@@ -581,7 +581,7 @@
 	for(var/obj/item/rig_module/module in installed_modules)
 		cell.use(module.process()*10)
 
-/obj/item/rig/proc/check_power_cost(var/mob/living/user, var/cost, use_unconcious, obj/item/rig_module/mod, user_is_ai)
+/obj/item/rig/proc/check_power_cost(mob/living/user, cost, use_unconcious, obj/item/rig_module/mod, user_is_ai)
 
 	if(!istype(user))
 		return 0
@@ -698,7 +698,7 @@
 		wearer.wearing_rig = src
 		update_icon()
 
-/obj/item/rig/proc/toggle_piece(var/piece, mob/living/carbon/human/H, deploy_mode, forced = FALSE)
+/obj/item/rig/proc/toggle_piece(piece, mob/living/carbon/human/H, deploy_mode, forced = FALSE)
 
 	if((sealing || !cell || !cell.charge) && !forced)
 		return

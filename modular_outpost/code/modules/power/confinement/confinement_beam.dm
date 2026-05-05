@@ -133,7 +133,7 @@ OL|IL|OL
 	power_sold_message("OH MY GOD WE'RE DOOMED! ", 5000, 1000,org_wattage,new_wattage)
 	power_sold_message("Congrats on winning. ", 10000,   1000,org_wattage,new_wattage)
 
-/datum/confinement_pulse_data/proc/power_sold_message(var/pre_message,var/gigawatts,credits,org_wattage,new_wattage)
+/datum/confinement_pulse_data/proc/power_sold_message(pre_message,gigawatts,credits,org_wattage,new_wattage)
 	SHOULD_NOT_OVERRIDE(TRUE)
 	PRIVATE_PROC(TRUE)
 	if(check_sold_wattage(gigawatts GIGAWATTS,org_wattage,new_wattage))

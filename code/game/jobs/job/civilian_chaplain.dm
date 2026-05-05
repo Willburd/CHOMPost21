@@ -136,7 +136,7 @@
 	var/title = JOB_CHAPLAIN
 	var/configured = FALSE
 
-/datum/religion/New(var/r, var/d, var/bn, bis, bits, t)
+/datum/religion/New(r, d, bn, bis, bits, t)
 	. = ..()
 	religion = r
 	deity = d

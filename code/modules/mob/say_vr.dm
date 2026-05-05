@@ -221,7 +221,7 @@
 			spawn(0)
 				O.see_emote(src, message, 2)
 
-/mob/proc/emote_vr(var/act, type, message, mode_selection) //This would normally go in say.dm
+/mob/proc/emote_vr(act, type, message, mode_selection) //This would normally go in say.dm
 	if(act == "me")
 		return custom_emote_vr(type, message, mode_selection)
 

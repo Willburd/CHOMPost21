@@ -378,7 +378,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 		user.client?.prefs_vr.load_vore()
 		ShowChoices(user)
 
-/datum/preferences/proc/vanity_copy_to(var/mob/living/carbon/human/character, var/copy_name, var/copy_flavour = TRUE, copy_ooc_notes = FALSE, convert_to_prosthetics = FALSE, apply_bloodtype = TRUE)
+/datum/preferences/proc/vanity_copy_to(mob/living/carbon/human/character, copy_name, copy_flavour = TRUE, copy_ooc_notes = FALSE, convert_to_prosthetics = FALSE, apply_bloodtype = TRUE)
 	//snowflake copy_to, does not copy anything but the vanity things
 	//does not check if the name is the same, do that in any proc that calls this proc
 	/*

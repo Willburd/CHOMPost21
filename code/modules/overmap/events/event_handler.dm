@@ -29,7 +29,7 @@ GLOBAL_DATUM_INIT(overmap_event_handler, /datum/decl/overmap_event_handler, new)
 
 		qdel(datum_spawn)//idk help how do I do this better?
 
-/datum/decl/overmap_event_handler/proc/acquire_event_turfs(var/number_of_turfs, distance_from_origin, list/candidate_turfs, continuous = TRUE)
+/datum/decl/overmap_event_handler/proc/acquire_event_turfs(number_of_turfs, distance_from_origin, list/candidate_turfs, continuous = TRUE)
 	number_of_turfs = min(number_of_turfs, candidate_turfs.len)
 	candidate_turfs = candidate_turfs.Copy() // Not this proc's responsibility to adjust the given lists
 
@@ -52,7 +52,7 @@ GLOBAL_DATUM_INIT(overmap_event_handler, /datum/decl/overmap_event_handler, new)
 
 	return selected_turfs
 
-/datum/decl/overmap_event_handler/proc/get_random_neighbour(var/turf/origin_turf, list/candidate_turfs, continuous = TRUE, range)
+/datum/decl/overmap_event_handler/proc/get_random_neighbour(turf/origin_turf, list/candidate_turfs, continuous = TRUE, range)
 	var/fitting_turfs
 	if(continuous)
 		fitting_turfs = origin_turf.CardinalTurfs(FALSE)

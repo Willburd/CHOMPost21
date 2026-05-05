@@ -821,7 +821,7 @@
 		for(var/component in species_component)
 			H.LoadComponent(component)
 
-/datum/species/proc/produceCopy(var/list/traits, mob/living/carbon/human/H, custom_base, reset_dna = TRUE) // Traitgenes reset_dna flag required, or genes get reset on resleeve
+/datum/species/proc/produceCopy(list/traits, mob/living/carbon/human/H, custom_base, reset_dna = TRUE) // Traitgenes reset_dna flag required, or genes get reset on resleeve
 	ASSERT(src)
 	ASSERT(istype(H))
 	var/datum/species/new_copy = new src.type()

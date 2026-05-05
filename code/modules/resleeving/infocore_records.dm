@@ -37,7 +37,7 @@
 
 	var/one_time = FALSE
 
-/datum/transhuman/mind_record/New(var/datum/mind/mind, var/mob/living/carbon/human/M, add_to_db = TRUE, one_time = FALSE, database_key)
+/datum/transhuman/mind_record/New(datum/mind/mind, mob/living/carbon/human/M, add_to_db = TRUE, one_time = FALSE, database_key)
 	ASSERT(mind)
 
 	src.one_time = one_time
@@ -120,7 +120,7 @@
 	..()
 	return QDEL_HINT_HARDDEL // For now at least there is no easy way to clear references to this in GLOB.machines etc.
 
-/datum/transhuman/body_record/proc/init_from_mob(var/mob/living/carbon/human/M, add_to_db = 0, ckeylock = 0, database_key)
+/datum/transhuman/body_record/proc/init_from_mob(mob/living/carbon/human/M, add_to_db = 0, ckeylock = 0, database_key)
 	ASSERT(!QDELETED(M))
 	ASSERT(istype(M))
 
@@ -247,7 +247,7 @@
  */
 
 /// The core of resleeving, creates a mob based on the current record
-/datum/transhuman/body_record/proc/produce_human_mob(var/location, is_synthfab, force_unlock, backup_name)
+/datum/transhuman/body_record/proc/produce_human_mob(location, is_synthfab, force_unlock, backup_name)
 	// These are broken up into steps, otherwise the proc gets massive and hard to read.
 	var/mob/living/carbon/human/H = internal_producebody(location,backup_name)
 	internal_producebody_handlesleevelock(H,force_unlock)

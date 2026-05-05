@@ -119,7 +119,7 @@ GLOBAL_DATUM_INIT(ingame_hud_med_vr, /icon, icon('icons/mob/hud_med_vr.dmi'))
 	//does not really need to happen, that kinda thing will only happen when putting another person's limb onto your own body
 	return sorted
 
-/mob/living/carbon/human/proc/transform_into_other_human(var/mob/living/carbon/human/character, var/copy_name, copy_flavour = TRUE, convert_to_prosthetics = FALSE, apply_bloodtype = TRUE)
+/mob/living/carbon/human/proc/transform_into_other_human(mob/living/carbon/human/character, copy_name, copy_flavour = TRUE, convert_to_prosthetics = FALSE, apply_bloodtype = TRUE)
 	/*
 	name, nickname, flavour, OOC notes
 	gender, sex

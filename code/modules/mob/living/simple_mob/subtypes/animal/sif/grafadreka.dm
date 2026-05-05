@@ -291,7 +291,7 @@ GLOBAL_LIST_EMPTY(wounds_being_tended_by_drakes)
 		return ..()
 	return 0.25 // Quarter nutrition from non-meat.
 
-/mob/living/simple_mob/animal/sif/grafadreka/handle_reagent_transfer(var/datum/reagents/holder, var/amount = 1, chem_type = CHEM_BLOOD, multiplier = 1, copy = 0)
+/mob/living/simple_mob/animal/sif/grafadreka/handle_reagent_transfer(datum/reagents/holder, amount = 1, chem_type = CHEM_BLOOD, multiplier = 1, copy = 0)
 	return holder.trans_to_holder(reagents, amount, multiplier, copy)
 
 /mob/living/simple_mob/animal/sif/grafadreka/Life()

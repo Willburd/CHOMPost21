@@ -458,7 +458,7 @@ In most cases it makes more sense to use apply_damage() instead! And make sure t
 //Damages ONE external organ, organ gets randomly selected from damagable ones.
 //It automatically updates damage overlays if necesary
 //It automatically updates health status
-/mob/living/carbon/human/take_organ_damage(var/brute, burn, sharp = FALSE, edge = FALSE)
+/mob/living/carbon/human/take_organ_damage(brute, burn, sharp = FALSE, edge = FALSE)
 	var/list/obj/item/organ/external/parts = get_damageable_organs()
 	if(!parts.len)	return
 	var/obj/item/organ/external/picked = pick(parts)
@@ -491,7 +491,7 @@ In most cases it makes more sense to use apply_damage() instead! And make sure t
 	if(update)	UpdateDamageIcon()
 
 // damage MANY external organs, in random order
-/mob/living/carbon/human/take_overall_damage(var/brute, var/burn, sharp = FALSE, edge = FALSE, used_weapon = null)
+/mob/living/carbon/human/take_overall_damage(brute, burn, sharp = FALSE, edge = FALSE, used_weapon = null)
 	var/list/obj/item/organ/external/parts = get_damageable_organs()
 	var/update = 0
 	while(parts.len && (brute>0 || burn>0) )
@@ -547,7 +547,7 @@ This function restores all organs.
 	return organs_by_name[zone]
 */
 
-/mob/living/carbon/human/apply_damage(var/damage = 0, var/damagetype = BRUTE, var/def_zone = null, var/blocked = 0, var/sharp = FALSE, edge = FALSE, obj/used_weapon = null, projectile = FALSE)
+/mob/living/carbon/human/apply_damage(damage = 0, damagetype = BRUTE, def_zone = null, blocked = 0, sharp = FALSE, edge = FALSE, obj/used_weapon = null, projectile = FALSE)
 	SEND_SIGNAL(src, COMSIG_MOB_APPLY_DAMAGE, damage, damagetype, def_zone, blocked, sharp, edge, used_weapon, projectile)
 	if(GLOB.Debug2)
 		log_world("## DEBUG: human/apply_damage() was called on [src], with [damage] damage, and an armor value of [blocked].")

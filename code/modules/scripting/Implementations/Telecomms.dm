@@ -227,7 +227,7 @@
 			S.memory[address] = value
 
 
-/datum/signal/proc/tcombroadcast(var/message, freq, source, job)
+/datum/signal/proc/tcombroadcast(message, freq, source, job)
 
 	var/datum/signal/newsign = new
 	var/obj/machinery/telecomms/server/S = data["server"]

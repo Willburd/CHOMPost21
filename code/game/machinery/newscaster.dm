@@ -59,7 +59,7 @@
 	var/list/datum/feed_channel/network_channels = list()
 	var/datum/feed_message/wanted_issue
 
-/datum/feed_network/proc/CreateFeedChannel(var/channel_name, var/author, locked, adminChannel = 0, announcement_message)
+/datum/feed_network/proc/CreateFeedChannel(channel_name, author, locked, adminChannel = 0, announcement_message)
 	var/datum/feed_channel/newChannel = new /datum/feed_channel
 	newChannel.channel_name = channel_name
 	newChannel.author = author
@@ -71,7 +71,7 @@
 		newChannel.announcement = "Breaking news from [channel_name]!"
 	network_channels += newChannel
 
-/datum/feed_network/proc/SubmitArticle(var/msg, var/author, var/channel_name, var/obj/item/photo/photo, adminMessage = 0, message_type = "", title)
+/datum/feed_network/proc/SubmitArticle(msg, author, channel_name, obj/item/photo/photo, adminMessage = 0, message_type = "", title)
 	var/datum/feed_message/newMsg = new /datum/feed_message
 	newMsg.author = author
 	newMsg.body = msg

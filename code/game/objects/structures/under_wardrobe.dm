@@ -42,7 +42,7 @@
 		metadata["[gt]"] = tweak_data
 	return tweak_data
 
-/obj/structure/undies_wardrobe/proc/set_metadata(var/mob/living/carbon/human/H, underwear_category, datum/gear_tweak/gt, new_metadata)
+/obj/structure/undies_wardrobe/proc/set_metadata(mob/living/carbon/human/H, underwear_category, datum/gear_tweak/gt, new_metadata)
 	var/list/metadata = H.all_underwear_metadata[underwear_category]
 	metadata["[gt]"] = new_metadata
 

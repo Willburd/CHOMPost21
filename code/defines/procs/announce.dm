@@ -32,7 +32,7 @@ GLOBAL_DATUM_INIT(command_announcement, /datum/announcement/priority/command, ne
 	title = "Security Announcement"
 	announcement_type = "Security Announcement"
 
-/datum/announcement/proc/Announce(var/message as text, var/new_title = "", var/new_sound = null, do_newscast = newscast, msg_sanitized = 0, zlevel)
+/datum/announcement/proc/Announce(message as text, new_title = "", new_sound = null, do_newscast = newscast, msg_sanitized = 0, zlevel)
 	if(!message)
 		return
 
@@ -149,12 +149,12 @@ GLOBAL_DATUM_INIT(command_announcement, /datum/announcement/priority/command, ne
 /proc/ion_storm_announcement()
 	GLOB.command_announcement.Announce("It has come to our attention that \the [station_name()] passed through an ion storm.  Please monitor all electronic equipment for malfunctions.", "Anomaly Alert")
 
-/proc/AnnounceArrival(var/mob/living/carbon/human/character, var/rank, join_message, channel = "Common", zlevel)
+/proc/AnnounceArrival(mob/living/carbon/human/character, rank, join_message, channel = "Common", zlevel)
 	if (SSticker.current_state == GAME_STATE_PLAYING)
 		var/list/zlevels = zlevel ? using_map.get_map_levels(zlevel, TRUE, om_range = DEFAULT_OVERMAP_RANGE) : null
 		if(character.mind.role_alt_title)
 			rank = character.mind.role_alt_title
 		AnnounceArrivalSimple(character.real_name, rank, join_message, channel, zlevels)
 
-/proc/AnnounceArrivalSimple(var/name, var/rank = "visitor", join_message = "will arrive at the station shortly", channel = "Common", list/zlevels)
+/proc/AnnounceArrivalSimple(name, rank = "visitor", join_message = "will arrive at the station shortly", channel = "Common", list/zlevels)
 	GLOB.global_announcer.autosay("[name], [rank], [join_message].", "Arrivals Announcement Computer", channel, zlevels)

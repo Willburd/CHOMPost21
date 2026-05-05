@@ -102,7 +102,7 @@
 // User has to wear their ID or have it inhand for ID Scan to work.
 // Can also be called manually, with optional parameter being access_to_check to scan the user's ID.
 // explicit_card can be passed by callers that already have a card reference (e.g. the laptop's inserted card).
-/datum/computer_file/program/proc/can_run(var/mob/living/user, loud = 0, access_to_check, obj/item/card/id/explicit_card)
+/datum/computer_file/program/proc/can_run(mob/living/user, loud = 0, access_to_check, obj/item/card/id/explicit_card)
 	// Defaults to required_access
 	if(!access_to_check)
 		access_to_check = required_access

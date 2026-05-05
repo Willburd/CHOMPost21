@@ -11,7 +11,7 @@
 	Returns
 	A number between 0 and 100, with higher numbers resulting in less damage taken.
 */
-/mob/living/proc/run_armor_check(var/def_zone = null, var/attack_flag = "melee", armour_pen = 0, absorb_text = null, soften_text = null)
+/mob/living/proc/run_armor_check(def_zone = null, attack_flag = "melee", armour_pen = 0, absorb_text = null, soften_text = null)
 	if(GLOB.Debug2)
 		log_world("## DEBUG: getarmor() was called.")
 
@@ -138,7 +138,7 @@
 //	return absorb
 
 //Handles the effects of "stun" weapons
-/mob/living/proc/stun_effect_act(var/stun_amount, var/agony_amount, def_zone, used_weapon=null, electric = FALSE)
+/mob/living/proc/stun_effect_act(stun_amount, agony_amount, def_zone, used_weapon=null, electric = FALSE)
 	flash_pain()
 	SEND_SIGNAL(src, COMSIG_STUN_EFFECT_ACT, stun_amount, agony_amount, def_zone, used_weapon, electric)
 
@@ -153,7 +153,7 @@
 		apply_effect(STUTTER, agony_amount/10)
 		apply_effect(EYE_BLUR, agony_amount/10)
 
-/mob/living/proc/electrocute_act(var/shock_damage, var/obj/source, siemens_coeff = 1.0, def_zone = null, stun = 1)
+/mob/living/proc/electrocute_act(shock_damage, obj/source, siemens_coeff = 1.0, def_zone = null, stun = 1)
 	  return 0 //only carbon liveforms have this proc
 
 /mob/living/emp_act(severity, recursive)
@@ -458,7 +458,7 @@
 	if(amount > 0)
 		adjustToxLoss(amount)
 
-/mob/living/proc/can_inject(var/mob/user, error_msg, target_zone, ignore_thickness = FALSE)
+/mob/living/proc/can_inject(mob/user, error_msg, target_zone, ignore_thickness = FALSE)
 	return 1
 
 /mob/living/proc/get_organ_target()

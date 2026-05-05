@@ -472,7 +472,7 @@ GLOBAL_LIST_EMPTY_TYPED(dna_genes_bad, /datum/gene/trait)
 
 // Set a DNA UI block's value, given a value and a max possible value.
 // Used in hair and facial styles (value being the index and maxvalue being the len of the hairstyle list)
-/datum/dna/proc/SetUIValueRange(var/block,value,maxvalue,defer=0)
+/datum/dna/proc/SetUIValueRange(block,value,maxvalue,defer=0)
 	if (block<=0) return
 	ASSERT(maxvalue<=4095)
 	var/range = (4095 / maxvalue)
@@ -520,7 +520,7 @@ GLOBAL_LIST_EMPTY_TYPED(dna_genes_bad, /datum/gene/trait)
 // Do not use this unless you absolutely have to.
 // Set a block from a hex string.  This is inefficient.  If you can, use SetUIValue().
 // Used in DNA modifiers.
-/datum/dna/proc/SetUISubBlock(var/block,subBlock, newSubBlock, defer=0)
+/datum/dna/proc/SetUISubBlock(block,subBlock, newSubBlock, defer=0)
 	if (block<=0) return
 	var/oldBlock=GetUIBlock(block)
 	var/newBlock=""
@@ -621,7 +621,7 @@ GLOBAL_LIST_EMPTY_TYPED(dna_genes_bad, /datum/gene/trait)
 // Do not use this unless you absolutely have to.
 // Set a sub-block from a hex character.  This is inefficient.  If you can, use SetUIValue().
 // Used in DNA modifiers.
-/datum/dna/proc/SetSESubBlock(var/block,subBlock, newSubBlock, defer=0)
+/datum/dna/proc/SetSESubBlock(block,subBlock, newSubBlock, defer=0)
 	if (block<=0) return
 	var/oldBlock=GetSEBlock(block)
 	var/newBlock=""

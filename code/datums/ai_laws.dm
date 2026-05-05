@@ -295,7 +295,7 @@
 /datum/ai_law/supplied/set_state_law(datum/ai_laws/laws, state)
 	laws.set_state_law_internal(laws.supplied_laws, laws.state_supplied, src, state)
 
-/datum/ai_laws/proc/set_state_law_internal(var/list/datum/ai_law/laws, list/state, list/datum/ai_law/law, do_state)
+/datum/ai_laws/proc/set_state_law_internal(list/datum/ai_law/laws, list/state, list/datum/ai_law/law, do_state)
 	var/index = laws.Find(law)
 	if(index)
 		state[index] = do_state

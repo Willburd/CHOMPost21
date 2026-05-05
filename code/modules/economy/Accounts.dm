@@ -19,7 +19,7 @@
 	var/time = ""
 	var/source_terminal = ""
 
-/proc/create_account(var/new_owner_name = "Default user", starting_funds = 0, obj/machinery/account_database/source_db, offmap = FALSE)
+/proc/create_account(new_owner_name = "Default user", starting_funds = 0, obj/machinery/account_database/source_db, offmap = FALSE)
 
 	//create a new account
 	var/datum/money_account/M = new()
@@ -78,7 +78,7 @@
 
 	return M
 
-/proc/charge_to_account(var/attempt_account_number, var/source_name, purpose, terminal_id, amount)
+/proc/charge_to_account(attempt_account_number, source_name, purpose, terminal_id, amount)
 	for(var/datum/money_account/D in GLOB.all_money_accounts)
 		if(D.account_number == attempt_account_number && !D.suspended)
 			D.money += amount
@@ -114,7 +114,7 @@
 			return D
 
 //Performing purchases by ID card
-/proc/purchase_with_id_card(obj/item/card/id/I, mob/M, var/purchase_title = "Company", purchase_terminal = "Terminal", purchase_desc = "Purchase of Something", price = 0)
+/proc/purchase_with_id_card(obj/item/card/id/I, mob/M, purchase_title = "Company", purchase_terminal = "Terminal", purchase_desc = "Purchase of Something", price = 0)
 	// Check if account can pay at all
 	var/datum/money_account/customer_account = get_account(I.associated_account_number)
 	if(!customer_account)

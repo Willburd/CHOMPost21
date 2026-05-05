@@ -43,7 +43,7 @@
 	return poster_decl
 
 //Places the poster on a wall
-/obj/item/poster/afterattack(var/atom/A, mob/user, adjacent, clickparams)
+/obj/item/poster/afterattack(atom/A, mob/user, adjacent, clickparams)
 	if(!adjacent)
 		return FALSE
 

@@ -146,7 +146,7 @@
 
 // Traitgenes Injectors are randomized now due to no hardcoded genes. Split into good or bad, and then versions that specify what they do on the label.
 // Otherwise scroll down further for how to make unique injectors
-/obj/item/dnainjector/proc/pick_block(var/datum/gene/trait/G, labeled, allow_disable, force_disable = FALSE)
+/obj/item/dnainjector/proc/pick_block(datum/gene/trait/G, labeled, allow_disable, force_disable = FALSE)
 	if(G)
 		block = G.block
 		datatype = DNA2_BUF_SE

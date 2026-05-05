@@ -12,7 +12,7 @@
 		A.process()
 		check_alarm_cleared(A)
 
-/datum/alarm_handler/proc/triggerAlarm(var/atom/origin, var/atom/source, duration = 0, severity = 1, hidden = 0)
+/datum/alarm_handler/proc/triggerAlarm(atom/origin, atom/source, duration = 0, severity = 1, hidden = 0)
 	var/new_alarm
 	//Proper origin and source mandatory
 	if(!(origin && source))

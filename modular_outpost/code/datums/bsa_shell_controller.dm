@@ -43,7 +43,7 @@
 	cur_delay += rand(7 SECONDS, 9 SECONDS)
 	addtimer(CALLBACK(src, PROC_REF(finish_message)), cur_delay, TIMER_DELETE_ME)
 
-/datum/bsa_shell_controller/proc/announce(var/x,y,z, first_shot = TRUE)
+/datum/bsa_shell_controller/proc/announce(x,y,z, first_shot = TRUE)
 	if(first_shot)
 		var/message = "Requesting a precision artillery strike on coordinates: [x], [y], [z]."
 		GLOB.global_announcer.autosay(message, "Outpost-22 Fire Control", "Command")

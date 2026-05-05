@@ -430,7 +430,7 @@ GLOBAL_LIST_EMPTY(cached_examine_icons)
 				swapped = 1
 	return result
 
-/proc/gen_hud_image(var/file, person, state, plane)
+/proc/gen_hud_image(file, person, state, plane)
 	var/image/img = image(file, person, state)
 	img.plane = plane //Thanks Byond.
 	img.layer = MOB_LAYER-0.2
@@ -452,7 +452,7 @@ GLOBAL_LIST_EMPTY(cached_examine_icons)
 * @param grow_to Relative to the size of the icon, how big the halo grows while fading (don't use negatives for inward halos, use < 1)
 * @param pixel_scale If you'd like the halo to use pixel scale or the default 'fuzzy' scale
 */
-/proc/animate_aura(var/atom/A, var/simple_icons, var/color = "#00FF22", var/anim_duration = 5, var/offset = 1, loops = 1, grow_to = 2, pixel_scale = FALSE)
+/proc/animate_aura(atom/A, simple_icons, color = "#00FF22", anim_duration = 5, offset = 1, loops = 1, grow_to = 2, pixel_scale = FALSE)
 	ASSERT(A)
 
 	//Take a guess at this, if they didn't set it

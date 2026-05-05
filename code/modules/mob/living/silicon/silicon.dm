@@ -94,10 +94,10 @@
 	to_chat(src, span_bolddanger("*BZZZT*"))
 	to_chat(src, span_danger("Warning: Electromagnetic pulse detected."))
 
-/mob/living/silicon/stun_effect_act(var/stun_amount, var/agony_amount, def_zone, used_weapon=null, electric = FALSE)
+/mob/living/silicon/stun_effect_act(stun_amount, agony_amount, def_zone, used_weapon=null, electric = FALSE)
 	return	//immune
 
-/mob/living/silicon/electrocute_act(var/shock_damage, var/obj/source, siemens_coeff = 0.0, def_zone = null, stun = 1)
+/mob/living/silicon/electrocute_act(shock_damage, obj/source, siemens_coeff = 0.0, def_zone = null, stun = 1)
 	if(shock_damage > 0)
 		var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread
 		s.set_up(5, 1, loc)
@@ -131,7 +131,7 @@
 	updatehealth()
 	return 2
 
-/mob/living/silicon/apply_effect(var/effect = 0,effecttype = STUN, blocked = 0, check_protection = 1)
+/mob/living/silicon/apply_effect(effect = 0,effecttype = STUN, blocked = 0, check_protection = 1)
 	// outpost 21 edit begin - radiation and haunting affects borg vision
 	switch(effecttype)
 		if(IRRADIATE)
@@ -193,7 +193,7 @@
 */
 
 //can't inject synths
-/mob/living/silicon/can_inject(var/mob/user, error_msg, target_zone, ignore_thickness = FALSE)
+/mob/living/silicon/can_inject(mob/user, error_msg, target_zone, ignore_thickness = FALSE)
 	if(error_msg)
 		to_chat(user, span_warning("The armoured plating is too tough."))
 	return 0

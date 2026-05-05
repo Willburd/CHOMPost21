@@ -72,7 +72,7 @@
 		else
 			to_chat(user, span_danger("It's nearly falling to pieces."))
 
-/obj/structure/low_wall/attackby(var/obj/item/W, mob/user, hit_modifier, click_parameters)
+/obj/structure/low_wall/attackby(obj/item/W, mob/user, hit_modifier, click_parameters)
 	src.add_fingerprint(user)
 
 	// Making grilles (only works on Bay ones currently)

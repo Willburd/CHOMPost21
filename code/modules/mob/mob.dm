@@ -124,7 +124,7 @@
 // message is the message output to anyone who can see e.g. "[src] does something!"
 // self_message (optional) is what the src mob sees  e.g. "You do something!"
 // blind_message (optional) is what blind people will hear e.g. "You hear something!"
-/mob/visible_message(var/message, var/self_message, var/blind_message, list/exclude_mobs = null, range = world.view, runemessage)
+/mob/visible_message(message, self_message, blind_message, list/exclude_mobs = null, range = world.view, runemessage)
 	if(self_message)
 		if(LAZYLEN(exclude_mobs))
 			exclude_mobs |= src
@@ -159,7 +159,7 @@
 // self_message (optional) is what the src mob hears.
 // deaf_message (optional) is what deaf people will see.
 // hearing_distance (optional) is the range, how many tiles away the message can be heard.
-/mob/audible_message(var/message, var/deaf_message, var/hearing_distance, self_message, radio_message, runemessage)
+/mob/audible_message(message, deaf_message, hearing_distance, self_message, radio_message, runemessage)
 
 	var/range = hearing_distance || world.view
 	var/list/hear = get_mobs_and_objs_in_view_fast(get_turf(src),range,remote_ghosts = FALSE)

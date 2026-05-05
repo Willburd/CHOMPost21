@@ -57,7 +57,7 @@
 		update_verbs()
 
 // Uninstalls component. Found and Critical vars may be passed by parent types, if they have additional hardware.
-/obj/item/modular_computer/proc/uninstall_component(var/mob/living/user, obj/item/computer_hardware/H, found = 0, critical = 0)
+/obj/item/modular_computer/proc/uninstall_component(mob/living/user, obj/item/computer_hardware/H, found = 0, critical = 0)
 	if(portable_drive == H)
 		portable_drive = null
 		found = 1

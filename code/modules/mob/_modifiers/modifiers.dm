@@ -131,7 +131,7 @@
 // Third argument is the 'source' of the modifier, if it's from someone else.  If null, it will default to the mob being applied to.
 // The SECONDS/MINUTES macro is very helpful for this.  E.g. M.add_modifier(/datum/modifier/example, 5 MINUTES)
 // The fourth argument is a boolean to suppress failure messages, set it to true if the modifier is repeatedly applied (as chem-based modifiers are) to prevent chat-spam
-/mob/living/proc/add_modifier(var/modifier_type, expire_at = null, mob/living/origin = null, suppress_failure = FALSE)
+/mob/living/proc/add_modifier(modifier_type, expire_at = null, mob/living/origin = null, suppress_failure = FALSE)
 	// First, check if the mob already has this modifier.
 	for(var/datum/modifier/M in modifiers)
 		if(ispath(modifier_type, M))

@@ -738,7 +738,7 @@ CHOMP Remove end */
 				if(holder.buildmode.objsay)
 					to_chat(usr, "[object.type]")
 
-/proc/build_drag(var/client/user, buildmode, var/atom/fromatom, var/atom/toatom, var/atom/fromloc, atom/toloc, fromcontrol, tocontrol, params)
+/proc/build_drag(client/user, buildmode, atom/fromatom, atom/toatom, atom/fromloc, atom/toloc, fromcontrol, tocontrol, params)
 	var/obj/effect/bmode/buildholder/holder = null
 	for(var/obj/effect/bmode/buildholder/H)
 		if(H.cl == user)
@@ -805,7 +805,7 @@ CHOMP Remove end */
 			log_admin("BUILDMODE/ITEM GENERATION: [key_name(usr)] selected [result] to be spawned.")
 	return result
 
-/obj/effect/bmode/buildmode/proc/make_rectangle(var/turf/A, var/turf/B, var/turf/wall_type, turf/floor_type, area_enabled, area_name)
+/obj/effect/bmode/buildmode/proc/make_rectangle(turf/A, turf/B, turf/wall_type, turf/floor_type, area_enabled, area_name)
 	if(!A || !B) // No coords
 		return
 	if(A.z != B.z) // Not same z-level

@@ -17,7 +17,7 @@
 		return
 	step_process(target, step_count, delay)
 
-/obj/effect/effect/water/proc/step_process(var/turf/target, step_count, delay, iteration)
+/obj/effect/effect/water/proc/step_process(turf/target, step_count, delay, iteration)
 	step_count--
 	if(!loc)
 		qdel(src)

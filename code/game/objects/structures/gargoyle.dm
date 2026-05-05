@@ -25,7 +25,7 @@
 	var/can_revert = TRUE
 	var/was_rayed = FALSE
 
-/obj/structure/gargoyle/Initialize(mapload, var/mob/living/carbon/human/H, var/ident_ovr, var/mat_ovr, var/adj_ovr, tint_ovr, revert = TRUE, discard_clothes)
+/obj/structure/gargoyle/Initialize(mapload, mob/living/carbon/human/H, ident_ovr, mat_ovr, adj_ovr, tint_ovr, revert = TRUE, discard_clothes)
 	. = ..()
 	if(isspace(loc) || isopenspace(loc))
 		anchored = FALSE

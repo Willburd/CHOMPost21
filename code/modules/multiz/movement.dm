@@ -555,14 +555,14 @@
 // If silent is True, the proc won't play sound or give a message.
 // If planetary is True, it's harder to stop the fall damage
 
-/atom/movable/proc/fall_impact(var/atom/hit_atom, var/damage_min = 0, damage_max = 10, silent = FALSE, planetary = FALSE)
+/atom/movable/proc/fall_impact(atom/hit_atom, damage_min = 0, damage_max = 10, silent = FALSE, planetary = FALSE)
 	if(!silent)
 		visible_message("\The [src] falls from above and slams into \the [hit_atom]!", "You hear something slam into \the [hit_atom].")
 	for(var/atom/movable/A in src.contents)
 		A.fall_impact(hit_atom, damage_min, damage_max, silent = TRUE)
 
 // Take damage from falling and hitting the ground
-/mob/living/fall_impact(var/atom/hit_atom, var/damage_min = 1, damage_max = 5, silent = FALSE, planetary = FALSE) // Outpost 21 edit(port) - At least 1 damage from falls
+/mob/living/fall_impact(atom/hit_atom, damage_min = 1, damage_max = 5, silent = FALSE, planetary = FALSE) // Outpost 21 edit(port) - At least 1 damage from falls
 	var/turf/landing = get_turf(hit_atom)
 	var/safe_fall = FALSE
 	if(src.softfall || (isanimal(src) && src.mob_size <= MOB_SMALL))
@@ -675,7 +675,7 @@
 	// Then call parent to have us actually fall
 	return ..()
 
-/obj/mecha/fall_impact(var/atom/hit_atom, var/damage_min = 15, damage_max = 30, silent = FALSE, planetary = FALSE)
+/obj/mecha/fall_impact(atom/hit_atom, damage_min = 15, damage_max = 30, silent = FALSE, planetary = FALSE)
 	// Anything on the same tile as the landing tile is gonna have a bad day.
 	for(var/mob/living/L in hit_atom.contents)
 		L.visible_message(span_danger("\The [src] crushes \the [L] as it lands on them!"))

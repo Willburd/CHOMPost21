@@ -1086,7 +1086,7 @@
 		taurized = FALSE
 
 // Taur suits need to be shifted so its centered on their taur half.
-/obj/item/clothing/suit/make_worn_icon(var/body_type,var/slot_name,var/inhands,default_icon,default_layer = 0,icon/clip_mask)
+/obj/item/clothing/suit/make_worn_icon(body_type,slot_name,inhands,default_icon,default_layer = 0,icon/clip_mask)
 	var/image/standing = ..()
 	if(taurized) //Special snowflake var on suits
 		standing.pixel_x = -16

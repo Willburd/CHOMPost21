@@ -4,7 +4,7 @@
 	var/image/cursor
 	var/image/legend
 
-/datum/station_holomap/proc/initialize_holomap(var/turf/T, isAI = null, mob/user = null, reinit = FALSE)
+/datum/station_holomap/proc/initialize_holomap(turf/T, isAI = null, mob/user = null, reinit = FALSE)
 	if(!station_map || reinit)
 		station_map = image(SSholomaps.extraMiniMaps["[HOLOMAP_EXTRA_STATIONMAP]_[T.z]"])
 	if(!cursor || reinit)

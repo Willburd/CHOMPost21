@@ -162,7 +162,7 @@
 // Randomizes and spawns the smoke effect.
 // Also handles deleting the smoke once the effect is finished.
 //------------------------------------------
-/datum/effect/effect/system/smoke_spread/chem/proc/spawnSmoke(var/turf/T, icon/I, dist = 1, obj/effect/effect/smoke/chem/passed_smoke)
+/datum/effect/effect/system/smoke_spread/chem/proc/spawnSmoke(turf/T, icon/I, dist = 1, obj/effect/effect/smoke/chem/passed_smoke)
 
 	var/obj/effect/effect/smoke/chem/smoke
 	if(passed_smoke)

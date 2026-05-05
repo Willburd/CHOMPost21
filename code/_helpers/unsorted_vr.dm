@@ -54,7 +54,7 @@
 			query_string += "&from=[url_encode(sender)]"
 		world.Export("[CONFIG_GET(string/chat_webhook_url)]?[query_string]")
 
-/proc/admin_action_message(var/admin = "INVALID", var/user = "INVALID", action = "INVALID", reason = "INVALID", time = "INVALID")
+/proc/admin_action_message(admin = "INVALID", user = "INVALID", action = "INVALID", reason = "INVALID", time = "INVALID")
 	if (!CONFIG_GET(string/chat_webhook_url) || !action)
 		return
 	spawn(0)

@@ -61,7 +61,7 @@
 	return
 
 // Called when a blob expands onto another tile.
-/datum/blob_type/proc/on_expand(var/obj/structure/blob/B, obj/structure/blob/new_B, turf/T, mob/observer/blob/O)
+/datum/blob_type/proc/on_expand(obj/structure/blob/B, obj/structure/blob/new_B, turf/T, mob/observer/blob/O)
 	return
 
 // Called when blob_act() is called on a living mob.

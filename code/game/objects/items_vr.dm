@@ -1,4 +1,4 @@
-/obj/item/proc/inhabit_item(var/mob/candidate, candidate_name, mob/living/candidate_original_form, is_item_tf = FALSE)
+/obj/item/proc/inhabit_item(mob/candidate, candidate_name, mob/living/candidate_original_form, is_item_tf = FALSE)
 	//This makes it so that any object in the game can have something put in it like the cursed sword!
 	//This means the proc can also be manually called by admin commands.
 	//Handle moving the person into the object.

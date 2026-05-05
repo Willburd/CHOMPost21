@@ -116,7 +116,7 @@
 			plant.pixel_y = 0
 		plant.update_neighbors()
 
-/turf/simulated/shuttlewalls/ChangeTurf(var/turf/N, tell_universe, force_lighting_update, preserve_outdoors)
+/turf/simulated/shuttlewalls/ChangeTurf(turf/N, tell_universe, force_lighting_update, preserve_outdoors)
 	clear_plants()
 	..(N, tell_universe, force_lighting_update, preserve_outdoors)
 

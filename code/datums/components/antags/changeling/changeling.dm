@@ -223,7 +223,7 @@ GLOBAL_LIST_EMPTY_TYPED(powerinstances, /datum/power/changeling)
 
 
 //Helper proc. Does all the checks and stuff for us to avoid copypasta
-/mob/proc/changeling_power(var/required_chems=0, required_dna=0, max_genetic_damage=100, max_stat=0)
+/mob/proc/changeling_power(required_chems=0, required_dna=0, max_genetic_damage=100, max_stat=0)
 
 	if(!src.mind)		return
 	if(!isliving(src))	return

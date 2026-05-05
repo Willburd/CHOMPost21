@@ -1,4 +1,4 @@
-/datum/antagonist/proc/add_antagonist(var/datum/mind/player, var/ignore_role, var/do_not_equip, move_to_spawn, do_not_announce, preserve_appearance)
+/datum/antagonist/proc/add_antagonist(datum/mind/player, ignore_role, do_not_equip, move_to_spawn, do_not_announce, preserve_appearance)
 
 	if(!add_antagonist_mind(player, ignore_role))
 		return
@@ -16,7 +16,7 @@
 			equip(player.current)
 	return 1
 
-/datum/antagonist/proc/add_antagonist_mind(var/datum/mind/player, ignore_role, nonstandard_role_type, nonstandard_role_msg)
+/datum/antagonist/proc/add_antagonist_mind(datum/mind/player, ignore_role, nonstandard_role_type, nonstandard_role_msg)
 	if(!istype(player))
 		return 0
 	if(!player.current)

@@ -185,7 +185,7 @@
 // returns a list of all power-related objects (nodes, cable, junctions) in turf,
 // excluding source, that match the direction d
 // if unmarked==1, only return those with no powernet
-/proc/power_list(var/turf/T, var/source, d, unmarked=0, cable_only = 0)
+/proc/power_list(turf/T, source, d, unmarked=0, cable_only = 0)
 	. = list()
 
 	var/reverse = d ? GLOB.reverse_dir[d] : 0

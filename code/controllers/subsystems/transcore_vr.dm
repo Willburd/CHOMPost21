@@ -190,7 +190,7 @@ SUBSYSTEM_DEF(transcore)
 			return db
 
 // These are now just interfaces to databases
-/datum/controller/subsystem/transcore/proc/m_backup(var/datum/mind/mind, var/nif /* Outpost 21 edit - Nif removal obj/item/nif/nif*/ , one_time = FALSE, database_key)
+/datum/controller/subsystem/transcore/proc/m_backup(datum/mind/mind, nif /* Outpost 21 edit - Nif removal obj/item/nif/nif*/ , one_time = FALSE, database_key)
 	var/datum/transcore_db/db = db_by_key(database_key)
 	db.m_backup(mind=mind, nif=nif, one_time=one_time)
 
@@ -224,7 +224,7 @@ SUBSYSTEM_DEF(transcore)
 	var/core_dumped = FALSE
 	var/key // Key for this DB
 
-/datum/transcore_db/proc/m_backup(var/datum/mind/mind, nif /* Outpost 21 edit - Nif removal obj/item/nif/nif*/, one_time = FALSE)
+/datum/transcore_db/proc/m_backup(datum/mind/mind, nif /* Outpost 21 edit - Nif removal obj/item/nif/nif*/, one_time = FALSE)
 	ASSERT(mind)
 	if(!mind.name || core_dumped)
 		return 0

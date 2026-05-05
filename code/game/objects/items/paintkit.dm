@@ -24,7 +24,7 @@
 /obj/item/kit/proc/can_customize(obj/item/I)
 	return is_type_in_list(I, allowed_types)
 
-/obj/item/kit/proc/set_info(var/kit_name, var/kit_desc, var/kit_icon, kit_icon_file = CUSTOM_ITEM_OBJ, kit_icon_override_file = CUSTOM_ITEM_MOB, additional_data)
+/obj/item/kit/proc/set_info(kit_name, kit_desc, kit_icon, kit_icon_file = CUSTOM_ITEM_OBJ, kit_icon_override_file = CUSTOM_ITEM_MOB, additional_data)
 	new_name = kit_name
 	new_desc = kit_desc
 	new_icon = kit_icon
@@ -68,7 +68,7 @@
 /obj/item/kit/suit/can_customize(obj/item/I)
 	return istype(I, /obj/item/clothing/head/helmet/space/void) || istype(I, /obj/item/clothing/suit/space/void) || istype(I, /obj/item/clothing/suit/storage/hooded)
 
-/obj/item/kit/suit/set_info(var/kit_name, var/kit_desc, var/kit_icon, kit_icon_file = CUSTOM_ITEM_OBJ, kit_icon_override_file = CUSTOM_ITEM_MOB, additional_data)
+/obj/item/kit/suit/set_info(kit_name, kit_desc, kit_icon, kit_icon_file = CUSTOM_ITEM_OBJ, kit_icon_override_file = CUSTOM_ITEM_MOB, additional_data)
 	..()
 
 	new_light_overlay = additional_data
@@ -212,7 +212,7 @@
 		if(type == M.initial_icon)
 			return 1
 
-/obj/item/kit/paint/set_info(var/kit_name, var/kit_desc, var/kit_icon, kit_icon_file = CUSTOM_ITEM_OBJ, kit_icon_override_file = CUSTOM_ITEM_MOB, additional_data)
+/obj/item/kit/paint/set_info(kit_name, kit_desc, kit_icon, kit_icon_file = CUSTOM_ITEM_OBJ, kit_icon_override_file = CUSTOM_ITEM_MOB, additional_data)
 	..()
 
 	allowed_types = splittext(additional_data, ", ")

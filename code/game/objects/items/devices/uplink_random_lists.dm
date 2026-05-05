@@ -22,7 +22,7 @@ GLOBAL_DATUM_INIT(all_uplink_selection, /datum/uplink_random_selection/all, new)
 	items = list()
 	all_items = list()
 
-/datum/uplink_random_selection/proc/get_random_item(var/telecrystals, obj/item/uplink/U, list/bought_items, items_override = 0)
+/datum/uplink_random_selection/proc/get_random_item(telecrystals, obj/item/uplink/U, list/bought_items, items_override = 0)
 	var/const/attempts = 50
 
 	for(var/i = 0; i < attempts; i++)

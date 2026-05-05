@@ -369,7 +369,7 @@
 // Use for objects performing visible actions
 // message is output to anyone who can see, e.g. "The [src] does something!"
 // blind_message (optional) is what blind people will hear e.g. "You hear something!"
-/atom/proc/visible_message(var/message, var/blind_message, list/exclude_mobs, range = world.view, runemessage = "<span style='font-size: 1.5em'>👁</span>")
+/atom/proc/visible_message(message, blind_message, list/exclude_mobs, range = world.view, runemessage = "<span style='font-size: 1.5em'>👁</span>")
 
 	//VOREStation Edit
 	var/list/see
@@ -400,7 +400,7 @@
 // message is the message output to anyone who can hear.
 // deaf_message (optional) is what deaf people will see.
 // hearing_distance (optional) is the range, how many tiles away the message can be heard.
-/atom/proc/audible_message(var/message, var/deaf_message, hearing_distance, radio_message, runemessage)
+/atom/proc/audible_message(message, deaf_message, hearing_distance, radio_message, runemessage)
 
 	var/range = hearing_distance || world.view
 	var/list/hear = get_mobs_and_objs_in_view_fast(get_turf(src),range,remote_ghosts = FALSE)

@@ -67,7 +67,7 @@
 		loc.update_icon()
 	. = ..()
 
-/obj/machinery/requests_console/audible_message(var/message, var/deaf_message, hearing_distance, radio_message, runemessage)
+/obj/machinery/requests_console/audible_message(message, deaf_message, hearing_distance, radio_message, runemessage)
 	if(istype(loc,/obj/machinery/computer/supply_request_computeralt))
 		return loc.audible_message(message, deaf_message, hearing_distance, radio_message, runemessage)
 	. = ..()

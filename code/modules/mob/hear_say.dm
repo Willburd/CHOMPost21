@@ -1,5 +1,5 @@
 // At minimum every mob has a hear_say proc.
-/mob/proc/combine_message(var/list/message_pieces, verb, mob/speaker, always_stars = FALSE, radio = FALSE)
+/mob/proc/combine_message(list/message_pieces, verb, mob/speaker, always_stars = FALSE, radio = FALSE)
 	var/iteration_count = 0
 	var/msg = "" // This is to make sure that the pieces have actually added something
 	var/raw_msg = ""
@@ -62,7 +62,7 @@
 	else
 		return stars(SP.message)
 
-/mob/proc/hear_say(var/list/message_pieces, var/verb = "says", var/italics = 0, mob/speaker = null, sound/speech_sound, sound_vol)
+/mob/proc/hear_say(list/message_pieces, verb = "says", italics = 0, mob/speaker = null, sound/speech_sound, sound_vol)
 	if(!client && !teleop)
 		return FALSE
 
@@ -132,7 +132,7 @@
 	return TRUE
 
 // Done here instead of on_hear_say() since that is NOT called if the mob is clientless (which includes most AI mobs).
-/mob/living/hear_say(var/list/message_pieces, var/verb = "says", var/italics = 0, mob/speaker = null, sound/speech_sound, sound_vol)
+/mob/living/hear_say(list/message_pieces, verb = "says", italics = 0, mob/speaker = null, sound/speech_sound, sound_vol)
 	.=..()
 	if(has_AI()) // Won't happen if no ai_holder exists or there's a player inside w/o autopilot active.
 		ai_holder.on_hear_say(speaker, multilingual_to_message(message_pieces))
@@ -192,7 +192,7 @@
 
 	return tagged_message
 
-/mob/proc/hear_radio(var/list/message_pieces, var/verb = "says", var/part_a, var/part_b, var/part_c, var/part_d, var/part_e, mob/speaker = null, hard_to_hear = 0, vname = "")
+/mob/proc/hear_radio(list/message_pieces, verb = "says", part_a, part_b, part_c, part_d, part_e, mob/speaker = null, hard_to_hear = 0, vname = "")
 	// Outpost 21 edit(port) begin - Translators hear through radios
 	translator_proxy_hear(message_pieces,verb,speaker)
 	// Outpost 21 edit end
@@ -252,7 +252,7 @@
 		final_message = "[time][part_a][final_message][part_e]"
 	to_chat(src, final_message)
 
-/mob/proc/hear_signlang(var/message, var/verb = "gestures", var/verb_understood = "gestures", datum/language/language, mob/speaker = null, speech_type = 1)
+/mob/proc/hear_signlang(message, verb = "gestures", verb_understood = "gestures", datum/language/language, mob/speaker = null, speech_type = 1)
 	if(!client)
 		return
 

@@ -12,7 +12,7 @@
 	var/travel_time = 0							// How long it takes to move from start to end, or end to start.  Set to 0 for instant travel.
 	var/one_way = FALSE							// If true, you can't travel from end to start.
 
-/datum/shuttle_route/New(var/_start, var/_end, _interim, _time = 0, _oneway = FALSE)
+/datum/shuttle_route/New(_start, _end, _interim, _time = 0, _oneway = FALSE)
 	start = _start
 	end = _end
 	if(_interim)

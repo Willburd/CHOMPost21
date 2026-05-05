@@ -99,7 +99,7 @@
 	return prob(chance)
 
 // Merge of list.Find() and findtext()
-/proc/smartfind(var/haystack, needle, start = 1, end = 0)
+/proc/smartfind(haystack, needle, start = 1, end = 0)
 	if(haystack && needle)
 		if(isobject(haystack))
 			if(istype(haystack, /list))

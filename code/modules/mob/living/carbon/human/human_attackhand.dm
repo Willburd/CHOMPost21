@@ -418,7 +418,7 @@
 /mob/living/carbon/human/proc/afterattack(atom/target as mob|obj|turf|area, mob/living/user as mob|obj, inrange, params)
 	return
 
-/mob/living/carbon/human/attack_generic(var/mob/user, var/damage, var/attack_message, var/armor_type = "melee", armor_pen = 0, a_sharp = 0, a_edge = 0)
+/mob/living/carbon/human/attack_generic(mob/user, damage, attack_message, armor_type = "melee", armor_pen = 0, a_sharp = 0, a_edge = 0)
 	if(istype(user,/mob/living))
 		var/mob/living/L = user
 		if(touch_reaction_flags & SPECIES_TRAIT_THORNS)

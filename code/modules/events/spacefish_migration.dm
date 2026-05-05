@@ -43,7 +43,7 @@
 	if(count_spawned_fish() < fish_cap)
 		spawn_fish(rand(3, 3 + severity * 2) - 1, 1, severity + 2)
 
-/datum/event/spacefish_migration/proc/spawn_fish(var/num_groups, group_size_min, group_size_max, dir)
+/datum/event/spacefish_migration/proc/spawn_fish(num_groups, group_size_min, group_size_max, dir)
 	if(isnull(dir))
 		dir = (victim && prob(80)) ? victim.fore_dir : pick(GLOB.cardinal)
 

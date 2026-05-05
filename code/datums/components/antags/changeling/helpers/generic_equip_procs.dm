@@ -1,5 +1,5 @@
 //This is a generic proc that should be called by other ling armor procs to equip them.
-/mob/proc/changeling_generic_armor(var/armor_type, helmet_type, boot_type, chem_cost)
+/mob/proc/changeling_generic_armor(armor_type, helmet_type, boot_type, chem_cost)
 
 	if(!ishuman(src))
 		return 0

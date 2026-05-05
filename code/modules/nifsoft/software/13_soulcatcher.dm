@@ -77,7 +77,7 @@
 				html = span_nif(span_bold("\[[icon2html(nif.big_icon, CS.client)]NIF\]") + message))
 		CS << sound
 
-/datum/nifsoft/soulcatcher/proc/say_into(var/message, mob/living/sender, mob/eyeobj, whisper)
+/datum/nifsoft/soulcatcher/proc/say_into(message, mob/living/sender, mob/eyeobj, whisper)
 	var/sender_name = eyeobj ? eyeobj.name : sender.name
 
 	//AR Projecting
@@ -110,7 +110,7 @@
 
 	sender.log_talk("NSAY (NIF:[nif.human.real_name]): [message]", LOG_SAY, color="#ff00c8")
 
-/datum/nifsoft/soulcatcher/proc/emote_into(var/message, mob/living/sender, mob/eyeobj, whisper)
+/datum/nifsoft/soulcatcher/proc/emote_into(message, mob/living/sender, mob/eyeobj, whisper)
 	var/sender_name = eyeobj ? eyeobj.name : sender.name
 
 	//AR Projecting

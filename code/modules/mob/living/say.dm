@@ -472,7 +472,7 @@ GLOBAL_LIST_EMPTY(channel_to_radio_key)
 #undef BLOOPER_MAX_BLOOPERS
 #undef BLOOPER_MAX_TIME
 
-/mob/living/proc/say_signlang(var/message, var/verb="gestures", verb_understood="gestures", datum/language/language, type = 1)
+/mob/living/proc/say_signlang(message, verb="gestures", verb_understood="gestures", datum/language/language, type = 1)
 	var/turf/T = get_turf(src)
 	//We're in something, gesture to people inside the same thing
 	if(loc != T && !istype(loc, /obj/item/holder)) // Partially fixes sign language while being held.

@@ -1014,7 +1014,7 @@ GLOBAL_DATUM(planet_muriki, /datum/planet/muriki)
 /mob/living/
 	var/enzyme_affect = TRUE
 
-/proc/muriki_enzyme_affect_mob( var/mob/living/L, multiplier, mist, submerged)
+/proc/muriki_enzyme_affect_mob( mob/living/L, multiplier, mist, submerged)
 	// drop out early if no damage anyway
 	if(multiplier <= 0)
 		return

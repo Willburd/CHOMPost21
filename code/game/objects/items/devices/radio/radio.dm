@@ -293,7 +293,7 @@
 
 GLOBAL_DATUM(autospeaker, /mob/living/silicon/ai/announcer)
 
-/obj/item/radio/proc/autosay(var/message, var/from, channel, list/zlevels, states)
+/obj/item/radio/proc/autosay(message, from, channel, list/zlevels, states)
 
 	if(!GLOB.autospeaker)
 		return

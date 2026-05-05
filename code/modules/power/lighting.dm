@@ -31,7 +31,7 @@ GLOBAL_LIST_EMPTY(light_type_cache)
 
 	var/cell_connectors = TRUE
 
-/obj/machinery/light_construct/Initialize(mapload, var/newdir, building = 0, datum/frame/frame_types/frame_type, obj/machinery/light/fixture = null)
+/obj/machinery/light_construct/Initialize(mapload, newdir, building = 0, datum/frame/frame_types/frame_type, obj/machinery/light/fixture = null)
 	. = ..()
 	if(fixture)
 		fixture_type = fixture.type

@@ -50,7 +50,7 @@ GLOBAL_LIST_INIT(alphabet_upper, list("A","B","C","D","E","F","G","H","I","J","K
 	return copytext((html_encode(strip_html_simple(t))),1,limit)
 
 //Used for preprocessing entered text
-/proc/sanitize(var/input, var/max_length = MAX_MESSAGE_LEN, encode = 1, trim = 1, extra = 1)
+/proc/sanitize(input, max_length = MAX_MESSAGE_LEN, encode = 1, trim = 1, extra = 1)
 	if(!input)
 		return
 
@@ -84,7 +84,7 @@ GLOBAL_LIST_INIT(alphabet_upper, list("A","B","C","D","E","F","G","H","I","J","K
 //Best used for sanitize object names, window titles.
 //If you have a problem with sanitize() in chat, when quotes and >, < are displayed as html entites -
 //this is a problem of double-encode(when & becomes &amp;), use sanitize() with encode=0, but not the sanitizeSafe()!
-/proc/sanitizeSafe(var/input, var/max_length = MAX_MESSAGE_LEN, encode = 1, trim = 1, extra = 1)
+/proc/sanitizeSafe(input, max_length = MAX_MESSAGE_LEN, encode = 1, trim = 1, extra = 1)
 	return sanitize(replace_characters(input, list(">"=" ","<"=" ", "\""="'")), max_length, encode, trim, extra)
 
 //Filters out undesirable characters from names

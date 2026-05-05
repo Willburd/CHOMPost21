@@ -113,7 +113,7 @@
 		add_underlay_adapter(T, , direction, "-aux")
 		add_underlay_adapter(T, , direction, "")
 
-/obj/machinery/atmospherics/proc/add_underlay_adapter(var/turf/T, obj/machinery/atmospherics/node, direction, icon_connect_type) //modified from add_underlay, does not make exposed underlays
+/obj/machinery/atmospherics/proc/add_underlay_adapter(turf/T, obj/machinery/atmospherics/node, direction, icon_connect_type) //modified from add_underlay, does not make exposed underlays
 	if(node)
 		if(!T.is_plating() && node.level == 1 && istype(node, /obj/machinery/atmospherics/pipe))
 			underlays += GLOB.icon_manager.get_atmos_icon("underlay", direction, color_cache_name(node), "down" + icon_connect_type)

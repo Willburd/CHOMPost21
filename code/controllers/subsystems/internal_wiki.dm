@@ -75,7 +75,7 @@ SUBSYSTEM_DEF(internal_wiki)
 ///////////////////////////////////////////////////////////////////////////////////
 // Donation system, for the joke of course
 ///////////////////////////////////////////////////////////////////////////////////
-/datum/controller/subsystem/internal_wiki/proc/pay_with_card( var/obj/item/card/id/I, mob/M, obj/device, paying_amount)
+/datum/controller/subsystem/internal_wiki/proc/pay_with_card( obj/item/card/id/I, mob/M, obj/device, paying_amount)
 	SHOULD_NOT_OVERRIDE(TRUE)
 	if(!purchase_with_id_card(I, M, "Bingle.Co.LLC.UK.M.XM.WMP.AVI.COM", device.name, "Donation", paying_amount))
 		return FALSE
@@ -409,7 +409,7 @@ SUBSYSTEM_DEF(internal_wiki)
 		return "OH GOD WHY!?"
 	return sinter
 
-/datum/controller/subsystem/internal_wiki/proc/add_icon(var/list/data, ic, is, col)
+/datum/controller/subsystem/internal_wiki/proc/add_icon(list/data, ic, is, col)
 	var/load_data = list()
 	load_data["icon"] = ic // dmi path
 	load_data["state"] = is // string

@@ -154,15 +154,15 @@
 			player.hear_broadcast(src, speaker, speaker_mask, message)
 	//VOREStation Edit End
 
-/mob/proc/hear_broadcast(var/datum/language/language, mob/speaker, speaker_name, message)
+/mob/proc/hear_broadcast(datum/language/language, mob/speaker, speaker_name, message)
 	if((language in languages) && language.check_special_condition(src))
 		var/msg = span_hivemind("[language.name], " + span_name("[speaker_name]") + " [message]")
 		to_chat(src,msg)
 
-/mob/new_player/hear_broadcast(var/datum/language/language, mob/speaker, speaker_name, message)
+/mob/new_player/hear_broadcast(datum/language/language, mob/speaker, speaker_name, message)
 	return
 
-/mob/observer/dead/hear_broadcast(var/datum/language/language, mob/speaker, speaker_name, message)
+/mob/observer/dead/hear_broadcast(datum/language/language, mob/speaker, speaker_name, message)
 	if(speaker.name == speaker_name || antagHUD)
 		to_chat(src, span_hivemind("[language.name], " + span_name("[speaker_name]") + " ([ghost_follow_link(speaker, src)]) [message]"))
 	else

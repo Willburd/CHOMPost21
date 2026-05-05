@@ -112,7 +112,7 @@ Divergence proc, used in mutation to make unique datums.
 /mob/living/simple_mob/xeno/proc/RandomizeTraits()
 	return
 
-/mob/living/simple_mob/xeno/hear_say(var/list/message_pieces, verb = "says", italics = 0, mob/speaker = null)
+/mob/living/simple_mob/xeno/hear_say(list/message_pieces, verb = "says", italics = 0, mob/speaker = null)
 	if(traitdat.traits[TRAIT_XENO_CANLEARN])
 		if(!(message in speak))
 			speech_buffer.Add(multilingual_to_message(message_pieces))
