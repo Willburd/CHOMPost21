@@ -20001,6 +20001,16 @@
 	},
 /turf/simulated/wall,
 /area/constructionsite/engineering)
+"aUm" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/disposalpipe/segment,
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/tiled,
+/area/hallway/secondary/engineering_hallway)
 "aUp" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "0-2"
@@ -93005,7 +93015,6 @@
 	},
 /obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/eshui/emblem/eshui_c,
-/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/engineering_hallway)
 "ygl" = (
@@ -114710,7 +114719,7 @@ vzM
 aHJ
 wvZ
 xjq
-qaR
+aUm
 ygk
 qaR
 aYq
