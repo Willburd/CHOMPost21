@@ -2361,6 +2361,13 @@
 /obj/machinery/computer/shuttle_control/explore/ninja_overmap,
 /turf/simulated/shuttle/floor/voidcraft/dark,
 /area/shuttle/ninja_overmap)
+"fl" = (
+/obj/structure/bed/chair/shuttle_padded{
+	dir = 8;
+	name = "Co-pilot seat"
+	},
+/turf/simulated/floor/tiled/milspec/raised,
+/area/shuttle/mercenary)
 "fm" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 10
@@ -3477,10 +3484,6 @@
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/trade/centcom)
 "hh" = (
-/obj/machinery/computer/ship/navigation{
-	dir = 8;
-	pixel_x = 4
-	},
 /obj/effect/floor_decal/corner/white{
 	dir = 6
 	},
@@ -3489,6 +3492,10 @@
 	name = "Hostile bodycamera monitor";
 	pixel_x = 32;
 	pixel_y = -3
+	},
+/obj/machinery/computer/ship/sensors{
+	dir = 8;
+	pixel_x = 5
 	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/shuttle/mercenary)
@@ -12853,13 +12860,10 @@
 	},
 /area/wizard_station)
 "AG" = (
-/obj/machinery/computer/ship/sensors{
-	dir = 8;
-	pixel_x = 5
-	},
 /obj/effect/floor_decal/corner/white{
 	dir = 6
 	},
+/obj/structure/table/steel_reinforced,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/shuttle/mercenary)
 "AH" = (
@@ -12894,12 +12898,12 @@
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/trade/centcom)
 "AK" = (
-/obj/machinery/computer/shuttle_control/multi/syndicate{
-	dir = 4;
-	pixel_x = -5
-	},
 /obj/effect/floor_decal/corner/white{
 	dir = 9
+	},
+/obj/machinery/computer/shuttle_control/explore/mercenary_overmap{
+	dir = 4;
+	pixel_x = -4
 	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/shuttle/mercenary)
@@ -12932,13 +12936,6 @@
 	phoron = 21.8366
 	},
 /area/shuttle/skipjack)
-"AO" = (
-/obj/structure/bed/chair/shuttle_padded{
-	dir = 4;
-	name = "Pilot Seat"
-	},
-/turf/simulated/floor/tiled/milspec/raised,
-/area/shuttle/mercenary)
 "AP" = (
 /obj/effect/floor_decal/corner/black/border{
 	dir = 4
@@ -13180,10 +13177,6 @@
 /obj/effect/floor_decal/corner/white{
 	dir = 5
 	},
-/obj/structure/bed/chair/shuttle_padded{
-	dir = 8;
-	name = "Co-pilot seat"
-	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/shuttle/mercenary)
 "Bm" = (
@@ -13210,6 +13203,10 @@
 	pixel_y = 28;
 	id = "vali_backdoor";
 	name = "Rear hatch control"
+	},
+/obj/structure/bed/chair/shuttle_padded{
+	dir = 4;
+	name = "Pilot Seat"
 	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/shuttle/mercenary)
@@ -58761,7 +58758,7 @@ BU
 ey
 fo
 Bl
-An
+fl
 AE
 An
 ej
@@ -58923,7 +58920,7 @@ fo
 BI
 fo
 Bn
-AO
+An
 An
 An
 ej

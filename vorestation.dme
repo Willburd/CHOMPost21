@@ -6147,6 +6147,7 @@
 #include "modular_outpost\maps\common\shuttles\merc.dm"
 #include "modular_outpost\maps\common\shuttles\ninja.dm"
 #include "modular_outpost\maps\common\shuttles\security.dm"
+#include "modular_outpost\maps\common\shuttles\sites_airdrops.dm"
 #include "modular_outpost\maps\common\shuttles\sites_crash.dm"
 #include "modular_outpost\maps\common\shuttles\sites_generic.dm"
 #include "modular_outpost\maps\common\shuttles\skipjack.dm"

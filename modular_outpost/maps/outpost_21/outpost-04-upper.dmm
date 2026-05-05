@@ -5144,11 +5144,11 @@
 /turf/simulated/floor/wood,
 /area/library_conference_room)
 "amh" = (
-/obj/effect/shuttle_landmark/premade/specialops_overmap/airdrop_muriki_alt,
+/obj/effect/shuttle_landmark/premade/airdrop/muriki_southeast,
 /turf/simulated/open/muriki,
 /area/muriki/skyline/south)
 "ami" = (
-/obj/effect/shuttle_landmark/premade/specialops_overmap/airdrop_muriki,
+/obj/effect/shuttle_landmark/premade/airdrop/muriki_cent,
 /turf/simulated/open/muriki,
 /area/muriki/skyline/cent)
 "amj" = (
@@ -5280,12 +5280,6 @@
 /obj/structure/inflatable,
 /turf/simulated/floor/tiled/turfpack/muriki,
 /area/specialty/expie_clubhouse)
-"amH" = (
-/obj/effect/shuttle_landmark/premade/mercenary/station_n{
-	name = "OP21 - Mountainside"
-	},
-/turf/simulated/open/muriki,
-/area/muriki/skyline/cent)
 "amI" = (
 /obj/structure/cable/green{
 	icon_state = "32-2"
@@ -7884,6 +7878,18 @@
 /obj/machinery/washing_machine,
 /turf/simulated/floor/tiled/steel_grid,
 /area/quartermaster/mining/expl)
+"arr" = (
+/obj/effect/shuttle_landmark/premade/airdrop/muriki_southwest,
+/turf/simulated/open/muriki,
+/area/muriki/skyline/west)
+"ars" = (
+/obj/effect/shuttle_landmark/premade/airdrop/muriki_northwest,
+/turf/simulated/open/muriki,
+/area/muriki/skyline/north)
+"art" = (
+/obj/effect/shuttle_landmark/premade/airdrop/muriki_northeast,
+/turf/simulated/open/muriki,
+/area/muriki/skyline/north)
 "ary" = (
 /obj/structure/sign/directions/outpost/gen{
 	dir = 8;
@@ -68669,7 +68675,7 @@ ttw
 ttw
 ttw
 ttw
-ttw
+arr
 ttw
 ttw
 ttw
@@ -68715,7 +68721,7 @@ kxr
 kxr
 kxr
 kxr
-kxr
+ars
 kxr
 kxr
 kxr
@@ -81715,7 +81721,7 @@ rBk
 rBk
 rBk
 rBk
-amH
+rBk
 rBk
 rBk
 rBk
@@ -108726,7 +108732,7 @@ kxr
 kxr
 kxr
 kxr
-kxr
+art
 kxr
 kxr
 kxr
