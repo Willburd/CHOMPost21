@@ -5,7 +5,7 @@
 	integrity = 600
 	icon_base = "diona"
 	icon_reinf = "noreinf"
-	supply_conversion_value = 1 // Outpost 21 edit(port) - Added supply sell price. This was missing...
+	supply_conversion_value = 1
 
 /datum/material/diona/place_dismantled_product()
 	return
