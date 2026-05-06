@@ -15,7 +15,7 @@
 	sheet_plural_name = "crystals"
 	is_fusion_fuel = 1
 	flags = MATERIAL_UNMELTABLE
-	supply_conversion_value = 30 // Outpost 21 edit(port) - Added supply sell price. This was missing...
+	supply_conversion_value = 30
 
 /datum/material/supermatter/generate_recipes()
 	recipes = list(

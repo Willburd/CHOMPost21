@@ -20016,6 +20016,11 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/engineering_hallway)
+"aUo" = (
+/obj/structure/prop/rock/waterflat,
+/obj/effect/landmark/pengmark,
+/turf/simulated/floor/water/acidic/turfpack/muriki,
+/area/mine/unexplored/muriki/valleyeast)
 "aUp" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "0-2"
@@ -20027,6 +20032,46 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid/turfpack/muriki,
 /area/muriki/grounds/terraform)
+"aUq" = (
+/obj/structure/cliff{
+	dir = 6
+	},
+/obj/effect/landmark/pengmark,
+/turf/simulated/floor/outdoors/rocks/turfpack/muriki,
+/area/mine/explored/muriki/river/hole)
+"aUr" = (
+/obj/structure/window/maintenance_panel{
+	dir = 4
+	},
+/obj/effect/landmark/pengmark,
+/turf/simulated/floor,
+/area/constructionsite/engineering)
+"aUs" = (
+/obj/structure/window/maintenance_panel{
+	dir = 4
+	},
+/turf/simulated/floor,
+/area/constructionsite/engineering)
+"aUt" = (
+/obj/structure/cable/orange,
+/obj/structure/grille,
+/obj/structure/cable/orange{
+	icon_state = "0-2"
+	},
+/obj/effect/landmark/pengmark,
+/turf/simulated/floor,
+/area/storage/tech)
+"aUu" = (
+/obj/structure/cliff{
+	dir = 9
+	},
+/obj/effect/landmark/pengmark,
+/turf/simulated/floor/outdoors/rocks/turfpack/muriki,
+/area/mine/explored/muriki/river/hole)
+"aUv" = (
+/obj/effect/landmark/pengmark,
+/turf/simulated/floor/boxing,
+/area/mine/unexplored/muriki/mountainnorth)
 "aUZ" = (
 /obj/structure/dispenser/oxygen,
 /obj/effect/floor_decal/corner/brown{
@@ -35517,6 +35562,7 @@
 /obj/item/digestion_remains/variant1{
 	pixel_x = -4
 	},
+/obj/effect/landmark/pengmark,
 /turf/simulated/floor/outdoors/mud/turfpack/muriki{
 	outdoors = -1
 	},
@@ -37887,6 +37933,7 @@
 /obj/structure/cable/orange{
 	icon_state = "0-8"
 	},
+/obj/effect/landmark/pengmark,
 /turf/simulated/floor,
 /area/storage/tech)
 "gRv" = (
@@ -53293,7 +53340,7 @@
 	},
 /obj/machinery/door/window/northright{
 	name = "Engineering Hardsuits";
-	req_access = list(11)
+	req_access = list(11,51)
 	},
 /obj/effect/floor_decal/corner/orange{
 	dir = 10
@@ -75334,7 +75381,7 @@
 /obj/item/clothing/suit/space/void/engineering,
 /obj/machinery/door/window/northleft{
 	name = "Engineering Hardsuits";
-	req_access = list(11)
+	req_access = list(11,51)
 	},
 /obj/effect/floor_decal/corner/orange/full,
 /obj/machinery/camera/network/engineering{
@@ -75679,7 +75726,7 @@
 	},
 /obj/machinery/door/window/northleft{
 	name = "Engineering Hardsuits";
-	req_access = list(11)
+	req_access = list(11,51)
 	},
 /obj/effect/floor_decal/corner/orange{
 	dir = 10
@@ -110473,7 +110520,7 @@ lve
 qvv
 lve
 xsK
-qvv
+aUu
 jnX
 jnX
 jnX
@@ -112759,7 +112806,7 @@ mEL
 pDd
 pDd
 pDd
-pDd
+aUt
 pDd
 pDd
 pDd
@@ -117483,8 +117530,8 @@ cGQ
 cGQ
 cGQ
 bWF
-bWF
-bWF
+aUs
+aUr
 hts
 ivE
 vWw
@@ -123026,7 +123073,7 @@ jnX
 jnX
 jnX
 jnX
-aae
+aUq
 kXE
 aae
 kXE
@@ -129139,7 +129186,7 @@ arf
 arf
 wdK
 gAH
-lhs
+aSJ
 jnX
 jnX
 jnX
@@ -137346,7 +137393,7 @@ bqM
 rvS
 bxW
 fUc
-fUc
+aUv
 fUc
 ipG
 eyN
@@ -147373,7 +147420,7 @@ aiU
 aiU
 aiU
 aiR
-aFt
+aUo
 aiR
 aiR
 dYx
