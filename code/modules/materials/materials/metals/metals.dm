@@ -32,7 +32,7 @@
 	door_icon_base = "metal"
 	icon_colour = "#D1E6E3"
 	icon_reinf = "reinf_metal"
-	supply_conversion_value = 4 // Outpost 21 edit(port) - Added supply sell price. This was missing...
+	supply_conversion_value = 4
 
 /datum/material/titanium/generate_recipes()
 	..()
@@ -48,7 +48,7 @@
 	conductivity = 10
 	sheet_singular_name = "ingot"
 	sheet_plural_name = "ingots"
-	supply_conversion_value = 0.25 // Outpost 21 edit(port) - Added supply sell price. This was missing...
+	supply_conversion_value = 0.25
 
 /datum/material/lead
 	name = MAT_LEAD
@@ -59,7 +59,7 @@
 	sheet_singular_name = "ingot"
 	sheet_plural_name = "ingots"
 	radiation_resistance = 25 // Lead is Special and so gets to block more radiation than it normally would with just weight, totalling in 48 protection.
-	supply_conversion_value = 0.5 // Outpost 21 edit(port) - reduced value
+	supply_conversion_value = 0.5
 
 /datum/material/gold
 	name = MAT_GOLD
@@ -81,7 +81,7 @@
 	conductivity = 63
 	sheet_singular_name = "ingot"
 	sheet_plural_name = "ingots"
-	supply_conversion_value = 1 // Outpost 21 edit(port) - reduced value
+	supply_conversion_value = 1
 
 /datum/material/platinum
 	name = MAT_PLATINUM
@@ -106,7 +106,7 @@
 
 /datum/material/mhydrogen
 	name = MAT_METALHYDROGEN
-	display_name = "metallic hydrogen" // Outpost 21 edit(port) - Why did this not have a pretty name?
+	display_name = "metallic hydrogen"
 	stack_type = /obj/item/stack/material/mhydrogen
 	icon_colour = "#E6C5DE"
 	conductivity = 100
@@ -121,7 +121,7 @@
 	sheet_plural_name = "ingots"
 	is_fusion_fuel = 1
 	conductive = 0
-	supply_conversion_value = 3 // Outpost 21 edit(port) - Added supply sell price. This was missing...
+	supply_conversion_value = 3
 
 /datum/material/tritium
 	name = MAT_TRITIUM
@@ -131,7 +131,7 @@
 	sheet_plural_name = "ingots"
 	is_fusion_fuel = 1
 	conductive = 0
-	supply_conversion_value = 4 // Outpost 21 edit(port) - Added supply sell price. This was missing...
+	supply_conversion_value = 4
 
 /datum/material/osmium
 	name = MAT_OSMIUM
@@ -157,7 +157,7 @@
 	conductivity = 18
 	melting_point = T0C+3600
 	radiation_resistance = 15
-	supply_conversion_value = 0.5 // Outpost 21 edit(port) - Added supply sell price. This was missing...
+	supply_conversion_value = 0.5
 
 /datum/material/bronze
 	name = MAT_BRONZE
@@ -168,7 +168,7 @@
 	integrity = 120
 	conductivity = 12
 	protectiveness = 9 // 33%
-	supply_conversion_value = 1 // Outpost 21 edit(port) - Added supply sell price. This was missing...
+	supply_conversion_value = 1
 
 /datum/material/tin
 	name = MAT_TIN
@@ -178,7 +178,7 @@
 	icon_colour = "#b2afaf"
 	sheet_singular_name = "ingot"
 	sheet_plural_name = "ingots"
-	supply_conversion_value = 0.5 // Outpost 21 edit(port) - reduced value
+	supply_conversion_value = 0.5
 	hardness = 50
 	weight = 13
 
@@ -191,7 +191,7 @@
 	icon_colour = "#af633e"
 	sheet_singular_name = "ingot"
 	sheet_plural_name = "ingots"
-	supply_conversion_value = 0.5 // Outpost 21 edit(port) - reduced value
+	supply_conversion_value = 0.5
 	weight = 13
 	hardness = 50
 
@@ -203,5 +203,5 @@
 	stack_type = /obj/item/stack/material/aluminium
 	sheet_singular_name = "ingot"
 	sheet_plural_name = "ingots"
-	supply_conversion_value = 1 // Outpost 21 edit(port) - reduced value
+	supply_conversion_value = 1
 	weight = 10
