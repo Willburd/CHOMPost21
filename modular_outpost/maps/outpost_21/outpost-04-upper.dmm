@@ -8905,6 +8905,8 @@
 /obj/effect/floor_decal/milspec/color/purple/corner{
 	dir = 4
 	},
+/obj/item/clothing/head/welding,
+/obj/item/clothing/head/welding,
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/supermatter)
 "atq" = (
