@@ -73,6 +73,7 @@
 		"clonecontrol",
 		"gene_scanner",
 		"sleevemate",
+		"adv_slime_scanner", // Outpost 21 edit - Ranged slime scanner
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_4_POINTS)
 	// discount_experiments = list(/datum/experiment/scanning/people/mutant = TECHWEB_TIER_4_POINTS)

@@ -320,6 +320,7 @@
 
 	return results
 
+/* Outpost 21 edit - The slimescanner exists for a reason.
 /mob/living/simple_mob/slime/xenobio/get_description_info(list/additional_information)
 	var/list/lines = list()
 	var/intro_line = "Slimes are generally the test subjects of Xenobiology, with different colors having different properties.  \
@@ -337,3 +338,4 @@
 
 	lines.Add(description_info)
 	return lines.Join("\n")
+*/
