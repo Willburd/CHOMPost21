@@ -1,7 +1,7 @@
 /datum/sop_entry/xenoarch
 	title = "Guide to Xenoarcheology"
 	Author = "Diana Kuznetsova"
-	body = {"<center><b>E-Shui Xenoarcheological Studies and Research Field Guide</b>
+	body = {"<center><b>E-Shui Xenoarcheological Studies and Research Field Guide</b></center>
 			<br>Xenoarcheology, Anomalies, and You
 			<br>Diana Kuznetsova
 			<br>
