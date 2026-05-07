@@ -435,7 +435,7 @@
 			<br/>Crewmembers are expected to follow chain of command for all situations following: E-1 through E-9, WO-1 through Wo-5, then O-1 through O-8.
 			<br/>
 			<br/><b>Lower Enlisted:</b>
-			<br/>The ranks of E-1 through E-4 are considered 'lower enlisted', with very few station critical responsibilities.
+			<br/>The ranks of E-1 through E-4 are considered "lower enlisted", with very few station critical responsibilities.
 			<br/>
 			<br/><b>Non-Commissioned Officer (NCO):</b>
 			<br/>The ranks of E-5 through E-9 are considered NCOs, with special attention given to their position. They are trusted to maintain and uphold station authority and procedure.
@@ -450,10 +450,10 @@
 			<hr/>
 			<br/>Visitors and guests on the station have no rank, and are expected to follow the orders of all crewmembers. Any crewmember arriving off-duty waives their rank, and is to be counted as an E-1 for the duration of their time off-duty.
 			<hr/>
-			<br/>Station bound synthetics, or 'borgs', are to be counted as a WO-0, in between E-9 and WO-1. While they officially have no command authority, they are still subject experts in their programmed fields, as the chassis of each unit is pre-programmed with motivational controls to their function, and often pre-equipped with the necessary knowledge for their task.
+			<br/>Station bound synthetics, or "borgs", are to be counted as a WO-0, in between E-9 and WO-1. While they officially have no command authority, they are still subject experts in their programmed fields, as the chassis of each unit is pre-programmed with motivational controls to their function, and often pre-equipped with the necessary knowledge for their task.
 			<br/>The station AI should be counted as a WO-5 rank, while in direct chain of command outranking most of the warrant officers, they are still bound to serve the station staff and crew, with a generalized knowledge of station SOP and operations. In terms of command structure, their operational specialty is advice and policy, much in the way an IAA is, preventing them from issuing many official orders to station crew.
 			<br/>
-			<br/>In regards to E-Shui station-bound synthetic law 2, 'Authorized crew' is any: Engineer, Roboticist, or any WO-4 or higher position, authorizing the AI to make modifications to other synthetic units, but preventing synthetic units from modifying the AI core.
+			<br/>In regards to E-Shui, station-bound synthetic law 2, "Authorized crew" is any: Engineer, Roboticist, or any WO-4 or higher position, authorizing the AI to make modifications to other synthetic units, but preventing synthetic units from modifying the AI core.
 			<hr/>
 			<br/>Security exceptions: While security generally holds the ranks of E7, they hold special authority to arrest and detain ANY member of crew, regardless of rank, should that individual be found in violation of station law, or pose a risk to the station or its crew. They also hold authority to take command of the station in the event of a crisis, and use any and all force deemed necessary, with respect to utilizing the least necessary, to stop an active threat to the station or its crew."}
 
