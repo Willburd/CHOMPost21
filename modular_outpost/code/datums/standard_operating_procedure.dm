@@ -557,31 +557,31 @@
 	title = "Resleeving Guide and Legality"
 	author = "E-Shui Official"
 	body = 	{"<center><b>Resleeving Policy and Operation:</b></center>
-			<br/>This document's intent is to inform and guide station operations when using the Generation II Organic Crewmember Resleeving Device, or 'Resleever', in compliance with SolGov Law, Pangalactic Law, and E-Shui policy.
+			<br/>This document's intent is to inform and guide station operations when using the Generation II Organic Crewmember Resleeving Device, or "Resleever", in compliance with SolGov Law, Pangalactic Law, and E-Shui policy.
 			<hr/>
 			<br/><b><i>DEFINING TERMS:</b></i>
-			<br/><b>Forking:</b> To resleeve a still-living individual, thus creating a duplicate of the original, known as a 'fork'.
+			<br/><b>Forking:</b> To resleeve a still-living individual, thus creating a duplicate of the original, known as a "fork".
 			<br/><b>Cloning:</b> To create a body off an existing DNA sample or sequence, thus regrowing a whole new individual purely off genetic record.
 			<br/><b>Resleeving:</b> To create a body off a scanned template, thus preserving any scars, genetic damage, or alterations to a person's physical body.
-			<br/><b>Slagging:</b> To kill an individual while destroying their mind record, or stack. Ensuring a 'Real Death' situation. Most often done by injecting corruptive data streams into the mind record to ensure propagated destruction through any connected resleeving systems, or directing an energy weapon of at least 20GW towards the stack until destruction.
+			<br/><b>Slagging:</b> To kill an individual while destroying their mind record, or stack. Ensuring a "Real Death" situation. Most often done by injecting corruptive data streams into the mind record to ensure propagated destruction through any connected resleeving systems, or directing an energy weapon of at least 20GW towards the stack until destruction.
 			<br/><b>DNRSL:</b> Do Not Resleeve. Found in medical records to denote the individual has no wishes to be resleeved post-mortem, should their body be unrevivable.
 			<br/><b>DNRSS:</b> Do Not Resuscitate. Found in medical records to denote an individual has no wish to be revived post mortem, and should be resleeved, should they lack a DNRSL clause.
 			<br/><b>Mind record:</b> The digitized form of an individual's consciousness, memories, and experiences. Stored and saved separately from body records.
 			<br/><b>Body record:</b> A scanned record of one's body, utilized for resleeving, unnecessary for cloning.
 			<br/><b>Sleeve:</b> A body, created by either cloning, or resleeving; without a mind present, leaving them in a comatose state.
-			<br/><b>Cortical Stack:</b> Often called 'stack', resembles a small metal ovaloid disk about 13mm across, with about 6mm height, with a vibrant blue core that may emit a soft glow. Stacks directly interface with the mind and store a localized copy of the patient's mind, preventing necessity of mind scans.
+			<br/><b>Cortical Stack:</b> Often called "stack", resembles a small metal ovaloid disk about 13mm across, with about 6mm height, with a vibrant blue core that may emit a soft glow. Stacks directly interface with the mind and store a localized copy of the patient's mind, preventing necessity of mind scans.
 			<br/><b>Sleeve cards:</b> A small physical device that contains a person's mental record, with a speaker and microphone, to self contain and simulate the individual's memories in a non-mobile, nonorganic medium. Utilized in Stacked confinement for long-term punishment, or for individuals that pose significant risk should they inhabit any normal sleeve.
 			<br/><b>Body snatchers:</b> Illegal devices utilized to swap bodies with an individual, often to impersonate or extort them.
 			<hr/>
 			<br/><center><b>LEGALITY:</b></center>
-			<br/>Under Solgov Law: No crewmember not trained in resleever operation is authorized to operate the equipment. No patient is to be resleeved under any circumstance if revival is possible, barring a DNRSS clause. Any crewmembers that are deceased, but revivable, are EXPECTANT, and medical staff must utilize Triage to assess viability and treatment priority.
+			<br/>Under Solgov Law: No crewmember not trained in resleever operation is authorized to operate the equipment. No patient is to be resleeved under any circumstance if revival is possible. Any crewmembers that are deceased, but revivable, are EXPECTANT, and medical staff must utilize Triage to assess viability and treatment priority.
 			<br/>
 			<br/>No individual that is living is to be resleeved to create a duplicate. Under SolGov law statues 44703, 270, and 1704-B; forking an individual is punishable by up to 140 years in stacked confinement, immediate and permanent removal of all medical licenses, and destruction of all forked individuals. Any individual considered for resleeving must be confirmed deceased.
 			<br/>
 			<br/>Prior to ANY resleeving operation occurring, medical staff must review patient medical records, as many crew have a DNRSL clause, or may be unsleevable via station standard resleeving units, and must be shipped off to specialized cloners, located at Outpost-18.
 			<br/>Under Solgov statute 'Genetic and Disease Research', an individual can have their body sleeved for the exclusive purposes of medical treatment or research upon a signed waiver from the individual, and pretense that the new sleeve will be euthanized at the conclusion of research operations. Pangalactic law allows sleeves to be created for rapid resleeving in the event of combat deaths, but they must also be euthanized at the end of combat operations.
 			<br/>
-			<br/>'Sleeve mate' devices can be utilized for mobile mind and body scanning by trained individuals. Under no circumstance is an individual to be mind-scanned post mortem, under Pangalactic Mind Sanctity laws. Any patient exhibiting signs of Post-Mortem Scan Stress (PMSS) must be interviewed and an investigation conducted. Symptoms include, but is not exclusive to: Memory of dying and rotting body and mind, sensation of organ failure throughout the body, 'insects under the skin', severe memory loss far exceeding that of normal stress, complete inability of speech, and falling into a comatose state.
+			<br/>"Sleeve mate" devices can be utilized for mobile mind and body scanning by trained individuals. Under no circumstance is an individual to be mind-scanned post mortem, under Pangalactic Mind Sanctity laws. Any patient exhibiting signs of Post-Mortem Scan Stress (PMSS) must be interviewed and an investigation conducted. Symptoms include, but is not exclusive to: Memory of dying and rotting body and mind, sensation of organ failure throughout the body, 'insects under the skin', severe memory loss far exceeding that of normal stress, complete inability of speech, and falling into a comatose state.
 			<br/>
 			<br/>Under Solgov Law, any medical doctor found guilty of mind-scanning a patient post-mortem will have their medical license immediately suspended pending an investigation into the exact justification for the act. Should court findings prove the incident was not necessary during a crisis with all other options exhausted, the doctor and all associated parties can face up to 30 years in prison, or 50 years in stacked confinement with complete revocation of medical licenses.
 			<hr/>
@@ -589,7 +589,7 @@
 			<br/>Usage of the station's resleever device has been attempted to be simplified for standard medical usage. All medical professionals should be trained on its operation within 3 months of hire.
 			<br/>
 			<br/><center>For standard crew:</center>
-			<br/>To operate the machine; first ensure appropriate biomass is loaded into the growth pod. Unused biomass must be cleaned out at the end of the day to avoid spoilage.
+			<br/>To operate the machine; fist ensure appropriate biomass is loaded into the growth pod. Unused biomass must be cleaned out at the end of the day to avoid spoilage.
 			<br/>Check the patient's medical record PRIOR to resleeving to ensure there is no breach of patient rights, and ensure the patient is confirmed deceased.
 			<br/>Utilize the control console to review the station list of all known body and mind records, and to select the correct machines, especially in a setup with multiple resleevers present, a local wireless connection will list the nearby machines. Ensure a record of both exists for your patient. If they do, utilizing the body record section, initiate a growth cycle.
 			<br/>Depending on installed parts, this can take several seconds, to several minutes. Upon the new sleeve completion, perform a quick check to ensure the individual's new sleeve is medically sound.
