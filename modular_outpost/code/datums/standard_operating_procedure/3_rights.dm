@@ -1,10 +1,10 @@
 /datum/sop_entry/rights
 	title = "Employee Rights and Expectations"
 	author = "E-Shui Official"
-	body = {"Definitions: <br/>
+	body = {"Definitions: <br>
 			<br>A "Crew member" or "Employee" is any individual that has been hired by E-Shui, or has been contracted to E-Shui, for the purposes of performing their task and duty on the station, as required by their terms of employment or contract.
 			<br>A "Visitor" is any individual that is not hired by or contracted to E-Shui, or is awaiting their employment term to begin. A Visitor is not afforded any rights issued to Crew members.
-			<hr/>
+			<hr>
 			<center><b>Crew Rights:</center></b>
 			<br>In Compliance with Sol-Gov's Declaration of Sentient Rights, all employees of E-Shui are entitled to certain rights.
 			<br>1. Everyone has the right to work, with free choice of employment, just conditions, and protections against unemployment.
@@ -35,7 +35,7 @@
 			<br>You agree that you are required to operate for E-Shui until the next annual employment review, not prior to 1 year of employment. During this time, you are not allowed to quit, or be fired from, E-Shui. E-Shui reserves the right to dock any additional pay that exceeds the minimum living requirement pay.
 			<br>You agree that while operating under E-Shui, you will be required to pay back a recognized debt to the company, through any methods to include, but not limited to: Immediate payment, reduction of pay, contractual extensions, biological experimentation, mental experimentation, or forfeiture of property both actual and potential. This debt is accumulated through the on-boarding process of your initial biological and mental scans, and any future resleeves you will incur, to equal the value of the biomass expended.
 			<br>You agree to obey the E-Shui Non-Disclosure Agreement. You are not allowed to share any of the following: The location of the facility. The Layout of the Facility. The purpose of the facility beyond surface-level observation of a terraforming facility. Any details of the terraformer. Crew member strength. Crew member schedules. Security strength and equipment. Security response times.
-			<hr/>
+			<hr>
 			<br>By working on \[OUTPOST-21\], as a \[PLANETARY TERRAFORMING PROJECT\], you are entitled to:
 			<br>- 20 acres of land, of your choice, on a first-come basis to be reclaimed at the end of the terraforming process, but before the land becomes available for public purchase. Each employee is required to choose land, however, they are not required to use it, and are free to enlist it in the E-Shui Terraforming Buy Back Land Initiative to receive 60% of the sell value upon successful sale to a third party, once planetary property is opened.
 			<br>- Lifetime medical treatment, free of charge, through any E-Shui facility. Treatments can include experimental treatments at patient discretion. Current employees take priority in triage situations."}

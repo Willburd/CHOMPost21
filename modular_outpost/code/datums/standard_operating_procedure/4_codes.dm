@@ -2,17 +2,17 @@
 	title = "Codes, in order of Severity"
 	author = "E-Shui Official"
 	body = 	{"<center>All heads of staff are expected to know these codes, their meanings, and their expecations during each code, along with the companion document of Escalation and De-Escalation of threats and condition codes. The conditions are as follows: </center>
-			<hr/>
+			<hr>
 			<b>Condition Green:</b> All clear. Security may not openly brandish weapons, with the exception of the Warden while in security, and the Head of Security. Security may not perform random searches, with the exception of the E-Shui developed "Threat Detectors" A valid ping from a threat detector classifies as evidence to support a "just cause" for search and seizure.
-			<hr/>
+			<hr>
 			<b>Condition Yellow:</b> Minor security threat, or suspicion of developing event. Example: Rumors of stowaways on board, dangerous wildlife breeding in excess. Security is authorized to open carry weaponry at all times, security should immediately muster to the briefing room for a breakdown of the developing situation.
-			<hr/>
+			<hr>
 			<b>Condition Violet:</b> A serious medical issue that poses threat to the station or terraformer, such as viral outbreaks, mass crew casualties unrelated to security issues, or illness within the terraformer. Medical crew should immediately muster to their briefing room. Medical gains elevated access to all relevant departments and areas of the station for the purposes of resolving the issue, to include sensitive areas provided they remain under supervision of that department's head of staff. Disobeying, or interfering with Medical crew during this emergency warrants security intervention as an act against the station, with severity judged by security.
-			<hr/>
+			<hr>
 			<b>Condition Orange:</b> A serious engineering emergency, such as a "Tes-loose", incinerator breach, station spine destruction, or any other event posing an structural or logistical threat to the station or terraformer. Engineering gains elevated access to all departments for the purposes of containing the issue, to include sensitive areas provided they remain under supervision of that department's head of staff. Disobeying, or interfering with Engineering crew during this emergency warrants Security intervention as an act against the station, severity judged by security.
-			<hr/>
+			<hr>
 			<b>Condition Blue:</b> Confirmed hostile threats to the crew and crew areas of the station (Bridge, Medical, Security, Engineering, etc), or reliable suspicion to Red-level threats. Security is authorized access to the Blue Level armory for armor and equipment, and is authorized to wear and brandish anything supplied in the Blue Armory. Security is authorized to perform random searches on any crew member for any reason, to include Staff Heads.
-			<hr/>
+			<hr>
 			<b>Condition Red:</b> Confirmed, immediate, and severe threat to the station or terraformer. Under no circumstance is the terraformer to be injured or killed. Security is authorized any and all force they feel is necessary to subdue the threats to the station and or terraformer, appropriate tools are supplied in the Red Armory. Disobeying or interfering with security during this emergency classifies guilty parties as part of the red-level threat, and security are encouraged to neutralize them along with the red-level threat. Medical is responsible for evacuations of all non-security crew to designed safe areas, establish triage, and ensure survival of injured security personnel. Coordination between Medical and Security is essential.
-			<hr/>
+			<hr>
 			<b>Condition Delta:</b> While E-Shui can see no reason for a Terraformer to ever be euthanized, in compliance with SolGov Vs NanoTrasen 443-72, which states "Any facility that has the potential to be used against the: The owning company, Solgov or its allies, or is of tactical, strategic, or technological significance must be able to be destroyed before capture." Every E-Shui terraformer is installed with a Euthanizer. Condition Delta is automatically applied upon activation of the Euthanizer. All crew must immediately muster and make their way to the evacuation points. Any attempts to stop or impede the escape of crew is considered a Condition Red threat."}
