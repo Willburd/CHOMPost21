@@ -2,6 +2,8 @@
 <h1>Kitsuhana Heavy Industries</h1>
 <img class='_wikiimage' src=\ref['html/images/outpost/Kitsuhana_Logo.png']>
 
+<center><b>Do what you want. We will.</b></center>
+
 <p>KHI, or Kitsuhana Heavy Industries is a loosely organized AI managed polity of planets that operate outside Solgov space. Largely known for their technological trade, and advanced nano-technology. KHI reached their peak of influence in the 2300s, leading to mass adoption of the neural interface framework technology, NIFs.</p>
 
 <p>KHI has little governmental structure, operating entirely beneath three self-aware AI minds, Jin, Tir, and Fen. These AIs govern directly, and control all operations within KHI space. They are known as the Si. During this time KHI operated entirely through direct barter of resources and technologies, illegal or otherwise, and with anyone willing to cooperate with their terms.</p>
