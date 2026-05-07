@@ -58,6 +58,7 @@
 				#include "wiki/factions/blackhole.dm"
 				#include "wiki/factions/clowns.dm"
 				#include "wiki/factions/eshui.dm"
+				#include "wiki/factions/khi.dm"
 				#include "wiki/factions/nt.dm"
 				#include "wiki/factions/solgov.dm"
 				#include "wiki/factions/syndicate.dm"
