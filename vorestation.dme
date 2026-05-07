@@ -5657,7 +5657,6 @@
 #include "modular_outpost\code\_helpers\global_lists.dm"
 #include "modular_outpost\code\_helpers\multiloc.dm"
 #include "modular_outpost\code\books\wiki_books.dm"
-#include "modular_outpost\code\books\wiki\factions\khi.dm"
 #include "modular_outpost\code\controllers\subsystems\chemistry.dm"
 #include "modular_outpost\code\controllers\subsystems\departmentgoals.dm"
 #include "modular_outpost\code\controllers\subsystems\events.dm"
