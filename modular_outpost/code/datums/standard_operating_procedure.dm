@@ -174,6 +174,7 @@
 			<br/>Individuals on a community service period must have suit sensors on maximum.
 			<br/>
 			<br/>Felonies may not have brig time replaced with community service, and must remain HuT.
+			<br/>Brig time can be substituted for thalers, and thaler fines can be substituted for brig time, at an appropriate and reasonable rate, determined by security teams and severity of the time. A recommended ratio is: 50 Thalers = 1 minute
 			<hr/>
 			<center><b>Secure areas</center></b>
 			<br/>These areas are defined as Secure Areas due to the innate hazard they present. Any incident of trespassing in these areas is an automatic felony: The Terraformer, the Vault, the AI Chamber, Telecommunications, the Armory, the Brig. Trespassing in a secure area is grounds to consider the individual an automatic red-level threat, and is to be responded to with all necessary force to subdue the threat.
@@ -209,6 +210,8 @@
 			<br/>
 			<br/>Disturbing the Peace: Engaging in public erotic acts, nudity without permit, excessive yelling for no reason, hazardously throwing items, minor harassment, etc. Minimum sentence: 3 minutes brig, or 300 Thalers.
 			<br/>
+			<br/>Endangerment: To intentionally and consciously create an unsafe situation by disregarding proper precautions or safety. Minimum Sentence: 40 minutes brig, 1000 thalers.
+			<br/>
 			<br/>Escape from Confinement: To escape from confinement as someone who was serving a sentence or awaiting a court judgment. Minimum sentence: Re-capture, re-application of any previous crimes, 30 minutes brig. If escaping from a felony, lethal force is authorized.
 			<br/>
 			<br/>Exceeding Official Powers: To act outside of what is allowed by the chain of command. Minimum sentence: 30 minutes brig.
@@ -234,6 +237,8 @@
 			<br/>Littering:  To negligently leave trash, gibs, spills, or other bits of waste around the station. Or failing to restart a malfunctioning disposal outlet.  Minimum sentence:  5 minutes brig, or 200 Thalers and appropriate community service.
 			<br/>
 			<br/>Manslaughter: To accidentally kill a crew member, often through negligence, without malice or forethought. Minimum sentence: 1 hour brig, 2000 Thalers. Trial required.
+			<br/>
+			<br/>Medical Malpractice: To fail to deliver a reasonable, professional standard of medical treatment to a patient, or to interfere in the delivery of medical care to a patient. Minimum sentence: 1 hour brig, 2000 thaler fine. Extreme situations may cause revocation of medical license.
 			<br/>
 			<br/>Mistreatment of Prisoners To intentionally act, or cause an act, that puts a non-hostile prisoner's well-being in danger. Minimum sentence: 20 minutes brig.
 			<br/>
