@@ -461,7 +461,7 @@
 	title = "A Guide to Security and Armor Choice"
 	author = "Head of Security, Janik Blackscale"
 	body = 	{"Central said my last document wasnt 'professional' enough and came across too rude on new officers, so we'll try this again.
-			<br/ Security work is hard, and gear equipment is essential to understand to not overburden yourself and drain security resources. Below will cover armor types and loadout expectations
+			<br/>Security work is hard, and gear equipment is essential to understand to not overburden yourself and drain security resources. Below will cover armor types and loadout expectations
 			<hr/>
 			<br/>Locations:
 			<br/>In the green armory: Standard vest and helmet, biohazard suits, bomb suits, and EVA armor, located in the EVA storage upstairs.
