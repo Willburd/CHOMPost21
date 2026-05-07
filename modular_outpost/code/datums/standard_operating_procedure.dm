@@ -303,7 +303,7 @@
 			<hr/><b><center>Low Level Threats.</center></b>
 			<br/>
 			<center><b>Green:</b></center>
-			<br>Security must declare the reason for an arrest to the suspect, along with the reason for the arrest. Security may not use force until suspects are fleeing, or openly hostile. Every attempt to peacefully subdue a suspect must be made by security personnel. Security may only use nonlethals, such as tazers, batons, rubber bullets, and pepper spray. No non-security crew may attempt "civilian arrests." Security may not access the Blue or Red armory. Security may not place barricades, use door braces, or otherwise impede access to the station.
+			<br>Security must declare the arrest to the suspect, along with the reasoning. Security may not use force until suspects are fleeing, or openly hostile. Every attempt to peacefully subdue a suspect must be made by security personnel. Security may only use nonlethals, such as tazers, batons, rubber bullets, and pepper spray. No non-security crew may attempt "civilian arrests." Security may not access the Blue or Red armory. Security may not place barricades, use door braces, or otherwise impede access to the station.
 			<br>Department crew are not to wear hardsuits, soft suits, or rigs unless actively venturing outside, or into hazardous atmospheric conditions. Crew wearing aforementioned equipment without reason is in violation of 'Misuse of Company Equipment', and subject to search and seizure. Any crew wearing any hardsuits, rigs, or soft suits should be questioned by security, but not immediately arrested.
 			<br/>
 			<center><b>Yellow:</b></center>
@@ -327,7 +327,7 @@
 			<br/>
 			<center><b>Red:</b></center>
 			<br>Security is authorized immediate lethal force to any threat to the station or terraformer, and should not make arrests. Security is authorized any equipment in the Red Armory. Equipment must be returned at the end of the Red-level event. All departments must lock down unless security access, or evacuation, is needed in to or out of the department. All crew must muster to a safe Triage location decided by Medical and Security, and shelter in place until the event has passed, or evacuation is initiated.
-			<br>Hard suits and Rigs are not to be worn by: non-security crew, the captain, or heads of staff unless authorized by security forces. Soft suits are to be handed out and worn at medical or security discretion. Non-authorized crew wearing a hard suit or a rig are shoot-on-sight as they may be assisting the threat to the station.
+			<br>Hard suits and Rigs are not to be worn by: any non-security crew, unless authorized by security forces as necessary. Soft suits are to be handed out and worn at medical or security discretion. Non-authorized crew wearing a hard suit or a rig are shoot-on-sight as they may be assisting the threat to the station.
 			<br>Non-security crew wearing body armor of any kind are to be considered part of the direct threat to the station and shot on sight.
 			<br/>
 			<center><b>Delta:</b></center>
