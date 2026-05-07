@@ -1133,7 +1133,7 @@
 			<br>
 			<br>Excavated finds can and have activated at random, resulting in effects such as: Irreversible Genetic Mutations, EMP explosions, Terrain Annihilation, Ego Death, Hivemind Assimilation, Robotic Transformation, Immolation, Asphyxiation, Perpetual Sleep, Hallucinations, Belief in the Supernatural, Spontaneous Magnetism, Spontaneous Evisceration, Resurrection, Bluespace Re-translocation, Radiation sickness, among others.
 			<br>
-			<br>Information has been reviewed and found to be up to date as of 2569-09-29
+			<br>Information has been reviewed and found to be up to date as of 2569-09-29"}
 
 /datum/sop_entry/fragords
 	title = "Fragmentary Orders"
