@@ -106,7 +106,7 @@
 			<br>
 			<br>Exotic Particle Harvester
 			<br>When next to an Anomaly Scanner Pad with an anomaly on the Scanner Pad, can be used to extract the energy of an artifact into a Anomaly power battery.
-			<br><hr><center><b>Artifact Identification</b>
+			<br><hr><center><b>Artifact Identification</b></center>
 			<br>
 			<br>Artifacts can be identified in a plethora of ways, ranging from the coloration and 'look' of their effect to the artifact shape and form itself.
 			<br>Artifacts that have the same effect have been noted to have the same energy appearance, such as sparkles, or a blue sphere around it for example. Memorizing the artifact
@@ -142,7 +142,7 @@
 			<br>
 			<br>This battery can, once full, be removed from the artifact and placed in an Anomaly power utilizer. From here, the duration between energy pulses and the duration the utilizer will work for. This can be used only a limited amount of times before having to be recharged. Research can yield greater battery sizes.
 			<br>
-			<br><hr><center><b>Quick Reference / How to Excavate</b>
+			<br><hr><center><b>Quick Reference / How to Excavate</b></center>
 			<br>
 			<br>Step 0: Obtain a mind and body backup. Retrieve a 'Death Alarm Implant' from Medical. If extreme safety is desired, perform step 6.5 now.
 			<br>
