@@ -281,11 +281,6 @@
 #define RANK_PIN_PATH /obj/item/clothing/accessory/rank_eshui/commissioned3
 /datum/job/captain
 	rank_pin = RANK_PIN_PATH
-#undef RANK_PIN_PATH
-
-
-// Officer 4
-#define RANK_PIN_PATH /obj/item/clothing/accessory/rank_eshui/commissioned4
 /datum/job/centcom_officer
 	rank_pin = RANK_PIN_PATH
 #undef RANK_PIN_PATH
