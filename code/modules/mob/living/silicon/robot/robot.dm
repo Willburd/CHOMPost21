@@ -1124,14 +1124,6 @@
 	if(..())
 		return 1
 
-	//All Topic Calls that are only for the Cyborg go here
-	if(usr != src)
-		return 1
-
-	if (href_list["showalerts"])
-		subsystem_alarm_monitor()
-		return 1
-
 	// Outpost 21 edit begin - Borg accessories
 	if (href_list["lookitem_desc_only"])
 		var/obj/item/I = locate(href_list["lookitem_desc_only"])
@@ -1139,6 +1131,14 @@
 			return
 		usr.examinate(I, 1)
 	// Outpost 21 edit end
+
+	//All Topic Calls that are only for the Cyborg go here
+	if(usr != src)
+		return 1
+
+	if (href_list["showalerts"])
+		subsystem_alarm_monitor()
+		return 1
 
 /mob/living/silicon/robot/proc/radio_menu()
 	radio.interact(src)//Just use the radio's Topic() instead of bullshit special-snowflake code
