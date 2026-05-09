@@ -26012,7 +26012,7 @@
 /area/medical/virology)
 "cLU" = (
 /obj/machinery/camera/network/outside{
-	c_tag = "EXT - Tesla Core North";
+	c_tag = "EXT - Receiver Ext North";
 	dir = 1
 	},
 /obj/structure/flora/lily1,
@@ -29531,7 +29531,7 @@
 /area/muriki/processor/hall)
 "dWr" = (
 /obj/machinery/camera/network/engine{
-	c_tag = "ENG - Tesla Chamber North"
+	c_tag = "ENG - Receiver North"
 	},
 /turf/simulated/floor/outdoors/mud/turfpack/muriki,
 /area/engineering/engine_room)
@@ -32888,7 +32888,7 @@
 "fbx" = (
 /obj/machinery/camera/network/engine{
 	dir = 8;
-	c_tag = "ENG - Tesla Chamber Northeast"
+	c_tag = "ENG - Receiver East"
 	},
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
 /area/engineering/engine_room)
@@ -38090,7 +38090,7 @@
 /area/crew_quarters/bar)
 "gTa" = (
 /obj/machinery/camera/network/outside{
-	c_tag = "EXT - Tesla Core Northeast";
+	c_tag = "EXT - Receiver East";
 	dir = 4
 	},
 /turf/simulated/floor/plating/external/turfpack/muriki,
@@ -50115,7 +50115,7 @@
 	},
 /obj/machinery/camera/network/engineering{
 	dir = 1;
-	c_tag = "ENG - PA room West"
+	c_tag = "ENG - Receiver Control West"
 	},
 /obj/machinery/light_switch/breaker{
 	pixel_y = -32
@@ -51893,6 +51893,8 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/green,
 /turf/simulated/floor/tiled/white,
 /area/medical/virology/prep)
 "las" = (
@@ -54592,7 +54594,7 @@
 "lQO" = (
 /obj/machinery/camera/network/engine{
 	dir = 1;
-	c_tag = "ENG - Tesla Chamber South"
+	c_tag = "ENG - Power Receiver"
 	},
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
@@ -60414,7 +60416,7 @@
 	},
 /obj/machinery/camera/network/engine{
 	dir = 4;
-	c_tag = "ENG - Tesla Chamber Northwest"
+	c_tag = "ENG - Receiver West"
 	},
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
 /area/engineering/engine_room)
@@ -60464,7 +60466,7 @@
 "nHm" = (
 /obj/machinery/camera/network/engineering{
 	dir = 4;
-	c_tag = "ENG - Tesla Chamber West Airlock"
+	c_tag = "ENG - Receiver West Airlock"
 	},
 /obj/machinery/firealarm{
 	dir = 8;
@@ -61141,7 +61143,7 @@
 	},
 /obj/machinery/camera/network/engineering{
 	dir = 8;
-	c_tag = "ENG - Tesla Chamber East Airlock"
+	c_tag = "ENG - Receiver East Airlock"
 	},
 /obj/machinery/firealarm{
 	dir = 4;
@@ -66335,7 +66337,7 @@
 /area/muriki/bathroom/engineering)
 "pJx" = (
 /obj/machinery/camera/network/outside{
-	c_tag = "EXT - Tesla Core Northwest";
+	c_tag = "EXT - Receiver West";
 	dir = 8
 	},
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
@@ -68362,7 +68364,7 @@
 	},
 /obj/machinery/camera/network/engineering{
 	dir = 1;
-	c_tag = "ENG - PA Room East"
+	c_tag = "ENG - Receiver Control East"
 	},
 /obj/structure/closet/firecloset/full,
 /turf/simulated/floor/tiled,
