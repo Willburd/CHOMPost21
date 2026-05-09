@@ -18,8 +18,8 @@ List of things solar grubs should be able to do:
 GLOBAL_VAR_INIT(moth_amount, 0)
 
 /mob/living/simple_mob/vore/solargrub
-	name = "juvenile solargrub"
-	desc = "A young sparkling solargrub"
+	name = "solargrub" // Outpost 21 edit - Tweaked name and desc
+	desc = "A sparkling solargrub" // Outpost 21 edit - Tweaked name and desc
 	catalogue_data = list(/datum/category_item/catalogue/fauna/solargrub)
 	icon = 'icons/mob/vore.dmi'
 	icon_state = "solargrub"
