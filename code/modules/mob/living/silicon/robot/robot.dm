@@ -1125,11 +1125,11 @@
 		return 1
 
 	// Outpost 21 edit begin - Borg accessories
-	if (href_list["lookitem_desc_only"])
+	if(href_list["lookitem_desc_only"])
 		var/obj/item/I = locate(href_list["lookitem_desc_only"])
-		if(!I || !(I in accessories))
-			return
-		usr.examinate(I, 1)
+		if(I && (I in accessories))
+			usr.examinate(I, 1)
+		return 1
 	// Outpost 21 edit end
 
 	//All Topic Calls that are only for the Cyborg go here
