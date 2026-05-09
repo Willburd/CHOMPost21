@@ -166,7 +166,7 @@
 						apprehending criminals. A " + JOB_SECURITY_OFFICER + " is responsible for the health, safety, and processing of any prisoner they arrest. \
 						No one is above the Law, not Security or Command."
 	alt_titles = list(JOB_ALT_PATROL_OFFICER = /datum/alt_title/patrol_officer, JOB_ALT_SECURITY_GUARD = /datum/alt_title/security_guard,
-						JOB_ALT_SECURITY_DEPUTY = /datum/alt_title/security_guard, JOB_ALT_JUNIOR_OFFICER = /datum/alt_title/junior_officer,
+						JOB_ALT_SECURITY_DEPUTY = /datum/alt_title/security_deputy, JOB_ALT_JUNIOR_OFFICER = /datum/alt_title/junior_officer, // Outpost 21 edit - Wrong job datum
 						JOB_ALT_SECURITY_CONTRACTOR = /datum/alt_title/security_contractor, JOB_ALT_LOSS_PREVENTION = /datum/alt_title/loss_prevention)
 
 	min_age_by_species = list(SPECIES_PROMETHEAN = 3)
