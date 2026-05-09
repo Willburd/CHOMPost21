@@ -1756,6 +1756,18 @@
 /obj/structure/window/reinforced,
 /turf/simulated/floor/tiled/techfloor,
 /area/rnd/xenobiology/xenobioh)
+"adM" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/black{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/orange{
+	dir = 5
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/rnd/hallway/lowmain)
 "adN" = (
 /obj/machinery/atmospherics/pipe/simple/visible/supply{
 	dir = 6
@@ -6307,9 +6319,6 @@
 /turf/simulated/wall,
 /area/rnd/xenobiology/burn)
 "amA" = (
-/obj/machinery/light{
-	dir = 1
-	},
 /obj/structure/catwalk,
 /obj/structure/window/maintenance_panel,
 /turf/simulated/floor/plating,
@@ -17082,6 +17091,9 @@
 	dir = 5
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/machinery/light{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/lowmain)
 "aHR" = (
@@ -141362,7 +141374,7 @@ aiS
 akg
 ahd
 ahd
-anV
+adM
 apE
 aqQ
 aqQ
