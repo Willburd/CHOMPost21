@@ -150,6 +150,8 @@
 	rank_pin = RANK_PIN_PATH
 /datum/alt_title/medical_practitioner
 	rank_pin = RANK_PIN_PATH
+/datum/alt_title/coroner
+	rank_pin = RANK_PIN_PATH
 #undef RANK_PIN_PATH
 
 
