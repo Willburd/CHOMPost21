@@ -109,6 +109,7 @@ GLOBAL_VAR_INIT(queen_amount, 0) //We only gonna want 1 queen in the world.
 	faction = "metroids"
 	max_nutrition = 2200
 	nutrition = 0
+	voremob_loaded = FALSE // Outpost 21 edit - too small to eat stuff
 
 	//Metroids aren't affected by most atmospheres except cold.
 	minbodytemp = T0C-40
