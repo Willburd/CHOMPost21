@@ -101,6 +101,8 @@
 	rank_pin = RANK_PIN_PATH
 /datum/alt_title/salvage_tech
 	rank_pin = RANK_PIN_PATH
+/datum/alt_title/lab_assistant
+	rank_pin = RANK_PIN_PATH
 #undef RANK_PIN_PATH
 
 
