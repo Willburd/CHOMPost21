@@ -1484,6 +1484,15 @@
 	},
 /turf/unsimulated/floor/steel,
 /area/tdome/tdomeobserve)
+"dv" = (
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/mob/living/simple_mob/vore/wolftaur/syndicate/shotty,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
 "dw" = (
 /obj/structure/table/rack,
 /obj/item/storage/backpack/saddlebag_common/robust,
@@ -1653,9 +1662,26 @@
 "dQ" = (
 /turf/simulated/floor/wood/acacia,
 /area/ninja_dojo/dojo)
+"dR" = (
+/obj/structure/table/rack,
+/obj/item/clothing/gloves/telekinetic,
+/obj/item/clothing/gloves/telekinetic,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
 "dS" = (
 /turf/unsimulated/wall/fakeglass{
 	dir = 1
+	},
+/area/syndicate_mothership)
+"dT" = (
+/obj/structure/table/rack,
+/obj/item/clothing/gloves/toxinregen,
+/obj/item/clothing/gloves/regen,
+/obj/item/clothing/gloves/stamina,
+/turf/unsimulated/floor{
+	icon_state = "dark"
 	},
 /area/syndicate_mothership)
 "dU" = (
@@ -2450,30 +2476,17 @@
 	},
 /area/syndicate_mothership)
 "fW" = (
-/obj/item/clothing/shoes/boots/combat,
-/obj/item/clothing/shoes/boots/combat,
-/obj/item/clothing/shoes/boots/combat,
-/obj/item/clothing/gloves/combat,
-/obj/item/clothing/gloves/combat,
-/obj/item/clothing/gloves/combat,
-/obj/item/clothing/head/helmet/combat,
-/obj/item/clothing/head/helmet/combat,
 /obj/structure/table/rack,
-/turf/unsimulated/floor{
-	icon_state = "dark"
-	},
-/area/syndicate_mothership)
-"fX" = (
+/obj/item/clothing/shoes/boots/combat,
+/obj/item/clothing/shoes/boots/combat,
 /obj/item/clothing/shoes/boots/combat,
 /obj/item/clothing/shoes/boots/combat,
 /obj/item/clothing/shoes/boots/combat,
 /obj/item/clothing/gloves/combat,
 /obj/item/clothing/gloves/combat,
 /obj/item/clothing/gloves/combat,
-/obj/item/clothing/head/helmet/combat,
-/obj/item/clothing/head/helmet/combat,
-/obj/item/clothing/head/helmet/combat,
-/obj/structure/table/rack,
+/obj/item/clothing/gloves/combat,
+/obj/item/clothing/gloves/combat,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -13852,6 +13865,19 @@
 	dir = 9
 	},
 /obj/machinery/oxygen_pump/mobile/stabilizer,
+/obj/structure/closet/walllocker/medical/west{
+	name = "Blood storage closet"
+	},
+/obj/item/reagent_containers/blood/OMinus,
+/obj/item/reagent_containers/blood/OMinus,
+/obj/item/reagent_containers/blood/OMinus,
+/obj/item/reagent_containers/blood/OMinus,
+/obj/item/reagent_containers/blood/OMinus,
+/obj/item/reagent_containers/blood/OMinus,
+/obj/item/reagent_containers/blood/OMinus,
+/obj/item/reagent_containers/blood/OMinus,
+/obj/item/reagent_containers/blood/OMinus,
+/obj/item/reagent_containers/blood/OMinus,
 /turf/simulated/floor/tiled/white,
 /area/shuttle/mercenary)
 "CB" = (
@@ -14559,6 +14585,7 @@
 	dir = 5
 	},
 /obj/structure/medical_stand/anesthetic,
+/obj/item/reagent_containers/blood/OMinus,
 /turf/simulated/floor/tiled/white,
 /area/shuttle/mercenary)
 "Ef" = (
@@ -15971,15 +15998,6 @@
 	dir = 8
 	},
 /mob/living/simple_mob/vore/wolftaur/syndicate/awp,
-/turf/unsimulated/floor{
-	icon_state = "dark"
-	},
-/area/syndicate_mothership)
-"GR" = (
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/mob/living/simple_mob/vore/wolftaur/syndicate/shotty/combat,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -55154,7 +55172,7 @@ mN
 yb
 gy
 sg
-fX
+fW
 fW
 sg
 gB
@@ -55492,7 +55510,7 @@ HO
 HB
 sg
 Hi
-GR
+jv
 Gt
 yb
 sg
@@ -55654,7 +55672,7 @@ HP
 HB
 sg
 Hi
-jv
+dv
 Gu
 yb
 ke
@@ -60820,8 +60838,8 @@ mN
 mN
 ab
 yb
-kQ
-kQ
+dT
+dR
 dd
 hr
 hs
