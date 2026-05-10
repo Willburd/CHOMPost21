@@ -260,9 +260,12 @@
 			. = TRUE
 		// Outpost 21 edit(port) begin - Updated transcore dump process
 		if("coredump")
+			var/area/find_area = get_area(src)
+			if(!find_area)
+				find_area = "Unknown"
 			if(disk && !dump_in_progress_timer)
-				GLOB.global_announcer.autosay("An emergency core dump has been started!", "TransCore Oversight", "Command")
-				GLOB.global_announcer.autosay("An emergency core dump has been started!", "TransCore Oversight", "Medical")
+				GLOB.global_announcer.autosay("An emergency core dump has been started in \the [find_area]!", "TransCore Oversight", "Command")
+				GLOB.global_announcer.autosay("An emergency core dump has been started in \the [find_area]!", "TransCore Oversight", "Medical")
 				dump_in_progress_timer = addtimer(CALLBACK(src, PROC_REF(dump_transcore_database)), TRANSCORE_DUMP_TIME, TIMER_DELETE_ME|TIMER_STOPPABLE)
 				. = TRUE
 		if("ejectdisk")

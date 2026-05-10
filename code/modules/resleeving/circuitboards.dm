@@ -35,6 +35,7 @@
 /obj/item/circuitboard/resleeving_control
 	name = T_BOARD("resleeving control console")
 	build_path = /obj/machinery/computer/transhuman/resleeving
+	hidden = TRUE // Outpost 21 edit - This board is restricted
 
 /obj/item/circuitboard/body_designer
 	name = T_BOARD("body design console")
