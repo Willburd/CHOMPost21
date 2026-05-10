@@ -13687,12 +13687,13 @@
 	dir = 4
 	},
 /obj/structure/table/steel_reinforced,
-/obj/item/megaphone,
-/obj/item/tool/crowbar/red,
-/obj/item/binoculars,
 /obj/effect/floor_decal/milspec/color/red/half{
 	dir = 6
 	},
+/obj/item/card/id/gold/security/spare,
+/obj/item/tool/crowbar/red,
+/obj/item/megaphone,
+/obj/item/binoculars,
 /turf/simulated/floor/tiled/dark,
 /area/security/warden)
 "aAF" = (
@@ -27267,12 +27268,22 @@
 /area/muriki/bathroom/bridge)
 "dhQ" = (
 /obj/structure/table/reinforced,
-/obj/item/aicard,
 /obj/structure/fireaxecabinet{
 	pixel_y = 32
 	},
 /obj/effect/floor_decal/corner/white{
 	dir = 5
+	},
+/obj/item/card/id/gold/captain/spare{
+	pixel_y = 5
+	},
+/obj/item/paper{
+	name = "Notice Regarding Spare IDs";
+	info = "Notice to crew: It is a Felony offense to utilize these ID cards without just cause and authorization. They are provided for emergency situations only, not for crew convenience. If a head of staff is present, it is their responsibility to secure these spare IDs as they are not necessary with appropriate crew. A wall-safe is provided in this room for that purpose."
+	},
+/obj/machinery/door/window/brigdoor/southleft{
+	name = "Emergency Access";
+	req_access = list(19, 52)
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/bridge)
@@ -32828,7 +32839,7 @@
 /obj/machinery/computer/crew{
 	dir = 1
 	},
-/obj/structure/window/phoronreinforced{
+/obj/structure/window/reinforced{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/milspec,
@@ -53137,9 +53148,6 @@
 /area/muriki/grounds/civ)
 "luM" = (
 /obj/machinery/computer/rcon,
-/obj/structure/window/reinforced{
-	dir = 4
-	},
 /obj/effect/floor_decal/corner/yellow/full{
 	dir = 1
 	},
@@ -53148,6 +53156,9 @@
 	},
 /obj/machinery/alarm{
 	pixel_y = 26
+	},
+/obj/structure/window/phoronreinforced{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/bridge)
@@ -68184,11 +68195,11 @@
 /obj/effect/floor_decal/corner/white/full{
 	dir = 8
 	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
 /obj/machinery/computer/security/telescreen/entertainment{
 	pixel_y = 28
+	},
+/obj/structure/window/phoronreinforced{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/bridge)
@@ -86769,26 +86780,16 @@
 /area/mine/explored/muriki/river/hole)
 "wee" = (
 /obj/structure/table/reinforced,
-/obj/machinery/door/window/brigdoor/northright{
-	name = "Crisis Controls";
-	req_access = null;
-	req_one_access = list(19,52)
-	},
 /obj/machinery/lockdown_console/outpost21{
 	pixel_y = -28
 	},
 /obj/effect/floor_decal/corner/white{
 	dir = 10
 	},
-/obj/item/card/id/gold/captain/spare{
-	pixel_y = 5
-	},
-/obj/item/card/id/gold/security/spare{
-	pixel_y = -4
-	},
-/obj/item/paper{
-	name = "Notice Regarding Spare IDs";
-	info = "Notice to crew: It is a Felony offense to utilize these ID cards without just cause and authorization. They are provided for emergency situations only, not for crew convenience. If a head of staff is present, it is their responsibility to secure these spare IDs as they are not necessary with appropriate crew. A wall-safe is provided in this room for that purpose."
+/obj/machinery/door/window/brigdoor/northright{
+	name = "Crisis Controls";
+	req_access = null;
+	req_one_access = list(19,52)
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/bridge)
@@ -88792,11 +88793,11 @@
 	dir = 4
 	},
 /obj/machinery/light,
-/obj/structure/window/phoronreinforced{
-	dir = 4
-	},
 /obj/machinery/computer/security/telescreen/bodycamera{
 	pixel_y = -32
+	},
+/obj/structure/window/reinforced{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/bridge)
