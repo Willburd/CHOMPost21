@@ -622,6 +622,10 @@
 	our_db.core_dump(disk)
 	visible_message(span_warning("\The [src] spits out \the [disk]."))
 	current_br = null
+	var/area/find_area = get_area(src)
+	if(!find_area)
+		find_area = "Unknown"
+	disk.name += " \[[find_area]\]"
 	disk.forceMove(get_turf(src))
 	disk = null
 // Outpost 21 edit(port) end
