@@ -314,7 +314,7 @@
 */
 
 /obj/item/projectile/energy/electrode/strong
-	agony = 100 // Outpost 21 edit - Stun revolver from 70 to 100 agony damage
+	agony = 70
 	speed = 2.2 // Outpost 21 edit - Slower projectile for stun revolver
 	hud_state = "taser"
 
