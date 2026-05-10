@@ -20159,25 +20159,11 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/obj/machinery/door/blast/gate/thin/open{
-	dir = 2;
-	icon_state = "shutter2_0";
-	id = "medbayquar";
-	name = "Medbay Emergency Lockdown"
-	},
 /obj/structure/disposalpipe/segment,
-/obj/effect/floor_decal/industrial/hatch/yellow,
-/turf/simulated/floor/tiled/old_cargo/white,
-/area/medical/medbay2)
-"aNE" = (
-/obj/machinery/door/blast/gate/thin/open{
-	dir = 2;
-	icon_state = "shutter2_0";
-	id = "medbayquar";
-	name = "Medbay Emergency Lockdown"
+/obj/effect/floor_decal/corner/blue{
+	dir = 9
 	},
-/obj/effect/floor_decal/industrial/hatch/yellow,
-/turf/simulated/floor/tiled/old_cargo/white,
+/turf/simulated/floor/tiled/white,
 /area/medical/medbay2)
 "aNF" = (
 /obj/effect/floor_decal/spline/plain,
@@ -131680,7 +131666,7 @@ aPC
 aPC
 aPC
 aPC
-aNE
+aPC
 aOq
 vhg
 aPH

@@ -1690,6 +1690,12 @@
 	icon_state = "dark"
 	},
 /area/syndicate_mothership)
+"dV" = (
+/obj/machinery/recharge_station,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/centcom/simulated/cent_sat)
 "dW" = (
 /obj/effect/floor_decal/corner/white{
 	dir = 6
@@ -5860,7 +5866,8 @@
 /area/shuttle/specialops_overmap)
 "mE" = (
 /obj/machinery/door/blast/multi_tile/four_tile_hor_sec{
-	id = "inter_starfight"
+	id = "inter_starfight";
+	autoclose = 0
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -8883,9 +8890,7 @@
 /obj/effect/floor_decal/corner/red/border{
 	dir = 10
 	},
-/obj/structure/bed/chair/bay/shuttle{
-	dir = 1
-	},
+/obj/machinery/recharge_station,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -10922,7 +10927,8 @@
 /area/shuttle/specialops_overmap)
 "wB" = (
 /obj/machinery/door/blast/multi_tile/four_tile_hor_sec{
-	id = "inter_portfight"
+	id = "inter_portfight";
+	autoclose = 0
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -36703,7 +36709,7 @@ mN
 mN
 mN
 ng
-nL
+dV
 nL
 nL
 sJ
