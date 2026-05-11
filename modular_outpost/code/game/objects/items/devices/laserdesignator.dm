@@ -9,7 +9,7 @@
 	item_state = "designator"
 	slot_flags = SLOT_BELT
 	matter = list(MAT_GLASS = 500, MAT_STEEL = 500)
-	w_class = 2 //Increased to 2, because diodes are w_class 2. Conservation of matter.
+	w_class = ITEMSIZE_SMALL
 	var/turf/pointer_loc
 	var/energy = 3
 	var/max_energy = 3
