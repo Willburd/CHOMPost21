@@ -78043,14 +78043,8 @@
 	dir = 4
 	},
 /obj/item/borg/upgrade/utility/reset,
-/obj/item/borg/upgrade/utility/reset,
-/obj/item/aiModule/eshui_standard{
-	pixel_x = 1;
-	pixel_y = 6
-	},
-/obj/item/aiModule/reset{
-	pixel_y = 6;
-	pixel_x = 1
+/obj/item/borg/upgrade/utility/reset{
+	pixel_y = 7
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/medical/robotics)

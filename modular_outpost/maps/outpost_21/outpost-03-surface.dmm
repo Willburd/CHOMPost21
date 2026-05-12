@@ -20073,6 +20073,14 @@
 /obj/effect/landmark/pengmark,
 /turf/simulated/floor/boxing,
 /area/mine/unexplored/muriki/mountainnorth)
+"aUw" = (
+/turf/simulated/mineral/alt/ignore_mapgen/turfpack/muriki,
+/area/muriki/grounds/shutt)
+"aUx" = (
+/obj/random/landmine,
+/obj/structure/flora/rocks1,
+/turf/simulated/floor/outdoors/mud/turfpack/muriki,
+/area/muriki/grounds/shutt)
 "aUZ" = (
 /obj/structure/dispenser/oxygen,
 /obj/effect/floor_decal/corner/brown{
@@ -47512,7 +47520,6 @@
 "jIs" = (
 /obj/structure/table/steel,
 /obj/item/aicard,
-/obj/item/aiModule/reset,
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
@@ -79203,16 +79210,26 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/aft)
 "tSD" = (
-/obj/structure/table/steel,
-/obj/item/integrated_electronics/debugger{
-	pixel_x = -5
-	},
-/obj/item/integrated_electronics/wirer{
-	pixel_x = 5
-	},
-/obj/item/storage/bag/circuits/basic,
 /obj/effect/floor_decal/milspec/color/orange/half{
 	dir = 5
+	},
+/obj/structure/table/rack{
+	dir = 8;
+	layer = 2.9
+	},
+/obj/structure/window/phoronreinforced,
+/obj/machinery/door/window/brigdoor/westleft{
+	req_one_access = list(19,23,52,56);
+	req_access = null;
+	name = "Law resets"
+	},
+/obj/item/aiModule/reset{
+	pixel_y = 6;
+	pixel_x = 1
+	},
+/obj/item/aiModule/eshui_standard{
+	pixel_x = 1;
+	pixel_y = -4
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/storage/tech)
@@ -81157,8 +81174,6 @@
 /obj/effect/floor_decal/corner/white{
 	dir = 5
 	},
-/obj/item/areaeditor/blueprints/engineers,
-/obj/item/areaeditor/blueprints/engineers,
 /obj/item/storage/secure/briefcase/money{
 	desc = "An sleek tidy briefcase.";
 	name = "secure briefcase"
@@ -141570,8 +141585,8 @@ aGo
 aGo
 aGo
 aGo
-aNs
-aqm
+aUx
+aGo
 apP
 apP
 apP
@@ -141732,7 +141747,7 @@ apP
 apP
 apP
 apP
-apP
+aUw
 apP
 apP
 aMN
@@ -141893,9 +141908,9 @@ apP
 apP
 apP
 apP
-apP
-apP
-apP
+aUw
+aUw
+aUw
 apP
 apP
 apP
@@ -142054,11 +142069,11 @@ apP
 apP
 apP
 apP
-apP
-apP
-apP
-apP
-apP
+aUw
+aUw
+aUw
+aUw
+aUw
 fKh
 cdg
 gGx
@@ -142216,10 +142231,10 @@ apP
 apP
 sVk
 apP
-apP
-apP
-apP
-apP
+aUw
+aUw
+aUw
+aUw
 fKh
 gGx
 fKh
@@ -142379,9 +142394,9 @@ apP
 apP
 apP
 apP
-apP
-aBL
-apP
+aUw
+aUw
+aUw
 mAK
 fKh
 gGx
