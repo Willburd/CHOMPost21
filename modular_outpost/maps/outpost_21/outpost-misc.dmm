@@ -1707,6 +1707,23 @@
 	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/shuttle/mercenary)
+"dX" = (
+/obj/structure/table/rack,
+/obj/item/ammo_magazine/m10mm/rubber,
+/obj/item/ammo_magazine/m10mm/rubber,
+/obj/item/ammo_magazine/m10mm/rubber,
+/obj/item/ammo_magazine/m10mm/rubber,
+/obj/item/ammo_magazine/m10mm/rubber,
+/obj/item/ammo_magazine/m10mm/rubber,
+/obj/item/ammo_magazine/m10mm/rubber,
+/obj/item/ammo_magazine/m10mm/rubber,
+/obj/item/ammo_magazine/m10mm/rubber,
+/obj/item/ammo_magazine/m10mm/rubber,
+/obj/item/gun/projectile/automatic/c20r/rubber,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
 "dY" = (
 /obj/structure/table/alien,
 /obj/item/storage/box/glasses/square{
@@ -1721,6 +1738,28 @@
 "dZ" = (
 /turf/simulated/floor/tiled,
 /area/ninja_dojo/dojo)
+"ea" = (
+/obj/structure/table/rack,
+/obj/item/gun/energy/hunter,
+/obj/item/gun/energy/hunter,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"eb" = (
+/obj/structure/table/rack,
+/obj/item/storage/box/flashbangs,
+/obj/item/storage/box/flashbangs,
+/obj/item/storage/box/flashbangs,
+/obj/item/storage/box/flashbangs,
+/obj/item/storage/box/flashbangs,
+/obj/item/storage/box/flashbangs,
+/obj/item/storage/box/flashbangs,
+/obj/item/storage/box/flashbangs,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
 "ec" = (
 /turf/unsimulated/floor{
 	icon_state = "lino"
@@ -1781,6 +1820,30 @@
 	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/shuttle/mercenary)
+"ek" = (
+/obj/structure/table/rack,
+/obj/item/cell/slime{
+	pixel_x = 4;
+	pixel_y = 4
+	},
+/obj/item/cell/slime{
+	pixel_x = 4;
+	pixel_y = 4
+	},
+/obj/item/cell/slime,
+/obj/item/cell/slime,
+/obj/item/cell/slime{
+	pixel_x = -4;
+	pixel_y = -4
+	},
+/obj/item/cell/slime{
+	pixel_x = -4;
+	pixel_y = -4
+	},
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
 "el" = (
 /obj/effect/map_effect/interval/effect_emitter/smoke/fire,
 /turf/simulated/floor/indoorrocks,
@@ -1834,6 +1897,16 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
+"eq" = (
+/obj/structure/table/rack,
+/obj/item/storage/box/handcuffs,
+/obj/item/storage/box/handcuffs,
+/obj/item/storage/box/handcuffs,
+/obj/item/storage/box/handcuffs,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
 "es" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel,
 /obj/machinery/door/firedoor/glass,
@@ -60524,8 +60597,8 @@ kQ
 kQ
 kQ
 kQ
-kQ
-kQ
+ea
+dX
 kQ
 Iq
 dl
@@ -61332,7 +61405,7 @@ ab
 yb
 sg
 rA
-hE
+eb
 hH
 IN
 kG
@@ -61654,7 +61727,7 @@ mN
 mN
 ab
 yb
-kQ
+hE
 rA
 IW
 jo
@@ -62304,7 +62377,7 @@ ab
 yb
 kQ
 kQ
-hf
+ek
 hD
 la
 hA
@@ -62788,8 +62861,8 @@ mN
 mN
 ab
 yb
-kQ
-kQ
+IX
+eq
 gX
 qx
 fV
@@ -63600,7 +63673,7 @@ ab
 TW
 yb
 sg
-IX
+kQ
 iv
 gr
 in
