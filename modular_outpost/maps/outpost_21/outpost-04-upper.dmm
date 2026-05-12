@@ -7617,6 +7617,9 @@
 	},
 /turf/simulated/open,
 /area/hallway/secondary/engineering_hallway)
+"aqR" = (
+/turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
+/area/muriki/skyline/south)
 "aqT" = (
 /obj/structure/railing{
 	dir = 4
@@ -103958,7 +103961,7 @@ sAt
 sAt
 sAt
 sAt
-sAt
+aqR
 sAt
 sAt
 sAt
@@ -104119,9 +104122,9 @@ sAt
 sAt
 sAt
 sAt
-sAt
-sAt
-sAt
+aqR
+aqR
+aqR
 sAt
 sAt
 sAt
@@ -104280,6 +104283,11 @@ sAt
 sAt
 sAt
 sAt
+aqR
+aqR
+aqR
+aqR
+aqR
 sAt
 sAt
 sAt
@@ -104291,11 +104299,6 @@ sAt
 sAt
 sAt
 sAt
-sAt
-sAt
-sAt
-sAt
-amh
 sAt
 sAt
 sAt
@@ -104442,10 +104445,10 @@ sAt
 sAt
 sAt
 sAt
-sAt
-sAt
-sAt
-sAt
+aqR
+aqR
+aqR
+aqR
 sAt
 sAt
 sAt
@@ -104605,9 +104608,9 @@ sAt
 sAt
 sAt
 sAt
-sAt
-sAt
-sAt
+aqR
+aqR
+aqR
 sAt
 sAt
 sAt
@@ -104930,7 +104933,7 @@ sAt
 sAt
 sAt
 sAt
-sAt
+amh
 sAt
 sAt
 sAt
