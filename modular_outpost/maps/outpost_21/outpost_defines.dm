@@ -555,7 +555,7 @@
 [i]Transponder[/i]: Transmitting (CIV), SOLGOV IFF
 [b]Notice[/b]: Solgov Transport Facility"}
 	map_z = list(Z_NAME_ALIAS_MISC)
-	initial_restricted_waypoints = list("Interferon" = list("interferon_hangar"), "Rokkaku-Dako" = list("dako_docking_hanger"))
+	initial_restricted_waypoints = list("Interferon" = list("interferon_hangar"), "Rokkaku-Dako" = list("dako_docking_hanger"), "Mercenary" = list("mercenary_base"))
 
 /obj/effect/overmap/visitable/sector/murkiki_space/distant_gateway/get_space_zlevels()
 	return list() //None!

@@ -28,8 +28,8 @@
 	economic_modifier = 7
 	pto_type = PTO_SCIENCE
 	outfit_type = /datum/decl/hierarchy/outfit/job/science/electrophysicist
-	access = list(ACCESS_TOX, ACCESS_TOX_STORAGE, ACCESS_RESEARCH, ACCESS_ELECTROPHYS)
-	minimal_access = list(ACCESS_TOX, ACCESS_TOX_STORAGE, ACCESS_RESEARCH, ACCESS_ELECTROPHYS)
+	access = list(ACCESS_TOX, ACCESS_TOX_STORAGE, ACCESS_RESEARCH, ACCESS_ELECTROPHYS, ACCESS_CONSTRUCTION)
+	minimal_access = list(ACCESS_TOX, ACCESS_TOX_STORAGE, ACCESS_RESEARCH, ACCESS_ELECTROPHYS, ACCESS_CONSTRUCTION)
 	alt_titles = list(
 		JOB_ALT_CIRCUIT_DESIGNER = /datum/alt_title/circuit_designer,
 		JOB_ALT_CIRCUIT_PROGRAMMER = /datum/alt_title/circuit_programmer,

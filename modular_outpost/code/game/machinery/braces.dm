@@ -3,7 +3,7 @@
 /obj/item/tool/crowbar/brace_jack
 	name = "maintenance jack"
 	desc = "A special crowbar that can be used to safely remove airlock braces from airlocks."
-	w_class = ITEMSIZE_SMALL
+	w_class = ITEMSIZE_NORMAL
 	icon = 'modular_outpost/icons/obj/tools.dmi'
 	icon_state = "maintenance_jack"
 	throwforce = 7

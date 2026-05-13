@@ -68,7 +68,7 @@
 		"clonescanner",
 		"transhuman_clonepod",
 		"transhuman_resleever",
-		"resleeving_control",
+		// "resleeving_control", // Outpost 21 edit - This board is restricted
 		"body_designer",
 		"clonecontrol",
 		"gene_scanner",

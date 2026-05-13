@@ -9,7 +9,10 @@
 
 	for(var/datum/modifier/M in modifiers) //Do this before space check in case we're hasted (and use max speed)
 		if(M.haste)
-			return HUMAN_LOWEST_SLOWDOWN // Per haste documentation 'ignore slowdown and move really fast'. Calling ..() here adds slowdown.
+			// Outpost 21 edit begin - Nerfs green slimes
+			// return HUMAN_LOWEST_SLOWDOWN // Per haste documentation 'ignore slowdown and move really fast'. Calling ..() here adds slowdown.
+			. -= 3
+			// Outpost 21 edit end
 		if(!isnull(M.slowdown))
 			. += M.slowdown
 
