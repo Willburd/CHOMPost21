@@ -10082,16 +10082,6 @@
 	},
 /turf/simulated/floor/plating/external/turfpack/muriki,
 /area/muriki/grounds/tramborder)
-"arS" = (
-/obj/structure/trailblazer/yellow,
-/obj/structure/railing/grey{
-	dir = 4
-	},
-/obj/structure/railing/grey{
-	dir = 1
-	},
-/turf/simulated/floor/plating/external/turfpack/muriki,
-/area/muriki/grounds/tramborder)
 "arT" = (
 /obj/structure/railing,
 /obj/structure/railing{
@@ -10102,25 +10092,6 @@
 	},
 /turf/simulated/floor/outdoors/rocks/turfpack/muriki,
 /area/mine/explored/muriki/river/hole)
-"arU" = (
-/obj/effect/floor_decal/steeldecal/steel_decals10{
-	dir = 6
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals10{
-	dir = 5
-	},
-/turf/simulated/floor/plating/external/turfpack/muriki,
-/area/muriki/grounds/tramborder)
-"arV" = (
-/obj/structure/trailblazer/yellow,
-/obj/structure/railing/grey{
-	dir = 8
-	},
-/obj/structure/railing/grey{
-	dir = 1
-	},
-/turf/simulated/floor/plating/external/turfpack/muriki,
-/area/muriki/grounds/tramborder)
 "arW" = (
 /obj/structure/fence{
 	dir = 4
@@ -14834,6 +14805,15 @@
 /obj/effect/zone_divider,
 /turf/simulated/floor/outdoors/sidewalk/slab/turfpack/muriki,
 /area/muriki/grounds/terraform)
+"aDH" = (
+/obj/effect/zone_divider,
+/obj/structure/dancepole{
+	name = "roof support";
+	pixel_x = -7;
+	pixel_y = 14
+	},
+/turf/simulated/floor/outdoors/sidewalk/slab/turfpack/muriki,
+/area/muriki/grounds/tramborder)
 "aDI" = (
 /obj/effect/zone_divider,
 /turf/simulated/floor/water/acidic/turfpack/muriki,
@@ -15355,6 +15335,15 @@
 /obj/structure/prop/rock/waterflat,
 /turf/simulated/floor/water/acidic/deep/turfpack/muriki,
 /area/mine/unexplored/muriki/valleyeast)
+"aFl" = (
+/obj/effect/zone_divider,
+/obj/structure/dancepole{
+	name = "roof support";
+	pixel_x = 7;
+	pixel_y = 14
+	},
+/turf/simulated/floor/outdoors/sidewalk/slab/turfpack/muriki,
+/area/muriki/grounds/tramborder)
 "aFm" = (
 /obj/structure/prop/rock/watersharp,
 /turf/simulated/floor/water/acidic/turfpack/muriki,
@@ -17477,6 +17466,13 @@
 /obj/structure/flora/rocks1,
 /turf/simulated/floor/plating/external/turfpack/muriki,
 /area/muriki/grounds/sec)
+"aNp" = (
+/obj/structure/sign/warning/high_voltage{
+	pixel_x = -32
+	},
+/obj/effect/zone_divider,
+/turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
+/area/muriki/grounds/tramborder)
 "aNq" = (
 /obj/structure/flora/smallbould,
 /turf/simulated/floor/outdoors/mud/turfpack/muriki,
@@ -18011,6 +18007,12 @@
 /obj/structure/prop/rock,
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
 /area/muriki/grounds/engi)
+"aPv" = (
+/obj/structure/railing/grey{
+	dir = 1
+	},
+/turf/simulated/floor/plating/external/turfpack/muriki,
+/area/muriki/grounds/tramborder)
 "aPw" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -19998,6 +20000,14 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/engineering_hallway)
+"aUo" = (
+/obj/structure/dancepole{
+	name = "roof support";
+	pixel_x = -7;
+	pixel_y = 14
+	},
+/turf/simulated/floor/outdoors/sidewalk/slab/turfpack/muriki,
+/area/muriki/grounds/tramborder)
 "aUp" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "0-2"
@@ -20119,6 +20129,24 @@
 /area/muriki/grounds/engi)
 "aUN" = (
 /turf/simulated/mineral/alt/ignore_mapgen/turfpack/muriki,
+/area/muriki/grounds/engi)
+"aUO" = (
+/obj/structure/dancepole{
+	name = "roof support";
+	pixel_x = 7;
+	pixel_y = 14
+	},
+/turf/simulated/floor/outdoors/sidewalk/slab/turfpack/muriki,
+/area/muriki/grounds/tramborder)
+"aUP" = (
+/obj/structure/trailblazer/blue,
+/turf/simulated/floor/outdoors/sidewalk/slab/turfpack/muriki,
+/area/muriki/grounds/tramborder)
+"aUQ" = (
+/obj/structure/railing/grey{
+	dir = 8
+	},
+/turf/simulated/floor/plating/external/turfpack/muriki,
 /area/muriki/grounds/engi)
 "aUZ" = (
 /obj/structure/dispenser/oxygen,
@@ -66819,6 +66847,11 @@
 	dir = 8
 	},
 /obj/structure/trailblazer/blue,
+/obj/structure/dancepole{
+	name = "roof support";
+	pixel_x = -7;
+	pixel_y = 14
+	},
 /turf/simulated/floor/plating/external/turfpack/muriki,
 /area/muriki/grounds/tramborder)
 "pRL" = (
@@ -87308,6 +87341,11 @@
 	dir = 4
 	},
 /obj/structure/trailblazer/blue,
+/obj/structure/dancepole{
+	name = "roof support";
+	pixel_x = 7;
+	pixel_y = 14
+	},
 /turf/simulated/floor/plating/external/turfpack/muriki,
 /area/muriki/grounds/tramborder)
 "wkJ" = (
@@ -119367,9 +119405,9 @@ aDx
 aDx
 aDx
 aOV
-aCt
-aCt
-nYp
+aCu
+aCu
+aNp
 aCt
 aCt
 aCQ
@@ -119526,13 +119564,13 @@ ara
 ara
 ara
 ara
+aOX
 ara
-ara
-ara
-aqr
+aOW
+aHB
 aHB
 apd
-aHB
+aqr
 aCu
 aiZ
 aII
@@ -119688,13 +119726,13 @@ ara
 ara
 ajG
 ara
-aOX
-ara
-aOW
+arI
+arI
+arI
 aqr
-aHB
-aHB
-aNS
+aqr
+aqr
+aqr
 aCu
 aqz
 aII
@@ -119850,15 +119888,15 @@ ara
 ara
 ara
 ara
-rzX
-ara
-ara
+arI
+asb
+arZ
+arQ
+arQ
+aiG
 aqr
-arS
-arQ
-arQ
-aDl
-arM
+aOI
+aIF
 aII
 aII
 sHp
@@ -120013,14 +120051,14 @@ arI
 arI
 arI
 arI
-arI
-arI
+asc
+arY
+arY
+arY
+aPv
 aqr
-arU
-arY
-arY
-aDm
-arM
+aCu
+aIF
 aII
 aII
 sHp
@@ -120175,14 +120213,14 @@ ara
 ara
 ara
 ara
-ara
-ara
+asc
+arY
+arY
+arY
+aPv
 aqr
-arU
-arY
-arY
-aDm
-arM
+aCu
+aIF
 aII
 aII
 sHp
@@ -120337,14 +120375,14 @@ ara
 ara
 ara
 ara
-ara
-ara
+asc
+arY
+arY
+arY
+aPv
 aqr
-arU
-arY
-arY
-aDm
-arM
+aCu
+aIF
 aII
 aII
 sHp
@@ -120498,15 +120536,15 @@ ara
 ara
 aPi
 ara
-ara
-ara
-ara
+rzX
+asd
+aUQ
+arR
+arR
+aiG
 aqr
-arV
-arR
-arR
-aDn
-arN
+aCu
+aiZ
 aII
 aII
 sHp
@@ -120663,10 +120701,10 @@ ara
 ara
 ara
 ara
+aHB
+aHB
+aHB
 aqr
-aHB
-aHB
-aHB
 aCu
 aIF
 aII
@@ -120825,10 +120863,10 @@ ara
 ara
 ara
 ara
-aqr
+aHB
 aHB
 ats
-aHB
+aqr
 aCu
 aIF
 aOC
@@ -120987,10 +121025,10 @@ ara
 ara
 ara
 ara
-aqr
+aHB
 aNS
 aHB
-aHB
+aqr
 aCu
 aIF
 aII
@@ -121149,10 +121187,10 @@ arI
 ajG
 ara
 ara
+aHB
+aHB
+aHB
 aqr
-aHB
-aHB
-aHB
 aCu
 aIF
 aII
@@ -121311,10 +121349,10 @@ ara
 arI
 ara
 ara
-aqr
 aHB
 aHB
 aNS
+aqr
 aCu
 aIF
 aII
@@ -121473,11 +121511,11 @@ ara
 ara
 ara
 ara
-aqr
-aqr
 aHB
 aHB
-aCu
+aUo
+aqr
+aDH
 aiZ
 aII
 aII
@@ -121636,8 +121674,8 @@ ara
 aOX
 ara
 aHB
-aqr
 aHB
+aqr
 atv
 aCu
 aIF
@@ -121798,8 +121836,8 @@ ara
 ara
 ara
 aHB
+aHB
 aqr
-aNS
 aHB
 aCu
 aIF
@@ -121960,8 +121998,8 @@ ara
 ara
 ara
 aNS
-aqr
 aHB
+aqr
 aOq
 aCu
 aIF
@@ -122122,8 +122160,8 @@ ara
 ara
 ara
 aHB
+aNS
 aqr
-aHB
 aHB
 aCu
 aIF
@@ -122284,8 +122322,8 @@ ara
 ara
 ara
 aHB
-aqr
 aHB
+aqr
 aHB
 aCu
 aIF
@@ -122446,8 +122484,8 @@ ara
 ara
 ara
 wLM
-aqr
 aHB
+aqr
 aHB
 aCu
 aiZ
@@ -122608,8 +122646,8 @@ ara
 ara
 aOX
 aOh
-aqr
 aHB
+aqr
 aHB
 aCu
 aIF
@@ -122770,8 +122808,8 @@ ara
 ara
 ara
 jMF
-aqr
 aHB
+aqr
 aHB
 aCu
 aiZ
@@ -122932,7 +122970,7 @@ ara
 ara
 fxo
 aqq
-aqr
+aqq
 aqr
 aHB
 aCu
@@ -123096,7 +123134,7 @@ fxo
 aIm
 cEY
 aqr
-aHB
+hZu
 aCu
 aIF
 aII
@@ -123257,9 +123295,9 @@ fxo
 aJk
 aIm
 cEY
+aUO
 aqr
-aqr
-aCu
+aFl
 aIF
 aII
 aII
@@ -125363,7 +125401,7 @@ ara
 ara
 aqq
 aqq
-ato
+aUP
 aJc
 aHI
 aIF
@@ -125849,9 +125887,9 @@ aDx
 aDx
 aDw
 aCu
-aCt
+aDH
 aqr
-aCu
+aDH
 aCR
 aCU
 aCU
@@ -127794,7 +127832,7 @@ kWi
 kWi
 aiw
 aqr
-ats
+ajX
 aCu
 aIF
 aII
@@ -127955,9 +127993,9 @@ jnX
 kWi
 kWi
 aiw
+aUO
 aqr
-aqr
-aCu
+aFl
 aIF
 aqQ
 aqQ

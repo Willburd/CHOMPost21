@@ -2681,13 +2681,6 @@
 	},
 /turf/simulated/floor/reinforced,
 /area/rnd/supermatter)
-"agd" = (
-/obj/structure/railing{
-	dir = 4
-	},
-/obj/effect/zone_divider,
-/turf/simulated/floor/outpost_roof/turfpack/muriki,
-/area/muriki/rooftop/engineering)
 "age" = (
 /obj/structure/railing{
 	dir = 4
@@ -5127,6 +5120,12 @@
 /obj/item/flashlight/glowstick,
 /turf/simulated/floor/wood,
 /area/library_conference_room)
+"amh" = (
+/obj/structure/sign/warning/falling{
+	pixel_x = 32
+	},
+/turf/simulated/open,
+/area/muriki/tramstation/cargeng)
 "ami" = (
 /obj/effect/shuttle_landmark/premade/airdrop/muriki_cent,
 /turf/simulated/open/muriki,
@@ -5260,9 +5259,6 @@
 /obj/structure/inflatable,
 /turf/simulated/floor/tiled/turfpack/muriki,
 /area/specialty/expie_clubhouse)
-"amH" = (
-/turf/simulated/wall/r_lead,
-/area/muriki/tramstation/cargeng)
 "amI" = (
 /obj/structure/cable/green{
 	icon_state = "32-2"
@@ -7815,14 +7811,6 @@
 /obj/effect/shuttle_landmark/premade/airdrop/muriki_northeast,
 /turf/simulated/open/muriki,
 /area/muriki/skyline/north)
-"aru" = (
-/obj/structure/sign/warning/ionizing,
-/turf/simulated/wall/r_lead,
-/area/muriki/tramstation/cargeng)
-"arv" = (
-/obj/structure/sign/signnew/radiation,
-/turf/simulated/wall/r_lead,
-/area/muriki/tramstation/cargeng)
 "arw" = (
 /obj/machinery/door/airlock/maintenance/engi{
 	name = "Engineering";
@@ -7839,7 +7827,7 @@
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/steel_ridged,
-/area/muriki/tramstation/cargeng)
+/area/rnd/supermatter)
 "arx" = (
 /turf/simulated/wall/r_wall,
 /area/rnd/workshop)
@@ -10079,6 +10067,65 @@
 "ave" = (
 /turf/simulated/wall/r_wall,
 /area/muriki/tramstation/civ)
+"avf" = (
+/obj/structure/railing,
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/machinery/power/grounding_rod/pre_mapped,
+/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/area/muriki/skyline/cent)
+"avg" = (
+/obj/structure/railing,
+/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/area/muriki/skyline/cent)
+"avh" = (
+/obj/structure/railing,
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/structure/trailblazer/blue,
+/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/area/muriki/skyline/cent)
+"avi" = (
+/obj/structure/catwalk,
+/obj/structure/railing,
+/obj/structure/sign/warning/acid{
+	pixel_x = 32
+	},
+/turf/simulated/open,
+/area/muriki/tramstation/cargeng)
+"avj" = (
+/obj/structure/railing,
+/obj/effect/zone_divider,
+/turf/simulated/floor/glass/reinforced/turfpack/muriki,
+/area/muriki/skyline/cent)
+"avk" = (
+/obj/structure/railing,
+/obj/effect/zone_divider,
+/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/area/muriki/skyline/cent)
+"avl" = (
+/obj/effect/zone_divider,
+/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/area/muriki/skyline/cent)
+"avm" = (
+/obj/effect/zone_divider,
+/turf/simulated/floor/glass/reinforced/turfpack/muriki,
+/area/muriki/skyline/cent)
+"avn" = (
+/obj/effect/zone_divider,
+/obj/structure/railing{
+	dir = 4
+	},
+/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/area/muriki/skyline/cent)
+"avo" = (
+/obj/structure/window/maintenance_panel{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/muriki/tramstation/cargeng)
 "avp" = (
 /obj/effect/floor_decal/corner/blue{
 	dir = 10
@@ -10097,6 +10144,54 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/patient_wing)
+"avq" = (
+/turf/simulated/floor/glass/reinforced/turfpack/muriki,
+/area/muriki/skyline/cent)
+"avr" = (
+/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/area/muriki/skyline/cent)
+"avs" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/area/muriki/skyline/cent)
+"avt" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/area/muriki/skyline/cent)
+"avu" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/turf/simulated/floor/glass/reinforced/turfpack/muriki,
+/area/muriki/skyline/cent)
+"avv" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/effect/zone_divider,
+/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/area/muriki/skyline/cent)
+"avw" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/machinery/power/grounding_rod/pre_mapped,
+/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/area/muriki/skyline/cent)
+"avx" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/structure/trailblazer/blue,
+/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/area/muriki/skyline/cent)
 "avy" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 4
@@ -10109,6 +10204,15 @@
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/medbreak)
+"avA" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/structure/railing{
+	dir = 4
+	},
+/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/area/muriki/skyline/cent)
 "avB" = (
 /obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/corner/purple{
@@ -17797,7 +17901,6 @@
 /obj/structure/railing{
 	dir = 4
 	},
-/obj/machinery/power/grounding_rod/pre_mapped,
 /turf/simulated/floor/outpost_roof/turfpack/muriki,
 /area/muriki/rooftop/engineering)
 "emU" = (
@@ -78171,7 +78274,7 @@ dPP
 dPP
 dPP
 dPP
-amH
+dPP
 ktJ
 ylT
 lgR
@@ -78333,7 +78436,7 @@ uaV
 aqU
 aav
 arH
-amH
+dPP
 oUl
 tKK
 qwL
@@ -78495,7 +78598,7 @@ asE
 asu
 asb
 arI
-aru
+tfG
 eFH
 ylT
 lgR
@@ -78657,7 +78760,7 @@ asG
 asv
 afd
 arJ
-arv
+aPK
 oUl
 ylT
 lgR
@@ -78981,7 +79084,7 @@ asH
 asx
 asd
 arL
-amH
+dPP
 oUl
 ylT
 lgR
@@ -79143,10 +79246,10 @@ aoZ
 qfN
 afu
 arM
-amH
+dPP
 oUl
-ylT
-lgR
+avi
+amh
 lgR
 lgR
 lgR
@@ -79305,8 +79408,8 @@ asI
 qfN
 ase
 arN
-amH
-fri
+dPP
+avo
 fri
 fri
 fri
@@ -79954,7 +80057,7 @@ apb
 asi
 oxg
 dPP
-acZ
+adN
 agb
 adJ
 rBk
@@ -80440,8 +80543,8 @@ asz
 asi
 oxg
 dPP
-eoF
-agd
+acZ
+agb
 emS
 rBk
 rBk
@@ -80602,8 +80705,8 @@ oxg
 oxg
 oxg
 dPP
-rBk
-afF
+avq
+avj
 rBk
 rBk
 rBk
@@ -80764,8 +80867,8 @@ dPP
 dPP
 dPP
 dPP
-rBk
-afF
+avr
+avk
 rBk
 rBk
 rBk
@@ -80925,9 +81028,9 @@ rBk
 rBk
 rBk
 rBk
-rBk
-rBk
-afF
+avt
+avr
+avk
 rBk
 rBk
 rBk
@@ -81087,9 +81190,9 @@ rBk
 rBk
 rBk
 rBk
-rBk
-rBk
-afF
+avt
+avr
+avk
 rBk
 rBk
 rBk
@@ -81249,9 +81352,9 @@ rBk
 rBk
 rBk
 rBk
-rBk
-rBk
-afF
+avu
+avq
+avj
 rBk
 rBk
 rBk
@@ -81411,9 +81514,9 @@ rBk
 rBk
 rBk
 rBk
-rBk
-rBk
-afF
+avt
+avr
+avk
 rBk
 rBk
 rBk
@@ -81573,9 +81676,9 @@ afF
 afF
 afF
 afF
-afF
-afF
-afF
+avv
+avl
+avk
 afF
 afF
 afF
@@ -81735,9 +81838,9 @@ rBk
 rBk
 rBk
 rBk
-rBk
-rBk
-afF
+avt
+avr
+avk
 rBk
 rBk
 rBk
@@ -81897,9 +82000,9 @@ rBk
 rBk
 rBk
 rBk
-rBk
-rBk
-afF
+avu
+avq
+avj
 rBk
 rBk
 rBk
@@ -82059,9 +82162,9 @@ rBk
 rBk
 rBk
 rBk
-rBk
-rBk
-afF
+avt
+avr
+avk
 rBk
 rBk
 rBk
@@ -82221,9 +82324,9 @@ rBk
 rBk
 rBk
 rBk
-rBk
-rBk
-afF
+avt
+avr
+avk
 rBk
 rBk
 rBk
@@ -82383,9 +82486,9 @@ rBk
 rBk
 rBk
 rBk
-rBk
-rBk
-afF
+avt
+avr
+avk
 rBk
 rBk
 rBk
@@ -82545,9 +82648,9 @@ rBk
 rBk
 rBk
 rBk
-rBk
-rBk
-afF
+avt
+avr
+avk
 rBk
 rBk
 rBk
@@ -82707,9 +82810,9 @@ rBk
 rBk
 rBk
 rBk
-rBk
-rBk
-afF
+avt
+avr
+avk
 rBk
 rBk
 rBk
@@ -82869,9 +82972,9 @@ rBk
 rBk
 rBk
 rBk
-rBk
-rBk
-afF
+avt
+avr
+avk
 rBk
 rBk
 rBk
@@ -83031,9 +83134,9 @@ rBk
 rBk
 rBk
 rBk
-rBk
-rBk
-afF
+avu
+avq
+avj
 rBk
 rBk
 rBk
@@ -83193,9 +83296,9 @@ rBk
 rBk
 rBk
 rBk
-rBk
-rBk
-afF
+avt
+avr
+avk
 rBk
 rBk
 rBk
@@ -83355,9 +83458,9 @@ rBk
 rBk
 rBk
 rBk
-rBk
-rBk
-afF
+avt
+avr
+avk
 rBk
 rBk
 rBk
@@ -83517,9 +83620,9 @@ rBk
 rBk
 rBk
 rBk
-rBk
-rBk
-afF
+avt
+avr
+avk
 rBk
 rBk
 rBk
@@ -83679,9 +83782,9 @@ rBk
 rBk
 rBk
 rBk
-rBk
-rBk
-afF
+avt
+avr
+avk
 rBk
 rBk
 rBk
@@ -83841,9 +83944,9 @@ rBk
 rBk
 rBk
 rBk
-rBk
-rBk
-afF
+avt
+avr
+avk
 rBk
 rBk
 rBk
@@ -84003,9 +84106,9 @@ rBk
 rBk
 rBk
 rBk
-rBk
-rBk
-afF
+avt
+avr
+avk
 rBk
 rBk
 rBk
@@ -84165,9 +84268,9 @@ rBk
 rBk
 rBk
 rBk
-rBk
-rBk
-afF
+avu
+avq
+avj
 rBk
 rBk
 rBk
@@ -84327,9 +84430,9 @@ rBk
 rBk
 rBk
 rBk
-rBk
-rBk
-afF
+avt
+avr
+avk
 rBk
 rBk
 rBk
@@ -84489,9 +84592,9 @@ rBk
 rBk
 rBk
 rBk
-rBk
-rBk
-afF
+avt
+avr
+avk
 rBk
 rBk
 rBk
@@ -84651,9 +84754,9 @@ rBk
 rBk
 rBk
 rBk
-rBk
-rBk
-afF
+avt
+avr
+avk
 rBk
 rBk
 rBk
@@ -84813,9 +84916,9 @@ rBk
 rBk
 rBk
 rBk
-rBk
-rBk
-afF
+avt
+avr
+avk
 rBk
 rBk
 rBk
@@ -84975,9 +85078,9 @@ rBk
 rBk
 rBk
 rBk
-rBk
-rBk
-afF
+avt
+avr
+avk
 rBk
 rBk
 rBk
@@ -85137,9 +85240,9 @@ rBk
 rBk
 rBk
 rBk
-rBk
-rBk
-afF
+avt
+avr
+avk
 rBk
 rBk
 rBk
@@ -85299,9 +85402,9 @@ rBk
 rBk
 rBk
 rBk
-rBk
-rBk
-afF
+avu
+avq
+avj
 rBk
 rBk
 rBk
@@ -85461,9 +85564,9 @@ rBk
 rBk
 rBk
 rBk
-rBk
-rBk
-afF
+avt
+avr
+avk
 rBk
 rBk
 rBk
@@ -85623,9 +85726,9 @@ rBk
 rBk
 rBk
 rBk
-rBk
-rBk
-afF
+avt
+avr
+avk
 rBk
 rBk
 rBk
@@ -85785,9 +85888,9 @@ rBk
 rBk
 rBk
 rBk
-rBk
-rBk
-afF
+avt
+avr
+avk
 rBk
 rBk
 rBk
@@ -85947,9 +86050,9 @@ rBk
 rBk
 rBk
 rBk
-rBk
-rBk
-afF
+avt
+avr
+avk
 rBk
 rBk
 rBk
@@ -86109,9 +86212,9 @@ rBk
 rBk
 rBk
 rBk
-rBk
-rBk
-afF
+avt
+avr
+avk
 rBk
 rBk
 rBk
@@ -86271,9 +86374,9 @@ rBk
 rBk
 rBk
 rBk
-rBk
-rBk
-afF
+avw
+avr
+avk
 rBk
 rBk
 rBk
@@ -86433,9 +86536,9 @@ rBk
 rBk
 rBk
 rBk
-rBk
-rBk
-afF
+avu
+avq
+avj
 rBk
 rBk
 rBk
@@ -86595,9 +86698,9 @@ rBk
 rBk
 rBk
 rBk
-rBk
-rBk
-afF
+avu
+avq
+avj
 rBk
 rBk
 rBk
@@ -86757,9 +86860,9 @@ rBk
 rBk
 rBk
 rBk
-rBk
-rBk
-afF
+avu
+avq
+avj
 rBk
 rBk
 rBk
@@ -86919,9 +87022,9 @@ rBk
 rBk
 rBk
 rBk
-rBk
-rBk
-afF
+avu
+avq
+avj
 rBk
 rBk
 rBk
@@ -87081,9 +87184,9 @@ rBk
 rBk
 rBk
 rBk
-rBk
-rBk
-afF
+avu
+avq
+avj
 rBk
 rBk
 rBk
@@ -87243,9 +87346,9 @@ rBk
 rBk
 rBk
 rBk
-rBk
-rBk
-afF
+avu
+avq
+avj
 rBk
 rBk
 rBk
@@ -87405,9 +87508,9 @@ rBk
 rBk
 rBk
 rBk
-rBk
-rBk
-afF
+avu
+avq
+avj
 rBk
 rBk
 rBk
@@ -87567,9 +87670,9 @@ rBk
 rBk
 rBk
 rBk
-rBk
-rBk
-afF
+avu
+avq
+avj
 rBk
 rBk
 rBk
@@ -87729,9 +87832,9 @@ rBk
 rBk
 rBk
 rBk
-rBk
-rBk
-afF
+avt
+avr
+avk
 rBk
 rBk
 rBk
@@ -87891,9 +87994,9 @@ rBk
 rBk
 rBk
 rBk
-rBk
-rBk
-afF
+avt
+avr
+avk
 rBk
 rBk
 rBk
@@ -88053,9 +88156,9 @@ afF
 afF
 afF
 afF
-afF
-afF
-afF
+avv
+avl
+avk
 afF
 afF
 afF
@@ -88215,9 +88318,9 @@ rBk
 rBk
 rBk
 rBk
-rBk
-rBk
-afF
+avt
+avr
+avk
 rBk
 rBk
 rBk
@@ -88377,9 +88480,9 @@ rBk
 rBk
 rBk
 rBk
-rBk
-rBk
-afF
+avt
+avr
+avk
 rBk
 rBk
 rBk
@@ -88539,9 +88642,9 @@ rBk
 rBk
 rBk
 rBk
-rBk
-rBk
-afF
+avt
+avr
+avk
 rBk
 rBk
 rBk
@@ -88701,9 +88804,9 @@ rBk
 rBk
 rBk
 rBk
-rBk
-rBk
-afF
+avu
+avq
+avj
 rBk
 rBk
 rBk
@@ -88863,9 +88966,9 @@ rBk
 rBk
 rBk
 rBk
-rBk
-rBk
-afF
+avt
+avr
+avk
 rBk
 rBk
 rBk
@@ -89025,9 +89128,9 @@ rBk
 rBk
 rBk
 rBk
-rBk
-rBk
-afF
+avt
+avr
+avk
 rBk
 rBk
 rBk
@@ -89187,9 +89290,9 @@ rBk
 rBk
 rBk
 rBk
-rBk
-rBk
-afF
+avt
+avr
+avk
 rBk
 rBk
 rBk
@@ -89349,9 +89452,9 @@ rBk
 rBk
 rBk
 rBk
-rBk
-rBk
-afF
+avt
+avr
+avk
 rBk
 rBk
 rBk
@@ -89511,9 +89614,9 @@ rBk
 rBk
 rBk
 rBk
-rBk
-rBk
-afF
+avt
+avr
+avk
 rBk
 rBk
 rBk
@@ -89673,9 +89776,9 @@ rBk
 rBk
 rBk
 rBk
-rBk
-rBk
-afF
+avt
+avr
+avk
 rBk
 rBk
 rBk
@@ -89835,9 +89938,9 @@ rBk
 rBk
 rBk
 rBk
-rBk
-rBk
-afF
+avu
+avq
+avj
 rBk
 rBk
 rBk
@@ -89997,9 +90100,9 @@ rBk
 rBk
 rBk
 rBk
-rBk
-rBk
-afF
+avt
+avr
+avk
 rBk
 rBk
 rBk
@@ -90159,9 +90262,9 @@ rBk
 rBk
 rBk
 rBk
-rBk
-rBk
-afF
+avt
+avr
+avk
 rBk
 rBk
 rBk
@@ -90321,9 +90424,9 @@ rBk
 rBk
 rBk
 rBk
-rBk
-rBk
-afF
+avt
+avr
+avk
 rBk
 rBk
 rBk
@@ -90483,9 +90586,9 @@ rBk
 rBk
 rBk
 rBk
-rBk
-rBk
-afF
+avt
+avr
+avk
 rBk
 rBk
 rBk
@@ -90645,9 +90748,9 @@ rBk
 rBk
 rBk
 rBk
-rBk
-rBk
-afF
+avt
+avr
+avk
 rBk
 rBk
 rBk
@@ -90807,9 +90910,9 @@ rBk
 rBk
 rBk
 rBk
-rBk
-rBk
-afF
+avt
+avr
+avk
 rBk
 rBk
 rBk
@@ -90969,9 +91072,9 @@ rBk
 rBk
 rBk
 rBk
-rBk
-rBk
-afF
+avu
+avq
+avj
 rBk
 rBk
 rBk
@@ -91131,9 +91234,9 @@ rBk
 rBk
 rBk
 rBk
-rBk
-rBk
-afF
+avt
+avr
+avk
 rBk
 rBk
 rBk
@@ -91293,9 +91396,9 @@ rBk
 rBk
 rBk
 rBk
-rBk
-rBk
-afF
+avt
+avr
+avk
 rBk
 rBk
 rBk
@@ -91455,9 +91558,9 @@ rBk
 rBk
 rBk
 rBk
-rBk
-rBk
-afF
+avt
+avr
+avk
 rBk
 rBk
 rBk
@@ -91617,9 +91720,9 @@ rBk
 rBk
 rBk
 rBk
-rBk
-rBk
-afF
+avu
+avq
+avj
 rBk
 rBk
 rBk
@@ -91779,9 +91882,9 @@ rBk
 rBk
 rBk
 rBk
-rBk
-rBk
-afF
+avt
+avr
+avk
 rBk
 rBk
 rBk
@@ -91941,9 +92044,9 @@ rBk
 rBk
 rBk
 rBk
-rBk
-rBk
-afF
+avt
+avr
+avk
 rBk
 rBk
 rBk
@@ -92103,9 +92206,9 @@ rBk
 rBk
 rBk
 rBk
-rBk
-rBk
-afF
+avt
+avr
+avk
 rBk
 rBk
 rBk
@@ -92265,9 +92368,9 @@ rBk
 rBk
 rBk
 rBk
-rBk
-rBk
-afF
+avu
+avq
+avj
 rBk
 rBk
 rBk
@@ -92426,11 +92529,11 @@ rBk
 rBk
 rBk
 rBk
-rBk
-rBk
-rBk
-afF
-rBk
+avx
+avr
+avr
+avl
+avf
 rBk
 rBk
 rBk
@@ -92588,11 +92691,11 @@ rBk
 rBk
 rBk
 rBk
-rBk
-rBk
-rBk
-afF
-rBk
+avt
+avq
+avq
+avm
+avg
 rBk
 rBk
 rBk
@@ -92750,11 +92853,11 @@ rBk
 rBk
 rBk
 rBk
-rBk
-rBk
-rBk
-afF
-rBk
+avt
+avr
+avr
+avl
+avg
 rBk
 rBk
 rBk
@@ -92912,11 +93015,11 @@ rBk
 rBk
 rBk
 rBk
-rBk
-rBk
-rBk
-afF
-rBk
+avt
+avr
+avr
+avl
+avg
 rBk
 rBk
 rBk
@@ -93074,11 +93177,11 @@ rBk
 rBk
 rBk
 rBk
-rBk
-rBk
-rBk
-afF
-rBk
+avt
+avq
+avq
+avm
+avg
 rBk
 rBk
 rBk
@@ -93236,11 +93339,11 @@ rBk
 rBk
 rBk
 rBk
-rBk
-rBk
-rBk
-afF
-rBk
+avA
+avs
+avs
+avn
+avh
 rBk
 rBk
 rBk

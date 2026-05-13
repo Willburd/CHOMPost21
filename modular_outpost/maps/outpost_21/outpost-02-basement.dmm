@@ -1834,6 +1834,11 @@
 	},
 /turf/simulated/floor/bluegrid/airless,
 /area/medical/voxlab/airgap)
+"adV" = (
+/obj/structure/catwalk,
+/obj/item/clothing/head/cone,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/cargo)
 "adX" = (
 /obj/structure/disposalpipe/segment{
 	dir = 2;
@@ -113697,7 +113702,7 @@ bMZ
 bMZ
 bMZ
 bMZ
-bMZ
+adu
 adu
 chS
 bLx
@@ -113859,9 +113864,9 @@ bMZ
 bMZ
 bMZ
 bMZ
-bMZ
 adu
 cwI
+bLx
 clv
 bYI
 bge
@@ -114021,8 +114026,8 @@ bMZ
 bMZ
 bMZ
 bMZ
-bMZ
 adu
+bLx
 adu
 bLx
 adu
@@ -114177,9 +114182,7 @@ bLx
 adu
 bMZ
 bMZ
-bMZ
-bMZ
-bMZ
+bge
 bge
 bge
 bge
@@ -114187,6 +114190,8 @@ bge
 bge
 bge
 cwH
+bge
+bge
 bge
 bge
 cjO
@@ -114339,9 +114344,6 @@ cgT
 adu
 bMZ
 bMZ
-bMZ
-bMZ
-bMZ
 bge
 cka
 cjZ
@@ -114350,7 +114352,10 @@ ckj
 cpV
 cjI
 cjI
+cjI
+cjI
 cpV
+cjI
 cjP
 cjI
 bZb
@@ -114501,9 +114506,6 @@ adu
 adu
 bMZ
 bMZ
-bMZ
-bMZ
-bMZ
 bge
 cka
 cjZ
@@ -114512,7 +114514,10 @@ cjI
 cpW
 cjI
 cjI
+cjI
+cjI
 cpW
+cjI
 cjP
 cjI
 cbf
@@ -114663,9 +114668,6 @@ adu
 adu
 bMZ
 bMZ
-bMZ
-bMZ
-bMZ
 bge
 cka
 cjZ
@@ -114673,8 +114675,11 @@ cjY
 cjW
 cpV
 cpX
-cjI
+adV
+aQg
+adV
 cpV
+cjI
 cjP
 ckb
 bPC
@@ -114825,9 +114830,9 @@ cgU
 adu
 bMZ
 bMZ
-bMZ
-bMZ
-bMZ
+bge
+bge
+bge
 bge
 bge
 bge

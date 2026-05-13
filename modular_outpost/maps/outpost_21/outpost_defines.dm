@@ -437,9 +437,9 @@
 		"Mining Trawler" = list("outpost_trawler_pad"),
 		"Security Carrier" = list("outpost_security_hangar"),
 		"Medical Rescue" = list("outpost_medical_hangar"),
-		"Interferon" = list("airdrop_muriki_central", "airdrop_muriki_southeast"),
-		"Rokkaku-Dako" = list("dako_airdrop_muriki_central", "outpost_security_hangar", "outpost_security_hangar", "airdrop_muriki_central", "airdrop_muriki_southeast", "airdrop_muriki_southwest", "airdrop_muriki_northeast", "airdrop_muriki_northwest"),
-		"Mercenary" = list("airdrop_muriki_central", "airdrop_muriki_southeast", "airdrop_muriki_southwest", "airdrop_muriki_northeast", "airdrop_muriki_northwest"))
+		"Interferon" = list("airdrop_muriki_central", "lake_muriki_southeast"),
+		"Rokkaku-Dako" = list("dako_airdrop_muriki_central", "outpost_security_hangar", "outpost_security_hangar", "airdrop_muriki_central", "lake_muriki_southeast", "airdrop_muriki_southwest", "airdrop_muriki_northeast", "airdrop_muriki_northwest"),
+		"Mercenary" = list("airdrop_muriki_central", "lake_muriki_southeast", "airdrop_muriki_southwest", "airdrop_muriki_northeast", "airdrop_muriki_northwest"))
 	//Despite not being in the multi-z complex, these levels are part of the overmap sector
 	extra_z_levels = list()
 

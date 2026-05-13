@@ -4,11 +4,11 @@
 	base_turf = /turf/simulated/open/muriki
 	base_area = /area/muriki/skyline/cent
 
-/obj/effect/shuttle_landmark/premade/airdrop/muriki_southeast
-	name = "ES Outpost 21 Airdrop South East"
-	landmark_tag = "airdrop_muriki_southeast"
-	base_turf = /turf/simulated/open/muriki
-	base_area = /area/muriki/skyline/south
+/obj/effect/shuttle_landmark/premade/airdrop/muriki_southeast // This is a lake landing now
+	name = "ES Outpost 21 South East Lake"
+	landmark_tag = "lake_muriki_southeast"
+	base_turf = /turf/simulated/floor/water/acidic/deep/turfpack/muriki
+	base_area = /area/mine/unexplored/muriki/valleyeast
 
 /obj/effect/shuttle_landmark/premade/airdrop/muriki_southwest
 	name = "ES Outpost 21 Airdrop South West"
