@@ -13,6 +13,7 @@ GLOBAL_DATUM(synxes, /datum/antagonist/synx)
 	antag_sound = 'sound/rakshasa/Breath1.ogg'
 	role_type = BE_ALIEN
 	antag_indicator = "brainworm"
+	landmark_id = "Synx"
 	flags = ANTAG_OVERRIDE_MOB | ANTAG_RANDSPAWN | ANTAG_OVERRIDE_JOB | ANTAG_VOTABLE | ANTAG_CHOOSE_NAME
 	victory_text = "Synx win - more later"
 	loss_text = "Synx lost - more later!"
