@@ -13,6 +13,7 @@ GLOBAL_DATUM(chus, /datum/antagonist/chu)
 	antag_sound = 'sound/voice/hiss2.ogg'
 	role_type = BE_ALIEN
 	antag_indicator = "chuinfestation"
+	landmark_id = "Chu"
 	flags = ANTAG_OVERRIDE_MOB | ANTAG_RANDSPAWN | ANTAG_OVERRIDE_JOB | ANTAG_VOTABLE | ANTAG_IMPLANT_IMMUNE
 	victory_text = "Chu win - more later"
 	loss_text = "Chu lost - more later!"

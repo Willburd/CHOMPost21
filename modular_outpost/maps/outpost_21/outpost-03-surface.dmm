@@ -10082,6 +10082,10 @@
 	},
 /turf/simulated/floor/plating/external/turfpack/muriki,
 /area/muriki/grounds/tramborder)
+"arS" = (
+/obj/structure/catwalk,
+/turf/simulated/floor,
+/area/maintenance/engi_engine)
 "arT" = (
 /obj/structure/railing,
 /obj/structure/railing{
@@ -10092,6 +10096,18 @@
 	},
 /turf/simulated/floor/outdoors/rocks/turfpack/muriki,
 /area/mine/explored/muriki/river/hole)
+"arU" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/machinery/door/airlock/maintenance/engi{
+	name = "Engineering Substation"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/maintenance/engi_engine)
+"arV" = (
+/obj/machinery/floodlight,
+/obj/structure/catwalk,
+/turf/simulated/floor,
+/area/maintenance/engi_engine)
 "arW" = (
 /obj/structure/fence{
 	dir = 4
@@ -11910,6 +11926,7 @@
 	icon_state = "1-2"
 	},
 /obj/random/junk,
+/obj/structure/catwalk,
 /turf/simulated/floor,
 /area/maintenance/engi_engine)
 "awb" = (
@@ -20148,6 +20165,31 @@
 	},
 /turf/simulated/floor/plating/external/turfpack/muriki,
 /area/muriki/grounds/engi)
+"aUR" = (
+/obj/machinery/floodlight,
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/obj/structure/catwalk,
+/turf/simulated/floor,
+/area/maintenance/engi_engine)
+"aUS" = (
+/obj/structure/disposalpipe/up{
+	dir = 2
+	},
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "16-0"
+	},
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/structure/railing,
+/turf/simulated/floor,
+/area/maintenance/engi_engine)
 "aUZ" = (
 /obj/structure/dispenser/oxygen,
 /obj/effect/floor_decal/corner/brown{
@@ -22162,6 +22204,10 @@
 /obj/structure/cable/green{
 	icon_state = "1-4"
 	},
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/machinery/light/small,
 /turf/simulated/floor,
 /area/maintenance/engi_engine)
 "byA" = (
@@ -61146,6 +61192,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
+/obj/structure/catwalk,
 /turf/simulated/floor,
 /area/maintenance/engi_engine)
 "nVh" = (
@@ -63964,6 +64011,9 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "2-8"
+	},
+/obj/structure/railing{
+	dir = 1
 	},
 /turf/simulated/floor,
 /area/maintenance/engi_engine)
@@ -69516,17 +69566,13 @@
 /turf/simulated/floor/tiled,
 /area/maintenance/disposal)
 "qIi" = (
-/obj/structure/disposalpipe/up{
-	dir = 2
+/obj/structure/ladder/up,
+/obj/structure/catwalk,
+/obj/structure/cable/green{
+	icon_state = "4-8"
 	},
 /obj/structure/cable/green{
 	icon_state = "2-8"
-	},
-/obj/structure/cable/green{
-	icon_state = "0-8"
-	},
-/obj/structure/cable/green{
-	icon_state = "16-0"
 	},
 /turf/simulated/floor,
 /area/maintenance/engi_engine)
@@ -70579,14 +70625,15 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/kitchen)
 "qZf" = (
-/obj/structure/disposalpipe/segment,
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/obj/machinery/light/small{
-	dir = 4
-	},
 /obj/random/junk,
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/obj/structure/catwalk,
 /turf/simulated/floor,
 /area/maintenance/engi_engine)
 "qZv" = (
@@ -71891,13 +71938,6 @@
 "rxd" = (
 /turf/simulated/wall,
 /area/muriki/bathroom/bridge)
-"rxn" = (
-/obj/machinery/floodlight,
-/obj/effect/floor_decal/corner/orange{
-	dir = 9
-	},
-/turf/simulated/floor/tiled,
-/area/hallway/secondary/engineering_hallway)
 "rxp" = (
 /obj/structure/bed/chair/wheelchair,
 /obj/machinery/light{
@@ -76978,7 +77018,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/window/maintenance_panel,
-/turf/simulated/floor,
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/engi_engine)
 "tet" = (
 /obj/structure/cable/green{
@@ -115010,10 +115050,10 @@ aeW
 dDO
 pKs
 tyl
-gjV
-gjV
-gjV
-gjV
+aUS
+aUR
+arV
+arS
 oRx
 tel
 txF
@@ -115172,12 +115212,12 @@ oNG
 pno
 pMi
 tyl
-krN
-krN
-krN
-krN
-krN
-krN
+gjV
+gjV
+gjV
+arU
+gjV
+gjV
 ash
 ePc
 ukV
@@ -115336,8 +115376,8 @@ pOP
 tyl
 krN
 rdE
-rxn
 qtk
+blU
 sEN
 qtk
 tyd

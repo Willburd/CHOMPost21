@@ -1839,6 +1839,10 @@
 /obj/item/clothing/head/cone,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/cargo)
+"adW" = (
+/obj/effect/landmark/late_antag/synx,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/spine/waste)
 "adX" = (
 /obj/structure/disposalpipe/segment{
 	dir = 2;
@@ -1856,6 +1860,19 @@
 /obj/effect/catwalk_plated,
 /turf/simulated/floor/plating,
 /area/crew_quarters/recreation_area_hallway)
+"adY" = (
+/obj/effect/landmark/late_antag/borer,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/spine/waste)
+"adZ" = (
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/effect/landmark/late_antag/chu,
+/turf/simulated/floor/tiled/milspec/raised,
+/area/muriki/crew/arcade/lasertagstore)
 "aea" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4;
@@ -4448,6 +4465,7 @@
 /obj/structure/sign/warning/fire{
 	pixel_x = 32
 	},
+/obj/effect/landmark/late_antag/chu,
 /turf/simulated/floor/plating,
 /area/rnd/xenobiology/burn)
 "aiR" = (
@@ -5017,6 +5035,7 @@
 	dir = 4
 	},
 /obj/structure/catwalk,
+/obj/effect/landmark/late_antag/borer,
 /turf/simulated/floor/plating,
 /area/rnd/xenobiology/burn)
 "akc" = (
@@ -13959,9 +13978,11 @@
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 8
 	},
+/obj/effect/landmark/late_antag/chu,
 /turf/simulated/floor/tiled/techfloor,
 /area/muriki/atmos/voxdump)
 "aBR" = (
+/obj/effect/landmark/late_antag/borer,
 /turf/simulated/floor/tiled/techfloor,
 /area/muriki/atmos/voxdump)
 "aBS" = (
@@ -14526,6 +14547,7 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
+/obj/effect/landmark/late_antag/synx,
 /turf/simulated/floor/tiled/techfloor,
 /area/muriki/atmos/voxdump)
 "aDd" = (
@@ -26234,6 +26256,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
 	},
+/obj/effect/landmark/late_antag/synx,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/muriki/crew/arcade/lasertagstore)
 "aZv" = (
@@ -26460,6 +26483,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/effect/landmark/late_antag/borer,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/muriki/crew/arcade/lasertagstore)
 "aZR" = (
@@ -40376,7 +40400,6 @@
 /area/muriki/crew/glass)
 "bzi" = (
 /obj/effect/floor_decal/borderfloor/corner,
-/obj/effect/landmark/late_antag/chu,
 /turf/simulated/floor/tiled/steel,
 /area/muriki/crew/glass)
 "bzj" = (
@@ -52578,7 +52601,6 @@
 /obj/structure/railing{
 	flags = null
 	},
-/obj/effect/landmark/late_antag/chu,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/eng)
 "bYs" = (
@@ -52970,7 +52992,6 @@
 /obj/structure/railing{
 	dir = 1
 	},
-/obj/effect/landmark/late_antag/synx,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/engineering/coreproctunnel)
 "bZk" = (
@@ -54512,13 +54533,6 @@
 /obj/effect/landmark/hostile_xenobio,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/civ/north)
-"ccS" = (
-/obj/effect/landmark/late_antag/chu,
-/obj/structure/railing{
-	dir = 1
-	},
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/wastedisposalnear)
 "ccT" = (
 /obj/effect/landmark/step_trap,
 /turf/simulated/floor/plating/turfpack/muriki,
@@ -54802,14 +54816,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/engineering/trammaint)
-"cdJ" = (
-/obj/effect/landmark/late_antag/synx,
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/civ/west)
-"cdK" = (
-/obj/effect/landmark/late_antag/chu,
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/civ/west)
 "cdL" = (
 /turf/simulated/mineral/alt/ignore_cavegen/turfpack/muriki,
 /area/maintenance/civ/east)
@@ -55305,10 +55311,6 @@
 /obj/structure/trash_pile,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/spine/waste)
-"cfe" = (
-/obj/effect/landmark/hostile_xenobio,
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/spine/waste)
 "cff" = (
 /obj/effect/landmark/event_spawn/maintpred,
 /turf/simulated/floor/plating/turfpack/muriki,
@@ -55330,7 +55332,6 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/maintenance/int,
-/obj/effect/landmark/step_trap,
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/maintenance/spine/waste)
 "cfi" = (
@@ -55411,14 +55412,6 @@
 "cfs" = (
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/maintenance/cargo)
-"cft" = (
-/obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
-	},
-/obj/effect/landmark/late_antag/chu,
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/spine/waste)
 "cfu" = (
 /obj/structure/trash_pile,
 /turf/simulated/floor/plating,
@@ -55441,9 +55434,7 @@
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/cargo)
 "cfz" = (
-/obj/effect/landmark{
-	name = "spiderspawn"
-	},
+/obj/effect/landmark/late_antag/borer,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/cargo)
 "cfA" = (
@@ -55959,10 +55950,6 @@
 /area/maintenance/atmos_control)
 "cgT" = (
 /obj/effect/landmark/redspaceexit,
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/atmos_control)
-"cgU" = (
-/obj/effect/landmark/late_antag/chu,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/atmos_control)
 "cgV" = (
@@ -70689,7 +70676,6 @@
 /turf/simulated/floor/tiled/steel,
 /area/hallway/muriki/dorm)
 "dJR" = (
-/obj/effect/landmark/late_antag/synx,
 /obj/structure/toilet,
 /obj/machinery/light/small{
 	dir = 1
@@ -83198,7 +83184,6 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay2)
 "stx" = (
-/obj/effect/landmark/late_antag/synx,
 /obj/structure/urinal{
 	dir = 8;
 	pixel_x = 32
@@ -85278,10 +85263,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/incinerator)
-"vfE" = (
-/obj/effect/landmark/late_antag/synx,
-/turf/simulated/floor/tiled/steel,
-/area/muriki/crew/glass)
 "vgy" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -92856,7 +92837,7 @@ aLS
 kMh
 byK
 bDg
-ccS
+cNd
 byK
 aIg
 byK
@@ -100597,9 +100578,9 @@ cMK
 kMh
 ccU
 cfj
-cfe
 aSa
-aSa
+adW
+cfj
 kMh
 cyX
 cyX
@@ -100761,7 +100742,7 @@ ccU
 aSa
 cff
 ckn
-aSa
+adW
 kMh
 cyX
 cIa
@@ -100923,7 +100904,7 @@ kMh
 cfk
 cfg
 ceZ
-aSa
+adY
 kMh
 cyX
 cyX
@@ -102051,7 +102032,7 @@ kMh
 kMh
 asY
 kMh
-cft
+aRr
 clc
 kMh
 aIY
@@ -114826,7 +114807,7 @@ cIA
 adu
 bLp
 adu
-cgU
+bLx
 adu
 bMZ
 bMZ
@@ -135606,7 +135587,7 @@ aOU
 cnU
 vka
 cnU
-cdJ
+cov
 cnU
 vka
 vka
@@ -135768,7 +135749,7 @@ bRW
 cnU
 vka
 cnU
-cdK
+cov
 cnU
 vka
 vka
@@ -143067,7 +143048,7 @@ bwi
 bwT
 bxw
 byr
-vfE
+bzh
 bAb
 pig
 fUK
@@ -145780,7 +145761,7 @@ aYn
 aYN
 aZu
 aZQ
-bam
+adZ
 bam
 bbE
 bci

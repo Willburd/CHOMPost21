@@ -20,6 +20,10 @@
 	name = "Zombie - Lateload"
 	antag_id = MODE_ZOMBIE
 
+/obj/effect/landmark/late_antag/borer
+	name = "Borer - Lateload"
+	antag_id = MODE_BORER
+
 /obj/effect/landmark/redspacemonsterspawn
 	name = "redmonster"
 	delete_me = TRUE

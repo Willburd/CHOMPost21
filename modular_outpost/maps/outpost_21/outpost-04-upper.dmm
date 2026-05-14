@@ -2681,6 +2681,10 @@
 	},
 /turf/simulated/floor/reinforced,
 /area/rnd/supermatter)
+"agd" = (
+/obj/structure/ladder,
+/turf/simulated/floor,
+/area/maintenance/engineering)
 "age" = (
 /obj/structure/railing{
 	dir = 4
@@ -5259,6 +5263,18 @@
 /obj/structure/inflatable,
 /turf/simulated/floor/tiled/turfpack/muriki,
 /area/specialty/expie_clubhouse)
+"amH" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/effect/floor_decal/steeldecal/steel_decals3{
+	dir = 1
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals3{
+	dir = 10
+	},
+/obj/structure/disposalpipe/segment,
+/obj/effect/landmark/late_antag/chu,
+/turf/simulated/floor/tiled/kafel_full,
+/area/muriki/bathroom/phoronics)
 "amI" = (
 /obj/structure/cable/green{
 	icon_state = "32-2"
@@ -7811,6 +7827,10 @@
 /obj/effect/shuttle_landmark/premade/airdrop/muriki_northeast,
 /turf/simulated/open/muriki,
 /area/muriki/skyline/north)
+"aru" = (
+/obj/effect/landmark/late_antag/borer,
+/turf/simulated/floor/tiled/kafel_full,
+/area/muriki/bathroom/phoronics)
 "arw" = (
 /obj/machinery/door/airlock/maintenance/engi{
 	name = "Engineering";
@@ -19942,6 +19962,7 @@
 	},
 /area/chapel/main)
 "fpO" = (
+/obj/effect/landmark/late_antag/synx,
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/phoronics)
 "fqk" = (
@@ -27862,15 +27883,6 @@
 	},
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
 /area/mine/unexplored/muriki/mountaintopnorth)
-"jDR" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/turf/simulated/floor,
-/area/maintenance/engineering)
 "jEb" = (
 /obj/effect/floor_decal/eshui/emblem/eshui_small_l,
 /obj/structure/disposalpipe/segment,
@@ -77116,8 +77128,8 @@ cWT
 iPJ
 slB
 rYH
-rmo
-wKl
+nTB
+agd
 cWT
 acZ
 ghE
@@ -77278,8 +77290,8 @@ cWT
 tan
 uhy
 rYH
-jDR
-nTB
+rmo
+wKl
 cWT
 acZ
 hEc
@@ -107366,7 +107378,7 @@ ovc
 mpu
 dis
 iUX
-xvT
+amH
 sDz
 pwK
 ubn
@@ -107690,7 +107702,7 @@ ovc
 ovc
 ovc
 mpu
-fpO
+aru
 oWP
 pwK
 lqH
