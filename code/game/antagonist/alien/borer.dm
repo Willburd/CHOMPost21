@@ -41,6 +41,7 @@ GLOBAL_DATUM(borers, /datum/antagonist/borer)
 	player.objectives += new /datum/objective/borer_reproduce()
 	player.objectives += new /datum/objective/escape()
 
+/* Outpost 21 edit - Use our landmarks
 /datum/antagonist/borer/place_mob(mob/living/mob)
 	var/mob/living/simple_mob/animal/borer/borer = mob
 	if(istype(borer))
@@ -63,6 +64,7 @@ GLOBAL_DATUM(borers, /datum/antagonist/borer)
 			return
 		// Place them at a vent if they can't get a host.
 		borer.forceMove(get_turf(pick(get_vents())))
+*/
 
 /datum/antagonist/borer/attempt_random_spawn()
 	if(CONFIG_GET(flag/aliens_allowed)) ..()
