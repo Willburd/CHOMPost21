@@ -10122,7 +10122,7 @@
 /area/muriki/grounds/tramlinewest)
 "arY" = (
 /turf/simulated/open/muriki,
-/area/muriki/skyline/cent)
+/area/muriki/grounds/engi/garage_entrance)
 "arZ" = (
 /obj/structure/railing/grey{
 	dir = 4
@@ -14684,7 +14684,7 @@
 "aDm" = (
 /obj/effect/zone_divider,
 /turf/simulated/open/muriki,
-/area/muriki/skyline/cent)
+/area/muriki/grounds/engi/garage_entrance)
 "aDn" = (
 /obj/structure/railing/grey{
 	dir = 8
@@ -20190,6 +20190,20 @@
 /obj/structure/railing,
 /turf/simulated/floor,
 /area/maintenance/engi_engine)
+"aUT" = (
+/obj/effect/zone_divider,
+/turf/simulated/open/muriki,
+/area/muriki/grounds/med/garage_entrance)
+"aUU" = (
+/obj/effect/zone_divider,
+/turf/simulated/open/muriki,
+/area/muriki/grounds/civ/garage_entrance)
+"aUV" = (
+/turf/simulated/open/muriki,
+/area/muriki/grounds/med/garage_entrance)
+"aUW" = (
+/turf/simulated/open/muriki,
+/area/muriki/grounds/civ/garage_entrance)
 "aUZ" = (
 /obj/structure/dispenser/oxygen,
 /obj/effect/floor_decal/corner/brown{
@@ -90275,7 +90289,7 @@
 /area/hallway/primary/central_one)
 "xgw" = (
 /turf/simulated/open/muriki,
-/area/muriki/skyline/south)
+/area/muriki/grounds/sec/garage_entrance)
 "xgD" = (
 /turf/simulated/floor/outdoors/sidewalk/slab/turfpack/muriki,
 /area/muriki/grounds/sec)
@@ -130463,9 +130477,9 @@ aHB
 aHB
 aqr
 kuZ
-arY
-arY
-aDm
+aUV
+aUV
+aUT
 arM
 aII
 aII
@@ -130625,9 +130639,9 @@ aHB
 aNS
 aqr
 kuZ
-arY
-arY
-aDm
+aUV
+aUV
+aUT
 arN
 aII
 aII
@@ -130787,9 +130801,9 @@ aHB
 aHB
 aqr
 kuZ
-arY
-arY
-aDm
+aUV
+aUV
+aUT
 arM
 aII
 aII
@@ -130949,9 +130963,9 @@ ajX
 aHB
 aqr
 kuZ
-arY
-arY
-aDm
+aUV
+aUV
+aUT
 arM
 aII
 aII
@@ -142775,9 +142789,9 @@ aHR
 aHR
 aqw
 fEf
-arY
-arY
-aDm
+aUW
+aUW
+aUU
 awj
 aqw
 aqw
@@ -142937,9 +142951,9 @@ tuk
 aqw
 aqw
 awp
-arY
-arY
-aDm
+aUW
+aUW
+aUU
 awj
 aqw
 aqw
@@ -143099,9 +143113,9 @@ aqw
 aqw
 aJp
 awp
-arY
-arY
-aDm
+aUW
+aUW
+aUU
 awj
 aqw
 aqw

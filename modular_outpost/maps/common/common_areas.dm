@@ -1140,6 +1140,11 @@
 	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki
 	icon_state = "orablatri"
 
+/area/muriki/grounds/engi/garage_entrance
+	name = "\improper Engineering Garage Entrance"
+	icon_state = "cyablatri"
+	base_turf = /turf/simulated/open/muriki
+
 /area/muriki/grounds/waste
 	name = "\improper Facility Near Waste Management"
 	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki
@@ -1160,6 +1165,12 @@
 	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki
 	icon_state = "cyablatri"
 
+/area/muriki/grounds/med/garage_entrance
+	name = "\improper Medical Garage Entrance"
+	icon_state = "cyablatri"
+	base_turf = /turf/simulated/open/muriki
+	outdoors = FALSE // Covered roof
+
 /area/muriki/grounds/shutt
 	name = "\improper Facility Shuttle Pads"
 	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki
@@ -1169,6 +1180,11 @@
 	name = "\improper Facility Near Civilian Structure"
 	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki
 	icon_state = "bluwhitri"
+
+/area/muriki/grounds/civ/garage_entrance
+	name = "\improper Civilian Garage Entrance"
+	icon_state = "cyablatri"
+	base_turf = /turf/simulated/open/muriki
 
 /area/muriki/grounds/sci
 	name = "\improper Facility Near Science"

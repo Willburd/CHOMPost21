@@ -127,6 +127,9 @@
 										/area/muriki/grounds/tramborder/garage,
 										/area/muriki/grounds/tramborder/garage,
 										/area/muriki/grounds/sec/garage_entrance,
+										/area/muriki/grounds/med/garage_entrance,
+										/area/muriki/grounds/civ/garage_entrance,
+										/area/muriki/grounds/eng/garage_entrance,
 										// The roof areas don't need scrubbers and vents
 										/area/muriki/rooftop,
 										/area/muriki/rooftop/disposal,
@@ -233,6 +236,9 @@
 										/area/muriki/grounds/tramborder/garage,
 										/area/muriki/grounds/tramborder/garage,
 										/area/muriki/grounds/sec/garage_entrance,
+										/area/muriki/grounds/med/garage_entrance,
+										/area/muriki/grounds/civ/garage_entrance,
+										/area/muriki/grounds/eng/garage_entrance,
 										// The elevators don't need apcs
 										/area/muriki/elevator,
 										/area/muriki/elevator/secbase,
