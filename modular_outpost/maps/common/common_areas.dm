@@ -2084,6 +2084,10 @@
 	name = "\improper Civilian Roof"
 	icon_state = "away"
 
+/area/muriki/rooftop/crossdept_pathway
+	name = "\improper Cross Facility Walkway Roof"
+	icon_state = "away3"
+
 //
 //Backup Generators
 //

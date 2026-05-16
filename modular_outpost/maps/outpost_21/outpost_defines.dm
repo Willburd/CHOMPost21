@@ -139,6 +139,7 @@
 										/area/muriki/rooftop/science,
 										/area/muriki/rooftop/security,
 										/area/muriki/rooftop/engineering,
+										/area/muriki/rooftop/crossdept_pathway,
 										// The elevators don't need scrubbers and vents
 										/area/muriki/elevator,
 										/area/muriki/elevator/secbase,
