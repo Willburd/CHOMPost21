@@ -82,7 +82,10 @@
 	update_nearby_tiles(need_rebuild=1)
 
 	#ifndef OUTPOST_FRIENDSHIP_MODE
-	AddElement(/datum/element/headbonk/door) // Outpost 21 edit - Bonk!
+	// Outpost 21 edit begin - Bonk!
+	if(!istype(src, /obj/machinery/door/firedoor))
+		AddElement(/datum/element/headbonk/door)
+	// Outpost 21 edit end
 	#endif
 
 /obj/machinery/door/Destroy()
