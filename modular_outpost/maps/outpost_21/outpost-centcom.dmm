@@ -133,6 +133,12 @@
 	},
 /turf/simulated/floor/wood,
 /area/centcom/living)
+"aaA" = (
+/obj/structure/table/standard,
+/obj/item/storage/firstaid/surgery,
+/obj/item/storage/firstaid/surgery,
+/turf/simulated/floor/tiled/white,
+/area/centcom/medical)
 "aaB" = (
 /obj/effect/shuttle_landmark/premade/skipjack/transit,
 /turf/space/transit/east,
@@ -3205,6 +3211,8 @@
 	dir = 9
 	},
 /obj/structure/table/standard,
+/obj/item/storage/firstaid/surgery,
+/obj/item/storage/firstaid/surgery,
 /turf/simulated/floor/tiled/white,
 /area/centcom/medical)
 "ahn" = (
@@ -22091,6 +22099,7 @@
 /obj/effect/floor_decal/corner/blue/full{
 	dir = 4
 	},
+/obj/item/surgical/FixOVein,
 /turf/simulated/floor/tiled/white,
 /area/centcom/medical)
 "ism" = (
@@ -66031,7 +66040,7 @@ aey
 aaM
 adU
 vWP
-afJ
+aaA
 vWP
 agT
 aaM
@@ -66193,7 +66202,7 @@ aey
 aaM
 adU
 vWP
-afJ
+aaA
 vWP
 agT
 aaM
