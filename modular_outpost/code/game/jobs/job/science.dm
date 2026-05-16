@@ -71,6 +71,11 @@
 		JOB_ALT_MECHATRONIC_ENGINEER = /datum/alt_title/mech_tech)
 
 
+/datum/job/xenobiologist/New()
+	access -= list(ACCESS_ROBOTICS)
+	minimal_access -= list(ACCESS_ROBOTICS)
+
+
 /datum/job/xenobotanist
 	supervisors = "the " + JOB_QUARTERMASTER + " and " + JOB_RESEARCH_DIRECTOR
 	departments = list(DEPARTMENT_RESEARCH, DEPARTMENT_CIVILIAN)
