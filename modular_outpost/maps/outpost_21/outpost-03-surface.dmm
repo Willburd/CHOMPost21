@@ -70828,7 +70828,6 @@
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/engineering_hallway)
 "rdQ" = (
-/obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled/steel_grid,
 /area/engineering/storage)
 "rdX" = (
@@ -74253,7 +74252,7 @@
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/glass_engineeringatmos{
 	name = "Engineering EVA Storage";
-	req_one_access = list(11,24,51)
+	req_one_access = list(11,24)
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/engineering/hardsuitstore)
@@ -74448,7 +74447,7 @@
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/glass_engineeringatmos{
 	name = "Engineering EVA Storage";
-	req_one_access = list(11,24,51)
+	req_one_access = list(11,24)
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/engineering/hardsuitstore)
@@ -90315,7 +90314,6 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/virology/quarantine_quarantine)
 "xhe" = (
-/obj/machinery/door/firedoor/glass,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
@@ -90327,6 +90325,14 @@
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
+	},
+/obj/machinery/door/firedoor/multi_tile{
+	dir = 2
+	},
+/obj/machinery/door/airlock/multi_tile/glass{
+	name = "Engineering Storage";
+	req_one_access = list(10);
+	dir = 1
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/engineering/storage)

@@ -8906,6 +8906,8 @@
 /obj/effect/floor_decal/milspec/color/purple/corner{
 	dir = 4
 	},
+/obj/item/analyzer,
+/obj/item/analyzer,
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/supermatter)
 "atp" = (
