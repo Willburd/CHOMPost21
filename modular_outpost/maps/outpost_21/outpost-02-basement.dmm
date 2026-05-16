@@ -28295,7 +28295,7 @@
 /area/maintenance/civ/west)
 "bcN" = (
 /obj/structure/stairs/spawner/west,
-/turf/simulated/floor/plating/external/turfpack/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/cave)
 "bcO" = (
 /obj/effect/catwalk_plated,
@@ -30508,7 +30508,7 @@
 /obj/effect/floor_decal/industrial/warning/dust/corner{
 	dir = 4
 	},
-/turf/simulated/floor/plating/external/turfpack/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/cave)
 "bhe" = (
 /obj/structure/cable/heavyduty{
@@ -40847,7 +40847,7 @@
 /obj/effect/floor_decal/steeldecal/steel_decals10{
 	dir = 1
 	},
-/turf/simulated/floor/plating/external/turfpack/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/cave)
 "bAj" = (
 /obj/effect/floor_decal/corner/red/border{
@@ -59349,9 +59349,6 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/atmos_control)
-"cpz" = (
-/turf/simulated/floor/plating/external/turfpack/muriki,
-/area/maintenance/cave)
 "cpA" = (
 /obj/structure/bed/chair/bay/comfy/blue{
 	dir = 4
@@ -84165,7 +84162,7 @@
 /obj/effect/floor_decal/steeldecal/steel_decals10{
 	dir = 1
 	},
-/turf/simulated/floor/plating/external/turfpack/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/cave)
 "tJv" = (
 /obj/effect/floor_decal/industrial/outline/cut_corners/yellow,
@@ -124859,9 +124856,9 @@ gTT
 gTT
 gTT
 gTT
-cpz
-cpz
-cpz
+kqO
+kqO
+kqO
 alY
 cqD
 cqD
@@ -125184,8 +125181,8 @@ aYq
 gTT
 gTT
 bhd
-cpz
-cpz
+kqO
+kqO
 alY
 czb
 czb
