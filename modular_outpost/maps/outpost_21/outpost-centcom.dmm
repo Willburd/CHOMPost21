@@ -1149,6 +1149,7 @@
 /obj/structure/bed/pillowpile/orange{
 	pixel_y = -4
 	},
+/obj/item/toy/plushie/jil,
 /turf/simulated/floor/carpet/oracarpet,
 /area/centcom/living)
 "acF" = (
