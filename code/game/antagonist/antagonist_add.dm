@@ -18,6 +18,7 @@
 	// Outpost 21 edit begin - Automatically traitor borgs
 	var/mob/living/silicon/robot/bot = player?.current
 	if(istype(bot))
+		bot.syndicate = TRUE
 		bot.UnlinkSelf()
 	// Outpost 21 edit end
 
