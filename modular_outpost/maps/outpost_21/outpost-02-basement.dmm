@@ -5788,6 +5788,9 @@
 /obj/effect/floor_decal/milspec/color/orange/half{
 	dir = 1
 	},
+/obj/machinery/computer/security/telescreen/entertainment{
+	pixel_y = 28
+	},
 /turf/simulated/floor/tiled/freezer/cold,
 /area/engineering/tesh_freezer)
 "akT" = (
@@ -5908,10 +5911,6 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/civ/north)
-"alh" = (
-/obj/machinery/ai_status_display,
-/turf/simulated/wall/r_wall,
-/area/engineering/tesh_freezer)
 "ali" = (
 /obj/effect/floor_decal/milspec/color/orange/half{
 	dir = 8
@@ -5968,10 +5967,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/rnd/research/anomaly)
-"alq" = (
-/obj/machinery/status_display,
-/turf/simulated/wall/r_wall,
-/area/engineering/tesh_freezer)
 "alr" = (
 /obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/wall/durasteel,
@@ -73375,6 +73370,9 @@
 	dir = 6
 	},
 /obj/machinery/hologram/holopad,
+/obj/machinery/ai_status_display{
+	pixel_x = 32
+	},
 /turf/simulated/floor/tiled,
 /area/engineering/atmoshall)
 "gPi" = (
@@ -87055,6 +87053,10 @@
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
+	},
+/obj/machinery/status_display{
+	layer = 4;
+	pixel_x = 32
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/atmoshall)
@@ -110720,8 +110722,8 @@ aIw
 aUq
 aUq
 aeb
-alq
-alh
+aeb
+aeb
 aeb
 agi
 evd
