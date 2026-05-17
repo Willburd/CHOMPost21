@@ -40,6 +40,13 @@
 	src.modules += new /obj/item/dogborg/sleeper/lost(src)
 	src.modules += new /obj/item/dogborg/pounce(src)
 
+	// Outpost 21 edit begin - malf borgs automatically unlink
+	robot.disconnect_from_ai()
+	robot.scrambledcodes = TRUE
+	if(robot.camera)
+		robot.camera.clear_all_networks()
+	// Outpost 21 edit end
+
 /obj/item/robot_module/robot/malf/lost/adjust_gps(obj/item/gps/robot/robot_gps)
 	robot_gps.long_range = TRUE
 	robot_gps.hide_signal = TRUE
