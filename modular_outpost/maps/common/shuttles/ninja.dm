@@ -7,6 +7,7 @@
 	vessel_size = SHIP_SIZE_SMALL
 	shuttle = "Rokkaku-Dako"
 	fore_dir = EAST
+	overmap_stealth = TRUE
 
 /obj/machinery/computer/shuttle_control/explore/ninja_overmap
 	name = "short jump console"
