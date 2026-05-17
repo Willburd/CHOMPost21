@@ -882,6 +882,14 @@
 	flags = AREA_FLAG_IS_NOT_PERSISTENT
 	color_grading = COLORTINT_UNDERDARK
 
+/area/engineering/tesh_freezer
+	name = "\improper Engineering Freezer"
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
+	icon_state = "darkred"
+	sound_env = SMALL_ENCLOSED
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+	color_grading = COLORTINT_CHILL
+
 /area/engineering/atmos/tank_storage
 	name = "\improper Atmospherics Secure Storage"
 	color_grading = COLORTINT_DARK

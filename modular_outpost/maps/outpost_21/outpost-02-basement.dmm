@@ -1883,6 +1883,35 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/lowmain)
+"aeb" = (
+/turf/simulated/wall/r_wall,
+/area/engineering/tesh_freezer)
+"aec" = (
+/obj/machinery/power/apc{
+	dir = 8;
+	name = "west bump";
+	pixel_x = -24
+	},
+/obj/structure/cable/green,
+/obj/machinery/light,
+/obj/effect/floor_decal/milspec/color/orange/half{
+	dir = 10
+	},
+/obj/item/juke_remote{
+	autolinkareajuke_onspawn = /area/djstation
+	},
+/turf/simulated/floor/tiled/freezer/cold,
+/area/engineering/tesh_freezer)
+"aed" = (
+/obj/structure/bed/pillowpile/teal,
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -8;
+	pixel_y = -32;
+	dir = 1
+	},
+/obj/effect/floor_decal/milspec/color/orange/half,
+/turf/simulated/floor/tiled/freezer/cold,
+/area/engineering/tesh_freezer)
 "aee" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
@@ -2183,6 +2212,25 @@
 /obj/machinery/microscope,
 /turf/simulated/floor/tiled,
 /area/rnd/research/anomaly)
+"aeM" = (
+/obj/structure/bed/pillowpile/red,
+/obj/effect/floor_decal/milspec/color/orange/half,
+/turf/simulated/floor/tiled/freezer/cold,
+/area/engineering/tesh_freezer)
+"aeN" = (
+/obj/structure/bed/chair/sofa/right/blue{
+	dir = 1
+	},
+/obj/effect/floor_decal/milspec/color/orange/half,
+/turf/simulated/floor/tiled/freezer/cold,
+/area/engineering/tesh_freezer)
+"aeO" = (
+/obj/structure/bed/chair/sofa/blue{
+	dir = 1
+	},
+/obj/effect/floor_decal/milspec/color/orange/half,
+/turf/simulated/floor/tiled/freezer/cold,
+/area/engineering/tesh_freezer)
 "aeP" = (
 /obj/structure/table/standard,
 /obj/structure/cable/green{
@@ -2193,6 +2241,15 @@
 	},
 /turf/simulated/floor/tiled,
 /area/rnd/research/anomaly)
+"aeQ" = (
+/obj/structure/bed/chair/sofa/corner/blue{
+	dir = 8
+	},
+/obj/effect/floor_decal/milspec/color/orange/half{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/freezer/cold,
+/area/engineering/tesh_freezer)
 "aeR" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -2231,6 +2288,15 @@
 /obj/random/maintenance/misc,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/cave)
+"aeY" = (
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/milspec/color/orange/half{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/freezer/cold,
+/area/engineering/tesh_freezer)
 "aeZ" = (
 /obj/structure/cable/orange{
 	icon_state = "1-2"
@@ -2660,6 +2726,13 @@
 	phoron = 21.8366
 	},
 /area/muriki/bathroom/vox)
+"afS" = (
+/turf/simulated/floor/tiled/freezer/cold,
+/area/engineering/tesh_freezer)
+"afT" = (
+/obj/structure/table/glass,
+/turf/simulated/floor/tiled/freezer/cold,
+/area/engineering/tesh_freezer)
 "afU" = (
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/dark,
@@ -2671,6 +2744,33 @@
 /obj/item/bikehorn,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/wastedisposalnear)
+"afW" = (
+/obj/structure/bed/chair/sofa/blue{
+	dir = 8
+	},
+/obj/effect/floor_decal/milspec/color/orange/half{
+	dir = 4
+	},
+/obj/item/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = 26
+	},
+/turf/simulated/floor/tiled/freezer/cold,
+/area/engineering/tesh_freezer)
+"afX" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled,
+/area/engineering/atmoshall)
 "afY" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -2683,6 +2783,21 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/maintenance/cave)
+"afZ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/engineering/atmoshall)
 "aga" = (
 /obj/item/clothing/head/cone,
 /obj/effect/floor_decal/techfloor/orange{
@@ -2745,6 +2860,24 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/research/isolation_b)
+"agi" = (
+/obj/machinery/door/airlock/freezer{
+	req_one_access = list(10,29,52,56)
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/steel_ridged,
+/area/engineering/tesh_freezer)
 "agj" = (
 /obj/machinery/atmospherics/unary/vent_scrubber{
 	dir = 8
@@ -3253,6 +3386,32 @@
 	},
 /turf/simulated/floor/tiled,
 /area/rnd/research/anomaly)
+"agR" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
+/obj/machinery/light_switch{
+	dir = 4;
+	pixel_x = -28;
+	pixel_y = -28
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals9{
+	dir = 1
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals9{
+	dir = 8
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/freezer/cold,
+/area/engineering/tesh_freezer)
 "agS" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 9
@@ -3288,6 +3447,16 @@
 /obj/item/stack/rods,
 /turf/simulated/floor/tiled,
 /area/maintenance/oldbridge)
+"agV" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/tiled/freezer/cold,
+/area/engineering/tesh_freezer)
 "agW" = (
 /turf/simulated/wall,
 /area/mine/unexplored/muriki/cave/underdark_pit/south_west_waste)
@@ -3633,6 +3802,17 @@
 	phoron = 21.8366
 	},
 /area/muriki/bathroom/vox)
+"ahB" = (
+/obj/structure/bed/chair/bay/chair/padded/red/smallnest,
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/freezer/cold,
+/area/engineering/tesh_freezer)
 "ahC" = (
 /turf/simulated/mineral/alt/turfpack/muriki,
 /area/maintenance/research)
@@ -4902,6 +5082,11 @@
 	},
 /turf/simulated/floor/tiled,
 /area/rnd/research/anomaly)
+"ajH" = (
+/obj/structure/table/glass,
+/obj/item/toy/plushie/teshari/y_yw,
+/turf/simulated/floor/tiled/freezer/cold,
+/area/engineering/tesh_freezer)
 "ajI" = (
 /obj/structure/table/standard,
 /obj/item/laser_pointer/purple,
@@ -4931,6 +5116,18 @@
 "ajL" = (
 /turf/simulated/wall,
 /area/rnd/research/anomaly)
+"ajM" = (
+/obj/structure/bed/chair/sofa/blue{
+	dir = 8
+	},
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/effect/floor_decal/milspec/color/orange/half{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/freezer/cold,
+/area/engineering/tesh_freezer)
 "ajN" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
@@ -5547,6 +5744,21 @@
 	phoron = 21.8366
 	},
 /area/medical/voxlab/breakroom)
+"akN" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/effect/floor_decal/milspec/color/orange/half{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/freezer/cold,
+/area/engineering/tesh_freezer)
+"akO" = (
+/obj/effect/floor_decal/milspec/color/orange/corner{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/unary/vent_pump/on,
+/turf/simulated/floor/tiled/freezer/cold,
+/area/engineering/tesh_freezer)
 "akP" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -5571,6 +5783,13 @@
 	},
 /turf/simulated/floor/tiled,
 /area/rnd/research/anomaly)
+"akS" = (
+/obj/structure/bed/chair/sofa/right/blue,
+/obj/effect/floor_decal/milspec/color/orange/half{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/freezer/cold,
+/area/engineering/tesh_freezer)
 "akT" = (
 /obj/structure/sign/deck/first,
 /turf/simulated/wall/titanium,
@@ -5623,6 +5842,13 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/incinerator)
+"ala" = (
+/obj/structure/bed/chair/sofa/blue,
+/obj/effect/floor_decal/milspec/color/orange/half{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/freezer/cold,
+/area/engineering/tesh_freezer)
 "alb" = (
 /obj/effect/map_effect/interval/burnpit,
 /obj/machinery/atmospherics/pipe/simple/hidden/red{
@@ -5660,6 +5886,13 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/lowmain)
+"ale" = (
+/obj/structure/bed/chair/sofa/corner/blue,
+/obj/effect/floor_decal/milspec/color/orange/half{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/freezer/cold,
+/area/engineering/tesh_freezer)
 "alf" = (
 /obj/structure/grille,
 /obj/machinery/door/firedoor,
@@ -5675,12 +5908,33 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/civ/north)
+"alh" = (
+/obj/machinery/ai_status_display,
+/turf/simulated/wall/r_wall,
+/area/engineering/tesh_freezer)
+"ali" = (
+/obj/effect/floor_decal/milspec/color/orange/half{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/freezer/cold,
+/area/engineering/tesh_freezer)
+"alj" = (
+/obj/structure/bed/chair/bay/chair/padded/red/smallnest,
+/turf/simulated/floor/tiled/freezer/cold,
+/area/engineering/tesh_freezer)
 "alk" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/rnd/research/anomaly)
+"all" = (
+/obj/effect/floor_decal/milspec/color/orange/half{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled/freezer/cold,
+/area/engineering/tesh_freezer)
 "alm" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/yellow,
 /obj/effect/landmark{
@@ -5714,6 +5968,10 @@
 	},
 /turf/simulated/floor/tiled,
 /area/rnd/research/anomaly)
+"alq" = (
+/obj/machinery/status_display,
+/turf/simulated/wall/r_wall,
+/area/engineering/tesh_freezer)
 "alr" = (
 /obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/wall/durasteel,
@@ -6163,6 +6421,16 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/incinerator)
+"amh" = (
+/obj/machinery/firealarm{
+	pixel_y = 26
+	},
+/obj/effect/floor_decal/milspec/color/orange/half{
+	dir = 9
+	},
+/obj/structure/bed/chair/bay/chair/padded/red/bignest,
+/turf/simulated/floor/tiled/freezer/cold,
+/area/engineering/tesh_freezer)
 "ami" = (
 /obj/effect/floor_decal/techfloor/orange,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
@@ -6186,6 +6454,15 @@
 	},
 /turf/simulated/floor/plating,
 /area/rnd/research/anomaly)
+"amk" = (
+/obj/machinery/alarm/freezer{
+	pixel_y = 26
+	},
+/obj/effect/floor_decal/milspec/color/orange/half{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/freezer/cold,
+/area/engineering/tesh_freezer)
 "aml" = (
 /obj/structure/grille,
 /obj/machinery/door/firedoor,
@@ -6338,6 +6615,19 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/lowmain)
+"amy" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/effect/floor_decal/milspec/color/orange/half{
+	dir = 5
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 2
+	},
+/obj/machinery/disposal,
+/turf/simulated/floor/tiled/freezer/cold,
+/area/engineering/tesh_freezer)
 "amz" = (
 /obj/structure/sign/warning/fire,
 /turf/simulated/wall,
@@ -23171,6 +23461,7 @@
 /obj/effect/floor_decal/corner/orange{
 	dir = 9
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/engineering/atmoshall)
 "aTC" = (
@@ -70122,6 +70413,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 8
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/engineering/atmoshall)
 "dis" = (
@@ -71362,7 +71654,7 @@
 	pixel_x = -6
 	},
 /turf/simulated/wall/r_wall,
-/area/engineering/atmoshall)
+/area/engineering/tesh_freezer)
 "evy" = (
 /obj/effect/map_effect/interval/effect_emitter/smoke/mist/passive,
 /turf/simulated/floor/water/acidic/deep/turfpack/muriki,
@@ -73081,9 +73373,6 @@
 	},
 /obj/effect/floor_decal/corner/orange{
 	dir = 6
-	},
-/obj/machinery/ai_status_display{
-	pixel_x = 32
 	},
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled,
@@ -76357,9 +76646,9 @@
 "kyp" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
+/obj/structure/disposalpipe/junction{
+	dir = 1;
+	icon_state = "pipe-j2"
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/atmoshall)
@@ -78236,6 +78525,7 @@
 	c_tag = "ENG - Robotics Hallway";
 	dir = 4
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/engineering/atmoshall)
 "mRp" = (
@@ -84369,12 +84659,13 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 9
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 9
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/engineering/atmoshall)
 "tZz" = (
@@ -85576,6 +85867,9 @@
 	name = "Station Intercom (General)";
 	pixel_x = 26
 	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled,
 /area/engineering/atmoshall)
 "vAv" = (
@@ -86758,10 +87052,6 @@
 	},
 /obj/effect/floor_decal/corner/orange{
 	dir = 6
-	},
-/obj/machinery/status_display{
-	layer = 4;
-	pixel_x = 32
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
@@ -110109,7 +110399,7 @@ dij
 aTA
 mRo
 tZn
-aJq
+afX
 raS
 raS
 aTi
@@ -110271,7 +110561,7 @@ pYY
 wSL
 gOY
 vzQ
-aMk
+afZ
 aMk
 fuI
 aTi
@@ -110429,14 +110719,14 @@ aIw
 aIw
 aUq
 aUq
-aUq
-aUq
-aUq
-aUq
-aUq
+aeb
+alq
+alh
+aeb
+agi
 evd
-aUq
-aUq
+aeb
+aeb
 aao
 auU
 aHq
@@ -110591,14 +110881,14 @@ bRc
 bQS
 aQh
 bMZ
-bMZ
-bMZ
-bMZ
-bMZ
-bMZ
-bMZ
-bMZ
-aXN
+aeb
+amh
+ali
+akN
+agR
+aeY
+aec
+aeb
 atL
 jCO
 bGx
@@ -110753,14 +111043,14 @@ aQs
 aIc
 aQh
 bMZ
-bMZ
-bMZ
-bMZ
-bMZ
-bMZ
-bMZ
-bMZ
-aXN
+aeb
+amk
+alj
+afS
+agV
+afS
+aed
+aeb
 jQE
 hYR
 dKe
@@ -110915,14 +111205,14 @@ aQh
 adB
 aQh
 aQt
-aQt
-bMZ
-bMZ
-bMZ
-bMZ
-bMZ
-bMZ
-adu
+aeb
+amy
+all
+akO
+ahB
+afS
+aeM
+aeb
 adu
 adu
 aXN
@@ -111077,14 +111367,14 @@ aQt
 bHv
 bIk
 bWS
-aQt
-adu
-adu
-bMZ
-bMZ
-bMZ
-bMZ
-adu
+akx
+akx
+akx
+akS
+ajH
+afT
+aeN
+aeb
 bXl
 adu
 aYo
@@ -111239,14 +111529,14 @@ bYn
 aQt
 ciN
 cqp
-cev
-fTo
 bMc
-pxx
-bMZ
-bMZ
-bMZ
-adu
+fTo
+akx
+ala
+afT
+afT
+aeO
+aeb
 bXl
 adu
 aYo
@@ -111401,14 +111691,14 @@ bHv
 bHI
 bIm
 bWS
-aQt
+adu
 cqf
-adu
-bMZ
-bMZ
-bMZ
-bMZ
-adu
+akx
+ale
+ajM
+afW
+aeQ
+aeb
 bLQ
 adu
 adu
@@ -111563,14 +111853,14 @@ aQt
 aQt
 aQt
 aQt
-aQt
+adu
 clv
-adu
-bMZ
-adu
-adu
-adu
-adu
+akx
+aeb
+aeb
+aeb
+aeb
+aeb
 bEQ
 adu
 cgR
