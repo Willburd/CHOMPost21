@@ -14,6 +14,13 @@
 		create_antagonist(player, move_to_spawn, do_not_announce, preserve_appearance)
 		if(!do_not_equip)
 			equip(player.current)
+
+	// Outpost 21 edit begin - Automatically traitor borgs
+	var/mob/living/silicon/robot/bot = player?.current
+	if(istype(bot))
+		bot.UnlinkSelf()
+	// Outpost 21 edit end
+
 	return 1
 
 /datum/antagonist/proc/add_antagonist_mind(datum/mind/player, ignore_role, nonstandard_role_type, nonstandard_role_msg)
