@@ -7,6 +7,7 @@
 	vessel_size = SHIP_SIZE_SMALL
 	shuttle = "Mercenary"
 	fore_dir = EAST
+	overmap_stealth = TRUE
 
 /obj/machinery/computer/shuttle_control/explore/mercenary_overmap
 	name = "short jump console"
@@ -17,7 +18,7 @@
 	name = "Mercenary"
 	warmup_time = 0
 	current_location = "mercenary_base"
-	docking_controller_tag = "merc_shuttle"
+	//docking_controller_tag = "merc_shuttle"
 	shuttle_area = list(/area/shuttle/mercenary)
 	ceiling_type = /turf/simulated/shuttle/floor/black/turfpack/muriki
 

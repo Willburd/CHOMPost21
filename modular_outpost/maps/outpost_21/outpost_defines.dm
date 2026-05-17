@@ -127,6 +127,9 @@
 										/area/muriki/grounds/tramborder/garage,
 										/area/muriki/grounds/tramborder/garage,
 										/area/muriki/grounds/sec/garage_entrance,
+										/area/muriki/grounds/med/garage_entrance,
+										/area/muriki/grounds/civ/garage_entrance,
+										/area/muriki/grounds/engi/garage_entrance,
 										// The roof areas don't need scrubbers and vents
 										/area/muriki/rooftop,
 										/area/muriki/rooftop/disposal,
@@ -136,6 +139,7 @@
 										/area/muriki/rooftop/science,
 										/area/muriki/rooftop/security,
 										/area/muriki/rooftop/engineering,
+										/area/muriki/rooftop/crossdept_pathway,
 										// The elevators don't need scrubbers and vents
 										/area/muriki/elevator,
 										/area/muriki/elevator/secbase,
@@ -233,6 +237,9 @@
 										/area/muriki/grounds/tramborder/garage,
 										/area/muriki/grounds/tramborder/garage,
 										/area/muriki/grounds/sec/garage_entrance,
+										/area/muriki/grounds/med/garage_entrance,
+										/area/muriki/grounds/civ/garage_entrance,
+										/area/muriki/grounds/engi/garage_entrance,
 										// The elevators don't need apcs
 										/area/muriki/elevator,
 										/area/muriki/elevator/secbase,
@@ -457,7 +464,10 @@
 	if(istype(AM, /obj/effect/overmap/visitable/ship/landable))
 		var/obj/effect/overmap/visitable/ship/landable/SL = AM //Phew
 		var/datum/shuttle/autodock/multi/shuttle = SSshuttles.shuttles[SL.shuttle]
-		if(!istype(shuttle) || !shuttle.cloaked) //Not a multishuttle (the only kind that can cloak) or not cloaked
+		if(istype(SL)) // overmap cloak
+			if(!SL.overmap_stealth)
+				SSatc.msg(message)
+		else if(!istype(shuttle) || !shuttle.cloaked) // instant warp cloak
 			SSatc.msg(message)
 
 	//For ships, it's safe to assume they're big enough to not be sneaky
@@ -496,7 +506,10 @@
 	if(istype(AM, /obj/effect/overmap/visitable/ship/landable))
 		var/obj/effect/overmap/visitable/ship/landable/SL = AM //Phew
 		var/datum/shuttle/autodock/multi/shuttle = SSshuttles.shuttles[SL.shuttle]
-		if(!istype(shuttle) || !shuttle.cloaked) //Not a multishuttle (the only kind that can cloak) or not cloaked
+		if(istype(SL)) // overmap cloak
+			if(!SL.overmap_stealth)
+				SSatc.msg(message)
+		else if(!istype(shuttle) || !shuttle.cloaked) //Not a multishuttle (the only kind that can cloak) or not cloaked
 			SSatc.msg(message)
 
 	//For ships, it's safe to assume they're big enough to not be sneaky
@@ -535,7 +548,10 @@
 	if(istype(AM, /obj/effect/overmap/visitable/ship/landable))
 		var/obj/effect/overmap/visitable/ship/landable/SL = AM //Phew
 		var/datum/shuttle/autodock/multi/shuttle = SSshuttles.shuttles[SL.shuttle]
-		if(!istype(shuttle) || !shuttle.cloaked) //Not a multishuttle (the only kind that can cloak) or not cloaked
+		if(istype(SL)) // overmap cloak
+			if(!SL.overmap_stealth)
+				SSatc.msg(message)
+		else if(!istype(shuttle) || !shuttle.cloaked) //Not a multishuttle (the only kind that can cloak) or not cloaked
 			SSatc.msg(message)
 
 	//For ships, it's safe to assume they're big enough to not be sneaky

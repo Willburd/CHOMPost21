@@ -2,6 +2,9 @@
 #define OUTPOST_CONFINEMENTBEAM_CRASHES list("crash_ptl","crash_ptl_enginesouth","crash_ptl_enginenorth")
 #define OUTPOST_ASTEROID_CRASHES list("crash_rec","crash_rec_trawlerbad")
 
+/obj/effect/overmap/visitable/ship
+	var/overmap_stealth = FALSE // Hidden from ATC movement messages
+
 //////////////////////////////////////////////////////////////
 // Escape shuttle
 /datum/shuttle/autodock/ferry/emergency/escape

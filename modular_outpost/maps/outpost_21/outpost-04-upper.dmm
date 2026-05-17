@@ -237,6 +237,9 @@
 /obj/effect/floor_decal/milspec/color/purple/corner{
 	dir = 8
 	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/supermatter)
 "aaw" = (
@@ -1715,7 +1718,7 @@
 	},
 /obj/effect/zone_divider,
 /turf/simulated/floor/outpost_roof/turfpack/muriki,
-/area/muriki/rooftop/engineering)
+/area/muriki/rooftop/crossdept_pathway)
 "adL" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 6
@@ -5128,6 +5131,11 @@
 /obj/structure/sign/warning/falling{
 	pixel_x = 32
 	},
+/obj/structure/lattice,
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/structure/catwalk,
 /turf/simulated/open,
 /area/muriki/tramstation/cargeng)
 "ami" = (
@@ -6846,6 +6854,9 @@
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/supermatter)
 "apt" = (
+/obj/structure/cable/green{
+	icon_state = "5-10"
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/supermatter)
 "apu" = (
@@ -7651,6 +7662,9 @@
 /obj/effect/floor_decal/milspec/color/purple/corner{
 	dir = 8
 	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/supermatter)
 "aqV" = (
@@ -7831,6 +7845,10 @@
 /obj/effect/landmark/late_antag/borer,
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/phoronics)
+"arv" = (
+/obj/machinery/light/small,
+/turf/simulated/floor/plating,
+/area/muriki/tramstation/cargeng)
 "arw" = (
 /obj/machinery/door/airlock/maintenance/engi{
 	name = "Engineering";
@@ -7846,6 +7864,9 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/rnd/supermatter)
 "arx" = (
@@ -7979,6 +8000,9 @@
 /obj/effect/floor_decal/milspec/color/purple/corner{
 	dir = 8
 	},
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/supermatter)
 "arI" = (
@@ -7986,6 +8010,9 @@
 /obj/effect/floor_decal/milspec/color/orange/half,
 /obj/effect/floor_decal/milspec/color/purple/corner{
 	dir = 8
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/supermatter)
@@ -7999,10 +8026,16 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/industrial/warning/corner,
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/supermatter)
 "arK" = (
 /obj/effect/floor_decal/industrial/warning,
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/supermatter)
 "arL" = (
@@ -8573,6 +8606,12 @@
 /obj/effect/floor_decal/milspec/color/purple/corner{
 	dir = 8
 	},
+/obj/structure/cable/green{
+	icon_state = "2-5"
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals_central7{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/supermatter)
 "asQ" = (
@@ -8904,6 +8943,14 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/milspec/color/purple/corner{
+	dir = 4
+	},
+/obj/item/analyzer,
+/obj/item/analyzer,
+/obj/structure/cable/green{
+	icon_state = "4-10"
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals_central7{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
@@ -9630,6 +9677,9 @@
 	dir = 4
 	},
 /obj/item/geiger/wall/north,
+/obj/effect/floor_decal/steeldecal/steel_decals_central7{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/engineering_hallway)
 "aum" = (
@@ -10094,11 +10144,7 @@
 	},
 /obj/machinery/power/grounding_rod/pre_mapped,
 /turf/simulated/floor/outpost_roof/turfpack/muriki,
-/area/muriki/skyline/cent)
-"avg" = (
-/obj/structure/railing,
-/turf/simulated/floor/outpost_roof/turfpack/muriki,
-/area/muriki/skyline/cent)
+/area/muriki/rooftop/crossdept_pathway)
 "avh" = (
 /obj/structure/railing,
 /obj/structure/railing{
@@ -10106,43 +10152,40 @@
 	},
 /obj/structure/trailblazer/blue,
 /turf/simulated/floor/outpost_roof/turfpack/muriki,
-/area/muriki/skyline/cent)
+/area/muriki/rooftop/crossdept_pathway)
 "avi" = (
-/obj/structure/catwalk,
-/obj/structure/railing,
 /obj/structure/sign/warning/acid{
 	pixel_x = 32
 	},
-/turf/simulated/open,
+/turf/simulated/floor/plating,
 /area/muriki/tramstation/cargeng)
 "avj" = (
 /obj/structure/railing,
 /obj/effect/zone_divider,
 /turf/simulated/floor/glass/reinforced/turfpack/muriki,
-/area/muriki/skyline/cent)
+/area/muriki/rooftop/crossdept_pathway)
 "avk" = (
 /obj/structure/railing,
 /obj/effect/zone_divider,
 /turf/simulated/floor/outpost_roof/turfpack/muriki,
-/area/muriki/skyline/cent)
-"avl" = (
-/obj/effect/zone_divider,
-/turf/simulated/floor/outpost_roof/turfpack/muriki,
-/area/muriki/skyline/cent)
+/area/muriki/rooftop/crossdept_pathway)
 "avm" = (
 /obj/effect/zone_divider,
 /turf/simulated/floor/glass/reinforced/turfpack/muriki,
-/area/muriki/skyline/cent)
+/area/muriki/rooftop/crossdept_pathway)
 "avn" = (
 /obj/effect/zone_divider,
 /obj/structure/railing{
 	dir = 4
 	},
 /turf/simulated/floor/outpost_roof/turfpack/muriki,
-/area/muriki/skyline/cent)
+/area/muriki/rooftop/crossdept_pathway)
 "avo" = (
 /obj/structure/window/maintenance_panel{
 	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/muriki/tramstation/cargeng)
@@ -10166,42 +10209,39 @@
 /area/medical/patient_wing)
 "avq" = (
 /turf/simulated/floor/glass/reinforced/turfpack/muriki,
-/area/muriki/skyline/cent)
-"avr" = (
-/turf/simulated/floor/outpost_roof/turfpack/muriki,
-/area/muriki/skyline/cent)
+/area/muriki/rooftop/crossdept_pathway)
 "avs" = (
 /obj/structure/railing{
 	dir = 4
 	},
 /turf/simulated/floor/outpost_roof/turfpack/muriki,
-/area/muriki/skyline/cent)
+/area/muriki/rooftop/crossdept_pathway)
 "avt" = (
 /obj/structure/railing{
 	dir = 1
 	},
 /turf/simulated/floor/outpost_roof/turfpack/muriki,
-/area/muriki/skyline/cent)
+/area/muriki/rooftop/crossdept_pathway)
 "avu" = (
 /obj/structure/railing{
 	dir = 1
 	},
 /turf/simulated/floor/glass/reinforced/turfpack/muriki,
-/area/muriki/skyline/cent)
+/area/muriki/rooftop/crossdept_pathway)
 "avv" = (
 /obj/structure/railing{
 	dir = 1
 	},
 /obj/effect/zone_divider,
 /turf/simulated/floor/outpost_roof/turfpack/muriki,
-/area/muriki/skyline/cent)
+/area/muriki/rooftop/crossdept_pathway)
 "avw" = (
 /obj/structure/railing{
 	dir = 1
 	},
 /obj/machinery/power/grounding_rod/pre_mapped,
 /turf/simulated/floor/outpost_roof/turfpack/muriki,
-/area/muriki/skyline/cent)
+/area/muriki/rooftop/crossdept_pathway)
 "avx" = (
 /obj/structure/railing{
 	dir = 1
@@ -10211,7 +10251,7 @@
 	},
 /obj/structure/trailblazer/blue,
 /turf/simulated/floor/outpost_roof/turfpack/muriki,
-/area/muriki/skyline/cent)
+/area/muriki/rooftop/crossdept_pathway)
 "avy" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 4
@@ -10232,7 +10272,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/outpost_roof/turfpack/muriki,
-/area/muriki/skyline/cent)
+/area/muriki/rooftop/crossdept_pathway)
 "avB" = (
 /obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/corner/purple{
@@ -10250,6 +10290,81 @@
 	dir = 6
 	},
 /area/hydroponics/publicgarden)
+"avE" = (
+/obj/structure/trash_pile,
+/turf/simulated/floor/plating,
+/area/muriki/tramstation/cargeng)
+"avF" = (
+/turf/simulated/floor/plating,
+/area/muriki/tramstation/cargeng)
+"avG" = (
+/obj/structure/railing{
+	dir = 1;
+	flags = null
+	},
+/turf/simulated/floor/plating,
+/area/muriki/tramstation/cargeng)
+"avH" = (
+/obj/structure/lattice,
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/structure/catwalk,
+/turf/simulated/open,
+/area/muriki/tramstation/cargeng)
+"avI" = (
+/obj/structure/railing,
+/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/area/muriki/rooftop/crossdept_pathway)
+"avJ" = (
+/obj/structure/railing,
+/obj/structure/catwalk,
+/turf/simulated/open,
+/area/muriki/tramstation/cargeng)
+"avK" = (
+/obj/structure/railing,
+/turf/simulated/floor/plating,
+/area/muriki/tramstation/cargeng)
+"avL" = (
+/obj/effect/zone_divider,
+/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/area/muriki/rooftop/crossdept_pathway)
+"avM" = (
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/plating,
+/area/muriki/tramstation/cargeng)
+"avN" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/plating,
+/area/muriki/tramstation/cargeng)
+"avO" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/area/muriki/rooftop/crossdept_pathway)
+"avP" = (
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
+/obj/machinery/power/apc{
+	dir = 1;
+	name = "north bump";
+	pixel_y = 24
+	},
+/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/area/muriki/rooftop/crossdept_pathway)
+"avQ" = (
+/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/area/muriki/rooftop/crossdept_pathway)
+"avR" = (
+/obj/machinery/power/grounding_rod/pre_mapped,
+/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/area/muriki/rooftop/crossdept_pathway)
 "avW" = (
 /obj/structure/table/rack/shelf,
 /obj/effect/floor_decal/corner/red{
@@ -12849,6 +12964,9 @@
 	},
 /obj/machinery/power/thermoregulator/cryogaia{
 	pixel_x = 32
+	},
+/obj/structure/cable/green{
+	icon_state = "0-1"
 	},
 /turf/simulated/floor,
 /area/teleporter/engineering)
@@ -17922,7 +18040,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/outpost_roof/turfpack/muriki,
-/area/muriki/rooftop/engineering)
+/area/muriki/rooftop/crossdept_pathway)
 "emU" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -18386,6 +18504,9 @@
 /obj/machinery/atmospherics/pipe/simple/visible/supply{
 	dir = 10
 	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor,
 /area/teleporter/engineering)
 "ezE" = (
@@ -18614,9 +18735,6 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/airlock/glass_external{
 	req_one_access = list(10)
-	},
-/obj/structure/cable/yellow{
-	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/engineering)
@@ -18866,9 +18984,6 @@
 "eLk" = (
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 4
-	},
-/obj/structure/cable/yellow{
-	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/engineering)
@@ -41317,14 +41432,14 @@
 /turf/simulated/floor/wood,
 /area/rnd/rdoffice)
 "qJv" = (
-/obj/structure/cable/yellow{
-	icon_state = "0-2"
-	},
 /obj/machinery/power/apc{
 	dir = 4;
 	name = "east bump";
 	pixel_x = 24;
 	nightshift_setting = 3
+	},
+/obj/structure/cable/green{
+	icon_state = "0-2"
 	},
 /turf/simulated/floor/outpost_roof/turfpack/muriki,
 /area/muriki/rooftop/engineering)
@@ -43403,9 +43518,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
-	},
-/obj/structure/cable/yellow{
-	icon_state = "2-8"
 	},
 /turf/simulated/floor,
 /area/maintenance/engineering)
@@ -47879,6 +47991,9 @@
 /obj/effect/floor_decal/milspec/color/purple/corner{
 	dir = 8
 	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/supermatter)
 "uaY" = (
@@ -50170,9 +50285,10 @@
 /obj/structure/railing{
 	dir = 1
 	},
-/obj/structure/cable/yellow{
-	icon_state = "1-4"
+/obj/structure/cable/green{
+	icon_state = "1-8"
 	},
+/obj/structure/catwalk,
 /turf/simulated/floor/plating/external/turfpack/muriki,
 /area/muriki/rooftop/engineering)
 "viO" = (
@@ -50695,6 +50811,10 @@
 /obj/structure/railing{
 	dir = 1
 	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/catwalk,
 /turf/simulated/floor/plating/external/turfpack/muriki,
 /area/muriki/rooftop/engineering)
 "vtR" = (
@@ -51555,6 +51675,9 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/airlock/glass_external{
 	req_one_access = list(10)
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/teleporter/engineering)
@@ -53773,6 +53896,9 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals10{
 	dir = 8
+	},
+/obj/structure/cable/green{
+	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/teleporter/engineering)
@@ -78612,7 +78738,7 @@ asb
 arI
 tfG
 eFH
-ylT
+avJ
 lgR
 lgR
 lgR
@@ -78774,7 +78900,7 @@ afd
 arJ
 aPK
 oUl
-ylT
+avJ
 lgR
 lgR
 lgR
@@ -78935,8 +79061,8 @@ asw
 asc
 arK
 arw
-oUl
-ylT
+avM
+avK
 lgR
 lgR
 lgR
@@ -78950,8 +79076,8 @@ lgR
 lgR
 lgR
 lgR
-luE
-cYj
+avG
+arv
 nCw
 rYa
 nCw
@@ -79097,8 +79223,8 @@ asx
 asd
 arL
 dPP
-oUl
-ylT
+avN
+avK
 lgR
 lgR
 lgR
@@ -79112,8 +79238,8 @@ lgR
 lgR
 lgR
 lgR
-luE
-oUl
+avG
+avE
 nCw
 ugE
 nCw
@@ -79259,23 +79385,23 @@ qfN
 afu
 arM
 dPP
-oUl
+avN
 avi
 amh
-lgR
-lgR
-lgR
-lgR
-lgR
-lgR
-lgR
-lgR
-lgR
-lgR
-lgR
-lgR
-luE
-oUl
+avH
+avH
+avH
+avH
+avH
+avH
+avH
+avH
+avH
+avH
+avH
+avH
+avF
+avF
 nCw
 bKN
 nCw
@@ -79583,9 +79709,9 @@ agc
 asc
 arO
 dPP
-acZ
+avO
 adK
-adJ
+avI
 rBk
 rBk
 rBk
@@ -79745,9 +79871,9 @@ aoP
 asg
 arP
 dPP
-acZ
-agb
-adJ
+avP
+avL
+avI
 rBk
 rBk
 rBk
@@ -79907,9 +80033,9 @@ asy
 ash
 oxg
 dPP
-acZ
-agb
-adJ
+avQ
+avL
+avI
 rBk
 rBk
 rBk
@@ -80069,9 +80195,9 @@ apb
 asi
 oxg
 dPP
-adN
-agb
-adJ
+avR
+avL
+avI
 rBk
 rBk
 rBk
@@ -80231,9 +80357,9 @@ eXT
 asj
 oxg
 dPP
-acZ
-agb
-adJ
+avQ
+avL
+avI
 rBk
 rBk
 rBk
@@ -80393,9 +80519,9 @@ eXT
 ask
 oxg
 dPP
-acZ
-agb
-adJ
+avQ
+avL
+avI
 rBk
 rBk
 rBk
@@ -80555,8 +80681,8 @@ asz
 asi
 oxg
 dPP
-acZ
-agb
+avQ
+avL
 emS
 rBk
 rBk
@@ -80879,7 +81005,7 @@ dPP
 dPP
 dPP
 dPP
-avr
+avQ
 avk
 rBk
 rBk
@@ -81041,7 +81167,7 @@ rBk
 rBk
 rBk
 avt
-avr
+avQ
 avk
 rBk
 rBk
@@ -81203,7 +81329,7 @@ rBk
 rBk
 rBk
 avt
-avr
+avQ
 avk
 rBk
 rBk
@@ -81527,7 +81653,7 @@ rBk
 rBk
 rBk
 avt
-avr
+avQ
 avk
 rBk
 rBk
@@ -81689,7 +81815,7 @@ afF
 afF
 afF
 avv
-avl
+avL
 avk
 afF
 afF
@@ -81851,7 +81977,7 @@ rBk
 rBk
 rBk
 avt
-avr
+avQ
 avk
 rBk
 rBk
@@ -82175,7 +82301,7 @@ rBk
 rBk
 rBk
 avt
-avr
+avQ
 avk
 rBk
 rBk
@@ -82337,7 +82463,7 @@ rBk
 rBk
 rBk
 avt
-avr
+avQ
 avk
 rBk
 rBk
@@ -82499,7 +82625,7 @@ rBk
 rBk
 rBk
 avt
-avr
+avQ
 avk
 rBk
 rBk
@@ -82661,7 +82787,7 @@ rBk
 rBk
 rBk
 avt
-avr
+avQ
 avk
 rBk
 rBk
@@ -82823,7 +82949,7 @@ rBk
 rBk
 rBk
 avt
-avr
+avQ
 avk
 rBk
 rBk
@@ -82985,7 +83111,7 @@ rBk
 rBk
 rBk
 avt
-avr
+avQ
 avk
 rBk
 rBk
@@ -83309,7 +83435,7 @@ rBk
 rBk
 rBk
 avt
-avr
+avQ
 avk
 rBk
 rBk
@@ -83471,7 +83597,7 @@ rBk
 rBk
 rBk
 avt
-avr
+avQ
 avk
 rBk
 rBk
@@ -83633,7 +83759,7 @@ rBk
 rBk
 rBk
 avt
-avr
+avQ
 avk
 rBk
 rBk
@@ -83795,7 +83921,7 @@ rBk
 rBk
 rBk
 avt
-avr
+avQ
 avk
 rBk
 rBk
@@ -83957,7 +84083,7 @@ rBk
 rBk
 rBk
 avt
-avr
+avQ
 avk
 rBk
 rBk
@@ -84119,7 +84245,7 @@ rBk
 rBk
 rBk
 avt
-avr
+avQ
 avk
 rBk
 rBk
@@ -84443,7 +84569,7 @@ rBk
 rBk
 rBk
 avt
-avr
+avQ
 avk
 rBk
 rBk
@@ -84605,7 +84731,7 @@ rBk
 rBk
 rBk
 avt
-avr
+avQ
 avk
 rBk
 rBk
@@ -84767,7 +84893,7 @@ rBk
 rBk
 rBk
 avt
-avr
+avQ
 avk
 rBk
 rBk
@@ -84929,7 +85055,7 @@ rBk
 rBk
 rBk
 avt
-avr
+avQ
 avk
 rBk
 rBk
@@ -85091,7 +85217,7 @@ rBk
 rBk
 rBk
 avt
-avr
+avQ
 avk
 rBk
 rBk
@@ -85253,7 +85379,7 @@ rBk
 rBk
 rBk
 avt
-avr
+avQ
 avk
 rBk
 rBk
@@ -85577,7 +85703,7 @@ rBk
 rBk
 rBk
 avt
-avr
+avQ
 avk
 rBk
 rBk
@@ -85739,7 +85865,7 @@ rBk
 rBk
 rBk
 avt
-avr
+avQ
 avk
 rBk
 rBk
@@ -85901,7 +86027,7 @@ rBk
 rBk
 rBk
 avt
-avr
+avQ
 avk
 rBk
 rBk
@@ -86063,7 +86189,7 @@ rBk
 rBk
 rBk
 avt
-avr
+avQ
 avk
 rBk
 rBk
@@ -86225,7 +86351,7 @@ rBk
 rBk
 rBk
 avt
-avr
+avQ
 avk
 rBk
 rBk
@@ -86387,7 +86513,7 @@ rBk
 rBk
 rBk
 avw
-avr
+avQ
 avk
 rBk
 rBk
@@ -87845,7 +87971,7 @@ rBk
 rBk
 rBk
 avt
-avr
+avQ
 avk
 rBk
 rBk
@@ -88007,7 +88133,7 @@ rBk
 rBk
 rBk
 avt
-avr
+avQ
 avk
 rBk
 rBk
@@ -88169,7 +88295,7 @@ afF
 afF
 afF
 avv
-avl
+avL
 avk
 afF
 afF
@@ -88331,7 +88457,7 @@ rBk
 rBk
 rBk
 avt
-avr
+avQ
 avk
 rBk
 rBk
@@ -88493,7 +88619,7 @@ rBk
 rBk
 rBk
 avt
-avr
+avQ
 avk
 rBk
 rBk
@@ -88655,7 +88781,7 @@ rBk
 rBk
 rBk
 avt
-avr
+avQ
 avk
 rBk
 rBk
@@ -88979,7 +89105,7 @@ rBk
 rBk
 rBk
 avt
-avr
+avQ
 avk
 rBk
 rBk
@@ -89141,7 +89267,7 @@ rBk
 rBk
 rBk
 avt
-avr
+avQ
 avk
 rBk
 rBk
@@ -89303,7 +89429,7 @@ rBk
 rBk
 rBk
 avt
-avr
+avQ
 avk
 rBk
 rBk
@@ -89465,7 +89591,7 @@ rBk
 rBk
 rBk
 avt
-avr
+avQ
 avk
 rBk
 rBk
@@ -89627,7 +89753,7 @@ rBk
 rBk
 rBk
 avt
-avr
+avQ
 avk
 rBk
 rBk
@@ -89789,7 +89915,7 @@ rBk
 rBk
 rBk
 avt
-avr
+avQ
 avk
 rBk
 rBk
@@ -90113,7 +90239,7 @@ rBk
 rBk
 rBk
 avt
-avr
+avQ
 avk
 rBk
 rBk
@@ -90275,7 +90401,7 @@ rBk
 rBk
 rBk
 avt
-avr
+avQ
 avk
 rBk
 rBk
@@ -90437,7 +90563,7 @@ rBk
 rBk
 rBk
 avt
-avr
+avQ
 avk
 rBk
 rBk
@@ -90599,7 +90725,7 @@ rBk
 rBk
 rBk
 avt
-avr
+avQ
 avk
 rBk
 rBk
@@ -90761,7 +90887,7 @@ rBk
 rBk
 rBk
 avt
-avr
+avQ
 avk
 rBk
 rBk
@@ -90923,7 +91049,7 @@ rBk
 rBk
 rBk
 avt
-avr
+avQ
 avk
 rBk
 rBk
@@ -91247,7 +91373,7 @@ rBk
 rBk
 rBk
 avt
-avr
+avQ
 avk
 rBk
 rBk
@@ -91409,7 +91535,7 @@ rBk
 rBk
 rBk
 avt
-avr
+avQ
 avk
 rBk
 rBk
@@ -91571,7 +91697,7 @@ rBk
 rBk
 rBk
 avt
-avr
+avQ
 avk
 rBk
 rBk
@@ -91895,7 +92021,7 @@ rBk
 rBk
 rBk
 avt
-avr
+avQ
 avk
 rBk
 rBk
@@ -92057,7 +92183,7 @@ rBk
 rBk
 rBk
 avt
-avr
+avQ
 avk
 rBk
 rBk
@@ -92219,7 +92345,7 @@ rBk
 rBk
 rBk
 avt
-avr
+avQ
 avk
 rBk
 rBk
@@ -92542,9 +92668,9 @@ rBk
 rBk
 rBk
 avx
-avr
-avr
-avl
+avQ
+avQ
+avL
 avf
 rBk
 rBk
@@ -92707,7 +92833,7 @@ avt
 avq
 avq
 avm
-avg
+avI
 rBk
 rBk
 rBk
@@ -92866,10 +92992,10 @@ rBk
 rBk
 rBk
 avt
-avr
-avr
-avl
-avg
+avQ
+avQ
+avL
+avI
 rBk
 rBk
 rBk
@@ -93028,10 +93154,10 @@ rBk
 rBk
 rBk
 avt
-avr
-avr
-avl
-avg
+avQ
+avQ
+avL
+avI
 rBk
 rBk
 rBk
@@ -93193,7 +93319,7 @@ avt
 avq
 avq
 avm
-avg
+avI
 rBk
 rBk
 rBk
