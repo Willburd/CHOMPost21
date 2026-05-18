@@ -277,8 +277,10 @@
 
 	showing = WEAKREF(thing)
 	showing_name = "[thing]"
+	/* Outpost 21 edit(port) - Bodycam vision fix
 	for(var/obj/machinery/computer/security/telescreen/bodycamera/ES as anything in GLOB.bodycamera_screens)
 		ES.show_thing(thing, src)
+	*/
 
 	START_PROCESSING(SSobj, src)
 
