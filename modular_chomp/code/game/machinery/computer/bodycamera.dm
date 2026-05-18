@@ -80,6 +80,11 @@
 	return // NUH
 
 /obj/machinery/computer/security/telescreen/bodycamera/process()
+	// Outpost 21 edit(port) begin - Bodycam vision fix
+	var/obj/machinery/camera/network/bodycamera/active_body_cam = camera.active_camera
+	if(istype(active_body_cam) && (!the_camera || active_body_cam != the_camera.resolve()))
+		show_thing(active_body_cam.loc, active_body_cam.loc) // this will try to get the topmost atom itself
+	// Outpost 21 edit end
 	if(!showing || !the_camera)
 		stop_showing()
 		return
@@ -87,8 +92,10 @@
 	var/obj/item/clothing/accessory/bodycam/bo_cam = the_camera.resolve()
 	var/turf/here = get_turf(them)
 	var/turf/there = get_turf(bo_cam)
-	if(here != there)
+	// Outpost 21 edit(port) begin - Bodycam vision fix
+	if(here != there || active_body_cam?.loc != bo_cam)
 		stop_showing()
+	// Outpost 21 edit end
 
 /obj/machinery/computer/security/telescreen/bodycamera/proc/show_thing(atom/thing, obj/item/clothing/accessory/bodycam/other_thing)
 	if(!enabled)
@@ -101,11 +108,13 @@
 		return
 	the_camera = WEAKREF(other_thing)
 	var/tries = 10
+	// Outpost 21 edit(port) begin - Bodycam vision fix
 	var/atom/recursive_loc = thing
 	while(--tries)
-		recursive_loc = thing.loc
-		if(!istype(recursive_loc, /atom/movable))
+		recursive_loc = recursive_loc.loc
+		if(isturf(recursive_loc.loc))
 			break
+	// Outpost 21 edit end
 	thing = recursive_loc // should get the topmost atom, which *should* be a mob, or a locker, or something that isnt just ~clothes~
 	showing = WEAKREF(thing)
 	if(bpinboard)
