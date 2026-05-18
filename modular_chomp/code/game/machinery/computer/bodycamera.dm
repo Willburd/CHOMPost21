@@ -44,7 +44,7 @@
 	bradio.listening = TRUE
 	bradio.broadcasting = FALSE
 	bradio.set_frequency(BDCM_FREQ)
-	bradio.canhear_range = world.view // Same as default sight range.
+	bradio.canhear_range = 5 // Same as default sight range. // Outpost 21 edit - Reduced range from world.view(7) to 5
 	power_change()
 
 /obj/machinery/computer/security/telescreen/bodycamera/Destroy()
