@@ -1366,9 +1366,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/ninja_dojo/dojo)
 "di" = (
-/obj/machinery/porta_turret/stationary/syndie{
-	req_access = list(150)
-	},
+/obj/machinery/porta_turret/stationary/syndie,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -1924,6 +1922,9 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/mercenary)
+"et" = (
+/turf/simulated/shuttle/plating/airless,
+/area/syndicate_mothership)
 "ew" = (
 /turf/unsimulated/floor{
 	icon_state = "freezerfloor"
@@ -13653,9 +13654,7 @@
 /turf/simulated/floor/tiled/white,
 /area/shuttle/mercenary)
 "Cb" = (
-/obj/machinery/porta_turret/stationary/syndie{
-	req_access = list(150)
-	},
+/obj/machinery/porta_turret/stationary/syndie,
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 1
 	},
@@ -17589,7 +17588,7 @@
 	intercept = 1
 	},
 /turf/simulated/shuttle/plating/airless,
-/area/space)
+/area/syndicate_mothership)
 "NL" = (
 /obj/machinery/door/airlock/external{
 	frequency = 1381;
@@ -67987,11 +67986,11 @@ TW
 TW
 TW
 TW
-Sg
-Sg
-Sg
-Sg
-Sg
+yb
+yb
+yb
+yb
+yb
 TW
 TW
 TW
@@ -68149,11 +68148,11 @@ TW
 TW
 TW
 TW
-Sg
-mN
-mN
-mN
-Sg
+yb
+et
+et
+et
+yb
 TW
 TW
 TW
@@ -68311,11 +68310,11 @@ TW
 TW
 TW
 TW
-Sg
-mN
+yb
+et
 NE
-mN
-Sg
+et
+yb
 TW
 TW
 TW
@@ -68473,11 +68472,11 @@ TW
 TW
 TW
 TW
-Sg
-mN
-mN
-mN
-Sg
+yb
+et
+et
+et
+yb
 TW
 TW
 TW
@@ -68635,11 +68634,11 @@ TW
 TW
 TW
 TW
-Sg
-Sg
-Sg
-Sg
-Sg
+yb
+yb
+yb
+yb
+yb
 TW
 TW
 TW
