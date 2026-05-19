@@ -1,126 +1,120 @@
-/obj/move/airtunnel
+/obj/structure/airtunnel
 	name = "airtunnel"
 	icon = 'modular_outpost/icons/obj/airtunnel/airtunnel.dmi'
 	icon_state = "floor"
-	var/deployed = 0.0
-	var/obj/move/airtunnel/next = null
-	var/obj/move/airtunnel/previous = null
-	var/r_master = null
+	var/deployed = FALSE
+	var/obj/structure/airtunnel/next = null
+	var/obj/structure/airtunnel/previous = null
+	var/area/airtunnel/master = null
 
-/obj/move/airtunnel/connector
-	name = "connector"
-	icon_state = "floor-c"
-	var/obj/move/airtunnel/current = null
-	deployed = 1.0
+/obj/structure/airtunnel/process()
+	if(!deployed)
+		return
+	. = ..()
 
-/obj/move/airtunnel/connector/wall
-	name = "wall"
-	icon_state = "wall-c"
-	opacity = 1
-	density = 1
-	updatecell = 0.0
+/obj/structure/airtunnel/proc/relocate(direction_to_expand)
+	var/turf/direction_turf = get_step(src, direction_to_expand)
+	for(var/atom/movable/A in contents)
+		A.forceMove(direction_turf)
 
-/obj/move/airtunnel/wall
+/obj/structure/airtunnel/proc/move_left()
+	relocate(WEST)
+	if ((next && next.deployed))
+		return next.move_left()
+	return next
+
+/obj/structure/airtunnel/proc/move_right()
+	relocate(EAST)
+	if ((previous && previous.deployed))
+		previous.move_right()
+	return previous
+
+/obj/structure/airtunnel/proc/create(num, y_coord)
+
+	if (y_coord == 72)
+		if ((num < 7 || (num > 14 && num < 21)))
+			next = new /obj/structure/airtunnel( null )
+		else
+			next = new /obj/structure/airtunnel/wall( null )
+	else
+		next = new /obj/structure/airtunnel( null )
+	next.master = master
+	next.previous = src
+	if (num > 1)
+		spawn( 0 )
+			next.create(num - 1, y_coord)
+
+
+///////////////////////////////////////////////////////////////////////////////////
+// Wall
+///////////////////////////////////////////////////////////////////////////////////
+/obj/structure/airtunnel/wall
 	name = "wall"
 	icon_state = "wall"
 	opacity = 1
 	density = 1
-	updatecell = 0.0
+	can_atmos_pass = ATMOS_PASS_NO
 
-/obj/move/airtunnel/process()
-
-	if (!( deployed ))
-		return null
-	else
-		..()
-	return
-
-/obj/move/airtunnel/connector/create()
+/obj/structure/airtunnel/connector/wall/create()
 
 	current = src
-	next = new /obj/move/airtunnel( null )
+	next = new /obj/structure/airtunnel/wall( null )
 	next.master = master
 	next.previous = src
 	spawn( 0 )
 		next.create(36, y)
-		return
-	return
 
-/obj/move/airtunnel/connector/wall/create()
-
-	current = src
-	next = new /obj/move/airtunnel/wall( null )
-	next.master = master
-	next.previous = src
-	spawn( 0 )
-		next.create(36, y)
-		return
-	return
-
-/obj/move/airtunnel/connector/wall/process()
-
-	return
-
-/obj/move/airtunnel/wall/create(num, y_coord)
+/obj/structure/airtunnel/wall/create(num, y_coord)
 
 	if (((num < 7 || (num > 14 && num < 21)) && y_coord == 72))
-		next = new /obj/move/airtunnel( null )
+		next = new /obj/structure/airtunnel( null )
 	else
-		next = new /obj/move/airtunnel/wall( null )
+		next = new /obj/structure/airtunnel/wall( null )
+
 	next.master = master
 	next.previous = src
 	if (num > 1)
 		spawn( 0 )
 			next.create(num - 1, y_coord)
-			return
-	return
 
-/obj/move/airtunnel/wall/move_right()
-
+/obj/structure/airtunnel/wall/move_right()
 	flick("wall-m", src)
-	return ..()
-	return
+	. = ..()
 
-/obj/move/airtunnel/wall/move_left()
-
+/obj/structure/airtunnel/wall/move_left()
 	flick("wall-m", src)
-	return ..()
-	return
+	. = ..()
 
-/obj/move/airtunnel/wall/process()
+/obj/structure/airtunnel/wall/process()
+	return PROCESS_KILL
 
-	return
 
-/obj/move/airtunnel/proc/move_left()
+///////////////////////////////////////////////////////////////////////////////////
+// Connector
+///////////////////////////////////////////////////////////////////////////////////
+/obj/structure/airtunnel/connector
+	name = "connector"
+	icon_state = "floor-c"
+	var/obj/structure/airtunnel/current = null
+	deployed = TRUE
 
-	relocate(get_step(src, WEST))
-	if ((next && next.deployed))
-		return next.move_left()
-	else
-		return next
-	return
+/obj/structure/airtunnel/connector/wall
+	name = "wall"
+	icon_state = "wall-c"
+	opacity = 1
+	density = 1
+	can_atmos_pass = ATMOS_PASS_NO
 
-/obj/move/airtunnel/proc/move_right()
+/obj/structure/airtunnel/connector/create()
 
-	relocate(get_step(src, EAST))
-	if ((previous && previous.deployed))
-		previous.move_right()
-	return previous
-	return
-
-/obj/move/airtunnel/proc/create(num, y_coord)
-
-	if (y_coord == 72)
-		if ((num < 7 || (num > 14 && num < 21)))
-			next = new /obj/move/airtunnel( null )
-		else
-			next = new /obj/move/airtunnel/wall( null )
-	else
-		next = new /obj/move/airtunnel( null )
+	current = src
+	next = new /obj/structure/airtunnel( null )
 	next.master = master
 	next.previous = src
-	if (num > 1)
-		spawn( 0 )
-			next.create(num - 1, y_coord)
-			return
+	spawn( 0 )
+		next.create(36, y)
+		return
 	return
+
+/obj/structure/airtunnel/connector/wall/process()
+	return PROCESS_KILL

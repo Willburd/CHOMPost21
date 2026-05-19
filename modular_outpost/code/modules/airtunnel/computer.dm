@@ -2,11 +2,19 @@
  *	Airtunnel -- the airtunnel computer
  *				 Controls extention and retraction of the tunnel, and regulation of the atmosphere in it.
  *
- *	Note: Currently, only 1 airtunnel per map can be operated; there is no link to the global airtunnel datum
  */
 
 /obj/machinery/computer/airtunnel
 	name = "Air Tunnel Control"
+	var/area/airtunnel/current_controller = null
+
+/obj/machinery/computer/airtunnel/Initialize(mapload)
+	. = ..()
+	current_controller = get_area(src)
+
+/obj/machinery/computer/airtunnel/Destroy()
+	current_controller = null
+	. = ..()
 
 /// Update icon_state depending on computer and airtunnel status
 /obj/machinery/computer/airtunnel/proc/update_icon()
@@ -19,12 +27,12 @@
 		return
 
 	var/status = 0
-	if (SS13_airtunnel.operating == 1)
+	if (current_controller.operating == 1)
 		status = "r"
-	else if (SS13_airtunnel.operating == 2)
+	else if (current_controller.operating == 2)
 		status = "e"
 	else
-		var/obj/move/airtunnel/connector/C = pick(SS13_airtunnel.connectors)
+		var/obj/structure/airtunnel/connector/C = pick(current_controller.connectors)
 
 		if (C.current == C)
 			status = 0
@@ -33,7 +41,7 @@
 		else
 			status = 1
 
-	icon_state = "console[SS13_airtunnel.siphon_status >= 2 ? "1" : "0"][status]"
+	icon_state = "console[current_controller.siphon_status >= 2 ? "1" : "0"][status]"
 
 // Update the icon, use power, and update interaction window for viewers
 /obj/machinery/computer/airtunnel/process()
@@ -41,8 +49,6 @@
 	if(stat & (NOPOWER|BROKEN) )
 		return
 	use_power(250)
-
-	updateDialog()
 
 // Monkey interct same as human
 /obj/machinery/computer/airtunnel/attack_paw(mob/user)
@@ -59,16 +65,14 @@
 		return
 
 	var/dat = "<HTML><BODY><TT><B>Air Tunnel Controls</B><BR>"
-	user.machine = src
-
-	if (SS13_airtunnel.operating == 1)
+	if (current_controller.operating == 1)
 		dat += "<B>Status:</B> RETRACTING<BR>"
 
-	else  if (SS13_airtunnel.operating == 2)
+	else  if (current_controller.operating == 2)
 		dat += "<B>Status:</B> EXPANDING<BR>"
 
 	else
-		var/obj/move/airtunnel/connector/C = pick(SS13_airtunnel.connectors)
+		var/obj/structure/airtunnel/connector/C = pick(current_controller.connectors)
 
 		if (C.current == C)
 			dat += "<B>Status:</B> Fully Retracted<BR>"
@@ -78,10 +82,10 @@
 			dat += "<B>Status:</B> Stopped Midway<BR>"
 
 	dat += "<A href='?src=\ref[src];retract=1'>Retract</A> <A href='?src=\ref[src];stop=1'>Stop</A> <A href='?src=\ref[src];extend=1'>Extend</A><BR>"
-	dat += "<BR><B>Air Level:</B> [(SS13_airtunnel.air_stat ? "Acceptable" : "DANGEROUS")]<BR>"
+	dat += "<BR><B>Air Level:</B> [(current_controller.air_stat ? "Acceptable" : "DANGEROUS")]<BR>"
 	dat += "<B>Air System Status:</B> "
 
-	switch(SS13_airtunnel.siphon_status)
+	switch(current_controller.siphon_status)
 		if(0.0)
 			dat += "Stopped "
 		if(1.0)
@@ -115,26 +119,24 @@
 		usr.machine = src
 
 		if (href_list["retract"])
-			SS13_airtunnel.retract()
+			current_controller.retract()
 		else if (href_list["stop"])
-			SS13_airtunnel.operating = 0
+			current_controller.operating = 0
 		else if (href_list["extend"])
-			SS13_airtunnel.extend()
+			current_controller.extend()
 		else if (href_list["release"])
-			SS13_airtunnel.siphon_status = 3
-			SS13_airtunnel.siphons()
+			current_controller.siphon_status = 3
+			current_controller.siphons()
 		else if (href_list["siphon"])
-			SS13_airtunnel.siphon_status = 1
-			SS13_airtunnel.siphons()
+			current_controller.siphon_status = 1
+			current_controller.siphons()
 		else if (href_list["stop_siph"])
-			SS13_airtunnel.siphon_status = 0
-			SS13_airtunnel.siphons()
+			current_controller.siphon_status = 0
+			current_controller.siphons()
 		else if (href_list["auto"])
-			SS13_airtunnel.siphon_status = 2
-			SS13_airtunnel.siphons()
+			current_controller.siphon_status = 2
+			current_controller.siphons()
 		else if (href_list["refresh"])
-			SS13_airtunnel.siphons()
+			current_controller.siphons()
 
 		add_fingerprint(usr)
-
-		updateDialog()

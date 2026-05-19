@@ -6,10 +6,12 @@
 
 /area/airtunnel
 	name = "airtunnel"
+	var/list/obj/structure/airtunnel/connectors = list()
+	var/operating = 0
 
 /area/airtunnel/Initialize(mapload)
 	. = ..()
-	for(var/obj/move/airtunnel/A in locate(src))
+	for(var/obj/structure/airtunnel/A in locate(src))
 		A.master = src
 		A.create()
 		connectors += A
@@ -19,40 +21,19 @@
 	connectors = null
 	. = ..()
 
-/area/airtunnel/proc/siphons()
-	switch(siphon_status)
-		if(0.0)
-			for(var/obj/machinery/atmoalter/siphs/S in locate(linked_area))
-				S.t_status = 3
-		if(1.0)
-			for(var/obj/machinery/atmoalter/siphs/fullairsiphon/S in locate(linked_area))
-				S.t_status = 2
-				S.t_per = 1000000.0
-			for(var/obj/machinery/atmoalter/siphs/scrubbers/S in locate(linked_area))
-				S.t_status = 3
-		if(2.0)
-			for(var/obj/machinery/atmoalter/siphs/S in locate(linked_area))
-				S.t_status = 4
-		if(3.0)
-			for(var/obj/machinery/atmoalter/siphs/fullairsiphon/S in locate(linked_area))
-				S.t_status = 1
-				S.t_per = 1000000.0
-			for(var/obj/machinery/atmoalter/siphs/scrubbers/S in locate(linked_area))
-				S.t_status = 3
-
 /area/airtunnel/proc/stop()
 	operating = 0
 	return
 
 /area/airtunnel/proc/extend()
-	if (operating)
+	if(operating)
 		return
 
 	spawn(0)
 		operating = 2
 		while(operating == 2)
 			var/ok = 1
-			for(var/obj/move/airtunnel/connector/A in connectors)
+			for(var/obj/structure/airtunnel/connector/A in connectors)
 				if (!( A.current.next ))
 					operating = 0
 					return
@@ -61,7 +42,7 @@
 			if (!( ok ))
 				operating = 0
 			else
-				for(var/obj/move/airtunnel/connector/A in connectors)
+				for(var/obj/structure/airtunnel/connector/A in connectors)
 					if (A.current)
 						A.current.next.loc = get_step(A.current.loc, EAST)
 						A.current = A.current.next
@@ -78,7 +59,7 @@
 		operating = 1
 		while(operating == 1)
 			var/ok = 1
-			for(var/obj/move/airtunnel/connector/A in connectors)
+			for(var/obj/structure/airtunnel/connector/A in connectors)
 				if (A.current == A)
 					operating = 0
 					return
@@ -91,7 +72,7 @@
 			if (!( ok ))
 				operating = 0
 			else
-				for(var/obj/move/airtunnel/connector/A in connectors)
+				for(var/obj/structure/airtunnel/connector/A in connectors)
 					if (!( A.current.move_right() ))
 						operating = 0
 			sleep(20)

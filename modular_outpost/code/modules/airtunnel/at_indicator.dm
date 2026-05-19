@@ -27,7 +27,7 @@
 	else if (SS13_airtunnel.operating == 2)
 		status = "e"
 	else
-		var/obj/move/airtunnel/connector/C = pick(SS13_airtunnel.connectors)
+		var/obj/structure/airtunnel/connector/C = pick(SS13_airtunnel.connectors)
 		if (C.current == C)
 			status = 0
 		else
