@@ -10,7 +10,7 @@ SUBSYSTEM_DEF(supply)
 	/// Supply points
 	var/points = 50
 	/// How many points we get every SSSupply fire.
-	var/points_per_process = 1.0
+	var/points_per_process = 0.0 // Outpost 21 edit - No supply point generation
 	/// How much money we get for every stamped slip we return to Central
 	var/points_per_slip = 2
 	/// How much money one SP is worth in thalers. Shows up in the end of round stats.
