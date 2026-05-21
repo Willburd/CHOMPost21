@@ -11859,7 +11859,7 @@
 /obj/structure/table/standard,
 /obj/item/clothing/gloves/sterile/latex,
 /obj/item/hand_labeler,
-/obj/item/retail_scanner,
+/obj/item/cargo_scanner,
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology)
 "axf" = (
@@ -19449,7 +19449,7 @@
 /obj/item/tape_roll,
 /obj/item/tape_roll,
 /obj/structure/table/steel,
-/obj/item/retail_scanner{
+/obj/item/cargo_scanner{
 	pixel_x = -5
 	},
 /obj/item/vac_attachment{
@@ -61185,8 +61185,8 @@
 	dir = 8
 	},
 /obj/structure/table/standard,
-/obj/item/retail_scanner,
-/obj/item/retail_scanner,
+/obj/item/cargo_scanner,
+/obj/item/cargo_scanner,
 /obj/item/radio/intercom/department/medbay{
 	dir = 4;
 	pixel_x = 21
@@ -79617,7 +79617,7 @@
 /obj/machinery/atm{
 	pixel_y = -32
 	},
-/obj/item/retail_scanner,
+/obj/item/cargo_scanner,
 /obj/effect/floor_decal/spline/plain,
 /turf/simulated/floor/carpet,
 /area/muriki/crew/casino)

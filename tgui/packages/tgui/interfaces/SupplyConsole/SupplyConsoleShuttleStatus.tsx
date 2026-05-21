@@ -60,7 +60,6 @@ export const SupplyConsoleShuttleStatus = (props) => {
       <LabeledList>
         <LabeledList.Item label="Reserve">
           {' '}
-          {/* Outpost 21 edit - Points or thalers */}
           <AnimatedNumber
             value={supply_points * (price_mod ? 1 : cash_points)}
           />

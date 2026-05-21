@@ -1,4 +1,5 @@
-/obj/item/retail_scanner
+//Device that tells you how many cargo points / thalers an item sells for
+/obj/item/cargo_scanner
 	name = "cargo scanner"
 	desc = "Assess the cargo sale value of items."
 	icon = 'icons/obj/device.dmi'
@@ -8,7 +9,7 @@
 	w_class = ITEMSIZE_SMALL
 
 // Always face the user when put on a table
-/obj/item/retail_scanner/afterattack(atom/movable/AM, mob/user, proximity)
+/obj/item/cargo_scanner/afterattack(atom/movable/AM, mob/user, proximity)
 	if(!proximity)	return
 	if(istype(AM, /obj/structure/table))
 		src.pixel_y = 3 // Shift it up slightly to look better on table
@@ -18,11 +19,11 @@
 		scan_item_price(AM,user)
 
 // Reset dir when picked back up
-/obj/item/retail_scanner/pickup(mob/user)
+/obj/item/cargo_scanner/pickup(mob/user)
 	src.dir = SOUTH
 	src.pixel_y = 0
 
-/obj/item/retail_scanner/proc/scan_item_price(atom/movable/AM,mob/user)
+/obj/item/cargo_scanner/proc/scan_item_price(atom/movable/AM,mob/user)
 	if(istype(AM,/obj/effect))
 		return 0
 
