@@ -5861,7 +5861,7 @@
 	name = "plastic table frame"
 	},
 /obj/item/mass_spectrometer/adv,
-/obj/item/retail_scanner{
+/obj/item/cargo_scanner{
 	pixel_x = -5
 	},
 /obj/structure/disposalpipe/segment,
@@ -7123,8 +7123,8 @@
 /area/rnd/research/anomaly_storage)
 "apU" = (
 /obj/structure/table/rack/shelf/steel,
-/obj/item/retail_scanner,
-/obj/item/retail_scanner,
+/obj/item/cargo_scanner,
+/obj/item/cargo_scanner,
 /turf/simulated/floor/tiled/dark,
 /area/rnd/research/anomaly_storage)
 "apV" = (
@@ -11070,8 +11070,8 @@
 	dir = 5
 	},
 /obj/structure/table/standard,
-/obj/item/retail_scanner,
-/obj/item/retail_scanner,
+/obj/item/cargo_scanner,
+/obj/item/cargo_scanner,
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/phoronics/burn)
 "aMO" = (
@@ -40119,7 +40119,7 @@
 	pixel_x = -4;
 	pixel_y = 12
 	},
-/obj/item/retail_scanner,
+/obj/item/cargo_scanner,
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/coffee_shop)
 "qcY" = (

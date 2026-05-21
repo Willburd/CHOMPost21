@@ -48257,7 +48257,7 @@
 /obj/machinery/door/window/southleft{
 	req_one_access = list(33)
 	},
-/obj/item/retail_scanner{
+/obj/item/cargo_scanner{
 	pixel_x = -9
 	},
 /obj/structure/disposalpipe/segment,
@@ -52961,11 +52961,11 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/item/retail_scanner,
-/obj/item/retail_scanner,
-/obj/item/retail_scanner,
-/obj/item/retail_scanner,
-/obj/item/retail_scanner,
+/obj/item/cargo_scanner,
+/obj/item/cargo_scanner,
+/obj/item/cargo_scanner,
+/obj/item/cargo_scanner,
+/obj/item/cargo_scanner,
 /turf/simulated/floor/tiled,
 /area/quartermaster/storage)
 "lqb" = (
@@ -56313,8 +56313,8 @@
 /area/medical/chemistry)
 "moG" = (
 /obj/structure/table/woodentable,
-/obj/item/retail_scanner,
-/obj/item/retail_scanner,
+/obj/item/cargo_scanner,
+/obj/item/cargo_scanner,
 /turf/simulated/floor/lino,
 /area/crew_quarters/bar)
 "moI" = (
@@ -57027,7 +57027,7 @@
 	pixel_x = -5;
 	pixel_y = 10
 	},
-/obj/item/retail_scanner,
+/obj/item/cargo_scanner,
 /obj/item/clothing/glasses/omnihud/rnd,
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/lab)
@@ -58167,7 +58167,7 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 10
 	},
-/obj/item/retail_scanner,
+/obj/item/cargo_scanner,
 /turf/simulated/floor/tiled/techfloor,
 /area/rnd/research/mailing)
 "mVD" = (
@@ -62762,8 +62762,8 @@
 /obj/structure/table/steel,
 /obj/item/cataloguer,
 /obj/item/cataloguer,
-/obj/item/retail_scanner,
-/obj/item/retail_scanner,
+/obj/item/cargo_scanner,
+/obj/item/cargo_scanner,
 /turf/simulated/floor/tiled,
 /area/quartermaster/mining/prep)
 "owA" = (
@@ -86647,16 +86647,16 @@
 	pixel_x = -8;
 	pixel_y = 9
 	},
-/obj/item/retail_scanner{
+/obj/item/cargo_scanner{
 	pixel_x = 9
 	},
-/obj/item/retail_scanner{
+/obj/item/cargo_scanner{
 	pixel_x = 9
 	},
-/obj/item/retail_scanner{
+/obj/item/cargo_scanner{
 	pixel_x = 9
 	},
-/obj/item/retail_scanner{
+/obj/item/cargo_scanner{
 	pixel_x = 9
 	},
 /turf/simulated/floor/tiled/kafel_full,
@@ -93177,8 +93177,8 @@
 /obj/effect/floor_decal/corner/orange{
 	dir = 5
 	},
-/obj/item/retail_scanner,
-/obj/item/retail_scanner,
+/obj/item/cargo_scanner,
+/obj/item/cargo_scanner,
 /turf/simulated/floor/tiled/milspec,
 /area/engineering/foyer)
 "yfH" = (
