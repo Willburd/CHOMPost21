@@ -27,8 +27,6 @@ GLOBAL_VAR_INIT(prey_digested_roundstat, 0)
 GLOBAL_VAR_INIT(items_digested_roundstat, 0)
 GLOBAL_LIST_EMPTY(security_printer_tickets)
 GLOBAL_LIST_EMPTY(refined_chems_sold)
-GLOBAL_VAR_INIT(landmines_stepped_on_roundstat, 0)	//Outpost21 edit - oh boy
-GLOBAL_VAR_INIT(gibber_fellin_roundstat, 0)			//Outpost21 edit - oh boy
 
 /datum/controller/subsystem/ticker/proc/RoundTrivia()//bazinga
 	var/list/valid_stats_list = list() //This is to be populated with the good shit
