@@ -22,6 +22,7 @@
 /datum/decl/emote/audible/kweh
 	key = "kweh"
 	emote_message_3p = "kwehs out loud!"
+	emote_message_mute_3p = "acts out a kweh!"
 	sound_vary = TRUE
 
 /datum/decl/emote/audible/kweh/get_emote_sound(mob/living/user)
@@ -35,6 +36,7 @@
 /datum/decl/emote/audible/kweh_sad
 	key = "skweh"
 	emote_message_3p = "kwehs sadly"
+	emote_message_mute_3p = "acts out a kweh..."
 	sound_vary = TRUE
 
 /datum/decl/emote/audible/kweh_sad/get_emote_sound(mob/living/user)
