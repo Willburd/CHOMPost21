@@ -75,6 +75,10 @@
 	rank_pin = RANK_PIN_PATH
 /datum/job/janitor
 	rank_pin = RANK_PIN_PATH
+/datum/job/clown
+	rank_pin = RANK_PIN_PATH
+/datum/job/mime
+	rank_pin = RANK_PIN_PATH
 #undef RANK_PIN_PATH
 
 
