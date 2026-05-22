@@ -5768,6 +5768,7 @@
 #include "modular_outpost\code\game\jobs\job\offduty.dm"
 #include "modular_outpost\code\game\jobs\job\science.dm"
 #include "modular_outpost\code\game\jobs\job\security.dm"
+#include "modular_outpost\code\game\jobs\job\special.dm"
 #include "modular_outpost\code\game\jobs\job\stowaway.dm"
 #include "modular_outpost\code\game\machinery\air_alarm.dm"
 #include "modular_outpost\code\game\machinery\auto_doc.dm"
