@@ -3,7 +3,6 @@
 	// No inf pressure shadekin here
 	hazard_high_pressure = HAZARD_HIGH_PRESSURE
 	// Has eye color here, so they can do faded eyes
-	spawn_flags = NONE // Allowed base here
 	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_SKIN_COLOR | HAS_UNDERWEAR | HAS_EYE_COLOR
 	max_age = 150 // Functionally immortal, but dies from slow exposure to harm over time... better medical care on crew
 
