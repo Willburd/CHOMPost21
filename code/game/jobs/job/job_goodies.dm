@@ -62,7 +62,7 @@
 		/obj/item/poster/custom = 200,
 		/obj/item/ticket_printer = 200,
 		/obj/item/holowarrant = 200,
-		/obj/item/retail_scanner = 100, ///security,	//CHOMPStation addition Outpost 21 edit - retail scanner tweak
+		/obj/item/cargo_scanner = 100, ///security,	//CHOMPStation addition Outpost 21 edit - retail scanner tweak
 		/obj/item/taperoll/police = 100
 	)
 

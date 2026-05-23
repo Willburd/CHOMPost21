@@ -267,7 +267,7 @@
 			teles_left -= 1
 
 			// use a lot of power
-			use_power(trueDistance * 10000)
+			use_power(trueDistance * 1000) // Outpost 21 edit - Make telesci actually fun
 
 			var/datum/effect/effect/system/spark_spread/S = new /datum/effect/effect/system/spark_spread()
 			S.set_up(5, 1, get_turf(telepad))
