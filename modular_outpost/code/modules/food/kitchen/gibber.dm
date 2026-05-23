@@ -175,11 +175,6 @@
 		to_chat(user, "<span class='danger'>The gibber safety guard is engaged!</span>")
 		return
 
-
-	if(victim.abiotic(1))
-		to_chat(user, "<span class='danger'>Subject may not have abiotic items on.</span>")
-		return
-
 	user.visible_message("<span class='danger'>[user] starts to put [victim] into the gibber!</span>")
 	src.add_fingerprint(user)
 	if(do_after(user, 3 SECONDS, target = src) && victim.Adjacent(src) && user.Adjacent(src) && victim.Adjacent(user) && !occupant)

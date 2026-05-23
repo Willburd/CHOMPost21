@@ -58,9 +58,11 @@
 			to_chat(user, span_warning("\The [H.affecting] has other entities attached to it. Remove them first."))
 			return
 		var/mob/M = H.affecting
+		/* Outpost 21 edit(port) - Disable abiotic lockout
 		if(M.abiotic())
 			to_chat(user, span_notice("Subject cannot have abiotic items on."))
 			return
+		*/
 		M.forceMove(src)
 		occupant = M
 		update_icon()
@@ -94,9 +96,11 @@
 
 	if(O.buckled)
 		return 0
+	/* Outpost 21 edit(port) - Disable abiotic lockout
 	if(O.abiotic())
 		to_chat(user, span_notice("Subject cannot have abiotic items on."))
 		return 0
+	*/
 	if(O.has_buckled_mobs())
 		to_chat(user, span_warning("\The [O] has other entities attached to it. Remove them first."))
 		return
