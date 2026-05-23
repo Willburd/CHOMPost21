@@ -135,6 +135,8 @@
 	rank_pin = RANK_PIN_PATH
 /datum/alt_title/junior_brigphys
 	rank_pin = RANK_PIN_PATH
+/datum/alt_title/junior_roboticist
+	rank_pin = RANK_PIN_PATH
 /datum/alt_title/nurse
 	rank_pin = RANK_PIN_PATH
 #undef RANK_PIN_PATH
