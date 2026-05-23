@@ -68,8 +68,14 @@
 	alt_titles = list(
 		JOB_ALT_ASSEMBLY_TECHNICIAN = /datum/alt_title/assembly_tech,
 		JOB_ALT_BIOMECHANICAL_ENGINEER = /datum/alt_title/biomech,
-		JOB_ALT_MECHATRONIC_ENGINEER = /datum/alt_title/mech_tech)
+		JOB_ALT_MECHATRONIC_ENGINEER = /datum/alt_title/mech_tech,
+		JOB_ALT_JUNIOR_ROBOTICIST = /datum/alt_title/junior_roboticist)
 
+
+/datum/alt_title/junior_roboticist
+	title = JOB_ALT_JUNIOR_ROBOTICIST
+	title_blurb = "A " + JOB_ALT_JUNIOR_ROBOTICIST + " focuses on the construction and maintenance of Exosuits. While not being as well versed in their use, they should have some knowledge behind them during their training period. \
+					They may also be called upon to work on synthetics and prosthetics, if needed."
 
 /datum/job/xenobiologist/New()
 	access -= list(ACCESS_ROBOTICS)
