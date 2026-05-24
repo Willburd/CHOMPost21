@@ -209,7 +209,8 @@
 		istype(thing,/obj/item/rcd) || \
 		istype(thing,/obj/item/shield) || \
 		istype(thing,/obj/item/weldpack) || \
-		istype(thing,/obj/item/clothing/gloves/telekinetic) \
+		istype(thing,/obj/item/clothing/gloves/telekinetic) || \
+		istype(thing,/obj/item/disposable_teleporter) \
 	)
 		return 1
 	else
