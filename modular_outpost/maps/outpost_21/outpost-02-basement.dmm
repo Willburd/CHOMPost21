@@ -19619,6 +19619,9 @@
 	pixel_y = 5
 	},
 /obj/item/reagent_containers/spray/cleaner,
+/obj/item/flash,
+/obj/item/flash,
+/obj/item/flash,
 /turf/simulated/floor/tiled/milspec,
 /area/medical/robotics)
 "aMe" = (
@@ -72901,6 +72904,9 @@
 	dir = 1
 	},
 /obj/structure/table/standard,
+/obj/item/extinguisher/mini,
+/obj/item/extinguisher/mini,
+/obj/item/extinguisher/mini,
 /turf/simulated/floor/tiled/milspec,
 /area/medical/robotics)
 "fZt" = (
@@ -78321,6 +78327,10 @@
 /obj/item/borg/upgrade/utility/reset{
 	pixel_y = 7
 	},
+/obj/item/sticky_pad/random{
+	pixel_x = 2;
+	pixel_y = 9
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/medical/robotics)
 "mJD" = (
@@ -82262,19 +82272,12 @@
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/muriki/bathroom/scilower)
 "rfv" = (
-/obj/structure/table/standard,
-/obj/item/extinguisher/mini,
-/obj/item/extinguisher/mini,
-/obj/item/extinguisher/mini,
-/obj/item/flash,
-/obj/item/flash,
-/obj/item/flash,
 /obj/effect/floor_decal/milspec/color/orange/half{
 	dir = 4
 	},
-/obj/item/sticky_pad/random{
-	pixel_x = 2;
-	pixel_y = 9
+/obj/machinery/computer/rdconsole_tg/robotics_remote{
+	pixel_x = 5;
+	dir = 8
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/medical/robotics)
