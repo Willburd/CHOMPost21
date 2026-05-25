@@ -8,7 +8,7 @@
 	effect = pick(EFFECT_TOUCH, EFFECT_AURA)
 	effect_type = pick(EFFECT_BLUESPACE, EFFECT_SYNTH)
 
-/datum/artifact_effect/gasch4/DoEffectTouch(var/mob/user)
+/datum/artifact_effect/gasch4/DoEffectTouch(mob/user)
 	var/atom/holder = get_master_holder()
 	if(holder)
 		var/turf/holder_loc = holder.loc

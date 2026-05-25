@@ -16,7 +16,7 @@
 /datum/map_z_level/outpost_lateload
 	z = 0
 
-/datum/map_z_level/outpost_lateload/New(var/datum/map/map, mapZ)
+/datum/map_z_level/outpost_lateload/New(datum/map/map, mapZ)
 	if(mapZ && !z)
 		z = mapZ
 	return ..(map)
@@ -38,7 +38,7 @@
 // Misc Z-level
 /datum/map_z_level/outpost_lateload/misc
 	name = Z_NAME_OUTPOST_MISC
-	flags = MAP_LEVEL_ADMIN|MAP_LEVEL_XENOARCH_EXEMPT|MAP_LEVEL_SEALED|MAP_LEVEL_BELOW_BLOCKED
+	flags = MAP_LEVEL_ADMIN|MAP_LEVEL_CONTACT|MAP_LEVEL_XENOARCH_EXEMPT|MAP_LEVEL_SEALED|MAP_LEVEL_BELOW_BLOCKED
 
 /datum/map_template/outpost_lateload/misc
 	name = Z_NAME_OUTPOST_MISC

@@ -35,14 +35,15 @@
 	var/mob/living/silicon/robot/R = host
 
 	var/list/modules = list()
+	var/list/whitelisted = list()
 	if(R.module)
 		modules = list(R.modtype)
 		selected_module = R.modtype
 	else
-		if(LAZYLEN(R.restrict_modules_to) > 0)
-			modules.Add(R.restrict_modules_to)
+		if(LAZYLEN(R.restrict_modules_to))
+			modules += R.restrict_modules_to
 		else if(R.shell)
-			modules.Add(GLOB.robot_module_types) // CHOMPEdit
+			modules += GLOB.shell_module_types
 			// Outpost 21 edit begin - Admins always have ERT access
 			if(usr.client && usr.client.holder && check_rights_for(usr.client, (R_ADMIN|R_MOD)))
 				modules |= GLOB.emergency_module_types
@@ -53,18 +54,21 @@
 				modules |= GLOB.emergency_module_types
 			// CHOMPAdd End
 		else
-			modules.Add(GLOB.robot_module_types)
+			modules += GLOB.robot_module_types
 			// Outpost 21 edit begin - Admins always have ERT access
 			if(usr.client && usr.client.holder && check_rights_for(usr.client, (R_ADMIN|R_MOD)))
 				modules |= GLOB.emergency_module_types
 			// Outpost 21 edit end
-			else if(R.crisis || GLOB.security_level >= SEC_LEVEL_RED || R.crisis_override)
+			if(R.crisis || GLOB.security_level >= SEC_LEVEL_RED || R.crisis_override)
 				to_chat(R, span_red("Crisis mode active. Combat module available."))
 				modules |= GLOB.emergency_module_types
 			for(var/module_name in GLOB.whitelisted_module_types)
 				if(is_borg_whitelisted(R, module_name))
-					modules |= module_name
+					if(!(module_name in modules))
+						modules += module_name
+						whitelisted += module_name
 	data["possible_modules"] = modules
+	data["whitelisted_modules"] = whitelisted
 	data["mind_name"] = R.mind.name
 	data["theme"] = R.get_ui_theme()
 
@@ -97,7 +101,7 @@
 				model_type = "wide"
 			if(istype(S, /datum/robot_sprite/dogborg/tall))
 				model_type = "tall"
-			available_sprites += list(list("sprite" = S.name, "belly" = S.has_vore_belly_sprites, "type" = model_type))
+			UNTYPED_LIST_ADD(available_sprites, list("sprite" = S.name, "belly" = S.has_vore_belly_sprites, "type" = model_type))
 
 		data["possible_sprites"] = available_sprites
 		data["sprite_datum"] = sprite_datum
@@ -120,12 +124,12 @@
 	switch(action)
 		if("pick_module")
 			if(R.module)
-				return
+				return FALSE
 			var/new_module = params["value"]
 			if(!(new_module in GLOB.robot_modules))
-				return
+				return FALSE
 			if(!is_borg_whitelisted(R, new_module))
-				return
+				return FALSE
 			selected_module = new_module
 			if(sprite_datum)
 				var/new_datum
@@ -135,32 +139,32 @@
 						new_datum = S
 						break
 				sprite_datum = new_datum
-			. = TRUE
+			return TRUE
 		if("pick_icon")
 			var/sprite = params["value"]
 			if(!sprite)
-				return
+				return FALSE
 			var/list/module_sprites = SSrobot_sprites.get_module_sprites(selected_module, R)
 			for(var/datum/robot_sprite/S in module_sprites)
 				if(S.name == sprite)
 					sprite_datum = S
 					break
-			. = TRUE
+			return TRUE
 		if("rename")
 			var/name = params["value"]
 			if(name)
 				new_name = sanitizeSafe(name, MAX_NAME_LEN)
 				R.sprite_name = new_name
-			. = TRUE
+			return TRUE
 		if("confirm")
 			R.apply_name(new_name)
 			R.apply_module(sprite_datum, selected_module)
 			R.update_multibelly()
 			R.transform_module()
 			close_ui()
-			. = TRUE
+			return TRUE
 
-/mob/living/silicon/robot/proc/apply_name(var/new_name)
+/mob/living/silicon/robot/proc/apply_name(new_name)
 	if(!custom_name)
 		if (new_name)
 			custom_name = new_name
@@ -170,7 +174,7 @@
 			real_name = new_name
 			// Outpost 21 edit end
 
-/mob/living/silicon/robot/proc/apply_module(var/datum/robot_sprite/new_datum, var/new_module)
+/mob/living/silicon/robot/proc/apply_module(datum/robot_sprite/new_datum, new_module)
 	icon_selected = TRUE
 	var/module_type = GLOB.robot_modules[new_module]
 	if(modtype != new_module || !module)

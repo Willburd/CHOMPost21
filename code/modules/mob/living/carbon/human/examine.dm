@@ -135,7 +135,7 @@
 	// Outpost 21 edit begin - Eshui ranks
 	if(LAZYLEN(ranks_items))
 		for(var/obj/item/clothing/accessory/rank_eshui/pin in ranks_items)
-			msg += "[p_They()] [p_have()] the rank of [span_underline(span_bold(pin.rank))]."
+			msg += "[p_They()] [p_have()] the rank of [icon2html(pin,user.client)] [span_underline(span_bold(pin.rank))]."
 	// Outpost 21 edit end
 
 	//suit/armour
@@ -437,6 +437,24 @@
 	if(hasHUD(user,"best"))
 		msg += "Employment records: <a href='byond://?src=\ref[src];emprecord=`'>\[View\]</a> <a href='byond://?src=\ref[src];emprecordadd=`'>\[Add comment\]</a>"
 
+	// Outpost 21 edit begin - Gold digger trait
+	if(HAS_TRAIT(user, TRAIT_GOLDDIGGER))
+		var/datum/preferences/P = client?.prefs
+		if(P)
+			msg += "[p_They()] look like [p_theyre()] [P.read_preference(/datum/preference/choiced/human/economic_status)] economically."
+		else
+			msg += "You can't get a sense of how well off [p_they()] are..."
+	// Outpost 21 edit end
+
+	// Outpost 21 edit begin - Unwashed
+	if(feels_gross >= 10)
+		if(feels_gross >= 50)
+			msg += span_danger("[p_They()] [p_are()] a monument to filth. The dirt beneath [p_them()] cowers with fear, for its god walks amongst it.")
+		else if(feels_gross >= 20)
+			msg += span_warning("[p_They()] really need[p_s()] a shower, it's uncomfortable to even look at [p_them()].")
+		else
+			msg += "[p_They()] look unwashed."
+	// Outpost 21 edit end
 
 	var/flavor_text = print_flavor_text()
 	if(flavor_text)

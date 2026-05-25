@@ -12,11 +12,15 @@
 	appearance_flags = TILE_BOUND|PIXEL_SCALE|NO_CLIENT_COLOR
 	layer = LAYER_HUD_BASE
 	plane = PLANE_PLAYER_HUD
-	var/obj/master = null	//A reference to the object in the slot. Grabs or items, generally.
+	/// A reference to the object in the slot. Grabs or items, generally, but any datum will do.
+	var/datum/weakref/master_ref = null
+	/// A reference to the owner HUD, if any.
+	//VAR_PRIVATE/datum/hud/hud = null //This SHOULD be converted to private eventually, but we're not there yet.
 	var/datum/hud/hud = null // A reference to the owner HUD, if any.
 
 /atom/movable/screen/Destroy()
-	master = null
+	master_ref = null
+	hud = null
 	return ..()
 
 /atom/movable/screen/proc/component_click(atom/movable/screen/component_button/component, params)
@@ -67,6 +71,7 @@
 	name = "close"
 
 /atom/movable/screen/close/Click()
+	var/obj/master = master_ref?.resolve()
 	if(master)
 		if(istype(master, /obj/item/storage))
 			var/obj/item/storage/S = master
@@ -100,6 +105,7 @@
 	name = "grab"
 
 /atom/movable/screen/grab/Click()
+	var/obj/master = master_ref?.resolve()
 	var/obj/item/grab/G = master
 	G.s_click(src)
 	return 1
@@ -121,6 +127,7 @@
 		return 1
 	if (istype(usr.loc,/obj/mecha)) // stops inventory actions in a mech
 		return 1
+	var/obj/master = master_ref?.resolve()
 	if(master)
 		var/obj/item/I = usr.get_active_hand()
 		if(I)
@@ -640,14 +647,14 @@
 
 		if("shadekin status")
 			var/turf/T = get_turf(usr)
-			// outpost 21 addition begin - lockers are dark and spooky!
+			// outpost 21 edit begin - lockers are dark and spooky!
 			var/darkness = 0
 			if(T)
 				darkness = round(1 - T.get_lumcount(),0.1)
 				to_chat(usr,span_notice(span_bold("Darkness:") + " [darkness]"))
 			if(istype(usr.loc,/obj/structure/closet)) // it's dark in here!
 				darkness = 1
-			// outpost 21 addition end
+			// outpost 21 edit end
 			var/mob/living/H = usr
 			if(ismob(H))
 				var/datum/component/shadekin/SK = H.get_shadekin_component()
@@ -684,14 +691,14 @@
 						feral_passing = FALSE
 					if(feral_passing)
 						var/turf/T = get_turf(H)
-						// outpost 21 addition begin - lockers are dark and spooky!
+						// outpost 21 edit begin - lockers are dark and spooky!
 						var/darkness = 0
 						if(T)
 							darkness = round(1 - T.get_lumcount(),0.1)
 						if(istype(H.loc,/obj/structure/closet))
 							darkness = 1 // it's dark in here!
 						if(darkness <= 0.1)
-						// outpost 21 addition end
+						// outpost 21 edit end
 							to_chat(usr, span_notice("You are slowly calming down in darkness' safety..."))
 						else if(isbelly(H.loc)) // Safety message for if inside a belly.
 							to_chat(usr, span_notice("You are slowly calming down within the darkness of something's belly, listening to their body as it moves around you. ...safe..."))
@@ -869,7 +876,7 @@
 	owner = null
 	return ..()
 
-/atom/movable/screen/movable/mapper_holder/proc/update(var/atom/movable/screen/mapper/map, var/atom/movable/screen/mapper/extras_holder/extras, ping = FALSE)
+/atom/movable/screen/movable/mapper_holder/proc/update(atom/movable/screen/mapper/map, atom/movable/screen/mapper/extras_holder/extras, ping = FALSE)
 	if(!running)
 		running = TRUE
 		if(ping)
@@ -900,7 +907,7 @@
 		owner.pinging = !owner.pinging
 		on()
 
-/atom/movable/screen/movable/mapper_holder/proc/off(var/inform = TRUE)
+/atom/movable/screen/movable/mapper_holder/proc/off(inform = TRUE)
 	frame.cut_overlay("powlight")
 	bg.vis_contents.Cut()
 	vis_contents.Remove(mask_ping, mask_full, extras_holder)
@@ -909,7 +916,7 @@
 	if(inform)
 		owner.stop_updates()
 
-/atom/movable/screen/movable/mapper_holder/proc/on(var/inform = TRUE)
+/atom/movable/screen/movable/mapper_holder/proc/on(inform = TRUE)
 	frame.add_overlay("powlight")
 	if(inform)
 		owner.start_updates()
@@ -1023,6 +1030,10 @@
 	var/static/list/ammo_screen_loc_list = list(ui_ammo_hud1, ui_ammo_hud2, ui_ammo_hud3 ,ui_ammo_hud4)
 	var/datum/weakref/our_gun
 
+/atom/movable/screen/ammo/Destroy()
+	. = ..()
+	our_gun = null
+
 /atom/movable/screen/ammo/Click()
 	var/mob/user = usr
 	if(!user.checkClickCooldown())
@@ -1037,7 +1048,7 @@
 	gun.switch_firemodes(user)
 	return TRUE
 
-/atom/movable/screen/ammo/proc/add_hud(var/mob/living/user, var/obj/item/gun/G)
+/atom/movable/screen/ammo/proc/add_hud(mob/living/user, obj/item/gun/G)
 
 	if(!user?.client)
 		return
@@ -1055,10 +1066,10 @@
 
 	user.client.screen += src
 
-/atom/movable/screen/ammo/proc/remove_hud(var/mob/living/user)
+/atom/movable/screen/ammo/proc/remove_hud(mob/living/user)
 	user?.client?.screen -= src
 
-/atom/movable/screen/ammo/proc/update_hud(var/mob/living/user, var/obj/item/gun/G)
+/atom/movable/screen/ammo/proc/update_hud(mob/living/user, obj/item/gun/G)
 	if(!user?.client?.screen.Find(src))
 		return
 

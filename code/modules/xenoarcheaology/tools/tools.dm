@@ -3,7 +3,6 @@
 	desc = "A coiled metallic tape used to check dimensions and lengths."
 	icon = 'icons/obj/xenoarchaeology.dmi'
 	icon_state = "measuring"
-	origin_tech = list(TECH_MATERIAL = 1)
 	matter = list(MAT_STEEL = 100)
 	w_class = ITEMSIZE_SMALL
 
@@ -36,7 +35,6 @@
 	icon = 'icons/obj/xenoarchaeology.dmi'
 	icon_state = "xenoarch_scanner"
 	item_state = "analyzer"
-	origin_tech = list(TECH_BLUESPACE = 3, TECH_MAGNET = 3)
 	matter = list(MAT_STEEL = 10000,MAT_GLASS = 5000)
 	w_class = ITEMSIZE_SMALL
 	slot_flags = SLOT_BELT
@@ -103,7 +101,6 @@
 	icon = 'icons/obj/xenoarchaeology.dmi'
 	icon_state = "depth_scanner"
 	item_state = "analyzer"
-	origin_tech = list(TECH_MAGNET = 2, TECH_ENGINEERING = 2, TECH_BLUESPACE = 2)
 	matter = list(MAT_STEEL = 1000,MAT_GLASS = 1000)
 	w_class = ITEMSIZE_SMALL
 	slot_flags = SLOT_BELT
@@ -117,7 +114,7 @@
 	var/record_index = 1
 	var/material = "unknown"
 
-/obj/item/depth_scanner/proc/scan_atom(var/mob/user, var/atom/A)
+/obj/item/depth_scanner/proc/scan_atom(mob/user, atom/A)
 	user.visible_message(span_bold("\The [user]") + " scans \the [A], the air around them humming gently.")
 
 	if(istype(A, /turf/simulated/mineral))
@@ -171,6 +168,12 @@
 	if(!ui)
 		ui = new(user, src, "XenoarchDepthScanner", name)
 		ui.open()
+
+/obj/item/depth_scanner/tgui_static_data(mob/user)
+	. = ..()
+	if(isrobot(loc))
+		var/mob/living/silicon/robot/robot_owner = loc
+		.["theme"] = robot_owner.get_ui_theme()
 
 /obj/item/depth_scanner/tgui_data(mob/user, datum/tgui/ui, datum/tgui_state/state)
 	var/list/data = ..()
@@ -230,7 +233,6 @@
 	icon = 'icons/obj/device.dmi'
 	icon_state = "pinoff"	//pinonfar, pinonmedium, pinonclose, pinondirect, pinonnull
 	item_state = "electronic"
-	origin_tech = list(TECH_MAGNET = 3, TECH_ENGINEERING = 2, TECH_BLUESPACE = 3)
 	matter = list(MAT_STEEL = 1000,MAT_GLASS = 500)
 	var/frequency = PUB_FREQ
 	var/scan_ticks = 0
@@ -332,7 +334,6 @@
 	icon_state = "ano_scanner2"
 	item_state = "lampgreen"
 	icon = 'icons/obj/xenoarchaeology.dmi'
-	origin_tech = list(TECH_MAGNET = 3, TECH_ENGINEERING = 3, TECH_BLUESPACE = 2)
 	matter = list(MAT_STEEL = 10000,MAT_GLASS = 5000)
 	w_class = ITEMSIZE_SMALL
 	slot_flags = SLOT_BELT

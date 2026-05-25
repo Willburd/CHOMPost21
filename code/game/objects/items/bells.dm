@@ -5,7 +5,7 @@
 	icon_state = "deskbell"
 	force = 2
 	throwforce = 2
-	w_class = 2.0
+	w_class = ITEMSIZE_SMALL
 	matter = list(MAT_STEEL = 50)
 	var/broken
 	attack_verb = list("annoyed")
@@ -20,6 +20,7 @@
 	if(broken)
 		. += span_bold("It looks damaged, the ringer is stuck firmly inside.")
 
+// Outpost 21 edit begin - Remove radial menu
 /obj/item/deskbell/attack_ai(mob/user)
 	return
 
@@ -28,8 +29,9 @@
 		ring(user)
 		add_fingerprint(user)
 	..()
+// Outpost 21 edit end
 
-/obj/item/deskbell/attack(mob/target as mob, mob/living/user as mob)
+/obj/item/deskbell/attack(mob/living/M, mob/living/user, target_zone, attack_modifier)
 	if(!broken)
 		ring(user)
 		add_fingerprint(user)
@@ -37,7 +39,7 @@
 
 /obj/item/deskbell/attack_hand(mob/user)
 	// Outpost 21 edit begin - Remove radial menu
-	if(!isturf(loc) || anchored)
+	if(src == user.get_active_hand() || anchored)
 		if(!broken && check_ability(user))
 			ring(user)
 			add_fingerprint(user)

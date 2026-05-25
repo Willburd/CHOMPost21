@@ -51,7 +51,7 @@ Possible to do for anyone motivated enough:
 		attack_hand(user)
 	return
 
-/obj/machinery/hologram/holopad/attack_hand(var/mob/living/carbon/human/user) //Carn: Hologram requests.
+/obj/machinery/hologram/holopad/attack_hand(mob/living/carbon/human/user) //Carn: Hologram requests.
 	if(!istype(user))
 		return
 	if(tgui_alert(user,"Would you like to request an AI's presence?","Request AI",list("Yes","No")) == "Yes")
@@ -144,13 +144,9 @@ For the other part of the code, check silicon say.dm. Particularly robot talk.*/
 	if(LAZYLEN(masters))
 		START_MACHINE_PROCESSING(src)
 
-	// Outpost 21 edit(port) begin - ambience for AI when in hologram
+	// Let the AI experience area ambiences too
 	var/area/ar = get_area(hologram.loc)
-	if(ar)
-		A.lastarea = ar
-		A.lastareachange = world.time
-		ar.play_ambience(A, initial = TRUE)
-	// Outpost 21 edit end
+	ar?.play_ambience(A, initial = TRUE)
 	return 1
 
 /obj/machinery/hologram/holopad/proc/clear_holo(mob/living/silicon/ai/user)

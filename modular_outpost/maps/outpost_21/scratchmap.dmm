@@ -51,6 +51,26 @@
 /mob/living/simple_mob/vore/wolf/direwolf/syndicate/black,
 /turf/simulated/floor/reinforced,
 /area/space)
+"al" = (
+/turf/unsimulated/wall/r_wall,
+/area/space)
+"am" = (
+/turf/unsimulated/wall/fakeglass2{
+	dir = 4
+	},
+/area/space)
+"an" = (
+/obj/machinery/door/airlock/centcom{
+	name = "Special Operations";
+	req_access = list(103)
+	},
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"ao" = (
+/turf/unsimulated/wall/fakeglass,
+/area/space)
 "ap" = (
 /obj/random/maintenance/engineering,
 /turf/space,
@@ -84,6 +104,9 @@
 	ignore_mapgen = 1
 	},
 /area/space)
+"aw" = (
+/turf/simulated/floor/wood,
+/area/space)
 "ax" = (
 /obj/effect/landmark/event_spawn/maintpred,
 /turf/space,
@@ -110,15 +133,144 @@
 /obj/effect/recycler_vendor_beacon,
 /turf/space,
 /area/space)
+"aD" = (
+/obj/machinery/recharge_station,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"aE" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/vending/security_armor,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"aF" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/table/rack,
+/obj/fiftyspawner/mhydrogen,
+/obj/fiftyspawner/mhydrogen,
+/obj/fiftyspawner/mhydrogen,
+/obj/fiftyspawner/mhydrogen,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"aG" = (
+/obj/structure/table/rack,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/fiftyspawner/leather,
+/obj/fiftyspawner/leather,
+/obj/item/tool/wirecutters/alien{
+	pixel_y = 6
+	},
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"aH" = (
+/obj/structure/table/rack,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/fiftyspawner/durasteel/hull,
+/obj/fiftyspawner/durasteel/hull,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"aI" = (
+/obj/structure/table/rack,
+/obj/item/storage/belt/security/tactical,
+/obj/item/storage/belt/security/tactical,
+/obj/item/storage/belt/security/tactical,
+/obj/item/storage/belt/security/tactical,
+/obj/item/storage/belt/security/tactical,
+/obj/effect/floor_decal/corner/black{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/red,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"aJ" = (
+/obj/effect/floor_decal/corner/black{
+	dir = 10
+	},
+/obj/effect/floor_decal/corner/red,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
 "aK" = (
 /obj/random/maintenance/cargo,
 /turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
 	},
 /area/space)
+"aL" = (
+/obj/structure/table/rack,
+/obj/item/storage/belt/utility,
+/obj/item/storage/belt/utility,
+/obj/item/storage/belt/utility,
+/obj/item/storage/belt/utility,
+/obj/item/storage/belt/utility,
+/obj/effect/floor_decal/corner/black{
+	dir = 10
+	},
+/obj/effect/floor_decal/corner/red,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
 "aM" = (
 /obj/machinery/door/airlock/maintenance/int,
 /turf/simulated/floor/plating/turfpack/muriki,
+/area/space)
+"aN" = (
+/obj/structure/table/rack,
+/obj/item/storage/belt/medical/emt,
+/obj/item/storage/belt/medical/emt,
+/obj/item/storage/belt/medical/emt,
+/obj/item/storage/belt/medical/emt,
+/obj/item/storage/belt/medical/emt,
+/obj/effect/floor_decal/corner/black{
+	dir = 10
+	},
+/obj/effect/floor_decal/corner/red,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"aO" = (
+/obj/effect/floor_decal/corner/black/full{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/red,
+/obj/structure/table/reinforced,
+/obj/item/clothing/accessory/holster/hip/black,
+/obj/item/clothing/accessory/holster/hip/black,
+/obj/item/clothing/accessory/holster/hip/black,
+/obj/item/clothing/accessory/holster/hip/black,
+/obj/item/clothing/accessory/holster/hip/black,
+/obj/item/clothing/accessory/holster/hip/black,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"aP" = (
+/turf/unsimulated/wall/fakeglass{
+	dir = 8
+	},
+/area/space)
+"aQ" = (
+/turf/unsimulated/wall/fakeglass{
+	icon_state = "fakewindows2";
+	dir = 1
+	},
 /area/space)
 "aR" = (
 /obj/structure/trash_pile,
@@ -134,6 +286,44 @@
 /area/space)
 "aT" = (
 /turf/simulated/floor/plating/turfpack/muriki,
+/area/space)
+"aU" = (
+/turf/unsimulated/wall/fakeglass{
+	dir = 4
+	},
+/area/space)
+"aV" = (
+/turf/unsimulated/wall/fakeglass{
+	icon_state = "fakewindows2"
+	},
+/area/space)
+"aW" = (
+/obj/structure/bed/chair/backed_red{
+	dir = 1
+	},
+/obj/effect/landmark/late_antag/ert,
+/turf/simulated/floor/wood,
+/area/space)
+"aX" = (
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"aY" = (
+/obj/structure/table/reinforced,
+/obj/effect/floor_decal/corner/black{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/red,
+/obj/item/clothing/accessory/holster/hip/black,
+/obj/item/clothing/accessory/holster/hip/black,
+/obj/item/clothing/accessory/holster/hip/black,
+/obj/item/clothing/accessory/holster/hip/black,
+/obj/item/clothing/accessory/holster/hip/black,
+/obj/item/clothing/accessory/holster/hip/black,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
 /area/space)
 "aZ" = (
 /obj/item/flame/candle/everburn,
@@ -154,6 +344,19 @@
 	ignore_mapgen = 1
 	},
 /area/space)
+"bc" = (
+/obj/structure/table/steel_reinforced,
+/obj/structure/reagent_dispensers/acid{
+	pixel_x = -30
+	},
+/obj/item/reagent_containers/glass/beaker/sulphuric,
+/obj/item/reagent_containers/glass/beaker/sulphuric,
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
+"bd" = (
+/obj/machinery/rnd/production/circuit_imprinter,
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
 "be" = (
 /obj/machinery/transhuman/autoresleever,
 /turf/simulated/floor/plating/turfpack/muriki,
@@ -172,13 +375,156 @@
 	ignore_mapgen = 1
 	},
 /area/space)
+"bh" = (
+/obj/machinery/computer/mecha{
+	dir = 1;
+	pixel_y = -2
+	},
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
+"bi" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/mecha_parts/mecha_equipment/tool/jetpack,
+/obj/item/mecha_parts/mecha_equipment/antiproj_armor_booster,
+/obj/item/mecha_parts/mecha_equipment/anticcw_armor_booster,
+/obj/item/mecha_parts/mecha_equipment/storage/bluespace,
+/obj/item/mecha_parts/mecha_equipment/cloak,
+/obj/item/mecha_parts/mecha_equipment/generator/nuclear,
+/obj/item/mecha_parts/mecha_equipment/tesla_energy_relay,
+/obj/item/mecha_parts/mecha_equipment/weapon/energy/laser/xray,
+/obj/item/mecha_parts/mecha_equipment/weapon/energy/ion,
+/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/scattershot,
+/obj/item/mecha_parts/mecha_equipment/repair_droid,
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
+"bj" = (
+/obj/machinery/mech_recharger,
+/obj/mecha/combat/phazon/janus,
+/turf/unsimulated/shuttle/plating,
+/area/space)
 "bk" = (
 /turf/simulated/mineral/alt/turfpack/muriki,
+/area/space)
+"bl" = (
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
+"bm" = (
+/obj/machinery/mech_recharger,
+/obj/mecha/combat/phazon,
+/turf/unsimulated/shuttle/plating,
 /area/space)
 "bn" = (
 /obj/effect/decal/cleanable/blood/oil,
 /turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
+	},
+/area/space)
+"bo" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/mecha_parts/mecha_equipment/tool/jetpack,
+/obj/item/mecha_parts/mecha_equipment/antiproj_armor_booster,
+/obj/item/mecha_parts/mecha_equipment/anticcw_armor_booster,
+/obj/item/mecha_parts/mecha_equipment/storage/bluespace,
+/obj/item/mecha_parts/mecha_equipment/gravcatapult,
+/obj/item/mecha_parts/mecha_equipment/cloak,
+/obj/item/mecha_parts/mecha_equipment/generator,
+/obj/item/mecha_parts/mecha_equipment/tesla_energy_relay,
+/obj/item/mecha_parts/mecha_equipment/weapon/energy/laser/xray,
+/obj/item/mecha_parts/mecha_equipment/weapon/energy/ion,
+/obj/item/mecha_parts/mecha_equipment/weapon/energy/taser,
+/obj/item/mecha_parts/mecha_equipment/weapon/energy/medigun,
+/obj/item/mecha_parts/mecha_equipment/weapon/ballistic/missile_rack/grenade/frag,
+/obj/item/mecha_parts/mecha_equipment/repair_droid,
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
+"bp" = (
+/obj/structure/table/rack,
+/obj/effect/floor_decal/corner/black{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/item/rig/ert/assetprotection,
+/obj/item/rig/ert/assetprotection,
+/obj/item/clothing/mask/gas/swat{
+	pixel_x = -7
+	},
+/obj/item/clothing/mask/gas/swat{
+	pixel_x = -7
+	},
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"bq" = (
+/obj/structure/table/rack,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/item/clothing/suit/armor/swat,
+/obj/item/clothing/mask/gas/swat,
+/obj/item/clothing/shoes/boots/swat,
+/obj/item/clothing/gloves/swat,
+/obj/item/clothing/head/helmet/swat,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"br" = (
+/obj/structure/table/rack,
+/obj/effect/floor_decal/corner/black{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/red,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/item/clothing/gloves/arm_guard/laserproof,
+/obj/item/clothing/suit/armor/laserproof,
+/obj/item/clothing/shoes/leg_guard/laserproof,
+/obj/item/clothing/head/helmet/laserproof,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"bs" = (
+/obj/structure/table/rack,
+/obj/item/clothing/accessory/storage/black_vest,
+/obj/item/clothing/accessory/storage/black_vest,
+/obj/item/clothing/accessory/storage/black_vest,
+/obj/item/clothing/accessory/storage/black_vest,
+/obj/item/clothing/accessory/storage/black_vest,
+/obj/item/clothing/accessory/storage/black_vest,
+/obj/effect/floor_decal/corner/black{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 1
+	},
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"bt" = (
+/obj/structure/table/rack,
+/obj/item/clothing/accessory/storage/brown_vest,
+/obj/item/clothing/accessory/storage/brown_vest,
+/obj/item/clothing/accessory/storage/brown_vest,
+/obj/item/clothing/accessory/storage/brown_vest,
+/obj/item/clothing/accessory/storage/brown_vest,
+/obj/item/clothing/accessory/storage/brown_vest,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"bu" = (
+/obj/structure/table/rack,
+/obj/item/clothing/accessory/storage/white_vest,
+/obj/item/clothing/accessory/storage/white_vest,
+/obj/item/clothing/accessory/storage/white_vest,
+/obj/item/clothing/accessory/storage/white_vest,
+/obj/item/clothing/accessory/storage/white_vest,
+/obj/item/clothing/accessory/storage/white_vest,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
 	},
 /area/space)
 "bv" = (
@@ -193,6 +539,106 @@
 	ignore_mapgen = 1
 	},
 /area/space)
+"bx" = (
+/obj/structure/table/reinforced,
+/obj/effect/floor_decal/corner/black{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/red,
+/obj/item/clothing/accessory/holster/hip/black,
+/obj/item/clothing/accessory/holster/hip/black,
+/obj/item/clothing/accessory/holster/hip/black,
+/obj/item/clothing/accessory/holster/hip/black,
+/obj/item/clothing/accessory/holster/hip/black,
+/obj/item/clothing/accessory/holster/hip/black,
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"by" = (
+/turf/unsimulated/wall/fakeglass2,
+/area/space)
+"bz" = (
+/obj/structure/table/rack,
+/obj/item/storage/backpack/dufflebag/syndie/ammo,
+/obj/item/storage/backpack/dufflebag/syndie/ammo,
+/obj/item/storage/backpack/dufflebag/syndie/ammo,
+/obj/effect/floor_decal/corner/black{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/outline/cut_corners/red,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"bA" = (
+/obj/structure/table/rack,
+/obj/item/storage/backpack/dufflebag/syndie,
+/obj/item/storage/backpack/dufflebag/syndie,
+/obj/item/storage/backpack/dufflebag/syndie,
+/obj/effect/floor_decal/industrial/outline/cut_corners/yellow,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"bB" = (
+/obj/structure/table/rack,
+/obj/item/storage/backpack/dufflebag/syndie/med,
+/obj/item/storage/backpack/dufflebag/syndie/med,
+/obj/item/storage/backpack/dufflebag/syndie/med,
+/obj/effect/floor_decal/industrial/outline/cut_corners/blue,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"bC" = (
+/obj/structure/closet{
+	name = "tactical equipment";
+	desc = "It's a storage unit for standard-issue attire."
+	},
+/obj/effect/floor_decal/corner/black{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/red,
+/obj/effect/floor_decal/industrial/outline,
+/obj/item/clothing/under/tactical,
+/obj/item/clothing/under/tactical,
+/obj/item/clothing/under/tactical,
+/obj/item/clothing/under/tactical,
+/obj/item/clothing/under/tactical,
+/obj/item/storage/belt/security/tactical,
+/obj/item/storage/belt/security/tactical,
+/obj/item/storage/belt/security/tactical,
+/obj/item/storage/belt/security/tactical,
+/obj/item/storage/belt/security/tactical,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"bD" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/cell/giga,
+/obj/item/cell/giga,
+/obj/item/cell/giga,
+/obj/item/cell/giga,
+/obj/item/cell/giga,
+/obj/item/cell/giga,
+/obj/item/cell/giga,
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
+"bE" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/cell/infinite,
+/obj/item/cell/infinite,
+/obj/item/cell/infinite,
+/obj/item/cell/infinite,
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
+"bF" = (
+/obj/structure/table/steel_reinforced,
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
 "bG" = (
 /obj/structure/cliff{
 	dir = 8
@@ -201,11 +647,194 @@
 	ignore_mapgen = 1
 	},
 /area/space)
+"bH" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/mecha_parts/mecha_equipment/gravcatapult,
+/obj/item/mecha_parts/mecha_equipment/gravcatapult,
+/obj/item/mecha_parts/mecha_equipment/weapon/energy/flamer,
+/obj/item/mecha_parts/mecha_equipment/weapon/energy/flamer,
+/obj/item/mecha_parts/mecha_equipment/wormhole_generator,
+/obj/item/mecha_parts/mecha_equipment/wormhole_generator,
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
+"bI" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/cell/mech/super,
+/obj/item/cell/mech/super,
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
+"bJ" = (
+/obj/structure/table/steel_reinforced,
+/obj/item/mecha_parts/component/actuator/hispeed,
+/obj/item/mecha_parts/component/actuator/hispeed,
+/obj/item/mecha_parts/component/electrical/high_current,
+/obj/item/mecha_parts/component/electrical/high_current,
+/obj/item/mecha_parts/component/gas/reinforced,
+/obj/item/mecha_parts/component/gas/reinforced,
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
+"bK" = (
+/turf/unsimulated/wall/fakeglass{
+	dir = 1
+	},
+/area/space)
+"bL" = (
+/obj/effect/floor_decal/industrial/loading,
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
+"bM" = (
+/obj/structure/table/wooden_reinforced,
+/obj/item/storage/box/trackimp{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/storage/box/cdeathalarm_kit,
+/turf/simulated/floor/wood,
+/area/space)
+"bN" = (
+/obj/structure/table/wooden_reinforced,
+/obj/item/card/id/event/altcard/ert{
+	access = list(1,101,103)
+	},
+/turf/simulated/floor/wood,
+/area/space)
+"bO" = (
+/obj/structure/bed/chair/backed_red,
+/turf/simulated/floor/wood,
+/area/space)
+"bP" = (
+/obj/structure/table/wooden_reinforced,
+/obj/item/megaphone,
+/turf/simulated/floor/wood,
+/area/space)
+"bQ" = (
+/obj/effect/floor_decal/corner/black{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 1
+	},
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"bR" = (
+/obj/effect/floor_decal/corner/black{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 1
+	},
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"bS" = (
+/obj/effect/floor_decal/corner/black/full{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/red,
+/obj/effect/floor_decal/corner/red{
+	dir = 1
+	},
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"bT" = (
+/obj/machinery/mecha_part_fabricator_tg/prosthetics,
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
+"bU" = (
+/obj/machinery/mecha_part_fabricator_tg,
+/turf/unsimulated/floor/techfloor_grid,
+/area/space)
 "bV" = (
 /obj/vehicle/train/trolley,
 /turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
 	},
+/area/space)
+"bW" = (
+/obj/structure/sign/directions/eva{
+	dir = 4;
+	pixel_y = 3
+	},
+/obj/structure/sign/directions/elevator{
+	pixel_y = -3
+	},
+/turf/unsimulated/wall/r_wall,
+/area/space)
+"bX" = (
+/obj/machinery/door/airlock/centcom{
+	name = "Special Operations";
+	req_access = list(103)
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"bY" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/black{
+	dir = 10
+	},
+/obj/effect/floor_decal/corner/red,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"bZ" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"ca" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/black{
+	dir = 10
+	},
+/obj/effect/floor_decal/corner/red,
+/obj/machinery/door/airlock/centcom{
+	name = "Special Operations";
+	req_access = list(103)
+	},
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"cb" = (
+/obj/effect/floor_decal/corner/black{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 4
+	},
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"cc" = (
+/obj/machinery/door/airlock/centcom{
+	name = "Commander";
+	req_access = list(103)
+	},
+/turf/simulated/floor/tiled/dark,
+/area/space)
+"cd" = (
+/obj/structure/table/reinforced,
+/obj/item/pinpointer/advpinpointer,
+/turf/simulated/floor/wood,
 /area/space)
 "ce" = (
 /obj/item/circuitboard/broken,
@@ -219,6 +848,263 @@
 	ignore_mapgen = 1
 	},
 /area/space)
+"cg" = (
+/obj/structure/table/reinforced,
+/obj/item/storage/box/flashbangs,
+/obj/item/storage/belt/security/tactical,
+/obj/item/clothing/glasses/sunglasses/sechud/tactical,
+/obj/item/material/knife/tacknife/combatknife/durahull,
+/turf/simulated/floor/wood,
+/area/space)
+"ch" = (
+/obj/structure/table/reinforced,
+/obj/item/pda/ert,
+/obj/item/perfect_tele,
+/obj/item/hand_tele,
+/turf/simulated/floor/wood,
+/area/space)
+"ci" = (
+/obj/structure/table/reinforced,
+/obj/item/card/id/centcom/ert/commander{
+	access = list(1,101,103)
+	},
+/turf/simulated/floor/wood,
+/area/space)
+"cj" = (
+/obj/effect/floor_decal/corner/black/full,
+/obj/effect/floor_decal/corner/red{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/red,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"ck" = (
+/obj/structure/table/rack,
+/obj/effect/floor_decal/corner/black{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/red,
+/obj/item/gun/magnetic/railgun,
+/obj/item/gun/magnetic/railgun,
+/obj/item/rcd_ammo/large,
+/obj/item/rcd_ammo/large,
+/obj/item/rcd_ammo/large,
+/obj/item/rcd_ammo/large,
+/obj/item/rcd_ammo/large,
+/obj/item/rcd_ammo/large,
+/obj/item/rcd_ammo/large,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"cl" = (
+/obj/structure/table/rack,
+/obj/effect/floor_decal/corner/black/full,
+/obj/effect/floor_decal/corner/red{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/red,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"cm" = (
+/obj/structure/table/rack,
+/obj/effect/floor_decal/corner/black/full{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/red,
+/obj/item/rig/ert/medical,
+/obj/item/rig/ert/medical,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"cn" = (
+/obj/structure/table/rack,
+/obj/effect/floor_decal/corner/black/full,
+/obj/effect/floor_decal/corner/red,
+/obj/effect/floor_decal/corner/red{
+	dir = 1
+	},
+/obj/item/storage/firstaid/fire{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/storage/firstaid/fire{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/storage/firstaid/fire{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/storage/firstaid/fire{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/storage/firstaid/o2,
+/obj/item/storage/firstaid/o2,
+/obj/item/storage/firstaid/o2,
+/obj/item/storage/firstaid/o2,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"co" = (
+/obj/effect/floor_decal/corner/black/full{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/red,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"cp" = (
+/obj/structure/table/reinforced,
+/obj/item/toy/nuke,
+/turf/simulated/floor/wood,
+/area/space)
+"cq" = (
+/obj/structure/table/rack,
+/obj/item/gun/projectile/automatic/p90,
+/obj/item/gun/projectile/automatic/p90,
+/obj/item/gun/projectile/automatic/p90,
+/obj/item/gun/projectile/automatic/p90,
+/obj/effect/floor_decal/corner/black{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 1
+	},
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"cr" = (
+/obj/structure/table/rack,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/obj/item/ammo_magazine/m9mmp90,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"cs" = (
+/obj/structure/table/rack,
+/obj/item/material/twohanded/fireaxe/dura,
+/obj/item/material/twohanded/fireaxe/dura,
+/obj/item/material/twohanded/fireaxe/dura,
+/obj/item/material/twohanded/fireaxe/dura,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"ct" = (
+/obj/structure/table/rack,
+/obj/item/cell/device/weapon/recharge/alien{
+	pixel_x = 4;
+	pixel_y = 4
+	},
+/obj/item/cell/device/weapon/recharge/alien{
+	pixel_x = 4;
+	pixel_y = 4
+	},
+/obj/item/cell/device/weapon/recharge/alien{
+	pixel_x = 4;
+	pixel_y = 4
+	},
+/obj/item/cell/device/weapon/recharge/alien{
+	pixel_x = 2;
+	pixel_y = 2
+	},
+/obj/item/cell/device/weapon/recharge/alien{
+	pixel_x = 2;
+	pixel_y = 2
+	},
+/obj/item/cell/device/weapon/recharge/alien{
+	pixel_x = 2;
+	pixel_y = 2
+	},
+/obj/item/cell/device/weapon/recharge/alien,
+/obj/item/cell/device/weapon/recharge/alien,
+/obj/item/cell/device/weapon/recharge/alien,
+/obj/item/cell/device/weapon/recharge/alien{
+	pixel_x = -2;
+	pixel_y = -2
+	},
+/obj/item/cell/device/weapon/recharge/alien{
+	pixel_x = -2;
+	pixel_y = -2
+	},
+/obj/item/cell/device/weapon/recharge/alien{
+	pixel_x = -2;
+	pixel_y = -2
+	},
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"cu" = (
+/obj/structure/table/rack,
+/obj/item/plastique,
+/obj/item/plastique,
+/obj/item/plastique,
+/obj/item/plastique,
+/obj/item/plastique,
+/obj/item/plastique,
+/obj/item/plastique,
+/obj/item/plastique,
+/obj/item/plastique,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"cv" = (
+/obj/structure/table/rack,
+/obj/fiftyspawner/phoron,
+/obj/fiftyspawner/phoron,
+/obj/item/gun/magnetic/matfed/phoronbore/loaded,
+/obj/effect/floor_decal/corner/black{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/red,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"cw" = (
+/obj/structure/table/rack,
+/obj/effect/floor_decal/corner/black{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 1
+	},
+/obj/item/rig/ert/assetprotection,
+/obj/item/rig/ert/assetprotection,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
 "cx" = (
 /obj/item/broken_device/random,
 /obj/item/circuitboard/broken,
@@ -227,10 +1113,290 @@
 	ignore_mapgen = 1
 	},
 /area/space)
+"cy" = (
+/obj/structure/table/rack,
+/obj/effect/floor_decal/corner/black{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/red,
+/obj/item/rig/ert/janitor,
+/obj/item/rig/ert/janitor,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"cz" = (
+/obj/structure/table/rack,
+/obj/item/storage/firstaid/adv{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/storage/firstaid/adv{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/storage/firstaid/adv{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/storage/firstaid/adv{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/storage/firstaid/adv{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/storage/firstaid/clotting,
+/obj/item/storage/firstaid/clotting,
+/obj/item/storage/firstaid/clotting,
+/obj/item/storage/firstaid/clotting,
+/obj/item/storage/firstaid/clotting,
+/obj/effect/floor_decal/corner/black{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 1
+	},
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"cA" = (
+/obj/structure/table/rack,
+/obj/item/storage/pouch/ifak,
+/obj/item/storage/pouch/ifak,
+/obj/item/storage/pouch/ifak,
+/obj/item/storage/pouch/ifak,
+/obj/item/storage/pouch/ifak,
+/obj/item/storage/pouch/ifak,
+/obj/item/storage/pouch/ifak,
+/obj/item/storage/pouch/ifak,
+/obj/item/storage/pouch/ifak,
+/obj/item/storage/pouch/ifak,
+/obj/item/storage/pouch/ifak,
+/obj/item/storage/pouch/ifak,
+/obj/item/storage/pouch/ifak,
+/obj/item/storage/pouch/ifak,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"cB" = (
+/obj/structure/table/rack,
+/obj/item/storage/firstaid/regular{
+	pixel_x = 5;
+	pixel_y = 7
+	},
+/obj/item/storage/firstaid/regular{
+	pixel_x = 5;
+	pixel_y = 7
+	},
+/obj/item/storage/firstaid/regular{
+	pixel_x = 5;
+	pixel_y = 7
+	},
+/obj/item/storage/firstaid/regular{
+	pixel_x = 5;
+	pixel_y = 7
+	},
+/obj/item/storage/firstaid/regular{
+	pixel_x = 5;
+	pixel_y = 7
+	},
+/obj/item/storage/firstaid/regular,
+/obj/item/storage/firstaid/regular,
+/obj/item/storage/firstaid/regular,
+/obj/item/storage/firstaid/regular,
+/obj/item/storage/firstaid/regular,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"cC" = (
+/obj/structure/table/rack,
+/obj/item/storage/firstaid/toxin{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/storage/firstaid/toxin{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/storage/firstaid/toxin{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/storage/firstaid/toxin{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/storage/firstaid/toxin{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/storage/firstaid/vox,
+/obj/item/storage/firstaid/vox,
+/obj/item/storage/firstaid/vox,
+/obj/item/storage/firstaid/vox,
+/obj/item/storage/firstaid/vox,
+/obj/effect/floor_decal/corner/black{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/red,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"cD" = (
+/obj/structure/table/reinforced,
+/obj/machinery/cell_charger,
+/obj/effect/floor_decal/corner/black{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/outline/cut_corners/yellow,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"cE" = (
+/obj/structure/table/reinforced,
+/obj/item/cell/hyper,
+/obj/item/cell/hyper,
+/obj/item/cell/hyper,
+/obj/item/cell/hyper,
+/obj/item/cell/hyper,
+/obj/item/cell/hyper,
+/obj/item/cell/hyper,
+/obj/item/cell/hyper,
+/obj/item/cell/hyper,
+/obj/item/cell/hyper,
+/obj/item/cell/hyper,
+/obj/item/cell/hyper,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"cF" = (
+/obj/structure/table/reinforced,
+/obj/item/tool/crowbar,
+/obj/item/tool/screwdriver,
+/obj/item/tool/wrench,
+/obj/item/tool/crowbar,
+/obj/item/tool/screwdriver,
+/obj/item/tool/wrench,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"cG" = (
+/obj/structure/table/reinforced,
+/obj/machinery/cell_charger,
+/obj/effect/floor_decal/corner/black{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/red,
+/obj/effect/floor_decal/industrial/outline/cut_corners/yellow,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"cH" = (
+/obj/structure/table/reinforced,
+/obj/item/radio/intercom{
+	name = "Spec Ops Intercom";
+	dir = 4;
+	pixel_x = 24;
+	frequency = 1443;
+	broadcasting = 1
+	},
+/obj/item/gun/energy/pulse_rifle/compact/admin,
+/obj/item/clothing/accessory/holster/hip/black{
+	pixel_y = 12
+	},
+/turf/simulated/floor/wood,
+/area/space)
+"cI" = (
+/obj/structure/table/rack,
+/obj/item/flamethrower/full,
+/obj/item/flamethrower/full,
+/obj/item/flamethrower/full,
+/obj/effect/floor_decal/corner/black{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 1
+	},
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
 "cJ" = (
 /obj/structure/outcrop/silver,
 /turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
+	},
+/area/space)
+"cK" = (
+/obj/structure/table/rack,
+/obj/item/tank/phoron,
+/obj/item/tank/phoron,
+/obj/item/tank/phoron,
+/obj/item/tank/phoron,
+/obj/item/tank/phoron,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"cL" = (
+/obj/structure/table/rack,
+/obj/item/material/knife/tacknife/combatknife/durahull,
+/obj/item/material/knife/tacknife/combatknife/durahull,
+/obj/item/material/knife/tacknife/combatknife/durahull,
+/obj/item/material/knife/tacknife/combatknife/durahull,
+/obj/item/material/knife/tacknife/combatknife/durahull,
+/obj/item/material/knife/tacknife/combatknife/durahull,
+/obj/item/material/knife/tacknife/combatknife/durahull,
+/obj/item/material/knife/tacknife/combatknife/durahull,
+/obj/item/material/knife/tacknife/combatknife/durahull,
+/obj/item/material/knife/tacknife/combatknife/durahull,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"cM" = (
+/obj/structure/table/rack,
+/obj/item/cell/device/weapon/empproof{
+	pixel_x = 4;
+	pixel_y = 4
+	},
+/obj/item/cell/device/weapon/empproof{
+	pixel_x = 4;
+	pixel_y = 4
+	},
+/obj/item/cell/device/weapon/empproof{
+	pixel_x = 2;
+	pixel_y = 2
+	},
+/obj/item/cell/device/weapon/empproof{
+	pixel_x = 2;
+	pixel_y = 2
+	},
+/obj/item/cell/device/weapon/empproof,
+/obj/item/cell/device/weapon/empproof,
+/obj/item/cell/device/weapon/empproof{
+	pixel_x = -2;
+	pixel_y = -2
+	},
+/obj/item/cell/device/weapon/empproof{
+	pixel_x = -2;
+	pixel_y = -2
+	},
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
 	},
 /area/space)
 "cN" = (
@@ -240,8 +1406,164 @@
 	ignore_mapgen = 1
 	},
 /area/space)
+"cO" = (
+/obj/structure/table/rack,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"cP" = (
+/obj/structure/table/rack,
+/obj/item/gun/projectile/automatic/serdy/hectate{
+	pixel_x = -9
+	},
+/obj/effect/floor_decal/corner/black{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/red,
+/obj/item/gun/projectile/automatic/serdy/hectate{
+	pixel_x = -9
+	},
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"cQ" = (
+/obj/structure/table/rack,
+/obj/effect/floor_decal/corner/black{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/red,
+/obj/item/card/id/centcom/ert/medic,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"cR" = (
+/obj/structure/table/rack,
+/obj/item/storage/firstaid/bonemed{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/storage/firstaid/bonemed{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/storage/firstaid/bonemed{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/storage/firstaid/bonemed{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/storage/firstaid/bonemed{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/storage/firstaid/combat,
+/obj/item/storage/firstaid/combat,
+/obj/item/storage/firstaid/combat,
+/obj/item/storage/firstaid/combat,
+/obj/item/storage/firstaid/combat,
+/obj/effect/floor_decal/corner/black{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 1
+	},
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"cS" = (
+/obj/structure/table/rack,
+/obj/item/storage/firstaid/adv{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/storage/firstaid/adv{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/storage/firstaid/adv{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/storage/firstaid/adv{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/storage/firstaid/adv{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/storage/firstaid/adv{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/storage/firstaid/adv,
+/obj/item/storage/firstaid/adv,
+/obj/item/storage/firstaid/adv,
+/obj/item/storage/firstaid/adv,
+/obj/item/storage/firstaid/adv,
+/obj/item/storage/firstaid/adv,
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"cT" = (
+/obj/structure/table/rack,
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"cU" = (
+/obj/structure/table/rack,
+/obj/item/healthanalyzer/phasic,
+/obj/item/healthanalyzer/phasic,
+/obj/item/healthanalyzer/phasic,
+/obj/effect/floor_decal/corner/black{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/red,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
 "cV" = (
 /turf/simulated/mineral/alt/ignore_mapgen/turfpack/muriki,
+/area/space)
+"cW" = (
+/obj/structure/table/reinforced,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"cX" = (
+/obj/structure/table/reinforced,
+/obj/item/pda/ert,
+/obj/item/pda/ert,
+/obj/item/pda/ert,
+/obj/item/pda/ert,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"cY" = (
+/obj/structure/table/rack,
+/obj/item/rig/ert,
+/obj/item/clothing/accessory/storage/black_vest,
+/obj/item/clothing/suit/armor/swat/officer,
+/turf/simulated/floor/wood,
 /area/space)
 "cZ" = (
 /obj/random/maintenance/cargo,
@@ -250,12 +1572,90 @@
 	ignore_mapgen = 1
 	},
 /area/space)
+"da" = (
+/obj/structure/table/rack,
+/obj/item/clothing/suit/armor/vest/ert/command,
+/obj/item/storage/backpack/ert/commander,
+/turf/simulated/floor/wood,
+/area/space)
 "db" = (
 /obj/structure/cliff/corner{
 	dir = 9
 	},
 /turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
+	},
+/area/space)
+"dc" = (
+/obj/item/personal_shield_generator/belt/adminbus,
+/turf/simulated/floor/wood,
+/area/space)
+"dd" = (
+/obj/machinery/computer/communications,
+/turf/simulated/floor/wood,
+/area/space)
+"de" = (
+/obj/structure/table/reinforced,
+/obj/item/ammo_magazine/ammo_box/b145,
+/obj/item/ammo_magazine/ammo_box/b145,
+/obj/item/ammo_magazine/ammo_box/b145,
+/obj/item/ammo_magazine/ammo_box/b145/highvel,
+/obj/item/ammo_magazine/ammo_box/b145/highvel,
+/obj/item/gun/projectile/revolver/slab,
+/turf/simulated/floor/wood,
+/area/space)
+"df" = (
+/obj/structure/table/rack,
+/obj/item/gun/projectile/serdy_pistols/tp23s,
+/obj/item/gun/projectile/serdy_pistols/tp23s,
+/obj/item/gun/projectile/serdy_pistols/tp23s,
+/obj/item/gun/projectile/serdy_pistols/tp23s,
+/obj/item/gun/projectile/serdy_pistols/tp23s,
+/obj/item/gun/projectile/serdy_pistols/tp23s,
+/obj/item/gun/projectile/serdy_pistols/tp23s,
+/obj/item/gun/projectile/serdy_pistols/tp23s,
+/obj/item/gun/projectile/serdy_pistols/tp23s,
+/obj/item/gun/projectile/serdy_pistols/tp23s,
+/obj/item/gun/projectile/serdy_pistols/tp23s,
+/obj/item/gun/projectile/serdy_pistols/tp23s,
+/obj/item/gun/projectile/serdy_pistols/tp23s,
+/obj/item/gun/projectile/serdy_pistols/tp23s,
+/obj/effect/floor_decal/corner/black{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 1
+	},
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"dg" = (
+/obj/structure/table/rack,
+/obj/item/ammo_magazine/tp23s/highpower,
+/obj/item/ammo_magazine/tp23s/highpower,
+/obj/item/ammo_magazine/tp23s/highpower,
+/obj/item/ammo_magazine/tp23s/highpower,
+/obj/item/ammo_magazine/tp23s/highpower,
+/obj/item/ammo_magazine/tp23s/highpower,
+/obj/item/ammo_magazine/tp23s/highpower,
+/obj/item/ammo_magazine/tp23s/highpower,
+/obj/item/ammo_magazine/tp23s/highpower,
+/obj/item/ammo_magazine/tp23s/highpower,
+/obj/item/ammo_magazine/tp23s/highpower,
+/obj/item/ammo_magazine/tp23s/highpower,
+/obj/item/ammo_magazine/tp23s/highpower,
+/obj/item/ammo_magazine/tp23s/highpower,
+/obj/item/ammo_magazine/tp23s/highpower,
+/obj/item/ammo_magazine/tp23s/highpower,
+/obj/item/ammo_magazine/tp23s/highpower,
+/obj/item/ammo_magazine/tp23s/highpower,
+/obj/item/ammo_magazine/tp23s/highpower,
+/obj/item/ammo_magazine/tp23s/highpower,
+/obj/item/ammo_magazine/tp23s/highpower,
+/obj/item/ammo_magazine/tp23s/highpower,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
 	},
 /area/space)
 "dh" = (
@@ -266,12 +1666,89 @@
 	ignore_mapgen = 1
 	},
 /area/space)
+"di" = (
+/obj/structure/table/rack,
+/obj/item/material/knife/machete/durahull,
+/obj/item/material/knife/machete/durahull,
+/obj/item/material/knife/machete/durahull,
+/obj/item/material/knife/machete/durahull,
+/obj/item/material/knife/machete/durahull,
+/obj/item/material/knife/machete/durahull,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"dj" = (
+/obj/structure/table/rack,
+/obj/item/gun/energy/pulse_rifle/carbine,
+/obj/item/gun/energy/pulse_rifle/carbine,
+/obj/item/gun/energy/pulse_rifle/carbine,
+/obj/item/gun/energy/pulse_rifle/carbine,
+/obj/item/gun/energy/pulse_rifle/carbine,
+/obj/item/gun/energy/pulse_rifle/carbine,
+/obj/item/gun/energy/pulse_rifle/carbine,
+/obj/item/gun/energy/pulse_rifle/carbine,
+/obj/item/gun/energy/pulse_rifle/carbine,
+/obj/item/gun/energy/pulse_rifle/carbine,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
 "dk" = (
 /obj/structure/cliff{
 	dir = 9
 	},
 /turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
+	},
+/area/space)
+"dl" = (
+/obj/structure/table/rack,
+/obj/item/storage/box/frags,
+/obj/item/storage/box/frags,
+/obj/item/storage/box/frags,
+/obj/item/storage/box/frags,
+/obj/item/storage/box/frags,
+/obj/item/storage/box/frags,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"dm" = (
+/obj/structure/table/rack,
+/obj/item/gun/launcher/grenade/underslung,
+/obj/item/gun/launcher/grenade/underslung,
+/obj/effect/floor_decal/corner/black{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/red,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"dn" = (
+/obj/structure/table/rack,
+/obj/effect/floor_decal/corner/black{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 1
+	},
+/obj/item/rig/ch/precursor,
+/obj/item/rig/ch/precursor,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"do" = (
+/obj/structure/table/rack,
+/obj/effect/floor_decal/corner/black{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/red,
+/obj/item/card/id/centcom/ert/janitor,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
 	},
 /area/space)
 "dp" = (
@@ -282,6 +1759,23 @@
 	ignore_mapgen = 1
 	},
 /area/space)
+"dq" = (
+/obj/structure/table/rack,
+/obj/item/bodybag/cryobag,
+/obj/item/bodybag/cryobag,
+/obj/item/bodybag/cryobag,
+/obj/item/bodybag/cryobag,
+/obj/item/bodybag/cryobag,
+/obj/effect/floor_decal/corner/black{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 1
+	},
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
 "dr" = (
 /obj/structure/cliff/corner{
 	dir = 5
@@ -290,11 +1784,195 @@
 	ignore_mapgen = 1
 	},
 /area/space)
+"ds" = (
+/obj/structure/table/rack,
+/obj/item/defib_kit/compact/combat/loaded,
+/obj/item/defib_kit/compact/combat/loaded,
+/obj/item/defib_kit/compact/combat/loaded,
+/obj/effect/floor_decal/corner/black{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/red,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"dt" = (
+/obj/structure/table/rack,
+/obj/item/rig_module/mounted/taser,
+/obj/item/rig_module/mounted/taser,
+/obj/item/rig_module/mounted/taser,
+/obj/effect/floor_decal/corner/black{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 1
+	},
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"du" = (
+/obj/machinery/autolathe{
+	name = "Unlocked Autolathe";
+	desc = "Your typical Autolathe. It appears to have much more options than your regular one, however...";
+	hacked = 1
+	},
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"dv" = (
+/obj/item/stack/cable_coil,
+/obj/item/stack/cable_coil,
+/obj/item/stack/cable_coil,
+/obj/item/stack/cable_coil,
+/obj/item/stack/cable_coil,
+/obj/item/stack/cable_coil,
+/obj/structure/table/rack,
+/obj/effect/floor_decal/corner/black{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/red,
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"dw" = (
+/obj/structure/table/rack,
+/obj/item/gun/projectile/automatic/mg42,
+/obj/effect/floor_decal/corner/black{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 1
+	},
+/obj/item/gun/projectile/automatic/mg42,
+/obj/item/gun/projectile/automatic/mg42,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
 "dx" = (
 /obj/structure/cliff/corner{
 	dir = 5
 	},
 /turf/simulated/mineral/alt/ignore_mapgen/turfpack/muriki,
+/area/space)
+"dy" = (
+/obj/structure/table/rack,
+/obj/item/ammo_magazine/mg42,
+/obj/item/ammo_magazine/mg42,
+/obj/item/ammo_magazine/mg42,
+/obj/item/ammo_magazine/mg42,
+/obj/item/ammo_magazine/mg42,
+/obj/item/ammo_magazine/mg42,
+/obj/item/ammo_magazine/mg42,
+/obj/item/ammo_magazine/mg42,
+/obj/item/ammo_magazine/mg42,
+/obj/item/ammo_magazine/mg42,
+/obj/item/ammo_magazine/mg42,
+/obj/item/ammo_magazine/mg42,
+/obj/item/ammo_magazine/mg42,
+/obj/item/ammo_magazine/mg42,
+/obj/item/ammo_magazine/mg42,
+/obj/item/ammo_magazine/mg42,
+/obj/item/ammo_magazine/mg42,
+/obj/item/ammo_magazine/mg42,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"dz" = (
+/obj/structure/table/rack,
+/obj/item/shield/energy,
+/obj/item/shield/energy,
+/obj/item/shield/energy,
+/obj/item/shield/energy,
+/obj/item/shield/energy,
+/obj/item/shield/energy,
+/obj/item/shield/energy,
+/obj/item/shield/energy,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"dA" = (
+/obj/structure/table/rack,
+/obj/item/gun/launcher/grenade,
+/obj/item/gun/launcher/grenade,
+/obj/item/gun/launcher/grenade,
+/obj/effect/floor_decal/corner/black{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/red,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"dB" = (
+/obj/structure/table/rack,
+/obj/effect/floor_decal/corner/black{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/red,
+/obj/item/card/id/centcom/ert/engineer,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"dC" = (
+/obj/effect/floor_decal/corner/black{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 1
+	},
+/obj/structure/table/reinforced,
+/obj/item/reagent_containers/glass/beaker/bluespace,
+/obj/item/reagent_containers/glass/beaker/bluespace,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"dD" = (
+/obj/structure/table/reinforced,
+/obj/machinery/chemical_dispenser/ert/specialops,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"dE" = (
+/obj/structure/table/reinforced,
+/obj/machinery/chemical_dispenser/biochemistry/full,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"dF" = (
+/obj/effect/floor_decal/corner/black{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/red,
+/obj/structure/table/reinforced,
+/obj/item/reagent_containers/glass/beaker/bluespace,
+/obj/item/reagent_containers/glass/beaker/bluespace,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"dG" = (
+/obj/structure/table/rack,
+/obj/item/rig_module/mounted/egun,
+/obj/item/rig_module/mounted/egun,
+/obj/effect/floor_decal/corner/black{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 1
+	},
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
 /area/space)
 "dH" = (
 /obj/structure/cliff/corner{
@@ -302,6 +1980,87 @@
 	},
 /turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
+	},
+/area/space)
+"dI" = (
+/obj/item/stack/material/glass{
+	amount = 50
+	},
+/obj/item/stack/material/glass{
+	amount = 50
+	},
+/obj/item/stack/material/glass{
+	amount = 50
+	},
+/obj/item/stack/material/glass{
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	pixel_x = 2;
+	pixel_y = 2;
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	pixel_x = 2;
+	pixel_y = 2;
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	pixel_x = 2;
+	pixel_y = 2;
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	pixel_x = 2;
+	pixel_y = 2;
+	amount = 50
+	},
+/obj/item/stack/material/plasteel{
+	amount = 50
+	},
+/obj/item/stack/material/plasteel{
+	amount = 50
+	},
+/obj/item/stack/material/plasteel{
+	amount = 50
+	},
+/obj/item/stack/material/plasteel{
+	amount = 50
+	},
+/obj/item/stack/material/glass/reinforced{
+	amount = 50
+	},
+/obj/item/stack/material/glass/reinforced{
+	amount = 50
+	},
+/obj/item/stack/material/glass/reinforced{
+	amount = 50
+	},
+/obj/item/storage/briefcase/inflatable{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/storage/briefcase/inflatable{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/storage/briefcase/inflatable{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/storage/briefcase/inflatable{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/structure/table/steel_reinforced,
+/obj/item/stack/rods,
+/obj/item/stack/rods,
+/obj/item/stack/material/glass/phoronglass,
+/obj/item/stack/material/glass/phoronglass,
+/obj/item/stack/rods,
+/obj/item/stack/rods,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
 	},
 /area/space)
 "dJ" = (
@@ -312,6 +2071,45 @@
 	ignore_mapgen = 1
 	},
 /area/space)
+"dK" = (
+/obj/item/clothing/glasses/welding/superior,
+/obj/item/clothing/glasses/welding/superior,
+/obj/item/clothing/glasses/welding/superior,
+/obj/item/clothing/glasses/welding/superior,
+/obj/item/clothing/glasses/welding/superior,
+/obj/item/clothing/glasses/welding/superior,
+/obj/item/grenade/chem_grenade/metalfoam,
+/obj/item/grenade/chem_grenade/metalfoam,
+/obj/item/grenade/chem_grenade/metalfoam,
+/obj/item/grenade/chem_grenade/metalfoam,
+/obj/item/grenade/chem_grenade/metalfoam,
+/obj/item/grenade/chem_grenade/metalfoam,
+/obj/structure/table/rack,
+/obj/effect/floor_decal/corner/black{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/red,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"dL" = (
+/obj/structure/table/rack,
+/obj/item/gun/projectile/automatic/serdy/m41a,
+/obj/item/gun/projectile/automatic/serdy/m41a,
+/obj/item/gun/projectile/automatic/serdy/m41a,
+/obj/effect/floor_decal/corner/black{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 1
+	},
+/obj/item/gun/projectile/automatic/serdy/m41a,
+/obj/item/gun/projectile/automatic/serdy/m41a,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
 "dM" = (
 /obj/effect/decal/cleanable/blood/oil,
 /obj/structure/cliff,
@@ -319,10 +2117,197 @@
 	ignore_mapgen = 1
 	},
 /area/space)
+"dN" = (
+/obj/structure/table/rack,
+/obj/item/ammo_magazine/m41,
+/obj/item/ammo_magazine/m41,
+/obj/item/ammo_magazine/m41,
+/obj/item/ammo_magazine/m41,
+/obj/item/ammo_magazine/m41,
+/obj/item/ammo_magazine/m41,
+/obj/item/ammo_magazine/m41,
+/obj/item/ammo_magazine/m41,
+/obj/item/ammo_magazine/m41,
+/obj/item/ammo_magazine/m41,
+/obj/item/ammo_magazine/m41,
+/obj/item/ammo_magazine/m41,
+/obj/item/ammo_magazine/m41,
+/obj/item/ammo_magazine/m41,
+/obj/item/ammo_magazine/m41,
+/obj/item/ammo_magazine/m41,
+/obj/item/ammo_magazine/m41,
+/obj/item/ammo_magazine/m41,
+/obj/item/ammo_magazine/m41,
+/obj/item/ammo_magazine/m41,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"dO" = (
+/obj/structure/table/rack,
+/obj/item/personal_shield_generator/belt/adminbus,
+/obj/item/personal_shield_generator/belt/adminbus,
+/obj/item/personal_shield_generator/belt/adminbus,
+/obj/item/personal_shield_generator/belt/adminbus,
+/obj/item/personal_shield_generator/belt/adminbus,
+/obj/item/personal_shield_generator/belt/adminbus,
+/obj/item/personal_shield_generator/belt/adminbus,
+/obj/item/personal_shield_generator/belt/adminbus,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"dP" = (
+/obj/structure/table/rack,
+/obj/item/gun/energy/plasmastun,
+/obj/item/gun/energy/plasmastun,
+/obj/item/gun/energy/plasmastun,
+/obj/item/gun/energy/plasmastun,
+/obj/item/gun/energy/plasmastun,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"dQ" = (
+/obj/structure/table/rack,
+/obj/item/gun/launcher/rocket,
+/obj/item/gun/launcher/rocket,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"dR" = (
+/obj/structure/table/rack,
+/obj/item/ammo_casing/rocket,
+/obj/item/ammo_casing/rocket,
+/obj/item/ammo_casing/rocket,
+/obj/item/ammo_casing/rocket,
+/obj/item/ammo_casing/rocket,
+/obj/item/ammo_casing/rocket,
+/obj/item/ammo_casing/rocket,
+/obj/item/ammo_casing/rocket,
+/obj/item/ammo_casing/rocket,
+/obj/effect/floor_decal/corner/black{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/red,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"dS" = (
+/obj/effect/floor_decal/corner/black{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/red,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"dT" = (
+/obj/effect/floor_decal/corner/black{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 1
+	},
+/obj/machinery/chem_master,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"dU" = (
+/obj/effect/floor_decal/corner/black{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/red,
+/obj/machinery/chem_master,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"dV" = (
+/obj/structure/table/rack,
+/obj/item/rig_module/chem_dispenser/combat,
+/obj/item/rig_module/chem_dispenser/combat,
+/obj/item/rig_module/chem_dispenser/injector,
+/obj/item/rig_module/chem_dispenser/injector,
+/obj/item/rig_module/device/healthscanner,
+/obj/item/rig_module/device/healthscanner,
+/obj/effect/floor_decal/corner/black{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 1
+	},
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
 "dW" = (
 /obj/random/maintenance/misc,
 /turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
+	},
+/area/space)
+"dX" = (
+/obj/item/circuitboard/aiupload,
+/obj/item/circuitboard/borgupload,
+/obj/item/circuitboard/smes,
+/obj/item/aiModule/nanotrasen,
+/obj/item/aiModule/reset,
+/obj/item/aiModule/freeformcore,
+/obj/item/aiModule/protectStation,
+/obj/item/aiModule/quarantine,
+/obj/item/aiModule/paladin,
+/obj/item/aiModule/robocop,
+/obj/item/aiModule/safeguard,
+/obj/structure/table/rack,
+/obj/effect/floor_decal/corner/black{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/red,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"dY" = (
+/obj/structure/table/rack,
+/obj/item/gun/projectile/automatic/as24,
+/obj/item/gun/projectile/automatic/as24,
+/obj/item/gun/projectile/automatic/as24,
+/obj/item/gun/projectile/automatic/as24,
+/obj/item/gun/projectile/automatic/as24,
+/obj/effect/floor_decal/corner/black{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 1
+	},
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"dZ" = (
+/obj/structure/table/rack,
+/obj/item/ammo_magazine/m12gdrum,
+/obj/item/ammo_magazine/m12gdrum,
+/obj/item/ammo_magazine/m12gdrum,
+/obj/item/ammo_magazine/m12gdrum,
+/obj/item/ammo_magazine/m12gdrum,
+/obj/item/ammo_magazine/m12gdrum,
+/obj/item/ammo_magazine/m12gdrum,
+/obj/item/ammo_magazine/m12gdrum,
+/obj/item/ammo_magazine/m12gdrum,
+/obj/item/ammo_magazine/m12gdrum/pellet,
+/obj/item/ammo_magazine/m12gdrum/pellet,
+/obj/item/ammo_magazine/m12gdrum/pellet,
+/obj/item/ammo_magazine/m12gdrum/pellet,
+/obj/item/ammo_magazine/m12gdrum/pellet,
+/obj/item/ammo_magazine/m12gdrum/pellet,
+/obj/item/ammo_magazine/m12gdrum/pellet,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
 	},
 /area/space)
 "ea" = (
@@ -333,10 +2318,201 @@
 	ignore_mapgen = 1
 	},
 /area/space)
+"eb" = (
+/obj/structure/table/rack,
+/obj/item/clothing/glasses/omni,
+/obj/item/clothing/glasses/omni,
+/obj/item/clothing/glasses/omni,
+/obj/item/clothing/glasses/omni,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"ec" = (
+/obj/structure/table/rack,
+/obj/item/gun/energy/alien,
+/obj/item/gun/energy/alien,
+/obj/item/gun/energy/alien,
+/obj/item/gun/energy/alien,
+/obj/item/gun/energy/alien,
+/obj/item/gun/energy/alien,
+/obj/item/gun/energy/alien,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"ed" = (
+/obj/structure/table/rack,
+/obj/item/gun/energy/gun/burst/mg42,
+/obj/item/gun/energy/gun/burst/mg42,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
 "ee" = (
 /obj/structure/cliff_end,
 /turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
+	},
+/area/space)
+"ef" = (
+/obj/structure/table/rack,
+/obj/item/laser_designator,
+/obj/effect/floor_decal/corner/black{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/red,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"eg" = (
+/obj/structure/table/rack{
+	dir = 4
+	},
+/obj/item/clothing/shoes/magboots,
+/obj/item/clothing/shoes/magboots,
+/obj/item/clothing/shoes/magboots,
+/obj/item/clothing/shoes/magboots,
+/obj/item/clothing/shoes/magboots,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/effect/floor_decal/corner/black/full{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"eh" = (
+/obj/structure/dispenser/oxygen,
+/obj/effect/floor_decal/corner/black{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"ei" = (
+/obj/structure/table/rack{
+	dir = 4
+	},
+/obj/item/suit_cooling_unit,
+/obj/item/suit_cooling_unit,
+/obj/item/suit_cooling_unit,
+/obj/item/clothing/shoes/magboots,
+/obj/item/clothing/shoes/magboots,
+/obj/item/clothing/shoes/magboots,
+/obj/item/clothing/shoes/magboots,
+/obj/item/clothing/shoes/magboots,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/effect/floor_decal/corner/black/full{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/red,
+/obj/effect/floor_decal/corner/red{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"ej" = (
+/obj/effect/floor_decal/corner/black/full{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 1
+	},
+/obj/structure/table/rack,
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"ek" = (
+/obj/effect/floor_decal/corner/black{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 1
+	},
+/obj/structure/table/reinforced,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"el" = (
+/obj/effect/floor_decal/corner/black/full{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/red,
+/obj/effect/floor_decal/corner/red{
+	dir = 1
+	},
+/obj/structure/table/rack,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"em" = (
+/obj/structure/table/rack,
+/obj/item/rig_module/device/rcd,
+/obj/item/rig_module/device/rcd,
+/obj/item/rig_module/device/plasmacutter,
+/obj/item/rig_module/device/plasmacutter,
+/obj/effect/floor_decal/corner/black/full{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 1
+	},
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"en" = (
+/obj/structure/table/rack,
+/obj/item/rig_module/rescue_pharm,
+/obj/item/rig_module/sprinter,
+/obj/item/rig_module/sprinter,
+/obj/effect/floor_decal/corner/black{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 1
+	},
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"eo" = (
+/obj/structure/table/rack,
+/obj/item/rig_module/device/drill,
+/obj/item/rig_module/device/drill,
+/obj/item/rig_module/maneuvering_jets,
+/obj/item/rig_module/maneuvering_jets,
+/obj/effect/floor_decal/corner/black{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 1
+	},
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
 	},
 /area/space)
 "ep" = (
@@ -346,22 +2522,3106 @@
 	ignore_mapgen = 1
 	},
 /area/space)
+"eq" = (
+/obj/item/stack/material/phoron,
+/obj/structure/table/rack,
+/obj/effect/floor_decal/corner/black{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 1
+	},
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
 "er" = (
 /obj/item/stolenpackage,
 /turf/space,
 /area/space)
+"es" = (
+/obj/item/smes_coil,
+/obj/item/smes_coil,
+/obj/item/t_scanner/advanced,
+/obj/item/t_scanner/advanced,
+/obj/structure/table/rack,
+/obj/effect/floor_decal/corner/black/full{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/red,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"et" = (
+/obj/effect/floor_decal/corner/black/full{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 1
+	},
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/space)
+"eu" = (
+/turf/unsimulated/mineral/muriki/basalt,
+/area/space)
+"ev" = (
+/turf/simulated/wall,
+/area/space)
+"ew" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/door/airlock/maintenance/int,
+/obj/effect/decal/cleanable/blood/tracks/suspicious,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/space)
+"ex" = (
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/space)
+"ey" = (
+/obj/structure/disposalpipe/junction{
+	dir = 8;
+	icon_state = "pipe-j2"
+	},
+/obj/effect/decal/cleanable/blood/tracks/suspicious{
+	dir = 9
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/space)
+"ez" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/obj/effect/decal/cleanable/blood/tracks/suspicious{
+	dir = 6
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/space)
+"eA" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/door/airlock/maintenance/int,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/space)
+"eB" = (
+/obj/structure/disposalpipe/junction/yjunction{
+	dir = 8
+	},
+/obj/effect/landmark/step_trap,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/space)
+"eC" = (
+/obj/structure/disposalpipe/junction/yjunction{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/blood/tracks/suspicious,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/space)
+"eD" = (
+/turf/simulated/mineral/alt/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"eE" = (
+/obj/item/material/barbedwire/start_active,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"eF" = (
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"eG" = (
+/turf/simulated/wall,
+/area/mine/explored/muriki/liminaltoobs)
+"eH" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"eI" = (
+/obj/structure/disposalpipe/junction{
+	dir = 4;
+	icon_state = "pipe-j2"
+	},
+/obj/effect/decal/cleanable/blood/tracks/suspicious{
+	dir = 10
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"eJ" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/obj/effect/decal/cleanable/blood/tracks/suspicious{
+	dir = 5
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"eK" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/door/airlock/maintenance/int,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"eL" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/door/airlock/maintenance/int,
+/obj/effect/landmark/electrify_door/ten,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"eM" = (
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"eN" = (
+/obj/structure/disposalpipe/junction{
+	dir = 4
+	},
+/obj/structure/blade_trap/start_active,
+/obj/effect/landmark/step_trap,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"eO" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"eP" = (
+/obj/structure/disposalpipe/junction{
+	dir = 4
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"eQ" = (
+/obj/structure/disposalpipe/junction/yjunction,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"eR" = (
+/obj/structure/disposalpipe/junction{
+	dir = 8;
+	icon_state = "pipe-j2"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"eS" = (
+/obj/effect/auto_crayon{
+	icon_state = "uboa"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/space)
+"eT" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/door/airlock/maintenance/int,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"eU" = (
+/obj/structure/disposalpipe/junction/yjunction{
+	dir = 8
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"eV" = (
+/obj/structure/disposalpipe/junction{
+	dir = 1
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"eW" = (
+/obj/structure/disposalpipe/junction/yjunction{
+	dir = 4
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"eX" = (
+/obj/structure/disposalpipe/junction{
+	dir = 1;
+	icon_state = "pipe-j2"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"eY" = (
+/obj/structure/disposalpipe/junction/yjunction{
+	dir = 8
+	},
+/obj/effect/landmark/step_trap,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"eZ" = (
+/obj/structure/disposalpipe/junction/yjunction{
+	dir = 1
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"fa" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/obj/random/junk,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"fb" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/obj/effect/landmark/step_trap,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"fc" = (
+/obj/structure/disposalpipe/junction{
+	dir = 8
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"fd" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"fe" = (
+/obj/structure/disposalpipe/junction/yjunction{
+	dir = 1
+	},
+/obj/effect/landmark/step_trap,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"ff" = (
+/obj/structure/disposalpipe/junction{
+	dir = 4;
+	icon_state = "pipe-j2"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"fg" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/obj/effect/landmark/step_trap,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"fh" = (
+/turf/simulated/open/muriki,
+/area/mine/explored/muriki/liminaltoobs)
 "fi" = (
 /obj/random/outcrop,
 /turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
 	},
 /area/space)
+"fj" = (
+/obj/structure/disposalpipe/broken,
+/turf/simulated/open/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"fk" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/auto_crayon{
+	icon_state = "uboa"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/space)
+"fl" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/door/airlock/maintenance/int,
+/obj/effect/landmark/electrify_door/ten,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"fm" = (
+/obj/structure/disposalpipe/junction{
+	dir = 2;
+	icon_state = "pipe-j2"
+	},
+/obj/random/junk,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"fn" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/door/airlock/maintenance/int,
+/obj/item/grenade/concussion,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"fo" = (
+/obj/structure/disposalpipe/broken{
+	dir = 8
+	},
+/turf/simulated/open/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"fp" = (
+/obj/structure/disposalpipe/broken{
+	dir = 4
+	},
+/turf/simulated/open/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"fq" = (
+/obj/structure/disposalpipe/broken{
+	dir = 1
+	},
+/turf/simulated/open/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"fr" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/obj/effect/landmark/step_trap,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"fs" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/door/airlock/maintenance/int,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/space)
+"ft" = (
+/obj/structure/disposalpipe/junction/yjunction,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/space)
+"fu" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/obj/effect/landmark/step_trap,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/space)
+"fv" = (
+/obj/structure/disposalpipe/junction{
+	dir = 4
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/space)
+"fw" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/obj/effect/landmark{
+	name = "badbody"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/space)
+"fx" = (
+/obj/structure/disposalpipe/junction{
+	dir = 4
+	},
+/obj/effect/mine/claymore,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"fy" = (
+/obj/structure/disposalpipe/junction{
+	dir = 8;
+	icon_state = "pipe-j2"
+	},
+/obj/effect/landmark/step_trap,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"fz" = (
+/obj/structure/disposalpipe/junction{
+	dir = 1;
+	icon_state = "pipe-j2"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/space)
+"fA" = (
+/obj/structure/disposalpipe/junction{
+	dir = 2;
+	icon_state = "pipe-j2"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/space)
+"fB" = (
+/obj/structure/disposalpipe/junction,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/space)
+"fC" = (
+/obj/structure/disposalpipe/junction{
+	dir = 1
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/space)
+"fD" = (
+/obj/structure/disposalpipe/junction,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"fE" = (
+/obj/structure/disposalpipe/junction{
+	dir = 1
+	},
+/obj/effect/landmark/redspaceexit,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"fF" = (
+/obj/structure/disposalpipe/junction{
+	dir = 1
+	},
+/obj/effect/mine/claymore{
+	dir = 4
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"fG" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/door/airlock/maintenance/int,
+/obj/effect/landmark/electrify_door/fifty,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/space)
+"fH" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/space)
+"fI" = (
+/obj/structure/disposalpipe/junction{
+	dir = 4;
+	icon_state = "pipe-j2"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/space)
+"fJ" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/space)
+"fK" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/obj/random/junk,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/space)
+"fL" = (
+/obj/structure/disposalpipe/junction{
+	dir = 8
+	},
+/obj/effect/landmark/step_trap,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"fM" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/obj/structure/blade_trap/start_active,
+/obj/random/junk,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"fN" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/obj/random/junk,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"fO" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/door/airlock/maintenance/int,
+/obj/effect/landmark/electrify_door/ten,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/space)
+"fP" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/space)
+"fQ" = (
+/obj/structure/disposalpipe/junction{
+	dir = 8;
+	icon_state = "pipe-j2"
+	},
+/obj/effect/landmark/step_trap,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/space)
+"fR" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/obj/random/junk,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
 "fS" = (
 /obj/random/maintenance/medical,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/space)
+"fT" = (
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/obj/effect/landmark{
+	name = "badbody"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"fU" = (
+/obj/structure/disposalpipe/junction,
+/obj/random/junk,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/space)
+"fV" = (
+/obj/structure/disposalpipe/junction/yjunction{
+	dir = 4
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/space)
+"fW" = (
+/obj/structure/disposalpipe/junction/yjunction{
+	dir = 8
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/space)
+"fX" = (
+/obj/structure/disposalpipe/junction/yjunction{
+	dir = 8
+	},
+/obj/effect/mine/claymore{
+	dir = 8
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"fY" = (
+/obj/structure/disposalpipe/junction{
+	dir = 2;
+	icon_state = "pipe-j2"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/liminaltoobs)
+"fZ" = (
+/obj/structure/disposalpipe/junction{
+	dir = 8
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/space)
+"ga" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/obj/effect/landmark/step_trap,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/space)
+"gb" = (
+/obj/structure/disposalpipe/junction/yjunction{
+	dir = 1
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/space)
+"gc" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/obj/random/junk,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/space)
+"gd" = (
+/obj/structure/disposalpipe/broken{
+	dir = 1
+	},
+/obj/structure/disposalpipe/broken{
+	dir = 4
+	},
+/turf/simulated/open/muriki,
+/area/space)
+"ge" = (
+/obj/random/junk,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/space)
+"gf" = (
+/obj/item/trash/porkpie,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/space)
+"gg" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/door/airlock/maintenance/int,
+/obj/item/grenade/spawnergrenade/manhacks,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/space)
+"gh" = (
+/obj/structure/disposalpipe/junction{
+	dir = 1
+	},
+/obj/effect/mine/claymore{
+	dir = 4
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/space)
+"gi" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/door/airlock/maintenance/int,
+/obj/effect/landmark/electrify_door/ten,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/space)
+"gj" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/obj/effect/landmark/step_trap,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/space)
+"gk" = (
+/obj/structure/table/reinforced,
+/obj/machinery/door/window/brigdoor/eastright{
+	name = "Research and Development Desk";
+	req_one_access = list(47);
+	req_access = null;
+	dir = 1
+	},
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-8"
+	},
+/obj/machinery/button/doorbell{
+	desc = "A doorbell, press to get beakers thrown at you.";
+	id = "sciding";
+	name = "Research Call";
+	pixel_x = -9;
+	pixel_y = -6
+	},
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"gl" = (
+/obj/structure/grille,
+/obj/machinery/door/firedoor/glass,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/plating,
+/area/space)
+"gm" = (
+/obj/item/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -21
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/purple/border{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/steel,
+/area/space)
+"gn" = (
+/obj/structure/cable/green{
+	icon_state = "2-4"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/steel,
+/area/space)
+"go" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/obj/effect/floor_decal/borderfloor/corner,
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/blue/bordercorner,
+/obj/effect/floor_decal/corner/blue/bordercorner{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/steel,
+/area/space)
+"gp" = (
+/obj/machinery/door/airlock/glass_medical{
+	name = "First-Aid Station";
+	req_one_access = null
+	},
+/obj/machinery/door/firedoor/glass,
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/space)
+"gq" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"gr" = (
+/obj/structure/extinguisher_cabinet{
+	dir = 8;
+	pixel_x = 30
+	},
+/obj/effect/floor_decal/corner/blue{
+	dir = 6
+	},
+/obj/structure/cable/green{
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"gs" = (
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -26
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 8
+	},
+/turf/simulated/floor/wood,
+/area/space)
+"gt" = (
+/obj/structure/bed/chair/bay/chair/padded/blue{
+	dir = 1
+	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/wood,
+/area/space)
+"gu" = (
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/spline/plain,
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"gv" = (
+/obj/effect/floor_decal/milspec/color/purple/half,
+/obj/structure/table/standard,
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"gw" = (
+/obj/machinery/light,
+/obj/machinery/computer/security/telescreen/entertainment{
+	pixel_x = 32
+	},
+/obj/machinery/rnd/destructive_analyzer,
+/obj/effect/floor_decal/milspec/color/purple/half{
+	dir = 4
+	},
+/obj/effect/floor_decal/milspec/color/purple/half{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"gx" = (
+/obj/machinery/vending/fitness,
+/obj/effect/floor_decal/borderfloor{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/purple/border{
+	dir = 9
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/steel,
+/area/space)
+"gy" = (
+/obj/machinery/vending/foodfast,
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/purple/border{
+	dir = 1
+	},
+/obj/item/geiger/wall/north,
+/turf/simulated/floor/tiled/steel,
+/area/space)
+"gz" = (
+/obj/machinery/vending/snack,
+/obj/effect/floor_decal/borderfloor{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/blue/border{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/steel,
+/area/space)
+"gA" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/plating,
+/area/space)
+"gB" = (
+/obj/machinery/medical_kiosk{
+	pixel_y = 2;
+	can_dispense = 1
+	},
+/obj/effect/floor_decal/corner/blue/full{
+	dir = 8
+	},
+/obj/machinery/camera/network/medbay{
+	c_tag = "MED - Bar Medstation"
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"gC" = (
+/obj/structure/table/standard,
+/obj/effect/floor_decal/corner/blue{
+	dir = 5
+	},
+/obj/machinery/alarm{
+	pixel_y = 26
+	},
+/obj/item/stack/medical/splint,
+/obj/item/stack/medical/splint,
+/obj/item/stack/medical/splint,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"gD" = (
+/obj/structure/table/standard,
+/obj/item/storage/firstaid/fire,
+/obj/effect/floor_decal/corner/blue{
+	dir = 5
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/machinery/firealarm{
+	pixel_y = 26
+	},
+/obj/item/storage/firstaid/regular,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"gE" = (
+/obj/structure/table/standard,
+/obj/item/storage/firstaid/o2,
+/obj/item/storage/firstaid/toxin,
+/obj/effect/floor_decal/corner/blue/full{
+	dir = 1
+	},
+/obj/machinery/power/apc{
+	dir = 1;
+	name = "north bump";
+	pixel_y = 24;
+	nightshift_setting = 2
+	},
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
+/obj/item/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = 32
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"gF" = (
+/obj/structure/table/woodentable,
+/obj/item/paper_bin,
+/obj/item/pen,
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 8
+	},
+/turf/simulated/floor/wood,
+/area/space)
+"gG" = (
+/obj/machinery/computer/med_data/laptop,
+/obj/structure/table/woodentable,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/wood,
+/area/space)
+"gH" = (
+/obj/structure/table/woodentable,
+/obj/item/toy/plushie/therapy/yellow{
+	name = "Cheese"
+	},
+/obj/item/fluff/fidgetspinner,
+/turf/simulated/floor/wood,
+/area/space)
+"gI" = (
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/wood,
+/area/space)
+"gJ" = (
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"gK" = (
+/obj/structure/bed/chair/office/dark{
+	dir = 4
+	},
+/obj/effect/landmark/start/scientist,
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"gL" = (
+/obj/machinery/camera/network/research{
+	c_tag = "SCI - RnD East";
+	dir = 8
+	},
+/obj/effect/floor_decal/milspec/color/purple/half{
+	dir = 4
+	},
+/obj/machinery/status_display{
+	layer = 4;
+	pixel_x = 32
+	},
+/obj/machinery/computer/rdconsole_tg{
+	dir = 8
+	},
+/obj/effect/floor_decal/milspec/color/purple/half{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"gM" = (
+/obj/machinery/button/windowtint{
+	id = "mental_health";
+	pixel_x = -24;
+	pixel_y = 10
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 8
+	},
+/obj/structure/extinguisher_cabinet{
+	dir = 4;
+	pixel_x = -30;
+	pixel_y = -7
+	},
+/turf/simulated/floor/wood,
+/area/space)
+"gN" = (
+/obj/structure/bed/chair/office/dark{
+	dir = 4
+	},
+/obj/effect/landmark/start{
+	name = "Psychiatrist"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/wood,
+/area/space)
+"gO" = (
+/obj/structure/table/woodentable,
+/obj/item/folder,
+/turf/simulated/floor/wood,
+/area/space)
+"gP" = (
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"gQ" = (
+/obj/effect/floor_decal/milspec/color/purple/half{
+	dir = 4
+	},
+/obj/machinery/ai_status_display{
+	pixel_x = 32
+	},
+/obj/machinery/computer/supply_request_computeralt/research{
+	dir = 8
+	},
+/obj/effect/floor_decal/milspec/color/purple/half{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"gR" = (
+/obj/item/assembly/igniter,
+/obj/structure/table/standard,
+/turf/simulated/floor/reinforced,
+/area/space)
+"gS" = (
+/obj/structure/reagent_dispensers/watertank,
+/obj/machinery/light,
+/turf/simulated/floor/reinforced,
+/area/space)
+"gT" = (
+/obj/structure/reagent_dispensers/fueltank,
+/turf/simulated/floor/reinforced,
+/area/space)
+"gU" = (
+/obj/machinery/sparker{
+	id = "Xenobio";
+	pixel_y = -28
+	},
+/turf/simulated/floor/reinforced,
+/area/space)
+"gV" = (
+/obj/machinery/camera/network/research{
+	c_tag = "SCI - Miscellaneous Test Chamber";
+	dir = 1;
+	network = list("Research","Miscellaneous Reseach")
+	},
+/turf/simulated/floor/reinforced,
+/area/space)
+"gW" = (
+/turf/simulated/floor/reinforced,
+/area/space)
+"gX" = (
+/obj/machinery/light,
+/turf/simulated/floor/reinforced,
+/area/space)
+"gY" = (
+/obj/structure/stasis_cage,
+/turf/simulated/floor/reinforced,
+/area/space)
+"gZ" = (
+/obj/structure/closet/secure_closet{
+	name = "Psychiatrist's Locker";
+	req_access = list(64)
+	},
+/obj/item/clothing/suit/straight_jacket,
+/obj/item/reagent_containers/pill/methylphenidate,
+/obj/item/reagent_containers/pill/citalopram,
+/obj/item/reagent_containers/pill/citalopram,
+/obj/item/reagent_containers/pill/citalopram,
+/obj/item/reagent_containers/pill/citalopram,
+/obj/item/reagent_containers/pill/methylphenidate,
+/obj/item/reagent_containers/syringe,
+/obj/item/reagent_containers/syringe,
+/obj/item/reagent_containers/syringe,
+/obj/item/reagent_containers/glass/bottle/stoxin,
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 9
+	},
+/obj/item/clothing/suit/storage/teshari/cloak/jobs/psych,
+/obj/item/clothing/accessory/holster/hip,
+/obj/item/storage/box/syringegun,
+/obj/item/gun/launcher/syringe,
+/obj/item/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -21
+	},
+/obj/item/geiger/wall/north,
+/turf/simulated/floor/wood,
+/area/space)
+"ha" = (
+/obj/machinery/power/apc{
+	dir = 1;
+	name = "north bump";
+	pixel_y = 24
+	},
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/space)
+"hb" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/obj/structure/sign/scenery/map/left_outpost21{
+	pixel_y = 32
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/space)
+"hc" = (
+/obj/structure/sign/scenery/map/right_outpost21{
+	pixel_y = 32
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/space)
+"hd" = (
+/obj/effect/floor_decal/milspec/color/purple/half{
+	dir = 4
+	},
+/obj/item/geiger/wall/east,
+/obj/machinery/rnd/production/protolathe/department/science,
+/obj/effect/floor_decal/milspec/color/purple/half{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"he" = (
+/obj/item/stack/cable_coil,
+/obj/item/multitool,
+/obj/machinery/cell_charger,
+/obj/item/cell/high{
+	charge = 100;
+	maxcharge = 15000
+	},
+/obj/item/cell/high{
+	charge = 100;
+	maxcharge = 15000
+	},
+/obj/structure/table/standard,
+/turf/simulated/floor/reinforced,
+/area/space)
+"hf" = (
+/obj/machinery/portable_atmospherics/canister,
+/turf/simulated/floor/reinforced,
+/area/space)
+"hg" = (
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-8"
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals_central7{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"hh" = (
+/obj/effect/floor_decal/milspec/color/purple/half{
+	dir = 4
+	},
+/obj/item/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = 21
+	},
+/obj/machinery/rnd/production/circuit_imprinter,
+/obj/effect/floor_decal/milspec/color/purple/half{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"hi" = (
+/obj/structure/table/standard,
+/turf/simulated/floor/reinforced,
+/area/space)
+"hj" = (
+/obj/effect/landmark{
+	name = "blobstart"
+	},
+/turf/simulated/floor/reinforced,
+/area/space)
+"hk" = (
+/obj/machinery/atmospherics/unary/outlet_injector{
+	dir = 1;
+	frequency = 1441;
+	id = "n2_in";
+	use_power = 1
+	},
+/turf/simulated/floor/reinforced,
+/area/space)
+"hl" = (
+/obj/structure/prop/rock/watersharp,
+/turf/simulated/floor/water/acidic/deep/turfpack/muriki,
+/area/space)
 "hm" = (
 /turf/space,
+/area/space)
+"hn" = (
+/turf/simulated/floor/water/acidic/deep/turfpack/muriki,
+/area/space)
+"ho" = (
+/turf/simulated/floor/water/acidic/turfpack/muriki,
+/area/space)
+"hp" = (
+/obj/structure/flora/lily3,
+/turf/simulated/floor/water/acidic/turfpack/muriki,
+/area/space)
+"hq" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/obj/structure/cable/green{
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"hr" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"hs" = (
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
+/obj/machinery/power/apc{
+	dir = 4;
+	name = "east bump";
+	pixel_x = 24
+	},
+/obj/effect/floor_decal/milspec/color/purple/half{
+	dir = 4
+	},
+/obj/structure/table/standard,
+/obj/item/lightreplacer,
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"ht" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/reinforced,
+/area/space)
+"hu" = (
+/obj/machinery/atmospherics/pipe/simple/visible,
+/turf/simulated/floor/reinforced,
+/area/space)
+"hv" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
+	},
+/turf/simulated/floor/reinforced,
+/area/space)
+"hw" = (
+/turf/simulated/floor/outdoors/mud/turfpack/muriki,
+/area/space)
+"hx" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/light_switch{
+	pixel_x = 25;
+	pixel_y = 28
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"hy" = (
+/obj/machinery/cell_charger,
+/obj/structure/table/standard,
+/obj/item/cataloguer/compact,
+/obj/item/cell/high{
+	charge = 100;
+	maxcharge = 15000
+	},
+/obj/item/cell/high{
+	charge = 100;
+	maxcharge = 15000
+	},
+/obj/effect/floor_decal/milspec/color/purple/half{
+	dir = 1
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 5;
+	pixel_y = 32
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"hz" = (
+/obj/structure/table/standard,
+/obj/machinery/recharger{
+	pixel_x = 6
+	},
+/obj/machinery/recharger{
+	pixel_x = -5
+	},
+/obj/item/cell/device,
+/obj/item/cell/device,
+/obj/effect/floor_decal/milspec/color/purple/half{
+	dir = 5
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/machinery/alarm{
+	pixel_y = 26
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"hA" = (
+/obj/machinery/shieldwallgen{
+	anchored = 1;
+	req_access = list(47)
+	},
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
+/obj/effect/floor_decal/milspec/color/purple,
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"hB" = (
+/obj/machinery/door/blast/regular{
+	density = 0;
+	dir = 4;
+	icon_state = "pdoor0";
+	id = "misclab";
+	name = "Test Chamber Blast Doors";
+	opacity = 0
+	},
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/plating,
+/area/space)
+"hC" = (
+/obj/machinery/door/blast/regular{
+	density = 0;
+	dir = 4;
+	icon_state = "pdoor0";
+	id = "misclab";
+	name = "Test Chamber Blast Doors";
+	opacity = 0
+	},
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
+/obj/structure/cable/green,
+/turf/simulated/floor/plating,
+/area/space)
+"hD" = (
+/obj/machinery/door/blast/regular{
+	density = 0;
+	dir = 4;
+	icon_state = "pdoor0";
+	id = "misclab";
+	name = "Test Chamber Blast Doors";
+	opacity = 0
+	},
+/obj/machinery/door/window/southleft{
+	dir = 1;
+	name = "Test Chamber";
+	req_one_access = list(7,29)
+	},
+/obj/machinery/door/window/southleft{
+	name = "Test Chamber";
+	req_one_access = list(7,29)
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/old_cargo/white,
+/area/space)
+"hE" = (
+/obj/machinery/door/blast/regular{
+	density = 0;
+	dir = 4;
+	icon_state = "pdoor0";
+	id = "misclab";
+	name = "Test Chamber Blast Doors";
+	opacity = 0
+	},
+/obj/machinery/door/window/southright{
+	dir = 1;
+	name = "Test Chamber";
+	req_one_access = list(7,29)
+	},
+/obj/machinery/door/window/southright{
+	name = "Test Chamber";
+	req_one_access = list(7,29)
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/visible,
+/turf/simulated/floor/tiled/old_cargo/white,
+/area/space)
+"hF" = (
+/obj/machinery/door/blast/regular{
+	density = 0;
+	dir = 4;
+	icon_state = "pdoor0";
+	id = "misclab";
+	name = "Test Chamber Blast Doors";
+	opacity = 0
+	},
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced,
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/red,
+/turf/simulated/floor/plating,
+/area/space)
+"hG" = (
+/obj/machinery/door/blast/regular{
+	density = 0;
+	dir = 4;
+	icon_state = "pdoor0";
+	id = "misclab";
+	name = "Test Chamber Blast Doors";
+	opacity = 0
+	},
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced,
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/plating,
+/area/space)
+"hH" = (
+/obj/machinery/shieldwallgen{
+	anchored = 1;
+	req_access = list(47)
+	},
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
+/obj/effect/floor_decal/milspec/color/purple,
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"hI" = (
+/obj/machinery/door/airlock/glass_research{
+	name = "Research and Development"
+	},
+/obj/machinery/door/firedoor/glass,
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled/steel_ridged,
+/area/space)
+"hJ" = (
+/obj/effect/floor_decal/milspec/color/purple/half{
+	dir = 10
+	},
+/obj/structure/extinguisher_cabinet{
+	dir = 4;
+	pixel_x = -30;
+	pixel_y = -7
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"hK" = (
+/obj/effect/floor_decal/milspec/color/purple/half,
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"hL" = (
+/obj/structure/table/reinforced,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/item/clothing/mask/gas,
+/obj/effect/floor_decal/milspec/color/purple/half,
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"hM" = (
+/obj/machinery/atmospherics/pipe/simple/visible,
+/obj/effect/floor_decal/milspec/color/purple/half,
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"hN" = (
+/obj/structure/table/reinforced,
+/obj/item/tool/wrench,
+/obj/item/clothing/glasses/science,
+/obj/item/tool/crowbar/brass,
+/obj/machinery/atmospherics/pipe/simple/hidden/red{
+	dir = 6
+	},
+/obj/effect/floor_decal/milspec/color/purple/half,
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"hO" = (
+/obj/structure/table/reinforced,
+/obj/machinery/button/ignition{
+	id = "Xenobio";
+	pixel_x = -6;
+	pixel_y = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/red{
+	dir = 4
+	},
+/obj/effect/floor_decal/milspec/color/purple/half,
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"hP" = (
+/obj/item/stool/padded,
+/obj/machinery/atmospherics/pipe/simple/hidden/red{
+	dir = 9
+	},
+/obj/machinery/computer/security/telescreen{
+	desc = "Used to monitor the proceedings inside the test chamber.";
+	name = "Test Chamber Monitor";
+	network = list("Miscellaneous Reseach");
+	pixel_x = 32
+	},
+/obj/effect/floor_decal/milspec/color/purple/half{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"hQ" = (
+/obj/structure/disposalpipe/sortjunction/flipped{
+	dir = 8;
+	sortType = "Science";
+	name = "Science"
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"hR" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 10
+	},
+/obj/machinery/light,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"hS" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/obj/effect/floor_decal/corner/purple/full{
+	dir = 4
+	},
+/obj/item/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -21
+	},
+/obj/structure/closet/secure_closet{
+	req_one_access = list(7,47)
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"hT" = (
+/obj/structure/grille,
+/obj/machinery/door/firedoor/glass,
+/obj/structure/window/reinforced/full,
+/turf/simulated/floor/plating,
+/area/space)
+"hU" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/obj/effect/floor_decal/milspec/color/purple/half{
+	dir = 8
+	},
+/obj/machinery/light_switch{
+	dir = 4;
+	pixel_x = -28;
+	pixel_y = -27
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"hV" = (
+/obj/structure/bed/chair/office/light,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"hW" = (
+/obj/structure/ladder/top_hatch,
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"hX" = (
+/obj/machinery/atmospherics/pipe/simple/visible{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"hY" = (
+/obj/machinery/atmospherics/pipe/simple/visible{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"hZ" = (
+/obj/machinery/button/remote/blast_door{
+	id = "misclab";
+	name = "Test Chamber Blast Doors";
+	pixel_x = 6;
+	pixel_y = -30;
+	req_access = list(47)
+	},
+/obj/machinery/atmospherics/pipe/simple/visible{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"ia" = (
+/obj/machinery/atmospherics/binary/pump{
+	dir = 1;
+	name = "Research Lab Vent"
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 10
+	},
+/turf/simulated/floor/plating,
+/area/space)
+"ib" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced,
+/obj/structure/cable/green,
+/obj/machinery/door/blast/regular{
+	density = 0;
+	dir = 2;
+	icon_state = "pdoor0";
+	id = "Scilock";
+	name = "Science Lockdown";
+	opacity = 0
+	},
+/turf/simulated/floor/plating,
+/area/space)
+"ic" = (
+/obj/structure/atmopost,
+/turf/simulated/floor/outdoors/mud/turfpack/muriki,
+/area/space)
+"id" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"ie" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-8"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/effect/catwalk_plated/white,
+/turf/simulated/floor/plating,
+/area/space)
+"if" = (
+/obj/structure/disposalpipe/junction{
+	dir = 2;
+	icon_state = "pipe-j2"
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"ig" = (
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/glass_research{
+	name = "Auxillary Lab";
+	req_one_access = list(30,47,52)
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/steel_ridged,
+/area/space)
+"ih" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"ii" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"ij" = (
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "5-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals_central7{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"ik" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"il" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
+/obj/effect/landmark{
+	name = "vinestart"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"im" = (
+/obj/machinery/atmospherics/binary/pump,
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"in" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/universal,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/space)
+"io" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/cable/green,
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
+/obj/machinery/door/blast/regular{
+	density = 0;
+	dir = 2;
+	icon_state = "pdoor0";
+	id = "Scilock";
+	name = "Science Lockdown";
+	opacity = 0
+	},
+/turf/simulated/floor/plating,
+/area/space)
+"ip" = (
+/obj/structure/trailblazer/yellow,
+/turf/simulated/floor/outdoors/mud/turfpack/muriki,
+/area/space)
+"iq" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"ir" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"is" = (
+/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/corner/purple{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"it" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/effect/floor_decal/milspec/color/purple/half{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"iu" = (
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"iv" = (
+/obj/structure/cable/green{
+	icon_state = "4-10"
+	},
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"iw" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"ix" = (
+/obj/machinery/atmospherics/portables_connector,
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"iy" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 9
+	},
+/turf/simulated/floor/plating,
+/area/space)
+"iz" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
+/obj/machinery/door/blast/regular{
+	density = 0;
+	dir = 2;
+	icon_state = "pdoor0";
+	id = "Scilock";
+	name = "Science Lockdown";
+	opacity = 0
+	},
+/turf/simulated/floor/plating,
+/area/space)
+"iA" = (
+/obj/structure/flora/lily2,
+/turf/simulated/floor/water/acidic/turfpack/muriki,
+/area/space)
+"iB" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/door/firedoor/glass/hidden{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/old_cargo/white,
+/area/space)
+"iC" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/door/firedoor/glass/hidden{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/old_cargo/white,
+/area/space)
+"iD" = (
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -26
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/effect/floor_decal/milspec/color/purple/half{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"iE" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"iF" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"iG" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 10
+	},
+/obj/machinery/doorbell_chime{
+	id_tag = "sciding";
+	name = "Research Call";
+	pixel_x = 32
+	},
+/obj/effect/floor_decal/milspec/color/purple/half{
+	dir = 4
+	},
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"iH" = (
+/obj/machinery/camera/network/outside{
+	c_tag = "EXT - Sci East";
+	dir = 4
+	},
+/turf/simulated/floor/water/acidic/turfpack/muriki,
+/area/space)
+"iI" = (
+/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/corner/purple{
+	dir = 9
+	},
+/obj/machinery/station_map{
+	dir = 4;
+	pixel_x = -32
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"iJ" = (
+/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/corner/purple{
+	dir = 6
+	},
+/obj/item/radio/intercom{
+	dir = 4;
+	frequency = 1475;
+	name = "Station Intercom (Security)";
+	pixel_x = 21
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"iK" = (
+/obj/machinery/disposal,
+/obj/structure/disposalpipe/trunk{
+	dir = 4
+	},
+/obj/effect/floor_decal/milspec/color/purple/half{
+	dir = 9
+	},
+/obj/item/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -21
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"iL" = (
+/obj/machinery/newscaster{
+	pixel_x = -2;
+	pixel_y = 28
+	},
+/obj/structure/closet/crate,
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/obj/effect/floor_decal/milspec/color/purple/half{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"iM" = (
+/obj/machinery/light_switch{
+	pixel_x = -22;
+	pixel_y = 30
+	},
+/obj/structure/closet/crate,
+/obj/machinery/power/apc{
+	dir = 1;
+	name = "north bump";
+	pixel_y = 24
+	},
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
+/obj/effect/floor_decal/milspec/color/purple/half{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"iN" = (
+/obj/machinery/doorbell_chime{
+	id_tag = "sciding";
+	name = "Research Call";
+	pixel_y = 30
+	},
+/obj/effect/floor_decal/milspec/color/purple/half{
+	dir = 1
+	},
+/obj/structure/closet/secure_closet{
+	req_one_access = list(7,47)
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"iO" = (
+/obj/machinery/camera/network/research{
+	c_tag = "SCI - Miscellaneous Research"
+	},
+/obj/structure/table/reinforced,
+/obj/effect/floor_decal/milspec/color/purple/half{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"iP" = (
+/obj/machinery/alarm{
+	pixel_y = 26
+	},
+/obj/item/juke_remote{
+	autolinkareajuke_onspawn = /area/djstation
+	},
+/obj/structure/table/reinforced,
+/obj/effect/floor_decal/milspec/color/purple/half{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"iQ" = (
+/obj/item/geiger/wall{
+	pixel_y = 30
+	},
+/obj/effect/floor_decal/milspec/color/purple/half{
+	dir = 1
+	},
+/obj/structure/closet/firecloset/full,
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"iR" = (
+/obj/structure/extinguisher_cabinet{
+	dir = 8;
+	pixel_x = 30
+	},
+/obj/structure/closet/bombcloset,
+/obj/effect/floor_decal/milspec/color/purple/half{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"iS" = (
+/obj/structure/prop/rock/small/water,
+/turf/simulated/floor/water/acidic/turfpack/muriki,
+/area/space)
+"iT" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/alarm{
+	dir = 4;
+	pixel_x = -26
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"iU" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/green{
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"iV" = (
+/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/corner/purple{
+	dir = 6
+	},
+/obj/machinery/power/thermoregulator/cryogaia{
+	pixel_x = 32
+	},
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"iW" = (
+/obj/item/beartrap{
+	anchored = 1;
+	deployed = 1
+	},
+/turf/simulated/floor/outdoors/mud/turfpack/muriki,
+/area/space)
+"iX" = (
+/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/corner/purple{
+	dir = 9
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/machinery/holoposter{
+	dir = 4;
+	pixel_x = -30
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"iY" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"iZ" = (
+/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/corner/purple{
+	dir = 6
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"ja" = (
+/obj/structure/table/reinforced,
+/obj/item/storage/belt/utility/full,
+/obj/item/pen/fountain,
+/obj/machinery/doorbell_chime{
+	id_tag = "sciding";
+	name = "Research Call";
+	pixel_y = -30
+	},
+/obj/effect/floor_decal/corner/purple/full,
+/obj/item/multitool,
+/obj/item/tool/screwdriver,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"jb" = (
+/obj/structure/table/reinforced,
+/obj/item/paper_bin,
+/obj/effect/floor_decal/corner/purple{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"jc" = (
+/obj/structure/table/reinforced,
+/obj/item/storage/box/monkeycubes/wolpincubes,
+/obj/effect/floor_decal/corner/purple{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"jd" = (
+/obj/structure/closet/secure_closet{
+	req_one_access = list(7,47)
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"je" = (
+/obj/effect/floor_decal/corner/purple{
+	dir = 10
+	},
+/obj/machinery/power/thermoregulator/cryogaia{
+	pixel_y = -32
+	},
+/obj/structure/cable/green,
+/obj/structure/closet/secure_closet{
+	req_one_access = list(7,47)
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"jf" = (
+/obj/machinery/disposal,
+/obj/structure/disposalpipe/trunk{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/purple/full{
+	dir = 4
+	},
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"jg" = (
+/obj/structure/grille,
+/obj/machinery/door/blast/regular{
+	density = 0;
+	icon_state = "pdoor0";
+	id = "misclab";
+	name = "Test Chamber Blast Doors";
+	opacity = 0
+	},
+/obj/structure/window/phoronreinforced{
+	dir = 4
+	},
+/obj/structure/window/phoronreinforced{
+	dir = 8
+	},
+/obj/structure/window/phoronreinforced,
+/obj/structure/cable/green,
+/turf/simulated/floor/plating,
+/area/space)
+"jh" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/reinforced,
+/area/space)
+"ji" = (
+/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/corner/purple{
+	dir = 9
+	},
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -26
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"jj" = (
+/obj/effect/floor_decal/corner/purple{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"jk" = (
+/obj/structure/bed/chair/bay/chair/padded/purple,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"jl" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"jm" = (
+/turf/simulated/floor/tiled/white,
+/area/space)
+"jn" = (
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"jo" = (
+/obj/structure/grille,
+/obj/machinery/door/blast/regular{
+	density = 0;
+	icon_state = "pdoor0";
+	id = "misclab";
+	name = "Test Chamber Blast Doors";
+	opacity = 0
+	},
+/obj/structure/window/phoronreinforced{
+	dir = 4
+	},
+/obj/structure/window/phoronreinforced{
+	dir = 8
+	},
+/obj/structure/window/phoronreinforced{
+	dir = 1
+	},
+/obj/structure/cable/green,
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
+/turf/simulated/floor/plating,
+/area/space)
+"jp" = (
+/obj/machinery/camera/network/research{
+	c_tag = "SCI - Bluespace Lab Test Chamber";
+	dir = 8
+	},
+/turf/simulated/floor/reinforced,
+/area/space)
+"jq" = (
+/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/corner/purple{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"jr" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/cable/green{
+	icon_state = "2-4"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"js" = (
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/glass_research{
+	name = "Telescience";
+	req_one_access = list(7,47)
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/steel_ridged,
+/area/space)
+"jt" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/structure/cable/green{
+	icon_state = "1-8"
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals_central7{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"ju" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"jv" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/hologram/holopad,
+/obj/effect/landmark/redspaceexit,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"jw" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"jx" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"jy" = (
+/obj/machinery/door/blast/regular{
+	density = 0;
+	icon_state = "pdoor0";
+	id = "misclab";
+	name = "Test Chamber Blast Doors";
+	opacity = 0
+	},
+/obj/machinery/door/airlock/research{
+	req_one_access = list(7,47);
+	name = "Telescience Chamber"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/reinforced,
+/area/space)
+"jz" = (
+/obj/machinery/telepad,
+/turf/simulated/floor/reinforced,
+/area/space)
+"jA" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"jB" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 4
+	},
+/obj/effect/catwalk_plated/white,
+/turf/simulated/floor/plating,
+/area/space)
+"jC" = (
+/obj/machinery/button/remote/blast_door{
+	dir = 4;
+	id = "misclab";
+	name = "Test Chamber Blast Doors";
+	pixel_x = -30;
+	pixel_y = 6
+	},
+/obj/machinery/button/ignition{
+	id = "Telesci";
+	pixel_x = -28;
+	pixel_y = -3
+	},
+/obj/machinery/light_switch{
+	dir = 4;
+	pixel_x = -28;
+	pixel_y = -10
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"jD" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"jE" = (
+/obj/structure/bed/chair/bay/chair/padded/purple{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"jF" = (
+/obj/effect/floor_decal/corner/purple{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"jG" = (
+/obj/structure/grille,
+/obj/machinery/door/blast/regular{
+	density = 0;
+	icon_state = "pdoor0";
+	id = "misclab";
+	name = "Test Chamber Blast Doors";
+	opacity = 0
+	},
+/obj/structure/window/phoronreinforced{
+	dir = 4
+	},
+/obj/structure/window/phoronreinforced{
+	dir = 8
+	},
+/obj/structure/window/phoronreinforced,
+/obj/structure/cable/green,
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
+/turf/simulated/floor/plating,
+/area/space)
+"jH" = (
+/obj/machinery/sparker{
+	id = "Telesci";
+	pixel_x = 28
+	},
+/turf/simulated/floor/reinforced,
+/area/space)
+"jI" = (
+/obj/structure/lattice,
+/obj/structure/disposalpipe/down{
+	dir = 1
+	},
+/turf/simulated/open,
+/area/space)
+"jJ" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"jK" = (
+/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/corner/purple{
+	dir = 6
+	},
+/obj/item/radio/intercom{
+	dir = 4;
+	frequency = 1475;
+	name = "Station Intercom (Security)";
+	pixel_x = 21
+	},
+/obj/structure/closet/secure_closet{
+	req_one_access = list(7,47)
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"jL" = (
+/obj/effect/floor_decal/corner/purple/full{
+	dir = 8
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -26
+	},
+/obj/structure/table/reinforced,
+/obj/item/gps/science,
+/obj/item/gps/science,
+/obj/item/gps/science,
+/obj/item/gps/science,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"jM" = (
+/obj/item/stock_parts/subspace/crystal{
+	pixel_x = 6
+	},
+/obj/item/stock_parts/subspace/crystal{
+	pixel_x = 6
+	},
+/obj/item/stock_parts/subspace/crystal{
+	pixel_x = 6
+	},
+/obj/item/stack/telecrystal,
+/obj/item/stack/telecrystal,
+/obj/structure/table/reinforced,
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
+/obj/machinery/power/apc{
+	dir = 1;
+	name = "north bump";
+	pixel_y = 24
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"jN" = (
+/obj/structure/table/reinforced,
+/obj/item/bluespace_crystal,
+/obj/item/bluespace_crystal,
+/obj/item/bluespace_crystal,
+/obj/item/bluespace_crystal,
+/obj/item/sticky_pad/random{
+	pixel_x = -8;
+	pixel_y = 9
+	},
+/obj/machinery/alarm{
+	pixel_y = 26
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"jO" = (
+/obj/machinery/camera/network/research{
+	c_tag = "SCI - Bluespace Lab"
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 5
+	},
+/obj/item/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 21
+	},
+/obj/machinery/computer/telescience,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"jP" = (
+/obj/structure/closet/crate/science,
+/obj/item/bluespace_crystal/artificial,
+/obj/item/bluespace_crystal,
+/obj/item/bluespace_crystal,
+/obj/machinery/vending/wallmed1/public{
+	pixel_y = 30
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"jQ" = (
+/obj/effect/landmark/holiday_event_spawn,
+/obj/effect/floor_decal/corner/purple/full{
+	dir = 1
+	},
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -5;
+	pixel_y = 30
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"jR" = (
+/obj/structure/grille,
+/obj/machinery/door/blast/regular{
+	density = 0;
+	icon_state = "pdoor0";
+	id = "misclab";
+	name = "Test Chamber Blast Doors";
+	opacity = 0
+	},
+/obj/structure/window/phoronreinforced{
+	dir = 4
+	},
+/obj/structure/window/phoronreinforced{
+	dir = 8
+	},
+/obj/structure/window/phoronreinforced{
+	dir = 1
+	},
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
+/turf/simulated/floor/plating,
+/area/space)
+"jS" = (
+/obj/item/geiger/wall/north,
+/turf/simulated/floor/reinforced,
+/area/space)
+"jT" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/effect/landmark/event_spawn/maintpred,
+/turf/simulated/floor/tiled/techfloor,
+/area/space)
+"jU" = (
+/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/corner/purple{
+	dir = 9
+	},
+/obj/machinery/ai_status_display{
+	pixel_x = -32
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"jV" = (
+/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/corner/purple{
+	dir = 6
+	},
+/obj/machinery/camera/network/research{
+	c_tag = "SCI - Main Hall Northeast";
+	network = list("Research","Miscellaneous Reseach");
+	dir = 8
+	},
+/obj/structure/closet/secure_closet{
+	req_one_access = list(7,47)
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"jW" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/window/maintenance_panel{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/space)
+"jX" = (
+/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/corner/purple/full{
+	dir = 8
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/machinery/status_display{
+	layer = 4;
+	pixel_x = -32
+	},
+/obj/structure/closet{
+	name = "Winter Coats"
+	},
+/obj/item/clothing/shoes/boots/winter/science,
+/obj/item/clothing/shoes/boots/winter/science,
+/obj/item/clothing/shoes/boots/winter/science,
+/obj/item/clothing/suit/storage/hooded/wintercoat/science,
+/obj/item/clothing/suit/storage/hooded/wintercoat/science,
+/obj/item/clothing/suit/storage/hooded/wintercoat/science,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"jY" = (
+/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/corner/purple/full{
+	dir = 1
+	},
+/obj/structure/closet/secure_closet{
+	req_one_access = list(7,47)
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"jZ" = (
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/obj/machinery/doorbell_chime{
+	id_tag = "sciding";
+	name = "Research Call";
+	pixel_y = -30
+	},
+/obj/effect/floor_decal/milspec/color/purple/half{
+	dir = 10
+	},
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -26
+	},
+/obj/structure/closet/firecloset/full,
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"ka" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/floor_decal/milspec/color/purple/half,
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/item/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -21
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"kb" = (
+/obj/machinery/door/window,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/floor_decal/milspec/color/purple/half,
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/micro_tunnel{
+	pixel_y = -32
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"kc" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/floor_decal/milspec/color/purple/half,
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"kd" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/floor_decal/milspec/color/purple/half,
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/light,
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"ke" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/floor_decal/milspec/color/purple/half,
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/camera/network/research{
+	c_tag = "SCI - Firing Range Impact";
+	dir = 1;
+	network = list("Research","Miscellaneous Reseach")
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"kf" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/floor_decal/milspec/color/purple/half,
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/light,
+/obj/structure/ladder/top_hatch,
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"kg" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"kh" = (
+/obj/machinery/shieldwallgen,
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
+/obj/structure/catwalk,
+/turf/simulated/floor/plating,
+/area/space)
+"ki" = (
+/obj/structure/grille,
+/obj/machinery/door/firedoor/glass,
+/obj/structure/window/reinforced/full,
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/plating,
+/area/space)
+"kj" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/door/airlock/glass_research{
+	name = "Weapon Testing Range";
+	req_one_access = list(7,47)
+	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/tiled/steel_ridged,
+/area/space)
+"kk" = (
+/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/milspec/color/purple/half{
+	dir = 8
+	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"kl" = (
+/obj/machinery/door/window,
+/obj/structure/window/reinforced,
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"km" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"kn" = (
+/obj/structure/target_stake,
+/turf/simulated/floor/tiled/milspec,
+/area/space)
+"ko" = (
+/obj/effect/floor_decal/milspec/color/purple/half{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
 /area/space)
 "mj" = (
 /turf/simulated/wall/r_wall,
@@ -15657,23 +20917,23 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+al
+al
+al
+al
+al
+al
+an
+bX
+al
+bK
+aV
+aV
+aV
+aV
+aV
+ao
+al
 hm
 hm
 hm
@@ -15829,6 +21089,29 @@ hm
 hm
 hm
 hm
+ki
+jX
+jU
+jq
+jA
+jq
+ji
+iX
+iT
+iI
+iB
+iq
+id
+hQ
+hI
+hx
+hq
+hg
+gJ
+gJ
+gJ
+gu
+gk
 hm
 hm
 hm
@@ -15891,46 +21174,23 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+al
+cY
+aw
+aw
+cd
+aP
+cb
+bY
+aP
+bM
+aw
+aW
+aW
+aW
+aW
+aw
+am
 hm
 hm
 hm
@@ -16086,6 +21346,29 @@ hm
 hm
 hm
 hm
+kj
+ir
+ir
+jJ
+jB
+jr
+ir
+iY
+iU
+ir
+iC
+ir
+ie
+hR
+ev
+hy
+hr
+gP
+gP
+gP
+gK
+gv
+gl
 hm
 hm
 hm
@@ -16148,46 +21431,23 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+al
+da
+aw
+aw
+cg
+aU
+cb
+bY
+aQ
+bN
+aw
+aw
+aw
+aw
+aw
+aw
+al
 hm
 hm
 hm
@@ -16343,6 +21603,29 @@ hm
 hm
 hm
 hm
+ki
+jY
+jV
+jK
+is
+if
+is
+iZ
+iV
+iJ
+iB
+is
+if
+hS
+ev
+hz
+hs
+hh
+hd
+gQ
+gL
+gw
+mj
 hm
 hm
 hm
@@ -16405,46 +21688,23 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+al
+dc
+aw
+aw
+aw
+cc
+aX
+bY
+aQ
+bO
+aw
+aW
+aW
+aW
+aW
+aw
+an
 hm
 hm
 hm
@@ -16600,6 +21860,29 @@ hm
 hm
 hm
 hm
+ev
+ev
+ev
+ev
+ev
+js
+gA
+gA
+ev
+ev
+ev
+hT
+ig
+hT
+ev
+ev
+mj
+mj
+mj
+mj
+mj
+mj
+mj
 hm
 hm
 hm
@@ -16662,46 +21945,23 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+al
+dd
+aw
+aw
+ch
+aP
+cb
+bY
+aU
+bP
+aw
+aW
+aW
+aW
+aW
+aw
+an
 hm
 hm
 hm
@@ -16857,6 +22117,29 @@ hm
 hm
 hm
 hm
+kk
+jZ
+ev
+jL
+jC
+id
+jj
+ja
+ev
+iK
+iD
+it
+ih
+hU
+hJ
+hA
+mj
+hi
+he
+gR
+mj
+gx
+gm
 hm
 hm
 hm
@@ -16919,46 +22202,23 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+al
+aw
+aw
+aw
+aw
+aQ
+cb
+bZ
+an
+aw
+aw
+aw
+aw
+aw
+aw
+aw
+al
 hm
 hm
 hm
@@ -17114,6 +22374,29 @@ hm
 hm
 hm
 hm
+gP
+ka
+ev
+jM
+jn
+jt
+jk
+jb
+ev
+iL
+iu
+iu
+ii
+gP
+hK
+hB
+mj
+gW
+gW
+gS
+mj
+gy
+gn
 hm
 hm
 hm
@@ -17176,46 +22459,23 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+al
+de
+cH
+cp
+ci
+aU
+cb
+bZ
+an
+aw
+aw
+aw
+aw
+aw
+aw
+aw
+al
 hm
 hm
 hm
@@ -17371,6 +22631,29 @@ hm
 hm
 hm
 hm
+kl
+kb
+ev
+jN
+jD
+ju
+jl
+jc
+ev
+iM
+gJ
+gJ
+ij
+hV
+hL
+hC
+ht
+gW
+gW
+gT
+mj
+gz
+go
 hm
 hm
 hm
@@ -17433,46 +22716,23 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+al
+al
+al
+al
+al
+al
+an
+ca
+al
+al
+al
+al
+al
+al
+al
+al
+al
 hm
 hm
 hm
@@ -17628,6 +22888,29 @@ hm
 hm
 hm
 hm
+km
+kc
+mj
+jO
+jE
+jv
+jm
+jd
+ev
+iN
+gP
+iv
+ik
+hW
+hK
+hD
+gW
+hj
+gW
+gU
+mj
+gA
+gp
 hm
 hm
 hm
@@ -17686,50 +22969,27 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+al
+et
+dY
+dL
+dw
+df
+cI
+cq
+cj
+am
+cb
+bY
+am
+bQ
+bp
+bp
+bp
+bp
+aX
+aD
+al
 hm
 hm
 hm
@@ -17885,6 +23145,29 @@ hm
 hm
 hm
 hm
+gP
+kd
+mj
+jP
+jm
+jw
+jn
+je
+ev
+iO
+iE
+iw
+il
+hX
+hM
+hE
+hu
+hk
+gW
+gV
+mj
+gB
+gq
 hm
 hm
 hm
@@ -17943,50 +23226,27 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+al
+bR
+aX
+aX
+aX
+aX
+aX
+aX
+aX
+an
+cb
+bZ
+an
+aX
+aX
+aX
+aX
+aX
+aX
+aE
+al
 hm
 hm
 hm
@@ -18142,6 +23402,29 @@ hm
 hm
 hm
 hm
+gP
+kc
+mj
+jQ
+jF
+jx
+is
+jf
+ev
+iP
+iF
+hr
+gP
+hY
+hN
+hF
+hv
+gW
+gW
+gW
+mj
+gC
+gq
 hm
 hm
 hm
@@ -18200,50 +23483,27 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+al
+bR
+dZ
+dN
+dy
+dg
+cK
+cr
+aJ
+aP
+aX
+bY
+aP
+aX
+bq
+bq
+bq
+bq
+aX
+aF
+al
 hm
 hm
 hm
@@ -18399,6 +23659,29 @@ hm
 hm
 hm
 hm
+gP
+kc
+mj
+jR
+jG
+jy
+jo
+jg
+mj
+iQ
+iF
+ix
+im
+hZ
+hO
+hG
+mj
+gW
+gW
+gX
+mj
+gD
+gq
 hm
 hm
 hm
@@ -18457,50 +23740,27 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+al
+bR
+eb
+dO
+dz
+di
+cL
+cs
+aJ
+aU
+cb
+bY
+aU
+aX
+bq
+bq
+bq
+bq
+aX
+aG
+al
 hm
 hm
 hm
@@ -18656,6 +23916,29 @@ hm
 hm
 hm
 hm
+gP
+kc
+mj
+gW
+gW
+gW
+gW
+gW
+mj
+iR
+iG
+iy
+in
+ia
+hP
+hH
+mj
+hf
+hf
+gY
+mj
+gE
+gr
 hm
 hm
 hm
@@ -18714,50 +23997,27 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+al
+bR
+aX
+aX
+aX
+aX
+aX
+aX
+aX
+an
+cb
+bZ
+an
+aX
+aX
+aX
+aX
+aX
+aX
+aH
+al
 hm
 hm
 hm
@@ -18913,6 +24173,29 @@ hm
 hm
 hm
 hm
+gP
+kc
+mj
+jS
+gW
+gW
+gW
+gW
+mj
+mj
+mj
+iz
+io
+ib
+mj
+mj
+mj
+mj
+mj
+mj
+mj
+ev
+ev
 hm
 hm
 hm
@@ -18971,50 +24254,27 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+al
+bR
+ec
+dP
+dj
+dj
+cM
+ct
+aJ
+aP
+cb
+bY
+am
+aX
+br
+br
+br
+br
+aX
+aD
+al
 hm
 hm
 hm
@@ -19145,6 +24405,17 @@ hm
 hm
 hm
 hm
+bk
+ev
+ev
+eA
+ev
+ev
+ev
+eA
+ev
+ev
+bk
 hm
 hm
 hm
@@ -19159,6 +24430,29 @@ hm
 hm
 hm
 hm
+kn
+ke
+mj
+jh
+jH
+jz
+jp
+jh
+mj
+hn
+iH
+iA
+hw
+hw
+hw
+ho
+hn
+hl
+mj
+gZ
+gM
+gF
+gs
 hm
 hm
 hm
@@ -19217,61 +24511,27 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+al
+bR
+ed
+dQ
+dl
+dl
+cO
+cu
+aJ
+aU
+aX
+bY
+al
+an
+bK
+by
+by
+ao
+an
+al
+al
 hm
 hm
 hm
@@ -19402,6 +24662,17 @@ hm
 hm
 hm
 hm
+bk
+ev
+fH
+fU
+ex
+ev
+fH
+fz
+ex
+ev
+bk
 hm
 hm
 hm
@@ -19416,6 +24687,29 @@ hm
 hm
 hm
 hm
+gP
+kf
+mj
+mj
+mj
+mj
+mj
+mj
+mj
+ho
+ho
+ho
+ip
+ic
+ho
+ho
+ho
+hn
+mj
+ha
+gN
+gG
+gt
 hm
 hm
 hm
@@ -19474,61 +24768,27 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+al
+bR
+aX
+aX
+aX
+aX
+aX
+aX
+aX
+an
+cb
+bY
+am
+aX
+bz
+bz
+bz
+bs
+aX
+aI
+al
 hm
 hm
 hm
@@ -19659,6 +24919,17 @@ hm
 hm
 hm
 hm
+aT
+fs
+fZ
+ev
+ft
+fO
+fI
+ev
+ft
+fs
+aT
 hm
 hm
 hm
@@ -19673,6 +24944,29 @@ hm
 hm
 hm
 hm
+gJ
+kg
+jW
+jT
+jI
+mj
+hn
+ho
+iW
+iS
+ho
+ho
+ho
+ho
+ho
+ho
+ho
+ho
+mj
+hb
+gO
+gH
+aw
 hm
 hm
 hm
@@ -19731,61 +25025,27 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+al
+bS
+ef
+dR
+dA
+dm
+cP
+cv
+ck
+am
+cb
+bZ
+an
+aX
+aX
+aX
+aX
+aX
+aX
+aJ
+al
 hm
 hm
 hm
@@ -19909,6 +25169,24 @@ hm
 hm
 hm
 hm
+bk
+bk
+aT
+bk
+bk
+bk
+aT
+aT
+ev
+ga
+fV
+fP
+ev
+fJ
+fA
+fu
+ev
+bk
 hm
 hm
 hm
@@ -19923,6 +25201,29 @@ hm
 hm
 hm
 hm
+ko
+kh
+mj
+mj
+mj
+mj
+hn
+ho
+ho
+ho
+ho
+hn
+hn
+hn
+hn
+ho
+hw
+hp
+mj
+hc
+aw
+gI
+aw
 hm
 hm
 hm
@@ -19981,68 +25282,27 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+al
+al
+al
+al
+al
+al
+al
+al
+al
+al
+cb
+bY
+aP
+bR
+bA
+bA
+bA
+bt
+aX
+aL
+al
 hm
 hm
 hm
@@ -20166,6 +25426,24 @@ hm
 hm
 hm
 hm
+ev
+ev
+eA
+ev
+ev
+ev
+eA
+ev
+ev
+ev
+eA
+ev
+ev
+ev
+eA
+ev
+ev
+ev
 hm
 hm
 hm
@@ -20246,6 +25524,7 @@ hm
 hm
 hm
 hm
+eu
 hm
 hm
 hm
@@ -20260,46 +25539,27 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+eu
+al
+eg
+bQ
+dn
+dn
+cw
+cw
+cl
+am
+aX
+bY
+aU
+bR
+bB
+bB
+bB
+bu
+aX
+aN
+al
 hm
 hm
 hm
@@ -20423,6 +25683,24 @@ hm
 hm
 hm
 hm
+ev
+gj
+fB
+ex
+ev
+fH
+fz
+ex
+ev
+fH
+fW
+ex
+ev
+fH
+fB
+ex
+ev
+ev
 hm
 hm
 hm
@@ -20503,6 +25781,7 @@ hm
 hm
 hm
 hm
+eu
 hm
 hm
 hm
@@ -20517,46 +25796,27 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+eu
+al
+eh
+aX
+aX
+aX
+aX
+aX
+aX
+an
+cb
+bZ
+an
+aX
+aX
+aX
+aX
+aX
+aX
+aJ
+al
 hm
 hm
 hm
@@ -20680,6 +25940,24 @@ hm
 hm
 hm
 hm
+fs
+fZ
+ev
+ft
+fs
+fI
+ev
+ft
+fO
+gb
+ev
+fQ
+fs
+fI
+ev
+fv
+fs
+eS
 hm
 hm
 hm
@@ -20760,6 +26038,7 @@ hm
 hm
 hm
 hm
+eu
 hm
 hm
 hm
@@ -20774,46 +26053,27 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+eu
+al
+eh
+aX
+aX
+aX
+aX
+aX
+aX
+an
+cb
+bY
+am
+bS
+bC
+bC
+bC
+bx
+aY
+aO
+al
 hm
 hm
 hm
@@ -20937,6 +26197,30 @@ hm
 hm
 hm
 hm
+ev
+fJ
+fV
+fw
+ev
+fJ
+fA
+fu
+ev
+fK
+fC
+fP
+ev
+fK
+fC
+fw
+ev
+ev
+fk
+ev
+bk
+ev
+eS
+ev
 hm
 hm
 hm
@@ -21011,6 +26295,7 @@ hm
 hm
 hm
 hm
+eu
 hm
 hm
 hm
@@ -21026,51 +26311,26 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+al
+ei
+dS
+dB
+do
+cQ
+cy
+cm
+am
+cb
+bY
+al
+al
+al
+al
+al
+al
+al
+al
+al
 hm
 hm
 hm
@@ -21194,6 +26454,32 @@ hm
 hm
 hm
 hm
+ev
+ev
+gi
+ev
+ev
+ev
+gg
+ev
+ev
+ev
+eT
+eG
+eG
+eG
+eT
+eG
+eG
+eG
+eT
+eG
+eG
+eG
+eT
+eG
+eG
+eD
 hm
 hm
 hm
@@ -21266,6 +26552,7 @@ hm
 hm
 hm
 hm
+eu
 hm
 hm
 hm
@@ -21281,52 +26568,25 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+al
+al
+al
+al
+al
+al
+al
+al
+al
+aX
+bY
+aP
+bT
+bL
+bl
+bl
+bl
+bc
+aP
 hm
 hm
 hm
@@ -21451,6 +26711,32 @@ hm
 hm
 hm
 hm
+ev
+fH
+fW
+ex
+ev
+fH
+fB
+gd
+ev
+fH
+fX
+eM
+eG
+eH
+fD
+eM
+eG
+fb
+eU
+eM
+eG
+eH
+eU
+eM
+eG
+eD
 hm
 hm
 hm
@@ -21523,6 +26809,7 @@ hm
 hm
 hm
 hm
+eu
 hm
 hm
 hm
@@ -21538,52 +26825,25 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+al
+ej
+dT
+dC
+dq
+cR
+cz
+cn
+am
+cb
+bY
+aQ
+bU
+bL
+bl
+bl
+bl
+bd
+aQ
 hm
 hm
 hm
@@ -21708,6 +26968,32 @@ hm
 hm
 hm
 hm
+fs
+gb
+ev
+fQ
+fs
+fI
+ev
+fv
+fs
+fI
+eG
+eR
+eL
+fL
+eG
+fx
+eK
+fc
+eG
+eP
+eK
+eZ
+eG
+eN
+eK
+eE
 hm
 hm
 hm
@@ -21780,6 +27066,7 @@ hm
 hm
 hm
 hm
+eu
 hm
 hm
 hm
@@ -21795,52 +27082,25 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+al
+bR
+aX
+aX
+aX
+aX
+aX
+aX
+an
+cb
+bY
+aU
+bl
+bl
+bl
+bl
+bl
+bh
+aU
 hm
 hm
 hm
@@ -21965,6 +27225,32 @@ hm
 hm
 hm
 hm
+ev
+fJ
+fC
+fP
+ev
+fJ
+gh
+fP
+ev
+ga
+fY
+fR
+eG
+fd
+fE
+eO
+eG
+fd
+eV
+eO
+eG
+fa
+eV
+eO
+eG
+eD
 hm
 hm
 hm
@@ -22037,6 +27323,7 @@ hm
 hm
 hm
 hm
+eu
 hm
 hm
 hm
@@ -22052,52 +27339,25 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+al
+ek
+dD
+dD
+aX
+cS
+cA
+aJ
+aP
+aX
+bY
+al
+al
+al
+bl
+bl
+al
+al
+al
 hm
 hm
 hm
@@ -22222,6 +27482,32 @@ hm
 hm
 hm
 hm
+ev
+ev
+eA
+ev
+ev
+ev
+eA
+ev
+ev
+ev
+eT
+eG
+eG
+eG
+eT
+eG
+eG
+eG
+fl
+eG
+eG
+eG
+eT
+eG
+eG
+eD
 hm
 hm
 hm
@@ -22294,6 +27580,7 @@ hm
 hm
 hm
 hm
+eu
 hm
 hm
 hm
@@ -22309,52 +27596,25 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+al
+ek
+dE
+dE
+aX
+cT
+cB
+aJ
+aU
+cb
+bY
+aP
+bi
+bl
+bl
+bl
+bl
+bi
+aP
 hm
 hm
 hm
@@ -22479,6 +27739,32 @@ hm
 hm
 hm
 hm
+bk
+bk
+aT
+bk
+bk
+bk
+aT
+aT
+ev
+fH
+fD
+fT
+eG
+eH
+fD
+eM
+eG
+eH
+eX
+eM
+eG
+fb
+eU
+eM
+eG
+eD
 hm
 hm
 hm
@@ -22551,6 +27837,7 @@ hm
 hm
 hm
 hm
+eu
 hm
 hm
 hm
@@ -22566,52 +27853,25 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+al
+bR
+aX
+aX
+aX
+aX
+aX
+aX
+an
+cb
+bY
+aU
+bj
+bl
+bl
+bl
+bl
+bj
+aQ
 hm
 hm
 hm
@@ -22743,6 +28003,25 @@ hm
 hm
 hm
 hm
+aT
+fs
+fZ
+eG
+eQ
+eL
+fc
+eG
+eQ
+eK
+ff
+eG
+eQ
+eL
+fc
+eG
+eP
+eK
+eF
 hm
 hm
 hm
@@ -22815,6 +28094,7 @@ hm
 hm
 hm
 hm
+eu
 hm
 hm
 hm
@@ -22830,45 +28110,25 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+al
+el
+dU
+dF
+ds
+cU
+cC
+co
+am
+aX
+bZ
+an
+bl
+bl
+bH
+bD
+bl
+bl
+aQ
 hm
 hm
 hm
@@ -23000,6 +28260,25 @@ hm
 hm
 hm
 hm
+bk
+ev
+fJ
+fY
+eO
+eG
+fM
+eW
+eO
+eG
+fd
+fm
+fg
+eG
+fd
+eW
+eO
+eG
+eD
 hm
 hm
 hm
@@ -23072,6 +28351,7 @@ hm
 hm
 hm
 hm
+eu
 hm
 hm
 hm
@@ -23087,45 +28367,25 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+al
+al
+al
+al
+al
+al
+al
+al
+al
+cb
+bZ
+an
+bl
+bl
+bI
+bE
+bl
+bl
+aQ
 hm
 hm
 hm
@@ -23257,6 +28517,25 @@ hm
 hm
 hm
 hm
+bk
+ev
+ev
+eT
+eG
+eG
+eG
+eT
+eG
+eG
+eG
+fn
+eG
+eG
+eG
+eT
+eG
+eG
+eD
 hm
 hm
 hm
@@ -23329,6 +28608,7 @@ hm
 hm
 hm
 hm
+eu
 hm
 hm
 hm
@@ -23344,45 +28624,25 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+al
+em
+dV
+dG
+dt
+cD
+cD
+cj
+am
+cb
+bY
+aP
+bl
+bl
+bJ
+bF
+bl
+bm
+aQ
 hm
 hm
 hm
@@ -23514,6 +28774,25 @@ hm
 hm
 hm
 hm
+bk
+ev
+gc
+eU
+eM
+eG
+eH
+eU
+eM
+eG
+fh
+fo
+fh
+eG
+eH
+eX
+eM
+eG
+eD
 hm
 hm
 hm
@@ -23586,6 +28865,7 @@ hm
 hm
 hm
 hm
+eu
 hm
 hm
 hm
@@ -23601,45 +28881,25 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+al
+bR
+aX
+aX
+aX
+aX
+aX
+aX
+an
+cb
+bY
+aU
+bl
+bl
+bl
+bl
+bl
+bo
+aU
 hm
 hm
 hm
@@ -23771,6 +29031,25 @@ hm
 hm
 hm
 hm
+aT
+fs
+fI
+eG
+eR
+eL
+eZ
+eG
+fy
+eK
+fq
+fh
+fj
+eK
+fe
+eG
+eQ
+eL
+eF
 hm
 hm
 hm
@@ -23843,6 +29122,7 @@ hm
 hm
 hm
 hm
+eu
 hm
 hm
 hm
@@ -23858,45 +29138,25 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+al
+en
+aX
+dI
+du
+cW
+cE
+aJ
+aP
+aX
+bY
+bW
+al
+al
+al
+al
+al
+al
+al
 hm
 hm
 hm
@@ -24028,6 +29288,25 @@ hm
 hm
 hm
 hm
+bk
+ev
+ga
+fY
+eO
+eG
+fa
+eV
+eO
+eG
+fh
+fp
+fh
+eG
+fd
+eV
+eO
+eG
+eF
 hm
 hm
 hm
@@ -24100,6 +29379,7 @@ hm
 hm
 hm
 hm
+eu
 hm
 hm
 hm
@@ -24115,36 +29395,16 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+al
+eo
+aX
+dI
+du
+cX
+cF
+aJ
+aQ
+cb
 hm
 hm
 hm
@@ -24285,6 +29545,28 @@ hm
 hm
 hm
 hm
+bk
+ev
+ev
+eT
+eG
+eG
+eG
+eT
+eG
+eG
+eG
+eT
+eG
+eG
+eG
+eT
+eG
+eG
+eG
+eA
+ev
+ev
 hm
 hm
 hm
@@ -24354,6 +29636,7 @@ hm
 hm
 hm
 hm
+eu
 hm
 hm
 hm
@@ -24369,39 +29652,16 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+al
+eq
+aX
+dI
+du
+cW
+cE
+aJ
+aU
+cb
 hm
 hm
 hm
@@ -24542,6 +29802,28 @@ hm
 hm
 hm
 hm
+ev
+ev
+fH
+eU
+eM
+eG
+fN
+eU
+eM
+eG
+eH
+eU
+eM
+eG
+eH
+eY
+eM
+eG
+eH
+eB
+ex
+ev
 hm
 hm
 hm
@@ -24627,38 +29909,16 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+al
+bR
+aX
+aX
+aX
+aX
+aX
+aX
+an
+aX
 hm
 hm
 hm
@@ -24799,6 +30059,28 @@ hm
 hm
 hm
 hm
+aT
+fs
+fZ
+eG
+eQ
+eK
+ff
+eG
+eR
+eK
+eZ
+eG
+eQ
+eL
+ff
+eG
+eR
+eK
+eI
+ev
+ey
+ew
 hm
 hm
 hm
@@ -24884,38 +30166,16 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+al
+es
+dX
+dK
+dv
+cG
+cG
+co
+am
+cb
 hm
 hm
 hm
@@ -25056,6 +30316,28 @@ hm
 hm
 hm
 hm
+ge
+ev
+fJ
+eW
+eO
+eG
+fr
+fF
+eO
+eG
+fr
+eV
+eO
+eG
+fd
+eW
+eO
+eG
+eJ
+eC
+ez
+ev
 hm
 hm
 hm
@@ -25141,38 +30423,16 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+al
+al
+al
+al
+al
+al
+al
+al
+al
+cb
 hm
 hm
 hm
@@ -25313,28 +30573,28 @@ hm
 hm
 hm
 hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
-hm
+gf
+ev
+ev
+eA
+ev
+ev
+ev
+fG
+ev
+ev
+ev
+eA
+ev
+ev
+ev
+eA
+ev
+ev
+ev
+eA
+ev
+ev
 hm
 hm
 hm

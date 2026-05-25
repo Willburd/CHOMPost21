@@ -19,7 +19,7 @@
 			return
 		gen_interval++
 
-/obj/belly/proc/HandleBellyReagentEffects(var/list/touchable_atoms)
+/obj/belly/proc/HandleBellyReagentEffects(list/touchable_atoms)
 	if(LAZYLEN(contents))
 		if(show_liquids && reagent_touches && reagents.total_volume >= 5)
 			var/affecting_amt = reagents.total_volume / max(LAZYLEN(touchable_atoms), 1)
@@ -219,6 +219,16 @@
 			reagentid = REAGENT_ID_SPIDEREGG
 			reagentcolor = "#efe9e9"
 		// Outpost 21 edit end
+		// Outpost 21 edit begin - Coffee machine belly
+		if(REAGENT_COFFEE)
+			generated_reagents = list(REAGENT_ID_COFFEE = 1)
+			if(reagent_name in our_reagents)
+				reagent_name = lowertext(REAGENT_COFFEE)
+			gen_amount = 1
+			gen_cost = 10
+			reagentid = REAGENT_ID_COFFEE
+			reagentcolor = "#482000"
+		// Outpost 21 edit end
 		if(REAGENT_ETHANOL)
 			generated_reagents = list(REAGENT_ID_ETHANOL = 1)
 			if(reagent_name in our_reagents)
@@ -347,7 +357,7 @@
 			return
 		vore_fx(owner)
 
-/obj/belly/deserialize(var/list/data)
+/obj/belly/deserialize(list/data)
 	..()
 	if(!SSchemistry.chemical_reagents[reagentid])
 		to_chat(owner, span_warning("Belly reagent with ID \"[reagentid]\" not found, please reselect your liquid reagent"))

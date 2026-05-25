@@ -27,9 +27,9 @@
 	surgery_name = "Cut Face"
 	allowed_tools = list(
 	/obj/item/surgical/scalpel = 100,		\
-	/obj/item/material/knife = 95,	\
-	/obj/item/material/shard = 70, 		\
-	) // Outpost 21 edit - Buffing ghetto surgery
+	/obj/item/material/knife = 75,	\
+	/obj/item/material/shard = 50, 		\
+	)
 
 	min_duration = 50 //CHOMPedit
 	max_duration = 50 //CHOMPedit
@@ -101,8 +101,8 @@
 	surgery_name = "Fix Face"
 	allowed_tools = list(
 		/obj/item/surgical/retractor = 100, 	\
-		/obj/item/material/kitchen/utensil/fork = 95
-	) // Outpost 21 edit - Buffing ghetto surgery
+		/obj/item/material/kitchen/utensil/fork = 75
+	)
 
 	allowed_procs = list(IS_CROWBAR = 55)
 

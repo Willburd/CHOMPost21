@@ -3,7 +3,7 @@
 	desc = "Focuses confined energy beams from narrow-band to wide-band. Requires anchors on both sides for support, and must face correctly in order to function."
 
 // Only needs anchors
-/obj/structure/confinement_beam_generator/lens/process_tool_hit(var/obj/item/O, var/mob/user)
+/obj/structure/confinement_beam_generator/lens/process_tool_hit(obj/item/O, mob/user)
 	if(!(O) || !(user))
 		return FALSE
 	if(!ismob(user) || !isobj(O))
@@ -46,12 +46,10 @@
 			return FALSE
 	. = ..()
 
-/obj/structure/confinement_beam_generator/lens/inner_lens/pulse(datum/weakref/WF)
-	var/datum/confinement_pulse_data/data = WF?.resolve()
+/obj/structure/confinement_beam_generator/lens/inner_lens/pulse(datum/confinement_pulse_data/data)
 	if(!data)
 		return
-	// Prevent procspamming
-	addtimer(CALLBACK(src, PROC_REF(fire_wide_beam), loc, WF), 0, TIMER_DELETE_ME) // Only this one sends energy
+	fire_wide_beam(get_turf(src), data)
 
 /obj/structure/confinement_beam_generator/focus/update_parts_icons()
 	..() // Update self

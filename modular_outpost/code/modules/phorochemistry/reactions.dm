@@ -1,4 +1,4 @@
-/decl/chemical_reaction/distilling/sapoformator
+/datum/decl/chemical_reaction/distilling/sapoformator
 	name = "Distilling Sapoformator"
 	id = "distill_sapoformator"
 	result = REAGENT_ID_SPACOMYCAZE
@@ -7,7 +7,7 @@
 	temp_range = list(T0C + 160, T0C + 220)
 	result_amount = 2
 
-/decl/chemical_reaction/distilling/obscuritol
+/datum/decl/chemical_reaction/distilling/obscuritol
 	name = "Distilling Obscuritol"
 	id = "distill_obscuritol"
 	result = REAGENT_ID_OBSCURITOL
@@ -16,7 +16,7 @@
 	temp_range = list(T0C + 60, T0C + 320)
 	result_amount = 1
 
-/decl/chemical_reaction/distilling/obscuritol/on_reaction(datum/reagents/holder, created_volume)
+/datum/decl/chemical_reaction/distilling/obscuritol/on_reaction(datum/reagents/holder, created_volume)
 	. = ..()
 	if(holder && holder.my_atom)
 		var/turf/T = get_turf(holder.my_atom)
@@ -25,7 +25,7 @@
 			if(prob(2))
 				light.broken()
 
-/decl/chemical_reaction/distilling/oxyphoromin
+/datum/decl/chemical_reaction/distilling/oxyphoromin
 	name = "Distilling Oxyphoromin"
 	id = "distill_oxyphoromin"
 	result = REAGENT_ID_OXYPHOROMIN
@@ -34,7 +34,7 @@
 	temp_range = list(T0C + 960, T0C + 1470)
 	result_amount = 1
 
-/decl/chemical_reaction/distilling/extreme_mutagen
+/datum/decl/chemical_reaction/distilling/extreme_mutagen
 	name = "Distilling Mutagen X"
 	id = "distill_extreme_mutagen"
 	result = REAGENT_ID_MUTAGENX
@@ -43,7 +43,7 @@
 	temp_range = list(T0C + 60, T0C + 170)
 	result_amount = 0.1
 
-/decl/chemical_reaction/distilling/genedrazine
+/datum/decl/chemical_reaction/distilling/genedrazine
 	name = "Distilling Genedrazine"
 	id = "distill_genedrazine"
 	result = REAGENT_ID_GENEDRAZINE
@@ -52,7 +52,7 @@
 	temp_range = list(T0C + 90, T0C + 200)
 	result_amount = 1
 
-/decl/chemical_reaction/distilling/expulsicol
+/datum/decl/chemical_reaction/distilling/expulsicol
 	name = "Distilling Expulsicol"
 	id = "distill_expulsicol"
 	result = REAGENT_ID_EXPULSICOL
@@ -61,7 +61,7 @@
 	temp_range = list(T0C + 200, T0C + 600)
 	result_amount = 2
 
-/decl/chemical_reaction/distilling/nocturnol
+/datum/decl/chemical_reaction/distilling/nocturnol
 	name = "Distilling Nocturnol"
 	id = "distill_nocturnol"
 	result = REAGENT_ID_NOCTURNOL

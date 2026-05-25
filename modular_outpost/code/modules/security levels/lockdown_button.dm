@@ -6,6 +6,7 @@
 	layer = ABOVE_WINDOW_LAYER
 	circuit = /obj/item/circuitboard/lockdown_console
 	anchored = TRUE
+	flags = WALL_ITEM
 	idle_power_usage = 2
 	active_power_usage = 6
 	req_one_access = list( ACCESS_KEYCARD_AUTH, ACCESS_HEADS, ACCESS_HEADS_VAULT, ACCESS_BRIG)
@@ -66,7 +67,7 @@
 				C.forceMove(loc)
 			A.state = 3
 			A.update_icon()
-			M.deconstruct(src)
+			M.atom_deconstruct(src)
 			qdel(src)
 		return
 

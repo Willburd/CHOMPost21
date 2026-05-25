@@ -5,6 +5,7 @@
 	pass_flags = PASSTABLE | PASSGLASS | PASSGRILLE
 	layer = ABOVE_MOB_LAYER
 	lifespan = ANOMALY_COUNTDOWN_TIMER * 2
+	danger_mult = 1.1
 
 	/// Who are we moving towards?
 	var/datum/weakref/pursuit_target
@@ -19,8 +20,14 @@
 	. = ..()
 	pursuit_target = WEAKREF(find_nearest_target())
 
+/obj/effect/anomaly/bioscrambler/Destroy()
+	. = ..()
+	pursuit_target = null
+
 /obj/effect/anomaly/bioscrambler/anomalyEffect(seconds_per_tick)
 	. = ..()
+	if(stats)
+		return
 	if(!COOLDOWN_FINISHED(src, pulse_cooldown))
 		return
 
@@ -32,6 +39,7 @@
 		if(prob(susceptibility * 100))
 			randmutb(nearby)
 			domutcheck(nearby, null)
+			nearby.check_mutation_cascade_gib() // Outpost 21 edit - mutation cascade trait
 			nearby.balloon_alert(nearby, "something has changed about you")
 
 /obj/effect/anomaly/bioscrambler/move_anomaly()
@@ -87,3 +95,15 @@
 /obj/effect/anomaly/bioscrambler/detonate()
 	COOLDOWN_RESET(src, pulse_cooldown)
 	anomalyEffect()
+
+/obj/effect/anomaly/bioscrambler/anomalyPulse()
+	if(!..())
+		return
+
+	switch(stats.severity)
+		if(0 to 15)
+			var/datum/effect/effect/system/spark_spread/sparks = new /datum/effect/effect/system/spark_spread
+			sparks.set_up(3, 1, src)
+			sparks.start()
+		else
+			anomalyEffect()

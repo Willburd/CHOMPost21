@@ -82,6 +82,7 @@
 			add_cartridge(new type(src))
 		panel_open = FALSE
 
+	/* Outpost 12 edit - No NT tutorial please
 	var/obj/item/paper/P = new /obj/item/paper(get_turf(src))
 	P.name = "Synthesizer Instructions"
 	P.desc = "A photocopy of a handwritten note."
@@ -113,6 +114,7 @@
 	<BR><BR> Name: Dylovene (60u) \
 	<BR> Number of steps: 3 \
 	<BR> Recipe string: Silicon,20,Nitrogen,20,Potassium,20"}
+	*/
 
 /obj/machinery/chemical_synthesizer/examine(mob/user)
 	. = ..()
@@ -590,7 +592,7 @@
 
 
 // This proc controls the timing for each step in a reaction. Step is the index for the current chem of our recipe, step + 1 is the volume of said chem.
-/obj/machinery/chemical_synthesizer/proc/follow_recipe(var/r_id, var/step as num)
+/obj/machinery/chemical_synthesizer/proc/follow_recipe(r_id, step as num)
 	if(stalled) // Emergency stop if() check.
 		stalled = FALSE
 		stall()
@@ -607,7 +609,7 @@
 	addtimer(CALLBACK(src, PROC_REF(perform_reaction), r_id, step), recipes[r_id][step + 1] * delay_modifier)
 
 // This proc carries out the actual steps in each reaction.
-/obj/machinery/chemical_synthesizer/proc/perform_reaction(var/r_id, var/step as num)
+/obj/machinery/chemical_synthesizer/proc/perform_reaction(r_id, step as num)
 	if(stalled) // Emergency stop if() check.
 		stalled = FALSE
 		stall()
@@ -668,7 +670,7 @@
 		follow_recipe(r_id, step)
 
 // Now that we're done, bottle up the product.
-/obj/machinery/chemical_synthesizer/proc/bottle_product(var/r_id)
+/obj/machinery/chemical_synthesizer/proc/bottle_product(r_id)
 	if(stat & (BROKEN|NOPOWER))
 		stall()
 		return

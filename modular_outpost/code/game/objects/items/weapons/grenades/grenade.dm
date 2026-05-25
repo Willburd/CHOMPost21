@@ -46,3 +46,10 @@
 	det_time = 5 SECONDS
 	if(!mapload)
 		activate(null)
+
+// Enable these in launcher
+/obj/item/grenade/explosive/frag
+	loadable = TRUE
+
+/obj/item/grenade/explosive
+	loadable = TRUE

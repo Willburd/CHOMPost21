@@ -4,17 +4,8 @@
 	icon = 'modular_outpost/icons/obj/toy.dmi'
 	icon_state = "plushie_jil"
 	var/cooldown = 0
-
-/obj/item/toy/plushie/jil/attack_self(mob/user as mob)
-	if(!cooldown)
-		playsound(user, 'sound/voice/merp.ogg', 10, 0)
-		src.visible_message(span_danger("Merp!"))
-		cooldown = 1
-		addtimer(CALLBACK(src, .proc/cooldownreset), 50)
-	return ..()
-
-/obj/item/toy/plushie/jil/proc/cooldownreset()
-	cooldown = 0
+	pokephrase = "merp!"
+	squeeze_sound = 'sound/voice/merp.ogg'
 
 /obj/item/toy/plushie/chu
 	name = "Chu plushie"
@@ -22,24 +13,15 @@
 	icon = 'modular_outpost/icons/obj/toy.dmi'
 	icon_state = "plushie_chu"
 	var/cooldown = 0
-
-/obj/item/toy/plushie/chu/attack_self(mob/user as mob)
-	if(!cooldown)
-		playsound(user, pick('sound/voice/hiss2.ogg','sound/voice/hiss3.ogg','sound/voice/hiss4.ogg') , 50, 0)
-		src.visible_message(span_danger("Chitter!"))
-		cooldown = 1
-		addtimer(CALLBACK(src, .proc/cooldownreset), 50)
-	return ..()
-
-/obj/item/toy/plushie/chu/proc/cooldownreset()
-	cooldown = 0
-
+	pokephrase = "chitter!"
+	squeeze_sound = 'sound/voice/hiss2.ogg'
 
 /obj/item/toy/plushie/pillow
 	name = "plush pillow"
 	desc = "A fluffy soft pillow!"
 	icon = 'modular_outpost/icons/obj/toy.dmi'
 	icon_state = "plushie_pillow"
+	pokephrase = null
 
 /obj/item/toy/plushie/pillow/red
 	name = "red plush pillow"

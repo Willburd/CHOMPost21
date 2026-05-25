@@ -1,7 +1,7 @@
 /obj/effect/auto_crayon
 	name = "autografitti"
 	desc = "Automagically draws grafitti by name"
-	icon = 'icons/effects/crayondecal.dmi'
+	icon = 'modular_outpost/icons/effects/crayondecal.dmi' // Outpost 21 edit - Use our crayons
 	icon_state = "dwarf"
 	invisibility = 100
 	var/colour = null

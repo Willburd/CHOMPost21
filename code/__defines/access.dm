@@ -60,7 +60,7 @@
 #define ACCESS_MINING_OFFICE 49
 #define ACCESS_MAILSORTING 50
 
-// #define UNUSED 51
+#define ACCESS_ELECTROPHYS 51 // Outpost 21 edit - Particle physicist
 // #define UNUSED 52
 
 #define ACCESS_HEADS_VAULT 53
@@ -110,5 +110,11 @@
 
 #define ACCESS_ALIEN 300 // For things like crashed ships.
 #define ACCESS_TALON 301
+#define ACCESS_TALON_BRIDGE 302
+#define ACCESS_TALON_MEDICAL 303
+#define ACCESS_TALON_ENGINEER 304
+#define ACCESS_TALON_CARGO 305
+#define ACCESS_TALON_SECURITY 306
+#define ACCESS_TALON_PILOT 307
 
 #define ACCESS_LOST 511 // For outsider borgs

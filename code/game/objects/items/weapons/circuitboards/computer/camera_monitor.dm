@@ -17,6 +17,7 @@
 /obj/item/circuitboard/security/tv
 	name = T_BOARD("security camera monitor - television")
 	build_path = /obj/machinery/computer/security/wooden_tv
+	hidden = TRUE
 
 /obj/item/circuitboard/security/engineering
 	name = T_BOARD("engineering camera monitor")
@@ -55,15 +56,15 @@
 	network = NETWORK_BODYCAM
 // CHOMPEdit End
 
-/obj/item/circuitboard/security/construct(var/obj/machinery/computer/security/C)
+/obj/item/circuitboard/security/construct(obj/machinery/computer/security/C)
 	if (..(C))
 		C.set_network(network.Copy())
 
-/obj/item/circuitboard/security/deconstruct(var/obj/machinery/computer/security/C)
+/obj/item/circuitboard/security/atom_deconstruct(disassembled = TRUE, obj/machinery/computer/security/C)
 	if (..(C))
 		network = C.network.Copy()
 
-/obj/item/circuitboard/security/emag_act(var/remaining_charges, var/mob/user)
+/obj/item/circuitboard/security/emag_act(remaining_charges, mob/user)
 	if(emagged)
 		to_chat(user, "Circuit lock is already removed.")
 		return
@@ -92,7 +93,7 @@
 			to_chat(user, "No input found please hang up and try your call again.")
 			return
 		var/list/tempnetwork = splittext(input, ",")
-		tempnetwork = difflist(tempnetwork,restricted_camera_networks,1)
+		tempnetwork = difflist(tempnetwork, GLOB.restricted_camera_networks, 1)
 		if(tempnetwork.len < 1)
 			to_chat(user, "No network found please hang up and try your call again.")
 			return

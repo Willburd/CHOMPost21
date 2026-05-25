@@ -201,7 +201,7 @@
 	icon_state = "red2"
 	sound_env = SOUND_ENVIRONMENT_MOUNTAINS
 	music = 'sound/ambience/ambiatm1.ogg'
-	ambience = AMBIENCE_FOREBODING
+	ambience = AMBIENCE_MURIKIOUTSIDE
 	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki
 
 /area/submap/outpost21/yard_sinkhole
@@ -209,7 +209,7 @@
 	icon_state = "red2"
 	sound_env = SOUND_ENVIRONMENT_MOUNTAINS
 	music = 'sound/ambience/ambiatm1.ogg'
-	ambience = AMBIENCE_FOREBODING
+	ambience = AMBIENCE_MURIKIOUTSIDE
 	base_turf = /turf/simulated/open/muriki
 
 /area/submap/outpost21/yard_cargocontainer
@@ -217,6 +217,6 @@
 	icon_state = "red"
 	sound_env = SOUND_ENVIRONMENT_BATHROOM
 	music = 'sound/ambience/ambiatm1.ogg'
-	ambience = AMBIENCE_FOREBODING
+	ambience = AMBIENCE_MURIKIOUTSIDE
 	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki
 	color_grading = COLORTINT_DARK

@@ -18,7 +18,7 @@
 /obj/structure/disposaloutlet/Initialize(mapload)
 	. = ..()
 
-	target = get_ranged_target_turf(src, dir, 10)
+	update_target()
 
 	var/obj/structure/disposalpipe/trunk/trunk = locate() in get_turf(src)
 	AddComponent(/datum/component/disposal_system_connection)
@@ -27,6 +27,7 @@
 		SEND_SIGNAL(src, COMSIG_DISPOSAL_LINK, trunk)
 
 /obj/structure/disposaloutlet/Destroy()
+	SEND_SIGNAL(src, COMSIG_DISPOSAL_UNLINK) //Just to be safe.
 	target = null
 	. = ..()
 
@@ -106,6 +107,13 @@
 		// Outpost 21 edit end
 
 	T.assume_air(gas)
+
+/obj/structure/disposaloutlet/set_dir(newdir)
+	. = ..()
+	update_target()
+
+/obj/structure/disposaloutlet/proc/update_target()
+	target = get_ranged_target_turf(src, dir, 10)
 
 #undef OUTLET_SCREWED
 #undef OUTLET_UNSCREWED

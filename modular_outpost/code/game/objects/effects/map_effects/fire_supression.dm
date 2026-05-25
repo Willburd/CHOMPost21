@@ -12,7 +12,7 @@
 	var/list/mist_list = list()
 	var/datum/looping_sound/weather/rain/soundloop
 
-/obj/effect/map_effect/interval/fire_supression/Initialize(mapload,var/area/our_area)
+/obj/effect/map_effect/interval/fire_supression/Initialize(mapload,area/our_area)
 	soundloop = new(list(src), FALSE)
 	soundloop.start()
 	for(var/turf/T in our_area)
@@ -35,7 +35,7 @@
 		if(T && istype(T,/turf/simulated/floor))
 			spawn_mist(T)
 
-/obj/effect/map_effect/interval/fire_supression/proc/spawn_mist(var/turf/T)
+/obj/effect/map_effect/interval/fire_supression/proc/spawn_mist(turf/T)
 	PRIVATE_PROC(TRUE)
 	SHOULD_NOT_OVERRIDE(TRUE)
 	if(locate(/obj/effect/mist/fire_suppression) in T)
@@ -44,7 +44,7 @@
 	mist_list.Add(S)
 	addtimer(CALLBACK(src, PROC_REF(remove_mist), S), rand(15,22) SECONDS, TIMER_DELETE_ME)
 
-/obj/effect/map_effect/interval/fire_supression/proc/remove_mist(var/obj/effect/mist/fire_suppression/mist = null)
+/obj/effect/map_effect/interval/fire_supression/proc/remove_mist(obj/effect/mist/fire_suppression/mist = null)
 	PRIVATE_PROC(TRUE)
 	SHOULD_NOT_OVERRIDE(TRUE)
 	if(mist)

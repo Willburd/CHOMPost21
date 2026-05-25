@@ -12,13 +12,11 @@
 	filtered_organs = list(O_LIVER, O_KIDNEYS)
 	scannable = SCANNABLE_DIFFICULT
 	var/strength = 4 // How much damage it deals per unit
-	var/skin_danger = 0.2 // The multiplier for how effective the toxin is when making skin contact.
+	dermal_absorption = 0
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_PRECURSOR
 
-	ppe_flags = REAGENT_PPE_GAS|REAGENT_PPE_SQUIRTS|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
-
-/datum/reagent/toxin/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/toxin/affect_blood(mob/living/carbon/M, alien, removed)
 	var/poison_strength = strength * M.species.chem_strength_tox
 	if(strength && alien != IS_DIONA)
 		if(issmall(M)) removed *= 2 // Small bodymass, more effect from lower volume.
@@ -30,13 +28,11 @@
 				M.heal_organ_damage((10/poison_strength) * removed, (10/poison_strength) * removed) //Doses of toxins below 10 units, and 10 strength, are capable of providing useful compounds for repair.
 		M.adjustToxLoss(poison_strength * removed)
 
-/datum/reagent/toxin/affect_touch(var/mob/living/carbon/M, var/alien, var/removed)
-	affect_blood(M, alien, removed * 0.2)
-
 /datum/reagent/toxin/plasticide
 	name = REAGENT_PLASTICIDE
 	id = REAGENT_ID_PLASTICIDE
 	description = "Liquid plastic, do not eat."
+	dermal_absorption = 0
 	taste_description = "plastic"
 	reagent_state = LIQUID
 	color = "#CF3600"
@@ -55,9 +51,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_PRECURSOR
 
-	ppe_flags = REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
-
-/datum/reagent/toxin/amatoxin/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/toxin/amatoxin/affect_blood(mob/living/carbon/M, alien, removed)
 	// Trojan horse. Waits until most of the toxin has gone through the body before dealing the bulk of it in one big strike.
 	if(volume < max_dose * 0.1)
 		M.adjustToxLoss(max_dose * strength) //Get hit all at once.
@@ -69,14 +63,13 @@
 	description = "A deadly neurotoxin produced by the dreaded space carp."
 	taste_description = "fish"
 	reagent_state = LIQUID
+	dermal_absorption = 0.4
 	color = "#003333"
 	strength = 10
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_PRECURSOR
 
-	ppe_flags = REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
-
-/datum/reagent/toxin/carpotoxin/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/toxin/carpotoxin/affect_blood(mob/living/carbon/M, alien, removed)
 	..()
 	M.adjustBrainLoss(strength / 4 * removed)
 
@@ -88,12 +81,12 @@
 	reagent_state = LIQUID
 	color = "#005555"
 	strength = 8
-	skin_danger = 0.4
+	dermal_absorption = 0.4
 	wiki_flag = WIKI_SPOILER
 	supply_conversion_value = REFINERYEXPORT_VALUE_NO
 	industrial_use = REFINERYEXPORT_REASON_BIOHAZARD
 
-/datum/reagent/toxin/neurotoxic_protein/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/toxin/neurotoxic_protein/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien == IS_CHIMERA)
 		return
 	..()
@@ -111,24 +104,24 @@
 	name = REAGENT_HYDROPHORON
 	id = REAGENT_ID_HYDROPHORON
 	description = "An exceptionally flammable molecule formed from deuterium synthesis."
+	dermal_absorption = 1 //same as phoron
 	strength = 80
 	var/fire_mult = 30
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_PRECURSOR
 
-	ppe_flags = REAGENT_PPE_PHORONGAS|REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
-
-/datum/reagent/toxin/hydrophoron/touch_mob(var/mob/living/L, var/amount)
+/datum/reagent/toxin/hydrophoron/touch_mob(mob/living/L, amount)
 	..()
 	if(istype(L))
 		L.adjust_fire_stacks(amount / fire_mult)
 
-/datum/reagent/toxin/hydrophoron/affect_touch(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/toxin/hydrophoron/affect_touch(mob/living/carbon/M, alien, removed)
 	M.take_organ_damage(0, removed * 0.1) //being splashed directly with hydrophoron causes minor chemical burns
 	if(prob(10 * fire_mult))
 		M.pl_effects()
+	..()
 
-/datum/reagent/toxin/hydrophoron/touch_turf(var/turf/simulated/T)
+/datum/reagent/toxin/hydrophoron/touch_turf(turf/simulated/T)
 	if(!istype(T))
 		return
 	..()
@@ -138,7 +131,7 @@
 		spawn (0) target_tile.hotspot_expose(700, 400)
 	remove_self(volume)
 
-/datum/reagent/toxin/hydrophoron/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/toxin/hydrophoron/affect_blood(mob/living/carbon/M, alien, removed)
 	..()
 	if(alien == IS_SLIME)
 		M.adjust_fire_stacks(removed * 10)
@@ -152,6 +145,7 @@
 	id = REAGENT_ID_LEAD
 	description = "Elemental Lead."
 	color = "#273956"
+	dermal_absorption = 0 //It's lead.
 	strength = 4
 	supply_conversion_value = 0.5 SHEET_TO_REAGENT_EQUIVILENT // has sheet value
 	industrial_use = REFINERYEXPORT_REASON_PRECURSOR
@@ -163,7 +157,6 @@
 	color = "#2CE893"
 	strength = 5
 
-	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_MEDSCI
 
@@ -173,9 +166,8 @@
 	description = "A weaker toxin produced by giant spiders applied only in warning bites, known to slow a people down a lot."
 	color = "#2CE893"
 	strength = 1
-	ppe_flags = REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
 
-/datum/reagent/toxin/warningtoxin/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/toxin/warningtoxin/affect_blood(mob/living/carbon/M, alien, removed)
 	var/poison_strength = strength * M.species.chem_strength_tox
 	if(strength && alien != IS_DIONA)
 		M.adjustToxLoss(poison_strength * removed)
@@ -192,19 +184,17 @@
 	color = "#9D14DB"
 	strength = 30
 	touch_met = 5
-	skin_danger = 1
+	dermal_absorption = 1
 	supply_conversion_value = 5 SHEET_TO_REAGENT_EQUIVILENT // has sheet value
 	industrial_use = REFINERYEXPORT_REASON_PHORON
 	coolant_modifier = 0.85
 
-	ppe_flags = REAGENT_PPE_PHORONGAS|REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
-
-/datum/reagent/toxin/phoron/touch_mob(var/mob/living/L, var/amount)
+/datum/reagent/toxin/phoron/touch_mob(mob/living/L, amount)
 	..()
 	if(istype(L))
 		L.adjust_fire_stacks(amount / 5)
 
-/datum/reagent/toxin/phoron/affect_touch(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/toxin/phoron/affect_touch(mob/living/carbon/M, alien, removed)
 	..()
 	M.adjust_fire_stacks(removed / 5)
 	if(alien == IS_VOX || M.species.phoron_contact_mod == 0)
@@ -213,7 +203,7 @@
 	if(prob(50))
 		M.pl_effects()
 
-/datum/reagent/toxin/phoron/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/toxin/phoron/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien == IS_VOX)
 		M.adjustOxyLoss(-100 * removed) //5 oxyloss healed per tick.
 		return //You're wasting plasma (a semi-limited chemical) to save someone, so it might as well be somewhat strong.
@@ -221,18 +211,19 @@
 		M.adjust_fire_stacks(removed * 3) //Not quite 'converting' it. It's like mixing fuel into a jelly. You get explosive, or at least combustible, jelly.
 	..()
 
-/datum/reagent/toxin/phoron/touch_turf(var/turf/simulated/T, var/amount)
+/datum/reagent/toxin/phoron/touch_turf(turf/simulated/T, amount)
 	..()
 	if(!istype(T))
 		return
 	T.assume_gas(GAS_VOLATILE_FUEL, amount, T20C)
 	remove_self(amount)
 
-/datum/reagent/toxin/cyanide //Fast and Lethal
+/datum/reagent/toxin/cyanide //Fast and Lethal //Fast and lethal my ASS. This shit takes 20 seconds to deal 15 toxins. Eating crayons kills you faster.
 	name = REAGENT_CYANIDE
 	id = REAGENT_ID_CYANIDE
-	description = "A highly toxic chemical."
+	description = "A highly toxic chemical. Prevents cellular respiration, causing moderate amounts of toxins from cell death, the inability to breathe, and eventual loss of consciousness."
 	taste_description = "almond"
+	dermal_absorption = 0 //Splash someone and insta-KO them? No. Make zombie/lich powder for that.
 	taste_mult = 0.6
 	reagent_state = LIQUID
 	color = "#CF3600"
@@ -241,25 +232,26 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_PRECURSOR
 
-	ppe_flags = REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
-
-/datum/reagent/toxin/cyanide/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/toxin/cyanide/affect_blood(mob/living/carbon/M, alien, removed)
 	..()
 	M.adjustOxyLoss(10 * removed)
-	M.Sleeping(1)
+	M.AdjustLosebreath(5) //Adjusting oxyloss with no losebreath adjustment is useless.
+	if(dose > 5) //Puts you to sleep if its in your system for too long. This is equivalent to 100 seconds (50 ticks). By this point, you have 75 toxins, ~100 oxyloss, and are good as dead w/o treatment.
+		M.Sleeping(1)
 
 /datum/reagent/toxin/mold
 	name = REAGENT_MOLD
 	id = REAGENT_ID_MOLD
 	description = "A mold is a fungus that causes biodegradation of natural materials. This variant contains mycotoxins, and is dangerous to humans."
 	taste_description = "mold"
+	dermal_absorption = 0
 	reagent_state = SOLID
 	strength = 5
 	wiki_flag = WIKI_SPOILER
 	supply_conversion_value = REFINERYEXPORT_VALUE_NO
 	industrial_use = REFINERYEXPORT_REASON_BIOHAZARD
 
-/datum/reagent/toxin/mold/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/toxin/mold/affect_ingest(mob/living/carbon/M, alien, removed)
 	..()
 	if(prob(5))
 		M.vomit()
@@ -269,6 +261,7 @@
 	id = REAGENT_ID_EXPIREDMEDICINE
 	description = "Some form of liquid medicine that is well beyond its shelf date. Administering it now would cause illness."
 	taste_description = "bitterness"
+	dermal_absorption = 0
 	reagent_state = LIQUID
 	strength = 5
 	filtered_organs = list(O_SPLEEN)
@@ -276,12 +269,12 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_NO
 	industrial_use = REFINERYEXPORT_REASON_BIOHAZARD
 
-/datum/reagent/toxin/expired_medicine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/toxin/expired_medicine/affect_blood(mob/living/carbon/M, alien, removed)
 	..()
 	if(prob(5))
 		M.vomit()
 
-/datum/reagent/toxin/expired_medicine/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/toxin/expired_medicine/affect_ingest(mob/living/carbon/M, alien, removed)
 	affect_blood(M, alien, removed * 0.66)
 
 
@@ -291,6 +284,7 @@
 	description = "A homemade stimulant with some serious side-effects."
 	taste_description = "sweetness"
 	taste_mult = 1.8
+	dermal_absorption = 0.2 //Made with fertilizer, so some penetration ala organophosphate.
 	color = "#d0583a"
 	metabolism = REM * 3
 	overdose = 10
@@ -299,7 +293,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_BIOHAZARD
 
-/datum/reagent/toxin/stimm/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/toxin/stimm/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien == IS_TAJARA)
 		removed *= 1.25
 	..()
@@ -310,7 +304,7 @@
 		M.take_organ_damage(6 * removed, 0)
 	M.add_chemical_effect(CE_SPEEDBOOST, 1)
 
-/datum/reagent/toxin/stimm/overdose(var/mob/living/carbon/M, var/alient, var/removed)
+/datum/reagent/toxin/stimm/overdose(mob/living/carbon/M, alient, removed)
 	..()
 	if(prob(10)) // 1 in 10. This thing's made with welder fuel and fertilizer, what do you expect?
 		var/obj/item/organ/internal/heart/ht = M.internal_organs_by_name[O_HEART]
@@ -323,6 +317,7 @@
 	id = REAGENT_ID_POTASSIUMCHLORIDE
 	description = "A delicious salt that stops the heart when injected into cardiac muscle."
 	taste_description = "salt"
+	dermal_absorption = 0 //it's salt.
 	reagent_state = SOLID
 	color = "#FFFFFF"
 	strength = 0
@@ -331,12 +326,12 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_MEDSCI
 
-/datum/reagent/toxin/potassium_chloride/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/toxin/potassium_chloride/affect_blood(mob/living/carbon/M, alien, removed)
 	..()
 	if(alien == IS_SLIME)
 		M.adjustFireLoss(removed * 2)
 
-/datum/reagent/toxin/potassium_chloride/overdose(var/mob/living/carbon/M, var/alien)
+/datum/reagent/toxin/potassium_chloride/overdose(mob/living/carbon/M, alien)
 	..()
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
@@ -351,6 +346,7 @@
 	id = REAGENT_ID_POTASSIUMCHLOROPHORIDE
 	description = "A specific chemical based on Potassium Chloride to stop the heart for surgery. Not safe to eat!"
 	taste_description = "salt"
+	dermal_absorption = 0 //again, it's salt.
 	reagent_state = SOLID
 	color = "#FFFFFF"
 	strength = 10
@@ -359,7 +355,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_MEDSCI
 
-/datum/reagent/toxin/potassium_chlorophoride/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/toxin/potassium_chlorophoride/affect_blood(mob/living/carbon/M, alien, removed)
 	..()
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
@@ -377,6 +373,7 @@
 	description = "A strong neurotoxin that puts the subject into a death-like state."
 	taste_description = "numbness"
 	reagent_state = SOLID
+	dermal_absorption = 0 //No splashing someone to isnta KO them.
 	color = "#669900"
 	metabolism = REM
 	strength = 3
@@ -385,9 +382,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_MEDSCI
 
-	ppe_flags = REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
-
-/datum/reagent/toxin/zombiepowder/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/toxin/zombiepowder/affect_blood(mob/living/carbon/M, alien, removed)
 	..()
 	if(alien == IS_DIONA)
 		return
@@ -412,15 +407,14 @@
 	description = "A stablized nerve agent that puts the subject into a strange state of un-death."
 	reagent_state = SOLID
 	color = "#666666"
+	dermal_absorption = 0 //Has its own custom affect_touch effect. The parent has this set to 0, but this is just here for the comment.
 	metabolism = REM * 0.75
 	mrate_static = TRUE
 	scannable = SCANNABLE_SECRETIVE
 	supply_conversion_value = REFINERYEXPORT_VALUE_MASSINDUSTRY
 	industrial_use = REFINERYEXPORT_REASON_MEDSCI
 
-	ppe_flags = REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
-
-/datum/reagent/lichpowder/affect_touch(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/lichpowder/affect_touch(mob/living/carbon/M, alien, removed)
 	if(alien == IS_DIONA)
 		return
 	if(!(M.status_flags & FAKEDEATH))
@@ -447,6 +441,7 @@
 	description = "A chemical mix good for growing plants with."
 	taste_description = "plant food"
 	taste_mult = 0.5
+	dermal_absorption = 0.4 //Organo-phosphate poison... Give them a unique effect someday?
 	reagent_state = LIQUID
 	strength = 0.5 // It's not THAT poisonous.
 	color = "#664330"
@@ -475,7 +470,7 @@
 	strength = 1.5
 	color = "#e67819"
 
-/datum/reagent/toxin/fertilizer/tannin/touch_obj(var/obj/O, var/volume)
+/datum/reagent/toxin/fertilizer/tannin/touch_obj(obj/O, volume)
 	..()
 	if(istype(O, /obj/item/stack/hairlesshide))
 		var/obj/item/stack/hairlesshide/HH = O
@@ -486,6 +481,7 @@
 	name = REAGENT_PLANTBGONE
 	id = REAGENT_ID_PLANTBGONE
 	description = "A harmful toxic mixture to kill plantlife. Do not ingest!"
+	dermal_absorption = 0.1 //Very weak.
 	taste_mult = 1
 	reagent_state = LIQUID
 	color = "#49002E"
@@ -493,9 +489,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_PRECURSOR
 
-	ppe_flags = REAGENT_PPE_GAS|REAGENT_PPE_SQUIRTS|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
-
-/datum/reagent/toxin/plantbgone/touch_turf(var/turf/T)
+/datum/reagent/toxin/plantbgone/touch_turf(turf/T)
 	..()
 	if(istype(T, /turf/simulated/wall))
 		var/turf/simulated/wall/W = T
@@ -504,7 +498,7 @@
 				qdel(E)
 			W.visible_message(span_notice("The fungi are completely dissolved by the solution!"))
 
-/datum/reagent/toxin/plantbgone/touch_obj(var/obj/O, var/volume)
+/datum/reagent/toxin/plantbgone/touch_obj(obj/O, volume)
 	..()
 	if(istype(O, /obj/effect/plant))
 		qdel(O)
@@ -513,11 +507,11 @@
 		alien_weeds.health -= rand(15, 35)
 		alien_weeds.healthcheck()
 
-/datum/reagent/toxin/plantbgone/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/toxin/plantbgone/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien == IS_DIONA)
 		M.adjustToxLoss(50 * removed)
 
-/datum/reagent/toxin/plantbgone/affect_touch(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/toxin/plantbgone/affect_touch(mob/living/carbon/M, alien, removed)
 	if(alien == IS_DIONA)
 		M.adjustToxLoss(50 * removed)
 
@@ -526,6 +520,7 @@
 	id = REAGENT_ID_SIFSAP
 	description = "A natural slurry comprised of fluorescent bacteria native to Sif, in the Vir system."
 	taste_description = "sour"
+	dermal_absorption = 0 //Bacteria.
 	reagent_state = LIQUID
 	color = "#C6E2FF"
 	strength = 2
@@ -533,7 +528,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_PRECURSOR
 
-/datum/reagent/toxin/sifslurry/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/toxin/sifslurry/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien == IS_DIONA) // Symbiotic bacteria.
 		M.adjust_nutrition(strength * removed)
 		return
@@ -541,7 +536,7 @@
 		M.add_modifier(/datum/modifier/slow_pulse, 30 SECONDS)
 	..()
 
-/datum/reagent/toxin/sifslurry/overdose(var/mob/living/carbon/M, var/alien, var/removed) // Overdose effect.
+/datum/reagent/toxin/sifslurry/overdose(mob/living/carbon/M, alien, removed) // Overdose effect.
 	if(alien == IS_DIONA)
 		return
 	if(ishuman(M))
@@ -550,7 +545,7 @@
 	M.apply_effect(2 * removed,IRRADIATE, 0, 0)
 	M.apply_effect(5 * removed,DROWSY, 0, 0)
 
-/datum/reagent/toxin/sifslurry/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/toxin/sifslurry/affect_ingest(mob/living/carbon/M, alien, removed)
 	affect_blood(M, alien, removed * 0.7)
 
 /datum/reagent/acid/polyacid
@@ -566,8 +561,6 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_INDUSTRY
 
-	ppe_flags = REAGENT_PPE_GAS|REAGENT_PPE_SQUIRTS|REAGENT_PPE_BUBBLES|REAGENT_PPE_BURNS|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
-
 /datum/reagent/acid/digestive
 	name = REAGENT_STOMACID
 	id = REAGENT_ID_STOMACID
@@ -582,8 +575,6 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_NO
 	industrial_use = REFINERYEXPORT_REASON_BIOHAZARD
 
-	ppe_flags = REAGENT_PPE_GAS|REAGENT_PPE_SQUIRTS|REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
-
 /datum/reagent/acid/diet_digestive
 	name = REAGENT_DIETSTOMACID
 	id = REAGENT_ID_DIETSTOMACID
@@ -597,13 +588,12 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_NO
 	industrial_use = REFINERYEXPORT_REASON_BIOHAZARD
 
-	ppe_flags = REAGENT_PPE_GAS|REAGENT_PPE_SQUIRTS|REAGENT_PPE_BUBBLES|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
-
 /datum/reagent/thermite/venom
 	name = REAGENT_THERMITEV
 	id = REAGENT_ID_THERMITEV
 	description = "A biologically produced compound capable of melting steel or other metals, similarly to thermite."
 	taste_description = "sweet chalk"
+	dermal_absorption = 0 //It's a powder/solid.
 	reagent_state = SOLID
 	color = "#673910"
 	touch_met = 50
@@ -611,7 +601,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_UNWANTED
 	industrial_use = REFINERYEXPORT_REASON_BIOHAZARD
 
-/datum/reagent/thermite/venom/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/thermite/venom/affect_blood(mob/living/carbon/M, alien, removed)
 	M.adjustFireLoss(3 * removed)
 	if(M.fire_stacks <= 1.5)
 		M.adjust_fire_stacks(0.15)
@@ -635,9 +625,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_UNWANTED
 	industrial_use = REFINERYEXPORT_REASON_BIOHAZARD
 
-	ppe_flags = REAGENT_PPE_GAS|REAGENT_PPE_SQUIRTS|REAGENT_PPE_SPLASH // Outpost 21 edit - PPE reagents
-
-/datum/reagent/condensedcapsaicin/venom/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/condensedcapsaicin/venom/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien == IS_DIONA)
 		return
 	if(prob(50))
@@ -658,12 +646,13 @@
 	description = "Lexorin temporarily stops respiration. Causes tissue damage."
 	taste_description = "acid"
 	reagent_state = LIQUID
+	dermal_absorption = 0.2 //Causes tissue damage, so can be presumed to penetrate through the skin somewhat.
 	color = "#C8A5DC"
 	overdose = REAGENTS_OVERDOSE
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_MEDSCI
 
-/datum/reagent/lexorin/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/lexorin/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien == IS_DIONA)
 		return
 	if(alien == IS_SLIME)
@@ -689,15 +678,15 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_MEDSCI
 
-/datum/reagent/mutagen/affect_touch(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/mutagen/affect_touch(mob/living/carbon/M, alien, removed)
 	if(prob(33))
 		affect_blood(M, alien, removed)
 
-/datum/reagent/mutagen/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/mutagen/affect_ingest(mob/living/carbon/M, alien, removed)
 	if(prob(67))
 		affect_blood(M, alien, removed)
 
-/datum/reagent/mutagen/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/mutagen/affect_blood(mob/living/carbon/M, alien, removed)
 
 	if(M.isSynthetic())
 		return
@@ -742,6 +731,7 @@
 			else
 				randmutg(M)
 			domutcheck(M, null)
+			M.check_mutation_cascade_gib() // Outpost 21 edit - mutation cascade trait
 			M.UpdateAppearance()
 	M.apply_effect(10 * removed, IRRADIATE, 0)
 
@@ -758,7 +748,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_MATSCI
 
-/datum/reagent/slimejelly/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/slimejelly/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien == IS_DIONA)
 		return
 	if(alien == IS_SLIME) //Partially made of the stuff. Why would it hurt them?
@@ -788,7 +778,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_MEDSCI
 
-/datum/reagent/soporific/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/soporific/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien == IS_DIONA)
 		return
 
@@ -840,7 +830,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_MEDSCI
 
-/datum/reagent/chloralhydrate/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/chloralhydrate/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien == IS_DIONA)
 		return
 
@@ -875,7 +865,7 @@
 	if(effective_dose > 1 * threshold)
 		M.adjustToxLoss(removed)
 
-/datum/reagent/chloralhydrate/overdose(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/chloralhydrate/overdose(mob/living/carbon/M, alien, removed)
 	..()
 	M.SetLosebreath(10)
 	M.adjustOxyLoss(removed * overdose_mod)
@@ -909,7 +899,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_MEDSCI
 
-/datum/reagent/serotrotium/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/serotrotium/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien == IS_DIONA)
 		return
 	if(prob(7))
@@ -925,7 +915,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_UNWANTED
 	industrial_use = REFINERYEXPORT_REASON_BIOHAZARD
 
-/datum/reagent/serotrotium/venom/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/serotrotium/venom/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien == IS_DIONA)
 		return
 	if(prob(30))
@@ -947,7 +937,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_MEDSCI
 
-/datum/reagent/cryptobiolin/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/cryptobiolin/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien == IS_DIONA)
 		return
 	var/drug_strength = 4
@@ -973,7 +963,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_WEAPONS
 
-/datum/reagent/impedrezene/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/impedrezene/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien == IS_DIONA)
 		return
 	M.make_jittery(-5)
@@ -997,7 +987,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_WEAPONS
 
-/datum/reagent/mindbreaker/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/mindbreaker/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien == IS_DIONA)
 		return
 
@@ -1026,7 +1016,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_MATSCI
 
-/datum/reagent/slimetoxin/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/slimetoxin/affect_blood(mob/living/carbon/M, alien, removed)
 	if(M.isSynthetic())
 		return
 
@@ -1041,6 +1031,7 @@
 			else
 				randmutg(M)
 			domutcheck(M, null)
+			M.check_mutation_cascade_gib() // Outpost 21 edit - mutation cascade trait
 			M.UpdateAppearance()
 	M.apply_effect(16 * removed, IRRADIATE, 0)
 
@@ -1056,7 +1047,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_MATSCI
 
-/datum/reagent/aslimetoxin/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/aslimetoxin/affect_blood(mob/living/carbon/M, alien, removed)
 	if(M.isSynthetic())
 		return
 
@@ -1071,6 +1062,7 @@
 			else
 				randmutg(M)
 			domutcheck(M, null)
+			M.check_mutation_cascade_gib() // Outpost 21 edit - mutation cascade trait
 			M.UpdateAppearance()
 	M.apply_effect(6 * removed, IRRADIATE, 0)
 
@@ -1093,7 +1085,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_NO
 	industrial_use = REFINERYEXPORT_REASON_BIOHAZARD
 
-/datum/reagent/shredding_nanites/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/shredding_nanites/affect_blood(mob/living/carbon/M, alien, removed)
 	M.adjustBruteLoss(4 * removed)
 	M.adjustOxyLoss(4 * removed)
 
@@ -1111,8 +1103,8 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_NO
 	industrial_use = REFINERYEXPORT_REASON_BIOHAZARD
 
-/datum/reagent/irradiated_nanites/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	SSradiation.radiate(get_turf(M), 20)	// Irradiate people around you.
+/datum/reagent/irradiated_nanites/affect_blood(mob/living/carbon/M, alien, removed)
+	//SSradiation.radiate(get_turf(M), 20)	// Irradiate people around you. //TODO
 	M.radiation = max(M.radiation + 5 * removed, 0)	// Irradiate you. Because it's inside you.
 
 /datum/reagent/neurophage_nanites
@@ -1130,7 +1122,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_NO
 	industrial_use = REFINERYEXPORT_REASON_BIOHAZARD
 
-/datum/reagent/neurophage_nanites/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/neurophage_nanites/affect_blood(mob/living/carbon/M, alien, removed)
 	M.adjustBrainLoss(2 * removed)	// Their job is to give you a bad time.
 	M.adjustBruteLoss(2 * removed)
 

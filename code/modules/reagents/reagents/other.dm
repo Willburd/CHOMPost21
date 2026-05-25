@@ -5,7 +5,8 @@
 	id = REAGENT_ID_CRAYONDUST
 	description = "Intensely coloured powder obtained by grinding crayons."
 	taste_description = "powdered wax"
-	reagent_state = LIQUID
+	reagent_state = SOLID
+	dermal_absorption = 0 //no
 	color = "#888888"
 	overdose = 10
 
@@ -60,6 +61,7 @@
 	description = "Intensely coloured ink used in markers."
 	taste_description = "extremely bitter"
 	reagent_state = LIQUID
+	dermal_absorption = 0 //NO
 	color = "#888888"
 	overdose = 10
 
@@ -119,6 +121,7 @@
 	description = "This paint will stick to almost any object."
 	taste_description = "chalk"
 	reagent_state = LIQUID
+	dermal_absorption = 0 //NOOOOOOOOOOO
 	color = "#808080"
 	overdose = REAGENTS_OVERDOSE * 0.5
 	color_weight = 20
@@ -126,17 +129,17 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_COSMETIC
 
-/datum/reagent/paint/touch_turf(var/turf/T)
+/datum/reagent/paint/touch_turf(turf/T)
 	..()
 	if(istype(T) && !istype(T, /turf/space))
 		T.color = color
 
-/datum/reagent/paint/touch_obj(var/obj/O)
+/datum/reagent/paint/touch_obj(obj/O)
 	..()
 	if(istype(O))
 		O.color = color
 
-/datum/reagent/paint/touch_mob(var/mob/M)
+/datum/reagent/paint/touch_mob(mob/M)
 	..()
 	if(istype(M) && !istype(M, /mob/observer)) //painting ghosts: not allowed
 		M.color = color //maybe someday change this to paint only clothes and exposed body parts for human mobs.
@@ -144,11 +147,11 @@
 /datum/reagent/paint/get_data()
 	return color
 
-/datum/reagent/paint/initialize_data(var/newdata)
+/datum/reagent/paint/initialize_data(newdata)
 	color = newdata
 	return
 
-/datum/reagent/paint/mix_data(var/newdata, var/newamount)
+/datum/reagent/paint/mix_data(newdata, newamount)
 	var/list/colors = list(0, 0, 0, 0)
 	var/tot_w = 0
 
@@ -195,10 +198,10 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = "how did you get this?"
 
-/datum/reagent/adminordrazine/affect_touch(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/adminordrazine/affect_touch(mob/living/carbon/M, alien, removed)
 	affect_blood(M, alien, removed)
 
-/datum/reagent/adminordrazine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/adminordrazine/affect_blood(mob/living/carbon/M, alien, removed)
 	M.heal_organ_damage(40,40)
 	M.adjustCloneLoss(-40)
 	M.adjustToxLoss(-40)
@@ -293,13 +296,13 @@
 	supply_conversion_value = 2 SHEET_TO_REAGENT_EQUIVILENT // has sheet value
 	industrial_use = REFINERYEXPORT_REASON_PRECURSOR
 
-/datum/reagent/uranium/affect_touch(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/uranium/affect_touch(mob/living/carbon/M, alien, removed)
 	affect_ingest(M, alien, removed)
 
-/datum/reagent/uranium/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/uranium/affect_blood(mob/living/carbon/M, alien, removed)
 	M.apply_effect(5 * removed, IRRADIATE, 0)
 
-/datum/reagent/uranium/touch_turf(var/turf/T)
+/datum/reagent/uranium/touch_turf(turf/T)
 	..()
 	if(volume >= 3)
 		if(!istype(T, /turf/space))
@@ -381,13 +384,14 @@
 	description = "Adrenaline is a hormone used as a drug to treat cardiac arrest and other cardiac dysrhythmias resulting in diminished or absent cardiac output."
 	taste_description = "bitterness"
 	reagent_state = LIQUID
+	dermal_absorption = 0.2
 	scannable = SCANNABLE_BENEFICIAL
 	color = "#C8A5DC"
 	mrate_static = TRUE
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_MEDSCI
 
-/datum/reagent/adrenaline/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/adrenaline/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien == IS_DIONA)
 		return
 	M.SetParalysis(0)
@@ -401,6 +405,7 @@
 	taste_description = "water"
 	color = "#E0E8EF"
 	mrate_static = TRUE
+	dermal_absorption = 0.5 //It's so holy it penetrates into your blood.
 	scannable = SCANNABLE_BENEFICIAL
 
 	glass_name = "holy water"
@@ -412,7 +417,7 @@
 	coolant_modifier = 1 // It's water
 	var/failed_message = FALSE
 
-/datum/reagent/water/holywater/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/water/holywater/affect_ingest(mob/living/carbon/M, alien, removed)
 	..()
 	if(ishuman(M)) // Any location
 		if(M.mind && GLOB.cult.is_antagonist(M.mind) && prob(10))
@@ -432,7 +437,7 @@
 				to_chat(M, span_notice("The power of the holy water courses through you, but seems to have failed to cure your ailments. Perhaps a larger dose is needed?"))
 				failed_message = TRUE
 
-/datum/reagent/water/holywater/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/water/holywater/affect_blood(mob/living/carbon/M, alien, removed)
 	..()
 	if(ishuman(M)) // Any location
 		if(M.mind && GLOB.cult.is_antagonist(M.mind) && prob(5))
@@ -453,7 +458,7 @@
 				failed_message = TRUE
 	return
 
-/datum/reagent/water/holywater/touch_turf(var/turf/T)
+/datum/reagent/water/holywater/touch_turf(turf/T)
 	..()
 	if(volume >= 5)
 		T.holy = 1
@@ -522,13 +527,14 @@
 	description = "Thermite produces an aluminothermic reaction known as a thermite reaction. Can be used to melt walls."
 	taste_description = "sweet tasting metal"
 	reagent_state = SOLID
+	dermal_absorption = 0
 	scannable = SCANNABLE_ADVANCED
 	color = "#673910"
 	touch_met = 50
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_PRECURSOR
 
-/datum/reagent/thermite/touch_turf(var/turf/T)
+/datum/reagent/thermite/touch_turf(turf/T)
 	..()
 	if(volume >= 5)
 		if(istype(T, /turf/simulated/wall))
@@ -538,12 +544,12 @@
 			remove_self(5)
 	return
 
-/datum/reagent/thermite/touch_mob(var/mob/living/L, var/amount)
+/datum/reagent/thermite/touch_mob(mob/living/L, amount)
 	..()
 	if(istype(L))
 		L.adjust_fire_stacks(amount / 5)
 
-/datum/reagent/thermite/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/thermite/affect_blood(mob/living/carbon/M, alien, removed)
 	M.adjustFireLoss(3 * removed)
 
 /datum/reagent/space_cleaner
@@ -552,13 +558,14 @@
 	description = "A compound used to clean things. Now with 50% more sodium hypochlorite!"
 	taste_description = "sourness"
 	reagent_state = LIQUID
+	dermal_absorption = 0
 	scannable = SCANNABLE_ADVANCED
 	color = "#A5F0EE"
 	touch_met = 50
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_CLEAN
 
-/datum/reagent/space_cleaner/touch_mob(var/mob/M)
+/datum/reagent/space_cleaner/touch_mob(mob/M)
 	..()
 	if(iscarbon(M))
 		var/mob/living/carbon/C = M
@@ -568,11 +575,11 @@
 		var/mob/living/simple_mob/macrophage = M
 		macrophage.adjustToxLoss(20)
 
-/datum/reagent/space_cleaner/touch_obj(var/obj/O)
+/datum/reagent/space_cleaner/touch_obj(obj/O)
 	..()
 	O.wash(CLEAN_SCRUB)
 
-/datum/reagent/space_cleaner/touch_turf(var/turf/T)
+/datum/reagent/space_cleaner/touch_turf(turf/T)
 	..()
 	if(volume >= 1)
 		if(istype(T, /turf/simulated))
@@ -591,7 +598,7 @@
 
 	T.apply_fire_protection() // CHOMPAdd - Apply fire protection
 
-/datum/reagent/space_cleaner/affect_touch(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/space_cleaner/affect_touch(mob/living/carbon/M, alien, removed)
 	if(M.r_hand)
 		M.r_hand.wash(CLEAN_SCRUB)
 	if(M.l_hand)
@@ -620,7 +627,7 @@
 			return
 	M.wash(CLEAN_SCRUB)
 
-/datum/reagent/space_cleaner/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/space_cleaner/affect_ingest(mob/living/carbon/M, alien, removed)
 	if(alien == IS_SLIME)
 		M.adjustToxLoss(6 * removed)
 	else
@@ -628,7 +635,7 @@
 		if(prob(5))
 			M.vomit()
 
-/datum/reagent/space_cleaner/touch_mob(var/mob/living/L, var/amount)
+/datum/reagent/space_cleaner/touch_mob(mob/living/L, amount)
 	..()
 	if(ishuman(L))
 		var/mob/living/carbon/human/H = L
@@ -650,7 +657,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_LUBE
 
-/datum/reagent/lube/touch_turf(var/turf/simulated/T)
+/datum/reagent/lube/touch_turf(turf/simulated/T)
 	..()
 	if(!istype(T))
 		return
@@ -668,7 +675,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_PRECURSOR
 
-/datum/reagent/silicate/touch_obj(var/obj/O)
+/datum/reagent/silicate/touch_obj(obj/O)
 	..()
 	if(istype(O, /obj/structure/window))
 		var/obj/structure/window/W = O
@@ -688,7 +695,7 @@
 	industrial_use = REFINERYEXPORT_REASON_PRECURSOR
 	coolant_modifier = 0.95
 
-/datum/reagent/nitroglycerin
+/datum/reagent/nitroglycerin //This immediately explode as soon as it reacts, so you can't actually obtain this.
 	name = REAGENT_NITROGLYCERIN
 	id = REAGENT_ID_NITROGLYCERIN
 	description = "Nitroglycerin is a heavy, colorless, oily, explosive liquid obtained by nitrating glycerol."
@@ -714,7 +721,7 @@
 	industrial_use = REFINERYEXPORT_REASON_INDUSTRY
 	coolant_modifier = 2 // In the name
 
-/datum/reagent/coolant/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/coolant/affect_blood(mob/living/carbon/M, alien, removed)
 	if(M.isSynthetic() && ishuman(M))
 		var/mob/living/carbon/human/H = M
 
@@ -762,11 +769,11 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_PRECURSOR
 
-/datum/reagent/luminol/touch_obj(var/obj/O)
+/datum/reagent/luminol/touch_obj(obj/O)
 	..()
 	O.reveal_blood()
 
-/datum/reagent/luminol/touch_mob(var/mob/living/L)
+/datum/reagent/luminol/touch_mob(mob/living/L)
 	..()
 	L.reveal_blood()
 
@@ -801,6 +808,7 @@
 	description = "Miniature medical robots that are malfunctioning and cause bodily harm. Fortunately, they cannot self-replicate."
 	taste_description = "metal"
 	reagent_state = SOLID
+	dermal_absorption = 0.1 //Burrow into the skin and get into your bloodstream. This means 60u splashed on someone (with no losses, given splash is lossy) will give them 6u of nanites.
 	color = "#333333"
 	metabolism = REM * 3 // Broken nanomachines go a bit slower.
 	scannable = 1
@@ -808,7 +816,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_NO
 	industrial_use = REFINERYEXPORT_REASON_BIOHAZARD
 
-/datum/reagent/defective_nanites/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/defective_nanites/affect_blood(mob/living/carbon/M, alien, removed)
 	M.take_organ_damage(2 * removed, 2 * removed)
 	M.adjustOxyLoss(4 * removed)
 	M.adjustToxLoss(2 * removed)

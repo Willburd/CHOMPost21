@@ -8,3 +8,5 @@
 	var/title_outfit = null						// The outfit used by the alt-title. If it's the same as the base job, leave this null.
 	var/list/mail_goodies = null
 	var/exclusive_mail_goodies = FALSE
+
+	var/list/additional_access = list() // Outpost 21 edit - Alt titles with unique access

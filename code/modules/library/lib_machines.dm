@@ -10,11 +10,10 @@
 
 #define INVPAGESIZE 6
 #define INVPAGESIZEPUBLIC 7
-var/global/list/all_books // moved to global list so it can be shared by public comps
 
 // Moved to a hook instead of in initilize. The whole pre-packaged book inventory is fully static and isn't meant to be changed anyway
 /hook/roundstart/proc/assemble_library_inventory()
-	global.all_books = list()
+	GLOB.all_books = list()
 	var/list/base_genre_books = list(
 		/obj/item/book/custom_library/fiction,
 		/obj/item/book/custom_library/nonfiction,
@@ -28,15 +27,15 @@ var/global/list/all_books // moved to global list so it can be shared by public 
 
 	for(var/path in subtypesof(/obj/item/book/codex/lore))
 		var/obj/item/book/C = new path(null)
-		global.all_books[C.name] = C
+		GLOB.all_books[C.name] = C
 
 	for(var/path in subtypesof(/obj/item/book/custom_library) - base_genre_books)
 		var/obj/item/book/B = new path(null)
-		global.all_books[B.title] = B
+		GLOB.all_books[B.title] = B
 
 	for(var/path in subtypesof(/obj/item/book/bundle/custom_library) - base_genre_books)
 		var/obj/item/book/M = new path(null)
-		global.all_books[M.title] = M
+		GLOB.all_books[M.title] = M
 
 	return TRUE
 
@@ -91,15 +90,15 @@ var/global/list/all_books // moved to global list so it can be shared by public 
 				if(token)
 					inv += list(tgui_add_library_token(token))
 		if("publiconline") // internal archive (hardcoded books)
-			if(inventory_page + 1 >= global.all_books.len / INVPAGESIZEPUBLIC)
+			if(inventory_page + 1 >= GLOB.all_books.len / INVPAGESIZEPUBLIC)
 				inv_right = FALSE
-			for(var/BP in global.all_books)
+			for(var/BP in GLOB.all_books)
 				entry_count++
 				if(entry_count < start_entry)
 					continue
 				if(entry_count >= start_entry + INVPAGESIZEPUBLIC)
 					break
-				var/obj/item/book/B = global.all_books[BP]
+				var/obj/item/book/B = GLOB.all_books[BP]
 				if(B)
 					inv += list(tgui_add_library_book(B))
 	data["inventory"] = inv
@@ -131,13 +130,13 @@ var/global/list/all_books // moved to global list so it can be shared by public 
 				if("publicarchive") // external archive (SSpersistance database)
 					siz = SSpersistence.all_books.len / INVPAGESIZEPUBLIC
 				if("publiconline") // internal archive (hardcoded books)
-					siz = global.all_books.len / INVPAGESIZEPUBLIC
+					siz = GLOB.all_books.len / INVPAGESIZEPUBLIC
 			if(inventory_page + 1 >= siz)
 				inventory_page-- // go back
 	if(.)
 		SStgui.update_uis(src)
 
-/obj/machinery/librarypubliccomp/attack_hand(var/mob/user as mob)
+/obj/machinery/librarypubliccomp/attack_hand(mob/user as mob)
 	usr.set_machine(src)
 	add_fingerprint(usr)
 	tgui_interact(user)
@@ -198,15 +197,15 @@ var/global/list/all_books // moved to global list so it can be shared by public 
 				if(B)
 					inv += list(tgui_add_library_book(B))
 		if("online") // internal archive (hardcoded books)
-			if(inventory_page + 1 >= global.all_books.len / INVPAGESIZE)
+			if(inventory_page + 1 >= GLOB.all_books.len / INVPAGESIZE)
 				inv_right = FALSE
-			for(var/BP in global.all_books)
+			for(var/BP in GLOB.all_books)
 				entry_count++
 				if(entry_count < start_entry)
 					continue
 				if(entry_count >= start_entry + INVPAGESIZE)
 					break
-				var/obj/item/book/B = global.all_books[BP]
+				var/obj/item/book/B = GLOB.all_books[BP]
 				if(B)
 					inv += list(tgui_add_library_book(B))
 		if("archive") // external archive (SSpersistance database)
@@ -269,7 +268,7 @@ var/global/list/all_books // moved to global list so it can be shared by public 
 	return data
 
 // shared with public pc
-/proc/tgui_add_library_book(var/obj/item/book/B)
+/proc/tgui_add_library_book(obj/item/book/B)
 	var/list/book = list()
 	book["id"] = B.type
 	book["title"] = B.name
@@ -285,7 +284,7 @@ var/global/list/all_books // moved to global list so it can be shared by public 
 	book["type"] = "[B.type]"
 	return book
 
-/proc/tgui_add_library_token(var/list/token)
+/proc/tgui_add_library_token(list/token)
 	var/list/book = list()
 	book["id"] = token["uid"]
 	book["title"] = token["title"]
@@ -391,7 +390,7 @@ var/global/list/all_books // moved to global list so it can be shared by public 
 				if("inventory") // barcode scanned books for checkout
 					siz = inventory.len / INVPAGESIZE
 				if("online") // internal archive (hardcoded books)
-					siz = global.all_books.len / INVPAGESIZE
+					siz = GLOB.all_books.len / INVPAGESIZE
 				if("archive") // external archive (SSpersistance database)
 					siz = SSpersistence.all_books.len / INVPAGESIZE
 				if("checkedout") // books checked out of the library
@@ -484,12 +483,12 @@ var/global/list/all_books // moved to global list so it can be shared by public 
 	if(.)
 		SStgui.update_uis(src)
 
-/obj/machinery/librarycomp/attack_hand(var/mob/user as mob)
+/obj/machinery/librarycomp/attack_hand(mob/user as mob)
 	usr.set_machine(src)
 	add_fingerprint(usr)
 	tgui_interact(user)
 
-/obj/machinery/librarycomp/emag_act(var/remaining_charges, var/mob/user)
+/obj/machinery/librarycomp/emag_act(remaining_charges, mob/user)
 	if (src.density && !src.emagged)
 		src.emagged = 1
 		return 1
@@ -516,7 +515,7 @@ var/global/list/all_books // moved to global list so it can be shared by public 
 	density = TRUE
 	var/obj/item/book/cache		// Last scanned book
 
-/obj/machinery/libraryscanner/attackby(var/obj/O as obj, var/mob/user as mob)
+/obj/machinery/libraryscanner/attackby(obj/O as obj, mob/user as mob)
 	if(cache) // Prevent stacking books in here, unlike the original code.
 		to_chat(user,span_warning("\The [src] already has a book inside it!"))
 		return
@@ -526,7 +525,7 @@ var/global/list/all_books // moved to global list so it can be shared by public 
 		cache = O
 		visible_message(span_notice("\The [O] was inserted into \the [src]."))
 
-/obj/machinery/libraryscanner/attack_hand(var/mob/user as mob)
+/obj/machinery/libraryscanner/attack_hand(mob/user as mob)
 	if(cache) // Prevent stacking books in here
 		cache = null
 		for(var/obj/item/book/B in contents) // The old code allowed stacking, if multiple things end up in here somehow we may as well drop them all out too.
@@ -551,7 +550,7 @@ var/global/list/all_books // moved to global list so it can be shared by public 
 	. = ..()
 	AddElement(/datum/element/climbable)
 
-/obj/machinery/bookbinder/attackby(var/obj/O as obj, var/mob/user as mob)
+/obj/machinery/bookbinder/attackby(obj/O as obj, mob/user as mob)
 	if(istype(O, /obj/item/paper) || istype(O, /obj/item/paper_bundle))
 		if(istype(O, /obj/item/paper))
 			user.drop_item()

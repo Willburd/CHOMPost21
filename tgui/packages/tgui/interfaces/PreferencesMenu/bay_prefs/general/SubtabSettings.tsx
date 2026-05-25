@@ -48,13 +48,10 @@ export const SubtabSettings = (props: {
     uplink_type,
     record_banned,
     exploitable_record,
-    pai_name,
-    pai_desc,
-    pai_role,
-    pai_comments,
     syndicate_ban,
     special_roles,
     custom_footstep,
+    ignore_shoes,
     custom_species_sound,
     custom_speech_bubble,
     persistence_settings,
@@ -138,6 +135,15 @@ export const SubtabSettings = (props: {
                       {custom_footstep}
                     </Button>
                   </LabeledList.Item>
+                  <LabeledList.Item label="Ignore Shoes">
+                    <Button
+                      onClick={() => act('toggle_ignore_shoes')}
+                      selected={ignore_shoes}
+                      tooltip="Allow footstep sounds to pass through shoes."
+                    >
+                      {ignore_shoes ? 'Yes' : 'No'}
+                    </Button>
+                  </LabeledList.Item>
                   <LabeledList.Item label="Custom Species Sounds">
                     <Button onClick={() => act('customize_species_sounds')}>
                       {custom_species_sound}
@@ -215,6 +221,7 @@ export const SubtabSettings = (props: {
                       {resleeve_lock ? 'Yes' : 'No'}
                     </Button>
                   </LabeledList.Item>
+                  {/* Outpost 21 edit - Backup implant removal
                   <LabeledList.Item label="Spawn With Backup Implant">
                     <Button
                       onClick={() => act('toggle_implant')}
@@ -224,6 +231,7 @@ export const SubtabSettings = (props: {
                       {auto_backup_implant ? 'Yes' : 'No'}
                     </Button>
                   </LabeledList.Item>
+                  */}
                   <LabeledList.Item label="Start With Body Scan">
                     <Button
                       onClick={() => act('toggle_resleeve_scan')}
@@ -257,7 +265,6 @@ export const SubtabSettings = (props: {
                   </LabeledList.Item>
                 </LabeledList>
               </Stack.Item>
-              {/* Outpost 21 edit - Disabled here, we manually select players
               <Stack.Item>
                 <Box bold>Special Roles</Box>
                 {syndicate_ban ? (
@@ -290,7 +297,6 @@ export const SubtabSettings = (props: {
                   </LabeledList>
                 )}
               </Stack.Item>
-              */}
             </Stack>
           </Stack.Item>
           <Stack.Divider />
@@ -396,31 +402,6 @@ export const SubtabSettings = (props: {
                     </Button>
                     <Button fluid onClick={() => act('reset_cold')}>
                       Reset
-                    </Button>
-                  </LabeledList.Item>
-                </LabeledList>
-              </Stack.Item>
-              <Stack.Item>
-                <Box bold>pAI Settings</Box>
-                <LabeledList>
-                  <LabeledList.Item label="Name">
-                    <Button onClick={() => act('option', { option: 'name' })}>
-                      {pai_name || 'None Set'}
-                    </Button>
-                  </LabeledList.Item>
-                  <LabeledList.Item label="Description">
-                    <Button onClick={() => act('option', { option: 'desc' })}>
-                      {pai_desc || 'None Set'}
-                    </Button>
-                  </LabeledList.Item>
-                  <LabeledList.Item label="Role">
-                    <Button onClick={() => act('option', { option: 'role' })}>
-                      {pai_role || 'None Set'}
-                    </Button>
-                  </LabeledList.Item>
-                  <LabeledList.Item label="OOC Comments">
-                    <Button onClick={() => act('option', { option: 'ooc' })}>
-                      {pai_comments || 'None Set'}
                     </Button>
                   </LabeledList.Item>
                 </LabeledList>

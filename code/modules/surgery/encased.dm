@@ -25,8 +25,8 @@
 	surgery_name = "Cut Bone"
 	allowed_tools = list(
 		/obj/item/surgical/circular_saw = 100, \
-		/obj/item/material/knife/machete/hatchet = 95
-	) // Outpost 21 edit - Buffing ghetto surgery
+		/obj/item/material/knife/machete/hatchet = 75
+	)
 
 	allowed_procs = list(IS_CROWBAR = 50)
 

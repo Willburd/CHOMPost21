@@ -9,7 +9,7 @@
 #define LIGHT_EMERGENCY_POWER_USE 0.2 //How much power emergency lights will consume per tick
 
 GLOBAL_LIST_EMPTY(light_type_cache)
-/proc/get_light_type_instance(var/light_type)
+/proc/get_light_type_instance(light_type)
 	. = GLOB.light_type_cache[light_type]
 	if(!.)
 		. = new light_type
@@ -31,7 +31,7 @@ GLOBAL_LIST_EMPTY(light_type_cache)
 
 	var/cell_connectors = TRUE
 
-/obj/machinery/light_construct/Initialize(mapload, var/newdir, var/building = 0, var/datum/frame/frame_types/frame_type, var/obj/machinery/light/fixture = null)
+/obj/machinery/light_construct/Initialize(mapload, newdir, building = 0, datum/frame/frame_types/frame_type, obj/machinery/light/fixture = null)
 	. = ..()
 	if(fixture)
 		fixture_type = fixture.type
@@ -342,21 +342,21 @@ GLOBAL_LIST_EMPTY(light_type_cache)
 		if(start_with_cell && !no_emergency)
 			cell = new/obj/item/cell/emergency_light(src)
 		var/obj/item/light/L = get_light_type_instance(light_type) //This is fine, but old code.
-		// Outpost 21 addition begin - Nightshift lights in maintenance tunnels are scary
+		// outpost 21 edit begin - Nightshift lights in maintenance tunnels are scary
 		var/area/A = get_area(src)
 		if(A && A.use_maint_night_color)
 			L.nightshift_color = LIGHT_COLOR_NIGHTSHIFT_MAINT
 		else
 			L.nightshift_color = LIGHT_COLOR_NIGHTSHIFT
-		// Outpost 21 addition end
+		// outpost 21 edit end
 		update_from_bulb(L)
-		// outpost 21 addition begin - redspace hell lights have a fixed broken chance, ignoring default breaking chance... also reduces lighting lag...
+		// outpost 21 edit begin - redspace hell lights have a fixed broken chance, ignoring default breaking chance... also reduces lighting lag...
 		if(A && A.broken_light_chance >= 0)
 			if(prob(A.broken_light_chance))
 				broken(1)
 		else if(prob(L.broken_chance))
 			broken(1)
-		// outpost 21 addition end
+		// outpost 21 edit end
 
 	on = powered()
 	update(0)
@@ -464,7 +464,7 @@ GLOBAL_LIST_EMPTY(light_type_cache)
 // CHOMPStation Edit End
 
 // update lighting
-/obj/machinery/light/proc/update(var/trigger = 1)
+/obj/machinery/light/proc/update(trigger = 1)
 	update_icon()
 	if(!on)
 		needsound = TRUE // Play sound next time we turn on
@@ -513,7 +513,7 @@ GLOBAL_LIST_EMPTY(light_type_cache)
 	update_light()
 	update_active_power_usage((light_range * light_power) * LIGHTING_POWER_FACTOR)
 
-/obj/machinery/light/proc/nightshift_mode(var/state)
+/obj/machinery/light/proc/nightshift_mode(state)
 	if(!nightshift_allowed)
 		return
 
@@ -521,7 +521,7 @@ GLOBAL_LIST_EMPTY(light_type_cache)
 		nightshift_enabled = state
 		update(FALSE)
 
-/obj/machinery/light/attack_generic(var/mob/user, var/damage)
+/obj/machinery/light/attack_generic(mob/user, damage)
 	if(!damage)
 		return
 	if(status == LIGHT_EMPTY||status == LIGHT_BROKEN)
@@ -534,7 +534,7 @@ GLOBAL_LIST_EMPTY(light_type_cache)
 	broken()
 	return 1
 
-/obj/machinery/light/take_damage(var/damage)
+/obj/machinery/light/take_damage(damage)
 	if(!damage)
 		return
 	if(status == LIGHT_EMPTY||status == LIGHT_BROKEN)
@@ -549,7 +549,7 @@ GLOBAL_LIST_EMPTY(light_type_cache)
 
 // attempt to set the light's on/off status
 // will not switch on if broken/burned/empty
-/obj/machinery/light/proc/seton(var/s)
+/obj/machinery/light/proc/seton(s)
 	on = (s && status == LIGHT_OK)
 	update()
 	// Outpost 21 edit begin - Flickering spooky lights on lightswitch
@@ -756,7 +756,7 @@ GLOBAL_LIST_EMPTY(light_type_cache)
 	set_light(brightness_range * bulb_emergency_brightness_mul, max(bulb_emergency_pow_min, bulb_emergency_pow_mul * (cell.charge / cell.maxcharge)), bulb_emergency_colour)
 	return TRUE
 
-/obj/machinery/light/proc/flicker(var/amount = rand(10, 20), var/flicker_color)
+/obj/machinery/light/proc/flicker(amount = rand(10, 20), flicker_color)
 	if(flickering) return
 	SShaunting.influence(HAUNTING_UNSETTLE) // Outpost 21 edit - IT DA SPOOKY STATION!
 	if(on && status == LIGHT_OK)
@@ -816,7 +816,7 @@ GLOBAL_LIST_EMPTY(light_type_cache)
 
 	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
-		if(H.species.can_shred(H))
+		if(H.species.can_shred(H, FALSE, 10))
 			user.setClickCooldown(user.get_attack_speed())
 			for(var/mob/M in viewers(src))
 				M.show_message(span_red("[user.name] smashed the light!"), 3, "You hear a tinkle of breaking glass", 2)
@@ -844,7 +844,7 @@ GLOBAL_LIST_EMPTY(light_type_cache)
 		else if(TK in user.mutations)
 			to_chat(user, "You telekinetically remove the light [get_fitting_name()].")
 		else
-			to_chat(user, "You try to remove the light [get_fitting_name()], but it's too hot and you don't want to burn your hand.")
+			to_chat(user, "You try to remove the [get_fitting_name()], but it's too hot and you don't want to burn your hand.")
 			return				// if burned, don't remove the light
 	else
 		to_chat(user, "You remove the light [get_fitting_name()].")
@@ -888,7 +888,7 @@ GLOBAL_LIST_EMPTY(light_type_cache)
 
 // break the light and make sparks if was on
 
-/obj/machinery/light/proc/broken(var/skip_sound_and_sparks = FALSE)
+/obj/machinery/light/proc/broken(skip_sound_and_sparks = FALSE)
 	if(status == LIGHT_EMPTY)
 		return
 
@@ -1139,12 +1139,12 @@ GLOBAL_LIST_EMPTY(light_type_cache)
 
 // attack bulb/tube with object
 // if a syringe, can inject phoron to make it explode
-/obj/item/light/attackby(var/obj/item/I, var/mob/user)
+/obj/item/light/attackby(obj/item/I, mob/user)
 	..()
 	if(isrobot(user))
 		I = user.get_active_hand()
 
-	if(istype(I,/obj/item/multitool))
+	if(I?.has_tool_quality(TOOL_MULTITOOL))
 		var/list/menu_list = list(
 		"Normal Range",
 		"Normal Brightness",

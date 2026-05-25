@@ -1,4 +1,4 @@
-var/list/floor_light_cache = list()
+GLOBAL_LIST_EMPTY(floor_light_cache)
 
 /obj/item/floor_light
 	name = "floor light kit"
@@ -39,7 +39,7 @@ var/list/floor_light_cache = list()
 /obj/machinery/floor_light/prebuilt
 	anchored = TRUE
 
-/obj/machinery/floor_light/attackby(var/obj/item/W, var/mob/user)
+/obj/machinery/floor_light/attackby(obj/item/W, mob/user)
 	if(W.has_tool_quality(TOOL_SCREWDRIVER))
 		anchored = !anchored
 		visible_message(span_notice("\The [user] has [anchored ? "attached" : "detached"] \the [src]."))
@@ -61,7 +61,7 @@ var/list/floor_light_cache = list()
 		attack_hand(user)
 	return
 
-/obj/machinery/floor_light/attack_hand(var/mob/user)
+/obj/machinery/floor_light/attack_hand(mob/user)
 
 	if(user.a_intent == I_HURT && !issmall(user))
 		if(!isnull(damaged) && !(stat & BROKEN))
@@ -124,22 +124,22 @@ var/list/floor_light_cache = list()
 	if(use_power && !broken())
 		if(isnull(damaged))
 			var/cache_key = "floorlight-[default_light_colour]"
-			if(!floor_light_cache[cache_key])
+			if(!GLOB.floor_light_cache[cache_key])
 				var/image/I = image("on")
 				I.color = default_light_colour
 				I.layer = layer+0.001
-				floor_light_cache[cache_key] = I
-			add_overlay(floor_light_cache[cache_key])
+				GLOB.floor_light_cache[cache_key] = I
+			add_overlay(GLOB.floor_light_cache[cache_key])
 		else
 			if(damaged == 0) //Needs init.
 				damaged = rand(1,4)
 			var/cache_key = "floorlight-broken[damaged]-[default_light_colour]"
-			if(!floor_light_cache[cache_key])
+			if(!GLOB.floor_light_cache[cache_key])
 				var/image/I = image("flicker[damaged]")
 				I.color = default_light_colour
 				I.layer = layer+0.001
-				floor_light_cache[cache_key] = I
-			add_overlay(floor_light_cache[cache_key])
+				GLOB.floor_light_cache[cache_key] = I
+			add_overlay(GLOB.floor_light_cache[cache_key])
 
 /obj/machinery/floor_light/proc/broken()
 	return (stat & (BROKEN|NOPOWER))

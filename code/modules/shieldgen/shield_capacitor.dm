@@ -31,12 +31,11 @@
 	max_charge = 12e6
 	max_charge_rate = 600000
 
-/obj/machinery/shield_capacitor/emag_act(var/remaining_charges, var/mob/user)
+/obj/machinery/shield_capacitor/emag_act(remaining_charges, mob/user)
 	if(prob(75))
 		src.locked = !src.locked
 		to_chat(user, "Controls are now [src.locked ? "locked." : "unlocked."]")
 		. = 1
-		updateDialog()
 	var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread
 	s.set_up(5, 1, src)
 	s.start()
@@ -48,7 +47,6 @@
 		if((ACCESS_CAPTAIN in C.GetAccess()) || (ACCESS_SECURITY in C.GetAccess()) || (ACCESS_ENGINE in C.GetAccess()))
 			src.locked = !src.locked
 			to_chat(user, "Controls are now [src.locked ? "locked." : "unlocked."]")
-			updateDialog()
 		else
 			to_chat(user, span_red("Access denied."))
 	else if(W.has_tool_quality(TOOL_WRENCH))
@@ -62,7 +60,6 @@
 					if(get_dir(src, gen) == src.dir)
 						owned_gen = gen
 						owned_gen.capacitors |= src
-						owned_gen.updateDialog()
 		else
 			if(owned_gen && (src in owned_gen.capacitors))
 				owned_gen.capacitors -= src

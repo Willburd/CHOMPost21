@@ -19,6 +19,9 @@
 
 /obj/item/syringe_cartridge/attackby(obj/item/I, mob/user)
 	if(istype(I, /obj/item/reagent_containers/syringe))
+		if(syringe)
+			to_chat(user, span_warning("[src] already has a syringe loaded!"))
+			return
 		syringe = I
 		to_chat(user, span_notice("You carefully insert [syringe] into [src]."))
 		user.remove_from_mob(syringe)
@@ -128,7 +131,7 @@
 	else
 		..()
 
-/obj/item/gun/launcher/syringe/attackby(var/obj/item/A as obj, mob/user as mob)
+/obj/item/gun/launcher/syringe/attackby(obj/item/A as obj, mob/user as mob)
 	if(istype(A, /obj/item/syringe_cartridge))
 		var/obj/item/syringe_cartridge/C = A
 		if(darts.len >= max_darts)

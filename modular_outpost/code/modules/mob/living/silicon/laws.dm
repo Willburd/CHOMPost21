@@ -1,8 +1,8 @@
-/mob/living/silicon/proc/generate_outpost_ion_law(var/exclude_crew_names = FALSE)
+/mob/living/silicon/proc/generate_outpost_ion_law(exclude_crew_names = FALSE)
 	var/list/players = list()
 
 	for(var/mob/living/carbon/human/player in GLOB.player_list)
-		if(!player.mind || player_is_antag(player.mind, only_offstation_roles = 1) || player.client.inactivity > 10 MINUTES)
+		if(!player.mind || SSantag_job.player_is_antag(player.mind, only_offstation_roles = 1) || player.client.inactivity > 10 MINUTES)
 			continue
 		players += player.real_name
 
@@ -84,11 +84,11 @@
 							)
 	return pick(laws)
 
-/mob/living/silicon/proc/generate_screech_law(var/exclude_crew_names = FALSE)
+/mob/living/silicon/proc/generate_screech_law(exclude_crew_names = FALSE)
 	var/list/players = list()
 
 	for(var/mob/living/carbon/human/player in GLOB.player_list)
-		if(!player.mind || player_is_antag(player.mind, only_offstation_roles = 1) || player.client.inactivity > 10 MINUTES)
+		if(!player.mind || SSantag_job.player_is_antag(player.mind, only_offstation_roles = 1) || player.client.inactivity > 10 MINUTES)
 			continue
 		players += player.real_name
 

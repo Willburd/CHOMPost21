@@ -151,16 +151,16 @@
 				prob(15);/obj/effect/mine/emp/camo,
 				prob(10);/obj/effect/mine/stun,
 				prob(10);/obj/effect/mine/incendiary,
-				prob(10);/obj/effect/mine/spiders, // Outpost 21 addition - you bet you know what this does
-				prob(10);/obj/effect/mine/glue, // Outpost 21 addition
-				prob(10);/obj/effect/mine/portal, // Outpost 21 addition
-				prob(10);/obj/effect/mine/lube, // Outpost 21 addition
-				prob(1);/obj/effect/mine/confetti, // Outpost 21 addition
-				prob(1);/obj/effect/mine/taarainbow, // Outpost 21 addition - CANDY
-				prob(1);/obj/effect/mine/dnascramble, // Outpost 21 addition - Genetics works again lmao
-				prob(1);/obj/item/mine/n2o, // Outpost 21 addition
-				prob(1);/obj/item/mine/phoron, // Outpost 21 addition
-				prob(1);/obj/item/mine/methane) // Outpost 21 addition - Methane mine
+				prob(10);/obj/effect/mine/spiders, // outpost 21 edit - you bet you know what this does
+				prob(10);/obj/effect/mine/glue, // outpost 21 edit
+				prob(10);/obj/effect/mine/portal, // outpost 21 edit
+				prob(10);/obj/effect/mine/lube, // outpost 21 edit
+				prob(1);/obj/effect/mine/confetti, // outpost 21 edit
+				prob(1);/obj/effect/mine/taarainbow, // outpost 21 edit - CANDY
+				prob(1);/obj/effect/mine/dnascramble, // outpost 21 edit - Genetics works again lmao
+				prob(1);/obj/item/mine/n2o, // outpost 21 edit
+				prob(1);/obj/item/mine/phoron, // outpost 21 edit
+				prob(1);/obj/item/mine/methane) // outpost 21 edit - Methane mine
 
 /obj/random/humanoidremains
 	name = "Random Humanoid Remains"
@@ -357,7 +357,7 @@
 			),
 			prob(2);list(
 				/obj/item/rig/industrial/equipped,
-				/obj/item/storage/bag/ore,
+				/obj/item/ore_bag,
 				/obj/structure/closet/crate/engineering
 			),
 			prob(2);list(
@@ -416,43 +416,43 @@
 			),
 			prob(2);list(
 				/obj/item/pickaxe/silver,
-				/obj/item/storage/bag/ore,
+				/obj/item/ore_bag,
 				/obj/item/clothing/glasses/material,
 				/obj/structure/closet/crate/engineering
 			),
 			prob(2);list(
 				/obj/item/pickaxe/advdrill,
-				/obj/item/storage/bag/ore,
+				/obj/item/ore_bag,
 				/obj/item/clothing/glasses/material,
 				/obj/structure/closet/crate/engineering
 			),
 			prob(2);list(
 				/obj/item/pickaxe/jackhammer,
-				/obj/item/storage/bag/ore,
+				/obj/item/ore_bag,
 				/obj/item/clothing/glasses/material,
 				/obj/structure/closet/crate/engineering
 			),
 			prob(2);list(
 				/obj/item/pickaxe/diamond,
-				/obj/item/storage/bag/ore,
+				/obj/item/ore_bag,
 				/obj/item/clothing/glasses/material,
 				/obj/structure/closet/crate/engineering
 			),
 			prob(2);list(
 				/obj/item/pickaxe/diamonddrill,
-				/obj/item/storage/bag/ore,
+				/obj/item/ore_bag,
 				/obj/item/clothing/glasses/material,
 				/obj/structure/closet/crate/engineering
 			),
 			prob(2);list(
 				/obj/item/pickaxe/gold,
-				/obj/item/storage/bag/ore,
+				/obj/item/ore_bag,
 				/obj/item/clothing/glasses/material,
 				/obj/structure/closet/crate/engineering
 			),
 			prob(2);list(
 				/obj/item/pickaxe/plasmacutter,
-				/obj/item/storage/bag/ore,
+				/obj/item/ore_bag,
 				/obj/item/clothing/glasses/material,
 				/obj/structure/closet/crate/engineering
 			),
@@ -1627,7 +1627,7 @@
 /obj/random/multiple/underdark/ores/item_to_spawn()
 	return pick(
 				prob(9);list(
-							/obj/item/storage/bag/ore,
+							/obj/item/ore_bag,
 							/obj/item/shovel,
 							/obj/item/ore/glass,
 							/obj/item/ore/glass,
@@ -1647,7 +1647,7 @@
 							/obj/item/ore/hydrogen
 							),
 				prob(7);list(
-							/obj/item/storage/bag/ore,
+							/obj/item/ore_bag,
 							/obj/item/pickaxe,
 							/obj/item/ore/osmium,
 							/obj/item/ore/osmium,
@@ -2009,3 +2009,15 @@
 				/obj/structure/closet/crate/secure/phoron //HQ FUEL TANKS
 			),
 		)
+
+/obj/random/multiple/legtrap
+	name = "random legtraps"
+	desc = "Random legtraps (beartraps and mousetraps)."
+	icon = 'icons/misc/mark.dmi'
+	icon_state = "x3"
+
+/obj/random/multiple/legtrap/item_to_spawn()
+	return pick(
+				prob(67);list(/obj/item/assembly/mousetrap/armed),
+				prob(33);list(/obj/item/beartrap/start_active),
+				)

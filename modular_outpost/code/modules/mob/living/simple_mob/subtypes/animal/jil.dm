@@ -116,6 +116,10 @@
 	icon_splat = "jil_big_splat"
 	icon_rest = "jil_big_sleep"
 
+/mob/living/simple_mob/vore/alienanimals/jil/jillioth/Initialize(mapload)
+	. = ..()
+	status_flags &= !(CANSTUN|CANWEAKEN) // Jillioths laugh at your puny battons
+
 /mob/living/simple_mob/vore/alienanimals/jil/jillioth/jillord
 	name = "jillord"
 	real_name = "jillord"
@@ -131,10 +135,8 @@
 	melee_damage_upper = 40
 
 	voice_freq = 22500
-
-/mob/living/simple_mob/vore/alienanimals/jil/jillioth/jillord/Initialize(mapload)
-	. = ..()
-	resize(3, animate = FALSE, ignore_prefs = TRUE)
+	icon_scale_x = 3
+	icon_scale_y = 3
 
 /mob/living/simple_mob/vore/alienanimals/jil/Initialize(mapload)
 	. = ..()
@@ -169,12 +171,12 @@
 	src.icon_dead = icon_splat
 	src.icon_state = icon_splat
 
-/mob/living/simple_mob/vore/alienanimals/jil/proc/bonk(var/mob/M, var/sound_play)
+/mob/living/simple_mob/vore/alienanimals/jil/proc/bonk(mob/M, sound_play)
 	// bonk noise
 	if(sound_play && sound_play)
 		M.say("*merp")
 
-/mob/living/simple_mob/vore/alienanimals/jil/proc/scream(var/mob/M, var/sound_play)
+/mob/living/simple_mob/vore/alienanimals/jil/proc/scream(mob/M, sound_play)
 	// screaming noise
 	if(sound_play)
 		to_chat(M, pick("Squee!","Squeee!","Squeak!","Eeeee!"))
@@ -230,7 +232,7 @@
 				lying = FALSE
 				update_icon()
 
-/mob/living/simple_mob/vore/alienanimals/jil/attackby(var/obj/item/O as obj, var/mob/user as mob)
+/mob/living/simple_mob/vore/alienanimals/jil/attackby(obj/item/O as obj, mob/user as mob)
 	if(stat == DEAD)
 		return ..()
 	if(istype(O, /obj/item/grab))
@@ -246,7 +248,7 @@
 		return
 	return ..()
 
-/mob/living/simple_mob/vore/alienanimals/jil/proc/handle_self_use(var/obj/item/O)
+/mob/living/simple_mob/vore/alienanimals/jil/proc/handle_self_use(obj/item/O)
 	// num num num
 	if(istype(O,/obj/item/reagent_containers/food))
 		var/obj/item/reagent_containers/food/F = O
@@ -369,7 +371,7 @@
 		home_turf = A // new nest!
 		last_pickup_turf = null // clear
 
-/datum/ai_holder/simple_mob/intentional/jil/proc/self_use_item(var/obj/item/O)
+/datum/ai_holder/simple_mob/intentional/jil/proc/self_use_item(obj/item/O)
 	if(istype(O,/obj/item/reagent_containers/food))
 		return TRUE
 	if(istype(O,/obj/item/assembly/signaler))
@@ -529,7 +531,7 @@
 		*/
 	. -= holder.contents
 
-/datum/ai_holder/simple_mob/intentional/jil/find_target(var/list/possible_targets, var/has_targets_list = FALSE)
+/datum/ai_holder/simple_mob/intentional/jil/find_target(list/possible_targets, has_targets_list = FALSE)
 	if(!hoard_items)
 		return
 

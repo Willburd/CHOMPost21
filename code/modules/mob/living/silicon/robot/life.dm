@@ -13,7 +13,7 @@
 	// For some reason borg Life() doesn't call ..()
 	handle_modifiers()
 	handle_light()
-	handle_radiation() // outpost 21 addition - radiation and haunting affects vision
+	handle_radiation() // outpost 21 edit - radiation and haunting affects vision
 
 	if(client)
 		handle_regular_hud_updates()
@@ -56,13 +56,13 @@
 		if(lights_on)
 			cell_use_power(30) 	// 30W light. Normal lights would use ~15W, but increased for balance reasons.
 
-		has_power = 1
+		has_power = TRUE
 	else
 		if (has_power)
 			to_chat(src, span_red("You are now running on emergency backup power."))
-		has_power = 0
+		has_power = FALSE
 		if(lights_on) // Light is on but there is no power!
-			lights_on = 0
+			lights_on = FALSE
 			set_light(0)
 
 /mob/living/silicon/robot/handle_regular_status_updates()
@@ -157,10 +157,10 @@
 	else
 		blinded = 1
 
-	// outpost 21 addition begin - lockers are dark and spooky!
+	// outpost 21 edit begin - lockers are dark and spooky!
 	if(istype(loc, /obj/structure/closet))
 		blinded = 1
-	// outpost 21 addition end
+	// outpost 21 edit end
 
 	// Call parent to handle signals
 	. = ..()
@@ -202,12 +202,10 @@
 		see_in_dark = 8
 		see_invisible = SEE_INVISIBLE_LEVEL_TWO
 		fullbright = TRUE
-	/* //ChompEDIT START - remove this for now
 	else if (sight_mode & BORGANOMALOUS)
 		see_in_dark = 8
 		see_invisible = INVISIBILITY_SHADEKIN
 		fullbright = TRUE
-	*/ //ChompEDIT END
 	else if (!seedarkness)
 		sight &= ~SEE_MOBS
 		sight &= ~SEE_TURFS
@@ -402,7 +400,7 @@
 	else
 		. = ..()
 
-// outpost 21 addition begin - radiation and haunting affects borg vision
+// outpost 21 edit begin - radiation and haunting affects borg vision
 /mob/living/silicon/robot/handle_radiation()
 	. = ..()
 	if(.)
@@ -421,4 +419,4 @@
 		radiation = 0
 	else
 		client.screen |= GLOB.global_hud.whitense
-// outpost 21 addition end
+// outpost 21 edit end

@@ -15,7 +15,7 @@
 /turf/simulated/floor/tiled/airless,
 /area/submap/outpost21/asteroid_generic)
 "g" = (
-/obj/machinery/trailblazer/yellow,
+/obj/structure/trailblazer/yellow,
 /turf/simulated/floor/airless,
 /area/submap/outpost21/asteroid_generic)
 "j" = (

@@ -25,3 +25,8 @@
 	icon_state = "cart-m"
 	programs = list(
 		new/datum/data/pda/app/uav_control)
+
+/obj/item/cartridge/quartermaster
+	programs = list(
+		new/datum/data/pda/app/supply,
+		new/datum/data/pda/app/status_display)

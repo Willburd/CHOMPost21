@@ -3,7 +3,7 @@
 	var/obj/host
 	var/obj/item/grenade/nade
 
-/datum/component/grenadetrap/Initialize(var/obj/item/grenade/G)
+/datum/component/grenadetrap/Initialize(obj/item/grenade/G)
 	if(!isobj(parent))
 		return COMPONENT_INCOMPATIBLE
 	host = parent
@@ -50,6 +50,8 @@
 
 /datum/component/grenadetrap/proc/on_bumped(datum/source, atom/A)
 	SIGNAL_HANDLER
+	if(HAS_TRAIT(A, TRAIT_AMBIENT_PEST_MOB)) // Miniture things don't set off the trap
+		return
 	if(activated)
 		return
 	activated = TRUE
@@ -77,7 +79,7 @@
 
 // Helper procs
 //////////////////////////////////////////////////////////////////////////////////////////////////////
-/obj/proc/attach_grenade_trap(mob/user,var/obj/item/grenade/nade)
+/obj/proc/attach_grenade_trap(mob/user,obj/item/grenade/nade)
 	var/datum/component/grenadetrap/GT = GetComponent(/datum/component/grenadetrap)
 	if(GT)
 		to_chat(user, span_warning("There is already a [GT.nade] rigged to \the [src]!"))

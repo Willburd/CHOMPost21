@@ -47,7 +47,8 @@ SUBSYSTEM_DEF(haunting)
 		/datum/station_haunt/chills,
 		/datum/station_haunt/lurker,
 		/datum/station_haunt/distant_alarm,
-		/datum/station_haunt/camera_stare
+		/datum/station_haunt/camera_stare,
+		/datum/station_haunt/deck_hatch_open
 		)
 	hauntings["[MODE_CONCERN]"] = list(
 		/datum/station_haunt/light_flicker,
@@ -61,7 +62,9 @@ SUBSYSTEM_DEF(haunting)
 		/datum/station_haunt/vent_crawler,
 		/datum/station_haunt/shuttle_move,
 		/datum/station_haunt/change_nearby_display,
-		/datum/station_haunt/camera_stare
+		/datum/station_haunt/camera_stare,
+		/datum/station_haunt/deck_hatch_open,
+		/datum/station_haunt/terraformer_song
 		)
 	hauntings["[MODE_UNNERVING]"] = list(
 		/datum/station_haunt/light_flicker,
@@ -87,7 +90,8 @@ SUBSYSTEM_DEF(haunting)
 		/datum/station_haunt/shuttle_move,
 		/datum/station_haunt/lurker/can_appear,
 		/datum/station_haunt/change_nearby_display,
-		/datum/station_haunt/camera_stare
+		/datum/station_haunt/camera_stare,
+		/datum/station_haunt/deck_hatch_open
 		)
 	hauntings["[MODE_SPOOKY]"] = list(
 		/datum/station_haunt/light_flicker,
@@ -112,7 +116,8 @@ SUBSYSTEM_DEF(haunting)
 		/datum/station_haunt/shuttle_move,
 		/datum/station_haunt/lurker/can_appear,
 		/datum/station_haunt/change_nearby_display,
-		/datum/station_haunt/camera_stare
+		/datum/station_haunt/camera_stare,
+		/datum/station_haunt/deck_hatch_open
 		)
 	hauntings["[MODE_SCARY]"] = list(
 		/datum/station_haunt/ghost_write,
@@ -137,7 +142,9 @@ SUBSYSTEM_DEF(haunting)
 		/datum/station_haunt/blood_rain,
 		/datum/station_haunt/lurker/can_appear,
 		/datum/station_haunt/lurker/pyromanic,
-		/datum/station_haunt/camera_stare
+		/datum/station_haunt/camera_stare,
+		/datum/station_haunt/deck_hatch_open,
+		/datum/station_haunt/deck_hatch_clown
 		)
 	hauntings["[MODE_SUPERSPOOKY]"] = list(
 		/datum/station_haunt/ghost_write,
@@ -158,14 +165,16 @@ SUBSYSTEM_DEF(haunting)
 		/datum/station_haunt/camera_stare,
 		/datum/station_haunt/tesh_encircle,
 		/datum/station_haunt/shuttle_sabotage,
-		/datum/station_haunt/entity_spawn
+		/datum/station_haunt/entity_spawn,
+		/datum/station_haunt/tcomms_sabotage,
+		/datum/station_haunt/deck_hatch_clown
 		)
 
 	next_haunt_time = world.time + (rand(15,30) MINUTES) // No instant ghosts
 	return SS_INIT_SUCCESS
 
 /datum/controller/subsystem/haunting/stat_entry(msg)
-	msg = "Score: [haunt_score] | Mode: [world_mode] | Change: [new_score] | Who: [current_player_target?.resolve()] | Event: [last_event][current_haunt ? "" : "(finished)"] | Total: [total_haunts]/[prior_haunts.len]"
+	msg = "Score: [haunt_score] | Mode: [world_mode] | Change: [new_score] | Who: [current_player_target?.resolve()] | Event: [last_event][current_haunt ? "" : "(finished)"] | Total: [total_haunts]/[length(prior_haunts)]"
 	return ..()
 
 /datum/controller/subsystem/haunting/fire()
@@ -228,7 +237,7 @@ SUBSYSTEM_DEF(haunting)
 		return null
 	return M
 
-/datum/controller/subsystem/haunting/proc/force_player_target(var/mob/potential)
+/datum/controller/subsystem/haunting/proc/force_player_target(mob/potential)
 	clear_player_target()
 	if(!potential)
 		return FALSE
@@ -241,11 +250,11 @@ SUBSYSTEM_DEF(haunting)
 
 /datum/controller/subsystem/haunting/proc/get_random_player()
 	SHOULD_NOT_OVERRIDE(TRUE)
-	if(!GLOB.player_list.len)
+	if(!length(GLOB.player_list))
 		return null
 	return pick(GLOB.player_list)
 
-/datum/controller/subsystem/haunting/proc/get_world_haunt_attention(var/mob/M,var/notice_chance)
+/datum/controller/subsystem/haunting/proc/get_world_haunt_attention(mob/M,notice_chance)
 	SHOULD_NOT_OVERRIDE(TRUE)
 	if(isnewplayer(M))
 		return
@@ -294,7 +303,7 @@ SUBSYSTEM_DEF(haunting)
 	SHOULD_NOT_OVERRIDE(TRUE)
 	return world_mode >= MODE_SUPERSPOOKY
 
-/datum/controller/subsystem/haunting/proc/start_haunt(var/forced = FALSE)
+/datum/controller/subsystem/haunting/proc/start_haunt(forced = FALSE)
 	PRIVATE_PROC(TRUE)
 	SHOULD_NOT_OVERRIDE(TRUE)
 	if(!forced)
@@ -397,13 +406,13 @@ SUBSYSTEM_DEF(haunting)
 		return
 	current_haunt.fire()
 
-/datum/controller/subsystem/haunting/proc/influence(var/type)
+/datum/controller/subsystem/haunting/proc/influence(type)
 	SHOULD_NOT_OVERRIDE(TRUE)
 	if(isnull(current_influences[type]))
 		current_influences[type] = 0
 	current_influences[type] += 1
 
-/datum/controller/subsystem/haunting/proc/set_haunting(var/path)
+/datum/controller/subsystem/haunting/proc/set_haunting(path)
 	SHOULD_NOT_OVERRIDE(TRUE)
 	// has to handle a verb input too...
 	if(!path)
@@ -416,7 +425,7 @@ SUBSYSTEM_DEF(haunting)
 	current_haunt = new path()
 	total_haunts++
 
-/datum/controller/subsystem/haunting/proc/log_haunting(var/LE,var/notify_admin = FALSE)
+/datum/controller/subsystem/haunting/proc/log_haunting(LE,notify_admin = FALSE)
 	SHOULD_NOT_OVERRIDE(TRUE)
 	var/mob/M = current_player_target?.resolve()
 	if(M)

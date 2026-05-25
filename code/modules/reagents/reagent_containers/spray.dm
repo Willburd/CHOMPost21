@@ -28,7 +28,7 @@
 	if(istype(A, /obj/item/storage) || istype(A, /obj/structure/table) || istype(A, /obj/structure/closet) || istype(A, /obj/item/reagent_containers) || istype(A, /obj/structure/sink) || istype(A, /obj/structure/janitorialcart))
 		return
 
-	if(istype(A, /spell))
+	if(istype(A, /datum/spell))
 		return
 
 	if(proximity)
@@ -179,7 +179,6 @@
 	w_class = ITEMSIZE_NORMAL
 	max_transfer_amount = null
 	volume = 600
-	origin_tech = list(TECH_COMBAT = 3, TECH_MATERIAL = 3, TECH_ENGINEERING = 3)
 
 /obj/item/reagent_containers/spray/chemsprayer/Spray_at(atom/A as mob|obj, mob/user)
 	playsound(src, 'sound/effects/spray3.ogg', rand(50,1), -6)

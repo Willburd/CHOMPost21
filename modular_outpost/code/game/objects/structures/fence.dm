@@ -22,3 +22,11 @@
 
 /obj/structure/fence/eshui_sign_high_sec/electric
 	electric = TRUE
+
+// Slipping off of fences
+/obj/structure/fence/CanPass(atom/movable/mover, turf/target)
+	if(mover.z > z)
+		if(prob(20))
+			mover.audible_message("Squeek!")
+			return TRUE
+	. = ..()

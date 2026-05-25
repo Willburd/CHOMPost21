@@ -1,1 +1,1 @@
-/datum/category_item/catalogue/information/organization/morpheus
+/datum/lore/organization/tsc/morpheus

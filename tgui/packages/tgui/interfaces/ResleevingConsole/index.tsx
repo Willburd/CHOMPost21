@@ -7,6 +7,7 @@ import { MindRecordModal } from './MindRecordModal';
 import {
   ResleevingConsoleCoreDump,
   ResleevingConsoleDiskPrep,
+  ResleevingConsoleDumpProgress,
 } from './ResleevingConsoleCoreDump';
 import {
   ResleevingConsoleBody,
@@ -18,7 +19,7 @@ import type { Data } from './types';
 
 export const ResleevingConsole = (props) => {
   const { data } = useBackend<Data>();
-  const { coredumped, emergency } = data;
+  const { coredumped, dump_progress, emergency } = data;
   let body: React.JSX.Element = (
     <Stack fill vertical>
       <ResleevingConsoleTemp />
@@ -41,6 +42,11 @@ export const ResleevingConsole = (props) => {
   if (emergency) {
     body = <ResleevingConsoleDiskPrep />;
   }
+  // Outpost 21 edit begin - Updated transcore dump process
+  if (dump_progress) {
+    body = <ResleevingConsoleDumpProgress />;
+  }
+  // Outpost 21 edit end
   return (
     <Window width={640} height={520}>
       {data.active_b_rec && (

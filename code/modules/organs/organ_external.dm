@@ -131,6 +131,9 @@
 	return ..()
 
 /obj/item/organ/external/emp_act(severity, recursive)
+	. = ..()
+	if (. & EMP_PROTECT_SELF)
+		return
 	for(var/obj/O as anything in src.contents)
 		O.emp_act(severity, recursive)
 
@@ -173,15 +176,67 @@
 		return //no eating the limb until everything's been removed
 	return ..(user, TRUE)
 
+/obj/item/organ/external/get_description_info(list/additional_information)
+	if(!additional_information)
+		additional_information = list()
+	switch(stage)
+		if(0)
+			additional_information += "Can be cut open via a scalpel to perform procedures on it."
+		if(1)
+			additional_information += "The [name] is cut open and can be opened further with a retractor or closed with a cautery."
+		if(2)
+			additional_information += "The [name] is fully open, allowing for removal of anything within or attached via a hemostat. It can also be partially closed with fix-o-vein."
+			if(status & ORGAN_DEAD)
+				additional_information += "Can have necrosis partially removed by use of a scalpel."
+		if(3) //Status only happens if we used a scalpel on stage 2.
+			additional_information += "The [name] is fully open with some necrotic tissue removed. The use of a bioregenerator can fully remove infection and necrosis from the limb."
+	if(status & ORGAN_DEAD)
+		additional_information += "Can have necrosis and infection surgically removed."
+	. = ..(additional_information)
+	return .
+
 /obj/item/organ/external/examine(mob/user)
 	. = ..()
 	if(in_range(user, src) || isobserver(user))
 		for(var/obj/item/I in contents)
-			if(istype(I, /obj/item/organ))
+
+			//Handling attached limbs, like the foot on a leg.
+			if(istype(I, /obj/item/organ/external))
+				var/obj/item/organ/external/child_organ = I
+				. += span_notice("There is [child_organ.name] attached to it.")
+
+				//Handling status on attached limbs.
+				if(child_organ.status & ORGAN_DEAD) //Can happen for other reasons than infection.
+					. += span_bolddanger("The attached [child_organ.name] is dead.")
+				if(child_organ.status & ORGAN_MUTATED)
+					. += span_danger("The attached [child_organ.name] is mutated and deformed.")
+				if(child_organ.status & ORGAN_BROKEN)
+					. += span_danger("The attached [child_organ.name] is broken.")
+
+				//Handling infections on attached limbs.
+				if(child_organ.germ_level < INFECTION_LEVEL_ONE)
+					continue
+
+				switch(child_organ.germ_level)
+					if(INFECTION_LEVEL_ONE to INFECTION_LEVEL_TWO - 1)
+						. += span_warning("The attached [child_organ.name] has signs of a minor infection.")
+					if(INFECTION_LEVEL_TWO to INFECTION_LEVEL_THREE - 1)
+						. += span_boldwarning("The attached [child_organ.name] has signs of a moderate infection.")
+					if(INFECTION_LEVEL_THREE to INFINITY)
+						. += span_bolddanger("The attached [child_organ.name] is necrotic.")
+				continue
+
+			if(istype(I, /obj/item/organ)) //We can't see inside the organ if it has an organ in it.
 				continue
 			. += span_danger("There is \a [I] sticking out of it.")
+		if(stage)
+			switch(stage)
+				if(1)
+					. += span_danger("The [name] is surgically cut open.")
+				if(2)
+					. += span_danger("The [name] is cut open and the skin retracted.")
 
-/obj/item/organ/external/attackby(obj/item/W as obj, mob/living/user as mob)
+/obj/item/organ/external/attackby(obj/item/W, mob/living/user)
 	switch(stage)
 		if(0)
 			if(istype(W,/obj/item/surgical/scalpel))
@@ -193,15 +248,43 @@
 				user.visible_message(span_danger(span_bold("[user]") + " cracks [src] open like an egg with [W]!"))
 				stage++
 				return
+			if(istype(W,/obj/item/surgical/cautery))
+				user.visible_message(span_danger(span_bold("[user]") + " closes [src] with [W]!"))
+				stage--
+				return
 		if(2)
 			if(istype(W,/obj/item/surgical/hemostat))
-				if(contents.len)
-					var/obj/item/removing = pick(contents)
+				if(LAZYLEN(contents))
+					var/obj/item/removing = tgui_input_list(user, "What would you like to remove?", "Extraction", contents, timeout = 20 SECONDS)
+					if(!removing || removing.loc != src || !Adjacent(user)) //Didn't select anything or selected something that was already removed OR we walked away.
+						user.visible_message(span_danger(span_bold("[user]") + " decides against removing anything from [src]"))
+						return
 					removing.loc = get_turf(user.loc)
 					user.put_in_hands(removing)
 					user.visible_message(span_danger(span_bold("[user]") + " extracts [removing] from [src] with [W]!"))
 				else
 					user.visible_message(span_danger(span_bold("[user]") + " fishes around fruitlessly in [src] with [W]."))
+				return
+			if(istype(W,/obj/item/surgical/FixOVein))
+				user.visible_message(span_danger(span_bold("[user]") + " partially closes [src] with [W]!"))
+				stage--
+				return
+			//Begin necrosis surgery
+			if(istype(W,/obj/item/surgical/scalpel))
+				if(!(status & ORGAN_DEAD))
+					to_chat(user, span_notice("The limb isn't necrotic, there's no need to fix it!"))
+					return
+				user.visible_message(span_danger(span_bold("[user]") + " cuts necrotic tissue off [src] with [W]!"))
+				stage++
+				return
+		if(3)
+			if(istype(W,/obj/item/surgical/bioregen))
+				user.visible_message(span_danger(span_bold("[user]") + " rejuvinates formerly necrotic tissue on [src] with [W]!"))
+				germ_level = 0
+				status &= ~ORGAN_DEAD
+				damage = 0 //Fix the damage on it as well.
+				START_PROCESSING(SSobj, src) //Dead limbs stop processing, so we restart the process.
+				stage-- //Go back to stage 2
 				return
 	..()
 
@@ -243,7 +326,8 @@
 
 	dislocated = 0
 	if(istype(owner))
-		owner.shock_stage += 20
+		if(!organ_can_feel_pain())
+			owner.shock_stage += 20
 
 		//check to see if we still need the verb
 		for(var/obj/item/organ/external/limb in owner.organs)
@@ -254,7 +338,7 @@
 /obj/item/organ/external/update_health()
 	damage = min(max_damage, (brute_dam + burn_dam))
 
-/obj/item/organ/external/Initialize(mapload, var/internal)
+/obj/item/organ/external/Initialize(mapload, internal)
 	..(mapload, 0)
 	if(istype(owner))
 		replaced(owner)
@@ -265,7 +349,7 @@
 	if(!QDELETED(src))
 		get_icon()
 
-/obj/item/organ/external/replaced(var/mob/living/carbon/human/target)
+/obj/item/organ/external/replaced(mob/living/carbon/human/target)
 	owner = target
 	forceMove(owner)
 	if(istype(owner))
@@ -292,7 +376,7 @@
 			   DAMAGE PROCS
 ****************************************************/
 
-/obj/item/organ/external/proc/is_damageable(var/additional_damage = 0)
+/obj/item/organ/external/proc/is_damageable(additional_damage = 0)
 	//Continued damage to vital organs can kill you, and robot organs don't count towards total damage so no need to cap them.
 	return (vital || (robotic >= ORGAN_ROBOT) || brute_dam + burn_dam + additional_damage < max_damage)
 
@@ -505,7 +589,7 @@
 	return result
 
 //Helper proc used by various tools for repairing robot limbs
-/obj/item/organ/external/proc/robo_repair(var/repair_amount, var/damage_type, var/damage_desc, obj/item/tool, mob/living/user)
+/obj/item/organ/external/proc/robo_repair(repair_amount, damage_type, damage_desc, obj/item/tool, mob/living/user)
 	if((src.robotic < ORGAN_ROBOT))
 		return 0
 
@@ -562,7 +646,7 @@
 /*
 This function completely restores a damaged organ to perfect condition.
 */
-/obj/item/organ/external/rejuvenate(var/ignore_prosthetic_prefs)
+/obj/item/organ/external/rejuvenate(ignore_prosthetic_prefs)
 	damage_state = "00"
 	status = 0
 	brute_dam = 0
@@ -585,12 +669,14 @@ This function completely restores a damaged organ to perfect condition.
 		owner.clear_alert("embeddedobject")
 
 	if(owner && !ignore_prosthetic_prefs)
-		if(owner.client && owner.client.prefs && owner.client.prefs.real_name == owner.real_name)
-			var/status = owner.client.prefs.organ_data[organ_tag]
+		if(owner.client && owner.client.prefs && owner.client.prefs.read_preference(/datum/preference/name/real_name) == owner.real_name)
+			var/list/organ_data = owner.client.prefs.read_preference(/datum/preference/organ_data)
+			var/status = organ_data?[organ_tag]
 			if(status == "amputated")
 				remove_rejuv()
 			else if(status == "cyborg")
-				var/robodata = owner.client.prefs.rlimb_data[organ_tag]
+				var/list/rlimb_data = owner.client.prefs.read_preference(/datum/preference/rlimb_data)
+				var/robodata = rlimb_data?[organ_tag]
 				if(robodata)
 					robotize(robodata)
 				else
@@ -611,7 +697,7 @@ This function completely restores a damaged organ to perfect condition.
 		I.remove_rejuv()
 	..()
 
-/obj/item/organ/external/proc/createwound(var/type = CUT, var/damage)
+/obj/item/organ/external/proc/createwound(type = CUT, damage)
 	if(damage == 0) return
 
 	//moved this before the open_wound check so that having many small wounds for example doesn't somehow protect you from taking internal damage (because of the return)
@@ -928,7 +1014,7 @@ Note that amputating the affected organ does in fact remove the infection from t
 ****************************************************/
 
 //Handles dismemberment
-/obj/item/organ/external/proc/droplimb(var/clean, var/disintegrate = DROPLIMB_EDGE, var/ignore_children = null)
+/obj/item/organ/external/proc/droplimb(clean, disintegrate = DROPLIMB_EDGE, ignore_children = null)
 
 	if(cannot_amputate || !owner)
 		return
@@ -1071,7 +1157,7 @@ Note that amputating the affected organ does in fact remove the infection from t
 /obj/item/organ/external/proc/is_stump()
 	return 0
 
-/obj/item/organ/external/proc/release_restraints(var/mob/living/carbon/human/holder)
+/obj/item/organ/external/proc/release_restraints(mob/living/carbon/human/holder)
 	if(!holder)
 		holder = owner
 	if(!holder)
@@ -1203,7 +1289,7 @@ Note that amputating the affected organ does in fact remove the infection from t
 	status &= ~ORGAN_BROKEN
 	return 1
 
-/obj/item/organ/external/proc/apply_splint(var/atom/movable/splint)
+/obj/item/organ/external/proc/apply_splint(atom/movable/splint)
 	if(!splinted)
 		splinted = splint
 		if(!applied_pressure)
@@ -1221,7 +1307,7 @@ Note that amputating the affected organ does in fact remove the infection from t
 		return 1
 	return 0
 
-/obj/item/organ/external/robotize(var/company, var/skip_prosthetics = 0, var/keep_organs = 0)
+/obj/item/organ/external/robotize(company, skip_prosthetics = 0, keep_organs = 0)
 
 	if(robotic >= ORGAN_ROBOT)
 		return
@@ -1303,7 +1389,7 @@ Note that amputating the affected organ does in fact remove the infection from t
 /obj/item/organ/external/proc/is_malfunctioning()
 	return ((robotic >= ORGAN_ROBOT) && (brute_dam + burn_dam) >= min_broken_damage*0.83 && prob(brute_dam + burn_dam)) //VOREStation Edit - Makes robotic limb damage scalable
 
-/obj/item/organ/external/proc/embed(var/obj/item/W, var/silent = 0)
+/obj/item/organ/external/proc/embed(obj/item/W, silent = 0)
 	if(!owner || loc != owner)
 		return
 	if(SEND_SIGNAL(owner, COMSIG_EMBED_OBJECT) & COMSIG_CANCEL_EMBED) //Normally we'd let this proc continue on, but it's much less time consumptive to just do a godmode check here.
@@ -1320,7 +1406,7 @@ Note that amputating the affected organ does in fact remove the infection from t
 		H.drop_from_inventory(W)
 	W.loc = owner
 
-/obj/item/organ/external/removed(var/mob/living/user, var/ignore_children = 0)
+/obj/item/organ/external/removed(mob/living/user, ignore_children = 0)
 	if(!owner)
 		return
 	var/is_robotic = robotic >= ORGAN_ROBOT
@@ -1381,7 +1467,7 @@ Note that amputating the affected organ does in fact remove the infection from t
 	victim.refresh_modular_limb_verbs()
 	victim.update_icons_body()
 
-/obj/item/organ/external/proc/disfigure(var/type = "brute")
+/obj/item/organ/external/proc/disfigure(type = "brute")
 	if (disfigured)
 		return
 	if(owner)
@@ -1487,7 +1573,7 @@ Note that amputating the affected organ does in fact remove the infection from t
 		return english_list(flavor_text)
 
 // Returns a list of the clothing (not glasses) that are covering this part
-/obj/item/organ/external/proc/get_covering_clothing(var/target_covering)	// target_covering checks for mouth/eye coverage
+/obj/item/organ/external/proc/get_covering_clothing(target_covering)	// target_covering checks for mouth/eye coverage
 	var/list/covering_clothing = list()
 
 	if(!target_covering)
@@ -1512,7 +1598,7 @@ Note that amputating the affected organ does in fact remove the infection from t
 			if(!istype(I,/obj/item/implant)) // Outpost 21 edit - Nif removal: && !istype(I,/obj/item/nif)) //VOREStation Add - NIFs
 				return 1
 
-/obj/item/organ/external/proc/is_hidden_by_sprite_accessory(var/clothing_only = FALSE)			// Clothing only will mean the check should only be used in places where we want to hide clothing icon, not organ itself.
+/obj/item/organ/external/proc/is_hidden_by_sprite_accessory(clothing_only = FALSE)			// Clothing only will mean the check should only be used in places where we want to hide clothing icon, not organ itself.
 	if(owner && owner.tail_style && owner.tail_style.hide_body_parts && (organ_tag in owner.tail_style.hide_body_parts))
 		return 1
 	if(clothing_only && markings.len)

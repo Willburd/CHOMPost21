@@ -8,7 +8,6 @@
 	anchored = TRUE
 	var/power_failing = FALSE // Turns to TRUE when the grid check event is fired by the Game Master, or perhaps a cheeky antag.
 	// Wire stuff below.
-	var/datum/wires/grid_checker/wires
 	var/wire_locked_out = FALSE
 	var/wire_allow_manual_1 = FALSE
 	var/wire_allow_manual_2 = FALSE
@@ -19,7 +18,7 @@
 	. = ..()
 	connect_to_network()
 	update_icon()
-	wires = new(src)
+	set_wires(new /datum/wires/grid_checker(src))
 	default_apply_parts()
 
 /obj/machinery/power/grid_checker/Destroy()
@@ -46,6 +45,13 @@
 	else if(istype(W, /obj/item/multitool) || W.has_tool_quality(TOOL_WIRECUTTER))
 		attack_hand(user)
 
+// Outpost 21 edit(port) begin - Borgs should be able to use the grid checker
+/obj/machinery/power/grid_checker/attack_robot(mob/living/user)
+	if(!user)
+		return
+	interact(user)
+// Outpost 21 edit(port) end
+
 /obj/machinery/power/grid_checker/attack_hand(mob/user)
 	if(!user)
 		return
@@ -61,13 +67,13 @@
 
 	return tgui_interact(user)
 
-/obj/machinery/power/grid_checker/proc/power_failure(var/announce = TRUE,var/extended = FALSE)
+/obj/machinery/power/grid_checker/proc/power_failure(announce = TRUE, extended = FALSE) // Outpost 21 edit - Extend blackout if given the argument to do so!
 	if(announce)
-		command_announcement.Announce("Abnormal activity detected in [station_name()]'s powernet. As a precautionary measure, \
+		GLOB.command_announcement.Announce("Abnormal activity detected in [station_name()]'s powernet. As a precautionary measure, \
 		the station's power will be shut off for an indeterminate duration while the powernet monitor restarts automatically, or \
 		when Engineering can manually resolve the issue.", //CHOMPEdit
 		"Critical Power Failure",
-		new_sound = 'sound/AI/poweroff.ogg')
+		new_sound = ANNOUNCER_MSG_POWER_OFF)
 		SShaunting.influence(HAUNTING_GHOSTS) // Outpost 21 edit - IT DA SPOOKY STATION!
 	power_failing = TRUE
 	if(powernet)
@@ -93,11 +99,11 @@
 		if(power_failing) // Check to see if engineering didn't beat us to it.
 			end_power_failure(TRUE)
 
-/obj/machinery/power/grid_checker/proc/end_power_failure(var/announce = TRUE)
+/obj/machinery/power/grid_checker/proc/end_power_failure(announce = TRUE)
 	if(announce)
-		command_announcement.Announce("Power has been restored to [station_name()]. We apologize for the inconvenience.",
+		GLOB.command_announcement.Announce("Power has been restored to [station_name()]. We apologize for the inconvenience.",
 		"Power Systems Nominal",
-		new_sound = 'sound/AI/poweron.ogg')
+		new_sound = ANNOUNCER_MSG_POWER_ON)
 	power_failing = FALSE
 	update_icon()
 

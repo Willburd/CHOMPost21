@@ -1,19 +1,19 @@
-var/list/_slime_default_emotes = list(
-	/decl/emote/audible/moan,
-	/decl/emote/visible/twitch,
-	/decl/emote/visible/sway,
-	/decl/emote/visible/shiver,
-	/decl/emote/visible/bounce,
-	/decl/emote/visible/jiggle,
-	/decl/emote/visible/lightup,
-	/decl/emote/visible/vibrate,
-	/decl/emote/slime,
-	/decl/emote/slime/pout,
-	/decl/emote/slime/sad,
-	/decl/emote/slime/angry,
-	/decl/emote/slime/frown,
-	/decl/emote/slime/smile
-)
+GLOBAL_LIST_INIT(slime_default_emotes, list(
+	/datum/decl/emote/audible/moan,
+	/datum/decl/emote/visible/twitch,
+	/datum/decl/emote/visible/sway,
+	/datum/decl/emote/visible/shiver,
+	/datum/decl/emote/visible/bounce,
+	/datum/decl/emote/visible/jiggle,
+	/datum/decl/emote/visible/lightup,
+	/datum/decl/emote/visible/vibrate,
+	/datum/decl/emote/slime,
+	/datum/decl/emote/slime/pout,
+	/datum/decl/emote/slime/sad,
+	/datum/decl/emote/slime/angry,
+	/datum/decl/emote/slime/frown,
+	/datum/decl/emote/slime/smile
+))
 
 // The top-level slime defines. Xenobio slimes and feral slimes will inherit from this.
 /mob/living/simple_mob/slime
@@ -40,7 +40,7 @@ var/list/_slime_default_emotes = list(
 
 	response_help = "pets"
 
-	organ_names = /decl/mob_organ_names/slime
+	organ_names = /datum/decl/mob_organ_names/slime
 
 	// Atmos stuff.
 	minbodytemp = T0C-30
@@ -87,7 +87,7 @@ var/list/_slime_default_emotes = list(
 	pain_emote_3p = list("squishes", "squelches")
 
 /mob/living/simple_mob/slime/get_available_emotes()
-	return global._slime_default_emotes.Copy()
+	return GLOB.slime_default_emotes.Copy()
 
 /datum/say_list/slime
 	speak = list("Blorp...", "Blop...")
@@ -224,7 +224,7 @@ var/list/_slime_default_emotes = list(
 	return
 
 // Hat simulator
-/mob/living/simple_mob/slime/proc/give_hat(var/obj/item/clothing/head/new_hat, var/mob/living/user)
+/mob/living/simple_mob/slime/proc/give_hat(obj/item/clothing/head/new_hat, mob/living/user)
 	if(!istype(new_hat))
 		to_chat(user, span_warning("\The [new_hat] isn't a hat."))
 		return
@@ -239,7 +239,7 @@ var/list/_slime_default_emotes = list(
 		update_icon()
 		return
 
-/mob/living/simple_mob/slime/proc/remove_hat(var/mob/living/user)
+/mob/living/simple_mob/slime/proc/remove_hat(mob/living/user)
 	if(!hat)
 		to_chat(user, span_warning("\The [src] doesn't have a hat to remove."))
 	else
@@ -263,5 +263,5 @@ var/list/_slime_default_emotes = list(
 	playsound(src, 'sound/effects/slime_squish.ogg', 50, 0)
 	visible_message(span_infoplain(span_bold("\The [src]") + " squishes!"))
 
-/decl/mob_organ_names/slime
+/datum/decl/mob_organ_names/slime
 	hit_zones = list("cytoplasmic membrane")

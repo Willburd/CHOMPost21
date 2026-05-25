@@ -18,7 +18,7 @@
 /turf/template_noop,
 /area/mine/unexplored/muriki/cave/deepdark)
 "x" = (
-/obj/machinery/trailblazer/yellow,
+/obj/structure/trailblazer/yellow,
 /turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "y" = (

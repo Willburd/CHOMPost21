@@ -18433,7 +18433,7 @@
 /obj/structure/table/rack{
 	dir = 1
 	},
-/obj/item/storage/bag/ore,
+/obj/item/ore_bag,
 /obj/random/maintenance/cargo,
 /obj/random/maintenance/cargo,
 /obj/random/maintenance/cargo,
@@ -55657,14 +55657,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/docking_hallway2)
-"kar" = (
-/obj/machinery/smartfridge/sheets/persistent_lossy{
-	desc = "An industrial sized storage unit for materials. Following company policy with B-Shift, this particular storage unit will retain a percentage of its material in-between crew transfers.";
-	name = "\improper Persistent Industrial Sheet Storage";
-	req_one_access = list(31,48)
-	},
-/turf/simulated/floor/tiled,
-/area/quartermaster/warehouse)
 "kay" = (
 /obj/machinery/ai_status_display{
 	pixel_x = -32
@@ -55959,6 +55951,23 @@
 	},
 /obj/effect/floor_decal/corner/purple/border{
 	dir = 8
+	},
+/obj/item/assembly/signaler/anomaly/flux,
+/obj/item/anomaly_releaser/science,
+/obj/item/anomaly_releaser/science{
+	pixel_x = 4;
+	pixel_y = 3
+	},
+/obj/item/anomaly_releaser/science{
+	pixel_x = 8;
+	pixel_y = 6
+	},
+/obj/item/anomaly_scanner{
+	pixel_y = -9;
+	pixel_x = 6
+	},
+/obj/item/anomaly_scanner{
+	pixel_y = -6
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/misc_lab)
@@ -58963,6 +58972,13 @@
 	},
 /obj/effect/floor_decal/corner/purple/border{
 	dir = 8
+	},
+/obj/machinery/power/emitter{
+	anchored = 1;
+	dir = 4;
+	icon_state = "emitter2";
+	id = "EngineEmitter";
+	state = 2
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/misc_lab)
@@ -62347,6 +62363,7 @@
 /obj/effect/floor_decal/corner/purple/border{
 	dir = 4
 	},
+/obj/machinery/anomaly_harvester,
 /turf/simulated/floor/tiled/white,
 /area/rnd/misc_lab)
 "nZY" = (
@@ -98561,7 +98578,7 @@ aOj
 aQI
 aSR
 bxr
-kar
+bGn
 bAG
 qmn
 bEy

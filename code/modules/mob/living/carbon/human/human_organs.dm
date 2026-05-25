@@ -87,8 +87,7 @@
 				spark_system.set_up(5, 0, src)
 				spark_system.attach(src)
 				spark_system.start()
-				spawn(10)
-					qdel(spark_system)
+				QDEL_IN(spark_system, 1 SECOND)
 		else if (E.is_broken())
 			stance_damage += 1
 		else if (E.is_dislocated())
@@ -117,7 +116,7 @@
 				emote("scream")
 			automatic_custom_emote(VISIBLE_MESSAGE, "collapses!", check_stat = TRUE)
 		if(!(lying || resting)) // stops permastun with SPINE sdisability
-			Weaken(5) //can't emote while weakened, apparently.
+			Weaken(5)
 
 /mob/living/carbon/human/proc/handle_grasp()
 	if(!l_hand && !r_hand)
@@ -194,7 +193,7 @@
 		O.trace_chemicals[A.name] = 100
 
 // Traitgenes Init genes based on the traits currently active
-/mob/living/carbon/human/proc/sync_dna_traits(var/refresh_traits, var/hide_message = TRUE)
+/mob/living/carbon/human/proc/sync_dna_traits(refresh_traits, hide_message = TRUE)
 	SHOULD_NOT_OVERRIDE(TRUE) //Don't. Even. /Think/. About. It.
 	if(!dna || !species)
 		return
@@ -224,7 +223,7 @@
 	for(var/obj/item/organ/O in all_bits)
 		O.set_dna(dna)
 
-/mob/living/carbon/human/proc/set_gender(var/g)
+/mob/living/carbon/human/proc/set_gender(g)
 	if(g != gender)
 		gender = g
 

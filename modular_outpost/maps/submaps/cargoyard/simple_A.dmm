@@ -28,7 +28,7 @@
 /turf/simulated/floor/outdoors/mud/turfpack/muriki,
 /area/submap/outpost21/yard_generic)
 "G" = (
-/obj/machinery/trailblazer/yellow,
+/obj/structure/trailblazer/yellow,
 /turf/simulated/floor/outdoors/mud/turfpack/muriki,
 /area/submap/outpost21/yard_generic)
 "M" = (

@@ -252,9 +252,9 @@ GLOBAL_PROTECT(protected_ranks)
 		dbfail = TRUE
 	//clear the datums references
 	GLOB.admin_datums.Cut()
-	for(var/client/C in GLOB.admins)
-		C.remove_admin_verbs()
-		C.holder = null
+	for(var/client/current_client in GLOB.admins)
+		current_client.remove_admin_verbs()
+		current_client.holder = null
 	GLOB.admins.Cut()
 	GLOB.protected_admins.Cut()
 	GLOB.deadmins.Cut()
@@ -391,7 +391,7 @@ GLOBAL_PROTECT(protected_ranks)
 		var/datum/admins/holder = GLOB.protected_admins[holder_ckey]
 		sql_admins += list(list("ckey" = holder.target, "rank" = holder.rank_names()))
 	SSdbcore.MassInsert(format_table_name("admin"), sql_admins, duplicate_key = TRUE)
-	var/datum/db_query/query_admin_rank_update = SSdbcore.NewQuery("UPDATE [format_table_name("player")] AS p INNER JOIN [format_table_name("admin")] AS a ON p.ckey = a.ckey SET p.lastadminrank = a.rank")
+	var/datum/db_query/query_admin_rank_update = SSdbcore.NewQuery("UPDATE [format_table_name("erro_player")] AS p INNER JOIN [format_table_name("admin")] AS a ON p.ckey = a.ckey SET p.lastadminrank = a.rank")
 	query_admin_rank_update.Execute()
 	qdel(query_admin_rank_update)
 

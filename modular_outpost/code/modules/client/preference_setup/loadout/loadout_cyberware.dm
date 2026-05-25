@@ -24,3 +24,12 @@
 	exploitable = 1
 	sort_category = "Cyberware"
 	cost = 2
+
+/datum/gear/utility/implant/generic/blood_sugar
+	display_name = "implant, blood sugar monitor"
+	description = "An implanted alarm which monitors host blood sugar and plays an audible warning when it becomes dangerously low."
+	path = /obj/item/implant/blood_sugar
+	slot = "implant"
+	exploitable = 1
+	sort_category = "Cyberware"
+	cost = 1

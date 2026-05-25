@@ -44,6 +44,7 @@
 	var/const/deffont = "Verdana"
 	var/const/signfont = "Times New Roman"
 	var/const/crayonfont = "Comic Sans MS"
+	resistance_flags = FLAMMABLE
 
 /obj/item/paper/card
 	name = "blank card"
@@ -96,7 +97,7 @@
 	return
 
 
-/obj/item/paper/Initialize(mapload, var/text, var/title)
+/obj/item/paper/Initialize(mapload, text, title)
 	. = ..()
 
 	if(istext(title))
@@ -137,7 +138,7 @@
 		return
 	icon_state = "paper"
 
-/obj/item/paper/proc/update_space(var/new_text)
+/obj/item/paper/proc/update_space(new_text)
 	if(!new_text)
 		return
 
@@ -150,7 +151,7 @@
 	else
 		. += span_notice("You have to go closer if you want to read it.")
 
-/obj/item/paper/proc/show_content(var/mob/user, var/forceshow=0)
+/obj/item/paper/proc/show_content(mob/user, forceshow=0)
 	if(!(forceshow || (ishuman(user) || isobserver(user) || issilicon(user) || (istype(user) && user.universal_understand))))
 		user << browse("<HTML><HEAD><TITLE>[name]</TITLE></HEAD><BODY>[stars(info)][stamps]</BODY></HTML>", "window=[name]")
 		onclose(user, "[name]")
@@ -163,7 +164,7 @@
 	set category = "Object"
 	set src in usr
 
-	if((CLUMSY in usr.mutations) && prob(20)) // Outpost 21 edit - Made clumsy less obnoxious
+	if(CLUMSY_FAIL_CHANCE(usr))
 		to_chat(usr, span_warning("You cut yourself on the paper."))
 		return
 	var/n_name = sanitizeSafe(tgui_input_text(usr, "What would you like to label the paper?", "Paper Labelling", null, MAX_NAME_LEN, encode = FALSE), MAX_NAME_LEN)
@@ -202,7 +203,7 @@
 				spam_flag = 0
 	return
 
-/obj/item/paper/attack_ai(var/mob/living/silicon/ai/user)
+/obj/item/paper/attack_ai(mob/living/silicon/ai/user)
 	var/dist
 	if(istype(user) && user.camera) //is AI
 		dist = get_dist(src, user.camera)
@@ -216,11 +217,12 @@
 		onclose(user, "[name]")
 	return
 
-/obj/item/paper/attack(mob/living/carbon/M as mob, mob/living/carbon/user as mob)
+/obj/item/paper/attack(mob/living/M, mob/living/user, target_zone, attack_modifier)
 	if(user.zone_sel.selecting == O_EYES)
 		user.visible_message(span_notice("You show the paper to [M]. "), \
 			span_notice(" [user] holds up a paper and shows it to [M]. "))
 		M.examinate(src)
+		return ITEM_INTERACT_SUCCESS
 
 	else if(user.zone_sel.selecting == O_MOUTH) // lipstick wiping
 		if(ishuman(M))
@@ -237,6 +239,8 @@
 											span_notice("You wipe off [H]'s lipstick."))
 					H.lip_style = null
 					H.update_icons_body()
+					return ITEM_INTERACT_SUCCESS
+				return ITEM_INTERACT_FAILURE
 
 /obj/item/paper/proc/set_content(text,title)
 	if(title)
@@ -247,7 +251,7 @@
 	update_space(info)
 	updateinfolinks()
 
-/obj/item/paper/proc/addtofield(var/id, var/text, var/links = 0)
+/obj/item/paper/proc/addtofield(id, text, links = 0)
 	var/locid = 0
 	var/laststart = 1
 	var/textindex = 1
@@ -301,12 +305,12 @@
 	updateinfolinks()
 	update_icon()
 
-/obj/item/paper/proc/get_signature(var/obj/item/pen/P, mob/user as mob)
+/obj/item/paper/proc/get_signature(obj/item/pen/P, mob/user as mob)
 	if(P && istype(P, /obj/item/pen))
 		return P.get_signature(user)
 	return (user && user.real_name) ? user.real_name : "Anonymous"
 
-/obj/item/paper/proc/parsepencode(var/t, var/obj/item/pen/P, mob/user as mob, var/iscrayon = 0)
+/obj/item/paper/proc/parsepencode(t, obj/item/pen/P, mob/user as mob, iscrayon = 0)
 //	t = copytext(sanitize(t),1,MAX_MESSAGE_LEN)
 
 	t = replacetext(t, "\[center\]", "<center>")
@@ -351,9 +355,10 @@
 		t = replacetext(t, "\[cell\]", "<td>")
 		t = replacetext(t, "\[/cell\]", "")
 		// Outpost 21 edit begin - use our logo
-		t = replacetext(t, "\[logo\]", "<img src=\ref['html/images/eslogo.png']>")
-		t = replacetext(t, "\[eslogo\]", "<img src=\ref['html/images/eslogo.png']>")
+		t = replacetext(t, "\[logo\]", "<img src=\ref['html/images/outpost/eslogo.png']>")
+		t = replacetext(t, "\[eslogo\]", "<img src=\ref['html/images/outpost/eslogo.png']>")
 		t = replacetext(t, "\[ntlogo\]", "<img src=\ref['html/images/ntlogo.png']>")
+		t = replacetext(t, "\[talogo\]", "<img src=\ref['html/images/talonlogo.png']>")
 		t = replacetext(t, "\[sglogo\]", "<img src=\ref['html/images/sglogo.png']>")
 		t = replacetext(t, "\[trlogo\]", "<img src=\ref['html/images/trader.png']>")
 		t = replacetext(t, "\[pclogo\]", "<img src=\ref['html/images/pclogo.png']>") // Not available on virgo // CHOMPEnable
@@ -377,6 +382,7 @@
 		t = replacetext(t, "\[logo\]", "")
 		t = replacetext(t, "\[eslogo\]", "")
 		t = replacetext(t, "\[ntlogo\]", "")
+		t = replacetext(t, "\[talogo\]", "")
 		t = replacetext(t, "\[sglogo\]", "")
 		t = replacetext(t, "\[trlogo\]", "")
 		t = replacetext(t, "\[pclogo\]", "")
@@ -511,7 +517,7 @@
 
 		update_icon()
 
-/obj/item/paper/get_worn_icon_state(var/slot_name)
+/obj/item/paper/get_worn_icon_state(slot_name)
 	if(slot_name == slot_head_str)
 		return "paper" //Gross, but required for now.
 	return ..()

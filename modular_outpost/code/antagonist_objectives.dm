@@ -1,5 +1,5 @@
 // TODO - Create custom objective system that replaced the old one for all antags
-/datum/antagonist/proc/outpost_custom_antag_objectives(var/datum/mind/player)
+/datum/antagonist/proc/outpost_custom_antag_objectives(datum/mind/player)
 
 	var/datum/objective/survive/survive = new
 	survive.owner = player

@@ -36,6 +36,7 @@ GLOBAL_VAR_INIT(photo_count, 0)
 	var/scribble	//Scribble on the back.
 	var/icon/tiny
 	var/photo_size = 3
+	resistance_flags = FLAMMABLE
 
 /obj/item/photo/Initialize(mapload)
 	. = ..()
@@ -86,14 +87,14 @@ GLOBAL_VAR_INIT(photo_count, 0)
 	return
 
 
-// Outpost 21 addition begin - The image of a...
-/obj/item/photo/proc/statue_curse(var/user)
+// outpost 21 edit begin - The image of a...
+/obj/item/photo/proc/statue_curse(user)
 	var/t = rand(260, 560) SECONDS
 	log_admin("[user] took a picture of an angel statue. It will spawn a statue in: [t / (1 SECOND)] seconds.")
 	addtimer(CALLBACK(src, PROC_REF(statue_spawn)), t)
 
 /obj/item/photo/proc/statue_spawn()
-	if(statue_photos_allowed <= 0)
+	if(GLOB.statue_photos_allowed <= 0)
 		return
 	if(!QDELETED(src))
 		var/turf/T = get_turf(src)
@@ -114,7 +115,7 @@ GLOBAL_VAR_INIT(photo_count, 0)
 					T = get_turf(src)
 					if(isturf(T))
 						new /mob/living/simple_mob/animal/statue(T)
-						statue_photos_allowed--
+						GLOB.statue_photos_allowed--
 					desc += span_cult("Part of the photo is smeared unnaturally.")
 // Outpost 21 edit end
 
@@ -181,8 +182,8 @@ GLOBAL_VAR_INIT(photo_count, 0)
 		size = nsize
 		to_chat(usr, span_notice("Camera will now take [size]x[size] photos."))
 
-/obj/item/camera/attack(mob/living/carbon/human/M as mob, mob/user as mob)
-	return
+/obj/item/camera/attack(mob/living/M, mob/living/user, target_zone, attack_modifier)
+	return NONE
 
 /obj/item/camera/attack_self(mob/user)
 	. = ..(user)
@@ -334,26 +335,26 @@ GLOBAL_VAR_INIT(photo_count, 0)
 	var/z_c	= target.z
 	var/list/turfs = list()
 	var/mobs = ""
-	var/statue = FALSE // Outpost 21 addition - The image of a...
+	var/statue = FALSE // outpost 21 edit - The image of a...
 	for(var/i = 1 to size)
 		for(var/j = 1 to size)
 			var/turf/T = locate(x_c, y_c, z_c)
 			if(can_capture_turf(T, user))
 				turfs.Add(T)
 				mobs += get_mobs(T)
-				// Outpost 21 addition begin - The image of a...
+				// outpost 21 edit begin - The image of a...
 				if(locate(/mob/living/simple_mob/animal/statue) in T.contents)
 					statue = TRUE
-				// Outpost 21 addition end
+				// outpost 21 edit end
 			x_c++
 		y_c--
 		x_c = x_c - size
 
 	var/obj/item/photo/p = createpicture(target, user, turfs, mobs, flag)
-	// Outpost 21 addition begin - The image of a...
+	// outpost 21 edit begin - The image of a...
 	if(statue)
 		p.statue_curse(user)
-	// Outpost 21 addition end
+	// outpost 21 edit end
 
 	printpicture(user, p)
 
@@ -385,7 +386,7 @@ GLOBAL_VAR_INIT(photo_count, 0)
 	if(!user.get_inactive_hand())
 		user.put_in_inactive_hand(p)
 
-/obj/item/photo/proc/copy(var/copy_id = 0)
+/obj/item/photo/proc/copy(copy_id = 0)
 	var/obj/item/photo/p = new/obj/item/photo()
 
 	p.name = name

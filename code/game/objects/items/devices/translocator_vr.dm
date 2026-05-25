@@ -5,7 +5,6 @@
 	icon = 'icons/obj/device_alt.dmi'
 	icon_state = "hand_tele"
 	w_class = ITEMSIZE_SMALL
-	origin_tech = list(TECH_MAGNET = 5, TECH_BLUESPACE = 5, TECH_ILLEGAL = 7)
 
 	var/cell_type = /obj/item/cell/device/weapon
 	var/obj/item/cell/power_source
@@ -98,7 +97,10 @@
 	else
 		return ..()
 
-/obj/item/perfect_tele/proc/unload_ammo(mob/user, var/ignore_inactive_hand_check = 0)
+/obj/item/perfect_tele/attack(mob/living/M, mob/living/user, target_zone, attack_modifier)
+	afterattack(M, user)
+
+/obj/item/perfect_tele/proc/unload_ammo(mob/user, ignore_inactive_hand_check = 0)
 	if(battery_lock)
 		to_chat(user,span_notice("[src] does not have a battery port."))
 		return
@@ -110,14 +112,14 @@
 	else
 		to_chat(user,span_notice("[src] does not have a power cell."))
 
-/obj/item/perfect_tele/proc/check_menu(var/mob/living/user)
+/obj/item/perfect_tele/proc/check_menu(mob/living/user)
 	if(!istype(user))
 		return FALSE
 	if(user.incapacitated() || !user.Adjacent(src))
 		return FALSE
 	return TRUE
 
-/obj/item/perfect_tele/attack_self(mob/user, list/modifiers, var/radial_menu_anchor = src)
+/obj/item/perfect_tele/attack_self(mob/user, list/modifiers, radial_menu_anchor = src)
 	. = ..(user)
 	if(.)
 		return TRUE
@@ -255,9 +257,11 @@ This device records all warnings given and teleport events for admin review in c
 	//Seems okay to me!
 	return TRUE
 
-/obj/item/perfect_tele/afterattack(mob/living/target, mob/living/user, proximity, var/ignore_fail_chance = 0)
+/obj/item/perfect_tele/afterattack(mob/living/target, mob/user, proximity_flag, click_parameters, ignore_fail_chance = 0)
 	//No, you can't teleport people from over there.
-	if(!proximity)
+	if(!user.Adjacent(target) && !proximity_flag)
+		return
+	if(!istype(target))
 		return
 
 	if(!teleport_checks(target,user))
@@ -286,6 +290,7 @@ This device records all warnings given and teleport events for admin review in c
 				R.force_dismount(rider)
 
 	// Outpost 21 edit begin - Teleport redspace chance
+	var/atom/movable/dest_beacon = destination
 	var/area/current_area = get_area(target)
 	var/chance = 1
 	if(current_area?.haunted)
@@ -297,7 +302,7 @@ This device records all warnings given and teleport events for admin review in c
 				redlist += R
 		if(redlist.len > 0)
 			// if teleport worked, drop out... otherwise just teleport normally, it means there was no redspace spawns!
-			destination = pick(redlist)
+			dest_beacon = pick(redlist)
 			to_chat(user,span_danger("Something feels wrong..."))
 	//Failure chance
 	else if (!ignore_fail_chance)
@@ -305,16 +310,18 @@ This device records all warnings given and teleport events for admin review in c
 		if(prob(failure_chance) && beacons.len >= 2)
 			var/list/wrong_choices = beacons - destination.tele_name
 			var/wrong_name = pick(wrong_choices)
-			destination = beacons[wrong_name]
+			dest_beacon = beacons[wrong_name]
 			to_chat(user,span_warning("\The [src] malfunctions and sends you to the wrong beacon!"))
 
-
+	// Outpost 21 edit begin - Swap beacon with teleporter now
+	var/atom/movable/before_teleport_loc = get_turf(src)
+	// Outpost 21 edit end
 
 	//Destination beacon vore checking
-	var/turf/dT = get_turf(destination)
+	var/turf/dT = get_turf(dest_beacon) // Outpost 21 edit - Teleport redspace chance
 	var/atom/real_dest = dT
 
-	var/atom/real_loc = destination.loc
+	var/atom/real_loc = dest_beacon.loc // Outpost 21 edit - Teleport redspace chance
 	if(isbelly(real_loc))
 		real_dest = real_loc
 	if(isliving(real_loc))
@@ -328,14 +335,13 @@ This device records all warnings given and teleport events for admin review in c
 	var/televored = FALSE
 	if(isbelly(real_dest))
 		var/obj/belly/B = real_dest
-		// CHOMPEdit Start - Making pref checks work properly
 		if(target.devourable && target.can_be_drop_prey && B.owner != target)
 			televored = TRUE
-			to_chat(target,span_vwarning("\The [src] teleports you right into \a [lowertext(real_dest.name)]!"))
+			to_chat(target, span_vwarning("\The [src] teleports you right into \a [lowertext(real_dest.name)]!"))
 		else
-			to_chat(target,span_vwarning("\The [src] narrowly avoids teleporting you right into \a [lowertext(real_dest.name)]!"))
+			to_chat(target, span_vwarning("\The [src] narrowly avoids teleporting you right into \a [lowertext(real_dest.name)]!"))
 			real_dest = dT //Nevermind!
-		// CHOMPEdit End
+
 	//Phase-out effect
 	phase_out(target,get_turf(target))
 
@@ -360,6 +366,11 @@ This device records all warnings given and teleport events for admin review in c
 			//Phase-in effect for grabbed person
 			phase_in(G.affecting,get_turf(G.affecting))
 
+	// Outpost 21 edit begin - Swap beacon with teleporter now
+	if(istype(dest_beacon, /obj/item/perfect_tele_beacon) && !dest_beacon.anchored)
+		dest_beacon.forceMove(before_teleport_loc)
+	// Outpost 21 edit end
+
 	update_icon()
 	spawn(30 SECONDS)
 		ready = 1
@@ -367,7 +378,7 @@ This device records all warnings given and teleport events for admin review in c
 
 	logged_events["[world.time]"] = "[user] teleported [target] to [real_dest] [televored ? "(Belly: [lowertext(real_dest.name)])" : null]"
 
-/obj/item/perfect_tele/proc/phase_out(var/mob/M,var/turf/T)
+/obj/item/perfect_tele/proc/phase_out(mob/M,turf/T)
 
 	if(!M || !T)
 		return
@@ -377,7 +388,7 @@ This device records all warnings given and teleport events for admin review in c
 	playsound(T, "sparks", 50, 1)
 	anim(T,M,'icons/mob/mob.dmi',,"phaseout",,M.dir)
 
-/obj/item/perfect_tele/proc/phase_in(var/mob/M,var/turf/T)
+/obj/item/perfect_tele/proc/phase_in(mob/M,turf/T)
 
 	if(!M || !T)
 		return
@@ -453,7 +464,6 @@ GLOBAL_LIST_BOILERPLATE(premade_tele_beacons, /obj/item/perfect_tele_beacon/stat
 	icon_state = "minitrans"
 	beacons_left = 1 //Just one
 	cell_type = /obj/item/cell/device
-	origin_tech = list(TECH_MAGNET = 5, TECH_BLUESPACE = 5)
 
 /*
 /obj/item/perfect_tele/one_beacon/teleport_checks(mob/living/target,mob/living/user)
@@ -499,7 +509,7 @@ GLOBAL_LIST_BOILERPLATE(premade_tele_beacons, /obj/item/perfect_tele_beacon/stat
 	var/phase_power = 75
 	var/recharging = 0
 
-/obj/item/perfect_tele/frontier/unload_ammo(mob/user, var/ignore_inactive_hand_check = 0)
+/obj/item/perfect_tele/frontier/unload_ammo(mob/user, ignore_inactive_hand_check = 0)
 	if(recharging)
 		return
 	recharging = 1

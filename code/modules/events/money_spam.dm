@@ -9,11 +9,10 @@
 	pick_message_server()
 
 /datum/event/pda_spam/proc/pick_message_server()
-	if(message_servers)
-		for (var/obj/machinery/message_server/MS in message_servers)
-			if(MS.active)
-				useMS = MS
-				break
+	for(var/obj/machinery/message_server/MS in GLOB.message_servers)
+		if(MS.active)
+			useMS = MS
+			break
 
 /datum/event/pda_spam/tick()
 	if(world.time > last_spam_time + 3000)
@@ -35,7 +34,7 @@
 			// /obj/machinery/message_server/proc/send_pda_message(var/recipient = "",var/sender = "",var/message = "")
 			var/obj/item/pda/P
 			var/list/viables = list()
-			for(var/obj/item/pda/check_pda in sort_names(PDAs))
+			for(var/obj/item/pda/check_pda in GLOB.PDAs)
 				if (!check_pda.owner || check_pda == src || check_pda.hidden)
 					continue
 
@@ -50,7 +49,7 @@
 
 			var/sender
 			var/message
-			switch(pick(1,2,3,4,5,6,7))
+			switch(pick(1,2,3,4,5,6,7,8)) //outpost 21 edit egin - adds 8th slot for new ads, renames wetskrell into xenohub
 				if(1)
 					sender = pick("MaxBet","MaxBet Online Casino","There is no better time to register","I'm excited for you to join us")
 					message = pick("Triple deposits are waiting for you at MaxBet Online when you register to play with us.",\
@@ -88,10 +87,10 @@
 					"Due to my lack of agents I require an off-world financial account to immediately deposit the sum of 1 POINT FIVE MILLION credits.",\
 					"Greetings sir, I regretfully to inform you that as I lay dying here due to my lack ofheirs I have chosen you to recieve the full sum of my lifetime savings of 1.5 billion credits")
 				if(6)
-					sender = pick("[using_map.company_name] Morale Divison","Feeling Lonely?","Bored?","www.wetskrell.nt")
+					sender = pick("[using_map.company_name] Morale Divison","Feeling Lonely?","Bored?","exn.xenohub.un")
 					message = pick("The [using_map.company_name] Morale Division wishes to provide you with quality entertainment sites.",\
-					"WetSkrell.nt is a xenophillic website endorsed by NT for the use of male crewmembers among it's many stations and outposts.",\
-					"Wetskrell.nt only provides the higest quality of male entertaiment to [using_map.company_name] Employees.",\
+					"xenohub.un is a xenophillic website endorsed by [using_map.company_name] for the use of male crewmembers among it's many stations and outposts.",\
+					"xenohub.un only provides the higest quality of male entertaiment to [using_map.company_name] Employees.",\
 					"Simply enter your [using_map.company_name] Bank account system number and pin. With three easy steps this service could be yours!")
 				if(7)
 					sender = pick("You have won free tickets!","Click here to claim your prize!","You are the 1000th vistor!","You are our lucky grand prize winner!")
@@ -99,6 +98,13 @@
 					"You have won tickets to the newest crime drama DETECTIVE MYSTERY IN THE CLAMITY CAPER!",\
 					"You have won tickets to the newest romantic comedy 16 RULES OF LOVE!",\
 					"You have won tickets to the newest thriller THE CULT OF THE SLEEPING ONE!")
+				if(8) //outpost 21 edit begin - New spam ads
+					sender = pick("Find your niche~","Deep and Intimate","exn.pawfinder.un")
+					message = pick("Security borg puts five 'marshmallows' on their 'harm baton', only on Onlyborgs!",\
+					"Pawfinder, more than just paws~",\
+					"Talonfinder. Scaly goodness over any part~",\
+					"Acid rain? Not in these guts! Use PredBlocker(TM) to render even the most acidic guts into tame saunas*!",\
+					"See the new synth everyone's raving about. Dagoth B-Ur-g! Only on Onlyborgs, for only 30 Thalers a month!") //"outpost 21 edit end
 
 			if (useMS.send_pda_message("[P.owner]", sender, message))	//Message been filtered by spam filter.
 				return

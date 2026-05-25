@@ -67,7 +67,8 @@
 							NETWORK_COMMUNICATORS,
 							NETWORK_ALARM_ATMOS,
 							NETWORK_ALARM_POWER,
-							NETWORK_ALARM_FIRE
+							NETWORK_ALARM_FIRE,
+							NETWORK_ROGUE_SLEEVERS
 							)
 	usable_email_tlds = list("internalmail.es")
 	allowed_spawns = list("Elevator", "Cryogenic Storage", "Cyborg Storage", "On-Site Dorms")
@@ -126,6 +127,9 @@
 										/area/muriki/grounds/tramborder/garage,
 										/area/muriki/grounds/tramborder/garage,
 										/area/muriki/grounds/sec/garage_entrance,
+										/area/muriki/grounds/med/garage_entrance,
+										/area/muriki/grounds/civ/garage_entrance,
+										/area/muriki/grounds/engi/garage_entrance,
 										// The roof areas don't need scrubbers and vents
 										/area/muriki/rooftop,
 										/area/muriki/rooftop/disposal,
@@ -135,6 +139,7 @@
 										/area/muriki/rooftop/science,
 										/area/muriki/rooftop/security,
 										/area/muriki/rooftop/engineering,
+										/area/muriki/rooftop/crossdept_pathway,
 										// The elevators don't need scrubbers and vents
 										/area/muriki/elevator,
 										/area/muriki/elevator/secbase,
@@ -178,6 +183,7 @@
 										/area/rnd/xenobiology/lost,
 										/area/maintenance/damaged_resleeverA,
 										/area/maintenance/damaged_resleeverB,
+										/area/maintenance/damaged_resleeverC,
 										/area/security/brig_hole,
 										/area/muriki/crew/bunker,
 										// Shadekin exclusions
@@ -231,6 +237,9 @@
 										/area/muriki/grounds/tramborder/garage,
 										/area/muriki/grounds/tramborder/garage,
 										/area/muriki/grounds/sec/garage_entrance,
+										/area/muriki/grounds/med/garage_entrance,
+										/area/muriki/grounds/civ/garage_entrance,
+										/area/muriki/grounds/engi/garage_entrance,
 										// The elevators don't need apcs
 										/area/muriki/elevator,
 										/area/muriki/elevator/secbase,
@@ -242,8 +251,10 @@
 										/area/muriki/lowerelev,
 										/area/muriki/lowerevac,
 										/area/muriki/crystal,
+										/area/rnd/xenobiology/lost,
 										/area/maintenance/damaged_resleeverA,
 										/area/maintenance/damaged_resleeverB,
+										/area/maintenance/damaged_resleeverC,
 										/area/security/brig_hole,
 										// Shadekin exclusions
 										/area/maintenance/shadekin_dark/waste,
@@ -413,12 +424,13 @@
 
 
 /obj/effect/landmark/map_data/muriki
-    height = 4
+	height = 4
 
 // Overmap represetation of muriki
 /obj/effect/overmap/visitable/sector/muriki
 	name = "Muriki"
 	desc = "What a terrible place to call home."
+	icon_state = "ruined"
 	scanner_desc = @{"[i]Registration[/i]: ES Outpost 21-00
 [i]Class[/i]: Planetary Installation
 [i]Transponder[/i]: Transmitting (CIV), ESHUI IFF
@@ -428,30 +440,39 @@
 	icon_state = "globe"
 	color = "#7be313"
 	initial_generic_waypoints = list("outpost_landing_pad","outpost_engineering_pad")
-	initial_restricted_waypoints = list( "Mining Trawler" = list("outpost_trawler_pad"), "Security Carrier" = list("outpost_security_hangar"), "Medical Rescue" = list("outpost_medical_hangar"))
+	initial_restricted_waypoints = list(
+		"Mining Trawler" = list("outpost_trawler_pad"),
+		"Security Carrier" = list("outpost_security_hangar"),
+		"Medical Rescue" = list("outpost_medical_hangar"),
+		"Interferon" = list("airdrop_muriki_central", "lake_muriki_southeast"),
+		"Rokkaku-Dako" = list("dako_airdrop_muriki_central", "outpost_security_hangar", "outpost_security_hangar", "airdrop_muriki_central", "lake_muriki_southeast", "airdrop_muriki_southwest", "airdrop_muriki_northeast", "airdrop_muriki_northwest"),
+		"Mercenary" = list("airdrop_muriki_central", "lake_muriki_southeast", "airdrop_muriki_southwest", "airdrop_muriki_northeast", "airdrop_muriki_northwest"))
 	//Despite not being in the multi-z complex, these levels are part of the overmap sector
 	extra_z_levels = list()
 
-/obj/effect/overmap/visitable/sector/muriki/Crossed(var/atom/movable/AM)
+/obj/effect/overmap/visitable/sector/muriki/Crossed(atom/movable/AM)
 	. = ..()
 	announce_atc(AM,going = FALSE)
 
-/obj/effect/overmap/visitable/sector/muriki/Uncrossed(var/atom/movable/AM)
+/obj/effect/overmap/visitable/sector/muriki/Uncrossed(atom/movable/AM)
 	. = ..()
 	announce_atc(AM,going = TRUE)
 
-/obj/effect/overmap/visitable/sector/muriki/announce_atc(var/atom/movable/AM, var/going = FALSE)
+/obj/effect/overmap/visitable/sector/muriki/announce_atc(atom/movable/AM, going = FALSE)
 	var/message = "Sensor contact for vessel '[AM.name]' has [going ? "left" : "entered"] ATC control area."
 	//For landables, we need to see if their shuttle is cloaked
 	if(istype(AM, /obj/effect/overmap/visitable/ship/landable))
 		var/obj/effect/overmap/visitable/ship/landable/SL = AM //Phew
 		var/datum/shuttle/autodock/multi/shuttle = SSshuttles.shuttles[SL.shuttle]
-		if(!istype(shuttle) || !shuttle.cloaked) //Not a multishuttle (the only kind that can cloak) or not cloaked
-			atc.msg(message)
+		if(istype(SL)) // overmap cloak
+			if(!SL.overmap_stealth)
+				SSatc.msg(message)
+		else if(!istype(shuttle) || !shuttle.cloaked) // instant warp cloak
+			SSatc.msg(message)
 
 	//For ships, it's safe to assume they're big enough to not be sneaky
 	else if(istype(AM, /obj/effect/overmap/visitable/ship))
-		atc.msg(message)
+		SSatc.msg(message)
 
 /obj/effect/overmap/visitable/sector/muriki/get_space_zlevels()
 	return list() //None!
@@ -462,6 +483,7 @@
 	initial_generic_waypoints = list("orbitalyard_civ","orbitalyard_north","orbitalyard_south","orbitalyard_east","orbitalyard_west")
 	initial_restricted_waypoints = list("Mining Trawler" = list("trawler_yard"))
 	name = "Orbital Reclamation Yard"
+	icon_state = "htu_cruiser"
 	scanner_desc = @{"[i]Registration[/i]: ES Orbital 21-03
 [i]Class[/i]: Installation
 [i]Transponder[/i]: Transmitting (CIV), ESHUI IFF
@@ -470,26 +492,29 @@
 	extra_z_levels = list()
 	levels_for_distress = list(Z_LEVEL_OUTPOST_SURFACE)
 
-/obj/effect/overmap/visitable/sector/murkiki_space/orbital_yard/Crossed(var/atom/movable/AM)
+/obj/effect/overmap/visitable/sector/murkiki_space/orbital_yard/Crossed(atom/movable/AM)
 	. = ..()
 	announce_atc(AM,going = FALSE)
 
-/obj/effect/overmap/visitable/sector/murkiki_space/orbital_yard/Uncrossed(var/atom/movable/AM)
+/obj/effect/overmap/visitable/sector/murkiki_space/orbital_yard/Uncrossed(atom/movable/AM)
 	. = ..()
 	announce_atc(AM,going = TRUE)
 
-/obj/effect/overmap/visitable/sector/murkiki_space/orbital_yard/announce_atc(var/atom/movable/AM, var/going = FALSE)
+/obj/effect/overmap/visitable/sector/murkiki_space/orbital_yard/announce_atc(atom/movable/AM, going = FALSE)
 	var/message = "Sensor contact for vessel '[AM.name]' has [going ? "left" : "entered"] ATC control area."
 	//For landables, we need to see if their shuttle is cloaked
 	if(istype(AM, /obj/effect/overmap/visitable/ship/landable))
 		var/obj/effect/overmap/visitable/ship/landable/SL = AM //Phew
 		var/datum/shuttle/autodock/multi/shuttle = SSshuttles.shuttles[SL.shuttle]
-		if(!istype(shuttle) || !shuttle.cloaked) //Not a multishuttle (the only kind that can cloak) or not cloaked
-			atc.msg(message)
+		if(istype(SL)) // overmap cloak
+			if(!SL.overmap_stealth)
+				SSatc.msg(message)
+		else if(!istype(shuttle) || !shuttle.cloaked) //Not a multishuttle (the only kind that can cloak) or not cloaked
+			SSatc.msg(message)
 
 	//For ships, it's safe to assume they're big enough to not be sneaky
 	else if(istype(AM, /obj/effect/overmap/visitable/ship))
-		atc.msg(message)
+		SSatc.msg(message)
 
 /obj/effect/overmap/visitable/sector/murkiki_space/orbital_yard/get_space_zlevels()
 	return list(Z_LEVEL_OUTPOST_ASTEROID)
@@ -499,6 +524,7 @@
 /obj/effect/overmap/visitable/sector/murkiki_space/confinementbeam
 	initial_generic_waypoints = list("confinementbeam_civ")
 	name = "Confinement Beam Platform"
+	icon_state = "htu_cruiser"
 	scanner_desc = @{"[i]Registration[/i]: ES Orbital 21-04
 [i]Class[/i]: Confinement Beam
 [i]Transponder[/i]: Transmitting (ENG), ESHUI IFF
@@ -508,26 +534,44 @@
 	initial_restricted_waypoints = list( "Mining Trawler" = list("confinementbeam_trawler"), "Security Carrier" = list("confinementbeam_security", "aisat_security"), "Medical Rescue" = list("confinementbeam_medical"))
 	levels_for_distress = list(Z_LEVEL_OUTPOST_SURFACE)
 
-/obj/effect/overmap/visitable/sector/murkiki_space/confinementbeam/Crossed(var/atom/movable/AM)
+/obj/effect/overmap/visitable/sector/murkiki_space/confinementbeam/Crossed(atom/movable/AM)
 	. = ..()
 	announce_atc(AM,going = FALSE)
 
-/obj/effect/overmap/visitable/sector/murkiki_space/confinementbeam/Uncrossed(var/atom/movable/AM)
+/obj/effect/overmap/visitable/sector/murkiki_space/confinementbeam/Uncrossed(atom/movable/AM)
 	. = ..()
 	announce_atc(AM,going = TRUE)
 
-/obj/effect/overmap/visitable/sector/murkiki_space/confinementbeam/announce_atc(var/atom/movable/AM, var/going = FALSE)
+/obj/effect/overmap/visitable/sector/murkiki_space/confinementbeam/announce_atc(atom/movable/AM, going = FALSE)
 	var/message = "Sensor contact for vessel '[AM.name]' has [going ? "left" : "entered"] ATC control area."
 	//For landables, we need to see if their shuttle is cloaked
 	if(istype(AM, /obj/effect/overmap/visitable/ship/landable))
 		var/obj/effect/overmap/visitable/ship/landable/SL = AM //Phew
 		var/datum/shuttle/autodock/multi/shuttle = SSshuttles.shuttles[SL.shuttle]
-		if(!istype(shuttle) || !shuttle.cloaked) //Not a multishuttle (the only kind that can cloak) or not cloaked
-			atc.msg(message)
+		if(istype(SL)) // overmap cloak
+			if(!SL.overmap_stealth)
+				SSatc.msg(message)
+		else if(!istype(shuttle) || !shuttle.cloaked) //Not a multishuttle (the only kind that can cloak) or not cloaked
+			SSatc.msg(message)
 
 	//For ships, it's safe to assume they're big enough to not be sneaky
 	else if(istype(AM, /obj/effect/overmap/visitable/ship))
-		atc.msg(message)
+		SSatc.msg(message)
 
 /obj/effect/overmap/visitable/sector/murkiki_space/confinementbeam/get_space_zlevels()
 	return list(Z_LEVEL_OUTPOST_CONFINEMENTBEAM)
+
+
+
+/obj/effect/overmap/visitable/sector/murkiki_space/distant_gateway
+	name = "Sector Gateway"
+	icon_state = "ring"
+	scanner_desc = @{"[i]Registration[/i]: SOLGOV GATE SB323
+[i]Class[/i]: Longjump Bluespace Gateway
+[i]Transponder[/i]: Transmitting (CIV), SOLGOV IFF
+[b]Notice[/b]: Solgov Transport Facility"}
+	map_z = list(Z_NAME_ALIAS_MISC)
+	initial_restricted_waypoints = list("Interferon" = list("interferon_hangar"), "Rokkaku-Dako" = list("dako_docking_hanger"), "Mercenary" = list("mercenary_base"))
+
+/obj/effect/overmap/visitable/sector/murkiki_space/distant_gateway/get_space_zlevels()
+	return list() //None!

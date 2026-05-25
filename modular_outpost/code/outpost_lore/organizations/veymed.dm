@@ -1,1 +1,1 @@
-/datum/category_item/catalogue/information/organization/vey_med
+/datum/lore/organization/tsc/vey_med

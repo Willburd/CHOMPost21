@@ -39,7 +39,7 @@
 		return
 	tgui_interact(user)
 
-/obj/machinery/mineral/processing_unit_console/attackby(var/obj/item/I, var/mob/user)
+/obj/machinery/mineral/processing_unit_console/attackby(obj/item/I, mob/user)
 	if(istype(I, /obj/item/card/id))
 		if(!powered())
 			return
@@ -74,7 +74,7 @@
 	for(var/ore in machine.ores_processing)
 		if(!machine.ores_stored[ore] && !show_all_ores)
 			continue
-		var/ore/O = GLOB.ore_data[ore]
+		var/datum/ore/O = GLOB.ore_data[ore]
 		if(!O)
 			continue
 		ores.Add(list(list(
@@ -189,8 +189,8 @@
 
 /obj/machinery/mineral/processing_unit/Initialize(mapload)
 	. = ..()
-	for(var/ore in GLOB.ore_data)
-		var/ore/OD = GLOB.ore_data[ore]
+	for(var/ore, value in GLOB.ore_data)
+		var/datum/ore/OD = value
 		ores_processing[OD.name] = 0
 		ores_stored[OD.name] = 0
 
@@ -204,7 +204,7 @@
 		if(src.output) break
 	return
 
-/obj/machinery/mineral/processing_unit/proc/toggle_speed(var/forced)
+/obj/machinery/mineral/processing_unit/proc/toggle_speed(forced)
 	var/area/refinery_area = get_area(src)
 	if(forced)
 		speed_process = forced
@@ -270,7 +270,7 @@
 
 		if(ores_stored[metal] > 0 && ores_processing[metal] != 0)
 
-			var/ore/O = GLOB.ore_data[metal]
+			var/datum/ore/O = GLOB.ore_data[metal]
 
 			if(!O) continue
 

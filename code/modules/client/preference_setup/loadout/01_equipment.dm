@@ -34,7 +34,7 @@
 	save_data["no_jacket"]					= pref.no_jacket
 
 // Moved from /datum/preferences/proc/copy_to()
-/datum/category_item/player_setup_item/loadout/equipment/copy_to_mob(var/mob/living/carbon/human/character)
+/datum/category_item/player_setup_item/loadout/equipment/copy_to_mob(mob/living/carbon/human/character)
 	character.all_underwear.Cut()
 	character.all_underwear_metadata.Cut()
 
@@ -67,7 +67,8 @@
 
 		for(var/datum/category_group/underwear/WRC in GLOB.global_underwear.categories)
 			for(var/datum/category_item/underwear/WRI in WRC.items)
-				if(WRI.is_default(pref.identifying_gender ? pref.identifying_gender : MALE))
+				var/id_gender = pref.read_preference(/datum/preference/choiced/gender/identifying)
+				if(WRI.is_default(id_gender ? id_gender : MALE))
 					pref.all_underwear[WRC.name] = WRI.name
 					break
 
@@ -137,7 +138,7 @@
 
 	return data
 
-/datum/category_item/player_setup_item/loadout/equipment/proc/get_metadata(var/underwear_category, var/datum/gear_tweak/gt)
+/datum/category_item/player_setup_item/loadout/equipment/proc/get_metadata(underwear_category, datum/gear_tweak/gt)
 	var/metadata = pref.all_underwear_metadata[underwear_category]
 	if(!metadata)
 		metadata = list()
@@ -149,7 +150,7 @@
 		metadata["[gt]"] = tweak_data
 	return tweak_data
 
-/datum/category_item/player_setup_item/loadout/equipment/proc/set_metadata(var/underwear_category, var/datum/gear_tweak/gt, var/new_metadata)
+/datum/category_item/player_setup_item/loadout/equipment/proc/set_metadata(underwear_category, datum/gear_tweak/gt, new_metadata)
 	var/list/metadata = pref.all_underwear_metadata[underwear_category]
 	metadata["[gt]"] = new_metadata
 

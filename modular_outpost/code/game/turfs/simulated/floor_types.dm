@@ -1,4 +1,4 @@
-/decl/flooring/outpost_roof/hull
+/datum/decl/flooring/outpost_roof/hull
 	name = "hull"
 	descriptor = "sloped roof plating"
 	icon = 'icons/turf/flooring/eris/hull.dmi'
@@ -12,14 +12,14 @@
 	name = "roofing"
 	icon = 'icons/turf/flooring/eris/hull.dmi'
 	icon_state = "hullcenter0"
-	initial_flooring = /decl/flooring/outpost_roof/hull
+	initial_flooring = /datum/decl/flooring/outpost_roof/hull
 	outdoors = TRUE
 
 /turf/simulated/floor/solarpanel
 	name = "solarpanel"
 	icon = 'icons/turf/flooring/plating.dmi'
 	icon_state = "solarpanel"
-	initial_flooring = /decl/flooring/outpost_roof/hull
+	initial_flooring = /datum/decl/flooring/outpost_roof/hull
 	outdoors = TRUE
 
 /turf/simulated/floor/solarpanel/airless

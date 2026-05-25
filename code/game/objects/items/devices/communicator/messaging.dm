@@ -2,7 +2,7 @@
 // Parameters: 4 (origin atom - the source of the message's holder, origin_address - where the message came from, message - the message received,
 //				  text - message text to send if message is of type "text")
 // Description: Handles voice requests and invite messages originating from both real communicators and ghosts.  Also includes a ping response and IM function.
-/obj/item/communicator/receive_exonet_message(var/atom/origin_atom, origin_address, message, text)
+/obj/item/communicator/receive_exonet_message(atom/origin_atom, origin_address, message, text)
 	if(message == "voice")
 		if(isobserver(origin_atom) || istype(origin_atom, /obj/item/communicator))
 			if(origin_atom in voice_invites)
@@ -53,7 +53,7 @@
 // Parameters: 3 (candidate - the communicator wanting to message the device, origin_address - the address of the sender, text - the message)
 // Description: Response to a communicator trying to message the device.
 //				Adds them to the list of people that have messaged this device and adds the message to the message list.
-/obj/item/communicator/proc/request_im(var/atom/candidate, var/origin_address, var/text)
+/obj/item/communicator/proc/request_im(atom/candidate, origin_address, text)
 	var/who = null
 	if(isobserver(candidate))
 		var/mob/observer/dead/ghost = candidate
@@ -110,6 +110,7 @@
 				usr.client.mob.log_talk("(COMM: [src]) sent \"[message]\" to [exonet.get_atom_from_address(comm.exonet.address)]", LOG_PDA)
 				to_chat(usr, span_notice("[icon2html(src,usr.client)] Sent message to [istype(comm, /obj/item/communicator) ? comm.owner : comm.name], <b>\"[message]\"</b> (<a href='byond://?src=\ref[src];action=Reply;target=\ref[exonet.get_atom_from_address(comm.exonet.address)]'>Reply</a>)"))
 
+/* Outpost 21 edit- Communicator removal
 // Verb: text_communicator()
 // Parameters: None
 // Description: Allows a ghost to send a text message to a communicator.
@@ -129,7 +130,7 @@
 		return //something is terribly wrong
 
 	for(var/mob/living/L in GLOB.mob_list) //Simple check so you don't have dead people calling.
-		if(src.client.prefs.real_name == L.real_name)
+		if(src.client.prefs.read_preference(/datum/preference/name/real_name) == L.real_name)
 			to_chat(src, span_danger("Your identity is already present in the game world.  Please load in a different character first."))
 			return
 
@@ -140,7 +141,7 @@
 		return
 
 	var/list/choices = list()
-	for(var/obj/item/communicator/comm in all_communicators)
+	for(var/obj/item/communicator/comm in GLOB.all_communicators)
 		if(!comm.network_visibility || !comm.exonet || !comm.exonet.address)
 			continue
 		choices.Add(comm)
@@ -183,3 +184,4 @@
 		HTML += line + "<br>"
 	HTML +="</body></html>"
 	usr << browse(HTML, "window=log;size=400x444;border=1;can_resize=1;can_close=1;can_minimize=0")
+*/

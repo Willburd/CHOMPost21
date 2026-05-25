@@ -166,7 +166,7 @@
 
 	add_fingerprint(ui.user)
 
-/obj/machinery/atmospherics/unary/cryo_cell/attackby(var/obj/item/G as obj, var/mob/user as mob)
+/obj/machinery/atmospherics/unary/cryo_cell/attackby(obj/item/G as obj, mob/user as mob)
 	if(istype(G, /obj/item/reagent_containers/glass))
 		if(beaker)
 			to_chat(user, span_warning("A beaker is already loaded into the machine."))
@@ -193,7 +193,7 @@
 
 	return
 
-/obj/machinery/atmospherics/unary/cryo_cell/MouseDrop_T(var/mob/target, var/mob/user) //Allows borgs to put people into cryo without external assistance
+/obj/machinery/atmospherics/unary/cryo_cell/MouseDrop_T(mob/target, mob/user) //Allows borgs to put people into cryo without external assistance
 	if(user.stat || user.lying || !Adjacent(user) || !target.Adjacent(user)|| !ishuman(target))
 		return
 	put_mob(target)
@@ -270,6 +270,7 @@
 		occupant.bodytemperature = 261									  // Changed to 70 from 140 by Zuhayr due to reoccurance of bug.
 	unbuckle_mob(occupant, force = TRUE)
 	occupant.cozyloop.stop() // CHOMPStation Add: Cozy Music
+	//REMOVE_TRAIT(occupant, TRAIT_STASIS, REF(src)) //Stops life almost entirely, so not done here.
 	occupant = null
 	current_heat_capacity = initial(current_heat_capacity)
 	update_use_power(USE_POWER_IDLE)
@@ -286,9 +287,11 @@
 	if(occupant)
 		to_chat(usr, span_danger("The cryo cell is already occupied!"))
 		return
+	/* Outpost 21 edit(port) - Disable abiotic lockout
 	if(M.abiotic())
 		to_chat(usr, span_warning("Subject may not have abiotic items on."))
 		return
+	*/
 	if(!node)
 		to_chat(usr, span_warning("The cell is not correctly connected to its pipe network!"))
 		return
@@ -299,6 +302,7 @@
 		to_chat(M, span_boldnotice("You feel a cold liquid surround you. Your skin starts to freeze up."))
 	occupant = M
 	occupant.cozyloop.start() // CHOMPStation Add: Cozy Music
+	//ADD_TRAIT(occupant, TRAIT_STASIS, REF(src))  //Stops life almost entirely, so not done here.
 	buckle_mob(occupant, forced = TRUE, check_loc = FALSE)
 	vis_contents |= occupant
 	occupant.pixel_y += 19
@@ -342,7 +346,7 @@
 			return
 		put_mob(L)
 
-/atom/proc/return_air_for_internal_lifeform(var/mob/living/lifeform)
+/atom/proc/return_air_for_internal_lifeform(mob/living/lifeform)
 	return return_air()
 
 /obj/machinery/atmospherics/unary/cryo_cell/return_air_for_internal_lifeform()

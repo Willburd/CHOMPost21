@@ -11,10 +11,11 @@
 	shock_resist = -0.2
 	deflect_chance = 0
 	movement_cooldown = 10
+	damage_fatigue_mult = 0
 	status_flags = null
 	special_attack_min_range = 0
 	special_attack_max_range = 14
-	wreckage = /obj/item/prop/tyrlore/gatekeeper
+	wreckage = /obj/item/trash/material/circuit
 
 	melee_miss_chance = 0
 	see_in_dark = 14

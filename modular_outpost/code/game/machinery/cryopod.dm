@@ -20,7 +20,7 @@
 
 	time_till_despawn = 60 //1 second, lets make this fast
 
-/obj/machinery/cryopod/proc/log_special_item(var/atom/movable/item,var/mob/to_despawn)
+/obj/machinery/cryopod/proc/log_special_item(atom/movable/item,mob/to_despawn)
 	ASSERT(item && to_despawn)
 
 	var/loaded_from_key

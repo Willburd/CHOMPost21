@@ -55,7 +55,7 @@
 	inherent_verbs = list(
 		/mob/living/carbon/human/proc/tie_hair)
 
-/datum/species/human/get_bodytype(var/mob/living/carbon/human/H)
+/datum/species/human/get_bodytype(mob/living/carbon/human/H)
 	return SPECIES_HUMAN
 
 /datum/species/human/vatgrown
@@ -187,13 +187,13 @@
 		)
 
 	default_emotes = list(
-		/decl/emote/human/swish,
-		/decl/emote/human/wag,
-		/decl/emote/human/sway,
-		/decl/emote/human/qwag,
-		/decl/emote/human/fastsway,
-		/decl/emote/human/swag,
-		/decl/emote/human/stopsway
+		/datum/decl/emote/human/swish,
+		/datum/decl/emote/human/wag,
+		/datum/decl/emote/human/sway,
+		/datum/decl/emote/human/qwag,
+		/datum/decl/emote/human/fastsway,
+		/datum/decl/emote/human/swag,
+		/datum/decl/emote/human/stopsway
 	)
 
 	footstep = FOOTSTEP_MOB_CLAW
@@ -201,7 +201,7 @@
 	inherent_verbs = list(/mob/living/carbon/human/proc/tie_hair)
 	wikilink="https://wiki.chompstation13.net/index.php?title=Unathi" //CHOMPSedit: link to our wiki
 
-/datum/species/unathi/equip_survival_gear(var/mob/living/carbon/human/H)
+/datum/species/unathi/equip_survival_gear(mob/living/carbon/human/H)
 	..()
 	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/sandal(H),slot_shoes)
 
@@ -307,21 +307,21 @@
 
 	default_emotes = list(
 		//VOREStation Add
-		/decl/emote/audible/gnarl,
-		/decl/emote/audible/purr,
-		/decl/emote/audible/purrlong,
+		/datum/decl/emote/audible/gnarl,
+		/datum/decl/emote/audible/purr,
+		/datum/decl/emote/audible/purrlong,
 		//VOREStation Add End
-		/decl/emote/human/swish,
-		/decl/emote/human/wag,
-		/decl/emote/human/sway,
-		/decl/emote/human/qwag,
-		/decl/emote/human/fastsway,
-		/decl/emote/human/swag,
-		/decl/emote/human/stopsway
+		/datum/decl/emote/human/swish,
+		/datum/decl/emote/human/wag,
+		/datum/decl/emote/human/sway,
+		/datum/decl/emote/human/qwag,
+		/datum/decl/emote/human/fastsway,
+		/datum/decl/emote/human/swag,
+		/datum/decl/emote/human/stopsway
 	)
 	inherent_verbs = list(/mob/living/carbon/human/proc/lick_wounds, /mob/living/carbon/human/proc/tie_hair)
 
-/datum/species/tajaran/equip_survival_gear(var/mob/living/carbon/human/H)
+/datum/species/tajaran/equip_survival_gear(mob/living/carbon/human/H)
 	..()
 	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/sandal(H),slot_shoes)
 
@@ -424,10 +424,10 @@
 		)
 
 	default_emotes = list(
-		/decl/emote/audible/warble,
-		/decl/emote/audible/lwarble,
-		/decl/emote/audible/croon,
-		/decl/emote/audible/croak
+		/datum/decl/emote/audible/warble,
+		/datum/decl/emote/audible/lwarble,
+		/datum/decl/emote/audible/croon,
+		/datum/decl/emote/audible/croak
 	)
 	inherent_verbs = list(/mob/living/carbon/human/proc/tie_hair, /mob/living/carbon/human/proc/water_stealth, /mob/living/carbon/human/proc/underwater_devour)
 
@@ -520,11 +520,12 @@
 
 
 	default_emotes = list(
-		/decl/emote/audible/chirp
+		/datum/decl/emote/audible/chirp
 	)
 	inherent_verbs = list(/mob/living/carbon/human/proc/tie_hair)
 
-/datum/species/zaddat/equip_survival_gear(var/mob/living/carbon/human/H)
+/* Outpost 21 edit - Use ours
+/datum/species/zaddat/equip_survival_gear(mob/living/carbon/human/H)
 	..()
 	if(H.wear_suit) //get rid of job labcoats so they don't stop us from equipping the Shroud
 		qdel(H.wear_suit) //if you know how to gently set it in like, their backpack or whatever, be my guest
@@ -535,6 +536,7 @@
 
 	H.equip_to_slot_or_del(new /obj/item/clothing/mask/gas/zaddat/(H), slot_wear_mask) // mask has to come first or Shroud helmet will get in the way
 	H.equip_to_slot_or_del(new /obj/item/clothing/suit/space/void/zaddat/(H), slot_wear_suit)
+*/
 
 /datum/species/diona
 
@@ -633,27 +635,27 @@
 	genders = list(MALE, FEMALE, PLURAL, NEUTER)
 
 	default_emotes = list(
-		/decl/emote/audible/chirp,
-		/decl/emote/audible/multichirp
+		/datum/decl/emote/audible/chirp,
+		/datum/decl/emote/audible/multichirp
 	)
 
-/datum/species/diona/can_understand(var/mob/other)
+/datum/species/diona/can_understand(mob/other)
 	if(istype(other, /mob/living/carbon/alien/diona))
 		return TRUE
 	return FALSE
 
-/datum/species/diona/equip_survival_gear(var/mob/living/carbon/human/H)
+/datum/species/diona/equip_survival_gear(mob/living/carbon/human/H)
 	if(H.backbag == 1)
 		H.equip_to_slot_or_del(new /obj/item/flashlight/flare(H), slot_r_hand)
 	else
 		H.equip_to_slot_or_del(new /obj/item/flashlight/flare(H.back), slot_in_backpack)
 
-/datum/species/diona/handle_post_spawn(var/mob/living/carbon/human/H)
+/datum/species/diona/handle_post_spawn(mob/living/carbon/human/H)
 	H.gender = NEUTER
 	ADD_TRAIT(H, UNIQUE_MINDSTRUCTURE, ROUNDSTART_TRAIT)
 	return ..()
 
-/datum/species/diona/handle_death(var/mob/living/carbon/human/H)
+/datum/species/diona/handle_death(mob/living/carbon/human/H)
 
 	var/mob/living/carbon/alien/diona/S = new(get_turf(H))
 
@@ -682,18 +684,18 @@
 
 	H.visible_message(span_danger("\The [H] splits apart with a wet slithering noise!"))
 
-/datum/species/diona/handle_environment_special(var/mob/living/carbon/human/H)
+/datum/species/diona/handle_environment_special(mob/living/carbon/human/H)
 	if(H.inStasisNow())
 		return
 
 	var/obj/item/organ/internal/diona/node/light_organ = locate() in H.internal_organs
 
 	if(light_organ && !light_organ.is_broken())
-		// outpost 21 addition begin - lockers are dark and spooky!
+		// outpost 21 edit begin - lockers are dark and spooky!
 		var/light_amount = 0 //how much light there is in the place, affects receiving nutrition and healing
 		if(istype(H.loc,/obj/structure/closet))
 			light_amount = 0 // it's dark in here!
-		// outpost 21 addition end
+		// outpost 21 edit end
 		else if(isturf(H.loc)) //else, there's considered to be no light
 			var/turf/T = H.loc
 			light_amount = T.get_lumcount() * 10
@@ -1036,7 +1038,7 @@
 	water_breather = TRUE
 	water_movement = -4 //Negates shallow. Halves deep.
 
-/datum/species/zaddat/equip_survival_gear(var/mob/living/carbon/human/H)
+/datum/species/zaddat/equip_survival_gear(mob/living/carbon/human/H)
 	.=..()
 	var/obj/item/storage/toolbox/lunchbox/survival/zaddat/L = new(get_turf(H))
 	if(H.backbag == 1)
@@ -1232,14 +1234,14 @@
 		)
 
 	default_emotes = list(
-		/decl/emote/audible/teshsqueak,
-		/decl/emote/audible/teshchirp,
-		/decl/emote/audible/teshtrill
+		/datum/decl/emote/audible/teshsqueak,
+		/datum/decl/emote/audible/teshchirp,
+		/datum/decl/emote/audible/teshtrill
 	)
 
 	footstep = FOOTSTEP_MOB_TESHARI
 
-/datum/species/teshari/equip_survival_gear(var/mob/living/carbon/human/H)
+/datum/species/teshari/equip_survival_gear(mob/living/carbon/human/H)
 	..()
 	//if(!(H.client?.prefs?.shoe_hater)) //CHOMPStation Edit. Disables shoe_hater. Un-indents below line by 1.
 	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/sandal(H),slot_shoes)
@@ -1596,7 +1598,7 @@
 
 	climb_mult = 0.75
 
-/datum/species/spider/handle_environment_special(var/mob/living/carbon/human/H)
+/datum/species/spider/handle_environment_special(mob/living/carbon/human/H)
 	if(H.stat == DEAD) // If they're dead they won't need anything.
 		return
 
@@ -1756,7 +1758,7 @@
 
 	species_component = list(/datum/component/xenochimera)
 
-/datum/species/xenochimera/handle_environment_special(var/mob/living/carbon/human/H)
+/datum/species/xenochimera/handle_environment_special(mob/living/carbon/human/H)
 	//Cold/pressure effects when not regenerating
 	var/datum/gas_mixture/environment = H.loc.return_air()
 	var/pressure2 = environment.return_pressure()

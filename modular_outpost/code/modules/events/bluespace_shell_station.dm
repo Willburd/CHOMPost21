@@ -49,7 +49,7 @@
 	finalareas -= /area/muriki/crew/bunker_deep
 
 /datum/event/bluespace_shelling/announce()
-	command_announcement.Announce("Attention [station_name()]. Bluespace shelling confirmed for [department_name]. Fire for Effect. All crew must retreat to a safe distance, seek shelter, and remain in place until the all clear is given. ETA 30 seconds.", "Bluespace Shelling")
+	GLOB.command_announcement.Announce("Attention [station_name()]. Bluespace shelling confirmed for [department_name]. Fire for Effect. All crew must retreat to a safe distance, seek shelter, and remain in place until the all clear is given. ETA 30 seconds.", "Bluespace Shelling", new_sound = ANNOUNCER_MSG_BSA_FIRED)
 	set_security_level(seclevel)
 
 /datum/event/bluespace_shelling/tick()
@@ -66,7 +66,7 @@
 				boom(1)
 
 			if(spawncount == 1)
-				command_announcement.Announce("Attention [station_name()]. Commencing final volley, brace for impact.", "Bluespace Shelling")
+				GLOB.command_announcement.Announce("Attention [station_name()]. Commencing final volley, brace for impact.", "Bluespace Shelling")
 		else
 			// end it
 			boom(2)
@@ -77,10 +77,10 @@
 			if(prob(20))
 				boom(1)
 			endWhen = 0 // Now
-			command_announcement.Announce("Cease Fire. Cease Fire. Bluespace artillery shelling has finalized. Assess damage, and begin repair operations.", "Bluespace Shelling")
+			GLOB.command_announcement.Announce("Cease Fire. Cease Fire. Bluespace artillery shelling has finalized. Assess damage, and begin repair operations.", "Bluespace Shelling")
 		spawncount--
 
-/datum/event/bluespace_shelling/proc/boom(var/mult)
+/datum/event/bluespace_shelling/proc/boom(mult)
 	var/hitsize = rand(1,2) * mult
 	if(spawncount <= 0)
 		hitsize = rand(2,5) * mult // final shots

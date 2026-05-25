@@ -1,4 +1,4 @@
-/var/global/sent_chus_to_station = 0
+GLOBAL_VAR_INIT(sent_chus_to_station, 0)
 
 /datum/event/chu_infestation
 	announceWhen	= 90
@@ -8,10 +8,10 @@
 /datum/event/chu_infestation/setup()
 	announceWhen = rand(announceWhen, announceWhen + rand(60,100))
 	spawncount = rand(2 * severity, 5 * severity)
-	sent_chus_to_station = 1
+	GLOB.sent_chus_to_station = 1
 
 /datum/event/chu_infestation/announce()
-	command_announcement.Announce("Massive migration of unknown biological entities has been detected near [location_name()], please stand-by.", "Lifesign Alert")
+	GLOB.command_announcement.Announce("Massive migration of unknown biological entities has been detected near [location_name()], please stand-by.", "Lifesign Alert", new_sound = ANNOUNCER_MSG_UNIDENTIFIED_LIFESIGNS)
 
 /datum/event/chu_infestation/start()
 	var/list/vents = list()

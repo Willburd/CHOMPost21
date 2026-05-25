@@ -3,7 +3,7 @@
 /turf/template_noop,
 /area/template_noop)
 "g" = (
-/obj/machinery/trailblazer/yellow,
+/obj/structure/trailblazer/yellow,
 /turf/template_noop,
 /area/submap/outpost21/yard_generic)
 "R" = (

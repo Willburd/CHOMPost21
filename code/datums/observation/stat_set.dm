@@ -8,9 +8,9 @@
 //			/old_stat: Status before the change.
 //			/new_stat: Status after the change.
 /*
-stat_set_event, /decl/observ/stat_set, new)
+stat_set_event, /datum/decl/observ/stat_set, new)
 
-/decl/observ/stat_set
+/datum/decl/observ/stat_set
 	name = "Stat Set"
 	expected_type = /mob/living
 */
@@ -19,7 +19,7 @@ stat_set_event, /decl/observ/stat_set, new)
 /****************
 * Stat Handling *
 ****************/
-/mob/living/set_stat(var/new_stat)
+/mob/living/set_stat(new_stat)
 	var/old_stat = stat
 	. = ..()
 	if(stat != old_stat)

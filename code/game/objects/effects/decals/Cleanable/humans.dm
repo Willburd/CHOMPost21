@@ -18,10 +18,6 @@
 	var/synthblood = 0
 	var/list/datum/disease/viruses = list()
 	var/amount = 5
-	// Outpost 21 addition begin
-	var/customname
-	var/customdesc
-	// Outpost 21 addition end
 	generic_filth = TRUE
 	persistent = FALSE
 	var/delete_me = FALSE
@@ -57,7 +53,7 @@
 						qdel(B)
 
 //VOREstation edit - Moved timer call to Init, and made it not call on mapload
-/obj/effect/decal/cleanable/blood/Initialize(mapload, var/_age)
+/obj/effect/decal/cleanable/blood/Initialize(mapload, _age)
 	. = ..()
 	if(!mapload)
 		addtimer(CALLBACK(src, PROC_REF(dry)), DRYING_TIME * (amount+1))
@@ -68,16 +64,7 @@
 /obj/effect/decal/cleanable/blood/update_icon()
 	if(basecolor == "rainbow") basecolor = get_random_colour(1)
 	color = basecolor
-
-	// Outpost 21 addition begin - Custom description for goop
-	if(customname)
-		name = customname
-		if(customdesc)
-			desc = customdesc
-		else
-			desc = initial(desc)
-	// Outpost 21 addition end
-	else if(basecolor == SYNTH_BLOOD_COLOUR)
+	if(basecolor == SYNTH_BLOOD_COLOUR)
 		name = "oil"
 		desc = "It's quite oily."
 	else if(synthblood)
@@ -250,7 +237,7 @@
 	random_icon_states = list("gibmid1", "gibmid2", "gibmid3")
 
 
-/obj/effect/decal/cleanable/blood/gibs/proc/streak(var/list/directions)
+/obj/effect/decal/cleanable/blood/gibs/proc/streak(list/directions)
 	spawn (0)
 		var/direction = pick(directions)
 		for (var/i = 0, i < pick(1, 200; 2, 150; 3, 50; 4), i++)

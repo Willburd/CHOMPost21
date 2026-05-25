@@ -1,4 +1,4 @@
-/proc/bluespace_bag_malfunction( var/mob/user, var/obj/item/bag_holding, var/obj/item/stored_item )
+/proc/bluespace_bag_malfunction( mob/user, obj/item/bag_holding, obj/item/stored_item )
 	if(prob(10))
 		to_chat(user, span_danger("\The [stored_item] violently explodes as it is inserted into \the [bag_holding]!"))
 		explosion(get_turf(stored_item),1,1,2,3)
@@ -60,6 +60,13 @@
 			do_teleport(right_arm, right_arm, 0, TRUE, forced = TRUE, channel = TELEPORT_CHANNEL_QUANTUM)
 		if(left_arm || right_arm)
 			H.emote("scream")
+		return
+
+	if(prob(10))
+		to_chat(user, span_danger("Both \the [stored_item] and \the [bag_holding] collapse violently into a singularity!"))
+		new /obj/effect/bhole(get_turf(stored_item))
+		qdel(bag_holding)
+		qdel(stored_item)
 		return
 
 	to_chat(user, span_warning("The Bluespace interfaces of the two devices conflict and malfunction."))

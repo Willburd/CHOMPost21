@@ -93,7 +93,7 @@
 	. = ..()
 	update_icon()
 
-/obj/structure/reagent_dispensers/souppot/attackby(var/obj/item/O as obj, var/mob/user as mob)
+/obj/structure/reagent_dispensers/souppot/attackby(obj/item/O as obj, mob/user as mob)
 	. = ..()
 	if(.)
 		return
@@ -180,5 +180,29 @@
 	flags = OPENCONTAINER
 
 /obj/structure/reagent_dispensers/medical_waste_tank/Initialize(mapload)
+	. = ..()
+	AddElement(/datum/element/climbable)
+
+
+
+/obj/structure/reagent_dispensers/poly_acid_tank
+	name = REAGENT_PACID + " tank"
+	desc = "A large tank of polytrinic acid. A syndicate classic."
+	icon_state = "mwaste"
+	icon = 'modular_outpost/icons/obj/chemical_tanks.dmi'
+
+/obj/structure/reagent_dispensers/poly_acid_tank/Initialize(mapload)
+	. = ..()
+	AddElement(/datum/element/climbable)
+
+
+
+/obj/structure/reagent_dispensers/lube_tank
+	name = REAGENT_LUBE + " tank"
+	desc = "A large tank of lube. The clown's personal heaven is about to manifest."
+	icon_state = "he3"
+	icon = 'icons/obj/chemical_tanks.dmi'
+
+/obj/structure/reagent_dispensers/lube_tank/Initialize(mapload)
 	. = ..()
 	AddElement(/datum/element/climbable)

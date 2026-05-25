@@ -14,7 +14,7 @@
 	spawncount = rand(2 * severity, 4 * severity)
 
 	for(var/obj/machinery/atmospherics/unary/vent_pump/temp_vent in GLOB.machines)
-		//CHOMPEdit: Added a couple areas to the exclusion. Also made this actually work.
+		//Added a couple areas to the exclusion. Also made this actually work.
 		var/area/in_area = get_area(temp_vent)
 		if(in_area.flag_check(AREA_FORBID_EVENTS))
 			continue
@@ -23,7 +23,7 @@
 				vents += temp_vent
 
 /datum/event/metroid_infestation/announce()
-	command_announcement.Announce("High-energy lifeforms detected coming aboard [station_name()]. All crew members, stay alert, and listen to security instructions.", "Lifesign Alert", new_sound = 'sound/misc/alarm1.ogg')
+	GLOB.command_announcement.Announce("High-energy lifeforms detected coming aboard [station_name()]. All crew members, stay alert, and listen to security instructions.", "Lifesign Alert", new_sound = 'sound/misc/alarm1.ogg')
 
 /datum/event/metroid_infestation/start()
 	while((spawncount >= 1) && vents.len)
@@ -55,4 +55,4 @@
 		area_names |= metroid_area.name
 	if(area_names.len && active_metroid_event == TRUE)
 		var/english_list = english_list(area_names)
-		command_announcement.Announce("Sensors have narrowed down remaining lifeforms to the following areas: [english_list]", "Lifesign Alert")
+		GLOB.command_announcement.Announce("Sensors have narrowed down remaining lifeforms to the following areas: [english_list]", "Lifesign Alert") //No sound intentionally.

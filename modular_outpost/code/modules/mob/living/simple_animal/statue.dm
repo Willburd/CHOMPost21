@@ -2,7 +2,7 @@
 //Weeping angels/SCP-173 hype
 //Horrible shitcoding and stolen code adaptations below. You have been warned.
 //Above comment has been cleaned by the holy light of someone who knows vaguely what they are doing, and was told their ideas were pretty neato. - Willbird
-var/global/statue_photos_allowed = 3 // Photos can spawn statues... Lets not let this be easily abused! Admins can manually set this if they want more during a round...
+GLOBAL_VAR_INIT(statue_photos_allowed, 3) // Photos can spawn statues... Lets not let this be easily abused! Admins can manually set this if they want more during a round...
 
 // fake mob-like statue
 /obj/structure/prop/statue/jumpscare
@@ -69,14 +69,18 @@ var/global/statue_photos_allowed = 3 // Photos can spawn statues... Lets not let
 
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/statue
 	var/datum/weakref/cached_watcher = null
-	var/banishable = 0 // If the chaplain has any power here
+	var/banishable = TRUE // If the chaplain has any power here
 	var/view_range = 8
 
 	var/player_has_activated = FALSE // if true, allows it to start going to random places if bored
 	var/bordom_counter = 500
 
+/mob/living/simple_mob/animal/statue/Destroy()
+	cached_watcher = null
+	. = ..()
+
 // Cannot talk
-/mob/living/simple_mob/animal/statue/say(var/message, var/datum/language/speaking = null, var/whispering = 0)
+/mob/living/simple_mob/animal/statue/say(message, datum/language/speaking = null, whispering = 0)
 	return 0
 
 // Turn to dust when killed
@@ -130,7 +134,7 @@ var/global/statue_photos_allowed = 3 // Photos can spawn statues... Lets not let
 			if(prob(40))
 				L.broken()
 
-/mob/living/simple_mob/animal/statue/attackby(var/obj/item/O as obj, var/mob/user as mob) //banishing the statue is a risky job
+/mob/living/simple_mob/animal/statue/attackby(obj/item/O as obj, mob/user as mob) //banishing the statue is a risky job
 	if(istype(O, /obj/item/nullrod))
 		visible_message("<span class='warning'>[user] tries to banish [src] with [O]!</span>")
 		if(do_after(user, 2 SECONDS, target = src))
@@ -157,7 +161,7 @@ var/global/statue_photos_allowed = 3 // Photos can spawn statues... Lets not let
 	animate_movement = NO_STEPS // Do not animate movement, you jump around as you're a scary statue.
 	. = ..()
 
-/mob/living/simple_mob/animal/statue/face_atom(var/atom/A)
+/mob/living/simple_mob/animal/statue/face_atom(atom/A)
 	if(is_being_watched())
 		return
 	. = ..()
@@ -215,12 +219,12 @@ var/global/statue_photos_allowed = 3 // Photos can spawn statues... Lets not let
 				cached_watcher = WEAKREF(M.occupant)
 				return
 
-/mob/living/simple_mob/animal/statue/proc/bordom_reset(var/player)
+/mob/living/simple_mob/animal/statue/proc/bordom_reset(player)
 	if(player)
 		player_has_activated = TRUE
 	bordom_counter = max(rand(500,700),bordom_counter)
 
-/mob/living/simple_mob/animal/statue/proc/check_mob_blind(var/mob/living/M)
+/mob/living/simple_mob/animal/statue/proc/check_mob_blind(mob/living/M)
 	if(isanimal(M))
 		return M.blinded || (M.eye_blurry && prob(10)) || prob(20) // close enough to blinking for dumb animals
 	if(M.isSynthetic())
@@ -336,7 +340,7 @@ var/global/statue_photos_allowed = 3 // Photos can spawn statues... Lets not let
 		S.bordom_counter = 0 // Zoop
 	return
 
-/datum/ai_holder/simple_mob/intentional/statue/proc/blind_target(var/mob/L,var/show_messages = TRUE)
+/datum/ai_holder/simple_mob/intentional/statue/proc/blind_target(mob/L,show_messages = TRUE)
 	if(ishuman(L))
 		var/mob/living/carbon/human/H = L
 		if (H.species == SPECIES_DIONA || H.species == SPECIES_PROMETHEAN || H.species == SPECIES_PROTEAN) // can't blink and organic

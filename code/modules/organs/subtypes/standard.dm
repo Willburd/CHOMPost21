@@ -297,7 +297,7 @@
 		cannot_gib = FALSE
 	return ..()
 
-/obj/item/organ/external/head/robotize(var/company, var/skip_prosthetics, var/keep_organs)
+/obj/item/organ/external/head/robotize(company, skip_prosthetics, keep_organs)
 	. = ..(company, skip_prosthetics, 1)
 	if(model)
 		var/datum/robolimb/robohead = GLOB.all_robolimbs[model]
@@ -349,7 +349,7 @@
 		span_notice("You make \the [I] kiss \the [src]!."))
 	return ..()
 
-/obj/item/organ/external/head/get_icon(var/skeletal, var/can_apply_transparency = TRUE)
+/obj/item/organ/external/head/get_icon(skeletal, can_apply_transparency = TRUE)
 	..()
 
 	//The overlays are not drawn on the mob, they are used for if the head is removed and becomes an item
@@ -363,8 +363,8 @@
 
 	//Eye color/icon
 	var/should_have_eyes = owner.should_have_organ(O_EYES)
-	var/has_eye_color = owner.species.appearance_flags & HAS_EYE_COLOR
-	if((should_have_eyes || has_eye_color) && eye_icon)
+	var/has_eye_sprites = owner.species.appearance_flags & HAS_EYE_COLOR
+	if((should_have_eyes || has_eye_sprites) && eye_icon)
 		var/obj/item/organ/internal/eyes/eyes = owner.internal_organs_by_name[O_EYES]
 		var/icon/eyes_icon = new/icon(eye_icon_location, eye_icon)
 		//Do we have a special eye icon with its own coloration? Remove
@@ -373,7 +373,7 @@
 			if(should_have_eyes)
 				//And we have them
 				if(eyes)
-					if(has_eye_color)
+					if(has_eye_sprites)
 						eyes_icon.Blend(rgb(eyes.eye_colour[1], eyes.eye_colour[2], eyes.eye_colour[3]), ICON_ADD)
 				//They're gone!
 				else

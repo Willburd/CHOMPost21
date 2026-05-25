@@ -13,7 +13,6 @@ GLOBAL_DATUM(sleevemate_mob, /mob/living/carbon/human/dummy/mannequin)
 	throw_speed = 5
 	throw_range = 10
 	matter = list(MAT_STEEL = 200)
-	origin_tech = list(TECH_MAGNET = 2, TECH_BIO = 2)
 
 	var/datum/mind/stored_mind
 
@@ -80,7 +79,7 @@ GLOBAL_DATUM(sleevemate_mob, /mob/living/carbon/human/dummy/mannequin)
 
 
 
-/obj/item/sleevemate/attack(mob/living/M, mob/living/user)
+/obj/item/sleevemate/attack(mob/living/M, mob/living/user, target_zone, attack_modifier)
 	// Gather potential subtargets
 	var/list/choices = list(M)
 	if(istype(M))
@@ -91,7 +90,7 @@ GLOBAL_DATUM(sleevemate_mob, /mob/living/carbon/human/dummy/mannequin)
 	if(choices.len > 1)
 		var/mob/living/new_M = tgui_input_list(user, "Ambiguous target. Please validate target:", "Target Validation", choices, M)
 		if(!new_M || !M.Adjacent(user))
-			return
+			return ITEM_INTERACT_FAILURE
 		M = new_M
 
 	if(isrobot(M))
@@ -99,12 +98,14 @@ GLOBAL_DATUM(sleevemate_mob, /mob/living/carbon/human/dummy/mannequin)
 		var/obj/item/dogborg/sleeper/S = locate() in R.module.modules
 		if(S && S.patient)
 			scan_mob(S.patient, user)
-			return
+			return ITEM_INTERACT_SUCCESS
 
 	if(ishuman(M))
 		scan_mob(M, user)
+		return ITEM_INTERACT_SUCCESS
 	else
 		to_chat(user,span_warning("Not a compatible subject to work with!"))
+		return ITEM_INTERACT_FAILURE
 
 /obj/item/sleevemate/attack_self(mob/living/user)
 	. = ..(user)
@@ -229,6 +230,12 @@ GLOBAL_DATUM(sleevemate_mob, /mob/living/carbon/human/dummy/mannequin)
 			to_chat(usr,span_warning("Target seems totally braindead."))
 			return
 
+		// Outpost 21 edit begin - Coredump prevents scans
+		if(SStranscore.default_db?.core_dumped)
+			to_chat(usr,span_danger("Transcore safety interlock failure. Resleeving database is dumped and offline."))
+			return
+		// Outpost 21 edit end
+
 		/* Outpost 21 edit - Nif removal
 		var/nif
 		if(ishuman(target))
@@ -266,6 +273,12 @@ GLOBAL_DATUM(sleevemate_mob, /mob/living/carbon/human/dummy/mannequin)
 		if(!ishuman(target))
 			to_chat(usr,span_warning("Target is not of an acceeptable body type."))
 			return
+
+		// Outpost 21 edit begin - Coredump prevents scans
+		if(SStranscore.default_db?.core_dumped)
+			to_chat(usr,span_danger("Transcore safety interlock failure. Resleeving database is dumped and offline."))
+			return
+		// Outpost 21 edit end
 
 		var/mob/living/carbon/human/H = target
 
@@ -386,7 +399,7 @@ GLOBAL_DATUM(sleevemate_mob, /mob/living/carbon/human/dummy/mannequin)
 	else
 		icon_state = initial(icon_state)
 
-/obj/item/sleevemate/emag_act(var/remaining_charges, var/mob/user)
+/obj/item/sleevemate/emag_act(remaining_charges, mob/user)
 	//CHOMPEdit Start
 	var/list/choices = list("Body Snatcher","Mind Binder","Corruptor") // Outpost 21 edit - Emagged sleevemate
 	var/choice = tgui_input_list(user, "How would you like to modify the [src]?", "", choices)

@@ -12,10 +12,13 @@
 	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_WHITELIST_SELECTABLE // Almost an antag, whitelist please
 
 /datum/species/crew_shadekin
-	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_WHITELIST_SELECTABLE // Allowed here but still whitelist for lore
+	spawn_flags = SPECIES_CAN_JOIN | SPECIES_WHITELIST_SELECTABLE
 
 /datum/species/xenomorph_hybrid
 	spawn_flags = SPECIES_CAN_JOIN | SPECIES_IS_WHITELISTED | SPECIES_WHITELIST_SELECTABLE // Was going to be restricted, but made whitelist instead
+
+/datum/species/diona
+	spawn_flags = SPECIES_CAN_JOIN // Allow unrestricted diona
 
 /////////////////////////////////////////////////////////////////////////////////
 // Disabled section

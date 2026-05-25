@@ -82,50 +82,50 @@
 
 /* Unported stuff, We already have things that match these. These were made for the yinglet species icon, and likely will not fit anyway.
 // this doesnt function do to how the tail code works
-// /decl/sprite_accessory/marking/yinglet/recolour_under_tail
+// /datum/decl/sprite_accessory/marking/yinglet/recolour_under_tail
 //	name = "Tail Underfluff Colour"
 //	icon_state = "underfluff"
 
-/decl/sprite_accessory/hair/yinglet
+/datum/decl/sprite_accessory/hair/yinglet
 	name = "Ying Messy"
 	icon_state = "hair_messy"
 	species_allowed = list(SPECIES_YINGLET)
 	icon = 'icons/mob/scav/hair.dmi'
 	blend = ICON_MULTIPLY
 
-/decl/sprite_accessory/hair/yinglet/afro
+/datum/decl/sprite_accessory/hair/yinglet/afro
 	name = "Ying Afro"
 	icon_state = "hair_afro"
 
-/decl/sprite_accessory/hair/yinglet/familyman
+/datum/decl/sprite_accessory/hair/yinglet/familyman
 	name = "Ying Family Man"
 	icon_state = "hair_familyman"
 
-/decl/sprite_accessory/hair/yinglet/spiky
+/datum/decl/sprite_accessory/hair/yinglet/spiky
 	name = "Ying Spiky"
 	icon_state = "hair_spiky"
 
-/decl/sprite_accessory/hair/yinglet/ponytail
+/datum/decl/sprite_accessory/hair/yinglet/ponytail
 	name = "Ying Ponytail"
 	icon_state = "hair_ponytail"
 	flags = HAIR_TIEABLE
 
-/decl/sprite_accessory/hair/yinglet/long
+/datum/decl/sprite_accessory/hair/yinglet/long
 	name = "Ying Long Hair"
 	icon_state = "hair_long"
 	flags = HAIR_TIEABLE
 
-/decl/sprite_accessory/hair/yinglet/longmessy
+/datum/decl/sprite_accessory/hair/yinglet/longmessy
 	name = "Ying Long Messy Hair"
 	icon_state = "hair_longmessy"
 	flags = HAIR_TIEABLE
 
-/decl/sprite_accessory/hair/yinglet/updo
+/datum/decl/sprite_accessory/hair/yinglet/updo
 	name = "Ying Updo"
 	icon_state = "hair_updo"
 	flags = HAIR_TIEABLE
 
-/decl/sprite_accessory/hair/yinglet/bald
+/datum/decl/sprite_accessory/hair/yinglet/bald
 	name = "Ying Bald"
 	icon_state = "hair_bald"
 	flags = VERY_SHORT | HAIR_BALD

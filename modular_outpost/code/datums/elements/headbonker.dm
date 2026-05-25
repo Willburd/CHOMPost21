@@ -21,10 +21,10 @@
 		return FALSE
 	return TRUE
 
-/datum/element/headbonk/proc/clonk(atom/source,var/mob/living/M)
-	playsound(source,'sound/effects/clang1.ogg')
+/datum/element/headbonk/proc/clonk(atom/source,mob/living/M)
+	playsound(source, 'modular_outpost/sound/effects/clonk.ogg', 100, 1)
 	playsound(source,"punch")
-	M.visible_message(span_danger("\The [M] bonks their head into \the [source]!"))
+	M.visible_message(span_danger("\The [M] clonks their head into \the [source]!"))
 	M.Stun(5)
 	M.Weaken(5)
 	M.apply_damage(rand(1,3),BRUTE,BP_HEAD)

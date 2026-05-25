@@ -300,7 +300,7 @@
 	. = ..()
 
 /turf/simulated/floor/outdoors/grass/heavy/randomgen
-	initial_flooring = /decl/flooring/grass/heavy
+	initial_flooring = /datum/decl/flooring/grass/heavy
 	name = "heavy grass"
 	icon_state = "grass-heavy0"
 	edge_blending_priority = 4
@@ -318,7 +318,7 @@
 	icon_state = "snow"
 	edge_blending_priority = 6
 	movement_cost = 2
-	initial_flooring = /decl/flooring/snow
+	initial_flooring = /datum/decl/flooring/snow
 	demote_to = /turf/simulated/floor/outdoors/dirt
 
 /turf/simulated/floor/outdoors/snow/thor/planetuse/Entered(atom/A)
@@ -336,7 +336,7 @@
 	for(var/d in crossed_dirs)
 		add_overlay(image(icon = 'icons/turf/outdoors.dmi', icon_state = "snow_footprints", dir = text2num(d)))
 
-/turf/simulated/floor/outdoors/snow/thor/planetuse/attackby(var/obj/item/W, var/mob/user)
+/turf/simulated/floor/outdoors/snow/thor/planetuse/attackby(obj/item/W, mob/user)
 	if(istype(W, /obj/item/shovel))
 		to_chat(user, span_notice("You begin to remove \the [src] with your [W]."))
 		if(do_after(user, 4 SECONDS * W.toolspeed, src))
@@ -357,7 +357,7 @@
 	return
 
 /obj/effect/step_trigger/teleporter/planetary_fall/thor/find_planet()
-	planet = planet_thor
+	planet = GLOB.planet_thor
 
 // Space mineral tiles are now not the default, so they get demoted to subtype status.
 /turf/simulated/mineral/thor/vacuum

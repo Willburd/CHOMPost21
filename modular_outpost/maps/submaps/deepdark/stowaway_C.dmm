@@ -1,0 +1,372 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/template_noop,
+/area/template_noop)
+"b" = (
+/obj/random/junk,
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"c" = (
+/obj/effect/auto_crayon{
+	icon_state = "one_wrath"
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"d" = (
+/obj/random/junk,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"h" = (
+/obj/random/trash,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"k" = (
+/obj/effect/landmark/bslocker,
+/turf/simulated/floor/wood/broken/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"l" = (
+/obj/structure/closet/tent/B,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"o" = (
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"p" = (
+/obj/structure/barricade/sandbag,
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"q" = (
+/obj/structure/reagent_dispensers/fueltank/barrel/two,
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"r" = (
+/turf/simulated/floor/wood/broken/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"t" = (
+/obj/structure/barricade,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"v" = (
+/turf/simulated/wall/stonelogs/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"w" = (
+/obj/random/junk,
+/turf/simulated/floor/wood/broken/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"z" = (
+/obj/structure/table/woodentable,
+/obj/random/maintenance,
+/obj/random/maintenance,
+/obj/random/maintenance,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"B" = (
+/obj/structure/closet/tent/B,
+/obj/effect/landmark/redspaceexit,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"C" = (
+/turf/simulated/mineral/alt/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"E" = (
+/obj/structure/simple_door/wood,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"F" = (
+/turf/simulated/wall/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"G" = (
+/obj/structure/table/woodentable,
+/obj/random/maintenance/security,
+/obj/random/maintenance/misc,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"J" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"K" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"P" = (
+/obj/item/sticky_pad,
+/obj/item/sticky_pad,
+/obj/item/sticky_pad,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"R" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/pickaxe,
+/obj/effect/landmark/loot_spawn,
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"S" = (
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"U" = (
+/obj/item/pickaxe,
+/obj/effect/auto_crayon{
+	icon_state = "air"
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"V" = (
+/obj/random/maintenance/foodstuff,
+/obj/random/maintenance/foodstuff,
+/obj/structure/table/woodentable,
+/obj/item/pickaxe,
+/turf/simulated/floor/wood/broken/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"W" = (
+/turf/template_noop,
+/area/mine/explored/muriki/cave/deepdark)
+"Y" = (
+/obj/structure/table/woodentable,
+/obj/random/maintenance/medical,
+/obj/random/maintenance/medical,
+/obj/random/maintenance/morestuff,
+/obj/random/maintenance/morestuff,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Z" = (
+/obj/effect/landmark/loot_spawn,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+
+(1,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+"}
+(2,1,1) = {"
+a
+W
+W
+C
+C
+q
+o
+o
+b
+o
+o
+o
+o
+p
+p
+p
+p
+o
+W
+a
+"}
+(3,1,1) = {"
+a
+W
+C
+v
+v
+v
+E
+v
+v
+v
+C
+R
+o
+o
+K
+o
+p
+o
+o
+a
+"}
+(4,1,1) = {"
+a
+C
+C
+v
+l
+S
+S
+r
+Y
+v
+C
+C
+v
+E
+v
+v
+v
+v
+W
+a
+"}
+(5,1,1) = {"
+a
+C
+C
+v
+S
+S
+c
+S
+G
+v
+v
+v
+v
+P
+h
+S
+k
+v
+W
+a
+"}
+(6,1,1) = {"
+a
+C
+C
+v
+V
+r
+d
+r
+z
+E
+r
+F
+F
+t
+t
+S
+U
+v
+C
+a
+"}
+(7,1,1) = {"
+a
+C
+C
+v
+B
+S
+d
+w
+r
+F
+Z
+E
+r
+h
+J
+S
+r
+v
+C
+a
+"}
+(8,1,1) = {"
+a
+W
+C
+v
+v
+v
+v
+v
+v
+v
+v
+v
+v
+v
+v
+v
+v
+v
+C
+a
+"}
+(9,1,1) = {"
+a
+W
+W
+C
+C
+C
+C
+C
+C
+C
+W
+W
+W
+W
+C
+C
+C
+C
+W
+a
+"}
+(10,1,1) = {"
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+"}

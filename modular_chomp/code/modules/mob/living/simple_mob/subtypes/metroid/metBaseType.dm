@@ -61,6 +61,7 @@
 	meat_type = /obj/item/reagent_containers/food/snacks/metroidmeat
 
 	can_be_drop_prey = FALSE //CHOMP Add
+	devourable = FALSE // Outpost 21 edit - devour forbidden due to how strong vore is
 
 	enzyme_affect = FALSE // Outpost 21 add
 
@@ -73,6 +74,8 @@
 	nutrition = 100		//Have them start off pretty hungry still.
 	if(istype(src,/mob/living/simple_mob/metroid/juvenile)) // Outpost 21 edit - Lock to babys
 		add_verb(src,/mob/living/proc/ventcrawl) //CHOMPEdit TGPanel //May not do anything at the moment.
+	if(istype(src,/mob/living/simple_mob/metroid/juvenile/zeta) || istype(src,/mob/living/simple_mob/metroid/juvenile/omega) || istype(src,/mob/living/simple_mob/metroid/juvenile/queen)) // Outpost 21 edit - Digging troids
+		ADD_TRAIT(src, TRAIT_NATURALTUNNELER, ROUNDSTART_TRAIT)
 	return ..()
 
 /datum/say_list/metroid

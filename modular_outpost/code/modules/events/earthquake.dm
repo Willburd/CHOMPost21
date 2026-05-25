@@ -3,7 +3,7 @@
 	startWhen = 20
 
 /datum/event/quake/announce()
-	command_announcement.Announce("Sudden seismic activity detected in lower crust. Possible tectonic event incoming. All personnel should seek structurally safe locations and stay low to the ground.", "Structural Alert")
+	GLOB.command_announcement.Announce("Sudden seismic activity detected in lower crust. Possible tectonic event incoming. All personnel should seek structurally safe locations and stay low to the ground.", "Structural Alert", new_sound = ANNOUNCER_MSG_EARTHQUAKE)
 
 /datum/event/quake/start()
 	var/datum/planet/P = pick(SSplanets.planets)
@@ -13,7 +13,9 @@
 	affecting_z = P.expected_z_levels.Copy()
 	if(!affecting_z.len)
 		return
+	station_quake(affecting_z)
 
+/proc/station_quake(list/affecting_z)
 	// Vibe lights
 	for(var/obj/machinery/light/L in GLOB.machines)
 		if(!(L.z in affecting_z))

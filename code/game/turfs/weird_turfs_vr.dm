@@ -29,10 +29,10 @@
 				L.visible_message("[L]'s body gives off a faint, sparking, haze...", "Your body gives off a faint, sparking, haze...", runemessage = "gives off a faint, sparking haze")
 		var/datum/component/shadekin/comp = L.GetComponent(/datum/component/shadekin)
 		if(comp)
-			comp.dark_energy += 10
+			// comp.dark_energy += 10 // Outpost 21 edit(port) - Regen in dark tiles over time
 			if(prob(10))
 				to_chat(L, span_notice("You can feel the energy flowing into you!"))
-		else if(prob(0.25))
+		else if(prob(4)) // Outpost 21 edit - Raised from 0.25 chance
 			to_chat(L, span_danger("The darkness seethes under your feet..."))
 			L.hallucination += 50
 
@@ -87,10 +87,10 @@
 				L.visible_message("[L]'s body gives off a faint, sparking, haze...", "Your body gives off a faint, sparking, haze...", runemessage = "gives off a faint, sparking haze")
 		var/datum/component/shadekin/comp = L.GetComponent(/datum/component/shadekin)
 		if(comp)
-			comp.dark_energy += 10
+			// comp.dark_energy += 10 // Outpost 21 edit(port) - Regen in dark tiles over time
 			if(prob(10))
 				to_chat(L, span_notice("You can feel the energy flowing into you!"))
-		else if(prob(0.25))
+		else if(prob(4)) // Outpost 21 edit - Raised from 0.25 chance
 			to_chat(L, span_danger("The darkness seethes under your feet..."))
 			L.hallucination += 50
 

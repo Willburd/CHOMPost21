@@ -32,7 +32,7 @@
 	},
 /area/mine/explored/muriki/cave/deepdark)
 "r" = (
-/obj/machinery/trailblazer/yellow,
+/obj/structure/trailblazer/yellow,
 /turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "s" = (

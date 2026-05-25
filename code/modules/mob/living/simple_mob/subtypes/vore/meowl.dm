@@ -100,7 +100,7 @@
 		"Unfortunately, %pred seems to have absolutely no intention of letting you go, and your futile effort goes nowhere.",
 		"Strain as you might, you can't keep up the effort long enough before you sink back into %pred's %belly.")
 
-/mob/living/simple_mob/vore/meowl/attackby(var/obj/item/O as obj, var/mob/user as mob)
+/mob/living/simple_mob/vore/meowl/attackby(obj/item/O as obj, mob/user as mob)
 	if(istype(O, /obj/item/reagent_containers/food))
 		if(health <= 0)
 			return
@@ -111,7 +111,7 @@
 		return
 	return ..()
 
-/mob/living/simple_mob/vore/meowl/PounceTarget(var/mob/living/M, var/successrate = 100)
+/mob/living/simple_mob/vore/meowl/PounceTarget(mob/living/M, successrate = 100)
 	vore_pounce_cooldown = world.time + 1 SECONDS // don't attempt another pounce for a while
 	if(prob(max(successrate,33))) // pounce success!
 		M.Weaken(5)
@@ -156,29 +156,30 @@
 	last_conflict_time = world.time
 
 	// Check if there is more than one person nearby and if they allow eating them
-	if(!check_attacker(target)) //Only act friendly if you haven't been attacked yet
-		var/list/crowd = list_targets()
+	if(target)
+		if(!check_attacker(target)) //Only act friendly if you haven't been attacked yet
+			var/list/crowd = list_targets()
 
-		var/mob/living/L = target
-		if(istype(L))
-			if(!L.allowmobvore && vore_hostile && distance <= 8)
+			var/mob/living/L = target
+			if(istype(L))
+				if(!L.allowmobvore && vore_hostile && distance <= 8)
+					play_friend(target)
+					set_stance(STANCE_APPROACH)
+					return
+
+			if(crowd.len > 1 && distance <= 8)
 				play_friend(target)
 				set_stance(STANCE_APPROACH)
 				return
 
-		if(crowd.len > 1 && distance <= 8)
-			play_friend(target)
-			set_stance(STANCE_APPROACH)
-			return
+		// Don't attack if you're well fed!
 
-	// Don't attack if you're well fed!
+			var/mob/living/simple_mob/vore/meowl/M = holder
 
-		var/mob/living/simple_mob/vore/meowl/M = holder
-
-		if(istype(M))
-			if(M.well_fed + 10 MINUTES > world.time)
-				set_stance(STANCE_APPROACH)
-				return
+			if(istype(M))
+				if(M.well_fed + 10 MINUTES > world.time)
+					set_stance(STANCE_APPROACH)
+					return
 
 
 	// Do a 'special' attack, if one is allowed.

@@ -147,11 +147,7 @@ export const ModifyRobot = (props) => {
   );
 
   return (
-    <Window
-      width={target?.module ? 900 : 400}
-      height={700}
-      theme={theme || 'ntos'}
-    >
+    <Window width={target?.module ? 900 : 400} height={700} theme={theme}>
       <Window.Content>
         <Stack fill vertical>
           <Stack.Item>
@@ -170,6 +166,7 @@ export const ModifyRobot = (props) => {
                 <Stack align="baseline">
                   <Stack.Item>
                     <Dropdown
+                      searchInput
                       selected={target ? target.name : ''}
                       options={all_robots}
                       onSelected={(value) =>
@@ -222,6 +219,7 @@ export const ModifyRobot = (props) => {
                   <Stack align="baseline">
                     <Stack.Item>
                       <Dropdown
+                        searchInput
                         selected={selected_ai || ''}
                         options={active_ais}
                         onSelected={(value) =>

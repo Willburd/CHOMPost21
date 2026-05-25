@@ -44,6 +44,10 @@
 	name = "chief medical officer's rubber stamp"
 	icon_state = "stamp-cmo"
 
+/obj/item/stamp/talon
+	name = "talon's rubber stamp"
+	icon_state = "stamp-tal"
+
 /obj/item/stamp/denied
 	name = "\improper DENIED rubber stamp"
 	icon_state = "stamp-deny"
@@ -56,6 +60,10 @@
 /obj/item/stamp/clown
 	name = "clown's rubber stamp"
 	icon_state = "stamp-clown"
+
+/obj/item/stamp/mime
+	name = "mime's rubber stamp"
+	icon_state = "stamp-mime"
 
 /obj/item/stamp/internalaffairs
 	name = "internal affairs rubber stamp"

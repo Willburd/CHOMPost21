@@ -85,7 +85,7 @@ GLOBAL_LIST_INIT(ai_verbs_default, list(
 	var/override_CPURate = 0					// Bonus/Penalty CPU generation rate. For use by admins/testers.
 
 	var/datum/ai_icon/selected_sprite			// The selected icon set
-	var/custom_sprite 	= 0 					// Whether the selected icon is custom
+	var/custom_sprite  = FALSE					// Whether the selected icon is custom
 	var/carded
 
 	// Multicam Vars
@@ -130,8 +130,10 @@ GLOBAL_LIST_INIT(ai_verbs_default, list(
 	canmove = 0
 	density = TRUE
 
+	/* Outpost 21 edit - Communicator removal
 	if(!is_dummy)
 		aiCommunicator = new /obj/item/communicator/integrated(src)
+	*/
 
 	holo_icon = getHologramIcon(icon('icons/mob/AI.dmi',"holo1"))
 
@@ -185,6 +187,7 @@ GLOBAL_LIST_INIT(ai_verbs_default, list(
 
 	GLOB.ai_list += src
 	. = ..()
+	init_id(idcard_type)
 
 	new /obj/machinery/ai_powersupply(src)
 
@@ -281,7 +284,7 @@ GLOBAL_LIST_INIT(ai_verbs_default, list(
 
 		if(Entry[1] == src.ckey && Entry[2] == src.real_name)
 			icon = CUSTOM_ITEM_SYNTH
-			custom_sprite = 1
+			custom_sprite = TRUE
 			selected_sprite = new/datum/ai_icon("Custom", "[src.ckey]-ai", "4", "[ckey]-ai-crash", "#FFFFFF", "#FFFFFF", "#FFFFFF")
 		else
 			selected_sprite = GLOB.default_ai_icon
@@ -404,7 +407,7 @@ GLOBAL_LIST_INIT(ai_verbs_default, list(
 		call_shuttle_proc(src)
 
 	// hack to display shuttle timer
-	if(emergency_shuttle.online())
+	if(SSemergency_shuttle.online())
 		post_status(src, "shuttle", user = src)
 
 /mob/living/silicon/ai/proc/ai_recall_shuttle()
@@ -465,7 +468,7 @@ GLOBAL_LIST_INIT(ai_verbs_default, list(
 		unset_machine()
 		src << browse(null, t1)
 	if (href_list["switchcamera"])
-		switchCamera(locate(href_list["switchcamera"])) in cameranet.cameras
+		switchCamera(locate(href_list["switchcamera"])) in GLOB.cameranet.cameras
 	if (href_list["showalerts"])
 		subsystem_alarm_monitor()
 	//Carn: holopad requests
@@ -502,9 +505,9 @@ GLOBAL_LIST_INIT(ai_verbs_default, list(
 	return
 
 /mob/living/silicon/ai/proc/camera_visibility(mob/observer/eye/aiEye/moved_eye)
-	cameranet.visibility(moved_eye, client, all_eyes)
+	GLOB.cameranet.visibility(moved_eye, client, all_eyes)
 
-/mob/living/silicon/ai/forceMove(atom/destination)
+/mob/living/silicon/ai/forceMove(atom/destination, direction, movetime)
 	. = ..()
 	if(.)
 		end_multicam()
@@ -528,7 +531,7 @@ GLOBAL_LIST_INIT(ai_verbs_default, list(
 			new_eye.set_light(0)
 
 
-/mob/living/silicon/ai/proc/switchCamera(var/obj/machinery/camera/C)
+/mob/living/silicon/ai/proc/switchCamera(obj/machinery/camera/C)
 	if (!C || stat == DEAD) //C.can_use())
 		return 0
 
@@ -554,17 +557,17 @@ GLOBAL_LIST_INIT(ai_verbs_default, list(
 		return
 
 	var/list/cameralist = new()
-	for (var/obj/machinery/camera/C in cameranet.cameras)
+	for (var/obj/machinery/camera/C in GLOB.cameranet.cameras)
 		if(!C.can_use())
 			continue
-		var/list/tempnetwork = difflist(C.network,restricted_camera_networks,1)
+		var/list/tempnetwork = difflist(C.network, GLOB.restricted_camera_networks, 1)
 		for(var/i in tempnetwork)
 			cameralist[i] = i
 
 	cameralist = sortAssoc(cameralist)
 	return cameralist
 
-/mob/living/silicon/ai/proc/ai_network_change(var/network in get_camera_network_list())
+/mob/living/silicon/ai/proc/ai_network_change(network in get_camera_network_list())
 	set category = "AI.Camera Control"
 	set name = "Jump To Network"
 	unset_machine()
@@ -578,7 +581,7 @@ GLOBAL_LIST_INIT(ai_verbs_default, list(
 
 	src.network = network
 
-	for(var/obj/machinery/camera/C in cameranet.cameras)
+	for(var/obj/machinery/camera/C in GLOB.cameranet.cameras)
 		if(!C.can_use())
 			continue
 		if(network in C.network)
@@ -848,7 +851,7 @@ GLOBAL_LIST_INIT(ai_verbs_default, list(
 	to_chat(src, span_filter_notice("Your hologram will [hologram_follow ? "follow" : "no longer follow"] you now."))
 
 
-/mob/living/silicon/ai/proc/check_unable(var/flags = NONE, var/feedback = 1)
+/mob/living/silicon/ai/proc/check_unable(flags = NONE, feedback = 1)
 	if(stat == DEAD)
 		if(feedback)
 			to_chat(src, span_warning("You are dead!"))
@@ -906,7 +909,7 @@ GLOBAL_LIST_INIT(ai_verbs_default, list(
 	else
 		to_chat(src, span_warning("Target is not on or near any active cameras on the station."))
 
-/mob/living/silicon/ai/ex_act(var/severity)
+/mob/living/silicon/ai/ex_act(severity)
 	if(severity == 1.0)
 		qdel(src)
 		return

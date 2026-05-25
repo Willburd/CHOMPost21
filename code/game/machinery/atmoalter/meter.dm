@@ -3,7 +3,6 @@
 	desc = "It measures something."
 	icon = 'icons/obj/meter.dmi'
 	icon_state = "meterX"
-	var/obj/machinery/atmospherics/pipe/target = null
 	var/list/pipes_on_turf = list()
 	anchored = TRUE
 	power_channel = ENVIRON
@@ -12,27 +11,52 @@
 	var/open = FALSE
 	use_power = USE_POWER_IDLE
 	idle_power_usage = 15
+	var/piping_layer = PIPING_LAYER_DEFAULT
+	var/datum/weakref/cached_pipe = null
 
-/obj/machinery/meter/Initialize(mapload)
+/obj/machinery/meter/Initialize(mapload, pipe_layer_selected)
 	. = ..()
-	if (!target)
-		target = select_target()
+	// Check if we should attach to a pipe OTHER than the regular.
+	// Don't do this if we have a mapper set pipe layer, or if we are not maploaded.
+	if(mapload && piping_layer == PIPING_LAYER_DEFAULT)
+		for(var/obj/machinery/atmospherics/pipe/P in get_turf(src))
+			pipe_layer_selected = P.piping_layer // First come first serve
+			break
+	// Offset the icon as needed
+	if(pipe_layer_selected != PIPING_LAYER_DEFAULT)
+		piping_layer = pipe_layer_selected
+		update_icon()
+	// Rename automagically based on the pipelayer it's being made at.
+	if(!mapload || name == initial(name)) // Check if we have a map edited name first
+		switch(piping_layer)
+			if(PIPING_LAYER_SUPPLY)
+				name = "supply-meter"
+			if(PIPING_LAYER_SCRUBBER)
+				name = "scrubber-meter"
+			if(PIPING_LAYER_FUEL)
+				name = "fuel-meter"
+			if(PIPING_LAYER_AUX)
+				name = "aux-meter"
 
 /obj/machinery/meter/Destroy()
 	pipes_on_turf.Cut()
-	target = null
+	cached_pipe = null
 	return ..()
 
 /obj/machinery/meter/proc/select_target()
-	var/obj/machinery/atmospherics/pipe/P
-	for(P in loc)
+	var/obj/machinery/atmospherics/pipe/P = cached_pipe?.resolve()
+	if(P)
+		return P
+	for(P in get_turf(src))
+		if(P.piping_layer != piping_layer)
+			continue
 		if(!P.hides_under_flooring())
-			break
-	if(!P)
-		P = locate(/obj/machinery/atmospherics/pipe) in loc
-	return P
+			cached_pipe = WEAKREF(P)
+			return P
+	return null
 
 /obj/machinery/meter/process()
+	var/obj/machinery/atmospherics/pipe/target = select_target()
 	if(!target)
 		icon_state = "meterX"
 		return 0
@@ -80,7 +104,8 @@
 /obj/machinery/meter/examine(mob/user)
 	. = ..()
 
-	if(get_dist(user, src) > 3 && !(isAI(user) || isobserver(user)))
+	var/obj/machinery/atmospherics/pipe/target = select_target()
+	if(get_dist(user, src) > 6 && !(isAI(user) || isobserver(user)))
 		. += span_warning("You are too far away to read it.")
 
 	else if(stat & (NOPOWER|BROKEN))
@@ -105,7 +130,7 @@
 
 	return ..()
 
-/obj/machinery/meter/attackby(var/obj/item/W, var/mob/user)
+/obj/machinery/meter/attackby(obj/item/W, mob/user)
 	if(W.has_tool_quality(TOOL_WRENCH))
 		playsound(src, W.usesound, 50, 1)
 		to_chat(user, span_notice("You begin to unfasten \the [src]..."))
@@ -135,6 +160,7 @@
 			pipes_on_turf |= P
 		if(!pipes_on_turf.len)
 			return
+		var/obj/machinery/atmospherics/pipe/target = select_target()
 		target = pipes_on_turf[1]
 		pipes_on_turf.Remove(target)
 		pipes_on_turf.Add(target)
@@ -143,10 +169,35 @@
 
 	return ..()
 
+/obj/machinery/meter/update_icon()
+	. = ..()
+	// Use offsets instead of custom icons
+	switch(piping_layer)
+		if(PIPING_LAYER_SUPPLY)
+			pixel_x = -4
+			pixel_y = -4
+			name = "supply-meter"
+		if(PIPING_LAYER_SCRUBBER)
+			pixel_x = 4
+			pixel_y = 4
+			name = "scrubber-meter"
+		if(PIPING_LAYER_FUEL)
+			pixel_x = 8
+			pixel_y = 8
+			name = "fuel-meter"
+		if(PIPING_LAYER_AUX)
+			pixel_x = -8
+			pixel_y = -8
+			name = "aux-meter"
+		else
+			pixel_x = 0
+			pixel_y = 0
+			name = initial(name)
+
 // TURF METER - REPORTS A TILE'S AIR CONTENTS
 
 /obj/machinery/meter/turf/select_target()
 	return loc
 
-/obj/machinery/meter/turf/attackby(var/obj/item/W as obj, var/mob/user as mob)
+/obj/machinery/meter/turf/attackby(obj/item/W as obj, mob/user as mob)
 	return

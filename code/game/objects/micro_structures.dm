@@ -106,23 +106,6 @@ GLOBAL_LIST_EMPTY(micro_tunnels)
 		tunnel_interact(user)
 		return ..()
 
-// Outpost 21 edit begin - Welding mouse holes
-/obj/structure/micro_tunnel/attackby(obj/item/I, mob/user)
-	if(I.has_tool_quality(TOOL_WELDER))
-		var/obj/item/weldingtool/WT = I.get_welder()
-		if(!WT.isOn())
-			return
-		if(WT.get_fuel() < 5) //uses up 5 fuel.
-			to_chat(user, span_notice("You need more fuel to complete this task."))
-			return
-		playsound(src, WT.usesound, 50, 1)
-		if(do_after(user, 5 SECONDS))
-			visible_message("\The [user] welds \the [src] shut.")
-			qdel(src)
-			return
-	. = ..()
-// Outpost 21 edit end
-
 /obj/structure/micro_tunnel/proc/tunnel_interact(mob/living/user)
 	if(!isliving(user))
 		return
@@ -242,7 +225,7 @@ GLOBAL_LIST_EMPTY(micro_tunnels)
 
 	enter_tunnel(user)
 
-/obj/structure/micro_tunnel/proc/can_enter(var/mob/living/user)
+/obj/structure/micro_tunnel/proc/can_enter(mob/living/user)
 	if(user.mob_size <= MOB_TINY || user.get_effective_size(TRUE) <= micro_accepted_scale || (/mob/living/proc/ventcrawl in user.verbs)) // Outpost 21 edit - Ventcrawlers can use mouse holes
 		return TRUE
 
@@ -276,7 +259,7 @@ GLOBAL_LIST_EMPTY(micro_tunnels)
 	to_chat(k,span_notice("You are inside of \the [src]. It's dark and gloomy inside of here. You can click upon the tunnel to exit, or travel to another tunnel if there are other tunnels linked to it."))
 	tunnel_notify(k)
 
-/obj/structure/micro_tunnel/proc/tunnel_notify(var/mob/living/user)
+/obj/structure/micro_tunnel/proc/tunnel_notify(mob/living/user)
 	to_chat(user, span_notice("You arrive inside \the [src]."))
 	var/our_message = "You can see "
 	var/found_stuff = FALSE

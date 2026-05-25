@@ -1,5 +1,5 @@
 // Outdoor atmospheres on planets reset to default state over time.
-/zone/tick()
+/datum/zone/tick()
 	. = ..()
 
 	// Planet airmix cannot be saturated by station antics, slowly bleed this to base air if an outside turf is in our contents. - Willbird

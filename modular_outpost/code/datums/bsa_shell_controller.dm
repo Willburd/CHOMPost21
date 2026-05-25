@@ -1,6 +1,6 @@
 /datum/bsa_shell_controller
 
-/datum/bsa_shell_controller/proc/ask(var/mob/user)
+/datum/bsa_shell_controller/proc/ask(mob/user)
 	var/rounds = 0
 	var/max_rounds = 0
 	rounds = tgui_input_text( user, "How many rounds will be fired:", "Number of shells")
@@ -43,7 +43,7 @@
 	cur_delay += rand(7 SECONDS, 9 SECONDS)
 	addtimer(CALLBACK(src, PROC_REF(finish_message)), cur_delay, TIMER_DELETE_ME)
 
-/datum/bsa_shell_controller/proc/announce(var/x,var/y,var/z, var/first_shot = TRUE)
+/datum/bsa_shell_controller/proc/announce(x,y,z, first_shot = TRUE)
 	if(first_shot)
 		var/message = "Requesting a precision artillery strike on coordinates: [x], [y], [z]."
 		GLOB.global_announcer.autosay(message, "Outpost-22 Fire Control", "Command")
@@ -57,7 +57,7 @@
 		GLOB.global_announcer.autosay(message, "Outpost-22 Fire Control", "Common")
 	addtimer(CALLBACK(src, PROC_REF(shelling), x, y, z), rand(4 SECONDS, 6 SECONDS), TIMER_DELETE_ME)
 
-/datum/bsa_shell_controller/proc/shelling(var/x,var/y,var/z)
+/datum/bsa_shell_controller/proc/shelling(x,y,z)
 	var/turf/T = locate(x,y,z)
 	if(!T)
 		return
@@ -67,7 +67,7 @@
 	var/obj/structure/ship_munition/disperser_charge/C = new /obj/structure/ship_munition/disperser_charge/explosive(T)
 	addtimer(CALLBACK(src, PROC_REF(detonate), WEAKREF(C)), rand(1,15), TIMER_DELETE_ME)
 
-/datum/bsa_shell_controller/proc/detonate(var/datum/weakref/WF)
+/datum/bsa_shell_controller/proc/detonate(datum/weakref/WF)
 	var/obj/structure/ship_munition/disperser_charge/C = WF?.resolve()
 	if(!C)
 		return

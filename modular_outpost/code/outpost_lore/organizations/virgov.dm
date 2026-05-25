@@ -1,1 +1,1 @@
-/datum/category_item/catalogue/information/organization/virgov
+///datum/lore/organization/gov/virgov

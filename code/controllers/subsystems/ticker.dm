@@ -72,7 +72,7 @@ SUBSYSTEM_DEF(ticker)
 
 	/// ### LEGACY VARS ###
 	/// Default time to wait before rebooting in desiseconds.
-	var/const/restart_timeout = 4 MINUTES
+	var/const/restart_timeout = 5 MINUTES
 	/// Track where we are ending game/round
 	var/end_game_state = END_GAME_NOT_OVER
 	/// Time remaining until restart in desiseconds
@@ -158,10 +158,10 @@ SUBSYSTEM_DEF(ticker)
 				var/game_finished = FALSE
 				var/mode_finished = FALSE
 				if (CONFIG_GET(flag/continuous_rounds)) // Game keeps going after mode ends.
-					game_finished = (emergency_shuttle.returned() || mode.station_was_nuked)
+					game_finished = (SSemergency_shuttle.returned() || mode.station_was_nuked)
 					mode_finished = ((end_game_state >= END_GAME_MODE_FINISHED) || mode.check_finished()) // Short circuit if already finished.
 				else // Game ends when mode does
-					game_finished = (mode.check_finished() || (emergency_shuttle.returned() && emergency_shuttle.evac == 1)) || GLOB.universe_has_ended
+					game_finished = (mode.check_finished() || (SSemergency_shuttle.returned() && SSemergency_shuttle.evac)) || GLOB.universe_has_ended
 					mode_finished = game_finished
 
 				if(game_finished && mode_finished)
@@ -236,13 +236,7 @@ SUBSYSTEM_DEF(ticker)
 	INVOKE_ASYNC(SSdbcore, TYPE_PROC_REF(/datum/controller/subsystem/dbcore,SetRoundStart))
 
 	to_chat(world, span_notice(span_bold("Welcome to [station_name()], enjoy your stay!")))
-	// Outpost 21 edit - Restore yawn intro
-	if(prob(95))
-		world << sound('sound/AI/welcome.ogg') // Skie
-	else
-		world << sound('sound/AI/yawn/welcome_secret.ogg')
-	// Outpost 21 edit end
-	//SEND_SOUND(world, sound(SSstation.announcer.get_rand_welcome_sound()))
+	play_simple_announcement(world, prob(95) ? ANNOUNCER_MSG_ROUND_START : 'sound/AI/yawn/welcome_secret.ogg') // Outpost 21 edit - Restore yawn intro
 
 	current_state = GAME_STATE_PLAYING
 	Master.SetRunLevel(RUNLEVEL_GAME)
@@ -263,7 +257,7 @@ SUBSYSTEM_DEF(ticker)
 
 	var/list/adm = get_admin_counts()
 	var/list/allmins = adm["present"]
-	send2adminchat("Server", "Round [GLOB.round_id ? "#[GLOB.round_id]" : ""] has started[allmins.len ? ".":" with no active admins online!"]")
+	send2adminchat("Server", "Round [GLOB.round_id ? "#[GLOB.round_id]" : ""] has started[length(allmins) ? ".":" with no active admins online!"]")
 
 	setup_done = TRUE
 	// TODO START
@@ -300,7 +294,7 @@ SUBSYSTEM_DEF(ticker)
 
 	var/list/runnable_modes = config.get_runnable_modes()
 	if((GLOB.master_mode == "random") || (GLOB.master_mode == "secret"))
-		if(!runnable_modes.len)
+		if(!length(runnable_modes))
 			to_chat(world, span_filter_system(span_bold("Unable to choose playable game mode.") + " Reverting to pregame lobby."))
 			return 0
 		if(GLOB.secret_force_mode != "secret")
@@ -317,26 +311,26 @@ SUBSYSTEM_DEF(ticker)
 		to_chat(world, span_boldannounce("Serious error in mode setup! Reverting to pregame lobby.")) //Uses setup instead of set up due to computational context.
 		return 0
 
-	GLOB.job_master.ResetOccupations()
+	SSjob.reset_occupations()
 	src.mode.create_antagonists()
 	src.mode.pre_setup()
-	GLOB.job_master.DivideOccupations() // Apparently important for new antagonist system to register specific job antags properly.
+	SSjob.divide_occupations() // Apparently important for new antagonist system to register specific job antags properly.
 
 	if(!src.mode.can_start())
 		to_chat(world, span_filter_system(span_bold("Unable to start [mode.name].") + " Not enough players readied, [CONFIG_GET(keyed_list/player_requirements)[mode.config_tag]] players needed. Reverting to pregame lobby."))
 		mode.fail_setup()
 		mode = null
-		GLOB.job_master.ResetOccupations()
+		SSjob.reset_occupations()
 		return 0
 
 	if(hide_mode)
 		to_chat(world, span_world(span_notice("The current game mode is - Secret!")))
-		if(runnable_modes.len)
+		if(length(runnable_modes))
 			var/list/tmpmodes = list()
 			for (var/datum/game_mode/M in runnable_modes)
 				tmpmodes+=M.name
 			tmpmodes = sortList(tmpmodes)
-			if(tmpmodes.len)
+			if(length(tmpmodes))
 				to_chat(world, span_filter_system(span_bold("Possibilities:") + " [english_list(tmpmodes, and_text= "; ", comma_text = "; ")]"))
 	else
 		src.mode.announce()
@@ -359,8 +353,8 @@ SUBSYSTEM_DEF(ticker)
 				feedback_set_details("end_proper", "proper completion")
 				restart_timeleft = restart_timeout
 
-			if(blackbox)
-				blackbox.save_all_data_to_sql()	// TODO - Blackbox or statistics subsystem
+			if(GLOB.blackbox)
+				GLOB.blackbox.save_all_data_to_sql()	// TODO - Blackbox or statistics subsystem
 
 			end_game_state = END_GAME_ENDING
 			return
@@ -372,7 +366,7 @@ SUBSYSTEM_DEF(ticker)
 
 			// Ask their new_player mob to spawn them
 			if(!player.spawn_checks_vr(player.mind.assigned_role))
-				var/datum/job/job_datum = GLOB.job_master.GetJob(J.title)
+				var/datum/job/job_datum = SSjob.get_job(J.title)
 				job_datum.current_positions--
 				player.mind.assigned_role = null
 				continue //VOREStation Add
@@ -408,8 +402,8 @@ SUBSYSTEM_DEF(ticker)
 		if(player && player.mind && player.mind.assigned_role)
 			if(player.mind.assigned_role == JOB_SITE_MANAGER)
 				captainless=0
-			if(!player_is_antag(player.mind, only_offstation_roles = 1))
-				GLOB.job_master.EquipRank(player, player.mind.assigned_role, 0)
+			if(!SSantag_job.player_is_antag(player.mind, only_offstation_roles = 1))
+				SSjob.equip_rank(player, player.mind.assigned_role, 0)
 				UpdateFactionList(player)
 				//equip_custom_items(player)	//VOREStation Removal
 				//player.apply_traits() //VOREStation Removal

@@ -1,6 +1,6 @@
 /obj/item/spellbook/oneuse/buttblast
 	icon = 'modular_outpost/icons/obj/library.dmi'
-	spell = /spell/targeted/buttblast
+	spell = /datum/spell/targeted/buttblast
 	spellname = "buttblast"
 	icon_state ="bookbutt"
 	desc = "This book seems indecent."

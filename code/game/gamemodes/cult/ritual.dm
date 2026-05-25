@@ -5,14 +5,11 @@ GLOBAL_VAR_INIT(runedec, 0)
 GLOBAL_LIST_INIT(engwords, list("travel", "blood", "join", "hell", "destroy", "technology", "self", "see", "other", "hide"))
 GLOBAL_LIST_INIT(rnwords, list("ire","ego","nahlizet","certum","veri","jatkaa","mgar","balaq", "karazet", "geeri"))
 
-/client/proc/check_words() // -- Urist
-	set category = ADMIN_CATEGORY_SECRETS
-	set name = "Check Rune Words"
-	set desc = "Check the rune-word meaning"
+ADMIN_VERB(check_words, R_ADMIN|R_EVENT, "Check Rune Words", "Check the rune-word meaning.", ADMIN_CATEGORY_SECRETS) // -- Urist
 	if(!GLOB.cultwords["travel"])
 		runerandom()
-	for (var/word in GLOB.engwords)
-		to_chat(usr, "[GLOB.cultwords[word]] is [word]")
+	for (var/word, rune in GLOB.engwords)
+		to_chat(user, "[rune] is [word]")
 
 /proc/runerandom() //randomizes word meaning
 	var/list/runewords=GLOB.rnwords
@@ -89,7 +86,7 @@ GLOBAL_LIST_INIT(rnwords, list("ire","ego","nahlizet","certum","veri","jatkaa","
 		. += "This spell circle reads: <i>[word1] [word2] [word3]</i>."
 
 
-/obj/effect/rune/attackby(I as obj, user as mob)
+/obj/effect/rune/attackby(obj/I, mob/user)
 	if(istype(I, /obj/item/book/tome) && iscultist(user))
 		to_chat(user, "You retrace your steps, carefully undoing the lines of the rune.")
 		qdel(src)
@@ -101,7 +98,7 @@ GLOBAL_LIST_INIT(rnwords, list("ire","ego","nahlizet","certum","veri","jatkaa","
 	return
 
 
-/obj/effect/rune/attack_hand(mob/living/user as mob)
+/obj/effect/rune/attack_hand(mob/living/user)
 	if(!iscultist(user))
 		to_chat(user, "You can't mouth the arcane scratchings without fumbling over them.")
 		return
@@ -296,23 +293,24 @@ GLOBAL_LIST_INIT(rnwords, list("ire","ego","nahlizet","certum","veri","jatkaa","
 	for(var/V in GLOB.cultwords)
 		words[GLOB.cultwords[V]] = V
 
-/obj/item/book/tome/attack(mob/living/M as mob, mob/living/user as mob)
+/obj/item/book/tome/attack(mob/living/M, mob/living/user, target_zone, attack_modifier)
 	add_attack_logs(user,M,"Hit with [name]")
 
 	if(isobserver(M))
 		var/mob/observer/dead/D = M
 		D.manifest(user)
-		return
+		return ITEM_INTERACT_SUCCESS
 	if(!istype(M))
-		return
+		return ITEM_INTERACT_FAILURE
 	if(!iscultist(user))
 		return ..()
 	if(iscultist(M))
-		return
+		return ITEM_INTERACT_FAILURE
 	M.take_organ_damage(0,rand(5,20)) //really lucky - 5 hits for a crit
 	for(var/mob/O in viewers(M, null))
 		O.show_message(span_warning("\The [user] beats \the [M] with \the [src]!"), 1)
 	to_chat(M, span_danger("You feel searing heat inside!"))
+	return ITEM_INTERACT_SUCCESS
 
 
 /obj/item/book/tome/attack_self(mob/living/user)

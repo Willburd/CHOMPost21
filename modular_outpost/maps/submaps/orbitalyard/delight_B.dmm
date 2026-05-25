@@ -7,10 +7,6 @@
 /mob/living/simple_mob/animal/space/carp/large,
 /turf/simulated/floor/tiled/airless,
 /area/submap/outpost21/structure_generic/delight_ruins)
-"ag" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/fuel,
-/turf/simulated/floor/tiled/eris/dark/orangecorner/turfpack/airless,
-/area/submap/outpost21/structure_generic/delight_ruins)
 "al" = (
 /obj/structure/table/reinforced,
 /obj/fiftyspawner/steel,
@@ -293,9 +289,6 @@
 /turf/simulated/floor/tiled/airless,
 /area/submap/outpost21/structure_generic/delight_ruins)
 "dv" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
-	dir = 4
-	},
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/angled_bay/hatch{
 	dir = 4;
@@ -306,10 +299,6 @@
 	stripe_color = "#e6ab22"
 	},
 /turf/simulated/floor/tiled/steel_ridged/turfpack/airless,
-/area/submap/outpost21/structure_generic/delight_ruins)
-"dz" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden/fuel,
-/turf/simulated/wall/bay/r_wall/steel,
 /area/submap/outpost21/structure_generic/delight_ruins)
 "dB" = (
 /obj/machinery/chem_master,
@@ -614,12 +603,6 @@
 	},
 /turf/simulated/floor/airless,
 /area/submap/outpost21/structure_generic/delight_ruins)
-"hY" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
-	dir = 4
-	},
-/turf/simulated/wall/bay/r_wall/steel,
-/area/submap/outpost21/structure_generic/delight_ruins)
 "ii" = (
 /obj/machinery/requests_console/preset/engineering{
 	pixel_x = 30
@@ -766,12 +749,6 @@
 	},
 /turf/simulated/floor/airless,
 /area/template_noop)
-"ka" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/eris/dark/orangecorner/turfpack/airless,
-/area/submap/outpost21/structure_generic/delight_ruins)
 "kg" = (
 /obj/structure/sign/department/chem{
 	pixel_y = 32
@@ -853,7 +830,6 @@
 /turf/simulated/floor/tiled/airless,
 /area/submap/outpost21/structure_generic/delight_ruins)
 "ls" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/fuel,
 /obj/item/radio/intercom{
 	dir = 8;
 	pixel_x = -24
@@ -1026,7 +1002,6 @@
 /turf/simulated/floor/airless,
 /area/submap/outpost21/structure_generic/delight_ruins)
 "nE" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/fuel,
 /obj/structure/dispenser{
 	phorontanks = 0
 	},
@@ -1178,12 +1153,6 @@
 	pixel_y = 4
 	},
 /obj/item/radio/off,
-/turf/simulated/floor/tiled/eris/dark/orangecorner/turfpack/airless,
-/area/submap/outpost21/structure_generic/delight_ruins)
-"oM" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
-	dir = 5
-	},
 /turf/simulated/floor/tiled/eris/dark/orangecorner/turfpack/airless,
 /area/submap/outpost21/structure_generic/delight_ruins)
 "oY" = (
@@ -2339,12 +2308,6 @@
 	},
 /turf/simulated/floor/airless,
 /area/submap/outpost21/structure_generic/delight_ruins)
-"De" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
-	dir = 10
-	},
-/turf/simulated/wall/bay/r_wall/steel,
-/area/submap/outpost21/structure_generic/delight_ruins)
 "Df" = (
 /obj/machinery/chemical_dispenser/full,
 /turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
@@ -2406,12 +2369,6 @@
 /area/submap/outpost21/structure_generic/delight_ruins)
 "Ee" = (
 /turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
-/area/submap/outpost21/structure_generic/delight_ruins)
-"Eh" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
-	dir = 6
-	},
-/turf/simulated/wall/bay/r_wall/steel,
 /area/submap/outpost21/structure_generic/delight_ruins)
 "Et" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
@@ -2503,9 +2460,6 @@
 /turf/simulated/floor/tiled/eris/steel/brown_platform/turfpack/airless,
 /area/submap/outpost21/structure_generic/delight_ruins)
 "Gj" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
-	dir = 4
-	},
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 10
 	},
@@ -2592,12 +2546,6 @@
 	pixel_y = 30
 	},
 /turf/simulated/floor/airless,
-/area/submap/outpost21/structure_generic/delight_ruins)
-"Hr" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
-	dir = 10
-	},
-/turf/simulated/floor/tiled/eris/dark/orangecorner/turfpack/airless,
 /area/submap/outpost21/structure_generic/delight_ruins)
 "Hu" = (
 /obj/machinery/hologram/holopad,
@@ -2806,9 +2754,6 @@
 /turf/simulated/floor/tiled/airless,
 /area/submap/outpost21/structure_generic/delight_ruins)
 "JP" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
-	dir = 4
-	},
 /obj/structure/bed/chair/office/dark{
 	dir = 4
 	},
@@ -3037,13 +2982,6 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/closet/crate/freezer,
 /turf/simulated/floor/tiled/eris/steel/cargo/turfpack/airless,
-/area/submap/outpost21/structure_generic/delight_ruins)
-"Mu" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
-	dir = 10
-	},
-/obj/machinery/hologram/holopad,
-/turf/simulated/floor/tiled/eris/dark/orangecorner/turfpack/airless,
 /area/submap/outpost21/structure_generic/delight_ruins)
 "MB" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -3943,12 +3881,6 @@
 /obj/effect/floor_decal/steeldecal/steel_decals5,
 /turf/simulated/floor/tiled/airless,
 /area/submap/outpost21/structure_generic/delight_ruins)
-"Xo" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/eris/steel/cargo/turfpack/airless,
-/area/submap/outpost21/structure_generic/delight_ruins)
 "Xp" = (
 /obj/machinery/disposal/wall{
 	dir = 1
@@ -4027,12 +3959,6 @@
 "Yk" = (
 /obj/structure/medical_stand,
 /turf/simulated/floor/tiled/white/turfpack/airless,
-/area/submap/outpost21/structure_generic/delight_ruins)
-"Ym" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
-	dir = 4
-	},
-/turf/simulated/floor/airless,
 /area/submap/outpost21/structure_generic/delight_ruins)
 "Yu" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -5073,7 +4999,7 @@ mD
 rn
 zY
 Px
-Xo
+iO
 eu
 hm
 hm
@@ -5135,7 +5061,7 @@ Px
 au
 Px
 au
-Ym
+mD
 mD
 hm
 hm
@@ -5197,7 +5123,7 @@ ci
 op
 DJ
 rn
-Xo
+iO
 mD
 hm
 hm
@@ -5259,7 +5185,7 @@ op
 lv
 Px
 rn
-Ym
+mD
 mD
 hm
 hm
@@ -5321,7 +5247,7 @@ mD
 TX
 Px
 GT
-Xo
+iO
 ge
 gQ
 hm
@@ -5383,7 +5309,7 @@ cW
 Px
 Px
 Px
-Xo
+iO
 mD
 hm
 hm
@@ -5445,7 +5371,7 @@ rn
 rn
 rn
 Px
-Ym
+mD
 mD
 hm
 hm
@@ -5507,7 +5433,7 @@ mR
 iO
 iO
 RM
-Xo
+iO
 eu
 hm
 hm
@@ -5569,7 +5495,7 @@ ui
 Fn
 iO
 mD
-Xo
+iO
 eu
 hm
 hm
@@ -5693,7 +5619,7 @@ zh
 WH
 iO
 cW
-Ym
+mD
 mD
 vS
 vS
@@ -5755,7 +5681,7 @@ zh
 cI
 iO
 iO
-Ym
+mD
 cW
 vU
 mD
@@ -5941,7 +5867,7 @@ qM
 vx
 cp
 df
-ka
+fR
 jY
 vx
 mD
@@ -6003,7 +5929,7 @@ Zp
 vx
 ZE
 fR
-ka
+fR
 fR
 ml
 mD
@@ -6065,7 +5991,7 @@ bE
 vx
 sE
 fR
-ka
+fR
 bj
 vx
 vx
@@ -6127,13 +6053,13 @@ fR
 MZ
 fR
 fR
-Mu
-ag
-ls
-ag
-oM
+Pu
 fR
-Eh
+ls
+fR
+fR
+fR
+Sw
 mD
 oE
 UM
@@ -6193,9 +6119,9 @@ fR
 jQ
 cE
 fR
-ka
+fR
 zC
-hY
+Sw
 mD
 mD
 UM
@@ -6255,9 +6181,9 @@ SW
 yd
 cE
 fR
-ka
+fR
 UG
-hY
+Sw
 Sw
 Sw
 az
@@ -6317,9 +6243,9 @@ fR
 jQ
 Oq
 fR
-Hr
+fR
 nE
-dz
+Sw
 mD
 mD
 az
@@ -6381,7 +6307,7 @@ fR
 fR
 fR
 Ad
-hY
+Sw
 Sw
 Sw
 az
@@ -6443,7 +6369,7 @@ jQ
 fR
 Nh
 Jb
-De
+Sw
 mD
 oE
 UM

@@ -20,6 +20,10 @@
 	name = "Zombie - Lateload"
 	antag_id = MODE_ZOMBIE
 
+/obj/effect/landmark/late_antag/borer
+	name = "Borer - Lateload"
+	antag_id = MODE_BORER
+
 /obj/effect/landmark/redspacemonsterspawn
 	name = "redmonster"
 	delete_me = TRUE
@@ -44,6 +48,7 @@
 			/mob/living/simple_mob/vore/ashy,
 			/mob/living/simple_mob/vore/cryptdrake,
 			/mob/living/simple_mob/vore/demonAI,
+			/mob/living/simple_mob/mechanical/mecha/combat/honker,
 			// Cult
 			/mob/living/simple_mob/creature,
 			/mob/living/simple_mob/vore/aggressive/corrupthound,
@@ -187,7 +192,11 @@
 		prob(15);/mob/living/simple_mob/mechanical/cyber_horror/ling_cyber_horror,
 		prob(25);/mob/living/simple_mob/mechanical/cyber_horror/corgi,
 		prob(25);/mob/living/simple_mob/mechanical/cyber_horror/cat_cyber_horror,
+		// Xenobio slimes
+		prob(20);/mob/living/simple_mob/slime/xenobio,
 	)
+	if(mob_path == /mob/living/simple_mob/slime/xenobio)
+		mob_path = pick(typesof(/mob/living/simple_mob/slime/xenobio))
 	new mob_path(src.loc)
 
 
@@ -421,6 +430,10 @@
 	var/chance = 0
 	delete_me = TRUE
 
+/obj/effect/landmark/wet_floor/Initialize(mapload)
+	..()
+	return INITIALIZE_HINT_LATELOAD
+
 /obj/effect/landmark/wet_floor/twentyfive
 	name = "wet floor 25%"
 	chance = 25
@@ -438,7 +451,10 @@
 		return
 	var/turf/simulated/floor/T = get_turf(src)
 	T.wet = TURFSLIP_WET
-
+	if(T.wet_overlay)
+		return
+	T.wet_overlay = image('icons/effects/water.dmi', icon_state = "wet_floor")
+	T.add_overlay(T.wet_overlay)
 
 
 // lube floor with no end timer
@@ -446,6 +462,10 @@
 	name = "lube floor 0%"
 	var/chance = 0
 	delete_me = TRUE
+
+/obj/effect/landmark/lube_floor/Initialize(mapload)
+	..()
+	return INITIALIZE_HINT_LATELOAD
 
 /obj/effect/landmark/lube_floor/twentyfive
 	name = "lube floor 25%"
@@ -464,3 +484,7 @@
 		return
 	var/turf/simulated/floor/T = get_turf(src)
 	T.wet = TURFSLIP_LUBE
+	if(T.wet_overlay)
+		return
+	T.wet_overlay = image('icons/effects/water.dmi', icon_state = "wet_floor")
+	T.add_overlay(T.wet_overlay)

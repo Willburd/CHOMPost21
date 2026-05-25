@@ -5,6 +5,14 @@
 /datum/job/stowaway
 	rank_pin = null // no rank
 
+// Specialty
+/datum/job/cyborg
+	rank_pin = /obj/item/clothing/accessory/rank_eshui/borg
+/datum/alt_title/drone
+	rank_pin = /obj/item/clothing/accessory/rank_eshui/drone
+/datum/job/ai
+	rank_pin = /obj/item/clothing/accessory/rank_eshui/ai
+
 // Lowest rank, no duty
 #define RANK_PIN_PATH /obj/item/clothing/accessory/rank_eshui
 /datum/job/offduty_cargo
@@ -20,6 +28,8 @@
 /datum/job/offduty_science
 	rank_pin = RANK_PIN_PATH
 /datum/job/offduty_security
+	rank_pin = RANK_PIN_PATH
+/datum/alt_title/experiment
 	rank_pin = RANK_PIN_PATH
 #undef RANK_PIN_PATH
 
@@ -42,6 +52,16 @@
 	rank_pin = RANK_PIN_PATH
 /datum/alt_title/security_contractor
 	rank_pin = RANK_PIN_PATH
+/datum/alt_title/logistics_contractor
+	rank_pin = RANK_PIN_PATH
+/datum/alt_title/mining_contractor
+	rank_pin = RANK_PIN_PATH
+/datum/alt_title/research_contractor
+	rank_pin = RANK_PIN_PATH
+/datum/job/maint_lurker
+	rank_pin = RANK_PIN_PATH
+/datum/job/vr_avatar
+	rank_pin = RANK_PIN_PATH
 #undef RANK_PIN_PATH
 
 
@@ -54,6 +74,10 @@
 /datum/job/intern
 	rank_pin = RANK_PIN_PATH
 /datum/job/janitor
+	rank_pin = RANK_PIN_PATH
+/datum/job/clown
+	rank_pin = RANK_PIN_PATH
+/datum/job/mime
 	rank_pin = RANK_PIN_PATH
 #undef RANK_PIN_PATH
 
@@ -81,6 +105,8 @@
 	rank_pin = RANK_PIN_PATH
 /datum/alt_title/salvage_tech
 	rank_pin = RANK_PIN_PATH
+/datum/alt_title/lab_assistant
+	rank_pin = RANK_PIN_PATH
 #undef RANK_PIN_PATH
 
 
@@ -97,6 +123,10 @@
 /datum/alt_title/computer_tech
 	rank_pin = RANK_PIN_PATH
 /datum/alt_title/ship_breaker
+	rank_pin = RANK_PIN_PATH
+/datum/alt_title/hall_monitor // this is a joke
+	rank_pin = RANK_PIN_PATH
+/datum/alt_title/junior_roboticist
 	rank_pin = RANK_PIN_PATH
 #undef RANK_PIN_PATH
 
@@ -125,6 +155,8 @@
 /datum/alt_title/junior_officer
 	rank_pin = RANK_PIN_PATH
 /datum/alt_title/medical_practitioner
+	rank_pin = RANK_PIN_PATH
+/datum/alt_title/coroner
 	rank_pin = RANK_PIN_PATH
 #undef RANK_PIN_PATH
 
@@ -173,6 +205,10 @@
 /datum/alt_title/anomalist
 	rank_pin = RANK_PIN_PATH
 /datum/alt_title/engine_tech
+	rank_pin = RANK_PIN_PATH
+/datum/job/electro_physicist
+	rank_pin = RANK_PIN_PATH
+/datum/alt_title/teleport_operation
 	rank_pin = RANK_PIN_PATH
 #undef RANK_PIN_PATH
 
@@ -257,11 +293,6 @@
 #define RANK_PIN_PATH /obj/item/clothing/accessory/rank_eshui/commissioned3
 /datum/job/captain
 	rank_pin = RANK_PIN_PATH
-#undef RANK_PIN_PATH
-
-
-// Officer 4
-#define RANK_PIN_PATH /obj/item/clothing/accessory/rank_eshui/commissioned4
 /datum/job/centcom_officer
 	rank_pin = RANK_PIN_PATH
 #undef RANK_PIN_PATH

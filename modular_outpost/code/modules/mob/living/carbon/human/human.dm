@@ -45,8 +45,11 @@
 		to_chat(src, "<span class='notice'>Placing \the [perscrip] in your [Bag.name]!</span>")
 		Bag.contents += perscrip
 
-/mob/living/carbon/human/proc/equip_survival_tanks(var/forceback = FALSE)
-	if(!isnull(species) && !isnull(species.breath_type) && species.breath_type != GAS_O2)
+/mob/living/carbon/human/proc/equip_survival_tanks(forceback = FALSE)
+	if(!species)
+		return
+
+	if(species.breath_type && species.breath_type != GAS_O2)
 		// configure tank
 		var/obj/item/tank/gastank = null
 		if(species.breath_type == GAS_PHORON)
@@ -70,3 +73,18 @@
 		internal = locate(/obj/item/tank) in contents
 		if(istype(internal,/obj/item/tank) && internals)
 			internals.icon_state = "internal1"
+
+	if(GetComponent(/datum/component/burninlight))
+		if(wear_suit) //get rid of job labcoats so they don't stop us from equipping the Shroud
+			qdel(wear_suit) //if you know how to gently set it in like, their backpack or whatever, be my guest
+		if(wear_mask)
+			qdel(wear_mask)
+		if(head)
+			qdel(head)
+		// Put on the suit
+		if(species.name == SPECIES_ZADDAT)
+			equip_to_slot_or_del(new /obj/item/clothing/mask/gas/zaddat(src), slot_wear_mask)
+			equip_to_slot_or_del(new /obj/item/clothing/suit/space/void/zaddat(src), slot_wear_suit)
+		else
+			equip_to_slot_or_del(new /obj/item/clothing/head/helmet/space/emergency, slot_head)
+			equip_to_slot_or_del(new /obj/item/clothing/suit/space/emergency(src), slot_wear_suit)

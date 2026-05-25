@@ -1,4 +1,4 @@
-/obj/vehicle/has_interior/controller/heavyarmor_medic
+/obj/vehicle/has_interior/heavyarmor_medic
 	name = "Nurse Bradley"
 	desc = "The Heavy Medical Recovery vehicle. Designed to break into areas, rescue crew, and get out, no matter how dangerous. Classified as Station Suppository."
 	move_delay = 2 //Was 3. Now matches APC to make it more viable
@@ -9,8 +9,8 @@
 	icon_state = "med_tank"
 	base_icon = "med_tank"
 
-	health = 800
-	maxhealth = 800
+	health = 1300
+	maxhealth = 1300
 	fire_dam_coeff = 0.2
 	brute_dam_coeff = 0.4
 	breakwalls = TRUE

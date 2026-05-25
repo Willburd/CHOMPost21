@@ -39,11 +39,11 @@
 
 	return src
 
-/mob/new_player/AIize(var/move = TRUE)
+/mob/new_player/AIize(move = TRUE)
 	spawning = 1
 	return ..()
 
-/mob/living/carbon/human/AIize(var/move = TRUE) // 'move' argument needs defining here too because BYOND is dumb
+/mob/living/carbon/human/AIize(move = TRUE) // 'move' argument needs defining here too because BYOND is dumb
 	if (transforming)
 		return
 	for(var/t in organs)
@@ -56,7 +56,7 @@
 
 	return ..(move)
 
-/mob/living/carbon/AIize(var/move = TRUE)
+/mob/living/carbon/AIize(move = TRUE)
 	if (transforming)
 		return
 	for(var/obj/item/W in src)
@@ -67,7 +67,7 @@
 	invisibility = INVISIBILITY_ABSTRACT
 	return ..()
 
-/mob/proc/AIize(var/move = TRUE)
+/mob/proc/AIize(move = TRUE)
 	if(client)
 		src << sound(null, repeat = 0, wait = 0, volume = 85, channel = 1) // stop the jams for AIs
 
@@ -189,6 +189,10 @@
 		O.fuzzy = B.fuzzy
 		O.custom_speech_bubble = B.custom_speech_bubble
 
+	// Outpost 21 edit begin - Borg accessories
+	equip_robot_accessories(O)
+	// Outpost 21 edit end
+
 	SEND_GLOBAL_SIGNAL(COMSIG_GLOB_BORGIFY, O)
 
 	spawn(0)	// Mobs still instantly del themselves, thus we need to spawn or O will never be returned
@@ -297,7 +301,7 @@
  * This proc is here to force coders to manually place their mob in this list, hopefully tested.
  * This also gives a place to explain -why- players shouldnt be turn into certain mobs and hopefully someone can fix them.
  */
-/mob/proc/safe_animal(var/MP)
+/mob/proc/safe_animal(MP)
 
 //Bad mobs! - Remember to add a comment explaining what's wrong with the mob
 	if(!MP)

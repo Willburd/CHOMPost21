@@ -1,1 +1,1 @@
-/datum/category_item/catalogue/information/organization/ward_takahashi
+/datum/lore/organization/tsc/ward_takahashi

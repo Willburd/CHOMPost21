@@ -54,7 +54,7 @@
 	icon_state = "juicer"+num2text(!isnull(beaker))
 	return
 
-/obj/machinery/reagentgrinder/attackby(var/obj/item/O, var/mob/user)
+/obj/machinery/reagentgrinder/attackby(obj/item/O, mob/user)
 	if(beaker)
 		if(default_deconstruction_screwdriver(user, O))
 			return
@@ -111,7 +111,7 @@
 
 	if(istype(O,/obj/item/gripper))
 		var/obj/item/gripper/B = O	//B, for Borg.
-		var/obj/item/wrapped = B.get_current_pocket()
+		var/obj/item/wrapped = B.get_wrapped_item()
 		if(!wrapped)
 			to_chat(user, "\The [B] is not holding anything.")
 			return 0
@@ -140,7 +140,7 @@
 	. = ..()
 	grind_verb()
 
-/obj/machinery/reagentgrinder/attack_hand(var/mob/user)
+/obj/machinery/reagentgrinder/attack_hand(mob/user)
 	//interact(user)
 	if(isAI(user))
 		return
@@ -243,7 +243,7 @@
 	//if(beaker)
 	//	replace_beaker(user)
 
-/obj/machinery/reagentgrinder/proc/grind(var/mob/user)
+/obj/machinery/reagentgrinder/proc/grind(mob/user)
 
 	power_change()
 	if(stat & (NOPOWER|BROKEN))
@@ -262,7 +262,7 @@
 
 	grind_items_to_reagents(holdingitems,beaker.reagents)
 
-/obj/machinery/reagentgrinder/proc/replace_beaker(var/mob/living/user, var/obj/item/reagent_containers/new_beaker)
+/obj/machinery/reagentgrinder/proc/replace_beaker(mob/living/user, obj/item/reagent_containers/new_beaker)
 	if(!user)
 		return FALSE
 	if(beaker)

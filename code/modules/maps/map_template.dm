@@ -90,7 +90,7 @@
 
 	admin_notice(span_danger("Submap initializations finished."), R_DEBUG)
 
-/datum/map_template/proc/load_new_z(var/centered = FALSE)
+/datum/map_template/proc/load_new_z(centered = FALSE)
 	var/x = 1
 	var/y = 1
 
@@ -177,7 +177,7 @@
 	var/deleted_atoms = 0
 	admin_notice(span_danger("Annihilating objects in submap loading locatation."), R_DEBUG)
 	var/list/turfs_to_clean = get_affected_turfs(origin, centered)
-	if(turfs_to_clean.len)
+	if(length(turfs_to_clean))
 		for(var/turf/T in turfs_to_clean)
 			for(var/atom/movable/AM in T)
 				++deleted_atoms
@@ -204,7 +204,7 @@
 
 //for your ever biggening badminnery kevinz000
 //❤ - Cyberboss
-/proc/load_new_z_level(var/file, var/name)
+/proc/load_new_z_level(file, name)
 	var/datum/map_template/template = new(file, name, TRUE)
 	if(!template.cached_map || template.cached_map.check_for_errors())
 		return FALSE
@@ -212,10 +212,10 @@
 	return TRUE
 
 // Very similar to the /tg/ version.
-/proc/seed_submaps(var/list/z_levels, var/budget = 0, var/whitelist = /area/space, var/desired_map_template_type = null)
+/proc/seed_submaps(list/z_levels, budget = 0, whitelist = /area/space, desired_map_template_type = null)
 	set background = TRUE
 
-	if(!z_levels || !z_levels.len)
+	if(!z_levels || !length(z_levels))
 		admin_notice("seed_submaps() was not given any Z-levels.", R_DEBUG)
 		return
 
@@ -253,8 +253,8 @@
 		overall_sanity--
 		var/datum/map_template/chosen_template = null
 
-		if(potential_submaps.len)
-			if(priority_submaps.len) // Do these first.
+		if(length(potential_submaps))
+			if(length(priority_submaps)) // Do these first.
 				chosen_template = pick(priority_submaps)
 			else
 				chosen_template = pick(potential_submaps)

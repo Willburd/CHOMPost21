@@ -23,7 +23,7 @@ SUBSYSTEM_DEF(throwing)
 	var/list/currentrun = src.currentrun
 
 	while(length(currentrun))
-		var/atom/movable/AM = currentrun[currentrun.len]
+		var/atom/movable/AM = currentrun[length(currentrun)]
 		var/datum/thrownthing/TT = currentrun[AM]
 		currentrun.len--
 		if (QDELETED(AM) || QDELETED(TT))
@@ -253,7 +253,7 @@ SUBSYSTEM_DEF(throwing)
 /datum/thrownthing/proc/hit_atom(atom/A)
 	finalize(hit=TRUE, t_target=A)
 
-/datum/thrownthing/proc/hitcheck(var/turf/T)
+/datum/thrownthing/proc/hitcheck(turf/T)
 	var/atom/movable/hit_thing
 	for (var/thing in T)
 		var/atom/movable/AM = thing

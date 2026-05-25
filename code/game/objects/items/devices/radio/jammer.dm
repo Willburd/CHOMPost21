@@ -1,8 +1,18 @@
 GLOBAL_LIST_EMPTY(active_radio_jammers)
 
-/proc/is_jammed(var/obj/radio)
+/proc/is_jammed(obj/radio)
 	var/turf/Tr = get_turf(radio)
 	if(!Tr) return 0 //Nullspace radios don't get jammed.
+
+	// Outpost 21 edit begin - Disable phased shadekin radios
+	var/atom/find_top_mob = radio.loc
+	while(find_top_mob && !isturf(find_top_mob))
+		if(ismob(find_top_mob))
+			var/mob/found_mob = find_top_mob
+			if(found_mob.is_incorporeal())
+				return TRUE
+		find_top_mob = find_top_mob.loc
+	// Outpost 21 edit end
 
 	var/area/our_area = get_area(Tr)
 
@@ -10,6 +20,20 @@ GLOBAL_LIST_EMPTY(active_radio_jammers)
 		return TRUE
 
 	for(var/obj/item/radio_jammer/J as anything in GLOB.active_radio_jammers)
+		// Outpost 21 edit begin - Radio jamming component
+		if(istype(J, /datum/component/radio_jammer))
+			var/datum/component/radio_jammer/comp = J
+			var/turf/Tcj = comp.get_host_turf()
+			if(!Tcj)
+				continue
+			if(Tcj.z != Tr.z)
+				continue
+			var/dist = get_dist(Tcj,Tr)
+			if(dist > comp.jam_range)
+				continue
+			return list("jammer" = comp, "distance" = dist)
+		// Outpost 21 edit end
+
 		var/turf/Tj = get_turf(J)
 
 		if(J.on && Tj.z == Tr.z) //If we're on the same Z, it's worth checking.
@@ -30,7 +54,6 @@ GLOBAL_LIST_EMPTY(active_radio_jammers)
 	var/obj/item/cell/device/weapon/power_source
 	var/tick_cost = 5 //VOREStation Edit - For the ERPs.
 
-	origin_tech = list(TECH_ILLEGAL = 7, TECH_BLUESPACE = 5) //Such technology! Subspace jamming!
 	pickup_sound = 'sound/items/pickup/device.ogg'
 	drop_sound = 'sound/items/drop/device.ogg'
 

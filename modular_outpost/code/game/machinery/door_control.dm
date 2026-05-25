@@ -1,6 +1,9 @@
 /obj/machinery/button/remote/admin_only
 	name = "secure remote object control"
 	desc = "It controls objects, remotely and with extreme prejudice."
+	icon = 'icons/obj/door_release.dmi'
+	icon_state = "doorctrl0"
+	resistance_flags = INDESTRUCTIBLE
 
 /obj/machinery/button/remote/admin_only/attack_ai(mob/user as mob)
 	return attack_hand(user)
@@ -14,7 +17,7 @@
 /obj/machinery/button/remote/admin_only/attackby(obj/item/W, mob/user as mob)
 	return attack_hand(user)
 
-/obj/machinery/button/remote/admin_only/emag_act(var/remaining_charges, var/mob/user)
+/obj/machinery/button/remote/admin_only/emag_act(remaining_charges, mob/user)
 	return
 
 /obj/machinery/button/remote/admin_only/ex_act(severity)

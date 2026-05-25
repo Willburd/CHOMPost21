@@ -147,7 +147,11 @@
 	'sound/ambience/generic/generic5.ogg',\
 	'sound/ambience/generic/generic6.ogg',\
 	'sound/ambience/generic/generic7.ogg',\
-	'sound/ambience/generic/generic8.ogg'\
+	'sound/ambience/generic/generic8.ogg',\
+	'modular_outpost/sound/dragon_studio/droplets_in_a_cave.ogg',\
+	'modular_outpost/sound/dragon_studio/steam_hissing.ogg',\
+	'modular_outpost/sound/dragon_studio/deep_sea_growl.ogg',\
+	'modular_outpost/sound/dragon_studio/creepy_industrial_hum.ogg',\
 	)
 
 // Life support machinery at work, keeping everyone breathing.

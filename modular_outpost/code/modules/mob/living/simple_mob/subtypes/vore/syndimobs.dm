@@ -38,12 +38,6 @@
 				"rad" = 100
 				)
 
-
-//Vars for new ammo belts. Putting these up here to keep them in one spot
-var/shottype_index = 1
-var/list/lmgshot = list(/obj/item/projectile/bullet/rifle/a545/ap,/obj/item/projectile/bullet/rifle/a545/rubber)
-var/list/shotgun_mean1 = list(/obj/item/projectile/ion,/obj/item/projectile/energy/flash/flare,/obj/item/projectile/scatter/flechette,/obj/item/projectile/scatter/flechette,/obj/item/projectile/bullet/shotgun,/obj/item/projectile/bullet/shotgun/beanbag)
-
 ///Base taur.
 /mob/living/simple_mob/vore/wolftaur/syndicate
 	maxHealth = 275 //Editing to better match in-game values where HP is double what it says. You can reach 150 Hp easily without trait debt
@@ -71,6 +65,11 @@ var/list/shotgun_mean1 = list(/obj/item/projectile/ion,/obj/item/projectile/ener
 	needs_reload = TRUE //Lets have SOME mercy
 	base_attack_cooldown = 6 //was 8. Lets let these guys shoot a bit faster... but not as fast as the others, they're the slow, continual fire.
 	reload_time = 2.2 SECONDS //Trained reload speed. Probably horribly slow for what a hotkey player can do.
+
+	//Vars for new ammo belts. Putting these up here to keep them in one spot
+	var/shottype_index = 1
+	var/list/lmgshot = list(/obj/item/projectile/bullet/rifle/a545/ap,/obj/item/projectile/bullet/rifle/a545/rubber)
+	var/list/shotgun_mean1 = list(/obj/item/projectile/ion,/obj/item/projectile/energy/flash/flare,/obj/item/projectile/scatter/flechette,/obj/item/projectile/scatter/flechette,/obj/item/projectile/bullet/shotgun,/obj/item/projectile/bullet/shotgun/beanbag)
 
 ////LMG guys. Meant to put down a lot of fire.
 /mob/living/simple_mob/vore/wolftaur/syndicate/lmg

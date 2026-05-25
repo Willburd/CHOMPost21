@@ -26,7 +26,7 @@
 		R.instances = list()
 	return ..()
 
-/obj/machinery/vending/cargo_resale/proc/cargo_vendor_unlocking(var/obj/item/card/id/C, mob/user as mob)
+/obj/machinery/vending/cargo_resale/proc/cargo_vendor_unlocking(obj/item/card/id/C, mob/user as mob)
 	// Handle unlocking machine if cargo
 	if(!(unlock_access[1] in C.access)) //doesn't have this access
 		return FALSE
@@ -81,7 +81,7 @@
 
 	return FALSE
 
-/obj/machinery/vending/cargo_resale/proc/set_cargo_price(var/datum/stored_item/vending_product/R, mob/user as mob)
+/obj/machinery/vending/cargo_resale/proc/set_cargo_price(datum/stored_item/vending_product/R, mob/user as mob)
 	if(!Adjacent(user))
 		return
 	var/amount = tgui_input_number(user, "Assign vending price for [R.item_name], it is currently [R.item_name ? R.item_name : "free"].", "Set Vending Price")
@@ -99,7 +99,7 @@
 // Remove empty products from machine on final vend
 /obj/machinery/vending/delayed_vend(datum/stored_item/vending_product/R, mob/user)
 	. = ..()
-	if(R && R.instances.len <= 0)
+	if(R && !LAZYLEN(R.instances))
 		product_records.Remove(R)
 		SStgui.update_uis(src)
 
@@ -108,7 +108,7 @@
  *
  *  Called after the money has already been taken from the customer.
  */
-/obj/machinery/vending/cargo_resale/credit_purchase(var/target as text)
+/obj/machinery/vending/cargo_resale/credit_purchase(target as text)
 	var/datum/money_account/cargo_dept_account = GLOB.department_accounts[vending_account]
 	cargo_dept_account.money += currently_vending.price
 

@@ -116,7 +116,7 @@
 
 
 
-/proc/spread_germs_to_organ(var/obj/item/organ/external/E, var/mob/living/carbon/human/user)
+/proc/spread_germs_to_organ(obj/item/organ/external/E, mob/living/carbon/human/user)
 	if(!istype(user) || !istype(E)) return
 
 	var/germ_level = user.germ_level
@@ -134,7 +134,7 @@
 
 	return 1
 
-/obj/item/proc/do_surgery(mob/living/carbon/M, mob/living/user, var/zone)
+/obj/item/proc/do_surgery(mob/living/carbon/M, mob/living/user, zone)
 	if(!can_do_surgery(M, user))
 		return FALSE
 	if(!istype(M))
@@ -253,9 +253,9 @@
 				GLOB.surgery_steps.Swap(i, gap + i)
 				swapped = 1
 
-/datum/surgery_status/
-	var/eyes	=	0
-	var/face	=	0
+/datum/surgery_status
+	var/eyes = 0
+	var/face = 0
 	var/brainstem = 0
 	var/head_reattach = 0
 	var/current_organ = "organ"

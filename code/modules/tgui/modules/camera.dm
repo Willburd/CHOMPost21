@@ -257,7 +257,7 @@
 		all_networks += additional_networks
 
 	var/list/D = list()
-	for(var/obj/machinery/camera/C in cameranet.cameras)
+	for(var/obj/machinery/camera/C in GLOB.cameranet.cameras)
 		if(!C.network)
 			stack_trace("Camera in a cameranet has no camera network")
 			continue
@@ -316,5 +316,8 @@
 
 /datum/tgui_module/camera/bigscreen/tgui_state(mob/user)
 	return GLOB.tgui_physical_state_bigscreen
+
+/datum/tgui_module/camera/virtual/tgui_state(mob/user)
+	return GLOB.tgui_camera_view
 
 #undef DEFAULT_MAP_SIZE

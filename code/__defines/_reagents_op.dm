@@ -8,6 +8,12 @@
 #define REAGENT_THEDEW "Mountain Wind Crystal Classic"
 #define REAGENT_ID_THEDEW "the_dew_mtw"
 
+#define REAGENT_FENTHOL	"Fenthol"
+#define REAGENT_ID_FENTHOL "fenthol"
+
+#define REAGENT_NARCOLOXON	"Narcoloxon"
+#define REAGENT_ID_NARCOLOXON "narcoloxon"
+
 // PPE effects
 // into eyes
 #define REAGENT_PPE_GAS 		0x1

@@ -2874,7 +2874,7 @@
 /turf/simulated/floor/tiled/eris/cafe,
 /area/groundbase/civilian/kitchen)
 "hv" = (
-/obj/structure/toilet,
+/obj/structure/toilet/teleplumbed,
 /obj/machinery/button/remote/airlock{
 	id = "toilet1";
 	pixel_x = -26;
@@ -4801,7 +4801,7 @@
 /turf/simulated/floor/tiled,
 /area/groundbase/science/robotics)
 "mI" = (
-/obj/structure/toilet{
+/obj/structure/toilet/teleplumbed{
 	dir = 8
 	},
 /obj/machinery/light,
@@ -5235,7 +5235,7 @@
 /turf/simulated/floor/wood,
 /area/groundbase/medical/psych)
 "oj" = (
-/obj/structure/toilet{
+/obj/structure/toilet/teleplumbed{
 	dir = 8
 	},
 /obj/machinery/light,
@@ -6512,6 +6512,7 @@
 /obj/machinery/requests_console/preset/research{
 	pixel_y = 30
 	},
+/obj/machinery/anomaly_harvester,
 /turf/simulated/floor/tiled,
 /area/groundbase/science/rnd)
 "rI" = (
@@ -7172,6 +7173,7 @@
 /turf/simulated/floor/tiled/white,
 /area/groundbase/medical/triage)
 "tI" = (
+/obj/machinery/rnd/destructive_analyzer,
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/science/rnd)
 "tJ" = (
@@ -7694,7 +7696,7 @@
 /area/groundbase/science/xenohall)
 "vi" = (
 /obj/machinery/light,
-/obj/structure/toilet{
+/obj/structure/toilet/teleplumbed{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
@@ -8073,7 +8075,7 @@
 /area/groundbase/medical/lobby)
 "wk" = (
 /obj/machinery/light,
-/obj/structure/toilet{
+/obj/structure/toilet/teleplumbed{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
@@ -8863,7 +8865,7 @@
 /turf/simulated/floor/wood,
 /area/groundbase/dorms/room1)
 "yC" = (
-/obj/structure/toilet{
+/obj/structure/toilet/teleplumbed{
 	dir = 8
 	},
 /obj/machinery/light,
@@ -10461,12 +10463,18 @@
 /area/groundbase/dorms/room1)
 "Dm" = (
 /obj/structure/table/standard,
-/obj/item/retail_scanner/science,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
 /obj/structure/noticeboard{
 	pixel_x = 32
+	},
+/obj/item/storage/box/anomaly{
+	pixel_y = 12;
+	pixel_x = 10
+	},
+/obj/item/storage/box/anomaly{
+	pixel_y = 5
 	},
 /turf/simulated/floor/tiled,
 /area/groundbase/science/rnd)
@@ -11032,6 +11040,7 @@
 	dir = 8
 	},
 /obj/machinery/light,
+/obj/machinery/power/emitter,
 /turf/simulated/floor/tiled,
 /area/groundbase/science/rnd)
 "EN" = (
@@ -11066,7 +11075,7 @@
 /turf/simulated/floor/outdoors/sidewalk/slab,
 /area/groundbase/level2/nw)
 "EU" = (
-/obj/structure/toilet,
+/obj/structure/toilet/teleplumbed,
 /obj/machinery/button/remote/airlock{
 	id = "toilet2";
 	pixel_x = -26;
@@ -11219,7 +11228,7 @@
 /area/groundbase/command/hop)
 "Fr" = (
 /obj/machinery/light,
-/obj/structure/toilet{
+/obj/structure/toilet/teleplumbed{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
@@ -14623,7 +14632,7 @@
 /area/groundbase/civilian/hydroponics)
 "OB" = (
 /obj/machinery/light,
-/obj/structure/toilet{
+/obj/structure/toilet/teleplumbed{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
@@ -17170,7 +17179,7 @@
 /turf/simulated/floor/carpet,
 /area/groundbase/civilian/chapel)
 "VT" = (
-/obj/structure/toilet{
+/obj/structure/toilet/teleplumbed{
 	dir = 8
 	},
 /obj/machinery/light,
@@ -17896,6 +17905,7 @@
 	dir = 1;
 	pixel_y = -30
 	},
+/obj/item/retail_scanner/science,
 /turf/simulated/floor/tiled,
 /area/groundbase/science/rnd)
 "Yc" = (

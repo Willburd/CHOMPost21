@@ -13,7 +13,7 @@
 	var/datum/projectile_data/last_tele_data = null
 	var/z_co = 1
 	var/distance_off
-	var/rotation_off
+	// var/rotation_off // Outpost 21 edit - Remove randomized offset in Tsci
 	var/turf/last_target
 
 	var/rotation = 0
@@ -58,7 +58,6 @@
 		crystals += W
 		W.forceMove(src)
 		user.visible_message("[user] inserts [W] into \the [src]'s crystal slot.", span_notice("You insert [W] into \the [src]'s crystal slot."))
-		updateDialog()
 	else if(istype(W, /obj/item/gps))
 		if(!inserted_gps)
 			inserted_gps = W
@@ -190,16 +189,9 @@
 /obj/machinery/computer/telescience/proc/telefail()
 	COOLDOWN_START(src, teleport_cooldown, (2 SECONDS))
 	switch(rand(99))
-		if(0 to 80)
+		if(0 to 85)
 			sparks()
 			visible_message(span_warning("The telepad weakly fizzles."))
-			return
-		if(81 to 85)
-			sparks()
-			var/anomaly = pick(FLUX_ANOMALY, GRAVITATIONAL_ANOMALY, PYRO_ANOMALY, HALLUCINATION_ANOMALY, BIOSCRAMBLER_ANOMALY, DIMENSIONAL_ANOMALY, WEATHER_ANOMALY)
-			generate_anomaly(get_turf(telepad), anomaly, 1, FALSE)
-			for(var/mob/living/carbon/human/human in viewers(telepad, null))
-				to_chat(human, span_warning("The telepad crackles with energy, as a tear in reality is created!"))
 			return
 		if(86 to 90)
 			// Irradiate everyone in telescience!
@@ -238,9 +230,11 @@
 
 	if(telepad)
 		var/trueDistance = CLAMP(distance + distance_off, 1, get_max_allowed_distance())
-		var/trueRotation = rotation + rotation_off
+		var/trueRotation = rotation // + rotation_off // Outpost 21 edit - Remove randomized offset in Tsci
 
 		var/datum/projectile_data/proj_data = simple_projectile_trajectory(telepad.x, telepad.y, trueRotation, trueDistance)
+		if(proj_data?.time)
+			proj_data.time /= 3 // Outpost 21 edit - Decreased teleport cooldown
 		last_tele_data = proj_data
 
 		var/trueX = proj_data.dest_x
@@ -273,7 +267,7 @@
 			teles_left -= 1
 
 			// use a lot of power
-			use_power(trueDistance * 10000)
+			use_power(trueDistance * 1000) // Outpost 21 edit - Make telesci actually fun
 
 			var/datum/effect/effect/system/spark_spread/S = new /datum/effect/effect/system/spark_spread()
 			S.set_up(5, 1, get_turf(telepad))
@@ -303,6 +297,7 @@
 				source = dest
 				dest = target
 
+			var/list/sent_atoms = list()
 			flick("pad-beam", telepad)
 			playsound(telepad, 'sound/weapons/emitter2.ogg', 25, 1, extrarange = 3, falloff = 5)
 			for(var/atom/movable/ROI in source)
@@ -338,13 +333,16 @@
 						else
 							log_msg += ")"
 					log_msg += ", "
+				sent_atoms += ROI
 				do_teleport(ROI, dest)
+			// Either works for the experiment scan, so fire signals on both
+			SEND_SIGNAL(src, COMSIG_TELESCI_TELEPORT, sent_atoms, target, sending)
+			SEND_SIGNAL(telepad, COMSIG_TELESCI_TELEPORT, sent_atoms, target, sending)
 
 			if (!dd_hassuffix(log_msg, ", "))
 				log_msg += "nothing"
 			log_msg += " [sending ? "to" : "from"] [trueX], [trueY], [z_co] ([A ? A.name : "null area"])"
 			investigate_log(log_msg, "telesci")
-			updateDialog()
 
 /obj/machinery/computer/telescience/proc/teleport(mob/user)
 	if(!COOLDOWN_FINISHED(src, teleport_cooldown))
@@ -382,11 +380,11 @@
 /obj/machinery/computer/telescience/proc/recalibrate()
 	teles_left = rand(40, 50)
 	distance_off = rand(-4, 4)
-	rotation_off = rand(-10, 10)
+//	rotation_off = rand(-10, 10) // Outpost 21 edit - Remove randomized offset in Tsci
 
 
 // Procedure that calculates the actual trajectory taken!
-/proc/simple_projectile_trajectory(var/src_x, var/src_y, var/rotation, var/distance)
+/proc/simple_projectile_trajectory(src_x, src_y, rotation, distance)
 	var/time = distance / 10 // 100ms per distance seems fine?
 	var/dest_x = src_x + distance*sin(rotation);
 	var/dest_y = src_y + distance*cos(rotation);

@@ -21,13 +21,6 @@
 	character_name = list("shitfacemcgee")  //Character name. this variable is required, or the item doesn't show in loadout. Change to "character_name = null" if not character restricted.
 */
 
-/datum/gear/fluff/collar //Use this as a base path for collars if you'd like to set tags in loadout. Make sure you don't use apostrophes in the display name or this breaks!
-	slot = slot_tie
-
-/datum/gear/fluff/collar/New()
-	..()
-	gear_tweaks += gear_tweak_collar_tag
-
 // global fluff medals
 /datum/gear/fluff/ESHUI_surveypatch
 	display_name = "ESHUI Survey Corps Patch"
@@ -44,8 +37,8 @@
 /datum/gear/fluff/ESHUI_bronzemedal
 	display_name = "ESHUI Meritorious Defense Medal"
 	path = /obj/item/clothing/accessory/medal/solgov/bronze/sol/eshui
-	ckeywhitelist = list("drakefrostpaw","nadyr","ozydev","remthebold","synxplushy","wdf71","cadeTiger","niilomarvy","lowpowermia","ikidarsha","rainy12","bigbade")
-	character_name = list("Drake Frostpaw","Taaa","Ecise Nei","Papin Vandalia","Me Eep","Mitz","Feldam","Svatti","Nikita","Stridefast","Raine Rattlewag","Sitka Niteshade","Anna Neso","Kalun")
+	ckeywhitelist = list("drakefrostpaw","nadyr","ozydev","remthebold","synxplushy","wdf71","cadeTiger","niilomarvy","lowpowermia","ikidarsha","rainy12","bigbade","darklord92")
+	character_name = list("Drake Frostpaw","Taaa","Ecise Nei","Papin Vandalia","Me Eep","Mitz","Feldam","Svatti","Nikita","Stridefast","Raine Rattlewag","Sitka Niteshade","Anna Neso","Kalun","Quincy")
 
 /datum/gear/fluff/ESHUI_medalval
 	display_name = "ESHUI Medal of Valor"
@@ -56,14 +49,14 @@
 /datum/gear/fluff/ESHUI_medaldefop
 	display_name = "ESHUI Defensive Operations Medal"
 	path = /obj/item/clothing/accessory/medal/solgov/iron/star/eshui
-	ckeywhitelist = list("jollytjerry11","synxplushy","darklord92","niilomarvy")
-	character_name = list("Ed'Reith Foley","Zeeshi","Vi'Akit","Ral'Hathamee")
+	ckeywhitelist = list("jollytjerry11","synxplushy","darklord92","niilomarvy","thewatcherxacol","ikidarsha")
+	character_name = list("Ed'Reith Foley","Zeeshi","Vi'Akit","Ral'Hathamee","Krae Anraschia","P10-N33R")
 
 /datum/gear/fluff/ESHUI_medalcomb
 	display_name = "ESHUI Combat Action Medal"
 	path = /obj/item/clothing/accessory/medal/solgov/silver/sword/eshui
-	ckeywhitelist = list("ozydev","synxplushy","remthebold","cameron653","ironicleo","caramelion","pirakahunter788","haliaeetus","valinari","silencedmp5a5","natesaruli")
-	character_name = list("Raine Rattlewag","Cracker","Zeeshi","Trashfire","Diana Kuznetsova","Nikel","Tasesii","Calza Colfax","Atus","Valinari Sandivi Gloria","Russo","Cecil Colfax")
+	ckeywhitelist = list("ozydev","synxplushy","remthebold","cameron653","ironicleo","caramelion","pirakahunter788","haliaeetus","valinari","silencedmp5a5","natesaruli","spectralriot")
+	character_name = list("Raine Rattlewag","Cracker","Zeeshi","Trashfire","Diana Kuznetsova","Nikel","Tasesii","Calza Colfax","Atus","Valinari Sandivi Gloria","Russo","Cecil Colfax","Victim","ES-HASD #408")
 
 /datum/gear/fluff/ESHUI_rankpin
 	display_name = "ESHUI Officer's Qualification Pin"

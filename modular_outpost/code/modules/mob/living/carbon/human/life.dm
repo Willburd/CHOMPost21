@@ -55,26 +55,49 @@
 	VAR_PRIVATE/feels_gross = 0
 
 /mob/living/carbon/human/handle_outpost_hygene()
+	if(isSynthetic())
+		return
+
+	// Need to be at maximum filth
+	var/threshold = 10
 	if(germ_level < GERM_LEVEL_MOVE_CAP || isbelly(loc))
+		if(feels_gross >= threshold && !isbelly(loc)) // Got cleaned
+			to_chat(src,span_notice("You feel refreshed and clean."))
 		feels_gross = 0
 		return
+
+	// Avoid spam
 	if(prob(99) || stat != CONSCIOUS || is_incorporeal())
 		return
 	feels_gross++
-	if(feels_gross < 5)
+	if(feels_gross < threshold)
 		return
+
+	// Dirtking unaffected, unbothered, in their element
+	if(species && (/datum/trait/neutral/mudking in species.traits))
+		return
+
 	// Wash your damn ass
+	if(feels_gross == threshold + 10)
+		to_chat(src,span_warning("You feel like you should take a shower..."))
+		return
+	if((feels_gross % 2) == 0) // Only do it half the time
+		return
 	switch(rand(1,6))
 		if(1)
-			emote("sneeze")
+			if(prob(20))
+				emote("sneeze")
 		if(2)
-			emote("cough")
+			if(prob(20))
+				emote("cough")
 		if(3)
-			emote("sniff")
+			if(prob(20))
+				emote("sniff")
 		if(4)
 			to_chat(src,span_warning("You feel dirty."))
 		if(5)
 			to_chat(src,span_warning("You feel disgusting."))
 		if(6)
-			to_chat(src,span_warning("You feel itchy."))
+			if(prob(70))
+				to_chat(src,span_warning("You feel itchy."))
 #endif

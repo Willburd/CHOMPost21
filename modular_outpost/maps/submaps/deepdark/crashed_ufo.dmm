@@ -17,6 +17,11 @@
 /obj/item/prop/alien/junk,
 /turf/simulated/shuttle/floor/alienplating,
 /area/submap/outpost21/crashed_ufo)
+"af" = (
+/obj/structure/table/alien,
+/obj/item/prop/deconstructable/gigacell,
+/turf/simulated/shuttle/floor/alienplating,
+/area/submap/outpost21/crashed_ufo)
 "ag" = (
 /obj/machinery/door/airlock/alien/locked,
 /turf/simulated/shuttle/floor/alienplating,
@@ -866,7 +871,7 @@ at
 aq
 aq
 aM
-aP
+af
 aq
 ai
 ac

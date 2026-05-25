@@ -70,7 +70,7 @@
 	return INITIALIZE_HINT_NORMAL
 
 // Boarding.
-/obj/vehicle/boat/MouseDrop_T(var/atom/movable/C, mob/user)
+/obj/vehicle/boat/MouseDrop_T(atom/movable/C, mob/user)
 	if(ismob(C))
 		load(C, user) // Outpost 21 edit - Cannot unbuckle if user_buckle_mob(C, user) is used
 	else

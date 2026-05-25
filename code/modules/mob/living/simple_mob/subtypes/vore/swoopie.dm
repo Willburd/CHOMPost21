@@ -47,13 +47,6 @@
 
 	var/static/list/crew_creatures = list(	/mob/living/simple_mob/protean_blob,
 											/mob/living/simple_mob/slime/promethean)
-	var/static/list/pest_creatures = list(	/mob/living/simple_mob/animal/passive/mouse,
-											/mob/living/simple_mob/animal/passive/lizard,
-											/mob/living/simple_mob/animal/passive/cockroach,
-											// Outpost 21 edit begin - outpost creatures, note: uses EXACT types, no inheretance!
-											/mob/living/simple_mob/vore/alienanimals/jil,
-											/mob/living/simple_mob/vore/alienanimals/jil/jillioth)
-											// Outpost 21 edit end
 	var/obj/item/vac_attachment/swoopie/Vac
 
 /mob/living/simple_mob/vore/aggressive/corrupthound/swoopie/Initialize(mapload)
@@ -63,13 +56,13 @@
 		init_vore()
 	Vac = new /obj/item/vac_attachment/swoopie(src)
 	if(istype(Vac))
-		Vac.output_dest = vore_selected
+		Vac.output_dest = WEAKREF(vore_selected)
 		Vac.vac_power = 3
 		Vac.vac_owner = src
 
 /mob/living/simple_mob/vore/aggressive/corrupthound/swoopie/IIsAlly(mob/living/L)
 	. = ..()
-	if(L?.type in pest_creatures) // If they're a pest, swoop no matter what!
+	if(L && HAS_TRAIT(L, TRAIT_AMBIENT_PEST_MOB)) // If they're a pest, swoop no matter what!
 		return FALSE
 	if(!.) // Outside the faction and not in friends, are they crew
 		return L?.type in crew_creatures
@@ -214,9 +207,10 @@
 					L.remove_from_mob(Vac, src)
 				else
 					Vac.forceMove(src)
-		if(!Vac.output_dest)
+		var/atom/movable/vac_output = Vac.output_dest?.resolve()
+		if(!vac_output)
 			if(isbelly(vore_selected))
-				Vac.output_dest = vore_selected
+				Vac.output_dest = WEAKREF(vore_selected)
 	if(!istype(T) || !istype(Vac) || !has_AI() || Vac.loc != src || stat)
 		return
 	if(istype(T, /turf/simulated))
@@ -233,27 +227,6 @@
 			Vac.afterattack(L, src, 1)
 			return
 
-// Outpost 21 edit begin - size modifier for swoopies
-/mob/living/get_effective_size(var/micro = FALSE)
-	return size_multiplier + 0.55 // Lets teshari get scooped running under it
-// Outpost 21 edit end
-
-// Outpost 21 edit(port) begin - Ejection lever
-/mob/living/simple_mob/vore/aggressive/corrupthound/swoopie/verb/eject_switch()
-	set name = "Eject CHURNO-VAC"
-	set desc = "Releases the contents of the SWOOPIE's CHURNO-VAC."
-	set category = "Object"
-	set src in oview(1)
-
-	if(do_after(usr, 40, target = src))
-		usr.visible_message(span_info("[usr] pulls \The [src]'s ejection switch!"))
-		release_vore_contents()
-		for(var/mob/living/L in living_mobs(0)) //add everyone on the tile to the do-not-eat list for a while
-			if(!(LAZYFIND(prey_excludes, L))) // Unless they're already on it, just to avoid fuckery.
-				LAZYSET(prey_excludes, L, world.time)
-				addtimer(CALLBACK(src, PROC_REF(removeMobFromPreyExcludes), WEAKREF(L)), 30 SECONDS)
-// Outpost 21 edit end
-
 /datum/say_list/swoopie
 	speak = list("Scanning for debris...", "Scanning for dirt...", "Scanning for pests...", "Squawk!")
 	emote_hear = list("squawks!", "whirrs idly.", "revs up its vacuum.")
@@ -261,7 +234,7 @@
 	say_maybe_target = list("Pest detected?")
 	say_got_target = list("PEST DETECTED!")
 
-/mob/living/simple_mob/vore/aggressive/corrupthound/swoopie/ClickOn(var/atom/A, var/params)
+/mob/living/simple_mob/vore/aggressive/corrupthound/swoopie/ClickOn(atom/A, params)
 	var/list/modifiers = params2list(params)
 	if(modifiers["shift"] || modifiers["ctrl"] || modifiers["middle"] || modifiers["alt"])
 		return ..()
@@ -353,7 +326,7 @@
 			to_chat(usr, "You press a button on \the [src], [ai.swoop_pests ? "" : "de"]activating it's pest seeking routines!")
 		if("Swoop Trash")
 			ai.swoop_trash = !ai.swoop_trash // invert the option
-			to_chat(usr, "you press a button on \the [src], [ai.swoop_trash ? "" : "de"]activating it's pest seeking routines!")
+			to_chat(usr, "you press a button on \the [src], [ai.swoop_trash ? "" : "de"]activating it's trash seeking routines!")
 
 
 /mob/living/simple_mob/vore/aggressive/corrupthound/swoopie/Login()
@@ -367,7 +340,7 @@
 	icon = 'icons/mob/vacpack_swoop.dmi'
 	item_state = null
 
-/obj/item/vac_attachment/swoopie/dropped(mob/user) //This should fix it sitting on the ground until the next life() tick
+/obj/item/vac_attachment/swoopie/dropped(mob/user, equipping, slot) //This should fix it sitting on the ground until the next life() tick
 	. = ..()
 	if(!vac_owner)
 		return
@@ -402,7 +375,7 @@
 
 	return ..(targets)
 
-/datum/ai_holder/simple_mob/retaliate/swoopie/find_target(var/list/possible_targets, var/has_targets_list = FALSE)
+/datum/ai_holder/simple_mob/retaliate/swoopie/find_target(list/possible_targets, has_targets_list = FALSE)
 	ai_log("find_target() : Entered.", AI_LOG_TRACE)
 	if(!hostile) // So retaliating mobs only attack the thing that hit it.
 		return null

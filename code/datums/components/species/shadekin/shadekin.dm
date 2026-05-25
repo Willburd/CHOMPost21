@@ -181,10 +181,10 @@
 
 	var/brightness = T.get_lumcount() //Brightness in 0.0 to 1.0
 	darkness = 1-brightness //Invert
-	// outpost 21 addition begin - lockers are dark and spooky!
+	// outpost 21 edit begin - lockers are dark and spooky!
 	if(istype(owner.loc,/obj/structure/closet)) // it's dark in here!
 		darkness = 1
-	// outpost 21 addition end
+	// outpost 21 edit end
 	var/is_dark = (darkness >= 0.5)
 
 	if(in_phase)
@@ -204,6 +204,12 @@
 			dark_gains = energy_light
 
 	dark_gains = handle_nutrition_conversion(dark_gains)
+
+	// Outpost 21 edit(port) begin - Regen in dark tiles over time
+	if(istype(T,/turf/simulated/floor/weird_things/dark) || istype(T,/turf/unsimulated/floor/dark))
+		dark_gains *= 3
+		dark_gains += 2
+	// Outpost 21 edit end
 
 	shadekin_adjust_energy(dark_gains)
 
@@ -314,6 +320,11 @@
 	SIGNAL_HANDLER
 
 	if(in_phase && hide_voice_in_phase)
+		name_data[1] = ""
+		return COMPONENT_ALT_NAME_CHANGED
+
+	// Suppress "(as Unknown)" for shadekin with voice changers, or no identification.
+	if(source.name != source.GetVoice())
 		name_data[1] = ""
 		return COMPONENT_ALT_NAME_CHANGED
 

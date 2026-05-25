@@ -431,7 +431,7 @@
 /datum/gear/suit/wintercoat/security
 	display_name = "winter coat, security"
 	path = /obj/item/clothing/suit/storage/hooded/wintercoat/security
-	allowed_roles = list(JOB_SECURITY_OFFICER, JOB_HEAD_OF_SECURITY, JOB_WARDEN /*, JOB_DETECTIVE*/, JOB_BLUESHIELD_GUARD, JOB_SECURITY_PILOT) //YW ADDITIONS // Outpost 21 edit - Detective is officer now
+	allowed_roles = list(JOB_SECURITY_OFFICER, JOB_HEAD_OF_SECURITY, JOB_WARDEN /*, JOB_DETECTIVE*/, JOB_BLUESHIELD_GUARD, JOB_BRIG_PHYSICIAN, JOB_SECURITY_PILOT) //YW ADDITIONS // Outpost 21 edit - Detective is officer now
 	show_roles = FALSE
 
 /datum/gear/suit/wintercoat/security/hos
@@ -485,7 +485,7 @@
 /datum/gear/suit/wintercoat/science
 	display_name = "winter coat, science"
 	path = /obj/item/clothing/suit/storage/hooded/wintercoat/science
-	allowed_roles = list(JOB_RESEARCH_DIRECTOR,JOB_SCIENTIST, JOB_ROBOTICIST, JOB_XENOBIOLOGIST, JOB_XENOBOTANIST)
+	allowed_roles = list(JOB_RESEARCH_DIRECTOR,JOB_SCIENTIST, JOB_ROBOTICIST, JOB_XENOBIOLOGIST, JOB_XENOBOTANIST, JOB_ELECTROPHYSICIST)
 	show_roles = FALSE
 
 /datum/gear/suit/wintercoat/science/robotics
@@ -684,19 +684,19 @@
 /datum/gear/suit/snowsuit/security
 	display_name = "snowsuit, security"
 	path = /obj/item/clothing/suit/storage/hooded/wintercoat/snowsuit/security // CHOMPEdit
-	allowed_roles = list(JOB_SECURITY_OFFICER, JOB_HEAD_OF_SECURITY, JOB_WARDEN /*, JOB_DETECTIVE*/, JOB_BLUESHIELD_GUARD, JOB_SECURITY_PILOT) //YW ADDITIONS // Outpost 21 edit - Detective is officer now
+	allowed_roles = list(JOB_SECURITY_OFFICER, JOB_HEAD_OF_SECURITY, JOB_WARDEN /*, JOB_DETECTIVE*/, JOB_BLUESHIELD_GUARD, JOB_BRIG_PHYSICIAN, JOB_SECURITY_PILOT) //YW ADDITIONS // Outpost 21 edit - Detective is officer now, Brig medic accessible
 	show_roles = FALSE
 
 /datum/gear/suit/snowsuit/medical
 	display_name = "snowsuit, medical"
 	path = /obj/item/clothing/suit/storage/hooded/wintercoat/snowsuit/medical // CHOMPEdit
-	allowed_roles = list(JOB_MEDICAL_DOCTOR,JOB_CHIEF_MEDICAL_OFFICER,JOB_CHEMIST,JOB_PARAMEDIC,JOB_GENETICIST, JOB_PSYCHIATRIST, JOB_SEARCH_AND_RESCUE) // CHOMPEdit
+	allowed_roles = list(JOB_MEDICAL_DOCTOR,JOB_CHIEF_MEDICAL_OFFICER,JOB_CHEMIST,JOB_PARAMEDIC,JOB_GENETICIST, JOB_PSYCHIATRIST, JOB_BRIG_PHYSICIAN, JOB_SEARCH_AND_RESCUE) // CHOMPEdit // Outpost 21 edit - Brig medic accessible
 	show_roles = FALSE
 
 /datum/gear/suit/snowsuit/science
 	display_name = "snowsuit, science"
 	path = /obj/item/clothing/suit/storage/hooded/wintercoat/snowsuit/science // CHOMPEdit
-	allowed_roles = list(JOB_RESEARCH_DIRECTOR,JOB_SCIENTIST, JOB_ROBOTICIST, JOB_XENOBIOLOGIST)
+	allowed_roles = list(JOB_RESEARCH_DIRECTOR,JOB_SCIENTIST, JOB_ROBOTICIST, JOB_XENOBIOLOGIST, JOB_ELECTROPHYSICIST)
 	show_roles = FALSE
 
 /datum/gear/suit/snowsuit/engineering

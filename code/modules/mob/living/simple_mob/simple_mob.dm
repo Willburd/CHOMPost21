@@ -63,7 +63,7 @@
 	var/harm_intent_damage = 3		// How much an unarmed harm click does to this mob.
 	var/list/loot_list = list()		// The list of lootable objects to drop, with "/path = prob%" structure
 	var/obj/item/card/id/myid// An ID card if they have one to give them access to stuff.
-	var/organ_names = /decl/mob_organ_names //'False' bodyparts that can be shown as hit by projectiles in place of the default humanoid bodyplan.
+	var/organ_names = /datum/decl/mob_organ_names //'False' bodyparts that can be shown as hit by projectiles in place of the default humanoid bodyplan.
 
 	//Mob environment settings
 	var/minbodytemp = 250			// Minimum "okay" temperature in kelvin
@@ -185,6 +185,7 @@
 
 	//no stripping of simplemobs
 	strip_pref = FALSE
+	blocks_emissive = EMISSIVE_BLOCK_UNIQUE // Note, this should be refactored to drop priority overlays
 
 /mob/living/simple_mob/Initialize(mapload)
 	remove_verb(src, /mob/verb/observe)
@@ -370,13 +371,13 @@
 	movement_target = null
 
 
-/mob/living/simple_mob/say_quote(var/message, var/datum/language/speaking = null)
+/mob/living/simple_mob/say_quote(message, datum/language/speaking = null)
 	if(speak_emote.len)
 		. = pick(speak_emote)
 	else if(speaking)
 		. = ..()
 
-/mob/living/simple_mob/get_speech_ending(verb, var/ending)
+/mob/living/simple_mob/get_speech_ending(verb, ending)
 	return verb
 
 /mob/living/simple_mob/is_sentient()
@@ -391,19 +392,19 @@
 	add_overlay(hud_list)
 
 //Makes it so that simplemobs can understand galcomm without being able to speak it.
-/mob/living/simple_mob/say_understands(var/mob/other, var/datum/language/speaking = null)
+/mob/living/simple_mob/say_understands(mob/other, datum/language/speaking = null)
 	if(understands_common && (speaking?.name == LANGUAGE_GALCOM || !speaking))
 		return TRUE
 	return ..()
 
-/decl/mob_organ_names
+/datum/decl/mob_organ_names
 	var/list/hit_zones = list("body") //When in doubt, it's probably got a body.
 
 /*
  * How injured are we? Returns a number that is then added to movement cooldown and firing/melee delay respectively.
  * Called by movement_delay and our firing/melee delay checks
 */
-/mob/living/simple_mob/proc/get_injury_level(var/mob/living/simple_mob/M)
+/mob/living/simple_mob/proc/get_injury_level(mob/living/simple_mob/M)
 	var/h = getMaxHealth() - getOxyLoss() - getToxLoss() - getFireLoss() - getBruteLoss() - getCloneLoss() - halloss // We're not updating our actual health here bc we want updatehealth() and other checks to handle that
 	if(h > 0) 												// Safety to prevent division by 0 errors
 		if((h / getMaxHealth()) <= threshold) 				// Essentially, did our health go down? We don't modify want to modify our total slowdown if we didn't actually take damage, and aren't below our threshold %

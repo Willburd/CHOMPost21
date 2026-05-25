@@ -1,1 +1,1 @@
-/datum/category_item/catalogue/information/organization/bishop
+/datum/lore/organization/tsc/bishop

@@ -8,8 +8,10 @@
 	// Steps that check for a target limb or organ check the machine, if they see it's an autodoc monkey
 	var/obj/machinery/auto_doc/owner_machine
 
-/mob/living/carbon/human/monkey/auto_doc/rad_act(severity)
-	return
+
+/mob/living/carbon/human/monkey/auto_doc/Initialize(mapload)
+	. = ..()
+	AddComponent(/datum/component/radiation_effects, radiation_immunity = TRUE, glows = FALSE)
 
 /mob/living/carbon/human/monkey/auto_doc/handle_disabilities()
 	return
@@ -61,6 +63,7 @@
 	doctor = new(src)
 	doctor.owner_machine = src
 	doctor.AddElement(/datum/element/godmode)
+	doctor.species.flags &= NO_DNA | NO_HALLUCINATION | NO_PAIN | NO_INFECT // No mutation
 
 /obj/machinery/auto_doc/proc/create_operations()
 	operations = list()
@@ -169,7 +172,7 @@
 		user.drop_item(src)
 		insert_organ(user,O)
 
-/obj/machinery/auto_doc/click_alt(var/mob/user)
+/obj/machinery/auto_doc/click_alt(mob/user)
 	..()
 	add_fingerprint(user)
 	remove_organ(user)
@@ -350,7 +353,7 @@
 	// NEXT
 	next_time = world.time + delay_time
 
-/obj/machinery/auto_doc/proc/end_operation(var/success)
+/obj/machinery/auto_doc/proc/end_operation(success)
 	use_power = USE_POWER_IDLE
 	operation_type = ""
 	operation_active = FALSE
@@ -360,7 +363,7 @@
 	update_icon()
 	flick("end",src)
 
-/obj/machinery/auto_doc/proc/insert_organ(mob/user as mob, var/obj/item/organ/O)
+/obj/machinery/auto_doc/proc/insert_organ(mob/user as mob, obj/item/organ/O)
 	if(!O)
 		return
 	if(tools[TOOL_TRANSPLANT])
@@ -403,7 +406,7 @@
 	else
 		icon_state = "idle"
 
-/proc/autodoc_surgery_step_select( var/user, var/list/available_surgeries, var/window_desc, var/window_title )
+/proc/autodoc_surgery_step_select( user, list/available_surgeries, window_desc, window_title )
 	if(!istype(user,/mob/living/carbon/human/monkey/auto_doc))
 		//More than one possible? Ask them which one.
 		if(available_surgeries.len > 1)
@@ -421,7 +424,7 @@
 				return surgery
 		return null
 
-/proc/autodoc_organ_select( var/user, var/mob/living/carbon/human/target, var/list/named_organ_to_tag_list, var/window_desc, var/window_title )
+/proc/autodoc_organ_select( user, mob/living/carbon/human/target, list/named_organ_to_tag_list, window_desc, window_title )
 	// named_organ_to_tag_list is in the format "organ's name" -> organ_tag. EX: "Liver" -> "liver"
 	if(istype(user,/mob/living/carbon/human/monkey/auto_doc))
 		var/mob/living/carbon/human/monkey/auto_doc/D = user
