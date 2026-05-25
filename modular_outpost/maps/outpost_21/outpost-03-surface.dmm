@@ -27418,7 +27418,7 @@
 	},
 /obj/machinery/door/window/brigdoor/southleft{
 	name = "Emergency Access";
-	req_access = list(19, 52)
+	req_access = list(19)
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/bridge)
