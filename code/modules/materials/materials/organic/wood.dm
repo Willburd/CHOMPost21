@@ -19,6 +19,7 @@
 	destruction_desc = "splinters"
 	sheet_singular_name = "plank"
 	sheet_plural_name = "planks"
+	supply_conversion_value = 0.25
 
 /datum/material/wood/generate_recipes()
 	..()
@@ -145,7 +146,7 @@
 	sheet_plural_name = "logs"
 	sheet_collective_name = "pile"
 	pass_stack_colors = TRUE
-	supply_conversion_value = 0.5 // Outpost 21 edit(port) - reduced value
+	supply_conversion_value = 0.5
 
 /datum/material/wood/log/generate_recipes()
 	recipes = list(
@@ -172,7 +173,7 @@
 	stack_type = /obj/item/stack/material/stick
 	sheet_collective_name = "pile"
 	pass_stack_colors = TRUE
-	supply_conversion_value = 0.5 // Outpost 21 edit(port) - reduced value
+	supply_conversion_value = 0.05
 	sheet_singular_name = "stick"
 	sheet_plural_name = "sticks"
 

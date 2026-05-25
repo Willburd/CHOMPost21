@@ -129,7 +129,7 @@
 /obj/machinery/porta_turret/stationary/syndie // Generic turrets for POIs that need to not shoot their buddies.
 	req_one_access = list(ACCESS_SYNDICATE)
 	enabled = TRUE
-	check_all = TRUE
+	// check_all = TRUE // Outpost 21 edit - Check EITHER not require both faction and the ID
 	faction = FACTION_SYNDICATE // Make sure this equals the faction that the mobs in the POI have or they will fight each other.
 
 /obj/machinery/porta_turret/ai_defense

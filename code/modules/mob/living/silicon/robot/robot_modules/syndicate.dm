@@ -39,6 +39,13 @@
 	robot_id.forceMove(src)
 	src.modules += robot_id
 
+	// Outpost 21 edit begin - Syndicate borgs automatically unlink
+	robot.disconnect_from_ai()
+	robot.scrambledcodes = TRUE
+	if(robot.camera)
+		robot.camera.clear_all_networks()
+	// Outpost 21 edit end
+
 /obj/item/robot_module/robot/syndicate/adjust_gps(obj/item/gps/robot/robot_gps)
 	robot_gps.long_range = TRUE
 	robot_gps.hide_signal = TRUE

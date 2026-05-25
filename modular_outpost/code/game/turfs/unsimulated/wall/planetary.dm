@@ -3,7 +3,7 @@
 /turf/unsimulated/wall/planetary/muriki
 	name = "Ice wall"
 	desc = "Rocky outcrop that surrounds the outpost. Impassable."
-	icon = 'modular_outpost/icons/turf/icewall.dmi'
+	icon = 'icons/turf/snow.dmi'
 	icon_state = "Icerock"
 	alpha = 0xFF
 	MURIKI_SET_ATMOS

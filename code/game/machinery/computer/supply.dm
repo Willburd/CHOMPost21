@@ -24,7 +24,6 @@
 	icon_keyboard = "tech_key"
 	icon_screen = "supply"
 	light_color = "#b88b2e"
-	//req_access = list(ACCESS_CARGO) //CHOMPRemove, removing hard access locks.
 	circuit = /obj/item/circuitboard/supplycomp/control
 	authorization = SUP_SEND_SHUTTLE | SUP_ACCEPT_ORDERS
 
@@ -156,8 +155,8 @@
 	data["receipts"] = receipts
 	data["contraband"] = can_order_contraband || (authorization & SUP_CONTRABAND)
 	data["modal"] = tgui_modal_data(src)
-	data["price_mod"] = price_mode // Outpost 21 edit - Points or thalers
-	data["cash_points"] = SSsupply.points_per_money // Outpost 21 edit - Points or thalers
+	data["price_mod"] = price_mode
+	data["cash_points"] = SSsupply.money_per_points
 	return data
 
 /obj/machinery/computer/supplycomp/tgui_static_data(mob/user)
@@ -486,11 +485,9 @@
 				if("force_shuttle")
 					shuttle.force_launch(src)
 			. = TRUE
-		// Outpost 21 edit begin - Points or thalers
 		if("change_cash_mode")
 			price_mode = !price_mode
 			. = TRUE
-		// Outpost 21 edit end
 	add_fingerprint(ui.user)
 
 /obj/machinery/computer/supplycomp/proc/post_signal(command)

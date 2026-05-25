@@ -1366,9 +1366,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/ninja_dojo/dojo)
 "di" = (
-/obj/machinery/porta_turret/stationary/syndie{
-	req_access = list(150)
-	},
+/obj/machinery/porta_turret/stationary/syndie,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -1484,6 +1482,15 @@
 	},
 /turf/unsimulated/floor/steel,
 /area/tdome/tdomeobserve)
+"dv" = (
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/mob/living/simple_mob/vore/wolftaur/syndicate/shotty,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
 "dw" = (
 /obj/structure/table/rack,
 /obj/item/storage/backpack/saddlebag_common/robust,
@@ -1653,9 +1660,26 @@
 "dQ" = (
 /turf/simulated/floor/wood/acacia,
 /area/ninja_dojo/dojo)
+"dR" = (
+/obj/structure/table/rack,
+/obj/item/clothing/gloves/telekinetic,
+/obj/item/clothing/gloves/telekinetic,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
 "dS" = (
 /turf/unsimulated/wall/fakeglass{
 	dir = 1
+	},
+/area/syndicate_mothership)
+"dT" = (
+/obj/structure/table/rack,
+/obj/item/clothing/gloves/toxinregen,
+/obj/item/clothing/gloves/regen,
+/obj/item/clothing/gloves/stamina,
+/turf/unsimulated/floor{
+	icon_state = "dark"
 	},
 /area/syndicate_mothership)
 "dU" = (
@@ -1664,6 +1688,12 @@
 	icon_state = "dark"
 	},
 /area/syndicate_mothership)
+"dV" = (
+/obj/machinery/recharge_station,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/centcom/simulated/cent_sat)
 "dW" = (
 /obj/effect/floor_decal/corner/white{
 	dir = 6
@@ -1675,6 +1705,23 @@
 	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/shuttle/mercenary)
+"dX" = (
+/obj/structure/table/rack,
+/obj/item/ammo_magazine/m10mm/rubber,
+/obj/item/ammo_magazine/m10mm/rubber,
+/obj/item/ammo_magazine/m10mm/rubber,
+/obj/item/ammo_magazine/m10mm/rubber,
+/obj/item/ammo_magazine/m10mm/rubber,
+/obj/item/ammo_magazine/m10mm/rubber,
+/obj/item/ammo_magazine/m10mm/rubber,
+/obj/item/ammo_magazine/m10mm/rubber,
+/obj/item/ammo_magazine/m10mm/rubber,
+/obj/item/ammo_magazine/m10mm/rubber,
+/obj/item/gun/projectile/automatic/c20r/rubber,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
 "dY" = (
 /obj/structure/table/alien,
 /obj/item/storage/box/glasses/square{
@@ -1689,6 +1736,28 @@
 "dZ" = (
 /turf/simulated/floor/tiled,
 /area/ninja_dojo/dojo)
+"ea" = (
+/obj/structure/table/rack,
+/obj/item/gun/energy/hunter,
+/obj/item/gun/energy/hunter,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"eb" = (
+/obj/structure/table/rack,
+/obj/item/storage/box/flashbangs,
+/obj/item/storage/box/flashbangs,
+/obj/item/storage/box/flashbangs,
+/obj/item/storage/box/flashbangs,
+/obj/item/storage/box/flashbangs,
+/obj/item/storage/box/flashbangs,
+/obj/item/storage/box/flashbangs,
+/obj/item/storage/box/flashbangs,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
 "ec" = (
 /turf/unsimulated/floor{
 	icon_state = "lino"
@@ -1749,6 +1818,30 @@
 	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/shuttle/mercenary)
+"ek" = (
+/obj/structure/table/rack,
+/obj/item/cell/slime{
+	pixel_x = 4;
+	pixel_y = 4
+	},
+/obj/item/cell/slime{
+	pixel_x = 4;
+	pixel_y = 4
+	},
+/obj/item/cell/slime,
+/obj/item/cell/slime,
+/obj/item/cell/slime{
+	pixel_x = -4;
+	pixel_y = -4
+	},
+/obj/item/cell/slime{
+	pixel_x = -4;
+	pixel_y = -4
+	},
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
 "el" = (
 /obj/effect/map_effect/interval/effect_emitter/smoke/fire,
 /turf/simulated/floor/indoorrocks,
@@ -1802,6 +1895,24 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
+"eq" = (
+/obj/structure/table/rack,
+/obj/item/storage/box/handcuffs,
+/obj/item/storage/box/handcuffs,
+/obj/item/storage/box/handcuffs,
+/obj/item/storage/box/handcuffs,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"er" = (
+/obj/structure/fans/hardlight,
+/obj/machinery/door/airlock/glass_external{
+	req_access = list(150);
+	req_one_access = null
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/shuttle/mercenary)
 "es" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel,
 /obj/machinery/door/firedoor/glass,
@@ -1811,6 +1922,9 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/mercenary)
+"et" = (
+/turf/simulated/shuttle/plating/airless,
+/area/syndicate_mothership)
 "ew" = (
 /turf/unsimulated/floor{
 	icon_state = "freezerfloor"
@@ -2450,30 +2564,17 @@
 	},
 /area/syndicate_mothership)
 "fW" = (
-/obj/item/clothing/shoes/boots/combat,
-/obj/item/clothing/shoes/boots/combat,
-/obj/item/clothing/shoes/boots/combat,
-/obj/item/clothing/gloves/combat,
-/obj/item/clothing/gloves/combat,
-/obj/item/clothing/gloves/combat,
-/obj/item/clothing/head/helmet/combat,
-/obj/item/clothing/head/helmet/combat,
 /obj/structure/table/rack,
-/turf/unsimulated/floor{
-	icon_state = "dark"
-	},
-/area/syndicate_mothership)
-"fX" = (
+/obj/item/clothing/shoes/boots/combat,
+/obj/item/clothing/shoes/boots/combat,
 /obj/item/clothing/shoes/boots/combat,
 /obj/item/clothing/shoes/boots/combat,
 /obj/item/clothing/shoes/boots/combat,
 /obj/item/clothing/gloves/combat,
 /obj/item/clothing/gloves/combat,
 /obj/item/clothing/gloves/combat,
-/obj/item/clothing/head/helmet/combat,
-/obj/item/clothing/head/helmet/combat,
-/obj/item/clothing/head/helmet/combat,
-/obj/structure/table/rack,
+/obj/item/clothing/gloves/combat,
+/obj/item/clothing/gloves/combat,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -5847,7 +5948,8 @@
 /area/shuttle/specialops_overmap)
 "mE" = (
 /obj/machinery/door/blast/multi_tile/four_tile_hor_sec{
-	id = "inter_starfight"
+	id = "inter_starfight";
+	autoclose = 0
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -8788,6 +8890,16 @@
 /obj/effect/floor_decal/corner/blue/border,
 /obj/machinery/mech_recharger,
 /obj/effect/floor_decal/industrial/warning/full,
+/obj/structure/extinguisher_cabinet/old{
+	pixel_y = -32;
+	pixel_x = 6;
+	dir = 1
+	},
+/obj/structure/extinguisher_cabinet/old{
+	pixel_y = -32;
+	pixel_x = -6;
+	dir = 1
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/specialops_overmap)
 "sR" = (
@@ -8870,9 +8982,7 @@
 /obj/effect/floor_decal/corner/red/border{
 	dir = 10
 	},
-/obj/structure/bed/chair/bay/shuttle{
-	dir = 1
-	},
+/obj/machinery/recharge_station,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -9542,14 +9652,6 @@
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 1
 	},
-/obj/structure/extinguisher_cabinet/old{
-	pixel_y = 32;
-	pixel_x = -6
-	},
-/obj/structure/extinguisher_cabinet/old{
-	pixel_y = 32;
-	pixel_x = 6
-	},
 /obj/machinery/mech_recharger,
 /obj/effect/floor_decal/industrial/warning/full,
 /turf/simulated/floor/tiled/techfloor,
@@ -10137,6 +10239,9 @@
 	frequency = 1381;
 	id_tag = "int_vent"
 	},
+/obj/item/hoist_kit,
+/obj/item/hoist_kit,
+/obj/structure/table/steel_reinforced,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -10774,23 +10879,6 @@
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 9
 	},
-/obj/machinery/embedded_controller/radio/airlock/docking_port{
-	frequency = 1381;
-	id_tag = "int_docker";
-	pixel_y = 26;
-	tag_exterior_door = "int_docker_door_ext";
-	tag_interior_door = "int_docker_door_int";
-	tag_airpump = "int_vent";
-	tag_chamber_sensor = "int_sensor";
-	tag_interior_sensor = "int_interior_sensor";
-	tag_exterior_sensor = "int_exterior_sensor"
-	},
-/obj/machinery/airlock_sensor{
-	frequency = 1381;
-	id_tag = "int_sensor";
-	master_tag = "int_docker";
-	pixel_y = 36
-	},
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -10909,7 +10997,8 @@
 /area/shuttle/specialops_overmap)
 "wB" = (
 /obj/machinery/door/blast/multi_tile/four_tile_hor_sec{
-	id = "inter_portfight"
+	id = "inter_portfight";
+	autoclose = 0
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -10934,15 +11023,6 @@
 	},
 /obj/machinery/atmospheric_field_generator/perma/underdoors,
 /obj/machinery/shield_diffuser,
-/obj/machinery/airlock_sensor/airlock_exterior/shuttle{
-	dir = 1;
-	frequency = 1381;
-	id_tag = "int_exterior_sensor";
-	master_tag = "int_docker";
-	pixel_x = 28;
-	pixel_y = 10;
-	req_one_access = list(1,52)
-	},
 /obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/shuttle/specialops_overmap)
@@ -13574,9 +13654,7 @@
 /turf/simulated/floor/tiled/white,
 /area/shuttle/mercenary)
 "Cb" = (
-/obj/machinery/porta_turret/stationary/syndie{
-	req_access = list(150)
-	},
+/obj/machinery/porta_turret/stationary/syndie,
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 1
 	},
@@ -13852,6 +13930,19 @@
 	dir = 9
 	},
 /obj/machinery/oxygen_pump/mobile/stabilizer,
+/obj/structure/closet/walllocker/medical/west{
+	name = "Blood storage closet"
+	},
+/obj/item/reagent_containers/blood/OMinus,
+/obj/item/reagent_containers/blood/OMinus,
+/obj/item/reagent_containers/blood/OMinus,
+/obj/item/reagent_containers/blood/OMinus,
+/obj/item/reagent_containers/blood/OMinus,
+/obj/item/reagent_containers/blood/OMinus,
+/obj/item/reagent_containers/blood/OMinus,
+/obj/item/reagent_containers/blood/OMinus,
+/obj/item/reagent_containers/blood/OMinus,
+/obj/item/reagent_containers/blood/OMinus,
 /turf/simulated/floor/tiled/white,
 /area/shuttle/mercenary)
 "CB" = (
@@ -14038,8 +14129,6 @@
 /area/shuttle/mercenary)
 "CZ" = (
 /obj/machinery/door/airlock/glass_external{
-	frequency = 1331;
-	id_tag = "merc_shuttle_doors";
 	req_access = list(150);
 	req_one_access = null
 	},
@@ -14315,7 +14404,6 @@
 /obj/structure/cable/orange{
 	icon_state = "0-8"
 	},
-/obj/structure/cable/orange,
 /turf/simulated/floor/plating,
 /area/shuttle/mercenary)
 "DA" = (
@@ -14536,6 +14624,7 @@
 	pixel_x = 4;
 	pixel_y = 23
 	},
+/obj/item/hoist_kit,
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/mercenary)
 "Ec" = (
@@ -14559,6 +14648,7 @@
 	dir = 5
 	},
 /obj/structure/medical_stand/anesthetic,
+/obj/item/reagent_containers/blood/OMinus,
 /turf/simulated/floor/tiled/white,
 /area/shuttle/mercenary)
 "Ef" = (
@@ -14688,26 +14778,12 @@
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "Em" = (
-/obj/machinery/access_button{
-	command = "cycle_interior";
-	frequency = 1331;
-	master_tag = "merc_shuttle";
-	name = "interior access button";
-	pixel_x = -10;
-	pixel_y = 21;
-	req_access = list(150)
-	},
-/obj/machinery/door/airlock/glass_external{
-	frequency = 1331;
-	id_tag = "merc_shuttle_doors";
-	req_access = list(150);
-	req_one_access = null
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
-/obj/structure/cable/orange{
-	icon_state = "1-2"
+/obj/machinery/door/airlock/glass_external{
+	req_access = list(150);
+	req_one_access = null
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/shuttle/mercenary)
@@ -14753,21 +14829,10 @@
 /area/shuttle/mercenary)
 "Es" = (
 /obj/machinery/door/airlock/external{
-	frequency = 1331;
-	id_tag = "merc_shuttle_doors";
 	name = "Ship External Access";
 	req_access = list(150)
 	},
 /obj/machinery/shield_diffuser,
-/obj/machinery/access_button{
-	command = "cycle_exterior";
-	frequency = 1331;
-	master_tag = "merc_shuttle";
-	name = "interior access button";
-	pixel_x = 10;
-	pixel_y = 25;
-	req_access = list(150)
-	},
 /obj/effect/step_trigger/dephase_shadekin,
 /obj/structure/fans/hardlight,
 /obj/effect/floor_decal/corner/lightgrey/border,
@@ -15068,24 +15133,6 @@
 	icon_state = "milspec_outerhull"
 	},
 /area/shuttle/specialops_overmap)
-"EW" = (
-/obj/structure/grille,
-/obj/machinery/door/firedoor/glass,
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/window/reinforced,
-/obj/structure/cable/orange{
-	icon_state = "0-2"
-	},
-/turf/simulated/floor/plating,
-/area/shuttle/mercenary)
 "EX" = (
 /obj/machinery/power/port_gen/pacman/mrs,
 /turf/unsimulated/floor{
@@ -15139,19 +15186,6 @@
 /obj/machinery/atmospherics/unary/vent_pump/high_volume,
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 1
-	},
-/turf/simulated/floor/reinforced,
-/area/shuttle/mercenary)
-"Fd" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume,
-/obj/effect/floor_decal/corner/lightgrey/border{
-	dir = 1
-	},
-/obj/machinery/embedded_controller/radio/simple_docking_controller{
-	frequency = 1331;
-	id_tag = "merc_shuttle";
-	pixel_y = 26;
-	tag_door = "merc_shuttle_doors"
 	},
 /turf/simulated/floor/reinforced,
 /area/shuttle/mercenary)
@@ -15434,12 +15468,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "FK" = (
-/obj/machinery/airlock_sensor{
-	frequency = 1331;
-	id_tag = "merc_shuttle_sensor";
-	pixel_x = 26;
-	pixel_y = 4
-	},
 /obj/machinery/status_display{
 	layer = 4;
 	pixel_y = 32
@@ -15661,12 +15689,6 @@
 /obj/item/stock_parts/capacitor/super,
 /obj/item/stock_parts/manipulator/pico,
 /obj/item/stock_parts/manipulator/pico,
-/obj/machinery/airlock_sensor{
-	frequency = 1331;
-	id_tag = "merc_shuttle_sensor";
-	pixel_x = 8;
-	pixel_y = -28
-	},
 /obj/machinery/pointdefense{
 	id_tag = "pd_merc"
 	},
@@ -15971,15 +15993,6 @@
 	dir = 8
 	},
 /mob/living/simple_mob/vore/wolftaur/syndicate/awp,
-/turf/unsimulated/floor{
-	icon_state = "dark"
-	},
-/area/syndicate_mothership)
-"GR" = (
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/mob/living/simple_mob/vore/wolftaur/syndicate/shotty/combat,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -17575,7 +17588,7 @@
 	intercept = 1
 	},
 /turf/simulated/shuttle/plating/airless,
-/area/space)
+/area/syndicate_mothership)
 "NL" = (
 /obj/machinery/door/airlock/external{
 	frequency = 1381;
@@ -36685,7 +36698,7 @@ mN
 mN
 mN
 ng
-nL
+dV
 nL
 nL
 sJ
@@ -55154,7 +55167,7 @@ mN
 yb
 gy
 sg
-fX
+fW
 fW
 sg
 gB
@@ -55492,7 +55505,7 @@ HO
 HB
 sg
 Hi
-GR
+jv
 Gt
 yb
 sg
@@ -55654,7 +55667,7 @@ HP
 HB
 sg
 Hi
-jv
+dv
 Gu
 yb
 ke
@@ -58089,8 +58102,8 @@ fo
 fo
 fo
 Cn
-CZ
-CZ
+er
+er
 CZ
 Cn
 fo
@@ -60500,8 +60513,8 @@ kQ
 kQ
 kQ
 kQ
-kQ
-kQ
+ea
+dX
 kQ
 Iq
 dl
@@ -60820,8 +60833,8 @@ mN
 mN
 ab
 yb
-kQ
-kQ
+dT
+dR
 dd
 hr
 hs
@@ -61308,7 +61321,7 @@ ab
 yb
 sg
 rA
-hE
+eb
 hH
 IN
 kG
@@ -61630,7 +61643,7 @@ mN
 mN
 ab
 yb
-kQ
+hE
 rA
 IW
 jo
@@ -62280,7 +62293,7 @@ ab
 yb
 kQ
 kQ
-hf
+ek
 hD
 la
 hA
@@ -62301,7 +62314,7 @@ mN
 mN
 fR
 fo
-EW
+fo
 Em
 Dz
 fo
@@ -62764,8 +62777,8 @@ mN
 mN
 ab
 yb
-kQ
-kQ
+IX
+eq
 gX
 qx
 fV
@@ -62787,7 +62800,7 @@ mN
 mN
 mN
 fR
-Fd
+Fc
 Eq
 DB
 fR
@@ -63576,7 +63589,7 @@ ab
 TW
 yb
 sg
-IX
+kQ
 iv
 gr
 in
@@ -67973,11 +67986,11 @@ TW
 TW
 TW
 TW
-Sg
-Sg
-Sg
-Sg
-Sg
+yb
+yb
+yb
+yb
+yb
 TW
 TW
 TW
@@ -68135,11 +68148,11 @@ TW
 TW
 TW
 TW
-Sg
-mN
-mN
-mN
-Sg
+yb
+et
+et
+et
+yb
 TW
 TW
 TW
@@ -68297,11 +68310,11 @@ TW
 TW
 TW
 TW
-Sg
-mN
+yb
+et
 NE
-mN
-Sg
+et
+yb
 TW
 TW
 TW
@@ -68459,11 +68472,11 @@ TW
 TW
 TW
 TW
-Sg
-mN
-mN
-mN
-Sg
+yb
+et
+et
+et
+yb
 TW
 TW
 TW
@@ -68621,11 +68634,11 @@ TW
 TW
 TW
 TW
-Sg
-Sg
-Sg
-Sg
-Sg
+yb
+yb
+yb
+yb
+yb
 TW
 TW
 TW

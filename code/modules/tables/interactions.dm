@@ -39,7 +39,7 @@
 			if (M.lying)
 				chance += 20				//Lying down lets you catch less bullets
 		if(flipped==1)
-			if(get_dir(loc, from) == dir)	//Flipped tables catch mroe bullets
+			if(get_dir(loc, from) == reverse_direction(dir))	//Flipped tables catch mroe bullets // Outpost 21 edit(port) - Reverse projectile blocking direction
 				chance += 20
 			else
 				return 1					//But only from one side

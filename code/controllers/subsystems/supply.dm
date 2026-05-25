@@ -7,16 +7,23 @@ SUBSYSTEM_DEF(supply)
 	//Initializes at default time
 	flags = SS_NO_TICK_CHECK
 
-	//supply points
+	/// Supply points
 	var/points = 50
-	var/points_per_process = 0 // Outpost 21 edit - changed 1.0 to 0	// Processes every 20 seconds, so this is 3 per minute
+	/// How many points we get every SSSupply fire.
+	var/points_per_process = 0.0 // Outpost 21 edit - No supply point generation
+	/// How much money we get for every stamped slip we return to Central
 	var/points_per_slip = 2
-	var/points_per_money = 8 // Outpost 21 edit - changed from 0.02 to 8, matches cargopoint vendor. Taxes cash exports to avoid exploits. // 1 point for $50
-	var/cash_tax = 0.05 //  Outpost 21 edit - Amount REMAINING after taxing. We have higher money conversion so exports are more valuable, and taxes on raw cash export
-	var/watts_sold = 0 // Outpost 21 edit(port) - selling excess power
-	var/points_per_watt = 10 MEGAWATTS // Outpost 21 edit(port) - amount of watts needed to get a supply point
-	var/warheads_sold = 0 // Outpost 21 edit(port) - selling TTVs
-	var/warheads_value = 0 // Outpost 21 edit(port) - selling TTVs
+	/// How much money one SP is worth in thalers. Shows up in the end of round stats.
+	var/money_per_points = 50
+	/// How much power we've sold this round.
+	var/watts_sold = 0
+	/// How many watts that have to be sold for a point - NYI
+	var/points_per_watt = 10 MEGAWATTS
+	/// How many TTVs we have sold this round.
+	var/warheads_sold = 0
+	/// How many points we've made selling TTVs
+	var/warheads_value = 0
+
 	//control
 	var/ordernum = 0						// Start at zero, it's per-shift tracking
 	var/list/shoppinglist = list()			// Approved orders
@@ -58,11 +65,11 @@ SUBSYSTEM_DEF(supply)
 		return 1
 	if(istype(A,/obj/item/radio/beacon))
 		return 1
-	if(istype(A,/obj/item/perfect_tele_beacon))	//VOREStation Addition: Translocator beacons
-		return 1										//VOREStation Addition: Translocator beacons
-	if(istype(A,/obj/machinery/power/quantumpad)) //	//VOREStation Add: Quantum pads
-		return 1					//VOREStation Add: Quantum pads
-	if(istype(A,/obj/structure/extraction_point )) // CHOMPStation Add: Fulton beacons
+	if(istype(A,/obj/item/perfect_tele_beacon))
+		return 1
+	if(istype(A,/obj/machinery/power/quantumpad))
+		return 1
+	if(istype(A,/obj/structure/extraction_point))
 		return 1
 
 	for(var/atom/B in A.contents)
@@ -75,7 +82,7 @@ SUBSYSTEM_DEF(supply)
 	SEND_GLOBAL_SIGNAL(COMSIG_GLOB_SUPPLY_SHUTTLE_DEPART, shuttle.shuttle_area)
 	for(var/area/subarea in shuttle.shuttle_area)
 		for(var/atom/movable/MA in subarea)
-			if(MA.anchored && !istype(MA,/obj/mecha)) // Outpost 21 edit - Selling mechs
+			if(MA.anchored && !istype(MA,/obj/mecha))
 				continue
 
 			var/datum/exported_crate/EC = new /datum/exported_crate()
@@ -384,7 +391,5 @@ SUBSYSTEM_DEF(supply)
 	var/approved_at							// Date and time the order was approved at
 	var/status								// [Requested, Accepted, Denied, Shipped]
 
-// Outpost 21 edit begin
 /datum/controller/subsystem/supply/proc/points_to_cash(val)
-	return FLOOR((val / points_per_money) / cash_tax, 1) // Undoes taxes, 500T == 500T when scanned
-// Outpost 21 edit end
+	return FLOOR(((val * money_per_points)), 1)

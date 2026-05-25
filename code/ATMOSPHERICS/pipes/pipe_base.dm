@@ -116,16 +116,14 @@
 	if(air_temporary)
 		loc.assume_air(air_temporary)
 	for(var/obj/machinery/meter/meter in loc)
-		if(meter.target == src)
+		var/obj/machinery/atmospherics/pipe/target = meter.select_target()
+		if(target == src)
 			var/obj/item/pipe_meter/PM = new /obj/item/pipe_meter(loc)
 			meter.transfer_fingerprints_to(PM)
 			qdel(meter)
 	. = ..()
 
 /obj/machinery/atmospherics/pipe/attackby(obj/item/W as obj, mob/user as mob)
-	if (istype(src, /obj/machinery/atmospherics/pipe/tank))
-		return ..()
-
 	if(istype(W,/obj/item/pipe_painter))
 		return 0
 

@@ -127,6 +127,9 @@
 										/area/muriki/grounds/tramborder/garage,
 										/area/muriki/grounds/tramborder/garage,
 										/area/muriki/grounds/sec/garage_entrance,
+										/area/muriki/grounds/med/garage_entrance,
+										/area/muriki/grounds/civ/garage_entrance,
+										/area/muriki/grounds/engi/garage_entrance,
 										// The roof areas don't need scrubbers and vents
 										/area/muriki/rooftop,
 										/area/muriki/rooftop/disposal,
@@ -136,6 +139,7 @@
 										/area/muriki/rooftop/science,
 										/area/muriki/rooftop/security,
 										/area/muriki/rooftop/engineering,
+										/area/muriki/rooftop/crossdept_pathway,
 										// The elevators don't need scrubbers and vents
 										/area/muriki/elevator,
 										/area/muriki/elevator/secbase,
@@ -233,6 +237,9 @@
 										/area/muriki/grounds/tramborder/garage,
 										/area/muriki/grounds/tramborder/garage,
 										/area/muriki/grounds/sec/garage_entrance,
+										/area/muriki/grounds/med/garage_entrance,
+										/area/muriki/grounds/civ/garage_entrance,
+										/area/muriki/grounds/engi/garage_entrance,
 										// The elevators don't need apcs
 										/area/muriki/elevator,
 										/area/muriki/elevator/secbase,
@@ -437,9 +444,9 @@
 		"Mining Trawler" = list("outpost_trawler_pad"),
 		"Security Carrier" = list("outpost_security_hangar"),
 		"Medical Rescue" = list("outpost_medical_hangar"),
-		"Interferon" = list("airdrop_muriki_central", "airdrop_muriki_southeast"),
-		"Rokkaku-Dako" = list("dako_airdrop_muriki_central", "outpost_security_hangar", "outpost_security_hangar", "airdrop_muriki_central", "airdrop_muriki_southeast", "airdrop_muriki_southwest", "airdrop_muriki_northeast", "airdrop_muriki_northwest"),
-		"Mercenary" = list("airdrop_muriki_central", "airdrop_muriki_southeast", "airdrop_muriki_southwest", "airdrop_muriki_northeast", "airdrop_muriki_northwest"))
+		"Interferon" = list("airdrop_muriki_central", "lake_muriki_southeast"),
+		"Rokkaku-Dako" = list("dako_airdrop_muriki_central", "outpost_security_hangar", "outpost_security_hangar", "airdrop_muriki_central", "lake_muriki_southeast", "airdrop_muriki_southwest", "airdrop_muriki_northeast", "airdrop_muriki_northwest"),
+		"Mercenary" = list("airdrop_muriki_central", "lake_muriki_southeast", "airdrop_muriki_southwest", "airdrop_muriki_northeast", "airdrop_muriki_northwest"))
 	//Despite not being in the multi-z complex, these levels are part of the overmap sector
 	extra_z_levels = list()
 
@@ -457,7 +464,10 @@
 	if(istype(AM, /obj/effect/overmap/visitable/ship/landable))
 		var/obj/effect/overmap/visitable/ship/landable/SL = AM //Phew
 		var/datum/shuttle/autodock/multi/shuttle = SSshuttles.shuttles[SL.shuttle]
-		if(!istype(shuttle) || !shuttle.cloaked) //Not a multishuttle (the only kind that can cloak) or not cloaked
+		if(istype(SL)) // overmap cloak
+			if(!SL.overmap_stealth)
+				SSatc.msg(message)
+		else if(!istype(shuttle) || !shuttle.cloaked) // instant warp cloak
 			SSatc.msg(message)
 
 	//For ships, it's safe to assume they're big enough to not be sneaky
@@ -496,7 +506,10 @@
 	if(istype(AM, /obj/effect/overmap/visitable/ship/landable))
 		var/obj/effect/overmap/visitable/ship/landable/SL = AM //Phew
 		var/datum/shuttle/autodock/multi/shuttle = SSshuttles.shuttles[SL.shuttle]
-		if(!istype(shuttle) || !shuttle.cloaked) //Not a multishuttle (the only kind that can cloak) or not cloaked
+		if(istype(SL)) // overmap cloak
+			if(!SL.overmap_stealth)
+				SSatc.msg(message)
+		else if(!istype(shuttle) || !shuttle.cloaked) //Not a multishuttle (the only kind that can cloak) or not cloaked
 			SSatc.msg(message)
 
 	//For ships, it's safe to assume they're big enough to not be sneaky
@@ -535,7 +548,10 @@
 	if(istype(AM, /obj/effect/overmap/visitable/ship/landable))
 		var/obj/effect/overmap/visitable/ship/landable/SL = AM //Phew
 		var/datum/shuttle/autodock/multi/shuttle = SSshuttles.shuttles[SL.shuttle]
-		if(!istype(shuttle) || !shuttle.cloaked) //Not a multishuttle (the only kind that can cloak) or not cloaked
+		if(istype(SL)) // overmap cloak
+			if(!SL.overmap_stealth)
+				SSatc.msg(message)
+		else if(!istype(shuttle) || !shuttle.cloaked) //Not a multishuttle (the only kind that can cloak) or not cloaked
 			SSatc.msg(message)
 
 	//For ships, it's safe to assume they're big enough to not be sneaky
@@ -555,7 +571,7 @@
 [i]Transponder[/i]: Transmitting (CIV), SOLGOV IFF
 [b]Notice[/b]: Solgov Transport Facility"}
 	map_z = list(Z_NAME_ALIAS_MISC)
-	initial_restricted_waypoints = list("Interferon" = list("interferon_hangar"), "Rokkaku-Dako" = list("dako_docking_hanger"))
+	initial_restricted_waypoints = list("Interferon" = list("interferon_hangar"), "Rokkaku-Dako" = list("dako_docking_hanger"), "Mercenary" = list("mercenary_base"))
 
 /obj/effect/overmap/visitable/sector/murkiki_space/distant_gateway/get_space_zlevels()
 	return list() //None!

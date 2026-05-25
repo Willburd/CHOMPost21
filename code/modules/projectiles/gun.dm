@@ -620,6 +620,11 @@
 	if(!istype(P))
 		return //default behaviour only applies to true projectiles
 
+	// Outpost 21 edit begin - Forbid taser stun pointblank multiplier
+	if(P.taser_effect)
+		return
+	// Outpost 21 edit end
+
 	//default point blank multiplier
 	var/damage_mult = 1.3
 
@@ -634,7 +639,7 @@
 				damage_mult = 2.5
 			else if(grabstate >= GRAB_AGGRESSIVE)
 				damage_mult = 1.5
-	P.agony *= damage_mult
+	// P.agony *= damage_mult // Outpost 21 edit - Forbid taser stun pointblank multiplier
 	P.damage *= damage_mult
 
 /obj/item/gun/proc/process_accuracy(obj/projectile, mob/living/user, atom/target, burst, held_twohanded)

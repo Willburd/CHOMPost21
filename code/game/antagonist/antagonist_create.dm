@@ -19,18 +19,73 @@
 	announce_antagonist_spawn()
 
 /datum/antagonist/proc/create_default(mob/source)
-	var/mob/living/M
-	if(mob_path)
-		M = new mob_path(get_turf(source))
-	else
-		M = new /mob/living/carbon/human(get_turf(source))
-	M.real_name = source.real_name
-	M.name = M.real_name
+	// Outpost 21 edit begin - default antagonist behavior uses currently loaded slot instead of human mobs
+	if(mob_path && mob_path != /mob/living/carbon/human) // Humans get special handling
+		var/mob/living/new_character = new mob_path(get_turf(source))
+		new_character.real_name = source.real_name
+		new_character.name = new_character.real_name
+		if(!isnull(source.mind))
+			source.mind.transfer_to(new_character)
+		new_character.ckey = source.ckey
+		add_antagonist(new_character.mind, 1, 0, 1) // Equip them and move them to spawn.
+		return new_character
+
+	if(!source.client)
+		var/mob/living/new_character = new /mob/living/carbon/human(get_turf(source))
+		new_character.real_name = source.real_name
+		new_character.name = new_character.real_name
+		if(!isnull(source.mind))
+			source.mind.transfer_to(new_character)
+		new_character.ckey = source.ckey
+		add_antagonist(new_character.mind, 1, 0, 1) // Equip them and move them to spawn.
+		return new_character
+
+	var/player_key = source.client.key
+	var/picked_ckey = source.client.ckey
+	var/picked_slot = source.client.prefs.default_slot
+	var/mob/living/carbon/human/new_character = new(get_turf(source))
+
 	if(!isnull(source.mind))
-		source.mind.transfer_to(M)
-	M.ckey = source.ckey
-	add_antagonist(M.mind, 1, 0, 1) // Equip them and move them to spawn.
-	return M
+		source.mind.transfer_to(new_character)
+	new_character.ckey = picked_ckey
+
+	new_character.client.prefs.copy_to(new_character)
+	if(new_character.dna)
+		new_character.dna.ResetUIFrom(new_character)
+		new_character.sync_dna_traits(TRUE) // Traitgenes Sync traits to genetics if needed
+		new_character.sync_organ_dna()
+	new_character.sync_addictions()
+	new_character.initialize_vessel()
+	new_character.key = player_key
+
+	if(new_character.mind)
+		new_character.mind.loaded_from_ckey = picked_ckey
+		new_character.mind.loaded_from_slot = picked_slot
+		if(new_character.mind.antag_holder)
+			new_character.mind.antag_holder.apply_antags(new_character)
+
+	for(var/lang in new_character.client.prefs.alternate_languages)
+		var/datum/language/chosen_language = GLOB.all_languages[lang]
+		if(chosen_language)
+			if(is_lang_whitelisted(new_character,chosen_language) || (new_character.species && (chosen_language.name in new_character.species.secondary_langs)))
+				new_character.add_language(lang)
+	for(var/key in new_character.client.prefs.language_custom_keys)
+		if(new_character.client.prefs.language_custom_keys[key])
+			var/datum/language/keylang = GLOB.all_languages[new_character.client.prefs.language_custom_keys[key]]
+			if(keylang)
+				new_character.language_keys[key] = keylang
+	if(new_character.client.prefs.preferred_language) // Do we have a preferred language?
+		var/datum/language/def_lang = GLOB.all_languages[new_character.client.prefs.preferred_language]
+		if(def_lang)
+			new_character.default_language = def_lang
+
+	SEND_SIGNAL(new_character, COMSIG_HUMAN_DNA_FINALIZED)
+	new_character.regenerate_icons()
+	new_character.update_transform()
+
+	add_antagonist(new_character.mind, 1, 0, 1) // Equip them and move them to spawn.
+	return new_character
+	// Outpost 21 edit end
 
 /datum/antagonist/proc/create_id(assignment, mob/living/carbon/human/player, equip = 1)
 

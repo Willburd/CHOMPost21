@@ -2,7 +2,7 @@
 	if(landmark_id)
 		starting_locations = list()
 		for(var/obj/effect/landmark/L in GLOB.landmarks_list)
-			if(L.name == landmark_id)
+			if(L.name == landmark_id || L.name == "[landmark_id] - Lateload") // Outpost 21 edit - Allow latespawn antag landmarks too
 				starting_locations |= get_turf(L)
 
 /datum/antagonist/proc/announce_antagonist_spawn()
