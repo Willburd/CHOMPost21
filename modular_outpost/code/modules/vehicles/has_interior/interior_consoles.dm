@@ -250,14 +250,14 @@
 /datum/remote_view_config/interior_vehicle/helm
 	relay_movement = TRUE
 
-/datum/remote_view_config/interior_vehicle/handle_relay_movement( datum/component/remote_view/owner_component, mob/host_mob, direction)
+/datum/remote_view_config/interior_vehicle/handle_relay_movement(datum/component/remote_view/owner_component, mob/host_mob, direction)
 	var/obj/machinery/computer/vehicle_interior_console/tgui_owner = owner_component.get_coordinator()
 	if(tgui_owner?.interior_controller && host_mob.buckled)
 		return tgui_owner.interior_controller.relaymove(host_mob, direction)
 	return FALSE
 
-/datum/remote_view_config/interior_vehicle/handle_apply_visuals( datum/component/remote_view/owner_component, mob/host_mob)
-	var/obj/machinery/computer/vehicle_interior_console/tgui_owner = owner_component.get_coordinator()
+/datum/remote_view_config/interior_vehicle/handle_apply_visuals(mob/host_mob)
+	var/obj/machinery/computer/vehicle_interior_console/tgui_owner = get_component_coordinator(host_mob)
 	if(!tgui_owner)
 		return
 	if(get_dist(host_mob, tgui_owner.tgui_host()) > 1 || !tgui_owner.interior_controller || !host_mob.buckled)
@@ -265,17 +265,17 @@
 		return
 
 // We are responsible for restoring the health UI's icons on removal
-/datum/remote_view_config/interior_vehicle/attached_to_mob( datum/component/remote_view/owner_component, mob/host_mob)
+/datum/remote_view_config/interior_vehicle/attached_to_mob(datum/component/remote_view/owner_component, mob/host_mob)
 	original_health_hud_icon = host_mob.healths?.icon
 
-/datum/remote_view_config/interior_vehicle/detatch_from_mob( datum/component/remote_view/owner_component, mob/host_mob)
+/datum/remote_view_config/interior_vehicle/detatch_from_mob(datum/component/remote_view/owner_component, mob/host_mob)
 	if(host_mob.healths && original_health_hud_icon)
 		host_mob.healths.icon = original_health_hud_icon
 		host_mob.healths.appearance = null
 
 // Show the uav health instead of the mob's while it is viewing
-/datum/remote_view_config/interior_vehicle/handle_hud_health( datum/component/remote_view/owner_component, mob/host_mob)
-	var/obj/machinery/computer/vehicle_interior_console/tgui_owner = owner_component.get_coordinator()
+/datum/remote_view_config/interior_vehicle/handle_hud_health(mob/host_mob)
+	var/obj/machinery/computer/vehicle_interior_console/tgui_owner = get_component_coordinator(host_mob)
 
 	var/mutable_appearance/MA = new (host_mob.healths)
 	MA.icon = 'icons/mob/screen1_robot_minimalist.dmi'
