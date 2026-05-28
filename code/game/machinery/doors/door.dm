@@ -83,7 +83,7 @@
 
 	#ifndef OUTPOST_FRIENDSHIP_MODE
 	// Outpost 21 edit begin - Bonk!
-	if(!istype(src, /obj/machinery/door/firedoor))
+	if(!istype(src, /obj/machinery/door/firedoor) && !istype(src, /obj/machinery/door/window))
 		AddElement(/datum/element/headbonk/door)
 	// Outpost 21 edit end
 	#endif
