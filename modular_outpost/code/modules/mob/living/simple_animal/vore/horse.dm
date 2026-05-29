@@ -4,14 +4,16 @@
 
 /mob/living/simple_mob/vore/horse/gift/Initialize(mapload)
 	. = ..()
+	playsound(loc, 'sound/effects/confetti_ball.ogg', 50, 1, -3)
 	confetti_spread = new /datum/effect/effect/system/confetti_spread()
 	confetti_spread.attach(src)
-	start_effect_sprayer(confetti_spread, rand(2,3), 'sound/effects/confetti_ball.ogg')
+#ifndef UNIT_TESTS
 	QDEL_IN(src, 2 MINUTES)
 	addtimer(CALLBACK(src, PROC_REF(gifting)), 20 SECONDS, TIMER_DELETE_ME)
+#endif
 
 /mob/living/simple_mob/vore/horse/gift/Destroy()
-	start_effect_sprayer(confetti_spread, rand(2,3), 'sound/effects/confetti_ball.ogg')
+	playsound(loc, 'sound/effects/confetti_ball.ogg', 50, 1, -3)
 	QDEL_NULL(confetti_spread)
 	new /obj/item/a_gift(loc)
 	new /obj/item/a_gift(loc)
