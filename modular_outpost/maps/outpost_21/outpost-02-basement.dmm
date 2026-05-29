@@ -5911,6 +5911,12 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/civ/north)
+"alh" = (
+/obj/structure/waterfall/top{
+	dir = 1
+	},
+/turf/simulated/floor/water/acidic/indoor/turfpack/muriki,
+/area/mine/explored/muriki/river/south)
 "ali" = (
 /obj/effect/floor_decal/milspec/color/orange/half{
 	dir = 8
@@ -5967,6 +5973,12 @@
 	},
 /turf/simulated/floor/tiled,
 /area/rnd/research/anomaly)
+"alq" = (
+/obj/structure/waterfall{
+	dir = 1
+	},
+/turf/simulated/floor/water/acidic/deep/indoor/turfpack/muriki,
+/area/mine/explored/muriki/river/south)
 "alr" = (
 /obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/wall/durasteel,
@@ -6662,6 +6674,19 @@
 	},
 /turf/simulated/floor/tiled,
 /area/rnd/research/anomaly)
+"amE" = (
+/obj/structure/waterfall{
+	dir = 1
+	},
+/turf/simulated/floor/water/acidic/deep/turfpack/muriki,
+/area/mine/explored/muriki/river/south)
+"amF" = (
+/obj/structure/waterfall/mist{
+	dir = 1;
+	pixel_y = -6
+	},
+/turf/simulated/floor/water/acidic/deep/turfpack/muriki,
+/area/mine/explored/muriki/river/south)
 "amG" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/yellow,
 /obj/machinery/meter,
@@ -105933,9 +105958,9 @@ blV
 blV
 blV
 blV
-blV
-mGE
-fBh
+amF
+alq
+alh
 iwf
 iwf
 iwf
@@ -106095,9 +106120,9 @@ blV
 blV
 blV
 blV
-blV
-blV
-fBh
+amF
+amE
+alh
 fBh
 iwf
 iwf
