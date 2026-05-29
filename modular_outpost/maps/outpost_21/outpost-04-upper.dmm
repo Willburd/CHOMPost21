@@ -10145,6 +10145,14 @@
 /obj/machinery/power/grounding_rod/pre_mapped,
 /turf/simulated/floor/outpost_roof/turfpack/muriki,
 /area/muriki/rooftop/crossdept_pathway)
+"avg" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/structure/railing,
+/obj/effect/landmark/pengmark,
+/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/area/muriki/rooftop/engineering)
 "avh" = (
 /obj/structure/railing,
 /obj/structure/railing{
@@ -10169,6 +10177,13 @@
 /obj/effect/zone_divider,
 /turf/simulated/floor/outpost_roof/turfpack/muriki,
 /area/muriki/rooftop/crossdept_pathway)
+"avl" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/machinery/power/grounding_rod/pre_mapped,
+/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/area/muriki/rooftop/engineering)
 "avm" = (
 /obj/effect/zone_divider,
 /turf/simulated/floor/glass/reinforced/turfpack/muriki,
@@ -10210,6 +10225,13 @@
 "avq" = (
 /turf/simulated/floor/glass/reinforced/turfpack/muriki,
 /area/muriki/rooftop/crossdept_pathway)
+"avr" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/machinery/light/small,
+/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/area/muriki/rooftop/engineering)
 "avs" = (
 /obj/structure/railing{
 	dir = 4
@@ -10365,6 +10387,41 @@
 /obj/machinery/power/grounding_rod/pre_mapped,
 /turf/simulated/floor/outpost_roof/turfpack/muriki,
 /area/muriki/rooftop/crossdept_pathway)
+"avS" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/area/muriki/rooftop/engineering)
+"avT" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/structure/catwalk,
+/obj/structure/lattice,
+/obj/structure/ladder,
+/turf/simulated/open/muriki,
+/area/engineering/engine_room)
+"avU" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/structure/catwalk,
+/obj/structure/lattice,
+/turf/simulated/open/muriki,
+/area/engineering/engine_room)
+"avV" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/structure/railing{
+	dir = 1;
+	flags = null
+	},
+/obj/structure/catwalk,
+/obj/structure/lattice,
+/turf/simulated/open/muriki,
+/area/engineering/engine_room)
 "avW" = (
 /obj/structure/table/rack/shelf,
 /obj/effect/floor_decal/corner/red{
@@ -10393,6 +10450,15 @@
 	},
 /turf/simulated/floor/tiled,
 /area/security/vacantoffice)
+"avX" = (
+/obj/structure/railing{
+	dir = 1;
+	flags = null
+	},
+/obj/structure/catwalk,
+/obj/structure/lattice,
+/turf/simulated/open/muriki,
+/area/engineering/engine_room)
 "avY" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -10403,6 +10469,22 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/secelev)
+"avZ" = (
+/obj/effect/landmark/pengmark,
+/turf/simulated/floor/plating/external/turfpack/muriki,
+/area/muriki/skyline/north)
+"awa" = (
+/obj/structure/catwalk,
+/obj/structure/lattice,
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/effect/landmark/pengmark,
+/turf/simulated/open/muriki,
+/area/muriki/skyline/north)
 "awf" = (
 /obj/structure/catwalk,
 /obj/effect/floor_decal/flesh{
@@ -17934,16 +18016,6 @@
 "ejR" = (
 /turf/simulated/wall/titanium,
 /area/muriki/elevator/sciupper)
-"ejW" = (
-/obj/structure/catwalk,
-/obj/structure/railing{
-	dir = 1;
-	flags = null
-	},
-/obj/structure/lattice,
-/obj/machinery/light,
-/turf/simulated/open/muriki,
-/area/engineering/engine_room)
 "ekh" = (
 /obj/machinery/alarm{
 	pixel_y = 26
@@ -19307,6 +19379,9 @@
 /area/quartermaster/mining/secpi)
 "eSi" = (
 /obj/machinery/atmospherics/pipe/vent,
+/obj/structure/railing{
+	dir = 1
+	},
 /turf/simulated/floor/outpost_roof/turfpack/muriki,
 /area/muriki/rooftop/engineering)
 "eSV" = (
@@ -74987,7 +75062,7 @@ rBk
 lDC
 rtP
 rtP
-mqN
+avg
 rBk
 rBk
 rBk
@@ -76437,7 +76512,7 @@ eoF
 eoF
 acZ
 acZ
-acZ
+ioo
 acZ
 cWT
 cWT
@@ -76598,9 +76673,9 @@ kxr
 kxr
 kxr
 drT
-acZ
-ioo
-acZ
+eoF
+eoF
+eoF
 cWT
 cWT
 bnr
@@ -76760,9 +76835,9 @@ kxr
 kxr
 kxr
 kxr
-qEV
-acZ
-acZ
+kxr
+kxr
+kxr
 cWT
 aAd
 bZR
@@ -76922,9 +76997,9 @@ kxr
 kxr
 kxr
 kxr
-qEV
-ioo
-acZ
+kxr
+kxr
+kxr
 cWT
 cWT
 aal
@@ -77084,9 +77159,9 @@ kxr
 kxr
 kxr
 kxr
-qEV
-acZ
-acZ
+kxr
+kxr
+kxr
 cWT
 cWT
 ePO
@@ -77246,10 +77321,10 @@ kxr
 kxr
 kxr
 kxr
-qEV
-ioo
-acZ
-acZ
+kxr
+kxr
+kxr
+avl
 cWT
 iPJ
 slB
@@ -77408,10 +77483,10 @@ kxr
 kxr
 kxr
 kxr
-qEV
-acZ
-acZ
-acZ
+kxr
+kxr
+kxr
+avr
 cWT
 tan
 uhy
@@ -77570,10 +77645,10 @@ kxr
 kxr
 kxr
 kxr
-qEV
-adN
-acZ
-acZ
+kxr
+kxr
+kxr
+avS
 cWT
 tan
 uhy
@@ -77732,9 +77807,9 @@ kxr
 kxr
 kxr
 kxr
-qEV
-acZ
-acZ
+kxr
+kxr
+kxr
 eSi
 ome
 sBt
@@ -77894,9 +77969,9 @@ kxr
 kxr
 kxr
 kxr
-qEV
-ioo
-acZ
+avV
+avU
+avT
 acZ
 krn
 pIT
@@ -78056,7 +78131,7 @@ kxr
 kxr
 kxr
 kxr
-qnY
+avX
 qnY
 qnY
 qnY
@@ -78218,7 +78293,7 @@ kxr
 kxr
 kxr
 kxr
-bAR
+npb
 qnY
 qnY
 qnY
@@ -78704,7 +78779,7 @@ kxr
 kxr
 kxr
 kxr
-ejW
+npb
 qnY
 qnY
 cwy
@@ -79503,7 +79578,7 @@ kxr
 kxr
 kxr
 sYu
-owj
+awa
 owj
 oao
 abe
@@ -80324,7 +80399,7 @@ kxr
 kxr
 kxr
 kxr
-ejW
+npb
 qnY
 qnY
 qnY
@@ -80972,7 +81047,7 @@ kxr
 kxr
 kxr
 kxr
-npb
+bAR
 qnY
 acZ
 acZ
@@ -81126,7 +81201,7 @@ kxr
 kxr
 kxr
 kxr
-dgh
+avZ
 dgh
 agC
 dgh
