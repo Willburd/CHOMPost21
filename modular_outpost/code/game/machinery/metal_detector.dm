@@ -134,7 +134,7 @@
 
 /obj/machinery/metal_detector/proc/obj_check(obj/item/thing)
 
-	if(!thing)
+	if(!istype(thing))
 		return -1
 	if(thing.item_flags & ABSTRACT)
 		return -1
