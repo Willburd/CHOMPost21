@@ -22,6 +22,14 @@
 		bot.UnlinkSelf()
 	// Outpost 21 edit end
 
+	// Outpost 21 edit begin - Hide pda messenger of antags by default
+	var/obj/item/pda/check_pda = locate() in player.current
+	if(check_pda)
+		var/datum/data/pda/app/messenger/mesg = locate() in check_pda.programs
+		if(mesg)
+			mesg.toff = TRUE // Disable the messenger, but allow it to be turned back on
+	// Outpost 21 edit end
+
 	return 1
 
 /datum/antagonist/proc/add_antagonist_mind(datum/mind/player, ignore_role, nonstandard_role_type, nonstandard_role_msg)
