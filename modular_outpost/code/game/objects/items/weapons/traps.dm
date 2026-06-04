@@ -1,4 +1,4 @@
-/obj/item/beartrap/proc/attackby(obj/item/W, mob/user)
+/obj/item/beartrap/attackby(obj/item/W, mob/user)
 	if (!deployed && !anchored && W.has_tool_quality(TOOL_WRENCH))
 		user.visible_message(
 			span_danger("\The [user] disassembles \the [src]."),
