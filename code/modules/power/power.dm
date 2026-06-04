@@ -315,10 +315,9 @@
 
 		// Outpost 21 edit(port) begin - Removed phorochem
 //Phorochemistry DM: Allows chemicalresistant shocking -Radiantflash
-		for(var/datum/reagent/R in M.reagents.reagent_list)
-			if(R.id == REAGENT_ID_FULGURACIN)
-				to_chat(M, span_notice("Your hairs stand up, but you resist the shock for the most part"))
-				return 0 //no shock for you
+		if(H.reagents.has_reagent(REAGENT_ID_FULGURACIN))
+			to_chat(M, span_notice("Your hairs stand up, but you resist the shock for the most part"))
+			return 0 //no shock for you
 		// Outpost 21 edit end
 
 	//Checks again. If we are still here subject will be shocked, trigger standard 20 tick warning
