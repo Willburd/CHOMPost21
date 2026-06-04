@@ -5843,6 +5843,7 @@
 #include "modular_outpost\code\game\objects\items\weapons\material_subtypes.dm"
 #include "modular_outpost\code\game\objects\items\weapons\stunstaff.dm"
 #include "modular_outpost\code\game\objects\items\weapons\tape.dm"
+#include "modular_outpost\code\game\objects\items\weapons\traps.dm"
 #include "modular_outpost\code\game\objects\items\weapons\circuitboards\frame.dm"
 #include "modular_outpost\code\game\objects\items\weapons\circuitboards\machinery\medical.dm"
 #include "modular_outpost\code\game\objects\items\weapons\circuitboards\machinery\tutorial.dm"
