@@ -999,6 +999,7 @@ GLOBAL_DATUM(planet_muriki, /datum/planet/muriki)
 	)
 	outdoor_sounds_type = /datum/looping_sound/weather/wind
 	indoor_sounds_type = /datum/looping_sound/weather/wind/indoors
+	hazardous_weather = TRUE
 
 /////////////////////////////////////////////////////////////////////////////////////////
 // FIREWORKS
