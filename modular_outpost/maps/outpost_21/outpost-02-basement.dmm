@@ -6692,6 +6692,10 @@
 /obj/machinery/meter,
 /turf/simulated/floor/tiled,
 /area/rnd/research/anomaly)
+"amH" = (
+/obj/structure/medical_stand/anesthetic,
+/turf/simulated/floor/tiled/dark,
+/area/medical/biostorage)
 "amK" = (
 /obj/machinery/atmospherics/binary/pump/on{
 	dir = 8;
@@ -18348,12 +18352,10 @@
 	dir = 4;
 	pixel_x = -26
 	},
-/obj/structure/bed/chair/bay/chair/padded/blue{
-	dir = 4
-	},
 /obj/effect/floor_decal/milspec/color/blue/half{
 	dir = 9
 	},
+/obj/structure/medical_stand/anesthetic,
 /turf/simulated/floor/tiled/milspec/sterile,
 /area/medical/surgtrain)
 "aJE" = (
@@ -73933,8 +73935,8 @@
 /turf/simulated/floor/tiled/old_cargo/white,
 /area/rnd/hallway/lowmain)
 "hqj" = (
-/obj/structure/cable/yellow{
-	icon_state = "4-8"
+/obj/item/stack/cable_coil/yellow{
+	amount = 10
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/incinerator)
@@ -130988,7 +130990,7 @@ bMU
 aHN
 aIW
 aJN
-aJN
+amH
 aLQ
 aMU
 aIR
@@ -135351,7 +135353,7 @@ chM
 amq
 amq
 ahC
-ahC
+agP
 agP
 agP
 agP
@@ -135513,9 +135515,9 @@ bZo
 amq
 ahC
 ahC
-ahC
 agP
 cJM
+bZo
 bZA
 agP
 cJQ
@@ -135675,8 +135677,8 @@ amq
 amq
 ahC
 ahC
-ahC
 agP
+bZo
 cJW
 bZo
 bZA
@@ -135837,7 +135839,7 @@ cqS
 ahC
 ahC
 ahC
-ahC
+agP
 agP
 agP
 agP
