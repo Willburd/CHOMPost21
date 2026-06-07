@@ -1925,6 +1925,19 @@
 "et" = (
 /turf/simulated/shuttle/plating/airless,
 /area/syndicate_mothership)
+"eu" = (
+/obj/machinery/gear_painter,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"ev" = (
+/obj/machinery/gear_painter,
+/turf/unsimulated/floor{
+	dir = 5;
+	icon_state = "vault"
+	},
+/area/wizard_station)
 "ew" = (
 /turf/unsimulated/floor{
 	icon_state = "freezerfloor"
@@ -35190,7 +35203,7 @@ Zy
 bK
 bK
 bK
-bK
+ev
 bK
 bK
 EK
@@ -57431,7 +57444,7 @@ mN
 mN
 ab
 yb
-sg
+eu
 IY
 IV
 IP
