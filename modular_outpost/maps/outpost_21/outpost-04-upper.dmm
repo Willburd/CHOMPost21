@@ -18010,7 +18010,10 @@
 /area/muriki/crew/civmail)
 "ejI" = (
 /obj/machinery/light/small,
-/obj/effect/floor_decal/industrial/outline/cut_corners/yellow,
+/obj/item/stack/cable_coil/yellow{
+	amount = 10
+	},
+/obj/structure/table/rack,
 /turf/simulated/floor,
 /area/maintenance/engineering)
 "ejR" = (
@@ -20549,6 +20552,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 4
 	},
+/obj/effect/floor_decal/industrial/outline/cut_corners/yellow,
 /turf/simulated/floor,
 /area/maintenance/engineering)
 "fDs" = (
@@ -27731,10 +27735,10 @@
 	dir = 4
 	},
 /obj/structure/table/gamblingtable,
-/obj/item/reagent_containers/food/drinks/britcup,
 /obj/structure/cable/green{
 	icon_state = "6-9"
 	},
+/obj/item/reagent_containers/food/drinks/glass2/coffeemug/blue,
 /turf/simulated/floor/carpet/blue,
 /area/crew_quarters/medbreak)
 "juV" = (
@@ -29293,6 +29297,7 @@
 	},
 /obj/structure/dogbed,
 /mob/living/simple_mob/animal/passive/cat/bones,
+/obj/item/toy/cat_toy/rod,
 /turf/simulated/floor/wood,
 /area/crew_quarters/heads/cmo)
 "kkU" = (
@@ -32944,11 +32949,9 @@
 	dir = 4
 	},
 /obj/structure/table/standard,
-/obj/item/clothing/ears/earmuffs/headphones,
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 4
 	},
-/obj/item/form_printer,
 /turf/simulated/floor/wood,
 /area/crew_quarters/medbreak)
 "mjX" = (
@@ -33718,7 +33721,6 @@
 /area/medical/sleevecheck)
 "mFG" = (
 /obj/structure/table/standard,
-/obj/item/toy/cat_toy/rod,
 /turf/simulated/floor/wood,
 /area/crew_quarters/medbreak)
 "mFK" = (
@@ -38949,9 +38951,6 @@
 /turf/simulated/floor/wood,
 /area/crew_quarters/medbreak)
 "pqV" = (
-/obj/structure/cable/yellow{
-	icon_state = "1-2"
-	},
 /obj/effect/landmark/vermin,
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 8
@@ -42425,6 +42424,7 @@
 /obj/item/laser_pointer/blue,
 /obj/structure/table/standard,
 /obj/effect/floor_decal/spline/fancy/wood,
+/obj/item/clothing/ears/earmuffs/headphones,
 /turf/simulated/floor/wood,
 /area/crew_quarters/medbreak)
 "rhQ" = (
@@ -43591,8 +43591,8 @@
 "rNl" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/structure/cable/yellow{
-	icon_state = "1-2"
+/obj/item/stack/cable_coil/yellow{
+	amount = 1
 	},
 /turf/simulated/floor,
 /area/maintenance/engineering)
@@ -43853,10 +43853,10 @@
 /area/crew_quarters/heads/cmo)
 "rWp" = (
 /obj/structure/cable/yellow{
-	icon_state = "1-2"
-	},
-/obj/structure/cable/yellow{
 	icon_state = "1-4"
+	},
+/obj/item/stack/cable_coil/yellow{
+	amount = 1
 	},
 /turf/simulated/floor/plating/external/turfpack/muriki{
 	outdoors = 0
@@ -51696,6 +51696,7 @@
 /obj/structure/table/rack,
 /obj/item/melee/umbrella/random,
 /obj/item/melee/umbrella/random,
+/obj/item/stack/cable_coil/yellow,
 /turf/simulated/floor/plating,
 /area/muriki/rooftop/secgen)
 "vQg" = (

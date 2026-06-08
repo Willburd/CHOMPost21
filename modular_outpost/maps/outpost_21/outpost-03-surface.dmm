@@ -4180,7 +4180,6 @@
 /turf/simulated/floor/tiled/steel,
 /area/bridge/hallway)
 "afW" = (
-/obj/structure/bed/chair/bay/chair/padded/purple,
 /obj/structure/cable/green{
 	icon_state = "1-4"
 	},
@@ -4190,8 +4189,7 @@
 /obj/effect/floor_decal/steeldecal/steel_decals_central7{
 	dir = 4
 	},
-/obj/effect/landmark/start/scientist,
-/turf/simulated/floor/wood,
+/turf/simulated/floor/carpet/purple,
 /area/rnd/breakroom)
 "afX" = (
 /obj/structure/cable/green{
@@ -4678,20 +4676,13 @@
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/engineering_hallway)
 "agJ" = (
-/obj/item/paper_bin{
-	pixel_x = -11
-	},
-/obj/item/pen{
-	pixel_x = -11
-	},
-/obj/structure/table/woodentable,
 /obj/structure/sign/scenery/map/left_outpost21{
 	pixel_y = 32
 	},
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
 	},
-/obj/item/form_printer,
+/obj/machinery/vending/snack,
 /turf/simulated/floor/wood,
 /area/rnd/breakroom)
 "agK" = (
@@ -8203,7 +8194,12 @@
 	name = "Emergency NanoMed";
 	pixel_y = 32
 	},
-/obj/structure/medical_stand/anesthetic,
+/obj/machinery/photocopier/faxmachine{
+	department = "Medical"
+	},
+/obj/structure/table/standard{
+	name = "plastic table frame"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/medical/sleeper)
 "anf" = (
@@ -8407,6 +8403,9 @@
 "anD" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
 	},
 /turf/simulated/floor/wood,
 /area/rnd/breakroom)
@@ -9074,11 +9073,12 @@
 /turf/simulated/floor/plating,
 /area/quartermaster/foyer)
 "apf" = (
-/obj/structure/reagent_dispensers/water_cooler/full,
-/obj/effect/floor_decal/spline/fancy/wood{
+/obj/structure/bed/chair/sofa/purp,
+/obj/effect/floor_decal/spline/plain{
 	dir = 1
 	},
-/turf/simulated/floor/wood,
+/obj/effect/landmark/start/scientist,
+/turf/simulated/floor/carpet/purple,
 /area/rnd/breakroom)
 "apg" = (
 /obj/structure/toilet,
@@ -11217,14 +11217,6 @@
 /obj/structure/trailblazer/yellow,
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
 /area/muriki/grounds/med)
-"auJ" = (
-/obj/structure/table/woodentable,
-/obj/item/toy/plushie/borgplushie/drake/sci{
-	name = "Mini-Prae";
-	desc = "An adorable stuffed toy of a familiar robot!"
-	},
-/turf/simulated/floor/wood,
-/area/rnd/breakroom)
 "auK" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -12450,13 +12442,6 @@
 /obj/item/clothing/accessory/bodycam/yobro,
 /turf/simulated/floor/wood,
 /area/engineering/break_room)
-"axx" = (
-/obj/structure/table/woodentable,
-/obj/item/clothing/accessory/bodycam/yobro,
-/obj/item/clothing/accessory/bodycam/yobro,
-/obj/item/clothing/accessory/bodycam/yobro,
-/turf/simulated/floor/wood,
-/area/rnd/breakroom)
 "axy" = (
 /turf/simulated/wall/stonelogs/turfpack/muriki,
 /area/specialty/stowaway_clubhouse)
@@ -13543,6 +13528,15 @@
 	},
 /turf/simulated/floor/tiled,
 /area/security/detectives_office)
+"aAr" = (
+/obj/structure/table/gamblingtable,
+/obj/item/clothing/accessory/bodycam/yobro,
+/obj/item/clothing/accessory/bodycam/yobro,
+/obj/item/clothing/accessory/bodycam/yobro,
+/obj/item/clothing/accessory/bodycam/yobro,
+/obj/effect/floor_decal/spline/plain,
+/turf/simulated/floor/carpet/purple,
+/area/rnd/breakroom)
 "aAs" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
@@ -13835,15 +13829,17 @@
 /turf/simulated/floor/tiled/dark,
 /area/security/warden)
 "aAW" = (
-/obj/structure/bed/chair/bay/chair/padded/purple,
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/obj/effect/floor_decal/spline/fancy/wood{
+/obj/structure/bed/chair/sofa/purp{
+	dir = 4
+	},
+/obj/effect/floor_decal/spline/plain{
 	dir = 8
 	},
-/obj/effect/landmark/start/scientist,
-/turf/simulated/floor/wood,
+/obj/effect/landmark/start/xenobot,
+/turf/simulated/floor/carpet/purple,
 /area/rnd/breakroom)
 "aAX" = (
 /obj/effect/floor_decal/milspec/color/red/half{
@@ -20326,6 +20322,32 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/maintenance/medbay_aft)
+"aVs" = (
+/obj/structure/table/gamblingtable,
+/obj/item/toy/plushie/borgplushie/drake/sci{
+	name = "Mini-Prae";
+	desc = "An adorable stuffed toy of a familiar robot!"
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/purple,
+/area/rnd/breakroom)
+"aVt" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/carpet/purple,
+/area/rnd/breakroom)
+"aVu" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/purple,
+/area/rnd/breakroom)
 "aVw" = (
 /obj/structure/toilet{
 	dir = 8
@@ -25576,8 +25598,11 @@
 /turf/simulated/floor/plating,
 /area/lawoffice)
 "cBR" = (
-/obj/structure/table/gamblingtable,
-/turf/simulated/floor/wood,
+/obj/structure/bed/chair/sofa/left/purp{
+	dir = 1
+	},
+/obj/effect/floor_decal/spline/plain,
+/turf/simulated/floor/carpet/purple,
 /area/rnd/breakroom)
 "cCd" = (
 /obj/item/clothing/suit/storage/teshari/beltcloak/jobs/command,
@@ -27434,6 +27459,10 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 4
 	},
+/obj/structure/table/woodentable,
+/obj/machinery/photocopier/faxmachine{
+	department = "Research Director's Office"
+	},
 /turf/simulated/floor/wood,
 /area/rnd/breakroom)
 "dhq" = (
@@ -28479,9 +28508,18 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 4
+	},
+/obj/structure/table/woodentable,
+/obj/item/form_printer{
+	pixel_x = 12
+	},
+/obj/item/paper_bin{
+	pixel_x = -11
+	},
+/obj/item/pen{
+	pixel_x = -11
 	},
 /turf/simulated/floor/wood,
 /area/rnd/breakroom)
@@ -28736,13 +28774,6 @@
 /obj/structure/table/rack,
 /turf/simulated/floor/tiled/steel,
 /area/bridge/hallway)
-"dDz" = (
-/obj/structure/bed/chair/bay/chair/padded/purple{
-	dir = 8
-	},
-/obj/effect/landmark/start/xenobio,
-/turf/simulated/floor/wood,
-/area/rnd/breakroom)
 "dDA" = (
 /obj/structure/sign/directions/security/armory{
 	pixel_y = 5
@@ -28841,10 +28872,7 @@
 /obj/structure/sign/painting/public{
 	pixel_y = -32
 	},
-/obj/machinery/vending/cigarette{
-	dir = 1;
-	pixel_y = -1
-	},
+/obj/machinery/medical_kiosk,
 /turf/simulated/floor/wood,
 /area/rnd/breakroom)
 "dFD" = (
@@ -31041,12 +31069,13 @@
 /turf/simulated/floor/redgrid/off/turfpack/muriki,
 /area/muriki/processor/euth)
 "esN" = (
-/obj/structure/table/gamblingtable,
-/obj/item/toy/snowglobe/stellardelight,
-/obj/effect/floor_decal/spline/fancy/wood{
-	dir = 8
+/obj/structure/bed/chair/sofa/corner/purp{
+	dir = 1
 	},
-/turf/simulated/floor/wood,
+/obj/effect/floor_decal/spline/plain{
+	dir = 10
+	},
+/turf/simulated/floor/carpet/purple,
 /area/rnd/breakroom)
 "esT" = (
 /turf/simulated/floor/water/acidic/turfpack/muriki,
@@ -33011,6 +33040,8 @@
 	name = "Station Intercom (General)";
 	pixel_y = -21
 	},
+/obj/structure/table/woodentable,
+/obj/item/toy/snowglobe/stellardelight,
 /turf/simulated/floor/wood,
 /area/rnd/breakroom)
 "eZc" = (
@@ -35928,11 +35959,7 @@
 /turf/simulated/floor/tiled,
 /area/quartermaster/foyer)
 "gai" = (
-/obj/structure/bed/chair/bay/chair/padded/purple{
-	dir = 8
-	},
-/obj/machinery/atmospherics/unary/vent_pump/on,
-/obj/effect/landmark/start/xenobio,
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/wood,
 /area/rnd/breakroom)
 "gaG" = (
@@ -37289,10 +37316,8 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/obj/machinery/vending/coffee{
-	dir = 1;
-	pixel_y = -1
-	},
+/obj/structure/table/woodentable,
+/obj/item/reagent_containers/food/drinks/glass2/coffeemug/tall/rainbow,
 /turf/simulated/floor/wood,
 /area/rnd/breakroom)
 "gAc" = (
@@ -38043,14 +38068,14 @@
 /turf/simulated/floor/plating,
 /area/engineering/drone_fabrication)
 "gMT" = (
-/obj/structure/table/gamblingtable,
-/obj/item/juke_remote{
-	autolinkareajuke_onspawn = /area/djstation
+/obj/structure/bed/chair/sofa/purp{
+	dir = 4
 	},
-/obj/effect/floor_decal/spline/fancy/wood{
+/obj/effect/floor_decal/spline/plain{
 	dir = 8
 	},
-/turf/simulated/floor/wood,
+/obj/effect/landmark/start/xenobot,
+/turf/simulated/floor/carpet/purple,
 /area/rnd/breakroom)
 "gMY" = (
 /turf/simulated/floor/tiled/techfloor,
@@ -40879,9 +40904,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 5
-	},
 /obj/effect/floor_decal/spline/fancy/wood/corner{
 	dir = 1
 	},
@@ -40893,6 +40915,9 @@
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
 	},
 /turf/simulated/floor/wood,
 /area/rnd/breakroom)
@@ -43851,6 +43876,11 @@
 	dir = 9
 	},
 /obj/structure/disposalpipe/segment,
+/obj/machinery/light_switch{
+	dir = 1;
+	pixel_x = -23;
+	pixel_y = -26
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/virology)
 "iya" = (
@@ -49344,10 +49374,9 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/main)
 "khu" = (
-/obj/effect/landmark{
-	name = "lightsout"
-	},
-/turf/simulated/floor/wood,
+/obj/structure/table/gamblingtable,
+/obj/item/material/ashtray/bronze,
+/turf/simulated/floor/carpet/purple,
 /area/rnd/breakroom)
 "khA" = (
 /obj/structure/cable/yellow{
@@ -51430,7 +51459,6 @@
 /turf/simulated/floor/tiled,
 /area/hallway/security/armor)
 "kNP" = (
-/obj/machinery/medical_kiosk,
 /obj/structure/sign/scenery/map/right_outpost21{
 	pixel_y = 32
 	},
@@ -51443,6 +51471,7 @@
 /obj/machinery/ai_status_display{
 	pixel_x = 32
 	},
+/obj/machinery/vending/cigarette,
 /turf/simulated/floor/wood,
 /area/rnd/breakroom)
 "kOd" = (
@@ -53179,9 +53208,10 @@
 /area/quartermaster/foyer)
 "lrL" = (
 /obj/effect/floor_decal/spline/fancy/wood,
-/obj/machinery/vending/snack{
-	dir = 1
+/obj/item/juke_remote{
+	autolinkareajuke_onspawn = /area/djstation
 	},
+/obj/structure/table/woodentable,
 /turf/simulated/floor/wood,
 /area/rnd/breakroom)
 "lrN" = (
@@ -54112,10 +54142,13 @@
 /turf/simulated/wall,
 /area/maintenance/medicelev)
 "lCW" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
 	},
-/obj/structure/disposalpipe/segment{
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
 /turf/simulated/floor/wood,
@@ -56647,8 +56680,10 @@
 /turf/simulated/floor/tiled,
 /area/quartermaster/storage)
 "mtM" = (
-/obj/structure/table/woodentable,
-/obj/item/material/ashtray/bronze,
+/obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/effect/landmark{
+	name = "lightsout"
+	},
 /turf/simulated/floor/wood,
 /area/rnd/breakroom)
 "mtX" = (
@@ -57415,7 +57450,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/green,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/light_switch{
-	pixel_x = -27;
+	pixel_x = -23;
 	pixel_y = 28
 	},
 /obj/structure/disposalpipe/segment,
@@ -58629,9 +58664,7 @@
 "ncw" = (
 /obj/effect/floor_decal/spline/fancy/wood,
 /obj/structure/sign/poster,
-/obj/machinery/vending/foodfast{
-	dir = 1
-	},
+/obj/structure/reagent_dispensers/water_cooler/full,
 /turf/simulated/floor/wood,
 /area/rnd/breakroom)
 "ncz" = (
@@ -60338,6 +60371,9 @@
 	dir = 1;
 	pixel_y = -26
 	},
+/obj/structure/table/woodentable,
+/obj/item/storage/box/donkpockets,
+/obj/item/storage/box/donkpockets,
 /turf/simulated/floor/wood,
 /area/rnd/breakroom)
 "nCe" = (
@@ -64615,7 +64651,9 @@
 /turf/simulated/floor/plating,
 /area/security/armoury)
 "oYS" = (
-/obj/structure/table/woodentable,
+/obj/structure/bed/chair/bay/comfy/purple{
+	dir = 8
+	},
 /turf/simulated/floor/wood,
 /area/rnd/breakroom)
 "oYY" = (
@@ -69798,16 +69836,13 @@
 /turf/simulated/floor/plating/external/turfpack/muriki,
 /area/muriki/grounds/engi)
 "qLw" = (
-/obj/structure/table/woodentable,
-/obj/machinery/photocopier/faxmachine{
-	department = "Research Director's Office"
-	},
 /obj/machinery/alarm{
 	pixel_y = 26
 	},
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
 	},
+/obj/machinery/vending/foodfast,
 /turf/simulated/floor/wood,
 /area/rnd/breakroom)
 "qLE" = (
@@ -70820,12 +70855,6 @@
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/unexplored/muriki/mountainnorth)
 "rbR" = (
-/obj/item/storage/box/donkpockets,
-/obj/item/storage/box/donkpockets,
-/obj/item/storage/box/cups{
-	pixel_x = -5
-	},
-/obj/structure/table/woodentable,
 /obj/machinery/doorbell_chime{
 	id_tag = "sciding";
 	name = "Research Call";
@@ -70834,6 +70863,7 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
 	},
+/obj/machinery/vending/coffee,
 /turf/simulated/floor/wood,
 /area/rnd/breakroom)
 "rcm" = (
@@ -74957,13 +74987,10 @@
 /turf/simulated/floor/redgrid/off/turfpack/muriki,
 /area/muriki/processor/euth)
 "sxo" = (
-/obj/structure/bed/chair/bay/chair/padded/purple{
-	dir = 1
-	},
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 8
 	},
-/obj/effect/landmark/start/scientist,
+/obj/structure/ladder/top_hatch,
 /turf/simulated/floor/wood,
 /area/rnd/breakroom)
 "sxz" = (
@@ -75062,9 +75089,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/hallway/primary/central_two)
 "szw" = (
-/obj/structure/table/gamblingtable,
-/obj/item/deck/cards,
-/turf/simulated/floor/wood,
+/turf/simulated/floor/carpet/purple,
 /area/rnd/breakroom)
 "szF" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
@@ -81019,13 +81044,17 @@
 /turf/simulated/floor/tiled/steel,
 /area/hallway/primary/central_one)
 "upF" = (
-/obj/structure/medical_stand,
 /obj/effect/floor_decal/corner/blue/full{
 	dir = 8
 	},
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/structure/table/standard{
+	name = "plastic table frame"
+	},
+/obj/item/paper_bin,
+/obj/item/pen/blue,
 /turf/simulated/floor/tiled/dark,
 /area/medical/sleeper)
 "upU" = (
@@ -81490,12 +81519,12 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/chemistry)
 "uxf" = (
-/obj/machinery/microwave,
-/obj/structure/table/woodentable,
-/obj/effect/floor_decal/spline/fancy/wood{
-	dir = 1
+/obj/structure/bed/chair/sofa/left/purp,
+/obj/effect/floor_decal/spline/plain{
+	dir = 5
 	},
-/turf/simulated/floor/wood,
+/obj/effect/landmark/start/scientist,
+/turf/simulated/floor/carpet/purple,
 /area/rnd/breakroom)
 "uxh" = (
 /obj/structure/cable/green{
@@ -82317,13 +82346,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/office)
-"uKh" = (
-/obj/structure/bed/chair/bay/chair/padded/purple{
-	dir = 1
-	},
-/obj/effect/landmark/start/scientist,
-/turf/simulated/floor/wood,
-/area/rnd/breakroom)
 "uKA" = (
 /turf/simulated/wall/r_wall,
 /area/hallway/primary/central_three)
@@ -83340,11 +83362,12 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/kitchen)
 "vbf" = (
-/obj/structure/bed/chair/bay/chair/padded/purple{
-	dir = 4
+/obj/structure/table/gamblingtable,
+/obj/item/deck/cards,
+/obj/effect/floor_decal/spline/plain{
+	dir = 6
 	},
-/obj/effect/landmark/start/xenobot,
-/turf/simulated/floor/wood,
+/turf/simulated/floor/carpet/purple,
 /area/rnd/breakroom)
 "vbq" = (
 /obj/effect/floor_decal/corner/orange{
@@ -86605,9 +86628,6 @@
 /turf/simulated/floor/tiled/old_cargo/white,
 /area/medical/sleeper)
 "vZA" = (
-/obj/effect/floor_decal/spline/fancy/wood{
-	dir = 9
-	},
 /obj/machinery/light{
 	dir = 8
 	},
@@ -86622,7 +86642,14 @@
 /obj/machinery/computer/security/telescreen/entertainment{
 	pixel_x = -32
 	},
-/turf/simulated/floor/wood,
+/obj/structure/bed/chair/sofa/corner/purp{
+	dir = 4
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 9
+	},
+/obj/effect/landmark/start/xenobio,
+/turf/simulated/floor/carpet/purple,
 /area/rnd/breakroom)
 "vZM" = (
 /obj/structure/table/reinforced,
@@ -91727,7 +91754,8 @@
 /obj/structure/sign/yessmoking_1{
 	pixel_y = -32
 	},
-/obj/structure/ladder/top_hatch,
+/obj/structure/table/woodentable,
+/obj/machinery/microwave,
 /turf/simulated/floor/wood,
 /area/rnd/breakroom)
 "xDG" = (
@@ -92911,10 +92939,12 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/obj/effect/floor_decal/spline/fancy/wood{
+/obj/structure/bed/chair/sofa/purp,
+/obj/effect/floor_decal/spline/plain{
 	dir = 1
 	},
-/turf/simulated/floor/wood,
+/obj/effect/landmark/start/xenobio,
+/turf/simulated/floor/carpet/purple,
 /area/rnd/breakroom)
 "xZI" = (
 /obj/structure/table/marble,
@@ -141174,7 +141204,7 @@ xZC
 afW
 szw
 cBR
-uKh
+agR
 nCc
 nIT
 fzc
@@ -141333,10 +141363,10 @@ aDR
 aJX
 mbh
 apf
-wPy
+aVt
 khu
+aAr
 agR
-rIU
 eYW
 nIT
 nIT
@@ -141495,8 +141525,8 @@ aLb
 aJX
 kVH
 uxf
-wPy
-vbf
+aVu
+aVs
 vbf
 anC
 hNw
@@ -141658,7 +141688,7 @@ aKX
 coj
 rbR
 wPy
-axx
+oYS
 oYS
 hZc
 dFz
@@ -141820,7 +141850,7 @@ fjo
 coj
 qLw
 wPy
-auJ
+rIU
 mtM
 anD
 ncw
@@ -141982,7 +142012,7 @@ bal
 nSL
 agJ
 wPy
-dDz
+agR
 gai
 lCW
 lrL
