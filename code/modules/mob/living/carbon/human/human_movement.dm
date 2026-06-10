@@ -141,7 +141,7 @@
 		pose_move = FALSE
 		remove_pose_indicator()
 
-	if(client && !is_incorporeal() && isturf(loc)) // Outpost 21 edit(port) - Departmentgoal signals
+	if(client && !is_incorporeal() && isturf(loc))
 		GLOB.step_taken_shift_roundstat++
 
 // This calculates the amount of slowdown to receive from items worn. This does NOT include species modifiers.
