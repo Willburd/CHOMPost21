@@ -69,7 +69,7 @@
 
 /datum/goal/cargo/sell_chemicals/New()
 	. = ..()
-	goal_count = rand(10,15) * CARGOTANKER_VOLUME
+	goal_count = rand(6,10) * CARGOTANKER_VOLUME
 	chosen_reagent = pick(list(
 							REAGENT_ID_BICARIDINE,
 							REAGENT_ID_ANTITOXIN,
@@ -110,7 +110,7 @@
 	name = "Mining Productivity"
 
 /datum/goal/cargo/mine_rock/New()
-	goal_count = rand(1500,2500)
+	goal_count = rand(3500,5500)
 	goal_text = "Drill through at least [goal_count] rock walls, keeping our miners in shape!"
 
 /datum/goal/cargo/mine_rock/check_completion()
