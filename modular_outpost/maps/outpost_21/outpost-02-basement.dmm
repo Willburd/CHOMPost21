@@ -78361,13 +78361,13 @@
 /turf/simulated/floor/tiled/milspec,
 /area/medical/robotics)
 "mJD" = (
-/obj/item/flag/eshui,
 /obj/effect/floor_decal/borderfloor{
 	dir = 6
 	},
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 6
 	},
+/obj/machinery/vending/loadout/loadout_misc,
 /turf/simulated/floor/tiled/dark,
 /area/muriki/crew/vr_train)
 "mJH" = (
