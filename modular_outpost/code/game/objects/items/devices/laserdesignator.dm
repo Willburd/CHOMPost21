@@ -22,7 +22,7 @@
 	. = ..(user)
 	if(.)
 		return TRUE
-	zoom(user, CAM_DIST, CAM_SIZE) // long but small vision range
+	toggle_zoom(user, CAM_DIST, CAM_SIZE) // long but small vision range
 
 /obj/item/laser_designator/attack(mob/living/M, mob/user)
 	laser_act(M, user)
