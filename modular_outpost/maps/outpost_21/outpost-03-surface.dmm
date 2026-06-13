@@ -30719,7 +30719,6 @@
 	layer = 4;
 	pixel_y = -32
 	},
-/obj/structure/closet/emcloset,
 /obj/machinery/camera/network/civilian{
 	c_tag = "CIV - Departure Waiting Lobby Southwest";
 	dir = 4
@@ -30727,6 +30726,7 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 10
 	},
+/obj/machinery/vending/loadout/accessory,
 /turf/simulated/floor/wood,
 /area/hallway/secondary/entry/docking_lounge)
 "emJ" = (
@@ -49081,8 +49081,8 @@
 	pixel_y = -24
 	},
 /obj/structure/cable/green,
-/obj/machinery/vending/loadout/loadout_misc,
 /obj/effect/floor_decal/spline/fancy/wood,
+/obj/machinery/vending/loadout/overwear,
 /turf/simulated/floor/wood,
 /area/hallway/secondary/entry/docking_lounge)
 "kcH" = (
