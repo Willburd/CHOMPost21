@@ -11217,6 +11217,12 @@
 /obj/structure/trailblazer/yellow,
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
 /area/muriki/grounds/med)
+"auJ" = (
+/obj/effect/floor_decal/corner/blue{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/medbay_primary_storage)
 "auK" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -12442,6 +12448,12 @@
 /obj/item/clothing/accessory/bodycam/yobro,
 /turf/simulated/floor/wood,
 /area/engineering/break_room)
+"axx" = (
+/obj/effect/floor_decal/corner/blue{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/medbay_primary_storage)
 "axy" = (
 /turf/simulated/wall/stonelogs/turfpack/muriki,
 /area/specialty/stowaway_clubhouse)
@@ -27759,6 +27771,9 @@
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/effect/floor_decal/corner/blue/full{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay_primary_storage)
 "dlz" = (
@@ -29440,6 +29455,9 @@
 	dir = 8;
 	pixel_x = 30;
 	pixel_y = 6
+	},
+/obj/effect/floor_decal/corner/blue{
+	dir = 6
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay_primary_storage)
@@ -36522,6 +36540,9 @@
 	dir = 4;
 	pixel_x = 11
 	},
+/obj/effect/floor_decal/corner/blue{
+	dir = 6
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay_primary_storage)
 "gli" = (
@@ -43265,6 +43286,9 @@
 /obj/machinery/firealarm{
 	pixel_y = 26
 	},
+/obj/effect/floor_decal/corner/blue{
+	dir = 5
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay_primary_storage)
 "iog" = (
@@ -44008,6 +44032,9 @@
 /area/hallway/security/armor)
 "iAg" = (
 /obj/structure/bed/chair/wheelchair,
+/obj/effect/floor_decal/corner/blue{
+	dir = 6
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay_primary_storage)
 "iAx" = (
@@ -62328,6 +62355,9 @@
 /obj/structure/cable/green{
 	icon_state = "0-2"
 	},
+/obj/effect/floor_decal/corner/blue{
+	dir = 5
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay_primary_storage)
 "ooB" = (
@@ -66373,6 +66403,9 @@
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/effect/floor_decal/corner/blue/full{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay_primary_storage)
 "pGw" = (
@@ -70401,6 +70434,7 @@
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/effect/floor_decal/corner/blue/full,
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay_primary_storage)
 "qSH" = (
@@ -72029,6 +72063,9 @@
 "rxp" = (
 /obj/structure/bed/chair/wheelchair,
 /obj/machinery/light{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/blue/full{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
@@ -82299,6 +82336,9 @@
 	dir = 4;
 	pixel_x = -26
 	},
+/obj/effect/floor_decal/corner/blue{
+	dir = 9
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay_primary_storage)
 "uJq" = (
@@ -91967,6 +92007,9 @@
 /obj/item/storage/firstaid/vox,
 /obj/structure/sign/nosmoking_2{
 	pixel_x = 32
+	},
+/obj/effect/floor_decal/corner/blue{
+	dir = 6
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay_primary_storage)
@@ -136195,8 +136238,8 @@ nCi
 hUY
 dls
 uIH
-lEp
-lEp
+axx
+axx
 lEp
 rHg
 qSA
@@ -136685,7 +136728,7 @@ lEp
 lEp
 usD
 lEp
-lEp
+auJ
 brS
 van
 pqi
