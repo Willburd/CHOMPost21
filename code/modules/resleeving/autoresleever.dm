@@ -314,6 +314,12 @@ GLOBAL_LIST_EMPTY(active_autoresleevers)
 		outpost_post_sleeve(idscan,new_character,spawnloc)
 	// Outpost 21 edit end
 
+	// Outpost 21 edit begin - reequip rust drones
+	var/datum/antagonist/antag_data = SSantag_job.get_antag_data(new_character.mind.special_role)
+	if(istype(antag_data, /datum/antagonist/rustdrone))
+		antag_data.equip(new_character)
+	// Outpost 21 edit end
+
 	if(!new_character.dna)
 		CRASH("[new_character] just came out of an autosleever and has no DNA! Species: [new_character.species] as mob: [new_character.type].") // Outpost 21 edit - Nif removal, was:  NIF Status: [new_character.nif]")
 
