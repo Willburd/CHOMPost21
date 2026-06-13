@@ -6209,14 +6209,11 @@
 	},
 /area/shuttle/specops/centcom)
 "nk" = (
-/obj/effect/landmark{
-	name = "halluspawn"
-	},
 /turf/unsimulated/floor{
 	icon_state = "plating";
 	name = "plating"
 	},
-/area/specialty/thedarkplace)
+/area/mine/unexplored/sinkhole)
 "nl" = (
 /obj/effect/fancy_shuttle/delivery{
 	dir = 1
@@ -6823,7 +6820,7 @@
 	icon_state = "plating";
 	name = "plating"
 	},
-/area/specialty/thedarkplace)
+/area/mine/unexplored/sinkhole)
 "oC" = (
 /turf/unsimulated/floor/snow,
 /area/specialty/thedarkplace)
@@ -24379,9 +24376,9 @@ jj
 jj
 VT
 jj
-cX
-cX
-cX
+ad
+ad
+ad
 ae
 ag
 ag
@@ -24541,9 +24538,9 @@ jj
 jj
 VT
 jj
-cX
+ad
 nk
-cX
+ad
 ae
 ag
 ag
@@ -24703,9 +24700,9 @@ QQ
 VT
 VT
 jj
-cX
+ad
 oB
-cX
+ad
 ae
 ag
 ag
@@ -24865,9 +24862,9 @@ jj
 jj
 VT
 jj
-cX
-cX
-cX
+ad
+ad
+ad
 Sg
 Sg
 Sg
