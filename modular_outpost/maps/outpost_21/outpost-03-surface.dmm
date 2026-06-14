@@ -28993,12 +28993,12 @@
 /turf/simulated/floor/tiled/freezer,
 /area/security/detectives_office)
 "dHL" = (
-/obj/machinery/light/small{
-	dir = 1
-	},
 /obj/machinery/meter,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
+	},
+/obj/machinery/light/small{
+	dir = 8
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/wastedisposal)
@@ -68368,11 +68368,11 @@
 /obj/effect/landmark{
 	name = "nukeitem"
 	},
-/obj/item/personal_shield_generator/belt/melee/loaded,
-/obj/item/melee/energy/spear,
 /obj/effect/floor_decal/corner/red/full{
 	dir = 8
 	},
+/obj/item/melee/energy/spear,
+/obj/item/personal_shield_generator/security/strong/loaded,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/security/tactical)
 "qmt" = (

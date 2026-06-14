@@ -454,14 +454,9 @@
 /area/specialty/redspace)
 "abv" = (
 /obj/structure/table/rack,
-/obj/item/personal_shield_generator/belt/adminbus,
-/obj/item/personal_shield_generator/belt/adminbus,
-/obj/item/personal_shield_generator/belt/adminbus,
-/obj/item/personal_shield_generator/belt/adminbus,
-/obj/item/personal_shield_generator/belt/adminbus,
-/obj/item/personal_shield_generator/belt/adminbus,
-/obj/item/personal_shield_generator/belt/adminbus,
-/obj/item/personal_shield_generator/belt/adminbus,
+/obj/item/personal_shield_generator/belt/melee/loaded,
+/obj/item/personal_shield_generator/belt/melee/loaded,
+/obj/item/personal_shield_generator/belt/melee/loaded,
 /turf/unsimulated/floor/steel{
 	icon_state = "milspec"
 	},
@@ -5380,9 +5375,9 @@
 	},
 /area/centcom/control)
 "alV" = (
-/obj/machinery/door/airlock/centcom{
-	name = "Commander";
-	req_access = list(103)
+/obj/machinery/door/airlock/centcom/nameddorm{
+	name = "Penances Office";
+	matchnames = list("Penance")
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/centcom/specops)
@@ -10360,7 +10355,6 @@
 	pixel_y = -22
 	},
 /obj/structure/table/alien/blue,
-/obj/item/personal_shield_generator/belt/adminbus,
 /turf/simulated/floor/tiled,
 /area/centcom/control)
 "cfp" = (

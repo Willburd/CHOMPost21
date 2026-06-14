@@ -1487,6 +1487,10 @@
 	dir = 8
 	},
 /mob/living/simple_mob/vore/wolftaur/syndicate/shotty,
+/obj/machinery/door/window{
+	name = "Break glass in case of lonely";
+	dir = 1
+	},
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -1999,6 +2003,19 @@
 	icon_state = "vault"
 	},
 /area/wizard_station)
+"eB" = (
+/mob/living/simple_mob/vore/wolftaur/syndicate/lmg,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/machinery/door/window{
+	name = "Break glass in case of lonely";
+	dir = 1
+	},
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
 "eC" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel,
 /obj/effect/floor_decal/corner/lightgrey/border{
@@ -2063,6 +2080,13 @@
 /obj/machinery/atmospherics/pipe/manifold4w/hidden,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
+"eH" = (
+/obj/structure/table/reinforced,
+/obj/machinery/chem_master,
+/turf/unsimulated/floor{
+	icon_state = "white"
+	},
+/area/syndicate_mothership)
 "eI" = (
 /turf/unsimulated/beach/coastline,
 /area/beach)
@@ -2115,6 +2139,32 @@
 /obj/item/flag,
 /turf/simulated/floor/indoorrocks,
 /area/specialty/hell)
+"eQ" = (
+/mob/living/simple_mob/vore/wolftaur/syndicate/lmg,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/machinery/door/window{
+	name = "Break glass in case of lonely";
+	dir = 2
+	},
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"eR" = (
+/mob/living/simple_mob/vore/wolftaur/syndicate/smg,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/machinery/door/window{
+	name = "Break glass in case of lonely";
+	dir = 2
+	},
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
 "eS" = (
 /obj/item/reagent_containers/chem_canister/chlorine{
 	pixel_x = -7;
@@ -2212,6 +2262,19 @@
 /obj/effect/floor_decal/industrial/bot_outline/red,
 /turf/simulated/floor/reinforced,
 /area/shuttle/mercenary)
+"eZ" = (
+/mob/living/simple_mob/vore/wolftaur/syndicate,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/machinery/door/window{
+	name = "Break glass in case of lonely";
+	dir = 2
+	},
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
 "fa" = (
 /obj/structure/grille{
 	desc = "A flimsy lattice of metal rods, with screws to secure it to the floor. This grille seems slightly more sturdy than others probably reinforced to withstand the wildlife.";
@@ -16003,6 +16066,10 @@
 	dir = 8
 	},
 /mob/living/simple_mob/vore/wolftaur/syndicate/awp,
+/obj/machinery/door/window{
+	name = "Break glass in case of lonely";
+	dir = 1
+	},
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -16012,6 +16079,10 @@
 	dir = 8
 	},
 /mob/living/simple_mob/vore/wolftaur/syndicate/alt2,
+/obj/machinery/door/window{
+	name = "Break glass in case of lonely";
+	dir = 1
+	},
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -16484,6 +16555,10 @@
 	dir = 8
 	},
 /mob/living/simple_mob/vore/wolftaur/syndicate/alt3,
+/obj/machinery/door/window{
+	name = "Break glass in case of lonely";
+	dir = 2
+	},
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -55187,10 +55262,10 @@ yb
 iJ
 yb
 jv
-jv
 HB
+jv
 sg
-Hi
+jv
 GQ
 Gn
 yb
@@ -55349,11 +55424,11 @@ ew
 ew
 yb
 Gq
-Gq
-HB
+eQ
 sg
-Hi
-Gq
+sg
+sg
+eB
 Gq
 yb
 kb
@@ -55511,11 +55586,11 @@ ew
 ew
 yb
 HO
-HO
-HB
+eR
+sg
+sg
 sg
 Hi
-jv
 Gt
 yb
 sg
@@ -55674,9 +55749,9 @@ Il
 yb
 Id
 HP
-HB
 sg
-Hi
+sg
+sg
 dv
 Gu
 yb
@@ -55835,10 +55910,10 @@ ew
 Il
 yb
 HQ
-HQ
-HB
+eZ
 sg
-Hi
+sg
+sg
 GS
 Gv
 yb
@@ -63126,7 +63201,7 @@ Hc
 jd
 hc
 hc
-hc
+eH
 hc
 js
 Hc
