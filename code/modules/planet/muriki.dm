@@ -1132,7 +1132,7 @@ GLOBAL_DATUM(planet_muriki, /datum/planet/muriki)
 		if(burn_eyes && H.glasses && (H.glasses.body_parts_covered & EYES) && ((H.glasses.item_flags & BLOCK_GAS_SMOKE_EFFECT) || (H.glasses.item_flags & AIRTIGHT) || (H.glasses.flags & PHORONGUARD)))
 			burn_eyes = FALSE
 		// no breathers
-		if(!H.species || !H.species.breath_type)
+		if(!H.species || !H.species.breath_type || H.is_holding_breath)
 			burn_lungs = FALSE
 	if(L.wear_mask)
 		// check for masks

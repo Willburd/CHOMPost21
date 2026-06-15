@@ -525,6 +525,15 @@
 	if(SEND_SIGNAL(src, COMSIG_CHECK_FOR_GODMODE) & COMSIG_GODMODE_CANCEL)
 		return 0	// Cancelled by a component
 
+	// Outpost 21 edit begin - Holding breath verb
+	if(is_holding_breath && (stat || (oxyloss > 10 && prob(oxyloss / 2)))) // Stop holding breath if you pass out, or if you reach beyond limits
+		stop_holding_breath()
+	if(is_holding_breath)
+		failed_last_breath = 1
+		adjustOxyLoss(1)
+		return
+	// Outpost 21 edit end
+
 	if(mNobreath in mutations)
 		return
 
