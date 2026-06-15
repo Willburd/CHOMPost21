@@ -2312,6 +2312,40 @@
 	icon_state = "vault"
 	},
 /area/wizard_station)
+"fc" = (
+/obj/effect/step_trigger/dephase_shadekin,
+/obj/structure/window/plastitanium{
+	dir = 1
+	},
+/turf/simulated/floor/reinforced/airless,
+/area/shuttle/mercenary)
+"fd" = (
+/obj/effect/step_trigger/dephase_shadekin,
+/obj/effect/floor_decal/industrial/hatch/red,
+/obj/machinery/porta_turret/heavy{
+	req_one_access = list(150)
+	},
+/obj/structure/window/plastitanium{
+	dir = 4
+	},
+/obj/structure/window/plastitanium{
+	dir = 1
+	},
+/turf/simulated/floor/reinforced/airless,
+/area/shuttle/mercenary)
+"fe" = (
+/obj/effect/step_trigger/dephase_shadekin,
+/obj/structure/window/plastitanium,
+/turf/simulated/floor/reinforced/airless,
+/area/shuttle/mercenary)
+"ff" = (
+/obj/effect/step_trigger/dephase_shadekin,
+/obj/effect/floor_decal/industrial/hatch/red,
+/obj/machinery/porta_turret/heavy{
+	req_one_access = list(150)
+	},
+/turf/simulated/floor/reinforced/airless,
+/area/shuttle/mercenary)
 "fh" = (
 /turf/unsimulated/floor{
 	icon_state = "dark"
@@ -2513,9 +2547,15 @@
 	},
 /area/syndicate_mothership)
 "fG" = (
-/obj/machinery/porta_turret/stationary/syndie,
 /obj/effect/step_trigger/dephase_shadekin,
 /obj/effect/floor_decal/industrial/hatch/red,
+/obj/machinery/porta_turret/heavy{
+	req_one_access = list(150)
+	},
+/obj/structure/window/plastitanium{
+	dir = 4
+	},
+/obj/structure/window/plastitanium,
 /turf/simulated/floor/reinforced/airless,
 /area/shuttle/mercenary)
 "fH" = (
@@ -4603,12 +4643,6 @@
 /obj/item/reagent_containers/glass/beaker/large,
 /obj/item/reagent_containers/glass/beaker/large,
 /obj/item/reagent_containers/glass/beaker/large,
-/obj/item/reagent_containers/glass/beaker/large,
-/obj/item/reagent_containers/glass/beaker/large,
-/obj/item/reagent_containers/glass/beaker/large,
-/obj/item/reagent_containers/glass/beaker/large,
-/obj/item/reagent_containers/glass/beaker/large,
-/obj/item/reagent_containers/glass/beaker/large,
 /turf/unsimulated/floor{
 	icon_state = "white"
 	},
@@ -4649,6 +4683,12 @@
 /obj/item/reagent_containers/glass/bottle/rezadone,
 /obj/item/reagent_containers/glass/bottle/rezadone,
 /obj/item/reagent_containers/glass/bottle/rezadone,
+/obj/item/storage/quickdraw/syringe_case/clotting{
+	pixel_x = -13
+	},
+/obj/item/storage/quickdraw/syringe_case/clotting{
+	pixel_x = -13
+	},
 /turf/unsimulated/floor{
 	icon_state = "white"
 	},
@@ -4774,15 +4814,6 @@
 /obj/item/tape/police,
 /turf/unsimulated/floor{
 	icon_state = "dark"
-	},
-/area/syndicate_mothership)
-"jI" = (
-/obj/item/storage/quickdraw/syringe_case/clotting,
-/obj/item/storage/quickdraw/syringe_case/clotting,
-/obj/item/storage/quickdraw/syringe_case/clotting,
-/obj/structure/table/reinforced,
-/turf/unsimulated/floor{
-	icon_state = "white"
 	},
 /area/syndicate_mothership)
 "jJ" = (
@@ -13138,8 +13169,8 @@
 /obj/structure/cable/orange{
 	icon_state = "0-8"
 	},
-/obj/structure/cable/orange{
-	icon_state = "0-4"
+/obj/structure/window/plastitanium{
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/shuttle/mercenary)
@@ -13501,6 +13532,7 @@
 	},
 /obj/effect/step_trigger/dephase_shadekin,
 /obj/effect/floor_decal/industrial/hatch/blue,
+/obj/structure/window/plastitanium,
 /turf/simulated/floor/reinforced/airless,
 /area/shuttle/mercenary)
 "BF" = (
@@ -14480,13 +14512,19 @@
 /turf/simulated/floor/plating,
 /area/shuttle/mercenary)
 "DA" = (
-/obj/machinery/porta_turret/heavy{
-	req_one_access = list(150)
-	},
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 10
 	},
 /obj/effect/floor_decal/industrial/hatch/red,
+/obj/machinery/porta_turret/heavy{
+	req_one_access = list(150)
+	},
+/obj/structure/window/plastitanium{
+	dir = 1
+	},
+/obj/structure/window/plastitanium{
+	dir = 4
+	},
 /turf/simulated/floor/reinforced,
 /area/shuttle/mercenary)
 "DB" = (
@@ -14735,21 +14773,13 @@
 	req_one_access = list();
 	pixel_y = 32
 	},
-/obj/item/storage/firstaid/adv{
-	pixel_x = 8;
+/obj/item/storage/firstaid/combat{
+	pixel_x = -8;
 	pixel_y = 8
 	},
 /obj/item/storage/firstaid/combat{
 	pixel_x = -8;
 	pixel_y = 8
-	},
-/obj/item/storage/firstaid/o2{
-	pixel_x = 8;
-	pixel_y = -6
-	},
-/obj/item/storage/firstaid/clotting{
-	pixel_x = -8;
-	pixel_y = -6
 	},
 /obj/item/storage/firstaid/adv{
 	pixel_x = 8;
@@ -14757,14 +14787,6 @@
 	},
 /obj/item/storage/firstaid/adv{
 	pixel_x = 8;
-	pixel_y = 8
-	},
-/obj/item/storage/firstaid/combat{
-	pixel_x = -8;
-	pixel_y = 8
-	},
-/obj/item/storage/firstaid/combat{
-	pixel_x = -8;
 	pixel_y = 8
 	},
 /obj/item/storage/firstaid/clotting{
@@ -14785,7 +14807,9 @@
 	},
 /obj/item/storage/firstaid/vox,
 /obj/item/storage/firstaid/vox,
-/obj/item/storage/firstaid/vox,
+/obj/item/reagent_containers/syringe/antiviral,
+/obj/item/reagent_containers/syringe/antiviral,
+/obj/item/reagent_containers/syringe/antiviral,
 /turf/simulated/floor/tiled/white,
 /area/shuttle/mercenary)
 "Eg" = (
@@ -16328,22 +16352,6 @@
 	dir = 8
 	},
 /area/tdome/tdomeobserve)
-"Hs" = (
-/obj/structure/grille,
-/obj/machinery/door/firedoor/glass,
-/obj/structure/window/plastitanium{
-	dir = 1
-	},
-/obj/structure/window/plastitanium,
-/obj/effect/step_trigger/dephase_shadekin,
-/obj/structure/cable/orange{
-	icon_state = "0-4"
-	},
-/obj/structure/cable/orange{
-	icon_state = "0-8"
-	},
-/turf/simulated/floor/plating,
-/area/shuttle/mercenary)
 "Ht" = (
 /obj/effect/floor_decal/industrial/arrows/red,
 /obj/effect/floor_decal/industrial/arrows/red{
@@ -57371,8 +57379,8 @@ mN
 fO
 fO
 fR
-AH
-fR
+ff
+fe
 As
 mN
 mN
@@ -57384,7 +57392,7 @@ ss
 mN
 mN
 As
-fR
+fc
 AH
 fR
 fO
@@ -59310,7 +59318,7 @@ gZ
 sg
 sg
 jF
-fG
+fd
 fR
 fR
 fR
@@ -60125,7 +60133,7 @@ mN
 mN
 mN
 mN
-Hs
+AS
 GY
 GD
 fo
@@ -60287,7 +60295,7 @@ mN
 mN
 mN
 mN
-AU
+fR
 GZ
 GE
 fo
@@ -60301,7 +60309,7 @@ fo
 BR
 BB
 Bx
-AU
+fR
 mN
 mN
 mN
@@ -61586,7 +61594,7 @@ mN
 mN
 mN
 mN
-fG
+fd
 fR
 FF
 EQ
@@ -63039,7 +63047,7 @@ Hc
 iR
 hc
 jR
-jI
+eH
 hc
 jr
 Hc
@@ -63201,7 +63209,7 @@ Hc
 jd
 hc
 hc
-eH
+hc
 hc
 js
 Hc

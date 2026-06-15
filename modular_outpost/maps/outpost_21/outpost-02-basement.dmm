@@ -6696,6 +6696,42 @@
 /obj/structure/medical_stand/anesthetic,
 /turf/simulated/floor/tiled/dark,
 /area/medical/biostorage)
+"amI" = (
+/obj/structure/window/reinforced{
+	dir = 8;
+	health = 1e+006
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/visible/yellow{
+	dir = 1
+	},
+/obj/machinery/door/blast/regular{
+	density = 0;
+	icon_state = "pdoor0";
+	id = "atmoslockdown";
+	name = "Atmospherics Lockdown";
+	opacity = 0
+	},
+/obj/structure/grille,
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/atmospherics/pipe/simple/visible/aux,
+/turf/simulated/floor/plating,
+/area/engineering/atmos)
+"amJ" = (
+/obj/machinery/atmospherics/unary/vent_pump/aux{
+	dir = 4;
+	use_power = 1;
+	internal_pressure_bound = 4000;
+	internal_pressure_bound_default = 4000;
+	external_pressure_bound = 0;
+	external_pressure_bound_default = 0;
+	pressure_checks = 2;
+	pressure_checks_default = 2
+	},
+/turf/simulated/floor/reinforced/oxygen,
+/area/engineering/atmos)
 "amK" = (
 /obj/machinery/atmospherics/binary/pump/on{
 	dir = 8;
@@ -6727,6 +6763,34 @@
 /obj/machinery/portable_atmospherics/canister/oxygen,
 /turf/simulated/floor/plating,
 /area/maintenance/incinerator)
+"amN" = (
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/door/blast/regular{
+	density = 0;
+	icon_state = "pdoor0";
+	id = "atmoslockdown";
+	name = "Atmospherics Lockdown";
+	opacity = 0
+	},
+/obj/structure/grille,
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/atmospherics/pipe/simple/visible/aux{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/engineering/atmos)
+"amO" = (
+/obj/structure/catwalk,
+/obj/machinery/atmospherics/pipe/simple/visible/aux{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/engineering/atmos)
 "amP" = (
 /obj/structure/sign/warning/caution,
 /turf/simulated/wall/r_wall,
@@ -7000,6 +7064,12 @@
 /obj/random/junk,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/civ/north)
+"anw" = (
+/obj/machinery/atmospherics/pipe/simple/visible/red,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/atmospherics/portables_connector/aux,
+/turf/simulated/floor/plating,
+/area/engineering/atmos)
 "anx" = (
 /obj/machinery/light{
 	dir = 8
@@ -11098,6 +11168,9 @@
 /obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
 /obj/structure/sign/atmos_o2,
+/obj/machinery/atmospherics/pipe/simple/visible/aux{
+	dir = 10
+	},
 /turf/simulated/floor/plating,
 /area/engineering/atmos)
 "avG" = (
@@ -11661,6 +11734,9 @@
 /obj/machinery/atmospherics/binary/pump/on{
 	name = "Waste to Core Processing"
 	},
+/obj/machinery/atmospherics/binary/pump/aux{
+	dir = 1
+	},
 /turf/simulated/floor/plating,
 /area/engineering/atmos)
 "awE" = (
@@ -12027,11 +12103,17 @@
 	},
 /obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
+/obj/machinery/atmospherics/pipe/simple/visible/aux{
+	dir = 5
+	},
 /turf/simulated/floor/plating,
 /area/engineering/atmos)
 "axp" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan,
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/visible/aux{
 	dir = 4
 	},
 /turf/simulated/floor/plating,
@@ -12040,6 +12122,9 @@
 /obj/machinery/atmospherics/pipe/simple/visible/red,
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
 	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/visible/aux{
+	dir = 9
 	},
 /turf/simulated/floor/plating,
 /area/engineering/atmos)
@@ -19067,6 +19152,9 @@
 /area/rnd/research/isolation_a)
 "aKY" = (
 /obj/machinery/atmospherics/binary/volume_pump{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/visible/aux{
 	dir = 4
 	},
 /turf/simulated/floor/plating,
@@ -107322,7 +107410,7 @@ ana
 acT
 acT
 acT
-aun
+avD
 avC
 aun
 acT
@@ -107485,7 +107573,7 @@ acT
 acT
 acT
 auo
-avD
+amJ
 vBQ
 acT
 aup
@@ -107647,7 +107735,7 @@ acT
 acT
 acT
 and
-avE
+amN
 aqg
 acT
 ayt
@@ -107809,7 +107897,7 @@ ads
 asg
 ads
 aup
-ajm
+amO
 aqh
 ajc
 ani
@@ -107972,7 +108060,7 @@ acT
 acT
 anf
 avF
-aqi
+amI
 axo
 ayu
 acT
@@ -108457,7 +108545,7 @@ anm
 anm
 atp
 aus
-anm
+anw
 awD
 axq
 aso
