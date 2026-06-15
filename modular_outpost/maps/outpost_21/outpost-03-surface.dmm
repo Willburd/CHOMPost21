@@ -19467,10 +19467,6 @@
 	dir = 5
 	},
 /obj/structure/table/reinforced,
-/obj/item/bluespace_crystal,
-/obj/item/bluespace_crystal,
-/obj/item/bluespace_crystal,
-/obj/item/bluespace_crystal,
 /obj/item/sticky_pad/random{
 	pixel_x = -8;
 	pixel_y = 9
@@ -34721,6 +34717,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 1
 	},
+/obj/item/bluespace_crystal,
 /turf/simulated/floor/tiled/white,
 /area/rnd/telesci)
 "fEV" = (
@@ -50883,17 +50880,6 @@
 	dir = 6
 	},
 /obj/structure/table/reinforced,
-/obj/item/stack/telecrystal,
-/obj/item/stack/telecrystal,
-/obj/item/stock_parts/subspace/crystal{
-	pixel_x = 6
-	},
-/obj/item/stock_parts/subspace/crystal{
-	pixel_x = 6
-	},
-/obj/item/stock_parts/subspace/crystal{
-	pixel_x = 6
-	},
 /obj/machinery/button/ignition{
 	id = "Telesci";
 	pixel_x = 28;
@@ -50913,6 +50899,22 @@
 	dir = 8;
 	pixel_x = 25;
 	pixel_y = 6
+	},
+/obj/item/bluespace_crystal,
+/obj/item/bluespace_crystal{
+	pixel_x = 3
+	},
+/obj/item/bluespace_crystal{
+	pixel_x = -4;
+	pixel_y = -4
+	},
+/obj/item/bluespace_crystal{
+	pixel_x = -7;
+	pixel_y = 2
+	},
+/obj/item/bluespace_crystal{
+	pixel_x = 6;
+	pixel_y = 5
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/telesci)
