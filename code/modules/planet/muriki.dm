@@ -657,6 +657,7 @@ GLOBAL_DATUM(planet_muriki, /datum/planet/muriki)
 	color_grading = COLORTINT_DARK
 
 	hazardous_weather = TRUE
+	shuttle_crash_chance = 10
 
 /datum/weather/muriki/downpour/process_effects()
 	..()
@@ -719,6 +720,7 @@ GLOBAL_DATUM(planet_muriki, /datum/planet/muriki)
 	color_grading = COLORTINT_DARK
 
 	hazardous_weather = TRUE
+	shuttle_crash_chance = 25
 
 /datum/weather/muriki/downpourfatal/process_effects()
 	..()
@@ -795,6 +797,7 @@ GLOBAL_DATUM(planet_muriki, /datum/planet/muriki)
 		"An intense chill is felt, and chunks of frozen acid start to fall from the sky, towards you."
 	)
 	color_grading = COLORTINT_CHILL
+	shuttle_crash_chance = 1 // Extremly rare
 
 /datum/weather/muriki/acid_hail/planet_effect(mob/living/L)
 	if(L.z in holder.our_planet.expected_z_levels)
@@ -928,6 +931,7 @@ GLOBAL_DATUM(planet_muriki, /datum/planet/muriki)
 	color_grading = COLORTINT_COLD
 
 	hazardous_weather = TRUE
+	shuttle_crash_chance = 3 // rare
 
 /datum/weather/muriki/blizzard/planet_effect(mob/living/L)
 	if(L.z in holder.our_planet.expected_z_levels)
@@ -1000,6 +1004,7 @@ GLOBAL_DATUM(planet_muriki, /datum/planet/muriki)
 	outdoor_sounds_type = /datum/looping_sound/weather/wind
 	indoor_sounds_type = /datum/looping_sound/weather/wind/indoors
 	hazardous_weather = TRUE
+	shuttle_crash_chance = 10
 
 /////////////////////////////////////////////////////////////////////////////////////////
 // FIREWORKS
@@ -1014,6 +1019,7 @@ GLOBAL_DATUM(planet_muriki, /datum/planet/muriki)
 		WEATHER_STORM = 20
 		)
 	color_grading = COLORTINT_MEAT
+	shuttle_crash_chance = 2
 
 /datum/weather/muriki/confetti //fixs firework stars
 	name = "confetti"
@@ -1031,6 +1037,7 @@ GLOBAL_DATUM(planet_muriki, /datum/planet/muriki)
 	)
 	imminent_transition_message = "A rain is starting... A rain of confetti...?"
 	color_grading = COLORTINT_OMEN
+	shuttle_crash_chance = 8
 
 
 
@@ -1058,6 +1065,7 @@ GLOBAL_DATUM(planet_muriki, /datum/planet/muriki)
 		"The blizzard's wind chills you to your bones."
 	)
 	hazardous_weather = TRUE
+	shuttle_crash_chance = 15
 
 /////////////////////////////////////////////////////////////////////////////////////////
 // EVIL DARKNESS
@@ -1079,6 +1087,7 @@ GLOBAL_DATUM(planet_muriki, /datum/planet/muriki)
 		"Everything around you seems to stop, it's quiet enough to hear the air creaking under the weight of something you cannot see."
 	)
 	hazardous_weather = TRUE
+	shuttle_crash_chance = 3 // rare
 
 
 /////////////////////////////////////////////////////////////////////////////////////////
