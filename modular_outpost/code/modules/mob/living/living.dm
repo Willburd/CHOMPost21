@@ -70,7 +70,7 @@
 	if(is_holding_breath)
 		stop_holding_breath()
 		return
-	if(mNobreath in mutations || isSynthetic() || does_not_breathe || !should_have_organ(O_LUNGS))
+	if((mNobreath in mutations) || isSynthetic() || does_not_breathe || !should_have_organ(O_LUNGS))
 		to_chat(src, span_danger("You don't need to hold your breath!"))
 		return
 	if(stat)
