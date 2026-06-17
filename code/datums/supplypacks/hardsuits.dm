@@ -104,6 +104,7 @@
 
 // CHOMPStation EDIT End
 
+/* Outpost 21 edit - Antag hardsuit in cargo order list
 /datum/supply_pack/hardsuits/breacher_rig
 	name = "unathi breacher hardsuit (empty)"
 	desc = "A Hegemony \'Breacher\' combat hardsuit. Requires Armory access, and can only be worn by unathi."
@@ -114,6 +115,7 @@
 	containertype = /obj/structure/closet/crate/secure/gear
 	containername = "unathi breacher hardsuit crate"
 	access = ACCESS_ARMORY
+*/
 
 /datum/supply_pack/hardsuits/zero_rig
 	name = "null hardsuit (jets)"
