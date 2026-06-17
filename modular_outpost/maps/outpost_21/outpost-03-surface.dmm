@@ -11217,6 +11217,12 @@
 /obj/structure/trailblazer/yellow,
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
 /area/muriki/grounds/med)
+"auJ" = (
+/obj/effect/floor_decal/corner/blue{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/medbay_primary_storage)
 "auK" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -12442,6 +12448,12 @@
 /obj/item/clothing/accessory/bodycam/yobro,
 /turf/simulated/floor/wood,
 /area/engineering/break_room)
+"axx" = (
+/obj/effect/floor_decal/corner/blue{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/medbay_primary_storage)
 "axy" = (
 /turf/simulated/wall/stonelogs/turfpack/muriki,
 /area/specialty/stowaway_clubhouse)
@@ -19455,10 +19467,6 @@
 	dir = 5
 	},
 /obj/structure/table/reinforced,
-/obj/item/bluespace_crystal,
-/obj/item/bluespace_crystal,
-/obj/item/bluespace_crystal,
-/obj/item/bluespace_crystal,
 /obj/item/sticky_pad/random{
 	pixel_x = -8;
 	pixel_y = 9
@@ -27759,6 +27767,9 @@
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/effect/floor_decal/corner/blue/full{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay_primary_storage)
 "dlz" = (
@@ -28978,12 +28989,12 @@
 /turf/simulated/floor/tiled/freezer,
 /area/security/detectives_office)
 "dHL" = (
-/obj/machinery/light/small{
-	dir = 1
-	},
 /obj/machinery/meter,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
+	},
+/obj/machinery/light/small{
+	dir = 8
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/wastedisposal)
@@ -29440,6 +29451,9 @@
 	dir = 8;
 	pixel_x = 30;
 	pixel_y = 6
+	},
+/obj/effect/floor_decal/corner/blue{
+	dir = 6
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay_primary_storage)
@@ -34703,6 +34717,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 1
 	},
+/obj/item/bluespace_crystal,
 /turf/simulated/floor/tiled/white,
 /area/rnd/telesci)
 "fEV" = (
@@ -36521,6 +36536,9 @@
 /obj/structure/sink{
 	dir = 4;
 	pixel_x = 11
+	},
+/obj/effect/floor_decal/corner/blue{
+	dir = 6
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay_primary_storage)
@@ -43265,6 +43283,9 @@
 /obj/machinery/firealarm{
 	pixel_y = 26
 	},
+/obj/effect/floor_decal/corner/blue{
+	dir = 5
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay_primary_storage)
 "iog" = (
@@ -44008,6 +44029,9 @@
 /area/hallway/security/armor)
 "iAg" = (
 /obj/structure/bed/chair/wheelchair,
+/obj/effect/floor_decal/corner/blue{
+	dir = 6
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay_primary_storage)
 "iAx" = (
@@ -50856,17 +50880,6 @@
 	dir = 6
 	},
 /obj/structure/table/reinforced,
-/obj/item/stack/telecrystal,
-/obj/item/stack/telecrystal,
-/obj/item/stock_parts/subspace/crystal{
-	pixel_x = 6
-	},
-/obj/item/stock_parts/subspace/crystal{
-	pixel_x = 6
-	},
-/obj/item/stock_parts/subspace/crystal{
-	pixel_x = 6
-	},
 /obj/machinery/button/ignition{
 	id = "Telesci";
 	pixel_x = 28;
@@ -50886,6 +50899,22 @@
 	dir = 8;
 	pixel_x = 25;
 	pixel_y = 6
+	},
+/obj/item/bluespace_crystal,
+/obj/item/bluespace_crystal{
+	pixel_x = 3
+	},
+/obj/item/bluespace_crystal{
+	pixel_x = -4;
+	pixel_y = -4
+	},
+/obj/item/bluespace_crystal{
+	pixel_x = -7;
+	pixel_y = 2
+	},
+/obj/item/bluespace_crystal{
+	pixel_x = 6;
+	pixel_y = 5
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/telesci)
@@ -62328,6 +62357,9 @@
 /obj/structure/cable/green{
 	icon_state = "0-2"
 	},
+/obj/effect/floor_decal/corner/blue{
+	dir = 5
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay_primary_storage)
 "ooB" = (
@@ -66373,6 +66405,9 @@
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/effect/floor_decal/corner/blue/full{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay_primary_storage)
 "pGw" = (
@@ -68335,11 +68370,11 @@
 /obj/effect/landmark{
 	name = "nukeitem"
 	},
-/obj/item/personal_shield_generator/belt/melee/loaded,
-/obj/item/melee/energy/spear,
 /obj/effect/floor_decal/corner/red/full{
 	dir = 8
 	},
+/obj/item/melee/energy/spear,
+/obj/item/personal_shield_generator/security/strong/loaded,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/security/tactical)
 "qmt" = (
@@ -70401,6 +70436,7 @@
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/effect/floor_decal/corner/blue/full,
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay_primary_storage)
 "qSH" = (
@@ -72029,6 +72065,9 @@
 "rxp" = (
 /obj/structure/bed/chair/wheelchair,
 /obj/machinery/light{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/blue/full{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
@@ -82299,6 +82338,9 @@
 	dir = 4;
 	pixel_x = -26
 	},
+/obj/effect/floor_decal/corner/blue{
+	dir = 9
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay_primary_storage)
 "uJq" = (
@@ -91967,6 +92009,9 @@
 /obj/item/storage/firstaid/vox,
 /obj/structure/sign/nosmoking_2{
 	pixel_x = 32
+	},
+/obj/effect/floor_decal/corner/blue{
+	dir = 6
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay_primary_storage)
@@ -136195,8 +136240,8 @@ nCi
 hUY
 dls
 uIH
-lEp
-lEp
+axx
+axx
 lEp
 rHg
 qSA
@@ -136685,7 +136730,7 @@ lEp
 lEp
 usD
 lEp
-lEp
+auJ
 brS
 van
 pqi

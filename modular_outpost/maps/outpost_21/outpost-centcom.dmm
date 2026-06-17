@@ -454,14 +454,9 @@
 /area/specialty/redspace)
 "abv" = (
 /obj/structure/table/rack,
-/obj/item/personal_shield_generator/belt/adminbus,
-/obj/item/personal_shield_generator/belt/adminbus,
-/obj/item/personal_shield_generator/belt/adminbus,
-/obj/item/personal_shield_generator/belt/adminbus,
-/obj/item/personal_shield_generator/belt/adminbus,
-/obj/item/personal_shield_generator/belt/adminbus,
-/obj/item/personal_shield_generator/belt/adminbus,
-/obj/item/personal_shield_generator/belt/adminbus,
+/obj/item/personal_shield_generator/belt/melee/loaded,
+/obj/item/personal_shield_generator/belt/melee/loaded,
+/obj/item/personal_shield_generator/belt/melee/loaded,
 /turf/unsimulated/floor/steel{
 	icon_state = "milspec"
 	},
@@ -5380,9 +5375,9 @@
 	},
 /area/centcom/control)
 "alV" = (
-/obj/machinery/door/airlock/centcom{
-	name = "Commander";
-	req_access = list(103)
+/obj/machinery/door/airlock/centcom/nameddorm{
+	name = "Penances Office";
+	matchnames = list("Penance")
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/centcom/specops)
@@ -6162,6 +6157,18 @@
 /obj/effect/floor_decal/spline/fancy/wood,
 /turf/simulated/floor/carpet/oracarpet,
 /area/centcom/living)
+"anH" = (
+/obj/effect/floor_decal/corner/black/full,
+/obj/effect/floor_decal/corner/red{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/red,
+/obj/item/chainsaw/rauf,
+/obj/structure/table/rack,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/centcom/specops)
 "anI" = (
 /obj/structure/closet/secure_closet/medical_wall{
 	pixel_y = 32
@@ -10360,7 +10367,6 @@
 	pixel_y = -22
 	},
 /obj/structure/table/alien/blue,
-/obj/item/personal_shield_generator/belt/adminbus,
 /turf/simulated/floor/tiled,
 /area/centcom/control)
 "cfp" = (
@@ -65371,7 +65377,7 @@ clw
 fiE
 aoV
 ues
-wMc
+anH
 rWp
 iQm
 fPz

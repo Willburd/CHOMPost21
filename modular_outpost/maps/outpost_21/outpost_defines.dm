@@ -423,6 +423,10 @@
 	flags = MAP_LEVEL_ADMIN|MAP_LEVEL_CONTACT|MAP_LEVEL_XENOARCH_EXEMPT|MAP_LEVEL_SEALED|MAP_LEVEL_BELOW_BLOCKED
 
 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Muriki overmap sector
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 /obj/effect/landmark/map_data/muriki
 	height = 4
 
@@ -449,6 +453,8 @@
 		"Mercenary" = list("airdrop_muriki_central", "lake_muriki_southeast", "airdrop_muriki_southwest", "airdrop_muriki_northeast", "airdrop_muriki_northwest"))
 	//Despite not being in the multi-z complex, these levels are part of the overmap sector
 	extra_z_levels = list()
+	var/airspace_lockdown = FALSE
+	var/list/recent_targets = list()
 
 /obj/effect/overmap/visitable/sector/muriki/Crossed(atom/movable/AM)
 	. = ..()
@@ -465,6 +471,8 @@
 		var/obj/effect/overmap/visitable/ship/landable/SL = AM //Phew
 		var/datum/shuttle/autodock/multi/shuttle = SSshuttles.shuttles[SL.shuttle]
 		if(istype(SL)) // overmap cloak
+			if(airspace_lockdown)
+				addtimer(CALLBACK(src, PROC_REF(notify_airspace_violation), SL), 3 SECONDS, TIMER_DELETE_ME)
 			if(!SL.overmap_stealth)
 				SSatc.msg(message)
 		else if(!istype(shuttle) || !shuttle.cloaked) // instant warp cloak
@@ -477,7 +485,81 @@
 /obj/effect/overmap/visitable/sector/muriki/get_space_zlevels()
 	return list() //None!
 
+/obj/effect/overmap/visitable/sector/muriki/proc/notify_airspace_violation(obj/effect/overmap/visitable/ship/landable/SL)
+	if(QDELETED(SL))
+		return
+	if(!airspace_lockdown)
+		recent_targets.Remove(SL.name)
+		return
+	if(SL.name in recent_targets)
+		return
+	if(!Adjacent(SL) || SL.status == SHIP_STATUS_LANDED) // too quick
+		return
+	SSatc.msg("[SL.known ? SL : "Unknown vessel"], you are in violation of restricted air space. Land your vessel immediately and stand by to be boarded, or you will be fired upon. Lethal force is authorized.")
+	addtimer(CALLBACK(src, PROC_REF(offensive_airspace_violation), SL), 12 SECONDS, TIMER_DELETE_ME)
 
+/obj/effect/overmap/visitable/sector/muriki/proc/offensive_airspace_violation(obj/effect/overmap/visitable/ship/landable/SL)
+	if(QDELETED(SL))
+		return
+	if(!airspace_lockdown)
+		recent_targets.Remove(SL.name)
+		return
+	if(!Adjacent(SL) || SL.status == SHIP_STATUS_LANDED)
+		SSatc.msg("[SL.known ? SL : "Unknown vessel"] exiting secured zone. Target is out of range or has landed.")
+		recent_targets.Remove(SL.name)
+		return
+	SSatc.msg("Target acquired: [SL.known ? SL : "Unknown vessel"]. Firing surface to space countermeasures.")
+	recent_targets.Add(SL.name)
+	addtimer(CALLBACK(src, PROC_REF(shoot_down_shuttle), SL, rand(2,3)), rand(5,7) SECONDS, TIMER_DELETE_ME)
+
+/obj/effect/overmap/visitable/sector/muriki/proc/shoot_down_shuttle(obj/effect/overmap/visitable/ship/landable/SL, remaining_shots)
+	if(QDELETED(SL))
+		return
+	if(!airspace_lockdown || remaining_shots <= 0)
+		recent_targets.Remove(SL.name)
+		return
+	if(!Adjacent(SL) || SL.status == SHIP_STATUS_LANDED)
+		SSatc.msg("[SL.known ? SL : "Unknown vessel"] exiting secured zone. Target is out of range or has landed.")
+		recent_targets.Remove(SL.name)
+		return
+	// Get a random turf on the shuttle. In the future we'll want to try targeting near engines.
+	var/datum/shuttle/shuttle_datum = SSshuttles.shuttles[SL.shuttle]
+	if(!shuttle_datum)
+		return
+	var/area/A = pick(shuttle_datum.shuttle_area)
+	if(!A)
+		return
+	var/turf/T = pick(get_area_turfs(A.type))
+	if(!T)
+		return
+	// Fire
+	var/obj/structure/ship_munition/disperser_charge/explosive/C = new(T)
+	addtimer(CALLBACK(C, TYPE_PROC_REF(/obj/structure/ship_munition/disperser_charge, bsa_shell_event)), rand(1,15), TIMER_DELETE_ME)
+	// This si kinda guarenteed at this point
+	shuttle_datum.emagged_crash = TRUE
+	// next shot
+	addtimer(CALLBACK(src, PROC_REF(shoot_down_shuttle), SL, --remaining_shots), rand(4,8) SECONDS, TIMER_DELETE_ME)
+
+ADMIN_VERB(lockdown_muriki_airspace, R_EVENT, "Airspace Lockdown ", "Lockdown traffic in and out of Muriki. Shuttles will automatically have BSA shells fired at them.", ADMIN_CATEGORY_EVENTS)
+	var/obj/effect/overmap/visitable/sector/muriki/sector_muriki = locate() in world
+	if(!sector_muriki)
+		return
+	sector_muriki.airspace_lockdown = !sector_muriki.airspace_lockdown
+	to_chat(usr, span_warning("Airspace has been [sector_muriki.airspace_lockdown ? "locked down!" : "opened to traffic."]"))
+	// reroute
+	if(sector_muriki.airspace_lockdown)
+		SSatc.reroute_traffic(TRUE, FALSE) // Lockout airspace
+	else if(GLOB.security_level < SEC_LEVEL_RED)
+		SSatc.reroute_traffic(FALSE, FALSE) // Release if not locked by seclevel
+	// announce
+	if(sector_muriki.airspace_lockdown)
+		SSatc.msg("Planetary lockdown in effect: All ships entering air traffic control space will be fired upon.")
+	else
+		SSatc.msg("Planetary lockdown lifted. Air traffic is safe to resume; air defenses are standing down.")
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// orbital yard overmap sector
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /obj/effect/overmap/visitable/sector/murkiki_space/orbital_yard
 	initial_generic_waypoints = list("orbitalyard_civ","orbitalyard_north","orbitalyard_south","orbitalyard_east","orbitalyard_west")
@@ -520,6 +602,9 @@
 	return list(Z_LEVEL_OUTPOST_ASTEROID)
 
 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// confinement beam overmap sector
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /obj/effect/overmap/visitable/sector/murkiki_space/confinementbeam
 	initial_generic_waypoints = list("confinementbeam_civ")
@@ -562,6 +647,9 @@
 	return list(Z_LEVEL_OUTPOST_CONFINEMENTBEAM)
 
 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Escape gateway overmap sector
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /obj/effect/overmap/visitable/sector/murkiki_space/distant_gateway
 	name = "Sector Gateway"

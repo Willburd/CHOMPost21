@@ -1,5 +1,6 @@
 /datum/weather
 	var/hazardous_weather
+	var/shuttle_crash_chance = 0
 
 /datum/weather_holder/advance_forecast()
 	. = ..()

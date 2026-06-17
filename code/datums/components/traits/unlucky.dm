@@ -138,6 +138,9 @@
 	if(!prob(2 * effective_luck))
 		return
 
+	if(prob(20)) // Outpost 21 edit - Reduce this chaos a little bit
+		return
+
 	var/turf/our_guy_pos = get_turf(our_guy)
 	if(!our_guy_pos)
 		return

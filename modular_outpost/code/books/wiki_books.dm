@@ -30,7 +30,7 @@
 				#include "wiki/gameplay/basics.dm"
 				#include "wiki/gameplay/rank.dm"
 				#include "wiki/gameplay/resleeving.dm"
-				#include "wiki/gameplay/positronic.dm"
+				#include "wiki/gameplay/silicon_minds.dm"
 				#include "wiki/gameplay/borglaw.dm"
 			),
 			"Species" = list(
