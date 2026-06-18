@@ -5261,7 +5261,7 @@
 #include "maps\tether\tether_shuttle_defs.dm"
 #include "maps\tether\tether_telecomm_defs.dm"
 #include "maps\virtual_reality\constructVR.dm"
-#include "modular_alpha_gattening\code\defines\guns.dm"
+#include "modular_alpha_gattening\code\__defines\guns.dm"
 #include "modular_alpha_gattening\code\modules\projectiles\casing.dm"
 #include "modular_alpha_gattening\code\modules\projectiles\magazines.dm"
 #include "modular_alpha_gattening\code\modules\projectiles\projectiles.dm"
