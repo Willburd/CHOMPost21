@@ -2346,6 +2346,23 @@
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/shuttle/mercenary)
+"fg" = (
+/obj/structure/table/rack,
+/obj/item/gun/projectile/automatic/serdy/awp,
+/obj/item/ammo_magazine/awp/ap,
+/obj/item/ammo_magazine/awp/ap,
+/obj/item/ammo_magazine/awp/ap,
+/obj/item/ammo_magazine/awp/ap,
+/obj/item/ammo_magazine/awp/ap,
+/obj/item/ammo_magazine/awp/ap,
+/obj/item/ammo_magazine/awp/ap,
+/obj/item/ammo_magazine/awp/ap,
+/obj/item/ammo_magazine/awp/ap,
+/obj/item/ammo_magazine/awp/ap,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
 "fh" = (
 /turf/unsimulated/floor{
 	icon_state = "dark"
@@ -2364,6 +2381,28 @@
 /obj/structure/bed/double,
 /turf/simulated/floor/carpet/geo,
 /area/planet/clown)
+"fk" = (
+/obj/structure/table/rack,
+/obj/item/melee/energy/sword,
+/obj/item/melee/energy/sword,
+/obj/item/melee/energy/sword,
+/obj/item/melee/energy/sword,
+/obj/item/melee/energy/sword,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"fl" = (
+/obj/structure/table/rack,
+/obj/item/shield/energy/imperial,
+/obj/item/shield/energy/imperial,
+/obj/item/shield/energy/imperial,
+/obj/item/shield/energy/imperial,
+/obj/item/shield/energy/imperial,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
 "fn" = (
 /obj/machinery/door/airlock/silver{
 	req_one_access = list(150)
@@ -3623,18 +3662,6 @@
 /obj/item/melee/energy/sword/ionic_rapier/lance,
 /obj/item/melee/energy/sword/ionic_rapier/lance,
 /obj/item/melee/energy/sword/ionic_rapier/lance,
-/turf/unsimulated/floor{
-	icon_state = "dark"
-	},
-/area/syndicate_mothership)
-"hp" = (
-/obj/structure/table/rack,
-/obj/item/shield/energy/imperial,
-/obj/item/shield/energy/imperial,
-/obj/item/shield/energy/imperial,
-/obj/item/shield/energy/imperial,
-/obj/item/shield/energy/imperial,
-/obj/item/shield/energy/imperial,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -59471,7 +59498,7 @@ yb
 hm
 kQ
 bM
-kQ
+fg
 nO
 nS
 nW
@@ -60118,9 +60145,9 @@ ab
 yb
 sg
 kQ
-hp
-ho
 kQ
+kQ
+IX
 hf
 hf
 sg
@@ -60603,9 +60630,9 @@ mN
 ab
 yb
 kQ
-kQ
-kQ
-kQ
+ho
+fl
+fk
 ea
 dX
 kQ
@@ -62870,7 +62897,7 @@ mN
 mN
 ab
 yb
-IX
+kQ
 eq
 gX
 qx
