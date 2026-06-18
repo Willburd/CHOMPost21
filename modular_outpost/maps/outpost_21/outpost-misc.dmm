@@ -2348,17 +2348,17 @@
 /area/shuttle/mercenary)
 "fg" = (
 /obj/structure/table/rack,
-/obj/item/gun/projectile/automatic/serdy/awp,
-/obj/item/ammo_magazine/awp/ap,
-/obj/item/ammo_magazine/awp/ap,
-/obj/item/ammo_magazine/awp/ap,
-/obj/item/ammo_magazine/awp/ap,
-/obj/item/ammo_magazine/awp/ap,
-/obj/item/ammo_magazine/awp/ap,
-/obj/item/ammo_magazine/awp/ap,
-/obj/item/ammo_magazine/awp/ap,
-/obj/item/ammo_magazine/awp/ap,
-/obj/item/ammo_magazine/awp/ap,
+/obj/item/ammo_magazine/bm109,
+/obj/item/ammo_magazine/bm109,
+/obj/item/ammo_magazine/bm109,
+/obj/item/ammo_magazine/bm109,
+/obj/item/ammo_magazine/bm109,
+/obj/item/ammo_magazine/bm109,
+/obj/item/ammo_magazine/bm109,
+/obj/item/ammo_magazine/bm109,
+/obj/item/ammo_magazine/bm109,
+/obj/item/ammo_magazine/bm109,
+/obj/item/gun/projectile/automatic/serdy/bm109,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -2399,6 +2399,23 @@
 /obj/item/shield/energy/imperial,
 /obj/item/shield/energy/imperial,
 /obj/item/shield/energy/imperial,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"fm" = (
+/obj/structure/table/rack,
+/obj/item/ammo_magazine/awp/ap,
+/obj/item/ammo_magazine/awp/ap,
+/obj/item/ammo_magazine/awp/ap,
+/obj/item/ammo_magazine/awp/ap,
+/obj/item/ammo_magazine/awp/ap,
+/obj/item/ammo_magazine/awp/ap,
+/obj/item/ammo_magazine/awp/ap,
+/obj/item/ammo_magazine/awp/ap,
+/obj/item/ammo_magazine/awp/ap,
+/obj/item/ammo_magazine/awp/ap,
+/obj/item/gun/projectile/automatic/serdy/awp,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -3105,58 +3122,38 @@
 /area/syndicate_mothership)
 "gJ" = (
 /obj/structure/table/rack,
-/obj/item/ammo_magazine/ammo_box/b12g/pellet{
-	pixel_x = 5;
-	pixel_y = 5
+/obj/item/ammo_magazine/strela/slug{
+	pixel_x = -7
 	},
-/obj/item/ammo_magazine/ammo_box/b12g/pellet{
-	pixel_x = 5;
-	pixel_y = 5
+/obj/item/ammo_magazine/strela/slug{
+	pixel_x = -7
 	},
-/obj/item/ammo_magazine/ammo_box/b12g/pellet{
-	pixel_x = 5;
-	pixel_y = 5
+/obj/item/ammo_magazine/strela/slug{
+	pixel_x = -7
 	},
-/obj/item/ammo_magazine/ammo_box/b12g/pellet{
-	pixel_x = 5;
-	pixel_y = 5
+/obj/item/ammo_magazine/strela/slug{
+	pixel_x = -7
 	},
-/obj/item/ammo_magazine/ammo_box/b12g/pellet{
-	pixel_x = 5;
-	pixel_y = 5
+/obj/item/ammo_magazine/strela/slug{
+	pixel_x = -7
 	},
-/obj/item/ammo_magazine/ammo_box/b12g/pellet{
-	pixel_x = 5;
-	pixel_y = 5
+/obj/item/ammo_magazine/strela{
+	pixel_x = 8
 	},
-/obj/item/ammo_magazine/ammo_box/b12g/pellet{
-	pixel_x = 5;
-	pixel_y = 5
+/obj/item/ammo_magazine/strela{
+	pixel_x = 8
 	},
-/obj/item/ammo_magazine/ammo_box/b12g/pellet{
-	pixel_x = 5;
-	pixel_y = 5
+/obj/item/ammo_magazine/strela{
+	pixel_x = 8
 	},
-/obj/item/ammo_magazine/ammo_box/b12g/pellet{
-	pixel_x = 5;
-	pixel_y = 5
+/obj/item/ammo_magazine/strela{
+	pixel_x = 8
 	},
-/obj/item/ammo_magazine/ammo_box/b12g/pellet{
-	pixel_x = 5;
-	pixel_y = 5
+/obj/item/ammo_magazine/strela{
+	pixel_x = 8
 	},
-/obj/item/ammo_magazine/ammo_box/b12g/flechette,
-/obj/item/ammo_magazine/ammo_box/b12g/flechette,
-/obj/item/ammo_magazine/ammo_box/b12g/flechette,
-/obj/item/ammo_magazine/ammo_box/b12g/flechette,
-/obj/item/ammo_magazine/ammo_box/b12g/flechette,
-/obj/item/ammo_magazine/ammo_box/b12g/flechette,
-/obj/item/ammo_magazine/ammo_box/b12g/flechette,
-/obj/item/ammo_magazine/ammo_box/b12g/flechette,
-/obj/item/ammo_magazine/ammo_box/b12g/flechette,
-/obj/item/ammo_magazine/ammo_box/b12g/flechette,
-/obj/item/gun/projectile/shotgun/pump/shorty,
-/obj/item/gun/projectile/shotgun/pump/shorty,
+/obj/item/gun/projectile/automatic/serdy/strela,
+/obj/item/gun/projectile/automatic/serdy/strela,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -3265,23 +3262,31 @@
 /area/syndicate_mothership)
 "gO" = (
 /obj/structure/table/rack,
-/obj/item/ammo_magazine/m45/ap,
-/obj/item/ammo_magazine/m45/ap,
-/obj/item/ammo_magazine/m45/ap,
-/obj/item/ammo_magazine/m45/ap,
-/obj/item/ammo_magazine/m45/ap,
-/obj/item/ammo_magazine/m45/ap,
-/obj/item/ammo_magazine/m45/ap,
-/obj/item/ammo_magazine/m45/ap,
-/obj/item/ammo_magazine/m45/ap,
-/obj/item/ammo_magazine/m45/ap,
-/obj/item/ammo_magazine/m45/ap,
-/obj/item/gun/projectile/silenced/empty,
-/obj/item/gun/projectile/silenced/empty,
-/obj/item/gun/projectile/silenced/empty,
-/obj/item/gun/projectile/silenced/empty,
-/obj/item/gun/projectile/silenced/empty,
-/obj/item/gun/projectile/silenced/empty,
+/obj/item/ammo_magazine/ssp4,
+/obj/item/ammo_magazine/ssp4,
+/obj/item/ammo_magazine/ssp4,
+/obj/item/ammo_magazine/ssp4,
+/obj/item/ammo_magazine/ssp4,
+/obj/item/ammo_magazine/ssp4,
+/obj/item/ammo_magazine/ssp4,
+/obj/item/ammo_magazine/ssp4,
+/obj/item/ammo_magazine/ssp4,
+/obj/item/ammo_magazine/ssp4,
+/obj/item/ammo_magazine/ssp4,
+/obj/item/ammo_magazine/ssp4,
+/obj/item/ammo_magazine/ssp4,
+/obj/item/ammo_magazine/ssp4,
+/obj/item/ammo_magazine/ssp4,
+/obj/item/ammo_magazine/ssp4,
+/obj/item/ammo_magazine/ssp4,
+/obj/item/ammo_magazine/ssp4,
+/obj/item/ammo_magazine/ssp4,
+/obj/item/ammo_magazine/ssp4,
+/obj/item/gun/projectile/automatic/serdy/ssp4_silenced,
+/obj/item/gun/projectile/automatic/serdy/ssp4_silenced,
+/obj/item/gun/projectile/automatic/serdy/ssp4_silenced,
+/obj/item/gun/projectile/automatic/serdy/ssp4_silenced,
+/obj/item/gun/projectile/automatic/serdy/ssp4_silenced,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -4128,7 +4133,6 @@
 /area/shuttle/trade/centcom)
 "ij" = (
 /obj/structure/table/rack,
-/obj/item/rig/military,
 /obj/item/rig/military,
 /turf/unsimulated/floor{
 	icon_state = "dark"
@@ -6581,23 +6585,23 @@
 /area/shuttle/specops/centcom)
 "nS" = (
 /obj/structure/table/rack,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
 /obj/item/gun/projectile/automatic/serdy/hectate,
-/obj/item/ammo_magazine/hectate/ap,
-/obj/item/ammo_magazine/hectate/ap,
-/obj/item/ammo_magazine/hectate/ap,
-/obj/item/ammo_magazine/hectate/ap,
-/obj/item/ammo_magazine/hectate/ap,
-/obj/item/ammo_magazine/hectate/ap,
-/obj/item/ammo_magazine/hectate/ap,
-/obj/item/ammo_magazine/hectate/ap,
-/obj/item/ammo_magazine/hectate/ap,
-/obj/item/ammo_magazine/hectate/ap,
-/obj/item/ammo_magazine/hectate/ap,
-/obj/item/ammo_magazine/hectate/ap,
-/obj/item/ammo_magazine/hectate/ap,
-/obj/item/ammo_magazine/hectate/ap,
-/obj/item/ammo_magazine/hectate/ap,
-/obj/item/ammo_magazine/hectate/ap,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -59012,7 +59016,7 @@ yb
 sg
 hj
 gV
-gV
+nO
 gW
 gY
 sg
@@ -59499,7 +59503,7 @@ hm
 kQ
 bM
 fg
-nO
+fm
 nS
 nW
 Iq
