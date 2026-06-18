@@ -46155,6 +46155,7 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/red,
+/obj/machinery/gear_painter,
 /turf/unsimulated/floor/steel{
 	icon_state = "milspec"
 	},
