@@ -367,6 +367,7 @@
 	H.resize(sizemult, FALSE)
 	H.appearance_flags = aflags
 	H.weight = weight
+	H.changeling_locked = changeling_locked
 	if(speciesname)
 		H.custom_species = speciesname
 
