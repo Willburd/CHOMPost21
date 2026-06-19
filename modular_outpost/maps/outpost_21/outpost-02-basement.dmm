@@ -7379,6 +7379,32 @@
 	},
 /turf/simulated/floor/bluegrid/airless,
 /area/medical/voxlab/airgap)
+"anP" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/inflatable/door,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/wastedisposalnear)
+"anQ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/structure/inflatable/door,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/spine/waste)
+"anR" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/structure/inflatable/door,
+/turf/simulated/floor/plating,
+/area/maintenance/civ/west)
 "anS" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -7388,6 +7414,9 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/wastedisposalnear)
+"anT" = (
+/turf/simulated/wall/r_wall,
+/area/crew_quarters/sleep/Dorm_2)
 "anU" = (
 /obj/effect/floor_decal/corner/purple{
 	dir = 5
@@ -7501,6 +7530,10 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/lowmain)
+"aoh" = (
+/obj/structure/inflatable/door,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/wastedisposalnear)
 "aoi" = (
 /obj/machinery/atmospherics/binary/pump/high_power/on{
 	name = "supply pump"
@@ -7578,6 +7611,101 @@
 	},
 /turf/simulated/floor/plating,
 /area/engineering/atmos)
+"aoq" = (
+/obj/structure/closet/lasertag/red,
+/obj/effect/floor_decal/spline/plain{
+	dir = 4
+	},
+/obj/structure/sign/poster{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/geo,
+/area/muriki/crew/arcade/lasertag)
+"aor" = (
+/obj/effect/floor_decal/spline/plain{
+	dir = 8
+	},
+/obj/structure/closet/secure_closet/personal,
+/obj/structure/sign/poster{
+	dir = 8
+	},
+/turf/simulated/floor/carpet/geo,
+/area/muriki/crew/arcade/lasertag)
+"aos" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced,
+/obj/effect/zone_divider,
+/turf/simulated/floor/plating,
+/area/maintenance/spine/eng)
+"aot" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced,
+/obj/effect/zone_divider,
+/turf/simulated/floor/plating,
+/area/crew_quarters/recreation_area_hallway)
+"aou" = (
+/obj/machinery/door/airlock/glass_external{
+	req_one_access = null
+	},
+/obj/effect/zone_divider,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/crew_quarters/recreation_area_hallway)
+"aov" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/glass,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced,
+/obj/effect/zone_divider,
+/turf/simulated/floor/plating,
+/area/maintenance/cave)
+"aow" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced,
+/obj/effect/zone_divider,
+/turf/simulated/floor/plating,
+/area/maintenance/cargo)
+"aox" = (
+/obj/machinery/door/airlock/glass_external{
+	req_one_access = null
+	},
+/obj/effect/zone_divider,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/maintenance/cargo)
 "aoy" = (
 /obj/structure/curtain/open/shower,
 /obj/machinery/shower{
@@ -7595,6 +7723,10 @@
 /obj/effect/landmark/start/xenobio,
 /turf/simulated/floor/tiled/freezer,
 /area/muriki/research/isolation_hall)
+"aoz" = (
+/obj/effect/zone_divider,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/medical/tankstore)
 "aoA" = (
 /obj/machinery/atmospherics/binary/pump/on{
 	dir = 8;
@@ -7602,6 +7734,25 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/incinerator)
+"aoB" = (
+/obj/structure/sign/poster{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/civ/bunker)
+"aoC" = (
+/obj/structure/closet/lasertag/blue,
+/obj/effect/floor_decal/spline/plain{
+	dir = 4
+	},
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+/obj/structure/sign/poster{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/geo,
+/area/muriki/crew/arcade/lasertag)
 "aoD" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/atmospherics/pipe/simple/hidden/black{
@@ -7854,6 +8005,13 @@
 /obj/machinery/portable_atmospherics/canister/phoron,
 /turf/simulated/floor/plating,
 /area/engineering/atmos/tank_storage)
+"apb" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/structure/inflatable/door,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/spine/eng)
 "apc" = (
 /obj/structure/table/glass,
 /obj/machinery/chemical_dispenser/full,
@@ -8110,6 +8268,13 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/lowmain)
+"apv" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/inflatable/door,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/atmos_control)
 "apw" = (
 /turf/simulated/wall,
 /area/rnd/hallway/lowmain)
@@ -8124,6 +8289,16 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/lowmain)
+"apz" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/black{
+	dir = 4
+	},
+/obj/structure/inflatable/door,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/atmos_control)
 "apA" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/red{
 	dir = 5
@@ -25746,6 +25921,9 @@
 /obj/structure/handrail{
 	dir = 8
 	},
+/obj/structure/sign/poster{
+	dir = 4
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/fitness)
 "aXi" = (
@@ -26180,6 +26358,9 @@
 	dir = 8
 	},
 /obj/structure/closet/secure_closet/personal,
+/obj/structure/sign/poster{
+	dir = 8
+	},
 /turf/simulated/floor/carpet/geo,
 /area/muriki/crew/arcade/lasertag)
 "aYm" = (
@@ -27027,6 +27208,9 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 1
 	},
+/obj/structure/sign/poster/eshui{
+	dir = 1
+	},
 /turf/simulated/floor/carpet/geo,
 /area/muriki/crew/arcade)
 "bad" = (
@@ -27685,6 +27869,9 @@
 /obj/item/camera_film,
 /obj/item/camera,
 /obj/item/camera,
+/obj/item/poster,
+/obj/item/poster,
+/obj/item/poster,
 /turf/simulated/floor/carpet,
 /area/crew_quarters/recreation_area)
 "bbk" = (
@@ -30703,7 +30890,7 @@
 /turf/simulated/floor/plating,
 /area/maintenance/civ)
 "bgG" = (
-/turf/simulated/wall,
+/turf/simulated/wall/r_wall,
 /area/maintenance/dormitory)
 "bgH" = (
 /obj/effect/floor_decal/borderfloor{
@@ -41325,6 +41512,7 @@
 	pixel_x = -4;
 	pixel_y = 27
 	},
+/obj/effect/zone_divider,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/cave)
 "bAo" = (
@@ -43449,6 +43637,7 @@
 	name = "Heavy Armor Garage"
 	},
 /obj/effect/step_trigger/dephase_shadekin,
+/obj/effect/zone_divider,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/security/tankstore)
 "bEI" = (
@@ -43839,6 +44028,7 @@
 	id = "medgarage";
 	name = "Medical Garage Door"
 	},
+/obj/effect/zone_divider,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/medical/tankstore)
 "bFx" = (
@@ -44743,6 +44933,9 @@
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/structure/sign/poster/eshui{
+	dir = 1
+	},
 /turf/simulated/floor/carpet/geo,
 /area/muriki/crew/arcade)
 "bHa" = (
@@ -45340,6 +45533,9 @@
 /obj/item/pen/crayon/rainbow{
 	pixel_x = 11
 	},
+/obj/item/poster/eshui,
+/obj/item/poster/eshui,
+/obj/item/poster/eshui,
 /turf/simulated/floor/carpet,
 /area/crew_quarters/recreation_area)
 "bIi" = (
@@ -54490,6 +54686,7 @@
 /obj/structure/cable/orange{
 	icon_state = "1-10"
 	},
+/obj/structure/inflatable/door,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/atmos_control)
 "cbJ" = (
@@ -56402,7 +56599,7 @@
 "chb" = (
 /obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/wall/r_wall,
-/area/muriki/crew/bunker)
+/area/hallway/muriki/bunkerhall)
 "chc" = (
 /obj/machinery/power/apc{
 	name = "south bump";
@@ -56459,7 +56656,7 @@
 	},
 /obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/techfloor,
-/area/muriki/crew/bunker)
+/area/hallway/muriki/bunkerhall)
 "chg" = (
 /obj/effect/landmark/event_spawn/maintpred,
 /turf/simulated/floor/plating/turfpack/muriki,
@@ -59950,6 +60147,7 @@
 /obj/machinery/door/airlock/glass_external{
 	req_one_access = null
 	},
+/obj/effect/zone_divider,
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/maintenance/spine/eng)
 "cpZ" = (
@@ -60751,6 +60949,7 @@
 	dir = 10
 	},
 /obj/machinery/light,
+/obj/structure/sign/poster,
 /turf/simulated/floor/tiled/steel,
 /area/crew_quarters/recreation_area_hallway)
 "csn" = (
@@ -74146,6 +74345,7 @@
 "hAE" = (
 /obj/effect/floor_decal/milspec/hatchmarks,
 /obj/effect/step_trigger/dephase_shadekin,
+/obj/effect/zone_divider,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/security/tankstore)
 "hAW" = (
@@ -77120,7 +77320,7 @@
 	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/steel,
-/area/muriki/crew/bunker)
+/area/hallway/muriki/bunkerhall)
 "kRR" = (
 /turf/simulated/floor/water/acidic/shoreline/corner/corner_flesh/indoor/turfpack/muriki,
 /area/muriki/processor/pools/eastfund)
@@ -77215,7 +77415,7 @@
 	},
 /obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/techfloor,
-/area/muriki/crew/bunker)
+/area/hallway/muriki/bunkerhall)
 "kZt" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -78858,9 +79058,6 @@
 /obj/effect/mist,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/muriki/processor/gland/airmix)
-"nkl" = (
-/turf/simulated/wall/r_wall,
-/area/muriki/crew/bunker)
 "nku" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
@@ -81628,7 +81825,7 @@
 	tele_name = "Bunker"
 	},
 /turf/simulated/floor/tiled/steel,
-/area/muriki/crew/bunker)
+/area/hallway/muriki/bunkerhall)
 "qqJ" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/door/airlock/maintenance/int,
@@ -83430,6 +83627,9 @@
 /obj/item/grenade/shooter/energy/lasertagblue,
 /obj/item/grenade/shooter/energy/lasertagblue,
 /obj/item/grenade/shooter/energy/lasertagblue,
+/obj/structure/sign/poster{
+	dir = 4
+	},
 /turf/simulated/floor/carpet/geo,
 /area/muriki/crew/arcade/lasertag)
 "smO" = (
@@ -84117,7 +84317,7 @@
 	pixel_y = 9;
 	dir = 4
 	},
-/turf/simulated/wall,
+/turf/simulated/wall/r_wall,
 /area/maintenance/dormitory)
 "tdB" = (
 /obj/effect/floor_decal/borderfloor{
@@ -84330,7 +84530,7 @@
 	},
 /obj/effect/floor_decal/industrial/stand_clear/yellow,
 /turf/simulated/floor/tiled/steel,
-/area/muriki/crew/bunker)
+/area/hallway/muriki/bunkerhall)
 "tua" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -85213,6 +85413,9 @@
 	dir = 4
 	},
 /obj/structure/flora/pottedplant/decorative,
+/obj/structure/sign/poster{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/pool)
 "uBL" = (
@@ -87850,7 +88053,7 @@
 	pixel_y = 24
 	},
 /turf/simulated/floor/tiled/steel,
-/area/muriki/crew/bunker)
+/area/hallway/muriki/bunkerhall)
 "xRt" = (
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 6
@@ -96816,7 +97019,7 @@ cfv
 cfv
 cfv
 byK
-aIg
+anP
 byK
 iwf
 iwf
@@ -97287,7 +97490,7 @@ aIY
 kMh
 czQ
 czN
-agb
+anQ
 aAS
 kMh
 kMh
@@ -98886,7 +99089,7 @@ byK
 cwa
 ava
 cvX
-ava
+aoh
 aHR
 ava
 aqp
@@ -101812,7 +102015,7 @@ kMh
 adx
 agb
 bEV
-agb
+anQ
 bLG
 agb
 cFR
@@ -106316,7 +106519,7 @@ ckm
 ckl
 ckk
 ckg
-cpT
+aos
 ckf
 coB
 cpT
@@ -106630,7 +106833,7 @@ bQB
 bQm
 bXR
 bXI
-bQm
+apb
 bQz
 gWL
 bMZ
@@ -106640,7 +106843,7 @@ ckm
 ckl
 ckk
 ckh
-cpT
+aos
 bJz
 cfJ
 cpT
@@ -111956,7 +112159,7 @@ viH
 kRe
 apa
 okH
-bLS
+apv
 adu
 aRb
 clO
@@ -114737,7 +114940,7 @@ cka
 cjZ
 cjY
 ckj
-cpV
+aow
 cjI
 cjI
 cjI
@@ -114899,7 +115102,7 @@ cka
 cjZ
 cjY
 cjI
-cpW
+aox
 cjI
 cjI
 cjI
@@ -115061,7 +115264,7 @@ cka
 cjZ
 cjY
 cjW
-cpV
+aow
 cpX
 adV
 aQg
@@ -115666,7 +115869,7 @@ bMZ
 bMZ
 bMZ
 adu
-bUd
+apz
 adu
 bMZ
 bMZ
@@ -118598,7 +118801,7 @@ cqR
 cqR
 cqR
 adu
-bLS
+apv
 adu
 bMZ
 bMZ
@@ -125913,7 +126116,7 @@ czD
 aSe
 aSe
 aWS
-aSe
+aoz
 cuy
 kqO
 kqO
@@ -126075,7 +126278,7 @@ aSe
 aSe
 icW
 lBJ
-aSe
+aoz
 csz
 kqO
 kqO
@@ -127048,9 +127251,9 @@ azy
 aWd
 aWb
 aMW
-bAm
+aov
 bAn
-bAm
+aov
 alY
 cqD
 cqD
@@ -137295,7 +137498,7 @@ cnU
 cnU
 cnU
 cnU
-bbl
+anR
 cnU
 aHS
 aHS
@@ -137420,7 +137623,7 @@ cuL
 cuI
 cuD
 cuA
-bSt
+aot
 cuo
 cuk
 cvf
@@ -137582,7 +137785,7 @@ cuL
 cuI
 cuE
 bME
-cul
+aou
 bME
 bME
 cvg
@@ -137744,7 +137947,7 @@ cuL
 cuI
 cuE
 cuB
-bSt
+aot
 bME
 bME
 cvh
@@ -142630,7 +142833,7 @@ bky
 tdw
 bgG
 bng
-bom
+anT
 bom
 bom
 bom
@@ -142792,7 +142995,7 @@ bkz
 bgG
 bmc
 thI
-bom
+anT
 boM
 bpD
 bom
@@ -142954,7 +143157,7 @@ aId
 bgG
 bmd
 bnh
-bom
+anT
 boN
 bpE
 bqw
@@ -143085,7 +143288,7 @@ wZi
 fJz
 aWB
 aXp
-bKs
+aoB
 aYk
 bKs
 aZi
@@ -143116,7 +143319,7 @@ pRR
 bgG
 bme
 bni
-bom
+anT
 boO
 bpF
 bom
@@ -143278,7 +143481,7 @@ bkA
 bgG
 bgG
 bgG
-bom
+anT
 bom
 bom
 bom
@@ -143408,7 +143611,7 @@ aUM
 aVw
 aVR
 kAG
-aXq
+aor
 aXq
 aYl
 aYG
@@ -143423,7 +143626,7 @@ bdh
 bdI
 bee
 bew
-aXq
+aor
 aXq
 sAw
 bfX
@@ -143732,8 +143935,8 @@ cpg
 cpg
 cpB
 aWE
-aXr
-aXr
+aoC
+aoC
 aXr
 aYH
 aZl
@@ -143746,9 +143949,9 @@ bak
 bdj
 bdK
 bef
+aoq
 bex
-bex
-bex
+aoq
 smp
 aVT
 cpk
@@ -146474,10 +146677,10 @@ pmN
 pmN
 pmN
 pmN
-nkl
+lOq
 kRw
 qqD
-nkl
+lOq
 cpL
 ehN
 xMD
@@ -146636,10 +146839,10 @@ pmN
 pmN
 pmN
 pmN
-nkl
+lOq
 xRc
 ttG
-nkl
+lOq
 cpI
 cpI
 cpF

@@ -8115,8 +8115,10 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
-/obj/machinery/station_map{
-	pixel_y = 32
+/obj/item/radio/intercom{
+	name = "Station Intercom (General)";
+	dir = 1;
+	pixel_y = 21
 	},
 /turf/simulated/floor/tiled,
 /area/muriki/tramstation/civ)
@@ -19281,6 +19283,9 @@
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/machinery/atm{
+	pixel_x = -28
+	},
 /turf/simulated/floor/tiled/steel,
 /area/hallway/primary/central_three)
 "aSZ" = (
@@ -20356,6 +20361,15 @@
 	},
 /turf/simulated/floor/carpet/purple,
 /area/rnd/breakroom)
+"aVv" = (
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/red/border,
+/obj/item/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -21
+	},
+/turf/simulated/floor/tiled,
+/area/muriki/tramstation/civ)
 "aVw" = (
 /obj/structure/toilet{
 	dir = 8
@@ -20385,11 +20399,21 @@
 /obj/structure/window/reinforced,
 /turf/simulated/floor/tiled/milspec,
 /area/security/armoury)
+"aVy" = (
+/obj/machinery/atm{
+	pixel_x = -30;
+	pixel_y = -2
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/crew_quarters/kitchen)
 "aVz" = (
 /turf/simulated/floor/water/acidic/shoreline/corner/corner_flesh/indoor/turfpack/muriki{
 	dir = 1
 	},
 /area/muriki/processor/hall)
+"aVA" = (
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/rnd/lockers)
 "aVX" = (
 /obj/machinery/computer/skills,
 /obj/effect/floor_decal/spline/fancy/wood{
@@ -21385,16 +21409,6 @@
 /obj/item/clothing/head/helmet/laserproof,
 /turf/simulated/floor/tiled/dark,
 /area/security/tactical)
-"bjF" = (
-/obj/effect/floor_decal/corner/green{
-	dir = 10
-	},
-/obj/machinery/firealarm{
-	dir = 1;
-	pixel_y = -26
-	},
-/turf/simulated/floor/tiled/kafel_full,
-/area/crew_quarters/kitchen)
 "bjH" = (
 /obj/structure/cable/green{
 	icon_state = "2-8"
@@ -22356,10 +22370,8 @@
 /obj/effect/floor_decal/industrial/danger{
 	dir = 1
 	},
-/obj/item/radio/intercom{
-	dir = 1;
-	name = "Station Intercom (General)";
-	pixel_y = 21
+/obj/machinery/station_map{
+	pixel_y = 32
 	},
 /turf/simulated/floor/tiled,
 /area/muriki/tramstation/civ)
@@ -23877,7 +23889,8 @@
 	dir = 1
 	},
 /obj/structure/mirror{
-	pixel_y = -30
+	pixel_y = -30;
+	dir = 1
 	},
 /obj/effect/floor_decal/corner/brown/border,
 /turf/simulated/floor/tiled/kafel_full/white,
@@ -25247,6 +25260,9 @@
 "cux" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/light,
+/obj/machinery/atm{
+	pixel_x = -28
+	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/central_two)
 "cuF" = (
@@ -25861,11 +25877,11 @@
 "cFV" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/lightgrey/border,
-/obj/item/radio/intercom{
-	name = "Station Intercom (General)";
-	pixel_y = -21
-	},
 /obj/effect/landmark/start,
+/obj/machinery/station_map{
+	pixel_y = -32;
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/muriki/arriveelev)
 "cFZ" = (
@@ -27606,6 +27622,10 @@
 	},
 /obj/machinery/light,
 /obj/structure/closet/firecloset/full,
+/obj/item/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -21
+	},
 /turf/simulated/floor/tiled/dark,
 /area/muriki/arriveelev)
 "djK" = (
@@ -27914,13 +27934,11 @@
 /area/muriki/tramstation/civ)
 "dov" = (
 /obj/effect/floor_decal/industrial/warning,
-/obj/item/radio/intercom{
-	dir = 8;
-	name = "Station Intercom (General)";
-	pixel_x = -22
-	},
 /obj/machinery/light{
 	dir = 8
+	},
+/obj/machinery/atm{
+	pixel_x = -28
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/lab)
@@ -32564,9 +32582,8 @@
 /obj/effect/floor_decal/milspec/color/purple/half{
 	dir = 8
 	},
-/obj/machinery/firealarm{
-	dir = 8;
-	pixel_x = -26
+/obj/machinery/atm{
+	pixel_x = -28
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/lab)
@@ -51467,6 +51484,10 @@
 /obj/effect/floor_decal/milspec/color/purple/half{
 	dir = 10
 	},
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -26
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/lab)
 "kNw" = (
@@ -60156,7 +60177,9 @@
 /area/quartermaster/office)
 "nxr" = (
 /obj/machinery/smartfridge/drinks,
-/turf/simulated/wall,
+/turf/simulated/floor/tiled/techfloor{
+	color = "#eacd7c"
+	},
 /area/muriki/crew/barback)
 "nxx" = (
 /obj/effect/catwalk_plated,
@@ -65705,6 +65728,9 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "1-8"
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals_central7{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/telesci)
@@ -75072,6 +75098,9 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
+/obj/structure/cable/green{
+	icon_state = "5-10"
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/rnd/lockers)
 "syu" = (
@@ -78719,7 +78748,7 @@
 "tGl" = (
 /obj/structure/closet/secure_closet/scientist,
 /obj/structure/cable/green{
-	icon_state = "1-2"
+	icon_state = "2-5"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/rnd/lockers)
@@ -84083,12 +84112,13 @@
 /obj/structure/sink{
 	dir = 1
 	},
-/obj/structure/mirror{
-	pixel_y = -30
-	},
 /obj/effect/floor_decal/corner/brown/border,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
+	},
+/obj/structure/mirror{
+	pixel_y = -30;
+	dir = 1
 	},
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/muriki/bathroom/cargo)
@@ -90465,6 +90495,12 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/effect/floor_decal/steeldecal/steel_decals_central7{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-10"
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/rnd/lockers)
 "xhO" = (
@@ -91878,27 +91914,6 @@
 /obj/structure/prop/alien/pod,
 /turf/simulated/floor/tiled/milspec/turfpack/muriki,
 /area/mine/unexplored/muriki/mountaineast)
-"xGf" = (
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/obj/structure/cable/green{
-	icon_state = "2-4"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals_central7{
-	dir = 4
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/rnd/lockers)
 "xGo" = (
 /turf/simulated/floor/tiled/yellow,
 /area/engineering/hardsuitstore)
@@ -136437,7 +136452,7 @@ rhE
 gkj
 byK
 amy
-hvz
+aVv
 sQM
 chx
 jtD
@@ -139515,7 +139530,7 @@ vLA
 dta
 ddS
 toj
-ktR
+ddS
 oUD
 htm
 bkH
@@ -142067,8 +142082,8 @@ lJD
 oKz
 maz
 qQs
-xGf
-jZb
+sQS
+aVA
 tGl
 xGU
 are
@@ -148082,7 +148097,7 @@ wYW
 iKT
 nuL
 nuL
-bjF
+jcD
 cGe
 tpU
 ebX
@@ -148245,7 +148260,7 @@ bgu
 bgu
 nuL
 mlc
-mlc
+aVy
 nkT
 sid
 nUj

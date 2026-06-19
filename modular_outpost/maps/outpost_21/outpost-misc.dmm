@@ -1414,6 +1414,9 @@
 /obj/item/radio/headset/alt/syndicate,
 /obj/item/radio/headset/alt/syndicate,
 /obj/item/radio/headset/alt/syndicate,
+/obj/item/radio/headset/alt/syndicate,
+/obj/item/radio/headset/alt/syndicate,
+/obj/item/radio/headset/alt/syndicate,
 /turf/unsimulated/floor{
 	icon_state = "lino"
 	},
@@ -2346,6 +2349,23 @@
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/shuttle/mercenary)
+"fg" = (
+/obj/structure/table/rack,
+/obj/item/ammo_magazine/bm109,
+/obj/item/ammo_magazine/bm109,
+/obj/item/ammo_magazine/bm109,
+/obj/item/ammo_magazine/bm109,
+/obj/item/ammo_magazine/bm109,
+/obj/item/ammo_magazine/bm109,
+/obj/item/ammo_magazine/bm109,
+/obj/item/ammo_magazine/bm109,
+/obj/item/ammo_magazine/bm109,
+/obj/item/ammo_magazine/bm109,
+/obj/item/gun/projectile/automatic/serdy/bm109,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
 "fh" = (
 /turf/unsimulated/floor{
 	icon_state = "dark"
@@ -2364,6 +2384,45 @@
 /obj/structure/bed/double,
 /turf/simulated/floor/carpet/geo,
 /area/planet/clown)
+"fk" = (
+/obj/structure/table/rack,
+/obj/item/melee/energy/sword,
+/obj/item/melee/energy/sword,
+/obj/item/melee/energy/sword,
+/obj/item/melee/energy/sword,
+/obj/item/melee/energy/sword,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"fl" = (
+/obj/structure/table/rack,
+/obj/item/shield/energy/imperial,
+/obj/item/shield/energy/imperial,
+/obj/item/shield/energy/imperial,
+/obj/item/shield/energy/imperial,
+/obj/item/shield/energy/imperial,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"fm" = (
+/obj/structure/table/rack,
+/obj/item/ammo_magazine/awp/ap,
+/obj/item/ammo_magazine/awp/ap,
+/obj/item/ammo_magazine/awp/ap,
+/obj/item/ammo_magazine/awp/ap,
+/obj/item/ammo_magazine/awp/ap,
+/obj/item/ammo_magazine/awp/ap,
+/obj/item/ammo_magazine/awp/ap,
+/obj/item/ammo_magazine/awp/ap,
+/obj/item/ammo_magazine/awp/ap,
+/obj/item/ammo_magazine/awp/ap,
+/obj/item/gun/projectile/automatic/serdy/awp,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
 "fn" = (
 /obj/machinery/door/airlock/silver{
 	req_one_access = list(150)
@@ -2693,6 +2752,14 @@
 /obj/item/clothing/gloves/combat,
 /turf/unsimulated/floor{
 	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"fX" = (
+/obj/structure/table/oak,
+/obj/item/soap/syndie,
+/obj/item/soap/syndie,
+/turf/unsimulated/floor{
+	icon_state = "freezerfloor"
 	},
 /area/syndicate_mothership)
 "fY" = (
@@ -3066,58 +3133,38 @@
 /area/syndicate_mothership)
 "gJ" = (
 /obj/structure/table/rack,
-/obj/item/ammo_magazine/ammo_box/b12g/pellet{
-	pixel_x = 5;
-	pixel_y = 5
+/obj/item/ammo_magazine/strela/slug{
+	pixel_x = -7
 	},
-/obj/item/ammo_magazine/ammo_box/b12g/pellet{
-	pixel_x = 5;
-	pixel_y = 5
+/obj/item/ammo_magazine/strela/slug{
+	pixel_x = -7
 	},
-/obj/item/ammo_magazine/ammo_box/b12g/pellet{
-	pixel_x = 5;
-	pixel_y = 5
+/obj/item/ammo_magazine/strela/slug{
+	pixel_x = -7
 	},
-/obj/item/ammo_magazine/ammo_box/b12g/pellet{
-	pixel_x = 5;
-	pixel_y = 5
+/obj/item/ammo_magazine/strela/slug{
+	pixel_x = -7
 	},
-/obj/item/ammo_magazine/ammo_box/b12g/pellet{
-	pixel_x = 5;
-	pixel_y = 5
+/obj/item/ammo_magazine/strela/slug{
+	pixel_x = -7
 	},
-/obj/item/ammo_magazine/ammo_box/b12g/pellet{
-	pixel_x = 5;
-	pixel_y = 5
+/obj/item/ammo_magazine/strela{
+	pixel_x = 8
 	},
-/obj/item/ammo_magazine/ammo_box/b12g/pellet{
-	pixel_x = 5;
-	pixel_y = 5
+/obj/item/ammo_magazine/strela{
+	pixel_x = 8
 	},
-/obj/item/ammo_magazine/ammo_box/b12g/pellet{
-	pixel_x = 5;
-	pixel_y = 5
+/obj/item/ammo_magazine/strela{
+	pixel_x = 8
 	},
-/obj/item/ammo_magazine/ammo_box/b12g/pellet{
-	pixel_x = 5;
-	pixel_y = 5
+/obj/item/ammo_magazine/strela{
+	pixel_x = 8
 	},
-/obj/item/ammo_magazine/ammo_box/b12g/pellet{
-	pixel_x = 5;
-	pixel_y = 5
+/obj/item/ammo_magazine/strela{
+	pixel_x = 8
 	},
-/obj/item/ammo_magazine/ammo_box/b12g/flechette,
-/obj/item/ammo_magazine/ammo_box/b12g/flechette,
-/obj/item/ammo_magazine/ammo_box/b12g/flechette,
-/obj/item/ammo_magazine/ammo_box/b12g/flechette,
-/obj/item/ammo_magazine/ammo_box/b12g/flechette,
-/obj/item/ammo_magazine/ammo_box/b12g/flechette,
-/obj/item/ammo_magazine/ammo_box/b12g/flechette,
-/obj/item/ammo_magazine/ammo_box/b12g/flechette,
-/obj/item/ammo_magazine/ammo_box/b12g/flechette,
-/obj/item/ammo_magazine/ammo_box/b12g/flechette,
-/obj/item/gun/projectile/shotgun/pump/shorty,
-/obj/item/gun/projectile/shotgun/pump/shorty,
+/obj/item/gun/projectile/automatic/serdy/strela,
+/obj/item/gun/projectile/automatic/serdy/strela,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -3226,23 +3273,31 @@
 /area/syndicate_mothership)
 "gO" = (
 /obj/structure/table/rack,
-/obj/item/ammo_magazine/m45/ap,
-/obj/item/ammo_magazine/m45/ap,
-/obj/item/ammo_magazine/m45/ap,
-/obj/item/ammo_magazine/m45/ap,
-/obj/item/ammo_magazine/m45/ap,
-/obj/item/ammo_magazine/m45/ap,
-/obj/item/ammo_magazine/m45/ap,
-/obj/item/ammo_magazine/m45/ap,
-/obj/item/ammo_magazine/m45/ap,
-/obj/item/ammo_magazine/m45/ap,
-/obj/item/ammo_magazine/m45/ap,
-/obj/item/gun/projectile/silenced/empty,
-/obj/item/gun/projectile/silenced/empty,
-/obj/item/gun/projectile/silenced/empty,
-/obj/item/gun/projectile/silenced/empty,
-/obj/item/gun/projectile/silenced/empty,
-/obj/item/gun/projectile/silenced/empty,
+/obj/item/ammo_magazine/ssp4,
+/obj/item/ammo_magazine/ssp4,
+/obj/item/ammo_magazine/ssp4,
+/obj/item/ammo_magazine/ssp4,
+/obj/item/ammo_magazine/ssp4,
+/obj/item/ammo_magazine/ssp4,
+/obj/item/ammo_magazine/ssp4,
+/obj/item/ammo_magazine/ssp4,
+/obj/item/ammo_magazine/ssp4,
+/obj/item/ammo_magazine/ssp4,
+/obj/item/ammo_magazine/ssp4,
+/obj/item/ammo_magazine/ssp4,
+/obj/item/ammo_magazine/ssp4,
+/obj/item/ammo_magazine/ssp4,
+/obj/item/ammo_magazine/ssp4,
+/obj/item/ammo_magazine/ssp4,
+/obj/item/ammo_magazine/ssp4,
+/obj/item/ammo_magazine/ssp4,
+/obj/item/ammo_magazine/ssp4,
+/obj/item/ammo_magazine/ssp4,
+/obj/item/gun/projectile/automatic/serdy/ssp4_silenced,
+/obj/item/gun/projectile/automatic/serdy/ssp4_silenced,
+/obj/item/gun/projectile/automatic/serdy/ssp4_silenced,
+/obj/item/gun/projectile/automatic/serdy/ssp4_silenced,
+/obj/item/gun/projectile/automatic/serdy/ssp4_silenced,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -3628,15 +3683,11 @@
 	},
 /area/syndicate_mothership)
 "hp" = (
-/obj/structure/table/rack,
-/obj/item/shield/energy/imperial,
-/obj/item/shield/energy/imperial,
-/obj/item/shield/energy/imperial,
-/obj/item/shield/energy/imperial,
-/obj/item/shield/energy/imperial,
-/obj/item/shield/energy/imperial,
+/obj/structure/sink{
+	pixel_y = 16
+	},
 /turf/unsimulated/floor{
-	icon_state = "dark"
+	icon_state = "freezerfloor"
 	},
 /area/syndicate_mothership)
 "hq" = (
@@ -4102,7 +4153,6 @@
 "ij" = (
 /obj/structure/table/rack,
 /obj/item/rig/military,
-/obj/item/rig/military,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -4505,6 +4555,29 @@
 	dir = 1
 	},
 /area/ninja_dojo/dojo)
+"iY" = (
+/obj/machinery/vending/fitness{
+	dir = 1
+	},
+/obj/item/card/emag,
+/turf/unsimulated/floor{
+	icon_state = "cult";
+	name = "plating"
+	},
+/area/syndicate_mothership)
+"iZ" = (
+/obj/structure/table/wooden_reinforced,
+/obj/item/reagent_containers/food/snacks/syndicake,
+/obj/item/reagent_containers/food/snacks/syndicake,
+/obj/item/reagent_containers/food/snacks/syndicake,
+/obj/item/reagent_containers/food/snacks/syndicake,
+/obj/item/reagent_containers/food/snacks/syndicake,
+/obj/item/reagent_containers/food/snacks/syndicake,
+/turf/unsimulated/floor{
+	icon_state = "cult";
+	name = "plating"
+	},
+/area/syndicate_mothership)
 "ja" = (
 /obj/item/aicard,
 /obj/structure/table/alien,
@@ -4519,6 +4592,18 @@
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
+	},
+/area/syndicate_mothership)
+"jc" = (
+/obj/structure/table/rack,
+/obj/item/roller/adv,
+/obj/item/roller/adv,
+/obj/item/roller/adv,
+/obj/item/roller/adv,
+/obj/item/roller/adv,
+/obj/item/roller/adv,
+/turf/unsimulated/floor{
+	icon_state = "dark"
 	},
 /area/syndicate_mothership)
 "jd" = (
@@ -4555,6 +4640,13 @@
 	pixel_y = -2
 	},
 /obj/structure/table/rack/shelf,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"je" = (
+/obj/structure/table/rack,
+/obj/item/bluespaceradio/outpost_prelinked,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -4610,6 +4702,16 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
+"jh" = (
+/obj/structure/table/rack,
+/obj/item/storage/belt/medical/emt,
+/obj/item/storage/belt/medical/emt,
+/obj/item/storage/belt/medical/emt,
+/obj/item/storage/belt/medical/emt,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
 "ji" = (
 /turf/unsimulated/map,
 /area/overmap)
@@ -4691,16 +4793,6 @@
 	},
 /turf/unsimulated/floor{
 	icon_state = "white"
-	},
-/area/syndicate_mothership)
-"jq" = (
-/obj/structure/table/wooden_reinforced,
-/obj/item/paper{
-	info = "Set your faction to syndicate"
-	},
-/turf/unsimulated/floor{
-	icon_state = "cult";
-	name = "plating"
 	},
 /area/syndicate_mothership)
 "jr" = (
@@ -6554,23 +6646,23 @@
 /area/shuttle/specops/centcom)
 "nS" = (
 /obj/structure/table/rack,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
 /obj/item/gun/projectile/automatic/serdy/hectate,
-/obj/item/ammo_magazine/hectate/ap,
-/obj/item/ammo_magazine/hectate/ap,
-/obj/item/ammo_magazine/hectate/ap,
-/obj/item/ammo_magazine/hectate/ap,
-/obj/item/ammo_magazine/hectate/ap,
-/obj/item/ammo_magazine/hectate/ap,
-/obj/item/ammo_magazine/hectate/ap,
-/obj/item/ammo_magazine/hectate/ap,
-/obj/item/ammo_magazine/hectate/ap,
-/obj/item/ammo_magazine/hectate/ap,
-/obj/item/ammo_magazine/hectate/ap,
-/obj/item/ammo_magazine/hectate/ap,
-/obj/item/ammo_magazine/hectate/ap,
-/obj/item/ammo_magazine/hectate/ap,
-/obj/item/ammo_magazine/hectate/ap,
-/obj/item/ammo_magazine/hectate/ap,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -17007,7 +17099,9 @@
 /area/syndicate_mothership)
 "IL" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/machinery/vending/security_armor,
+/obj/machinery/vending/security_armor{
+	req_access = null
+	},
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -17056,8 +17150,11 @@
 "IP" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/table/rack,
-/obj/fiftyspawner/titanium,
-/obj/fiftyspawner/titanium,
+/obj/item/clothing/head/helmet/swat,
+/obj/item/clothing/head/helmet/swat,
+/obj/item/clothing/head/helmet/swat,
+/obj/item/clothing/head/helmet/swat,
+/obj/item/clothing/head/helmet/swat,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -17094,10 +17191,12 @@
 /area/syndicate_mothership)
 "IT" = (
 /obj/structure/table/wooden_reinforced,
-/obj/item/storage/photo_album,
 /obj/structure/sign/scenery/map/left_outpost21{
 	pixel_y = 32
 	},
+/obj/item/spacecash/c1000,
+/obj/item/spacecash/c1000,
+/obj/item/spacecash/c1000,
 /turf/unsimulated/floor{
 	icon_state = "cult";
 	name = "plating"
@@ -17131,6 +17230,9 @@
 	},
 /obj/structure/sign/scenery/map/right_outpost21{
 	pixel_y = 32
+	},
+/obj/item/paper{
+	info = "Set your faction to syndicate"
 	},
 /turf/unsimulated/floor{
 	icon_state = "cult";
@@ -17176,8 +17278,18 @@
 "IY" = (
 /obj/structure/table/rack,
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/fiftyspawner/durasteel,
-/obj/fiftyspawner/durasteel,
+/obj/fiftyspawner/durasteel{
+	pixel_x = -5
+	},
+/obj/fiftyspawner/titanium{
+	pixel_x = 5
+	},
+/obj/fiftyspawner/durasteel{
+	pixel_x = -5
+	},
+/obj/fiftyspawner/titanium{
+	pixel_x = 5
+	},
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -55589,7 +55701,7 @@ fV
 sg
 fF
 yb
-ew
+fX
 ew
 ew
 yb
@@ -55751,7 +55863,7 @@ gG
 sg
 gD
 yb
-ew
+hp
 ew
 Il
 yb
@@ -56717,7 +56829,7 @@ ab
 mN
 yb
 IT
-aJ
+iZ
 aJ
 II
 gk
@@ -56879,7 +56991,7 @@ ab
 mN
 yb
 IU
-jq
+aJ
 aJ
 IJ
 gk
@@ -57207,7 +57319,7 @@ gk
 gk
 gk
 gk
-Iz
+iY
 yb
 sg
 sg
@@ -58985,7 +59097,7 @@ yb
 sg
 hj
 gV
-gV
+nO
 gW
 gY
 sg
@@ -59471,8 +59583,8 @@ yb
 hm
 kQ
 bM
-kQ
-nO
+fg
+fm
 nS
 nW
 Iq
@@ -60118,9 +60230,9 @@ ab
 yb
 sg
 kQ
-hp
-ho
 kQ
+kQ
+IX
 hf
 hf
 sg
@@ -60602,10 +60714,10 @@ mN
 mN
 ab
 yb
-kQ
-kQ
-kQ
-kQ
+je
+ho
+fl
+fk
 ea
 dX
 kQ
@@ -62385,7 +62497,7 @@ mN
 ab
 yb
 kQ
-kQ
+jc
 ek
 hD
 la
@@ -62546,7 +62658,7 @@ mN
 mN
 ab
 yb
-kQ
+jh
 IZ
 hf
 hJ
@@ -62870,7 +62982,7 @@ mN
 mN
 ab
 yb
-IX
+kQ
 eq
 gX
 qx
