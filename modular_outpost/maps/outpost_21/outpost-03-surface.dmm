@@ -25246,6 +25246,9 @@
 	c_tag = "SCI - Miscellaneous Research"
 	},
 /obj/structure/table/reinforced,
+/obj/item/toy/plushie/expie{
+	pixel_y = 5
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/otherlab)
 "cuj" = (
@@ -40195,6 +40198,7 @@
 /area/maintenance/medbay_roof)
 "hut" = (
 /obj/structure/window/maintenance_panel,
+/obj/item/toy/plushie/expie/milky,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/muriki/bathroom/virology)
 "huB" = (

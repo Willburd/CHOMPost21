@@ -8427,6 +8427,11 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/lowmain)
+"apG" = (
+/obj/structure/catwalk,
+/obj/item/toy/plushie/expie,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/spine/eng)
 "apQ" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/atmospherics/pipe/simple/hidden/red{
@@ -39695,6 +39700,7 @@
 	pixel_x = 30;
 	pixel_y = -7
 	},
+/obj/item/toy/plushie/expie,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/sec)
 "bwJ" = (
@@ -61045,6 +61051,7 @@
 /area/maintenance/sec)
 "csI" = (
 /obj/structure/window/maintenance_panel,
+/obj/item/toy/plushie/expie,
 /turf/simulated/floor/tiled/techfloor/grid/turfpack/muriki,
 /area/muriki/bathroom/cargolower)
 "csJ" = (
@@ -108122,7 +108129,7 @@ bvB
 bLc
 aNf
 cLP
-bJz
+apG
 cLH
 tOB
 mbH

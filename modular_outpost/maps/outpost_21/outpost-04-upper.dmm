@@ -38948,6 +38948,10 @@
 /obj/effect/landmark/start{
 	name = "Medical Doctor"
 	},
+/obj/item/toy/plushie/expie{
+	pixel_x = -6;
+	pixel_y = -6
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/medbreak)
 "pqV" = (
