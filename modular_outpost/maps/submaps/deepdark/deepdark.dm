@@ -38,6 +38,7 @@
 #include "yawn_B.dmm"
 #include "cross_A.dmm"
 #include "statue_A.dmm"
+#include "statue_B.dmm"
 #include "hole_A.dmm"
 #include "lava_A.dmm"
 #include "lava_B.dmm"
@@ -705,10 +706,18 @@
 
 /datum/map_template/outpost21/muriki/caves_deepdark_huge/statue_A
 	name = "statue A"
-	desc = "Random statue."
+	desc = "Ominous statues."
 	mappath = "modular_outpost/maps/submaps/deepdark/statue_A.dmm"
 	allow_duplicates = TRUE
 	discard_prob = 85
+	cost = 30
+
+/datum/map_template/outpost21/muriki/caves_deepdark_huge/statue_B
+	name = "statue A"
+	desc = "Ominous statues."
+	mappath = "modular_outpost/maps/submaps/deepdark/statue_B.dmm"
+	allow_duplicates = FALSE
+	discard_prob = 45
 	cost = 30
 
 /datum/map_template/outpost21/muriki/caves_deepdark_huge/hole_A
