@@ -6058,6 +6058,7 @@
 #include "modular_outpost\code\modules\reagents\machinery\dispenser\cartridge_presets.dm"
 #include "modular_outpost\code\modules\reagents\machinery\dispenser\reagents_tank.dm"
 #include "modular_outpost\code\modules\reagents\machinery\dispenser\supply.dm"
+#include "modular_outpost\code\modules\reagents\reactions\medicine.dm"
 #include "modular_outpost\code\modules\reagents\reactions\distilling\distilling.dm"
 #include "modular_outpost\code\modules\reagents\reactions\instant\instant.dm"
 #include "modular_outpost\code\modules\reagents\reagent_containers\blood_pack.dm"
