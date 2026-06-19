@@ -16,6 +16,8 @@
 #include "den_E.dmm"
 #include "den_F.dmm"
 #include "den_G.dmm"
+#include "pond_A.dmm"
+#include "pond_B.dmm"
 #include "cave_A.dmm"
 #include "cave_B.dmm"
 #include "hall_A.dmm"
@@ -523,6 +525,24 @@
 	discard_prob = 60
 	cost = 15
 
+/datum/map_template/outpost21/muriki/caves_deepdark/pond_A
+	name = "Pond A"
+	desc = "Tiny pond."
+	mappath = "modular_outpost/maps/submaps/deepdark/pond_A.dmm"
+	allow_duplicates = TRUE
+	discard_prob = 20
+	cost = 15
+
+/datum/map_template/outpost21/muriki/caves_deepdark/pond_B
+	name = "Pond B"
+	desc = "Tiny pond."
+	mappath = "modular_outpost/maps/submaps/deepdark/pond_B.dmm"
+	allow_duplicates = TRUE
+	discard_prob = 20
+	cost = 15
+
+//////////////////////////////////////////////////////////////
+// Huge structures in the cave
 /datum/map_template/outpost21/muriki/caves_deepdark_huge/pit_A
 	name = "Old Tug Graveyard"
 	desc = "Old Secret."
@@ -531,8 +551,6 @@
 	discard_prob = 70
 	cost = 25
 
-//////////////////////////////////////////////////////////////
-// Huge structures in the cave
 /datum/map_template/outpost21/muriki/caves_deepdark_huge/cave_A
 	name = "Cave A"
 	desc = "Random cave."
