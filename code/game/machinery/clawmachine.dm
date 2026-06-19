@@ -72,7 +72,8 @@
 						/obj/item/toy/plushie/chu,
 						//Outpost 21 add end
 						/obj/item/toy/plushie/tinytin,
-						/obj/item/toy/plushie/tinytin_sec
+						/obj/item/toy/plushie/chu,
+						/obj/item/toy/plushie/expie,
 						//CHOMPStation Add Start
 						/obj/item/toy/plushie/teppi,
 						/obj/item/toy/plushie/teppi/alt,

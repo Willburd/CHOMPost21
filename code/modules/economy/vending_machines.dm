@@ -866,6 +866,11 @@
 					/obj/item/toy/plushie/tinytin = 1,
 					/obj/item/toy/plushie/tinytin_sec = 1,
 					//VOREStation Add End
+					//Outpost 21 add start
+					/obj/item/toy/plushie/jil = 1,
+					/obj/item/toy/plushie/chu = 1,
+					/obj/item/toy/plushie/expie = 1,
+					//Outpost 21 add end
 					//YawnWider Add Start
 					/obj/item/toy/plushie/teshari/_yw = 1,
 					/obj/item/toy/plushie/teshari/w_yw = 1,
@@ -928,6 +933,11 @@
 					/obj/item/toy/plushie/tinytin = 35,
 					/obj/item/toy/plushie/tinytin_sec = 50,
 					//VOREStation Add End
+					//Outpost 21 add start
+					/obj/item/toy/plushie/jil = 35,
+					/obj/item/toy/plushie/chu = 10,
+					/obj/item/toy/plushie/expie = 80,
+					//Outpost 21 add end
 					//YawnWider Add Start
 					/obj/item/toy/plushie/teshari/_yw = 150,
 					/obj/item/toy/plushie/teshari/w_yw = 150,
