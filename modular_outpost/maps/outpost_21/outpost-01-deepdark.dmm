@@ -44,6 +44,7 @@
 /obj/effect/decal/cleanable/blood/tracks/suspicious{
 	dir = 9
 	},
+/obj/item/broken_device/random,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "aal" = (
@@ -2895,7 +2896,9 @@
 	},
 /area/mine/explored/muriki/cave/deepdark)
 "ahi" = (
-/obj/effect/zone_divider,
+/obj/machinery/light/broken/small{
+	dir = 8
+	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "ahj" = (
@@ -3018,6 +3021,7 @@
 /area/muriki/processor/depths)
 "cvk" = (
 /obj/structure/sign/department/bridge,
+/obj/effect/zone_divider,
 /turf/simulated/wall/r_wall,
 /area/mine/explored/muriki/cave/deepdark)
 "cSc" = (
@@ -3187,10 +3191,11 @@
 /obj/machinery/door/airlock/glass_external{
 	req_one_access = null
 	},
-/obj/item/airlock_brace,
 /obj/effect/decal/cleanable/blood/tracks/suspicious{
 	dir = 4
 	},
+/obj/item/broken_device/random,
+/obj/effect/zone_divider,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "uXm" = (
@@ -9466,11 +9471,11 @@ tWu
 agZ
 tWu
 tWu
-wXd
-wXd
-wXd
-wXd
-wXd
+aha
+aha
+aha
+aha
+aha
 gNY
 gNY
 gNY
@@ -9630,8 +9635,8 @@ agZ
 agZ
 aha
 ahi
-ahi
-ahi
+uXm
+uXm
 aha
 ahh
 ahh
@@ -9790,11 +9795,11 @@ tWu
 agZ
 tWu
 tWu
-wXd
+aha
 aak
 aaj
 aai
-wXd
+aha
 gNY
 gNY
 gNY
@@ -9952,11 +9957,11 @@ tWu
 agZ
 tWu
 tWu
-wXd
+aha
 uIn
 cvk
-wXd
-wXd
+aha
+aha
 gNY
 gNY
 gNY
