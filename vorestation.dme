@@ -5842,6 +5842,7 @@
 #include "modular_outpost\code\game\objects\items\devices\radio\headset.dm"
 #include "modular_outpost\code\game\objects\items\devices\radio\intercom.dm"
 #include "modular_outpost\code\game\objects\items\devices\radio\radio.dm"
+#include "modular_outpost\code\game\objects\items\toys\expie_plush.dm"
 #include "modular_outpost\code\game\objects\items\toys\toys.dm"
 #include "modular_outpost\code\game\objects\items\weapons\AI_modules.dm"
 #include "modular_outpost\code\game\objects\items\weapons\material_subtypes.dm"
