@@ -5993,6 +5993,7 @@
 #include "modular_outpost\code\modules\mob\living\carbon\human\species\species.dm"
 #include "modular_outpost\code\modules\mob\living\carbon\human\species\station\prometheans.dm"
 #include "modular_outpost\code\modules\mob\living\carbon\human\species\station\prommie_blob.dm"
+#include "modular_outpost\code\modules\mob\living\carbon\human\species\station\station.dm"
 #include "modular_outpost\code\modules\mob\living\carbon\human\species\station\station_special_abilities.dm"
 #include "modular_outpost\code\modules\mob\living\carbon\human\species\station\traits_vr\negative.dm"
 #include "modular_outpost\code\modules\mob\living\carbon\human\species\station\traits_vr\neutral.dm"
