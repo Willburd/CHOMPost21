@@ -6243,14 +6243,6 @@
 	icon_state = "milspec"
 	},
 /area/centcom/specops)
-"anR" = (
-/obj/effect/floor_decal/corner/red{
-	dir = 4
-	},
-/turf/unsimulated/floor/steel{
-	icon_state = "milspec"
-	},
-/area/centcom/specops)
 "anS" = (
 /obj/structure/table/reinforced,
 /obj/item/storage/belt/utility,
@@ -7055,34 +7047,6 @@
 	name = "Special Operations"
 	},
 /turf/simulated/floor/tiled/milspec/raised,
-/area/centcom/specops)
-"apT" = (
-/obj/effect/floor_decal/corner/black/full{
-	dir = 8
-	},
-/obj/effect/floor_decal/corner/red{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/red{
-	dir = 8
-	},
-/turf/unsimulated/floor/steel{
-	icon_state = "milspec"
-	},
-/area/centcom/specops)
-"apU" = (
-/obj/effect/floor_decal/corner/black/full{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/red{
-	dir = 4
-	},
-/turf/unsimulated/floor/steel{
-	icon_state = "milspec"
-	},
-/area/centcom/specops)
-"apV" = (
-/turf/unsimulated/mineral/muriki/basalt,
 /area/centcom/specops)
 "apW" = (
 /obj/effect/floor_decal/corner/black/full{
@@ -13344,12 +13308,6 @@
 /obj/machinery/door/firedoor/border_only,
 /turf/simulated/floor/tiled/steel_grid,
 /area/specialty/redspace)
-"dQW" = (
-/obj/machinery/computer/teleporter{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/milspec/raised,
-/area/centcom/specops)
 "dQZ" = (
 /obj/machinery/door/window/southright{
 	name = "Virology Isolation Room Four";
@@ -22147,10 +22105,6 @@
 /obj/item/surgical/FixOVein,
 /turf/simulated/floor/tiled/white,
 /area/centcom/medical)
-"ism" = (
-/obj/machinery/teleport/station,
-/turf/simulated/floor/tiled/milspec/raised,
-/area/centcom/specops)
 "isA" = (
 /obj/effect/floor_decal/spline/plain,
 /obj/effect/decal/cleanable/blood,
@@ -30868,13 +30822,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/escape)
-"nIf" = (
-/obj/item/perfect_tele_beacon/stationary{
-	tele_name = "CentCom";
-	tele_network = "centcom"
-	},
-/turf/simulated/floor/tiled/milspec/raised,
-/area/centcom/specops)
 "nII" = (
 /obj/machinery/conveyor{
 	dir = 4;
@@ -36835,10 +36782,6 @@
 	},
 /turf/simulated/floor/carpet/purcarpet,
 /area/centcom/living)
-"rjb" = (
-/obj/machinery/teleport/hub,
-/turf/simulated/floor/tiled/milspec/raised,
-/area/centcom/specops)
 "rjw" = (
 /turf/simulated/floor/carpet/turcarpet,
 /area/specialty/redspace)
@@ -46155,6 +46098,7 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/red,
+/obj/machinery/gear_painter,
 /turf/unsimulated/floor/steel{
 	icon_state = "milspec"
 	},
@@ -70230,16 +70174,16 @@ uho
 uho
 uho
 uho
-apV
-apV
-apV
+uho
+uho
+uho
+uho
+uho
+uho
+uho
+uho
 hPE
-apT
-apN
-apN
-apN
-apN
-ahQ
+iQm
 hsz
 hsz
 aiO
@@ -70392,16 +70336,16 @@ uho
 uho
 uho
 uho
-apV
-apV
-apV
+uho
+uho
+uho
+uho
+uho
+uho
+uho
+uho
 hPE
-apU
-hsz
-ahP
-ahP
-ahP
-anR
+iQm
 anQ
 ahP
 apM
@@ -70554,17 +70498,17 @@ uho
 uho
 uho
 uho
-apV
-apV
-apV
+uho
+uho
+uho
+uho
+uho
+uho
+uho
+uho
 hPE
 rWp
 apS
-rWp
-hPE
-rWp
-akR
-akR
 rWp
 hPE
 hPE
@@ -70716,15 +70660,15 @@ uho
 uho
 uho
 uho
-apV
-apV
-apV
+uho
+uho
+uho
+uho
+uho
+uho
+uho
+uho
 hPE
-bsU
-bsU
-bsU
-hPE
-bsU
 bsU
 bsU
 bsU
@@ -70878,17 +70822,17 @@ uho
 uho
 uho
 uho
-apV
-apV
-apV
-hPE
-bsU
-anW
-bsU
+uho
+uho
+uho
+uho
+uho
+uho
+uho
+uho
 hPE
 bwh
-bsU
-nIf
+anW
 bsU
 hPE
 hPE
@@ -71040,18 +70984,18 @@ uho
 uho
 uho
 uho
-apV
-apV
-apV
+uho
+uho
+uho
+uho
+uho
+uho
+uho
+uho
 hPE
 anX
 anY
 aoa
-hPE
-bsU
-rjb
-ism
-dQW
 hPE
 hPE
 cpp
@@ -71202,14 +71146,14 @@ uho
 uho
 uho
 uho
-apV
-apV
-apV
-hPE
-hPE
-hPE
-hPE
-hPE
+uho
+uho
+uho
+uho
+uho
+uho
+uho
+uho
 hPE
 hPE
 hPE

@@ -110,7 +110,6 @@
 	conductive = 0
 	conductivity = 5
 	reflectivity = 0.5
-	radiation_resistance = 20
 	spatial_instability = 30
 	sheet_singular_name = "gem"
 	sheet_plural_name = "gems"
@@ -133,7 +132,6 @@
 	negation = 15
 	conductivity = 60
 	reflectivity = 0.3
-	radiation_resistance = 5
 	sheet_singular_name = "sheet"
 	sheet_plural_name = "sheets"
 	supply_conversion_value = 8
@@ -157,7 +155,6 @@
 	negation = 25
 	explosion_resistance = 85
 	reflectivity = 0.2
-	radiation_resistance = 10
 	supply_conversion_value = 13
 	icon_base = "stone"
 	table_icon_base = "stone"
@@ -179,7 +176,6 @@
 	negation = 35
 	explosion_resistance = 20
 	reflectivity = 1
-	radiation_resistance = 100
 	supply_conversion_value = 15
 	icon_base = "stone"
 	table_icon_base = "stone"
@@ -241,7 +237,6 @@
 	explosion_resistance = 13
 	negation = 12
 	spatial_instability = 18
-	radiation_resistance = 18
 	supply_conversion_value = 12
 	can_sharpen = TRUE
 

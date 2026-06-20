@@ -188,6 +188,15 @@ GLOBAL_LIST_INIT(RMS_random_malfunction, list(/obj/item/fbp_backup_cell,
 	var/list/banned_sheet_materials = list(
 		/obj/item/stack/material/supermatter,
 		/obj/item/stack/material/glamour,
+		// Outpost 21 edit begin - Removed RMS materials
+		/obj/item/stack/material/mhydrogen,
+		/obj/item/stack/material/verdantium,
+		/obj/item/stack/material/valhollide,
+		/obj/item/stack/material/painite,
+		/obj/item/stack/material/void_opal,
+		/obj/item/stack/material/durasteel,
+		/obj/item/stack/material/plasteel,
+		// Outpost 21 edit end
 		/obj/item/stack/material/morphium, //CHOMPAdd Start
 		/obj/item/stack/material/shellchitin,
 		/obj/item/stack/material/dreamscale,
