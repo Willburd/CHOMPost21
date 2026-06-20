@@ -5922,6 +5922,7 @@
 #include "modular_outpost\code\modules\clothing\accessories\fluff_awards.dm"
 #include "modular_outpost\code\modules\clothing\accessories\job_rankpins.dm"
 #include "modular_outpost\code\modules\clothing\accessories\neoclothing.dm"
+#include "modular_outpost\code\modules\clothing\accessories\storage.dm"
 #include "modular_outpost\code\modules\clothing\glasses\glasses.dm"
 #include "modular_outpost\code\modules\clothing\masks\voice.dm"
 #include "modular_outpost\code\modules\clothing\spacesuits\rig\modules\spacesuits.dm"
