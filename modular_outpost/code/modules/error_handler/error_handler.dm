@@ -10,6 +10,8 @@ GLOBAL_VAR_INIT(hyperspeed_runtime_meows,0)
 		GLOB.hyperspeed_runtime_meows++
 		if(GLOB.hyperspeed_runtime_meows >= 35)
 			var/mob/living/simple_mob/animal/passive/cat/runtime/C = pick(GLOB.runtimes_in_world)
+			if(C.stat)
+				return
 			playsound(C,'sound/voice/meow.ogg',90)
 			C.visible_message("\The [C] meows!")
 			C.gib()
@@ -19,6 +21,8 @@ GLOBAL_VAR_INIT(hyperspeed_runtime_meows,0)
 	GLOB.hyperspeed_runtime_meows = 0 // Reset
 	GLOB.last_runtime_meow = world.time
 	for(var/mob/living/simple_mob/animal/passive/cat/runtime/C in GLOB.runtimes_in_world)
+		if(C.stat)
+			continue
 		playsound(C,'sound/voice/meow.ogg',60)
 		C.visible_message("\The [C] meows!")
 		if(prob(1) && prob(5))
