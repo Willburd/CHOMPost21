@@ -65,7 +65,7 @@
 	icon_x = 64
 	icon_y = 32
 
-	whitelist_ckey = "jademanique"
+	whitelist_ckey = "natesaruli"
 	whitelist_charname = "B.A.U-Kingside"
 
 // L
