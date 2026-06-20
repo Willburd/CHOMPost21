@@ -149,7 +149,7 @@
 	var/new_link = strip_html_simple(tgui_input_text(src, "Enter a link to add on to your examine text! This should be a related image link/gallery, or things like your F-list. This is not the place for memes.", "Custom Link" , html_decode(custom_link), max_length = 400, encode = TRUE,  prevent_enter = TRUE)) // Outpost 21 edit(port) - Allow longer custom links
 	if(new_link && CanUseTopic(src))
 		if(length(new_link) > 400) // Outpost 21 edit(port) - Allow longer custom links
-			to_chat(src, span_warning("Your entry is too long, it must be 100 characters or less."))
+			to_chat(src, span_warning("Your entry is too long, it must be 400 characters or less.")) // Outpost 21 edit(port) - Allow longer custom links
 			return
 
 		custom_link = new_link
