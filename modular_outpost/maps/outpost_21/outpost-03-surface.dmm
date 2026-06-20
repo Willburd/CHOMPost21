@@ -20414,6 +20414,10 @@
 "aVA" = (
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/rnd/lockers)
+"aVB" = (
+/obj/structure/ladder/top_hatch,
+/turf/simulated/floor/tiled/white,
+/area/medical/exam_room)
 "aVX" = (
 /obj/machinery/computer/skills,
 /obj/effect/floor_decal/spline/fancy/wood{
@@ -138032,7 +138036,7 @@ xVS
 xVS
 vnO
 spw
-wxr
+aVB
 jIX
 ryc
 vnO
