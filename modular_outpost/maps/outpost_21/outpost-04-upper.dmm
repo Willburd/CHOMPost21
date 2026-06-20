@@ -2680,7 +2680,7 @@
 /area/muriki/rooftop/engineering)
 "agc" = (
 /obj/structure/cable/yellow{
-	icon_state = "6-9"
+	icon_state = "1-4"
 	},
 /turf/simulated/floor/reinforced,
 /area/rnd/supermatter)
@@ -6540,12 +6540,6 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/supermatter)
-"aoP" = (
-/obj/structure/cable/yellow{
-	icon_state = "4-9"
-	},
-/turf/simulated/floor/reinforced,
-/area/rnd/supermatter)
 "aoQ" = (
 /obj/structure/window/reinforced{
 	dir = 4
@@ -6683,6 +6677,9 @@
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
+/obj/effect/floor_decal/steeldecal/steel_decals_central7{
+	dir = 4
+	},
 /turf/simulated/floor/reinforced,
 /area/rnd/supermatter)
 "apc" = (
@@ -6760,7 +6757,7 @@
 	dir = 1
 	},
 /obj/structure/cable/yellow{
-	icon_state = "6-9"
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/reinforced,
 /area/rnd/supermatter)
@@ -7567,9 +7564,6 @@
 /turf/simulated/floor/outpost_roof/turfpack/muriki,
 /area/muriki/rooftop/science)
 "aqJ" = (
-/obj/structure/cable/yellow{
-	icon_state = "2-5"
-	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/supermatter)
 "aqK" = (
@@ -8095,7 +8089,6 @@
 /area/rnd/supermatter)
 "arP" = (
 /obj/item/geiger/wall/east,
-/obj/machinery/power/rad_collector,
 /obj/effect/floor_decal/milspec/color/orange/half{
 	dir = 6
 	},
@@ -8105,10 +8098,7 @@
 /obj/effect/floor_decal/milspec/color/purple/corner{
 	dir = 4
 	},
-/obj/structure/cable/yellow{
-	icon_state = "0-1"
-	},
-/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/closet/firecloset,
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/supermatter)
 "arQ" = (
@@ -8240,13 +8230,6 @@
 /obj/random/outcrop,
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
 /area/muriki/skyline/cent)
-"asg" = (
-/obj/effect/floor_decal/industrial/warning,
-/obj/structure/cable/yellow{
-	icon_state = "2-9"
-	},
-/turf/simulated/floor/reinforced,
-/area/rnd/supermatter)
 "ash" = (
 /obj/structure/window/plastitanium/full,
 /obj/structure/grille,
@@ -8431,6 +8414,7 @@
 	name = "Chamber Blastdoor";
 	opacity = 0
 	},
+/obj/structure/fans/hardlight,
 /turf/simulated/floor/reinforced,
 /area/rnd/supermatter)
 "asz" = (
@@ -8461,11 +8445,10 @@
 /obj/effect/floor_decal/milspec/color/orange/half{
 	dir = 8
 	},
-/obj/fiftyspawner/glass,
-/obj/fiftyspawner/plastic,
 /obj/effect/floor_decal/milspec/color/purple/corner{
 	dir = 8
 	},
+/obj/fiftyspawner/steel,
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/workshop)
 "asC" = (
@@ -8515,16 +8498,6 @@
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 5
-	},
-/turf/simulated/floor/reinforced,
-/area/rnd/supermatter)
-"asI" = (
-/obj/effect/floor_decal/industrial/stand_clear/red,
-/obj/effect/floor_decal/industrial/warning{
-	dir = 1
-	},
-/obj/structure/cable/yellow{
-	icon_state = "1-6"
 	},
 /turf/simulated/floor/reinforced,
 /area/rnd/supermatter)
@@ -8612,6 +8585,11 @@
 /obj/effect/floor_decal/steeldecal/steel_decals_central7{
 	dir = 4
 	},
+/obj/structure/sink{
+	dir = 8;
+	pixel_x = -12;
+	pixel_y = 2
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/supermatter)
 "asQ" = (
@@ -8625,39 +8603,20 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/supermatter)
-"asR" = (
-/obj/structure/cable/yellow{
-	icon_state = "4-8"
-	},
-/obj/structure/cable/yellow{
-	icon_state = "5-8"
-	},
-/obj/structure/cable/yellow{
-	icon_state = "6-8"
-	},
-/obj/structure/cable/yellow{
-	icon_state = "1-8"
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals_central7{
-	dir = 4
-	},
-/obj/structure/cable/yellow{
-	icon_state = "2-8"
-	},
-/turf/simulated/floor/tiled/milspec,
-/area/rnd/supermatter)
 "asS" = (
-/obj/machinery/power/rad_collector,
-/obj/structure/cable/yellow{
-	icon_state = "0-8"
-	},
 /obj/effect/floor_decal/milspec/color/orange/half{
 	dir = 4
 	},
 /obj/effect/floor_decal/milspec/color/purple/corner{
 	dir = 4
 	},
-/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/effect/floor_decal/steeldecal/steel_decals_central7{
+	dir = 4
+	},
+/obj/structure/table/glass,
+/obj/machinery/reagentgrinder{
+	pixel_y = 9
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/supermatter)
 "asT" = (
@@ -8673,6 +8632,9 @@
 	dir = 1
 	},
 /obj/structure/table/glass,
+/obj/item/reagent_containers/glass/beaker/large{
+	pixel_y = 3
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/supermatter)
 "asV" = (
@@ -8844,15 +8806,11 @@
 /area/rnd/supermatter)
 "atj" = (
 /obj/structure/cable/yellow{
-	icon_state = "4-10"
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/supermatter)
 "atk" = (
-/obj/machinery/power/rad_collector,
-/obj/structure/cable/yellow{
-	icon_state = "0-8"
-	},
 /obj/machinery/camera/network/research{
 	dir = 8;
 	c_tag = "SCI - Particle Lab East"
@@ -8871,7 +8829,10 @@
 	dir = 8;
 	pixel_y = -7
 	},
-/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/table/glass,
+/obj/machinery/chemical_dispenser{
+	pixel_y = 5
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/supermatter)
 "atl" = (
@@ -9000,18 +8961,18 @@
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/supermatter)
 "atr" = (
-/obj/structure/table/rack/shelf/steel,
-/obj/fiftyspawner/phoronrglass{
-	pixel_x = -4
-	},
-/obj/fiftyspawner/plastitanium_glass{
-	pixel_x = 4
-	},
 /obj/effect/floor_decal/milspec/color/orange/half{
 	dir = 1
 	},
 /obj/effect/floor_decal/milspec/color/purple/corner{
 	dir = 4
+	},
+/obj/structure/table/rack/shelf,
+/obj/fiftyspawner/graphite{
+	pixel_x = -4
+	},
+/obj/fiftyspawner/aluminium{
+	pixel_x = 4
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/supermatter)
@@ -9032,7 +8993,7 @@
 	dir = 4
 	},
 /obj/structure/cable/yellow{
-	icon_state = "4-10"
+	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/supermatter)
@@ -9049,10 +9010,10 @@
 /obj/effect/floor_decal/milspec/color/purple/corner{
 	dir = 4
 	},
+/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/cable/yellow{
 	icon_state = "0-8"
 	},
-/obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/supermatter)
 "atu" = (
@@ -10485,6 +10446,18 @@
 /obj/effect/landmark/pengmark,
 /turf/simulated/open/muriki,
 /area/muriki/skyline/north)
+"awb" = (
+/obj/effect/floor_decal/steeldecal/steel_decals_central7{
+	dir = 4
+	},
+/obj/structure/cable/yellow{
+	icon_state = "2-8"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/rnd/supermatter)
 "awf" = (
 /obj/structure/catwalk,
 /obj/effect/floor_decal/flesh{
@@ -79621,8 +79594,8 @@ atT
 tfG
 atr
 aqJ
-asR
-asI
+apk
+hKz
 qfN
 ase
 arN
@@ -79783,7 +79756,7 @@ atU
 dPP
 ats
 atj
-apk
+awb
 aph
 agc
 asc
@@ -79947,8 +79920,8 @@ att
 atk
 asS
 asG
-aoP
-asg
+eXT
+asc
 arP
 dPP
 avP

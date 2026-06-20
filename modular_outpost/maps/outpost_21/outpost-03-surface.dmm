@@ -83990,6 +83990,7 @@
 	dir = 5
 	},
 /obj/structure/table/reinforced,
+/obj/fiftyspawner/plastic,
 /turf/simulated/floor/tiled/milspec,
 /area/engineering/storage)
 "vjX" = (
