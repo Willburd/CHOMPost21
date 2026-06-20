@@ -89451,6 +89451,7 @@
 	dir = 5
 	},
 /obj/structure/disposalpipe/segment,
+/obj/structure/ladder/top_hatch,
 /turf/simulated/floor/tiled/white,
 /area/medical/chemistry)
 "wSy" = (
