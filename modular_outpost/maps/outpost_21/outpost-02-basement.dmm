@@ -8432,6 +8432,41 @@
 /obj/item/toy/plushie/expie,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/spine/eng)
+"apH" = (
+/obj/structure/catwalk,
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/structure/extinguisher_cabinet{
+	dir = 8;
+	pixel_x = 30
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/med)
+"apI" = (
+/obj/structure/catwalk,
+/obj/structure/railing,
+/obj/structure/ladder/up,
+/obj/effect/floor_decal/industrial/outline/grey,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/med)
+"apJ" = (
+/obj/structure/catwalk,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/med)
+"apK" = (
+/obj/structure/catwalk,
+/obj/structure/trash_pile,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/med)
+"apL" = (
+/obj/structure/catwalk,
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/random/junk,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/med)
 "apQ" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/atmospherics/pipe/simple/hidden/red{
@@ -132416,8 +132451,8 @@ aPF
 bMC
 aPF
 bMU
-bMU
-bMU
+ydY
+ydY
 nLz
 nLz
 kJo
@@ -132576,10 +132611,10 @@ bMU
 bMU
 aPF
 bMC
-aPF
-bMU
-bMU
-bMU
+ydY
+ydY
+ydY
+aBs
 nLz
 ghC
 kpD
@@ -132738,10 +132773,10 @@ bMU
 bMU
 aPF
 bMC
-aPF
-bMU
-bMU
-bMU
+ydY
+apK
+apI
+aBs
 nLz
 pui
 emx
@@ -132900,10 +132935,10 @@ bMU
 aPF
 aPF
 ciS
-aPF
-bMU
-bMU
-bMU
+ydY
+apL
+apJ
+apH
 nLz
 aNZ
 cYa
@@ -133062,10 +133097,10 @@ bMU
 aPF
 ciT
 cmk
-aPF
-bMU
-bMU
-bMU
+ydY
+ydY
+ydY
+ydY
 nLz
 yjx
 ceK
