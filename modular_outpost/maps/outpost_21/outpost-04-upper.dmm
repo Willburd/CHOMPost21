@@ -3739,6 +3739,9 @@
 /area/muriki/processor/hall)
 "aiD" = (
 /obj/structure/lattice,
+/obj/effect/mine/claymore{
+	dir = 8
+	},
 /turf/simulated/open/muriki,
 /area/mine/explored/muriki/river/hole)
 "aiE" = (
@@ -6540,6 +6543,12 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/supermatter)
+"aoP" = (
+/obj/structure/barricade/sandbag,
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/unexplored/muriki/mountaintopeast)
 "aoQ" = (
 /obj/structure/window/reinforced{
 	dir = 4
@@ -8230,6 +8239,12 @@
 /obj/random/outcrop,
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
 /area/muriki/skyline/cent)
+"asg" = (
+/obj/item/stack/emptysandbag{
+	amount = 30
+	},
+/turf/simulated/floor/tiled/turfpack/muriki,
+/area/specialty/expie_clubhouse)
 "ash" = (
 /obj/structure/window/plastitanium/full,
 /obj/structure/grille,
@@ -8501,6 +8516,13 @@
 	},
 /turf/simulated/floor/reinforced,
 /area/rnd/supermatter)
+"asI" = (
+/obj/structure/closet,
+/obj/item/gun/projectile/revolver,
+/obj/item/ammo_magazine/s357,
+/obj/item/ammo_magazine/s357,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/specialty/expie_clubhouse)
 "asJ" = (
 /obj/effect/floor_decal/industrial/rad_floor/red,
 /obj/structure/cable/yellow{
@@ -8603,6 +8625,12 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/supermatter)
+"asR" = (
+/obj/effect/auto_crayon{
+	icon_state = "one_wrath"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/specialty/expie_clubhouse)
 "asS" = (
 /obj/effect/floor_decal/milspec/color/orange/half{
 	dir = 4
@@ -15207,12 +15235,6 @@
 /obj/effect/map_effect/interval/effect_emitter/smoke/mist/passive,
 /turf/simulated/floor/water/acidic/indoor/turfpack/muriki,
 /area/muriki/processor/hall/waterway_other)
-"cPO" = (
-/obj/effect/auto_crayon{
-	icon_state = "shelter"
-	},
-/turf/simulated/wall/r_wall,
-/area/muriki/processor)
 "cPX" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -64626,7 +64648,7 @@ omZ
 bpJ
 lvV
 hCV
-cPO
+wqX
 cgR
 cgR
 wlx
@@ -116702,7 +116724,7 @@ aiT
 idv
 idv
 idv
-idv
+aoP
 alf
 idv
 idv
@@ -116864,7 +116886,7 @@ idv
 idv
 idv
 aiH
-idv
+aoP
 alf
 idv
 idv
@@ -117333,9 +117355,9 @@ hIk
 hIk
 hIk
 hIk
-luR
-luR
-luR
+ajR
+ajR
+ajR
 ahX
 aii
 aiF
@@ -117495,9 +117517,9 @@ hIk
 hIk
 hIk
 hIk
-hIk
-hIk
-hIk
+ajR
+ajU
+asI
 ahX
 aij
 aiF
@@ -117658,7 +117680,7 @@ hIk
 ajR
 ajR
 ajR
-ajR
+ajP
 ajR
 ahX
 ahX
@@ -117820,7 +117842,7 @@ hIk
 ajR
 ajU
 ajU
-ajU
+asR
 ajU
 ajR
 ajR
@@ -118317,7 +118339,7 @@ akl
 akh
 akh
 ajQ
-ajQ
+asg
 ajQ
 ajR
 ajR
