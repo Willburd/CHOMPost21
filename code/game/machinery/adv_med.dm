@@ -225,6 +225,12 @@
 			paralysis_duration = 0
 			fakedeath = TRUE
 
+		// Outpost 21 edit begin - Upgraded parts needed to show certain things
+		var/scanner_part_level = 0
+		for(var/obj/item/stock_parts/scanning_module/scanner in contents)
+			scanner_part_level = scanner.get_rating()
+		// Outpost 21 edit end
+
 		occupantData["stat"] = occupant_stat
 		occupantData["health"] = occupant_health
 		occupantData["maxHealth"] = H.getMaxHealth()
@@ -244,10 +250,14 @@
 		occupantData["bodyTempC"] = H.bodytemperature-T0C
 		occupantData["bodyTempF"] = (((H.bodytemperature-T0C) * 1.8) + 32)
 
-		occupantData["hasBorer"] = H.has_brain_worms()
+		occupantData["hasBorer"] = scanner_part_level >= 4 && H.has_brain_worms() // Outpost 21 edit - Upgraded parts needed to show certain things, hyper needed
 		occupantData["hasWithdrawl"] = has_withdrawl
 
-		occupantData["allergens"] = assembly_allergy_list(H.species.allergens, H.species.medallergens)
+		// Outpost 21 edit begin - Upgraded parts needed to show certain things
+		occupantData["allergens"] = null
+		if(scanner_part_level >= 3) // Super needed
+			occupantData["allergens"] = assembly_allergy_list(H.species.allergens, H.species.medallergens)
+		// Outpost 21 edit end
 		occupantData["hasAllergens"] = islist(occupantData["allergens"])
 
 		occupantData["colourblind"] = null
