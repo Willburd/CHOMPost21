@@ -161,6 +161,8 @@
 	#define JOB_ALT_INTERNAL_AFFAIRS_LIAISON "Internal Affairs Liaison"
 	#define JOB_ALT_INTERNAL_AFFAIRS_DELEGATE "Internal Affairs Delegate"
 	#define JOB_ALT_INTERNAL_AFFAIRS_INVESTIGATOR "Internal Affairs Investigator"
+	#define JOB_ALT_INTERNAL_AFFAIRS_DAMAGE_ASSESSMENT "Damage Assessment Officer" // outpost 21 edit
+	#define JOB_ALT_INTERNAL_AFFAIRS_CASUALTY_ANALYST "Causality Analysts Officer" // outpost 21 edit
 
 #define JOB_CHAPLAIN "Chaplain"
 	// Chaplain alt titles
