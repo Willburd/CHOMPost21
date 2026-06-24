@@ -327,6 +327,7 @@
 		if("Swoop Trash")
 			ai.swoop_trash = !ai.swoop_trash // invert the option
 			to_chat(usr, "you press a button on \the [src], [ai.swoop_trash ? "" : "de"]activating it's trash seeking routines!")
+	ai.lose_target() // Outpost 21 edit - Changing selection mode should reset target
 
 
 /mob/living/simple_mob/vore/aggressive/corrupthound/swoopie/Login()
