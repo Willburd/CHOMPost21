@@ -13,5 +13,9 @@
 GLOBAL_LIST_INIT(redspace_areas, list(
 	/area/redspace_abduction,
 	/area/redgate,
-	/area/survivalpod/redspace // Redspace shelters effectively pull a bit of redspace into realspace, so
+	// Outpost 21 edit begin - Curses upon ye
+	// /area/survivalpod/redspace // Redspace shelters effectively pull a bit of redspace into realspace, so
+	/area/specialty/redspace,
+	/area/specialty/thedarkplace,
+	// Outpost 21 edit end
 ))
