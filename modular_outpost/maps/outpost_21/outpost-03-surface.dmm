@@ -47867,11 +47867,6 @@
 	req_one_access = list(5,19,40);
 	dir = 4
 	},
-/obj/machinery/light_switch{
-	dir = 4;
-	pixel_x = -26;
-	pixel_y = -23
-	},
 /turf/simulated/floor/tiled/white,
 /area/medical/reception)
 "jHH" = (
@@ -76341,11 +76336,6 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/corner/blue/bordercorner,
-/obj/machinery/light_switch{
-	dir = 1;
-	pixel_x = -21;
-	pixel_y = -28
-	},
 /turf/simulated/floor/tiled/white,
 /area/medical/reception)
 "sTx" = (
