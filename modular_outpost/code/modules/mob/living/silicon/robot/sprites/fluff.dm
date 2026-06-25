@@ -81,7 +81,7 @@
 	sprite_icon_state = "derg"
 	sprite_hud_icon_state = "k9"
 
-	has_eye_light_sprites = TRUE
+	has_eye_light_sprites = FALSE
 	has_vore_belly_sprites = TRUE
 	has_rest_sprites = TRUE
 	rest_sprite_options = list("Default", "Sit")
@@ -91,6 +91,7 @@
 	pixel_x = -16
 	icon_x = 64
 	icon_y = 64
+	vis_height = 64
 
 	whitelist_ckey = "natesaruli"
 	whitelist_charname = "SP-A.T"
