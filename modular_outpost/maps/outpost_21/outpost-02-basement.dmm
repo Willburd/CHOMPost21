@@ -8504,14 +8504,8 @@
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/spine/civ)
 "apO" = (
-/obj/machinery/light/small,
-/obj/structure/trash_pile,
-/obj/structure/railing{
-	dir = 4
-	},
-/obj/structure/railing{
-	dir = 1
-	},
+/obj/structure/ladder/up,
+/obj/structure/catwalk,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/spine/civ)
 "apP" = (
@@ -9098,8 +9092,8 @@
 /turf/simulated/floor/water/acidic/deep/turfpack/muriki,
 /area/mine/explored/muriki/river/north)
 "aqZ" = (
-/obj/machinery/door/airlock/maintenance/medical,
 /obj/structure/disposalpipe/segment,
+/obj/machinery/door/airlock/maintenance/int,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/spine/civ)
 "ara" = (
@@ -26560,6 +26554,18 @@
 	},
 /turf/simulated/floor/wood,
 /area/maintenance/civ/bunker)
+"aXo" = (
+/obj/effect/floor_decal/industrial/outline/grey,
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/structure/trash_pile,
+/obj/machinery/light/small,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/spine/civ)
 "aXp" = (
 /obj/structure/hammock_kbraid_s,
 /obj/structure/dancepole{
@@ -132676,9 +132682,9 @@ aPH
 aQR
 aRM
 aSs
-gsI
-gsI
-gsI
+aKP
+aKP
+aKP
 gsI
 aNG
 cch
@@ -132999,8 +133005,8 @@ bso
 aKP
 aKP
 aKP
-gsI
-gsI
+aKP
+aKP
 aqE
 aqE
 gsI
@@ -133323,7 +133329,7 @@ aOt
 aKP
 apP
 ara
-gsI
+aKP
 aqW
 aqS
 aqL
@@ -133813,7 +133819,7 @@ cch
 cJB
 gsI
 aqP
-apP
+aXo
 gsI
 apM
 aEF
