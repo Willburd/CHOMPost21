@@ -61,6 +61,7 @@
 	rest_sprite_options = list("Default", "Sit", "Bellyup")
 	has_dead_sprite = TRUE
 	has_dead_sprite_overlay = TRUE
+	sprite_flags = ROBOT_HAS_TASER_SPRITE | ROBOT_HAS_LASER_SPRITE
 	pixel_x = -16
 	icon_x = 64
 	icon_y = 32
