@@ -834,22 +834,9 @@
 	},
 /turf/simulated/floor/plating,
 /area/offworld/asteroidyard/station/observation)
-"bP" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/disposalpipe/segment,
-/obj/machinery/atmospherics/pipe/simple/hidden,
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
-/obj/structure/cable/green{
-	icon_state = "2-4"
-	},
-/turf/simulated/floor/tiled/milspec,
-/area/offworld/asteroidyard/station/halls_storage)
 "bQ" = (
 /obj/structure/cable/green{
-	icon_state = "4-8"
+	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/trawler_airlock)
@@ -1004,7 +991,7 @@
 /obj/machinery/door/airlock/glass_external{
 	frequency = 1381;
 	icon_state = "door_locked";
-	id_tag = "trawler_bay_door";
+	id_tag = "orbital_trawler_bay_door";
 	locked = 1;
 	req_one_access = list(13,48,52)
 	},
@@ -1416,6 +1403,13 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/asteroidyard/station/access_shaft)
+"cW" = (
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	frequency = 1381;
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/confinementbeam/station/trawler_airlock)
 "cZ" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 5
@@ -7110,6 +7104,12 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "2-4"
+	},
+/obj/machinery/embedded_controller/radio/simple_docking_controller{
+	frequency = 1381;
+	id_tag = "orbyard_trawler_dock_controller";
+	pixel_y = 30;
+	tag_door = "orbital_trawler_bay_door"
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/trawler_airlock)
@@ -12905,7 +12905,7 @@
 /obj/machinery/door/airlock/glass_external{
 	frequency = 1381;
 	icon_state = "door_locked";
-	id_tag = "trawler_bay_door";
+	id_tag = "orbital_trawler_bay_door";
 	locked = 1;
 	req_one_access = list(13,48,52)
 	},
@@ -14294,14 +14294,11 @@
 /obj/machinery/door/airlock/glass_external{
 	frequency = 1381;
 	icon_state = "door_locked";
-	id_tag = "trawler_bay_door";
+	id_tag = "orbital_trawler_bay_door";
 	locked = 1;
 	req_one_access = list(13,48,52)
 	},
 /obj/machinery/door/firedoor/border_only,
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/trawler_airlock)
 "Rh" = (
@@ -15098,6 +15095,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/trawler_airlock)
@@ -16495,7 +16495,7 @@
 /obj/machinery/door/airlock/glass_external{
 	frequency = 1381;
 	icon_state = "door_locked";
-	id_tag = "trawler_bay_door";
+	id_tag = "orbital_trawler_bay_door";
 	locked = 1;
 	req_one_access = list(13,48,52)
 	},
@@ -34764,7 +34764,7 @@ Ea
 Mu
 Bv
 AW
-bP
+Xl
 Zx
 ew
 xC
@@ -35088,7 +35088,7 @@ vE
 bN
 IP
 Dq
-id
+cW
 sT
 bN
 CE
