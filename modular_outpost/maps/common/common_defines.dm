@@ -9,8 +9,8 @@
 #define Z_LEVEL_OUTPOST_BASEMENT					2
 #define Z_LEVEL_OUTPOST_SURFACE						3
 #define Z_LEVEL_OUTPOST_UPPER						4
-#define Z_LEVEL_OUTPOST_ASTEROID 					5
-#define Z_LEVEL_OUTPOST_CONFINEMENTBEAM				6
+#define Z_LEVEL_OUTPOST_ORBITAL_LOWER				5
+#define Z_LEVEL_OUTPOST_ORBITAL_UPPER				6
 #define Z_LEVEL_OUTPOST_VR		 					7
 //define Z_LEVEL_OUTPOST_PROSPECTOR					8 // Does nothing currently
 //define Z_LEVEL_OUTPOST_SURVEYOR					9 // Does nothing currently

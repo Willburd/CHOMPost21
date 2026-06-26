@@ -16,14 +16,9 @@
 	autolinkers = list("station_relay")
 
 /obj/machinery/telecomms/relay/preset/outpost/recyard
-	id = "Reclamation Yard Relay"
-	listening_level = Z_LEVEL_OUTPOST_ASTEROID
+	id = "Orbital Facility Relay"
+	listening_level = Z_LEVEL_OUTPOST_ORBITAL_LOWER
 	autolinkers = list("roid_relay")
-
-/obj/machinery/telecomms/relay/preset/outpost/confinementbeam
-	id = "AI Platform Relay"
-	listening_level = Z_LEVEL_OUTPOST_CONFINEMENTBEAM
-	autolinkers = list("ai_relay")
 
 /obj/machinery/telecomms/relay/preset/outpost/prospector
 	id = "Prospector Relay"
