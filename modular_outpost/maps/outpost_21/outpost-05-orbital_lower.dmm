@@ -329,7 +329,7 @@
 /area/offworld/confinementbeam/station/lower_hallway)
 "aL" = (
 /obj/machinery/atmospherics/unary/heat_exchanger,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/airless,
 /area/space)
 "aM" = (
 /obj/structure/cable/green{
@@ -688,7 +688,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor,
+/turf/simulated/floor/airless,
 /area/space)
 "bC" = (
 /obj/effect/map_helper/airlock/sensor/ext_sensor,
@@ -2508,7 +2508,7 @@
 /area/offworld/confinementbeam/station/lower_hallway)
 "gB" = (
 /obj/structure/confinement_beam_generator/lens/outer_lens,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/airless,
 /area/space)
 "gE" = (
 /obj/machinery/teleport/hub,
@@ -3659,13 +3659,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/confinementbeam/station/port_equipment)
-"ni" = (
-/obj/structure/catwalk,
-/obj/structure/cable/yellow{
-	icon_state = "4-8"
-	},
-/turf/simulated/floor,
-/area/space)
 "nm" = (
 /obj/structure/window/phoronreinforced{
 	dir = 4
@@ -5278,7 +5271,7 @@
 /obj/machinery/atmospherics/unary/heat_exchanger{
 	dir = 1
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/airless,
 /area/space)
 "wp" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -5491,7 +5484,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "1-4"
 	},
-/turf/simulated/floor,
+/turf/simulated/floor/airless,
 /area/space)
 "yc" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -5630,7 +5623,7 @@
 /obj/machinery/atmospherics/pipe/simple/visible/red{
 	dir = 8
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/airless,
 /area/space)
 "yX" = (
 /obj/structure/disposaloutlet{
@@ -5746,7 +5739,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor,
+/turf/simulated/floor/airless,
 /area/space)
 "zu" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
@@ -5889,7 +5882,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "2-4"
 	},
-/turf/simulated/floor,
+/turf/simulated/floor/airless,
 /area/space)
 "Ak" = (
 /obj/machinery/vending/fitness{
@@ -8169,10 +8162,6 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/ptl_core)
-"Or" = (
-/obj/structure/catwalk,
-/turf/simulated/floor,
-/area/space)
 "OA" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -8646,7 +8635,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor,
+/turf/simulated/floor/airless,
 /area/space)
 "Rv" = (
 /obj/machinery/teleport/station,
@@ -8892,19 +8881,6 @@
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/confinementbeam/station/aux_power)
-"SV" = (
-/obj/structure/catwalk,
-/obj/structure/cable/yellow{
-	icon_state = "1-8"
-	},
-/obj/structure/cable/yellow{
-	icon_state = "2-8"
-	},
-/obj/structure/cable/yellow{
-	icon_state = "4-8"
-	},
-/turf/simulated/floor,
-/area/space)
 "SX" = (
 /obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
@@ -8970,7 +8946,7 @@
 /obj/machinery/atmospherics/pipe/simple/visible/red{
 	dir = 8
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/airless,
 /area/space)
 "Tk" = (
 /obj/effect/floor_decal/corner/orange{
@@ -9612,7 +9588,7 @@
 /turf/simulated/floor/plating,
 /area/maintenance/confinementbeam/north)
 "WV" = (
-/turf/simulated/floor/plating,
+/turf/simulated/floor/airless,
 /area/space)
 "WW" = (
 /obj/structure/cable/green{
@@ -9805,7 +9781,7 @@
 /obj/structure/confinement_beam_generator/lens/inner_lens{
 	dir = 4
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/airless,
 /area/space)
 "XQ" = (
 /obj/structure/grille,
@@ -9892,7 +9868,7 @@
 /obj/machinery/atmospherics/pipe/simple/visible/red{
 	dir = 5
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/airless,
 /area/space)
 "Yu" = (
 /obj/structure/cable/heavyduty{
@@ -32744,8 +32720,8 @@ Ap
 OL
 jk
 xM
-Or
-Or
+Ok
+Ok
 xM
 xM
 xM
@@ -32905,9 +32881,9 @@ yr
 Ok
 Ok
 QI
-Or
-Or
-Or
+Ok
+Ok
+Ok
 xM
 xM
 xM
@@ -33063,13 +33039,13 @@ xM
 xM
 xM
 xM
-ni
+cr
 xM
 xM
 xM
 xM
-Or
-Or
+Ok
+Ok
 xM
 xM
 xM
@@ -33225,13 +33201,13 @@ xM
 xM
 xM
 xM
-ni
+cr
 xM
 xM
 xM
 xM
-Or
-Or
+Ok
+Ok
 xM
 xM
 xM
@@ -33387,7 +33363,7 @@ bB
 Ro
 bB
 bB
-SV
+cq
 bB
 bB
 zr
