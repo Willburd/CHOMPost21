@@ -9,7 +9,10 @@
 
 	for(var/datum/modifier/M in modifiers) //Do this before space check in case we're hasted (and use max speed)
 		if(M.haste)
-			return HUMAN_LOWEST_SLOWDOWN // Per haste documentation 'ignore slowdown and move really fast'. Calling ..() here adds slowdown.
+			// Outpost 21 edit begin - Nerfs green slimes
+			// return HUMAN_LOWEST_SLOWDOWN // Per haste documentation 'ignore slowdown and move really fast'. Calling ..() here adds slowdown.
+			. -= 3
+			// Outpost 21 edit end
 		if(!isnull(M.slowdown))
 			. += M.slowdown
 
@@ -138,7 +141,7 @@
 		pose_move = FALSE
 		remove_pose_indicator()
 
-	if(client && !is_incorporeal() && isturf(loc)) // Outpost 21 edit(port) - Departmentgoal signals
+	if(client && !is_incorporeal() && isturf(loc))
 		GLOB.step_taken_shift_roundstat++
 
 // This calculates the amount of slowdown to receive from items worn. This does NOT include species modifiers.
@@ -274,7 +277,7 @@
 			return v.tank
 
 
-/mob/living/carbon/human/Process_Spacemove(var/check_drift = 0)
+/mob/living/carbon/human/Process_Spacemove(check_drift = 0)
 	//Can we act?
 	if(restrained())	return 0
 
@@ -298,13 +301,13 @@
 	return FALSE
 
 // Handle footstep sounds
-/mob/living/carbon/human/handle_footstep(var/turf/T)
+/mob/living/carbon/human/handle_footstep(turf/T)
 	if(shoes && loc == T && get_gravity(loc) && !flying)
 		if(SEND_SIGNAL(shoes, COMSIG_SHOES_STEP_ACTION, m_intent))
 			return
 	return
 
-/mob/living/carbon/human/set_dir(var/new_dir)
+/mob/living/carbon/human/set_dir(new_dir)
 	. = ..()
 	if(. && (species.tail || tail_style))
 		//update_tail_showing() this is already called by update_inv_wear_suit

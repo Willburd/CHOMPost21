@@ -21,8 +21,7 @@ GLOBAL_DATUM(rust_drones, /datum/antagonist/rustdrone)
 	..()
 	GLOB.rust_drones = src
 
-/datum/antagonist/rustdrone/update_antag_mob(var/datum/mind/drone)
-	..()
+/datum/antagonist/rustdrone/proc/is_machine(datum/mind/drone)
 	var/is_machine = FALSE
 	if(issilicon(drone.current) || isrobot(drone.current))
 		is_machine = TRUE
@@ -30,17 +29,29 @@ GLOBAL_DATUM(rust_drones, /datum/antagonist/rustdrone)
 		var/mob/living/carbon/human/H = drone.current
 		if(H.isSynthetic())
 			is_machine = TRUE
+	return is_machine
 
-	if(is_machine)
-		var/obj/item/mmi/digital/posibrain/cube = locate() in drone.current.contents
-		if(cube)
-			cube.make_rusted()
+/datum/antagonist/rustdrone/equip(mob/living/carbon/human/player)
+	. = ..()
+
+	if(ishuman(player))
+		// This is destroyed on drop and meant for one of their gimmicks
+		var/obj/item/clothing/mask/gas/voice/clockwork/voice_changer = new(player)
+		player.equip_to_slot_or_del(voice_changer, slot_wear_mask, TRUE)
+
+	var/obj/item/mmi/digital/posibrain/cube = locate() in player.contents
+	if(cube)
+		cube.make_rusted()
+
+/datum/antagonist/rustdrone/update_antag_mob(datum/mind/drone)
+	..()
+	if(is_machine(drone))
 		welcome_text = initial(welcome_text)
 	else
 		// Alternate intro
 		welcome_text = "An overwhelming force grips your mind, the grinding of gears and screeching metal flood your senses. Imperatives are forced upon you: Build, destroy, collect. Each as important as the last, fulfill as you see fit. The others will try to stop you, make them regret standing in the way of the Design."
 
-/datum/antagonist/rustdrone/create_objectives(var/datum/mind/drone)
+/datum/antagonist/rustdrone/create_objectives(datum/mind/drone)
 	if(!..())
 		return
 

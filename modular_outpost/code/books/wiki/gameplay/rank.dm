@@ -60,6 +60,8 @@
 
 <h2>"O3" Captain</h2>
 <p>[station_rank_guide(/obj/item/clothing/accessory/rank_eshui/commissioned3::rank_level_index)]</p>
+<p>Emergency response teams are also lead by specially trained captains, and have the full authority of that rank when they arrive on station during a crisis. Characters who become ERT captains are considered part of special operations due to their training. It is unlikely they will ever arrive for standard shifts again due to the classified knowledge they now priviledged to.</p>
+<p>While only one captain may ever by on shift at the surface facility. There is no limit to the number of captains routinely present at central command, as the role is primarily for deligating tasks assigned to them from the major.</p>
 
 <ul>
 	<li><img class='_rankimage' src=\ref['html/images/outpost/O3.png'] title='[/obj/item/clothing/accessory/rank_eshui/commissioned3::rank]'>: [station_rank_job_list(/obj/item/clothing/accessory/rank_eshui/commissioned3)]</li>

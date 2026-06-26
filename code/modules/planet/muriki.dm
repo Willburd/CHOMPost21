@@ -127,7 +127,7 @@ GLOBAL_DATUM(planet_muriki, /datum/planet/muriki)
 	var/min_lightning_cooldown = 0
 	var/max_lightning_cooldown = 0
 
-/datum/weather/muriki/proc/fill_vats(var/global_chance,var/single_chance,var/amount)
+/datum/weather/muriki/proc/fill_vats(global_chance,single_chance,amount)
 	if(!prob(global_chance))
 		return
 	for(var/obj/machinery/reagent_refinery/vat/V in GLOB.vats_to_rain_into)
@@ -138,7 +138,7 @@ GLOBAL_DATUM(planet_muriki, /datum/planet/muriki)
 			if(prob(single_chance))
 				V.reagents.add_reagent(REAGENT_ID_WATER,amount)
 
-/datum/weather/muriki/proc/wet_plating(var/chance)
+/datum/weather/muriki/proc/wet_plating(chance)
 	if(holder.our_planet.planet_floors.len)
 		var/i = rand(6,18)
 		while(i-- > 0)
@@ -160,7 +160,7 @@ GLOBAL_DATUM(planet_muriki, /datum/planet/muriki)
 
 //Weather definitions
 /datum/weather_holder/muriki
-	temperature = 293.15 // 20c
+	temperature = T20C
 	allowed_weather_types = list(
 		WEATHER_CLEAR		= new /datum/weather/muriki/clear(),
 		WEATHER_LIGHT_SNOW	= new /datum/weather/muriki/light_snow(),
@@ -171,13 +171,17 @@ GLOBAL_DATUM(planet_muriki, /datum/planet/muriki)
 		WEATHER_RAIN        = new /datum/weather/muriki/acid_rain(),
 		WEATHER_STORM		= new /datum/weather/muriki/acid_storm(),
 		WEATHER_HAIL		= new /datum/weather/muriki/acid_hail(),
+		WEATHER_HOT			= new /datum/weather/muriki/heatwave(),
+		WEATHER_ASH_STORM	= new /datum/weather/muriki/heatwave/lethal(),
 		WEATHER_DOWNPOURWARNING = new /datum/weather/muriki/downpourwarning(),
 		WEATHER_DOWNPOUR 		= new /datum/weather/muriki/downpour(),
 		WEATHER_DOWNPOURFATAL 	= new /datum/weather/muriki/downpourfatal(),
 		WEATHER_FALLOUT_TEMP	= new /datum/weather/muriki/fallout/temp(),
 		WEATHER_CONFETTI		= new /datum/weather/muriki/confetti(),
 		WEATHER_COLDDARKNESS	= new /datum/weather/muriki/clear/hidden_evildarkness(),
-		WEATHER_LONGBLIZZARD	= new /datum/weather/muriki/blizzard/hidden_dangerous()
+		WEATHER_LONGBLIZZARD	= new /datum/weather/muriki/blizzard/hidden_dangerous(),
+		WEATHER_EMBERFALL 		= new /datum/weather/muriki/emberfall(),
+		WEATHER_BLOOD_MOON 		= new /datum/weather/muriki/blood_moon(),
 		)
 	roundstart_weather_chances = list() // See New() for seasonal starting weathers
 
@@ -237,7 +241,7 @@ GLOBAL_DATUM(planet_muriki, /datum/planet/muriki)
 /////////////////////////////////////////////////////////////////////////////////////////
 /datum/weather/muriki/clear
 	name = "clear"
-	temp_high = 283.15 // 10c
+	temp_high = T0C + 10
 	temp_low = T0C
 	wind_high = 2
 	wind_low = 1
@@ -262,17 +266,19 @@ GLOBAL_DATUM(planet_muriki, /datum/planet/muriki)
 				)
 		if("summer")
 			transition_chances = list(
-				WEATHER_CLEAR = 15,
-				WEATHER_RAIN = 65,
+				WEATHER_CLEAR = 20,
+				WEATHER_RAIN = 60,
 				WEATHER_HAIL = 5,
-				WEATHER_OVERCAST = 10,
-				WEATHER_FOG = 5
+				WEATHER_HOT = 5,
+				WEATHER_ASH_STORM = 5, // Lethal heatwave
+				WEATHER_FOG = 5,
 				)
 		if("autumn")
 			transition_chances = list(
 				WEATHER_CLEAR = 15,
-				WEATHER_RAIN = 75,
+				WEATHER_RAIN = 70,
 				WEATHER_HAIL = 5,
+				WEATHER_HOT = 5,
 				WEATHER_LIGHT_SNOW = 5
 				)
 		if("winter")
@@ -284,6 +290,37 @@ GLOBAL_DATUM(planet_muriki, /datum/planet/muriki)
 				)
 	. = ..()
 
+
+/////////////////////////////////////////////////////////////////////////////////////////
+// HEATWAVE
+/////////////////////////////////////////////////////////////////////////////////////////
+/datum/weather/muriki/heatwave
+	name = "heat wave"
+	temp_high = T0C + 60
+	temp_low = T0C + 50
+	wind_high = 2
+	wind_low = 1
+	transition_chances = list(
+		WEATHER_CLEAR = 30,
+		WEATHER_RAIN = 10,
+		WEATHER_OVERCAST = 25,
+		WEATHER_HOT = 20,
+		WEATHER_ASH_STORM = 15 // Lethal heatwave
+	) // Only used in the summer
+	observed_message = "The heat is unbearable."
+	transition_messages = list(
+		"The sky clears up.",
+		"The sky is visible.",
+		"The weather is calm."
+		)
+	sky_visible = TRUE
+	color_grading = COLORTINT_BADBROKE
+
+/datum/weather/muriki/heatwave/lethal
+	name = "lethal heat wave"
+	temp_high = T0C + 90
+	temp_low = T0C + 60
+	hazardous_weather = TRUE
 
 /////////////////////////////////////////////////////////////////////////////////////////
 // DEATH FOG
@@ -363,7 +400,7 @@ GLOBAL_DATUM(planet_muriki, /datum/planet/muriki)
 /datum/weather/muriki/acid_rain
 	name = "rain"
 	icon_state = "rain"
-	temp_high = 293.15 // 20c
+	temp_high = T20C
 	temp_low = T0C
 	wind_high = 2
 	wind_low = 1
@@ -459,7 +496,7 @@ GLOBAL_DATUM(planet_muriki, /datum/planet/muriki)
 	name = "storm"
 	icon_state = "storm"
 	temp_high = T0C
-	temp_low =  268.15 // -5c
+	temp_low =  T0C -5
 	wind_high = 4
 	wind_low = 2
 	light_modifier = 0.3
@@ -620,6 +657,7 @@ GLOBAL_DATUM(planet_muriki, /datum/planet/muriki)
 	color_grading = COLORTINT_DARK
 
 	hazardous_weather = TRUE
+	shuttle_crash_chance = 10
 
 /datum/weather/muriki/downpour/process_effects()
 	..()
@@ -682,6 +720,7 @@ GLOBAL_DATUM(planet_muriki, /datum/planet/muriki)
 	color_grading = COLORTINT_DARK
 
 	hazardous_weather = TRUE
+	shuttle_crash_chance = 25
 
 /datum/weather/muriki/downpourfatal/process_effects()
 	..()
@@ -732,8 +771,8 @@ GLOBAL_DATUM(planet_muriki, /datum/planet/muriki)
 /datum/weather/muriki/acid_hail
 	name = "hail"
 	icon_state = "hail"
-	temp_high = 263.15  // -10c
-	temp_low = 258.15 // -15c
+	temp_high = T0C -10
+	temp_low = T0C -15
 	light_modifier = 0.3
 	flight_failure_modifier = 15
 	timer_low_bound = 2
@@ -758,6 +797,7 @@ GLOBAL_DATUM(planet_muriki, /datum/planet/muriki)
 		"An intense chill is felt, and chunks of frozen acid start to fall from the sky, towards you."
 	)
 	color_grading = COLORTINT_CHILL
+	shuttle_crash_chance = 1 // Extremly rare
 
 /datum/weather/muriki/acid_hail/planet_effect(mob/living/L)
 	if(L.z in holder.our_planet.expected_z_levels)
@@ -798,7 +838,7 @@ GLOBAL_DATUM(planet_muriki, /datum/planet/muriki)
 	name = "light snow"
 	icon_state = "snowfall_light"
 	temp_high = T0C
-	temp_low = 263.15 // -10c
+	temp_low = T0C -10
 	wind_high = 1
 	wind_low = 0
 	light_modifier = 0.8
@@ -838,8 +878,8 @@ GLOBAL_DATUM(planet_muriki, /datum/planet/muriki)
 /datum/weather/muriki/snow
 	name = "moderate snow"
 	icon_state = "snowfall_med"
-	temp_high = 258.15 // -15c
-	temp_low = 253.15 // -20c
+	temp_high = T0C -15
+	temp_low = T0C -20
 	wind_high = 2
 	wind_low = 0
 	light_modifier = 0.5
@@ -867,8 +907,8 @@ GLOBAL_DATUM(planet_muriki, /datum/planet/muriki)
 /datum/weather/muriki/blizzard
 	name = "blizzard"
 	icon_state = "snowfall_heavy"
-	temp_high = 243.15 // -30c
-	temp_low = 213.15 // -60c
+	temp_high = T0C -30
+	temp_low = T0C -60
 	wind_high = 4
 	wind_low = 2
 	light_modifier = 0.3
@@ -891,6 +931,7 @@ GLOBAL_DATUM(planet_muriki, /datum/planet/muriki)
 	color_grading = COLORTINT_COLD
 
 	hazardous_weather = TRUE
+	shuttle_crash_chance = 3 // rare
 
 /datum/weather/muriki/blizzard/planet_effect(mob/living/L)
 	if(L.z in holder.our_planet.expected_z_levels)
@@ -928,6 +969,43 @@ GLOBAL_DATUM(planet_muriki, /datum/planet/muriki)
 			if(show_message)
 				to_chat(L, effect_message)
 
+// A culty weather.
+/datum/weather/muriki/blood_moon
+	name = "blood moon"
+	light_modifier = 0.5
+	light_color = "#FF0000"
+	flight_failure_modifier = 25
+	transition_chances = list(
+		WEATHER_BLOOD_MOON = 100
+		)
+	observed_message = "Everything is red. Something really wrong is going on."
+	transition_messages = list(
+		"The sky turns blood red!"
+	)
+	outdoor_sounds_type = /datum/looping_sound/weather/wind
+	indoor_sounds_type = /datum/looping_sound/weather/wind/indoors
+
+// Ash and embers fall forever, such as from a volcano or something.
+/datum/weather/muriki/emberfall
+	name = "emberfall"
+	icon_state = "ashfall_light"
+	light_modifier = 0.7
+	light_color = "#880000"
+	temp_high = 293.15	// 20c
+	temp_low = 283.15	// 10c
+	flight_failure_modifier = 20
+	transition_chances = list(
+		WEATHER_EMBERFALL = 100
+		)
+	observed_message = "Soot, ash, and embers float down from above."
+	transition_messages = list(
+		"Gentle embers waft down around you like grotesque snow."
+	)
+	outdoor_sounds_type = /datum/looping_sound/weather/wind
+	indoor_sounds_type = /datum/looping_sound/weather/wind/indoors
+	hazardous_weather = TRUE
+	shuttle_crash_chance = 10
+
 /////////////////////////////////////////////////////////////////////////////////////////
 // FIREWORKS
 /////////////////////////////////////////////////////////////////////////////////////////
@@ -941,6 +1019,7 @@ GLOBAL_DATUM(planet_muriki, /datum/planet/muriki)
 		WEATHER_STORM = 20
 		)
 	color_grading = COLORTINT_MEAT
+	shuttle_crash_chance = 2
 
 /datum/weather/muriki/confetti //fixs firework stars
 	name = "confetti"
@@ -958,6 +1037,7 @@ GLOBAL_DATUM(planet_muriki, /datum/planet/muriki)
 	)
 	imminent_transition_message = "A rain is starting... A rain of confetti...?"
 	color_grading = COLORTINT_OMEN
+	shuttle_crash_chance = 8
 
 
 
@@ -971,8 +1051,8 @@ GLOBAL_DATUM(planet_muriki, /datum/planet/muriki)
 /////////////////////////////////////////////////////////////////////////////////////////
 /datum/weather/muriki/blizzard/hidden_dangerous
 	name = "extreme blizzard"
-	temp_high = 213.15 // -60c
-	temp_low = 183.15 // -90c
+	temp_high = T0C -60
+	temp_low = T0C -90
 	light_modifier = 0.1
 	flight_failure_modifier = 10
 	transition_chances = list(
@@ -985,6 +1065,7 @@ GLOBAL_DATUM(planet_muriki, /datum/planet/muriki)
 		"The blizzard's wind chills you to your bones."
 	)
 	hazardous_weather = TRUE
+	shuttle_crash_chance = 15
 
 /////////////////////////////////////////////////////////////////////////////////////////
 // EVIL DARKNESS
@@ -1006,6 +1087,7 @@ GLOBAL_DATUM(planet_muriki, /datum/planet/muriki)
 		"Everything around you seems to stop, it's quiet enough to hear the air creaking under the weight of something you cannot see."
 	)
 	hazardous_weather = TRUE
+	shuttle_crash_chance = 3 // rare
 
 
 /////////////////////////////////////////////////////////////////////////////////////////
@@ -1014,7 +1096,7 @@ GLOBAL_DATUM(planet_muriki, /datum/planet/muriki)
 /mob/living/
 	var/enzyme_affect = TRUE
 
-/proc/muriki_enzyme_affect_mob( var/mob/living/L, var/multiplier, var/mist, var/submerged)
+/proc/muriki_enzyme_affect_mob( mob/living/L, multiplier, mist, submerged)
 	// drop out early if no damage anyway
 	if(multiplier <= 0)
 		return
@@ -1059,7 +1141,7 @@ GLOBAL_DATUM(planet_muriki, /datum/planet/muriki)
 		if(burn_eyes && H.glasses && (H.glasses.body_parts_covered & EYES) && ((H.glasses.item_flags & BLOCK_GAS_SMOKE_EFFECT) || (H.glasses.item_flags & AIRTIGHT) || (H.glasses.flags & PHORONGUARD)))
 			burn_eyes = FALSE
 		// no breathers
-		if(!H.species || !H.species.breath_type)
+		if(!H.species || !H.species.breath_type || H.is_holding_breath)
 			burn_lungs = FALSE
 	if(L.wear_mask)
 		// check for masks

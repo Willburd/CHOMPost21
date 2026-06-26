@@ -11,7 +11,9 @@
 /area/mine
 	use_maint_night_color = TRUE
 
-/area/proc/fire_supression_set(var/enable)
+/area/proc/fire_supression_set(enable)
+	if(!(flags & AREA_FIRE_SUPRESSION)) // Do not do anything if the area doesn't have it
+		return
 	if(enable)
 		// spawn supression
 		if(fire_supress)
@@ -23,6 +25,10 @@
 		return
 	QDEL_NULL(fire_supress)
 
+/proc/debug_fire_alarms()
+	for(var/area/A in world)
+		if(A.flags & AREA_FIRE_SUPRESSION)
+			A.icon_state = "red"
 
 // Haunted area logic
 /area/Entered(mob/M)

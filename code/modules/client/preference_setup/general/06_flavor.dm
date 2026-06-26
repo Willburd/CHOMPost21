@@ -38,7 +38,7 @@
 	return
 
 // Moved from /datum/preferences/proc/copy_to()
-/datum/category_item/player_setup_item/general/flavor/copy_to_mob(var/mob/living/carbon/human/character)
+/datum/category_item/player_setup_item/general/flavor/copy_to_mob(mob/living/carbon/human/character)
 	character.flavor_texts["general"]	= pref.flavor_texts["general"]
 	character.flavor_texts["head"]		= pref.flavor_texts["head"]
 	character.flavor_texts["face"]		= pref.flavor_texts["face"]
@@ -72,16 +72,16 @@
 			SetFlavourTextRobot(user)
 			return TOPIC_HANDLED
 		if("custom_link")
-			var/new_link = strip_html_simple(tgui_input_text(user, "Enter a link to add on to your examine text! This should be a related image link/gallery, or things like your F-list. This is not the place for memes.", "Custom Link" , html_decode(pref.custom_link), max_length = 100, encode = TRUE,  prevent_enter = TRUE))
+			var/new_link = strip_html_simple(tgui_input_text(user, "Enter a link to add on to your examine text! This should be a related image link/gallery, or things like your F-list. This is not the place for memes.", "Custom Link" , html_decode(pref.custom_link), max_length = 400, encode = TRUE,  prevent_enter = TRUE)) // Outpost 21 edit(port) - Allow longer custom links
 			if(new_link)
-				if(length(new_link) > 100)
-					to_chat(user, span_warning("Your entry is too long, it must be 100 characters or less."))
+				if(length(new_link) > 400) // Outpost 21 edit(port) - Allow longer custom links
+					to_chat(user, span_warning("Your entry is too long, it must be 400 characters or less.")) // Outpost 21 edit(port) - Allow longer custom links
 					return
 				pref.custom_link = new_link
 				log_admin("[user]/[user.ckey] set their custom link to [pref.custom_link]")
 
 // README: This must stay for SetFlavorText to work!
-/datum/category_item/player_setup_item/general/flavor/OnTopic(var/href,var/list/href_list, var/mob/user)
+/datum/category_item/player_setup_item/general/flavor/OnTopic(href,list/href_list, mob/user)
 	if(href_list["flavor_text"])
 		switch(href_list["flavor_text"])
 			if("open")

@@ -9,7 +9,7 @@
 	item_state = "designator"
 	slot_flags = SLOT_BELT
 	matter = list(MAT_GLASS = 500, MAT_STEEL = 500)
-	w_class = 2 //Increased to 2, because diodes are w_class 2. Conservation of matter.
+	w_class = ITEMSIZE_SMALL
 	var/turf/pointer_loc
 	var/energy = 3
 	var/max_energy = 3
@@ -22,18 +22,18 @@
 	. = ..(user)
 	if(.)
 		return TRUE
-	zoom(user, CAM_DIST, CAM_SIZE) // long but small vision range
+	toggle_zoom(user, CAM_DIST, CAM_SIZE) // long but small vision range
 
 /obj/item/laser_designator/attack(mob/living/M, mob/user)
 	laser_act(M, user)
 	return ITEM_INTERACT_SUCCESS
 
-/obj/item/laser_designator/afterattack(var/atom/target, var/mob/living/user, flag, params)
+/obj/item/laser_designator/afterattack(atom/target, mob/living/user, flag, params)
 	if(flag)	//we're placing the object on a table or in backpack
 		return
 	laser_act(target, user)
 
-/obj/item/laser_designator/proc/laser_act(var/atom/target, var/mob/living/user)
+/obj/item/laser_designator/proc/laser_act(atom/target, mob/living/user)
 	if(!(user in (viewers(world.view + CAM_DIST + CAM_SIZE,target))))
 		return
 	if(!(world.time - last_used_time >= cooldown))
@@ -86,7 +86,7 @@
 	spawn(cooldown)
 		icon_state = item_state
 
-/obj/item/laser_designator/proc/call_down_the_fist_of_god(var/mob/user, var/atom/target,var/turf/hithere)
+/obj/item/laser_designator/proc/call_down_the_fist_of_god(mob/user, atom/target,turf/hithere)
 	if(target && !istype(hithere))
 		hithere = get_turf(target)
 	if(!target && !hithere)

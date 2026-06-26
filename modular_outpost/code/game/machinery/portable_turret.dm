@@ -55,7 +55,7 @@
 	shot_delay = 0.18 SECONDS //Super fast fire rate. It's a machine gun. Vali set the number, blame her :P
 	reqpower = 50
 
-/obj/machinery/porta_turret/heavy/target(var/mob/living/target)
+/obj/machinery/porta_turret/heavy/target(mob/living/target)
 	if(disabled)
 		return FALSE
 	if(target)

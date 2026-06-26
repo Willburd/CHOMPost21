@@ -87,7 +87,7 @@
 		new /obj/item/gun/energy/locked/frontier/holdout(src)
 
 //Taken from YW, why is this not in the dance pole's file itself? Redundant code, or just their mappers dumb? TODO: Fix.
-/obj/structure/dancepole/attackby(var/obj/item/O as obj, var/mob/user as mob)
+/obj/structure/dancepole/attackby(obj/item/O as obj, mob/user as mob)
 	if(O.is_wrench())
 		anchored = !anchored
 		playsound(src.loc, 'sound/items/Deconstruct.ogg', 50, 1)
@@ -106,7 +106,7 @@
 /obj/effect/step_trigger/lost_in_space
 	var/deathmessage = "You drift off into space, floating alone in the void until your life support runs out."
 
-/obj/effect/step_trigger/lost_in_space/Trigger(var/atom/movable/A) //replacement for shuttle dump zones because there's no empty space levels to dump to
+/obj/effect/step_trigger/lost_in_space/Trigger(atom/movable/A) //replacement for shuttle dump zones because there's no empty space levels to dump to
 	if(ismob(A))
 		to_chat(A, span_danger(deathmessage))
 	qdel(A)

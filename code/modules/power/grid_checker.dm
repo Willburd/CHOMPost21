@@ -45,6 +45,13 @@
 	else if(istype(W, /obj/item/multitool) || W.has_tool_quality(TOOL_WIRECUTTER))
 		attack_hand(user)
 
+// Outpost 21 edit(port) begin - Borgs should be able to use the grid checker
+/obj/machinery/power/grid_checker/attack_robot(mob/living/user)
+	if(!user)
+		return
+	interact(user)
+// Outpost 21 edit(port) end
+
 /obj/machinery/power/grid_checker/attack_hand(mob/user)
 	if(!user)
 		return
@@ -60,7 +67,7 @@
 
 	return tgui_interact(user)
 
-/obj/machinery/power/grid_checker/proc/power_failure(var/announce = TRUE,var/extended = FALSE)
+/obj/machinery/power/grid_checker/proc/power_failure(announce = TRUE, extended = FALSE) // Outpost 21 edit - Extend blackout if given the argument to do so!
 	if(announce)
 		GLOB.command_announcement.Announce("Abnormal activity detected in [station_name()]'s powernet. As a precautionary measure, \
 		the station's power will be shut off for an indeterminate duration while the powernet monitor restarts automatically, or \
@@ -92,7 +99,7 @@
 		if(power_failing) // Check to see if engineering didn't beat us to it.
 			end_power_failure(TRUE)
 
-/obj/machinery/power/grid_checker/proc/end_power_failure(var/announce = TRUE)
+/obj/machinery/power/grid_checker/proc/end_power_failure(announce = TRUE)
 	if(announce)
 		GLOB.command_announcement.Announce("Power has been restored to [station_name()]. We apologize for the inconvenience.",
 		"Power Systems Nominal",

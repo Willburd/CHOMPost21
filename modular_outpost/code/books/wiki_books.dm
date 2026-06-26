@@ -24,12 +24,13 @@
 				#include "wiki/setting/outpost22.dm"
 				#include "wiki/setting/outpost18.dm"
 				#include "wiki/setting/nifpro.dm"
+				#include "wiki/setting/oldearth.dm"
 			),
 			"Gameplay" = list(
 				#include "wiki/gameplay/basics.dm"
 				#include "wiki/gameplay/rank.dm"
 				#include "wiki/gameplay/resleeving.dm"
-				#include "wiki/gameplay/positronic.dm"
+				#include "wiki/gameplay/silicon_minds.dm"
 				#include "wiki/gameplay/borglaw.dm"
 			),
 			"Species" = list(
@@ -58,6 +59,7 @@
 				#include "wiki/factions/blackhole.dm"
 				#include "wiki/factions/clowns.dm"
 				#include "wiki/factions/eshui.dm"
+				#include "wiki/factions/khi.dm"
 				#include "wiki/factions/nt.dm"
 				#include "wiki/factions/solgov.dm"
 				#include "wiki/factions/syndicate.dm"

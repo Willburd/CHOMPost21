@@ -310,6 +310,12 @@
 	thrown_force_divisor = 1.2 //default is 0.6
 	named_from_material = FALSE //Makes sure it's not "plas ed'reith's hammer, and should JUST use its name"
 
+/obj/item/chainsaw/rauf
+	name = "Raufoss` Chainsaw"
+	desc = "A relatively normal looking chainsaw. That is, until you notice the dried blood covering its chassis, the total lack of a chain brake, and the serrated durasteel chain it now sports. It has 'Property of Raufoss' etched into the bar."
+	active_force = 80
+	inactive_force = 15
+
 // TEMP DEFINITIONS SOME NOT MEANT FOR HERE! These exist purely to placate loadout code's typechecks
 /obj/item/toy/plushie/fluff
 	name = "TEMP PLUSH BASE - DELETE ONCE WE ADD A PLUSH"

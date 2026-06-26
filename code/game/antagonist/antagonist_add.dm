@@ -1,4 +1,4 @@
-/datum/antagonist/proc/add_antagonist(var/datum/mind/player, var/ignore_role, var/do_not_equip, var/move_to_spawn, var/do_not_announce, var/preserve_appearance)
+/datum/antagonist/proc/add_antagonist(datum/mind/player, ignore_role, do_not_equip, move_to_spawn, do_not_announce, preserve_appearance)
 
 	if(!add_antagonist_mind(player, ignore_role))
 		return
@@ -14,9 +14,25 @@
 		create_antagonist(player, move_to_spawn, do_not_announce, preserve_appearance)
 		if(!do_not_equip)
 			equip(player.current)
+
+	// Outpost 21 edit begin - Automatically traitor borgs
+	var/mob/living/silicon/robot/bot = player?.current
+	if(istype(bot))
+		bot.syndicate = TRUE
+		bot.UnlinkSelf()
+	// Outpost 21 edit end
+
+	// Outpost 21 edit begin - Hide pda messenger of antags by default
+	var/obj/item/pda/check_pda = locate() in player.current
+	if(check_pda)
+		var/datum/data/pda/app/messenger/mesg = locate() in check_pda.programs
+		if(mesg)
+			mesg.toff = TRUE // Disable the messenger, but allow it to be turned back on
+	// Outpost 21 edit end
+
 	return 1
 
-/datum/antagonist/proc/add_antagonist_mind(var/datum/mind/player, var/ignore_role, var/nonstandard_role_type, var/nonstandard_role_msg)
+/datum/antagonist/proc/add_antagonist_mind(datum/mind/player, ignore_role, nonstandard_role_type, nonstandard_role_msg)
 	if(!istype(player))
 		return 0
 	if(!player.current)
@@ -49,7 +65,7 @@
 		update_icons_added(player)
 	return 1
 
-/datum/antagonist/proc/remove_antagonist(var/datum/mind/player, var/show_message, var/implanted)
+/datum/antagonist/proc/remove_antagonist(datum/mind/player, show_message, implanted)
 	if(player.current && faction_verb)
 		remove_verb(player.current, faction_verb)
 	if(player in current_antagonists)

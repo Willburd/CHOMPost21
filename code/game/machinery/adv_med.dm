@@ -40,7 +40,7 @@
 	else
 		set_light(0)
 
-/obj/machinery/bodyscanner/attackby(var/obj/item/G, user as mob)
+/obj/machinery/bodyscanner/attackby(obj/item/G, user as mob)
 	if(istype(G, /obj/item/grab))
 		var/obj/item/grab/H = G
 		if(panel_open)
@@ -58,9 +58,11 @@
 			to_chat(user, span_warning("\The [H.affecting] has other entities attached to it. Remove them first."))
 			return
 		var/mob/M = H.affecting
+		/* Outpost 21 edit(port) - Disable abiotic lockout
 		if(M.abiotic())
 			to_chat(user, span_notice("Subject cannot have abiotic items on."))
 			return
+		*/
 		M.forceMove(src)
 		occupant = M
 		update_icon()
@@ -94,9 +96,11 @@
 
 	if(O.buckled)
 		return 0
+	/* Outpost 21 edit(port) - Disable abiotic lockout
 	if(O.abiotic())
 		to_chat(user, span_notice("Subject cannot have abiotic items on."))
 		return 0
+	*/
 	if(O.has_buckled_mobs())
 		to_chat(user, span_warning("\The [O] has other entities attached to it. Remove them first."))
 		return
@@ -221,6 +225,12 @@
 			paralysis_duration = 0
 			fakedeath = TRUE
 
+		// Outpost 21 edit begin - Upgraded parts needed to show certain things
+		var/scanner_part_level = 0
+		for(var/obj/item/stock_parts/scanning_module/scanner in contents)
+			scanner_part_level = scanner.get_rating()
+		// Outpost 21 edit end
+
 		occupantData["stat"] = occupant_stat
 		occupantData["health"] = occupant_health
 		occupantData["maxHealth"] = H.getMaxHealth()
@@ -240,10 +250,14 @@
 		occupantData["bodyTempC"] = H.bodytemperature-T0C
 		occupantData["bodyTempF"] = (((H.bodytemperature-T0C) * 1.8) + 32)
 
-		occupantData["hasBorer"] = H.has_brain_worms()
+		occupantData["hasBorer"] = scanner_part_level >= 4 && H.has_brain_worms() // Outpost 21 edit - Upgraded parts needed to show certain things, hyper needed
 		occupantData["hasWithdrawl"] = has_withdrawl
 
-		occupantData["allergens"] = assembly_allergy_list(H.species.allergens, H.species.medallergens)
+		// Outpost 21 edit begin - Upgraded parts needed to show certain things
+		occupantData["allergens"] = null
+		if(scanner_part_level >= 3) // Super needed
+			occupantData["allergens"] = assembly_allergy_list(H.species.allergens, H.species.medallergens)
+		// Outpost 21 edit end
 		occupantData["hasAllergens"] = islist(occupantData["allergens"])
 
 		occupantData["colourblind"] = null
@@ -741,7 +755,7 @@
 		scanner.console = null
 	return ..()
 
-/obj/machinery/body_scanconsole/attackby(var/obj/item/I, var/mob/user)
+/obj/machinery/body_scanconsole/attackby(obj/item/I, mob/user)
 	if(computer_deconstruction_screwdriver(user, I))
 		return
 	else if(istype(I, /obj/item/multitool)) //Did you want to link it?

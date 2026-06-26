@@ -143,7 +143,7 @@
 	return pressure_adjustment_coefficient
 
 // Calculate how much of the enviroment pressure-difference affects the human.
-/mob/living/carbon/human/calculate_affecting_pressure(var/pressure)
+/mob/living/carbon/human/calculate_affecting_pressure(pressure)
 	var/pressure_difference
 
 	// First get the absolute pressure difference.
@@ -474,7 +474,7 @@
 
 	/** breathing **/
 
-/mob/living/carbon/human/handle_chemical_smoke(var/datum/gas_mixture/environment)
+/mob/living/carbon/human/handle_chemical_smoke(datum/gas_mixture/environment)
 	if(wear_mask && (wear_mask.item_flags & BLOCK_GAS_SMOKE_EFFECT))
 		return
 	if(glasses && (glasses.item_flags & BLOCK_GAS_SMOKE_EFFECT))
@@ -524,6 +524,15 @@
 /mob/living/carbon/human/handle_breath(datum/gas_mixture/breath)
 	if(SEND_SIGNAL(src, COMSIG_CHECK_FOR_GODMODE) & COMSIG_GODMODE_CANCEL)
 		return 0	// Cancelled by a component
+
+	// Outpost 21 edit begin - Holding breath verb
+	if(is_holding_breath && (stat || (oxyloss > 10 && prob(oxyloss / 2)))) // Stop holding breath if you pass out, or if you reach beyond limits
+		stop_holding_breath()
+	if(is_holding_breath)
+		failed_last_breath = 1
+		adjustOxyLoss(1)
+		return
+	// Outpost 21 edit end
 
 	if(mNobreath in mutations)
 		return
@@ -825,7 +834,7 @@
 	breath.update_values()
 	return 1
 
-/mob/living/carbon/human/proc/play_inhale(var/mob/living/M, var/exhale)
+/mob/living/carbon/human/proc/play_inhale(mob/living/M, exhale)
 	var/suit_inhale_sound
 	if(species.suit_inhale_sound)
 		suit_inhale_sound = species.suit_inhale_sound
@@ -836,7 +845,7 @@
 	if(!exhale) // Did we fail exhale? If no, play it after inhale finishes.
 		addtimer(CALLBACK(src, PROC_REF(play_exhale), M), 5 SECONDS)
 
-/mob/living/carbon/human/proc/play_exhale(var/mob/living/M)
+/mob/living/carbon/human/proc/play_exhale(mob/living/M)
 	var/suit_exhale_sound
 	if(species.suit_exhale_sound)
 		suit_exhale_sound = species.suit_exhale_sound
@@ -1130,7 +1139,7 @@
 	. = 1 - .
 	. = min(., 1.0)
 
-/mob/living/carbon/human/proc/get_thermal_protection(var/flags)
+/mob/living/carbon/human/proc/get_thermal_protection(flags)
 	.=0
 	if(flags)
 		if(flags & HEAD)
@@ -1459,7 +1468,7 @@
 
 	return 1
 
-/mob/living/carbon/human/set_stat(var/new_stat)
+/mob/living/carbon/human/set_stat(new_stat)
 	. = ..()
 	if(. && stat)
 		update_skin(1)
@@ -1558,48 +1567,6 @@
 			overlay_fullscreen("fear", /atom/movable/screen/fullscreen/fear, severity)
 		else
 			clear_fullscreen("fear")
-
-		if(healths)
-			if(chem_effects[CE_PAINKILLER] > 100)
-				healths.icon_state = "health_numb"
-			else
-				// Generate a by-limb health display.
-				var/mutable_appearance/healths_ma = new(healths)
-				healths_ma.icon_state = "blank"
-				healths_ma.overlays = null
-				healths_ma.plane = PLANE_PLAYER_HUD
-
-				var/no_damage = 1
-				var/trauma_val = 0 // Used in calculating softcrit/hardcrit indicators.
-				if(!(species.flags & NO_PAIN))
-					trauma_val = max(traumatic_shock,halloss)/getMaxHealth()
-				var/limb_trauma_val = trauma_val*0.3
-				// Collect and apply the images all at once to avoid appearance churn.
-				var/list/health_images = list()
-				for(var/obj/item/organ/external/E in organs)
-					if(no_damage && (E.brute_dam || E.burn_dam))
-						no_damage = 0
-					health_images += E.get_damage_hud_image(limb_trauma_val)
-
-				// Apply a fire overlay if we're burning.
-				if(on_fire || get_hallucination_component()?.get_hud_state() == HUD_HALLUCINATION_ONFIRE)
-					health_images += image('icons/mob/OnFire.dmi',"[get_fire_icon_state()]")
-
-				// Show a general pain/crit indicator if needed.
-				if(get_hallucination_component()?.get_hud_state() == HUD_HALLUCINATION_CRIT)
-					trauma_val = 2
-				if(trauma_val)
-					if(!(species.flags & NO_PAIN))
-						if(trauma_val > 0.7)
-							health_images += image('icons/mob/screen1_health.dmi',"softcrit")
-						if(trauma_val >= 1)
-							health_images += image('icons/mob/screen1_health.dmi',"hardcrit")
-				else if(no_damage)
-					health_images += image('icons/mob/screen1_health.dmi',"fullhealth")
-
-				healths_ma.add_overlay(health_images)
-				healths.appearance = healths_ma
-
 
 		var/fat_alert = /atom/movable/screen/alert/fat
 		var/hungry_alert = /atom/movable/screen/alert/hungry
@@ -1713,7 +1680,7 @@
 	var/no_damage = 1
 	var/trauma_val = 0 // Used in calculating softcrit/hardcrit indicators.
 	if(!(species.flags & NO_PAIN))
-		trauma_val = max(traumatic_shock,halloss)/species.total_health
+		trauma_val = max(traumatic_shock,halloss)/getMaxHealth()
 	var/limb_trauma_val = trauma_val*0.3
 	// Collect and apply the images all at once to avoid appearance churn.
 	var/list/health_images = list()
@@ -1830,7 +1797,7 @@
 	// Call parent to handle signals
 	..()
 
-/mob/living/carbon/human/proc/process_glasses(var/obj/item/clothing/glasses/G)
+/mob/living/carbon/human/proc/process_glasses(obj/item/clothing/glasses/G)
 	. = FALSE
 	if(G && G.active)
 		if(G.darkness_view)
@@ -1851,7 +1818,7 @@
 			see_invisible = see_invisible_default
 
 /* Outpost 21 edit - Nif removal
-/mob/living/carbon/human/proc/process_nifsoft_vision(var/datum/nifsoft/NS)
+/mob/living/carbon/human/proc/process_nifsoft_vision(datum/nifsoft/NS)
 	. = FALSE
 	if(NS && NS.active)
 		if(NS.darkness_view)

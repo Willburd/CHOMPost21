@@ -7,7 +7,6 @@ GLOBAL_LIST_INIT(bluespace_item_types, list(
 	// Outpost 21 edit(port) begin - missing bluespace item
 	/obj/item/clothing/accessory/storage/bluespace,
 	/obj/item/ore_bag/holding,
-	/obj/item/clothing/gloves/bluespace,
 	/obj/item/clothing/under/hyperfiber/bluespace,
 	/obj/item/reagent_containers/food/drinks/bluespace_coffee,
 	/obj/item/reagent_containers/glass/beaker/bluespace,
@@ -139,7 +138,7 @@ GLOBAL_LIST_INIT(bluespace_item_types, list(
 
 			teleatom.buckle_mob(rider, TRUE)
 
-/proc/tele_play_specials(atom/movable/teleatom, atom/location, var/datum/effect/effect/system/effect, sound)
+/proc/tele_play_specials(atom/movable/teleatom, atom/location, datum/effect/effect/system/effect, sound)
 	if(!location)
 		return
 

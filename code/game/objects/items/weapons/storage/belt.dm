@@ -29,7 +29,7 @@
 	update_icon()
 
 //Some belts have sprites to show icons
-/obj/item/storage/belt/make_worn_icon(var/body_type,var/slot_name,var/inhands,var/default_icon,var/default_layer = 0,var/icon/clip_mask = null)
+/obj/item/storage/belt/make_worn_icon(body_type,slot_name,inhands,default_icon,default_layer = 0,icon/clip_mask = null)
 	var/image/standing = ..()
 	if(!inhands && contents.len)
 		for(var/obj/item/i in contents)
@@ -543,6 +543,7 @@
 		/obj/item/depth_scanner,
 		/obj/item/camera,
 		/obj/item/paper,
+		/obj/item/paper_bundle,
 		/obj/item/photo,
 		/obj/item/folder,
 		/obj/item/pen,
@@ -727,6 +728,7 @@
 		/obj/item/pickaxe,
 		/obj/item/shovel,
 		/obj/item/paper,
+		/obj/item/paper_bundle,
 		/obj/item/photo,
 		/obj/item/folder,
 		/obj/item/pen,
@@ -769,6 +771,7 @@
 		/obj/item/cell/device,
 		/obj/item/pickaxe,
 		/obj/item/paper,
+		/obj/item/paper_bundle,
 		/obj/item/photo,
 		/obj/item/folder,
 		/obj/item/pen,

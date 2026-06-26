@@ -78,7 +78,7 @@ OL|IL|OL
 	origin_machine = null
 	. = ..()
 
-/datum/confinement_pulse_data/proc/transmit_beam_to_z(var/fake_beam)
+/datum/confinement_pulse_data/proc/transmit_beam_to_z(fake_beam)
 	SHOULD_NOT_OVERRIDE(TRUE)
 	if(target_z == -1 || power_level == 0)
 		return
@@ -133,7 +133,7 @@ OL|IL|OL
 	power_sold_message("OH MY GOD WE'RE DOOMED! ", 5000, 1000,org_wattage,new_wattage)
 	power_sold_message("Congrats on winning. ", 10000,   1000,org_wattage,new_wattage)
 
-/datum/confinement_pulse_data/proc/power_sold_message(var/pre_message,var/gigawatts,var/credits,var/org_wattage,var/new_wattage)
+/datum/confinement_pulse_data/proc/power_sold_message(pre_message,gigawatts,credits,org_wattage,new_wattage)
 	SHOULD_NOT_OVERRIDE(TRUE)
 	PRIVATE_PROC(TRUE)
 	if(check_sold_wattage(gigawatts GIGAWATTS,org_wattage,new_wattage))
@@ -141,7 +141,7 @@ OL|IL|OL
 		GLOB.global_announcer.autosay("PTL bounty reached, [credits] additional supply points awarded.", "Confinement Beam Monitor", CHANNEL_SUPPLY)
 		SSsupply.points += credits
 
-/datum/confinement_pulse_data/proc/check_sold_wattage(var/threshold,var/org_wattage,var/new_wattage)
+/datum/confinement_pulse_data/proc/check_sold_wattage(threshold,org_wattage,new_wattage)
 	SHOULD_NOT_OVERRIDE(TRUE)
 	PRIVATE_PROC(TRUE)
 	if(new_wattage >= threshold && org_wattage < threshold)
@@ -225,7 +225,7 @@ OL|IL|OL
 				icon_state="[base_icon]_p"	// Panel closed and powered
 	return
 
-/obj/structure/confinement_beam_generator/proc/process_tool_hit(var/obj/item/O, var/mob/user)
+/obj/structure/confinement_beam_generator/proc/process_tool_hit(obj/item/O, mob/user)
 	PROTECTED_PROC(TRUE)
 	if(!(O) || !(user))
 		return FALSE
@@ -329,7 +329,7 @@ OL|IL|OL
 		T = GetAbove(T)
 	return T.z
 
-/obj/structure/confinement_beam_generator/proc/exchange_heat(var/transfer_coefficient)
+/obj/structure/confinement_beam_generator/proc/exchange_heat(transfer_coefficient)
 	SHOULD_NOT_OVERRIDE(TRUE)
 	PROTECTED_PROC(TRUE)
 	// Alter deviation of beam
@@ -381,7 +381,7 @@ OL|IL|OL
 			explosion(get_turf(src),2,3,5,7)
 			qdel(src)
 
-/obj/structure/confinement_beam_generator/proc/use_exchanger(var/obj/machinery/atmospherics/unary/heat_exchanger/EXA,var/transfer_coefficient)
+/obj/structure/confinement_beam_generator/proc/use_exchanger(obj/machinery/atmospherics/unary/heat_exchanger/EXA,transfer_coefficient)
 	SHOULD_NOT_OVERRIDE(TRUE)
 	PRIVATE_PROC(TRUE)
 	if(!EXA)

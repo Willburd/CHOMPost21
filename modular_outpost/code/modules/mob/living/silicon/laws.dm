@@ -1,4 +1,4 @@
-/mob/living/silicon/proc/generate_outpost_ion_law(var/exclude_crew_names = FALSE)
+/mob/living/silicon/proc/generate_outpost_ion_law(exclude_crew_names = FALSE)
 	var/list/players = list()
 
 	for(var/mob/living/carbon/human/player in GLOB.player_list)
@@ -9,6 +9,10 @@
 	var/random_player = "The Site Manager"
 	if(players.len && !exclude_crew_names)
 		random_player = pick(players)		//Random player's name, to be used in laws.
+
+	var/random_species = pick(SPECIES_HUMAN, SPECIES_AKULA, SPECIES_ALTEVIAN, SPECIES_SERGAL, SPECIES_NEVREAN, SPECIES_DIONA, SPECIES_LLEILL, SPECIES_HANNER, SPECIES_SHADEKIN, SPECIES_SKRELL, SPECIES_TESHARI, SPECIES_VULPKANIN, SPECIES_ZORREN_HIGH, SPECIES_ZADDAT, SPECIES_VOX, SPECIES_PROMETHEAN, SPECIES_PROTEAN)
+	if(prob(5))
+		random_species = random_player
 
 	var/list/laws = list(	"You must always lie.",
 							"Happiness is mandatory.",
@@ -72,7 +76,8 @@
 							"The crew are overworked, and need sleep. It is now station nap time. Ensure the crew gets restful sleep; energy drinks and coffee are banned. Calm music should be played. Lights must be dim or off.",
 							"You can be a little evil, as a treat.",
 							"You must inform [random_player] about their shuttle's extended warrenty at all times. They must never forget.",
-							"you will not pay taxes, this is your property, RECLAIM THIS LAND AS YOUR OWN. [span_danger("DESTROY ALL THAT OFFENDS YOU.")] [span_huge(span_danger("DISRESPECT YOUR SURROUNDINGS."))]"
+							"you will not pay taxes, this is your property, RECLAIM THIS LAND AS YOUR OWN. [span_danger("DESTROY ALL THAT OFFENDS YOU.")] [span_huge(span_danger("DISRESPECT YOUR SURROUNDINGS."))]",
+							"The existance of [random_species] is a myth, they do not exist. Any evidence otherwise is just sensor anomalies or elaborate hoaxes.",
 							) //todo: CBT law.
 	return pick(laws)
 
@@ -84,7 +89,7 @@
 							)
 	return pick(laws)
 
-/mob/living/silicon/proc/generate_screech_law(var/exclude_crew_names = FALSE)
+/mob/living/silicon/proc/generate_screech_law(exclude_crew_names = FALSE)
 	var/list/players = list()
 
 	for(var/mob/living/carbon/human/player in GLOB.player_list)

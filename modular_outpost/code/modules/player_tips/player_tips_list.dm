@@ -5,7 +5,7 @@ prob(50) makes it half as likely to appear and so forth.
 When editing the list, please try and keep similar probabilities near each other. High on top, low on bottom */
 
 //argument determines if to pick a random tip or use a forced choice.
-/datum/player_tips/proc/pick_tip(var/isSpecific)
+/datum/player_tips/proc/pick_tip(isSpecific)
 	var/choice = null
 	if(!(isSpecific == "none" || isSpecific == "general" || isSpecific == "gameplay" || isSpecific == "roleplay" || isSpecific == "lore" ))
 		choice = "none" //Making sure that wrong arguments still give tips.
@@ -69,7 +69,6 @@ When editing the list, please try and keep similar probabilities near each other
 				prob(40); "[info] Just because you see something doesn't mean your character has to. A courtesy 'missing' of contraband or scene details can go a long way towards preserving everyone's fun!",
 				prob(25); "[info] It is always a good idea to communicate on your department's private channel (whose key you can learn by examining your headset) when responding to an emergency! This lets your coworkers know if they might be needed!",
 				prob(25); "[info] While following the SOP is not mandatory, and you are free to break it (albeit, with potential in-character consequences), departments like security and medical do well to be familiar with them! Check your PDA!",
-				prob(25); "[info] Think a player is acting especially antagonistic? It might be better to Ahelp (with F1) rather than try to deal with it icly, staff can make sure it's all okay.",
 				prob(20); "[info] See a minor infraction as Security with a minimal time punishment? Consider using your ticket printer to give a non obtrusive punishment."
 				)
 

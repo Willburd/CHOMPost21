@@ -1,5 +1,6 @@
 /datum/weather
 	var/hazardous_weather
+	var/shuttle_crash_chance = 0
 
 /datum/weather_holder/advance_forecast()
 	. = ..()
@@ -16,8 +17,3 @@
 /datum/weather_holder/proc/weather_alarm()
 	SHOULD_NOT_OVERRIDE(TRUE)
 	GLOB.priority_announcement.Announce("Crew are advised to delay EVA activities or prepare and shelter accordingly for approaching weather.", "Attention! Severe weather warning is in effect!", new_sound = ANNOUNCER_MSG_WEATHER_ALERT, zlevel = our_planet.expected_z_levels[1])
-
-ADMIN_VERB(weather_warning_siren, R_EVENT, "Severe Weather Siren", "Sets off the severe weather alarm.", ADMIN_CATEGORY_EVENTS)
-	var/datum/planet/planet = SSplanets.planets[1]
-	if(istype(planet))
-		planet.weather_holder.weather_alarm()

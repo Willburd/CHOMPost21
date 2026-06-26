@@ -112,7 +112,7 @@
 			data["tempMsg"] = "Telepad undergoing physical maintenance operations."
 
 		//We'll base our options on connected z's or overmap
-		data["sectorOptions"] = using_map.get_map_levels(z, TRUE, overmap_range)
+		data["sectorOptions"] = using_map.get_map_levels(z, TRUE, overmap_range) | using_map.event_levels.Copy() // Outpost 21 edit - Event levels count for teleport goals too
 
 		data["lastTeleData"] = null
 		if(last_tele_data)
@@ -267,7 +267,7 @@
 			teles_left -= 1
 
 			// use a lot of power
-			use_power(trueDistance * 10000)
+			use_power(trueDistance * 1000) // Outpost 21 edit - Make telesci actually fun
 
 			var/datum/effect/effect/system/spark_spread/S = new /datum/effect/effect/system/spark_spread()
 			S.set_up(5, 1, get_turf(telepad))
@@ -384,7 +384,7 @@
 
 
 // Procedure that calculates the actual trajectory taken!
-/proc/simple_projectile_trajectory(var/src_x, var/src_y, var/rotation, var/distance)
+/proc/simple_projectile_trajectory(src_x, src_y, rotation, distance)
 	var/time = distance / 10 // 100ms per distance seems fine?
 	var/dest_x = src_x + distance*sin(rotation);
 	var/dest_y = src_y + distance*cos(rotation);

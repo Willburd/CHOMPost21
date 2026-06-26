@@ -237,7 +237,7 @@ SUBSYSTEM_DEF(haunting)
 		return null
 	return M
 
-/datum/controller/subsystem/haunting/proc/force_player_target(var/mob/potential)
+/datum/controller/subsystem/haunting/proc/force_player_target(mob/potential)
 	clear_player_target()
 	if(!potential)
 		return FALSE
@@ -254,7 +254,7 @@ SUBSYSTEM_DEF(haunting)
 		return null
 	return pick(GLOB.player_list)
 
-/datum/controller/subsystem/haunting/proc/get_world_haunt_attention(var/mob/M,var/notice_chance)
+/datum/controller/subsystem/haunting/proc/get_world_haunt_attention(mob/M,notice_chance)
 	SHOULD_NOT_OVERRIDE(TRUE)
 	if(isnewplayer(M))
 		return
@@ -303,7 +303,7 @@ SUBSYSTEM_DEF(haunting)
 	SHOULD_NOT_OVERRIDE(TRUE)
 	return world_mode >= MODE_SUPERSPOOKY
 
-/datum/controller/subsystem/haunting/proc/start_haunt(var/forced = FALSE)
+/datum/controller/subsystem/haunting/proc/start_haunt(forced = FALSE)
 	PRIVATE_PROC(TRUE)
 	SHOULD_NOT_OVERRIDE(TRUE)
 	if(!forced)
@@ -406,13 +406,13 @@ SUBSYSTEM_DEF(haunting)
 		return
 	current_haunt.fire()
 
-/datum/controller/subsystem/haunting/proc/influence(var/type)
+/datum/controller/subsystem/haunting/proc/influence(type)
 	SHOULD_NOT_OVERRIDE(TRUE)
 	if(isnull(current_influences[type]))
 		current_influences[type] = 0
 	current_influences[type] += 1
 
-/datum/controller/subsystem/haunting/proc/set_haunting(var/path)
+/datum/controller/subsystem/haunting/proc/set_haunting(path)
 	SHOULD_NOT_OVERRIDE(TRUE)
 	// has to handle a verb input too...
 	if(!path)
@@ -425,7 +425,7 @@ SUBSYSTEM_DEF(haunting)
 	current_haunt = new path()
 	total_haunts++
 
-/datum/controller/subsystem/haunting/proc/log_haunting(var/LE,var/notify_admin = FALSE)
+/datum/controller/subsystem/haunting/proc/log_haunting(LE,notify_admin = FALSE)
 	SHOULD_NOT_OVERRIDE(TRUE)
 	var/mob/M = current_player_target?.resolve()
 	if(M)

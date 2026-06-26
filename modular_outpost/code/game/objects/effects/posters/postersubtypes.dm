@@ -6,7 +6,7 @@
 	icon_state = "rolled_poster_es"
 	poster_type = /obj/structure/sign/poster/eshui
 
-/obj/item/poster/eshui/Initialize(mapload, var/datum/decl/poster/P = null)
+/obj/item/poster/eshui/Initialize(mapload, datum/decl/poster/P = null)
 	if(!ispath(poster_decl) && !ispath(P) && !istype(P))
 		poster_decl = get_poster_decl(/datum/decl/poster/eshui, FALSE, null)
 	return ..(mapload, poster_decl)

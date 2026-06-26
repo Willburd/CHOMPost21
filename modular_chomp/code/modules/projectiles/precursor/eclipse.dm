@@ -18,7 +18,6 @@
 
 	reload_time = 10
 
-	move_delay = 0
 
 	firemodes = list(
 		list(mode_name="normal", fire_delay=5, projectile_type=/obj/item/projectile/energy/frostsphere, charge_cost = 80),
@@ -80,7 +79,7 @@
 	irradiate = 3
 	speed = 1 //a bit faster due to the source having a 3 second wind up
 
-/obj/item/projectile/energy/mechahack/on_hit(var/atom/target)
+/obj/item/projectile/energy/mechahack/on_hit(atom/target)
 	. = ..()
 	if(istype(target, /obj/mecha))
 		remote_eject(target)
@@ -99,7 +98,7 @@
 	speed = 2
 	var/power = 20				//How hard it will hit for with electrocute_act(), decreases with each bounce.
 
-/obj/item/projectile/energy/lightingspark/attack_mob(var/mob/living/target_mob, var/distance, var/miss_modifier=0)
+/obj/item/projectile/energy/lightingspark/attack_mob(mob/living/target_mob, distance, miss_modifier=0)
 	//First we shock the guy we just hit.
 	if(ishuman(target_mob))
 		var/mob/living/carbon/human/H = target_mob

@@ -1,4 +1,4 @@
-/client/proc/smite(var/mob/living/carbon/human/target in GLOB.player_list)
+/client/proc/smite(mob/living/carbon/human/target in GLOB.player_list)
 	set name = "Smite"
 	set desc = "Abuse a player with various 'special treatments' from a list."
 	set category = "Fun.Do Not"
@@ -174,7 +174,7 @@
 			spice.loc = target.loc
 			to_chat(target,"A bottle of spices appears at your feet... be careful what you wish for!")
 
-		if(SMITE_PIE) //CHOMP Add
+		if(SMITE_PIE) //CHOMPAdd - Start
 			new/obj/effect/decal/cleanable/pie_smudge(get_turf(target))
 			playsound(target, 'sound/effects/slime_squish.ogg', 100, 1, get_rand_frequency(), falloff = 5)
 			target.Weaken(1)
@@ -198,12 +198,12 @@
 				if(target.wear_suit)
 					target.unEquip(target.wear_suit)
 				var/obj/item/clothing/suit = new /obj/item/clothing/suit/storage/hooded/foodcostume/hotdog
-				var/obj/item/clothing/hood = new /obj/item/clothing/head/hood_vr/hotdog_hood
+				var/obj/item/clothing/hood = new /obj/item/clothing/head/hood/hotdog_hood
 				target.equip_to_slot_if_possible(suit, slot_wear_suit, 0, 0, 1)
 				target.equip_to_slot_if_possible(hood, slot_head, 0, 0, 1)
 				sleep(5 SECONDS)
 				qdel(suit)
-				qdel(hood)
+				qdel(hood) //CHOMPAdd - End
 		else
 			return //Injection? Don't print any messages.
 
@@ -327,7 +327,7 @@ GLOBAL_VAR(redspace_abduction_z)
 	*/
 	// Outpost 21 edit end
 
-/proc/fake_autosave(var/mob/living/target, var/client/user, var/wide)
+/proc/fake_autosave(mob/living/target, client/user, wide)
 	if(!istype(target) || !target.client)
 		to_chat(user, span_warning("Skipping [target] because they are not a /mob/living or have no client."))
 		return
