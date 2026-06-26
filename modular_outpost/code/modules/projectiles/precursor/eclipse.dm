@@ -17,8 +17,6 @@
 	recoil_mode = 0
 	charge_meter = 1
 
-	move_delay = 0
-
 	charge_cost = 80
 
 	reload_time = 10

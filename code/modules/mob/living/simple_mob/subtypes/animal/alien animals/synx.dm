@@ -281,7 +281,7 @@
 	overdose = REAGENTS_OVERDOSE * 4 //But takes a lot to OD
 	wiki_flag = WIKI_SPOILER // Outpost 21 edit - Hide this on the wiki
 
-/datum/reagent/inaprovaline/synxchem/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/inaprovaline/synxchem/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien != IS_DIONA)
 		if(prob(8))
 			M.custom_pain("You [pick("feel numb!","feel dizzy and heavy.","feel strange!")]",60)
@@ -302,7 +302,7 @@
 	overdose = REAGENTS_OVERDOSE * 20 //it's all fake. But having nanomachines move through you is not good at a certain amount.
 	wiki_flag = WIKI_SPOILER // Outpost 21 edit - Hide this on the wiki
 
-/datum/reagent/inaprovaline/synxchem/holo/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/inaprovaline/synxchem/holo/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien != IS_DIONA)
 		if(prob(5))
 			M.custom_pain("You feel no pain!",60)
@@ -325,7 +325,7 @@
 	overdose = REAGENTS_OVERDOSE * 200
 	wiki_flag = WIKI_SPOILER // Outpost 21 edit - Hide this on the wiki
 
-/datum/reagent/inaprovaline/synxchem/clown/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/inaprovaline/synxchem/clown/affect_blood(mob/living/carbon/M, alien, removed)
 	M.adjustToxLoss(0.01)
 	playsound(M.loc, 'sound/items/bikehorn.ogg', 50, 1)
 	M.adjustBruteLoss(-2)//healing brute
@@ -353,7 +353,7 @@
 		//Since Halloss is not "real" damage this should not cause death
 */
 
-/datum/reagent/inaprovaline/synxchem/overdose(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/inaprovaline/synxchem/overdose(mob/living/carbon/M, alien, removed)
 	..()
 	if(alien != IS_DIONA)
 		M.make_dizzy(10)
@@ -363,10 +363,10 @@
 			M.AdjustParalysis(1)
 
 
-/datum/reagent/inaprovaline/synxchem/holo/overdose(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/inaprovaline/synxchem/holo/overdose(mob/living/carbon/M, alien, removed)
 	return
 
-/datum/reagent/inaprovaline/synxchem/clown/overdose(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/inaprovaline/synxchem/clown/overdose(mob/living/carbon/M, alien, removed)
 	return
 
 
@@ -376,7 +376,7 @@
 //////////////////////////////////////////////////////////////////////////////////////
 // nevermind. I added any roleplay flavor weird fur mechanics to happen when you touch or attack the synx.
 
-/mob/living/simple_mob/animal/synx/apply_melee_effects(var/atom/A) //Re-adding this for AI synx
+/mob/living/simple_mob/animal/synx/apply_melee_effects(atom/A) //Re-adding this for AI synx
 	if(stomach_distended) //Hacky burn damage code
 		if(isliving(A)) //Only affect living mobs, should include silicons. This could be expanded to deal special effects to acid-vulnerable objects.
 			var/mob/living/L = A
@@ -411,7 +411,7 @@
 
 
 
-/mob/living/simple_mob/animal/synx/hear_say(message,verb,language,fakename,isItalics,var/mob/living/speaker)
+/mob/living/simple_mob/animal/synx/hear_say(message,verb,language,fakename,isItalics,mob/living/speaker)
 	. = ..()
 	if(!message || !speaker)    return
 	if (speaker == src) return
@@ -624,7 +624,7 @@
 				add_overlay("[icon_state]_[belly_class]-[vs_fullness]")
 
 
-/mob/living/simple_mob/animal/synx/proc/build_icons(var/random)
+/mob/living/simple_mob/animal/synx/proc/build_icons(random)
 	glow_toggle = has_collar // Outpost 21 - tie glow to having a collar!
 	cut_overlays()
 	if(stat == DEAD)

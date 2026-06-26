@@ -284,12 +284,12 @@ modular computers
 
 /datum/gear/utility/dufflebag/eng
 	display_name = "engineering dufflebag"
-	allowed_roles = list(JOB_CHIEF_ENGINEER,JOB_ATMOSPHERIC_TECHNICIAN,JOB_ENGINEER)
+	allowed_roles = list(JOB_CHIEF_ENGINEER,JOB_ATMOSPHERIC_TECHNICIAN,JOB_ENGINEER,JOB_ROBOTICIST) // Outpost 21 edit - Robotics is engineering here
 	path = /obj/item/storage/backpack/dufflebag/eng
 
 /datum/gear/utility/dufflebag/sci
 	display_name = "science dufflebag"
-	allowed_roles = list(JOB_RESEARCH_DIRECTOR,JOB_SCIENTIST,JOB_ROBOTICIST,JOB_XENOBIOLOGIST,JOB_XENOBOTANIST)
+	allowed_roles = list(JOB_RESEARCH_DIRECTOR,JOB_SCIENTIST,JOB_XENOBIOLOGIST,JOB_XENOBOTANIST, JOB_ELECTROPHYSICIST) // Outpost 21 edit - Robotics is engineering here
 	path = /obj/item/storage/backpack/dufflebag/sci
 
 /datum/gear/utility/dufflebag/explorer

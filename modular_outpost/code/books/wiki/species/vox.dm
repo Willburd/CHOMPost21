@@ -19,8 +19,16 @@
 
 <p>Vox are highly secretive. Their history and culture are their own, and a vox will never freely give such information. A vox will lie in a hundred new ways before they will say the truth, and only so that you do not even believe that the truth isn't just another lie. As all vox know the capabilities of their kind, and fear or respect them enough to not incur its wrath. Vox technology is highly advanced, far beyond anything created by the other known species. Where the vox originally came from is unknown, even to the common vox.</p>
 
-<p>Vox live on colony ships. Travelling the galaxy through advanced methods of bluespace translocation. No known encounter with a vox colony ship has ever been recorded, or survived. The vox are willing to erase entire colonies and planets if it would expose their kind. It is a mercy that they avoid most of Solgov's space. Vox raiders however are another story. Vox that have been either tasked with or exiled from the colony to live a life of scavenging and piracy. Often vox raiders for small tightknit groups, and operate in packs. Three to four well armed vox could give even a wealthy corporate security team a run for their money... and often do.</p>
+<p>Vox live on colony ships known as arkships. Travelling the galaxy through advanced methods of bluespace translocation. No known encounter with an arkship has ever been recorded, or survived. The vox are willing to erase entire colonies and planets if it would expose their kind. It is a mercy that they avoid most of Solgov's space. Vox raiders however are another story. Vox that have been either tasked with or exiled from the colony to live a life of scavenging and piracy. Often vox raiders form small tightknit groups, and operate in packs. Three to four well armed vox could give even a wealthy corporate security team a run for their money... and often do.</p>
 
-<p>Vox social structure is another secret unspoken to those who are not also vox. Even then it is rarely spoken of, as such knowledge is expected to be known already. Vox society is stratified into the primary castes, TODO </p>
+<p>Vox social structure is another secret unspoken to those who are not vox. Even then it is rarely spoken of, as such knowledge is expected to be known already. Vox society is stratified into the primary castes: Worker, Armalis, and Auralis. Auralis vox are not directly part of vox society, and serve a more critical function above it.</p>
+
+<p>Almost all vox fall into the Worker caste, where their lives and work are predestined from before birth. Vox are purpose grown creatures. A vox is born into its function, like a borg is built. All worker vox are sexless, and do not participate in vox reproduction. They exist to support the colonies existence, and are ultimately considered expendable by the castes above them.</p>
+
+<p>Vox Armalis are larger, purpose grown for command and hardened by years of simulation and physical training. Vox Armalis are psychically sensitive and capable of telepathy even with other species; However doing so is extremely damaging to the minds of other species. Vox Armalis are part of the vox reproductive cycle along side vox Auralis, but serve primarily as the coordinators of an arkship, directing their movements and functions. While workers perform the tasks needed to do so. The highest ranking vox Armalis </p>
+
+<p>Vox Auralis are an exception to vox society, and are massive organisms that are entwined with the structure of an arkship. Vox Auralis are considered gods by all other vox, and their existence is a highly guarded secret. A portion of their body forms the reproductive life tree where new vox are grown in pods through the mating of a vox Auralis and Armalis.</p>
+
+
 
 "},

@@ -188,7 +188,7 @@
 	add_ai_verbs(src)
 
 // Outpost 21 edit(port) begin - Allow AI to hear ambiences
-/mob/living/silicon/ai/handle_ambience(var/forced) // If you're in an ambient area and have not moved out of it for x time as configured per-client, and do not have it disabled, we're going to play ambience again to you, to help break up the silence.
+/mob/living/silicon/ai/handle_ambience(forced) // If you're in an ambient area and have not moved out of it for x time as configured per-client, and do not have it disabled, we're going to play ambience again to you, to help break up the silence.
 	var/pref = read_preference(/datum/preference/numeric/ambience_freq)
 	if(!pref)
 		return

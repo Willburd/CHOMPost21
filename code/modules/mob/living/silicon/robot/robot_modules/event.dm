@@ -9,7 +9,7 @@
 /obj/item/robot_module/robot/malf/lost
 	name = "lost robot module"
 
-/obj/item/robot_module/robot/malf/lost/create_equipment(var/mob/living/silicon/robot/robot)
+/obj/item/robot_module/robot/malf/lost/create_equipment(mob/living/silicon/robot/robot)
 	..()
 	// Sec
 	src.modules += new /obj/item/melee/robotic/baton/shocker(src)
@@ -40,6 +40,13 @@
 	src.modules += new /obj/item/dogborg/sleeper/lost(src)
 	src.modules += new /obj/item/dogborg/pounce(src)
 
+	// Outpost 21 edit begin - malf borgs automatically unlink
+	robot.disconnect_from_ai()
+	robot.scrambledcodes = TRUE
+	if(robot.camera)
+		robot.camera.clear_all_networks()
+	// Outpost 21 edit end
+
 /obj/item/robot_module/robot/malf/lost/adjust_gps(obj/item/gps/robot/robot_gps)
 	robot_gps.long_range = TRUE
 	robot_gps.hide_signal = TRUE
@@ -55,7 +62,7 @@
 /obj/item/robot_module/robot/malf/gravekeeper
 	name = "gravekeeper robot module"
 
-/obj/item/robot_module/robot/malf/gravekeeper/create_equipment(var/mob/living/silicon/robot/robot)
+/obj/item/robot_module/robot/malf/gravekeeper/create_equipment(mob/living/silicon/robot/robot)
 	..()
 	// For fending off animals and looters
 	src.modules += new /obj/item/melee/robotic/baton/shocker(src)

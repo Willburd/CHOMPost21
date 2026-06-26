@@ -52,7 +52,7 @@
 		host.add_ventcrawl(vent_found)
 		to_chat(host, "<span class='info'>You are now a Jil, a fluffy little thief that seeks to steal anything you can grab, and bring it back to your nest. Be warned, the crew might not like you taking their things.</span>")
 
-/mob/observer/dead/proc/alert_of_death(var/datum/transhuman/mind_record/MR)
+/mob/observer/dead/proc/alert_of_death(datum/transhuman/mind_record/MR)
 	ASSERT(MR)
 	if(!client)	return
 

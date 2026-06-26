@@ -7,7 +7,7 @@
 // Imagine copypasting code again!
 
 /** Creates a thinking indicator over the mob. Note: Prefs are checked in /client/proc/start_thinking() */
-/obj/effect/overlay/aiholo/proc/create_thinking_indicator(var/cur_bubble_appearance)
+/obj/effect/overlay/aiholo/proc/create_thinking_indicator(cur_bubble_appearance)
 	if(active_thinking_indicator || active_typing_indicator)
 		return FALSE
 	active_thinking_indicator = mutable_appearance('icons/mob/talk_vr.dmi', "[cur_bubble_appearance]_thinking", FLOAT_LAYER)
@@ -22,7 +22,7 @@
 	active_thinking_indicator = null
 
 /** Creates a typing indicator over the mob. Note: Prefs are checked in /client/proc/start_typing() */
-/obj/effect/overlay/aiholo/proc/create_typing_indicator(var/cur_bubble_appearance)
+/obj/effect/overlay/aiholo/proc/create_typing_indicator(cur_bubble_appearance)
 	if(active_typing_indicator || active_thinking_indicator)
 		return FALSE
 	active_typing_indicator = mutable_appearance('icons/mob/talk_vr.dmi', "[cur_bubble_appearance]_typing", ABOVE_MOB_LAYER)

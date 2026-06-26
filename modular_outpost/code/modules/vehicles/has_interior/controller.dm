@@ -499,6 +499,9 @@
 /obj/vehicle/has_interior/MouseDrop_T(atom/movable/C, mob/user)
 	if(user.buckled || user.stat || user.restrained() || !Adjacent(user) || !user.Adjacent(C) || !istype(C) || (user == C && !user.canmove))
 		return 0
+	if(ismecha(user.loc))
+		to_chat(user, span_warning("\The [user.loc] is too large to fit inside!"))
+		return 0
 	if(!Adjacent(user))
 		return 0
 	if(entrance_hatch == null || !entrance_hatch.locked)
@@ -513,7 +516,7 @@
 /obj/vehicle/has_interior/attack_hand(mob/user)
 	// nothing YET, used for attacks
 
-/obj/vehicle/has_interior/attack_generic(var/mob/user, var/damage, var/attack_message)
+/obj/vehicle/has_interior/attack_generic(mob/user, damage, attack_message)
 	if(user.client && user.a_intent == I_HELP)
 		attack_hand(user)
 		return
@@ -523,7 +526,7 @@
 		return
 	. = ..()
 
-/obj/vehicle/has_interior/proc/enter_interior(var/atom/movable/C)
+/obj/vehicle/has_interior/proc/enter_interior(atom/movable/C)
 	// moves atom to interior access point of tank
 	if(!istype(entrypos,/turf/))
 		C.visible_message("<span class='notice'>Interior inaccessible...</span>")

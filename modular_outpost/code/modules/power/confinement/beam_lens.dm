@@ -3,7 +3,7 @@
 	desc = "Focuses confined energy beams from narrow-band to wide-band. Requires anchors on both sides for support, and must face correctly in order to function."
 
 // Only needs anchors
-/obj/structure/confinement_beam_generator/lens/process_tool_hit(var/obj/item/O, var/mob/user)
+/obj/structure/confinement_beam_generator/lens/process_tool_hit(obj/item/O, mob/user)
 	if(!(O) || !(user))
 		return FALSE
 	if(!ismob(user) || !isobj(O))

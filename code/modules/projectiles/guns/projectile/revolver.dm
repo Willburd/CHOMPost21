@@ -37,7 +37,7 @@
 		return
 	return ..()
 
-/obj/item/gun/projectile/revolver/load_ammo(var/obj/item/A, mob/user)
+/obj/item/gun/projectile/revolver/load_ammo(obj/item/A, mob/user)
 	chamber_offset = 0
 	return ..()
 
@@ -170,7 +170,6 @@
 	icon_state = "deckard-empty"
 	caliber = ".38"
 	ammo_type = /obj/item/ammo_casing/a38
-	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 
 /obj/item/gun/projectile/revolver/deckard/emp
 	ammo_type = /obj/item/ammo_casing/a38/emp
@@ -183,7 +182,7 @@
 	else
 		icon_state = "deckard-empty"
 
-/obj/item/gun/projectile/revolver/deckard/load_ammo(var/obj/item/A, mob/user)
+/obj/item/gun/projectile/revolver/deckard/load_ammo(obj/item/A, mob/user)
 	if(istype(A, /obj/item/ammo_magazine))
 		flick("deckard-reload",src)
 	..()

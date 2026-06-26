@@ -76,7 +76,7 @@ GLOBAL_DATUM_INIT(openspace_backdrop_one_for_all, /atom/movable/openspace_backdr
 	AddElement(/datum/element/turf_z_transparency, FALSE)
 	update_icon()
 
-/turf/simulated/open/Entered(var/atom/movable/mover, var/atom/oldloc)
+/turf/simulated/open/Entered(atom/movable/mover, atom/oldloc)
 	..()
 	mover.fall()
 
@@ -85,17 +85,22 @@ GLOBAL_DATUM_INIT(openspace_backdrop_one_for_all, /atom/movable/openspace_backdr
 		A.fall()
 
 // Called when thrown object lands on this turf.
-/turf/simulated/open/hitby(var/atom/movable/source, datum/thrownthing/throwingdatum)
+/turf/simulated/open/hitby(atom/movable/source, datum/thrownthing/throwingdatum)
 	. = ..()
 	source.fall()
 
 /turf/simulated/open/examine(mob/user, distance, infix, suffix)
 	. = ..()
 	if(Adjacent(user))
-		var/depth = 1
-		for(var/T = GetBelow(src); isopenspace(T); T = GetBelow(T))
-			depth += 1
-		. += "It is about [depth] levels deep."
+		// Outpost 21 edit begin - Lethal fall z levels
+		if(is_lethal_fall())
+			. += span_danger("It looks extremely deep...")
+		else
+		// Outpost 21 edit end
+			var/depth = 1
+			for(var/T = GetBelow(src); isopenspace(T); T = GetBelow(T))
+				depth += 1
+			. += "It is about [depth] levels deep."
 
 /turf/simulated/open/update_icon()
 	cut_overlays()

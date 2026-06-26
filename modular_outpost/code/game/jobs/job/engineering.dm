@@ -1,18 +1,18 @@
 /datum/job/chief_engineer/New()
 	. = ..()
-	access |= list(ACCESS_ROBOTICS, ACCESS_CHANGE_IDS)
-	minimal_access |= list(ACCESS_ROBOTICS, ACCESS_CHANGE_IDS)
+	access |= list(ACCESS_ROBOTICS, ACCESS_CHANGE_IDS, ACCESS_ELECTROPHYS)
+	minimal_access |= list(ACCESS_ROBOTICS, ACCESS_CHANGE_IDS, ACCESS_ELECTROPHYS)
 
 
 /datum/job/engineer/New()
 	. = ..()
-	access |= list(ACCESS_ROBOTICS, ACCESS_ATMOSPHERICS)
+	access |= list(ACCESS_ROBOTICS, ACCESS_ATMOSPHERICS, ACCESS_ELECTROPHYS)
 	alt_titles |= list(	JOB_ALT_SHIPBREAKER = /datum/alt_title/ship_breaker)
 
 
 /datum/job/atmos/New()
 	. = ..()
-	access |= list(ACCESS_ROBOTICS)
+	access |= list(ACCESS_ROBOTICS, ACCESS_ELECTROPHYS)
 	alt_titles |= list(JOB_ALT_DISPOSALS_TECHNICIAN = /datum/alt_title/disposals_tech)
 
 

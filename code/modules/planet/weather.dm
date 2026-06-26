@@ -9,7 +9,7 @@
 	var/list/roundstart_weather_chances = list() // Assoc list of weather identifiers and their odds of being picked to happen at roundstart.
 	var/next_weather_shift = null // world.time when the weather subsystem will advance the forecast.
 	var/imminent_weather_shift = null // world.time when weather will shift towards pre-set imminent weather type.
-	var/list/forecast = list() // A list of what the weather will be in the future. This allows it to be pre-determined and planned around.
+	VAR_PROTECTED/list/forecast = list() // A list of what the weather will be in the future. This allows it to be pre-determined and planned around.
 
 	// Holds the weather icon, using vis_contents. Documentation says an /atom/movable is required for placing inside another atom's vis_contents.
 	var/atom/movable/weather_visuals/visuals = null
@@ -19,7 +19,7 @@
 
 	var/locked = FALSE // Outpost 21 edit - Locking weather
 
-/datum/weather_holder/New(var/source)
+/datum/weather_holder/New(source)
 	..()
 	our_planet = source
 	for(var/A in allowed_weather_types)
@@ -43,7 +43,7 @@
 	T.vis_contents -= visuals
 	T.vis_contents -= special_visuals
 
-/datum/weather_holder/proc/change_weather(var/new_weather)
+/datum/weather_holder/proc/change_weather(new_weather)
 	var/old_light_modifier = null
 	var/datum/weather/old_weather = null
 	if(current_weather)
@@ -95,7 +95,7 @@
 
 // Used to determine what the weather will be soon, in a semi-random fashion.
 // The forecast is made by calling this repeatively, from the bottom (highest index) of the forecast list.
-/datum/weather_holder/proc/get_next_weather(var/datum/weather/W)
+/datum/weather_holder/proc/get_next_weather(datum/weather/W)
 	if(!current_weather) // At roundstart, choose a suitable initial weather.
 		return pickweight(roundstart_weather_chances)
 	return pickweight(W.transition_chances)
@@ -141,12 +141,12 @@
 	forecast.Cut()
 	build_forecast()
 
-// Outpost 21 edit(port) being - Forecast accessors
 /datum/weather_holder/proc/get_forecast_data()
+	// Outpost 21 edit begin - Locking weather
 	if(locked)
 		return list(current_weather,current_weather,current_weather) // locked in
+	// Outpost 21 edit end
 	return forecast
-// Outpost 21 edit end
 
 /datum/weather_holder/proc/update_icon_effects()
 	visuals.icon_state = current_weather.icon_state

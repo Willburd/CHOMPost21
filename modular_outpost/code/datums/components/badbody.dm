@@ -139,7 +139,7 @@
 		SShaunting.influence(HAUNTING_GHOSTS)
 
 // Hacky, but I refused to rewrite say code just for this
-/datum/component/badbody/proc/deadsay(var/speak)
+/datum/component/badbody/proc/deadsay(speak)
 	if(isbelly(body.loc))
 		var/obj/belly/B = body.loc
 		if(copytext(speak, 1, 2) == "*")

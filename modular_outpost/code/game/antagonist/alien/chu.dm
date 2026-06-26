@@ -13,6 +13,7 @@ GLOBAL_DATUM(chus, /datum/antagonist/chu)
 	antag_sound = 'sound/voice/hiss2.ogg'
 	role_type = BE_ALIEN
 	antag_indicator = "chuinfestation"
+	landmark_id = "Chu"
 	flags = ANTAG_OVERRIDE_MOB | ANTAG_RANDSPAWN | ANTAG_OVERRIDE_JOB | ANTAG_VOTABLE | ANTAG_IMPLANT_IMMUNE
 	victory_text = "Chu win - more later"
 	loss_text = "Chu lost - more later!"
@@ -26,7 +27,7 @@ GLOBAL_DATUM(chus, /datum/antagonist/chu)
 	GLOB.chus = src
 	infestationglobalgoal = rand(15,25); // lowpop
 
-/datum/antagonist/chu/create_objectives(var/datum/mind/chu)
+/datum/antagonist/chu/create_objectives(datum/mind/chu)
 	if(!..())
 		return
 
@@ -34,7 +35,7 @@ GLOBAL_DATUM(chus, /datum/antagonist/chu)
 	chu_objective.owner = chu
 	chu.objectives += chu_objective
 
-/datum/antagonist/chu/equip(var/mob/living/carbon/human/chu_mob)
+/datum/antagonist/chu/equip(mob/living/carbon/human/chu_mob)
 	if(!..())
 		return 0
 	// what would a chu even get?

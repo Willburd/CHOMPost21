@@ -13,6 +13,7 @@ GLOBAL_DATUM(synxes, /datum/antagonist/synx)
 	antag_sound = 'sound/rakshasa/Breath1.ogg'
 	role_type = BE_ALIEN
 	antag_indicator = "brainworm"
+	landmark_id = "Synx"
 	flags = ANTAG_OVERRIDE_MOB | ANTAG_RANDSPAWN | ANTAG_OVERRIDE_JOB | ANTAG_VOTABLE | ANTAG_CHOOSE_NAME
 	victory_text = "Synx win - more later"
 	loss_text = "Synx lost - more later!"
@@ -24,7 +25,7 @@ GLOBAL_DATUM(synxes, /datum/antagonist/synx)
 	..()
 	GLOB.synxes = src
 
-/datum/antagonist/synx/create_objectives(var/datum/mind/synx)
+/datum/antagonist/synx/create_objectives(datum/mind/synx)
 	if(!..())
 		return
 
@@ -36,7 +37,7 @@ GLOBAL_DATUM(synxes, /datum/antagonist/synx)
 	consume_objective.owner = synx
 	synx.objectives += consume_objective
 
-/datum/antagonist/synx/equip(var/mob/living/carbon/human/synx_mob)
+/datum/antagonist/synx/equip(mob/living/carbon/human/synx_mob)
 	if(!..())
 		return 0
 	// what would a synx even get?

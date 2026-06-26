@@ -221,6 +221,7 @@ export const SubtabSettings = (props: {
                       {resleeve_lock ? 'Yes' : 'No'}
                     </Button>
                   </LabeledList.Item>
+                  {/* Outpost 21 edit - Backup implant removal
                   <LabeledList.Item label="Spawn With Backup Implant">
                     <Button
                       onClick={() => act('toggle_implant')}
@@ -230,6 +231,7 @@ export const SubtabSettings = (props: {
                       {auto_backup_implant ? 'Yes' : 'No'}
                     </Button>
                   </LabeledList.Item>
+                  */}
                   <LabeledList.Item label="Start With Body Scan">
                     <Button
                       onClick={() => act('toggle_resleeve_scan')}

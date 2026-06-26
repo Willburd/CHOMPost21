@@ -46,6 +46,16 @@
 	departments = list(DEPARTMENT_COMMAND)
 	selection_color = "#1D1D4F"
 
+/datum/job/lawyer/New()
+	. = ..()
+	alt_titles |= list(JOB_ALT_INTERNAL_AFFAIRS_DAMAGE_ASSESSMENT = /datum/alt_title/ia_damage_assesment, JOB_ALT_INTERNAL_AFFAIRS_CASUALTY_ANALYST = /datum/alt_title/ia_casualty_analyst)
+
+/datum/alt_title/ia_damage_assesment
+	title = JOB_ALT_INTERNAL_AFFAIRS_DAMAGE_ASSESSMENT
+
+/datum/alt_title/ia_casualty_analyst
+	title = JOB_ALT_INTERNAL_AFFAIRS_CASUALTY_ANALYST
+
 
 /datum/job/entertainer/New()
 	. = ..()

@@ -20,6 +20,10 @@
 	name = "Zombie - Lateload"
 	antag_id = MODE_ZOMBIE
 
+/obj/effect/landmark/late_antag/borer
+	name = "Borer - Lateload"
+	antag_id = MODE_BORER
+
 /obj/effect/landmark/redspacemonsterspawn
 	name = "redmonster"
 	delete_me = TRUE
@@ -286,7 +290,7 @@
 		return
 
 	// creates stuff like ruptured gas tanks, and landmines
-	switch(rand(1,3))
+	switch(rand(1,4))
 		if(1)
 			var/newpath = pick(
 				/obj/effect/mine/emp,
@@ -302,28 +306,27 @@
 				/obj/effect/mine/confetti,
 				/obj/effect/mine/lube,
 				/obj/effect/mine/dnascramble)
-			var/obj/effect/mine/M = new newpath()
+			var/obj/effect/mine/M = new newpath(T)
 			if(prob(20))
 				M.camo_net = TRUE
 				M.alpha = 50 // Wish this was part of a proc instead of magic num
-			M.loc = src.loc
 
 		if(2)
 			var/turf/srcturf = get_turf(src)
 			if(srcturf.outdoors == OUTDOORS_NO)
 				if(prob(20))
 					// rare spawn!
-					var/obj/item/lego/L = new /obj/item/lego()
-					L.loc = src.loc
+					new /obj/item/lego(T)
 				else
-					var/obj/item/assembly/mousetrap/armed/M = new /obj/item/assembly/mousetrap/armed();
-					M.loc = src.loc
+					new /obj/item/assembly/mousetrap/armed(T);
 
 		if(3)
-			var/obj/item/beartrap/M = new /obj/item/beartrap();
+			var/obj/item/beartrap/M = new /obj/item/beartrap(T);
 			M.deployed = TRUE
 			M.update_icon()
-			M.loc = src.loc
+
+		if(4)
+			new /obj/item/material/barbedwire/glass/start_active(T)
 
 
 

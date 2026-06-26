@@ -106,7 +106,6 @@
 	cell_type = /obj/item/cell/device/weapon/recharge/alien // Self charges.
 	modifystate = "alienpistol"
 	battery_lock = 1 //CHOMPedit adds battery lock.
-	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 
 /datum/category_item/catalogue/anomalous/precursor_a/alien_pistol
 	name = "Precursor Alpha Weapon - Appendageheld Laser"
@@ -183,7 +182,7 @@
 	if(remainingshots || failurechance)
 		desc = "A rare weapon, produced by the Lunar Arms Company around 2105 - one of humanity's first wholly extra-terrestrial weapon designs. It's been reasonably well-preserved."
 
-/obj/item/gun/energy/captain/special_check(var/mob/user)
+/obj/item/gun/energy/captain/special_check(mob/user)
 	if(remainingshots)
 		remainingshots -= 1
 		if(!remainingshots) //you've shot your load, sonny
@@ -194,7 +193,7 @@
 		return 0
 	return ..()
 
-/obj/item/gun/energy/captain/proc/burnout(var/mob/user)
+/obj/item/gun/energy/captain/proc/burnout(mob/user)
 	//your gun is now rendered useless
 	projectile_type = /obj/item/projectile/beam/practice //just in case you somehow manage to get it to fire again, its beam type is set to one that sucks
 	power_supply.charge = 0
@@ -207,7 +206,7 @@
 	sparks.start()
 	update_icon()
 
-/obj/item/gun/energy/captain/proc/malfunction(var/mob/user)
+/obj/item/gun/energy/captain/proc/malfunction(mob/user)
 	var/screwup = rand(1,10)
 	switch(screwup)
 		if(1 to 5) //50% of just draining the battery and making future malfunctions more likely
@@ -340,7 +339,7 @@
 	set name = "Use Scope"
 	set popup_menu = 1
 
-	toggle_scope(2.0)
+	toggle_scope(usr, 2.0)
 
 /*
  * Laser Scattergun (proof of concept)
@@ -441,7 +440,7 @@
 	set name = "Aim Down Sights"
 	set popup_menu = 1
 
-	toggle_scope(scope_multiplier)
+	toggle_scope(usr, scope_multiplier)
 
 /obj/item/gun/energy/monorifle/combat
 	name = "combat mono-rifle"

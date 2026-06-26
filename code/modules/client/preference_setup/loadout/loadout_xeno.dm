@@ -234,7 +234,7 @@
 /datum/gear/uniform/dept/undercoat/research
 	display_name = "scientist undercoat (Teshari)"
 	path = /obj/item/clothing/under/teshari/undercoat/jobs/sci
-	allowed_roles = list(JOB_RESEARCH_DIRECTOR,JOB_SCIENTIST, JOB_ROBOTICIST, JOB_XENOBIOLOGIST, JOB_XENOBOTANIST)
+	allowed_roles = list(JOB_RESEARCH_DIRECTOR,JOB_SCIENTIST, JOB_ROBOTICIST, JOB_XENOBIOLOGIST, JOB_XENOBOTANIST, JOB_ELECTROPHYSICIST)
 
 /datum/gear/uniform/dept/undercoat/robo
 	display_name = "roboticist undercoat (Teshari)"
@@ -423,7 +423,7 @@
 /datum/gear/suit/dept/cloak/research
 	display_name = "scientist cloak (Teshari)"
 	path = /obj/item/clothing/suit/storage/teshari/cloak/jobs/sci
-	allowed_roles = list(JOB_RESEARCH_DIRECTOR,JOB_SCIENTIST, JOB_ROBOTICIST, JOB_XENOBIOLOGIST, JOB_XENOBOTANIST)
+	allowed_roles = list(JOB_RESEARCH_DIRECTOR,JOB_SCIENTIST, JOB_ROBOTICIST, JOB_XENOBIOLOGIST, JOB_XENOBOTANIST, JOB_ELECTROPHYSICIST)
 
 /datum/gear/suit/dept/cloak/research/New()
 	..()
@@ -867,3 +867,11 @@
 	sort_category = "Xenowear"
 	whitelisted = SPECIES_ZADDAT
 	allowed_roles = list(JOB_CHIEF_ENGINEER,JOB_ATMOSPHERIC_TECHNICIAN, JOB_ENGINEER)
+
+/datum/gear/uniform/anthro_skeleton
+	path = /obj/item/clothing/under/anthro_skeleton
+	display_name = "Anthro Skeleton"
+	description = "A standardized anthropomorphic skeleton commonly used by prometheans who struggle to maintain their outer body shape. It's made of plastic, just like the trusty model in the exam room."
+	slot = slot_w_uniform
+	whitelisted = SPECIES_PROMETHEAN
+	sort_category = "Xenowear"

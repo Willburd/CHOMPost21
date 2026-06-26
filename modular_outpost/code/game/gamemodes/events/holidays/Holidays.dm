@@ -11,7 +11,7 @@
 
 //////////////////////////////////////////////////////////////////////////////
 // Proc decides what spawns for all the holiday event objects ---------------------------------------------------------
-/proc/Holiday_Event_Spawn_Object(var/turf/here)
+/proc/Holiday_Event_Spawn_Object(turf/here)
 	var/MM	=	text2num(time2text(world.timeofday, "MM")) 	// get the current month
 	var/DD	=	text2num(time2text(world.timeofday, "DD")) 	// get the current day
 	switch(MM)

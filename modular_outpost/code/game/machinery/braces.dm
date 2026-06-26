@@ -3,7 +3,7 @@
 /obj/item/tool/crowbar/brace_jack
 	name = "maintenance jack"
 	desc = "A special crowbar that can be used to safely remove airlock braces from airlocks."
-	w_class = ITEMSIZE_SMALL
+	w_class = ITEMSIZE_NORMAL
 	icon = 'modular_outpost/icons/obj/tools.dmi'
 	icon_state = "maintenance_jack"
 	throwforce = 7
@@ -100,7 +100,7 @@
 				to_chat(user, "You repair some dents on \the [src].")
 
 
-/obj/item/airlock_brace/proc/lock_brace(var/obj/machinery/door/airlock/airlk)
+/obj/item/airlock_brace/proc/lock_brace(obj/machinery/door/airlock/airlk)
 	if(!airlk || airlock)
 		// airlock doesn't exist, or already on an airlock!
 		return
@@ -127,7 +127,7 @@
 	update_icon()
 
 
-/obj/item/airlock_brace/proc/unlock_brace(var/mob/user)
+/obj/item/airlock_brace/proc/unlock_brace(mob/user)
 	if(!airlock)
 		return
 	playsound( src, 'sound/machines/door/airlockforced.ogg', 50, 1)

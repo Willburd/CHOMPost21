@@ -2,7 +2,7 @@
 #define MODE_CHU "chuinfestation"
 #define MODE_SYNX "synxhunt"
 #define MODE_ZOMBIE "zombies"
-#define MODE_RUSTDRONE "rustdrone"
+#define MODE_RUSTDRONE "Rust Drone"
 
 #define BE_TRAITOR    0x1
 #define BE_OPERATIVE  0x2

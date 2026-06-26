@@ -12,7 +12,7 @@
 	scannable = SCANNABLE_BENEFICIAL
 	ppe_flags = REAGENT_PPE_SPLASH
 
-/datum/reagent/hemocyanin/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/hemocyanin/affect_blood(mob/living/carbon/M, alien, removed)
 	if(M.species.poison_type != GAS_O2)
 		M.adjustToxLoss(removed * 9)
 	else if(alien != IS_DIONA)
@@ -23,7 +23,7 @@
 	holder.remove_reagent(REAGENT_ID_DEXALIN, 3 * removed)
 	holder.remove_reagent(REAGENT_ID_DEXALINP, 3 * removed)
 
-/datum/reagent/hemocyanin/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/hemocyanin/affect_ingest(mob/living/carbon/M, alien, removed)
 	if(alien == IS_DIONA)
 		return
 	// why did you eat this?
@@ -44,7 +44,7 @@
 
 	ppe_flags = REAGENT_PPE_SPLASH
 
-/datum/reagent/toxin/fenthol/proc/fenthol_effect(var/mob/living/carbon/M, chem_effective)
+/datum/reagent/toxin/fenthol/proc/fenthol_effect(mob/living/carbon/M, chem_effective)
 	M.add_chemical_effect(CE_PAINKILLER, 400 * chem_effective)
 	M.add_chemical_effect(CE_NARCOTICS, 1)
 	M.AdjustConfused(-10 * chem_effective)
@@ -54,7 +54,7 @@
 	M.make_jittery(-12 * chem_effective)
 	M.stuttering = max((M.stuttering - (12 * chem_effective)),0)
 
-/datum/reagent/toxin/fenthol/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/toxin/fenthol/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien == IS_DIONA || alien == IS_VOX)
 		return
 	fenthol_effect(M, 1 * M.species.chem_strength_pain)
@@ -64,7 +64,7 @@
 		return
 	fenthol_effect(M, 1 * M.species.chem_strength_pain * 0.2)
 
-/datum/reagent/toxin/fenthol/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/toxin/fenthol/affect_ingest(mob/living/carbon/M, alien, removed)
 	if(alien == IS_DIONA || alien == IS_VOX)
 		return
 	fenthol_effect(M, 1 * M.species.chem_strength_pain * 0.6)

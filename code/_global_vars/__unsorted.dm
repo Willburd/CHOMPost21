@@ -69,7 +69,7 @@ GLOBAL_LIST_INIT(malf_module_types, list("Lost", "Gravekeeper"))
 GLOBAL_LIST_INIT(antag_module_types, list("Protector", "Mechanist", "Combat Medic", "Ninja"))
 
 // List of whitelisted modules
-GLOBAL_LIST_INIT(whitelisted_module_types, list("Combat", "Lost", "Gravekeeper", "Protector", "Mechanist", "Combat Medic", "Ninja"))
+GLOBAL_LIST_INIT(whitelisted_module_types, list("Lost", "Gravekeeper", "Protector", "Mechanist", "Combat Medic", "Ninja")) // Outpost 21 edit - Removed "Combat" from whitelisted modules
 
 // Bomb cap!
 GLOBAL_VAR_INIT(max_explosion_range, 14)

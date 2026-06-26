@@ -2,7 +2,7 @@
 // Vore management panel for players
 //
 
-#define STATION_PREF_NAME "Chomp" // CHOMPEdit
+#define STATION_PREF_NAME "Outpost" // Outpost 21 edit - Station name
 #define VORE_BELLY_TAB 0
 #define VORE_INSIDE_TAB 1
 #define SOULCATCHER_TAB 2
@@ -1479,7 +1479,7 @@
 			return TRUE
 	return FALSE
 
-/datum/vore_look/proc/sanitize_fixed_list(var/list/messages, type, delim = "\n\n", limit)
+/datum/vore_look/proc/sanitize_fixed_list(list/messages, type, delim = "\n\n", limit)
 	if(!limit)
 		CRASH("[type] set message called without limit!")
 	VPPREF_MESSAGE_SANITY(type)

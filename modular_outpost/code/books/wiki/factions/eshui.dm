@@ -2,6 +2,8 @@
 <h1>Eshui</h1>
 <img class='_wikiimage' src=\ref['html/images/outpost/eslogo.png']>
 
+<center><b>Breathing new life into the universe.</b></center>
+
 <p>Eshui is a corporate mega-conglomerate operating within Solgov space. Headquartered on Earth in the Sol system. It primarily focuses on its terraforming operations along Solgov's borders. Turning barren, abandoned, or otherwise uninhabited worlds into paradise planets over the span of 50 to 80 years. Then reselling the planets to various governments, corporate, or private buyers. The company operates multiple other smaller divisions, such as medical, sleeve engineering, biotechnology research, and gas giant harvesting.</p>
 
 <p>Due to their operations being isolated primarily to Solgov space, and lacking the size and financial power of larger corporations like Nanotrasen, they are often subject to more strict regulation enforcement. Many corporate policies dryly stating "in compliance with--" before listing the case and reasoning behind some of the many government mandated policies they need to enforce. Because of this, Eshui and other corporations like it in Solgov's sights are often regarded as having higher employee protections and benefits. At the cost of sometimes needed to act more directly on the government's behalf in times of war.</p>

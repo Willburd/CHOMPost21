@@ -37,7 +37,10 @@
 /datum/component/undead_revival/proc/revive_action()
 	if(host.stat != DEAD)
 		return
-	if(!prob(revive_chance)) // Retry later
+	var/belly_forbidden = FALSE
+	if(isbelly(host.loc))
+		belly_forbidden = TRUE
+	if(!prob(revive_chance) || belly_forbidden) // Retry later
 		addtimer(CALLBACK(src, PROC_REF(revive_action)), revive_time + (revive_time * rand(0,1)), TIMER_DELETE_ME)
 		return
 	// Time for fun!

@@ -1,3 +1,6 @@
+/mob/living
+	var/is_holding_breath = FALSE
+
 /mob/living/Initialize(mapload)
 	. = ..()
 
@@ -9,7 +12,7 @@
 	if(C && !C.opened)
 		src.forceMove(C)
 
-/mob/living/proc/slam_grabbed_mob_against_thing(var/obj/item/grab/G)
+/mob/living/proc/slam_grabbed_mob_against_thing(obj/item/grab/G)
 	// null checking for my own sanity, only aggressive grabs headsmash
 	var/mob/living/throw_mob = G.throw_held()
 	if(throw_mob && a_intent == I_HURT && G.state >= GRAB_NECK)
@@ -59,3 +62,30 @@
 
 /mob/living/proc/handle_outpost_hygene()
 	return
+
+/mob/living/carbon/human/verb/hold_breath()
+	set name = "Hold Breath"
+	set category = "IC.Game"
+
+	if(is_holding_breath)
+		stop_holding_breath()
+		return
+	if((mNobreath in mutations) || isSynthetic() || does_not_breathe || !should_have_organ(O_LUNGS))
+		to_chat(src, span_danger("You don't need to hold your breath!"))
+		return
+	if(stat)
+		to_chat(src, span_danger("You must be awake to hold your breath!"))
+		return
+	if(oxyloss > 10)
+		to_chat(src, span_danger("You are too out of breath to hold it!"))
+		return
+	visible_message("\The [src] starts holding their breath!")
+	is_holding_breath = TRUE
+	throw_alert("holding_breath", /atom/movable/screen/alert/holding_breath)
+
+/mob/living/carbon/human/proc/stop_holding_breath()
+	visible_message("\The [src] stops holding their breath!")
+	if(!stat && oxyloss > 10)
+		emote("gasp")
+	is_holding_breath = FALSE
+	clear_alert("holding_breath")

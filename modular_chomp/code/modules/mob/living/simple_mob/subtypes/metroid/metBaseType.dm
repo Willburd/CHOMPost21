@@ -61,6 +61,7 @@
 	meat_type = /obj/item/reagent_containers/food/snacks/metroidmeat
 
 	can_be_drop_prey = FALSE //CHOMP Add
+	devourable = FALSE // Outpost 21 edit - devour forbidden due to how strong vore is
 
 	enzyme_affect = FALSE // Outpost 21 add
 

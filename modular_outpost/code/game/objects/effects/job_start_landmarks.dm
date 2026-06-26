@@ -6,3 +6,5 @@
 	name = "maint_pred"
 /obj/effect/landmark/start/command_officer
 	name = JOB_COMMAND_OFFICER
+/obj/effect/landmark/start/electrophysicist
+	name = JOB_ELECTROPHYSICIST
