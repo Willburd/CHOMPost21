@@ -539,7 +539,7 @@
 	dir = 8
 	},
 /obj/structure/cable/orange{
-	icon_state = "2-8"
+	icon_state = "1-8"
 	},
 /obj/effect/floor_decal/corner/white/bordercorner{
 	dir = 1
@@ -733,8 +733,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/cable/yellow{
-	icon_state = "2-9";
-	dir = 1
+	icon_state = "1-6"
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/power_distribution)
@@ -1267,6 +1266,13 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/asteroidyard/station/access_shaft)
+"cH" = (
+/obj/effect/floor_decal/corner/blue{
+	dir = 10
+	},
+/obj/machinery/elevator_warning,
+/turf/simulated/floor/tiled/old_tile/white,
+/area/offworld/confinementbeam/station/medical_treatment)
 "cI" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -1315,6 +1321,12 @@
 	},
 /turf/simulated/floor/carpet/turcarpet,
 /area/ai)
+"cL" = (
+/obj/machinery/door/airlock/glass_mining{
+	req_one_access = null
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/offworld/asteroidyard/station/halls_storage)
 "cM" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/effect/floor_decal/corner/white{
@@ -1335,6 +1347,10 @@
 	},
 /turf/simulated/floor/tiled/old_tile/white,
 /area/offworld/confinementbeam/station/medical_treatment)
+"cO" = (
+/obj/structure/trash_pile/disable_mouse_spawn,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/airless,
+/area/offworld/asteroidyard/external)
 "cP" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 6
@@ -1376,6 +1392,10 @@
 /obj/machinery/portable_atmospherics/canister/air/airlock,
 /turf/simulated/floor/plating,
 /area/ai_sat/docking_wing)
+"cU" = (
+/obj/random/junk,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/airless,
+/area/offworld/asteroidyard/external)
 "cV" = (
 /obj/effect/floor_decal/corner/brown{
 	dir = 10
@@ -2159,11 +2179,11 @@
 	pixel_x = 5;
 	pixel_y = 28
 	},
-/obj/structure/cable/orange{
-	icon_state = "2-8"
-	},
 /obj/effect/floor_decal/corner/green{
 	dir = 6
+	},
+/obj/structure/cable/orange{
+	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/asteroidyard/station/halls_storage)
@@ -2755,10 +2775,6 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/asteroidyard/station/halls_storage)
-"he" = (
-/obj/structure/sign/warning/vacuum,
-/turf/simulated/wall/r_wall,
-/area/offworld/asteroidyard/station/access_shaft)
 "hf" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -3639,8 +3655,7 @@
 	dir = 10
 	},
 /obj/structure/cable/yellow{
-	icon_state = "6-8";
-	dir = 1
+	icon_state = "4-9"
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/power_distribution)
@@ -4478,8 +4493,7 @@
 /area/offworld/asteroidyard/station/halls_storage)
 "mw" = (
 /obj/structure/cable/yellow{
-	icon_state = "4-10";
-	dir = 1
+	icon_state = "5-8"
 	},
 /turf/simulated/floor/airless,
 /area/offworld/confinementbeam/exterior)
@@ -5320,7 +5334,7 @@
 /area/offworld/asteroidyard/station/bar)
 "pe" = (
 /obj/structure/cable/orange{
-	icon_state = "2-8"
+	icon_state = "1-8"
 	},
 /turf/simulated/floor/water/digestive_enzymes/nanites,
 /area/ai)
@@ -5458,10 +5472,6 @@
 "pF" = (
 /turf/simulated/wall/r_wall,
 /area/offworld/confinementbeam/station/storage)
-"pH" = (
-/obj/structure/sign/warning/internals_required,
-/turf/simulated/wall/r_wall,
-/area/offworld/asteroidyard/station/access_shaft)
 "pI" = (
 /obj/structure/grille,
 /obj/structure/cable/cyan{
@@ -6106,7 +6116,7 @@
 	dir = 1
 	},
 /turf/space,
-/area/offworld/asteroidyard/station/halls_bar)
+/area/offworld/asteroidyard/external)
 "rI" = (
 /turf/simulated/floor/plating,
 /area/ai_sat/atmos)
@@ -6820,8 +6830,7 @@
 /area/offworld/confinementbeam/station/storage)
 "tN" = (
 /obj/structure/cable/yellow{
-	icon_state = "6-8";
-	dir = 1
+	icon_state = "4-9"
 	},
 /turf/simulated/floor/airless,
 /area/offworld/confinementbeam/exterior)
@@ -7205,8 +7214,7 @@
 	dir = 4
 	},
 /obj/structure/cable/yellow{
-	icon_state = "6-8";
-	dir = 1
+	icon_state = "4-9"
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/power_distribution)
@@ -7285,7 +7293,7 @@
 /area/ai_server_room)
 "vC" = (
 /obj/structure/cable/orange{
-	icon_state = "2-8"
+	icon_state = "1-8"
 	},
 /turf/simulated/floor/airless,
 /area/ai_sat/core_external)
@@ -7492,7 +7500,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/cable/orange{
-	icon_state = "2-8"
+	icon_state = "1-8"
 	},
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/techmaint,
@@ -9495,7 +9503,7 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
-/turf/space,
+/turf/simulated/floor/airless,
 /area/offworld/asteroidyard/external)
 "Cu" = (
 /obj/structure/cable/yellow{
@@ -11440,9 +11448,6 @@
 	},
 /turf/simulated/floor,
 /area/offworld/asteroidyard/station/access_shaft)
-"IV" = (
-/turf/space,
-/area/offworld/asteroidyard/station/halls_bar)
 "IW" = (
 /obj/structure/railing{
 	dir = 4
@@ -11992,7 +11997,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/cable/orange{
-	icon_state = "2-8"
+	icon_state = "1-8"
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor/tiled/dark,
@@ -12891,10 +12896,6 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/ai_transit_hub)
-"Ni" = (
-/obj/structure/sign/warning/radioactive,
-/turf/simulated/wall/r_wall,
-/area/offworld/asteroidyard/station/access_shaft)
 "Nj" = (
 /obj/item/radio/beacon,
 /obj/machinery/hologram/holopad,
@@ -14043,13 +14044,13 @@
 /obj/effect/floor_decal/corner/brown{
 	dir = 9
 	},
-/obj/structure/cable/orange{
-	icon_state = "2-8"
-	},
 /obj/machinery/light_switch{
 	pixel_x = -22;
 	pixel_y = -27;
 	dir = 1
+	},
+/obj/structure/cable/orange{
+	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/asteroidyard/station/access_shaft)
@@ -14526,14 +14527,14 @@
 	dir = 4
 	},
 /obj/structure/lattice,
-/turf/space,
+/turf/simulated/floor/airless,
 /area/offworld/asteroidyard/external)
 "RO" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 1
 	},
 /obj/structure/cable/orange{
-	icon_state = "2-8"
+	icon_state = "1-8"
 	},
 /obj/structure/cable/orange{
 	icon_state = "1-2"
@@ -14832,7 +14833,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/space,
+/turf/simulated/floor/airless,
 /area/offworld/asteroidyard/external)
 "SA" = (
 /obj/structure/cable/yellow{
@@ -14918,10 +14919,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/power_distribution)
-"SO" = (
-/obj/structure/sign/warning/internals_required,
-/turf/simulated/wall,
-/area/offworld/asteroidyard/station/access_shaft)
 "SP" = (
 /obj/structure/particle_accelerator/particle_emitter/center,
 /turf/simulated/floor/airless,
@@ -15495,8 +15492,7 @@
 	dir = 1
 	},
 /obj/structure/cable/orange{
-	icon_state = "5-8";
-	dir = 8
+	icon_state = "1-6"
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/power_distribution)
@@ -15734,6 +15730,7 @@
 /obj/effect/floor_decal/corner/orange{
 	dir = 6
 	},
+/obj/machinery/elevator_warning,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/power_distribution)
 "Vf" = (
@@ -15919,8 +15916,7 @@
 	dir = 10
 	},
 /obj/structure/cable/orange{
-	icon_state = "5-8";
-	dir = 4
+	icon_state = "2-9"
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/power_distribution)
@@ -15934,7 +15930,7 @@
 	dir = 1;
 	icon_state = "pipe-c"
 	},
-/turf/space,
+/turf/simulated/floor/airless,
 /area/offworld/asteroidyard/external)
 "VJ" = (
 /obj/structure/cable/yellow{
@@ -31955,7 +31951,7 @@ cu
 uI
 uI
 uI
-uI
+cO
 cu
 cu
 az
@@ -32114,7 +32110,7 @@ dk
 dk
 cu
 cu
-uI
+cO
 uI
 uI
 cu
@@ -32277,9 +32273,9 @@ dk
 cu
 cu
 uI
+cU
 uI
-uI
-uI
+cU
 cu
 uI
 xc
@@ -32438,7 +32434,7 @@ dk
 dk
 cu
 cu
-uI
+cU
 uI
 uI
 uI
@@ -32603,7 +32599,7 @@ cu
 uI
 fY
 uI
-uI
+cU
 cu
 cu
 uI
@@ -32766,7 +32762,7 @@ cu
 uI
 uI
 uI
-uI
+cO
 cu
 cu
 xc
@@ -32925,9 +32921,9 @@ dk
 dk
 cu
 cu
+cO
 uI
-uI
-uI
+cU
 uI
 cu
 cu
@@ -33088,10 +33084,10 @@ dk
 cu
 cu
 az
+cU
 uI
 uI
-uI
-uI
+cU
 cu
 az
 cu
@@ -33573,13 +33569,13 @@ dk
 dk
 dk
 cu
-uI
+cU
 uI
 wG
 uI
 uI
 uI
-uI
+cU
 az
 cu
 cu
@@ -33610,7 +33606,7 @@ rR
 rR
 rR
 rR
-IV
+dk
 dk
 dk
 dk
@@ -33738,11 +33734,11 @@ gN
 cu
 uI
 wG
-uI
+cU
 xc
+cU
 uI
-uI
-uI
+cO
 cu
 cu
 cu
@@ -33772,7 +33768,7 @@ rR
 kF
 mN
 rR
-IV
+dk
 dk
 dk
 dk
@@ -33898,11 +33894,11 @@ dk
 dk
 uI
 cu
-uI
+cO
 wG
+cU
 uI
-uI
-uI
+cU
 uI
 uI
 cu
@@ -33934,7 +33930,7 @@ Od
 ci
 Ef
 rR
-IV
+dk
 dk
 dk
 dk
@@ -34062,7 +34058,7 @@ uI
 cu
 cu
 wG
-uI
+cO
 uI
 uI
 uI
@@ -34096,7 +34092,7 @@ Yy
 bb
 TG
 rR
-IV
+dk
 dk
 dk
 dk
@@ -35098,7 +35094,7 @@ bN
 CE
 jt
 iB
-Ea
+cL
 nV
 Xp
 BY
@@ -35432,7 +35428,7 @@ Sn
 uG
 Kr
 UL
-pH
+Sn
 vU
 pw
 zK
@@ -35918,10 +35914,10 @@ Sn
 Xt
 HF
 Xt
-SO
+Sn
 pa
 En
-Ni
+Sn
 mk
 cu
 cu
@@ -36080,7 +36076,7 @@ Sn
 Sn
 Sn
 Sn
-he
+Sn
 hO
 Vy
 VR
@@ -37076,7 +37072,7 @@ Wo
 TR
 Di
 Di
-bW
+cH
 Du
 SM
 aQ
