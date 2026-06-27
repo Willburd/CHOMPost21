@@ -8243,6 +8243,7 @@
 /obj/item/stack/emptysandbag{
 	amount = 30
 	},
+/obj/structure/table/steel,
 /turf/simulated/floor/tiled/turfpack/muriki,
 /area/specialty/expie_clubhouse)
 "ash" = (
@@ -10486,6 +10487,16 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/supermatter)
+"awc" = (
+/obj/item/paper_bin,
+/obj/structure/table/steel,
+/obj/item/pen/blue,
+/turf/simulated/floor/tiled/turfpack/muriki,
+/area/specialty/expie_clubhouse)
+"awd" = (
+/obj/item/toy/plushie/expie,
+/turf/simulated/floor/carpet/turfpack/muriki,
+/area/specialty/expie_clubhouse)
 "awf" = (
 /obj/structure/catwalk,
 /obj/effect/floor_decal/flesh{
@@ -118338,7 +118349,7 @@ akq
 akl
 akh
 akh
-ajQ
+awc
 asg
 ajQ
 ajR
@@ -118495,7 +118506,7 @@ ajU
 ajR
 ajQ
 ajQ
-akh
+awd
 akh
 akm
 akh
