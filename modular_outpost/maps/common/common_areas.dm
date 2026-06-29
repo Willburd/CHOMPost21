@@ -2787,6 +2787,13 @@
 	ambience = AMBIENCE_GENERIC
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 
+/area/offworld/confinementbeam/station/south_power_airlock
+	name = "\improper Confinement Beam Power Distribution Airlock South"
+	icon_state = "shuttle2"
+	sound_env = SMALL_ENCLOSED
+	ambience = AMBIENCE_GENERIC
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+
 /area/offworld/confinementbeam/station/port_airlock
 	name = "\improper Confinement Beam Port Airlock"
 	icon_state = "shuttle2"

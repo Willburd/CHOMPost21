@@ -133,6 +133,7 @@
 		/area/offworld/confinementbeam/station/trawler_airlock,
 		/area/offworld/confinementbeam/station/access_shaft,
 		/area/offworld/confinementbeam/station/starboard_airlock,
+		/area/offworld/confinementbeam/station/south_power_airlock,
 		/area/offworld/confinementbeam/station/port_airlock,
 		/area/offworld/confinementbeam/station/hallway,
 		/area/offworld/confinementbeam/station/hallway_alt
