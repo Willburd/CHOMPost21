@@ -260,7 +260,7 @@
 	rank_pin = RANK_PIN_PATH
 /datum/alt_title/co_warrant_officer
 	rank_pin = RANK_PIN_PATH
-/datum/job/hop
+/datum/alt_title/bridge_secretary
 	rank_pin = RANK_PIN_PATH
 #undef RANK_PIN_PATH
 
@@ -285,6 +285,8 @@
 /datum/job/chief_engineer
 	rank_pin = RANK_PIN_PATH
 /datum/job/hos
+	rank_pin = RANK_PIN_PATH
+/datum/job/hop
 	rank_pin = RANK_PIN_PATH
 #undef RANK_PIN_PATH
 

@@ -2215,6 +2215,11 @@
 "aeM" = (
 /obj/structure/bed/pillowpile/red,
 /obj/effect/floor_decal/milspec/color/orange/half,
+/obj/machinery/doorbell_chime{
+	id_tag = "engdinger";
+	name = "Engineering Dinger";
+	pixel_y = -30
+	},
 /turf/simulated/floor/tiled/freezer/cold,
 /area/engineering/tesh_freezer)
 "aeN" = (
@@ -5748,6 +5753,10 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/effect/floor_decal/milspec/color/orange/half{
 	dir = 8
+	},
+/obj/machinery/camera/network/engineering{
+	c_tag = "ENG - Teshari Breakroom";
+	dir = 4
 	},
 /turf/simulated/floor/tiled/freezer/cold,
 /area/engineering/tesh_freezer)
@@ -26901,6 +26910,10 @@
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/fitness)
+"aYf" = (
+/obj/item/material/barbedwire/glass/start_active,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/civ/south)
 "aYg" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -48374,6 +48387,7 @@
 /area/maintenance/civ/south)
 "bNg" = (
 /obj/structure/foamedmetal,
+/obj/item/material/barbedwire/glass/start_active,
 /turf/simulated/floor/plating,
 /area/maintenance/sec)
 "bNh" = (
@@ -51201,6 +51215,13 @@
 /obj/structure/foamedmetal,
 /turf/simulated/floor/plating/external/turfpack/muriki,
 /area/maintenance/civ/west)
+"bSb" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/item/material/barbedwire/glass/start_active,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/spine/waste)
 "bSc" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -51321,6 +51342,23 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/engineering/coreproctunnel)
+"bSw" = (
+/obj/random/junk,
+/obj/item/material/barbedwire/glass/start_active,
+/turf/simulated/floor/plating,
+/area/maintenance/sec)
+"bSx" = (
+/obj/item/material/barbedwire/glass/start_active,
+/turf/simulated/floor,
+/area/maintenance/oldbridge)
+"bSy" = (
+/obj/item/material/barbedwire/glass/start_active,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/research)
+"bSz" = (
+/obj/item/material/barbedwire/glass/start_active,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/research/north)
 "bSA" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -51347,6 +51385,13 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/med)
+"bSD" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/item/material/barbedwire/glass/start_active,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/research/north)
 "bSF" = (
 /turf/simulated/wall,
 /area/mine/unexplored/muriki/cave/terra)
@@ -72552,14 +72597,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/rnd/research/anomaly)
-"evd" = (
-/obj/machinery/doorbell_chime{
-	id_tag = "engdinger";
-	name = "Engineering Dinger";
-	pixel_x = -6
-	},
-/turf/simulated/wall/r_wall,
-/area/engineering/tesh_freezer)
 "evy" = (
 /obj/effect/map_effect/interval/effect_emitter/smoke/mist/passive,
 /turf/simulated/floor/water/acidic/deep/turfpack/muriki,
@@ -94024,7 +94061,7 @@ kMh
 kMh
 kMh
 cNm
-aLS
+bSb
 kMh
 byK
 bDg
@@ -95443,7 +95480,7 @@ iVB
 xkR
 eID
 uoh
-uoh
+bSx
 yjs
 aAO
 aAO
@@ -111628,7 +111665,7 @@ aeb
 aeb
 aeb
 agi
-evd
+aeb
 aeb
 aeb
 aao
@@ -132414,7 +132451,7 @@ bhB
 bhW
 bhW
 bhW
-cvz
+bSw
 aJd
 bJK
 bhW
@@ -136196,7 +136233,7 @@ gqd
 gqd
 gqd
 bJG
-caB
+bSD
 bJG
 cqU
 bJG
@@ -137460,7 +137497,7 @@ bMg
 bMg
 bMg
 bMI
-bMg
+aYf
 aXK
 aXK
 mpL
@@ -137619,7 +137656,7 @@ akQ
 akQ
 bMg
 bMg
-bMg
+aYf
 akQ
 akQ
 bMq
@@ -137851,7 +137888,7 @@ agP
 agP
 amq
 amq
-bYM
+bSy
 bYM
 amq
 foD
@@ -138014,7 +138051,7 @@ ahC
 ahC
 amq
 amq
-bYM
+bSy
 amq
 foD
 amq
@@ -141391,7 +141428,7 @@ caD
 bJG
 bJG
 bUL
-bUL
+bSz
 ahd
 aiN
 ajZ
@@ -142200,7 +142237,7 @@ cnd
 cmX
 bJG
 bJG
-bUL
+bSz
 ahd
 ahP
 aiR

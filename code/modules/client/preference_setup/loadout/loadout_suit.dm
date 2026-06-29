@@ -678,7 +678,7 @@
 /datum/gear/suit/snowsuit/command
 	display_name = "snowsuit, command"
 	path = /obj/item/clothing/suit/storage/hooded/wintercoat/snowsuit/command // CHOMPEdit
-	allowed_roles = list(JOB_SITE_MANAGER,JOB_RESEARCH_DIRECTOR,JOB_HEAD_OF_PERSONNEL,JOB_HEAD_OF_SECURITY,JOB_CHIEF_ENGINEER,JOB_HEAD_OF_PERSONNEL,JOB_BLUESHIELD_GUARD) //YW ADDITIONS // Outpost 21 edit - Command sec folded into hop
+	allowed_roles = list(JOB_SITE_MANAGER,JOB_RESEARCH_DIRECTOR,JOB_HEAD_OF_PERSONNEL,JOB_HEAD_OF_SECURITY,JOB_CHIEF_ENGINEER,JOB_COMMAND_OFFICER,JOB_BLUESHIELD_GUARD) //YW ADDITIONS // Outpost 21 edit - Command sec folded into command officer
 	show_roles = FALSE
 
 /datum/gear/suit/snowsuit/security
@@ -722,7 +722,7 @@
 /datum/gear/suit/cmddressjacket
 	display_name = "command dress jacket"
 	path = /obj/item/clothing/suit/storage/toggle/cmddressjacket
-	allowed_roles = list(JOB_SITE_MANAGER, JOB_HEAD_OF_PERSONNEL, JOB_HEAD_OF_PERSONNEL) // Outpost 21 edit - Command sec folded into hop
+	allowed_roles = list(JOB_SITE_MANAGER, JOB_HEAD_OF_PERSONNEL, JOB_COMMAND_OFFICER) // Outpost 21 edit - Command sec folded into command officer
 	show_roles = FALSE
 
 /datum/gear/suit/miscellaneous/kimono
