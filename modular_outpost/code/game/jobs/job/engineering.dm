@@ -20,3 +20,7 @@
 /datum/alt_title/ship_breaker
 	title = JOB_ALT_SHIPBREAKER
 	title_blurb = "A " + JOB_ALT_SHIPBREAKER + " specializes in the dismantling and recovery of destroyed or retired ships. Often in EVA environments on orbital stations."
+
+/datum/alt_title/electro_physicist
+	title = JOB_ALT_ELECTROPHYSICIST
+	title_blurb = "A " + JOB_ROBOTICIST + " with a specialty in micro-electronics and particle interactions. Using particle accelerators to convert one form of matter into another, or designing complex nano-circuitry. Experts in the field of electromagnetic radiation."

@@ -336,6 +336,7 @@
 	#define JOB_ALT_MECHATRONIC_ENGINEER "Mechatronic Engineer"
 	#define JOB_ALT_SOFTWARE_ENGINEER "Software Engineer"
 	#define JOB_ALT_JUNIOR_ROBOTICIST "Junior Roboticist" // Outpost 21 edit - Adds junior roboticist alt title
+	#define JOB_ALT_ELECTROPHYSICIST "Electrophysicist" // Outpost 21 edit - Electrophysicist added
 
 #define JOB_XENOBOTANIST "Xenobotanist"
 	// Xenobotanist alt titles

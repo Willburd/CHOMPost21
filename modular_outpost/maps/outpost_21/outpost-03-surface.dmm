@@ -10413,7 +10413,7 @@
 	name = "Engineering East Airlock";
 	pixel_y = -24;
 	dir = 1;
-	req_one_access = list(10,51)
+	req_one_access = list(10)
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/engineering_hallway)
@@ -34916,7 +34916,7 @@
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/engineering{
 	name = "Engineering Latrine";
-	req_one_access = list(10,51)
+	req_one_access = list(10)
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -49427,7 +49427,7 @@
 	},
 /obj/machinery/door/airlock/engineering{
 	name = "Engineering Latrine";
-	req_one_access = list(10,51)
+	req_one_access = list(10)
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -53769,7 +53769,7 @@
 	},
 /obj/machinery/door/window/northright{
 	name = "Engineering Hardsuits";
-	req_access = list(11,51)
+	req_access = list(11)
 	},
 /obj/effect/floor_decal/corner/orange{
 	dir = 10
@@ -66891,7 +66891,7 @@
 	name = "Engineering West Airlock";
 	pixel_y = 24;
 	pixel_x = 24;
-	req_one_access = list(10,51)
+	req_one_access = list(10)
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/eva)
@@ -75657,7 +75657,7 @@
 /obj/item/clothing/suit/space/void/engineering,
 /obj/machinery/door/window/northleft{
 	name = "Engineering Hardsuits";
-	req_access = list(11,51)
+	req_access = list(11)
 	},
 /obj/effect/floor_decal/corner/orange/full,
 /obj/machinery/camera/network/engineering{
@@ -76002,7 +76002,7 @@
 	},
 /obj/machinery/door/window/northleft{
 	name = "Engineering Hardsuits";
-	req_access = list(11,51)
+	req_access = list(11)
 	},
 /obj/effect/floor_decal/corner/orange{
 	dir = 10
@@ -82396,7 +82396,7 @@
 "uKK" = (
 /obj/machinery/door/airlock/engineering{
 	name = "Engineering Den";
-	req_one_access = list(10,51)
+	req_one_access = list(10)
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/effect/floor_decal/spline/fancy/wood{
@@ -84975,7 +84975,7 @@
 /obj/effect/floor_decal/industrial/warning,
 /obj/machinery/door/airlock/glass_engineering{
 	name = "Engineering Hallway";
-	req_one_access = list(10,24,29,40,51)
+	req_one_access = list(10,24,29,40)
 	},
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled/steel_grid,
@@ -88350,7 +88350,7 @@
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/glass_engineeringatmos{
 	name = "Engineering Locker Room";
-	req_one_access = list(10,51)
+	req_one_access = list(10)
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4

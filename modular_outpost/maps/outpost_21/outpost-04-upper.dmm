@@ -7856,7 +7856,7 @@
 "arw" = (
 /obj/machinery/door/airlock/maintenance/engi{
 	name = "Engineering";
-	req_one_access = list(10,51)
+	req_one_access = list(10)
 	},
 /obj/item/airlock_brace,
 /obj/machinery/door/blast/regular{
@@ -8418,7 +8418,7 @@
 "asy" = (
 /obj/machinery/door/airlock/highsecurity{
 	name = "Test Chamber";
-	req_one_access = list(10,51)
+	req_one_access = list(10)
 	},
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -8868,7 +8868,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/glass_engineering{
-	req_one_access = list(10,51);
+	req_one_access = list(10);
 	name = "Circuitry Lab"
 	},
 /turf/simulated/floor/tiled/steel_ridged,
@@ -9184,7 +9184,7 @@
 "atE" = (
 /obj/machinery/door/airlock/highsecurity{
 	name = "Particle Lab";
-	req_one_access = list(10,51)
+	req_one_access = list(10)
 	},
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -35246,7 +35246,7 @@
 	departments = list("Security EVA","Security");
 	name = "Security Pilot suit cycler";
 	req_access = newlist();
-	req_one_access = list(1,51)
+	req_one_access = list(1)
 	},
 /obj/structure/window/reinforced{
 	dir = 1
@@ -35254,7 +35254,7 @@
 /obj/machinery/door/window/brigdoor/southright{
 	dir = 8;
 	req_access = newlist();
-	req_one_access = list(51)
+	req_one_access = list(1)
 	},
 /obj/effect/floor_decal/corner/red{
 	dir = 6

@@ -206,6 +206,8 @@
 	rank_pin = RANK_PIN_PATH
 /datum/alt_title/teleport_operation
 	rank_pin = RANK_PIN_PATH
+/datum/alt_title/xenobotanist
+	rank_pin = RANK_PIN_PATH
 /datum/alt_title/xenoflorist
 	rank_pin = RANK_PIN_PATH
 /datum/alt_title/xenohydroponicist

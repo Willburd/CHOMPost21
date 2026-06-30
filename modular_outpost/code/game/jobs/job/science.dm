@@ -30,16 +30,16 @@
 		JOB_ALT_JUNIOR_ROBOTICIST = /datum/alt_title/junior_roboticist,
 		JOB_ALT_CIRCUIT_DESIGNER = /datum/alt_title/circuit_designer,
 		JOB_ALT_CIRCUIT_PROGRAMMER = /datum/alt_title/circuit_programmer,
-		JOB_ALT_SOFTWARE_ENGINEER = /datum/alt_title/software_engi)
+		JOB_ALT_SOFTWARE_ENGINEER = /datum/alt_title/software_engi,
+		JOB_ALT_ELECTROPHYSICIST = /datum/alt_title/electro_physicist)
 
 
+// Alt titles
 /datum/alt_title/junior_roboticist
 	title = JOB_ALT_JUNIOR_ROBOTICIST
 	title_blurb = "A " + JOB_ALT_JUNIOR_ROBOTICIST + " focuses on the construction and maintenance of Exosuits. While not being as well versed in their use, they should have some knowledge behind them during their training period. \
 					They may also be called upon to work on synthetics and prosthetics, if needed."
 
-
-// Alt titles
 /datum/alt_title/circuit_designer
 	title_blurb = "A " + JOB_ALT_CIRCUIT_DESIGNER + " is a " + JOB_ENGINEER + " whose expertise is working with integrated circuits. They are familar with the workings and programming of those devices. \
 				   They work to create various useful devices using the capabilities of integrated circuitry." // engineering here
@@ -51,17 +51,3 @@
 /datum/alt_title/teleport_operation
 	title = JOB_ALT_TELEPORT_OPERATOR
 	title_blurb = "A " + JOB_ALT_TELEPORT_OPERATOR + " is a " + JOB_SCIENTIST + " who operates the public teleporter using telescience expertise to get crew to remote locations safely."
-
-
-// Xenobotanist alt-title edits
-/datum/alt_title/xenoflorist
-	title = JOB_ALT_XENOFLORIST
-	title_blurb = "A " + JOB_ALT_XENOFLORIST + " grows and cares for a variety of abnormal, custom made, and frequently dangerous plant life. When the products of these plants \
-					are both safe and beneficial to the station, they may choose to introduce it to the rest of the crew."
-	title_outfit = /datum/decl/hierarchy/outfit/job/science/xenobotanist
-
-/datum/alt_title/xenohydroponicist
-	title = JOB_ALT_XENOHYDROPONICIST
-	title_blurb = "A " + JOB_ALT_XENOHYDROPONICIST + " grows and cares for a variety of abnormal, custom made, and frequently dangerous plant life. When the products of these plants \
-					are both safe and beneficial to the station, they may choose to introduce it to the rest of the crew."
-	title_outfit = /datum/decl/hierarchy/outfit/job/science/xenobotanist

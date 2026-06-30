@@ -130,6 +130,7 @@ const rank2icon = {
   'Circuit Designer': 'car-battery',
   'Circuit Programmer': 'laptop-file',
   'Teleporter Operator': 'users-between-lines', // outpost 21 edit
+  Electrophysicist: ['car-battery', 'atom'], // outpost 21 edit
   // Xenobiologist
   Xenobiologist: 'meteor',
   Xenozoologist: 'locust',
@@ -454,14 +455,15 @@ const rank2color = {
   'Circuit Designer': 'purple',
   'Circuit Programmer': 'purple',
   'Teleporter Operator': 'purple', // outpost 21 edit
+  Electrophysicist: 'orange', // outpost 21 edit
   // Xenobiologist
   Xenobiologist: 'purple',
   Xenozoologist: 'purple',
   Xenoanthropologist: 'purple',
   // Xenobotanist
-  Xenobotanist: 'purple',
-  Xenohydroponicist: 'purple',
-  Xenoflorist: 'purple',
+  Xenobotanist: 'green', // outpost 21 edit - purple to green
+  Xenohydroponicist: 'green', // outpost 21 edit - purple to green
+  Xenoflorist: 'green', // outpost 21 edit - purple to green
   // Cargo QM
   Quartermaster: 'brown',
   'Supply Chief': 'brown',
