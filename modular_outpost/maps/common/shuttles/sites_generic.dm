@@ -30,7 +30,7 @@
 	name = "Reclaimation Yard (Civilian Dock)"
 	landmark_tag = "orbitalyard_civ"
 	base_turf = /turf/space
-	base_area = /area/offworld/asteroidyard
+	base_area = /area/offworld/asteroidyard/external
 	local_crash_sites = OUTPOST_ASTEROID_CRASHES
 
 /obj/effect/shuttle_landmark/premade/generic/beltmine_north
