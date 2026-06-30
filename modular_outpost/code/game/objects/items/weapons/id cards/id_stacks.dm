@@ -9,3 +9,7 @@
 
 /obj/item/card/id/science/xenobotanist
 	initial_sprite_stack = list("base-stamp", "top-green", "stamp-n", "stripe-purple")
+
+/obj/item/card/id/engineering/roboticist
+	name = "Roboticist's ID"
+	initial_sprite_stack = list("base-stamp", "top-orange", "stamp-n", "stripe-purple")

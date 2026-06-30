@@ -20,6 +20,7 @@
 	name = "Robotics R&D Console"
 	desc = "Used to remotely work with the research and development lab. Locked by default."
 	locked = TRUE
+	req_access = null
 	req_one_access = list(ACCESS_RESEARCH, ACCESS_ROBOTICS)
 	circuit = /obj/item/circuitboard/rdconsole/robotics_locked
 	filter_department = CHANNEL_ENGINEERING
@@ -35,6 +36,7 @@
 	name = "Genetics R&D Console"
 	desc = "Used to remotely work with the research and development lab. Locked by default."
 	locked = TRUE
+	req_access = null
 	req_one_access = list(ACCESS_RESEARCH, ACCESS_GENETICS)
 	circuit = /obj/item/circuitboard/rdconsole/genetics_locked
 	filter_department = CHANNEL_MEDICAL
@@ -50,6 +52,7 @@
 	name = "Botany R&D Console"
 	desc = "Used to remotely work with the research and development lab. Locked by default."
 	locked = TRUE
+	req_access = null
 	req_one_access = list(ACCESS_RESEARCH, ACCESS_HYDROPONICS, ACCESS_XENOBOTANY)
 	circuit = /obj/item/circuitboard/rdconsole/botany_locked
 	filter_department = CHANNEL_SERVICE
