@@ -4719,7 +4719,8 @@
 "alj" = (
 /obj/machinery/power/apc/alarms_hidden{
 	dir = 4;
-	pixel_x = 24
+	pixel_x = 24;
+	locked = 0
 	},
 /turf/simulated/floor/carpet/blucarpet/turfpack/muriki,
 /area/specialty/expie_clubhouse)
@@ -5701,7 +5702,7 @@
 	pixel_y = -26
 	},
 /obj/effect/floor_decal/corner/purple,
-/obj/machinery/computer/rdconsole_tg/remote_locked{
+/obj/machinery/computer/rdconsole_tg/botany_remote{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/hydro,
@@ -8182,7 +8183,6 @@
 /area/rnd/workshop)
 "arY" = (
 /obj/structure/bed/chair/office/dark,
-/obj/effect/landmark/start/electrophysicist,
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/workshop)
 "arZ" = (
@@ -8243,6 +8243,7 @@
 /obj/item/stack/emptysandbag{
 	amount = 30
 	},
+/obj/structure/table/steel,
 /turf/simulated/floor/tiled/turfpack/muriki,
 /area/specialty/expie_clubhouse)
 "ash" = (
@@ -8304,7 +8305,7 @@
 /obj/effect/floor_decal/milspec/color/purple/corner{
 	dir = 8
 	},
-/obj/machinery/computer/rdconsole_tg/remote_locked{
+/obj/machinery/computer/rdconsole_tg/robotics_remote{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
@@ -8330,7 +8331,7 @@
 /obj/structure/bed/chair/office/dark{
 	dir = 8
 	},
-/obj/effect/landmark/start/electrophysicist,
+/obj/effect/landmark/start/roboticist,
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/workshop)
 "asq" = (
@@ -8566,7 +8567,6 @@
 /obj/structure/bed/chair/office/dark{
 	dir = 8
 	},
-/obj/effect/landmark/start/electrophysicist,
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/workshop)
 "asO" = (
@@ -8790,10 +8790,6 @@
 /obj/item/geiger/wall/east,
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/workshop)
-"ate" = (
-/obj/effect/landmark/start/electrophysicist,
-/turf/simulated/floor/tiled/milspec,
-/area/rnd/supermatter)
 "atf" = (
 /obj/structure/extinguisher_cabinet{
 	pixel_x = -5;
@@ -9224,7 +9220,7 @@
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/engineering_hallway)
 "atH" = (
-/obj/effect/landmark/start/electrophysicist,
+/obj/effect/landmark/start/roboticist,
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/engineering_hallway)
 "atI" = (
@@ -9284,7 +9280,6 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 8
 	},
-/obj/effect/landmark/start/electrophysicist,
 /obj/machinery/firealarm{
 	dir = 1;
 	pixel_y = -26
@@ -10484,6 +10479,20 @@
 /obj/structure/cable/yellow{
 	icon_state = "1-8"
 	},
+/turf/simulated/floor/tiled/milspec,
+/area/rnd/supermatter)
+"awc" = (
+/obj/item/paper_bin,
+/obj/structure/table/steel,
+/obj/item/pen/blue,
+/turf/simulated/floor/tiled/turfpack/muriki,
+/area/specialty/expie_clubhouse)
+"awd" = (
+/obj/item/toy/plushie/expie,
+/turf/simulated/floor/carpet/turfpack/muriki,
+/area/specialty/expie_clubhouse)
+"awe" = (
+/obj/effect/landmark/start/roboticist,
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/supermatter)
 "awf" = (
@@ -41798,7 +41807,7 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/purple,
-/obj/machinery/computer/rdconsole_tg/remote_locked{
+/obj/machinery/computer/rdconsole_tg/genetics_remote{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
@@ -78967,7 +78976,7 @@ aui
 atQ
 dPP
 ato
-ate
+aqJ
 api
 asG
 asv
@@ -79615,7 +79624,7 @@ aun
 atT
 tfG
 atr
-aqJ
+awe
 apk
 hKz
 qfN
@@ -118338,7 +118347,7 @@ akq
 akl
 akh
 akh
-ajQ
+awc
 asg
 ajQ
 ajR
@@ -118495,7 +118504,7 @@ ajU
 ajR
 ajQ
 ajQ
-akh
+awd
 akh
 akm
 akh

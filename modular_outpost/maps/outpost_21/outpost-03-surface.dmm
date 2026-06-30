@@ -6263,25 +6263,11 @@
 	dir = 1
 	},
 /obj/structure/disposalpipe/segment,
-/obj/item/radio/intercom{
-	dir = 8;
-	name = "Station Intercom (General)";
-	pixel_x = -34;
-	listening = 1
-	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 9
 	},
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 9
-	},
-/obj/machinery/button/remote/airlock{
-	desc = "A remote control switch for the medbay foyer.";
-	id = "MedbayFoyer";
-	name = "Medbay Doors Control";
-	pixel_x = -24;
-	dir = 4;
-	pixel_y = 3
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/reception)
@@ -20554,6 +20540,9 @@
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 1
 	},
+/obj/structure/sign/clock{
+	pixel_y = 32
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/reception)
 "aVQ" = (
@@ -24694,16 +24683,13 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/obj/machinery/door/blast/shutters{
-	density = 0;
-	dir = 2;
-	icon_state = "shutter0";
-	id = "op2shutter";
-	name = "Surgery Privacy Shutters";
-	opacity = 0
-	},
 /obj/structure/cable/green{
 	icon_state = "0-4"
+	},
+/obj/machinery/door/blast/shutters{
+	dir = 2;
+	id = "op2shutter";
+	name = "Surgery Privacy Shutters"
 	},
 /turf/simulated/floor/plating,
 /area/medical/surgery2)
@@ -26277,16 +26263,13 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/obj/machinery/door/blast/shutters{
-	density = 0;
-	dir = 2;
-	icon_state = "shutter0";
-	id = "op1shutter";
-	name = "Surgery Privacy Shutters";
-	opacity = 0
-	},
 /obj/structure/cable/green{
 	icon_state = "0-4"
+	},
+/obj/machinery/door/blast/shutters{
+	dir = 2;
+	id = "op1shutter";
+	name = "Surgery Privacy Shutters"
 	},
 /turf/simulated/floor/plating,
 /area/medical/surgery)
@@ -26969,16 +26952,13 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/obj/machinery/door/blast/shutters{
-	density = 0;
-	dir = 2;
-	icon_state = "shutter0";
-	id = "op2shutter";
-	name = "Surgery Privacy Shutters";
-	opacity = 0
-	},
 /obj/structure/cable/green{
 	icon_state = "0-8"
+	},
+/obj/machinery/door/blast/shutters{
+	dir = 2;
+	id = "op2shutter";
+	name = "Surgery Privacy Shutters"
 	},
 /turf/simulated/floor/plating,
 /area/medical/surgery2)
@@ -29063,6 +29043,14 @@
 	},
 /obj/effect/floor_decal/corner/blue{
 	dir = 6
+	},
+/obj/machinery/button/remote/airlock{
+	desc = "A remote control switch for the medbay foyer.";
+	id = "MedbayFoyer";
+	name = "Medical Public Exit";
+	pixel_x = 26;
+	dir = 8;
+	pixel_y = 5
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay3)
@@ -40613,16 +40601,13 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/obj/machinery/door/blast/shutters{
-	density = 0;
-	dir = 2;
-	icon_state = "shutter0";
-	id = "op1shutter";
-	name = "Surgery Privacy Shutters";
-	opacity = 0
-	},
 /obj/structure/cable/green{
 	icon_state = "0-8"
+	},
+/obj/machinery/door/blast/shutters{
+	dir = 2;
+	id = "op1shutter";
+	name = "Surgery Privacy Shutters"
 	},
 /turf/simulated/floor/plating,
 /area/medical/surgery)
@@ -47867,6 +47852,14 @@
 	req_one_access = list(5,19,40);
 	dir = 4
 	},
+/obj/machinery/button/remote/blast_door{
+	desc = "A panic-button for locking down medical to outside threats. Requires CMO access.";
+	id = "medbayquar";
+	name = "Medbay Emergency Lockdown Control";
+	pixel_x = -24;
+	pixel_y = 36;
+	dir = 4
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/reception)
 "jHH" = (
@@ -53790,14 +53783,6 @@
 	},
 /obj/structure/window/reinforced,
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/blast/shutters{
-	density = 0;
-	dir = 2;
-	icon_state = "shutter0";
-	id = "op2shutter";
-	name = "Surgery Privacy Shutters";
-	opacity = 0
-	},
 /obj/structure/cable/green{
 	icon_state = "0-4"
 	},
@@ -53805,6 +53790,11 @@
 	icon_state = "0-8"
 	},
 /obj/structure/cable/green,
+/obj/machinery/door/blast/shutters{
+	dir = 2;
+	id = "op2shutter";
+	name = "Surgery Privacy Shutters"
+	},
 /turf/simulated/floor/plating,
 /area/medical/surgery2)
 "lxB" = (
@@ -65651,9 +65641,6 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay3)
 "prs" = (
-/obj/structure/sign/clock{
-	pixel_x = -32
-	},
 /obj/structure/table/standard,
 /obj/item/storage/firstaid/regular,
 /obj/effect/floor_decal/borderfloor{
@@ -65661,6 +65648,12 @@
 	},
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 9
+	},
+/obj/item/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -34;
+	listening = 1
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/reception)
@@ -85012,14 +85005,6 @@
 	},
 /obj/structure/window/reinforced,
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/blast/shutters{
-	density = 0;
-	dir = 2;
-	icon_state = "shutter0";
-	id = "op1shutter";
-	name = "Surgery Privacy Shutters";
-	opacity = 0
-	},
 /obj/structure/cable/green{
 	icon_state = "0-4"
 	},
@@ -85027,6 +85012,11 @@
 	icon_state = "0-8"
 	},
 /obj/structure/cable/green,
+/obj/machinery/door/blast/shutters{
+	dir = 2;
+	id = "op1shutter";
+	name = "Surgery Privacy Shutters"
+	},
 /turf/simulated/floor/plating,
 /area/medical/surgery)
 "vAJ" = (
@@ -137745,7 +137735,7 @@ aSO
 hyM
 atN
 aVR
-gqT
+iBg
 aVP
 pSX
 bnu

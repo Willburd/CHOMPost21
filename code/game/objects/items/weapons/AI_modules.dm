@@ -64,7 +64,7 @@ AI MODULES
 					to_chat(R, "These are your laws now:")
 					R.show_laws()
 			to_chat(user, "Upload complete. The AI's laws have been modified.")
-			addtimer(CALLBACK(src, PROC_REF(law_upload_announce), AM), rand(20,40) SECONDS, TIMER_DELETE_ME) // Outpost 21 edit - Announce AI changes from consoles
+			addtimer(CALLBACK(src, PROC_REF(law_upload_announce), comp.name, AM.x, AM.y, AM.z), rand(20,40) SECONDS, TIMER_DELETE_ME) // Outpost 21 edit - Announce AI changes from consoles
 
 	else if (istype(AM, /obj/machinery/computer/borgupload))
 		var/obj/machinery/computer/borgupload/comp = AM
@@ -87,7 +87,7 @@ AI MODULES
 			to_chat(comp.current,  "These are your laws now:")
 			comp.current.show_laws()
 			to_chat(user, "Upload complete. The robot's laws have been modified.")
-			addtimer(CALLBACK(src, PROC_REF(law_upload_announce), AM), rand(20,40) SECONDS, TIMER_DELETE_ME) // Outpost 21 edit - Announce AI changes from consoles
+			addtimer(CALLBACK(src, PROC_REF(law_upload_announce), comp.name, AM.x, AM.y, AM.z), rand(20,40) SECONDS, TIMER_DELETE_ME) // Outpost 21 edit - Announce AI changes from consoles
 
 	else if(isrobot(AM))
 		var/mob/living/silicon/robot/R = AM

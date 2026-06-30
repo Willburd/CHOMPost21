@@ -199,6 +199,11 @@ Nothing else in the console has ID requirements.
 		if (stored_research.hidden_nodes[v])
 			continue
 
+		// Outpost 21 edit begin - Hide nodes on remote consoles if we don't match the filter for it
+		if (filter_department && !(filter_department in n.announce_channels))
+			continue
+		// Outpost 21 edit end
+
 		data["nodes"] += list(list(
 			"id" = n.id,
 			"is_free" = n.is_free(stored_research),

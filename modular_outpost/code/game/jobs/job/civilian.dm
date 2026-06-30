@@ -7,6 +7,7 @@
 	. = ..()
 	access |= list(ACCESS_XENOBOTANY)
 	minimal_access |= list(ACCESS_XENOBOTANY)
+	alt_titles |= list(JOB_ALT_XENOHYDROPONICIST = /datum/alt_title/xenohydroponicist, JOB_ALT_XENOFLORIST = /datum/alt_title/xenoflorist)
 
 
 /datum/job/bartender

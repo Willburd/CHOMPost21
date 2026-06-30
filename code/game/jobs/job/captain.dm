@@ -141,7 +141,7 @@ GLOBAL_DATUM_INIT(captain_announcement, /datum/announcement/minor, new(do_newsca
 //////////////////////////////////
 //		Command Secretary
 //////////////////////////////////
-/* Outpost 21 edit - Command sec folded into hop
+/* Outpost 21 edit - Command sec folded into command officer
 /datum/job/secretary
 	title = JOB_COMMAND_SECRETARY
 	flag = BRIDGE
