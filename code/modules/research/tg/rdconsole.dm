@@ -200,7 +200,7 @@ Nothing else in the console has ID requirements.
 			continue
 
 		// Outpost 21 edit begin - Hide nodes on remote consoles if we don't match the filter for it
-		if (filter_department && !(filter_department in n.announce_channels))
+		if (!stored_research.researched_nodes[n.id] && length(n.announce_channels) && length(filter_department) && !(filter_department in n.announce_channels))
 			continue
 		// Outpost 21 edit end
 
