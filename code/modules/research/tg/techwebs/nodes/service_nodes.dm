@@ -66,6 +66,7 @@
 		"bearslap", // Outpost 21 edit - bearslap
 		"barbedwire",
 		"snarewire",
+		"springtrap",
 		// "buffer",
 		"washing"
 	)
