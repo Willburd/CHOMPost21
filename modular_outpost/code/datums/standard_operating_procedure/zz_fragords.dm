@@ -18,4 +18,15 @@
 		<br>
 		This order is effective immediately until revoked. Dated: 25690802
 		<br>
-		Signed: E-Shui Outpost-21 CC Security Commander, Penance. C-Shift Captain Khrutch Yizhnera"}
+		Signed: E-Shui Outpost-21 CC Security Commander, Penance. C-Shift Captain Khrutch Yizhnera
+		<br>
+		<hr>
+		<br>
+		<b>Adjustment to Standard Operating Procedure Authorized Equipment</b>
+		<br>
+		<br>
+		Following observed necessity: All officers are now required to have one knife of their choosing on their person at all times in order to dispose of vines, circumorph bodies, flesh spiders, and all other self-reviving creatures. This knife must be added to the standard kit to apply on all condition codes. Officers are only authorized one knife to be maintained on their person.
+		<br>
+		This order is effective immediately until revoked. Dated: 25700630
+		<br>
+		Signed: E-Shui Outpost-21 C-Shift Captain Khrutch Yizhnera"}

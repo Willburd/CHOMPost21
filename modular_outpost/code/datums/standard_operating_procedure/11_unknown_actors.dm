@@ -10,13 +10,13 @@
 			<br><hr><hr>
 			<br><b>Threats to the Terraformer:</b>
 			<br>  <b>Definition:</b> Any individual or creature capable of and willing to cause direct and permanent harm to the Terraforming unit.
-			<br>  <b>Notes:</b> The Terraformer is resilient, and has sufficient immuno-response to ward off Chu'Ukara infection, Synx inhabitation, or dosages less than 3ku of chloral hydrate. Most station threats will be unable to harm it. Stray artillery fire or tank shells can heal over time with appropriate medical procedures to avoid scarring. Attention must be given to individuals attempting to seek entry into the Euthanizer core. Threats may attempt to use social engineering instead of direct force, under no circumstance is detailed information about Terraformer access, policies, turret controller locations, trap locations, or any other information to be  given to any unauthorized individual, and such information is not to be transmitted over Radio or Body Camera microphone.
+			<br>  <b>Notes:</b> The Terraformer is resilient, and has sufficient immuno-response to ward off Chu'Ukara infection, Synx inhabitation, or dosages less than 3ku of chloral hydrate. Most station threats will be unable to harm it. Stray artillery fire or tank shells can heal over time with appropriate medical procedures to avoid scarring. Attention must be given to individuals attempting to seek entry into the Euthanizer core. Threats may attempt to use social engineering instead of direct force, under no circumstance is detailed information about Terraformer access, policies, turret controller locations, trap locations, or any other information to be given to any unauthorized individual, and such information is not to be transmitted over Radio or Body Camera microphone.
 			<br>  <b>Threat:</b> VERY HIGH. Assess capability and resources as below or per situation. Utilize all available force and extreme violence to neutralize any creature of individual seeking access into the Euthanizer.
 			<br>  <b>Recommended Action:</b> Primary attention must be given to the twin access points; Primary Euthanizer access, located on the surface on the Southeastern edge of the outer shell, under turret protection. And the Atmospherics Waste line, sealed by blast doors. The latter is considered a lower level access as there is no direct access from the waste line to the Euthanizer. Utilize all force available to neutralize any threat seeking to gain access to the Terraformer's Euthanizer, and ensure power from engineering to the defense turrets is not interrupted. All station staff must take appropriate action at direction of security to prevent Euthanizer Activation.
 			<hr>
 			<center><b>Stowaways</b></center>
 			<br>  <b>Definition:</b> Individuals that exist and live within E-Shui grounds, but are not current E-Shui staff. Many of these individuals come from defunct resleevers, crashed ships, extraspace anomalies, escaped prisoners, or defunct employees. Many may not know Galcom, or have poor linguistic and reason capability, usage of translators is recommended.
-			<br>  <b>Notes:</b> Recent events have made it necessary to clarify the station is not to 'adopt' stowaways from the station, many are not in a safe mental state for crew operation, may carry unwanted diseases, and may be Forking risk.
+			<br>  <b>Notes:</b> Recent events have made it necessary to clarify the station is not to 'adopt' stowaways from the station, many are not in a safe mental state for crew operation and may carry unwanted diseases.
 			<br>  <b>Threat:</b> MEDIUM. Stowaways are likely poorly equipped and poorly armed, expect high levels of mental instability and excessive hostility and paranoia. Survival is highly indicative of identification and evasion of traps and countermeasures located on station.
 			<br>  <b>Recommended Action:</b> Lock down departments, restrain and capture individuals for interrogation. Execution is not authorized unless necessary on capture. Ensure steps are taken to secure any lose tools or belongings to avoid theft and counter-utilization by stowaways.
 			<hr>
@@ -53,12 +53,23 @@
 			<center><b>Changelings</center></b>
 			<br>  <b>Definition:</b> Largely unknown entities capable of devouring and mimicking individuals.
 			<br>  <b>Notes:</b> Unknown motivations, and unknown skillset.
-			<br>  <b>Threat:</b> VERY HIGH. Unknown skillset, unknown motivations. Ability to mimic any individual previously consumed.
+			<br>  <b>Threat:</b> VERY HIGH. Unknown skillset, unknown motivations. Ability to mimic any individual previously consumed. Reports show they are capable of self revival. Medical tests show that small blood contamination can be fatal to crew.
 			<br>  <b>Recommended Action:</b> Immediate red-level threat. All staff are to pair up and remain on high alert. Do not trust corpses.
+			<hr>
+			<center><b>Xenochimera</center></b>
+			<br>  <b>Definition:</b> "Individuals" infected with a form of Roanoke Virus.
+			<br>
+			<br>  <b>Threat:</b> HIGH. While Roaknoke is not often infectious to creatures with a sufficient immune system, xenochimera are known to be highly durable, with incredible physical strength. Often devolve into a "feral" mindset when starved, injured, or otherwise altered out of mental state.
+			<br>Most importantly: Xenochimera are capable of self revival given food and time. Killing one is not guaranteed death.
+			<br>
+			<br>  <b>Recommended Action:</b>
+			<br>Feral Xenochimeric crew: Code Blue threat. Neutralize via any, but least, necessary means: move the unconscious, or deceased, individual to a dark location and supply with meat. Monitor.
+			<br>Feral Xenochimeric Stowaways: Code Red threat. Negotiations are impossible, due to significant capabilities: Eliminate swiftly and dispose of the body.
+			<br>Stable Xenochimeric Stowaways: Treat as an armed and dangerous Stowaway.
 			<hr>
 			<center><b>Malicious Trespassers</center></b>
 			<br>  <b>Definition:</b> Hostile actors to the station, such as Syndicate members, E-Shui saboteurs, Nanotrasen Nuclear Squads, or any other well-equipped individuals entering station property to cause mass damage, terrorism, or casualties on station.
-			<br>  <b>Notes:</b> Largely focused on corporate espionage, focusing on destruction of station or death of crew. May be well equipped.
+			<br>  <b>Notes:</b>
 			<br>  <b>Threat:</b> HIGH. Expect lethal weaponry and hardsuits, with subversion devices to prevent camera tracking, with door hacking capability. Likely unable to reliably defuse station traps, utilize frequently.
 			<br>  <b>Recommended Action:</b> Code Red Situation. All departments MUST lock down, with maintenance doors being bolted and braced against intrusion. Regular patrols must be made to all secure areas, and at least one individual must remain on watch on the main access to the Terraformer's Euthanizer. Strong recommendation of usage for any tactical vehicles for grounds patrols after maintenance access is sealed off, as allowed by crew staffing. Patrols of maintenance after sealing are to be performed by minimum 2 man teams, and any individual performing any patrol must have body cameras equipped, fully activated, and configured to their name.
 			<hr>
@@ -69,7 +80,7 @@
 			<br>  <b>Recommended Action:</b> Code Red situation. Vents and Scrubbers should be welded closed in critical areas with non-essential crew evacuating to the bunker or off-station. Maintenance should be bolted, bracing is not required. Recommended usage of station flamethrowers, directional mines, and bluespace artillery for large infestations.
 			<hr>
 			<center><b>All Other Entities</center></b>
-			<br>  <b>Definition:</b> Any other threats not previously identified
+			<br>  <b>Definition:</b> Any other threat not previously identified
 			<br>  <b>Notes:</b> Utilize caution. Recall defense of the Terraformer is highest priority above station survival, but Terraformer defense cannot occur without station. Continual watch of Euthanizer access is necessary for any threat capable of or willing to cause damage to the Terraformer.
 			<br>  <b>Threat:</b> VARIABLE
-			<br>  <b>Recommended Action:</b> Utilize best judgment for weapon usage, condition code, and actions taken. Under no circumstance is the Terraformers Euthanizer to be breached or activated. Avoid excessive damage to the station, and avoid unnecessary crew loss."}
+			<br>  <b>Recommended Action:</b> Utilize best judgment for weapon usage, condition code, and actions taken. Under no circumstance is the Terraformer's Euthanizer to be breached or activated. Avoid excessive damage to the station, and avoid unnecessary crew loss."}
