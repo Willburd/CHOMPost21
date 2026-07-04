@@ -454,6 +454,7 @@
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_SECURITY | DEPARTMENT_BITFLAG_SCIENCE
 
+/* Outpost 21 edit - Disabled NSFW guns
 // NSFW gun and cells
 /datum/design_techweb/cell_based/prototype_nsfw
 	name = "cell-loaded revolver"
@@ -562,6 +563,7 @@
 		RND_CATEGORY_WEAPONS + RND_SUBCATEGORY_WEAPONS_AMMO
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_SECURITY | DEPARTMENT_BITFLAG_SCIENCE
+*/
 
 /datum/design_techweb/ptrshell
 	name = "14.5mm shell"

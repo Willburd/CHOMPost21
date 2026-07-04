@@ -51701,14 +51701,6 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/spine/waste)
-"bTy" = (
-/obj/machinery/atmospherics/valve,
-/turf/simulated/wall,
-/area/maintenance/sec)
-"bTz" = (
-/obj/machinery/atmospherics/valve/shutoff,
-/turf/simulated/wall,
-/area/maintenance/sec)
 "bTA" = (
 /obj/structure/cable/orange{
 	icon_state = "4-9"
@@ -121142,7 +121134,7 @@ aeV
 aeV
 aeV
 aeV
-bTy
+bhW
 czZ
 czV
 bhW
@@ -121304,7 +121296,7 @@ aeV
 aeV
 aeV
 aeV
-bTz
+bhW
 cAa
 czW
 bhW

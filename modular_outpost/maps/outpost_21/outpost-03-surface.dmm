@@ -7248,21 +7248,6 @@
 /obj/effect/landmark/start/engineer,
 /turf/simulated/floor/tiled,
 /area/engineering/corepower)
-"alA" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 9
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 10
-	},
-/turf/simulated/floor/tiled,
-/area/muriki/tramstation/civ)
 "alB" = (
 /obj/item/radio/intercom{
 	dir = 4;
@@ -18432,9 +18417,6 @@
 "aQN" = (
 /obj/effect/floor_decal/industrial/danger,
 /obj/structure/ladder/top_hatch,
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 1
-	},
 /turf/simulated/floor/tiled,
 /area/muriki/tramstation/civ)
 "aQO" = (
@@ -20689,6 +20671,21 @@
 "aWa" = (
 /turf/simulated/wall,
 /area/muriki/bathroom/security)
+"aWb" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
+/turf/simulated/floor/tiled,
+/area/muriki/tramstation/civ)
 "aWq" = (
 /obj/machinery/light{
 	dir = 4
@@ -62341,7 +62338,6 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled,
 /area/muriki/tramstation/civ)
 "ojZ" = (
@@ -137056,9 +137052,9 @@ oek
 bfD
 tnI
 qGT
-djp
-ahx
-lFi
+hqd
+aWb
+iCQ
 euQ
 rhE
 rhE
@@ -137219,7 +137215,7 @@ fmm
 bqe
 hZZ
 wZN
-ahx
+eql
 mdE
 don
 rhE
@@ -137381,7 +137377,7 @@ odT
 odT
 pVA
 fWR
-ahx
+eql
 kON
 tlq
 rhE
@@ -137543,7 +137539,7 @@ hmw
 eXT
 boR
 oju
-alA
+eql
 aQN
 uXv
 rhE
