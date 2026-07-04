@@ -538,6 +538,10 @@
 /datum/station_haunt/terraformer_song/fire()
 	var/mob/M = SShaunting.get_player_target()
 	if(M && !issilicon(M))
+		if(ishuman(M))
+			var/mob/living/carbon/human/H = M
+			if(H.isSynthetic())
+				return
 		var/turf/goal_turf = get_turf(M)
 		var/xx = rand(5,10) * (prob(50) ? 1 : -1)
 		var/yy = rand(5,10) * (prob(50) ? 1 : -1)
