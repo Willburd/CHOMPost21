@@ -61,7 +61,7 @@
 /turf/simulated/floor/flesh/attackby(obj/item/W, mob/user)
 	if(..())
 		return
-	if(!is_sharp(W) && !is_hot(W))
+	if(!is_sharp(W) && !W.is_hot())
 		return
 	// In terraformer... not allowed
 	var/area/AR = get_area(src)
@@ -143,7 +143,7 @@
 /turf/simulated/flesh/attackby(obj/item/W, mob/user)
 	if(..())
 		return
-	if(!is_sharp(W) && !is_hot(W))
+	if(!is_sharp(W) && !W.is_hot())
 		return
 	// Cut it out
 	user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
@@ -301,7 +301,7 @@ GLOBAL_LIST_EMPTY(terraformer_arteries)
 			cut_open()
 		return
 
-	if((is_type_in_list(W,valid_treatments) || is_hot(W)) && !density) // Closing
+	if((is_type_in_list(W,valid_treatments) || W.is_hot()) && !density) // Closing
 		user.visible_message("\The [user] begins sealing \the [src]!")
 		if(do_after(user, W.toolspeed * 5 SECONDS, target = src))
 			user.visible_message("\The [user] seals up \the [src]!")

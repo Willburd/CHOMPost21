@@ -1398,11 +1398,6 @@
 		if(species.vision_organ)
 			vision = internal_organs_by_name[species.vision_organ]
 
-		// outpost 21 edit addition - lockers are dark and spooky!
-		if(istype(loc,/obj/structure/closet))
-			SetBlinded(1)
-			blinded =    1
-		// outpost 21 edit end
 		if(!species.vision_organ) // Presumably if a species has no vision organs, they see via some other means.
 			SetBlinded(0)
 			blinded =    0
@@ -1630,7 +1625,11 @@
 
 		if(CONFIG_GET(flag/welder_vision))
 			var/found_welder
-			if(species.short_sighted)
+			// outpost 21 edit addition - lockers are dark and spooky!
+			if(istype(loc,/obj/structure/closet))
+				found_welder = 1
+			else if(species.short_sighted)
+			// outpost 21 edit end
 				found_welder = 1
 			else
 				if(istype(glasses, /obj/item/clothing/glasses/welding))

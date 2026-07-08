@@ -217,6 +217,7 @@
 		"fluor_light_bulb",
 		"fluor_light_tube",
 		//CHOMPEdit end
+		"airlock_braces", // Outpost 21 edit - Adds airlock braces
 	)
 
 /datum/techweb_node/emerge_power

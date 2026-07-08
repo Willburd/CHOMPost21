@@ -59295,8 +59295,6 @@
 	dir = 8;
 	name = "Energy"
 	},
-/obj/item/gun/energy/ionrifle/pistol,
-/obj/item/gun/energy/ionrifle/pistol,
 /obj/item/ammo_magazine/ammo_box/b45/emp{
 	pixel_y = 12
 	},
@@ -62589,16 +62587,88 @@
 	name = "Energy"
 	},
 /obj/structure/table/rack,
-/obj/item/gun/projectile/automatic/c20r/rubber,
-/obj/item/gun/projectile/automatic/c20r/rubber,
-/obj/item/ammo_magazine/ammo_box/b10mm/emp{
-	pixel_y = 13
+/obj/item/gun/projectile/automatic/serdy/mp5,
+/obj/item/gun/projectile/automatic/serdy/mp5,
+/obj/item/gun/projectile/automatic/serdy/mp5,
+/obj/item/ammo_magazine/mp5mag{
+	pixel_x = -4;
+	pixel_y = 0
 	},
-/obj/item/ammo_magazine/ammo_box/b10mm/emp{
-	pixel_y = 13
+/obj/item/ammo_magazine/mp5mag{
+	pixel_x = -4;
+	pixel_y = 0
 	},
-/obj/item/ammo_magazine/ammo_box/b10mm/emp{
-	pixel_y = 13
+/obj/item/ammo_magazine/mp5mag{
+	pixel_x = -4;
+	pixel_y = 0
+	},
+/obj/item/ammo_magazine/mp5mag{
+	pixel_x = -4;
+	pixel_y = 0
+	},
+/obj/item/ammo_magazine/mp5mag{
+	pixel_x = -4;
+	pixel_y = 0
+	},
+/obj/item/ammo_magazine/mp5mag{
+	pixel_x = -4;
+	pixel_y = 0
+	},
+/obj/item/ammo_magazine/mp5mag{
+	pixel_x = -4;
+	pixel_y = 0
+	},
+/obj/item/ammo_magazine/mp5mag{
+	pixel_x = -4;
+	pixel_y = 0
+	},
+/obj/item/ammo_magazine/mp5mag{
+	pixel_x = -4;
+	pixel_y = 0
+	},
+/obj/item/ammo_magazine/mp5mag{
+	pixel_x = -4;
+	pixel_y = 0
+	},
+/obj/item/ammo_magazine/mp5mag/rubber{
+	pixel_x = 4;
+	pixel_y = 0
+	},
+/obj/item/ammo_magazine/mp5mag/rubber{
+	pixel_x = 4;
+	pixel_y = 0
+	},
+/obj/item/ammo_magazine/mp5mag/rubber{
+	pixel_x = 4;
+	pixel_y = 0
+	},
+/obj/item/ammo_magazine/mp5mag/rubber{
+	pixel_x = 4;
+	pixel_y = 0
+	},
+/obj/item/ammo_magazine/mp5mag/rubber{
+	pixel_x = 4;
+	pixel_y = 0
+	},
+/obj/item/ammo_magazine/mp5mag/rubber{
+	pixel_x = 4;
+	pixel_y = 0
+	},
+/obj/item/ammo_magazine/mp5mag/rubber{
+	pixel_x = 4;
+	pixel_y = 0
+	},
+/obj/item/ammo_magazine/mp5mag/rubber{
+	pixel_x = 4;
+	pixel_y = 0
+	},
+/obj/item/ammo_magazine/mp5mag/rubber{
+	pixel_x = 4;
+	pixel_y = 0
+	},
+/obj/item/ammo_magazine/mp5mag/rubber{
+	pixel_x = 4;
+	pixel_y = 0
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/tactical)
