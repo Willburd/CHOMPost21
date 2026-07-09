@@ -84,7 +84,7 @@ specialty pins
 /obj/item/clothing/accessory/solgov/specialty/officer/eshui
 	name = "officer's qualification pin"
 	icon = 'modular_outpost/icons/inventory/accessory/fluff_awards.dmi'
-	desc = "A golden pin denoting high level leadership positions, and authority on the station."
+	desc = "A small golden pin denoting completion of officer training courses and promotion to a head of staff position. Most often to signify that one has the trust and experience to operate as a head, even if they currently are not assigned as one."
 	icon_state = "fleetpin_officer"
 
 /*****
