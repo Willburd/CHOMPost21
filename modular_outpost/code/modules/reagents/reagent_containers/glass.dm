@@ -61,3 +61,29 @@
 	icon_state = pick(icons)
 	item_state = icon_state
 	. = ..()
+
+
+// Prankster bucket of random silly chemicals
+/obj/item/reagent_containers/glass/bucket/prankster_mix
+	var/static/list/prankster_chems = list(
+		REAGENT_ID_WATER,
+		REAGENT_ID_LUBE,
+		REAGENT_ID_CLEANER,
+		REAGENT_ID_GRAPEJUICE,
+		REAGENT_ID_GRAPESODA,
+		REAGENT_ID_ORANGEJUICE,
+		REAGENT_ID_ORANGESODA,
+		REAGENT_ID_APPLEJUICE,
+		REAGENT_ID_APPLESODA,
+		REAGENT_ID_MILK,
+		REAGENT_ID_COFFEE,
+		REAGENT_ID_ETHANOL,
+		// Evil chems
+		REAGENT_ID_RADIUM,
+		REAGENT_ID_FUEL,
+	)
+
+/obj/item/reagent_containers/glass/bucket/prankster_mix/Initialize(mapload)
+	. = ..()
+	var/max_vol = reagents.maximum_volume
+	reagents.add_reagent(pick(prankster_chems),rand(max_vol / 3, max_vol))

@@ -284,6 +284,11 @@
 		A.AddComponent(/datum/component/grenadetrap,G)
 		return
 
+	if(A && prob(4))
+		var/obj/item/reagent_containers/glass/bucket/prankster_mix/B = new(A)
+		AddComponent(/datum/component/waterbuckettrap,B)
+		return
+
 	var/obj/structure/cable/C = locate() in T
 	if(C && prob(20) && T.is_plating())
 		C.fray()
