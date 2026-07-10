@@ -2670,9 +2670,7 @@
 	},
 /area/medical/voxlab/main)
 "afM" = (
-/obj/machinery/computer/transhuman/resleeving{
-	pixel_y = 3
-	},
+/obj/machinery/computer/transhuman/resleeving/no_disk,
 /turf/simulated/floor/tiled/techfloor{
 	oxygen = 0;
 	phoron = 21.8366
