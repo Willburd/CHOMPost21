@@ -38429,7 +38429,7 @@
 /turf/simulated/floor/tiled/monotile,
 /area/hallway/secondary/secmedbridge)
 "pdE" = (
-/obj/machinery/food_replicator,
+/obj/machinery/synthesizer,
 /obj/structure/table/marble,
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/coffee_shop)

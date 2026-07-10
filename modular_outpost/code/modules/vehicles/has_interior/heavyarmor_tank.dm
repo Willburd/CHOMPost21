@@ -103,4 +103,4 @@
 	icon_state = "rocketshell"
 	projectile_type = /obj/item/projectile/bullet/kyshell
 	caliber = "rocket"
-	matter = list(MAT_STEEL = 10000)
+	matter = list(MAT_STEEL = MATERIAL_COST(5))
