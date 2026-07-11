@@ -37,8 +37,8 @@
 /datum/gear/fluff/ESHUI_bronzemedal
 	display_name = "ESHUI Meritorious Defense Medal"
 	path = /obj/item/clothing/accessory/medal/solgov/bronze/sol/eshui
-	ckeywhitelist = list("drakefrostpaw","nadyr","ozydev","remthebold","synxplushy","wdf71","cadeTiger","niilomarvy","lowpowermia","ikidarsha","rainy12","bigbade","darklord92")
-	character_name = list("Drake Frostpaw","Taaa","Ecise Nei","Papin Vandalia","Me Eep","Mitz","Feldam","Svatti","Nikita","Stridefast","Raine Rattlewag","Sitka Niteshade","Anna Neso","Kalun","Quincy")
+	ckeywhitelist = list("drakefrostpaw","nadyr","ozydev","remthebold","synxplushy","wdf71","cadeTiger","niilomarvy","lowpowermia","ikidarsha","rainy12","bigbade","darklord92","vandervall")
+	character_name = list("Drake Frostpaw","Taaa","Ecise Nei","Papin Vandalia","Me Eep","Mitz","Feldam","Svatti","Nikita","Stridefast","Raine Rattlewag","Sitka Niteshade","Anna Neso","Kalun","Quincy","Wyatt Banksy")
 
 /datum/gear/fluff/ESHUI_medalval
 	display_name = "ESHUI Medal of Valor"

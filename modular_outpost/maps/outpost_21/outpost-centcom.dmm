@@ -6184,6 +6184,17 @@
 	},
 /turf/simulated/floor/wood/alt,
 /area/centcom/living)
+"anK" = (
+/obj/effect/floor_decal/corner/red{
+	dir = 5
+	},
+/obj/machinery/computer/cryopod/dorms{
+	pixel_y = 32
+	},
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/centcom/security)
 "anL" = (
 /obj/structure/table/woodentable,
 /obj/item/flashlight/lamp/green{
@@ -26520,6 +26531,7 @@
 /obj/structure/sign/clock{
 	pixel_y = 32
 	},
+/obj/item/toy/plushie/slimeplushie,
 /turf/simulated/floor/wood{
 	oxygen = 0;
 	phoron = 21.8366
@@ -65663,7 +65675,7 @@ bOi
 bOi
 bOi
 bOi
-tqH
+anK
 nAK
 pPd
 bOi
