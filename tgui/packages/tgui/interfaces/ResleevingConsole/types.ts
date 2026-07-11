@@ -18,7 +18,7 @@ export type Data = {
     occupied: BooleanLike;
     occupant: string;
   }[];
-  dump_progress: number; // Outpost 21 edit - Updated transcore dump process
+  dump_progress: number;
   coredumped: BooleanLike;
   emergency: BooleanLike;
   temp: { text: string; style: string } | null;
