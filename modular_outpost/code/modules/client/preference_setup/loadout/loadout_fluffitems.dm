@@ -58,12 +58,6 @@
 	ckeywhitelist = list("ozydev","synxplushy","remthebold","cameron653","ironicleo","caramelion","pirakahunter788","haliaeetus","valinari","silencedmp5a5","natesaruli","spectralriot")
 	character_name = list("Raine Rattlewag","Cracker","Zeeshi","Trashfire","Diana Kuznetsova","Nikel","Tasesii","Calza Colfax","Atus","Valinari Sandivi Gloria","Russo","Cecil Colfax","Victim","ES-HASD #408")
 
-/datum/gear/fluff/ESHUI_rankpin
-	display_name = "ESHUI Officer's Qualification Pin"
-	path = /obj/item/clothing/accessory/solgov/specialty/officer/eshui
-	ckeywhitelist = list("remthebold","seagha","nadyr","ozydev","caramelion")
-	character_name = list("Schale","Aiektaaknell","Janik Vam","Zeeshi","Ed'Reith Foley", "Taaa","Cracker","Tasesii")
-
 /datum/gear/fluff/ESHUI_commanderpin //A good goal for an antag to steal
 	display_name = "ESHUI Captaincy Medal"
 	path = /obj/item/clothing/accessory/medal/gold/captain/eshui

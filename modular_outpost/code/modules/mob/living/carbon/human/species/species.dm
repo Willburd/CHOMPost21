@@ -72,7 +72,9 @@
 	for(var/mob/living/carbon/human/player in GLOB.player_list)
 		if(player == H)
 			continue
-		to_chat(player, span_large(span_shadekinempathy("You feel a powerful sensation of dread as the emotional presence of another like you is ripped from this reality...")))
+		// Inform all other shadekin of this kin's death.
+		if(player.species && (player.species.name == SPECIES_SHADEKIN || player.species.name == SPECIES_SHADEKIN_CREW))
+			to_chat(player, span_large(span_shadekinempathy("You feel a powerful sensation of dread as the emotional presence of another like you is ripped from this reality...")))
 	. = ..()
 
 /datum/species/skrell/New()

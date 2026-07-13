@@ -39973,13 +39973,13 @@
 /obj/item/book/manual/stasis,
 /obj/item/book/manual/medical_cloning,
 /obj/item/book/manual/resleeving,
-/obj/effect/floor_decal/spline/fancy/wood{
-	dir = 1
-	},
 /obj/machinery/doorbell_chime/medical{
 	name = "Medical Non-Emergency Request";
 	pixel_x = -32;
 	id_tag = "medding"
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 10
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/medbreak)

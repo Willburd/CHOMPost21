@@ -33174,7 +33174,7 @@
 /obj/item/soap,
 /obj/item/towel/random,
 /turf/simulated/floor/tiled/kafel_full,
-/area/maintenance/civ)
+/area/crew_quarters/sleep/Dorm_1)
 "bjP" = (
 /obj/structure/toilet,
 /obj/machinery/light/small{
@@ -33184,7 +33184,7 @@
 	dir = 2
 	},
 /turf/simulated/floor/tiled/kafel_full,
-/area/maintenance/civ)
+/area/crew_quarters/sleep/Dorm_1)
 "bjQ" = (
 /obj/structure/curtain/open/shower,
 /obj/machinery/door/window/southright{
@@ -33201,7 +33201,7 @@
 	icon_state = "spline_plain_full"
 	},
 /turf/simulated/floor/tiled/freezer,
-/area/maintenance/civ)
+/area/crew_quarters/sleep/Dorm_1)
 "bjR" = (
 /obj/structure/closet/secure_closet/personal,
 /obj/effect/floor_decal/spline/fancy/wood{

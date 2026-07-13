@@ -83,11 +83,11 @@
 		return TRUE
 
 	// Don't burn forever, eventually we have no more fuel
-	ultimate_burnout += 0.001
+	ultimate_burnout += 0.002 //outpost 21 edit, bumping from 0.001 to 0.002
 
 	// Spread while burning out oxigen
 	var/datum/gas_mixture/air_contents = my_tile.return_air()
-	var/gas_exchange = rand(0.01, 0.2)
+	var/gas_exchange = rand(0.01, 0.03) //Outpost 21 edit - Reduces max O2 loss, so it won't choke itself out nearly as fast.
 	air_contents.remove_by_flag(XGM_GAS_OXIDIZER, gas_exchange)
 	air_contents.adjust_gas(GAS_CO2, gas_exchange * 1.5) // Lots of CO2
 

@@ -32276,6 +32276,9 @@
 	},
 /obj/structure/table/reinforced,
 /obj/item/hoist_kit,
+/obj/item/chainsaw/alt{
+	pixel_y = -10
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/engineering/storage)
 "eHf" = (
@@ -57257,16 +57260,6 @@
 	},
 /turf/simulated/floor/plating/external/turfpack/muriki,
 /area/engineering/engine_room)
-"mzW" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/green/border{
-	dir = 1
-	},
-/obj/machinery/computer/timeclock/premade/north,
-/turf/simulated/floor/tiled/steel,
-/area/hallway/primary/central_two)
 "mAk" = (
 /obj/structure/catwalk,
 /obj/effect/floor_decal/flesh,
@@ -146690,7 +146683,7 @@ alO
 oQV
 alU
 exh
-mzW
+jAp
 byh
 pzF
 jbq

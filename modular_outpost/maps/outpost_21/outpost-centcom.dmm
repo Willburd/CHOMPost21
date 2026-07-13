@@ -6163,8 +6163,8 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/red,
-/obj/item/chainsaw/rauf,
 /obj/structure/table/rack,
+/obj/item/chainsaw/alt/axered/rauf,
 /turf/unsimulated/floor/steel{
 	icon_state = "milspec"
 	},
