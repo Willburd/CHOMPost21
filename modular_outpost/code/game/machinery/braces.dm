@@ -11,7 +11,7 @@
 	pry = 1
 	toolspeed = 1
 	tool_qualities = list(TOOL_CROWBAR)
-	matter = list(MAT_DURASTEEL = 50)
+	matter = list(MAT_DURASTEEL = MATERIAL_COST(0.025))
 
 
 // BRACE - Can be installed on airlock to reinforce it and keep it closed.

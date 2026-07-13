@@ -20,10 +20,7 @@
 
 
 /// Alerts the station when an AI upload console is used
-/obj/item/aiModule/proc/law_upload_announce(obj/machinery/computer/source_machine)
-	var/turf/T = get_turf(source_machine)
-	if(!T)
-		return
-	var/str = "\A [source_machine] has been used to modify the laws of a synthetic unit. Signal originates from [T.x], [T.y], [using_map.get_zlevel_name(T.z)]"
+/obj/item/aiModule/proc/law_upload_announce(machine_name, X, Y, Z)
+	var/str = "\A [machine_name] has been used to modify the laws of a synthetic unit. Signal originates from [X], [Y], [using_map.get_zlevel_name(Z)]"
 	GLOB.global_announcer.autosay(str, "Artificial Intelligence Oversight", DEPARTMENT_ENGINEERING)
 	GLOB.global_announcer.autosay(str, "Artificial Intelligence Oversight", DEPARTMENT_COMMAND)

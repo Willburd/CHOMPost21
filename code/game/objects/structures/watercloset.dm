@@ -344,6 +344,16 @@
 	var/turf/T = get_turf(src)
 	T.assume_air(gas)
 
+	// Outpost 21 edit(port) begin - Cistern loot-splosion
+	if(cistern)
+		for(var/atom/movable/AM in contents)
+			if(AM == bin || AM == teleplumb_crystal)
+				continue
+			LAZYADD(received_items, AM)
+	if(length(currently_held_objects))
+		LAZYADD(received_items, currently_held_objects)
+	// Outpost 21 edit end
+
 	if(!length(received_items))
 		visible_message(span_warning("The water in \the [src] gurgles and bubbles ominously..."), span_notice("You hear a wet gurgling and spluttering..."), runemessage = "glurgles")
 		return

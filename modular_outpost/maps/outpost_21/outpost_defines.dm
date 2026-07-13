@@ -44,6 +44,7 @@
 							NETWORK_ENGINE,
 							NETWORK_ENGINEERING,
 							NETWORK_ENGINEERING_OUTPOST,
+							NETWORK_SUBSTATIONS,
 							NETWORK_DEFAULT,
 							NETWORK_MEDICAL,
 							NETWORK_RESEARCH,
@@ -487,6 +488,8 @@
 
 /obj/effect/overmap/visitable/sector/muriki/proc/notify_airspace_violation(obj/effect/overmap/visitable/ship/landable/SL)
 	if(QDELETED(SL))
+		return
+	if(istype(SL, /obj/effect/overmap/visitable/ship/landable/specialops_overmap)) // Ignores the ERT shuttle
 		return
 	if(!airspace_lockdown)
 		recent_targets.Remove(SL.name)

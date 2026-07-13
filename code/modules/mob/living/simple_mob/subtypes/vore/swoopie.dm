@@ -38,7 +38,7 @@
 	vore_pounce_chance = 100
 	vore_pounce_maxhealth = 200
 	has_hands = TRUE
-	adminbus_trash = TRUE //You know what, sure whatever. It's not like anyone's gonna be taking this bird on unga trips to be their gamer backpack, which kinda was the main reason for the trash eater restrictions in the first place anyway.
+	expanded_trasheat = TRUE //You know what, sure whatever. It's not like anyone's gonna be taking this bird on unga trips to be their gamer backpack, which kinda was the main reason for the trash eater restrictions in the first place anyway.
 	faction = "neutral"
 	say_list_type = /datum/say_list/swoopie
 	ai_holder_type = /datum/ai_holder/simple_mob/retaliate/swoopie
@@ -327,6 +327,7 @@
 		if("Swoop Trash")
 			ai.swoop_trash = !ai.swoop_trash // invert the option
 			to_chat(usr, "you press a button on \the [src], [ai.swoop_trash ? "" : "de"]activating it's trash seeking routines!")
+	ai.lose_target() // Outpost 21 edit - Changing selection mode should reset target
 
 
 /mob/living/simple_mob/vore/aggressive/corrupthound/swoopie/Login()

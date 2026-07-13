@@ -53,7 +53,6 @@ x/proc/disable_goggles()\
 	active = FALSE;\
 	icon_state = off_state;\
 	flash_protection = FLASH_PROTECTION_NONE;\
-	tint = TINT_NONE;\
 	away_planes = enables_planes;\
 	enables_planes = null;\
 	if(ismob(loc))\

@@ -12,7 +12,7 @@
 	cell_type = /obj/item/cell/device/weapon
 	projectile_type = /obj/item/projectile/energy/flamecrystal
 
-	matter = list(MAT_DURASTEEL = 1000, MAT_MORPHIUM = 500)
+	matter = list(MAT_DURASTEEL = MATERIAL_COST(0.5), MAT_MORPHIUM = MATERIAL_COST(0.25))
 
 	recoil_mode = 0
 	charge_meter = 1

@@ -17,6 +17,12 @@
 		G.forceMove(src) // Put into the door
 		AddComponent(/datum/component/grenadetrap,G)
 
+	// bucket trapped map spawn
+	var/obj/item/reagent_containers/glass/bucket/bucky = locate() in loc
+	if(bucky)
+		bucky.forceMove(src) // Put into the door
+		AddComponent(/datum/component/waterbuckettrap,bucky)
+
 	// Maint breaks airlocks sometimes
 	var/area/A = get_area(src)
 	var/maint_broke_chance = 0

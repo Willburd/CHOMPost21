@@ -136,7 +136,7 @@
 	holomap_color = HOLOMAP_AREACOLOR_COMMAND
 	base_turf = /turf/simulated/open
 	use_emergency_overlay = TRUE
-	flags = RAD_SHIELDED | AREA_BLOCK_PHASE_SHIFT | BLUE_SHIELDED
+	flags = RAD_SHIELDED | AREA_BLOCK_PHASE_SHIFT | BLUE_SHIELDED | AREA_FIRE_SUPRESSION
 	color_grading = COLORTINT_COLD
 
 /area/server
@@ -144,6 +144,7 @@
 	base_turf = /turf/simulated/open
 	use_emergency_overlay = TRUE
 	color_grading = COLORTINT_COLD
+	flags = AREA_FIRE_SUPRESSION
 
 /area/crew_quarters
 	holomap_color = HOLOMAP_AREACOLOR_CIV
@@ -183,7 +184,7 @@
 /area/crew_quarters/sleep/Dorm_1
 	holomap_color = HOLOMAP_AREACOLOR_DORMS
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
-	flags = AREA_FIRE_SUPRESSION|AREA_ALLOW_LARGE_SIZE|AREA_SOUNDPROOF
+	flags = AREA_ALLOW_LARGE_SIZE|AREA_SOUNDPROOF
 	color_grading = COLORTINT_WARM
 
 /area/crew_quarters/sleep/Dorm_2
@@ -221,7 +222,6 @@
 /area/crew_quarters/kitchen
 	holomap_color = HOLOMAP_AREACOLOR_HYDROPONICS
 	base_turf = /turf/simulated/open
-	flags = AREA_FIRE_SUPRESSION
 
 /area/crew_quarters/bar
 	holomap_color = HOLOMAP_AREACOLOR_HYDROPONICS
@@ -253,7 +253,7 @@
 
 /area/security/prison
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
-	flags = AREA_BLOCK_INSTANT_BUILDING | AREA_FIRE_SUPRESSION
+	flags = AREA_BLOCK_INSTANT_BUILDING
 	lightswitch = 1
 
 /area/security/brig
@@ -292,7 +292,7 @@
 /area/medical/medbay4
 	name = "\improper Medbay Hallway - Vox"
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
-	flags = AREA_BLOCK_INSTANT_BUILDING | AREA_FIRE_SUPRESSION
+	flags = AREA_BLOCK_INSTANT_BUILDING
 
 /area/medical/psych
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
@@ -389,7 +389,7 @@
 /area/medical/first_aid_station
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
 	base_turf = /turf/simulated/open
-	flags = AREA_BLOCK_INSTANT_BUILDING | AREA_FIRE_SUPRESSION
+	flags = AREA_BLOCK_INSTANT_BUILDING
 	lightswitch = 1
 
 /area/storage/tools
@@ -399,6 +399,7 @@
 /area/storage/tech
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 	base_turf = /turf/simulated/open
+	flags = AREA_FIRE_SUPRESSION
 
 /area/engineering/drone_fabrication
 	base_turf = /turf/simulated/open
@@ -484,6 +485,7 @@
 	holomap_color = HOLOMAP_AREACOLOR_SECURITY
 	base_turf = /turf/simulated/open
 	lightswitch = 1
+	flags = AREA_FIRE_SUPRESSION
 
 /area/tcommsat
 	holomap_color = HOLOMAP_AREACOLOR_COMMAND
@@ -514,7 +516,7 @@
 /area/tcommsat/powercontrol
 	holomap_color = HOLOMAP_AREACOLOR_COMMAND
 	base_turf = /turf/simulated/open
-	flags = RAD_SHIELDED | AREA_BLOCK_PHASE_SHIFT | BLUE_SHIELDED
+	flags = RAD_SHIELDED | AREA_BLOCK_PHASE_SHIFT | BLUE_SHIELDED | AREA_FIRE_SUPRESSION
 
 /area/engineering/atmos
 	name = "\improper Pulmonary Atmospherics"
@@ -526,6 +528,9 @@
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	color_grading = COLORTINT_DIM
+
+/area/engineering/engine_smes
+	flags = AREA_FIRE_SUPRESSION
 
 /area/constructionsite/atmospherics
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
@@ -605,6 +610,11 @@
 	flags = 0 //Makes it FILTHY again
 	base_turf = /turf/simulated/open
 	lightswitch = 1
+	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_BLOCK_INSTANT_BUILDING | AREA_FIRE_SUPRESSION
+
+/area/medical/resleeving
+	flags = AREA_FIRE_SUPRESSION
+
 
 /area/rnd/workshop
 	name = "\improper Circuitry Lab"
@@ -634,7 +644,7 @@
 
 /area/security/armoury
 	base_turf = /turf/simulated/open
-	flags = BLUE_SHIELDED|AREA_BLOCK_PHASE_SHIFT|AREA_FIRE_SUPRESSION
+	flags = BLUE_SHIELDED|AREA_BLOCK_PHASE_SHIFT
 	color_grading = COLORTINT_DIM
 	lightswitch = 1
 

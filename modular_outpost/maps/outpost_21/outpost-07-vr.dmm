@@ -1892,6 +1892,18 @@
 	},
 /turf/simulated/floor/plating,
 /area/vr/bloodstar)
+"adF" = (
+/obj/effect/blocker,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/airless,
+/area/vr/bloodstar)
+"adG" = (
+/obj/structure/lattice,
+/obj/effect/blocker,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/airless,
+/area/vr/bloodstar)
+"adH" = (
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/airless,
+/area/vr/bloodstar)
 "adK" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/white/border,
@@ -5992,7 +6004,7 @@
 /turf/simulated/floor,
 /area/vr/bloodstar)
 "bqK" = (
-/turf/simulated/mineral/ignore_mapgen,
+/turf/simulated/mineral/ignore_cavegen,
 /area/vr/bloodstar)
 "bqO" = (
 /obj/effect/decal/cleanable/dirt,
@@ -24552,7 +24564,7 @@
 /area/vr/bloodstar)
 "hdf" = (
 /obj/structure/lattice,
-/turf/simulated/mineral/ignore_mapgen,
+/turf/simulated/mineral/ignore_cavegen,
 /area/vr/bloodstar)
 "hdg" = (
 /obj/effect/floor_decal/industrial/warning/corner{
@@ -54861,7 +54873,7 @@
 "qtd" = (
 /obj/structure/lattice,
 /obj/effect/blocker,
-/turf/simulated/mineral/ignore_mapgen,
+/turf/simulated/mineral/ignore_cavegen,
 /area/vr/bloodstar)
 "qtf" = (
 /obj/structure/window/reinforced/polarized{
@@ -67819,7 +67831,7 @@
 /area/vr/bloodstar)
 "uCS" = (
 /obj/effect/blocker,
-/turf/simulated/mineral/ignore_mapgen,
+/turf/simulated/mineral/ignore_cavegen,
 /area/vr/bloodstar)
 "uDn" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -138667,7 +138679,7 @@ bqK
 bqK
 bqK
 bqK
-kPr
+adF
 bCE
 bCE
 bCE
@@ -138827,9 +138839,9 @@ kjX
 bqK
 bqK
 bqK
-vuI
-vuI
-kPr
+adH
+adH
+adF
 bCE
 bCE
 bCE
@@ -138991,7 +139003,7 @@ rHD
 rHD
 rHD
 kjX
-kPr
+adF
 bCE
 bCE
 bCE
@@ -140287,7 +140299,7 @@ rHD
 rHD
 rHD
 kjX
-kPr
+adF
 bCE
 bCE
 bCE
@@ -140448,8 +140460,8 @@ bqK
 bqK
 bqK
 bqK
-vuI
-kPr
+adH
+adF
 bCE
 bCE
 bCE
@@ -140610,7 +140622,7 @@ bqK
 bqK
 bqK
 bqK
-vuI
+adH
 oxC
 bCE
 bCE
@@ -140771,8 +140783,8 @@ rHD
 bqK
 bqK
 bqK
-vuI
-vuI
+adH
+adH
 oxC
 bCE
 bCE
@@ -140934,8 +140946,8 @@ bqK
 bqK
 bqK
 bqK
-vuI
-kPr
+adH
+adF
 bCE
 bGH
 bGH
@@ -141097,7 +141109,7 @@ bqK
 bqK
 bqK
 bqK
-kPr
+adF
 bGH
 bGH
 bCE
@@ -141259,7 +141271,7 @@ bqK
 bqK
 bqK
 bqK
-qnD
+adG
 bGH
 bCE
 bCE
@@ -141421,7 +141433,7 @@ wAt
 wAt
 wAt
 bBT
-qnD
+adG
 bCE
 bCE
 rvC

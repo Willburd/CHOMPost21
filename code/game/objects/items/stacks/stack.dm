@@ -437,15 +437,6 @@
 		..()
 	return
 
-// Outpost 21 edit(port) begin - Help intent only prods instead of bonks
-/obj/item/stack/attack(mob/living/M as mob, mob/living/user as mob)
-	// prodding on help intent, ignored for borgs and bots because of endless coding stupidity.
-	if(M != user && !issilicon(M) && !isbot(M) && user.a_intent == I_HELP)
-		user.visible_message(span_notice("[user] prods [M] with \the [src.name]."))
-		return ITEM_INTERACT_SUCCESS
-	. = ..(M,user)
-// Outpost 21 edit end
-
 /obj/item/stack/attackby(obj/item/W, mob/user)
 	if(istype(W, /obj/item/gripper))
 		var/obj/item/gripper/G = W

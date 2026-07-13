@@ -79,7 +79,7 @@
 /datum/gear/uniform/job_nullsuit/sci
 	display_name = "nullsuit, sci"
 	path = /obj/item/clothing/under/rank/nullsuit/sci
-	allowed_roles = list(JOB_RESEARCH_DIRECTOR, JOB_SCIENTIST, JOB_ROBOTICIST, JOB_XENOBIOLOGIST, JOB_PATHFINDER, JOB_EXPLORER, JOB_ELECTROPHYSICIST)
+	allowed_roles = list(JOB_RESEARCH_DIRECTOR, JOB_SCIENTIST, JOB_ROBOTICIST, JOB_XENOBIOLOGIST, JOB_PATHFINDER, JOB_EXPLORER)
 
 /datum/gear/uniform/job_nullsuit/sci/rd
 	display_name = "nullsuit, research director"

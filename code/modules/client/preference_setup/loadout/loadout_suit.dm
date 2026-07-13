@@ -485,7 +485,7 @@
 /datum/gear/suit/wintercoat/science
 	display_name = "winter coat, science"
 	path = /obj/item/clothing/suit/storage/hooded/wintercoat/science
-	allowed_roles = list(JOB_RESEARCH_DIRECTOR,JOB_SCIENTIST, JOB_ROBOTICIST, JOB_XENOBIOLOGIST, JOB_XENOBOTANIST, JOB_ELECTROPHYSICIST)
+	allowed_roles = list(JOB_RESEARCH_DIRECTOR,JOB_SCIENTIST, JOB_ROBOTICIST, JOB_XENOBIOLOGIST, JOB_XENOBOTANIST)
 	show_roles = FALSE
 
 /datum/gear/suit/wintercoat/science/robotics
@@ -678,7 +678,7 @@
 /datum/gear/suit/snowsuit/command
 	display_name = "snowsuit, command"
 	path = /obj/item/clothing/suit/storage/hooded/wintercoat/snowsuit/command // CHOMPEdit
-	allowed_roles = list(JOB_SITE_MANAGER,JOB_RESEARCH_DIRECTOR,JOB_HEAD_OF_PERSONNEL,JOB_HEAD_OF_SECURITY,JOB_CHIEF_ENGINEER,JOB_HEAD_OF_PERSONNEL,JOB_BLUESHIELD_GUARD) //YW ADDITIONS // Outpost 21 edit - Command sec folded into hop
+	allowed_roles = list(JOB_SITE_MANAGER,JOB_RESEARCH_DIRECTOR,JOB_HEAD_OF_PERSONNEL,JOB_HEAD_OF_SECURITY,JOB_CHIEF_ENGINEER,JOB_COMMAND_OFFICER,JOB_BLUESHIELD_GUARD) //YW ADDITIONS // Outpost 21 edit - Command sec folded into command officer
 	show_roles = FALSE
 
 /datum/gear/suit/snowsuit/security
@@ -696,7 +696,7 @@
 /datum/gear/suit/snowsuit/science
 	display_name = "snowsuit, science"
 	path = /obj/item/clothing/suit/storage/hooded/wintercoat/snowsuit/science // CHOMPEdit
-	allowed_roles = list(JOB_RESEARCH_DIRECTOR,JOB_SCIENTIST, JOB_ROBOTICIST, JOB_XENOBIOLOGIST, JOB_ELECTROPHYSICIST)
+	allowed_roles = list(JOB_RESEARCH_DIRECTOR,JOB_SCIENTIST, JOB_ROBOTICIST, JOB_XENOBIOLOGIST)
 	show_roles = FALSE
 
 /datum/gear/suit/snowsuit/engineering
@@ -722,7 +722,7 @@
 /datum/gear/suit/cmddressjacket
 	display_name = "command dress jacket"
 	path = /obj/item/clothing/suit/storage/toggle/cmddressjacket
-	allowed_roles = list(JOB_SITE_MANAGER, JOB_HEAD_OF_PERSONNEL, JOB_HEAD_OF_PERSONNEL) // Outpost 21 edit - Command sec folded into hop
+	allowed_roles = list(JOB_SITE_MANAGER, JOB_HEAD_OF_PERSONNEL, JOB_COMMAND_OFFICER) // Outpost 21 edit - Command sec folded into command officer
 	show_roles = FALSE
 
 /datum/gear/suit/miscellaneous/kimono

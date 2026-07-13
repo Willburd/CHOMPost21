@@ -9,3 +9,8 @@
 	for(var/obj/item/clothing/accessory/medal/internal_confinement_medal/medal_type as anything in typesof(/obj/item/clothing/accessory/medal/internal_confinement_medal))
 		medals[initial(medal_type.name)] = medal_type
 	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(medals))
+
+/datum/gear/accessory/officer_qualification_pin
+	display_name = "ESHUI Officer's Qualification Pin"
+	path = /obj/item/clothing/accessory/solgov/specialty/officer/eshui
+	cost = 0

@@ -7,6 +7,26 @@
 	. = ..()
 	access |= list(ACCESS_XENOBOTANY)
 	minimal_access |= list(ACCESS_XENOBOTANY)
+	alt_titles |= list(JOB_XENOBOTANIST = /datum/alt_title/xenobotanist, JOB_ALT_XENOHYDROPONICIST = /datum/alt_title/xenohydroponicist, JOB_ALT_XENOFLORIST = /datum/alt_title/xenoflorist)
+
+// alt-titles
+/datum/alt_title/xenobotanist
+	title = JOB_XENOBOTANIST
+	title_blurb = "A " + JOB_XENOBOTANIST + " grows and cares for a variety of abnormal, custom made, and frequently dangerous plant life. When the products of these plants \
+					are both safe and beneficial to the station, they may choose to introduce it to the rest of the crew."
+	title_outfit = /datum/decl/hierarchy/outfit/job/science/xenobotanist
+
+/datum/alt_title/xenoflorist
+	title = JOB_ALT_XENOFLORIST
+	title_blurb = "A " + JOB_ALT_XENOFLORIST + " grows and cares for a variety of abnormal, custom made, and frequently dangerous plant life. When the products of these plants \
+					are both safe and beneficial to the station, they may choose to introduce it to the rest of the crew."
+	title_outfit = /datum/decl/hierarchy/outfit/job/science/xenobotanist
+
+/datum/alt_title/xenohydroponicist
+	title = JOB_ALT_XENOHYDROPONICIST
+	title_blurb = "A " + JOB_ALT_XENOHYDROPONICIST + " grows and cares for a variety of abnormal, custom made, and frequently dangerous plant life. When the products of these plants \
+					are both safe and beneficial to the station, they may choose to introduce it to the rest of the crew."
+	title_outfit = /datum/decl/hierarchy/outfit/job/science/xenobotanist
 
 
 /datum/job/bartender
@@ -45,6 +65,16 @@
 /datum/job/lawyer
 	departments = list(DEPARTMENT_COMMAND)
 	selection_color = "#1D1D4F"
+
+/datum/job/lawyer/New()
+	. = ..()
+	alt_titles |= list(JOB_ALT_INTERNAL_AFFAIRS_DAMAGE_ASSESSMENT = /datum/alt_title/ia_damage_assesment, JOB_ALT_INTERNAL_AFFAIRS_CASUALTY_ANALYST = /datum/alt_title/ia_casualty_analyst)
+
+/datum/alt_title/ia_damage_assesment
+	title = JOB_ALT_INTERNAL_AFFAIRS_DAMAGE_ASSESSMENT
+
+/datum/alt_title/ia_casualty_analyst
+	title = JOB_ALT_INTERNAL_AFFAIRS_CASUALTY_ANALYST
 
 
 /datum/job/entertainer/New()

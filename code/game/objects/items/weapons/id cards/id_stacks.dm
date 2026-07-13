@@ -55,7 +55,7 @@
 	name = "Silver ID"
 	initial_sprite_stack = list("base-stamp-silver", "top-blue", "stamp-n")
 
-/* Outpost 21 edit - Command sec folded into hop
+/* Outpost 21 edit - Command sec folded into command officer
 /obj/item/card/id/silver/secretary
 	name = "Secretary's ID"
 	initial_sprite_stack = list("base-stamp", "top-blue", "stamp-n")

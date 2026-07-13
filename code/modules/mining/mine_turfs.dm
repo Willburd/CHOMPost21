@@ -674,6 +674,11 @@ GLOBAL_LIST_EMPTY(mining_overlay_cache)
 	else if(rand(1,500) == 1)
 		visible_message(span_notice("An old dusty crate was buried within!"))
 		new /obj/structure/closet/crate/secure/loot(src)
+	// Outpost 21 edit begin - Chemical tank loot sometimes
+	else if(rand(1,400) == 1)
+		visible_message(span_notice("An old dusty barrel was buried within!"))
+		new /obj/structure/reagent_dispensers/barrel/randomized_chem(src)
+	// Outpost 21 edit end
 
 	make_floor()
 	update_icon(1)
