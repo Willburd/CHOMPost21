@@ -5282,6 +5282,7 @@
 #include "modular_alpha_gattening\code\modules\projectiles\casing.dm"
 #include "modular_alpha_gattening\code\modules\projectiles\magazines.dm"
 #include "modular_alpha_gattening\code\modules\projectiles\projectiles.dm"
+#include "modular_alpha_gattening\code\modules\projectiles\guns\ballistic.dm"
 #include "modular_alpha_gattening\code\modules\projectiles\guns\factions\blackhole\ballistic.dm"
 #include "modular_alpha_gattening\code\modules\projectiles\guns\factions\blackhole\energy.dm"
 #include "modular_alpha_gattening\code\modules\projectiles\guns\factions\civilian\ballistic.dm"

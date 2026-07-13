@@ -5,7 +5,7 @@
 #define PER_BULLET_MATERIAL_COST 60
 
 // rest of the caliber sizes here
-#define CALIBER_TYPE_10MM tenmm
+#define CALIBER_TYPE_10MM "tenmm"
 
 
 #define BULLET_DEFINE_HUD(hud_str) hud_state = hud_str;

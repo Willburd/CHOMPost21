@@ -19,5 +19,5 @@
 
 	caliber = CALIBER_TYPE_10MM
 	load_method = MAGAZINE
-	magazine_type = /obj/item/ammo_magazine/mag_tenmm
-	allowed_magazines = list(/obj/item/ammo_magazine/mag_tenmm)
+	magazine_type = /obj/item/ammo_magazine/mag_testtenmil
+	allowed_magazines = list(/obj/item/ammo_magazine/mag_testtenmil)
