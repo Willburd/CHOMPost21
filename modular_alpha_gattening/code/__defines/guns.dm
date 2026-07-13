@@ -4,29 +4,36 @@
 
 #define PER_BULLET_MATERIAL_COST 60
 
-#define GUN_CHAMBER_10MIL "10mm"
 // rest of the caliber sizes here
+#define CALIBER_TYPE_10MM tenmm
 
 
-///////////////////////////////////
-// Gun identities
-// Guns share magazine compatibility.
-// All magazines of a specific caliber fit all guns of that caliber.
-// No exceptions. This system not compatible with realism of your historical gun's
-// hyper specific snowflake magazine only made in the 1930s. This is hundreds of years in
-// the future, and part of completely standardized system for the sake of GAMEPLAY.
-///////////////////////////////////
+#define BULLET_DEFINE_HUD(hud_str) hud_state = hud_str;
+#define BULLET_DEFINE_BLUNT embed_chance = 0;sharp = FALSE;
+#define BULLET_DEFINE_STANDARD_MATERIALS matter = list(MAT_STEEL = PER_BULLET_MATERIAL_COST);
 
-#define SET_GUN_PROJECTILE_ANY \
-load_method = MAGAZINE; \
-magazine_type = /obj/item/ammo_magazine; \
-allowed_magazines = list(/obj/item/ammo_magazine); \
-projectile_type = /obj/item/projectile/bullet; \
-caliber = "";
+// Bullet types
+#define BULLET_TYPE_PRACTICE practice
+#define BULLET_TYPE_RUBBER rubber
+#define BULLET_TYPE_ARMORPIERCING ap
+#define BULLET_TYPE_HOLLOWPOINT hp
 
-#define SET_GUN_PROJECTILE_TENMILL \
-load_method = MAGAZINE; \
-magazine_type = /obj/item/ammo_magazine/m10mm; \
-allowed_magazines = list(/obj/item/ammo_magazine/m10mm); \
-projectile_type = /obj/item/projectile/bullet/a10mm; \
-caliber = GUN_CHAMBER_10MIL;
+
+// Bullet damages
+#define BULLET_DAMAGE_MINIMAL 1
+#define BULLET_DAMAGE_LOW 5
+#define BULLET_DAMAGE_MILD 10
+#define BULLET_DAMAGE_MODERATE 20
+#define BULLET_DAMAGE_MEDIUM 40
+#define BULLET_DAMAGE_HIGH 50
+#define BULLET_DAMAGE_VERYHIGH 60
+#define BULLET_DAMAGE_EXTREME 75
+#define BULLET_DAMAGE_LETHAL 100
+
+
+// Bullet AP
+#define BULLET_PENETRATION_BAD -15
+#define BULLET_PENETRATION_POOR -10
+#define BULLET_PENETRATION_NONE 0
+#define BULLET_PENETRATION_GOOD 10
+#define BULLET_PENETRATION_GREAT 15

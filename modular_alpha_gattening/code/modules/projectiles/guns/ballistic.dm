@@ -7,4 +7,17 @@
 	w_class = ITEMSIZE_NORMAL
 	icon = 'modular_alpha_gattening/icons/obj/guns_x32.dmi'
 	icon_state = "debug"
-	SET_GUN_PROJECTILE_ANY
+
+	caliber = ""
+	load_method = MAGAZINE
+	magazine_type = /obj/item/ammo_magazine
+	allowed_magazines = list(/obj/item/ammo_magazine)
+	projectile_type = /obj/item/projectile/bullet
+
+/obj/item/gun/projectile/pistol/tenmil_test
+	name = "debug handgun 10mm"
+
+	caliber = CALIBER_TYPE_10MM
+	load_method = MAGAZINE
+	magazine_type = /obj/item/ammo_magazine/mag_tenmm
+	allowed_magazines = list(/obj/item/ammo_magazine/mag_tenmm)

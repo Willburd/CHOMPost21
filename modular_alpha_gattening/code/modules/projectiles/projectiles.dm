@@ -1,29 +1,53 @@
+#define CREATE_PROJECTILE_BASE(id) /obj/item/projectile/bullet/proj_ ##id
+#define CREATE_PROJECTILE_PRACTICE(id) /obj/item/projectile/bullet/proj_ ##id/practice
+#define CREATE_PROJECTILE_RUBBER(id) /obj/item/projectile/bullet/proj_ ##id/rubber
+#define CREATE_PROJECTILE_ARMORPIERCING(id) /obj/item/projectile/bullet/proj_ ##id/ap
+#define CREATE_PROJECTILE_HOLLOWPOINT(id) /obj/item/projectile/bullet/proj_ ##id/hp
+
 /////////////////////////////////////////////////////////////////////////////////////////
 // 10mm
 /////////////////////////////////////////////////////////////////////////////////////////
 
-/obj/item/projectile/bullet/proj_10mm
+CREATE_PROJECTILE_BASE(tenmm)
+	damage = BULLET_DAMAGE_MODERATE
+	BULLET_DEFINE_HUD("pistol")
 	fire_sound = 'sound/weapons/gunshot2.ogg'
-	hud_state = "pistol"
-	damage = 20
-	matter = list(MAT_STEEL = PER_BULLET_MATERIAL_COST)
+	BULLET_DEFINE_STANDARD_MATERIALS
 
-/obj/item/projectile/bullet/proj_10mm/practice
-	damage = 5
-	hud_state = "smg_light"
+CREATE_PROJECTILE_PRACTICE(tenmm)
+	damage = BULLET_DAMAGE_LOW
+	BULLET_DEFINE_HUD("smg_light")
+	BULLET_DEFINE_BLUNT
 
-/obj/item/projectile/bullet/proj_10mm/rubber
-	armor_penetration = -10
-	damage = 10
-	agony = 50
-	embed_chance = 0
-	sharp = FALSE
+CREATE_PROJECTILE_RUBBER(tenmm)
+	armor_penetration = BULLET_PENETRATION_POOR
+	damage = BULLET_DAMAGE_MILD
+	agony = BULLET_DAMAGE_HIGH
 	check_armour = "melee"
+	BULLET_DEFINE_BLUNT
 
-/obj/item/projectile/bullet/proj_10mm/ap
-	armor_penetration = 15
-	hud_state = "pistol_ap"
+CREATE_PROJECTILE_ARMORPIERCING(tenmm)
+	armor_penetration = BULLET_PENETRATION_GREAT
+	BULLET_DEFINE_HUD("pistol_ap")
 
-/obj/item/projectile/bullet/proj_10mm/hp
-	armor_penetration = -10
-	hud_state = "pistol_hollow"
+CREATE_PROJECTILE_HOLLOWPOINT(tenmm)
+	armor_penetration = BULLET_PENETRATION_POOR
+	BULLET_DEFINE_HUD("pistol_hollow")
+
+/////////////////////////////////////////////////////////////////////////////////////////
+// next size
+/////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+#undef CREATE_PROJECTILE_BASE
+#undef CREATE_PROJECTILE_PRACTICE
+#undef CREATE_PROJECTILE_RUBBER
+#undef CREATE_PROJECTILE_ARMORPIERCING
+#undef CREATE_PROJECTILE_HOLLOWPOINT
