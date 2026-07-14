@@ -154,18 +154,18 @@ Internal confinement medals
 /*****
 Dogtags
 *****/
-/obj/item/accessory/dtag
+/obj/item/clothing/accessory/dtag
 	name = "Identification Tag"
 	desc = "A small medal ID plate with important information regarding the owner. Often called 'dogtags', despite allegations of specism from the vulpkanin."
 	icon = 'modular_outpost/icons/inventory/accessory/item.dmi'
 	icon_state = "dtags"
 
-/obj/item/accessory/dtag/medical
+/obj/item/clothing/accessory/dtag/medical
 	name = "Medical Information Tag"
 	desc = "A small metal ID plate colored blue to identify patient worries. Containing blood type, and any DNR information."
 	icon_state = "dtags_med"
 
-/obj/item/accessory/dtag/allergy
+/obj/item/clothing/accessory/dtag/allergy
 	name = "Allergy Information Tag"
 	desc = "A small metal ID plate colored bright red to warn medical staff of a potentially hazardous allergy in the patient."
 	icon_state = "dtags_aller"
