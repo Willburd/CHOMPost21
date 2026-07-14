@@ -146,6 +146,7 @@
 		if(countdown_too_far_gone() && !announced)
 			GLOB.priority_announcement.Announce("The self-destruct sequence has reached terminal countdown, abort systems have been disabled.", "Self-Destruct Control Computer")
 			announced = TRUE
+			SSoutpost_voice.event_countdown(self_destruct_cutoff / (1 MINUTES), "to_detonation", TRUE) // C I N E M A T I C   V O I C E
 	return 0
 
 /obj/machinery/nuclearbomb/station/proc/has_timer()

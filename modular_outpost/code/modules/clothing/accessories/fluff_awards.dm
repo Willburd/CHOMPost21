@@ -156,7 +156,8 @@ Dogtags
 *****/
 /obj/item/accessory/dtag
 	name = "Identification Tag"
-	desc = "A small medal ID plate with important information regarding the owner. Often called 'dogtags', despite allegations of specism from the vulpkanin. "
+	desc = "A small medal ID plate with important information regarding the owner. Often called 'dogtags', despite allegations of specism from the vulpkanin."
+	icon = 'modular_outpost/icons/inventory/accessory/item.dmi'
 	icon_state = "dtags"
 
 /obj/item/accessory/dtag/medical

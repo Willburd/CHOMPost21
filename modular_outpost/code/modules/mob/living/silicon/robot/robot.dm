@@ -4,6 +4,8 @@
 
 /mob/living/silicon/robot/Destroy()
 	for(var/obj/item/dropping in accessories)
+		if(QDELETED(dropping)) // So cryopods don't put the deleted items back on the floor
+			continue
 		dropping.forceMove(get_turf(src))
 	accessories.Cut()
 	. = ..()

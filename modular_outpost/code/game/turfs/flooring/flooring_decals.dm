@@ -18,3 +18,27 @@
 	name = "steps"
 	icon = 'icons/obj/structures/multiz.dmi'
 	icon_state = "stair_l"
+
+/obj/effect/floor_decal/industrial/outline/green
+	name = "green outline"
+	color = "#15b800"
+
+/obj/effect/floor_decal/industrial/outline/orange
+	name = "orange outline"
+	color = "#dc8b08"
+
+/obj/effect/floor_decal/industrial/outline/purple
+	name = "purple outline"
+	color = "#c608c0"
+
+/obj/effect/floor_decal/industrial/outline/cut_corners/green
+	name = "green cut outline"
+	color = "#15b800"
+
+/obj/effect/floor_decal/industrial/outline/cut_corners/orange
+	name = "orange cut outline"
+	color = "#dc8b08"
+
+/obj/effect/floor_decal/industrial/outline/cut_corners/purple
+	name = "purple cut outline"
+	color = "#c608c0"
