@@ -39,10 +39,12 @@
 	description = "Exploration of non-human biology, unlocking the secrets of extraterrestrial lifeforms and their unique biological processes."
 	prereq_ids = list(TECHWEB_NODE_CYTOLOGY)
 	design_ids = list(
+		/* Outpost 21 edit - Species design disks are automatically unlocked here.
 		"prosthetic_skrell",
 		"prosthetic_tajaran",
 		"prosthetic_unathi",
 		"prosthetic_teshari",
+		*/
 		"slimebaton",
 		"slimetaser",
 		"slime_scanner",
