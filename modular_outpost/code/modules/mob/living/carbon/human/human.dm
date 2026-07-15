@@ -88,3 +88,21 @@
 		else
 			equip_to_slot_or_del(new /obj/item/clothing/head/helmet/space/emergency, slot_head)
 			equip_to_slot_or_del(new /obj/item/clothing/suit/space/emergency(src), slot_wear_suit)
+
+/mob/living/proc/dislocate_random_limb(probability = 100, number_of_attempts = 1, list/dislocation_sites = null) // Stub for ease of use
+	return
+
+/mob/living/carbon/human/dislocate_random_limb(probability = 100, number_of_attempts = 1, list/dislocation_sites = null)
+	if(!dislocation_sites)
+		dislocation_sites = list(BP_L_ARM, BP_R_ARM, BP_L_LEG, BP_R_LEG, BP_R_HAND, BP_L_HAND, BP_L_FOOT, BP_R_FOOT)
+	// Perform multiple dislocations
+	while(number_of_attempts > 0)
+		number_of_attempts -= 1
+		if(!prob(probability))
+			continue
+		// Actually dislocate it!
+		var/obj/item/organ/external/organ = get_organ(pick(dislocation_sites))
+		if(!organ || organ.dislocated > 0 || organ.dislocated == -1) //don't use is_dislocated() here, that checks parent
+			return FALSE
+		organ.dislocate()
+		visible_message(span_danger("[src]'s [organ.joint] [pick("gives way","caves in","collapses")]!"))
