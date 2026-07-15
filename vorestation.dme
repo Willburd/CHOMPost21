@@ -6122,6 +6122,7 @@
 #include "modular_outpost\code\modules\research\experiments\destructive\advanced_material_studies.dm"
 #include "modular_outpost\code\modules\research\experiments\scanner\misc.dm"
 #include "modular_outpost\code\modules\research\experiments\scanner\physical.dm"
+#include "modular_outpost\code\modules\research\machinery\mech_prosfab.dm"
 #include "modular_outpost\code\modules\research\techwebs\techweb_types.dm"
 #include "modular_outpost\code\modules\research\techwebs\nodes\cyborg_nodes.dm"
 #include "modular_outpost\code\modules\research\techwebs\nodes\engi_nodes.dm"
