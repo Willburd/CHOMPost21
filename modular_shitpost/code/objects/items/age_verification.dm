@@ -1,6 +1,12 @@
 /obj/item/orb_that_kills_old_people
 	name = "orb that kills old people"
 	desc = "dated shut up boomer meme here"
+	icon = 'modular_shitpost/icons/obj/orb.dmi'
+	icon_state = "orb"
+	item_icons = list(
+		slot_l_hand_str = 'modular_shitpost/icons/mob/items/orb_left.dmi',
+		slot_r_hand_str = 'modular_shitpost/icons/mob/items/orb_right.dmi'
+	)
 
 /obj/item/orb_that_kills_old_people/proc/r_u_old(mob/living/carbon/human/boomer)
 	if(H.age >= 60)
