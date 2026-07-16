@@ -615,6 +615,9 @@
 				adjustBruteLoss(rand(damage_min, damage_max))
 			Weaken(4)
 			updatehealth()
+
+		dislocate_random_limb(rand(10,40), rand(1,2)) // Outpost 21 edit - Falls cause possible dislocations
+
 	// There is really no situation where smacking into a floor and possibly dying horribly would NOT result in you dropping your remote view... It's also safer then assuming they should persist.
 	reset_perspective()
 

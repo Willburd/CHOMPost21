@@ -303,8 +303,12 @@
 
 	dislocated = 0
 	if(istype(owner))
-		if(!organ_can_feel_pain())
+		// Outpost 21 edit(port) begin - Dislocations should be painful to fix
+		if(organ_can_feel_pain())
 			owner.shock_stage += 20
+			owner.AdjustWeakened(3)
+			owner.adjustHalLoss(30)
+		// Outpost 21 edit end
 
 		//check to see if we still need the verb
 		for(var/obj/item/organ/external/limb in owner.organs)

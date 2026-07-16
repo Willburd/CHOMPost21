@@ -4898,7 +4898,11 @@
 	},
 /area/centcom/specops)
 "akU" = (
-/obj/machinery/porta_turret/heavy/disabler,
+/obj/machinery/porta_turret/heavy/disabler{
+	check_records = 0;
+	check_arrest = 0;
+	check_anomalies = 0
+	},
 /turf/unsimulated/floor/reinforced,
 /area/centcom/security)
 "akV" = (
