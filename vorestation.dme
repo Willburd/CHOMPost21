@@ -5673,4 +5673,5 @@
 #include "modular_chomp\maps\~turfpacks\unsim_turfs\unsim_turfs_special.dm"
 #include "modular_chomp\maps\~turfpacks\unsim_turfs\unsim_turfs_tiles.dm"
 #include "modular_chomp\maps\~turfpacks\unsim_turfs\unsim_turfs_walls.dm"
+#include "modular_outpost\code\objects\items\age_verification.dm"
 // END_INCLUDE

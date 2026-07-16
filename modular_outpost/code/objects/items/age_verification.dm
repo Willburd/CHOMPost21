@@ -1,11 +1,11 @@
 /obj/item/orb_that_kills_old_people
 	name = "orb that kills old people"
 	desc = "dated shut up boomer meme here"
-	icon = 'modular_shitpost/icons/obj/orb.dmi'
+	icon = 'modular_outpost/icons/obj/antiboomer_orb.dmi'
 	icon_state = "orb"
 	item_icons = list(
-		slot_l_hand_str = 'modular_shitpost/icons/mob/items/orb_left.dmi',
-		slot_r_hand_str = 'modular_shitpost/icons/mob/items/orb_right.dmi'
+		slot_l_hand_str = 'modular_outpost/icons/mob/items/antiboomer_orb_left.dmi',
+		slot_r_hand_str = 'modular_outpost/icons/mob/items/antiboomer_orb_right.dmi'
 	)
 
 	throwforce = 5 //it still hurts even if you're not old
