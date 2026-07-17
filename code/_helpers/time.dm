@@ -70,7 +70,7 @@ GLOBAL_VAR_INIT(next_station_date_change, 1 DAY)
 	return time2text(wtime - GLOB.timezoneOffset, format)
 
 /* Returns 1 if it is the selected month and day */
-/proc/isDay(var/month, var/day)
+/proc/isDay(month, day)
 	if(isnum(month) && isnum(day))
 		var/MM = text2num(time2text(world.timeofday, "MM")) // get the current month
 		var/DD = text2num(time2text(world.timeofday, "DD")) // get the current day
@@ -119,7 +119,7 @@ GLOBAL_VAR_INIT(rollover_safety_date, 0) // set in world/New to the server start
 	return GLOB.midnight_rollovers
 
 ///Increases delay as the server gets more overloaded, as sleeps aren't cheap and sleeping only to wake up and sleep again is wasteful
-#define DELTA_CALC max(((max(TICK_USAGE, world.cpu) / 100) * max(Master.sleep_delta-1,1)), 1)
+#define DELTA_CALC min(3,max(((max(TICK_USAGE, world.cpu) / 100) * max(Master.sleep_delta-1,1)), 1)) // Outpost 21 edit(port) - Clamp in bounds of a max
 
 ///returns the number of ticks slept
 /proc/stoplag(initial_delay)

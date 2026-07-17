@@ -21,7 +21,7 @@
 			ai_log("engage_target() : Pursuing other options (last seen, or a new target).", AI_LOG_TRACE)
 			return
 
-	var/distance = get_dist(holder, target)
+	var/distance = resolve_multiloc_distance(holder, target) // Outpost 21 edit - Multiloc object distance check
 	ai_log("engage_target() : Distance to target ([target]) is [distance].", AI_LOG_TRACE)
 	holder.face_atom(target)
 	last_conflict_time = world.time
@@ -151,7 +151,7 @@
 
 // Test if we are within range to attempt an attack, melee or ranged.
 /datum/ai_holder/proc/within_range(atom/movable/AM)
-	var/distance = get_dist(holder, AM)
+	var/distance = resolve_multiloc_distance(holder, AM) // Outpost 21 edit - Multiloc object distance check
 	if(distance <= 1)
 		return TRUE // Can melee.
 	else if(holder.ICheckRangedAttack(AM) && distance <= max_range(AM))
@@ -178,7 +178,8 @@
 
 	// Find out where we're going.
 	var/get_to = closest_distance(target)
-	var/distance = get_dist(holder, target)
+	var/distance = resolve_multiloc_distance(holder, target) // Outpost 21 edit - Multiloc object distance check
+
 	ai_log("walk_to_target() : get_to is [get_to].", AI_LOG_TRACE)
 
 	// We're here!

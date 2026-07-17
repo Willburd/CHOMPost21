@@ -141,6 +141,8 @@
 ///////////////////////////
 //// The Various Machines
 /obj/machinery/telecomms/allinone/talon
+	id = "talon_aio"
+	network = "Talon"
 	freq_listening = list(PUB_FREQ, TALON_FREQ)
 
 /obj/item/paper/secret_vendornote
@@ -522,7 +524,7 @@ personally I recommend using the ship's boat if you need to evacuate, but if you
 		/obj/item/gps/mining/talonminer,
 		/obj/item/clothing/gloves/black,
 		/obj/item/analyzer,
-		/obj/item/storage/bag/ore,
+		/obj/item/ore_bag,
 		/obj/item/flashlight/lantern,
 		/obj/item/shovel,
 		/obj/item/pickaxe,

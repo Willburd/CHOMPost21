@@ -21,9 +21,10 @@
 	var/datum/material/padding_material
 	var/base_icon = "bed"
 	var/applies_material_colour = 1
+	var/override_name = FALSE // Outpost 21 edit - Keep set map names
 	var/flippable = TRUE
 
-/obj/structure/bed/Initialize(mapload, var/new_material, var/new_padding_material)
+/obj/structure/bed/Initialize(mapload, new_material, new_padding_material)
 	..()
 	color = null
 	if(!new_material)
@@ -70,10 +71,12 @@
 	// Strings.
 	desc = initial(desc)
 	if(padding_material)
-		name = "[padding_material.display_name] [initial(name)]" //this is not perfect but it will do for now.
+		if(!override_name) // Outpost 21 edit - Keep set map names
+			name = "[padding_material.display_name] [initial(name)]" //this is not perfect but it will do for now.
 		desc += " It's made of [material.use_name] and covered with [padding_material.use_name]."
 	else
-		name = "[material.display_name] [initial(name)]"
+		if(!override_name) // Outpost 21 edit - Keep set map names
+			name = "[material.display_name] [initial(name)]"
 		desc += " It's made of [material.use_name]."
 
 /obj/structure/bed/CanPass(atom/movable/mover, turf/target)
@@ -171,7 +174,7 @@
 		padding_material = null
 	update_icon()
 
-/obj/structure/bed/proc/add_padding(var/padding_type)
+/obj/structure/bed/proc/add_padding(padding_type)
 	padding_material = get_material_by_name(padding_type)
 	update_icon()
 

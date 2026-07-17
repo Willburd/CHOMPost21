@@ -28,18 +28,30 @@
 		return
 
 	else
-		var/A
-
-		A = tgui_input_list(user, "Select a beacon to connect to", "Balloon Extraction Pack", possible_beacons)
-
-		if(!A)
+		var/obj/structure/extraction_point/A = tgui_input_list(user, "Select a beacon to connect to", "Balloon Extraction Pack", possible_beacons) // Outpost 21 edit(port) - Fulton nullspace destination fix
+		if(QDELETED(A)) // Outpost 21 edit(port) - Fulton nullspace destination fix
 			return
 		beacon = A
 		to_chat(user, "You link the extraction pack to the beacon system.")
 
 /obj/item/extraction_pack/afterattack(atom/movable/A, mob/living/carbon/human/user, flag, params)
-	if(!beacon)
+	if(QDELETED(beacon)) // Outpost 21 edit(port) - Fulton nullspace destination fix
 		to_chat(user, "[src] is not linked to a beacon, and cannot be used.")
+		return
+	// Outpost 21 edit begin - No escaping redspace
+	var/atom/warp_goal = beacon
+	var/area/user_area = get_area(user)
+	var/turf/user_turf = get_turf(user)
+	if(user_area.haunted && (user_turf.z in using_map.admin_levels)) // admin level is redspace centcomm z on outpost
+		var/list/redlist = list()
+		for(var/obj/effect/landmark/R in GLOB.landmarks_list)
+			if(R.name == "redentrance")
+				redlist += R
+		if(redlist.len > 0)
+			warp_goal = pick(redlist)
+	// Outpost 21 edit end
+	if(!warp_goal) // Outpost 21 edit(port) - Fulton nullspace destination fix
+		beacon = null
 		return
 	if(!can_use_indoors)
 		var/turf/T = get_turf(A)
@@ -110,11 +122,17 @@
 				var/mob/living/carbon/human/L = A
 				L.AdjustStunned(20)
 				L.drowsyness = 0
+				L.emote("scream")
 			sleep(30)
 			var/list/flooring_near_beacon = list()
-			for(var/turf/simulated/floor/floor in orange(1, beacon))
+			var/had_option = FALSE
+			for(var/turf/simulated/floor/floor in orange(1, warp_goal)) // Outpost 21 edit - No escaping redspace
+				had_option = TRUE
 				flooring_near_beacon += floor
-			holder_obj.forceMove(pick(flooring_near_beacon))
+			if(had_option)
+				holder_obj.forceMove(pick(flooring_near_beacon))
+			else
+				holder_obj.forceMove(get_turf(warp_goal)) // Outpost 21 edit(port) - No escaping redspace
 			animate(holder_obj, pixel_z = 10, time = 50)
 			sleep(50)
 			animate(holder_obj, pixel_z = 15, time = 10)

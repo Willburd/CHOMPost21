@@ -1608,13 +1608,13 @@
 					//6
 					list("key"=/obj/item/stack/material/steel,
 							"backkey"=IS_SCREWDRIVER,
-							"desc"="Translocator is secured"),  //Chompedit, change hand tele to translocator
+							"desc"="Tand tele is secured"),  // Outpost 21 edit - Reverted chomp edit
 					//7
 					list("key"=IS_SCREWDRIVER,
 							"backkey"=IS_CROWBAR,
-							"desc"="Translocator is installed"),  //Chompedit, change hand tele to translocator
+							"desc"="Hand tele is installed"),  // Outpost 21 edit - Reverted chomp edit
 					//8
-					list("key"=/obj/item/perfect_tele,  //Chompedit, change hand tele to translocator
+					list("key"=/obj/item/hand_tele,  // Outpost 21 edit - Reverted chomp edit
 							"backkey"=IS_SCREWDRIVER,
 							"desc"="SMES coil is secured"),
 					//9

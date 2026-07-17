@@ -44,7 +44,7 @@
 	cold_level_2 = 50
 	cold_level_3 = 0
 
-	breath_type = GAS_N2 //CHOMPedit
+	breath_type = GAS_N2
 	poison_type = GAS_O2
 	ideal_air_type = /datum/gas_mixture/belly_air/vox
 	siemens_coefficient = 0.2
@@ -91,13 +91,14 @@
 	)
 	inherent_verbs = list(/mob/living/carbon/human/proc/tie_hair) //Get ya quills done did
 
-/datum/species/vox/get_random_name(var/gender)
+/datum/species/vox/get_random_name(gender)
 	var/datum/language/species_language = GLOB.all_languages[default_language]
 	return species_language.get_random_name(gender)
 
-/datum/species/vox/equip_survival_gear(var/mob/living/carbon/human/H, var/extendedtank = 0,var/comprehensive = 0)
+/datum/species/vox/equip_survival_gear(mob/living/carbon/human/H, extendedtank = 0,comprehensive = 0)
 	. = ..()
 
+	/* Outpost 21 edit(port) - we use our own tank code
 	H.equip_to_slot_or_del(new /obj/item/clothing/mask/breath(H), slot_wear_mask)
 	if(H.backbag == 1)
 		H.equip_to_slot_or_del(new /obj/item/tank/nitrogen(H), slot_back) //CHOMPedit
@@ -108,3 +109,4 @@
 	H.internal = locate(/obj/item/tank) in H.contents
 	if(istype(H.internal,/obj/item/tank) && H.internals)
 		H.internals.icon_state = "internal1"
+	*/

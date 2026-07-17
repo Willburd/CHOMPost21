@@ -13,11 +13,13 @@
 	// For some reason borg Life() doesn't call ..()
 	handle_modifiers()
 	handle_light()
+	handle_radiation() // outpost 21 edit - radiation and haunting affects vision
 
 	if(client)
 		handle_regular_hud_updates()
 		handle_vision()
 		update_items()
+		update_haunt() // Outpost 21 edit - Haunted areas cause haunted borg laws
 	if (stat != DEAD) //still using power
 		use_power()
 		process_killswitch()
@@ -155,6 +157,11 @@
 	else
 		blinded = 1
 
+	// outpost 21 edit begin - lockers are dark and spooky!
+	if(istype(loc, /obj/structure/closet))
+		blinded = 1
+	// outpost 21 edit end
+
 	// Call parent to handle signals
 	. = ..()
 
@@ -195,12 +202,10 @@
 		see_in_dark = 8
 		see_invisible = SEE_INVISIBLE_LEVEL_TWO
 		fullbright = TRUE
-	/* //ChompEDIT START - remove this for now
 	else if (sight_mode & BORGANOMALOUS)
 		see_in_dark = 8
 		see_invisible = INVISIBILITY_SHADEKIN
 		fullbright = TRUE
-	*/ //ChompEDIT END
 	else if (!seedarkness)
 		sight &= ~SEE_MOBS
 		sight &= ~SEE_TURFS
@@ -394,3 +399,24 @@
 		return TRUE
 	else
 		. = ..()
+
+// outpost 21 edit begin - radiation and haunting affects borg vision
+/mob/living/silicon/robot/handle_radiation()
+	. = ..()
+	if(.)
+		return
+	if(!client) // This is purely visual for borgs so we shouldn't bother otherwise
+		radiation = 0
+		return
+	var/area/A = get_area(src)
+	if(A && A.haunted) // Force haunting rad vision
+		radiation = 10
+	var/old_rads = radiation
+	radiation -= rand(2,7)
+	if(radiation <= 0)
+		if(old_rads > 0)
+			client.screen -= GLOB.global_hud.whitense
+		radiation = 0
+	else
+		client.screen |= GLOB.global_hud.whitense
+// outpost 21 edit end

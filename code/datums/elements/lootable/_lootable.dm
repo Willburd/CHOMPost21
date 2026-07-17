@@ -4,7 +4,7 @@
 	var/chance_rare = 1				// Ditto, but for rare_loot list.
 	var/chance_gamma = 0			// Singledrop global loot table shared with all piles.
 
-	var/allow_multiple_looting = TRUE	// If true, the same person can loot multiple times.  Mostly for debugging.
+	var/allow_multiple_looting = FALSE	// If true, the same person can loot multiple times.  Mostly for debugging.
 	var/loot_depletion = FALSE		// If true, loot piles can be 'depleted' after a certain number of searches by different players, where no more loot can be obtained.
 	var/loot_left = 0				// Maximum number of times a pile can be looted before no loot will remain for anyone
 	var/delete_on_depletion = FALSE	// If true, and if the loot gets depleted as above, the pile is deleted.
@@ -29,7 +29,7 @@
 	UnregisterSignal(target, COMSIG_LOOT_REWARD)
 
 /// Calculates and drops loot, the source's turf is where it will be dropped, L is the searching mob, and searched_by is a passed list for storing who has searched a loot pile.
-/datum/element/lootable/proc/loot(atom/source,mob/living/L,var/list/searched_by, wake_chance = 0)
+/datum/element/lootable/proc/loot(atom/source,mob/living/L,list/searched_by, wake_chance = 0)
 	SIGNAL_HANDLER
 	// The loot's all gone.
 	if(loot_depletion)
@@ -54,10 +54,10 @@
 	var/obj/item/loot = null
 	var/span = "notice" // Blue
 
-	if(HAS_TRAIT(L, TRAIT_UNLUCKY) && unlucky_loot.len) // If you're unlucky, you will always find bad stuff.
+	if(HAS_TRAIT(L, TRAIT_UNLUCKY) && unlucky_loot.len && prob(15)) // If you're unlucky, you will probably find bad stuff.
 		loot = produce_unlucky_item(source)
 		span = "cult" // Purple and bold.
-		if(prob(1))
+		if(prob(6))
 			to_chat(L, span_danger("You cut your hand on something in the trash!"))
 			L.apply_damage(2, BRUTE, pick(BP_L_HAND, BP_R_HAND), used_weapon = "sharp object")
 			var/datum/disease/advance/random/random_disease = new /datum/disease/advance/random()
@@ -75,6 +75,12 @@
 	else if(prob(chance_gamma) && GLOB.unique_gamma_loot.len) // ULTRA GRAND PRIZE
 		loot = produce_gamma_item(source)
 		span = "cult" // Purple and bold.
+
+	// Outpost 21 edit begin - New loot
+	else if(prob(chance_gamma) && !GLOB.spawned_theta)
+		loot = produce_theta_item()
+		span = "cult" // Purple and bold.
+	// Outpost 21 edit end
 
 	else  // Welp.
 		loot = produce_common_item(source)
@@ -100,8 +106,14 @@
 	to_chat(L, span_info(final_message))
 	var/disturbed_sleep = rand(1,100) //spawning of mobs, for now only the trash panda.
 	if(disturbed_sleep <= wake_chance)
-		new /mob/living/simple_mob/animal/passive/raccoon(get_turf(source))
-		source.visible_message("A raccoon jumps out of the trash!.")
+		if(prob(50))
+			new /mob/living/simple_mob/animal/passive/raccoon(get_turf(source))
+			source.visible_message("A raccoon jumps out of the trash!")
+		// Outpost 21 edit begin - 50% possum too!
+		else
+			new /mob/living/simple_mob/animal/passive/opossum(get_turf(source))
+			source.visible_message("An opossum jumps out of the trash!")
+		// Outpost 21 edit end
 
 	// Check if we should delete on depletion
 	if(!loot_depletion)
@@ -153,6 +165,6 @@
 	return produce_rare_item(source)
 
 /// Restores a removed gamma loot item back to the loot table
-/proc/restore_gamma_loot(var/w_type)
+/proc/restore_gamma_loot(w_type)
 	GLOB.allocated_gamma_loot -= w_type
 	GLOB.unique_gamma_loot += w_type

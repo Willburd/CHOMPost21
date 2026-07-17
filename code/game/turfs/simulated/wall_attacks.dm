@@ -1,5 +1,5 @@
 //Interactions
-/turf/simulated/wall/proc/toggle_open(var/mob/user)
+/turf/simulated/wall/proc/toggle_open(mob/user)
 
 	if(can_open == WALL_OPENING)
 		return
@@ -41,14 +41,14 @@
 		SSair.mark_for_update(turf)
 
 
-/turf/simulated/wall/proc/update_thermal(var/turf/simulated/source)
+/turf/simulated/wall/proc/update_thermal(turf/simulated/source)
 	if(istype(source))
 		if(density && opacity)
 			source.thermal_conductivity = WALL_HEAT_TRANSFER_COEFFICIENT
 		else
 			source.thermal_conductivity = initial(source.thermal_conductivity)
 
-/turf/simulated/wall/proc/fail_smash(var/mob/user)
+/turf/simulated/wall/proc/fail_smash(mob/user)
 	var/damage_lower = 25
 	var/damage_upper = 75
 	if(isanimal(user))
@@ -63,7 +63,7 @@
 	user.do_attack_animation(src)
 	take_damage(rand(damage_lower,damage_upper))
 
-/turf/simulated/wall/proc/success_smash(var/mob/user)
+/turf/simulated/wall/proc/success_smash(mob/user)
 	to_chat(user, span_danger("You smash through the wall!"))
 	user.do_attack_animation(src)
 	if(isanimal(user))
@@ -72,7 +72,7 @@
 	spawn(1)
 		dismantle_wall(1)
 
-/turf/simulated/wall/proc/try_touch(var/mob/user, var/rotting)
+/turf/simulated/wall/proc/try_touch(mob/user, rotting)
 
 	if(rotting)
 		if(reinf_material)
@@ -90,7 +90,7 @@
 		toggle_open(user)
 	return 0
 
-/turf/simulated/wall/attack_ai(var/mob/user)
+/turf/simulated/wall/attack_ai(mob/user)
 	if(!Adjacent(user))
 		return
 	if(!isrobot((user)))
@@ -98,8 +98,9 @@
 	var/rotting = (locate(/obj/effect/overlay/wallrot) in src)
 	try_touch(user, rotting)
 
-/turf/simulated/wall/attack_hand(var/mob/user)
-
+/turf/simulated/wall/attack_hand(mob/user)
+	if(!Adjacent(user))
+		return
 	radiate()
 	add_fingerprint(user)
 	user.setClickCooldown(user.get_attack_speed())
@@ -113,7 +114,7 @@
 
 	try_touch(user, rotting)
 
-/turf/simulated/wall/attack_generic(var/mob/user, var/damage, var/attack_message)
+/turf/simulated/wall/attack_generic(mob/user, damage, attack_message)
 
 	radiate()
 	user.setClickCooldown(user.get_attack_speed())
@@ -132,9 +133,27 @@
 		return success_smash(user)
 	return fail_smash(user)
 
-/turf/simulated/wall/attackby(var/obj/item/W, var/mob/user, attack_modifier, click_parameters)
+/turf/simulated/wall/attackby(obj/item/W, mob/user, attack_modifier, click_parameters)
 
 	user.setClickCooldown(user.get_attack_speed(W))
+
+	// outpost 21 edit begin - Slamming heads into walls
+	if(isliving(user) && istype(W,/obj/item/grab))
+		var/mob/living/L = user
+		var/damage_done = L.slam_grabbed_mob_against_thing(W)
+		if(damage_done > -1)
+			var/obj/item/grab/G = W
+			var/mob/living/throw_mob = G.throw_held()
+			if(throw_mob)
+				// SMACK wall till it breaks!
+				if(L.zone_sel.selecting != BP_HEAD)
+					to_chat(L, span_danger("Slammed [throw_mob] into the wall!"))
+					if(damage_done >= STRUCTURE_MIN_DAMAGE_THRESHOLD * 2) attack_generic(L,damage_done,"slammed")
+				else
+					to_chat(L, span_danger("Slammed [throw_mob] by the head into the wall"))
+					if(damage_done >= STRUCTURE_MIN_DAMAGE_THRESHOLD * 2) attack_generic(L,damage_done,"slammed")
+		return
+	// outpost 21 edit end
 
 /*
 //As with the floors, only this time it works AND tries pushing the wall after it's done.
@@ -153,8 +172,15 @@
 
 	if(W)
 		radiate()
-		if(is_hot(W))
-			burn(is_hot(W))
+		if(W.is_hot())
+			var/burn_temp = 1000
+			if(istype(W, /obj/item/flame/lighter))
+				burn_temp = 1500
+			if(istype(W, /obj/item/melee/energy))
+				burn_temp = 3500
+			if(istype(W, /obj/item/weldingtool) || istype(W, /obj/item/tool/transforming) || istype(W, /obj/item/pickaxe/plasmacutter))
+				burn_temp = 3800
+			burn(burn_temp)
 
 	if(istype(W, /obj/item/electronic_assembly/wallmount))
 		var/obj/item/electronic_assembly/wallmount/IC = W

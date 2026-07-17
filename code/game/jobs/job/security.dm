@@ -53,7 +53,7 @@
 	title = JOB_ALT_SECURITY_MANAGER
 
 //YW ADDITION START: LOYALTY IMPLANT FOR HOS
-/datum/job/hos/equip(var/mob/living/carbon/human/H)
+/datum/job/hos/equip(mob/living/carbon/human/H)
 	. = ..()
 	if(.)
 		H.implant_loyalty()
@@ -103,6 +103,7 @@
 //////////////////////////////////
 //			Detective
 //////////////////////////////////
+/* Outpost 21 edit - Detective is officer now
 /datum/job/detective
 	title = JOB_DETECTIVE
 	flag = DETECTIVE
@@ -127,11 +128,11 @@
 
 /datum/job/detective/get_request_reasons()
 	return list("Forensic investigation")
-
+*/
 // Detective Alt Titles
 /datum/alt_title/forensic_tech
 	title = JOB_ALT_FORENSIC_TECHNICIAN
-	title_blurb = "A " + JOB_ALT_FORENSIC_TECHNICIAN + " works more with hard evidence and labwork than a " + JOB_DETECTIVE + ", but they share the purpose of solving crimes."
+//	title_blurb = "A " + JOB_ALT_FORENSIC_TECHNICIAN + " works more with hard evidence and labwork than a " + JOB_DETECTIVE + ", but they share the purpose of solving crimes." // Outpost 21 edit - Detective is officer now
 	title_outfit = /datum/decl/hierarchy/outfit/job/security/detective/forensic
 
 /datum/alt_title/investigator
@@ -165,7 +166,7 @@
 						apprehending criminals. A " + JOB_SECURITY_OFFICER + " is responsible for the health, safety, and processing of any prisoner they arrest. \
 						No one is above the Law, not Security or Command."
 	alt_titles = list(JOB_ALT_PATROL_OFFICER = /datum/alt_title/patrol_officer, JOB_ALT_SECURITY_GUARD = /datum/alt_title/security_guard,
-						JOB_ALT_SECURITY_DEPUTY = /datum/alt_title/security_guard, JOB_ALT_JUNIOR_OFFICER = /datum/alt_title/junior_officer,
+						JOB_ALT_SECURITY_DEPUTY = /datum/alt_title/security_deputy, JOB_ALT_JUNIOR_OFFICER = /datum/alt_title/junior_officer, // Outpost 21 edit - Wrong job datum
 						JOB_ALT_SECURITY_CONTRACTOR = /datum/alt_title/security_contractor, JOB_ALT_LOSS_PREVENTION = /datum/alt_title/loss_prevention)
 
 	min_age_by_species = list(SPECIES_PROMETHEAN = 3)

@@ -97,7 +97,7 @@ SUBSYSTEM_DEF(explosions)
 	if(!length(pending_explosions))
 		suspend_and_invoke_deferred_subsystems()
 
-/datum/controller/subsystem/explosions/proc/fire_prepare_explosions(var/list/data)
+/datum/controller/subsystem/explosions/proc/fire_prepare_explosions(list/data)
 	var/pwr = data[4]
 	var/direction = data[5]
 	var/starting_power = data[6]
@@ -140,7 +140,7 @@ SUBSYSTEM_DEF(explosions)
 	// Build the final explosion list, will be processed when we get to final resolution
 	finalize_explosion(data[1],data[2],data[3],pwr,starting_power)
 
-/datum/controller/subsystem/explosions/proc/fire_resolve_explosions(var/list/data)
+/datum/controller/subsystem/explosions/proc/fire_resolve_explosions(list/data)
 	var/pwr = data[4]
 	var/starting_power = data[5]
 	if(pwr <= 0)
@@ -168,7 +168,7 @@ SUBSYSTEM_DEF(explosions)
 	PRIVATE_PROC(TRUE)
 	resolve_explosions = FALSE
 
-/datum/controller/subsystem/explosions/proc/wake_and_defer_subsystem_updates(var/defer = FALSE)
+/datum/controller/subsystem/explosions/proc/wake_and_defer_subsystem_updates(defer = FALSE)
 	if(defer) // Save these for AFTER the explosion has resolved
 		SSmachines.defer_powernet_rebuild();
 	// waking from sleep, we are absolutely not resuming, and INSTANT feedback to players is required here.
@@ -195,7 +195,7 @@ SUBSYSTEM_DEF(explosions)
 	currentrun[key] = data
 
 // INTERNAL explosion proc, meant for GROWING a currently processing blast.
-/datum/controller/subsystem/explosions/proc/append_currentrun(var/x0,var/y0,var/z0,var/pwr,var/direction,var/starting_power)
+/datum/controller/subsystem/explosions/proc/append_currentrun(x0,y0,z0,pwr,direction,starting_power)
 	SHOULD_NOT_OVERRIDE(TRUE)
 	PRIVATE_PROC(TRUE)
 	if(pwr <= 0)
@@ -251,7 +251,7 @@ SUBSYSTEM_DEF(explosions)
 	wake_and_defer_subsystem_updates(devastation_range >= 8 || heavy_impact_range >= 16 || light_impact_range >= 20)
 
 // Collect prepared explosions for BLAST PROCESSING
-/datum/controller/subsystem/explosions/proc/finalize_explosion(var/x0,var/y0,var/z0,var/pwr,var/max_starting)
+/datum/controller/subsystem/explosions/proc/finalize_explosion(x0,y0,z0,pwr,max_starting)
 	SHOULD_NOT_OVERRIDE(TRUE)
 	PRIVATE_PROC(TRUE)
 	if(pwr <= 0)
@@ -284,10 +284,16 @@ SUBSYSTEM_DEF(explosions)
 		var/adj_light = max(0, (multi_z_scalar * light_impact_range) - (shaped ? 2 : 0) )
 		var/adj_flash = max(0, (multi_z_scalar * flash_range) - (shaped ? 2 : 0) )
 		if(adj_dev > 0 || adj_heavy > 0)
+			// Outpost 21 edit begin - deadly fall z levels don't transfer explosions up
 			if(HasAbove(epicenter.z) && z_transfer & UP)
-				explosion(GetAbove(epicenter), round(adj_dev), round(adj_heavy), round(adj_light), round(adj_flash), 0, UP, shaped)
+				var/turf/z_turf = GetAbove(epicenter)
+				if(!((z_turf.z in using_map.deadly_fall_levels) || (epicenter.z in using_map.deadly_fall_levels)))
+					explosion(z_turf, round(adj_dev), round(adj_heavy), round(adj_light), round(adj_flash), 0, UP, shaped)
 			if(HasBelow(epicenter.z) && z_transfer & DOWN)
-				explosion(GetBelow(epicenter), round(adj_dev), round(adj_heavy), round(adj_light), round(adj_flash), 0, DOWN, shaped)
+				var/turf/z_turf = GetBelow(epicenter)
+				if(!((z_turf.z in using_map.deadly_fall_levels) || (epicenter.z in using_map.deadly_fall_levels)))
+					explosion(z_turf, round(adj_dev), round(adj_heavy), round(adj_light), round(adj_flash), 0, DOWN, shaped)
+			// Outpost 21 edit end
 	var/max_range = max(devastation_range, heavy_impact_range, light_impact_range, flash_range)
 
 	// Play sounds; we want sounds to be different depending on distance so we will manually do it ourselves.

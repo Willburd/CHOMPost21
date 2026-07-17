@@ -73,7 +73,7 @@
 	vore_stomach_name = "fuel processor"
 	vore_stomach_flavor = "You have ended up in the fuel processor of this corrupted machine. This place was definitely not designed with safety and comfort in mind. The heated and cramped surroundings oozing potent fluids all over your form, eager to do nothing less than breaking you apart to fuel its rampage for the next few days... hours... minutes? Oh dear..."
 
-	loot_list = list(/obj/item/borg/upgrade/basic/syndicate = 6, /obj/item/borg/upgrade/basic/vtec = 6, /obj/item/material/knife/ritual = 6, /obj/item/disk/nifsoft/compliance = 6)
+	loot_list = list(/obj/item/borg/upgrade/basic/syndicate = 6, /obj/item/borg/upgrade/basic/vtec = 6, /obj/item/material/knife/ritual = 6 /* Outpost 21 edit - Nif removal: , /obj/item/disk/nifsoft/compliance = 6*/ )
 
 	can_be_drop_prey = FALSE
 	allow_mind_transfer = TRUE
@@ -98,7 +98,7 @@
 /mob/living/simple_mob/vore/aggressive/corrupthound/speech_bubble_appearance()
 	return "synthetic_evil"
 
-/mob/living/simple_mob/vore/aggressive/corrupthound/apply_melee_effects(var/atom/A)
+/mob/living/simple_mob/vore/aggressive/corrupthound/apply_melee_effects(atom/A)
 	if(ismouse(A))
 		var/mob/living/simple_mob/animal/passive/mouse/mouse = A
 		if(mouse.getMaxHealth() < 20) // In case a badmin makes giant mice or something.
@@ -123,7 +123,7 @@
 /mob/living/simple_mob/vore/aggressive/corrupthound/MouseDrop_T(mob/living/M, mob/living/user)
 	return
 
-/mob/living/simple_mob/vore/aggressive/corrupthound/space/Process_Spacemove(var/check_drift = 0)
+/mob/living/simple_mob/vore/aggressive/corrupthound/space/Process_Spacemove(check_drift = 0)
 	return TRUE
 
 /mob/living/simple_mob/vore/aggressive/corrupthound/load_default_bellies()
@@ -245,6 +245,7 @@
 	. += /datum/decl/emote/audible/synth/dwoop
 	. += /datum/decl/emote/audible/synth/boop
 	. += /datum/decl/emote/audible/synth/robochirp
+	. += /datum/decl/emote/audible/synth/bhonk // Outpost 21 edit - Honk borg
 
 /datum/category_item/catalogue/technology/drone/corrupt_hound/janihound
 	name = "Drone - Corrupt Hound"
@@ -345,7 +346,7 @@
 /mob/living/simple_mob/vore/retaliate/corrupthound/janihound/speech_bubble_appearance()
 	return "synthetic_evil"
 
-/mob/living/simple_mob/vore/retaliate/corrupthound/janihound/apply_melee_effects(var/atom/A)
+/mob/living/simple_mob/vore/retaliate/corrupthound/janihound/apply_melee_effects(atom/A)
 	if(ismouse(A))
 		var/mob/living/simple_mob/animal/passive/mouse/mouse = A
 		if(mouse.getMaxHealth() < 20) // In case a badmin makes giant mice or something.
@@ -370,7 +371,7 @@
 /mob/living/simple_mob/vore/retaliate/corrupthound/janihound/MouseDrop_T(mob/living/M, mob/living/user)
 	return
 
-/mob/living/simple_mob/vore/retaliate/corrupthound/janihound/space/Process_Spacemove(var/check_drift = 0)
+/mob/living/simple_mob/vore/retaliate/corrupthound/janihound/space/Process_Spacemove(check_drift = 0)
 	return TRUE
 
 /mob/living/simple_mob/vore/retaliate/corrupthound/janihound/load_default_bellies()

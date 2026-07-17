@@ -16,7 +16,8 @@
 		/obj/item/radio/headset/earbud/cargo,
 		/obj/item/clothing/gloves/black,
 		/obj/item/clothing/gloves/fingerless,
-		/obj/item/clothing/head/soft)
+		/obj/item/clothing/head/soft,
+		/obj/item/cargo_scanner)
 
 /obj/structure/closet/secure_closet/cargotech/Initialize(mapload)
 	if(prob(75))
@@ -58,7 +59,8 @@
 		/obj/item/clothing/suit/storage/hooded/wintercoat/cargo,
 		/obj/item/clothing/suit/storage/hooded/wintercoat/cargo/qm,
 		/obj/item/clothing/head/beret/qm,
-		/obj/item/clothing/shoes/boots/winter/supply)
+		/obj/item/clothing/shoes/boots/winter/supply,
+		/obj/item/cargo_scanner)
 
 /obj/structure/closet/secure_closet/quartermaster/Initialize(mapload)
 	if(prob(75))
@@ -80,12 +82,12 @@
 		/obj/item/clothing/gloves/black,
 		/obj/item/clothing/shoes/black,
 		/obj/item/analyzer,
-		/obj/item/storage/bag/ore,
+		/obj/item/ore_bag,
 		/obj/item/storage/belt/miner,
 		/obj/item/flashlight/lantern,
 		/obj/item/shovel,
 		/obj/item/pickaxe/drill,
-		/obj/item/kinetic_crusher,
+//		/obj/item/kinetic_crusher, // Outpost 21 edit - Removed roundstart PKs
 		/obj/item/clothing/glasses/material,
 		/obj/item/clothing/suit/storage/hooded/wintercoat/miner,
 		/obj/item/clothing/shoes/boots/winter/mining,

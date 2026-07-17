@@ -8,7 +8,6 @@
 	fire_sound = 'sound/weapons/wave.ogg'
 	charge_cost = 240
 	projectile_type = /obj/item/projectile/beam/mouselaser
-	origin_tech = list(TECH_BLUESPACE = 4)
 	battery_lock = 1
 	firemodes = list()
 	force = 0 //CHOMPEdit
@@ -83,7 +82,7 @@
 	tracer_type = /obj/effect/projectile/tracer/laser_omni
 	impact_type = /obj/effect/projectile/impact/laser_omni
 
-/obj/item/projectile/beam/mouselaser/on_hit(var/atom/target)
+/obj/item/projectile/beam/mouselaser/on_hit(atom/target)
 	var/mob/living/M = target
 	if(!istype(M))
 		return
@@ -100,15 +99,13 @@
 		if(M.stat == DEAD)	//We can let it undo the TF, because the person will be dead, but otherwise things get weird.
 			return
 		var/mob/living/new_mob = spawn_mob(M)
-
 		M.tf_into(new_mob)
 
-/obj/item/projectile/beam/mouselaser/proc/spawn_mob(var/mob/living/target)
+/obj/item/projectile/beam/mouselaser/proc/spawn_mob(mob/living/target)
 	if(!ispath(tf_type))
 		return
 	var/new_mob = new tf_type(get_turf(target))
 	return new_mob
-
 
 
 /////SUBTYPES/////
@@ -136,7 +133,7 @@
 	name = "recombobulation beam"
 	tf_admin_pref_override = FALSE
 
-/obj/item/projectile/beam/mouselaser/reversion/on_hit(var/atom/target)
+/obj/item/projectile/beam/mouselaser/reversion/on_hit(atom/target)
 	if(istype(target,/obj/item)) //Are we shooting an item?
 		var/obj/item/O = target
 		if(O.possessed_voice.len) //Does the object have a voice? AKA, if someone inhabiting it?
@@ -182,7 +179,7 @@
 		"mouse" = /mob/living/simple_mob/animal/passive/mouse,
 		"rat" = /mob/living/simple_mob/animal/passive/mouse/rat,
 		"dust jumper" = /mob/living/simple_mob/vore/alienanimals/dustjumper,
-		"woof" = /mob/living/simple_mob/vore/woof,
+		// "woof" = /mob/living/simple_mob/vore/woof, // Outpost 21 edit - Softdog removal
 		"corgi" = /mob/living/simple_mob/animal/passive/dog/corgi,
 		"cat" = /mob/living/simple_mob/animal/passive/cat,
 		"chicken" = /mob/living/simple_mob/animal/passive/chicken,
@@ -208,7 +205,7 @@
 		"rat" = /mob/living/simple_mob/animal/passive/mouse/rat,
 		"giant rat" = /mob/living/simple_mob/vore/aggressive/rat,
 		"dust jumper" = /mob/living/simple_mob/vore/alienanimals/dustjumper,
-		"woof" = /mob/living/simple_mob/vore/woof,
+		// "woof" = /mob/living/simple_mob/vore/woof, // Outpost 21 edit - Softdog removal
 		"corgi" = /mob/living/simple_mob/animal/passive/dog/corgi,
 		"cat" = /mob/living/simple_mob/animal/passive/cat,
 		"chicken" = /mob/living/simple_mob/animal/passive/chicken,
@@ -261,7 +258,7 @@
 	name = "unstable metamorphosis ray"
 	tf_allow_select = FALSE
 
-/obj/item/gun/energy/mouseray/metamorphosis/advanced/random/attackby(var/obj/item/A as obj, mob/user as mob)
+/obj/item/gun/energy/mouseray/metamorphosis/advanced/random/attackby(obj/item/A as obj, mob/user as mob)
 	if(A.has_tool_quality(TOOL_MULTITOOL))
 		if(tf_allow_select)
 			to_chat(user, span_warning("You scramble the stored data on \the [src], making it less reliable."))
@@ -282,9 +279,11 @@
 		tf_type = tf_possible_types[choice]
 	. = ..()
 
+/* // Outpost 21 edit - Softdog removal
 /obj/item/gun/energy/mouseray/woof
 	name = "woof ray"
 	tf_type = /mob/living/simple_mob/vore/woof
+*/
 
 /obj/item/gun/energy/mouseray/corgi
 	name = "corgi ray"
@@ -354,7 +353,7 @@
 /obj/random/mouseray/item_to_spawn()
 	return pick(prob(300);/obj/item/gun/energy/mouseray,
 				prob(50);/obj/item/gun/energy/mouseray/corgi,
-				prob(50);/obj/item/gun/energy/mouseray/woof,
+				// prob(50);/obj/item/gun/energy/mouseray/woof, // Outpost 21 edit - Softdog removal
 				prob(50);/obj/item/gun/energy/mouseray/cat,
 				prob(50);/obj/item/gun/energy/mouseray/chicken,
 				prob(50);/obj/item/gun/energy/mouseray/lizard,

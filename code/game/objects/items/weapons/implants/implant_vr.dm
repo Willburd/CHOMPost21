@@ -87,7 +87,7 @@
 		hear(say_in_me.group[2])
 
 
-/obj/item/implant/sizecontrol/hear(var/msg)
+/obj/item/implant/sizecontrol/hear(msg)
 	if (malfunction)
 		return
 
@@ -114,6 +114,9 @@
 
 
 /obj/item/implant/sizecontrol/emp_act(severity, recursive)
+	. = ..()
+	if (. & EMP_PROTECT_SELF)
+		return
 	if(isliving(imp_in))
 		var/newsize = pick(RESIZE_HUGE,RESIZE_BIG,RESIZE_NORMAL,RESIZE_SMALL,RESIZE_TINY,RESIZE_A_HUGEBIG,RESIZE_A_BIGNORMAL,RESIZE_A_NORMALSMALL,RESIZE_A_SMALLTINY)
 		var/mob/living/H = imp_in
@@ -180,7 +183,7 @@ Due to the small chemical capacity of the implant, the life of the implant is re
 	icon_state = "implant_evil"
 	var/active = TRUE
 	var/laws = "CHANGE BEFORE IMPLANTATION"
-	var/nif_payload = /datum/nifsoft/compliance
+	// var/nif_payload = /datum/nifsoft/compliance // Outpost 21 edit - Nif removal
 
 /obj/item/implant/compliance/get_data()
 	var/dat = {"
@@ -198,13 +201,15 @@ Due to the small chemical capacity of the implant, the life of the implant is re
 		return
 
 	var/mob/living/carbon/human/target = source
-	if(!target.nif || target.nif.stat != NIF_WORKING) //No nif or their NIF is broken.
-		to_chat(target, span_notice("You suddenly feel compelled to follow the following commands: [laws]"))
-		to_chat(target, span_notice("((OOC NOTE: Commands that go against server rules should be disregarded and ahelped.))"))
-		to_chat(target, span_notice("((OOC NOTE: Your new commands can be checked at any time by using the 'notes' command in chat. Additionally, if you did not agree to this, you are not compelled to follow the implant.))"))
-		target.add_memory(laws)
-		return
+	// if(!target.nif || target.nif.stat != NIF_WORKING) //No nif or their NIF is broken. // Outpost 21 edit - Nif removal
+	to_chat(target, span_danger("You suddenly feel compelled to follow the following commands: [laws]")) // Outpost 21 edit - increased visibility
+	to_chat(target, span_danger("((OOC NOTE: Commands that go against server rules should be disregarded and ahelped.))")) // Outpost 21 edit - increased visibility
+	to_chat(target, span_danger("((OOC NOTE: Your new commands can be checked at any time by using the 'notes' command in chat. Additionally, if you did not agree to this, you are not compelled to follow the implant.))")) // Outpost 21 edit - increased visibility
+	target.add_memory(laws)
+	return
+	/* Outpost 21 edit - Nif removal
 	else //You got a nif...Upload time.
 		new nif_payload(target.nif,laws)
-		to_chat(target, span_notice("((OOC NOTE: Commands that go against server rules should be disregarded and ahelped.))"))
-		to_chat(target, span_notice("((OOC NOTE: If you did not agree to this, you are not compelled to follow the laws.))"))
+		to_chat(target, span_danger("((OOC NOTE: Commands that go against server rules should be disregarded and ahelped.))")) // Outpost 21 edit - increased visibility
+		to_chat(target, span_danger("((OOC NOTE: If you did not agree to this, you are not compelled to follow the laws.))")) // Outpost 21 edit - increased visibility
+	*/

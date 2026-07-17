@@ -1,6 +1,6 @@
 // Procs for living mobs based around mob transformation. Initially made for the mouseray, they are now used in various other places and the main procs are now called from here.
 
-/mob/living/proc/tf_into(var/A, var/allow_emotes = FALSE, var/object_name)
+/mob/living/proc/tf_into(A, allow_emotes = FALSE, object_name)
 	if(isliving(A))
 		var/mob/living/M = A
 		transform_into_mob(M, FALSE)
@@ -15,7 +15,7 @@
 		I.unacidable = !digestable
 		forceMove(possessed_voice)
 
-/mob/living/proc/mob_belly_transfer(var/mob/living/M)
+/mob/living/proc/mob_belly_transfer(mob/living/M)
 	for(var/obj/belly/B as anything in M.vore_organs)
 		B.loc = src
 		B.forceMove(src)
@@ -23,7 +23,7 @@
 		M.vore_organs -= B
 		src.vore_organs += B
 
-/mob/living/proc/transfer_mob_identity(var/mob/living/new_mob)
+/mob/living/proc/transfer_mob_identity(mob/living/new_mob)
 	for(var/obj/belly/B as anything in new_mob.vore_organs)
 		new_mob.vore_organs -= B
 		qdel(B)
@@ -51,7 +51,9 @@
 	new_mob.mob_belly_transfer(src)
 	new_mob.nutrition = src.nutrition
 
+	/* Outpost 21 edit - Disable soulgems
 	src.soulgem?.transfer_self(new_mob)
+	*/
 
 /mob/living
 	var/mob/living/tf_mob_holder = null
@@ -60,8 +62,10 @@
 	if(!tf_mob_holder)
 		return
 	var/mob/living/ourmob = tf_mob_holder
+	/* Outpost 21 edit - Disable soulgems
 	if(soulgem) //Should always be the case, but...Safety. Done here first
 		soulgem.transfer_self(ourmob)
+	*/
 	if(ourmob.loc != src)
 		if(isnull(ourmob.loc))
 			to_chat(src,span_notice("You have no body."))
@@ -110,8 +114,8 @@
 
 	if(ishuman(src))
 		for(var/obj/item/W in src)
-			if(istype(W, /obj/item/implant/backup) || istype(W, /obj/item/nif))
-				continue
+			//if(istype(W, /obj/item/implant/backup) || istype(W, /obj/item/nif)) Outpost 21 edit - Outpost 21 edit - Remove backup implants, Nif removal
+			//	continue
 			src.drop_from_inventory(W)
 
 	if(tf_form == ourmob)
@@ -134,7 +138,7 @@
 		if(tf_mob_holder.stat == DEAD)
 			death()
 
-/mob/living/proc/copy_vore_prefs_to_mob(var/mob/living/new_mob)
+/mob/living/proc/copy_vore_prefs_to_mob(mob/living/new_mob)
 	//For primarily copying vore preference settings from a carbon mob to a simplemob
 	//It can be used for other things, but be advised, if you're using it to put a simplemob into a carbon mob, you're gonna be overriding a bunch of prefs
 
@@ -226,7 +230,7 @@
 	else
 		transform_into_mob(tf_form, TRUE, TRUE, TRUE)
 
-/mob/living/set_dir(var/new_dir)
+/mob/living/set_dir(new_dir)
 	. = ..()
 	if(size_multiplier != 1 || icon_scale_x != 1 && center_offset > 0)
 		update_transform(TRUE)

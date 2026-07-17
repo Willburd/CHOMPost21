@@ -12,8 +12,9 @@
 
 /// Vore unique objects
 #define VENTCRAWL_VORE_WHITELIST 	/obj/belly, \
-									/obj/soulgem, \
 									/obj/item/holder
+
+								//	/obj/soulgem, \ // Outpost 21 edit - Soulgem removal
 
 /// Reasonable items with a low chance of causing exploits, mostly for catslugs but allowed by default on other vent crawlers
 #define VENTCRAWL_SMALLITEM_WHITELIST /obj/item/coin, \
@@ -21,6 +22,8 @@
 									/obj/item/toy, \
 									/obj/item/clipboard, \
 									/obj/item/paper, \
+									/obj/item/paperplane, \
+									/obj/item/paper_bundle, \
 									/obj/item/pen, \
 									/obj/item/canvas, \
 									/obj/item/paint_palette, \

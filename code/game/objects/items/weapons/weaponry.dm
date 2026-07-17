@@ -12,7 +12,7 @@
 	drop_sound = 'sound/items/drop/sword.ogg'
 	pickup_sound = 'sound/items/pickup/sword.ogg'
 
-/obj/item/nullrod/attack(mob/M as mob, mob/living/user as mob)
+/obj/item/nullrod/attack(mob/living/M, mob/living/user, target_zone, attack_modifier)
 
 	add_attack_logs(user,M,"Hit with [src] (nullrod)")
 
@@ -21,19 +21,19 @@
 
 	if(!user.IsAdvancedToolUser())
 		to_chat(user, span_danger("You don't have the dexterity to do this!"))
-		return
+		return ITEM_INTERACT_FAILURE
 
 	if(CLUMSY_HARM_CHANCE(user))
 		to_chat(user, span_danger("The rod slips out of your hand and hits your head."))
 		user.take_organ_damage(10)
 		user.Paralyse(20)
-		return
+		return ITEM_INTERACT_SUCCESS
 
 	if(M.stat != DEAD)
 		if(user?.mind?.assigned_role != JOB_CHAPLAIN)
 			to_chat(user, span_danger("You feel that only a chaplain can wield the null rod's true power!"))
 			..()
-			return
+			return ITEM_INTERACT_FAILURE
 
 		if(ishuman(M))
 			var/mob/living/carbon/human/infected = M
@@ -60,7 +60,7 @@
 		else
 			to_chat(user, span_danger("The rod appears to do nothing."))
 			M.visible_message(span_danger("\The [user] waves \the [src] over \the [M]'s head."))
-			return
+		return ITEM_INTERACT_SUCCESS
 
 /obj/item/nullrod/afterattack(atom/A, mob/user as mob, proximity)
 	if(!proximity)
@@ -68,6 +68,23 @@
 	if (istype(A, /turf/simulated/floor))
 		to_chat(user, span_notice("You hit the floor with the [src]."))
 		call(/obj/effect/rune/proc/revealrunes)(src)
+	// Outpost 21 edit begin - Dephase shadekin with nullrod
+	if(user?.mind?.assigned_role == JOB_CHAPLAIN)
+		for(var/mob/living/living in range(2, get_turf(src)))
+			var/datum/component/shadekin/SK = living.get_shadekin_component()
+			if(SK && SK.in_phase)
+				SK.attack_dephase(null, src)
+				to_chat(living, span_danger("An unyielding force of will alone drags you into reality!"))
+		// Outpost 21 edit end
+		// Outpost 21 edit begin - Chaplain can fix the horse hat
+		if(ishuman(A))
+			var/mob/living/carbon/human/check_hat = A
+			if(istype(check_hat.head, /obj/item/clothing/mask/horsehead))
+				var/obj/item/clothing/mask/horsehead/cursed_mask = check_hat.head
+				cursed_mask.canremove = TRUE
+				check_hat.drop_from_inventory(cursed_mask)
+				to_chat(check_hat, span_notice("Your curse has been removed!"))
+		// Outpost 21 edit end
 
 /obj/item/energy_net
 	name = "energy net"
@@ -77,11 +94,7 @@
 	throwforce = 0
 	force = 0
 	var/net_type = /obj/effect/energy_net
-
-/obj/item/energy_net/dropped(mob/user)
-	..()
-	spawn(10)
-		if(src) qdel(src)
+	item_flags = DROPDEL
 
 /obj/item/energy_net/throw_impact(atom/hit_atom)
 	..()

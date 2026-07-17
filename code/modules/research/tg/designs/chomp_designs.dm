@@ -58,6 +58,7 @@
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
 
+/* Outpost 21 edit - Removed overpowered mech shields
 /datum/design_techweb/mechfab/combat_shield
 	name = "linear combat shield"
 	id = "mech_shield_droid"
@@ -78,17 +79,9 @@
 		RND_CATEGORY_EQUIPMENT
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE | DEPARTMENT_BITFLAG_SECURITY
+*/
 
 // New Stuff
-
-/datum/design_techweb/board/food_replicator
-	name = "Food Replicator"
-	id = "food_replicator"
-	build_path = /obj/item/circuitboard/food_replicator
-	category = list(
-		RND_CATEGORY_MACHINE
-	)
-	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE | DEPARTMENT_BITFLAG_ENGINEERING
 
 /datum/design_techweb/mindbinder
 	name = "Mind Binder"

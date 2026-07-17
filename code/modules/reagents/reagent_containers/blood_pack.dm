@@ -4,14 +4,48 @@
 	icon_state = "sterile"
 
 /obj/item/storage/box/bloodpacks/Initialize(mapload)
-		. = ..()
-		new /obj/item/reagent_containers/blood/empty(src)
-		new /obj/item/reagent_containers/blood/empty(src)
-		new /obj/item/reagent_containers/blood/empty(src)
-		new /obj/item/reagent_containers/blood/empty(src)
-		new /obj/item/reagent_containers/blood/empty(src)
-		new /obj/item/reagent_containers/blood/empty(src)
-		new /obj/item/reagent_containers/blood/empty(src)
+	. = ..()
+	new /obj/item/reagent_containers/blood/empty(src)
+	new /obj/item/reagent_containers/blood/empty(src)
+	new /obj/item/reagent_containers/blood/empty(src)
+	new /obj/item/reagent_containers/blood/empty(src)
+	new /obj/item/reagent_containers/blood/empty(src)
+	new /obj/item/reagent_containers/blood/empty(src)
+	new /obj/item/reagent_containers/blood/empty(src)
+
+// Outpost 21 edit(port) begin - Actual blood packs
+/obj/item/storage/box/bloodpacks_full
+	name = "blood bags"
+	desc = "This box contains loaded blood packs."
+	icon_state = "sterile"
+
+/obj/item/storage/box/bloodpacks_full/Initialize(mapload)
+	. = ..()
+	new /obj/item/reagent_containers/blood/APlus(src)
+	new /obj/item/reagent_containers/blood/AMinus(src)
+	new /obj/item/reagent_containers/blood/BPlus(src)
+	new /obj/item/reagent_containers/blood/BMinus(src)
+	new /obj/item/reagent_containers/blood/OPlus(src)
+	new /obj/item/reagent_containers/blood/OMinus(src)
+	new /obj/item/reagent_containers/blood/synthblood(src)
+// Outpost 21 edit end
+
+// Outpost 21 edit begin - Medical IV bags
+/obj/item/storage/box/iv_medpacks
+	name = "medication IV bags"
+	desc = "This box contains empty medication IV bags."
+	icon_state = "sterile"
+
+/obj/item/storage/box/bloodpacks_full/Initialize(mapload)
+	. = ..()
+	new /obj/item/reagent_containers/blood/refillable(src)
+	new /obj/item/reagent_containers/blood/refillable(src)
+	new /obj/item/reagent_containers/blood/refillable(src)
+	new /obj/item/reagent_containers/blood/refillable(src)
+	new /obj/item/reagent_containers/blood/refillable(src)
+	new /obj/item/reagent_containers/blood/refillable(src)
+	new /obj/item/reagent_containers/blood/refillable(src)
+// Outpost 21 edit end
 
 /obj/item/reagent_containers/blood
 	name = "IV pack"

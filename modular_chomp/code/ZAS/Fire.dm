@@ -22,15 +22,21 @@
 		fire.firelevel = max(fl, fire.firelevel)
 		return TRUE
 
+	// Outpost 21 edit begin - No lingering in the incin
+	var/obj/effect/map_effect/interval/burnpit/BP = locate() in src
+	if(BP)
+		return 0
+	// Outpost 21 edit end
+
 	fire = new /obj/fire/lingering(src, fl)
 	SSair.active_fire_zones |= zone
 	zone.fire_tiles |= src
 	return FALSE
 
-/turf/proc/feed_lingering_fire(var/amnt)
+/turf/proc/feed_lingering_fire(amnt)
 	return
 
-/turf/simulated/feed_lingering_fire(var/amnt)
+/turf/simulated/feed_lingering_fire(amnt)
 	if(fire && istype(fire, /obj/fire/lingering))
 		var/obj/fire/lingering/F = fire
 		F.firelevel += amnt
@@ -77,13 +83,14 @@
 		return TRUE
 
 	// Don't burn forever, eventually we have no more fuel
-	ultimate_burnout += 0.001
+	ultimate_burnout += 0.002 //outpost 21 edit, bumping from 0.001 to 0.002
 
 	// Spread while burning out oxigen
 	var/datum/gas_mixture/air_contents = my_tile.return_air()
-	var/gas_exchange = rand(0.01, 0.2)
+	var/gas_exchange = rand(0.01, 0.03) //Outpost 21 edit - Reduces max O2 loss, so it won't choke itself out nearly as fast.
 	air_contents.remove_by_flag(XGM_GAS_OXIDIZER, gas_exchange)
 	air_contents.adjust_gas(GAS_CO2, gas_exchange * 1.5) // Lots of CO2
+
 
 	// Limit max lingering fire temp gain, or engines melt
 	if(air_contents.temperature < FIRE_MAX_TEMP) // May as well limit this

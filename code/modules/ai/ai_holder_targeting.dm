@@ -37,7 +37,7 @@
 	. = ohearers(vision_range, holder) - holder // CHOMPEdit Remove ourselves to prevent suicidal decisions. ~ SRC is the ai_holder.
 	. -= GLOB.dview_mob // Not the dview mob!
 
-	var/static/list/hostile_machines = typecacheof(list(/obj/machinery/porta_turret, /obj/mecha))
+	var/static/list/hostile_machines = typecacheof(list(/obj/machinery/porta_turret, /obj/mecha, /obj/vehicle/has_interior)) // Outpost 21 edit - Mobs attack vehicles
 	var/static/list/ignore = typecacheof(list(/mob/observer))
 
 	for(var/HM in typecache_filter_list(range(vision_range, holder), hostile_machines))
@@ -47,7 +47,7 @@
 //CHOMPEdit End
 
 // Step 2, filter down possible targets to things we actually care about.
-/datum/ai_holder/proc/find_target(var/list/possible_targets, var/has_targets_list = FALSE)
+/datum/ai_holder/proc/find_target(list/possible_targets, has_targets_list = FALSE)
 	ai_log("find_target() : Entered.", AI_LOG_TRACE)
 	if(!hostile) // So retaliating mobs only attack the thing that hit it.
 		return null
@@ -130,7 +130,7 @@
 			closest_targets += A
 	return closest_targets
 
-/datum/ai_holder/proc/can_attack(atom/movable/the_target, var/vision_required = TRUE)
+/datum/ai_holder/proc/can_attack(atom/movable/the_target, vision_required = TRUE)
 	//CHOMP Removal (optimizing by making most intense check last)
 	if(!belly_attack)
 		if(isbelly(holder.loc))
@@ -174,6 +174,14 @@
 			return can_attack(M.occupant)
 		return destructive // Empty mechs are 'neutral'.
 
+	// Outpost 21 edit begin - Mobs attack vehicles
+	if(istype(the_target, /obj/vehicle))
+		var/obj/vehicle/V = the_target
+		if(holder.faction == V.faction || holder.AI_ignores)
+			return FALSE
+		return V.health > 0
+	// Outpost 21 edit end
+
 	if(istype(the_target, /obj/machinery/porta_turret))
 		var/obj/machinery/porta_turret/P = the_target
 		if(P.stat & BROKEN)
@@ -195,7 +203,7 @@
 //CHOMPEdit Begin
 //It may seem a bit funny to define a proc above and then immediately override it in the same file
 //But this is basically layering the checks so that the vision check will always come last
-/datum/ai_holder/can_attack(atom/movable/the_target, var/vision_required = TRUE)
+/datum/ai_holder/can_attack(atom/movable/the_target, vision_required = TRUE)
 	if(!..())
 		return FALSE
 	if(vision_required && !can_see_target(the_target))
@@ -323,15 +331,15 @@
 	add_attacker(AM)
 
 // Checks to see if an atom attacked us lately
-/datum/ai_holder/proc/check_attacker(var/atom/movable/A)
+/datum/ai_holder/proc/check_attacker(atom/movable/A)
 	return (A.name in attackers)
 
 // We were attacked by this thing recently
-/datum/ai_holder/proc/add_attacker(var/atom/movable/A)
+/datum/ai_holder/proc/add_attacker(atom/movable/A)
 	attackers |= A.name
 
 // Forgive this attacker
-/datum/ai_holder/proc/remove_attacker(var/atom/movable/A)
+/datum/ai_holder/proc/remove_attacker(atom/movable/A)
 	attackers -= A.name
 
 // Causes targeting to prefer targeting the taunter if possible.

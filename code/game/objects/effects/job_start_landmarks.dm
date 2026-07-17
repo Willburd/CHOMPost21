@@ -2,14 +2,18 @@
 	name = JOB_SITE_MANAGER
 /obj/effect/landmark/start/hop
 	name = JOB_HEAD_OF_PERSONNEL
+/* Outpost 21 edit - Command sec folded into command officer
 /obj/effect/landmark/start/commandsecretary
 	name = JOB_COMMAND_SECRETARY
+*/
 /obj/effect/landmark/start/hos
 	name = JOB_HEAD_OF_SECURITY
 /obj/effect/landmark/start/warden
 	name = JOB_WARDEN
+/* Outpost 21 edit - Detective is officer now
 /obj/effect/landmark/start/detective
 	name = JOB_DETECTIVE
+*/
 /obj/effect/landmark/start/security
 	name = JOB_SECURITY_OFFICER
 /obj/effect/landmark/start/ce
@@ -96,10 +100,12 @@
 	name = JOB_TALON_PILOT
 /obj/effect/landmark/start/talonminer
 	name = JOB_TALON_MINER
-
+	
 /obj/effect/landmark/start/ghost_roles
 	name = JOB_GHOSTROLES
+/* Outpost 21 edit - disable these jobs
 /obj/effect/landmark/start/outsider
 	name = JOB_OUTSIDER
 /obj/effect/landmark/start/anomaly
 	name = JOB_ANOMALY
+*/

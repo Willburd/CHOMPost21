@@ -29,7 +29,7 @@
 	var/can_be_drop_pred = FALSE
 	var/can_be_afk_prey = TRUE
 	var/can_be_afk_pred = TRUE
-	var/allow_spontaneous_tf = FALSE	// Obviously.
+	var/allow_spontaneous_tf = TRUE		// Outpost 21 edit - Required for chus
 	var/show_vore_fx = TRUE				// Show belly fullscreens
 	var/selective_preference = DM_DEFAULT	// Preference for selective bellymode
 	var/size_strip_preference = SIZESTRIP_NONE	// Preference for size change stripping
@@ -77,7 +77,7 @@
 	var/vore_icons = 0					// Bitfield for which fields we have vore icons for.
 	var/vore_eyes = FALSE				// For mobs with fullness specific eye overlays.
 
-	var/obj/soulgem/soulgem				// Soulcatcher. Needs to be up-ported sometime.
+	// var/obj/soulgem/soulgem				// Soulcatcher. Needs to be up-ported sometime. Outpost 21 edit - Disable soulgems
 
 	var/receive_reagents = FALSE			//Pref for people to avoid others transfering reagents into them.
 	var/give_reagents = FALSE				//Pref for people to avoid others taking reagents from them.

@@ -87,7 +87,7 @@ GLOBAL_LIST_BOILERPLATE(all_darkportal_minions, /obj/structure/dark_portal/minio
 		return
 	else if(istype(user, /mob/living/carbon/human))
 		var/mob/living/carbon/human/H = user
-		if(H.job && H.job != JOB_OUTSIDER && LAZYLEN(destination_station_areas))
+		if(H.job /* && H.job != JOB_OUTSIDER*/ && LAZYLEN(destination_station_areas)) // Outpost 21 edit - We don't have an outsider job
 			var/list/floors = list()
 			var/area/picked_area = pick(destination_station_areas)
 			for(var/turf/simulated/floor/floor in get_area_turfs(picked_area))
@@ -190,11 +190,11 @@ GLOBAL_LIST_BOILERPLATE(all_darkportal_minions, /obj/structure/dark_portal/minio
 	else
 		to_chat(user, span_notice("You touch the portal, your hand able to pass through without harm."))
 
-/obj/structure/dark_portal/proc/check_to_close(var/obj/structure/dark_portal/target)
+/obj/structure/dark_portal/proc/check_to_close(obj/structure/dark_portal/target)
 	if(locked == target)
 		close_portal()
 
-/obj/structure/dark_portal/proc/check_to_close_desc(var/old_locked)
+/obj/structure/dark_portal/proc/check_to_close_desc(old_locked)
 	if(locked == old_locked)
 		close_portal()
 

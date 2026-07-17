@@ -62,6 +62,8 @@
 			<I>This spell creates your ethereal form, temporarily making you invisible and able to pass through walls.</I><BR>
 			<A href='byond://?src=\ref[src];spell_choice=knock'>Knock</A> (10)<BR>
 			<I>This spell opens nearby doors and does not require wizard garb.</I><BR>
+			<A href='byond://?src=\ref[src];spell_choice=buttblast'>Buttblast</A> (10)<BR>
+			<I>This spell removes a target's butt instantly.</I><BR>
 			<A href='byond://?src=\ref[src];spell_choice=noclothes'>Remove Clothes Requirement</A> <b>Warning: this takes away 2 spell choices.</b><BR>
 			<HR>
 			<B>Artefacts:</B><BR>
@@ -241,6 +243,12 @@
 								to_chat(H, span_notice("The walls suddenly disappear."))
 							temp = "You have purchased a scrying orb, and gained x-ray vision."
 							max_uses--
+						// Outpost 21 edit begin - buttblasting
+						if("buttblast")
+							feedback_add_details("wizard_spell_learned","BB") //please do not change the abbreviation to keep data processing consistent. Add a unique id to any new spells
+							H.add_spell(new/datum/spell/targeted/buttblast)
+							temp = "You have learned buttblast."
+						// Outpost 21 edit end
 		else
 			if(href_list["temp"])
 				temp = null
@@ -254,6 +262,7 @@
 	var/spell = /datum/spell/targeted/projectile/magic_missile //just a placeholder to avoid runtimes if someone spawned the generic
 	var/spellname = "sandbox"
 	var/used = 0
+	icon = 'icons/obj/library.dmi'
 	name = "spellbook of "
 	uses = 1
 	max_uses = 1
@@ -304,7 +313,7 @@
 
 /obj/item/spellbook/oneuse/fireball/recoil(mob/user as mob)
 	..()
-	explosion(user.loc, -1, 0, 2, 3, 0)
+	explosion(user.loc, -1, 1, 3, 4, 6) // Outpost 21 edit - Increased fireball explosion
 	qdel(src)
 
 /obj/item/spellbook/oneuse/smoke
@@ -420,6 +429,8 @@
 	if(ishuman(user))
 		to_chat(user, span_narsie(span_bolddanger("HOR-SIE HAS RISEN")))
 		var/obj/item/clothing/mask/horsehead/magichead = new /obj/item/clothing/mask/horsehead
+		magichead.say_verbs = list("neighs", "whinnys", "snorts")
+		magichead.say_messages = list("NEEEEIGH", "KEECHOOOW", "WHIIIINNNY", "NEEEEEEIGHHHH", "KEECHOOOWWW")
 		magichead.canremove = FALSE		//curses!
 		magichead.flags_inv = null	//so you can still see their face
 		magichead.voicechange = 1	//NEEEEIIGHH
@@ -439,3 +450,28 @@
 	..()
 	to_chat(user, span_warning("[src] suddenly feels very warm!"))
 	empulse(src, 1, 1, 1, 1)
+
+/obj/item/spellbook/oneuse/mime
+	name = "Guide to Mimery Vol 0"
+	desc = "The missing entry into the legendary saga. Unfortunately it doesn't teach you anything."
+	icon_state ="bookmime"
+
+/obj/item/spellbook/oneuse/mime/mimery
+	name = "Guide to Dank Mimery"
+	desc = "Teaches three classic pantomime routines, allowing a practiced mime to conjure invisible objects into corporeal existence. One use only."
+	spell = /datum/spell/aoe_turf/conjure/forcewall/mime
+	spellname = ""
+
+/obj/item/spellbook/oneuse/mime/mimery/onlearned(mob/user)
+	if(ishuman(user))
+		var/mob/living/carbon/human/human = user
+		var/datum/spell/chair = new /datum/spell/aoe_turf/conjure/invisible_chair
+		var/datum/spell/box = new /datum/spell/aoe_turf/conjure/invisible_box
+		human.add_spell(chair)
+		human.add_spell(box)
+		var/datum/action/innate/vow_of_silence/vow = locate() in human.actions
+		if(!vow && human.mind)
+			vow = new(human.mind)
+			vow.Grant(human)
+	to_chat(user, span_warning("The book disappears into thin air."))
+	qdel(src)

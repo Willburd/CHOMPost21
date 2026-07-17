@@ -7,7 +7,7 @@
 	// List of all non-destroyed canisters on station levels
 	var/list/all_canisters = list()
 	for(var/obj/machinery/portable_atmospherics/canister/C in GLOB.machines)
-		if(!C.destroyed && (C.z in using_map.station_levels) && C.air_contents.total_moles >= MOLES_CELLSTANDARD && !C.dont_burst)	//CHOMPEdit
+		if(!C.destroyed && (C.z in using_map.event_levels) && C.air_contents.total_moles >= MOLES_CELLSTANDARD && !C.dont_burst)	//CHOMPEdit
 			all_canisters += C
 
 	for(var/i in 1 to 10)
@@ -24,7 +24,7 @@
 	kill()
 	return
 
-/datum/event/canister_leak/proc/break_canister(var/obj/machinery/portable_atmospherics/canister/C)
+/datum/event/canister_leak/proc/break_canister(obj/machinery/portable_atmospherics/canister/C)
 	log_game("canister_leak event: Canister [C] ([C.x],[C.y],[C.z]) destroyed.")
 	C.health = 0
 	C.healthcheck()

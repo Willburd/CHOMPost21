@@ -8,6 +8,7 @@
 
 	var/cloaked = FALSE
 	var/can_cloak = FALSE
+	var/can_be_haunted = FALSE // Outpost 21 edit - IT DA SPOOKY STATION!
 
 	var/at_origin = 1
 	var/cooldown = 20
@@ -27,7 +28,7 @@
 	start_location = current_location
 	last_location = current_location
 
-/datum/shuttle/autodock/multi/proc/set_destination(var/destination_key, mob/user)
+/datum/shuttle/autodock/multi/proc/set_destination(destination_key, mob/user)
 	if(moving_status != SHUTTLE_IDLE)
 		return
 	next_location = destinations_cache[destination_key]

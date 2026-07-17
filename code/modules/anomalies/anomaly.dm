@@ -74,12 +74,16 @@
 	w_class = ITEMSIZE_SMALL
 	throw_speed = 5
 	throw_range = 10
-	matter = list(MAT_STEEL = 200)
+	matter = list(MAT_STEEL = MATERIAL_COST(0.1))
 
 	pickup_sound = 'sound/items/pickup/device.ogg'
 	drop_sound = 'sound/items/drop/device.ogg'
 
 	var/datum/weakref/buffered_anomaly = null
+
+/obj/item/anomaly_scanner/Destroy()
+	. = ..()
+	buffered_anomaly = null
 
 /obj/item/anomaly_scanner/attack_self(mob/living/user)
 	. = ..(user)
@@ -181,6 +185,8 @@
 	icon = 'icons/obj/assemblies/new_assemblies.dmi'
 	icon_state = "inert"
 	worth = 0
+	var/options = 3
+	var/list/choices
 	var/picked = FALSE
 	anomaly_type = /obj/effect/anomaly/flux // Default
 
@@ -192,22 +198,22 @@
 	if(picked)
 		return TRUE
 
-	var/list/choices = list()
-	var/list/core_types = subtypesof(/obj/effect/anomaly)
+	if(isnull(choices))
+		choices = list()
+		var/list/core_types = subtypesof(/obj/effect/anomaly)
 
-	// Two random cores
-	for(var/i = 0, i < 2, i++)
-		var/type = pick(core_types)
-		var/obj/effect/anomaly/anom = new type
-		choices[capitalize(anom.name)] = type
-
-	// Guaranteed
-	var/preset = /obj/effect/anomaly/flux
-	var/obj/effect/anomaly/preset_anom = new preset
-	choices[capitalize(preset_anom.name)] = preset
+		for(var/i = 0, i < options, i++)
+			var/type = pick_n_take(core_types)
+			var/obj/effect/anomaly/anom = new type
+			choices[capitalize(anom.name)] = type
 
 	var/choice = tgui_input_list(user, "Choose an anomaly core.", "Anomaly Core Selection", choices)
 
 	if(choice && !picked)
 		anomaly_type = choices[choice]
 		picked = TRUE
+
+/obj/item/assembly/signaler/anomaly/choice/Destroy()
+	for(var/obj/effect/anomaly/anom in options)
+		qdel(anom)
+	. = ..()

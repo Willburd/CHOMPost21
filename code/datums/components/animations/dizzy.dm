@@ -42,8 +42,8 @@ dizzy process - wiggles the client's pixel offset over time
 
 	if(dizziness > 100 && owner.client)
 		var/amplitude = dizziness*(sin(dizziness * 0.044 * world.time) + 1) / 70
-		owner.client.pixel_x = amplitude * sin(0.008 * dizziness * world.time)
-		owner.client.pixel_y = amplitude * cos(0.008 * dizziness * world.time)
+		owner.client.pixel_x = amplitude * sin(0.008 * dizziness * world.time) * ALCOHOLIC_DIZZY_MULTIPLIER // Outpost 21 edit - Booze code
+		owner.client.pixel_y = amplitude * cos(0.008 * dizziness * world.time) * ALCOHOLIC_DIZZY_MULTIPLIER // Outpost 21 edit - Booze code
 
 	addtimer(CALLBACK(src, PROC_REF(handle_tick)), 1, TIMER_DELETE_ME)
 
@@ -68,7 +68,7 @@ dizzy process - wiggles the client's pixel offset over time
 value of dizziness ranges from 0 to 1000
 below 100 is not dizzy
 */
-/mob/proc/make_dizzy(var/amount)
+/mob/proc/make_dizzy(amount)
 	if(amount < 0 && get_dizzy() == 0) // If removing, check if we're already empty!
 		return
 	var/datum/component/dizzy_shake/DC = LoadComponent(/datum/component/dizzy_shake);
@@ -85,7 +85,7 @@ below 100 is not dizzy
 	return max(DC.dizziness,0)
 
 // Disabled on borgs
-/mob/living/silicon/make_dizzy(var/amount)
+/mob/living/silicon/make_dizzy(amount)
 	return
 
 /mob/living/silicon/get_dizzy()

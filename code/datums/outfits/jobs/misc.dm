@@ -27,6 +27,11 @@
 	offmap_spawn = TRUE
 	outfit_type = /datum/decl/hierarchy/outfit/noncrew/vr_avatar
 
+// Outpost 21 edit begin - Forbid this job
+/datum/job/vr_avatar/is_position_available()
+	return FALSE
+// Outpost 21 edit end
+
 /datum/decl/hierarchy/outfit/noncrew/vr_avatar
 	pda_slot = null
 	id_slot = null

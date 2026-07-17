@@ -214,7 +214,7 @@
 /datum/gear/uniform/dept/undercoat/security
 	display_name = "security undercoat (Teshari)"
 	path = /obj/item/clothing/under/teshari/undercoat/jobs/sec
-	allowed_roles = list(JOB_HEAD_OF_SECURITY,JOB_DETECTIVE,JOB_WARDEN,JOB_SECURITY_OFFICER,JOB_SECURITY_PILOT) //YW ADDITIONS
+	allowed_roles = list(JOB_HEAD_OF_SECURITY, /*JOB_DETECTIVE,*/ JOB_WARDEN,JOB_SECURITY_OFFICER,JOB_SECURITY_PILOT) //YW ADDITIONS // Outpost 21 edit - Detective is officer now
 
 /datum/gear/uniform/dept/undercoat/service
 	display_name = "service undercoat (Teshari)"
@@ -239,7 +239,7 @@
 /datum/gear/uniform/dept/undercoat/robo
 	display_name = "roboticist undercoat (Teshari)"
 	path = /obj/item/clothing/under/teshari/undercoat/jobs/robo
-	allowed_roles = list(JOB_RESEARCH_DIRECTOR,JOB_ROBOTICIST)
+	allowed_roles = list(JOB_CHIEF_ENGINEER,JOB_ROBOTICIST) // Outpost 21 edit - Roboticist moved to engineering
 
 /datum/gear/uniform/dept/undercoat/medical
 	display_name = "medical undercoat (Teshari)"
@@ -371,7 +371,7 @@
 /datum/gear/suit/dept/cloak/security
 	display_name = "security cloak (Teshari)"
 	path = /obj/item/clothing/suit/storage/teshari/cloak/jobs/sec
-	allowed_roles = list(JOB_HEAD_OF_SECURITY,JOB_DETECTIVE,JOB_WARDEN,JOB_SECURITY_OFFICER,JOB_SECURITY_PILOT) //YW ADDITIONS
+	allowed_roles = list(JOB_HEAD_OF_SECURITY, /*JOB_DETECTIVE,*/ JOB_WARDEN,JOB_SECURITY_OFFICER,JOB_SECURITY_PILOT) //YW ADDITIONS // Outpost 21 edit - Detective is officer now
 
 /datum/gear/suit/dept/cloak/security/New()
 	..()
@@ -436,7 +436,7 @@
 /datum/gear/suit/dept/cloak/robo
 	display_name = "roboticist cloak (Teshari)"
 	path = /obj/item/clothing/suit/storage/teshari/cloak/jobs/robo
-	allowed_roles = list(JOB_RESEARCH_DIRECTOR,JOB_ROBOTICIST)
+	allowed_roles = list(JOB_CHIEF_ENGINEER,JOB_ROBOTICIST) // Outpost 21 edit - Roboticist moved to engineering
 
 /datum/gear/suit/dept/cloak/robo/New()
 	..()
@@ -702,13 +702,13 @@
 
 /datum/gear/uniform/voxcasual
 	display_name = "casual wear (Vox)"
-	path = /obj/item/clothing/under/vox/vox_casual
+	path = /obj/item/clothing/under/vox/vox_casual/station // Outpost 21 edit - use station version of casualwear so it has suit sensors and no alien webbing
 	sort_category = "Xenowear"
 	whitelisted = "Vox"
 
 /datum/gear/uniform/voxrobes
 	display_name = "comfy robes (Vox)"
-	path = /obj/item/clothing/under/vox/vox_robes
+	path = /obj/item/clothing/under/vox/vox_robes/station // Outpost 21 edit - use station version of casualwear so it has suit sensors and no alien webbing
 	sort_category = "Xenowear"
 	whitelisted = "Vox"
 
@@ -858,7 +858,7 @@
 	sort_category = "Xenowear"
 	whitelisted = SPECIES_ZADDAT
 	path = /obj/item/clothing/suit/space/void/zaddat/security
-	allowed_roles = list(JOB_HEAD_OF_SECURITY,JOB_DETECTIVE,JOB_WARDEN,JOB_SECURITY_OFFICER)
+	allowed_roles = list(JOB_HEAD_OF_SECURITY,JOB_SECURITY_OFFICER,JOB_WARDEN,JOB_SECURITY_OFFICER) // Outpost 21 edit - Detective is officer now
 
 /datum/gear/suit/zaddat/engineer
 	display_name = "Zaddat engineer shroud"
@@ -867,3 +867,11 @@
 	sort_category = "Xenowear"
 	whitelisted = SPECIES_ZADDAT
 	allowed_roles = list(JOB_CHIEF_ENGINEER,JOB_ATMOSPHERIC_TECHNICIAN, JOB_ENGINEER)
+
+/datum/gear/uniform/anthro_skeleton
+	path = /obj/item/clothing/under/anthro_skeleton
+	display_name = "Anthro Skeleton"
+	description = "A standardized anthropomorphic skeleton commonly used by prometheans who struggle to maintain their outer body shape. It's made of plastic, just like the trusty model in the exam room."
+	slot = slot_w_uniform
+	whitelisted = SPECIES_PROMETHEAN
+	sort_category = "Xenowear"

@@ -375,8 +375,8 @@
 	icon_state = "cart"
 	req_access = list(ACCESS_HOP)
 	products = list(/obj/item/cartridge/medical = 10,/obj/item/cartridge/engineering = 10,/obj/item/cartridge/security = 10,
-					/obj/item/cartridge/janitor = 10,/obj/item/cartridge/signal/science = 10,/obj/item/pda/heads = 10,
-					/obj/item/cartridge/captain = 3,/obj/item/cartridge/quartermaster = 10)
+					/obj/item/cartridge/janitor = 10,/obj/item/cartridge/signal/engineering = 10,/obj/item/pda/heads = 10,
+					/obj/item/cartridge/captain = 3,/obj/item/cartridge/quartermaster = 10) // Outpost 21 edit - Robotics in engineering
 	req_log_access = ACCESS_HOP
 	has_logs = 1
 
@@ -469,7 +469,7 @@
 					/obj/item/storage/pill_bottle/carbon = 2,
 					/obj/item/clothing/mask/chewable/candy/lolli = 15,
 					/obj/item/storage/box/khcrystal = 4,
-					/obj/item/backup_implanter = 3,
+					///obj/item/backup_implanter = 3, // Outpost 21 edit - remove backup implanter
 					/obj/item/clothing/glasses/omnihud/med = 4,
 					/obj/item/glasses_kit = 1,
 					/obj/item/storage/quickdraw/syringe_case = 4)
@@ -866,6 +866,11 @@
 					/obj/item/toy/plushie/tinytin = 1,
 					/obj/item/toy/plushie/tinytin_sec = 1,
 					//VOREStation Add End
+					//Outpost 21 add start
+					/obj/item/toy/plushie/jil = 1,
+					/obj/item/toy/plushie/chu = 1,
+					/obj/item/toy/plushie/expie = 1,
+					//Outpost 21 add end
 					//YawnWider Add Start
 					/obj/item/toy/plushie/teshari/_yw = 1,
 					/obj/item/toy/plushie/teshari/w_yw = 1,
@@ -928,6 +933,11 @@
 					/obj/item/toy/plushie/tinytin = 35,
 					/obj/item/toy/plushie/tinytin_sec = 50,
 					//VOREStation Add End
+					//Outpost 21 add start
+					/obj/item/toy/plushie/jil = 35,
+					/obj/item/toy/plushie/chu = 10,
+					/obj/item/toy/plushie/expie = 80,
+					//Outpost 21 add end
 					//YawnWider Add Start
 					/obj/item/toy/plushie/teshari/_yw = 150,
 					/obj/item/toy/plushie/teshari/w_yw = 150,
@@ -1261,7 +1271,8 @@
 					/obj/item/gun/projectile/revolver/toy = 5,
 					/obj/item/gun/projectile/revolver/toy/big_iron = 5,
 					/obj/item/gun/projectile/revolver/toy/crossbow = 5,
-					/obj/item/gun/projectile/automatic/toy = 5
+					/obj/item/gun/projectile/automatic/toy = 5,
+					/obj/item/mine/claymore/donksoft = 10 // Outpost 21 edit(port) - Donksoft claymores
 					)
 	contraband = list()
 	prices = list(/obj/item/ammo_magazine/ammo_box/foam = 50,
@@ -1276,7 +1287,8 @@
 					/obj/item/gun/projectile/revolver/toy = 100,
 					/obj/item/gun/projectile/revolver/toy/big_iron = 175,
 					/obj/item/gun/projectile/revolver/toy/crossbow = 75,
-					/obj/item/gun/projectile/automatic/toy = 300)
+					/obj/item/gun/projectile/automatic/toy = 300,
+					/obj/item/mine/claymore/donksoft = 50) // Outpost 21 edit(port) - Donksoft claymores
 	vending_sound = "machines/vending/vending_cans.ogg"
 
 /*

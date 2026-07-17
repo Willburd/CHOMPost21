@@ -2,7 +2,7 @@ GLOBAL_LIST_EMPTY(outfits_decls)
 GLOBAL_LIST_EMPTY(outfits_decls_by_type)
 GLOBAL_DATUM_INIT(outfits_decls_root, /datum/decl/hierarchy/outfit, new) // Rewuires the above lists
 
-/proc/outfit_by_type(var/outfit_type)
+/proc/outfit_by_type(outfit_type)
 	return GLOB.outfits_decls_by_type[outfit_type]
 
 /proc/outfits()
@@ -87,8 +87,21 @@ GLOBAL_DATUM_INIT(outfits_decls_root, /datum/decl/hierarchy/outfit, new) // Rewu
 		J.toggle()
 		J.toggle_valve()
 
-/datum/decl/hierarchy/outfit/proc/equip(mob/living/carbon/human/H, var/rank, var/assignment)
+/datum/decl/hierarchy/outfit/proc/equip(mob/living/carbon/human/H, rank, assignment)
 	equip_base(H)
+
+	// Outpost 21 edit begin - Give your rank pin
+	var/pin_path = null
+	var/datum/job/rank_job = SSjob.get_job(rank)
+	pin_path = rank_job.rank_pin
+	if(assignment in rank_job.alt_titles)
+		var/datum/alt_title/alt = rank_job.alt_titles[assignment]
+		if(!isnull(initial(alt.rank_pin)))
+			pin_path = initial(alt.rank_pin)
+	if(ispath(pin_path))
+		var/obj/new_pin = new pin_path(get_turf(H))
+		H.equip_to_slot_if_possible( new_pin, slot_tie)
+	// Outpost 21 edit end
 
 	rank = rank || id_pda_assignment
 	assignment = id_pda_assignment || assignment || rank
@@ -159,7 +172,12 @@ GLOBAL_DATUM_INIT(outfits_decls_root, /datum/decl/hierarchy/outfit, new) // Rewu
 			H.equip_to_slot_or_del(new path(H), slot_tie)
 
 	if(H.species)
-		H.species.equip_survival_gear(H, flags&OUTFIT_EXTENDED_SURVIVAL, flags&OUTFIT_COMPREHENSIVE_SURVIVAL)
+		// Outpost 21 edit begin - Stowaway unique start equipment
+		if(flags&OUTFIT_STOWAWAY)
+			equip_stowaway_gear(H)
+		// Outpost 21 edit end
+		else
+			H.species.equip_survival_gear(H, flags&OUTFIT_EXTENDED_SURVIVAL, flags&OUTFIT_COMPREHENSIVE_SURVIVAL)
 
 /datum/decl/hierarchy/outfit/proc/equip_id(mob/living/carbon/human/H, rank, assignment)
 	if(!id_slot || !id_type)

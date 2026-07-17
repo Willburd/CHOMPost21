@@ -247,8 +247,8 @@
 				prob(4);/obj/item/storage/firstaid/adv, //VOREStation Edit: 6 to 4
 				prob(8);/obj/item/storage/firstaid/fire,
 				prob(1);/obj/item/denecrotizer/medical, //VOREStation Add,
-				prob(1);/obj/item/storage/firstaid/combat,
-				prob(2);/obj/item/storage/firstaid/experimental) //CHOMPadd
+				prob(1);/obj/item/storage/firstaid/combat)
+				// prob(2);/obj/item/storage/firstaid/experimental) //CHOMPadd // Outpost 21 edit - Removing badly designed chems
 
 /obj/random/contraband
 	name = "Random Illegal Item"
@@ -265,6 +265,7 @@
 				prob(6);/obj/item/material/butterflyhandle,
 				prob(2);/obj/item/material/butterfly/switchblade,
 				prob(2);/obj/item/clothing/accessory/knuckledusters,
+				prob(2);/obj/item/reagent_containers/glass/beaker/wheymax, // outpost 21 WHEYMAXING
 				prob(1);/obj/item/material/knife/tacknife,
 				prob(1);/obj/item/clothing/suit/storage/vest/heavy/merc,
 				prob(1);/obj/item/beartrap,
@@ -272,7 +273,10 @@
 				prob(1);/obj/item/handcuffs/legcuffs,
 				prob(1);/obj/item/lockpick,
 				prob(2);/obj/item/reagent_containers/syringe/drugs,
-				prob(1);/obj/item/reagent_containers/syringe/steroid)
+				prob(1);/obj/item/reagent_containers/syringe/steroid,
+				prob(2);/obj/item/implanter/compliance, // Outpost 21 edit - implanters
+				prob(2);/obj/item/implanter/loyalty, // Outpost 21 edit - implanters
+				prob(1);/obj/item/dnainjector/random_verygood_labeled) // Outpost 21 edit - Lets add a little chaos
 
 /obj/random/contraband/nofail
 	name = "Guaranteed Random Illegal Item"
@@ -719,6 +723,12 @@
 				/obj/item/toy/figure/psychologist,
 				/obj/item/toy/figure/paramedic,
 				/obj/item/toy/figure/ert,
+				//Outpost 21 add start
+				/obj/item/toy/plushie/tinytin,
+				/obj/item/toy/plushie/jil,
+				/obj/item/toy/plushie/chu,
+				/obj/item/toy/plushie/expie,
+				//Outpost 21 add end
 				//chompstation Add start
 				/obj/item/toy/figure/station,
 				/obj/item/toy/sif)
@@ -788,6 +798,11 @@
 				/obj/item/toy/plushie/teshari/b_yw,
 				/obj/item/toy/plushie/teshari/y_yw,
 				//YawnWider Add End
+				//Outpost 21 add start
+				/obj/item/toy/plushie/jil,
+				/obj/item/toy/plushie/chu,
+				/obj/item/toy/plushie/expie,
+				//Outpost 21 add end
 				//CHOMPStation Add Start
 				/obj/item/toy/plushie/teppi,
 				/obj/item/toy/plushie/teppi/alt,
@@ -1150,7 +1165,7 @@
 		prob(10);/obj/item/clothing/under/hyperfiber,
 		prob(10);/obj/item/clothing/under/hyperfiber/bluespace,
 		prob(20);/obj/item/implant/sizecontrol,
-		prob(2);/obj/item/storage/bag/ore/holding,
+		prob(2);/obj/item/ore_bag/holding,
 		prob(2);/obj/item/storage/bag/sheetsnatcher/holding,
 		prob(2);/obj/item/storage/backpack/holding,
 		prob(2);/obj/item/storage/backpack/holding/duffle,

@@ -14,8 +14,8 @@
 		REAGENT_ID_PHORON,		//Gold and uranium are ommitted as they can already be obtained with normal xenobotany
 		REAGENT_ID_SILVER,
 		REAGENT_ID_PLATINUM,
-		REAGENT_ID_STEEL,
-		REAGENT_ID_PLASTEEL,
+		// REAGENT_ID_STEEL,  Outpost21 edit
+		// REAGENT_ID_PLASTEEL,  Outpost21 edit
 		REAGENT_ID_HYDROPHORON,
 
 		REAGENT_ID_MACROCILLIN,		 //ban everything that's already banned in seed.dm except nutriment
@@ -27,18 +27,17 @@
 
 	var/list/datum/reagent/allowed_reagents = list() //compile the list of reagents we're allowed to splice in
 
-
 /obj/machinery/botany/precisioneditor/Initialize(mapload)
 	. = ..()
 	for(var/R in SSchemistry.chemical_reagents)
-	testlist.Add(R)
-	var/datum/reagent/current = SSchemistry.chemical_reagents[R]
-/*CHOMP Edit: Remove Phorochem code
-		if(istype(current, /datum/reagent/phororeagent)) //phorochems are banned from this process, obviously
-			continue
-*/
-	allowed_reagents.Add(R)
-	allowed_reagents -= banlist //apparently outright checking if it's in the banlist before it's added doesn't work?
+		testlist.Add(R)
+		/*CHOMP Edit: Remove Phorochem code
+		var/datum/reagent/current = SSchemistry.chemical_reagents[R]
+			if(istype(current, /datum/reagent/phororeagent)) //phorochems are banned from this process, obviously
+				continue
+		*/
+		allowed_reagents.Add(R)
+		allowed_reagents -= banlist //apparently outright checking if it's in the banlist before it's added doesn't work?
 
 /obj/machinery/botany/precisioneditor/attack_hand(mob/user as mob)
 	tgui_interact(user)
@@ -80,7 +79,8 @@
 	if(loaded_beaker)
 		data["beakerchems"] = list()
 		for(var/datum/reagent/current in loaded_beaker.reagents.reagent_list)
-			data["beakerchems"].Add(list(list("name" = "[current.id]", "displayname" = SSchemistry.chemical_reagents[current.id])))
+			var/list/D = data["beakerchems"]
+			D.Add(list(list("name" = "[current.id]", "displayname" = SSchemistry.chemical_reagents[current.id])))
 	if(seed)
 		data["seedname"] = seed.seed.display_name
 		data["health"] = seed.modified
@@ -89,7 +89,8 @@
 		data["chems"] = list()
 
 		for(var/chem_name in seed.seed.chems)
-			data["chems"].Add(list(list("name" = "[chem_name]", "displayname" = SSchemistry.chemical_reagents[chem_name])))
+			var/list/D = data["chems"]
+			D.Add(list(list("name" = "[chem_name]", "displayname" = SSchemistry.chemical_reagents[chem_name])))
 
 	return data
 
@@ -151,7 +152,6 @@
 						seed.seed.traits["[TRAIT_PLANT_COLOUR]"] = newcolor
 					if(1)
 						seed.seed.traits["[TRAIT_PRODUCT_COLOUR]"] = newcolor
-					else
 			else
 				visible_message("[icon2html(src,viewers(src))] Error: Invalid input detected.")
 			. = TRUE
@@ -166,7 +166,7 @@
 //nobody's made a helper function for this, so if you want to use it
 //elsewhere, feel free to copy it/make it more easily accessible
 //Verifies that input is valid hex input (#AAAAAA, where A is 0-F)
-/obj/machinery/botany/precisioneditor/proc/is_valid_hex(var/input)
+/obj/machinery/botany/precisioneditor/proc/is_valid_hex(input)
 	var/safety_check = 1
 	if(!(length(input) == 7))
 		return FALSE			 //input is either too short or too long
@@ -183,7 +183,7 @@
 
 	return TRUE
 
-/obj/machinery/botany/precisioneditor/proc/add_chem_to_seed(var/chem_name)
+/obj/machinery/botany/precisioneditor/proc/add_chem_to_seed(chem_name)
 	if(!loaded_beaker)
 		return
 	var/chem_amount = loaded_beaker.reagents.get_reagent_amount(chem_name)

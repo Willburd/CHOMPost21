@@ -53,25 +53,25 @@
 			if(IS_WRENCH)
 				if(tool.has_tool_quality(TOOL_WRENCH))
 					return allowed_procs[P]
-	return 0
+	return FALSE
 
 
 // Checks if this step applies to the user mob at all
 /datum/surgery_step/proc/is_valid_target(mob/living/carbon/human/target)
 	if(!ishuman(target))
-		return 0
+		return FALSE
 
 	if(allowed_species)
 		for(var/species in allowed_species)
 			if(target.species.get_bodytype() == species)
-				return 1
+				return TRUE
 
 	if(disallowed_species)
 		for(var/species in disallowed_species)
 			if(target.species.get_bodytype() == species)
-				return 0
+				return FALSE
 
-	return 1
+	return TRUE
 
 // Let's check if stuff blocks us from doing surgery on them
 // TODO: make it based on area coverage rather than just forbid spacesuits?
@@ -91,7 +91,7 @@
 
 // checks whether this step can be applied with the given user and target
 /datum/surgery_step/proc/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
-	return 0
+	return FALSE
 
 // does stuff to begin the step, usually just printing messages. Moved germs transfering and bloodying here too
 /datum/surgery_step/proc/begin_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
@@ -116,7 +116,7 @@
 
 
 
-/proc/spread_germs_to_organ(var/obj/item/organ/external/E, var/mob/living/carbon/human/user)
+/proc/spread_germs_to_organ(obj/item/organ/external/E, mob/living/carbon/human/user)
 	if(!istype(user) || !istype(E)) return
 
 	var/germ_level = user.germ_level
@@ -128,13 +128,13 @@
 
 /obj/item/proc/can_do_surgery(mob/living/carbon/M, mob/living/user)
 //	if(M == user)
-//		return 0
+//		return FALSE
 	if(!ishuman(M))
-		return 1
+		return TRUE
 
-	return 1
+	return TRUE
 
-/obj/item/proc/do_surgery(mob/living/carbon/M, mob/living/user)
+/obj/item/proc/do_surgery(mob/living/carbon/M, mob/living/user, zone)
 	if(!can_do_surgery(M, user))
 		return FALSE
 	if(!istype(M))
@@ -142,7 +142,7 @@
 	if (user.a_intent == I_HURT)	//check for Hippocratic Oath
 		//Insert intentional hurt medical code here.
 		return FALSE
-	var/zone = user.zone_sel.selecting
+	// var/zone = user.zone_sel.selecting,  Outpost 21 edit - This is passed in manually in the autodoc instead of detected here!
 	if(zone in M.op_stage.in_progress) //Can't operate on someone repeatedly.
 		to_chat(user, span_warning("You can't operate on this area while surgery is already in progress."))
 		return TRUE
@@ -164,7 +164,7 @@
 			continue
 
 	if(!available_surgeries.len) //No available surgeries. Failure.
-		return 0
+		return FALSE
 
 	// Having trouble with an ASSOSCIATED LIST? or REMOVING SOMETHING FROM AN ASSOCIATED LIST? Look here for a quick guide, developed out of frustration.
 	// Note: This is an ultra edge case. Like, what is being done here is horrible and is so rare this should never happen again in the code.
@@ -186,17 +186,16 @@
 		if(!do_after(user, 3 SECONDS, target = M))
 			return FALSE
 
-	var/datum/surgery_step/selected_surgery
-	if(available_surgeries.len > 1) //More than one possible? Ask them which one.
-		selected_surgery = tgui_input_list(user, "Select which surgery step you wish to perform", "Surgery Select", available_surgeries) //Shows the name in the list.
-	else
-		selected_surgery = pick(available_surgeries)
+	// Outpost 21 edit(port) begin - Autodoc surgery selection
+	var/datum/surgery_step/selected_surgery = autodoc_surgery_step_select( user, available_surgeries, "Select which surgery step you wish to perform", "Surgery Select")
+	// Outpost 21 edit end
 
 	if(isnull(selected_surgery)) //They clicked 'cancel'
 		return TRUE
 	var/obj/item/organ/external/affected = M.get_organ(zone)
 	selected_surgery = available_surgeries[selected_surgery] //Sets the name they selected to be the datum.
-	if(istype(selected_surgery,/datum/surgery_step/generic/amputate))
+
+	if(!istype(user,/mob/living/carbon/human/monkey/auto_doc) && istype(selected_surgery,/datum/surgery_step/generic/amputate)) // Outpost 21 edit(port) - Autodoc support
 		to_chat(user, span_danger("You are preparing to amputate \the [M]'s [affected.name]!"))
 		if(!do_after(user, 3 SECONDS, target = M))
 			to_chat(user, span_warning("You reconsider performing an amputation..."))
@@ -205,18 +204,21 @@
 	selected_surgery.begin_step(user, M, zone, src)		//start on it
 	var/success = TRUE
 
-	// Bad tools make it less likely to succeed.
-	if(!prob(selected_surgery.tool_quality(src)))
-		success = FALSE
-
-	// Not staying still fails you too.
-	if(success)
-		var/calc_duration = rand(selected_surgery.min_duration, selected_surgery.max_duration)
-		calc_duration *= CLAMP((100-cleanliness)/10 + 1, 1, 10)
-		if(!do_after(user, calc_duration * toolspeed, M, target_zone = zone, max_distance = reach))
+	// Outpost 21 edit(port) begin - Auto doc ignores tool success
+	if(!istype(user,/mob/living/carbon/human/monkey/auto_doc))
+		// Bad tools make it less likely to succeed.
+		if(!prob(selected_surgery.tool_quality(src)))
 			success = FALSE
-			to_chat(user, span_warning("You must remain close to and keep focused on your patient to conduct surgery."))
-			user.balloon_alert(user, "you must remain close to and keep focused on your patent to conduct surgery") // CHOMPEdit
+
+		// Not staying still fails you too.
+		if(success)
+			var/calc_duration = rand(selected_surgery.min_duration, selected_surgery.max_duration)
+			calc_duration *= CLAMP((100-cleanliness)/10 + 1, 1, 10)
+			if(!do_after(user, calc_duration * toolspeed, M, target_zone = zone, max_distance = reach))
+				success = FALSE
+				to_chat(user, span_warning("You must remain close to and keep focused on your patient to conduct surgery."))
+				user.balloon_alert(user, "you must remain close to and keep focused on your patent to conduct surgery") // CHOMPEdit
+	// Outpost 21 edit end
 
 	if(!affected) // If the limb was just attached, get it to adjust germ levels
 		affected = M.get_organ(zone)

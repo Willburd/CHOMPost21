@@ -13,7 +13,7 @@
 	var/datum/projectile_data/last_tele_data = null
 	var/z_co = 1
 	var/distance_off
-	var/rotation_off
+	// var/rotation_off // Outpost 21 edit - Remove randomized offset in Tsci
 	var/turf/last_target
 
 	var/rotation = 0
@@ -112,7 +112,7 @@
 			data["tempMsg"] = "Telepad undergoing physical maintenance operations."
 
 		//We'll base our options on connected z's or overmap
-		data["sectorOptions"] = using_map.get_map_levels(z, TRUE, overmap_range)
+		data["sectorOptions"] = using_map.get_map_levels(z, TRUE, overmap_range) | using_map.event_levels.Copy() // Outpost 21 edit - Event levels count for teleport goals too
 
 		data["lastTeleData"] = null
 		if(last_tele_data)
@@ -207,7 +207,7 @@
 			sparks()
 			if(telepad)
 				var/L = get_turf(telepad)
-				var/blocked = list(/mob/living/simple_mob/vore, /mob/living/simple_mob/vore/ddraig) + typesof(/mob/living/simple_mob/vore/woof) + typesof(/mob/living/simple_mob/vore/overmap)
+				var/blocked = list(/mob/living/simple_mob/vore, /mob/living/simple_mob/vore/ddraig) /*+ typesof(/mob/living/simple_mob/vore/woof)*/ + typesof(/mob/living/simple_mob/vore/overmap) // Outpost 21 edit - Softdog removal
 				var/list/hostiles = typesof(/mob/living/simple_mob/vore) - blocked
 				playsound(L, 'sound/effects/phasein.ogg', 100, 1, extrarange = 3, falloff = 5)
 				for(var/i in 1 to rand(1,4))
@@ -230,9 +230,11 @@
 
 	if(telepad)
 		var/trueDistance = CLAMP(distance + distance_off, 1, get_max_allowed_distance())
-		var/trueRotation = rotation + rotation_off
+		var/trueRotation = rotation // + rotation_off // Outpost 21 edit - Remove randomized offset in Tsci
 
 		var/datum/projectile_data/proj_data = simple_projectile_trajectory(telepad.x, telepad.y, trueRotation, trueDistance)
+		if(proj_data?.time)
+			proj_data.time /= 3 // Outpost 21 edit - Decreased teleport cooldown
 		last_tele_data = proj_data
 
 		var/trueX = proj_data.dest_x
@@ -265,7 +267,7 @@
 			teles_left -= 1
 
 			// use a lot of power
-			use_power(trueDistance * 10000)
+			use_power(trueDistance * 1000) // Outpost 21 edit - Make telesci actually fun
 
 			var/datum/effect/effect/system/spark_spread/S = new /datum/effect/effect/system/spark_spread()
 			S.set_up(5, 1, get_turf(telepad))
@@ -378,11 +380,11 @@
 /obj/machinery/computer/telescience/proc/recalibrate()
 	teles_left = rand(40, 50)
 	distance_off = rand(-4, 4)
-	rotation_off = rand(-10, 10)
+//	rotation_off = rand(-10, 10) // Outpost 21 edit - Remove randomized offset in Tsci
 
 
 // Procedure that calculates the actual trajectory taken!
-/proc/simple_projectile_trajectory(var/src_x, var/src_y, var/rotation, var/distance)
+/proc/simple_projectile_trajectory(src_x, src_y, rotation, distance)
 	var/time = distance / 10 // 100ms per distance seems fine?
 	var/dest_x = src_x + distance*sin(rotation);
 	var/dest_y = src_y + distance*cos(rotation);

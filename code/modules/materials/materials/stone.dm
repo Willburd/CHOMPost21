@@ -14,6 +14,7 @@
 	door_icon_base = "stone"
 	sheet_singular_name = "brick"
 	sheet_plural_name = "bricks"
+	supply_conversion_value = 0.5
 
 /datum/material/stone/generate_recipes()
 	..()
@@ -26,7 +27,6 @@
 	hardness = 30 //VOREStation Edit - Please.
 	integrity = 201 //hack to stop kitchen benches being flippable, todo: refactor into weight system
 	stack_type = /obj/item/stack/material/marble
-	supply_conversion_value = 2
 
 /datum/material/stone/marble/generate_recipes()
 	..()
@@ -42,9 +42,9 @@
 	hardness = 30
 	integrity = 100
 	stack_type = /obj/item/stack/material/flint
-	supply_conversion_value = 2
 	sheet_singular_name = "piece"
 	sheet_plural_name = "pieces"
+	supply_conversion_value = 0.1
 
 /datum/material/stone/flint/generate_recipes()
 	return
@@ -61,6 +61,7 @@
 	weight = 27
 	hardness = 60
 	var/image/texture
+	supply_conversion_value = 0.1
 
 /datum/material/stone/concrete/generate_recipes()
 	..()

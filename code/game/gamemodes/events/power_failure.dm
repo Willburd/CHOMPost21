@@ -1,13 +1,13 @@
 
-/proc/power_failure(var/announce = 1)
+/proc/power_failure(announce = 1)
 	if(announce)
-		GLOB.command_announcement.Announce("Abnormal activity detected in [station_name()]'s powernet. As a precautionary measure, the station's power will be shut off for an indeterminate duration.", "Critical Power Failure", new_sound = 'sound/AI/poweroff.ogg')
+		GLOB.command_announcement.Announce("Abnormal activity detected in [station_name()]'s powernet. As a precautionary measure, the station's power will be shut off for an indeterminate duration.", "Critical Power Failure", new_sound = ANNOUNCER_MSG_POWER_OFF)
 
 	var/list/skipped_areas = list(/area/ai)
 
 	for(var/obj/machinery/power/smes/S in GLOB.smeses)
 		var/area/current_area = get_area(S)
-		if((current_area.type in skipped_areas) || !(S.z in using_map.station_levels))
+		if((current_area.type in skipped_areas) || !(S.z in using_map.event_levels)) // Outpost 21 edit(port) - Use event levels
 			continue
 		S.last_charge			= S.charge
 		S.last_output_attempt	= S.output_attempt
@@ -20,16 +20,16 @@
 
 
 	for(var/obj/machinery/power/apc/C in GLOB.apcs)
-		if(!C.is_critical && C.cell && (C.z in using_map.station_levels))
+		if(!C.is_critical && C.cell && (C.z in using_map.event_levels))
 			C.cell.charge = 0
 
-/proc/power_restore(var/announce = 1)
+/proc/power_restore(announce = 1)
 	var/list/skipped_areas = list(/area/ai)
 
 	if(announce)
-		GLOB.command_announcement.Announce("Power has been restored to [station_name()]. We apologize for the inconvenience.", "Power Systems Nominal", new_sound = 'sound/AI/poweron.ogg')
+		GLOB.command_announcement.Announce("Power has been restored to [station_name()]. We apologize for the inconvenience.", "Power Systems Nominal", new_sound = ANNOUNCER_MSG_POWER_ON)
 	for(var/obj/machinery/power/apc/C in GLOB.apcs)
-		if(C.cell && (C.z in using_map.station_levels))
+		if(C.cell && (C.z in using_map.event_levels))
 			C.cell.charge = C.cell.maxcharge
 	for(var/obj/machinery/power/smes/S in GLOB.smeses)
 		var/area/current_area = get_area(S)
@@ -41,10 +41,10 @@
 		S.update_icon()
 		S.power_change()
 
-/proc/power_restore_quick(var/announce = 1)
+/proc/power_restore_quick(announce = 1)
 
 	if(announce)
-		GLOB.command_announcement.Announce("All SMESs on [station_name()] have been recharged. We apologize for the inconvenience.", "Power Systems Nominal", new_sound = 'sound/AI/poweron.ogg')
+		GLOB.command_announcement.Announce("All SMESs on [station_name()] have been recharged. We apologize for the inconvenience.", "Power Systems Nominal", new_sound = ANNOUNCER_MSG_POWER_ON)
 	for(var/obj/machinery/power/smes/S in GLOB.smeses)
 		if(isNotStationLevel(S.z))
 			continue

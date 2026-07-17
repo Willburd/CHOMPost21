@@ -6,12 +6,14 @@
 	flags = MATERIAL_UNMELTABLE
 	icon_colour = "#6C7364"
 	integrity = 1200
-	melting_point = 6000       // Hull plating.
+	melting_point = 46000 // Hull plating. Outpost 21 edit - was 6000
 	explosion_resistance = 200 // Hull plating.
 	hardness = 500
 	weight = 500
 	protectiveness = 80 // 80%
 	wiki_flag = WIKI_SPOILER
+	supply_conversion_value = 5 // Neat if you somehow manage to sell this
+	shard_type = null
 
 /datum/material/alienalloy/elevatorium
 	name = MAT_ALIEN_ELEVAT

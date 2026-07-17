@@ -26,6 +26,7 @@
 	var/mimeamt = 0 //How many silence left when infected with mime.exe
 	var/detonate = 1 // Can the PDA be blown up?
 	var/ttone = "beep" //The ringtone!
+
 	var/hidden = 0 // Is the PDA hidden from the PDA list?
 	var/touch_silent = 0 //If 1, no beeps on interacting.
 
@@ -44,13 +45,18 @@
 		new/datum/data/pda/app/notekeeper,
 		new/datum/data/pda/app/timeclock, //CHOMPEdit: Add the timeclock to default apps
 		new/datum/data/pda/app/news,
+		// outpost 21 edit begin - New apps
+		new/datum/data/pda/app/weather,
+		new/datum/data/pda/app/sop,
+		// outpost 21 edit end
 		new/datum/data/pda/app/messenger,
 		new/datum/data/pda/app/manifest,
 		new/datum/data/pda/app/atmos_scanner,
 		new/datum/data/pda/app/nerdle,
 		new/datum/data/pda/app/game_launcher,
 		new/datum/data/pda/utility/scanmode/notes,
-		new/datum/data/pda/utility/flashlight)
+		new/datum/data/pda/utility/flashlight,
+		new/datum/data/pda/app/goals)
 	var/list/shortcut_cache = list()
 	var/list/shortcut_cat_order = list()
 	var/list/notifying_programs = list()
@@ -221,7 +227,7 @@
 	for(var/datum/data/pda/P as anything in programs)
 		P.pda = src
 
-/obj/item/pda/proc/detonate_act(var/obj/item/pda/P)
+/obj/item/pda/proc/detonate_act(obj/item/pda/P)
 	//TODO: sometimes these attacks show up on the message server
 	var/i = rand(1,100)
 	var/j = rand(0,1) //Possibility of losing the PDA after the detonation
@@ -456,9 +462,10 @@
 			add_overlay("pda-pen")
 	return
 
-/obj/item/pda/attack(mob/living/C, mob/living/user)
-	if (istype(C, /mob/living/carbon) && scanmode)
-		scanmode.scan_mob(C, user)
+/obj/item/pda/attack(mob/living/M, mob/living/user, target_zone, attack_modifier)
+	if(istype(M, /mob/living/carbon) && scanmode)
+		scanmode.scan_mob(M, user)
+		return ITEM_INTERACT_SUCCESS
 
 /obj/item/pda/afterattack(atom/A, mob/user, proximity)
 	if(proximity && scanmode)
@@ -469,7 +476,7 @@
 	var/turf/T = get_turf(src.loc)
 	if(T)
 		T.hotspot_expose(700,125)
-		explosion(T, 0, 0, 1, rand(1,2))
+		explosion(T, 0, 1, 2, rand(1,2)) // Outpost 21 edit - Buffed slightly
 	return
 
 /obj/item/pda/Destroy()

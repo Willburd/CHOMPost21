@@ -5,26 +5,47 @@
 	icon_state = "deskbell"
 	force = 2
 	throwforce = 2
-	w_class = 2.0
-	matter = list(MAT_STEEL = 50)
+	w_class = ITEMSIZE_SMALL
+	matter = list(MAT_STEEL = MATERIAL_COST(0.025))
 	var/broken
 	attack_verb = list("annoyed")
+	/* Outpost 21 edit begin - Remove radial menu
 	var/static/radial_examine = image(icon = 'icons/mob/radial.dmi', icon_state = "radial_examine")
 	var/static/radial_use = image(icon = 'icons/mob/radial.dmi', icon_state = "radial_use")
 	var/static/radial_pickup = image(icon = 'icons/mob/radial.dmi', icon_state = "radial_pickup")
+	*/
 
 /obj/item/deskbell/examine(mob/user)
 	. = ..()
 	if(broken)
 		. += span_bold("It looks damaged, the ringer is stuck firmly inside.")
 
-/obj/item/deskbell/attack(mob/target as mob, mob/living/user as mob)
+// Outpost 21 edit begin - Remove radial menu
+/obj/item/deskbell/attack_ai(mob/user)
+	return
+
+/obj/item/deskbell/attack_self(mob/user)
 	if(!broken)
-		playsound(src, 'sound/effects/deskbell.ogg', 50, 1)
+		ring(user)
+		add_fingerprint(user)
+	..()
+// Outpost 21 edit end
+
+/obj/item/deskbell/attack(mob/living/M, mob/living/user, target_zone, attack_modifier)
+	if(!broken)
+		ring(user)
+		add_fingerprint(user)
 	..()
 
 /obj/item/deskbell/attack_hand(mob/user)
-
+	// Outpost 21 edit begin - Remove radial menu
+	if(src == user.get_active_hand() || anchored)
+		if(!broken && check_ability(user))
+			ring(user)
+			add_fingerprint(user)
+	else
+		return ..()
+	/*
 	//This defines the radials and what call we're assiging to them.
 	var/list/options = list()
 	options["examine"] = radial_examine
@@ -59,6 +80,8 @@
 
 		if("pick up")
 			..()
+	*/
+	// Outpost 21 edit end
 
 /obj/item/deskbell/proc/ring(mob/user)
 	if(user.a_intent == I_HURT)
@@ -87,16 +110,22 @@
 /obj/item/deskbell/attackby(obj/item/W, mob/user, params)
 	if(!istype(W))
 		return
-	if(W.has_tool_quality(TOOL_WRENCH) && isturf(loc))
-		if(do_after(user, 5, target = src))
-			if(!src) return
-			to_chat(user, span_notice("You dissasemble the desk bell"))
-			new /obj/item/stack/material/steel(get_turf(src), 1)
-			qdel(src)
-			return
-	if(!broken)
-		ring(user)
-
+	// Outpost 21 edit begin - Remove radial menu, and actually disassembling this back to metal sheets
+	if(isturf(loc))
+		if(W.has_tool_quality(TOOL_WRENCH) && isturf(loc))
+			anchored = !anchored
+			playsound(src, W.usesound, 50, 1)
+			to_chat(user, span_notice("You [anchored ? "secure" : "unsecure"] \the [src]."))
+		else if(W.has_tool_quality(TOOL_SCREWDRIVER) && isturf(loc))
+			if(do_after(user, 5, target = src))
+				if(!src) return
+				to_chat(user, span_notice("You dissasemble the desk bell"))
+				new /obj/item/stack/material/steel(get_turf(src), 1)
+				qdel(src)
+				return
+		else if(!broken)
+			ring(user)
+	// Outpost 21 edit end
 
 /obj/item/deskbell/proc/break_bell(mob/user)
 	to_chat(user,span_notice("The ringing abruptly stops as [src]'s ringer gets jammed inside!"))

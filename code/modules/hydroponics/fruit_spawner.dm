@@ -323,12 +323,12 @@
 /obj/fruitspawner/tobacco
 	name = "tobacco spawner"
 	seedtype = PLANT_TOBACCO
-	icon_state = "leafy"
+	icon_state = "grass2" // Outpost 21 edit - CI wants this fixed
 
 /obj/fruitspawner/stimbush
 	name = "stimbush spawner"
 	seedtype = "stimbush"
-	icon_state = "leafy"
+	icon_state = "grass2" // Outpost 21 edit - CI wants this fixed
 
 /obj/fruitspawner/tomato
 	name = "tomato spawner"

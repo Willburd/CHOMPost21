@@ -1,5 +1,5 @@
 // Returns which access is relevant to passed network. Used by the program.
-/proc/get_camera_access(var/network)
+/proc/get_camera_access(network)
 	if(!network)
 		return 0
 	. = using_map.get_network_access(network)
@@ -23,6 +23,12 @@
 		if(NETWORK_TALON_HELMETS)
 			return ACCESS_TALON
 		//VOREStation Add End
+		// Outpost 21 edit begin - Our camera networks
+		if(NETWORK_WASTE)
+			return ACCESS_ENGINE
+		if(NETWORK_BUNKER,NETWORK_FOUNDATIONS)
+			return 0
+		// Outpost 21 edit end
 
 	if(network in using_map.station_networks)
 		return ACCESS_SECURITY // Default for all other station networks

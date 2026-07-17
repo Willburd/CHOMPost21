@@ -1,0 +1,325 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/simulated/mineral/alt/ignore_cavegen/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"b" = (
+/obj/structure/trash_pile,
+/turf/simulated/floor/plating,
+/area/mine/explored/muriki/cave/deepdark)
+"e" = (
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"f" = (
+/turf/simulated/wall,
+/area/mine/explored/muriki/cave/deepdark)
+"i" = (
+/obj/structure/dirtybed,
+/obj/item/bedsheet/ian,
+/turf/simulated/floor/plating,
+/area/mine/explored/muriki/cave/deepdark)
+"k" = (
+/turf/simulated/mineral/alt/ignore_cavegen/turfpack/muriki,
+/area/template_noop)
+"o" = (
+/turf/template_noop,
+/area/template_noop)
+"q" = (
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
+/area/template_noop)
+"v" = (
+/obj/machinery/door/airlock/maintenance/int,
+/turf/simulated/floor/tiled/techfloor,
+/area/mine/explored/muriki/cave/deepdark)
+"A" = (
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"B" = (
+/obj/structure/table/woodentable,
+/obj/item/flame/candle/everburn,
+/obj/item/storage/box/matches,
+/obj/item/pen/crayon/marker/yellow,
+/turf/simulated/floor/plating,
+/area/mine/explored/muriki/cave/deepdark)
+"D" = (
+/obj/random/maintenance/cargo,
+/turf/simulated/floor/plating,
+/area/mine/explored/muriki/cave/deepdark)
+"K" = (
+/obj/structure/closet/emcloset,
+/turf/simulated/floor/plating,
+/area/mine/explored/muriki/cave/deepdark)
+"T" = (
+/obj/machinery/light/small,
+/turf/simulated/floor/plating,
+/area/mine/explored/muriki/cave/deepdark)
+"U" = (
+/turf/simulated/floor/plating,
+/area/mine/explored/muriki/cave/deepdark)
+"W" = (
+/obj/structure/table/woodentable,
+/obj/random/maintenance/foodstuff,
+/obj/random/maintenance/foodstuff,
+/obj/random/maintenance/foodstuff,
+/turf/simulated/floor/plating,
+/area/mine/explored/muriki/cave/deepdark)
+"X" = (
+/obj/item/assembly/mousetrap/armed,
+/obj/random/trash,
+/turf/simulated/floor/plating,
+/area/mine/explored/muriki/cave/deepdark)
+
+(1,1,1) = {"
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+"}
+(2,1,1) = {"
+o
+o
+o
+o
+o
+o
+o
+q
+q
+q
+k
+k
+k
+o
+o
+"}
+(3,1,1) = {"
+o
+o
+k
+k
+k
+q
+e
+e
+e
+e
+a
+a
+a
+k
+o
+"}
+(4,1,1) = {"
+o
+k
+k
+a
+a
+a
+a
+e
+A
+e
+a
+a
+a
+k
+o
+"}
+(5,1,1) = {"
+o
+k
+k
+a
+a
+f
+f
+f
+v
+f
+f
+a
+a
+k
+o
+"}
+(6,1,1) = {"
+o
+k
+k
+a
+a
+f
+B
+U
+U
+U
+f
+a
+a
+k
+o
+"}
+(7,1,1) = {"
+o
+k
+k
+a
+a
+f
+i
+U
+X
+W
+f
+a
+a
+k
+o
+"}
+(8,1,1) = {"
+o
+o
+k
+a
+a
+f
+f
+f
+f
+f
+f
+a
+k
+k
+o
+"}
+(9,1,1) = {"
+o
+o
+o
+a
+A
+A
+f
+K
+K
+b
+f
+a
+k
+o
+o
+"}
+(10,1,1) = {"
+o
+o
+q
+e
+e
+A
+v
+U
+D
+T
+f
+a
+k
+o
+o
+"}
+(11,1,1) = {"
+o
+q
+q
+e
+e
+e
+f
+f
+f
+f
+f
+a
+o
+o
+o
+"}
+(12,1,1) = {"
+o
+q
+q
+a
+e
+e
+a
+a
+a
+a
+a
+a
+o
+o
+o
+"}
+(13,1,1) = {"
+o
+o
+k
+k
+q
+o
+o
+k
+k
+k
+k
+k
+k
+o
+o
+"}
+(14,1,1) = {"
+o
+o
+o
+o
+o
+o
+o
+o
+o
+k
+k
+k
+k
+o
+o
+"}
+(15,1,1) = {"
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+"}

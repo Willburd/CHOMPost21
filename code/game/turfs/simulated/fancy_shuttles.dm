@@ -67,6 +67,13 @@ INITIALIZE_IMMEDIATE(/obj/effect/fancy_shuttle)
 	take_damage(damage)
 	return damage
 
+// Outpost 21 edit begin - Half hulls
+/turf/simulated/wall/fancy_shuttle/low //you can see over it and it doesn't block air but you still cant walk over it
+	blocks_air = FALSE
+	opacity = FALSE
+	icon_state = "hull_low"
+// Outpost 21 edit end
+
 /turf/simulated/wall/fancy_shuttle/nondense
 	density = FALSE
 	blocks_air = FALSE
@@ -82,7 +89,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/fancy_shuttle)
 	return ..()
 
 // No girders, and Eris plating
-/turf/simulated/wall/fancy_shuttle/dismantle_wall(var/devastated, var/explode, var/no_product)
+/turf/simulated/wall/fancy_shuttle/dismantle_wall(devastated, explode, no_product)
 
 	playsound(src, 'sound/items/Welder.ogg', 100, 1)
 	if(!no_product && !devastated)
@@ -178,7 +185,7 @@ INITIALIZE_IMMEDIATE(/obj/effect/fancy_shuttle)
 /obj/effect/floor_decal/fancy_shuttle/make_decal_image()
 	return image(icon = icon, icon_state = icon_state, layer = BUILTIN_DECAL_LAYER)
 
-/obj/effect/floor_decal/fancy_shuttle/get_cache_key(var/turf/T)
+/obj/effect/floor_decal/fancy_shuttle/get_cache_key(turf/T)
 	return "[alpha]-[color]-[dir]-[icon_state]-[T.layer]-[icon_file]"
 
 /**

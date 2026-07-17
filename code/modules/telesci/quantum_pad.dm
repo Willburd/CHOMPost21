@@ -114,7 +114,7 @@
 		icon_state = initial(icon_state)
 
 // Panel flips retry power cable connections so you don't have to decon the whole thing
-/obj/machinery/power/quantumpad/default_deconstruction_screwdriver(var/mob/user, var/obj/item/S)
+/obj/machinery/power/quantumpad/default_deconstruction_screwdriver(mob/user, obj/item/S)
 	if((. = ..()))
 		var/original_powernet = powernet
 		if(powernet)
@@ -164,6 +164,14 @@
 		to_chat(user, span_warning("Linked pad is not responding to ping."))
 		return
 	src.add_fingerprint(user)
+
+	// Outpost 21 edit begin - Incase anyone is a smartass
+	if(istype(get_area(src),/area/specialty/redspace))
+		explosion(get_turf(src),3,3,2,1)
+		qdel(src)
+		return
+	// Outpost 21 edit end
+
 	doteleport(user)
 
 /*CHOMP Remove. Teleport code changed slightly making this obsolete

@@ -1,0 +1,2484 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/obj/effect/floor_decal/stairs/station{
+	dir = 8;
+	icon_state = "stair_u"
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"ab" = (
+/obj/effect/floor_decal/stairs/station{
+	dir = 8
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"ac" = (
+/obj/effect/auto_crayon{
+	icon_state = "one_wrath"
+	},
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"ad" = (
+/obj/effect/auto_crayon{
+	icon_state = "survival"
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"ae" = (
+/obj/effect/auto_crayon{
+	icon_state = "wander"
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"af" = (
+/obj/effect/auto_crayon{
+	icon_state = "fire"
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"ag" = (
+/obj/effect/auto_crayon{
+	icon_state = "one_wrath"
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"ai" = (
+/obj/item/pen/crayon/marker/rainbow,
+/turf/simulated/floor/wood/broken/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"bi" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/stack/sandbags{
+	amount = 30
+	},
+/obj/machinery/light/small/flicker{
+	dir = 1
+	},
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"bO" = (
+/obj/structure/barricade,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"ce" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/tool/screwdriver,
+/obj/item/stack/cable_coil,
+/obj/item/stack/cable_coil,
+/obj/item/tool/screwdriver,
+/obj/item/stack/cable_coil,
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/item/tool/screwdriver,
+/obj/item/tool/screwdriver,
+/obj/item/stack/cable_coil,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"cf" = (
+/obj/structure/bed,
+/obj/item/bedsheet/craftable,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"cN" = (
+/obj/structure/bonfire,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"cR" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/pickaxe,
+/obj/item/shovel,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"dw" = (
+/obj/machinery/light/small,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"ec" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/storage/toolbox/syndicate,
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/item/storage/toolbox/electrical{
+	pixel_y = -8
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"el" = (
+/obj/item/trash/rkibble{
+	desc = "A bowl of healthy food for any pet to grow big and strong! It looks untouched. ";
+	name = "bowl of kibble"
+	},
+/obj/item/trash/rkibble{
+	desc = "A bowl of healthy food for any pet to grow big and strong! It looks untouched. ";
+	name = "bowl of kibble"
+	},
+/obj/item/trash/rkibble{
+	desc = "A bowl of healthy food for any pet to grow big and strong! It looks untouched. ";
+	name = "bowl of kibble"
+	},
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"eC" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/clothing/gloves/arm_guard/combat,
+/obj/item/clothing/gloves/arm_guard/combat,
+/obj/item/clothing/gloves/arm_guard/combat,
+/obj/item/clothing/gloves/arm_guard/combat,
+/obj/item/clothing/gloves/arm_guard/combat,
+/obj/item/clothing/gloves/arm_guard/combat,
+/obj/item/clothing/shoes/leg_guard/combat,
+/obj/item/clothing/shoes/leg_guard/combat,
+/obj/item/clothing/shoes/leg_guard/combat,
+/obj/item/clothing/shoes/leg_guard/combat,
+/obj/item/clothing/shoes/leg_guard/combat,
+/obj/item/clothing/shoes/leg_guard/combat,
+/obj/item/clothing/suit/armor/combat,
+/obj/item/clothing/suit/armor/combat,
+/obj/item/clothing/suit/armor/combat,
+/obj/item/clothing/suit/armor/combat,
+/obj/item/clothing/suit/armor/combat,
+/obj/item/clothing/suit/armor/combat,
+/obj/item/clothing/head/helmet/combat,
+/obj/item/clothing/head/helmet/combat,
+/obj/item/clothing/head/helmet/combat,
+/obj/item/clothing/head/helmet/combat,
+/obj/item/clothing/head/helmet/combat,
+/obj/item/clothing/head/helmet/combat,
+/obj/machinery/light/small,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"eJ" = (
+/obj/structure/bed,
+/obj/item/bedsheet/craftable,
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/item/toy/plushie/pillow/green,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"eO" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/rig/hazmat/equipped,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"fd" = (
+/obj/structure/closet/grave/dirthole,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"fD" = (
+/obj/machinery/light/small,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"gn" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/wood/broken/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"gu" = (
+/turf/simulated/floor/wood/broken/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"gx" = (
+/obj/machinery/light/small/flicker{
+	dir = 4
+	},
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"gO" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/stack/sandbags{
+	amount = 30
+	},
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"gU" = (
+/obj/structure/barricade/sandbag,
+/obj/item/material/barbedwire/start_active,
+/turf/simulated/floor/wood/broken/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"hg" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/beartrap,
+/obj/item/beartrap,
+/obj/item/beartrap,
+/obj/item/beartrap,
+/obj/item/beartrap,
+/obj/item/beartrap,
+/obj/item/beartrap,
+/obj/item/pen/crayon/marker/rainbow,
+/obj/item/pen/crayon/marker/rainbow,
+/obj/item/pen/crayon/marker/rainbow,
+/obj/item/beartrap,
+/obj/item/beartrap,
+/obj/item/beartrap,
+/obj/item/beartrap,
+/obj/item/beartrap,
+/obj/item/beartrap,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"hN" = (
+/turf/template_noop,
+/area/mine/explored/muriki/cave/deepdark)
+"iK" = (
+/obj/item/stack/medical/ointment,
+/obj/item/stack/medical/ointment,
+/obj/item/stack/medical/ointment,
+/obj/item/stack/medical/ointment,
+/obj/item/stack/medical/ointment,
+/obj/item/stack/medical/ointment,
+/obj/item/stack/medical/ointment,
+/obj/item/stack/medical/bruise_pack,
+/obj/item/stack/medical/bruise_pack,
+/obj/item/stack/medical/bruise_pack,
+/obj/item/stack/medical/bruise_pack,
+/obj/item/stack/medical/bruise_pack,
+/obj/item/stack/medical/bruise_pack,
+/obj/item/stack/medical/bruise_pack,
+/obj/structure/table/rack/shelf/wood,
+/obj/item/storage/pill_bottle/dermaline{
+	pixel_y = 6;
+	pixel_x = 9
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"ja" = (
+/obj/item/clothing/suit/caution,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"jc" = (
+/obj/structure/table/rack/shelf/wood,
+/turf/simulated/floor/wood/broken/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"jg" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/fiftyspawner/glass{
+	pixel_x = -9
+	},
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/plastic{
+	pixel_x = 7
+	},
+/obj/fiftyspawner/plastic{
+	pixel_x = 7
+	},
+/obj/fiftyspawner/plastic{
+	pixel_x = 7
+	},
+/obj/fiftyspawner/phoronrglass{
+	pixel_y = -9
+	},
+/obj/fiftyspawner/rglass{
+	pixel_x = -8;
+	pixel_y = -9
+	},
+/obj/fiftyspawner/uranium{
+	pixel_x = 8;
+	pixel_y = -9
+	},
+/obj/fiftyspawner/uranium{
+	pixel_x = 8;
+	pixel_y = -9
+	},
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/glass{
+	pixel_x = -9
+	},
+/obj/fiftyspawner/steel,
+/obj/item/stack/material/durasteel{
+	pixel_y = 8;
+	pixel_x = 7;
+	amount = 16
+	},
+/obj/item/stack/material/titanium{
+	pixel_y = 8;
+	amount = 16
+	},
+/obj/item/stack/material/plasteel{
+	pixel_x = -8;
+	pixel_y = 8;
+	amount = 50
+	},
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/plastic{
+	pixel_x = 7
+	},
+/obj/fiftyspawner/plastic{
+	pixel_x = 7
+	},
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/steel,
+/obj/item/stack/material/plasteel{
+	pixel_x = -8;
+	pixel_y = 8;
+	amount = 50
+	},
+/obj/fiftyspawner/phoron{
+	pixel_x = -3;
+	pixel_y = -4
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"kj" = (
+/turf/simulated/mineral/alt/ignore_mapgen/turfpack/muriki,
+/area/mine/unexplored/muriki/cave/deepdark)
+"kt" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/poster,
+/turf/simulated/floor/wood/broken/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"kx" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/clothing/suit/armor/reactive/repulse,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"kC" = (
+/obj/item/trash/rkibble{
+	desc = "A bowl of healthy food for any pet to grow big and strong! It looks untouched. ";
+	name = "bowl of kibble"
+	},
+/obj/item/trash/rkibble{
+	desc = "A bowl of healthy food for any pet to grow big and strong! It looks untouched. ";
+	name = "bowl of kibble"
+	},
+/obj/item/trash/rkibble{
+	desc = "A bowl of healthy food for any pet to grow big and strong! It looks untouched. ";
+	name = "bowl of kibble"
+	},
+/obj/item/trash/rkibble{
+	desc = "A bowl of healthy food for any pet to grow big and strong! It looks untouched. ";
+	name = "bowl of kibble"
+	},
+/obj/item/trash/rkibble{
+	desc = "A bowl of healthy food for any pet to grow big and strong! It looks untouched. ";
+	name = "bowl of kibble"
+	},
+/obj/item/trash/rkibble{
+	desc = "A bowl of healthy food for any pet to grow big and strong! It looks untouched. ";
+	name = "bowl of kibble"
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"kE" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/machinery/power/apc/alarms_hidden{
+	dir = 1;
+	pixel_y = 28
+	},
+/obj/structure/cable/yellow{
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"li" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/weldingtool,
+/obj/item/weldingtool,
+/obj/item/tool/crowbar,
+/obj/item/tool/crowbar,
+/obj/item/weldingtool,
+/obj/item/weldingtool,
+/obj/item/weldingtool,
+/obj/item/tool/crowbar/red,
+/obj/item/weldingtool,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"lL" = (
+/turf/template_noop,
+/area/template_noop)
+"mq" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/material/butterfly,
+/obj/item/material/butterfly,
+/obj/item/material/knife/tacknife,
+/obj/item/material/butterfly,
+/turf/simulated/floor/wood/broken/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"mI" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/storage/firstaid/fire{
+	pixel_x = 4;
+	pixel_y = 4
+	},
+/obj/item/storage/firstaid/fire{
+	pixel_x = 4;
+	pixel_y = 4
+	},
+/obj/item/storage/firstaid/fire{
+	pixel_x = 4;
+	pixel_y = 4
+	},
+/obj/item/storage/firstaid/fire{
+	pixel_x = 4;
+	pixel_y = 4
+	},
+/obj/item/storage/firstaid/fire{
+	pixel_x = 4;
+	pixel_y = 4
+	},
+/obj/item/storage/firstaid/toxin,
+/obj/item/storage/firstaid/o2{
+	pixel_x = -4;
+	pixel_y = -4
+	},
+/obj/item/storage/firstaid/o2{
+	pixel_x = -4;
+	pixel_y = -4
+	},
+/obj/item/storage/firstaid/o2{
+	pixel_x = -4;
+	pixel_y = -4
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"mO" = (
+/obj/item/stack/material/wood/oak,
+/turf/simulated/floor/wood/broken/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"nq" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/fiftyspawner/plasteel,
+/obj/item/plastique/seismic{
+	pixel_x = -8
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"ob" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/holosign_creator/combifan,
+/obj/item/holosign_creator/combifan,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"pG" = (
+/obj/item/stack/sandbags{
+	amount = 30
+	},
+/obj/structure/table/rack/shelf/wood,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"pP" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/material/barbedwire,
+/obj/item/material/barbedwire,
+/obj/item/material/barbedwire,
+/obj/item/material/barbedwire,
+/obj/item/material/barbedwire,
+/obj/item/material/barbedwire,
+/obj/item/material/barbedwire,
+/obj/item/material/barbedwire,
+/obj/item/material/barbedwire,
+/obj/item/material/barbedwire,
+/obj/item/material/barbedwire,
+/obj/item/material/barbedwire,
+/obj/item/material/barbedwire,
+/obj/item/material/barbedwire,
+/obj/item/material/barbedwire,
+/obj/item/material/barbedwire,
+/obj/item/material/barbedwire,
+/obj/item/material/barbedwire,
+/obj/item/material/barbedwire,
+/obj/item/material/barbedwire,
+/obj/item/material/barbedwire,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"qG" = (
+/obj/structure/reagent_dispensers/fueltank,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"ru" = (
+/obj/structure/bed/padded,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"rO" = (
+/obj/structure/simple_door/wood,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"rY" = (
+/obj/item/trash/rkibble{
+	desc = "A bowl of healthy food for any pet to grow big and strong! It looks untouched. ";
+	name = "bowl of kibble"
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"sz" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/gun/projectile/dartgun,
+/obj/item/gun/projectile/shotgun/pump/empty{
+	pixel_x = -16;
+	desc = "A blood soaked shotgun, betraying its history... do you feel lucky?"
+	},
+/obj/item/ammo_casing/a12g/bb,
+/obj/item/ammo_casing/a12g/bb,
+/obj/item/ammo_casing/a12g/bb,
+/obj/item/ammo_casing/a12g/bb,
+/obj/item/ammo_magazine/ammo_box/b12g,
+/obj/item/ammo_magazine/ammo_box/b12g,
+/obj/item/ammo_magazine/ammo_box/b12g,
+/obj/item/ammo_magazine/ammo_box/b12g,
+/obj/item/ammo_magazine/ammo_box/b12g,
+/obj/item/ammo_magazine/ammo_box/b12g,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"sN" = (
+/obj/item/trash/rkibble{
+	desc = "A bowl of healthy food for any pet to grow big and strong! It looks untouched. ";
+	name = "bowl of kibble"
+	},
+/turf/simulated/floor/wood/broken/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"sO" = (
+/obj/effect/auto_crayon{
+	icon_state = "x"
+	},
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"ti" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/storage/firstaid/adv,
+/obj/item/storage/firstaid/adv,
+/obj/item/storage/firstaid/adv,
+/obj/item/storage/firstaid/adv,
+/obj/item/storage/firstaid/adv,
+/obj/item/storage/firstaid/adv,
+/obj/item/storage/firstaid/adv,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"tr" = (
+/obj/random/junk,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"tv" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/clothing/suit/storage/toggle/hoodie/black,
+/obj/item/tool/crowbar/brace_jack,
+/obj/machinery/light/small,
+/obj/item/tool/crowbar/brace_jack,
+/obj/item/tool/crowbar/brace_jack,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"tL" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/radio,
+/obj/item/storage/backpack/dufflebag/syndie,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"tU" = (
+/obj/machinery/portable_atmospherics/canister/phoron,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"uk" = (
+/obj/item/clothing/head/cone,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"uv" = (
+/obj/random/trash,
+/obj/structure/table/rack/shelf/wood,
+/obj/item/surgical/scalpel/laser3,
+/obj/item/surgical/circular_saw/manager{
+	pixel_y = 6
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"uG" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/clothing/suit/space/void/wizard,
+/obj/item/clothing/head/helmet/space/void/wizard,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"uS" = (
+/obj/structure/barricade/sandbag,
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"wT" = (
+/obj/machinery/space_heater,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"xb" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/healthanalyzer,
+/obj/item/healthanalyzer,
+/obj/item/healthanalyzer,
+/obj/item/healthanalyzer,
+/obj/item/storage/pouch/ifak{
+	pixel_x = -8
+	},
+/obj/item/storage/pouch/ifak{
+	pixel_x = -8
+	},
+/obj/item/storage/pouch/ifak{
+	pixel_x = -8
+	},
+/obj/item/healthanalyzer/advanced,
+/obj/item/storage/pouch/ifak{
+	pixel_x = -8
+	},
+/obj/item/storage/pouch/ifak{
+	pixel_x = -8
+	},
+/obj/item/storage/pouch/ifak{
+	pixel_x = -8
+	},
+/obj/item/storage/pouch/ifak{
+	pixel_x = -8
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"xc" = (
+/obj/structure/bed,
+/obj/item/bedsheet/hos,
+/turf/simulated/floor/wood/broken/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"xs" = (
+/obj/structure/bed,
+/obj/item/bedsheet/craftable,
+/obj/item/toy/plushie/pillow/green,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"ye" = (
+/obj/item/stack/material/wood/oak,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"yh" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/soap/syndie,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"yk" = (
+/obj/item/storage/pill_bottle/tramadol,
+/obj/structure/table/rack/shelf/wood,
+/obj/item/stack/nanopaste{
+	pixel_x = 10
+	},
+/obj/item/storage/pill_bottle/dylovene{
+	pixel_x = -6
+	},
+/obj/item/storage/pill_bottle/tramadol,
+/obj/item/stack/nanopaste{
+	pixel_x = 10
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"yA" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/clothing/gloves/fyellow,
+/obj/item/clothing/gloves/fyellow,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"yF" = (
+/obj/machinery/light/small,
+/obj/structure/table/rack/shelf/wood,
+/obj/item/implanter/compliance,
+/obj/item/mine/claymore,
+/obj/item/mine/claymore,
+/obj/item/mine/claymore,
+/obj/item/mine/claymore,
+/obj/item/mine/claymore,
+/obj/item/mine/claymore,
+/obj/item/mine/claymore,
+/obj/item/mine/claymore,
+/obj/item/mine/claymore,
+/obj/item/mine/claymore,
+/obj/item/mine/claymore,
+/obj/item/mine/claymore,
+/obj/item/mine/claymore,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"yI" = (
+/turf/template_noop,
+/area/mine/unexplored/muriki/cave/deepdark)
+"yN" = (
+/obj/random/trash,
+/obj/random/junk,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"yU" = (
+/obj/structure/barricade/planks,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"zg" = (
+/obj/item/trash/rkibble{
+	desc = "A bowl of healthy food for any pet to grow big and strong! It looks untouched. ";
+	name = "bowl of kibble"
+	},
+/obj/item/trash/rkibble{
+	desc = "A bowl of healthy food for any pet to grow big and strong! It looks untouched. ";
+	name = "bowl of kibble"
+	},
+/obj/item/trash/rkibble{
+	desc = "A bowl of healthy food for any pet to grow big and strong! It looks untouched. ";
+	name = "bowl of kibble"
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Aw" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/storage/belt/utility/full,
+/obj/item/material/twohanded/spear,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Az" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/tool/wirecutters,
+/obj/item/tool/wirecutters,
+/obj/item/tool/wrench,
+/obj/item/tool/wrench,
+/obj/item/tool/wirecutters,
+/obj/item/tool/wrench,
+/obj/item/tool/wirecutters,
+/obj/item/tool/wrench,
+/obj/item/tool/wrench,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"AT" = (
+/turf/simulated/wall/stonelogs/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"AY" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/multitool,
+/obj/item/multitool,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Bc" = (
+/obj/item/defib_kit,
+/obj/structure/table/rack/shelf/wood,
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/item/defib_kit,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Bp" = (
+/turf/simulated/mineral/alt/ignore_mapgen/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Bq" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/random/thermalponcho,
+/obj/random/thermalponcho,
+/obj/random/thermalponcho,
+/obj/random/thermalponcho,
+/obj/random/thermalponcho,
+/obj/random/thermalponcho,
+/obj/random/thermalponcho,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Bu" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/storage/firstaid/regular,
+/obj/item/storage/firstaid/regular,
+/obj/item/storage/firstaid/regular,
+/obj/item/storage/firstaid/regular,
+/obj/item/storage/firstaid/regular,
+/obj/item/storage/firstaid/regular,
+/obj/item/storage/firstaid/regular,
+/obj/item/storage/firstaid/regular,
+/obj/item/storage/firstaid/regular,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"BB" = (
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
+/area/mine/unexplored/muriki/cave/deepdark)
+"CM" = (
+/obj/machinery/light/small,
+/obj/structure/reagent_dispensers/fueltank,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"CR" = (
+/obj/structure/bed,
+/obj/item/bedsheet/ce,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"CV" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Ds" = (
+/obj/structure/bed,
+/obj/item/bedsheet/mime,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"DT" = (
+/obj/item/trash/rkibble{
+	desc = "A bowl of healthy food for any pet to grow big and strong! It looks untouched. ";
+	name = "bowl of kibble"
+	},
+/obj/item/sticky_pad{
+	pixel_x = -12;
+	pixel_y = 3
+	},
+/obj/item/sticky_pad{
+	pixel_x = -12;
+	pixel_y = 3
+	},
+/obj/item/sticky_pad{
+	pixel_x = -12;
+	pixel_y = 3
+	},
+/turf/simulated/floor/wood/broken/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"FI" = (
+/obj/structure/simple_door/wood,
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"FJ" = (
+/obj/structure/simple_door/wood,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Gx" = (
+/obj/random/junk,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"GL" = (
+/obj/effect/landmark/loot_spawn,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"GU" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/blade_trap_kit,
+/obj/item/blade_trap_kit,
+/obj/item/blade_trap_kit,
+/obj/item/blade_trap_kit,
+/obj/item/blade_trap_kit,
+/obj/item/blade_trap_kit,
+/obj/item/blade_trap_kit,
+/obj/item/blade_trap_kit,
+/obj/item/blade_trap_kit,
+/obj/item/blade_trap_kit,
+/obj/item/pen/crayon/marker/rainbow,
+/obj/item/pen/crayon/marker/rainbow,
+/obj/item/pen/crayon/marker/rainbow,
+/obj/item/pen/crayon/marker/rainbow,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Hl" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/clothing/gloves/black{
+	pixel_y = -6
+	},
+/obj/item/clothing/gloves/yellow,
+/obj/item/clothing/gloves/yellow,
+/obj/item/clothing/gloves/yellow,
+/obj/item/healthanalyzer/guide{
+	pixel_y = 7
+	},
+/obj/item/healthanalyzer/guide{
+	pixel_y = 7
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Ig" = (
+/obj/structure/barricade/sandbag,
+/obj/structure/dancepole{
+	name = "roof support"
+	},
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Jp" = (
+/obj/item/flashlight/glowstick,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Jx" = (
+/obj/item/gun/projectile/shotgun/doublebarrel/quad,
+/obj/structure/table/rack/shelf/wood,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"JF" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/storage/belt/utility{
+	pixel_y = -4
+	},
+/obj/item/storage/belt/utility/full/multitool,
+/obj/item/tape_roll{
+	pixel_x = 10;
+	pixel_y = 10
+	},
+/obj/item/tape_roll{
+	pixel_x = 10;
+	pixel_y = 10
+	},
+/obj/item/tape_roll{
+	pixel_x = 10;
+	pixel_y = 10
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Ke" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/pickaxe,
+/obj/item/tank/jetpack/carbondioxide,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Kj" = (
+/obj/item/reagent_containers/blood/OMinus,
+/obj/item/reagent_containers/blood/OMinus,
+/obj/item/reagent_containers/blood/OMinus,
+/obj/item/reagent_containers/blood/OMinus,
+/obj/structure/medical_stand,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"KO" = (
+/obj/item/trash/rkibble{
+	desc = "A bowl of healthy food for any pet to grow big and strong! It looks untouched. ";
+	name = "bowl of kibble"
+	},
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"KS" = (
+/obj/random/trash,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Lv" = (
+/obj/random/trash,
+/obj/random/junk,
+/turf/simulated/floor/wood/broken/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"LJ" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/tank/emergency/oxygen/engi,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"LR" = (
+/obj/machinery/light/small,
+/obj/random/trash,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Nd" = (
+/obj/structure/table/rack/shelf/wood,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"NH" = (
+/obj/structure/barricade/sandbag,
+/obj/item/sleevemate,
+/obj/item/sleevemate,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"NU" = (
+/obj/structure/barricade/sandbag,
+/obj/item/material/barbedwire/start_active,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Oe" = (
+/turf/simulated/wall/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Pi" = (
+/obj/structure/cable/yellow{
+	icon_state = "16-0"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"PV" = (
+/obj/item/healthanalyzer/guide,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Qr" = (
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Qv" = (
+/obj/item/reagent_containers/syringe/drugs,
+/obj/structure/table/rack/shelf/wood,
+/obj/item/reagent_containers/syringe/voxkit{
+	pixel_y = -5
+	},
+/obj/item/reagent_containers/syringe/voxkit{
+	pixel_y = -5
+	},
+/obj/item/laser_pointer/blue,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"QA" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/radio,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"QT" = (
+/obj/item/material/barbedwire/start_active,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Ra" = (
+/obj/structure/barricade/sandbag,
+/obj/item/stack/material/wood/oak,
+/obj/item/stack/material/wood/oak{
+	pixel_x = -10
+	},
+/obj/item/stack/material/wood/oak{
+	pixel_x = 10
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Ro" = (
+/obj/random/flashlight,
+/obj/random/flashlight,
+/obj/random/flashlight,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Rw" = (
+/turf/simulated/mineral/alt/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"RL" = (
+/obj/structure/barricade/sandbag,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Sq" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/airlock_electronics,
+/obj/item/laser_pointer/purple,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"SL" = (
+/obj/structure/bed,
+/obj/item/bedsheet/brown,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Ub" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Uo" = (
+/obj/structure/bed,
+/obj/item/bedsheet/hop,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Wr" = (
+/obj/structure/barricade,
+/obj/item/stack/material/wood/oak,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"WO" = (
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Xh" = (
+/obj/random/trash,
+/turf/simulated/floor/wood/broken/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"XG" = (
+/obj/structure/window/reinforced/full,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Yi" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/radio,
+/obj/item/spacecash/c500,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Yx" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/perfect_tele/one_beacon,
+/obj/item/perfect_tele/one_beacon,
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"YA" = (
+/obj/random/flashlight,
+/turf/simulated/floor/wood/broken/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"YC" = (
+/obj/machinery/light/small/flicker{
+	dir = 1
+	},
+/obj/random/trash,
+/obj/random/junk,
+/turf/simulated/floor/wood/broken/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Zb" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/random/trash,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Zd" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/ammo_magazine/m16,
+/obj/item/ammo_magazine/m16,
+/obj/item/ammo_magazine/m16,
+/obj/item/ammo_magazine/m16,
+/obj/item/ammo_magazine/m16,
+/obj/item/ammo_magazine/m16,
+/obj/item/ammo_magazine/m16,
+/obj/item/ammo_magazine/m16,
+/obj/item/ammo_magazine/m16,
+/obj/item/ammo_magazine/m16,
+/obj/item/gun/projectile/automatic/serdy/m4a1{
+	pixel_x = -10
+	},
+/obj/item/gun/projectile/automatic/serdy/m4a1{
+	pixel_x = -10
+	},
+/obj/item/gun/projectile/automatic/serdy/m4a1{
+	pixel_x = -10
+	},
+/obj/item/ammo_magazine/m16,
+/obj/item/ammo_magazine/m16,
+/obj/item/ammo_magazine/m16,
+/obj/item/ammo_magazine/m16,
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/item/ammo_magazine/m16,
+/obj/item/ammo_magazine/m16,
+/obj/item/ammo_magazine/m16,
+/obj/item/ammo_magazine/m16,
+/obj/item/ammo_magazine/m16,
+/obj/item/ammo_magazine/m16,
+/obj/item/ammo_magazine/m16,
+/obj/item/ammo_magazine/m16,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Zf" = (
+/obj/machinery/power/grounding_rod/pre_mapped,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Zo" = (
+/obj/item/sticky_pad,
+/obj/item/sticky_pad,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Zr" = (
+/obj/structure/barricade/cutout/fluke,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"ZD" = (
+/obj/random/flashlight,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"ZQ" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/storage/firstaid/surgery,
+/obj/item/roller{
+	pixel_x = -8;
+	pixel_y = -7
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+
+(1,1,1) = {"
+lL
+lL
+lL
+lL
+lL
+lL
+lL
+lL
+lL
+lL
+lL
+lL
+lL
+lL
+lL
+lL
+lL
+lL
+lL
+lL
+lL
+lL
+lL
+lL
+lL
+lL
+lL
+lL
+lL
+lL
+lL
+lL
+lL
+lL
+lL
+"}
+(2,1,1) = {"
+lL
+yI
+yI
+yI
+yI
+yI
+yI
+yI
+yI
+yI
+yI
+yI
+yI
+yI
+yI
+yI
+yI
+yI
+yI
+yI
+yI
+yI
+yI
+yI
+yI
+yI
+yI
+yI
+yI
+yI
+yI
+yI
+yI
+yI
+lL
+"}
+(3,1,1) = {"
+lL
+yI
+yI
+yI
+yI
+yI
+yI
+yI
+yI
+yI
+yI
+yI
+yI
+yI
+yI
+yI
+hN
+hN
+Zf
+QT
+QT
+QT
+hN
+hN
+hN
+yI
+yI
+yI
+yI
+yI
+yI
+yI
+yI
+yI
+lL
+"}
+(4,1,1) = {"
+lL
+yI
+yI
+yI
+yI
+yI
+yI
+yI
+yI
+yI
+yI
+yI
+hN
+hN
+hN
+hN
+hN
+Qr
+Qr
+QT
+RL
+RL
+RL
+hN
+hN
+hN
+hN
+hN
+yI
+yI
+yI
+yI
+yI
+yI
+lL
+"}
+(5,1,1) = {"
+lL
+yI
+yI
+yI
+yI
+yI
+yI
+yI
+yI
+Bp
+Bp
+Bp
+Bp
+Bp
+Bp
+Bp
+Bp
+QT
+Qr
+QT
+RL
+Qr
+RL
+hN
+hN
+hN
+hN
+hN
+hN
+yI
+yI
+yI
+yI
+yI
+lL
+"}
+(6,1,1) = {"
+lL
+yI
+yI
+yI
+yI
+yI
+dw
+AT
+Bp
+Bp
+Bp
+Bp
+Bp
+Bp
+Bp
+Bp
+Bp
+Qr
+Qr
+QT
+RL
+Qr
+RL
+RL
+RL
+RL
+Qr
+Qr
+Qr
+hN
+yI
+yI
+yI
+yI
+lL
+"}
+(7,1,1) = {"
+lL
+yI
+yI
+yI
+hN
+Qr
+Qr
+AT
+AT
+AT
+AT
+AT
+AT
+AT
+AT
+AT
+Bp
+Bp
+Qr
+Qr
+Qr
+Qr
+Zr
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
+yI
+yI
+yI
+yI
+lL
+"}
+(8,1,1) = {"
+lL
+yI
+yI
+yI
+Qr
+Qr
+sO
+AT
+Ro
+tr
+af
+yU
+SL
+KS
+Ds
+AT
+Rw
+Bp
+fd
+QT
+RL
+Qr
+Qr
+QT
+QT
+QT
+Qr
+Qr
+Qr
+Qr
+yI
+yI
+yI
+yI
+lL
+"}
+(9,1,1) = {"
+lL
+yI
+yI
+hN
+Qr
+Qr
+tU
+AT
+AT
+rO
+AT
+AT
+Yi
+gu
+ob
+AT
+Rw
+Bp
+Bp
+Bp
+RL
+Ig
+Qr
+RL
+XG
+XG
+XG
+AT
+AT
+Qr
+Qr
+yI
+yI
+yI
+lL
+"}
+(10,1,1) = {"
+lL
+yI
+yI
+hN
+Qr
+Qr
+Qr
+FJ
+Qr
+Qr
+Qr
+AT
+eJ
+ae
+cf
+AT
+Rw
+Bp
+Bp
+Bp
+pG
+Qr
+Qr
+Qr
+XG
+tr
+yN
+pP
+AT
+Qr
+Qr
+BB
+yI
+yI
+lL
+"}
+(11,1,1) = {"
+lL
+yI
+yI
+hN
+Bp
+Qr
+Qr
+AT
+Qr
+cN
+Qr
+XG
+tL
+tr
+QA
+AT
+Rw
+Rw
+Rw
+Bp
+pG
+qG
+gx
+ac
+XG
+sN
+WO
+yF
+AT
+Qr
+Qr
+BB
+yI
+yI
+lL
+"}
+(12,1,1) = {"
+lL
+yI
+yI
+Bp
+Bp
+Bp
+Bp
+AT
+Qr
+Qr
+GL
+AT
+CR
+gu
+Uo
+AT
+AT
+AT
+AT
+AT
+AT
+AT
+AT
+rO
+AT
+Oe
+rO
+Oe
+AT
+Qr
+Qr
+BB
+yI
+yI
+lL
+"}
+(13,1,1) = {"
+lL
+yI
+yI
+Bp
+Bp
+Bp
+Bp
+AT
+AT
+AT
+AT
+AT
+Oe
+rO
+Oe
+Wr
+Sq
+Oe
+ZQ
+ru
+Kj
+Aw
+Oe
+ja
+Oe
+Nd
+gu
+yA
+AT
+Qr
+Qr
+Qr
+yI
+yI
+lL
+"}
+(14,1,1) = {"
+lL
+yI
+yI
+hN
+Bp
+Bp
+Bp
+Rw
+AT
+tr
+Jx
+AT
+Nd
+WO
+xs
+Oe
+kE
+Oe
+uv
+ad
+gn
+WO
+rO
+DT
+rO
+ZD
+WO
+tv
+AT
+Qr
+Qr
+Qr
+yI
+yI
+lL
+"}
+(15,1,1) = {"
+lL
+yI
+yI
+hN
+hN
+fd
+Qr
+CM
+AT
+gu
+mq
+AT
+Zd
+KS
+sz
+Oe
+FI
+Oe
+Oe
+NH
+Oe
+Oe
+Oe
+YC
+Oe
+Ra
+rO
+Oe
+AT
+Qr
+Qr
+Qr
+yI
+yI
+lL
+"}
+(16,1,1) = {"
+lL
+yI
+yI
+hN
+hN
+Qr
+Qr
+Qr
+rO
+tr
+WO
+rO
+ZD
+mO
+WO
+rO
+Pi
+rO
+WO
+KO
+rY
+rO
+WO
+tr
+rO
+WO
+gu
+fD
+AT
+Qr
+Qr
+Qr
+yI
+yI
+lL
+"}
+(17,1,1) = {"
+lL
+yI
+yI
+hN
+hN
+Bp
+Bp
+Rw
+AT
+ZD
+gu
+AT
+Nd
+WO
+xc
+Oe
+rO
+Oe
+rO
+Oe
+Oe
+Oe
+bO
+rO
+Oe
+Oe
+Oe
+rO
+AT
+Qr
+Qr
+Qr
+yI
+yI
+lL
+"}
+(18,1,1) = {"
+lL
+yI
+yI
+hN
+hN
+Bp
+Bp
+Rw
+AT
+cR
+jc
+AT
+Oe
+Wr
+Oe
+Oe
+tr
+Oe
+WO
+PV
+Bu
+Oe
+Qv
+tr
+Oe
+aa
+kC
+WO
+AT
+Qr
+Qr
+Qr
+yI
+yI
+lL
+"}
+(19,1,1) = {"
+lL
+yI
+yI
+hN
+hN
+Qr
+Bp
+Rw
+AT
+AT
+AT
+AT
+Az
+WO
+JF
+jg
+ye
+Oe
+Bc
+ai
+xb
+Oe
+LJ
+WO
+bO
+ab
+zg
+wT
+AT
+Qr
+Qr
+Qr
+yI
+yI
+lL
+"}
+(20,1,1) = {"
+lL
+yI
+yI
+yI
+hN
+Gx
+Qr
+Qr
+Ub
+ag
+rO
+bO
+ce
+KS
+AY
+Hl
+YA
+gU
+yk
+WO
+mI
+bO
+eO
+LR
+Oe
+WO
+Lv
+Nd
+AT
+Qr
+Qr
+hN
+yI
+yI
+lL
+"}
+(21,1,1) = {"
+lL
+yI
+yI
+yI
+hN
+Qr
+Qr
+tU
+Rw
+AT
+AT
+AT
+li
+WO
+rY
+rY
+WO
+Oe
+ti
+tr
+iK
+Oe
+hg
+uk
+Oe
+GU
+WO
+eC
+AT
+Qr
+Qr
+hN
+yI
+yI
+lL
+"}
+(22,1,1) = {"
+lL
+yI
+yI
+yI
+hN
+QT
+fd
+Rw
+Rw
+Rw
+Rw
+AT
+AT
+AT
+AT
+Oe
+rO
+Oe
+Oe
+rO
+AT
+AT
+AT
+rO
+AT
+XG
+XG
+AT
+AT
+Qr
+hN
+yI
+yI
+yI
+lL
+"}
+(23,1,1) = {"
+lL
+yI
+yI
+yI
+yI
+hN
+Bp
+Bp
+Bp
+Bp
+Bp
+Bp
+Rw
+Rw
+AT
+ec
+WO
+Xh
+mO
+WO
+AT
+Rw
+gO
+Qr
+uS
+QT
+QT
+QT
+QT
+Qr
+hN
+yI
+yI
+yI
+lL
+"}
+(24,1,1) = {"
+lL
+yI
+yI
+yI
+yI
+hN
+Bp
+Bp
+Bp
+Bp
+Bp
+Bp
+Rw
+Rw
+AT
+Oe
+Oe
+Oe
+NU
+rO
+AT
+AT
+bi
+Qr
+Ig
+QT
+Qr
+Qr
+Qr
+Qr
+hN
+yI
+yI
+yI
+lL
+"}
+(25,1,1) = {"
+lL
+yI
+yI
+yI
+yI
+yI
+hN
+Qr
+Bp
+Bp
+Bp
+Bp
+Rw
+Rw
+AT
+WO
+CV
+rO
+Zb
+tr
+Zo
+rO
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
+Qr
+yI
+yI
+yI
+yI
+lL
+"}
+(26,1,1) = {"
+lL
+yI
+yI
+yI
+yI
+yI
+hN
+Qr
+Qr
+Qr
+Bp
+Bp
+AT
+AT
+AT
+rO
+Oe
+Oe
+Oe
+rO
+AT
+AT
+Rw
+Rw
+qG
+Qr
+Qr
+Qr
+Qr
+Qr
+yI
+yI
+yI
+yI
+lL
+"}
+(27,1,1) = {"
+lL
+yI
+yI
+yI
+yI
+yI
+yI
+Qr
+Qr
+Qr
+Qr
+Qr
+rO
+WO
+Jp
+WO
+Bq
+Oe
+yh
+WO
+AT
+Rw
+Rw
+Rw
+Rw
+Qr
+Qr
+Qr
+Qr
+BB
+yI
+yI
+yI
+yI
+lL
+"}
+(28,1,1) = {"
+lL
+yI
+yI
+yI
+yI
+yI
+yI
+hN
+Qr
+Qr
+Qr
+Qr
+AT
+Ke
+Xh
+gu
+uG
+bO
+nq
+WO
+AT
+AT
+AT
+Rw
+Rw
+Qr
+Qr
+Qr
+Qr
+yI
+yI
+yI
+yI
+yI
+lL
+"}
+(29,1,1) = {"
+lL
+yI
+yI
+yI
+yI
+yI
+yI
+hN
+Qr
+Qr
+Qr
+Qr
+AT
+kx
+el
+tr
+kt
+Oe
+Yx
+KS
+Qr
+Qr
+AT
+Rw
+Rw
+Qr
+Qr
+Qr
+Qr
+yI
+yI
+yI
+yI
+yI
+lL
+"}
+(30,1,1) = {"
+lL
+yI
+yI
+yI
+yI
+yI
+yI
+yI
+hN
+Qr
+Qr
+Qr
+AT
+AT
+AT
+AT
+AT
+AT
+AT
+AT
+AT
+AT
+AT
+Rw
+Rw
+Qr
+Qr
+Qr
+BB
+yI
+yI
+yI
+yI
+yI
+lL
+"}
+(31,1,1) = {"
+lL
+yI
+yI
+yI
+yI
+yI
+yI
+yI
+hN
+Bp
+Bp
+Bp
+Bp
+Bp
+Bp
+Bp
+Bp
+Bp
+Bp
+Bp
+Bp
+Bp
+Bp
+Bp
+Rw
+Qr
+Qr
+Qr
+BB
+yI
+yI
+yI
+yI
+yI
+lL
+"}
+(32,1,1) = {"
+lL
+yI
+yI
+yI
+yI
+yI
+yI
+yI
+yI
+yI
+kj
+Bp
+Bp
+Bp
+Bp
+Bp
+Bp
+Bp
+Bp
+Bp
+Bp
+Bp
+Bp
+Bp
+hN
+Qr
+BB
+BB
+yI
+yI
+yI
+yI
+yI
+yI
+lL
+"}
+(33,1,1) = {"
+lL
+yI
+yI
+yI
+yI
+yI
+yI
+yI
+yI
+yI
+kj
+kj
+Bp
+Bp
+Bp
+Bp
+Bp
+Bp
+Bp
+Bp
+Bp
+Bp
+Bp
+hN
+hN
+yI
+yI
+yI
+yI
+yI
+yI
+yI
+yI
+yI
+lL
+"}
+(34,1,1) = {"
+lL
+yI
+yI
+yI
+yI
+yI
+yI
+yI
+yI
+yI
+yI
+yI
+yI
+kj
+kj
+kj
+kj
+kj
+kj
+kj
+kj
+kj
+kj
+yI
+yI
+yI
+yI
+yI
+yI
+yI
+yI
+yI
+yI
+yI
+lL
+"}
+(35,1,1) = {"
+lL
+lL
+lL
+lL
+lL
+lL
+lL
+lL
+lL
+lL
+lL
+lL
+lL
+lL
+lL
+lL
+lL
+lL
+lL
+lL
+lL
+lL
+lL
+lL
+lL
+lL
+lL
+lL
+lL
+lL
+lL
+lL
+lL
+lL
+lL
+"}

@@ -18,6 +18,13 @@
 	default_apply_parts()
 	// Can't be set on these
 	src.verbs -= /obj/machinery/reagent_refinery/verb/set_APTFT
+	GLOB.vats_to_rain_into += src // Outpost 21 edit - Rainy vats
+
+// Outpost 21 edit begin - Rainy vats
+/obj/machinery/reagent_refinery/vat/Destroy()
+	GLOB.vats_to_rain_into -= src
+	. = ..()
+// Outpost 21 edit end
 
 /obj/machinery/reagent_refinery/vat/process()
 	if(buckled_mobs && buckled_mobs.len && reagents.total_volume > 0)
@@ -61,13 +68,13 @@
 	. += "The meter shows [reagents.total_volume]u / [reagents.maximum_volume]u. It is pumping chemicals at a rate of [amount_per_transfer_from_this]u."
 	tutorial(REFINERY_TUTORIAL_SINGLEOUTPUT, .)
 
-/obj/machinery/reagent_refinery/vat/handle_transfer(var/atom/origin_machine, var/datum/reagents/RT, var/source_forward_dir, var/transfer_rate, var/filter_id = "")
+/obj/machinery/reagent_refinery/vat/handle_transfer(atom/origin_machine, datum/reagents/RT, source_forward_dir, transfer_rate, filter_id = "")
 	// no back/forth, filters don't use just their forward, they send the side too!
 	if(dir == GLOB.reverse_dir[source_forward_dir])
 		return 0
 	. = ..(origin_machine, RT, source_forward_dir, transfer_rate, filter_id)
 
-/obj/machinery/reagent_refinery/vat/MouseDrop_T(var/atom/movable/C, mob/user as mob)
+/obj/machinery/reagent_refinery/vat/MouseDrop_T(atom/movable/C, mob/user as mob)
 	if(user.buckled || user.stat || user.restrained() || !Adjacent(user) || !user.Adjacent(C) || !istype(C) || (user == C && !user.canmove))
 		return
 	if(istype(C,/obj/vehicle/train/trolley_tank))

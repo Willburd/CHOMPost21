@@ -38,11 +38,16 @@
 	var/datum/weakref/ATC
 
 	var/list/req_access = list()
+	var/obj/machinery/computer/communications/comm_console = null // Outpost 21 edit - use the comm's console access
 
 /datum/tgui_module/communications/New(host)
 	. = ..()
 	crew_announcement = new()
 	crew_announcement.newscast = TRUE
+
+/datum/tgui_module/communications/Destroy(force)
+	. = ..()
+	ATC = null
 
 /datum/tgui_module/communications/tgui_interact(mob/user, datum/tgui/ui)
 	if(using_map && !(get_z(user) in using_map.contact_levels))
@@ -53,6 +58,10 @@
 /datum/tgui_module/communications/proc/is_authenticated(mob/user, message = TRUE)
 	if(authenticated == COMM_AUTHENTICATION_MAX)
 		return COMM_AUTHENTICATION_MAX
+	// Outpost 21 edit begin - AI can use command console
+	if((isAI(usr) || isrobot(usr)))
+		return COMM_AUTHENTICATION_MIN
+	// Outpost 21 edit end
 	else if(isobserver(user))
 		var/mob/observer/dead/D = user
 		if(D.can_admin_interact())
@@ -73,7 +82,7 @@
 	var/old_level = GLOB.security_level
 	if(!tmp_alertlevel) tmp_alertlevel = SEC_LEVEL_GREEN
 	if(tmp_alertlevel < SEC_LEVEL_GREEN) tmp_alertlevel = SEC_LEVEL_GREEN
-	if(tmp_alertlevel > SEC_LEVEL_BLUE) tmp_alertlevel = SEC_LEVEL_BLUE //Cannot engage delta with this
+	if(tmp_alertlevel > SEC_LEVEL_RED) tmp_alertlevel = SEC_LEVEL_RED //Cannot engage delta with this. Outpost 21 edit - Allow red alert
 	set_security_level(tmp_alertlevel)
 	if(GLOB.security_level != old_level)
 		//Only notify the admins if an actual change happened
@@ -90,7 +99,9 @@
 				feedback_inc("alert_comms_orange",1)
 			if(SEC_LEVEL_BLUE)
 				feedback_inc("alert_comms_blue",1)
-		COOLDOWN_START(src, level_change_cooldown, 2 MINUTES) // 2 minute cd on station alert changing.
+			if(SEC_LEVEL_RED) // Outpost 21 edit - Allow red alert
+				feedback_inc("alert_comms_red",1)
+		COOLDOWN_START(src, level_change_cooldown, 30 SECOND) // Outpost 21 edit - cooldown from 2 minutes to 30 seconds
 	tmp_alertlevel = 0
 
 /datum/tgui_module/communications/tgui_data(mob/user)
@@ -98,7 +109,9 @@
 	data["is_ai"]         = isAI(user) || isrobot(user)
 	data["menu_state"]    = data["is_ai"] ? ai_menu_state : menu_state
 	data["emagged"]       = emagged
-	data["authenticated"] = is_authenticated(user, 0)
+	// Outpost 21 edit begin - AI can use command console
+	data["authenticated"] =data["is_ai"] ? COMM_AUTHENTICATION_MIN : is_authenticated(user, 0)
+	// Outpost 21 edit end
 	data["authmax"] = data["authenticated"] == COMM_AUTHENTICATION_MAX ? TRUE : FALSE
 	data["atcsquelch"] = SSatc.is_squelched()
 	data["boss_short"] = using_map.boss_short
@@ -140,6 +153,7 @@
 		list("id" = SEC_LEVEL_BLUE,   "name" = "Blue",   "icon" = "eye"),
 		list("id" = SEC_LEVEL_ORANGE, "name" = "Orange", "icon" = "wrench"),
 		list("id" = SEC_LEVEL_VIOLET, "name" = "Violet", "icon" = "biohazard"),
+		list("id" = SEC_LEVEL_RED, 	  "name" = "Red", 	 "icon" = "close"), // Outpost 21 edit - Red alert is easier
 	)
 
 	var/datum/comm_message_listener/l = obtain_message_listener()
@@ -212,7 +226,7 @@
 
 	. = TRUE
 	if(action == "auth")
-		if(!ishuman(ui.user))
+		if(!ishuman(ui.user) && !isAI(ui.user) && !isrobot(ui.user)) // Outpost 21 edit - AI can use command console
 			to_chat(ui.user, span_warning("Access denied."))
 			return FALSE
 		// Logout function.
@@ -222,6 +236,11 @@
 			setMenuState(ui.user, COMM_SCREEN_MAIN)
 			return
 		// Login function.
+		// Outpost 21 edit begin - use console's access to allow min-access
+		if(istype(comm_console,/obj/machinery/computer/communications))
+			if(comm_console.check_access_list(ui.user.GetAccess()))
+				authenticated = COMM_AUTHENTICATION_MIN
+		// Outpost 21 edit end
 		if(check_access(ui.user, ACCESS_HEADS))
 			authenticated = COMM_AUTHENTICATION_MIN
 		if(check_access(ui.user, ACCESS_CAPTAIN))
@@ -233,7 +252,7 @@
 			to_chat(ui.user, span_warning("You need to wear your ID."))
 
 	// All functions below this point require authentication.
-	if(!is_authenticated(ui.user))
+	if(!is_authenticated(ui.user) && !(isAI(ui.user) || isrobot(ui.user))) // Outpost 21 edit - AI can use command console
 		return FALSE
 
 	switch(action)
@@ -242,15 +261,17 @@
 			setMenuState(ui.user, COMM_SCREEN_MAIN)
 
 		if("newalertlevel")
+			/* Outpost 21 edit(port) begin - AI can use command console
 			if(isAI(ui.user) || isrobot(ui.user))
 				to_chat(ui.user, span_warning("Firewalls prevent you from changing the alert level."))
 				return
-			else if(isobserver(ui.user))
+			Outpost 21 edit end */
+			if(isobserver(ui.user))
 				var/mob/observer/dead/D = ui.user
 				if(D.can_admin_interact())
 					change_security_level(ui.user, text2num(params["level"]))
 					return TRUE
-			else if(!ishuman(ui.user))
+			else if(!ishuman(ui.user) && !isAI(ui.user) && !isrobot(ui.user)) // Outpost 21 edit - AI can use command console
 				to_chat(ui.user, span_warning("Security measures prevent you from changing the alert level."))
 				return
 
@@ -275,7 +296,7 @@
 				message_cooldown = world.time + 600 //One minute
 
 		if("callshuttle")
-			if(!is_authenticated(ui.user))
+			if(!is_authenticated(ui.user) && !(isAI(ui.user) || isrobot(ui.user))) // Outpost 21 edit - AI can use command console
 				return
 
 
@@ -388,11 +409,11 @@
 	ntos = TRUE
 
 /* Etc global procs */
-/proc/enable_prison_shuttle(var/mob/user)
+/proc/enable_prison_shuttle(mob/user)
 	for(var/obj/machinery/computer/prison_shuttle/PS in GLOB.machines)
 		PS.allowedtocall = !(PS.allowedtocall)
 
-/proc/call_shuttle_proc(var/mob/user)
+/proc/call_shuttle_proc(mob/user)
 	if ((!( SSticker ) || !SSemergency_shuttle.location()))
 		return
 
@@ -431,7 +452,7 @@
 
 	return
 
-/proc/init_shift_change(var/mob/user, var/force = 0)
+/proc/init_shift_change(mob/user, force = 0)
 	if ((!( SSticker ) || !SSemergency_shuttle.location()))
 		return
 
@@ -478,7 +499,7 @@
 
 	return
 
-/proc/cancel_call_proc(var/mob/user)
+/proc/cancel_call_proc(mob/user)
 	if (!( SSticker ) || !SSemergency_shuttle.can_recall())
 		return
 	if((SSticker.mode.name == "blob")||(SSticker.mode.name == "Meteor"))

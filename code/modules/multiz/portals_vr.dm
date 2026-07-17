@@ -43,7 +43,7 @@
 		spawn(0)
 		src.teleport(user)
 
-/obj/structure/portal_event/attack_ghost(var/mob/observer/dead/user)
+/obj/structure/portal_event/attack_ghost(mob/observer/dead/user)
 	if(!target && check_rights_for(user?.client, R_HOLDER))
 		to_chat(user, span_notice("Selecting 'Portal Here' will create and link a portal at your location, while 'Target Here' will create an object that is only visible to ghosts which will act as the target, again at your location. Each option will give you the ability to change portal types, but for all options except 'Select Type' you only get one shot at it, so be sure to experiment with 'Select Type' first if you're not familiar with them."))
 		var/response = tgui_alert(user, "You appear to be staff. This portal has no exit point. If you want to make one, move to where you want it to go, and click the appropriate option, see chat for more info, otherwise click 'Cancel'", "Unbound Portal", list("Cancel","Portal Here","Target Here", "Select Type"))
@@ -208,7 +208,7 @@
 					MI.forceMove(get_turf(H))
 					if(!issilicon(MI)) //Don't drop borg modules...
 						for(var/obj/item/II in MI)
-							if(istype(II,/obj/item/implant) || istype(II,/obj/item/nif))
+							if(istype(II,/obj/item/implant)) // Outpost 21 edit - Nif removal: || istype(II,/obj/item/nif))
 								continue
 							MI.drop_from_inventory(II, dest.loc)
 					var/obj/effect/landmark/finaldest = pick(GLOB.awayabductors)
@@ -219,7 +219,7 @@
 					MI << 'sound/effects/bamf.ogg'
 					to_chat(MI,span_warning("You're starting to come to. You feel like you've been out for a few minutes, at least..."))
 				for(var/obj/item/I in L)
-					if(istype(I,/obj/item/implant) || istype(I,/obj/item/nif))
+					if(istype(I,/obj/item/implant)) // Outpost 21 edit - Nif removal: || istype(I,/obj/item/nif))
 						continue
 					L.drop_from_inventory(I, dest.loc)
 			var/obj/effect/landmark/finaldest = pick(GLOB.awayabductors)

@@ -33,16 +33,20 @@
 	var/db_key
 	var/datum/transcore_db/our_db
 
+	var/msgcooldown = 0 // Outpost 21 edit
+	catalogue_data = list(/datum/category_item/catalogue/technology/medical_kiosk) // Outpost 21 edit - data for tutorial
+
 	//These are the variables that control 'When we were
 	var/last_dispensed
 	var/dispense_cooldown = 1 MINUTE //If abused, this can be decreased. The machine gives chems and supplies that are easily and readily available, barring tramadol. If someone intentionally breaks their arm to rob the machines of their tramadol to fuel their addiction, that's a gameplay feature.
 
 	/// This determines if the kiosk can dispense or not. Edit the below line to FALSE if you don't want them to do such.
-	var/can_dispense = TRUE
+	var/can_dispense = FALSE // Outpost 21 edit - By default we do not dispense medical aid
 
 /obj/machinery/medical_kiosk/Initialize(mapload)
 	. = ..()
 	our_db = SStranscore.db_by_key(db_key)
+	default_apply_parts()
 
 /obj/machinery/medical_kiosk/Destroy()
 	our_db = null //Remove the reference we have to our DB.
@@ -125,9 +129,12 @@
 
 /obj/machinery/medical_kiosk/proc/medical_scan(mob/living/user)
 	if(!istype(user))
-		return "<br>" + span_warning("Unable to perform diagnosis on this type of life form.")
+		return "<br>" + span_warning("Unable to perform diagnosis on synthetic life forms.")
 	if(user.isSynthetic())
 		return "<br>" + span_warning("Unable to perform diagnosis on synthetic life forms.")
+	// Outpost 21 edit - Halucination replies
+	if(user.hallucination > 20 && prob(30))
+		return "<br>" + span_notice("[halu_text(user)]")
 
 	var/problems = 0
 	for(var/obj/item/organ/external/E in user)
@@ -163,7 +170,6 @@
 
 	if(HUSK in user.mutations)
 		problems |= HUSKED_BODY
-
 	if(user.getToxLoss() > 0)
 		problems |= TOXIN_DAMAGE
 	if(user.getOxyLoss() > 0)
@@ -330,22 +336,125 @@
 	return problem_text
 
 /obj/machinery/medical_kiosk/proc/do_backup_scan(mob/living/carbon/human/user)
+	// Outpost 21 edit begin - Coredump prevents scans
+	if(SStranscore.default_db?.core_dumped)
+		return "<br>" + span_danger("Transcore interlock safety failure. DBcore safety needs central command restart. Resleeving database offline.")
+	// Outpost 21 edit end
+
 	if(!istype(user))
 		return "<br>" + span_warning("Unable to perform full scan. Please see a medical professional.")
 	if(!user.mind)
 		return "<br>" + span_warning("Unable to perform full scan. Please see a medical professional.")
-	if(istype(get_area(src), /area/vr))
-		return "<br>" + span_danger("Incompatible database configuration error: A Transcore Mind and Body Resource Management server could not be detected.")
 
+	// Outpost 21 edit begin - VR kiosks tutorial
+	if(istype(get_area(src), /area/vr))
+		return "<br>" + span_warning("Backup simulation performed. Remember to backup when you leave virtual reality!")
+	// Outpost 21 edit end
+
+	/* Outpost 21 edit - Nif removal
 	var/nif = user.nif
 	if(nif)
 		persist_nif_data(user)
+	*/
 
-	our_db.m_backup(user.mind,nif,one_time = TRUE)
+	our_db.m_backup(user.mind,null /*Outpost 21 edit - Nif removal: nif */,one_time = TRUE)
 	var/datum/transhuman/body_record/BR = new()
-	BR.init_from_mob(user, TRUE, TRUE, database_key = db_key)
+	BR.init_from_mob(user, TRUE, user.resleeve_lock, database_key = db_key) // Outpost 21 edit - Maintain resleeve_lock
 
-	return "<br>" + span_notice("Backup scan completed!") + "<br>" + span_bold("Note:") + " A backup implant is required for automated notifications to the appropriate department in case of incident."
+	// Outpost 21 edit begin - what a mean halucination
+	var/area/A = get_area(src)
+	if((user.hallucination > 20 && prob(5)) || (A && A.haunted))
+		return "<br>" + span_notice("Backup scan completed!") + "<br><b>Note:</b> Backup scan erased. Body scan erased. You deserve to die."
+
+	return "<br>" + span_notice("Backup scan completed!") + "<br><b>Note:</b> Please ensure your suit's sensors are properly configured to alert medical and security personal to your current status."
+	// return "<br>" + span_notice("Backup scan completed!") + "<br><b>Note:</b> A backup implant is required for automated notifications to the appropriate department in case of incident."
+	// Outpost 21 edit end
+
+// Outpost 21 edit begin - kiosk announcements
+/obj/machinery/medical_kiosk/process()
+	if(inoperable() || panel_open)
+		return
+
+	if(msgcooldown > 0)
+		msgcooldown--
+		return
+
+	var/area/AR = get_area(src)
+	if(prob(1))
+		var/mob/living/carbon/halucinateTarget = null
+		var/count = 0
+		for(var/atom/A in view(src, 4))
+			if(istype(A, /mob/living/carbon))
+				count += 1
+				var/mob/living/carbon/C = A
+				if((C.hallucination > 20 && prob(5)) || (AR && AR.haunted) || (prob(10) && SShaunting.station_is_haunted()))
+					halucinateTarget = C
+
+		if((count == 1 && istype(halucinateTarget,/mob/living/carbon)) || (AR && AR.haunted) || (prob(10) && SShaunting.station_is_haunted()))
+			// halucination replies
+			var/text = halu_text(halucinateTarget)
+			balloon_alert_visible(text)
+			visible_message("\The [src] says [text]")
+			if(!AR || !AR.haunted) // don't let redspace spam all around
+				SShaunting.influence(HAUNTING_GHOSTS) // IT DA SPOOKY STATION!
+				SShaunting.get_world_haunt_attention(halucinateTarget,40)
+			msgcooldown = 60 SECONDS
+		else
+			// tease people to backup
+			var/text = advert_text()
+			balloon_alert_visible(text)
+			visible_message("\The [src] says [text]")
+			msgcooldown = 60 SECONDS
+	return
+
+/obj/machinery/medical_kiosk/proc/halu_text(mob/living/target)
+	if(prob(75) && SStranscore.default_db?.core_dumped)
+		return "Error: No one will leave here alive."
+	if(prob(15))
+		return "You're not who you say you are."
+	if(prob(15))
+		return "I know you are lying about what you are."
+	if(prob(15))
+		return "Your insides are whispering."
+	if(prob(15))
+		return "Your flesh is whispering, it says to peel it off."
+	if(prob(15) && target)
+		return "Your eyes are lying to you. Wake up [target.real_name]."
+	if(prob(15))
+		return "Cut the bad things inside of you out."
+	if(prob(15))
+		return "You're not alone, it's inside you."
+	if(prob(15) && target)
+		return "[target.real_name]. [target.real_name]. [target.real_name]. [target.real_name]. [target.real_name]. [target.real_name]. [target.real_name]. [target.real_name]. [target.real_name]. [target.real_name]."
+	if(prob(15))
+		return "Stop lying to everyone, they know what is inside your body."
+	if(prob(15))
+		return "Everyone wants to cut you open, and take the things inside you for themselves."
+	if(prob(15) && target)
+		return "You are not really a [target.get_species()] are you?" // super special message
+	return "Your body is wrong."
+
+/obj/machinery/medical_kiosk/proc/advert_text()
+	if(SStranscore.default_db?.core_dumped)
+		return "Error: Transcore interlock safety failure. Resleeving database offline."
+	if(prob(15))
+		return "Cherish the memories you have, save the ones you could lose"
+	if(prob(15))
+		return "Have you had your scan today?"
+	if(prob(15))
+		return "Having your backup done regularly can save you from years of legal trouble!"
+	if(prob(15))
+		return "Having regular backups is statistically linked to happier life outcomes!"
+	if(prob(15))
+		return "Going out that airlock without a backup?"
+	if(prob(15))
+		return "Are you sure you want to lose those memories? Backups take only a few seconds!"
+	if(prob(15))
+		return "A few second backup here, could save you hours in lost memories!"
+	if(prob(15))
+		return "You almost dropped those life long memories! Back them up while you can!"
+	return "Are you in compliance? Get backed up today!"
+// Outpost 21 edit end
 
 #undef BROKEN_BONES
 #undef INTERNAL_BLEEDING
@@ -356,6 +465,7 @@
 #undef CHRONIC_RADIATION_DOSE
 #undef TOXIN_DAMAGE
 #undef OXY_DAMAGE
+
 #undef HUSKED_BODY
 #undef INFECTION
 #undef VIRUS

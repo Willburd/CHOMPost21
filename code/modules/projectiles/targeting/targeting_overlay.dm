@@ -26,7 +26,7 @@
 	moveToNullspace()
 	verbs.Cut()
 
-/obj/aiming_overlay/proc/toggle_permission(var/perm)
+/obj/aiming_overlay/proc/toggle_permission(perm)
 
 	if(target_permissions & perm)
 		target_permissions &= ~perm
@@ -143,7 +143,7 @@
 		spawn(0)
 			owner.set_dir(get_dir(get_turf(owner), get_turf(src)))
 
-/obj/aiming_overlay/proc/aim_at(var/mob/target, var/obj/thing)
+/obj/aiming_overlay/proc/aim_at(mob/target, obj/thing)
 
 	if(!owner)
 		return
@@ -160,6 +160,11 @@
 	if(target.alpha <= 50)
 		to_chat(owner, span_warning("You cannot aim at something you cannot see."))
 		return
+	// Outpost 21 edit begin - Lets not handle ghosts...
+	if(isobserver(target))
+		to_chat(owner, span_warning("You can't bust this ghost!"))
+		return
+	// Outpost 21 edit end
 
 	if(aiming_at)
 		if(aiming_at == target)
@@ -193,7 +198,7 @@
 	else
 		icon_state = "locking"
 
-/obj/aiming_overlay/proc/toggle_active(var/force_state = null)
+/obj/aiming_overlay/proc/toggle_active(force_state = null)
 	if(!isnull(force_state))
 		if(active == force_state)
 			return
@@ -213,7 +218,7 @@
 			owner.client.remove_gun_icons()
 		owner.gun_setting_icon?.icon_state = "gun[active]"
 
-/obj/aiming_overlay/proc/cancel_aiming(var/no_message = 0)
+/obj/aiming_overlay/proc/cancel_aiming(no_message = 0)
 	if(!aiming_with || !aiming_at)
 		return
 	if(istype(aiming_with, /obj/item/gun))

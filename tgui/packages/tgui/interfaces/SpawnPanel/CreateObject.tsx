@@ -28,14 +28,14 @@ type SpawnPanelData = {
   preferences?: SpawnPanelPreferences;
 };
 
-interface SpawnPreferences {
+type SpawnPreferences = {
   hide_icons: boolean;
   hide_mappings: boolean;
   sort_by: string;
   search_text: string;
   search_by: string;
   selected_atom?: string;
-}
+};
 
 export function CreateObject(props: CreateObjectProps) {
   const { act, data } = useBackend<SpawnPanelData>();
@@ -126,6 +126,9 @@ export function CreateObject(props: CreateObjectProps) {
       if (storedShowIcons !== undefined) setshowIcons(storedShowIcons);
       if (storedShowPreview !== undefined) setshowPreview(storedShowPreview);
       if (storedSelectedObj && allObjects[storedSelectedObj]) {
+        act('selected-atom-changed', {
+          newObj: storedSelectedObj,
+        });
         setSelectedObj(storedSelectedObj);
         props.onIconSettingsChange?.({
           icon: allObjects[storedSelectedObj].icon,

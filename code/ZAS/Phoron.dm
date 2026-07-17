@@ -13,7 +13,7 @@ GLOBAL_DATUM_INIT(contamination_overlay, /image, 'icons/effects/contamination.dm
 	var/PHORONGUARD_ONLY_NAME = "\"PhoronGuard Only\""
 	var/PHORONGUARD_ONLY_DESC = "If this is on, only biosuits and spacesuits protect against contamination and ill effects."
 
-	var/GENETIC_CORRUPTION = 0
+	var/GENETIC_CORRUPTION = 2 // Outpost 21 - Genetics damage phoron
 	var/GENETIC_CORRUPTION_NAME = "Genetic Corruption Chance"
 	var/GENETIC_CORRUPTION_DESC = "Chance of genetic corruption as well as toxic damage, X in 10,000."
 
@@ -95,9 +95,9 @@ GLOBAL_DATUM_INIT(contamination_overlay, /image, 'icons/effects/contamination.dm
 		return
 
 	//Burn skin if exposed.
-	if(GLOB.vsc.plc.SKIN_BURNS && (species.breath_type != GAS_PHORON))
+	if(GLOB.vsc.plc.SKIN_BURNS && (species.breath_type != GAS_PHORON) && species.phoron_contact_mod > 0) // Outpost 21 edit(port) - phoron contact mod
 		if(!pl_head_protected() || !pl_suit_protected())
-			burn_skin(0.75)
+			burn_skin(0.75 * species.phoron_contact_mod) // Outpost 21 edit(port) - phoron contact mod
 			if(prob(20))
 				to_chat(src, span_danger("Your skin burns!"))
 			updatehealth()
@@ -118,20 +118,23 @@ GLOBAL_DATUM_INIT(contamination_overlay, /image, 'icons/effects/contamination.dm
 		if(burn_eyes && head && (head.body_parts_covered & EYES) && (head.item_flags & AIRTIGHT))
 			burn_eyes = 0
 
+		/* Outpost 21 edit - Nif removal
 		//VOREStation Edit - NIF Support
 		if(nif && nif.flag_check(NIF_V_UVFILTER,NIF_FLAGS_VISION))
 			burn_eyes = 0
+		*/
 
 		//If we still need to, burn their eyes
 		if(burn_eyes)
 			burn_eyes()
 
 	//Genetic Corruption
-	if(GLOB.vsc.plc.GENETIC_CORRUPTION && (species.breath_type != GAS_PHORON))
-		if(rand(1,10000) < GLOB.vsc.plc.GENETIC_CORRUPTION)
+	if(GLOB.vsc.plc.GENETIC_CORRUPTION && (species.breath_type != GAS_PHORON) && species.phoron_contact_mod > 0) // Outpost 21 edit(port) - phoron contact mod
+		if(rand(1,10000) < GLOB.vsc.plc.GENETIC_CORRUPTION * species.phoron_contact_mod) // Outpost 21 edit(port) - phoron contact mod
 			randmutb(src)
 			to_chat(src, span_danger("High levels of toxins cause you to spontaneously mutate!"))
 			domutcheck(src,null)
+			check_mutation_cascade_gib() // Outpost 21 edit - mutation cascade trait
 			UpdateAppearance()
 
 /mob/living/carbon/human/proc/burn_eyes()

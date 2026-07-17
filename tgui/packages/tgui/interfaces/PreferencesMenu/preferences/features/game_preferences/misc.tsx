@@ -67,6 +67,13 @@ export const MessengerEmbeds: FeatureToggle = {
   component: CheckboxInput,
 };
 
+export const HIDE_PAIN_SCREAM: FeatureToggle = {
+  name: 'Hide Pain Scream',
+  category: 'GAMEPLAY',
+  description: 'When enabled, stops automatic screaming when damage is taken.',
+  component: CheckboxInput,
+};
+
 export const AutoPunctuation: FeatureToggle = {
   name: 'Automatic Punctuation',
   category: 'GAMEPLAY',

@@ -42,8 +42,8 @@
 	req_one_access = list(ACCESS_EXPLORER,ACCESS_BRIG) //CHOMP explo keep
 
 	starts_with = list(
-		/obj/item/gun/energy/locked/phasegun = 2,
-		/obj/item/gun/energy/locked/phasegun/pistol,
+		/obj/item/gun/energy/locked/phasegun/unlocked = 2, // Outpost 21 edit - unlock most explo guns
+		/obj/item/gun/energy/locked/phasegun/pistol/unlocked, // Outpost 21 edit - unlock most explo guns
 		/obj/item/cell/device/weapon = 2,
 		/obj/item/clothing/accessory/permit/gun/planetside)
 
@@ -62,8 +62,8 @@
 		/obj/item/storage/belt/explorer,
 		/obj/item/clothing/shoes/boots/winter/explorer,
 		/obj/item/clothing/gloves/black,
-		/obj/item/radio/headset/explorer,
-		/obj/item/radio/headset/alt/explorer,
+		// /obj/item/radio/headset/explorer, // Outpost 21 edit - No explo headsets
+		// /obj/item/radio/headset/alt/explorer, // Outpost 21 edit - No explo headsets
 		/obj/item/cartridge/explorer,
 		/obj/item/flashlight,
 		/obj/item/gps/explorer,
@@ -152,7 +152,7 @@
 		/obj/item/reagent_containers/glass/bottle/antitoxin,
 		/obj/item/storage/belt/medical/emt,
 		/obj/item/material/knife/tacknife/survival,
-		/obj/item/gun/energy/locked/frontier/holdout,
+		/obj/item/gun/energy/locked/frontier/holdout/unlocked, // Outpost 21 edit - unlock most explo guns
 		/obj/item/clothing/mask/gas/explorer,
 		/obj/item/clothing/suit/storage/hooded/explorer/medic,
 		/obj/item/clothing/suit/storage/hooded/wintercoat/medical/sar,
@@ -199,7 +199,7 @@
 	starts_with = list(
 		/obj/item/storage/backpack/parachute,
 		/obj/item/material/knife/tacknife/survival,
-		/obj/item/gun/energy/locked/frontier/holdout, //CHOMP explo keep
+		/obj/item/gun/energy/locked/frontier/holdout/unlocked, //CHOMP explo keep // Outpost 21 edit - unlock most explo guns
 		/obj/item/clothing/head/pilot_vr,
 		/obj/item/clothing/under/rank/pilot1/no_webbing,
 		/obj/item/clothing/suit/storage/toggle/bomber/pilot,

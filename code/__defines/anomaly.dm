@@ -4,7 +4,7 @@
  */
 
 ///Time in ticks before the anomaly goes poof/explodes depending on type.
-#define ANOMALY_COUNTDOWN_TIMER (120 SECONDS)
+#define ANOMALY_COUNTDOWN_TIMER (480 SECONDS) // Outpost 21 edit - Extended anom timer, was 120 seconds
 
 /**
  * Nuisance/funny anomalies

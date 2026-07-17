@@ -137,7 +137,7 @@ GLOBAL_LIST_EMPTY(event_last_fired)
 			command_alert("Meteors have been detected on collision course with the station.", "Meteor Alert")
 			for(var/mob/M in GLOB.player_list)
 				if(!isnewplayer(M))
-					M << sound('sound/AI/meteors.ogg')
+					play_simple_announcement(M, ANNOUNCER_MSG_METEORS)
 			spawn(100)
 				meteor_wave(10)
 				spawn_meteors()
@@ -190,6 +190,7 @@ GLOBAL_LIST_EMPTY(event_last_fired)
 	active_with_role[JOB_HEAD_OF_SECURITY] = 0 //CHOMP Add
 	active_with_role[JOB_WARDEN] = 0 //CHOMP Add
 	active_with_role[DEPARTMENT_CARGO] = 0 //CHOMP Add
+	active_with_role[JOB_CHAPLAIN] = 0 //Outpost 21 Add
 
 	for(var/mob/M in GLOB.player_list)
 		if(!M.mind || !M.client || M.client.is_afk(10 MINUTES)) // longer than 10 minutes AFK counts them as inactive
@@ -249,5 +250,9 @@ GLOBAL_LIST_EMPTY(event_last_fired)
 
 		if(M.mind.assigned_role in SSjob.get_job_titles_in_department(DEPARTMENT_CARGO)) //CHOMP Add
 			active_with_role[DEPARTMENT_CARGO]++ //CHOMP Add
+
+		if(M.mind.assigned_role == JOB_CHAPLAIN) //Outpost 21 Add
+			active_with_role[JOB_CHAPLAIN]++ //Outpost 21 Add
+
 
 	return active_with_role

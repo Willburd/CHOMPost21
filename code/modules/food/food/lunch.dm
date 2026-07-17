@@ -138,7 +138,7 @@ GLOBAL_LIST_INIT(lunchables_drink_reagents, list(/datum/reagent/drink/nothing,
 // This default list is a bit different, it contains items we don't want
 GLOBAL_LIST_INIT(lunchables_ethanol_reagents, list(/datum/reagent/ethanol/acid_spit,
 											/datum/reagent/ethanol/atomicbomb,
-											/datum/reagent/ethanol/beepsky_smash,
+											/*/datum/reagent/ethanol/coffee,*/ // outpost 21 edit - allow more booze in starting flash
 											/datum/reagent/ethanol/coffee,
 											/datum/reagent/ethanol/hippies_delight,
 											/datum/reagent/ethanol/hooch,
@@ -148,7 +148,7 @@ GLOBAL_LIST_INIT(lunchables_ethanol_reagents, list(/datum/reagent/ethanol/acid_s
 											/datum/reagent/ethanol/pwine,
 											/datum/reagent/ethanol/threemileisland,
 											/datum/reagent/ethanol/toxins_special,
-											/datum/reagent/ethanol/voxdelight,
+											/*/datum/reagent/ethanol/voxdelight,*/ // outpost 21 edit - allow more booze in starting flash
 											/datum/reagent/ethanol/soemmerfire,
 											/datum/reagent/ethanol/slimeshot
 											))
@@ -178,14 +178,14 @@ GLOBAL_LIST_INIT(lunchables_ethanol_reagents, list(/datum/reagent/ethanol/acid_s
 		GLOB.lunchables_ethanol_reagents = init_lunchable_reagent_list(GLOB.lunchables_ethanol_reagents, /datum/reagent/ethanol)
 	return GLOB.lunchables_ethanol_reagents
 
-/proc/init_lunchable_list(var/list/lunches)
+/proc/init_lunchable_list(list/lunches)
 	. = list()
 	for(var/obj/O as anything in lunches)
 		var/name = strip_improper(initial(O.name))
 		.[name] = O
 	return sortAssoc(.)
 
-/proc/init_lunchable_reagent_list(var/list/banned_reagents, var/reagent_types)
+/proc/init_lunchable_reagent_list(list/banned_reagents, reagent_types)
 	. = list()
 	for(var/reagent_type in subtypesof(reagent_types))
 		if(reagent_type in banned_reagents)

@@ -76,12 +76,19 @@ GLOBAL_LIST_INIT(cat_default_emotes, list(
 				visible_emote("suddenly stops and stares at something unseen[istype(A) ? " near [A]":""].")
 
 // Instakills mice.
-/mob/living/simple_mob/animal/passive/cat/apply_melee_effects(var/atom/A)
+/mob/living/simple_mob/animal/passive/cat/apply_melee_effects(atom/A)
 	if(ismouse(A))
 		var/mob/living/simple_mob/animal/passive/mouse/mouse = A
 		if(mouse.getMaxHealth() < 20) // In case a badmin makes giant mice or something.
 			mouse.splat()
 			visible_emote(pick("bites \the [mouse]!", "toys with \the [mouse].", "chomps on \the [mouse]!"))
+	// Outpost 21 edit begin - kills jils
+	else if(istype(A,/mob/living/simple_mob/vore/alienanimals/jil))
+		var/mob/living/simple_mob/vore/alienanimals/jil/jil = A
+		if(jil.getMaxHealth() <= 5) // incase of jillioth
+			jil.splat()
+			visible_emote(pick("bites \the [jil]!", "toys with \the [jil].", "chomps on \the [jil]!"))
+	// Outpost 21 edit end
 	else
 		..()
 
@@ -138,6 +145,16 @@ GLOBAL_LIST_INIT(cat_default_emotes, list(
 	named = TRUE
 	holder_type = /obj/item/holder/cat/runtime
 	makes_dirt = 0 //Vorestation Edit
+
+// Outpost 21 edit(port) begin - Runtime error handler
+/mob/living/simple_mob/animal/passive/cat/runtime/Initialize(mapload)
+	. = ..()
+	GLOB.runtimes_in_world.Add(src)
+
+/mob/living/simple_mob/animal/passive/cat/runtime/Destroy()
+	GLOB.runtimes_in_world.Remove(src)
+	. = ..()
+// Outpost 21 edit end
 
 /mob/living/simple_mob/animal/passive/cat/kitten
 	name = "kitten"

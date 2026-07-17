@@ -38,6 +38,8 @@
 		// "jerrycan",
 		// "reflex_hammer",
 		// "blood_scanner",
+		"needle_cleaner_board", // Outpost 21 edit(port) - Needle cleaning centrifuge
+		"stentkit", // Outpost 21 edit - Stent kits
 		"sleevecard",
 		"body_record_disk",
 		"scanner_console",
@@ -199,6 +201,7 @@
 	announce_channels = list(CHANNEL_MEDICAL)
 	discount_experiments = list(/datum/experiment/scanning/people/hurt_medigun = TECHWEB_TIER_3_POINTS)
 
+/* Outpost 21 edit - Nif removal
 /datum/techweb_node/nif
 	id = TECHWEB_NODE_NIF
 	display_name = "Nanite-Implant Frameworks"
@@ -235,3 +238,4 @@
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_5_POINTS)
 	announce_channels = list(CHANNEL_MEDICAL)
+*/

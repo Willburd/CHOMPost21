@@ -78,6 +78,11 @@
 		SPECIES_VOX = 'icons/inventory/feet/mob_vox.dmi'
 		)
 
+// Outpost 21 edit begin - Vox magboots on rig shouldn't snow you down
+/obj/item/clothing/shoes/magboots/rig/vox/set_slowdown()
+	return //voxboots suffer no slowdown penalties!
+// Outpost 21 edit end
+
 /obj/item/clothing/suit/space/rig/vox
 	species_restricted = list(SPECIES_VOX)
 

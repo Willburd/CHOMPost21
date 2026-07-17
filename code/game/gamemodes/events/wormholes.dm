@@ -1,5 +1,6 @@
-/proc/wormhole_event(var/set_duration = 5 MINUTES, var/wormhole_duration_modifier = 1)
+/proc/wormhole_event(set_duration = 5 MINUTES, wormhole_duration_modifier = 1, redspace = FALSE)
 	spawn()
+	/* Outpost 21 edit begin - Dechomp this
 	// CHOMPEdit Start - Only allowing these to go to the station
 		var/list/pick_turfs = list()
 		var/list/exits = list()
@@ -8,6 +9,11 @@
 		Z_choices |= using_map.get_map_levels(1, FALSE)
 		Z_choices -= global.using_map.sealed_levels
 	// CHOMPEdit End
+	*/
+		var/list/pick_turfs = list()
+		var/list/exits = list()
+		var/list/Z_choices = global.using_map.event_levels
+	// Outpost 21 edit end
 		for(var/turf/simulated/floor/T in world)
 			var/area/A = T.loc
 			if(T.z in Z_choices)
@@ -33,8 +39,17 @@
 			var/wormhole_max_duration = round((5 MINUTES) * wormhole_duration_modifier)
 			var/wormhole_min_duration = round((30 SECONDS) * wormhole_duration_modifier)
 
-			//All ready. Announce that bad juju is afoot.
-			GLOB.command_announcement.Announce("Space-time anomalies detected on the station. There is no additional data.", "Anomaly Alert", new_sound = 'sound/AI/spanomalies.ogg')
+			// Outpost 21 edit begin - Redspace portals
+			if(!redspace)
+				//All ready. Announce that bad juju is afoot.
+				GLOB.command_announcement.Announce("Space-time anomalies detected on the station. There is no additional data.", "Anomaly Alert", new_sound = ANNOUNCER_MSG_SPACETIME_ANOMS)
+			else
+				//All ready. Announce that bad bad bad things are happening
+				if(prob(30)) // It's getting smarter...
+					GLOB.command_announcement.Announce("%&(£&%@%(*$&£/{}detected near the [station_name()]. Please£&?*(%RUN&(*RUN$%RUN&({}AI-controlled equipment£%@%(*RUN$%&RUNRUNRUN(£&?RUN*(%&£/{}RUNRUNerrorsRUN.RUN.RUN.RUN.", "Anomaly Alert", new_sound = ANNOUNCER_MSG_SPACETIME_ANOMS)
+				else
+					GLOB.command_announcement.Announce("An ion storm was Detected within proximitY tO \the [station_name()] recently. Check All AI conTrolled equipment for Corruption.", "Anomaly Alert", new_sound = ANNOUNCER_MSG_SPACETIME_ANOMS)
+			// Outpost 21 edit end
 
 			//prob(20) can be approximated to 1 wormhole every 5 turfs!
 			//admittedly less random but totally worth it >_<
@@ -71,13 +86,16 @@
 //				pick_turfs -= exit
 				if( !exit || !istype(exit) )	continue	//sanity
 
-				create_wormhole(enter,exit,wormhole_min_duration,wormhole_max_duration)
+				if(redspace || prob(1)) // rare chance
+					create_redspace_wormhole(enter,exit,FALSE,wormhole_min_duration,wormhole_max_duration)
+				else
+					create_wormhole(enter,exit,wormhole_min_duration,wormhole_max_duration)
 
 				sleep(sleep_duration)						//have a well deserved nap!
 
 
 //maybe this proc can even be used as an admin tool for teleporting players without ruining immulsions?
-/proc/create_wormhole(var/turf/enter as turf, var/atom/exit, var/min_duration = 30 SECONDS, var/max_duration = 60 SECONDS) // CHOMPEdit
+/proc/create_wormhole(turf/enter as turf, atom/exit, min_duration = 30 SECONDS, max_duration = 60 SECONDS) // CHOMPEdit
 	set waitfor = FALSE
 	var/obj/effect/portal/P = new /obj/effect/portal( enter )
 	P.target = exit

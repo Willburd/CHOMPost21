@@ -25,8 +25,8 @@
 					/obj/item/storage/pouch/flares/full_flare = 10,
 					/obj/item/storage/pouch/holster = 5,
 				// Misc
-					/obj/item/radio/headset/explorer = 10,
-					/obj/item/radio/headset/alt/explorer = 10,
+					// /obj/item/radio/headset/explorer = 10, // Outpost 21 edit - No explo headsets
+					// /obj/item/radio/headset/alt/explorer = 10, // Outpost 21 edit - No explo headsets
 					/obj/item/clothing/mask/gas/explorer = 10,
 					/obj/item/storage/backpack/satchel/explorer = 10,
 					/obj/item/storage/backpack/dufflebag/explorer = 10,
@@ -41,9 +41,9 @@
 	req_one_access = list(ACCESS_EXPLORER,ACCESS_PILOT,ACCESS_MEDICAL_EQUIP)
 	products = list(
 				// Phase
-					/obj/item/gun/energy/locked/phasegun/pistol = 10,
-					/obj/item/gun/energy/locked/phasegun = 10,
-					/obj/item/gun/energy/locked/phasegun/rifle = 5,
+					/obj/item/gun/energy/locked/phasegun/pistol/unlocked = 10, // Outpost 21 edit - unlock most explo guns
+					/obj/item/gun/energy/locked/phasegun/unlocked = 10, // Outpost 21 edit - unlock most explo guns
+					/obj/item/gun/energy/locked/phasegun/rifle/unlocked = 5, // Outpost 21 edit - unlock most explo guns
 				// Ammo
 					/obj/item/cell/device/weapon = 25,
 				// Melee
@@ -71,8 +71,8 @@
 				/obj/item/flashlight = 10,
 				/obj/item/storage/backpack/parachute = 5,
 				/obj/item/storage/box/flare = 5,
-				/obj/item/storage/box/cdeathalarm_kit = 1,
-				/obj/item/storage/box/backup_kit = 1
+				/obj/item/storage/box/cdeathalarm_kit = 1
+				// /obj/item/storage/box/backup_kit = 1 // Outpost 21 edit - Backup removal
 				)
 
 /obj/machinery/vending/exploration_pilot

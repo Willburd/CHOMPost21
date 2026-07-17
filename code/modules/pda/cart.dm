@@ -17,6 +17,7 @@ GLOBAL_LIST_INIT(security_cartridges, list(
 
 GLOBAL_LIST_INIT(engineering_cartridges, list(
 	/obj/item/cartridge/engineering,
+	/obj/item/cartridge/signal/engineering, // Outpost 21 edit - Robotics in engineering
 	/obj/item/cartridge/atmos,
 	/obj/item/cartridge/ce
 	))
@@ -105,7 +106,8 @@ GLOBAL_LIST_INIT(civilian_cartridges, list(
 	name = "\improper R.O.B.U.S.T. cartridge"
 	icon_state = "cart-s"
 	programs = list(
-		new/datum/data/pda/app/crew_records/security)
+		new/datum/data/pda/app/crew_records/security,
+		new/datum/data/pda/app/prisoner_manager) // Outpost 21 edit - Prisoner tracker
 
 /obj/item/cartridge/detective
 	name = "\improper D.E.T.E.C.T. cartridge"
@@ -114,7 +116,8 @@ GLOBAL_LIST_INIT(civilian_cartridges, list(
 		new/datum/data/pda/app/crew_records/medical,
 		new/datum/data/pda/utility/scanmode/medical,
 
-		new/datum/data/pda/app/crew_records/security)
+		new/datum/data/pda/app/crew_records/security,
+		new/datum/data/pda/app/prisoner_manager) // Outpost 21 edit - Prisoner tracker
 
 
 /obj/item/cartridge/janitor
@@ -200,7 +203,8 @@ GLOBAL_LIST_INIT(civilian_cartridges, list(
 	programs = list(
 		new/datum/data/pda/app/crew_records/security,
 
-		new/datum/data/pda/app/status_display)
+		new/datum/data/pda/app/status_display,
+		new/datum/data/pda/app/prisoner_manager) // Outpost 21 edit - Prisoner tracker
 
 /obj/item/cartridge/ce
 	name = "\improper Power-On DELUXE cartridge"
@@ -277,7 +281,7 @@ GLOBAL_LIST_INIT(civilian_cartridges, list(
 	if(istype(D))
 		D.remote_door_id = initial_remote_door_id
 
-/obj/item/cartridge/proc/post_status(var/command, var/data1, var/data2)
+/obj/item/cartridge/proc/post_status(command, data1, data2)
 
 	var/datum/radio_frequency/frequency = SSradio.return_frequency(1435)
 	if(!frequency) return

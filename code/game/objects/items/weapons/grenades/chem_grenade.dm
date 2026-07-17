@@ -147,11 +147,11 @@
 
 	return
 
-/obj/item/grenade/chem_grenade/proc/primed(var/primed = 1)
+/obj/item/grenade/chem_grenade/proc/primed(primed = 1)
 	if(active)
 		icon_state = initial(icon_state) + (primed?"_primed":"_active")
 
-/obj/item/grenade/chem_grenade/detonate()
+/obj/item/grenade/chem_grenade/detonate(sound = TRUE) // Outpost 21 edit - added sound parameter
 	if(!stage || stage<2) return
 
 	var/has_reagents = 0
@@ -161,7 +161,8 @@
 	active = 0
 	if(!has_reagents)
 		icon_state = initial(icon_state) +"_locked"
-		playsound(src, 'sound/items/Screwdriver2.ogg', 50, 1)
+		if(sound) // Outpost 21 edit - added sound parameter
+			playsound(src, 'sound/items/Screwdriver2.ogg', 50, 1)
 		spawn(0) //Otherwise det_time is erroneously set to 0 after this
 			if(istimer(detonator.a_left)) //Make sure description reflects that the timer has been reset
 				var/obj/item/assembly/timer/T = detonator.a_left
@@ -171,7 +172,8 @@
 				det_time = 10*T.time
 		return
 
-	playsound(src, 'sound/effects/bamf.ogg', 50, 1)
+	if(sound) // Outpost 21 edit - added sound parameter
+		playsound(src, 'sound/effects/bamf.ogg', 50, 1)
 
 	for(var/obj/item/reagent_containers/glass/G in beakers)
 		G.reagents.trans_to_obj(src, G.reagents.total_volume)
@@ -201,7 +203,6 @@
 	desc = "An oversized grenade that affects a larger area."
 	icon_state = "large_grenade"
 	allowed_containers = list(/obj/item/reagent_containers/glass)
-	origin_tech = list(TECH_COMBAT = 3, TECH_MATERIAL = 3)
 	affected_area = 4
 
 /obj/item/grenade/chem_grenade/metalfoam

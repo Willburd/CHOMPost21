@@ -16,7 +16,11 @@ export const DisposalBin = (props) => {
   const { act, data } = useBackend<Data>();
   const { mode, pressure, isAI, panel_open, flushing } = data;
   let stateText;
-  if (mode === 2) {
+  /* Outpost 21 edit begin - Interlock error disposals */
+  if (mode === 3) {
+    stateText = 'Interlock Error';
+  } else if (mode === 2) {
+    /* Outpost 21 edit end */
     stateText = 'Ready';
   } else if (mode <= 0) {
     stateText = 'N/A';

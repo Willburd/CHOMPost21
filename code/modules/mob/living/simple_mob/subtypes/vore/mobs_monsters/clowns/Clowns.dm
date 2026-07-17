@@ -31,10 +31,7 @@
 	minbodytemp = 0
 	maxbodytemp = 700
 
-
 /datum/ai_holder/simple_mob/melee/clowns
-	can_breakthrough = FALSE
-	violent_breakthrough = FALSE
 	hostile = FALSE // The majority of simplemobs are hostile, gaslamps are nice.
 	cooperative = FALSE
 	retaliate = TRUE //so the monster can attack back

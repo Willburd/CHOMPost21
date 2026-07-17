@@ -3,7 +3,7 @@
 	seed_name = "Gardenia"
 	display_name = "Gardenia Produce"
 	kitchen_tag = PLANT_GARDENIA
-	chems = list(REAGENT_ID_NUTRIMENT = list(1), REAGENT_ID_PHENETHYLAMINE = list(12,24))
+	chems = list(REAGENT_ID_NUTRIMENT = list(1), REAGENT_ID_APHRODISIAC = list(5,12)) // Outpost 21 edit - Removing badly designed chems
 
 /datum/seed/lustflower/New()
 	..()

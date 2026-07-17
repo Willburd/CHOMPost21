@@ -1,6 +1,6 @@
 /datum/component/coughing_disability
 	var/mob/living/owner
-	var/cough_chance = 5
+	var/cough_chance = 1 // Outpost 21 edit - Made coughing less obnoxious
 
 /datum/component/coughing_disability/Initialize()
 	if (!isliving(parent))
@@ -17,6 +17,8 @@
 	if(isbelly(owner.loc))
 		return
 	if(owner.stat != CONSCIOUS)
+		return
+	if(owner.antihistaminescount) // Outpost 21 edit(port) - Medications calm disabilities
 		return
 	if(owner.transforming)
 		return

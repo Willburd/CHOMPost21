@@ -25,7 +25,6 @@
 	preserve_item = 1
 	w_class = ITEMSIZE_HUGE //It's a giant shield generator!!!
 	unacidable = TRUE
-	origin_tech = list(TECH_MATERIAL = 6, TECH_COMBAT = 8, TECH_POWER = 6, TECH_DATA = 4) //These are limited AND high tech. Breaking one of them down is massive.
 	actions_types = list(/datum/action/item_action/toggle_shield)
 	var/obj/item/gun/energy/gun/generator/active_weapon
 	var/obj/item/cell/device/bcell = null
@@ -68,7 +67,6 @@
 
 /obj/item/personal_shield_generator/loaded //starts with a cell
 	bcell = /obj/item/cell/device/shield_generator/backpack
-
 
 /obj/item/personal_shield_generator/update_icon()
 	if(shield_active)
@@ -113,6 +111,9 @@
 */
 
 /obj/item/personal_shield_generator/emp_act(severity, recursive)
+	. = ..()
+	if (. & EMP_PROTECT_SELF)
+		return
 	if(bcell && shield_active)
 		switch(severity)
 			if(1) //Point blank EMP shots have a good chance of burning the cell charge.
@@ -125,6 +126,9 @@
 						s.set_up(5, 1, src)
 						s.start()
 						shield_active = 0
+						if(isliving(loc))
+							var/mob/living/our_user = loc
+							our_user.remove_modifiers_of_type(/datum/modifier/shield_projection)
 						if(bcell.charge_delay) //It WILL blow up soon. Downside of self-charging cells.
 							to_chat(src.loc, span_critical("Your shield generator sparks and suddenly goes down! A warning message pops up on screen: \
 							'WARNING, INTERNAL CELL MELTDOWN IMMINENT. TIME TILL EXPLOSION: [bcell.charge_delay/10] SECONDS. DISCARD UNIT IMMEDIATELY!'"))
@@ -225,7 +229,7 @@
 // Making it so emagging the weapon it comes with would also be a good idea. Different modes, perhaps?
 
 /*
-/obj/item/personal_shield_generator/emag_act(var/remaining_charges, var/mob/user)
+/obj/item/personal_shield_generator/emag_act(remaining_charges, mob/user)
 	if(active_weapon)
 		. = active_weapon.emag_act(user)
 		update_icon()
@@ -362,7 +366,7 @@
 
 	return 0
 
-/obj/item/personal_shield_generator/dropped(mob/user)
+/obj/item/personal_shield_generator/dropped(mob/user, equipping, slot)
 	..()
 	reattach_gun(user) //A gun attached to a base unit should never exist outside of their base unit or the mob equipping the base unit
 
@@ -434,21 +438,21 @@
 		return 0
 	return 1
 
-/obj/item/gun/energy/gun/generator/dropped(mob/user)
+/obj/item/gun/energy/gun/generator/dropped(mob/user, equipping, slot)
 	..() //update twohanding
 	if(shield_generator)
 		shield_generator.reattach_gun(user)
 
-/obj/item/gun/energy/proc/check_charge(var/charge_amt) //In case using any other guns.
+/obj/item/gun/energy/proc/check_charge(charge_amt) //In case using any other guns.
 	return 0
 
-/obj/item/gun/energy/proc/checked_use(var/charge_amt) //In case using any other guns.
+/obj/item/gun/energy/proc/checked_use(charge_amt) //In case using any other guns.
 	return 0
 
-/obj/item/gun/energy/gun/generator/check_charge(var/charge_amt)
+/obj/item/gun/energy/gun/generator/check_charge(charge_amt)
 	return (shield_generator.bcell && shield_generator.bcell.check_charge(charge_amt))
 
-/obj/item/gun/energy/gun/generator/checked_use(var/charge_amt)
+/obj/item/gun/energy/gun/generator/checked_use(charge_amt)
 	return (shield_generator.bcell && shield_generator.bcell.checked_use(charge_amt))
 
 

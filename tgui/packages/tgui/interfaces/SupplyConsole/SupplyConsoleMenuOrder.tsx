@@ -15,7 +15,15 @@ import type { Data, SupplyPack } from './types';
 export const SupplyConsoleMenuOrder = (props) => {
   const { act, data } = useBackend<Data>();
 
-  const { categories, supply_packs, contraband, supply_points } = data;
+  const {
+    categories,
+    supply_packs,
+    contraband,
+    supply_points,
+    price_mod,
+    cash_points,
+  } = data;
+  /* Outpost 21 edit - Points or thalers */
 
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const [searchCategory, setSearchCategory] = useState<string>('');
@@ -111,7 +119,14 @@ export const SupplyConsoleMenuOrder = (props) => {
                       Info
                     </Button>
                   </Stack.Item>
-                  <Stack.Item grow>{pack.cost} points</Stack.Item>
+                  <Stack.Item grow>
+                    {pack.cost * (price_mod ? 1 : cash_points)}
+                    {
+                      price_mod === 1
+                        ? ' points'
+                        : '₮' /* Outpost 21 edit - Points or thalers */
+                    }
+                  </Stack.Item>
                 </Stack>
               </Box>
             ))}

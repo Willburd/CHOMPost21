@@ -64,8 +64,8 @@
 		SK.attack_dephase(null, src) //Won't dephase them if they're not in phase. It has built in checks.
 
 /obj/machinery/bluespace_denier/emp_act(severity)
-	if(stat & (BROKEN|NOPOWER))
-		..(severity)
+	. = ..()
+	if (. & EMP_PROTECT_SELF || (stat & (BROKEN|NOPOWER)))
 		return
 	if(prob(75/severity))
 		pulse()

@@ -34,7 +34,7 @@
 		"safeguard",
 		"protectstation",
 		"paladin",
-		"nanotrasen",
+		"eshui_standard", // Outpost 21 edit - Eshui law board
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_1_POINTS)
 	announce_channels = list(CHANNEL_SCIENCE)
@@ -68,7 +68,7 @@
 		"reporter",
 		"live_and_let_live",
 		"balance",
-
+		"nanotrasen", // Outpost 21 edit - This is an external design here
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_3_POINTS)
 	announce_channels = list(CHANNEL_SCIENCE, CHANNEL_COMMAND)

@@ -16,12 +16,28 @@
 	active_thinking_indicator.pixel_y = get_oversized_icon_offsets()["y"]
 	add_overlay(active_thinking_indicator)
 
+	// outpost 21 edit begin - used to forward ai typing indicator to holograms - Willbird
+	if(isAI(src))
+		var/mob/living/silicon/ai/A = src
+		if(A.holo && istype(A.holo.masters[A],/obj/effect/overlay/aiholo/))
+			var/obj/effect/overlay/aiholo/holo = A.holo.masters[A]
+			holo.create_thinking_indicator(cur_bubble_appearance)
+	// outpost 21 edit end
+
 /** Removes the thinking indicator over the mob. */
 /mob/proc/remove_thinking_indicator()
 	if(!active_thinking_indicator)
 		return FALSE
 	cut_overlay(active_thinking_indicator)
 	active_thinking_indicator = null
+
+	// outpost 21 edit begin - used to forward ai typing indicator to holograms - Willbird
+	if(isAI(src))
+		var/mob/living/silicon/ai/A = src
+		if(A.holo && istype(A.holo.masters[A],/obj/effect/overlay/aiholo/))
+			var/obj/effect/overlay/aiholo/holo = A.holo.masters[A]
+			holo.remove_thinking_indicator()
+	// outpost 21 edit end
 
 /** Creates a typing indicator over the mob. Note: Prefs are checked in /client/proc/start_typing() */
 /mob/proc/create_typing_indicator()
@@ -35,6 +51,14 @@
 	active_typing_indicator.pixel_y = get_oversized_icon_offsets()["y"]
 	add_overlay(active_typing_indicator)
 
+	// outpost 21 edit begin - used to forward ai typing indicator to holograms - Willbird
+	if(isAI(src))
+		var/mob/living/silicon/ai/A = src
+		if(A.holo && istype(A.holo.masters[A],/obj/effect/overlay/aiholo/))
+			var/obj/effect/overlay/aiholo/holo = A.holo.masters[A]
+			holo.create_typing_indicator(cur_bubble_appearance)
+	// outpost 21 edit end
+
 /** Removes the typing indicator over the mob. */
 /mob/proc/remove_typing_indicator()
 	if(!active_typing_indicator)
@@ -42,11 +66,28 @@
 	cut_overlay(active_typing_indicator)
 	active_typing_indicator = null
 
+	// outpost 21 edit begin - used to forward ai typing indicator to holograms - Willbird
+	if(isAI(src))
+		var/mob/living/silicon/ai/A = src
+		if(A.holo && istype(A.holo.masters[A],/obj/effect/overlay/aiholo/))
+			var/obj/effect/overlay/aiholo/holo = A.holo.masters[A]
+			holo.remove_typing_indicator()
+	// outpost 21 edit end
+
 /** Removes any indicators and marks the mob as not speaking IC. */
 /mob/proc/remove_all_indicators()
 	REMOVE_TRAIT(src, TRAIT_THINKING_IN_CHARACTER, CURRENTLY_TYPING_TRAIT)
 	remove_thinking_indicator()
 	remove_typing_indicator()
+
+	// outpost 21 edit begin - used to forward ai typing indicator to holograms - Willbird
+	if(isAI(src))
+		var/mob/living/silicon/ai/A = src
+		if(A.holo && istype(A.holo.masters[A],/obj/effect/overlay/aiholo/))
+			var/obj/effect/overlay/aiholo/holo = A.holo.masters[A]
+			holo.remove_thinking_indicator()
+			holo.remove_typing_indicator()
+	// outpost 21 edit end
 
 /mob/set_stat(new_stat)
 	. = ..()

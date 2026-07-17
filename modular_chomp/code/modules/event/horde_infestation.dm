@@ -15,7 +15,7 @@
 		var/area/in_area = get_area(temp_vent)
 		if(in_area.flag_check(AREA_FORBID_EVENTS))
 			continue
-		if(!temp_vent.welded && temp_vent.network && (temp_vent.loc.z in using_map.station_levels)) //No spawns on welded vents
+		if(!temp_vent.welded && temp_vent.network && (temp_vent.loc.z in using_map.event_levels)) //No spawns on welded vents
 			if(temp_vent.network.normal_members.len > 10) //CHOMP Edit: Most our networks are 40. SM is 4 and toxins is 2. This needed to change in order to spawn.
 				vents += temp_vent
 
@@ -33,7 +33,7 @@
 
 /datum/event/horde_infestation/announce()
 	if(spiders) //Horrible way of doing this
-		GLOB.command_announcement.Announce("Unidentified lifesigns detected coming aboard [station_name()]. Secure any exterior access, including ducting and ventilation.", "Lifesign Alert", new_sound = 'sound/AI/aliens.ogg')
+		GLOB.command_announcement.Announce("Unidentified lifesigns detected coming aboard [station_name()]. Secure any exterior access, including ducting and ventilation.", "Lifesign Alert", new_sound = ANNOUNCER_MSG_UNIDENTIFIED_LIFESIGNS)
 	if(metroids) //Horrible way of doing this
 		GLOB.command_announcement.Announce("High-energy lifeforms detected coming aboard [station_name()]. All crew members, stay alert, and listen to security instructions.", "Lifesign Alert", new_sound = 'sound/misc/alarm1.ogg')
 
@@ -44,7 +44,7 @@
 			var/area/in_area = get_area(temp_vent)
 			if(in_area.flag_check(AREA_FORBID_EVENTS))
 				continue
-			if(!temp_vent.welded && temp_vent.network && (temp_vent.loc.z in using_map.station_levels))
+			if(!temp_vent.welded && temp_vent.network && (temp_vent.loc.z in using_map.event_levels))
 				if(temp_vent.network.normal_members.len > 10) //CHOMP Edit: Most our networks are 40. SM is 4 and toxins is 2. This needed to change to 10 from 50 in order for spawns to work.
 					var/area/A = get_area(temp_vent)
 					if(!(A.flag_check(AREA_FORBID_EVENTS)))
@@ -95,4 +95,4 @@
 			area_names |= metroid_area.name
 		if(area_names.len)
 			var/english_list = english_list(area_names)
-			GLOB.command_announcement.Announce("Sensors have narrowed down remaining lifeforms to the following areas: [english_list]", "Lifesign Alert")
+			GLOB.command_announcement.Announce("Sensors have narrowed down remaining lifeforms to the following areas: [english_list]", "Lifesign Alert") //No sound intentionally.

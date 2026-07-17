@@ -72,7 +72,7 @@ SUBSYSTEM_DEF(ticker)
 
 	/// ### LEGACY VARS ###
 	/// Default time to wait before rebooting in desiseconds.
-	var/const/restart_timeout = 4 MINUTES
+	var/const/restart_timeout = 5 MINUTES
 	/// Track where we are ending game/round
 	var/end_game_state = END_GAME_NOT_OVER
 	/// Time remaining until restart in desiseconds
@@ -236,8 +236,7 @@ SUBSYSTEM_DEF(ticker)
 	INVOKE_ASYNC(SSdbcore, TYPE_PROC_REF(/datum/controller/subsystem/dbcore,SetRoundStart))
 
 	to_chat(world, span_notice(span_bold("Welcome to [station_name()], enjoy your stay!")))
-	world << sound('sound/AI/welcome.ogg') // Skie
-	//SEND_SOUND(world, sound(SSstation.announcer.get_rand_welcome_sound()))
+	play_simple_announcement(world, prob(95) ? ANNOUNCER_MSG_ROUND_START : 'sound/AI/yawn/welcome_secret.ogg') // Outpost 21 edit - Restore yawn intro
 
 	current_state = GAME_STATE_PLAYING
 	Master.SetRunLevel(RUNLEVEL_GAME)
@@ -266,7 +265,7 @@ SUBSYSTEM_DEF(ticker)
 	// TODO END
 	for(var/obj/effect/landmark/start/S in GLOB.landmarks_list)
 		//Deleting Startpoints but we need the ai point to AI-ize people later
-		if (S.name != "AI")
+		if (S.name != "AI" && S.name != "Stowaway") // Outpost 21 edit - don't clear stowaway points either
 			qdel(S)
 
 	if(CONFIG_GET(flag/sql_enabled))
@@ -312,16 +311,16 @@ SUBSYSTEM_DEF(ticker)
 		to_chat(world, span_boldannounce("Serious error in mode setup! Reverting to pregame lobby.")) //Uses setup instead of set up due to computational context.
 		return 0
 
-	GLOB.job_master.ResetOccupations()
+	SSjob.reset_occupations()
 	src.mode.create_antagonists()
 	src.mode.pre_setup()
-	GLOB.job_master.DivideOccupations() // Apparently important for new antagonist system to register specific job antags properly.
+	SSjob.divide_occupations() // Apparently important for new antagonist system to register specific job antags properly.
 
 	if(!src.mode.can_start())
 		to_chat(world, span_filter_system(span_bold("Unable to start [mode.name].") + " Not enough players readied, [CONFIG_GET(keyed_list/player_requirements)[mode.config_tag]] players needed. Reverting to pregame lobby."))
 		mode.fail_setup()
 		mode = null
-		GLOB.job_master.ResetOccupations()
+		SSjob.reset_occupations()
 		return 0
 
 	if(hide_mode)
@@ -367,7 +366,7 @@ SUBSYSTEM_DEF(ticker)
 
 			// Ask their new_player mob to spawn them
 			if(!player.spawn_checks_vr(player.mind.assigned_role))
-				var/datum/job/job_datum = GLOB.job_master.GetJob(J.title)
+				var/datum/job/job_datum = SSjob.get_job(J.title)
 				job_datum.current_positions--
 				player.mind.assigned_role = null
 				continue //VOREStation Add
@@ -404,10 +403,11 @@ SUBSYSTEM_DEF(ticker)
 			if(player.mind.assigned_role == JOB_SITE_MANAGER)
 				captainless=0
 			if(!SSantag_job.player_is_antag(player.mind, only_offstation_roles = 1))
-				GLOB.job_master.EquipRank(player, player.mind.assigned_role, 0)
+				SSjob.equip_rank(player, player.mind.assigned_role, 0)
 				UpdateFactionList(player)
 				//equip_custom_items(player)	//VOREStation Removal
 				//player.apply_traits() //VOREStation Removal
+		/* Outpost 21 edit - Remove backups
 		//VOREStation Addition Start
 		if(player.client)
 			if(player.client.prefs.auto_backup_implant)
@@ -416,6 +416,7 @@ SUBSYSTEM_DEF(ticker)
 				if(imp.handle_implant(player,player.zone_sel.selecting))
 					imp.post_implant(player)
 		//VOREStation Addition End
+		*/
 		CHECK_TICK
 	if(captainless)
 		for(var/mob/M in GLOB.player_list)

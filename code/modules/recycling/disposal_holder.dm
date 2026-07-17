@@ -7,7 +7,7 @@
 	invisibility = INVISIBILITY_ABSTRACT
 	var/datum/gas_mixture/gas = null	// gas used to flush, will appear at exit point
 	var/active = FALSE	// true if the holder is moving, otherwise inactive
-	var/count = 2048	//*** can travel 2048 steps before going inactive (in case of loops)
+	var/count = 4096	// Outpost 21 edit - Raise disposal maximum distance
 	var/destinationTag = "" // changes if contains a delivery container
 	var/hasmob = FALSE //If it contains a mob
 	var/partialTag = "" //set by a partial tagger the first time round, then put in destinationTag if it goes through again.
@@ -74,11 +74,18 @@
 	if(!active)
 		return
 
-	/*// Clonk n' bonk  //CHOMPEdit - Non-damaging Disposals Edit Start
+	var/noiseprob = 2 // outpost 21 edit - disposal clunking
+
+	// Outpost 21 edit begin - We like our disposals to do damage
+	#ifndef OUTPOST_FRIENDSHIP_MODE
 	if(hasmob && prob(3))
+		noiseprob = 30 // outpost 21 edit - disposal clunking
 		for(var/mob/living/H in src)
 			if(!istype(H,/mob/living/silicon/robot/drone)) //Drones use the mailing code to move through the disposal system,
-				H.take_overall_damage(20, 0, "Blunt Trauma") */ //horribly maim any living creature jumping down disposals.  c'est la vie //CHOMPEdit - Non-damaging Disposals Edit End
+				H.take_overall_damage(20, 0, "Blunt Trauma") //horribly maim any living creature jumping down disposals.  c'est la vie
+				H.dislocate_random_limb(rand(1,5)) // Also dislocate stuff
+	#endif
+	// Outpost 21 edit end
 
 	// Transfer to next segment
 	var/obj/structure/disposalpipe/last = loc
@@ -88,6 +95,23 @@
 	if(!curr)
 		last.pipe_expel(src, get_turf(loc), dir)
 		return
+
+	// outpost 21 edit begin - disposal clunking
+	// make noises to spook people lots, the teshari love it!
+	if(prob(40)) // double probability helps push this down in rarity
+		var/turf/T = get_turf(src)
+		SSmotiontracker.ping(T,40) // Teshari rattler
+		if(prob(noiseprob))
+			if(T)
+				playsound(T, 'sound/machines/ventcrawl.ogg', 50, 1, -3)
+				var/message = pick(
+					prob(90);"* clunk *",
+					prob(90);"* thud *",
+					prob(90);"* clatter *",
+					prob(1);"* <span style='font-size:2em'>ඞ</span> *"
+				)
+				T.runechat_message(message)
+	// outpost 21 edit end
 
 	// Onto the next segment
 	if(!(count--))
@@ -165,3 +189,8 @@
 /obj/structure/disposalholder/proc/vent_gas(atom/location)
 	location.assume_air(gas)  // vent all gas to turf
 	return
+
+// Outpost 21 edit(port) begin - Disposal pipe dropping
+/obj/structure/disposalholder/AllowDrop()
+	return TRUE
+// Outpost 21 edit end

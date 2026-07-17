@@ -71,7 +71,7 @@
 			handle_medical_side_effects()
 
 			handle_heartbeat()
-			handle_nif()
+			// handle_nif() // Outpost 21 edit - Nif removal
 			if(phobias)
 				handle_phobias()
 			if(!client)
@@ -143,7 +143,7 @@
 	return pressure_adjustment_coefficient
 
 // Calculate how much of the enviroment pressure-difference affects the human.
-/mob/living/carbon/human/calculate_affecting_pressure(var/pressure)
+/mob/living/carbon/human/calculate_affecting_pressure(pressure)
 	var/pressure_difference
 
 	// First get the absolute pressure difference.
@@ -174,6 +174,10 @@
 
 	if(stat != CONSCIOUS) //Let's not worry about tourettes if you're not conscious.
 		return
+
+	// outpost 21 edit(port) begin - Major disabilities rework
+	handle_outpost_medications()
+	// outpost 21 edit end
 
 	if(isbelly(loc)) //Let's not have you seizing, coughing, or falling apart if you're in a belly.
 		return
@@ -470,7 +474,7 @@
 
 	/** breathing **/
 
-/mob/living/carbon/human/handle_chemical_smoke(var/datum/gas_mixture/environment)
+/mob/living/carbon/human/handle_chemical_smoke(datum/gas_mixture/environment)
 	if(wear_mask && (wear_mask.item_flags & BLOCK_GAS_SMOKE_EFFECT))
 		return
 	if(glasses && (glasses.item_flags & BLOCK_GAS_SMOKE_EFFECT))
@@ -520,6 +524,15 @@
 /mob/living/carbon/human/handle_breath(datum/gas_mixture/breath)
 	if(SEND_SIGNAL(src, COMSIG_CHECK_FOR_GODMODE) & COMSIG_GODMODE_CANCEL)
 		return 0	// Cancelled by a component
+
+	// Outpost 21 edit begin - Holding breath verb
+	if(is_holding_breath && (stat || (oxyloss > 10 && prob(oxyloss / 2)))) // Stop holding breath if you pass out, or if you reach beyond limits
+		stop_holding_breath()
+	if(is_holding_breath)
+		failed_last_breath = 1
+		adjustOxyLoss(1)
+		return
+	// Outpost 21 edit end
 
 	if(mNobreath in mutations)
 		return
@@ -724,7 +737,7 @@
 
 			// Enough to make us sleep as well
 			if(SA_pp > SA_sleep_min)
-				Sleeping(5)
+				Sleeping(10) // Outpost 21 edit - Extend the sleeping time just a bit
 
 		// There is sleeping gas in their lungs, but only a little, so give them a bit of a warning
 		else if(SA_pp > 0.15)
@@ -821,7 +834,7 @@
 	breath.update_values()
 	return 1
 
-/mob/living/carbon/human/proc/play_inhale(var/mob/living/M, var/exhale)
+/mob/living/carbon/human/proc/play_inhale(mob/living/M, exhale)
 	var/suit_inhale_sound
 	if(species.suit_inhale_sound)
 		suit_inhale_sound = species.suit_inhale_sound
@@ -832,7 +845,7 @@
 	if(!exhale) // Did we fail exhale? If no, play it after inhale finishes.
 		addtimer(CALLBACK(src, PROC_REF(play_exhale), M), 5 SECONDS)
 
-/mob/living/carbon/human/proc/play_exhale(var/mob/living/M)
+/mob/living/carbon/human/proc/play_exhale(mob/living/M)
 	var/suit_exhale_sound
 	if(species.suit_exhale_sound)
 		suit_exhale_sound = species.suit_exhale_sound
@@ -1009,8 +1022,8 @@
 	else if(adjusted_pressure >= species.hazard_low_pressure)
 		throw_alert("pressure", /atom/movable/screen/alert/lowpressure, 1)
 	else
-		if(!(COLD_RESISTANCE in mutations) && !istype(loc, /obj/structure/closet/body_bag/cryobag))
-			if(!isSynthetic() || !nif || !nif.flag_check(NIF_O_PRESSURESEAL,NIF_FLAGS_OTHER))
+		if( !(COLD_RESISTANCE in mutations) && !istype(loc, /obj/structure/closet/body_bag/cryobag))
+			if(!isSynthetic()) // Outpost 21 edit - Nif removal: || !nif || !nif.flag_check(NIF_O_PRESSURESEAL,NIF_FLAGS_OTHER)) // NIF pressure seals
 				var/pressure_damage = LOW_PRESSURE_DAMAGE
 				if(stat==DEAD)
 					pressure_damage = pressure_damage/2
@@ -1043,8 +1056,8 @@
 
 	// FBPs will overheat when alive, prosthetic limbs are fine.
 	if(stat != DEAD && robobody_count)
-		if(!nif || !nif.flag_check(NIF_O_HEATSINKS,NIF_FLAGS_OTHER))
-			bodytemperature += round(robobody_count*1.15)
+		// Outpost 21 edit - Nif removal: if(!nif || !nif.flag_check(NIF_O_HEATSINKS,NIF_FLAGS_OTHER)) // NIF heatsinks prevent the base heat increase per tick if installed.
+		bodytemperature += round(robobody_count*1.15)
 		var/obj/item/organ/internal/robotic/heatsink/HS = internal_organs_by_name[O_HEATSINK]
 		if(!HS || HS.is_broken()) // However, NIF Heatsinks will not compensate for a core FBP component (your heatsink) being lost.
 			bodytemperature += round(robobody_count*0.5)
@@ -1126,7 +1139,7 @@
 	. = 1 - .
 	. = min(., 1.0)
 
-/mob/living/carbon/human/proc/get_thermal_protection(var/flags)
+/mob/living/carbon/human/proc/get_thermal_protection(flags)
 	.=0
 	if(flags)
 		if(flags & HEAD)
@@ -1173,19 +1186,30 @@
 			var/total_phoronloss = 0
 			for(var/obj/item/I in src)
 				if(I.contaminated)
-					if(check_belly(I)) continue
-					if(src.species && src.species.get_bodytype() != "Vox" && src.species.get_bodytype() != "Shadekin")
+					if(check_belly(I)) continue //VOREStation Edit
+					if(src.species && src.species.get_bodytype() != "Vox" && src.species.get_bodytype() != "Shadekin" && src.species.phoron_contact_mod > 0)	// Outpost 21 edit - phoron contact mod
 						// This is hacky, I'm so sorry.
 						if(I != l_hand && I != r_hand)	//If the item isn't in your hands, you're probably wearing it. Full damage for you.
-							total_phoronloss += GLOB.vsc.plc.CONTAMINATION_LOSS
+							total_phoronloss += GLOB.vsc.plc.CONTAMINATION_LOSS * src.species.phoron_contact_mod  // Outpost 21 edit(port) - phoron contact mod
 						else if(I == l_hand)	//If the item is in your hands, but you're wearing protection, you might be alright.
-							var/l_hand_blocked = 0
-							l_hand_blocked = 1-(100-getarmor(BP_L_HAND, "bio"))/100	//This should get a number between 0 and 1
-							total_phoronloss += GLOB.vsc.plc.CONTAMINATION_LOSS * l_hand_blocked
+							// Outpost 21 edit(port) begin - glove permiability instead of bio armor (minimum limit)
+							var/l_hand_blocked = 1
+							if(gloves)
+								l_hand_blocked = gloves.permeability_coefficient 	//This should get a number between 0 and 1
+								if(l_hand_blocked <= 0.02)
+									l_hand_blocked = 0
+							// Outpost 21 edit(port) end
+							total_phoronloss += GLOB.vsc.plc.CONTAMINATION_LOSS * l_hand_blocked * src.species.phoron_contact_mod  // Outpost 21 edit(port) - phoron contact mod
 						else if(I == r_hand)	//If the item is in your hands, but you're wearing protection, you might be alright.
-							var/r_hand_blocked = 0
-							r_hand_blocked = 1-(100-getarmor(BP_R_HAND, "bio"))/100	//This should get a number between 0 and 1
-							total_phoronloss += GLOB.vsc.plc.CONTAMINATION_LOSS * r_hand_blocked
+							// Outpost 21 edit(port) begin - glove permiability instead of bio armor (minimum limit)
+							var/r_hand_blocked = 1
+							if(gloves)
+								r_hand_blocked = gloves.permeability_coefficient 	//This should get a number between 0 and 1
+								if(r_hand_blocked <= 0.02)
+									r_hand_blocked = 0
+							// Outpost 21 edit(port) end
+							total_phoronloss += GLOB.vsc.plc.CONTAMINATION_LOSS * r_hand_blocked * src.species.phoron_contact_mod  // Outpost 21 edit(port) - phoron contact mod
+
 			if(total_phoronloss)
 				adjustToxLoss(total_phoronloss)
 
@@ -1262,6 +1286,8 @@
 			set_stat(UNCONSCIOUS)
 			blinded = TRUE
 			in_crit = TRUE
+			if(!HAS_TRAIT(src, TRAIT_CRITICAL_CONDITION))
+				ADD_TRAIT(src, TRAIT_CRITICAL_CONDITION, STAT_TRAIT)
 
 		if(hallucination)
 			if(hallucination >= HALLUCINATION_THRESHOLD && !(species.flags & (NO_POISON|IS_PLANT|NO_HALLUCINATION)) && !HAS_TRAIT(src, TRAIT_MADNESS_IMMUNE))
@@ -1343,6 +1369,8 @@
 		else if(!in_crit)
 			set_stat(CONSCIOUS)
 			clear_alert("asleep")
+			if(HAS_TRAIT(src, TRAIT_CRITICAL_CONDITION))
+				REMOVE_TRAIT(src, TRAIT_CRITICAL_CONDITION, STAT_TRAIT)
 
 		//Periodically double-check embedded_flag
 		if(embedded_flag && !(life_tick % 10))
@@ -1435,7 +1463,7 @@
 
 	return 1
 
-/mob/living/carbon/human/set_stat(var/new_stat)
+/mob/living/carbon/human/set_stat(new_stat)
 	. = ..()
 	if(. && stat)
 		update_skin(1)
@@ -1449,7 +1477,7 @@
 	if(!.)
 		return
 
-	client.screen.Remove(GLOB.global_hud.blurry, GLOB.global_hud.druggy, GLOB.global_hud.vimpaired, GLOB.global_hud.darkMask, GLOB.global_hud.nvg, GLOB.global_hud.thermal, GLOB.global_hud.meson, GLOB.global_hud.science, GLOB.global_hud.material, GLOB.global_hud.whitense)
+	client.screen.Remove(GLOB.global_hud.blurry, GLOB.global_hud.druggy, GLOB.global_hud.vimpaired, GLOB.global_hud.darkMask, GLOB.global_hud.nvg, GLOB.global_hud.thermal, GLOB.global_hud.meson, GLOB.global_hud.science, GLOB.global_hud.material, GLOB.global_hud.whitense, GLOB.global_hud.heavy_whitense)
 
 	if(istype(client.eye,/obj/machinery/camera))
 		var/obj/machinery/camera/cam = client.eye
@@ -1535,48 +1563,6 @@
 		else
 			clear_fullscreen("fear")
 
-		if(healths)
-			if(chem_effects[CE_PAINKILLER] > 100)
-				healths.icon_state = "health_numb"
-			else
-				// Generate a by-limb health display.
-				var/mutable_appearance/healths_ma = new(healths)
-				healths_ma.icon_state = "blank"
-				healths_ma.overlays = null
-				healths_ma.plane = PLANE_PLAYER_HUD
-
-				var/no_damage = 1
-				var/trauma_val = 0 // Used in calculating softcrit/hardcrit indicators.
-				if(!(species.flags & NO_PAIN))
-					trauma_val = max(traumatic_shock,halloss)/getMaxHealth()
-				var/limb_trauma_val = trauma_val*0.3
-				// Collect and apply the images all at once to avoid appearance churn.
-				var/list/health_images = list()
-				for(var/obj/item/organ/external/E in organs)
-					if(no_damage && (E.brute_dam || E.burn_dam))
-						no_damage = 0
-					health_images += E.get_damage_hud_image(limb_trauma_val)
-
-				// Apply a fire overlay if we're burning.
-				if(on_fire || get_hallucination_component()?.get_hud_state() == HUD_HALLUCINATION_ONFIRE)
-					health_images += image('icons/mob/OnFire.dmi',"[get_fire_icon_state()]")
-
-				// Show a general pain/crit indicator if needed.
-				if(get_hallucination_component()?.get_hud_state() == HUD_HALLUCINATION_CRIT)
-					trauma_val = 2
-				if(trauma_val)
-					if(!(species.flags & NO_PAIN))
-						if(trauma_val > 0.7)
-							health_images += image('icons/mob/screen1_health.dmi',"softcrit")
-						if(trauma_val >= 1)
-							health_images += image('icons/mob/screen1_health.dmi',"hardcrit")
-				else if(no_damage)
-					health_images += image('icons/mob/screen1_health.dmi',"fullhealth")
-
-				healths_ma.add_overlay(health_images)
-				healths.appearance = healths_ma
-
-
 		var/fat_alert = /atom/movable/screen/alert/fat
 		var/hungry_alert = /atom/movable/screen/alert/hungry
 		var/starving_alert = /atom/movable/screen/alert/starving
@@ -1620,8 +1606,10 @@
 				if(G.prescription)
 					apply_nearsighted_overlay = FALSE
 
+			/* Outpost 21 edit - Nif removal
 			if(nif && nif.flag_check(NIF_V_CORRECTIVE, NIF_FLAGS_VISION))
 				apply_nearsighted_overlay = FALSE
+			*/
 
 		set_fullscreen(apply_nearsighted_overlay, "nearsighted", /atom/movable/screen/fullscreen/impaired, 1)
 
@@ -1637,14 +1625,20 @@
 
 		if(CONFIG_GET(flag/welder_vision))
 			var/found_welder
-			if(species.short_sighted)
+			// outpost 21 edit addition - lockers are dark and spooky!
+			if(istype(loc,/obj/structure/closet))
+				found_welder = 1
+			else if(species.short_sighted)
+			// outpost 21 edit end
 				found_welder = 1
 			else
 				if(istype(glasses, /obj/item/clothing/glasses/welding))
 					var/obj/item/clothing/glasses/welding/O = glasses
 					if(!O.up)
 						found_welder = 1
+				/* Outpost 21 edit - Nif removal
 				if(!found_welder && nif && nif.flag_check(NIF_V_UVFILTER,NIF_FLAGS_VISION))	found_welder = 1
+				*/
 				if(istype(glasses, /obj/item/clothing/glasses/sunglasses/thinblindfold))
 					found_welder = 1
 				if(!found_welder && istype(head, /obj/item/clothing/head/welding))
@@ -1685,7 +1679,7 @@
 	var/no_damage = 1
 	var/trauma_val = 0 // Used in calculating softcrit/hardcrit indicators.
 	if(!(species.flags & NO_PAIN))
-		trauma_val = max(traumatic_shock,halloss)/species.total_health
+		trauma_val = max(traumatic_shock,halloss)/getMaxHealth()
 	var/limb_trauma_val = trauma_val*0.3
 	// Collect and apply the images all at once to avoid appearance churn.
 	var/list/health_images = list()
@@ -1775,6 +1769,12 @@
 			if(!isnull(M.vision_flags))
 				sight |= M.vision_flags
 
+		// Outpost 21 edit(port) begin - nocturnol
+		if(species.reagent_tag != IS_DIONA && see_in_dark < 8 && bloodstr.has_reagent(REAGENT_ID_NOCTURNOL))
+			see_in_dark = 8
+		// Outpost 21 edit end
+
+		/* Outpost 21 edit - Nif removal
 		if(!glasses_processed && nif)
 			var/datum/nifsoft/vision_soft
 			for(var/datum/nifsoft/NS in nif.nifsofts)
@@ -1783,6 +1783,7 @@
 					break
 			if(vision_soft)
 				glasses_processed = process_nifsoft_vision(vision_soft)		//not really glasses but equitable
+		*/
 
 		if(!glasses_processed && (species.get_vision_flags(src) > 0))
 			sight |= species.get_vision_flags(src)
@@ -1795,7 +1796,7 @@
 	// Call parent to handle signals
 	..()
 
-/mob/living/carbon/human/proc/process_glasses(var/obj/item/clothing/glasses/G)
+/mob/living/carbon/human/proc/process_glasses(obj/item/clothing/glasses/G)
 	. = FALSE
 	if(G && G.active)
 		if(G.darkness_view)
@@ -1815,7 +1816,8 @@
 		else if(!druggy && !seer)
 			see_invisible = see_invisible_default
 
-/mob/living/carbon/human/proc/process_nifsoft_vision(var/datum/nifsoft/NS)
+/* Outpost 21 edit - Nif removal
+/mob/living/carbon/human/proc/process_nifsoft_vision(datum/nifsoft/NS)
 	. = FALSE
 	if(NS && NS.active)
 		if(NS.darkness_view)
@@ -1824,6 +1826,7 @@
 		if(NS.vision_flags_mob)
 			sight |= NS.vision_flags_mob
 			. = TRUE
+*/
 
 /mob/living/carbon/human/handle_random_events()
 	if(inStasisNow())
@@ -1915,56 +1918,73 @@
 	if(stat)
 		return 0
 
-	if(shock_stage == 10)
-		if(traumatic_shock >= 80)
-			custom_pain("[pick("It hurts so much", "You really need some painkillers", "Dear god, the pain")]!", 40)
-
-	if(shock_stage >= 30)
-		if(shock_stage == 30 && !isbelly(loc))
-			automatic_custom_emote(VISIBLE_MESSAGE, "is having trouble keeping their eyes open.", check_stat = TRUE)
+	//Passive effects.
+	if(shock_stage >= 30 || traumatic_shock > 120) //Either signifigantly in shock or SEVERELY injured.
 		eye_blurry = max(2, eye_blurry)
-		if(traumatic_shock >= 80)
-			stuttering = max(stuttering, 5)
+		stuttering = max(5, stuttering)
 
+	//The various stages, sorted from most severe to least.
+	switch(shock_stage)
+		if(151 to INFINITY)
+			if(prob(10)) //Instead of perma-stunned on the ground, you have a chance to get back up.
+				if(!weakened && !lying)
+					automatic_custom_emote(VISIBLE_MESSAGE, "collapses!", check_stat = TRUE)
+				Weaken(5)
+			return
 
-	if(shock_stage == 40)
-		if(traumatic_shock >= 80)
-			to_chat(src, span_danger("[pick("The pain is excruciating", "Please&#44; just end the pain", "Your whole body is going numb")]!"))
-
-	if (shock_stage >= 60)
-		if(shock_stage == 60 && !isbelly(loc))
-			automatic_custom_emote(VISIBLE_MESSAGE, "'s body becomes limp.", check_stat = TRUE)
-		if (prob(2))
-			if(traumatic_shock >= 80)
-				to_chat(src, span_danger("[pick("The pain is excruciating", "Please&#44; just end the pain", "Your whole body is going numb")]!"))
-			Weaken(20)
-
-	if(shock_stage >= 80)
-		if (prob(5))
-			if(traumatic_shock >= 80)
-				to_chat(src, span_danger("[pick("The pain is excruciating", "Please&#44; just end the pain", "Your whole body is going numb")]!"))
-				if(prob(20) && !isbelly(loc))
+		if(150)
+			if(!isbelly(loc))
+				automatic_custom_emote(VISIBLE_MESSAGE, "can no longer stand, collapsing!", check_stat = TRUE)
+				if(prob(60) && !src.client?.prefs?.read_preference(/datum/preference/toggle/hide_pain_scream)) // Outpost 21 edit - Hide automatic pain scream
 					emote("pain")
-			Weaken(20)
+			Weaken(3)
+			return
 
-	if(shock_stage >= 120)
-		if (prob(2))
+		if(120 to 149)
+			if(prob(2))
+				if(traumatic_shock >= 80)
+					to_chat(src, span_danger("[pick("Your body freezes up", "You feel like you could die any moment now", "You fall over, your body refusing to respond")]!"))
+					if(prob(40) && !isbelly(loc) && !src.client?.prefs?.read_preference(/datum/preference/toggle/hide_pain_scream)) // Outpost 21 edit - Hide automatic pain scream
+						emote("pain")
+				Paralyse(5)
+			return
+
+		if(80 to 119)
+			if(prob(5))
+				if(traumatic_shock >= 80)
+					to_chat(src, span_danger("[pick("The pain is excruciating", "Please, just end the pain", "Your whole body is going numb")]!"))
+					if(prob(20) && !isbelly(loc) && !src.client?.prefs?.read_preference(/datum/preference/toggle/hide_pain_scream)) // Outpost 21 edit - Hide automatic pain scream
+						emote("pain")
+				Weaken(3)
+			return
+
+		if(60 to 79)
+			if(shock_stage == 60 && !isbelly(loc))
+				automatic_custom_emote(VISIBLE_MESSAGE, "'s body becomes limp.", check_stat = TRUE)
+			if(prob(2))
+				if(traumatic_shock >= 80)
+					to_chat(src, span_danger("[pick("The pain is excruciating", "Please, just end the pain", "Your whole body is going numb")]!"))
+				Weaken(3)
+			return
+
+		if(41 to 59)
+			return //A small reprieve. Inbetween compensated and decompensated shock.
+
+		if(40)
 			if(traumatic_shock >= 80)
-				to_chat(src, span_danger("[pick("You black out", "You feel like you could die any moment now", "You are about to lose consciousness")]!"))
-				if(prob(40) && !isbelly(loc))
-					emote("pain")
-			Paralyse(5)
-			Sleeping(5)
+				to_chat(src, span_danger("[pick("The pain is excruciating", "Please, just end the pain", "Your whole body is going numb")]!"))
+			return
 
-	if(shock_stage == 150)
-		if(!isbelly(loc))
-			automatic_custom_emote(VISIBLE_MESSAGE, "can no longer stand, collapsing!", check_stat = TRUE)
-			if(prob(60))
-				emote("pain")
-		Weaken(20)
+		if(30 to 39)
+			if(shock_stage == 30 && !isbelly(loc))
+				automatic_custom_emote(VISIBLE_MESSAGE, "is having trouble keeping their eyes open.", check_stat = TRUE)
+			return
 
-	if(shock_stage >= 150)
-		Weaken(20)
+		if(10)
+			if(traumatic_shock >= 80)
+				custom_pain("[pick("It hurts so much", "You really need some painkillers", "Dear god, the pain")]!", 40)
+			return
+
 
 /mob/living/carbon/human/proc/handle_pulse()
 	if(life_tick % 5) return pulse	//update pulse every 5 life ticks (~1 tick/sec, depending on server load)
@@ -1995,13 +2015,13 @@
 		temp = PULSE_NONE
 		if(!isnull(modifier_set))
 			temp = modifier_set
-		return temp //No blood, no pulse.
+		return CLAMP(round(temp), 0, PULSE_THREADY) //No blood, no pulse.
 
 	if(stat == DEAD)
 		temp = PULSE_NONE
 		if(!isnull(modifier_set))
 			temp = modifier_set
-		return temp	//that's it, you're dead, nothing can influence your pulse, aside from outside means.
+		return CLAMP(round(temp), 0, PULSE_THREADY) //that's it, you're dead, nothing can influence your pulse, aside from outside means.
 
 	var/obj/item/organ/internal/heart/Pump = internal_organs_by_name[O_HEART]
 
@@ -2012,6 +2032,10 @@
 
 		if(brain_modifier <= 0.7 && brain_modifier >= 0.4) // 70%-40% control, things start going weird as the brain is failing.
 			brain_modifier = rand(5, 15) / 10
+
+	if(shock_stage > 60) //Fight or flight time.
+		if(temp < PULSE_2FAST)
+			temp = PULSE_2FAST
 
 	if(Pump)
 		temp += Pump.standard_pulse_level - PULSE_NORM
@@ -2057,7 +2081,8 @@
 				if(R.volume >= R.overdose)
 					temp = PULSE_NONE
 					break //No amount of medications is getting you out of this.
-		return temp * brain_modifier
+		return CLAMP(round(temp * brain_modifier), 0, PULSE_THREADY)
+
 	//handles different chems' influence on pulse
 	for(var/datum/reagent/R in reagents.reagent_list)
 		if(R.id in GLOB.bradycardics)
@@ -2072,7 +2097,7 @@
 			if(R.volume >= R.overdose)
 				temp = PULSE_NONE
 
-	return max(0, round(temp * brain_modifier))
+	return CLAMP(round(temp * brain_modifier), 0, PULSE_THREADY)
 
 /mob/living/carbon/human/proc/handle_heartbeat()
 	if(pulse == PULSE_NONE)
@@ -2192,6 +2217,14 @@
 					else if((R.fields["id"] == E.fields["id"]) && (R.fields["criminal"] == "Released"))
 						holder.icon_state = "hudreleased"
 						break
+
+		// Outpost 21 edit begin - Check for noncrew department jobs, and then see if they've been granted an ID
+		var/datum/job/J = SSjob.get_job(job)
+		var/obj/item/card/id/id = GetIdCard()
+		if(J?.departments.len > 0 && J?.departments[1] == DEPARTMENT_NONCREW && (!id || id.registered_name != name))
+			holder.icon_state = "hudwanted"
+		// Outpost 21 edit end
+
 		if(block_hud)
 			holder.icon_state = "hudblank"
 		apply_hud(WANTED_HUD, holder)
@@ -2238,6 +2271,7 @@
 
 		holder.icon_state = "hudblank"
 
+		/* Outpost 21 edit - Remove backup implants
 		for(var/obj/item/organ/external/E in organs)
 			for(var/obj/item/implant/I in E.implants)
 				if(I.implanted && istype(I,/obj/item/implant/backup))
@@ -2248,6 +2282,7 @@
 						holder.icon_state = "hud_backup_nobody"
 					else
 						holder.icon_state = "hud_backup_norm"
+		*/
 		if(block_hud)
 			holder.icon_state = "hudblank"
 		apply_hud(BACKUP_HUD, holder)

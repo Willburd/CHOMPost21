@@ -44,7 +44,7 @@ GLOBAL_LIST_EMPTY(available_ai_shells)
 	transfer_shell()
 
 
-/mob/living/silicon/robot/proc/transfer_shell(var/mob/living/silicon/robot/target)
+/mob/living/silicon/robot/proc/transfer_shell(mob/living/silicon/robot/target)
 	var/mob/living/silicon/ai/AI = mainframe
 	//relay AI
 	if(!CONFIG_GET(flag/allow_ai_shells)) // CHOMPEdit
@@ -156,7 +156,7 @@ GLOBAL_LIST_EMPTY(available_ai_shells)
 	connected_ai = mainframe // So they share laws.
 	mainframe.connected_robots |= src
 
-	// CHOMPEdit Start - Outpost 21 upport: force the law sync when an AI enters this shell, unless emagged
+	// Outpost 21 edit begin - force the law sync when an AI enters this shell, unless emagged
 	var/org_lu = lawupdate
 	if(!emagged)
 		lawupdate = TRUE // not emagged, so the AI shell should have law priority. Prevents confusion when you suddenly have two different ion laws. One in shell one in core.

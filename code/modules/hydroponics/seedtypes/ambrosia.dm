@@ -51,7 +51,7 @@
 	display_name = "ambrosia gaia"
 	kitchen_tag = PLANT_AMBROSIAGAIA
 	mutants = null
-	chems = list (REAGENT_ID_EARTHSBLOOD = list(3,5), REAGENT_ID_NUTRIMENT = list(1,3))
+	chems = list (REAGENT_ID_COROPHIZINE = list(3,5), REAGENT_ID_NUTRIMENT = list(1,3))
 
 /datum/seed/ambrosia/gaia/New()
 	..()

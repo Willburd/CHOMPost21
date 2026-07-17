@@ -98,7 +98,7 @@
 	entry_vent = null
 	. = ..()
 
-/obj/item/organ/internal/intestine/horror/handle_organ_mod_special(var/removed = FALSE)
+/obj/item/organ/internal/intestine/horror/handle_organ_mod_special(removed = FALSE)
 	..()
 	if(removed)
 		for(var/obj/machinery/atmospherics/unary/vent_pump/v in view(7,src))
@@ -196,6 +196,7 @@
 	can_reject = FALSE
 	meat_type = /obj/item/reagent_containers/food/snacks/meat/worm
 	var/spider_chance = 10 //for admemes
+	var/growth_level = 0 // Outpost 21 edit - Flesh spider chance
 
 /obj/item/organ/internal/stomach/horror/process()
 	..()
@@ -215,6 +216,9 @@
 				spider.color = "[owner.species.blood_color]"
 				spider.name = "writhing tendril mass"
 				spider.desc = "A small, writhing mass of flesh and tendrils."
+				if(prob(20) && growth_level > 100) // Outpost 21 edit - Flesh spider chance
+					new /obj/effect/spider/spiderling/flesh(T)
+	growth_level += rand(0.1,1) // Outpost 21 edit - Flesh spider chance
 
 /obj/item/organ/internal/voicebox/horror
 	name = "mass"
@@ -232,7 +236,7 @@
 	. = ..()
 	redspace = GLOB.all_languages[LANGUAGE_REDSPACE]
 
-/obj/item/organ/internal/voicebox/horror/replaced(var/mob/living/carbon/human/target,var/obj/item/organ/external/affected)
+/obj/item/organ/internal/voicebox/horror/replaced(mob/living/carbon/human/target,obj/item/organ/external/affected)
 	..()
 	target.add_language(LANGUAGE_REDSPACE)
 	target.default_language = redspace

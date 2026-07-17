@@ -14,6 +14,7 @@ SUBSYSTEM_DEF(persistence)
 	var/list/obj/structure/sign/painting/painting_frames = list()
 	var/list/all_paintings = list()
 	var/list/unpicked_paintings = list()
+	var/list/all_books = list() // Outpost 21 edit(port) - Books to SSpersistence
 
 /datum/controller/subsystem/persistence/Initialize()
 	for(var/datum/persistent/P as anything in subtypesof(/datum/persistent))
@@ -28,7 +29,7 @@ SUBSYSTEM_DEF(persistence)
 		var/datum/persistent/P = persistence_datums[thing]
 		P.Shutdown()
 
-/datum/controller/subsystem/persistence/proc/track_value(var/atom/value, var/track_type)
+/datum/controller/subsystem/persistence/proc/track_value(atom/value, track_type)
 
 	if(CONFIG_GET(flag/persistence_disabled)) //if the config is set to persistence disabled, nothing will save or load.
 		return
@@ -48,12 +49,12 @@ SUBSYSTEM_DEF(persistence)
 		tracking_values[track_type] = list()
 	tracking_values[track_type] += value
 
-/datum/controller/subsystem/persistence/proc/forget_value(var/atom/value, var/track_type)
+/datum/controller/subsystem/persistence/proc/forget_value(atom/value, track_type)
 	if(tracking_values[track_type])
 		tracking_values[track_type] -= value
 
 
-/datum/controller/subsystem/persistence/proc/show_info(var/mob/user)
+/datum/controller/subsystem/persistence/proc/show_info(mob/user)
 	if(!check_rights_for(user.client, R_HOLDER))
 		return
 

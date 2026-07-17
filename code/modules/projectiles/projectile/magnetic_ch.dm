@@ -25,14 +25,14 @@
 	energetic_impact = 1
 	hud_state = "rocket_thermobaric"
 
-/obj/item/projectile/bullet/magnetic/fuelrod/blitz/on_impact(var/atom/A)
+/obj/item/projectile/bullet/magnetic/fuelrod/blitz/on_impact(atom/A)
 	if(isturf(loc))
 		explosion(loc, 3, 4, 5, 10)
 	..(A)
 
 /obj/item/projectile/bullet/magnetic/fuelrod/blitz/on_hit(atom/target, blocked = 0, def_zone)
 	var/mob/living/M = target
-	if(istype(M) && M.maxHealth<=200)
+	if(istype(M) && (M.maxHealth<=200) || istype(M,/mob/living/simple_mob/animal/statue)) // Outpost 21 edit - Holy purifying fire
 		M.dust()
 	if(isturf(loc))
 		explosion(loc, 3, 4, 5, 10)

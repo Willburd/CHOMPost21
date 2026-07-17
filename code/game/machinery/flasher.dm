@@ -30,7 +30,6 @@
 	return INITIALIZE_HINT_LATELOAD
 
 /obj/machinery/flasher/portable/LateInitialize()
-	// Map start flashers enable proximity sensing
 	if(anchored)
 		add_overlay("[base_state]-s")
 		sense_proximity(callback = TYPE_PROC_REF(/atom,HasProximity))
@@ -80,9 +79,11 @@
 		var/flash_time = strength
 		if(ishuman(O))
 			var/mob/living/carbon/human/H = O
+			/*  Outpost 21 edit - Nif removal
 			if(H.nif && H.nif.flag_check(NIF_V_FLASHPROT,NIF_FLAGS_VISION))
 				H.nif.notify("High intensity light detected, and blocked!",TRUE)
 				continue
+			*/
 			if(FLASHPROOF in H.mutations)
 				continue
 			if(!H.eyecheck() <= 0)
@@ -101,12 +102,11 @@
 		O.Weaken(flash_time)
 
 /obj/machinery/flasher/emp_act(severity, recursive)
-	if(stat & (BROKEN|NOPOWER))
-		..(severity, recursive)
+	. = ..()
+	if (. & EMP_PROTECT_SELF || stat & (BROKEN|NOPOWER))
 		return
 	if(prob(75/severity))
 		flash()
-	..(severity, recursive)
 
 /obj/machinery/flasher/portable/HasProximity(turf/T, datum/weakref/WF, oldloc)
 	if(isnull(WF))

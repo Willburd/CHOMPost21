@@ -20,7 +20,7 @@
 // Proc: open_connection()
 // Parameters: 2 (user - the person who initiated the connecting being opened, candidate - the communicator or observer that will connect to the device)
 // Description: Typechecks the candidate, then calls the correct proc for further connecting.
-/obj/item/communicator/proc/open_connection(mob/user, var/atom/candidate)
+/obj/item/communicator/proc/open_connection(mob/user, atom/candidate)
 	if(isobserver(candidate))
 		voice_invites.Remove(candidate)
 		open_connection_to_ghost(user, candidate)
@@ -31,7 +31,7 @@
 // Proc: open_connection_to_communicator()
 // Parameters: 2 (user - the person who initiated this and will be receiving feedback information, candidate - someone else's communicator)
 // Description: Adds the candidate and src to each other's communicating lists, allowing messages seen by the devices to be relayed.
-/obj/item/communicator/proc/open_connection_to_communicator(mob/user, var/atom/candidate)
+/obj/item/communicator/proc/open_connection_to_communicator(mob/user, atom/candidate)
 	if(!istype(candidate, /obj/item/communicator))
 		return
 	var/obj/item/communicator/comm = candidate
@@ -56,7 +56,7 @@
 // Proc: open_connection_to_ghost()
 // Parameters: 2 (user - the person who initiated this, candidate - the ghost that will be turned into a voice mob)
 // Description: Pulls the candidate ghost from deadchat, makes a new voice mob, transfers their identity, then their client.
-/obj/item/communicator/proc/open_connection_to_ghost(mob/user, var/mob/candidate)
+/obj/item/communicator/proc/open_connection_to_ghost(mob/user, mob/candidate)
 	if(!isobserver(candidate))
 		return
 	//Handle moving the ghost into the new shell.
@@ -113,7 +113,7 @@
 // Parameters: 3 (user - the user who initiated the disconnect, target - the mob or device being disconnected, reason - string shown when disconnected)
 // Description: Deletes specific voice_mobs or disconnects communicators, and shows a message to everyone when doing so.  If target is null, all communicators
 //				and voice mobs are removed.
-/obj/item/communicator/proc/close_connection(mob/user, var/atom/target, var/reason)
+/obj/item/communicator/proc/close_connection(mob/user, atom/target, reason)
 	if(voice_mobs.len == 0 && communicating.len == 0)
 		return
 
@@ -144,7 +144,7 @@
 // Proc: request()
 // Parameters: 1 (candidate - the ghost or communicator wanting to call the device)
 // Description: Response to a communicator or observer trying to call the device.  Adds them to the list of requesters
-/obj/item/communicator/proc/request(var/atom/candidate)
+/obj/item/communicator/proc/request(atom/candidate)
 	if(candidate in voice_requests)
 		return
 	var/who = null
@@ -179,7 +179,7 @@
 // Proc: del_request()
 // Parameters: 1 (candidate - the ghost or communicator to be declined)
 // Description: Declines a request and cleans up both ends
-/obj/item/communicator/proc/del_request(var/atom/candidate)
+/obj/item/communicator/proc/del_request(atom/candidate)
 	if(!(candidate in voice_requests))
 		return
 
@@ -209,12 +209,14 @@
 		if(!T) return
 		//VOREStation Edit Start for commlinks
 		var/list/mobs_to_relay
+		/* Outpost 21 edit - Nif removal
 		if(istype(comm,/obj/item/communicator/commlink))
 			var/obj/item/communicator/commlink/CL = comm
 			mobs_to_relay = list(CL.nif.human)
 		else
-			var/list/in_range = get_mobs_and_objs_in_view_fast(T,world.view,0) //Range of 3 since it's a tiny video display
-			mobs_to_relay = in_range["mobs"]
+		*/
+		var/list/in_range = get_mobs_and_objs_in_view_fast(T,world.view,0) //Range of 3 since it's a tiny video display
+		mobs_to_relay = in_range["mobs"]
 		//VOREStation Edit End
 		var/rendered = "[icon2html(src,mobs_to_relay)] " + span_message("[text]")
 		for(var/mob/mob in mobs_to_relay) //We can't use visible_message(), or else we will get an infinite loop if two communicators hear each other.
@@ -237,12 +239,14 @@
 		if(!T) return
 		//VOREStation Edit Start for commlinks
 		var/list/mobs_to_relay
+		/* Outpost 21 edit - Nif removal
 		if(istype(comm,/obj/item/communicator/commlink))
 			var/obj/item/communicator/commlink/CL = comm
 			mobs_to_relay = list(CL.nif.human)
 		else
-			var/list/in_range = get_mobs_and_objs_in_view_fast(T,world.view,0) //Range of 3 since it's a tiny video display
-			mobs_to_relay = in_range["mobs"]
+		*/
+		var/list/in_range = get_mobs_and_objs_in_view_fast(T,world.view,0) //Range of 3 since it's a tiny video display
+		mobs_to_relay = in_range["mobs"]
 		//VOREStation Edit End
 
 		for(var/mob/mob in mobs_to_relay)
@@ -268,6 +272,7 @@
 			mob.show_message(rendered)
 	..()
 
+/* Outpost 21 edit- Communicator removal
 // Verb: join_as_voice()
 // Parameters: None
 // Description: Allows ghosts to call communicators, if they meet all the requirements.
@@ -324,6 +329,7 @@
 			O.exonet.send_message(chosen_communicator.exonet.address, "voice")
 
 			to_chat(src, "A communications request has been sent to [chosen_communicator].  Now you need to wait until someone answers.")
+*/
 
 // Proc: connect_video()
 // Parameters: user - the mob doing the viewing of video, comm - the communicator at the far end

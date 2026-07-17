@@ -387,7 +387,7 @@
 /datum/gear/suit/forensics
 	display_name = "forensics uniform selection"
 	path = /obj/item/clothing/suit/storage/forensics/red/long
-	allowed_roles = list(JOB_DETECTIVE)
+	allowed_roles = list(JOB_SECURITY_OFFICER) // Outpost 21 edit - Detective is officer now
 
 /datum/gear/suit/forensics/New()
 	..()
@@ -431,7 +431,7 @@
 /datum/gear/suit/wintercoat/security
 	display_name = "winter coat, security"
 	path = /obj/item/clothing/suit/storage/hooded/wintercoat/security
-	allowed_roles = list(JOB_SECURITY_OFFICER, JOB_HEAD_OF_SECURITY, JOB_WARDEN, JOB_DETECTIVE, JOB_BLUESHIELD_GUARD, JOB_SECURITY_PILOT) //YW ADDITIONS
+	allowed_roles = list(JOB_SECURITY_OFFICER, JOB_HEAD_OF_SECURITY, JOB_WARDEN /*, JOB_DETECTIVE*/, JOB_BLUESHIELD_GUARD, JOB_BRIG_PHYSICIAN, JOB_SECURITY_PILOT) //YW ADDITIONS // Outpost 21 edit - Detective is officer now
 	show_roles = FALSE
 
 /datum/gear/suit/wintercoat/security/hos
@@ -491,7 +491,7 @@
 /datum/gear/suit/wintercoat/science/robotics
 	display_name = "winter coat, robotics"
 	path = /obj/item/clothing/suit/storage/hooded/wintercoat/science/robotics
-	allowed_roles = list(JOB_RESEARCH_DIRECTOR, JOB_ROBOTICIST)
+	allowed_roles = list(JOB_CHIEF_ENGINEER, JOB_ROBOTICIST) // Outpost 21 edit - Roboticist moved to engineering
 	show_roles = FALSE
 
 /datum/gear/suit/wintercoat/science/rd
@@ -678,19 +678,19 @@
 /datum/gear/suit/snowsuit/command
 	display_name = "snowsuit, command"
 	path = /obj/item/clothing/suit/storage/hooded/wintercoat/snowsuit/command // CHOMPEdit
-	allowed_roles = list(JOB_SITE_MANAGER,JOB_RESEARCH_DIRECTOR,JOB_HEAD_OF_PERSONNEL,JOB_HEAD_OF_SECURITY,JOB_CHIEF_ENGINEER,JOB_COMMAND_SECRETARY,JOB_BLUESHIELD_GUARD) //YW ADDITIONS
+	allowed_roles = list(JOB_SITE_MANAGER,JOB_RESEARCH_DIRECTOR,JOB_HEAD_OF_PERSONNEL,JOB_HEAD_OF_SECURITY,JOB_CHIEF_ENGINEER,JOB_COMMAND_OFFICER,JOB_BLUESHIELD_GUARD) //YW ADDITIONS // Outpost 21 edit - Command sec folded into command officer
 	show_roles = FALSE
 
 /datum/gear/suit/snowsuit/security
 	display_name = "snowsuit, security"
 	path = /obj/item/clothing/suit/storage/hooded/wintercoat/snowsuit/security // CHOMPEdit
-	allowed_roles = list(JOB_SECURITY_OFFICER, JOB_HEAD_OF_SECURITY, JOB_WARDEN, JOB_DETECTIVE, JOB_BLUESHIELD_GUARD, JOB_SECURITY_PILOT) //YW ADDITIONS
+	allowed_roles = list(JOB_SECURITY_OFFICER, JOB_HEAD_OF_SECURITY, JOB_WARDEN /*, JOB_DETECTIVE*/, JOB_BLUESHIELD_GUARD, JOB_BRIG_PHYSICIAN, JOB_SECURITY_PILOT) //YW ADDITIONS // Outpost 21 edit - Detective is officer now, Brig medic accessible
 	show_roles = FALSE
 
 /datum/gear/suit/snowsuit/medical
 	display_name = "snowsuit, medical"
 	path = /obj/item/clothing/suit/storage/hooded/wintercoat/snowsuit/medical // CHOMPEdit
-	allowed_roles = list(JOB_MEDICAL_DOCTOR,JOB_CHIEF_MEDICAL_OFFICER,JOB_CHEMIST,JOB_PARAMEDIC,JOB_GENETICIST, JOB_PSYCHIATRIST, JOB_SEARCH_AND_RESCUE) // CHOMPEdit
+	allowed_roles = list(JOB_MEDICAL_DOCTOR,JOB_CHIEF_MEDICAL_OFFICER,JOB_CHEMIST,JOB_PARAMEDIC,JOB_GENETICIST, JOB_PSYCHIATRIST, JOB_BRIG_PHYSICIAN, JOB_SEARCH_AND_RESCUE) // CHOMPEdit // Outpost 21 edit - Brig medic accessible
 	show_roles = FALSE
 
 /datum/gear/suit/snowsuit/science
@@ -722,7 +722,7 @@
 /datum/gear/suit/cmddressjacket
 	display_name = "command dress jacket"
 	path = /obj/item/clothing/suit/storage/toggle/cmddressjacket
-	allowed_roles = list(JOB_SITE_MANAGER, JOB_HEAD_OF_PERSONNEL, JOB_COMMAND_SECRETARY)
+	allowed_roles = list(JOB_SITE_MANAGER, JOB_HEAD_OF_PERSONNEL, JOB_COMMAND_OFFICER) // Outpost 21 edit - Command sec folded into command officer
 	show_roles = FALSE
 
 /datum/gear/suit/miscellaneous/kimono
@@ -868,7 +868,7 @@
 	display_name = "traffic officer's jacket"
 	description = "A high visibility jacket for security personnel inclined to direct vehicles rather than people."
 	path = /obj/item/clothing/suit/storage/toggle/labcoat/neo_police
-	allowed_roles = list(JOB_SECURITY_OFFICER, JOB_HEAD_OF_SECURITY, JOB_WARDEN, JOB_DETECTIVE)
+	allowed_roles = list(JOB_SECURITY_OFFICER, JOB_HEAD_OF_SECURITY, JOB_WARDEN) // Outpost 21 edit - Detective is officer now
 	show_roles = FALSE
 
 /datum/gear/suit/jacket_modular
@@ -896,7 +896,7 @@
 /datum/gear/suit/detective_alt
 	display_name = "sleek modern coat selection"
 	path = /obj/item/clothing/suit/storage/det_trench/alt
-	allowed_roles = list(JOB_HEAD_OF_SECURITY, JOB_DETECTIVE)
+	allowed_roles = list(JOB_HEAD_OF_SECURITY, JOB_SECURITY_OFFICER) // Outpost 21 edit - Detective is officer now
 
 /datum/gear/suit/detective_alt/New()
 	..()

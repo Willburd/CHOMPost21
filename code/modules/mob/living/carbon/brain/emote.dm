@@ -7,7 +7,8 @@ GLOBAL_LIST_INIT(brain_default_emotes, list(
 	/datum/decl/emote/audible/beep,
 	/datum/decl/emote/audible/boop,
 	/datum/decl/emote/visible/blink,
-	/datum/decl/emote/visible/flash
+	/datum/decl/emote/visible/flash,
+	/datum/decl/emote/visible/async_blink // Outpost 21 edit - Async blink
 ))
 
 /mob/living/carbon/brain/can_emote()

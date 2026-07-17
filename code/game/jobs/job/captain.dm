@@ -41,7 +41,7 @@ GLOBAL_DATUM_INIT(captain_announcement, /datum/announcement/minor, new(do_newsca
 
 
 /*
-/datum/job/captain/equip(var/mob/living/carbon/human/H)
+/datum/job/captain/equip(mob/living/carbon/human/H)
 	. = ..()
 	if(.)
 		H.implant_loyalty()
@@ -141,7 +141,7 @@ GLOBAL_DATUM_INIT(captain_announcement, /datum/announcement/minor, new(do_newsca
 //////////////////////////////////
 //		Command Secretary
 //////////////////////////////////
-
+/* Outpost 21 edit - Command sec folded into command officer
 /datum/job/secretary
 	title = JOB_COMMAND_SECRETARY
 	flag = BRIDGE
@@ -168,6 +168,7 @@ GLOBAL_DATUM_INIT(captain_announcement, /datum/announcement/minor, new(do_newsca
 	outfit_type = /datum/decl/hierarchy/outfit/job/secretary
 	job_description = "A " + JOB_COMMAND_SECRETARY + " handles paperwork duty for the Heads of Staff, so they can better focus on managing their departments. \
 						They are not Heads of Staff, and have no real authority."
+*/
 
 /datum/alt_title/command_liaison
 	title = JOB_ALT_COMMAND_LIAISON

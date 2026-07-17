@@ -1,0 +1,89 @@
+/obj/item/reagent_containers/glass/beaker/vial/hemocyanin
+	name = "vial (hemocyanin)"
+	prefill = list(REAGENT_ID_HEMOCYANIN = 30)
+
+/obj/item/reagent_containers/glass/beaker/vial/sustenance
+	name = "vial (artificial sustenance)"
+	prefill = list(REAGENT_ID_ASUSTENANCE = 30)
+
+
+/obj/item/reagent_containers/food/drinks/cans/crystal_classic_wind
+	name = "\improper Mountain Wind Crystal Classic"
+	desc = "Mountain Wind Crystal Classic, was the hit soft drink fad in 2231. Last seen on sale in 2285..."
+	description_fluff = "Mountain Wild soda from before the 'space' rebranding centuries ago. This hasn't been seen on shelves for just as long!"
+	icon_state = "space_mountain_wind"
+	center_of_mass_x = 16
+	center_of_mass_y = 8
+
+/obj/item/reagent_containers/food/drinks/cans/crystal_classic_wind/Initialize(mapload)
+	. = ..()
+	reagents.add_reagent(REAGENT_ID_THEDEW, 30)
+
+
+// Randomized protein powder
+/obj/item/reagent_containers/glass/beaker/wheymax
+	name = "WHEYMAX"
+	desc = "A small plastic container with an absurdly decorated label."
+	icon = 'icons/obj/chemical.dmi'
+	icon_state = "bottle-5"
+	item_state = "bottle-5"
+
+/obj/item/reagent_containers/glass/beaker/wheymax/Initialize(mapload)
+	prefill = list(REAGENT_ID_PROTEINPOWDER = 20, REAGENT_ID_SUGAR = 10) // 4/6ths nutriment, 1/6th sugar, 1/6th flavor
+	var/name_pick
+	switch(rand(1,8))
+		if(1)
+			prefill += list(REAGENT_ID_INSTANTAPPLE = 30)
+			name_pick = list("APPLESNAPZ YOUR KNEECAPS","CYANIDE LUST","SEEDS OF DEATH")
+		if(2)
+			prefill += list(REAGENT_ID_INSTANTGRAPE = 30)
+			name_pick = list("SOUR PUCKER SENSATION","SOUR DESPAIR STORM","SULTRY SOUR SECCUBUS")
+		if(3)
+			prefill += list(REAGENT_ID_INSTANTJUICE = 30)
+			name_pick = list("FRUITY DEATHSQUAD","DEATH FROM THE LOOM","RAINBOW OF FUCK")
+		if(4)
+			prefill += list(REAGENT_ID_INSTANTORANGE = 30)
+			name_pick = list("FLORIDA ONE MAN RIOT","CITRUS CASTRATION","CITRUS CONCUBINE")
+		if(5)
+			prefill += list(REAGENT_ID_INSTANTWATERMELON = 30)
+			name_pick = list("HUGE BAZONGAS","MASSIVE DOBONHONKAROOS","WATERHELLON")
+		if(6)
+			prefill += list(REAGENT_ID_HOTCOCO = 30)
+			name_pick = list("COCOCAINE","BITTER ADORATION","BLACK LIQUID SORROW")
+		if(7)
+			prefill += list(REAGENT_ID_CAPSAICIN = 30)
+			name_pick = list("RECTAL RAMPAGE","ASSASSIN OF ASS DEVASSTATION","BOTTLE OF WOES")
+		if(8)
+			prefill += list(REAGENT_ID_COFFEE = 30)
+			name_pick = list("RAW PESTICIDES","TESHARI RATTLER","MORNING BANSHEE")
+	name = "WHEYMAX ([pick(name_pick)])"
+	var/icons = list("bottle5","bottle6","bottle7","bottle8","bottle9")
+	icon_state = pick(icons)
+	item_state = icon_state
+	. = ..()
+
+
+// Prankster bucket of random silly chemicals
+/obj/item/reagent_containers/glass/bucket/prankster_mix
+	var/static/list/prankster_chems = list(
+		REAGENT_ID_WATER,
+		REAGENT_ID_LUBE,
+		REAGENT_ID_CLEANER,
+		REAGENT_ID_GRAPEJUICE,
+		REAGENT_ID_GRAPESODA,
+		REAGENT_ID_ORANGEJUICE,
+		REAGENT_ID_ORANGESODA,
+		REAGENT_ID_APPLEJUICE,
+		REAGENT_ID_APPLESODA,
+		REAGENT_ID_MILK,
+		REAGENT_ID_COFFEE,
+		REAGENT_ID_ETHANOL,
+		// Evil chems
+		REAGENT_ID_RADIUM,
+		REAGENT_ID_FUEL,
+	)
+
+/obj/item/reagent_containers/glass/bucket/prankster_mix/Initialize(mapload)
+	. = ..()
+	var/max_vol = reagents.maximum_volume
+	reagents.add_reagent(pick(prankster_chems),rand(max_vol / 3, max_vol))

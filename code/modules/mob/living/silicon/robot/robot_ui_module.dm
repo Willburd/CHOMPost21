@@ -44,13 +44,21 @@
 			modules += R.restrict_modules_to
 		else if(R.shell)
 			modules += GLOB.shell_module_types
+			// Outpost 21 edit begin - Admins always have ERT access
+			if(usr.client && usr.client.holder && check_rights_for(usr.client, (R_ADMIN|R_MOD)))
+				modules |= GLOB.emergency_module_types
+			// Outpost 21 edit end
 			// CHOMPAdd Start, crisis mode for shells
-			if(R.crisis || GLOB.security_level == SEC_LEVEL_RED || R.crisis_override)
+			else if(R.crisis || GLOB.security_level == SEC_LEVEL_RED || R.crisis_override)
 				to_chat(src, span_red("Crisis mode active. Combat module available."))
 				modules |= GLOB.emergency_module_types
 			// CHOMPAdd End
 		else
 			modules += GLOB.robot_module_types
+			// Outpost 21 edit begin - Admins always have ERT access
+			if(usr.client && usr.client.holder && check_rights_for(usr.client, (R_ADMIN|R_MOD)))
+				modules |= GLOB.emergency_module_types
+			// Outpost 21 edit end
 			if(R.crisis || GLOB.security_level >= SEC_LEVEL_RED || R.crisis_override)
 				to_chat(R, span_red("Crisis mode active. Combat module available."))
 				modules |= GLOB.emergency_module_types
@@ -156,13 +164,17 @@
 			close_ui()
 			return TRUE
 
-/mob/living/silicon/robot/proc/apply_name(var/new_name)
+/mob/living/silicon/robot/proc/apply_name(new_name)
 	if(!custom_name)
 		if (new_name)
 			custom_name = new_name
 			sprite_name = new_name
+			// Outpost 21 edit begin - if missing the crew manifest uses incorrect original name, plus the other robot rename functions like /datum/eventkit/modify_robot/tgui_act() sets this?
+			name = new_name
+			real_name = new_name
+			// Outpost 21 edit end
 
-/mob/living/silicon/robot/proc/apply_module(var/datum/robot_sprite/new_datum, var/new_module)
+/mob/living/silicon/robot/proc/apply_module(datum/robot_sprite/new_datum, new_module)
 	icon_selected = TRUE
 	var/module_type = GLOB.robot_modules[new_module]
 	if(modtype != new_module || !module)

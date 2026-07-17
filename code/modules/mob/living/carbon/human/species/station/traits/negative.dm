@@ -47,7 +47,7 @@
 	custom_only = FALSE
 	banned_species = list(SPECIES_TESHARI, SPECIES_SHADEKIN_CREW) //These are already this weak.
 
-/datum/trait/negative/endurance_low/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+/datum/trait/negative/endurance_low/apply(datum/species/S,mob/living/carbon/human/H)
 	..()
 	H.setMaxHealth(S.total_health)
 
@@ -59,7 +59,7 @@
 	custom_only = FALSE
 	banned_species = list(SPECIES_TESHARI) //These are already this weak.
 
-/datum/trait/negative/endurance_very_low/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+/datum/trait/negative/endurance_very_low/apply(datum/species/S,mob/living/carbon/human/H)
 	..()
 	H.setMaxHealth(S.total_health)
 
@@ -90,24 +90,28 @@
 	name = "Burn Weakness, Minor"
 	desc = "Increases damage from burn damage sources by 15%"
 	cost = -1
+
 	var_changes = list("burn_mod" = 1.15)
 
 /datum/trait/negative/burn_weak
 	name = "Burn Weakness"
 	desc = "Increases damage from burn damage sources by 20%"
 	cost = -2
+
 	var_changes = list("burn_mod" = 1.2)
 
 /datum/trait/negative/burn_weak_plus
 	name = "Burn Weakness, Major"
 	desc = "Increases damage from burn damage sources by 50%"
 	cost = -3
+
 	var_changes = list("burn_mod" = 1.5)
 
 /datum/trait/negative/conductive
 	name = "Conductive"
 	desc = "Increases your susceptibility to electric shocks by 25%"
 	cost = -2 //CHOMPEdit
+
 	var_changes = list("siemens_coefficient" = 1.25) //This makes you a lot weaker to tasers.
 
 /datum/trait/negative/conductive_plus
@@ -140,7 +144,7 @@
 	cost = -2 //I feel like this should be higher, but let's see where it goes
 	excludes = list(/datum/trait/negative/boneless, /datum/trait/negative/boneless/major, /datum/trait/positive/densebones)
 
-/datum/trait/negative/hollow/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+/datum/trait/negative/hollow/apply(datum/species/S,mob/living/carbon/human/H)
 	..()
 	for(var/obj/item/organ/external/O in H.organs)
 		O.min_broken_damage *= 0.5
@@ -160,15 +164,7 @@
 
 	activation_message="You feel off balance..."
 	primitive_expression_messages=list("staggers")
-	excludes = list(/datum/trait/negative/lightweight_light)
-
-/datum/trait/negative/neural_hypersensitivity
-	name = "Neural Hypersensitivity"
-	desc = "Your nerves are particularly sensitive to physical changes, leading to experiencing twice the intensity of pain and pleasure alike. Makes all pain effects twice as strong, and occur at half as much damage."
-	cost = -1
-	var_changes = list("trauma_mod" = 2)
-	can_take = ORGANICS
-	custom_only = FALSE
+	excludes = list(/datum/trait/negative/lightweight_light, /datum/trait/positive/heavyweight)
 
 /datum/trait/negative/breathes
 	cost = -2
@@ -180,6 +176,7 @@
 
 	activation_message="You feel like breathing is more difficult..."
 	primitive_expression_messages=list("gasps")
+
 
 /datum/trait/negative/breathes/phoron
 	name = "Phoron Breather"
@@ -209,6 +206,7 @@
 	var_changes_pref = list("extra_languages" = -3)
 	custom_only = FALSE
 	varchange_type = TRAIT_VARCHANGE_MORE_BETTER
+	excludes = list(/datum/trait/negative/no_galcom) // Outpost 21 edit- Don't stack this with removing common
 
 /datum/trait/negative/dark_blind
 	name = "Nyctalopia"
@@ -258,6 +256,7 @@
 	excludes = list(/datum/trait/negative/less_blood_extreme)
 	can_take = ORGANICS
 
+
 /datum/trait/negative/less_blood_extreme
 	name = "Low Blood Volume, Extreme"
 	desc = "You have 60% less blood volume compared to most species, making you much more prone to blood loss issues."
@@ -266,11 +265,13 @@
 	excludes = list(/datum/trait/negative/less_blood)
 	can_take = ORGANICS
 
+
 /datum/trait/negative/extreme_slowdown
 	name = "Slowdown, Extreme"
 	desc = "You move EXTREMELY slower than baseline"
 	cost = -8
 	var_changes = list("slowdown" = 4.0)
+
 
 	//Traitgenes
 	is_genetrait = TRUE
@@ -283,6 +284,7 @@
 	name = "Low Blood Sugar"
 	desc = "If you let your nutrition get too low, you will start to experience adverse affects including hallucinations, unconsciousness, and weakness"
 	cost = -1
+
 
 	// Traitgenes Made into a gene trait
 	is_genetrait = TRUE
@@ -307,7 +309,7 @@
 	activation_message="You can't seem to see anything."
 	primitive_expression_messages=list("stumbles aimlessly.")
 
-/datum/trait/negative/blindness/handle_environment_special(var/mob/living/carbon/human/H)
+/datum/trait/negative/blindness/handle_environment_special(mob/living/carbon/human/H)
 	H.sdisabilities |= sdisability 		//no matter what you do, the blindess still comes for you // Traitgenes tweaked to be consistant with other gene traits by using var
 
 /datum/trait/negative/agoraphobia
@@ -316,6 +318,7 @@
 	cost = -3
 	excludes = list(/datum/trait/negative/lonely,/datum/trait/negative/lonely/major)
 	added_component_path = /datum/component/crowd_detection/agoraphobia
+
 
 	//Traitgenes
 	is_genetrait = TRUE
@@ -331,12 +334,14 @@
 	excludes = list(/datum/trait/negative/lonely/major,/datum/trait/negative/agoraphobia)
 	added_component_path = /datum/component/crowd_detection/lonely
 
+
 /datum/trait/negative/lonely/major
 	name = "Major loneliness vulnerability"
 	desc = "You're extremely prone to loneliness! Being alone for extended periods of time causes adverse effects. Most mobs won't be enough to cure this loneliness, you need other social beings."
 	cost = -3
 	excludes = list(/datum/trait/negative/lonely,/datum/trait/negative/agoraphobia)
 	added_component_path = /datum/component/crowd_detection/lonely/major
+
 
 	//Traitgenes
 	is_genetrait = TRUE
@@ -351,9 +356,10 @@
 	cost = -12 // Similar to Very Low Endurance, this straight up will require you NEVER getting in a fight. This is extremely crippling. I salute the madlad that takes this.
 	var_changes = list("total_health" = 25)
 
-/datum/trait/negative/endurance_glass/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+/datum/trait/negative/endurance_glass/apply(datum/species/S,mob/living/carbon/human/H)
 	..()
 	H.setMaxHealth(S.total_health)
+
 
 /datum/trait/negative/reduced_biocompat_minor
 	name = "Reduced Biocompatibility, Minor"
@@ -362,6 +368,7 @@
 	var_changes = list("chem_strength_heal" = 0.8)
 	can_take = ORGANICS
 
+
 /datum/trait/negative/reduced_biocompat
 	name = "Reduced Biocompatibility"
 	desc = "For whatever reason, you're one of the unlucky few who don't get as much benefit from modern-day chemicals. Remember to note this down in your medical records! Chems are only 60% as effective on you!"
@@ -369,12 +376,14 @@
 	var_changes = list("chem_strength_heal" = 0.6)
 	can_take = ORGANICS
 
+
 /datum/trait/negative/reduced_biocompat_extreme
 	name = "Reduced Biocompatibility, Major"
 	desc = "For whatever reason, you're one of the unlucky few who don't get as much benefit from modern-day chemicals. Remember to note this down in your medical records! Chems are only 30% as effective on you!"
 	cost = -8 //CHOMPEdit - Keep original value
 	var_changes = list("chem_strength_heal" = 0.3)
 	can_take = ORGANICS
+
 
 	//Traitgenes
 	is_genetrait = TRUE
@@ -390,11 +399,13 @@
 	cost = -1
 	var_changes = list("flash_mod" = 1.5)
 
+
 /datum/trait/negative/light_sensitivity_plus
 	name = "Photosensitivity, Major"
 	desc = "You have trouble dealing with sudden flashes of light, taking quite a long time for you to be able to recover. The effects of flashes from cameras and security equipment leave you stunned for some time. 100% (2x) stun duration from flashes."
 	cost = -2
 	var_changes = list("flash_mod" = 2.0)
+
 
 	//Traitgenes
 	is_genetrait = TRUE
@@ -419,11 +430,13 @@
 	cost = -2
 	var_changes = list("pain_mod" = 1.2)
 
+
 /datum/trait/negative/pain_intolerance_advanced
 	name = "Pain Intolerance, Major"
 	desc = "You are highly sensitive to all sources of pain, and experience 50% more pain."
 	cost = -3
 	var_changes = list("pain_mod" = 1.5) //this makes you extremely vulnerable to most sources of pain, a stunbaton bop or shotgun beanbag will do around 90 agony, almost enough to drop you in one hit.
+
 
 	//Traitgenes
 	is_genetrait = TRUE
@@ -432,11 +445,20 @@
 	activation_message="You feel as though the airflow around you is painful..."
 	primitive_expression_messages=list("bumps their toe, screaming in pain")
 
+/datum/trait/negative/neural_hypersensitivity
+	name = "Neural Hypersensitivity" //Would rename this to 'Pain Intolerance, Extreme' but for savefile reasons, it stays this name.
+	desc = "You are frail and sensitive to pain. You experience 100% more pain from all sources."
+	cost = -5
+	var_changes = list("pain_mod" = 2)
+	can_take = ORGANICS
+	custom_only = FALSE
+
 /datum/trait/negative/sensitive_biochem
 	name = "Sensitive Biochemistry, Minor"
 	desc = "Your biochemistry is a little delicate, rendering you more susceptible to the negative effects of some chemicals. You'll probably want to list this in your medical records, and perhaps in your exploitable info as well. Chemical toxin damage and negative drug effects are 25% stronger on you. Additionally, knockout drugs work 25% faster on you."
 	cost = -1
 	var_changes = list("chem_strength_tox" = 1.25)
+
 
 	//Traitgenes
 	can_take = ORGANICS
@@ -477,7 +499,7 @@
 	custom_only = FALSE
 	excludes = list(/datum/trait/negative/bad_shooter)
 
-/datum/trait/negative/thick_digits/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+/datum/trait/negative/thick_digits/apply(datum/species/S,mob/living/carbon/human/H)
 	..()
 	H.add_modifier(/datum/modifier/trait/thickdigits)
 
@@ -522,7 +544,7 @@
 	desc = "Without the protection of darkness or a suit your body quickly begins to break down when exposed to light."
 	cost = -4
 	is_genetrait = TRUE // There is no upside, a neat landmine for genetics
-	hidden = TRUE //Disabled on Virgo
+	// hidden = TRUE //Disabled on Virgo // Outpost 21 edit - Used here
 	can_take = ORGANICS
 	added_component_path = /datum/component/burninlight // Literally just Zaddat, but you don't start with any suit. Good luck.
 
@@ -532,14 +554,14 @@
 	desc = "You have become chemically dependant to any alcoholic drink, and need to regularly consume it or suffer withdrawals."
 	addiction = REAGENT_ID_ETHANOL
 	custom_only = FALSE
-	hidden = TRUE //Disabled on Virgo
+	// hidden = TRUE //Disabled on Virgo // Outpost 21 edit - Used here
 
 /datum/trait/neutral/addiction_bliss
 	name = "Addiction - " + REAGENT_BLISS
 	desc = "You have become chemically dependant to " + REAGENT_BLISS + ", and need to regularly consume it or suffer withdrawals."
 	addiction = REAGENT_ID_BLISS
 	custom_only = FALSE
-	hidden = TRUE //Disabled on Virgo
+	// hidden = TRUE //Disabled on Virgo // Outpost 21 edit - Used here
 
 /datum/trait/neutral/addiction_coffee
 	name = "Addiction - " + REAGENT_COFFEE
@@ -552,7 +574,7 @@
 	desc = "You have become chemically dependant to " + REAGENT_HYPERZINE + ", and need to regularly consume it or suffer withdrawals."
 	addiction = REAGENT_ID_HYPERZINE
 	custom_only = FALSE
-	hidden = TRUE //Disabled on Virgo
+	// hidden = TRUE //Disabled on Virgo // Outpost 21 edit - Used here
 
 /datum/trait/neutral/addiction_nicotine
 	name = "Addiction - " + REAGENT_NICOTINE
@@ -565,21 +587,21 @@
 	desc = "You have become chemically dependant to " + REAGENT_OXYCODONE + ", and need to regularly consume it or suffer withdrawals."
 	addiction = REAGENT_ID_OXYCODONE
 	custom_only = FALSE
-	hidden = TRUE //Disabled on Virgo
+	// hidden = TRUE //Disabled on Virgo // Outpost 21 edit - Used here
 
 /datum/trait/neutral/addiction_painkiller
 	name = "Addiction - Pain Killers"
 	desc = "You have become chemically dependant to " + REAGENT_TRAMADOL + ", and need to regularly consume it or suffer withdrawals."
 	addiction = REAGENT_ID_TRAMADOL
 	custom_only = FALSE
-	hidden = TRUE //Disabled on Virgo
+	// hidden = TRUE //Disabled on Virgo // Outpost 21 edit - Used here
 
 /datum/trait/neutral/addiction_asustenance
 	name = "Unstable Vat Grown Body"
 	desc = "You are chemically dependant to " + REAGENT_ASUSTENANCE + ", and need to regularly consume it or your body decays."
 	addiction = REAGENT_ID_ASUSTENANCE
 	custom_only = FALSE
-	hidden = TRUE //Disabled on Virgo
+	// hidden = TRUE //Disabled on Virgo // Outpost 21 edit - Used here
 
 /datum/trait/negative/unlucky
 	name = "Unlucky"
@@ -646,7 +668,7 @@
 	limb_health = 0.5
 	excludes = list(/datum/trait/negative/hollow, /datum/trait/positive/densebones, /datum/trait/negative/boneless)
 
-/datum/trait/negative/boneless/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+/datum/trait/negative/boneless/apply(datum/species/S,mob/living/carbon/human/H)
 	..()
 	for(var/obj/item/organ/external/ex_organ in H.organs)
 		ex_organ.cannot_break = TRUE
@@ -695,7 +717,7 @@
 	var_changes = list("emp_dmg_mod" = 1.3, "emp_stun_mod" = 1.3, "emp_sensitivity" = (EMP_BLIND | EMP_DEAFEN | EMP_BRUTE_DMG | EMP_BURN_DMG | EMP_CONFUSE))
 	excludes = list(/datum/trait/negative/poorconstruction, /datum/trait/positive/emp_resist, /datum/trait/positive/emp_resist_major)
 
-/datum/trait/negative/faultwires/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+/datum/trait/negative/faultwires/apply(datum/species/S,mob/living/carbon/human/H)
 	..()
 	H.add_modifier(/datum/modifier/trait/empweakness)
 
@@ -708,7 +730,7 @@
 	var_changes = list("emp_dmg_mod" = 1.6, "emp_stun_mod" = 1.6, "emp_sensitivity" = (EMP_BLIND | EMP_DEAFEN | EMP_BRUTE_DMG | EMP_BURN_DMG | EMP_CONFUSE | EMP_WEAKEN))
 	excludes = list(/datum/trait/negative/faultwires, /datum/trait/positive/emp_resist, /datum/trait/positive/emp_resist_major)
 
-/datum/trait/negative/poorconstruction/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+/datum/trait/negative/poorconstruction/apply(datum/species/S,mob/living/carbon/human/H)
 	..()
 	H.add_modifier(/datum/modifier/trait/majorempweakness)
 
@@ -733,7 +755,7 @@
 	desc = "Your light weight and poor balance make you very susceptible to unhelpful bumping if you are unprepared)"
 	cost = -1
 	var_changes = list("lightweight_light" = 1)
-	excludes = list(/datum/trait/negative/lightweight)
+	excludes = list(/datum/trait/negative/lightweight, /datum/trait/positive/heavyweight)
 	custom_only = FALSE
 
 /datum/trait/negative/scrawny
@@ -769,3 +791,51 @@
 	desc = "You are approximately 50% more susceptible to radiation, and it dissipates slower from your body."
 	cost = -2
 	var_changes = list("radiation_mod" = 1.5, "rad_removal_mod" = 0.5, "rad_levels" = WEAKENED_RADIATION_RESISTANCE)
+
+// medical allergens
+/datum/trait/negative/medical_allergy
+	name = "Allergy: " + REAGENT_TRICORDRAZINE
+	desc = "You're highly allergic to " + REAGENT_TRICORDRAZINE + " and " + REAGENT_TRICORLIDAZE + ", be sure to write that in your medical record! NB: By taking this trait, you acknowledge there is a significant risk your character may suffer a fatal reaction if exposed to this substance."
+	cost = -1
+	custom_only = FALSE
+	var/medallergen = MEDALLERGEN_TRICORD
+
+	/* Lets show medical some mercy by not making these genes
+	is_genetrait = TRUE
+	hidden = FALSE
+
+	activation_message="Something feels odd..."
+	*/
+
+/datum/trait/negative/medical_allergy/apply(datum/species/S,mob/living/carbon/human/H)
+	S.medallergens |= medallergen
+	..()
+
+/datum/trait/negative/medical_allergy/unapply(datum/species/S,mob/living/carbon/human/H)
+	S.medallergens &= ~medallergen
+	..()
+
+/datum/trait/negative/medical_allergy/bicard
+	name = "Allergy: " + REAGENT_BICARIDINE
+	desc = "You're highly allergic to " + REAGENT_BICARIDINE + " and " + REAGENT_BICARIDAZE + ", be sure to write that in your medical record! NB: By taking this trait, you acknowledge there is a significant risk your character may suffer a fatal reaction if exposed to this substance."
+	medallergen = MEDALLERGEN_BICARD
+
+/datum/trait/negative/medical_allergy/dylo
+	name = "Allergy: " + REAGENT_ANTITOXIN
+	desc = "You're highly allergic to " + REAGENT_ANTITOXIN + ", be sure to write that in your medical record! NB: By taking this trait, you acknowledge there is a significant risk your character may suffer a fatal reaction if exposed to this substance."
+	medallergen = MEDALLERGEN_DYLO
+
+/datum/trait/negative/medical_allergy/spacacillin
+	name = "Allergy: " + REAGENT_SPACEACILLIN
+	desc = "You're highly allergic to " + REAGENT_SPACEACILLIN + ", be sure to write that in your medical record! NB: By taking this trait, you acknowledge there is a significant risk your character may suffer a fatal reaction if exposed to this substance."
+	medallergen = MEDALLERGEN_SPACACIL
+
+/datum/trait/negative/medical_allergy/peridaxon
+	name = "Allergy: " + REAGENT_PERIDAXON
+	desc = "You're highly allergic to " + REAGENT_PERIDAXON + ", be sure to write that in your medical record! NB: By taking this trait, you acknowledge there is a significant risk your character may suffer a fatal reaction if exposed to this substance."
+	medallergen = MEDALLERGEN_PERIDAX
+
+/datum/trait/negative/medical_allergy/kelotane
+	name = "Allergy: " + REAGENT_KELOTANE
+	desc = "You're highly allergic to " + REAGENT_KELOTANE + ", " + REAGENT_DERMALINE + " and " + REAGENT_DERMALAZE + ", be sure to write that in your medical record! NB: By taking this trait, you acknowledge there is a significant risk your character may suffer a fatal reaction if exposed to this substance."
+	medallergen = MEDALLERGEN_KELOTANE

@@ -180,6 +180,13 @@ GLOBAL_LIST_INIT(human_default_emotes, list(
 	/datum/decl/emote/audible/caw2,
 	/datum/decl/emote/audible/caw_m,
 	/datum/decl/emote/audible/gwah,
+	//YW ADDITION: Add Start
+	/datum/decl/emote/audible/hooh,
+	/datum/decl/emote/audible/ack,
+	/datum/decl/emote/audible/ough,
+	/datum/decl/emote/audible/howl,
+	/datum/decl/emote/visible/cross,
+	//YW ADDITION: Add End
 	//CHOMP Add start
 	/datum/decl/emote/audible/wheeze,
 	/datum/decl/emote/audible/prbt2,
@@ -197,6 +204,23 @@ GLOBAL_LIST_INIT(human_default_emotes, list(
 	/datum/decl/emote/audible/tailthump,
 	/datum/decl/emote/audible/squeal,
 	//CHOMP Add end
+	//outpost 21 add begin
+	/datum/decl/emote/visible/ragescree,
+	/datum/decl/emote/visible/sdance,
+	/datum/decl/emote/visible/floorspin/tantrum,
+	/datum/decl/emote/audible/woo,
+	/datum/decl/emote/visible/kiss,
+	/datum/decl/emote/visible/dab,
+	/datum/decl/emote/audible/synth/rstartup,
+	/datum/decl/emote/audible/synth/rshutdown,
+	/datum/decl/emote/audible/synth/error,
+	/datum/decl/emote/audible/synth/rberr,
+	/datum/decl/emote/audible/synth/rbpos,
+	/datum/decl/emote/visible/async_blink,
+	/datum/decl/emote/audible/kweh,
+	/datum/decl/emote/audible/kweh_sad,
+	/datum/decl/emote/audible/concrete_grind,
+	//outpost 21 add end
 ))
 
 GLOBAL_LIST_INIT(simple_mob_default_emotes, list(
@@ -354,6 +378,24 @@ GLOBAL_LIST_INIT(simple_mob_default_emotes, list(
 	/datum/decl/emote/audible/tailthump,
 	/datum/decl/emote/audible/squeal,
 	//CHOMP Add end
+	//outpost 21 add begin
+	/datum/decl/emote/audible/wawa,
+	/datum/decl/emote/visible/sdance,
+	/datum/decl/emote/visible/floorspin/tantrum,
+	/datum/decl/emote/visible/ragescree,
+	/datum/decl/emote/visible/kiss,
+	/datum/decl/emote/visible/dab,
+	/datum/decl/emote/audible/woo,
+	/datum/decl/emote/audible/synth/rstartup,
+	/datum/decl/emote/audible/synth/rshutdown,
+	/datum/decl/emote/audible/synth/error,
+	/datum/decl/emote/audible/synth/rberr,
+	/datum/decl/emote/audible/synth/rbpos,
+	/datum/decl/emote/visible/async_blink,
+	/datum/decl/emote/audible/kweh,
+	/datum/decl/emote/audible/kweh_sad,
+	/datum/decl/emote/audible/concrete_grind,
+	//outpost 21 add end
 	))
 
 /mob/living/carbon/human/get_available_emotes()
@@ -486,7 +528,7 @@ GLOBAL_LIST_INIT(simple_mob_default_emotes, list(
 	popup.set_content(HTML)
 	popup.open()
 
-/mob/living/carbon/human/proc/toggle_tail(var/setting,var/message = 0)
+/mob/living/carbon/human/proc/toggle_tail(setting,message = 0)
 	if(!tail_style || !tail_style.ani_state)
 		if(message)
 			to_chat(src, span_warning("You don't have a tail that supports this."))
@@ -498,7 +540,7 @@ GLOBAL_LIST_INIT(simple_mob_default_emotes, list(
 		update_tail_showing()
 	return 1
 
-/mob/living/carbon/human/proc/toggle_wing(var/setting,var/message = 0)
+/mob/living/carbon/human/proc/toggle_wing(setting,message = 0)
 	if(!wing_style || !wing_style.ani_state)
 		if(message)
 			to_chat(src, span_warning("You don't have a wingtype that supports this."))

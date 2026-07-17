@@ -34,7 +34,7 @@
 
 /obj/structure/reagent_dispensers/examine(mob/user)
 	. = ..()
-	if(get_dist(user, src) <= 2)
+	if(get_dist(user, src) <= 2 && !istype(src,/obj/structure/reagent_dispensers/souppot)) // Outpost 21 edit - Hide soup!
 		. += span_notice("It contains:")
 		if(reagents && reagents.reagent_list.len)
 			for(var/datum/reagent/R in reagents.reagent_list)
@@ -244,7 +244,7 @@
 	return ..()
 
 
-/obj/structure/reagent_dispensers/fueltank/bullet_act(var/obj/item/projectile/Proj)
+/obj/structure/reagent_dispensers/fueltank/bullet_act(obj/item/projectile/Proj)
 	if(Proj.get_structure_damage())
 		if(istype(Proj.firer))
 			message_admins("[key_name_admin(Proj.firer)] shot fueltank at [loc.loc.name] ([loc.x],[loc.y],[loc.z]) (<A href='byond://?_src_=holder;[HrefToken()];adminplayerobservecoodjump=1;X=[loc.x];Y=[loc.y];Z=[loc.z]'>JMP</a>).")
@@ -272,7 +272,7 @@
 /obj/structure/reagent_dispensers/fueltank/fire_act(datum/gas_mixture/air, temperature, volume)
 	if (modded)
 		explode()
-	else if (temperature > T0C+500)
+	else if (temperature > PHORON_MINIMUM_BURN_TEMPERATURE) // Outpost 21 edit - Pop these a lot more readily
 		explode()
 	return ..()
 
@@ -347,7 +347,7 @@
 /obj/structure/reagent_dispensers/water_cooler/Initialize(mapload)
 	. = ..()
 	if(bottle)
-		reagents.add_reagent(REAGENT_ID_WATER,2000)
+		reagents.add_reagent(REAGENT_ID_WATER,1000) // Outpost 21 edit - nerfed from 2000 to 1000
 	update_icon()
 	AddElement(/datum/element/climbable)
 	AddElement(/datum/element/rotatable)
@@ -487,6 +487,13 @@
 	icon = 'icons/obj/stationobjs.dmi'
 	icon_state = "nuclearbomb0"
 
+// Outpost 21 edit begin - Change the booze!
+/obj/structure/reagent_dispensers/beerkeg/fakenuke/Initialize(mapload)
+	. = ..()
+	reagents.clear_reagents()
+	reagents.add_reagent(REAGENT_ID_UNATHILIQUOR,1000) // the HARD shit
+// Outpost 21 edit - end
+
 //Cooking oil refill tank
 /obj/structure/reagent_dispensers/cookingoil
 	name = "cooking oil tank"
@@ -500,7 +507,7 @@
 	reagents.add_reagent(REAGENT_ID_COOKINGOIL,5000)
 	AddElement(/datum/element/climbable)
 
-/obj/structure/reagent_dispensers/cookingoil/bullet_act(var/obj/item/projectile/Proj)
+/obj/structure/reagent_dispensers/cookingoil/bullet_act(obj/item/projectile/Proj)
 	if(Proj.get_structure_damage())
 		explode()
 

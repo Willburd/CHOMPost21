@@ -1,5 +1,5 @@
 //////CHOMP PLANTS//////
-
+/* Outpost 21 edit - Removing badly designed chems
 /datum/seed/soybean/sapbean
 	name = PLANT_SAPBEAN
 	seed_name = PLANT_SAPBEAN
@@ -11,21 +11,21 @@
 	seed_name = "orange sapbean"
 	display_name = "orange sapbean"
 	mutants = list(PLANT_PURPLESAPBEAN,PLANT_BLUESAPBEAN,PLANT_BLACKSAPBEAN)
-	chems = list(REAGENT_ID_ORANGESAP = list(0,10))
+	chems = list(REAGENT_ID_ORANGESAP = list(0,1)) // Outpost 21 edit - Hydroponics chem nerf
 
 /datum/seed/soybean/sapbean/purple
 	name = PLANT_PURPLESAPBEAN
 	seed_name = "purple sapbean"
 	display_name = "purple sapbean"
 	mutants = list(PLANT_ORANGESAPBEAN,PLANT_BLUESAPBEAN,PLANT_BLACKSAPBEAN)
-	chems = list(REAGENT_PURPLESAP = list(0,10))
+	chems = list(REAGENT_PURPLESAP = list(0,1)) // Outpost 21 edit - Hydroponics chem nerf
 
 /datum/seed/soybean/sapbean/blue
 	name = PLANT_BLUESAPBEAN
 	seed_name = "blue sapbean"
 	display_name = "blue sapbean"
 	mutants = list(PLANT_ORANGESAPBEAN,PLANT_PURPLESAPBEAN,PLANT_BLACKSAPBEAN)
-	chems = list(REAGENT_ID_BLUESAP = list(0,10))
+	chems = list(REAGENT_ID_BLUESAP = list(0,1)) // Outpost 21 edit - Hydroponics chem nerf
 
 /datum/seed/soybean/sapbean/black //A bean with all the power but in so little quanitity
 	name = PLANT_BLACKSAPBEAN
@@ -55,6 +55,7 @@
 	set_trait(TRAIT_MATURATION,8)
 	set_trait(TRAIT_POTENCY,10)
 	set_trait(TRAIT_YIELD,2)
+*/
 
 //Commenting out because self_harvesting can be troublesome.
 //  /datum/seed/apple/falling
@@ -122,7 +123,7 @@
 	name = "sweetbreeze"
 	seed_name = "sweet breeze"
 	display_name = "sweet breeze"
-	chems = list(REAGENT_ID_NUTRIMENT = list(1,10), REAGENT_ID_SERAZINE = list(1,10))
+	chems = list(REAGENT_ID_NUTRIMENT = list(1,10), REAGENT_ID_MENTHOL = list(1,5)) // Outpost 21 edit - REAGENT_ID_SERAZINE to REAGENT_ID_MENTHOL, 1-10 to 1-5
 	mutants = null
 
 /datum/seed/flower/lavender/sweetbreeze/New()

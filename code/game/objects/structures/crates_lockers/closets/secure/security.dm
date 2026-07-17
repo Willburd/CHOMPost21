@@ -31,7 +31,7 @@
 		/obj/item/radio/headset/alt/heads/hop,
 		/obj/item/radio/headset/earbud/heads/hop,
 		/obj/item/storage/box/ids = 2,
-		/obj/item/gun/energy/gun/compact,
+		// /obj/item/gun/energy/gun/compact, // Outpost 21 edit - Not authorized
 		/obj/item/storage/box/commandkeys,
 		/obj/item/storage/box/servicekeys,
 		/obj/item/flash,
@@ -182,7 +182,7 @@
 		/obj/item/ammo_magazine/m12gdrumjack/beanbag,
 		/obj/item/ammo_magazine/m12gdrumjack/beanbag,
 		/obj/item/ticket_printer,		//CHOMPStation addition
-		/obj/item/retail_scanner/security,	//CHOMPStation addition
+		/obj/item/cargo_scanner, ///security,	//CHOMPStation addition Outpost 21 edit - retail scanner tweak
 		/obj/item/clothing/accessory/bodycam // CHOMPEdit
 
 		)
@@ -221,7 +221,7 @@
 		/obj/item/gun/energy/taser,
 		/obj/item/cell/device/weapon,
 		/obj/item/holowarrant,				//CHOMPStation addition
-		/obj/item/retail_scanner/security,	//CHOMPStation addition
+		/obj/item/cargo_scanner, ///security,	//CHOMPStation addition Outpost 21 edit - retail scanner tweak
 		/obj/item/clothing/glasses/hud/security,	//CHOMPStation addition
 		/obj/item/ticket_printer,			//CHOMPStation addition
 		/obj/item/gunbox/sec_officer,			//CHOMPStation addition
@@ -287,7 +287,7 @@
 		/obj/item/taperecorder,
 		/obj/item/storage/bag/detective,
 		/obj/item/rectape/random = 3,
-		/obj/item/retail_scanner/security,	//CHOMPStation addition
+		/obj/item/cargo_scanner, ///security,	//CHOMPStation addition Outpost 21 edit - retail scanner tweak
 		/obj/item/clothing/glasses/hud/security		//CHOMPStation addition
 		)
 

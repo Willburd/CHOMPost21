@@ -55,7 +55,7 @@
 		log_admin("[key_name(src)] updated their OOC notes mid-round.")
 		ooc_notes_window(src)
 
-/mob/living/proc/set_metainfo_likes(mob/user, var/reopen = TRUE)
+/mob/living/proc/set_metainfo_likes(mob/user, reopen = TRUE)
 	if(user != src)
 		return
 	var/new_metadata = strip_html_simple(tgui_input_text(src, "Enter any information you'd like others to see relating to your LIKED roleplay preferences. This will not be saved permanently unless you click save in the OOC notes panel! Type \"!clear\" to empty.", "Game Preference" , html_decode(ooc_notes_likes), multiline = TRUE,  prevent_enter = TRUE))
@@ -69,7 +69,7 @@
 		if(reopen)
 			ooc_notes_window(src)
 
-/mob/living/proc/set_metainfo_dislikes(mob/user, var/reopen = TRUE)
+/mob/living/proc/set_metainfo_dislikes(mob/user, reopen = TRUE)
 	if(user != src)
 		return
 	var/new_metadata = strip_html_simple(tgui_input_text(src, "Enter any information you'd like others to see relating to your DISLIKED roleplay preferences. This will not be saved permanently unless you click save in the OOC notes panel! Type \"!clear\" to empty.", "Game Preference" , html_decode(ooc_notes_dislikes), multiline = TRUE,  prevent_enter = TRUE))
@@ -146,10 +146,10 @@
 
 	if(usr != src)
 		return
-	var/new_link = strip_html_simple(tgui_input_text(src, "Enter a link to add on to your examine text! This should be a related image link/gallery, or things like your F-list. This is not the place for memes.", "Custom Link" , html_decode(custom_link), max_length = 100, encode = TRUE,  prevent_enter = TRUE))
+	var/new_link = strip_html_simple(tgui_input_text(src, "Enter a link to add on to your examine text! This should be a related image link/gallery, or things like your F-list. This is not the place for memes.", "Custom Link" , html_decode(custom_link), max_length = 400, encode = TRUE,  prevent_enter = TRUE)) // Outpost 21 edit(port) - Allow longer custom links
 	if(new_link && CanUseTopic(src))
-		if(length(new_link) > 100)
-			to_chat(src, span_warning("Your entry is too long, it must be 100 characters or less."))
+		if(length(new_link) > 400) // Outpost 21 edit(port) - Allow longer custom links
+			to_chat(src, span_warning("Your entry is too long, it must be 400 characters or less.")) // Outpost 21 edit(port) - Allow longer custom links
 			return
 
 		custom_link = new_link

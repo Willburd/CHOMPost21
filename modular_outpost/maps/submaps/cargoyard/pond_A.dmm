@@ -1,0 +1,513 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/simulated/floor/water/acidic/deep/turfpack/muriki,
+/area/submap/outpost21/yard_generic)
+"b" = (
+/turf/simulated/floor/water/acidic/shoreline/corner/corner_mud/turfpack/muriki{
+	dir = 1
+	},
+/area/submap/outpost21/yard_generic)
+"c" = (
+/turf/simulated/floor/water/acidic/shoreline/corner/corner_mud/turfpack/muriki{
+	dir = 4
+	},
+/area/submap/outpost21/yard_generic)
+"i" = (
+/turf/simulated/floor/water/acidic/shoreline/shoreline_mud/turfpack/muriki{
+	dir = 8
+	},
+/area/submap/outpost21/yard_generic)
+"m" = (
+/turf/simulated/floor/outdoors/mud/turfpack/muriki,
+/area/submap/outpost21/yard_generic)
+"q" = (
+/turf/simulated/floor/water/acidic/shoreline/shoreline_mud/turfpack/muriki{
+	dir = 1
+	},
+/area/submap/outpost21/yard_generic)
+"y" = (
+/turf/simulated/floor/water/acidic/shoreline/shoreline_mud/turfpack/muriki{
+	dir = 9
+	},
+/area/submap/outpost21/yard_generic)
+"H" = (
+/turf/simulated/floor/water/acidic/shoreline/shoreline_mud/turfpack/muriki{
+	dir = 10
+	},
+/area/submap/outpost21/yard_generic)
+"K" = (
+/turf/simulated/floor/water/acidic/shoreline/corner/corner_mud/turfpack/muriki,
+/area/submap/outpost21/yard_generic)
+"L" = (
+/turf/simulated/floor/water/acidic/shoreline/shoreline_mud/turfpack/muriki,
+/area/submap/outpost21/yard_generic)
+"M" = (
+/turf/simulated/floor/water/acidic/shoreline/shoreline_mud/turfpack/muriki{
+	dir = 5
+	},
+/area/submap/outpost21/yard_generic)
+"N" = (
+/turf/simulated/floor/outdoors/mud/turfpack/muriki,
+/area/template_noop)
+"Q" = (
+/turf/simulated/floor/water/acidic/turfpack/muriki,
+/area/submap/outpost21/yard_generic)
+"R" = (
+/turf/simulated/floor/water/acidic/shoreline/shoreline_mud/turfpack/muriki{
+	dir = 4
+	},
+/area/submap/outpost21/yard_generic)
+"U" = (
+/turf/simulated/floor/water/acidic/shoreline/shoreline_mud/turfpack/muriki{
+	dir = 6
+	},
+/area/submap/outpost21/yard_generic)
+"W" = (
+/turf/simulated/floor/water/acidic/shoreline/corner/corner_mud/turfpack/muriki{
+	dir = 8
+	},
+/area/submap/outpost21/yard_generic)
+"Z" = (
+/turf/template_noop,
+/area/template_noop)
+
+(1,1,1) = {"
+Z
+Z
+Z
+Z
+Z
+Z
+Z
+Z
+Z
+Z
+Z
+Z
+Z
+Z
+Z
+Z
+Z
+Z
+Z
+Z
+"}
+(2,1,1) = {"
+Z
+Z
+Z
+Z
+Z
+Z
+Z
+Z
+N
+N
+N
+Z
+Z
+Z
+Z
+Z
+Z
+Z
+Z
+Z
+"}
+(3,1,1) = {"
+Z
+Z
+Z
+Z
+N
+N
+m
+m
+m
+m
+m
+m
+N
+N
+Z
+Z
+Z
+Z
+Z
+Z
+"}
+(4,1,1) = {"
+Z
+Z
+Z
+N
+m
+m
+K
+i
+i
+i
+W
+m
+m
+m
+N
+N
+Z
+Z
+Z
+Z
+"}
+(5,1,1) = {"
+Z
+Z
+Z
+N
+m
+K
+U
+Q
+Q
+Q
+M
+i
+W
+m
+m
+m
+Z
+Z
+Z
+Z
+"}
+(6,1,1) = {"
+Z
+Z
+N
+m
+K
+U
+Q
+Q
+Q
+Q
+Q
+Q
+q
+m
+m
+m
+N
+Z
+Z
+Z
+"}
+(7,1,1) = {"
+Z
+Z
+N
+m
+L
+Q
+Q
+Q
+a
+a
+Q
+Q
+M
+W
+m
+m
+m
+N
+Z
+Z
+"}
+(8,1,1) = {"
+Z
+Z
+N
+m
+L
+Q
+Q
+a
+a
+a
+a
+Q
+Q
+M
+i
+W
+m
+N
+Z
+Z
+"}
+(9,1,1) = {"
+Z
+Z
+N
+m
+L
+Q
+Q
+a
+a
+a
+a
+a
+Q
+Q
+Q
+M
+W
+m
+Z
+Z
+"}
+(10,1,1) = {"
+Z
+Z
+N
+m
+L
+Q
+Q
+a
+a
+a
+a
+a
+a
+Q
+Q
+Q
+q
+m
+N
+Z
+"}
+(11,1,1) = {"
+Z
+Z
+N
+m
+L
+Q
+Q
+a
+a
+a
+a
+a
+a
+a
+Q
+Q
+q
+m
+N
+Z
+"}
+(12,1,1) = {"
+Z
+Z
+N
+m
+b
+H
+Q
+Q
+a
+a
+a
+a
+a
+a
+Q
+Q
+q
+m
+N
+Z
+"}
+(13,1,1) = {"
+Z
+Z
+N
+m
+m
+L
+Q
+Q
+Q
+a
+a
+a
+a
+a
+Q
+Q
+q
+m
+N
+Z
+"}
+(14,1,1) = {"
+Z
+Z
+Z
+N
+m
+b
+H
+Q
+Q
+a
+a
+a
+a
+Q
+Q
+Q
+q
+m
+N
+Z
+"}
+(15,1,1) = {"
+Z
+Z
+Z
+Z
+N
+m
+b
+H
+Q
+Q
+Q
+Q
+Q
+Q
+Q
+y
+c
+m
+Z
+Z
+"}
+(16,1,1) = {"
+Z
+Z
+Z
+Z
+Z
+N
+m
+b
+H
+Q
+Q
+Q
+Q
+Q
+Q
+q
+m
+Z
+Z
+Z
+"}
+(17,1,1) = {"
+Z
+Z
+Z
+Z
+Z
+Z
+m
+m
+b
+R
+R
+R
+R
+R
+R
+c
+N
+Z
+Z
+Z
+"}
+(18,1,1) = {"
+Z
+Z
+Z
+Z
+Z
+Z
+Z
+N
+N
+N
+m
+m
+m
+m
+m
+N
+Z
+Z
+Z
+Z
+"}
+(19,1,1) = {"
+Z
+Z
+Z
+Z
+Z
+Z
+Z
+Z
+Z
+Z
+Z
+Z
+Z
+Z
+Z
+Z
+Z
+Z
+Z
+Z
+"}
+(20,1,1) = {"
+Z
+Z
+Z
+Z
+Z
+Z
+Z
+Z
+Z
+Z
+Z
+Z
+Z
+Z
+Z
+Z
+Z
+Z
+Z
+Z
+"}

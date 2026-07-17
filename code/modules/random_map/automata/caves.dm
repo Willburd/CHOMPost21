@@ -8,10 +8,10 @@
 /datum/random_map/automata/cave_system/no_cracks
 	make_cracked_turfs = FALSE
 
-/datum/random_map/automata/cave_system/get_appropriate_path(var/value)
+/datum/random_map/automata/cave_system/get_appropriate_path(value)
 	return
 
-/datum/random_map/automata/cave_system/get_map_char(var/value)
+/datum/random_map/automata/cave_system/get_map_char(value)
 	switch(value)
 		if(DOOR_CHAR)
 			return "x"
@@ -55,7 +55,7 @@
 	#endif
 	return 1
 
-/datum/random_map/automata/cave_system/apply_to_turf(var/x,var/y)
+/datum/random_map/automata/cave_system/apply_to_turf(x,y)
 	var/current_cell = get_map_cell(x,y)
 	if(!current_cell)
 		return 0
@@ -64,8 +64,10 @@
 		if(!T.ignore_cavegen)
 			if(map[current_cell] == FLOOR_CHAR)
 				T.make_floor()
+				/* Outpost 21 edit - Disabled this for our own spawners
 				if(prob(0.5)) // 1 in 200 chance //CHOMP Add
 					new /obj/structure/mob_spawner/scanner/mining_animals(T) //CHOMP Add
+				*/
 			else
 				T.make_wall()
 			LAZYSET(turfs_changed, T, TRUE)

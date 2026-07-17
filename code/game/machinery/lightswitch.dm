@@ -30,6 +30,9 @@
 	if(!name)
 		name = "light switch ([area.name])"
 
+	// Outpost21 edit begin - Lightswitches start off
+	area.lightswitch = FALSE
+	// Outpost21 edit end
 	on = area.lightswitch
 	update_icon()
 
@@ -86,11 +89,10 @@
 		update_icon()
 
 /obj/machinery/light_switch/emp_act(severity, recursive)
-	if(stat & (BROKEN|NOPOWER))
-		..(severity, recursive)
+	. = ..()
+	if (. & EMP_PROTECT_SELF || stat & (BROKEN|NOPOWER))
 		return
 	power_change()
-	..(severity, recursive)
 
 //Breakers for event maps
 

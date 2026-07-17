@@ -11,21 +11,21 @@
 
 /datum/surgery_step/repairflesh/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	if (isslime(target))
-		return 0
+		return FALSE
 	if (target_zone == O_EYES || target_zone == O_MOUTH)
-		return 0
+		return FALSE
 	if(!ishuman(target))
-		return 0
+		return FALSE
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 	if (affected == null)
-		return 0
+		return FALSE
 	if (affected.is_stump())
-		return 0
+		return FALSE
 	if (affected.robotic >= ORGAN_ROBOT)
-		return 0
+		return FALSE
 	if(coverage_check(user, target, affected, tool))
-		return 0
-	return 1
+		return FALSE
+	return TRUE
 
 
 //////////////////////////////////////////////////////////////////
@@ -50,9 +50,9 @@
 	if(..())
 		var/obj/item/organ/external/affected = target.get_organ(target_zone)
 		if(affected.burn_stage || affected.brute_stage)
-			return 0
-		return 1
-	return 0
+			return FALSE
+		return TRUE
+	return FALSE
 
 /datum/surgery_step/repairflesh/scan_injury/begin_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
@@ -90,9 +90,9 @@
 	allowed_tools = list(
 	/obj/item/stack/medical/advanced/ointment = 100,
 	/obj/item/stack/medical/ointment = 100,
-	/obj/item/tape_roll = 30,
-	/obj/item/taperoll = 10
-	)
+	/obj/item/tape_roll = 50,
+	/obj/item/taperoll = 30
+	) // Outpost 21 edit - Buffing ghetto surgery
 
 	priority = 3
 
@@ -103,9 +103,9 @@
 	if(..())
 		var/obj/item/organ/external/affected = target.get_organ(target_zone)
 		if(affected.burn_stage < 1 || !(affected.burn_dam))
-			return 0
-		return 1
-	return 0
+			return FALSE
+		return TRUE
+	return FALSE
 
 /datum/surgery_step/repairflesh/repair_burns/begin_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
@@ -162,9 +162,9 @@
 	allowed_tools = list(
 	/obj/item/stack/medical/advanced/bruise_pack = 100,
 	/obj/item/stack/medical/bruise_pack = 100,
-	/obj/item/tape_roll = 40,
-	/obj/item/taperoll = 10
-	)
+	/obj/item/tape_roll = 60,
+	/obj/item/taperoll = 30
+	) // Outpost 21 edit - Buffing ghetto surgery
 
 	priority = 3
 
@@ -175,9 +175,9 @@
 	if(..())
 		var/obj/item/organ/external/affected = target.get_organ(target_zone)
 		if(affected.brute_stage < 1 || !(affected.brute_dam))
-			return 0
-		return 1
-	return 0
+			return FALSE
+		return TRUE
+	return FALSE
 
 /datum/surgery_step/repairflesh/repair_brute/begin_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)

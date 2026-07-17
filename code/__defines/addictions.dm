@@ -8,10 +8,10 @@
 
 GLOBAL_LIST_INIT(reagent_addictive_standard,list(REAGENT_ID_AMBROSIAEXTRACT,REAGENT_ID_TALUMQUEM,REAGENT_ID_METHYLPHENIDATE))
 GLOBAL_LIST_INIT(reagent_addictive_slow,list(REAGENT_ID_TRAMADOL,REAGENT_ID_OXYCODONE,REAGENT_ID_TRICORDRAZINE,REAGENT_ID_ASUSTENANCE,REAGENT_ID_ETHANOL,REAGENT_ID_NICOTINE,REAGENT_ID_COFFEE))
-GLOBAL_LIST_INIT(reagent_addictive_fast,list(REAGENT_ID_HYPERZINE,REAGENT_ID_BLISS))
+GLOBAL_LIST_INIT(reagent_addictive_fast,list(REAGENT_ID_HYPERZINE,REAGENT_ID_BLISS,REAGENT_ID_FENTHOL)) // Outpost 21 edit - Fenthol addiction
 GLOBAL_LIST_INIT(reagent_addictive_poison,list())
 
-/proc/get_addictive_reagents(var/addict_type)
+/proc/get_addictive_reagents(addict_type)
 	RETURN_TYPE(/list)
 	switch(addict_type)
 		if(ADDICT_NORMAL)

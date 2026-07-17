@@ -42,8 +42,8 @@
 	reagents = R
 	R.my_atom = src
 
-/obj/item/toy/balloon/attack(mob/living/carbon/human/M as mob, mob/user as mob)
-	return
+/obj/item/toy/balloon/attack(mob/living/M, mob/living/user, target_zone, attack_modifier)
+	return NONE
 
 /obj/item/toy/balloon/afterattack(atom/A as mob|obj, mob/user as mob, proximity)
 	if(!proximity) return
@@ -405,8 +405,8 @@
 	toysay = "Arf!"
 
 /obj/item/toy/figure/detective
-	name = JOB_DETECTIVE + " action figure"
-	desc = "A \"Space Life\" brand " + JOB_DETECTIVE + " action figure."
+	name = JOB_ALT_DETECTIVE + " action figure" // Outpost 21 edit - Detective is officer now
+	desc = "A \"Space Life\" brand " + JOB_ALT_DETECTIVE + " action figure." // Outpost 21 edit - Detective is officer now
 	icon_state = "detective"
 	toysay = "This airlock has grey jumpsuit and insulated glove fibers on it."
 
@@ -642,7 +642,7 @@
 	cooldown_length = 1 SECOND
 
 // Attack mob
-/obj/item/toy/plushie/carp/attack(mob/M as mob, mob/user as mob)
+/obj/item/toy/plushie/carp/attack(mob/living/M, mob/living/user, target_zone, attack_modifier)
 	playsound(src, squeeze_sound, 20, 1)	// Play bite sound in local area
 	return ..()
 

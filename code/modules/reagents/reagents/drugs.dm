@@ -21,6 +21,7 @@
 	reagent_state = LIQUID
 	metabolism = REM * 0.5
 	ingest_met = REM * 1.5 /// Be very careful with this, ingestion is weird and will spam high/sober messages horribly!
+	allergen_factor = 3 // Allergic reactions to concentrated medications should be pretty strong
 	dermal_absorption = 0
 	mrate_static = TRUE
 	overdose = REAGENTS_OVERDOSE
@@ -28,7 +29,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_ILLDRUG
 
-/datum/reagent/drugs/affect_blood(mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/drugs/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien == IS_DIONA)
 		return
 
@@ -64,7 +65,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED // bonus
 	industrial_use = REFINERYEXPORT_REASON_ILLDRUG
 
-/datum/reagent/drugs/bliss/affect_blood(mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/drugs/bliss/affect_blood(mob/living/carbon/M, alien, removed)
 	..()
 	var/drug_strength = 15
 	if(M.species.chem_strength_tox > 0)
@@ -80,7 +81,7 @@
 		M.emote(pick("twitch", "drool", "moan", "giggle"))
 		prob_proc = FALSE
 
-/datum/reagent/drugs/bliss/overdose(var/mob/living/M as mob)
+/datum/reagent/drugs/bliss/overdose(mob/living/M as mob)
 	if(prob_proc == TRUE && prob(20))
 		M.hallucination = max(M.hallucination, 5)
 		prob_proc = FALSE
@@ -110,7 +111,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED // bonus
 	industrial_use = REFINERYEXPORT_REASON_ILLDRUG
 
-/datum/reagent/drugs/ambrosia_extract/affect_blood(mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/drugs/ambrosia_extract/affect_blood(mob/living/carbon/M, alien, removed)
 	..()
 	var/drug_strength = 3
 	if(M.species.chem_strength_tox > 0) //Closer to 0 means they're more resistant to toxins. Higher than 1 means they're weaker to toxins.
@@ -144,7 +145,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED // bonus
 	industrial_use = REFINERYEXPORT_REASON_ILLDRUG
 
-/datum/reagent/drugs/psilocybin/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/drugs/psilocybin/affect_blood(mob/living/carbon/M, alien, removed)
 	..()
 
 	var/threshold = 1
@@ -199,7 +200,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_ILLDRUG
 
-/datum/reagent/drugs/talum_quem/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/drugs/talum_quem/affect_blood(mob/living/carbon/M, alien, removed)
 	..()
 
 	var/drug_strength = 29
@@ -209,7 +210,7 @@
 		M.adjustToxLoss(10 * removed) //Given incorporations of other toxins with similiar damage, this seems right.
 
 	M.druggy = max(M.druggy, drug_strength)
-	if(prob(10) && prob_proc == TRUE && isturf(M.loc) && !istype(M.loc, /turf/space) && M.canmove && !M.restrained())
+	if(prob(10) && prob_proc == TRUE && isturf(M.loc) && !istype(M.loc, /turf/space) && M.canmove && !M.restrained() && !M.resting) // Outpost 21 edit - Resting stops drug movement
 		step(M, pick(GLOB.cardinal))
 		prob_proc = FALSE
 	if(prob(7) && prob_proc == TRUE)
@@ -224,10 +225,12 @@
 	taste_description = "sour staleness"
 	color = "#181818"
 	high_messages = FALSE
+
+	metabolism = REM * 0.08 // outpost 21 edit - require less a round
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_RECDRUG
 
-/datum/reagent/drugs/nicotine/handle_addiction(var/mob/living/carbon/M, var/alien)
+/datum/reagent/drugs/nicotine/handle_addiction(mob/living/carbon/M, alien)
 	// A copy of the base with withdrawl, but with much less effects, such as vomiting.
 	var/current_addiction = M.get_addiction_to_reagent(id)
 	// slow degrade
@@ -271,6 +274,8 @@
 	color = "#BF80BF"
 	high_message_list = list("You feel focused.", "Your attention is undivided.")
 	sober_message_list = list("It becomes harder to focus...", "You feel distractible.")
+
+	metabolism = REM * 0.124 // outpost 21 edit - require less a round
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	scannable = SCANNABLE_BENEFICIAL
 	industrial_use = REFINERYEXPORT_REASON_DRUG
@@ -284,13 +289,19 @@
 	scannable = SCANNABLE_BENEFICIAL
 	high_message_list = list("Everything feels a bit more steady.", "Your mind feels stable.")
 	sober_message_list = list("You feel a little tired.", "You feel a little more listless...")
+
+	metabolism = REM * 0.02 // outpost 21 edit - require less a round
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_DRUG
 
-/datum/reagent/drugs/citalopram/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/drugs/citalopram/affect_blood(mob/living/carbon/M, alien, removed)
 	..()
 
 	M.fear = max((M.fear - 3),0)
+	// Outpost 21 edit begin - calm anxiety
+	M.make_jittery(-2)
+	M.stuttering = max((M.stuttering - 2),0)
+	// Outpost 21 edit end
 
 /datum/reagent/drugs/paroxetine
 	name = REAGENT_PAROXETINE
@@ -301,13 +312,19 @@
 	scannable = SCANNABLE_BENEFICIAL
 	high_message_list = list("Everything feels good, stable.", "You feel grounded.")
 	sober_message_list = list("The stability is gone...", "Everything is much less stable.")
+
+	metabolism = REM * 0.124 // outpost 21 edit - require less a round
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_DRUG
 
-/datum/reagent/drugs/paroxetine/affect_blood(mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/drugs/paroxetine/affect_blood(mob/living/carbon/M, alien, removed)
 	..()
 
 	M.fear = max((M.fear - 6),0)
+	// Outpost 21 edit begin - calm anxiety
+	M.make_jittery(-2)
+	M.stuttering = max((M.stuttering - 2),0)
+	// Outpost 21 edit end
 	if(prob(5) && prob_proc == TRUE)
 		to_chat(M, span_warning("Everything feels out of control..."))
 		M.hallucination += 200
@@ -322,5 +339,16 @@
 	scannable = SCANNABLE_BENEFICIAL
 	high_message_list = list("You feel sluggish...", "You feel calm and collected.")
 	sober_message_list = list("You feel so much more antsy...", "Your concentration wavers.")
+
+	metabolism = REM * 0.02 // outpost 21 edit - require less a round
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_DRUG
+
+// Outpost 21 edit begin - calm anxiety
+/datum/reagent/drugs/qerr_quem/affect_blood(mob/living/carbon/M, alien, removed)
+	..()
+
+	M.fear = max((M.fear - 3),0)
+	M.make_jittery(-2)
+	M.stuttering = max((M.stuttering - 2),0)
+// Outpost 21 edit end

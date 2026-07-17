@@ -44,13 +44,15 @@ GLOBAL_LIST_INIT(spawntypes, populate_spawn_points())
 
 /datum/spawnpoint/arrivals
 	display_name = "Arrivals Shuttle"
-	msg = "will arrive to the station shortly by shuttle"
-	disallow_job = list(JOB_OUTSIDER) //CHOMPEdit add
+	// msg = "will arrive to the station shortly by shuttle"
+	msg = "has arrived on station by shuttle" // Outpost 21 edit
+	disallow_job = list(JOB_STOWAWAY) //CHOMPEdit add // Outpost 21 edit
 
 /datum/spawnpoint/arrivals/New()
 	..()
 	turfs = GLOB.latejoin
 
+/* Outpost 21 edit - Only use ours
 /datum/spawnpoint/gateway
 	display_name = "Gateway"
 	msg = "has completed translation from offsite gateway"
@@ -58,6 +60,8 @@ GLOBAL_LIST_INIT(spawntypes, populate_spawn_points())
 /datum/spawnpoint/gateway/New()
 	..()
 	turfs = GLOB.latejoin_gateway
+*/
+
 /* VOREStation Edit
 /datum/spawnpoint/elevator
 	display_name = "Elevator"
@@ -67,6 +71,7 @@ GLOBAL_LIST_INIT(spawntypes, populate_spawn_points())
 	..()
 	turfs = latejoin_elevator
 */
+/* Outpost 21 edit - Only use ours
 /datum/spawnpoint/cryo
 	display_name = "Cryogenic Storage"
 	msg = "has completed cryogenic revival"
@@ -111,6 +116,7 @@ GLOBAL_LIST_INIT(spawntypes, populate_spawn_points())
 /datum/spawnpoint/tram/New()
 	..()
 	turfs = GLOB.latejoin_tram
+*/
 
 /datum/spawnpoint/vore
 	display_name = "Vorespawn - Prey"

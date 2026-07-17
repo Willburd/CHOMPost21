@@ -1,3 +1,6 @@
+/datum/gear/accessory/webbing_selector
+	cost = 1 //The below added the highercost/special ones to the loadout for 1 point.
+
 /datum/gear/accessory/brown_vest
 	display_name = "webbing, brown"
 	path = /obj/item/clothing/accessory/storage/brown_vest
@@ -31,4 +34,4 @@
 /datum/gear/accessory/holster
 	display_name = "holster selection (Security, CD, HoP)"
 	path = /obj/item/clothing/accessory/holster
-	allowed_roles = list(JOB_SITE_MANAGER,JOB_HEAD_OF_PERSONNEL,JOB_SECURITY_OFFICER,JOB_WARDEN,JOB_HEAD_OF_SECURITY,JOB_DETECTIVE,JOB_PATHFINDER,JOB_EXPLORER)
+	allowed_roles = list(JOB_SITE_MANAGER,JOB_HEAD_OF_PERSONNEL,JOB_SECURITY_OFFICER,JOB_WARDEN,JOB_HEAD_OF_SECURITY,/*JOB_DETECTIVE,*/JOB_PATHFINDER,JOB_EXPLORER) // Outpost 21 edit - Detective is officer now

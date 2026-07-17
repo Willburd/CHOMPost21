@@ -324,12 +324,13 @@
 		/obj/item/capture_crystal/random = 50,
 		/obj/item/perfect_tele = 10,
 		/obj/item/chameleon = 25,
-		/obj/item/gun/energy/sizegun = 25,
-		/obj/item/slow_sizegun = 25,
+		// /obj/item/gun/energy/sizegun = 25, // outpost 21 no easy sizeguns
+		// /obj/item/slow_sizegun = 25, // outpost 21 no easy sizeguns
+		/obj/item/implanter/loyalty, // outpost 21 edit - Kinda evil drops
 		/obj/item/clothing/accessory/collar/shock/bluespace = 25,
 		/obj/item/implant/sizecontrol = 25,
 		/obj/item/clothing/under/hyperfiber/bluespace = 25,
-		/obj/item/nif/authentic = 1,
+		// /obj/item/nif/authentic = 1, Outpost 21 edit - Nif removal
 		/obj/item/toy/bosunwhistle = 50,
 		/obj/item/cell/infinite = 10,
 		/obj/item/cell/void = 15,
@@ -357,7 +358,7 @@
 		/obj/item/clothing/accessory/collar/shock/bluespace = 10,
 		/obj/item/implant/sizecontrol = 10,
 		/obj/item/clothing/under/hyperfiber/bluespace = 10,
-		/obj/item/nif/authentic = 100,
+		// /obj/item/nif/authentic = 100, Outpost 21 edit - Nif removal
 		/obj/item/toy/bosunwhistle = 1,
 		/obj/item/cell/infinite = 20,
 		/obj/item/cell/void = 20,

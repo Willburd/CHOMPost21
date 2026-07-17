@@ -65,7 +65,7 @@
 	total_health = 150 // Larger health pool.
 	burn_mod = 2 // Fire does not mix well with their silicon carapace.
 	toxins_mod = 0.5 // Resistant to toxins.
-	trauma_mod = 0.3 // Highly resistant to pain.
+	pain_mod = 0.3 // Highly resistant to pain.
 	rad_removal_mod = 1.5 // Radiation leaves the body much faster.
 	chem_strength_heal = 0.1 // Acidic blood neutralizes most injected and ingested beneficial chemicals.
 	metabolic_rate = 1.3 // Very physically active species, thus requiring more nutritional intake.
@@ -167,13 +167,13 @@
 		O_PLASMA =   	/obj/item/organ/internal/xenos/plasmavessel/weak, // Less plasma capacity.
 		O_HIVE =     	/obj/item/organ/internal/xenos/hivenode, // Lets them speak Hivemind and open resin doors.
 		O_RESIN =		/obj/item/organ/internal/xenos/resinspinner/weak, // Weaker weed nodes with less spread range.
-		O_EGG =         /obj/item/organ/internal/xenos/eggsac // Fluff organ.
+		O_EGG =         /obj/item/organ/internal/xenos/eggsac, // Fluff organ.
 		)
 
 	var/weeds_plasma_rate = 3 	// Plasma regen. Much lower than actual xenos. Faster on weeds.
 	var/weeds_heal_rate = 0.5   // Health regen on weeds. No healing unless resting.
 
-/datum/species/xenomorph_hybrid/handle_environment_special(var/mob/living/carbon/human/H)
+/datum/species/xenomorph_hybrid/handle_environment_special(mob/living/carbon/human/H)
 
 	var/turf/T = H.loc
 	if(!T) return
@@ -187,7 +187,7 @@
 			P.stored_plasma = min(max(P.stored_plasma,0),P.max_plasma)
 	..()
 
-/datum/species/xenomorph_hybrid/proc/regenerate(var/mob/living/carbon/human/H)
+/datum/species/xenomorph_hybrid/proc/regenerate(mob/living/carbon/human/H)
 	var/heal_rate = weeds_heal_rate
 	var/mend_prob = 10 // Much lower than regular xenos. Bumped from 5 to 10 as medical changes allowed all carbons to passively heal damage after a long delay.
 	if (!H.resting)

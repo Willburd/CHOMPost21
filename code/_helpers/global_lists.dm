@@ -16,7 +16,6 @@ GLOBAL_LIST_EMPTY(cable_list)						//Index for all cables, so that powernets don
 GLOBAL_LIST_EMPTY(landmarks_list)					//list of all landmarks created
 GLOBAL_LIST_EMPTY(event_triggers)					//Associative list of creator_ckey:list(landmark references) for event triggers
 GLOBAL_LIST_EMPTY(surgery_steps)					//list of all surgery steps  |BS12
-GLOBAL_LIST_EMPTY(joblist)							//list of all jobstypes, minus borg and AI
 
 GLOBAL_LIST_EMPTY(mechas_list)						//list of all mechs. Used by hostile mobs target tracking.
 GLOBAL_LIST_EMPTY_TYPED(PDAs, /obj/item/pda)
@@ -117,14 +116,14 @@ GLOBAL_LIST_INIT(string_slot_flags, list(
 ))
 
 GLOBAL_LIST_EMPTY(mannequins)
-/proc/get_mannequin(var/ckey = "NULL")
+/proc/get_mannequin(ckey = "NULL")
 	var/mob/living/carbon/human/dummy/mannequin/M = GLOB.mannequins[ckey]
 	if(!istype(M))
 		GLOB.mannequins[ckey] = new /mob/living/carbon/human/dummy/mannequin(null)
 		M = GLOB.mannequins[ckey]
 	return M
 
-/proc/del_mannequin(var/ckey = "NULL")
+/proc/del_mannequin(ckey = "NULL")
 	GLOB.mannequins-= ckey
 
 //////////////////////////
@@ -172,13 +171,6 @@ GLOBAL_LIST_EMPTY(mannequins)
 		var/datum/surgery_step/S = new T
 		GLOB.surgery_steps += S
 	sort_surgeries()
-
-	//List of job. I can't believe this was calculated multiple times per tick!
-	paths = subtypesof(/datum/job)
-	paths -= GLOB.exclude_jobs
-	for(var/T in paths)
-		var/datum/job/J = new T
-		GLOB.joblist[J.title] = J
 
 	//Languages
 	paths = subtypesof(/datum/language)
@@ -355,7 +347,10 @@ GLOBAL_LIST_INIT(selectable_footstep, list(
 	"Light Claw" = FOOTSTEP_MOB_TESHARI,
 	"Slither" = FOOTSTEP_MOB_SLITHER,
 	"Mech" = FOOTSTEP_MOB_MECHY,
-	"Heavy" = FOOTSTEP_MOB_HEAVY_ALT
+	"Heavy" = FOOTSTEP_MOB_HEAVY,
+	"Heavy Alt" = FOOTSTEP_MOB_HEAVY_ALT,
+	"Slime" = FOOTSTEP_MOB_SLIME,
+
 ))
 
 // Put any artifact effects that are duplicates, unique, or otherwise unwated in here! This prevents them from spawning via RNG.
@@ -446,7 +441,6 @@ GLOBAL_LIST_INIT(reagent_containers_can_be_placed_into, list(
 		/obj/vehicle/train/trolley_tank,
 		/obj/machinery/feeder, //CHOMPedit,
 		/obj/machinery/chemical_synthesizer, //CHOMPedit,
-		/obj/machinery/food_replicator // CHOMPAdd
 	),
 	REAGENT_CONTAINER_CAN_BE_PLACED_INTO_WATERCOOLER = list(
 		/obj/structure/table,
@@ -526,7 +520,7 @@ GLOBAL_LIST_INIT(vr_mob_spawner_options, list(
 	"Cat" = /mob/living/simple_mob/animal/passive/cat,
 	"Fox" = /mob/living/simple_mob/animal/passive/fox,
 	"Cow" = /mob/living/simple_mob/animal/passive/cow,
-	"Dog" = /mob/living/simple_mob/vore/woof,
+	// "Dog" = /mob/living/simple_mob/vore/woof, // Outpost 21 edit - Remove softdogs
 	"Horse" = /mob/living/simple_mob/vore/horse/big,
 	"Hippo" = /mob/living/simple_mob/vore/hippo,
 	"Sheep" = /mob/living/simple_mob/vore/sheep,
@@ -637,8 +631,17 @@ GLOBAL_LIST_INIT(unique_gamma_loot, list(
 	/obj/item/gun/energy/netgun,
 	/obj/item/gun/projectile/pirate, // CHOMPAdd
 	/obj/item/gun/projectile/dartgun,
-	/obj/item/clothing/gloves/black/bloodletter,
-	/obj/item/gun/energy/mouseray/metamorphosis
+	// /obj/item/clothing/gloves/black/bloodletter, // Outpost 21 edit - Removed glove
+	/obj/item/gun/energy/mouseray/metamorphosis,
+	// Outpost 21 edit begin - New loot
+	/obj/item/organ/internal/augment/armmounted/shoulder/blade,
+	/obj/item/organ/internal/augment/armmounted/shoulder/surge,
+	/obj/item/organ/internal/augment/bioaugment/thermalshades,
+	/obj/item/organ/internal/augment/armmounted/hand/sword,
+	/obj/item/organ/internal/augment/armmounted/dartbow,
+	/obj/item/organ/internal/augment/armmounted/apc_connector,
+	/obj/item/tool/crowbar/brace_jack, // Outpost 21 edit(port) - New loot
+	// Outpost 21 edit end
 	))
 
 GLOBAL_LIST_INIT(newscaster_standard_feeds, list(/datum/news_announcement/bluespace_research, /datum/news_announcement/lotus_tree, /datum/news_announcement/random_junk,  /datum/news_announcement/food_riots))
@@ -750,7 +753,7 @@ GLOBAL_LIST_INIT(device_ringtones, list("beep" = 'sound/machines/twobeep.ogg',
 										"boom" = 'sound/effects/explosionfar.ogg',
 										"slip" = 'sound/misc/slip.ogg',
 										"honk" = 'sound/items/bikehorn.ogg',
-										"SKREE" = 'sound/voice/shriek1.ogg',
+										"SKREE" = 'modular_outpost/sound/voice/shriek1.ogg', // Outpost 21 edit - Vox sounds reduced in volume
 										// "holy" = 'sound/items/PDA/ambicha4-short.ogg',
 										"xeno" = 'sound/voice/hiss1.ogg',
 										"dust" = 'sound/effects/supermatter.ogg', // CHOMPEdit
@@ -774,10 +777,10 @@ GLOBAL_LIST_INIT(device_ringtones, list("beep" = 'sound/machines/twobeep.ogg',
 										"squish" = 'sound/effects/slime_squish.ogg',
 										"bubble"= 'sound/effects/bubbles.ogg',
 										"silly" = 'sound/effects/whistle.ogg',
-										// "frog" = 'sound/voice/Croak.ogg',
+										"frog" = 'sound/voice/Croak.ogg', // Outpost 21 edit - Enable
 										"peep" = 'sound/voice/peep.ogg',
 										"quack" = 'sound/voice/quack.ogg',
-										// "ough" = 'sound/misc/ough.ogg',
+										"ough" = 'sound/misc/ough.ogg', // Outpost 21 edit - Enable
 										"stamp" = 'sound/bureaucracy/stamp.ogg',
 										"gnome" = 'sound/items/hooh.ogg',
 										"ratchet" = 'sound/items/Ratchet.ogg',
@@ -836,13 +839,15 @@ GLOBAL_LIST_INIT(home_system_choices, list(
 	"Ue-Orsi Flotilla",
 	"AH-CV Prosperity",
 	"AH-CV Migrant",
-	"Altevian Colony Ship"
+	"Altevian Colony Ship",
+	"Eshui Residential" // Outpost 21 edit
 	))
 
 GLOBAL_LIST_INIT(faction_choices, list(
 	"Sol Central", // CHOMPAdd
 	"NanoTrasen Incorporated",
 	"Hephaestus Industries",
+	"Eshui Incorporated", // Outpost 21 edit
 	"Vey-Medical",
 	"Zeng-Hu Pharmaceuticals",
 	"Ward-Takahashi GMC",
@@ -998,6 +1003,7 @@ GLOBAL_LIST_INIT(xeno2ChemList, list(REAGENT_ID_INAPROVALINE,
 						REAGENT_ID_CONDENSEDCAPSAICIN,
 						REAGENT_ID_NEUROTOXIN))
 
+/* Outpost 21 edit - Use ours
 //keep synced with the defines BE_* in setup.dm --rastaf
 //some autodetection here.
 //Change these to 0 if the equivalent mode is disabled for whatever reason!
@@ -1023,6 +1029,7 @@ GLOBAL_LIST_INIT(special_roles, list(
 	"cursed sword" = 1,									// 18
 	"ship survivor" = 1,								// 19
 ))
+*/
 
 GLOBAL_LIST_INIT(maint_mob_pred_options, list(
 	"Rabbit" = /mob/living/simple_mob/vore/rabbit,
@@ -1138,7 +1145,7 @@ GLOBAL_LIST_INIT(tube_dir_list, list(
 
 GLOBAL_LIST_EMPTY(direction_table)
 
-GLOBAL_LIST_INIT(valid_bloodreagents, list("default",REAGENT_ID_IRON,REAGENT_ID_COPPER,REAGENT_ID_PHORON,REAGENT_ID_SILVER,REAGENT_ID_GOLD,REAGENT_ID_SLIMEJELLY))	//allowlist-based so people don't make their blood restored by alcohol or something really silly. use reagent IDs!
+GLOBAL_LIST_INIT(valid_bloodreagents, list("default",REAGENT_ID_IRON,REAGENT_ID_COPPER,REAGENT_ID_PHORON,REAGENT_ID_SILVER,REAGENT_ID_GOLD,REAGENT_ID_SLIMEJELLY,REAGENT_ID_PHOSPHORUS))	//allowlist-based so people don't make their blood restored by alcohol or something really silly. use reagent IDs! // Outpost 21 edit - Canon expi blood
 
 GLOBAL_LIST_EMPTY(monitor_states)
 
@@ -1226,9 +1233,9 @@ GLOBAL_LIST_EMPTY(entopic_users)
 
 GLOBAL_LIST_EMPTY(alt_farmanimals)
 
-GLOBAL_LIST_EMPTY(acceptable_items) // List of the items you can put in
-GLOBAL_LIST_EMPTY(available_recipes) // List of the recipes you can use
-GLOBAL_LIST_EMPTY(acceptable_reagents) // List of the reagents you can put in
+GLOBAL_ALIST_INIT(available_recipes, build_kitchen_recipes()) //List of all recipies. THIS MUST COME FIRST before acceptable_items and acceptable_reagents because it is used to build those lists.
+GLOBAL_LIST_INIT(acceptable_items, build_kitchen_items()) // List of the items you can put in
+GLOBAL_LIST_INIT(acceptable_reagents, build_kitchen_reagents()) // List of the reagents you can put in
 
 
 GLOBAL_LIST_INIT(all_ui_styles, list(
@@ -1297,9 +1304,9 @@ GLOBAL_LIST_INIT(description_icons, list(
 	"stunbaton" = image(icon='icons/obj/weapons.dmi',icon_state="stunbaton_active"),
 	"slimebaton" = image(icon='icons/obj/weapons.dmi',icon_state="slimebaton_active"),
 
-	"power cell" = image(icon='icons/obj/power.dmi',icon_state="hcell"),
-	"device cell" = image(icon='icons/obj/power.dmi',icon_state="dcell"),
-	"weapon cell" = image(icon='icons/obj/power.dmi',icon_state="wcell"),
+	"power cell" = image(icon='icons/obj/power_cells.dmi',icon_state="b_st"), //CHOMPEdit
+	"device cell" = image(icon='icons/obj/power_cells.dmi',icon_state="m_st"), //CHOMPEdit
+	"weapon cell" = image(icon='icons/obj/power_cells.dmi',icon_state="m_sup"), //CHOMPEdit
 
 	"hatchet" = image(icon='icons/obj/weapons.dmi',icon_state="hatchet"),
 	))
@@ -1528,6 +1535,13 @@ GLOBAL_LIST_INIT(sheet_reagents, list( //have a number of reagents divisible by 
 	))
 
 GLOBAL_LIST_INIT(ore_reagents, list( //have a number of reageents divisible by REAGENTS_PER_ORE (default 20) unless you like decimals.
+	/obj/item/ore/copper = list(REAGENT_ID_COPPER),
+	/obj/item/ore/tin = list(REAGENT_ID_TIN),
+	/obj/item/ore/void_opal = list(REAGENT_ID_SILICON,REAGENT_ID_SILICON,REAGENT_ID_OXYGEN,REAGENT_ID_WATER),
+	/obj/item/ore/painite = list(REAGENT_ID_CALCIUM,REAGENT_ID_ALUMINIUM,REAGENT_ID_OXYGEN,REAGENT_ID_OXYGEN),
+	/obj/item/ore/quartz = list(REAGENT_ID_SILICON,REAGENT_ID_OXYGEN),
+	/obj/item/ore/bauxite = list(REAGENT_ID_ALUMINIUM,REAGENT_ID_ALUMINIUM),
+	// Original grinder
 	/obj/item/ore/glass = list(REAGENT_ID_SILICON),
 	/obj/item/ore/iron = list(REAGENT_ID_IRON),
 	/obj/item/ore/coal = list(REAGENT_ID_CARBON),

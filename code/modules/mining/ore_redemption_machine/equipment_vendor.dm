@@ -27,7 +27,8 @@
 		else
 			QDEL_NULL(inserted_id)
 	for(var/key, value in prize_list)
-		QDEL_NULL_LIST(value)
+		var/list/item_list = value
+		QDEL_LIST_ASSOC_VAL(item_list)
 	. = ..()
 
 /datum/data/mining_equipment
@@ -68,7 +69,7 @@
 		EQUIPMENT("Jump Boots",									/obj/item/clothing/shoes/bhop,								2500),
 		EQUIPMENT("Mini-Translocator",							/obj/item/perfect_tele/one_beacon,							1200),
 		EQUIPMENT("Survival Equipment - Insulated Poncho",		/obj/random/thermalponcho,									750),
-		EQUIPMENT("Mining Satchel of Holding",					/obj/item/storage/bag/ore/holding,							1500),
+		EQUIPMENT("Mining Satchel of Holding",					/obj/item/ore_bag/holding,							1500),
 		EQUIPMENT("Industrial Equipment - Sheet-Snatcher",		/obj/item/storage/bag/sheetsnatcher,						500),
 		EQUIPMENT("Sheet Snatcher of Holding",					/obj/item/storage/bag/sheetsnatcher/holding,				1000),
 		EQUIPMENT("Advanced Ore Scanner",						/obj/item/mining_scanner/advanced,							500),
@@ -112,7 +113,7 @@
 		EQUIPMENT("Archeology Equipment - Chisels",				/obj/item/storage/excavation,								500),
 		EQUIPMENT("Archeology Equipment - Scanner",				/obj/item/depth_scanner,									1000), // They can get a basic scanner for archeology, but not the anomaly scanner. Keeps job stealing at a minimum while also allowing miners to excavate any cool rocks they come across.
 		EQUIPMENT("Fine Excavation Kit - Measuring Tape",		/obj/item/measuring_tape,									125),
-		EQUIPMENT("Explosive Excavation Kit - Plastic Charge",	/obj/item/plastique/seismic/locked,							1500),
+		EQUIPMENT("Explosive Excavation Kit - Plastic Charge",	/obj/item/plastique/seismic,								1500), // Outpost 21 edit - Unlocked seismic charge
 		EQUIPMENT("Industrial Equipment - Phoron Bore",			/obj/item/gun/magnetic/matfed/phoronbore/loaded,			3000),
 		EQUIPMENT("Industrial Equipment - Inducer",				/obj/item/inducer,											3500),
 	)
@@ -149,8 +150,10 @@
 	prize_list["Miscellaneous"] = list(
 		EQUIPMENT(REAGENT_ABSINTHE,				/obj/item/reagent_containers/food/drinks/bottle/absinthe,					125),
 		EQUIPMENT("Cigar",						/obj/item/clothing/mask/smokable/cigarette/cigar/havana,					150),
+		/* Outpost 21 edit - Removed modular computers
 		EQUIPMENT("Digital Tablet - Standard",	/obj/item/modular_computer/tablet/preset/custom_loadout/standard,			500),
 		EQUIPMENT("Digital Tablet - Advanced",	/obj/item/modular_computer/tablet/preset/custom_loadout/advanced,			1000),
+		*/
 		EQUIPMENT("Laser Pointer",				/obj/item/laser_pointer,													900),
 		EQUIPMENT("Plush Toy",					/obj/random/plushie,														300),
 		EQUIPMENT("Soap",						/obj/item/soap/nanotrasen,													200),
@@ -275,9 +278,9 @@
 				return
 
 			remove_points(inserted_id, prize.cost)
-			var/obj/item/I = new prize.equipment_path(loc)
-			if(isitem(I))
-				I.persist_storable = FALSE
+			// Outpost 21 edit begin - Let players keep their prizes, at least until security takes them away.
+			new prize.equipment_path(loc)
+			// Outpost 21 edit end
 			flick(icon_vend, src)
 		else
 			flick(icon_deny, src)
@@ -387,7 +390,7 @@
 			new_card.mine_points = 1000
 	qdel(voucher)
 
-/obj/machinery/mineral/equipment_vendor/proc/new_prize(var/name, var/path, var/cost) // Generic proc for adding new entries. Good for abusing for FUN and PROFIT.
+/obj/machinery/mineral/equipment_vendor/proc/new_prize(name, path, cost) // Generic proc for adding new entries. Good for abusing for FUN and PROFIT.
 	if(!cost)
 		cost = 100
 	if(!path)

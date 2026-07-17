@@ -135,9 +135,11 @@ FIRE ALARM
 	return alarm()
 
 /obj/machinery/firealarm/emp_act(severity, recursive)
+	. = ..()
+	if (. & EMP_PROTECT_SELF)
+		return
 	if(prob(50 / severity))
 		alarm(rand(30 / severity, 60 / severity))
-	..()
 
 /obj/machinery/firealarm/attackby(obj/item/W as obj, mob/user as mob)
 	add_fingerprint(user)
@@ -216,6 +218,7 @@ FIRE ALARM
 	if(!(working))
 		return
 	var/area/area = get_area(src)
+	area.fire_supression_set(FALSE) // Outpost 21 edit(port) - Fire supression
 	for(var/obj/machinery/firealarm/FA in area)
 		GLOB.fire_alarm.clearAlarm(src.loc, FA)
 		FA.soundloop.stop() // CHOMPEdit: Soundloop
@@ -224,11 +227,12 @@ FIRE ALARM
 	if(user)
 		log_game("[user] reset a fire alarm at [COORD(src)]")
 
-/obj/machinery/firealarm/proc/alarm(var/duration = 0, mob/user)
+/obj/machinery/firealarm/proc/alarm(duration = 0, mob/user)
 	if(!(working))
 		return
 	var/area/area = get_area(src)
-	if(!firewarn && !alarms_hidden) // CHOMPAdd
+	area.fire_supression_set(TRUE) // Outpost 21 edit(port) - Fire supression
+	if(!user && !firewarn && !alarms_hidden) // CHOMPAdd
 		GLOB.global_announcer.autosay("Tripped [area]", "Fire Alarm Monitor", DEPARTMENT_ENGINEERING)
 	for(var/obj/machinery/firealarm/FA in area)
 		GLOB.fire_alarm.triggerAlarm(loc, FA, duration, hidden = alarms_hidden)
@@ -239,7 +243,7 @@ FIRE ALARM
 	if(user)
 		log_game("[user] triggered a fire alarm at [COORD(src)]")
 
-/obj/machinery/firealarm/proc/set_security_level(var/newlevel)
+/obj/machinery/firealarm/proc/set_security_level(newlevel)
 	if(seclevel != newlevel)
 		seclevel = newlevel
 		update_icon()

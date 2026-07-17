@@ -1,0 +1,2177 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"ac" = (
+/obj/structure/table/reinforced,
+/obj/machinery/recharger,
+/obj/effect/floor_decal/corner/orange/full{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/cave_red_A)
+"ay" = (
+/turf/template_noop,
+/area/mine/explored/muriki/cave/deepdark)
+"aJ" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/floor_decal/corner/orange{
+	dir = 9
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/submap/outpost21/cave_red_A)
+"bk" = (
+/turf/simulated/wall/r_wall,
+/area/submap/outpost21/cave_red_A)
+"bo" = (
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/cave_red_A)
+"bR" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 5
+	},
+/obj/item/geiger/wall/north,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/cave_red_A)
+"bX" = (
+/obj/effect/landmark{
+	name = "badbody"
+	},
+/turf/simulated/floor/flesh,
+/area/submap/outpost21/cave_red_A)
+"ce" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/submap/outpost21/cave_red_A)
+"cs" = (
+/obj/effect/floor_decal/industrial/warning,
+/obj/machinery/door/airlock/glass_engineering{
+	name = "Engineering Hallway"
+	},
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/tiled/steel_grid,
+/area/submap/outpost21/cave_red_A)
+"cy" = (
+/obj/structure/sign/nosmoking_2,
+/turf/simulated/wall,
+/area/submap/outpost21/cave_red_A)
+"cB" = (
+/obj/effect/floor_decal/industrial/warning,
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/cave_red_A)
+"dv" = (
+/obj/structure/window/reinforced,
+/obj/structure/closet/secure_closet/personal,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/cave_red_A)
+"dB" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/orange/border{
+	dir = 9
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/machinery/vending/wallmed1/public{
+	pixel_y = 32
+	},
+/obj/machinery/recharge_station,
+/turf/simulated/floor/tiled,
+/area/submap/outpost21/cave_red_A)
+"dX" = (
+/obj/effect/floor_decal/borderfloor/corner,
+/obj/effect/floor_decal/industrial/danger/corner,
+/turf/simulated/floor/tiled,
+/area/submap/outpost21/cave_red_A)
+"eX" = (
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/closet/secure_closet/personal,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/cave_red_A)
+"fB" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/submap/outpost21/cave_red_A)
+"ga" = (
+/obj/effect/floor_decal/corner/orange/border{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/submap/outpost21/cave_red_A)
+"hr" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/cave_red_A)
+"hB" = (
+/obj/structure/grille,
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/window/basic/full,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/cave_red_A)
+"hF" = (
+/obj/effect/floor_decal/corner/orange,
+/turf/simulated/floor/tiled,
+/area/submap/outpost21/cave_red_A)
+"hN" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 8
+	},
+/obj/effect/landmark/redspacemonsterspawn,
+/turf/simulated/floor/tiled,
+/area/submap/outpost21/cave_red_A)
+"hS" = (
+/turf/simulated/floor/tiled,
+/area/submap/outpost21/cave_red_A)
+"im" = (
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 25
+	},
+/obj/effect/floor_decal/corner/orange{
+	dir = 6
+	},
+/turf/simulated/floor/tiled,
+/area/submap/outpost21/cave_red_A)
+"is" = (
+/obj/structure/bed/chair/office/dark{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/cave_red_A)
+"iC" = (
+/turf/simulated/mineral/alt/ignore_mapgen,
+/area/mine/explored/muriki/cave/deepdark)
+"jb" = (
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/cave_red_A)
+"jl" = (
+/turf/simulated/floor/tiled/yellow,
+/area/submap/outpost21/cave_red_A)
+"kH" = (
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/closet/secure_closet/personal,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/cave_red_A)
+"lf" = (
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/closet,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/cave_red_A)
+"lk" = (
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/glass_engineeringatmos{
+	name = "Engineering Locker Room";
+	req_one_access = list(10)
+	},
+/turf/simulated/floor/tiled/steel_ridged,
+/area/submap/outpost21/cave_red_A)
+"ll" = (
+/obj/structure/grille,
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/window/basic/full,
+/obj/structure/sign/department/ass,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/cave_red_A)
+"lK" = (
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 1
+	},
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/orange/bordercorner{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/orange/bordercorner{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/submap/outpost21/cave_red_A)
+"lO" = (
+/obj/effect/floor_decal/industrial/warning,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/grille,
+/turf/simulated/floor,
+/area/submap/outpost21/cave_red_A)
+"lS" = (
+/obj/structure/closet/secure_closet/engineering_personal,
+/obj/item/gps/engineering,
+/obj/item/gps/engineering,
+/turf/simulated/floor/tiled/yellow,
+/area/submap/outpost21/cave_red_A)
+"lW" = (
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/orange/bordercorner{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/submap/outpost21/cave_red_A)
+"mm" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/cave_red_A)
+"mT" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/landmark/redspacemonsterspawn,
+/turf/simulated/floor/tiled,
+/area/submap/outpost21/cave_red_A)
+"mU" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 6
+	},
+/obj/machinery/elevator_warning,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/cave_red_A)
+"nQ" = (
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/industrial/danger,
+/obj/structure/salvageable/console{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/submap/outpost21/cave_red_A)
+"oe" = (
+/obj/structure/reagent_dispensers/watertank/high,
+/obj/effect/floor_decal/milspec/color/orange/half,
+/obj/machinery/light,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/cave_red_A)
+"oH" = (
+/obj/item/assembly/mousetrap/armed,
+/turf/simulated/floor/flesh,
+/area/submap/outpost21/cave_red_A)
+"oK" = (
+/obj/structure/table/reinforced,
+/obj/item/stack/material/glass{
+	amount = 50
+	},
+/obj/item/stack/material/glass{
+	amount = 50
+	},
+/obj/item/stack/material/glass{
+	amount = 50
+	},
+/obj/item/stack/material/glass{
+	amount = 50
+	},
+/obj/item/stack/material/glass/phoronrglass{
+	amount = 20
+	},
+/obj/item/stack/material/glass/phoronrglass{
+	amount = 20
+	},
+/obj/effect/floor_decal/milspec/color/orange/half{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/cave_red_A)
+"oV" = (
+/obj/structure/closet/secure_closet/atmos_personal,
+/obj/item/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = 21
+	},
+/obj/item/gps/engineering,
+/obj/item/gps/engineering,
+/turf/simulated/floor/tiled/yellow,
+/area/submap/outpost21/cave_red_A)
+"pj" = (
+/obj/structure/salvageable/autolathe,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/cave_red_A)
+"pm" = (
+/obj/item/geiger/wall/south,
+/turf/simulated/floor/flesh,
+/area/submap/outpost21/cave_red_A)
+"py" = (
+/obj/machinery/disposal,
+/obj/effect/floor_decal/milspec/color/orange/half{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/cave_red_A)
+"pG" = (
+/obj/machinery/vending/engineering,
+/obj/effect/floor_decal/milspec/color/orange/half{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/cave_red_A)
+"qv" = (
+/turf/simulated/floor/flesh,
+/area/submap/outpost21/cave_red_A)
+"qD" = (
+/obj/effect/floor_decal/corner/orange,
+/obj/effect/landmark{
+	name = "badbody"
+	},
+/turf/simulated/floor/tiled,
+/area/submap/outpost21/cave_red_A)
+"qI" = (
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/industrial/danger,
+/obj/structure/bed/chair/sofa/bench/left,
+/turf/simulated/floor/tiled,
+/area/submap/outpost21/cave_red_A)
+"qM" = (
+/obj/structure/grille,
+/obj/structure/window/basic/full,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/cave_red_A)
+"qV" = (
+/obj/structure/table/reinforced,
+/obj/effect/floor_decal/corner/orange{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/cave_red_A)
+"rr" = (
+/obj/structure/closet/secure_closet/engineering_personal,
+/obj/item/gps/engineering,
+/obj/item/gps/engineering,
+/obj/machinery/doorbell_chime{
+	id_tag = "engdinger";
+	name = "Engineering Dinger";
+	pixel_x = -30
+	},
+/turf/simulated/floor/tiled/yellow,
+/area/submap/outpost21/cave_red_A)
+"rw" = (
+/obj/effect/floor_decal/corner/orange/full{
+	dir = 8
+	},
+/obj/structure/salvageable/console,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/cave_red_A)
+"sw" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 9
+	},
+/obj/effect/floor_decal/eshui/emblem/eshui_l,
+/turf/simulated/floor/tiled,
+/area/submap/outpost21/cave_red_A)
+"sI" = (
+/obj/structure/table/reinforced,
+/obj/effect/floor_decal/corner/orange{
+	dir = 10
+	},
+/obj/item/reagent_containers/spray/cleaner,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/cave_red_A)
+"sU" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/orange/border{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled,
+/area/submap/outpost21/cave_red_A)
+"ta" = (
+/obj/structure/table/reinforced,
+/obj/item/storage/firstaid/regular,
+/obj/item/bodybag/cryobag{
+	pixel_x = 6
+	},
+/obj/random/medical/lite,
+/turf/simulated/floor/tiled/yellow,
+/area/submap/outpost21/cave_red_A)
+"to" = (
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled,
+/area/submap/outpost21/cave_red_A)
+"tt" = (
+/obj/machinery/door/blast/gate/open{
+	dir = 2;
+	id = "englockdown";
+	name = "Engineering Lockdown"
+	},
+/obj/machinery/door/firedoor/glass/hidden{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/submap/outpost21/cave_red_A)
+"tO" = (
+/obj/machinery/floodlight,
+/obj/effect/floor_decal/milspec/color/orange/half{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/cave_red_A)
+"tQ" = (
+/obj/structure/grille,
+/obj/structure/window/basic/full,
+/obj/machinery/door/blast/gate/open{
+	dir = 2;
+	id = "englockdown";
+	name = "Engineering Lockdown"
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/cave_red_A)
+"ui" = (
+/obj/structure/table/reinforced,
+/obj/item/radio/off{
+	pixel_y = 6
+	},
+/obj/item/radio/off{
+	pixel_x = 6;
+	pixel_y = 4
+	},
+/obj/item/radio/off{
+	pixel_x = -6;
+	pixel_y = 4
+	},
+/obj/item/radio/off,
+/obj/item/reagent_containers/spray/cleaner,
+/obj/effect/floor_decal/milspec/color/orange/half{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/cave_red_A)
+"uj" = (
+/obj/machinery/vending/assist,
+/obj/effect/floor_decal/milspec/color/orange/half{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/cave_red_A)
+"us" = (
+/obj/structure/closet,
+/turf/simulated/floor/tiled/yellow,
+/area/submap/outpost21/cave_red_A)
+"ut" = (
+/obj/machinery/vending/tool,
+/obj/effect/floor_decal/milspec/color/orange/half{
+	dir = 1
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/cave_red_A)
+"uD" = (
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/flesh,
+/area/submap/outpost21/cave_red_A)
+"uZ" = (
+/obj/item/taperoll/engineering,
+/obj/item/taperoll/engineering,
+/obj/item/taperoll/engineering,
+/obj/structure/table/reinforced,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/cave_red_A)
+"vR" = (
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/industrial/danger,
+/turf/simulated/floor/tiled,
+/area/submap/outpost21/cave_red_A)
+"yf" = (
+/obj/machinery/door/blast/gate/open{
+	dir = 8;
+	id = "englockdown";
+	name = "Engineering Lockdown"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/submap/outpost21/cave_red_A)
+"yg" = (
+/obj/effect/floor_decal/industrial/warning,
+/obj/effect/landmark{
+	name = "badbody"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/cave_red_A)
+"yx" = (
+/obj/structure/bed/chair/sofa/bench,
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/industrial/danger,
+/turf/simulated/floor/tiled,
+/area/submap/outpost21/cave_red_A)
+"yV" = (
+/obj/machinery/hologram/holopad,
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/orange/border{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/submap/outpost21/cave_red_A)
+"zx" = (
+/turf/simulated/flesh,
+/area/submap/outpost21/cave_red_A)
+"zC" = (
+/obj/structure/sign/directions/evac,
+/obj/structure/sign/directions/tram{
+	pixel_y = -6
+	},
+/turf/simulated/wall,
+/area/submap/outpost21/cave_red_A)
+"zY" = (
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/cave_red_A)
+"Ag" = (
+/obj/structure/closet/secure_closet/atmos_personal,
+/obj/item/gps/engineering,
+/obj/item/gps/engineering,
+/turf/simulated/floor/tiled/yellow,
+/area/submap/outpost21/cave_red_A)
+"AJ" = (
+/obj/item/geiger/wall/north,
+/turf/simulated/floor/tiled/yellow,
+/area/submap/outpost21/cave_red_A)
+"AS" = (
+/obj/machinery/door/airlock{
+	id_tag = "eng_lobby_latrine";
+	name = "Single Occupant Latrine"
+	},
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/tiled/steel_ridged,
+/area/submap/outpost21/cave_red_A)
+"AX" = (
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/industrial/danger,
+/obj/structure/bed/chair/sofa/bench/right,
+/turf/simulated/floor/tiled,
+/area/submap/outpost21/cave_red_A)
+"Be" = (
+/turf/simulated/mineral/alt/ignore_mapgen,
+/area/submap/outpost21/cave_red_A)
+"Bj" = (
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/closet/secure_closet/personal,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/cave_red_A)
+"BS" = (
+/obj/structure/table/standard,
+/obj/structure/bedsheetbin,
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/item/soap/nanotrasen,
+/obj/random/soap,
+/obj/effect/floor_decal/corner/orange/border{
+	dir = 10
+	},
+/obj/item/towel/random,
+/obj/item/towel/random,
+/turf/simulated/floor/tiled/kafel_full,
+/area/submap/outpost21/cave_red_A)
+"BU" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 6
+	},
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/effect/floor_decal/eshui/emblem/eshui_r,
+/turf/simulated/floor/tiled,
+/area/submap/outpost21/cave_red_A)
+"Cw" = (
+/obj/structure/reagent_dispensers/fueltank/high,
+/obj/effect/floor_decal/milspec/color/orange/half{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/cave_red_A)
+"CH" = (
+/obj/item/hand_labeler,
+/obj/item/tape_roll,
+/obj/item/clipboard,
+/obj/item/folder/yellow,
+/obj/structure/table/reinforced,
+/obj/effect/floor_decal/corner/orange{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/cave_red_A)
+"Dc" = (
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/industrial/danger,
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/flesh,
+/area/submap/outpost21/cave_red_A)
+"Df" = (
+/obj/structure/reagent_dispensers/foam,
+/obj/effect/floor_decal/milspec/color/orange/half,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/cave_red_A)
+"Di" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/orange/border{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/submap/outpost21/cave_red_A)
+"Du" = (
+/turf/template_noop,
+/area/template_noop)
+"DJ" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 10
+	},
+/obj/item/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -21
+	},
+/turf/simulated/floor/tiled,
+/area/submap/outpost21/cave_red_A)
+"DL" = (
+/obj/effect/landmark/redspacemonsterspawn,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/cave_red_A)
+"DN" = (
+/obj/item/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -21
+	},
+/turf/simulated/floor/flesh,
+/area/submap/outpost21/cave_red_A)
+"DQ" = (
+/obj/item/geiger/wall/north,
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/orange/border{
+	dir = 1
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/submap/outpost21/cave_red_A)
+"DW" = (
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/orange/bordercorner{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/submap/outpost21/cave_red_A)
+"EM" = (
+/obj/machinery/door/flesh,
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/cave_red_A)
+"EO" = (
+/obj/machinery/disposal,
+/obj/effect/floor_decal/corner/orange/full{
+	dir = 1
+	},
+/obj/machinery/requests_console/preset/engineering{
+	pixel_x = 2;
+	pixel_y = 30
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/cave_red_A)
+"Fg" = (
+/turf/simulated/wall,
+/area/submap/outpost21/cave_red_A)
+"Fh" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/cave_red_A)
+"FM" = (
+/obj/structure/table/reinforced,
+/obj/machinery/doorbell_chime{
+	id_tag = "engdinger";
+	name = "Engineering Dinger";
+	pixel_x = -30
+	},
+/obj/effect/floor_decal/milspec/color/orange/half{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/cave_red_A)
+"FS" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 10
+	},
+/obj/machinery/light,
+/turf/simulated/floor/tiled,
+/area/submap/outpost21/cave_red_A)
+"GC" = (
+/obj/effect/floor_decal/milspec/color/orange/half{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/cave_red_A)
+"GL" = (
+/obj/structure/sign/department/eng{
+	pixel_x = 5
+	},
+/turf/simulated/wall/r_wall,
+/area/submap/outpost21/cave_red_A)
+"GN" = (
+/obj/effect/floor_decal/industrial/warning/corner,
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/cave_red_A)
+"GT" = (
+/obj/structure/railing,
+/obj/effect/floor_decal/corner/orange{
+	dir = 6
+	},
+/obj/machinery/disposal,
+/turf/simulated/floor/tiled,
+/area/submap/outpost21/cave_red_A)
+"Ha" = (
+/obj/structure/table/reinforced,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/cave_red_A)
+"HL" = (
+/obj/structure/grille,
+/obj/structure/window/basic/full,
+/obj/machinery/door/blast/gate/open{
+	dir = 4;
+	id = "englockdown";
+	name = "Engineering Lockdown"
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/cave_red_A)
+"HR" = (
+/obj/structure/closet/secure_closet/engineering_personal,
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/item/gps/engineering,
+/obj/item/gps/engineering,
+/turf/simulated/floor/tiled/yellow,
+/area/submap/outpost21/cave_red_A)
+"IH" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 10
+	},
+/obj/machinery/holoposter{
+	dir = 1;
+	pixel_y = -32
+	},
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled,
+/area/submap/outpost21/cave_red_A)
+"IV" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 5
+	},
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled/steel_grid,
+/area/submap/outpost21/cave_red_A)
+"Jf" = (
+/obj/machinery/door/blast/gate/open{
+	dir = 2;
+	id = "englockdown";
+	name = "Engineering Lockdown"
+	},
+/obj/machinery/door/firedoor/glass/hidden{
+	dir = 1
+	},
+/obj/machinery/doorbell_chime{
+	id_tag = "engdinger";
+	name = "Engineering Dinger";
+	pixel_x = -30
+	},
+/turf/simulated/floor/tiled/dark,
+/area/submap/outpost21/cave_red_A)
+"Jh" = (
+/obj/effect/floor_decal/milspec/color/orange/half{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/cave_red_A)
+"Jk" = (
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled/yellow,
+/area/submap/outpost21/cave_red_A)
+"JH" = (
+/obj/machinery/door/flesh,
+/turf/simulated/floor/tiled/techmaint,
+/area/mine/explored/muriki/cave/deepdark)
+"Ka" = (
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/cave_red_A)
+"Kg" = (
+/obj/effect/floor_decal/industrial/warning,
+/obj/machinery/door/airlock/glass_engineering{
+	name = "Engineering Hallway"
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/submap/outpost21/cave_red_A)
+"Kw" = (
+/obj/effect/floor_decal/corner/orange/full,
+/obj/structure/salvageable/console{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/cave_red_A)
+"KZ" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 10
+	},
+/turf/simulated/floor/tiled,
+/area/submap/outpost21/cave_red_A)
+"LM" = (
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/danger/corner{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/submap/outpost21/cave_red_A)
+"LQ" = (
+/obj/random/tech_supply,
+/obj/random/tech_supply,
+/obj/random/tech_supply,
+/obj/structure/table/reinforced,
+/obj/effect/floor_decal/milspec/color/orange/half{
+	dir = 4
+	},
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/cave_red_A)
+"LX" = (
+/obj/machinery/door/firedoor/border_only,
+/turf/simulated/floor/tiled/steel_grid,
+/area/submap/outpost21/cave_red_A)
+"Mf" = (
+/obj/effect/catwalk_plated,
+/turf/simulated/floor/flesh,
+/area/submap/outpost21/cave_red_A)
+"ME" = (
+/obj/structure/bed/chair/office/dark,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/cave_red_A)
+"MI" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 10
+	},
+/obj/structure/salvageable/console{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/cave_red_A)
+"MX" = (
+/obj/effect/catwalk_plated/dark,
+/turf/simulated/floor/flesh,
+/area/submap/outpost21/cave_red_A)
+"Nd" = (
+/obj/effect/floor_decal/borderfloor/corner,
+/obj/effect/floor_decal/industrial/danger/corner,
+/obj/effect/landmark{
+	name = "badbody"
+	},
+/turf/simulated/floor/tiled,
+/area/submap/outpost21/cave_red_A)
+"Nz" = (
+/turf/simulated/floor/tiled/kafel_full,
+/area/submap/outpost21/cave_red_A)
+"NY" = (
+/obj/structure/table/reinforced,
+/obj/item/stack/material/plastic{
+	amount = 50
+	},
+/obj/item/stack/material/plastic{
+	amount = 50
+	},
+/obj/item/stack/material/plasteel{
+	amount = 10
+	},
+/obj/item/stack/material/plasteel{
+	amount = 10
+	},
+/obj/item/stack/material/plasteel{
+	amount = 10
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/cave_red_A)
+"Oi" = (
+/turf/simulated/floor/flesh,
+/area/mine/explored/muriki/cave/deepdark)
+"Oy" = (
+/obj/machinery/smartfridge/sheets{
+	description_info = "Materials stored in here will not last in-between rounds";
+	name = "\improper temporary Smart Sheet Storage"
+	},
+/obj/effect/floor_decal/milspec/color/orange/half{
+	dir = 1
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/cave_red_A)
+"OS" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 6
+	},
+/turf/simulated/floor/tiled,
+/area/submap/outpost21/cave_red_A)
+"Pi" = (
+/obj/structure/bed/chair/office/dark,
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/cave_red_A)
+"PQ" = (
+/obj/effect/floor_decal/eshui/emblem/eshui_c,
+/turf/simulated/floor/tiled,
+/area/submap/outpost21/cave_red_A)
+"Qb" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/submap/outpost21/cave_red_A)
+"Qk" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 5
+	},
+/obj/structure/salvageable/console,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/cave_red_A)
+"Qn" = (
+/obj/structure/sign/department/atmos,
+/turf/simulated/wall,
+/area/submap/outpost21/cave_red_A)
+"Qr" = (
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/closet,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/cave_red_A)
+"Re" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/machinery/door/airlock/engineering{
+	name = "Engineering Latrine"
+	},
+/turf/simulated/floor/tiled/steel_ridged,
+/area/submap/outpost21/cave_red_A)
+"RD" = (
+/obj/machinery/door/window/westleft{
+	dir = 4;
+	name = "Engineering Reception Desk";
+	req_access = list(10);
+	req_one_access = newlist()
+	},
+/obj/machinery/door/blast/gate/open{
+	dir = 4;
+	id = "englockdown";
+	name = "Engineering Lockdown"
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/submap/outpost21/cave_red_A)
+"Sb" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 10
+	},
+/obj/machinery/holoposter{
+	dir = 1;
+	pixel_y = -32
+	},
+/turf/simulated/floor/tiled,
+/area/submap/outpost21/cave_red_A)
+"Tz" = (
+/obj/structure/urinal{
+	pixel_y = 32
+	},
+/obj/structure/window/reinforced/tinted/frosted{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/orange/border{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/submap/outpost21/cave_red_A)
+"Ws" = (
+/turf/simulated/flesh,
+/area/mine/explored/muriki/cave/deepdark)
+"WC" = (
+/obj/effect/floor_decal/milspec/color/orange/half{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/cave_red_A)
+"WM" = (
+/obj/structure/table/reinforced,
+/obj/item/paper_bin,
+/obj/item/pen/red,
+/obj/item/pen/blue{
+	pixel_x = 4;
+	pixel_y = 4
+	},
+/obj/effect/floor_decal/corner/orange{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/cave_red_A)
+"Xq" = (
+/obj/effect/floor_decal/corner/orange/border{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled/kafel_full,
+/area/submap/outpost21/cave_red_A)
+"Xs" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/orange/border{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/submap/outpost21/cave_red_A)
+"XP" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/submap/outpost21/cave_red_A)
+"XR" = (
+/obj/effect/floor_decal/milspec/color/orange/half{
+	dir = 5
+	},
+/obj/machinery/partslathe,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/cave_red_A)
+"XX" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 9
+	},
+/turf/simulated/floor/tiled,
+/area/submap/outpost21/cave_red_A)
+"Yc" = (
+/obj/structure/table/reinforced,
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/rods{
+	amount = 50
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/cave_red_A)
+"Ye" = (
+/obj/structure/table/reinforced,
+/obj/machinery/recharger{
+	pixel_x = -6;
+	pixel_y = 4
+	},
+/obj/machinery/recharger{
+	pixel_x = 6;
+	pixel_y = 4
+	},
+/obj/effect/floor_decal/milspec/color/orange/half{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/cave_red_A)
+"Yp" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 5
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/item/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 21
+	},
+/obj/structure/salvageable/console,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/cave_red_A)
+"YB" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/orange/border{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/submap/outpost21/cave_red_A)
+"YV" = (
+/obj/structure/railing,
+/obj/structure/catwalk,
+/turf/simulated/floor/flesh,
+/area/submap/outpost21/cave_red_A)
+"Zk" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/orange/border{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/submap/outpost21/cave_red_A)
+"Zn" = (
+/obj/effect/floor_decal/industrial/warning,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/cave_red_A)
+"ZJ" = (
+/obj/structure/table/reinforced,
+/obj/effect/floor_decal/milspec/color/orange/half{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/cave_red_A)
+"ZN" = (
+/obj/machinery/door/blast/gate/open{
+	dir = 8;
+	id = "englockdown";
+	name = "Engineering Lockdown"
+	},
+/turf/simulated/floor/flesh,
+/area/submap/outpost21/cave_red_A)
+"ZO" = (
+/obj/structure/extinguisher_cabinet{
+	dir = 4;
+	pixel_x = -30
+	},
+/obj/effect/floor_decal/milspec/color/orange/half{
+	dir = 8
+	},
+/obj/item/storage/briefcase/inflatable{
+	pixel_x = 3;
+	pixel_y = 6
+	},
+/obj/item/storage/briefcase/inflatable{
+	pixel_y = 3
+	},
+/obj/item/storage/briefcase/inflatable{
+	pixel_x = -3
+	},
+/obj/structure/table/rack,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/cave_red_A)
+
+(1,1,1) = {"
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+"}
+(2,1,1) = {"
+Du
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+Du
+"}
+(3,1,1) = {"
+Du
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+iC
+iC
+iC
+ay
+ay
+ay
+ay
+ay
+ay
+iC
+iC
+iC
+iC
+iC
+iC
+iC
+iC
+ay
+ay
+ay
+ay
+Du
+"}
+(4,1,1) = {"
+Du
+ay
+ay
+ay
+iC
+iC
+iC
+iC
+iC
+iC
+iC
+Ws
+JH
+Ws
+Ws
+ay
+iC
+iC
+iC
+iC
+Oi
+Oi
+Ws
+Ws
+iC
+iC
+ay
+ay
+ay
+Du
+"}
+(5,1,1) = {"
+Du
+ay
+ay
+ay
+iC
+iC
+Oi
+iC
+iC
+iC
+Ws
+Oi
+Oi
+Ws
+Ws
+iC
+iC
+iC
+Oi
+Oi
+Oi
+Oi
+Ws
+Ws
+Ws
+Ws
+ay
+ay
+ay
+Du
+"}
+(6,1,1) = {"
+Du
+ay
+ay
+iC
+iC
+Oi
+ZN
+yf
+Fg
+Fg
+qv
+qv
+qv
+bk
+bk
+bk
+Be
+Be
+bk
+Fg
+AS
+Fg
+Fg
+dB
+zx
+Ws
+iC
+ay
+ay
+Du
+"}
+(7,1,1) = {"
+Du
+ay
+ay
+iC
+Oi
+Oi
+bX
+ce
+Fg
+uj
+WC
+py
+ZJ
+FM
+ZJ
+ZO
+Cw
+bk
+rw
+Fh
+jb
+Kw
+tQ
+Xs
+qv
+Oi
+iC
+iC
+ay
+Du
+"}
+(8,1,1) = {"
+Du
+ay
+ay
+iC
+Ws
+Ws
+hS
+KZ
+Fg
+ut
+zY
+jb
+zY
+jb
+jb
+jb
+oe
+bk
+Qk
+is
+Pi
+MI
+tQ
+Xs
+AX
+Oi
+iC
+iC
+ay
+Du
+"}
+(9,1,1) = {"
+Du
+ay
+ay
+iC
+Ws
+Ws
+to
+FS
+Fg
+pG
+jb
+pj
+Ha
+Ha
+Ha
+GN
+Df
+bk
+Yp
+DL
+jb
+MI
+tQ
+Xs
+yx
+Oi
+Oi
+iC
+iC
+Du
+"}
+(10,1,1) = {"
+Du
+ay
+ay
+iC
+iC
+Ws
+zx
+Sb
+Fg
+Jh
+jb
+uZ
+bo
+Qr
+lf
+yg
+qv
+zx
+qV
+jb
+zY
+MI
+tQ
+Xs
+qI
+Oi
+Oi
+iC
+iC
+Du
+"}
+(11,1,1) = {"
+Du
+ay
+ay
+iC
+iC
+Ws
+zx
+KZ
+Fg
+tO
+jb
+zY
+jb
+dv
+Bj
+cB
+DN
+bk
+CH
+jb
+ME
+MI
+tQ
+Xs
+vR
+Oi
+iC
+iC
+ay
+Du
+"}
+(12,1,1) = {"
+Du
+ay
+ay
+ay
+iC
+iC
+hS
+DJ
+Fg
+tO
+jb
+NY
+jb
+eX
+kH
+Zn
+pm
+bk
+bR
+jb
+jb
+sI
+tQ
+Xs
+vR
+Oi
+iC
+iC
+ay
+Du
+"}
+(13,1,1) = {"
+Du
+ay
+ay
+ay
+iC
+iC
+hS
+KZ
+Fg
+Oy
+jb
+Yc
+jb
+zY
+jb
+Ka
+mm
+cs
+zY
+jb
+zY
+WM
+tQ
+yV
+LM
+Oi
+iC
+iC
+ay
+Du
+"}
+(14,1,1) = {"
+Du
+ay
+ay
+iC
+iC
+Oi
+hS
+IH
+Fg
+XR
+GC
+oK
+jb
+jb
+Ye
+LQ
+ui
+bk
+EO
+mU
+jb
+ac
+tQ
+Xs
+Nd
+Oi
+Oi
+iC
+iC
+Du
+"}
+(15,1,1) = {"
+Du
+ay
+iC
+iC
+iC
+Oi
+hS
+KZ
+zC
+hB
+hB
+hB
+LX
+LX
+ll
+hB
+hB
+bk
+Fg
+cy
+RD
+HL
+qM
+Xs
+vR
+Oi
+Oi
+iC
+iC
+Du
+"}
+(16,1,1) = {"
+Du
+ay
+iC
+iC
+Oi
+Oi
+qv
+hN
+aJ
+XX
+XX
+XX
+to
+to
+XX
+sw
+XX
+Kg
+Jf
+Di
+lK
+Zk
+Zk
+DW
+vR
+iC
+iC
+iC
+iC
+Du
+"}
+(17,1,1) = {"
+Du
+ay
+iC
+iC
+Oi
+Oi
+Mf
+to
+hS
+to
+hS
+hS
+hS
+Mf
+hS
+PQ
+hS
+lO
+tt
+Qb
+Mf
+hS
+hS
+hS
+vR
+iC
+iC
+iC
+iC
+Du
+"}
+(18,1,1) = {"
+Du
+ay
+iC
+iC
+Oi
+iC
+hS
+hS
+hS
+hS
+qD
+OS
+hS
+im
+OS
+BU
+OS
+Kg
+tt
+YB
+lW
+hS
+hS
+to
+nQ
+iC
+iC
+ay
+ay
+Du
+"}
+(19,1,1) = {"
+Du
+ay
+ay
+iC
+iC
+iC
+hS
+hF
+GT
+XP
+KZ
+Fg
+lk
+Fg
+cy
+Fg
+Fg
+bk
+bk
+GL
+Xs
+hS
+hS
+hS
+vR
+Ws
+Ws
+ay
+ay
+Du
+"}
+(20,1,1) = {"
+Du
+ay
+ay
+iC
+iC
+iC
+hS
+KZ
+Qn
+IV
+fB
+Fg
+jl
+jl
+lS
+HR
+rr
+lS
+lS
+bk
+DQ
+mT
+hS
+hS
+vR
+JH
+ay
+ay
+ay
+Du
+"}
+(21,1,1) = {"
+Du
+ay
+ay
+ay
+iC
+iC
+hS
+KZ
+hr
+qv
+qv
+Fg
+AJ
+Jk
+jl
+Jk
+jl
+MX
+jl
+bk
+sU
+qv
+hS
+to
+vR
+iC
+iC
+ay
+ay
+Du
+"}
+(22,1,1) = {"
+Du
+ay
+ay
+ay
+iC
+Oi
+qv
+KZ
+hr
+qv
+qv
+Fg
+Ag
+Ag
+oV
+us
+us
+jl
+ta
+bk
+qv
+qv
+qv
+hS
+LM
+iC
+iC
+ay
+ay
+Du
+"}
+(23,1,1) = {"
+Du
+ay
+ay
+ay
+iC
+iC
+qv
+FS
+Fg
+Fg
+Fg
+Fg
+Fg
+Fg
+Fg
+Fg
+Fg
+Re
+Fg
+bk
+qv
+qv
+bX
+hS
+dX
+Oi
+iC
+iC
+ay
+Du
+"}
+(24,1,1) = {"
+Du
+ay
+ay
+ay
+iC
+iC
+Be
+qv
+EM
+YV
+oH
+Fg
+Tz
+ga
+Xq
+Be
+Be
+Nz
+BS
+zx
+qv
+qv
+qv
+uD
+Dc
+Oi
+iC
+ay
+ay
+Du
+"}
+(25,1,1) = {"
+Du
+ay
+ay
+ay
+iC
+iC
+iC
+Ws
+Ws
+Oi
+Oi
+Ws
+Ws
+Ws
+iC
+iC
+iC
+iC
+Ws
+Ws
+Ws
+iC
+Oi
+Oi
+Oi
+iC
+iC
+ay
+ay
+Du
+"}
+(26,1,1) = {"
+Du
+ay
+ay
+ay
+ay
+iC
+iC
+Ws
+Ws
+Oi
+Ws
+Ws
+Ws
+iC
+iC
+iC
+iC
+iC
+Ws
+Ws
+iC
+iC
+Oi
+Oi
+iC
+iC
+iC
+iC
+ay
+Du
+"}
+(27,1,1) = {"
+Du
+ay
+ay
+ay
+ay
+ay
+iC
+iC
+iC
+Oi
+Oi
+iC
+iC
+iC
+iC
+iC
+iC
+iC
+iC
+iC
+iC
+iC
+iC
+iC
+iC
+iC
+iC
+iC
+ay
+Du
+"}
+(28,1,1) = {"
+Du
+ay
+ay
+ay
+ay
+ay
+iC
+iC
+iC
+iC
+iC
+iC
+iC
+iC
+ay
+ay
+ay
+iC
+iC
+iC
+ay
+ay
+iC
+iC
+iC
+iC
+iC
+ay
+ay
+Du
+"}
+(29,1,1) = {"
+Du
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+iC
+iC
+iC
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+ay
+Du
+"}
+(30,1,1) = {"
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+Du
+"}

@@ -61,6 +61,11 @@ GLOBAL_LIST_INIT(pitcher_plant_lure_messages, list(
 	var/scent_strength = 5 //How much can a hungry pitcher confuse nearby people?
 	var/last_lifechecks = 0 //Timing variable to limit vore/hungry proc calls
 	var/list/pitcher_plant_lure_messages = null
+
+	// Outpost 21 edit begin - increased pitcher visibility
+	plane = ABOVE_PLANE
+	// Outpost 21 edit end
+
 	can_be_drop_prey = FALSE
 
 /mob/living/simple_mob/vore/pitcher_plant //Putting vore variables separately because apparently that's tradition.

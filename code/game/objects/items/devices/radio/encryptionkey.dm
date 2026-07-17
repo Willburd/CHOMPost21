@@ -16,19 +16,16 @@
 /obj/item/encryptionkey/syndicate
 	icon_state = "syn_cypherkey"
 	channels = list(CHANNEL_MERCENARY = 1)
-	origin_tech = list(TECH_ILLEGAL = 3)
 	syndie = 1//Signifies that it de-crypts Syndicate transmissions
 
 /obj/item/encryptionkey/raider
 	icon_state = "cypherkey"
 	channels = list(CHANNEL_RAIDER = 1)
-	origin_tech = list(TECH_ILLEGAL = 2)
 	syndie = 1
 
 /obj/item/encryptionkey/binary
 	icon_state = "bin_cypherkey"
 	translate_binary = 1
-	origin_tech = list(TECH_ILLEGAL = 3)
 
 /obj/item/encryptionkey/headset_sec
 	name = "security radio encryption key"
@@ -169,7 +166,7 @@
 /obj/item/encryptionkey/qm
 	name = "quartermaster's encryption key"
 	icon_state = "qm_cypherkey"
-	channels = list(/*CHANNEL_COMMAND = 1,*/ CHANNEL_SUPPLY = 1) // CHOMPEdit Remove Command
+	channels = list(CHANNEL_COMMAND = 1, CHANNEL_SUPPLY = 1) // CHOMPEdit Remove Command. Outpost 21 Back to command!
 
 /obj/item/encryptionkey/pilot
 	name = "pilot's encryption key"

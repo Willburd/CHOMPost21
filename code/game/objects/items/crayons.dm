@@ -78,7 +78,7 @@
 /obj/item/pen/crayon/afterattack(atom/target, mob/user, proximity, click_parameters)
 	if(!proximity) return
 	if(istype(target,/turf/simulated/floor))
-		var/drawtype = tgui_input_list(user, "Choose what you'd like to draw.", "Crayon scribbles", list("graffiti","rune","letter","arrow"))
+		var/drawtype = tgui_input_list(user, "Choose what you'd like to draw.", "Crayon scribbles", list("graffiti","rune","letter","arrow","scavmarks"))
 		if(!drawtype)
 			return
 		if(get_dist(target, user) > 1 || !(user.z == target.z))
@@ -104,6 +104,18 @@
 				if(!drawtype || get_dist(target, user) > 1 || !(user.z == target.z))
 					return
 				to_chat(user, "You start drawing an arrow on the [target.name].")
+			//Outpost 21 edit begin - New marking subtype to avoid conflicts
+			if("scavmarks")
+				drawtype = tgui_input_list(user, "Choose the marking.", "Crayon scribbles", list("one_wrath", "two_lust", "three_trade", "four_greed", "five_life", "six_tranquility", "seven_resolve", "eight_decision", "nine_removal", "ten_death", "shelter", "agony", "suspicious", "cant_find", "wander", "violence", "desire", "companion", "food", "survival", "stomach", "pill", "skull", "travel", "intersection", "beach", "market", "marsh", "depart", "light", "dark", "air", "water", "fire", "earth", "chaos", "day", "night", "cog"))
+				if(!drawtype || get_dist(target, user) > 1 || !(user.z == target.z))
+					return
+				to_chat(user, "You start drawing a marking on the [target.name].")
+			if("numbers")
+				drawtype = tgui_input_list(user, "Choose the number.", "Crayon scribbles", list("num_one", "num_two", "num_three", "num_four", "num_five", "num_six", "num_seven", "num_eight", "num_nine", "num_zero", "tal_one", "tal_two", "tal_three", "tal_four", "tal_five", "dot_one", "dot_two", "dot_three", "dot_four", "dot_five", "dot_six", "dot_seven", "dot_eight", "dot_nine", "dot_ten"))
+				if(!drawtype || get_dist(target, user) > 1 || !(user.z == target.z))
+					return
+				to_chat(user, "You start drawing a marking on the [target.name].")
+				//Outpost 21 edit end
 		if(instant || do_after(user, 5 SECONDS, target = src))
 			var/list/mouse_control = params2list(click_parameters)
 			var/p_x = 0
@@ -130,7 +142,7 @@
 					qdel(src)
 	return
 
-/obj/item/pen/crayon/attack(mob/living/M as mob, mob/living/user as mob)
+/obj/item/pen/crayon/attack(mob/living/M, mob/living/user, target_zone, attack_modifier)
 	if(M == user)
 		to_chat(user, "You take a bite of the crayon and swallow it.")
 		user.nutrition += 1
@@ -144,6 +156,7 @@
 			if(uses <= 0)
 				to_chat(user, span_warning("You ate your crayon!"))
 				qdel(src)
+		return ITEM_INTERACT_SUCCESS
 	else
 		..()
 
@@ -230,7 +243,7 @@
 		shadeColour = new_colour
 	return
 
-/obj/item/pen/crayon/marker/attack(mob/living/M, mob/living/user)
+/obj/item/pen/crayon/marker/attack(mob/living/M, mob/living/user, target_zone, attack_modifier)
 	if(M == user)
 		to_chat(user, "You take a bite of the marker and swallow it.")
 		user.nutrition += 1
@@ -244,5 +257,6 @@
 			if(uses <= 0)
 				to_chat(user, span_warning("You ate the marker!"))
 				qdel(src)
+		return ITEM_INTERACT_SUCCESS
 	else
 		..()

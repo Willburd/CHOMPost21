@@ -1,0 +1,677 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/simulated/mineral/alt/ignore_cavegen/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"c" = (
+/obj/structure/bed/chair{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"d" = (
+/obj/machinery/door/airlock,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/floor_decal/rust,
+/obj/item/grenade/explosive,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"e" = (
+/obj/structure/table/standard,
+/obj/effect/decal/cleanable/cobweb,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"f" = (
+/obj/item/broken_device/random,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"g" = (
+/obj/machinery/door/airlock,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"h" = (
+/obj/structure/salvageable/computer,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"i" = (
+/obj/machinery/door/airlock/external,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"j" = (
+/obj/item/circuitboard/broken,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"k" = (
+/obj/structure/table,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"l" = (
+/obj/structure/salvageable/machine,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"m" = (
+/turf/simulated/wall/r_wall,
+/area/mine/explored/muriki/cave/deepdark)
+"n" = (
+/turf/template_noop,
+/area/mine/explored/muriki/cave/deepdark)
+"p" = (
+/obj/structure/table,
+/obj/effect/decal/cleanable/cobweb2,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/silencer,
+/obj/item/card/emag,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"q" = (
+/obj/structure/toilet{
+	dir = 8;
+	icon_state = "toilet00"
+	},
+/obj/item/tool/crowbar,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/floor_decal/rust,
+/mob/living/simple_mob/animal/space/mouse_army/stealth,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"s" = (
+/obj/item/broken_device/random,
+/obj/effect/decal/cleanable/cobweb,
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_mob/animal/space/mouse_army/ammo,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"t" = (
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_mob/animal/space/mouse_army/ammo,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"v" = (
+/obj/structure/table/standard,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"w" = (
+/obj/structure/bed,
+/obj/effect/decal/cleanable/cobweb,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"x" = (
+/obj/machinery/door/airlock,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"y" = (
+/obj/structure/door_assembly,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"z" = (
+/obj/effect/floor_decal/techfloor/hole/right,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"A" = (
+/obj/structure/salvageable/server,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"B" = (
+/obj/structure/closet,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/floor_decal/rust,
+/obj/item/gun/projectile/automatic/serdy/ak74,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"C" = (
+/obj/item/pen,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"D" = (
+/obj/structure/frame,
+/obj/effect/decal/cleanable/cobweb2,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"F" = (
+/obj/structure/filingcabinet,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"G" = (
+/obj/item/broken_device/random,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"H" = (
+/obj/effect/decal/cleanable/vomit,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"J" = (
+/obj/structure/frame/computer{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"K" = (
+/turf/simulated/wall,
+/area/mine/explored/muriki/cave/deepdark)
+"M" = (
+/turf/simulated/mineral/alt/ignore_cavegen/turfpack/muriki,
+/area/template_noop)
+"O" = (
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
+/area/template_noop)
+"Q" = (
+/obj/structure/salvageable/data,
+/obj/effect/decal/cleanable/cobweb2,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"R" = (
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"S" = (
+/obj/effect/floor_decal/techfloor/hole/right{
+	dir = 4
+	},
+/obj/item/broken_bottle,
+/obj/effect/decal/cleanable/cobweb2,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"T" = (
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_mob/animal/space/mouse_army/stealth,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"U" = (
+/obj/structure/table/rack,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"V" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"W" = (
+/mob/living/simple_mob/animal/space/mouse_army/ammo,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"X" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Y" = (
+/obj/structure/door_assembly/door_assembly_ext,
+/obj/effect/decal/cleanable/dirt,
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Z" = (
+/turf/template_noop,
+/area/template_noop)
+
+(1,1,1) = {"
+Z
+Z
+Z
+Z
+Z
+Z
+Z
+Z
+Z
+Z
+Z
+Z
+Z
+Z
+Z
+Z
+Z
+Z
+Z
+Z
+"}
+(2,1,1) = {"
+Z
+Z
+Z
+Z
+Z
+Z
+Z
+Z
+Z
+Z
+O
+O
+O
+O
+Z
+Z
+Z
+Z
+Z
+Z
+"}
+(3,1,1) = {"
+Z
+Z
+Z
+n
+n
+n
+n
+n
+n
+a
+a
+a
+R
+R
+R
+n
+n
+Z
+Z
+Z
+"}
+(4,1,1) = {"
+Z
+Z
+Z
+n
+n
+n
+n
+a
+a
+a
+a
+a
+R
+W
+R
+R
+n
+n
+Z
+Z
+"}
+(5,1,1) = {"
+Z
+Z
+n
+n
+a
+a
+a
+a
+a
+m
+m
+m
+m
+m
+a
+n
+n
+n
+n
+Z
+"}
+(6,1,1) = {"
+Z
+n
+n
+a
+a
+a
+a
+a
+a
+m
+w
+T
+B
+m
+a
+n
+n
+n
+n
+Z
+"}
+(7,1,1) = {"
+Z
+n
+n
+a
+a
+m
+m
+m
+a
+m
+p
+G
+F
+m
+a
+a
+n
+n
+n
+Z
+"}
+(8,1,1) = {"
+Z
+n
+a
+a
+m
+m
+J
+m
+m
+m
+K
+x
+K
+m
+a
+a
+a
+n
+n
+Z
+"}
+(9,1,1) = {"
+Z
+a
+a
+a
+m
+e
+c
+j
+X
+d
+X
+V
+h
+m
+m
+m
+m
+a
+n
+Z
+"}
+(10,1,1) = {"
+Z
+a
+m
+m
+m
+k
+k
+v
+X
+K
+f
+X
+V
+y
+H
+z
+m
+a
+n
+Z
+"}
+(11,1,1) = {"
+Z
+a
+m
+s
+g
+C
+X
+V
+V
+K
+V
+X
+X
+K
+S
+q
+m
+a
+n
+Z
+"}
+(12,1,1) = {"
+Z
+a
+m
+D
+K
+V
+X
+A
+U
+K
+Q
+l
+m
+m
+m
+m
+m
+a
+n
+Z
+"}
+(13,1,1) = {"
+Z
+a
+m
+m
+m
+i
+Y
+m
+m
+m
+m
+m
+m
+a
+a
+a
+a
+a
+Z
+Z
+"}
+(14,1,1) = {"
+Z
+n
+a
+a
+m
+X
+t
+m
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+Z
+Z
+"}
+(15,1,1) = {"
+Z
+n
+n
+a
+m
+V
+X
+m
+a
+a
+a
+a
+a
+a
+a
+a
+R
+Z
+Z
+Z
+"}
+(16,1,1) = {"
+Z
+n
+n
+R
+m
+X
+i
+m
+a
+a
+a
+a
+a
+a
+a
+a
+R
+O
+Z
+Z
+"}
+(17,1,1) = {"
+Z
+Z
+n
+n
+R
+R
+R
+a
+a
+a
+M
+M
+M
+Z
+O
+O
+O
+O
+Z
+Z
+"}
+(18,1,1) = {"
+Z
+Z
+n
+n
+n
+n
+R
+R
+R
+a
+M
+Z
+Z
+Z
+Z
+O
+O
+O
+Z
+Z
+"}
+(19,1,1) = {"
+Z
+Z
+Z
+n
+n
+n
+n
+n
+n
+Z
+Z
+Z
+Z
+Z
+Z
+Z
+Z
+Z
+Z
+Z
+"}
+(20,1,1) = {"
+Z
+Z
+Z
+Z
+Z
+Z
+Z
+Z
+Z
+Z
+Z
+Z
+Z
+Z
+Z
+Z
+Z
+Z
+Z
+Z
+"}

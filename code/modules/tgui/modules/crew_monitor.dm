@@ -33,7 +33,7 @@
 
 /datum/tgui_module/crew_monitor/tgui_interact(mob/user, datum/tgui/ui = null)
 	var/z = get_z(user)
-	var/list/map_levels = using_map.get_visible_map_levels(z, TRUE)  //CHOMPEdit
+	var/list/map_levels = using_map.get_map_levels(z, TRUE, om_range = DEFAULT_OVERMAP_RANGE)
 
 	if(!map_levels.len)
 		to_chat(user, span_warning("The crew monitor doesn't seem like it'll work here."))
@@ -53,7 +53,8 @@
 	data["isAI"] = isAI(user)
 
 	var/z = get_z(user)
-	var/list/map_levels = uniqueList(using_map.get_visible_map_levels(z, TRUE))  //CHOMPEdit
+	var/list/map_levels = uniqueList(using_map.get_map_levels(z, TRUE, om_range = DEFAULT_OVERMAP_RANGE))
+	map_levels -= using_map.deadly_fall_levels // Outpost 21 edit - Forbid deepdark
 	data["map_levels"] = map_levels
 
 	var/list/crewmembers = list()
@@ -81,7 +82,9 @@
 /datum/tgui_module/crew_monitor/robot/tgui_state(mob/user)
 	return GLOB.tgui_self_state
 
+/* Outpost 21 edit - Nif removal
 // Subtype for nif_state
 /datum/tgui_module/crew_monitor/nif
 /datum/tgui_module/crew_monitor/nif/tgui_state(mob/user)
 	return GLOB.tgui_nif_state
+*/

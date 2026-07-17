@@ -27,6 +27,7 @@
 		SEND_SIGNAL(src, COMSIG_DISPOSAL_LINK, trunk)
 
 /obj/structure/disposaloutlet/Destroy()
+	SEND_SIGNAL(src, COMSIG_DISPOSAL_UNLINK) //Just to be safe.
 	target = null
 	. = ..()
 
@@ -96,6 +97,14 @@
 		AM.forceMove(T)
 		AM.pipe_eject(dir)
 		AM.throw_at(target, eject_range, 1)
+		// Outpost 21 edit begin - Disposals gib things if at a high enough damage
+		#ifndef OUTPOST_FRIENDSHIP_MODE
+		if(isliving(AM))
+			var/mob/living/L = AM
+			if(L.stat == DEAD && L.getBruteLoss() > 150)
+				L.gib() // SPLOOT out of tubes violently in a shower of gore
+		#endif
+		// Outpost 21 edit end
 
 	T.assume_air(gas)
 

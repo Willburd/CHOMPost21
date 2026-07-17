@@ -23,7 +23,9 @@ GLOBAL_LIST_INIT(admin_verbs_admin, list(
 	/client/proc/trader_ship, // Trader ship admin verb,
 	/client/proc/aooc,
 	/client/proc/change_security_level,
+	/* Outpost 21 edit - Nif removal
 	/datum/admins/proc/quick_authentic_nif, //CHOMPStation addn verbs (#19260))
+	*/
 	/datum/admins/proc/set_uplink,
 	/client/proc/delbook,
 	/client/proc/start_vote,
@@ -46,7 +48,9 @@ GLOBAL_LIST_INIT(admin_verbs_debug, list(
 	/client/proc/hide_most_verbs,		//hides all our hideable adminverbs,
 	/datum/admins/proc/set_uplink,
 	/client/proc/stop_sounds,
+	/* Outpost 21 edit - Nif removal
 	/datum/admins/proc/quick_authentic_nif, //CHOMPStation add
+	*/
 	))
 
 //verbs which can be hidden - needs work
@@ -95,5 +99,7 @@ GLOBAL_LIST_INIT(admin_verbs_event_manager, list(
 	/client/proc/start_vote,
 	/client/proc/add_hidden_area,
 	/client/proc/remove_hidden_area,
+	/* Outpost 21 edit - Nif removal
 	/datum/admins/proc/quick_authentic_nif, //CHOMPStation add
+	*/
 ))

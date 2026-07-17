@@ -290,7 +290,7 @@
 		if(IM_HOLD)
 			items_preserved |= I
 		if(IM_DIGEST_FOOD)
-			if(istype(I,/obj/item/reagent_containers/food) || istype(I, /obj/item/organ))
+			if(istype(I,/obj/item/reagent_containers/food) || istype(I, /obj/item/organ) || istype(I,/obj/item/reagent_containers/pill)) // Outpost 21 edit(port) - digest pills in vore bellies
 				var/obj/item/organ/R = I
 				if(istype(R) && R.robotic >= ORGAN_ROBOT)
 					items_preserved |= I
@@ -344,6 +344,13 @@
 
 	if(M.ckey)
 		GLOB.prey_digested_roundstat++
+		// Outpost 21 edit begin - deep hunger antag
+		if(!isnull(owner.mind))
+			for(var/datum/objective/O in owner.mind.objectives)
+				if(istype(O,/datum/objective/consume))
+					var/datum/objective/consume/C = O
+					C.digested += 1
+		// Outpost 21 edit end
 
 	owner.churn_count++
 	owner.handle_special_unlocks()

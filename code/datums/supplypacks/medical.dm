@@ -28,7 +28,7 @@
 
 /datum/supply_pack/med/bloodpack
 	name = "BloodPack crate"
-	desc = "Three boxes of bloodbags."
+	desc = "Three boxes of filled bloodbags."
 	contains = list(/obj/item/storage/box/bloodpacks = 3)
 	cost = 10
 	containertype = /obj/structure/closet/crate/medical/blood

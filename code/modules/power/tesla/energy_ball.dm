@@ -22,12 +22,15 @@
 	var/produced_power
 	var/energy_to_raise = 32
 	var/energy_to_lower = -20
+	plane = PLANE_LIGHTING_ABOVE // Outpost 21 edit - Tesla appearance tweak
 
 /obj/singularity/energy_ball/Initialize(mapload, starting_energy = 50, is_miniball = FALSE)
 	. = ..()
 	miniball = is_miniball
+	/* Outpost 21 edit - Disable tesla light
 	if(!miniball)
 		set_light(10, 7, "#EEEEFF")
+	*/
 
 /obj/singularity/energy_ball/ex_act(severity, target)
 	return
@@ -48,7 +51,7 @@
 	..()
 
 
-/obj/singularity/energy_ball/process(var/wait = 20)
+/obj/singularity/energy_ball/process(wait = 20)
 	set waitfor = FALSE
 	if(!orbiting)
 		if (handle_energy())
@@ -71,7 +74,7 @@
 	if(orbiting_balls.len)
 		. += "The amount of orbiting mini-balls is [orbiting_balls.len]."
 
-/obj/singularity/energy_ball/proc/move_the_basket_ball(var/move_amount)
+/obj/singularity/energy_ball/proc/move_the_basket_ball(move_amount)
 	//we face the last thing we zapped, so this lets us favor that direction a bit
 	var/move_bias = dir
 	for(var/i in 0 to move_amount)
@@ -232,10 +235,15 @@
 			if(SEND_SIGNAL(L, COMSIG_CHECK_FOR_GODMODE) & COMSIG_GODMODE_CANCEL)
 				continue
 			if(dist <= zap_range && (dist < closest_dist || !closest_mob) && L.stat != DEAD && !HAS_TRAIT(L, TRAIT_TESLA_SHOCKIMMUNE))
-				closest_mob = L
-				closest_atom = A
-				closest_dist = dist
-
+				// Outpost 21 edit(port) begin - Lightning doesn't bleed indoors to kill mobs
+				if(isturf(L.loc))
+					var/turf/flr = L.loc
+					// being indoors will save you, also stops department pets dying to zaps out a window
+					if(flr.outdoors > -1)
+						closest_mob = L
+						closest_atom = A
+						closest_dist = dist
+				// Outpost 21 edit end
 		else if(closest_mob)
 			continue
 
@@ -295,7 +303,7 @@
 		if(issilicon(closest_mob))
 			var/mob/living/silicon/S = closest_mob
 			if(stun_mobs)
-				S.emp_act(3 /*EMP_LIGHT*/)
+				S.emp_act(EMP_LIGHT)
 			tesla_zap(closest_mob, 7, power / 1.5, explosive, stun_mobs, current_jumps = current_jumps) // metallic folks bounce it further
 		else
 			tesla_zap(closest_mob, 5, power / 1.5, explosive, stun_mobs, current_jumps = current_jumps)

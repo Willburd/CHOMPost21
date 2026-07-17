@@ -23,7 +23,7 @@
 	var/human_prey_swallow_time = 100		// Time in deciseconds to swallow /mob/living/carbon/human
 	var/nonhuman_prey_swallow_time = 30		// Time in deciseconds to swallow anything else
 	var/nutrition_percent = 100				// Nutritional percentage per tick in digestion mode
-	var/digest_max = 36						// maximum total damage across all types
+	var/digest_max = 10						// maximum total damage across all types // Outpost 21 edit - Cap digestion damage maximum to 10
 	var/digest_brute = 0.5					// Brute damage per tick in digestion mode
 	var/digest_burn = 0.5					// Burn damage per tick in digestion mode
 	var/digest_oxy = 0						// Oxy damage per tick in digestion mode
@@ -130,7 +130,7 @@
 	//Actual full digest modes
 	var/tmp/static/list/digest_modes = list(DM_HOLD,DM_DIGEST,DM_ABSORB,DM_DRAIN,DM_SELECT,DM_UNABSORB,DM_HEAL,DM_SHRINK,DM_GROW,DM_SIZE_STEAL,DM_EGG)
 	//Digest mode addon flags
-	var/tmp/static/list/mode_flag_list = list("Numbing" = DM_FLAG_NUMBING, "Stripping" = DM_FLAG_STRIPPING, "Leave Remains" = DM_FLAG_LEAVEREMAINS, "Muffles" = DM_FLAG_THICKBELLY, "Affect Worn Items" = DM_FLAG_AFFECTWORN, "Jams Sensors" = DM_FLAG_JAMSENSORS, "Complete Absorb" = DM_FLAG_FORCEPSAY, "Spare Prosthetics" = DM_FLAG_SPARELIMB, "Slow Body Digestion" = DM_FLAG_SLOWBODY, "Muffle Items" = DM_FLAG_MUFFLEITEMS, "TURBO MODE" = DM_FLAG_TURBOMODE, "Absorbed Prey Can Devour" = DM_FLAG_ABSORBEDVORE, "Makes Prey Wet" = DM_FLAG_WETTENS)
+	var/tmp/static/list/mode_flag_list = list("Numbing" = DM_FLAG_NUMBING, "Stripping" = DM_FLAG_STRIPPING, "Leave Remains" = DM_FLAG_LEAVEREMAINS, "Muffles" = DM_FLAG_THICKBELLY, "Affect Worn Items" = DM_FLAG_AFFECTWORN, "Jams Sensors" = DM_FLAG_JAMSENSORS, "Complete Absorb" = DM_FLAG_FORCEPSAY, "Spare Prosthetics" = DM_FLAG_SPARELIMB, "Slow Body Digestion" = DM_FLAG_SLOWBODY, "Muffle Items" = DM_FLAG_MUFFLEITEMS, /*"TURBO MODE" = DM_FLAG_TURBOMODE,*/ "Absorbed Prey Can Devour" = DM_FLAG_ABSORBEDVORE, "Makes Prey Wet" = DM_FLAG_WETTENS) // Outpost 21 edit - Disable turbo mode
 	//Item related modes
 	var/tmp/static/list/item_digest_modes = list(IM_HOLD,IM_DIGEST_FOOD,IM_DIGEST,IM_DIGEST_PARALLEL)
 	//drain modes
@@ -250,6 +250,8 @@
 	REAGENT_BIOMASS,
 	REAGENT_CONCENTRATEDRADIUM,
 	REAGENT_TRICORDRAZINE,
+	REAGENT_SPIDEREGG, // Outpost 21 edit - Spoods
+	REAGENT_COFFEE, // Outpost 21 edit - Coffee machine belly
 	REAGENT_ETHANOL
 	)
 
@@ -274,7 +276,7 @@
 	var/last_transfer_log = 0				// Prevent server message spam!
 	var/next_transfer_log = 0				// Prevent server message spam!
 	var/entrance_log_count = 0				// Entrance count before spawm
-	flags = NOREACT							// We dont want bellies to start bubling nonstop due to people mixing when transfering and making different reagents
+	flags = NOREACT|REMOTEVIEW_ON_ENTER		// We dont want bellies to start bubling nonstop due to people mixing when transfering and making different reagents
 
 //For serialization, keep this updated, required for bellies to save correctly.
 /obj/belly/vars_to_save()
@@ -499,12 +501,14 @@
 		owner = loc
 		owner.vore_organs += src
 		if(isliving(loc))
+			mode_flags &= ~DM_FLAG_TURBOMODE // Outpost 21 edit - Remove turbo mode
 			if(mode_flags & DM_FLAG_TURBOMODE)
 				START_PROCESSING(SSobj, src)
 			else
 				START_PROCESSING(SSbellies, src)
 
 	create_reagents(300)	// So we can have some liquids in bellies
+	AddElement(/datum/element/empprotection, EMP_PROTECT_ALL)
 
 /obj/belly/Destroy()
 	if(mode_flags & DM_FLAG_TURBOMODE)
@@ -555,7 +559,7 @@
 				last_transfer_log = world.time
 				entrance_log_count = 0
 			if(world.time >= next_transfer_log)
-				to_chat(owner,span_vnotice("[thing] slides into your [lowertext(name)]."))
+				to_chat(owner,span_vnotice("[thing] slides into your [lowertext(get_belly_name())]."))
 				entrance_log_count++
 				if(entrance_log_count >= MAX_ENTRY_MESSAAGES)
 					next_transfer_log = world.time + ENTRY_MESSAGE_INTERVAL
@@ -705,7 +709,7 @@
 
 	//Print notifications/sound if necessary
 	if(!silent && count)
-		owner.visible_message(span_vnotice(span_green(span_bold("[owner] [release_verb] everything from their [lowertext(name)]!"))), range = privacy_range)
+		owner.visible_message(span_vnotice(span_green(span_bold("[owner] [release_verb] everything from their [lowertext(get_belly_name())]!"))), range = privacy_range)
 		var/soundfile
 		if(!fancy_vore)
 			soundfile = GLOB.classic_release_sounds[release_sound]
@@ -795,7 +799,7 @@
 		if(isitem(M))
 			owner.visible_message(span_vnotice(span_green(span_bold(belly_format_string(trash_eater_out, M, item=M)))),range = privacy_range) //double dip. prey = item, item = prey. sanity check in case they use %prey in the message.
 		else
-			owner.visible_message(span_vnotice(span_green(span_bold("[owner] [release_verb] [M] from their [lowertext(name)]!"))),range = privacy_range)
+			owner.visible_message(span_vnotice(span_green(span_bold("[owner] [release_verb] [M] from their [lowertext(get_belly_name())]!"))),range = privacy_range)
 		var/soundfile
 		if(!fancy_vore)
 			soundfile = GLOB.classic_release_sounds[release_sound]
@@ -936,20 +940,22 @@
 	if(isrobot(M))
 		var/mob/living/silicon/robot/R = M
 		if(R.mmi && R.mind && R.mmi.brainmob)
+			/* Outpost 21 edit - Disable soulgems
 			if((R.soulcatcher_pref_flags & SOULCATCHER_ALLOW_CAPTURE) && owner.soulgem && owner.soulgem.flag_check(SOULGEM_ACTIVE | NIF_SC_CATCHING_OTHERS, TRUE))
 				owner.soulgem.catch_mob(R, R.name)
 			else
-				R.mmi.loc = src
-				items_preserved += R.mmi
-				var/obj/item/robot_module/MB = locate() in R.contents
-				if(MB)
-					R.mmi.brainmob.languages = MB.original_languages
-				else
-					R.mmi.brainmob.languages = R.languages
-				R.mmi.brainmob.remove_language(LANGUAGE_ROBOT_TALK)
-				hasMMI = R.mmi
-				M.mind.transfer_to(hasMMI.brainmob)
-				R.mmi = null
+			*/
+			R.mmi.loc = src
+			items_preserved += R.mmi
+			var/obj/item/robot_module/MB = locate() in R.contents
+			if(MB)
+				R.mmi.brainmob.languages = MB.original_languages
+			else
+				R.mmi.brainmob.languages = R.languages
+			R.mmi.brainmob.remove_language(LANGUAGE_ROBOT_TALK)
+			hasMMI = R.mmi
+			M.mind.transfer_to(hasMMI.brainmob)
+			R.mmi = null
 		else if(!R.shell) // Shells don't have brainmobs in their MMIs.
 			to_chat(R, span_danger("Oops! Something went very wrong, your MMI was unable to receive your mind. You have been ghosted. Please make a bug report so we can fix this bug."))
 		if(R.shell) // Let the standard procedure for shells handle this.
@@ -1154,7 +1160,7 @@
 	return list("primary" = primary_bellies, "secondary" = secondary_bellies)
 
 //Autotransfer callback
-/obj/belly/proc/check_autotransfer(var/atom/movable/prey, var/list/transfer_locations)
+/obj/belly/proc/check_autotransfer(atom/movable/prey, list/transfer_locations)
 	if(!(prey in contents) || !prey.autotransferable)
 		return FALSE
 	var/obj/belly/dest_belly
@@ -1176,7 +1182,7 @@
 	if(ismob(prey))
 		var/autotransfer_owner_message
 		var/autotransfer_prey_message
-		var/dest_belly_name = dest_belly.name
+		var/dest_belly_name = dest_belly.get_belly_name()
 		if(dest_belly.name == autotransferlocation)
 			autotransfer_owner_message = span_vwarning(belly_format_string(primary_autotransfer_messages_owner, prey, dest = dest_belly_name))
 			autotransfer_prey_message = span_vwarning(belly_format_string(primary_autotransfer_messages_prey, prey, dest = dest_belly_name))
@@ -1192,7 +1198,7 @@
 	return TRUE
 
 //Autotransfer filter
-/obj/belly/proc/autotransfer_filter(var/atom/movable/prey, var/whitelist, var/blacklist)
+/obj/belly/proc/autotransfer_filter(atom/movable/prey, whitelist, blacklist)
 	if(ismob(prey))
 		if(blacklist & autotransfer_flags_list["Absorbed"])
 			if(isliving(prey))
@@ -1726,7 +1732,7 @@
 	color = "#664330"
 	w_class = ITEMSIZE_SMALL
 
-/obj/belly/proc/recycle(var/obj/item/O)
+/obj/belly/proc/recycle(obj/item/O)
 	if(!recycling || (!LAZYLEN(O.matter) && !istype(O, /obj/item/ore)))
 		return FALSE
 	if(istype(O, /obj/item/ore))
@@ -1768,7 +1774,7 @@
 			O.possessed_voice = list()
 	return TRUE
 
-/obj/belly/proc/owner_adjust_nutrition(var/amount = 0)
+/obj/belly/proc/owner_adjust_nutrition(amount = 0)
 	if(storing_nutrition && amount > 0)
 		for(var/obj/item/reagent_containers/food/rawnutrition/R in contents)
 			if(istype(R))
@@ -1789,7 +1795,7 @@
 	w_class = ITEMSIZE_SMALL
 	var/stored_nutrition = 0
 
-/obj/item/reagent_containers/food/rawnutrition/standard_feed_mob(var/mob/user, var/mob/target)
+/obj/item/reagent_containers/food/rawnutrition/standard_feed_mob(mob/user, mob/target)
 	if(isliving(target))
 		var/mob/living/L = target
 		L.nutrition += stored_nutrition
@@ -1800,16 +1806,23 @@
 
 // Updates the belly_surrounding list variable. Called in bellymodes_vr.dm
 /obj/belly/proc/update_belly_surrounding()
+	/* Outpost 21 edit begin - Nif removal
 	if(!contents.len && !LAZYLEN(owner.soulgem?.brainmobs))
 		belly_surrounding = list()
 		return
 	belly_surrounding = get_belly_surrounding(contents)
 	if(owner.soulgem?.linked_belly == src)
 		belly_surrounding += owner.soulgem.brainmobs
+	*/
+	if(!contents.len)
+		belly_surrounding = list()
+		return
+	belly_surrounding = get_belly_surrounding(contents)
+	// Outpost 21 edit end
 
 // Recursive proc that returns all living mobs directly and indirectly inside a belly
 // This can also be called more generically to get all living mobs not in bellies within any contents list
-/obj/belly/proc/get_belly_surrounding(var/list/C)
+/obj/belly/proc/get_belly_surrounding(list/C)
 	var/list/surrounding = list()
 	for(var/thing in C)
 		if(istype(thing,/mob/living))
@@ -1828,7 +1841,6 @@
 		. += AM
 
 /obj/belly/proc/get_belly_name(original)
-	var/display_name = ""
 	if(original)
 		return display_name ? display_name : name
 	return display_name ? lowertext(display_name) : lowertext(name)

@@ -64,7 +64,7 @@
 		to_chat(potential_prey, span_notice("Inbelly spawn cancelled."))
 		to_chat(src, span_notice("Prey cancelled their inbelly spawn request."))
 
-/proc/inbelly_spawn(client/prey, mob/living/pred, obj/belly/target_belly, var/absorbed = FALSE)
+/proc/inbelly_spawn(client/prey, mob/living/pred, obj/belly/target_belly, absorbed = FALSE)
 	// All this is basically admin late spawn-in, but skipping all parts related to records and equipment and with predteremined location
 	var/player_key = prey.key
 	var/picked_ckey = prey.ckey
@@ -125,6 +125,7 @@
 
 	return new_character			// incase its ever needed
 
+/* Outpost 21 edit - Nif removal
 /mob/living/proc/soulcatcher_spawn_prompt(mob/observer/dead/prey, req_time)
 	if(tgui_alert(src, "[prey.name] wants to join into your Soulcatcher.","Soulcatcher Request",list("Deny", "Allow"), timeout=1 MINUTES) != "Allow")
 		to_chat(prey, span_warning("[src] has denied your request."))
@@ -174,3 +175,4 @@
 		prey.mind.active = TRUE
 
 		SC.catch_mob(prey) //This will result in the prey being deleted so...
+*/

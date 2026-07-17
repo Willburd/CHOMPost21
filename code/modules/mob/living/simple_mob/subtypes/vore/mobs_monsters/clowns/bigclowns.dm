@@ -306,7 +306,6 @@
 	pixel_x = -16
 	pixel_y = 0
 
-
 /mob/living/simple_mob/clowns/big/blob
 	name = "A Clown?"
 	desc = "Go to a gym fatty!"

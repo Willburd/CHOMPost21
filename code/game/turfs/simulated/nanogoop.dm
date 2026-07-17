@@ -48,6 +48,7 @@ GLOBAL_LIST_BOILERPLATE(nanite_turfs, /turf/simulated/floor/water/digestive_enzy
 	if(ishuman(user))
 		if(smes || isAI(nutrienttarget))
 			return ..()
+		/* Outpost 21 edit - Nif removal
 		var/mob/living/carbon/human/checker = user
 		if(checker.nif)//Proteans have NIFS
 			var/choice1 = tgui_input_list(user, "Do you wish interface with \the [src]", "Desired state", list("On", "Off"))
@@ -83,6 +84,7 @@ GLOBAL_LIST_BOILERPLATE(nanite_turfs, /turf/simulated/floor/water/digestive_enzy
 						user.visible_message(span_warning("\The [user] inspects \the [src]"), span_warning("You begin to interface with \the [src]."))
 						if(do_after(user, 30, src))
 							toggle_all(FALSE)
+		*/
 	return ..()
 
 /turf/simulated/floor/water/digestive_enzymes/nanites/attack_ai(mob/user)
@@ -217,8 +219,10 @@ GLOBAL_LIST_BOILERPLATE(nanite_turfs, /turf/simulated/floor/water/digestive_enzy
 				if(istype(targetitem, /obj/item/organ))
 					targetitem.unacidable = TRUE
 					continue
+				/* Outpost 21 edit - Removed Nif
 				if(istype(targetitem, /obj/item/implant/backup) || istype(targetitem, /obj/item/nif))
 					continue
+				*/
 				targetcarbon.drop_from_inventory(targetitem)
 			var/how_much = targetcarbon.mob_size + targetcarbon.nutrition
 			if(!targetcarbon.ckey)
@@ -257,7 +261,7 @@ GLOBAL_LIST_BOILERPLATE(nanite_turfs, /turf/simulated/floor/water/digestive_enzy
 		nutrients += how_much
 	give_nutrients(nutrients)
 
-/turf/simulated/floor/water/digestive_enzymes/nanites/proc/give_nutrients(var/amt)
+/turf/simulated/floor/water/digestive_enzymes/nanites/proc/give_nutrients(amt)
 	var/mob/living/nutrienttarget = moblink?.resolve()
 	var/obj/machinery/power/smes/smes = linkedsmes?.resolve()
 	if(smes)
@@ -276,12 +280,12 @@ GLOBAL_LIST_BOILERPLATE(nanite_turfs, /turf/simulated/floor/water/digestive_enzy
 			return
 
 
-/turf/simulated/floor/water/digestive_enzymes/nanites/return_air_for_internal_lifeform(var/mob/living/targetmob)
+/turf/simulated/floor/water/digestive_enzymes/nanites/return_air_for_internal_lifeform(mob/living/targetmob)
 	if(!can_digest(targetmob))
 		return return_air() //Nanites should always be nonlethal until the AI turns on digestion
 	return ..()
 
-/turf/simulated/floor/water/digestive_enzymes/nanites/proc/toggle_all(var/on = TRUE, var/digest = FALSE, var/robot = FALSE, var/synth = FALSE)
+/turf/simulated/floor/water/digestive_enzymes/nanites/proc/toggle_all(on = TRUE, digest = FALSE, robot = FALSE, synth = FALSE)
 	var/mob/living/nutrienttarget = moblink?.resolve()
 	for(var/turf/simulated/floor/water/digestive_enzymes/nanites/nanites in GLOB.nanite_turfs)
 		if(nanites.id == id)
@@ -290,7 +294,7 @@ GLOBAL_LIST_BOILERPLATE(nanite_turfs, /turf/simulated/floor/water/digestive_enzy
 				nanites.moblink = WEAKREF(nutrienttarget)
 			nanites.select_state(on, digest, robot, synth)
 
-/turf/simulated/floor/water/digestive_enzymes/nanites/proc/select_state(var/on = TRUE, var/digest = FALSE, var/robot = FALSE, var/synth = FALSE)
+/turf/simulated/floor/water/digestive_enzymes/nanites/proc/select_state(on = TRUE, digest = FALSE, robot = FALSE, synth = FALSE)
 	if(!on)
 		name = "nanite-infested tiles."
 		desc = "This section of reinforced plating appears to host a colony of nanites between the tiles"

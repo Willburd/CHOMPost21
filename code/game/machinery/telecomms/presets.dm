@@ -46,8 +46,8 @@
 	id = "CentCom Hub"
 	network = "tcommsat"
 	produces_heat = 0
-	autolinkers = list("hub_cent", "c_relay", "s_relay", "m_relay", "r_relay", "hb_relay",
-		"centcom", "receiverCent", "broadcasterCent") //VOREStation Edit - Added "hb_relay"
+	autolinkers = list("hub_cent", "c_relay", "s_relay", "m_relay", "r_relay", "hb_relay", "y_relay",
+		"centcom", "receiverCent", "broadcasterCent") //VOREStation Edit - Added "hb_relay", Outpost 21 edit - Added "y_relay"
 
 //Receivers
 
@@ -169,7 +169,7 @@
 
 /obj/machinery/telecomms/server/presets/common
 	id = "Common Server"
-	freq_listening = list(PUB_FREQ, AI_FREQ, ENT_FREQ, BDCM_FREQ) // AI Private and Common // CHOMPEdit
+	freq_listening = list(PUB_FREQ, /*AI_FREQ,*/ ENT_FREQ, BDCM_FREQ) // AI Private and Common // CHOMPEdit // Outpost 21 edit begin - Telecomms modifications
 
 	autolinkers = list("common")
 
@@ -193,7 +193,7 @@
 
 /obj/machinery/telecomms/server/presets/engineering
 	id = "Engineering Server"
-	freq_listening = list(ENG_FREQ)
+	freq_listening = list(ENG_FREQ, AI_FREQ) // Outpost 21 edit begin - Telecomms modifications (AI on engineering)
 	autolinkers = list("engineering")
 
 /obj/machinery/telecomms/server/presets/security

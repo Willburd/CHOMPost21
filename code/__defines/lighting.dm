@@ -124,7 +124,7 @@ do { \
 #define LIGHT_BROKEN 2
 #define LIGHT_BURNED 3
 
-#define SUNLIGHT_RADIUS 9 //Tiles that sunlight penetrates into shade
+#define SUNLIGHT_RADIUS 6 //Tiles that sunlight penetrates into shade // Outpost 21 edit - Reduced from 9 to 6
 #define SUNLIGHT_NONE 0
 #define SUNLIGHT_POSSIBLE 1
 #define SUNLIGHT_CURRENT 2

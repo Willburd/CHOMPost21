@@ -115,3 +115,4 @@
 	light_range = 2
 	light_power = 3
 	light_color = "#FFFFFF"
+//CHOMPStation add end <3

@@ -30,7 +30,7 @@ GLOBAL_VAR_INIT(message_delay, 0) // To make sure restarting the recentmessages 
 	//Linked bluespace radios
 	var/list/linked_radios_weakrefs = list()
 
-/obj/machinery/telecomms/broadcaster/proc/link_radio(var/obj/item/radio/R)
+/obj/machinery/telecomms/broadcaster/proc/link_radio(obj/item/radio/R)
 	if(!istype(R))
 		return
 	linked_radios_weakrefs |= WEAKREF(R)
@@ -146,7 +146,7 @@ GLOBAL_VAR_INIT(message_delay, 0) // To make sure restarting the recentmessages 
 
 	var/list/linked_radios_weakrefs = list()
 
-/obj/machinery/telecomms/allinone/proc/link_radio(var/obj/item/radio/R)
+/obj/machinery/telecomms/allinone/proc/link_radio(obj/item/radio/R)
 	if(!istype(R))
 		return
 	linked_radios_weakrefs |= WEAKREF(R)
@@ -179,7 +179,10 @@ GLOBAL_VAR_INIT(message_delay, 0) // To make sure restarting the recentmessages 
 	if(is_freq_listening(signal)) // detect subspace signals
 
 		signal.data["done"] = 1 // mark the signal as being broadcasted since we're a broadcaster
-		signal.data["compression"] = 0 // decompress since we're a processor
+		// Outpost 21 edit begin - haunted areas cause compression, Precompressed signals pass through and remain messed up
+		if(!signal.data["haunted"])
+			signal.data["compression"] = 0 // decompress since we're a processor
+		// Outpost 21 edit end
 
 		// Search for the original signal and mark it as done as well
 		var/datum/signal/original = signal.data["original"]
@@ -191,7 +194,9 @@ GLOBAL_VAR_INIT(message_delay, 0) // To make sure restarting the recentmessages 
 
 		if(signal.data["slow"] > 0)
 			addtimer(CALLBACK(src, PROC_REF(broadcast_signal), signal), signal.data["slow"], TIMER_DELETE_ME)
+			return
 
+		broadcast_signal(signal)
 
 /obj/machinery/telecomms/allinone/proc/broadcast_signal(datum/signal/signal)
 	/* ###### Broadcast a message using signal.data ###### */
@@ -235,7 +240,10 @@ GLOBAL_VAR_INIT(message_delay, 0) // To make sure restarting the recentmessages 
 	if(is_freq_listening(signal)) // detect subspace signals
 
 		//signal.data["done"] = 1 // mark the signal as being broadcasted since we're a broadcaster
-		signal.data["compression"] = 0
+		// Outpost 21 edit begin - haunted areas cause compression, Precompressed signals pass through and remain messed up
+		if(!signal.data["haunted"])
+			signal.data["compression"] = 0
+		// Outpost 21 end
 
 		/*
 		// Search for the original signal and mark it as done as well
@@ -543,20 +551,20 @@ GLOBAL_VAR_INIT(message_delay, 0) // To make sure restarting the recentmessages 
 			// Displays garbled message (ie "f*c* **u, **i*er!")
 		if(length(heard_garbled))
 			for (var/mob/R in heard_garbled)
-				R.hear_radio(message_pieces, verbage, part_a, part_b, part_c, part_d, part_e, M, 1, vname)
+				R.hear_radio(message_pieces, verbage, part_a, part_b, part_c, part_d, part_e, M, compression, vname) // Outpost 21 edit - haunted areas cause compression, Pass through compression
 				if(R.read_preference(/datum/preference/toggle/radio_sounds))
 					R << 'sound/effects/radio_common_quieter.ogg'
 
 		/* --- Complete gibberish. Usually happens when there's a compressed message --- */
 		if(length(heard_gibberish))
 			for (var/mob/R in heard_gibberish)
-				R.hear_radio(message_pieces, verbage, part_a, part_b, part_c, part_d, part_e, M, 1)
+				R.hear_radio(message_pieces, verbage, part_a, part_b, part_c, part_d, part_e, M, compression) // Outpost 21 edit - haunted areas cause compression, Pass through compression
 				if(R.read_preference(/datum/preference/toggle/radio_sounds))
 					R << 'sound/effects/radio_common_quieter.ogg'
 
 	return 1
 
-/proc/Broadcast_SimpleMessage(var/source, var/frequency, list/message_pieces, var/data, var/mob/M, var/compression, var/level, var/list/forced_radios)
+/proc/Broadcast_SimpleMessage(source, frequency, list/message_pieces, data, mob/M, compression, level, list/forced_radios)
 	var/text = multilingual_to_message(message_pieces)
 	/* ###### Prepare the radio connection ###### */
 
@@ -740,7 +748,7 @@ GLOBAL_VAR_INIT(message_delay, 0) // To make sure restarting the recentmessages 
 	var/pos_z = get_z(src)
 	return ((pos_z in signal.data["level"]) && signal.data["done"])
 
-/atom/proc/telecomms_process(var/do_sleep = 1)
+/atom/proc/telecomms_process(do_sleep = 1)
 
 	// First, we want to generate a new radio signal
 	var/datum/signal/signal = new

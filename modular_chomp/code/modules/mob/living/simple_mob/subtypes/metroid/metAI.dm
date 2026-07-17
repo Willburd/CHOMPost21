@@ -37,7 +37,7 @@
 
 		if( (!L.lying && prob(30 + (my_juvenile.power_charge * 7) ) || (!L.lying && always_stun) ))
 			my_juvenile.a_intent = I_DISARM // Stun them first.
-		else if(my_juvenile.is_juvenile && my_juvenile.can_consume(L) && L.lying)
+		else if(my_juvenile.is_juvenile && my_juvenile.can_consume(L) && (L.lying || !ishuman(L))) // Outpost 21 edit - Metroids can latch simple mobs
 			my_juvenile.a_intent = I_GRAB // Then eat them.
 		else
 			my_juvenile.a_intent = I_HURT // Otherwise robust them.
@@ -53,7 +53,7 @@
 			return 1 // Melee (eat) the target if dead/dying, don't shoot it.
 	return ..()
 
-/datum/ai_holder/simple_mob/juvenile_metroid/can_attack(atom/movable/AM, var/vision_required = TRUE)
+/datum/ai_holder/simple_mob/juvenile_metroid/can_attack(atom/movable/AM, vision_required = TRUE)
 	. = ..()
 	if(.) // Do some additional checks because we have Special Code(tm).
 		if(ishuman(AM))

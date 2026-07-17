@@ -2,7 +2,7 @@
 // Vore management panel for players
 //
 
-#define STATION_PREF_NAME "Chomp" // CHOMPEdit
+#define STATION_PREF_NAME "Outpost" // Outpost 21 edit - Station name
 #define VORE_BELLY_TAB 0
 #define VORE_INSIDE_TAB 1
 #define SOULCATCHER_TAB 2
@@ -137,7 +137,6 @@
 
 	// Inisde Data
 	data["inside"] = get_inside_data(host)
-
 	data["host_mobtype"] = null
 	data["show_pictures"] = null
 	data["icon_overflow"] = null
@@ -177,11 +176,13 @@
 			data["prey_abilities"] = get_prey_abilities(host, hostloc)
 			data["intent_data"] = get_intent_data(host, hostloc)
 
+		/* Outpost 21 edit - Disable soulgems
 		if(SOULCATCHER_TAB)
 			// Soulcatcher and abilities
 			data["our_bellies"] = get_vorebellies(host, FALSE)
 			data["soulcatcher"] = get_soulcatcher_data(host)
 			data["abilities"] = get_ability_data(host)
+		*/
 
 		if(PREFERENCE_TAB)
 			// Preference data, we only ever need that when we go to the pref page!
@@ -792,6 +793,7 @@
 					living_host.adjust_nutrition(-VORE_RESIZE_COST)
 					living_host.resize(new_size, uncapped = living_host.has_large_resize_bounds(), ignore_prefs = TRUE)
 			return TRUE
+		/* Outpost 21 edit - Disable soulgems
 		//Soulcatcher functions
 		if("soulcatcher_release_all")
 			host.soulgem.release_mobs()
@@ -805,9 +807,11 @@
 		if("soulcatcher_transfer")
 			host.soulgem.transfer_selected()
 			return TRUE
+		/* Outpost 21 edit - Delete souls is is too abusable by antags
 		if("soulcatcher_delete")
 			host.soulgem.delete_selected()
 			return TRUE
+		*/
 		if("soulcatcher_transfer_control")
 			host.soulgem.take_control_selected()
 			return TRUE
@@ -906,12 +910,15 @@
 				unsaved_changes = TRUE
 				host.soulgem.set_custom_message(message, SC_TRANSFERE_MESSAGE)
 			return TRUE
+		/* Outpost 21 edit - Delete souls is is too abusable by antags
 		if(SC_DELETE_MESSAGE)
 			var/message = params["val"]
 			if(message)
 				unsaved_changes = TRUE
 				host.soulgem.set_custom_message(message, SC_DELETE_MESSAGE)
 			return TRUE
+		*/
+		*/
 		if("preset")
 			var/raw_data = lowertext(params["color"])
 			var/index = lowertext(params["index"])
@@ -1472,7 +1479,7 @@
 			return TRUE
 	return FALSE
 
-/datum/vore_look/proc/sanitize_fixed_list(var/list/messages, type, delim = "\n\n", limit)
+/datum/vore_look/proc/sanitize_fixed_list(list/messages, type, delim = "\n\n", limit)
 	if(!limit)
 		CRASH("[type] set message called without limit!")
 	VPPREF_MESSAGE_SANITY(type)

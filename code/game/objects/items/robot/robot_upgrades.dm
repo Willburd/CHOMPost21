@@ -37,7 +37,7 @@
 
 /obj/item/borg/upgrade/utility/reset
 	name = "robotic module reset board"
-	desc = "Used to reset a cyborg's module. Destroys any higher than basic upgrades applied to the robot."
+	desc = "Used to reset a cyborg's module. Destroys any higher than basic upgrades applied to the robot. DOES NOT RESET LAWS, only equiped modules." // Outpost 21 edit - clarified mechanics
 	icon_state = "cyborg_upgrade1"
 	item_state = "cyborg_upgrade"
 	require_module = TRUE
@@ -186,7 +186,7 @@
 	R.add_language(LANGUAGE_SIIK, 			1)
 	R.add_language(LANGUAGE_AKHANI, 		1)
 	R.add_language(LANGUAGE_SKRELLIAN, 		1)
-	R.add_language(LANGUAGE_GUTTER, 		1)
+	//R.add_language(LANGUAGE_GUTTER, 		1) Outpost 21 edit - Not for borgs
 	R.add_language(LANGUAGE_SCHECHI, 		1)
 	R.add_language(LANGUAGE_ROOTLOCAL, 		1)
 	R.add_language(LANGUAGE_TERMINUS, 		1)
@@ -666,7 +666,6 @@
 	R.module.modules += new/obj/item/borg/sight/material(R.module)
 	return TRUE
 
-/* //ChompEDIT START - disabling for now
 /obj/item/borg/upgrade/no_prod/vision_anomalous
 	name = "Robot anomalous vision module"
 	desc = "Vision alterantion software to add anomalous sight capabilities."
@@ -684,4 +683,3 @@
 
 	R.module.modules += new/obj/item/borg/sight/anomalous(R.module)
 	return TRUE
-*/ //ChompEDIT END

@@ -10,7 +10,7 @@ GLOBAL_DATUM(infiltrators, /datum/antagonist/traitor/infiltrator)
 	role_text = "Infiltrator"
 	role_text_plural = "Infiltrators"
 	welcome_text = "To speak on your team's private channel, use :t."
-	protected_jobs = list(JOB_SECURITY_OFFICER, JOB_WARDEN, JOB_DETECTIVE, JOB_INTERNAL_AFFAIRS_AGENT, JOB_HEAD_OF_SECURITY, JOB_SITE_MANAGER)
+	protected_jobs = list(JOB_SECURITY_OFFICER, JOB_WARDEN, /*JOB_DETECTIVE,*/ JOB_INTERNAL_AFFAIRS_AGENT, JOB_HEAD_OF_SECURITY, JOB_SITE_MANAGER) // Outpost 21 edit - Detective is officer now
 	flags = ANTAG_SUSPICIOUS | ANTAG_RANDSPAWN | ANTAG_VOTABLE
 	can_speak_aooc = TRUE
 
@@ -18,7 +18,7 @@ GLOBAL_DATUM(infiltrators, /datum/antagonist/traitor/infiltrator)
 	..()
 	GLOB.infiltrators = src
 
-/datum/antagonist/traitor/infiltrator/equip(var/mob/living/carbon/human/traitor_mob)
+/datum/antagonist/traitor/infiltrator/equip(mob/living/carbon/human/traitor_mob)
 	..() // Give the uplink and other stuff.
 	// Now for the special headset.
 

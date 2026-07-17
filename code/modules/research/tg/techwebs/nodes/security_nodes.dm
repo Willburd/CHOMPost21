@@ -15,15 +15,16 @@
 		// "foam_dart",
 		"knuckledusters",
 		"tacknife",
-		/* Unbalanced material weapons
+		// Outpost 21 edit begin - We rebalanced these weapons
 		"claymore",
 		"gladius",
 		"katana",
 		"rapier",
 		"sabre",
 		"longsword",
-		// "battleaxe", // No wielded sprite
-		*/
+		"battleaxe", // No wielded sprite
+		"sledgehammer",
+		// Outpost 21 edit end
 	)
 
 // Basic pistol rounds
@@ -243,6 +244,7 @@
 		//CHOMPEnable Start
 		"bodycam_monitor",
 		//CHOMPEnable End
+		"metal_detector", // Outpost 21 edit - Thread detector
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_1_POINTS)
 	announce_channels = list(CHANNEL_SECURITY)
@@ -309,6 +311,7 @@
 		// "c38_true_strike",
 		// "c38_true_strike_mag",
 		// "techshotshell",
+		"grenade_phase", // Outpost 21 edit - Phasenades
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_4_POINTS)
 	discount_experiments = list(/datum/experiment/ordnance/highyieldbomb = TECHWEB_TIER_4_POINTS)
@@ -323,6 +326,7 @@
 		"stunrevolver",
 		"temp_gun",
 		"vinstunrevolver",
+		"huntergun", // Outpost 21 edit - Accessible hybrid netgun
 		// "ioncarbine",
 		// "lasershell",
 	)
@@ -346,6 +350,7 @@
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_4_POINTS)
 	announce_channels = list(CHANNEL_SECURITY)
 
+/* Outpost 21 edit - Disabled NSFW guns
 /datum/techweb_node/gun_nsfw
 	id = TECHWEB_NODE_NSFW
 	display_name = "'NSFW' Gun"
@@ -360,10 +365,11 @@
 		"nsfw_cell_ion",
 		"nsfw_cell_shotstun",
 		"nsfw_cell_xray",
-		// "nsfw_cell_stripper", // CHOMPRemove
+		"nsfw_cell_stripper", // Outpost 21 edit - Reenable
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_4_POINTS)
 	announce_channels = list(CHANNEL_SECURITY)
+*/
 
 /datum/techweb_node/phase_weapons //CHOMPEdit Start - Adds Phase Weaponry
 	id = TECHWEB_NODE_PHASE_WEAPONS

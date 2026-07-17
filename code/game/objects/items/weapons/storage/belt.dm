@@ -29,7 +29,7 @@
 	update_icon()
 
 //Some belts have sprites to show icons
-/obj/item/storage/belt/make_worn_icon(var/body_type,var/slot_name,var/inhands,var/default_icon,var/default_layer = 0,var/icon/clip_mask = null)
+/obj/item/storage/belt/make_worn_icon(body_type,slot_name,inhands,default_icon,default_layer = 0,icon/clip_mask = null)
 	var/image/standing = ..()
 	if(!inhands && contents.len)
 		for(var/obj/item/i in contents)
@@ -88,7 +88,8 @@
 		/obj/item/reagent_scanner,
 		/obj/item/lightpainter,
 		/obj/item/anomaly_releaser,
-		/obj/item/anomaly_scanner
+		/obj/item/anomaly_scanner,
+		/obj/item/grenade/chem_grenade/metalfoam // Outpost 21 edit - Allow metal foam nades in toolbelt
 		)
 
 /obj/item/storage/belt/utility/full
@@ -328,6 +329,8 @@
 		/obj/item/taperoll,
 		/obj/item/gun/projectile/colt/detective,
 		/obj/item/holowarrant,
+		/obj/item/shield/energy, // Outpost 21 edit - Add shield to belt
+		/obj/item/tool/crowbar/brace_jack, // Outpost 21 edit - Add shield to belt
 		/obj/item/ticket_printer	//VOREStation Edit
 		)
 
@@ -519,6 +522,7 @@
 		/obj/item/soap,
 		/obj/item/holosign_creator, //CHOMPAdd
 		/obj/item/lightreplacer,
+		/obj/item/lightpainter,
 		/obj/item/clothing/glasses/hud/janitor
 		)
 
@@ -539,6 +543,7 @@
 		/obj/item/depth_scanner,
 		/obj/item/camera,
 		/obj/item/paper,
+		/obj/item/paper_bundle,
 		/obj/item/photo,
 		/obj/item/folder,
 		/obj/item/pen,
@@ -723,6 +728,7 @@
 		/obj/item/pickaxe,
 		/obj/item/shovel,
 		/obj/item/paper,
+		/obj/item/paper_bundle,
 		/obj/item/photo,
 		/obj/item/folder,
 		/obj/item/pen,
@@ -735,13 +741,13 @@
 		/obj/item/storage/excavation,
 		/obj/item/anobattery,
 		/obj/item/reagent_containers/hypospray/autoinjector,
-		/obj/item/plastique/seismic/locked,
+		/obj/item/plastique/seismic, // Outpost 21 edit - Unlocked seismic charge
 		/obj/item/gun/magnetic/matfed/phoronbore,
 		/obj/item/storage/bag/sheetsnatcher,
 		/obj/item/melee,
 		/obj/item/kinetic_crusher,
 		/obj/item/mining_scanner,
-		/obj/item/storage/bag/ore,
+		/obj/item/ore_bag,
 		/obj/item/storage/sample_container
 		)
 		//Pretty much, if it's in the mining vendor, they should be able to put it on the belt.
@@ -765,6 +771,7 @@
 		/obj/item/cell/device,
 		/obj/item/pickaxe,
 		/obj/item/paper,
+		/obj/item/paper_bundle,
 		/obj/item/photo,
 		/obj/item/folder,
 		/obj/item/pen,

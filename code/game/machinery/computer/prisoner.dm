@@ -6,7 +6,7 @@
 	icon_keyboard = "security_key"
 	icon_screen = "explosive"
 	light_color = "#a91515"
-	req_access = list(ACCESS_ARMORY)
+	req_access = list(ACCESS_SECURITY) // Outpost 21 edit - Security instead of warden
 	circuit = /obj/item/circuitboard/prisoner
 	var/id = 0.0
 	var/temp = null
@@ -15,7 +15,7 @@
 	var/stop = 0.0
 	var/screen = 0 // 0 - No Access Denied, 1 - Access allowed
 
-/obj/machinery/computer/prisoner/attack_ai(var/mob/user as mob)
+/obj/machinery/computer/prisoner/attack_ai(mob/user as mob)
 	return src.attack_hand(user)
 
 /obj/machinery/computer/prisoner/attack_hand(mob/user)
@@ -50,20 +50,28 @@
 				continue
 			if(!track.implanted)
 				continue
+			// Outpost 21 edit begin - Improved tracker implants
+			var/xyz = "?.?.?"
 			var/loc_display = "Unknown"
 			var/mob/living/L = track.imp_in
 			if((get_z(L) in using_map.station_levels) && !istype(L.loc, /turf/space))
 				loc_display = T.loc
+				xyz = "[T.x].[T.y].[T.z]"
 			if(track.malfunction)
 				loc_display = pick(GLOB.teleportlocs)
-			if(is_vore_jammed(track))
+				xyz = "[rand(1,300)].[rand(1,300)].[rand(1,10)]"
+			var/area/A = get_area(L)
+			if(is_vore_jammed(track) || !A || A.flag_check(AREA_BLOCK_SUIT_SENSORS)) // Outpost 21 edit - Tracking implants respect crew sensor blocking areas
 				loc_display = "E4R@4"
+				xyz = "[rand(1,300)].[rand(1,300)].[rand(1,10)]"
 			trackImplants.Add(list(list(
 				"host" = L,
 				"ref" = "\ref[track]",
 				"id" = "[track.id]",
 				"loc" = "[loc_display]",
+				"coords" = xyz,
 			)))
+			// Outpost 21 edit end
 
 	return list("locked" = !screen, "chemImplants" = chemImplants, "trackImplants" = trackImplants)
 

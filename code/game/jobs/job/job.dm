@@ -43,6 +43,8 @@
 	var/list/restricted_keys = list()		//CHOMPadd
 	var/list/shift_keys = list()			//CHOMPadd
 
+	var/forbid_department_account_access = FALSE // Outpost 21 edit - Does not provide the account ID and key for the department's bank account
+
 	//Requires a ckey to be whitelisted in jobwhitelist.txt
 	var/whitelist_only = 0
 
@@ -74,16 +76,25 @@
 
 /datum/job/New()
 	. = ..()
+	// Outpost 21 edit begin - We allow the whole department to use the bank account
+	if(account_allowed && !offmap_spawn && !forbid_department_account_access)
+		var/list/accounts = list() // heads get head stuff
+		for(var/dept in (departments + departments_managed + department_accounts))
+			if(!locate(dept) in accounts)
+				accounts.Add(dept)
+		department_accounts = accounts
+		return
+	// Outpost 21 edit end
 	department_accounts = department_accounts || departments_managed
 
-/datum/job/proc/equip(var/mob/living/carbon/human/H, var/alt_title)
+/datum/job/proc/equip(mob/living/carbon/human/H, alt_title)
 	var/datum/decl/hierarchy/outfit/outfit = get_outfit(H, alt_title)
 	if(!outfit)
 		return FALSE
 	. = outfit.equip(H, title, alt_title)
 	return 1
 
-/datum/job/proc/get_outfit(var/mob/living/carbon/human/H, var/alt_title)
+/datum/job/proc/get_outfit(mob/living/carbon/human/H, alt_title)
 	if(alt_title && alt_titles)
 		var/datum/alt_title/A = alt_titles[alt_title]
 		if(A && initial(A.title_outfit))
@@ -91,13 +102,13 @@
 	. = . || outfit_type
 	. = outfit_by_type(.)
 
-/datum/job/proc/setup_account(var/mob/living/carbon/human/H)
+/datum/job/proc/setup_account(mob/living/carbon/human/H)
 	if(!account_allowed || (H.mind && H.mind.initial_account))
 		return
 
 	var/income = 1
 	if(H.client)
-		switch(H.client.prefs.economic_status)
+		switch(H.client.prefs.read_preference(/datum/preference/choiced/human/economic_status))
 			if(CLASS_UPPER)		income = 1.30
 			if(CLASS_UPMID)		income = 1.15
 			if(CLASS_MIDDLE)	income = 1
@@ -121,10 +132,16 @@
 
 		H.mind.initial_account = M
 
-	to_chat(H, span_boldnotice("Your account number is: [M.account_number], your account pin is: [M.remote_access_pin]"))
+	// Outpost 21 edit begin - Show department accounts too so players know they have access
+	if(account_allowed && !forbid_department_account_access)
+		for(var/dept in department_accounts)
+			var/datum/money_account/bank_account = GLOB.department_accounts[dept]
+			if(bank_account)
+				to_chat(H, span_notice("<b>The [bank_account.owner_name] number is: [bank_account.account_number], and its account pin is: [bank_account.remote_access_pin]</b>"))
+	// Outpost 21 edit end
 
 // overrideable separately so AIs/borgs can have cardborg hats without unneccessary new()/qdel()
-/datum/job/proc/equip_preview(mob/living/carbon/human/H, var/alt_title)
+/datum/job/proc/equip_preview(mob/living/carbon/human/H, alt_title)
 	var/datum/decl/hierarchy/outfit/outfit = get_outfit(H, alt_title)
 	if(!outfit)
 		return FALSE
@@ -145,14 +162,14 @@
 		return max(0, minimal_player_age - C.player_age)
 	return 0
 
-/datum/job/proc/apply_fingerprints(var/mob/living/carbon/human/target)
+/datum/job/proc/apply_fingerprints(mob/living/carbon/human/target)
 	if(!istype(target))
 		return 0
 	for(var/obj/item/item in target.contents)
 		apply_fingerprints_to_item(target, item)
 	return 1
 
-/datum/job/proc/apply_fingerprints_to_item(var/mob/living/carbon/human/holder, var/obj/item/item)
+/datum/job/proc/apply_fingerprints_to_item(mob/living/carbon/human/holder, obj/item/item)
 	item.add_fingerprint(holder,1)
 	if(item.contents.len)
 		for(var/obj/item/sub_item in item.contents)
@@ -161,10 +178,10 @@
 /datum/job/proc/is_position_available()
 	return (current_positions < total_positions) || (total_positions == -1)
 
-/datum/job/proc/has_alt_title(var/mob/H, var/supplied_title, var/desired_title)
+/datum/job/proc/has_alt_title(mob/H, supplied_title, desired_title)
 	return (supplied_title == desired_title) || (H.mind && H.mind.role_alt_title == desired_title)
 
-/datum/job/proc/get_description_blurb(var/alt_title)
+/datum/job/proc/get_description_blurb(alt_title)
 	var/list/message = list()
 	message |= job_description
 
@@ -177,7 +194,7 @@
 	return message
 
 /datum/job/proc/get_job_icon()
-	if(!GLOB.job_master.job_icons[title])
+	if(!SSjob.job_icon_cache[title])
 		var/mob/living/carbon/human/dummy/mannequin/mannequin = get_mannequin("#job_icon")
 		dress_mannequin(mannequin)
 		mannequin.dir = SOUTH
@@ -185,11 +202,11 @@
 		var/icon/preview_icon = getFlatIcon(mannequin)
 
 		preview_icon.Scale(preview_icon.Width() * 2, preview_icon.Height() * 2) // Scaling here to prevent blurring in the browser.
-		GLOB.job_master.job_icons[title] = preview_icon
+		SSjob.job_icon_cache[title] = preview_icon
 
-	return GLOB.job_master.job_icons[title]
+	return SSjob.job_icon_cache[title]
 
-/datum/job/proc/dress_mannequin(var/mob/living/carbon/human/dummy/mannequin/mannequin)
+/datum/job/proc/dress_mannequin(mob/living/carbon/human/dummy/mannequin/mannequin)
 	mannequin.delete_inventory(TRUE)
 	equip_preview(mannequin)
 	if(mannequin.back)
@@ -208,10 +225,12 @@
 	//return (brain_type && LAZYACCESS(ideal_age_by_species, brain_type)) || LAZYACCESS(ideal_age_by_species, brain_type) || ideal_character_age //VOREStation Removal
 
 /datum/job/proc/is_species_banned(species_name, brain_type)
+	/* Outpost 21 edit - Allow shadekin jobs, they're whitelist anyway
 	// CHOMPEdit begin -- Shadekin cannot be any crew position
 	if(species_name == SPECIES_SHADEKIN)
 		return TRUE
 	// CHOMPEdit end
+	*/
 	return FALSE // VOREStation Edit - Any species can be any job.
 	/* VOREStation Removal
 	if(banned_job_species == null)
@@ -229,7 +248,7 @@
 		SSjob.shift_keys[title] += keylist
 //CHOMPadd end
 
-/datum/job/proc/update_limit(var/comperator)
+/datum/job/proc/update_limit(comperator)
 	return
 
 // Check client-specific availability rules.

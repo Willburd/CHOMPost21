@@ -3,7 +3,14 @@ GLOBAL_LIST_INIT(bluespace_item_types, list(
 	/obj/item/storage/bag/trash/holding,
 	/obj/item/storage/pouch/holding,
 	/obj/item/storage/belt/utility/holding,
-	/obj/item/storage/belt/medical/holding
+	/obj/item/storage/belt/medical/holding,
+	// Outpost 21 edit(port) begin - missing bluespace item
+	/obj/item/clothing/accessory/storage/bluespace,
+	/obj/item/ore_bag/holding,
+	/obj/item/clothing/under/hyperfiber/bluespace,
+	/obj/item/reagent_containers/food/drinks/bluespace_coffee,
+	/obj/item/reagent_containers/glass/beaker/bluespace,
+	// Outpost 21 edit end
 ))
 
 /proc/do_teleport(atom/movable/teleatom, atom/destination, precision = null, datum/effect/effect/effectin = null, datum/effect/effect/effectout = null, asoundin = null, asoundout = null, no_effects=FALSE, channel=TELEPORT_CHANNEL_BLUESPACE, forced = FALSE)
@@ -53,6 +60,24 @@ GLOBAL_LIST_INIT(bluespace_item_types, list(
 		var/obj/belly/belly = destination
 		if(can_spontaneous_vore(belly.owner, teleatom) && belly.owner != teleatom)
 			destturf = destination
+
+	// Outpost 21 edit begin - Teleport redspace chance
+	if(isturf(destturf) && !forced)
+		var/area/current_area = get_area(curturf)
+		var/chance = 1
+		if(current_area?.haunted)
+			chance = 10
+		var/area/red_area_check = get_area(destturf)
+		if((prob(chance) || istype(current_area,/area/specialty/redspace)) && !istype(red_area_check,/area/specialty/redspace))
+			var/list/redlist = list()
+			for(var/obj/effect/landmark/R in GLOB.landmarks_list)
+				if(R.name == "redentrance")
+					redlist += R
+			if(redlist.len > 0)
+				destturf = get_turf(pick(redlist))
+				to_chat(teleatom,span_danger("Something feels wrong..."))
+				forced = TRUE // No escape
+	// Outpost 21 edit end
 
 	// HOLD IT! destturf? Hell nah, televore finally works again.
 	// Now CHECK if someone capable of televoring is in the same turf...
@@ -113,7 +138,7 @@ GLOBAL_LIST_INIT(bluespace_item_types, list(
 
 			teleatom.buckle_mob(rider, TRUE)
 
-/proc/tele_play_specials(atom/movable/teleatom, atom/location, var/datum/effect/effect/system/effect, sound)
+/proc/tele_play_specials(atom/movable/teleatom, atom/location, datum/effect/effect/system/effect, sound)
 	if(!location)
 		return
 
@@ -192,3 +217,46 @@ GLOBAL_LIST_INIT(bluespace_item_types, list(
 		return FALSE
 
 	return TRUE
+
+// Gets the topmost teleportable container
+/proc/get_teleportable_container(atom/movable/teleportable, container_flags = ALL)
+	while(ismovable(teleportable.loc))
+		if(!(container_flags & TELEPORT_CONTAINER_INCLUDE_STORAGE) && isitem(teleportable))
+			var/obj/item/item = teleportable
+			if(item.storage_depth(item.loc))
+				break
+		var/atom/movable/movable = teleportable.loc
+		if(movable.anchored)
+			break
+		if(isliving(movable))
+			var/mob/living/living = movable
+			if(!(container_flags & TELEPORT_CONTAINER_INCLUDE_INVENTORY))
+				var/list/equipped = living.get_equipped_items(INCLUDE_HELD|INCLUDE_POCKETS)
+				if((teleportable in equipped) && !HAS_TRAIT(teleportable, TRAIT_NODROP))
+					if(istype(teleportable, /obj/item/rig) && (container_flags & TELEPORT_CONTAINER_INCLUDE_SEALED_RIGSUIT))
+						var/obj/item/rig/rigsuit = teleportable
+						var/sealed = TRUE
+						for(var/obj/item/clothing/part as anything in rigsuit)
+							if((part == rigsuit || part.loc != rigsuit) && rigsuit.offline)
+								sealed = FALSE
+								break
+						if(!sealed)
+							break
+					else
+						break
+			if(living.buckled)
+				if(living.buckled.anchored)
+					break
+				else
+					var/obj/buckle_obj = living.buckled
+					buckle_obj.unbuckle_mob(living)
+		if(!(container_flags & TELEPORT_CONTAINER_INCLUDE_CLOSET) && istype(movable, /obj/structure/closet))
+			break
+		if(!(container_flags & TELEPORT_CONTAINER_INCLUDE_MECH_EQUIPMENT) && istype(movable, /obj/item/mecha_parts/mecha_equipment))
+			break
+		if(!(container_flags & TELEPORT_CONTAINER_INCLUDE_VEHICLE) && istype(movable, /obj/vehicle))
+			var/obj/vehicle/vehicle = movable
+			if(vehicle.load)
+				break
+		teleportable = movable
+	return teleportable

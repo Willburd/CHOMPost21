@@ -1,10 +1,10 @@
 // Define a place to save in character setup
 /datum/preferences
-	var/vantag_volunteer = 0	// What state I want to be in, in terms of being affected by antags.
+	var/vantag_volunteer = FALSE		// What state I want to be in, in terms of being affected by antags.
 	var/vantag_preference = VANTAG_NONE	// Whether I'd like to volunteer to be an antag at some point.
-	var/resleeve_lock = 0	// Whether movs should have OOC reslieving protection. Default false.
-	var/resleeve_scan = 1	// Whether mob should start with a pre-spawn body scan.  Default true.
-	var/mind_scan = 1		// Whether mob should start with a pre-spawn mind scan.  Default true.
+	var/resleeve_lock = FALSE			// Whether movs should have OOC reslieving protection. Default false.
+	var/resleeve_scan = TRUE			// Whether mob should start with a pre-spawn body scan.  Default true.
+	var/mind_scan = TRUE				// Whether mob should start with a pre-spawn mind scan.  Default true.
 
 	var/custom_species	// Custom species name, can't be changed due to it having been used in savefiles already.
 
@@ -29,7 +29,7 @@
 	pref.directory_ad			= save_data["directory_ad"]
 	pref.sensorpref				= save_data["sensorpref"]
 	pref.capture_crystal		= save_data["capture_crystal"]
-	pref.auto_backup_implant	= save_data["auto_backup_implant"]
+	//pref.auto_backup_implant	= save_data["auto_backup_implant"] Outpost 21 edit - no backup implants
 	pref.borg_petting			= save_data["borg_petting"]
 	pref.resleeve_lock			= save_data["resleeve_lock"]
 	pref.resleeve_scan			= save_data["resleeve_scan"]
@@ -55,7 +55,7 @@
 	save_data["directory_ad"]			= pref.directory_ad
 	save_data["sensorpref"]				= pref.sensorpref
 	save_data["capture_crystal"]		= pref.capture_crystal
-	save_data["auto_backup_implant"]	= pref.auto_backup_implant
+	//save_data["auto_backup_implant"]	= pref.auto_backup_implant Outpost 21 edit - no backup implants
 	save_data["borg_petting"]			= pref.borg_petting
 	save_data["resleeve_lock"]			= pref.resleeve_lock
 	save_data["resleeve_scan"]			= pref.resleeve_scan
@@ -72,7 +72,7 @@
 	save_data["custom_heat"]		= check_list_copy(pref.custom_heat)
 	save_data["custom_cold"]		= check_list_copy(pref.custom_cold)
 
-/datum/category_item/player_setup_item/general/vore_misc/copy_to_mob(var/mob/living/carbon/human/character)
+/datum/category_item/player_setup_item/general/vore_misc/copy_to_mob(mob/living/carbon/human/character)
 	character.custom_species	= pref.custom_species
 
 	character.custom_say		= lowertext(trim(pref.custom_say))
@@ -94,9 +94,13 @@
 		BITSET(character.hud_updateflag, VANTAG_HUD)
 		var/want_body_save = pref.resleeve_scan
 		var/want_mind_save = pref.mind_scan
+		var/datum/job/J = SSjob.get_job(character.job)
+		if(J && J.offmap_spawn)
+			want_body_save = FALSE
+			want_mind_save = FALSE
 
-		spawn(50)
-			if(QDELETED(character) || QDELETED(pref))
+		spawn(5 SECONDS)
+			if(QDELETED(character) || QDELETED(pref) || character.GetComponent(/datum/component/badbody)) // Outpost 21 edit - Disable if badbody
 				return // They might have been deleted during the wait
 			if(!character.virtual_reality_mob && !(/mob/living/carbon/human/proc/perform_exit_vr in character.verbs)) //Janky fix to prevent resleeving VR avatars but beats refactoring transcore
 				if(want_body_save && !(character.species.flags & NO_SLEEVE)) // Nosleeve flag overrides character pref editor. Otherwise resleevable species still get one even if they took a trait to not be sleevable.
@@ -105,7 +109,7 @@
 				if(want_mind_save)
 					var/datum/transcore_db/our_db = SStranscore.db_by_key(null)
 					if(our_db)
-						our_db.m_backup(character.mind,character.nif,one_time = TRUE)
+						our_db.m_backup(character.mind,null/*character.nif*/,one_time = TRUE) // Outpost 21 edit - Nif removal
 			if(pref.resleeve_lock)
 				character.resleeve_lock = character.ckey
 			character.original_player = character.ckey
@@ -155,6 +159,7 @@
 	data["borg_petting"] = pref.borg_petting
 
 	data["ignore_shoes"] = pref.read_preference(/datum/preference/toggle/human/ignore_shoes)
+	data["synth_cookie"] = pref.read_preference(/datum/preference/toggle/living/foodsynth_cookies)
 
 	data["resleeve_lock"] = pref.resleeve_lock
 	data["resleeve_scan"] = pref.resleeve_scan
@@ -235,6 +240,9 @@
 			return TOPIC_REFRESH
 		if("toggle_resleeve_scan")
 			pref.resleeve_scan = pref.resleeve_scan ? 0 : 1;
+			return TOPIC_REFRESH
+		if("toggle_synth_cookie")
+			pref.update_preference_by_type(/datum/preference/toggle/living/foodsynth_cookies, !pref.read_preference(/datum/preference/toggle/living/foodsynth_cookies))
 			return TOPIC_REFRESH
 		if("toggle_mind_scan")
 			pref.mind_scan = pref.mind_scan ? 0 : 1;

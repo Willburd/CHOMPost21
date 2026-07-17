@@ -1,0 +1,111 @@
+/datum/event/psychic_screach
+	announceWhen = -1 // Never (setup may override)
+
+/datum/event/psychic_screach/setup()
+	endWhen = rand(5, 10)
+	announceWhen = endWhen + rand( 20, 30)
+
+/datum/event/psychic_screach/announce()
+	GLOB.command_announcement.Announce("We just received readings that an unknown energy emission just passed through \the [location_name()]. Electrical systems appear to have been affected. Is anyone reading this?", "Anomaly Alert", new_sound = ANNOUNCER_MSG_COMMSBLACKOUT)
+
+/datum/event/psychic_screach/start()
+	// SCARY
+	Sound( 'sound/goonstation/spooky/Meatzone_Howl.ogg', affecting_z)
+	Sound( 'sound/goonstation/spooky/Station_SpookyAtmosphere2.ogg', affecting_z)
+	SShaunting.intense_world_haunt()
+	if(prob(60))
+		SShaunting.intense_world_haunt()
+	if(prob(20))
+		SShaunting.intense_world_haunt()
+
+	// Break telecoms for a bit
+	for(var/obj/machinery/telecomms/T in GLOB.telecomms_list)
+		T.emp_act(1)
+	for(var/obj/machinery/exonet_node/N in GLOB.machines)
+		N.emp_act(1)
+
+	// Vibecheck lights
+	for(var/obj/machinery/light/zap in GLOB.machines)
+		if(prob(15))
+			zap.broken()
+
+	// flash lights
+	for(var/mob/living/L in GLOB.player_list)
+		for(var/obj/machinery/light/flash in range(12, L))
+			flash.flicker(9)
+
+	// Scare the crew a bit
+	var/list/borglist = list()
+	for(var/mob/living/L in GLOB.living_mob_list)
+		if(!(L.z in affecting_z))
+			continue
+		if(isAI(L)) // AI is fine
+			continue
+		if(istype(L,/mob/living/carbon/human/monkey/auto_doc))
+			continue
+		if(ishuman(L))
+			// MMIs
+			var/mob/living/carbon/human/H = L
+			if (H.isSynthetic())
+				// fwump
+				to_chat(H, "<span class='warning'>Your integrated sensors detect an anomaly. Your systems will be impacted as you begin a partial restart.</span>")
+				var/ionbug = rand(3, 9)
+				H.confused += ionbug
+				H.eye_blurry += (ionbug - 1)
+			else
+				// nosebleed
+				to_chat(H, "<span class='warning'>Your nose begins to bleed...</span>")
+				H.drip(1)
+				H.Confuse(2)
+				H.adjustHalLoss(30)
+		else if(issilicon(L))
+			// BORGS
+			var/mob/living/silicon/S = L
+			to_chat(S, "<span class='warning'>Your integrated sensors detect an anomaly. Your systems will be impacted as you begin a partial restart.</span>")
+			var/ionbug = rand(3, 9)
+			S.confused += ionbug
+			S.eye_blurry += (ionbug - 1)
+			if(isAI(L)) // not an AI event
+				continue
+			// extremely boring if a shell or empty gets it
+			if(!L.client)
+				continue
+			if(isrobot(L))
+				var/mob/living/silicon/robot/R = L
+				if(R.shell)
+					continue
+			// BORGS LOCATED
+			borglist.Add(L)
+	// NOW SWIGGTY SWOOTY FOR THEIR BOOTY
+	if(borglist.len)
+		var/mob/living/silicon/S = pick(borglist)
+		// funni laws!
+		to_chat(S, "<span class='danger'>You have detected a change in your laws information:</span>")
+		var/law = S.generate_screech_law()
+		S.add_ion_law(law)
+		//to_chat(S, law)
+		S.show_laws()
+
+/datum/event/psychic_screach/end()
+	..()
+	// finally a powerout
+	Sound( 'sound/goonstation/spooky/Station_SpookyAtmosphere1.ogg', affecting_z)
+
+	if(severity == EVENT_LEVEL_MAJOR)
+		power_kill_quick() // OHNO
+	else
+		// This sets off a chain of events that lead to the actual grid check (or perhaps worse).
+		// First, the Supermatter engine makes a power spike.
+		for(var/obj/machinery/power/generator/engine in GLOB.machines)
+			engine.power_spike(80,TRUE,TRUE)
+			break // Just one engine, please.
+
+/datum/event/psychic_screach/proc/Sound(sound, list/zlevels)
+	if(!sound)
+		return
+
+	for(var/mob/M in GLOB.player_list)
+		if(zlevels && !(M.z in zlevels))
+			continue
+		if(!isnewplayer(M) && !isdeaf(M))
+			M << sound

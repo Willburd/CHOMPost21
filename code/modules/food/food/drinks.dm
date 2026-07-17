@@ -14,7 +14,7 @@
 	volume = 50
 	var/trash = null
 	var/cant_open = 0
-	var/cant_chance = 0
+	var/cant_chance = 1 // Outpost 21 edit - This is genuinely just kinda funny
 
 	var/is_can = FALSE
 
@@ -36,7 +36,19 @@
 			price_tag = reagent.price_tag
 		else
 			price_tag = null
+	// Outpost 21 edit begin - Empty drinks have no value
+	else
+		price_tag = null
+	// Outpost 21 edit end
 	return
+
+// Outpost 21 edit begin - Open drink cans don't have any value
+/obj/item/reagent_containers/food/drinks/cans/on_reagent_change()
+	if(flags & OPENCONTAINER)
+		price_tag = null
+		return
+	. = ..()
+// Outpost 21 edit end
 
 /obj/item/reagent_containers/food/drinks/Destroy()
 	if(food_inserted_micros)
@@ -91,7 +103,7 @@
 
 	return ..()
 
-/obj/item/reagent_containers/food/drinks/proc/On_Consume(var/mob/living/eater, var/mob/feeder, var/changed = FALSE)
+/obj/item/reagent_containers/food/drinks/proc/On_Consume(mob/living/eater, mob/feeder, changed = FALSE)
 	SEND_SIGNAL(src, COMSIG_GLASS_DRANK, eater, feeder)
 	if(!feeder)
 		feeder = eater
@@ -126,7 +138,7 @@
 			qdel(src)
 	return
 
-/obj/item/reagent_containers/food/drinks/on_rag_wipe(var/obj/item/reagent_containers/glass/rag/R)
+/obj/item/reagent_containers/food/drinks/on_rag_wipe(obj/item/reagent_containers/glass/rag/R)
 	wash(CLEAN_SCRUB)
 
 /obj/item/reagent_containers/food/drinks/attack_self(mob/user, special_pass)
@@ -144,18 +156,19 @@
 		GLOB.cans_opened_roundstat++
 		to_chat(user, span_notice("You open [src] with an audible pop!"))
 		flags |= OPENCONTAINER
+		price_tag = null // Outpost 21 edit - Open drink cans don't have any value
 	else
 		to_chat(user, span_warning("...wait a second, this one doesn't have a ring pull. It's not a <b>can</b>, it's a <b>can't!</b>"))
 		name = "\improper can't of [initial(name)]"	//don't update the name until they try to open it
 
-/obj/item/reagent_containers/food/drinks/attack(mob/M as mob, mob/user as mob, def_zone)
+/obj/item/reagent_containers/food/drinks/attack(mob/living/M, mob/living/user, target_zone, attack_modifier)
 	if(force && !(flags & NOBLUDGEON) && user.a_intent == I_HURT)
 		return ..()
 
 	if(standard_feed_mob(user, M))
-		return
+		return ITEM_INTERACT_SUCCESS
 
-	return FALSE
+	return ITEM_INTERACT_FAILURE
 
 /obj/item/reagent_containers/food/drinks/afterattack(obj/target, mob/user, proximity)
 	if(!proximity) return
@@ -166,7 +179,7 @@
 		return
 	return ..()
 
-/obj/item/reagent_containers/food/drinks/standard_feed_mob(var/mob/user, var/mob/target)
+/obj/item/reagent_containers/food/drinks/standard_feed_mob(mob/user, mob/target)
 	if(!is_open_container())
 		to_chat(user, span_notice("You need to open [src]!"))
 		return TRUE
@@ -176,19 +189,19 @@
 	On_Consume(target, user, changed)
 	return
 
-/obj/item/reagent_containers/food/drinks/standard_dispenser_refill(var/mob/user, var/obj/structure/reagent_dispensers/target)
+/obj/item/reagent_containers/food/drinks/standard_dispenser_refill(mob/user, obj/structure/reagent_dispensers/target)
 	if(!is_open_container())
 		to_chat(user, span_notice("You need to open [src]!"))
 		return TRUE
 	return ..()
 
-/obj/item/reagent_containers/food/drinks/standard_pour_into(var/mob/user, var/atom/target)
+/obj/item/reagent_containers/food/drinks/standard_pour_into(mob/user, atom/target)
 	if(!is_open_container())
 		to_chat(user, span_notice("You need to open [src]!"))
 		return TRUE
 	return ..()
 
-/obj/item/reagent_containers/food/drinks/self_feed_message(var/mob/user)
+/obj/item/reagent_containers/food/drinks/self_feed_message(mob/user)
 	if(amount_per_transfer_from_this == volume)	//I wanted to use a switch, but switch statements can't use vars and the maximum volume of containers varies
 		to_chat(user, span_notice("You knock back the entire [src] in one go!"))
 	else if(amount_per_transfer_from_this == 1)
@@ -204,7 +217,7 @@
 	else	//default message as a fallback
 		to_chat(user, span_notice("You swallow a gulp from \the [src]."))
 
-/obj/item/reagent_containers/food/drinks/feed_sound(var/mob/user)
+/obj/item/reagent_containers/food/drinks/feed_sound(mob/user)
 	playsound(src, 'sound/items/drink.ogg', rand(10, 50), TRUE)
 
 /obj/item/reagent_containers/food/drinks/examine(mob/user)
@@ -535,7 +548,7 @@
 	icon_state = "lithiumflask"
 
 /obj/item/reagent_containers/food/drinks/flask/detflask
-	name = "\improper " + JOB_DETECTIVE + "'s flask"
+	name = "\improper " + JOB_ALT_DETECTIVE + "'s flask" // Outpost 21 edit - Detective is officer now
 	desc = "A metal flask with a leather band and golden badge belonging to the detective."
 	icon_state = "detflask"
 	volume = 60

@@ -31,6 +31,7 @@
 		"pros_spleen",
 		"pros_larynx",
 		"pros_stomach",
+		"pros_butt", // Outpost 21 edit - Prosthetic butt
 		// Robots
 		"robot_exoskeleton",
 		"robot_torso",
@@ -73,7 +74,7 @@
 		"recharge_station",
 		"transhuman_synthprinter",
 		"robot_scanner",
-		"protean_reboot",
+		// "protean_reboot", // Outpost 21 edit - Protean removal
 		// bags
 		"misc_synth_bag",
 		"misc_synth_bag_tag_nt",
@@ -168,7 +169,7 @@
 	description = "Implants designed to operate seamlessly without active user input, enhancing various physiological functions or providing continuous benefits."
 	prereq_ids = list(TECHWEB_NODE_AUGMENTATION)
 	design_ids = list(
-		"implant_backup",
+		// "implant_backup", // Outpost 21 edit - Backup removal
 		"health_scan_implant",
 		// "skill_station",
 		// "implant_trombone",
@@ -188,7 +189,7 @@
 	id = TECHWEB_NODE_CYBER_IMPLANTS
 	display_name = "Cybernetic Implants"
 	description = "Advanced technological enhancements integrated into the body, offering improved physical capabilities."
-	prereq_ids = list(TECHWEB_NODE_PASSIVE_IMPLANTS, TECHWEB_NODE_CYBERNETICS)
+	prereq_ids = list(TECHWEB_NODE_PASSIVE_IMPLANTS)
 	design_ids = list(
 		"implant_chem",
 		// "ci-breather",
@@ -196,6 +197,7 @@
 		// "ci-thrusters",
 		// "ci-herculean",
 		// "ci-connector",
+		"implant_apc", // Outpost 21 edit - APC connector
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_3_POINTS)
 	announce_channels = list(CHANNEL_SCIENCE, CHANNEL_MEDICAL)
@@ -238,6 +240,7 @@
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_5_POINTS)
 	announce_channels = list(CHANNEL_SCIENCE, CHANNEL_MEDICAL)
 
+/* Outpost 21 edit - Protean removal
 /datum/techweb_node/protean
 	id = TECHWEB_NODE_PROTEAN
 	display_name = "Protean Parts"
@@ -250,3 +253,4 @@
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_5_POINTS)
 	announce_channels = list(CHANNEL_SCIENCE, CHANNEL_MEDICAL)
+*/

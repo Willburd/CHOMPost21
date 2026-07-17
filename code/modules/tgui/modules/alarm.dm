@@ -32,10 +32,13 @@
 /datum/tgui_module/alarm_monitor/engineering/glasses/tgui_state(mob/user)
 	return GLOB.tgui_glasses_state
 
+
+/* Outpost 21 edit - Nif removal
 // Subtype for nif_state
 /datum/tgui_module/alarm_monitor/engineering/nif
 /datum/tgui_module/alarm_monitor/engineering/nif/tgui_state(mob/user)
 	return GLOB.tgui_nif_state
+*/
 
 // Subtype for NTOS
 /datum/tgui_module/alarm_monitor/engineering/ntos
@@ -55,11 +58,11 @@
 /datum/tgui_module/alarm_monitor/security/ntos
 	ntos = TRUE
 
-/datum/tgui_module/alarm_monitor/proc/register_alarm(var/object, var/procName)
+/datum/tgui_module/alarm_monitor/proc/register_alarm(object, procName)
 	for(var/datum/alarm_handler/AH in alarm_handlers)
 		AH.register_alarm(object, procName)
 
-/datum/tgui_module/alarm_monitor/proc/unregister_alarm(var/object)
+/datum/tgui_module/alarm_monitor/proc/unregister_alarm(object)
 	for(var/datum/alarm_handler/AH in alarm_handlers)
 		AH.unregister_alarm(object)
 

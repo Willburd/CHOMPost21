@@ -38,9 +38,22 @@
 	if(is_valid_setup())
 		return TRUE
 
-	for(var/obj/machinery/disperser/front/F in GLOB.machines)
-		if(get_dist(src, F) >= link_range)
+	// Outpost 21 edit(port) begin - Use nearest launcher
+	var/obj/machinery/disperser/front/nearest_front
+	var/obj/machinery/disperser/middle/nearest_middle
+	var/obj/machinery/disperser/back/nearest_back
+
+	var/check_dist = INFINITY
+	for(var/obj/machinery/disperser/front/F in get_area(src))
+		if(F.z != z)
 			continue
+		var/new_dist = get_dist(src, F)
+		if(new_dist >= link_range)
+			continue
+		if(new_dist > check_dist)
+			continue
+		check_dist = new_dist
+		// Detect if machine is valid
 		var/backwards = turn(F.dir, 180)
 		var/obj/machinery/disperser/middle/M = locate() in get_step(F, backwards)
 		if(!M || get_dist(src, M) >= link_range)
@@ -48,14 +61,21 @@
 		var/obj/machinery/disperser/back/B = locate() in get_step(M, backwards)
 		if(!B || get_dist(src, B) >= link_range)
 			continue
-		front = F
-		middle = M
-		back = B
-		if(is_valid_setup())
-			RegisterSignal(F, COMSIG_OBSERVER_DESTROYED, PROC_REF(release_links))
-			RegisterSignal(M, COMSIG_OBSERVER_DESTROYED, PROC_REF(release_links))
-			RegisterSignal(B, COMSIG_OBSERVER_DESTROYED, PROC_REF(release_links))
-			return TRUE
+		nearest_front = F
+		nearest_middle = M
+		nearest_back = B
+
+	// Link console to nearest set of machines
+	front = nearest_front
+	middle = nearest_middle
+	back = nearest_back
+	if(is_valid_setup())
+		RegisterSignal(front, COMSIG_OBSERVER_DESTROYED, PROC_REF(release_links))
+		RegisterSignal(middle, COMSIG_OBSERVER_DESTROYED, PROC_REF(release_links))
+		RegisterSignal(back, COMSIG_OBSERVER_DESTROYED, PROC_REF(release_links))
+		return TRUE
+	// Outpost 21 edit(port) end
+
 	return FALSE
 
 /obj/machinery/computer/ship/disperser/proc/is_valid_setup()

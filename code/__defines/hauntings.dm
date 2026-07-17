@@ -1,0 +1,7 @@
+#define HAUNTING_BLESSING "blessing"
+#define HAUNTING_RESLEEVE "resleeve"
+#define HAUNTING_COMFORT "comfort"
+#define HAUNTING_UNSETTLE "unsettle"
+#define HAUNTING_BLOOD "blood"
+#define HAUNTING_DEATH "death"
+#define HAUNTING_GHOSTS "ghosts"

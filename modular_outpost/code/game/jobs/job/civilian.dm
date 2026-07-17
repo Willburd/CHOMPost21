@@ -1,0 +1,94 @@
+/datum/job/hydro
+	supervisors = "the " + JOB_QUARTERMASTER
+	selection_color = "#7a4f33"
+	sorting_order = 2
+
+/datum/job/hydro/New()
+	. = ..()
+	access |= list(ACCESS_XENOBOTANY)
+	minimal_access |= list(ACCESS_XENOBOTANY)
+	alt_titles |= list(JOB_XENOBOTANIST = /datum/alt_title/xenobotanist, JOB_ALT_XENOHYDROPONICIST = /datum/alt_title/xenohydroponicist, JOB_ALT_XENOFLORIST = /datum/alt_title/xenoflorist)
+
+// alt-titles
+/datum/alt_title/xenobotanist
+	title = JOB_XENOBOTANIST
+	title_blurb = "A " + JOB_XENOBOTANIST + " grows and cares for a variety of abnormal, custom made, and frequently dangerous plant life. When the products of these plants \
+					are both safe and beneficial to the station, they may choose to introduce it to the rest of the crew."
+	title_outfit = /datum/decl/hierarchy/outfit/job/science/xenobotanist
+
+/datum/alt_title/xenoflorist
+	title = JOB_ALT_XENOFLORIST
+	title_blurb = "A " + JOB_ALT_XENOFLORIST + " grows and cares for a variety of abnormal, custom made, and frequently dangerous plant life. When the products of these plants \
+					are both safe and beneficial to the station, they may choose to introduce it to the rest of the crew."
+	title_outfit = /datum/decl/hierarchy/outfit/job/science/xenobotanist
+
+/datum/alt_title/xenohydroponicist
+	title = JOB_ALT_XENOHYDROPONICIST
+	title_blurb = "A " + JOB_ALT_XENOHYDROPONICIST + " grows and cares for a variety of abnormal, custom made, and frequently dangerous plant life. When the products of these plants \
+					are both safe and beneficial to the station, they may choose to introduce it to the rest of the crew."
+	title_outfit = /datum/decl/hierarchy/outfit/job/science/xenobotanist
+
+
+/datum/job/bartender
+	supervisors = "the " + JOB_QUARTERMASTER
+	selection_color = "#7a4f33"
+	sorting_order = 1
+
+/datum/job/bartender/New()
+	. = ..()
+	access |= list(ACCESS_XENOBOTANY)
+	minimal_access |= list(ACCESS_XENOBOTANY)
+
+
+/datum/job/chef
+	supervisors = "the " + JOB_QUARTERMASTER
+	selection_color = "#7a4f33"
+	sorting_order = 1
+
+/datum/job/chef/New()
+	. = ..()
+	access |= list(ACCESS_XENOBOTANY)
+	minimal_access |= list(ACCESS_XENOBOTANY)
+
+
+/datum/job/janitor
+	departments = list(DEPARTMENT_CARGO)
+	supervisors = "the " + JOB_QUARTERMASTER
+	selection_color = "#7a4f33"
+
+/datum/job/janitor/New()
+	. = ..()
+	access |= list(ACCESS_CARGO, ACCESS_MAILSORTING)
+	minimal_access |= list(ACCESS_CARGO, ACCESS_MAILSORTING)
+
+
+/datum/job/lawyer
+	departments = list(DEPARTMENT_COMMAND)
+	selection_color = "#1D1D4F"
+
+/datum/job/lawyer/New()
+	. = ..()
+	alt_titles |= list(JOB_ALT_INTERNAL_AFFAIRS_DAMAGE_ASSESSMENT = /datum/alt_title/ia_damage_assesment, JOB_ALT_INTERNAL_AFFAIRS_CASUALTY_ANALYST = /datum/alt_title/ia_casualty_analyst)
+
+/datum/alt_title/ia_damage_assesment
+	title = JOB_ALT_INTERNAL_AFFAIRS_DAMAGE_ASSESSMENT
+
+/datum/alt_title/ia_casualty_analyst
+	title = JOB_ALT_INTERNAL_AFFAIRS_CASUALTY_ANALYST
+
+
+/datum/job/entertainer/New()
+	. = ..()
+	alt_titles |= list(JOB_ALT_RADIOHOST = /datum/alt_title/radiohost)
+
+
+// Alt titles
+/datum/alt_title/radiohost
+	title = JOB_ALT_RADIOHOST
+	title_blurb = "A " + JOB_ALT_RADIOHOST + "'s job includes playing music, singing songs, tell stories, or reading your favorite fanfic. You are the radiowave gremlin of the station make sure everyone else knows that!"
+
+
+// Chaplain component stuff letting them see EVIL
+/datum/job/chaplain/equip(mob/living/carbon/human/H, alt_title, ask_questions)
+	. = ..()
+	H.AddComponent(/datum/component/haunting_vision)

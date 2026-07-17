@@ -1,5 +1,6 @@
 GLOBAL_LIST_EMPTY(archive_diseases)
 
+/*
 GLOBAL_LIST_INIT(advance_cures, list(
 	list(REAGENT_ID_WATER, REAGENT_ID_NUTRIMENT, REAGENT_ID_IRON),
 	list(REAGENT_ID_ETHANOL, REAGENT_ID_RADIUM, REAGENT_ID_POTASSIUM, REAGENT_ID_LITHIUM),
@@ -13,6 +14,27 @@ GLOBAL_LIST_INIT(advance_cures, list(
 	list(REAGENT_ID_LIPOZINE, REAGENT_ID_LUBE, REAGENT_ID_SACID),
 	list(REAGENT_ID_ASUSTENANCE, REAGENT_ID_CORDRADAXON, REAGENT_ID_OXYCODONE),
 ))
+*/
+// Outpost 21 edit begin - Increase the cruelty of the chems to encourage the use of monkeys
+GLOBAL_LIST_INIT(advance_cures, list(
+	REAGENT_ID_RADIUM,
+	REAGENT_ID_TOXIN,
+	REAGENT_ID_FUEL,
+	REAGENT_ID_MERCURY,
+	REAGENT_ID_BLISS,
+	REAGENT_ID_POTASSIUM,
+	REAGENT_ID_MUTAGEN,
+	REAGENT_ID_MINDBREAKER,
+	REAGENT_ID_HYPERZINE,
+	REAGENT_ID_HEMOCYANIN,
+	REAGENT_ID_CLEANER,
+	REAGENT_ID_CRYOXADONE,
+	REAGENT_ID_MUTAGENX,
+	REAGENT_ID_PHORON,
+	REAGENT_ID_SACID,
+	REAGENT_ID_ASUSTENANCE
+))
+// Outpost 21 edit end
 
 /datum/disease/advance
 	name = DEVELOPER_WARNING_NAME
@@ -88,6 +110,7 @@ GLOBAL_LIST_INIT(advance_cures, list(
 		if(resistance && !(id in affected_mob.GetResistances()))
 			affected_mob.GetResistances()[id] = id
 		remove_virus()
+		SEND_GLOBAL_SIGNAL(COMSIG_GLOB_ADV_DISEASE_CURED, id)
 	qdel(src)
 
 /datum/disease/advance/Copy()
@@ -552,7 +575,7 @@ ADMIN_VERB(AdminCreateVirus, R_SPAWN|R_EVENT, "Create Advanced Virus", "Create a
 /*
 *	Generates a random name for a disease, depending on where it comes from
 */
-/datum/disease/advance/proc/random_disease_name(var/atom/diseasesource)
+/datum/disease/advance/proc/random_disease_name(atom/diseasesource)
 
 	if(length(symptoms) == 1)
 		var/datum/symptom/main_symptom = symptoms[1]

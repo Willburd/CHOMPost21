@@ -51,6 +51,7 @@
 
 	///Var for attack_self chainn
 	var/special_handling = FALSE
+	resistance_flags = FLAMMABLE
 
 /obj/item/mail/container_resist(mob/living/M)
 	if(istype(M, /mob/living/voice)) return
@@ -77,6 +78,10 @@
 		var/stamp_count = rand(1, stamp_max)
 		for(var/i = 1, i <= stamp_count, i++)
 			stamps += list("stamp_[rand(2, 8)]")
+
+/obj/item/mail/Destroy()
+	recipient_ref = null
+	. = ..()
 
 /obj/item/mail/blank
 	desc = "A blank envelope."
@@ -213,8 +218,13 @@
 	if(recipient_ref)
 		var/datum/mind/recipient = recipient_ref.resolve()
 		if(recipient && recipient.current?.dna.unique_enzymes != user.dna.unique_enzymes)
-			balloon_alert(user, "you can't open somebody's mail! That's <em>illegal</em>")
-			return FALSE
+			// Outpost 21 edit begin - Allow tearing open mail
+			if(user.a_intent != I_HURT)
+				balloon_alert(user, "you can't open somebody's mail! That's <em>illegal</em>")
+				return FALSE
+			else if(!opening)
+				balloon_alert(user, "you rip open the mail!")
+			// Outpost 21 edit end
 
 	if(opening)
 		balloon_alert(user, "already opening that!")
@@ -243,12 +253,12 @@
 	playsound(loc, 'sound/items/poster_ripped.ogg', 100, TRUE)
 	qdel(src)
 
-/obj/item/mail/proc/initialize_for_recipient(var/datum/mind/recipient, var/preset_goodies = FALSE)
+/obj/item/mail/proc/initialize_for_recipient(datum/mind/recipient, preset_goodies = FALSE)
 	var/current_title = recipient.role_alt_title ? recipient.role_alt_title : recipient.assigned_role
 	name = "[initial(name)] for [recipient.name] ([current_title])"
 	recipient_ref = WEAKREF(recipient)
 
-	var/datum/job/this_job = SSjob.name_occupations[recipient.assigned_role]
+	var/datum/job/this_job = SSjob.occupations_by_name[recipient.assigned_role]
 
 	var/list/goodies = generic_goodies
 	if(this_job)
@@ -400,8 +410,8 @@ ADMIN_VERB(spawn_mail, R_SPAWN, "Spawn Mail", "Spawn mail for a specific player,
 	. = ..()
 	. += span_notice("Scan a letter to log it into the active database, then scan the person you wish to hand the letter to. Correctly scanning the recipient of the letter logged into the active database will add points to the supply budget.")
 
-/obj/item/mail_scanner/attack()
-	return
+/obj/item/mail_scanner/attack(mob/living/M, mob/living/user, target_zone, attack_modifier)
+	return NONE
 
 /obj/item/mail_scanner/afterattack(atom/A, mob/user)
 	if(istype(A, /obj/item/mail))
@@ -447,6 +457,7 @@ ADMIN_VERB(spawn_mail, R_SPAWN, "Spawn Mail", "Spawn mail for a specific player,
 		to_chat(user, span_notice("Succesful delivery acknowledged! [cargo_points] points added to Supply."))
 		playsound(loc, 'sound/items/mail/mailapproved.ogg', 50, TRUE)
 		SSsupply.points += cargo_points
+		SEND_GLOBAL_SIGNAL(COMSIG_GLOB_MAIL_DELIVERED)
 
 // JUNK MAIL STUFF
 

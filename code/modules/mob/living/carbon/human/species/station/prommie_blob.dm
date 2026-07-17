@@ -102,7 +102,7 @@
 	return
 
 //Constructor allows passing the human to sync damages
-/mob/living/simple_mob/slime/promethean/Initialize(mapload, var/mob/living/carbon/human/H)
+/mob/living/simple_mob/slime/promethean/Initialize(mapload, mob/living/carbon/human/H)
 	. = ..()
 	if(!H)
 		return INITIALIZE_HINT_QDEL
@@ -157,20 +157,20 @@
 			healths.icon_state = "health7"
 
 // All the damage and such to the blob translates to the human
-/mob/living/simple_mob/slime/promethean/apply_effect(var/effect = 0, var/effecttype = STUN, var/blocked = 0, var/check_protection = 1)
+/mob/living/simple_mob/slime/promethean/apply_effect(effect = 0, effecttype = STUN, blocked = 0, check_protection = 1)
 	if(humanform)
 		return humanform.apply_effect(effect, effecttype, blocked, check_protection)
 	else
 		return ..()
 
-/mob/living/simple_mob/slime/promethean/adjustBruteLoss(var/amount,var/include_robo)
+/mob/living/simple_mob/slime/promethean/adjustBruteLoss(amount,include_robo)
 	amount *= 0.75
 	if(humanform)
 		return humanform.adjustBruteLoss(amount)
 	else
 		return ..()
 
-/mob/living/simple_mob/slime/promethean/adjustFireLoss(var/amount,var/include_robo)
+/mob/living/simple_mob/slime/promethean/adjustFireLoss(amount,include_robo)
 	amount *= 2
 	if(humanform)
 		return humanform.adjustFireLoss(amount)
@@ -345,7 +345,7 @@
 
 	//Drop all our things
 	var/list/things_to_drop = contents.Copy()
-	var/list/things_to_not_drop = list(w_uniform,nif,l_store,r_store,wear_id,l_ear,r_ear) //And whatever else we decide for balancing.
+	var/list/things_to_not_drop = list(w_uniform /* Outpost 21 edit - Nif removal: ,nif */ ,l_store,r_store,wear_id,l_ear,r_ear) //And whatever else we decide for balancing.
 	var/obj/item/clothing/head/new_hat
 	var/has_hat = FALSE
 	things_to_drop -= things_to_not_drop //Crunch the lists
@@ -395,7 +395,7 @@
 		new_hat.forceMove(src)
 
 	blob.update_icon()
-	remove_verb(blob, /mob/living/proc/ventcrawl) // Absolutely not.
+	// remove_verb(blob, /mob/living/proc/ventcrawl) // Absolutely not. // Outpost 21 edit - Promie blob ventcrawl
 	remove_verb(blob, /mob/living/simple_mob/proc/set_name) // We already have a name.
 	temporary_form = blob
 
@@ -422,7 +422,7 @@
 		B.forceMove(blob)
 		B.owner = blob
 
-	soulgem.owner = blob
+	// soulgem.owner = blob //CHOMPAdd Outpost 21 edit - Disable soulgems
 
 	//We can still speak our languages!
 	blob.languages = languages.Copy()
@@ -430,7 +430,7 @@
 	//Return our blob in case someone wants it
 	return blob
 
-/mob/living/carbon/human/proc/prommie_outofblob(var/mob/living/simple_mob/slime/promethean/blob, force)
+/mob/living/carbon/human/proc/prommie_outofblob(mob/living/simple_mob/slime/promethean/blob, force)
 	if(!istype(blob))
 		return
 
@@ -494,7 +494,7 @@
 		B.forceMove(src)
 		B.owner = src
 
-	soulgem.owner = src
+	// soulgem.owner = src Outpost 21 edit - Disable soulgems
 
 	//vore_organs.Cut()
 
@@ -524,7 +524,7 @@
 	if(hat)
 		. += "They are wearing \a [hat]."
 
-/mob/living/simple_mob/slime/promethean/say_understands(var/mob/other, var/datum/language/speaking = null)
+/mob/living/simple_mob/slime/promethean/say_understands(mob/other, datum/language/speaking = null)
 	if(speaking?.name == LANGUAGE_PROMETHEAN)	//Promethean and sign are both nonverbal, so won't work with the same trick as below, so let's check for them
 		return TRUE
 	else if(speaking?.name == LANGUAGE_SIGN)

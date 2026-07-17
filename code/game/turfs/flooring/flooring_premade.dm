@@ -524,6 +524,7 @@
 /turf/simulated/floor/airless/ceiling
 /turf/simulated/floor/plating
 /turf/simulated/floor/plating/external // To be overrided by the map files.
+	outdoors = TRUE // Outpost 21 edit - Make external plating behave
 /turf/simulated/floor/tiled/external
 
 //**** Here lives snow ****
@@ -565,7 +566,7 @@
 /turf/simulated/floor/snow/Entered(atom/A)
 	if(isliving(A))
 		var/mob/living/L = A
-		if(L.hovering || L.flying) // Flying things shouldn't make footprints.
+		if(L.hovering || L.flying || L.is_incorporeal()) // Flying things shouldn't make footprints. outpost 21 edit - incorporial doesn't cost more food either
 			if(L.flying)
 				L.adjust_nutrition(-0.5)
 			return ..()

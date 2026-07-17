@@ -11,7 +11,7 @@
 /obj/item/reagent_containers/food/snacks/deathclawmeat/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_PROTEIN, 6)
-	reagents.add_reagent(REAGENT_ID_DEATHBLOOD, 6)
+	reagents.add_reagent(REAGENT_ID_RADIUM, 6) // REAGENT_ID_DEATHBLOOD // Outpost 21 edit - Removing badly designed chems
 
 /obj/item/reagent_containers/food/snacks/dragonmeat
 	name = "Dragon Meat"
@@ -20,13 +20,13 @@
 	center_of_mass_x = 17 //CHOMPEdit
 	center_of_mass_y= 16 //CHOMPEdit
 	nutriment_amt = 3
-	nutriment_desc = list(REAGENT_ID_PROTEIN = 6, REAGENT_ID_LIQUIDFIRE = 6)
+	nutriment_desc = list(REAGENT_ID_PROTEIN = 6, REAGENT_ID_RADIUM = 6) // , REAGENT_ID_LIQUIDFIRE = 6) // Outpost 21 edit - Removing badly designed chems
 	bitesize = 6
 
 /obj/item/reagent_containers/food/snacks/dragonmeat/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_PROTEIN, 6)
-	reagents.add_reagent(REAGENT_ID_LIQUIDFIRE, 6)
+	//reagents.add_reagent(REAGENT_ID_LIQUIDFIRE, 6) // Outpost 21 edit - Removing badly designed chems
 
 /obj/item/reagent_containers/food/snacks/phorondragonmeat
 	name = "Phoron Dragon Meat"
@@ -41,7 +41,7 @@
 /obj/item/reagent_containers/food/snacks/phorondragonmeat/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_PROTEIN, 6)
-	reagents.add_reagent(REAGENT_ID_NEOLIQUIDFIRE, 6)
+	// reagents.add_reagent(REAGENT_ID_NEOLIQUIDFIRE, 6) // Outpost 21 edit - Removing badly designed chems
 	reagents.add_reagent(REAGENT_ID_PHORON, 3)
 
 /obj/item/reagent_containers/food/snacks/metroidmeat
@@ -57,7 +57,7 @@
 /obj/item/reagent_containers/food/snacks/metroidmeat/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_PROTEIN, 3)
-	reagents.add_reagent(REAGENT_ID_LIQUIDLIFE, 3)
+	// reagents.add_reagent(REAGENT_ID_LIQUIDLIFE, 3) // Outpost 21 edit - Removing badly designed chems
 
 /obj/item/reagent_containers/food/snacks/meat/raymeat
 	name = "Solar Ray Meat"
@@ -112,13 +112,13 @@
 	center_of_mass_x = 17 //CHOMPEdit
 	center_of_mass_y= 16 //CHOMPEdit
 	nutriment_amt = 3
-	nutriment_desc = list(REAGENT_ID_PROTEIN = 5, REAGENT_ID_NEOLIQUIDFIRE = 5)
+	nutriment_desc = list(REAGENT_ID_PROTEIN = 3, REAGENT_ID_DERMALINE = 3) // REAGENT_ID_NEOLIQUIDFIRE Outpost 21 edit - Removing badly designed chems
 	bitesize = 1
 
 /obj/item/reagent_containers/food/snacks/painiteant/Initialize(mapload)
 	. = ..()
-	reagents.add_reagent(REAGENT_ID_PROTEIN, 5)
-	reagents.add_reagent(REAGENT_ID_NEOLIQUIDFIRE, 5)
+	reagents.add_reagent(REAGENT_ID_PROTEIN, 3)
+	reagents.add_reagent(REAGENT_ID_DERMALINE,  3) // REAGENT_ID_NEOLIQUIDFIRE Outpost 21 edit - Removing badly designed chems
 
 
 /obj/item/reagent_containers/food/snacks/tyrant_burn
@@ -128,13 +128,13 @@
 	center_of_mass_x = 17 //CHOMPEdit
 	center_of_mass_y= 16 //CHOMPEdit
 	nutriment_amt = 3
-	nutriment_desc = list(REAGENT_ID_PROTEIN = 5, REAGENT_ID_LIQUIDFIRE = 5)
+	nutriment_desc = list(REAGENT_ID_PROTEIN = 3, REAGENT_ID_KELOTANE = 3) // REAGENT_ID_LIQUIDFIRE Outpost 21 edit - Removing badly designed chems
 	bitesize = 1
 
 /obj/item/reagent_containers/food/snacks/tyrant_burn/Initialize(mapload)
 	. = ..()
-	reagents.add_reagent(REAGENT_ID_PROTEIN, 5)
-	reagents.add_reagent(REAGENT_ID_LIQUIDFIRE, 5)
+	reagents.add_reagent(REAGENT_ID_PROTEIN, 3)
+	reagents.add_reagent(REAGENT_ID_KELOTANE, 3) // REAGENT_ID_LIQUIDFIRE Outpost 21 edit - Removing badly designed chems
 
 /obj/item/reagent_containers/food/snacks/tyrant_radiation
 	name = "Quartz Ant Slice"
@@ -143,13 +143,13 @@
 	center_of_mass_x = 17 //CHOMPEdit
 	center_of_mass_y= 16 //CHOMPEdit
 	nutriment_amt = 3
-	nutriment_desc = list(REAGENT_ID_PROTEIN = 5, REAGENT_ID_DEATHBLOOD = 5)
+	nutriment_desc = list(REAGENT_ID_PROTEIN = 3, REAGENT_ID_TOXIN = 3) // REAGENT_ID_DEATHBLOOD Outpost 21 edit - Removing badly designed chems
 	bitesize = 1
 
 /obj/item/reagent_containers/food/snacks/tyrant_radiation/Initialize(mapload)
 	. = ..()
-	reagents.add_reagent(REAGENT_ID_PROTEIN, 5)
-	reagents.add_reagent(REAGENT_ID_DEATHBLOOD, 5)
+	reagents.add_reagent(REAGENT_ID_PROTEIN, 3)
+	reagents.add_reagent(REAGENT_ID_TOXIN, 3) // REAGENT_ID_DEATHBLOOD Outpost 21 edit - Removing badly designed chems
 
 /obj/item/reagent_containers/food/snacks/tyrant_bonus
 	name = "Agate Ant Slice"
@@ -158,11 +158,10 @@
 	center_of_mass_x = 17 //CHOMPEdit
 	center_of_mass_y= 16 //CHOMPEdit
 	nutriment_amt = 3
-	nutriment_desc = list(REAGENT_ID_PROTEIN = 5, REAGENT_ID_LIQUIDLIFE = 5)
+	nutriment_desc = list(REAGENT_ID_PROTEIN = 3, REAGENT_ID_TRICORDRAZINE = 3) // REAGENT_ID_LIQUIDLIFE Outpost 21 edit - Removing badly designed chems
 	bitesize = 1
 
 /obj/item/reagent_containers/food/snacks/tyrant_bonus/Initialize(mapload)
 	. = ..()
-	reagents.add_reagent(REAGENT_ID_PROTEIN, 5)
-	reagents.add_reagent(REAGENT_ID_LIQUIDLIFE, 5)
-
+	reagents.add_reagent(REAGENT_ID_PROTEIN, 3)
+	reagents.add_reagent(REAGENT_ID_TRICORDRAZINE, 3) // REAGENT_ID_LIQUIDLIFE Outpost 21 edit - Removing badly designed chems

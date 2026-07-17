@@ -1,0 +1,108 @@
+/mob/living/carbon/human/proc/equip_disability_items()
+	//Gives glasses to the vision impaired
+	if(disabilities & NEARSIGHTED)
+		var/equipped = equip_to_slot_or_del(new /obj/item/clothing/glasses/regular(src), slot_glasses)
+		if(equipped != 1)
+			var/obj/item/clothing/glasses/G = glasses
+			G.prescription = TRUE
+
+	// store some extra things
+	var/obj/item/storage/Bag
+	for(var/obj/item/storage/S in contents)
+		Bag = S
+		break
+	if(!Bag)
+		to_chat(src, "<span class='danger'>Failed to locate a storage object for your medication on your mob, either you spawned with no arms and no backpack or this is a bug.</span>")
+		return
+
+	//Gives medications for neurological disabilities
+	if((disabilities & SCHIZOPHRENIA) || GetComponent(/datum/component/schizophrenia))
+		var/perscrip = new /obj/item/storage/pill_bottle/tercozolam()
+		to_chat(src, "<span class='notice'>Placing \the [perscrip] medication in your [Bag.name]!</span>")
+		Bag.contents += perscrip
+
+	if((disabilities & DEPRESSION) || GetComponent(/datum/component/nervousness_disability) || GetComponent(/datum/component/epilepsy_disability) || GetComponent(/datum/component/tourettes_disability))
+		var/perscrip = new /obj/item/storage/pill_bottle/citalopram() // currently the only reasonable med, also one of the few with an actual pill bottle
+		to_chat(src, "<span class='notice'>Placing \the [perscrip] medication in your [Bag.name]!</span>")
+		Bag.contents += perscrip
+
+	// allergy meds!
+	if(species.allergens & ALLERGEN_POLLEN)
+		var/perscrip = new /obj/item/storage/pill_bottle/inaprovaline() // because anaphylactic shock from grass is overwhelming
+		to_chat(src, "<span class='notice'>Placing \the [perscrip] medication in your [Bag.name]!</span>")
+		Bag.contents += perscrip
+
+	if(!isnull(species.breath_type) && species.breath_type != GAS_O2)
+		// antitox pills
+		var/perscrip = new /obj/item/storage/pill_bottle/dylovene() // anti-toxin for accidents
+		to_chat(src, "<span class='notice'>Placing \the [perscrip] medication in your [Bag.name]!</span>")
+		Bag.contents += perscrip
+
+	// Sustinance addiction... They REALLY need this one, so make sure they get it...
+	if(get_addiction_to_reagent(REAGENT_ID_ASUSTENANCE) > 0)
+		var/obj/item/reagent_containers/glass/beaker/vial/perscrip = new /obj/item/reagent_containers/glass/beaker/vial/sustenance()
+		perscrip.flags ^= OPENCONTAINER // Close the container
+		to_chat(src, "<span class='notice'>Placing \the [perscrip] in your [Bag.name]!</span>")
+		Bag.contents += perscrip
+
+/mob/living/carbon/human/proc/equip_survival_tanks(forceback = FALSE)
+	if(!species)
+		return
+
+	if(species.breath_type && species.breath_type != GAS_O2)
+		// configure tank
+		var/obj/item/tank/gastank = null
+		if(species.breath_type == GAS_PHORON)
+			gastank = new /obj/item/tank/vox(src)
+		if(species.breath_type == GAS_N2)
+			gastank = new /obj/item/tank/nitrogen(src)
+		if(species.breath_type == GAS_CO2)
+			gastank = new /obj/item/tank/carbon_dioxide(src)
+		if(species.breath_type == GAS_CH4)
+			gastank = new /obj/item/tank/methane(src)
+
+		// back, or hand...
+		equip_to_slot_or_del(new /obj/item/clothing/mask/breath(src), slot_wear_mask)
+		if(forceback || backbag == 1)
+			equip_to_slot_or_del(gastank, slot_back)
+		else
+			equip_to_slot_or_del(gastank, slot_r_hand)
+			if(!(gastank in contents))
+				equip_to_slot_or_del(gastank, slot_l_hand)
+
+		internal = locate(/obj/item/tank) in contents
+		if(istype(internal,/obj/item/tank) && internals)
+			internals.icon_state = "internal1"
+
+	if(GetComponent(/datum/component/burninlight))
+		if(wear_suit) //get rid of job labcoats so they don't stop us from equipping the Shroud
+			qdel(wear_suit) //if you know how to gently set it in like, their backpack or whatever, be my guest
+		if(wear_mask)
+			qdel(wear_mask)
+		if(head)
+			qdel(head)
+		// Put on the suit
+		if(species.name == SPECIES_ZADDAT)
+			equip_to_slot_or_del(new /obj/item/clothing/mask/gas/zaddat(src), slot_wear_mask)
+			equip_to_slot_or_del(new /obj/item/clothing/suit/space/void/zaddat(src), slot_wear_suit)
+		else
+			equip_to_slot_or_del(new /obj/item/clothing/head/helmet/space/emergency, slot_head)
+			equip_to_slot_or_del(new /obj/item/clothing/suit/space/emergency(src), slot_wear_suit)
+
+/mob/living/proc/dislocate_random_limb(probability = 100, number_of_attempts = 1, list/dislocation_sites = null) // Stub for ease of use
+	return
+
+/mob/living/carbon/human/dislocate_random_limb(probability = 100, number_of_attempts = 1, list/dislocation_sites = null)
+	if(!dislocation_sites)
+		dislocation_sites = list(BP_L_ARM, BP_R_ARM, BP_L_LEG, BP_R_LEG, BP_R_HAND, BP_L_HAND, BP_L_FOOT, BP_R_FOOT)
+	// Perform multiple dislocations
+	while(number_of_attempts > 0)
+		number_of_attempts -= 1
+		if(!prob(probability))
+			continue
+		// Actually dislocate it!
+		var/obj/item/organ/external/organ = get_organ(pick(dislocation_sites))
+		if(!organ || organ.dislocated > 0 || organ.dislocated == -1) //don't use is_dislocated() here, that checks parent
+			return FALSE
+		organ.dislocate()
+		visible_message(span_danger("[src]'s [organ.joint] [pick("gives way","caves in","collapses")]!"))

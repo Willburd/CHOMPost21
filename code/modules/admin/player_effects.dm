@@ -268,7 +268,7 @@ ADMIN_VERB_AND_CONTEXT_MENU(player_effects, R_FUN, "Player Effects", "Modify a p
 			if(H.wear_suit)
 				H.unEquip(H.wear_suit)
 			var/obj/item/clothing/suit = new /obj/item/clothing/suit/storage/hooded/foodcostume/hotdog
-			var/obj/item/clothing/hood = new /obj/item/clothing/head/hood_vr/hotdog_hood
+			var/obj/item/clothing/hood = new /obj/item/clothing/head/hood/hotdog_hood
 			H.equip_to_slot_if_possible(suit, slot_wear_suit, 0, 0, 1)
 			H.equip_to_slot_if_possible(hood, slot_head, 0, 0, 1)
 			sleep(5 SECONDS)
@@ -605,7 +605,7 @@ ADMIN_VERB_AND_CONTEXT_MENU(player_effects, R_FUN, "Player Effects", "Modify a p
 			var/mob/living/carbon/human/Tar = target
 			if(!istype(Tar))
 				return
-			add_verb(Tar, /mob/living/proc/eat_trash)
+			add_verb(Tar, /mob/living/proc/eat_trash_verb)
 			add_verb(Tar, /mob/living/proc/toggle_trash_catching)
 
 		if("active_cloaking")
@@ -656,8 +656,10 @@ ADMIN_VERB_AND_CONTEXT_MENU(player_effects, R_FUN, "Player Effects", "Modify a p
 				return
 
 			for(var/obj/item/W in Tar)
+				/* Outpost 21 edit - Nif removal, Remove backup implants
 				if(istype(W, /obj/item/implant/backup) || istype(W, /obj/item/nif))	//VOREStation Edit - There's basically no reason to remove either of these
 					continue	//VOREStation Edit
+				*/
 				Tar.drop_from_inventory(W)
 
 		if("drop_specific")
@@ -710,6 +712,7 @@ ADMIN_VERB_AND_CONTEXT_MENU(player_effects, R_FUN, "Player Effects", "Modify a p
 
 		////////ADMIN//////////////
 
+		/* Outpost 21 edit - Nif removal
 		if("quick_nif")
 			var/mob/living/carbon/human/Tar = target
 			if(!istype(Tar))
@@ -743,6 +746,7 @@ ADMIN_VERB_AND_CONTEXT_MENU(player_effects, R_FUN, "Player Effects", "Modify a p
 				else
 					new /obj/item/nif(Tar)
 			log_and_message_admins("Quick NIF'd [Tar.real_name] with a [input_NIF].", ui.user)
+		*/
 
 		if("resize")
 			SSadmin_verbs.dynamic_invoke_verb(ui.user.client, /datum/admin_verb/resize, target)
@@ -752,7 +756,7 @@ ADMIN_VERB_AND_CONTEXT_MENU(player_effects, R_FUN, "Player Effects", "Modify a p
 			if(where == "Cancel")
 				return
 			if(where == "To Me")
-				ui.user.client.Getmob(target)
+				SSadmin_verbs.dynamic_invoke_verb(ui.user.client, /datum/admin_verb/Getmob, target)
 			if(where == "To Mob")
 				var/mob/selection = tgui_input_list(ui.user, "Select a mob to jump [target] to:", "Jump to mob", GLOB.mob_list)
 				target.on_mob_jump()

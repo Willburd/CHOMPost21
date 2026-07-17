@@ -1,3 +1,4 @@
+/* Outpost 21 edit - Nif removal
 ///////////
 // Soulcatcher - Like a posibrain, sorta!
 /datum/nifsoft/soulcatcher
@@ -26,7 +27,7 @@
 		spawn(0)
 			deactivate()
 
-/datum/nifsoft/soulcatcher/deactivate(var/force = FALSE)
+/datum/nifsoft/soulcatcher/deactivate(force = FALSE)
 	if((. = ..()))
 		return TRUE
 
@@ -60,7 +61,7 @@
 		inside_flavor = load
 	return TRUE
 
-/datum/nifsoft/soulcatcher/proc/notify_into(var/message)
+/datum/nifsoft/soulcatcher/proc/notify_into(message)
 	var/sound = nif.good_sound
 
 	message = " " + span_bold("Soulcatcher") + " displays, \"" + span_notice(span_nif("[message]")) + "\""
@@ -76,7 +77,7 @@
 				html = span_nif(span_bold("\[[icon2html(nif.big_icon, CS.client)]NIF\]") + message))
 		CS << sound
 
-/datum/nifsoft/soulcatcher/proc/say_into(var/message, var/mob/living/sender, var/mob/eyeobj, var/whisper)
+/datum/nifsoft/soulcatcher/proc/say_into(message, mob/living/sender, mob/eyeobj, whisper)
 	var/sender_name = eyeobj ? eyeobj.name : sender.name
 
 	//AR Projecting
@@ -109,7 +110,7 @@
 
 	sender.log_talk("NSAY (NIF:[nif.human.real_name]): [message]", LOG_SAY, color="#ff00c8")
 
-/datum/nifsoft/soulcatcher/proc/emote_into(var/message, var/mob/living/sender, var/mob/eyeobj, var/whisper)
+/datum/nifsoft/soulcatcher/proc/emote_into(message, mob/living/sender, mob/eyeobj, whisper)
 	var/sender_name = eyeobj ? eyeobj.name : sender.name
 
 	//AR Projecting
@@ -137,7 +138,7 @@
 
 	sender.log_message("NME (NIF:[nif.human.real_name]): [message]", LOG_EMOTE, color="#ff00c8")
 
-/datum/nifsoft/soulcatcher/proc/show_settings(var/mob/living/carbon/human/H)
+/datum/nifsoft/soulcatcher/proc/show_settings(mob/living/carbon/human/H)
 	set waitfor = FALSE
 	var/settings_list = list(
 	"Catching You \[[setting_flags & NIF_SC_CATCHING_ME ? "Enabled" : "Disabled"]\]" = NIF_SC_CATCHING_ME,
@@ -178,7 +179,7 @@
 				var/flag = settings_list[choice]
 				return toggle_setting(flag)
 
-/datum/nifsoft/soulcatcher/proc/toggle_setting(var/flag)
+/datum/nifsoft/soulcatcher/proc/toggle_setting(flag)
 	setting_flags ^= flag
 
 	var/notify_message
@@ -225,7 +226,7 @@
 	return TRUE
 
 //Complex version for catching in-round characters
-/datum/nifsoft/soulcatcher/proc/catch_mob(var/mob/M)
+/datum/nifsoft/soulcatcher/proc/catch_mob(mob/M)
 	if(!M.mind)	return
 	if(!(M.soulcatcher_pref_flags & SOULCATCHER_ALLOW_CAPTURE) && !isobserver(M)) return // Bypass pref check for observer join
 
@@ -284,6 +285,7 @@
 	//Announce to host and other minds
 	notify_into("New mind loaded: [brainmob.name]")
 	return TRUE
+*/
 
 ////////////////
 //The caught mob
@@ -299,7 +301,7 @@
 	universal_understand = TRUE
 
 	var/obj/item/nif/nif
-	var/datum/nifsoft/soulcatcher/soulcatcher
+	//var/datum/nifsoft/soulcatcher/soulcatcher // Outpost 21 edit - Nif removal
 	var/identifying_gender
 
 /mob/living/carbon/brain/caught_soul/Login()
@@ -309,6 +311,7 @@
 	identifying_gender = client.prefs.read_preference(/datum/preference/choiced/gender/identifying)
 
 /mob/living/carbon/brain/caught_soul/Destroy()
+	/* Outpost 21 edit - Nif removal
 	if(soulcatcher)
 		soulcatcher.notify_into("Mind unloaded: [name]")
 		soulcatcher.brainmobs -= src
@@ -316,8 +319,9 @@
 	if(eyeobj)
 		reenter_soulcatcher()
 		eyeobj = null //This SHOULD be null already, reenter_soulcatcher destroys and nulls it, but safety first.
+	*/
 	container = null
-	nif = null
+	// nif = null // Outpost 21 edit - Nif removal
 	return ..()
 
 /mob/living/carbon/brain/caught_soul/Life()
@@ -327,8 +331,10 @@
 
 	. = ..()
 
+	/* Outpost 21 edit - Nif removal
 	if(!parent_mob && !transient &&(life_tick % 150 == 0) && soulcatcher?.setting_flags & NIF_SC_BACKUPS)
 		SStranscore.m_backup(mind,0) //Passed 0 means "Don't touch the nif fields on the mind record"
+	*/
 
 	life_tick++
 
@@ -342,6 +348,7 @@
 	if(parent_mob) return
 
 	//If they're blinded
+	/* Outpost 21 edit - Nif removal
 	if(soulcatcher) // needs it's own handling to allow vore_fx
 		if(ext_blind)
 			eye_blind = 5
@@ -351,6 +358,7 @@
 			eye_blind = 0
 			clear_fullscreens()
 			client.screen.Add(GLOB.global_hud.whitense)
+	*/
 
 	//If they're deaf
 	if(ext_deaf)
@@ -370,18 +378,19 @@
 		return FALSE
 	..()
 
-/mob/living/carbon/brain/caught_soul/face_atom(var/atom/A)
+/mob/living/carbon/brain/caught_soul/face_atom(atom/A)
 	if(eyeobj)
 		return eyeobj.face_atom(A)
 	else
 		return ..(A)
 
-/mob/living/carbon/brain/caught_soul/set_dir(var/direction)
+/mob/living/carbon/brain/caught_soul/set_dir(direction)
 	if(eyeobj)
 		return eyeobj.set_dir(direction)
 	else
 		return ..(direction)
 
+/* Outpost 21 edit - Nif removal
 /mob/living/carbon/brain/caught_soul/me_verb_subtle(message as message)
 	if(silent) return FALSE
 	soulcatcher.emote_into(message,src,eyeobj,TRUE)
@@ -390,11 +399,12 @@
 	if(silent) return FALSE
 	soulcatcher.say_into(message,src,eyeobj,TRUE)
 
-/mob/living/carbon/brain/caught_soul/say(var/message, var/datum/language/speaking = null, var/whispering = 0)
+/mob/living/carbon/brain/caught_soul/say(message, datum/language/speaking = null, whispering = 0)
 	if(silent) return FALSE
 	soulcatcher.say_into(message,src,eyeobj)
+*/
 
-/mob/living/carbon/brain/caught_soul/emote(var/act,var/m_type=1,var/message = null)
+/mob/living/carbon/brain/caught_soul/emote(act,m_type=1,message = null)
 	if(silent) return FALSE
 	if (act == "me")
 		if(silent)
@@ -411,9 +421,11 @@
 	else
 		return FALSE
 
-/mob/living/carbon/brain/caught_soul/custom_emote(var/m_type, var/message)
+/* Outpost 21 edit - Nif removal
+/mob/living/carbon/brain/caught_soul/custom_emote(m_type, message)
 	if(silent) return FALSE
 	soulcatcher.emote_into(message,src,eyeobj)
+*/
 
 /mob/living/carbon/brain/caught_soul/resist()
 	set name = "Resist"
@@ -430,7 +442,7 @@
 	icon_state = "beacon"
 	var/mob/living/parent_human
 
-/mob/observer/eye/ar_soul/Initialize(mapload, var/human)
+/mob/observer/eye/ar_soul/Initialize(mapload, human)
 	. = ..()
 	var/mob/brainmob = loc
 	if(!istype(brainmob) || !brainmob.client)
@@ -505,13 +517,15 @@
 				to_use_custom_name = name
 			gem.catch_mob(src, to_use_custom_name)
 			return
-		var/mob/living/carbon/human/HP = B.owner
+		// var/mob/living/carbon/human/HP = B.owner // Outpost 21 edit - Nif removal
 		var/mob/living/carbon/human/H = src
 		if(!istype(H))
 			return
+		/* Outpost 21 edit - Nif removal
 		if(istype(HP) && HP.nif && HP.nif.flag_check(NIF_O_SCOTHERS,NIF_FLAGS_OTHER))
 			var/datum/nifsoft/soulcatcher/SC = HP.nif.imp_check(NIF_SOULCATCHER)
 			SC.catch_mob(H)
+		*/
 	else
 		var/obj/soulgem/gem = soulgem
 		if(gem && gem.flag_check(SOULGEM_ACTIVE | NIF_SC_CATCHING_ME, TRUE))
@@ -523,10 +537,13 @@
 		var/mob/living/carbon/human/H = src
 		if(!istype(H))
 			return
+		/* Outpost 21 edit - Nif removal
 		if(H.nif && H.nif.flag_check(NIF_O_SCMYSELF,NIF_FLAGS_OTHER)) //They are caught in their own NIF
 			var/datum/nifsoft/soulcatcher/SC = H.nif.imp_check(NIF_SOULCATCHER)
 			SC.catch_mob(H)
+		*/
 
+/* Outpost 21 edit - Nif removal
 ///////////////////
 //Verbs for humans
 /mob/proc/nsay(message as text)
@@ -589,7 +606,10 @@
 	if(message)
 		var/sane_message = sanitize(message)
 		SC.emote_into(sane_message,src)
+*/
 
+
+/* Outpost 21 edit begin - Soulcatch mechanics that are illegal
 ///////////////////
 //Verbs for soulbrains
 /mob/living/carbon/brain/caught_soul/verb/ar_project()
@@ -600,7 +620,7 @@
 	if(eyeobj)
 		to_chat(src,span_warning("You're already projecting in AR!"))
 		return
-
+	/* Outpost 21 edit - Nif removal
 	if(!(soulcatcher.setting_flags & NIF_SC_PROJECTING))
 		to_chat(src,span_warning("Projecting from this NIF has been disabled!"))
 		return
@@ -610,6 +630,7 @@
 
 	eyeobj = new/mob/observer/eye/ar_soul(src,nif.human)
 	soulcatcher.notify_into("[src] now AR projecting.")
+	*/
 
 /mob/living/carbon/brain/caught_soul/verb/jump_to_owner()
 	set name = "Jump to Owner"
@@ -619,8 +640,9 @@
 	if(!eyeobj)
 		to_chat(src,span_warning("You're not projecting into AR!"))
 		return
-
+	/* Outpost 21 edit - Nif removal
 	eyeobj.forceMove(get_turf(nif))
+	*/
 
 /mob/living/carbon/brain/caught_soul/verb/reenter_soulcatcher()
 	set name = "Re-enter Soulcatcher"
@@ -632,26 +654,33 @@
 		return
 
 	QDEL_NULL(eyeobj)
+	/* Outpost 21 edit - Nif removal
 	soulcatcher.notify_into("[src] ended AR projection.")
+	*/
+*/
 
 /mob/living/carbon/brain/caught_soul/verb/nsay_brain(message as text)
 	set name = "NSay"
 	set desc = "Speak into the NIF's Soulcatcher (circumventing AR speaking)."
 	set category = "Soulcatcher"
 
+	/* Outpost 21 edit - Nif removal
 	if(!message)
 		message = tgui_input_text(src, "Type a message to say.","Speak into Soulcatcher", encode = FALSE)
 	if(message)
 		var/sane_message = sanitize(message)
 		soulcatcher.say_into(sane_message,src,null)
+	*/
 
 /mob/living/carbon/brain/caught_soul/verb/nme_brain(message as message)
 	set name = "NMe"
 	set desc = "Emote into the NIF's Soulcatcher (circumventing AR speaking)."
 	set category = "Soulcatcher"
 
+	/* Outpost 21 edit - Nif removal
 	if(!message)
 		message = tgui_input_text(src, "Type an action to perform.","Emote into Soulcatcher", encode = FALSE)
 	if(message)
 		var/sane_message = sanitize(message)
 		soulcatcher.emote_into(sane_message,src,null)
+	*/

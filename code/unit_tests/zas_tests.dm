@@ -7,7 +7,7 @@
 	var/area_path = null
 	var/expectation = UT_NORMAL
 
-/datum/unit_test/zas_area_test/proc/test_air_in_area(var/test_area, var/expectation = UT_NORMAL)
+/datum/unit_test/zas_area_test/proc/test_air_in_area(test_area, expectation = UT_NORMAL)
 	var/test_result = list("result" = 0, "msg" = "")
 
 	var/area/A = locate(test_area)
@@ -113,10 +113,12 @@
 	name = "ZAS: Xenobiology"
 	area_path = /area/rnd/xenobiology
 
+/* Outpost 21 edit - We don't have this anymore - Outpost 21
 /datum/unit_test/zas_area_test/mining_area
 	name = "ZAS: Mining Area (Vacuum)"
 	area_path = /area/mine/explored
 	expectation = UT_VACUUM //CHOMPStation Edit 7/1/20 TFF - Revert to Vacuum checking
+*/
 
 /datum/unit_test/zas_area_test/cargo_bay
 	name = "ZAS: Cargo Bay"

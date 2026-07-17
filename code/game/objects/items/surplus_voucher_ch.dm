@@ -16,7 +16,7 @@
 		return TRUE
 	spawn_item(get_turf(src))
 
-/obj/item/surplus_voucher/com/proc/spawn_item(var/turf/T)
+/obj/item/surplus_voucher/com/proc/spawn_item(turf/T)
 	var/path = pick(prob(6);/obj/item/reagent_containers/food/drinks/bottle/whiskey,
 					prob(3);/obj/item/reagent_containers/food/drinks/bottle/specialwhiskey,
 					prob(3);/obj/item/reagent_containers/food/drinks/bottle/vodka,
@@ -57,7 +57,7 @@
 		return TRUE
 	spawn_item(get_turf(src))
 
-/obj/item/surplus_voucher/eng/proc/spawn_item(var/turf/T)
+/obj/item/surplus_voucher/eng/proc/spawn_item(turf/T)
 	var/path = pick(prob(2);/obj/item/storage/briefcase/inflatable,
 					prob(2);/obj/item/clamp,
 					prob(3);/obj/item/extinguisher,
@@ -84,7 +84,7 @@
 		return TRUE
 	spawn_item(get_turf(src))
 
-/obj/item/surplus_voucher/med/proc/spawn_item(var/turf/T)
+/obj/item/surplus_voucher/med/proc/spawn_item(turf/T)
 	var/path = pick(prob(6);/obj/item/storage/firstaid/regular,
 					prob(6);/obj/item/storage/firstaid/fire,
 					prob(6);/obj/item/storage/firstaid/toxin,
@@ -102,7 +102,7 @@
 					prob(3);/obj/item/storage/pill_bottle/carbon,
 					prob(3);/obj/item/storage/pill_bottle/iron,
 					prob(4);/obj/item/storage/pill_bottle/assorted,
-					prob(4);/obj/item/backup_implanter,
+					// prob(4);/obj/item/backup_implanter, Outpost 21 edit - remove backup implanter
 					prob(2);/obj/item/toy/plushie/borgplushie/medihound)
 	playsound(T, 'sound/effects/phasein.ogg', 25, 1)
 	new path(T)
@@ -117,7 +117,7 @@
 		return TRUE
 	spawn_item(get_turf(src))
 
-/obj/item/surplus_voucher/sci/proc/spawn_item(var/turf/T)
+/obj/item/surplus_voucher/sci/proc/spawn_item(turf/T)
 	var/path = pick(prob(1);/obj/item/kit/paint/ripley,
 					prob(1);/obj/item/kit/paint/ripley/death,
 					prob(1);/obj/item/kit/paint/ripley/flames_red,
@@ -150,7 +150,7 @@
 		return TRUE
 	spawn_item(get_turf(src))
 
-/obj/item/surplus_voucher/sec/proc/spawn_item(var/turf/T)
+/obj/item/surplus_voucher/sec/proc/spawn_item(turf/T)
 	var/path = pick(prob(2);/obj/item/storage/box/flashbangs,
 					prob(4);/obj/item/storage/box/flare,
 					prob(5);/obj/item/storage/box/donut,
@@ -176,7 +176,7 @@
 		return TRUE
 	spawn_item(get_turf(src))
 
-/obj/item/surplus_voucher/ser/proc/spawn_item(var/turf/T)
+/obj/item/surplus_voucher/ser/proc/spawn_item(turf/T)
 	var/path = pick(prob(4);/obj/item/reagent_containers/food/drinks/milk,
 					prob(4);/obj/item/reagent_containers/food/condiment/carton/flour,
 					prob(4);/obj/item/reagent_containers/food/drinks/soymilk,

@@ -192,7 +192,7 @@ GLOBAL_DATUM_INIT(vsc, /datum/vs_control, new)
 	for(var/V in plc.settings)
 		plc.Randomize(V)
 
-/datum/vs_control/proc/SetDefault(var/mob/user)
+/datum/vs_control/proc/SetDefault(mob/user)
 	var/list/setting_choices = list("Phoron - Standard", "Phoron - Low Hazard", "Phoron - High Hazard", "Phoron - Oh Shit!",\
 	"ZAS - Normal", "ZAS - Forgiving", "ZAS - Dangerous", "ZAS - Hellish", "ZAS/Phoron - Initial")
 	var/def = tgui_input_list(user, "Which of these presets should be used?", "Setting Choice", setting_choices)
@@ -202,7 +202,7 @@ GLOBAL_DATUM_INIT(vsc, /datum/vs_control, new)
 		if("Phoron - Standard")
 			plc.CLOTH_CONTAMINATION = 1 //If this is on, phoron does damage by getting into cloth.
 			plc.PHORONGUARD_ONLY = 0
-			plc.GENETIC_CORRUPTION = 0 //Chance of genetic corruption as well as toxic damage, X in 1000.
+			plc.GENETIC_CORRUPTION = 2 //Chance of genetic corruption as well as toxic damage, X in 1000. // Outpost 21 - Genetics damage phoron
 			plc.SKIN_BURNS = 0       //Phoron has an effect similar to mustard gas on the un-suited.
 			plc.EYE_BURNS = 1 //Phoron burns the eyes of anyone not wearing eye protection.
 			plc.PHORON_HALLUCINATION = 0
@@ -211,7 +211,7 @@ GLOBAL_DATUM_INIT(vsc, /datum/vs_control, new)
 		if("Phoron - Low Hazard")
 			plc.CLOTH_CONTAMINATION = 0 //If this is on, phoron does damage by getting into cloth.
 			plc.PHORONGUARD_ONLY = 0
-			plc.GENETIC_CORRUPTION = 0 //Chance of genetic corruption as well as toxic damage, X in 1000
+			plc.GENETIC_CORRUPTION = 3 //Chance of genetic corruption as well as toxic damage, X in 1000 // Outpost 21 - Genetics damage phoron
 			plc.SKIN_BURNS = 0       //Phoron has an effect similar to mustard gas on the un-suited.
 			plc.EYE_BURNS = 1 //Phoron burns the eyes of anyone not wearing eye protection.
 			plc.PHORON_HALLUCINATION = 0
@@ -220,7 +220,7 @@ GLOBAL_DATUM_INIT(vsc, /datum/vs_control, new)
 		if("Phoron - High Hazard")
 			plc.CLOTH_CONTAMINATION = 1 //If this is on, phoron does damage by getting into cloth.
 			plc.PHORONGUARD_ONLY = 0
-			plc.GENETIC_CORRUPTION = 0 //Chance of genetic corruption as well as toxic damage, X in 1000.
+			plc.GENETIC_CORRUPTION = 4 //Chance of genetic corruption as well as toxic damage, X in 1000. // Outpost 21 - Genetics damage phoron
 			plc.SKIN_BURNS = 1       //Phoron has an effect similar to mustard gas on the un-suited.
 			plc.EYE_BURNS = 1 //Phoron burns the eyes of anyone not wearing eye protection.
 			plc.PHORON_HALLUCINATION = 1

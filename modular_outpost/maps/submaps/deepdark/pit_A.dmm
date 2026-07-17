@@ -1,0 +1,1603 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/template_noop,
+/area/mine/explored/muriki/cave/deepdark)
+"b" = (
+/obj/structure/cliff_end{
+	dir = 8
+	},
+/turf/simulated/mineral/alt/ignore_mapgen/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"c" = (
+/obj/structure/cliff/corner{
+	dir = 9
+	},
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"d" = (
+/obj/item/broken_device/random,
+/obj/structure/ladder_assembly,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"e" = (
+/obj/machinery/door/airlock/maintenance_hatch,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"f" = (
+/obj/random/outcrop,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"g" = (
+/obj/effect/decal/cleanable/blood/oil,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"h" = (
+/obj/structure/cliff_end,
+/turf/simulated/mineral/alt/ignore_mapgen/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"i" = (
+/obj/vehicle/train/trolley,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"j" = (
+/obj/structure/cliff/corner{
+	dir = 10
+	},
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"k" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"l" = (
+/obj/effect/decal/cleanable/blood/oil,
+/obj/structure/cliff,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"m" = (
+/turf/simulated/mineral/alt/turfpack/muriki,
+/area/template_noop)
+"n" = (
+/obj/random/maintenance/misc,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"o" = (
+/turf/simulated/mineral/alt/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"p" = (
+/obj/random/maintenance/cargo,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"q" = (
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/template_noop)
+"r" = (
+/obj/structure/outcrop/silver,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"s" = (
+/obj/structure/cliff,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"t" = (
+/obj/structure/cliff_end{
+	dir = 1
+	},
+/turf/simulated/mineral/alt/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"u" = (
+/obj/item/broken_device/random,
+/obj/item/circuitboard/broken,
+/obj/effect/decal/cleanable/blood/oil,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"v" = (
+/obj/item/circuitboard/broken,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"w" = (
+/obj/effect/landmark/redspaceexit,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"x" = (
+/turf/template_noop,
+/area/template_noop)
+"y" = (
+/obj/structure/cliff{
+	dir = 10
+	},
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"z" = (
+/obj/structure/railing,
+/obj/structure/railing{
+	dir = 1
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"A" = (
+/obj/structure/cliff{
+	dir = 5
+	},
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"B" = (
+/obj/effect/landmark/redspaceexit,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"C" = (
+/obj/structure/cliff/corner{
+	dir = 6
+	},
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"D" = (
+/obj/effect/landmark/step_trap,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"E" = (
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"F" = (
+/obj/structure/cliff_end{
+	dir = 8
+	},
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"G" = (
+/obj/structure/cliff_end,
+/obj/structure/cliff_end{
+	dir = 8
+	},
+/turf/simulated/mineral/alt/ignore_mapgen/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"H" = (
+/obj/structure/railing,
+/obj/effect/landmark/step_trap,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"I" = (
+/obj/effect/landmark/step_trap,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"J" = (
+/obj/effect/decal/cleanable/blood/oil,
+/obj/item/circuitboard/broken,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"K" = (
+/turf/simulated/mineral/alt/ignore_mapgen/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"L" = (
+/obj/structure/cliff/corner{
+	dir = 5
+	},
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"M" = (
+/obj/structure/trash_pile,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"N" = (
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"O" = (
+/obj/structure/cliff{
+	dir = 6
+	},
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"P" = (
+/obj/structure/cliff{
+	dir = 9
+	},
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"Q" = (
+/obj/structure/cliff{
+	dir = 4
+	},
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"R" = (
+/obj/structure/railing,
+/obj/effect/landmark/redspaceexit,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"S" = (
+/obj/structure/cliff{
+	dir = 1
+	},
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"T" = (
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/template_noop)
+"U" = (
+/turf/simulated/wall/r_wall,
+/area/mine/explored/muriki/cave/deepdark)
+"V" = (
+/obj/structure/cliff{
+	dir = 8
+	},
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"W" = (
+/obj/item/broken_device/random,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"X" = (
+/obj/structure/railing,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Y" = (
+/obj/structure/cliff_end{
+	dir = 4
+	},
+/turf/simulated/mineral/alt/ignore_mapgen/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Z" = (
+/obj/random/maintenance/cargo,
+/obj/effect/decal/cleanable/blood/oil,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/explored/muriki/cave/deepdark)
+
+(1,1,1) = {"
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+"}
+(2,1,1) = {"
+x
+x
+x
+x
+x
+x
+x
+x
+m
+m
+m
+m
+m
+m
+T
+q
+T
+T
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+"}
+(3,1,1) = {"
+x
+x
+x
+m
+m
+m
+m
+m
+m
+m
+m
+m
+o
+o
+N
+N
+E
+E
+N
+o
+o
+o
+o
+m
+m
+m
+m
+x
+x
+x
+x
+x
+x
+x
+x
+"}
+(4,1,1) = {"
+x
+x
+m
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+N
+E
+f
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+a
+x
+x
+x
+"}
+(5,1,1) = {"
+x
+m
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+U
+U
+E
+E
+K
+U
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+a
+x
+x
+"}
+(6,1,1) = {"
+x
+m
+o
+o
+U
+U
+U
+U
+U
+U
+U
+U
+U
+U
+o
+D
+N
+K
+U
+U
+U
+U
+U
+U
+U
+U
+o
+o
+o
+o
+o
+o
+a
+x
+x
+"}
+(7,1,1) = {"
+x
+o
+o
+o
+U
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+N
+E
+N
+U
+o
+o
+o
+o
+o
+o
+U
+U
+o
+o
+o
+o
+o
+o
+x
+x
+"}
+(8,1,1) = {"
+x
+o
+o
+o
+U
+o
+o
+K
+K
+K
+K
+K
+K
+K
+K
+K
+E
+N
+Y
+K
+K
+K
+K
+o
+o
+o
+U
+U
+o
+o
+o
+o
+o
+a
+x
+"}
+(9,1,1) = {"
+x
+o
+o
+o
+U
+o
+o
+h
+V
+V
+V
+j
+K
+Y
+Y
+K
+E
+N
+S
+N
+N
+K
+K
+o
+o
+o
+o
+U
+o
+o
+o
+o
+o
+o
+x
+"}
+(10,1,1) = {"
+x
+o
+o
+o
+U
+o
+o
+N
+N
+N
+p
+y
+j
+s
+s
+M
+E
+H
+S
+c
+V
+V
+t
+o
+o
+o
+o
+U
+U
+o
+o
+o
+o
+o
+x
+"}
+(11,1,1) = {"
+x
+a
+o
+o
+U
+o
+o
+N
+g
+N
+N
+N
+s
+s
+s
+f
+E
+X
+S
+S
+u
+i
+o
+o
+o
+o
+o
+o
+U
+U
+o
+o
+o
+o
+x
+"}
+(12,1,1) = {"
+x
+a
+o
+o
+U
+o
+o
+d
+v
+N
+N
+O
+C
+s
+s
+I
+E
+E
+S
+S
+v
+o
+o
+o
+o
+o
+o
+o
+o
+U
+o
+o
+o
+o
+x
+"}
+(13,1,1) = {"
+x
+a
+f
+o
+U
+N
+o
+N
+p
+W
+N
+s
+O
+C
+s
+N
+E
+c
+P
+S
+p
+v
+W
+o
+o
+o
+o
+o
+o
+U
+U
+o
+o
+o
+x
+"}
+(14,1,1) = {"
+x
+N
+N
+N
+U
+D
+N
+N
+N
+N
+N
+s
+s
+N
+y
+j
+z
+S
+c
+P
+N
+c
+V
+V
+t
+o
+o
+o
+o
+o
+U
+o
+o
+a
+x
+"}
+(15,1,1) = {"
+x
+N
+N
+N
+e
+E
+N
+i
+N
+N
+n
+l
+s
+N
+B
+s
+z
+S
+S
+B
+N
+S
+I
+g
+N
+o
+o
+o
+o
+o
+U
+o
+o
+a
+x
+"}
+(16,1,1) = {"
+x
+a
+N
+N
+U
+E
+N
+f
+v
+N
+W
+s
+s
+O
+Q
+C
+z
+S
+S
+N
+N
+S
+v
+N
+N
+N
+N
+o
+o
+o
+U
+o
+a
+a
+x
+"}
+(17,1,1) = {"
+x
+a
+N
+o
+U
+o
+I
+N
+N
+J
+N
+s
+s
+y
+j
+N
+X
+S
+L
+A
+N
+S
+N
+g
+N
+v
+N
+o
+o
+o
+U
+o
+N
+a
+x
+"}
+(18,1,1) = {"
+x
+a
+N
+o
+U
+o
+o
+o
+N
+N
+N
+s
+y
+j
+s
+N
+w
+L
+A
+S
+N
+S
+N
+N
+N
+N
+g
+N
+N
+E
+U
+N
+N
+N
+x
+"}
+(19,1,1) = {"
+x
+a
+a
+o
+U
+o
+o
+N
+N
+B
+N
+s
+N
+s
+s
+E
+D
+E
+S
+S
+g
+S
+N
+N
+v
+B
+N
+N
+N
+E
+e
+N
+N
+a
+x
+"}
+(20,1,1) = {"
+x
+a
+o
+o
+U
+o
+o
+N
+W
+N
+N
+y
+j
+s
+s
+k
+R
+c
+P
+S
+N
+L
+A
+N
+N
+N
+N
+N
+N
+E
+U
+f
+N
+a
+x
+"}
+(21,1,1) = {"
+x
+a
+o
+o
+U
+o
+o
+N
+i
+N
+N
+N
+s
+s
+s
+k
+X
+S
+c
+P
+r
+N
+S
+N
+N
+N
+I
+o
+o
+o
+U
+o
+o
+a
+x
+"}
+(22,1,1) = {"
+x
+a
+o
+o
+U
+o
+o
+o
+o
+N
+O
+Q
+C
+s
+s
+k
+X
+S
+S
+N
+N
+N
+S
+N
+N
+p
+o
+o
+o
+o
+U
+o
+o
+a
+x
+"}
+(23,1,1) = {"
+x
+a
+o
+o
+U
+o
+o
+o
+o
+K
+b
+K
+N
+s
+s
+N
+X
+S
+L
+A
+J
+N
+F
+N
+N
+O
+t
+o
+o
+o
+U
+o
+o
+o
+x
+"}
+(24,1,1) = {"
+x
+o
+o
+o
+U
+o
+o
+o
+o
+o
+K
+K
+K
+G
+C
+N
+X
+S
+B
+S
+W
+N
+N
+O
+Q
+C
+o
+o
+o
+o
+U
+o
+o
+o
+x
+"}
+(25,1,1) = {"
+x
+o
+o
+o
+U
+o
+o
+o
+o
+o
+o
+K
+K
+K
+M
+N
+X
+S
+c
+P
+N
+N
+O
+C
+o
+o
+o
+o
+o
+o
+U
+o
+o
+o
+x
+"}
+(26,1,1) = {"
+x
+o
+o
+o
+U
+o
+o
+o
+o
+o
+K
+K
+K
+K
+f
+N
+X
+S
+S
+N
+N
+O
+C
+o
+o
+o
+o
+o
+o
+U
+U
+o
+o
+o
+x
+"}
+(27,1,1) = {"
+x
+m
+o
+o
+U
+U
+U
+U
+o
+o
+o
+K
+K
+K
+K
+N
+X
+S
+S
+N
+N
+s
+o
+o
+o
+o
+o
+o
+U
+U
+o
+o
+o
+m
+x
+"}
+(28,1,1) = {"
+x
+x
+o
+o
+o
+o
+o
+U
+U
+o
+o
+o
+o
+K
+K
+N
+D
+S
+L
+A
+Z
+s
+o
+o
+o
+o
+o
+o
+U
+o
+o
+o
+o
+x
+x
+"}
+(29,1,1) = {"
+x
+x
+a
+o
+o
+o
+o
+o
+U
+U
+o
+o
+K
+K
+K
+N
+E
+L
+A
+L
+Q
+C
+o
+o
+o
+o
+o
+U
+U
+o
+o
+o
+o
+x
+x
+"}
+(30,1,1) = {"
+x
+x
+a
+o
+o
+o
+o
+o
+o
+U
+U
+U
+K
+K
+K
+E
+E
+N
+b
+K
+K
+K
+o
+o
+o
+o
+U
+U
+o
+o
+o
+o
+a
+x
+x
+"}
+(31,1,1) = {"
+x
+x
+x
+o
+o
+o
+o
+o
+K
+K
+K
+U
+U
+K
+U
+N
+E
+E
+U
+K
+K
+K
+o
+o
+o
+o
+U
+U
+o
+o
+o
+a
+a
+x
+x
+"}
+(32,1,1) = {"
+x
+x
+x
+a
+o
+o
+o
+o
+o
+K
+K
+K
+U
+U
+U
+E
+E
+E
+U
+U
+U
+U
+U
+U
+U
+U
+U
+o
+o
+o
+o
+a
+a
+x
+x
+"}
+(33,1,1) = {"
+x
+x
+x
+a
+a
+a
+a
+o
+o
+o
+o
+o
+o
+o
+E
+N
+E
+N
+N
+o
+o
+o
+o
+o
+o
+o
+o
+o
+o
+a
+a
+a
+x
+x
+x
+"}
+(34,1,1) = {"
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+m
+o
+f
+N
+N
+N
+E
+N
+o
+o
+o
+o
+m
+m
+m
+m
+x
+x
+x
+x
+x
+x
+x
+x
+"}
+(35,1,1) = {"
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+x
+"}

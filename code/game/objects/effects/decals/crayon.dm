@@ -9,7 +9,7 @@
 	var/art_color
 	var/art_shade
 
-/obj/effect/decal/cleanable/crayon/Initialize(mapload, main = "#FFFFFF",shade = "#000000",var/type = "rune", new_age = 0)
+/obj/effect/decal/cleanable/crayon/Initialize(mapload, main = "#FFFFFF",shade = "#000000",type = "rune", new_age = 0)
 	name = type
 	desc = "A [type] drawn in crayon."
 
@@ -28,8 +28,8 @@
 
 /obj/effect/decal/cleanable/crayon/update_icon()
 	cut_overlays()
-	var/icon/mainOverlay = new/icon('icons/effects/crayondecal.dmi',"[art_type]",2.1)
-	var/icon/shadeOverlay = new/icon('icons/effects/crayondecal.dmi',"[art_type]s",2.1)
+	var/icon/mainOverlay = new/icon('modular_outpost/icons/effects/crayondecal.dmi',"[art_type]",2.1) // Outpost 21 edit - Use our crayons
+	var/icon/shadeOverlay = new/icon('modular_outpost/icons/effects/crayondecal.dmi',"[art_type]s",2.1) // Outpost 21 edit - Use our crayons
 
 	if(mainOverlay && shadeOverlay)
 		mainOverlay.Blend(art_color,ICON_ADD)

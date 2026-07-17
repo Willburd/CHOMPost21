@@ -11,7 +11,7 @@
 #define FAT             6
 #define HUSK            7
 #define NOCLONE         8
-#define LASER           9  // Harm intent - click anywhere to shoot lasers from eyes.
+#define LASER_EYES      9  // Harm intent - click anywhere to shoot lasers from eyes.
 #define HEAL            10 // Healing people with hands.
 #define FLASHPROOF		11 // Flashproof eyes.
 
@@ -33,12 +33,11 @@
 
 // disabilities
 #define NEARSIGHTED 0x1
-/*
 #define DEPRESSION     	0x20	// Roleplay drugs
 #define SCHIZOPHRENIA  	0x40	// Roleplay drugs
-*/
 #define WINGDINGS     	0x80	// Better handling as disability
 #define CENSORED     	0x400	// Cannot swear
+
 // sdisabilities
 #define BLIND 0x1
 #define MUTE  0x2
@@ -125,9 +124,11 @@
 // Needs to match the highest number above.
 #define DNA_UI_LENGTH      65
 
-#define DNA_SE_LENGTH 93 // Traitgenes (Expanded from 49 to 84, there have been a considerable expansion of genes. //CHOMPEdit: Upped to 93. NOTE: Ensure it's increased when there is a conflict here! Thanks!
+#define DNA_SE_LENGTH 102 // Traitgenes // Outpost 21 edit - Increased again
+
 // This leaves room for future expansion. This can be arbitrarily raised without worry if genes start to get crowded.
 // Should have more than 10 empty genes after setup. - Willbird)
+// Outpost 21 edit, increased to 102
 
 //DNA modifiers
 // Buffer datatype flags.

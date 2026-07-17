@@ -369,7 +369,7 @@ ADMIN_VERB(cmd_admin_dress, R_FUN, "elect equipment", "Select equipment for a mo
 	feedback_add_details("admin_verb","SEQ")
 	dressup_human(target_human, outfit, 1)
 
-/proc/dressup_human(var/mob/living/carbon/human/H, var/datum/decl/hierarchy/outfit/outfit)
+/proc/dressup_human(mob/living/carbon/human/H, datum/decl/hierarchy/outfit/outfit)
 	if(!H || !outfit)
 		return
 	if(outfit.undress)
@@ -514,7 +514,7 @@ ADMIN_VERB(cmd_debug_using_map, R_DEBUG, "Debug Map Datum", "Debug the map metad
 	user.debug_variables(using_map)
 
 // DNA2 - Admin Hax
-/client/proc/cmd_admin_toggle_block(var/mob/M,var/block)
+/client/proc/cmd_admin_toggle_block(mob/M,block)
 	if(!SSticker)
 		tgui_alert_async(src, "Wait until the game starts")
 		return
@@ -618,6 +618,7 @@ ADMIN_VERB(cmd_clear_smart_asset_cache, R_DEBUG|R_SERVER, "Clear Smart Asset Cac
 ADMIN_VERB(cmd_reload_robot_sprite_test, R_DEBUG|R_SERVER, "Reload Robot Test Sprites", "Reloads the dmis from the test folder and creates the test datums.", ADMIN_CATEGORY_DEBUG_SPRITES)
 	SSrobot_sprites.reload_test_sprites()
 
+/* Outpost 21 edit - Nif removal
 ADMIN_VERB(quick_nif, R_ADMIN, "Quick NIF", "Spawns a NIF into someone in quick-implant mode.", ADMIN_CATEGORY_FUN_ADD_NIF)
 	var/input_NIF
 	var/mob/living/carbon/human/H = tgui_input_list(user, "Pick a mob with a player","Quick NIF", GLOB.player_list)
@@ -661,6 +662,7 @@ ADMIN_VERB(quick_nif, R_ADMIN, "Quick NIF", "Spawns a NIF into someone in quick-
 
 	log_and_message_admins("Quick NIF'd [H.real_name] with a [input_NIF].", user)
 	feedback_add_details("admin_verb","QNIF") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
+*/
 
 ADMIN_VERB(reload_configuration, R_DEBUG, "Reload Configuration", "Reloads the configuration from the default path on the disk, wiping any in-round modifications.", ADMIN_CATEGORY_DEBUG_SERVER)
 	if(tgui_alert(user, "Are you absolutely sure you want to reload the configuration from the default path on the disk, wiping any in-round modifications?", "Really reset?", list("No", "Yes")) != "Yes")

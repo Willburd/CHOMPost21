@@ -19,12 +19,14 @@ const quick_actions: {
   icon_state: string;
   eventName: string;
 }[] = [
+  /* Outpost 21 edit - Communicator removal
   {
     name: 'Communicator',
     icon: 'icons/obj/device.dmi',
     icon_state: 'communicator',
     eventName: 'quick_action_comm',
   },
+  */
   {
     name: 'PDA',
     icon: 'icons/obj/pda_vr.dmi',

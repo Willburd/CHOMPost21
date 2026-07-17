@@ -72,7 +72,7 @@
 /datum/preference/toggle/emote_sounds
 	category = PREFERENCE_CATEGORY_GAME_PREFERENCES
 	savefile_key = "EMOTE_SOUNDS"
-	default_value = TRUE
+	default_value = FALSE // Outpost 21 edit - Default to off
 	savefile_identifier = PREFERENCE_PLAYER
 
 /datum/preference/toggle/whisper_sounds
@@ -84,6 +84,12 @@
 /datum/preference/toggle/subtle_sounds
 	category = PREFERENCE_CATEGORY_GAME_PREFERENCES
 	savefile_key = "SUBTLE_SOUNDS"
+	default_value = FALSE // Outpost 21 edit - Default to off
+	savefile_identifier = PREFERENCE_PLAYER
+
+/datum/preference/toggle/looc_sounds
+	category = PREFERENCE_CATEGORY_GAME_PREFERENCES
+	savefile_key = "LOOC_SOUNDS"
 	default_value = TRUE
 	savefile_identifier = PREFERENCE_PLAYER
 
@@ -268,4 +274,9 @@
 /datum/preference/numeric/volume/sound_instruments
 	category = PREFERENCE_CATEGORY_GAME_PREFERENCES
 	savefile_key = "sound_instruments"
+	savefile_identifier = PREFERENCE_PLAYER
+
+/datum/preference/toggle/sound_fridgehum
+	category = PREFERENCE_CATEGORY_GAME_PREFERENCES
+	savefile_key = "sound_fridgehum"
 	savefile_identifier = PREFERENCE_PLAYER

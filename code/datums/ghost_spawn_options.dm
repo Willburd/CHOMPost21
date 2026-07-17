@@ -21,7 +21,7 @@
 		to_chat(user, span_warning("You cannot become a mouse because you are banned from playing ghost roles."))
 		return
 
-	if(!user.MayRespawn(1))
+	if(!user.MayRespawn(TRUE))
 		return
 
 	var/turf/T = get_turf(user)
@@ -77,7 +77,7 @@
 			to_chat(user, span_danger("You have not been playing on the server long enough to join as drone."))
 			return
 
-	if(!user.MayRespawn(1))
+	if(!user.MayRespawn(TRUE))
 		return
 
 	var/deathtime = world.time - user.timeofdeath
@@ -112,6 +112,7 @@
 
 	user.fake_enter_vr(S)
 
+/* Outpost 21 edit - Nif removal and soulcatcher removal
 /datum/tgui_module/ghost_spawn_menu/proc/soulcatcher_spawn(mob/observer/dead/user, selected_player)
 	var/mob/living/target = locate(selected_player) in GLOB.player_list
 		//Didn't pick anyone or picked a null
@@ -168,6 +169,7 @@
 	var/req_time = world.time
 	gem.notify_holder("Transient mindstate detected, analyzing...")
 	addtimer(CALLBACK(target, TYPE_PROC_REF(/mob/living, soulcatcher_spawn_prompt), user, req_time), 1.5 SECONDS, TIMER_DELETE_ME)
+*/
 
 /datum/tgui_module/ghost_spawn_menu/proc/vore_belly_spawn(mob/observer/dead/user, selected_player)
 	var/mob/living/target = locate(selected_player) in GLOB.player_list
@@ -180,6 +182,7 @@
 	to_chat(target, span_notice("Incoming belly spawn request."))
 	addtimer(CALLBACK(target, TYPE_PROC_REF(/mob/living, inbelly_spawn_prompt), user.client), 1.5 SECONDS, TIMER_DELETE_ME) // Hand reins over to them
 
+/* Outpost 21 edit - removed corgie spawn
 /datum/tgui_module/ghost_spawn_menu/proc/join_corgi(mob/observer/dead/user)
 	if(jobban_isbanned(user, JOB_GHOSTROLES))
 		to_chat(user, span_danger("You are banned from playing ghost roles and cannot spawn as a corgi."))
@@ -264,3 +267,4 @@
 	if(possibleSpawnspots.len)
 		return pick(possibleSpawnspots)
 	return null
+*/

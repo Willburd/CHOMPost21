@@ -138,7 +138,7 @@
 // Proc: force_toggle()
 // Parameters: None
 // Description: Opens or closes the door, depending on current state. No checks are done inside this proc.
-/obj/machinery/door/blast/proc/force_toggle(var/forced = 0, mob/user as mob)
+/obj/machinery/door/blast/proc/force_toggle(forced = 0, mob/user as mob)
 	if (forced)
 		playsound(src, 'sound/machines/door/airlock_creaking.ogg', 100, 1)
 
@@ -227,7 +227,7 @@
 // Proc: attack_alien()
 // Parameters: Attacking Xeno mob.
 // Description: Forces open the door after a delay.
-/obj/machinery/door/blast/attack_alien(var/mob/user) //Familiar, right? Doors.
+/obj/machinery/door/blast/attack_alien(mob/user) //Familiar, right? Doors.
 	if(ishuman(user))
 		var/mob/living/carbon/human/X = user
 		if(istype(X.species, /datum/species/xenos))
@@ -274,7 +274,7 @@
 // Proc: open()
 // Parameters: None
 // Description: Opens the door. Does necessary checks. Automatically closes if autoclose is true
-/obj/machinery/door/blast/open(var/forced = 0)
+/obj/machinery/door/blast/open(forced = 0)
 	if(forced)
 		force_open()
 		return 1
@@ -468,6 +468,11 @@
 	bound_height = 64
 	width = 2
 	dir = NORTH
+
+/obj/machinery/door/blast/multi_tile/two_tile_ver/open
+	icon_state = "open"
+	opacity = 0
+	density = FALSE
 
 /obj/machinery/door/blast/multi_tile/four_tile_hor_sec
 	icon = 'icons/obj/doors/1x4blast_hor_sec.dmi'

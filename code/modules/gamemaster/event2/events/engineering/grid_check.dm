@@ -45,6 +45,6 @@
 	// This sets off a chain of events that lead to the actual grid check (or perhaps worse).
 	// First, the Supermatter engine makes a power spike.
 	if(engine)
-		engine.power_spike()
+		engine.power_spike(30,FALSE,FALSE)
 	// After that, the engine checks if a grid checker exists on the same powernet, and if so, it triggers a blackout.
 	// If not, lots of stuff breaks.  See code/modules/power/generator.dm for that piece of code.

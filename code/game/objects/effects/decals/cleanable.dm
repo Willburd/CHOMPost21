@@ -16,7 +16,7 @@ generic_filth = TRUE means when the decal is saved, it will be switched out for 
 	///The type of cleaning required to clean the decal, CLEAN_TYPE_LIGHT_DECAL can be cleaned with mops and soap, CLEAN_TYPE_HARD_DECAL can be cleaned by soap, see __DEFINES/cleaning.dm for the others
 	var/clean_type = CLEAN_TYPE_LIGHT_DECAL
 
-/obj/effect/decal/cleanable/Initialize(mapload, var/_age)
+/obj/effect/decal/cleanable/Initialize(mapload, _age)
 	if(!isnull(_age))
 		age = _age
 	if(random_icon_states && length(src.random_icon_states) > 0)
@@ -41,7 +41,6 @@ generic_filth = TRUE means when the decal is saved, it will be switched out for 
 	if (random_icon_states && length(random_icon_states) > 0)
 		icon_state = pick(random_icon_states)
 
-
 /obj/effect/decal/cleanable/update_icon()
 	// Overrides should not inheret from this, and instead replace it entirely to match this in some form.
 	// add_janitor_hud_overlay() does not pre-cut overlays, so cut_overlays() must be called first.
@@ -59,7 +58,7 @@ generic_filth = TRUE means when the decal is saved, it will be switched out for 
 	hud.layer = BELOW_MOB_LAYER
 	hud.mouse_opacity = 0
 	//HUD VARIANT: Allows the hud to show up with it's normal alpha, even if the 'dirty thing' it's attached to has a low alpha (ex: dirt). If you want to disable it, simply comment out the lines between the 'HUD VARIANT' tag!
-	//hud.appearance_flags = RESET_ALPHA | RESET_COLOR // CHOMPRemove
-	//hud.alpha = 255 // CHOMPRemove
+	hud.appearance_flags = RESET_ALPHA | RESET_COLOR
+	hud.alpha = 128 + (alpha / 2) // Outpost 21 edit - half alpha, but still fade a bit based on dirt alpha
 	//HUD VARIANT end
 	add_overlay(hud)

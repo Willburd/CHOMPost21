@@ -1,3 +1,4 @@
+/* Outpost 21 edit - Removing badly designed chems
 //Chemist update
 /datum/decl/chemical_reaction/instant/livingagent
 	name = REAGENT_LIVINGAGENT
@@ -118,6 +119,7 @@
 	required_reagents = list(REAGENT_ID_LIQUIDFIRE = 1, REAGENT_ID_SULFUR = 1, REAGENT_ID_PHORON = 0.1)
 	catalysts = list(REAGENT_ID_PHORON = 5)
 	result_amount = 1
+*/
 
 //Some extra metal solidification reactions
 /datum/decl/chemical_reaction/instant/solidification/deuterium
@@ -127,12 +129,14 @@
 	sheet_to_give = /obj/item/stack/material/deuterium
 
 //Injectable toxin reactions
+/* Outpost 21 edit - Removing badly designed chems
 /datum/decl/chemical_reaction/instant/succubi_paralize
 	name = "paralyzingfluid"
 	id = "paralyzingfluid"
 	result = "succubi_paralize"
 	required_reagents = list(REAGENT_ID_BENZILATE = 1, REAGENT_ID_CRYPTOBIOLIN = 1)
 	result_amount = 2
+*/
 
 /datum/decl/chemical_reaction/instant/numbingenzyme
 	name = "numbingenzyme"

@@ -49,7 +49,7 @@
 
 			if (!lying && !buckled && world.time - l_move_time < 15)
 			//Moving around with fractured ribs won't do you any good
-				if (prob(10) && !stat && can_feel_pain() && chem_effects[CE_PAINKILLER] < 50 && E.is_broken() && E.internal_organs.len)
+				if (prob(10) && !stat && can_feel_pain() && chem_effects[CE_PAINKILLER] < 50 && E.is_broken() && E.internal_organs.len && !src.client?.prefs?.read_preference(/datum/preference/toggle/hide_pain_scream)) // Outpost 21 edit - Hide automatic pain scream
 					custom_pain("Pain jolts through your broken [E.encased ? E.encased : E.name], staggering you!", 50)
 					emote("scream")
 					drop_item(loc)
@@ -110,7 +110,7 @@
 		stance_damage -= 4
 
 	// standing is poor
-	if(stance_damage >= 4 || (stance_damage >= 2 && prob(5)))
+	if(stance_damage >= 4 || (stance_damage >= 2 && prob(1))) // Outpost 21 edit(port) - Probability to 1 from 5
 		if(!(lying || resting) && !isbelly(loc))
 			if(limb_pain)
 				emote("scream")
@@ -161,7 +161,7 @@
 			if(!isbelly(loc))
 				var/emote_scream = pick("screams in pain and ", "lets out a sharp cry and ", "cries out and ")
 				automatic_custom_emote(VISIBLE_MESSAGE, "[(can_feel_pain()) ? "" : emote_scream ]drops what they were holding in their [E.name]!", check_stat = TRUE)
-				if(can_feel_pain())
+				if(can_feel_pain() && !src.client?.prefs?.read_preference(/datum/preference/toggle/hide_pain_scream)) // Outpost 21 edit - Hide automatic pain scream
 					emote("pain")
 
 		else if(E.is_malfunctioning())
@@ -193,7 +193,7 @@
 		O.trace_chemicals[A.name] = 100
 
 // Traitgenes Init genes based on the traits currently active
-/mob/living/carbon/human/proc/sync_dna_traits(var/refresh_traits, var/hide_message = TRUE)
+/mob/living/carbon/human/proc/sync_dna_traits(refresh_traits, hide_message = TRUE)
 	SHOULD_NOT_OVERRIDE(TRUE) //Don't. Even. /Think/. About. It.
 	if(!dna || !species)
 		return
@@ -223,7 +223,7 @@
 	for(var/obj/item/organ/O in all_bits)
 		O.set_dna(dna)
 
-/mob/living/carbon/human/proc/set_gender(var/g)
+/mob/living/carbon/human/proc/set_gender(g)
 	if(g != gender)
 		gender = g
 

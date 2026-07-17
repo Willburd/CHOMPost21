@@ -13,6 +13,7 @@
 	path = /obj/item/text_to_speech
 	cost = 0
 
+/* Outpost 21 edit - Communicator removal
 /datum/gear/utility/communicator
 	display_name = "communicator selection"
 	path = /obj/item/communicator
@@ -21,9 +22,10 @@
 /datum/gear/utility/communicator/New()
 	..()
 	var/list/communicators = list()
-	for(var/obj/item/communicator_type as anything in typesof(/obj/item/communicator) - list(/obj/item/communicator/integrated,/obj/item/communicator/commlink)) //VOREStation Edit - Remove Commlink
+	for(var/obj/item/communicator_type as anything in typesof(/obj/item/communicator)/* Outpost 21 edit - Nif removal: - list(/obj/item/communicator/integrated,/obj/item/communicator/commlink)*/) //VOREStation Edit - Remove Commlink
 		communicators[initial(communicator_type.name)] = communicator_type
 	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(communicators))
+*/
 
 /datum/gear/utility/camera
 	display_name = "camera"
@@ -153,7 +155,7 @@
 /****************
 modular computers
 ****************/
-
+/* Outpost 21 edit - Removed modular computers
 /datum/gear/utility/cheaptablet
 	display_name = "tablet computer: cheap"
 	display_name = "tablet computer, cheap"
@@ -194,6 +196,7 @@ modular computers
 /datum/gear/utility/customlaptop/New()
 	..()
 	gear_tweaks += new /datum/gear_tweak/laptop()
+*/
 
 //////////Language Translators
 
@@ -276,17 +279,17 @@ modular computers
 
 /datum/gear/utility/dufflebag/sec
 	display_name = "security Dufflebag"
-	allowed_roles = list(JOB_HEAD_OF_SECURITY,JOB_WARDEN,JOB_DETECTIVE,JOB_SECURITY_OFFICER,JOB_BLUESHIELD_GUARD,JOB_SECURITY_PILOT) //YW ADDITIONS
+	allowed_roles = list(JOB_HEAD_OF_SECURITY,JOB_WARDEN,/*JOB_DETECTIVE,*/JOB_SECURITY_OFFICER,JOB_BLUESHIELD_GUARD,JOB_BRIG_PHYSICIAN,JOB_SECURITY_PILOT) //YW ADDITIONS// Outpost 21 edit - Detective is officer now, Brig medic accessible
 	path = /obj/item/storage/backpack/dufflebag/sec
 
 /datum/gear/utility/dufflebag/eng
 	display_name = "engineering dufflebag"
-	allowed_roles = list(JOB_CHIEF_ENGINEER,JOB_ATMOSPHERIC_TECHNICIAN,JOB_ENGINEER)
+	allowed_roles = list(JOB_CHIEF_ENGINEER,JOB_ATMOSPHERIC_TECHNICIAN,JOB_ENGINEER,JOB_ROBOTICIST) // Outpost 21 edit - Robotics is engineering here
 	path = /obj/item/storage/backpack/dufflebag/eng
 
 /datum/gear/utility/dufflebag/sci
 	display_name = "science dufflebag"
-	allowed_roles = list(JOB_RESEARCH_DIRECTOR,JOB_SCIENTIST,JOB_ROBOTICIST,JOB_XENOBIOLOGIST,JOB_XENOBOTANIST)
+	allowed_roles = list(JOB_RESEARCH_DIRECTOR,JOB_SCIENTIST,JOB_XENOBIOLOGIST,JOB_XENOBOTANIST) // Outpost 21 edit - Robotics is engineering here
 	path = /obj/item/storage/backpack/dufflebag/sci
 
 /datum/gear/utility/dufflebag/explorer

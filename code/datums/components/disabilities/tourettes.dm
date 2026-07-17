@@ -51,6 +51,8 @@
 		return
 	if(owner.stat != CONSCIOUS)
 		return
+	if(owner.anxietymedcount == 1) // Outpost 21 edit(port) - Medications calm disabilities, yes this is meant to be == 1
+		return
 	if(owner.transforming)
 		return
 	if(owner.client && (owner.client.prefs.muted & MUTE_IC))

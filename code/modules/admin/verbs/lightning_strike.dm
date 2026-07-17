@@ -94,6 +94,8 @@ ADMIN_VERB(admin_lightning_strike, R_FUN, "Lightning Strike", "Causes lightning 
 				C.deaf_loop.start() // CHOMPStation Add: Ear Ringing/Deafness
 			to_chat(L, span_danger("Lightning struck nearby, and the thunderclap is deafening!"))
 
+	SShaunting.influence(HAUNTING_UNSETTLE) // Outpost 21 edit - IT DA SPOOKY STATION!
+
 #undef LIGHTNING_REDIRECT_RANGE
 #undef LIGHTNING_ZAP_RANGE
 #undef LIGHTNING_POWER

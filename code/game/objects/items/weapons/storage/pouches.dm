@@ -117,6 +117,7 @@
 		/obj/item/stack/material/steel,
 		/obj/item/stack/material/glass,
 		/obj/item/lightreplacer,
+		/obj/item/lightpainter,
 		/obj/item/cell
 	) //Vorestation Add - makes it actually useful lmao, adds sheets and cells as well as light replacers and lets you take any extinguisher that fits
 
@@ -185,6 +186,7 @@
 /obj/item/storage/pouch/flares/full_flare
 	starts_with = list(/obj/item/flashlight/flare = 14) // CHOMPedit: Full box of flares.
 /obj/item/storage/pouch/flares/full_glow
+	name = "storage pouch (glowsticks)" // Outpost 21 edit - Name clarity
 	starts_with = list(/obj/item/flashlight/glowstick = 14) // CHOMPedit: Full box of glowsticks.
 
 /obj/item/storage/pouch/flares/update_icon()

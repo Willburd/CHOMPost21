@@ -23,7 +23,7 @@
 	industrial_use = REFINERYEXPORT_REASON_RAW
 
 //VOREStation Edit
-/datum/reagent/calcium/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/calcium/affect_ingest(mob/living/carbon/M, alien, removed)
 	if(ishuman(M) && rand(1,10000) == 1)
 		var/mob/living/carbon/human/H = M
 		for(var/obj/item/organ/external/O in H.bad_external_organs)
@@ -47,7 +47,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_UNWANTED
 	industrial_use = REFINERYEXPORT_REASON_PRECURSOR
 
-/datum/reagent/carbon/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/carbon/affect_ingest(mob/living/carbon/M, alien, removed)
 	if(alien == IS_DIONA)
 		return
 	if(M.ingested && M.ingested.reagent_list.len > 1) // Need to have at least 2 reagents - cabon and something to remove
@@ -57,7 +57,7 @@
 				continue
 			M.ingested.remove_reagent(R.id, removed * effect)
 
-/datum/reagent/carbon/touch_turf(var/turf/T)
+/datum/reagent/carbon/touch_turf(turf/T)
 	..()
 	if(!istype(T, /turf/space))
 		var/obj/effect/decal/cleanable/dirt/dirtoverlay = locate(/obj/effect/decal/cleanable/dirt, T)
@@ -79,10 +79,10 @@
 	industrial_use = REFINERYEXPORT_REASON_RAW
 	coolant_modifier = 0.15
 
-/datum/reagent/chlorine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/chlorine/affect_blood(mob/living/carbon/M, alien, removed)
 	M.take_organ_damage(1*REM, 0)
 
-/datum/reagent/chlorine/affect_touch(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/chlorine/affect_touch(mob/living/carbon/M, alien, removed)
 	M.take_organ_damage(1*REM, 0)
 
 /datum/reagent/copper
@@ -105,7 +105,7 @@
 	color = "#404030"
 	cup_prefix = "alcoholic"
 
-	ingest_met = REM * 2
+	ingest_met = REM * 2 * ALCOHOLIC_EFFECT_MULTIPLIER
 
 	var/nutriment_factor = 0
 	var/strength = 10 // This is, essentially, units between stages - the lower, the stronger. Less fine tuning, more clarity.
@@ -126,12 +126,12 @@
 	industrial_use = REFINERYEXPORT_REASON_FOOD
 	coolant_modifier = 1.15
 
-/datum/reagent/ethanol/touch_mob(var/mob/living/L, var/amount)
+/datum/reagent/ethanol/touch_mob(mob/living/L, amount)
 	..()
 	if(istype(L))
 		L.adjust_fire_stacks(amount / 15)
 
-/datum/reagent/ethanol/affect_blood(var/mob/living/carbon/M, var/alien, var/removed) //This used to do just toxin. That's boring. Let's make this FUN.
+/datum/reagent/ethanol/affect_blood(mob/living/carbon/M, alien, removed) //This used to do just toxin. That's boring. Let's make this FUN.
 	if(issmall(M))
 		removed *= 2
 
@@ -144,23 +144,23 @@
 		var/effective_dose = dose * strength_mod * (1 + volume/60) //drinking a LOT will make you go down faster
 
 		if(effective_dose >= (strength * M.species.chem_strength_alcohol)) // Early warning
-			M.make_dizzy(18) // It is decreased at the speed of 3 per tick
+			M.make_dizzy(18 * ALCOHOLIC_EFFECT_MULTIPLIER) // It is decreased at the speed of 3 per tick // Outpost 21 edit - Booze code
 		if(effective_dose >= (strength * M.species.chem_strength_alcohol) * 2) // Slurring
-			M.slurring = max(M.slurring, 90)
+			M.slurring = max(M.slurring, 90 * ALCOHOLIC_EFFECT_MULTIPLIER) // Outpost 21 edit - Booze code
 		if(effective_dose >= (strength * M.species.chem_strength_alcohol) * 3) // Confusion - walking in random directions
 			M.Confuse(60)
 		if(effective_dose >= (strength * M.species.chem_strength_alcohol) * 4) // Blurry vision
-			M.eye_blurry = max(M.eye_blurry, 30)
+			M.eye_blurry = max(M.eye_blurry, 30 * ALCOHOLIC_EFFECT_MULTIPLIER) // Outpost 21 edit - Booze code
 		if(effective_dose >= (strength * M.species.chem_strength_alcohol) * 5) // Drowsyness - periodically falling asleep
-			M.drowsyness = max(M.drowsyness, 60)
+			M.drowsyness = max(M.drowsyness, 60 * ALCOHOLIC_EFFECT_MULTIPLIER) // Outpost 21 edit - Booze code
 		if(effective_dose >= (strength * M.species.chem_strength_alcohol) * 6) // Toxic dose
 			M.add_chemical_effect(CE_ALCOHOL_TOXIC, toxicity*3)
 		if(effective_dose >= (strength * M.species.chem_strength_alcohol) * 7) // Pass out
-			M.Paralyse(60)
-			M.Sleeping(90)
+			M.Paralyse(60 * ALCOHOLIC_EFFECT_MULTIPLIER) // Outpost 21 edit - Booze code
+			M.Sleeping(90 * ALCOHOLIC_EFFECT_MULTIPLIER) // Outpost 21 edit - Booze code
 
 		if(druggy != 0)
-			M.druggy = max(M.druggy, druggy*3)
+			M.druggy = max(M.druggy, druggy*3 * ALCOHOLIC_EFFECT_MULTIPLIER) // Outpost 21 edit - Booze code
 
 		if(adj_temp > 0 && M.bodytemperature < targ_temp) // 310 is the normal bodytemp. 310.055
 			M.bodytemperature = min(targ_temp, M.bodytemperature + (adj_temp * TEMPERATURE_DAMAGE_COEFFICIENT))
@@ -168,15 +168,15 @@
 			M.bodytemperature = min(targ_temp, M.bodytemperature - (adj_temp * TEMPERATURE_DAMAGE_COEFFICIENT))
 
 		if(halluci)
-			M.hallucination = max(M.hallucination, halluci*3)
+			M.hallucination = max(M.hallucination, halluci*3 * ALCOHOLIC_EFFECT_MULTIPLIER) // Outpost 21 edit - Booze code
 
-/datum/reagent/ethanol/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/ethanol/affect_ingest(mob/living/carbon/M, alien, removed)
 	var/ep_base_power = 60	//base nutrition gain for ethanol-processing synthetics, reduced by alcohol strength
 	var/ep_final_mod = 30	//final divisor on nutrition gain
 	if(issmall(M))
 		removed *= 2
 
-	if(!(M.species.allergens & allergen_type) && !(M.isSynthetic()))	//assuming it doesn't cause a horrible reaction, we get the nutrition effects - VOREStation Edit (added synth check)
+	if(!(M.species.allergens & allergen_type) && !(M.species.medallergens & medallergen_type) && !(M.isSynthetic()))	//assuming it doesn't cause a horrible reaction, we get the nutrition effects - VOREStation Edit (added synth check)
 		M.adjust_nutrition(nutriment_factor * removed)
 
 	if(M.isSynthetic() && M.nutrition < 500 && M.species.robo_ethanol_proc)
@@ -216,7 +216,7 @@
 		if(adj_temp < 0 && M.bodytemperature > targ_temp)
 			M.bodytemperature = min(targ_temp, M.bodytemperature - (adj_temp * TEMPERATURE_DAMAGE_COEFFICIENT))
 
-/datum/reagent/ethanol/touch_obj(var/obj/O)
+/datum/reagent/ethanol/touch_obj(obj/O)
 	..()
 	if(istype(O, /obj/item/paper))
 		var/obj/item/paper/paperaffected = O
@@ -234,7 +234,7 @@
 		to_chat(usr, span_notice("The solution dissolves the ink on the book."))
 	return
 
-/datum/reagent/ethanol/handle_addiction(var/mob/living/carbon/M, var/alien)
+/datum/reagent/ethanol/handle_addiction(mob/living/carbon/M, alien)
 	// A copy of the base with withdrawl, but with much less effects, such as vomiting.
 	var/current_addiction = M.get_addiction_to_reagent(id)
 	var/realistic_addiction = FALSE //DEFAULT set to FALSE. Toggle to TRUE for a more realistic addiction with potentially fatal side effects.
@@ -315,10 +315,10 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_RAW
 
-/datum/reagent/fluorine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/fluorine/affect_blood(mob/living/carbon/M, alien, removed)
 	M.adjustToxLoss(removed)
 
-/datum/reagent/fluorine/affect_touch(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/fluorine/affect_touch(mob/living/carbon/M, alien, removed)
 	M.adjustToxLoss(removed)
 
 /datum/reagent/hydrogen
@@ -355,9 +355,9 @@
 	industrial_use = REFINERYEXPORT_REASON_PRECURSOR
 	coolant_modifier = 0.15
 
-/datum/reagent/lithium/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/lithium/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien != IS_DIONA)
-		if(M.canmove && !M.restrained() && istype(M.loc, /turf/space))
+		if(M.canmove && !M.restrained() && istype(M.loc, /turf/space) && !M.resting) // Outpost 21 edit - Resting stops drug movement
 			step(M, pick(GLOB.cardinal))
 		if(prob(5))
 			M.emote(pick("twitch", "drool", "moan"))
@@ -373,9 +373,9 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_COMMON
 	industrial_use = REFINERYEXPORT_REASON_PRECURSOR
 
-/datum/reagent/mercury/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/mercury/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien != IS_DIONA)
-		if(M.canmove && !M.restrained() && istype(M.loc, /turf/space))
+		if(M.canmove && !M.restrained() && istype(M.loc, /turf/space) && !M.resting) // Outpost 21 edit - Resting stops drug movement
 			step(M, pick(GLOB.cardinal))
 		if(prob(5))
 			M.emote(pick("twitch", "drool", "moan"))
@@ -405,8 +405,8 @@
 	industrial_use = REFINERYEXPORT_REASON_RAW
 	coolant_modifier = 0.25
 
-/datum/reagent/oxygen/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	if(alien == IS_VOX)
+/datum/reagent/oxygen/affect_blood(mob/living/carbon/M, alien, removed)
+	if(M.species.poison_type == GAS_O2) // outpost 21 edit, changed from alien == IS_VOX to be consistant with poison oxygen behavior
 		M.adjustToxLoss(removed * 3)
 
 /datum/reagent/phosphorus
@@ -442,11 +442,11 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_RARE
 	industrial_use = REFINERYEXPORT_REASON_PRECURSOR
 
-/datum/reagent/radium/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/radium/affect_blood(mob/living/carbon/M, alien, removed)
 	if(issmall(M)) removed *= 2
 	M.apply_effect(10 * removed, IRRADIATE, 0)
 
-/datum/reagent/radium/touch_turf(var/turf/T)
+/datum/reagent/radium/touch_turf(turf/T)
 	..()
 	if(volume >= 3)
 		if(!istype(T, /turf/space))
@@ -466,11 +466,11 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_RARE
 	industrial_use = REFINERYEXPORT_REASON_PRECURSOR
 
-/datum/reagent/radium/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/radium/affect_blood(mob/living/carbon/M, alien, removed)
 	if(issmall(M)) removed *= 2
 	M.apply_effect(10 * removed, IRRADIATE, 0) // Radium may increase your chances to cure a disease
 
-/datum/reagent/radium/affect_touch(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/radium/affect_touch(mob/living/carbon/M, alien, removed)
 	if(issmall(M)) removed *= 2
 	M.apply_effect(10 * removed, IRRADIATE, 0) // Radium may increase your chances to cure a disease
 
@@ -491,13 +491,13 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_PRECURSOR
 
-/datum/reagent/acid/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/acid/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien == IS_GREY) //ywedit
 		return
 	if(issmall(M)) removed *= 2
 	M.take_organ_damage(0, removed * power * 2)
 
-/datum/reagent/acid/affect_touch(var/mob/living/carbon/M, var/alien, var/removed) // This is the most interesting
+/datum/reagent/acid/affect_touch(mob/living/carbon/M, alien, removed) // This is the most interesting
 	if(alien == IS_GREY) //ywedit
 		return
 	if(ishuman(M) && !isbelly(M.loc)) //CHOMPEdit Start
@@ -571,7 +571,7 @@
 		else
 			M.take_organ_damage(0, removed * power * 0.1) // Balance. The damage is instant, so it's weaker. 10 units -> 5 damage, double for pacid. 120 units beaker could deal 60, but a) it's burn, which is not as dangerous, b) it's a one-use weapon, c) missing with it will splash it over the ground and d) clothes give some protection, so not everything will hit
 
-/datum/reagent/acid/touch_obj(var/obj/O, var/amount) //CHOMPEdit Start
+/datum/reagent/acid/touch_obj(obj/O, amount) //CHOMPEdit Start
 	if(istype(O, /obj/item) && O.loc)
 		if(isbelly(O.loc) || isbelly(O.loc.loc))
 			var/obj/belly/B = (isbelly(O.loc) ? O.loc : O.loc.loc)
@@ -594,7 +594,7 @@
 		qdel(O)
 		remove_self(meltdose) // 10 units of acid will not melt EVERYTHING on the tile
 
-/datum/reagent/acid/touch_mob(var/mob/living/L) //CHOMPAdd Start
+/datum/reagent/acid/touch_mob(mob/living/L) //CHOMPAdd Start
 	if(!isliving(L))
 		return
 	if(isbelly(L.loc))
@@ -653,7 +653,7 @@
 	industrial_use = REFINERYEXPORT_REASON_FOOD
 	coolant_modifier = -0.25
 
-/datum/reagent/sugar/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/sugar/affect_blood(mob/living/carbon/M, alien, removed)
 	M.adjust_nutrition(removed * 3)
 
 	var/effective_dose = dose
@@ -744,3 +744,4 @@
 	color = "#808000"
 	supply_conversion_value = REFINERYEXPORT_VALUE_NO
 	industrial_use = REFINERYEXPORT_REASON_BIOHAZARD
+	wiki_flag = WIKI_SPOILER // Outpost 21 edit - Hide this on wiki

@@ -14,7 +14,7 @@
 	headset_alt = /obj/item/radio/headset/alt/heads/captain
 	headset_earbud = /obj/item/radio/headset/earbud/heads/captain
 
-/datum/decl/hierarchy/outfit/job/captain/post_equip(var/mob/living/carbon/human/H)
+/datum/decl/hierarchy/outfit/job/captain/post_equip(mob/living/carbon/human/H)
 	..()
 	if(H.age>49)
 		// Since we can have something other than the default uniform at this
@@ -38,6 +38,16 @@
 	headset_alt = /obj/item/radio/headset/alt/heads/hop
 	headset_earbud = /obj/item/radio/headset/earbud/heads/hop
 
+// Outpost 21 edit begin - Command sec folded into command officer
+/datum/decl/hierarchy/outfit/job/hop/pre_equip(mob/living/carbon/human/H)
+	..()
+	if(H.gender == FEMALE)
+		uniform = /obj/item/clothing/under/suit_jacket/female/skirt
+	else
+		uniform = /obj/item/clothing/under/suit_jacket/charcoal
+// Outpost 21 edit end
+
+/* Outpost 21 edit - Command sec folded into command officer
 /datum/decl/hierarchy/outfit/job/secretary
 	name = OUTFIT_JOB_NAME(JOB_COMMAND_SECRETARY)
 	shoes = /obj/item/clothing/shoes/brown
@@ -55,3 +65,4 @@
 		uniform = /obj/item/clothing/under/suit_jacket/female/skirt
 	else
 		uniform = /obj/item/clothing/under/suit_jacket/charcoal
+*/

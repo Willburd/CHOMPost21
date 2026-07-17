@@ -58,8 +58,9 @@ GLOBAL_LIST_INIT(possible_cable_coil_colours, list(
 	layer = WIRES_LAYER
 	color = COLOR_RED
 	var/obj/machinery/power/breakerbox/breaker_box
+	var/broken = FALSE // Outpost 21 edit(port) - broken wire trap
 
-/obj/structure/cable/drain_power(var/drain_check, var/surge, var/amount = 0)
+/obj/structure/cable/drain_power(drain_check, surge, amount = 0)
 	if(drain_check)
 		return 1
 
@@ -104,8 +105,21 @@ GLOBAL_LIST_INIT(possible_cable_coil_colours, list(
 	if(level==1) hide(!T.is_plating())
 	GLOB.cable_list += src //add it to the global cable list
 
+// Outpost 21 edit(port) begin - broken wire trap
+/obj/structure/cable/Initialize(mapload)
+	. = ..()
+	if(mapload && prob(1))
+		var/area/A = get_area(src)
+		if(istype(A,/area/maintenance) || istype(A,/area/mine))
+			fray()
+// Outpost 21 edit end
 
 /obj/structure/cable/Destroy()					// called when a cable is deleted
+	// Outpost 21 edit(port) begin - broken wire trap
+	if(broken)
+		unsense_proximity(range = 0, callback = TYPE_PROC_REF(/atom,HasProximity))
+	// Outpost 21 edit end
+
 	if(powernet)
 		cut_cable_from_powernet()				// update the powernets
 	GLOB.cable_list -= src							//remove it from global cable list
@@ -113,11 +127,16 @@ GLOBAL_LIST_INIT(possible_cable_coil_colours, list(
 
 /obj/structure/cable/examine(mob/user)
 	. = ..()
+	// Outpost 21 edit(port) begin - broken wire trap
+	if(broken)
+		. += span_warning("It looks frayed! Some tape might help.")
+	// Outpost 21 edit end
 	if(isobserver(user))
 		. += span_warning("[powernet?.avail > 0 ? "[DisplayPower(powernet.avail)] in power network." : "The cable is not powered."]")
 
 // Rotating cables requires d1 and d2 to be rotated
 /obj/structure/cable/set_dir(new_dir)
+	. = ..()
 	if(powernet)
 		cut_cable_from_powernet() // Remove this cable from the powernet so the connections update
 
@@ -149,7 +168,7 @@ GLOBAL_LIST_INIT(possible_cable_coil_colours, list(
 ///////////////////////////////////
 
 //If underfloor, hide the cable
-/obj/structure/cable/hide(var/i)
+/obj/structure/cable/hide(i)
 	if(istype(loc, /turf))
 		invisibility = i ? INVISIBILITY_ABSTRACT : INVISIBILITY_NONE
 	update_icon()
@@ -163,6 +182,60 @@ GLOBAL_LIST_INIT(possible_cable_coil_colours, list(
 		return
 	icon_state = "[d1]-[d2]"
 	alpha = invisibility ? 127 : 255
+	// Outpost 21 edit(port) begin - broken wire trap
+	cut_overlays()
+	if(broken && !invisibility)
+		var/image/broke = image('icons/obj/power_cond_damaged.dmi', src, "[d1]-[d2]")
+		broke.appearance_flags = (RESET_COLOR|PIXEL_SCALE|KEEP_APART)
+		broke.plane = OBJ_PLANE
+		broke.layer = HIDING_LAYER // Above things for SAFETY
+		add_overlay(broke)
+		var/image/spark = image('icons/obj/power_cond_damaged.dmi', src, "spark")
+		spark.appearance_flags = (RESET_COLOR|PIXEL_SCALE|RESET_ALPHA|KEEP_APART)
+		spark.plane = OBJ_PLANE
+		spark.layer = UNDER_JUNK_LAYER-0.001 // Spark above most things
+		add_overlay(spark)
+	// Outpost 21 edit end
+
+// Outpost 21 edit(port) begin - broken wire trap
+/obj/structure/cable/proc/fray()
+	if(d1 >= 16 || breaker_box)
+		return // Invalid
+	if(!broken)
+		broken = TRUE
+		update_icon()
+		sense_proximity(range = 0, callback = TYPE_PROC_REF(/atom,HasProximity))
+
+/obj/structure/cable/proc/unfray()
+	if(broken)
+		broken = FALSE
+		update_icon()
+		unsense_proximity(range = 0, callback = TYPE_PROC_REF(/atom,HasProximity))
+
+/obj/structure/cable/HasProximity(turf/T, datum/weakref/WF, old_loc)
+	if(!broken) // if this somehow happens
+		unfray()
+		return
+	if(!T.is_plating()) // floor panels stop wires from shocking...
+		return
+	if(isnull(WF))
+		return
+	var/atom/movable/AM = WF.resolve()
+	if(isnull(AM))
+		return
+	if(ishuman(AM))
+		var/mob/living/carbon/human/H = AM
+		if(H.is_incorporeal())
+			return
+		if(H.shoes && H.shoes.flags & NOCONDUCT)
+			return
+	if(isliving(AM))
+		var/mob/living/M = AM
+		if(M.is_incorporeal())
+			return
+		shock(M,80,1)
+		return
+// Outpost 21 edit end
 
 //Telekinesis has no effect on a cable
 /obj/structure/cable/attack_tk(mob/user)
@@ -172,6 +245,8 @@ GLOBAL_LIST_INIT(possible_cable_coil_colours, list(
 //   - Wirecutters : cut it duh !
 //   - Cable coil : merge cables
 //   - Multitool : get the power currently passing through the cable
+//   - Sharp Items : frays wires - Outpost 21 edit
+//   - Tape Roll : repairs wires if frayed - Outpost 21 edit
 //
 
 /obj/structure/cable/attackby(obj/item/W, mob/user)
@@ -180,7 +255,17 @@ GLOBAL_LIST_INIT(possible_cable_coil_colours, list(
 	if(!T.is_plating())
 		return
 
-	if(W.has_tool_quality(TOOL_WIRECUTTER))
+	// Outpost 21 edit(port) begin - broken wire trap
+	if(broken && istype(W,/obj/item/tape_roll))
+		if(do_after(user,2 SECONDS,src))
+			if(broken)
+				unfray()
+				to_chat(user, span_warning("You repair \the [src]'s sheath with \the [W]."))
+				src.add_fingerprint(user)
+		return
+
+	else if(W.has_tool_quality(TOOL_WIRECUTTER))
+	// Outpost 21 edit end
 		var/obj/item/stack/cable_coil/CC
 		if(d1 == UP || d2 == UP)
 			to_chat(user, span_warning("You must cut this cable from above."))
@@ -213,6 +298,9 @@ GLOBAL_LIST_INIT(possible_cable_coil_colours, list(
 
 		investigate_log("was cut by [key_name(user, user.client)] in [user.loc.loc]","wires")
 
+		if(broken) // Outpost 21 edit(port) - Cutting cable off should fix it too, somehow it was persisting broken state...?
+			unfray()
+
 		qdel(src)
 		return
 
@@ -223,6 +311,8 @@ GLOBAL_LIST_INIT(possible_cable_coil_colours, list(
 			to_chat(user, "Not enough cable")
 			return
 		coil.cable_join(src, user)
+		if(broken) // Outpost 21 edit - Adding cable autofixes others
+			unfray()
 
 	else if(istype(W, /obj/item/multitool))
 
@@ -237,11 +327,15 @@ GLOBAL_LIST_INIT(possible_cable_coil_colours, list(
 	else
 		if(!(W.flags & NOCONDUCT))
 			shock(user, 50, 0.7)
+		// Outpost 21 edit(port) begin - broken wire trap
+		if(is_sharp(W))
+			fray()
+		// Outpost 21 edit end
 
 	src.add_fingerprint(user)
 
 // shock the user with probability prb
-/obj/structure/cable/proc/shock(mob/user, prb, var/siemens_coeff = 1.0)
+/obj/structure/cable/proc/shock(mob/user, prb, siemens_coeff = 1.0)
 	if(!prob(prb))
 		return 0
 	if (electrocute_mob(user, powernet, src, siemens_coeff))
@@ -258,17 +352,24 @@ GLOBAL_LIST_INIT(possible_cable_coil_colours, list(
 		if(1.0)
 			qdel(src)
 		if(2.0)
-			if (prob(50))
+			// Outpost 21 edit(port) begin - broken wire trap
+			if (prob(10))
+				fray()
+			else if (prob(50))
+			// Outpost 21 edit end
 				new/obj/item/stack/cable_coil(src.loc, src.d1 ? 2 : 1, color)
 				qdel(src)
 
 		if(3.0)
 			if (prob(25))
-				new/obj/item/stack/cable_coil(src.loc, src.d1 ? 2 : 1, color)
-				qdel(src)
+				// Outpost 21 edit(port) begin - broken wire trap
+				fray()
+				//new/obj/item/stack/cable_coil(src.loc, src.d1 ? 2 : 1, color)
+				//qdel(src)
+				// Outpost 21 edit end
 	return
 
-/obj/structure/cable/proc/cableColor(var/colorC)
+/obj/structure/cable/proc/cableColor(colorC)
 	var/color_n = "#DD0000"
 	if(colorC)
 		color_n = colorC
@@ -280,7 +381,7 @@ GLOBAL_LIST_INIT(possible_cable_coil_colours, list(
 
 //handles merging diagonally matching cables
 //for info : direction^3 is flipping horizontally, direction^12 is flipping vertically
-/obj/structure/cable/proc/mergeDiagonalsNetworks(var/direction)
+/obj/structure/cable/proc/mergeDiagonalsNetworks(direction)
 	if(SSmachines.powernet_is_defered()) return;
 
 	//search for and merge diagonally matching cables from the first direction component (north/south)
@@ -325,7 +426,7 @@ GLOBAL_LIST_INIT(possible_cable_coil_colours, list(
 				C.powernet.add_cable(src) //else, we simply connect to the matching cable powernet
 
 // merge with the powernets of power objects in the given direction
-/obj/structure/cable/proc/mergeConnectedNetworks(var/direction)
+/obj/structure/cable/proc/mergeConnectedNetworks(direction)
 	if(SSmachines.powernet_is_defered()) return;
 
 	var/fdir = direction ? GLOB.reverse_dir[direction] : 0 //flip the direction, to match with the source position on its turf
@@ -402,7 +503,7 @@ GLOBAL_LIST_INIT(possible_cable_coil_colours, list(
 //////////////////////////////////////////////
 
 //if powernetless_only = 1, will only get connections without powernet
-/obj/structure/cable/proc/get_connections(var/powernetless_only = 0)
+/obj/structure/cable/proc/get_connections(powernetless_only = 0)
 	. = list()	// this will be a list of all connected power objects
 	var/turf/T
 
@@ -515,7 +616,7 @@ GLOBAL_LIST_INIT(possible_cable_coil_colours, list(
 	w_class = ITEMSIZE_SMALL
 	throw_speed = 2
 	throw_range = 5
-	matter = list(MAT_STEEL = 50, MAT_GLASS = 20)
+	matter = list(MAT_STEEL = MATERIAL_COST(0.025), MAT_GLASS = MATERIAL_COST(0.01))
 	slot_flags = SLOT_BELT
 	item_state = "coil"
 	attack_verb = list("whipped", "lashed", "disciplined", "flogged")
@@ -526,7 +627,7 @@ GLOBAL_LIST_INIT(possible_cable_coil_colours, list(
 	tool_qualities = list(TOOL_CABLE_COIL)
 	singular_name = "cable"
 
-/obj/item/stack/cable_coil/Initialize(mapload, length = MAXCOIL, var/param_color = null)
+/obj/item/stack/cable_coil/Initialize(mapload, length = MAXCOIL, param_color = null)
 	. = ..()
 	amount = length
 	if (param_color) // It should be red by default, so only recolor it if parameter was specified.
@@ -541,7 +642,7 @@ GLOBAL_LIST_INIT(possible_cable_coil_colours, list(
 ///////////////////////////////////
 
 //you can use wires to heal robotics
-/obj/item/stack/cable_coil/attack(var/atom/A, var/mob/living/user, var/def_zone)
+/obj/item/stack/cable_coil/attack(mob/living/A, mob/living/user, target_zone, attack_modifier)
 	if(ishuman(A) && user.a_intent == I_HELP)
 		var/mob/living/carbon/human/H = A
 		var/obj/item/organ/external/S = H.organs_by_name[user.zone_sel.selecting]
@@ -557,16 +658,18 @@ GLOBAL_LIST_INIT(possible_cable_coil_colours, list(
 		if(S.organ_tag == BP_HEAD)
 			if(H.head && istype(H.head,/obj/item/clothing/head/helmet/space))
 				to_chat(user, span_warning("You can't apply [src] through [H.head]!"))
-				return 1
+				return ITEM_INTERACT_FAILURE
 		else
 			if(H.wear_suit && istype(H.wear_suit,/obj/item/clothing/suit/space))
 				to_chat(user, span_warning("You can't apply [src] through [H.wear_suit]!"))
-				return 1
+				return ITEM_INTERACT_FAILURE
 
 		var/use_amt = min(src.amount, CEILING(S.burn_dam/5, 1), 5)
 		if(can_use(use_amt))
 			if(S.robo_repair(5*use_amt, BURN, "some damaged wiring", src, user))
 				src.use(use_amt)
+				return ITEM_INTERACT_SUCCESS
+		return ITEM_INTERACT_FAILURE
 
 	else
 		return ..()
@@ -584,7 +687,7 @@ GLOBAL_LIST_INIT(possible_cable_coil_colours, list(
 		icon_state = "coil"
 		name = initial(name)
 
-/obj/item/stack/cable_coil/proc/set_cable_color(var/selected_color, var/user)
+/obj/item/stack/cable_coil/proc/set_cable_color(selected_color, user)
 	if(!selected_color)
 		return
 
@@ -942,13 +1045,13 @@ GLOBAL_LIST_INIT(possible_cable_coil_colours, list(
 	w_class = ITEMSIZE_SMALL
 	throw_speed = 2
 	throw_range = 5
-	matter = list(MAT_STEEL = 50, MAT_GLASS = 20)
+	matter = list(MAT_STEEL = MATERIAL_COST(0.025), MAT_GLASS = MATERIAL_COST(0.01))
 	slot_flags = SLOT_BELT
 	attack_verb = list("whipped", "lashed", "disciplined", "flogged")
 	stacktype = null
 	toolspeed = 0.25
 
-/obj/item/stack/cable_coil/alien/Initialize(mapload, length = MAXCOIL, var/param_color = null)		//There has to be a better way to do this.
+/obj/item/stack/cable_coil/alien/Initialize(mapload, length = MAXCOIL, param_color = null)		//There has to be a better way to do this.
 	. = ..()
 	if(embed_chance == -1)		//From /obj/item, don't want to do what the normal cable_coil does
 		if(sharp)
@@ -960,7 +1063,7 @@ GLOBAL_LIST_INIT(possible_cable_coil_colours, list(
 /obj/item/stack/cable_coil/alien/update_icon()
 	icon_state = initial(icon_state)
 
-/obj/item/stack/cable_coil/alien/can_use(var/used)
+/obj/item/stack/cable_coil/alien/can_use(used)
 	return 1
 
 /obj/item/stack/cable_coil/alien/use()	//It's endless

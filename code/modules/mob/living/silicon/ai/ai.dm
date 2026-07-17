@@ -130,8 +130,10 @@ GLOBAL_LIST_INIT(ai_verbs_default, list(
 	canmove = 0
 	density = TRUE
 
+	/* Outpost 21 edit - Communicator removal
 	if(!is_dummy)
 		aiCommunicator = new /obj/item/communicator/integrated(src)
+	*/
 
 	holo_icon = getHologramIcon(icon('icons/mob/AI.dmi',"holo1"))
 
@@ -164,7 +166,7 @@ GLOBAL_LIST_INIT(ai_verbs_default, list(
 	add_language(LANGUAGE_AKHANI, 1)
 	add_language(LANGUAGE_SKRELLIAN, 1)
 	add_language(LANGUAGE_TRADEBAND, 1)
-	add_language(LANGUAGE_GUTTER, 1)
+	// add_language(LANGUAGE_GUTTER, 1) Outpost 21 edit - Not for borgs
 	add_language(LANGUAGE_EAL, 1)
 	add_language(LANGUAGE_SCHECHI, 1)
 	add_language(LANGUAGE_SIGN, 1)
@@ -529,7 +531,7 @@ GLOBAL_LIST_INIT(ai_verbs_default, list(
 			new_eye.set_light(0)
 
 
-/mob/living/silicon/ai/proc/switchCamera(var/obj/machinery/camera/C)
+/mob/living/silicon/ai/proc/switchCamera(obj/machinery/camera/C)
 	if (!C || stat == DEAD) //C.can_use())
 		return 0
 
@@ -565,7 +567,7 @@ GLOBAL_LIST_INIT(ai_verbs_default, list(
 	cameralist = sortAssoc(cameralist)
 	return cameralist
 
-/mob/living/silicon/ai/proc/ai_network_change(var/network in get_camera_network_list())
+/mob/living/silicon/ai/proc/ai_network_change(network in get_camera_network_list())
 	set category = "AI.Camera Control"
 	set name = "Jump To Network"
 	unset_machine()
@@ -680,7 +682,8 @@ GLOBAL_LIST_INIT(ai_verbs_default, list(
 						"male tesharii",
 						"female tesharii",
 						"male skrell",
-						"female skrell"
+						"female skrell",
+						"synx"	// outpost 21 edit - added synx
 					)
 					input = tgui_input_list(src, "Please select a hologram:", "Hologram Choice", icon_list)
 					if(input)
@@ -736,6 +739,8 @@ GLOBAL_LIST_INIT(ai_verbs_default, list(
 								holo_icon = getHologramIcon(icon('icons/mob/pets.dmi',"syndifox"))	// CHOMPStation Edit: Fox holograms!
 							if("fox, alt")															// CHOMPStation Edit: Fox holograms!
 								holo_icon = getHologramIcon(icon('icons/mob/pets.dmi',"fox2"))		// CHOMPStation Edit: Fox holograms!
+							if("synx") 																	// outpost 21 edit - added synx
+								holo_icon = getHologramIcon(icon('icons/mob/synx.dmi',"synx_living"))	// outpost 21 edit - added synx
 
 //Toggles the luminosity and applies it by re-entereing the camera.
 /mob/living/silicon/ai/proc/toggle_camera_light()
@@ -846,7 +851,7 @@ GLOBAL_LIST_INIT(ai_verbs_default, list(
 	to_chat(src, span_filter_notice("Your hologram will [hologram_follow ? "follow" : "no longer follow"] you now."))
 
 
-/mob/living/silicon/ai/proc/check_unable(var/flags = NONE, var/feedback = 1)
+/mob/living/silicon/ai/proc/check_unable(flags = NONE, feedback = 1)
 	if(stat == DEAD)
 		if(feedback)
 			to_chat(src, span_warning("You are dead!"))
@@ -904,7 +909,7 @@ GLOBAL_LIST_INIT(ai_verbs_default, list(
 	else
 		to_chat(src, span_warning("Target is not on or near any active cameras on the station."))
 
-/mob/living/silicon/ai/ex_act(var/severity)
+/mob/living/silicon/ai/ex_act(severity)
 	if(severity == 1.0)
 		qdel(src)
 		return

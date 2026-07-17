@@ -114,14 +114,27 @@
 /obj/structure/closet/crate/ex_act(severity)
 	switch(severity)
 		if(1.0)
-			for(var/obj/O in src.contents)
-				qdel(O)
+			// outpost 21 edit begin - stop destroying items
+			if(istype(src,/obj/structure/closet/crate/secure/loot))
+				for(var/obj/O in src.contents)
+					qdel(O)
+			else
+				for(var/obj/O in src.contents)
+					O.forceMove(get_turf(src))
+			// outpost 21 edit end
 			qdel(src)
 			return
 		if(2.0)
-			for(var/obj/O in src.contents)
-				if(prob(50))
+			// outpost 21 edit begin - stop destroying items
+			if(istype(src,/obj/structure/closet/crate/secure/loot))
+				for(var/obj/O in src.contents)
 					qdel(O)
+					if(prob(50))
+						qdel(O)
+			else
+				for(var/obj/O in src.contents)
+					O.forceMove(get_turf(src))
+			// outpost 21 edit end
 			qdel(src)
 			return
 		if(3.0)
@@ -174,7 +187,7 @@
 	else
 		to_chat(user, span_notice("Access Denied"))
 
-/obj/structure/closet/crate/secure/proc/set_locked(var/newlocked, mob/user = null)
+/obj/structure/closet/crate/secure/proc/set_locked(newlocked, mob/user = null)
 	if(locked == newlocked) return
 
 	locked = newlocked
@@ -214,7 +227,7 @@
 		return
 	return ..()
 
-/obj/structure/closet/crate/secure/emag_act(var/remaining_charges, var/mob/user)
+/obj/structure/closet/crate/secure/emag_act(remaining_charges, mob/user)
 	if(!broken)
 		playsound(src, "sparks", 60, 1)
 		locked = 0
@@ -224,6 +237,9 @@
 		return 1
 
 /obj/structure/closet/crate/secure/emp_act(severity, recursive)
+	. = ..()
+	if (. & EMP_PROTECT_SELF)
+		return
 	if(!broken && !opened  && prob(50/severity))
 		if(!locked)
 			locked = TRUE
@@ -237,7 +253,6 @@
 			req_access = list()
 			req_access += pick(SSaccess.get_all_station_access())
 	update_icon()
-	..()
 
 /obj/structure/closet/crate/plastic
 	name = "plastic crate"
@@ -328,7 +343,7 @@
 		newgas.temperature = target_temp
 	return newgas
 
-/obj/structure/closet/crate/freezer/Entered(var/atom/movable/AM)
+/obj/structure/closet/crate/freezer/Entered(atom/movable/AM)
 	if(istype(AM, /obj/item/organ))
 		var/obj/item/organ/O = AM
 		O.preserved = 1
@@ -336,7 +351,7 @@
 			organ.preserved = 1
 	..()
 
-/obj/structure/closet/crate/freezer/Exited(var/atom/movable/AM)
+/obj/structure/closet/crate/freezer/Exited(atom/movable/AM)
 	if(istype(AM, /obj/item/organ))
 		var/obj/item/organ/O = AM
 		O.preserved = 0
@@ -751,7 +766,7 @@
 //Mining Cart
 /obj/structure/closet/crate/miningcar
 	name = "mining cart"
-	desc = "A mining car. This one doesn't work on rails, but has to be dragged."
+	desc = "A mining car. This one doesn't work on rails, and has to be dragged."
 	icon = 'icons/obj/closets/miningcar.dmi'
 	closet_appearance = null
 	open_sound = 'sound/effects/wooden_closet_open.ogg'

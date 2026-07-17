@@ -153,7 +153,7 @@
 /datum/access/robotics
 	id = ACCESS_ROBOTICS
 	desc = "Robotics"
-	region = ACCESS_REGION_RESEARCH
+	region = ACCESS_REGION_ENGINEERING
 
 /datum/access/rd
 	id = ACCESS_RD

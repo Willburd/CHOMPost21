@@ -1,0 +1,494 @@
+/obj/effect/landmark/redspacestart
+	name = "redentrance" // places in redspace where mobs are placed when they enter it
+	icon = 'icons/mob/screen1.dmi'
+	icon_state = "x"
+
+/obj/effect/landmark/redspaceexit
+	name = "redexit" // places in realspace that are legal to eject mobs to
+	icon = 'icons/mob/screen1.dmi'
+	icon_state = "x"
+
+/obj/effect/landmark/late_antag/chu
+	name = "Chu - Lateload"
+	antag_id = MODE_CHU
+
+/obj/effect/landmark/late_antag/synx
+	name = "Synx - Lateload"
+	antag_id = MODE_SYNX
+
+/obj/effect/landmark/late_antag/zombie
+	name = "Zombie - Lateload"
+	antag_id = MODE_ZOMBIE
+
+/obj/effect/landmark/late_antag/borer
+	name = "Borer - Lateload"
+	antag_id = MODE_BORER
+
+/obj/effect/landmark/redspacemonsterspawn
+	name = "redmonster"
+	delete_me = TRUE
+
+/obj/effect/landmark/redspacemonsterspawn/Initialize(mapload)
+	. = ..()
+
+	if(prob(80))
+		return // leave redspace mostly empty, so it feels dangerous when you do find something, not just insane and cruel
+
+	if(!isturf(src.loc))
+		return
+
+	var/list/mobs = list(
+			/mob/living/simple_mob/clowns/normal,
+			/mob/living/simple_mob/shadekin/red/dark,
+			/mob/living/simple_mob/animal/synx/ai,
+			/mob/living/simple_mob/vore,
+			/mob/living/simple_mob/vore/alienanimals/chu,
+			/mob/living/simple_mob/vore/vore_hostile/abyss_lurker,
+			/mob/living/simple_mob/vore/vore_hostile/leaper,
+			/mob/living/simple_mob/vore/ashy,
+			/mob/living/simple_mob/vore/cryptdrake,
+			/mob/living/simple_mob/vore/demonAI,
+			/mob/living/simple_mob/mechanical/mecha/combat/honker,
+			// Cult
+			/mob/living/simple_mob/creature,
+			/mob/living/simple_mob/vore/aggressive/corrupthound,
+			/mob/living/simple_mob/vore/demonAI/wendigo,
+			/mob/living/simple_mob/vore/demonAI/engorge,
+			/mob/living/simple_mob/humanoid/cultist/noodle,
+			/mob/living/simple_mob/humanoid/cultist/tesh,
+			// Candy
+			/mob/living/simple_mob/vore/candy/redcabold,
+			/mob/living/simple_mob/vore/candy/bluecabold,
+			/mob/living/simple_mob/vore/candy/yellowcabold,
+			/mob/living/simple_mob/vore/candy/marshmellowserpent,
+			// Cyber horror
+			/mob/living/simple_mob/mechanical/cyber_horror/vox,
+			/mob/living/simple_mob/mechanical/cyber_horror/ling_cyber_horror,
+			/mob/living/simple_mob/mechanical/cyber_horror/corgi,
+			/mob/living/simple_mob/mechanical/cyber_horror/tajaran,
+			/mob/living/simple_mob/mechanical/cyber_horror/grey,
+			/mob/living/simple_mob/mechanical/cyber_horror/cat_cyber_horror,
+		)
+	var/mob_path = pick(mobs);
+	if(mob_path == /mob/living/simple_mob/clowns/normal)
+		// clowns are the most complex, taken right from the clune infestation event
+		var/spawncount = pick(1,2)
+		while((spawncount >= 1))
+			// normal ones...
+			var/subcount = pick(2,3)
+			while((subcount >= 1))
+				var/mob/living/simple_mob/clowns/normal/C = new /mob/living/simple_mob/clowns/normal()
+				C.loc = src.loc
+				subcount--
+
+			// what in gods name.
+			subcount = pick(1,2)
+			while((subcount >= 1))
+				var/chosen_clown = pick(
+				list(/mob/living/simple_mob/clowns/big/honkling
+				, /mob/living/simple_mob/clowns/big/blob
+				, /mob/living/simple_mob/clowns/big/mutant
+				, /mob/living/simple_mob/clowns/big/flesh
+				, /mob/living/simple_mob/clowns/big/scary
+				, /mob/living/simple_mob/clowns/big/giggles
+				, /mob/living/simple_mob/clowns/big/longface
+				, /mob/living/simple_mob/clowns/big/hulk
+				, /mob/living/simple_mob/clowns/big/thin
+				, /mob/living/simple_mob/clowns/big/wide
+				, /mob/living/simple_mob/clowns/big/perm
+				, /mob/living/simple_mob/clowns/big/thicc
+				, /mob/living/simple_mob/clowns/big/punished
+				, /mob/living/simple_mob/clowns/big/cluwne
+				, /mob/living/simple_mob/clowns/big/honkmunculus
+				, /mob/living/simple_mob/clowns/big/tunnelclown
+				, /mob/living/simple_mob/clowns/big/sentinel
+				, /mob/living/simple_mob/clowns/big/destroyer
+				, /mob/living/simple_mob/clowns/big/chlown
+				, /mob/living/simple_mob/clowns/big/clowns
+				, /mob/living/simple_mob/clowns/big/mayor
+				, /mob/living/simple_mob/clowns/big/honkling))
+				new chosen_clown(src.loc)
+				subcount--
+			spawncount--
+		return
+	// otherwise just spawn something!
+	new mob_path(src.loc)
+
+
+/obj/effect/landmark/hostile_xenobio
+	name = "dangerous xeno spawner"
+	delete_me = TRUE
+
+/obj/effect/landmark/hostile_xenobio/Initialize(mapload)
+	. = ..()
+
+	if(prob(20))
+		return // likely to be empty, so xenobio doesn't need to clear it out any time they want to do stuff
+
+	if(!isturf(src.loc))
+		return
+
+	var/mob_path = pick(
+		// Wildlife
+		prob(75);/mob/living/simple_mob/vore/alienanimals/jil,
+		prob(25);/mob/living/simple_mob/vore/alienanimals/jil/jillioth,
+		prob(90);/mob/living/simple_mob/animal/synx/ai,
+		prob(75);/mob/living/simple_mob/vore/vore_hostile/gelatinous_cube,
+		prob(90);/mob/living/simple_mob/animal/space/carp,
+		prob(90);/mob/living/simple_mob/animal/giant_spider,
+		prob(20);/mob/living/simple_mob/animal/giant_spider/electric,
+		prob(20);/mob/living/simple_mob/animal/giant_spider/frost,
+		prob(20);/mob/living/simple_mob/animal/giant_spider/hunter,
+		prob(20);/mob/living/simple_mob/animal/giant_spider/ion,
+		prob(20);/mob/living/simple_mob/animal/giant_spider/lurker,
+		prob(20);/mob/living/simple_mob/animal/giant_spider/pepper,
+		prob(10);/mob/living/simple_mob/animal/giant_spider/tunneler,
+		prob(10);/mob/living/simple_mob/animal/giant_spider/webslinger,
+		prob(5);/mob/living/simple_mob/animal/giant_spider/phorogenic,
+		prob(5);/mob/living/simple_mob/animal/giant_spider/thermic,
+		prob(1);/mob/living/simple_mob/animal/giant_spider/broodmother,
+		prob(35);/mob/living/simple_mob/vore/leopardmander,
+		prob(90);/mob/living/simple_mob/animal/space/goose,
+		prob(90);/mob/living/simple_mob/vore/oregrub,
+		prob(25);/mob/living/simple_mob/vore/pitcher_plant,
+		prob(35);/mob/living/simple_mob/vore/alienanimals/dustjumper,
+		prob(75);/mob/living/simple_mob/clowns/normal,
+		prob(90);/mob/living/simple_mob/vore/otie/feral,
+		prob(90);/mob/living/simple_mob/vore/aggressive/rat,
+		prob(90);/mob/living/simple_mob/vore/aggressive/giant_snake,
+		prob(90);/mob/living/simple_mob/vore/slug,
+		prob(90);/mob/living/simple_mob/vore/pakkun,
+		prob(55);/mob/living/simple_mob/vore/scel,
+		prob(55);/mob/living/simple_mob/vore/jelly,
+		// Ohno
+		prob(10);/mob/living/simple_mob/vore/alienanimals/chu,
+		prob(35);/mob/living/simple_mob/animal/passive/snake/python,
+		prob(35);/mob/living/simple_mob/vore/pakkun/fire,
+		prob(35);/mob/living/simple_mob/vore/pakkun/sand,
+		prob(55);/mob/living/simple_mob/animal/space/bear,
+		prob(75);/mob/living/simple_mob/shadekin/red/dark,
+		prob(35);/mob/living/simple_mob/clowns/big/flesh,
+		prob(35);/mob/living/simple_mob/clowns/big/scary,
+		prob(35);/mob/living/simple_mob/clowns/big/longface,
+		prob(75);/mob/living/simple_mob/animal/space/carp/large,
+		prob(5);/mob/living/simple_mob/vore/otie/syndicate,
+		prob(5);/mob/living/simple_mob/animal/giant_spider/flesh,
+		// Troidin
+		prob(75);/mob/living/simple_mob/metroid/juvenile/baby,
+		prob(55);/mob/living/simple_mob/metroid/juvenile/alpha,
+		prob(35);/mob/living/simple_mob/metroid/juvenile/gamma,
+		prob(15);/mob/living/simple_mob/metroid/juvenile/zeta,
+		prob(5);/mob/living/simple_mob/metroid/juvenile/omega,
+		// Ayys
+		prob(55);/mob/living/simple_mob/animal/space/alien,
+		prob(55);/mob/living/simple_mob/animal/space/alien/sentinel,
+		// Candy
+		prob(15);/mob/living/simple_mob/vore/candy/redcabold,
+		prob(15);/mob/living/simple_mob/vore/candy/bluecabold,
+		prob(15);/mob/living/simple_mob/vore/candy/yellowcabold,
+		prob(15);/mob/living/simple_mob/vore/candy/marshmellowserpent,
+		// Cyber horror
+		prob(15);/mob/living/simple_mob/mechanical/cyber_horror/vox,
+		prob(15);/mob/living/simple_mob/mechanical/cyber_horror/ling_cyber_horror,
+		prob(25);/mob/living/simple_mob/mechanical/cyber_horror/corgi,
+		prob(25);/mob/living/simple_mob/mechanical/cyber_horror/cat_cyber_horror,
+		// Xenobio slimes
+		prob(20);/mob/living/simple_mob/slime/xenobio,
+	)
+	if(mob_path == /mob/living/simple_mob/slime/xenobio)
+		mob_path = pick(typesof(/mob/living/simple_mob/slime/xenobio))
+	new mob_path(src.loc)
+
+
+/obj/effect/landmark/dangerous_situation
+	name = "dangerous situation spawner"
+	delete_me = TRUE
+
+/obj/effect/landmark/dangerous_situation/Initialize(mapload)
+	. = ..()
+	if(!isturf(loc))
+		return
+
+	// On friendship mode, traps reduced
+	#ifdef OUTPOST_FRIENDSHIP_MODE
+	if(prob(40))
+		return
+	#endif
+
+	// creates stuff like ruptured gas tanks, and landmines
+	switch(rand(1,4))
+		if(1)
+			var/newpath = pick(/obj/machinery/portable_atmospherics/canister/carbon_dioxide/broken,/obj/machinery/portable_atmospherics/canister/nitrous_oxide/broken,/obj/machinery/portable_atmospherics/canister/phoron/broken)
+			var/obj/machinery/portable_atmospherics/canister/tank = new newpath()
+			tank.loc = src.loc
+
+		if(2)
+			var/newpath = pick(prob(30);/obj/effect/mine,
+				prob(25);/obj/effect/mine/frag,
+				prob(2);/obj/effect/mine/emp,
+				prob(1);/obj/effect/mine/dnascramble,
+				prob(10);/obj/effect/mine/stun,
+				prob(10);/obj/effect/mine/incendiary,
+				prob(10);/obj/effect/mine/spiders,
+				prob(10);/obj/effect/mine/portal)
+			var/obj/effect/mine/M = new newpath()
+			if(prob(60))
+				M.camo_net = TRUE
+				M.alpha = 50 // Wish this was part of a proc instead of magic num
+			M.loc = src.loc
+
+		if(3)
+			var/obj/structure/largecrate/animal/pred/crate = new /obj/structure/largecrate/animal/pred()
+			crate.name = "Kobby Friend Crate [rand(999,9999)]"
+			crate.loc = src.loc
+
+		if(4)
+			var/obj/structure/largecrate/animal/dangerous/crate = new /obj/structure/largecrate/animal/dangerous()
+			crate.name = "Super Kobby Friend Crate [rand(999,9999)]"
+			crate.loc = src.loc
+
+
+
+
+/obj/effect/landmark/step_trap
+	name = "step trap spawner"
+	delete_me = TRUE
+
+/obj/effect/landmark/step_trap/Initialize(mapload)
+	..()
+	return INITIALIZE_HINT_LATELOAD
+
+/obj/effect/landmark/step_trap/LateInitialize()
+	if(prob(40))
+		return
+
+	// On friendship mode, traps reduced
+	#ifdef OUTPOST_FRIENDSHIP_MODE
+	if(prob(30))
+		return
+	#endif
+
+	var/turf/T = get_turf(src)
+	if(!T)
+		return
+
+	var/obj/machinery/door/airlock/A = locate() in T
+	if(A && prob(20))
+		A.wires.cut(WIRE_ELECTRIFY)
+		A.electrify()
+		return
+
+	if(A && prob(4))
+		var/nade_path = pick(list(/obj/item/grenade/anti_photon, /obj/item/grenade/confetti, /obj/item/grenade/flashbang, /obj/item/grenade/smokebomb, /obj/item/grenade/concussion, /obj/item/grenade/empgrenade))
+		var/obj/item/grenade/G = new nade_path(A)
+		A.AddComponent(/datum/component/grenadetrap,G)
+		return
+
+	if(A && prob(4))
+		var/obj/item/reagent_containers/glass/bucket/prankster_mix/B = new(A)
+		AddComponent(/datum/component/waterbuckettrap,B)
+		return
+
+	var/obj/structure/cable/C = locate() in T
+	if(C && prob(20) && T.is_plating())
+		C.fray()
+		return
+
+	// creates stuff like ruptured gas tanks, and landmines
+	switch(rand(1,4))
+		if(1)
+			var/newpath = pick(
+				/obj/effect/mine/emp,
+				/obj/effect/mine/stun,
+				/obj/effect/mine/training,
+				/obj/effect/mine/lasertag/red,
+				/obj/effect/mine/lasertag/blue,
+				/obj/effect/mine/lasertag/omni,
+				/obj/effect/mine/lasertag/all,
+				/obj/effect/mine/spiders,
+				/obj/effect/mine/portal,
+				/obj/effect/mine/glue,
+				/obj/effect/mine/confetti,
+				/obj/effect/mine/lube,
+				/obj/effect/mine/dnascramble)
+			var/obj/effect/mine/M = new newpath(T)
+			if(prob(20))
+				M.camo_net = TRUE
+				M.alpha = 50 // Wish this was part of a proc instead of magic num
+
+		if(2)
+			var/turf/srcturf = get_turf(src)
+			if(srcturf.outdoors == OUTDOORS_NO)
+				if(prob(20))
+					// rare spawn!
+					new /obj/item/lego(T)
+				else
+					new /obj/item/assembly/mousetrap/armed(T);
+
+		if(3)
+			var/obj/item/beartrap/M = new /obj/item/beartrap(T);
+			M.deployed = TRUE
+			M.update_icon()
+
+		if(4)
+			new /obj/item/material/barbedwire/glass/start_active(T)
+
+
+
+/obj/effect/landmark/electrify_door
+	name = "electrify door 0%"
+	var/chance = 0
+	delete_me = TRUE
+
+/obj/effect/landmark/electrify_door/five
+	name = "electrify door 5%"
+	chance = 5
+
+/obj/effect/landmark/electrify_door/ten
+	name = "electrify door 10%"
+	chance = 10
+
+/obj/effect/landmark/electrify_door/twentyfive
+	name = "electrify door 25%"
+	chance = 25
+
+/obj/effect/landmark/electrify_door/fifty
+	name = "electrify door 50%"
+	chance = 50
+
+/obj/effect/landmark/electrify_door/seventyfive
+	name = "electrify door 75%"
+	chance = 75
+
+/obj/effect/landmark/electrify_door/always_electrified
+	name = "electrify door 100%"
+	chance = 100
+
+/obj/effect/landmark/electrify_door/Initialize(mapload)
+	..()
+	return INITIALIZE_HINT_LATELOAD
+
+/obj/effect/landmark/electrify_door/LateInitialize()
+	if(!prob(chance))
+		return
+	// On friendship mode, traps reduced
+	#ifdef OUTPOST_FRIENDSHIP_MODE
+	if(prob(20))
+		return
+	#endif
+	var/obj/machinery/door/airlock/A = locate() in get_turf(src)
+	if(A)
+		A.wires.cut(WIRE_ELECTRIFY)
+		A.electrify()
+
+
+
+
+/obj/effect/landmark/bolt_door
+	name = "bolt door 0%"
+	var/chance = 0
+	delete_me = TRUE
+
+/obj/effect/landmark/bolt_door/five
+	name = "bolt door 5%"
+	chance = 5
+
+/obj/effect/landmark/bolt_door/ten
+	name = "bolt door 10%"
+	chance = 10
+
+/obj/effect/landmark/bolt_door/twentyfive
+	name = "bolt door 25%"
+	chance = 25
+
+/obj/effect/landmark/bolt_door/fifty
+	name = "bolt door 50%"
+	chance = 50
+
+/obj/effect/landmark/bolt_door/seventyfive
+	name = "bolt door 75%"
+	chance = 75
+
+/obj/effect/landmark/bolt_door/always_bolted
+	name = "bolt door 100%"
+	chance = 100
+
+/obj/effect/landmark/bolt_door/Initialize(mapload)
+	..()
+	return INITIALIZE_HINT_LATELOAD
+
+/obj/effect/landmark/bolt_door/LateInitialize()
+	if(!prob(chance))
+		return
+	var/obj/machinery/door/airlock/A = locate() in get_turf(src)
+	if(A) // We don't want to call signals, just treat the door as if it was already locked. So skip calling lock()
+		A.locked = TRUE
+		A.update_icon()
+
+
+
+
+// Soak floor with no end timer
+/obj/effect/landmark/wet_floor
+	name = "wet floor 0%"
+	var/chance = 0
+	delete_me = TRUE
+
+/obj/effect/landmark/wet_floor/Initialize(mapload)
+	..()
+	return INITIALIZE_HINT_LATELOAD
+
+/obj/effect/landmark/wet_floor/twentyfive
+	name = "wet floor 25%"
+	chance = 25
+
+/obj/effect/landmark/wet_floor/fifty
+	name = "wet floor 50%"
+	chance = 50
+
+/obj/effect/landmark/wet_floor/always_wet
+	name = "wet floor 100%"
+	chance = 100
+
+/obj/effect/landmark/wet_floor/LateInitialize()
+	if(!prob(chance))
+		return
+	var/turf/simulated/floor/T = get_turf(src)
+	T.wet = TURFSLIP_WET
+	if(T.wet_overlay)
+		return
+	T.wet_overlay = image('icons/effects/water.dmi', icon_state = "wet_floor")
+	T.add_overlay(T.wet_overlay)
+
+
+// lube floor with no end timer
+/obj/effect/landmark/lube_floor
+	name = "lube floor 0%"
+	var/chance = 0
+	delete_me = TRUE
+
+/obj/effect/landmark/lube_floor/Initialize(mapload)
+	..()
+	return INITIALIZE_HINT_LATELOAD
+
+/obj/effect/landmark/lube_floor/twentyfive
+	name = "lube floor 25%"
+	chance = 25
+
+/obj/effect/landmark/lube_floor/fifty
+	name = "lube floor 50%"
+	chance = 50
+
+/obj/effect/landmark/lube_floor/always_lubed
+	name = "lube floor 100%"
+	chance = 100
+
+/obj/effect/landmark/lube_floor/LateInitialize()
+	if(!prob(chance))
+		return
+	var/turf/simulated/floor/T = get_turf(src)
+	T.wet = TURFSLIP_LUBE
+	if(T.wet_overlay)
+		return
+	T.wet_overlay = image('icons/effects/water.dmi', icon_state = "wet_floor")
+	T.add_overlay(T.wet_overlay)

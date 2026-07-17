@@ -11,7 +11,7 @@
 	slipping_dir = owner.dir
 	RegisterSignal(owner, COMSIG_MOVABLE_MOVED, PROC_REF(move_react))
 
-/datum/component/turfslip/proc/start_slip(var/turf/simulated/start, var/is_dirt)
+/datum/component/turfslip/proc/start_slip(turf/simulated/start, is_dirt)
 	var/slip_stun = 6
 	var/floor_type = "wet"
 	var/already_slipping = (slip_dist > 1)
@@ -77,7 +77,7 @@
 			return
 		// reduce absurd slip distances to something reasonable if we are no longer standing on lube
 		if(slip_dist > 4)
-			slip_dist = 4
+			slip_dist = rand(2,4) // Outpost 21 edit - We like our randomized slip dist for lube
 
 	else if(ground.wet >= TURFSLIP_LUBE) // Lube and above slips forever
 		// Lube slips forever, if we re-enter the lube then restore our slip

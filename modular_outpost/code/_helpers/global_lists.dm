@@ -1,0 +1,4 @@
+GLOBAL_LIST_EMPTY(interior_vehicle_list)
+GLOBAL_LIST_EMPTY(nukeitems)
+
+GLOBAL_LIST_EMPTY(vats_to_rain_into)

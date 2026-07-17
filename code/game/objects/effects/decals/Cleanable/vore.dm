@@ -11,12 +11,12 @@
 	var/custombasedesc = null
 	var/custombasecolor = null
 
-/obj/effect/decal/cleanable/blood/reagent/Initialize(mapload, var/spill_name, var/spill_color, var/spill_reagentid, var/new_amount, var/ckey_user, var/ckey_spawn)
+/obj/effect/decal/cleanable/blood/reagent/Initialize(mapload, spill_name, spill_color, spill_reagentid, new_amount, ckey_user, ckey_spawn)
 	. = ..()
 	switch(spill_reagentid)	//To ensure that if people spill some liquids, it wont cause issues with spawning, like spilling blood. Also allow for spilling of certain things to
-		if("blood")
+		if(REAGENT_ID_BLOOD)
 			return
-		if("water")		//Dont recall if we have a water puddle system, but keeping this blacklisted, would be silly with dried water puddles.
+		if(REAGENT_ID_WATER)		//Dont recall if we have a water puddle system, but keeping this blacklisted, would be silly with dried water puddles.
 			return
 
 	ckey_source = ckey_spawn
@@ -42,6 +42,9 @@
 	color = custombasecolor
 	name = custombasename
 	desc = custombasedesc
+
+	cut_overlays()
+	add_janitor_hud_overlay()
 
 /obj/effect/decal/cleanable/blood/reagent/Crossed(mob/living/carbon/human/perp)
 	//Nothing, we dont wanna spread our mess all over, at least not until people want that

@@ -2,7 +2,7 @@
 #define HUMAN_EATING_NO_MOUTH		1
 #define HUMAN_EATING_BLOCKED_MOUTH	2
 
-/mob/living/carbon/human/can_eat(var/food, var/feedback = 1)
+/mob/living/carbon/human/can_eat(food, feedback = 1)
 	var/list/status = can_eat_status()
 	if(status[1] == HUMAN_EATING_NO_ISSUE)
 		return 1
@@ -13,7 +13,7 @@
 			balloon_alert(src, "\the [status[2]] is in the way!")
 	return 0
 
-/mob/living/carbon/human/can_force_feed(var/feeder, var/food, var/feedback = 1)
+/mob/living/carbon/human/can_force_feed(feeder, food, feedback = 1)
 	var/list/status = can_eat_status()
 	if(status[1] == HUMAN_EATING_NO_ISSUE)
 		return 1
@@ -193,17 +193,21 @@
 				var/obj/item/clothing/glasses/V = rig.visor.vision.glasses
 				compiled_vis |= V.enables_planes
 
+	/* Outpost 21 edit - Nif removal
 	if(nif)
 		compiled_vis |= nif.planes_visible()
 	//event hud
+	*/
 	if(vantag_hud)
 		compiled_vis |= VIS_CH_VANTAG
 
 	if(client?.prefs?.read_preference(/datum/preference/toggle/tummy_sprites))
 		compiled_vis += VIS_CH_STOMACH
 
+	/* Outpost 21 edit - Disable soulgems
 	if(soulgem?.flag_check(SOULGEM_SEE_SR_SOULS))
 		compiled_vis += VIS_SOULCATCHER
+	*/
 
 	if(!compiled_vis.len && !vis_enabled.len)
 		return //Nothin' doin'.

@@ -1,7 +1,7 @@
 GLOBAL_VAR_INIT(client_record_update_lock, FALSE)
 
 // Manually updating records from medical console to a player's save.
-/proc/get_current_mob_from_record(var/datum/data/record/active)
+/proc/get_current_mob_from_record(datum/data/record/active)
 	var/datum/transcore_db/db = SStranscore.db_by_mind_name(active.fields["name"])
 	if(db)
 		var/datum/transhuman/mind_record/record = db.backed_up[active.fields["name"]]
@@ -15,7 +15,7 @@ GLOBAL_VAR_INIT(client_record_update_lock, FALSE)
 	return null
 
 
-/proc/client_update_record(var/obj/machinery/computer/COM, var/user)
+/proc/client_update_record(obj/machinery/computer/COM, user)
 	if(!COM || QDELETED(COM))
 		return "Invalid console"
 
@@ -94,7 +94,7 @@ GLOBAL_VAR_INIT(client_record_update_lock, FALSE)
 
 	var/new_data = strip_html_simple(tgui_input_text(M,"Please review [user]'s changes to your [record_string] record before confirming. Confirming will SAVE your CURRENT character slot! If your new [record_string] record major errors, it is recomended to have it corrected IC instead of editing it yourself.","Character Preference", html_decode(active.fields["notes"]), MAX_RECORD_LENGTH, TRUE, prevent_enter = TRUE), MAX_RECORD_LENGTH)
 	if(!new_data)
-		message_admins("[active.fields["name"]] refused [record_string] record update from [user] with review.")
+		message_admins("[active.fields["name"]] refused [record_string] record update from [user] with review.") // Outpost 21 edit - Client to Player for clarity
 		if(COM && !QDELETED(COM))
 			COM.visible_message(span_notice("\The [COM] buzzes!"))
 			playsound(COM, 'sound/machines/deniedbeep.ogg', 50, 0)
@@ -109,15 +109,15 @@ GLOBAL_VAR_INIT(client_record_update_lock, FALSE)
 	// Update records in the consoles, remember this can happen a while after a record is closed on the console... Use cached data.
 	switch(console_path)
 		if(/obj/machinery/computer/med_data)
-			P.med_record = new_data
+			P.write_preference_by_type(/datum/preference/text/human/med_record, new_data)
 			if(active)
 				active.fields["notes"] = new_data
 		if(/obj/machinery/computer/skills)
-			P.gen_record = new_data
+			P.write_preference_by_type(/datum/preference/text/human/gen_record, new_data)
 			if(active)
 				active.fields["notes"] = new_data
 		if(/obj/machinery/computer/secure_data)
-			P.sec_record = new_data
+			P.write_preference_by_type(/datum/preference/text/human/sec_record, new_data)
 			if(active)
 				active.fields["notes"] = new_data
 

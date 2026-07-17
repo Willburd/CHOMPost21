@@ -10,7 +10,7 @@
 	. = ..(user)
 	if(.)
 		return TRUE
-	if(user.incapacitated(INCAPACITATION_KNOCKDOWN|INCAPACITATION_DISABLED)) // EDIT: We can use the device only if we are not in certain types of incapacitation. We don't want chairs stopping us from texting!!
+	if(user.incapacitated(INCAPACITATION_DISABLED)) // EDIT: We can use the device only if we are not in certain types of incapacitation. We don't want chairs stopping us from texting!!
 		to_chat(user, "You cannot activate the device in your state.")
 		return
 
@@ -27,7 +27,11 @@
 		named = 1
 		*/
 
+	user.client?.start_thinking()
+	user.client?.start_typing()
 	var/message = tgui_input_text(user,"Choose a message to relay to those around you.", "", "", MAX_MESSAGE_LEN)
+	user.client?.stop_thinking()
+
 	if(message)
 		audible_message("[icon2html(src, user.client)] \The [src.name] states, \"[message]\"", runemessage = "synthesized speech")
 		if(ismob(loc))

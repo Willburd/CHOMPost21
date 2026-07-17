@@ -7,11 +7,13 @@
 			weight -= species.metabolism*(0.01*weight_loss) // starvation weight loss
 
 //Our call for the NIF to do whatever
+/* Outpost 21 edit - Nif removal
 /mob/living/carbon/human/proc/handle_nif()
 	if(!nif) return
 
 	//Process regular life stuff
 	nif.life()
+*/
 
 //Overriding carbon move proc that forces default hunger factor
 /mob/living/carbon/Moved(atom/old_loc, direction, forced = FALSE)
@@ -23,10 +25,18 @@
 		if(m_intent == I_RUN)
 			adjust_nutrition(hunger_rate/-10)
 
-	// Moving around increases germ_level faster
-	if(germ_level < GERM_LEVEL_MOVE_CAP && prob(8))
-		germ_level++
+	// Outpost 21 edit begin - Dirty floors affect germ growth
+	var/dirt_multiplier = 0
+	var/turf/simulated/floor/T = get_turf(src)
+	if(istype(T))
+		dirt_multiplier = T.dirt / 80
+	if(dirt_multiplier < 0.2)
+		return
+	// Outpost 21 edit end
 
+	// Moving around increases germ_level faster
+	if(germ_level < GERM_LEVEL_MOVE_CAP && prob(8 * dirt_multiplier)) // Outpost 21 edit - Dirty floors affect germ growth
+		germ_level++
 
 /mob/living/carbon
 	var/synth_cosmetic_pain = FALSE

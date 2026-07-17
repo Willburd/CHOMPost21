@@ -139,7 +139,7 @@
 
 		did_entry = TRUE
 
-/area/shuttle/excursion/away_alienship/proc/abduct(var/mob/living/mob)
+/area/shuttle/excursion/away_alienship/proc/abduct(mob/living/mob)
 	if(isliving(mob))
 		var/mob/living/L = mob
 
@@ -159,7 +159,7 @@
 		L.forceMove(pick(get_area_turfs(dump_area)))
 		if(!issilicon(L)) //Don't drop borg modules...
 			for(var/obj/item/I in L)
-				if(istype(I,/obj/item/implant) || istype(I,/obj/item/nif))
+				if(istype(I,/obj/item/implant)) // Outpost 21 edit - Nif removal: || istype(I,/obj/item/nif))
 					continue
 				if(istype(I,/obj/item/holder))
 					var/obj/item/holder/H = I

@@ -44,5 +44,6 @@
 	T.real_name = chosen_dna.dna.real_name
 	T.UpdateAppearance()
 	domutcheck(T, null)
+	T.check_mutation_cascade_gib() // Outpost 21 edit - mutation cascade trait
 	feedback_add_details("changeling_powers","TS")
 	return TRUE

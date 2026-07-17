@@ -9,8 +9,16 @@
 		new/datum/data/pda/app/main_menu,
 		new/datum/data/pda/app/notekeeper,
 		new/datum/data/pda/app/news,
+		// outpost 21 edit begin - New apps
+		new/datum/data/pda/app/weather,
+		new/datum/data/pda/app/sop,
+		new/datum/data/pda/app/prisoner_manager,
+		new/datum/data/pda/app/crew_records/security,
+		new/datum/data/pda/app/crew_records/medical,
+		// outpost 21 edit end
 		new/datum/data/pda/app/messenger,
-		new/datum/data/pda/app/game_launcher)
+		new/datum/data/pda/app/game_launcher,
+		new/datum/data/pda/app/goals)
 	special_handling = TRUE
 
 /obj/item/pda/ai/proc/set_name_and_job(newname as text, newjob as text, newrank as null|text)

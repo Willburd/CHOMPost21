@@ -4,11 +4,13 @@
 #define LOC_CHAPEL 2
 #define LOC_LIBRARY 3
 #define LOC_HYDRO 4
-#define LOC_TECH 5
-#define LOC_HANGAR1 6
-#define LOC_HANGAR2 7
-#define LOC_HANGAR3 8
-#define LOC_VAULT 9
+// #define LOC_TECH 5
+// #define LOC_HANGAR1 6
+// #define LOC_HANGAR2 7
+// #define LOC_HANGAR3 8
+// #define LOC_VAULT 9
+#define LOC_MEDICAL 5
+#define LOC_VAULT 6
 
 
 #define VERM_MICE 0
@@ -25,8 +27,8 @@
 	var/vermstring
 
 /datum/event/infestation/start()
-//CHOMPEdit changed for Southern Cross areas
-	location = rand(0,9)
+//CHOMP Edit changed for Southern Cross areas
+	location = rand(0,6) // Outpost 21 edit - Use our areas
 	var/list/turf/simulated/floor/turfs = list()
 	var/spawn_area_type = get_spawn_area()
 	for(var/areapath in typesof(spawn_area_type))
@@ -108,11 +110,15 @@
 		if(LOC_HYDRO)
 			spawn_area_type = /area/hydroponics
 			locstring = "hydroponics"
+		if(LOC_MEDICAL)
+			spawn_area_type = /area/medical
+			locstring = "medical"
+		/* Outpost 21 edit - Use ours
 		if(LOC_TECH)
 			spawn_area_type = /area/storage/tech
 			locstring = "technical storage"
 		if(LOC_HANGAR1)
-			spawn_area_type = /area/hangar/two //hangar one is no longer in use on the sc
+			spawn_area_type = /area/hangar/one
 			locstring = "the hangar deck"
 		if(LOC_HANGAR2)
 			spawn_area_type = /area/hangar/two
@@ -120,9 +126,11 @@
 		if(LOC_HANGAR3)
 			spawn_area_type = /area/hangar/three
 			locstring = "the hangar deck"
+		*/
 		if(LOC_VAULT)
 			spawn_area_type = /area/security/nuke_storage
 			locstring = "the vault"
+
 	return spawn_area_type
 		// ChompEDIT End
 /* CHOMPedit - Upstream Code, not implmeneted here
@@ -132,7 +140,7 @@
 	if(count_spawned_vermin() < vermin_cap)
 		spawn_vermin(rand(4,10), prep_size_min, prep_size_max)
 
-/datum/event/infestation/proc/spawn_vermin(var/num_groups, var/group_size_min, var/group_size_max)
+/datum/event/infestation/proc/spawn_vermin(num_groups, group_size_min, group_size_max)
 	if(spawn_locations.len) // Okay we've got landmarks, lets use those!
 		shuffle_inplace(spawn_locations)
 		num_groups = min(num_groups, spawn_locations.len)
@@ -143,7 +151,7 @@
 		return
 
 // Spawn a single vermin at given location.
-/datum/event/infestation/proc/spawn_one_vermin(var/loc)
+/datum/event/infestation/proc/spawn_one_vermin(loc)
 	var/mob/living/simple_mob/animal/M = new spawn_types(loc)
 	RegisterSignal(M, COMSIG_OBSERVER_DESTROYED, PROC_REF(on_vermin_destruction))
 	spawned_vermin.Add(M)
@@ -157,7 +165,7 @@
 			. += 1
 
 // If vermin is kill, remove it from the list.
-/datum/event/infestation/proc/on_vermin_destruction(var/mob/M)
+/datum/event/infestation/proc/on_vermin_destruction(mob/M)
 	SIGNAL_HANDLER
 	spawned_vermin -= M
 	UnregisterSignal(M, COMSIG_OBSERVER_DESTROYED)
@@ -165,19 +173,19 @@
 
 
 /datum/event/infestation/announce()
-	GLOB.command_announcement.Announce("Bioscans indicate that [vermstring] have been breeding in [locstring]. Clear them out, before this starts to affect productivity.", "Vermin infestation")
+	GLOB.command_announcement.Announce("Bioscans indicate that [vermstring] have been breeding in [locstring]. Clear them out, before this starts to affect productivity.", "Vermin infestation", ANNOUNCER_MSG_VERMIN_INFESTATION)
 
 #undef LOC_KITCHEN
 #undef LOC_ATMOS
 #undef LOC_CHAPEL
 #undef LOC_LIBRARY
 #undef LOC_HYDRO
-#undef LOC_TECH
-#undef LOC_HANGAR1
-#undef LOC_HANGAR2
-#undef LOC_HANGAR3
+// #undef LOC_TECH
+// #undef LOC_HANGAR1
+// #undef LOC_HANGAR2
+// #undef LOC_HANGAR3
+#undef LOC_MEDICAL
 #undef LOC_VAULT
-
 #undef VERM_MICE
 #undef VERM_LIZARDS
 #undef VERM_SPIDERS // Chomp EDIT

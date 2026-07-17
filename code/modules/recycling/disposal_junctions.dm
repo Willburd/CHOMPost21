@@ -56,7 +56,6 @@
 	var/last_sort = FALSE
 	var/sort_scan = TRUE
 	var/panel_open = FALSE
-	var/datum/wires/wires = null // ...Why isnt this defined on /atom...
 
 /obj/structure/disposalpipe/sortjunction/proc/updatedesc()
 	desc = initial(desc)
@@ -71,7 +70,7 @@
 
 /obj/structure/disposalpipe/sortjunction/Destroy()
 	QDEL_NULL(wires)
-	if(sortType)
+	if(sortType && !istype(get_area(src), /area/vr)) // Outpost 21 edit - Ignore VR tags
 		LAZYREMOVE(GLOB.tagger_locations["[sortType]"], get_z(src))
 	. = ..()
 
@@ -87,10 +86,10 @@
 
 /obj/structure/disposalpipe/sortjunction/Initialize(mapload)
 	. = ..()
-	if(sortType)
-		LAZYADD(GLOB.tagger_locations["[sortType]"], get_z(src))
+	if(sortType && !istype(get_area(src), /area/vr))
+		LAZYADD(GLOB.tagger_locations["[sortType]"], get_z(src)) // Outpost 21 edit - Ignore VR tags
 
-	wires = new /datum/wires/disposals(src)
+	set_wires(new /datum/wires/disposals(src))
 
 	updatedir()
 	updatename()
@@ -115,7 +114,7 @@
 	if(istype(I, /obj/item/destTagger))
 		var/obj/item/destTagger/O = I
 
-		if(O.currTag)// Tag set
+		if(O.currTag && !istype(get_area(src), /area/vr))// Tag set // Outpost 21 edit - Ignore VR tags
 			var/current_z = get_z(src)
 			if(sortType)
 				LAZYREMOVE(GLOB.tagger_locations["[sortType]"], current_z)
@@ -217,13 +216,13 @@
 		H.destinationTag = check_for_corpse_or_id(H)
 	. = ..()
 
-/obj/structure/disposalpipe/sortjunction/bodies/divert_check(var/checkTag)
+/obj/structure/disposalpipe/sortjunction/bodies/divert_check(checkTag)
 	return checkTag == CORPSE_SORT_TAG
 
 /obj/structure/disposalpipe/sortjunction/bodies/flipped
 	icon_state = "pipe-j2s"
 
-/obj/structure/disposalpipe/sortjunction/bodies/proc/check_for_corpse_or_id(var/obj/structure/disposalholder/H)
+/obj/structure/disposalpipe/sortjunction/bodies/proc/check_for_corpse_or_id(obj/structure/disposalholder/H)
 	for(var/mob/living/L in H)
 		if(iscarbon(L)) // only living carbons count not silicons, drones can control their own mailing destination...
 			return CORPSE_SORT_TAG

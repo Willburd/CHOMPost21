@@ -15,7 +15,7 @@
 	for(var/i = 1 to container_limit)
 		containers += new /obj/item/reagent_containers/glass/bottle/biomass(src)
 
-/obj/machinery/clonepod/transhuman/growclone(var/datum/transhuman/body_record/current_project)
+/obj/machinery/clonepod/transhuman/growclone(datum/transhuman/body_record/current_project)
 	//Manage machine-specific stuff.
 	if(mess || attempting)
 		return 0
@@ -132,7 +132,7 @@
 	density = TRUE
 	anchored = TRUE
 
-	var/list/stored_material =  list(MAT_STEEL = 30000, MAT_GLASS = 30000)
+	var/list/stored_material =  list(MAT_STEEL = MATERIAL_COST(15), MAT_GLASS = MATERIAL_COST(15))
 	var/connected      //What console it's done up with
 	var/busy = 0       //Busy cloning
 	var/body_cost = 15000  //Cost of a cloned body (metal and glass ea.)
@@ -153,6 +153,10 @@
 	component_parts += new /obj/item/stack/cable_coil(src, 2)
 	RefreshParts()
 	update_icon()
+
+/obj/machinery/transhuman/synthprinter/Destroy()
+	current_br = null
+	. = ..()
 
 /obj/machinery/transhuman/synthprinter/RefreshParts()
 
@@ -190,7 +194,7 @@
 
 	return
 
-/obj/machinery/transhuman/synthprinter/proc/print(var/datum/weakref/BR)
+/obj/machinery/transhuman/synthprinter/proc/print(datum/weakref/BR)
 	if(!BR?.resolve() || busy)
 		return 0
 
@@ -315,7 +319,11 @@
 	RefreshParts()
 	update_icon()
 
-/obj/machinery/transhuman/resleever/proc/set_occupant(var/mob/living/carbon/human/H)
+/obj/machinery/transhuman/resleever/Destroy()
+	. = ..()
+
+
+/obj/machinery/transhuman/resleever/proc/set_occupant(mob/living/carbon/human/H)
 	SHOULD_NOT_OVERRIDE(TRUE)
 	if(!H)
 		weakref_occupant = null
@@ -420,7 +428,7 @@
 
 	add_fingerprint(user)
 
-/obj/machinery/transhuman/resleever/proc/putmind(var/datum/transhuman/mind_record/MR, mode = 1, var/mob/living/carbon/human/override = null, var/db_key)
+/obj/machinery/transhuman/resleever/proc/putmind(datum/transhuman/mind_record/MR, mode = 1, mob/living/carbon/human/override = null, db_key)
 	var/mob/living/carbon/human/occupant = get_occupant()
 	if((!occupant || !istype(occupant) || occupant.stat >= DEAD) && mode == 1)
 		return 0
@@ -462,6 +470,7 @@
 		to_chat(occupant, span_danger("Your mind backup was a 'one-time' backup. \
 		You will not be able to remember anything since the backup, [how_long] minutes ago."))
 
+	/* Outpost 21 edit - Nif removal
 	//Re-supply a NIF if one was backed up with them.
 	if(MR.nif_path)
 		var/obj/item/nif/nif = new MR.nif_path(occupant,null,MR.nif_savedata)
@@ -469,6 +478,7 @@
 			for(var/path in MR.nif_software)
 				new path(nif)
 		nif.durability = MR.nif_durability //Restore backed up durability after restoring the softs.
+	*/
 
 	// If it was a custom sleeve (not owned by anyone), update namification sequences
 	if(!occupant.original_player)
@@ -476,18 +486,22 @@
 		occupant.name = occupant.real_name
 		occupant.dna.real_name = occupant.real_name
 
+	/* Outpost 21 edit begin - We don't use backup implants
 	//Give them a backup implant
 	var/obj/item/implant/backup/new_imp = new()
 	if(new_imp.handle_implant(occupant, BP_HEAD))
 		new_imp.post_implant(occupant)
+	*/
 
 	SEND_GLOBAL_SIGNAL(COMSIG_GLOB_RESLEEVED_MIND, occupant, MR.mind_ref)
 
+	// Outpost 21 edit begin - Small edits to the flavor text. - Ignus
 	//Inform them and make them a little dizzy.
 	if(confuse_amount + blur_amount <= 16)
-		to_chat(occupant, span_notice("You feel a small pain in your head as you're given a new backup implant. Your new body feels comfortable already, however."))
+		to_chat(occupant, span_notice("Your eyes open as you wake up in the tube, remembering only your last scan. Your new body feels comfortable, however."))
 	else
-		to_chat(occupant, span_warning("You feel a small pain in your head as you're given a new backup implant. Oh, and a new body. It's disorienting, to say the least."))
+		to_chat(occupant, span_warning("Your eyes wince at the light as you try to remember what happened, weren't you just in the lobby? It's disorienting."))
+	// Outpost 21 edit end
 
 	occupant.SetConfused(max(occupant.confused, confuse_amount))								// Apply immedeate effects
 	occupant.eye_blurry = max(occupant.eye_blurry, blur_amount)
@@ -506,13 +520,17 @@
 		if(occupant.mind.antag_holder)
 			occupant.mind.antag_holder.apply_antags(occupant)
 
+		if(occupant.changeling_locked || occupant.mind.antag_holder.changeling)
+			occupant.make_changeling()
+
 	if(original_occupant)
 		occupant = original_occupant
 
+	SShaunting.influence(HAUNTING_RESLEEVE) // Outpost 21 edit - IT DA SPOOKY STATION!
 	playsound(src, 'sound/machines/medbayscanner1.ogg', 100, 1) // Play our sound at the end of the mind injection!
 	return 1
 
-/obj/machinery/transhuman/resleever/proc/go_out(var/mob/M)
+/obj/machinery/transhuman/resleever/proc/go_out()
 	var/mob/living/carbon/human/occupant = get_occupant()
 	if(!occupant)
 		return
@@ -541,7 +559,7 @@
 	set src in oview(1)
 	if(usr.stat != 0)
 		return
-	src.go_out(usr)
+	go_out()
 	add_fingerprint(usr)
 	return
 

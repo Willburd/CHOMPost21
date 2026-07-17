@@ -33,6 +33,7 @@ export const SoulOptions = (props: { taken_over: BooleanLike }) => {
                 Transfer
               </Button>
             </Stack.Item>
+            {/* Outpost 21 edit - Delete souls is is too abusable by antags
             <Stack.Item>
               <Button.Confirm
                 icon="skull"
@@ -45,6 +46,7 @@ export const SoulOptions = (props: { taken_over: BooleanLike }) => {
                 Delete
               </Button.Confirm>
             </Stack.Item>
+            */}
           </>
         )}
         <Stack.Item>

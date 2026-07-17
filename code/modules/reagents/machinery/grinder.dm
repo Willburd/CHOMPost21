@@ -14,11 +14,13 @@
 	var/limit = 10
 	var/list/holdingitems = list()
 
+	/* Outpost 21 edit - disable radial menu
 	var/static/radial_examine = image(icon = 'icons/mob/radial.dmi', icon_state = "radial_examine")
 	var/static/radial_eject = image(icon = 'icons/mob/radial.dmi', icon_state = "radial_eject")
 	var/static/radial_grind = image(icon = 'icons/mob/radial.dmi', icon_state = "radial_grind")
 	// var/static/radial_juice = image(icon = 'icons/mob/radial.dmi', icon_state = "radial_juice")
 	// var/static/radial_mix = image(icon = 'icons/mob/radial.dmi', icon_state = "radial_mix")
+	*/
 
 /obj/machinery/reagentgrinder/Initialize(mapload)
 	. = ..()
@@ -52,7 +54,7 @@
 	icon_state = "juicer"+num2text(!isnull(beaker))
 	return
 
-/obj/machinery/reagentgrinder/attackby(var/obj/item/O, var/mob/user)
+/obj/machinery/reagentgrinder/attackby(obj/item/O, mob/user)
 	if(beaker)
 		if(default_deconstruction_screwdriver(user, O))
 			return
@@ -133,16 +135,72 @@
 	//CHOMPedit end
 	return 0
 
+// outpost 21 (large)edit begin - removing radial menu
 /obj/machinery/reagentgrinder/click_alt(mob/user)
 	. = ..()
-	if(user.incapacitated() || !Adjacent(user))
-		return
-	replace_beaker(user)
+	grind_verb()
 
 /obj/machinery/reagentgrinder/attack_hand(mob/user)
-	interact(user)
+	//interact(user)
+	if(isAI(user))
+		return
+	if(inuse || user.incapacitated() || !Adjacent(user))
+		return
 
-/obj/machinery/reagentgrinder/interact(mob/user) // The microwave Menu //I am reasonably certain that this is not a microwave
+	if(beaker)
+		replace_beaker(user)
+		return
+
+	if(length(holdingitems))
+		eject(user)
+		return
+
+/obj/machinery/reagentgrinder/verb/grind_verb()
+	set name = "Grind"
+	set category = "Object"
+	set src in oview(1)
+
+	if(inuse || usr.incapacitated() || !Adjacent(usr) || stat & NOPOWER)
+		return
+	if(isAI(usr))
+		return
+	if(!beaker)
+		to_chat(usr, "No beaker inserted.")
+	else if(!length(holdingitems))
+		to_chat(usr, "\the [src] is empty.")
+	else
+		grind(usr)
+
+/obj/machinery/reagentgrinder/verb/eject_verb()
+	set name = "Eject Contents"
+	set category = "Object"
+	set src in oview(1)
+
+	if(inuse || usr.incapacitated() || !Adjacent(usr))
+		return
+	if(isAI(usr))
+		return
+	if(!length(holdingitems))
+		to_chat(usr, "\the [src] is already empty.")
+	else
+		eject(usr)
+
+/obj/machinery/reagentgrinder/verb/remove_beaker()
+	set name = "Remove Beaker"
+	set category = "Object"
+	set src in oview(1)
+
+	if(inuse || usr.incapacitated() || !Adjacent(usr))
+		return
+	if(isAI(usr))
+		return
+	if(!beaker)
+		to_chat(usr, "No beaker inserted.")
+	else
+		replace_beaker(usr)
+
+/*
+/obj/machinery/reagentgrinder/interact(mob/user as mob) // The microwave Menu //I am reasonably certain that this is not a microwave
 	if(inuse || user.incapacitated())
 		return
 
@@ -173,6 +231,7 @@
 			grind(user)
 		if("examine")
 			examine(user)
+*/
 
 /obj/machinery/reagentgrinder/proc/eject(mob/user)
 	if(user.incapacitated())
@@ -181,10 +240,10 @@
 		O.loc = src.loc
 		holdingitems -= O
 	holdingitems.Cut()
-	if(beaker)
-		replace_beaker(user)
+	//if(beaker)
+	//	replace_beaker(user)
 
-/obj/machinery/reagentgrinder/proc/grind()
+/obj/machinery/reagentgrinder/proc/grind(mob/user)
 
 	power_change()
 	if(stat & (NOPOWER|BROKEN))
@@ -201,7 +260,6 @@
 	spawn(60)
 		inuse = 0
 
-	// Process.
 	grind_items_to_reagents(holdingitems,beaker.reagents)
 
 /obj/machinery/reagentgrinder/proc/replace_beaker(mob/living/user, obj/item/reagent_containers/new_beaker)

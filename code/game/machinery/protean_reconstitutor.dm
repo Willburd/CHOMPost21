@@ -254,7 +254,7 @@
 						antag_data.add_antagonist(P.mind)
 						antag_data.place_mob(P)
 					P.mind.assigned_role = charjob
-					P.mind.role_alt_title = GLOB.job_master.GetPlayerAltTitle(P, charjob)
+					P.mind.role_alt_title = SSjob.get_player_alt_title(P, charjob)
 
 				//no need to be particularly thorough about language handover, we can safely assume that they were allowed to have it if they had it to begin with
 				P.languages.Cut()
@@ -283,8 +283,10 @@
 		P.apply_vore_prefs()
 		//run a little revive, load their prefs, and boot a new NIF on them for the finishing touches and cleanup... (yes, we need to initialize a new NIF, they don't get one from the revive process)
 		//using revive is honestly a bit overkill since it kinda deletes-and-replaces most of the guts anyway (hence the cache and restore of refactory contents; otherwise they get wiped!), but it also ensures the new protean comes out in their "base form" as well as hopefully cleaning up any loose ends in the resurrection process
+		/*  Outpost 21 edit - Nif removal
 		var/obj/item/nif/protean/new_nif = new()
 		new_nif.quick_implant(P)
+		*/
 		//revive complete, now restore the cached mats (if we had any)
 		if(mats_cached == TRUE)
 			src.visible_message(span_notice("\The [src] chirps, \"Reindexing archived refactory materials storage.\""))

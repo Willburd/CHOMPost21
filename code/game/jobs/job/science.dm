@@ -88,7 +88,8 @@
 						they find an appropriate topic."
 	alt_titles = list(JOB_ALT_RESEARCHER = /datum/alt_title/researcher, JOB_ALT_LAB_ASSISTANT = /datum/alt_title/lab_assistant, JOB_ALT_XENOARCHAEOLOGIST = /datum/alt_title/xenoarch,
 							JOB_ALT_XENOPALEONTOLOGIST = /datum/alt_title/xenopaleontologist, JOB_ALT_ANOMALIST = /datum/alt_title/anomalist, JOB_ALT_PHORON_RESEARCHER = /datum/alt_title/phoron_research,
-						JOB_ALT_GAS_PHYSICIST = /datum/alt_title/gas_physicist, JOB_ALT_CIRCUIT_DESIGNER = /datum/alt_title/circuit_designer, JOB_ALT_CIRCUIT_PROGRAMMER = /datum/alt_title/circuit_programmer)
+						JOB_ALT_GAS_PHYSICIST = /datum/alt_title/gas_physicist, JOB_ALT_CIRCUIT_DESIGNER = /datum/alt_title/circuit_designer, JOB_ALT_CIRCUIT_PROGRAMMER = /datum/alt_title/circuit_programmer,
+						JOB_ALT_RESEARCH_CONTRACTOR = /datum/alt_title/research_contractor)
 
 /datum/job/scientist/get_request_reasons()
 	return list("Assembling expedition team")
@@ -139,6 +140,10 @@
 	title = JOB_ALT_CIRCUIT_PROGRAMMER
 	title_blurb = "A " + JOB_ALT_CIRCUIT_PROGRAMMER + " is a " + JOB_SCIENTIST + " whose expertise is working with integrated circuits. They are familar with the workings and programming of those devices. \
 				   They work to create various useful devices using the capabilities of integrated circuitry."
+
+/datum/alt_title/research_contractor
+	title = JOB_ALT_RESEARCH_CONTRACTOR
+	title_blurb = "A " + JOB_ALT_RESEARCH_CONTRACTOR + " is a specialist hired to conduct various or specific research projects and operations, but isn't directly employed by NT proper."
 
 //////////////////////////////////
 //			Xenobiologist
@@ -232,6 +237,7 @@
 /datum/alt_title/assembly_tech
 	title = JOB_ALT_ASSEMBLY_TECHNICIAN
 
+/* Outpost 21 edit - Xenobotanist rolled into botanist
 //////////////////////////////////
 //			Xenobotanist
 //////////////////////////////////
@@ -256,6 +262,7 @@
 	job_description = "A " + JOB_XENOBOTANIST + " grows and cares for a variety of abnormal, custom made, and frequently dangerous plant life. When the products of these plants \
 					are both safe and beneficial to the station, they may choose to introduce it to the rest of the crew."
 	alt_titles = list(JOB_ALT_XENOHYDROPONICIST = /datum/alt_title/xenohydroponicist, JOB_ALT_XENOFLORIST = /datum/alt_title/xenoflorist)
+*/
 
 /datum/alt_title/xenoflorist
 	title = JOB_ALT_XENOFLORIST

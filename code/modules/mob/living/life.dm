@@ -28,6 +28,7 @@
 		handle_mutations()
 		handle_radiation()
 
+		handle_outpost_hygene() // Outpost 21 edit - Germ interactions
 
 
 		//Blood
@@ -48,6 +49,17 @@
 				remove_status_indicator("afk")
 				to_chat(src, span_notice("You have been automatically un-marked as AFK."))
 				away_from_keyboard = FALSE
+
+			// Outpost 21 edit begin - IT DA SPOOKY STATION!
+			if(prob(2) && !away_from_keyboard)
+				var/area/A = get_area(src)
+				if(A.haunted)
+					SShaunting.influence(HAUNTING_GHOSTS)
+					SShaunting.get_world_haunt_attention(src,20)
+				var/turf/T = get_turf(src)
+				if(T && T.get_lumcount() < 0.25) // the dark isn't your friend
+					SShaunting.get_world_haunt_attention(src,40)
+			// Outpost 21 edit end
 
 	//Chemicals in the body, this is moved over here so that blood can be added after death
 	handle_chemicals_in_body()
@@ -109,7 +121,7 @@
 /mob/living/proc/handle_random_events()
 	return
 
-/mob/living/proc/handle_environment(var/datum/gas_mixture/environment)
+/mob/living/proc/handle_environment(datum/gas_mixture/environment)
 	return
 
 /mob/living/proc/handle_stomach()
@@ -291,6 +303,10 @@
 	else if(istype(loc,/obj/item/holder)) //Poor carried teshari and whatnot should adjust appropriately
 		var/turf/T = get_turf(src)
 		brightness = T.get_lumcount()
+	// outpost 21 edit begin - lockers are dark and spooky!
+	else if(istype(loc,/obj/structure/closet))
+		brightness = 0 // it's dark in here!
+	// outpost 21 edit end
 
 	var/darkness = 1-brightness					//Silly, I know, but 'alpha' and 'darkness' go the same direction on a number line
 	var/adjust_to = min(darkness,darksightedness)//Capped by how darksighted they are

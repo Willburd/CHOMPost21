@@ -3,7 +3,7 @@
 	name = "shallow water"
 	desc = "A body of water.  It seems shallow enough to walk through, if needed."
 	icon = 'icons/turf/outdoors.dmi'
-	icon_state = "seashallow" // So it shows up in the map editor as water.
+	icon_state = "sand" // So it shows up in the map editor as water. // Outpost 21 edit - CI wants this fixed
 	var/water_icon = 'icons/turf/outdoors.dmi'
 	var/water_state = "water_shallow"
 	var/under_state = "rock"
@@ -64,7 +64,7 @@
 
 	else return ..()
 
-/turf/simulated/floor/water/return_air_for_internal_lifeform(var/mob/living/L)
+/turf/simulated/floor/water/return_air_for_internal_lifeform(mob/living/L)
 	if(L && L.lying)
 		if(L.can_breathe_water()) // For squid.
 			var/datum/gas_mixture/water_breath = new()
@@ -188,8 +188,7 @@
 	return
 
 /mob/living/water_act(amount)
-	// adjust_fire_stacks(-amount * 5)
-	adjust_wet_stacks(amount * 5)
+	adjust_fire_stacks(-amount * 10)
 	for(var/atom/movable/AM in contents)
 		AM.water_act(amount)
 	inflict_water_damage(20 * amount) // Only things vulnerable to water will actually be harmed (slimes/prommies).

@@ -4,7 +4,7 @@
 	icon = 'icons/obj/gun.dmi'
 	icon_state = "p08"
 	spawn_nothing_percentage = 50
-/obj/random/weapon/item_to_spawn()
+/obj/random/item_to_spawn()
 	return pick(prob(11);/obj/random/ammo_all,\
 				prob(11);/obj/item/gun/energy/laser,\
 				prob(11);/obj/item/gun/projectile/pirate,\
@@ -88,7 +88,7 @@
 				prob(1);/obj/item/cane/concealed,\
 				prob(1);/obj/item/material/sword/katana)
 
-/obj/random/weapon/guarenteed
+/obj/random/guarenteed
 	spawn_nothing_percentage = 0
 
 /obj/random/ammo_all
@@ -156,6 +156,7 @@
 				prob(2);/obj/item/material/butterfly/switchblade,
 				prob(2);/obj/item/clothing/accessory/knuckledusters,
 				prob(2);/obj/item/reagent_containers/syringe/drugs,
+				prob(2);/obj/item/reagent_containers/glass/beaker/wheymax, // outpost 21 WHEYMAXING
 				prob(1);/obj/item/material/knife/tacknife,
 				prob(1);/obj/item/clothing/suit/storage/vest/heavy/merc,
 				prob(1);/obj/item/beartrap,

@@ -10,10 +10,15 @@ GLOBAL_LIST_EMPTY(active_autoresleevers)
 	var/equip_body = FALSE				//If true, this will spawn the person with equipment
 	var/default_job = JOB_ALT_VISITOR		//The job that will be assigned if equip_body is true and the ghost doesn't have a job
 	var/ghost_spawns = FALSE			//If true, allows ghosts who haven't been spawned yet to spawn
-	var/vore_respawn = 5 MINUTES		//The time to wait if you died from vore
-	var/respawn = 30 MINUTES			//The time to wait if you didn't die from vore
+	var/vore_respawn = 15 MINUTES		//The time to wait if you died from vore // Outpost 21 edit - 15 mins
+	var/respawn = 15 MINUTES			//The time to wait if you didn't die from vore // Outpost 21 edit - 15 mins
 	var/spawn_slots = -1				//How many people can be spawned from this? If -1 it's unlimited
 	var/spawntype						//The kind of mob that will be spawned, if set.
+	// outpost 21 edit begin - Our resleever works different
+	var/allow_ghosts_to_trigger = TRUE // If true, enables standard behavior
+	var/releaseturf
+	var/throw_dir = WEST
+	// outpost 21 edit end
 
 /obj/machinery/transhuman/autoresleever/Initialize(mapload)
 	. = ..()
@@ -35,11 +40,27 @@ GLOBAL_LIST_EMPTY(active_autoresleevers)
 	update_icon()
 
 /obj/machinery/transhuman/autoresleever/attack_ghost(mob/observer/dead/user as mob)
+	// outpost 21 edit begin - Our resleever works different
+	if(!allow_ghosts_to_trigger)
+		return
+	// outpost 21 edit end
+	// Outpost 21 edit begin - Coredump prevents scans
+	if(SStranscore.default_db?.core_dumped)
+		to_chat(user, span_warning("Resleeving database is dumped and offline."))
+		return
+	// Outpost 21 edit end
 	update_icon()
 	if(spawn_slots == 0)
 		to_chat(user, span_warning("There are no more respawn slots."))
 		return
 	if(user.mind)
+		if(islist(user.client?.prefs?.pos_traits) && (/datum/trait/positive/disposable_respawn in user.client.prefs.pos_traits))
+			var/fast_respawn = 5 MINUTES
+			if(fast_respawn <= world.time - user.timeofdeath)
+				autoresleeve(user)
+			else
+				to_chat(user, span_warning("You must wait [((fast_respawn - (world.time - user.timeofdeath)) * 0.1) / 60] minutes to use \the [src]."))
+			return
 		if(user.mind.vore_death)
 			if(vore_respawn <= world.time - user.timeofdeath)
 				autoresleeve(user)
@@ -60,18 +81,28 @@ GLOBAL_LIST_EMPTY(active_autoresleevers)
 	else
 		to_chat(user, span_warning("You need to have been spawned in order to respawn here."))
 
-/obj/machinery/transhuman/autoresleever/attackby(var/mob/user)	//Let's not let people mess with this.
+/obj/machinery/transhuman/autoresleever/attackby(mob/user)	//Let's not let people mess with this.
+	// outpost 21 edit begin - Our resleever works different
+	if(!allow_ghosts_to_trigger)
+		return
+	// outpost 21 edit end
 	update_icon()
 	if(isobserver(user))
 		attack_ghost(user)
 	else
 		return
 
-/obj/machinery/transhuman/autoresleever/proc/autoresleeve(var/mob/observer/dead/ghost)
-	if(stat & (BROKEN | MAINT | EMPED)) // Let it still work when power is just off, it has it's own backup reserve or something.
+/obj/machinery/transhuman/autoresleever/proc/autoresleeve(mob/observer/dead/ghost,idscan = FALSE)
+	if(stat) // Outpost 21 edit - We prefer our autosleever to not work in a powerout, was:  & (BROKEN | MAINT | EMPED)) // Let it still work when power is just off, it has it's own backup reserve or something.
 		to_chat(ghost, span_warning("This machine is not functioning..."))
 		return
+	// Outpost 21 edit begin - Coredump prevents scans
+	if(SStranscore.default_db?.core_dumped)
+		to_chat(ghost, span_warning("Resleeving database is dumped and offline."))
+		return
+	// Outpost 21 edit end
 	if(!isobserver(ghost))
+		to_chat(ghost, span_warning("Auto-resleever has recieved your ID. Unfortunately you are inhabiting an animal and cannot be auto-resleeved. You may click the auto-resleever to resleeve yourself when your death timer has ended.")) // Outpost 21 edit - actually inform players
 		return
 	if(ghost.mind && ghost.mind.current && ghost.mind.current.stat != DEAD && ghost.mind.current.enabled == TRUE) //CHOMPEdit - Disabled body shouldn't block this.
 		if(istype(ghost.mind.current.loc, /obj/item/mmi))
@@ -96,7 +127,7 @@ GLOBAL_LIST_EMPTY(active_autoresleevers)
 	if(pref_species) // In case we somehow don't have a species set here.
 		chosen_species = GLOB.all_species[pref_species]
 
-	if((chosen_species.spawn_flags & SPECIES_IS_WHITELISTED) || (chosen_species.spawn_flags & SPECIES_IS_RESTRICTED))
+	if((chosen_species.spawn_flags & SPECIES_IS_WHITELISTED) || (chosen_species.spawn_flags & SPECIES_IS_RESTRICTED) || (chosen_species.flags & NO_SLEEVE) || (locate(/datum/trait/negative/noresleeve) in ghost.client.prefs.neg_traits)) // Outpost 21 edit - No sleeve
 		to_chat(ghost, span_warning("This species cannot be resleeved!"))
 		return
 	// CHOMPEdit End: Add checks for Whitelist + Resleeving
@@ -121,6 +152,10 @@ GLOBAL_LIST_EMPTY(active_autoresleevers)
 	var/picked_slot = ghost_client.prefs.default_slot
 
 	var/spawnloc = get_turf(src)
+	// Outpost 21 edit begin - release turf behaviors
+	if(releaseturf)
+		spawnloc = get_step( releaseturf, throw_dir)
+	// Outpost 21 edit end
 	//Did we actually get a loc to spawn them?
 	if(!spawnloc)
 		to_chat(ghost, span_warning("Could not find a valid location to spawn your character."))
@@ -157,7 +192,13 @@ GLOBAL_LIST_EMPTY(active_autoresleevers)
 		message_admins("[key_name_admin(ghost)] swapped savefiles while using the autosleever and tried to spawn as another character! [ADMIN_JMP(T)]")
 		return
 	var/mob/living/carbon/human/new_character
-	new_character = new(spawnloc)
+	// Outpost 21 edit begin - release turf behaviors
+	if(!releaseturf)
+		new_character = new(spawnloc)
+	else
+		// spawn inside, release after
+		new_character = new(src)
+	// Outpost 21 edit end
 
 	//We were able to spawn them, right?
 	if(!new_character)
@@ -210,9 +251,9 @@ GLOBAL_LIST_EMPTY(active_autoresleevers)
 	//If desired, apply equipment.
 	if(equip_body)
 		if(charjob)
-			GLOB.job_master.EquipRank(new_character, charjob, 1)
+			SSjob.equip_rank(new_character, charjob, 1)
 			new_character.mind.assigned_role = charjob
-			new_character.mind.role_alt_title = GLOB.job_master.GetPlayerAltTitle(new_character, charjob)
+			new_character.mind.role_alt_title = SSjob.get_player_alt_title(new_character, charjob)
 
 	//A redraw for good measure
 	new_character.regenerate_icons()
@@ -222,16 +263,37 @@ GLOBAL_LIST_EMPTY(active_autoresleevers)
 	log_admin("[new_character.ckey]'s character [new_character.real_name] has been auto-resleeved.")
 	message_admins("[new_character.ckey]'s character [new_character.real_name] has been auto-resleeved.")
 
+	/* Outpost 21 edit - remove backup implanter
 	var/obj/item/implant/backup/imp = new(src)
 
 	if(imp.handle_implant(new_character,new_character.zone_sel.selecting))
 		imp.post_implant(new_character)
+	*/
+
+	// Outpost 21 edit begin - Give players loadout implants
+	if(new_character?.client?.prefs && !issilicon(new_character))
+		var/list/active_gear_list = LAZYACCESS(new_character.client.prefs.gear_list, "[new_character.client.prefs.gear_slot]")
+		for(var/thing in active_gear_list)
+			var/datum/gear/G = GLOB.gear_datums[thing]
+			if(!G) //Not a real gear datum (maybe removed, as this is loaded from their savefile)
+				continue
+			if(G.whitelisted && !is_alien_whitelisted(new_character.client, GLOB.all_species[G.whitelisted]))
+				continue
+			if(G.slot != "implant")
+				continue
+			var/obj/item/implant/I = G.spawn_item(new_character, active_gear_list[G.display_name])
+			I.invisibility = INVISIBILITY_MAXIMUM
+			I.implant_loadout(new_character)
+	// Outpost 21 edit end
 
 	var/datum/transcore_db/db = SStranscore.db_by_mind_name(new_character.mind.name)
 	if(db)
+
 		var/datum/transhuman/mind_record/record = db.backed_up[new_character.mind.name]
-		if((world.time - record.last_notification) < 30 MINUTES)
-			GLOB.global_announcer.autosay("[new_character.name] has been resleeved by the automatic resleeving system.", "TransCore Oversight", new_character.isSynthetic() ? "Science" : "Medical")
+		if((world.time - record.last_notification) < 30 MINUTES && istype(get_area(src), /area/medical)) // Outpost 21 edit - Only notify if in medical
+			GLOB.global_announcer.autosay("[new_character.name] has been resleeved by the automatic resleeving system.", "TransCore Oversight", new_character.isSynthetic() ? "Engineering" : "Medical") // Outpost 21 edit - Robotics is engineering here
+
+		/* Outpost 21 edit - Nif removal
 		spawn(0)	//Wait a second for nif to do its thing if there is one
 		if(record.nif_path)
 			var/obj/item/nif/nif
@@ -244,9 +306,22 @@ GLOBAL_LIST_EMPTY(active_autoresleevers)
 				for(var/path in record.nif_software)
 					new path(nif)
 				nif.durability = record.nif_durability
+		*/
+
+	SShaunting.influence(HAUNTING_RESLEEVE) // Outpost 21 edit - IT DA SPOOKY STATION!
+	// Outpost 21 edit begin - release turf behaviors
+	if(releaseturf)
+		outpost_post_sleeve(idscan,new_character,spawnloc)
+	// Outpost 21 edit end
+
+	// Outpost 21 edit begin - reequip rust drones
+	var/datum/antagonist/antag_data = SSantag_job.get_antag_data(new_character.mind.special_role)
+	if(istype(antag_data, /datum/antagonist/rustdrone))
+		antag_data.equip(new_character)
+	// Outpost 21 edit end
 
 	if(!new_character.dna)
-		CRASH("[new_character] just came out of an autosleever and has no DNA! Species: [new_character.species] as mob: [new_character.type]. NIF Status: [new_character.nif]")
+		CRASH("[new_character] just came out of an autosleever and has no DNA! Species: [new_character.species] as mob: [new_character.type].") // Outpost 21 edit - Nif removal, was:  NIF Status: [new_character.nif]")
 
 	if(spawn_slots == -1)
 		return
@@ -255,3 +330,110 @@ GLOBAL_LIST_EMPTY(active_autoresleevers)
 	else
 		spawn_slots --
 		return
+
+// Outpost 21 edit begin - our resleever works different
+/obj/machinery/transhuman/autoresleever/proc/link_gibber(obj/machinery/gibber/G)
+	G.sleevelink = src
+	releaseturf = get_turf(G)
+	throw_dir = G.gib_throw_dir
+
+/obj/machinery/transhuman/autoresleever/proc/get_id_trigger(obj/item/card/id/D)
+	if(stat || isnull(releaseturf))
+		return
+
+	// Can't use resleever now
+	if(SStranscore.default_db?.core_dumped)
+		src.visible_message("[src] flashes 'Database Safety Interlock Failure', and lets out a loud incorrect sounding beep!")
+		playsound(src, 'sound/machines/defib_failed.ogg', 50, 0)
+		return
+
+	// what even happened?
+	if(isnull(D))
+		src.visible_message("[src] flashes 'Invalid ID!', and lets out a loud incorrect sounding beep!")
+		playsound(src, 'sound/machines/defib_failed.ogg', 50, 0)
+		return
+
+	// do not let guest IDs be used
+	if(istype(D,/obj/item/card/id/guest))
+		src.visible_message("[src] flashes 'Temporary guest ID identified!', and lets out a loud incorrect sounding beep!")
+		playsound(src, 'sound/machines/defib_failed.ogg', 50, 0)
+		return
+
+	//Name matching is ugly but mind doesn't persist to look at.
+	var/datum/transcore_db/db = SStranscore.db_by_mind_name(D.registered_name)
+	if(isnull(db))
+		src.visible_message("[src] flashes 'No records detected for [D.registered_name]!', and lets out a loud incorrect sounding beep!")
+		playsound(src, 'sound/machines/defib_failed.ogg', 50, 0)
+		return
+
+	var/datum/transhuman/mind_record/recordM = db.backed_up[D.registered_name]
+	var/datum/transhuman/body_record/recordB = db.body_scans[D.registered_name]
+
+	if(isnull(recordM))
+		src.visible_message("[src] flashes 'No mind records detected for [D.registered_name]!', and lets out a loud incorrect sounding beep!")
+		playsound(src, 'sound/machines/defib_failed.ogg', 50, 0)
+		if((world.time - recordM.last_notification) < 30 MINUTES)
+			GLOB.global_announcer.autosay("[D.registered_name] was unable to be resleeved, no records loaded or records are corrupted. Informing [using_map.dock_name].", "TransCore Oversight", "Medical")
+		return
+
+	if(isnull(recordB) || isnull(recordB.mydna) || isnull(recordB.mydna.dna))
+		src.visible_message("[src] flashes 'No body records for [D.registered_name], or dna was corrupted!', and lets out a loud incorrect sounding beep!")
+		playsound(src, 'sound/machines/defib_failed.ogg', 50, 0)
+		if((world.time - recordM.last_notification) < 30 MINUTES)
+			GLOB.global_announcer.autosay("[D.registered_name] was unable to be resleeved, no records loaded or records are corrupted. Informing [using_map.dock_name].", "TransCore Oversight", "Medical")
+		return
+
+	var/datum/species/chosen_species = GLOB.all_species[recordB.mydna.dna.species]
+	if(chosen_species.flags & NO_SLEEVE || (locate(/datum/trait/negative/noresleeve) in recordB.mydna.dna.species_traits)) // Sanity. Prevents species like Xenochimera, Proteans, etc from rejoining the round via resleeve, as they should have their own methods of doing so already, as agreed to when you whitelist as them.
+		src.visible_message("[src] flashes 'Could not resleeve [D.registered_name]. Invalid species!', and lets out a loud incorrect sounding beep!")
+		playsound(src, 'sound/machines/defib_failed.ogg', 50, 0)
+		if((world.time - recordM.last_notification) < 30 MINUTES)
+			GLOB.global_announcer.autosay("[D.registered_name] was unable to be resleeved by the automatic resleeving system.", "TransCore Oversight", "Medical")
+		return
+
+	playsound(src, 'sound/machines/medbayscanner1.ogg', 50, 0) // Make it clear the ID was processed and it's waiting
+	visible_message("\The [src] flashes 'Record found, preparing to resleeve [D.registered_name]!'")
+	spawn(100) // needs big delay time to make sure the host is dead if stayed in brain
+		// solve the ghost from mind refs
+		var/mob/ghost
+		var/client/ghost_client
+		for(var/client/C in GLOB.clients)
+			if(C.ckey == recordM.ckey)
+				ghost_client = C
+				ghost = ghost_client.mob
+				break
+
+		// Avoiding some funny messages
+		if(!stat && istype(ghost,/mob/observer/dead))
+			to_chat(ghost, "<span class='warning'>Your ID has arrived at the autosleever!</span>")
+			autoresleeve(ghost,TRUE)
+
+/obj/machinery/transhuman/autoresleever/proc/outpost_post_sleeve(idscan, mob/living/carbon/human/new_character, spawnloc)
+	var/confuse_amount = rand(8,26)
+	var/blur_amount = rand(8,56)
+	var/sickness_duration = rand(20,30) MINUTES
+
+	// apply state
+	new_character.confused = max(new_character.confused, confuse_amount)
+	new_character.eye_blurry = max(new_character.eye_blurry, blur_amount)
+	new_character.add_modifier(/datum/modifier/resleeving_sickness, sickness_duration)
+
+	if(idscan) // Harmful respawn
+		new_character.adjustOxyLoss( rand(5,25))
+		new_character.adjustBruteLoss( rand(1,8), FALSE)
+		new_character.adjustToxLoss( rand(0,12))
+		new_character.adjustFireLoss( rand(0,8), FALSE)
+		new_character.adjustCloneLoss( rand(0,6))
+	new_character.sleeping = rand(4,6)
+	new_character.Life() // Force lifetick for instant effect
+
+	// Visuals and release
+	playsound(src, 'sound/machines/defib_charge.ogg', 50, 0)
+	spawn(1 SECONDS)
+		playsound(src, "bodyfall", 50, 1)
+		playsound(src, 'sound/machines/defib_zap.ogg', 50, 1, -1)
+
+	spawn(5 SECONDS)
+		new_character.forceMove(spawnloc)
+		new_character.throw_at(get_edge_target_turf(src.loc, throw_dir), 1,5)
+// outpost 21 edit end

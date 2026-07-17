@@ -12,6 +12,7 @@
 #define DISPOSALMODE_OFF 0
 #define DISPOSALMODE_CHARGING 1
 #define DISPOSALMODE_CHARGED 2
+#define DISPOSALMODE_INTERLOCKERROR 3 // Outpost 21 edit - Interlock error
 
 /obj/machinery/disposal
 	name = "disposal unit"
@@ -58,17 +59,22 @@
 	update_icon()
 
 /obj/machinery/disposal/Destroy()
+	SEND_SIGNAL(src, COMSIG_DISPOSAL_UNLINK) //Just to be safe.
 	eject()
 	return ..()
 
 /obj/machinery/disposal/singularity_pull(S, current_size)
 	..()
 	if(current_size >= STAGE_FIVE)
-		deconstruct()
+		atom_deconstruct(TRUE)
+
+/obj/machinery/disposal/MouseDrop_T(atom/dropping, mob/user, src_location, over_location, src_control, over_control, params)
+	if(Adjacent(user) && Adjacent(dropping) && isobj(dropping) && isturf(dropping.loc))
+		attackby(dropping, user, drag_dropped = TRUE)
 
 // attack by item places it in to disposal
-/obj/machinery/disposal/attackby(obj/item/I, mob/user)
-	if(stat & BROKEN || !I || !user)
+/obj/machinery/disposal/attackby(obj/item/I, mob/user, attack_modifier, click_parameters, drag_dropped = FALSE)
+	if(stat & BROKEN || !I || !user || !istype(I))
 		return
 
 	add_fingerprint(user)
@@ -102,7 +108,7 @@
 				if(do_after(user, 2 SECONDS * W.toolspeed, target = src))
 					if(!src || !W.isOn()) return
 					to_chat(user, "You sliced the floorweld off the disposal unit.")
-					deconstruct()
+					atom_deconstruct(TRUE)
 				return
 			else
 				to_chat(user, "You need more welding fuel to complete this task.")
@@ -143,12 +149,13 @@
 				add_attack_logs(user,GM,"Disposals dunked")
 		return
 
-	if(isrobot(user))
+	if(isrobot(user) && !drag_dropped) //Borgs are allowed to drag-drop items into the disposal unit.
 		return
 	if(!I || I.anchored || !I.canremove)
 		return
 
-	user.drop_item()
+	if(!drag_dropped)
+		user.drop_item()
 	if(I)
 		if(istype(I, /obj/item/holder))
 			var/obj/item/holder/holder = I
@@ -262,9 +269,11 @@
 
 // mouse drop another mob or self
 //
-/obj/machinery/disposal/MouseDrop_T(mob/living/target, mob/living/user)
-	if(istype(target))
-		stuff_mob_in(target, user)
+/obj/machinery/disposal/MouseDrop_T(atom/dropping, mob/user, src_location, over_location, src_control, over_control, params)
+	if(isliving(dropping))
+		stuff_mob_in(dropping, user)
+	else if(isobj(dropping) && isturf(dropping.loc))
+		attackby(dropping, user, drag_dropped = TRUE)
 
 /obj/machinery/disposal/proc/stuff_mob_in(mob/living/target, mob/living/user)
 	//animals cannot put mobs other than themselves into disposal
@@ -444,8 +453,8 @@
 		add_overlay("[controls_iconstate]-full")
 
 	// charging and ready light
-	if(mode == DISPOSALMODE_CHARGING)
-		add_overlay("[controls_iconstate]-charge")
+	if(mode == DISPOSALMODE_CHARGING || mode == DISPOSALMODE_INTERLOCKERROR) // Outpost 21 edit - disposal failure
+		add_overlay("[initial(icon_state)]-charge")
 	else if(mode == DISPOSALMODE_CHARGED)
 		add_overlay("[controls_iconstate]-ready")
 
@@ -456,19 +465,39 @@
 		update_use_power(USE_POWER_OFF)
 		return
 
+	// Outpost 21 edit begin - disposal failure
 	flush_count++
-	if( flush_count >= flush_every_ticks )
-		if( contents.len )
-			if(mode == DISPOSALMODE_CHARGED)
+	if(flush_count >= flush_every_ticks)
+		if(mode == DISPOSALMODE_INTERLOCKERROR)
+			// broken machine interlock, flushes rooms to vacuum!
+			spawn(0)
+				feedback_inc("disposal_auto_flush",1)
+				flush()
+			// Make it more obvious
+			visible_message(span_warning("\The [src] sparks violently!"))
+			var/datum/effect/effect/system/spark_spread/sparks = new /datum/effect/effect/system/spark_spread()
+			sparks.set_up(4, 1, get_turf(src))
+			sparks.start()
+			flush_count = rand(0,10)
+		else
+			if(contents.len && mode == DISPOSALMODE_CHARGED)
 				spawn(0)
 					feedback_inc("disposal_auto_flush",1)
 					flush()
-		flush_count = 0
+			flush_count = 0
+	// Outpost 21 edit end
 
 	if(flush && air_contents.return_pressure() >= SEND_PRESSURE )	// flush can happen even without power
 		flush()
 
-	if(mode != DISPOSALMODE_CHARGING) //if off or ready, no need to charge
+	// Outpost 21 edit begin - disposal failure
+	if(mode == DISPOSALMODE_INTERLOCKERROR)
+		pressurize() // drain the room!
+		if(!flush && prob(10))
+			flush = TRUE
+			update_icon()
+	else if(mode != DISPOSALMODE_CHARGING) //if off or ready, no need to charge
+	// Outpost 21 edit end
 		update_use_power(USE_POWER_IDLE)
 	else if(air_contents.return_pressure() >= SEND_PRESSURE)
 		mode = DISPOSALMODE_CHARGED //if full enough, switch to ready mode
@@ -486,7 +515,12 @@
 
 	var/power_draw = -1
 	if(env && env.temperature > 0)
-		var/transfer_moles = (PUMP_MAX_FLOW_RATE/env.volume)*env.total_moles	//group_multiplier is divided out here
+		// Outpost 21 edit begin - disposal failure
+		var/flowrate = PUMP_MAX_FLOW_RATE
+		if(mode == DISPOSALMODE_INTERLOCKERROR)
+			flowrate *= rand(9,29)
+		var/transfer_moles = (flowrate/env.volume)*env.total_moles	//group_multiplier is divided out here
+		// Outpost 21 edit end
 		power_draw = pump_gas(src, env, air_contents, transfer_moles, active_power_usage)
 
 	if (power_draw > 0)
@@ -514,16 +548,21 @@
 	PROTECTED_PROC(TRUE)
 	if(QDELETED(src))
 		return
+
+	/* Outpost 21 edit - You have other ways to dispose of these, players should be allowed to make mistakes and get caught
 	// We don't ever want digestion remains going through disposals, but people understandably thing they're doing right by trashing them
 	// So let's just delete them instead!
 	for(var/obj/item/digestion_remains/bone in src)
 		qdel(bone)
+	*/
 
 	var/list/flushed_items = list()
 	for(var/atom/movable/AM in src)
 		flushed_items += AM
 
-	if(stat_tracking)
+	// Outpost 21 edit begin - disposal failure
+	if(mode != DISPOSALMODE_INTERLOCKERROR && stat_tracking)
+	// Outpost 21 edit end
 		GLOB.disposals_flush_shift_roundstat++
 
 	if(!SEND_SIGNAL(src, COMSIG_DISPOSAL_FLUSH, flushed_items, air_contents)) //If the signal isnt recieved, we'll just expel immediately.
@@ -584,7 +623,7 @@
 
 // Ideally, deconstruct would be a proc on /machinery, but you cant have nice things with polaris.
 // AKA: FUKKIN CHANGE THIS WHEN THAT HAPPENS!!!!!1!!   pls. -Reo
-/obj/machinery/disposal/proc/deconstruct(disassembled = TRUE)
+/obj/machinery/disposal/atom_deconstruct(disassembled = TRUE)
 	var/turf/T = loc
 	/* // More nice things... Someday we'll have flags_1 and then have proper support for anything being a hologram.
 	if(!(flags_1 & NODECONSTRUCT_1))
@@ -606,6 +645,7 @@
 	for(var/atom/movable/AM in src)
 		AM.forceMove(T)
 	//..() //*cough
+	SEND_SIGNAL(src, COMSIG_DISPOSAL_UNLINK) //unlinks in destroy, too. Multi-sending shouldnt be too bad.
 	qdel(src) //Parent above should do this, but that's not a thing as of writing this.
 
 
@@ -649,6 +689,7 @@
 #undef DISPOSALMODE_OFF
 #undef DISPOSALMODE_CHARGING
 #undef DISPOSALMODE_CHARGED
+#undef DISPOSALMODE_INTERLOCKERROR // Outpost 21 edit - Interlock error
 #undef SEND_PRESSURE
 #undef PRESSURE_TANK_VOLUME
 #undef PUMP_MAX_FLOW_RATE

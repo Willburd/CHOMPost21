@@ -6,7 +6,7 @@ import type { BooleanLike } from 'tgui-core/react';
 type Data = {
   locked: BooleanLike;
   chemImplants: { host: string; units: string; ref: string }[];
-  trackImplants: { host: string; ref: string; id: string; loc: string }[];
+  trackImplants: { host: string; ref: string; id: string; loc: string; coords: string; }[]; /* Outpost 21 edit - Show coords */
 };
 
 export const PrisonerManagement = (props) => {
@@ -82,6 +82,7 @@ export const PrisonerManagement = (props) => {
                   <Table.Row header>
                     <Table.Cell textAlign="center">Host</Table.Cell>
                     <Table.Cell textAlign="center">Location</Table.Cell>
+                    <Table.Cell textAlign="center">Coords</Table.Cell> {/* Outpost 21 edit - Show coords */}
                     <Table.Cell textAlign="center">Message</Table.Cell>
                   </Table.Row>
                   {trackImplants.map((track) => (
@@ -90,6 +91,7 @@ export const PrisonerManagement = (props) => {
                         {track.host} ({track.id})
                       </Table.Cell>
                       <Table.Cell textAlign="center">{track.loc}</Table.Cell>
+                      <Table.Cell textAlign="center">{track.coords}</Table.Cell> {/* Outpost 21 edit - Show coords */}
                       <Table.Cell textAlign="center">
                         <Button onClick={() => act('warn', { imp: track.ref })}>
                           Message

@@ -78,3 +78,4 @@ SUBSYSTEM_DEF(chemistry)
 		if(!D.name)
 			continue
 		chemical_reagents[D.id] = D
+	randomize_chemical_market_prices() // Outpost 21 edit(port) - randomization of reagent prices... Yes this should be SSsupply, but doing it here is much safer...

@@ -100,7 +100,7 @@
 	icon = 'alienship.dmi'
 	icon_state = "alien_injector"
 	item_state = "autoinjector"
-	filled_reagents = list("rezadone" = 4, "corophizine" = 1)
+	filled_reagents = list(REAGENT_ID_REZADONE = 4, REAGENT_ID_COROPHIZINE = 1)
 
 
 // -- Areas -- //
@@ -138,7 +138,7 @@
 
 		did_entry = TRUE
 
-/area/shuttle/excursion/away_alienship/proc/abduct(var/mob/living/mob)
+/area/shuttle/excursion/away_alienship/proc/abduct(mob/living/mob)
 	if(isliving(mob))
 		var/mob/living/L = mob
 
@@ -158,7 +158,7 @@
 		L.forceMove(pick(get_area_turfs(dump_area)))
 		if(!issilicon(L)) //Don't drop borg modules...
 			for(var/obj/item/I in L)
-				if(istype(I,/obj/item/implant) || istype(I,/obj/item/nif))
+				if(istype(I,/obj/item/implant)) // Outpost 21 edit - Nif removal: || istype(I,/obj/item/nif))
 					continue
 				if(istype(I,/obj/item/holder))
 					var/obj/item/holder/H = I

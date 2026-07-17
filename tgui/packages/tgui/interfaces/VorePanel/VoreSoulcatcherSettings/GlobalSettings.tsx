@@ -56,6 +56,7 @@ export const GlobalSettings = (props: {
             Ext. Vision
           </Button>
         </Stack.Item>
+        {/* Outpost 21 edit - Backup implants removed
         <Stack.Item>
           <Button
             disabled={!editMode}
@@ -70,7 +71,9 @@ export const GlobalSettings = (props: {
           >
             Mind Backups
           </Button>
-        </Stack.Item>
+        </Stack.Item
+        */
+        /* Outpost 21 edit - Soulcatch mechanics that are illegal
         <Stack.Item>
           <Button
             disabled={!editMode}
@@ -103,6 +106,7 @@ export const GlobalSettings = (props: {
             SR Vision
           </Button>
         </Stack.Item>
+        */}
         <Stack.Item>
           <Button
             disabled={!editMode}

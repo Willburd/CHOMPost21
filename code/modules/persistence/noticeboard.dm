@@ -9,7 +9,7 @@
 	flags = WALL_ITEM
 	var/list/notices
 	var/base_icon_state = "nboard0"
-	var/const/max_notices = 5
+	var/const/max_notices = 25 // Outpost 21 edit - Notice board has more notes
 
 /obj/structure/noticeboard/Initialize(mapload)
 	. = ..()
@@ -30,14 +30,14 @@
 
 	update_icon()
 
-/obj/structure/noticeboard/proc/add_paper(var/atom/movable/paper, var/skip_icon_update)
+/obj/structure/noticeboard/proc/add_paper(atom/movable/paper, skip_icon_update)
 	if(istype(paper))
 		LAZYDISTINCTADD(notices, paper)
 		paper.forceMove(src)
 		if(!skip_icon_update)
 			update_icon()
 
-/obj/structure/noticeboard/proc/remove_paper(var/atom/movable/paper, var/skip_icon_update)
+/obj/structure/noticeboard/proc/remove_paper(atom/movable/paper, skip_icon_update)
 	if(istype(paper) && paper.loc == src)
 		paper.dropInto(loc)
 		LAZYREMOVE(notices, paper)
@@ -59,7 +59,7 @@
 	dismantle()
 
 /obj/structure/noticeboard/update_icon()
-	icon_state = "[base_icon_state][LAZYLEN(notices)]"
+	icon_state = "[base_icon_state][LAZYLEN(notices) > 5 ? 5 : LAZYLEN(notices)]" // Outpost 21 edit - Notice board has more notes
 
 /obj/structure/noticeboard/attackby(obj/item/I, mob/user)
 	if(I.has_tool_quality(TOOL_SCREWDRIVER))
@@ -103,10 +103,10 @@
 		return
 	return ..()
 
-/obj/structure/noticeboard/attack_ai(var/mob/user)
+/obj/structure/noticeboard/attack_ai(mob/user)
 	examine(user)
 
-/obj/structure/noticeboard/attack_hand(var/mob/user)
+/obj/structure/noticeboard/attack_hand(mob/user)
 	examine(user)
 
 /obj/structure/noticeboard/examine(mob/user)

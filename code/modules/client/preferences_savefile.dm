@@ -54,7 +54,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 		log_world("[client_ckey] preferences migrating from [current_version] to v14....")
 		to_chat(client, span_danger("Migrating savefile from version [current_version] to v14..."))
 
-		migration_14_nifs(S)
+		// migration_14_nifs(S) // Outpost 21 edit - Nif Removal
 
 		log_world("[client_ckey] preferences successfully migrated from [current_version] to v14.")
 		to_chat(client, span_danger("v14 savefile migration complete."))
@@ -64,7 +64,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 		log_world("[client_ckey] preferences migrating from [current_version] to v15....")
 		to_chat(client, span_danger("Migrating savefile from version [current_version] to v15..."))
 
-		migration_15_nif_path(S)
+		// migration_15_nif_path(S) // Outpost 21 edit - Nif Removal
 
 		log_world("[client_ckey] preferences successfully migrated from [current_version] to v15.")
 		to_chat(client, span_danger("v15 savefile migration complete."))
@@ -340,8 +340,11 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	slot = sanitize_integer(slot, 1, CONFIG_GET(number/character_slots), initial(default_slot))
 	if(slot != default_slot)
 		default_slot = slot
-		nif_path = nif_durability = nif_savedata = null //VOREStation Add - Don't copy NIF
+		// nif_path = nif_durability = nif_savedata = null //VOREStation Add - Don't copy NIF // Outpost 21 edit - Nif removal
 		savefile.set_entry("default_slot", slot)
+
+	// Clear stale data before overwriting.
+	savefile.remove_entry("character[slot]")
 
 	return TRUE
 

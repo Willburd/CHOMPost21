@@ -30,7 +30,10 @@ GLOBAL_LIST_INIT(robot_default_emotes, list(
 	/datum/decl/emote/audible/synth/security,
 	/datum/decl/emote/audible/synth/security/halt,
 	/datum/decl/emote/visible/mlem,
-	/datum/decl/emote/visible/blep
+	/datum/decl/emote/visible/blep,
+	// Outpost 21 edit begin - Our emotes
+	/datum/decl/emote/audible/synth/bhonk,
+	// Outpost 21 edit end
 ))
 
 /mob/living/silicon/robot/get_available_emotes()

@@ -1,0 +1,2241 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"ah" = (
+/obj/effect/auto_crayon{
+	icon_state = "uboa"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"am" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/auto_crayon{
+	icon_state = "uboa"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"aV" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/obj/effect/landmark/step_trap,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/cave_liminal_D)
+"ba" = (
+/obj/structure/disposalpipe/broken{
+	dir = 8
+	},
+/turf/simulated/deathdrop/liminal,
+/area/submap/outpost21/cave_liminal_D)
+"bq" = (
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"bB" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/obj/effect/landmark{
+	name = "badbody"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/cave_liminal_D)
+"el" = (
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/cave_liminal_D)
+"fA" = (
+/obj/structure/disposalpipe/junction{
+	dir = 1
+	},
+/obj/effect/landmark/redspaceexit,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/cave_liminal_D)
+"fM" = (
+/obj/structure/disposalpipe/broken{
+	dir = 1
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"gm" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/door/airlock/maintenance/int,
+/obj/effect/landmark/electrify_door/ten,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/submap/outpost21/cave_liminal_D)
+"gT" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/obj/effect/decal/cleanable/blood/tracks/suspicious{
+	dir = 5
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/cave_liminal_D)
+"hk" = (
+/obj/effect/auto_crayon{
+	icon_state = "uboa"
+	},
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"hP" = (
+/obj/structure/disposalpipe/junction/yjunction{
+	dir = 1
+	},
+/obj/effect/landmark/step_trap,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/cave_liminal_D)
+"ix" = (
+/obj/structure/disposalpipe/junction/yjunction,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/cave_liminal_D)
+"ko" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/door/airlock/maintenance/int,
+/obj/item/grenade/concussion,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/submap/outpost21/cave_liminal_D)
+"kM" = (
+/obj/structure/disposalpipe/junction/yjunction{
+	dir = 1
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/cave_liminal_D)
+"lD" = (
+/obj/structure/disposalpipe/junction{
+	dir = 1
+	},
+/obj/effect/mine/claymore{
+	dir = 4
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/cave_liminal_D)
+"lG" = (
+/obj/structure/disposalpipe/junction{
+	dir = 4
+	},
+/obj/structure/blade_trap/start_active,
+/obj/effect/landmark/step_trap,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/cave_liminal_D)
+"mg" = (
+/obj/structure/disposalpipe/junction{
+	dir = 1
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/cave_liminal_D)
+"mn" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/cave_liminal_D)
+"mw" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/obj/effect/decal/cleanable/blood/tracks/suspicious{
+	dir = 6
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/cave_liminal_D)
+"my" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/cave_liminal_D)
+"nd" = (
+/obj/effect/decal/cleanable/blood/tracks/suspicious,
+/obj/structure/disposalpipe/broken{
+	dir = 1
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"ny" = (
+/obj/structure/disposalpipe/junction{
+	dir = 4
+	},
+/obj/effect/mine/claymore,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/cave_liminal_D)
+"nz" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/door/airlock/maintenance/int,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/submap/outpost21/cave_liminal_D)
+"nP" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/obj/effect/landmark/step_trap,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/cave_liminal_D)
+"ou" = (
+/obj/structure/disposalpipe/junction{
+	dir = 4;
+	icon_state = "pipe-j2"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/cave_liminal_D)
+"oy" = (
+/obj/effect/auto_crayon{
+	icon_state = "uboa"
+	},
+/obj/structure/disposalpipe/broken{
+	dir = 4
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"pF" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/obj/random/junk,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/cave_liminal_D)
+"pG" = (
+/obj/structure/disposalpipe/junction{
+	dir = 8;
+	icon_state = "pipe-j2"
+	},
+/obj/effect/landmark/step_trap,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/cave_liminal_D)
+"qy" = (
+/obj/structure/disposalpipe/junction,
+/obj/random/junk,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/cave_liminal_D)
+"qJ" = (
+/turf/simulated/wall,
+/area/mine/unexplored/muriki/cave/deepdark)
+"rm" = (
+/obj/structure/disposalpipe/junction{
+	dir = 2;
+	icon_state = "pipe-j2"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/cave_liminal_D)
+"sz" = (
+/turf/template_noop,
+/area/template_noop)
+"sR" = (
+/obj/effect/auto_crayon{
+	icon_state = "uboa"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"tg" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"tP" = (
+/obj/structure/disposalpipe/broken,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"vq" = (
+/obj/structure/disposalpipe/broken{
+	dir = 1
+	},
+/obj/structure/disposalpipe/broken{
+	dir = 4
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/cave_liminal_D)
+"vv" = (
+/obj/item/trash/porkpie,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"wx" = (
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/obj/effect/landmark{
+	name = "badbody"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/cave_liminal_D)
+"wy" = (
+/obj/structure/disposalpipe/junction{
+	dir = 8
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/cave_liminal_D)
+"xv" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"yD" = (
+/obj/structure/disposalpipe/broken{
+	dir = 8
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"zi" = (
+/obj/structure/disposalpipe/junction{
+	dir = 1;
+	icon_state = "pipe-j2"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/cave_liminal_D)
+"zU" = (
+/turf/template_noop,
+/area/mine/explored/muriki/cave/deepdark)
+"An" = (
+/obj/structure/disposalpipe/broken,
+/turf/simulated/deathdrop/liminal,
+/area/submap/outpost21/cave_liminal_D)
+"AJ" = (
+/obj/structure/disposalpipe/junction/yjunction{
+	dir = 4
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/cave_liminal_D)
+"Bh" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/obj/structure/blade_trap/start_active,
+/obj/random/junk,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/cave_liminal_D)
+"Bq" = (
+/obj/structure/disposalpipe/broken{
+	dir = 1
+	},
+/turf/simulated/deathdrop/liminal,
+/area/submap/outpost21/cave_liminal_D)
+"BC" = (
+/turf/template_noop,
+/area/mine/unexplored/muriki/cave/deepdark)
+"Cm" = (
+/obj/structure/disposalpipe/broken{
+	dir = 1
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/unexplored/muriki/cave/deepdark)
+"Dd" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/door/airlock/maintenance/int,
+/obj/effect/landmark/electrify_door/ten,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/submap/outpost21/cave_liminal_D)
+"EP" = (
+/obj/item/material/barbedwire/start_active,
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"FC" = (
+/obj/structure/disposalpipe/junction,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/cave_liminal_D)
+"Gp" = (
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/unexplored/muriki/cave/deepdark)
+"Gx" = (
+/obj/effect/decal/cleanable/blood/tracks/suspicious,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/unexplored/muriki/cave/deepdark)
+"GF" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/cave_liminal_D)
+"HA" = (
+/obj/structure/disposalpipe/junction{
+	dir = 4;
+	icon_state = "pipe-j2"
+	},
+/obj/effect/decal/cleanable/blood/tracks/suspicious{
+	dir = 10
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/cave_liminal_D)
+"Je" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/door/airlock/maintenance/int,
+/obj/effect/decal/cleanable/blood/tracks/suspicious,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/submap/outpost21/cave_liminal_D)
+"Ku" = (
+/obj/structure/disposalpipe/junction{
+	dir = 8;
+	icon_state = "pipe-j2"
+	},
+/obj/effect/decal/cleanable/blood/tracks/suspicious{
+	dir = 9
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/cave_liminal_D)
+"Kx" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/door/airlock/maintenance/int,
+/obj/item/grenade/spawnergrenade/manhacks,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/submap/outpost21/cave_liminal_D)
+"Le" = (
+/obj/structure/disposalpipe/broken{
+	dir = 4
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Nc" = (
+/turf/simulated/wall,
+/area/submap/outpost21/cave_liminal_D)
+"Ns" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/door/airlock/maintenance/int,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/submap/outpost21/cave_liminal_D)
+"Oy" = (
+/turf/simulated/wall,
+/area/mine/explored/muriki/cave/deepdark)
+"QC" = (
+/obj/structure/disposalpipe/junction{
+	dir = 8;
+	icon_state = "pipe-j2"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/cave_liminal_D)
+"Rr" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Rz" = (
+/obj/structure/disposalpipe/junction/yjunction{
+	dir = 8
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/cave_liminal_D)
+"Sh" = (
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"SC" = (
+/obj/structure/disposalpipe/junction/yjunction{
+	dir = 8
+	},
+/obj/effect/mine/claymore{
+	dir = 8
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/cave_liminal_D)
+"ST" = (
+/turf/simulated/mineral/alt/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Tt" = (
+/obj/structure/disposalpipe/junction/yjunction{
+	dir = 8
+	},
+/obj/effect/landmark/step_trap,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/cave_liminal_D)
+"Ua" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/obj/effect/landmark/step_trap,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/cave_liminal_D)
+"Ui" = (
+/obj/structure/disposalpipe/junction{
+	dir = 8
+	},
+/obj/effect/landmark/step_trap,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/cave_liminal_D)
+"UE" = (
+/turf/simulated/deathdrop/liminal,
+/area/submap/outpost21/cave_liminal_D)
+"UW" = (
+/obj/structure/disposalpipe/junction/yjunction{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/blood/tracks/suspicious,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/cave_liminal_D)
+"Ve" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/obj/random/junk,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/cave_liminal_D)
+"Wt" = (
+/obj/structure/disposalpipe/junction{
+	dir = 4
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/cave_liminal_D)
+"Wx" = (
+/obj/effect/auto_crayon{
+	icon_state = "uboa"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"WJ" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/obj/random/junk,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/cave_liminal_D)
+"XA" = (
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"YH" = (
+/obj/random/junk,
+/obj/structure/disposalpipe/broken{
+	dir = 8
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"YU" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/door/airlock/maintenance/int,
+/obj/effect/landmark/electrify_door/fifty,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/submap/outpost21/cave_liminal_D)
+"Zb" = (
+/obj/structure/disposalpipe/junction{
+	dir = 2;
+	icon_state = "pipe-j2"
+	},
+/obj/random/junk,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/submap/outpost21/cave_liminal_D)
+"Zj" = (
+/obj/structure/disposalpipe/broken{
+	dir = 4
+	},
+/turf/simulated/deathdrop/liminal,
+/area/submap/outpost21/cave_liminal_D)
+
+(1,1,1) = {"
+sz
+sz
+sz
+sz
+sz
+sz
+sz
+sz
+sz
+sz
+sz
+sz
+sz
+sz
+sz
+sz
+sz
+sz
+sz
+sz
+sz
+sz
+sz
+sz
+sz
+sz
+sz
+sz
+sz
+sz
+sz
+sz
+sz
+sz
+sz
+sz
+sz
+sz
+sz
+sz
+"}
+(2,1,1) = {"
+sz
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+Gp
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+sz
+"}
+(3,1,1) = {"
+sz
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+zU
+zU
+XA
+BC
+BC
+zU
+Le
+Oy
+zU
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+sz
+"}
+(4,1,1) = {"
+sz
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+Gp
+BC
+zU
+zU
+zU
+zU
+zU
+Oy
+XA
+zU
+zU
+Oy
+Rr
+Oy
+zU
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+sz
+"}
+(5,1,1) = {"
+sz
+BC
+BC
+BC
+BC
+zU
+zU
+zU
+Oy
+XA
+zU
+zU
+zU
+zU
+ST
+ST
+Oy
+oy
+Oy
+zU
+Oy
+Rr
+Oy
+zU
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+sz
+"}
+(6,1,1) = {"
+sz
+BC
+BC
+BC
+zU
+XA
+XA
+XA
+XA
+XA
+zU
+ST
+ST
+ST
+ST
+ST
+Oy
+Rr
+Oy
+zU
+Oy
+ah
+Oy
+zU
+zU
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+sz
+"}
+(7,1,1) = {"
+sz
+BC
+BC
+zU
+zU
+zU
+Oy
+Oy
+Oy
+XA
+ST
+ST
+ST
+ST
+ST
+Nc
+Nc
+Ns
+Nc
+Nc
+Nc
+Ns
+Nc
+Nc
+ST
+zU
+zU
+zU
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+sz
+"}
+(8,1,1) = {"
+sz
+BC
+BC
+zU
+zU
+ST
+ST
+ST
+Oy
+XA
+ST
+ST
+Oy
+Oy
+ST
+Nc
+mn
+qy
+el
+Nc
+mn
+zi
+el
+Nc
+ST
+Oy
+zU
+zU
+BC
+Gp
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+sz
+"}
+(9,1,1) = {"
+sz
+BC
+BC
+zU
+zU
+ST
+ST
+ST
+Oy
+tg
+bq
+bq
+bq
+hk
+bq
+nz
+wy
+Nc
+ix
+gm
+ou
+Nc
+ix
+nz
+bq
+bq
+fM
+zU
+zU
+Le
+zU
+ST
+zU
+zU
+BC
+BC
+BC
+BC
+BC
+sz
+"}
+(10,1,1) = {"
+sz
+BC
+BC
+zU
+ST
+ST
+ST
+ST
+ST
+Rr
+ST
+ST
+ST
+Le
+XA
+Nc
+nP
+AJ
+my
+Nc
+GF
+rm
+aV
+Nc
+ST
+Oy
+Oy
+ST
+ST
+Rr
+Oy
+ST
+ST
+Oy
+zU
+BC
+BC
+BC
+BC
+sz
+"}
+(11,1,1) = {"
+sz
+BC
+zU
+zU
+ST
+ST
+ST
+Nc
+Nc
+Ns
+Nc
+Nc
+Nc
+Ns
+Nc
+Nc
+Nc
+Ns
+Nc
+Nc
+Nc
+Ns
+Nc
+Nc
+Oy
+ST
+ST
+ST
+Oy
+Rr
+Oy
+ST
+ST
+Oy
+zU
+zU
+BC
+BC
+BC
+sz
+"}
+(12,1,1) = {"
+sz
+BC
+zU
+Oy
+Oy
+Oy
+Oy
+Nc
+Ua
+FC
+el
+Nc
+mn
+zi
+el
+Nc
+mn
+Rz
+el
+Nc
+mn
+FC
+el
+Nc
+Oy
+Oy
+Oy
+Oy
+Oy
+Rr
+Oy
+ST
+ST
+Oy
+XA
+zU
+BC
+BC
+BC
+sz
+"}
+(13,1,1) = {"
+sz
+BC
+XA
+tP
+bq
+bq
+bq
+nz
+wy
+Nc
+ix
+nz
+ou
+Nc
+ix
+gm
+kM
+Nc
+pG
+nz
+ou
+Nc
+Wt
+nz
+hk
+Sh
+XA
+XA
+XA
+Rr
+Oy
+ST
+ST
+Oy
+XA
+zU
+zU
+BC
+BC
+sz
+"}
+(14,1,1) = {"
+sz
+BC
+zU
+zU
+zU
+Oy
+Oy
+Nc
+GF
+AJ
+bB
+Nc
+GF
+rm
+aV
+Nc
+Ve
+mg
+my
+Nc
+Ve
+mg
+bB
+Nc
+Oy
+am
+Oy
+ST
+Oy
+ah
+Oy
+ST
+ST
+Oy
+XA
+Oy
+zU
+BC
+BC
+sz
+"}
+(15,1,1) = {"
+sz
+BC
+ST
+ST
+ST
+ST
+ST
+Nc
+Nc
+Dd
+Nc
+Nc
+Nc
+Kx
+Nc
+Nc
+Nc
+Ns
+Nc
+Nc
+Nc
+Ns
+Nc
+Nc
+Nc
+Ns
+Nc
+Nc
+Nc
+Ns
+Nc
+Nc
+ST
+Oy
+XA
+Oy
+zU
+zU
+BC
+sz
+"}
+(16,1,1) = {"
+sz
+BC
+zU
+zU
+ST
+ST
+Oy
+Nc
+mn
+Rz
+el
+Nc
+mn
+FC
+vq
+Nc
+mn
+SC
+el
+Nc
+mn
+FC
+el
+Nc
+Ua
+Rz
+el
+Nc
+mn
+Rz
+el
+Nc
+Oy
+Oy
+XA
+Oy
+Oy
+Oy
+BC
+sz
+"}
+(17,1,1) = {"
+sz
+BC
+zU
+zU
+tP
+bq
+bq
+nz
+kM
+Nc
+pG
+nz
+ou
+Nc
+Wt
+nz
+ou
+Nc
+QC
+gm
+Ui
+Nc
+ny
+nz
+wy
+Nc
+Wt
+nz
+kM
+Nc
+lG
+nz
+EP
+bq
+bq
+fM
+zU
+zU
+BC
+sz
+"}
+(18,1,1) = {"
+sz
+BC
+Oy
+Oy
+Oy
+Oy
+Oy
+Nc
+GF
+mg
+my
+Nc
+GF
+lD
+my
+Nc
+nP
+rm
+WJ
+Nc
+GF
+fA
+my
+Nc
+GF
+mg
+my
+Nc
+Ve
+mg
+my
+Nc
+Oy
+Oy
+XA
+Oy
+ST
+zU
+BC
+sz
+"}
+(19,1,1) = {"
+sz
+BC
+zU
+ST
+ST
+ST
+ST
+Nc
+Nc
+Ns
+Nc
+Nc
+Nc
+Ns
+Nc
+Nc
+Nc
+Ns
+Nc
+Nc
+Nc
+Ns
+Nc
+Nc
+Nc
+Dd
+Nc
+Nc
+Nc
+Ns
+Nc
+Nc
+ST
+Oy
+XA
+ST
+ST
+ST
+BC
+sz
+"}
+(20,1,1) = {"
+sz
+BC
+zU
+zU
+ST
+ST
+ST
+ST
+Oy
+Rr
+Oy
+ST
+ST
+Rr
+sR
+Nc
+mn
+FC
+wx
+Nc
+mn
+FC
+el
+Nc
+mn
+zi
+el
+Nc
+Ua
+Rz
+el
+Nc
+ST
+Oy
+sR
+Oy
+Oy
+zU
+BC
+sz
+"}
+(21,1,1) = {"
+sz
+BC
+zU
+zU
+zU
+ST
+ST
+ST
+Oy
+Rr
+ST
+Oy
+XA
+xv
+bq
+nz
+wy
+Nc
+ix
+gm
+wy
+Nc
+ix
+nz
+ou
+Nc
+ix
+gm
+wy
+Nc
+Wt
+nz
+bq
+bq
+bq
+bq
+fM
+XA
+BC
+sz
+"}
+(22,1,1) = {"
+sz
+BC
+zU
+zU
+zU
+zU
+zU
+ST
+Oy
+Rr
+ST
+ST
+sR
+Oy
+ST
+Nc
+GF
+rm
+my
+Nc
+Bh
+AJ
+my
+Nc
+GF
+Zb
+aV
+Nc
+GF
+AJ
+my
+Nc
+ST
+Oy
+Oy
+Oy
+Oy
+Oy
+qJ
+sz
+"}
+(23,1,1) = {"
+sz
+BC
+BC
+BC
+zU
+zU
+zU
+zU
+Oy
+yD
+ST
+Oy
+XA
+Oy
+ST
+Nc
+Nc
+Ns
+Nc
+Nc
+Nc
+Ns
+Nc
+Nc
+Nc
+ko
+Nc
+Nc
+Nc
+Ns
+Nc
+Nc
+ST
+ST
+ST
+ST
+ST
+ST
+BC
+sz
+"}
+(24,1,1) = {"
+sz
+BC
+BC
+BC
+zU
+zU
+zU
+zU
+zU
+XA
+ST
+Oy
+XA
+ST
+ST
+Nc
+pF
+Rz
+el
+Nc
+mn
+Rz
+el
+Nc
+UE
+ba
+UE
+Nc
+mn
+zi
+el
+Nc
+ST
+Oy
+ST
+ST
+ST
+zU
+BC
+sz
+"}
+(25,1,1) = {"
+sz
+BC
+BC
+BC
+BC
+zU
+zU
+zU
+zU
+zU
+ST
+Oy
+tg
+bq
+bq
+nz
+ou
+Nc
+QC
+gm
+kM
+Nc
+pG
+nz
+Bq
+UE
+An
+nz
+hP
+Nc
+ix
+gm
+Sh
+Oy
+Oy
+Oy
+zU
+zU
+BC
+sz
+"}
+(26,1,1) = {"
+sz
+BC
+BC
+BC
+BC
+zU
+zU
+zU
+zU
+zU
+ST
+Oy
+yD
+Oy
+Oy
+Nc
+nP
+rm
+my
+Nc
+Ve
+mg
+my
+Nc
+UE
+Zj
+UE
+Nc
+GF
+mg
+my
+Nc
+Wx
+Sh
+zU
+zU
+zU
+BC
+BC
+sz
+"}
+(27,1,1) = {"
+sz
+BC
+BC
+BC
+BC
+BC
+BC
+zU
+zU
+zU
+ST
+Oy
+XA
+Oy
+ST
+Nc
+Nc
+Ns
+Nc
+Nc
+Nc
+Ns
+Nc
+Nc
+Nc
+Ns
+Nc
+Nc
+Nc
+Ns
+Nc
+Nc
+Nc
+Ns
+Nc
+Nc
+zU
+BC
+BC
+sz
+"}
+(28,1,1) = {"
+sz
+BC
+BC
+BC
+BC
+BC
+BC
+zU
+zU
+zU
+ST
+Oy
+XA
+Oy
+Oy
+Nc
+mn
+Rz
+el
+Nc
+pF
+Rz
+el
+Nc
+mn
+Rz
+el
+Nc
+mn
+Tt
+el
+Nc
+mn
+Tt
+el
+Nc
+Oy
+qJ
+qJ
+sz
+"}
+(29,1,1) = {"
+sz
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+zU
+zU
+zU
+ST
+XA
+Oy
+tg
+nz
+wy
+Nc
+ix
+nz
+ou
+Nc
+QC
+nz
+kM
+Nc
+ix
+gm
+ou
+Nc
+QC
+nz
+HA
+Nc
+Ku
+Je
+nd
+Gx
+Gp
+sz
+"}
+(30,1,1) = {"
+sz
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+zU
+zU
+zU
+ST
+XA
+Oy
+YH
+Nc
+GF
+AJ
+my
+Nc
+nP
+lD
+my
+Nc
+nP
+mg
+my
+Nc
+GF
+AJ
+my
+Nc
+gT
+UW
+mw
+Nc
+zU
+BC
+BC
+sz
+"}
+(31,1,1) = {"
+sz
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+zU
+zU
+ST
+XA
+Oy
+vv
+Nc
+Nc
+Ns
+Nc
+Nc
+Nc
+YU
+Nc
+Nc
+Nc
+Ns
+Nc
+Nc
+Nc
+Ns
+Nc
+Nc
+Nc
+Ns
+Nc
+Nc
+zU
+BC
+BC
+sz
+"}
+(32,1,1) = {"
+sz
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+zU
+zU
+ST
+XA
+Oy
+XA
+Oy
+ST
+Rr
+Oy
+ST
+Oy
+ah
+Oy
+ST
+Oy
+Rr
+Oy
+ST
+Oy
+Rr
+Oy
+ST
+Oy
+Rr
+Oy
+zU
+zU
+BC
+BC
+sz
+"}
+(33,1,1) = {"
+sz
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+zU
+zU
+XA
+Oy
+XA
+ST
+ST
+ah
+Oy
+ST
+Oy
+yD
+ST
+ST
+Oy
+ah
+Oy
+ST
+Oy
+yD
+sR
+XA
+XA
+xv
+bq
+bq
+bq
+Cm
+Gp
+sz
+"}
+(34,1,1) = {"
+sz
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+Gp
+Oy
+zU
+zU
+ST
+Rr
+Oy
+Oy
+Oy
+ST
+ST
+ST
+Oy
+Rr
+Oy
+ST
+Oy
+Oy
+Oy
+Oy
+ST
+ST
+Oy
+Oy
+Oy
+qJ
+BC
+sz
+"}
+(35,1,1) = {"
+sz
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+Gp
+zU
+zU
+zU
+zU
+Rr
+zU
+zU
+Oy
+ST
+zU
+ST
+Oy
+Rr
+Oy
+ST
+ST
+ST
+ST
+ST
+ST
+ST
+ST
+ST
+ST
+BC
+BC
+sz
+"}
+(36,1,1) = {"
+sz
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+zU
+zU
+yD
+zU
+zU
+Oy
+ST
+zU
+zU
+Oy
+yD
+ST
+ST
+zU
+ST
+ST
+ST
+ST
+ST
+ST
+zU
+BC
+BC
+BC
+sz
+"}
+(37,1,1) = {"
+sz
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+zU
+zU
+zU
+Oy
+zU
+zU
+zU
+zU
+XA
+ST
+zU
+zU
+zU
+zU
+zU
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+sz
+"}
+(38,1,1) = {"
+sz
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+Gp
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+sz
+"}
+(39,1,1) = {"
+sz
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+BC
+sz
+"}
+(40,1,1) = {"
+sz
+sz
+sz
+sz
+sz
+sz
+sz
+sz
+sz
+sz
+sz
+sz
+sz
+sz
+sz
+sz
+sz
+sz
+sz
+sz
+sz
+sz
+sz
+sz
+sz
+sz
+sz
+sz
+sz
+sz
+sz
+sz
+sz
+sz
+sz
+sz
+sz
+sz
+sz
+sz
+"}

@@ -232,6 +232,20 @@ export const FunForYouTab = (props) => {
             </Button>
           </NoticeBox>
         </Stack.Item>
+        {/* Outpost 21 edit begin - Outpost admin fun */}
+        <Stack.Item>
+          <NoticeBox danger mb={0}>
+            <Button
+              color="black"
+              icon="fire"
+              fluid
+              onClick={() => act('summonclean')}
+            >
+              Summon All Is Clean! (DANGEROUS: ends round)
+            </Button>
+          </NoticeBox>
+        </Stack.Item>
+        {/* Outpost 21 edit end */}
       </Stack.Item>
       <Stack>
         <Stack.Item>

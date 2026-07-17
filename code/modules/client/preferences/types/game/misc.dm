@@ -11,7 +11,7 @@
 	var/datum/plane_holder/PH = client?.mob?.plane_holder
 	if(PH)
 		PH.set_ao(VIS_OBJS, value)
-		PH.set_ao(VIS_MOBS, value)
+		// PH.set_ao(VIS_MOBS, value) // Outpost 21 edit - Completely broken for stealth
 
 /datum/preference/toggle/attack_icons
 	category = PREFERENCE_CATEGORY_GAME_PREFERENCES
@@ -65,6 +65,14 @@
 	savefile_key = "MessengerEmbeds"
 	default_value = TRUE
 	savefile_identifier = PREFERENCE_PLAYER
+
+// Outpost 21 edit begin - Hide automatic pain scream
+/datum/preference/toggle/hide_pain_scream
+	category = PREFERENCE_CATEGORY_GAME_PREFERENCES
+	savefile_key = "HIDE_PAIN_SCREAM"
+	default_value = FALSE
+	savefile_identifier = PREFERENCE_PLAYER
+// Outpost 21 edit end
 
 /datum/preference/toggle/autopunctuation
 	category = PREFERENCE_CATEGORY_GAME_PREFERENCES

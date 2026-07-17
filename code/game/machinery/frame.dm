@@ -24,9 +24,10 @@ GLOBAL_LIST(construction_frame_floor)
 	var/frame_style = FRAME_STYLE_FLOOR	// "floor" or "wall"
 	var/x_offset				// For wall frames: pixel_x
 	var/y_offset				// For wall frames: pixel_y
+	var/is_dense = TRUE			// Lazy workaround for wall-mounted, upgradable machines
 
 // Get the icon state to use at a given state.  Default implementation is based on the frame's name
-/datum/frame/frame_types/proc/get_icon_state(var/state)
+/datum/frame/frame_types/proc/get_icon_state(state)
 	var/type = lowertext(name)
 	type = replacetext(type, " ", "_")
 	return "[type]_[state]"
@@ -217,6 +218,22 @@ GLOBAL_LIST(construction_frame_floor)
 	circuit = /obj/item/circuitboard/injector_maker
 	frame_size = 3
 
+/datum/frame/frame_types/foodsynthesizer
+	name = "Food Synthesizer"
+	icon_override = 'icons/obj/machines/foodsynthesizer.dmi'
+	frame_class = FRAME_CLASS_MACHINE
+	frame_size = 5
+	frame_style = FRAME_STYLE_WALL
+	x_offset = 24
+	y_offset = 30
+	is_dense = FALSE
+
+/datum/frame/frame_types/foodsynthesizer/mini
+	name = "Mini Food Synthesizer"
+	frame_class = FRAME_CLASS_MACHINE
+	frame_size = 3 // smaller, so slightly fewer sheets
+	frame_style = FRAME_STYLE_WALL
+
 // Refinery machines
 /datum/frame/frame_types/industrial_reagent_grinder
 	name = "Industrial Chemical Grinder"
@@ -245,6 +262,7 @@ GLOBAL_LIST(construction_frame_floor)
 
 /datum/frame/frame_types/industrial_reagent_pipe
 	name = "Industrial Chemical Pipe"
+	circuit = /obj/item/circuitboard/industrial_reagent_pipe // Comes with it's own circuitboard now
 	icon_override = 'icons/obj/stock_parts_refinery.dmi'
 	frame_class = FRAME_CLASS_MACHINE
 
@@ -327,7 +345,7 @@ GLOBAL_LIST(construction_frame_floor)
 	for(var/obj/ct as anything in req_components)
 		req_component_names[ct] = initial(ct.name)
 
-/obj/structure/frame/Initialize(mapload, var/dir, var/building = 0, var/datum/frame/frame_types/type, mob/user as mob)
+/obj/structure/frame/Initialize(mapload, dir, building = 0, datum/frame/frame_types/type, mob/user as mob)
 	. = ..()
 	if(building)
 		frame_type = type
@@ -349,7 +367,7 @@ GLOBAL_LIST(construction_frame_floor)
 	if(frame_type.name == "Computer")
 		density = TRUE
 
-	if(frame_type.frame_class == FRAME_CLASS_MACHINE)
+	if(frame_type.frame_class == FRAME_CLASS_MACHINE && frame_type.is_dense)
 		density = TRUE
 
 	update_icon()
@@ -490,6 +508,7 @@ GLOBAL_LIST(construction_frame_floor)
 				circuit.construct(B)
 				circuit.loc = null
 				B.circuit = circuit
+				B.update_icon()
 				var/obj/machinery/computer/LC = locate() in get_step(B, turn(B.dir, 90))
 				var/obj/machinery/computer/RC = locate() in get_step(B, turn(B.dir, -90))
 				if(LC)
@@ -646,7 +665,7 @@ GLOBAL_LIST(construction_frame_floor)
 
 	update_icon()
 
-/obj/structure/frame/proc/install_part(var/mob/user, var/obj/item/P, var/defer_feedback = FALSE)
+/obj/structure/frame/proc/install_part(mob/user, obj/item/P, defer_feedback = FALSE)
 	var/installed_part = FALSE
 	for(var/I in req_components)
 		if(!istype(P, I) || (req_components[I] == 0))
@@ -686,7 +705,7 @@ GLOBAL_LIST(construction_frame_floor)
 	to_chat(user, span_warning("You cannot add that component to the machine!"))
 	return FALSE
 
-/obj/structure/frame/proc/mass_install_parts(var/mob/user, var/obj/item/storage/S)
+/obj/structure/frame/proc/mass_install_parts(mob/user, obj/item/storage/S)
 	var/installed_part = FALSE
 	for(var/obj/item/P in S.contents)
 		installed_part |= install_part(user, P, TRUE)

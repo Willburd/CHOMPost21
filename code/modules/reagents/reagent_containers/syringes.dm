@@ -18,7 +18,7 @@
 	icon_state = "0"
 	center_of_mass_x = 16
 	center_of_mass_y = 14
-	matter = list(MAT_GLASS = 150)
+	matter = list(MAT_GLASS = MATERIAL_COST(0.075))
 	amount_per_transfer_from_this = 5
 	max_transfer_amount = null
 	volume = 15
@@ -60,7 +60,7 @@
 	..()
 	update_icon()
 
-/obj/item/reagent_containers/syringe/dropped(mob/user)
+/obj/item/reagent_containers/syringe/dropped(mob/user, equipping, slot)
 	..()
 	update_icon()
 
@@ -279,7 +279,10 @@
 			else
 				to_chat(user, span_notice("The syringe is empty."))
 
-//		dirty(target,affected) //VOREStation Add -- Removed by Request
+			// Outpost 21 edit begin - syringe dirtying restored, but made less painful
+			if(affected)
+				dirty(target,affected)
+			// Outpost 21 edit end
 	return
 
 /obj/item/reagent_containers/syringe/proc/syringestab(mob/living/carbon/target as mob, mob/living/carbon/user as mob)
@@ -415,7 +418,17 @@
 	//reagents.add_reagent(REAGENT_ID_ADRENALINE,5) //VOREStation Edit - No thanks.
 	reagents.add_reagent(REAGENT_ID_HYPERZINE,10)
 
-/obj/item/reagent_containers/syringe/proc/dirty(var/mob/living/carbon/human/target, var/obj/item/organ/external/eo)
+// Outpost 21 edit(port) begin - Sterilization of dirty needles
+/obj/item/reagent_containers/syringe/proc/sterilize()
+	dirtiness = 0
+	QDEL_LIST_NULL(viruses)
+	LAZYCLEARLIST(targets)
+	if(used)
+		used = FALSE
+		STOP_PROCESSING(SSobj, src)
+// Outpost 21 edit end
+
+/obj/item/reagent_containers/syringe/proc/dirty(mob/living/carbon/human/target, obj/item/organ/external/eo)
 	if(!ishuman(loc))
 		return //Avoid borg syringe problems.
 	LAZYINITLIST(targets)
@@ -437,8 +450,8 @@
 	var/infect_chance = dirtiness        //Start with dirtiness
 	if(infect_chance <= 10 && (hash in targets)) //Extra fast uses on target is free
 		infect_chance = 0
-	infect_chance += (targets.len-1)*10    //Extra 10% per extra target
-	if(prob(infect_chance))
+	infect_chance += (targets.len-1)*5    //Extra 5% per extra target, outpost 21 edit - 10% to 5%
+	if(targets.len > 1 && prob(infect_chance)) // Outpost 21 edit - Using it on the same person is the same as normal code
 		log_and_message_admins("[loc] infected [target]'s [eo.name] with \the [src].", usr)
 		infect_limb(eo)
 
@@ -450,9 +463,10 @@
 			target.ContractDisease(virus)
 
 	if(!used)
+		used = TRUE // Outpost 21 edit - missing flag?
 		START_PROCESSING(SSobj, src)
 
-/obj/item/reagent_containers/syringe/proc/infect_limb(var/obj/item/organ/external/eo)
+/obj/item/reagent_containers/syringe/proc/infect_limb(obj/item/organ/external/eo)
 	src = null
 	var/datum/weakref/limb_ref = WEAKREF(eo)
 	spawn(rand(5 MINUTES,10 MINUTES))

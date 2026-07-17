@@ -58,7 +58,7 @@
 
 // Use this when setting the eye's location.
 // It will also stream the chunk that the new loc is in.
-/mob/observer/eye/proc/setLoc(var/T)
+/mob/observer/eye/proc/setLoc(T)
 	if(owner)
 		T = get_turf(T)
 		if(T != loc)
@@ -88,7 +88,10 @@
 
 	return eyeobj.EyeMove(n, direct)
 
-/mob/observer/eye/proc/GetViewerClient()
+/mob/observer/proc/GetViewerClient() // Outpost 21 edit(port) - Literally no reason for this not to be base observer level
+	return client
+
+/mob/observer/eye/GetViewerClient() // Outpost 21 edit(port) - Literally no reason for this not to be base observer level
 	if(owner)
 		return owner.client
 	return null

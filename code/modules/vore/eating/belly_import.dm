@@ -12,8 +12,10 @@
 		return TRUE
 
 	switch(action)
+		/* Outpost 21 edit - Disable soulgems
 		if("import_soulcatcher")
 			import_soulcatcher(host, params["data"])
+		*/
 		if("import_bellies")
 			import_belly(ui.user, params["data"])
 

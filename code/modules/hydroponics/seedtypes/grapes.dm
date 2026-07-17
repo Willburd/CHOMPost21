@@ -26,7 +26,7 @@
 	seed_name = "green grape"
 	display_name = "green grapevines"
 	mutants = null
-	chems = list(REAGENT_ID_NUTRIMENT = list(1,10), REAGENT_ID_KELOTANE = list(3,5), REAGENT_ID_GRAPEJUICE = list(10,10))
+	chems = list(REAGENT_ID_NUTRIMENT = list(1,10), REAGENT_ID_KELOTANE = list(1,2), REAGENT_ID_GRAPEJUICE = list(10,10)) // Outpost 21 edit - Hydroponics chem nerf
 
 /datum/seed/grapes/green/New()
 	..()

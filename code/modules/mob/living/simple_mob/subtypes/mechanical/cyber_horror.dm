@@ -36,6 +36,12 @@
 
 	can_be_drop_prey = FALSE
 
+// Outpost 21 edit begin - Undead reviving mobs
+/mob/living/simple_mob/mechanical/cyber_horror/Initialize(mapload)
+	. = ..()
+	AddComponent(/datum/component/undead_revival, rev_time = 1 MINUTE, rev_chance = 30, rev_hppercent = 50)
+// Outpost 21 edit end
+
 /datum/say_list/cyber_horror
 	speak = list("H@!#$$P M@!$#",
 					"GHAA!@@#",
@@ -94,7 +100,7 @@
 /datum/say_list/cyber_horror/plasma
 	threaten_sound = 'sound/mob/robots/Cyber_Horror_Plasma.ogg'
 
-/mob/living/simple_mob/mechanical/cyber_horror/plasma_cyber_horror/apply_melee_effects(var/atom/A)
+/mob/living/simple_mob/mechanical/cyber_horror/plasma_cyber_horror/apply_melee_effects(atom/A)
 	if(isliving(A))
 		var/mob/living/L = A
 		if(L.reagents)
@@ -297,7 +303,7 @@
 	. = ..()
 	break_cloak()
 
-/mob/living/simple_mob/mechanical/cyber_horror/tajaran/hit_with_weapon(obj/item/O, mob/living/user, effective_force, hit_zone)
+/mob/living/simple_mob/mechanical/cyber_horror/tajaran/hit_with_weapon(obj/item/O, mob/living/user, effective_force, hit_zone, hide_attack_message)
 	. = ..()
 	break_cloak()
 
@@ -379,7 +385,7 @@
 /datum/say_list/cyber_horror/cat
 	threaten_sound = 'sound/mob/robots/Cyber_Horror_Cat.ogg'
 
-/mob/living/simple_mob/mechanical/cyber_horror/cat_cyber_horror/apply_melee_effects(var/atom/A)
+/mob/living/simple_mob/mechanical/cyber_horror/cat_cyber_horror/apply_melee_effects(atom/A)
 	if(isliving(A))
 		var/mob/living/L = A
 		if(L.reagents)

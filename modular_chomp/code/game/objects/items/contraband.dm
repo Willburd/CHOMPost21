@@ -20,7 +20,8 @@
 		/obj/item/storage/fancy/cigar/havana,
 		/obj/item/card/emag_broken,
 		/obj/item/sleevemate,
-		/obj/item/disk/nifsoft/compliance,
+		/obj/item/implanter/loyalty, // outpost 21 edit - Kinda evil drops
+		// /obj/item/disk/nifsoft/compliance, Outpost 21 edit - Nif removal
 		/obj/item/seeds/ambrosiadeusseed,
 		/obj/item/seeds/ambrosiavulgarisseed,
 		/obj/item/bodysnatcher)

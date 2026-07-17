@@ -12,8 +12,7 @@ GLOBAL_DATUM(sleevemate_mob, /mob/living/carbon/human/dummy/mannequin)
 	w_class = ITEMSIZE_SMALL
 	throw_speed = 5
 	throw_range = 10
-	matter = list(MAT_STEEL = 200)
-	origin_tech = list(TECH_MAGNET = 2, TECH_BIO = 2)
+	matter = list(MAT_STEEL = MATERIAL_COST(0.1))
 
 	var/datum/mind/stored_mind
 
@@ -24,6 +23,8 @@ GLOBAL_DATUM(sleevemate_mob, /mob/living/carbon/human/dummy/mannequin)
 	var/ooc_notes_dislikes = null
 	var/ooc_notes_style = FALSE
 	var/soulcatcher_pref_flags = NONE
+
+	var/emagged = FALSE // Outpost 21 edit - Emagged sleevemate
 
 	// Resleeving database this machine interacts with. Blank for default database
 	// Needs a matching /datum/transcore_db with key defined in code
@@ -73,12 +74,16 @@ GLOBAL_DATUM(sleevemate_mob, /mob/living/carbon/human/dummy/mannequin)
 	M.ooc_notes_maybes = ooc_notes_maybes
 	M.ooc_notes_style = ooc_notes_style
 	M.soulcatcher_pref_flags = soulcatcher_pref_flags
+	if(ishuman(M)) //Has to be done here since making someone a changeling requires an active mind.
+		var/mob/living/carbon/human/ling_test = M
+		if(ling_test.changeling_locked)
+			M.make_changeling()
 	SEND_GLOBAL_SIGNAL(COMSIG_GLOB_RESLEEVED_MIND, M, stored_mind)
 	clear_mind()
 
 
 
-/obj/item/sleevemate/attack(mob/living/M, mob/living/user)
+/obj/item/sleevemate/attack(mob/living/M, mob/living/user, target_zone, attack_modifier)
 	// Gather potential subtargets
 	var/list/choices = list(M)
 	if(istype(M))
@@ -89,7 +94,7 @@ GLOBAL_DATUM(sleevemate_mob, /mob/living/carbon/human/dummy/mannequin)
 	if(choices.len > 1)
 		var/mob/living/new_M = tgui_input_list(user, "Ambiguous target. Please validate target:", "Target Validation", choices, M)
 		if(!new_M || !M.Adjacent(user))
-			return
+			return ITEM_INTERACT_FAILURE
 		M = new_M
 
 	if(isrobot(M))
@@ -97,12 +102,14 @@ GLOBAL_DATUM(sleevemate_mob, /mob/living/carbon/human/dummy/mannequin)
 		var/obj/item/dogborg/sleeper/S = locate() in R.module.modules
 		if(S && S.patient)
 			scan_mob(S.patient, user)
-			return
+			return ITEM_INTERACT_SUCCESS
 
 	if(ishuman(M))
 		scan_mob(M, user)
+		return ITEM_INTERACT_SUCCESS
 	else
 		to_chat(user,span_warning("Not a compatible subject to work with!"))
+		return ITEM_INTERACT_FAILURE
 
 /obj/item/sleevemate/attack_self(mob/living/user)
 	. = ..(user)
@@ -187,6 +194,7 @@ GLOBAL_DATUM(sleevemate_mob, /mob/living/carbon/human/dummy/mannequin)
 	else
 		output += span_warning("Unable") + "<br>"
 
+	/* Outpost 21 edit - Nif removal
 	//Soulcatcher transfer
 	if(H.nif)
 		var/datum/nifsoft/soulcatcher/SC = H.nif.imp_check(NIF_SOULCATCHER)
@@ -198,6 +206,7 @@ GLOBAL_DATUM(sleevemate_mob, /mob/living/carbon/human/dummy/mannequin)
 
 			if(stored_mind)
 				output += span_bold("Store in Soulcatcher: ") + "\[<a href='byond://?src=\ref[src];target=\ref[H];mindput=1'>Perform</a>\]<br>"
+	*/
 
 	to_chat(user,output)
 
@@ -225,16 +234,40 @@ GLOBAL_DATUM(sleevemate_mob, /mob/living/carbon/human/dummy/mannequin)
 			to_chat(usr,span_warning("Target seems totally braindead."))
 			return
 
+		// Outpost 21 edit begin - Coredump prevents scans
+		if(SStranscore.default_db?.core_dumped)
+			to_chat(usr,span_danger("Transcore safety interlock failure. Resleeving database is dumped and offline."))
+			return
+		// Outpost 21 edit end
+
+		/* Outpost 21 edit - Nif removal
 		var/nif
 		if(ishuman(target))
 			var/mob/living/carbon/human/H = target
 			nif = H.nif
 			persist_nif_data(H)
+		*/
 
 		usr.visible_message("[usr] begins scanning [target]'s mind.",span_notice("You begin scanning [target]'s mind."))
 		if(do_after(usr, 8 SECONDS, target))
-			our_db.m_backup(target.mind,nif,one_time = TRUE)
-			to_chat(usr,span_notice("Mind backed up!"))
+			// Outpost 21 edit begin - Emagged sleevemate
+			if(emagged)
+				if(target.mind && (target.mind.name in our_db.backed_up))
+					var/datum/transhuman/mind_record/MR = our_db.backed_up[target.mind.name]
+					our_db.removed_mind(MR)
+					to_chat(usr,span_notice("Corrupted mind backup uploaded!"))
+				else
+					to_chat(usr,span_notice("Mind record not found!"))
+				return
+			// Outpost 21 edit end
+			our_db.m_backup(target.mind, null /* Outpost 21 edit - Nif removal: nif */,one_time = TRUE)
+			// Outpost 21 edit begin - Haunted sleevemates
+			var/area/A = get_area(src)
+			if(A && A.haunted && prob(20))
+				to_chat(usr,span_notice(pick(list("Soul stolen!","Error, mind erased!","Error, no mind detected!","Error, no soul detected!","Error, they are not really [target]."))))
+			else
+				to_chat(usr,span_notice("Mind backed up!"))
+			// Outpost 21 edit end
 		else
 			to_chat(usr,span_warning("You must remain close to your target!"))
 
@@ -245,13 +278,25 @@ GLOBAL_DATUM(sleevemate_mob, /mob/living/carbon/human/dummy/mannequin)
 			to_chat(usr,span_warning("Target is not of an acceeptable body type."))
 			return
 
+		// Outpost 21 edit begin - Coredump prevents scans
+		if(SStranscore.default_db?.core_dumped)
+			to_chat(usr,span_danger("Transcore safety interlock failure. Resleeving database is dumped and offline."))
+			return
+		// Outpost 21 edit end
+
 		var/mob/living/carbon/human/H = target
 
 		usr.visible_message("[usr] begins scanning [target]'s body.",span_notice("You begin scanning [target]'s body."))
 		if(do_after(usr, 8 SECONDS, target))
 			var/datum/transhuman/body_record/BR = new()
-			BR.init_from_mob(H, TRUE, TRUE, database_key = db_key)
-			to_chat(usr,span_notice("Body scanned!"))
+			BR.init_from_mob(H, TRUE, H.resleeve_lock, database_key = db_key) // Outpost 21 edit - Maintain resleeve_lock
+			// Outpost 21 edit begin - Haunted sleevemates
+			var/area/A = get_area(src)
+			if(A && A.haunted && prob(20))
+				to_chat(usr,span_notice(pick(list("Error, body is corrupt!","Error, the meat rejects us.","Error, this husk is puppeted by another.","Error, body scan erased!","Error, [target]'s body does not exist!"))))
+			else
+				to_chat(usr,span_notice("Body scanned!"))
+			// Outpost 21 edit end
 		else
 			to_chat(usr,span_warning("You must remain close to your target!"))
 
@@ -277,6 +322,7 @@ GLOBAL_DATUM(sleevemate_mob, /mob/living/carbon/human/dummy/mannequin)
 
 		return
 
+	/* Outpost 21 edit - Nif removal
 	if(href_list["mindput"])
 		if(!stored_mind)
 			to_chat(usr,span_warning("\The [src] no longer has a stored mind."))
@@ -305,6 +351,7 @@ GLOBAL_DATUM(sleevemate_mob, /mob/living/carbon/human/dummy/mannequin)
 		put_mind(GLOB.sleevemate_mob)
 		SC.catch_mob(GLOB.sleevemate_mob)
 		to_chat(usr,span_notice("Mind transferred into Soulcatcher!"))
+	*/
 
 	if(href_list["mindupload"])
 		if(!stored_mind)
@@ -332,6 +379,7 @@ GLOBAL_DATUM(sleevemate_mob, /mob/living/carbon/human/dummy/mannequin)
 			put_mind(target)
 			to_chat(usr,span_notice("Mind transferred into [target]!"))
 
+	/* Outpost 21 edit - Nif removal
 	if(href_list["mindrelease"])
 		if(stored_mind)
 			to_chat(usr,span_warning("There is already someone's mind stored inside"))
@@ -347,6 +395,7 @@ GLOBAL_DATUM(sleevemate_mob, /mob/living/carbon/human/dummy/mannequin)
 				to_chat(usr,span_notice("Mind downloaded!"))
 				return
 		to_chat(usr,span_notice("Unable to find that mind in Soulcatcher!"))
+	*/
 
 /obj/item/sleevemate/update_icon()
 	if(stored_mind)
@@ -354,9 +403,9 @@ GLOBAL_DATUM(sleevemate_mob, /mob/living/carbon/human/dummy/mannequin)
 	else
 		icon_state = initial(icon_state)
 
-/obj/item/sleevemate/emag_act(var/remaining_charges, var/mob/user)
+/obj/item/sleevemate/emag_act(remaining_charges, mob/user)
 	//CHOMPEdit Start
-	var/list/choices = list("Body Snatcher","Mind Binder")
+	var/list/choices = list("Body Snatcher","Mind Binder","Corruptor") // Outpost 21 edit - Emagged sleevemate
 	var/choice = tgui_input_list(user, "How would you like to modify the [src]?", "", choices)
 	if(!choice || !(choice in choices)) return
 	//CHOMPEdit End
@@ -365,6 +414,11 @@ GLOBAL_DATUM(sleevemate_mob, /mob/living/carbon/human/dummy/mannequin)
 	spark_system.set_up(5, 0, src.loc)
 	spark_system.start()
 	playsound(src, "sparks", 50, 1)
+	// Outpost 21 edit begin - Emagged sleevemate
+	if(choice == "Corruptor")
+		emagged = TRUE
+		return TRUE
+	// Outpost 21 edit end
 	if(isliving(src.loc))
 		var/mob/living/L = src.loc
 		L.unEquip(src)

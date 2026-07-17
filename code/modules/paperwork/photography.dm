@@ -36,6 +36,7 @@ GLOBAL_VAR_INIT(photo_count, 0)
 	var/scribble	//Scribble on the back.
 	var/icon/tiny
 	var/photo_size = 3
+	resistance_flags = FLAMMABLE
 
 /obj/item/photo/Initialize(mapload)
 	. = ..()
@@ -64,7 +65,7 @@ GLOBAL_VAR_INIT(photo_count, 0)
 		return list(span_notice("It is too far away to examine."))
 
 /obj/item/photo/proc/show(mob/user as mob)
-	user << browse_rsc(img, "tmp_photo_[id].png")
+	send_rsc(user, img, "tmp_photo_[id].png")
 	user << browse("<html><head><title>[name]</title></head>" \
 		+ "<body style='overflow:hidden;margin:0;text-align:center'>" \
 		+ "<img src='tmp_photo_[id].png' width='[64*photo_size]' style='-ms-interpolation-mode:nearest-neighbor' />" \
@@ -84,6 +85,39 @@ GLOBAL_VAR_INIT(photo_count, 0)
 		name = "[(n_name ? text("[n_name]") : "photo")]"
 	add_fingerprint(usr)
 	return
+
+
+// outpost 21 edit begin - The image of a...
+/obj/item/photo/proc/statue_curse(user)
+	var/t = rand(260, 560) SECONDS
+	log_admin("[user] took a picture of an angel statue. It will spawn a statue in: [t / (1 SECOND)] seconds.")
+	addtimer(CALLBACK(src, PROC_REF(statue_spawn)), t)
+
+/obj/item/photo/proc/statue_spawn()
+	if(GLOB.statue_photos_allowed <= 0)
+		return
+	if(!QDELETED(src))
+		var/turf/T = get_turf(src)
+		if(isturf(T))
+			visible_message("\The [src] flickers.")
+			spawn(10)
+				if(!QDELETED(src))
+					visible_message("\The [src] shakes.")
+					T = get_turf(src)
+					if(isturf(T))
+						for(var/obj/machinery/light/L in oview(12, T))
+							L.flicker(rand(20, 50))
+							spawn(rand(15,50))
+								if(prob(80))
+									L.broken()
+			spawn(13)
+				if(!QDELETED(src))
+					T = get_turf(src)
+					if(isturf(T))
+						new /mob/living/simple_mob/animal/statue(T)
+						GLOB.statue_photos_allowed--
+					desc += span_cult("Part of the photo is smeared unnaturally.")
+// Outpost 21 edit end
 
 
 /**************
@@ -131,7 +165,7 @@ GLOBAL_VAR_INIT(photo_count, 0)
 	item_state = "camera"
 	w_class = ITEMSIZE_SMALL
 	slot_flags = SLOT_BELT
-	matter = list(MAT_STEEL = 2000)
+	matter = list(MAT_STEEL = MATERIAL_COST(1))
 	var/pictures_max = 10
 	var/pictures_left = 10
 	var/on = 1
@@ -148,8 +182,8 @@ GLOBAL_VAR_INIT(photo_count, 0)
 		size = nsize
 		to_chat(usr, span_notice("Camera will now take [size]x[size] photos."))
 
-/obj/item/camera/attack(mob/living/carbon/human/M as mob, mob/user as mob)
-	return
+/obj/item/camera/attack(mob/living/M, mob/living/user, target_zone, attack_modifier)
+	return NONE
 
 /obj/item/camera/attack_self(mob/user)
 	. = ..(user)
@@ -191,9 +225,14 @@ GLOBAL_VAR_INIT(photo_count, 0)
 		atoms.Add(the_turf);
 		// As well as anything that isn't invisible.
 		for(var/atom/A in the_turf)
-			if(A.invisibility) continue
-			if(A.plane > 0 && !(A.plane in picture_planes)) continue
+			// Outpost 21 edit begin - allow ghosts into photos
+			if(!istype(A,/mob/observer/dead))
+				if(A.invisibility) continue
+				if(A.plane > 0 && !(A.plane in picture_planes)) continue
+			else
+				SShaunting.influence(HAUNTING_GHOSTS) // IT DA SPOOKY STATION!
 			atoms.Add(A)
+			// Outpost 21 edit end
 
 	// Sort the atoms into their layers
 	var/list/sorted = sort_atoms_by_layer(atoms)
@@ -228,22 +267,43 @@ GLOBAL_VAR_INIT(photo_count, 0)
 
 /obj/item/camera/proc/get_mobs(turf/the_turf as turf)
 	var/mob_detail
-	for(var/mob/living/carbon/A in the_turf)
-		if(A.invisibility) continue
-		var/holding = null
-		if(A.l_hand || A.r_hand)
-			if(A.l_hand) holding = "They are holding \a [A.l_hand]"
-			if(A.r_hand)
-				if(holding)
-					holding += " and \a [A.r_hand]"
-				else
-					holding = "They are holding \a [A.r_hand]"
+	// Outpost 21 edit begin - ghosts in photos, and statues
+	for(var/atom/S in the_turf)
+		if(isobserver(S))
+			// hide observers that are not ghosts
+			var/mob/observer/dead/G = S;
+			if(!G.is_dead()) continue
+			if(G.admin_ghosted) continue // Hide Aghosts
+			// add ghost description
+			if(!mob_detail)
+				mob_detail = "You can see a faded [G] on the photo."
+			else
+				mob_detail += "You can also see a faded [G] on the photo."
 
-		if(!mob_detail)
-			mob_detail = "You can see [A] on the photo[(A:health / A.getMaxHealth()) < 0.75 ? " - [A] looks hurt":""].[holding ? " [holding]":"."]. "
-		else
-			mob_detail += "You can also see [A] on the photo[(A:health / A.getMaxHealth()) < 0.75 ? " - [A] looks hurt":""].[holding ? " [holding]":"."]."
+		// add carbon descriptions
+		if(iscarbon(S))
+			var/mob/living/carbon/A = S
+			var/holding = null
+			if(A.l_hand || A.r_hand)
+				if(A.l_hand) holding = "They are holding \a [A.l_hand]"
+				if(A.r_hand)
+					if(holding)
+						holding += " and \a [A.r_hand]"
+					else
+						holding = "They are holding \a [A.r_hand]"
 
+			if(!mob_detail)
+				mob_detail = "You can see [A] on the photo[(A:health / A.getMaxHealth()) < 0.75 ? " - [A] looks hurt":""].[holding ? " [holding]":"."]. "
+			else
+				mob_detail += "You can also see [A] on the photo[(A:health / A.getMaxHealth()) < 0.75 ? " - [A] looks hurt":""].[holding ? " [holding]":"."]."
+
+		// What a cursed photo
+		if(istype(S,/mob/living/simple_mob/animal/statue))
+			if(!mob_detail)
+				mob_detail = "You can see a statue of an angel on the photo."
+			else
+				mob_detail += "You can also see a statue of an angel on the photo."
+	// Outpost 21 edit end
 	return mob_detail
 
 /obj/item/camera/afterattack(atom/target as mob|obj|turf|area, mob/user as mob, flag)
@@ -275,17 +335,26 @@ GLOBAL_VAR_INIT(photo_count, 0)
 	var/z_c	= target.z
 	var/list/turfs = list()
 	var/mobs = ""
+	var/statue = FALSE // outpost 21 edit - The image of a...
 	for(var/i = 1 to size)
 		for(var/j = 1 to size)
 			var/turf/T = locate(x_c, y_c, z_c)
 			if(can_capture_turf(T, user))
 				turfs.Add(T)
 				mobs += get_mobs(T)
+				// outpost 21 edit begin - The image of a...
+				if(locate(/mob/living/simple_mob/animal/statue) in T.contents)
+					statue = TRUE
+				// outpost 21 edit end
 			x_c++
 		y_c--
 		x_c = x_c - size
 
 	var/obj/item/photo/p = createpicture(target, user, turfs, mobs, flag)
+	// outpost 21 edit begin - The image of a...
+	if(statue)
+		p.statue_curse(user)
+	// outpost 21 edit end
 
 	printpicture(user, p)
 
@@ -317,7 +386,7 @@ GLOBAL_VAR_INIT(photo_count, 0)
 	if(!user.get_inactive_hand())
 		user.put_in_inactive_hand(p)
 
-/obj/item/photo/proc/copy(var/copy_id = 0)
+/obj/item/photo/proc/copy(copy_id = 0)
 	var/obj/item/photo/p = new/obj/item/photo()
 
 	p.name = name

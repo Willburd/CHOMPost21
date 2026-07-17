@@ -79,6 +79,15 @@
 
 	SSturf_cascade.start_cascade(get_turf(src), /turf/unsimulated/wall/supermatter)
 	SetUniversalState(/datum/universal_state/supermatter_cascade)
+
+	// Outpost 21 edit(port) begin - spawn the bluespace void
+	var/turf/our = get_turf(src)
+	if(our)
+		for(var/level in using_map.event_levels)
+			var/turf/T = get_turf(locate(our.x,our.y,level))
+			new /turf/unsimulated/wall/supermatter(T)
+	// Outpost 21 edit end
+
 	log_admin("New super singularity made by eating a SM crystal [prints]. Last touched by [forensic_data?.get_lastprint()].")
 	message_admins("New super singularity made by eating a SM crystal [prints]. Last touched by [forensic_data?.get_lastprint()].")
 	qdel(src)
@@ -121,4 +130,10 @@
 	return 0
 
 /mob/new_player/singuloCanEat()
+	return 0
+
+/turf/unsimulated/wall/supermatter/singuloCanEat() // Outpost 21 edit(port) - stop eating bluespace!
+	return 0
+
+/mob/obj/structure/stairs/singuloCanEat() // Outpost 21 edit(port) - stop eating stairs!
 	return 0

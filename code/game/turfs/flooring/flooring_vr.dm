@@ -1,7 +1,7 @@
 /turf/simulated/floor/flesh
 	name = "flesh"
 	desc = "This slick flesh ripples and squishes under your touch"
-	icon = 'icons/turf/stomach_vr.dmi'
+	icon = 'modular_outpost/icons/turf/stomach.dmi' // Outpost 21 edit - Flesh terrain tweaked
 	icon_state = "flesh_floor"
 	initial_flooring = /datum/decl/flooring/flesh
 
@@ -15,7 +15,7 @@
 /datum/decl/flooring/flesh
 	name = "flesh"
 	desc = "This slick flesh ripples and squishes under your touch"
-	icon = 'icons/turf/stomach_vr.dmi'
+	icon = 'modular_outpost/icons/turf/stomach.dmi' // Outpost 21 edit - Flesh terrain tweaked
 	icon_base = "flesh_floor"
 
 /datum/decl/flooring/grass/outdoors

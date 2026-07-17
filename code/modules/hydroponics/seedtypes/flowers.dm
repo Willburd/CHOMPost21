@@ -22,7 +22,7 @@
 	seed_name = PLANT_POPPIES
 	display_name = PLANT_POPPIES
 	kitchen_tag = PLANT_POPPIES
-	chems = list(REAGENT_ID_NUTRIMENT = list(1,20), REAGENT_ID_BICARIDINE = list(1,10))
+	chems = list(REAGENT_ID_NUTRIMENT = list(1,20), REAGENT_ID_BICARIDINE = list(1,3)) // Outpost 21 edit - Hydroponics chem nerf
 
 /datum/seed/flower/poppy/New()
 	..()
@@ -60,7 +60,7 @@
 	display_name = PLANT_LAVENDER
 	kitchen_tag = PLANT_LAVENDER
 	mutants = list(PLANT_MILKDEW) //CHOMPEdit - Adding mutation strain for milkdew.
-	chems = list(REAGENT_ID_NUTRIMENT = list(1,20), REAGENT_ID_BICARIDINE = list(1,10))
+	chems = list(REAGENT_ID_NUTRIMENT = list(1,20), REAGENT_ID_BICARIDINE = list(1,3)) // Outpost 21 edit - Hydroponics chem nerf
 
 /datum/seed/flower/lavender/New()
 	..()

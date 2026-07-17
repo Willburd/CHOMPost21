@@ -73,14 +73,14 @@
 /obj/effect/accelerated_particle/singularity_act()
 	return
 
-/obj/effect/accelerated_particle/proc/toxmob(var/mob/living/M)
+/obj/effect/accelerated_particle/proc/toxmob(mob/living/M)
 	var/radiation = (energy*2)
 	M.apply_effect((radiation*3),IRRADIATE,0)
 	M.updatehealth()
 	//to_chat(M, span_warning("You feel odd."))
 
 
-/obj/effect/accelerated_particle/proc/move(var/lag)
+/obj/effect/accelerated_particle/proc/move(lag)
 	if(target)
 		if(movetotarget)
 			if(!step_towards(src,target))
@@ -94,6 +94,13 @@
 		if(!step(src,dir))
 			src.loc = get_step(src,dir)
 	movement_range--
+
+	// Outpost 21 edit begin - Radiation resistance makes the PA beam lose power faster
+	if(iswall(loc))
+		var/turf/simulated/wall/check_wall = loc
+		movement_range -= (10 - (10 * check_wall.rad_insulation))
+	// Outpost 21 edit end
+
 	if(movement_range <= 0)
 		qdel(src)
 		return

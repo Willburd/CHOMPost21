@@ -1,3 +1,4 @@
+/* Outpost 21 edit - Use ours
 //Please use mob or src (not usr) in these procs. This way they can be called in the same fashion as procs.
 /client/verb/wiki(query as text)
 	set name = "wiki"
@@ -15,6 +16,7 @@
 	else
 		to_chat(src, span_warning("The wiki URL is not set in the server configuration."))
 		return
+*/
 
 /client/verb/forum()
 	set name = "forum"
@@ -179,6 +181,7 @@ Hotkey-Mode: (hotkey-mode must be on)
 \tz = activate held object (or y)
 \tf = cycle-intents-left
 \tg = cycle-intents-right
+\tb = Resist
 \t1 = activate module 1
 \t2 = activate module 2
 \t3 = activate module 3
@@ -198,6 +201,7 @@ Any-Mode: (hotkey doesn't need to be on)
 \tCtrl+q = unequip active module
 \tCtrl+x = cycle active modules
 \tCtrl+z = activate held object (or Ctrl+y)
+\tCtrl+b = Resist
 \tCtrl+f = cycle-intents-left
 \tCtrl+g = cycle-intents-right
 \tCtrl+1 = activate module 1

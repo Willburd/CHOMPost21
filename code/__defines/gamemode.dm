@@ -14,6 +14,7 @@
 #define SEC_LEVEL_RED   5
 #define SEC_LEVEL_DELTA 6
 
+/* Outpost 21 edit - Use ours
 #define BE_TRAITOR    0x1
 #define BE_OPERATIVE  0x2
 #define BE_CHANGELING 0x4
@@ -58,7 +59,7 @@ GLOBAL_LIST_INIT(be_special_flags, list(
 	"Cursed Sword"     = BE_CURSEDSWORD,
 	"Ship Survivor"	   = BE_SURVIVOR
 ))
-
+*/
 
 // Antagonist datum flags.
 #define ANTAG_OVERRIDE_JOB        0x1 // Assigned job is set to MODE when spawning.

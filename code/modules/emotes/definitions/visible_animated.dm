@@ -8,6 +8,14 @@
 	if(istype(user))
 		user.spin(20, 1)
 
+	// outpost 21 edit begin - add the sillier interactions
+	if(prob(5))
+		var/mob/living/M = user
+		if(!M.isSynthetic())
+			M.vomit()
+			return
+	// outpost 21 edit end
+
 /datum/decl/emote/visible/sidestep
 	key = "sidestep"
 	check_restraints = TRUE
@@ -25,6 +33,7 @@
 	emote_message_1p = "You do a flip!"
 	emote_message_3p = "does a flip!"
 	emote_sound = 'sound/effects/bodyfall4.ogg'
+	able_mute = TRUE
 
 /datum/decl/emote/visible/flip/do_extra(mob/user)
 	. = ..()
@@ -68,7 +77,7 @@
 		SOUTH
 	)
 
-/datum/decl/emote/visible/floorspin/proc/spin_dir(var/mob/user)
+/datum/decl/emote/visible/floorspin/proc/spin_dir(mob/user)
 	set waitfor = FALSE
 	for(var/i in spin_dirs)
 		user.set_dir(i)
@@ -76,7 +85,7 @@
 		if(QDELETED(user))
 			return
 
-/datum/decl/emote/visible/floorspin/proc/spin_anim(var/mob/user)
+/datum/decl/emote/visible/floorspin/proc/spin_anim(mob/user)
 	set waitfor = FALSE
 	sleep(1)
 	if(!QDELETED(user))

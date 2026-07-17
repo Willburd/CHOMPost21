@@ -36,7 +36,10 @@
 	if(is_freq_listening(signal)) // detect subspace signals
 
 		signal.data["done"] = 1 // mark the signal as being broadcasted since we're a broadcaster
-		signal.data["compression"] = 0 // decompress since we're a processor
+		// Outpost 21 edit begin - haunted areas cause compression, Precompressed signals pass through and remain messed up
+		if(!signal.data["haunted"])
+			signal.data["compression"] = 0 // decompress since we're a processor
+		// Outpost 21 edit end
 
 		if(signal.data["slow"] > 0)
 			addtimer(CALLBACK(src, PROC_REF(broadcast_signal), signal), signal.data["slow"], TIMER_DELETE_ME)

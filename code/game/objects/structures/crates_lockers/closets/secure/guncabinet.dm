@@ -56,6 +56,6 @@
 /obj/structure/closet/secure_closet/guncabinet/excursion/Initialize(mapload)
 	. = ..()
 	for(var/i = 1 to 2)
-		new /obj/item/gun/energy/locked/frontier(src)
+		new /obj/item/gun/energy/locked/frontier/unlocked(src) // Outpost 21 edit - unlock most explo guns
 	for(var/i = 1 to 2)
-		new /obj/item/gun/energy/locked/frontier/holdout(src)
+		new /obj/item/gun/energy/locked/frontier/holdout/unlocked(src) // Outpost 21 edit - unlock most explo guns

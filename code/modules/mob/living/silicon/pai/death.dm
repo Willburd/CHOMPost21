@@ -10,6 +10,7 @@
 			a.autosay("PAI \"[src]\" has died in [t.name]!", "PAI [src]'s Death Alarm")
 		paiDA = FALSE // no repeats we died already
 		qdel(a)
+
 //	set_respawn_timer()
 	release_vore_contents()
 	close_up(TRUE)

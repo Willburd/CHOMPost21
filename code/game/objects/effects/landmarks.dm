@@ -54,6 +54,11 @@
 		if("JoinLateCyborg")
 			GLOB.latejoin_cyborg += loc
 			delete_me = TRUE
+		// Outpost 21 edit begin - latejoin dorms
+		if("JoinLateDorm")
+			GLOB.latejoin_dorm += loc
+			delete_me = 1
+		// Outpost 21 edit end
 		if("prisonwarp")
 			GLOB.prisonwarp += loc
 			delete_me = TRUE
@@ -85,13 +90,18 @@
 		if("vinestart")
 			GLOB.vinestart += loc
 			delete_me = TRUE
+		// outpost 21 edit begin - nuke item random spawns
+		if("nukeitem")
+			GLOB.nukeitems += loc
+			delete_me = TRUE
+		// outpost 21 edit end
 
 	if(delete_me)
 		return INITIALIZE_HINT_QDEL
 	else
 		GLOB.landmarks_list += src
 
-/obj/effect/landmark/Destroy(var/force = FALSE)
+/obj/effect/landmark/Destroy(force = FALSE)
 	if(delete_me || force)
 		GLOB.landmarks_list -= src
 		return ..()

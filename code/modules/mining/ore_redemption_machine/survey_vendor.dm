@@ -15,16 +15,16 @@
 	prize_list["Gear"] = list(
 		EQUIPMENT("Brown Webbing",									/obj/item/clothing/accessory/storage/brown_vest,							500),
 		EQUIPMENT("Defense Equipment - Smoke Bomb",					/obj/item/grenade/smokebomb,												10),
-		EQUIPMENT("Defense Equipment - Razor Drone Deployer",		/obj/item/grenade/spawnergrenade/manhacks/station/locked,					100),
+		EQUIPMENT("Defense Equipment - Razor Drone Deployer",		/obj/item/grenade/spawnergrenade/manhacks/station,							100), // Outpost 21 edit - unlock most explo guns
 		EQUIPMENT("Defense Equipment - Sentry Drone Deployer",		/obj/item/grenade/spawnergrenade/ward,										150),
-		EQUIPMENT("Defense Equipment - Phase Pistol",				/obj/item/gun/energy/locked/phasegun/pistol,								100), //CHOMPEDIT
-		EQUIPMENT("Defense Equipment - Marksman Frontier Phaser", 	/obj/item/gun/energy/locked/frontier/rifle,									800), //CHOMPADD
-		EQUIPMENT("Defense Equipment - Frontier Shotgun",			/obj/item/gun/energy/locked/frontier/shotgun,								800), //CHOMPADD
-		EQUIPMENT("Defense Equipment - Frontier Carbine",			/obj/item/gun/energy/locked/frontier/carbine,								800), //CHOMPEDIT
-		EQUIPMENT("Defense Equipment - Frontier Phaser",			/obj/item/gun/energy/locked/frontier,										600), //CHOMPADD
-		EQUIPMENT("Defense Equipment - Holdout Frontier Phaser", 	/obj/item/gun/energy/locked/frontier/holdout,								300), //CHOMPADD
-		EQUIPMENT("Defense Equipment - Phase Carbine",				/obj/item/gun/energy/locked/phasegun,										200), //CHOMPEDIT
-		EQUIPMENT("Defense Equipment - Phase Rifle",				/obj/item/gun/energy/locked/phasegun/rifle,									350), //CHOMPEDIT
+		EQUIPMENT("Defense Equipment - Phase Pistol",				/obj/item/gun/energy/locked/phasegun/pistol/unlocked,						100), //CHOMPEDIT // Outpost 21 edit - unlock most explo guns
+		EQUIPMENT("Defense Equipment - Marksman Frontier Phaser", 	/obj/item/gun/energy/locked/frontier/rifle/unlocked,						800), //CHOMPADD // Outpost 21 edit - unlock most explo guns
+		EQUIPMENT("Defense Equipment - Frontier Shotgun",			/obj/item/gun/energy/locked/frontier/shotgun/unlocked,						800), //CHOMPADD // Outpost 21 edit - unlock most explo guns
+		EQUIPMENT("Defense Equipment - Frontier Carbine",			/obj/item/gun/energy/locked/frontier/carbine/unlocked,						800), //CHOMPEDIT // Outpost 21 edit - unlock most explo guns
+		EQUIPMENT("Defense Equipment - Frontier Phaser",			/obj/item/gun/energy/locked/frontier/unlocked,								600), //CHOMPADD // Outpost 21 edit - unlock most explo guns
+		EQUIPMENT("Defense Equipment - Holdout Frontier Phaser", 	/obj/item/gun/energy/locked/frontier/holdout/unlocked,						300), //CHOMPADD // Outpost 21 edit - unlock most explo guns
+		EQUIPMENT("Defense Equipment - Phase Carbine",				/obj/item/gun/energy/locked/phasegun/unlocked,								200), //CHOMPEDIT // Outpost 21 edit - unlock most explo guns
+		EQUIPMENT("Defense Equipment - Phase Rifle",				/obj/item/gun/energy/locked/phasegun/rifle/unlocked,						350), //CHOMPEDIT // Outpost 21 edit - unlock most explo guns
 		EQUIPMENT("Defense Equipment - Plasteel Machete",			/obj/item/material/knife/machete,											50),
 		EQUIPMENT("Hybrid Equipment - Proto-Kinetic Machete",		/obj/item/kinetic_crusher/machete,											100),
 		EQUIPMENT("Hybrid Equipment - Proto-Kinetic Dagger",		/obj/item/kinetic_crusher/machete/dagger,									75),
@@ -102,8 +102,10 @@
 		EQUIPMENT(REAGENT_ABSINTHE,									/obj/item/reagent_containers/food/drinks/bottle/absinthe,					10),
 		EQUIPMENT(REAGENT_WHISKEY,									/obj/item/reagent_containers/food/drinks/bottle/whiskey,					10),
 		EQUIPMENT("Cigar",											/obj/item/clothing/mask/smokable/cigarette/cigar/havana,					15),
+		/* Outpost 21 edit - Removed modular computers
 		EQUIPMENT("Digital Tablet - Standard",						/obj/item/modular_computer/tablet/preset/custom_loadout/standard,			50),
 		EQUIPMENT("Digital Tablet - Advanced",						/obj/item/modular_computer/tablet/preset/custom_loadout/advanced,			100),
+		*/
 		EQUIPMENT("Industrial Equipment - Phoron Bore",				/obj/item/gun/magnetic/matfed/phoronbore/loaded,							300),
 		EQUIPMENT("Industrial Equipment - Inducer",					/obj/item/inducer,															750),
 		EQUIPMENT("Laser Pointer",									/obj/item/laser_pointer,													90),
@@ -112,7 +114,9 @@
 		EQUIPMENT("Thalers - 100",									/obj/item/spacecash/c100,													100),
 		EQUIPMENT("Thalers - 1000",									/obj/item/spacecash/c1000,													1000),
 		EQUIPMENT("Umbrella",										/obj/item/melee/umbrella/random,											20),
+		/* Outpost 21 edit - Removed modular computers
 		EQUIPMENT("UAV - Recon Skimmer",							/obj/item/uav,																40),
+		*/
 		EQUIPMENT("Mining-Grade PSG",								/obj/item/personal_shield_generator/belt/mining/loaded,						100), //CHOMPADD
 		EQUIPMENT("Security-Grade PSG",								/obj/item/personal_shield_generator/belt/security/loaded,					200), //CHOMPADD
 		EQUIPMENT("PSG Variant-P",			   						/obj/item/personal_shield_generator/belt/parry,	            				250), //CHOMPADD

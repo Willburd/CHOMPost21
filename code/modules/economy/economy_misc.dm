@@ -46,12 +46,14 @@ GLOBAL_VAR_INIT(economy_init, 0)
 	create_department_account("Vendor")
 	GLOB.vendor_account = GLOB.department_accounts["Vendor"]
 
+	/* Outpost 21 edit - Ancient retail system removed
 	for(var/obj/item/retail_scanner/RS in GLOB.transaction_devices)
 		if(RS.account_to_connect)
 			RS.linked_account = GLOB.department_accounts[RS.account_to_connect]
 	for(var/obj/machinery/cash_register/CR in GLOB.transaction_devices)
 		if(CR.account_to_connect)
 			CR.linked_account = GLOB.department_accounts[CR.account_to_connect]
+	*/
 
 	GLOB.current_date_string = "[num2text(rand(1,31))] [pick("January","February","March","April","May","June","July","August","September","October","November","December")], [GLOB.game_year]"
 
@@ -88,7 +90,7 @@ GLOBAL_VAR_INIT(economy_init, 0)
 	department_account.owner_name = "[department] Account"
 	department_account.account_number = rand(111111, 999999)
 	department_account.remote_access_pin = rand(1111, 111111)
-	department_account.money = 5000
+	department_account.money = 500 // Outpost 21 edit - Anyone in dept can access the account now, less starting funds
 
 	//create an entry in the account transaction log for when it was created
 	var/datum/transaction/T = new()

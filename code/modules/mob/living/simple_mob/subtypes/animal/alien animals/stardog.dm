@@ -34,7 +34,7 @@
 	ai_holder_type = /datum/ai_holder/simple_mob/woof/stardog
 
 	has_langs = list(LANGUAGE_ANIMAL, LANGUAGE_CANILUNZT, LANGUAGE_GALCOM)
-	say_list_type = /datum/say_list/softdog
+	// say_list_type = /datum/say_list/softdog // Outpost 21 edit - Softdog removal
 	swallowTime = 0.1 SECONDS
 
 	loot_list = list(/obj/random/underdark/uncertain)
@@ -163,7 +163,7 @@
 	. += ""
 	. += "Affinity: [round(affinity)]"
 
-/mob/living/simple_mob/vore/overmap/stardog/start_pulling(var/atom/movable/AM)
+/mob/living/simple_mob/vore/overmap/stardog/start_pulling(atom/movable/AM)
 	if(!istype(loc, /turf/unsimulated/map))	//Don't pull stuff on the overmap
 		..()
 
@@ -575,8 +575,8 @@
 		/mob/living/simple_mob/vore/weretiger,
 		/mob/living/simple_mob/vore/wolf,
 		/mob/living/simple_mob/vore/wolf/direwolf,
-		/mob/living/simple_mob/vore/wolfgirl,
-		/mob/living/simple_mob/vore/woof
+		/mob/living/simple_mob/vore/wolfgirl
+		// /mob/living/simple_mob/vore/woof // Outpost 21 edit - Softdog removal
 	)
 
 /obj/structure/flora/tree/fur/choose_icon_state()
@@ -654,7 +654,7 @@
 	var/list/valid_treasure = list(
 		/obj/item/cell/infinite = 5,
 		/obj/item/cell/device/weapon/recharge/alien = 5,
-		/obj/item/nif/authentic = 1,
+		// /obj/item/nif/authentic = 1, Outpost 21 edit - Nif removal
 		/obj/item/toy/bosunwhistle = 50,
 		/obj/random/mouseray = 50,
 		/obj/item/gun/energy/mouseray/metamorphosis/advanced/random = 10,
@@ -914,7 +914,7 @@
 	requires_power = 0
 	spawnstuff = FALSE
 
-/area/redgate/stardog/flesh_abyss/play_ambience(var/mob/living/L, initial = TRUE)
+/area/redgate/stardog/flesh_abyss/play_ambience(mob/living/L, initial = TRUE)
 	if(!L.check_sound_preference(/datum/preference/toggle/digestion_noises))
 		return
 	..()
@@ -954,9 +954,11 @@
 	sound_env = SOUND_ENVIRONMENT_DIZZY
 
 	valid_mobs = list(	//Dog map spawns the dogs. It's not hard to understand!
+		/* // Outpost 21 edit - Softdog removal
 		list(
 			/mob/living/simple_mob/vore/woof
 			) = 100,
+		*/
 		list(
 			/mob/living/simple_mob/vore/wolf,
 			/mob/living/simple_mob/vore/wolf/direwolf,
@@ -1516,7 +1518,8 @@
 				if(istype(W, /obj/item/organ/internal/mmi_holder/posibrain))
 					var/obj/item/organ/internal/mmi_holder/MMI = W
 					MMI.removed()
-				if(istype(W, /obj/item/implant/backup) || istype(W, /obj/item/nif) || istype(W, /obj/item/organ))
+				// if(istype(W, /obj/item/implant/backup) || istype(W, /obj/item/nif)  Outpost 21 edit - Remove backup implants, nif removal
+				if(istype(W, /obj/item/organ))
 					continue
 				H.drop_from_inventory(W)
 			if(linked_mob)
@@ -1557,6 +1560,7 @@
 			linked_mob.adjust_nutrition(how_much)
 
 /turf/simulated/floor/flesh/mover
+	icon = 'icons/turf/stomach_vr.dmi' // Outpost 21 edit - Flesh terrain tweaked
 	icon_state = "flesh_floor_mover"
 	var/movechance = 5
 	var/we_process = FALSE

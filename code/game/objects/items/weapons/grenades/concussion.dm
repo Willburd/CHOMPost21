@@ -14,7 +14,7 @@
 	qdel(src)
 	return
 
-/obj/proc/concussion_blast(atom/target, var/radius = 5)
+/obj/proc/concussion_blast(atom/target, radius = 5)
 	var/turf/T = get_turf(target)
 	if(is_below_sound_pressure(T))
 		visible_message(span_notice("Whump."))
@@ -44,11 +44,13 @@
 						else
 							H.ear_damage += rand(0, 5)
 							H.ear_deaf = max(H.ear_deaf,15)
+					/* Outpost 21 edit - disable view spin
 					if(H.client)
 						if(prob(50))
 							H.client.spinleft()
 						else
 							H.client.spinright()
+					*/
 
 				else if(get_dist(H, T) <= round(radius * 0.5 * bang_effectiveness))
 					if(!ear_safety)
@@ -56,12 +58,13 @@
 						H.ear_damage += rand(0, 3)
 						H.ear_deaf = max(H.ear_deaf,10)
 						H.deaf_loop.start() // CHOMPStation Add: Ear Ringing/Deafness
-
+					/* Outpost 21 edit - disable view spin
 					if(H.client)
 						if(prob(50))
 							H.client.spinleft()
 						else
 							H.client.spinright()
+					*/
 
 				else if(!ear_safety && get_dist(H, T) <= (radius * bang_effectiveness))
 					H.Confuse(4)
@@ -79,6 +82,7 @@
 				else if(H.ear_damage >= 5)
 					to_chat(H, span_danger("Your ears start to ring!"))
 					H.deaf_loop.start() // CHOMPStation Add: Ear Ringing/Deafness
+			/* Outpost 21 edit - disable view spin
 			if(isrobot(L))
 				var/mob/living/silicon/robot/R = L
 				if(L.client)
@@ -87,4 +91,5 @@
 					else
 						L.client.spinright()
 				to_chat(R, span_critical("Gyroscopic failure."))
+			*/
 	return

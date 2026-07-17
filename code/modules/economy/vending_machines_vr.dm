@@ -31,6 +31,30 @@
 					/obj/item/reagent_containers/food/snacks/sliceable/bananabread = 2,
 					/obj/item/reagent_containers/food/snacks/sliceable/creamcheesebread = 2
 					)
+	// Outpost 21 edit begin - Prices for vendor
+	prices = list(	/obj/item/reagent_containers/food/snacks/tomatosoup = 15,
+					/obj/item/reagent_containers/food/snacks/mushroomsoup = 10,
+					/obj/item/reagent_containers/food/snacks/jellysandwich = 10,
+					/obj/item/reagent_containers/food/snacks/taco = 15,
+					/obj/item/reagent_containers/food/snacks/cheeseburger = 15,
+					/obj/item/reagent_containers/food/snacks/grilledcheese = 10,
+					/obj/item/reagent_containers/food/snacks/hotdog = 10,
+					/obj/item/reagent_containers/food/snacks/loadedbakedpotato = 10,
+					/obj/item/reagent_containers/food/snacks/omelette = 15,
+					/obj/item/reagent_containers/food/snacks/pastatomato = 10,
+					/obj/item/reagent_containers/food/snacks/tofuburger = 10,
+					/obj/item/reagent_containers/food/snacks/sliceable/pizza/mushroompizza = 25,
+					/obj/item/reagent_containers/food/snacks/sliceable/pizza/vegetablepizza = 25,
+					/obj/item/reagent_containers/food/snacks/sliceable/pizza/margherita = 25,
+					/obj/item/reagent_containers/food/snacks/sliceable/pizza/meatpizza = 25,
+					/obj/item/reagent_containers/food/snacks/waffles = 15,
+					/obj/item/reagent_containers/food/snacks/muffin = 10,
+					/obj/item/reagent_containers/food/snacks/appletart = 5,
+					/obj/item/reagent_containers/food/snacks/sliceable/applecake = 10,
+					/obj/item/reagent_containers/food/snacks/sliceable/bananabread = 10,
+					/obj/item/reagent_containers/food/snacks/sliceable/creamcheesebread = 10
+					)
+	// Outpost 21 edit end
 	contraband = list(/obj/item/reagent_containers/food/snacks/mysterysoup = 10)
 	vend_delay = 15
 
@@ -77,6 +101,17 @@
 					/obj/item/reagent_containers/food/snacks/meatballspagetti = 10,
 					/obj/item/reagent_containers/food/snacks/meatball = 15
 					)
+	// Outpost 21 edit begin - Prices for vendor
+	prices = list(	/obj/item/reagent_containers/food/snacks/sliceable/pizza/mushroompizza = 25,
+					/obj/item/reagent_containers/food/snacks/sliceable/pizza/vegetablepizza = 25,
+					/obj/item/reagent_containers/food/snacks/sliceable/pizza/margherita = 25,
+					/obj/item/reagent_containers/food/snacks/sliceable/pizza/meatpizza = 25,
+					/obj/item/reagent_containers/food/snacks/sliceable/pizza/pineapple = 25,
+					/obj/item/reagent_containers/food/snacks/pastatomato = 15,
+					/obj/item/reagent_containers/food/snacks/meatballspagetti = 15,
+					/obj/item/reagent_containers/food/snacks/meatball = 15
+					)
+	// Outpost 21 edit end
 	contraband = list(/obj/item/reagent_containers/food/snacks/sliceable/pizza/oldpizza = 1)
 	vend_delay = 10
 
@@ -100,6 +135,22 @@
 					)
 	contraband = list(/obj/item/reagent_containers/food/snacks/ghostburger = 3,
 					/obj/item/reagent_containers/food/snacks/tofuburger = 5)
+	// Outpost 21 edit begin - Prices for vendor
+	prices = list(/obj/item/reagent_containers/food/snacks/monkeyburger = 20,
+					/obj/item/reagent_containers/food/snacks/cheeseburger = 20,
+					/obj/item/reagent_containers/food/snacks/fishburger = 20,
+					/obj/item/reagent_containers/food/snacks/clownburger = 20,
+					/obj/item/reagent_containers/food/snacks/mimeburger = 20,
+					/obj/item/reagent_containers/food/snacks/bigbiteburger = 20,
+					/obj/item/reagent_containers/food/snacks/superbiteburger = 30,
+					/obj/item/reagent_containers/food/snacks/burger/bacon = 15,
+					/obj/item/reagent_containers/food/snacks/hotdog = 15,
+					/obj/item/reagent_containers/food/snacks/chickenfillet = 15,
+					/obj/item/reagent_containers/food/snacks/fries = 10,
+					/obj/item/reagent_containers/food/snacks/cheesyfries = 10,
+					/obj/item/reagent_containers/food/snacks/chilicheesefries = 10
+					)
+	// Outpost 21 edit end
 	vend_delay = 10
 
 /obj/machinery/vending/foodmeat
@@ -115,6 +166,17 @@
 					/obj/item/reagent_containers/food/snacks/stuffed_meatball = 15,
 					/obj/item/reagent_containers/food/snacks/meatsteak = 20
 					)
+	// Outpost 21 edit begin - Prices for vendor
+	prices = list(/obj/item/reagent_containers/food/snacks/ribplate = 25,
+					/obj/item/reagent_containers/food/snacks/sliceable/meatbread = 25,
+					/obj/item/reagent_containers/food/snacks/meat_pocket = 15,
+					/obj/item/reagent_containers/food/snacks/meatpie = 15,
+					/obj/item/reagent_containers/food/snacks/bacon_flatbread = 15,
+					/obj/item/reagent_containers/food/snacks/roastbeef = 25,
+					/obj/item/reagent_containers/food/snacks/stuffed_meatball = 15,
+					/obj/item/reagent_containers/food/snacks/meatsteak = 20
+					)
+	// Outpost 21 edit end
 	contraband = list(/obj/item/reagent_containers/food/snacks/monkeysdelight = 5)
 	vend_delay = 10
 
@@ -134,6 +196,20 @@
 					/obj/item/reagent_containers/food/snacks/lomein = 10,
 					/obj/item/reagent_containers/food/snacks/friedrice = 10
 					)
+	// Outpost 21 edit begin - Prices for vendor
+	prices = list(  /obj/item/reagent_containers/food/snacks/sliceable/sushi = 10,
+					/obj/item/reagent_containers/food/snacks/chawanmushi = 10,
+					/obj/item/reagent_containers/food/snacks/generalschicken = 20,
+					/obj/item/reagent_containers/food/snacks/chickenkatsu = 20,
+					/obj/item/reagent_containers/food/snacks/sweet_and_sour = 10,
+					/obj/item/reagent_containers/food/snacks/bibimbap = 15,
+					/obj/item/reagent_containers/food/snacks/hotandsoursoup = 10,
+					/obj/item/reagent_containers/food/snacks/kitsuneudon = 20,
+					/obj/item/reagent_containers/food/snacks/milosoup = 10,
+					/obj/item/reagent_containers/food/snacks/lomein = 20,
+					/obj/item/reagent_containers/food/snacks/friedrice = 15
+					)
+	// Outpost 21 edit end
 	contraband = list(/obj/item/reagent_containers/food/snacks/monkeyburger = 1)
 	vend_delay = 10
 
@@ -152,6 +228,19 @@
 					/obj/item/reagent_containers/food/snacks/cuttlefishcooked = 10,
 					/obj/item/reagent_containers/food/snacks/monkfishcooked = 10
 					)
+	// Outpost 21 edit begin - Prices for vendor
+	prices = list(  /obj/item/reagent_containers/food/snacks/sliceable/grilled_carp = 15,
+					/obj/item/reagent_containers/food/snacks/kudzudonburi = 15,
+					/obj/item/reagent_containers/food/snacks/zestfish = 15,
+					/obj/item/reagent_containers/food/snacks/lobstercooked = 20,
+					/obj/item/reagent_containers/food/snacks/sashimi = 20,
+					/obj/item/reagent_containers/food/snacks/sharkmeatcooked = 25,
+					/obj/item/reagent_containers/food/snacks/sharkmeatdip = 25,
+					/obj/item/reagent_containers/food/snacks/sharkmeatcubes = 25,
+					/obj/item/reagent_containers/food/snacks/cuttlefishcooked = 10,
+					/obj/item/reagent_containers/food/snacks/monkfishcooked = 15
+					)
+	// Outpost 21 edit end
 	contraband = list(/obj/item/reagent_containers/food/snacks/sliceable/monkfish = 1)
 	vend_delay = 10
 
@@ -170,6 +259,19 @@
 					/obj/item/reagent_containers/food/snacks/tofurkey = 10,
 					/obj/item/reagent_containers/food/snacks/stuffing = 10
 					)
+	// Outpost 21 edit begin - Prices for vendor
+	prices = list(  /obj/item/reagent_containers/food/snacks/beetsoup = 10,
+					/obj/item/reagent_containers/food/snacks/eggplantparm = 10,
+					/obj/item/reagent_containers/food/snacks/eggbowl = 15,
+					/obj/item/reagent_containers/food/snacks/flowerchildsalad = 15,
+					/obj/item/reagent_containers/food/snacks/tossedsalad = 10,
+					/obj/item/reagent_containers/food/snacks/fruitsalad = 10,
+					/obj/item/reagent_containers/food/snacks/grilledcheese = 15,
+					/obj/item/reagent_containers/food/snacks/stewedsoymeat = 10,
+					/obj/item/reagent_containers/food/snacks/tofurkey = 20,
+					/obj/item/reagent_containers/food/snacks/stuffing = 20
+					)
+	// Outpost 21 edit end
 	contraband = list(/obj/item/reagent_containers/food/snacks/meatsteak = 1)
 	vend_delay = 10
 
@@ -198,6 +300,29 @@
 					/obj/item/reagent_containers/food/snacks/chocolatebar = 10,
 					/obj/item/reagent_containers/food/snacks/chocolatepiece = 20
 					)
+	// Outpost 21 edit begin - Prices for vendor
+	prices = list(  /obj/item/reagent_containers/food/snacks/applepie = 15,
+					/obj/item/reagent_containers/food/snacks/cherrypie = 15,
+					/obj/item/reagent_containers/food/snacks/sliceable/keylimepie = 15,
+					/obj/item/reagent_containers/food/snacks/pie = 15,
+					/obj/item/reagent_containers/food/snacks/sliceable/pumpkinpie = 20,
+					/obj/item/reagent_containers/food/snacks/berryclafoutis = 10,
+					/obj/item/reagent_containers/food/snacks/funnelcake = 20,
+					/obj/item/reagent_containers/food/snacks/sliceable/plaincake = 20,
+					/obj/item/reagent_containers/food/snacks/sliceable/birthdaycake = 20,
+					/obj/item/reagent_containers/food/snacks/sliceable/carrotcake = 20,
+					/obj/item/reagent_containers/food/snacks/sliceable/cheesecake = 20,
+					/obj/item/reagent_containers/food/snacks/sliceable/lemoncake = 20,
+					/obj/item/reagent_containers/food/snacks/sliceable/limecake = 20,
+					/obj/item/reagent_containers/food/snacks/sliceable/orangecake = 20,
+					/obj/item/reagent_containers/food/snacks/sliceable/peanutcake = 20,
+					/obj/item/reagent_containers/food/snacks/icecreamsandwich = 15,
+					/obj/item/reagent_containers/food/snacks/cookie = 5,
+					/obj/item/reagent_containers/food/snacks/sliceable/brownies = 5,
+					/obj/item/reagent_containers/food/snacks/chocolatebar = 10,
+					/obj/item/reagent_containers/food/snacks/chocolatepiece = 5
+					)
+	// Outpost 21 edit end
 	contraband = list(/obj/item/reagent_containers/food/snacks/donut/chaos = 10)
 	vend_delay = 10
 
@@ -306,7 +431,7 @@
 					/obj/item/clothing/glasses/sunglasses = 1,
 					/obj/item/radio/headset/syndicate = 1,
 					/obj/item/pda = 1,
-					/obj/item/communicator = 1,
+					// /obj/item/communicator = 1, // Outpost 21 edit - Communicator removal
 					/obj/item/tape_roll = 2,
 					/obj/item/handcuffs = 4,
 					/obj/item/handcuffs/legcuffs = 4,
@@ -478,6 +603,18 @@
 					/obj/item/clothing/under/color/red = 5,
 					/obj/item/clothing/under/color/white = 5,
 					/obj/item/clothing/under/color/yellow = 5,
+					/obj/item/clothing/under/teshari/undercoat/standard/orange_grey = 5,
+					/obj/item/clothing/under/teshari/undercoat/standard/lightgrey_grey = 5,
+					/obj/item/clothing/under/teshari/undercoat/standard/white_grey = 5,
+					/obj/item/clothing/under/teshari/undercoat/standard/red_grey = 5,
+					/obj/item/clothing/under/teshari/undercoat/standard/orange = 5,
+					/obj/item/clothing/under/teshari/undercoat/standard/yellow_grey = 5,
+					/obj/item/clothing/under/teshari/undercoat/standard/green_grey = 5,
+					/obj/item/clothing/under/teshari/undercoat/standard/blue_grey = 5,
+					/obj/item/clothing/under/teshari/undercoat/standard/purple_grey = 5,
+					/obj/item/clothing/under/teshari/undercoat/standard/pink_grey = 5,
+					/obj/item/clothing/under/teshari/undercoat/standard/brown_grey = 5,
+					/obj/item/clothing/under/vox/vox_casual/station = 5,
 					/obj/item/clothing/shoes/black = 20,
 					/obj/item/clothing/shoes/white = 20,
 					/obj/item/clothing/accessory/watch = 20
@@ -1187,12 +1324,14 @@
 					/obj/item/clothing/ears/circuitry = 1,
 					/obj/item/text_to_speech = 5,
 					/obj/item/paicard = 5,
-					/obj/item/communicator = 10,
-					/obj/item/communicator/watch = 10,
+					// /obj/item/communicator = 10, // Outpost 21 edit - Communicator removal
+					// /obj/item/communicator/watch = 10, // Outpost 21 edit - Communicator removal
 					/obj/item/radio = 10,
 					/obj/item/camera = 5,
 					/obj/item/taperecorder = 5,
+					/* Outpost 21 edit - Removed modular computers
 					/obj/item/modular_computer/tablet/preset/custom_loadout/cheap = 5,
+					*/
 					/obj/item/pda = 10,
 					/obj/item/radio/headset = 10,
 					/obj/item/flashlight = 5,
@@ -1212,12 +1351,14 @@
 					/obj/item/clothing/ears/circuitry = 100,
 					/obj/item/text_to_speech = 300,
 					/obj/item/paicard = 100,
-					/obj/item/communicator = 100,
-					/obj/item/communicator/watch = 100,
+					// /obj/item/communicator = 100, // Outpost 21 edit - Communicator removal
+					// /obj/item/communicator/watch = 100, // Outpost 21 edit - Communicator removal
 					/obj/item/radio = 100,
 					/obj/item/camera = 100,
 					/obj/item/taperecorder = 100,
+					/* Outpost 21 edit - Removed modular computers
 					/obj/item/modular_computer/tablet/preset/custom_loadout/cheap = 1000,
+					*/
 					/obj/item/pda = 50,
 					/obj/item/radio/headset = 50,
 					/obj/item/flashlight = 100,
@@ -1229,7 +1370,7 @@
 					/obj/item/instrument/piano_synth/headphones/spacepods = 600,
 					/obj/item/clothing/gloves/bluespace = 500)
 	premium = list(/obj/item/perfect_tele/one_beacon = 1)
-	contraband = list(/obj/item/disk/nifsoft/compliance = 1)
+	contraband = list() // Outpost 21 edit - Nif removal: list(/obj/item/disk/nifsoft/compliance = 1)
 
 /obj/machinery/vending/event/gadget //FOR FACILITATING AND EQUIPPING EVENTS, DO NOT PLACE ON THE NORMAL MAP//
 	name = "Chips Co."
@@ -1246,19 +1387,21 @@
 					/obj/item/clothing/ears/circuitry = 1,
 					/obj/item/text_to_speech = 5,
 					/obj/item/paicard = 5,
-					/obj/item/communicator = 10,
-					/obj/item/communicator/watch = 10,
+					// /obj/item/communicator = 10, // Outpost 21 edit - Communicator removal
+					// /obj/item/communicator/watch = 10, // Outpost 21 edit - Communicator removal
 					/obj/item/radio = 10,
 					/obj/item/camera = 5,
 					/obj/item/taperecorder = 5,
+					/* Outpost 21 edit - Removed modular computers
 					/obj/item/modular_computer/tablet/preset/custom_loadout/cheap = 5,
+					*/
 					/obj/item/pda = 10,
 					/obj/item/radio/headset = 10,
 					/obj/item/flashlight = 5,
 					/obj/item/laser_pointer = 3,
 					/obj/item/clothing/glasses/omnihud = 10,
 					/obj/item/perfect_tele/one_beacon = 1,
-					/obj/item/disk/nifsoft/compliance = 1,
+					// /obj/item/disk/nifsoft/compliance = 1, Outpost 21 edit - Nif removal
 					/obj/item/perfect_tele/alien = 10)
 
 //////////////////END OF CHIPS CO. VENDORS//////////////////
@@ -1730,12 +1873,14 @@
 					/obj/item/clothing/ears/circuitry = 1,
 					/obj/item/text_to_speech = 5,
 					/obj/item/paicard = 5,
-					/obj/item/communicator = 10,
-					/obj/item/communicator/watch = 10,
+					// /obj/item/communicator = 10, // Outpost 21 edit - Communicator removal
+					// /obj/item/communicator/watch = 10, // Outpost 21 edit - Communicator removal
 					/obj/item/radio = 10,
 					/obj/item/camera = 5,
 					/obj/item/taperecorder = 5,
+					/* Outpost 21 edit - Removed modular computers
 					/obj/item/modular_computer/tablet/preset/custom_loadout/cheap = 5,
+					*/
 					/obj/item/pda = 10,
 					/obj/item/radio/headset = 10,
 					/obj/item/flashlight = 5,
@@ -1755,12 +1900,14 @@
 					/obj/item/clothing/ears/circuitry = 100,
 					/obj/item/text_to_speech = 300,
 					/obj/item/paicard = 100,
-					/obj/item/communicator = 100,
-					/obj/item/communicator/watch = 100,
+					// /obj/item/communicator = 100, // Outpost 21 edit - Communicator removal
+					// /obj/item/communicator/watch = 100, // Outpost 21 edit - Communicator removal
 					/obj/item/radio = 100,
 					/obj/item/camera = 100,
 					/obj/item/taperecorder = 100,
+					/* Outpost 21 edit - Removed modular computers
 					/obj/item/modular_computer/tablet/preset/custom_loadout/cheap = 1000,
+					*/
 					/obj/item/pda = 50,
 					/obj/item/radio/headset = 50,
 					/obj/item/flashlight = 100,
@@ -1772,7 +1919,7 @@
 					/obj/item/instrument/piano_synth/headphones/spacepods = 600,
 					/obj/item/clothing/gloves/bluespace = 500)
 	premium = list(/obj/item/perfect_tele/one_beacon = 1)
-	contraband = list(/obj/item/disk/nifsoft/compliance = 1)
+	contraband = list() // Outpost 21 edit - Nif removal: list(/obj/item/disk/nifsoft/compliance = 1)
 
 // Loadout Vending Machines End
 
@@ -1973,6 +2120,18 @@
 					/obj/item/clothing/under/color/red = 10,
 					/obj/item/clothing/under/color/white = 10,
 					/obj/item/clothing/under/color/yellow = 10,
+					/obj/item/clothing/under/teshari/undercoat/standard/orange_grey = 5,
+					/obj/item/clothing/under/teshari/undercoat/standard/lightgrey_grey = 5,
+					/obj/item/clothing/under/teshari/undercoat/standard/white_grey = 5,
+					/obj/item/clothing/under/teshari/undercoat/standard/red_grey = 5,
+					/obj/item/clothing/under/teshari/undercoat/standard/orange = 5,
+					/obj/item/clothing/under/teshari/undercoat/standard/yellow_grey = 5,
+					/obj/item/clothing/under/teshari/undercoat/standard/green_grey = 5,
+					/obj/item/clothing/under/teshari/undercoat/standard/blue_grey = 5,
+					/obj/item/clothing/under/teshari/undercoat/standard/purple_grey = 5,
+					/obj/item/clothing/under/teshari/undercoat/standard/pink_grey = 5,
+					/obj/item/clothing/under/teshari/undercoat/standard/brown_grey = 5,
+					/obj/item/clothing/under/vox/vox_casual/station = 5,
 					/obj/item/clothing/shoes/black = 20,
 					/obj/item/clothing/shoes/white = 20)
 	prices = list()
@@ -2576,19 +2735,21 @@
 					/obj/item/clothing/ears/circuitry = 1,
 					/obj/item/text_to_speech = 5,
 					/obj/item/paicard = 5,
-					/obj/item/communicator = 10,
-					/obj/item/communicator/watch = 10,
+					// /obj/item/communicator = 10, // Outpost 21 edit - Communicator removal
+					// /obj/item/communicator/watch = 10, // Outpost 21 edit - Communicator removal
 					/obj/item/radio = 10,
 					/obj/item/camera = 5,
 					/obj/item/taperecorder = 5,
+					/* Outpost 21 edit - Removed modular computers
 					/obj/item/modular_computer/tablet/preset/custom_loadout/cheap = 5,
+					*/
 					/obj/item/pda = 10,
 					/obj/item/radio/headset = 10,
 					/obj/item/flashlight = 5,
 					/obj/item/laser_pointer = 3,
 					/obj/item/clothing/glasses/omnihud = 10,
 					/obj/item/perfect_tele/one_beacon = 1,
-					/obj/item/disk/nifsoft/compliance = 1,
+					// /obj/item/disk/nifsoft/compliance = 1, Outpost 21 edit - Nif removal
 					/obj/item/perfect_tele/alien = 10)
 
 /obj/machinery/vending/event/costume //FOR FACILITATING AND EQUIPPING EVENTS, DO NOT PLACE ON THE NORMAL MAP//

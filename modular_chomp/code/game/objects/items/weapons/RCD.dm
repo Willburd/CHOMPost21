@@ -35,7 +35,7 @@ borosilicate = 9
 rborosilicate = 12
 */
 
-/obj/item/rcd/emag_act(var/remaining_charges, var/mob/user)
+/obj/item/rcd/emag_act(remaining_charges, mob/user)
 	..()
 	if(!emagged)
 		emagged = 1
@@ -273,6 +273,7 @@ rborosilicate = 12
 		"Freezer" = get_airlock_image(/obj/machinery/door/airlock/freezer),
 		"Science" = get_airlock_image(/obj/machinery/door/airlock/science),
 		"Mining" = get_airlock_image(/obj/machinery/door/airlock/mining),
+		"Refinery" = get_airlock_image(/obj/machinery/door/airlock/outpost_refinery), // Outpost 21 edit - Engiemed door
 		"Maintenance" = get_airlock_image(/obj/machinery/door/airlock/maintenance),
 		"External" = get_airlock_image(/obj/machinery/door/airlock/external),
 		"Airtight Hatch" = get_airlock_image(/obj/machinery/door/airlock/hatch),
@@ -289,6 +290,7 @@ rborosilicate = 12
 		"Research" = get_airlock_image(/obj/machinery/door/airlock/glass_research),
 		"Science" = get_airlock_image(/obj/machinery/door/airlock/glass_science),
 		"Mining" = get_airlock_image(/obj/machinery/door/airlock/glass_mining),
+		"Refinery" = get_airlock_image(/obj/machinery/door/airlock/glass_outpost_refinery), // Outpost 21 edit - Engiemed door
 		"External" = get_airlock_image(/obj/machinery/door/airlock/glass_external),
 	)
 

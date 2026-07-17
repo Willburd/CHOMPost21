@@ -5,8 +5,9 @@
 	emote_message_1p_target = "You snap your fingers at TARGET."
 	emote_message_3p_target = "snaps USER_THEIR fingers at TARGET."
 	emote_sound = 'sound/effects/fingersnap.ogg'
+	able_mute = TRUE
 
-/datum/decl/emote/audible/snap/proc/can_snap(var/atom/user)
+/datum/decl/emote/audible/snap/proc/can_snap(atom/user)
 	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
 		for(var/limb in list(BP_L_HAND, BP_R_HAND))
@@ -22,10 +23,28 @@
 	else						//VOREStation Addition End
 		return FALSE
 
-/datum/decl/emote/audible/snap/do_emote(var/atom/user, var/extra_params)
+// Outpost 21 edit begin - a pretty awful way to do this, but it's not used anywhere else at all, and I'm not making it a 1% chance to burst into flames for no reason on a single snap
+/mob/living
+	var/lastsnapemotetime = 0
+// Outpost 21 edit end
+
+/datum/decl/emote/audible/snap/do_emote(atom/user, extra_params)
 	if(!can_snap(user))
 		to_chat(user, span_warning("You need at least one working hand to snap your fingers."))
 		return FALSE
+
+	// outpost 21 edit begin - add the sillier interactions
+	if(isliving(user) && !ispAI(user))
+		var/mob/living/L = user
+		var/lasttime = L.lastsnapemotetime
+		L.lastsnapemotetime = world.time
+		if((L.lastsnapemotetime - lasttime) <= 2.5 SECONDS)
+			if(prob(3))
+				L.adjust_fire_stacks(2)
+				L.ignite_mob()
+				L.visible_message(span_danger("[L] bursts into flames!"))
+	// outpost 21 edit end
+
 	. = ..()
 
 /datum/decl/emote/audible/snap/do_extra(mob/user)

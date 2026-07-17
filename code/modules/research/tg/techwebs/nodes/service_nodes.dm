@@ -4,7 +4,7 @@
 	display_name = "Office Equipment"
 	description = "Nanotrasen's finest in ergonomic office tech, ensuring station admin stays productive and compliant with corporate policies — because even in space, paperwork never stops."
 	design_ids = list(
-		"communicator",
+		// "communicator", // Outpost 21 edit - Communicator removal
 		"laser_pointer",
 		"translator",
 		"ear_translator",
@@ -28,6 +28,7 @@
 		// "earmuffs",
 		"taperecorder",
 		"recordingcassette",
+		"cargo_scanner",
 		// "toy_balloon",
 		// "pet_carrier",
 		// "chisel",
@@ -62,8 +63,10 @@
 		"light_replacer",
 		"spraybottle",
 		"beartrap",
+		"bearslap", // Outpost 21 edit - bearslap
 		"barbedwire",
 		"snarewire",
+		"springtrap",
 		// "buffer",
 		"washing"
 	)
@@ -89,6 +92,8 @@
 		"idcardconsole",
 		"jukebox",
 		"request",
+		"request_computeralt", // Outpost 21 edit - Request console alt
+		"lockdown_console", // Outpost 21 edit - Lockdown console
 		// PDAs
 		"pda",
 		"cart_basic",
@@ -145,7 +150,7 @@
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_1_POINTS)
 	announce_channels = list(CHANNEL_SERVICE)
 
-
+/* Outpost 21 edit - No modular comms here
 /datum/techweb_node/modular_computers
 	id = TECHWEB_NODE_MODULAR_COMPUTER
 	display_name = "Modular Computers"
@@ -180,6 +185,7 @@
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_1_POINTS)
 	announce_channels = list(CHANNEL_SERVICE)
+*/
 
 /datum/techweb_node/gaming
 	id = TECHWEB_NODE_GAMING
@@ -276,9 +282,9 @@
 		"fryer_board",
 		"cerealmaker_board",
 		"candymachine_board",
-		"food_replicator", //CHOMPEDIT Enable - Adds Food Replicator
 		"honey_extractor",
-		// "food_replicator",
+		"food_synthesizer",
+		"compactfood_synthesizer",
 		"borgos1",
 		"range",
 		// "souppot",
@@ -304,6 +310,7 @@
 	prereq_ids = list(TECHWEB_NODE_PARTS_ADV)
 	design_ids = list(
 		"confetti_cannon",
+		"pie_cannon" // Outpost 21 edit - PIE
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_3_POINTS)
 	announce_channels = list(CHANNEL_SERVICE)

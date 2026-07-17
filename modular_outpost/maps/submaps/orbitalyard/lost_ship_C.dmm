@@ -1,0 +1,1608 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"ak" = (
+/obj/machinery/atmospherics/portables_connector{
+	dir = 8
+	},
+/obj/machinery/portable_atmospherics/canister/air,
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/structure_generic/lostshipa)
+"ao" = (
+/obj/structure/extinguisher_cabinet{
+	dir = 4;
+	pixel_x = -30;
+	pixel_y = -7
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/structure_generic/lostshipa)
+"ap" = (
+/turf/simulated/wall/rshull,
+/area/submap/outpost21/structure_generic/lostshipa)
+"at" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1
+	},
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/structure_generic/lostshipa)
+"au" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/structure_generic/lostshipa)
+"ax" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/universal{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/structure_generic/lostshipa)
+"aH" = (
+/obj/random/energy,
+/obj/structure/table/rack/shelf/steel,
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/structure_generic/lostshipa)
+"aM" = (
+/obj/machinery/door/firedoor,
+/obj/structure/grille,
+/obj/structure/window/plastitanium,
+/obj/structure/window/plastitanium{
+	dir = 1
+	},
+/obj/structure/window/plastitanium{
+	dir = 8
+	},
+/obj/structure/cable/yellow{
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/structure_generic/lostshipa)
+"aQ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/voidcraft,
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/structure_generic/lostshipa)
+"bU" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/blue{
+	dir = 1
+	},
+/obj/structure/cable/yellow{
+	icon_state = "2-4"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/random/cutout,
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/structure_generic/lostshipa)
+"bV" = (
+/obj/machinery/atmospherics/portables_connector{
+	dir = 4
+	},
+/obj/machinery/portable_atmospherics/canister/air,
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/structure_generic/lostshipa)
+"eL" = (
+/obj/machinery/door/airlock/glass_command{
+	req_one_access = list(300)
+	},
+/obj/machinery/door/firedoor,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/structure_generic/lostshipa)
+"eQ" = (
+/obj/machinery/door/airlock/glass_external{
+	req_one_access = list(10)
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/structure_generic/lostshipa)
+"eU" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/structure_generic/lostshipa)
+"fe" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/structure_generic/lostshipa)
+"ga" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/obj/structure/closet/crate,
+/obj/random/material/refined,
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/structure_generic/lostshipa)
+"gh" = (
+/turf/simulated/wall/rshull{
+	can_open = 1
+	},
+/area/submap/outpost21/structure_generic/lostshipa)
+"go" = (
+/obj/machinery/door/firedoor,
+/obj/structure/grille,
+/obj/structure/window/plastitanium,
+/obj/structure/window/plastitanium{
+	dir = 1
+	},
+/obj/structure/window/plastitanium{
+	dir = 4
+	},
+/obj/structure/cable/yellow,
+/obj/structure/cable/yellow{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/structure_generic/lostshipa)
+"hl" = (
+/obj/structure/shuttle/engine/propulsion{
+	dir = 1
+	},
+/turf/space,
+/area/submap/outpost21/structure_generic/lostshipa)
+"id" = (
+/obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/structure_generic/lostshipa)
+"ie" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/random/cutout,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/structure_generic/lostshipa)
+"jA" = (
+/obj/structure/bed/chair/shuttle,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/structure_generic/lostshipa)
+"kh" = (
+/obj/structure/table/rack/shelf/steel,
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/structure_generic/lostshipa)
+"kz" = (
+/obj/structure/shuttle/engine/heater{
+	dir = 1
+	},
+/obj/machinery/door/firedoor,
+/obj/structure/grille,
+/obj/structure/window/plastitanium{
+	dir = 1
+	},
+/obj/structure/window/plastitanium{
+	dir = 4
+	},
+/obj/structure/window/plastitanium,
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/structure_generic/lostshipa)
+"kM" = (
+/turf/template_noop,
+/area/template_noop)
+"lb" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/obj/machinery/pointdefense_control,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/structure_generic/lostshipa)
+"lZ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/structure_generic/lostshipa)
+"mg" = (
+/obj/random/maintenance/engineering,
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/structure_generic/lostshipa)
+"mn" = (
+/obj/random/cutout,
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/structure_generic/lostshipa)
+"mJ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/extinguisher_cabinet{
+	dir = 8;
+	pixel_x = 30;
+	pixel_y = -4
+	},
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/structure_generic/lostshipa)
+"nn" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/random/maintenance/research,
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/structure_generic/lostshipa)
+"oN" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/structure_generic/lostshipa)
+"oP" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
+/obj/structure/cable/yellow{
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/structure_generic/lostshipa)
+"qs" = (
+/obj/machinery/door/airlock/glass_external{
+	req_one_access = list(10)
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/door/firedoor,
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/structure_generic/lostshipa)
+"qx" = (
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/structure_generic/lostshipa)
+"qS" = (
+/obj/machinery/door/airlock/hatch{
+	name = "Engine Operations";
+	req_one_access = list(300)
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/door/firedoor,
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/structure_generic/lostshipa)
+"rw" = (
+/turf/space,
+/area/submap/outpost21/structure_generic/lostshipa)
+"rT" = (
+/turf/space,
+/area/template_noop)
+"ti" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/blue{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/structure_generic/lostshipa)
+"vb" = (
+/obj/machinery/door/airlock/hatch{
+	name = "Engine Operations";
+	req_one_access = list(300)
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/door/firedoor,
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/structure_generic/lostshipa)
+"vz" = (
+/obj/machinery/ion_engine,
+/turf/space,
+/area/submap/outpost21/structure_generic/lostshipa)
+"wb" = (
+/obj/structure/closet/medical_wall{
+	pixel_y = 32
+	},
+/obj/random/firstaid,
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/structure_generic/lostshipa)
+"wU" = (
+/obj/structure/closet/crate,
+/obj/random/material/refined,
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/structure_generic/lostshipa)
+"xE" = (
+/obj/machinery/atmospherics/binary/algae_farm{
+	dir = 1
+	},
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/structure_generic/lostshipa)
+"yu" = (
+/obj/structure/flight_left{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/structure_generic/lostshipa)
+"zo" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
+	},
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/structure_generic/lostshipa)
+"zq" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/structure_generic/lostshipa)
+"zD" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/structure_generic/lostshipa)
+"zI" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/obj/structure/cable/yellow{
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/structure_generic/lostshipa)
+"AW" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/blue{
+	dir = 1
+	},
+/obj/structure/cable/yellow{
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/structure_generic/lostshipa)
+"CB" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/red{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/structure_generic/lostshipa)
+"CI" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/structure_generic/lostshipa)
+"Ds" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/blue{
+	dir = 4
+	},
+/obj/structure/cable/yellow{
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/structure_generic/lostshipa)
+"DI" = (
+/obj/structure/bed/chair/shuttle,
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/structure_generic/lostshipa)
+"DO" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1
+	},
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/structure_generic/lostshipa)
+"Ed" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/structure_generic/lostshipa)
+"EI" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/voidcraft,
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/structure_generic/lostshipa)
+"Fh" = (
+/obj/structure/salvageable/console{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/structure_generic/lostshipa)
+"GA" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/universal,
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/structure_generic/lostshipa)
+"GK" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/structure_generic/lostshipa)
+"Hk" = (
+/obj/machinery/door/airlock/glass_command{
+	req_one_access = list(300)
+	},
+/obj/machinery/door/firedoor,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/structure_generic/lostshipa)
+"Hu" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/red,
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/structure_generic/lostshipa)
+"JI" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/random/gun/random,
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/structure_generic/lostshipa)
+"Kk" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/structure_generic/lostshipa)
+"KQ" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/structure_generic/lostshipa)
+"KS" = (
+/obj/structure/cable/yellow{
+	icon_state = "2-8"
+	},
+/obj/random/cutout,
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/structure_generic/lostshipa)
+"Mm" = (
+/obj/machinery/power/rtg/kugelblitz,
+/obj/structure/cable/yellow,
+/obj/structure/cable/yellow{
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/structure_generic/lostshipa)
+"Mv" = (
+/obj/machinery/door/airlock/glass_external{
+	req_one_access = list(10)
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/structure_generic/lostshipa)
+"MF" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/structure_generic/lostshipa)
+"MG" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/obj/random/cutout,
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/structure_generic/lostshipa)
+"Nc" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/structure_generic/lostshipa)
+"OK" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/structure_generic/lostshipa)
+"OT" = (
+/obj/structure/salvageable/console{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/structure_generic/lostshipa)
+"PL" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/structure_generic/lostshipa)
+"PT" = (
+/turf/simulated/floor/airless,
+/area/submap/outpost21/structure_generic/lostshipa)
+"QC" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/extinguisher_cabinet{
+	dir = 4;
+	pixel_x = -30;
+	pixel_y = -6
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/structure_generic/lostshipa)
+"QE" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/random/contraband/nofail,
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/structure_generic/lostshipa)
+"Rr" = (
+/obj/structure/shuttle/engine/heater{
+	dir = 1
+	},
+/obj/machinery/door/firedoor,
+/obj/structure/grille,
+/obj/structure/window/plastitanium{
+	dir = 1
+	},
+/obj/structure/window/plastitanium,
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/structure_generic/lostshipa)
+"RK" = (
+/obj/structure/closet/crate,
+/obj/random/mre,
+/obj/random/mre,
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/structure_generic/lostshipa)
+"RU" = (
+/obj/machinery/pointdefense,
+/turf/simulated/floor/airless,
+/area/submap/outpost21/structure_generic/lostshipa)
+"RV" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/obj/structure/closet/crate,
+/obj/random/maintenance/research,
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/structure_generic/lostshipa)
+"SO" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/obj/structure/table/rack/shelf/steel,
+/obj/random/gun/random,
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/structure_generic/lostshipa)
+"Ua" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/structure_generic/lostshipa)
+"Ue" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/structure_generic/lostshipa)
+"Uf" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/structure_generic/lostshipa)
+"UK" = (
+/obj/machinery/atmospherics/unary/outlet_injector{
+	dir = 8;
+	frequency = 1441;
+	id = "mix_in";
+	pixel_y = 1;
+	use_power = 1
+	},
+/turf/simulated/floor/airless,
+/area/submap/outpost21/structure_generic/lostshipa)
+"UY" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/structure_generic/lostshipa)
+"Vc" = (
+/obj/structure/shuttle/engine/heater{
+	dir = 1
+	},
+/obj/machinery/door/firedoor,
+/obj/structure/grille,
+/obj/structure/window/plastitanium{
+	dir = 1
+	},
+/obj/structure/window/plastitanium{
+	dir = 8
+	},
+/obj/structure/window/plastitanium,
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/structure_generic/lostshipa)
+"Vg" = (
+/obj/structure/extinguisher_cabinet,
+/turf/simulated/wall/rshull,
+/area/submap/outpost21/structure_generic/lostshipa)
+"VJ" = (
+/obj/machinery/door/airlock/glass_external{
+	req_one_access = list(10)
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/machinery/door/firedoor,
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/structure_generic/lostshipa)
+"Wx" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/structure_generic/lostshipa)
+"Xz" = (
+/obj/structure/flight_right{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/structure_generic/lostshipa)
+"XN" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/structure_generic/lostshipa)
+"Yc" = (
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/structure_generic/lostshipa)
+"YJ" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/obj/structure/table/rack/shelf/steel,
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/structure_generic/lostshipa)
+"Zb" = (
+/obj/random/maintenance/engineering,
+/obj/structure/extinguisher_cabinet{
+	dir = 8;
+	pixel_x = 30;
+	pixel_y = -4
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/structure_generic/lostshipa)
+"ZA" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/blue{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/structure_generic/lostshipa)
+"ZQ" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
+	},
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/structure_generic/lostshipa)
+
+(1,1,1) = {"
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+"}
+(2,1,1) = {"
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+"}
+(3,1,1) = {"
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+rT
+rT
+rT
+rT
+rT
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+"}
+(4,1,1) = {"
+kM
+kM
+rT
+rT
+rT
+rT
+rT
+rT
+rT
+rT
+rT
+rT
+rT
+rT
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+"}
+(5,1,1) = {"
+kM
+kM
+rT
+rT
+rT
+rT
+rT
+rT
+rw
+rw
+rw
+rw
+rw
+rT
+rT
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+"}
+(6,1,1) = {"
+kM
+kM
+rT
+rT
+rw
+rw
+rw
+rw
+rw
+PT
+PT
+PT
+rw
+rT
+rT
+rT
+rT
+rT
+rT
+rT
+rT
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+"}
+(7,1,1) = {"
+kM
+kM
+rT
+rT
+rw
+ap
+ap
+ap
+ap
+ap
+Mv
+ap
+ap
+rw
+rT
+rT
+rT
+rT
+rT
+rT
+rT
+rT
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+"}
+(8,1,1) = {"
+kM
+kM
+rT
+rT
+rw
+rw
+ap
+QE
+ap
+Kk
+Yc
+MG
+ap
+rw
+rw
+rw
+rw
+rw
+rw
+rw
+rw
+rT
+rT
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+"}
+(9,1,1) = {"
+kM
+kM
+rT
+rT
+rw
+rw
+ap
+mn
+ap
+Ed
+KQ
+zq
+ap
+RU
+rw
+rw
+rw
+rw
+rw
+rw
+rw
+rw
+rT
+rT
+kM
+kM
+kM
+kM
+kM
+kM
+"}
+(10,1,1) = {"
+kM
+kM
+rT
+rT
+rw
+rw
+ap
+gh
+ap
+ap
+VJ
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+RU
+rw
+rw
+rT
+rT
+kM
+kM
+kM
+kM
+kM
+"}
+(11,1,1) = {"
+kM
+kM
+rT
+rT
+rw
+ap
+ap
+bV
+mg
+Yc
+CI
+ao
+ap
+JI
+YJ
+ap
+kh
+SO
+nn
+ap
+ap
+ap
+rw
+rw
+rT
+rT
+kM
+kM
+kM
+kM
+"}
+(12,1,1) = {"
+kM
+kM
+rT
+rT
+rw
+vz
+Vc
+ZA
+GA
+au
+UY
+Ua
+ap
+wb
+CI
+ap
+Yc
+CI
+Yc
+ap
+lb
+ap
+ap
+rw
+rw
+rT
+rT
+kM
+kM
+kM
+"}
+(13,1,1) = {"
+kM
+kM
+rT
+rT
+rw
+vz
+Rr
+AW
+xE
+CB
+CI
+Yc
+ap
+ap
+EI
+ap
+ap
+EI
+ap
+ap
+ie
+OT
+ap
+ap
+rw
+rw
+rT
+rT
+kM
+kM
+"}
+(14,1,1) = {"
+kM
+kM
+rT
+rT
+rw
+hl
+Rr
+bU
+xE
+Hu
+id
+Ue
+vb
+Ue
+PL
+Ue
+QC
+PL
+Ue
+Hk
+OK
+jA
+Xz
+aM
+rw
+rw
+rT
+rT
+kM
+kM
+"}
+(15,1,1) = {"
+kM
+kM
+rT
+rT
+rw
+hl
+Rr
+Ds
+Mm
+ax
+zI
+zD
+qS
+mJ
+ZQ
+zD
+zD
+ZQ
+zD
+eL
+zo
+DI
+yu
+go
+rw
+rw
+rT
+rT
+kM
+kM
+"}
+(16,1,1) = {"
+kM
+kM
+rT
+rT
+rw
+vz
+Rr
+ti
+qx
+Nc
+at
+fe
+ap
+ap
+aQ
+ap
+ap
+aQ
+ap
+Vg
+oN
+Fh
+ap
+ap
+rw
+rw
+rT
+rT
+kM
+kM
+"}
+(17,1,1) = {"
+kM
+kM
+rT
+rT
+rw
+vz
+kz
+ti
+KS
+DO
+oP
+Yc
+ap
+wb
+Nc
+ap
+Yc
+Nc
+mn
+ap
+MF
+ap
+ap
+rw
+rw
+rT
+rT
+kM
+kM
+kM
+"}
+(18,1,1) = {"
+kM
+kM
+rT
+rT
+rw
+ap
+ap
+ak
+Yc
+lZ
+eU
+Zb
+ap
+RK
+RV
+ap
+wU
+ga
+RK
+ap
+ap
+ap
+rw
+rw
+rT
+rT
+kM
+kM
+kM
+kM
+"}
+(19,1,1) = {"
+kM
+kM
+rT
+rT
+rw
+rw
+ap
+gh
+ap
+ap
+qs
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+ap
+RU
+rw
+rw
+rT
+rT
+kM
+kM
+kM
+kM
+kM
+"}
+(20,1,1) = {"
+kM
+kM
+rT
+rT
+rw
+rw
+ap
+Yc
+ap
+XN
+Wx
+au
+ap
+RU
+rw
+rw
+rw
+rw
+rw
+rw
+rw
+rw
+rT
+rT
+kM
+kM
+kM
+kM
+kM
+kM
+"}
+(21,1,1) = {"
+kM
+kM
+rT
+rT
+rw
+rw
+ap
+aH
+ap
+GK
+Uf
+GK
+ap
+rw
+rw
+rw
+rw
+rw
+rw
+rw
+rw
+rT
+rT
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+"}
+(22,1,1) = {"
+kM
+kM
+rT
+rT
+rw
+ap
+ap
+ap
+ap
+ap
+eQ
+ap
+ap
+rw
+rT
+rT
+rT
+rT
+rT
+rT
+rT
+rT
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+"}
+(23,1,1) = {"
+kM
+kM
+rT
+rT
+rw
+rw
+rw
+rw
+rw
+PT
+UK
+PT
+rw
+rT
+rT
+rT
+rT
+rT
+rT
+rT
+rT
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+"}
+(24,1,1) = {"
+kM
+kM
+rT
+rT
+rT
+rT
+rT
+rT
+rw
+rw
+rw
+rw
+rw
+rT
+rT
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+"}
+(25,1,1) = {"
+kM
+kM
+rT
+rT
+rT
+rT
+rT
+rT
+rT
+rT
+rT
+rT
+rT
+rT
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+"}
+(26,1,1) = {"
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+rT
+rT
+rT
+rT
+rT
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+"}
+(27,1,1) = {"
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+"}
+(28,1,1) = {"
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+kM
+"}

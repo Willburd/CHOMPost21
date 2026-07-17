@@ -1,0 +1,38 @@
+/datum/event/disposal_damage/announce()
+	if(severity < EVENT_LEVEL_MAJOR)
+		return
+	GLOB.command_announcement.Announce("A sudden drop in the disposal network's pressure has been detected. Verify all disposal units are functioning correctly.", "Structural Alert", new_sound = ANNOUNCER_MSG_DISPOSAL_FAIL)
+
+/datum/event/disposal_damage/start()
+	if(!GLOB.machines.len)
+		return
+
+	var/list/disposals = list()
+	for(var/obj/machinery/M in GLOB.machines)
+		if(istype(M,/obj/machinery/disposal))
+			var/obj/machinery/disposal/D = M
+			var/turf/T = get_turf(D)
+			if(!T || !(T.z in using_map.station_levels)) // Not centcom!
+				continue
+			if(!(D.stat & BROKEN) && D.mode != 3 && D.anchored)
+				disposals.Add(M)
+	if(!disposals.len)
+		return
+
+	// count to break
+	var/severity_range = 0
+	switch(severity)
+		if(EVENT_LEVEL_MUNDANE)
+			severity_range = 2
+		if(EVENT_LEVEL_MODERATE)
+			severity_range = 6
+		if(EVENT_LEVEL_MAJOR)
+			severity_range = 7
+
+	// break amount of disposals based on severity
+	while(disposals.len && severity_range-- > 0)
+		var/obj/machinery/disposal/D = pick(disposals)
+		if(D)
+			// break em!
+			D.malfunction()
+			disposals.Remove(D)

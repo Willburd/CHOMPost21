@@ -58,7 +58,7 @@
 
 	// has_glowing_eyes = TRUE			//Applicable through neutral taits.
 
-	death_message = "phases to somewhere far away!"
+	death_message = SHADEKIN_DEATH_NOTICE // Outpost 21 edit - More obvious message that they are gone
 	speech_bubble_appearance = "ghost"
 
 	genders = list(MALE, FEMALE, PLURAL, NEUTER)
@@ -100,11 +100,11 @@
 		BP_R_FOOT = list("path" = /obj/item/organ/external/foot/right)
 		)
 
-	species_component = list(/datum/component/shadekin/full, /datum/component/radiation_effects/radiation_immune) //CHOMPEdit: Enabling full shadekin & no-power radiation component.
+	species_component = list(/datum/component/shadekin/full, /datum/component/radiation_effects/radiation_immune, /datum/component/haunting_vision) //CHOMPEdit: Enabling full shadekin & no-power radiation component. // Outpost 21 edit - Haunted area vision
 	component_requires_late_recalc = TRUE
 
-/datum/species/shadekin/handle_death(var/mob/living/carbon/human/H)
-	var/special_handling = TRUE //varswitch for downstream //CHOMPEdit - Enable.
+/datum/species/shadekin/handle_death(mob/living/carbon/human/H)
+	var/special_handling = FALSE //varswitch for downstream // Outpost 21 edit - Disable
 	H.clear_dark_maws() //clear dark maws on death or similar
 	var/datum/component/shadekin/SK = H.get_shadekin_component()
 	if(!special_handling || (SK && SK.no_retreat))
@@ -124,7 +124,7 @@
 			log_and_message_admins("[H] died outside of the dark but there were no valid floors to warp to")
 			return
 
-		H.visible_message("<b>\The [H.name]</b> phases to somewhere far away!")
+		H.visible_message("<b>\The [H.name]</b> [SHADEKIN_DEATH_NOTICE]") // Outpost 21 edit - More obvious message that they are gone
 		var/obj/effect/temp_visual/shadekin/phase_out/phaseanimout = new /obj/effect/temp_visual/shadekin/phase_out(H.loc)
 		phaseanimout.dir = H.dir
 		SK.respite_activating = TRUE
@@ -216,7 +216,7 @@
 /datum/species/shadekin/get_random_name()
 	return "shadekin"
 
-/datum/species/shadekin/post_spawn_special(var/mob/living/carbon/human/H)
+/datum/species/shadekin/post_spawn_special(mob/living/carbon/human/H)
 	.=..()
 
 	var/datum/component/shadekin/SK = H.get_shadekin_component()
@@ -241,7 +241,7 @@
 
 	H.health = H.getMaxHealth()
 
-/datum/species/shadekin/produceCopy(var/list/traits, var/mob/living/carbon/human/H, var/custom_base, var/reset_dna = TRUE) // Traitgenes reset_dna flag required, or genes get reset on resleeve
+/datum/species/shadekin/produceCopy(list/traits, mob/living/carbon/human/H, custom_base, reset_dna = TRUE) // Traitgenes reset_dna flag required, or genes get reset on resleeve
 	var/datum/species/shadekin/new_copy = ..()
 	new_copy.total_health = total_health
 

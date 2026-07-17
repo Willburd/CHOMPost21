@@ -199,7 +199,6 @@
 				to_chat(user, span_notice("Success!"))
 				locked = FALSE
 		return
-
 	else
 		attack_hand(user)
 	return

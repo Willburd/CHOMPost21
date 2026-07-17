@@ -1,0 +1,192 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"a" = (
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"h" = (
+/turf/simulated/mineral/alt/ignore_mapgen/turfpack/muriki,
+/area/mine/unexplored/muriki/cave/deepdark)
+"t" = (
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
+/area/mine/unexplored/muriki/cave/deepdark)
+"y" = (
+/turf/template_noop,
+/area/template_noop)
+"D" = (
+/turf/template_noop,
+/area/mine/unexplored/muriki/cave/deepdark)
+"M" = (
+/obj/effect/map_effect/interval/shifting_cave/opening/muriki,
+/turf/simulated/mineral/alt/ignore_mapgen/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"T" = (
+/turf/simulated/mineral/alt/ignore_mapgen/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+
+(1,1,1) = {"
+y
+y
+y
+y
+y
+y
+y
+y
+y
+y
+y
+y
+"}
+(2,1,1) = {"
+y
+D
+h
+h
+t
+t
+t
+t
+h
+h
+D
+y
+"}
+(3,1,1) = {"
+y
+h
+T
+T
+a
+a
+a
+a
+T
+T
+h
+y
+"}
+(4,1,1) = {"
+y
+h
+T
+M
+a
+a
+a
+a
+a
+T
+h
+y
+"}
+(5,1,1) = {"
+y
+h
+T
+M
+M
+M
+M
+a
+M
+T
+h
+y
+"}
+(6,1,1) = {"
+y
+h
+T
+T
+M
+M
+M
+M
+M
+T
+h
+y
+"}
+(7,1,1) = {"
+y
+h
+T
+T
+M
+M
+M
+M
+M
+M
+h
+y
+"}
+(8,1,1) = {"
+y
+h
+T
+M
+M
+a
+M
+M
+M
+M
+h
+y
+"}
+(9,1,1) = {"
+y
+h
+T
+M
+M
+a
+a
+a
+a
+T
+h
+y
+"}
+(10,1,1) = {"
+y
+h
+T
+T
+a
+a
+a
+a
+a
+T
+h
+y
+"}
+(11,1,1) = {"
+y
+D
+h
+h
+t
+t
+t
+t
+h
+h
+D
+y
+"}
+(12,1,1) = {"
+y
+y
+y
+y
+y
+y
+y
+y
+y
+y
+y
+y
+"}

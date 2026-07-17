@@ -11,7 +11,7 @@ GLOBAL_VAR_INIT(sent_spiders_to_station, 0)
 	GLOB.sent_spiders_to_station = 0
 
 /datum/event/spider_infestation/announce()
-	GLOB.command_announcement.Announce("Unidentified lifesigns detected coming aboard [station_name()]. Secure any exterior access, including ducting and ventilation.", "Lifesign Alert", new_sound = 'sound/AI/aliens.ogg')
+	GLOB.command_announcement.Announce("Unidentified lifesigns detected coming aboard [station_name()]. Secure any exterior access, including ducting and ventilation.", "Lifesign Alert", new_sound = ANNOUNCER_MSG_UNIDENTIFIED_LIFESIGNS)
 
 
 /datum/event/spider_infestation/start()
@@ -21,7 +21,7 @@ GLOBAL_VAR_INIT(sent_spiders_to_station, 0)
 		var/in_area = get_area(temp_vent)
 		if(istype(in_area, /area/crew_quarters/sleep) || istype(in_area, /area/hallway/secondary/entry))
 			continue
-		if(!temp_vent.welded && temp_vent.network && (temp_vent.loc.z in using_map.station_levels))
+		if(!temp_vent.welded && temp_vent.network && (temp_vent.loc.z in using_map.event_levels))
 			if(temp_vent.network.normal_members.len > 10) //CHOMP Edit: Most our networks are 40. SM is 4 and toxins is 2. This needed to change to 10 from 50 in order for spawns to work.
 				var/area/A = get_area(temp_vent)
 				if(!(A.flag_check(AREA_FORBID_EVENTS)))

@@ -89,11 +89,11 @@
 								/datum/power/shadekin/regenerate_other,
 								/datum/power/shadekin/create_shade,
 								/datum/power/shadekin/dark_maw,
-								/datum/power/shadekin/dark_respite,
-								/datum/power/shadekin/dark_tunneling)
+								/datum/power/shadekin/dark_respite)
+								// /datum/power/shadekin/dark_tunneling) // Outpost 21 edit - No using this
 	extended_kin = TRUE
 	drop_items_on_phase = TRUE
-	camera_counts_as_watcher = TRUE
+	camera_counts_as_watcher = FALSE // Outpost 21 edit - We don't want cameras to count here
 
 /datum/component/shadekin/full/rakshasa
 	flicker_time = 0 //Rakshasa don't flicker lights when they phase in.
@@ -181,6 +181,10 @@
 
 	var/brightness = T.get_lumcount() //Brightness in 0.0 to 1.0
 	darkness = 1-brightness //Invert
+	// outpost 21 edit begin - lockers are dark and spooky!
+	if(istype(owner.loc,/obj/structure/closet)) // it's dark in here!
+		darkness = 1
+	// outpost 21 edit end
 	var/is_dark = (darkness >= 0.5)
 
 	if(in_phase)
@@ -200,6 +204,12 @@
 			dark_gains = energy_light
 
 	dark_gains = handle_nutrition_conversion(dark_gains)
+
+	// Outpost 21 edit(port) begin - Regen in dark tiles over time
+	if(istype(T,/turf/simulated/floor/weird_things/dark) || istype(T,/turf/unsimulated/floor/dark))
+		dark_gains *= 3
+		dark_gains += 2
+	// Outpost 21 edit end
 
 	shadekin_adjust_energy(dark_gains)
 

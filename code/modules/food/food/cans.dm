@@ -82,6 +82,10 @@
 	pickup_sound = 'sound/items/pickup/disk.ogg'
 	cant_chance = 0
 
+/obj/item/reagent_containers/food/drinks/Destroy()
+	STOP_PROCESSING(SSobj, src)
+	. = ..()
+
 /obj/item/reagent_containers/food/drinks/cans/waterbottle/Initialize(mapload)
 	. = ..()
 	reagents.add_reagent(REAGENT_ID_WATER, 30)

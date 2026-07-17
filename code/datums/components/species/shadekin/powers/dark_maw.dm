@@ -63,7 +63,7 @@
 	icon = 'icons/obj/Shadekin_powers.dmi'
 	icon_state = "dark_maw_waiting"
 
-/obj/effect/abstract/dark_maw/Initialize(mapload, var/mob/user, var/trigger_now = FALSE)
+/obj/effect/abstract/dark_maw/Initialize(mapload, mob/user, trigger_now = FALSE)
 	. = ..()
 	if(!isturf(loc))
 		return INITIALIZE_HINT_QDEL
@@ -143,7 +143,7 @@
 	icon_state = "dark_maw_used"
 	qdel(src)
 
-/obj/effect/abstract/dark_maw/proc/triggered_by(var/mob/living/L, var/triggered_instantly = 0)
+/obj/effect/abstract/dark_maw/proc/triggered_by(mob/living/L, triggered_instantly = 0)
 	STOP_PROCESSING(SSobj, src)
 	icon_state = "dark_maw_used"
 	flick("dark_maw_tr", src)
@@ -153,7 +153,7 @@
 		to_chat(owner, span_warning("A dark maw you deployed has triggered!"))
 	addtimer(CALLBACK(src, PROC_REF(do_trigger), L), 1 SECOND, TIMER_DELETE_ME)
 
-/obj/effect/abstract/dark_maw/proc/do_trigger(var/mob/living/L)
+/obj/effect/abstract/dark_maw/proc/do_trigger(mob/living/L)
 	var/will_vore = 1
 
 	if(!(target in owner) || !can_phase_vore(owner, L, TRUE))
@@ -167,6 +167,14 @@
 		visible_message(span_notice("The shadowy tendrils fail to catch anything and dissipate."))
 		qdel(src)
 		return
+
+	// Outpost 21 edit begin - Darkmaw cannot cross unlinked z levels
+	var/turf/owner_turf = get_turf(owner)
+	var/turf/find_ground = get_turf(src)
+	if(will_vore && isturf(find_ground) && isturf(owner_turf) && !AreConnectedZLevels(owner_turf.z, find_ground.z))
+		to_chat(owner, span_warning("You feel as thought something has set off your trap, but you were too far to claim your prize..."))
+		will_vore = 0 // Too far...
+	// Outpost 21 edit end
 
 	if(will_vore)
 		visible_message(span_warning("The shadowy tendrils grab around [L] and drag them into the floor, leaving nothing behind."))

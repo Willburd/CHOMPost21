@@ -10,7 +10,7 @@
 
 	//Synx species belongs to ChimeraSynx , Base sprites made by: SpitefulCrow
 	icon = 'icons/mob/synx_modular.dmi'//giving synxes their own DMI file!
-	icon_state = "synx_living"
+	icon_state = "synx_bodyNormal" // "synx_living" // Outpost 21 edit - give synx a map icon
 	icon_living = "synx_living"
 	icon_dead = "synx_dead"
 	mob_bump_flag = SIMPLE_ANIMAL //This not existing was breaking vore bump for some reason.
@@ -53,6 +53,7 @@
 		"Straight",
 		"Nub",
 		"Capra",
+		"Wide", // Outpost 21 edit - Grins!
 	)
 	var/horns
 	var/list/marking_styles = list(
@@ -67,6 +68,7 @@
 		"Normal"
 	)
 	var/eyes
+	var/has_collar = FALSE
 //TODO: Add more customization options, these are pretty scarce
 	faction = "Synx"
 
@@ -109,6 +111,8 @@
 	attack_sharp = 1
 	attack_edge = 1
 	attack_armor_type = "melee" //Default is melee but I'm stating this explicitly to make it more obvious to anybody reading this
+	var/randomized_design = TRUE // Outpost 21 edit - use set cosmetics
+	glow_range = 1 // Outpost 21 edit - Glow is off by default, but collar turns it on! Any synx can have one due to set style! Smaller range than 4
 
 //Vore stuff//leaving most of this here even though its no going to be an AI controlled variant.
 	vore_active = 1
@@ -275,8 +279,9 @@
 	metabolism = REM * 0.1 //Slow metabolization to try and mimic permanent nerve damage without actually being too cruel to people
 	color = "#FFFFFF"
 	overdose = REAGENTS_OVERDOSE * 4 //But takes a lot to OD
+	wiki_flag = WIKI_SPOILER // Outpost 21 edit - Hide this on the wiki
 
-/datum/reagent/inaprovaline/synxchem/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/inaprovaline/synxchem/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien != IS_DIONA)
 		if(prob(8))
 			M.custom_pain("You [pick("feel numb!","feel dizzy and heavy.","feel strange!")]",60)
@@ -295,8 +300,9 @@
 	metabolism = REM * 1 //ten times faster for convenience of testers.
 	color = "#00FFFF"
 	overdose = REAGENTS_OVERDOSE * 20 //it's all fake. But having nanomachines move through you is not good at a certain amount.
+	wiki_flag = WIKI_SPOILER // Outpost 21 edit - Hide this on the wiki
 
-/datum/reagent/inaprovaline/synxchem/holo/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/inaprovaline/synxchem/holo/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien != IS_DIONA)
 		if(prob(5))
 			M.custom_pain("You feel no pain!",60)
@@ -317,8 +323,9 @@
 	metabolism = REM * 0.5
 	color = "#FFFFFF"
 	overdose = REAGENTS_OVERDOSE * 200
+	wiki_flag = WIKI_SPOILER // Outpost 21 edit - Hide this on the wiki
 
-/datum/reagent/inaprovaline/synxchem/clown/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/inaprovaline/synxchem/clown/affect_blood(mob/living/carbon/M, alien, removed)
 	M.adjustToxLoss(0.01)
 	playsound(M.loc, 'sound/items/bikehorn.ogg', 50, 1)
 	M.adjustBruteLoss(-2)//healing brute
@@ -346,7 +353,7 @@
 		//Since Halloss is not "real" damage this should not cause death
 */
 
-/datum/reagent/inaprovaline/synxchem/overdose(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/inaprovaline/synxchem/overdose(mob/living/carbon/M, alien, removed)
 	..()
 	if(alien != IS_DIONA)
 		M.make_dizzy(10)
@@ -356,10 +363,10 @@
 			M.AdjustParalysis(1)
 
 
-/datum/reagent/inaprovaline/synxchem/holo/overdose(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/inaprovaline/synxchem/holo/overdose(mob/living/carbon/M, alien, removed)
 	return
 
-/datum/reagent/inaprovaline/synxchem/clown/overdose(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/inaprovaline/synxchem/clown/overdose(mob/living/carbon/M, alien, removed)
 	return
 
 
@@ -369,7 +376,7 @@
 //////////////////////////////////////////////////////////////////////////////////////
 // nevermind. I added any roleplay flavor weird fur mechanics to happen when you touch or attack the synx.
 
-/mob/living/simple_mob/animal/synx/apply_melee_effects(var/atom/A) //Re-adding this for AI synx
+/mob/living/simple_mob/animal/synx/apply_melee_effects(atom/A) //Re-adding this for AI synx
 	if(stomach_distended) //Hacky burn damage code
 		if(isliving(A)) //Only affect living mobs, should include silicons. This could be expanded to deal special effects to acid-vulnerable objects.
 			var/mob/living/L = A
@@ -404,7 +411,7 @@
 
 
 
-/mob/living/simple_mob/animal/synx/hear_say(message,verb,language,fakename,isItalics,var/mob/living/speaker)
+/mob/living/simple_mob/animal/synx/hear_say(message,verb,language,fakename,isItalics,mob/living/speaker)
 	. = ..()
 	if(!message || !speaker)    return
 	if (speaker == src) return
@@ -617,12 +624,14 @@
 				add_overlay("[icon_state]_[belly_class]-[vs_fullness]")
 
 
-/mob/living/simple_mob/animal/synx/proc/build_icons(var/random)
+/mob/living/simple_mob/animal/synx/proc/build_icons(random)
+	glow_toggle = has_collar // Outpost 21 - tie glow to having a collar!
 	cut_overlays()
 	if(stat == DEAD)
 		icon_state = "synx_dead"
 		plane = MOB_LAYER
 		return
+	icon_state = "synx_living" // Outpost 21 edit - give synx a map icon, reset it here as this uses a layering system instead
 	if(random)
 		var/list/bodycolors = list("#FFFFFF")
 		body = pick(body_styles)
@@ -636,6 +645,8 @@
 		var/list/eyecolors = list("#FFE100","#FF6A00","#1C4DFF","#FF0000","#3D5EBE","#FF006E","#55CE21","#711BFF","#939EFF")
 		eyes = pick(eye_styles)
 		overlay_colors["Eyes"] = pick(eyecolors)
+		if(prob(2)) // Outpost 21 edit - Rare lost pet?
+			has_collar = TRUE
 
 
 	var/image/I = image(icon, "synx_body[body][transformed? "-t" : null][stomach_distended? "-s" : null]")
@@ -666,12 +677,20 @@
 	I.layer = (status_flags & HIDING)? HIDING_LAYER : MOB_LAYER
 	add_overlay(I)
 
+	if(has_collar)
+		I = image(icon, "synx_collar[transformed? "-t" : null]")
+		I.appearance_flags |= (RESET_COLOR|PIXEL_SCALE)
+		I.plane = (status_flags & HIDING)? OBJ_PLANE : MOB_PLANE
+		I.layer = (status_flags & HIDING)? HIDING_LAYER : MOB_LAYER
+		add_overlay(I)
+
+
 /mob/living/simple_mob/animal/synx/proc/set_style()
 	set name = "Set Style"
 	set desc = "Customise your icons."
 	set category = "Abilities.Synx"
 
-	var/list/options = list("Body","Horns","Marks","Eyes")
+	var/list/options = list("Body","Horns","Marks","Eyes","Collar")
 	for(var/option in options)
 		LAZYSET(options, option, new /image('icons/effects/synx_labels.dmi', option))
 	var/choice = show_radial_menu(src, src, options, radius = 60)
@@ -731,6 +750,8 @@
 				return 0
 			eyes = choice
 			overlay_colors["Eyes"] = new_color
+		if("Collar")
+			has_collar = !has_collar
 	if(.)
 		build_icons()
 
@@ -742,8 +763,6 @@
 	name = "Bob"
 	desc = "A very regular pet."
 	tt_desc = "synxus pergulus"
-	glow_range = 4
-	glow_toggle = 1
 	player_msg = "You aren't supposed to be in this. Wrong mob."
 
 /mob/living/simple_mob/animal/synx/ai/pet/load_default_bellies()
@@ -916,8 +935,8 @@
 	poison_type = "clownsynxchem" //unlike synxchem this one HONKS
 	name = "Inflatable Clown Synx"
 	desc = "Honk!, made this here with all the fun on in the booth. At the gate outside, when they pull up, they get me loose. Yeah, Jump Out Clowns, that's Clown gang, hoppin' out tiny cars. This shit way too funny, when we pull up give them the honk hard!"
-	icon_state = "synx_pet_rainbow"
-	icon_living = "synx_pet_rainbow"
+	//icon_state = "synx_pet_rainbow" // TODO : Needs to be ported to modular synx code
+	//icon_living = "synx_pet_rainbow" // TODO : Needs to be ported to modular synx code
 	//icon_dead = "synx_hardlight_dead"
 	icon_gib = null
 	faction = "clown"

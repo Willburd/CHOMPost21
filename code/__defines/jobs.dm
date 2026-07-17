@@ -15,15 +15,28 @@
 	#define JOB_ALT_FACILITY_STEWARD "Facility Steward"
 	#define JOB_ALT_FIRST_MATE "First Mate"
 	#define JOB_ALT_PERFORMANCE_MANAGEMENT_SUPERVISOR "Performance Management Supervisor"
+	#define JOB_ALT_EXECUTIVE_OFFICER "Executive Officer" // Outpost 21 edit - Executive officer alt title
 
-#define JOB_COMMAND_SECRETARY "Command Secretary"
+//#define JOB_COMMAND_SECRETARY "Command Secretary" // Outpost 21 edit - Command Secretary folded into HoP
 	// Command Secretary alt titles
+	#define JOB_ALT_COMMAND_SECRETARY "Command Secretary"
 	#define JOB_ALT_COMMAND_LIAISON "Command Liaison"
 	#define JOB_ALT_COMMAND_ASSISTANT "Command Assistant"
 	#define JOB_ALT_COMMAND_INTERN "Command Intern"
 	#define JOB_ALT_BRIDGE_SECRETARY "Bridge Secretary"
 	#define JOB_ALT_BRIDGE_ASSISTANT "Bridge Assistant"
 	#define JOB_ALT_BRIDGE_OFFICER "Bridge Officer" // CHOMPAdd
+
+// Outpost 21 edit begin - command officer
+#define JOB_COMMAND_OFFICER "Command Officer"
+	#define JOB_ALT_CO_PETTY_OFFICER "Petty Officer"
+	#define JOB_ALT_CO_PETTY_CADET "Cadet"
+	#define JOB_ALT_CO_WARRANT_OFFICER "Chief Warrant Officer"
+	#define JOB_ALT_CO_ASSIST_MED_OFFICER "Assistant Medical Officer"
+	#define JOB_ALT_CO_ASSIST_SEC_OFFICER "Combat Control Officer"
+	#define JOB_ALT_CO_ASSIST_ENG_OFFICER "Engineering Specialist"
+	#define JOB_ALT_CO_ASSIST_SCI_OFFICER "Command Intelligence Officer"
+// Outpost 21 edit end
 
 #define JOB_HEAD_OF_SECURITY "Head of Security"
 	// Head of Security alt titles
@@ -55,6 +68,7 @@
 	#define JOB_ALT_SUPPLY_CHIEF "Supply Chief"
 	#define JOB_ALT_LOGISTICS_MANAGER "Logistics Manager"
 	#define JOB_ALT_CARGO_SUPERVISOR "Cargo Supervisor"
+	#define JOB_ALT_CHIEF_STEWARD "Chief Steward" // outpost 21 edit
 
 #define JOB_PATHFINDER "Pathfinder" // was Pathfinder  //CHOMP explo keep
 	// Pathfinder alt titles
@@ -79,6 +93,7 @@
 		#define JOB_ALT_RESEARCH_ASSISTANT "Research Assistant"
 		#define JOB_ALT_VISITOR "Visitor"
 		#define JOB_ALT_RESIDENT "Resident"
+		#define JOB_ALT_SPACER "Spacer" // outpost 21 edit
 //___________________________________________________________
 
 
@@ -113,6 +128,7 @@
 	#define JOB_ALT_DISPOSALS_SORTER "Disposals Sorter"
 	#define JOB_ALT_MAILMAN "Mailman"
 	#define JOB_ALT_DELIVERY_WORKER "Delivery Worker"
+	#define JOB_ALT_LOGISTICS_CONTRACTOR "Logistics Contractor"
 
 #define JOB_SHAFT_MINER "Shaft Miner"
 	// Shaft Miner alt titles
@@ -120,6 +136,7 @@
 	#define JOB_ALT_DRILL_TECHNICIAN "Drill Technician"
 	#define JOB_ALT_PROSPECTOR "Prospector"
 	#define JOB_ALT_EXCAVATOR "Excavator"
+	#define JOB_ALT_MINING_CONTRACTOR "Mining Contractor"
 
 #define JOB_JANITOR "Janitor"
 	// Janitor alt titles
@@ -145,6 +162,8 @@
 	#define JOB_ALT_INTERNAL_AFFAIRS_LIAISON "Internal Affairs Liaison"
 	#define JOB_ALT_INTERNAL_AFFAIRS_DELEGATE "Internal Affairs Delegate"
 	#define JOB_ALT_INTERNAL_AFFAIRS_INVESTIGATOR "Internal Affairs Investigator"
+	#define JOB_ALT_INTERNAL_AFFAIRS_DAMAGE_ASSESSMENT "Damage Assessment Officer" // outpost 21 edit
+	#define JOB_ALT_INTERNAL_AFFAIRS_CASUALTY_ANALYST "Causality Analysts Officer" // outpost 21 edit
 
 #define JOB_CHAPLAIN "Chaplain"
 	// Chaplain alt titles
@@ -195,6 +214,7 @@
 	#define JOB_ALT_FISHER "Fisher"
 	#define JOB_ALT_FORTUNE_TELLER "Fortune Teller"
 	#define JOB_ALT_SPIRIT_HEALER "Spirit Healer"
+	#define JOB_ALT_RADIOHOST "Radio Host" // outpost 21 edit
 	#define JOB_ALT_EDUCATOR "Educator"
 	#define JOB_ALT_INSTRUCTOR "Instructor"
 //___________________________________________________________
@@ -208,6 +228,7 @@
 	#define JOB_ALT_ELECTRICIAN "Electrician"
 	#define JOB_ALT_CONSTRUCTION_ENGINEER "Construction Engineer"
 	#define JOB_ALT_ENGINEERING_CONTRACTOR "Engineering Contractor"
+	#define JOB_ALT_SHIPBREAKER "Ship Breaker" // outpost 21 edit
 	#define JOB_ALT_CHEMENGINEER "Chemical Engineer"
 	#define JOB_ALT_COMPUTER_TECHNICIAN "Computer Technician"
 	#define JOB_ALT_SALVAGE_TECHNICIAN "Salvage Technician"
@@ -249,6 +270,7 @@
 	#define JOB_ALT_ORDERLY "Orderly"
 	#define JOB_ALT_VIROLOGIST "Virologist"
 	#define JOB_ALT_MEDICAL_CONTRACTOR "Medical Contractor"
+	#define JOB_ALT_XENOSPECIALIST "Xenoanatomy Specialist" // outpost 21 edit
 	#define JOB_ALT_CORONER "Coroner"
 
 
@@ -271,6 +293,8 @@
 #define JOB_SEARCH_AND_RESCUE "Search and Rescue" // CHOMPEdit, actual JOB here
 
 #define JOB_GENETICIST "Geneticist" //Disabled atm
+	#define JOB_ALT_GENE_THERAPIST "Gene Therapist" // outpost 21 edit
+	#define JOB_ALT_SLEEVE_ENGINEER "Sleeve Engineer" // outpost 21 edit
 //___________________________________________________________
 
 
@@ -297,6 +321,8 @@
 	#define JOB_ALT_GAS_PHYSICIST "Gas Physicist"
 	#define JOB_ALT_CIRCUIT_DESIGNER "Circuit Designer"
 	#define JOB_ALT_CIRCUIT_PROGRAMMER "Circuit Programmer"
+	#define JOB_ALT_RESEARCH_CONTRACTOR "Research Contractor"
+	#define JOB_ALT_TELEPORT_OPERATOR "Teleporter Operator" // Outpost 21 edit - Telesci job
 
 #define JOB_XENOBIOLOGIST "Xenobiologist"
 	// Xenobiologist alt titles
@@ -309,6 +335,8 @@
 	#define JOB_ALT_BIOMECHANICAL_ENGINEER "Biomechanical Engineer"
 	#define JOB_ALT_MECHATRONIC_ENGINEER "Mechatronic Engineer"
 	#define JOB_ALT_SOFTWARE_ENGINEER "Software Engineer"
+	#define JOB_ALT_JUNIOR_ROBOTICIST "Junior Roboticist" // Outpost 21 edit - Adds junior roboticist alt title
+	#define JOB_ALT_ELECTROPHYSICIST "Electrophysicist" // Outpost 21 edit - Electrophysicist added
 
 #define JOB_XENOBOTANIST "Xenobotanist"
 	// Xenobotanist alt titles
@@ -324,11 +352,13 @@
 	#define JOB_ALT_ARMORY_SUPERINTENDENT "Armory Superintendent"
 	#define JOB_ALT_MASTERATARMS "Master-at-Arms"
 
+/* Outpost 21 edit - Detective is officer now
 #define JOB_DETECTIVE "Detective"
 	// Detective alt titles
 	#define JOB_ALT_INVESTIGATOR "Investigator"
 	#define JOB_ALT_SECURITY_INSPECTOR "Security Inspector"
 	#define JOB_ALT_FORENSIC_TECHNICIAN "Forensic Technician"
+*/
 
 #define JOB_SECURITY_OFFICER "Security Officer"
 	// Security Officer alt titles
@@ -337,7 +367,12 @@
 	#define JOB_ALT_SECURITY_DEPUTY "Security Deputy"
 	#define JOB_ALT_JUNIOR_OFFICER "Junior Officer"
 	#define JOB_ALT_SECURITY_CONTRACTOR "Security Contractor"
+	#define JOB_ALT_DETECTIVE "Detective"
+	#define JOB_ALT_INVESTIGATOR "Investigator"
+	#define JOB_ALT_SECURITY_INSPECTOR "Security Inspector"
+	#define JOB_ALT_FORENSIC_TECHNICIAN "Forensic Technician"
 	#define JOB_ALT_LOSS_PREVENTION "Loss Prevention Officer"
+	#define JOB_ALT_HALLMONITOR "Hall Monitor" // Outpost 21 edit - joke role
 
 // CHOMPAdd
 #define JOB_BRIG_PHYSICIAN "Brig Physician"
@@ -407,6 +442,7 @@
 #define JOB_BLUESHIELD_GUARD "Blueshield Guard"
 #define JOB_SECURITY_PILOT "Security Pilot"
 // CHOMPAdd End
+
 
 // Mind jobs
 #define JOB_SLIME "slime"
@@ -479,7 +515,8 @@
 #define ATMOSTECH (1<<7)
 #define AI_DEPT (1<<8)
 #define CYBORG (1<<9)
-#define BRIGPHYS (1<<10) // CHOMPAdd - Brig Physician
+#define ROBOTICIST (1<<10) // Outpost 21 edit - Moved to engineering
+#define BRIGPHYS (1<<11) // CHOMPAdd - Brig Physician // Outpost 21 edit - altered to 11
 #define CLOWN (1<<13)
 #define MIME (1<<14)
 #define INTERN (1<<15)
@@ -494,12 +531,12 @@
 #define GENETICIST (1<<5)
 #define VIROLOGIST (1<<6)
 #define PSYCHIATRIST (1<<7)
-#define ROBOTICIST (1<<8)
+// define ROBOTICIST (1<<8) // Outpost 21 edit - Moved to engineering
 #define XENOBIOLOGIST (1<<9)
 #define PARAMEDIC (1<<10)
-#define PATHFINDER (1<<11)
-#define EXPLORER (1<<12)
-#define SAR (1<<13)
+// define PATHFINDER (1<<11)	// Outpost 21 edit - removed job
+// define EXPLORER (1<<12)		// Outpost 21 edit - removed job
+// define SAR (1<<13)			// Outpost 21 edit - removed job
 #define XENOBOTANIST (1<<14)
 #define PILOT (1<<15) //ChompEDIT - ours is with the other explo jobs.
 
@@ -524,8 +561,10 @@
 
 #define OTHER (1<<10) //VOREStation Note: Unused on VS. Used downstream.
 #define NONCREW (1<<0)
-#define ANOMALY (1<<0) //VOREStation Note: Unused on VS. Used downstream.
+// define ANOMALY (1<<0) //VOREStation Note: Unused on VS. Used downstream. // Outpost 21 edit - removed job
+#define STOWAWAY (1<<1) // Outpost 21 edit - stowaways!
 
+/* Outpost 21 edit - removed job
 #define TALON (1<<3)
 
 #define TALCAP (1<<0)
@@ -534,6 +573,7 @@
 #define TALSEC (1<<3)
 #define TALENG (1<<4)
 #define TALMIN (1<<5)
+*/
 
 GLOBAL_LIST_INIT(command_positions, list(
 	JOB_SITE_MANAGER,
@@ -542,6 +582,7 @@ GLOBAL_LIST_INIT(command_positions, list(
 	JOB_CHIEF_ENGINEER,
 	JOB_RESEARCH_DIRECTOR,
 	JOB_CHIEF_MEDICAL_OFFICER,
-	JOB_COMMAND_SECRETARY,
-	JOB_BLUESHIELD_GUARD // CHOMPEnable
+	JOB_COMMAND_OFFICER, // Outpost 21 edit - Command officer
+	// JOB_COMMAND_SECRETARY, // Outpost 21 edit - Command sec folded into command officer
+	// JOB_BLUESHIELD_GUARD // CHOMPEnable // Outpost 21 edit - Job disabled
 ))

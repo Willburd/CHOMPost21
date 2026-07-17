@@ -1,0 +1,89 @@
+/datum/trait/positive/enzyme_immune
+	name = "Enzyme Immune"
+	desc = "Allows contact exposure to terraforming enzymes."
+	cost = 10
+	var_changes = list("enzyme_contact_mod" = 0)
+
+	// Traitgenes edit begin - Made into a gene trait
+	is_genetrait = TRUE
+	hidden = FALSE
+
+	activation_message="Your skin feels different..."
+	// Traitgenes edit end
+
+/datum/trait/positive/phoron_resist
+	name = "Phoron Resistant"
+	desc = "Allows contact exposure to phoron without ill effects. Your results may vary."
+	cost = 3
+	var_changes = list("phoron_contact_mod" = 0)
+	banned_species = list(SPECIES_VOX, SPECIES_PROMETHEAN)
+
+	// Traitgenes edit begin - Made into a gene trait
+	is_genetrait = TRUE
+	hidden = FALSE
+
+	activation_message="Your skin feels waxy..."
+	// Traitgenes edit end
+
+/datum/trait/positive/breathes/vox_air
+	name = "Dust Huffer"
+	desc = "You breathe air instead of phoron. Used for custom vox-like creatures. Abusing this trait may result in a species ban."
+	var_changes = list("breath_type" = GAS_O2, "poison_type" = GAS_PHORON, "ideal_air_type" = /datum/gas_mixture/belly_air)
+	cost = 4
+	allowed_species = list(SPECIES_VOX)
+
+/datum/trait/positive/superpower_superfart
+	name = "Super Fart"
+	desc = "Sin beyond mortal comprehension, this could only be the geneticist's fault."
+	cost = 6
+	custom_only = FALSE
+
+	is_genetrait = TRUE
+	activity_bounds = DNA_HARD_BOUNDS
+	hidden = TRUE // Cannot start with superpowers
+
+	activation_message="You feel incredible pressure inside of you."
+	deactivation_message="The pressure inside of you vanishes."
+	primitive_expression_messages=list("toots.")
+
+/datum/trait/positive/superpower_superfart/apply(datum/species/S, mob/living/carbon/human/H)
+	. = ..()
+	add_verb(H, /mob/living/proc/super_fart)
+
+/datum/trait/positive/superpower_superfart/unapply(datum/species/S, mob/living/carbon/human/H)
+	. = ..()
+	if(!(/mob/living/proc/super_fart in S.inherent_verbs))
+		remove_verb(H, /mob/living/proc/super_fart)
+
+/datum/trait/positive/disposable_respawn
+	name = "Disposable Body"
+	desc = "Autosleever respawn time reduced to 5 minutes regardless of what caused death."
+	cost = 12 // You really should know what this means by now
+
+/datum/trait/positive/naturaltunneler
+	name = "Natural Tunneler"
+	desc = "Using strong claws or inhuman strength you have the ability to carve your way through rough stone walls."
+	cost = 7
+
+/datum/trait/positive/naturaltunneler/apply(datum/species/S, mob/living/carbon/human/H, trait_prefs)
+	. = ..()
+	ADD_TRAIT(H, TRAIT_NATURALTUNNELER, ROUNDSTART_TRAIT)
+
+/datum/trait/positive/fortitude
+	name = "Fortitude"
+	cost = 2
+	desc = "You are more sturdy than most species, and as such, more resistant to stuns."
+	var_changes = list("stun_mod" = 0.6, "weaken_mod" = 0.6)
+
+/datum/trait/positive/radio_jammer
+	name = "Signal Disruptor"
+	desc = "Radios and PDAs near you do not function properly, including your own. Other machines that rely on radio frequencies may also be affected."
+	cost = 6
+
+/datum/trait/positive/radio_jammer/apply(datum/species/S, mob/living/carbon/human/H, trait_prefs)
+	. = ..()
+	H.AddComponent(/datum/component/radio_jammer)
+
+/datum/trait/positive/radio_jammer/unapply(datum/species/S, mob/living/carbon/human/H, trait_prefs)
+	. = ..()
+	qdel(H.GetComponent(/datum/component/radio_jammer))

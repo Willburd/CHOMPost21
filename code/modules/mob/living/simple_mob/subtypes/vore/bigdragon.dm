@@ -112,6 +112,8 @@ I think I covered everything.
 
 	plane = MOB_PLANE
 
+	mob_size = MOB_HUGE // Why was he medium... // outpost 21 edit(port) - These are huge. wtf
+
 	//Dragon vars
 	var/notame
 	var/norange
@@ -210,6 +212,29 @@ I think I covered everything.
 	melee_damage_upper = 15
 	allow_mind_transfer = TRUE
 
+//Outpost addition start, unique one for the crystal den on the map.
+/mob/living/simple_mob/vore/bigdragon/murikiboss //Outpost addition. The local terror is a bit more intimidating.
+	name = "Zircon"
+	desc = "A large, intimidating creature reminiscent of the traditional idea of medieval fire breathing lizards. This one is the unofficial 'lord' of outpost-21. You should run."
+	notame = 1 //He's got a hoard, he don't want your bribes.
+	special_attack_cooldown = 40 //Twice as fast windups. He's mean.
+	allow_spontaneous_tf = 0 //No mouseray cheat for you.
+	resizable = 0 //No size gun cheesing~
+	capture_crystal = FALSE //He ain't your pet... honestly I should do this for the default type... maybe same with the others, tbfh.
+	maxHealth = 1200 //small health boost, up from 800.
+	evasion = 15 //I think this is a percent, so let's give him just a chance to dodge your shit :>
+
+	armor = list(
+				"melee" = 50,
+				"bullet" = 50,
+				"laser" = 70,
+				"energy" = 80,
+				"bomb" = 80,
+				"bio" = 100,
+				"rad" = 100) //Tough boi ain't so easy to take down. Lasereyes aren't a win button here~ High armor to rad, bombs, and bio for cheese protection.
+
+//Outpost addition end.
+
 ///
 ///		Misc define stuff
 ///
@@ -219,7 +244,8 @@ I think I covered everything.
 	emote_hear = list("chuffs", "rawrs", "wehs", "roars", "scoffs", "yawns")
 	emote_see = list("licks their chops", "stretches", "yawns", "snarls")
 	say_maybe_target = list("Hrmph?")
-	say_got_target = list("FOOL.", "+INSOLENT+.", "YOU'VE MADE A MISTAKE TODAY.")
+//	say_got_target = list("FOOL.", "+INSOLENT+.", "YOU'VE MADE A MISTAKE TODAY.") //Outpost 21 edit: Yes dragons are "smart", and can talk in fantasy, but doesn't the speech feel very out of place to anyone else? Let's just leave this to player controlled ones.
+	say_got_target = list("ROAR!", "RHAAGH!")
 
 /datum/category_item/catalogue/fauna/bigdragon
 	name = "Invasive Fauna - Large Dragon"
@@ -335,7 +361,7 @@ I think I covered everything.
 	update_fullness()
 	build_icons()
 
-/mob/living/simple_mob/vore/bigdragon/proc/build_icons(var/random)
+/mob/living/simple_mob/vore/bigdragon/proc/build_icons(random)
 	cut_overlays()
 	if(stat == DEAD)
 		plane = MOB_LAYER
@@ -678,7 +704,8 @@ I think I covered everything.
 		if(!enraged)
 			if(health <= (maxHealth * 0.5))
 				enraged = 1
-				say("No more games. COME HERE.")
+//				say("No more games. COME HERE.")
+				say("!lets out a loud, guttural roar, shaking the blood from its body as its eyes take on a murderous look.")
 		if(enraged)
 			if(health >= (maxHealth * 0.5))
 				enraged = 0
@@ -733,7 +760,7 @@ I think I covered everything.
 ///		AI handling stuff
 ///
 // It hurts me a little to make these mob specific procs instead of effects that can be invoked by any mob, but I'm too lazy to go fix mob attacks like that.
-/mob/living/simple_mob/vore/bigdragon/proc/repulse(var/range = 2)
+/mob/living/simple_mob/vore/bigdragon/proc/repulse(range = 2)
 	var/list/thrownatoms = list()
 	for(var/mob/living/victim in oview(range, src))
 		thrownatoms += victim
@@ -746,7 +773,7 @@ I think I covered everything.
 	playsound(src, "sound/weapons/punchmiss.ogg", 50, 1)
 
 //Split repulse into two parts so I can recycle this later
-/mob/living/simple_mob/vore/bigdragon/proc/yeet(var/atom/movable/AM, var/gentle = 0)
+/mob/living/simple_mob/vore/bigdragon/proc/yeet(atom/movable/AM, gentle = 0)
 	var/maxthrow = 7
 	var/atom/throwtarget
 	var/distfromcaster
@@ -769,7 +796,7 @@ I think I covered everything.
 			playsound(src, get_sfx("punch"), 50, 1)
 		AM.throw_at(throwtarget, maxthrow, 3, src)
 
-/mob/living/simple_mob/vore/bigdragon/proc/chargestart(var/atom/A)
+/mob/living/simple_mob/vore/bigdragon/proc/chargestart(atom/A)
 	if(!enraged)
 		set_AI_busy(TRUE)
 
@@ -778,7 +805,7 @@ I think I covered everything.
 	chargetimer = addtimer(CALLBACK(src, PROC_REF(chargeend), A), charge_warmup, TIMER_STOPPABLE)
 
 
-/mob/living/simple_mob/vore/bigdragon/proc/chargeend(var/atom/A, var/explicit = 0, var/gentle = 0)
+/mob/living/simple_mob/vore/bigdragon/proc/chargeend(atom/A, explicit = 0, gentle = 0)
 	//make sure our target still exists and is on a turf
 	if(QDELETED(A) || !isturf(get_turf(A)))
 		set_AI_busy(FALSE)
@@ -810,7 +837,7 @@ I think I covered everything.
 		yeet(target, gentle)
 	set_AI_busy(FALSE)
 
-/mob/living/simple_mob/vore/bigdragon/proc/firebreathstart(var/atom/A)
+/mob/living/simple_mob/vore/bigdragon/proc/firebreathstart(atom/A)
 	glow_toggle = 1
 	set_light(glow_range, glow_intensity, glow_color) //Setting it here so the light starts immediately
 	if(!enraged)
@@ -820,7 +847,7 @@ I think I covered everything.
 	firebreathtimer = addtimer(CALLBACK(src, PROC_REF(firebreathend), A), charge_warmup, TIMER_STOPPABLE)
 	playsound(src, "sound/magic/Fireball.ogg", 50, 1)
 
-/mob/living/simple_mob/vore/bigdragon/proc/firebreathend(var/atom/A)
+/mob/living/simple_mob/vore/bigdragon/proc/firebreathend(atom/A)
 	//make sure our target still exists and is on a turf
 	if(QDELETED(A) || !isturf(get_turf(A)))
 		set_AI_busy(FALSE)
@@ -860,7 +887,7 @@ I think I covered everything.
 	var/fire_stacks = 1
 
 //Making it so fire passes through mobs but not walls
-/obj/item/projectile/bullet/incendiary/dragonflame/check_penetrate(var/atom/A)
+/obj/item/projectile/bullet/incendiary/dragonflame/check_penetrate(atom/A)
 	if(!A || !A.density) return 1
 
 	if(istype(A, /obj/mecha))
@@ -891,13 +918,14 @@ I think I covered everything.
 	else
 		. = ..()
 
-/mob/living/simple_mob/vore/bigdragon/do_tame(var/obj/O, var/mob/user)
+/mob/living/simple_mob/vore/bigdragon/do_tame(obj/O, mob/user)
 	if(!user)
 		return
 	if(faction == FACTION_NEUTRAL)
 		return	//We're already friendly
 	if(enraged || notame)
-		say("NO FORGIVENESS")
+//		say("NO FORGIVENESS") //Outpost 21 edit, same as above. Let's keep the speech to player-controlled dergs
+		say("!snarls loudly, betraying its petty grudge.")
 		return //No talk me I angy
 
 	handle_tame_item(O, user)
@@ -925,7 +953,7 @@ I think I covered everything.
 	var/warnings = 0
 	var/last_warning
 
-/datum/ai_holder/simple_mob/healbelly/proc/confirmPatient(var/mob/living/P)
+/datum/ai_holder/simple_mob/healbelly/proc/confirmPatient(mob/living/P)
 	if(isanimal(holder))
 		var/mob/living/simple_mob/H = holder
 		if(H.will_eat(P))
@@ -941,15 +969,34 @@ I think I covered everything.
 			if(P.health <= (P.getMaxHealth() * 0.95))	//Nom em'
 				if(vocal)
 					if(last_speak + 30 SECONDS < world.time)
-						var/message_options = list(
-							"Hey, [P.name]! You are injured, hold still.",
-							"[P.name]! Come here, let me help.",
-							"[P.name], you need help."
-							)
-						var/message = pick(message_options)
+						// Outpost 21 edit(port) begin - customizable says for heal bellies
+						var/message = pick(patient_confirm_say_list(P))
+						// Outpost 21 edit end
 						H.say(message)
 						last_speak = world.time
 					return 1
+
+// Outpost 21 edit(port) begin - customizable says for heal bellies
+/*/datum/ai_holder/simple_mob/healbelly/proc/patient_confirm_say_list(var/mob/P)
+	return list(
+				"Hey, [P.name]! You are injured, hold still.",
+				"[P.name]! Come here, let me help.",
+				"[P.name], you need help."
+				)
+*/
+/datum/ai_holder/simple_mob/healbelly/proc/patient_confirm_say_list(mob/P) //Another outpost 21 edit to remove speech
+	return list(
+				"!grumbles warmly at [P.name]!",
+				"!snorts at [P.name] caringly.",
+				"!squints at [P.name] with the scorn of a caring mother."
+				)
+
+/datum/ai_holder/simple_mob/healbelly/leopardmander/patient_confirm_say_list(mob/P) // leopardmander override, so that they don't speak!
+	return list(
+				"*rumble",
+				"*purr"
+				)
+// Outpost 21 edit end
 
 //Attack overrides to let us """Attack""" allies and heal them
 /datum/ai_holder/simple_mob/healbelly/can_attack(atom/movable/the_target, vision_required = 1)
@@ -984,7 +1031,7 @@ I think I covered everything.
 	holder.a_intent = I_HURT
 	return 1
 
-/datum/ai_holder/simple_mob/healbelly/retaliate/dragon/can_attack(atom/movable/the_target, var/vision_required = TRUE)
+/datum/ai_holder/simple_mob/healbelly/retaliate/dragon/can_attack(atom/movable/the_target, vision_required = TRUE)
 	if(istype(holder,/mob/living/simple_mob/vore/bigdragon))
 		var/mob/living/simple_mob/vore/bigdragon/BG = holder
 		if(holder.IIsAlly(the_target))
@@ -1028,11 +1075,14 @@ I think I covered everything.
 			if(H.IIsAlly(attacker))
 				switch(warnings)
 					if(0)
-						H.say("Stop that.")
+//						H.say("Stop that.")
+						H.say("!grumbles.")
 					if(1)
-						H.say("I'm warning you here.")
+//						H.say("I'm warning you here.")
+						H.say("!growls deeply.")
 					if(2)
-						H.say("You do that again, and you'll regret it.")
+//						H.say("You do that again, and you'll regret it.") //Outpost speech tweaks again. Look at me go!
+						H.say("!snarls and bares its fangs.")
 					if(3)
 						H.enrage(attacker)
 						return
@@ -1042,11 +1092,12 @@ I think I covered everything.
 				return
 	return .=..()
 
-/mob/living/simple_mob/vore/bigdragon/proc/enrage(var/atom/movable/attacker)
+/mob/living/simple_mob/vore/bigdragon/proc/enrage(atom/movable/attacker)
 	enraged = 1
 	norange = 0
 	faction = FACTION_DRAGON
-	say("HAVE IT YOUR WAY THEN")
+//	say("HAVE IT YOUR WAY THEN") //Outpost 21 edit.. can't. stop. me noooooooooow~.. what, don't know that song?
+	say("!bellows out a warcry and goes for the attack!")
 	qdel(ai_holder)
 	var/datum/ai_holder/simple_mob/intentional/dragon/D = new /datum/ai_holder/simple_mob/intentional/dragon(src)
 	ai_holder = D
@@ -1065,7 +1116,7 @@ I think I covered everything.
 	set_AI_busy(FALSE)
 
 //Smack people it warns
-/datum/ai_holder/simple_mob/healbelly/retaliate/dragon/proc/dissuade(var/chump)
+/datum/ai_holder/simple_mob/healbelly/retaliate/dragon/proc/dissuade(chump)
 	if(chump in check_trajectory(chump, holder, pass_flags = PASSTABLE))
 		if(istype(holder,/mob/living/simple_mob/vore/bigdragon))
 			var/mob/living/simple_mob/vore/bigdragon/H = holder

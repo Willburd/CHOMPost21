@@ -1,6 +1,7 @@
 /datum/job/hos
 	camp_protection = TRUE
-/*
+
+// Outpost 21 edit - Renable sec-med
 /datum/job/brigphysician
 	title = JOB_BRIG_PHYSICIAN
 	flag = BRIGPHYS
@@ -12,10 +13,10 @@
 	supervisors = "the " + JOB_HEAD_OF_SECURITY + " and " + JOB_CHIEF_MEDICAL_OFFICER
 	selection_color = "#601C1C"
 	economic_modifier = 7
-	access = list(access_medical, access_medical_equip, access_morgue, access_surgery, access_chemistry, access_virology, access_genetics, access_security, access_sec_doors, access_brig, access_eva)
-	minimal_access = list(access_medical, access_medical_equip, access_morgue, access_surgery, access_virology, access_security, access_sec_doors, access_brig, access_eva)
+	access = list(ACCESS_MEDICAL, ACCESS_MEDICAL_EQUIP, ACCESS_MORGUE, ACCESS_SURGERY, ACCESS_CHEMISTRY, ACCESS_VIROLOGY, ACCESS_GENETICS, ACCESS_SECURITY, ACCESS_SEC_DOORS, ACCESS_BRIG, ACCESS_EVA)
+	minimal_access = list(ACCESS_MEDICAL, ACCESS_MEDICAL_EQUIP, ACCESS_MORGUE, ACCESS_SURGERY, ACCESS_VIROLOGY, ACCESS_SECURITY, ACCESS_SEC_DOORS, ACCESS_BRIG, ACCESS_EVA)
 
-	outfit_type = /decl/hierarchy/outfit/job/security/brigphysician
+	outfit_type = /datum/decl/hierarchy/outfit/job/security/brigphysician
 	job_description = "The " + JOB_BRIG_PHYSICIAN + " is a doctor that helps security staff with medical issues. They have minimum access to Security, but they are not officers and should not conduct arrests."
 	alt_titles = list(
 		JOB_ALT_SECURITY_MEDIC = /datum/alt_title/security_medic,
@@ -24,7 +25,7 @@
 		JOB_ALT_JUNIOR_BRIGPHYS = /datum/alt_title/junior_brigphys,
 		JOB_ALT_DETENTION_HEALTH_OFFICER = /datum/alt_title/detention_med
 	)
-	outfit_type = /decl/hierarchy/outfit/job/security/brigphysician
+	outfit_type = /datum/decl/hierarchy/outfit/job/security/brigphysician
 
 /datum/alt_title/security_medic
 	title = JOB_ALT_SECURITY_MEDIC
@@ -40,4 +41,3 @@
 
 /datum/alt_title/detention_med
 	title = JOB_ALT_DETENTION_HEALTH_OFFICER
-*/

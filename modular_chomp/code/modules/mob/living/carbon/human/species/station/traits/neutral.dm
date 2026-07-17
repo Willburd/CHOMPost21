@@ -23,6 +23,7 @@
 		if(H.reagents.has_reagent(reagent))
 			H.adjust_nutrition(H.reagents.get_reagent_amount(reagent))
 			H.reagents.del_reagent(reagent)
+	/* Outpost 21 edit - Nif removal
 	if(H.nif)
 		var/obj/item/nif/implant = H.nif
 		implant.wear(5)
@@ -32,6 +33,7 @@
 			QDEL_NULL(implant)
 			H.adjust_nutrition(100)
 			to_chat(H, span_critical("Your NIF lets out one last sputter as it finally gives out"))
+	*/
 
 /datum/trait/neutral/mobegglaying
 	name = "Egg Laying"
@@ -39,7 +41,7 @@
 	cost = 0
 	custom_only = FALSE
 
-/datum/trait/neutral/mobegglaying/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+/datum/trait/neutral/mobegglaying/apply(datum/species/S,mob/living/carbon/human/H)
 	..()
 	add_verb(H,/mob/living/proc/mobegglaying)
 
@@ -49,7 +51,7 @@
 	cost = 0
 	custom_only = FALSE
 
-/datum/trait/neutral/succubus_bite/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+/datum/trait/neutral/succubus_bite/apply(datum/species/S,mob/living/carbon/human/H)
 	..()
 	add_verb(H,/mob/living/proc/succubus_bite)
 

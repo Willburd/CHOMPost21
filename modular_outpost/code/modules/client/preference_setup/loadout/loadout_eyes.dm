@@ -1,0 +1,26 @@
+// glasses
+/datum/gear/eyes/arglasses_all
+	allowed_roles = list(JOB_SITE_MANAGER,JOB_HEAD_OF_PERSONNEL,JOB_COMMAND_OFFICER)
+
+/datum/gear/eyes/arglasses_sec
+	allowed_roles = list(JOB_SECURITY_OFFICER,JOB_HEAD_OF_SECURITY,JOB_WARDEN,JOB_BRIG_PHYSICIAN)
+
+/datum/gear/eyes/arglasses_med
+	allowed_roles = list(JOB_MEDICAL_DOCTOR,JOB_CHIEF_MEDICAL_OFFICER,JOB_CHEMIST,JOB_PARAMEDIC,JOB_GENETICIST, JOB_PSYCHIATRIST,JOB_FIELD_MEDIC,JOB_BRIG_PHYSICIAN)
+
+/datum/gear/eyes/arglasses_eng
+	allowed_roles = list(JOB_ENGINEER,JOB_CHIEF_ENGINEER,JOB_ATMOSPHERIC_TECHNICIAN,JOB_ROBOTICIST)
+
+
+// Mandles
+/datum/gear/eyes/ar_mantle_cmd
+	allowed_roles = list(JOB_SITE_MANAGER,JOB_HEAD_OF_PERSONNEL,JOB_COMMAND_OFFICER)
+
+/datum/gear/eyes/ar_mantle_sec
+	allowed_roles = list(JOB_SECURITY_OFFICER,JOB_HEAD_OF_SECURITY,JOB_WARDEN,JOB_BRIG_PHYSICIAN)
+
+/datum/gear/eyes/ar_mantle_med
+	allowed_roles = list(JOB_MEDICAL_DOCTOR,JOB_CHIEF_MEDICAL_OFFICER,JOB_CHEMIST,JOB_PARAMEDIC,JOB_GENETICIST, JOB_PSYCHIATRIST,JOB_FIELD_MEDIC,JOB_BRIG_PHYSICIAN)
+
+/datum/gear/eyes/ar_mantle_eng
+	allowed_roles = list(JOB_ENGINEER,JOB_CHIEF_ENGINEER,JOB_ATMOSPHERIC_TECHNICIAN,JOB_ROBOTICIST)

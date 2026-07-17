@@ -29,6 +29,8 @@ type Data = {
   guestNotice: string;
   userMoney: number;
   user: { name: string; job: string };
+  cargo_configure: BooleanLike; // Outpost 21 edit(port) - Cargo vendor configuring
+  forced_icon_path: string | null; // Outpost 21 edit(port) - Cargo vendor sale icon override
 };
 
 type Product = {
@@ -196,14 +198,17 @@ export const VendingProductsList = (props: { products: Product[] }) => {
 
 const VendingRow = (props: { product: Product }) => {
   const { act, data } = useBackend<Data>();
-  const { actively_vending } = data;
+  const { actively_vending, cargo_configure, forced_icon_path } = data; // Outpost 21 edit(port) - Cargo vendor configuring, forced sale icons
   const { product } = props;
   return (
     <Table.Row className="candystripe">
       <Table.Cell collapsing>
         {(product.isatom && (
           <span
-            className={classes(['vending32x32', product.path])}
+            className={classes([
+              'vending32x32',
+              forced_icon_path ? forced_icon_path : product.path,
+            ])}
             style={{
               verticalAlign: 'middle',
             }}
@@ -242,7 +247,13 @@ const VendingRow = (props: { product: Product }) => {
             })
           }
         >
-          {product.price ? `Buy (${product.price}₮)` : 'Vend'}
+          {/* Outpost 21 edit(port) begin - Cargo vendor configuring */}
+          {cargo_configure
+            ? `Set(${product.price}₮)`
+            : product.price
+              ? `Buy (${product.price}₮)`
+              : 'Vend'}
+          {/* Outpost 21 edit end */}
         </Button>
       </Table.Cell>
     </Table.Row>

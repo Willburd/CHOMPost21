@@ -72,12 +72,19 @@
 		"The fox's stomach churns hungrily over your form, trying to take you.",
 		"With a loud glorp, the stomach spills more acids onto you.")
 
-/mob/living/simple_mob/animal/passive/fox/apply_melee_effects(var/atom/A)
+/mob/living/simple_mob/animal/passive/fox/apply_melee_effects(atom/A)
 	if(ismouse(A))
 		var/mob/living/simple_mob/animal/passive/mouse/mouse = A
 		if(mouse.getMaxHealth() < 20) // In case a badmin makes giant mice or something.
 			mouse.splat()
 			visible_emote(pick("bites \the [mouse]!", "toys with \the [mouse].", "chomps on \the [mouse]!"))
+	// Outpost 21 edit begin - kills jils
+	else if(istype(A,/mob/living/simple_mob/vore/alienanimals/jil))
+		var/mob/living/simple_mob/vore/alienanimals/jil/jil = A
+		if(jil.getMaxHealth() <= 5) // incase of jillioth
+			jil.splat()
+			visible_emote(pick("bites \the [jil]!", "toys with \the [jil].", "chomps on \the [jil]!"))
+	// Outpost 21 edit end
 	else
 		..()
 
@@ -91,7 +98,7 @@
 	else
 		return ..()
 
-/mob/living/simple_mob/animal/passive/fox/get_scooped(var/mob/living/carbon/grabber)
+/mob/living/simple_mob/animal/passive/fox/get_scooped(mob/living/carbon/grabber)
 	if (stat >= DEAD)
 		return //since the holder icon looks like a living cat
 	..()

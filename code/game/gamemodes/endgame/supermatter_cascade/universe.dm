@@ -7,19 +7,19 @@ GLOBAL_VAR_INIT(universe_has_ended, 0)
 
 	decay_rate = 5 // 5% chance of a turf decaying on lighting update/airflow (there's no actual tick for turfs)
 
-/datum/universal_state/supermatter_cascade/OnShuttleCall(var/mob/user)
+/datum/universal_state/supermatter_cascade/OnShuttleCall(mob/user)
 	if(user)
 		to_chat(user, span_sinister("All you hear on the frequency is static and panicked screaming. There will be no shuttle call today."))
 	return 0
 
-/datum/universal_state/supermatter_cascade/OnTurfChange(var/turf/T)
+/datum/universal_state/supermatter_cascade/OnTurfChange(turf/T)
 	var/turf/space/S = T
 	if(istype(S))
 		S.color = "#0066FF"
 	else
 		S.color = initial(S.color)
 
-/datum/universal_state/supermatter_cascade/DecayTurf(var/turf/T)
+/datum/universal_state/supermatter_cascade/DecayTurf(turf/T)
 	if(istype(T,/turf/simulated/wall))
 		var/turf/simulated/wall/W=T
 		W.melt()
@@ -72,13 +72,14 @@ GLOBAL_VAR_INIT(universe_has_ended, 0)
 
 					The access requirements on the Asteroid Shuttles' consoles have now been revoked.
 				"}
-		GLOB.priority_announcement.Announce(txt,"SUPERMATTER CASCADE DETECTED")
+		GLOB.priority_announcement.Announce(txt,"SUPERMATTER CASCADE DETECTED", ANNOUNCER_MSG_SUPERMATTER_CASCADE)
 
 		for(var/obj/machinery/computer/shuttle_control/C in GLOB.machines)
 			if(istype(C, /obj/machinery/computer/shuttle_control/research) || istype(C, /obj/machinery/computer/shuttle_control/mining))
 				C.req_access = list()
 				C.req_one_access = list()
 
+		/* Outpost 21 edit begin - Don't end game anymore
 		spawn(5 MINUTES)
 			play_cinematic(/datum/cinematic/nuke/self_destruct) // TODO: Custom cinematic
 
@@ -94,6 +95,7 @@ GLOBAL_VAR_INIT(universe_has_ended, 0)
 						M.health = 0
 						M.set_stat(DEAD)
 			GLOB.universe_has_ended = 1
+		*/
 		return
 
 /datum/universal_state/supermatter_cascade/proc/AreaSet()

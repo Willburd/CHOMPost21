@@ -536,6 +536,7 @@
 		thing.set_light(impact_light_range, impact_light_intensity, impact_light_color_override? impact_light_color_override : color)
 		beam_components.beam_components += thing
 	QDEL_IN(beam_components, duration)
+	beam_components = null // Release beam components so projectile can Qdel. They'll Qdel on their own with the above line.
 
 //Returns true if the target atom is on our current turf and above the right layer
 //If direct target is true it's the originally clicked target.
@@ -546,6 +547,8 @@
 		var/mob/M = firer
 		if((target == firer) || ((target == firer.loc) && istype(firer.loc, /obj/mecha)) || (target in firer.buckled_mobs) || (istype(M) && (M.buckled == target)))
 			return FALSE
+	if(istype(target,/obj/item/energy_net)) // Outpost 21 edit - Ignore nets
+		return FALSE
 	if(!ignore_loc && (loc != target.loc))
 		return FALSE
 	if(target in passthrough)
@@ -679,7 +682,7 @@
 
 /obj/item/projectile/proc/get_structure_damage()
 	if(damage_type == BRUTE || damage_type == BURN)
-		return damage + mob_bonus_damage //CHOMP Edit: Added mob_bonus_damage to the returned value so that phaser can do damage against shields.
+		return damage
 	return 0
 
 //return 1 if the projectile should be allowed to pass through after all, 0 if not.

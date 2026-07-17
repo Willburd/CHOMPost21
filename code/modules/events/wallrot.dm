@@ -7,7 +7,7 @@
 
 	// 100 attempts
 	for(var/i=0, i<100, i++)
-		var/z_level = pick(using_map.station_levels)
+		var/z_level = pick(using_map.event_levels)
 		var/turf/candidate = locate(rand(1, world.maxx), rand(1, world.maxy), z_level)
 		if(istype(candidate, /turf/simulated/wall))
 			center = candidate
@@ -18,8 +18,7 @@
 
 /datum/event/wallrot/announce()
 	if(center)
-		GLOB.command_announcement.Announce("Harmful fungi detected on \the [station_name()]. Hull integrity near [center.loc.name] may be compromised.", "Hazardous Biomass") //CHOMPEdit - Wording
-		// Chomp edit - Better wording as to what the hell it actually does.
+		GLOB.command_announcement.Announce("Harmful fungi detected on \the [station_name()]. Hull integrity near [center.loc.name] may be compromised.", "Hazardous Biomass", ANNOUNCER_MSG_WALLROT) //CHOMPEdit - Wording
 
 /datum/event/wallrot/start()
 	spawn()

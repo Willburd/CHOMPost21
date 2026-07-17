@@ -98,6 +98,12 @@
 			/obj/item/toy/plushie/dragon/white_east,
 			/obj/item/toy/plushie/dragon/gold_east,
 			//VOREStation Add End
+			//Outpost 21 add start
+			/obj/item/toy/plushie/tinytin,
+			/obj/item/toy/plushie/jil,
+			/obj/item/toy/plushie/chu,
+			/obj/item/toy/plushie/expie,
+			//Outpost 21 add end
 			//YawnWider Add Start
 			/obj/item/toy/plushie/teshari/_yw,
 			/obj/item/toy/plushie/teshari/w_yw,
@@ -306,6 +312,7 @@
 	containertype = /obj/structure/closet/crate
 	containername = "cordless jukebox speakers crate"
 
+/* Outpost 21 edit - No explo headsets
 /datum/supply_pack/misc/explorer_headsets
 	name = "shortwave-capable headsets (x4)"
 	desc = "Four headsets with shortwave fallback capacity. Requires Exploration, EVA, or Pilot's access."
@@ -321,6 +328,7 @@
 		ACCESS_PILOT
 	)
 	one_access = TRUE
+*/
 
 /datum/supply_pack/misc/emergency_beacons
 	name = "emergency locator beacons (x4)"

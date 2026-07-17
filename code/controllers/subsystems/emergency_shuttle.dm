@@ -27,10 +27,12 @@ SUBSYSTEM_DEF(emergency_shuttle)
 	VAR_PRIVATE/datum/announcement/priority/emergency_shuttle_recalled
 	VAR_PRIVATE/list/current_run
 
+	var/admin_override_mode = FALSE // Outpost 21 edit - Lets not end the round
+
 /datum/controller/subsystem/emergency_shuttle/Initialize()
-	emergency_shuttle_docked = new(0, new_sound = sound('sound/AI/shuttledock.ogg'))
-	emergency_shuttle_called = new(0, new_sound = sound('sound/AI/shuttlecalled.ogg'))
-	emergency_shuttle_recalled = new(0, new_sound = sound('sound/AI/shuttlerecalled.ogg'))
+	emergency_shuttle_docked = new()
+	emergency_shuttle_called = new()
+	emergency_shuttle_recalled = new()
 	return SS_INIT_SUCCESS
 
 /datum/controller/subsystem/emergency_shuttle/fire(resumed)
@@ -72,9 +74,9 @@ SUBSYSTEM_DEF(emergency_shuttle)
 		var/estimated_time = round(estimate_launch_time()/60,1)
 
 		if(evac)
-			emergency_shuttle_docked.Announce(replacetext(replacetext(using_map.emergency_shuttle_docked_message, "%dock_name%", "[using_map.dock_name]"),  "%ETD%", "[estimated_time] minute\s"))
+			emergency_shuttle_docked.Announce(replacetext(replacetext(using_map.emergency_shuttle_docked_message, "%dock_name%", "[using_map.dock_name]"),  "%ETD%", "[estimated_time] minute\s"), new_sound = ANNOUNCER_MSG_SHUTTLE_EMERG_DOCK)
 		else
-			GLOB.priority_announcement.Announce(replacetext(replacetext(using_map.shuttle_docked_message, "%dock_name%", "[using_map.dock_name]"),  "%ETD%", "[estimated_time] minute\s")/*, "Transfer System", 'sound/AI/tramarrived.ogg'*/) // CHOMPEdit
+			GLOB.priority_announcement.Announce(replacetext(replacetext(using_map.shuttle_docked_message, "%dock_name%", "[using_map.dock_name]"),  "%ETD%", "[estimated_time] minute\s"), "Transfer System", ANNOUNCER_MSG_SHUTTLE_ENDROUND_DOCK)
 
 	//arm the escape pods
 	if(!evac)
@@ -88,7 +90,7 @@ SUBSYSTEM_DEF(emergency_shuttle)
 			pod.arming_controller.arm()
 
 //begins the launch countdown and sets the amount of time left until launch
-/datum/controller/subsystem/emergency_shuttle/proc/set_launch_countdown(var/seconds)
+/datum/controller/subsystem/emergency_shuttle/proc/set_launch_countdown(seconds)
 	wait_for_launch = TRUE
 	launch_time = world.time + (seconds * 10)
 	can_fire = TRUE
@@ -113,7 +115,7 @@ SUBSYSTEM_DEF(emergency_shuttle)
 	var/estimated_time = round(estimate_arrival_time()/60, 1)
 
 	evac = TRUE
-	emergency_shuttle_called.Announce(replacetext(using_map.emergency_shuttle_called_message, "%ETA%", "[estimated_time] minute\s"))
+	emergency_shuttle_called.Announce(replacetext(using_map.emergency_shuttle_called_message, "%ETA%", "[estimated_time] minute\s"), new_sound = ANNOUNCER_MSG_SHUTTLE_EMERG_CALLED)
 	for(var/type, area in GLOB.areas_by_type)
 		if(istype(area, /area/hallway))
 			var/area/hallway/our_hallway = area
@@ -135,7 +137,7 @@ SUBSYSTEM_DEF(emergency_shuttle)
 	shuttle.move_time = SHUTTLE_TRANSIT_DURATION
 	var/estimated_time = round(estimate_arrival_time()/60, 1)
 
-	GLOB.priority_announcement.Announce(replacetext(replacetext(using_map.shuttle_called_message, "%dock_name%", "[using_map.dock_name]"),  "%ETA%", "[estimated_time] minute\s")/*, "Transfer System", 'sound/AI/tramcalled.ogg'*/) // CHOMPEdit
+	GLOB.priority_announcement.Announce(replacetext(replacetext(using_map.shuttle_called_message, "%dock_name%", "[using_map.dock_name]"),  "%ETA%", "[estimated_time] minute\s"), "Transfer System", ANNOUNCER_MSG_SHUTTLE_ENDROUND_CALLED)
 	SSatc.shift_ending()
 
 //recalls the shuttle
@@ -147,7 +149,7 @@ SUBSYSTEM_DEF(emergency_shuttle)
 	shuttle.cancel_launch(src)
 
 	if(evac)
-		emergency_shuttle_recalled.Announce(using_map.emergency_shuttle_recall_message)
+		emergency_shuttle_recalled.Announce(using_map.emergency_shuttle_recall_message, new_sound = ANNOUNCER_MSG_SHUTTLE_EMERG_RECALLED)
 
 		for(var/type, area in GLOB.areas_by_type)
 			if(istype(area, /area/hallway))
@@ -225,6 +227,13 @@ SUBSYSTEM_DEF(emergency_shuttle)
 //returns 1 if the shuttle has gone to the station and come back at least once,
 //used for game completion checking purposes
 /datum/controller/subsystem/emergency_shuttle/proc/returned()
+	// Outpost 21 edit begin - Don't end the round if we manually control the shuttle
+	if(admin_override_mode && departed && shuttle.moving_status == SHUTTLE_IDLE && shuttle.location == FERRY_LOCATION_OFFSITE)
+		admin_override_mode = FALSE
+		autopilot = TRUE
+		departed = FALSE
+		evac = FALSE
+	// Outpost 21 edit end
 	return (departed && shuttle.moving_status == SHUTTLE_IDLE && shuttle.location)	//we've gone to the station at least once, no longer in transit and are idle back at centcom
 
 //returns 1 if the shuttle is not idle at centcom
@@ -246,7 +255,7 @@ SUBSYSTEM_DEF(emergency_shuttle)
 	return shuttle && (shuttle.direction && shuttle.moving_status != SHUTTLE_IDLE)
 
 /datum/controller/subsystem/emergency_shuttle/proc/get_status_panel_eta()
-	if(online())
+	if(online() && !admin_override_mode) // Outpost 21 edit - Lets not end the round
 		if(shuttle.has_arrive_time())
 			var/timeleft = SSemergency_shuttle.estimate_arrival_time()
 			return "ETA-[(timeleft / 60) % 60]:[add_zero(num2text(timeleft % 60), 2)]"

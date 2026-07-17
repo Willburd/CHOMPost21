@@ -6,6 +6,7 @@
 
 /datum/gear/utility/implant/egg
 	display_name = "Egg implant"
+	description = "Implant that generates eggs within its user. A surprisingly common 'recreational' body mod." // Outpost 21 edit - desc
 	path = /obj/item/implant/reagent_generator/egg
 	cost = 0
 
@@ -35,7 +36,7 @@
 		"mouse" = /mob/living/simple_mob/animal/passive/mouse,
 		"rat" = /mob/living/simple_mob/animal/passive/mouse/rat,
 		"dust jumper" = /mob/living/simple_mob/vore/alienanimals/dustjumper,
-		"woof" = /mob/living/simple_mob/vore/woof,
+		// "woof" = /mob/living/simple_mob/vore/woof, // Outpost 21 edit - Remove softdogs
 		"corgi" = /mob/living/simple_mob/animal/passive/dog/corgi,
 		"cat" = /mob/living/simple_mob/animal/passive/cat,
 		"chicken" = /mob/living/simple_mob/animal/passive/chicken,

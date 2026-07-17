@@ -1,3 +1,4 @@
+/* Outpost 21 edit - Removing badly designed chems
 /datum/decl/chemical_reaction/instant/claridyl
 	name = REAGENT_CLARIDYL
 	id = REAGENT_ID_CLARIDYL
@@ -30,7 +31,7 @@
 	id = REAGENT_ID_EDENSNAKE
 	result = REAGENT_ID_EDENSNAKE
 	required_reagents = list(REAGENT_ID_EDEN = 1, REAGENT_ID_ETHANOL = 1)
-
+*/
 /datum/decl/chemical_reaction/instant/tercozolam
 	id = REAGENT_ID_TERCOZOLAM
 	result = REAGENT_ID_TERCOZOLAM
@@ -58,7 +59,7 @@
 	required_reagents = list(REAGENT_ID_SODIUMCHLORIDE = 1, REAGENT_ID_WATER = 1, REAGENT_ID_SUGAR = 1)
 	result_amount = 1
 ///SAP RECIPES//////
-
+/* Outpost 21 edit - Removing badly designed chems
 /datum/decl/chemical_reaction/instant/myelamine_sap //This is the clotting agent used by clotting packs.
 	name = REAGENT_MYELAMINE
 	id = REAGENT_ID_MYELAMINE + "sap"
@@ -89,13 +90,13 @@
 	result_amount = 3
 
 /////SERAZINE RECIPES//////
-
 /datum/decl/chemical_reaction/instant/alizene
 	name = REAGENT_ALIZENE
 	id = REAGENT_ID_ALIZENE
 	result = REAGENT_ID_ALIZENE
 	required_reagents = list(REAGENT_ID_BICARIDINE = 1, REAGENT_ID_SERAZINE = 1, REAGENT_ID_TUNGSTEN = 1)
 	result_amount = 3
+*/
 
 // Frost oil reactions for material sheets
 /datum/decl/chemical_reaction/instant/solidification/aluminium
@@ -111,6 +112,7 @@
 	sheet_to_give = /obj/item/stack/material/copper
 
 //YW stuff
+/* Outpost 21 edit - Removing badly designed chems
 /datum/decl/chemical_reaction/instant/benzilate
 	name = "Benzilate"
 	id = REAGENT_ID_BENZILATE
@@ -124,6 +126,7 @@
 	result = REAGENT_ID_PHENETHYLAMINE
 	required_reagents = list(REAGENT_ID_PAROXETINE = 1, REAGENT_ID_BENZILATE = 1)
 	result_amount = 2
+*/
 
 // Xenochem stuff
 /datum/decl/chemical_reaction/instant/xenolazarus // Moved here because upstream axed it and this file cannot conflict
@@ -132,7 +135,7 @@
 	result = null
 	required_reagents = list(REAGENT_ID_MONSTERTAMER = 5, REAGENT_ID_CLONEXADONE = 5)
 
-/datum/decl/chemical_reaction/instant/xenolazarus/on_reaction(var/datum/reagents/holder, var/created_volume) //literally all this does is mash the regenerate button
+/datum/decl/chemical_reaction/instant/xenolazarus/on_reaction(datum/reagents/holder, created_volume) //literally all this does is mash the regenerate button
 	if(ishuman(holder.my_atom))
 		var/mob/living/carbon/human/H = holder.my_atom
 		var/datum/component/xenochimera/comp = H.GetComponent(/datum/component/xenochimera)

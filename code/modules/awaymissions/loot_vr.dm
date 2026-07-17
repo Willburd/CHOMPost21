@@ -259,8 +259,10 @@
 				new /obj/item/storage/firstaid/combat(C)
 			if(prob(15))
 				new /obj/item/storage/firstaid/adv(C)
+			/* Outpost 21 edit - Removing badly designed chems
 			if(prob(5)) //CHOMPEdit End
 				new /obj/item/storage/firstaid/experimental(C) //CHOMPedit Add
+			*/
 		if("snacks")
 			//you're come so far, you must be in need of refreshment
 			var/obj/structure/closet/crate/freezer/C = new(src.loc)

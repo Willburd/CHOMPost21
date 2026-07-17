@@ -40,7 +40,7 @@
 	else
 		set_light(0)
 
-/obj/machinery/bodyscanner/attackby(var/obj/item/G, user as mob)
+/obj/machinery/bodyscanner/attackby(obj/item/G, user as mob)
 	if(istype(G, /obj/item/grab))
 		var/obj/item/grab/H = G
 		if(panel_open)
@@ -58,9 +58,11 @@
 			to_chat(user, span_warning("\The [H.affecting] has other entities attached to it. Remove them first."))
 			return
 		var/mob/M = H.affecting
+		/* Outpost 21 edit(port) - Disable abiotic lockout
 		if(M.abiotic())
 			to_chat(user, span_notice("Subject cannot have abiotic items on."))
 			return
+		*/
 		M.forceMove(src)
 		occupant = M
 		update_icon()
@@ -94,9 +96,11 @@
 
 	if(O.buckled)
 		return 0
+	/* Outpost 21 edit(port) - Disable abiotic lockout
 	if(O.abiotic())
 		to_chat(user, span_notice("Subject cannot have abiotic items on."))
 		return 0
+	*/
 	if(O.has_buckled_mobs())
 		to_chat(user, span_warning("\The [O] has other entities attached to it. Remove them first."))
 		return
@@ -188,6 +192,7 @@
 		update_icon() //VOREStation Edit - Health display for consoles with light and such.
 		var/mob/living/carbon/human/H = occupant
 		occupantData["name"] = H.name
+
 		occupantData["species"] = H.species.name
 		if(H.custom_species)
 			if( H.species.name == SPECIES_CUSTOM || H.species.name == SPECIES_HANNER )
@@ -220,6 +225,12 @@
 			paralysis_duration = 0
 			fakedeath = TRUE
 
+		// Outpost 21 edit begin - Upgraded parts needed to show certain things
+		var/scanner_part_level = 0
+		for(var/obj/item/stock_parts/scanning_module/scanner in contents)
+			scanner_part_level = scanner.get_rating()
+		// Outpost 21 edit end
+
 		occupantData["stat"] = occupant_stat
 		occupantData["health"] = occupant_health
 		occupantData["maxHealth"] = H.getMaxHealth()
@@ -239,8 +250,15 @@
 		occupantData["bodyTempC"] = H.bodytemperature-T0C
 		occupantData["bodyTempF"] = (((H.bodytemperature-T0C) * 1.8) + 32)
 
-		occupantData["hasBorer"] = H.has_brain_worms()
+		occupantData["hasBorer"] = scanner_part_level >= 4 && H.has_brain_worms() // Outpost 21 edit - Upgraded parts needed to show certain things, hyper needed
 		occupantData["hasWithdrawl"] = has_withdrawl
+
+		// Outpost 21 edit begin - Upgraded parts needed to show certain things
+		occupantData["allergens"] = null
+		if(scanner_part_level >= 3) // Super needed
+			occupantData["allergens"] = assembly_allergy_list(H.species.allergens, H.species.medallergens)
+		// Outpost 21 edit end
+		occupantData["hasAllergens"] = islist(occupantData["allergens"])
 
 		occupantData["colourblind"] = null
 		for(var/datum/modifier/M in H.modifiers)
@@ -309,15 +327,17 @@
 			for(var/obj/thing in E.implants)
 				var/implantSubData[0]
 				var/obj/item/implant/I = thing
-				var/obj/item/nif/N = thing
+				// var/obj/item/nif/N = thing Outpost 21 edit - Nif removal
 				if(istype(I))
 					implantSubData["name"] =  I.name
 					implantSubData["known"] = istype(I) && I.known_implant
 					implantData.Add(list(implantSubData))
+				/* Outpost 21 edit - Nif removal
 				else
 					implantSubData["name"] =  N.name
 					implantSubData["known"] = istype(N) && N.known_implant
 					implantData.Add(list(implantSubData))
+				*/
 
 			organData["implants"] = implantData
 			organData["implants_len"] = implantData.len
@@ -446,11 +466,13 @@
 				else
 					speciestext = "[H.custom_species] \[Similar biology to [H.species.name]\]"
 					dat += span_blue("Sapient Species: [speciestext]") + "<BR>"
+
 			for(var/addic in H.get_all_addictions())
 				if(H.get_addiction_to_reagent(addic) > 0 && H.get_addiction_to_reagent(addic) < 80)
 					var/datum/reagent/R = SSchemistry.chemical_reagents[addic]
 					has_withdrawl = R.name
 					break
+
 		var/t1
 		switch(occupant.stat) // obvious, see what their status is
 			if(0)
@@ -521,6 +543,12 @@
 
 		dat += "Paralysis Summary %: [occupant_paralysis] ([paralysis_duration] seconds left!)<br>"
 		dat += "Body Temperature: [occupant.bodytemperature-T0C]&deg;C ([occupant.bodytemperature*1.8-459.67]&deg;F)<br>"
+
+		if(ishuman(occupant))
+			var/mob/living/carbon/human/H = occupant
+			var/list/allergen_list = assembly_allergy_list(H.species.allergens, H.species.medallergens)
+			if(length(allergen_list))
+				dat += "Allergens: [english_list(allergen_list)]<BR>"
 
 		dat += "<hr>"
 
@@ -604,11 +632,13 @@
 
 			var/unknown_body = 0
 			for(var/obj/item/implant/I as anything in e.implants)
-				var/obj/item/nif/N = I //VOREStation Add: NIFs
+				// var/obj/item/nif/N = I //VOREStation Add: NIFs Outpost 21 edit - Nif removal
 				if(istype(I) && I.known_implant)
 					imp += "[I] implanted:"
+				/*  Outpost 21 edit - Nif removal
 				else if(istype(N) && N.known_implant) //VOREStation Add: NIFs
 					imp += "[N] implanted:"
+				*/
 				else
 					unknown_body++
 
@@ -725,7 +755,7 @@
 		scanner.console = null
 	return ..()
 
-/obj/machinery/body_scanconsole/attackby(var/obj/item/I, var/mob/user)
+/obj/machinery/body_scanconsole/attackby(obj/item/I, mob/user)
 	if(computer_deconstruction_screwdriver(user, I))
 		return
 	else if(istype(I, /obj/item/multitool)) //Did you want to link it?

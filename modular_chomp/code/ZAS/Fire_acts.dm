@@ -51,8 +51,8 @@ FIREACT_BURNS(/obj/machinery/vending,LOW_CHANCE,TRASH_BURN,BURN_TEMP_PHOROFIRE)
 FIREACT_BURNS(/obj/structure/loot_pile/mecha,LOW_CHANCE,TRASH_BURN,BURN_TEMP_PHOROFIRE)
 FIREACT_BURNS(/obj/structure/table/marble,LOW_CHANCE,TRASH_BURN,BURN_TEMP_PHOROFIRE)
 // The following two should be very limited to avoid frustrating crew
-FIREACT_BURNS(/obj/structure/cable,LOW_CHANCE,TRASH_BURN,BURN_TEMP_PHOROFIRE) // Comment out if wires shouldn't be destroyed
-FIREACT_BURNS(/obj/structure/disposalpipe/segment,LOW_CHANCE,TRASH_BURN,BURN_TEMP_PHOROFIRE) // Comment out if disposals shouldn't be destroyed
+// FIREACT_BURNS(/obj/structure/cable,LOW_CHANCE,TRASH_BURN,BURN_TEMP_PHOROFIRE) // Comment out if wires shouldn't be destroyed
+// FIREACT_BURNS(/obj/structure/disposalpipe/segment,LOW_CHANCE,TRASH_BURN,BURN_TEMP_PHOROFIRE) // Comment out if disposals shouldn't be destroyed
 //////////////////////////// LOW BURN ////////////////////////////
 FIREACT_BURNS(/obj/item/stack/material/plastic,LOW_CHANCE,LOW_BURN,BURN_TEMP_PLASTIC)
 FIREACT_BURNS(/obj/item/paper_bin,HIGH_CHANCE,LOW_BURN,BURN_TEMP_PAPER)

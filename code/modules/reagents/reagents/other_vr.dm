@@ -9,7 +9,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_MASSINDUSTRY
 	industrial_use = REFINERYEXPORT_REASON_MATSCI
 
-/datum/reagent/advmutationtoxin/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/advmutationtoxin/affect_blood(mob/living/carbon/M, alien, removed)
 	if(!(M.allow_spontaneous_tf))
 		return
 	if(ishuman(M))
@@ -17,6 +17,7 @@
 		if(H.species.name != "Promethean")
 			to_chat(M, span_danger("Your flesh rapidly mutates!"))
 
+			/* Outpost 21 edit - Remove backup implants
 			var/list/backup_implants = list()
 			for(var/obj/item/organ/I in H.organs)
 				for(var/obj/item/implant/backup/BI in I.contents)
@@ -24,16 +25,20 @@
 			if(backup_implants.len)
 				for(var/obj/item/implant/backup/BI in backup_implants)
 					BI.forceMove(src)
+			*/
 
 			H.set_species("Promethean")
 			H.shapeshifter_set_colour("#05FF9B") //They can still change their color.
 
+			/* Outpost 21 edit - Remove backup implants
 			if(backup_implants.len)
 				var/obj/item/organ/external/torso = H.get_organ(BP_TORSO)
 				for(var/obj/item/implant/backup/BI in backup_implants)
 					BI.forceMove(torso)
 					torso.implants += BI
+			*/
 
+/* Outpost 21 edit - Nif removal
 /datum/reagent/nif_repair_nanites
 	name = REAGENT_NIFREPAIRNANITES
 	id = REAGENT_ID_NIFREPAIRNANITES
@@ -48,7 +53,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_RARE
 	industrial_use = REFINERYEXPORT_REASON_MATSCI
 
-/datum/reagent/nif_repair_nanites/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/nif_repair_nanites/affect_blood(mob/living/carbon/M, alien, removed)
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
 		if(H.nif)
@@ -56,6 +61,7 @@
 			if(nif.stat == NIF_TEMPFAIL)
 				nif.stat = NIF_INSTALLING
 			nif.repair(removed)
+*/
 
 /datum/reagent/firefighting_foam
 	name = REAGENT_FIREFOAM
@@ -69,7 +75,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_UNWANTED
 	industrial_use = REFINERYEXPORT_REASON_INDUSTRY
 
-/datum/reagent/firefighting_foam/touch_turf(var/turf/T, reac_volume)
+/datum/reagent/firefighting_foam/touch_turf(turf/T, reac_volume)
 	if(reac_volume >= 1)
 		var/obj/effect/effect/foam/firefighting/F = (locate(/obj/effect/effect/foam/firefighting) in T)
 		if(!F)
@@ -87,8 +93,10 @@
 		lowertemp.react()
 		T.assume_air(lowertemp)
 		qdel(hotspot)
+	for(var/obj/effect/decal/cleanable/liquid_fuel/fuel_source in T) //Foam cleans up fuel sources.
+		qdel(fuel_source)
 
-	if (environment && environment.temperature > min_temperature) // Abstracted as steam or something
+	if(environment?.temperature > min_temperature) // Abstracted as steam or something
 		var/removed_heat = between(0, volume * 19000, -environment.get_thermal_energy_change(min_temperature))
 		environment.add_thermal_energy(-removed_heat)
 		if(prob(5))
@@ -96,10 +104,10 @@
 
 	T.apply_fire_protection() // CHOMPEdit - Apply fire protection to the turf
 
-/datum/reagent/firefighting_foam/touch_obj(var/obj/O, reac_volume)
+/datum/reagent/firefighting_foam/touch_obj(obj/O, reac_volume)
 	O.water_act(reac_volume / 5)
 
-/datum/reagent/firefighting_foam/touch_mob(var/mob/living/M, reac_volume)
+/datum/reagent/firefighting_foam/touch_mob(mob/living/M, reac_volume)
 	if(istype(M, /mob/living/simple_mob/slime)) //I'm sure foam is water-based!
 		var/mob/living/simple_mob/slime/S = M
 		S.adjustToxLoss(15 * reac_volume)
@@ -121,7 +129,7 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_UNWANTED
 	industrial_use = REFINERYEXPORT_REASON_PRECURSOR
 
-/datum/reagent/liquid_protean/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/liquid_protean/affect_blood(mob/living/carbon/M, alien, removed)
 	if(alien != IS_DIONA)
 		var/chem_effective = 1
 		if(alien == IS_SLIME)
@@ -130,6 +138,7 @@
 		M.heal_organ_damage(0.5 * removed, 0.5 * removed * chem_effective)
 		M.adjustToxLoss(-0.5 * removed * chem_effective)
 
+	/* Outpost 21 edit - Nif removal
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
 		if(H.nif)
@@ -137,6 +146,7 @@
 			if(nif.stat == NIF_TEMPFAIL)
 				nif.stat = NIF_INSTALLING
 			nif.repair(removed*0.1)
+	*/
 
 //Special toxins for solargrubs
 /datum/reagent/grubshock
@@ -151,5 +161,5 @@
 	supply_conversion_value = REFINERYEXPORT_VALUE_HIGHREFINED
 	industrial_use = REFINERYEXPORT_REASON_PRECURSOR
 
-/datum/reagent/grubshock/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+/datum/reagent/grubshock/affect_blood(mob/living/carbon/M, alien, removed)
 	M.take_organ_damage(0, removed * power * 0.2)

@@ -6,7 +6,7 @@
 	var/desc = "Someone neglected to write a nice description for this poor rock."
 
 	var/datum/time/current_time = new() // Holds the current time for sun positioning.  Note that we assume day and night is the same length because simplicity.
-	var/sun_process_interval = 1 HOUR
+	var/sun_process_interval = 20 MINUTES // Outpost 21 edit - we do this more often, because it's neat.
 	var/sun_last_process = null // world.time
 
 	var/datum/weather_holder/weather_holder
@@ -27,6 +27,11 @@
 
 	var/moon_name = null // Purely for flavor. Null means no moon exists.
 	var/moon_phase = null // Set if above is defined.
+
+	var/cryogenic_temp_shift = FALSE // If true, ALL areas that are not AREA_CRYOPLANET_SHIELDED will be brought toward the current weather's temperature. Causing indoor station areas to slowly match the planet's environment.
+
+	var/locked_light_intensity = 0 // Outpost 21 edit - Locking light levels
+	var/locked_light_color = null // Outpost 21 edit - Locking light levels
 
 /datum/planet/New()
 	..()
@@ -62,7 +67,7 @@
 	if(weather_holder)
 		weather_holder.process()
 
-/datum/planet/proc/update_sun_deferred(var/new_brightness, var/new_color)
+/datum/planet/proc/update_sun_deferred(new_brightness, new_color)
 	sun["brightness"] = CLAMP01(new_brightness)
 	sun["color"] = new_color
 	needs_work |= PLANET_PROCESS_SUN

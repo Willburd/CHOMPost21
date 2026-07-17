@@ -1,3 +1,4 @@
+/* Outpost 21 edit - removed job
 /datum/job/noncrew
 	title = JOB_OUTSIDER
 	disallow_jobhop = TRUE
@@ -69,8 +70,9 @@
 		return TRUE
 	else
 		return FALSE
+*/
 
-/datum/job/shadekin/update_limit(var/comperator)
+/datum/job/shadekin/update_limit(comperator)
 	var/current_limit = spawn_positions + round(comperator / 50)
 	if(current_limit > total_positions)
 		total_positions = current_limit

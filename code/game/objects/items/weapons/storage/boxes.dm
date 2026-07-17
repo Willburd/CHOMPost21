@@ -34,6 +34,7 @@
 	use_sound = 'sound/items/storage/box.ogg'
 	drop_sound = 'sound/items/drop/cardboardbox.ogg'
 	pickup_sound = 'sound/items/pickup/cardboardbox.ogg'
+	resistance_flags = FLAMMABLE
 
 // BubbleWrap - A box can be folded up to make card
 /obj/item/storage/box/attack_self(mob/user)
@@ -254,10 +255,10 @@
 	desc = "Box full of scum-bag tracking utensils."
 	icon_state = "implant"
 	starts_with = list(
-		/obj/item/implantcase/tracking = 4,
+		/obj/item/implantcase/tracking = 5, // Outpost 21 edit - Give an extra
 		/obj/item/implanter,
 		/obj/item/implantpad,
-		/obj/item/locator
+		///obj/item/locator // Outpost 21 edit - Largely pointless with pda
 	)
 
 /obj/item/storage/box/chemimp
@@ -321,6 +322,21 @@
 	icon_state = "monkeycubebox"
 	can_hold = list(/obj/item/reagent_containers/food/snacks/monkeycube)
 	starts_with = list(/obj/item/reagent_containers/food/snacks/monkeycube/wrapped = 4)
+
+// Outpost 21 edit(port) begin - Soaking monkey cubes
+/obj/item/storage/box/monkeycubes/proc/soaked()
+	for(var/A in contents)
+		var/obj/item/reagent_containers/food/snacks/monkeycube/C = A
+		if(istype(A,/obj/item/reagent_containers/food/snacks/monkeycube/wrapped))
+			C.soaked()
+		else if(istype(A,/obj/item/reagent_containers/food/snacks/monkeycube))
+			C.Expand()
+
+/obj/item/storage/box/monkeycubes/Moved(atom/old_loc, direction, forced, movetime)
+	. = ..()
+	if(istype(loc,/turf/simulated/floor/water))
+		soaked()
+// Outpost 21 edit end
 
 /obj/item/storage/box/monkeycubes/farwacubes
 	name = "farwa cube box"
@@ -400,6 +416,12 @@
 	icon_state = "handcuff"
 	starts_with = list(/obj/item/handcuffs = 7)
 
+/obj/item/storage/box/legcuffs
+	name = "box of spare legcuffs"
+	desc = "A box full of legcuffs."
+	icon_state = "handcuff"
+	starts_with = list(/obj/item/handcuffs/legcuffs = 7)
+
 /obj/item/storage/box/mousetraps
 	name = "box of Pest-B-Gon mousetraps"
 	desc = span_red(span_bold("WARNING:")) + " " + span_italics("Keep out of reach of children") + "."
@@ -432,7 +454,7 @@
 	drop_sound = 'sound/items/drop/matchbox.ogg'
 	pickup_sound =  'sound/items/pickup/matchbox.ogg'
 
-/obj/item/storage/box/matches/attackby(var/obj/item/flame/match/W, var/mob/user)
+/obj/item/storage/box/matches/attackby(obj/item/flame/match/W, mob/user)
 	if(istype(W) && !W.lit && !W.burnt)
 		if(prob(25))
 			W.light(user)
@@ -498,7 +520,7 @@
 /obj/item/storage/box/freezer/red
 	icon_state = "portafreezer_red"
 
-/obj/item/storage/box/freezer/Entered(var/atom/movable/AM)
+/obj/item/storage/box/freezer/Entered(atom/movable/AM)
 	if(istype(AM, /obj/item/organ))
 		var/obj/item/organ/O = AM
 		O.preserved = 1
@@ -506,7 +528,7 @@
 			organ.preserved = 1
 	..()
 
-/obj/item/storage/box/freezer/Exited(var/atom/movable/AM)
+/obj/item/storage/box/freezer/Exited(atom/movable/AM)
 	if(istype(AM, /obj/item/organ))
 		var/obj/item/organ/O = AM
 		O.preserved = 0
@@ -637,3 +659,20 @@
 	desc = "A box full of weapon power cells. For all your portable energy storage needs."
 	icon_state = "secbox"
 	starts_with = list(/obj/item/cell/device/weapon = 7)
+
+/obj/item/storage/box/mime
+	name = "invisible box"
+	desc = "Unfortunately not large enough to trap the mime."
+	foldable = null
+	icon_state = "box"
+	alpha = 0
+
+/obj/item/storage/box/mime/attack_hand(mob/user)
+	..()
+	if(HAS_MIND_TRAIT(user, TRAIT_MIMING))
+		alpha = 255
+
+/obj/item/storage/box/mime/Moved(atom/old_loc, direction, forced, movetime)
+	if(iscarbon(old_loc))
+		alpha = 0
+	return ..()

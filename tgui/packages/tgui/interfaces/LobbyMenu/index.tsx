@@ -18,7 +18,7 @@ export const LobbyMenu = (props) => {
 
   const [modal, setModal] = useState<ReactNode | false>(false);
 
-  const [filterDisabled, setFilterDisabled] = useState(false);
+  const [filterDisabled, setFilterDisabled] = useState(true); // Outpost 21 edit - Default scanlines off
   const [animationsDisabled, setAnimationsDisabled] = useState(false);
   const [audioDisabled, setAudioDisabled] = useState(false);
   const [animationsFinished, setAnimationsFinished] = useState(false);
