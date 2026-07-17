@@ -110,6 +110,9 @@ I think I covered everything.
 	special_attack_max_range = 10
 	special_attack_cooldown = 80
 
+	export_research_value = TECHWEB_TIER_4_POINTS
+	export_research_diminished_max = 2
+
 	plane = MOB_PLANE
 
 	mob_size = MOB_HUGE // Why was he medium... // outpost 21 edit(port) - These are huge. wtf
