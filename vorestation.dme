@@ -5886,6 +5886,7 @@
 #include "modular_outpost\code\game\objects\items\weapons\implants\implant.dm"
 #include "modular_outpost\code\game\objects\items\weapons\implants\implanter.dm"
 #include "modular_outpost\code\game\objects\items\weapons\implants\implanter_case.dm"
+#include "modular_outpost\code\game\objects\items\weapons\implants\lawset.dm"
 #include "modular_outpost\code\game\objects\items\weapons\implants\neuralbasic.dm"
 #include "modular_outpost\code\game\objects\items\weapons\material\chainsaw.dm"
 #include "modular_outpost\code\game\objects\items\weapons\storage\belt.dm"
