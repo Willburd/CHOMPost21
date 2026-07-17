@@ -25,33 +25,33 @@
 		if(bell_tolls_remaining >= 0)
 			playsound(src, 'sound/effects/Glassbr2.ogg')
 			visible_message("\The [src] suddenly shudders, before cracking, and imploding on itself, leaving nothing behind.")
-			QDEL(src)	//Our job is complete.
+			qdel(src)	//Our job is complete.
 		return TRUE
 	return FALSE
 
 /obj/item/orb_that_kills_old_people/equipped(mob/living/user, slot_equipped) //Generally i'd expect it to get caught by attack_hand(), but just incase it ends up in someone's hands through other means (someone putting it in their hands?), this should handle it.
 	. = ..()
 	if(r_u_old(user))
-		user.visible_message("[user] suddenly flashes into a pile of ash and bones as [user.they()] attempt to hold \the [src]!")
+		user.visible_message("[user] suddenly flashes into a pile of ash and bones as [user.p_they()] attempt to hold \the [src]!")
 
 /obj/item/orb_that_kills_old_people/attack_hand(mob/living/user)
-	if(r_u_old(mob))
-		user.visible_message("[user] tries to pick up \the [src], but as soon as [user.they()] touch it, [user.they()] instantaneously flash into a pile of ash and bones!")
+	if(r_u_old(user))
+		user.visible_message("[user] tries to pick up \the [src], but as soon as [user.p_they()] touch it, [user.p_they()] instantaneously flash into a pile of ash and bones!")
 		return
 	return ..()
 
 /obj/item/orb_that_kills_old_people/apply_hit_effect(mob/living/target, mob/living/user, hit_zone, attack_modifier)
 	if(r_u_old(target))
-		user.visible_message("[user] strikes [target] with \the [src], and [target.they()] instantaneously flash into a pile of ash and bones!")
+		user.visible_message("[user] strikes [target] with \the [src], and [target.p_they()] instantaneously flash into a pile of ash and bones!")
 		return
 	. = ..()
 
 /obj/item/orb_that_kills_old_people/throw_impact(atom/hit_atom)
 	. = ..()
 	if(r_u_old(hit_atom))
-		visible_message("[src] hits [hit_atom], and [hit_atom.they()] instantaneously flash into a pile of ash and bones!")
+		visible_message("[src] hits [hit_atom], and [hit_atom.p_they()] instantaneously flash into a pile of ash and bones!")
 
 /obj/item/orb_that_kills_old_people/Crossed(mob/living/M)
 	. = ..()
 	if(r_u_old(M))
-		visible_message("[M] steps on \the [src] and [M.they()] instantaneously flashes into a pile of ash and bones!")
+		visible_message("[M] steps on \the [src] and [M.p_they()] instantaneously flashes into a pile of ash and bones!")
