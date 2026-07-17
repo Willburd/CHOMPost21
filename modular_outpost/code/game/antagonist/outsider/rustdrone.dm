@@ -40,6 +40,10 @@ GLOBAL_DATUM(rust_drones, /datum/antagonist/rustdrone)
 		player.equip_to_slot_or_del(voice_changer, slot_wear_mask, TRUE)
 
 	var/obj/item/mmi/digital/posibrain/cube = locate() in player.contents
+	if(!cube) // Needed for FBPs
+		var/obj/item/organ/internal/mmi_holder/holder = locate() in player.contents
+		if(holder)
+			cube = holder.stored_mmi
 	if(cube)
 		cube.make_rusted()
 
