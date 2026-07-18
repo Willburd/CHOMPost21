@@ -17,3 +17,8 @@
 	key = "grindingrealization"
 	emote_message_3p = "slowly turns with dreadful realization"
 	emote_sound = 'modular_outpost/sound/voice/concrete_scrape_loop.ogg'
+
+/datum/decl/emote/audible/gorp
+	key = "gorp"
+	emote_message_3p = "gorp!"
+	emote_sound = 'modular_outpost/sound/voice/gorp.ogg'
