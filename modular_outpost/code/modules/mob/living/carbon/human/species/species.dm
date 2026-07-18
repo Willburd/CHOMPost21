@@ -5,12 +5,32 @@
 	// Has eye color here, so they can do faded eyes
 	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_SKIN_COLOR | HAS_UNDERWEAR | HAS_EYE_COLOR
 	max_age = 150 // Functionally immortal, but dies from slow exposure to harm over time... better medical care on crew
+	water_breather = FALSE
+	has_vibration_sense = TRUE
+	// Overrides upstream values entirely
+	siemens_coefficient = 0.85
+	heat_level_1 = 343									// Heat damage level 1 above this point.
+	heat_level_2 = 400									// Heat damage level 2 above this point.
+	heat_level_3 = 1000									// Heat damage level 3 above this point.
+	cold_level_1 = 233									// Cold damage level 1 below this point.
+	cold_level_2 = 200									// Cold damage level 2 below this point.
+	cold_level_3 = 120									// Cold damage level 3 below this point.
 
 /datum/species/shadekin
 	// No inf pressure shadekin here
 	hazard_high_pressure = HAZARD_HIGH_PRESSURE
 	vision_flags = SEE_SELF // No innate thermals
 	max_age = 100 // Functionally immortal, but dies from slow exposure to harm over time
+	water_breather = FALSE
+	has_vibration_sense = TRUE
+	// Overrides upstream values entirely
+	siemens_coefficient = 0.85
+	heat_level_1 = 473									// Heat damage level 1 above this point.
+	heat_level_2 = 550									// Heat damage level 2 above this point.
+	heat_level_3 = 1000									// Heat damage level 3 above this point.
+	cold_level_1 = 73									// Cold damage level 1 below this point.
+	cold_level_2 = 63									// Cold damage level 2 below this point.
+	cold_level_3 = 50									// Cold damage level 3 below this point.
 
 /datum/species/skrell
 	// Deepsea creatures get deep sea resistances!

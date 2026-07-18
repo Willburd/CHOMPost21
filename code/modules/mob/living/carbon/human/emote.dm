@@ -220,6 +220,7 @@ GLOBAL_LIST_INIT(human_default_emotes, list(
 	/datum/decl/emote/audible/kweh,
 	/datum/decl/emote/audible/kweh_sad,
 	/datum/decl/emote/audible/concrete_grind,
+	/datum/decl/emote/audible/gorp,
 	//outpost 21 add end
 ))
 
@@ -395,6 +396,7 @@ GLOBAL_LIST_INIT(simple_mob_default_emotes, list(
 	/datum/decl/emote/audible/kweh,
 	/datum/decl/emote/audible/kweh_sad,
 	/datum/decl/emote/audible/concrete_grind,
+	/datum/decl/emote/audible/gorp,
 	//outpost 21 add end
 	))
 
