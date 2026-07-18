@@ -467,7 +467,7 @@
 			fall_impact(A, 1, 1, TRUE, TRUE) // Shoutouts to simpleflips
 			visible_message("\The [src] does some really sick flips on the way down! Landing dramatically and mostly unharmed.")
 		else
-			fall_impact(A, 6, 12, TRUE, TRUE)
+			fall_impact(A, 10, 12, TRUE, TRUE)
 			visible_message("\The [src] falls from far above and crashes into \the [landing]!", "You hear something crash into \the [landing].")
 		return
 	if(special_fall_handle(A))
