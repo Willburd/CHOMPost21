@@ -128,6 +128,16 @@
 /datum/trait/positive/shapeshifting
 	hidden = TRUE // Changeling gameplay infringement
 
+/datum/trait/positive/endurance_high
+	banned_species = list(SPECIES_TESHARI, SPECIES_UNATHI, SPECIES_SHADEKIN_CREW, SPECIES_SHADEKIN) // Consistant restriction list
+
+/datum/trait/positive/endurance_very_high
+	banned_species = list(SPECIES_TESHARI, SPECIES_SHADEKIN_CREW, SPECIES_SHADEKIN) // Consistant restriction list
+
+/datum/trait/positive/endurance_extremely_high
+	banned_species = list(SPECIES_TESHARI, SPECIES_SHADEKIN_CREW, SPECIES_SHADEKIN) // Consistant restriction list
+
+
 /////////////////////////////////////////////////////////////////////////////////////////////////
 /// NEUTRAL
 /////////////////////////////////////////////////////////////////////////////////////////////////
