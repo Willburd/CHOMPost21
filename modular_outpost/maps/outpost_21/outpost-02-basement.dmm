@@ -6728,6 +6728,15 @@
 	},
 /turf/simulated/floor/plating,
 /area/engineering/atmos)
+"amJ" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/sign/warning/mail_delivery{
+	pixel_y = -32
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/sec)
 "amK" = (
 /obj/machinery/atmospherics/binary/pump/on{
 	dir = 8;
@@ -6759,6 +6768,27 @@
 /obj/machinery/portable_atmospherics/canister/oxygen,
 /turf/simulated/floor/plating,
 /area/maintenance/incinerator)
+"amN" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/light/small{
+	dir = 8
+	},
+/obj/structure/sign/warning/mail_delivery{
+	pixel_x = -32
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/cargo)
+"amO" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/sign/warning/mail_delivery{
+	name = "\improper DELIVERS TO WAREHOUSE";
+	desc = "A sign warning you this disposal outlet connects directly to the Cargo Warehouse, and doesn't touch the mailing loop.";
+	pixel_y = -32
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/cargo)
 "amP" = (
 /obj/structure/sign/warning/caution,
 /turf/simulated/wall/r_wall,
@@ -7032,6 +7062,19 @@
 /obj/random/junk,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/civ/south)
+"anw" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/random/junk,
+/obj/structure/sign/warning/incinerator{
+	pixel_y = -32
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/spine/eng)
 "anx" = (
 /obj/machinery/light{
 	dir = 8
@@ -28223,6 +28266,9 @@
 	},
 /obj/structure/cable/heavyduty,
 /obj/item/bikehorn,
+/obj/structure/sign/warning/mail_delivery{
+	pixel_x = -32
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/sec)
 "baW" = (
@@ -29412,7 +29458,9 @@
 /area/maintenance/civ/west)
 "bcN" = (
 /obj/structure/stairs/spawner/west,
-/turf/simulated/floor/plating/turfpack/muriki,
+/turf/simulated/floor/plating/external/turfpack/muriki{
+	outdoors = 0
+	},
 /area/maintenance/cave)
 "bcO" = (
 /obj/effect/catwalk_plated,
@@ -31634,7 +31682,9 @@
 /obj/effect/floor_decal/industrial/warning/dust/corner{
 	dir = 4
 	},
-/turf/simulated/floor/plating/turfpack/muriki,
+/turf/simulated/floor/plating/external/turfpack/muriki{
+	outdoors = 0
+	},
 /area/maintenance/cave)
 "bhe" = (
 /obj/structure/cable/heavyduty{
@@ -32036,6 +32086,9 @@
 /obj/effect/floor_decal/industrial/outline/grey,
 /obj/machinery/light/small{
 	dir = 8
+	},
+/obj/structure/sign/warning/mail_delivery{
+	pixel_y = -32
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/cargo)
@@ -33678,18 +33731,6 @@
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/cargolower)
-"bkU" = (
-/obj/structure/sign/directions/medical/chemlab{
-	dir = 1;
-	pixel_y = -10;
-	name = "\improper Chemical Refinery"
-	},
-/obj/structure/sign/directions/tram{
-	pixel_y = -4;
-	dir = 4
-	},
-/turf/simulated/wall,
-/area/maintenance/med_refinery)
 "bkV" = (
 /obj/effect/recycler_beacon,
 /turf/simulated/floor/tiled/milspec,
@@ -41987,7 +42028,9 @@
 /obj/effect/floor_decal/steeldecal/steel_decals10{
 	dir = 1
 	},
-/turf/simulated/floor/plating/turfpack/muriki,
+/turf/simulated/floor/plating/external/turfpack/muriki{
+	outdoors = 0
+	},
 /area/maintenance/cave)
 "bAj" = (
 /obj/effect/floor_decal/corner/red/border{
@@ -43639,6 +43682,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
+	},
+/obj/structure/sign/warning/mail_delivery{
+	pixel_x = 32
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/sec)
@@ -49260,6 +49306,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
 	},
+/obj/structure/sign/warning/mail_delivery{
+	pixel_y = -32
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/spine/eng)
 "bOK" = (
@@ -50883,6 +50932,9 @@
 /obj/structure/railing{
 	flags = null
 	},
+/obj/structure/sign/warning/mail_delivery{
+	pixel_x = -32
+	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/research)
 "bRF" = (
@@ -51674,6 +51726,23 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/spine/waste)
+"bTy" = (
+/obj/structure/sign/directions/tram{
+	pixel_y = -4;
+	dir = 4
+	},
+/obj/structure/sign/directions/medical/chemlab{
+	dir = 1;
+	pixel_y = -10;
+	name = "\improper Chemical Refinery"
+	},
+/turf/simulated/wall,
+/area/maintenance/cave)
+"bTz" = (
+/turf/simulated/floor/plating/external/turfpack/muriki{
+	outdoors = 0
+	},
+/area/maintenance/cave)
 "bTA" = (
 /obj/structure/cable/orange{
 	icon_state = "4-9"
@@ -53894,6 +53963,9 @@
 /obj/structure/cable/orange{
 	icon_state = "5-9"
 	},
+/obj/structure/sign/warning/mail_delivery{
+	pixel_y = -32
+	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/eng)
 "bYd" = (
@@ -54139,6 +54211,12 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/spine/civ)
+"bYB" = (
+/obj/structure/sign/warning/enzyme{
+	pixel_y = -32
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/cave)
 "bYC" = (
 /obj/random/junk,
 /turf/simulated/floor/plating/turfpack/muriki,
@@ -54993,6 +55071,9 @@
 	},
 /obj/machinery/light/small{
 	dir = 1
+	},
+/obj/structure/sign/warning/mail_delivery{
+	pixel_y = -32
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/atmos_control)
@@ -59507,6 +59588,9 @@
 	icon_state = "1-2"
 	},
 /obj/item/trash/candy/fruitbar,
+/obj/structure/sign/warning/mail_delivery{
+	pixel_x = -32
+	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/research)
 "clN" = (
@@ -64934,6 +65018,12 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/secelevbasement)
+"czT" = (
+/obj/structure/sign/warning/acid{
+	pixel_y = -32
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/cave)
 "czU" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 8
@@ -72094,9 +72184,6 @@
 "dDe" = (
 /obj/effect/floor_decal/borderfloor/corner,
 /obj/effect/floor_decal/corner/lightgrey/bordercorner,
-/obj/structure/sign/warning/acid{
-	pixel_y = -32
-	},
 /turf/simulated/floor/tiled/dark/turfpack/muriki,
 /area/maintenance/cave)
 "dDH" = (
@@ -82181,6 +82268,11 @@
 /obj/structure/railing{
 	dir = 1
 	},
+/obj/structure/sign/warning/biohazard{
+	icon_state = "bio-danger";
+	pixel_x = -32;
+	name = "\improper AUTOSLEEVER INTAKE"
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/research)
 "pJx" = (
@@ -85729,7 +85821,9 @@
 /obj/effect/floor_decal/steeldecal/steel_decals10{
 	dir = 1
 	},
-/turf/simulated/floor/plating/turfpack/muriki,
+/turf/simulated/floor/plating/external/turfpack/muriki{
+	outdoors = 0
+	},
 /area/maintenance/cave)
 "tJv" = (
 /obj/effect/floor_decal/industrial/outline/cut_corners/yellow,
@@ -109436,7 +109530,7 @@ aXN
 coO
 bvA
 cfu
-csJ
+anw
 gWL
 bge
 bge
@@ -112368,7 +112462,7 @@ cNB
 cbj
 bhh
 bnI
-bOY
+amN
 bcW
 bip
 bJX
@@ -112690,7 +112784,7 @@ blx
 bmr
 bnv
 pge
-bhh
+amO
 bge
 bjp
 aQg
@@ -120004,7 +120098,7 @@ aeV
 aeV
 aeV
 bhW
-ayT
+amJ
 bhW
 glX
 glX
@@ -126106,7 +126200,7 @@ bHf
 bHf
 bHf
 bHf
-bkU
+bHf
 chj
 bHf
 bHf
@@ -126427,9 +126521,9 @@ gTT
 gTT
 gTT
 gTT
-kqO
-kqO
-kqO
+bTz
+bTz
+bTz
 alY
 cqD
 cqD
@@ -126752,8 +126846,8 @@ aYq
 gTT
 gTT
 bhd
-kqO
-kqO
+bTz
+bTz
 alY
 czb
 czb
@@ -127563,7 +127657,7 @@ gTT
 gTT
 coC
 kqO
-kqO
+bYB
 alY
 czb
 czj
@@ -127725,7 +127819,7 @@ gTT
 gTT
 xpK
 kqO
-kqO
+czT
 alY
 czb
 czb
@@ -127888,7 +127982,7 @@ gTT
 ecn
 ecn
 ecn
-alY
+bTy
 cqD
 cqD
 cqD
