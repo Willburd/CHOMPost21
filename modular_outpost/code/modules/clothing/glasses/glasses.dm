@@ -131,3 +131,8 @@ VISION_GOGGLE_USES_CELL(/obj/item/clothing/glasses/omnihud/eng/meson)
 */
 
 #undef VISION_GOGGLE_USES_CELL
+
+/obj/item/clothing/glasses/welding/superior/tas
+	name = "Tasesii's goggles"
+	desc = "A pair of teshari-fitted welding goggles. The lenses don't look like they'd protect from much..."
+	flash_protection = FLASH_PROTECTION_NONE
