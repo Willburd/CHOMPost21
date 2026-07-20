@@ -16029,7 +16029,7 @@
 /turf/simulated/floor/outpost_roof/turfpack/muriki,
 /area/muriki/rooftop/security)
 "dlV" = (
-/obj/machinery/telecomms/server/presets/security,
+/obj/machinery/telecomms/server/presets/security/outpost,
 /turf/simulated/floor/bluegrid{
 	name = "Broadcast Mainframe";
 	nitrogen = 100;
