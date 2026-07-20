@@ -100,14 +100,24 @@ SUBSYSTEM_DEF(outpost_voice)
 		return
 	addtimer(CALLBACK(src, PROC_REF(play_sequence), full_sequence), delay)
 
-/datum/controller/subsystem/outpost_voice/proc/event_countdown(minutes, callout_id, do_seconds_countdown)
+/datum/controller/subsystem/outpost_voice/proc/event_countdown(minutes, callout_id, do_seconds_countdown = TRUE, do_all_minutes = TRUE)
 	var/seq = list()
-	while(minutes > 0)
+	if(do_all_minutes)
+		// Call out all minutes on way
+		while(minutes > 0)
+			if(minutes > 1)
+				seq += assemble_sequence(list(number_to_id["[minutes]"],"minutes",callout_id), 1 MINUTE)
+			else
+				seq += assemble_sequence(list(number_to_id["[minutes]"],"minute",callout_id), 10 SECONDS)
+			minutes--
+	else
+		// Only call out total time, and then 1 minute before
 		if(minutes > 1)
-			seq += assemble_sequence(list(number_to_id["[minutes]"],"minutes",callout_id), 1 MINUTE)
+			seq += assemble_sequence(list(number_to_id["[minutes]"],"minutes",callout_id), minutes MINUTES)
+			seq += assemble_sequence(list("one","minute",callout_id), 10 SECONDS)
 		else
 			seq += assemble_sequence(list(number_to_id["[minutes]"],"minute",callout_id), 10 SECONDS)
-		minutes--
+
 	if(do_seconds_countdown) // Final countdown isn't always desired
 		seq += assemble_sequence(list("fifty","seconds",callout_id), 10 SECONDS)
 		seq += assemble_sequence(list("fourty","seconds",callout_id), 10 SECONDS)
@@ -124,4 +134,29 @@ SUBSYSTEM_DEF(outpost_voice)
 		seq += assemble_sequence(list("two"), 1 SECOND)
 		seq += assemble_sequence(list("one"), 1 SECOND)
 		seq += assemble_sequence(list("zero"), 1 SECOND)
+	play_sequence(seq)
+
+/datum/controller/subsystem/outpost_voice/proc/event_seconds_countdown(seconds, callout_id)
+	var/seq = list()
+	if(seconds >= 60)
+		seq += assemble_sequence(list("one","minute",callout_id), 10 SECONDS)
+	if(seconds >= 50)
+		seq += assemble_sequence(list("fifty","seconds",callout_id), 10 SECONDS)
+	if(seconds >= 40)
+		seq += assemble_sequence(list("fourty","seconds",callout_id), 10 SECONDS)
+	if(seconds >= 30)
+		seq += assemble_sequence(list("thirty","seconds",callout_id), 10 SECONDS)
+	if(seconds >= 20)
+		seq += assemble_sequence(list("twenty","seconds",callout_id), 10 SECONDS)
+	seq += assemble_sequence(list("ten"), 1 SECOND)
+	seq += assemble_sequence(list("nine"), 1 SECOND)
+	seq += assemble_sequence(list("eight"), 1 SECOND)
+	seq += assemble_sequence(list("seven"), 1 SECOND)
+	seq += assemble_sequence(list("six"), 1 SECOND)
+	seq += assemble_sequence(list("five"), 1 SECOND)
+	seq += assemble_sequence(list("four"), 1 SECOND)
+	seq += assemble_sequence(list("three"), 1 SECOND)
+	seq += assemble_sequence(list("two"), 1 SECOND)
+	seq += assemble_sequence(list("one"), 1 SECOND)
+	seq += assemble_sequence(list("zero"), 1 SECOND)
 	play_sequence(seq)

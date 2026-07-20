@@ -61,6 +61,13 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 	":н" = CHANNEL_EXPLORATION,    ".н" = CHANNEL_EXPLORATION, //CHOMP keep explo
 	":ф" = CHANNEL_TALON,        ".ф" = CHANNEL_TALON, //CHOMP keep explo
 	":п" = CHANNEL_CASINO,	".п" = CHANNEL_CASINO,
+
+	// Outpost 21 edit begin - Security squad channels
+	":1" = CHANNEL_SEC_ALPHA,
+	":2" = CHANNEL_SEC_BETA,
+	":3" = CHANNEL_SEC_CHARLIE,
+	":4" = CHANNEL_SEC_DELTA,
+	// Outpost 21 edit end
 ))
 
 GLOBAL_LIST_EMPTY(channel_to_radio_key)

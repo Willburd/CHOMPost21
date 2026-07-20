@@ -33,7 +33,7 @@
 	var/minutes = 10
 	GLOB.command_announcement.Announce("A test-fire target has been acquired. Coordinates [xx].[yy].[zz] calibrated. Stay clear for firing. T-[minutes] Minutes", "Announcement")
 	addtimer(CALLBACK(src, PROC_REF(test_fire)), minutes MINUTE, TIMER_DELETE_ME)
-	SSoutpost_voice.event_countdown(minutes, "bsa_test", FALSE)
+	SSoutpost_voice.event_countdown(minutes, "bsa_test", FALSE, FALSE)
 
 /datum/event/bsa_test_fire/proc/test_fire()
 	var/datum/bsa_shell_controller/BSA = new /datum/bsa_shell_controller

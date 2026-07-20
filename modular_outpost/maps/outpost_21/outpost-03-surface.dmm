@@ -7248,6 +7248,10 @@
 /obj/effect/landmark/start/engineer,
 /turf/simulated/floor/tiled,
 /area/engineering/corepower)
+"alA" = (
+/obj/structure/sign/warning/enzyme,
+/turf/simulated/wall/r_wall,
+/area/muriki/crew/engyaid)
 "alB" = (
 /obj/item/radio/intercom{
 	dir = 4;
@@ -14800,15 +14804,6 @@
 /obj/effect/zone_divider,
 /turf/simulated/floor/outdoors/sidewalk/slab/turfpack/muriki,
 /area/muriki/grounds/terraform)
-"aDH" = (
-/obj/effect/zone_divider,
-/obj/structure/dancepole{
-	name = "roof support";
-	pixel_x = -7;
-	pixel_y = 14
-	},
-/turf/simulated/floor/outdoors/sidewalk/slab/turfpack/muriki,
-/area/muriki/grounds/tramborder)
 "aDI" = (
 /obj/effect/zone_divider,
 /turf/simulated/floor/water/acidic/turfpack/muriki,
@@ -15330,15 +15325,6 @@
 /obj/structure/prop/rock/waterflat,
 /turf/simulated/floor/water/acidic/deep/turfpack/muriki,
 /area/mine/unexplored/muriki/valleyeast)
-"aFl" = (
-/obj/effect/zone_divider,
-/obj/structure/dancepole{
-	name = "roof support";
-	pixel_x = 7;
-	pixel_y = 14
-	},
-/turf/simulated/floor/outdoors/sidewalk/slab/turfpack/muriki,
-/area/muriki/grounds/tramborder)
 "aFm" = (
 /obj/structure/prop/rock/watersharp,
 /turf/simulated/floor/water/acidic/turfpack/muriki,
@@ -19997,14 +19983,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/engineering_hallway)
-"aUo" = (
-/obj/structure/dancepole{
-	name = "roof support";
-	pixel_x = -7;
-	pixel_y = 14
-	},
-/turf/simulated/floor/outdoors/sidewalk/slab/turfpack/muriki,
-/area/muriki/grounds/tramborder)
 "aUp" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "0-2"
@@ -20127,14 +20105,6 @@
 "aUN" = (
 /turf/simulated/mineral/alt/ignore_cavegen/turfpack/muriki,
 /area/muriki/grounds/engi)
-"aUO" = (
-/obj/structure/dancepole{
-	name = "roof support";
-	pixel_x = 7;
-	pixel_y = 14
-	},
-/turf/simulated/floor/outdoors/sidewalk/slab/turfpack/muriki,
-/area/muriki/grounds/tramborder)
 "aUP" = (
 /obj/structure/trailblazer/blue,
 /turf/simulated/floor/outdoors/sidewalk/slab/turfpack/muriki,
@@ -20686,6 +20656,12 @@
 	},
 /turf/simulated/floor/tiled,
 /area/muriki/tramstation/civ)
+"aWc" = (
+/obj/structure/showcase/sign/enzyme,
+/turf/simulated/floor/outdoors/mud/turfpack/muriki{
+	outdoors = 0
+	},
+/area/muriki/grounds/tramborder)
 "aWq" = (
 /obj/machinery/light{
 	dir = 4
@@ -53670,12 +53646,6 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/bridge)
-"luO" = (
-/obj/effect/landmark{
-	name = "spiderspawn"
-	},
-/turf/simulated/floor/outdoors/sidewalk/slab/turfpack/muriki,
-/area/muriki/grounds/tramborder)
 "lve" = (
 /obj/structure/cliff/corner{
 	dir = 9
@@ -118485,7 +118455,7 @@ sJq
 rnM
 nJX
 wBg
-uvT
+alA
 vpr
 oGR
 ahm
@@ -121725,9 +121695,9 @@ ara
 ara
 aHB
 aHB
-aUo
 aqr
-aDH
+aqr
+aCu
 aiZ
 aII
 aII
@@ -123183,8 +123153,8 @@ ara
 fxo
 aqq
 aqq
-aqr
-aHB
+aqq
+aqq
 aCu
 aIF
 aII
@@ -123346,8 +123316,8 @@ fxo
 aIm
 cEY
 aqr
-hZu
-aCu
+aIa
+aHI
 aIF
 aII
 aII
@@ -123507,9 +123477,9 @@ fxo
 aJk
 aIm
 cEY
-aUO
-aqr
-aFl
+aIm
+aIm
+aHI
 aIF
 aII
 aII
@@ -123670,8 +123640,8 @@ aJk
 cEY
 cEY
 aIm
-aqr
-aCu
+aIm
+aHI
 aIF
 aII
 aII
@@ -123833,7 +123803,7 @@ aIm
 cEY
 aIm
 aqr
-aCu
+aHI
 aIF
 aII
 aII
@@ -123994,7 +123964,7 @@ aOY
 aIm
 aIm
 aIm
-aqr
+aqq
 aCu
 aiZ
 aII
@@ -124318,7 +124288,7 @@ fxo
 aqq
 aqq
 aqq
-aqr
+aqq
 aCu
 aIF
 aII
@@ -126099,9 +126069,9 @@ aDx
 aDx
 aDw
 aCu
-aDH
+aCt
 aqr
-aDH
+aCu
 aCR
 aCU
 aCU
@@ -127071,7 +127041,7 @@ arf
 arf
 aHB
 aHB
-luO
+vHB
 aqq
 aHI
 aiY
@@ -127233,7 +127203,7 @@ arf
 arf
 aHB
 aHB
-aqr
+aqq
 aqq
 aHI
 aiY
@@ -127395,7 +127365,7 @@ arf
 arf
 aHB
 aHB
-aqr
+aqq
 aqq
 aHI
 aiY
@@ -128205,9 +128175,9 @@ jnX
 kWi
 kWi
 aiw
-aUO
 aqr
-aFl
+aqr
+aCu
 aIF
 aqQ
 aqQ
@@ -133387,7 +133357,7 @@ lCV
 lCV
 kNy
 oTu
-eOf
+aWc
 fvN
 aqr
 eOf

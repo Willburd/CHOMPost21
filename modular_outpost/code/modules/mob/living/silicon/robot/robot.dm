@@ -37,6 +37,8 @@
 		return
 	if(haunted)
 		return
+	if(SShaunting.get_world_haunt() < 3)
+		return
 	// Check if we're in the SPOOKYZONE, this should fail a majority of the time to prevent camping for laws
 	var/area/A = get_area(src)
 	if(prob(99) || !A || !A.haunted)
