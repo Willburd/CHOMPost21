@@ -108,6 +108,10 @@
 	B.reagent_name = "caustic trash-sludge"
 	B.custom_reagentcolor = "#3c3030"
 	B.reagent_touches = FALSE
+	// Outpost 21 edit begin - Escapable swoopies
+	B.escapable = B_ESCAPABLE_DEFAULT
+	B.escapechance = 10
+	// Outpost 21 edit end
 
 	B = new /obj/belly/longneck(src)
 	B.affects_vore_sprites = FALSE
