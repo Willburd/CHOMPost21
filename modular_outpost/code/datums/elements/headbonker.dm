@@ -25,8 +25,8 @@
 	playsound(source, 'modular_outpost/sound/effects/clonk.ogg', 100, 1)
 	playsound(source,"punch")
 	M.visible_message(span_danger("\The [M] clonks their head into \the [source]!"))
-	M.Stun(5)
-	M.Weaken(5)
+	M.Stun(2)
+	M.Weaken(3)
 	M.apply_damage(rand(1,3),BRUTE,BP_HEAD)
 
 /// Subtypes
