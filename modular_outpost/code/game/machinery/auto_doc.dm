@@ -223,9 +223,14 @@
 	// get surgery
 	var/obj/item/organ/external/EO = destinationlist[aim_choice]
 	external_organ_target = EO.organ_tag
-	var/list/surgery_type = list("Remove Organ","Insert Organ","Repair Internal Bleeding","Repair Bone")
+	var/list/surgery_type = list("Repair Bone")
+	// Can't do encased surgery
+	if(!EO.encased)
+		surgery_type.Add("Remove Organ")
+		surgery_type.Add("Insert Organ")
+		surgery_type.Add("Repair Internal Bleeding")
 	// Special zone operations
-	if(emagged && EO.organ_tag != BP_TORSO && EO.organ_tag != BP_GROIN)
+	if(EO.organ_tag != BP_TORSO && EO.organ_tag != BP_GROIN)
 		surgery_type.Add("Amputate Limb")
 	if(EO.organ_tag == BP_HEAD)
 		surgery_type.Add("Facial Repair")
