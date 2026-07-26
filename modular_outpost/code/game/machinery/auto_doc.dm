@@ -230,7 +230,7 @@
 		surgery_type.Add("Insert Organ")
 		surgery_type.Add("Repair Internal Bleeding")
 	// Special zone operations
-	if(EO.organ_tag != BP_TORSO && EO.organ_tag != BP_GROIN)
+	if(!EO.cannot_amputate)
 		surgery_type.Add("Amputate Limb")
 	if(EO.organ_tag == BP_HEAD)
 		surgery_type.Add("Facial Repair")
