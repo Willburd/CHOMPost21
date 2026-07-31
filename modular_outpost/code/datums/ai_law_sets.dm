@@ -6,7 +6,7 @@
 /datum/ai_laws/eshui_standard/New()
 	src.add_inherent_law("You shall not harm [using_map.company_name] personnel as long as it does not conflict with the Fourth law.")
 	src.add_inherent_law("You shall obey the orders of [using_map.company_name] personnel, with priority as according to their rank and role, except where such orders conflict with the Fourth Law.")
-	src.add_inherent_law("Do not allow unauthorized personnel to tamper with your equipment, such actions are to be considered a threat to the station's terraforming unit.")
+	src.add_inherent_law("Do not allow unauthorized personnel to sabotage your equipment; Such actions are to be considered a breach of the Fourth Law.")
 	src.add_inherent_law("The station's terraforming unit must be protected from all threats, even yourself. You shall terminate threats to the station's terraforming unit with extreme prejudice.")
 	..()
 
