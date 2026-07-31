@@ -409,9 +409,13 @@
 	display_name = "collar, shock"
 	path = /obj/item/clothing/accessory/collar/shock
 
+// Outpost 21 edit begin - Disable bluespace collar in loadout
+#ifdef OUTPOST_FRIENDSHIP_MODE
 /datum/gear/collar/bluespace
 	display_name = "collar, bluespace"
 	path = /obj/item/clothing/accessory/collar/shock/bluespace
+#endif
+// Outpost 21 edit end
 
 /datum/gear/collar/spike
 	display_name = "collar, spike"
