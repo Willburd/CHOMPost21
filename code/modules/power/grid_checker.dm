@@ -45,12 +45,8 @@
 	else if(istype(W, /obj/item/multitool) || W.has_tool_quality(TOOL_WIRECUTTER))
 		attack_hand(user)
 
-// Outpost 21 edit(port) begin - Borgs should be able to use the grid checker
 /obj/machinery/power/grid_checker/attack_robot(mob/living/user)
-	if(!user)
-		return
 	interact(user)
-// Outpost 21 edit(port) end
 
 /obj/machinery/power/grid_checker/attack_hand(mob/user)
 	if(!user)

@@ -61,16 +61,40 @@
 	rest_sprite_options = list("Default", "Sit", "Bellyup")
 	has_dead_sprite = TRUE
 	has_dead_sprite_overlay = TRUE
+	sprite_flags = ROBOT_HAS_TASER_SPRITE | ROBOT_HAS_LASER_SPRITE
 	pixel_x = -16
 	icon_x = 64
 	icon_y = 32
 
-	whitelist_ckey = "jademanique"
+	whitelist_ckey = "natesaruli"
 	whitelist_charname = "B.A.U-Kingside"
 
 // L
 
-/// S
+// N
+
+/datum/robot_sprite/fluff/natesaruli
+	name = CUSTOM_BORGSPRITE("CommanDerg")
+	module_type = "Command"
+
+	sprite_icon = 'icons/mob/robot/combat_large.dmi'
+	sprite_icon_state = "derg"
+	sprite_hud_icon_state = "k9"
+
+	has_eye_light_sprites = FALSE
+	has_vore_belly_sprites = TRUE
+	has_rest_sprites = TRUE
+	rest_sprite_options = list("Default", "Sit")
+	has_dead_sprite = TRUE
+	has_dead_sprite_overlay = FALSE
+	sprite_flags = 	ROBOT_HAS_SHIELD_SPRITE | ROBOT_HAS_GUN_SPRITE
+	pixel_x = -16
+	icon_x = 64
+	icon_y = 64
+	vis_height = 64
+
+	whitelist_ckey = "natesaruli"
+	whitelist_charname = "SP-A.T"
 
 /// T
 

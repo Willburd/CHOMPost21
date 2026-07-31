@@ -86,6 +86,7 @@
 		"mech_energy_relay",
 		"mech_runningboard",
 		"mech_generator_nuclear",
+		"mech_firesaw", // Outpost 21 edit(port) - Firefighting mech upgrades
 		// "mecha_camera",
 		// "mech_radio",
 		// "botpad",

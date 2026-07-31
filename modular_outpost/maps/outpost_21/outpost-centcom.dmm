@@ -454,14 +454,9 @@
 /area/specialty/redspace)
 "abv" = (
 /obj/structure/table/rack,
-/obj/item/personal_shield_generator/belt/adminbus,
-/obj/item/personal_shield_generator/belt/adminbus,
-/obj/item/personal_shield_generator/belt/adminbus,
-/obj/item/personal_shield_generator/belt/adminbus,
-/obj/item/personal_shield_generator/belt/adminbus,
-/obj/item/personal_shield_generator/belt/adminbus,
-/obj/item/personal_shield_generator/belt/adminbus,
-/obj/item/personal_shield_generator/belt/adminbus,
+/obj/item/personal_shield_generator/belt/melee/loaded,
+/obj/item/personal_shield_generator/belt/melee/loaded,
+/obj/item/personal_shield_generator/belt/melee/loaded,
 /turf/unsimulated/floor/steel{
 	icon_state = "milspec"
 	},
@@ -1662,8 +1657,18 @@
 /turf/simulated/floor/wood,
 /area/centcom/specops)
 "adF" = (
+/obj/item/toy/plushie/borgplushie/medihound{
+	pixel_y = 2;
+	pixel_x = -10
+	},
 /obj/structure/table/woodentable,
-/obj/item/modular_computer/laptop,
+/obj/item/toy/mecha/phazon{
+	pixel_y = 10
+	},
+/obj/item/toy/mecha/odysseus{
+	pixel_x = 6;
+	pixel_y = 2
+	},
 /turf/simulated/floor/carpet/oracarpet,
 /area/centcom/living)
 "adG" = (
@@ -4893,7 +4898,11 @@
 	},
 /area/centcom/specops)
 "akU" = (
-/obj/machinery/porta_turret/heavy/disabler,
+/obj/machinery/porta_turret/heavy/disabler{
+	check_records = 0;
+	check_arrest = 0;
+	check_anomalies = 0
+	},
 /turf/unsimulated/floor/reinforced,
 /area/centcom/security)
 "akV" = (
@@ -5370,9 +5379,9 @@
 	},
 /area/centcom/control)
 "alV" = (
-/obj/machinery/door/airlock/centcom{
-	name = "Commander";
-	req_access = list(103)
+/obj/machinery/door/airlock/centcom/nameddorm{
+	name = "Penances Office";
+	matchnames = list("Penance")
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/centcom/specops)
@@ -5845,7 +5854,7 @@
 	dir = 1
 	},
 /obj/structure/curtain/open/shower/engineering,
-/turf/simulated/floor/wmarble,
+/turf/simulated/floor/tiled/kafel_full,
 /area/centcom/living)
 "amX" = (
 /obj/structure/window/reinforced{
@@ -5860,7 +5869,7 @@
 /obj/structure/handrail{
 	dir = 1
 	},
-/turf/simulated/floor/wmarble,
+/turf/simulated/floor/tiled/kafel_full,
 /area/centcom/living)
 "amY" = (
 /obj/effect/floor_decal/spline/fancy/wood{
@@ -5879,17 +5888,17 @@
 	pixel_x = -6;
 	pixel_y = 7
 	},
-/obj/item/reagent_containers/food/snacks/bageleverything{
-	pixel_x = 4;
-	pixel_y = 8
-	},
 /obj/item/towel{
 	pixel_x = -4;
 	pixel_y = -1
 	},
-/obj/item/reagent_containers/food/snacks/bageleverything{
-	pixel_x = 4;
-	pixel_y = 2
+/obj/item/reagent_containers/food/snacks/bagelraisin{
+	pixel_y = -4;
+	pixel_x = 8
+	},
+/obj/item/reagent_containers/food/snacks/bagelraisin{
+	pixel_y = 4;
+	pixel_x = 8
 	},
 /turf/simulated/floor/carpet/turfpack,
 /area/centcom/living)
@@ -5910,21 +5919,37 @@
 /turf/simulated/floor/carpet/sblucarpet,
 /area/centcom/living)
 "and" = (
-/obj/structure/bookcase,
+/obj/structure/table/woodentable,
+/obj/item/storage/bible{
+	pixel_y = 5
+	},
 /turf/simulated/floor/carpet/sblucarpet,
 /area/centcom/living)
 "ane" = (
 /obj/structure/table/woodentable,
 /obj/item/clothing/ears/earmuffs{
-	pixel_x = -5;
-	pixel_y = 9
+	pixel_x = 5;
+	pixel_y = 10
 	},
-/obj/item/bedsheet/orange,
+/obj/item/candybowl{
+	pixel_x = -3;
+	pixel_y = 4
+	},
+/obj/item/storage/box/admints{
+	pixel_y = 4
+	},
+/obj/item/storage/box/admints{
+	pixel_x = -4;
+	pixel_y = 4
+	},
 /turf/simulated/floor/carpet/sblucarpet,
 /area/centcom/living)
 "anf" = (
-/obj/structure/bed,
 /obj/item/bedsheet/pillow/white,
+/obj/item/bedsheet/orange,
+/obj/structure/bed/psych{
+	name = "extra soft mattress"
+	},
 /turf/simulated/floor/carpet/sblucarpet,
 /area/centcom/living)
 "ang" = (
@@ -5934,13 +5959,13 @@
 /obj/effect/floor_decal/steeldecal/steel_decals10{
 	dir = 5
 	},
-/turf/simulated/floor/wmarble,
+/turf/simulated/floor/tiled/kafel_full,
 /area/centcom/living)
 "anh" = (
-/turf/simulated/floor/wmarble,
+/turf/simulated/floor/tiled/kafel_full,
 /area/centcom/living)
 "ani" = (
-/obj/structure/simple_door,
+/obj/structure/simple_door/pinewood,
 /turf/simulated/floor/wood/alt,
 /area/centcom/living)
 "anj" = (
@@ -5980,7 +6005,7 @@
 	pixel_x = 3;
 	pixel_y = 3
 	},
-/turf/simulated/floor/wmarble,
+/turf/simulated/floor/tiled/kafel_full,
 /area/centcom/living)
 "ano" = (
 /obj/structure/table/rack/shelf/wood,
@@ -6025,25 +6050,29 @@
 /area/centcom/living)
 "ans" = (
 /obj/structure/closet/cabinet,
+/obj/item/clothing/suit/storage/puffyred,
+/obj/item/clothing/suit/storage/flannel/red,
+/obj/item/clothing/under/shorts/khaki,
+/obj/item/clothing/shoes/boots/jackboots/toeless,
 /turf/simulated/floor/carpet/sblucarpet,
 /area/centcom/living)
 "ant" = (
 /obj/structure/bed/pillowpile/orange,
-/obj/item/toy/plushie/borgplushie/medihound,
+/obj/item/toy/plushie/teshari/y_yw,
 /turf/simulated/floor/carpet/sblucarpet,
 /area/centcom/living)
 "anu" = (
-/obj/structure/simple_door,
-/turf/simulated/floor/wmarble,
+/obj/structure/simple_door/pinewood,
+/turf/simulated/floor/tiled/kafel_full,
 /area/centcom/living)
 "anv" = (
 /obj/machinery/washing_machine,
-/turf/simulated/floor/wmarble,
+/turf/simulated/floor/tiled/kafel_full,
 /area/centcom/living)
 "anw" = (
 /obj/structure/table/glass,
 /obj/item/storage/laundry_basket,
-/turf/simulated/floor/wmarble,
+/turf/simulated/floor/tiled/kafel_full,
 /area/centcom/living)
 "anx" = (
 /obj/structure/table/marble,
@@ -6061,10 +6090,19 @@
 	pixel_x = -7;
 	pixel_y = 13
 	},
+/obj/item/reagent_containers/food/drinks/glass2/mug{
+	pixel_x = 7;
+	pixel_y = 13
+	},
 /turf/simulated/floor/wood/alt,
 /area/centcom/living)
 "anz" = (
 /obj/structure/closet/secure_closet/freezer/fridge/empty,
+/obj/item/storage/fancy/egg_box,
+/obj/item/storage/box/donkpockets/berry,
+/obj/item/reagent_containers/food/snacks/bacon/microwave,
+/obj/item/reagent_containers/food/snacks/bacon/microwave,
+/obj/item/reagent_containers/food/snacks/bacon/microwave,
 /turf/simulated/floor/wood/alt,
 /area/centcom/living)
 "anA" = (
@@ -6081,7 +6119,7 @@
 	dir = 4;
 	pixel_x = -28
 	},
-/turf/simulated/floor/wmarble,
+/turf/simulated/floor/tiled/kafel_full,
 /area/centcom/living)
 "anC" = (
 /turf/simulated/shuttle/wall/dark,
@@ -6089,18 +6127,15 @@
 "anD" = (
 /obj/structure/table/glass,
 /obj/item/soap/purple_soap,
-/turf/simulated/floor/wmarble,
+/turf/simulated/floor/tiled/kafel_full,
 /area/centcom/living)
 "anE" = (
 /obj/structure/table/marble,
-/obj/item/storage/box/donkpockets/berry{
-	pixel_x = -5;
-	pixel_y = -3
-	},
 /obj/item/reagent_containers/food/drinks/cans/root_beer{
 	pixel_x = 8;
-	pixel_y = -5
+	pixel_y = 12
 	},
+/obj/machinery/bunsen_burner,
 /turf/simulated/floor/wood/alt,
 /area/centcom/living)
 "anF" = (
@@ -6127,11 +6162,17 @@
 /turf/simulated/floor/carpet/oracarpet,
 /area/centcom/living)
 "anH" = (
-/obj/structure/toilet{
-	dir = 4
+/obj/effect/floor_decal/corner/black/full,
+/obj/effect/floor_decal/corner/red{
+	dir = 1
 	},
-/turf/simulated/floor/wmarble,
-/area/centcom/living)
+/obj/effect/floor_decal/corner/red,
+/obj/structure/table/rack,
+/obj/item/chainsaw/alt/axered/rauf,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/centcom/specops)
 "anI" = (
 /obj/structure/closet/secure_closet/medical_wall{
 	pixel_y = 32
@@ -6139,7 +6180,7 @@
 /obj/item/storage/firstaid/regular,
 /obj/item/storage/pill_bottle/methylphenidate,
 /obj/item/flashlight/glowstick/orange,
-/turf/simulated/floor/wmarble,
+/turf/simulated/floor/tiled/kafel_full,
 /area/centcom/living)
 "anJ" = (
 /obj/structure/sign/clock{
@@ -6148,9 +6189,16 @@
 /turf/simulated/floor/wood/alt,
 /area/centcom/living)
 "anK" = (
-/obj/structure/coatrack,
-/turf/simulated/floor/wood/alt,
-/area/centcom/living)
+/obj/effect/floor_decal/corner/red{
+	dir = 5
+	},
+/obj/machinery/computer/cryopod/dorms{
+	pixel_y = 32
+	},
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/centcom/security)
 "anL" = (
 /obj/structure/table/woodentable,
 /obj/item/flashlight/lamp/green{
@@ -6206,14 +6254,6 @@
 /area/centcom/control)
 "anQ" = (
 /obj/effect/floor_decal/corner/black,
-/turf/unsimulated/floor/steel{
-	icon_state = "milspec"
-	},
-/area/centcom/specops)
-"anR" = (
-/obj/effect/floor_decal/corner/red{
-	dir = 4
-	},
 /turf/unsimulated/floor/steel{
 	icon_state = "milspec"
 	},
@@ -6491,9 +6531,21 @@
 	},
 /turf/simulated/shuttle/floor/voidcraft/dark,
 /area/shuttle/darktransit)
+"aoF" = (
+/obj/structure/bookcase,
+/obj/item/book/manual/resleeving,
+/obj/item/book/manual/ripley_build_and_repair,
+/turf/simulated/floor/carpet/sblucarpet,
+/area/centcom/living)
 "aoG" = (
 /turf/simulated/shuttle/wall/dark/hard_corner,
 /area/vehicle_interior/heavyarmor_tank_B)
+"aoH" = (
+/obj/structure/coatrack{
+	pixel_x = 10
+	},
+/turf/simulated/floor/wood/alt,
+/area/centcom/living)
 "aoJ" = (
 /obj/structure/bed/chair/wood/wings{
 	dir = 8
@@ -7010,34 +7062,6 @@
 	name = "Special Operations"
 	},
 /turf/simulated/floor/tiled/milspec/raised,
-/area/centcom/specops)
-"apT" = (
-/obj/effect/floor_decal/corner/black/full{
-	dir = 8
-	},
-/obj/effect/floor_decal/corner/red{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/red{
-	dir = 8
-	},
-/turf/unsimulated/floor/steel{
-	icon_state = "milspec"
-	},
-/area/centcom/specops)
-"apU" = (
-/obj/effect/floor_decal/corner/black/full{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/red{
-	dir = 4
-	},
-/turf/unsimulated/floor/steel{
-	icon_state = "milspec"
-	},
-/area/centcom/specops)
-"apV" = (
-/turf/unsimulated/mineral/muriki/basalt,
 /area/centcom/specops)
 "apW" = (
 /obj/effect/floor_decal/corner/black/full{
@@ -10322,7 +10346,6 @@
 	pixel_y = -22
 	},
 /obj/structure/table/alien/blue,
-/obj/item/personal_shield_generator/belt/adminbus,
 /turf/simulated/floor/tiled,
 /area/centcom/control)
 "cfp" = (
@@ -13300,12 +13323,6 @@
 /obj/machinery/door/firedoor/border_only,
 /turf/simulated/floor/tiled/steel_grid,
 /area/specialty/redspace)
-"dQW" = (
-/obj/machinery/computer/teleporter{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/milspec/raised,
-/area/centcom/specops)
 "dQZ" = (
 /obj/machinery/door/window/southright{
 	name = "Virology Isolation Room Four";
@@ -22103,10 +22120,6 @@
 /obj/item/surgical/FixOVein,
 /turf/simulated/floor/tiled/white,
 /area/centcom/medical)
-"ism" = (
-/obj/machinery/teleport/station,
-/turf/simulated/floor/tiled/milspec/raised,
-/area/centcom/specops)
 "isA" = (
 /obj/effect/floor_decal/spline/plain,
 /obj/effect/decal/cleanable/blood,
@@ -26522,6 +26535,7 @@
 /obj/structure/sign/clock{
 	pixel_y = 32
 	},
+/obj/item/toy/plushie/slimeplushie,
 /turf/simulated/floor/wood{
 	oxygen = 0;
 	phoron = 21.8366
@@ -30824,13 +30838,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/escape)
-"nIf" = (
-/obj/item/perfect_tele_beacon/stationary{
-	tele_name = "CentCom";
-	tele_network = "centcom"
-	},
-/turf/simulated/floor/tiled/milspec/raised,
-/area/centcom/specops)
 "nII" = (
 /obj/machinery/conveyor{
 	dir = 4;
@@ -36791,10 +36798,6 @@
 	},
 /turf/simulated/floor/carpet/purcarpet,
 /area/centcom/living)
-"rjb" = (
-/obj/machinery/teleport/hub,
-/turf/simulated/floor/tiled/milspec/raised,
-/area/centcom/specops)
 "rjw" = (
 /turf/simulated/floor/carpet/turcarpet,
 /area/specialty/redspace)
@@ -46111,6 +46114,7 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/red,
+/obj/machinery/gear_painter,
 /turf/unsimulated/floor/steel{
 	icon_state = "milspec"
 	},
@@ -53570,15 +53574,15 @@ aas
 aas
 aas
 aas
-vCT
-vCT
-vCT
-vCT
-vCT
-vCT
-vCT
-vCT
-vCT
+aas
+aas
+aas
+aas
+aas
+aas
+aas
+aas
+aas
 hIA
 hIA
 hIA
@@ -53732,15 +53736,15 @@ aas
 xAJ
 xxV
 tJx
-vCT
-anH
+aas
+wat
 anB
 anh
 anu
 anh
 ang
 amW
-vCT
+aas
 hIA
 hIA
 hIA
@@ -53894,15 +53898,15 @@ aas
 xAJ
 xxV
 tJx
-vCT
+aas
 anI
 anh
 anv
-byP
+aaw
 ann
 anh
 amX
-vCT
+aas
 hIA
 hIA
 hIA
@@ -54056,15 +54060,15 @@ aas
 xAJ
 xxV
 tJx
-vCT
+aas
 anh
 anD
 anw
-byP
-byP
+aaw
+aaw
 ani
-byP
-vCT
+aaw
+aas
 hIA
 hIA
 hIA
@@ -54218,15 +54222,15 @@ aas
 uKi
 pXX
 fEr
-vCT
-ani
-byP
-byP
-byP
+aas
+anu
+aaw
+aaw
+aaw
 ano
 anj
 amY
-vCT
+aas
 hIA
 hIA
 hIA
@@ -54380,15 +54384,15 @@ aas
 xAJ
 xxV
 tJx
-vCT
+aas
 anA
 anE
 anx
-byP
+aaw
 anp
 ank
 amZ
-vCT
+aas
 hIA
 hIA
 hIA
@@ -54542,15 +54546,15 @@ aas
 xAJ
 xxV
 tJx
-vCT
+aas
 anJ
 anA
 any
-byP
+aaw
 anq
 anl
 amZ
-vCT
+aas
 hIA
 hIA
 hIA
@@ -54704,15 +54708,15 @@ aas
 xAJ
 xxV
 tJx
-vCT
-anK
+aas
+anA
 anA
 anz
-byP
+aaw
 anr
 anm
 ana
-vCT
+aas
 hIA
 hIA
 hIA
@@ -54870,11 +54874,11 @@ abn
 anA
 anA
 anA
-byP
+aaw
 ans
 anc
-anc
-vCT
+aoF
+aas
 hIA
 hIA
 hIA
@@ -55028,15 +55032,15 @@ aas
 xAJ
 xxV
 tJx
-vCT
+aas
+aoH
 anA
 anA
-anA
-byP
+aaw
 fHu
 anc
 and
-vCT
+aas
 hIA
 hIA
 hIA
@@ -55190,7 +55194,7 @@ aas
 xAJ
 xxV
 tJx
-vCT
+aas
 anL
 anF
 anA
@@ -55198,7 +55202,7 @@ ani
 anc
 anc
 ane
-vCT
+aas
 hIA
 hIA
 hIA
@@ -55352,15 +55356,15 @@ aas
 xAJ
 xxV
 tJx
-vCT
+aas
 adF
 anG
 anA
-byP
+aaw
 ant
 anc
 anf
-vCT
+aas
 hIA
 hIA
 hIA
@@ -55514,15 +55518,15 @@ aas
 xAJ
 xxV
 tJx
-vCT
-vCT
-vCT
-vCT
-vCT
-vCT
-vCT
-vCT
-vCT
+aas
+aas
+aas
+aas
+aas
+aas
+aas
+aas
+aas
 hIA
 hIA
 hIA
@@ -65333,7 +65337,7 @@ clw
 fiE
 aoV
 ues
-wMc
+anH
 rWp
 iQm
 fPz
@@ -65675,7 +65679,7 @@ bOi
 bOi
 bOi
 bOi
-tqH
+anK
 nAK
 pPd
 bOi
@@ -70186,16 +70190,16 @@ uho
 uho
 uho
 uho
-apV
-apV
-apV
+uho
+uho
+uho
+uho
+uho
+uho
+uho
+uho
 hPE
-apT
-apN
-apN
-apN
-apN
-ahQ
+iQm
 hsz
 hsz
 aiO
@@ -70348,16 +70352,16 @@ uho
 uho
 uho
 uho
-apV
-apV
-apV
+uho
+uho
+uho
+uho
+uho
+uho
+uho
+uho
 hPE
-apU
-hsz
-ahP
-ahP
-ahP
-anR
+iQm
 anQ
 ahP
 apM
@@ -70510,17 +70514,17 @@ uho
 uho
 uho
 uho
-apV
-apV
-apV
+uho
+uho
+uho
+uho
+uho
+uho
+uho
+uho
 hPE
 rWp
 apS
-rWp
-hPE
-rWp
-akR
-akR
 rWp
 hPE
 hPE
@@ -70672,15 +70676,15 @@ uho
 uho
 uho
 uho
-apV
-apV
-apV
+uho
+uho
+uho
+uho
+uho
+uho
+uho
+uho
 hPE
-bsU
-bsU
-bsU
-hPE
-bsU
 bsU
 bsU
 bsU
@@ -70834,17 +70838,17 @@ uho
 uho
 uho
 uho
-apV
-apV
-apV
-hPE
-bsU
-anW
-bsU
+uho
+uho
+uho
+uho
+uho
+uho
+uho
+uho
 hPE
 bwh
-bsU
-nIf
+anW
 bsU
 hPE
 hPE
@@ -70996,18 +71000,18 @@ uho
 uho
 uho
 uho
-apV
-apV
-apV
+uho
+uho
+uho
+uho
+uho
+uho
+uho
+uho
 hPE
 anX
 anY
 aoa
-hPE
-bsU
-rjb
-ism
-dQW
 hPE
 hPE
 cpp
@@ -71158,14 +71162,14 @@ uho
 uho
 uho
 uho
-apV
-apV
-apV
-hPE
-hPE
-hPE
-hPE
-hPE
+uho
+uho
+uho
+uho
+uho
+uho
+uho
+uho
 hPE
 hPE
 hPE

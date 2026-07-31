@@ -552,7 +552,7 @@
 	if(!ignore_loc && (loc != target.loc))
 		return FALSE
 	if(target in passthrough)
-		return FA_ICON_HEART_PULSE
+		return FALSE
 	if(target.density)		//This thing blocks projectiles, hit it regardless of layer/mob stuns/etc.
 		return TRUE
 	if(!isliving(target))

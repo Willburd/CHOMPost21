@@ -1414,6 +1414,9 @@
 /obj/item/radio/headset/alt/syndicate,
 /obj/item/radio/headset/alt/syndicate,
 /obj/item/radio/headset/alt/syndicate,
+/obj/item/radio/headset/alt/syndicate,
+/obj/item/radio/headset/alt/syndicate,
+/obj/item/radio/headset/alt/syndicate,
 /turf/unsimulated/floor{
 	icon_state = "lino"
 	},
@@ -1487,6 +1490,10 @@
 	dir = 8
 	},
 /mob/living/simple_mob/vore/wolftaur/syndicate/shotty,
+/obj/machinery/door/window{
+	name = "Break glass in case of lonely";
+	dir = 1
+	},
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -1925,6 +1932,19 @@
 "et" = (
 /turf/simulated/shuttle/plating/airless,
 /area/syndicate_mothership)
+"eu" = (
+/obj/machinery/gear_painter,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"ev" = (
+/obj/machinery/gear_painter,
+/turf/unsimulated/floor{
+	dir = 5;
+	icon_state = "vault"
+	},
+/area/wizard_station)
 "ew" = (
 /turf/unsimulated/floor{
 	icon_state = "freezerfloor"
@@ -1986,6 +2006,19 @@
 	icon_state = "vault"
 	},
 /area/wizard_station)
+"eB" = (
+/mob/living/simple_mob/vore/wolftaur/syndicate/lmg,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/machinery/door/window{
+	name = "Break glass in case of lonely";
+	dir = 1
+	},
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
 "eC" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel,
 /obj/effect/floor_decal/corner/lightgrey/border{
@@ -2050,6 +2083,13 @@
 /obj/machinery/atmospherics/pipe/manifold4w/hidden,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
+"eH" = (
+/obj/structure/table/reinforced,
+/obj/machinery/chem_master,
+/turf/unsimulated/floor{
+	icon_state = "white"
+	},
+/area/syndicate_mothership)
 "eI" = (
 /turf/unsimulated/beach/coastline,
 /area/beach)
@@ -2102,6 +2142,32 @@
 /obj/item/flag,
 /turf/simulated/floor/indoorrocks,
 /area/specialty/hell)
+"eQ" = (
+/mob/living/simple_mob/vore/wolftaur/syndicate/lmg,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/machinery/door/window{
+	name = "Break glass in case of lonely";
+	dir = 2
+	},
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"eR" = (
+/mob/living/simple_mob/vore/wolftaur/syndicate/smg,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/machinery/door/window{
+	name = "Break glass in case of lonely";
+	dir = 2
+	},
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
 "eS" = (
 /obj/item/reagent_containers/chem_canister/chlorine{
 	pixel_x = -7;
@@ -2199,6 +2265,19 @@
 /obj/effect/floor_decal/industrial/bot_outline/red,
 /turf/simulated/floor/reinforced,
 /area/shuttle/mercenary)
+"eZ" = (
+/mob/living/simple_mob/vore/wolftaur/syndicate,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/machinery/door/window{
+	name = "Break glass in case of lonely";
+	dir = 2
+	},
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
 "fa" = (
 /obj/structure/grille{
 	desc = "A flimsy lattice of metal rods, with screws to secure it to the floor. This grille seems slightly more sturdy than others probably reinforced to withstand the wildlife.";
@@ -2236,6 +2315,57 @@
 	icon_state = "vault"
 	},
 /area/wizard_station)
+"fc" = (
+/obj/effect/step_trigger/dephase_shadekin,
+/obj/structure/window/plastitanium{
+	dir = 1
+	},
+/turf/simulated/floor/reinforced/airless,
+/area/shuttle/mercenary)
+"fd" = (
+/obj/effect/step_trigger/dephase_shadekin,
+/obj/effect/floor_decal/industrial/hatch/red,
+/obj/machinery/porta_turret/heavy{
+	req_one_access = list(150)
+	},
+/obj/structure/window/plastitanium{
+	dir = 4
+	},
+/obj/structure/window/plastitanium{
+	dir = 1
+	},
+/turf/simulated/floor/reinforced/airless,
+/area/shuttle/mercenary)
+"fe" = (
+/obj/effect/step_trigger/dephase_shadekin,
+/obj/structure/window/plastitanium,
+/turf/simulated/floor/reinforced/airless,
+/area/shuttle/mercenary)
+"ff" = (
+/obj/effect/step_trigger/dephase_shadekin,
+/obj/effect/floor_decal/industrial/hatch/red,
+/obj/machinery/porta_turret/heavy{
+	req_one_access = list(150)
+	},
+/turf/simulated/floor/reinforced/airless,
+/area/shuttle/mercenary)
+"fg" = (
+/obj/structure/table/rack,
+/obj/item/ammo_magazine/bm109,
+/obj/item/ammo_magazine/bm109,
+/obj/item/ammo_magazine/bm109,
+/obj/item/ammo_magazine/bm109,
+/obj/item/ammo_magazine/bm109,
+/obj/item/ammo_magazine/bm109,
+/obj/item/ammo_magazine/bm109,
+/obj/item/ammo_magazine/bm109,
+/obj/item/ammo_magazine/bm109,
+/obj/item/ammo_magazine/bm109,
+/obj/item/gun/projectile/automatic/serdy/bm109,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
 "fh" = (
 /turf/unsimulated/floor{
 	icon_state = "dark"
@@ -2254,6 +2384,45 @@
 /obj/structure/bed/double,
 /turf/simulated/floor/carpet/geo,
 /area/planet/clown)
+"fk" = (
+/obj/structure/table/rack,
+/obj/item/melee/energy/sword,
+/obj/item/melee/energy/sword,
+/obj/item/melee/energy/sword,
+/obj/item/melee/energy/sword,
+/obj/item/melee/energy/sword,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"fl" = (
+/obj/structure/table/rack,
+/obj/item/shield/energy/imperial,
+/obj/item/shield/energy/imperial,
+/obj/item/shield/energy/imperial,
+/obj/item/shield/energy/imperial,
+/obj/item/shield/energy/imperial,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"fm" = (
+/obj/structure/table/rack,
+/obj/item/ammo_magazine/awp/ap,
+/obj/item/ammo_magazine/awp/ap,
+/obj/item/ammo_magazine/awp/ap,
+/obj/item/ammo_magazine/awp/ap,
+/obj/item/ammo_magazine/awp/ap,
+/obj/item/ammo_magazine/awp/ap,
+/obj/item/ammo_magazine/awp/ap,
+/obj/item/ammo_magazine/awp/ap,
+/obj/item/ammo_magazine/awp/ap,
+/obj/item/ammo_magazine/awp/ap,
+/obj/item/gun/projectile/automatic/serdy/awp,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
 "fn" = (
 /obj/machinery/door/airlock/silver{
 	req_one_access = list(150)
@@ -2437,9 +2606,15 @@
 	},
 /area/syndicate_mothership)
 "fG" = (
-/obj/machinery/porta_turret/stationary/syndie,
 /obj/effect/step_trigger/dephase_shadekin,
 /obj/effect/floor_decal/industrial/hatch/red,
+/obj/machinery/porta_turret/heavy{
+	req_one_access = list(150)
+	},
+/obj/structure/window/plastitanium{
+	dir = 4
+	},
+/obj/structure/window/plastitanium,
 /turf/simulated/floor/reinforced/airless,
 /area/shuttle/mercenary)
 "fH" = (
@@ -2577,6 +2752,14 @@
 /obj/item/clothing/gloves/combat,
 /turf/unsimulated/floor{
 	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"fX" = (
+/obj/structure/table/oak,
+/obj/item/soap/syndie,
+/obj/item/soap/syndie,
+/turf/unsimulated/floor{
+	icon_state = "freezerfloor"
 	},
 /area/syndicate_mothership)
 "fY" = (
@@ -2950,58 +3133,38 @@
 /area/syndicate_mothership)
 "gJ" = (
 /obj/structure/table/rack,
-/obj/item/ammo_magazine/ammo_box/b12g/pellet{
-	pixel_x = 5;
-	pixel_y = 5
+/obj/item/ammo_magazine/strela/slug{
+	pixel_x = -7
 	},
-/obj/item/ammo_magazine/ammo_box/b12g/pellet{
-	pixel_x = 5;
-	pixel_y = 5
+/obj/item/ammo_magazine/strela/slug{
+	pixel_x = -7
 	},
-/obj/item/ammo_magazine/ammo_box/b12g/pellet{
-	pixel_x = 5;
-	pixel_y = 5
+/obj/item/ammo_magazine/strela/slug{
+	pixel_x = -7
 	},
-/obj/item/ammo_magazine/ammo_box/b12g/pellet{
-	pixel_x = 5;
-	pixel_y = 5
+/obj/item/ammo_magazine/strela/slug{
+	pixel_x = -7
 	},
-/obj/item/ammo_magazine/ammo_box/b12g/pellet{
-	pixel_x = 5;
-	pixel_y = 5
+/obj/item/ammo_magazine/strela/slug{
+	pixel_x = -7
 	},
-/obj/item/ammo_magazine/ammo_box/b12g/pellet{
-	pixel_x = 5;
-	pixel_y = 5
+/obj/item/ammo_magazine/strela{
+	pixel_x = 8
 	},
-/obj/item/ammo_magazine/ammo_box/b12g/pellet{
-	pixel_x = 5;
-	pixel_y = 5
+/obj/item/ammo_magazine/strela{
+	pixel_x = 8
 	},
-/obj/item/ammo_magazine/ammo_box/b12g/pellet{
-	pixel_x = 5;
-	pixel_y = 5
+/obj/item/ammo_magazine/strela{
+	pixel_x = 8
 	},
-/obj/item/ammo_magazine/ammo_box/b12g/pellet{
-	pixel_x = 5;
-	pixel_y = 5
+/obj/item/ammo_magazine/strela{
+	pixel_x = 8
 	},
-/obj/item/ammo_magazine/ammo_box/b12g/pellet{
-	pixel_x = 5;
-	pixel_y = 5
+/obj/item/ammo_magazine/strela{
+	pixel_x = 8
 	},
-/obj/item/ammo_magazine/ammo_box/b12g/flechette,
-/obj/item/ammo_magazine/ammo_box/b12g/flechette,
-/obj/item/ammo_magazine/ammo_box/b12g/flechette,
-/obj/item/ammo_magazine/ammo_box/b12g/flechette,
-/obj/item/ammo_magazine/ammo_box/b12g/flechette,
-/obj/item/ammo_magazine/ammo_box/b12g/flechette,
-/obj/item/ammo_magazine/ammo_box/b12g/flechette,
-/obj/item/ammo_magazine/ammo_box/b12g/flechette,
-/obj/item/ammo_magazine/ammo_box/b12g/flechette,
-/obj/item/ammo_magazine/ammo_box/b12g/flechette,
-/obj/item/gun/projectile/shotgun/pump/shorty,
-/obj/item/gun/projectile/shotgun/pump/shorty,
+/obj/item/gun/projectile/automatic/serdy/strela,
+/obj/item/gun/projectile/automatic/serdy/strela,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -3110,23 +3273,31 @@
 /area/syndicate_mothership)
 "gO" = (
 /obj/structure/table/rack,
-/obj/item/ammo_magazine/m45/ap,
-/obj/item/ammo_magazine/m45/ap,
-/obj/item/ammo_magazine/m45/ap,
-/obj/item/ammo_magazine/m45/ap,
-/obj/item/ammo_magazine/m45/ap,
-/obj/item/ammo_magazine/m45/ap,
-/obj/item/ammo_magazine/m45/ap,
-/obj/item/ammo_magazine/m45/ap,
-/obj/item/ammo_magazine/m45/ap,
-/obj/item/ammo_magazine/m45/ap,
-/obj/item/ammo_magazine/m45/ap,
-/obj/item/gun/projectile/silenced/empty,
-/obj/item/gun/projectile/silenced/empty,
-/obj/item/gun/projectile/silenced/empty,
-/obj/item/gun/projectile/silenced/empty,
-/obj/item/gun/projectile/silenced/empty,
-/obj/item/gun/projectile/silenced/empty,
+/obj/item/ammo_magazine/ssp4,
+/obj/item/ammo_magazine/ssp4,
+/obj/item/ammo_magazine/ssp4,
+/obj/item/ammo_magazine/ssp4,
+/obj/item/ammo_magazine/ssp4,
+/obj/item/ammo_magazine/ssp4,
+/obj/item/ammo_magazine/ssp4,
+/obj/item/ammo_magazine/ssp4,
+/obj/item/ammo_magazine/ssp4,
+/obj/item/ammo_magazine/ssp4,
+/obj/item/ammo_magazine/ssp4,
+/obj/item/ammo_magazine/ssp4,
+/obj/item/ammo_magazine/ssp4,
+/obj/item/ammo_magazine/ssp4,
+/obj/item/ammo_magazine/ssp4,
+/obj/item/ammo_magazine/ssp4,
+/obj/item/ammo_magazine/ssp4,
+/obj/item/ammo_magazine/ssp4,
+/obj/item/ammo_magazine/ssp4,
+/obj/item/ammo_magazine/ssp4,
+/obj/item/gun/projectile/automatic/serdy/ssp4_silenced,
+/obj/item/gun/projectile/automatic/serdy/ssp4_silenced,
+/obj/item/gun/projectile/automatic/serdy/ssp4_silenced,
+/obj/item/gun/projectile/automatic/serdy/ssp4_silenced,
+/obj/item/gun/projectile/automatic/serdy/ssp4_silenced,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -3512,15 +3683,11 @@
 	},
 /area/syndicate_mothership)
 "hp" = (
-/obj/structure/table/rack,
-/obj/item/shield/energy/imperial,
-/obj/item/shield/energy/imperial,
-/obj/item/shield/energy/imperial,
-/obj/item/shield/energy/imperial,
-/obj/item/shield/energy/imperial,
-/obj/item/shield/energy/imperial,
+/obj/structure/sink{
+	pixel_y = 16
+	},
 /turf/unsimulated/floor{
-	icon_state = "dark"
+	icon_state = "freezerfloor"
 	},
 /area/syndicate_mothership)
 "hq" = (
@@ -3986,7 +4153,6 @@
 "ij" = (
 /obj/structure/table/rack,
 /obj/item/rig/military,
-/obj/item/rig/military,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -4389,6 +4555,29 @@
 	dir = 1
 	},
 /area/ninja_dojo/dojo)
+"iY" = (
+/obj/machinery/vending/fitness{
+	dir = 1
+	},
+/obj/item/card/emag,
+/turf/unsimulated/floor{
+	icon_state = "cult";
+	name = "plating"
+	},
+/area/syndicate_mothership)
+"iZ" = (
+/obj/structure/table/wooden_reinforced,
+/obj/item/reagent_containers/food/snacks/syndicake,
+/obj/item/reagent_containers/food/snacks/syndicake,
+/obj/item/reagent_containers/food/snacks/syndicake,
+/obj/item/reagent_containers/food/snacks/syndicake,
+/obj/item/reagent_containers/food/snacks/syndicake,
+/obj/item/reagent_containers/food/snacks/syndicake,
+/turf/unsimulated/floor{
+	icon_state = "cult";
+	name = "plating"
+	},
+/area/syndicate_mothership)
 "ja" = (
 /obj/item/aicard,
 /obj/structure/table/alien,
@@ -4403,6 +4592,18 @@
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
+	},
+/area/syndicate_mothership)
+"jc" = (
+/obj/structure/table/rack,
+/obj/item/roller/adv,
+/obj/item/roller/adv,
+/obj/item/roller/adv,
+/obj/item/roller/adv,
+/obj/item/roller/adv,
+/obj/item/roller/adv,
+/turf/unsimulated/floor{
+	icon_state = "dark"
 	},
 /area/syndicate_mothership)
 "jd" = (
@@ -4439,6 +4640,13 @@
 	pixel_y = -2
 	},
 /obj/structure/table/rack/shelf,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"je" = (
+/obj/structure/table/rack,
+/obj/item/bluespaceradio/outpost_prelinked,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -4494,6 +4702,16 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
+"jh" = (
+/obj/structure/table/rack,
+/obj/item/storage/belt/medical/emt,
+/obj/item/storage/belt/medical/emt,
+/obj/item/storage/belt/medical/emt,
+/obj/item/storage/belt/medical/emt,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
 "ji" = (
 /turf/unsimulated/map,
 /area/overmap)
@@ -4518,12 +4736,6 @@
 /area/syndicate_mothership)
 "jl" = (
 /obj/structure/table/reinforced,
-/obj/item/reagent_containers/glass/beaker/large,
-/obj/item/reagent_containers/glass/beaker/large,
-/obj/item/reagent_containers/glass/beaker/large,
-/obj/item/reagent_containers/glass/beaker/large,
-/obj/item/reagent_containers/glass/beaker/large,
-/obj/item/reagent_containers/glass/beaker/large,
 /obj/item/reagent_containers/glass/beaker/large,
 /obj/item/reagent_containers/glass/beaker/large,
 /obj/item/reagent_containers/glass/beaker/large,
@@ -4573,18 +4785,21 @@
 /obj/item/reagent_containers/glass/bottle/rezadone,
 /obj/item/reagent_containers/glass/bottle/rezadone,
 /obj/item/reagent_containers/glass/bottle/rezadone,
+/obj/item/storage/quickdraw/syringe_case/clotting{
+	pixel_x = -13
+	},
+/obj/item/storage/quickdraw/syringe_case/clotting{
+	pixel_x = -13
+	},
 /turf/unsimulated/floor{
 	icon_state = "white"
 	},
 /area/syndicate_mothership)
 "jq" = (
-/obj/structure/table/wooden_reinforced,
-/obj/item/paper{
-	info = "Set your faction to syndicate"
-	},
+/obj/structure/table/rack,
+/obj/item/chainsaw/alt/sword,
 /turf/unsimulated/floor{
-	icon_state = "cult";
-	name = "plating"
+	icon_state = "dark"
 	},
 /area/syndicate_mothership)
 "jr" = (
@@ -4653,6 +4868,13 @@
 	icon_state = "white"
 	},
 /area/syndicate_mothership)
+"ju" = (
+/obj/structure/table/rack,
+/obj/item/chainsaw/alt,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
 "jv" = (
 /obj/structure/window/reinforced{
 	dir = 8
@@ -4698,15 +4920,6 @@
 /obj/item/tape/police,
 /turf/unsimulated/floor{
 	icon_state = "dark"
-	},
-/area/syndicate_mothership)
-"jI" = (
-/obj/item/storage/quickdraw/syringe_case/clotting,
-/obj/item/storage/quickdraw/syringe_case/clotting,
-/obj/item/storage/quickdraw/syringe_case/clotting,
-/obj/structure/table/reinforced,
-/turf/unsimulated/floor{
-	icon_state = "white"
 	},
 /area/syndicate_mothership)
 "jJ" = (
@@ -6196,14 +6409,11 @@
 	},
 /area/shuttle/specops/centcom)
 "nk" = (
-/obj/effect/landmark{
-	name = "halluspawn"
-	},
 /turf/unsimulated/floor{
 	icon_state = "plating";
 	name = "plating"
 	},
-/area/specialty/thedarkplace)
+/area/mine/unexplored/sinkhole)
 "nl" = (
 /obj/effect/fancy_shuttle/delivery{
 	dir = 1
@@ -6450,23 +6660,23 @@
 /area/shuttle/specops/centcom)
 "nS" = (
 /obj/structure/table/rack,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
+/obj/item/ammo_magazine/hectate/ap,
 /obj/item/gun/projectile/automatic/serdy/hectate,
-/obj/item/ammo_magazine/hectate/ap,
-/obj/item/ammo_magazine/hectate/ap,
-/obj/item/ammo_magazine/hectate/ap,
-/obj/item/ammo_magazine/hectate/ap,
-/obj/item/ammo_magazine/hectate/ap,
-/obj/item/ammo_magazine/hectate/ap,
-/obj/item/ammo_magazine/hectate/ap,
-/obj/item/ammo_magazine/hectate/ap,
-/obj/item/ammo_magazine/hectate/ap,
-/obj/item/ammo_magazine/hectate/ap,
-/obj/item/ammo_magazine/hectate/ap,
-/obj/item/ammo_magazine/hectate/ap,
-/obj/item/ammo_magazine/hectate/ap,
-/obj/item/ammo_magazine/hectate/ap,
-/obj/item/ammo_magazine/hectate/ap,
-/obj/item/ammo_magazine/hectate/ap,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -6810,7 +7020,7 @@
 	icon_state = "plating";
 	name = "plating"
 	},
-/area/specialty/thedarkplace)
+/area/mine/unexplored/sinkhole)
 "oC" = (
 /turf/unsimulated/floor/snow,
 /area/specialty/thedarkplace)
@@ -13065,8 +13275,8 @@
 /obj/structure/cable/orange{
 	icon_state = "0-8"
 	},
-/obj/structure/cable/orange{
-	icon_state = "0-4"
+/obj/structure/window/plastitanium{
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/shuttle/mercenary)
@@ -13428,6 +13638,7 @@
 	},
 /obj/effect/step_trigger/dephase_shadekin,
 /obj/effect/floor_decal/industrial/hatch/blue,
+/obj/structure/window/plastitanium,
 /turf/simulated/floor/reinforced/airless,
 /area/shuttle/mercenary)
 "BF" = (
@@ -14407,13 +14618,19 @@
 /turf/simulated/floor/plating,
 /area/shuttle/mercenary)
 "DA" = (
-/obj/machinery/porta_turret/heavy{
-	req_one_access = list(150)
-	},
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 10
 	},
 /obj/effect/floor_decal/industrial/hatch/red,
+/obj/machinery/porta_turret/heavy{
+	req_one_access = list(150)
+	},
+/obj/structure/window/plastitanium{
+	dir = 1
+	},
+/obj/structure/window/plastitanium{
+	dir = 4
+	},
 /turf/simulated/floor/reinforced,
 /area/shuttle/mercenary)
 "DB" = (
@@ -14662,21 +14879,13 @@
 	req_one_access = list();
 	pixel_y = 32
 	},
-/obj/item/storage/firstaid/adv{
-	pixel_x = 8;
+/obj/item/storage/firstaid/combat{
+	pixel_x = -8;
 	pixel_y = 8
 	},
 /obj/item/storage/firstaid/combat{
 	pixel_x = -8;
 	pixel_y = 8
-	},
-/obj/item/storage/firstaid/o2{
-	pixel_x = 8;
-	pixel_y = -6
-	},
-/obj/item/storage/firstaid/clotting{
-	pixel_x = -8;
-	pixel_y = -6
 	},
 /obj/item/storage/firstaid/adv{
 	pixel_x = 8;
@@ -14684,14 +14893,6 @@
 	},
 /obj/item/storage/firstaid/adv{
 	pixel_x = 8;
-	pixel_y = 8
-	},
-/obj/item/storage/firstaid/combat{
-	pixel_x = -8;
-	pixel_y = 8
-	},
-/obj/item/storage/firstaid/combat{
-	pixel_x = -8;
 	pixel_y = 8
 	},
 /obj/item/storage/firstaid/clotting{
@@ -14712,7 +14913,9 @@
 	},
 /obj/item/storage/firstaid/vox,
 /obj/item/storage/firstaid/vox,
-/obj/item/storage/firstaid/vox,
+/obj/item/reagent_containers/syringe/antiviral,
+/obj/item/reagent_containers/syringe/antiviral,
+/obj/item/reagent_containers/syringe/antiviral,
 /turf/simulated/floor/tiled/white,
 /area/shuttle/mercenary)
 "Eg" = (
@@ -15993,6 +16196,10 @@
 	dir = 8
 	},
 /mob/living/simple_mob/vore/wolftaur/syndicate/awp,
+/obj/machinery/door/window{
+	name = "Break glass in case of lonely";
+	dir = 1
+	},
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -16002,6 +16209,10 @@
 	dir = 8
 	},
 /mob/living/simple_mob/vore/wolftaur/syndicate/alt2,
+/obj/machinery/door/window{
+	name = "Break glass in case of lonely";
+	dir = 1
+	},
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -16247,22 +16458,6 @@
 	dir = 8
 	},
 /area/tdome/tdomeobserve)
-"Hs" = (
-/obj/structure/grille,
-/obj/machinery/door/firedoor/glass,
-/obj/structure/window/plastitanium{
-	dir = 1
-	},
-/obj/structure/window/plastitanium,
-/obj/effect/step_trigger/dephase_shadekin,
-/obj/structure/cable/orange{
-	icon_state = "0-4"
-	},
-/obj/structure/cable/orange{
-	icon_state = "0-8"
-	},
-/turf/simulated/floor/plating,
-/area/shuttle/mercenary)
 "Ht" = (
 /obj/effect/floor_decal/industrial/arrows/red,
 /obj/effect/floor_decal/industrial/arrows/red{
@@ -16474,6 +16669,10 @@
 	dir = 8
 	},
 /mob/living/simple_mob/vore/wolftaur/syndicate/alt3,
+/obj/machinery/door/window{
+	name = "Break glass in case of lonely";
+	dir = 2
+	},
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -16914,7 +17113,9 @@
 /area/syndicate_mothership)
 "IL" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/machinery/vending/security_armor,
+/obj/machinery/vending/security_armor{
+	req_access = null
+	},
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -16963,8 +17164,11 @@
 "IP" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/table/rack,
-/obj/fiftyspawner/titanium,
-/obj/fiftyspawner/titanium,
+/obj/item/clothing/head/helmet/swat,
+/obj/item/clothing/head/helmet/swat,
+/obj/item/clothing/head/helmet/swat,
+/obj/item/clothing/head/helmet/swat,
+/obj/item/clothing/head/helmet/swat,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -17001,10 +17205,12 @@
 /area/syndicate_mothership)
 "IT" = (
 /obj/structure/table/wooden_reinforced,
-/obj/item/storage/photo_album,
 /obj/structure/sign/scenery/map/left_outpost21{
 	pixel_y = 32
 	},
+/obj/item/spacecash/c1000,
+/obj/item/spacecash/c1000,
+/obj/item/spacecash/c1000,
 /turf/unsimulated/floor{
 	icon_state = "cult";
 	name = "plating"
@@ -17038,6 +17244,9 @@
 	},
 /obj/structure/sign/scenery/map/right_outpost21{
 	pixel_y = 32
+	},
+/obj/item/paper{
+	info = "Set your faction to syndicate"
 	},
 /turf/unsimulated/floor{
 	icon_state = "cult";
@@ -17083,8 +17292,18 @@
 "IY" = (
 /obj/structure/table/rack,
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/fiftyspawner/durasteel,
-/obj/fiftyspawner/durasteel,
+/obj/fiftyspawner/durasteel{
+	pixel_x = -5
+	},
+/obj/fiftyspawner/titanium{
+	pixel_x = 5
+	},
+/obj/fiftyspawner/durasteel{
+	pixel_x = -5
+	},
+/obj/fiftyspawner/titanium{
+	pixel_x = 5
+	},
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -24366,9 +24585,9 @@ jj
 jj
 VT
 jj
-cX
-cX
-cX
+ad
+ad
+ad
 ae
 ag
 ag
@@ -24528,9 +24747,9 @@ jj
 jj
 VT
 jj
-cX
+ad
 nk
-cX
+ad
 ae
 ag
 ag
@@ -24690,9 +24909,9 @@ QQ
 VT
 VT
 jj
-cX
+ad
 oB
-cX
+ad
 ae
 ag
 ag
@@ -24852,9 +25071,9 @@ jj
 jj
 VT
 jj
-cX
-cX
-cX
+ad
+ad
+ad
 Sg
 Sg
 Sg
@@ -35190,7 +35409,7 @@ Zy
 bK
 bK
 bK
-bK
+ev
 bK
 bK
 EK
@@ -55177,10 +55396,10 @@ yb
 iJ
 yb
 jv
-jv
 HB
+jv
 sg
-Hi
+jv
 GQ
 Gn
 yb
@@ -55339,11 +55558,11 @@ ew
 ew
 yb
 Gq
-Gq
-HB
+eQ
 sg
-Hi
-Gq
+sg
+sg
+eB
 Gq
 yb
 kb
@@ -55496,16 +55715,16 @@ fV
 sg
 fF
 yb
-ew
+fX
 ew
 ew
 yb
 HO
-HO
-HB
+eR
+sg
+sg
 sg
 Hi
-jv
 Gt
 yb
 sg
@@ -55658,15 +55877,15 @@ gG
 sg
 gD
 yb
-ew
+hp
 ew
 Il
 yb
 Id
 HP
-HB
 sg
-Hi
+sg
+sg
 dv
 Gu
 yb
@@ -55825,10 +56044,10 @@ ew
 Il
 yb
 HQ
-HQ
-HB
+eZ
 sg
-Hi
+sg
+sg
 GS
 Gv
 yb
@@ -56624,7 +56843,7 @@ ab
 mN
 yb
 IT
-aJ
+iZ
 aJ
 II
 gk
@@ -56786,7 +57005,7 @@ ab
 mN
 yb
 IU
-jq
+aJ
 aJ
 IJ
 gk
@@ -57114,7 +57333,7 @@ gk
 gk
 gk
 gk
-Iz
+iY
 yb
 sg
 sg
@@ -57286,8 +57505,8 @@ mN
 fO
 fO
 fR
-AH
-fR
+ff
+fe
 As
 mN
 mN
@@ -57299,7 +57518,7 @@ ss
 mN
 mN
 As
-fR
+fc
 AH
 fR
 fO
@@ -57431,7 +57650,7 @@ mN
 mN
 ab
 yb
-sg
+eu
 IY
 IV
 IP
@@ -58892,7 +59111,7 @@ yb
 sg
 hj
 gV
-gV
+nO
 gW
 gY
 sg
@@ -59225,7 +59444,7 @@ gZ
 sg
 sg
 jF
-fG
+fd
 fR
 fR
 fR
@@ -59378,8 +59597,8 @@ yb
 hm
 kQ
 bM
-kQ
-nO
+fg
+fm
 nS
 nW
 Iq
@@ -60025,9 +60244,9 @@ ab
 yb
 sg
 kQ
-hp
-ho
 kQ
+jq
+IX
 hf
 hf
 sg
@@ -60040,7 +60259,7 @@ mN
 mN
 mN
 mN
-Hs
+AS
 GY
 GD
 fo
@@ -60188,7 +60407,7 @@ yb
 sg
 kQ
 kQ
-kQ
+ju
 gC
 gA
 kv
@@ -60202,7 +60421,7 @@ mN
 mN
 mN
 mN
-AU
+fR
 GZ
 GE
 fo
@@ -60216,7 +60435,7 @@ fo
 BR
 BB
 Bx
-AU
+fR
 mN
 mN
 mN
@@ -60509,10 +60728,10 @@ mN
 mN
 ab
 yb
-kQ
-kQ
-kQ
-kQ
+je
+ho
+fl
+fk
 ea
 dX
 kQ
@@ -61501,7 +61720,7 @@ mN
 mN
 mN
 mN
-fG
+fd
 fR
 FF
 EQ
@@ -62292,7 +62511,7 @@ mN
 ab
 yb
 kQ
-kQ
+jc
 ek
 hD
 la
@@ -62453,7 +62672,7 @@ mN
 mN
 ab
 yb
-kQ
+jh
 IZ
 hf
 hJ
@@ -62777,7 +62996,7 @@ mN
 mN
 ab
 yb
-IX
+kQ
 eq
 gX
 qx
@@ -62954,7 +63173,7 @@ Hc
 iR
 hc
 jR
-jI
+eH
 hc
 jr
 Hc

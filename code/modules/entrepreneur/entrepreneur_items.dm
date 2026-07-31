@@ -412,7 +412,7 @@
 
 /obj/item/entrepreneur/spirit_board
 	name = "spirit board"
-	desc = "A wooden board with an alphabet at numbers on it, used to contact the dead. You need to use a glass to contact the spirit world. (It can be alt-clicked to decide the next letter in the sequence. This item does not canonise ghosts/souls in this setting, it's just a bit of fun!)"
+	desc = "A wooden board with an alphabet at numbers on it, used to contact the dead. You need to use a glass to contact the spirit world. (It can be alt-clicked to decide the next letter in the sequence.)" // Outpost 21 edit - CANON HERE:  This item does not canonise ghosts/souls in this setting, it's just a bit of fun!)"
 	icon = 'icons/obj/entrepreneur.dmi'
 	icon_state = "spirit_board"
 	var/list/possible_results = list("A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","Yes","No","1","2","3","4","5","6","7","8","9","0","Nothing")

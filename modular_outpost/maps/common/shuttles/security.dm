@@ -29,6 +29,12 @@
 	// If on highest level of spooky let the tram crash happen
 	if(SShaunting.get_world_haunt() >= 5)
 		return prob(1) && prob(1)
+	// Crash in certain weather
+	var/turf/T = get_turf(intended_destination)
+	if(T && T.z > 0 && T.z <= SSplanets.z_to_planet.len && SSplanets.z_to_planet[T.z])
+		var/datum/planet/P = SSplanets.z_to_planet[T.z]
+		if(prob(P?.weather_holder?.current_weather.shuttle_crash_chance))
+			return TRUE
 	return FALSE
 
 /obj/machinery/computer/shuttle_control/explore/security

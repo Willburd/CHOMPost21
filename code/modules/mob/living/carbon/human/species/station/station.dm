@@ -196,8 +196,6 @@
 		/datum/decl/emote/human/stopsway
 	)
 
-	footstep = FOOTSTEP_MOB_CLAW
-
 	inherent_verbs = list(/mob/living/carbon/human/proc/tie_hair)
 	wikilink="https://wiki.chompstation13.net/index.php?title=Unathi" //CHOMPSedit: link to our wiki
 
@@ -1239,8 +1237,6 @@
 		/datum/decl/emote/audible/teshtrill
 	)
 
-	footstep = FOOTSTEP_MOB_TESHARI
-
 /datum/species/teshari/equip_survival_gear(mob/living/carbon/human/H)
 	..()
 	//if(!(H.client?.prefs?.shoe_hater)) //CHOMPStation Edit. Disables shoe_hater. Un-indents below line by 1.
@@ -1709,6 +1705,10 @@
 		/mob/living/carbon/human/proc/lick_wounds,
 		/mob/living/carbon/human/proc/shapeshifter_reassemble)		//Xenochimera get all the special verbs since they can't select traits.
 		// CHOMPEdit: Lick Wounds Verb, reform verb
+
+	default_emotes = list(
+		/datum/decl/emote/audible/xenochimera_scream,
+	)
 
 	virus_immune = 1 // They practically ARE one.
 	min_age = 18

@@ -14,8 +14,6 @@
 	var/override_entire_hud = FALSE // Overrides all others, only this needs to be set if you do a fully custom hud
 	var/override_health_hud = FALSE
 	var/override_darkvision_hud = FALSE
-	// turf release flag
-	var/release_view_to_turf = FALSE
 
 /datum/remote_view_config/proc/register_signals(mob/host_mob, datum/component/remote_view/component)
 	RETURN_TYPE(null)
@@ -88,8 +86,9 @@
 	return
 
 /// Handles relayed movement during a remote view. Override this in a subtype to handle specialized logic. If it returns true, the mob will not move, allowing you to handle remotely controlled movement.
-/datum/remote_view_config/proc/handle_relay_movement(datum/component/remote_view/owner_component, mob/host_mob, datum/coordinator, atom/movable/remote_view_target, direction)
+/datum/remote_view_config/proc/handle_relay_movement(datum/component/remote_view/owner_component, mob/host_mob, direction)
 	SIGNAL_HANDLER
+	var/atom/remote_view_target = owner_component.get_target()
 	return remote_view_target.relaymove(host_mob, direction)
 
 /// Handles visual changes to mob's hud or flags when in use, it is fired every life tick.
@@ -150,17 +149,6 @@
 	will_paralyze = FALSE
 	will_sleep = FALSE
 	will_blind = FALSE
-	release_view_to_turf = TRUE
-
-/// Remote view that only allows decoupling a turf view by movement. Seperate from effect_immune to allow for easier removal in the future if the underlying issue that makes this needed is someday fixed
-/datum/remote_view_config/turf_decoupling
-	forbid_movement = TRUE
-	will_death = TRUE
-	will_stun = FALSE
-	will_weaken = FALSE
-	will_paralyze = FALSE
-	will_sleep = FALSE
-	will_blind = FALSE
 
 /// Remote view that only allows decoupling a turf view by movement. Seperate from effect_immune to allow for easier removal in the future if the underlying issue that makes this needed is someday fixed
 /datum/remote_view_config/looking_up
@@ -180,7 +168,8 @@
 /datum/remote_view_config/camera_standard
 	use_zoom_hud = TRUE
 
-/datum/remote_view_config/camera_standard/handle_apply_visuals( datum/component/remote_view/owner_component, mob/host_mob)
+/datum/remote_view_config/camera_standard/handle_apply_visuals(mob/host_mob)
+	var/datum/component/remote_view/owner_component = host_mob.GetComponent(/datum/component/remote_view)
 	var/obj/machinery/camera/view_camera = owner_component.get_target()
 	if(!view_camera || !view_camera.can_use())
 		host_mob.reset_perspective()

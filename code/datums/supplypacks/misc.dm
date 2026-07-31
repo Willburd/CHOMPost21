@@ -100,6 +100,9 @@
 			//VOREStation Add End
 			//Outpost 21 add start
 			/obj/item/toy/plushie/tinytin,
+			/obj/item/toy/plushie/jil,
+			/obj/item/toy/plushie/chu,
+			/obj/item/toy/plushie/expie,
 			//Outpost 21 add end
 			//YawnWider Add Start
 			/obj/item/toy/plushie/teshari/_yw,

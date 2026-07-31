@@ -7,12 +7,19 @@
 /datum/surgery_step/internal/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 
 	if(!ishuman(target))
-		return 0
+		return FALSE
 
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
+	if(!affected)
+		return FALSE
+
 	if(coverage_check(user, target, affected, tool))
-		return 0
-	return affected && affected.open == (affected.encased ? 3 : 2)
+		return FALSE
+
+	if(affected.encased)
+		return affected.open == BONE_RETRACTED
+
+	return affected.open >= FLESH_RETRACTED
 
 //Removed unused Embryo Surgery, derelict and broken.
 
@@ -114,11 +121,6 @@
 		if(I && I.damage > 0)
 			I.take_damage(dam_amt,0)
 
-
-
-
-
-
 //Robo internal organ fix. For when an organic has robotic limbs.
 /datum/surgery_step/fix_organic_organ_robotic //For artificial organs
 	surgery_name = "Mend Organ"
@@ -212,15 +214,15 @@
 
 /datum/surgery_step/internal/detatch_organ/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	if (!..())
-		return 0
+		return FALSE
 
 	if(!istype(tool))
-		return 0
+		return FALSE
 
 	var/obj/item/organ/external/affected = target.get_organ(target_zone)
 
 	if(!(affected && !(affected.robotic >= ORGAN_ROBOT)))
-		return 0
+		return FALSE
 
 	target.op_stage.current_organ = null
 
@@ -233,9 +235,9 @@
 	// Outpost 21 edit(port) begin - Autodoc code, and use organs actual name for malignants
 	var/organ_to_remove = autodoc_organ_select( user, target, attached_organs, "Which organ do you want to prepare for removal?", "Organ Choice" )
 	if(!organ_to_remove)
-		return 0
+		return FALSE
 	if(!attached_organs[organ_to_remove])
-		return 0
+		return FALSE
 	// Outpost 21 edit end
 
 	target.op_stage.current_organ = attached_organs[organ_to_remove]
@@ -286,10 +288,10 @@
 
 /datum/surgery_step/internal/remove_organ/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	if (!..())
-		return 0
+		return FALSE
 
 	if(!istype(tool))
-		return 0
+		return FALSE
 
 	var/list/removable_organs = list()
 	for(var/organ in target.internal_organs_by_name)
@@ -298,7 +300,7 @@
 			removable_organs |= organ
 
 	if(!removable_organs.len)
-		return 0
+		return FALSE
 
 	return ..()
 
@@ -377,7 +379,7 @@
 	var/organ_missing
 
 	if(!istype(O))
-		return 0
+		return FALSE
 
 	if((affected.robotic >= ORGAN_ROBOT) && !(O.robotic >= ORGAN_ROBOT))
 		to_chat(user, span_danger("You cannot install a naked organ into a robotic body."))
@@ -469,10 +471,10 @@
 
 /datum/surgery_step/internal/attach_organ/can_use(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)
 	if (!..())
-		return 0
+		return FALSE
 
 	if(!istype(tool))
-		return 0
+		return FALSE
 
 	target.op_stage.current_organ = null
 
@@ -485,9 +487,9 @@
 	// Outpost 21 edit(port) begin - Autodoc selection behavior
 	var/organ_to_replace = autodoc_organ_select( user, target, removable_organs, "Which organ do you want to reattach?", "Organ Choice" )
 	if(!organ_to_replace)
-		return 0
+		return FALSE
 	if(!removable_organs[organ_to_replace])
-		return 0
+		return FALSE
 	// Outpost 21 edit end
 
 	target.op_stage.current_organ = removable_organs[organ_to_replace]

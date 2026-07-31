@@ -2,7 +2,7 @@
 	name = T_BOARD("lockdown console")
 	build_path = /obj/machinery/lockdown_console
 	board_type = new /datum/frame/frame_types/lockdown_console
-	matter = list(MAT_STEEL = 50, MAT_GLASS = 50)
+	matter = list(MAT_STELL = MATERIAL_COST(0.025), MAT_GLASS = MATERIAL_COST(0.025))
 
 /obj/item/circuitboard/metal_detector
 	name = T_BOARD("threat scanner")
@@ -17,4 +17,4 @@
 /obj/item/circuitboard/supply_request_computeralt
 	name = T_BOARD("request console computer")
 	build_path = /obj/machinery/computer/supply_request_computeralt
-	matter = list(MAT_STEEL = 50, MAT_GLASS = 50)
+	matter = list(MAT_STELL = MATERIAL_COST(0.025), MAT_GLASS = MATERIAL_COST(0.025))

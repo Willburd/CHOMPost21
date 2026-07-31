@@ -388,7 +388,12 @@
 			s.set_up(3, 1, get_turf(owner))
 			s.start()
 			var/turf/picked = get_turf(pick(turfs))                      // Just in case...
-			owner.loc = picked                                          // And teleport them to the chosen location.
+			// Outpost 21 edit(port) begin - Unbuckle bluespace tumor teleports... todo make this actually a teleport?
+			if(owner.buckled)
+				owner.resist()
+				owner.buckled.unbuckle_mob(owner)
+			owner.forceMove(picked)										// And teleport them to the chosen location.
+			// Outpost 21 edit end
 		cooldown = rand(cooldownmin,cooldownmax)
 
 

@@ -30,7 +30,7 @@
 	if(species.pain_mod)
 		var/health_percent = ((health / getMaxHealth()) * 100) / species.pain_mod //Species pain sensitivity does not apply to painkillers, so we apply it before
 
-		var/hal_pain = getHalLoss() * species.pain_mod //trauma_mod is something entirely differently
+		var/hal_pain = getHalLoss() * species.pain_mod
 		//var/hal_pain = can_feel_pain() ? (getHalLoss() * 2) * species.pain_mod : 0 //Variant for if you want pain immune people to not be affected by halloss slowdown.
 
 		if((health_percent <= 60 || hal_pain >= 25) && !chem_effects[CE_NARCOTICS]) //Have taken 40% of our max health in damage OR we have >=25 halloss pain
@@ -141,7 +141,7 @@
 		pose_move = FALSE
 		remove_pose_indicator()
 
-	if(client && !is_incorporeal() && isturf(loc)) // Outpost 21 edit(port) - Departmentgoal signals
+	if(client && !is_incorporeal() && isturf(loc))
 		GLOB.step_taken_shift_roundstat++
 
 // This calculates the amount of slowdown to receive from items worn. This does NOT include species modifiers.
@@ -310,5 +310,5 @@
 /mob/living/carbon/human/set_dir(new_dir)
 	. = ..()
 	if(. && (species.tail || tail_style))
-		//update_tail_showing() this is already called by update_inv_wear_suit
+		update_tail_showing()
 		update_inv_wear_suit()

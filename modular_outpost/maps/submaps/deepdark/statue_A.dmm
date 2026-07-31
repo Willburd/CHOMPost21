@@ -6,7 +6,7 @@
 /obj/structure/prop/statue/jumpscare{
 	dir = 4
 	},
-/turf/simulated/mineral/floor/ignore_mapgen/cave,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "f" = (
 /obj/structure/table/marble,
@@ -16,19 +16,19 @@
 /area/mine/explored/muriki/cave/deepdark)
 "o" = (
 /obj/structure/prop/statue/angel,
-/turf/simulated/mineral/floor/ignore_mapgen/cave,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "p" = (
 /obj/structure/prop/statue/jumpscare{
 	dir = 8
 	},
-/turf/simulated/mineral/floor/ignore_mapgen/cave,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "A" = (
 /obj/structure/prop/statue/jumpscare{
 	dir = 1
 	},
-/turf/simulated/mineral/floor/ignore_mapgen/cave,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "E" = (
 /obj/structure/prop/statue/angel{
@@ -40,7 +40,7 @@
 /area/mine/explored/muriki/cave/deepdark)
 "G" = (
 /obj/structure/prop/statue/jumpscare,
-/turf/simulated/mineral/floor/ignore_mapgen/cave,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "I" = (
 /obj/structure/prop/statue,
@@ -49,14 +49,14 @@
 	},
 /area/mine/explored/muriki/cave/deepdark)
 "J" = (
-/turf/simulated/mineral/floor/ignore_mapgen/cave,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "P" = (
 /turf/template_noop,
 /area/template_noop)
 "T" = (
 /mob/living/simple_mob/animal/statue,
-/turf/simulated/mineral/floor/ignore_mapgen/cave,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "U" = (
 /obj/structure/prop/statue/angel{

@@ -17,7 +17,8 @@
 		new/datum/data/pda/app/crew_records/medical,
 		// outpost 21 edit end
 		new/datum/data/pda/app/messenger,
-		new/datum/data/pda/app/game_launcher)
+		new/datum/data/pda/app/game_launcher,
+		new/datum/data/pda/app/goals)
 	special_handling = TRUE
 
 /obj/item/pda/ai/proc/set_name_and_job(newname as text, newjob as text, newrank as null|text)

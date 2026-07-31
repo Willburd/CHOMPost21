@@ -295,8 +295,9 @@
 						M.adjust_fire_stacks(-1)
 					if(M.on_fire)
 						src.ignite_mob()
-					M.resting = 0 //Hoist yourself up up off the ground. No para/stunned/weakened removal.
-					update_canmove()
+					M.resting = !M.resting
+					M.AdjustWeakened(-3)
+					M.update_canmove()
 				else if(istype(hugger))
 					hugger.species.hug(hugger,src)
 				else
@@ -385,6 +386,8 @@
 			temp = rand(120, 160)
 			return num2text(method ? temp : temp + rand(-10, 10))
 		if(PULSE_THREADY)
+			return method ? ">250" : "extremely weak and fast, patient's artery feels like a thread"
+		else //Anything too high just returns thready.
 			return method ? ">250" : "extremely weak and fast, patient's artery feels like a thread"
 //			output for machines^	^^^^^^^output for people^^^^^^^^^
 

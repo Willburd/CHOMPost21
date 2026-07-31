@@ -638,6 +638,7 @@
 	)
 	mail_color = COMMS_COLOR_SCIENCE
 
+/* Outpost 21 edit - Xenobotanist rolled into botanist
 /datum/job/xenobotanist
 	mail_goodies = list(
 		/obj/item/reagent_containers/glass/bottle/mutagen = 350,
@@ -647,6 +648,7 @@
 		/obj/item/grenade/chem_grenade/antiweed = 50
 	)
 	mail_color = COMMS_COLOR_SCIENCE
+*/
 
 // Security
 
