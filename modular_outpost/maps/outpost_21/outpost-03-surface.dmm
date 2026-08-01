@@ -1978,10 +1978,6 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/trawler)
 "acH" = (
-/obj/machinery/computer/supply_request_computeralt/security{
-	dir = 4;
-	pixel_x = 2
-	},
 /obj/structure/window/plastitanium{
 	dir = 8
 	},
@@ -1994,6 +1990,18 @@
 /obj/structure/sign/yessmoking_1{
 	pixel_y = 32;
 	pixel_x = 6
+	},
+/obj/structure/table/steel_reinforced,
+/obj/item/stamp/ward{
+	pixel_y = 7;
+	pixel_x = -6
+	},
+/obj/item/stamp/denied{
+	pixel_x = 5;
+	pixel_y = 5
+	},
+/obj/item/material/ashtray/bronze{
+	pixel_y = -2
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/warden)
@@ -24676,16 +24684,12 @@
 	pixel_x = 32;
 	pixel_y = -4
 	},
-/obj/structure/table/steel_reinforced,
-/obj/item/stamp/ward,
-/obj/item/stamp/denied{
-	pixel_x = 5
-	},
 /obj/machinery/firealarm{
 	pixel_y = 26
 	},
-/obj/item/material/ashtray/bronze{
-	pixel_y = -8
+/obj/machinery/computer/supply_request_computeralt/security{
+	dir = 8;
+	pixel_x = 2
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/warden)
@@ -47023,13 +47027,15 @@
 /obj/effect/floor_decal/milspec/color/red/half{
 	dir = 4
 	},
-/obj/structure/table/steel_reinforced,
-/obj/item/storage/box/holobadge,
 /obj/machinery/light{
 	dir = 4
 	},
 /obj/machinery/computer/security/telescreen/entertainment{
 	pixel_x = 32
+	},
+/obj/machinery/computer/rdconsole_tg/security_remote{
+	dir = 8;
+	pixel_x = 2
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/warden)
@@ -54476,24 +54482,13 @@
 /turf/simulated/floor/tiled/milspec,
 /area/engineering/storage)
 "lFy" = (
-/obj/structure/table/steel,
-/obj/item/wrapping_paper,
-/obj/item/wrapping_paper,
-/obj/item/wrapping_paper,
-/obj/item/destTagger{
-	pixel_x = 4;
-	pixel_y = 3
-	},
 /obj/effect/floor_decal/corner/brown{
 	dir = 5
-	},
-/obj/item/destTagger{
-	pixel_x = 4;
-	pixel_y = 3
 	},
 /obj/machinery/alarm{
 	pixel_y = 26
 	},
+/obj/machinery/computer/rdconsole_tg/cargo_remote,
 /turf/simulated/floor/tiled,
 /area/quartermaster/delivery)
 "lFF" = (
@@ -70544,12 +70539,6 @@
 /area/security/secmail)
 "qRn" = (
 /obj/structure/table/steel,
-/obj/item/paper_bin{
-	pixel_x = -3;
-	pixel_y = 7
-	},
-/obj/item/pen,
-/obj/item/pen/red,
 /obj/effect/floor_decal/corner/brown{
 	dir = 6
 	},
@@ -70557,6 +70546,25 @@
 	id_tag = "cargodinger";
 	name = "Cargo Dinger";
 	pixel_x = 30
+	},
+/obj/item/paper_bin{
+	pixel_x = -3;
+	pixel_y = 7
+	},
+/obj/item/destTagger{
+	pixel_x = 4;
+	pixel_y = 3
+	},
+/obj/item/wrapping_paper,
+/obj/item/wrapping_paper,
+/obj/item/wrapping_paper,
+/obj/item/pen,
+/obj/item/pen,
+/obj/item/pen/red,
+/obj/item/pen/red,
+/obj/item/destTagger{
+	pixel_x = 4;
+	pixel_y = 3
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/delivery)
@@ -88546,6 +88554,10 @@
 /obj/item/pen/fountain8,
 /obj/item/clipboard{
 	pixel_x = -12
+	},
+/obj/item/storage/box/holobadge{
+	pixel_x = 8;
+	pixel_y = 11
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/security/warden)

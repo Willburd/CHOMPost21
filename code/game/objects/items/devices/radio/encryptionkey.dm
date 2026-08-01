@@ -30,7 +30,7 @@
 /obj/item/encryptionkey/headset_sec
 	name = "security radio encryption key"
 	icon_state = "sec_cypherkey"
-	channels = list(CHANNEL_SECURITY = 1, CHANNEL_SEC_ALPHA = 1, CHANNEL_SEC_BETA = 1, CHANNEL_SEC_CHARLIE = 1, CHANNEL_SEC_DELTA = 1) // Outpost 21 edit - Security squad channels
+	channels = list(CHANNEL_SECURITY = 1)
 
 /obj/item/encryptionkey/headset_eng
 	name = "engineering radio encryption key"
@@ -60,18 +60,18 @@
 /obj/item/encryptionkey/headset_com
 	name = "command radio encryption key"
 	icon_state = "com_cypherkey"
-	channels = list(CHANNEL_COMMAND = 1, CHANNEL_SEC_ALPHA = 1, CHANNEL_SEC_BETA = 1, CHANNEL_SEC_CHARLIE = 1, CHANNEL_SEC_DELTA = 1) // Outpost 21 edit - Security squad channels
+	channels = list(CHANNEL_COMMAND = 1)
 
 /obj/item/encryptionkey/heads/captain
 	name = "site manager's encryption key"
 	icon_state = "cap_cypherkey"
-	channels = list(CHANNEL_COMMAND = 1, CHANNEL_SECURITY = 1, CHANNEL_ENGINEERING = 1, CHANNEL_SCIENCE = 1, CHANNEL_MEDICAL = 1, CHANNEL_SUPPLY = 1, CHANNEL_SERVICE = 1, CHANNEL_SEC_ALPHA = 1, CHANNEL_SEC_BETA = 1, CHANNEL_SEC_CHARLIE = 1, CHANNEL_SEC_DELTA = 1) // Outpost 21 edit - Security squad channels
+	channels = list(CHANNEL_COMMAND = 1, CHANNEL_SECURITY = 1, CHANNEL_ENGINEERING = 1, CHANNEL_SCIENCE = 1, CHANNEL_MEDICAL = 1, CHANNEL_SUPPLY = 1, CHANNEL_SERVICE = 1)
 
 /obj/item/encryptionkey/heads/ai_integrated
 	name = "ai integrated encryption key"
 	desc = "Integrated encryption key"
 	icon_state = "cap_cypherkey"
-	channels = list(CHANNEL_COMMAND = 1, CHANNEL_SECURITY = 1, CHANNEL_ENGINEERING = 1, CHANNEL_SCIENCE = 1, CHANNEL_MEDICAL = 1, CHANNEL_SUPPLY = 1, CHANNEL_SERVICE = 1, CHANNEL_AI_PRIVATE = 1, CHANNEL_SEC_ALPHA = 1, CHANNEL_SEC_BETA = 1, CHANNEL_SEC_CHARLIE = 1, CHANNEL_SEC_DELTA = 1) // Outpost 21 edit - Security squad channels
+	channels = list(CHANNEL_COMMAND = 1, CHANNEL_SECURITY = 1, CHANNEL_ENGINEERING = 1, CHANNEL_SCIENCE = 1, CHANNEL_MEDICAL = 1, CHANNEL_SUPPLY = 1, CHANNEL_SERVICE = 1, CHANNEL_AI_PRIVATE = 1)
 
 /obj/item/encryptionkey/heads/rd
 	name = "research director's encryption key"
@@ -81,7 +81,7 @@
 /obj/item/encryptionkey/heads/hos
 	name = "head of security's encryption key"
 	icon_state = "hos_cypherkey"
-	channels = list(CHANNEL_SECURITY = 1, CHANNEL_COMMAND = 1, CHANNEL_SEC_ALPHA = 1, CHANNEL_SEC_BETA = 1, CHANNEL_SEC_CHARLIE = 1, CHANNEL_SEC_DELTA = 1) // Outpost 21 edit - Security squad channels
+	channels = list(CHANNEL_SECURITY = 1)
 
 /obj/item/encryptionkey/heads/ce
 	name = "chief engineer's encryption key"
@@ -96,7 +96,7 @@
 /obj/item/encryptionkey/heads/hop
 	name = "head of personnel's encryption key"
 	icon_state = "hop_cypherkey"
-	channels = list(CHANNEL_SUPPLY = 1, CHANNEL_SERVICE = 1, CHANNEL_COMMAND = 1, CHANNEL_SECURITY = 1, CHANNEL_SEC_ALPHA = 1, CHANNEL_SEC_BETA = 1, CHANNEL_SEC_CHARLIE = 1, CHANNEL_SEC_DELTA = 1) // Outpost 21 edit - Security squad channels
+	channels = list(CHANNEL_SUPPLY = 1, CHANNEL_SERVICE = 1, CHANNEL_COMMAND = 1, CHANNEL_SECURITY = 1)
 /*
 /obj/item/encryptionkey/headset_mine
 	name = "mining radio encryption key"
@@ -121,7 +121,7 @@
 /obj/item/encryptionkey/ert
 	name = "\improper ERT radio encryption key"
 	icon_state = "cent_cypherkey"
-	channels = list(CHANNEL_RESPONSE_TEAM = 1, CHANNEL_SCIENCE = 1, CHANNEL_COMMAND = 1, CHANNEL_MEDICAL = 1, CHANNEL_ENGINEERING = 1, CHANNEL_SECURITY = 1, CHANNEL_SUPPLY = 1, CHANNEL_SERVICE = 1, CHANNEL_SEC_ALPHA = 1, CHANNEL_SEC_BETA = 1, CHANNEL_SEC_CHARLIE = 1, CHANNEL_SEC_DELTA = 1) // Outpost 21 edit - Security squad channels
+	channels = list(CHANNEL_RESPONSE_TEAM = 1, CHANNEL_SCIENCE = 1, CHANNEL_COMMAND = 1, CHANNEL_MEDICAL = 1, CHANNEL_ENGINEERING = 1, CHANNEL_SECURITY = 1, CHANNEL_SUPPLY = 1, CHANNEL_SERVICE = 1)
 
 /obj/item/encryptionkey/omni		//Literally only for the admin intercoms
 	channels = list(CHANNEL_MERCENARY = 1, CHANNEL_RAIDER = 1, CHANNEL_RESPONSE_TEAM = 1, CHANNEL_SCIENCE = 1, CHANNEL_COMMAND = 1, CHANNEL_MEDICAL = 1, CHANNEL_ENGINEERING = 1, CHANNEL_SECURITY = 1, CHANNEL_SUPPLY = 1, CHANNEL_SERVICE = 1, CHANNEL_OUTSIDER = 1) //CHOMPedit: Added Outsider
@@ -134,18 +134,18 @@
 /obj/item/encryptionkey/heads/hop
 	name = "head of personnel's encryption key"
 	icon_state = "hop_cypherkey"
-	channels = list(CHANNEL_SUPPLY = 1, CHANNEL_SERVICE = 1, CHANNEL_COMMAND = 1, CHANNEL_SECURITY = 1, CHANNEL_EXPLORATION = 1, CHANNEL_SEC_ALPHA = 1, CHANNEL_SEC_BETA = 1, CHANNEL_SEC_CHARLIE = 1, CHANNEL_SEC_DELTA = 1) // Outpost 21 edit - Security squad channels
+	channels = list(CHANNEL_SUPPLY = 1, CHANNEL_SERVICE = 1, CHANNEL_COMMAND = 1, CHANNEL_SECURITY = 1, CHANNEL_EXPLORATION = 1)
 
 /obj/item/encryptionkey/heads/ai_integrated
 	name = "ai integrated encryption key"
 	desc = "Integrated encryption key"
 	icon_state = "cap_cypherkey"
-	channels = list(CHANNEL_COMMAND = 1, CHANNEL_SECURITY = 1, CHANNEL_ENGINEERING = 1, CHANNEL_SCIENCE = 1, CHANNEL_MEDICAL = 1, CHANNEL_SUPPLY = 1, CHANNEL_SERVICE = 1, CHANNEL_AI_PRIVATE = 1, CHANNEL_EXPLORATION = 1, CHANNEL_SEC_ALPHA = 1, CHANNEL_SEC_BETA = 1, CHANNEL_SEC_CHARLIE = 1, CHANNEL_SEC_DELTA = 1) // Outpost 21 edit - Security squad channels
+	channels = list(CHANNEL_COMMAND = 1, CHANNEL_SECURITY = 1, CHANNEL_ENGINEERING = 1, CHANNEL_SCIENCE = 1, CHANNEL_MEDICAL = 1, CHANNEL_SUPPLY = 1, CHANNEL_SERVICE = 1, CHANNEL_AI_PRIVATE = 1, CHANNEL_EXPLORATION = 1)
 
 /obj/item/encryptionkey/heads/captain
 	name = "site manager's encryption key"
 	icon_state = "cap_cypherkey"
-	channels = list(CHANNEL_COMMAND = 1, CHANNEL_SECURITY = 1, CHANNEL_ENGINEERING = 1, CHANNEL_SCIENCE = 1, CHANNEL_MEDICAL = 1, CHANNEL_SUPPLY = 1, CHANNEL_SERVICE = 1, CHANNEL_EXPLORATION = 1, CHANNEL_SEC_ALPHA = 1, CHANNEL_SEC_BETA = 1, CHANNEL_SEC_CHARLIE = 1, CHANNEL_SEC_DELTA = 1) // Outpost 21 edit - Security squad channels
+	channels = list(CHANNEL_COMMAND = 1, CHANNEL_SECURITY = 1, CHANNEL_ENGINEERING = 1, CHANNEL_SCIENCE = 1, CHANNEL_MEDICAL = 1, CHANNEL_SUPPLY = 1, CHANNEL_SERVICE = 1, CHANNEL_EXPLORATION = 1)
 
 /obj/item/encryptionkey/heads/rd
 	name = "research director's encryption key"

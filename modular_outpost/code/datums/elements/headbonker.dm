@@ -1,5 +1,5 @@
 /datum/element/headbonk
-	var/bonk_chance = 0.5
+	var/bonk_chance = 0.1
 
 /datum/element/headbonk/Attach(atom/target)
 	. = ..()
