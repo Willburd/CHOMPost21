@@ -62,3 +62,37 @@
 	name = T_BOARD("Botany R&D console")
 	build_path = /obj/machinery/computer/rdconsole_tg/botany_remote
 	hidden = TRUE // Limited availability
+
+
+
+/obj/machinery/computer/rdconsole_tg/cargo_remote
+	name = "Cargo R&D Console"
+	desc = "Used to remotely work with the research and development lab. Locked by default."
+	locked = TRUE
+	req_access = null
+	req_one_access = list(ACCESS_CARGO, ACCESS_MINING, ACCESS_JANITOR)
+	circuit = /obj/item/circuitboard/rdconsole/cargo_locked
+	filter_department = CHANNEL_SERVICE
+	is_remote = TRUE
+
+/obj/item/circuitboard/rdconsole/cargo_locked
+	name = T_BOARD("Cargo R&D console")
+	build_path = /obj/machinery/computer/rdconsole_tg/cargo_remote
+	hidden = TRUE // Limited availability
+
+
+
+/obj/machinery/computer/rdconsole_tg/security_remote
+	name = "Warden R&D Console"
+	desc = "Used to remotely work with the research and development lab. Locked by default."
+	locked = TRUE
+	req_access = null
+	req_one_access = list(ACCESS_ARMORY) // Warden
+	circuit = /obj/item/circuitboard/rdconsole/security_locked
+	filter_department = CHANNEL_SECURITY
+	is_remote = TRUE
+
+/obj/item/circuitboard/rdconsole/security_locked
+	name = T_BOARD("Warden R&D console")
+	build_path = /obj/machinery/computer/rdconsole_tg/security_remote
+	hidden = TRUE // Limited availability
