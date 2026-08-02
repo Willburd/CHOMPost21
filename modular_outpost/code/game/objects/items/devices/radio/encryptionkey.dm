@@ -2,14 +2,6 @@
 	channels |= list(CHANNEL_SEC_ALPHA = 1, CHANNEL_SEC_BETA = 1, CHANNEL_SEC_CHARLIE = 1, CHANNEL_SEC_DELTA = 1)
 	. = ..()
 
-/obj/item/encryptionkey/headset_com/Initialize(mapload)
-	channels |= list(CHANNEL_SEC_ALPHA = 1, CHANNEL_SEC_BETA = 1, CHANNEL_SEC_CHARLIE = 1, CHANNEL_SEC_DELTA = 1)
-	. = ..()
-
-/obj/item/encryptionkey/heads/captain/Initialize(mapload)
-	channels |= list(CHANNEL_SEC_ALPHA = 1, CHANNEL_SEC_BETA = 1, CHANNEL_SEC_CHARLIE = 1, CHANNEL_SEC_DELTA = 1)
-	. = ..()
-
 /obj/item/encryptionkey/heads/ai_integrated/Initialize(mapload)
 	channels |= list(CHANNEL_SEC_ALPHA = 1, CHANNEL_SEC_BETA = 1, CHANNEL_SEC_CHARLIE = 1, CHANNEL_SEC_DELTA = 1)
 	. = ..()
