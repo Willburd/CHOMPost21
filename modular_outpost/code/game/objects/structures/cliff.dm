@@ -201,6 +201,7 @@ two tiles on initialization, and which way a cliff is facing may change during m
 		var/blocked = L.run_armor_check(target_zone, "melee")
 
 		L.apply_damage(damage, BRUTE, target_zone, blocked, used_weapon=src)
+		L.dislocate_random_limb(rand(15,45))
 
 		// Now fall off more cliffs below this one if they exist.
 		var/obj/structure/cliff/bottom_cliff = locate() in T

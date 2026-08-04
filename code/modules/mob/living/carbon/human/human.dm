@@ -236,6 +236,10 @@
 	var/obj/item/organ/external/take_blast = pick(organs)
 	update |= take_blast.take_damage(b_loss * 0.9, f_loss * 0.9, used_weapon = "Explosive blast")
 
+	if(take_blast && b_loss >= 10) // Outpost 21 edit - Explosions dislocate limbs
+		dislocate_random_limb(rand(15,45), dislocation_sites = list(take_blast.organ_tag)) // The big one that got hit...
+		dislocate_random_limb(rand(3,12), 3) // Some random other limbs
+
 	// distribute the remaining 10% on all limbs equally
 	b_loss *= 0.1
 	f_loss *= 0.1

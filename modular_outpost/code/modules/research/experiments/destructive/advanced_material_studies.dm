@@ -67,6 +67,7 @@
 		/obj/item/anobattery = 1,
 		/obj/item/assembly/signaler/anomaly/bluespace = 1,
 		/obj/item/organ/internal/malignant/tumor/bluespace = 1,
+		/obj/item/stable_subcrystal = 1,
 	)
 
 /datum/experiment/scanning/points/bluespace_containing_items/final_contributing_index_checks(datum/component/experiment_handler/experiment_handler, atom/target, typepath)

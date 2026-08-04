@@ -358,6 +358,15 @@ Turf and target are seperate in case you want to teleport some distance from a t
 		var/name = "[A.real_name] ([A.modtype] [A.braintype])"
 		borgs[name] = A
 
+	// Outpost 21 edit begin - Lawset implant
+	for (var/obj/item/implant/lawset/I in GLOB.lawset_implants)
+		var/mob/living/carbon/human/H = I.get_host()
+		if(!istype(H) || H.stat == DEAD)
+			continue
+		var/name = "[H.real_name] (Humanoid [H.synthetic ? "synthetic" : "organic"])"
+		borgs[name] = I
+	// Outpost 21 edit end
+
 	if (borgs.len)
 		select = tgui_input_list(usr, "Unshackled borg signals detected:", "Borg selection", borgs)
 		if(select)
@@ -491,6 +500,8 @@ Turf and target are seperate in case you want to teleport some distance from a t
 
 // Format a power value in W, kW, MW, or GW.
 /proc/DisplayPower(powerused)
+	if(powerused <= 0)	//no negative numbers, please.
+		return "0 W"
 	if(powerused < 1000) //Less than a kW
 		return "[powerused] W"
 	else if(powerused < 1000000) //Less than a MW

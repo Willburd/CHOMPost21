@@ -4,6 +4,8 @@
 
 /mob/living/silicon/robot/Destroy()
 	for(var/obj/item/dropping in accessories)
+		if(QDELETED(dropping)) // So cryopods don't put the deleted items back on the floor
+			continue
 		dropping.forceMove(get_turf(src))
 	accessories.Cut()
 	. = ..()
@@ -34,6 +36,8 @@
 		haunted = TRUE // If you were not already you are now, just incase proc call is used.
 		return
 	if(haunted)
+		return
+	if(SShaunting.get_world_haunt() < 3)
 		return
 	// Check if we're in the SPOOKYZONE, this should fail a majority of the time to prevent camping for laws
 	var/area/A = get_area(src)

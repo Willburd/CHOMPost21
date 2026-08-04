@@ -298,7 +298,7 @@ GLOBAL_LIST_INIT(announcer_library, list(
 			ANNOUNCER_MSG_CLANG = 'modular_outpost/sound/AI/clang.ogg',
 			ANNOUNCER_MSG_BLUESPACE_ANOM = 'modular_outpost/sound/AI/bluespace_anom.ogg',
 			ANNOUNCER_MSG_DIMENSIONAL_ANOM = 'modular_outpost/sound/AI/dimensional_anom.ogg',
-			ANNOUNCER_MSG_BSA_FIRED = 'modular_outpost/sound/AI/shelling_confirmed.ogg',
+			ANNOUNCER_MSG_BSA_FIRED = 'modular_outpost/sound/AI/shelling_confirmed_short.ogg',
 			ANNOUNCER_MSG_GASLEAK = null,
 			ANNOUNCER_MSG_VENDORVIRUS = 'modular_outpost/sound/AI/comp_virus.ogg',
 			ANNOUNCER_MSG_COMMSBLACKOUT = 'sound/misc/interference.ogg',
