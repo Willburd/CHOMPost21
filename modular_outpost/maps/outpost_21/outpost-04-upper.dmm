@@ -10133,6 +10133,14 @@
 "ave" = (
 /turf/simulated/wall/r_wall,
 /area/muriki/tramstation/civ)
+"avf" = (
+/obj/structure/spring_trap/start_active{
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki{
+	outdoors = 0
+	},
+/area/mine/unexplored/muriki/mountaintop_pathway)
 "avg" = (
 /obj/structure/railing{
 	dir = 8
@@ -10141,6 +10149,15 @@
 /obj/effect/landmark/pengmark,
 /turf/simulated/floor/outpost_roof/turfpack/muriki,
 /area/muriki/rooftop/engineering)
+"avh" = (
+/obj/structure/spring_trap/start_active{
+	distance = 5
+	},
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1;
+	outdoors = 1
+	},
+/area/mine/unexplored/muriki/mountaintop_pathway)
 "avi" = (
 /obj/structure/sign/warning/acid{
 	pixel_x = 32
@@ -110436,7 +110453,7 @@ ovc
 pXM
 ajk
 kwX
-acn
+avh
 dEE
 dEE
 kxr
@@ -115043,7 +115060,7 @@ alR
 alJ
 alJ
 alO
-alJ
+avf
 alS
 alJ
 alR

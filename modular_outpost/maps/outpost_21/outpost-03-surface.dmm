@@ -13016,12 +13016,6 @@
 "azo" = (
 /turf/simulated/wall/stonelogs/turfpack/muriki,
 /area/mine/unexplored/muriki/mountaineast)
-"azp" = (
-/obj/structure/barricade/cutout/greytide,
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
-/area/mine/explored/muriki/river/hole)
 "azq" = (
 /obj/structure/table/woodentable,
 /obj/random/maintenance/foodstuff,
@@ -14812,6 +14806,15 @@
 /obj/effect/zone_divider,
 /turf/simulated/floor/outdoors/sidewalk/slab/turfpack/muriki,
 /area/muriki/grounds/terraform)
+"aDH" = (
+/obj/structure/spring_trap/start_active{
+	dir = 1;
+	distance = 7
+	},
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/unexplored/muriki/mountaineast)
 "aDI" = (
 /obj/effect/zone_divider,
 /turf/simulated/floor/water/acidic/turfpack/muriki,
@@ -18746,7 +18749,7 @@
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/research/north)
 "aRG" = (
-/obj/machinery/door/airlock/maintenance/int,
+/obj/machinery/door/airlock/maintenance/common,
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/maintenance/research/north)
 "aRH" = (
@@ -72136,6 +72139,10 @@
 /obj/structure/railing,
 /obj/structure/railing{
 	dir = 8
+	},
+/obj/structure/spring_trap/start_active{
+	dir = 1;
+	distance = 4
 	},
 /turf/simulated/floor/plating,
 /area/muriki/tramstation/waste)
@@ -153994,9 +154001,9 @@ mho
 mho
 mho
 eic
-azp
+ddK
 blG
-fhs
+aDH
 fhs
 azb
 ayZ
