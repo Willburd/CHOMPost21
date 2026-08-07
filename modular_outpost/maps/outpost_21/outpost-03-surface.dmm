@@ -13016,6 +13016,15 @@
 "azo" = (
 /turf/simulated/wall/stonelogs/turfpack/muriki,
 /area/mine/unexplored/muriki/mountaineast)
+"azp" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
+	},
+/turf/simulated/floor/tiled,
+/area/quartermaster/delivery)
 "azq" = (
 /obj/structure/table/woodentable,
 /obj/random/maintenance/foodstuff,
@@ -15336,6 +15345,12 @@
 /obj/structure/prop/rock/waterflat,
 /turf/simulated/floor/water/acidic/deep/turfpack/muriki,
 /area/mine/unexplored/muriki/valleyeast)
+"aFl" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/quartermaster/delivery)
 "aFm" = (
 /obj/structure/prop/rock/watersharp,
 /turf/simulated/floor/water/acidic/turfpack/muriki,
@@ -19994,6 +20009,14 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/engineering_hallway)
+"aUo" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/tiled,
+/area/quartermaster/delivery)
 "aUp" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "0-2"
@@ -20116,6 +20139,15 @@
 "aUN" = (
 /turf/simulated/mineral/alt/ignore_cavegen/turfpack/muriki,
 /area/muriki/grounds/engi)
+"aUO" = (
+/obj/effect/floor_decal/corner/brown{
+	dir = 9
+	},
+/obj/machinery/computer/rdconsole_tg/cargo_remote{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/quartermaster/office)
 "aUP" = (
 /obj/structure/trailblazer/blue,
 /turf/simulated/floor/outdoors/sidewalk/slab/turfpack/muriki,
@@ -25497,10 +25529,9 @@
 /obj/effect/floor_decal/corner/brown{
 	dir = 9
 	},
-/obj/item/juke_remote{
-	autolinkareajuke_onspawn = /area/djstation
-	},
 /obj/structure/table/standard,
+/obj/item/storage/belt/utility,
+/obj/item/storage/belt/utility,
 /obj/item/hand_labeler,
 /turf/simulated/floor/tiled,
 /area/quartermaster/office)
@@ -25673,16 +25704,12 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/virology/quarantine_quarantine)
 "cyp" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 9
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 5
-	},
 /obj/machinery/light_switch{
 	pixel_x = -34;
 	pixel_y = 28
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled,
 /area/quartermaster/delivery)
 "cyH" = (
@@ -29657,6 +29684,18 @@
 /obj/effect/floor_decal/corner/blue{
 	dir = 6
 	},
+/obj/item/experi_scanner{
+	pixel_y = 7;
+	pixel_x = 7
+	},
+/obj/item/experi_scanner{
+	pixel_y = 7;
+	pixel_x = 7
+	},
+/obj/item/experi_scanner{
+	pixel_y = 7;
+	pixel_x = 7
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay_primary_storage)
 "dPZ" = (
@@ -31214,9 +31253,6 @@
 /turf/simulated/floor/plating,
 /area/maintenance/substation/command)
 "eqL" = (
-/obj/structure/bed/chair/bay/chair/padded/brown{
-	dir = 1
-	},
 /obj/effect/landmark/start{
 	name = "Cargo Technician"
 	},
@@ -37713,6 +37749,9 @@
 	dir = 4;
 	icon_state = "pipe-c"
 	},
+/obj/item/juke_remote{
+	autolinkareajuke_onspawn = /area/djstation
+	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/office)
 "gCE" = (
@@ -41472,6 +41511,9 @@
 /turf/simulated/floor/tiled,
 /area/quartermaster/mining/processing)
 "hKU" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/delivery)
 "hLi" = (
@@ -42640,6 +42682,7 @@
 	pixel_x = 2;
 	pixel_y = 6
 	},
+/obj/item/clothing/head/soft,
 /turf/simulated/floor/tiled,
 /area/quartermaster/office)
 "ibs" = (
@@ -43279,6 +43322,18 @@
 /obj/item/storage/box/metalfoam{
 	pixel_x = -8;
 	pixel_y = 13
+	},
+/obj/item/experi_scanner{
+	pixel_y = 7;
+	pixel_x = 7
+	},
+/obj/item/experi_scanner{
+	pixel_y = 7;
+	pixel_x = 7
+	},
+/obj/item/experi_scanner{
+	pixel_y = 7;
+	pixel_x = 7
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/engineering/storage)
@@ -44516,16 +44571,6 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/hallway/security/armor)
-"iEz" = (
-/obj/structure/table/standard,
-/obj/item/storage/belt/utility,
-/obj/item/storage/belt/utility,
-/obj/effect/floor_decal/corner/brown{
-	dir = 9
-	},
-/obj/item/clothing/head/soft,
-/turf/simulated/floor/tiled,
-/area/quartermaster/office)
 "iEB" = (
 /obj/structure/table/rack{
 	dir = 8;
@@ -54491,7 +54536,10 @@
 /obj/machinery/alarm{
 	pixel_y = 26
 	},
-/obj/machinery/computer/rdconsole_tg/cargo_remote,
+/obj/structure/table/steel,
+/obj/item/storage/box,
+/obj/item/storage/box,
+/obj/item/mail_scanner,
 /turf/simulated/floor/tiled,
 /area/quartermaster/delivery)
 "lFF" = (
@@ -60521,6 +60569,26 @@
 /obj/item/tape_roll,
 /obj/item/tape_roll,
 /obj/item/tape_roll,
+/obj/item/experi_scanner{
+	pixel_y = 7;
+	pixel_x = 7
+	},
+/obj/item/experi_scanner{
+	pixel_y = 7;
+	pixel_x = 7
+	},
+/obj/item/experi_scanner{
+	pixel_y = 7;
+	pixel_x = 7
+	},
+/obj/item/experi_scanner{
+	pixel_y = 7;
+	pixel_x = 7
+	},
+/obj/item/experi_scanner{
+	pixel_y = 7;
+	pixel_x = 7
+	},
 /turf/simulated/floor/tiled,
 /area/storage/tools)
 "nBw" = (
@@ -79040,9 +79108,6 @@
 /turf/simulated/floor/outdoors/sidewalk/slab/turfpack/muriki,
 /area/mine/unexplored/muriki/valleywest)
 "tJh" = (
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 8
-	},
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/quartermaster/delivery)
@@ -80854,9 +80919,6 @@
 /turf/simulated/floor/plating,
 /area/quartermaster/delivery)
 "ujj" = (
-/obj/structure/table/steel,
-/obj/item/storage/box,
-/obj/item/storage/box,
 /obj/machinery/button/remote/blast_door{
 	id = "warehouse";
 	name = "Warehouse Door Control";
@@ -80867,10 +80929,7 @@
 /obj/effect/floor_decal/corner/brown{
 	dir = 5
 	},
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 4
-	},
-/obj/item/mail_scanner,
+/obj/machinery/rnd/destructive_analyzer,
 /turf/simulated/floor/tiled,
 /area/quartermaster/delivery)
 "ujp" = (
@@ -84091,8 +84150,7 @@
 /obj/effect/floor_decal/milspec/color/orange/half{
 	dir = 5
 	},
-/obj/structure/table/reinforced,
-/obj/fiftyspawner/plastic,
+/obj/machinery/rnd/destructive_analyzer,
 /turf/simulated/floor/tiled/milspec,
 /area/engineering/storage)
 "vjX" = (
@@ -86794,6 +86852,10 @@
 	},
 /obj/effect/floor_decal/milspec/color/orange/half{
 	dir = 4
+	},
+/obj/fiftyspawner/plastic{
+	pixel_x = 5;
+	pixel_y = 3
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/engineering/storage)
@@ -92603,6 +92665,14 @@
 /obj/item/tool/crowbar,
 /obj/machinery/status_display/supply_display{
 	pixel_y = 32
+	},
+/obj/item/experi_scanner{
+	pixel_y = 7;
+	pixel_x = -7
+	},
+/obj/item/experi_scanner{
+	pixel_y = 7;
+	pixel_x = -7
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/storage)
@@ -116234,8 +116304,8 @@ dWQ
 ppz
 lnZ
 plr
+aUO
 hlS
-iEz
 cuO
 uxB
 kwh
@@ -117540,8 +117610,8 @@ ayt
 qUX
 vKw
 cyp
-kZW
-hKU
+aUo
+azp
 egE
 axh
 evU
@@ -117703,7 +117773,7 @@ qdL
 goR
 tJh
 gOV
-hKU
+aFl
 brN
 axh
 rXN
