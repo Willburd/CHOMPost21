@@ -30,6 +30,22 @@
 			continue
 		if(istype(nearby, /area/space))
 			continue
+		// Outpost 21 edit begin - We have some other areas that shouldn't be affected
+		if(istype(nearby, /area/offworld/asteroidyard/external))
+			continue
+		if(istype(nearby, /area/offworld/confinementbeam/exterior))
+			continue
+		if(istype(nearby, /area/muriki/grounds))
+			continue
+		if(istype(nearby, /area/mine/explored/muriki/surface))
+			continue
+		if(istype(nearby, /area/mine/unexplored/muriki/surface))
+			continue
+		if(istype(nearby, /area/mine/unexplored/muriki))
+			continue
+		if(istype(nearby, /area/mine/explored/muriki))
+			continue
+		// Outpost 21 edit end
 		affected_areas |= nearby
 
 	for(var/area/area in affected_areas)
