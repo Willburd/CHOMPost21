@@ -62,14 +62,18 @@
 		set_light(0) // OFF!
 		return
 
-/obj/machinery/metal_detector/Crossed(atom/movable/AM as mob|obj)
-	if(AM.is_incorporeal() || istype(AM,/mob/observer)) // ectoplasm begone
-		if(prob(98))
-			return
-	if(istype(AM, /obj/effect/abstract))
-		return
+/obj/machinery/metal_detector/Crossed(atom/movable/AM)
 	if(stat & (NOPOWER|BROKEN) || !anchored)
 		return
+	if(istype(AM, /obj/effect/abstract))
+		return
+	if(AM.is_incorporeal() || istype(AM,/mob/observer))
+		if(prob(98))
+			return
+	if(istype(AM,/mob/observer/dead)) // ectoplasm begone
+		var/mob/observer/dead/ghst = AM
+		if(!ghst.interact_with_world)
+			return
 	if(world.time >= cooldown)
 		if(can_use_power_oneoff(active_power_usage))
 			// drain power
