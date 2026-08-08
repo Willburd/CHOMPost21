@@ -10184,6 +10184,9 @@
 /obj/machinery/power/grounding_rod/pre_mapped,
 /turf/simulated/floor/outpost_roof/turfpack/muriki,
 /area/muriki/rooftop/engineering)
+"avm" = (
+/turf/simulated/floor/tiled/kafel_full,
+/area/djstation)
 "avo" = (
 /obj/structure/window/maintenance_panel{
 	dir = 4
@@ -39856,6 +39859,7 @@
 	dir = 1;
 	pixel_y = -26
 	},
+/obj/machinery/recharge_station,
 /turf/simulated/floor/tiled/kafel_full,
 /area/djstation)
 "pRf" = (
@@ -117387,9 +117391,9 @@ cgN
 cgN
 cgN
 cgN
-qll
 szB
 mxN
+avm
 mXy
 ueG
 fTO
@@ -117549,9 +117553,9 @@ xpu
 eKE
 wlP
 phU
-luR
 szB
 iPH
+avm
 dlt
 dmg
 vcZ
@@ -117711,9 +117715,9 @@ kfm
 xpu
 ofL
 cgN
-luR
 szB
 wTv
+avm
 vwQ
 ueG
 bJh
@@ -117873,9 +117877,9 @@ gnn
 xpu
 ofL
 cgN
-luR
 szB
 dqq
+avm
 pRa
 ueG
 qst
@@ -118035,7 +118039,7 @@ sbM
 xpu
 ofL
 cgN
-luR
+szB
 szB
 szB
 szB
@@ -118197,7 +118201,7 @@ kfm
 xpu
 ofL
 cgN
-luR
+qll
 luR
 luR
 luR

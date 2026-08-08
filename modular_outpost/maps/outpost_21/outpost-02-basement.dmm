@@ -6429,9 +6429,9 @@
 	},
 /area/medical/voxlab/breakroom)
 "amg" = (
-/obj/machinery/atmospherics/binary/pump/on{
+/obj/machinery/atmospherics/binary/pump{
 	dir = 8;
-	target_pressure = 15000
+	name = "hot loop return"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/incinerator)
@@ -6738,9 +6738,9 @@
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/sec)
 "amK" = (
-/obj/machinery/atmospherics/binary/pump/on{
+/obj/machinery/atmospherics/binary/pump{
 	dir = 8;
-	target_pressure = 300
+	name = "fuel injection"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/incinerator)
@@ -7732,13 +7732,6 @@
 /obj/effect/zone_divider,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/medical/tankstore)
-"aoA" = (
-/obj/machinery/atmospherics/binary/pump/on{
-	dir = 8;
-	target_pressure = 400
-	},
-/turf/simulated/floor/plating,
-/area/maintenance/incinerator)
 "aoB" = (
 /obj/structure/sign/poster{
 	dir = 4
@@ -40216,14 +40209,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/incinerator)
-"bwA" = (
-/obj/machinery/atmospherics/binary/pump{
-	dir = 8;
-	name = "fuel injection";
-	target_pressure = 400
-	},
-/turf/simulated/floor/plating,
-/area/maintenance/incinerator)
 "bwB" = (
 /turf/simulated/mineral/crystal_shiny/ignore_mapgen/turfpack/muriki,
 /area/mine/unexplored/muriki/cave/cargo)
@@ -40834,8 +40819,8 @@
 /turf/simulated/floor/plating,
 /area/maintenance/incinerator)
 "bxL" = (
-/obj/machinery/atmospherics/binary/pump/on{
-	target_pressure = 15000
+/obj/machinery/atmospherics/binary/pump{
+	name = "main fuel line"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/incinerator)
@@ -42835,6 +42820,15 @@
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/security/brig)
+"bBU" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/auto_crayon{
+	icon_state = "survival"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/med)
 "bBV" = (
 /obj/machinery/door/airlock{
 	name = "Brig Gongpit"
@@ -59703,7 +59697,7 @@
 /area/maintenance/atmos_control)
 "cmb" = (
 /obj/effect/auto_crayon{
-	icon_state = "survival"
+	icon_state = "fire"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/med)
@@ -70572,7 +70566,8 @@
 "cMQ" = (
 /obj/machinery/atmospherics/binary/pump/on{
 	target_pressure = 15000;
-	dir = 1
+	dir = 1;
+	name = "coolant return"
 	},
 /obj/structure/cable/orange{
 	icon_state = "9-10"
@@ -79801,8 +79796,9 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/security/tankstore)
 "mbv" = (
-/obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	dir = 1
+/obj/machinery/atmospherics/binary/pump/on{
+	target_pressure = 15000;
+	name = "coolant outflow"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/incinerator)
@@ -81469,9 +81465,9 @@
 /turf/simulated/floor/plating,
 /area/mine/explored/muriki/cave/med/resleever_exit)
 "orU" = (
-/obj/machinery/atmospherics/binary/pump/on{
+/obj/machinery/atmospherics/binary/pump{
 	dir = 4;
-	target_pressure = 15000
+	name = "hot loop insertion"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/incinerator)
@@ -84616,9 +84612,9 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/tug)
 "rHM" = (
-/obj/machinery/atmospherics/binary/pump/on{
-	target_pressure = 15000;
-	dir = 1
+/obj/machinery/atmospherics/binary/pump{
+	dir = 1;
+	name = "coolant injection"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/incinerator)
@@ -85614,9 +85610,9 @@
 /area/security/tankstore)
 "sJF" = (
 /obj/random/maintenance/engineering,
-/obj/machinery/atmospherics/binary/pump/on{
-	target_pressure = 15000;
-	dir = 1
+/obj/machinery/atmospherics/binary/pump{
+	dir = 1;
+	name = "coolant injection"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/incinerator)
@@ -93058,8 +93054,8 @@ ckx
 bcV
 aQX
 bxb
-bwA
-aoA
+amK
+amK
 amK
 bxe
 byD
@@ -131862,7 +131858,7 @@ adv
 adv
 ciU
 iAI
-bMQ
+bXy
 aPF
 xaP
 cme
@@ -132024,7 +132020,7 @@ iAI
 bMd
 bMo
 aPF
-bXz
+bBU
 bSu
 cmh
 aPF
