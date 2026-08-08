@@ -15856,10 +15856,6 @@
 /obj/structure/prop/rock/watersharp,
 /turf/simulated/floor/water/acidic/deep/turfpack/muriki,
 /area/muriki/yard)
-"aHp" = (
-/mob/living/simple_mob/vore/alienanimals/teppi,
-/turf/simulated/floor/outdoors/mud/turfpack/muriki,
-/area/muriki/grounds/sec)
 "aHq" = (
 /obj/structure/cliff{
 	dir = 1
@@ -20705,6 +20701,23 @@
 	outdoors = 0
 	},
 /area/muriki/grounds/tramborder)
+"aWd" = (
+/obj/structure/fence/corner{
+	dir = 1
+	},
+/turf/simulated/floor/water/acidic/turfpack/muriki,
+/area/muriki/grounds/sec)
+"aWe" = (
+/obj/effect/zone_divider,
+/obj/structure/fence{
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/mud/turfpack/muriki,
+/area/muriki/grounds/sec)
+"aWf" = (
+/obj/structure/fence/door,
+/turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
+/area/muriki/grounds/sec)
 "aWq" = (
 /obj/machinery/light{
 	dir = 4
@@ -126046,7 +126059,7 @@ aqk
 aqk
 aGm
 aGm
-dye
+aWd
 aGr
 vkW
 aGr
@@ -126208,7 +126221,7 @@ aBK
 aBK
 aGT
 aGT
-aGT
+aWe
 aGn
 aGn
 aCa
@@ -126370,7 +126383,7 @@ aMQ
 aqi
 aqi
 aGi
-aGi
+aGa
 aGi
 aGh
 gBL
@@ -126532,7 +126545,7 @@ aqi
 aqi
 aqi
 aqi
-aHp
+aGa
 aGi
 aGh
 aGh
@@ -126694,7 +126707,7 @@ aqi
 aqi
 aqi
 aqi
-aqi
+aWf
 aGi
 aGi
 aGh
@@ -126847,7 +126860,7 @@ aqi
 aqi
 aqi
 aqi
-aqi
+scC
 aBK
 aqi
 aqi
@@ -126856,8 +126869,8 @@ aqi
 aqi
 aqi
 aqi
+asL
 aqi
-scC
 aGi
 aGi
 aGi
@@ -127018,7 +127031,7 @@ aqi
 aqi
 aqi
 aqi
-aqi
+asL
 aqi
 aqi
 aqi
@@ -127175,12 +127188,12 @@ aqi
 aBK
 aqi
 aqi
-aqi
+scC
 aqi
 aqi
 aEb
 aqi
-aqi
+asM
 aqi
 aqi
 aqi
@@ -127342,7 +127355,7 @@ aqi
 aqi
 aqi
 aqi
-aqi
+asL
 aqi
 aqi
 aqi
@@ -127504,7 +127517,7 @@ aqi
 aMQ
 aqi
 aqi
-aqi
+asL
 aqi
 aqi
 aEb

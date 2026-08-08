@@ -7732,6 +7732,10 @@
 /obj/effect/zone_divider,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/medical/tankstore)
+"aoA" = (
+/obj/structure/table/steel,
+/turf/simulated/floor/plating,
+/area/maintenance/sec)
 "aoB" = (
 /obj/structure/sign/poster{
 	dir = 4
@@ -38565,7 +38569,6 @@
 /obj/structure/cable/orange{
 	icon_state = "9-10"
 	},
-/obj/structure/table/steel,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/cargo)
 "btI" = (
@@ -40209,6 +40212,10 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/incinerator)
+"bwA" = (
+/obj/structure/table/steel,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/atmos_control)
 "bwB" = (
 /turf/simulated/mineral/crystal_shiny/ignore_mapgen/turfpack/muriki,
 /area/mine/unexplored/muriki/cave/cargo)
@@ -43777,6 +43784,7 @@
 /obj/structure/cable/orange{
 	icon_state = "6-8"
 	},
+/obj/structure/table/steel,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/cargo)
 "bDI" = (
@@ -115011,7 +115019,7 @@ bMZ
 bMZ
 adu
 aSy
-bLx
+bwA
 adu
 bLE
 bLi
@@ -131939,7 +131947,7 @@ glX
 glX
 glX
 bhW
-bJK
+aoA
 bhW
 cux
 cyG
