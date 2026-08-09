@@ -1754,12 +1754,13 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/port_airlock)
 "eb" = (
-/obj/structure/cable/orange{
-	icon_state = "1-4"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 1
 	},
+/obj/machinery/power/terminal{
+	dir = 4
+	},
+/obj/structure/cable/orange,
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/aux_power)
 "ec" = (
@@ -3544,10 +3545,13 @@
 /area/offworld/confinementbeam/station/lower_hallway)
 "mE" = (
 /obj/structure/window/maintenance_panel{
-	dir = 8
+	dir = 4
 	},
 /obj/structure/cable/green{
-	icon_state = "4-8"
+	icon_state = "0-4"
+	},
+/obj/machinery/power/terminal{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/confinementbeam/north)
@@ -6158,17 +6162,14 @@
 /area/offworld/confinementbeam/station/lower_hallway)
 "Ci" = (
 /obj/machinery/power/smes/buildable{
-	RCon_tag = "PTL - Interior";
+	RCon_tag = "PTL - Rust Output";
 	is_critical = 1
-	},
-/obj/structure/cable/orange{
-	icon_state = "0-8"
-	},
-/obj/structure/cable/heavyduty{
-	icon_state = "0-4"
 	},
 /obj/item/smes_coil/super_io,
 /obj/item/smes_coil/super_capacity,
+/obj/structure/cable/heavyduty{
+	icon_state = "0-4"
+	},
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/aux_power)
 "Co" = (
@@ -9089,17 +9090,14 @@
 /area/space)
 "Uc" = (
 /obj/machinery/power/smes/buildable{
-	RCon_tag = "PTL - Interior";
+	RCon_tag = "PTL - Rust Injectors";
 	is_critical = 1
-	},
-/obj/structure/cable/green{
-	icon_state = "0-8"
-	},
-/obj/structure/cable/green{
-	icon_state = "0-4"
 	},
 /obj/item/smes_coil/super_io,
 /obj/item/smes_coil/super_capacity,
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/aux_power)
 "Ug" = (
@@ -9108,7 +9106,7 @@
 /area/offworld/confinementbeam/station/lower_hallway)
 "Uh" = (
 /obj/structure/window/maintenance_panel{
-	dir = 8
+	dir = 4
 	},
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
@@ -9317,9 +9315,6 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/confinementbeam/station/atmos_sublevel)
 "Vu" = (
-/obj/structure/cable/green{
-	icon_state = "1-4"
-	},
 /obj/machinery/power/apc{
 	dir = 8;
 	name = "west bump";
@@ -9327,7 +9322,7 @@
 	nightshift_setting = 2
 	},
 /obj/structure/cable/green{
-	icon_state = "0-4"
+	icon_state = "1-4"
 	},
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/aux_power)

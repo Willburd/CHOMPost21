@@ -3480,10 +3480,10 @@
 /area/offworld/asteroidyard/station/bar)
 "jj" = (
 /obj/structure/cable/yellow{
-	icon_state = "1-2"
+	icon_state = "1-8"
 	},
 /obj/structure/cable/yellow{
-	icon_state = "1-8"
+	icon_state = "2-8"
 	},
 /turf/simulated/floor/airless,
 /area/offworld/confinementbeam/exterior)
@@ -6315,7 +6315,7 @@
 	dir = 9
 	},
 /obj/machinery/power/smes/buildable{
-	RCon_tag = "PTL_Exterior";
+	RCon_tag = "PTL - Engine Emitters";
 	is_critical = 1
 	},
 /obj/item/smes_coil/super_io,
