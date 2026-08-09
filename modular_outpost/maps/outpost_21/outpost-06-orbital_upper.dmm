@@ -7887,11 +7887,6 @@
 	},
 /turf/simulated/floor/tiled/old_tile/white,
 /area/offworld/confinementbeam/station/medical_treatment)
-"xz" = (
-/obj/structure/lattice,
-/obj/structure/lattice,
-/turf/simulated/mineral/floor/ignore_cavegen/turfpack/airless,
-/area/offworld/asteroidyard/external)
 "xA" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
@@ -37500,7 +37495,7 @@ tC
 tC
 tC
 vE
-xz
+vE
 vE
 vE
 vE
