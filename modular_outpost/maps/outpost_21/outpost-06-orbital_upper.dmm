@@ -1410,9 +1410,6 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/confinementbeam/station/trawler_airlock)
-"cX" = (
-/turf/simulated/mineral/vacuum,
-/area/offworld/asteroidyard/external/yardzone)
 "cY" = (
 /obj/structure/boulder,
 /turf/simulated/mineral/vacuum,
@@ -35709,7 +35706,7 @@ bP
 bP
 bP
 vE
-xz
+vE
 bN
 ca
 bR
@@ -51598,7 +51595,7 @@ Uw
 Uw
 Uw
 Uw
-cX
+Uw
 Uw
 Uw
 Uw
