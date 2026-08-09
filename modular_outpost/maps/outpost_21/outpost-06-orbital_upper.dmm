@@ -638,7 +638,7 @@
 	dir = 4;
 	icon_state = "pipe-c"
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/airless,
 /area/offworld/asteroidyard/external)
 "bu" = (
 /obj/effect/floor_decal/corner/green{
@@ -1231,7 +1231,7 @@
 	icon_state = "NW-SE"
 	},
 /obj/structure/disposalpipe/segment,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/airless,
 /area/offworld/asteroidyard/external)
 "cF" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -2351,7 +2351,7 @@
 	dir = 2;
 	icon_state = "pipe-c"
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/airless,
 /area/offworld/asteroidyard/external)
 "fI" = (
 /obj/effect/floor_decal/borderfloor{
@@ -3696,7 +3696,7 @@
 	dir = 8;
 	icon_state = "pipe-c"
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/airless,
 /area/offworld/asteroidyard/external)
 "kh" = (
 /obj/structure/table/standard,
@@ -4558,7 +4558,7 @@
 /obj/structure/disposaloutlet{
 	dir = 8
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/airless,
 /area/offworld/asteroidyard/external)
 "mF" = (
 /obj/effect/floor_decal/borderfloor{
@@ -5898,7 +5898,7 @@
 	icon_state = "D-NE"
 	},
 /obj/structure/disposalpipe/segment,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/airless,
 /area/offworld/asteroidyard/external)
 "qZ" = (
 /obj/structure/disposalpipe/segment,
@@ -7292,7 +7292,7 @@
 /area/ai_server_room)
 "vC" = (
 /obj/structure/cable/orange{
-	icon_state = "1-8"
+	icon_state = "2-8"
 	},
 /turf/simulated/floor/airless,
 /area/ai_sat/core_external)
@@ -7672,7 +7672,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/airless,
 /area/offworld/asteroidyard/external)
 "wH" = (
 /obj/effect/floor_decal/industrial/warning/dust{
@@ -8457,7 +8457,7 @@
 /turf/simulated/floor/plating,
 /area/offworld/asteroidyard/station/halls_bar)
 "zg" = (
-/turf/simulated/mineral/alt/ignore_cavegen,
+/turf/simulated/mineral/ignore_cavegen,
 /area/ai_sat/core_external)
 "zj" = (
 /obj/structure/table/glass,
@@ -14128,7 +14128,7 @@
 	icon_state = "D-SW"
 	},
 /obj/structure/disposalpipe/segment,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/airless,
 /area/offworld/asteroidyard/external)
 "QO" = (
 /obj/effect/floor_decal/corner/orange{
@@ -15426,7 +15426,7 @@
 /area/offworld/asteroidyard/external/yardzone)
 "Ux" = (
 /obj/structure/disposalpipe/segment,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/airless,
 /area/offworld/asteroidyard/external)
 "Uy" = (
 /obj/machinery/alarm{
