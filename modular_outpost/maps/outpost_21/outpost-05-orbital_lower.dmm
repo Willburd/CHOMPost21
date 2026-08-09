@@ -763,7 +763,7 @@
 	dir = 1;
 	frequency = 1381;
 	pixel_y = -32;
-	id_tag = "ai_aftlock"
+	id_tag = "yard_eastsolar_lock"
 	},
 /obj/machinery/airlock_sensor/airlock_exterior{
 	pixel_y = -24;
