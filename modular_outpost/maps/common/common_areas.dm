@@ -2647,11 +2647,13 @@
 	name = "\improper Reclamation Yard Northern Hallway"
 	icon_state = "orange"
 	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
+	base_turf = /turf/simulated/open
 
 /area/offworld/asteroidyard/station/access_shaft
 	name = "\improper Reclamation Yard Access Shaft"
 	icon_state = "red"
 	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
+	base_turf = /turf/simulated/open
 
 /area/offworld/asteroidyard/station/washing
 	name = "\improper Reclamation Yard Cleaning Room"

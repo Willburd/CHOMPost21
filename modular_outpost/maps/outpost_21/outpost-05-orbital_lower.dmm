@@ -279,9 +279,6 @@
 	},
 /obj/machinery/door/airlock/glass,
 /obj/machinery/door/firedoor,
-/obj/machinery/door/firedoor/glass/hidden/steel{
-	dir = 1
-	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/confinementbeam/station/lower_hallway)
 "aH" = (
@@ -690,10 +687,6 @@
 	},
 /turf/simulated/floor/airless,
 /area/space)
-"bC" = (
-/obj/effect/map_helper/airlock/sensor/ext_sensor,
-/turf/simulated/wall/r_wall,
-/area/offworld/confinementbeam/station/port_airlock)
 "bD" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-4"
@@ -4109,9 +4102,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/obj/machinery/door/firedoor/glass/hidden/steel{
-	dir = 8
-	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/confinementbeam/station/lower_hallway)
 "pR" = (
@@ -6330,9 +6320,6 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/obj/machinery/door/firedoor/glass/hidden/steel{
-	dir = 8
-	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/confinementbeam/station/lower_hallway)
 "De" = (
@@ -8502,7 +8489,7 @@
 /obj/machinery/atmospherics/pipe/simple/visible/red{
 	dir = 6
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/airless,
 /area/space)
 "QB" = (
 /obj/structure/cable/green{
@@ -8696,9 +8683,6 @@
 "RP" = (
 /obj/machinery/door/airlock/glass,
 /obj/machinery/door/firedoor,
-/obj/machinery/door/firedoor/glass/hidden/steel{
-	dir = 1
-	},
 /obj/effect/floor_decal/corner/green{
 	dir = 9
 	},
@@ -8760,6 +8744,7 @@
 	req_one_access = list(16,52,56);
 	dir = 8
 	},
+/obj/effect/map_helper/airlock/sensor/ext_sensor,
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/confinementbeam/station/port_airlock)
 "Sm" = (
@@ -26687,7 +26672,7 @@ RS
 RS
 xM
 bx
-bC
+bx
 Sg
 KG
 bx
@@ -26708,7 +26693,7 @@ zu
 qJ
 gY
 bx
-bC
+bx
 Sg
 KG
 bx
