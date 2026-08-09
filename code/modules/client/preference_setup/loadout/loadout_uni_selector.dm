@@ -629,7 +629,7 @@
 /datum/gear/uniform/science_dept_selector
 	display_name = "Science - Basic Uniforms"
 	description = "Select from a range of outfits available to all Science personnel."
-	allowed_roles = list(JOB_SCIENTIST,JOB_RESEARCH_DIRECTOR,JOB_ROBOTICIST,JOB_XENOBIOLOGIST,JOB_XENOBOTANIST,JOB_ELECTROPHYSICIST)
+	allowed_roles = list(JOB_SCIENTIST,JOB_RESEARCH_DIRECTOR,JOB_ROBOTICIST,JOB_XENOBIOLOGIST,JOB_XENOBOTANIST)
 	show_roles = FALSE
 	path = /obj/item/clothing/under/rank/neo_science
 	sort_category = "Uniforms"

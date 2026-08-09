@@ -358,6 +358,15 @@ Turf and target are seperate in case you want to teleport some distance from a t
 		var/name = "[A.real_name] ([A.modtype] [A.braintype])"
 		borgs[name] = A
 
+	// Outpost 21 edit begin - Lawset implant
+	for (var/obj/item/implant/lawset/I in GLOB.lawset_implants)
+		var/mob/living/carbon/human/H = I.get_host()
+		if(!istype(H) || H.stat == DEAD)
+			continue
+		var/name = "[H.real_name] (Humanoid [H.synthetic ? "synthetic" : "organic"])"
+		borgs[name] = I
+	// Outpost 21 edit end
+
 	if (borgs.len)
 		select = tgui_input_list(usr, "Unshackled borg signals detected:", "Borg selection", borgs)
 		if(select)
@@ -491,6 +500,8 @@ Turf and target are seperate in case you want to teleport some distance from a t
 
 // Format a power value in W, kW, MW, or GW.
 /proc/DisplayPower(powerused)
+	if(powerused <= 0)	//no negative numbers, please.
+		return "0 W"
 	if(powerused < 1000) //Less than a kW
 		return "[powerused] W"
 	else if(powerused < 1000000) //Less than a MW
@@ -1045,42 +1056,6 @@ GLOBAL_LIST_INIT(common_tools, list(
 	if(istype(I, /obj/item/assembly/signaler))
 		return TRUE
 	return
-
-/proc/is_hot(obj/item/W as obj)
-	switch(W.type)
-		if(/obj/item/weldingtool)
-			var/obj/item/weldingtool/WT = W
-			if(WT.isOn())
-				return 3800
-			else
-				return 0
-		if(/obj/item/tool/transforming)
-			var/obj/item/tool/transforming/TT = W
-			if(TT.possible_tooltypes[TT.current_tooltype] == TOOL_WELDER)
-				return 3800
-			else
-				return 0
-		if(/obj/item/flame/lighter)
-			if(W:lit)
-				return 1500
-			else
-				return 0
-		if(/obj/item/flame/match)
-			if(W:lit)
-				return 1000
-			else
-				return 0
-		if(/obj/item/clothing/mask/smokable/cigarette)
-			if(W:lit)
-				return 1000
-			else
-				return 0
-		if(/obj/item/pickaxe/plasmacutter)
-			return 3800
-		if(/obj/item/melee/energy)
-			return 3500
-		else
-			return 0
 
 //Whether or not the given item counts as sharp in terms of dealing damage
 /proc/is_sharp(obj/item/O)

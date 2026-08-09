@@ -33,3 +33,12 @@
 	exploitable = 1
 	sort_category = "Cyberware"
 	cost = 1
+
+/datum/gear/utility/implant/generic/lawset
+	display_name = "implant, lawset"
+	description = "Implant which applies silicon lawsets to an organic or FBP's brain. Applies ESHUI standard lawset by default on round start."
+	path = /obj/item/implant/lawset
+	slot = "implant"
+	exploitable = 1
+	sort_category = "Cyberware"
+	cost = 1

@@ -324,9 +324,6 @@
 	#define JOB_ALT_RESEARCH_CONTRACTOR "Research Contractor"
 	#define JOB_ALT_TELEPORT_OPERATOR "Teleporter Operator" // Outpost 21 edit - Telesci job
 
-// Outpost 21 edit - Particle physicist
-#define JOB_ELECTROPHYSICIST "Electrophysicist"
-
 #define JOB_XENOBIOLOGIST "Xenobiologist"
 	// Xenobiologist alt titles
 	#define JOB_ALT_XENOZOOLOGIST "Xenozoologist"
@@ -339,6 +336,7 @@
 	#define JOB_ALT_MECHATRONIC_ENGINEER "Mechatronic Engineer"
 	#define JOB_ALT_SOFTWARE_ENGINEER "Software Engineer"
 	#define JOB_ALT_JUNIOR_ROBOTICIST "Junior Roboticist" // Outpost 21 edit - Adds junior roboticist alt title
+	#define JOB_ALT_ELECTROPHYSICIST "Electrophysicist" // Outpost 21 edit - Electrophysicist added
 
 #define JOB_XENOBOTANIST "Xenobotanist"
 	// Xenobotanist alt titles
@@ -534,7 +532,6 @@
 #define VIROLOGIST (1<<6)
 #define PSYCHIATRIST (1<<7)
 // define ROBOTICIST (1<<8) // Outpost 21 edit - Moved to engineering
-#define ELECTROPHYSICIST (1<<8)  // Outpost 21 edit - Particle physicist
 #define XENOBIOLOGIST (1<<9)
 #define PARAMEDIC (1<<10)
 // define PATHFINDER (1<<11)	// Outpost 21 edit - removed job

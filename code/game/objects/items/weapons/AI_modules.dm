@@ -17,7 +17,7 @@ AI MODULES
 	throw_speed = 3
 	throw_range = 15
 	preserve_item = 1
-	matter = list(MAT_STEEL = 30, MAT_GLASS = 10)
+	matter = list(MAT_STEEL = MATERIAL_COST(0.015), MAT_GLASS = MATERIAL_COST(0.005))
 	var/datum/ai_laws/laws = null
 
 /obj/item/aiModule/examine(mob/user)
@@ -78,7 +78,18 @@ AI MODULES
 			to_chat(user, "You haven't selected a robot to transmit laws to!")
 			return
 
-		if (comp.current.stat == 2 || comp.current.emagged)
+		// Outpost 21 edit begin - Lawset implant
+		if(istype(comp.current, /obj/item/implant/lawset))
+			if(comp.current.stat == DEAD)
+				to_chat(user, "Upload failed. No signal is being detected from the implant.")
+				return
+			to_chat(user, "Upload complete. The implant's laws have been modified.")
+			if(laws)
+				laws.sync(comp.current, TRUE)
+			var/obj/item/implant/lawset/implant = comp.current
+			implant.notify_of_law_change()
+		else if (comp.current.stat == 2 || comp.current.emagged)
+		// Outpost 21 edit end
 			to_chat(user, "Upload failed. No signal is being detected from the robot.")
 		else if (comp.current.connected_ai)
 			to_chat(user, "Upload failed. The robot is slaved to an AI.")
@@ -127,6 +138,8 @@ AI MODULES
 	target.show_laws()
 
 /obj/item/aiModule/proc/log_law_changes(mob/living/silicon/ai/target, mob/sender)
+	if(istype(target, /obj/item/implant/lawset)) // Outpost 21 edit - Lawset implants
+		return
 	var/time = time2text(world.realtime,"hh:mm:ss")
 	GLOB.lawchanges.Add("[time] <B>:</B> [sender.name]([sender.key]) used [src.name] on [target.name]([target.key])")
 	log_and_message_admins("used [src.name] on [target.name]([target.key])")

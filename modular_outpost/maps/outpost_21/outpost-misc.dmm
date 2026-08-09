@@ -4795,6 +4795,13 @@
 	icon_state = "white"
 	},
 /area/syndicate_mothership)
+"jq" = (
+/obj/structure/table/rack,
+/obj/item/chainsaw/alt/sword,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
 "jr" = (
 /obj/structure/table/reinforced,
 /obj/item/dnainjector/set_trait/hulk,
@@ -4859,6 +4866,13 @@
 	},
 /turf/unsimulated/floor{
 	icon_state = "white"
+	},
+/area/syndicate_mothership)
+"ju" = (
+/obj/structure/table/rack,
+/obj/item/chainsaw/alt,
+/turf/unsimulated/floor{
+	icon_state = "dark"
 	},
 /area/syndicate_mothership)
 "jv" = (
@@ -60231,7 +60245,7 @@ yb
 sg
 kQ
 kQ
-kQ
+jq
 IX
 hf
 hf
@@ -60393,7 +60407,7 @@ yb
 sg
 kQ
 kQ
-kQ
+ju
 gC
 gA
 kv

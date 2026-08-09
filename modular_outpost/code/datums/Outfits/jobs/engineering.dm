@@ -4,7 +4,7 @@
 	l_ear = /obj/item/radio/headset/headset_eng
 	shoes = /obj/item/clothing/shoes/black
 	belt = /obj/item/storage/belt/utility/full/multitool
-	id_type = /obj/item/card/id/engineering
+	id_type = /obj/item/card/id/engineering/roboticist
 	pda_slot = slot_l_store
 	pda_type = /obj/item/pda/roboticist
 	backpack = /obj/item/storage/backpack

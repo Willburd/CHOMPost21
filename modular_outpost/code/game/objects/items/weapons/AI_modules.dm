@@ -24,3 +24,4 @@
 	var/str = "\A [machine_name] has been used to modify the laws of a synthetic unit. Signal originates from [X], [Y], [using_map.get_zlevel_name(Z)]"
 	GLOB.global_announcer.autosay(str, "Artificial Intelligence Oversight", DEPARTMENT_ENGINEERING)
 	GLOB.global_announcer.autosay(str, "Artificial Intelligence Oversight", DEPARTMENT_COMMAND)
+	GLOB.global_announcer.autosay(str, "Artificial Intelligence Oversight", DEPARTMENT_SECURITY)

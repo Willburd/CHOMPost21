@@ -25,6 +25,7 @@
 	name = "Mutation Cascade"
 	desc = "Your genes are highly reactive to any change. Even the smallest mutation causes your body to quickly and violently unravel on the spot in a burst of gore."
 	cost = -5
+	banned_species = list(SPECIES_PROMETHEAN, SPECIES_VOX, SPECIES_DIONA, SPECIES_AKULA, SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW, SPECIES_XENOCHIMERA)
 
 /datum/trait/negative/mutation_gibbing/apply(datum/species/S, mob/living/carbon/human/H, trait_prefs)
 	. = ..()

@@ -26,17 +26,17 @@ GLOBAL_VAR_INIT(spawned_theta,FALSE) // Only one a ROUND
 		/obj/item/dnainjector/random,
 		/obj/item/clothing/accessory/bodycam/yobro,
 		/obj/random/scavmark_paper,
-	)
-	var/static/list/outpost_rare_table = list(
-		/obj/item/reagent_containers/glass/beaker/wheymax,
-		/obj/item/prop/alien/junk,
-		/obj/item/implanter/loyalty,
-		/obj/item/clothing/gloves/telekinetic,
 		/obj/item/storage/box/monkeycubes,
 		/obj/item/storage/box/monkeycubes/pets/outpost_A,
 		/obj/item/storage/box/monkeycubes/pets/outpost_B,
 		/obj/item/storage/box/monkeycubes/pets/NT_standard,
 		/obj/item/storage/box/monkeycubes/pets/NT_special,
+		/obj/item/reagent_containers/glass/beaker/wheymax,
+	)
+	var/static/list/outpost_rare_table = list(
+		/obj/item/prop/alien/junk,
+		/obj/item/implanter/loyalty,
+		/obj/item/clothing/gloves/telekinetic,
 		/obj/item/deadringer,
 		/obj/item/organ/internal/augment/armmounted/shoulder/multiple,
 		/obj/item/organ/internal/augment/armmounted/shoulder/multiple/medical,

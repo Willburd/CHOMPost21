@@ -31,3 +31,16 @@
 		RND_CATEGORY_TOOLS + RND_SUBCATEGORY_TOOLS_MISC
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_SCIENCE
+
+/datum/design_techweb/airlock_braces
+	name = "airlock brace"
+	desc = "A sturdy device that can be attached to an airlock to reinforce it and provide additional security."
+	id = "airlock_braces"
+	build_type = PROTOLATHE
+	materials = list(MAT_STEEL = SHEET_MATERIAL_AMOUNT * 5)
+	build_path = /obj/item/airlock_brace
+	category = list(
+		RND_CATEGORY_INITIAL,
+		RND_CATEGORY_CONSTRUCTION + RND_SUBCATEGORY_CONSTRUCTION_MOUNTS
+	)
+	departmental_flags = DEPARTMENT_BITFLAG_ENGINEERING | DEPARTMENT_BITFLAG_SECURITY | DEPARTMENT_BITFLAG_SCIENCE

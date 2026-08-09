@@ -99,7 +99,7 @@
 		nade.det_time = 1.2 SECONDS
 		nade.activate()
 
-// Nade hook
+// Hook
 /obj/machinery/door/airlock/attackby(obj/item/C, mob/user)
 	if(istype(C,/obj/item/grenade))
 		var/obj/item/grenade/G = C
@@ -109,7 +109,7 @@
 			attach_grenade_trap(user,G)
 		return TRUE
 
-	var/datum/component/grenadetrap/GT = GetComponent(/datum/component/grenadetrap) // Awaiting upstream fix, fucking door code
+	var/datum/component/grenadetrap/GT = GetComponent(/datum/component/grenadetrap)
 	if(GT && C.has_tool_quality(TOOL_WIRECUTTER))
 		playsound(src, C.usesound, 50, 1)
 		to_chat(user, span_warning("You cut the trap from \the [src]."))

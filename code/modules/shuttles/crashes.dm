@@ -108,8 +108,12 @@
 	// Put people back
 	for(var/mob/living/L as anything in victims)
 		L.loc = victims[L]
+		// Outpost 21 edit begin - Raised damage on crash, throws people
 		L.adjustBruteLoss(5)
-		L.adjustBruteLoss(10)
 		L.adjustBruteLoss(15)
+		L.adjustBruteLoss(30)
+		if(!L.buckled)
+			throw_a_mob(L,pick(ALL_CARDINALS))
+		// Outpost 21 edit end
 
 	SShaunting.intense_world_haunt() // Outpost 21 edit - It da spooky station!

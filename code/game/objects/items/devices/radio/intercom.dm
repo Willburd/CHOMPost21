@@ -82,6 +82,26 @@
 	name = "entertainment intercom"
 	frequency = ENT_FREQ
 
+/obj/item/radio/intercom/atc
+	name = "Air Traffic Control intercom"
+	frequency = ATC_FREQ
+
+/obj/item/radio/intercom/atc/Initialize(mapload)
+	. = ..()
+	internal_channels = list(
+		num2text(ATC_FREQ) = list()
+	)
+
+/obj/item/radio/intercom/culture
+	name = "culture intercom"
+	frequency = CULTURE_FREQ
+
+/obj/item/radio/intercom/culture/Initialize(mapload)
+	. = ..()
+	internal_channels = list(
+		num2text(CULTURE_FREQ) = list()
+	)
+
 /obj/item/radio/intercom/science
 	name = "station intercom (Science)"
 	channels=list("Science")
@@ -104,7 +124,13 @@
 	. = ..()
 	internal_channels = list(
 		num2text(PUB_FREQ) = list(),
-		num2text(SEC_I_FREQ) = list(ACCESS_SECURITY)
+		num2text(SEC_I_FREQ) = list(ACCESS_SECURITY),
+		// Outpost 21 edit begin - Security squad channels
+		num2text(SEC_ALPHA_FREQ) = list(ACCESS_SECURITY),
+		num2text(SEC_BETA_FREQ) = list(ACCESS_SECURITY),
+		num2text(SEC_CHARLIE_FREQ) = list(ACCESS_SECURITY),
+		num2text(SEC_DELTA_FREQ) = list(ACCESS_SECURITY),
+		// Outpost 21 edit end
 	)
 
 /obj/item/radio/intercom/entertainment/Initialize(mapload)

@@ -76,6 +76,7 @@
 	music = 'sound/ambience/ambimine.ogg'
 	requires_power = TRUE
 	color_grading = COLORTINT_UNDERDARK
+	flags = AREA_FIRE_SUPRESSION
 
 //Hallways... I guess?
 /area/muriki/processor/hall
@@ -157,7 +158,7 @@
 	name = "\improper Bathroom. Don't use."
 	icon_state = "cyablatri"
 	sound_env = SMALL_ENCLOSED
-	flags = RAD_SHIELDED | AREA_BLOCK_TRACKING | AREA_FORBID_EVENTS | AREA_BLOCK_GHOST_SIGHT | AREA_FIRE_SUPRESSION
+	flags = RAD_SHIELDED | AREA_BLOCK_TRACKING | AREA_FORBID_EVENTS | AREA_BLOCK_GHOST_SIGHT
 	use_emergency_overlay = TRUE
 	base_turf = /turf/simulated/open
 	color_grading = COLORTINT_CHILL
@@ -372,7 +373,7 @@
 	icon_state = "medbay2"
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
 	base_turf = /turf/simulated/open
-	flags = AREA_BLOCK_INSTANT_BUILDING | AREA_FIRE_SUPRESSION
+	flags = /area/medical/first_aid_station::flags
 	lightswitch = 1
 
 /area/quartermaster/cargupbreak
@@ -595,7 +596,7 @@
 	sound_env = TUNNEL_ENCLOSED
 	holomap_color = HOLOMAP_AREACOLOR_CIV
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
-	flags = RAD_SHIELDED
+	flags = RAD_SHIELDED | AREA_FIRE_SUPRESSION
 	color_grading = COLORTINT_DIM
 
 /area/muriki/crew/civmail
@@ -1677,7 +1678,7 @@
 	sound_env = SMALL_ENCLOSED
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
-	flags = AREA_FIRE_SUPRESSION
+	flags = /area/medical/first_aid_station::flags
 
 /area/maintenance/damaged_resleeverA
 	name = "\improper Collapsed Structure"
@@ -2038,6 +2039,7 @@
 	icon_state = "blue"
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
 	lightswitch = 1
+	flags = AREA_FIRE_SUPRESSION
 
 /area/medical/virology/prep
 	name = "\improper Virology Preperation"
@@ -2297,7 +2299,6 @@
 	icon_state = "decontamination"
 	base_turf = /turf/simulated/open
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
-	flags = AREA_FIRE_SUPRESSION
 
 /area/rnd/entry_aux
 	name = "\improper Research Auxiliary Decontamination"
@@ -2329,7 +2330,6 @@
 /area/rnd/xenobiology
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
-	flags = AREA_FIRE_SUPRESSION
 
 /area/rnd/xenobiology/xenoflora2
 	name = "\improper Xenoflora Hazard Lab"
@@ -2385,7 +2385,7 @@
 	name = "\improper Xenolab First aid"
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
-	flags = AREA_FIRE_SUPRESSION
+	flags = /area/medical/first_aid_station::flags
 	lightswitch = 1
 
 /area/rnd/research/isolation_a
@@ -2458,7 +2458,7 @@
 	name = "\improper Research First aid"
 	base_turf = /turf/simulated/open
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
-	flags = AREA_BLOCK_INSTANT_BUILDING | AREA_FIRE_SUPRESSION
+	flags = /area/medical/first_aid_station::flags
 	lightswitch = 1
 
 /area/rnd/research/roof_eva
@@ -2525,7 +2525,7 @@
 	icon_state = "blublacir"
 	base_turf = /turf/simulated/open
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
-	flags = AREA_BLOCK_INSTANT_BUILDING | AREA_FIRE_SUPRESSION
+	flags = /area/medical/first_aid_station::flags
 
 /area/maintenance/substation/phoronics
 	name = "Phoronics Substation"

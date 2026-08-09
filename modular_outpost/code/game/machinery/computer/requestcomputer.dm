@@ -2,7 +2,7 @@
 	name = "requests console"
 	desc = "A console intended to send requests to different departments on the station."
 	icon_screen = "comm_monitor"
-	icon_keyboard = "id_key"
+	icon_keyboard = "tech_key"
 	var/obj/machinery/requests_console/internal_console = /obj/machinery/requests_console
 	circuit = /obj/item/circuitboard/supply_request_computeralt
 	light_color = "#e9aaec"

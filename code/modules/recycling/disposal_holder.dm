@@ -83,6 +83,7 @@
 		for(var/mob/living/H in src)
 			if(!istype(H,/mob/living/silicon/robot/drone)) //Drones use the mailing code to move through the disposal system,
 				H.take_overall_damage(20, 0, "Blunt Trauma") //horribly maim any living creature jumping down disposals.  c'est la vie
+				H.dislocate_random_limb(rand(1,5)) // Also dislocate stuff
 	#endif
 	// Outpost 21 edit end
 

@@ -19,7 +19,15 @@ GLOBAL_LIST_INIT(radiochannels, list(
 	CHANNEL_SECURITY_1		= SEC_I_FREQ,
 	CHANNEL_TALON			= TALON_FREQ, //VOREStation Add
 	CHANNEL_CASINO			= CSN_FREQ,
-	CHANNEL_OUTSIDER		= OUT_FREQ // CHOMPAdd
+	CHANNEL_OUTSIDER		= OUT_FREQ, // CHOMPAdd
+	CHANNEL_ATC				= ATC_FREQ,
+	CHANNEL_CULTURE			= CULTURE_FREQ,
+	// Outpost 21 edit begin - Security squad channels
+	CHANNEL_SEC_ALPHA 		= SEC_ALPHA_FREQ,
+	CHANNEL_SEC_BETA 		= SEC_BETA_FREQ,
+	CHANNEL_SEC_CHARLIE 	= SEC_CHARLIE_FREQ,
+	CHANNEL_SEC_DELTA 		= SEC_DELTA_FREQ,
+	// Outpost 21 edit end
 ))
 
 // Hey, if anyone ever needs to update tgui/packages/tgui/constants.js with new radio channels
@@ -100,4 +108,14 @@ GLOBAL_LIST_INIT(offmap_frequencies, list(TALON_FREQ, CSN_FREQ, OUT_FREQ)) var/l
 		return "deptradio"
 	if(frequency in GLOB.offmap_frequencies)
 		return "expradio"
+	// Outpost 21 edit begin - Security squad channels
+	if(frequency == SEC_ALPHA_FREQ)
+		return "secradio"
+	if(frequency == SEC_BETA_FREQ)
+		return "secradio"
+	if(frequency == SEC_CHARLIE_FREQ)
+		return "secradio"
+	if(frequency == SEC_DELTA_FREQ)
+		return "secradio"
+	// Outpost 21 edit end
 	return "radio"

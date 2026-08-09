@@ -220,7 +220,7 @@
 /datum/gear/eyes/arglasses_sci
 	display_name = "AR-Research glasses"
 	path = /obj/item/clothing/glasses/omnihud/rnd
-	allowed_roles = list(JOB_RESEARCH_DIRECTOR,JOB_SCIENTIST,JOB_XENOBIOLOGIST,JOB_XENOBOTANIST, JOB_ELECTROPHYSICIST) // ,JOB_ROBOTICIST) Outpost 21 edit - Roboticist moved to engineering
+	allowed_roles = list(JOB_RESEARCH_DIRECTOR,JOB_SCIENTIST,JOB_XENOBIOLOGIST,JOB_XENOBOTANIST) // ,JOB_ROBOTICIST) Outpost 21 edit - Roboticist moved to engineering
 
 /datum/gear/eyes/arglasses_sci/New()
 	..()

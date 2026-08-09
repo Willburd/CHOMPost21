@@ -27,7 +27,6 @@
 	hardness = 30 //VOREStation Edit - Please.
 	integrity = 201 //hack to stop kitchen benches being flippable, todo: refactor into weight system
 	stack_type = /obj/item/stack/material/marble
-	supply_conversion_value = 0.5 // Outpost 21 edit(port) - reduced value
 
 /datum/material/stone/marble/generate_recipes()
 	..()
@@ -43,7 +42,6 @@
 	hardness = 30
 	integrity = 100
 	stack_type = /obj/item/stack/material/flint
-	supply_conversion_value = 0.5 // Outpost 21 edit(port) - reduced value
 	sheet_singular_name = "piece"
 	sheet_plural_name = "pieces"
 	supply_conversion_value = 0.1

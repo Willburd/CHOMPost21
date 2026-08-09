@@ -8,7 +8,7 @@
 	icon_state = "designator"
 	item_state = "designator"
 	slot_flags = SLOT_BELT
-	matter = list(MAT_GLASS = 500, MAT_STEEL = 500)
+	matter = list(MAT_STEEL = MATERIAL_COST(0.25), MAT_GLASS = MATERIAL_COST(0.25))
 	w_class = ITEMSIZE_SMALL
 	var/turf/pointer_loc
 	var/energy = 3
