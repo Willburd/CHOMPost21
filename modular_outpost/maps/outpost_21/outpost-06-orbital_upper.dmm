@@ -11693,18 +11693,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/ai_sat/docking_wing)
-"JF" = (
-/obj/machinery/power/apc{
-	dir = 8;
-	name = "west bump";
-	pixel_x = -24;
-	nightshift_setting = 3
-	},
-/obj/effect/floor_decal/corner/green{
-	dir = 9
-	},
-/turf/simulated/floor/tiled/milspec,
-/area/offworld/asteroidyard/station/halls_bar)
 "JG" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -34550,7 +34538,7 @@ bU
 Kq
 gC
 bu
-JF
+bu
 bu
 Kj
 bU
