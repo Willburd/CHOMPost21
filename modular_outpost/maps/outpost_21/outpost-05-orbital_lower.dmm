@@ -8306,24 +8306,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/offworld/confinementbeam/station/ptl_core)
-"Pv" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/structure/cable/orange{
-	icon_state = "4-8"
-	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/obj/effect/floor_decal/corner/green{
-	dir = 5
-	},
-/turf/simulated/floor/tiled/milspec,
-/area/offworld/confinementbeam/station/lower_hallway)
 "Px" = (
 /obj/effect/floor_decal/eshui/emblem/eshui_small_l,
 /turf/simulated/floor/tiled/milspec,
@@ -20258,7 +20240,7 @@ xM
 xM
 xM
 ax
-Pv
+EJ
 xA
 PW
 dG

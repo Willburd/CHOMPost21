@@ -2638,12 +2638,12 @@
 	base_turf = /turf/simulated/open
 
 /area/offworld/asteroidyard/station/halls_storage
-	name = "\improper Reclamation Yard Hallway Storage"
+	name = "\improper Reclamation Yard Central Hallway"
 	icon_state = "green"
 	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
 
 /area/offworld/asteroidyard/station/halls_bar
-	name = "\improper Reclamation Yard Bar Hallway"
+	name = "\improper Reclamation Yard Northern Hallway"
 	icon_state = "orange"
 	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
 
