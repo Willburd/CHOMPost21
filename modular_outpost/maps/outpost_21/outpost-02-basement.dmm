@@ -72906,6 +72906,7 @@
 	},
 /obj/effect/step_trigger/dephase_shadekin,
 /obj/item/stack/rods,
+/obj/structure/hookah/randomized_drugs,
 /turf/simulated/floor/wood/alt/broken,
 /area/maintenance/oldbridge)
 "dLU" = (

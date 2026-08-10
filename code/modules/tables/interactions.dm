@@ -17,6 +17,10 @@
 	return FALSE
 
 /obj/structure/table/Uncross(atom/movable/mover, turf/target)
+	// Outpost 21 edit begin - Reverse projectile blocking direction
+	if(istype(mover,/obj/item/projectile))
+		return TRUE // We don't want to stop projectiles that have crossed us, we want to do it in check_cover() now
+	// Outpost 21 edit end
 	if(flipped == 1 && (get_dir(mover, target) == dir)) // From here to elsewhere, can't move in our dir
 		return !density
 	return TRUE
@@ -32,26 +36,21 @@
 		return 1
 	if (get_dist(P.starting, loc) <= 1) //Tables won't help you if people are THIS close
 		return 1
-	if (get_turf(P.original) == cover)
-		var/chance = 20
-		if (ismob(P.original))
+	// Outpost 21 edit begin - Reverse projectile blocking direction. We want slightly different table blocking, where the table's FRONT blocks the shot incoming, even if you don't target a mob
+	if(flipped == 1 && density && get_dir(P, src) == GLOB.reverse_dir[dir])
+		var/chance = 40
+		if(ismob(P.original))
 			var/mob/M = P.original
-			if (M.lying)
-				chance += 20				//Lying down lets you catch less bullets
-		if(flipped==1)
-			if(get_dir(loc, from) == reverse_direction(dir))	//Flipped tables catch mroe bullets // Outpost 21 edit(port) - Reverse projectile blocking direction
-				chance += 20
-			else
-				return 1					//But only from one side
+			if(get_turf(M) == get_turf(src) && M.lying)
+				chance += 20				// Lying down lets you catch less bullets
 		if(prob(chance))
 			health -= P.damage/2
 			if (health > 0)
 				visible_message(span_warning("[P] hits \the [src]!"))
 				return 0
-			else
-				visible_message(span_warning("[src] breaks down!"))
-				break_to_parts()
-				return 1
+			visible_message(span_warning("[src] breaks down!"))
+			break_to_parts()
+	// Outpost 21 edit end
 	return 1
 
 /obj/structure/table/MouseDrop_T(obj/O, mob/user, src_location, over_location, src_control, over_control, params)

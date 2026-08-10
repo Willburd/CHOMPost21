@@ -2991,6 +2991,56 @@
 /obj/effect/zone_divider,
 /turf/simulated/wall/r_wall,
 /area/submap/outpost21/foundation_block/research)
+"ahz" = (
+/obj/structure/prop/rock/small,
+/obj/item/stack/rods,
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"ahA" = (
+/obj/structure/prop/rock/sharp,
+/obj/random/junk,
+/obj/random/junk,
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"ahB" = (
+/obj/structure/prop/rock/round,
+/obj/random/junk,
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"ahC" = (
+/obj/structure/prop/rock/flat,
+/obj/random/junk,
+/obj/random/junk,
+/obj/random/junk,
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"ahD" = (
+/obj/random/junk,
+/obj/random/junk,
+/obj/random/junk,
+/obj/structure/prop/rock/small/alt,
+/obj/item/stack/rods,
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"ahE" = (
+/obj/structure/prop/rock/small,
+/obj/random/junk,
+/obj/item/stack/rods,
+/obj/item/stack/rods,
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/explored/muriki/cave/deepdark)
 "amr" = (
 /obj/effect/map_effect/interval/atmogland/bodyheat,
 /obj/effect/mist,
@@ -65685,9 +65735,9 @@ tWu
 agZ
 tWu
 vEI
-auj
-wRI
-vEI
+agl
+ahB
+ahz
 auj
 vEI
 tWu
@@ -65847,9 +65897,9 @@ tWu
 agZ
 tWu
 agQ
-hfs
-hfs
-plJ
+ahD
+ahC
+ahA
 vEI
 tWu
 tWu
@@ -66009,8 +66059,8 @@ tWu
 agZ
 tWu
 tWu
-vEI
-auj
+ahE
+agl
 vEI
 auj
 tWu
