@@ -157,7 +157,6 @@
 										/area/muriki/elevator/sciupper,
 										// The asteroid yard's exterior does not need scrubbers and vents
 										/area/offworld/orbital/exterior/yardzone,
-										/area/offworld/confinementbeam/exterior,
 										/area/ai_sat/core_external,
 										/area/ai_sat/power_control,
 										// Foundation blocks

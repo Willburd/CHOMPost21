@@ -69,7 +69,7 @@
 	landmark_tag = "confinementbeam_security"
 	docking_controller = "beam_sat_security_controller"
 	base_turf = /turf/space
-	base_area = /area/offworld/confinementbeam/exterior
+	base_area = /area/space
 	local_crash_sites = OUTPOST_CONFINEMENTBEAM_CRASHES
 
 /obj/effect/shuttle_landmark/premade/security/aisat_security
@@ -77,5 +77,5 @@
 	landmark_tag = "aisat_security"
 	docking_controller = "aisat_security_controller"
 	base_turf = /turf/space
-	base_area = /area/offworld/confinementbeam/exterior
+	base_area = /area/space
 	local_crash_sites = OUTPOST_CONFINEMENTBEAM_CRASHES

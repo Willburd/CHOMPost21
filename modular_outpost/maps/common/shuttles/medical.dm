@@ -72,5 +72,5 @@
 	landmark_tag = "confinementbeam_medical"
 	docking_controller = "beam_sat_medical_controller"
 	base_turf = /turf/space
-	base_area = /area/offworld/confinementbeam/exterior
+	base_area = /area/space
 	local_crash_sites = OUTPOST_CONFINEMENTBEAM_CRASHES
