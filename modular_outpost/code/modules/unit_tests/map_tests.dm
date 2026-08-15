@@ -521,6 +521,11 @@
 		if(!validate_camera(C, "ENG", used_cams))
 			failed = TRUE
 
+	for(var/obj/machinery/camera/network/engineering_outpost/C in world)
+		set background=1
+		if(!validate_camera(C, "REX", used_cams))
+			failed = TRUE
+
 	for(var/obj/machinery/camera/network/engine/C in world)
 		set background=1
 		if(!validate_camera(C, "ENG", used_cams))
