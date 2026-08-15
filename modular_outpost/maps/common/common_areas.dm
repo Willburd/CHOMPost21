@@ -3042,6 +3042,13 @@
 	ambience = AMBIENCE_ENGINEERING
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 
+/area/offworld/orbital/station/rust_gas_storage
+	name = "\improper RUST Gas Storage"
+	icon_state = "locker"
+	sound_env = SMALL_ENCLOSED
+	ambience = AMBIENCE_ENGINEERING
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+
 /area/offworld/orbital/station/rust_aux_tool_storage
 	name = "\improper Orbital RUST Auxiliary Tool Storage"
 	icon_state = "locker"
