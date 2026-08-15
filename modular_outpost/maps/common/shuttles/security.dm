@@ -62,7 +62,7 @@
 	name = "Prospector (Port Dock)"
 	landmark_tag = "prospector_docks_security"
 	base_turf = /turf/space
-	base_area = /area/offworld/asteroidyard // TODO
+	base_area = /area/space
 
 /obj/effect/shuttle_landmark/premade/security/confinementbeam
 	name = "Confinement Beam (Security Dock)"

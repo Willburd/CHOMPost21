@@ -123,7 +123,7 @@ GLOBAL_LIST_BOILERPLATE(all_tracking_implants, /obj/item/implant/tracking)
 		/area/ai_sat,
 		/area/engineering/gravgen,
 		/area/medical/voxlab,
-		/area/offworld/confinementbeam/station,
+		/area/offworld/orbital/station,
 		/area/shuttle/medical,
 		/area/shuttle/security,
 		/area/shuttle/trawler,
