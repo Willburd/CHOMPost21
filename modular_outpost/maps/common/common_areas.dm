@@ -2951,12 +2951,6 @@
 	name = "\improper Orbital Starboard Solars"
 	icon_state = "purple"
 
-/area/offworld/orbital/station/solarControl
-	name = "\improper Orbital Solar Control"
-	icon_state = "orange"
-	ambience = AMBIENCE_SUBSTATION
-	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
-
 
 // Power distro
 /area/offworld/orbital/station/power_distribution
