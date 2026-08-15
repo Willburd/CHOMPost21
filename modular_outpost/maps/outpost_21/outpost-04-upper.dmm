@@ -49257,18 +49257,7 @@
 /obj/effect/floor_decal/corner/red{
 	dir = 9
 	},
-/obj/item/storage/toolbox/syndicate{
-	pixel_y = 4
-	},
-/obj/item/hoist_kit{
-	pixel_y = -5
-	},
-/obj/item/hoist_kit{
-	pixel_y = -5
-	},
-/obj/item/hoist_kit{
-	pixel_y = -5
-	},
+/obj/item/storage/toolbox/syndicate,
 /turf/simulated/floor/tiled,
 /area/security/vacantoffice)
 "uFN" = (
