@@ -119,7 +119,7 @@
 	var/lying_prev = 0
 	var/is_shifted = FALSE // VoreStation Edit; pixel shifting + tilting
 	var/how_tilted = 0
-	var/maximum_tilt = 45
+	var/maximum_tilt = 180 //Outpost 21 edit. Increased from 45 to 180... If the edit prefix is wrong, blame Diana, Will.
 	var/canmove = 1
 	var/allowtilttime = 0 //This is the waiting timer for getting up after falling, lying, buckling, or otherwise being animated.
 	//Allows mobs to move through dense areas without restriction. For instance, in space or out of holder objects.

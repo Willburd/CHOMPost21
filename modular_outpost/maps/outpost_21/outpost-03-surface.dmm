@@ -15856,6 +15856,12 @@
 /obj/structure/prop/rock/watersharp,
 /turf/simulated/floor/water/acidic/deep/turfpack/muriki,
 /area/muriki/yard)
+"aHp" = (
+/obj/effect/floor_decal/industrial/arrows/red{
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/sidewalk/slab/turfpack/muriki,
+/area/muriki/grounds/sec)
 "aHq" = (
 /obj/structure/cliff{
 	dir = 1
@@ -127525,9 +127531,9 @@ aqi
 aqi
 aqi
 xgD
-xgD
-xgD
-xgD
+aHp
+aHp
+aHp
 aqi
 aqi
 aEb

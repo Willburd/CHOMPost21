@@ -133,6 +133,14 @@
 	name = "Night"
 	info = "On the paper is a crudely drawn image of some kind of machine. A four-eared canine is inside looking fast asleep, marks around the machine seem to indicate cold. On the machine is a symbol of a right-facing triangle, with a crescent moon and star in the bottom right. The image seems to convey an idea of long sleep."
 
+/obj/item/paper/scavmark/day
+	name = "Day"
+	info = "On the paper is a crudely drawn image of some kind of raptor-like creature looking down a hallway... in the hallway is some kind of shimmering motion in the air, with a variety of symbols around it.. it seems to mark a variety of strange dangers."
+
+/obj/item/paper/scavmark/intersection
+	name = "Intersection"
+	info = "On the paper is a crudely drawn image of some kind of rat-like creature, the creature is being flung by some kind of spring-loaded device and being thrown into a wall. An odd multi-crossed symbol points to it. A line divides the paper to a second image with a raptor-like creature, the same symbol is drawn with an odd upside down triangle. The raptor-like creature is gracefully using the spring to bounce across a body of water."
+
 /obj/item/paper/scavmark/suspicious
 	name = "Watching"
 	info = "On the paper is a crudely drawn image of a raptor-like creature. The raptor is gazing through some kind of obstruction at two indistinct individuals. They do not appear to be aware of the raptor. On the ground is a simplified drawing of a man in a space suit."
