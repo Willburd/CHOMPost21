@@ -59,12 +59,12 @@
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/storage)
 "ah" = (
-/turf/simulated/shuttle/wall,
+/turf/simulated/shuttle/wall/dark,
 /area/shuttle/belter)
 "ai" = (
 /obj/structure/shuttle/window,
 /obj/effect/shuttle_landmark/premade/belter/asteroid_yard,
-/turf/simulated/floor/airless,
+/turf/simulated/shuttle/floor/voidcraft/dark/turfpack/airless,
 /area/shuttle/belter)
 "aj" = (
 /obj/structure/shuttle/engine/heater{
@@ -112,6 +112,9 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/light{
 	dir = 1
+	},
+/obj/machinery/status_display{
+	pixel_y = 32
 	},
 /turf/simulated/shuttle/floor/voidcraft/light/turfpack/airless,
 /area/shuttle/belter)
@@ -274,6 +277,10 @@
 	},
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 1
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/fore)
@@ -468,6 +475,10 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/power_distribution)
+"be" = (
+/obj/item/geiger/wall/east,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/airless,
+/area/offworld/orbital/station/engine_core_port)
 "bf" = (
 /obj/structure/bed/chair/sofa/corp/right{
 	dir = 8
@@ -572,6 +583,11 @@
 	},
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 1
+	},
+/obj/item/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 25
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/fore)
@@ -813,7 +829,7 @@
 "bL" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/handrail,
-/obj/machinery/status_display{
+/obj/structure/closet/emergsuit_wall{
 	pixel_y = 32
 	},
 /turf/simulated/shuttle/floor/voidcraft/light/turfpack/airless,
@@ -844,9 +860,6 @@
 "bP" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 10
-	},
-/obj/effect/floor_decal/corner/blue{
-	dir = 5
 	},
 /obj/structure/cable/green{
 	icon_state = "1-4"
@@ -899,9 +912,6 @@
 /obj/effect/floor_decal/corner/orange{
 	dir = 10
 	},
-/obj/effect/floor_decal/corner/blue{
-	dir = 5
-	},
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "north bump";
@@ -951,6 +961,9 @@
 	},
 /obj/structure/transit_tube{
 	icon_state = "N-S"
+	},
+/obj/structure/cable/green{
+	icon_state = "0-8"
 	},
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/ai_transit_hub)
@@ -1242,6 +1255,9 @@
 /obj/effect/floor_decal/corner/white{
 	dir = 5
 	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/ai_transit_hub)
 "cB" = (
@@ -1341,6 +1357,7 @@
 /obj/effect/floor_decal/corner/brown{
 	dir = 9
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/dockinghanger)
 "cM" = (
@@ -1371,7 +1388,7 @@
 /obj/effect/floor_decal/industrial/warning/full,
 /obj/machinery/pipedispenser/disposal,
 /obj/machinery/camera/network/engineering_outpost{
-	c_tag = "PTL - Tool Storage Fore";
+	c_tag = "REX - Tool Storage Fore";
 	dir = 8
 	},
 /turf/simulated/floor/tiled/milspec,
@@ -1468,17 +1485,13 @@
 /obj/effect/floor_decal/corner/orange{
 	dir = 8
 	},
+/obj/machinery/light_switch/breaker{
+	pixel_x = -32;
+	pixel_y = -32
+	},
 /turf/simulated/floor/tiled/milspec/airless,
 /area/offworld/orbital/station/storage_engine_core)
 "dc" = (
-/obj/machinery/power/apc{
-	dir = 4;
-	name = "east bump";
-	pixel_x = 24
-	},
-/obj/structure/cable/green{
-	icon_state = "0-2"
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 2;
 	icon_state = "pipe-c"
@@ -1487,6 +1500,14 @@
 	dir = 6
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/extinguisher_cabinet{
+	dir = 8;
+	pixel_x = 30;
+	pixel_y = 7
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/ai_transit_hub)
 "dd" = (
@@ -1533,6 +1554,9 @@
 	name = "Toilet"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/kafel_full,
@@ -1633,18 +1657,14 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/power_distribution)
 "ds" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/red/bordercorner{
 	dir = 1
 	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/fore)
 "dt" = (
@@ -1857,9 +1877,6 @@
 "dJ" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 6
-	},
-/obj/machinery/light_switch/breaker{
-	pixel_x = 32
 	},
 /turf/simulated/floor/tiled/milspec/airless,
 /area/offworld/orbital/station/storage_engine_core)
@@ -2330,6 +2347,7 @@
 /obj/effect/floor_decal/corner/red/border{
 	dir = 1
 	},
+/obj/item/geiger/wall/north,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/fore)
 "eC" = (
@@ -2407,6 +2425,10 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
+	},
+/obj/structure/disposalpipe/junction{
+	dir = 4;
+	icon_state = "pipe-j2"
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/offworld/orbital/station/washing)
@@ -2533,6 +2555,10 @@
 	},
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/blue/border,
+/obj/item/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -22
+	},
 /turf/simulated/floor/tiled/old_tile/white,
 /area/offworld/orbital/station/medical_treatment)
 "eZ" = (
@@ -2858,6 +2884,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
+/obj/structure/disposalpipe/junction,
 /turf/simulated/floor/tiled/kafel_full,
 /area/offworld/orbital/station/washing)
 "fG" = (
@@ -3138,6 +3165,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/aft)
 "gk" = (
@@ -3258,6 +3288,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/medical_treatment)
 "gv" = (
@@ -3357,6 +3390,8 @@
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/machinery/disposal,
+/obj/structure/disposalpipe/trunk,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/ai_transit_hub)
 "gJ" = (
@@ -3390,7 +3425,8 @@
 /obj/structure/handrail{
 	dir = 1
 	},
-/obj/machinery/ai_status_display{
+/obj/structure/closet/medical_wall{
+	dir = 1;
 	pixel_y = -32
 	},
 /turf/simulated/shuttle/floor/voidcraft/light/turfpack/airless,
@@ -3492,6 +3528,11 @@
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 1
 	},
+/obj/item/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 24
+	},
 /turf/simulated/floor/tiled/old_tile/white,
 /area/offworld/orbital/station/medical_treatment)
 "gV" = (
@@ -3566,6 +3607,10 @@
 /obj/structure/cable/green{
 	icon_state = "1-8"
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor,
 /area/offworld/orbital/station/halls/fore)
 "hc" = (
@@ -3584,9 +3629,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/disposalpipe/segment,
-/obj/structure/extinguisher_cabinet{
-	pixel_x = 25
-	},
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
@@ -3595,6 +3637,11 @@
 	},
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 4
+	},
+/obj/structure/extinguisher_cabinet{
+	dir = 8;
+	pixel_x = 30;
+	pixel_y = -4
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/central)
@@ -3838,7 +3885,10 @@
 /obj/effect/floor_decal/corner/orange{
 	dir = 10
 	},
-/obj/machinery/disposal,
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -26
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/storage)
 "hF" = (
@@ -3871,8 +3921,7 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 1
 	},
-/obj/effect/floor_decal/borderfloor/cee,
-/obj/effect/floor_decal/corner/blue/bordercee{
+/obj/effect/floor_decal/steeldecal/monofloor{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/milspec,
@@ -3987,16 +4036,11 @@
 	},
 /turf/simulated/floor/airless,
 /area/ai_sat/power_control)
-"hV" = (
-/obj/item/geiger/wall/south,
-/obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/corner/blue/border,
-/turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/halls/stairs_upper)
 "hW" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/old_tile/white,
 /area/offworld/orbital/station/medical_treatment)
 "hX" = (
@@ -4277,6 +4321,7 @@
 /obj/effect/floor_decal/corner/brown{
 	dir = 9
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/dockinghanger)
 "iC" = (
@@ -4411,7 +4456,7 @@
 	},
 /obj/structure/extinguisher_cabinet{
 	pixel_x = 5;
-	pixel_y = 28
+	pixel_y = 30
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -4657,6 +4702,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/dockinghanger)
 "js" = (
@@ -4682,6 +4730,10 @@
 	},
 /obj/effect/floor_decal/corner/brown{
 	dir = 8
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/dockinghanger)
@@ -4773,7 +4825,6 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/ai_server_room)
 "jE" = (
-/obj/structure/disposalpipe/segment,
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
@@ -4783,6 +4834,9 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 8
+	},
+/obj/structure/disposalpipe/junction{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/central)
@@ -4842,19 +4896,6 @@
 	},
 /turf/simulated/floor/tiled/milspec/airless,
 /area/offworld/orbital/station/storage_engine_core)
-"jL" = (
-/obj/machinery/light{
-	dir = 1
-	},
-/obj/structure/extinguisher_cabinet{
-	pixel_x = 5;
-	pixel_y = 28
-	},
-/obj/effect/floor_decal/corner/brown/full{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/dockinghanger)
 "jM" = (
 /obj/structure/particle_accelerator/power_box,
 /turf/simulated/floor/airless,
@@ -4862,6 +4903,15 @@
 "jN" = (
 /obj/effect/floor_decal/industrial/warning/cee{
 	dir = 1
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 5;
+	pixel_y = 28
+	},
+/obj/item/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = 32
 	},
 /turf/simulated/floor/tiled/dark,
 /area/offworld/orbital/station/dockinghanger)
@@ -4949,10 +4999,6 @@
 /obj/structure/cable/green{
 	icon_state = "2-8"
 	},
-/obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
 	},
@@ -4964,6 +5010,9 @@
 	},
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 1
+	},
+/obj/structure/disposalpipe/junction/yjunction{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/central)
@@ -5167,12 +5216,7 @@
 "kv" = (
 /obj/structure/grille,
 /obj/machinery/door/firedoor/border_only,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
+/obj/structure/window/reinforced/full,
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/halls/fore)
 "kw" = (
@@ -5182,14 +5226,9 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/ai_transit_hub)
 "kx" = (
-/obj/machinery/firealarm{
+/obj/structure/sink/kitchen{
 	dir = 8;
-	pixel_x = -26
-	},
-/obj/structure/sink{
-	dir = 8;
-	pixel_x = -12;
-	pixel_y = 2
+	pixel_x = -11
 	},
 /turf/simulated/floor/tiled/kafel_full/beige,
 /area/offworld/orbital/station/washing)
@@ -5273,7 +5312,7 @@
 "kF" = (
 /obj/structure/extinguisher_cabinet{
 	pixel_x = 5;
-	pixel_y = 28
+	pixel_y = 30
 	},
 /obj/machinery/light{
 	dir = 8
@@ -5738,6 +5777,9 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/ai_transit_hub)
 "lC" = (
@@ -5763,6 +5805,9 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/old_tile/white,
@@ -5826,6 +5871,10 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled/old_tile/white,
 /area/offworld/orbital/station/medical_treatment)
@@ -6582,11 +6631,18 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/ai_transit_hub)
 "nw" = (
 /obj/effect/floor_decal/spline/fancy/wood/corner{
 	dir = 1
+	},
+/obj/machinery/light_switch{
+	pixel_x = 27;
+	pixel_y = 29
 	},
 /turf/simulated/floor/wood,
 /area/offworld/orbital/station/bar)
@@ -6638,6 +6694,7 @@
 	},
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/lightgrey/border,
+/obj/item/geiger/wall/south,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/stairs_upper)
 "nD" = (
@@ -6780,6 +6837,10 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -26
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/teleport)
 "nQ" = (
@@ -6821,13 +6882,10 @@
 /turf/simulated/floor/carpet/turcarpet,
 /area/offworld/orbital/station/bar)
 "nV" = (
-/obj/machinery/firealarm{
-	dir = 8;
-	pixel_x = -28
-	},
 /obj/machinery/door/airlock/maintenance/engi,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/techfloor,
-/area/maintenance/orbital/aft)
+/area/offworld/orbital/station/dockinghanger)
 "nW" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced{
@@ -6927,6 +6985,9 @@
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 1
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/fore)
 "od" = (
@@ -7005,6 +7066,9 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/ai_transit_hub)
 "ok" = (
@@ -7012,6 +7076,13 @@
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
 	dir = 1
+	},
+/obj/structure/cable/green,
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
+/obj/structure/cable/green{
+	icon_state = "0-8"
 	},
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/ai_transit_hub)
@@ -7023,6 +7094,9 @@
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
 	dir = 1
+	},
+/obj/structure/cable/green{
+	icon_state = "0-8"
 	},
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/ai_transit_hub)
@@ -7068,6 +7142,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/offworld/orbital/station/halls/fore)
 "oq" = (
@@ -7128,6 +7203,14 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/teleport)
+"ow" = (
+/obj/machinery/power/rad_collector,
+/obj/effect/floor_decal/corner/orange{
+	dir = 6
+	},
+/obj/item/geiger/wall/east,
+/turf/simulated/floor/tiled/milspec/airless,
+/area/offworld/orbital/station/storage_engine_core)
 "ox" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -7198,10 +7281,6 @@
 	},
 /turf/simulated/floor/tiled/old_tile/white,
 /area/ai_upload)
-"oE" = (
-/obj/machinery/recharge_station,
-/turf/simulated/floor/tiled/kafel_full,
-/area/offworld/orbital/station/washing)
 "oF" = (
 /obj/structure/bed/chair/bay/chair/padded{
 	dir = 4
@@ -7222,9 +7301,10 @@
 	},
 /obj/machinery/light_switch{
 	dir = 1;
-	pixel_x = 28;
+	pixel_x = 24;
 	pixel_y = -28
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/kafel_full,
 /area/offworld/orbital/station/washing)
 "oH" = (
@@ -7269,6 +7349,86 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/central)
+"oK" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/corner/orange,
+/obj/machinery/light_switch/breaker{
+	pixel_x = 32;
+	pixel_y = -32
+	},
+/turf/simulated/floor/tiled/milspec/airless,
+/area/offworld/orbital/station/storage_engine_core)
+"oL" = (
+/obj/structure/railing/grey,
+/obj/item/geiger/wall/west,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/airless,
+/area/offworld/orbital/station/engine_core_starboard)
+"oM" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 9
+	},
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/item/geiger/wall/west,
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/power_distribution)
+"oN" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 6
+	},
+/obj/item/geiger/wall/east,
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/power_distribution)
+"oO" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 10
+	},
+/obj/effect/floor_decal/corner/orange{
+	dir = 5
+	},
+/obj/item/geiger/wall/north,
+/turf/simulated/floor/airless,
+/area/offworld/orbital/station/engine_core_port)
+"oP" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 10
+	},
+/obj/item/geiger/wall/north,
+/turf/simulated/floor/airless,
+/area/offworld/orbital/station/engine_core_starboard)
+"oQ" = (
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/blue/border{
+	dir = 4
+	},
+/obj/item/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = 26
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/aft)
+"oR" = (
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/blue/border{
+	dir = 4
+	},
+/obj/item/geiger/wall/east,
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/aft)
 "oS" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
@@ -7281,6 +7441,10 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled/kafel_full/beige,
 /area/offworld/orbital/station/washing)
@@ -7332,8 +7496,37 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/offworld/orbital/station/washing)
+"oZ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/aux,
+/obj/structure/disposalpipe/junction{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/aft)
+"pa" = (
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/floor_decal/borderfloor/corner,
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/blue/bordercorner,
+/obj/effect/floor_decal/corner/blue/bordercorner{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/aft)
 "pb" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 8
@@ -7358,20 +7551,59 @@
 	},
 /turf/simulated/floor/water/digestive_enzymes/nanites,
 /area/ai)
+"pf" = (
+/obj/machinery/disposal,
+/obj/structure/disposalpipe/trunk{
+	dir = 8
+	},
+/obj/effect/floor_decal/steeldecal/monofloor{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/aft)
 "pg" = (
 /obj/structure/bed/chair/bay/chair/padded/purple{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/observation)
+"ph" = (
+/obj/structure/bed/chair/bay/shuttle{
+	dir = 8
+	},
+/obj/item/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -21;
+	pixel_x = -6
+	},
+/obj/item/geiger/wall/north,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/space)
 "pi" = (
 /obj/structure/lattice,
 /turf/space,
 /area/space)
+"pj" = (
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/blue/border,
+/obj/machinery/disposal/wall{
+	pixel_y = -32;
+	dir = 1
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/old_tile/white,
+/area/offworld/orbital/station/medical_treatment)
+"pk" = (
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled/old_tile/white,
+/area/offworld/orbital/station/medical_treatment)
 "pl" = (
 /obj/effect/floor_decal/corner/white/full{
 	dir = 8
 	},
+/obj/item/geiger/wall/north,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/teleport)
 "pm" = (
@@ -7399,6 +7631,9 @@
 /obj/machinery/teleport/station,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/offworld/orbital/station/teleport)
+"pp" = (
+/turf/simulated/shuttle/wall/dark/hard_corner,
+/area/shuttle/belter)
 "pq" = (
 /obj/machinery/computer/teleporter{
 	dir = 2;
@@ -7440,6 +7675,17 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/ai_transit_hub)
+"pu" = (
+/obj/structure/bed/chair/shuttle_padded{
+	dir = 1
+	},
+/obj/item/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -21;
+	pixel_x = 3
+	},
+/turf/simulated/shuttle/floor/voidcraft/dark/turfpack/airless,
+/area/shuttle/belter)
 "pv" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
@@ -7599,6 +7845,13 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/ai_sat/solar_airlock)
+"pL" = (
+/obj/machinery/light_switch/breaker{
+	pixel_x = 27;
+	pixel_y = 25
+	},
+/turf/simulated/shuttle/floor/voidcraft/dark/turfpack/airless,
+/area/shuttle/belter)
 "pM" = (
 /obj/effect/fancy_shuttle/secbus{
 	dir = 1;
@@ -7679,6 +7932,15 @@
 	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/ai_cyborg_station)
+"pU" = (
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/blue/border,
+/obj/item/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -22
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/stairs_upper)
 "pV" = (
 /obj/structure/transit_tube{
 	icon_state = "W-SE"
@@ -7703,6 +7965,9 @@
 /obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/wall/r_wall,
 /area/ai_sat/access_shaft)
+"pY" = (
+/turf/simulated/wall,
+/area/maintenance/orbital/aft)
 "pZ" = (
 /obj/effect/fancy_shuttle/medbus{
 	fancy_shuttle_tag = "medi"
@@ -7753,6 +8018,11 @@
 	},
 /turf/simulated/mineral/floor/ignore_cavegen/turfpack/airless,
 /area/ai_sat/core_external)
+"qe" = (
+/obj/machinery/floodlight,
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor,
+/area/maintenance/orbital/aft)
 "qf" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -7823,6 +8093,16 @@
 /obj/machinery/sleep_console,
 /turf/simulated/floor/tiled/old_tile/white,
 /area/offworld/orbital/station/medical_treatment)
+"qo" = (
+/turf/simulated/wall,
+/area/offworld/orbital/station/halls/central)
+"qp" = (
+/obj/structure/window/maintenance_panel{
+	dir = 1
+	},
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/maintenance/orbital/aft)
 "qq" = (
 /obj/structure/cable/cyan{
 	icon_state = "4-9"
@@ -7882,12 +8162,14 @@
 "qw" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/disposalpipe/segment,
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/borderfloor/corner,
 /obj/effect/floor_decal/corner/lightgrey/bordercorner,
+/obj/structure/disposalpipe/junction{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/fore)
 "qx" = (
@@ -7903,6 +8185,22 @@
 "qz" = (
 /turf/simulated/mineral/vacuum,
 /area/offworld/orbital/exterior)
+"qA" = (
+/turf/simulated/wall,
+/area/offworld/orbital/station/dockinghanger)
+"qB" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/item/geiger/wall/east,
+/turf/simulated/floor/tiled/dark,
+/area/offworld/orbital/station/dockinghanger)
 "qC" = (
 /obj/structure/transit_tube{
 	icon_state = "D-SW"
@@ -7955,6 +8253,33 @@
 	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/offworld/orbital/station/telecomms)
+"qJ" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/brown/border{
+	dir = 4
+	},
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = 26;
+	pixel_y = 0
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/central)
+"qK" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 8
+	},
+/obj/item/geiger/wall/west,
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/central)
 "qL" = (
 /obj/structure/window/reinforced{
 	dir = 8
@@ -7990,6 +8315,11 @@
 	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/ai_cyborg_station)
+"qN" = (
+/obj/machinery/disposal,
+/obj/structure/disposalpipe/trunk,
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/central)
 "qO" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 6
@@ -8108,6 +8438,24 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/central)
+"qY" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 4
+	},
+/obj/item/geiger/wall/east,
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/central)
 "qZ" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -8118,6 +8466,19 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/aux,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/power_distribution)
+"ra" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 4
+	},
+/obj/item/geiger/wall/east,
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/port_observation)
 "rb" = (
 /obj/machinery/firealarm{
 	pixel_y = 26
@@ -8237,6 +8598,24 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/power_distribution)
+"rp" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/lightgrey/border,
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -26
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/port_observation)
 "rq" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -8259,6 +8638,25 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/stairs_upper)
+"rr" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/lightgrey/border,
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -7;
+	pixel_y = -30;
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/port_observation)
 "rs" = (
 /obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/wall/r_wall,
@@ -8282,11 +8680,23 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/old_tile/white,
 /area/offworld/orbital/station/medical_treatment)
 "rw" = (
 /turf/simulated/wall/r_wall,
 /area/ai_sat/core_external)
+"rx" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/lightgrey/border,
+/obj/item/geiger/wall/south,
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/starboard)
 "ry" = (
 /obj/structure/cable/orange{
 	icon_state = "4-10"
@@ -8332,6 +8742,12 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/teleport)
+"rF" = (
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/lightgrey/border,
+/obj/item/geiger/wall/south,
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/starboard)
 "rG" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -8340,6 +8756,9 @@
 	fancy_shuttle_tag = "orbesc2"
 	},
 /area/space)
+"rH" = (
+/turf/simulated/wall,
+/area/offworld/orbital/station/halls/starboard)
 "rI" = (
 /obj/machinery/atmospherics/pipe/zpipe/down/scrubbers{
 	dir = 1
@@ -8371,6 +8790,15 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/central)
+"rK" = (
+/turf/simulated/wall,
+/area/maintenance/orbital/fore)
+"rL" = (
+/obj/machinery/disposal,
+/obj/effect/floor_decal/steeldecal/monofloor,
+/obj/structure/disposalpipe/trunk,
+/turf/simulated/floor/tiled/milspec,
+/area/maintenance/orbital/fore)
 "rM" = (
 /obj/machinery/door/airlock/highsecurity{
 	name = "AI Upload Access";
@@ -8396,6 +8824,18 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ai_upload_foyer)
+"rN" = (
+/obj/structure/bed/chair/bay/shuttle{
+	dir = 8
+	},
+/obj/item/geiger/wall/north,
+/obj/item/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -21;
+	pixel_x = -6
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/space)
 "rO" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/grille,
@@ -8411,6 +8851,22 @@
 	},
 /turf/simulated/floor/plating,
 /area/ai_sat/access_shaft)
+"rP" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 4
+	},
+/obj/item/geiger/wall/east,
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/central)
 "rQ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
@@ -8424,7 +8880,18 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/central)
 "rR" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall,
+/area/offworld/orbital/station/bar)
+"rS" = (
+/obj/structure/bed/chair/backed_red{
+	dir = 1
+	},
+/obj/effect/floor_decal/spline/plain,
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -26
+	},
+/turf/simulated/floor/carpet/turcarpet,
 /area/offworld/orbital/station/bar)
 "rT" = (
 /obj/machinery/porta_turret/ai_defense,
@@ -8450,6 +8917,9 @@
 	},
 /turf/simulated/floor/airless,
 /area/offworld/orbital/station/engine_core_port)
+"rW" = (
+/turf/simulated/wall,
+/area/offworld/orbital/station/halls/fore)
 "rX" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/effect/floor_decal/borderfloor/corner{
@@ -8460,6 +8930,11 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/port_observation)
+"rY" = (
+/obj/machinery/door/airlock/glass,
+/obj/machinery/door/firedoor/multi_tile/glass,
+/turf/simulated/floor/tiled/steel_ridged,
+/area/offworld/orbital/station/halls/fore)
 "rZ" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 6
@@ -8492,6 +8967,15 @@
 /obj/structure/grille,
 /turf/simulated/floor/airless,
 /area/ai)
+"sc" = (
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/lightgrey/border,
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/fore)
 "sd" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 9
@@ -8528,6 +9012,27 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/ai_sat/access_shaft)
+"sf" = (
+/obj/structure/disposalpipe/trunk,
+/obj/machinery/disposal,
+/obj/effect/floor_decal/steeldecal/monofloor,
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/fore)
+"sg" = (
+/obj/machinery/door/airlock/glass_security{
+	id_tag = "BrigFoyer";
+	layer = 2.8;
+	name = "Security Wing";
+	req_one_access = list(1,40,63)
+	},
+/obj/machinery/door/firedoor/multi_tile/glass,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/fore)
 "sh" = (
 /obj/structure/railing/grey{
 	dir = 4
@@ -8541,6 +9046,15 @@
 	},
 /turf/simulated/floor/airless,
 /area/ai_sat/power_control)
+"si" = (
+/obj/machinery/door/airlock/glass_security{
+	id_tag = "BrigFoyer";
+	layer = 2.8;
+	name = "Security Wing";
+	req_one_access = list(1,40,63)
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/fore)
 "sj" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 9
@@ -8559,6 +9073,10 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/power_distribution)
+"sk" = (
+/obj/machinery/ai_status_display,
+/turf/simulated/wall/r_wall,
+/area/offworld/orbital/station/halls/fore)
 "sl" = (
 /obj/machinery/door/airlock{
 	name = "AI Download Chamber";
@@ -8584,6 +9102,10 @@
 /obj/item/smes_coil/super_io,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/storage)
+"sn" = (
+/obj/machinery/status_display,
+/turf/simulated/wall/r_wall,
+/area/offworld/orbital/station/halls/fore)
 "so" = (
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ai)
@@ -8611,6 +9133,48 @@
 	},
 /turf/simulated/floor/water/digestive_enzymes/nanites,
 /area/ai)
+"sr" = (
+/obj/effect/floor_decal/corner/white{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/ai_transit_hub)
+"ss" = (
+/obj/effect/floor_decal/corner/white{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "4-9"
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals_central7{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/ai_transit_hub)
 "st" = (
 /obj/machinery/light{
 	dir = 8
@@ -8624,10 +9188,112 @@
 	},
 /turf/simulated/floor/tiled/old_tile/white,
 /area/ai_upload)
+"su" = (
+/obj/machinery/recharge_station,
+/turf/simulated/floor/tiled/kafel_full/beige,
+/area/offworld/orbital/station/washing)
+"sv" = (
+/obj/structure/janitorialcart,
+/obj/item/storage/bag/trash,
+/obj/item/storage/bag/trash,
+/obj/item/storage/bag/trash,
+/obj/item/storage/bag/trash,
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -26
+	},
+/turf/simulated/floor/tiled/kafel_full/beige,
+/area/offworld/orbital/station/washing)
+"sw" = (
+/obj/structure/extinguisher_cabinet{
+	pixel_y = -30;
+	dir = 1;
+	pixel_x = 5
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/offworld/orbital/station/washing)
+"sx" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/red/full,
+/obj/structure/extinguisher_cabinet{
+	dir = 4;
+	pixel_x = -30;
+	pixel_y = -7
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/security)
+"sy" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/light_switch{
+	dir = 1;
+	pixel_x = -26;
+	pixel_y = -28
+	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/security)
+"sz" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/security)
+"sA" = (
+/obj/structure/grille,
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/offworld/orbital/station/security/armory)
 "sB" = (
 /obj/structure/particle_accelerator/particle_emitter/right,
 /turf/simulated/floor/airless,
 /area/offworld/orbital/station/engine_core_starboard)
+"sC" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/red/full,
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -26
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/security/armory)
+"sD" = (
+/obj/effect/floor_decal/corner/red{
+	dir = 10
+	},
+/obj/machinery/recharger/wallcharger{
+	pixel_x = 4;
+	pixel_y = -30
+	},
+/obj/machinery/recharger/wallcharger{
+	pixel_x = 4;
+	pixel_y = -38
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/security/armory)
 "sE" = (
 /obj/effect/landmark{
 	name = "tripai"
@@ -8650,12 +9316,28 @@
 	},
 /turf/simulated/floor/greengrid,
 /area/ai)
+"sF" = (
+/obj/effect/floor_decal/corner/red{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/security/armory)
 "sG" = (
 /obj/machinery/light/small,
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/industrial/danger,
 /turf/simulated/floor/tiled/dark,
 /area/ai_sat/access_shaft)
+"sH" = (
+/obj/effect/floor_decal/corner/red/full{
+	dir = 4
+	},
+/obj/machinery/alarm{
+	dir = 8;
+	pixel_x = 26
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/security/armory)
 "sI" = (
 /obj/structure/cable/cyan{
 	icon_state = "1-6"
@@ -8671,14 +9353,37 @@
 /obj/effect/floor_decal/corner/white{
 	dir = 9
 	},
+/obj/item/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -26
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/teleport)
+"sK" = (
+/turf/simulated/wall/r_wall,
+/area/offworld/orbital/station/security/armory)
+"sL" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "6-9"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/ai_transit_hub)
 "sM" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/milspec/airless,
 /area/offworld/orbital/station/storage_engine_core)
+"sN" = (
+/obj/structure/disposalpipe/junction{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/ai_transit_hub)
 "sO" = (
 /obj/structure/window/basic{
 	dir = 1
@@ -8698,6 +9403,33 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/port_observation)
+"sQ" = (
+/obj/effect/floor_decal/corner/red{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/security)
+"sR" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 8
+	},
+/obj/structure/cable/green{
+	icon_state = "2-9"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals_central7{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/security)
 "sS" = (
 /obj/machinery/vending/coffee{
 	dir = 4;
@@ -8728,6 +9460,18 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/dockingarm)
+"sU" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/security)
 "sV" = (
 /obj/structure/particle_accelerator/fuel_chamber,
 /turf/simulated/floor/airless,
@@ -8766,6 +9510,24 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/ai_sat/access_shaft)
+"sZ" = (
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/highsecurity{
+	name = "Restock Armory";
+	req_access = list(1);
+	req_one_access = list(1,3,19)
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/security/armory)
 "ta" = (
 /obj/structure/table/standard,
 /obj/structure/window/reinforced{
@@ -8798,6 +9560,24 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/observation)
+"td" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/security/armory)
+"te" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/security/armory)
 "tf" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/grille,
@@ -8807,10 +9587,63 @@
 /obj/structure/window/reinforced,
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/storage)
+"tg" = (
+/obj/effect/floor_decal/corner/red{
+	dir = 6
+	},
+/obj/machinery/power/apc{
+	dir = 4;
+	name = "east bump";
+	pixel_x = 24
+	},
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/security/armory)
+"th" = (
+/obj/machinery/disposal/wall{
+	dir = 4;
+	pixel_x = -35
+	},
+/obj/structure/disposalpipe/trunk,
+/turf/simulated/floor/tiled/kafel_full,
+/area/offworld/orbital/station/washing)
+"ti" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 9
+	},
+/obj/machinery/power/apc{
+	dir = 8;
+	name = "west bump";
+	pixel_x = -24
+	},
+/obj/structure/cable/green{
+	icon_state = "0-6"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/security)
 "tj" = (
 /obj/machinery/particle_accelerator/control_box,
 /turf/simulated/floor/airless,
 /area/offworld/orbital/station/engine_core_starboard)
+"tk" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/security)
+"tl" = (
+/obj/effect/floor_decal/corner/red{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/security)
 "tm" = (
 /obj/machinery/power/apc/critical{
 	dir = 8;
@@ -8836,6 +9669,55 @@
 	},
 /turf/simulated/floor/greengrid,
 /area/ai_upload)
+"tn" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/red/full{
+	dir = 8
+	},
+/obj/structure/table/rack/shelf/steel,
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 5;
+	pixel_y = 30
+	},
+/obj/machinery/door/window/brigdoor/eastright{
+	dir = 2
+	},
+/obj/item/suit_cooling_unit,
+/obj/item/rig/combat/empty,
+/obj/item/clothing/mask/breath,
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/security/armory)
+"to" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/item/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 25
+	},
+/obj/machinery/door/window/brigdoor/eastright{
+	dir = 2
+	},
+/obj/structure/window/reinforced{
+	dir = 8;
+	pixel_x = -3
+	},
+/obj/item/clothing/glasses/thermal,
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/security/armory)
+"tp" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/machinery/door/window/brigdoor/eastright{
+	dir = 2
+	},
+/obj/structure/window/reinforced{
+	dir = 8;
+	pixel_x = -3
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/security/armory)
 "tq" = (
 /obj/machinery/door/airlock/glass_external{
 	frequency = 1381;
@@ -8865,9 +9747,40 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/power_distribution)
+"ts" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/red/full{
+	dir = 1
+	},
+/obj/structure/table/rack/shelf/steel,
+/obj/machinery/door/window/brigdoor/eastright{
+	dir = 2
+	},
+/obj/structure/window/reinforced{
+	dir = 8;
+	pixel_x = -3
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/security/armory)
 "tt" = (
 /turf/simulated/floor/greengrid,
 /area/offworld/orbital/station/telecomms)
+"tu" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/ai_transit_hub)
+"tv" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/ai_transit_hub)
 "tw" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
@@ -8880,6 +9793,35 @@
 	},
 /turf/simulated/floor/airless,
 /area/offworld/orbital/station/engine_core_starboard)
+"tx" = (
+/obj/effect/floor_decal/corner/white{
+	dir = 6
+	},
+/obj/machinery/power/apc{
+	dir = 4;
+	name = "east bump";
+	pixel_x = 24
+	},
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/ai_transit_hub)
+"ty" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/cable/green{
+	icon_state = "2-5"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/security)
 "tz" = (
 /obj/structure/table/standard,
 /obj/structure/window/reinforced{
@@ -8893,6 +9835,38 @@
 /obj/machinery/message_server,
 /turf/simulated/floor/greengrid,
 /area/offworld/orbital/station/telecomms)
+"tB" = (
+/obj/effect/floor_decal/corner/red{
+	dir = 6
+	},
+/obj/machinery/firealarm{
+	dir = 4;
+	layer = 3.3;
+	pixel_x = 26
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/security)
+"tC" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled/kafel_full,
+/area/offworld/orbital/station/washing)
+"tD" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 8
+	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/security)
 "tE" = (
 /obj/machinery/atmospherics/pipe/manifold4w/hidden,
 /turf/simulated/floor/tiled/techmaint,
@@ -8908,6 +9882,19 @@
 /obj/effect/floor_decal/eshui/emblem/eshui_l,
 /turf/simulated/floor/airless,
 /area/offworld/orbital/station/engine_core_port)
+"tH" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/red,
+/obj/structure/cable/green{
+	icon_state = "4-10"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/security)
 "tI" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -8917,10 +9904,40 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/aft)
+"tJ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 10
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/security)
 "tK" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/ai_upload)
+"tL" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 10
+	},
+/obj/structure/cable/green{
+	icon_state = "5-8"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/security)
 "tM" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 5
@@ -8943,6 +9960,18 @@
 "tP" = (
 /turf/simulated/floor/airless,
 /area/offworld/orbital/exterior)
+"tQ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/security)
 "tR" = (
 /obj/machinery/firealarm{
 	dir = 8;
@@ -8956,6 +9985,12 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/central)
+"tS" = (
+/obj/effect/floor_decal/corner/red{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/security)
 "tT" = (
 /obj/structure/cable/orange{
 	icon_state = "4-8"
@@ -8983,6 +10018,20 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/port_observation)
+"tV" = (
+/obj/machinery/light,
+/obj/effect/floor_decal/corner/red/full{
+	dir = 4
+	},
+/obj/machinery/vending/foodfast{
+	dir = 8;
+	pixel_x = 7
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/security)
+"tW" = (
+/turf/simulated/wall/r_wall,
+/area/offworld/orbital/station/security)
 "tX" = (
 /obj/machinery/camera/network/command{
 	c_tag = "AI - Messaging Server"
@@ -9023,6 +10072,13 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/starboard)
+"tZ" = (
+/obj/effect/floor_decal/corner/red/full{
+	dir = 8
+	},
+/obj/machinery/recharge_station,
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/security)
 "ua" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/grille,
@@ -9046,10 +10102,61 @@
 	},
 /turf/simulated/floor/wood,
 /area/ai)
+"uc" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/security)
+"ud" = (
+/obj/effect/floor_decal/corner/red{
+	dir = 5
+	},
+/obj/machinery/alarm{
+	pixel_y = 26
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/security)
+"ue" = (
+/obj/effect/floor_decal/corner/red{
+	dir = 5
+	},
+/obj/item/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 25
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/security)
+"uf" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/security)
+"ug" = (
+/obj/effect/floor_decal/corner/red{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/security)
 "uh" = (
 /obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/wall/r_wall,
 /area/ai_server_room)
+"ui" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/green{
+	icon_state = "1-10"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/security)
 "uj" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/disposalpipe/segment{
@@ -9081,6 +10188,31 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/observation)
+"um" = (
+/obj/effect/floor_decal/corner/red/full{
+	dir = 1
+	},
+/obj/machinery/vending/fitness{
+	dir = 8;
+	pixel_x = 8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/security)
+"un" = (
+/turf/simulated/wall/r_wall,
+/area/offworld/orbital/station/security/lockup)
+"uo" = (
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/glass_security{
+	name = "Salvage Lockup"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/security/lockup)
 "up" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/structure/cable/green{
@@ -9088,6 +10220,21 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/stairs_upper)
+"uq" = (
+/obj/structure/grille,
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/offworld/orbital/station/security/holding_cell)
 "ur" = (
 /obj/structure/cable{
 	icon_state = "1-4"
@@ -9123,6 +10270,19 @@
 	},
 /turf/simulated/floor/airless,
 /area/ai_sat/power_control)
+"uu" = (
+/obj/machinery/door/airlock/glass_security{
+	name = "Holding Cell";
+	req_one_access = list(1,2)
+	},
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/security/holding_cell)
 "uv" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -9191,6 +10351,30 @@
 /obj/structure/window/reinforced/full,
 /turf/simulated/floor/plating,
 /area/ai)
+"uz" = (
+/obj/structure/grille,
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/offworld/orbital/station/security/holding_cell)
+"uA" = (
+/obj/structure/grille,
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/offworld/orbital/station/security/holding_cell)
 "uB" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 6
@@ -9202,6 +10386,9 @@
 	},
 /turf/simulated/floor/tiled/milspec/airless,
 /area/offworld/orbital/station/storage_engine_core)
+"uC" = (
+/turf/simulated/wall/r_wall,
+/area/offworld/orbital/station/security/holding_cell)
 "uD" = (
 /obj/machinery/firealarm{
 	dir = 8;
@@ -9209,6 +10396,21 @@
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/offworld/orbital/station/washing)
+"uE" = (
+/obj/structure/closet{
+	name = "Evidence Closet"
+	},
+/obj/effect/floor_decal/corner/red/full,
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
+/obj/machinery/power/apc{
+	dir = 8;
+	name = "west bump";
+	pixel_x = -24
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/security/lockup)
 "uF" = (
 /obj/machinery/the_singularitygen/tesla,
 /obj/effect/floor_decal/corner/orange{
@@ -9217,8 +10419,31 @@
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/item/geiger/wall/west,
 /turf/simulated/floor/tiled/milspec/airless,
 /area/offworld/orbital/station/storage_engine_core)
+"uG" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/light_switch{
+	dir = 1;
+	pixel_x = -26;
+	pixel_y = -28
+	},
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/security/lockup)
+"uH" = (
+/obj/structure/closet{
+	name = "Evidence Closet"
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/security/lockup)
 "uI" = (
 /turf/simulated/mineral/floor/ignore_cavegen/turfpack/airless,
 /area/space)
@@ -9262,6 +10487,20 @@
 	},
 /turf/simulated/floor/tiled/milspec/airless,
 /area/offworld/orbital/station/storage_engine_core)
+"uM" = (
+/obj/structure/closet{
+	name = "Evidence Closet"
+	},
+/obj/effect/floor_decal/corner/red/full{
+	dir = 4
+	},
+/obj/machinery/firealarm{
+	dir = 4;
+	layer = 3.3;
+	pixel_x = 26
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/security/lockup)
 "uN" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 8
@@ -9274,6 +10513,34 @@
 /obj/item/smes_coil/super_capacity,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/storage)
+"uO" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/red/full,
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -28
+	},
+/obj/machinery/light_switch{
+	dir = 1;
+	pixel_x = -26;
+	pixel_y = -28
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/security/holding_cell)
+"uP" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/security/holding_cell)
 "uQ" = (
 /obj/structure/cable{
 	icon_state = "2-5"
@@ -9282,7 +10549,7 @@
 /area/offworld/orbital/station/engine_core_starboard)
 "uR" = (
 /obj/machinery/camera/network/engineering_outpost{
-	c_tag = "PTL - Port Engine One";
+	c_tag = "REX - Port Engine One";
 	dir = 6
 	},
 /turf/simulated/mineral/floor/ignore_cavegen/turfpack/airless,
@@ -9298,6 +10565,13 @@
 /obj/effect/landmark/holiday_event_spawn,
 /turf/simulated/floor/carpet/turcarpet,
 /area/ai)
+"uT" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/effect/floor_decal/corner/red{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/security/holding_cell)
 "uU" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 4
@@ -9307,6 +10581,37 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/power_distribution)
+"uV" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/security/holding_cell)
+"uW" = (
+/obj/machinery/door/airlock/silver{
+	name = "Drop Pod"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/security/holding_cell)
+"uX" = (
+/obj/structure/toilet/prison{
+	dir = 8
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/structure/handrail,
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/security/holding_cell)
 "uY" = (
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 8
@@ -9322,6 +10627,22 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/port_observation)
+"va" = (
+/obj/structure/closet{
+	name = "Evidence Closet"
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 9
+	},
+/obj/machinery/alarm{
+	dir = 4;
+	pixel_x = -26
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/security/lockup)
 "vb" = (
 /obj/structure/table/standard,
 /obj/item/storage/firstaid/toxin{
@@ -9364,6 +10685,29 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/power_distribution)
+"ve" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/security/lockup)
+"vf" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/security/lockup)
+"vg" = (
+/obj/item/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = 23
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/security/lockup)
 "vh" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -9376,20 +10720,98 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/aux,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/power_distribution)
+"vi" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 9
+	},
+/obj/item/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -23
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/security/holding_cell)
 "vj" = (
 /obj/machinery/field_generator,
 /turf/simulated/floor/airless,
 /area/offworld/orbital/station/engine_core_starboard)
+"vk" = (
+/obj/structure/cable/green{
+	icon_state = "2-9"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/security/holding_cell)
 "vl" = (
 /obj/effect/floor_decal/corner/green{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/old_tile/white,
 /area/offworld/orbital/station/medical_treatment)
+"vm" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/security/holding_cell)
 "vn" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/water/digestive_enzymes/nanites,
 /area/ai)
+"vo" = (
+/obj/effect/floor_decal/corner/red{
+	dir = 6
+	},
+/obj/structure/extinguisher_cabinet{
+	dir = 8;
+	pixel_x = 30;
+	pixel_y = 8
+	},
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/security/holding_cell)
+"vp" = (
+/obj/structure/closet{
+	name = "Evidence Closet"
+	},
+/obj/effect/floor_decal/corner/red/full{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/security/lockup)
+"vq" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 5
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 5;
+	pixel_y = 30
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/security/lockup)
+"vr" = (
+/obj/structure/closet{
+	name = "Evidence Closet"
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/security/lockup)
+"vs" = (
+/obj/structure/closet{
+	name = "Evidence Closet"
+	},
+/obj/effect/floor_decal/corner/red/full{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/security/lockup)
 "vt" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -9420,10 +10842,49 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/observation)
+"vw" = (
+/obj/effect/floor_decal/corner/red/full{
+	dir = 8
+	},
+/obj/machinery/power/apc{
+	dir = 8;
+	name = "west bump";
+	pixel_x = -24
+	},
+/obj/structure/cable/green{
+	icon_state = "0-6"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/security/holding_cell)
+"vx" = (
+/obj/effect/floor_decal/corner/red{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/security/holding_cell)
+"vy" = (
+/obj/effect/floor_decal/corner/red/full{
+	dir = 1
+	},
+/obj/machinery/alarm{
+	dir = 8;
+	pixel_x = 26
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/security/holding_cell)
 "vz" = (
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/water/digestive_enzymes/nanites,
 /area/ai)
+"vA" = (
+/obj/structure/grille,
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced,
+/turf/simulated/floor/plating,
+/area/offworld/orbital/station/security/holding_cell)
 "vB" = (
 /obj/machinery/light,
 /obj/effect/floor_decal/corner/white{
@@ -9490,16 +10951,6 @@
 	},
 /turf/simulated/floor/wood,
 /area/ai)
-"vL" = (
-/obj/machinery/power/rad_collector,
-/obj/effect/floor_decal/corner/orange{
-	dir = 6
-	},
-/obj/machinery/light_switch/breaker{
-	pixel_x = 32
-	},
-/turf/simulated/floor/tiled/milspec/airless,
-/area/offworld/orbital/station/storage_engine_core)
 "vS" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
@@ -9604,6 +11055,11 @@
 	dir = 10
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/disposal/wall{
+	dir = 8;
+	pixel_x = 32
+	},
+/obj/structure/disposalpipe/trunk,
 /turf/simulated/floor/tiled/kafel_full/beige,
 /area/offworld/orbital/station/washing)
 "wn" = (
@@ -9832,9 +11288,6 @@
 /obj/effect/floor_decal/corner/orange{
 	dir = 9
 	},
-/obj/machinery/light_switch/breaker{
-	pixel_x = -32
-	},
 /turf/simulated/floor/tiled/milspec/airless,
 /area/offworld/orbital/station/storage_engine_core)
 "xl" = (
@@ -9928,6 +11381,9 @@
 	},
 /obj/structure/handrail,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/obj/structure/disposalpipe/trunk{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/kafel_full,
@@ -10285,6 +11741,10 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
+/obj/structure/disposalpipe/junction{
+	dir = 2;
+	icon_state = "pipe-j2"
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/offworld/orbital/station/washing)
 "yY" = (
@@ -10316,6 +11776,10 @@
 	},
 /obj/effect/floor_decal/corner/orange{
 	dir = 4
+	},
+/obj/machinery/light_switch/breaker{
+	pixel_y = 33;
+	pixel_x = 32
 	},
 /turf/simulated/floor/tiled/milspec/airless,
 /area/offworld/orbital/station/storage_engine_core)
@@ -10420,6 +11884,9 @@
 	},
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 1
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/fore)
@@ -10551,9 +12018,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
@@ -10562,6 +12026,9 @@
 	},
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 1
+	},
+/obj/structure/disposalpipe/junction{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/starboard)
@@ -11053,18 +12520,6 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/fore)
-"BP" = (
-/obj/structure/grille,
-/obj/machinery/door/firedoor/border_only,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/window/reinforced,
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/turf/simulated/floor/plating,
-/area/offworld/orbital/station/halls/fore)
 "BS" = (
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/airless,
@@ -11073,6 +12528,7 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor,
 /area/maintenance/orbital/aft)
 "Ca" = (
@@ -11204,13 +12660,11 @@
 /area/offworld/orbital/station/halls/central)
 "CE" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
-/obj/item/radio/intercom{
-	dir = 1;
-	name = "Station Intercom (General)";
-	pixel_y = 22
-	},
 /obj/effect/floor_decal/corner/brown{
 	dir = 5
+	},
+/obj/machinery/firealarm{
+	pixel_y = 26
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/dockinghanger)
@@ -11409,7 +12863,7 @@
 /obj/structure/disposalpipe/trunk,
 /obj/structure/window/maintenance_panel,
 /turf/simulated/floor/tiled/techfloor,
-/area/maintenance/orbital/aft)
+/area/offworld/orbital/station/dockinghanger)
 "Dz" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/grille,
@@ -11675,6 +13129,7 @@
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 8
 	},
+/obj/item/geiger/wall/west,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/observation)
 "Ez" = (
@@ -11774,6 +13229,10 @@
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 1
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/item/geiger/wall/north,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/fore)
 "EU" = (
@@ -11920,6 +13379,9 @@
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 1
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/fore)
 "FC" = (
@@ -11949,7 +13411,7 @@
 /obj/item/radio/intercom{
 	dir = 8;
 	name = "Station Intercom (General)";
-	pixel_x = -31
+	pixel_x = -26
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -12387,6 +13849,9 @@
 /obj/structure/transit_tube{
 	icon_state = "N-S"
 	},
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/ai_transit_hub)
 "HI" = (
@@ -12431,9 +13896,8 @@
 /obj/structure/cable/green{
 	icon_state = "2-8"
 	},
-/obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
+/obj/structure/disposalpipe/junction/yjunction{
+	dir = 8
 	},
 /turf/simulated/floor,
 /area/offworld/orbital/station/halls/fore)
@@ -12649,14 +14113,12 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/dockingarm)
 "IS" = (
-/obj/effect/floor_decal/corner/orange{
-	dir = 5
-	},
 /obj/machinery/camera/network/engineering_outpost{
-	c_tag = "PTL - Tool Storage Central"
+	c_tag = "REX - Tool Storage Central"
 	},
 /obj/machinery/disposal,
 /obj/structure/disposalpipe/trunk,
+/obj/effect/floor_decal/steeldecal/monofloor,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/storage)
 "IU" = (
@@ -13002,6 +14464,9 @@
 "Ka" = (
 /obj/machinery/hologram/holopad,
 /obj/structure/disposalpipe/segment,
+/obj/structure/cable/green{
+	icon_state = "1-6"
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/ai_transit_hub)
 "Kc" = (
@@ -13138,6 +14603,7 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor,
 /area/maintenance/orbital/aft)
 "Kv" = (
@@ -13256,6 +14722,10 @@
 "Lb" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/light,
+/obj/machinery/ai_status_display{
+	pixel_y = -32
+	},
+/obj/structure/closet/crate/chest,
 /turf/simulated/shuttle/floor/voidcraft/light/turfpack/airless,
 /area/shuttle/belter)
 "Ld" = (
@@ -13557,7 +15027,7 @@
 /area/ai)
 "LZ" = (
 /obj/machinery/camera/network/engineering_outpost{
-	c_tag = "PTL - Starboard Engine One"
+	c_tag = "REX - Starboard Engine One"
 	},
 /turf/simulated/mineral/floor/ignore_cavegen/turfpack/airless,
 /area/offworld/orbital/station/engine_core_starboard)
@@ -13611,14 +15081,8 @@
 /area/offworld/orbital/station/storage_engine_core)
 "Mr" = (
 /obj/structure/grille,
-/obj/structure/window/reinforced{
-	dir = 4
-	},
 /obj/machinery/door/firedoor/border_only,
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/structure/window/reinforced,
+/obj/structure/window/reinforced/full,
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/bar)
 "Mt" = (
@@ -13724,6 +15188,9 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "2-8"
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals_central7{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/central)
@@ -13877,6 +15344,14 @@
 /obj/effect/floor_decal/corner/white{
 	dir = 6
 	},
+/obj/machinery/firealarm{
+	dir = 4;
+	layer = 3.3;
+	pixel_x = 26
+	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/ai_transit_hub)
 "Nr" = (
@@ -13915,6 +15390,11 @@
 	},
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 10
+	},
+/obj/item/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -22
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/aft)
@@ -14269,6 +15749,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/old_tile/white,
 /area/offworld/orbital/station/medical_treatment)
 "OG" = (
@@ -14454,9 +15937,6 @@
 /obj/effect/floor_decal/corner/orange{
 	dir = 9
 	},
-/obj/machinery/light_switch/breaker{
-	pixel_x = -32
-	},
 /obj/machinery/light{
 	dir = 8
 	},
@@ -14563,6 +16043,9 @@
 	},
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 1
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/fore)
@@ -14677,6 +16160,10 @@
 	dir = 5
 	},
 /obj/machinery/light,
+/obj/structure/extinguisher_cabinet{
+	pixel_y = -30;
+	dir = 1
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/teleport)
 "Qh" = (
@@ -14876,11 +16363,8 @@
 	dir = 4
 	},
 /obj/machinery/disposal,
-/obj/effect/floor_decal/borderfloor{
-	dir = 10
-	},
-/obj/effect/floor_decal/corner/lightgrey/border{
-	dir = 10
+/obj/effect/floor_decal/steeldecal/monofloor{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/observation)
@@ -14952,6 +16436,10 @@
 /obj/structure/cable/green{
 	icon_state = "0-2"
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/offworld/orbital/station/washing)
 "Rb" = (
@@ -15006,6 +16494,7 @@
 	dir = 9
 	},
 /obj/machinery/shieldwallgen,
+/obj/item/geiger/wall/west,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/storage)
 "Rl" = (
@@ -15140,10 +16629,6 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/aft)
-"RL" = (
-/obj/structure/trash_pile,
-/turf/simulated/floor/tiled/kafel_full/beige,
-/area/offworld/orbital/station/washing)
 "RM" = (
 /obj/machinery/door/airlock/glass_external{
 	frequency = 1381;
@@ -15296,6 +16781,9 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "6-8"
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals_central7{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/starboard)
@@ -15668,24 +17156,6 @@
 /obj/effect/floor_decal/spline/plain,
 /turf/simulated/floor/carpet,
 /area/offworld/orbital/station/bar)
-"Tw" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/status_display{
-	pixel_y = 32
-	},
-/obj/effect/floor_decal/borderfloor{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/red/border{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/halls/fore)
 "Ty" = (
 /obj/effect/floor_decal/steeldecal/steel_decals_central7{
 	dir = 4
@@ -16074,6 +17544,9 @@
 /obj/machinery/atmospherics/pipe/zpipe/down/aux{
 	dir = 1
 	},
+/obj/structure/disposalpipe/down{
+	dir = 1
+	},
 /turf/simulated/open,
 /area/maintenance/orbital/aft)
 "UM" = (
@@ -16245,17 +17718,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/ai_transit_hub)
-"Vg" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/machinery/door/firedoor/border_only,
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/turf/simulated/floor/plating,
-/area/offworld/orbital/station/bar)
 "Vh" = (
 /obj/structure/cable{
 	icon_state = "5-10"
@@ -16299,6 +17761,7 @@
 /obj/effect/floor_decal/corner/white{
 	dir = 5
 	},
+/obj/item/geiger/wall/north,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/ai_transit_hub)
 "Vp" = (
@@ -16345,9 +17808,6 @@
 "Vs" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 10
-	},
-/obj/effect/floor_decal/corner/blue{
-	dir = 5
 	},
 /turf/simulated/floor/airless,
 /area/offworld/orbital/station/engine_core_starboard)
@@ -16448,6 +17908,15 @@
 	dir = 1
 	},
 /obj/structure/disposalpipe/segment,
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/ai_transit_hub)
 "VM" = (
@@ -16751,8 +18220,14 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/storage)
 "Xb" = (
-/obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/corner/brown/border,
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 8
+	},
+/obj/effect/floor_decal/borderfloor/corner,
+/obj/effect/floor_decal/corner/brown/bordercorner,
+/obj/effect/floor_decal/corner/brown/bordercorner{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/dockingarm)
 "Xf" = (
@@ -16776,6 +18251,9 @@
 	},
 /obj/effect/floor_decal/borderfloor/corner,
 /obj/effect/floor_decal/corner/brown/bordercorner,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/central)
 "Xm" = (
@@ -16814,6 +18292,7 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 6
 	},
+/obj/item/geiger/wall/east,
 /turf/simulated/floor/carpet,
 /area/offworld/orbital/station/bar)
 "Xw" = (
@@ -16831,6 +18310,11 @@
 	},
 /obj/effect/floor_decal/corner/red/border{
 	dir = 1
+	},
+/obj/item/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 25
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/fore)
@@ -16972,6 +18456,12 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
+/obj/item/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = 24
+	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/kafel_full,
 /area/offworld/orbital/station/washing)
 "XW" = (
@@ -17369,16 +18859,16 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/aft)
 "Zx" = (
-/obj/machinery/firealarm{
-	dir = 4;
-	pixel_x = 26;
-	pixel_y = -8
-	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
 	},
 /obj/effect/floor_decal/corner/brown/border{
 	dir = 4
+	},
+/obj/item/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = 23
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/central)
@@ -33056,7 +34546,7 @@ Xa
 Xa
 Ny
 pF
-dT
+oO
 ii
 jY
 lp
@@ -33167,7 +34657,7 @@ en
 rX
 lq
 pz
-bT
+ra
 eh
 yb
 cX
@@ -33471,7 +34961,7 @@ pA
 Ke
 sO
 UI
-Mp
+sr
 ok
 cX
 cX
@@ -33630,7 +35120,7 @@ Fd
 LR
 VL
 cA
-yF
+tu
 Ka
 Nh
 lB
@@ -33651,7 +35141,7 @@ cX
 cX
 wI
 cs
-PG
+rp
 wI
 cX
 cX
@@ -33794,7 +35284,7 @@ bZ
 pA
 aq
 sO
-ef
+sL
 nv
 mk
 nW
@@ -33813,7 +35303,7 @@ cX
 cX
 wI
 kC
-PG
+rr
 wI
 cX
 cX
@@ -33954,10 +35444,10 @@ qz
 qz
 nf
 mU
-UI
-UI
-ef
-Mp
+tv
+yF
+sN
+ss
 mk
 kF
 mN
@@ -34051,7 +35541,7 @@ aL
 aL
 aL
 aw
-aw
+be
 dI
 On
 br
@@ -34116,7 +35606,7 @@ qz
 qz
 nf
 Vo
-UI
+ef
 UI
 om
 oy
@@ -34278,7 +35768,7 @@ qz
 qz
 nf
 gI
-Nq
+tx
 Nq
 dc
 fs
@@ -34287,11 +35777,11 @@ bb
 Ef
 mk
 mL
-eK
+rN
 mL
 tP
 mj
-eK
+rN
 mj
 jg
 rJ
@@ -34340,7 +35830,7 @@ rC
 rC
 OQ
 eF
-eK
+ph
 eF
 OQ
 OQ
@@ -34367,7 +35857,7 @@ iK
 tr
 RM
 iK
-iK
+oM
 md
 bB
 XA
@@ -34464,7 +35954,7 @@ Cz
 gr
 oJ
 oJ
-cl
+qY
 Jq
 fy
 oJ
@@ -34605,7 +36095,7 @@ qz
 qz
 qz
 qz
-qz
+mk
 mk
 bo
 Ef
@@ -34620,21 +36110,21 @@ jg
 jg
 TA
 JG
-jg
-jg
+qo
+qo
 QT
 kM
+qo
 jg
 jg
 jg
 jg
 jg
-jg
-jg
+qo
 qa
 kr
 ju
-jH
+qK
 jQ
 jO
 jI
@@ -34767,7 +36257,7 @@ qz
 qz
 qz
 qz
-qz
+mk
 mk
 gV
 nQ
@@ -34782,7 +36272,7 @@ Kj
 jI
 jw
 JG
-kd
+rH
 zM
 JO
 kf
@@ -34791,8 +36281,8 @@ kd
 qz
 qz
 qz
-qz
 jg
+qN
 jX
 GN
 zz
@@ -34807,8 +36297,8 @@ mm
 mm
 jA
 je
-jg
-Ea
+qo
+hz
 Ry
 nO
 iW
@@ -34929,8 +36419,8 @@ qz
 qz
 qz
 qz
-qz
 mk
+sf
 HS
 qw
 GT
@@ -34938,13 +36428,13 @@ cl
 ML
 fy
 fm
-bI
+rP
 bI
 Iw
 Vp
 oJ
 mB
-kd
+rH
 gb
 kJ
 ki
@@ -34953,14 +36443,14 @@ kd
 qz
 qz
 qz
-qz
+jg
 jg
 Mu
 Bv
 AW
 jS
 Zx
-nF
+qJ
 xC
 Xl
 Rq
@@ -34969,7 +36459,7 @@ Rq
 MW
 fA
 qX
-jg
+qo
 Dn
 Dn
 Dn
@@ -34990,7 +36480,7 @@ dU
 dU
 yh
 dU
-dU
+oZ
 dU
 ha
 dU
@@ -35091,13 +36581,13 @@ qz
 qz
 qz
 qz
-qz
 mk
+rW
 aF
-Ef
+sc
 kv
-Vg
-Vg
+Mr
+Mr
 Mr
 rR
 rR
@@ -35106,7 +36596,7 @@ wv
 Hh
 rR
 rR
-kd
+rH
 Kc
 kL
 km
@@ -35125,13 +36615,13 @@ bN
 bN
 Zk
 jr
-kj
-kj
-iN
-iN
-iN
-iN
-iN
+qA
+qA
+qA
+pY
+pY
+pY
+pY
 Dn
 Dn
 Dn
@@ -35152,14 +36642,14 @@ Vc
 Vc
 Vc
 Vc
-Vc
+pa
 UE
 zF
 Vc
 UN
 UN
-Vc
-Vc
+oR
+oQ
 dW
 ea
 QB
@@ -35254,10 +36744,10 @@ Tz
 Tz
 Tz
 Tz
-mk
+rW
 PH
 Ac
-et
+kv
 ko
 fx
 eS
@@ -35268,8 +36758,8 @@ UO
 ho
 WI
 rR
-kd
-kd
+rH
+rH
 FJ
 lm
 kd
@@ -35290,10 +36780,10 @@ jt
 iB
 cL
 nV
-ac
+jk
 BY
-ac
-iN
+qG
+pY
 Dn
 Dn
 Dn
@@ -35301,7 +36791,7 @@ AD
 iJ
 Pc
 me
-hV
+Wz
 hz
 eQ
 eQ
@@ -35313,8 +36803,8 @@ eQ
 eQ
 eQ
 eQ
-TU
-gX
+eQ
+pf
 gX
 gX
 gX
@@ -35412,14 +36902,14 @@ qz
 Tz
 Ap
 dP
-dP
+Ue
 Ue
 kx
-Ue
-mk
+su
+rW
 Fz
 Ef
-et
+kv
 zj
 HJ
 HJ
@@ -35429,11 +36919,11 @@ HJ
 dy
 Lu
 hB
-kN
+rK
 li
-kN
+rK
 tY
-XW
+rx
 kd
 qz
 qz
@@ -35446,24 +36936,24 @@ uK
 Ty
 bQ
 Xb
-bN
-jL
+Rf
+jG
 jG
 fo
 jp
-iN
+qA
 ac
 ac
-ac
-iN
-iN
-iN
-iN
-iN
-iN
+Bs
+pY
+pY
+pY
+pY
+pY
+pY
 vU
 me
-Wz
+pU
 hz
 eQ
 hg
@@ -35476,8 +36966,8 @@ vb
 cg
 eR
 TU
-qz
-qz
+gX
+gX
 qz
 qz
 qz
@@ -35578,10 +37068,10 @@ Lx
 Lx
 Lx
 Lx
-mk
+rW
 ET
 NW
-BP
+kv
 Hf
 HJ
 mM
@@ -35610,19 +37100,19 @@ id
 AO
 bN
 jN
-jx
+qB
 jx
 jq
 Dw
 jn
-jk
 qG
-iN
-jc
-ac
+iU
+qp
+qe
+jk
 Kr
 UL
-iN
+pY
 iG
 pw
 Wz
@@ -35659,7 +37149,7 @@ hS
 Pe
 Ve
 Lo
-hS
+oN
 EU
 hS
 hS
@@ -35739,11 +37229,11 @@ Gv
 xK
 zW
 Lx
-it
-mk
+sv
+rW
 Fz
 yo
-mk
+rW
 Fp
 pd
 mO
@@ -35753,9 +37243,9 @@ HJ
 Qf
 oS
 lQ
-kN
+rK
 ns
-kN
+rK
 TO
 Dj
 kd
@@ -35775,16 +37265,16 @@ kj
 kj
 kj
 kj
+kj
 iN
-iN
-iN
-Bs
-iN
+iU
+qG
+pY
 jc
 PX
 xP
 Qx
-iN
+pY
 Fm
 nN
 Yw
@@ -35901,11 +37391,11 @@ kV
 px
 wk
 oT
-RL
-mk
+it
+rW
 Fz
 Ef
-mk
+rW
 Iv
 LH
 ee
@@ -35917,7 +37407,7 @@ nL
 lR
 nK
 nx
-kN
+rK
 YM
 lm
 kd
@@ -35938,7 +37428,7 @@ qz
 OQ
 rC
 Au
-Au
+iN
 iN
 iU
 IU
@@ -35950,17 +37440,17 @@ yc
 VT
 cV
 hY
-Ea
+hz
 eQ
 hw
 nh
 lK
 hW
-Di
-Di
-Di
-Di
-eU
+pk
+pk
+pk
+pk
+pj
 TU
 qz
 qz
@@ -36064,10 +37554,10 @@ Kp
 Kp
 oY
 Kp
-mk
+rW
 zv
 Ef
-mk
+rW
 Ce
 fP
 mO
@@ -36077,9 +37567,9 @@ HJ
 QW
 PN
 lS
-kN
+rK
 lj
-kN
+rK
 fJ
 lm
 kd
@@ -36221,15 +37711,15 @@ qz
 qz
 Tz
 ku
-Tp
-py
 uD
+py
+th
 eI
-oE
-mk
+Tp
+rW
 oc
 Ef
-mk
+rW
 Mt
 HJ
 mO
@@ -36239,9 +37729,9 @@ HJ
 qu
 Tv
 ma
-kN
+rK
 ls
-kN
+rK
 hj
 lm
 kd
@@ -36383,7 +37873,7 @@ qz
 qz
 Tz
 QX
-XU
+tC
 yT
 XU
 fF
@@ -36391,7 +37881,7 @@ oG
 op
 hb
 nQ
-dX
+rY
 nu
 HJ
 mO
@@ -36401,9 +37891,9 @@ bx
 LU
 Xu
 iq
-kN
+rK
 lj
-kN
+rK
 yA
 lm
 kd
@@ -36478,10 +37968,10 @@ bW
 bB
 lV
 Mq
-VC
-vL
-zI
+oK
 Sw
+zI
+ow
 ZX
 uL
 uL
@@ -36549,8 +38039,8 @@ Kp
 dg
 Kp
 ec
-Tp
-mk
+sw
+rW
 TI
 nR
 dX
@@ -36560,12 +38050,12 @@ mR
 Ev
 xW
 rR
-kN
-kN
-kN
-kN
+rK
+rK
+rK
+rK
 lx
-kN
+rK
 kP
 lm
 kd
@@ -36712,22 +38202,22 @@ xT
 Kp
 dO
 oH
-mk
+rW
 od
 Ef
-mk
+rW
 Qy
 QL
 mR
 Ev
-xW
+rS
 rR
 lA
-kN
+rK
 lj
 lj
 lj
-kN
+rK
 kP
 lm
 kd
@@ -36800,7 +38290,7 @@ bW
 aR
 aR
 aR
-cI
+oL
 cC
 co
 ck
@@ -36863,10 +38353,10 @@ qz
 qz
 qz
 qz
-qz
-qz
-qz
-qz
+un
+un
+un
+un
 Tz
 Tz
 Tz
@@ -36877,19 +38367,19 @@ Tz
 mk
 TI
 Ef
-mk
+rW
 kE
 QL
 mS
 nU
 mv
 rR
-kN
-kN
+rK
+rK
 mc
-kN
+rK
 li
-kN
+rK
 kP
 Wu
 kd
@@ -37025,33 +38515,33 @@ qz
 qz
 qz
 qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
+un
+vp
+va
+uE
+un
+tZ
+sQ
+sQ
+ti
+sQ
+sx
 mk
 eO
 Ef
-mk
+rW
 nz
 na
 mC
 mC
 mx
 rR
-kN
+rK
 lj
 lj
-kN
-kN
-kN
+rK
+rK
+rK
 kR
 RR
 kd
@@ -37106,7 +38596,7 @@ qz
 OQ
 OQ
 yr
-Vs
+oP
 fl
 ia
 ck
@@ -37187,21 +38677,21 @@ qz
 qz
 qz
 qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-mk
+un
+vq
+ve
+uG
+uo
+uc
+tD
+ty
+tk
+sR
+sy
+sg
 ds
 Ef
-mk
+rW
 rR
 ji
 rR
@@ -37210,7 +38700,7 @@ rR
 rR
 mc
 mg
-kN
+rK
 lx
 lj
 kX
@@ -37349,33 +38839,33 @@ qz
 qz
 qz
 qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-mk
+un
+vr
+vf
+uH
+un
+ud
+tH
+tB
+tl
+sU
+sz
+si
 og
 Ef
-mk
+rW
 nA
 De
 mV
 wP
 rR
-kN
-kN
+rK
+rK
 lj
 lj
 lj
-kN
-kN
+rK
+rK
 kP
 lm
 kd
@@ -37511,33 +39001,33 @@ cX
 qz
 qz
 qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
+un
+vs
+vg
+uM
+un
+ue
+tJ
+sK
+sA
+sZ
+sA
 mk
 eB
 Ac
-mk
+rW
 nB
 mY
 mY
 mH
 rR
 lA
-kN
-kN
+rK
+rK
 mc
-kN
-kN
-kN
+rK
+rK
+rK
 FJ
 lm
 kd
@@ -37673,21 +39163,21 @@ cX
 cX
 cX
 cX
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
+un
+un
+un
+un
+un
+uf
+tJ
+sK
+tn
+td
+sC
 mk
 ux
 Ef
-mk
+rW
 nE
 nd
 mZ
@@ -37695,11 +39185,11 @@ mJ
 rR
 lA
 lA
-kN
+rK
 lj
-kN
+rK
 lA
-kN
+rK
 kP
 lm
 kd
@@ -37835,33 +39325,33 @@ cX
 cX
 cX
 cX
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
+uz
+vw
+vi
+uO
+uq
+ug
+tL
+sK
+to
+te
+sD
 mk
 lT
 Wl
-mk
-kN
-kN
-kN
-kN
-kN
-kN
-kN
-kN
+rW
+rK
+rK
+rK
+rK
+rK
+rK
+rK
+rK
 mf
-kN
+rK
 lA
-kN
+rK
 kP
 lm
 kd
@@ -37997,35 +39487,35 @@ cX
 cX
 cX
 cX
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-mk
+vA
+vx
+vk
+uP
+uu
+ui
+tQ
+sK
+tp
+te
+sF
+sk
 Us
 Ef
-mk
-kN
-kN
-kN
+rW
+rK
+rK
+rK
 lj
 lx
 lj
 lj
 lj
 lx
-kN
+rK
 lA
-kN
+rK
 fJ
-lm
+rF
 kd
 rC
 tP
@@ -38159,19 +39649,19 @@ cX
 cX
 cX
 cX
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-rC
-mk
-Tw
+vA
+vx
+vm
+uT
+uz
+ug
+tS
+sK
+tp
+te
+sF
+sn
+eO
 UU
 nI
 lj
@@ -38179,13 +39669,13 @@ lx
 lZ
 lj
 li
-kN
+rK
 lj
-kN
-kN
-kN
-kN
-kN
+rK
+rK
+rK
+rK
+rK
 Er
 XW
 kd
@@ -38321,33 +39811,33 @@ cX
 cX
 cX
 cX
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-rC
-rC
+uA
+vy
+vo
+uV
+uA
+um
+tV
+sK
+ts
+tg
+sH
 mk
 iP
 Ef
-mk
-kN
-kN
-kN
-kN
-kN
-kN
+rW
+rK
+rK
+rK
+rK
+rK
+rK
 lj
 lj
 lj
 lH
-kN
-kN
+rK
+rL
 zN
 kq
 kd
@@ -38483,33 +39973,33 @@ cX
 cX
 cX
 cX
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-rC
-rC
+uC
+uC
+uC
+uW
+uC
+tW
+tW
+sK
+sK
+sK
+sK
 mk
 Xw
 Ef
-mk
+rW
 lA
 lA
 lA
 lA
 lA
-kN
-kN
-kN
-kN
+rK
+rK
+rK
+rK
 lj
-kN
-kN
+rK
+rK
 eu
 Dj
 kd
@@ -38647,9 +40137,9 @@ cX
 qz
 qz
 qz
-qz
-qz
-qz
+uC
+uX
+uC
 qz
 qz
 qz
@@ -38659,19 +40149,19 @@ fj
 mk
 BL
 Ef
-mk
-kN
-kN
-kN
-kN
-kN
-kN
-kN
-kN
-kN
+rW
+rK
+rK
+rK
+rK
+rK
+rK
+rK
+rK
+rK
 kX
-kN
-kN
+rK
+rK
 pO
 kt
 kd
@@ -38809,9 +40299,9 @@ cX
 qz
 qz
 qz
-qz
-qz
-qz
+uC
+uC
+uC
 qz
 qz
 qz
@@ -38821,7 +40311,7 @@ fj
 mk
 eO
 Ef
-mk
+rW
 ul
 Pj
 lh
@@ -38983,7 +40473,7 @@ fj
 ze
 TI
 yo
-mk
+rW
 DZ
 nl
 gl
@@ -39032,11 +40522,11 @@ kb
 aJ
 tP
 tP
-ah
+pp
 bL
 at
 gL
-ah
+pp
 tP
 Bf
 qz
@@ -39195,7 +40685,7 @@ Sn
 tP
 tP
 ar
-an
+pL
 an
 an
 ar
@@ -39356,11 +40846,11 @@ Xz
 bJ
 tP
 tP
-ah
+pp
 nZ
 an
-fX
-ah
+pu
+pp
 tP
 Of
 rC
@@ -39469,7 +40959,7 @@ OQ
 et
 Ee
 fM
-mk
+rW
 oV
 lv
 lv
@@ -39481,7 +40971,7 @@ IH
 lv
 lv
 GS
-lf
+lh
 Ae
 rn
 oI
