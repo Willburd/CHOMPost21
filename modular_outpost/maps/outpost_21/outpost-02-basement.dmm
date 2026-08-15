@@ -43839,6 +43839,7 @@
 	dir = 1;
 	pixel_y = 21
 	},
+/obj/structure/railing/grey,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/security/tankstore)
 "bDN" = (
@@ -44035,6 +44036,9 @@
 /obj/effect/floor_decal/milspec/cargo_arrow{
 	dir = 4
 	},
+/obj/effect/floor_decal/industrial/arrows/red{
+	dir = 4
+	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/security/tankstore)
 "bEl" = (
@@ -44063,13 +44067,7 @@
 /obj/effect/floor_decal/industrial/stand_clear/red{
 	dir = 4
 	},
-/obj/machinery/turretid/lethal{
-	check_all = 1;
-	name = "Garage Turret Control";
-	req_access = null;
-	req_one_access = list(16,58);
-	pixel_y = 32
-	},
+/obj/structure/railing/grey,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/security/tankstore)
 "bEo" = (
@@ -44091,6 +44089,7 @@
 /obj/effect/floor_decal/milspec/cargo_arrow{
 	dir = 8
 	},
+/obj/structure/railing/grey,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/security/tankstore)
 "bEq" = (
@@ -44102,6 +44101,7 @@
 	},
 /obj/effect/floor_decal/industrial/warning/tile,
 /obj/effect/floor_decal/industrial/warning/color/tile/red,
+/obj/structure/railing/grey,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/security/tankstore)
 "bEr" = (
@@ -44114,13 +44114,14 @@
 /obj/machinery/camera/motion/security{
 	c_tag = "SEC - Tank Garage Exit (M)"
 	},
-/obj/machinery/button/remote/blast_door{
-	id = "secgarage";
-	name = "Go Get Em Boys";
+/obj/machinery/turretid/lethal{
+	check_all = 1;
+	name = "Garage Turret Control";
+	req_one_access = list(3,20,58);
 	pixel_y = 32;
-	req_one_access = list(3,58);
-	pixel_x = -4
+	req_access = null
 	},
+/obj/structure/railing/grey,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/security/tankstore)
 "bEs" = (
@@ -44133,6 +44134,7 @@
 /obj/structure/cable/orange{
 	icon_state = "4-8"
 	},
+/obj/structure/railing/grey,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/security/tankstore)
 "bEt" = (
@@ -44191,11 +44193,17 @@
 /obj/effect/floor_decal/milspec/cargo_arrow{
 	dir = 8
 	},
+/obj/effect/floor_decal/industrial/arrows/red{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/security/tankstore)
 "bEB" = (
 /obj/structure/cable/orange{
 	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/industrial/arrows/red{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/security/tankstore)
@@ -44258,6 +44266,9 @@
 /obj/effect/floor_decal/milspec/stripe{
 	dir = 8
 	},
+/obj/effect/floor_decal/industrial/arrows/red{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/security/tankstore)
 "bEJ" = (
@@ -44277,11 +44288,17 @@
 /obj/effect/floor_decal/milspec/stripe{
 	dir = 4
 	},
+/obj/effect/floor_decal/industrial/arrows/red{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/security/tankstore)
 "bEM" = (
 /obj/effect/floor_decal/corner/red/border,
 /obj/effect/floor_decal/milspec/cargo_arrow{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/arrows/red{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -44291,6 +44308,9 @@
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/corner/red/border,
+/obj/effect/floor_decal/industrial/arrows/red{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/security/tankstore)
 "bEO" = (
@@ -44302,6 +44322,9 @@
 /area/security/tankstore)
 "bEP" = (
 /obj/effect/floor_decal/corner/red/bordercorner{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/arrows/red{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -53532,6 +53555,7 @@
 /obj/machinery/camera/motion/security{
 	c_tag = "SEC - Tank Access Outer (M)"
 	},
+/obj/structure/railing/grey,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/security/tankstore)
 "bXg" = (
@@ -55545,6 +55569,10 @@
 /obj/item/trash/tidegobs,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/sec)
+"cby" = (
+/obj/effect/floor_decal/industrial/outline/red,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/security/tankstore)
 "cbz" = (
 /obj/effect/auto_crayon{
 	icon_state = "air"
@@ -60490,6 +60518,18 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/civ/west)
+"coe" = (
+/obj/machinery/porta_turret/heavy/disabler,
+/obj/effect/floor_decal/industrial/outline/red,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/security/tankstore)
+"cof" = (
+/obj/effect/floor_decal/corner/red/border,
+/obj/effect/floor_decal/industrial/arrows/red{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/security/tankstore)
 "cog" = (
 /obj/structure/disposalpipe/segment{
 	dir = 8;
@@ -60514,6 +60554,13 @@
 	},
 /turf/simulated/floor/tiled/material/gold,
 /area/muriki/crew/casinostore)
+"coi" = (
+/obj/effect/floor_decal/corner/red/border,
+/obj/effect/floor_decal/industrial/arrows/red{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/security/tankstore)
 "coj" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable/orange{
@@ -67986,6 +68033,12 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/river/end)
+"cFH" = (
+/obj/effect/floor_decal/industrial/arrows/red{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/security/tankstore)
 "cFI" = (
 /obj/structure/railing,
 /turf/simulated/floor/plating/turfpack/muriki,
@@ -72080,6 +72133,30 @@
 /obj/random/aberration,
 /turf/simulated/mineral/alt/turfpack/muriki,
 /area/mine/unexplored/muriki/mountainbasenorth)
+"cQF" = (
+/obj/effect/floor_decal/milspec/stripe{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/arrows/red{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/security/tankstore)
+"cQG" = (
+/obj/effect/floor_decal/industrial/arrows/red{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/security/tankstore)
+"cQH" = (
+/obj/effect/floor_decal/milspec/stripe{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/arrows/red{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/security/tankstore)
 "cRo" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/lightgrey/border,
@@ -75700,6 +75777,9 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/hallway/muriki/dorm)
 "hiK" = (
+/obj/effect/floor_decal/industrial/arrows/red{
+	dir = 4
+	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/security/tankstore)
 "hiP" = (
@@ -76699,6 +76779,7 @@
 	},
 /obj/effect/floor_decal/industrial/warning/tile,
 /obj/effect/floor_decal/industrial/warning/color/tile/red,
+/obj/structure/railing/grey,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/security/tankstore)
 "iGX" = (
@@ -80359,6 +80440,7 @@
 	pixel_x = -8;
 	pixel_y = 30
 	},
+/obj/structure/railing/grey,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/security/tankstore)
 "mPX" = (
@@ -80566,6 +80648,13 @@
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/industrial/stand_clear/red,
+/obj/machinery/button/remote/blast_door{
+	id = "secgarage";
+	name = "Go Get Em Boys";
+	pixel_y = 30;
+	req_one_access = list(3,58);
+	pixel_x = -29
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/security/tankstore)
 "nbn" = (
@@ -80869,6 +80958,9 @@
 /obj/effect/floor_decal/corner/red/border,
 /obj/effect/floor_decal/industrial/stand_clear/red{
 	dir = 8
+	},
+/obj/effect/floor_decal/industrial/arrows/red{
+	dir = 4
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/security/tankstore)
@@ -82891,6 +82983,7 @@
 /obj/effect/floor_decal/industrial/stand_clear/red{
 	dir = 8
 	},
+/obj/structure/railing/grey,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/security/tankstore)
 "pQH" = (
@@ -84238,6 +84331,9 @@
 "rmr" = (
 /obj/effect/floor_decal/corner/red/border,
 /obj/effect/floor_decal/milspec/cargo_arrow{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/arrows/red{
 	dir = 4
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
@@ -125313,8 +125409,8 @@ bCq
 bDI
 bCq
 bEm
-bEy
-bEy
+cQF
+cQF
 bEI
 lhA
 ckQ
@@ -125475,11 +125571,11 @@ bCq
 bCW
 bCq
 bXf
-bEh
-bEh
-bEK
+cQG
+cQG
+cof
 mSy
-bEh
+cby
 wCj
 xFf
 glX
@@ -125637,11 +125733,11 @@ bCq
 bCW
 bCq
 bDM
-bEh
-bEh
-bEK
+cFH
+cFH
+coi
 mSy
-bEh
+coe
 wCj
 xFf
 glX
@@ -125799,8 +125895,8 @@ bCq
 bCW
 bCq
 bEo
-bEz
-bEz
+cQH
+cQH
 bEL
 rTK
 dmD
@@ -127095,8 +127191,8 @@ bCq
 bDJ
 bDZ
 nbk
-bEh
-bEh
+cFH
+cFH
 bEP
 bEU
 ihy
@@ -127257,9 +127353,9 @@ cjl
 cjr
 kSe
 cmL
-bEh
-bEh
-bEh
+cFH
+cFH
+cFH
 bEh
 bEh
 bEh
