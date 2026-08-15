@@ -3029,15 +3029,22 @@
 
 // RUST engine
 /area/offworld/orbital/station/rust_core
-	name = "\improper RUST Engine Core"
+	name = "\improper Orbital RUST Engine Core"
 	icon_state = "engine"
 	sound_env = LARGE_ENCLOSED
 	ambience = AMBIENCE_ENGINEERING
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 
 /area/offworld/orbital/station/rust_tool_storage
-	name = "\improper RUST Tool Storage"
+	name = "\improper Orbital RUST Tool Storage"
 	icon_state = "orange"
+	sound_env = SMALL_ENCLOSED
+	ambience = AMBIENCE_ENGINEERING
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+
+/area/offworld/orbital/station/rust_gas_storage
+	name = "\improper Orbital RUST Gas Storage"
+	icon_state = "locker"
 	sound_env = SMALL_ENCLOSED
 	ambience = AMBIENCE_ENGINEERING
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
