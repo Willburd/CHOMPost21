@@ -254,6 +254,8 @@
 		/area/ai_server_room,
 		/area/quartermaster/mining/ore_silo,
 		/area/medical/psych,
+		/area/offworld/orbital/station/aux_equipment,
+		/area/offworld/orbital/station/rust_backup_power,
 	)
 
 	var/list/does_not_have_displays = list(
@@ -298,6 +300,7 @@
 		/area/tcomfoyer,
 		/area/tcommsat/lounge,
 		/area/tcommsat/powercontrol,
+		/area/offworld/orbital/station/telecomms,
 		// Armory
 		/area/security/armoury,
 		/area/security/tactical,
@@ -315,7 +318,8 @@
 		/area/engineering/trammaint,
 		/area/muriki/tramstation/waste,
 		/area/engineering/gravgen,
-		/area/wreck/bridge
+		/area/wreck/bridge,
+		/area/offworld/orbital/station/rust_core,
 	)
 
 	var/list/zs_to_test = using_map.unit_test_z_levels || list(1) //Either you set it, or you just get z1
