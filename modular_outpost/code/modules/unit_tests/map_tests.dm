@@ -160,7 +160,7 @@
 		/area/rnd/entry_aux,
 		/area/rnd/research/roof_eva,
 		/area/muriki/cybstorage,
-		/area/muriki/crew/bunker,
+		/area/muriki/crew/bunker
 	)
 
 	var/list/does_not_have_disposals = list(
@@ -290,6 +290,8 @@
 		/area/engineering/refinery/aid_station,
 		/area/medical/first_aid_station_starboard,
 		/area/medical/first_aid_station,
+		/area/offworld/orbital/station/medical_treatment,
+		/area/offworld/orbital/station/lower_medical_treatment,
 		// Tcomms
 		/area/comms,
 		/area/tcommsat/computer,
