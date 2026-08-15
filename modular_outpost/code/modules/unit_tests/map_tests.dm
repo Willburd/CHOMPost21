@@ -101,6 +101,8 @@
 		/area/offworld/orbital/station/starboard_airlock,
 		/area/offworld/orbital/station/dockingarm,
 		/area/offworld/orbital/station/south_power_airlock,
+		/area/offworld/orbital/station/access_shaft,
+		/area/offworld/orbital/station/south_power_airlock,
 		)
 
 	var/list/forced_hallway = list(
@@ -138,7 +140,18 @@
 		/area/rnd/research/phoronics,
 		/area/ai_sat/fore_airlock,
 		/area/ai_sat/access_shaft,
-		/area/ai_sat/docking_wing
+		/area/ai_sat/docking_wing,
+		/area/offworld/orbital/station/halls/lower/aft,
+		/area/offworld/orbital/station/halls/lower/central,
+		/area/offworld/orbital/station/halls/stairs_lower,
+		/area/offworld/orbital/station/halls/lower/fore,
+		/area/offworld/orbital/station/halls/rust_entry,
+		/area/offworld/orbital/station/halls/rust_tool_storage,
+		/area/offworld/orbital/station/halls/aft,
+		/area/offworld/orbital/station/halls/stairs_upper,
+		/area/offworld/orbital/station/halls/central,
+		/area/offworld/orbital/station/halls/starboard,
+		/area/offworld/orbital/station/halls/fore,
 	)
 
 	var/list/does_not_use_lightswitch = list(
