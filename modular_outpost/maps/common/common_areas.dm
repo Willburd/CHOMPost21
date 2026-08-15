@@ -2634,6 +2634,13 @@
 /area/offworld/orbital/exterior/yardzone
 	icon_state = "construction"
 
+/area/offworld/orbital/exterior/rust_cooling
+	name = "\improper Orbital Rust Cooling Array"
+
+/area/offworld/orbital/exterior/emitter_cooling
+	name = "\improper Orbital Emitter Cooling Array"
+
+
 // HALLWAYS
 /area/offworld/orbital/station/halls
 	name = "\improper Orbital Hallway"
@@ -2773,7 +2780,14 @@
 	color_grading = COLORTINT_DIM
 
 /area/offworld/orbital/station/medical_treatment
-	name = "\improper Orbital Medical Station"
+	name = "\improper Orbital Upper Medical Station"
+	icon_state = "green"
+	sound_env = SOUND_ENVIRONMENT_STONEROOM
+	ambience = AMBIENCE_GENERIC
+	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
+
+/area/offworld/orbital/station/lower_medical_treatment
+	name = "\improper Orbital Lower Medical Station"
 	icon_state = "green"
 	sound_env = SOUND_ENVIRONMENT_STONEROOM
 	ambience = AMBIENCE_GENERIC
@@ -2950,12 +2964,6 @@
 /area/offworld/orbital/exterior/starboard_solars
 	name = "\improper Orbital Starboard Solars"
 	icon_state = "purple"
-
-/area/offworld/orbital/station/solarControl
-	name = "\improper Orbital Solar Control"
-	icon_state = "orange"
-	ambience = AMBIENCE_SUBSTATION
-	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 
 
 // Power distro
