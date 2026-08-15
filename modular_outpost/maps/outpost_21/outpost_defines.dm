@@ -156,7 +156,17 @@
 										/area/muriki/elevator/civupper,
 										/area/muriki/elevator/sciupper,
 										// The asteroid yard's exterior does not need scrubbers and vents
+										/area/offworld/orbital/exterior,
 										/area/offworld/orbital/exterior/yardzone,
+										/area/offworld/orbital/exterior/emitter_cooling,
+										/area/offworld/orbital/station/south_power_airlock,
+										/area/offworld/orbital/exterior/starboard_solars,
+										/area/offworld/orbital/station/port_airlock,
+										/area/offworld/orbital/exterior/rust_cooling,
+										/area/offworld/orbital/station/engine_core_port,
+										/area/offworld/orbital/station/engine_core_starboard,
+										/area/offworld/orbital/station/storage_engine_core,
+										/area/offworld/orbital/station/dockingarm,
 										/area/ai_sat/core_external,
 										/area/ai_sat/power_control,
 										// Foundation blocks
