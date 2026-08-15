@@ -86,7 +86,7 @@
 		/area/hydroponics/gibber,
 		/area/rnd/research/roof_eva,
 		/area/ai_sat/core_external,
-		/area/offworld/confinementbeam/exterior,
+		/area/offworld/orbital/exterior,
 		/area/ai_sat/power_control,
 		/area/security/brig_hole,
 		/area/specialty/stowaway_clubhouse,
@@ -129,14 +129,7 @@
 		/area/rnd/research/phoronics,
 		/area/ai_sat/fore_airlock,
 		/area/ai_sat/access_shaft,
-		/area/ai_sat/docking_wing,
-		/area/offworld/confinementbeam/station/trawler_airlock,
-		/area/offworld/confinementbeam/station/access_shaft,
-		/area/offworld/confinementbeam/station/starboard_airlock,
-		/area/offworld/confinementbeam/station/south_power_airlock,
-		/area/offworld/confinementbeam/station/port_airlock,
-		/area/offworld/confinementbeam/station/hallway,
-		/area/offworld/confinementbeam/station/hallway_alt
+		/area/ai_sat/docking_wing
 	)
 
 	var/list/does_not_use_lightswitch = list(

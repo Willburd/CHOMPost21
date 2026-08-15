@@ -156,8 +156,8 @@
 										/area/muriki/elevator/civupper,
 										/area/muriki/elevator/sciupper,
 										// The asteroid yard's exterior does not need scrubbers and vents
-										/area/offworld/asteroidyard/external,
-										/area/offworld/asteroidyard/external/yardzone,
+										/area/offworld/orbital/exterior/yardzone,
+										/area/offworld/orbital/exterior/yardzone/yardzone,
 										/area/offworld/confinementbeam/exterior,
 										/area/ai_sat/core_external,
 										/area/ai_sat/power_control,
@@ -246,8 +246,8 @@
 										/area/muriki/elevator/secbase,
 										/area/muriki/elevator/medibasement,
 										// The asteroid yard's exterior does not need apcs
-										/area/offworld/asteroidyard/external,
-										/area/offworld/asteroidyard/external/yardzone,
+										/area/offworld/orbital/exterior/yardzone,
+										/area/offworld/orbital/exterior/yardzone/yardzone,
 										// Actual unit test exceptions
 										/area/muriki/lowerelev,
 										/area/muriki/lowerevac,
@@ -318,8 +318,8 @@
 	rare_ores = list(ORE_MARBLE = 5, ORE_QUARTZ = 15, ORE_COPPER = 20, ORE_TIN = 15, ORE_BAUXITE = 5, ORE_URANIUM = 25, ORE_PLATINUM = 25, ORE_HEMATITE = 15, ORE_RUTILE = 20, ORE_CARBON = 25, ORE_DIAMOND = 8, ORE_GOLD = 25, ORE_SILVER = 10, ORE_PHORON = 25, ORE_LEAD = 15, ORE_VOPAL = 1, ORE_VERDANTIUM = 3, ORE_PAINITE = 1)
 
 /datum/map/outpost/perform_map_generation()
-	seed_submaps(list(Z_LEVEL_OUTPOST_ORBITAL_UPPER), 220, /area/offworld/asteroidyard/external/yardzone, /datum/map_template/outpost21/space/orbitalyard_huge)
-	seed_submaps(list(Z_LEVEL_OUTPOST_ORBITAL_UPPER), 220, /area/offworld/asteroidyard/external/yardzone, /datum/map_template/outpost21/space/orbitalyard)
+	seed_submaps(list(Z_LEVEL_OUTPOST_ORBITAL_UPPER), 220, /area/offworld/orbital/exterior/yardzone, /datum/map_template/outpost21/space/orbitalyard_huge)
+	seed_submaps(list(Z_LEVEL_OUTPOST_ORBITAL_UPPER), 220, /area/offworld/orbital/exterior/yardzone, /datum/map_template/outpost21/space/orbitalyard)
 
 	seed_submaps(list(Z_LEVEL_OUTPOST_SURFACE), 150, /area/muriki/yard, /datum/map_template/outpost21/muriki/cargoyard_huge)
 	seed_submaps(list(Z_LEVEL_OUTPOST_SURFACE), 200, /area/muriki/yard, /datum/map_template/outpost21/muriki/cargoyard)
