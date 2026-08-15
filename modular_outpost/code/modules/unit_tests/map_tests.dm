@@ -92,6 +92,15 @@
 		/area/specialty/stowaway_clubhouse,
 		/area/specialty/stowaway_clubhouse/upper,
 		/area/specialty/expie_clubhouse,
+		/area/offworld/orbital/station/engine_core_port,
+		/area/offworld/orbital/station/engine_core_starboard,
+		/area/offworld/orbital/station/storage_engine_core,
+		/area/ai_sat/solar_airlock,
+		/area/offworld/orbital/station/solar_control,
+		/area/offworld/orbital/station/port_airlock,
+		/area/offworld/orbital/station/starboard_airlock,
+		/area/offworld/orbital/station/dockingarm,
+		/area/offworld/orbital/station/south_power_airlock,
 		)
 
 	var/list/forced_hallway = list(
@@ -138,7 +147,7 @@
 		/area/rnd/entry_aux,
 		/area/rnd/research/roof_eva,
 		/area/muriki/cybstorage,
-		/area/muriki/crew/bunker
+		/area/muriki/crew/bunker,
 	)
 
 	var/list/does_not_have_disposals = list(
@@ -231,7 +240,7 @@
 		/area/ai_sat/fore_airlock,
 		/area/ai_server_room,
 		/area/quartermaster/mining/ore_silo,
-		/area/medical/psych
+		/area/medical/psych,
 	)
 
 	var/list/does_not_have_displays = list(
