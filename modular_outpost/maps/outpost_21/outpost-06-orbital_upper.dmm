@@ -12154,9 +12154,7 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/power_distribution)
 "IL" = (
-/obj/effect/shuttle_landmark/premade/skipjack/station_se{
-	base_area = /area/offworld/asteroidyard/external
-	},
+/obj/effect/shuttle_landmark/premade/skipjack/station_se,
 /turf/space,
 /area/offworld/orbital/exterior/yardzone)
 "IM" = (
