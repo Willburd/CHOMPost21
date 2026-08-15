@@ -256,6 +256,7 @@
 		/area/medical/psych,
 		/area/offworld/orbital/station/aux_equipment,
 		/area/offworld/orbital/station/rust_backup_power,
+		/area/offworld/orbital/station/rust_aux_tool_storage,
 	)
 
 	var/list/does_not_have_displays = list(
