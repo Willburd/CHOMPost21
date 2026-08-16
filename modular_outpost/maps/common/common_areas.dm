@@ -2757,6 +2757,14 @@
 	icon_state = "toilet"
 	holomap_color = HOLOMAP_AREACOLOR_CIV
 	color_grading = COLORTINT_DARK
+	flags = /area/muriki/bathroom::flags
+
+/area/offworld/orbital/station/droppod
+	name = "\improper Orbital Drop Pod"
+	icon_state = "toilet"
+	holomap_color = HOLOMAP_AREACOLOR_CIV
+	color_grading = COLORTINT_DARK
+	flags = /area/muriki/bathroom::flags
 
 /area/offworld/orbital/station/engineering
 	name = "\improper Orbital Engineering"
@@ -2785,6 +2793,7 @@
 	sound_env = SOUND_ENVIRONMENT_STONEROOM
 	ambience = AMBIENCE_GENERIC
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
+	flags = /area/medical/first_aid_station::flags
 
 /area/offworld/orbital/station/lower_medical_treatment
 	name = "\improper Orbital Lower Medical Station"
@@ -2792,6 +2801,7 @@
 	sound_env = SOUND_ENVIRONMENT_STONEROOM
 	ambience = AMBIENCE_GENERIC
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
+	flags = /area/medical/first_aid_station::flags
 
 /area/offworld/orbital/station/engineering/mass_driver
 	name = "\improper Orbital Mass Driver"
@@ -2843,7 +2853,7 @@
 	base_turf = /turf/simulated/open
 
 /area/offworld/orbital/station/dockinghanger
-	name = "\improper Orbital Hanger"
+	name = "\improper Orbital Cargo Loading Airlock"
 	icon_state = "decontamination"
 	sound_env = LARGE_ENCLOSED
 	ambience = AMBIENCE_HANGAR

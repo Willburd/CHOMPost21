@@ -257,6 +257,8 @@
 		/area/offworld/orbital/station/aux_equipment,
 		/area/offworld/orbital/station/rust_backup_power,
 		/area/offworld/orbital/station/rust_aux_tool_storage,
+		/area/offworld/orbital/station/dockinghanger,
+		/area/offworld/orbital/station/teleport,
 	)
 
 	var/list/does_not_have_displays = list(
@@ -321,6 +323,8 @@
 		/area/engineering/gravgen,
 		/area/wreck/bridge,
 		/area/offworld/orbital/station/rust_core,
+		/area/offworld/orbital/station/teleport,
+		/area/offworld/orbital/station/security/armory,
 	)
 
 	var/list/zs_to_test = using_map.unit_test_z_levels || list(1) //Either you set it, or you just get z1
