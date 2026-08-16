@@ -259,6 +259,8 @@
 		/area/offworld/orbital/station/rust_aux_tool_storage,
 		/area/offworld/orbital/station/dockinghanger,
 		/area/offworld/orbital/station/teleport,
+		/area/offworld/orbital/station/telecomms,
+		/area/offworld/orbital/station/security/holding_cell,
 	)
 
 	var/list/does_not_have_displays = list(
