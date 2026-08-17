@@ -208,6 +208,11 @@
 			H.Weaken(5)
 			return world.time + rand(1200,2000)
 
+	// Fire ashes it
+	if(body.on_fire && prob(90))
+		body.ash()
+		return world.time + rand(1200,2000)
+
 	// Randomly do stuff to scare people
 	var/area/A = get_area(body.loc)
 	var/picking_val = rand(1,8)
