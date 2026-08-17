@@ -6613,7 +6613,7 @@
 	id_tag = "specops_centcom_dock_door"
 	},
 /obj/machinery/atmospheric_field_generator/perma/underdoors,
-/turf/space,
+/turf/unsimulated/floor/techfloor_grid,
 /area/centcom/simulated/cent_sat)
 "nN" = (
 /obj/structure/table/woodentable,

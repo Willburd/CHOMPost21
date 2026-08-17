@@ -625,3 +625,44 @@
 
 	if(failed)
 		TEST_FAIL("One or more tele_beacon objects are incorrectly setup or are duplicates")
+
+
+
+
+/datum/unit_test/things_should_not_be_in_walls
+
+/datum/unit_test/things_should_not_be_in_walls/Run()
+	set background=1
+
+	var/failed = FALSE
+
+	for(var/obj/machinery/light/L in world)
+		if(is_in_wall(L))
+			failed = TRUE
+	for(var/obj/machinery/door/D in world)
+		if(is_in_wall(D))
+			failed = TRUE
+		if(is_in_space(D))
+			failed = TRUE
+	for(var/obj/structure/railing/R in world)
+		if(is_in_wall(R))
+			failed = TRUE
+
+	if(failed)
+		TEST_FAIL("One or more objects are inside a dense turf wall.")
+
+/datum/unit_test/things_should_not_be_in_walls/proc/is_in_wall(obj/structure/thing)
+	var/turf/T = get_turf(thing)
+	if(!T)
+		return FALSE; // What?
+	if(!T.density)
+		return
+	TEST_NOTICE(src, "[thing] was inside a dense wall. Located at [T.x].[T.y].[T.z] : [get_area(thing)]")
+	return TRUE;
+
+/datum/unit_test/things_should_not_be_in_walls/proc/is_in_space(obj/structure/thing)
+	var/turf/T = get_turf(thing)
+	if(!isspace(T))
+		return FALSE;
+	TEST_NOTICE(src, "[thing] was placed on space turf. Located at [T.x].[T.y].[T.z] : [get_area(thing)]")
+	return TRUE
