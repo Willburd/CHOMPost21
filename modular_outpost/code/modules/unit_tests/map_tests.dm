@@ -632,6 +632,8 @@
 /datum/unit_test/things_should_not_be_in_walls
 
 /datum/unit_test/things_should_not_be_in_walls/Run()
+	set background=1
+
 	var/failed = FALSE
 
 	for(var/obj/machinery/light/L in world)
