@@ -312,8 +312,10 @@
 
 /datum/trait/negative/meltable
 	custom_only = FALSE // Allow non-custom species
+	banned_species = list(SPECIES_PROMETHEAN)
 
 /datum/trait/negative/meltable_major
 	custom_only = FALSE // Allow non-custom species
+	banned_species = list(SPECIES_PROMETHEAN)
 
 #endif
