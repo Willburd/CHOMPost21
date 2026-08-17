@@ -10187,6 +10187,36 @@
 "avm" = (
 /turf/simulated/floor/tiled/kafel_full,
 /area/djstation)
+"avn" = (
+/obj/item/toy/tennis/blue{
+	pixel_y = 10;
+	pixel_x = 10
+	},
+/obj/item/toy/tennis/purple{
+	pixel_y = 10
+	},
+/obj/item/toy/tennis/random{
+	pixel_y = 10;
+	pixel_x = -10
+	},
+/obj/item/toy/eight_ball,
+/obj/item/toy/baseball{
+	pixel_x = -9
+	},
+/obj/item/toy/tennis/cyan{
+	pixel_x = -3;
+	pixel_y = 7
+	},
+/obj/item/toy/tennis/cyan{
+	pixel_x = 9;
+	pixel_y = 0
+	},
+/obj/item/toy/tennis/blue{
+	pixel_x = 5;
+	pixel_y = -9
+	},
+/turf/simulated/floor/tiled/turfpack/muriki,
+/area/specialty/expie_clubhouse)
 "avo" = (
 /obj/structure/window/maintenance_panel{
 	dir = 4
@@ -49257,7 +49287,15 @@
 /obj/effect/floor_decal/corner/red{
 	dir = 9
 	},
-/obj/item/storage/toolbox/syndicate,
+/obj/item/storage/toolbox/syndicate{
+	pixel_y = 6
+	},
+/obj/item/hoist_kit{
+	pixel_y = -4
+	},
+/obj/item/hoist_kit{
+	pixel_y = -4
+	},
 /turf/simulated/floor/tiled,
 /area/security/vacantoffice)
 "uFN" = (
@@ -118619,7 +118657,7 @@ ajR
 ajR
 ajR
 ajR
-ajQ
+avn
 ajQ
 aku
 akh
