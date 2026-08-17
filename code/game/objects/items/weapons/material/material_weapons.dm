@@ -91,9 +91,11 @@
 	if(istype(W, /obj/item/whetstone))
 		var/obj/item/whetstone/whet = W
 		repair(whet.repair_amount, whet.repair_time, user)
+	/* Outpost 21 edit - Removed sharpening kit
 	if(istype(W, /obj/item/material/sharpeningkit))
 		var/obj/item/material/sharpeningkit/SK = W
 		repair(SK.repair_amount, SK.repair_time, user)
+	*/
 	..()
 
 /obj/item/material/proc/check_health(consumed)
