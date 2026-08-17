@@ -653,12 +653,14 @@
 	var/turf/T = get_turf(thing)
 	if(!T)
 		return FALSE; // What?
+	if(!T.density)
+		return
 	TEST_NOTICE(src, "[thing] was inside a dense wall. Located at [T.x].[T.y].[T.z] : [get_area(thing)]")
-	return T.density;
+	return TRUE;
 
 /datum/unit_test/things_should_not_be_in_walls/proc/is_in_space(obj/structure/thing)
 	var/turf/T = get_turf(thing)
-	if(isspace(T))
-		TEST_NOTICE(src, "[thing] was placed on space turf. Located at [T.x].[T.y].[T.z] : [get_area(thing)]")
-		return TRUE
-	return FALSE;
+	if(!isspace(T))
+		return FALSE;
+	TEST_NOTICE(src, "[thing] was placed on space turf. Located at [T.x].[T.y].[T.z] : [get_area(thing)]")
+	return TRUE
