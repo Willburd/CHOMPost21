@@ -666,3 +666,33 @@
 		return FALSE;
 	TEST_NOTICE(src, "[thing] was placed on space turf. Located at [T.x].[T.y].[T.z] : [get_area(thing)]")
 	return TRUE
+
+
+
+/datum/unit_test/wall_lights_must_have_supports
+
+/datum/unit_test/wall_lights_must_have_supports/Run()
+	set background=1
+
+	var/failed = FALSE
+
+	for(var/obj/machinery/light/L in world)
+		if(istype(L,/obj/machinery/light/flamp))
+			continue
+		if(istype(L,/obj/machinery/light/bigfloorlamp))
+			continue
+		if(istype(L,/obj/machinery/light/floortube))
+			continue
+		if(istype(L,/obj/machinery/light/small/fairylights))
+			continue
+		if(istype(L,/obj/machinery/light/lamppost))
+			continue
+		if(istype(L,/obj/machinery/light/spot))
+			continue
+		var/turf/get_wall = get_step(L, L.dir)
+		if(!get_wall.density)
+			TEST_NOTICE(src, "[L] was placed without a support wall. Located at [L.x].[L.y].[L.z] : [get_area(L)]")
+			failed = TRUE
+
+	if(failed)
+		TEST_FAIL("One or more lights is floating without a wall.")
