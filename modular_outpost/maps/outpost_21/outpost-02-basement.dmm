@@ -48085,7 +48085,6 @@
 	dir = 1;
 	flags = null
 	},
-/obj/machinery/light/small,
 /obj/item/clothing/suit/caution,
 /obj/structure/railing,
 /turf/simulated/floor/plating/turfpack/muriki,

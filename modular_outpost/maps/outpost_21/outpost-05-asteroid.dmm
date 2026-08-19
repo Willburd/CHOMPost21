@@ -66,7 +66,6 @@
 /obj/machinery/computer/shuttle_control/belter{
 	dir = 1
 	},
-/obj/machinery/light,
 /turf/simulated/shuttle/floor/voidcraft/dark/turfpack/airless,
 /area/shuttle/belter)
 "ak" = (
@@ -103,6 +102,9 @@
 	},
 /obj/structure/bed/chair/shuttle_padded{
 	dir = 8
+	},
+/obj/machinery/light{
+	dir = 4
 	},
 /turf/simulated/shuttle/floor/voidcraft/dark/turfpack/airless,
 /area/shuttle/belter)
@@ -908,6 +910,15 @@
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled,
 /area/offworld/asteroidyard/station/cave)
+"bS" = (
+/obj/structure/bed/chair/shuttle_padded{
+	dir = 4
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/shuttle/floor/voidcraft/dark/turfpack/airless,
+/area/shuttle/belter)
 "bT" = (
 /obj/machinery/meter,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -31984,7 +31995,7 @@ as
 an
 am
 am
-am
+bS
 ah
 ah
 tP
