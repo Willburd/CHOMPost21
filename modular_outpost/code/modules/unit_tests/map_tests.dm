@@ -696,7 +696,7 @@
 			continue
 		// Fallback and see if other things are supporting it
 		var/had_other_support = FALSE
-		for(var/obj/structure/window/find_win = locate() in get_wall.contents) // windows
+		for(var/obj/structure/window/find_win in get_wall.contents) // windows
 			if(find_win.fulltile) // Allows on full windows too
 				had_other_support = TRUE
 				break
