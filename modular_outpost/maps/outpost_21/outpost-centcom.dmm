@@ -23759,9 +23759,6 @@
 "jiZ" = (
 /obj/structure/bed,
 /obj/item/bedsheet/green,
-/obj/machinery/light{
-	dir = 1
-	},
 /turf/simulated/floor/wood/alt/tile,
 /area/centcom/living)
 "jjc" = (
@@ -91326,7 +91323,7 @@ ehv
 gDW
 sgA
 epa
-dwu
+ehv
 rte
 klr
 dwu
