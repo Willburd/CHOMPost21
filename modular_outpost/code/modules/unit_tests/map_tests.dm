@@ -681,6 +681,7 @@
 		var/area/ar = get_area(L)
 		if(istype(ar,/area/muriki/elevator))
 			continue
+
 		// Lights that don't need support
 		if(istype(L,/obj/machinery/light/flamp))
 			continue
@@ -694,10 +695,12 @@
 			continue
 		if(istype(L,/obj/machinery/light/spot))
 			continue
+
 		// Check for a dense wall first
 		var/turf/get_wall = get_step(L, L.dir)
 		if(get_wall.density)
 			continue
+
 		// Fallback and see if other things are supporting it
 		var/had_other_support = FALSE
 		for(var/obj/structure/window/find_win in get_wall.contents) // windows
@@ -707,6 +710,7 @@
 			if(find_win.dir == reverse_direction(L.dir)) // Allowed on windows and maint panels too
 				had_other_support = TRUE
 				break
+
 		if(!had_other_support)
 			TEST_NOTICE(src, "[L] was placed without a support wall. Located at [L.x].[L.y].[L.z] : [get_area(L)]")
 			failed = TRUE
