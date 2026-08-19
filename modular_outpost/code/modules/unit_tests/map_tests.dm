@@ -700,3 +700,54 @@
 		return FALSE;
 	TEST_NOTICE(src, "[thing] was placed on space turf. Located at [T.x].[T.y].[T.z] : [get_area(thing)]")
 	return TRUE
+
+
+
+/datum/unit_test/wall_lights_must_have_supports
+
+/datum/unit_test/wall_lights_must_have_supports/Run()
+	set background=1
+
+	var/failed = FALSE
+
+	for(var/obj/machinery/light/L in world)
+		// Ignore elevators
+		var/area/ar = get_area(L)
+		if(istype(ar,/area/turbolift))
+			continue
+
+		// Lights that don't need support
+		if(istype(L,/obj/machinery/light/flamp))
+			continue
+		if(istype(L,/obj/machinery/light/bigfloorlamp))
+			continue
+		if(istype(L,/obj/machinery/light/floortube))
+			continue
+		if(istype(L,/obj/machinery/light/small/fairylights))
+			continue
+		if(istype(L,/obj/machinery/light/lamppost))
+			continue
+		if(istype(L,/obj/machinery/light/spot))
+			continue
+
+		// Check for a dense wall first
+		var/turf/get_wall = get_step(L, L.dir)
+		if(get_wall.density)
+			continue
+
+		// Fallback and see if other things are supporting it
+		var/had_other_support = FALSE
+		for(var/obj/structure/window/find_win in get_wall.contents) // windows
+			if(find_win.fulltile) // Allows on full windows too
+				had_other_support = TRUE
+				break
+			if(find_win.dir == reverse_direction(L.dir)) // Allowed on windows and maint panels too
+				had_other_support = TRUE
+				break
+
+		if(!had_other_support)
+			TEST_NOTICE(src, "[L] was placed without a support wall. Located at [L.x].[L.y].[L.z] : [ar]")
+			failed = TRUE
+
+	if(failed)
+		TEST_FAIL("One or more lights is floating without a wall.")
