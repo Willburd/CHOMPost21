@@ -679,7 +679,7 @@
 	for(var/obj/machinery/light/L in world)
 		// Ignore elevators
 		var/area/ar = get_area(L)
-		if(istype(ar,/area/muriki/elevator))
+		if(istype(ar,/area/turbolift))
 			continue
 
 		// Lights that don't need support
@@ -712,7 +712,7 @@
 				break
 
 		if(!had_other_support)
-			TEST_NOTICE(src, "[L] was placed without a support wall. Located at [L.x].[L.y].[L.z] : [get_area(L)]")
+			TEST_NOTICE(src, "[L] was placed without a support wall. Located at [L.x].[L.y].[L.z] : [ar]")
 			failed = TRUE
 
 	if(failed)
