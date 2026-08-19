@@ -50,6 +50,12 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/orbital/lower/aft)
+"ah" = (
+/obj/effect/landmark{
+	name = "carpspawn"
+	},
+/turf/space,
+/area/space)
 "ai" = (
 /obj/item/radio/intercom{
 	dir = 1;
@@ -116,6 +122,12 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/lower/central)
+"ap" = (
+/obj/structure/cable/orange{
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/reinforced,
+/area/offworld/orbital/station/rust_core)
 "aq" = (
 /obj/random/trash,
 /obj/machinery/light/small{
@@ -553,6 +565,18 @@
 	},
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/rust_core)
+"bj" = (
+/obj/structure/cable/orange{
+	icon_state = "4-8"
+	},
+/obj/structure/cable/orange{
+	icon_state = "2-4"
+	},
+/obj/structure/cable/orange{
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/reinforced,
+/area/offworld/orbital/station/rust_core)
 "bk" = (
 /obj/structure/cable/orange{
 	icon_state = "4-8"
@@ -728,7 +752,7 @@
 /obj/machinery/atmospherics/portables_connector{
 	dir = 8
 	},
-/obj/effect/floor_decal/industrial/outline/blue,
+/obj/effect/floor_decal/industrial/outline/purple,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/beam_emitter)
 "bJ" = (
@@ -1431,7 +1455,7 @@
 /obj/effect/floor_decal/corner/orange/full{
 	dir = 1
 	},
-/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/effect/floor_decal/industrial/outline/purple,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/beam_emitter)
 "dn" = (
@@ -1935,6 +1959,15 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/rust_tool_storage)
+"eC" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/obj/structure/cable/orange{
+	icon_state = "8-9"
+	},
+/turf/simulated/floor/reinforced,
+/area/offworld/orbital/station/rust_core)
 "eD" = (
 /obj/structure/sign/signnew/radiation,
 /turf/simulated/wall/r_wall,
@@ -2860,6 +2893,9 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
+/obj/structure/cable/orange{
+	icon_state = "6-10"
+	},
 /turf/simulated/floor/reinforced,
 /area/offworld/orbital/station/rust_core)
 "gX" = (
@@ -2878,6 +2914,15 @@
 	},
 /turf/simulated/floor/reinforced/airmix,
 /area/offworld/orbital/station/atmos_primary)
+"ha" = (
+/obj/structure/cable/orange{
+	icon_state = "5-6"
+	},
+/obj/structure/cable/orange{
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/reinforced,
+/area/offworld/orbital/station/rust_core)
 "hb" = (
 /obj/machinery/air_sensor{
 	frequency = 1443;
@@ -3585,6 +3630,22 @@
 /obj/structure/atmospheric_retention_field/underdoors,
 /turf/simulated/floor/reinforced,
 /area/offworld/orbital/station/halls/lower/port)
+"iy" = (
+/obj/structure/window/phoronreinforced{
+	dir = 4
+	},
+/obj/structure/window/phoronreinforced{
+	dir = 8
+	},
+/obj/structure/window/phoronreinforced{
+	dir = 1
+	},
+/obj/structure/cable/orange{
+	icon_state = "5-9"
+	},
+/obj/structure/grille,
+/turf/simulated/floor/reinforced,
+/area/offworld/orbital/station/rust_core)
 "iz" = (
 /obj/machinery/portable_atmospherics/canister/phoron,
 /obj/effect/floor_decal/industrial/outline/purple,
@@ -3628,6 +3689,18 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/halls/lower/port)
+"iF" = (
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
+/obj/structure/cable/orange{
+	icon_state = "1-5"
+	},
+/obj/machinery/fusion_fuel_injector{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/offworld/orbital/station/rust_core)
 "iG" = (
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/milspec,
@@ -5932,7 +6005,7 @@
 /obj/effect/floor_decal/corner/orange{
 	dir = 5
 	},
-/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/effect/floor_decal/industrial/outline/purple,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/beam_emitter)
 "mX" = (
@@ -7506,6 +7579,9 @@
 "qo" = (
 /obj/machinery/power/fusion_core,
 /obj/effect/floor_decal/industrial/warning/full,
+/obj/structure/cable/orange{
+	icon_state = "0-4"
+	},
 /turf/simulated/floor/reinforced,
 /area/offworld/orbital/station/rust_core)
 "qp" = (
@@ -8538,6 +8614,9 @@
 /obj/structure/cable/green{
 	icon_state = "1-4"
 	},
+/obj/structure/cable/orange{
+	icon_state = "2-10"
+	},
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/rust_core)
 "so" = (
@@ -8938,7 +9017,7 @@
 /obj/machinery/atmospherics/portables_connector{
 	dir = 1
 	},
-/obj/effect/floor_decal/industrial/outline/red,
+/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/effect/floor_decal/corner/orange{
 	dir = 6
 	},
@@ -9149,7 +9228,7 @@
 /obj/effect/floor_decal/corner/orange{
 	dir = 5
 	},
-/obj/effect/floor_decal/industrial/outline/red,
+/obj/effect/floor_decal/industrial/outline/purple,
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/rust_core)
 "vg" = (
@@ -9448,6 +9527,9 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "2-8"
+	},
+/obj/structure/cable/orange{
+	icon_state = "4-10"
 	},
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/rust_core)
@@ -11595,9 +11677,6 @@
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/rust_core)
 "Ns" = (
-/obj/machinery/power/smes/buildable{
-	RCon_tag = "Power - Orbital Yard"
-	},
 /obj/item/smes_coil/super_capacity,
 /obj/item/smes_coil/super_io,
 /obj/structure/cable/green{
@@ -11605,6 +11684,9 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "0-2"
+	},
+/obj/machinery/power/smes/buildable/max_charge_max_output{
+	RCon_tag = "Power - Solars Orbital"
 	},
 /turf/simulated/floor,
 /area/offworld/orbital/station/solar_control)
@@ -11748,6 +11830,9 @@
 /area/offworld/orbital/exterior/starboard_solars)
 "Ol" = (
 /obj/machinery/power/hydromagnetic_trap,
+/obj/structure/cable/orange{
+	icon_state = "0-4"
+	},
 /turf/simulated/floor/reinforced,
 /area/offworld/orbital/station/rust_core)
 "Om" = (
@@ -12487,7 +12572,7 @@
 /obj/machinery/atmospherics/portables_connector{
 	dir = 1
 	},
-/obj/machinery/portable_atmospherics/canister/empty,
+/obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/rust_core)
 "TO" = (
@@ -12783,7 +12868,7 @@
 /obj/effect/floor_decal/corner/orange/full{
 	dir = 8
 	},
-/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/effect/floor_decal/industrial/outline/purple,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/beam_emitter)
 "VU" = (
@@ -13692,7 +13777,7 @@ xM
 xM
 xM
 xM
-xM
+ah
 xM
 xM
 xM
@@ -13852,7 +13937,7 @@ xM
 xM
 xM
 xM
-xM
+ah
 xM
 xM
 xM
@@ -14316,8 +14401,8 @@ xM
 xM
 xM
 xM
-xM
-xM
+ah
+ah
 xM
 xM
 xM
@@ -14518,7 +14603,7 @@ xM
 xM
 xM
 xM
-xM
+ah
 xM
 xM
 xM
@@ -14680,7 +14765,7 @@ xM
 xM
 xM
 xM
-xM
+ah
 xM
 xM
 xM
@@ -15448,7 +15533,7 @@ xM
 (14,1,1) = {"
 xM
 xM
-xM
+ah
 xM
 xM
 xM
@@ -15610,7 +15695,7 @@ xM
 (15,1,1) = {"
 xM
 xM
-xM
+ah
 xM
 xM
 xM
@@ -16298,7 +16383,7 @@ ng
 xM
 xM
 xM
-xM
+ah
 xM
 xM
 xM
@@ -16621,7 +16706,7 @@ ng
 ng
 xM
 xM
-xM
+ah
 xM
 xM
 xM
@@ -19499,7 +19584,7 @@ xM
 xM
 xM
 xM
-xM
+ah
 xM
 xM
 xM
@@ -19823,7 +19908,7 @@ xM
 xM
 xM
 xM
-xM
+ah
 xM
 xM
 xM
@@ -20186,7 +20271,7 @@ xM
 xM
 xM
 xM
-xM
+ah
 xM
 xM
 xM
@@ -20348,7 +20433,7 @@ xM
 xM
 xM
 xM
-xM
+ah
 xM
 xM
 xM
@@ -23236,7 +23321,7 @@ xM
 xM
 xM
 xM
-xM
+ah
 xM
 xM
 xM
@@ -24039,7 +24124,7 @@ xM
 xM
 xM
 xM
-xM
+ah
 xM
 xM
 xM
@@ -24201,7 +24286,7 @@ xM
 xM
 xM
 xM
-xM
+ah
 xM
 xM
 xM
@@ -27458,9 +27543,9 @@ jg
 YB
 Nu
 ge
-cs
-cs
-cs
+ha
+bj
+ap
 fY
 nm
 SB
@@ -27621,7 +27706,7 @@ QF
 je
 gW
 gc
-gc
+eC
 gc
 ga
 eg
@@ -27782,7 +27867,7 @@ dO
 gq
 eo
 eg
-jE
+iy
 av
 wq
 eg
@@ -27944,11 +28029,11 @@ bt
 pG
 um
 sn
-ZZ
+iF
 ZZ
 ZZ
 ei
-gv
+ei
 ei
 rD
 LE
@@ -32468,7 +32553,7 @@ xM
 xM
 xM
 xM
-xM
+ah
 xM
 xM
 xM
@@ -32628,7 +32713,7 @@ xM
 xM
 xM
 xM
-xM
+ah
 xM
 xM
 xM
@@ -34264,7 +34349,7 @@ xM
 xM
 xM
 xM
-xM
+ah
 xM
 xM
 xM
@@ -34588,7 +34673,7 @@ xM
 xM
 xM
 xM
-xM
+ah
 xM
 xM
 xM
