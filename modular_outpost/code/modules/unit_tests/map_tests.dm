@@ -677,6 +677,7 @@
 	var/failed = FALSE
 
 	for(var/obj/machinery/light/L in world)
+		// Lights that don't need support
 		if(istype(L,/obj/machinery/light/flamp))
 			continue
 		if(istype(L,/obj/machinery/light/bigfloorlamp))
@@ -689,10 +690,20 @@
 			continue
 		if(istype(L,/obj/machinery/light/spot))
 			continue
+		// Check for a dense wall first
 		var/turf/get_wall = get_step(L, L.dir)
-		if(!get_wall.density)
-			TEST_NOTICE(src, "[L] was placed without a support wall. Located at [L.x].[L.y].[L.z] : [get_area(L)]")
-			failed = TRUE
+		if(get_wall.density)
+			continue
+		// Fallback and see if windows work
+		var/obj/structure/window/find_win = locate() in get_wall.contents
+		if(find_win)
+			if(find_win.fulltile) // Allows on full windows too
+				continue
+			if(find_win.dir == reverse_direction(L.dir)) // Allowed on windows and maint panels too
+				continue
+
+		TEST_NOTICE(src, "[L] was placed without a support wall. Located at [L.x].[L.y].[L.z] : [get_area(L)]")
+		failed = TRUE
 
 	if(failed)
 		TEST_FAIL("One or more lights is floating without a wall.")
