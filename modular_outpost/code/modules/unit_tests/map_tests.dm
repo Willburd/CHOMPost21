@@ -694,16 +694,18 @@
 		var/turf/get_wall = get_step(L, L.dir)
 		if(get_wall.density)
 			continue
-		// Fallback and see if windows work
-		var/obj/structure/window/find_win = locate() in get_wall.contents
-		if(find_win)
+		// Fallback and see if other things are supporting it
+		var/had_other_support = FALSE
+		for(var/obj/structure/window/find_win = locate() in get_wall.contents) // windows
 			if(find_win.fulltile) // Allows on full windows too
-				continue
+				had_other_support = TRUE
+				break
 			if(find_win.dir == reverse_direction(L.dir)) // Allowed on windows and maint panels too
-				continue
-
-		TEST_NOTICE(src, "[L] was placed without a support wall. Located at [L.x].[L.y].[L.z] : [get_area(L)]")
-		failed = TRUE
+				had_other_support = TRUE
+				break
+		if(!had_other_support)
+			TEST_NOTICE(src, "[L] was placed without a support wall. Located at [L.x].[L.y].[L.z] : [get_area(L)]")
+			failed = TRUE
 
 	if(failed)
 		TEST_FAIL("One or more lights is floating without a wall.")
