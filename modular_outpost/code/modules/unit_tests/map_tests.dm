@@ -677,6 +677,10 @@
 	var/failed = FALSE
 
 	for(var/obj/machinery/light/L in world)
+		// Ignore elevators
+		var/area/ar = get_area(L)
+		if(istype(ar,/area/muriki/elevator))
+			continue
 		// Lights that don't need support
 		if(istype(L,/obj/machinery/light/flamp))
 			continue

@@ -18534,7 +18534,6 @@
 /obj/effect/floor_decal/corner/orange{
 	dir = 10
 	},
-/obj/machinery/light/broken,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "flD" = (
@@ -73784,9 +73783,6 @@
 	dir = 1
 	},
 /obj/item/material/shard,
-/obj/machinery/light/broken{
-	dir = 1
-	},
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
