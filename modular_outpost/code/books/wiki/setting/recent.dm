@@ -36,10 +36,6 @@
 	<td>- Mirzam tunnel is largely colonized and mapped, making inter-stellar travel in Solgov now common.</td>
 </tr>
 <tr>
-	<td>2293</td>
-	<td>- First contact with Kitsuhana Heavy Industries. Little is known at the time, as they rarely interact with civilizations outside of their own. First introduction of NIF technology through KHI technomancers.</td>
-</tr>
-<tr>
 	<td>2327</td>
 	<td>- First contact with the Unathi states.. tensions rapidly flare due to lack of communication, and a few Solgov ships are destroyed; mistaken for Skrell vessels.</td>
 </tr>
@@ -96,16 +92,16 @@
 	<td>- E-Shui establishes its first Outpost on the planet MU112-5.</td>
 </tr>
 <tr>
-	<td>2433</td>
-	<td>- The NIF incident results in multiple systems becoming permanently condemned. Due to a self replicating nanite virus.</td>
+	<td>2393</td>
+	<td>- First contact with Kitsuhana Heavy Industries. Little is known at the time, as they rarely interact with civilizations outside of their own. First introduction of NIF technology through KHI technomancers.</td>
 </tr>
 <tr>
 	<td>2440</td>
 	<td>- E-Shui completes terraforming of MU112-5, renaming it Muyang in honor of its founder. Begins the purchase of multiple other planets after auctioning the finished paradise world to Solgov.</td>
 </tr>
 <tr>
-	<td>2500</td>
-	<td>- KHI departs from Solgov space entirely, departing core-ward.</td>
+	<td>2522</td>
+	<td>- Beginning of the NIF incident.</td>
 </tr>
 <tr>
 	<td>2550</td>
@@ -113,7 +109,8 @@
 </tr>
 <tr>
 	<td>2552</td>
-	<td>- Outpost-21 becomes properly established. Orbital connection finalized.</td>
+	<td>- Outpost-21 becomes properly established. Orbital connection finalized.
+	<br>- The NIF incident culminates in multiple systems becoming permanently condemned due to a self replicating nanite virus.</td>
 </tr>
 <tr>
 	<td>2553</td>
@@ -130,6 +127,10 @@
 <tr>
 	<td>2559</td>
 	<td>- Med/sec building finalized. Central Command fully established.</td>
+</tr>
+<tr>
+	<td>2560</td>
+	<td>- KHI departs from Solgov space entirely, departing core-ward.</td>
 </tr>
 <tr>
 	<td>2561</td>
