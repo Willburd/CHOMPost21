@@ -71,3 +71,13 @@ img._speciesimage {
 	min-width: 150px;
 	background-color: rgba(0, 21, 255, 0.06);
 }
+
+th {
+	background-color: #ffffff21;
+	border-bottom: 2px solid #5254ad;
+}
+
+td {
+	background-color: #00000011;
+	border-bottom: 1px solid #fcfafa25;
+}

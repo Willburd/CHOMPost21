@@ -16,7 +16,7 @@
 		wiki_pages = list(
 			"Setting" = list(
 				#include "wiki/setting/primer.dm"
-				#include "wiki/setting/recent.dm"
+				//#include "wiki/setting/recent.dm"
 				#include "wiki/setting/solgovlaw.dm"
 				#include "wiki/setting/localarea.dm"
 				#include "wiki/setting/muriki.dm"
