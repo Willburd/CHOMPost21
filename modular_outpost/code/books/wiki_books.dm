@@ -24,6 +24,8 @@
 				#include "wiki/setting/outpost22.dm"
 				#include "wiki/setting/outpost18.dm"
 				#include "wiki/setting/nifpro.dm"
+				#include "wiki/setting/bluespace.dm"
+				#include "wiki/setting/redspace.dm"
 				#include "wiki/setting/oldearth.dm"
 			),
 			"Gameplay" = list(
