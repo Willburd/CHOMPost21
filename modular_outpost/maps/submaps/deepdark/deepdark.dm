@@ -713,7 +713,7 @@
 	cost = 30
 
 /datum/map_template/outpost21/muriki/caves_deepdark_huge/statue_B
-	name = "statue A"
+	name = "statue B"
 	desc = "Ominous statues."
 	mappath = "modular_outpost/maps/submaps/deepdark/statue_B.dmm"
 	allow_duplicates = FALSE
