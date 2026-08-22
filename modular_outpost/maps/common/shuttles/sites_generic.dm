@@ -18,45 +18,45 @@
 	name = "Prospector (Far-Port Dock)"
 	landmark_tag = "prospector_public_port"
 	base_turf = /turf/space
-	base_area = /area/offworld/asteroidyard // TODO
+	base_area = /area/space
 
 /obj/effect/shuttle_landmark/premade/generic/prospector_starboard
 	name = "Prospector (Far-Starboard Dock)"
 	landmark_tag = "prospector_public_starboard"
 	base_turf = /turf/space
-	base_area = /area/offworld/asteroidyard // TODO
+	base_area = /area/space
 
 /obj/effect/shuttle_landmark/premade/generic/beltmine
 	name = "Reclaimation Yard (Civilian Dock)"
 	landmark_tag = "orbitalyard_civ"
 	base_turf = /turf/space
-	base_area = /area/offworld/asteroidyard
+	base_area = /area/offworld/orbital/exterior/yardzone
 	local_crash_sites = OUTPOST_ASTEROID_CRASHES
 
 /obj/effect/shuttle_landmark/premade/generic/beltmine_north
 	name = "Reclaimation Yard (North)"
 	landmark_tag = "orbitalyard_north"
 	base_turf = /turf/space
-	base_area = /area/offworld/asteroidyard
+	base_area = /area/space
 	local_crash_sites = OUTPOST_ASTEROID_CRASHES
 
 /obj/effect/shuttle_landmark/premade/generic/beltmine_south
 	name = "Reclaimation Yard (South)"
 	landmark_tag = "orbitalyard_south"
 	base_turf = /turf/space
-	base_area = /area/offworld/asteroidyard
+	base_area = /area/space
 	local_crash_sites = OUTPOST_ASTEROID_CRASHES
 
 /obj/effect/shuttle_landmark/premade/generic/beltmine_east
 	name = "Reclaimation Yard (East)"
 	landmark_tag = "orbitalyard_east"
 	base_turf = /turf/space
-	base_area = /area/offworld/asteroidyard
+	base_area = /area/space
 	local_crash_sites = OUTPOST_ASTEROID_CRASHES
 
 /obj/effect/shuttle_landmark/premade/generic/beltmine_west
 	name = "Reclaimation Yard (West)"
 	landmark_tag = "orbitalyard_west"
 	base_turf = /turf/space
-	base_area = /area/offworld/asteroidyard
+	base_area = /area/space
 	local_crash_sites = OUTPOST_ASTEROID_CRASHES

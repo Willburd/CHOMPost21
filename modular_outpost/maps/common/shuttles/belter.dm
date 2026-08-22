@@ -20,7 +20,7 @@
 /obj/effect/shuttle_landmark/premade/belter/asteroid_yard
 	name = "Reclaimation Yard (Belter Platform)"
 	landmark_tag = "belter_station"
-	base_area = /area/offworld/asteroidyard/external
+	base_area = /area/offworld/orbital/exterior/yardzone
 	base_turf = /turf/simulated/floor/airless
 
 /obj/effect/shuttle_landmark/premade/belter/transit

@@ -60,6 +60,6 @@
 	name = "ES 21-4 Confinement Beam Platform"
 	landmark_tag = "beam_sat"
 	docking_controller = "beam_sat_controller"
-	base_area = /area/offworld/confinementbeam/exterior
+	base_area = /area/space
 	base_turf = /turf/simulated/floor/airless
 	local_crash_sites = OUTPOST_CONFINEMENTBEAM_CRASHES
