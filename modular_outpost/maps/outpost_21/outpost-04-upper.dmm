@@ -10266,6 +10266,24 @@
 	dir = 8
 	},
 /area/hydroponics/publicgarden)
+"avu" = (
+/obj/machinery/computer/security/telescreen/bodycamera{
+	pixel_y = 28
+	},
+/obj/machinery/camera/network/thunder{
+	alpha = 0;
+	c_tag = "Talk Show Radio";
+	invisibility = 101;
+	name = "talkshow";
+	dir = 4
+	},
+/obj/structure/table/steel_reinforced,
+/obj/item/radio/phone{
+	name = "Radio Host Phone"
+	},
+/obj/random_multi/single_item/sfr_headset,
+/turf/simulated/floor/wood,
+/area/djstation)
 "avy" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 4
@@ -12408,16 +12426,7 @@
 	layer = 2;
 	pixel_x = -9
 	},
-/obj/machinery/camera/network/thunder{
-	alpha = 0;
-	c_tag = "Talk Show Radio";
-	invisibility = 101;
-	name = "talkshow"
-	},
 /obj/item/toy/plushie/teshari/b_yw,
-/obj/machinery/firealarm{
-	pixel_y = 26
-	},
 /turf/simulated/floor/wood,
 /area/djstation)
 "bxB" = (
@@ -13615,6 +13624,10 @@
 /obj/random/cigarettes,
 /obj/random/cigarettes,
 /obj/item/flame/lighter/zippo/red,
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = 26
+	},
 /turf/simulated/floor/wood,
 /area/djstation)
 "bYv" = (
@@ -53821,11 +53834,6 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/phoronics/med)
 "xaw" = (
-/obj/structure/table/steel_reinforced,
-/obj/random_multi/single_item/sfr_headset,
-/obj/item/radio/phone{
-	name = "Radio Host Phone"
-	},
 /obj/machinery/computer/security/telescreen/entertainment{
 	pixel_y = 28
 	},
@@ -115486,7 +115494,7 @@ mJm
 acv
 acv
 dKL
-dvt
+szB
 szB
 alb
 kya
@@ -115649,7 +115657,7 @@ szB
 szB
 szB
 szB
-szB
+avu
 bxz
 bxH
 uGL
