@@ -44317,6 +44317,16 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/security/tankstore)
+"bEO" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/red{
+	dir = 4
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/machinery/door/airlock/maintenance/int,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/engineering/coreproctunnel)
 "bEP" = (
 /obj/effect/floor_decal/corner/red/bordercorner{
 	dir = 8
@@ -51296,6 +51306,7 @@
 /area/mine/unexplored/muriki/mountainbase)
 "bSm" = (
 /obj/structure/closet,
+/obj/item/gun/projectile/pirate,
 /turf/simulated/floor/tiled/dark,
 /area/mine/unexplored/muriki/mountainbase)
 "bSn" = (
@@ -54713,6 +54724,9 @@
 	icon_state = "0-4"
 	},
 /obj/random/junk,
+/obj/machinery/light/small{
+	dir = 1
+	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/engineering/coreproctunnel)
 "bZD" = (
@@ -57943,16 +57957,6 @@
 /obj/effect/landmark/event_spawn/maintpred,
 /turf/simulated/floor/plating,
 /area/maintenance/research)
-"chN" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/red{
-	dir = 4
-	},
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
-	},
-/mob/living/simple_mob/vore/jelly,
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/engineering/coreproctunnel)
 "chO" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/red{
 	dir = 4
@@ -105053,7 +105057,7 @@ bSS
 bSS
 bSS
 gKH
-bZi
+bEO
 gKH
 gKH
 bTc
@@ -105215,7 +105219,7 @@ gKH
 gKH
 gKH
 gKH
-chN
+bTh
 bSS
 bSS
 bZj
