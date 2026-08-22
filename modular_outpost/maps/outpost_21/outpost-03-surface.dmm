@@ -44047,7 +44047,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/obj/effect/mine/taarainbow,
+/obj/effect/mine/stripping,
 /obj/item/assembly/mousetrap/armed,
 /turf/simulated/floor/plating,
 /area/maintenance/medbay_aft)
