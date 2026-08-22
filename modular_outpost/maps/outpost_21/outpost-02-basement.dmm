@@ -51306,6 +51306,7 @@
 /area/mine/unexplored/muriki/mountainbase)
 "bSm" = (
 /obj/structure/closet,
+/obj/item/gun/projectile/pirate,
 /turf/simulated/floor/tiled/dark,
 /area/mine/unexplored/muriki/mountainbase)
 "bSn" = (
