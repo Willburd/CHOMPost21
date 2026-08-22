@@ -16,7 +16,7 @@
 		wiki_pages = list(
 			"Setting" = list(
 				#include "wiki/setting/primer.dm"
-				#include "wiki/setting/recent.dm"
+				//#include "wiki/setting/recent.dm"
 				#include "wiki/setting/solgovlaw.dm"
 				#include "wiki/setting/localarea.dm"
 				#include "wiki/setting/muriki.dm"
@@ -24,6 +24,8 @@
 				#include "wiki/setting/outpost22.dm"
 				#include "wiki/setting/outpost18.dm"
 				#include "wiki/setting/nifpro.dm"
+				#include "wiki/setting/bluespace.dm"
+				#include "wiki/setting/redspace.dm"
 				#include "wiki/setting/oldearth.dm"
 			),
 			"Gameplay" = list(
