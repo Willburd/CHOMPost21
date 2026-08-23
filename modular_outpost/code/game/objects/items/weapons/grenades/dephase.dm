@@ -27,3 +27,11 @@
 	new/obj/effect/effect/smoke/illumination(loc, 5, 30, 30, "#FFFFFF")
 
 	qdel(src)
+
+/obj/item/storage/box/anti_phasing
+    name = "box of anti-phasing grenades"
+    desc = "A box containing 7 experimental phase-disruption grenades."
+    icon_state = "emp"
+    starts_with = list(/obj/item/grenade/dephasing = 7)
+    drop_sound = 'sound/items/drop/ammobox.ogg'
+    pickup_sound = 'sound/items/pickup/ammobox.ogg'
