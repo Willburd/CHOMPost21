@@ -19275,8 +19275,7 @@
 /obj/effect/catwalk_plated/white,
 /obj/machinery/shower/automated{
 	dir = 4;
-	current_temperature = "freezing";
-	reagent_id = "spacomycaze"
+	current_temperature = "freezing"
 	},
 /obj/effect/floor_decal/industrial/bot_outline/blue,
 /turf/simulated/floor/plating/turfpack/muriki,
