@@ -37,6 +37,7 @@
 	var/list/emote_threats = list(
 								"I have come to collect a meal, now that your people have broken the seal.",
 								"The sight of me should make you fly, but know that regardless you will die.",
+	//							"Escape all this frustrating clamour, come sink with me into the glamour.", Outpost-21 edit: Removes conflicting lore
 								"My face may now be made of bone, but I should not experience it alone.",
 								"I can hear the racing of your heart, it is approaching my favourite part.",
 								"You will not be left to suffer, is it not that life is so much tougher.",
@@ -70,10 +71,10 @@
 	density = 0
 
 /datum/category_item/catalogue/fauna/ysbryd
-	name = "Supernatural Entity - Ysbryd"
-	desc = "Classification: Phantasma woemoris\
+	name = "Extra-Realspace Fauna - Ysbryd"
+	desc = "Classification: Phantasma glamoris\
 	<br><br>\
-	An unusual entity of ages past. Classified best as a spectre, it only reveals itself to its target as it slowly seeks them down to fill an endless hunger... though its exact motivations are unclear, the decorations and apparel on it appear to be celebratory or marrital in nature... perhaps it seeks to bond with a long abandoned lover, eating all that it can to fill the void."
+	An unusual creature originating from whitespace. Observation has been very limited due to it's physics defying behaviour, only appearing to one observer at any time, and due to it's highly aggressive behaviour. Xenobiologists have not been able to reliably encounter the creature and the few recorded encounters resulted in serious injury or death to the researcher in question. One particular study revealed that it seemed to be agitated by high frequency electromagnetic radiation, outside of the visible sprectrum of light, but results were not conclusive."
 	value = CATALOGUER_REWARD_HARD
 
 /mob/living/simple_mob/ysbryd/load_default_bellies()
