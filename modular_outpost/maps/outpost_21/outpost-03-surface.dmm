@@ -4695,11 +4695,11 @@
 	name = "Research Amnesty Dropoff";
 	pixel_x = -36
 	},
-/obj/structure/disposalpipe/trunk{
-	dir = 1
-	},
 /obj/effect/floor_decal/milspec/color/purple/half{
 	dir = 8
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/lab)
@@ -10493,6 +10493,9 @@
 /obj/item/experi_scanner,
 /obj/item/experi_scanner,
 /obj/item/experi_scanner,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/lab)
 "asG" = (
@@ -12582,6 +12585,9 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/milspec/color/purple/corner{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
@@ -17567,6 +17573,9 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/lab)
 "aNH" = (
@@ -20724,6 +20733,20 @@
 /obj/structure/fence/door,
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
 /area/muriki/grounds/sec)
+"aWg" = (
+/obj/effect/floor_decal/corner/red{
+	dir = 10
+	},
+/obj/structure/closet/crate/weapon,
+/turf/simulated/floor/tiled/techmaint,
+/area/security/evidence_storage)
+"aWh" = (
+/obj/structure/disposalpipe/segment{
+	icon_state = "pipe-c";
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/rnd/lab)
 "aWq" = (
 /obj/machinery/light{
 	dir = 4
@@ -27918,8 +27941,6 @@
 /obj/item/suit_cooling_unit,
 /obj/item/clothing/mask/breath,
 /obj/item/clothing/mask/breath,
-/obj/item/rig/combat/empty,
-/obj/item/rig/combat/empty,
 /obj/machinery/door/window/brigdoor/eastright{
 	name = "EVA Suit";
 	dir = 2
@@ -27930,6 +27951,7 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
+/obj/item/rig/hazard/equipped,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/security/tactical)
 "dkB" = (
@@ -30655,8 +30677,15 @@
 	dir = 4;
 	pixel_x = 26
 	},
-/obj/item/storage/box/sinpockets,
-/obj/item/storage/box/sinpockets,
+/obj/item/storage/box/sinpockets{
+	pixel_x = 8
+	},
+/obj/item/storage/box/sinpockets{
+	pixel_x = 8
+	},
+/obj/item/storage/box{
+	pixel_x = -6
+	},
 /turf/simulated/floor/tiled/old_tile/white,
 /area/security/security_equiptment_storage)
 "egh" = (
@@ -32818,12 +32847,15 @@
 	c_tag = "SCI - RnD West";
 	dir = 4
 	},
-/obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/milspec/color/purple/half{
 	dir = 8
 	},
 /obj/machinery/atm{
 	pixel_x = -28
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/lab)
@@ -34517,6 +34549,9 @@
 /obj/item/clothing/glasses/welding,
 /obj/structure/cable/green{
 	icon_state = "4-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/lab)
@@ -36859,6 +36894,9 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/industrial/outline/cut_corners/yellow,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/lab)
 "glK" = (
@@ -40038,6 +40076,9 @@
 /area/muriki/bathroom/security)
 "hnc" = (
 /obj/machinery/hologram/holopad,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/lab)
 "hns" = (
@@ -43823,6 +43864,10 @@
 	dir = 4
 	},
 /obj/effect/landmark/start/scientist,
+/obj/structure/disposalpipe/segment{
+	icon_state = "pipe-c";
+	dir = 8
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/lab)
 "isA" = (
@@ -45726,10 +45771,6 @@
 	},
 /area/muriki/septic)
 "iXC" = (
-/obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
-	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
@@ -45743,6 +45784,9 @@
 	dir = 4;
 	pixel_x = -26;
 	pixel_y = -26
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/lab)
@@ -46807,6 +46851,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/lab)
 "jpY" = (
@@ -47071,6 +47118,9 @@
 	},
 /obj/effect/floor_decal/industrial/outline/cut_corners/yellow,
 /obj/effect/landmark/redspaceexit,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/lab)
 "jtt" = (
@@ -47452,6 +47502,9 @@
 "jxv" = (
 /obj/structure/closet/secure_closet{
 	req_one_access = list(7,47)
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/lab)
@@ -54509,9 +54562,6 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/sanitorium)
 "lET" = (
-/obj/structure/closet{
-	name = "Evidence Closet"
-	},
 /obj/effect/floor_decal/corner/red/full{
 	dir = 4
 	},
@@ -54522,6 +54572,7 @@
 	pixel_y = -30;
 	dir = 1
 	},
+/obj/structure/closet/crate/weapon,
 /turf/simulated/floor/tiled/techmaint,
 /area/security/evidence_storage)
 "lFh" = (
@@ -54851,6 +54902,9 @@
 /obj/item/stock_parts/capacitor,
 /obj/item/stock_parts/gear,
 /obj/item/stock_parts/gear,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/lab)
 "lLE" = (
@@ -55042,6 +55096,9 @@
 /obj/item/reagent_containers/spray/cleaner,
 /obj/structure/cable/green{
 	icon_state = "4-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/lab)
@@ -56977,9 +57034,12 @@
 /turf/simulated/open,
 /area/engineering/gravgen)
 "mui" = (
-/obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/milspec/color/purple/half{
 	dir = 8
+	},
+/obj/structure/disposalpipe/segment{
+	icon_state = "pipe-c";
+	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/lab)
@@ -58595,6 +58655,9 @@
 	icon_state = "1-8"
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals_central7{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
@@ -65094,6 +65157,10 @@
 /turf/simulated/floor/wood,
 /area/crew_quarters/bar)
 "pbv" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/lab)
 "pbL" = (
@@ -66513,6 +66580,9 @@
 /area/security/detectives_office)
 "pDJ" = (
 /obj/effect/floor_decal/milspec/color/purple/half,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/lab)
 "pDN" = (
@@ -70978,6 +71048,9 @@
 /area/crew_quarters/heads/hop)
 "qXa" = (
 /obj/effect/floor_decal/milspec/color/purple/corner,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/lab)
 "qXw" = (
@@ -71118,6 +71191,9 @@
 "raU" = (
 /obj/effect/floor_decal/milspec/color/purple/corner{
 	dir = 8
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/lab)
@@ -72023,6 +72099,9 @@
 "rtd" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/lab)
@@ -88412,6 +88491,9 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/lab)
 "wxB" = (
@@ -89042,6 +89124,9 @@
 /obj/item/tape_roll,
 /obj/structure/cable/green{
 	icon_state = "4-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/lab)
@@ -90632,6 +90717,9 @@
 /obj/item/clipboard,
 /obj/item/folder/white,
 /obj/item/pen,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/lab)
 "xio" = (
@@ -128635,7 +128723,7 @@ itg
 fAs
 auM
 kKp
-axS
+aWg
 dfb
 hpz
 lqL
@@ -143815,8 +143903,8 @@ xCs
 mQp
 jpT
 rtd
-pbv
-pbv
+cJR
+cJR
 xTc
 vgX
 pkf
@@ -144463,7 +144551,7 @@ fxU
 cJR
 fvZ
 xhU
-pbv
+cJR
 hnc
 xEp
 sgE
@@ -144786,7 +144874,7 @@ czI
 dSE
 qqG
 pbv
-pbv
+aWh
 pbv
 iss
 aoE
