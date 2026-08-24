@@ -37,7 +37,7 @@
 	var/list/emote_threats = list(
 								"I have come to collect a meal, now that your people have broken the seal.",
 								"The sight of me should make you fly, but know that regardless you will die.",
-	//							"Escape all this frustrating clamour, come sink with me into the glamour.", Outpost-21 edit: Removes conflicting lore
+								"Escape all this frustrating clamour, come sink with me into the glamour.",
 								"My face may now be made of bone, but I should not experience it alone.",
 								"I can hear the racing of your heart, it is approaching my favourite part.",
 								"You will not be left to suffer, is it not that life is so much tougher.",
@@ -131,14 +131,6 @@
 /mob/living/simple_mob/ysbryd/death()
 	if(chosen_target)
 		disconnect_target()
-	// Outpost 21 edit begin - More Clear Death
-	var/turf/our_turf = get_turf(src)
-	if(our_turf)
-		visible_message(span_warning("The creature fades away with an echoing, ethereal screech, briefly showing itself to all, before crumbling down into a heap... only the eerie skull remaining!"))
-		var/obj/item/digestion_remains/skull/tajaran/new_skull = new /obj/item/digestion_remains/skull/unknown(our_turf)
-		new_skull.name = "Avian skull"
-		new_skull.desc = "A bleached, malformed avian skull. It has definitely has seen better times. Hard to tell what it belonged to."
-	 // Outpost 21 edit end
 	qdel(src)
 
 /mob/living/simple_mob/ysbryd/Life()
