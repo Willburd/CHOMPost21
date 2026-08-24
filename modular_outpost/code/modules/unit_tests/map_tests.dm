@@ -746,7 +746,7 @@
 				break
 
 		if(!had_other_support)
-			TEST_NOTICE(src, "[L] was placed without a support wall. Located at [L.x].[L.y].[L.z] : [ar]")
+			TEST_NOTICE(src, "[L] was placed without a support wall. Located on \the [get_turf(L)] [L.x].[L.y].[L.z] : [ar]")
 			failed = TRUE
 
 	if(failed)
