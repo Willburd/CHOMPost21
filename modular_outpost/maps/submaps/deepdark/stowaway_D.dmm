@@ -129,9 +129,6 @@
 /area/mine/explored/muriki/cave/deepdark)
 "oY" = (
 /obj/structure/table/rack/shelf/wood,
-/obj/machinery/light/small{
-	dir = 4
-	},
 /obj/item/storage/belt/utility/chief,
 /obj/item/clothing/gloves/heavy_engineer{
 	pixel_x = 7;
