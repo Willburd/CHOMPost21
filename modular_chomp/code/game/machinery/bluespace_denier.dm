@@ -16,6 +16,7 @@
 
 /obj/machinery/bluespace_denier/Initialize(mapload)
 	. = ..()
+	AddElement(/datum/element/climbable) // Outpost 21 edit - Port climbable flashers and bluespace dephasers
 	// if already anchored, setup the proxity check
 	timerid = addtimer(CALLBACK(src, PROC_REF(start_up)), 10 SECONDS, TIMER_STOPPABLE)
 

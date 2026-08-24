@@ -1,4 +1,10 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor,
+/area/submap/outpost21/cross_A)
 "aj" = (
 /obj/effect/landmark{
 	name = "badbody"
@@ -77,18 +83,12 @@
 /area/submap/outpost21/cross_A)
 "dJ" = (
 /obj/machinery/mech_recharger,
-/obj/machinery/light{
-	dir = 1
-	},
 /turf/simulated/floor/plating,
 /area/submap/outpost21/cross_A)
 "eG" = (
 /obj/structure/table/standard,
 /obj/random/medical,
 /obj/effect/floor_decal/corner/paleblue/full,
-/obj/machinery/light{
-	dir = 8
-	},
 /turf/simulated/floor/tiled/white,
 /area/submap/outpost21/cross_A)
 "eI" = (
@@ -209,6 +209,9 @@
 /obj/effect/floor_decal/corner/beige{
 	dir = 5
 	},
+/obj/machinery/light{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/white,
 /area/submap/outpost21/cross_A)
 "kw" = (
@@ -241,9 +244,6 @@
 /area/submap/outpost21/cross_A)
 "mf" = (
 /obj/structure/table/steel,
-/obj/machinery/light{
-	dir = 8
-	},
 /turf/simulated/floor/tiled/white,
 /area/submap/outpost21/cross_A)
 "mu" = (
@@ -252,6 +252,11 @@
 "nn" = (
 /obj/structure/bed/chair/wheelchair,
 /obj/effect/floor_decal/corner/paleblue,
+/obj/machinery/light{
+	dir = 4;
+	icon_state = "tube1";
+	pixel_x = 0
+	},
 /turf/simulated/floor/tiled/white,
 /area/submap/outpost21/cross_A)
 "nC" = (
@@ -372,11 +377,6 @@
 "qi" = (
 /obj/structure/closet/secure_closet/chemical,
 /obj/effect/floor_decal/corner/beige,
-/obj/machinery/light{
-	dir = 4;
-	icon_state = "tube1";
-	pixel_x = 0
-	},
 /turf/simulated/floor/tiled/white,
 /area/submap/outpost21/cross_A)
 "qA" = (
@@ -490,11 +490,6 @@
 /obj/item/clothing/head/helmet/space/void/medical,
 /obj/item/clothing/shoes/magboots,
 /obj/item/clothing/suit/space/void/medical,
-/obj/machinery/light{
-	dir = 4;
-	icon_state = "tube1";
-	pixel_x = 0
-	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/outpost21/cross_A)
 "wG" = (
@@ -803,6 +798,11 @@
 	name = "EVA Suit Storage";
 	req_access = list(5)
 	},
+/obj/machinery/light{
+	dir = 4;
+	icon_state = "tube1";
+	pixel_x = 0
+	},
 /turf/simulated/floor/tiled/dark,
 /area/submap/outpost21/cross_A)
 "JJ" = (
@@ -843,17 +843,6 @@
 	opacity = 0
 	},
 /turf/simulated/floor/plating,
-/area/submap/outpost21/cross_A)
-"Kv" = (
-/obj/effect/floor_decal/corner/paleblue{
-	dir = 4
-	},
-/obj/machinery/light{
-	dir = 4;
-	icon_state = "tube1";
-	pixel_x = 0
-	},
-/turf/simulated/floor/tiled/white,
 /area/submap/outpost21/cross_A)
 "KF" = (
 /obj/structure/grille,
@@ -1007,6 +996,11 @@
 	pixel_x = 32;
 	pixel_y = 0
 	},
+/obj/machinery/light{
+	dir = 4;
+	icon_state = "tube1";
+	pixel_x = 0
+	},
 /turf/simulated/floor/tiled/white,
 /area/submap/outpost21/cross_A)
 "Ru" = (
@@ -1060,11 +1054,6 @@
 	},
 /obj/effect/floor_decal/corner/paleblue/full{
 	dir = 1
-	},
-/obj/machinery/light{
-	dir = 4;
-	icon_state = "tube1";
-	pixel_x = 0
 	},
 /turf/simulated/floor/tiled/white,
 /area/submap/outpost21/cross_A)
@@ -1582,7 +1571,7 @@ Da
 zt
 MG
 IS
-Kv
+zt
 QG
 MG
 MG
@@ -1723,7 +1712,7 @@ zt
 MG
 gn
 zE
-sz
+aa
 VC
 lU
 MG
@@ -1737,7 +1726,7 @@ Xv
 (19,1,1) = {"
 Xv
 WQ
-pH
+cP
 gR
 pr
 MG
@@ -1764,7 +1753,7 @@ Xv
 (20,1,1) = {"
 Xv
 WQ
-cP
+pH
 Ax
 Vl
 zt
