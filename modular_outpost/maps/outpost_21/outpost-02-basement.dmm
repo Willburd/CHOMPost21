@@ -40502,15 +40502,6 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/sec)
-"bxm" = (
-/obj/structure/railing{
-	flags = null
-	},
-/obj/machinery/light/small{
-	dir = 1
-	},
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/sec)
 "bxn" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/glass_security{
@@ -127225,7 +127216,7 @@ bhW
 bhW
 bGz
 ckR
-bhW
+brJ
 brJ
 brJ
 brJ
@@ -127387,8 +127378,8 @@ bhW
 bVq
 buL
 bhW
-bhW
 brJ
+bbG
 bxl
 cKo
 cJr
@@ -127549,11 +127540,11 @@ bhW
 ciq
 bhW
 bhW
-aDq
 brJ
-bxm
+bJL
+bxl
 bwI
-bvN
+brJ
 bqe
 bqe
 bqe
