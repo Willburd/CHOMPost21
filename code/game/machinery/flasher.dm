@@ -27,6 +27,7 @@
 
 /obj/machinery/flasher/portable/Initialize(mapload)
 	..()
+	AddElement(/datum/element/climbable) // Outpost 21 edit - Port climbable flashers and bluespace dephasers
 	return INITIALIZE_HINT_LATELOAD
 
 /obj/machinery/flasher/portable/LateInitialize()
