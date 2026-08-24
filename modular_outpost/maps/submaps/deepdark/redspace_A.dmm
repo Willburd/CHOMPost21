@@ -883,9 +883,6 @@
 /obj/effect/floor_decal/milspec/color/orange/half{
 	dir = 4
 	},
-/obj/machinery/light{
-	dir = 4
-	},
 /turf/simulated/floor/tiled/milspec,
 /area/submap/outpost21/cave_red_A)
 "LX" = (
