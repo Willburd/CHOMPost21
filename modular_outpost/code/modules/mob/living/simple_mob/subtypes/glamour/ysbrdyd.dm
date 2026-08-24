@@ -1,4 +1,6 @@
 /mob/living/simple_mob/ysbryd
+	maxHealth = 900
+	health = 900
 	emote_threats = list(
 								"I have come to collect a meal, now that your people have broken the seal.",
 								"The sight of me should make you fly, but know that regardless you will die.",
@@ -9,6 +11,13 @@
 								"I can see in your eyes you wish to be free, so step forward and become one with me."
 	)
 	faction = FACTION_UNDERDARK
+
+/mob/living/simple_mob/ysbryd/Initialize(mapload)
+	. = ..()
+	AddComponent(/datum/component/radio_jammer)
+
+/mob/living/simple_mob/ysbryd/GetAccess()
+	return SSaccess.get_all_station_access().Copy() // Spooky door opening
 
 /mob/living/simple_mob/ysbryd/death() //More clear death message.
 	var/turf/our_turf = get_turf(src)

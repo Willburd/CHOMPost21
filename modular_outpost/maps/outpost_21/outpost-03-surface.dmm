@@ -90135,6 +90135,7 @@
 /obj/effect/floor_decal/corner/red/full{
 	dir = 1
 	},
+/obj/item/gun/energy/bfgtaser,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/security/tactical)
 "wYW" = (
