@@ -147,9 +147,6 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 6
 	},
-/obj/machinery/light{
-	dir = 4
-	},
 /turf/simulated/floor/tiled,
 /area/submap/outpost21/cave_red_C)
 "hK" = (

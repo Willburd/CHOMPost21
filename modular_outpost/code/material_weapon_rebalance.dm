@@ -7,7 +7,7 @@
 
 // stabby stabby
 /obj/item/material/sword/gladius
-	armor_penetration = 10
+	armor_penetration = 20
 	force_divisor = 0.42
 	attackspeed = DEFAULT_QUICK_COOLDOWN
 
@@ -28,7 +28,6 @@
 
 // engarde
 /obj/item/material/sword/rapier
-	reach = 2
 	force_divisor = 0.34
 	attackspeed = DEFAULT_QUICK_COOLDOWN
 
