@@ -625,3 +625,95 @@
 
 	if(failed)
 		TEST_FAIL("One or more tele_beacon objects are incorrectly setup or are duplicates")
+
+
+
+
+/datum/unit_test/things_should_not_be_in_walls
+
+/datum/unit_test/things_should_not_be_in_walls/Run()
+	set background=1
+
+	var/failed = FALSE
+
+	for(var/obj/machinery/light/L in world)
+		if(is_in_wall(L))
+			failed = TRUE
+	for(var/obj/machinery/door/D in world)
+		if(is_in_wall(D))
+			failed = TRUE
+		if(is_in_space(D))
+			failed = TRUE
+	for(var/obj/structure/railing/R in world)
+		if(is_in_wall(R))
+			failed = TRUE
+
+	if(failed)
+		TEST_FAIL("One or more objects are inside a dense turf wall.")
+
+/datum/unit_test/things_should_not_be_in_walls/proc/is_in_wall(obj/structure/thing)
+	var/turf/T = get_turf(thing)
+	if(!T)
+		return FALSE; // What?
+	if(!T.density)
+		return
+	TEST_NOTICE(src, "[thing] was inside a dense wall. Located at [T.x].[T.y].[T.z] : [get_area(thing)]")
+	return TRUE;
+
+/datum/unit_test/things_should_not_be_in_walls/proc/is_in_space(obj/structure/thing)
+	var/turf/T = get_turf(thing)
+	if(!isspace(T))
+		return FALSE;
+	TEST_NOTICE(src, "[thing] was placed on space turf. Located at [T.x].[T.y].[T.z] : [get_area(thing)]")
+	return TRUE
+
+
+
+/datum/unit_test/wall_lights_must_have_supports
+
+/datum/unit_test/wall_lights_must_have_supports/Run()
+	set background=1
+
+	var/failed = FALSE
+
+	for(var/obj/machinery/light/L in world)
+		// Ignore elevators
+		var/area/ar = get_area(L)
+		if(istype(ar,/area/turbolift))
+			continue
+
+		// Lights that don't need support
+		if(istype(L,/obj/machinery/light/flamp))
+			continue
+		if(istype(L,/obj/machinery/light/bigfloorlamp))
+			continue
+		if(istype(L,/obj/machinery/light/floortube))
+			continue
+		if(istype(L,/obj/machinery/light/small/fairylights))
+			continue
+		if(istype(L,/obj/machinery/light/lamppost))
+			continue
+		if(istype(L,/obj/machinery/light/spot))
+			continue
+
+		// Check for a dense wall first
+		var/turf/get_wall = get_step(L, L.dir)
+		if(get_wall.density)
+			continue
+
+		// Fallback and see if other things are supporting it
+		var/had_other_support = FALSE
+		for(var/obj/structure/window/find_win in get_wall.contents) // windows
+			if(find_win.fulltile) // Allows on full windows too
+				had_other_support = TRUE
+				break
+			if(find_win.dir == reverse_direction(L.dir)) // Allowed on windows and maint panels too
+				had_other_support = TRUE
+				break
+
+		if(!had_other_support)
+			TEST_NOTICE(src, "[L] was placed without a support wall. Located on \the [get_turf(L)] [L.x].[L.y].[L.z] : [ar]")
+			failed = TRUE
+
+	if(failed)
+		TEST_FAIL("One or more lights is floating without a wall.")

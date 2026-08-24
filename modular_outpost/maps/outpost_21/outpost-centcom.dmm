@@ -23759,9 +23759,6 @@
 "jiZ" = (
 /obj/structure/bed,
 /obj/item/bedsheet/green,
-/obj/machinery/light{
-	dir = 1
-	},
 /turf/simulated/floor/wood/alt/tile,
 /area/centcom/living)
 "jjc" = (
@@ -31329,12 +31326,6 @@
 /obj/structure/table/wooden_reinforced,
 /turf/simulated/floor/carpet/gaycarpet,
 /area/centcom/living)
-"nYi" = (
-/obj/machinery/light{
-	dir = 4
-	},
-/turf/simulated/flesh,
-/area/specialty/redspace)
 "nYl" = (
 /obj/machinery/door/firedoor/border_only,
 /turf/simulated/floor/tiled/steel_ridged,
@@ -41002,12 +40993,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/specialty/redspace)
-"tIk" = (
-/obj/structure/railing/grey{
-	dir = 8
-	},
-/turf/simulated/flesh,
-/area/specialty/redspace)
 "tJl" = (
 /obj/structure/table/woodentable,
 /obj/item/reagent_containers/food/drinks/bottle/cola,
@@ -47596,10 +47581,6 @@
 	dir = 8
 	},
 /turf/simulated/floor/flesh,
-/area/specialty/redspace)
-"xCl" = (
-/obj/structure/railing,
-/turf/simulated/flesh,
 /area/specialty/redspace)
 "xCF" = (
 /obj/structure/bed/chair/bay/shuttle,
@@ -84686,7 +84667,7 @@ epa
 epa
 epa
 aom
-nYi
+ylH
 epa
 tOt
 epa
@@ -91342,7 +91323,7 @@ ehv
 gDW
 sgA
 epa
-dwu
+ehv
 rte
 klr
 dwu
@@ -95721,7 +95702,7 @@ pCw
 vYr
 xCV
 cst
-tIk
+ylH
 hMR
 vYr
 xqy
@@ -95732,7 +95713,7 @@ epa
 ylH
 ylH
 ylH
-xCl
+ylH
 qdj
 cKH
 epa

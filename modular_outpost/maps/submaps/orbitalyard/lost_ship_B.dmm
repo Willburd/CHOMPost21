@@ -874,7 +874,6 @@
 /area/submap/outpost21/structure_generic/lostshipb)
 "Nt" = (
 /obj/structure/grille/broken/rustic,
-/obj/machinery/door/firedoor,
 /obj/item/material/shard/plastitaniumglass,
 /turf/space,
 /area/submap/outpost21/structure_generic/lostshipb)
@@ -1062,7 +1061,6 @@
 /turf/simulated/floor/tiled/milspec/raised,
 /area/submap/outpost21/structure_generic/lostshipb)
 "Vo" = (
-/obj/machinery/door/firedoor,
 /obj/item/material/shard/plastitaniumglass,
 /obj/structure/lattice,
 /obj/effect/decal/cleanable/ash,
@@ -1129,7 +1127,6 @@
 /area/submap/outpost21/structure_generic/lostshipb)
 "ZG" = (
 /obj/structure/grille/broken/rustic,
-/obj/machinery/door/firedoor,
 /obj/structure/lattice,
 /obj/item/material/shard/shrapnel,
 /turf/space,

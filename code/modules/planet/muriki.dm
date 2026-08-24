@@ -991,8 +991,8 @@ GLOBAL_DATUM(planet_muriki, /datum/planet/muriki)
 	icon_state = "ashfall_light"
 	light_modifier = 0.7
 	light_color = "#880000"
-	temp_high = 293.15	// 20c
-	temp_low = 283.15	// 10c
+	temp_high = T0C +70
+	temp_low = T0C +40
 	flight_failure_modifier = 20
 	transition_chances = list(
 		WEATHER_EMBERFALL = 100

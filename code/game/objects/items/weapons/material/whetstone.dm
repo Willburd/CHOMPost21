@@ -10,6 +10,7 @@
 	var/repair_amount = 5
 	var/repair_time = 40
 
+/* Outpost 21 edit - Removed sharpening kit
 /obj/item/whetstone/attackby(obj/item/I, mob/user)
 	if(istype(I, /obj/item/stack/material))
 		var/obj/item/stack/material/M = I
@@ -75,3 +76,4 @@
 			return
 	else
 		to_chat(user, "You can't sharpen [W] with [src]!")
+*/

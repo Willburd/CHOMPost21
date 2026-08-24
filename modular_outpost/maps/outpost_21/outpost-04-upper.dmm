@@ -10133,6 +10133,14 @@
 "ave" = (
 /turf/simulated/wall/r_wall,
 /area/muriki/tramstation/civ)
+"avf" = (
+/obj/structure/spring_trap/start_active{
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki{
+	outdoors = 0
+	},
+/area/mine/unexplored/muriki/mountaintop_pathway)
 "avg" = (
 /obj/structure/railing{
 	dir = 8
@@ -10141,6 +10149,15 @@
 /obj/effect/landmark/pengmark,
 /turf/simulated/floor/outpost_roof/turfpack/muriki,
 /area/muriki/rooftop/engineering)
+"avh" = (
+/obj/structure/spring_trap/start_active{
+	distance = 5
+	},
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1;
+	outdoors = 1
+	},
+/area/mine/unexplored/muriki/mountaintop_pathway)
 "avi" = (
 /obj/structure/sign/warning/acid{
 	pixel_x = 32
@@ -10167,6 +10184,39 @@
 /obj/machinery/power/grounding_rod/pre_mapped,
 /turf/simulated/floor/outpost_roof/turfpack/muriki,
 /area/muriki/rooftop/engineering)
+"avm" = (
+/turf/simulated/floor/tiled/kafel_full,
+/area/djstation)
+"avn" = (
+/obj/item/toy/tennis/blue{
+	pixel_y = 10;
+	pixel_x = 10
+	},
+/obj/item/toy/tennis/purple{
+	pixel_y = 10
+	},
+/obj/item/toy/tennis/random{
+	pixel_y = 10;
+	pixel_x = -10
+	},
+/obj/item/toy/eight_ball,
+/obj/item/toy/baseball{
+	pixel_x = -9
+	},
+/obj/item/toy/tennis/cyan{
+	pixel_x = -3;
+	pixel_y = 7
+	},
+/obj/item/toy/tennis/cyan{
+	pixel_x = 9;
+	pixel_y = 0
+	},
+/obj/item/toy/tennis/blue{
+	pixel_x = 5;
+	pixel_y = -9
+	},
+/turf/simulated/floor/tiled/turfpack/muriki,
+/area/specialty/expie_clubhouse)
 "avo" = (
 /obj/structure/window/maintenance_panel{
 	dir = 4
@@ -10210,6 +10260,47 @@
 	},
 /turf/simulated/floor/outpost_roof/turfpack/muriki,
 /area/muriki/rooftop/crossdept_pathway)
+"avt" = (
+/obj/machinery/light/flamp/noshade,
+/turf/simulated/floor/water/beach/corner/indoors{
+	dir = 8
+	},
+/area/hydroponics/publicgarden)
+"avu" = (
+/obj/machinery/computer/security/telescreen/bodycamera{
+	pixel_y = 28
+	},
+/obj/machinery/camera/network/thunder{
+	alpha = 0;
+	c_tag = "Talk Show Radio";
+	invisibility = 101;
+	name = "talkshow";
+	dir = 4
+	},
+/obj/structure/table/steel_reinforced,
+/obj/item/radio/phone{
+	name = "Radio Host Phone"
+	},
+/obj/random_multi/single_item/sfr_headset,
+/turf/simulated/floor/wood,
+/area/djstation)
+"avv" = (
+/obj/structure/table/rack,
+/turf/simulated/floor/tiled/turfpack/muriki,
+/area/specialty/expie_clubhouse)
+"avw" = (
+/obj/structure/table/rack,
+/obj/item/holosign_creator/combifan{
+	pixel_x = -5;
+	pixel_y = 7
+	},
+/turf/simulated/floor/tiled/turfpack/muriki,
+/area/specialty/expie_clubhouse)
+"avx" = (
+/obj/structure/table/rack/shelf,
+/obj/item/gun/projectile/shotgun/pump/empty,
+/turf/simulated/floor/tiled/turfpack/muriki,
+/area/specialty/expie_clubhouse)
 "avy" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 4
@@ -10222,6 +10313,11 @@
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/medbreak)
+"avA" = (
+/obj/structure/table/rack/shelf,
+/obj/item/material/knife/tacknife/survival,
+/turf/simulated/floor/tiled/turfpack/muriki,
+/area/specialty/expie_clubhouse)
 "avB" = (
 /obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/corner/purple{
@@ -10448,6 +10544,37 @@
 	},
 /turf/simulated/floor/plating,
 /area/muriki/processor/hall)
+"awg" = (
+/obj/structure/table/rack/shelf,
+/turf/simulated/floor/tiled/turfpack/muriki,
+/area/specialty/expie_clubhouse)
+"awh" = (
+/obj/structure/closet,
+/turf/simulated/floor/tiled/turfpack/muriki,
+/area/specialty/expie_clubhouse)
+"awi" = (
+/obj/item/radio,
+/obj/item/radio,
+/turf/simulated/floor/tiled/turfpack/muriki,
+/area/specialty/expie_clubhouse)
+"awj" = (
+/obj/structure/table/rack/shelf,
+/obj/item/tape_roll{
+	pixel_x = -5;
+	pixel_y = 7
+	},
+/turf/simulated/floor/tiled/turfpack/muriki,
+/area/specialty/expie_clubhouse)
+"awk" = (
+/obj/structure/closet/crate,
+/turf/simulated/floor/tiled/turfpack/muriki,
+/area/specialty/expie_clubhouse)
+"awl" = (
+/obj/effect/auto_crayon{
+	icon_state = "right"
+	},
+/turf/simulated/floor/tiled/turfpack/muriki,
+/area/specialty/expie_clubhouse)
 "awt" = (
 /obj/structure/sign/warning/acid{
 	pixel_y = 32
@@ -12352,16 +12479,7 @@
 	layer = 2;
 	pixel_x = -9
 	},
-/obj/machinery/camera/network/thunder{
-	alpha = 0;
-	c_tag = "Talk Show Radio";
-	invisibility = 101;
-	name = "talkshow"
-	},
 /obj/item/toy/plushie/teshari/b_yw,
-/obj/machinery/firealarm{
-	pixel_y = 26
-	},
 /turf/simulated/floor/wood,
 /area/djstation)
 "bxB" = (
@@ -13559,6 +13677,10 @@
 /obj/random/cigarettes,
 /obj/random/cigarettes,
 /obj/item/flame/lighter/zippo/red,
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = 26
+	},
 /turf/simulated/floor/wood,
 /area/djstation)
 "bYv" = (
@@ -20521,9 +20643,6 @@
 /obj/effect/floor_decal/corner/lime{
 	dir = 6
 	},
-/obj/machinery/light{
-	dir = 4
-	},
 /obj/structure/reagent_dispensers/watertank,
 /obj/item/reagent_containers/glass/bucket,
 /turf/simulated/floor/tiled/hydro,
@@ -24080,6 +24199,9 @@
 	name = "Gardener"
 	},
 /obj/item/stool/padded,
+/obj/machinery/light{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/hydro,
 /area/hydroponics)
 "hDa" = (
@@ -39839,6 +39961,7 @@
 	dir = 1;
 	pixel_y = -26
 	},
+/obj/machinery/recharge_station,
 /turf/simulated/floor/tiled/kafel_full,
 /area/djstation)
 "pRf" = (
@@ -49236,7 +49359,15 @@
 /obj/effect/floor_decal/corner/red{
 	dir = 9
 	},
-/obj/item/storage/toolbox/syndicate,
+/obj/item/storage/toolbox/syndicate{
+	pixel_y = 6
+	},
+/obj/item/hoist_kit{
+	pixel_y = -4
+	},
+/obj/item/hoist_kit{
+	pixel_y = -4
+	},
 /turf/simulated/floor/tiled,
 /area/security/vacantoffice)
 "uFN" = (
@@ -53756,11 +53887,6 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/phoronics/med)
 "xaw" = (
-/obj/structure/table/steel_reinforced,
-/obj/random_multi/single_item/sfr_headset,
-/obj/item/radio/phone{
-	name = "Radio Host Phone"
-	},
 /obj/machinery/computer/security/telescreen/entertainment{
 	pixel_y = 28
 	},
@@ -54428,9 +54554,6 @@
 /area/tcommsat/computer)
 "xrb" = (
 /obj/structure/flora/lily2,
-/obj/machinery/light{
-	dir = 1
-	},
 /turf/simulated/floor/water/indoors/beach,
 /area/hydroponics/publicgarden)
 "xsh" = (
@@ -109382,7 +109505,7 @@ tPL
 kyk
 jQv
 lQQ
-hwE
+qok
 lIN
 ciK
 mcj
@@ -109708,7 +109831,7 @@ rUc
 tUG
 hZy
 hwE
-qok
+hwE
 qCu
 ydb
 iHe
@@ -110032,7 +110155,7 @@ lxD
 kyk
 fWk
 jQv
-lQQ
+avt
 qCu
 hwE
 evq
@@ -110436,7 +110559,7 @@ ovc
 pXM
 ajk
 kwX
-acn
+avh
 dEE
 dEE
 kxr
@@ -111004,7 +111127,7 @@ lIN
 aaa
 rlW
 nNK
-hwE
+qok
 tty
 rUc
 tUG
@@ -111326,7 +111449,7 @@ iKk
 pMB
 pXo
 thg
-qok
+hwE
 hwE
 vsI
 uhx
@@ -115043,7 +115166,7 @@ alR
 alJ
 alJ
 alO
-alJ
+avf
 alS
 alJ
 alR
@@ -115424,7 +115547,7 @@ mJm
 acv
 acv
 dKL
-dvt
+szB
 szB
 alb
 kya
@@ -115587,7 +115710,7 @@ szB
 szB
 szB
 szB
-szB
+avu
 bxz
 bxH
 uGL
@@ -117370,9 +117493,9 @@ cgN
 cgN
 cgN
 cgN
-qll
 szB
 mxN
+avm
 mXy
 ueG
 fTO
@@ -117532,9 +117655,9 @@ xpu
 eKE
 wlP
 phU
-luR
 szB
 iPH
+avm
 dlt
 dmg
 vcZ
@@ -117694,9 +117817,9 @@ kfm
 xpu
 ofL
 cgN
-luR
 szB
 wTv
+avm
 vwQ
 ueG
 bJh
@@ -117856,9 +117979,9 @@ gnn
 xpu
 ofL
 cgN
-luR
 szB
 dqq
+avm
 pRa
 ueG
 qst
@@ -118018,7 +118141,7 @@ sbM
 xpu
 ofL
 cgN
-luR
+szB
 szB
 szB
 szB
@@ -118180,7 +118303,7 @@ kfm
 xpu
 ofL
 cgN
-luR
+qll
 luR
 luR
 luR
@@ -118598,7 +118721,7 @@ ajR
 ajR
 ajR
 ajR
-ajQ
+avn
 ajQ
 aku
 akh
@@ -118928,7 +119051,7 @@ ajQ
 ajQ
 ajQ
 ajQ
-ajQ
+awl
 aka
 ajQ
 ajZ
@@ -119258,11 +119381,11 @@ ajR
 ajR
 ajR
 ajR
-luR
-luR
-luR
-luR
-hIk
+ajR
+ajR
+ajR
+ajR
+ajR
 hIk
 hIk
 hIk
@@ -119420,11 +119543,11 @@ ali
 amk
 ajQ
 ajR
-luR
-luR
-luR
-luR
-luR
+awh
+ajQ
+ajQ
+avv
+ajR
 hIk
 hIk
 hIk
@@ -119582,11 +119705,11 @@ ajR
 aml
 ajQ
 ajR
-luR
-luR
-luR
-luR
-luR
+awi
+ajQ
+ajQ
+avv
+ajR
 hIk
 hIk
 hIk
@@ -119744,11 +119867,11 @@ ajR
 amm
 ajQ
 ajR
-luR
-luR
-luR
-luR
-hIk
+awj
+ajQ
+ajQ
+avw
+ajR
 hIk
 hIk
 hIk
@@ -119906,11 +120029,11 @@ ajR
 ajR
 ajR
 ajR
-luR
-luR
-luR
-luR
-luR
+ajZ
+ajQ
+ajQ
+avx
+ajR
 hIk
 hIk
 hIk
@@ -120065,14 +120188,14 @@ ajR
 ajR
 ajR
 ajR
-luR
-luR
-luR
-luR
-luR
-luR
-luR
-hIk
+awg
+awk
+ajQ
+ajQ
+ajQ
+ajQ
+avA
+ajR
 hIk
 hIk
 hIk
@@ -120223,18 +120346,18 @@ hIk
 hIk
 hIk
 hIk
-hIk
-hIk
-luR
-luR
-luR
-luR
-luR
-luR
-luR
-luR
-luR
-hIk
+ajR
+ajQ
+ajQ
+ajQ
+ajQ
+ajQ
+ajQ
+ajQ
+ajQ
+ajQ
+awg
+ajR
 hIk
 hIk
 hIk
@@ -120385,18 +120508,18 @@ hIk
 hIk
 hIk
 hIk
-hIk
-hIk
-luR
-luR
-luR
-luR
-luR
-luR
-luR
-luR
-luR
-hIk
+ajR
+ajR
+ajR
+ajR
+ajR
+ajR
+ajR
+ajR
+ajR
+ajR
+ajR
+ajR
 hIk
 hIk
 hIk

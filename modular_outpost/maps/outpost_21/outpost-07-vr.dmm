@@ -128,22 +128,7 @@
 "aal" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/window/maintenance_panel,
-/obj/structure/window/maintenance_panel{
-	dir = 1
-	},
-/turf/simulated/floor/plating,
-/area/vr/bloodstar)
-"aam" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/structure/window/maintenance_panel{
-	dir = 4
-	},
-/obj/structure/window/maintenance_panel{
-	dir = 8
-	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/vr/bloodstar)
 "aan" = (
 /obj/structure/grille,
@@ -1903,6 +1888,13 @@
 /area/vr/bloodstar)
 "adH" = (
 /turf/simulated/mineral/floor/ignore_cavegen/turfpack/airless,
+/area/vr/bloodstar)
+"adI" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/window/maintenance_panel{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/vr/bloodstar)
 "adK" = (
 /obj/effect/floor_decal/borderfloor,
@@ -7498,7 +7490,8 @@
 /area/vr/bloodstar)
 "bRq" = (
 /obj/machinery/door/airlock/glass_medical{
-	name = "Virology Laboratory"
+	name = "Virology Laboratory";
+	req_one_access = null
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/atmospherics/pipe/simple/hidden/black{
@@ -12714,12 +12707,9 @@
 	dir = 4
 	},
 /obj/structure/window/maintenance_panel{
-	dir = 8
-	},
-/obj/structure/window/maintenance_panel{
 	dir = 4
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/vr/bloodstar)
 "drt" = (
 /obj/machinery/hologram/holo_tutorial/hazard_1,
@@ -18544,7 +18534,6 @@
 /obj/effect/floor_decal/corner/orange{
 	dir = 10
 	},
-/obj/machinery/light/broken,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "flD" = (
@@ -40071,8 +40060,7 @@
 /obj/structure/window/maintenance_panel{
 	dir = 1
 	},
-/obj/structure/window/maintenance_panel,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/vr/bloodstar)
 "lLY" = (
 /obj/effect/floor_decal/spline/plain{
@@ -68387,8 +68375,7 @@
 /obj/structure/window/maintenance_panel{
 	dir = 1
 	},
-/obj/structure/window/maintenance_panel,
-/turf/simulated/floor,
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/vr/bloodstar)
 "uMf" = (
 /obj/structure/closet{
@@ -70927,10 +70914,7 @@
 /obj/structure/window/maintenance_panel{
 	dir = 4
 	},
-/obj/structure/window/maintenance_panel{
-	dir = 8
-	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/vr/bloodstar)
 "vAu" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -73799,9 +73783,6 @@
 	dir = 1
 	},
 /obj/item/material/shard,
-/obj/machinery/light/broken{
-	dir = 1
-	},
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
@@ -115592,7 +115573,7 @@ cdc
 ihx
 usk
 gfJ
-aah
+adI
 vsm
 vsm
 vsm
@@ -128554,7 +128535,7 @@ vRs
 iIz
 hBa
 rHD
-aam
+dri
 rHD
 rHD
 rHD
