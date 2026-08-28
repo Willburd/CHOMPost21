@@ -152,6 +152,7 @@
 		/area/offworld/orbital/station/halls/central,
 		/area/offworld/orbital/station/halls/starboard,
 		/area/offworld/orbital/station/halls/fore,
+		/area/offworld/orbital/station/halls/lower/port
 	)
 
 	var/list/does_not_use_lightswitch = list(
@@ -160,7 +161,8 @@
 		/area/rnd/entry_aux,
 		/area/rnd/research/roof_eva,
 		/area/muriki/cybstorage,
-		/area/muriki/crew/bunker
+		/area/muriki/crew/bunker,
+		/area/offworld/orbital/station/ai_transit_hub
 	)
 
 	var/list/does_not_have_disposals = list(
@@ -261,6 +263,9 @@
 		/area/offworld/orbital/station/teleport,
 		/area/offworld/orbital/station/telecomms,
 		/area/offworld/orbital/station/security/holding_cell,
+		/area/offworld/orbital/station/security/lockup,
+		/area/offworld/orbital/station/security/armory,
+		/area/offworld/orbital/station/halls/rust_tool_storage
 	)
 
 	var/list/does_not_have_displays = list(
