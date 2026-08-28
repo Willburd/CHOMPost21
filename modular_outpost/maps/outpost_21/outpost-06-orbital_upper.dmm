@@ -3708,6 +3708,30 @@
 	},
 /turf/simulated/floor/tiled/old_tile/white,
 /area/offworld/orbital/station/medical_treatment)
+"hh" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 1
+	},
+/obj/machinery/status_display{
+	pixel_y = 32
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/starboard)
 "hi" = (
 /obj/item/stack/cable_coil,
 /turf/simulated/floor/airless,
@@ -8070,15 +8094,15 @@
 /turf/simulated/wall/r_wall,
 /area/ai_cyborg_station)
 "qc" = (
-/obj/machinery/camera/network/command{
-	c_tag = "AI - Cyborg Station";
-	dir = 4
-	},
 /obj/machinery/firealarm{
 	dir = 8;
 	pixel_x = -26
 	},
 /obj/machinery/recharge_station,
+/obj/machinery/camera/network/ai_sat{
+	c_tag = "AI - Cyborg Station";
+	dir = 4
+	},
 /turf/simulated/floor/greengrid,
 /area/ai_cyborg_station)
 "qd" = (
@@ -8340,6 +8364,30 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/central)
+"qK" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 1
+	},
+/obj/machinery/ai_status_display{
+	pixel_y = 32
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/starboard)
 "qL" = (
 /obj/structure/window/reinforced{
 	dir = 8
@@ -39447,7 +39495,7 @@ lj
 lj
 lj
 rK
-kP
+hh
 lm
 kd
 OQ
@@ -39609,7 +39657,7 @@ mc
 rK
 li
 rK
-kP
+qK
 Wu
 kd
 OQ

@@ -2984,6 +2984,12 @@
 /obj/machinery/meter,
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/atmos_primary)
+"hh" = (
+/obj/machinery/status_display{
+	pixel_y = 32
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/lower/aft)
 "hi" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -3395,6 +3401,12 @@
 /area/offworld/orbital/station/beam_emitter)
 "ic" = (
 /turf/simulated/floor/plating,
+/area/offworld/orbital/station/halls/lower/aft)
+"id" = (
+/obj/machinery/ai_status_display{
+	pixel_y = 32
+	},
+/turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/lower/aft)
 "ie" = (
 /obj/machinery/atmospherics/portables_connector,
@@ -30933,7 +30945,7 @@ rG
 rG
 rG
 rE
-Qk
+hh
 hU
 Qk
 ax
@@ -31095,7 +31107,7 @@ eW
 eW
 eW
 rE
-Qk
+fR
 hU
 Qk
 ax
@@ -31257,7 +31269,7 @@ eW
 eW
 eW
 rE
-fR
+id
 hU
 Qk
 ax
