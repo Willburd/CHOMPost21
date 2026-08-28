@@ -8899,7 +8899,7 @@
 /obj/effect/floor_decal/steeldecal/monofloor,
 /obj/structure/disposalpipe/trunk,
 /turf/simulated/floor/tiled/milspec,
-/area/maintenance/orbital/fore)
+/area/offworld/orbital/station/halls/starboard)
 "rM" = (
 /obj/machinery/door/airlock/highsecurity{
 	name = "AI Upload Access";
@@ -40951,8 +40951,8 @@ lj
 rK
 rK
 rK
-rK
-rK
+rH
+rH
 Er
 XW
 kd
@@ -41113,7 +41113,7 @@ lj
 lj
 lj
 lH
-rK
+rH
 rL
 zN
 kq
@@ -41275,8 +41275,8 @@ rK
 rK
 rK
 lj
-rK
-rK
+rH
+rH
 eu
 Dj
 kd

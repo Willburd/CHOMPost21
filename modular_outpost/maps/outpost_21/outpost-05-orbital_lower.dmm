@@ -4748,6 +4748,11 @@
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 5
 	},
+/obj/item/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 24
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/lower/port)
 "kB" = (
@@ -6666,6 +6671,35 @@
 	},
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/rust_core)
+"ol" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 8
+	},
+/obj/machinery/disposal/wall{
+	dir = 4;
+	pixel_x = -32
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/lower/port)
+"om" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/aux,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/disposalpipe/junction{
+	dir = 1;
+	icon_state = "pipe-j2"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/lower/port)
 "on" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	frequency = 1381;
@@ -30295,7 +30329,7 @@ ff
 kv
 jO
 jO
-jO
+ol
 jK
 jn
 ja
@@ -30457,7 +30491,7 @@ iJ
 iJ
 iJ
 iJ
-iJ
+om
 jM
 iJ
 jb
