@@ -57281,35 +57281,17 @@
 	pixel_x = -8;
 	pixel_y = 3
 	},
-/obj/item/grenade/dephasing{
-	pixel_x = 7
+/obj/item/storage/box/anti_phasing{
+	pixel_x = 7;
+	pixel_y = 3
 	},
-/obj/item/grenade/dephasing{
-	pixel_x = 7
+/obj/item/storage/box/anti_phasing{
+	pixel_x = 7;
+	pixel_y = 3
 	},
-/obj/item/grenade/dephasing{
-	pixel_x = 7
-	},
-/obj/item/grenade/dephasing{
-	pixel_x = 7
-	},
-/obj/item/grenade/dephasing{
-	pixel_x = 7
-	},
-/obj/item/grenade/dephasing{
-	pixel_x = 7
-	},
-/obj/item/grenade/dephasing{
-	pixel_x = 7
-	},
-/obj/item/grenade/dephasing{
-	pixel_x = 7
-	},
-/obj/item/grenade/dephasing{
-	pixel_x = 7
-	},
-/obj/item/grenade/dephasing{
-	pixel_x = 7
+/obj/item/storage/box/anti_phasing{
+	pixel_x = 7;
+	pixel_y = 3
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/tactical)
