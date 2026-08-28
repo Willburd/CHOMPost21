@@ -1902,7 +1902,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/rust_tool_storage)
+/area/offworld/orbital/station/rust_gas_storage)
 "eu" = (
 /obj/structure/sign/signnew/radiation,
 /turf/simulated/wall/r_wall,
@@ -1952,13 +1952,13 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/rust_tool_storage)
+/area/offworld/orbital/station/rust_gas_storage)
 "eB" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/rust_tool_storage)
+/area/offworld/orbital/station/rust_gas_storage)
 "eC" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -2865,7 +2865,7 @@
 /obj/structure/dispenser/phoron,
 /obj/effect/floor_decal/industrial/outline/cut_corners/purple,
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/rust_tool_storage)
+/area/offworld/orbital/station/rust_gas_storage)
 "gU" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -3079,7 +3079,7 @@
 	},
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/techfloor,
-/area/offworld/orbital/station/halls/rust_tool_storage)
+/area/offworld/orbital/station/rust_gas_storage)
 "hu" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/glass_research{
@@ -3649,7 +3649,7 @@
 /obj/machinery/portable_atmospherics/canister/phoron,
 /obj/effect/floor_decal/industrial/outline/purple,
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/rust_tool_storage)
+/area/offworld/orbital/station/rust_gas_storage)
 "iA" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/black/border,
@@ -6888,7 +6888,7 @@
 	dir = 6
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/rust_tool_storage)
+/area/offworld/orbital/station/rust_gas_storage)
 "oD" = (
 /obj/structure/sign/signnew/explosives,
 /turf/simulated/wall/r_wall,
@@ -7642,6 +7642,9 @@
 	},
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/beam_emitter)
+"qk" = (
+/turf/simulated/wall,
+/area/offworld/orbital/station/rust_gas_storage)
 "ql" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
@@ -8200,6 +8203,9 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/beam_emitter)
+"rj" = (
+/turf/simulated/wall/r_wall,
+/area/offworld/orbital/station/rust_gas_storage)
 "rk" = (
 /obj/structure/toilet{
 	dir = 8
@@ -8749,6 +8755,13 @@
 /obj/item/geiger/wall/north,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/lower/fore)
+"sq" = (
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -26
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/rust_gas_storage)
 "sr" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -8963,9 +8976,6 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/rust_tool_storage)
-"sS" = (
-/turf/simulated/wall,
-/area/offworld/orbital/station/rust_tool_storage)
 "sT" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
@@ -8997,7 +9007,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/rust_tool_storage)
+/area/offworld/orbital/station/rust_gas_storage)
 "sX" = (
 /obj/structure/extinguisher_cabinet{
 	dir = 8;
@@ -9005,7 +9015,7 @@
 	pixel_y = 6
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/rust_tool_storage)
+/area/offworld/orbital/station/rust_gas_storage)
 "sY" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -9029,7 +9039,7 @@
 	},
 /obj/structure/disposalpipe/trunk,
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/rust_tool_storage)
+/area/offworld/orbital/station/rust_gas_storage)
 "tb" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/milspec,
@@ -9040,6 +9050,9 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/rust_tool_storage)
+"td" = (
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/rust_gas_storage)
 "te" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/pipedispenser/disposal,
@@ -9068,6 +9081,10 @@
 /obj/machinery/pipedispenser,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/rust_tool_storage)
+"th" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/rust_gas_storage)
 "tx" = (
 /obj/machinery/power/apc{
 	dir = 4;
@@ -10848,7 +10865,7 @@
 "GD" = (
 /obj/effect/floor_decal/industrial/outline/purple,
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/rust_tool_storage)
+/area/offworld/orbital/station/rust_gas_storage)
 "GE" = (
 /obj/machinery/vending/fitness{
 	dir = 4;
@@ -11413,7 +11430,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/rust_tool_storage)
+/area/offworld/orbital/station/rust_gas_storage)
 "Ku" = (
 /obj/structure/table/rack/shelf/steel,
 /obj/item/smes_coil/super_io,
@@ -12717,7 +12734,7 @@
 /obj/machinery/portable_atmospherics/canister/carbon_dioxide,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/rust_tool_storage)
+/area/offworld/orbital/station/rust_gas_storage)
 "TX" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
@@ -30249,15 +30266,15 @@ wX
 pL
 pH
 pH
-ev
-sS
-sS
-sS
-sS
-sS
-sS
-sS
-sP
+rj
+qk
+qk
+qk
+qk
+qk
+qk
+qk
+qk
 Dr
 Ne
 qs
@@ -30411,7 +30428,7 @@ pH
 pL
 pH
 pH
-ev
+rj
 gT
 gT
 ta
@@ -30573,15 +30590,15 @@ pH
 pL
 pH
 pH
-ev
-ey
-ey
-ey
-ey
+rj
+td
+td
+td
+td
 eB
 sW
-sR
-hs
+sq
+rj
 hs
 hs
 qs
@@ -30735,15 +30752,15 @@ pH
 pL
 pH
 pH
-ev
+rj
 TU
 TU
-tb
-ey
+th
+td
 GD
 iz
 iz
-ev
+rj
 eW
 eW
 eW
@@ -30897,15 +30914,15 @@ pH
 pL
 pH
 pH
-ev
+rj
 TU
 TU
-tb
+th
 sX
 GD
 iz
 iz
-ev
+rj
 eW
 eW
 eW
@@ -31059,15 +31076,15 @@ pH
 pL
 pH
 pS
-ev
-ev
-ev
-ev
-ev
-ev
-ev
-ev
-ev
+rj
+rj
+rj
+rj
+rj
+rj
+rj
+rj
+rj
 eW
 eW
 eW

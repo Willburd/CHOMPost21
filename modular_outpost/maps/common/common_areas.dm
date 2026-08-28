@@ -2859,17 +2859,17 @@
 	ambience = AMBIENCE_HANGAR
 	holomap_color = HOLOMAP_AREACOLOR_CIV
 
-/area/offworld/orbital/station/access_shaft/sec
-	name = "\improper Orbital Security Docking Arm"
+/area/offworld/orbital/station/access_shaft/upper
+	name = "\improper Orbital Upper Docking Arm"
 	icon_state = "red"
 	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
 	base_turf = /turf/simulated/open
 
-/area/offworld/orbital/station/access_shaft/med
-	name = "\improper Orbital Medical Docking Arm"
+/area/offworld/orbital/station/access_shaft/lower
+	name = "\improper Orbital Lower Docking Arm"
 	icon_state = "blue"
 	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
-	base_turf = /turf/simulated/open
+	base_turf = /turf/space
 
 // Observation
 /area/offworld/orbital/station/observation
