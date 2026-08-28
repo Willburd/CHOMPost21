@@ -2984,13 +2984,6 @@
 /obj/machinery/meter,
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/atmos_primary)
-"hh" = (
-/obj/effect/fancy_shuttle/secbus{
-	dir = 1;
-	fancy_shuttle_tag = "sec"
-	},
-/turf/space,
-/area/space)
 "hi" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -3403,12 +3396,6 @@
 "ic" = (
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/halls/lower/aft)
-"id" = (
-/obj/effect/fancy_shuttle/medbus{
-	fancy_shuttle_tag = "medi"
-	},
-/turf/space,
-/area/space)
 "ie" = (
 /obj/machinery/atmospherics/portables_connector,
 /obj/effect/floor_decal/industrial/outline/blue,
@@ -3751,6 +3738,13 @@
 /obj/item/tape/engineering,
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/halls/lower/aft)
+"iM" = (
+/obj/item/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -22
+	},
+/turf/simulated/floor/plating,
+/area/offworld/orbital/station/atmos_primary)
 "iN" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced{
@@ -4000,6 +3994,30 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/lower/port)
+"jo" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/corner/orange{
+	dir = 10
+	},
+/obj/item/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -22
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/beam_emitter)
+"jp" = (
+/obj/machinery/light,
+/obj/effect/floor_decal/corner/orange{
+	dir = 10
+	},
+/obj/item/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -22
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/lower/central)
 "jq" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 4
@@ -4291,6 +4309,11 @@
 	},
 /obj/effect/floor_decal/corner/orange/full{
 	dir = 8
+	},
+/obj/item/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 24
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/beam_emitter)
@@ -4893,6 +4916,10 @@
 "kQ" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/lightgrey/border,
+/obj/item/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -22
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/stairs_lower)
 "kR" = (
@@ -5613,6 +5640,20 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/south_power_airlock)
+"me" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/corner/orange{
+	dir = 6
+	},
+/obj/item/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = 24
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/lower/fore)
 "mf" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	frequency = 1381;
@@ -6810,6 +6851,7 @@
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/structure/window/reinforced,
 /turf/simulated/floor/bluegrid,
 /area/offworld/orbital/station/telecomms)
 "oF" = (
@@ -6880,6 +6922,9 @@
 /area/ai_sat/atmos)
 "oO" = (
 /obj/machinery/telecomms/relay/preset/outpost/recyard,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
 /turf/simulated/floor/bluegrid,
 /area/offworld/orbital/station/telecomms)
 "oP" = (
@@ -7078,6 +7123,15 @@
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/item/radio/intercom/locked/ai_private{
+	dir = 1;
+	pixel_y = 32
+	},
+/obj/item/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 21
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/ai_sat/atmos)
 "pk" = (
@@ -7162,6 +7216,10 @@
 	},
 /obj/machinery/firealarm{
 	pixel_y = 26
+	},
+/obj/machinery/light_switch{
+	pixel_x = 22;
+	pixel_y = 28
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/ai_sat/atmos)
@@ -8002,6 +8060,12 @@
 "ra" = (
 /obj/machinery/light{
 	dir = 8
+	},
+/obj/item/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -24;
+	listening = 1
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/offworld/orbital/station/spelunker)
@@ -10651,6 +10715,10 @@
 	dir = 5
 	},
 /obj/effect/floor_decal/corner/orange/full,
+/obj/item/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -22
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/beam_emitter)
 "FB" = (
@@ -11673,6 +11741,11 @@
 	},
 /obj/effect/floor_decal/corner/orange{
 	dir = 10
+	},
+/obj/item/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -21;
+	pixel_x = 3
 	},
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/rust_core)
@@ -12999,6 +13072,11 @@
 "WQ" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 10
+	},
+/obj/item/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -21;
+	pixel_x = 3
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/rust_entry)
@@ -18688,7 +18766,7 @@ xM
 xM
 xM
 xM
-xM
+ah
 xM
 xM
 xM
@@ -20308,7 +20386,7 @@ xM
 xM
 xM
 xM
-xM
+ah
 xM
 xM
 xM
@@ -21292,7 +21370,7 @@ xM
 xM
 xM
 xM
-xM
+ah
 xM
 xM
 xM
@@ -21445,7 +21523,7 @@ xM
 xM
 xM
 xM
-xM
+ah
 xM
 xM
 xM
@@ -22204,7 +22282,7 @@ xM
 xM
 xM
 xM
-xM
+ah
 xM
 xM
 xM
@@ -22356,6 +22434,7 @@ xM
 xM
 xM
 xM
+ah
 xM
 xM
 xM
@@ -22422,6 +22501,7 @@ xM
 xM
 xM
 xM
+ah
 xM
 xM
 xM
@@ -22433,9 +22513,7 @@ xM
 xM
 xM
 xM
-xM
-xM
-xM
+ah
 xM
 xM
 xM
@@ -23190,7 +23268,7 @@ xM
 xM
 xM
 xM
-xM
+ah
 xM
 xM
 xM
@@ -23981,7 +24059,7 @@ xM
 xM
 xM
 xM
-xM
+ah
 xM
 xM
 xM
@@ -24153,7 +24231,7 @@ xM
 xM
 xM
 xM
-xM
+ah
 xM
 xM
 xM
@@ -24865,12 +24943,12 @@ jj
 iW
 it
 xM
-id
 xM
 xM
 xM
 xM
-hh
+xM
+xM
 xM
 xM
 xM
@@ -30223,7 +30301,7 @@ gV
 gy
 gt
 gy
-gy
+iM
 gn
 eW
 eW
@@ -31807,7 +31885,7 @@ aR
 AP
 ch
 cL
-Of
+jo
 cB
 rS
 rK
@@ -32424,7 +32502,7 @@ Ws
 dJ
 dw
 dw
-dw
+me
 nq
 dw
 sg
@@ -33032,7 +33110,7 @@ xM
 xM
 xM
 xM
-xM
+ah
 xM
 xM
 xM
@@ -33209,7 +33287,7 @@ xM
 xM
 xM
 xM
-xM
+ah
 xM
 xM
 xM
@@ -34499,7 +34577,7 @@ xM
 xM
 xM
 xM
-xM
+ah
 xM
 xM
 xM
@@ -35688,7 +35766,7 @@ kX
 jk
 ms
 JZ
-VM
+jp
 PW
 eW
 eW
@@ -36291,7 +36369,7 @@ xM
 xM
 xM
 xM
-xM
+ah
 xM
 xM
 xM
@@ -36513,7 +36591,7 @@ xM
 xM
 xM
 xM
-xM
+ah
 xM
 xM
 xM
@@ -36874,7 +36952,7 @@ xM
 xM
 xM
 xM
-xM
+ah
 xM
 xM
 xM
@@ -36951,7 +37029,7 @@ xM
 xM
 xM
 xM
-xM
+ah
 xM
 xM
 xM
@@ -37008,7 +37086,7 @@ xM
 xM
 xM
 xM
-xM
+ah
 xM
 xM
 xM
@@ -37190,7 +37268,7 @@ xM
 xM
 xM
 xM
-xM
+ah
 xM
 xM
 xM
@@ -37815,6 +37893,7 @@ xM
 xM
 xM
 xM
+ah
 xM
 xM
 xM
@@ -37842,8 +37921,7 @@ xM
 xM
 xM
 xM
-xM
-xM
+ah
 xM
 xM
 xM

@@ -1329,16 +1329,16 @@
 /obj/item/bedsheet/cosmosdouble{
 	icon_state = "dobulesheetcosmos"
 	},
-/obj/machinery/camera/network/command{
-	c_tag = "AI - Rec Room Starboard";
-	dir = 1
-	},
 /obj/effect/floor_decal/spline/plain,
 /obj/item/radio/intercom/locked{
 	frequency = 1343;
 	locked_frequency = 1343;
 	name = "Private AI Channel";
 	pixel_y = -24
+	},
+/obj/machinery/camera/network/ai_sat{
+	dir = 1;
+	c_tag = "AI - Rec Room Starboard"
 	},
 /turf/simulated/floor/carpet/turcarpet,
 /area/ai)
@@ -1359,7 +1359,7 @@
 /obj/effect/floor_decal/corner/white{
 	dir = 6
 	},
-/obj/machinery/camera/motion/command{
+/obj/machinery/camera/motion/ai_sat{
 	c_tag = "AI - Entry Lobby (Motion)";
 	dir = 8
 	},
@@ -1584,6 +1584,12 @@
 	},
 /turf/simulated/floor/plating,
 /area/ai_sat/fore_airlock)
+"dk" = (
+/obj/effect/shuttle_landmark/premade/generic/beltmine{
+	docking_controller = "yardciv_bay_controller_upper"
+	},
+/turf/space,
+/area/space)
 "dl" = (
 /obj/structure/cable{
 	icon_state = "5-10"
@@ -1973,6 +1979,19 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/aux,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/aft)
+"dV" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/red/border{
+	dir = 4
+	},
+/obj/machinery/camera/network/ai_sat{
+	c_tag = "AI - Exterior Arrival Hall";
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark,
+/area/ai_sat/access_shaft)
 "dW" = (
 /obj/structure/cable/orange{
 	icon_state = "1-2"
@@ -3109,10 +3128,6 @@
 	},
 /turf/simulated/floor/tiled/old_tile/white,
 /area/offworld/orbital/station/medical_treatment)
-"gf" = (
-/obj/machinery/telecomms/relay/preset/outpost/recyard,
-/turf/simulated/floor/greengrid,
-/area/offworld/orbital/station/telecomms)
 "gg" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced{
@@ -4834,7 +4849,7 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/central)
 "jF" = (
-/obj/machinery/camera/network/substations{
+/obj/machinery/camera/network/ai_sat{
 	c_tag = "AI - North turret";
 	dir = 1
 	},
@@ -5567,10 +5582,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/camera/network/substations{
-	c_tag = "AI - Exterior Arrival Hall";
-	dir = 4
-	},
 /turf/simulated/floor/tiled/dark,
 /area/ai_sat/access_shaft)
 "lc" = (
@@ -5609,12 +5620,12 @@
 /turf/simulated/wall/r_wall,
 /area/offworld/orbital/station/observation)
 "lg" = (
-/obj/machinery/camera/network/command{
-	c_tag = "AI - Backup Generator"
-	},
 /obj/structure/railing/grey,
 /obj/structure/railing/grey{
 	dir = 8
+	},
+/obj/machinery/camera/network/ai_sat{
+	c_tag = "AI - Communications Monitoring"
 	},
 /turf/simulated/open,
 /area/ai_server_room)
@@ -6092,7 +6103,7 @@
 /area/ai_sat/fore_airlock)
 "mo" = (
 /obj/machinery/hologram/holopad,
-/obj/machinery/camera/network/command{
+/obj/machinery/camera/network/ai_sat{
 	c_tag = "AI - Core South"
 	},
 /turf/simulated/floor/water/digestive_enzymes/nanites,
@@ -7836,6 +7847,9 @@
 /obj/machinery/firealarm{
 	pixel_y = 26
 	},
+/obj/machinery/camera/network/ai_sat{
+	c_tag = "AI - Solar Airlock"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/ai_sat/solar_airlock)
 "pL" = (
@@ -7990,7 +8004,7 @@
 /turf/simulated/floor/greengrid,
 /area/ai_cyborg_station)
 "qd" = (
-/obj/machinery/camera/network/substations{
+/obj/machinery/camera/network/ai_sat{
 	c_tag = "AI - West turret";
 	dir = 8
 	},
@@ -8151,7 +8165,7 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/fore)
 "qx" = (
-/obj/machinery/camera/network/substations{
+/obj/machinery/camera/network/ai_sat{
 	c_tag = "AI - Southwest turret";
 	dir = 8
 	},
@@ -8679,7 +8693,7 @@
 /turf/space,
 /area/space)
 "rA" = (
-/obj/machinery/camera/network/substations{
+/obj/machinery/camera/network/ai_sat{
 	c_tag = "AI - South turret"
 	},
 /turf/simulated/mineral/floor/ignore_cavegen/turfpack/airless,
@@ -8698,7 +8712,7 @@
 /turf/simulated/mineral/floor/ignore_cavegen/turfpack/airless,
 /area/offworld/orbital/exterior)
 "rD" = (
-/obj/machinery/camera/network/substations{
+/obj/machinery/camera/network/ai_sat{
 	c_tag = "AI - Northeast turret";
 	dir = 1
 	},
@@ -9003,12 +9017,12 @@
 /obj/structure/railing/grey{
 	dir = 4
 	},
-/obj/machinery/camera/network/substations{
-	c_tag = "AI - Solar entry"
-	},
 /obj/structure/extinguisher_cabinet{
 	pixel_x = 5;
 	pixel_y = 28
+	},
+/obj/machinery/camera/network/ai_sat{
+	c_tag = "AI - Solar entry"
 	},
 /turf/simulated/floor/airless,
 /area/ai_sat/power_control)
@@ -10014,9 +10028,6 @@
 /turf/simulated/wall/r_wall,
 /area/offworld/orbital/station/security)
 "tX" = (
-/obj/machinery/camera/network/command{
-	c_tag = "AI - Messaging Server"
-	},
 /obj/item/radio/intercom/department/security{
 	dir = 1;
 	pixel_y = 21
@@ -10029,6 +10040,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
+	},
+/obj/machinery/camera/network/ai_sat{
+	c_tag = "AI - Messaging Server"
 	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/offworld/orbital/station/telecomms)
@@ -11477,7 +11491,7 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/port_observation)
 "wK" = (
-/obj/machinery/camera/network/substations{
+/obj/machinery/camera/network/ai_sat{
 	c_tag = "AI - Ext Fore Airlock";
 	dir = 1
 	},
@@ -12752,7 +12766,7 @@
 /obj/machinery/door/airlock/glass_external{
 	frequency = 1381;
 	icon_state = "door_locked";
-	id_tag = "ai_sat_sec_door";
+	id_tag = "yardciv_bay_door_upper";
 	locked = 1
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -12858,9 +12872,9 @@
 	},
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
 	frequency = 1381;
-	id_tag = "aisat_security_controller";
+	id_tag = "yardciv_bay_controller_upper";
 	pixel_y = 30;
-	tag_door = "ai_sat_sec_door"
+	tag_door = "yardciv_bay_door_upper"
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
@@ -13054,16 +13068,16 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/aft)
 "zH" = (
-/obj/machinery/camera/network/command{
-	c_tag = "AI - Rec Room Port";
-	dir = 1
-	},
 /obj/item/paper{
 	info = "In compliance with the Crew Ethical Treatment Act of 2374: ALL crewmembers are required at least one break room within their department of work. As of Solgov vs Nanotrasen 7782; AI, Cyborgs, and Synthetics of human-capable intelligence are classified as Crewmembers.";
 	name = "Notice to the AI"
 	},
 /obj/structure/table/woodentable,
 /obj/effect/floor_decal/spline/fancy/wood,
+/obj/machinery/camera/network/ai_sat{
+	dir = 1;
+	c_tag = "AI - Rec Room Port"
+	},
 /turf/simulated/floor/wood,
 /area/ai)
 "zI" = (
@@ -13133,9 +13147,6 @@
 	},
 /obj/structure/cable/orange{
 	icon_state = "2-4"
-	},
-/obj/machinery/camera/network/substations{
-	c_tag = "AI - Solar Airlock"
 	},
 /obj/item/radio/intercom{
 	dir = 1;
@@ -14646,7 +14657,7 @@
 /obj/machinery/computer/borgupload{
 	pixel_y = 3
 	},
-/obj/machinery/camera/motion/command{
+/obj/machinery/camera/network/ai_sat{
 	c_tag = "AI - Upload Chamber"
 	},
 /turf/simulated/floor/greengrid,
@@ -15146,7 +15157,7 @@
 /turf/simulated/floor/airless,
 /area/offworld/orbital/station/engine_core_starboard)
 "ID" = (
-/obj/machinery/camera/network/substations{
+/obj/machinery/camera/network/ai_sat{
 	c_tag = "AI - Ext Access Tube"
 	},
 /turf/simulated/floor/airless,
@@ -16118,9 +16129,9 @@
 /obj/structure/cable/cyan{
 	icon_state = "0-8"
 	},
-/obj/machinery/camera/network/command{
-	c_tag = "AI - Core North";
-	dir = 1
+/obj/machinery/camera/network/ai_sat{
+	dir = 1;
+	c_tag = "AI - Core North"
 	},
 /turf/simulated/floor/water/digestive_enzymes/nanites,
 /area/ai)
@@ -16689,7 +16700,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/halls/fore)
 "Oe" = (
-/obj/machinery/camera/network/substations{
+/obj/machinery/camera/network/ai_sat{
 	c_tag = "AI - Scrubber Vent port";
 	dir = 4
 	},
@@ -18894,7 +18905,7 @@
 /obj/effect/floor_decal/corner/orange/border{
 	dir = 8
 	},
-/obj/machinery/camera/network/substations{
+/obj/machinery/camera/network/ai_sat{
 	c_tag = "AI - Fore Airlock";
 	dir = 4
 	},
@@ -19263,12 +19274,12 @@
 	dir = 8;
 	pixel_x = -28
 	},
-/obj/machinery/camera/network/substations{
-	c_tag = "AI - Transit Tube Arrival";
-	dir = 4
-	},
 /obj/structure/transit_tube{
 	icon_state = "N-S"
+	},
+/obj/machinery/camera/network/ai_sat{
+	c_tag = "AI - Transit Tube Arrival";
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/ai_sat/access_shaft)
@@ -19536,7 +19547,7 @@
 /turf/simulated/floor/tiled/milspec/airless,
 /area/offworld/orbital/station/storage_engine_core)
 "XQ" = (
-/obj/machinery/camera/network/substations{
+/obj/machinery/camera/network/ai_sat{
 	c_tag = "AI - Northwest turret";
 	dir = 1
 	},
@@ -24534,7 +24545,7 @@ Hx
 rg
 Xr
 tA
-gf
+tt
 tt
 Rj
 lX
@@ -27058,7 +27069,7 @@ cX
 cX
 cX
 cX
-cX
+aa
 cX
 cX
 cX
@@ -27136,7 +27147,7 @@ vt
 vt
 ys
 ei
-vt
+dV
 vt
 Rb
 vt
@@ -27530,7 +27541,7 @@ cX
 cX
 cX
 cX
-cX
+aa
 cX
 cX
 cX
@@ -28653,7 +28664,7 @@ cX
 cX
 cX
 cX
-cX
+aa
 cX
 cX
 cX
@@ -28833,6 +28844,7 @@ cX
 cX
 cX
 cX
+aa
 cX
 cX
 cX
@@ -28841,8 +28853,7 @@ cX
 cX
 cX
 cX
-cX
-cX
+aa
 cX
 cX
 cX
@@ -28985,7 +28996,7 @@ cX
 cX
 cX
 cX
-cX
+aa
 cX
 cX
 cX
@@ -33650,7 +33661,7 @@ cX
 cX
 cX
 cX
-cX
+dk
 cX
 cX
 cX
@@ -42812,7 +42823,7 @@ cX
 cX
 cX
 cX
-cX
+aa
 cX
 cX
 cX
@@ -44103,7 +44114,7 @@ cX
 cX
 cX
 cX
-cX
+aa
 cX
 cX
 cX
