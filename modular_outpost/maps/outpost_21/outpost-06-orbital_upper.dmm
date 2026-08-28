@@ -1585,7 +1585,7 @@
 /turf/simulated/floor/plating,
 /area/ai_sat/fore_airlock)
 "dk" = (
-/obj/effect/shuttle_landmark/premade/generic/beltmine{
+/obj/effect/shuttle_landmark/premade/generic/beltmine_upper{
 	docking_controller = "yardciv_bay_controller_upper"
 	},
 /turf/space,

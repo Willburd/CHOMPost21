@@ -27,10 +27,17 @@
 	base_area = /area/space
 
 /obj/effect/shuttle_landmark/premade/generic/beltmine
-	name = "Reclaimation Yard (Civilian Dock)"
+	name = "Reclaimation Yard Lower (Civilian Dock)"
 	landmark_tag = "orbitalyard_civ"
 	base_turf = /turf/space
-	base_area = /area/offworld/orbital/exterior/yardzone
+	base_area = /area/space
+	local_crash_sites = OUTPOST_ASTEROID_CRASHES
+
+/obj/effect/shuttle_landmark/premade/generic/beltmine_upper
+	name = "Reclaimation Yard Upper (Civilian Dock)"
+	landmark_tag = "orbitalyard_civ_upper"
+	base_turf = /turf/space
+	base_area = /area/space
 	local_crash_sites = OUTPOST_ASTEROID_CRASHES
 
 /obj/effect/shuttle_landmark/premade/generic/beltmine_north
