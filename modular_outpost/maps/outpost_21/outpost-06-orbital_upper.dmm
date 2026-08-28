@@ -1962,6 +1962,13 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/aft)
+"dT" = (
+/obj/structure/bed/chair/shuttle_padded{
+	dir = 1
+	},
+/obj/machinery/light,
+/turf/simulated/shuttle/floor/voidcraft/dark/turfpack/airless,
+/area/shuttle/belter)
 "dU" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -3300,6 +3307,13 @@
 	},
 /turf/simulated/floor/tiled/old_tile/white,
 /area/offworld/orbital/station/medical_treatment)
+"gx" = (
+/obj/structure/bed/chair/shuttle_padded,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/shuttle/floor/voidcraft/dark/turfpack/airless,
+/area/shuttle/belter)
 "gy" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 9
@@ -5748,9 +5762,6 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/ai_transit_hub)
 "lC" = (
@@ -6598,9 +6609,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
-	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
 	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -9120,9 +9128,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
-	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
 	},
 /obj/structure/cable/green{
 	icon_state = "4-9"
@@ -13816,9 +13821,6 @@
 "CV" = (
 /obj/machinery/computer/shuttle_control/belter{
 	dir = 8
-	},
-/obj/machinery/light{
-	dir = 4
 	},
 /obj/machinery/embedded_controller/radio/airlock/docking_port{
 	pixel_y = 28
@@ -42280,9 +42282,9 @@ aK
 tP
 tP
 ah
-NZ
+gx
 an
-fX
+dT
 ah
 tP
 No
