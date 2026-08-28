@@ -37,7 +37,7 @@
 	var/list/emote_threats = list(
 								"I have come to collect a meal, now that your people have broken the seal.",
 								"The sight of me should make you fly, but know that regardless you will die.",
-	//							"Escape all this frustrating clamour, come sink with me into the glamour.", Outpost-21 edit: Removes conflicting lore
+								"Escape all this frustrating clamour, come sink with me into the glamour.",
 								"My face may now be made of bone, but I should not experience it alone.",
 								"I can hear the racing of your heart, it is approaching my favourite part.",
 								"You will not be left to suffer, is it not that life is so much tougher.",
