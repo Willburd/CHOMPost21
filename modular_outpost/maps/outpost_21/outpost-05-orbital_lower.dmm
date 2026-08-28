@@ -1636,7 +1636,7 @@
 	dir = 1;
 	frequency = 1381;
 	pixel_y = -32;
-	id_tag = "ai_aftlock"
+	id_tag = "orbital_beam_north"
 	},
 /obj/machinery/airlock_sensor/airlock_exterior{
 	pixel_y = -24;
@@ -1767,7 +1767,7 @@
 	dir = 1;
 	frequency = 1381;
 	pixel_y = -32;
-	id_tag = "ai_aftlock"
+	id_tag = "orbital_beam_south"
 	},
 /obj/machinery/airlock_sensor/airlock_exterior{
 	pixel_y = -24;

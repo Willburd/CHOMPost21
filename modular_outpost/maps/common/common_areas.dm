@@ -2844,6 +2844,20 @@
 	ambience = AMBIENCE_GENERIC
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 
+/area/offworld/orbital/station/south_engine_access_west
+	name = "\improper Orbital Engine Access Airlock West"
+	icon_state = "shuttle2"
+	sound_env = SMALL_ENCLOSED
+	ambience = AMBIENCE_GENERIC
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+
+/area/offworld/orbital/station/south_engine_access_east
+	name = "\improper Orbital Engine Access Airlock East"
+	icon_state = "shuttle2"
+	sound_env = SMALL_ENCLOSED
+	ambience = AMBIENCE_GENERIC
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+
 
 // Access shafts/hangers
 /area/offworld/orbital/station/access_shaft

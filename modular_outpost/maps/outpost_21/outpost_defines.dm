@@ -160,6 +160,8 @@
 										/area/offworld/orbital/exterior/yardzone,
 										/area/offworld/orbital/exterior/emitter_cooling,
 										/area/offworld/orbital/station/south_power_airlock,
+										/area/offworld/orbital/station/south_engine_access_west,
+										/area/offworld/orbital/station/south_engine_access_east,
 										/area/offworld/orbital/exterior/starboard_solars,
 										/area/offworld/orbital/station/port_airlock,
 										/area/offworld/orbital/exterior/rust_cooling,

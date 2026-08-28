@@ -518,8 +518,13 @@
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
 /obj/effect/floor_decal/corner/orange/full,
+/obj/item/radio/intercom{
+	frequency = 1343;
+	name = "Private Channel";
+	pixel_y = -21
+	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/halls/aft)
+/area/offworld/orbital/station/south_engine_access_east)
 "bk" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 1
@@ -567,7 +572,7 @@
 "bn" = (
 /obj/structure/sign/warning/vacuum,
 /turf/simulated/wall/r_wall,
-/area/offworld/orbital/station/halls/aft)
+/area/offworld/orbital/station/south_engine_access_west)
 "bo" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -659,7 +664,7 @@
 	dir = 10
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/halls/aft)
+/area/offworld/orbital/station/south_engine_access_east)
 "bw" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 10
@@ -2627,8 +2632,13 @@
 	name = "Emergency NanoMed";
 	pixel_x = -28
 	},
+/obj/item/radio/intercom{
+	frequency = 1343;
+	name = "Private Channel";
+	pixel_y = -21
+	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/halls/aft)
+/area/offworld/orbital/station/south_engine_access_west)
 "fe" = (
 /obj/structure/cable{
 	icon_state = "5-10"
@@ -4710,6 +4720,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/aux{
 	dir = 4
 	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/aft)
 "jn" = (
@@ -5240,7 +5253,7 @@
 /obj/effect/map_helper/airlock/button/ext_button,
 /obj/effect/map_helper/airlock/sensor/ext_sensor,
 /turf/simulated/floor/tiled/techfloor,
-/area/offworld/orbital/station/halls/aft)
+/area/offworld/orbital/station/south_engine_access_east)
 "kq" = (
 /obj/machinery/light,
 /obj/effect/floor_decal/borderfloor,
@@ -5550,7 +5563,7 @@
 	dir = 6
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/halls/aft)
+/area/offworld/orbital/station/south_engine_access_west)
 "kT" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 1
@@ -5619,7 +5632,7 @@
 	dir = 9
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/halls/aft)
+/area/offworld/orbital/station/south_engine_access_west)
 "lb" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -10027,8 +10040,11 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/aux{
 	dir = 1
 	},
+/obj/structure/cable/green{
+	icon_state = "2-4"
+	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/halls/aft)
+/area/offworld/orbital/station/south_engine_access_west)
 "tJ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -10475,7 +10491,7 @@
 	},
 /obj/effect/map_helper/airlock/door/ext_door,
 /turf/simulated/floor/tiled/techfloor,
-/area/offworld/orbital/station/halls/aft)
+/area/offworld/orbital/station/south_engine_access_west)
 "ux" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -12002,7 +12018,7 @@
 	health = 1e+006
 	},
 /turf/simulated/floor/plating,
-/area/offworld/orbital/station/halls/aft)
+/area/offworld/orbital/station/south_engine_access_west)
 "xr" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -12854,6 +12870,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/aux,
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/aft)
 "yQ" = (
@@ -13125,6 +13144,27 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/aft)
+"zq" = (
+/turf/simulated/wall/r_wall,
+/area/offworld/orbital/station/south_engine_access_west)
+"zr" = (
+/turf/simulated/wall/r_wall,
+/area/offworld/orbital/station/south_engine_access_east)
+"zs" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/aux,
+/obj/effect/floor_decal/corner/orange{
+	dir = 9
+	},
+/obj/machinery/power/apc{
+	dir = 8;
+	name = "west bump";
+	pixel_x = -24
+	},
+/obj/structure/cable/green{
+	icon_state = "0-1"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/south_engine_access_east)
 "zt" = (
 /obj/structure/cable/yellow{
 	icon_state = "2-4"
@@ -13132,6 +13172,13 @@
 /obj/effect/floor_decal/eshui/emblem/eshui_small_l,
 /turf/simulated/floor/airless,
 /area/offworld/orbital/station/engine_core_starboard)
+"zu" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/aux,
+/obj/effect/floor_decal/corner/orange{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/south_engine_access_east)
 "zv" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -13157,10 +13204,26 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/fore)
+"zw" = (
+/obj/structure/sign/warning/vacuum,
+/turf/simulated/wall/r_wall,
+/area/offworld/orbital/station/south_engine_access_east)
 "zx" = (
 /obj/effect/floor_decal/industrial/rad_floor/red,
 /turf/simulated/floor/airless,
 /area/offworld/orbital/station/engine_core_starboard)
+"zy" = (
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/aux{
+	dir = 1
+	},
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/south_engine_access_east)
 "zz" = (
 /obj/effect/catwalk_plated,
 /obj/structure/cable/green{
@@ -13208,11 +13271,31 @@
 	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/ai_upload_foyer)
+"zC" = (
+/obj/effect/floor_decal/corner/orange/full{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/south_engine_access_east)
 "zD" = (
 /obj/structure/table/gamblingtable,
 /obj/random/instrument,
 /turf/simulated/floor/carpet/turcarpet,
 /area/offworld/orbital/station/bar)
+"zE" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/orange/full{
+	dir = 1
+	},
+/obj/structure/extinguisher_cabinet{
+	dir = 8;
+	pixel_x = 30;
+	pixel_y = 6
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/south_engine_access_east)
 "zF" = (
 /obj/structure/cable/orange{
 	icon_state = "1-2"
@@ -13228,6 +13311,18 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/aft)
+"zG" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/offworld/orbital/station/south_engine_access_east)
 "zH" = (
 /obj/item/paper{
 	info = "In compliance with the Crew Ethical Treatment Act of 2374: ALL crewmembers are required at least one break room within their department of work. As of Solgov vs Nanotrasen 7782; AI, Cyborgs, and Synthetics of human-capable intelligence are classified as Crewmembers.";
@@ -13262,6 +13357,19 @@
 	},
 /turf/simulated/floor/tiled/milspec/airless,
 /area/offworld/orbital/station/storage_engine_core)
+"zK" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 4;
+	health = 1e+006
+	},
+/turf/simulated/floor/plating,
+/area/offworld/orbital/station/south_engine_access_east)
 "zL" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -14949,8 +15057,13 @@
 /obj/effect/floor_decal/corner/orange/full{
 	dir = 8
 	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -30;
+	pixel_y = 8;
+	dir = 4
+	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/halls/aft)
+/area/offworld/orbital/station/south_engine_access_west)
 "GW" = (
 /obj/machinery/flasher{
 	id = "AI";
@@ -15104,7 +15217,7 @@
 	dir = 6
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/halls/aft)
+/area/offworld/orbital/station/south_engine_access_west)
 "HH" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/grille,
@@ -15659,8 +15772,11 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/aux{
 	dir = 4
 	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/techfloor,
-/area/offworld/orbital/station/halls/aft)
+/area/offworld/orbital/station/south_engine_access_east)
 "JN" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -15708,6 +15824,12 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/aux{
 	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/aft)
@@ -15765,7 +15887,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/halls/aft)
+/area/offworld/orbital/station/south_engine_access_west)
 "Kh" = (
 /obj/machinery/computer/shuttle_control/multi{
 	shuttle_tag = "Engineering Ferry";
@@ -16156,7 +16278,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/halls/aft)
+/area/offworld/orbital/station/south_engine_access_east)
 "LB" = (
 /obj/machinery/airlock_sensor/airlock_exterior{
 	frequency = 1381;
@@ -16840,7 +16962,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/plating,
-/area/offworld/orbital/station/halls/aft)
+/area/offworld/orbital/station/south_engine_access_west)
 "NW" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
@@ -17907,8 +18029,16 @@
 /obj/effect/floor_decal/corner/orange{
 	dir = 6
 	},
+/obj/machinery/power/apc{
+	dir = 4;
+	name = "east bump";
+	pixel_x = 24
+	},
+/obj/structure/cable/green{
+	icon_state = "0-1"
+	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/halls/aft)
+/area/offworld/orbital/station/south_engine_access_west)
 "RM" = (
 /obj/machinery/door/airlock/glass_external{
 	frequency = 1381;
@@ -18173,8 +18303,11 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/aux{
 	dir = 4
 	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/techfloor,
-/area/offworld/orbital/station/halls/aft)
+/area/offworld/orbital/station/south_engine_access_west)
 "Sv" = (
 /obj/structure/sign/warning/secure_area,
 /turf/simulated/wall/r_wall,
@@ -36959,12 +37092,12 @@ eq
 pF
 pF
 pF
-pF
-gX
+zq
+zq
 uw
 bn
-gX
-gX
+zq
+zq
 Hc
 Hc
 ua
@@ -37126,7 +37259,7 @@ GV
 kS
 la
 fd
-gX
+zq
 YY
 lF
 qh
@@ -37288,7 +37421,7 @@ Kf
 tI
 RK
 Hy
-gX
+zq
 Rt
 kB
 Jg
@@ -37445,12 +37578,12 @@ Yb
 gX
 gX
 gX
-gX
-gX
+zq
+zq
 Su
-gX
-gX
-gX
+zq
+zq
+zq
 ej
 dD
 vF
@@ -38093,12 +38226,12 @@ gX
 gX
 gX
 dY
-gX
-gX
+zr
+zr
 JM
-gX
-gX
-gX
+zr
+zr
+zr
 Rt
 iw
 vG
@@ -38255,12 +38388,12 @@ qz
 Au
 OQ
 eb
-NV
-GV
-tI
-la
+zG
+zC
+zy
+zs
 bj
-gX
+zr
 cZ
 GA
 Jg
@@ -38417,12 +38550,12 @@ qz
 qz
 OQ
 eb
-xq
-Kf
+zK
+zE
 bv
-RK
+zu
 Lz
-gX
+zr
 Kh
 Nn
 hS
@@ -38579,12 +38712,12 @@ qz
 qz
 Au
 eb
-gX
-gX
+zr
+zr
 kp
-bn
-gX
-gX
+zw
+zr
+zr
 iY
 Hc
 aT

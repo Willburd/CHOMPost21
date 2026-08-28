@@ -100,9 +100,10 @@
 		/area/offworld/orbital/station/port_airlock,
 		/area/offworld/orbital/station/starboard_airlock,
 		/area/offworld/orbital/station/dockingarm,
-		/area/offworld/orbital/station/south_power_airlock,
 		/area/offworld/orbital/station/access_shaft,
 		/area/offworld/orbital/station/south_power_airlock,
+		/area/offworld/orbital/station/south_engine_access_west,
+		/area/offworld/orbital/station/south_engine_access_east,
 		)
 
 	var/list/forced_hallway = list(
