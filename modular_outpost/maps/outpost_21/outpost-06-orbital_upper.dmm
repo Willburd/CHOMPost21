@@ -284,9 +284,6 @@
 	dir = 4;
 	icon_state = "pipe-c"
 	},
-/obj/machinery/camera/network/engineering_outpost{
-	c_tag = "REX - Fore Hallway West"
-	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/fore)
 "aG" = (
@@ -601,6 +598,9 @@
 	dir = 1;
 	name = "Station Intercom (General)";
 	pixel_y = 25
+	},
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "REX - Fore Hallway West"
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/fore)
@@ -1195,12 +1195,6 @@
 	},
 /area/offworld/orbital/exterior)
 "cv" = (
-/obj/machinery/access_button/airlock_interior{
-	frequency = 1381;
-	pixel_y = -6;
-	pixel_x = 28
-	},
-/obj/effect/map_helper/airlock/button/int_button,
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
 	},
@@ -1515,12 +1509,6 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/ai_transit_hub)
 "dd" = (
-/obj/machinery/access_button/airlock_exterior{
-	frequency = 1381;
-	pixel_y = 6;
-	pixel_x = 28
-	},
-/obj/effect/map_helper/airlock/button/ext_button,
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
 	},
@@ -1694,15 +1682,11 @@
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/effect/map_helper/airlock/door/ext_door,
-/obj/machinery/access_button/airlock_exterior{
-	pixel_y = -10;
-	pixel_x = 25
-	},
 /obj/effect/map_helper/airlock/button/ext_button,
 /obj/effect/map_helper/airlock/sensor/ext_sensor,
 /obj/machinery/airlock_sensor/airlock_exterior/shuttle{
 	pixel_y = -10;
-	pixel_x = 35
+	pixel_x = 32
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/power_distribution)
@@ -4316,6 +4300,10 @@
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 8
 	},
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "REX - Yard Observation";
+	dir = 4
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/observation)
 "is" = (
@@ -4361,12 +4349,6 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/power_distribution)
 "ix" = (
-/obj/machinery/airlock_sensor/airlock_interior{
-	dir = 1;
-	frequency = 1381;
-	id_tag = "orbyard_insense";
-	pixel_y = -25
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -5280,12 +5262,6 @@
 	req_one_access = list(16,52,56);
 	dir = 4
 	},
-/obj/machinery/access_button/airlock_exterior{
-	pixel_x = 10;
-	dir = 4;
-	pixel_y = 25
-	},
-/obj/effect/map_helper/airlock/button/ext_button,
 /obj/effect/map_helper/airlock/sensor/ext_sensor,
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/south_engine_access_east)
@@ -5588,6 +5564,9 @@
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 1
 	},
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "REX - Starboard Hallway Central"
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/starboard)
 "kS" = (
@@ -5637,22 +5616,6 @@
 /obj/machinery/door/airlock/maintenance/common,
 /turf/simulated/floor/tiled/techmaint,
 /area/maintenance/orbital/fore)
-"kY" = (
-/obj/machinery/door/airlock/glass_external{
-	frequency = 1381;
-	id_tag = "orbyard_outer";
-	locked = 1
-	},
-/obj/machinery/access_button/airlock_exterior{
-	dir = 4;
-	frequency = 1381;
-	master_tag = "orbyard";
-	pixel_x = 10;
-	pixel_y = 25
-	},
-/obj/machinery/shield_diffuser,
-/turf/simulated/floor/tiled/techfloor,
-/area/offworld/orbital/station/starboard_airlock)
 "kZ" = (
 /obj/machinery/door/firedoor,
 /obj/structure/cable/orange{
@@ -6295,13 +6258,14 @@
 	id_tag = "orbyard_inner";
 	locked = 1
 	},
-/obj/machinery/access_button/airlock_interior{
-	frequency = 1381;
-	master_tag = "orbyard";
-	pixel_y = -23
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/aux{
 	dir = 4
+	},
+/obj/machinery/airlock_sensor/airlock_interior/shuttle{
+	id_tag = "orbyard_insense";
+	dir = 8;
+	pixel_y = -25;
+	pixel_x = -9
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/starboard_airlock)
@@ -6411,6 +6375,10 @@
 	},
 /obj/effect/floor_decal/corner/lightgrey{
 	dir = 10
+	},
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "REX - Bar Cryo";
+	dir = 1
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/bar)
@@ -9922,16 +9890,7 @@
 	icon_state = "1-2"
 	},
 /obj/effect/map_helper/airlock/sensor/int_sensor,
-/obj/machinery/access_button/airlock_exterior{
-	pixel_x = -23;
-	dir = 4
-	},
 /obj/effect/map_helper/airlock/button/int_button,
-/obj/machinery/airlock_sensor/airlock_interior/shuttle{
-	dir = 4;
-	pixel_y = 10;
-	pixel_x = -22
-	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/power_distribution)
 "ts" = (
@@ -10538,12 +10497,6 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/access_button/airlock_exterior{
-	pixel_x = -7;
-	dir = 8;
-	pixel_y = 25
-	},
-/obj/effect/map_helper/airlock/button/ext_button,
 /obj/effect/map_helper/airlock/sensor/ext_sensor,
 /obj/machinery/airlock_sensor/airlock_exterior/shuttle{
 	pixel_x = -10;
@@ -14007,6 +13960,41 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/power_distribution)
+"AG" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 10
+	},
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "REX - Primary Engine Exterior Port"
+	},
+/turf/simulated/floor/airless,
+/area/offworld/orbital/station/engine_core_port)
+"AH" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 10
+	},
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "REX - Primary Engine Exterior Starboard"
+	},
+/turf/simulated/floor/airless,
+/area/offworld/orbital/station/engine_core_starboard)
+"AI" = (
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "REX - Belter Pad";
+	dir = 4
+	},
+/turf/simulated/floor/airless,
+/area/offworld/orbital/exterior)
+"AJ" = (
+/obj/machinery/airlock_sensor/airlock_exterior{
+	frequency = 1381;
+	pixel_x = -22;
+	pixel_y = -7;
+	id_tag = "orbyard_outsense";
+	dir = 4
+	},
+/turf/simulated/floor/airless,
+/area/offworld/orbital/exterior)
 "AK" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -14043,6 +14031,24 @@
 /obj/effect/catwalk_plated,
 /turf/simulated/floor,
 /area/offworld/orbital/station/halls/aft)
+"AM" = (
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/lightgrey/border,
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "REX - Starboard Hallway West";
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/starboard)
+"AN" = (
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/lightgrey/border,
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "REX - Starboard Hallway East";
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/starboard)
 "AO" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 6
@@ -16092,19 +16098,11 @@
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/effect/map_helper/airlock/door/int_door,
-/obj/effect/map_helper/airlock/button/int_button,
 /obj/effect/map_helper/airlock/sensor/int_sensor,
 /obj/machinery/airlock_sensor/airlock_interior/shuttle{
 	dir = 8;
 	pixel_y = -25;
 	pixel_x = -10
-	},
-/obj/machinery/access_button/airlock_interior{
-	frequency = 1381;
-	master_tag = "engwest";
-	pixel_x = -10;
-	dir = 8;
-	pixel_y = 25
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/aux{
 	dir = 4
@@ -18397,6 +18395,11 @@
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/effect/map_helper/airlock/door/int_door,
+/obj/machinery/airlock_sensor/airlock_interior/shuttle{
+	dir = 1;
+	pixel_x = -25;
+	pixel_y = 9
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/power_distribution)
 "RN" = (
@@ -18634,12 +18637,6 @@
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/effect/map_helper/airlock/door/int_door,
-/obj/machinery/access_button/airlock_interior{
-	pixel_x = 10;
-	dir = 4;
-	pixel_y = 25
-	},
-/obj/effect/map_helper/airlock/button/int_button,
 /obj/effect/map_helper/airlock/sensor/int_sensor,
 /obj/machinery/airlock_sensor/airlock_interior/shuttle{
 	dir = 4;
@@ -19688,12 +19685,6 @@
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/ai_transit_hub)
 "VM" = (
-/obj/machinery/airlock_sensor/airlock_interior{
-	pixel_x = 26;
-	frequency = 1381;
-	pixel_y = 29
-	},
-/obj/effect/map_helper/airlock/sensor/int_sensor,
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
 	},
@@ -20210,6 +20201,10 @@
 	locked = 1
 	},
 /obj/effect/map_helper/airlock/door/int_door,
+/obj/effect/map_helper/airlock/sensor/int_sensor,
+/obj/machinery/airlock_sensor/airlock_interior/shuttle{
+	pixel_x = 24
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ai_sat/fore_airlock)
 "XU" = (
@@ -36152,7 +36147,7 @@ SW
 SW
 hE
 pF
-SM
+AG
 ii
 jY
 lp
@@ -38529,7 +38524,7 @@ rR
 rH
 rH
 FJ
-lm
+AM
 kd
 kd
 qz
@@ -41012,7 +41007,7 @@ qz
 qz
 Au
 yr
-Vs
+AH
 fl
 ia
 ck
@@ -41972,7 +41967,7 @@ aj
 aj
 ah
 tP
-tP
+AI
 OQ
 OQ
 OQ
@@ -42579,7 +42574,7 @@ tc
 Tt
 An
 Sf
-lm
+AN
 kd
 np
 tP
@@ -43093,7 +43088,7 @@ qz
 qz
 qz
 Sn
-kY
+tq
 tq
 Sn
 YD
@@ -43254,7 +43249,7 @@ qz
 qz
 qz
 qz
-tP
+AJ
 tP
 tP
 tP
