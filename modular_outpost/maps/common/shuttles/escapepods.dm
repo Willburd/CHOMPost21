@@ -77,7 +77,7 @@
 	name = "Escape Pod Berth 3"
 	landmark_tag = "pod_berth_three"
 	docking_controller = "escape_berth_three"
-	base_turf = /turf/simulated/mineral/floor/ignore_cavegen/turfpack/airless
+	base_turf = /turf/simulated/floor/airless
 	base_area = /area/offworld/orbital/exterior
 
 

@@ -166,11 +166,6 @@ GLOBAL_LIST_EMPTY(mining_overlay_cache)
 /turf/simulated/mineral/floor/ignore_mapgen
 	ignore_mapgen = 1
 
-// Outpost 21 edit(port) begin - Ignore cavegen variant
-/turf/simulated/mineral/floor/ignore_cavegen
-	ignore_cavegen = 1
-// Outpost 21 edit end
-
 /turf/simulated/mineral/proc/make_floor()
 	if(!density && !opacity)
 		return
