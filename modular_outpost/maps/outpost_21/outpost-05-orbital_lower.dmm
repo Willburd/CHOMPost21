@@ -2758,10 +2758,11 @@
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/atmos_primary)
 "gJ" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	dir = 4;
-	id_tag = "orb_mix_in";
-	frequency = 1443
+/obj/machinery/atmospherics/unary/outlet_injector{
+	frequency = 1443;
+	id = "orb_mix_in";
+	use_power = 1;
+	dir = 4
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/offworld/orbital/station/atmos_primary)

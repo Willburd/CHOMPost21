@@ -27,42 +27,42 @@
 	base_area = /area/space
 
 /obj/effect/shuttle_landmark/premade/generic/beltmine
-	name = "Reclaimation Yard Lower (Civilian Dock)"
+	name = "Lower Civilian Dock"
 	landmark_tag = "orbitalyard_civ"
 	base_turf = /turf/space
 	base_area = /area/space
 	local_crash_sites = OUTPOST_ASTEROID_CRASHES
 
 /obj/effect/shuttle_landmark/premade/generic/beltmine_upper
-	name = "Reclaimation Yard Upper (Civilian Dock)"
+	name = "Yard Civilian Dock"
 	landmark_tag = "orbitalyard_civ_upper"
 	base_turf = /turf/space
 	base_area = /area/space
 	local_crash_sites = OUTPOST_ASTEROID_CRASHES
 
 /obj/effect/shuttle_landmark/premade/generic/beltmine_north
-	name = "Reclaimation Yard (North)"
+	name = "Yard North"
 	landmark_tag = "orbitalyard_north"
 	base_turf = /turf/space
 	base_area = /area/space
 	local_crash_sites = OUTPOST_ASTEROID_CRASHES
 
 /obj/effect/shuttle_landmark/premade/generic/beltmine_south
-	name = "Reclaimation Yard (South)"
+	name = "Yard South"
 	landmark_tag = "orbitalyard_south"
 	base_turf = /turf/space
 	base_area = /area/space
 	local_crash_sites = OUTPOST_ASTEROID_CRASHES
 
 /obj/effect/shuttle_landmark/premade/generic/beltmine_east
-	name = "Reclaimation Yard (East)"
+	name = "Yard East"
 	landmark_tag = "orbitalyard_east"
 	base_turf = /turf/space
 	base_area = /area/space
 	local_crash_sites = OUTPOST_ASTEROID_CRASHES
 
 /obj/effect/shuttle_landmark/premade/generic/beltmine_west
-	name = "Reclaimation Yard (West)"
+	name = "Yard West"
 	landmark_tag = "orbitalyard_west"
 	base_turf = /turf/space
 	base_area = /area/space

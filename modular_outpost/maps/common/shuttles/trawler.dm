@@ -58,7 +58,7 @@
 	local_crash_sites = OUTPOST_SURFACE_CRASHES
 
 /obj/effect/shuttle_landmark/premade/trawler/beltmine
-	name = "Orbital Yard (Trawler bay)"
+	name = "Trawler Dock"
 	landmark_tag = "trawler_yard"
 	base_turf = /turf/simulated/floor/airless
 	base_area = /area/offworld/orbital/exterior

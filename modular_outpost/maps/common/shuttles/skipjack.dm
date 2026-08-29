@@ -38,13 +38,13 @@
 	base_turf = /turf/simulated/open/muriki
 
 /obj/effect/shuttle_landmark/premade/skipjack/station_nw
-	name = "Reclaimation Yard (West)"
+	name = "Yard West"
 	landmark_tag = "skipjack_yard_west"
 	base_area = /area/space
 	base_turf = /turf/space
 
 /obj/effect/shuttle_landmark/premade/skipjack/station_se
-	name = "Reclaimation Yard (East)"
+	name = "Yard East"
 	landmark_tag = "skipjack_yard_east"
 	base_area = /area/space
 	base_turf = /turf/space
