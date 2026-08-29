@@ -31,6 +31,7 @@
 
 /area/offworld/orbital/exterior/emitter_cooling
 	name = "\improper Orbital Emitter Cooling Array"
+	base_turf = /turf/space
 
 
 // HALLWAYS
@@ -107,6 +108,7 @@
 	sound_env = LARGE_ENCLOSED
 	ambience = AMBIENCE_ENGINEERING
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+	base_turf = /turf/simulated/open
 
 /area/offworld/orbital/station/halls/stairs_lower
 	name = "\improper Orbital Stairwell Lower"
@@ -261,12 +263,13 @@
 	name = "\improper Orbital Upper Docking Arm"
 	icon_state = "red"
 	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
-	base_turf = /turf/simulated/open
+	base_turf = /turf/space
 
 /area/offworld/orbital/station/access_shaft/lower
 	name = "\improper Orbital Lower Docking Arm"
 	icon_state = "blue"
 	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
+	base_turf = /turf/space
 
 // Observation
 /area/offworld/orbital/station/observation
@@ -282,6 +285,7 @@
 	sound_env = SMALL_SOFTFLOOR
 	ambience = AMBIENCE_GENERIC
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+	base_turf = /turf/space
 
 /area/offworld/orbital/station/starboard_observation
 	name = "\improper Orbital Starboard Observation"
@@ -371,6 +375,7 @@
 /area/offworld/orbital/exterior/starboard_solars
 	name = "\improper Orbital Starboard Solars"
 	icon_state = "purple"
+	base_turf = /turf/space
 
 
 // Power distro
@@ -524,6 +529,7 @@
 /area/maintenance/orbital/aft
 	name = "\improper Orbital Maintenance Aft"
 	sound_env = SMALL_ENCLOSED
+	base_turf = /turf/simulated/open
 
 /area/maintenance/orbital/port
 	name = "\improper Orbital Maintenance Port"

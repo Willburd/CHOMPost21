@@ -11916,6 +11916,10 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/lightgrey/border,
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "REX - Docking Arm Upper Central";
+	dir = 1
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/access_shaft/upper)
 "xe" = (
@@ -12276,6 +12280,10 @@
 	},
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 1
+	},
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "REX - Docking Arm Upper East";
+	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/access_shaft/upper)
@@ -13701,24 +13709,6 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/observation)
-"Aj" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/corner/lightgrey/border,
-/obj/machinery/camera/network/engineering_outpost{
-	c_tag = "REX - Docking Arm Upper Central";
-	dir = 1
-	},
-/turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/access_shaft/upper)
 "Ak" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -13746,12 +13736,8 @@
 	},
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/lightgrey/border,
-/obj/machinery/camera/network/engineering_outpost{
-	c_tag = "REX - Docking Arm Upper East";
-	dir = 1
-	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/access_shaft/upper)
+/area/offworld/orbital/station/halls/central)
 "Am" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 8
@@ -29054,8 +29040,8 @@ cX
 cX
 cX
 cX
-CR
-CR
+pi
+pi
 rw
 zg
 cX
@@ -29217,8 +29203,8 @@ cX
 cX
 cX
 cX
-CR
-CR
+pi
+pi
 cX
 cX
 cX
@@ -29379,7 +29365,7 @@ cX
 cX
 cX
 cX
-CR
+pi
 cX
 cX
 cX
@@ -29541,7 +29527,7 @@ cX
 cX
 cX
 cX
-CR
+pi
 cX
 cX
 cX
@@ -29703,7 +29689,7 @@ cX
 cX
 cX
 cX
-CR
+pi
 cX
 cX
 cX
@@ -29865,7 +29851,7 @@ cX
 cX
 cX
 cX
-CR
+pi
 cX
 cX
 cX
@@ -30027,7 +30013,7 @@ cX
 cX
 cX
 cX
-CR
+pi
 cX
 cX
 cX
@@ -30189,7 +30175,7 @@ cX
 cX
 cX
 cX
-CR
+pi
 cX
 cX
 cX
@@ -30351,7 +30337,7 @@ cX
 cX
 cX
 cX
-CR
+pi
 cX
 cX
 cX
@@ -30513,7 +30499,7 @@ cX
 cX
 cX
 cX
-CR
+pi
 cX
 cX
 cX
@@ -30675,7 +30661,7 @@ cX
 cX
 cX
 cX
-CR
+pi
 cX
 cX
 cX
@@ -30837,7 +30823,7 @@ cX
 cX
 cX
 cX
-CR
+pi
 cX
 cX
 cX
@@ -30999,7 +30985,7 @@ cX
 cX
 cX
 cX
-CR
+pi
 cX
 cX
 cX
@@ -31161,7 +31147,7 @@ cX
 cX
 cX
 cX
-CR
+pi
 cX
 cX
 cX
@@ -31323,7 +31309,7 @@ cX
 cX
 cX
 cX
-CR
+pi
 cX
 cX
 cX
@@ -31484,8 +31470,8 @@ cX
 cX
 cX
 cX
-CR
-CR
+pi
+pi
 fv
 qz
 cX
@@ -31646,7 +31632,7 @@ cX
 cX
 cX
 cX
-CR
+pi
 fv
 fv
 qz
@@ -31808,7 +31794,7 @@ cX
 cX
 cX
 cX
-CR
+pi
 fv
 qz
 qz
@@ -34307,7 +34293,7 @@ cX
 cX
 vM
 ws
-Aj
+xg
 rG
 cX
 cX
@@ -36573,9 +36559,9 @@ qz
 qz
 qz
 OQ
-vL
-xE
-xg
+vM
+xJ
+xm
 vM
 Au
 OQ
@@ -36735,10 +36721,10 @@ qz
 qz
 qz
 OQ
-vL
-xJ
-xm
-rG
+jg
+xM
+xn
+jg
 OQ
 OQ
 qz
@@ -36897,10 +36883,10 @@ qz
 qz
 qz
 OQ
-vL
-xE
+jg
+xN
 Al
-rG
+jg
 OQ
 fj
 qz
@@ -37059,10 +37045,10 @@ qz
 qz
 qz
 OQ
-vL
-xE
-xg
-rG
+jg
+xN
+Al
+jg
 OQ
 VG
 VG
@@ -37221,10 +37207,10 @@ qz
 qz
 qz
 OQ
-vM
-xE
-xg
-rG
+jg
+xN
+Al
+jg
 fj
 VG
 ya
@@ -37383,10 +37369,10 @@ qz
 qz
 qz
 OQ
-rG
-xE
-xg
-rG
+jg
+xN
+Al
+jg
 cu
 VG
 Gi
@@ -37546,8 +37532,8 @@ qz
 qz
 OQ
 jg
-xM
-xn
+xN
+Al
 jg
 jg
 jg

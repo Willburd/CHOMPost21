@@ -1132,7 +1132,7 @@
 //Orbital yard
 /area/turbolift/orbitalyard_lower
 	name = "Orbital lower"
-	base_turf = /turf/simulated/floor/plating
+	base_turf = /turf/simulated/mineral/floor/cave
 	lift_floor_label = "Lower"
 	lift_floor_name = "Engineering things"
 	lift_announce_str = "Arriving at Orbital Lower Level."
