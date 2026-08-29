@@ -76014,7 +76014,7 @@
 	},
 /obj/machinery/camera/network/engineering_outpost{
 	dir = 8;
-	c_tag = "ENG - Short-range Shuttle"
+	c_tag = "REX - Short-range Shuttle"
 	},
 /turf/simulated/shuttle/floor/voidcraft/light/turfpack/muriki,
 /area/shuttle/beamtransit)
