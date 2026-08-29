@@ -58,10 +58,10 @@
 	local_crash_sites = OUTPOST_SURFACE_CRASHES
 
 /obj/effect/shuttle_landmark/premade/trawler/beltmine
-	name = "Reclaimation Yard (Trawler bay)"
+	name = "Orbital Yard (Trawler bay)"
 	landmark_tag = "trawler_yard"
-	base_turf = /turf/simulated/floor
-	base_area = /area/space
+	base_turf = /turf/simulated/floor/airless
+	base_area = /area/offworld/orbital/exterior
 	local_crash_sites = OUTPOST_ASTEROID_CRASHES
 
 /obj/effect/shuttle_landmark/premade/trawler/prospector
@@ -69,10 +69,3 @@
 	landmark_tag = "prospector_docks_trawler"
 	base_turf = /turf/space
 	base_area = /area/space
-
-/obj/effect/shuttle_landmark/premade/trawler/confinementbeam
-	name = "Confinement Beam (Trawler Dock)"
-	landmark_tag = "confinementbeam_trawler"
-	base_turf = /turf/space
-	base_area = /area/space
-	local_crash_sites = OUTPOST_CONFINEMENTBEAM_CRASHES

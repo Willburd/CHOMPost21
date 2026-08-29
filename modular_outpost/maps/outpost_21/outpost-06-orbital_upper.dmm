@@ -5616,6 +5616,10 @@
 /obj/machinery/door/airlock/maintenance/common,
 /turf/simulated/floor/tiled/techmaint,
 /area/maintenance/orbital/fore)
+"kY" = (
+/obj/effect/shuttle_landmark/premade/generic/crash_rec_trawlerbad,
+/turf/simulated/mineral/vacuum,
+/area/offworld/orbital/exterior)
 "kZ" = (
 /obj/machinery/door/firedoor,
 /obj/structure/cable/orange{
@@ -6655,7 +6659,6 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/central)
 "nr" = (
-/obj/structure/lattice,
 /obj/structure/cable/green{
 	icon_state = "1-8"
 	},
@@ -14058,6 +14061,10 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/dockingarm)
+"AP" = (
+/obj/effect/shuttle_landmark/premade/generic/crash_rec,
+/turf/simulated/mineral/vacuum,
+/area/offworld/orbital/exterior)
 "AU" = (
 /obj/effect/shuttle_landmark/premade/skipjack/station_nw,
 /turf/space,
@@ -30819,7 +30826,7 @@ cX
 cX
 qz
 qz
-qz
+kY
 qz
 qz
 qz
@@ -34686,7 +34693,7 @@ OQ
 OQ
 fj
 qz
-qz
+AP
 fj
 OQ
 SM
@@ -42593,7 +42600,7 @@ tP
 tP
 tP
 tP
-OQ
+tP
 OQ
 qz
 qz
@@ -42755,7 +42762,7 @@ tP
 tP
 tP
 tP
-rC
+tP
 rC
 qz
 qz

@@ -590,7 +590,7 @@ ADMIN_VERB(lockdown_muriki_airspace, R_EVENT, "Airspace Lockdown ", "Lockdown tr
 [b]Notice[/b]: ESHUI Base, authorized personnel only"}
 	map_z = list(Z_LEVEL_OUTPOST_ORBITAL_LOWER, Z_LEVEL_OUTPOST_ORBITAL_UPPER)
 	extra_z_levels = list()
-	initial_restricted_waypoints = list( "Mining Trawler" = list("confinementbeam_trawler","trawler_yard"), "Security Carrier" = list("aisat_security"))
+	initial_restricted_waypoints = list( "Mining Trawler" = list("trawler_yard"), "Security Carrier" = list("aisat_security"))
 	levels_for_distress = list(Z_LEVEL_OUTPOST_SURFACE)
 
 /obj/effect/overmap/visitable/sector/murkiki_space/orbital_facility/Crossed(var/atom/movable/AM)
