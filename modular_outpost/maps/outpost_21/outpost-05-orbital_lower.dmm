@@ -1612,6 +1612,10 @@
 	dir = 4
 	},
 /obj/structure/disposalpipe/segment,
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "REX - Stairwell Lower East";
+	dir = 8
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/stairs_lower)
 "dJ" = (
@@ -2594,6 +2598,10 @@
 	},
 /obj/effect/floor_decal/corner/orange/full{
 	dir = 4
+	},
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "REX - Beam Fore Airlock";
+	dir = 1
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/south_power_airlock)
@@ -3679,6 +3687,10 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "REX - Trawler Cargo Hatch";
+	dir = 1
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/lower/port)
 "iE" = (
@@ -3810,6 +3822,10 @@
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
+	},
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "REX - Docking Arm Lower Airlock";
+	dir = 4
 	},
 /turf/simulated/floor,
 /area/offworld/orbital/station/access_shaft/lower)
@@ -4327,6 +4343,10 @@
 	name = "Station Intercom (General)";
 	pixel_y = 24
 	},
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "REX - Beam Emitter North West";
+	dir = 4
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/beam_emitter)
 "jM" = (
@@ -4529,6 +4549,10 @@
 	name = "Station Intercom (General)";
 	pixel_x = -21;
 	listening = 1
+	},
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "REX - Docking Arm Lower South";
+	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/access_shaft/lower)
@@ -8568,16 +8592,6 @@
 /obj/item/geiger/wall/south,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/lower/central)
-"rY" = (
-/obj/effect/floor_decal/corner/orange{
-	dir = 10
-	},
-/obj/machinery/camera/network/engineering_outpost{
-	dir = 1;
-	c_tag = "REX - Starboard Solar Hallway Center"
-	},
-/turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/halls/lower/central)
 "rZ" = (
 /obj/structure/catwalk,
 /obj/machinery/camera/network/engineering_outpost{
@@ -9093,6 +9107,139 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/rust_gas_storage)
+"ti" = (
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "REX - Atmospherics East";
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/offworld/orbital/station/atmos_primary)
+"tj" = (
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "REX - Atmospherics East";
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/offworld/orbital/station/atmos_primary)
+"tk" = (
+/obj/machinery/atmospherics/pipe/simple/visible/red{
+	dir = 4
+	},
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "REX - Atmospherics Dump Vent";
+	dir = 1
+	},
+/turf/simulated/floor/airless,
+/area/offworld/orbital/station/atmos_primary)
+"tl" = (
+/obj/machinery/atmospherics/portables_connector,
+/obj/effect/floor_decal/industrial/outline/blue,
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "REX - Atmospherics North"
+	},
+/turf/simulated/floor/plating,
+/area/offworld/orbital/station/atmos_primary)
+"tm" = (
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "REX - Construction Area";
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/lower/aft)
+"tn" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 8
+	},
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "REX - Elevator Lobby";
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/lower/port)
+"to" = (
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/lightgrey/border,
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "REX - Docking Arm Lower Central";
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/access_shaft/lower)
+"tp" = (
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/lightgrey/border,
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "REX - Docking Arm Lower East";
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/access_shaft/lower)
+"tq" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/corner/orange{
+	dir = 10
+	},
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "REX - Beam Emitter South";
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/beam_emitter)
+"tr" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/corner/orange{
+	dir = 6
+	},
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "REX - Beam Emitter South East";
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/beam_emitter)
+"ts" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 10
+	},
+/obj/machinery/camera/network/engineering_outpost{
+	dir = 1;
+	c_tag = "REX - Starboard Solar Hallway Central"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/lower/central)
+"tt" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/structure/extinguisher_cabinet{
+	dir = 8;
+	pixel_x = 30
+	},
+/obj/effect/floor_decal/corner/orange{
+	dir = 6
+	},
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "REX - Beam Emitter North East";
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/beam_emitter)
+"tu" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 9
+	},
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "REX - Beam Emitter North";
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/beam_emitter)
 "tx" = (
 /obj/machinery/power/apc{
 	dir = 4;
@@ -9645,14 +9792,15 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/beam_emitter)
 "xA" = (
-/obj/machinery/light{
-	dir = 8
-	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
 	},
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 8
+	},
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "REX - Docking Arm Lower Cornerl";
+	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/access_shaft/lower)
@@ -9992,6 +10140,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
+	},
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "REX - Stairwell Lower West"
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/stairs_lower)
@@ -10789,6 +10940,10 @@
 /obj/item/radio/intercom{
 	name = "Station Intercom (General)";
 	pixel_y = -22
+	},
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "REX - Beam Emitter South West";
+	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/beam_emitter)
@@ -11924,6 +12079,10 @@
 /obj/effect/floor_decal/corner/orange/full{
 	dir = 4
 	},
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "REX - Beam Emitter Gas Storage";
+	dir = 8
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/beam_emitter)
 "Oa" = (
@@ -12819,7 +12978,7 @@
 	},
 /obj/machinery/camera/network/engineering_outpost{
 	dir = 4;
-	c_tag = "REX - Beam Control Medbay"
+	c_tag = "REX - Beam Control Medical Kiosk"
 	},
 /turf/simulated/floor/tiled,
 /area/offworld/orbital/station/lower_medical_treatment)
@@ -26615,7 +26774,7 @@ cE
 by
 it
 lC
-lq
+to
 it
 it
 xM
@@ -28906,7 +29065,7 @@ xM
 xM
 xM
 xM
-hn
+tk
 gn
 RS
 RS
@@ -29045,7 +29204,7 @@ bQ
 by
 it
 rO
-lq
+tp
 it
 RS
 xM
@@ -29712,7 +29871,7 @@ ff
 ff
 iC
 gn
-ie
+tl
 hO
 hB
 hA
@@ -30353,7 +30512,7 @@ kC
 ff
 kv
 jO
-jO
+tn
 ol
 jK
 jn
@@ -30534,7 +30693,7 @@ gH
 gH
 gw
 gy
-gy
+ti
 gn
 eW
 eW
@@ -30689,7 +30848,7 @@ hZ
 hK
 eU
 gy
-gy
+tj
 gI
 gy
 gy
@@ -31330,7 +31489,7 @@ eW
 rE
 id
 hU
-Qk
+tm
 ax
 ax
 ax
@@ -31632,7 +31791,7 @@ aR
 cg
 uc
 cL
-Of
+tq
 cB
 fC
 rK
@@ -31770,7 +31929,7 @@ dq
 sd
 sJ
 sJ
-KR
+tu
 Ur
 aR
 uc
@@ -32586,7 +32745,7 @@ aX
 xG
 NO
 ED
-st
+tt
 ak
 tQ
 nP
@@ -32596,7 +32755,7 @@ pc
 bW
 al
 mp
-aX
+tr
 ak
 st
 rN
@@ -34051,7 +34210,7 @@ aq
 lT
 lP
 lN
-rY
+mm
 PW
 eW
 eW
@@ -34699,7 +34858,7 @@ PW
 PW
 mz
 uV
-mm
+ts
 PW
 eW
 eW
