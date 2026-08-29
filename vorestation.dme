@@ -6235,6 +6235,7 @@
 #include "modular_outpost\code\ZAS\Fire.dm"
 #include "modular_outpost\code\ZAS\Zone.dm"
 #include "modular_outpost\maps\common\common_areas.dm"
+#include "modular_outpost\maps\common\common_areas_orbital.dm"
 #include "modular_outpost\maps\common\common_defines.dm"
 #include "modular_outpost\maps\common\common_things.dm"
 #include "modular_outpost\maps\common\common_turfs.dm"
