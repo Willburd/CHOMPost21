@@ -2492,7 +2492,9 @@
 "eN" = (
 /obj/machinery/door/airlock/glass_external/public{
 	id_tag = "escape_berth_three_door";
-	frequency = 1385
+	frequency = 1385;
+	locked = 1;
+	icon_state = "door_locked"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/halls/aft)
@@ -6177,7 +6179,9 @@
 "ml" = (
 /obj/machinery/door/airlock/glass_external/public{
 	id_tag = "escape_berth_one_door";
-	frequency = 1383
+	frequency = 1383;
+	icon_state = "door_locked";
+	locked = 1
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/halls/central)
@@ -14269,7 +14273,9 @@
 "Bh" = (
 /obj/machinery/door/airlock/glass_external/public{
 	id_tag = "escape_berth_one_door";
-	frequency = 1381
+	frequency = 1381;
+	icon_state = "door_locked";
+	locked = 1
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/halls/central)
