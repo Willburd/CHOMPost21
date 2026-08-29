@@ -3008,14 +3008,14 @@
 
 
 // Main engines
-/area/offworld/orbital/station/engine_core_port
+/area/offworld/orbital/exterior/engine_core_port
 	name = "\improper Port Engine Core"
 	icon_state = "engine"
 	sound_env = LARGE_ENCLOSED
 	ambience = AMBIENCE_ENGINEERING
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 
-/area/offworld/orbital/station/engine_core_starboard
+/area/offworld/orbital/exterior/engine_core_starboard
 	name = "\improper Starboard Engine Core"
 	icon_state = "engine"
 	sound_env = LARGE_ENCLOSED

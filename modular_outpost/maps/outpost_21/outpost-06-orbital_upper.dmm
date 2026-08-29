@@ -178,7 +178,7 @@
 /area/offworld/orbital/station/observation)
 "aw" = (
 /turf/simulated/mineral/floor/ignore_cavegen/turfpack/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "ax" = (
 /obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/wall/r_wall,
@@ -310,7 +310,7 @@
 "aI" = (
 /obj/structure/particle_accelerator/particle_emitter/left,
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "aJ" = (
 /obj/structure/grille,
 /obj/machinery/door/firedoor/border_only,
@@ -332,7 +332,7 @@
 "aL" = (
 /obj/structure/lattice,
 /turf/simulated/mineral/floor/ignore_cavegen/turfpack/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "aM" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -356,7 +356,7 @@
 /area/ai_sat/power_control)
 "aO" = (
 /turf/simulated/mineral/vacuum,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "aP" = (
 /obj/machinery/alarm{
 	dir = 4;
@@ -375,7 +375,7 @@
 /area/offworld/orbital/station/storage_engine_core)
 "aR" = (
 /turf/simulated/mineral/floor/ignore_cavegen/turfpack/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "aS" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/aux{
 	dir = 4
@@ -395,7 +395,7 @@
 "aU" = (
 /obj/random/outcrop,
 /turf/simulated/mineral/floor/ignore_cavegen/turfpack/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "aV" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -429,7 +429,7 @@
 /area/ai_sat/fore_airlock)
 "aY" = (
 /turf/simulated/floor/plating,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "aZ" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -444,7 +444,7 @@
 	dir = 8
 	},
 /turf/simulated/mineral/floor/ignore_cavegen/turfpack/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "bb" = (
 /obj/effect/catwalk_plated,
 /obj/structure/cable/green{
@@ -483,7 +483,7 @@
 "be" = (
 /obj/item/geiger/wall/east,
 /turf/simulated/mineral/floor/ignore_cavegen/turfpack/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "bf" = (
 /obj/structure/bed/chair/sofa/corp/right{
 	dir = 8
@@ -505,7 +505,7 @@
 "bh" = (
 /obj/item/weldingtool,
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "bi" = (
 /obj/structure/lattice,
 /turf/space,
@@ -570,7 +570,7 @@
 "bm" = (
 /obj/random/outcrop,
 /turf/simulated/mineral/floor/ignore_cavegen/turfpack/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "bn" = (
 /obj/structure/sign/warning/vacuum,
 /turf/simulated/wall/r_wall,
@@ -625,10 +625,10 @@
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "br" = (
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "bs" = (
 /obj/structure/particle_accelerator/power_box{
 	dir = 1
@@ -678,7 +678,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "bx" = (
 /obj/structure/extinguisher_cabinet{
 	dir = 8;
@@ -703,11 +703,11 @@
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "bz" = (
 /obj/structure/prop/rock/small/alt,
 /turf/simulated/mineral/floor/ignore_cavegen/turfpack/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "bA" = (
 /obj/structure/window/phoronreinforced{
 	dir = 8
@@ -717,7 +717,7 @@
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "bB" = (
 /turf/simulated/wall/r_wall,
 /area/offworld/orbital/station/storage_engine_core)
@@ -729,7 +729,7 @@
 	icon_state = "2-5"
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "bD" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/grille,
@@ -738,11 +738,11 @@
 	},
 /obj/structure/window/reinforced,
 /turf/simulated/floor/plating,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "bE" = (
 /obj/structure/prop/rock/small/alt,
 /turf/simulated/mineral/floor/ignore_cavegen/turfpack/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "bF" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
@@ -869,7 +869,7 @@
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "bQ" = (
 /obj/structure/cable/green{
 	icon_state = "1-4"
@@ -925,7 +925,7 @@
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "bV" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 6
@@ -943,10 +943,10 @@
 "bW" = (
 /obj/structure/lattice,
 /turf/simulated/mineral/floor/ignore_cavegen/turfpack/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "bX" = (
 /turf/simulated/mineral/vacuum,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "bY" = (
 /obj/effect/floor_decal/corner/white{
 	dir = 9
@@ -1005,7 +1005,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "cd" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	frequency = 1381;
@@ -1089,13 +1089,13 @@
 "cj" = (
 /obj/machinery/field_generator,
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "ck" = (
 /obj/structure/railing/grey{
 	dir = 1
 	},
 /turf/simulated/mineral/floor/ignore_cavegen/turfpack/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "cl" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
@@ -1149,7 +1149,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "cp" = (
 /turf/simulated/wall/r_wall,
 /area/ai)
@@ -1247,7 +1247,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor/grid/turfpack/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "cA" = (
 /obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/corner/white{
@@ -1274,7 +1274,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "cD" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-4"
@@ -1296,7 +1296,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "cG" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -1309,11 +1309,11 @@
 "cH" = (
 /obj/item/tool/wrench,
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "cI" = (
 /obj/structure/railing/grey,
 /turf/simulated/mineral/floor/ignore_cavegen/turfpack/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "cJ" = (
 /obj/machinery/light,
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -1374,7 +1374,7 @@
 	icon_state = "2-5"
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "cO" = (
 /obj/structure/trash_pile/disable_mouse_spawn,
 /turf/simulated/mineral/floor/ignore_cavegen/turfpack/airless,
@@ -1411,7 +1411,7 @@
 	icon_state = "2-9"
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "cT" = (
 /obj/machinery/atmospherics/portables_connector{
 	dir = 8
@@ -1458,7 +1458,7 @@
 	icon_state = "4-10"
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "cZ" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 5
@@ -1567,7 +1567,7 @@
 "di" = (
 /obj/effect/floor_decal/eshui/emblem/eshui_c,
 /turf/simulated/floor/tiled/milspec/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "dj" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/grille,
@@ -1741,7 +1741,7 @@
 	icon_state = "6-8"
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "dA" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -1822,7 +1822,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/plating,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "dF" = (
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 4
@@ -1868,7 +1868,7 @@
 "dI" = (
 /obj/structure/railing/grey,
 /turf/simulated/mineral/floor/ignore_cavegen/turfpack/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "dJ" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 6
@@ -1918,7 +1918,7 @@
 "dN" = (
 /obj/structure/boulder,
 /turf/simulated/mineral/floor/ignore_cavegen/turfpack/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "dO" = (
 /obj/structure/sink{
 	dir = 4;
@@ -2283,7 +2283,7 @@
 	icon_state = "2-5"
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "ex" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -2466,7 +2466,7 @@
 	icon_state = "2-9"
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "eM" = (
 /obj/machinery/door/window/survival_pod,
 /obj/structure/bed/chair/bay/shuttle{
@@ -2601,14 +2601,14 @@
 	icon_state = "2-9"
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "fb" = (
 /obj/structure/railing/grey{
 	dir = 4
 	},
 /obj/structure/lattice,
 /turf/simulated/mineral/floor/ignore_cavegen/turfpack/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "fc" = (
 /obj/effect/floor_decal/corner/green{
 	dir = 5
@@ -2644,13 +2644,13 @@
 	icon_state = "5-10"
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "ff" = (
 /obj/structure/cable{
 	icon_state = "6-9"
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "fg" = (
 /obj/machinery/alarm{
 	dir = 1;
@@ -2684,7 +2684,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/milspec/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "fj" = (
 /obj/structure/boulder,
 /turf/simulated/mineral/floor/ignore_cavegen/turfpack/airless,
@@ -2703,7 +2703,7 @@
 /area/offworld/orbital/station/medical_treatment)
 "fl" = (
 /turf/simulated/floor/tiled/milspec/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "fm" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -2750,7 +2750,7 @@
 	icon_state = "4-10"
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "fr" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -2807,7 +2807,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "fv" = (
 /turf/simulated/wall/r_wall,
 /area/offworld/orbital/exterior)
@@ -2850,7 +2850,7 @@
 	icon_state = "6-8"
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "fA" = (
 /obj/item/geiger/wall/east,
 /obj/effect/floor_decal/borderfloor{
@@ -2933,7 +2933,7 @@
 "fI" = (
 /obj/effect/floor_decal/industrial/rad_floor/red,
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "fJ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 8
@@ -2991,7 +2991,7 @@
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "fO" = (
 /obj/structure/sink{
 	dir = 4;
@@ -3016,7 +3016,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "fR" = (
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 5
@@ -3066,7 +3066,7 @@
 "fW" = (
 /obj/structure/particle_accelerator/particle_emitter/right,
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "fX" = (
 /obj/structure/bed/chair/shuttle_padded{
 	dir = 1
@@ -3176,7 +3176,7 @@
 "gh" = (
 /obj/structure/particle_accelerator/particle_emitter/center,
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "gi" = (
 /obj/machinery/vending/blood{
 	pixel_y = 0;
@@ -3246,7 +3246,7 @@
 "gm" = (
 /obj/structure/particle_accelerator/particle_emitter/left,
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "gn" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	frequency = 1381
@@ -3275,7 +3275,7 @@
 "gp" = (
 /obj/structure/particle_accelerator/power_box,
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "gq" = (
 /obj/machinery/firealarm{
 	dir = 1;
@@ -3378,7 +3378,7 @@
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "gA" = (
 /turf/simulated/wall,
 /area/ai_upload)
@@ -3409,7 +3409,7 @@
 "gD" = (
 /obj/machinery/particle_accelerator/control_box,
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "gE" = (
 /obj/effect/shuttle_landmark/premade/generic/beltmine_east,
 /turf/space,
@@ -3417,7 +3417,7 @@
 "gF" = (
 /obj/structure/particle_accelerator/fuel_chamber,
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "gG" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -3477,7 +3477,7 @@
 "gM" = (
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "gN" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 8
@@ -3756,7 +3756,7 @@
 "hi" = (
 /obj/item/stack/cable_coil,
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "hj" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 8
@@ -3812,11 +3812,11 @@
 	icon_state = "6-8"
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "hn" = (
 /obj/structure/particle_accelerator/end_cap,
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "ho" = (
 /obj/effect/floor_decal/spline/plain/cee,
 /turf/simulated/floor/carpet,
@@ -3833,7 +3833,7 @@
 	},
 /obj/structure/prop/rock/small/alt,
 /turf/simulated/mineral/floor/ignore_cavegen/turfpack/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "hr" = (
 /obj/machinery/power/emitter/antique,
 /turf/simulated/floor/tiled/milspec/airless,
@@ -3871,7 +3871,7 @@
 	dir = 4
 	},
 /turf/simulated/mineral/floor/ignore_cavegen/turfpack/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "hv" = (
 /obj/structure/cable/orange{
 	icon_state = "4-8"
@@ -3905,7 +3905,7 @@
 "hx" = (
 /obj/structure/boulder,
 /turf/simulated/mineral/floor/ignore_cavegen/turfpack/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "hy" = (
 /obj/machinery/door/airlock/glass,
 /obj/structure/disposalpipe/segment,
@@ -3927,7 +3927,7 @@
 	},
 /obj/structure/lattice,
 /turf/simulated/mineral/floor/ignore_cavegen/turfpack/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "hB" = (
 /obj/machinery/elevator_warning,
 /obj/effect/floor_decal/spline/fancy/wood,
@@ -3958,7 +3958,7 @@
 "hD" = (
 /obj/structure/railing/grey,
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "hE" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 10
@@ -3979,7 +3979,7 @@
 "hG" = (
 /obj/effect/floor_decal/eshui/emblem/eshui_c,
 /turf/simulated/floor/tiled/milspec/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "hH" = (
 /obj/structure/lattice,
 /obj/structure/disposalpipe/segment{
@@ -4024,7 +4024,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "hM" = (
 /obj/machinery/door/airlock/glass,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -4171,7 +4171,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "ib" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
@@ -4237,7 +4237,7 @@
 /area/ai_sat/power_control)
 "ii" = (
 /turf/simulated/floor/tiled/milspec/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "ij" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -4567,7 +4567,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "iS" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -4713,7 +4713,7 @@
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "jk" = (
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor,
@@ -4891,14 +4891,14 @@
 "jB" = (
 /obj/machinery/the_singularitygen,
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "jC" = (
 /obj/structure/cable,
 /obj/machinery/power/emitter/antique{
 	dir = 8
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "jD" = (
 /obj/structure/prop/machine/core/starts_on{
 	name = "Bluespace Inhibitor";
@@ -4990,7 +4990,7 @@
 "jM" = (
 /obj/structure/particle_accelerator/power_box,
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "jN" = (
 /obj/effect/floor_decal/industrial/warning/cee{
 	dir = 1
@@ -5118,7 +5118,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "jZ" = (
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/stairs_upper)
@@ -5437,7 +5437,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "kI" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -5747,7 +5747,7 @@
 	dir = 1
 	},
 /turf/simulated/mineral/floor/ignore_cavegen/turfpack/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "lq" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -5867,7 +5867,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "lE" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -5932,7 +5932,7 @@
 	},
 /obj/effect/floor_decal/eshui/emblem/eshui_r,
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "lK" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
@@ -5960,7 +5960,7 @@
 	icon_state = "2-9"
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "lN" = (
 /obj/effect/floor_decal/borderfloor/corner,
 /obj/effect/floor_decal/corner/lightgrey/bordercorner,
@@ -6230,7 +6230,7 @@
 	icon_state = "5-8"
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "mx" = (
 /obj/machinery/light,
 /obj/effect/floor_decal/spline/fancy/wood{
@@ -6612,7 +6612,7 @@
 	},
 /obj/structure/prop/rock/small/alt,
 /turf/simulated/mineral/floor/ignore_cavegen/turfpack/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "nn" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 4
@@ -6734,7 +6734,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "nz" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 5
@@ -7348,7 +7348,7 @@
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "oD" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
@@ -7451,7 +7451,7 @@
 /obj/structure/railing/grey,
 /obj/item/geiger/wall/west,
 /turf/simulated/mineral/floor/ignore_cavegen/turfpack/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "oM" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 9
@@ -7475,14 +7475,14 @@
 	},
 /obj/item/geiger/wall/north,
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "oP" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 10
 	},
 /obj/item/geiger/wall/north,
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "oQ" = (
 /obj/structure/cable/orange{
 	icon_state = "1-2"
@@ -7616,7 +7616,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "pc" = (
 /obj/machinery/light{
 	dir = 8
@@ -7868,7 +7868,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "pE" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced{
@@ -8650,7 +8650,7 @@
 	icon_state = "1-6"
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "rf" = (
 /obj/structure/cable/cyan,
 /obj/structure/cable/cyan{
@@ -9051,7 +9051,7 @@
 	dir = 6
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "rW" = (
 /turf/simulated/wall,
 /area/offworld/orbital/station/halls/fore)
@@ -9405,7 +9405,7 @@
 "sB" = (
 /obj/structure/particle_accelerator/particle_emitter/right,
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "sC" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
@@ -9620,7 +9620,7 @@
 "sV" = (
 /obj/structure/particle_accelerator/fuel_chamber,
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "sW" = (
 /obj/structure/cable/cyan,
 /obj/structure/cable/cyan{
@@ -9780,7 +9780,7 @@
 "tj" = (
 /obj/machinery/particle_accelerator/control_box,
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "tk" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -9938,7 +9938,7 @@
 	dir = 6
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "tx" = (
 /obj/effect/floor_decal/corner/white{
 	dir = 6
@@ -10036,7 +10036,7 @@
 	},
 /obj/effect/floor_decal/eshui/emblem/eshui_l,
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "tH" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -10114,7 +10114,7 @@
 	icon_state = "4-9"
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "tO" = (
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 10
@@ -10739,14 +10739,14 @@
 	icon_state = "2-5"
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "uR" = (
 /obj/machinery/camera/network/engineering_outpost{
 	c_tag = "REX - Port Engine One";
 	dir = 6
 	},
 /turf/simulated/mineral/floor/ignore_cavegen/turfpack/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "uS" = (
 /obj/machinery/alarm{
 	dir = 1;
@@ -10946,7 +10946,7 @@
 "vj" = (
 /obj/machinery/field_generator,
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "vk" = (
 /obj/structure/cable/green{
 	icon_state = "2-9"
@@ -11599,7 +11599,7 @@
 	icon_state = "1-10"
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "wA" = (
 /obj/structure/transit_tube{
 	icon_state = "D-SE"
@@ -11946,7 +11946,7 @@
 "xi" = (
 /obj/effect/shuttle_landmark/premade/beamtransit/beam_sat,
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "xj" = (
 /obj/structure/particle_accelerator/fuel_chamber{
 	dir = 1
@@ -11973,7 +11973,7 @@
 	icon_state = "4-10"
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "xm" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -12247,7 +12247,7 @@
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "xJ" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/structure/cable/green{
@@ -12559,7 +12559,7 @@
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "ym" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced{
@@ -12616,7 +12616,7 @@
 /area/offworld/orbital/station/access_shaft/upper)
 "yr" = (
 /turf/simulated/wall/r_wall,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "ys" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 4
@@ -12672,7 +12672,7 @@
 	},
 /obj/random/outcrop,
 /turf/simulated/mineral/floor/ignore_cavegen/turfpack/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "yx" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -12862,14 +12862,14 @@
 	},
 /obj/machinery/power/tesla_coil/collector,
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "yM" = (
 /obj/structure/railing/grey{
 	dir = 1
 	},
 /obj/structure/lattice,
 /turf/simulated/mineral/floor/ignore_cavegen/turfpack/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "yN" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -12915,7 +12915,7 @@
 "yR" = (
 /obj/item/tool/wirecutters,
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "yS" = (
 /obj/effect/floor_decal/borderfloor/corner,
 /obj/effect/floor_decal/corner/lightgrey/bordercorner,
@@ -13125,7 +13125,7 @@
 	},
 /obj/machinery/power/tesla_coil/collector,
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "zm" = (
 /obj/effect/floor_decal/corner/red{
 	dir = 5
@@ -13202,7 +13202,7 @@
 	},
 /obj/effect/floor_decal/eshui/emblem/eshui_small_l,
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "zu" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/aux,
 /obj/effect/floor_decal/corner/orange{
@@ -13242,7 +13242,7 @@
 "zx" = (
 /obj/effect/floor_decal/industrial/rad_floor/red,
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "zy" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -13858,7 +13858,7 @@
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "Ay" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-4"
@@ -13867,7 +13867,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "Az" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/lightgrey/border,
@@ -13968,7 +13968,7 @@
 	c_tag = "REX - Primary Engine Exterior Port"
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "AH" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 10
@@ -13977,7 +13977,7 @@
 	c_tag = "REX - Primary Engine Exterior Starboard"
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "AI" = (
 /obj/machinery/camera/network/engineering_outpost{
 	c_tag = "REX - Belter Pad";
@@ -14112,7 +14112,7 @@
 	},
 /obj/item/clothing/head/welding,
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "Be" = (
 /obj/structure/sign/department/ai,
 /obj/effect/step_trigger/dephase_shadekin,
@@ -14226,7 +14226,7 @@
 "BS" = (
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "BY" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -14463,7 +14463,7 @@
 	},
 /obj/effect/floor_decal/eshui/emblem/eshui_small_r,
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "Dd" = (
 /obj/machinery/light{
 	dir = 1
@@ -14552,7 +14552,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "Dv" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced{
@@ -14862,7 +14862,7 @@
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled/milspec/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "EG" = (
 /obj/structure/bed/chair/backed_red{
 	dir = 8
@@ -15074,7 +15074,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "Fz" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -15196,7 +15196,7 @@
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "FY" = (
 /obj/machinery/button/remote/airlock{
 	id = "ai_main_door";
@@ -15234,7 +15234,7 @@
 	},
 /obj/effect/floor_decal/eshui/emblem/eshui_l,
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "Gh" = (
 /obj/structure/table/rack/shelf/steel,
 /obj/item/stack/material/glass/phoronrglass{
@@ -15289,7 +15289,7 @@
 	icon_state = "5-10"
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "Gv" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
@@ -15367,7 +15367,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "GS" = (
 /obj/machinery/alarm{
 	dir = 1;
@@ -15602,7 +15602,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "HS" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 1
@@ -15628,7 +15628,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "HX" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 6
@@ -15655,7 +15655,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "Ig" = (
 /obj/structure/cable/cyan{
 	icon_state = "0-2"
@@ -15686,7 +15686,7 @@
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "Ip" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/effect/floor_decal/industrial/warning{
@@ -15768,11 +15768,11 @@
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "IC" = (
 /obj/structure/particle_accelerator/end_cap,
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "ID" = (
 /obj/machinery/camera/network/ai_sat{
 	c_tag = "AI - Ext Access Tube"
@@ -15863,7 +15863,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "IZ" = (
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 6
@@ -16024,7 +16024,7 @@
 	},
 /obj/item/tool/crowbar,
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "JD" = (
 /obj/structure/cable/cyan{
 	icon_state = "0-8"
@@ -16428,7 +16428,7 @@
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled/milspec/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "KX" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/aux,
 /obj/structure/disposalpipe/segment,
@@ -16445,7 +16445,7 @@
 	dir = 9
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "Lb" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/light,
@@ -16460,7 +16460,7 @@
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "Lh" = (
 /obj/structure/lattice,
 /turf/space,
@@ -16760,7 +16760,7 @@
 	c_tag = "REX - Starboard Engine One"
 	},
 /turf/simulated/mineral/floor/ignore_cavegen/turfpack/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "Ma" = (
 /obj/machinery/atmospherics/portables_connector{
 	dir = 8
@@ -17113,7 +17113,7 @@
 	},
 /obj/machinery/power/tesla_coil/collector,
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "Nx" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 10
@@ -17236,7 +17236,7 @@
 	health = 1e+006
 	},
 /turf/simulated/floor/plating,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "NN" = (
 /obj/effect/floor_decal/eshui/emblem/eshui_l,
 /turf/simulated/floor/tiled/milspec,
@@ -17352,7 +17352,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "Om" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 9
@@ -17374,7 +17374,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "Oo" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -17541,7 +17541,7 @@
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "Pa" = (
 /obj/machinery/light{
 	dir = 4
@@ -17668,7 +17668,7 @@
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "Pl" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/aux,
 /turf/simulated/floor/tiled/milspec,
@@ -17739,7 +17739,7 @@
 "Py" = (
 /obj/effect/floor_decal/eshui/emblem/eshui_small_r,
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "Pz" = (
 /obj/effect/floor_decal/spline/fancy/wood,
 /obj/structure/panic_button{
@@ -17918,7 +17918,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "Ql" = (
 /obj/effect/landmark/start{
 	name = "AI"
@@ -17974,7 +17974,7 @@
 /obj/structure/cable/yellow,
 /obj/machinery/power/tesla_coil/collector,
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "Qs" = (
 /obj/structure/railing/grey,
 /obj/structure/cable/yellow{
@@ -18014,7 +18014,7 @@
 "Qz" = (
 /obj/machinery/the_singularitygen/tesla,
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "QB" = (
 /obj/structure/cable/orange{
 	icon_state = "1-2"
@@ -18076,7 +18076,7 @@
 "QK" = (
 /obj/machinery/shield_diffuser,
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "QL" = (
 /obj/structure/bed/chair/backed_red,
 /turf/simulated/floor/wood,
@@ -18117,7 +18117,7 @@
 "QR" = (
 /obj/item/tool/wrench,
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "QS" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 10
@@ -18333,7 +18333,7 @@
 "RB" = (
 /obj/effect/floor_decal/corner/orange,
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "RC" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
@@ -18552,7 +18552,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "Si" = (
 /obj/structure/cable/cyan,
 /obj/structure/cable/cyan{
@@ -18569,7 +18569,7 @@
 	icon_state = "6-8"
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "Sl" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-4"
@@ -18693,7 +18693,7 @@
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "SC" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4;
@@ -18739,13 +18739,13 @@
 "SH" = (
 /obj/item/weldingtool,
 /turf/simulated/mineral/floor/ignore_cavegen/turfpack/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "SI" = (
 /obj/structure/cable/yellow{
 	icon_state = "6-9"
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "SL" = (
 /obj/structure/window/reinforced{
 	dir = 8
@@ -18766,7 +18766,7 @@
 	dir = 10
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "SN" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -18779,7 +18779,7 @@
 "SP" = (
 /obj/structure/particle_accelerator/particle_emitter/center,
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "SQ" = (
 /obj/structure/prop/machine/core/starts_on{
 	name = "Bluespace Inhibitor";
@@ -18881,7 +18881,7 @@
 	},
 /obj/machinery/power/tesla_coil/collector,
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "Tt" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -19105,7 +19105,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "Uj" = (
 /obj/structure/particle_accelerator/end_cap{
 	dir = 1
@@ -19133,7 +19133,7 @@
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "Uo" = (
 /obj/item/radio/intercom/department/security{
 	dir = 8;
@@ -19255,7 +19255,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "UG" = (
 /obj/structure/cable/orange{
 	icon_state = "1-2"
@@ -19488,7 +19488,7 @@
 	icon_state = "5-10"
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "Vi" = (
 /turf/simulated/floor/wood,
 /area/ai)
@@ -19500,7 +19500,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "Vl" = (
 /obj/structure/cable/orange{
 	icon_state = "4-8"
@@ -19575,7 +19575,7 @@
 	dir = 10
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "Vv" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/lightgrey/border,
@@ -19641,7 +19641,7 @@
 	},
 /obj/structure/lattice,
 /turf/simulated/mineral/floor/ignore_cavegen/turfpack/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "VF" = (
 /obj/structure/cable/orange{
 	icon_state = "2-9"
@@ -19740,7 +19740,7 @@
 	icon_state = "4-10"
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "VV" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 9
@@ -19750,13 +19750,13 @@
 	},
 /obj/effect/floor_decal/eshui/emblem/eshui_r,
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "VZ" = (
 /obj/structure/cable{
 	icon_state = "6-9"
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "Wb" = (
 /obj/structure/sign/warning/lethal_turrets,
 /turf/simulated/wall/r_wall,
@@ -19791,7 +19791,7 @@
 	icon_state = "2-5"
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "Wi" = (
 /obj/machinery/door/airlock/glass_external{
 	frequency = 1381;
@@ -19868,7 +19868,7 @@
 "Wy" = (
 /obj/effect/floor_decal/eshui/emblem/eshui_small_l,
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "Wz" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/blue/border,
@@ -19994,7 +19994,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "Xl" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -20276,11 +20276,11 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "Yh" = (
 /obj/machinery/power/grounding_rod,
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "Yk" = (
 /obj/structure/railing/grey,
 /obj/structure/railing/grey{
@@ -20314,7 +20314,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_port)
+/area/offworld/orbital/exterior/engine_core_port)
 "Yw" = (
 /obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/borderfloor/corner,
@@ -20610,7 +20610,7 @@
 /area/offworld/orbital/station/bar)
 "Zt" = (
 /turf/simulated/floor/airless,
-/area/offworld/orbital/station/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard)
 "Zu" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/aux,
 /obj/structure/disposalpipe/segment,
