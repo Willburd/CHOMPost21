@@ -261,7 +261,7 @@
 /area/offworld/orbital/station/backup_power)
 "aG" = (
 /turf/simulated/wall/r_wall,
-/area/maintenance/orbital/lower/starboard)
+/area/muriki/elevator/yardlower)
 "aH" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
@@ -592,9 +592,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/rust_core)
-"bl" = (
-/turf/simulated/wall/titanium,
-/area/offworld/orbital/station/halls/lower/port)
 "bm" = (
 /turf/simulated/mineral/ignore_cavegen,
 /area/maintenance/orbital/lower/aft)
@@ -900,9 +897,6 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/beam_emitter)
-"bY" = (
-/turf/simulated/floor/plating,
-/area/maintenance/orbital/lower/starboard)
 "bZ" = (
 /obj/machinery/light/floortube{
 	dir = 1
@@ -4479,7 +4473,7 @@
 /area/offworld/orbital/station/access_shaft/lower)
 "ka" = (
 /turf/simulated/wall/titanium,
-/area/space)
+/area/muriki/elevator/yardlower)
 "kb" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
@@ -4650,7 +4644,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/offworld/orbital/station/halls/lower/port)
+/area/muriki/elevator/yardlower)
 "ks" = (
 /obj/machinery/light{
 	dir = 1
@@ -4929,7 +4923,7 @@
 	pixel_x = -24
 	},
 /turf/simulated/floor/plating,
-/area/maintenance/orbital/lower/starboard)
+/area/muriki/elevator/yardlower)
 "kQ" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/lightgrey/border,
@@ -7985,8 +7979,9 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/offworld/orbital/station/spelunker)
 "qQ" = (
+/obj/turbolift_map_holder/muriki/orbital_yard,
 /turf/simulated/floor/plating,
-/area/space)
+/area/muriki/elevator/yardlower)
 "qR" = (
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging/junction{
 	dir = 4
@@ -9218,6 +9213,9 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/beam_emitter)
+"tv" = (
+/turf/simulated/floor/plating,
+/area/muriki/elevator/yardlower)
 "tx" = (
 /obj/machinery/power/apc{
 	dir = 4;
@@ -11170,7 +11168,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/maintenance/orbital/lower/starboard)
+/area/muriki/elevator/yardlower)
 "HX" = (
 /obj/structure/closet/crate,
 /obj/item/fuel_assembly/tritium,
@@ -11393,7 +11391,7 @@
 "JA" = (
 /obj/structure/ladder/up,
 /turf/simulated/floor/plating,
-/area/maintenance/orbital/lower/starboard)
+/area/muriki/elevator/yardlower)
 "JD" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
@@ -11788,7 +11786,7 @@
 	icon_state = "0-10"
 	},
 /turf/simulated/floor/plating,
-/area/maintenance/orbital/lower/starboard)
+/area/muriki/elevator/yardlower)
 "Ml" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 6
@@ -29180,7 +29178,7 @@ aG
 aG
 aG
 aG
-aG
+pT
 iw
 iw
 iw
@@ -29498,10 +29496,10 @@ RS
 RS
 aG
 ka
-qQ
-qQ
-qQ
-qQ
+tv
+tv
+tv
+tv
 qQ
 ka
 pT
@@ -29660,11 +29658,11 @@ aG
 aG
 aG
 ka
-qQ
-qQ
-qQ
-qQ
-qQ
+tv
+tv
+tv
+tv
+tv
 ka
 pT
 jG
@@ -29819,14 +29817,14 @@ lq
 it
 aG
 aG
-bY
+tv
 kP
 ka
-qQ
-qQ
-qQ
-qQ
-qQ
+tv
+tv
+tv
+tv
+tv
 ka
 pT
 jH
@@ -29979,16 +29977,16 @@ ll
 lG
 lq
 it
-bY
-bY
+tv
+tv
 Mj
 JA
 ka
-qQ
-qQ
-qQ
-qQ
-qQ
+tv
+tv
+tv
+tv
+tv
 ka
 pT
 jI
@@ -30146,11 +30144,11 @@ aG
 HW
 aG
 ka
-qQ
-qQ
-qQ
-qQ
-qQ
+tv
+tv
+tv
+tv
+tv
 ka
 pT
 jN
@@ -30307,13 +30305,13 @@ le
 cx
 mX
 zT
-bl
-bl
+ka
+ka
 kr
 kr
 kr
-bl
-bl
+ka
+ka
 pT
 pT
 iE

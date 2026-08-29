@@ -133,7 +133,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
 	},
-/turf/simulated/floor/tiled/milspec,
+/obj/effect/catwalk_plated,
+/turf/simulated/floor/plating,
 /area/offworld/orbital/station/starboard_airlock)
 "aq" = (
 /obj/structure/transit_tube/station{
@@ -4268,9 +4269,6 @@
 "in" = (
 /turf/simulated/floor/airless,
 /area/ai_sat/core_external)
-"io" = (
-/turf/simulated/wall/titanium,
-/area/offworld/orbital/station/halls/stairs_upper)
 "ip" = (
 /obj/structure/cable/yellow{
 	icon_state = "2-4"
@@ -4424,7 +4422,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/offworld/orbital/station/halls/stairs_upper)
+/area/muriki/elevator/yardupper)
 "iE" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -4921,6 +4919,9 @@
 	},
 /obj/structure/disposalpipe/junction{
 	dir = 1
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals_central7{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/central)
@@ -10011,7 +10012,8 @@
 	icon_state = "pipe-c";
 	dir = 4
 	},
-/turf/simulated/floor/tiled/milspec,
+/obj/effect/catwalk_plated,
+/turf/simulated/floor/plating,
 /area/offworld/orbital/station/security)
 "tE" = (
 /obj/machinery/atmospherics/pipe/manifold4w/hidden,
@@ -11667,7 +11669,7 @@
 /area/offworld/orbital/exterior)
 "wH" = (
 /turf/simulated/open,
-/area/space)
+/area/muriki/elevator/yardupper)
 "wI" = (
 /turf/simulated/wall/r_wall,
 /area/offworld/orbital/station/port_observation)
@@ -11809,7 +11811,7 @@
 	},
 /obj/structure/cable/green,
 /turf/simulated/floor/plating,
-/area/maintenance/orbital/starboard)
+/area/muriki/elevator/yardupper)
 "wY" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -12048,7 +12050,8 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/milspec,
+/obj/effect/catwalk_plated,
+/turf/simulated/floor,
 /area/offworld/orbital/station/halls/central)
 "xs" = (
 /obj/effect/floor_decal/borderfloor{
@@ -12430,7 +12433,7 @@
 	dir = 4
 	},
 /turf/simulated/open,
-/area/maintenance/orbital/starboard)
+/area/muriki/elevator/yardupper)
 "yb" = (
 /obj/structure/grille,
 /obj/machinery/door/firedoor/border_only,
@@ -14020,7 +14023,7 @@
 	icon_state = "4-10"
 	},
 /obj/effect/catwalk_plated,
-/turf/simulated/floor,
+/turf/simulated/floor/plating,
 /area/offworld/orbital/station/halls/aft)
 "AM" = (
 /obj/effect/floor_decal/borderfloor,
@@ -14354,7 +14357,7 @@
 /obj/structure/cable/green{
 	icon_state = "2-8"
 	},
-/turf/simulated/floor/tiled/milspec,
+/turf/simulated/floor/plating,
 /area/offworld/orbital/station/halls/central)
 "CE" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
@@ -14645,7 +14648,7 @@
 /obj/structure/cable/green{
 	icon_state = "2-4"
 	},
-/turf/simulated/floor,
+/turf/simulated/floor/plating,
 /area/offworld/orbital/station/halls/stairs_upper)
 "DI" = (
 /obj/structure/cable/orange{
@@ -15250,7 +15253,7 @@
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/plating,
-/area/maintenance/orbital/starboard)
+/area/muriki/elevator/yardupper)
 "Gp" = (
 /obj/machinery/computer/borgupload{
 	pixel_y = 3
@@ -15614,7 +15617,7 @@
 /obj/structure/disposalpipe/junction/yjunction{
 	dir = 8
 	},
-/turf/simulated/floor,
+/turf/simulated/floor/plating,
 /area/offworld/orbital/station/halls/fore)
 "HT" = (
 /obj/structure/cable,
@@ -15740,7 +15743,7 @@
 /obj/structure/disposalpipe/junction{
 	dir = 1
 	},
-/turf/simulated/floor/tiled/milspec,
+/turf/simulated/floor/plating,
 /area/offworld/orbital/station/halls/central)
 "IA" = (
 /obj/structure/sign/warning/lethal_turrets{
@@ -19063,7 +19066,7 @@
 "Ua" = (
 /obj/structure/ladder,
 /turf/simulated/floor/plating,
-/area/maintenance/orbital/starboard)
+/area/muriki/elevator/yardupper)
 "Ud" = (
 /obj/structure/particle_accelerator/particle_emitter/left{
 	dir = 1
@@ -19634,7 +19637,7 @@
 /area/offworld/orbital/station/power_distribution)
 "VG" = (
 /turf/simulated/wall/r_wall,
-/area/maintenance/orbital/starboard)
+/area/muriki/elevator/yardupper)
 "VH" = (
 /obj/structure/lattice,
 /obj/structure/disposalpipe/segment{
@@ -19969,7 +19972,7 @@
 /area/offworld/orbital/station/dockingarm)
 "Xf" = (
 /turf/simulated/wall/titanium,
-/area/space)
+/area/muriki/elevator/yardupper)
 "Xg" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-8"
@@ -20381,7 +20384,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/aux,
 /obj/effect/catwalk_plated,
-/turf/simulated/floor,
+/turf/simulated/floor/plating,
 /area/offworld/orbital/station/halls/aft)
 "YM" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -37398,13 +37401,13 @@ jg
 jg
 zd
 Ea
-io
-io
+Xf
+Xf
 iD
 iD
 iD
-io
-io
+Xf
+Xf
 gX
 gX
 gX

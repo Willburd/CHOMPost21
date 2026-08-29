@@ -1011,6 +1011,14 @@
 	name = "Science Second Floor"
 	flags = AREA_FLAG_IS_NOT_PERSISTENT
 	base_turf = /turf/simulated/open
+/area/muriki/elevator/yardlower
+	name = "Orbital Lower"
+	base_turf = /turf/simulated/floor/plating
+	flags = AREA_FLAG_IS_NOT_PERSISTENT
+/area/muriki/elevator/yardupper
+	name = "Orbital Upper"
+	flags = AREA_FLAG_IS_NOT_PERSISTENT
+	base_turf = /turf/simulated/open
 
 // finalized elevator areas, lift itself makes these once init
 /area/turbolift
@@ -1120,6 +1128,24 @@
 	lift_floor_name = "Server, Tool Storage, Phoronics, RD."
 	lift_announce_str = "Arriving at Second Floor."
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
+
+//Orbital yard
+/area/turbolift/orbitalyard_lower
+	name = "Orbital lower"
+	base_turf = /turf/simulated/floor/plating
+	lift_floor_label = "Lower"
+	lift_floor_name = "Engineering things"
+	lift_announce_str = "Arriving at Orbital Lower Level."
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+
+/area/turbolift/orbitalyard_upper
+	name = "Orbital Upper"
+	base_turf = /turf/simulated/open
+	lift_floor_label = "Upper"
+	lift_floor_name = "Engineering things"
+	lift_announce_str = "Arriving at Orbital Upper Level."
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+
 
 //
 //----------------- Exterior / hazard areas / mine ---------------------------------
