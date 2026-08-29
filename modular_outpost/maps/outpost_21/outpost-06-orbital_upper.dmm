@@ -1703,7 +1703,7 @@
 	pixel_x = 35
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/offworld/orbital/station/storage_engine_core)
+/area/offworld/orbital/station/power_distribution)
 "dv" = (
 /obj/structure/cable/orange{
 	icon_state = "1-4"
@@ -11812,7 +11812,7 @@
 /obj/machinery/door/firedoor/glass,
 /obj/effect/map_helper/airlock/door/ext_door,
 /turf/simulated/floor/tiled/techfloor,
-/area/offworld/orbital/station/storage_engine_core)
+/area/offworld/orbital/station/power_distribution)
 "wS" = (
 /obj/machinery/light/small,
 /turf/simulated/mineral/floor/ignore_cavegen/turfpack/airless,
@@ -18794,7 +18794,7 @@
 "SX" = (
 /obj/structure/sign/warning/vacuum,
 /turf/simulated/wall/r_wall,
-/area/offworld/orbital/station/storage_engine_core)
+/area/offworld/orbital/station/power_distribution)
 "SY" = (
 /obj/structure/cable/yellow{
 	icon_state = "5-8"
@@ -37463,7 +37463,7 @@ Hc
 Hc
 Hc
 Hc
-bB
+Hc
 bB
 bB
 bB
@@ -37625,7 +37625,7 @@ RM
 iK
 oM
 md
-bB
+Hc
 XA
 XP
 XP
@@ -37787,7 +37787,7 @@ OP
 aD
 Pf
 Up
-bB
+Hc
 Sd
 is
 is
@@ -38435,7 +38435,7 @@ Hc
 cr
 dt
 Hc
-bB
+Hc
 yf
 zJ
 aQ
@@ -38597,7 +38597,7 @@ Aa
 JJ
 JJ
 XG
-bB
+Hc
 ZR
 bV
 dJ
@@ -38759,7 +38759,7 @@ Jg
 Jg
 Jg
 nS
-bB
+Hc
 bB
 bB
 bB
@@ -38921,7 +38921,7 @@ hS
 hS
 hS
 Pt
-bB
+Hc
 Cn
 Df
 Df
@@ -39083,7 +39083,7 @@ SF
 xf
 rk
 Hc
-bB
+Hc
 yf
 aQ
 Cm
