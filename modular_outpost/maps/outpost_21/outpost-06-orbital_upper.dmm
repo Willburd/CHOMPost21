@@ -1682,7 +1682,6 @@
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/effect/map_helper/airlock/door/ext_door,
-/obj/effect/map_helper/airlock/button/ext_button,
 /obj/effect/map_helper/airlock/sensor/ext_sensor,
 /obj/machinery/airlock_sensor/airlock_exterior/shuttle{
 	pixel_y = -10;
@@ -9885,17 +9884,6 @@
 /obj/machinery/shield_diffuser,
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/starboard_airlock)
-"tr" = (
-/obj/effect/floor_decal/corner/orange{
-	dir = 9
-	},
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/obj/effect/map_helper/airlock/sensor/int_sensor,
-/obj/effect/map_helper/airlock/button/int_button,
-/turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/power_distribution)
 "ts" = (
 /obj/machinery/light{
 	dir = 1
@@ -18407,6 +18395,7 @@
 	pixel_x = -25;
 	pixel_y = 9
 	},
+/obj/effect/map_helper/airlock/sensor/int_sensor,
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/power_distribution)
 "RN" = (
@@ -37624,7 +37613,7 @@ Yf
 gy
 sj
 iK
-tr
+iK
 RM
 iK
 oM
