@@ -75,7 +75,11 @@
 	allowed_spawns = list("Elevator", "Cryogenic Storage", "Cyborg Storage", "On-Site Dorms")
 	default_skybox = /datum/skybox_settings/outpost21
 	unit_test_z_levels = list(Z_LEVEL_OUTPOST_DEEPDARK,Z_LEVEL_OUTPOST_BASEMENT,Z_LEVEL_OUTPOST_SURFACE,Z_LEVEL_OUTPOST_UPPER,Z_LEVEL_OUTPOST_ORBITAL_LOWER,Z_LEVEL_OUTPOST_ORBITAL_UPPER)
-	unit_test_exempt_areas = list()
+	unit_test_exempt_areas = list(
+										/area/specialty/expie_clubhouse,
+										/area/specialty/stowaway_clubhouse,
+										/area/specialty/stowaway_clubhouse/upper
+	)
 	unit_test_exempt_from_atmos = list(	/area/muriki/processor,
 										/area/muriki/processor/hall,
 										/area/muriki/processor/hall/entrance,
@@ -155,6 +159,8 @@
 										/area/muriki/elevator/mediupper,
 										/area/muriki/elevator/civupper,
 										/area/muriki/elevator/sciupper,
+										/area/muriki/elevator/yardlower,
+										/area/muriki/elevator/yardupper,
 										// The asteroid yard's exterior does not need scrubbers and vents
 										/area/offworld/orbital/exterior,
 										/area/offworld/orbital/exterior/yardzone,
