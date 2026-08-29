@@ -42,7 +42,9 @@
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/storage)
 "af" = (
-/obj/effect/overmap/visitable/sector/murkiki_space/orbital_facility,
+/obj/effect/overmap/visitable/sector/murkiki_space/orbital_facility{
+	docking_codes = "YZMB"
+	},
 /turf/space,
 /area/space)
 "ag" = (
@@ -38911,8 +38913,8 @@ Lz
 zr
 Kh
 Nn
-hS
 Pe
+Jg
 Ve
 Lo
 oN
@@ -39073,8 +39075,8 @@ zr
 zr
 iY
 Hc
-aT
 Hc
+aT
 Hc
 Hc
 Hc
@@ -39239,8 +39241,8 @@ Zt
 Zt
 Zt
 Zt
+Zt
 QK
-bW
 aR
 aR
 aR
@@ -39397,12 +39399,12 @@ ck
 QK
 Zt
 Zt
+Zt
 xi
 Zt
 Zt
 Zt
 QK
-bW
 bW
 bX
 bX
@@ -39563,8 +39565,8 @@ Zt
 Zt
 Zt
 Zt
+Zt
 QK
-aR
 bX
 bX
 bX
@@ -39725,8 +39727,8 @@ Zt
 Zt
 Zt
 Zt
+Zt
 QK
-aR
 dN
 bX
 dN
@@ -39881,14 +39883,14 @@ fl
 ia
 ck
 QK
+Zt
+Zt
+Zt
+Zt
+Zt
+Zt
+Zt
 QK
-QK
-QK
-QK
-QK
-QK
-QK
-aR
 bX
 bX
 bX
@@ -40042,15 +40044,15 @@ Vs
 fl
 ia
 ck
-bW
-aR
-aR
-bW
-bW
-aR
-aR
-aR
-aR
+QK
+QK
+QK
+QK
+QK
+QK
+QK
+QK
+QK
 bX
 bW
 aR
