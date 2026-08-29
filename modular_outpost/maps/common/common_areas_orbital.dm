@@ -6,13 +6,14 @@
 	sound_env = SMALL_ENCLOSED
 	ambience = AMBIENCE_MAINTENANCE
 	holomap_color = HOLOMAP_AREACOLOR_CARGO
+	base_turf = /turf/simulated/mineral/floor/cave
 
 /area/offworld/orbital/exterior
 	name = "\improper Orbital Exterior"
 	icon_state = "red2"
 	has_gravity = 0
 	ambience = AMBIENCE_OUTPOST21_SPACE
-	base_turf = /turf/space
+	base_turf = /turf/simulated/mineral/floor/vacuum
 	flags = AREA_BLOCK_GHOST_SIGHT
 	ambience = AMBIENCE_SPACE
 	has_gravity = FALSE
@@ -37,31 +38,26 @@
 	name = "\improper Orbital Hallway"
 	icon_state = "purple"
 	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
-	base_turf = /turf/simulated/open
 
 /area/offworld/orbital/station/halls/central
 	name = "\improper Orbital Central Hallway"
 	icon_state = "green"
 	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
-	base_turf = /turf/simulated/open
 
 /area/offworld/orbital/station/halls/fore
 	name = "\improper Orbital Fore Hallway"
 	icon_state = "orange"
 	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
-	base_turf = /turf/simulated/open
 
 /area/offworld/orbital/station/halls/aft
 	name = "\improper Orbital Aft Hallway"
 	icon_state = "orange"
 	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
-	base_turf = /turf/simulated/open
 
 /area/offworld/orbital/station/halls/starboard
 	name = "\improper Orbital Starboard Hallway"
 	icon_state = "orange"
 	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
-	base_turf = /turf/simulated/open
 
 /area/offworld/orbital/station/halls/lower
 	name = "\improper Orbital Lower Hallway"
@@ -123,13 +119,11 @@
 	name = "\improper Orbital RUST Storage Hallway"
 	icon_state = "purple"
 	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
-	base_turf = /turf/simulated/open
 
 /area/offworld/orbital/station/halls/rust_entry
 	name = "\improper Orbital RUST Entry Hallway"
 	icon_state = "purple"
 	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
-	base_turf = /turf/simulated/open
 
 // GENERAL ROOMS
 /area/offworld/orbital/station/washing
@@ -255,7 +249,6 @@
 	name = "\improper Orbital Public Docking Arm"
 	icon_state = "red"
 	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
-	base_turf = /turf/simulated/open
 
 /area/offworld/orbital/station/dockinghanger
 	name = "\improper Orbital Cargo Loading Airlock"
@@ -274,7 +267,6 @@
 	name = "\improper Orbital Lower Docking Arm"
 	icon_state = "blue"
 	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
-	base_turf = /turf/space
 
 // Observation
 /area/offworld/orbital/station/observation
@@ -523,26 +515,22 @@
 	name = "\improper Orbital Maintenance"
 	sound_env = SMALL_ENCLOSED
 	ambience = AMBIENCE_MAINTENANCE
-	base_turf = /turf/space
+	base_turf = /turf/simulated/mineral/floor/cave
 
 /area/maintenance/orbital/fore
 	name = "\improper Orbital Maintenance Fore"
-	base_turf = /turf/simulated/open
 	sound_env = SMALL_ENCLOSED
 
 /area/maintenance/orbital/aft
 	name = "\improper Orbital Maintenance Aft"
-	base_turf = /turf/simulated/open
 	sound_env = SMALL_ENCLOSED
 
 /area/maintenance/orbital/port
 	name = "\improper Orbital Maintenance Port"
-	base_turf = /turf/simulated/open
 	sound_env = SMALL_ENCLOSED
 
 /area/maintenance/orbital/starboard
 	name = "\improper Orbital Maintenance Starboard"
-	base_turf = /turf/simulated/open
 	sound_env = SMALL_ENCLOSED
 
 /area/maintenance/orbital/lower
@@ -550,20 +538,16 @@
 
 /area/maintenance/orbital/lower/fore
 	name = "\improper Orbital Maintenance Lower Fore"
-	base_turf = /turf/simulated/open
 	sound_env = SMALL_ENCLOSED
 
 /area/maintenance/orbital/lower/aft
 	name = "\improper Orbital Maintenance Lower Aft"
-	base_turf = /turf/simulated/open
 	sound_env = SMALL_ENCLOSED
 
 /area/maintenance/orbital/lower/port
 	name = "\improper Orbital Maintenance Lower Port"
-	base_turf = /turf/simulated/open
 	sound_env = SMALL_ENCLOSED
 
 /area/maintenance/orbital/lower/starboard
 	name = "\improper Orbital Maintenance Lower Starboard"
-	base_turf = /turf/simulated/open
 	sound_env = SMALL_ENCLOSED
