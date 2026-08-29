@@ -2600,7 +2600,7 @@
 	dir = 4
 	},
 /obj/machinery/camera/network/engineering_outpost{
-	c_tag = "REX - Beam Fore Airlock";
+	c_tag = "REX - Beam Aft Airlock";
 	dir = 1
 	},
 /turf/simulated/floor/tiled/milspec,
@@ -9109,7 +9109,7 @@
 /area/offworld/orbital/station/rust_gas_storage)
 "ti" = (
 /obj/machinery/camera/network/engineering_outpost{
-	c_tag = "REX - Atmospherics East";
+	c_tag = "REX - Atmospherics South";
 	dir = 1
 	},
 /turf/simulated/floor/plating,

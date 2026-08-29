@@ -6127,10 +6127,6 @@
 /obj/structure/cable{
 	icon_state = "1-4"
 	},
-/obj/machinery/camera/network/engineering_outpost{
-	c_tag = "REX - Power Distribution Airlock";
-	dir = 1
-	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/power_distribution)
 "me" = (
@@ -13994,6 +13990,21 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/stairs_upper)
+"AF" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 5
+	},
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/aux{
+	dir = 1
+	},
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "REX - Power Distribution Airlock"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/power_distribution)
 "AK" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -37935,7 +37946,7 @@ HI
 vd
 Lt
 Hc
-Uk
+AF
 Pf
 Dm
 SX
