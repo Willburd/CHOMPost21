@@ -2,6 +2,9 @@
 //-----------------------------------------------------------------------
 // Orbital
 
+// This makes the area behave like area/space
+#define EXTERIOR_AREA_BEHAVIOR(x) x {base_turf = /turf/space;has_gravity = FALSE;dynamic_lighting = FALSE;}; x/get_gravity(){return FALSE;}
+
 /area/offworld/orbital/station
 	sound_env = SMALL_ENCLOSED
 	ambience = AMBIENCE_MAINTENANCE
@@ -11,27 +14,23 @@
 /area/offworld/orbital/exterior
 	name = "\improper Orbital Exterior"
 	icon_state = "red2"
-	has_gravity = 0
-	ambience = AMBIENCE_OUTPOST21_SPACE
+	ambience = AMBIENCE_MURIKICAVE
 	base_turf = /turf/simulated/mineral/floor/vacuum
 	flags = AREA_BLOCK_GHOST_SIGHT
 	ambience = AMBIENCE_SPACE
-	has_gravity = FALSE
-	dynamic_lighting = FALSE // Respect space
 
-/area/offworld/orbital/exterior/get_gravity()
-	return FALSE
 
 // Area where pois generate
 /area/offworld/orbital/exterior/yardzone
 	icon_state = "construction"
+EXTERIOR_AREA_BEHAVIOR(/area/offworld/orbital/exterior/yardzone)
 
 /area/offworld/orbital/exterior/rust_cooling
 	name = "\improper Orbital Rust Cooling Array"
 
 /area/offworld/orbital/exterior/emitter_cooling
 	name = "\improper Orbital Emitter Cooling Array"
-	base_turf = /turf/space
+EXTERIOR_AREA_BEHAVIOR(/area/offworld/orbital/exterior/emitter_cooling)
 
 
 // HALLWAYS
@@ -165,6 +164,7 @@
 	sound_env = SMALL_ENCLOSED
 	ambience = AMBIENCE_ENGINEERING
 	holomap_color = HOLOMAP_AREACOLOR_COMMAND
+	base_turf = /turf/simulated/open
 
 /area/offworld/orbital/station/teleport
 	name = "\improper Orbital Teleporter"
@@ -375,8 +375,7 @@
 /area/offworld/orbital/exterior/starboard_solars
 	name = "\improper Orbital Starboard Solars"
 	icon_state = "purple"
-	base_turf = /turf/space
-
+EXTERIOR_AREA_BEHAVIOR(/area/offworld/orbital/exterior/starboard_solars)
 
 // Power distro
 /area/offworld/orbital/station/power_distribution
