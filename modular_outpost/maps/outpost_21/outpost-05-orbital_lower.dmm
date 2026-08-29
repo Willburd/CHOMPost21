@@ -2599,10 +2599,6 @@
 /obj/effect/floor_decal/corner/orange/full{
 	dir = 4
 	},
-/obj/machinery/camera/network/engineering_outpost{
-	c_tag = "REX - Beam Aft Airlock";
-	dir = 1
-	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/south_power_airlock)
 "gm" = (
@@ -8592,6 +8588,16 @@
 /obj/item/geiger/wall/south,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/lower/central)
+"rY" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "REX - Beam Emitter Central";
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/offworld/orbital/station/beam_emitter)
 "rZ" = (
 /obj/structure/catwalk,
 /obj/machinery/camera/network/engineering_outpost{
@@ -32103,7 +32109,7 @@ uc
 bX
 cw
 my
-cc
+rY
 mw
 cb
 bX
