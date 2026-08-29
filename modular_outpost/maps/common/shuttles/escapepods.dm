@@ -9,6 +9,7 @@
 	docking_controller_tag = "orbital_escape_pod_one"
 	move_time = SHUTTLE_TRANSIT_DURATION_RETURN
 	move_direction = WEST
+	ceiling_type = /turf/simulated/shuttle/floor/white
 
 /datum/shuttle/autodock/ferry/escape_pod/orbital_pod_two
 	name = "Orbital Escape Pod 2"
@@ -21,6 +22,7 @@
 	docking_controller_tag = "orbital_escape_pod_two"
 	move_time = SHUTTLE_TRANSIT_DURATION_RETURN
 	move_direction = WEST
+	ceiling_type = /turf/simulated/shuttle/floor/white
 
 /datum/shuttle/autodock/ferry/escape_pod/orbital_pod_three
 	name = "Orbital Escape Pod 3"
@@ -33,6 +35,7 @@
 	docking_controller_tag = "orbital_escape_pod_three"
 	move_time = SHUTTLE_TRANSIT_DURATION_RETURN
 	move_direction = WEST
+	ceiling_type = /turf/simulated/shuttle/floor/white
 
 
 // Areas
@@ -85,14 +88,38 @@
 /obj/effect/shuttle_landmark/premade/orbital_escape/pod_one/transit
 	name = "Deep Space"
 	landmark_tag = "orbital_escape_pod_transit_one"
+	base_area = /area/space
+	base_turf = /turf/space/transit/west
+
+// Force acceptable, this pod can't risk stopping
+/obj/effect/shuttle_landmark/premade/orbital_escape/pod_one/transit/is_valid(datum/shuttle/shuttle)
+	if(shuttle.current_location == src)
+		return FALSE
+	return TRUE
 
 /obj/effect/shuttle_landmark/premade/orbital_escape/pod_two/transit
 	name = "Deep Space"
 	landmark_tag = "orbital_escape_pod_transit_two"
+	base_area = /area/space
+	base_turf = /turf/space/transit/west
+
+// Force acceptable, this pod can't risk stopping
+/obj/effect/shuttle_landmark/premade/orbital_escape/pod_two/transit/is_valid(datum/shuttle/shuttle)
+	if(shuttle.current_location == src)
+		return FALSE
+	return TRUE
 
 /obj/effect/shuttle_landmark/premade/orbital_escape/pod_three/transit
 	name = "Deep Space"
 	landmark_tag = "orbital_escape_pod_transit_three"
+	base_area = /area/space
+	base_turf = /turf/space/transit/west
+
+// Force acceptable, this pod can't risk stopping
+/obj/effect/shuttle_landmark/premade/orbital_escape/pod_three/transit/is_valid(datum/shuttle/shuttle)
+	if(shuttle.current_location == src)
+		return FALSE
+	return TRUE
 
 
 // Landing
@@ -113,3 +140,9 @@
 	landmark_tag = "orbital_escape_pod_landing_three"
 	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki
 	base_area = /area/muriki/grounds/sec
+
+// Force acceptable, this pod can't risk stopping
+/obj/effect/shuttle_landmark/premade/orbital_escape/landing_site/is_valid(datum/shuttle/shuttle)
+	if(shuttle.current_location == src)
+		return FALSE
+	return TRUE
