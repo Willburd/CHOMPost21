@@ -20747,6 +20747,18 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/lab)
+"aWi" = (
+/obj/effect/shuttle_landmark/premade/orbital_escape/pod_three/landing_site,
+/turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
+/area/muriki/grounds/sec)
+"aWj" = (
+/obj/effect/shuttle_landmark/premade/orbital_escape/pod_two/landing_site,
+/turf/simulated/floor/water/acidic/deep/turfpack/muriki,
+/area/muriki/grounds/engi)
+"aWk" = (
+/obj/effect/shuttle_landmark/premade/orbital_escape/pod_one/landing_site,
+/turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
+/area/mine/explored/muriki/mountaineast)
 "aWq" = (
 /obj/machinery/light{
 	dir = 4
@@ -110197,7 +110209,7 @@ pvY
 pvY
 pvY
 pvY
-pvY
+aWj
 pvY
 pvY
 pvY
@@ -126609,7 +126621,7 @@ kjo
 aGi
 aGi
 aqi
-aqi
+aWi
 aqi
 aqi
 aqi
@@ -149528,7 +149540,7 @@ aLJ
 aKW
 aFc
 aFc
-aFc
+aWk
 aFc
 aFc
 aFc

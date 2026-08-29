@@ -2411,12 +2411,12 @@
 /turf/simulated/wall/fancy_shuttle{
 	fancy_shuttle_tag = "orbesc3"
 	},
-/area/space)
+/area/shuttle/orbital_pod_three)
 "eF" = (
 /turf/simulated/wall/fancy_shuttle{
 	fancy_shuttle_tag = "orbesc3"
 	},
-/area/space)
+/area/shuttle/orbital_pod_three)
 "eG" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -2426,6 +2426,13 @@
 	},
 /obj/effect/floor_decal/industrial/danger{
 	dir = 8
+	},
+/obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod_berth{
+	dir = 4;
+	pixel_x = -24;
+	id_tag = "escape_berth_three";
+	tag_door = "escape_berth_three_door";
+	frequency = 1385
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/aft)
@@ -2459,8 +2466,16 @@
 /obj/structure/bed/chair/bay/shuttle{
 	dir = 8
 	},
+/obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod{
+	pixel_y = 24;
+	id_tag = "orbital_escape_pod_three";
+	frequency = 1385
+	},
+/obj/machinery/light{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/space)
+/area/shuttle/orbital_pod_three)
 "eL" = (
 /obj/structure/cable{
 	icon_state = "2-9"
@@ -2473,9 +2488,12 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/space)
+/area/shuttle/orbital_pod_three)
 "eN" = (
-/obj/machinery/door/airlock/glass_external/public,
+/obj/machinery/door/airlock/glass_external/public{
+	id_tag = "escape_berth_three_door";
+	frequency = 1385
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/halls/aft)
 "eO" = (
@@ -4269,6 +4287,10 @@
 "in" = (
 /turf/simulated/floor/airless,
 /area/ai_sat/core_external)
+"io" = (
+/obj/structure/sign/pods,
+/turf/simulated/wall/r_wall,
+/area/offworld/orbital/station/halls/aft)
 "ip" = (
 /obj/structure/cable/yellow{
 	icon_state = "2-4"
@@ -6143,17 +6165,20 @@
 /turf/simulated/wall/fancy_shuttle{
 	fancy_shuttle_tag = "orbesc1"
 	},
-/area/space)
+/area/shuttle/orbital_pod_two)
 "mj" = (
 /turf/simulated/wall/fancy_shuttle{
 	fancy_shuttle_tag = "orbesc1"
 	},
-/area/space)
+/area/shuttle/orbital_pod_two)
 "mk" = (
 /turf/simulated/wall/r_wall,
 /area/offworld/orbital/station/halls/fore)
 "ml" = (
-/obj/machinery/door/airlock/glass_external/public,
+/obj/machinery/door/airlock/glass_external/public{
+	id_tag = "escape_berth_one_door";
+	frequency = 1383
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/halls/central)
 "mm" = (
@@ -6394,12 +6419,12 @@
 /turf/simulated/wall/fancy_shuttle{
 	fancy_shuttle_tag = "orbesc2"
 	},
-/area/space)
+/area/shuttle/orbital_pod_one)
 "mL" = (
 /turf/simulated/wall/fancy_shuttle{
 	fancy_shuttle_tag = "orbesc2"
 	},
-/area/space)
+/area/shuttle/orbital_pod_one)
 "mM" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 9
@@ -6655,6 +6680,13 @@
 	},
 /obj/effect/floor_decal/industrial/danger{
 	dir = 8
+	},
+/obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod_berth{
+	dir = 4;
+	pixel_x = -24;
+	id_tag = "escape_berth_one";
+	tag_door = "escape_berth_one_door";
+	frequency = 1381
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/central)
@@ -7665,7 +7697,7 @@
 	},
 /obj/item/geiger/wall/north,
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/space)
+/area/shuttle/orbital_pod_three)
 "pi" = (
 /obj/structure/lattice,
 /turf/space,
@@ -8976,7 +9008,7 @@
 	pixel_x = -6
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/space)
+/area/shuttle/orbital_pod_two)
 "rO" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/grille,
@@ -9885,6 +9917,12 @@
 /obj/machinery/shield_diffuser,
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/starboard_airlock)
+"tr" = (
+/obj/effect/shuttle_landmark/premade/orbital_escape/pod_three,
+/turf/simulated/wall/fancy_shuttle{
+	fancy_shuttle_tag = "orbesc3"
+	},
+/area/shuttle/orbital_pod_three)
 "ts" = (
 /obj/machinery/light{
 	dir = 1
@@ -14056,6 +14094,49 @@
 /obj/effect/shuttle_landmark/premade/generic/crash_rec,
 /turf/simulated/mineral/vacuum,
 /area/offworld/orbital/exterior)
+"AQ" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 8
+	},
+/obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod_berth{
+	dir = 4;
+	pixel_x = -24;
+	id_tag = "escape_berth_two";
+	tag_door = "escape_berth_two_door";
+	frequency = 1383
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/central)
+"AR" = (
+/obj/structure/sign/pods,
+/turf/simulated/wall/r_wall,
+/area/offworld/orbital/station/halls/central)
+"AS" = (
+/obj/effect/shuttle_landmark/premade/orbital_escape/pod_two,
+/turf/simulated/wall/fancy_shuttle{
+	fancy_shuttle_tag = "orbesc1"
+	},
+/area/shuttle/orbital_pod_two)
+"AT" = (
+/obj/structure/bed/chair/bay/shuttle{
+	dir = 8
+	},
+/obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod{
+	pixel_y = 24;
+	id_tag = "orbital_escape_pod_two";
+	frequency = 1383
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/shuttle/orbital_pod_two)
 "AU" = (
 /obj/effect/shuttle_landmark/premade/skipjack/station_nw,
 /turf/space,
@@ -14082,6 +14163,52 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/central)
+"AX" = (
+/obj/machinery/door/window/survival_pod,
+/obj/structure/bed/chair/bay/shuttle{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/shuttle/orbital_pod_two)
+"AY" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/danger{
+	dir = 8
+	},
+/obj/structure/extinguisher_cabinet{
+	dir = 4;
+	pixel_x = -30;
+	pixel_y = -6
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -30;
+	pixel_y = 8;
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/central)
+"AZ" = (
+/obj/effect/shuttle_landmark/premade/orbital_escape/pod_one,
+/turf/simulated/wall/fancy_shuttle{
+	fancy_shuttle_tag = "orbesc2"
+	},
+/area/shuttle/orbital_pod_one)
+"Ba" = (
+/obj/structure/bed/chair/bay/shuttle{
+	dir = 8
+	},
+/obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod{
+	pixel_y = 24;
+	id_tag = "orbital_escape_pod_one";
+	frequency = 1381
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/shuttle/orbital_pod_one)
 "Bb" = (
 /obj/item/radio/intercom{
 	broadcasting = 1;
@@ -14111,6 +14238,18 @@
 /obj/item/clothing/head/welding,
 /turf/simulated/floor/airless,
 /area/offworld/orbital/exterior/engine_core_starboard)
+"Bd" = (
+/obj/structure/bed/chair/bay/shuttle{
+	dir = 8
+	},
+/obj/item/geiger/wall/north,
+/obj/item/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -21;
+	pixel_x = -6
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/shuttle/orbital_pod_one)
 "Be" = (
 /obj/structure/sign/department/ai,
 /obj/effect/step_trigger/dephase_shadekin,
@@ -14120,6 +14259,20 @@
 /obj/effect/floor_decal/eshui/emblem/eshui_small_l,
 /turf/simulated/floor/airless,
 /area/offworld/orbital/exterior)
+"Bg" = (
+/obj/machinery/door/window/survival_pod,
+/obj/structure/bed/chair/bay/shuttle{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/shuttle/orbital_pod_one)
+"Bh" = (
+/obj/machinery/door/airlock/glass_external/public{
+	id_tag = "escape_berth_one_door";
+	frequency = 1381
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/offworld/orbital/station/halls/central)
 "Bj" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -16231,16 +16384,6 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/power_distribution)
 "Kj" = (
-/obj/structure/extinguisher_cabinet{
-	dir = 4;
-	pixel_x = -30;
-	pixel_y = -6
-	},
-/obj/structure/extinguisher_cabinet{
-	pixel_x = -30;
-	pixel_y = 8;
-	dir = 4
-	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
 	},
@@ -37203,11 +37346,11 @@ kF
 mN
 mk
 mL
-mL
+AZ
 mK
 cX
 mj
-mj
+AS
 mi
 cX
 cX
@@ -37256,7 +37399,7 @@ qz
 rC
 OQ
 eF
-eF
+tr
 eE
 OQ
 OQ
@@ -37365,11 +37508,11 @@ ob
 Ef
 mk
 mL
-eK
+Ba
 mL
 tP
 mj
-eK
+AT
 mj
 jg
 jg
@@ -37527,7 +37670,7 @@ bb
 Ef
 mk
 mL
-rN
+Bd
 mL
 tP
 mj
@@ -37689,11 +37832,11 @@ iS
 Ef
 mk
 mL
-eM
+Bg
 mL
-zL
+tP
 mj
-eM
+AX
 mj
 jg
 TA
@@ -37851,12 +37994,12 @@ bo
 Ef
 mk
 jg
-ml
-jg
+Bh
+AR
 my
 jg
 ml
-jg
+AR
 jg
 TA
 JG
@@ -37905,7 +38048,7 @@ gX
 gX
 gX
 eN
-gX
+io
 gX
 gX
 gX
@@ -38016,10 +38159,10 @@ nq
 bu
 gC
 mq
-mq
+AY
 bu
 Kj
-jI
+AQ
 jw
 JG
 rH

@@ -6243,6 +6243,7 @@
 #include "modular_outpost\maps\common\shuttles\elevators.dm"
 #include "modular_outpost\maps\common\shuttles\engineering_ferry.dm"
 #include "modular_outpost\maps\common\shuttles\ert_dropship.dm"
+#include "modular_outpost\maps\common\shuttles\escapepods.dm"
 #include "modular_outpost\maps\common\shuttles\ferryman.dm"
 #include "modular_outpost\maps\common\shuttles\interferon.dm"
 #include "modular_outpost\maps\common\shuttles\medical.dm"
