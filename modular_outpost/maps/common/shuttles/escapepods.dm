@@ -66,14 +66,14 @@
 	name = "Escape Pod Berth 1"
 	landmark_tag = "pod_berth_one"
 	docking_controller = "escape_berth_one"
-	base_turf = /turf/space
+	base_turf = /turf/simulated/floor/airless
 	base_area = /area/offworld/orbital/exterior
 
 /obj/effect/shuttle_landmark/premade/orbital_escape/pod_two
 	name = "Escape Pod Berth 2"
 	landmark_tag = "pod_berth_two"
 	docking_controller = "escape_berth_two"
-	base_turf = /turf/space
+	base_turf = /turf/simulated/floor/airless
 	base_area = /area/offworld/orbital/exterior
 
 /obj/effect/shuttle_landmark/premade/orbital_escape/pod_three

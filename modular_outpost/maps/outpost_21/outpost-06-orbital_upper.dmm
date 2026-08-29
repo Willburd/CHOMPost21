@@ -2469,7 +2469,8 @@
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod{
 	pixel_y = 24;
 	id_tag = "orbital_escape_pod_three";
-	frequency = 1385
+	frequency = 1385;
+	tag_door = "escape_berth_three_door"
 	},
 /obj/machinery/light{
 	dir = 8
@@ -6178,7 +6179,7 @@
 /area/offworld/orbital/station/halls/fore)
 "ml" = (
 /obj/machinery/door/airlock/glass_external/public{
-	id_tag = "escape_berth_one_door";
+	id_tag = "escape_berth_two_door";
 	frequency = 1383;
 	icon_state = "door_locked";
 	locked = 1
@@ -14134,7 +14135,8 @@
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod{
 	pixel_y = 24;
 	id_tag = "orbital_escape_pod_two";
-	frequency = 1383
+	frequency = 1383;
+	tag_door = "escape_berth_two_door"
 	},
 /obj/machinery/light{
 	dir = 8
@@ -14206,7 +14208,8 @@
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod{
 	pixel_y = 24;
 	id_tag = "orbital_escape_pod_one";
-	frequency = 1381
+	frequency = 1381;
+	tag_door = "escape_berth_one_door"
 	},
 /obj/machinery/light{
 	dir = 8
