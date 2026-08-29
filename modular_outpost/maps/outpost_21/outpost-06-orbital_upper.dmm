@@ -4720,9 +4720,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/aux{
 	dir = 4
 	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/aft)
 "jn" = (
@@ -10040,9 +10037,6 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/aux{
 	dir = 1
 	},
-/obj/structure/cable/green{
-	icon_state = "2-4"
-	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/south_engine_access_west)
 "tJ" = (
@@ -12870,9 +12864,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/aux,
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/aft)
 "yQ" = (
@@ -13161,7 +13152,7 @@
 	pixel_x = -24
 	},
 /obj/structure/cable/green{
-	icon_state = "0-1"
+	icon_state = "0-9"
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/south_engine_access_east)
@@ -13218,9 +13209,6 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/aux{
 	dir = 1
-	},
-/obj/structure/cable/green{
-	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/south_engine_access_east)
@@ -13407,6 +13395,24 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/starboard)
+"zO" = (
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/corner/orange{
+	dir = 9
+	},
+/obj/structure/cable/green{
+	icon_state = "2-10"
+	},
+/obj/structure/cable/green{
+	icon_state = "2-4"
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals_central7{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/aft)
 "zQ" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -15774,7 +15780,7 @@
 	dir = 4
 	},
 /obj/structure/cable/green{
-	icon_state = "4-8"
+	icon_state = "6-9"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/south_engine_access_east)
@@ -15825,12 +15831,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/aux{
 	dir = 4
-	},
-/obj/structure/cable/green{
-	icon_state = "2-8"
-	},
-/obj/structure/cable/green{
-	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/aft)
@@ -17685,6 +17685,9 @@
 /obj/effect/floor_decal/corner/orange{
 	dir = 6
 	},
+/obj/structure/cable/green{
+	icon_state = "6-8"
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/aft)
 "QC" = (
@@ -18036,7 +18039,7 @@
 	pixel_x = 24
 	},
 /obj/structure/cable/green{
-	icon_state = "0-1"
+	icon_state = "0-5"
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/south_engine_access_west)
@@ -18305,7 +18308,7 @@
 	dir = 4
 	},
 /obj/structure/cable/green{
-	icon_state = "4-8"
+	icon_state = "5-10"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/south_engine_access_west)
@@ -37742,7 +37745,7 @@ Ps
 zp
 dM
 TV
-Mx
+zO
 JT
 Mx
 UX
@@ -37904,7 +37907,7 @@ dU
 dU
 dS
 kl
-dU
+dS
 yP
 RP
 im
