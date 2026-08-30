@@ -6297,11 +6297,12 @@
 	dir = 4
 	},
 /obj/machinery/airlock_sensor/airlock_interior/shuttle{
-	id_tag = "orbyard_insense";
 	dir = 8;
 	pixel_y = -25;
 	pixel_x = -9
 	},
+/obj/effect/map_helper/airlock/door/int_door,
+/obj/effect/map_helper/airlock/sensor/int_sensor,
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/starboard_airlock)
 "mA" = (
@@ -9121,16 +9122,14 @@
 /turf/simulated/floor/tiled/milspec/airless,
 /area/offworld/orbital/station/storage_engine_core)
 "sa" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1381;
-	id_tag = "orbyard_vent"
-	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume,
 /obj/machinery/light{
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/brown/border{
 	dir = 1
 	},
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor/tiled/steel_grid,
 /area/offworld/orbital/station/starboard_airlock)
 "sb" = (
@@ -9921,6 +9920,7 @@
 	locked = 1
 	},
 /obj/machinery/shield_diffuser,
+/obj/effect/map_helper/airlock/door/ext_door,
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/starboard_airlock)
 "tr" = (
@@ -12416,18 +12416,15 @@
 /turf/simulated/floor/tiled/old_tile/white,
 /area/offworld/orbital/station/medical_treatment)
 "xV" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1381;
-	id_tag = "orbyard_vent"
-	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume,
 /obj/machinery/airlock_sensor{
-	frequency = 1381;
-	id_tag = "orbyard_sensor";
 	pixel_y = 32
 	},
 /obj/effect/floor_decal/corner/brown/border{
 	dir = 1
 	},
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
+/obj/effect/map_helper/airlock/sensor/chamber_sensor,
 /turf/simulated/floor/tiled/steel_grid,
 /area/offworld/orbital/station/starboard_airlock)
 "xW" = (
@@ -13710,6 +13707,17 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/observation)
+"Aj" = (
+/obj/machinery/door/airlock/glass_external{
+	frequency = 1381;
+	id_tag = "orbyard_outer";
+	locked = 1
+	},
+/obj/machinery/shield_diffuser,
+/obj/effect/map_helper/airlock/door/ext_door,
+/obj/effect/map_helper/airlock/sensor/ext_sensor,
+/turf/simulated/floor/tiled/techfloor,
+/area/offworld/orbital/station/starboard_airlock)
 "Ak" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -14010,12 +14018,10 @@
 /turf/simulated/floor/airless,
 /area/offworld/orbital/exterior)
 "AJ" = (
-/obj/machinery/airlock_sensor/airlock_exterior{
-	frequency = 1381;
-	pixel_x = -22;
-	pixel_y = -7;
-	id_tag = "orbyard_outsense";
-	dir = 4
+/obj/machinery/airlock_sensor/airlock_exterior/shuttle{
+	pixel_x = -24;
+	dir = 4;
+	pixel_y = -7
 	},
 /turf/simulated/floor/airless,
 /area/offworld/orbital/exterior)
@@ -17262,8 +17268,7 @@
 /obj/structure/reagent_dispensers/fueltank/high,
 /obj/machinery/power/apc{
 	name = "south bump";
-	pixel_y = -24;
-	nightshift_setting = 3
+	pixel_y = -24
 	},
 /obj/structure/cable/green,
 /turf/simulated/floor/tiled/milspec,
@@ -18121,6 +18126,7 @@
 	id_tag = "orbyard_inner";
 	locked = 1
 	},
+/obj/effect/map_helper/airlock/door/int_door,
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/starboard_airlock)
 "Qx" = (
@@ -20772,16 +20778,14 @@
 	tag_interior_door = "orbyard_inner";
 	tag_interior_sensor = "orbyard_insense"
 	},
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1381;
-	id_tag = "orbyard_vent"
-	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume,
 /obj/effect/floor_decal/corner/brown/border{
 	dir = 1
 	},
 /obj/machinery/camera/network/engineering_outpost{
 	c_tag = "REX - Yard Access Airlock"
 	},
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor/tiled/steel_grid,
 /area/offworld/orbital/station/starboard_airlock)
 "ZC" = (
@@ -43216,7 +43220,7 @@ qz
 qz
 qz
 Sn
-tq
+Aj
 tq
 Sn
 YD
