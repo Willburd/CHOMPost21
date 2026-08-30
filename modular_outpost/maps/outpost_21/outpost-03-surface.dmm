@@ -35204,8 +35204,6 @@
 "fHm" = (
 /obj/structure/table/rack,
 /obj/effect/floor_decal/industrial/outline/grey,
-/obj/item/clothing/glasses/night,
-/obj/item/clothing/glasses/night,
 /obj/structure/window/reinforced{
 	dir = 4
 	},
@@ -35214,6 +35212,15 @@
 	},
 /obj/machinery/door/window/brigdoor/northright{
 	req_one_access = list(1,3,19)
+	},
+/obj/item/clothing/glasses/ghost{
+	pixel_y = 4
+	},
+/obj/item/clothing/glasses/night{
+	pixel_y = -6
+	},
+/obj/item/clothing/glasses/night{
+	pixel_y = -6
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/tactical)
@@ -55658,7 +55665,7 @@
 /obj/structure/sign/nosmoking_2{
 	pixel_x = 32
 	},
-/obj/structure/window/reinforced/tinted,
+/obj/structure/window/reinforced/tinted/frosted,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/medical/virologyaccess)
 "lZf" = (
