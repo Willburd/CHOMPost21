@@ -16,9 +16,9 @@
 	if(isliving(loc))
 		var/mob/living/M = loc
 		if(M.l_hand == src)
-			M.apply_damage(10, BRUTE, BP_L_HAND)
+			M.apply_damage(30, BRUTE, BP_L_HAND)
 		if(M.r_hand == src)
-			M.apply_damage(10, BRUTE, BP_R_HAND)
+			M.apply_damage(30, BRUTE, BP_R_HAND)
 		M.Confuse(10)
 		M.Weaken(3)
 		M.ex_act(3)
