@@ -418,7 +418,9 @@
 /turf/simulated/floor/plating,
 /area/maintenance/orbital/lower/fore)
 "aW" = (
-/obj/machinery/computer/fusion_fuel_control,
+/obj/machinery/computer/fusion_fuel_control{
+	id_tag = "Rust Fuel Injectors"
+	},
 /obj/effect/floor_decal/corner/orange{
 	dir = 5
 	},
@@ -496,7 +498,9 @@
 /turf/simulated/floor/plating,
 /area/maintenance/orbital/lower/fore)
 "bd" = (
-/obj/machinery/computer/fusion_core_control,
+/obj/machinery/computer/fusion_core_control{
+	id_tag = "Rust Fusion Core"
+	},
 /obj/effect/floor_decal/corner/orange{
 	dir = 5
 	},
@@ -2189,7 +2193,11 @@
 /turf/simulated/floor/plating,
 /area/maintenance/orbital/lower/aft)
 "fh" = (
-/obj/machinery/computer/general_air_control/supermatter_core,
+/obj/machinery/computer/general_air_control/supermatter_core{
+	input_tag = "rust_injector";
+	output_tag = "rust_vent";
+	sensors = list("rust_sensor" = "RUST Engine Sensor")
+	},
 /obj/effect/floor_decal/corner/orange/full{
 	dir = 1
 	},
@@ -2507,7 +2515,9 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/rust_entry)
 "ga" = (
-/obj/machinery/air_sensor,
+/obj/machinery/air_sensor{
+	id_tag = "rust_sensor"
+	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
@@ -2901,7 +2911,8 @@
 /area/offworld/orbital/station/atmos_primary)
 "gW" = (
 /obj/machinery/atmospherics/unary/vent_pump/engine{
-	dir = 1
+	dir = 1;
+	id_tag = "rust_vent"
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -3719,7 +3730,8 @@
 	icon_state = "0-4"
 	},
 /obj/machinery/fusion_fuel_injector{
-	dir = 8
+	dir = 8;
+	id_tag = "Rust Fuel Injectors"
 	},
 /obj/structure/cable/orange{
 	icon_state = "5-8"
@@ -6227,7 +6239,9 @@
 /turf/simulated/wall/r_wall,
 /area/offworld/orbital/station/rust_core)
 "no" = (
-/obj/machinery/computer/gyrotron_control,
+/obj/machinery/computer/gyrotron_control{
+	id_tag = "Rust Gyrotron"
+	},
 /obj/effect/floor_decal/corner/orange/full{
 	dir = 8
 	},
@@ -7489,7 +7503,7 @@
 "pR" = (
 /obj/machinery/atmospherics/unary/outlet_injector{
 	dir = 1;
-	id = "recycle_in";
+	id = "rust_injector";
 	frequency = 1445;
 	use_power = 1;
 	volume_rate = 700
@@ -7703,7 +7717,9 @@
 /turf/space,
 /area/space)
 "qo" = (
-/obj/machinery/power/fusion_core,
+/obj/machinery/power/fusion_core{
+	id_tag = "Rust Fusion Core"
+	},
 /obj/effect/floor_decal/industrial/warning/full,
 /obj/structure/cable/orange{
 	icon_state = "0-4"
@@ -8716,9 +8732,6 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/lower/fore)
 "sh" = (
-/obj/machinery/fusion_fuel_injector{
-	dir = 2
-	},
 /obj/machinery/light{
 	dir = 1
 	},
@@ -8726,6 +8739,10 @@
 	dir = 5
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/fusion_fuel_injector{
+	dir = 2;
+	id_tag = "Rust Fuel Injectors"
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/rust_tool_storage)
 "si" = (
@@ -9589,7 +9606,8 @@
 /area/offworld/orbital/station/rust_gas_storage)
 "tY" = (
 /obj/machinery/fusion_fuel_injector{
-	dir = 2
+	dir = 2;
+	id_tag = "Rust Fuel Injectors"
 	},
 /obj/effect/floor_decal/corner/orange{
 	dir = 9
@@ -9609,13 +9627,14 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/rust_gas_storage)
 "ua" = (
-/obj/machinery/fusion_fuel_injector{
-	dir = 2
-	},
 /obj/effect/floor_decal/corner/orange/full{
 	dir = 8
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/fusion_fuel_injector{
+	dir = 2;
+	id_tag = "Rust Fuel Injectors"
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/rust_tool_storage)
 "ub" = (
@@ -9629,13 +9648,14 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/beam_emitter)
 "ud" = (
-/obj/machinery/fusion_fuel_injector{
-	dir = 2
-	},
 /obj/effect/floor_decal/corner/orange{
 	dir = 5
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/fusion_fuel_injector{
+	dir = 2;
+	id_tag = "Rust Fuel Injectors"
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/rust_tool_storage)
 "ue" = (
@@ -10625,7 +10645,8 @@
 /area/offworld/orbital/exterior/starboard_solars)
 "Br" = (
 /obj/machinery/power/emitter/gyrotron{
-	dir = 1
+	dir = 1;
+	id_tag = "Rust Gyrotron"
 	},
 /obj/structure/cable/green{
 	icon_state = "0-2"
@@ -12427,7 +12448,8 @@
 /area/offworld/orbital/station/halls/stairs_lower)
 "Oj" = (
 /obj/machinery/fusion_fuel_injector{
-	dir = 2
+	dir = 2;
+	id_tag = "Rust Fuel Injectors"
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/milspec,
@@ -12975,7 +12997,8 @@
 /area/offworld/orbital/station/beam_emitter)
 "SB" = (
 /obj/machinery/fusion_fuel_injector{
-	dir = 1
+	dir = 1;
+	id_tag = "Rust Fuel Injectors"
 	},
 /obj/structure/cable/green{
 	icon_state = "0-2"
@@ -14019,7 +14042,8 @@
 /area/offworld/orbital/station/rust_core)
 "ZZ" = (
 /obj/machinery/fusion_fuel_injector{
-	dir = 8
+	dir = 8;
+	id_tag = "Rust Fuel Injectors"
 	},
 /obj/structure/cable/green{
 	icon_state = "0-4"
