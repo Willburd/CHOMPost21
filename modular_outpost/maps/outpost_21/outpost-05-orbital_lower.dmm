@@ -2210,7 +2210,8 @@
 /obj/machinery/computer/general_air_control/supermatter_core{
 	input_tag = "rust_injector";
 	output_tag = "rust_vent";
-	sensors = list("rust_sensor" = "RUST Engine Sensor")
+	sensors = list("rust_sensor" = "RUST Engine Sensor");
+	frequency = 1445
 	},
 /obj/effect/floor_decal/corner/orange/full{
 	dir = 1
@@ -2534,7 +2535,8 @@
 /area/offworld/orbital/station/halls/rust_entry)
 "ga" = (
 /obj/machinery/air_sensor{
-	id_tag = "rust_sensor"
+	id_tag = "rust_sensor";
+	frequency = 1445
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -2930,7 +2932,8 @@
 "gW" = (
 /obj/machinery/atmospherics/unary/vent_pump/engine{
 	dir = 1;
-	id_tag = "rust_vent"
+	id_tag = "rust_vent";
+	frequency = 1445
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4

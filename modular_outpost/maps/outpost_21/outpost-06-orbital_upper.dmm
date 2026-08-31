@@ -13327,13 +13327,6 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/south_engine_access_east)
-"zt" = (
-/obj/structure/cable/yellow{
-	icon_state = "2-4"
-	},
-/obj/effect/floor_decal/eshui/emblem/eshui_small_l,
-/turf/simulated/floor/airless,
-/area/offworld/orbital/exterior/engine_core_starboard)
 "zu" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/aux,
 /obj/effect/floor_decal/corner/orange{
@@ -14907,7 +14900,6 @@
 /obj/effect/floor_decal/corner/orange{
 	dir = 5
 	},
-/obj/effect/floor_decal/eshui/emblem/eshui_small_r,
 /turf/simulated/floor/airless,
 /area/offworld/orbital/exterior/engine_core_port)
 "Dd" = (
@@ -18145,10 +18137,6 @@
 /obj/structure/prop/rock/small/alt,
 /turf/simulated/mineral/floor/ignore_cavegen/turfpack/airless,
 /area/offworld/orbital/exterior)
-"Py" = (
-/obj/effect/floor_decal/eshui/emblem/eshui_small_r,
-/turf/simulated/floor/airless,
-/area/offworld/orbital/exterior/engine_core_starboard)
 "Pz" = (
 /obj/effect/floor_decal/spline/fancy/wood,
 /obj/structure/panic_button{
@@ -20279,10 +20267,6 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/ai_sat/fore_airlock)
-"Wy" = (
-/obj/effect/floor_decal/eshui/emblem/eshui_small_l,
-/turf/simulated/floor/airless,
-/area/offworld/orbital/exterior/engine_core_port)
 "Wz" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/blue/border,
@@ -34624,7 +34608,7 @@ fj
 OQ
 br
 br
-Wy
+br
 br
 br
 br
@@ -41761,7 +41745,7 @@ aR
 aU
 aR
 co
-zt
+xI
 cF
 cF
 jj
@@ -42409,7 +42393,7 @@ ba
 ba
 Bq
 Bo
-Py
+Zt
 Zt
 Zt
 BS
