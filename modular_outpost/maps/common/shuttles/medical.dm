@@ -73,4 +73,4 @@
 	docking_controller = "beam_sat_medical_controller"
 	base_turf = /turf/space
 	base_area = /area/space
-	local_crash_sites = OUTPOST_CONFINEMENTBEAM_CRASHES
+	local_crash_sites = OUTPOST_ASTEROID_CRASHES

@@ -62,4 +62,4 @@
 	docking_controller = "beam_sat_controller"
 	base_area = /area/offworld/orbital/exterior/engine_core_starboard
 	base_turf = /turf/simulated/floor/airless
-	local_crash_sites = OUTPOST_CONFINEMENTBEAM_CRASHES
+	local_crash_sites = OUTPOST_ASTEROID_CRASHES

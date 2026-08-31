@@ -70,7 +70,7 @@
 	docking_controller = "beam_sat_security_controller"
 	base_turf = /turf/space
 	base_area = /area/space
-	local_crash_sites = OUTPOST_CONFINEMENTBEAM_CRASHES
+	local_crash_sites = OUTPOST_ASTEROID_CRASHES
 
 /obj/effect/shuttle_landmark/premade/security/aisat_security
 	name = "AI Satellite (Security Dock)"
@@ -78,4 +78,4 @@
 	docking_controller = "aisat_security_controller"
 	base_turf = /turf/space
 	base_area = /area/space
-	local_crash_sites = OUTPOST_CONFINEMENTBEAM_CRASHES
+	local_crash_sites = OUTPOST_ASTEROID_CRASHES

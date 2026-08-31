@@ -730,12 +730,29 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/orbital/lower/aft)
+"bD" = (
+/obj/structure/catwalk,
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/obj/effect/shuttle_landmark/premade/generic/crash_ptl_enginesouth,
+/turf/simulated/floor/airless,
+/area/offworld/orbital/exterior/starboard_solars)
 "bE" = (
 /obj/structure/cable/green{
 	icon_state = "6-9"
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/beam_emitter)
+"bF" = (
+/obj/machinery/atmospherics/pipe/simple/heat_exchanging,
+/obj/structure/lattice,
+/obj/machinery/atmospherics/pipe/simple/visible/red{
+	dir = 4
+	},
+/obj/effect/shuttle_landmark/premade/generic/crash_ptl_enginenorth,
+/turf/space,
+/area/offworld/orbital/exterior/emitter_cooling)
 "bG" = (
 /obj/structure/cable/cyan{
 	icon_state = "4-10"
@@ -1216,6 +1233,10 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/beam_emitter)
+"cI" = (
+/obj/effect/shuttle_landmark/premade/generic/crash_ptl,
+/turf/space,
+/area/space)
 "cJ" = (
 /obj/machinery/atmospherics/pipe/simple/visible/black,
 /obj/effect/floor_decal/corner/orange{
@@ -26216,7 +26237,7 @@ eW
 xM
 xM
 xM
-xM
+cI
 xM
 eW
 eW
@@ -29806,7 +29827,7 @@ pC
 pC
 pC
 pC
-Fc
+bF
 pC
 ee
 pC
@@ -37434,7 +37455,7 @@ zr
 bB
 bB
 zr
-bB
+bD
 bB
 xU
 xM
