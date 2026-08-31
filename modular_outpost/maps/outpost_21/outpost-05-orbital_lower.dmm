@@ -2433,6 +2433,10 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "REX - RUST Core Main";
+	dir = 1
+	},
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/rust_core)
 "fR" = (
@@ -9023,15 +9027,6 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/maintenance/orbital/lower/fore)
-"sO" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 1
-	},
-/obj/machinery/camera/network/engineering_outpost{
-	c_tag = "REX - RUST Core Main"
-	},
-/turf/simulated/floor/reinforced,
-/area/offworld/orbital/station/rust_core)
 "sP" = (
 /turf/simulated/wall,
 /area/offworld/orbital/station/halls/rust_tool_storage)
@@ -28007,7 +28002,7 @@ Zv
 Is
 fQ
 Nu
-sO
+ge
 Ol
 qo
 Ol
