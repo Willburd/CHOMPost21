@@ -2465,7 +2465,6 @@
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod{
 	id_tag = "orbital_escape_pod_three";
 	frequency = 1385;
-	tag_door = "escape_berth_three_door";
 	pixel_x = -24;
 	dir = 4
 	},
@@ -14222,7 +14221,6 @@
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod{
 	id_tag = "orbital_escape_pod_two";
 	frequency = 1383;
-	tag_door = "escape_berth_two_door";
 	pixel_x = -24;
 	dir = 4
 	},
@@ -14296,7 +14294,6 @@
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod{
 	id_tag = "orbital_escape_pod_one";
 	frequency = 1381;
-	tag_door = "escape_berth_one_door";
 	dir = 4;
 	pixel_x = -24
 	},
