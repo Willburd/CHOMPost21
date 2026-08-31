@@ -265,6 +265,12 @@ EXTERIOR_AREA_BEHAVIOR(/area/offworld/orbital/exterior/emitter_cooling)
 	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
 	base_turf = /turf/space
 
+/area/offworld/orbital/station/access_shaft/upper_connector
+	name = "\improper Orbital Upper Docking Connector"
+	icon_state = "red"
+	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
+	base_turf = /turf/space
+
 /area/offworld/orbital/station/access_shaft/lower
 	name = "\improper Orbital Lower Docking Arm"
 	icon_state = "blue"
