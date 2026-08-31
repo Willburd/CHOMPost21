@@ -378,6 +378,16 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/starboard_airlock)
+"aT" = (
+/obj/machinery/disposal,
+/obj/effect/floor_decal/steeldecal/monofloor{
+	dir = 1
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/aft)
 "aU" = (
 /obj/random/outcrop,
 /turf/simulated/mineral/floor/ignore_cavegen/turfpack/airless,
@@ -6589,11 +6599,11 @@
 "ne" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/aux,
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/aft)
 "nf" = (
@@ -18865,6 +18875,7 @@
 	name = "Station Intercom (General)";
 	pixel_x = -22
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/aft)
 "Ny" = (
@@ -18922,6 +18933,10 @@
 /obj/structure/closet/emergsuit_wall{
 	dir = 8;
 	pixel_x = -32
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/aft)
@@ -20563,15 +20578,14 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
 	},
-/obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/aux{
 	dir = 5
 	},
 /obj/structure/cable/green{
 	icon_state = "1-6"
+	},
+/obj/structure/disposalpipe/junction/yjunction{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/aft)
@@ -39133,7 +39147,7 @@ gX
 gX
 gX
 gX
-qz
+gX
 qz
 qz
 OQ
@@ -39294,8 +39308,8 @@ qE
 pS
 NG
 Nx
+aT
 gX
-qz
 rC
 rC
 DQ
@@ -39457,7 +39471,7 @@ ne
 Tg
 Vv
 gX
-qz
+gX
 rC
 OQ
 DQ
