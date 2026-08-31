@@ -2763,6 +2763,18 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/dockinghanger)
+"fp" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 1
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/access_shaft/upper)
 "fq" = (
 /obj/structure/cable{
 	icon_state = "4-10"
@@ -10270,6 +10282,9 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/security/holding_cell)
+"tW" = (
+/turf/simulated/wall/r_wall,
+/area/offworld/orbital/station/access_shaft/upper_connector)
 "tX" = (
 /obj/item/radio/intercom/department/security{
 	dir = 1;
@@ -10807,6 +10822,23 @@
 	},
 /turf/simulated/floor/airless,
 /area/offworld/orbital/exterior/engine_core_starboard)
+"uR" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 4
+	},
+/obj/machinery/power/apc{
+	dir = 4;
+	name = "east bump";
+	pixel_x = 24
+	},
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/access_shaft/upper_connector)
 "uS" = (
 /obj/machinery/alarm{
 	dir = 1;
@@ -12183,6 +12215,15 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/access_shaft/upper)
+"xx" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/access_shaft/upper_connector)
 "xy" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 1
@@ -12202,6 +12243,9 @@
 /obj/effect/floor_decal/corner/lightgrey/bordercorner{
 	dir = 4
 	},
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/access_shaft/upper)
 "xA" = (
@@ -12209,6 +12253,9 @@
 	dir = 1;
 	name = "Station Intercom (General)";
 	pixel_y = 21
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/access_shaft/upper)
@@ -12226,6 +12273,9 @@
 	dir = 1;
 	name = "north bump";
 	pixel_y = 24
+	},
+/obj/structure/cable/green{
+	icon_state = "0-8"
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/access_shaft/upper)
@@ -12401,6 +12451,9 @@
 /area/offworld/orbital/station/halls/central)
 "xR" = (
 /obj/machinery/door/airlock/glass,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/access_shaft/upper)
 "xS" = (
@@ -12413,7 +12466,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/access_shaft/upper)
+/area/offworld/orbital/station/access_shaft/upper_connector)
 "xT" = (
 /obj/structure/toilet{
 	dir = 8
@@ -12471,8 +12524,11 @@
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 4
 	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/access_shaft/upper)
+/area/offworld/orbital/station/access_shaft/upper_connector)
 "xZ" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -12540,7 +12596,7 @@
 /obj/structure/window/reinforced,
 /obj/machinery/door/firedoor/border_only,
 /turf/simulated/floor/plating,
-/area/offworld/orbital/station/access_shaft/upper)
+/area/offworld/orbital/station/access_shaft/upper_connector)
 "ye" = (
 /obj/effect/floor_decal/borderfloor/corner,
 /obj/effect/floor_decal/corner/orange/bordercorner,
@@ -12566,8 +12622,11 @@
 	dir = 8;
 	pixel_x = 26
 	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/access_shaft/upper)
+/area/offworld/orbital/station/access_shaft/upper_connector)
 "yh" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -12635,7 +12694,7 @@
 	},
 /obj/machinery/door/firedoor/border_only,
 /turf/simulated/floor/plating,
-/area/offworld/orbital/station/access_shaft/upper)
+/area/offworld/orbital/station/access_shaft/upper_connector)
 "yn" = (
 /obj/structure/particle_accelerator/end_cap{
 	dir = 1
@@ -12677,7 +12736,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/access_shaft/upper)
+/area/offworld/orbital/station/access_shaft/upper_connector)
 "yr" = (
 /turf/simulated/wall/r_wall,
 /area/offworld/orbital/exterior/engine_core_starboard)
@@ -12703,8 +12762,11 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/access_shaft/upper)
+/area/offworld/orbital/station/access_shaft/upper_connector)
 "yu" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced{
@@ -12719,7 +12781,7 @@
 	},
 /obj/machinery/door/firedoor/border_only,
 /turf/simulated/floor/plating,
-/area/offworld/orbital/station/access_shaft/upper)
+/area/offworld/orbital/station/access_shaft/upper_connector)
 "yv" = (
 /obj/effect/floor_decal/industrial/outline/grey,
 /obj/structure/cable/cyan{
@@ -12751,7 +12813,7 @@
 	pixel_x = -26
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/access_shaft/upper)
+/area/offworld/orbital/station/access_shaft/upper_connector)
 "yy" = (
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/techmaint,
@@ -12822,8 +12884,11 @@
 	c_tag = "REX - Docking Arm Upper North";
 	dir = 8
 	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/access_shaft/upper)
+/area/offworld/orbital/station/access_shaft/upper_connector)
 "yD" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -12835,7 +12900,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/item/geiger/wall/west,
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/access_shaft/upper)
+/area/offworld/orbital/station/access_shaft/upper_connector)
 "yE" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -12849,7 +12914,7 @@
 	pixel_x = 32
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/access_shaft/upper)
+/area/offworld/orbital/station/access_shaft/upper_connector)
 "yF" = (
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/milspec,
@@ -12878,7 +12943,7 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/structure/window/reinforced,
 /turf/simulated/floor/plating,
-/area/offworld/orbital/station/access_shaft/upper)
+/area/offworld/orbital/station/access_shaft/upper_connector)
 "yI" = (
 /obj/structure/bed/chair/bay/chair/padded{
 	dir = 8
@@ -12915,7 +12980,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/access_shaft/upper)
+/area/offworld/orbital/station/access_shaft/upper_connector)
 "yL" = (
 /obj/structure/cable/yellow{
 	icon_state = "0-4"
@@ -12944,7 +13009,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/access_shaft/upper)
+/area/offworld/orbital/station/access_shaft/upper_connector)
 "yO" = (
 /obj/structure/transit_tube{
 	icon_state = "E-NW"
@@ -12974,7 +13039,7 @@
 	dir = 6
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/access_shaft/upper)
+/area/offworld/orbital/station/access_shaft/upper_connector)
 "yR" = (
 /obj/item/tool/wirecutters,
 /turf/simulated/floor/airless,
@@ -12986,7 +13051,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/access_shaft/upper)
+/area/offworld/orbital/station/access_shaft/upper_connector)
 "yT" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 4
@@ -13009,7 +13074,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/offworld/orbital/station/access_shaft/upper)
+/area/offworld/orbital/station/access_shaft/upper_connector)
 "yV" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/industrial/danger,
@@ -13021,12 +13086,12 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/access_shaft/upper)
+/area/offworld/orbital/station/access_shaft/upper_connector)
 "yW" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/industrial/danger,
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/access_shaft/upper)
+/area/offworld/orbital/station/access_shaft/upper_connector)
 "yX" = (
 /obj/machinery/shield_diffuser,
 /obj/effect/floor_decal/industrial/hatch/yellow,
@@ -13037,7 +13102,7 @@
 	locked = 1
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/offworld/orbital/station/access_shaft/upper)
+/area/offworld/orbital/station/access_shaft/upper_connector)
 "yY" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/grille,
@@ -13088,7 +13153,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/access_shaft/upper)
+/area/offworld/orbital/station/access_shaft/upper_connector)
 "zc" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -13103,7 +13168,7 @@
 	c_tag = "REX - Docking Arm Upper Airlock"
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/access_shaft/upper)
+/area/offworld/orbital/station/access_shaft/upper_connector)
 "zd" = (
 /obj/machinery/door/airlock/glass_engineering{
 	req_one_access = null
@@ -13132,7 +13197,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/offworld/orbital/station/access_shaft/upper)
+/area/offworld/orbital/station/access_shaft/upper_connector)
 "zg" = (
 /turf/simulated/mineral/ignore_cavegen,
 /area/ai_sat/core_external)
@@ -13153,7 +13218,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/access_shaft/upper)
+/area/offworld/orbital/station/access_shaft/upper_connector)
 "zi" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -13165,7 +13230,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/access_shaft/upper)
+/area/offworld/orbital/station/access_shaft/upper_connector)
 "zj" = (
 /obj/structure/table/glass,
 /obj/random/flashlight,
@@ -14536,7 +14601,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/access_shaft/upper)
+/area/offworld/orbital/station/access_shaft/upper_connector)
 "BG" = (
 /obj/machinery/camera/network/engineering_outpost{
 	dir = 1;
@@ -33335,24 +33400,24 @@ cX
 cX
 cX
 cX
-rG
-rG
+tW
+tW
 yu
 ym
 ym
 ym
 yH
-rG
-rG
-rG
-rG
-rG
-rG
+tW
+tW
+tW
+tW
+tW
+tW
 yu
 ym
 ym
 yd
-rG
+tW
 rG
 ws
 wU
@@ -33497,7 +33562,7 @@ cX
 cX
 cX
 cX
-rG
+tW
 zb
 yQ
 xS
@@ -33659,16 +33724,16 @@ cX
 cX
 cX
 cX
-rG
+tW
 zc
 yS
-xY
-xY
-xY
+xx
+xx
+xx
 yN
-xY
+xx
 yE
-xY
+uR
 yC
 xY
 xY
@@ -33821,24 +33886,24 @@ cX
 cX
 cX
 cX
-rG
+tW
 zf
 yU
-rG
+tW
 yu
 ym
 yd
-rG
-rG
-rG
-rG
-rG
+tW
+tW
+tW
+tW
+tW
 yu
 ym
 yd
-rG
-rG
-rG
+tW
+tW
+tW
 rG
 xA
 wY
@@ -33983,10 +34048,10 @@ cX
 cX
 cX
 cX
-rG
+tW
 zh
 yV
-rG
+tW
 cX
 cX
 cX
@@ -34002,7 +34067,7 @@ cX
 cX
 cX
 vK
-ws
+fp
 xe
 wO
 rG
@@ -34145,10 +34210,10 @@ cX
 cX
 cX
 cX
-rG
+tW
 zi
 yW
-rG
+tW
 cX
 cX
 cX
@@ -34164,7 +34229,7 @@ cX
 cX
 cX
 vL
-ws
+fp
 xg
 rG
 rG
@@ -34307,10 +34372,10 @@ cX
 cX
 cX
 cX
-rG
+tW
 yX
 yX
-rG
+tW
 cX
 cX
 cX
@@ -34326,7 +34391,7 @@ cX
 cX
 cX
 vL
-ws
+fp
 xh
 rG
 cX
@@ -34488,7 +34553,7 @@ cX
 cX
 cX
 vM
-ws
+fp
 xg
 rG
 cX
