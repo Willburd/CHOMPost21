@@ -12491,14 +12491,10 @@
 /area/offworld/orbital/station/medical_treatment)
 "xV" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume,
-/obj/machinery/airlock_sensor{
-	pixel_y = 32
-	},
 /obj/effect/floor_decal/corner/brown/border{
 	dir = 1
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
-/obj/effect/map_helper/airlock/sensor/chamber_sensor,
 /turf/simulated/floor/tiled/steel_grid,
 /area/offworld/orbital/station/starboard_airlock)
 "xW" = (
@@ -13803,6 +13799,11 @@
 /obj/machinery/shield_diffuser,
 /obj/effect/map_helper/airlock/door/ext_door,
 /obj/effect/map_helper/airlock/sensor/ext_sensor,
+/obj/machinery/airlock_sensor/airlock_exterior/shuttle{
+	pixel_x = 9;
+	dir = 4;
+	pixel_y = 25
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/starboard_airlock)
 "Ak" = (
@@ -14101,14 +14102,6 @@
 /obj/machinery/camera/network/engineering_outpost{
 	c_tag = "REX - Belter Pad";
 	dir = 4
-	},
-/turf/simulated/floor/airless,
-/area/offworld/orbital/exterior)
-"AJ" = (
-/obj/machinery/airlock_sensor/airlock_exterior/shuttle{
-	pixel_x = -24;
-	dir = 4;
-	pixel_y = -7
 	},
 /turf/simulated/floor/airless,
 /area/offworld/orbital/exterior)
@@ -21057,6 +21050,10 @@
 	c_tag = "REX - Yard Access Airlock"
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
+/obj/machinery/airlock_sensor{
+	pixel_y = 23
+	},
+/obj/effect/map_helper/airlock/sensor/chamber_sensor,
 /turf/simulated/floor/tiled/steel_grid,
 /area/offworld/orbital/station/starboard_airlock)
 "ZC" = (
@@ -43652,7 +43649,7 @@ qz
 qz
 qz
 qz
-AJ
+tP
 tP
 tP
 tP
