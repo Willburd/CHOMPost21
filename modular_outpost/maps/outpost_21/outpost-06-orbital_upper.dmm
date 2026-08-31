@@ -880,11 +880,8 @@
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/borderfloor,
-/obj/machinery/firealarm{
-	dir = 1;
-	pixel_y = -26
-	},
 /obj/effect/floor_decal/corner/brown/border,
+/obj/item/geiger/wall/south,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/dockingarm)
 "bS" = (
@@ -2364,6 +2361,7 @@
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 8
 	},
+/obj/item/geiger/wall/west,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/aft)
 "eD" = (
@@ -7050,7 +7048,6 @@
 /area/ai_upload)
 "nU" = (
 /obj/structure/table/gamblingtable,
-/obj/item/binoculars,
 /obj/effect/floor_decal/spline/plain{
 	dir = 4
 	},
@@ -9727,6 +9724,10 @@
 /obj/effect/floor_decal/corner/brown/border{
 	dir = 10
 	},
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -26
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/dockingarm)
 "sU" = (
@@ -12117,6 +12118,13 @@
 /obj/machinery/light,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/access_shaft/upper)
+"xi" = (
+/obj/structure/cable/yellow{
+	icon_state = "2-4"
+	},
+/obj/item/geiger/wall/west,
+/turf/simulated/floor/airless,
+/area/offworld/orbital/exterior/engine_core_starboard)
 "xj" = (
 /obj/structure/particle_accelerator/fuel_chamber{
 	dir = 1
@@ -13372,6 +13380,7 @@
 /obj/effect/floor_decal/corner/orange/border{
 	dir = 8
 	},
+/obj/item/geiger/wall/west,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/aft)
 "zq" = (
@@ -13441,6 +13450,16 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/fore)
+"zw" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 6
+	},
+/obj/machinery/computer/security/telescreen/entertainment{
+	pixel_x = 32;
+	pixel_y = -3
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/power_distribution)
 "zx" = (
 /obj/effect/floor_decal/industrial/rad_floor/red,
 /turf/simulated/floor/airless,
@@ -14434,6 +14453,22 @@
 /obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/wall/r_wall,
 /area/ai_upload_foyer)
+"Bf" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/lightgrey/border,
+/obj/machinery/light,
+/obj/item/geiger/wall/south,
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/access_shaft/upper)
 "Bg" = (
 /obj/machinery/door/window/survival_pod,
 /obj/structure/bed/chair/bay/shuttle{
@@ -14579,6 +14614,7 @@
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/blue/border,
 /obj/item/extraction_pack,
+/obj/item/geiger/wall/south,
 /turf/simulated/floor/tiled/old_tile/white,
 /area/offworld/orbital/station/medical_treatment)
 "Bz" = (
@@ -14713,6 +14749,13 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/security/holding_cell)
+"BK" = (
+/obj/structure/table/gamblingtable,
+/obj/machinery/computer/security/telescreen/entertainment{
+	pixel_y = -3
+	},
+/turf/simulated/floor/carpet/turcarpet,
+/area/offworld/orbital/station/bar)
 "BL" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -35771,7 +35814,7 @@ cX
 cX
 vL
 fp
-xh
+Bf
 rG
 cX
 cX
@@ -40672,7 +40715,7 @@ zu
 Lz
 zr
 Kh
-hS
+zw
 Pe
 Ck
 EU
@@ -41737,7 +41780,7 @@ rW
 Qy
 HJ
 FR
-Ev
+BK
 rS
 rR
 lA
@@ -43107,7 +43150,7 @@ aR
 aU
 aR
 co
-xI
+xi
 cF
 cF
 jj

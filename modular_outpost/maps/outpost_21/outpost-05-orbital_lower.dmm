@@ -4,6 +4,10 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
+/obj/machinery/computer/security/telescreen/entertainment{
+	pixel_x = -32;
+	pixel_y = -3
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/orbital/lower/aft)
 "ab" = (
@@ -1541,6 +1545,7 @@
 /area/offworld/orbital/station/atmos_primary)
 "dy" = (
 /obj/structure/railing/grey,
+/obj/item/geiger/wall/east,
 /turf/simulated/floor/airless,
 /area/offworld/orbital/exterior/emitter_cooling)
 "dz" = (
@@ -3063,6 +3068,12 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/halls/rust_entry)
+"hj" = (
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/industrial/danger,
+/obj/item/geiger/wall/south,
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/lower/port)
 "hk" = (
 /obj/machinery/atmospherics/binary/volume_pump,
 /turf/simulated/floor/plating,
@@ -4350,16 +4361,6 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/lower/port)
-"jI" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 1
-	},
-/obj/item/geiger/wall/north,
-/obj/effect/floor_decal/industrial/danger{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/halls/lower/port)
 "jJ" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -5215,6 +5216,10 @@
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 8
 	},
+/obj/machinery/computer/security/telescreen/entertainment{
+	pixel_x = -32;
+	pixel_y = -3
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/stairs_lower)
 "lf" = (
@@ -5410,11 +5415,12 @@
 /obj/structure/table/standard,
 /obj/item/book/manual/rust_engine,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/ai_status_display{
-	pixel_x = -32
-	},
 /obj/effect/floor_decal/corner/orange{
 	dir = 9
+	},
+/obj/machinery/computer/security/telescreen/entertainment{
+	pixel_x = -32;
+	pixel_y = -3
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/rust_control)
@@ -6838,6 +6844,9 @@
 /obj/machinery/camera/network/engineering_outpost{
 	c_tag = "REX - RUST Control Room";
 	dir = 4
+	},
+/obj/machinery/ai_status_display{
+	pixel_x = -32
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/rust_control)
@@ -10589,6 +10598,7 @@
 /obj/effect/floor_decal/corner/orange{
 	dir = 9
 	},
+/obj/item/geiger/wall/west,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/lower/fore)
 "vN" = (
@@ -10598,6 +10608,39 @@
 /obj/effect/floor_decal/industrial/warning/full,
 /turf/simulated/floor/airless,
 /area/offworld/orbital/exterior/rust_cooling)
+"vO" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 10
+	},
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/item/geiger/wall/south,
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/beam_emitter)
+"vP" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 6
+	},
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/obj/machinery/computer/security/telescreen/entertainment{
+	pixel_x = 32;
+	pixel_y = -3
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/beam_emitter)
+"vQ" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/corner/orange{
+	dir = 10
+	},
+/obj/item/geiger/wall/south,
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/lower/fore)
 "vR" = (
 /obj/machinery/door/airlock/maintenance/int,
 /obj/effect/landmark/step_trap,
@@ -27796,7 +27839,7 @@ dl
 by
 it
 lF
-lq
+rM
 it
 xM
 xM
@@ -30888,10 +30931,10 @@ tv
 tv
 ka
 pT
-jI
+cQ
 ff
 ff
-iA
+hj
 gn
 rn
 hP
@@ -31808,7 +31851,7 @@ cF
 qs
 PC
 iI
-Ty
+vQ
 fw
 eW
 eW
@@ -33299,7 +33342,7 @@ up
 jJ
 qE
 xw
-Of
+vO
 cB
 rT
 qw
@@ -33601,7 +33644,7 @@ rQ
 xu
 rU
 aX
-aX
+vP
 uN
 rN
 ED

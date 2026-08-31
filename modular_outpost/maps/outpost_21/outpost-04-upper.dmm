@@ -5311,14 +5311,10 @@
 /obj/structure/table/rack,
 /obj/fiftyspawner/uranium,
 /obj/fiftyspawner/uranium,
-/obj/fiftyspawner/uranium,
-/obj/fiftyspawner/uranium,
 /turf/simulated/floor/plating,
 /area/muriki/rooftop/medgen)
 "amK" = (
 /obj/structure/table/rack,
-/obj/fiftyspawner/uranium,
-/obj/fiftyspawner/uranium,
 /obj/fiftyspawner/uranium,
 /obj/fiftyspawner/uranium,
 /obj/machinery/light/small,
@@ -6863,6 +6859,10 @@
 	},
 /obj/effect/floor_decal/milspec/color/purple/corner{
 	dir = 8
+	},
+/obj/machinery/computer/security/telescreen/entertainment{
+	pixel_x = -32;
+	pixel_y = -3
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/supermatter)
@@ -19927,12 +19927,6 @@
 /obj/structure/table/rack,
 /obj/fiftyspawner/uranium,
 /obj/fiftyspawner/uranium,
-/obj/fiftyspawner/uranium,
-/obj/fiftyspawner/uranium,
-/obj/fiftyspawner/uranium,
-/obj/fiftyspawner/uranium,
-/obj/fiftyspawner/uranium,
-/obj/fiftyspawner/uranium,
 /turf/simulated/floor/plating,
 /area/maintenance/gravgen)
 "fhu" = (
@@ -22610,7 +22604,9 @@
 /area/rnd/hallway/phoronicsmainhall)
 "gKp" = (
 /obj/structure/table/woodentable,
-/obj/item/toy/griffin,
+/obj/machinery/computer/security/telescreen/entertainment{
+	pixel_x = -6
+	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/cargupbreak)
 "gKI" = (
@@ -24170,6 +24166,7 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 5
 	},
+/obj/item/geiger/wall/east,
 /turf/simulated/floor/wood,
 /area/crew_quarters/heads/chief)
 "hBM" = (
@@ -32779,12 +32776,6 @@
 /obj/structure/table/rack,
 /obj/fiftyspawner/uranium,
 /obj/fiftyspawner/uranium,
-/obj/fiftyspawner/uranium,
-/obj/fiftyspawner/uranium,
-/obj/fiftyspawner/uranium,
-/obj/fiftyspawner/uranium,
-/obj/fiftyspawner/uranium,
-/obj/fiftyspawner/uranium,
 /turf/simulated/floor,
 /area/muriki/rooftop/scigen)
 "mcZ" = (
@@ -33990,10 +33981,6 @@
 /obj/item/tape_roll,
 /obj/item/gun/energy/stunrevolver,
 /obj/item/clothing/accessory/holster/hip,
-/obj/item/geiger/wall/west{
-	dir = 4;
-	pixel_x = 28
-	},
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 4
 	},
@@ -34003,6 +33990,10 @@
 	},
 /obj/effect/landmark{
 	name = "nukeitem"
+	},
+/obj/machinery/computer/security/telescreen/entertainment{
+	pixel_x = 32;
+	pixel_y = -3
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/heads/chief)
@@ -38811,10 +38802,6 @@
 /obj/structure/cable/green{
 	icon_state = "0-4"
 	},
-/obj/fiftyspawner/uranium,
-/obj/fiftyspawner/uranium,
-/obj/fiftyspawner/uranium,
-/obj/fiftyspawner/uranium,
 /obj/fiftyspawner/uranium,
 /turf/simulated/floor/plating,
 /area/muriki/rooftop/cargen)
@@ -45059,6 +45046,7 @@
 /obj/structure/sign/scenery/map/right_outpost21{
 	pixel_y = 32
 	},
+/obj/item/toy/griffin,
 /turf/simulated/floor/tiled,
 /area/quartermaster/cargupbreak)
 "syg" = (
@@ -51966,10 +51954,7 @@
 /obj/effect/floor_decal/corner/orange/full{
 	dir = 4
 	},
-/obj/item/geiger/wall/west{
-	dir = 4;
-	pixel_x = 28
-	},
+/obj/item/geiger/wall/east,
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/engineering_hallway)
 "vVs" = (

@@ -25384,6 +25384,9 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/machinery/computer/security/telescreen/entertainment{
+	pixel_y = -35
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/courtroom)
 "aVm" = (
@@ -41361,6 +41364,9 @@
 /obj/item/deck/cards,
 /obj/item/dice{
 	pixel_x = 12
+	},
+/obj/machinery/computer/security/telescreen/entertainment{
+	pixel_y = -35
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/brig)
@@ -64884,6 +64890,9 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
 	},
+/obj/machinery/computer/security/telescreen/entertainment{
+	pixel_y = 28
+	},
 /turf/simulated/floor/wood/hardwood/parquet,
 /area/maintenance/research)
 "czy" = (
@@ -84431,12 +84440,11 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/atmos)
 "qXw" = (
-/obj/machinery/firealarm{
-	dir = 1;
-	pixel_y = -26
-	},
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/lightgrey/border,
+/obj/machinery/computer/security/telescreen/entertainment{
+	pixel_y = -35
+	},
 /turf/simulated/floor/tiled/dark,
 /area/muriki/crew/vr_train)
 "qXV" = (
@@ -88355,6 +88363,10 @@
 	},
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 8
+	},
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -28
 	},
 /turf/simulated/floor/tiled/dark,
 /area/muriki/crew/vr_train)
