@@ -473,9 +473,6 @@
 /turf/simulated/floor/tiled/milspec/airless,
 /area/offworld/orbital/station/storage_engine_core)
 "bd" = (
-/obj/structure/cable/orange{
-	icon_state = "1-2"
-	},
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 10
 	},
@@ -745,17 +742,11 @@
 /turf/simulated/mineral/floor/ignore_cavegen/turfpack/airless,
 /area/offworld/orbital/exterior/engine_core_port)
 "bF" = (
-/obj/structure/cable/yellow{
-	icon_state = "1-2"
+/obj/machinery/light/floortube{
+	dir = 1
 	},
-/obj/structure/cable/yellow{
-	icon_state = "1-6"
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals_central7{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/power_distribution)
+/turf/simulated/floor/airless,
+/area/offworld/orbital/exterior/engine_core_starboard)
 "bG" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -1151,12 +1142,11 @@
 /turf/simulated/wall/r_wall,
 /area/ai)
 "cq" = (
-/obj/machinery/power/breakerbox{
-	name = "PTL Power Input Breaker";
-	RCon_tag = "PTL Emergency Shutoff"
-	},
 /obj/machinery/light,
-/turf/simulated/floor,
+/obj/effect/floor_decal/corner/orange{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/power_distribution)
 "cr" = (
 /obj/machinery/status_display,
@@ -1802,10 +1792,7 @@
 	dir = 4
 	},
 /obj/structure/cable/green{
-	icon_state = "6-8"
-	},
-/obj/structure/cable/green{
-	icon_state = "5-8"
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/power_distribution)
@@ -2123,16 +2110,17 @@
 /turf/simulated/floor/tiled/dark,
 /area/ai_sat/access_shaft)
 "ej" = (
-/obj/effect/floor_decal/corner/orange{
-	dir = 5
-	},
 /obj/machinery/light_switch/breaker{
 	pixel_y = 28
 	},
 /obj/machinery/camera/network/engineering_outpost{
 	c_tag = "REX - Power Distribution North"
 	},
-/turf/simulated/floor/tiled/milspec,
+/obj/machinery/power/breakerbox{
+	name = "PTL Beam Power Input Breaker";
+	RCon_tag = "PTL Emergency Beam Shutoff"
+	},
+/turf/simulated/floor,
 /area/offworld/orbital/station/power_distribution)
 "ek" = (
 /obj/structure/cable/cyan,
@@ -5136,9 +5124,6 @@
 /obj/effect/floor_decal/corner/orange{
 	dir = 10
 	},
-/obj/structure/cable/yellow{
-	icon_state = "4-9"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/aux,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/power_distribution)
@@ -5184,9 +5169,6 @@
 "ka" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 8
-	},
-/obj/structure/cable/orange{
-	icon_state = "1-8"
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/power_distribution)
@@ -5410,12 +5392,11 @@
 /turf/simulated/floor/tiled/old_tile/white,
 /area/offworld/orbital/station/medical_treatment)
 "kB" = (
-/obj/machinery/power/sensor{
-	name = "Powernet Sensor - PLT Platform Mainline";
-	name_tag = "PTL Platform Mainline"
-	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/power_distribution)
@@ -5846,6 +5827,9 @@
 /obj/structure/disposalpipe/segment,
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/aux,
+/obj/structure/cable/orange{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/power_distribution)
 "lu" = (
@@ -6848,11 +6832,14 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/stairs_upper)
 "nD" = (
-/obj/structure/cable/green{
-	icon_state = "1-10"
-	},
 /obj/effect/floor_decal/corner/orange{
 	dir = 1
+	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/cable/orange{
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/power_distribution)
@@ -7276,10 +7263,6 @@
 /turf/simulated/floor/plating,
 /area/ai_sat/solar_airlock)
 "oo" = (
-/obj/machinery/power/sensor{
-	name = "Powernet Sensor - PLT Platform Input";
-	name_tag = "PTL Platform Input"
-	},
 /obj/structure/cable/yellow{
 	icon_state = "2-8"
 	},
@@ -8819,11 +8802,11 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/starboard)
 "ro" = (
-/obj/structure/cable/yellow{
-	icon_state = "2-8"
+/obj/machinery/light/spot{
+	dir = 1
 	},
-/turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/power_distribution)
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/airless,
+/area/offworld/orbital/exterior/engine_core_starboard)
 "rp" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -10868,7 +10851,7 @@
 	dir = 4
 	},
 /obj/structure/cable/orange{
-	icon_state = "1-2"
+	icon_state = "1-8"
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/power_distribution)
@@ -10976,11 +10959,11 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/central)
 "vd" = (
-/obj/structure/cable/yellow{
-	icon_state = "4-9"
+/obj/machinery/light/spot{
+	dir = 1
 	},
-/turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/power_distribution)
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/airless,
+/area/offworld/orbital/exterior/engine_core_port)
 "ve" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
@@ -11373,11 +11356,11 @@
 /turf/simulated/floor/wood,
 /area/ai)
 "vT" = (
-/obj/structure/cable/green{
-	icon_state = "2-9"
-	},
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 6
+	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/power_distribution)
@@ -12492,14 +12475,10 @@
 /area/offworld/orbital/station/medical_treatment)
 "xV" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume,
-/obj/machinery/airlock_sensor{
-	pixel_y = 32
-	},
 /obj/effect/floor_decal/corner/brown/border{
 	dir = 1
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
-/obj/effect/map_helper/airlock/sensor/chamber_sensor,
 /turf/simulated/floor/tiled/steel_grid,
 /area/offworld/orbital/station/starboard_airlock)
 "xW" = (
@@ -13330,11 +13309,14 @@
 /area/offworld/orbital/station/south_engine_access_east)
 "zt" = (
 /obj/structure/cable/yellow{
-	icon_state = "2-4"
+	icon_state = "1-2"
 	},
-/obj/effect/floor_decal/eshui/emblem/eshui_small_l,
-/turf/simulated/floor/airless,
-/area/offworld/orbital/exterior/engine_core_starboard)
+/obj/machinery/power/sensor{
+	name = "Powernet Sensor - PLT Platform Input";
+	name_tag = "PTL Platform Input"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/power_distribution)
 "zu" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/aux,
 /obj/effect/floor_decal/corner/orange{
@@ -13811,6 +13793,11 @@
 /obj/machinery/shield_diffuser,
 /obj/effect/map_helper/airlock/door/ext_door,
 /obj/effect/map_helper/airlock/sensor/ext_sensor,
+/obj/machinery/airlock_sensor/airlock_exterior/shuttle{
+	pixel_x = 9;
+	dir = 4;
+	pixel_y = 25
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/starboard_airlock)
 "Ak" = (
@@ -14113,13 +14100,14 @@
 /turf/simulated/floor/airless,
 /area/offworld/orbital/exterior)
 "AJ" = (
-/obj/machinery/airlock_sensor/airlock_exterior/shuttle{
-	pixel_x = -24;
-	dir = 4;
-	pixel_y = -7
+/obj/effect/floor_decal/corner/orange{
+	dir = 5
 	},
-/turf/simulated/floor/airless,
-/area/offworld/orbital/exterior)
+/obj/structure/cable/yellow{
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/power_distribution)
 "AK" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -14672,24 +14660,6 @@
 	dir = 1
 	},
 /turf/simulated/floor/airless,
-/area/offworld/orbital/exterior/engine_core_starboard)
-"BP" = (
-/obj/machinery/light/spot{
-	dir = 1
-	},
-/turf/simulated/mineral/floor/ignore_cavegen/turfpack/airless,
-/area/offworld/orbital/exterior/engine_core_starboard)
-"BQ" = (
-/obj/machinery/light/spot{
-	dir = 1
-	},
-/turf/simulated/mineral/floor/ignore_cavegen/turfpack/airless,
-/area/offworld/orbital/exterior/engine_core_port)
-"BR" = (
-/obj/machinery/light/floortube{
-	dir = 1
-	},
-/turf/simulated/floor/airless,
 /area/offworld/orbital/exterior/engine_core_port)
 "BS" = (
 /obj/machinery/hologram/holopad,
@@ -14861,9 +14831,6 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/power_distribution)
 "CL" = (
-/obj/structure/cable/orange{
-	icon_state = "1-2"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
 	},
@@ -14932,7 +14899,6 @@
 /obj/effect/floor_decal/corner/orange{
 	dir = 5
 	},
-/obj/effect/floor_decal/eshui/emblem/eshui_small_r,
 /turf/simulated/floor/airless,
 /area/offworld/orbital/exterior/engine_core_port)
 "Dd" = (
@@ -15439,9 +15405,6 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ai)
 "Fc" = (
-/obj/structure/cable/orange{
-	icon_state = "1-2"
-	},
 /obj/structure/bed/chair/comfy/orange{
 	dir = 8
 	},
@@ -15474,6 +15437,12 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/industrial/warning/dust/corner,
+/obj/structure/cable/green{
+	icon_state = "1-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/power_distribution)
 "Fk" = (
@@ -16461,9 +16430,6 @@
 /turf/simulated/floor/tiled/old_tile/white,
 /area/ai_upload)
 "Jx" = (
-/obj/structure/cable/orange{
-	icon_state = "1-2"
-	},
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 9
 	},
@@ -18170,10 +18136,6 @@
 /obj/structure/prop/rock/small/alt,
 /turf/simulated/mineral/floor/ignore_cavegen/turfpack/airless,
 /area/offworld/orbital/exterior)
-"Py" = (
-/obj/effect/floor_decal/eshui/emblem/eshui_small_r,
-/turf/simulated/floor/airless,
-/area/offworld/orbital/exterior/engine_core_starboard)
 "Pz" = (
 /obj/effect/floor_decal/spline/fancy/wood,
 /obj/structure/panic_button{
@@ -19026,8 +18988,9 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/obj/structure/cable/yellow{
-	icon_state = "6-8"
+/obj/machinery/power/sensor{
+	name = "Powernet Sensor - PLT Platform Mainline";
+	name_tag = "PTL Platform Mainline"
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/power_distribution)
@@ -19660,9 +19623,6 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/structure/cable/orange{
-	icon_state = "1-6"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
 	},
@@ -20081,12 +20041,6 @@
 /obj/structure/lattice,
 /turf/simulated/mineral/floor/ignore_cavegen/turfpack/airless,
 /area/offworld/orbital/exterior/engine_core_starboard)
-"VF" = (
-/obj/structure/cable/orange{
-	icon_state = "2-9"
-	},
-/turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/power_distribution)
 "VG" = (
 /turf/simulated/wall/r_wall,
 /area/muriki/elevator/yardupper)
@@ -20304,10 +20258,6 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/ai_sat/fore_airlock)
-"Wy" = (
-/obj/effect/floor_decal/eshui/emblem/eshui_small_l,
-/turf/simulated/floor/airless,
-/area/offworld/orbital/exterior/engine_core_port)
 "Wz" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/blue/border,
@@ -21098,6 +21048,10 @@
 	c_tag = "REX - Yard Access Airlock"
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
+/obj/machinery/airlock_sensor{
+	pixel_y = 23
+	},
+/obj/effect/map_helper/airlock/sensor/chamber_sensor,
 /turf/simulated/floor/tiled/steel_grid,
 /area/offworld/orbital/station/starboard_airlock)
 "ZC" = (
@@ -34333,7 +34287,7 @@ Br
 br
 UF
 Bu
-BQ
+vd
 aL
 aw
 aw
@@ -34649,7 +34603,7 @@ fj
 OQ
 br
 br
-Wy
+br
 br
 br
 br
@@ -34814,7 +34768,7 @@ rV
 tG
 br
 gD
-BR
+BO
 fW
 br
 bC
@@ -35629,7 +35583,7 @@ br
 br
 hL
 Bu
-BQ
+vd
 aL
 aw
 aw
@@ -38216,13 +38170,13 @@ tI
 RK
 Hy
 zq
-Rt
+AJ
 kB
-Jg
-ro
-oo
-bF
 VJ
+oo
+oo
+VJ
+zt
 cD
 OP
 aD
@@ -38384,7 +38338,7 @@ vF
 oE
 hV
 HI
-vd
+Jg
 Lt
 Hc
 AF
@@ -39032,7 +38986,7 @@ vG
 vE
 jL
 dC
-VF
+Jg
 ka
 Aa
 JJ
@@ -41625,7 +41579,7 @@ aR
 aR
 co
 Bq
-BP
+ro
 aR
 cC
 Zt
@@ -41786,7 +41740,7 @@ aR
 aU
 aR
 co
-zt
+xI
 cF
 cF
 jj
@@ -41951,7 +41905,7 @@ tw
 Gf
 Zt
 tj
-BO
+bF
 sB
 SI
 Zt
@@ -42434,7 +42388,7 @@ ba
 ba
 Bq
 Bo
-Py
+Zt
 Zt
 Zt
 BS
@@ -42597,7 +42551,7 @@ aU
 aR
 co
 Bq
-BP
+ro
 aR
 Zt
 Zt
@@ -43693,7 +43647,7 @@ qz
 qz
 qz
 qz
-AJ
+tP
 tP
 tP
 tP
