@@ -63,6 +63,28 @@
 	for(var/x = 1 to world.maxx)
 		for(var/y = 1 to world.maxy)
 			var/turf/tile = locate(x, y, zLevel)
+			// Outpost 21 edit begin - Hide map spoilers
+			var/static_color = pick("#FFFFFF22","#FFFFFF11","#FFFFFF44","#FFFFFF55")
+			var/area/check_area = get_area(tile)
+			if(tile.z == /datum/map_z_level/outpost/deepdark::z )
+				if(prob(90)) // Let SOME things poke through the static
+					canvas.DrawBox(static_color, x, y) // Censor
+					continue
+			if(istype(check_area, /area/muriki/processor))
+				if(IS_OBSTACLE(tile))
+					canvas.DrawBox(HOLOMAP_OBSTACLE, x, y) // Keep the walls
+				else
+					canvas.DrawBox(static_color, x, y) // Censor
+				continue
+			if(tile.z == /datum/map_z_level/outpost/orbital_facility_lower::z || tile.z == /datum/map_z_level/outpost/orbital_facility_upper::z)
+				if(prob(90)) // Let SOME things poke through the static
+					if(istype(check_area, /area/offworld/orbital/exterior/yardzone) \
+					|| istype(check_area, /area/submap/outpost21/asteroid_generic) \
+					|| istype(check_area, /area/submap/outpost21/structure_generic) \
+					|| tile.x >= 145)
+						canvas.DrawBox(static_color, x, y) // Censor
+						continue
+			// Outpost 21 edit end
 			if(tile && tile.loc:holomapAlwaysDraw())
 				if(IS_ROCK(tile))
 					canvas.DrawBox(HOLOMAP_ROCK, x, y)
