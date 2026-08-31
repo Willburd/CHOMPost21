@@ -10575,6 +10575,19 @@
 	},
 /turf/simulated/floor/tiled/turfpack/muriki,
 /area/specialty/expie_clubhouse)
+"awm" = (
+/obj/structure/table/standard,
+/obj/random/medical,
+/obj/random/medical,
+/obj/random/medical,
+/obj/random/medical,
+/obj/random/medical,
+/obj/item/storage/pill_bottle/maintenance{
+	pixel_x = 14;
+	pixel_y = -3
+	},
+/turf/simulated/floor/carpet/blucarpet/turfpack/muriki,
+/area/specialty/expie_clubhouse)
 "awt" = (
 /obj/structure/sign/warning/acid{
 	pixel_y = 32
@@ -119862,7 +119875,7 @@ all
 akc
 akc
 akc
-ake
+awm
 ajR
 amm
 ajQ

@@ -20759,6 +20759,22 @@
 /obj/effect/shuttle_landmark/premade/orbital_escape/pod_one/landing_site,
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
 /area/mine/explored/muriki/mountaineast)
+"aWl" = (
+/obj/structure/simple_door/wood,
+/obj/item/reagent_containers/glass/bucket/prankster_mix,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
+"aWm" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/item/storage/pill_bottle/maintenance{
+	pixel_x = 7;
+	pixel_y = 4
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/specialty/stowaway_clubhouse)
 "aWq" = (
 /obj/machinery/light{
 	dir = 4
@@ -42809,6 +42825,10 @@
 /obj/random/flashlight,
 /obj/random/flashlight,
 /obj/random/flashlight,
+/obj/item/reagent_containers/pill/maintenance{
+	pixel_x = -11;
+	pixel_y = -11
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/medbay_aft)
 "icN" = (
@@ -155003,7 +155023,7 @@ axy
 axy
 axy
 axP
-axA
+aWl
 axP
 ayj
 aya
@@ -155974,7 +155994,7 @@ rJa
 axT
 axy
 axy
-ayn
+aWm
 axC
 ayg
 aym

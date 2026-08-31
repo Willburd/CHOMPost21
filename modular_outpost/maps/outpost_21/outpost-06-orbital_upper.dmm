@@ -11641,6 +11641,11 @@
 	},
 /turf/simulated/floor/tiled/milspec/airless,
 /area/offworld/orbital/station/storage_engine_core)
+"wp" = (
+/obj/machinery/pointdefense,
+/obj/effect/floor_decal/industrial/warning/full,
+/turf/simulated/floor/airless,
+/area/ai_sat/core_external)
 "wq" = (
 /obj/structure/bed/chair/sofa/right/orange{
 	dir = 8
@@ -29872,7 +29877,7 @@ ak
 ak
 Ez
 ak
-ak
+wp
 GC
 Oe
 cX
