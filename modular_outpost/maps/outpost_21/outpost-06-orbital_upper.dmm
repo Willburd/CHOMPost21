@@ -9167,6 +9167,7 @@
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/structure/reagent_dispensers/fueltank/high,
 /turf/simulated/floor/tiled/milspec/airless,
 /area/offworld/orbital/station/storage_engine_core)
 "sa" = (
@@ -14666,6 +14667,30 @@
 /obj/item/bedsheet/mime,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/security/holding_cell)
+"BO" = (
+/obj/machinery/light/floortube{
+	dir = 1
+	},
+/turf/simulated/floor/airless,
+/area/offworld/orbital/exterior/engine_core_starboard)
+"BP" = (
+/obj/machinery/light/spot{
+	dir = 1
+	},
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/airless,
+/area/offworld/orbital/exterior/engine_core_starboard)
+"BQ" = (
+/obj/machinery/light/spot{
+	dir = 1
+	},
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/airless,
+/area/offworld/orbital/exterior/engine_core_port)
+"BR" = (
+/obj/machinery/light/floortube{
+	dir = 1
+	},
+/turf/simulated/floor/airless,
+/area/offworld/orbital/exterior/engine_core_port)
 "BS" = (
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/airless,
@@ -34307,8 +34332,8 @@ Bu
 Br
 br
 UF
-aw
-aw
+Bu
+BQ
 aL
 aw
 aw
@@ -34789,7 +34814,7 @@ rV
 tG
 br
 gD
-br
+BR
 fW
 br
 bC
@@ -35603,8 +35628,8 @@ aw
 br
 br
 hL
-aw
-aw
+Bu
+BQ
 aL
 aw
 aw
@@ -41599,8 +41624,8 @@ bX
 aR
 aR
 co
-aR
-aR
+Bq
+BP
 aR
 cC
 Zt
@@ -41926,7 +41951,7 @@ tw
 Gf
 Zt
 tj
-Zt
+BO
 sB
 SI
 Zt
@@ -42571,8 +42596,8 @@ aR
 aU
 aR
 co
-aR
-aR
+Bq
+BP
 aR
 Zt
 Zt
