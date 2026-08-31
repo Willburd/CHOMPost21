@@ -13946,8 +13946,10 @@
 /area/offworld/orbital/station/access_shaft/lower)
 "ZC" = (
 /obj/machinery/atmospherics/omni/atmos_filter{
-	tag_south = 2;
-	tag_west = 1
+	tag_west = 1;
+	tag_east = 2;
+	tag_north = 5;
+	use_power = 0
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/plating,
