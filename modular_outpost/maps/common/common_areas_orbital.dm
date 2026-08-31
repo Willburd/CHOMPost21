@@ -384,6 +384,13 @@ EXTERIOR_AREA_BEHAVIOR(/area/offworld/orbital/exterior/emitter_cooling)
 EXTERIOR_AREA_BEHAVIOR(/area/offworld/orbital/exterior/starboard_solars)
 
 // Power distro
+/area/offworld/orbital/station/engine_primer
+	name = "\improper Orbital Engine Primer"
+	icon_state = "orange"
+	sound_env = SMALL_ENCLOSED
+	ambience = AMBIENCE_SUBSTATION
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+
 /area/offworld/orbital/station/power_distribution
 	name = "\improper Orbital Power Distribution"
 	icon_state = "orange"
