@@ -3063,9 +3063,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/halls/rust_entry)
-"hj" = (
-/turf/simulated/wall/r_wall,
-/area/offworld/orbital/exterior)
 "hk" = (
 /obj/machinery/atmospherics/binary/volume_pump,
 /turf/simulated/floor/plating,
@@ -4402,6 +4399,13 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/beam_emitter)
+"jM" = (
+/obj/machinery/pointdefense{
+	id_tag = "orbital_point_def"
+	},
+/obj/effect/floor_decal/industrial/warning/full,
+/turf/simulated/floor/airless,
+/area/offworld/orbital/station/atmos_primary)
 "jN" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 5
@@ -4420,6 +4424,13 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/lower/port)
+"jP" = (
+/obj/machinery/pointdefense{
+	id_tag = "orbital_point_def"
+	},
+/obj/effect/floor_decal/industrial/warning/full,
+/turf/simulated/floor/airless,
+/area/offworld/orbital/station/access_shaft/lower)
 "jQ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -7000,6 +7011,9 @@
 	dir = 8
 	},
 /obj/structure/window/reinforced,
+/obj/machinery/pointdefense_control{
+	id_tag = "orbital_point_def"
+	},
 /turf/simulated/floor/bluegrid,
 /area/offworld/orbital/station/telecomms)
 "oF" = (
@@ -10535,6 +10549,20 @@
 /obj/structure/trailblazer/yellow,
 /turf/simulated/mineral/floor/ignore_cavegen/turfpack/airless,
 /area/offworld/orbital/exterior/rust_cooling)
+"vI" = (
+/obj/machinery/pointdefense{
+	id_tag = "orbital_point_def"
+	},
+/obj/effect/floor_decal/industrial/warning/full,
+/turf/simulated/floor/airless,
+/area/offworld/orbital/exterior/emitter_cooling)
+"vJ" = (
+/obj/machinery/pointdefense{
+	id_tag = "orbital_point_def"
+	},
+/obj/effect/floor_decal/industrial/warning/full,
+/turf/simulated/floor/airless,
+/area/offworld/orbital/exterior/starboard_solars)
 "vK" = (
 /obj/machinery/atmospherics/binary/pump/high_power{
 	dir = 4
@@ -10544,6 +10572,13 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/beam_emitter)
+"vL" = (
+/obj/machinery/pointdefense{
+	id_tag = "orbital_point_def"
+	},
+/obj/effect/floor_decal/industrial/warning/full,
+/turf/simulated/floor/airless,
+/area/offworld/orbital/exterior)
 "vM" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -10556,6 +10591,13 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/lower/fore)
+"vN" = (
+/obj/machinery/pointdefense{
+	id_tag = "orbital_point_def"
+	},
+/obj/effect/floor_decal/industrial/warning/full,
+/turf/simulated/floor/airless,
+/area/offworld/orbital/exterior/rust_cooling)
 "vR" = (
 /obj/machinery/door/airlock/maintenance/int,
 /obj/effect/landmark/step_trap,
@@ -24837,6 +24879,7 @@ xM
 xM
 xM
 xM
+jP
 xM
 xM
 xM
@@ -24848,8 +24891,7 @@ xM
 xM
 xM
 xM
-xM
-xM
+jP
 xM
 xM
 xM
@@ -25467,11 +25509,11 @@ by
 by
 by
 by
-by
+vI
 di
 di
 di
-by
+vI
 by
 by
 by
@@ -25640,7 +25682,7 @@ bz
 bz
 bz
 vg
-by
+vI
 by
 by
 by
@@ -25779,7 +25821,7 @@ xM
 xM
 xM
 xM
-bH
+vI
 es
 ee
 ee
@@ -27033,7 +27075,7 @@ xM
 xM
 xM
 xM
-RS
+vL
 RS
 RS
 RS
@@ -28588,7 +28630,7 @@ xM
 xM
 xM
 xM
-RS
+jM
 RS
 RS
 RS
@@ -28750,7 +28792,7 @@ xM
 xM
 xM
 xM
-hj
+gn
 RS
 RS
 RS
@@ -28912,7 +28954,7 @@ xM
 xM
 xM
 xM
-hj
+gn
 RS
 RS
 RS
@@ -29074,7 +29116,7 @@ xM
 xM
 xM
 xM
-hj
+gn
 RS
 RS
 RS
@@ -29236,7 +29278,7 @@ xM
 xM
 xM
 xM
-hj
+gn
 RS
 RS
 RS
@@ -29398,7 +29440,7 @@ xM
 xM
 xM
 xM
-hj
+gn
 RS
 RS
 RS
@@ -29466,7 +29508,7 @@ xM
 xM
 xM
 fO
-fO
+vN
 fO
 fO
 eJ
@@ -32547,7 +32589,7 @@ pP
 pM
 pJ
 pE
-eW
+vL
 eW
 xM
 xM
@@ -41983,7 +42025,7 @@ xM
 xM
 xM
 xM
-Ok
+vJ
 Ok
 Ok
 Ok
@@ -42001,7 +42043,7 @@ Ok
 Ok
 Ok
 Ok
-Ok
+vJ
 xM
 xM
 xM

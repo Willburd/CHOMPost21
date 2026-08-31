@@ -568,6 +568,13 @@
 /obj/random/outcrop,
 /turf/simulated/mineral/floor/ignore_cavegen/turfpack/airless,
 /area/offworld/orbital/exterior/engine_core_port)
+"bn" = (
+/obj/machinery/pointdefense{
+	id_tag = "orbital_point_def"
+	},
+/obj/effect/floor_decal/industrial/warning/full,
+/turf/simulated/floor/airless,
+/area/offworld/orbital/exterior)
 "bo" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -1215,6 +1222,13 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/halls/central)
+"cy" = (
+/obj/machinery/pointdefense{
+	id_tag = "orbital_point_def"
+	},
+/obj/effect/floor_decal/industrial/warning/full,
+/turf/simulated/floor/airless,
+/area/offworld/orbital/station/access_shaft/upper)
 "cz" = (
 /obj/structure/window/maintenance_panel,
 /obj/structure/cable/green{
@@ -1778,6 +1792,13 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/storage)
+"dC" = (
+/obj/machinery/pointdefense{
+	id_tag = "orbital_point_def"
+	},
+/obj/effect/floor_decal/industrial/warning/full,
+/turf/simulated/floor/airless,
+/area/space)
 "dD" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
@@ -4664,6 +4685,13 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/aft)
+"iY" = (
+/obj/machinery/pointdefense{
+	id_tag = "orbital_point_def"
+	},
+/obj/effect/floor_decal/industrial/warning/full,
+/turf/simulated/floor/airless,
+/area/ai_sat/power_control)
 "iZ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
@@ -8634,6 +8662,13 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/ai_server_room)
+"qW" = (
+/obj/machinery/pointdefense{
+	id_tag = "orbital_point_def"
+	},
+/obj/effect/floor_decal/industrial/warning/full,
+/turf/simulated/floor/airless,
+/area/offworld/orbital/station/security/lockup)
 "qX" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 6
@@ -8780,6 +8815,13 @@
 	},
 /turf/simulated/floor/airless,
 /area/ai)
+"rm" = (
+/obj/machinery/pointdefense{
+	id_tag = "orbital_point_def"
+	},
+/obj/effect/floor_decal/industrial/warning/full,
+/turf/simulated/floor/airless,
+/area/offworld/orbital/station/security/holding_cell)
 "rn" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 6
@@ -8861,6 +8903,13 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/port_observation)
+"rs" = (
+/obj/machinery/pointdefense{
+	id_tag = "orbital_point_def"
+	},
+/obj/effect/floor_decal/industrial/warning/full,
+/turf/simulated/floor/airless,
+/area/ai_sat/access_shaft)
 "rt" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -25318,7 +25367,7 @@ Fn
 Ed
 Sl
 Fn
-Se
+iY
 TZ
 cX
 cX
@@ -29044,7 +29093,7 @@ TZ
 TZ
 TZ
 TZ
-Se
+iY
 cX
 cX
 cX
@@ -29829,12 +29878,12 @@ Oe
 cX
 cX
 cX
-cX
+rs
 Qu
 vV
 sG
 Qu
-cX
+rs
 cX
 cX
 cX
@@ -32800,6 +32849,7 @@ cX
 cX
 cX
 cX
+cy
 cX
 cX
 cX
@@ -32815,8 +32865,7 @@ cX
 cX
 cX
 cX
-cX
-cX
+cy
 cX
 cX
 cX
@@ -34563,7 +34612,7 @@ cX
 cX
 cX
 cX
-cX
+dC
 cX
 cX
 cX
@@ -34651,7 +34700,7 @@ br
 aw
 aw
 OQ
-qz
+fv
 qz
 cX
 cX
@@ -34813,7 +34862,7 @@ br
 br
 aw
 OQ
-qz
+fv
 qz
 cX
 cX
@@ -34975,7 +35024,7 @@ aw
 br
 aw
 Pv
-qz
+fv
 qz
 cX
 cX
@@ -35137,7 +35186,7 @@ aw
 br
 aw
 OQ
-qz
+fv
 qz
 cX
 cX
@@ -35461,7 +35510,7 @@ aw
 br
 aw
 OQ
-qz
+fv
 qz
 cX
 cX
@@ -35623,7 +35672,7 @@ aw
 br
 aw
 Pv
-qz
+fv
 qz
 cX
 cX
@@ -35785,7 +35834,7 @@ br
 br
 aw
 OQ
-qz
+fv
 qz
 cX
 cX
@@ -35947,7 +35996,7 @@ aw
 br
 aw
 qz
-qz
+fv
 qz
 cX
 cX
@@ -36109,7 +36158,7 @@ aw
 br
 aw
 qz
-qz
+fv
 qz
 cX
 cX
@@ -36271,7 +36320,7 @@ br
 br
 aw
 qz
-qz
+fv
 qz
 cX
 cX
@@ -36595,7 +36644,7 @@ aw
 br
 aw
 qz
-qz
+fv
 qz
 cX
 cX
@@ -36757,7 +36806,7 @@ br
 br
 aw
 OQ
-qz
+fv
 qz
 cX
 cX
@@ -36919,7 +36968,7 @@ aw
 br
 aw
 OQ
-qz
+fv
 qz
 qz
 cX
@@ -37081,7 +37130,7 @@ aw
 br
 aw
 Pv
-qz
+fv
 qz
 qz
 cX
@@ -37243,7 +37292,7 @@ aw
 br
 aw
 Pv
-qz
+fv
 qz
 qz
 cX
@@ -37405,7 +37454,7 @@ aw
 br
 aw
 Au
-qz
+fv
 qz
 qz
 cX
@@ -38540,7 +38589,7 @@ aw
 aL
 qz
 qz
-qz
+fv
 qz
 cX
 cX
@@ -38702,7 +38751,7 @@ aL
 aL
 qz
 qz
-qz
+fv
 qz
 OQ
 cX
@@ -38864,7 +38913,7 @@ aL
 aO
 qz
 qz
-qz
+fv
 qz
 qz
 cX
@@ -39188,7 +39237,7 @@ OQ
 Au
 OQ
 qz
-qz
+fv
 qz
 qz
 cX
@@ -39350,7 +39399,7 @@ OQ
 OQ
 OQ
 qz
-qz
+fv
 qz
 qz
 cX
@@ -39512,7 +39561,7 @@ Pv
 OQ
 OQ
 rC
-qz
+fv
 qz
 OQ
 cX
@@ -39674,7 +39723,7 @@ OQ
 Au
 OQ
 rC
-qz
+fv
 qz
 qz
 cX
@@ -39836,7 +39885,7 @@ OQ
 OQ
 rC
 rC
-qz
+fv
 qz
 qz
 cX
@@ -39998,9 +40047,9 @@ rC
 rC
 rC
 Pv
+fv
 qz
-qz
-qz
+fv
 cX
 cX
 cX
@@ -40160,9 +40209,9 @@ rC
 OQ
 Au
 OQ
+fv
 qz
-qz
-qz
+fv
 cX
 cX
 cX
@@ -40324,7 +40373,7 @@ OQ
 rC
 qz
 qz
-qz
+fv
 cX
 cX
 cX
@@ -40486,7 +40535,7 @@ rC
 rC
 qz
 qz
-qz
+fv
 cX
 cX
 cX
@@ -40648,7 +40697,7 @@ OQ
 OQ
 qz
 qz
-qz
+fv
 cX
 cX
 cX
@@ -40808,9 +40857,9 @@ rC
 OQ
 OQ
 Au
+fv
 qz
-qz
-qz
+fv
 cX
 cX
 cX
@@ -40970,9 +41019,9 @@ rC
 rC
 OQ
 qz
+fv
 qz
-qz
-qz
+fv
 cX
 cX
 cX
@@ -41132,9 +41181,9 @@ OQ
 rC
 rC
 rC
+fv
 qz
-qz
-qz
+fv
 cX
 cX
 cX
@@ -41294,7 +41343,7 @@ OQ
 OQ
 rC
 rC
-qz
+fv
 qz
 qz
 cX
@@ -41456,7 +41505,7 @@ OQ
 Au
 OQ
 OQ
-qz
+fv
 qz
 qz
 cX
@@ -41618,7 +41667,7 @@ OQ
 OQ
 OQ
 OQ
-qz
+fv
 qz
 qz
 cX
@@ -42104,7 +42153,7 @@ Zt
 aR
 qz
 qz
-qz
+fv
 qz
 qz
 cX
@@ -42266,7 +42315,7 @@ aR
 aR
 qz
 qz
-qz
+fv
 qz
 qz
 cX
@@ -42428,7 +42477,7 @@ aR
 aU
 qz
 qz
-qz
+fv
 qz
 qz
 cX
@@ -42590,7 +42639,7 @@ aR
 gQ
 OQ
 qz
-qz
+fv
 qz
 cX
 cX
@@ -42636,7 +42685,7 @@ cX
 cX
 cX
 cX
-cX
+qW
 un
 un
 un
@@ -42752,7 +42801,7 @@ Zt
 aR
 OQ
 qz
-qz
+fv
 qz
 cX
 cX
@@ -42914,7 +42963,7 @@ Zt
 Zt
 OQ
 qz
-qz
+fv
 qz
 cX
 cX
@@ -43076,7 +43125,7 @@ Zt
 Zt
 OQ
 OQ
-qz
+fv
 qz
 cX
 cX
@@ -43238,7 +43287,7 @@ Zt
 Zt
 OQ
 OQ
-Au
+fv
 OQ
 cX
 cX
@@ -43446,7 +43495,7 @@ cX
 cX
 cX
 cX
-cX
+rm
 uC
 uC
 uC
@@ -43562,7 +43611,7 @@ Zt
 Zt
 OQ
 OQ
-qz
+fv
 Au
 cX
 cX
@@ -43724,7 +43773,7 @@ Zt
 Zt
 Pv
 OQ
-qz
+fv
 qz
 cX
 cX
@@ -43886,7 +43935,7 @@ Zt
 Zt
 OQ
 qz
-qz
+fv
 cX
 cX
 cX
@@ -44048,7 +44097,7 @@ Zt
 aR
 qz
 qz
-qz
+fv
 cX
 cX
 cX
@@ -44210,7 +44259,7 @@ aR
 gQ
 OQ
 qz
-qz
+fv
 cX
 cX
 cX
@@ -44756,7 +44805,7 @@ Pv
 OQ
 OQ
 OQ
-OQ
+bn
 lf
 lf
 TN
@@ -44770,7 +44819,7 @@ fL
 cB
 lf
 lf
-OQ
+bn
 OQ
 OQ
 Fq
@@ -45121,7 +45170,7 @@ Uw
 Uw
 Uw
 Uw
-Uw
+bn
 Em
 Eh
 Eh
@@ -45137,7 +45186,7 @@ rC
 CS
 DM
 DM
-OQ
+bn
 CF
 OQ
 Dp
@@ -45145,7 +45194,7 @@ OQ
 CT
 OQ
 CF
-OQ
+bn
 Pv
 qz
 qz
