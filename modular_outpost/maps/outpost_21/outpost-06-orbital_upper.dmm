@@ -6300,7 +6300,6 @@
 "mz" = (
 /obj/machinery/door/airlock/glass_external{
 	frequency = 1381;
-	id_tag = "orbyard_inner";
 	locked = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/aux{
@@ -9958,7 +9957,6 @@
 "tq" = (
 /obj/machinery/door/airlock/glass_external{
 	frequency = 1381;
-	id_tag = "orbyard_outer";
 	locked = 1
 	},
 /obj/machinery/shield_diffuser,
@@ -13823,7 +13821,6 @@
 "Aj" = (
 /obj/machinery/door/airlock/glass_external{
 	frequency = 1381;
-	id_tag = "orbyard_outer";
 	locked = 1
 	},
 /obj/machinery/shield_diffuser,
@@ -19740,7 +19737,6 @@
 "Qw" = (
 /obj/machinery/door/airlock/glass_external{
 	frequency = 1381;
-	id_tag = "orbyard_inner";
 	locked = 1
 	},
 /obj/effect/map_helper/airlock/door/int_door,
@@ -22350,13 +22346,7 @@
 /obj/machinery/embedded_controller/radio/airlock/airlock_controller{
 	frequency = 1381;
 	id_tag = "orbyard";
-	pixel_y = 32;
-	tag_airpump = "orbyard_vent";
-	tag_chamber_sensor = "orbyard_sensor";
-	tag_exterior_door = "orbyard_outer";
-	tag_exterior_sensor = "orbyard_outsense";
-	tag_interior_door = "orbyard_inner";
-	tag_interior_sensor = "orbyard_insense"
+	pixel_y = 32
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	frequency = 1381

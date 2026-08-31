@@ -1134,7 +1134,7 @@
 	name = "Orbital lower"
 	base_turf = /turf/simulated/mineral/floor/cave
 	lift_floor_label = "Lower"
-	lift_floor_name = "Engineering things"
+	lift_floor_name = "Cargo Docking Bay, Atmospherics, PTL Beam Emitter, Solar Array, RUST Reactor, Auxiliary Power Generators, Xenoarcheology, Phoronics."
 	lift_announce_str = "Arriving at Orbital Lower Level."
 	holomap_color = HOLOMAP_AREACOLOR_CIV
 
@@ -1142,7 +1142,7 @@
 	name = "Orbital Upper"
 	base_turf = /turf/simulated/open
 	lift_floor_label = "Upper"
-	lift_floor_name = "Engineering things"
+	lift_floor_name = "Recyard Access, Medical Station, Docking Arm, Escape Pods, Trawler Docking Bay, Engineering Ferry Dock, Engineering Tool Storage, Primary Engines, Power Distribution, Mining Belter Shuttle, Observation Deck, Bar, Telecomms, AI Access, Security Station, Teleporter."
 	lift_announce_str = "Arriving at Orbital Upper Level."
 	holomap_color = HOLOMAP_AREACOLOR_CIV
 
