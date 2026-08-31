@@ -220,8 +220,10 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/rust_control)
 "az" = (
-/obj/structure/atmospheric_retention_field/underdoors,
-/turf/simulated/floor/reinforced,
+/obj/effect/floor_decal/industrial/stand_clear/yellow{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/lower/port)
 "aA" = (
 /obj/structure/cable/green{
@@ -234,6 +236,9 @@
 /obj/random/cutout,
 /turf/simulated/floor/wood/alt,
 /area/maintenance/orbital/lower/aft)
+"aC" = (
+/turf/simulated/floor/reinforced/airless,
+/area/offworld/orbital/station/halls/lower/port)
 "aD" = (
 /obj/effect/floorbreak,
 /turf/simulated/floor/plating,
@@ -1311,6 +1316,15 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/lower/central)
+"cQ" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/danger{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/lower/port)
 "cR" = (
 /obj/random/trash,
 /turf/simulated/floor/plating,
@@ -3537,13 +3551,6 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/atmos_primary)
-"im" = (
-/obj/structure/window/maintenance_panel{
-	dir = 1
-	},
-/obj/structure/lattice,
-/turf/space,
-/area/space)
 "in" = (
 /obj/machinery/door/airlock/glass_engineeringatmos,
 /obj/machinery/door/firedoor/glass,
@@ -3656,15 +3663,23 @@
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/access_shaft/lower)
 "iw" = (
-/turf/simulated/floor/reinforced/airless,
-/area/space)
-"ix" = (
 /obj/machinery/door/blast/multi_tile/four_tile_ver{
 	name = "Trawler access door";
 	id = "orb_trawldoor"
 	},
-/obj/structure/atmospheric_retention_field/underdoors,
-/turf/simulated/floor/reinforced,
+/turf/simulated/floor/reinforced/airless,
+/area/offworld/orbital/station/halls/lower/port)
+"ix" = (
+/obj/effect/floor_decal/borderfloor,
+/obj/machinery/button/remote/blast_door{
+	id = "orb_trawldoor";
+	name = "Cargo Bay Door";
+	req_one_access = list(1,5,10,19,31,47,48,52);
+	pixel_y = -28;
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/danger,
+/turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/lower/port)
 "iy" = (
 /obj/structure/window/phoronreinforced{
@@ -3689,30 +3704,17 @@
 /area/offworld/orbital/station/rust_gas_storage)
 "iA" = (
 /obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/corner/black/border,
-/turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/halls/lower/port)
-"iB" = (
-/obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/corner/black/border,
-/obj/machinery/button/remote/blast_door{
-	id = "orb_trawldoor";
-	name = "Cargo Bay Door";
-	req_one_access = list(1,5,10,19,31,47,48,52);
-	pixel_y = -28;
-	dir = 1
-	},
+/obj/effect/floor_decal/industrial/danger,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/lower/port)
 "iC" = (
 /obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/corner/black/border,
 /obj/machinery/light,
+/obj/effect/floor_decal/industrial/danger,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/lower/port)
 "iD" = (
 /obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/corner/black/border,
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
@@ -3720,6 +3722,7 @@
 	c_tag = "REX - Trawler Cargo Hatch";
 	dir = 1
 	},
+/obj/effect/floor_decal/industrial/danger,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/lower/port)
 "iE" = (
@@ -3727,6 +3730,7 @@
 /obj/machinery/door/airlock/glass_external/public{
 	req_one_access = list(1,5,10,19,31,47,48,52)
 	},
+/obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/halls/lower/port)
 "iF" = (
@@ -3750,8 +3754,11 @@
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 8
 	},
-/obj/effect/floor_decal/corner/black/bordercorner{
-	dir = 8
+/obj/effect/floor_decal/industrial/danger/corner{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/caution{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/lower/port)
@@ -3909,6 +3916,7 @@
 /obj/machinery/door/airlock/glass_external/public{
 	req_one_access = list(1,5,10,19,31,47,48,52)
 	},
+/obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/halls/lower/port)
 "ja" = (
@@ -3916,6 +3924,9 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/caution{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
@@ -4037,18 +4048,21 @@
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 4
 	},
-/obj/effect/floor_decal/corner/lightgrey/bordercorner{
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/effect/floor_decal/industrial/danger/corner{
 	dir = 4
 	},
-/obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/lower/port)
 "jn" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 1
 	},
-/obj/effect/floor_decal/corner/lightgrey/bordercorner{
-	dir = 1
+/obj/effect/floor_decal/industrial/danger/corner{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/caution{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/lower/port)
@@ -4279,24 +4293,15 @@
 /obj/structure/grille,
 /turf/simulated/floor/reinforced,
 /area/offworld/orbital/station/rust_core)
-"jF" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/lightgrey/border{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/halls/lower/port)
 "jG" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
 	},
-/obj/effect/floor_decal/corner/lightgrey/border{
-	dir = 1
-	},
 /obj/machinery/status_display{
 	pixel_y = 32
+	},
+/obj/effect/floor_decal/industrial/danger{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/lower/port)
@@ -4304,32 +4309,29 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
 	},
-/obj/effect/floor_decal/corner/lightgrey/border{
-	dir = 1
-	},
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/item/geiger/wall/north,
+/obj/machinery/ai_status_display{
+	pixel_y = 32
+	},
+/obj/effect/floor_decal/industrial/danger{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/lower/port)
 "jI" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
 	},
-/obj/effect/floor_decal/corner/lightgrey/border{
+/obj/item/geiger/wall/north,
+/obj/effect/floor_decal/industrial/danger{
 	dir = 1
-	},
-/obj/machinery/ai_status_display{
-	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/lower/port)
 "jK" = (
 /obj/effect/floor_decal/borderfloor{
-	dir = 8
-	},
-/obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 8
 	},
 /obj/machinery/power/apc{
@@ -4339,6 +4341,9 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "0-4"
+	},
+/obj/effect/floor_decal/industrial/danger{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/lower/port)
@@ -4377,7 +4382,7 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 5
 	},
-/obj/effect/floor_decal/corner/lightgrey/border{
+/obj/effect/floor_decal/industrial/danger{
 	dir = 5
 	},
 /turf/simulated/floor/tiled/milspec,
@@ -29534,11 +29539,11 @@ aG
 aG
 aG
 pT
+aC
+aC
+aC
 iw
-iw
-iw
-iw
-im
+pT
 dG
 dG
 dG
@@ -29696,7 +29701,7 @@ ka
 ka
 ka
 pT
-az
+cQ
 az
 az
 ix
@@ -29858,7 +29863,7 @@ tv
 qQ
 ka
 pT
-jF
+cQ
 ff
 ff
 iA
@@ -30023,7 +30028,7 @@ pT
 jG
 ff
 ff
-iB
+iA
 gn
 ie
 hN
