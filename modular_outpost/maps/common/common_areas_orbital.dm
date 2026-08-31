@@ -64,7 +64,7 @@ EXTERIOR_AREA_BEHAVIOR(/area/offworld/orbital/exterior/emitter_cooling)
 	icon_state = "yellow"
 	sound_env = LARGE_ENCLOSED
 	ambience = AMBIENCE_ENGINEERING
-	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
 
 /area/offworld/orbital/station/halls/lower/central
 	name = "\improper Orbital Lower Central Hallway"
@@ -85,28 +85,28 @@ EXTERIOR_AREA_BEHAVIOR(/area/offworld/orbital/exterior/emitter_cooling)
 	icon_state = "yellow"
 	sound_env = LARGE_ENCLOSED
 	ambience = AMBIENCE_ENGINEERING
-	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
 
 /area/offworld/orbital/station/halls/lower/port
 	name = "\improper Orbital Lower Port Hallway"
 	icon_state = "yellow"
 	sound_env = LARGE_ENCLOSED
 	ambience = AMBIENCE_ENGINEERING
-	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
 
 /area/offworld/orbital/station/halls/lower/starboard
 	name = "\improper Orbital Lower Starboard Hallway"
 	icon_state = "yellow"
 	sound_env = LARGE_ENCLOSED
 	ambience = AMBIENCE_ENGINEERING
-	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
 
 /area/offworld/orbital/station/halls/stairs_upper
 	name = "\improper Orbital Stairwell Upper"
 	icon_state = "yellow"
 	sound_env = LARGE_ENCLOSED
 	ambience = AMBIENCE_ENGINEERING
-	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
 	base_turf = /turf/simulated/open
 
 /area/offworld/orbital/station/halls/stairs_lower
@@ -114,17 +114,17 @@ EXTERIOR_AREA_BEHAVIOR(/area/offworld/orbital/exterior/emitter_cooling)
 	icon_state = "yellow"
 	sound_env = LARGE_ENCLOSED
 	ambience = AMBIENCE_ENGINEERING
-	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
 
 /area/offworld/orbital/station/halls/rust_tool_storage
 	name = "\improper Orbital RUST Storage Hallway"
 	icon_state = "purple"
-	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 
 /area/offworld/orbital/station/halls/rust_entry
 	name = "\improper Orbital RUST Entry Hallway"
 	icon_state = "purple"
-	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 
 // GENERAL ROOMS
 /area/offworld/orbital/station/washing
@@ -135,7 +135,7 @@ EXTERIOR_AREA_BEHAVIOR(/area/offworld/orbital/exterior/emitter_cooling)
 /area/offworld/orbital/station/bar
 	name = "\improper Orbital Bar"
 	icon_state = "green"
-	holomap_color = HOLOMAP_AREACOLOR_CIV
+	holomap_color = HOLOMAP_AREACOLOR_HYDROPONICS
 	color_grading = COLORTINT_WARM
 
 /area/offworld/orbital/station/spelunker
@@ -208,21 +208,21 @@ EXTERIOR_AREA_BEHAVIOR(/area/offworld/orbital/exterior/emitter_cooling)
 	icon_state = "shuttle2"
 	sound_env = SMALL_ENCLOSED
 	ambience = AMBIENCE_GENERIC
-	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+	holomap_color = HOLOMAP_AREACOLOR_CARGO
 
 /area/offworld/orbital/station/trawler_airlock
 	name = "\improper Orbital Trawler Airlock"
 	icon_state = "shuttle2"
 	sound_env = SMALL_ENCLOSED
 	ambience = AMBIENCE_GENERIC
-	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+	holomap_color = HOLOMAP_AREACOLOR_CARGO
 
 /area/offworld/orbital/station/dockingarm
 	name = "\improper Orbital Docking Arm"
 	icon_state = "decontamination"
 	sound_env = LARGE_ENCLOSED
 	ambience = AMBIENCE_HANGAR
-	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+	holomap_color = HOLOMAP_AREACOLOR_CARGO
 
 /area/offworld/orbital/station/south_power_airlock
 	name = "\improper Orbital Power Distribution Airlock South"
@@ -257,7 +257,7 @@ EXTERIOR_AREA_BEHAVIOR(/area/offworld/orbital/exterior/emitter_cooling)
 	icon_state = "decontamination"
 	sound_env = LARGE_ENCLOSED
 	ambience = AMBIENCE_HANGAR
-	holomap_color = HOLOMAP_AREACOLOR_CIV
+	holomap_color = HOLOMAP_AREACOLOR_CARGO
 
 /area/offworld/orbital/station/access_shaft/upper
 	name = "\improper Orbital Upper Docking Arm"
@@ -290,7 +290,7 @@ EXTERIOR_AREA_BEHAVIOR(/area/offworld/orbital/exterior/emitter_cooling)
 	icon_state = "blue"
 	sound_env = SMALL_SOFTFLOOR
 	ambience = AMBIENCE_GENERIC
-	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+	holomap_color = HOLOMAP_AREACOLOR_CIV
 	base_turf = /turf/space
 
 /area/offworld/orbital/station/starboard_observation
@@ -298,7 +298,7 @@ EXTERIOR_AREA_BEHAVIOR(/area/offworld/orbital/exterior/emitter_cooling)
 	icon_state = "blue"
 	sound_env = SMALL_SOFTFLOOR
 	ambience = AMBIENCE_GENERIC
-	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+	holomap_color = HOLOMAP_AREACOLOR_CIV
 
 
 // Security
@@ -328,7 +328,7 @@ EXTERIOR_AREA_BEHAVIOR(/area/offworld/orbital/exterior/emitter_cooling)
 	icon_state = "teleporter"
 	sound_env = LARGE_ENCLOSED
 	ambience = AMBIENCE_ENGINEERING
-	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+	holomap_color = HOLOMAP_AREACOLOR_COMMAND
 
 
 // PTL emitter
@@ -501,7 +501,7 @@ EXTERIOR_AREA_BEHAVIOR(/area/offworld/orbital/exterior/starboard_solars)
 	icon_state = "locker"
 	sound_env = ASTEROID
 	ambience = AMBIENCE_GENERIC
-	holomap_color = HOLOMAP_AREACOLOR_CARGO
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 	color_grading = COLORTINT_DIM
 
 /area/offworld/orbital/station/storage_aux

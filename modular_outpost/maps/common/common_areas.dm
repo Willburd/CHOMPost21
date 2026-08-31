@@ -944,14 +944,14 @@
 
 /area/ai_sat/atmos
 	name = "\improper AI Satellite Atmospherics"
-	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+	holomap_color = HOLOMAP_AREACOLOR_COMMAND
 	sound_env = SMALL_ENCLOSED
 	ambience = AMBIENCE_MAINTENANCE
 	color_grading = COLORTINT_DARK
 
 /area/ai_sat/power_control
 	name = "\improper AI Satellite Power Control"
-	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+	holomap_color = null
 	sound_env = SMALL_ENCLOSED
 	ambience = AMBIENCE_SUBSTATION
 	base_turf = /turf/space
@@ -1136,7 +1136,7 @@
 	lift_floor_label = "Lower"
 	lift_floor_name = "Engineering things"
 	lift_announce_str = "Arriving at Orbital Lower Level."
-	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+	holomap_color = HOLOMAP_AREACOLOR_CIV
 
 /area/turbolift/orbitalyard_upper
 	name = "Orbital Upper"
@@ -1144,7 +1144,7 @@
 	lift_floor_label = "Upper"
 	lift_floor_name = "Engineering things"
 	lift_announce_str = "Arriving at Orbital Upper Level."
-	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+	holomap_color = HOLOMAP_AREACOLOR_CIV
 
 
 //
