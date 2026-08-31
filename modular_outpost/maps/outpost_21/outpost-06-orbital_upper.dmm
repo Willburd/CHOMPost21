@@ -14449,7 +14449,7 @@
 /area/offworld/orbital/exterior/engine_core_starboard)
 "Br" = (
 /obj/machinery/camera/network/engineering_outpost{
-	c_tag = "REX - Primary Starboard Engine Emitter"
+	c_tag = "REX - Primary Port Engine Emitter"
 	},
 /turf/simulated/floor/airless,
 /area/offworld/orbital/exterior/engine_core_port)
