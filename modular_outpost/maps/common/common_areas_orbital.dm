@@ -38,6 +38,8 @@ EXTERIOR_AREA_BEHAVIOR(/area/offworld/orbital/exterior/emitter_cooling)
 	name = "\improper Orbital Hallway"
 	icon_state = "purple"
 	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
+	sound_env = TUNNEL_ENCLOSED
+	ambience = AMBIENCE_MAINTENANCE
 
 /area/offworld/orbital/station/halls/central
 	name = "\improper Orbital Central Hallway"
@@ -131,12 +133,17 @@ EXTERIOR_AREA_BEHAVIOR(/area/offworld/orbital/exterior/emitter_cooling)
 	name = "\improper Orbital Cleaning Room"
 	icon_state = "red"
 	holomap_color = HOLOMAP_AREACOLOR_CIV
+	sound_env = SMALL_ENCLOSED
+	ambience = AMBIENCE_GENERIC
+
 
 /area/offworld/orbital/station/bar
 	name = "\improper Orbital Bar"
 	icon_state = "green"
 	holomap_color = HOLOMAP_AREACOLOR_HYDROPONICS
 	color_grading = COLORTINT_WARM
+	sound_env = MEDIUM_SOFTFLOOR
+	ambience = AMBIENCE_GENERIC
 
 /area/offworld/orbital/station/spelunker
 	name = "\improper Orbital Spelunker"
@@ -144,6 +151,8 @@ EXTERIOR_AREA_BEHAVIOR(/area/offworld/orbital/exterior/emitter_cooling)
 	holomap_color = HOLOMAP_AREACOLOR_CIV
 	color_grading = COLORTINT_DARK
 	flags = /area/muriki/bathroom::flags
+	sound_env = SMALL_ENCLOSED
+	ambience = AMBIENCE_GENERIC
 
 /area/offworld/orbital/station/droppod
 	name = "\improper Orbital Drop Pod"
@@ -151,10 +160,13 @@ EXTERIOR_AREA_BEHAVIOR(/area/offworld/orbital/exterior/emitter_cooling)
 	holomap_color = HOLOMAP_AREACOLOR_CIV
 	color_grading = COLORTINT_DARK
 	flags = /area/muriki/bathroom::flags
+	sound_env = SMALL_ENCLOSED
+	ambience = AMBIENCE_GENERIC
 
 /area/offworld/orbital/station/engineering
 	name = "\improper Orbital Engineering"
 	icon_state = "orange"
+	sound_env = TUNNEL_ENCLOSED
 	ambience = AMBIENCE_SUBSTATION
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 
@@ -162,7 +174,7 @@ EXTERIOR_AREA_BEHAVIOR(/area/offworld/orbital/exterior/emitter_cooling)
 	name = "\improper Orbital Telecomms"
 	icon_state = "tcomsatlob"
 	sound_env = SMALL_ENCLOSED
-	ambience = AMBIENCE_ENGINEERING
+	ambience = AMBIENCE_HIGHSEC
 	holomap_color = HOLOMAP_AREACOLOR_COMMAND
 	base_turf = /turf/simulated/open
 
@@ -170,7 +182,7 @@ EXTERIOR_AREA_BEHAVIOR(/area/offworld/orbital/exterior/emitter_cooling)
 	name = "\improper Orbital Teleporter"
 	icon_state = "tcomsatlob"
 	sound_env = SMALL_ENCLOSED
-	ambience = AMBIENCE_ENGINEERING
+	ambience = AMBIENCE_HIGHSEC
 	holomap_color = HOLOMAP_AREACOLOR_COMMAND
 	color_grading = COLORTINT_DIM
 
@@ -251,6 +263,8 @@ EXTERIOR_AREA_BEHAVIOR(/area/offworld/orbital/exterior/emitter_cooling)
 	name = "\improper Orbital Public Docking Arm"
 	icon_state = "red"
 	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
+	sound_env = LARGE_ENCLOSED
+	ambience = AMBIENCE_HANGAR
 
 /area/offworld/orbital/station/dockinghanger
 	name = "\improper Orbital Cargo Loading Airlock"
@@ -263,18 +277,24 @@ EXTERIOR_AREA_BEHAVIOR(/area/offworld/orbital/exterior/emitter_cooling)
 	name = "\improper Orbital Upper Docking Arm"
 	icon_state = "red"
 	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
+	sound_env = LARGE_ENCLOSED
+	ambience = AMBIENCE_HANGAR
 	base_turf = /turf/space
 
 /area/offworld/orbital/station/access_shaft/upper_connector
 	name = "\improper Orbital Upper Docking Connector"
 	icon_state = "red"
 	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
+	sound_env = LARGE_ENCLOSED
+	ambience = AMBIENCE_HANGAR
 	base_turf = /turf/space
 
 /area/offworld/orbital/station/access_shaft/lower
 	name = "\improper Orbital Lower Docking Arm"
 	icon_state = "blue"
 	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
+	sound_env = LARGE_ENCLOSED
+	ambience = AMBIENCE_HANGAR
 	base_turf = /turf/space
 
 // Observation
@@ -306,7 +326,7 @@ EXTERIOR_AREA_BEHAVIOR(/area/offworld/orbital/exterior/emitter_cooling)
 	name = "\improper Orbital Security"
 	icon_state = "red"
 	sound_env = SMALL_SOFTFLOOR
-	ambience = AMBIENCE_GENERIC
+	ambience = AMBIENCE_HIGHSEC
 	holomap_color = HOLOMAP_AREACOLOR_SECURITY
 
 /area/offworld/orbital/station/security/lockup
@@ -327,7 +347,7 @@ EXTERIOR_AREA_BEHAVIOR(/area/offworld/orbital/exterior/emitter_cooling)
 	name = "\improper AI Core Transit Hub"
 	icon_state = "teleporter"
 	sound_env = LARGE_ENCLOSED
-	ambience = AMBIENCE_ENGINEERING
+	ambience = AMBIENCE_HIGHSEC
 	holomap_color = HOLOMAP_AREACOLOR_COMMAND
 
 
@@ -352,14 +372,14 @@ EXTERIOR_AREA_BEHAVIOR(/area/offworld/orbital/exterior/emitter_cooling)
 	name = "\improper Orbital Primary Atmospherics"
 	icon_state = "toxtest"
 	sound_env = LARGE_ENCLOSED
-	ambience = AMBIENCE_ENGINEERING
+	ambience = AMBIENCE_ATMOS
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 
 /area/offworld/orbital/station/atmos_sublevel
 	name = "\improper Orbital Lower Atmospherics"
 	icon_state = "engineering_workshop"
 	sound_env = LARGE_ENCLOSED
-	ambience = AMBIENCE_ENGINEERING
+	ambience = AMBIENCE_ATMOS
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 
 /area/offworld/orbital/station/atmos_aux
