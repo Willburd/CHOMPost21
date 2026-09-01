@@ -1795,7 +1795,7 @@
 	},
 /obj/effect/floor_decal/industrial/warning/full,
 /turf/simulated/floor/airless,
-/area/space)
+/area/offworld/orbital/station/access_shaft/upper_connector)
 "dD" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
@@ -7035,6 +7035,7 @@
 /obj/effect/floor_decal/corner/orange{
 	dir = 10
 	},
+/obj/structure/dispenser/oxygen,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/power_distribution)
 "nT" = (
@@ -7803,6 +7804,8 @@
 /obj/machinery/status_display{
 	pixel_y = 32
 	},
+/obj/item/clothing/glasses/welding,
+/obj/item/clothing/head/welding,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/storage)
 "po" = (
@@ -10839,8 +10842,10 @@
 	dir = 8
 	},
 /obj/structure/table/rack/shelf/steel,
-/obj/item/smes_coil/super_io,
 /obj/item/smes_coil/super_capacity,
+/obj/item/smes_coil/super_capacity,
+/obj/item/smes_coil/super_io,
+/obj/item/smes_coil/super_io,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/storage)
 "uO" = (
@@ -17239,6 +17244,10 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/central)
+"GO" = (
+/obj/structure/reagent_dispensers/fueltank/high,
+/turf/simulated/floor/tiled/milspec/airless,
+/area/offworld/orbital/station/storage_engine_core)
 "GQ" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
@@ -40246,7 +40255,7 @@ zJ
 aQ
 hp
 zJ
-aQ
+GO
 FU
 FU
 aQ
