@@ -4806,14 +4806,17 @@
 /area/offworld/orbital/station/access_shaft/lower)
 "kz" = (
 /obj/structure/table/rack/shelf/steel,
-/obj/item/smes_coil/super_capacity,
-/obj/item/smes_coil/super_capacity,
-/obj/item/smes_coil/super_capacity,
 /obj/machinery/light{
 	dir = 4
 	},
 /obj/effect/floor_decal/corner/orange{
 	dir = 6
+	},
+/obj/fiftyspawner/plastic{
+	pixel_x = -6
+	},
+/obj/fiftyspawner/phoron{
+	pixel_x = 6
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/rust_tool_storage)
@@ -10770,6 +10773,30 @@
 /obj/machinery/power/thermoregulator,
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/rust_core)
+"wd" = (
+/obj/item/clothing/head/welding,
+/turf/simulated/floor/plating,
+/area/offworld/orbital/station/rust_core)
+"we" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/fiftyspawner/titanium{
+	pixel_x = -6
+	},
+/obj/fiftyspawner/plasteel{
+	pixel_x = 6
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/rust_tool_storage)
+"wf" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/fiftyspawner/steel{
+	pixel_x = -6
+	},
+/obj/fiftyspawner/steel{
+	pixel_x = 6
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/rust_tool_storage)
 "wm" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -11587,6 +11614,7 @@
 /obj/effect/floor_decal/corner/orange{
 	dir = 10
 	},
+/obj/item/clothing/glasses/welding,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/rust_tool_storage)
 "CU" = (
@@ -11674,7 +11702,14 @@
 /turf/simulated/floor/tiled,
 /area/offworld/orbital/station/lower_medical_treatment)
 "Dn" = (
-/obj/machinery/door/airlock/hatch,
+/obj/machinery/door/airlock/hatch{
+	icon_state = "door_locked";
+	id_tag = "engine_access_hatch";
+	locked = 1;
+	name = "Reactor Core";
+	rad_insulation = 0;
+	req_access = list(11)
+	},
 /turf/simulated/floor/reinforced,
 /area/offworld/orbital/station/rust_core)
 "Do" = (
@@ -12643,9 +12678,6 @@
 /area/offworld/orbital/station/rust_gas_storage)
 "Ku" = (
 /obj/structure/table/rack/shelf/steel,
-/obj/item/smes_coil/super_io,
-/obj/item/smes_coil/super_io,
-/obj/item/smes_coil/super_io,
 /obj/item/radio/intercom{
 	dir = 4;
 	name = "Station Intercom (General)";
@@ -12653,6 +12685,9 @@
 	},
 /obj/effect/floor_decal/corner/orange{
 	dir = 6
+	},
+/obj/item/stack/material/glass/phoronrglass{
+	amount = 50
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/rust_tool_storage)
@@ -28200,7 +28235,7 @@ av
 wq
 eg
 eo
-ei
+wd
 sG
 Wt
 sA
@@ -30619,8 +30654,8 @@ ev
 tc
 ey
 ey
-ey
-ey
+wf
+we
 sT
 se
 sP

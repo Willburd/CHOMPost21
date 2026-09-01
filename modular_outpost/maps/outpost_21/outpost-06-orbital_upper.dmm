@@ -7804,6 +7804,8 @@
 /obj/machinery/status_display{
 	pixel_y = 32
 	},
+/obj/item/clothing/glasses/welding,
+/obj/item/clothing/head/welding,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/storage)
 "po" = (
