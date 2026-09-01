@@ -4950,7 +4950,7 @@
 "jB" = (
 /obj/machinery/the_singularitygen,
 /turf/simulated/floor/airless,
-/area/offworld/orbital/exterior/engine_core_starboard/singo_hole)
+/area/space)
 "jC" = (
 /obj/structure/cable,
 /obj/machinery/power/emitter/antique{
@@ -17276,19 +17276,12 @@
 /obj/structure/reagent_dispensers/fueltank/high,
 /turf/simulated/floor/tiled/milspec/airless,
 /area/offworld/orbital/station/storage_engine_core)
-"GP" = (
-/turf/space,
-/area/offworld/orbital/exterior/engine_core_starboard/singo_hole)
 "GQ" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/airless,
 /area/offworld/orbital/exterior/engine_core_port)
-"GR" = (
-/obj/structure/lattice,
-/turf/space,
-/area/offworld/orbital/exterior/engine_core_starboard/singo_hole)
 "GS" = (
 /obj/machinery/alarm{
 	dir = 1;
@@ -17309,9 +17302,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/halls/fore)
-"GU" = (
-/turf/simulated/floor/airless,
-/area/offworld/orbital/exterior/engine_core_starboard/singo_hole)
 "GV" = (
 /obj/effect/floor_decal/corner/orange/full{
 	dir = 8
@@ -43106,11 +43096,11 @@ yR
 xl
 Zt
 vj
-GP
-GR
-GP
-GR
-GP
+cX
+pi
+cX
+pi
+cX
 vj
 Zt
 Zt
@@ -43267,13 +43257,13 @@ aR
 Zt
 Cd
 Zt
-GP
-GP
-GR
-GP
-GR
-GP
-GP
+cX
+cX
+pi
+cX
+pi
+cX
+cX
 Zt
 bF
 Zt
@@ -43429,13 +43419,13 @@ aR
 Zt
 Bc
 Zt
-GR
-GR
-GU
-GU
-GU
-GR
-GR
+pi
+pi
+Gn
+Gn
+Gn
+pi
+pi
 Zt
 Zt
 Zt
@@ -43591,13 +43581,13 @@ cF
 cF
 SA
 Zt
-GP
-GP
-GU
+cX
+cX
+Gn
 jB
-GU
-GP
-GP
+Gn
+cX
+cX
 Zt
 Zt
 Zt
@@ -43753,13 +43743,13 @@ aR
 Zt
 cC
 Zt
-GR
-GR
-GU
-GU
-GU
-GR
-GR
+pi
+pi
+Gn
+Gn
+Gn
+pi
+pi
 Zt
 Zt
 Zt
@@ -43915,13 +43905,13 @@ LZ
 Zt
 BQ
 QR
-GP
-GP
-GR
-GP
-GR
-GP
-GP
+cX
+cX
+pi
+cX
+pi
+cX
+cX
 Zt
 bF
 Zt
@@ -44078,11 +44068,11 @@ hi
 Sk
 Zt
 vj
-GP
-GR
-GP
-GR
-GP
+cX
+pi
+cX
+pi
+cX
 vj
 Zt
 Zt
