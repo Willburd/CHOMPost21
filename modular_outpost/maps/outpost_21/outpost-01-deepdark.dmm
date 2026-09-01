@@ -79,6 +79,11 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 10
 	},
+/obj/item/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -21
+	},
 /turf/simulated/floor/wood,
 /area/muriki/crew/bunker_deep/main)
 "aar" = (
@@ -106,6 +111,10 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 10
 	},
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -26
+	},
 /turf/simulated/floor/carpet/turcarpet,
 /area/muriki/crew/bunker_deep/main)
 "aav" = (
@@ -128,6 +137,11 @@
 "aaw" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 5
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -30;
+	pixel_y = 8;
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/muriki/crew/bunker_deep/eng)
@@ -208,10 +222,6 @@
 /turf/simulated/floor/plating,
 /area/muriki/crew/bunker_deep/eng)
 "aaG" = (
-/obj/machinery/firealarm{
-	dir = 8;
-	pixel_x = -26
-	},
 /obj/machinery/camera/network/bunker{
 	c_tag = "BNK - Air Supply";
 	dir = 4
@@ -252,6 +262,11 @@
 /obj/structure/table/rack,
 /obj/fiftyspawner/uranium,
 /obj/fiftyspawner/uranium,
+/obj/item/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -21
+	},
 /turf/simulated/floor/plating,
 /area/muriki/crew/bunker_deep/eng)
 "aaL" = (
@@ -588,6 +603,11 @@
 	pixel_y = -24
 	},
 /obj/effect/floor_decal/corner/white/full,
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -30;
+	pixel_y = 8;
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark,
 /area/muriki/crew/bunker_deep/comm)
 "abs" = (
@@ -647,6 +667,11 @@
 /obj/machinery/firealarm{
 	dir = 1;
 	pixel_y = -26
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -30;
+	pixel_y = 8;
+	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
 /area/muriki/crew/bunker_deep/main)
@@ -882,6 +907,10 @@
 /obj/effect/floor_decal/corner/black{
 	dir = 5
 	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 5;
+	pixel_y = 28
+	},
 /turf/simulated/floor/tiled/dark,
 /area/muriki/crew/bunker_deep/main)
 "abQ" = (
@@ -996,6 +1025,11 @@
 /obj/machinery/camera/network/bunker{
 	c_tag = "BNK - Main Room East";
 	dir = 8
+	},
+/obj/structure/extinguisher_cabinet{
+	dir = 8;
+	pixel_x = 30;
+	pixel_y = 6
 	},
 /turf/simulated/floor/carpet/turcarpet,
 /area/muriki/crew/bunker_deep/main)
@@ -1261,6 +1295,10 @@
 /obj/structure/cable/green{
 	icon_state = "1-8"
 	},
+/obj/structure/extinguisher_cabinet{
+	pixel_y = -30;
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/muriki/crew/bunker_deep/main)
 "acF" = (
@@ -1512,11 +1550,20 @@
 /obj/effect/floor_decal/corner/blue{
 	dir = 10
 	},
+/obj/item/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -21
+	},
 /turf/simulated/floor/tiled/white,
 /area/muriki/crew/bunker_deep/med)
 "adj" = (
 /obj/effect/floor_decal/corner/blue/full{
 	dir = 4
+	},
+/obj/structure/extinguisher_cabinet{
+	dir = 8;
+	pixel_x = 30;
+	pixel_y = -4
 	},
 /turf/simulated/floor/tiled/white,
 /area/muriki/crew/bunker_deep/med)
@@ -1613,6 +1660,10 @@
 	dir = 5
 	},
 /obj/effect/floor_decal/corner/black/border,
+/obj/structure/extinguisher_cabinet{
+	pixel_y = -30;
+	dir = 1
+	},
 /turf/simulated/floor/tiled/white,
 /area/muriki/bathroom/bunker_buster)
 "adx" = (
@@ -1625,6 +1676,10 @@
 /obj/machinery/light,
 /obj/effect/floor_decal/corner/black/border,
 /obj/effect/floor_decal/steeldecal/steel_decals3,
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -26
+	},
 /turf/simulated/floor/tiled/white,
 /area/muriki/bathroom/bunker_buster)
 "ady" = (
@@ -1690,6 +1745,11 @@
 "adE" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
+	},
+/obj/structure/extinguisher_cabinet{
+	dir = 8;
+	pixel_x = 30;
+	pixel_y = 6
 	},
 /turf/simulated/floor/plating,
 /area/muriki/crew/bunker_deep/eng)
@@ -3041,6 +3101,36 @@
 	ignore_mapgen = 1
 	},
 /area/mine/explored/muriki/cave/deepdark)
+"ahF" = (
+/obj/effect/floor_decal/corner/black{
+	dir = 10
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_y = -30;
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/bunker_deep/main)
+"ahG" = (
+/obj/effect/floor_decal/corner/white{
+	dir = 5
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 5;
+	pixel_y = 28
+	},
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/bunker_deep/main)
+"ahH" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/item/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -21
+	},
+/turf/simulated/floor/tiled/dark,
+/area/muriki/crew/bunker_deep/main)
 "amr" = (
 /obj/effect/map_effect/interval/atmogland/bodyheat,
 /obj/effect/mist,
@@ -60695,7 +60785,7 @@ ahs
 ahs
 ahs
 ahp
-acL
+ahG
 adP
 aap
 acq
@@ -62646,7 +62736,7 @@ acn
 aca
 ach
 aca
-aat
+ahF
 ahp
 afi
 gNY
@@ -63123,7 +63213,7 @@ ads
 ahp
 abP
 adm
-acS
+ahH
 abp
 acS
 acD

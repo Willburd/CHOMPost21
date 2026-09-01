@@ -86,12 +86,26 @@
 		/area/hydroponics/gibber,
 		/area/rnd/research/roof_eva,
 		/area/ai_sat/core_external,
-		/area/offworld/confinementbeam/exterior,
+		/area/offworld/orbital/exterior,
 		/area/ai_sat/power_control,
 		/area/security/brig_hole,
 		/area/specialty/stowaway_clubhouse,
 		/area/specialty/stowaway_clubhouse/upper,
 		/area/specialty/expie_clubhouse,
+		/area/offworld/orbital/exterior/engine_core_port,
+		/area/offworld/orbital/exterior/engine_core_starboard,
+		/area/offworld/orbital/station/storage_engine_core,
+		/area/ai_sat/solar_airlock,
+		/area/offworld/orbital/station/solar_control,
+		/area/offworld/orbital/station/port_airlock,
+		/area/offworld/orbital/station/starboard_airlock,
+		/area/offworld/orbital/station/dockingarm,
+		/area/offworld/orbital/station/access_shaft,
+		/area/offworld/orbital/station/south_power_airlock,
+		/area/offworld/orbital/station/south_engine_access_west,
+		/area/offworld/orbital/station/south_engine_access_east,
+		/area/muriki/lowerelev,
+		/area/muriki/lowerevac,
 		)
 
 	var/list/forced_hallway = list(
@@ -130,12 +144,18 @@
 		/area/ai_sat/fore_airlock,
 		/area/ai_sat/access_shaft,
 		/area/ai_sat/docking_wing,
-		/area/offworld/confinementbeam/station/trawler_airlock,
-		/area/offworld/confinementbeam/station/access_shaft,
-		/area/offworld/confinementbeam/station/starboard_airlock,
-		/area/offworld/confinementbeam/station/port_airlock,
-		/area/offworld/confinementbeam/station/hallway,
-		/area/offworld/confinementbeam/station/hallway_alt
+		/area/offworld/orbital/station/halls/lower/aft,
+		/area/offworld/orbital/station/halls/lower/central,
+		/area/offworld/orbital/station/halls/stairs_lower,
+		/area/offworld/orbital/station/halls/lower/fore,
+		/area/offworld/orbital/station/halls/rust_entry,
+		/area/offworld/orbital/station/halls/rust_tool_storage,
+		/area/offworld/orbital/station/halls/aft,
+		/area/offworld/orbital/station/halls/stairs_upper,
+		/area/offworld/orbital/station/halls/central,
+		/area/offworld/orbital/station/halls/starboard,
+		/area/offworld/orbital/station/halls/fore,
+		/area/offworld/orbital/station/halls/lower/port
 	)
 
 	var/list/does_not_use_lightswitch = list(
@@ -144,7 +164,12 @@
 		/area/rnd/entry_aux,
 		/area/rnd/research/roof_eva,
 		/area/muriki/cybstorage,
-		/area/muriki/crew/bunker
+		/area/muriki/crew/bunker,
+		/area/offworld/orbital/station/ai_transit_hub,
+		/area/muriki/crew/bunker_deep/eng,
+		/area/muriki/crew/bunker_deep/main,
+		/area/muriki/crew/bunker_deep/comm,
+		/area/muriki/crew/bunker_deep/med,
 	)
 
 	var/list/does_not_have_disposals = list(
@@ -237,7 +262,21 @@
 		/area/ai_sat/fore_airlock,
 		/area/ai_server_room,
 		/area/quartermaster/mining/ore_silo,
-		/area/medical/psych
+		/area/medical/psych,
+		/area/offworld/orbital/station/aux_equipment,
+		/area/offworld/orbital/station/rust_backup_power,
+		/area/offworld/orbital/station/rust_aux_tool_storage,
+		/area/offworld/orbital/station/dockinghanger,
+		/area/offworld/orbital/station/teleport,
+		/area/offworld/orbital/station/telecomms,
+		/area/offworld/orbital/station/security/holding_cell,
+		/area/offworld/orbital/station/security/lockup,
+		/area/offworld/orbital/station/security/armory,
+		/area/offworld/orbital/station/halls/rust_tool_storage,
+		/area/muriki/crew/bunker_deep/eng,
+		/area/muriki/crew/bunker_deep/main,
+		/area/muriki/crew/bunker_deep/comm,
+		/area/muriki/crew/bunker_deep/med,
 	)
 
 	var/list/does_not_have_displays = list(
@@ -274,12 +313,15 @@
 		/area/engineering/refinery/aid_station,
 		/area/medical/first_aid_station_starboard,
 		/area/medical/first_aid_station,
+		/area/offworld/orbital/station/medical_treatment,
+		/area/offworld/orbital/station/lower_medical_treatment,
 		// Tcomms
 		/area/comms,
 		/area/tcommsat/computer,
 		/area/tcomfoyer,
 		/area/tcommsat/lounge,
 		/area/tcommsat/powercontrol,
+		/area/offworld/orbital/station/telecomms,
 		// Armory
 		/area/security/armoury,
 		/area/security/tactical,
@@ -297,7 +339,10 @@
 		/area/engineering/trammaint,
 		/area/muriki/tramstation/waste,
 		/area/engineering/gravgen,
-		/area/wreck/bridge
+		/area/wreck/bridge,
+		/area/offworld/orbital/station/rust_core,
+		/area/offworld/orbital/station/teleport,
+		/area/offworld/orbital/station/security/armory,
 	)
 
 	var/list/zs_to_test = using_map.unit_test_z_levels || list(1) //Either you set it, or you just get z1
@@ -516,6 +561,11 @@
 	for(var/obj/machinery/camera/network/engineering/C in world)
 		set background=1
 		if(!validate_camera(C, "ENG", used_cams))
+			failed = TRUE
+
+	for(var/obj/machinery/camera/network/engineering_outpost/C in world)
+		set background=1
+		if(!validate_camera(C, "REX", used_cams))
 			failed = TRUE
 
 	for(var/obj/machinery/camera/network/engine/C in world)

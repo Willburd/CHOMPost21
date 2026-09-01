@@ -1,6 +1,5 @@
 #define OUTPOST_SURFACE_CRASHES list("crash_cargoyard","crash_north","crash_south","crash_engi_roof","crash_sec_roof","crash_garden_roof")
-#define OUTPOST_CONFINEMENTBEAM_CRASHES list("crash_ptl","crash_ptl_enginesouth","crash_ptl_enginenorth")
-#define OUTPOST_ASTEROID_CRASHES list("crash_rec","crash_rec_trawlerbad")
+#define OUTPOST_ASTEROID_CRASHES list("crash_rec","crash_rec_trawlerbad","crash_ptl","crash_ptl_enginesouth","crash_ptl_enginenorth")
 
 /obj/effect/overmap/visitable/ship
 	var/overmap_stealth = FALSE // Hidden from ATC movement messages

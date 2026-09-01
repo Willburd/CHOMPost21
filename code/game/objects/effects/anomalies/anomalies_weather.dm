@@ -31,9 +31,7 @@
 		if(istype(nearby, /area/space))
 			continue
 		// Outpost 21 edit begin - We have some other areas that shouldn't be affected
-		if(istype(nearby, /area/offworld/asteroidyard/external))
-			continue
-		if(istype(nearby, /area/offworld/confinementbeam/exterior))
+		if(istype(nearby, /area/offworld/orbital/exterior))
 			continue
 		if(istype(nearby, /area/muriki/grounds))
 			continue
