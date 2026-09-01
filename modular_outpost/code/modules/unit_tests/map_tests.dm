@@ -168,7 +168,7 @@
 		/area/muriki/crew/bunker_deep/eng,
 		/area/muriki/crew/bunker_deep/main,
 		/area/muriki/crew/bunker_deep/comm,
-		/area/muriki/crew/bunker_deep/medm
+		/area/muriki/crew/bunker_deep/med,
 	)
 
 	var/list/does_not_have_disposals = list(
@@ -275,7 +275,7 @@
 		/area/muriki/crew/bunker_deep/eng,
 		/area/muriki/crew/bunker_deep/main,
 		/area/muriki/crew/bunker_deep/comm,
-		/area/muriki/crew/bunker_deep/medm
+		/area/muriki/crew/bunker_deep/med,
 	)
 
 	var/list/does_not_have_displays = list(
