@@ -1545,7 +1545,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/kafel_full,
-/area/offworld/orbital/station/washing)
+/area/offworld/orbital/station/droppod)
 "dh" = (
 /obj/machinery/door/airlock/hatch{
 	icon_state = "door_locked";
@@ -1857,6 +1857,10 @@
 	pixel_x = 5;
 	pixel_y = 5
 	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 5;
+	pixel_y = 30
+	},
 /turf/simulated/floor/tiled/kafel_full/beige,
 /area/offworld/orbital/station/washing)
 "dI" = (
@@ -1923,7 +1927,7 @@
 	pixel_x = 28
 	},
 /turf/simulated/floor/tiled/kafel_full,
-/area/offworld/orbital/station/washing)
+/area/offworld/orbital/station/droppod)
 "dP" = (
 /obj/structure/table/standard,
 /obj/random/soap,
@@ -2054,7 +2058,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/kafel_full,
-/area/offworld/orbital/station/washing)
+/area/offworld/orbital/station/droppod)
 "ed" = (
 /obj/machinery/door/airlock/glass,
 /obj/machinery/door/firedoor,
@@ -2439,8 +2443,13 @@
 	dir = 4;
 	icon_state = "pipe-j2"
 	},
+/obj/machinery/light_switch{
+	dir = 4;
+	pixel_x = -26;
+	pixel_y = -21
+	},
 /turf/simulated/floor/tiled/kafel_full,
-/area/offworld/orbital/station/washing)
+/area/offworld/orbital/station/droppod)
 "eJ" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 6
@@ -2946,7 +2955,7 @@
 	},
 /obj/structure/disposalpipe/junction,
 /turf/simulated/floor/tiled/kafel_full,
-/area/offworld/orbital/station/washing)
+/area/offworld/orbital/station/droppod)
 "fG" = (
 /obj/structure/disposalpipe/segment{
 	dir = 2;
@@ -5360,7 +5369,7 @@
 	pixel_y = 26
 	},
 /turf/simulated/floor/tiled/kafel_full,
-/area/offworld/orbital/station/washing)
+/area/offworld/orbital/station/droppod)
 "kv" = (
 /obj/structure/grille,
 /obj/machinery/door/firedoor/border_only,
@@ -7328,7 +7337,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock{
-	name = "Rock box"
+	name = "Drop Pod"
 	},
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -7511,7 +7520,7 @@
 	},
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/kafel_full,
-/area/offworld/orbital/station/washing)
+/area/offworld/orbital/station/droppod)
 "oH" = (
 /obj/structure/sink{
 	dir = 4;
@@ -7523,7 +7532,7 @@
 	},
 /obj/machinery/light,
 /turf/simulated/floor/tiled/kafel_full,
-/area/offworld/orbital/station/washing)
+/area/offworld/orbital/station/droppod)
 "oI" = (
 /obj/structure/grille,
 /obj/machinery/door/firedoor/border_only,
@@ -7645,6 +7654,11 @@
 	dir = 1;
 	icon_state = "pipe-c"
 	},
+/obj/machinery/light_switch{
+	pixel_x = 25;
+	pixel_y = -21;
+	dir = 8
+	},
 /turf/simulated/floor/tiled/kafel_full/beige,
 /area/offworld/orbital/station/washing)
 "oU" = (
@@ -7699,7 +7713,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_ridged,
-/area/offworld/orbital/station/washing)
+/area/offworld/orbital/station/droppod)
 "oZ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -7928,7 +7942,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/kafel_full,
-/area/offworld/orbital/station/washing)
+/area/offworld/orbital/station/droppod)
 "pz" = (
 /obj/machinery/alarm{
 	dir = 8;
@@ -9483,7 +9497,7 @@
 	pixel_x = 5
 	},
 /turf/simulated/floor/tiled/kafel_full,
-/area/offworld/orbital/station/washing)
+/area/offworld/orbital/station/droppod)
 "sx" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
@@ -9911,7 +9925,7 @@
 	},
 /obj/structure/disposalpipe/trunk,
 /turf/simulated/floor/tiled/kafel_full,
-/area/offworld/orbital/station/washing)
+/area/offworld/orbital/station/droppod)
 "ti" = (
 /obj/machinery/light{
 	dir = 8
@@ -10152,7 +10166,7 @@
 	},
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/kafel_full,
-/area/offworld/orbital/station/washing)
+/area/offworld/orbital/station/droppod)
 "tD" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 8
@@ -10746,7 +10760,7 @@
 	pixel_x = -26
 	},
 /turf/simulated/floor/tiled/kafel_full,
-/area/offworld/orbital/station/washing)
+/area/offworld/orbital/station/droppod)
 "uE" = (
 /obj/structure/closet{
 	name = "Evidence Closet"
@@ -12583,7 +12597,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/kafel_full,
-/area/offworld/orbital/station/washing)
+/area/offworld/orbital/station/droppod)
 "xU" = (
 /obj/machinery/sleeper{
 	dir = 8
@@ -13164,7 +13178,7 @@
 	icon_state = "pipe-j2"
 	},
 /turf/simulated/floor/tiled/kafel_full,
-/area/offworld/orbital/station/washing)
+/area/offworld/orbital/station/droppod)
 "yU" = (
 /obj/machinery/door/airlock/glass,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -17039,7 +17053,7 @@
 "Gl" = (
 /obj/structure/sign/warning/deathsposal,
 /turf/simulated/wall,
-/area/offworld/orbital/station/washing)
+/area/offworld/orbital/station/droppod)
 "Gm" = (
 /turf/simulated/wall/r_wall,
 /area/offworld/orbital/station/security)
@@ -17276,12 +17290,26 @@
 /obj/structure/reagent_dispensers/fueltank/high,
 /turf/simulated/floor/tiled/milspec/airless,
 /area/offworld/orbital/station/storage_engine_core)
+"GP" = (
+/turf/simulated/wall/r_wall,
+/area/offworld/orbital/station/droppod)
 "GQ" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/airless,
 /area/offworld/orbital/exterior/engine_core_port)
+"GR" = (
+/obj/machinery/washing_machine,
+/obj/item/radio/intercom{
+	broadcasting = 1;
+	dir = 8;
+	frequency = 1447;
+	name = "Private AI Channel";
+	pixel_x = -24
+	},
+/turf/simulated/floor/tiled/kafel_full/beige,
+/area/offworld/orbital/station/washing)
 "GS" = (
 /obj/machinery/alarm{
 	dir = 1;
@@ -18268,7 +18296,7 @@
 /area/ai_sat/solar_airlock)
 "Kp" = (
 /turf/simulated/wall,
-/area/offworld/orbital/station/washing)
+/area/offworld/orbital/station/droppod)
 "Kr" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
@@ -20114,7 +20142,7 @@
 	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled/kafel_full,
-/area/offworld/orbital/station/washing)
+/area/offworld/orbital/station/droppod)
 "Rb" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -20805,7 +20833,7 @@
 /area/offworld/orbital/station/power_distribution)
 "Tp" = (
 /turf/simulated/floor/tiled/kafel_full,
-/area/offworld/orbital/station/washing)
+/area/offworld/orbital/station/droppod)
 "Tq" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -22108,7 +22136,7 @@
 	},
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/kafel_full,
-/area/offworld/orbital/station/washing)
+/area/offworld/orbital/station/droppod)
 "XW" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
@@ -40561,7 +40589,7 @@ qz
 Tz
 Ap
 dP
-Ue
+GR
 Ue
 kx
 su
@@ -41206,7 +41234,7 @@ qz
 qz
 qz
 qz
-Tz
+GP
 Kp
 Kp
 Gl
@@ -41368,7 +41396,7 @@ qz
 qz
 qz
 qz
-Tz
+GP
 ku
 uD
 py
@@ -41530,7 +41558,7 @@ qz
 qz
 qz
 qz
-Tz
+GP
 QX
 tC
 yT
@@ -41692,7 +41720,7 @@ qz
 qz
 qz
 qz
-Tz
+GP
 dg
 Kp
 dg
@@ -41854,7 +41882,7 @@ qz
 qz
 qz
 qz
-Tz
+GP
 xT
 Kp
 xT
@@ -42016,13 +42044,13 @@ un
 un
 un
 un
-Tz
-Tz
-Tz
-Tz
-Tz
-Tz
-Tz
+GP
+GP
+GP
+GP
+GP
+GP
+GP
 Ge
 pG
 Ef
