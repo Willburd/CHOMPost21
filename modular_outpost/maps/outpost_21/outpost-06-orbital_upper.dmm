@@ -5418,8 +5418,8 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/industrial/warning/color{
-	light_color = "#00ff00";
-	dir = 8
+	dir = 8;
+	color = "#00ff00"
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/power_distribution)
@@ -8279,8 +8279,8 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/industrial/warning/color{
-	light_color = "#00ff00";
-	dir = 1
+	dir = 1;
+	color = "#00ff00"
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/power_distribution)
@@ -17380,7 +17380,7 @@
 	},
 /obj/effect/floor_decal/industrial/warning/color/corner{
 	dir = 1;
-	light_color = "#00ff00"
+	color = "#00ff00"
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/power_distribution)
@@ -20236,12 +20236,12 @@
 /obj/effect/floor_decal/corner/orange{
 	dir = 5
 	},
-/obj/effect/floor_decal/industrial/warning/color/corner/yellow{
+/obj/effect/floor_decal/industrial/warning/corner{
 	dir = 8
 	},
 /obj/effect/floor_decal/industrial/warning/color/corner{
 	dir = 8;
-	light_color = "#00ff00"
+	color = "#00ff00"
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/power_distribution)
@@ -22418,7 +22418,7 @@
 	},
 /obj/effect/floor_decal/industrial/warning,
 /obj/effect/floor_decal/industrial/warning/color{
-	light_color = "#00ff00"
+	color = "#00ff00"
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/power_distribution)
