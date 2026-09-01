@@ -105,6 +105,7 @@
 		/area/offworld/orbital/station/south_engine_access_west,
 		/area/offworld/orbital/station/south_engine_access_east,
 		/area/muriki/lowerelev,
+		/area/muriki/lowerevac,
 		)
 
 	var/list/forced_hallway = list(
