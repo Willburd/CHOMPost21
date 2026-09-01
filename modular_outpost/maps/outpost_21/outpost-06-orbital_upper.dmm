@@ -17239,6 +17239,10 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/central)
+"GO" = (
+/obj/structure/reagent_dispensers/fueltank/high,
+/turf/simulated/floor/tiled/milspec/airless,
+/area/offworld/orbital/station/storage_engine_core)
 "GQ" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
@@ -40246,7 +40250,7 @@ zJ
 aQ
 hp
 zJ
-aQ
+GO
 FU
 FU
 aQ

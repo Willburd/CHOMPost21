@@ -160,6 +160,7 @@
 	pixel_y = -30;
 	dir = 1
 	},
+/obj/structure/reagent_dispensers/foam,
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/aux_equipment)
 "at" = (
@@ -9306,6 +9307,7 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/reagent_dispensers/fueltank/high,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/rust_tool_storage)
 "tc" = (
@@ -10179,6 +10181,7 @@
 /obj/structure/cable/green{
 	icon_state = "4-10"
 	},
+/obj/structure/reagent_dispensers/foam,
 /turf/simulated/floor/plating,
 /area/maintenance/orbital/lower/fore)
 "uR" = (
@@ -10667,6 +10670,10 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/beam_emitter)
+"vU" = (
+/obj/structure/reagent_dispensers/foam,
+/turf/simulated/floor/plating,
+/area/muriki/elevator/yardlower)
 "vV" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -10685,6 +10692,21 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/rust_entry)
+"vW" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 10
+	},
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/structure/reagent_dispensers/coolanttank,
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/beam_emitter)
+"vX" = (
+/obj/random/trash,
+/obj/structure/reagent_dispensers/foam,
+/turf/simulated/floor/plating,
+/area/maintenance/orbital/lower/fore)
 "vZ" = (
 /obj/machinery/alarm{
 	dir = 4;
@@ -11284,6 +11306,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "1-8"
 	},
+/obj/structure/reagent_dispensers/coolanttank,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/beam_emitter)
 "AO" = (
@@ -13033,6 +13056,7 @@
 	c_tag = "REX - Beam Emitter Gas Storage";
 	dir = 8
 	},
+/obj/structure/reagent_dispensers/fueltank/high,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/beam_emitter)
 "Oa" = (
@@ -29751,7 +29775,7 @@ ef
 SP
 fV
 fV
-cR
+vX
 uP
 mM
 WT
@@ -30938,7 +30962,7 @@ ll
 lG
 lq
 pZ
-tv
+vU
 tv
 Mj
 JA
@@ -33523,7 +33547,7 @@ XU
 ql
 mh
 cz
-Of
+vW
 cB
 re
 qW
