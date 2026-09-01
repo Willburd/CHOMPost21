@@ -130,4 +130,9 @@
 
 /obj/machinery/atmospherics/binary/circulator/examine(mob/user, infix, suffix)
 	. = ..()
-	. += span_infoplain("Its outlet port is to the [dir2text(dir)].")
+	// Outpost 21 edit begin - Reversible TEGs
+	var/cur_dur = dir
+	if(reverse_pipes)
+		cur_dur = turn(dir, 180)
+	. += span_infoplain("Its outlet port is to the [dir2text(cur_dur)].")
+	// Outpost 21 edit end
