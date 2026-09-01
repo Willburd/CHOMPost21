@@ -4363,6 +4363,9 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/lower/port)
+"jI" = (
+/turf/simulated/wall/r_wall,
+/area/offworld/orbital/exterior/emitter_cooling)
 "jJ" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -6791,6 +6794,7 @@
 /obj/effect/floor_decal/corner/orange{
 	dir = 6
 	},
+/obj/machinery/meter,
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/rust_core)
 "ol" = (
@@ -7893,6 +7897,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-10"
 	},
+/obj/machinery/meter,
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/rust_core)
 "qv" = (
@@ -9734,6 +9739,7 @@
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
 	dir = 10
 	},
+/obj/machinery/meter,
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/rust_core)
 "tX" = (
@@ -10339,6 +10345,7 @@
 	c_tag = "REX - RUST Core Main";
 	dir = 1
 	},
+/obj/machinery/meter,
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/rust_core)
 "vk" = (
@@ -10648,6 +10655,9 @@
 /obj/effect/landmark/step_trap,
 /turf/simulated/floor/plating,
 /area/maintenance/orbital/lower/aft)
+"vS" = (
+/turf/simulated/wall/r_wall,
+/area/space)
 "vT" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
 	dir = 8
@@ -12087,7 +12097,6 @@
 /area/offworld/orbital/station/beam_emitter)
 "Hg" = (
 /obj/structure/table/standard,
-/obj/item/clothing/glasses/omnihud/eng,
 /obj/effect/floor_decal/corner/orange{
 	dir = 10
 	},
@@ -12095,6 +12104,12 @@
 	dir = 1;
 	pixel_y = -26
 	},
+/obj/item/analyzer,
+/obj/item/analyzer,
+/obj/item/analyzer,
+/obj/item/analyzer,
+/obj/item/analyzer,
+/obj/item/clothing/glasses/omnihud/eng,
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/rust_control)
 "Hk" = (
@@ -12867,6 +12882,7 @@
 /obj/machinery/atmospherics/pipe/simple/visible/green{
 	dir = 5
 	},
+/obj/machinery/meter,
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/rust_core)
 "MS" = (
@@ -14435,6 +14451,7 @@
 "YB" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/black,
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/meter,
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/rust_core)
 "YD" = (
@@ -25549,10 +25566,10 @@ by
 by
 by
 by
-by
-by
-by
-by
+jI
+jI
+jI
+jI
 by
 vI
 di
@@ -25560,10 +25577,10 @@ di
 di
 vI
 by
-by
-by
-by
-by
+jI
+jI
+jI
+jI
 by
 by
 by
@@ -25706,9 +25723,9 @@ xM
 xM
 xM
 by
-by
-by
-by
+jI
+jI
+jI
 by
 Rk
 bz
@@ -25729,9 +25746,9 @@ bz
 vg
 vI
 by
-by
-by
-by
+jI
+jI
+jI
 by
 iW
 tf
@@ -25889,10 +25906,10 @@ pC
 ee
 pC
 Fc
-pC
-pC
-pC
-pC
+ee
+ee
+ee
+ee
 bJ
 bH
 it
@@ -27440,7 +27457,7 @@ xM
 xM
 xM
 xM
-xM
+vS
 qi
 wX
 wX
@@ -27602,7 +27619,7 @@ xM
 xM
 xM
 xM
-xM
+vS
 qi
 wX
 wX
@@ -27764,7 +27781,7 @@ xM
 xM
 xM
 xM
-xM
+vS
 qi
 wX
 wX
@@ -27926,7 +27943,7 @@ xM
 xM
 xM
 xM
-xM
+vS
 qi
 wX
 wX
@@ -28088,7 +28105,7 @@ xM
 xM
 xM
 xM
-xM
+vS
 qi
 wX
 wX
@@ -28250,7 +28267,7 @@ xM
 xM
 xM
 xM
-xM
+vS
 qi
 Ec
 Aw
@@ -28412,7 +28429,7 @@ xM
 xM
 xM
 xM
-xM
+vS
 qi
 DS
 lS
@@ -28574,7 +28591,7 @@ xM
 xM
 xM
 xM
-xM
+vS
 qi
 wX
 wX
@@ -28736,7 +28753,7 @@ xM
 xM
 xM
 xM
-xM
+vS
 qi
 wX
 wX
@@ -28898,7 +28915,7 @@ xM
 xM
 xM
 xM
-xM
+vS
 qi
 wX
 wX
@@ -29060,7 +29077,7 @@ xM
 xM
 xM
 xM
-xM
+vS
 qi
 wX
 wX
@@ -29222,7 +29239,7 @@ xM
 xM
 xM
 xM
-xM
+vS
 qi
 wX
 wX
@@ -29871,7 +29888,7 @@ xM
 xM
 xM
 xM
-xM
+vS
 qi
 DS
 lS
@@ -30033,7 +30050,7 @@ xM
 xM
 xM
 xM
-xM
+vS
 qn
 wX
 zW
@@ -30195,7 +30212,7 @@ xM
 xM
 xM
 xM
-xM
+vS
 qn
 wX
 zW
@@ -30357,7 +30374,7 @@ xM
 xM
 xM
 xM
-xM
+vS
 qn
 wX
 zW
@@ -30519,7 +30536,7 @@ xM
 xM
 xM
 xM
-xM
+vS
 qn
 wX
 zW
@@ -30681,7 +30698,7 @@ xM
 xM
 xM
 xM
-xM
+vS
 qn
 wX
 zW
@@ -30843,7 +30860,7 @@ xM
 xM
 xM
 xM
-xM
+vS
 qn
 wX
 zW
@@ -31005,7 +31022,7 @@ xM
 xM
 xM
 xM
-xM
+vS
 qn
 wX
 zW
@@ -31167,7 +31184,7 @@ xM
 xM
 xM
 xM
-xM
+vS
 qn
 wX
 zW
@@ -31329,7 +31346,7 @@ xM
 xM
 xM
 xM
-xM
+vS
 qn
 wX
 zW
@@ -31491,7 +31508,7 @@ xM
 xM
 xM
 xM
-xM
+vS
 qn
 wX
 zW
@@ -31653,7 +31670,7 @@ xM
 xM
 xM
 xM
-xM
+vS
 qn
 wX
 zW
@@ -31815,7 +31832,7 @@ xM
 xM
 xM
 xM
-xM
+vS
 qn
 wX
 zW
@@ -31977,7 +31994,7 @@ xM
 xM
 xM
 xM
-xM
+vS
 qn
 wX
 zW
@@ -32139,7 +32156,7 @@ xM
 xM
 xM
 xM
-xM
+vS
 qn
 wX
 zW
@@ -32301,7 +32318,7 @@ xM
 xM
 xM
 xM
-xM
+vS
 qn
 wX
 zW
@@ -32463,7 +32480,7 @@ xM
 xM
 xM
 xM
-xM
+vS
 qn
 wX
 zW
