@@ -123,23 +123,29 @@
 
 
 // Landing
-/obj/effect/shuttle_landmark/premade/orbital_escape/pod_one/landing_site
+/obj/effect/shuttle_landmark/premade/orbital_escape/landing_site/pod_one
 	name = "Landing Site"
 	landmark_tag = "orbital_escape_pod_landing_one"
 	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki
 	base_area = /area/mine/explored/muriki/mountaineast
 
-/obj/effect/shuttle_landmark/premade/orbital_escape/pod_two/landing_site
+/obj/effect/shuttle_landmark/premade/orbital_escape/landing_site/pod_two
 	name = "Landing Site"
 	landmark_tag = "orbital_escape_pod_landing_two"
 	base_turf = /turf/simulated/floor/water/acidic/deep/turfpack/muriki
 	base_area = /area/muriki/grounds/engi
 
-/obj/effect/shuttle_landmark/premade/orbital_escape/pod_three/landing_site
+/obj/effect/shuttle_landmark/premade/orbital_escape/landing_site/pod_three
 	name = "Landing Site"
 	landmark_tag = "orbital_escape_pod_landing_three"
 	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki
 	base_area = /area/muriki/grounds/sec
+
+// Crash on landing
+/obj/effect/shuttle_landmark/premade/orbital_escape/landing_site/shuttle_arrived(datum/shuttle/shuttle)
+	. = ..()
+	var/turf/ground = get_turf(src)
+	explosion(ground, 1, 1, 2, 3)
 
 // Force acceptable, this pod can't risk stopping
 /obj/effect/shuttle_landmark/premade/orbital_escape/landing_site/is_valid(datum/shuttle/shuttle)

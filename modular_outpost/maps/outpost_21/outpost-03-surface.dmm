@@ -20778,15 +20778,15 @@
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/lab)
 "aWi" = (
-/obj/effect/shuttle_landmark/premade/orbital_escape/pod_three/landing_site,
+/obj/effect/shuttle_landmark/premade/orbital_escape/landing_site/pod_three,
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
 /area/muriki/grounds/sec)
 "aWj" = (
-/obj/effect/shuttle_landmark/premade/orbital_escape/pod_two/landing_site,
+/obj/effect/shuttle_landmark/premade/orbital_escape/landing_site/pod_two,
 /turf/simulated/floor/water/acidic/deep/turfpack/muriki,
 /area/muriki/grounds/engi)
 "aWk" = (
-/obj/effect/shuttle_landmark/premade/orbital_escape/pod_one/landing_site,
+/obj/effect/shuttle_landmark/premade/orbital_escape/landing_site/pod_one,
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
 /area/mine/explored/muriki/mountaineast)
 "aWl" = (
