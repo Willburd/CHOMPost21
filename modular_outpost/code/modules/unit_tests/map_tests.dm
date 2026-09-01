@@ -104,6 +104,7 @@
 		/area/offworld/orbital/station/south_power_airlock,
 		/area/offworld/orbital/station/south_engine_access_west,
 		/area/offworld/orbital/station/south_engine_access_east,
+		/area/muriki/lowerelev,
 		)
 
 	var/list/forced_hallway = list(
@@ -163,7 +164,11 @@
 		/area/rnd/research/roof_eva,
 		/area/muriki/cybstorage,
 		/area/muriki/crew/bunker,
-		/area/offworld/orbital/station/ai_transit_hub
+		/area/offworld/orbital/station/ai_transit_hub,
+		/area/muriki/crew/bunker_deep/eng,
+		/area/muriki/crew/bunker_deep/main,
+		/area/muriki/crew/bunker_deep/comm,
+		/area/muriki/crew/bunker_deep/medm
 	)
 
 	var/list/does_not_have_disposals = list(
@@ -266,7 +271,11 @@
 		/area/offworld/orbital/station/security/holding_cell,
 		/area/offworld/orbital/station/security/lockup,
 		/area/offworld/orbital/station/security/armory,
-		/area/offworld/orbital/station/halls/rust_tool_storage
+		/area/offworld/orbital/station/halls/rust_tool_storage,
+		/area/muriki/crew/bunker_deep/eng,
+		/area/muriki/crew/bunker_deep/main,
+		/area/muriki/crew/bunker_deep/comm,
+		/area/muriki/crew/bunker_deep/medm
 	)
 
 	var/list/does_not_have_displays = list(
