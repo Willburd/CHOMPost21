@@ -492,3 +492,32 @@
 		return
 	T.wet_overlay = image('icons/effects/water.dmi', icon_state = "wet_floor")
 	T.add_overlay(T.wet_overlay)
+
+
+// Damage wires
+/obj/effect/landmark/fray_wire
+	name = "fray wire 0%"
+	var/chance = 0
+	delete_me = TRUE
+
+/obj/effect/landmark/fray_wire/Initialize(mapload)
+	..()
+	return INITIALIZE_HINT_LATELOAD
+
+/obj/effect/landmark/fray_wire/twentyfive
+	name = "fray wire 25%"
+	chance = 25
+
+/obj/effect/landmark/fray_wire/fifty
+	name = "fray wire 50%"
+	chance = 50
+
+/obj/effect/landmark/fray_wire/always_lubed
+	name = "fray wire 100%"
+	chance = 100
+
+/obj/effect/landmark/fray_wire/LateInitialize()
+	if(!prob(chance))
+		return
+	var/obj/structure/cable/wire = locate() in get_turf(src)
+	wire.fray()

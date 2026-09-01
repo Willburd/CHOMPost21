@@ -59,18 +59,18 @@
 	name = "Prospector (Starboard Dock)"
 	landmark_tag = "prospector_docks_medical"
 	base_turf = /turf/space
-	base_area = /area/offworld/asteroidyard // TODO
+	base_area = /area/space
 
 /obj/effect/shuttle_landmark/premade/medical/prospector_rear
 	name = "Prospector (Medical Dock)"
 	landmark_tag = "prospector_rear_medical"
 	base_turf = /turf/space
-	base_area = /area/offworld/asteroidyard // TODO
+	base_area = /area/space
 
 /obj/effect/shuttle_landmark/premade/medical/confinementbeam
 	name = "Confinement Beam (Medical Dock)"
 	landmark_tag = "confinementbeam_medical"
 	docking_controller = "beam_sat_medical_controller"
 	base_turf = /turf/space
-	base_area = /area/offworld/confinementbeam/exterior
-	local_crash_sites = OUTPOST_CONFINEMENTBEAM_CRASHES
+	base_area = /area/space
+	local_crash_sites = OUTPOST_ASTEROID_CRASHES

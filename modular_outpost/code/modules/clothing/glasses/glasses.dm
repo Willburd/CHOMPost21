@@ -124,6 +124,7 @@ VISION_GOGGLE_USES_CELL(/obj/item/clothing/glasses/material)
 VISION_GOGGLE_USES_CELL(/obj/item/clothing/glasses/night)
 VISION_GOGGLE_USES_CELL(/obj/item/clothing/glasses/omni)
 VISION_GOGGLE_USES_CELL(/obj/item/clothing/glasses/omnihud/eng/meson)
+VISION_GOGGLE_USES_CELL(/obj/item/clothing/glasses/ghost)
 
 /*
 /obj/item/clothing/glasses/hud

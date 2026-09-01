@@ -22,6 +22,7 @@
 				continue
 			if(is_vore_jammed(B) || !A || A.flag_check(AREA_BLOCK_SUIT_SENSORS))
 				implantData[++implantData.len] = list("host" = B.imp_in, "x" = rand(1,300), "y" = rand(1,300), "z" = rand(1,300), "area" = "E4R@4")
+				continue
 			if(!(bl.z in using_map.station_levels) || istype(bl, /turf/space))
 				implantData[++implantData.len] = list("host" = B.imp_in, "x" = "?", "y" = "?", "z" = "?", "area" = "Unknown")
 				continue

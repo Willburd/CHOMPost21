@@ -473,7 +473,7 @@
 
 /area/ai_server_room
 	holomap_color = HOLOMAP_AREACOLOR_COMMAND
-	base_turf = /turf/simulated/mineral/floor/vacuum
+	base_turf = /turf/simulated/open
 	use_emergency_overlay = TRUE
 
 /area/ai_cyborg_station

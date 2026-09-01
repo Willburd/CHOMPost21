@@ -54,3 +54,16 @@
 		/area/turbolift/scimain,
 		/area/turbolift/sciupper,
 		)
+
+/obj/turbolift_map_holder/muriki/orbital_yard
+	icon = 'icons/obj/turbolift_preview_5x5.dmi'
+	depth = 2
+	lift_size_x = 4
+	lift_size_y = 4
+	dir = EAST
+	name = "Orbital Elevator map placeholder"
+
+	areas_to_use = list(
+		/area/turbolift/orbitalyard_lower,
+		/area/turbolift/orbitalyard_upper
+		)
