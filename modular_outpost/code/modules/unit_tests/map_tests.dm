@@ -86,12 +86,26 @@
 		/area/hydroponics/gibber,
 		/area/rnd/research/roof_eva,
 		/area/ai_sat/core_external,
-		/area/offworld/confinementbeam/exterior,
+		/area/offworld/orbital/exterior,
 		/area/ai_sat/power_control,
 		/area/security/brig_hole,
 		/area/specialty/stowaway_clubhouse,
 		/area/specialty/stowaway_clubhouse/upper,
 		/area/specialty/expie_clubhouse,
+		/area/offworld/orbital/exterior/engine_core_port,
+		/area/offworld/orbital/exterior/engine_core_starboard,
+		/area/offworld/orbital/station/storage_engine_core,
+		/area/ai_sat/solar_airlock,
+		/area/offworld/orbital/station/solar_control,
+		/area/offworld/orbital/station/port_airlock,
+		/area/offworld/orbital/station/starboard_airlock,
+		/area/offworld/orbital/station/dockingarm,
+		/area/offworld/orbital/station/access_shaft,
+		/area/offworld/orbital/station/south_power_airlock,
+		/area/offworld/orbital/station/south_engine_access_west,
+		/area/offworld/orbital/station/south_engine_access_east,
+		/area/muriki/lowerelev,
+		/area/muriki/lowerevac,
 		)
 
 	var/list/forced_hallway = list(
@@ -130,12 +144,18 @@
 		/area/ai_sat/fore_airlock,
 		/area/ai_sat/access_shaft,
 		/area/ai_sat/docking_wing,
-		/area/offworld/confinementbeam/station/trawler_airlock,
-		/area/offworld/confinementbeam/station/access_shaft,
-		/area/offworld/confinementbeam/station/starboard_airlock,
-		/area/offworld/confinementbeam/station/port_airlock,
-		/area/offworld/confinementbeam/station/hallway,
-		/area/offworld/confinementbeam/station/hallway_alt
+		/area/offworld/orbital/station/halls/lower/aft,
+		/area/offworld/orbital/station/halls/lower/central,
+		/area/offworld/orbital/station/halls/stairs_lower,
+		/area/offworld/orbital/station/halls/lower/fore,
+		/area/offworld/orbital/station/halls/rust_entry,
+		/area/offworld/orbital/station/halls/rust_tool_storage,
+		/area/offworld/orbital/station/halls/aft,
+		/area/offworld/orbital/station/halls/stairs_upper,
+		/area/offworld/orbital/station/halls/central,
+		/area/offworld/orbital/station/halls/starboard,
+		/area/offworld/orbital/station/halls/fore,
+		/area/offworld/orbital/station/halls/lower/port
 	)
 
 	var/list/does_not_use_lightswitch = list(
@@ -144,7 +164,12 @@
 		/area/rnd/entry_aux,
 		/area/rnd/research/roof_eva,
 		/area/muriki/cybstorage,
-		/area/muriki/crew/bunker
+		/area/muriki/crew/bunker,
+		/area/offworld/orbital/station/ai_transit_hub,
+		/area/muriki/crew/bunker_deep/eng,
+		/area/muriki/crew/bunker_deep/main,
+		/area/muriki/crew/bunker_deep/comm,
+		/area/muriki/crew/bunker_deep/med,
 	)
 
 	var/list/does_not_have_disposals = list(
@@ -237,7 +262,21 @@
 		/area/ai_sat/fore_airlock,
 		/area/ai_server_room,
 		/area/quartermaster/mining/ore_silo,
-		/area/medical/psych
+		/area/medical/psych,
+		/area/offworld/orbital/station/aux_equipment,
+		/area/offworld/orbital/station/rust_backup_power,
+		/area/offworld/orbital/station/rust_aux_tool_storage,
+		/area/offworld/orbital/station/dockinghanger,
+		/area/offworld/orbital/station/teleport,
+		/area/offworld/orbital/station/telecomms,
+		/area/offworld/orbital/station/security/holding_cell,
+		/area/offworld/orbital/station/security/lockup,
+		/area/offworld/orbital/station/security/armory,
+		/area/offworld/orbital/station/halls/rust_tool_storage,
+		/area/muriki/crew/bunker_deep/eng,
+		/area/muriki/crew/bunker_deep/main,
+		/area/muriki/crew/bunker_deep/comm,
+		/area/muriki/crew/bunker_deep/med,
 	)
 
 	var/list/does_not_have_displays = list(
@@ -274,12 +313,15 @@
 		/area/engineering/refinery/aid_station,
 		/area/medical/first_aid_station_starboard,
 		/area/medical/first_aid_station,
+		/area/offworld/orbital/station/medical_treatment,
+		/area/offworld/orbital/station/lower_medical_treatment,
 		// Tcomms
 		/area/comms,
 		/area/tcommsat/computer,
 		/area/tcomfoyer,
 		/area/tcommsat/lounge,
 		/area/tcommsat/powercontrol,
+		/area/offworld/orbital/station/telecomms,
 		// Armory
 		/area/security/armoury,
 		/area/security/tactical,
@@ -297,7 +339,10 @@
 		/area/engineering/trammaint,
 		/area/muriki/tramstation/waste,
 		/area/engineering/gravgen,
-		/area/wreck/bridge
+		/area/wreck/bridge,
+		/area/offworld/orbital/station/rust_core,
+		/area/offworld/orbital/station/teleport,
+		/area/offworld/orbital/station/security/armory,
 	)
 
 	var/list/zs_to_test = using_map.unit_test_z_levels || list(1) //Either you set it, or you just get z1
@@ -518,6 +563,11 @@
 		if(!validate_camera(C, "ENG", used_cams))
 			failed = TRUE
 
+	for(var/obj/machinery/camera/network/engineering_outpost/C in world)
+		set background=1
+		if(!validate_camera(C, "REX", used_cams))
+			failed = TRUE
+
 	for(var/obj/machinery/camera/network/engine/C in world)
 		set background=1
 		if(!validate_camera(C, "ENG", used_cams))
@@ -625,3 +675,95 @@
 
 	if(failed)
 		TEST_FAIL("One or more tele_beacon objects are incorrectly setup or are duplicates")
+
+
+
+
+/datum/unit_test/things_should_not_be_in_walls
+
+/datum/unit_test/things_should_not_be_in_walls/Run()
+	set background=1
+
+	var/failed = FALSE
+
+	for(var/obj/machinery/light/L in world)
+		if(is_in_wall(L))
+			failed = TRUE
+	for(var/obj/machinery/door/D in world)
+		if(is_in_wall(D))
+			failed = TRUE
+		if(is_in_space(D))
+			failed = TRUE
+	for(var/obj/structure/railing/R in world)
+		if(is_in_wall(R))
+			failed = TRUE
+
+	if(failed)
+		TEST_FAIL("One or more objects are inside a dense turf wall.")
+
+/datum/unit_test/things_should_not_be_in_walls/proc/is_in_wall(obj/structure/thing)
+	var/turf/T = get_turf(thing)
+	if(!T)
+		return FALSE; // What?
+	if(!T.density)
+		return
+	TEST_NOTICE(src, "[thing] was inside a dense wall. Located at [T.x].[T.y].[T.z] : [get_area(thing)]")
+	return TRUE;
+
+/datum/unit_test/things_should_not_be_in_walls/proc/is_in_space(obj/structure/thing)
+	var/turf/T = get_turf(thing)
+	if(!isspace(T))
+		return FALSE;
+	TEST_NOTICE(src, "[thing] was placed on space turf. Located at [T.x].[T.y].[T.z] : [get_area(thing)]")
+	return TRUE
+
+
+
+/datum/unit_test/wall_lights_must_have_supports
+
+/datum/unit_test/wall_lights_must_have_supports/Run()
+	set background=1
+
+	var/failed = FALSE
+
+	for(var/obj/machinery/light/L in world)
+		// Ignore elevators
+		var/area/ar = get_area(L)
+		if(istype(ar,/area/turbolift))
+			continue
+
+		// Lights that don't need support
+		if(istype(L,/obj/machinery/light/flamp))
+			continue
+		if(istype(L,/obj/machinery/light/bigfloorlamp))
+			continue
+		if(istype(L,/obj/machinery/light/floortube))
+			continue
+		if(istype(L,/obj/machinery/light/small/fairylights))
+			continue
+		if(istype(L,/obj/machinery/light/lamppost))
+			continue
+		if(istype(L,/obj/machinery/light/spot))
+			continue
+
+		// Check for a dense wall first
+		var/turf/get_wall = get_step(L, L.dir)
+		if(get_wall.density)
+			continue
+
+		// Fallback and see if other things are supporting it
+		var/had_other_support = FALSE
+		for(var/obj/structure/window/find_win in get_wall.contents) // windows
+			if(find_win.fulltile) // Allows on full windows too
+				had_other_support = TRUE
+				break
+			if(find_win.dir == reverse_direction(L.dir)) // Allowed on windows and maint panels too
+				had_other_support = TRUE
+				break
+
+		if(!had_other_support)
+			TEST_NOTICE(src, "[L] was placed without a support wall. Located on \the [get_turf(L)] [L.x].[L.y].[L.z] : [ar]")
+			failed = TRUE
+
+	if(failed)
+		TEST_FAIL("One or more lights is floating without a wall.")

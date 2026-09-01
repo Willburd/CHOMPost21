@@ -45,7 +45,7 @@
 				var/mob/living/carbon/C = user
 				playsound(get_turf(C), 'sound/items/eatfood.ogg', 25, 0)
 				C.ingested.add_reagent(REAGENT_ID_TOXIN, 0.5) //normally formaldehyde, and 2 units of it. Toxin is being subsituted and is 4 times as toxic, hence a quarter of the normal amount.
-				C.ingested.add_reagent(REAGENT_ID_CHLORALHYDRATE, 3)
+				C.ingested.add_reagent(REAGENT_ID_CLEANER, 3) // Outpost 21 edit - WHY WAS THIS CHLORAL
 				reagents.trans_to_holder(C.ingested, 1)
 				bites++
 				update_icon() // Outpost 21 edit - Eating soap update

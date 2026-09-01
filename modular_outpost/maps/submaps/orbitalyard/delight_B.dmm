@@ -1091,12 +1091,6 @@
 /obj/structure/table/standard,
 /turf/simulated/floor/tiled/eris/steel/brown_platform/turfpack/airless,
 /area/submap/outpost21/structure_generic/delight_ruins)
-"or" = (
-/obj/machinery/light{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/eris/dark/orangecorner/turfpack/airless,
-/area/submap/outpost21/structure_generic/delight_ruins)
 "ox" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
 	dir = 10
@@ -1706,12 +1700,6 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
-/area/submap/outpost21/structure_generic/delight_ruins)
-"ww" = (
-/obj/machinery/light{
-	dir = 1
-	},
-/turf/simulated/floor/wood/turfpack/airless,
 /area/submap/outpost21/structure_generic/delight_ruins)
 "wA" = (
 /obj/machinery/door/firedoor/glass,
@@ -2424,15 +2412,6 @@
 /obj/machinery/light,
 /turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
 /area/submap/outpost21/structure_generic/delight_ruins)
-"Fz" = (
-/obj/structure/table/reinforced,
-/obj/random/tech_supply,
-/obj/random/tech_supply,
-/obj/machinery/light{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/eris/dark/orangecorner/turfpack/airless,
-/area/submap/outpost21/structure_generic/delight_ruins)
 "FB" = (
 /obj/structure/lattice,
 /obj/item/stack/rods,
@@ -3048,12 +3027,6 @@
 /obj/item/storage/box/pillbottles,
 /obj/structure/closet/wardrobe/chemistry_white,
 /turf/simulated/floor/tiled/eris/white/bluecorner/turfpack/airless,
-/area/submap/outpost21/structure_generic/delight_ruins)
-"Nh" = (
-/obj/machinery/light{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/eris/dark/orangecorner/turfpack/airless,
 /area/submap/outpost21/structure_generic/delight_ruins)
 "Nq" = (
 /obj/machinery/light,
@@ -4530,7 +4503,7 @@ Gv
 mD
 rv
 jw
-ww
+mM
 Jf
 cW
 GM
@@ -5982,7 +5955,7 @@ oY
 YF
 lg
 mD
-or
+fR
 Rn
 lD
 MB
@@ -6364,10 +6337,10 @@ IN
 BQ
 Ra
 IM
-Fz
+jQ
 jQ
 fR
-Nh
+fR
 Jb
 Sw
 mD

@@ -60,7 +60,7 @@
 #define ACCESS_MINING_OFFICE 49
 #define ACCESS_MAILSORTING 50
 
-#define ACCESS_ELECTROPHYS 51 // Outpost 21 edit - Particle physicist
+// #define UNUSED 51
 // #define UNUSED 52
 
 #define ACCESS_HEADS_VAULT 53

@@ -118,8 +118,8 @@
 		return linked_uav.relaymove(host_mob, direction, tgui_owner.signal_strength)
 	return FALSE
 
-/datum/remote_view_config/uav_control_pda/handle_apply_visuals( datum/component/remote_view/owner_component, mob/host_mob)
-	var/datum/data/pda/app/uav_control/tgui_owner = owner_component.get_coordinator()
+/datum/remote_view_config/uav_control_pda/handle_apply_visuals( mob/host_mob)
+	var/datum/data/pda/app/uav_control/tgui_owner = get_component_coordinator(host_mob)
 	if(!tgui_owner)
 		return
 	var/obj/item/uav/linked_uav = tgui_owner.our_uav?.resolve()
@@ -150,14 +150,14 @@
 		host_mob.healths.appearance = null
 
 // Show the uav health instead of the mob's while it is viewing
-/datum/remote_view_config/uav_control_pda/handle_hud_health( datum/component/remote_view/owner_component, mob/host_mob)
-	var/datum/data/pda/app/uav_control/tgui_owner = owner_component.get_coordinator()
+/datum/remote_view_config/uav_control_pda/handle_hud_health( mob/host_mob)
+	var/datum/data/pda/app/uav_control/tgui_owner = get_component_coordinator(host_mob)
 
 	var/mutable_appearance/MA = new (host_mob.healths)
 	MA.icon = 'icons/mob/screen1_robot_minimalist.dmi'
 	MA.cut_overlays()
 
-	var/obj/item/uav/linked_uav = tgui_owner.our_uav?.resolve()
+	var/obj/item/uav/linked_uav = tgui_owner?.our_uav?.resolve()
 	if(!linked_uav)
 		MA.icon_state = "health7"
 	else

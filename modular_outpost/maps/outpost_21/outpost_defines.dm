@@ -44,6 +44,7 @@
 							NETWORK_ENGINE,
 							NETWORK_ENGINEERING,
 							NETWORK_ENGINEERING_OUTPOST,
+							NETWORK_SUBSTATIONS,
 							NETWORK_DEFAULT,
 							NETWORK_MEDICAL,
 							NETWORK_RESEARCH,
@@ -73,8 +74,12 @@
 	usable_email_tlds = list("internalmail.es")
 	allowed_spawns = list("Elevator", "Cryogenic Storage", "Cyborg Storage", "On-Site Dorms")
 	default_skybox = /datum/skybox_settings/outpost21
-	unit_test_z_levels = list(Z_LEVEL_OUTPOST_DEEPDARK,Z_LEVEL_OUTPOST_BASEMENT,Z_LEVEL_OUTPOST_SURFACE,Z_LEVEL_OUTPOST_UPPER,Z_LEVEL_OUTPOST_ASTEROID,Z_LEVEL_OUTPOST_CONFINEMENTBEAM)
-	unit_test_exempt_areas = list()
+	unit_test_z_levels = list(Z_LEVEL_OUTPOST_DEEPDARK,Z_LEVEL_OUTPOST_BASEMENT,Z_LEVEL_OUTPOST_SURFACE,Z_LEVEL_OUTPOST_UPPER,Z_LEVEL_OUTPOST_ORBITAL_LOWER,Z_LEVEL_OUTPOST_ORBITAL_UPPER)
+	unit_test_exempt_areas = list(
+										/area/specialty/expie_clubhouse,
+										/area/specialty/stowaway_clubhouse,
+										/area/specialty/stowaway_clubhouse/upper
+	)
 	unit_test_exempt_from_atmos = list(	/area/muriki/processor,
 										/area/muriki/processor/hall,
 										/area/muriki/processor/hall/entrance,
@@ -154,10 +159,22 @@
 										/area/muriki/elevator/mediupper,
 										/area/muriki/elevator/civupper,
 										/area/muriki/elevator/sciupper,
+										/area/muriki/elevator/yardlower,
+										/area/muriki/elevator/yardupper,
 										// The asteroid yard's exterior does not need scrubbers and vents
-										/area/offworld/asteroidyard/external,
-										/area/offworld/asteroidyard/external/yardzone,
-										/area/offworld/confinementbeam/exterior,
+										/area/offworld/orbital/exterior,
+										/area/offworld/orbital/exterior/yardzone,
+										/area/offworld/orbital/exterior/emitter_cooling,
+										/area/offworld/orbital/station/south_power_airlock,
+										/area/offworld/orbital/station/south_engine_access_west,
+										/area/offworld/orbital/station/south_engine_access_east,
+										/area/offworld/orbital/exterior/starboard_solars,
+										/area/offworld/orbital/station/port_airlock,
+										/area/offworld/orbital/exterior/rust_cooling,
+										/area/offworld/orbital/exterior/engine_core_port,
+										/area/offworld/orbital/exterior/engine_core_starboard,
+										/area/offworld/orbital/station/storage_engine_core,
+										/area/offworld/orbital/station/dockingarm,
 										/area/ai_sat/core_external,
 										/area/ai_sat/power_control,
 										// Foundation blocks
@@ -245,8 +262,7 @@
 										/area/muriki/elevator/secbase,
 										/area/muriki/elevator/medibasement,
 										// The asteroid yard's exterior does not need apcs
-										/area/offworld/asteroidyard/external,
-										/area/offworld/asteroidyard/external/yardzone,
+										/area/offworld/orbital/exterior/yardzone,
 										// Actual unit test exceptions
 										/area/muriki/lowerelev,
 										/area/muriki/lowerevac,
@@ -278,8 +294,8 @@
 			Z_LEVEL_OUTPOST_BASEMENT,
 			Z_LEVEL_OUTPOST_SURFACE,
 			Z_LEVEL_OUTPOST_UPPER,
-			Z_LEVEL_OUTPOST_ASTEROID,
-			Z_LEVEL_OUTPOST_CONFINEMENTBEAM
+			Z_LEVEL_OUTPOST_ORBITAL_LOWER,
+			Z_LEVEL_OUTPOST_ORBITAL_UPPER
 		)
 
 	ai_shell_restricted = TRUE
@@ -289,26 +305,26 @@
 		Z_LEVEL_OUTPOST_BASEMENT,
 		Z_LEVEL_OUTPOST_SURFACE,
 		Z_LEVEL_OUTPOST_UPPER,
-		Z_LEVEL_OUTPOST_CONFINEMENTBEAM
+		Z_LEVEL_OUTPOST_ORBITAL_LOWER,
+		Z_LEVEL_OUTPOST_ORBITAL_UPPER
 		)
 
 	confinement_beam_z_levels = list(
 		// Z_LEVEL_OUTPOST_DEEPDARK,
 		Z_LEVEL_OUTPOST_BASEMENT,
 		Z_LEVEL_OUTPOST_SURFACE,
-		Z_LEVEL_OUTPOST_UPPER,
-		Z_LEVEL_OUTPOST_ASTEROID
+		Z_LEVEL_OUTPOST_UPPER
 	)
 
 	// Zlevels with rare ores
 	rare_ore_levels = list(
-		Z_LEVEL_OUTPOST_ASTEROID,
-		Z_LEVEL_OUTPOST_CONFINEMENTBEAM,
+		Z_LEVEL_OUTPOST_ORBITAL_LOWER,
+		Z_LEVEL_OUTPOST_ORBITAL_UPPER,
 		Z_NAME_OUTPOST_ROGUEMINE_1,
 		Z_NAME_OUTPOST_ROGUEMINE_2
 	)
 
-	belter_docked_z = 		list(Z_LEVEL_OUTPOST_ASTEROID)
+	belter_docked_z = 		list(Z_LEVEL_OUTPOST_ORBITAL_UPPER)
 	belter_transit_z =	 	list(Z_NAME_ALIAS_CENTCOM)
 	belter_belt_z = 		list(Z_NAME_OUTPOST_ROGUEMINE_1,
 									Z_NAME_OUTPOST_ROGUEMINE_2)
@@ -317,8 +333,8 @@
 	rare_ores = list(ORE_MARBLE = 5, ORE_QUARTZ = 15, ORE_COPPER = 20, ORE_TIN = 15, ORE_BAUXITE = 5, ORE_URANIUM = 25, ORE_PLATINUM = 25, ORE_HEMATITE = 15, ORE_RUTILE = 20, ORE_CARBON = 25, ORE_DIAMOND = 8, ORE_GOLD = 25, ORE_SILVER = 10, ORE_PHORON = 25, ORE_LEAD = 15, ORE_VOPAL = 1, ORE_VERDANTIUM = 3, ORE_PAINITE = 1)
 
 /datum/map/outpost/perform_map_generation()
-	seed_submaps(list(Z_LEVEL_OUTPOST_ASTEROID), 220, /area/offworld/asteroidyard/external/yardzone, /datum/map_template/outpost21/space/orbitalyard_huge)
-	seed_submaps(list(Z_LEVEL_OUTPOST_ASTEROID), 220, /area/offworld/asteroidyard/external/yardzone, /datum/map_template/outpost21/space/orbitalyard)
+	seed_submaps(list(Z_LEVEL_OUTPOST_ORBITAL_UPPER), 220, /area/offworld/orbital/exterior/yardzone, /datum/map_template/outpost21/space/orbitalyard_huge)
+	seed_submaps(list(Z_LEVEL_OUTPOST_ORBITAL_UPPER), 220, /area/offworld/orbital/exterior/yardzone, /datum/map_template/outpost21/space/orbitalyard)
 
 	seed_submaps(list(Z_LEVEL_OUTPOST_SURFACE), 150, /area/muriki/yard, /datum/map_template/outpost21/muriki/cargoyard_huge)
 	seed_submaps(list(Z_LEVEL_OUTPOST_SURFACE), 200, /area/muriki/yard, /datum/map_template/outpost21/muriki/cargoyard)
@@ -338,8 +354,12 @@
 	new /datum/random_map/automata/cave_system(null, 1, 1, Z_LEVEL_OUTPOST_UPPER, world.maxx, world.maxy) // Create the mining Z-level.
 	new /datum/random_map/noise/ore(null, 1, 1, Z_LEVEL_OUTPOST_UPPER, world.maxx, world.maxy)         // Create the mining ore distribution map.
 
-	new /datum/random_map/automata/cave_system(null, 128, 1,  Z_LEVEL_OUTPOST_ASTEROID, world.maxx, world.maxy) // Create the mining Z-level.
-	new /datum/random_map/noise/ore(null, 1, 1, Z_LEVEL_OUTPOST_ASTEROID, world.maxx, world.maxy)         // Create the mining ore distribution map.
+	new /datum/random_map/automata/cave_system(null, 128, 1,  Z_LEVEL_OUTPOST_ORBITAL_LOWER, world.maxx, world.maxy) // Create the mining Z-level.
+	new /datum/random_map/noise/ore(null, 1, 1, Z_LEVEL_OUTPOST_ORBITAL_LOWER, world.maxx, world.maxy)         // Create the mining ore distribution map.
+
+	new /datum/random_map/automata/cave_system(null, 128, 1,  Z_LEVEL_OUTPOST_ORBITAL_UPPER, world.maxx, world.maxy) // Create the mining Z-level.
+	new /datum/random_map/noise/ore(null, 1, 1, Z_LEVEL_OUTPOST_ORBITAL_UPPER, world.maxx, world.maxy)         // Create the mining ore distribution map.
+
 	return 1
 
 /datum/planet/muriki
@@ -368,7 +388,7 @@
 /datum/map_z_level/outpost/deepdark
 	z = Z_LEVEL_OUTPOST_DEEPDARK
 	name = "Deepdark"
-	flags = MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_CONSOLES|MAP_LEVEL_SEALED|MAP_LEVEL_BELOW_BLOCKED|MAP_LEVEL_MAPPABLE|MAP_LEVEL_EVENTS|MAP_LEVEL_VORESPAWN|MAP_LEVEL_EXTREMEFALL
+	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_CONSOLES|MAP_LEVEL_SEALED|MAP_LEVEL_BELOW_BLOCKED|MAP_LEVEL_MAPPABLE|MAP_LEVEL_EVENTS|MAP_LEVEL_VORESPAWN|MAP_LEVEL_EXTREMEFALL
 	base_turf = /turf/simulated/mineral/turfpack/muriki
 	holomap_offset_x = OUTPOST21_HOLOMAP_MARGIN_X
 	holomap_offset_y = OUTPOST21_HOLOMAP_MARGIN_Y + (OUTPOST21_MAP_SIZEY * 20) - 32 // hidden
@@ -405,23 +425,27 @@
 	holomap_legend_x = 140
 	holomap_legend_y = 240
 
-/datum/map_z_level/outpost/confinementbeam
-	z = Z_LEVEL_OUTPOST_CONFINEMENTBEAM
-	name = "Confinementbeam"
+/datum/map_z_level/outpost/orbital_facility_lower
+	z = Z_LEVEL_OUTPOST_ORBITAL_LOWER
+	name = "Orbital Facility Lower"
 	transit_chance = 40
-	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_CONSOLES|MAP_LEVEL_BELOW_BLOCKED|MAP_LEVEL_PERSIST|MAP_LEVEL_MAPPABLE|MAP_LEVEL_VORESPAWN
+	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_CONSOLES|MAP_LEVEL_BELOW_BLOCKED|MAP_LEVEL_PERSIST|MAP_LEVEL_MAPPABLE|MAP_LEVEL_EVENTS|MAP_LEVEL_VORESPAWN
 
-/datum/map_z_level/outpost/asteroid_mine
-	z = Z_LEVEL_OUTPOST_ASTEROID
-	name = "Asteroid"
+/datum/map_z_level/outpost/orbital_facility_upper
+	z = Z_LEVEL_OUTPOST_ORBITAL_UPPER
+	name = "Orbital Facility Upper"
 	transit_chance = 40
-	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_PERSIST|MAP_LEVEL_BELOW_BLOCKED|MAP_LEVEL_MAPPABLE|MAP_LEVEL_EVENTS|MAP_LEVEL_VORESPAWN
+	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_CONSOLES|MAP_LEVEL_PERSIST|MAP_LEVEL_MAPPABLE|MAP_LEVEL_EVENTS|MAP_LEVEL_VORESPAWN
 
 /datum/map_z_level/outpost/vr
 	z = Z_LEVEL_OUTPOST_VR
 	name = "Virtual"
 	flags = MAP_LEVEL_ADMIN|MAP_LEVEL_CONTACT|MAP_LEVEL_XENOARCH_EXEMPT|MAP_LEVEL_SEALED|MAP_LEVEL_BELOW_BLOCKED
 
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Muriki overmap sector
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /obj/effect/landmark/map_data/muriki
 	height = 4
@@ -449,6 +473,8 @@
 		"Mercenary" = list("airdrop_muriki_central", "lake_muriki_southeast", "airdrop_muriki_southwest", "airdrop_muriki_northeast", "airdrop_muriki_northwest"))
 	//Despite not being in the multi-z complex, these levels are part of the overmap sector
 	extra_z_levels = list()
+	var/airspace_lockdown = FALSE
+	var/list/recent_targets = list()
 
 /obj/effect/overmap/visitable/sector/muriki/Crossed(atom/movable/AM)
 	. = ..()
@@ -465,6 +491,8 @@
 		var/obj/effect/overmap/visitable/ship/landable/SL = AM //Phew
 		var/datum/shuttle/autodock/multi/shuttle = SSshuttles.shuttles[SL.shuttle]
 		if(istype(SL)) // overmap cloak
+			if(airspace_lockdown)
+				addtimer(CALLBACK(src, PROC_REF(notify_airspace_violation), SL), 3 SECONDS, TIMER_DELETE_ME)
 			if(!SL.overmap_stealth)
 				SSatc.msg(message)
 		else if(!istype(shuttle) || !shuttle.cloaked) // instant warp cloak
@@ -477,72 +505,110 @@
 /obj/effect/overmap/visitable/sector/muriki/get_space_zlevels()
 	return list() //None!
 
+/obj/effect/overmap/visitable/sector/muriki/proc/notify_airspace_violation(obj/effect/overmap/visitable/ship/landable/SL)
+	if(QDELETED(SL))
+		return
+	if(istype(SL, /obj/effect/overmap/visitable/ship/landable/specialops_overmap)) // Ignores the ERT shuttle
+		return
+	if(!airspace_lockdown)
+		recent_targets.Remove(SL.name)
+		return
+	if(SL.name in recent_targets)
+		return
+	if(!Adjacent(SL) || SL.status == SHIP_STATUS_LANDED) // too quick
+		return
+	SSatc.msg("[SL.known ? SL : "Unknown vessel"], you are in violation of restricted air space. Land your vessel immediately and stand by to be boarded, or you will be fired upon. Lethal force is authorized.")
+	addtimer(CALLBACK(src, PROC_REF(offensive_airspace_violation), SL), 12 SECONDS, TIMER_DELETE_ME)
 
+/obj/effect/overmap/visitable/sector/muriki/proc/offensive_airspace_violation(obj/effect/overmap/visitable/ship/landable/SL)
+	if(QDELETED(SL))
+		return
+	if(!airspace_lockdown)
+		recent_targets.Remove(SL.name)
+		return
+	if(!Adjacent(SL) || SL.status == SHIP_STATUS_LANDED)
+		SSatc.msg("[SL.known ? SL : "Unknown vessel"] exiting secured zone. Target is out of range or has landed.")
+		recent_targets.Remove(SL.name)
+		return
+	SSatc.msg("Target acquired: [SL.known ? SL : "Unknown vessel"]. Firing surface to space countermeasures.")
+	recent_targets.Add(SL.name)
+	addtimer(CALLBACK(src, PROC_REF(shoot_down_shuttle), SL, rand(2,3)), rand(5,7) SECONDS, TIMER_DELETE_ME)
 
-/obj/effect/overmap/visitable/sector/murkiki_space/orbital_yard
-	initial_generic_waypoints = list("orbitalyard_civ","orbitalyard_north","orbitalyard_south","orbitalyard_east","orbitalyard_west")
-	initial_restricted_waypoints = list("Mining Trawler" = list("trawler_yard"))
-	name = "Orbital Reclamation Yard"
+/obj/effect/overmap/visitable/sector/muriki/proc/shoot_down_shuttle(obj/effect/overmap/visitable/ship/landable/SL, remaining_shots)
+	if(QDELETED(SL))
+		return
+	if(!airspace_lockdown || remaining_shots <= 0)
+		recent_targets.Remove(SL.name)
+		return
+	if(!Adjacent(SL) || SL.status == SHIP_STATUS_LANDED)
+		SSatc.msg("[SL.known ? SL : "Unknown vessel"] exiting secured zone. Target is out of range or has landed.")
+		recent_targets.Remove(SL.name)
+		return
+	// Get a random turf on the shuttle. In the future we'll want to try targeting near engines.
+	var/datum/shuttle/shuttle_datum = SSshuttles.shuttles[SL.shuttle]
+	if(!shuttle_datum)
+		return
+	var/area/A = pick(shuttle_datum.shuttle_area)
+	if(!A)
+		return
+	var/turf/T = pick(get_area_turfs(A.type))
+	if(!T)
+		return
+	// Fire
+	var/obj/structure/ship_munition/disperser_charge/explosive/C = new(T)
+	addtimer(CALLBACK(C, TYPE_PROC_REF(/obj/structure/ship_munition/disperser_charge, bsa_shell_event)), rand(1,15), TIMER_DELETE_ME)
+	// This si kinda guarenteed at this point
+	shuttle_datum.emagged_crash = TRUE
+	// next shot
+	addtimer(CALLBACK(src, PROC_REF(shoot_down_shuttle), SL, --remaining_shots), rand(4,8) SECONDS, TIMER_DELETE_ME)
+
+ADMIN_VERB(lockdown_muriki_airspace, R_EVENT, "Airspace Lockdown ", "Lockdown traffic in and out of Muriki. Shuttles will automatically have BSA shells fired at them.", ADMIN_CATEGORY_EVENTS)
+	var/obj/effect/overmap/visitable/sector/muriki/sector_muriki = locate() in world
+	if(!sector_muriki)
+		return
+	sector_muriki.airspace_lockdown = !sector_muriki.airspace_lockdown
+	to_chat(usr, span_warning("Airspace has been [sector_muriki.airspace_lockdown ? "locked down!" : "opened to traffic."]"))
+	// reroute
+	if(sector_muriki.airspace_lockdown)
+		SSatc.reroute_traffic(TRUE, FALSE) // Lockout airspace
+	else if(GLOB.security_level < SEC_LEVEL_RED)
+		SSatc.reroute_traffic(FALSE, FALSE) // Release if not locked by seclevel
+	// announce
+	if(sector_muriki.airspace_lockdown)
+		SSatc.msg("Planetary lockdown in effect: All ships entering air traffic control space will be fired upon.")
+	else
+		SSatc.msg("Planetary lockdown lifted. Air traffic is safe to resume; air defenses are standing down.")
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// orbital yard overmap sector
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/obj/effect/landmark/map_data/muriki_orbital_facility
+	height = 2
+
+/obj/effect/overmap/visitable/sector/murkiki_space/orbital_facility
+	initial_generic_waypoints = list("orbitalyard_civ","orbitalyard_civ_upper","orbitalyard_north","orbitalyard_south","orbitalyard_east","orbitalyard_west")
+	name = "Orbital Facility Platform"
 	icon_state = "htu_cruiser"
-	scanner_desc = @{"[i]Registration[/i]: ES Orbital 21-03
-[i]Class[/i]: Installation
-[i]Transponder[/i]: Transmitting (CIV), ESHUI IFF
-[b]Notice[/b]: ESHUI Base, authorized personnel only"}
-	map_z = list(Z_LEVEL_OUTPOST_ASTEROID)
-	extra_z_levels = list()
-	levels_for_distress = list(Z_LEVEL_OUTPOST_SURFACE)
-
-/obj/effect/overmap/visitable/sector/murkiki_space/orbital_yard/Crossed(atom/movable/AM)
-	. = ..()
-	announce_atc(AM,going = FALSE)
-
-/obj/effect/overmap/visitable/sector/murkiki_space/orbital_yard/Uncrossed(atom/movable/AM)
-	. = ..()
-	announce_atc(AM,going = TRUE)
-
-/obj/effect/overmap/visitable/sector/murkiki_space/orbital_yard/announce_atc(atom/movable/AM, going = FALSE)
-	var/message = "Sensor contact for vessel '[AM.name]' has [going ? "left" : "entered"] ATC control area."
-	//For landables, we need to see if their shuttle is cloaked
-	if(istype(AM, /obj/effect/overmap/visitable/ship/landable))
-		var/obj/effect/overmap/visitable/ship/landable/SL = AM //Phew
-		var/datum/shuttle/autodock/multi/shuttle = SSshuttles.shuttles[SL.shuttle]
-		if(istype(SL)) // overmap cloak
-			if(!SL.overmap_stealth)
-				SSatc.msg(message)
-		else if(!istype(shuttle) || !shuttle.cloaked) //Not a multishuttle (the only kind that can cloak) or not cloaked
-			SSatc.msg(message)
-
-	//For ships, it's safe to assume they're big enough to not be sneaky
-	else if(istype(AM, /obj/effect/overmap/visitable/ship))
-		SSatc.msg(message)
-
-/obj/effect/overmap/visitable/sector/murkiki_space/orbital_yard/get_space_zlevels()
-	return list(Z_LEVEL_OUTPOST_ASTEROID)
-
-
-
-/obj/effect/overmap/visitable/sector/murkiki_space/confinementbeam
-	initial_generic_waypoints = list("confinementbeam_civ")
-	name = "Confinement Beam Platform"
-	icon_state = "htu_cruiser"
-	scanner_desc = @{"[i]Registration[/i]: ES Orbital 21-04
+	scanner_desc = @{"[i]Registration[/i]: ES Orbital 21-05
 [i]Class[/i]: Confinement Beam
 [i]Transponder[/i]: Transmitting (ENG), ESHUI IFF
 [b]Notice[/b]: ESHUI Base, authorized personnel only"}
-	map_z = list(Z_LEVEL_OUTPOST_CONFINEMENTBEAM)
+	map_z = list(Z_LEVEL_OUTPOST_ORBITAL_LOWER, Z_LEVEL_OUTPOST_ORBITAL_UPPER)
 	extra_z_levels = list()
-	initial_restricted_waypoints = list( "Mining Trawler" = list("confinementbeam_trawler"), "Security Carrier" = list("confinementbeam_security", "aisat_security"), "Medical Rescue" = list("confinementbeam_medical"))
+	initial_restricted_waypoints = list( "Mining Trawler" = list("trawler_yard"), "Security Carrier" = list("aisat_security"))
 	levels_for_distress = list(Z_LEVEL_OUTPOST_SURFACE)
 
-/obj/effect/overmap/visitable/sector/murkiki_space/confinementbeam/Crossed(atom/movable/AM)
+/obj/effect/overmap/visitable/sector/murkiki_space/orbital_facility/Crossed(var/atom/movable/AM)
 	. = ..()
 	announce_atc(AM,going = FALSE)
 
-/obj/effect/overmap/visitable/sector/murkiki_space/confinementbeam/Uncrossed(atom/movable/AM)
+/obj/effect/overmap/visitable/sector/murkiki_space/orbital_facility/Uncrossed(var/atom/movable/AM)
 	. = ..()
 	announce_atc(AM,going = TRUE)
 
-/obj/effect/overmap/visitable/sector/murkiki_space/confinementbeam/announce_atc(atom/movable/AM, going = FALSE)
+/obj/effect/overmap/visitable/sector/murkiki_space/orbital_facility/announce_atc(var/atom/movable/AM, var/going = FALSE)
+
 	var/message = "Sensor contact for vessel '[AM.name]' has [going ? "left" : "entered"] ATC control area."
 	//For landables, we need to see if their shuttle is cloaked
 	if(istype(AM, /obj/effect/overmap/visitable/ship/landable))
@@ -558,10 +624,13 @@
 	else if(istype(AM, /obj/effect/overmap/visitable/ship))
 		SSatc.msg(message)
 
-/obj/effect/overmap/visitable/sector/murkiki_space/confinementbeam/get_space_zlevels()
-	return list(Z_LEVEL_OUTPOST_CONFINEMENTBEAM)
+/obj/effect/overmap/visitable/sector/murkiki_space/orbital_facility/get_space_zlevels()
+	return list(Z_LEVEL_OUTPOST_ORBITAL_LOWER, Z_LEVEL_OUTPOST_ORBITAL_UPPER)
 
 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Escape gateway overmap sector
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /obj/effect/overmap/visitable/sector/murkiki_space/distant_gateway
 	name = "Sector Gateway"

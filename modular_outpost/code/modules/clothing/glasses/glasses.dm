@@ -53,7 +53,6 @@ x/proc/disable_goggles()\
 	active = FALSE;\
 	icon_state = off_state;\
 	flash_protection = FLASH_PROTECTION_NONE;\
-	tint = TINT_NONE;\
 	away_planes = enables_planes;\
 	enables_planes = null;\
 	if(ismob(loc))\
@@ -125,6 +124,7 @@ VISION_GOGGLE_USES_CELL(/obj/item/clothing/glasses/material)
 VISION_GOGGLE_USES_CELL(/obj/item/clothing/glasses/night)
 VISION_GOGGLE_USES_CELL(/obj/item/clothing/glasses/omni)
 VISION_GOGGLE_USES_CELL(/obj/item/clothing/glasses/omnihud/eng/meson)
+VISION_GOGGLE_USES_CELL(/obj/item/clothing/glasses/ghost)
 
 /*
 /obj/item/clothing/glasses/hud
@@ -132,3 +132,8 @@ VISION_GOGGLE_USES_CELL(/obj/item/clothing/glasses/omnihud/eng/meson)
 */
 
 #undef VISION_GOGGLE_USES_CELL
+
+/obj/item/clothing/glasses/welding/superior/tas
+	name = "Tasesii's goggles"
+	desc = "A pair of teshari-fitted welding goggles. The lenses don't look like they'd protect from much..."
+	flash_protection = FLASH_PROTECTION_NONE

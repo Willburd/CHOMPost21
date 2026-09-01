@@ -284,13 +284,18 @@
 		A.AddComponent(/datum/component/grenadetrap,G)
 		return
 
+	if(A && prob(4))
+		var/obj/item/reagent_containers/glass/bucket/prankster_mix/B = new(A)
+		AddComponent(/datum/component/waterbuckettrap,B)
+		return
+
 	var/obj/structure/cable/C = locate() in T
 	if(C && prob(20) && T.is_plating())
 		C.fray()
 		return
 
 	// creates stuff like ruptured gas tanks, and landmines
-	switch(rand(1,3))
+	switch(rand(1,4))
 		if(1)
 			var/newpath = pick(
 				/obj/effect/mine/emp,
@@ -306,28 +311,27 @@
 				/obj/effect/mine/confetti,
 				/obj/effect/mine/lube,
 				/obj/effect/mine/dnascramble)
-			var/obj/effect/mine/M = new newpath()
+			var/obj/effect/mine/M = new newpath(T)
 			if(prob(20))
 				M.camo_net = TRUE
 				M.alpha = 50 // Wish this was part of a proc instead of magic num
-			M.loc = src.loc
 
 		if(2)
 			var/turf/srcturf = get_turf(src)
 			if(srcturf.outdoors == OUTDOORS_NO)
 				if(prob(20))
 					// rare spawn!
-					var/obj/item/lego/L = new /obj/item/lego()
-					L.loc = src.loc
+					new /obj/item/lego(T)
 				else
-					var/obj/item/assembly/mousetrap/armed/M = new /obj/item/assembly/mousetrap/armed();
-					M.loc = src.loc
+					new /obj/item/assembly/mousetrap/armed(T);
 
 		if(3)
-			var/obj/item/beartrap/M = new /obj/item/beartrap();
+			var/obj/item/beartrap/M = new /obj/item/beartrap(T);
 			M.deployed = TRUE
 			M.update_icon()
-			M.loc = src.loc
+
+		if(4)
+			new /obj/item/material/barbedwire/glass/start_active(T)
 
 
 
@@ -488,3 +492,32 @@
 		return
 	T.wet_overlay = image('icons/effects/water.dmi', icon_state = "wet_floor")
 	T.add_overlay(T.wet_overlay)
+
+
+// Damage wires
+/obj/effect/landmark/fray_wire
+	name = "fray wire 0%"
+	var/chance = 0
+	delete_me = TRUE
+
+/obj/effect/landmark/fray_wire/Initialize(mapload)
+	..()
+	return INITIALIZE_HINT_LATELOAD
+
+/obj/effect/landmark/fray_wire/twentyfive
+	name = "fray wire 25%"
+	chance = 25
+
+/obj/effect/landmark/fray_wire/fifty
+	name = "fray wire 50%"
+	chance = 50
+
+/obj/effect/landmark/fray_wire/always_lubed
+	name = "fray wire 100%"
+	chance = 100
+
+/obj/effect/landmark/fray_wire/LateInitialize()
+	if(!prob(chance))
+		return
+	var/obj/structure/cable/wire = locate() in get_turf(src)
+	wire.fray()

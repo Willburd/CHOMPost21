@@ -56,7 +56,7 @@
 		"docking_status" = docking_program.get_docking_status(),
 		"override_enabled" = docking_program.override_enabled,
 		"exterior_status" =	docking_program.memory["door_status"],								// TGUI DATA fails silently when there's no linked pod, leading to UI crashes
-		"can_force" = pod?.can_force() || (SSemergency_shuttle.departed && pod?.can_launch()),	//allow players to manually launch ahead of time if the shuttle leaves
+		"can_force" = pod?.can_force() || (/* Outpost 21 edit - Allow launching anytime SSemergency_shuttle.departed &&*/ pod?.can_launch()),	//allow players to manually launch ahead of time if the shuttle leaves
 		"armed" = pod?.arming_controller.armed,
 		"internalTemplateName" = "EscapePodConsole",
 	)
@@ -72,7 +72,7 @@
 		if("force_launch")
 			if(pod.can_force())
 				pod.force_launch(src)
-			else if(SSemergency_shuttle.departed && pod.can_launch())	//allow players to manually launch ahead of time if the shuttle leaves
+			else if(/* Outpost 21 edit - Allow launching anytime SSemergency_shuttle.departed &&*/ pod.can_launch())	//allow players to manually launch ahead of time if the shuttle leaves
 				pod.launch(src)
 			. = TRUE
 
@@ -99,6 +99,7 @@
 		"internalTemplateName" = "EscapePodBerthConsole",
 	)
 
+/* Outpost 21 edit - Allow launching anytime
 /obj/machinery/embedded_controller/radio/simple_docking_controller/escape_pod_berth/emag_act(remaining_charges, mob/user)
 	if (!emagged)
 		to_chat(user, span_notice("You emag the [src], arming the escape pod!"))
@@ -108,6 +109,7 @@
 			if (!P.armed)
 				P.arm()
 		return 1
+*/
 
 //A docking controller program for a simple door based docking port
 /datum/embedded_program/docking/simple/escape_pod_berth
@@ -122,10 +124,12 @@
 		open_door()
 
 
+/* Outpost 21 edit - Allow launching anytime
 /datum/embedded_program/docking/simple/escape_pod_berth/receive_user_command(command)
 	if (!armed)
 		return TRUE // Eat all commands.
 	return ..(command)
+*/
 
 /datum/embedded_program/docking/simple/escape_pod_berth/process()
 	..()

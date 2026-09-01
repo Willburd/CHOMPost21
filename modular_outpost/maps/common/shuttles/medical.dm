@@ -40,6 +40,12 @@
 	// If on highest level of spooky let the tram crash happen
 	if(SShaunting.get_world_haunt() >= 5)
 		return prob(1) && prob(1)
+	// Crash in certain weather
+	var/turf/T = get_turf(intended_destination)
+	if(T && T.z > 0 && T.z <= SSplanets.z_to_planet.len && SSplanets.z_to_planet[T.z])
+		var/datum/planet/P = SSplanets.z_to_planet[T.z]
+		if(prob(P?.weather_holder?.current_weather.shuttle_crash_chance))
+			return TRUE
 	return FALSE
 
 /obj/effect/shuttle_landmark/premade/medical/muriki
@@ -53,18 +59,18 @@
 	name = "Prospector (Starboard Dock)"
 	landmark_tag = "prospector_docks_medical"
 	base_turf = /turf/space
-	base_area = /area/offworld/asteroidyard // TODO
+	base_area = /area/space
 
 /obj/effect/shuttle_landmark/premade/medical/prospector_rear
 	name = "Prospector (Medical Dock)"
 	landmark_tag = "prospector_rear_medical"
 	base_turf = /turf/space
-	base_area = /area/offworld/asteroidyard // TODO
+	base_area = /area/space
 
 /obj/effect/shuttle_landmark/premade/medical/confinementbeam
 	name = "Confinement Beam (Medical Dock)"
 	landmark_tag = "confinementbeam_medical"
 	docking_controller = "beam_sat_medical_controller"
 	base_turf = /turf/space
-	base_area = /area/offworld/confinementbeam/exterior
-	local_crash_sites = OUTPOST_CONFINEMENTBEAM_CRASHES
+	base_area = /area/space
+	local_crash_sites = OUTPOST_ASTEROID_CRASHES

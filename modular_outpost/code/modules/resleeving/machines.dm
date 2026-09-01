@@ -3,6 +3,28 @@
 //// and decanting into bodies
 ////////////////////////////////
 
+// Update description
+/obj/machinery/computer/transhuman/resleeving
+	desc = "Controls various resleeving systems."
+
+/////// Computer with no diskdrive ///////
+/obj/machinery/computer/transhuman/resleeving/no_disk
+	name = "auxiliary resleeving control console"
+	desc = "Controls various resleeving systems. This one has no diskdrive."
+	circuit = /obj/item/circuitboard/resleeving_control/no_disk
+
+/obj/machinery/computer/transhuman/resleeving/no_disk/attackby(obj/item/W, mob/user)
+	if(istype(W, /obj/item/disk/body_record))
+		to_chat(user, span_notice("\The [src] has no diskdrive."))
+		return
+	. = ..()
+
+/obj/item/circuitboard/resleeving_control/no_disk
+	name = T_BOARD("auxiliary resleeving control console")
+	build_path = /obj/machinery/computer/transhuman/resleeving/no_disk
+	hidden = TRUE // Limited availability
+
+
 /////// Grower Pod ///////
 /obj/machinery/clonepod/transhuman/vox
 	name = "vox regeneration pod"

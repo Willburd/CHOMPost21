@@ -2,7 +2,7 @@
 /////////////////////////////////////////////////////////////////////////////////////////
 /obj/machinery/telecomms/receiver/preset_right/outpost
 	id = "outpost_rx"
-	freq_listening = list(AI_FREQ, SCI_FREQ, MED_FREQ, SUP_FREQ, SRV_FREQ, COMM_FREQ, ENG_FREQ, SEC_FREQ, ENT_FREQ, EXP_FREQ)
+	freq_listening = list(AI_FREQ, SCI_FREQ, MED_FREQ, SUP_FREQ, SRV_FREQ, COMM_FREQ, ENG_FREQ, SEC_FREQ, ENT_FREQ, EXP_FREQ, SEC_ALPHA_FREQ, SEC_BETA_FREQ, SEC_CHARLIE_FREQ, SEC_DELTA_FREQ)
 
 /obj/machinery/telecomms/broadcaster/preset_right/outpost
 	id = "outpost_tx"
@@ -16,14 +16,9 @@
 	autolinkers = list("station_relay")
 
 /obj/machinery/telecomms/relay/preset/outpost/recyard
-	id = "Reclamation Yard Relay"
-	listening_level = Z_LEVEL_OUTPOST_ASTEROID
+	id = "Orbital Facility Relay"
+	listening_level = Z_LEVEL_OUTPOST_ORBITAL_LOWER
 	autolinkers = list("roid_relay")
-
-/obj/machinery/telecomms/relay/preset/outpost/confinementbeam
-	id = "AI Platform Relay"
-	listening_level = Z_LEVEL_OUTPOST_CONFINEMENTBEAM
-	autolinkers = list("ai_relay")
 
 /obj/machinery/telecomms/relay/preset/outpost/prospector
 	id = "Prospector Relay"
@@ -52,7 +47,7 @@
 	autolinkers = list("processor2", "supply", "service", "unused")
 
 /obj/machinery/telecomms/bus/preset_three/outpost
-	freq_listening = list(SEC_FREQ, COMM_FREQ)
+	freq_listening = list(SEC_FREQ, COMM_FREQ, SEC_ALPHA_FREQ, SEC_BETA_FREQ, SEC_CHARLIE_FREQ, SEC_DELTA_FREQ)
 	autolinkers = list("processor3", "security", "command")
 
 /obj/machinery/telecomms/bus/preset_four/outpost
@@ -76,6 +71,9 @@
 
 // SERVERS
 /////////////////////////////////////////////////////////////////////////////////////////
+/obj/machinery/telecomms/server/presets/security/outpost
+	freq_listening = list(SEC_FREQ, SEC_ALPHA_FREQ, SEC_BETA_FREQ, SEC_CHARLIE_FREQ, SEC_DELTA_FREQ)
+
 /obj/machinery/telecomms/server/presets/service/outpost
 	freq_listening = list(SRV_FREQ, EXP_FREQ)
 	autolinkers = list("service", "explorer")
@@ -98,7 +96,11 @@
 		num2text(SCI_FREQ) = list(ACCESS_TOX,ACCESS_XENOBIOLOGY),
 		num2text(SUP_FREQ) = list(ACCESS_CARGO),
 		num2text(SRV_FREQ) = list(ACCESS_JANITOR, ACCESS_HYDROPONICS),
-		num2text(EXP_FREQ) = list(ACCESS_EXPLORER)
+		num2text(EXP_FREQ) = list(ACCESS_EXPLORER),
+		num2text(SEC_ALPHA_FREQ) 	= list(ACCESS_SECURITY),
+		num2text(SEC_BETA_FREQ) 	= list(ACCESS_SECURITY),
+		num2text(SEC_CHARLIE_FREQ) 	= list(ACCESS_SECURITY),
+		num2text(SEC_DELTA_FREQ) 	= list(ACCESS_SECURITY),
 	)
 
 /obj/item/multitool/outpost_buffered

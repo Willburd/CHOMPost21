@@ -16,6 +16,7 @@
 	desc = "Allows contact exposure to phoron without ill effects. Your results may vary."
 	cost = 3
 	var_changes = list("phoron_contact_mod" = 0)
+	banned_species = list(SPECIES_VOX, SPECIES_PROMETHEAN)
 
 	// Traitgenes edit begin - Made into a gene trait
 	is_genetrait = TRUE

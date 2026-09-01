@@ -112,7 +112,7 @@
 			data["tempMsg"] = "Telepad undergoing physical maintenance operations."
 
 		//We'll base our options on connected z's or overmap
-		data["sectorOptions"] = using_map.get_map_levels(z, TRUE, overmap_range)
+		data["sectorOptions"] = using_map.get_map_levels(z, TRUE, overmap_range) | using_map.event_levels.Copy() // Outpost 21 edit - Event levels count for teleport goals too
 
 		data["lastTeleData"] = null
 		if(last_tele_data)

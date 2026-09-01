@@ -65,14 +65,11 @@
 	s.set_up(2, 1, T)
 	s.start()
 	var/obj/structure/ship_munition/disperser_charge/C = new /obj/structure/ship_munition/disperser_charge/explosive(T)
-	addtimer(CALLBACK(src, PROC_REF(detonate), WEAKREF(C)), rand(1,15), TIMER_DELETE_ME)
+	addtimer(CALLBACK(C, TYPE_PROC_REF(/obj/structure/ship_munition/disperser_charge, bsa_shell_event)), rand(1,15), TIMER_DELETE_ME)
 
-/datum/bsa_shell_controller/proc/detonate(datum/weakref/WF)
-	var/obj/structure/ship_munition/disperser_charge/C = WF?.resolve()
-	if(!C)
-		return
-	var/turf/T = get_turf(C)
-	qdel(C)
+/obj/structure/ship_munition/disperser_charge/proc/bsa_shell_event()
+	var/turf/T = get_turf(src)
+	qdel(src)
 	if(!T)
 		return
 	explosion( T, 3, 5, 7, 5)

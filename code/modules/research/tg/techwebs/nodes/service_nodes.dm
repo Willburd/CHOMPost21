@@ -66,6 +66,7 @@
 		"bearslap", // Outpost 21 edit - bearslap
 		"barbedwire",
 		"snarewire",
+		"springtrap",
 		// "buffer",
 		"washing"
 	)
@@ -281,9 +282,9 @@
 		"fryer_board",
 		"cerealmaker_board",
 		"candymachine_board",
-		"food_replicator", //CHOMPEDIT Enable - Adds Food Replicator
 		"honey_extractor",
-		// "food_replicator",
+		"food_synthesizer",
+		"compactfood_synthesizer",
 		"borgos1",
 		"range",
 		// "souppot",

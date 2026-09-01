@@ -1,6 +1,8 @@
 #define LIST_NODE1 1
 #define LIST_NODE2 2
 
+#define REBUILD_UNIVERSAL_NODE_LIST if(!length(universal_nodes)) {universal_nodes = new/list(PIPING_LAYER_AUX);universal_nodes[PIPING_LAYER_SUPPLY] = list(null, null);universal_nodes[PIPING_LAYER_REGULAR] = list(null, null);universal_nodes[PIPING_LAYER_SCRUBBER] = list(null, null);universal_nodes[PIPING_LAYER_FUEL] = list(null, null);universal_nodes[PIPING_LAYER_AUX] = list(null, null);};
+
 //
 // Universal Pipe Adapter - Designed for connecting scrubbers, normal, and supply pipes together.
 // Visible varient
@@ -20,19 +22,14 @@
 	universal_destroy(universal_nodes)
 
 /obj/machinery/atmospherics/pipe/simple/visible/universal/atmos_init()
-	if(!universal_nodes) // Done here, because other things can remotely call atmos_init() from around this pipe
-		universal_nodes = new/list(PIPING_LAYER_AUX)
-		universal_nodes[PIPING_LAYER_SUPPLY] = list(null, null)
-		universal_nodes[PIPING_LAYER_REGULAR] = list(null, null)
-		universal_nodes[PIPING_LAYER_SCRUBBER] = list(null, null)
-		universal_nodes[PIPING_LAYER_FUEL] = list(null, null)
-		universal_nodes[PIPING_LAYER_AUX] = list(null, null)
+	REBUILD_UNIVERSAL_NODE_LIST
 	universal_atmos_init(universal_nodes)
 
 /obj/machinery/atmospherics/pipe/simple/visible/universal/disconnect(obj/machinery/atmospherics/reference)
 	universal_disconnect(universal_nodes, reference)
 
 /obj/machinery/atmospherics/pipe/simple/visible/universal/pipeline_expansion()
+	REBUILD_UNIVERSAL_NODE_LIST
 	var/list/all_nodes = list()
 	for(var/list/sublist in universal_nodes)
 		all_nodes += sublist
@@ -47,6 +44,15 @@
 /obj/machinery/atmospherics/pipe/simple/visible/universal/update_underlays()
 	..()
 	update_icon()
+
+/obj/machinery/atmospherics/pipe/simple/visible/universal/relaymove(mob/living/user, direction)
+	if(initialize_directions & direction)
+		return ..()
+	if((NORTH|EAST) & direction)
+		user.change_ventcrawl_layer(user.ventcrawl_layer + 1)
+	if((SOUTH|WEST) & direction)
+		user.change_ventcrawl_layer(user.ventcrawl_layer - 1)
+	user.setMoveCooldown(0.25 SECONDS) // So this doesn't instantly slam through all of them
 
 //
 // Universal Pipe Adapter - Designed for connecting scrubbers, normal, and supply pipes together.
@@ -67,19 +73,14 @@
 	universal_destroy(universal_nodes)
 
 /obj/machinery/atmospherics/pipe/simple/hidden/universal/atmos_init()
-	if(!universal_nodes) // Done here, because other things can remotely call atmos_init() from around this pipe
-		universal_nodes = new/list(PIPING_LAYER_AUX)
-		universal_nodes[PIPING_LAYER_SUPPLY] = list(null, null)
-		universal_nodes[PIPING_LAYER_REGULAR] = list(null, null)
-		universal_nodes[PIPING_LAYER_SCRUBBER] = list(null, null)
-		universal_nodes[PIPING_LAYER_FUEL] = list(null, null)
-		universal_nodes[PIPING_LAYER_AUX] = list(null, null)
+	REBUILD_UNIVERSAL_NODE_LIST
 	universal_atmos_init(universal_nodes)
 
 /obj/machinery/atmospherics/pipe/simple/hidden/universal/disconnect(obj/machinery/atmospherics/reference)
 	universal_disconnect(universal_nodes, reference)
 
 /obj/machinery/atmospherics/pipe/simple/hidden/universal/pipeline_expansion()
+	REBUILD_UNIVERSAL_NODE_LIST
 	var/list/all_nodes = list()
 	for(var/list/sublist in universal_nodes)
 		all_nodes += sublist
@@ -95,6 +96,14 @@
 	..()
 	update_icon()
 
+/obj/machinery/atmospherics/pipe/simple/hidden/universal/relaymove(mob/living/user, direction)
+	if(initialize_directions & direction)
+		return ..()
+	if((NORTH|EAST) & direction)
+		user.change_ventcrawl_layer(user.ventcrawl_layer + 1)
+	if((SOUTH|WEST) & direction)
+		user.change_ventcrawl_layer(user.ventcrawl_layer - 1)
+	user.setMoveCooldown(0.25 SECONDS) // So this doesn't instantly slam through all of them
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Shared universal pipe adaptor procs
@@ -217,6 +226,8 @@
 			underlays += GLOB.icon_manager.get_atmos_icon("underlay", direction, color_cache_name(node), "intact" + icon_connect_type)
 	else
 		underlays += GLOB.icon_manager.get_atmos_icon("underlay", direction, color_cache_name(node), "retracted" + icon_connect_type)
+
+#undef REBUILD_UNIVERSAL_NODE_LIST
 
 #undef LIST_NODE1
 #undef LIST_NODE2

@@ -76,6 +76,7 @@
 	music = 'sound/ambience/ambimine.ogg'
 	requires_power = TRUE
 	color_grading = COLORTINT_UNDERDARK
+	flags = AREA_FIRE_SUPRESSION
 
 //Hallways... I guess?
 /area/muriki/processor/hall
@@ -157,7 +158,7 @@
 	name = "\improper Bathroom. Don't use."
 	icon_state = "cyablatri"
 	sound_env = SMALL_ENCLOSED
-	flags = RAD_SHIELDED | AREA_BLOCK_TRACKING | AREA_FORBID_EVENTS | AREA_BLOCK_GHOST_SIGHT | AREA_FIRE_SUPRESSION
+	flags = RAD_SHIELDED | AREA_BLOCK_TRACKING | AREA_FORBID_EVENTS | AREA_BLOCK_GHOST_SIGHT
 	use_emergency_overlay = TRUE
 	base_turf = /turf/simulated/open
 	color_grading = COLORTINT_CHILL
@@ -372,7 +373,7 @@
 	icon_state = "medbay2"
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
 	base_turf = /turf/simulated/open
-	flags = AREA_BLOCK_INSTANT_BUILDING | AREA_FIRE_SUPRESSION
+	flags = /area/medical/first_aid_station::flags
 	lightswitch = 1
 
 /area/quartermaster/cargupbreak
@@ -595,7 +596,7 @@
 	sound_env = TUNNEL_ENCLOSED
 	holomap_color = HOLOMAP_AREACOLOR_CIV
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
-	flags = RAD_SHIELDED
+	flags = RAD_SHIELDED | AREA_FIRE_SUPRESSION
 	color_grading = COLORTINT_DIM
 
 /area/muriki/crew/civmail
@@ -943,14 +944,14 @@
 
 /area/ai_sat/atmos
 	name = "\improper AI Satellite Atmospherics"
-	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+	holomap_color = HOLOMAP_AREACOLOR_COMMAND
 	sound_env = SMALL_ENCLOSED
 	ambience = AMBIENCE_MAINTENANCE
 	color_grading = COLORTINT_DARK
 
 /area/ai_sat/power_control
 	name = "\improper AI Satellite Power Control"
-	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+	holomap_color = null
 	sound_env = SMALL_ENCLOSED
 	ambience = AMBIENCE_SUBSTATION
 	base_turf = /turf/space
@@ -1008,6 +1009,14 @@
 	base_turf = /turf/simulated/open
 /area/muriki/elevator/sciupper
 	name = "Science Second Floor"
+	flags = AREA_FLAG_IS_NOT_PERSISTENT
+	base_turf = /turf/simulated/open
+/area/muriki/elevator/yardlower
+	name = "Orbital Lower"
+	base_turf = /turf/simulated/floor/plating
+	flags = AREA_FLAG_IS_NOT_PERSISTENT
+/area/muriki/elevator/yardupper
+	name = "Orbital Upper"
 	flags = AREA_FLAG_IS_NOT_PERSISTENT
 	base_turf = /turf/simulated/open
 
@@ -1119,6 +1128,24 @@
 	lift_floor_name = "Server, Tool Storage, Phoronics, RD."
 	lift_announce_str = "Arriving at Second Floor."
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
+
+//Orbital yard
+/area/turbolift/orbitalyard_lower
+	name = "Orbital lower"
+	base_turf = /turf/simulated/mineral/floor/cave
+	lift_floor_label = "Lower"
+	lift_floor_name = "Cargo Docking Bay, Atmospherics, PTL Beam Emitter, Solar Array, RUST Reactor, Auxiliary Power Generators, Xenoarcheology, Phoronics."
+	lift_announce_str = "Arriving at Orbital Lower Level."
+	holomap_color = HOLOMAP_AREACOLOR_CIV
+
+/area/turbolift/orbitalyard_upper
+	name = "Orbital Upper"
+	base_turf = /turf/simulated/open
+	lift_floor_label = "Upper"
+	lift_floor_name = "Recyard Access, Medical Station, Docking Arm, Escape Pods, Trawler Docking Bay, Engineering Ferry Dock, Engineering Tool Storage, Primary Engines, Power Distribution, Mining Belter Shuttle, Observation Deck, Bar, Telecomms, AI Access, Security Station, Teleporter."
+	lift_announce_str = "Arriving at Orbital Upper Level."
+	holomap_color = HOLOMAP_AREACOLOR_CIV
+
 
 //
 //----------------- Exterior / hazard areas / mine ---------------------------------
@@ -1677,7 +1704,7 @@
 	sound_env = SMALL_ENCLOSED
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
-	flags = AREA_FIRE_SUPRESSION
+	flags = /area/medical/first_aid_station::flags
 
 /area/maintenance/damaged_resleeverA
 	name = "\improper Collapsed Structure"
@@ -2038,6 +2065,7 @@
 	icon_state = "blue"
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
 	lightswitch = 1
+	flags = AREA_FIRE_SUPRESSION
 
 /area/medical/virology/prep
 	name = "\improper Virology Preperation"
@@ -2297,7 +2325,6 @@
 	icon_state = "decontamination"
 	base_turf = /turf/simulated/open
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
-	flags = AREA_FIRE_SUPRESSION
 
 /area/rnd/entry_aux
 	name = "\improper Research Auxiliary Decontamination"
@@ -2329,7 +2356,6 @@
 /area/rnd/xenobiology
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
-	flags = AREA_FIRE_SUPRESSION
 
 /area/rnd/xenobiology/xenoflora2
 	name = "\improper Xenoflora Hazard Lab"
@@ -2385,7 +2411,7 @@
 	name = "\improper Xenolab First aid"
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
-	flags = AREA_FIRE_SUPRESSION
+	flags = /area/medical/first_aid_station::flags
 	lightswitch = 1
 
 /area/rnd/research/isolation_a
@@ -2458,7 +2484,7 @@
 	name = "\improper Research First aid"
 	base_turf = /turf/simulated/open
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
-	flags = AREA_BLOCK_INSTANT_BUILDING | AREA_FIRE_SUPRESSION
+	flags = /area/medical/first_aid_station::flags
 	lightswitch = 1
 
 /area/rnd/research/roof_eva
@@ -2525,7 +2551,7 @@
 	icon_state = "blublacir"
 	base_turf = /turf/simulated/open
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
-	flags = AREA_BLOCK_INSTANT_BUILDING | AREA_FIRE_SUPRESSION
+	flags = /area/medical/first_aid_station::flags
 
 /area/maintenance/substation/phoronics
 	name = "Phoronics Substation"
@@ -2606,296 +2632,6 @@
 	icon_state = "locker"
 	sound_env = SMALL_ENCLOSED
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
-
-//
-//-----------------------------------------------------------------------
-//Asteroid yard
-
-/area/offworld/asteroidyard/station
-	sound_env = SMALL_ENCLOSED
-	ambience = AMBIENCE_MAINTENANCE
-	holomap_color = HOLOMAP_AREACOLOR_CARGO
-
-/area/offworld/asteroidyard/external
-	name = "\improper Reclamation Yard Exterior"
-	icon_state = "red2"
-	has_gravity = 0
-	ambience = AMBIENCE_OUTPOST21_SPACE
-	base_turf = /turf/space
-	flags = AREA_BLOCK_GHOST_SIGHT
-	ambience = AMBIENCE_SPACE
-
-/area/offworld/asteroidyard/external/get_gravity()
-	return FALSE
-
-/area/offworld/asteroidyard/external/yardzone
-	icon_state = "construction"
-
-/area/offworld/asteroidyard/station/halls
-	name = "\improper Reclamation Yard Hallway"
-	icon_state = "purple"
-	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
-
-/area/offworld/asteroidyard/station/halls_storage
-	name = "\improper Reclamation Yard Hallway"
-	icon_state = "green"
-	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
-
-/area/offworld/asteroidyard/station/halls_bar
-	name = "\improper Reclamation Yard Hallway"
-	icon_state = "orange"
-	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
-
-/area/offworld/asteroidyard/station/access_shaft
-	name = "\improper Reclamation Yard Access Shaft"
-	icon_state = "red"
-	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
-
-/area/offworld/asteroidyard/station/washing
-	name = "\improper Reclamation Yard Cleaning Room"
-	icon_state = "red"
-	holomap_color = HOLOMAP_AREACOLOR_CIV
-
-/area/offworld/asteroidyard/station/dockingbay
-	name = "\improper Reclamation Yard Hanger"
-	icon_state = "decontamination"
-	sound_env = LARGE_ENCLOSED
-	ambience = AMBIENCE_HANGAR
-	holomap_color = HOLOMAP_AREACOLOR_CIV
-
-/area/offworld/asteroidyard/station/cave
-	name = "\improper Reclamation Yard Caverns"
-	icon_state = "construction"
-	sound_env = ASTEROID
-	holomap_color = HOLOMAP_AREACOLOR_CIV
-	color_grading = COLORTINT_DIM
-
-/area/offworld/asteroidyard/station/storage
-	name = "\improper Reclamation Yard Primary Storage"
-	icon_state = "locker"
-	sound_env = ASTEROID
-	holomap_color = HOLOMAP_AREACOLOR_CARGO
-	color_grading = COLORTINT_DIM
-
-/area/offworld/asteroidyard/station/storage_aux
-	name = "\improper Reclamation Yard Material Storage"
-	icon_state = "locker"
-	sound_env = SMALL_ENCLOSED
-	holomap_color = HOLOMAP_AREACOLOR_CARGO
-	color_grading = COLORTINT_DIM
-
-/area/offworld/asteroidyard/station/bar
-	name = "\improper Reclamation Yard Bar"
-	icon_state = "green"
-	holomap_color = HOLOMAP_AREACOLOR_CIV
-	color_grading = COLORTINT_WARM
-
-/area/offworld/asteroidyard/station/medbox
-	name = "\improper Reclamation Medical Station"
-	icon_state = "medbay2"
-	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
-
-/area/offworld/asteroidyard/station/spelunker
-	name = "\improper Reclamation Spelunker"
-	icon_state = "toilet"
-	holomap_color = HOLOMAP_AREACOLOR_CIV
-	color_grading = COLORTINT_DARK
-
-/area/offworld/asteroidyard/station/engineering
-	name = "\improper Reclamation Yard Engineering"
-	icon_state = "orange"
-	ambience = AMBIENCE_SUBSTATION
-	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
-
-/area/offworld/asteroidyard/station/solarControl
-	name = "\improper Reclamation Yard Solar Control"
-	icon_state = "orange"
-	ambience = AMBIENCE_SUBSTATION
-	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
-
-/area/offworld/asteroidyard/station/observation
-	name = "\improper Reclamation Yard Observation"
-	icon_state = "blue"
-	sound_env = LARGE_ENCLOSED
-	ambience = AMBIENCE_FOREBODING
-	holomap_color = HOLOMAP_AREACOLOR_CIV
-
-/area/offworld/asteroidyard/station/telecomms
-	name = "\improper Reclamation Yard Telecomms"
-	icon_state = "tcomsatlob"
-	sound_env = SMALL_ENCLOSED
-	ambience = AMBIENCE_ENGINEERING
-	holomap_color = HOLOMAP_AREACOLOR_COMMAND
-
-/area/offworld/asteroidyard/station/teleport
-	name = "\improper Reclamation Yard Teleporter"
-	icon_state = "tcomsatlob"
-	sound_env = SMALL_ENCLOSED
-	ambience = AMBIENCE_ENGINEERING
-	holomap_color = HOLOMAP_AREACOLOR_COMMAND
-	color_grading = COLORTINT_DIM
-
-//
-//-----------------------------------------------------------------------
-//Confinement beam
-/area/offworld/confinementbeam/station
-	sound_env = SMALL_ENCLOSED
-	ambience = AMBIENCE_MAINTENANCE
-	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
-	base_turf = /turf/space
-
-/area/offworld/confinementbeam/station/access_shaft
-	name = "\improper Confinement Beam Access Shaft"
-	icon_state = "red"
-	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
-
-/area/offworld/confinementbeam/station/dockingbay
-	name = "\improper Confinement Beam Docking Arm"
-	icon_state = "decontamination"
-	sound_env = LARGE_ENCLOSED
-	ambience = AMBIENCE_HANGAR
-	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
-
-/area/offworld/confinementbeam/exterior
-	name = "\improper Confinement Beam Exterior"
-	icon_state = "red2"
-	sound_env = SPACE
-	ambience = AMBIENCE_OUTPOST21_SPACE
-	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
-	flags = AREA_BLOCK_GHOST_SIGHT
-	has_gravity = FALSE
-	dynamic_lighting = FALSE // Respect space
-
-/area/offworld/confinementbeam/exterior/get_gravity()
-	return FALSE
-
-/area/offworld/confinementbeam/station/storage
-	name = "\improper Confinement Beam Primary Storage"
-	icon_state = "tcomsatlob"
-	sound_env = SMALL_ENCLOSED
-	ambience = AMBIENCE_GENERIC
-	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
-
-/area/offworld/confinementbeam/station/port_equipment
-	name = "\improper Confinement Beam Engine Equipment Port"
-	icon_state = "tcomsatlob"
-	sound_env = SMALL_ENCLOSED
-	ambience = AMBIENCE_GENERIC
-	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
-
-/area/offworld/confinementbeam/station/starboard_equipment
-	name = "\improper Confinement Beam Engine Equipment Starboard"
-	icon_state = "tcomsatlob"
-	sound_env = SMALL_ENCLOSED
-	ambience = AMBIENCE_GENERIC
-	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
-
-/area/offworld/confinementbeam/station/port_airlock
-	name = "\improper Confinement Beam Port Airlock"
-	icon_state = "shuttle2"
-	sound_env = SMALL_ENCLOSED
-	ambience = AMBIENCE_GENERIC
-	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
-
-/area/offworld/confinementbeam/station/starboard_airlock
-	name = "\improper Confinement Beam Starboard Airlock"
-	icon_state = "shuttle2"
-	sound_env = SMALL_ENCLOSED
-	ambience = AMBIENCE_GENERIC
-	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
-
-/area/offworld/confinementbeam/station/trawler_airlock
-	name = "\improper Confinement Beam Trawler Airlock"
-	icon_state = "shuttle2"
-	sound_env = SMALL_ENCLOSED
-	ambience = AMBIENCE_GENERIC
-	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
-
-/area/offworld/confinementbeam/station/solar_control
-	name = "\improper Confinement Beam Solar Control"
-	icon_state = "dark128"
-	sound_env = SMALL_ENCLOSED
-	ambience = AMBIENCE_ENGINEERING
-	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
-
-/area/offworld/confinementbeam/station/hallway
-	name = "\improper Confinement Beam Crew Conduit Aft"
-	icon_state = "blue"
-	sound_env = SOUND_ENVIRONMENT_HALLWAY
-	ambience = AMBIENCE_MAINTENANCE
-	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
-
-/area/offworld/confinementbeam/station/hallway_alt
-	name = "\improper Confinement Beam Crew Conduit Fore"
-	icon_state = "blue"
-	sound_env = SOUND_ENVIRONMENT_HALLWAY
-	ambience = AMBIENCE_MAINTENANCE
-	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
-
-/area/offworld/confinementbeam/station/backup_power
-	name = "\improper Confinement Beam Auxilary Power"
-	icon_state = "orange"
-	sound_env = SMALL_ENCLOSED
-	ambience = AMBIENCE_SUBSTATION
-	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
-
-/area/offworld/confinementbeam/station/medical_treatment
-	name = "\improper Confinement Beam Medical Station"
-	icon_state = "green"
-	sound_env = SOUND_ENVIRONMENT_STONEROOM
-	ambience = AMBIENCE_GENERIC
-	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
-
-/area/offworld/confinementbeam/station/atmos
-	name = "\improper Confinement Beam Atmospherics"
-	icon_state = "blue"
-	sound_env = LARGE_ENCLOSED
-	ambience = AMBIENCE_ATMOS
-	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
-
-/area/offworld/confinementbeam/station/power_distribution
-	name = "\improper Confinement Beam Power Distribution"
-	icon_state = "orange"
-	sound_env = SMALL_ENCLOSED
-	ambience = AMBIENCE_SUBSTATION
-	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
-
-/area/offworld/confinementbeam/station/beam_emitter
-	name = "\improper Confinement Beam Emitter Control"
-	icon_state = "shuttle2"
-	sound_env = LARGE_ENCLOSED
-	ambience = AMBIENCE_SUBSTATION
-	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
-
-/area/offworld/confinementbeam/station/port_observation
-	name = "\improper Confinement Beam Port Observation"
-	icon_state = "blue"
-	sound_env = SMALL_SOFTFLOOR
-	ambience = AMBIENCE_GENERIC
-	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
-
-/area/offworld/confinementbeam/station/starboard_observation
-	name = "\improper Confinement Beam Starboard Observation"
-	icon_state = "blue"
-	sound_env = SMALL_SOFTFLOOR
-	ambience = AMBIENCE_GENERIC
-	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
-
-/area/maintenance/confinementbeam
-	name = "\improper Confinement Beam Maintenance"
-	sound_env = SMALL_ENCLOSED
-	ambience = AMBIENCE_MAINTENANCE
-	base_turf = /turf/space
-
-/area/maintenance/confinementbeam/north
-	name = "\improper Confinement Beam Maintenance North"
-	base_turf = /turf/simulated/open
-	sound_env = SMALL_ENCLOSED
-
-/area/maintenance/confinementbeam/south
-	name = "\improper Confinement Beam Maintenance South"
-	base_turf = /turf/simulated/open
-	sound_env = SMALL_ENCLOSED
 
 //
 // Tramline --------------------------------------------------
@@ -3029,6 +2765,10 @@
 
 /area/centcom/simulated/cent_cargo_sat
 	name = "\improper CentCom Cargo Docking"
+	icon_state = "center"
+
+/area/centcom/security/contraban_turnin
+	name = "\improper CentCom Contraban Turnin"
 	icon_state = "center"
 
 /area/specialty/redspace

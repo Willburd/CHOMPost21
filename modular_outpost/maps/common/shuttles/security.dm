@@ -29,6 +29,12 @@
 	// If on highest level of spooky let the tram crash happen
 	if(SShaunting.get_world_haunt() >= 5)
 		return prob(1) && prob(1)
+	// Crash in certain weather
+	var/turf/T = get_turf(intended_destination)
+	if(T && T.z > 0 && T.z <= SSplanets.z_to_planet.len && SSplanets.z_to_planet[T.z])
+		var/datum/planet/P = SSplanets.z_to_planet[T.z]
+		if(prob(P?.weather_holder?.current_weather.shuttle_crash_chance))
+			return TRUE
 	return FALSE
 
 /obj/machinery/computer/shuttle_control/explore/security
@@ -56,20 +62,20 @@
 	name = "Prospector (Port Dock)"
 	landmark_tag = "prospector_docks_security"
 	base_turf = /turf/space
-	base_area = /area/offworld/asteroidyard // TODO
+	base_area = /area/space
 
 /obj/effect/shuttle_landmark/premade/security/confinementbeam
 	name = "Confinement Beam (Security Dock)"
 	landmark_tag = "confinementbeam_security"
 	docking_controller = "beam_sat_security_controller"
 	base_turf = /turf/space
-	base_area = /area/offworld/confinementbeam/exterior
-	local_crash_sites = OUTPOST_CONFINEMENTBEAM_CRASHES
+	base_area = /area/space
+	local_crash_sites = OUTPOST_ASTEROID_CRASHES
 
 /obj/effect/shuttle_landmark/premade/security/aisat_security
 	name = "AI Satellite (Security Dock)"
 	landmark_tag = "aisat_security"
 	docking_controller = "aisat_security_controller"
 	base_turf = /turf/space
-	base_area = /area/offworld/confinementbeam/exterior
-	local_crash_sites = OUTPOST_CONFINEMENTBEAM_CRASHES
+	base_area = /area/space
+	local_crash_sites = OUTPOST_ASTEROID_CRASHES

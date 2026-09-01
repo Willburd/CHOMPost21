@@ -1,6 +1,6 @@
 /obj/item/mine/claymore
 	name = "claymore"
-	desc = "A small directional explosive loaded with pellets similar to a shotgun blast. May destroy wires and soft structures its placed upon. Front towards enemy."
+	desc = "A small directional explosive loaded with pellets similar to a shotgun blast. Front towards enemy."
 	icon = 'modular_outpost/icons/obj/claymore.dmi'
 	icon_state = "claymore"
 	minetype = /obj/effect/mine/claymore
@@ -13,6 +13,9 @@
 	icon_state = "landmine"
 	mineitemtype = /obj/item/mine/claymore
 	var/list/lasers = list()
+	// Note: Manually fire()ing projectiles userless does not run submunitions code. Use submunitions DIRECTLY with the count fired!
+	var/shell_type = /obj/item/projectile/bullet/shotgun/buckshot
+	var/shell_count = 8 // Buckshot rounds
 
 /obj/effect/mine/claymore/Initialize(mapload)
 	. = ..()
@@ -34,11 +37,15 @@
 	var/turf/O = get_turf(src)
 	if(!O)
 		return
-	var/obj/item/projectile/P = new /obj/item/projectile/bullet/shotgun/buckshot/shell(src)
-	P.firer = src
-	P.old_style_target(get_step(get_turf(loc),dir))
-	P.fire()
+	while(shell_count > 0)
+		shell_count--
+		var/obj/item/projectile/P = new shell_type(src)
+		P.firer = src
+		P.old_style_target(get_step(get_turf(loc),dir))
+		P.setAngle(P.Angle + rand(-5,5))
+		P.fire()
 	visible_message("\The [src.name] detonates!")
+	playsound(src, 'sound/weapons/gunshot2.ogg')
 	spawn(0)
 		qdel(s)
 		qdel(src)
@@ -142,29 +149,19 @@
 	minetype = /obj/effect/mine/claymore/donksoft
 
 /obj/effect/mine/claymore/donksoft
-	name = "claymore"
-	desc = "A directional claymore. Using a infrared sensor to detect targets in a short range in front of it."
 	icon = 'modular_outpost/icons/obj/claymore.dmi'
 	icon_state = "landmine"
 	mineitemtype = /obj/item/mine/claymore/donksoft
+	shell_type = /obj/item/projectile/bullet/foam_dart
+	shell_count = 12
 
-/obj/effect/mine/claymore/donksoft/explode(mob/living/M)
-	if(triggered) // Prevents circular mine explosions from two mines detonating eachother
-		return
-	var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread()
-	triggered = 1
-	s.set_up(3, 1, src)
-	s.start()
-	var/turf/O = get_turf(src)
-	if(!O)
-		return
-	for(var/i = 1 to 12) // DONKIN TIME
-		var/obj/item/projectile/P = new /obj/item/projectile/bullet/foam_dart(src)
-		P.firer = src
-		P.old_style_target(get_step(get_turf(loc),dir))
-		P.setAngle(P.Angle + rand(-5,5))
-		P.fire()
-	visible_message("\The [src.name] detonates!")
-	spawn(0)
-		qdel(s)
-		qdel(src)
+
+/obj/item/mine/claymore/flechette
+	name = "claymore"
+	desc = "A small directional explosive loaded with anti-personal flechettes. Front towards enemy."
+	minetype = /obj/effect/mine/claymore/flechette
+
+/obj/effect/mine/claymore/flechette
+	mineitemtype = /obj/item/mine/claymore/flechette
+	shell_type = /obj/item/projectile/bullet/magnetic/flechette/small
+	shell_count = 8

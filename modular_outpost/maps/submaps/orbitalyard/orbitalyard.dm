@@ -297,7 +297,7 @@
 	always_unpowered = FALSE
 
 /area/submap/outpost21/structure_generic/lostshipb
-	name = "\improper Abandoned Vessel"
+	name = "\improper Destroyed Vessel"
 	always_unpowered = FALSE
 
 /area/submap/outpost21/structure_generic/lostpod

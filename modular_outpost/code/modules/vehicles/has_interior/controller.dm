@@ -499,6 +499,9 @@
 /obj/vehicle/has_interior/MouseDrop_T(atom/movable/C, mob/user)
 	if(user.buckled || user.stat || user.restrained() || !Adjacent(user) || !user.Adjacent(C) || !istype(C) || (user == C && !user.canmove))
 		return 0
+	if(ismecha(user.loc))
+		to_chat(user, span_warning("\The [user.loc] is too large to fit inside!"))
+		return 0
 	if(!Adjacent(user))
 		return 0
 	if(entrance_hatch == null || !entrance_hatch.locked)

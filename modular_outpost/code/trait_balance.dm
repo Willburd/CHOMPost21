@@ -128,6 +128,16 @@
 /datum/trait/positive/shapeshifting
 	hidden = TRUE // Changeling gameplay infringement
 
+/datum/trait/positive/endurance_high
+	banned_species = list(SPECIES_TESHARI, SPECIES_UNATHI, SPECIES_SHADEKIN_CREW, SPECIES_SHADEKIN) // Consistant restriction list
+
+/datum/trait/positive/endurance_very_high
+	banned_species = list(SPECIES_TESHARI, SPECIES_SHADEKIN_CREW, SPECIES_SHADEKIN) // Consistant restriction list
+
+/datum/trait/positive/endurance_extremely_high
+	banned_species = list(SPECIES_TESHARI, SPECIES_SHADEKIN_CREW, SPECIES_SHADEKIN) // Consistant restriction list
+
+
 /////////////////////////////////////////////////////////////////////////////////////////////////
 /// NEUTRAL
 /////////////////////////////////////////////////////////////////////////////////////////////////
@@ -299,5 +309,13 @@
 /datum/trait/negative/medical_allergy
 	is_genetrait = TRUE // Base FALSE
 	activation_message = "Something feels odd..."
+
+/datum/trait/negative/meltable
+	custom_only = FALSE // Allow non-custom species
+	banned_species = list(SPECIES_PROMETHEAN)
+
+/datum/trait/negative/meltable_major
+	custom_only = FALSE // Allow non-custom species
+	banned_species = list(SPECIES_PROMETHEAN)
 
 #endif

@@ -26,7 +26,7 @@
 	var/default_material = MAT_STEEL
 	var/datum/material/material
 	var/drops_debris = 1
-	var/named_from_material = 1 //YW EDIT, Does it prepend the material's name to it's name?
+	var/named_from_material = TRUE
 
 /obj/item/material/Initialize(mapload, material_key)
 	. = ..()
@@ -65,7 +65,7 @@
 	if(!material)
 		qdel(src)
 	else
-		if(named_from_material) //YW EDIT
+		if(named_from_material)
 			name = "[material.display_name] [initial(name)]"
 		health = round(material.integrity/10)
 		if(applies_material_colour)
@@ -91,9 +91,11 @@
 	if(istype(W, /obj/item/whetstone))
 		var/obj/item/whetstone/whet = W
 		repair(whet.repair_amount, whet.repair_time, user)
+	/* Outpost 21 edit - Removed sharpening kit
 	if(istype(W, /obj/item/material/sharpeningkit))
 		var/obj/item/material/sharpeningkit/SK = W
 		repair(SK.repair_amount, SK.repair_time, user)
+	*/
 	..()
 
 /obj/item/material/proc/check_health(consumed)

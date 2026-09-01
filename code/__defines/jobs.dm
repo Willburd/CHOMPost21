@@ -15,6 +15,7 @@
 	#define JOB_ALT_FACILITY_STEWARD "Facility Steward"
 	#define JOB_ALT_FIRST_MATE "First Mate"
 	#define JOB_ALT_PERFORMANCE_MANAGEMENT_SUPERVISOR "Performance Management Supervisor"
+	#define JOB_ALT_EXECUTIVE_OFFICER "Executive Officer" // Outpost 21 edit - Executive officer alt title
 
 //#define JOB_COMMAND_SECRETARY "Command Secretary" // Outpost 21 edit - Command Secretary folded into HoP
 	// Command Secretary alt titles
@@ -161,6 +162,8 @@
 	#define JOB_ALT_INTERNAL_AFFAIRS_LIAISON "Internal Affairs Liaison"
 	#define JOB_ALT_INTERNAL_AFFAIRS_DELEGATE "Internal Affairs Delegate"
 	#define JOB_ALT_INTERNAL_AFFAIRS_INVESTIGATOR "Internal Affairs Investigator"
+	#define JOB_ALT_INTERNAL_AFFAIRS_DAMAGE_ASSESSMENT "Damage Assessment Officer" // outpost 21 edit
+	#define JOB_ALT_INTERNAL_AFFAIRS_CASUALTY_ANALYST "Causality Analysts Officer" // outpost 21 edit
 
 #define JOB_CHAPLAIN "Chaplain"
 	// Chaplain alt titles
@@ -321,9 +324,6 @@
 	#define JOB_ALT_RESEARCH_CONTRACTOR "Research Contractor"
 	#define JOB_ALT_TELEPORT_OPERATOR "Teleporter Operator" // Outpost 21 edit - Telesci job
 
-// Outpost 21 edit - Particle physicist
-#define JOB_ELECTROPHYSICIST "Electrophysicist"
-
 #define JOB_XENOBIOLOGIST "Xenobiologist"
 	// Xenobiologist alt titles
 	#define JOB_ALT_XENOZOOLOGIST "Xenozoologist"
@@ -336,6 +336,7 @@
 	#define JOB_ALT_MECHATRONIC_ENGINEER "Mechatronic Engineer"
 	#define JOB_ALT_SOFTWARE_ENGINEER "Software Engineer"
 	#define JOB_ALT_JUNIOR_ROBOTICIST "Junior Roboticist" // Outpost 21 edit - Adds junior roboticist alt title
+	#define JOB_ALT_ELECTROPHYSICIST "Electrophysicist" // Outpost 21 edit - Electrophysicist added
 
 #define JOB_XENOBOTANIST "Xenobotanist"
 	// Xenobotanist alt titles
@@ -531,7 +532,6 @@
 #define VIROLOGIST (1<<6)
 #define PSYCHIATRIST (1<<7)
 // define ROBOTICIST (1<<8) // Outpost 21 edit - Moved to engineering
-#define ELECTROPHYSICIST (1<<8)  // Outpost 21 edit - Particle physicist
 #define XENOBIOLOGIST (1<<9)
 #define PARAMEDIC (1<<10)
 // define PATHFINDER (1<<11)	// Outpost 21 edit - removed job
@@ -583,6 +583,6 @@ GLOBAL_LIST_INIT(command_positions, list(
 	JOB_RESEARCH_DIRECTOR,
 	JOB_CHIEF_MEDICAL_OFFICER,
 	JOB_COMMAND_OFFICER, // Outpost 21 edit - Command officer
-	// JOB_COMMAND_SECRETARY, // Outpost 21 edit - Command sec folded into hop
+	// JOB_COMMAND_SECRETARY, // Outpost 21 edit - Command sec folded into command officer
 	// JOB_BLUESHIELD_GUARD // CHOMPEnable // Outpost 21 edit - Job disabled
 ))

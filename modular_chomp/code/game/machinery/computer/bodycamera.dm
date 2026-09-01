@@ -110,20 +110,27 @@
 	var/tries = 10
 	// Outpost 21 edit(port) begin - Bodycam vision fix
 	var/atom/recursive_loc = thing
-	while(--tries)
-		recursive_loc = recursive_loc.loc
-		if(isturf(recursive_loc.loc))
-			break
+	if(!QDELETED(recursive_loc?.loc))
+		while(--tries)
+			recursive_loc = recursive_loc.loc
+			if(isturf(recursive_loc.loc))
+				break
+		thing = recursive_loc // should get the topmost atom, which *should* be a mob, or a locker, or something that isnt just ~clothes~
+		showing = WEAKREF(thing)
+		if(bpinboard)
+			bpinboard.vis_contents.Cut()
+			bpinboard.cut_overlays()
+			bpinboard.vis_contents = list(thing)
 	// Outpost 21 edit end
-	thing = recursive_loc // should get the topmost atom, which *should* be a mob, or a locker, or something that isnt just ~clothes~
-	showing = WEAKREF(thing)
-	if(bpinboard)
-		bpinboard.vis_contents = list(thing)
 
 /obj/machinery/computer/security/telescreen/bodycamera/proc/stop_showing()
 	// Reverse of the above
+	// Outpost 21 edit(port) begin - Bodycam overlay fix
 	if(bpinboard)
+		bpinboard.vis_contents.Cut()
+		bpinboard.cut_overlays()
 		bpinboard.vis_contents = null
+	// Outpost 21 edit end
 	showing = null
 	the_camera = null
 

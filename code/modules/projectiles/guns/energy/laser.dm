@@ -13,7 +13,7 @@
 	slot_flags = SLOT_BELT|SLOT_BACK
 	w_class = ITEMSIZE_LARGE //CHOMP Edit - huge was dumb for this.
 	force = 10
-	matter = list(MAT_STEEL = 2000)
+	matter = list(MAT_STEEL = MATERIAL_COST(1))
 	projectile_type = /obj/item/projectile/beam/midlaser
 	one_handed_penalty = 30
 
@@ -106,7 +106,6 @@
 	cell_type = /obj/item/cell/device/weapon/recharge/alien // Self charges.
 	modifystate = "alienpistol"
 	battery_lock = 1 //CHOMPedit adds battery lock.
-	move_delay = 0 // CHOMPEdit: Pistols have move_delay of 0
 
 /datum/category_item/catalogue/anomalous/precursor_a/alien_pistol
 	name = "Precursor Alpha Weapon - Appendageheld Laser"
@@ -340,7 +339,7 @@
 	set name = "Use Scope"
 	set popup_menu = 1
 
-	toggle_scope(2.0)
+	toggle_scope(usr, 2.0)
 
 /*
  * Laser Scattergun (proof of concept)
@@ -370,7 +369,7 @@
 	slot_flags = SLOT_BELT
 	w_class = ITEMSIZE_NORMAL
 	force = 10
-	matter = list(MAT_STEEL = 2000)
+	matter = list(MAT_STEEL = MATERIAL_COST(1))
 	fire_sound = 'sound/weapons/mandalorian.ogg'
 	projectile_type = /obj/item/projectile/beam/imperial
 
@@ -386,7 +385,7 @@
 	slot_flags = SLOT_BELT|SLOT_BACK
 	w_class = ITEMSIZE_LARGE
 	force = 15
-	matter = list(MAT_STEEL = 2000)
+	matter = list(MAT_STEEL = MATERIAL_COST(1))
 	projectile_type = /obj/item/projectile/beam/mininglaser
 
 	firemodes = list(
@@ -408,7 +407,7 @@
 	slot_flags = SLOT_BELT
 	w_class = ITEMSIZE_NORMAL
 	force = 8
-	matter = list(MAT_STEEL = 1500)
+	matter = list(MAT_STEEL = MATERIAL_COST(0.75))
 	projectile_type = /obj/item/projectile/beam/midlaser
 
 /*
@@ -441,7 +440,7 @@
 	set name = "Aim Down Sights"
 	set popup_menu = 1
 
-	toggle_scope(scope_multiplier)
+	toggle_scope(usr, scope_multiplier)
 
 /obj/item/gun/energy/monorifle/combat
 	name = "combat mono-rifle"

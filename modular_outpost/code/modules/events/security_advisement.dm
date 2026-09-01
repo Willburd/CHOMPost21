@@ -77,7 +77,7 @@
 				else
 					str += pick(
 						"an ordered security review of their records.",
-						"an ordered physical review of their treat assessment to the company.",
+						"an ordered physical review of their threat assessment to the company.",
 						"an ordered assessment of their use as a emergency asset recovery operative.",
 						"possible compliance implanting by hostile outside actors.",
 					)

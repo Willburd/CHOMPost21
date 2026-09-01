@@ -71,10 +71,8 @@ export const PulsingWarningTriangle = (props) => {
   );
 };
 
-// Outpost 21 edit begin - Updated transcore dump process
 export const ResleevingConsoleDumpProgress = (props) => {
-  const { act } = useBackend();
-  const { data } = useBackend<Data>();
+  const { act, data } = useBackend<Data>();
   const { dump_progress } = data;
   return (
     <Dimmer textAlign="center">
@@ -94,4 +92,3 @@ export const ResleevingConsoleDumpProgress = (props) => {
     </Dimmer>
   );
 };
-// Outpost 21 edit end

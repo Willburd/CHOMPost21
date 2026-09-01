@@ -42,11 +42,9 @@ export const ResleevingConsole = (props) => {
   if (emergency) {
     body = <ResleevingConsoleDiskPrep />;
   }
-  // Outpost 21 edit begin - Updated transcore dump process
   if (dump_progress) {
     body = <ResleevingConsoleDumpProgress />;
   }
-  // Outpost 21 edit end
   return (
     <Window width={640} height={520}>
       {data.active_b_rec && (

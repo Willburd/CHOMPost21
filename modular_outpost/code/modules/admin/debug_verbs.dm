@@ -1,10 +1,10 @@
-ADMIN_VERB(lock_weather, R_EVENT, "Lock Weather", "Locks or unlocks the current weather from proceeding to the next forcast.", ADMIN_CATEGORY_EVENTS)
+ADMIN_VERB(lock_weather, R_EVENT, "Lock Weather", "Locks or unlocks the current weather from proceeding to the next forcast.", ADMIN_CATEGORY_DEBUG_EVENTS)
 	var/datum/planet/planet = tgui_input_list(usr, "Which planet do you want to toggle the weather lock on?", "Toggle Lock Weather", SSplanets.planets)
 	if(istype(planet))
 		planet.weather_holder.locked = !planet.weather_holder.locked
 		to_chat(usr, span_vdanger("The weather on [planet] is now [planet.weather_holder.locked ? "LOCKED" : "unlocked"], the weather is currently [planet.weather_holder.current_weather]."))
 
-ADMIN_VERB(lock_planet_light, R_EVENT, "Lock Planet Lightlevel", "Locks a planet to a specific light level and color.", ADMIN_CATEGORY_EVENTS)
+ADMIN_VERB(lock_planet_light, R_EVENT, "Lock Planet Lightlevel", "Locks a planet to a specific light level and color.", ADMIN_CATEGORY_DEBUG_EVENTS)
 	var/datum/planet/planet = tgui_input_list(usr, "Which planet do you want to toggle the weather lock on?", "Toggle Lock Weather", SSplanets.planets)
 	if(istype(planet))
 		if(!isnull(planet.locked_light_color))
@@ -21,12 +21,17 @@ ADMIN_VERB(lock_planet_light, R_EVENT, "Lock Planet Lightlevel", "Locks a planet
 		planet.locked_light_intensity = new_intensity
 		planet.update_sun()
 
-ADMIN_VERB(change_weather_temp, R_EVENT, "Change Weather Temperature", "Sets the temperature of the current weather.", ADMIN_CATEGORY_EVENTS)
+ADMIN_VERB(change_weather_temp, R_EVENT, "Change Weather Temperature", "Sets the temperature of the current weather.", ADMIN_CATEGORY_DEBUG_EVENTS)
 	var/datum/planet/planet = tgui_input_list(usr, "Which planet do you want to change the temperature on?", "Change Weather Temperature", SSplanets.planets)
 	var/set_temp = tgui_input_number(usr,"The new temperature in kelvin.", "New Temperature", 215, 999999, 1)
 	if(set_temp && istype(planet))
 		planet.weather_holder.temperature = max(1,set_temp)
 		SSplanets.updateTemp(planet)
+
+ADMIN_VERB(weather_warning_siren, R_EVENT, "Severe Weather Siren", "Sets off the severe weather alarm.", ADMIN_CATEGORY_DEBUG_EVENTS)
+	var/datum/planet/planet = SSplanets.planets[1]
+	if(istype(planet))
+		planet.weather_holder.weather_alarm()
 
 ADMIN_VERB(door_access_debug, R_DEBUG, "Debug All Door Access", "Reveals ALL door accesses for quick identification of problems. DANGER SLOW AND CANNOT BE UNDONE!", ADMIN_CATEGORY_DEBUG_INVESTIGATE)
 	for(var/obj/machinery/door/airlock/A in world)

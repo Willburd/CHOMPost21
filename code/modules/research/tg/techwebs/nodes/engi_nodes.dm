@@ -187,6 +187,7 @@
 		// "rwd",
 		"cable_coil",
 		"welding_helmet",
+		"welding_goggles",
 		"welding_tool",
 		"mini_welding_tool",
 		"multitool",
@@ -217,6 +218,7 @@
 		"fluor_light_bulb",
 		"fluor_light_tube",
 		//CHOMPEdit end
+		"airlock_braces", // Outpost 21 edit - Adds airlock braces
 	)
 
 /datum/techweb_node/emerge_power
@@ -255,7 +257,6 @@
 		"gyrotron",
 		"supermatter_core_manager",
 		"supermatter_injector_control",
-		"welding_goggles",
 		"electric_welding_tool",
 		// "tray_goggles",
 		// "geigercounter",
@@ -371,7 +372,7 @@
 		"industrial_reagent_furnace",
 		"industrial_reagent_grinder",
 		"industrial_reagent_hub",
-		"industrial_reagent_pipe",
+	//	"industrial_reagent_pipe", // comes with it's own circuitboard now
 		"industrial_reagent_pump",
 		"industrial_reagent_reactor",
 		"industrial_reagent_vat",

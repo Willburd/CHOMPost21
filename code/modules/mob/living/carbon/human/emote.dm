@@ -108,6 +108,8 @@ GLOBAL_LIST_INIT(human_default_emotes, list(
 	/datum/decl/emote/audible/vox_shriek,
 	/datum/decl/emote/audible/purr,
 	/datum/decl/emote/audible/purrlong,
+	/datum/decl/emote/audible/catgrowl,
+	/datum/decl/emote/audible/catgrowl2,
 	/datum/decl/emote/audible/awoo,
 	/datum/decl/emote/audible/awoo2,
 	/datum/decl/emote/audible/belch,
@@ -220,6 +222,7 @@ GLOBAL_LIST_INIT(human_default_emotes, list(
 	/datum/decl/emote/audible/kweh,
 	/datum/decl/emote/audible/kweh_sad,
 	/datum/decl/emote/audible/concrete_grind,
+	/datum/decl/emote/audible/gorp,
 	//outpost 21 add end
 ))
 
@@ -395,6 +398,7 @@ GLOBAL_LIST_INIT(simple_mob_default_emotes, list(
 	/datum/decl/emote/audible/kweh,
 	/datum/decl/emote/audible/kweh_sad,
 	/datum/decl/emote/audible/concrete_grind,
+	/datum/decl/emote/audible/gorp,
 	//outpost 21 add end
 	))
 

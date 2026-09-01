@@ -36,6 +36,12 @@
 	// If on highest level of spooky let the tram crash happen
 	if(SShaunting.get_world_haunt() >= 5)
 		return prob(1) && prob(1)
+	// Crash in certain weather
+	var/turf/T = get_turf(intended_destination)
+	if(T && T.z > 0 && T.z <= SSplanets.z_to_planet.len && SSplanets.z_to_planet[T.z])
+		var/datum/planet/P = SSplanets.z_to_planet[T.z]
+		if(prob(P?.weather_holder?.current_weather.shuttle_crash_chance))
+			return TRUE
 	return FALSE
 
 /obj/effect/shuttle_landmark/premade/beamtransit/base
@@ -54,6 +60,6 @@
 	name = "ES 21-4 Confinement Beam Platform"
 	landmark_tag = "beam_sat"
 	docking_controller = "beam_sat_controller"
-	base_area = /area/offworld/confinementbeam/exterior
+	base_area = /area/offworld/orbital/exterior
 	base_turf = /turf/simulated/floor/airless
-	local_crash_sites = OUTPOST_CONFINEMENTBEAM_CRASHES
+	local_crash_sites = OUTPOST_ASTEROID_CRASHES

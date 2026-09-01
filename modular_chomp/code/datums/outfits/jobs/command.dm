@@ -2,7 +2,7 @@
 	name = OUTFIT_JOB_NAME("Bridge Officer")
 	uniform = /obj/item/clothing/under/utility
 	// shoes = /obj/item/clothing/shoes/boots/winter/explorer // Outpost 21 edit - Why the boots...?
-	id_type = /obj/item/card/id/silver/hop // Outpost 21 edit - Command sec folded into hop
+	// id_type = /obj/item/card/id/silver/hop // Outpost 21 edit - Command sec folded into command officer
 	pda_type = /obj/item/pda/heads
 
 	headset = /obj/item/radio/headset/headset_com

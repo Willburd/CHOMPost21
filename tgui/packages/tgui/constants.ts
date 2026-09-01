@@ -185,6 +185,28 @@ export const RADIO_CHANNELS = [
     freq: 1485,
     color: '#008000',
   },
+  // Outpost 21 edit begin - Security squad channels
+  {
+    name: 'Alpha Squad',
+    freq: 1421,
+    color: '#af2212',
+  },
+  {
+    name: 'Beta Squad',
+    freq: 1423,
+    color: '#af2212',
+  },
+  {
+    name: 'Charlie Squad',
+    freq: 1425,
+    color: '#af2212',
+  },
+  {
+    name: 'Delta Squad',
+    freq: 1427,
+    color: '#af2212',
+  },
+  // Outpost 21 edit end
 ] as const;
 
 /*

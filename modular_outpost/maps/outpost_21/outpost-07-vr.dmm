@@ -128,22 +128,7 @@
 "aal" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/window/maintenance_panel,
-/obj/structure/window/maintenance_panel{
-	dir = 1
-	},
-/turf/simulated/floor/plating,
-/area/vr/bloodstar)
-"aam" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/structure/window/maintenance_panel{
-	dir = 4
-	},
-/obj/structure/window/maintenance_panel{
-	dir = 8
-	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/vr/bloodstar)
 "aan" = (
 /obj/structure/grille,
@@ -1891,6 +1876,25 @@
 	color = "#A10808"
 	},
 /turf/simulated/floor/plating,
+/area/vr/bloodstar)
+"adF" = (
+/obj/effect/blocker,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/airless,
+/area/vr/bloodstar)
+"adG" = (
+/obj/structure/lattice,
+/obj/effect/blocker,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/airless,
+/area/vr/bloodstar)
+"adH" = (
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/airless,
+/area/vr/bloodstar)
+"adI" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/window/maintenance_panel{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/vr/bloodstar)
 "adK" = (
 /obj/effect/floor_decal/borderfloor,
@@ -5992,7 +5996,7 @@
 /turf/simulated/floor,
 /area/vr/bloodstar)
 "bqK" = (
-/turf/simulated/mineral/ignore_mapgen,
+/turf/simulated/mineral/ignore_cavegen,
 /area/vr/bloodstar)
 "bqO" = (
 /obj/effect/decal/cleanable/dirt,
@@ -7486,7 +7490,8 @@
 /area/vr/bloodstar)
 "bRq" = (
 /obj/machinery/door/airlock/glass_medical{
-	name = "Virology Laboratory"
+	name = "Virology Laboratory";
+	req_one_access = null
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/atmospherics/pipe/simple/hidden/black{
@@ -12702,12 +12707,9 @@
 	dir = 4
 	},
 /obj/structure/window/maintenance_panel{
-	dir = 8
-	},
-/obj/structure/window/maintenance_panel{
 	dir = 4
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/vr/bloodstar)
 "drt" = (
 /obj/machinery/hologram/holo_tutorial/hazard_1,
@@ -18532,7 +18534,6 @@
 /obj/effect/floor_decal/corner/orange{
 	dir = 10
 	},
-/obj/machinery/light/broken,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
 "flD" = (
@@ -24552,7 +24553,7 @@
 /area/vr/bloodstar)
 "hdf" = (
 /obj/structure/lattice,
-/turf/simulated/mineral/ignore_mapgen,
+/turf/simulated/mineral/ignore_cavegen,
 /area/vr/bloodstar)
 "hdg" = (
 /obj/effect/floor_decal/industrial/warning/corner{
@@ -40059,8 +40060,7 @@
 /obj/structure/window/maintenance_panel{
 	dir = 1
 	},
-/obj/structure/window/maintenance_panel,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/vr/bloodstar)
 "lLY" = (
 /obj/effect/floor_decal/spline/plain{
@@ -54861,7 +54861,7 @@
 "qtd" = (
 /obj/structure/lattice,
 /obj/effect/blocker,
-/turf/simulated/mineral/ignore_mapgen,
+/turf/simulated/mineral/ignore_cavegen,
 /area/vr/bloodstar)
 "qtf" = (
 /obj/structure/window/reinforced/polarized{
@@ -67819,7 +67819,7 @@
 /area/vr/bloodstar)
 "uCS" = (
 /obj/effect/blocker,
-/turf/simulated/mineral/ignore_mapgen,
+/turf/simulated/mineral/ignore_cavegen,
 /area/vr/bloodstar)
 "uDn" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -68375,8 +68375,7 @@
 /obj/structure/window/maintenance_panel{
 	dir = 1
 	},
-/obj/structure/window/maintenance_panel,
-/turf/simulated/floor,
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/vr/bloodstar)
 "uMf" = (
 /obj/structure/closet{
@@ -70915,10 +70914,7 @@
 /obj/structure/window/maintenance_panel{
 	dir = 4
 	},
-/obj/structure/window/maintenance_panel{
-	dir = 8
-	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/vr/bloodstar)
 "vAu" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -73787,9 +73783,6 @@
 	dir = 1
 	},
 /obj/item/material/shard,
-/obj/machinery/light/broken{
-	dir = 1
-	},
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/tiled,
 /area/vr/bloodstar)
@@ -115580,7 +115573,7 @@ cdc
 ihx
 usk
 gfJ
-aah
+adI
 vsm
 vsm
 vsm
@@ -128542,7 +128535,7 @@ vRs
 iIz
 hBa
 rHD
-aam
+dri
 rHD
 rHD
 rHD
@@ -138667,7 +138660,7 @@ bqK
 bqK
 bqK
 bqK
-kPr
+adF
 bCE
 bCE
 bCE
@@ -138827,9 +138820,9 @@ kjX
 bqK
 bqK
 bqK
-vuI
-vuI
-kPr
+adH
+adH
+adF
 bCE
 bCE
 bCE
@@ -138991,7 +138984,7 @@ rHD
 rHD
 rHD
 kjX
-kPr
+adF
 bCE
 bCE
 bCE
@@ -140287,7 +140280,7 @@ rHD
 rHD
 rHD
 kjX
-kPr
+adF
 bCE
 bCE
 bCE
@@ -140448,8 +140441,8 @@ bqK
 bqK
 bqK
 bqK
-vuI
-kPr
+adH
+adF
 bCE
 bCE
 bCE
@@ -140610,7 +140603,7 @@ bqK
 bqK
 bqK
 bqK
-vuI
+adH
 oxC
 bCE
 bCE
@@ -140771,8 +140764,8 @@ rHD
 bqK
 bqK
 bqK
-vuI
-vuI
+adH
+adH
 oxC
 bCE
 bCE
@@ -140934,8 +140927,8 @@ bqK
 bqK
 bqK
 bqK
-vuI
-kPr
+adH
+adF
 bCE
 bGH
 bGH
@@ -141097,7 +141090,7 @@ bqK
 bqK
 bqK
 bqK
-kPr
+adF
 bGH
 bGH
 bCE
@@ -141259,7 +141252,7 @@ bqK
 bqK
 bqK
 bqK
-qnD
+adG
 bGH
 bCE
 bCE
@@ -141421,7 +141414,7 @@ wAt
 wAt
 wAt
 bBT
-qnD
+adG
 bCE
 bCE
 rvC

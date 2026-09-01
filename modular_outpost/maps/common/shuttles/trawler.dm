@@ -29,6 +29,12 @@
 	// If on highest level of spooky let the tram crash happen
 	if(SShaunting.get_world_haunt() >= 5)
 		return prob(1) && prob(1)
+	// Crash in certain weather
+	var/turf/T = get_turf(intended_destination)
+	if(T && T.z > 0 && T.z <= SSplanets.z_to_planet.len && SSplanets.z_to_planet[T.z])
+		var/datum/planet/P = SSplanets.z_to_planet[T.z]
+		if(prob(P?.weather_holder?.current_weather.shuttle_crash_chance))
+			return TRUE
 	return FALSE
 
 /obj/machinery/computer/shuttle_control/explore/trawler
@@ -52,21 +58,14 @@
 	local_crash_sites = OUTPOST_SURFACE_CRASHES
 
 /obj/effect/shuttle_landmark/premade/trawler/beltmine
-	name = "Reclaimation Yard (Trawler bay)"
+	name = "Trawler Dock"
 	landmark_tag = "trawler_yard"
-	base_turf = /turf/simulated/floor
-	base_area = /area/offworld/asteroidyard/station/dockingbay
+	base_turf = /turf/simulated/floor/airless
+	base_area = /area/offworld/orbital/exterior
 	local_crash_sites = OUTPOST_ASTEROID_CRASHES
 
 /obj/effect/shuttle_landmark/premade/trawler/prospector
 	name = "Prospector (Trawler Dock)"
 	landmark_tag = "prospector_docks_trawler"
 	base_turf = /turf/space
-	base_area = /area/offworld/asteroidyard // TODO
-
-/obj/effect/shuttle_landmark/premade/trawler/confinementbeam
-	name = "Confinement Beam (Trawler Dock)"
-	landmark_tag = "confinementbeam_trawler"
-	base_turf = /turf/space
-	base_area = /area/offworld/confinementbeam/exterior
-	local_crash_sites = OUTPOST_CONFINEMENTBEAM_CRASHES
+	base_area = /area/space
