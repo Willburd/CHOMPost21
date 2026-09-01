@@ -444,14 +444,6 @@ EXTERIOR_AREA_BEHAVIOR(/area/offworld/orbital/exterior/starboard_solars)
 	ambience = AMBIENCE_GENERIC
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 
-/area/offworld/orbital/exterior/engine_core_starboard/singo_hole
-	name = "\improper Starboard Engine Core Airgap"
-	icon_state = "orange"
-	sound_env = SOUND_ENVIRONMENT_CAVE
-	ambience = AMBIENCE_GENERIC
-	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
-	base_turf = /turf/space
-
 /area/offworld/orbital/station/engine_core_aux
 	name = "\improper Auxiliary Engine Core"
 	icon_state = "engine"

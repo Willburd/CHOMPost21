@@ -79,7 +79,6 @@
 										/area/specialty/expie_clubhouse,
 										/area/specialty/stowaway_clubhouse,
 										/area/specialty/stowaway_clubhouse/upper,
-										/area/offworld/orbital/exterior/engine_core_starboard/singo_hole,
 	)
 	unit_test_exempt_from_atmos = list(	/area/muriki/processor,
 										/area/muriki/processor/hall,

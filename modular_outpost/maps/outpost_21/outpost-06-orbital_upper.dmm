@@ -4950,7 +4950,7 @@
 "jB" = (
 /obj/machinery/the_singularitygen,
 /turf/simulated/floor/airless,
-/area/offworld/orbital/exterior/engine_core_starboard/singo_hole)
+/area/space)
 "jC" = (
 /obj/structure/cable,
 /obj/machinery/power/emitter/antique{
@@ -5418,8 +5418,8 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/industrial/warning/color{
-	light_color = "#00ff00";
-	dir = 8
+	dir = 8;
+	color = "#00ff00"
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/power_distribution)
@@ -8279,8 +8279,8 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/industrial/warning/color{
-	light_color = "#00ff00";
-	dir = 1
+	dir = 1;
+	color = "#00ff00"
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/power_distribution)
@@ -17276,19 +17276,12 @@
 /obj/structure/reagent_dispensers/fueltank/high,
 /turf/simulated/floor/tiled/milspec/airless,
 /area/offworld/orbital/station/storage_engine_core)
-"GP" = (
-/turf/space,
-/area/offworld/orbital/exterior/engine_core_starboard/singo_hole)
 "GQ" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/airless,
 /area/offworld/orbital/exterior/engine_core_port)
-"GR" = (
-/obj/structure/lattice,
-/turf/space,
-/area/offworld/orbital/exterior/engine_core_starboard/singo_hole)
 "GS" = (
 /obj/machinery/alarm{
 	dir = 1;
@@ -17309,9 +17302,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/halls/fore)
-"GU" = (
-/turf/simulated/floor/airless,
-/area/offworld/orbital/exterior/engine_core_starboard/singo_hole)
 "GV" = (
 /obj/effect/floor_decal/corner/orange/full{
 	dir = 8
@@ -17380,17 +17370,10 @@
 	},
 /obj/effect/floor_decal/industrial/warning/color/corner{
 	dir = 1;
-	light_color = "#00ff00"
+	color = "#00ff00"
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/power_distribution)
-"GZ" = (
-/obj/machinery/pointdefense{
-	id_tag = "orbital_point_def"
-	},
-/obj/effect/floor_decal/industrial/warning/full,
-/turf/simulated/floor/airless,
-/area/space)
 "Ha" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/aux{
 	dir = 10
@@ -17973,7 +17956,6 @@
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 9
 	},
-/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/power_distribution)
 "Jz" = (
@@ -20236,12 +20218,12 @@
 /obj/effect/floor_decal/corner/orange{
 	dir = 5
 	},
-/obj/effect/floor_decal/industrial/warning/color/corner/yellow{
+/obj/effect/floor_decal/industrial/warning/corner{
 	dir = 8
 	},
 /obj/effect/floor_decal/industrial/warning/color/corner{
 	dir = 8;
-	light_color = "#00ff00"
+	color = "#00ff00"
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/power_distribution)
@@ -22418,7 +22400,7 @@
 	},
 /obj/effect/floor_decal/industrial/warning,
 /obj/effect/floor_decal/industrial/warning/color{
-	light_color = "#00ff00"
+	color = "#00ff00"
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/power_distribution)
@@ -30045,7 +30027,7 @@ cX
 cX
 cX
 cX
-Gn
+rs
 Gk
 pC
 WE
@@ -33011,7 +32993,7 @@ cX
 cX
 cX
 cX
-cX
+dC
 cX
 cX
 cX
@@ -34773,10 +34755,10 @@ cX
 cX
 cX
 cX
+dC
 cX
 cX
 cX
-GZ
 cX
 cX
 cX
@@ -43106,11 +43088,11 @@ yR
 xl
 Zt
 vj
-GP
-GR
-GP
-GR
-GP
+cX
+pi
+cX
+pi
+cX
 vj
 Zt
 Zt
@@ -43267,13 +43249,13 @@ aR
 Zt
 Cd
 Zt
-GP
-GP
-GR
-GP
-GR
-GP
-GP
+cX
+cX
+pi
+cX
+pi
+cX
+cX
 Zt
 bF
 Zt
@@ -43429,13 +43411,13 @@ aR
 Zt
 Bc
 Zt
-GR
-GR
-GU
-GU
-GU
-GR
-GR
+pi
+pi
+Gn
+Gn
+Gn
+pi
+pi
 Zt
 Zt
 Zt
@@ -43591,13 +43573,13 @@ cF
 cF
 SA
 Zt
-GP
-GP
-GU
+cX
+cX
+Gn
 jB
-GU
-GP
-GP
+Gn
+cX
+cX
 Zt
 Zt
 Zt
@@ -43753,13 +43735,13 @@ aR
 Zt
 cC
 Zt
-GR
-GR
-GU
-GU
-GU
-GR
-GR
+pi
+pi
+Gn
+Gn
+Gn
+pi
+pi
 Zt
 Zt
 Zt
@@ -43915,13 +43897,13 @@ LZ
 Zt
 BQ
 QR
-GP
-GP
-GR
-GP
-GR
-GP
-GP
+cX
+cX
+pi
+cX
+pi
+cX
+cX
 Zt
 bF
 Zt
@@ -44078,11 +44060,11 @@ hi
 Sk
 Zt
 vj
-GP
-GR
-GP
-GR
-GP
+cX
+pi
+cX
+pi
+cX
 vj
 Zt
 Zt
