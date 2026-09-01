@@ -2767,6 +2767,10 @@
 	name = "\improper CentCom Cargo Docking"
 	icon_state = "center"
 
+/area/centcom/security/contraban_turnin
+	name = "\improper CentCom Contraban Turnin"
+	icon_state = "center"
+
 /area/specialty/redspace
 	name = "\improper Unknown"
 	base_turf = /turf/simulated/floor/flesh

@@ -35,6 +35,28 @@
 /obj/effect/step_trigger/lost_in_space,
 /turf/unsimulated/wall/dark,
 /area/space)
+"aaj" = (
+/obj/effect/floor_decal/corner/red{
+	dir = 5
+	},
+/obj/machinery/turretid{
+	pixel_y = 32;
+	req_access = list(101);
+	req_one_access = list(101);
+	check_access = 0;
+	check_records = 0;
+	check_anomalies = 0;
+	control_area = "\improper CentCom Contraban Turnin";
+	check_arrest = 0;
+	check_down = 0;
+	name = "contraban turret control panel";
+	check_all = 1;
+	enabled = 1
+	},
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/centcom/security)
 "aak" = (
 /obj/effect/step_trigger/lost_in_space,
 /turf/space/transit/east,
@@ -83,6 +105,9 @@
 "aas" = (
 /turf/unsimulated/wall/r_wall,
 /area/centcom/living)
+"aat" = (
+/turf/unsimulated/wall/r_wall,
+/area/centcom/security/contraban_turnin)
 "aau" = (
 /obj/effect/step_trigger/thrower{
 	name = "thrower_leftnostop";
@@ -174,6 +199,9 @@
 	icon_state = "plating"
 	},
 /area/space)
+"aaJ" = (
+/turf/unsimulated/floor/reinforced,
+/area/centcom/security/contraban_turnin)
 "aaK" = (
 /turf/unsimulated/wall/r_wall,
 /area/centcom)
@@ -1155,11 +1183,6 @@
 "acI" = (
 /turf/simulated/wall/wood,
 /area/centcom/living)
-"acJ" = (
-/turf/unsimulated/wall/fakeglass{
-	icon_state = "fakewindows2"
-	},
-/area/centcom/security)
 "acK" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/vending/security_armor,
@@ -4821,7 +4844,7 @@
 	},
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/centcom/security)
+/area/centcom/security/contraban_turnin)
 "akQ" = (
 /obj/machinery/door/airlock/glass_security{
 	name = "Holding Cell"
@@ -4887,17 +4910,23 @@
 	check_anomalies = 0
 	},
 /turf/unsimulated/floor/reinforced,
-/area/centcom/security)
+/area/centcom/security/contraban_turnin)
 "akV" = (
-/turf/unsimulated/wall/fakeglass,
-/area/centcom/security)
+/obj/structure/grille{
+	name = "Reinforced Grille";
+	desc = "A flimsy lattice of metal rods, with screws to secure it to the floor. This grille seems slightly more sturdy than others probably reinforced to withstand the wildlife.";
+	health = 25
+	},
+/obj/structure/window/basic/full,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/centcom/security/contraban_turnin)
 "akW" = (
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/centcom/security)
+/area/centcom/security/contraban_turnin)
 "akX" = (
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/centcom/security)
+/area/centcom/security/contraban_turnin)
 "akY" = (
 /turf/unsimulated/elevator_shaft{
 	desc = "That's a long way down"
@@ -4955,7 +4984,7 @@
 "alf" = (
 /obj/structure/disposalpipe/broken,
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/centcom/security)
+/area/centcom/security/contraban_turnin)
 "alg" = (
 /obj/structure/closet/wardrobe/orange,
 /obj/effect/floor_decal/corner/red{
@@ -5054,11 +5083,6 @@
 	icon_state = "milspec"
 	},
 /area/centcom/control)
-"alp" = (
-/turf/unsimulated/wall/fakeglass{
-	dir = 1
-	},
-/area/centcom/security)
 "alq" = (
 /obj/structure/table/standard,
 /obj/item/rectape,
@@ -64204,11 +64228,11 @@ pKo
 pKo
 yfq
 yfq
-hPE
-bOi
-bOi
-bOi
-bOi
+aat
+aat
+aat
+aat
+aat
 bOi
 bOi
 bOi
@@ -64366,11 +64390,11 @@ yfq
 yfq
 yfq
 yfq
-hPE
+aat
 akU
-vLN
+aaJ
 akU
-bOi
+aat
 akH
 pnx
 wWv
@@ -64528,12 +64552,12 @@ pKo
 pKo
 yfq
 yfq
-hPE
-alp
-acJ
+aat
 akV
-bOi
-tqH
+akV
+akV
+aat
+aaj
 tOV
 jfi
 kSy
@@ -64690,11 +64714,11 @@ pKo
 pKo
 yfq
 alA
-hPE
+aat
 akW
 akW
 akW
-bOi
+aat
 tqH
 tOV
 aky
@@ -64852,7 +64876,7 @@ yfq
 yfq
 yfq
 adE
-hPE
+aat
 akW
 alf
 akX
@@ -65014,11 +65038,11 @@ yfq
 yfq
 yfq
 alB
-hPE
+aat
 akW
 akW
 akW
-bOi
+aat
 akK
 nAK
 pPd
@@ -65176,11 +65200,11 @@ acH
 iNq
 hPE
 hPE
-hPE
-alp
-acJ
+aat
 akV
-bOi
+akV
+akV
+aat
 tqH
 nAK
 pPd
@@ -65338,11 +65362,11 @@ gkM
 hsz
 alK
 hPE
-hPE
+aat
 akU
-vLN
+aaJ
 akU
-bOi
+aat
 tqH
 nAK
 pPd
@@ -65500,11 +65524,11 @@ hsz
 hsz
 acK
 hPE
-hPE
-bOi
-bOi
-bOi
-bOi
+aat
+aat
+aat
+aat
+aat
 tqH
 nAK
 pPd
