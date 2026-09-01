@@ -17374,13 +17374,6 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/power_distribution)
-"GZ" = (
-/obj/machinery/pointdefense{
-	id_tag = "orbital_point_def"
-	},
-/obj/effect/floor_decal/industrial/warning/full,
-/turf/simulated/floor/airless,
-/area/space)
 "Ha" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/aux{
 	dir = 10
@@ -17963,7 +17956,6 @@
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 9
 	},
-/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/power_distribution)
 "Jz" = (
@@ -30035,7 +30027,7 @@ cX
 cX
 cX
 cX
-Gn
+rs
 Gk
 pC
 WE
@@ -33001,7 +32993,7 @@ cX
 cX
 cX
 cX
-cX
+dC
 cX
 cX
 cX
@@ -34763,10 +34755,10 @@ cX
 cX
 cX
 cX
+dC
 cX
 cX
 cX
-GZ
 cX
 cX
 cX
