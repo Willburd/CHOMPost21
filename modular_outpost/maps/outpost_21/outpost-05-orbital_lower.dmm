@@ -2222,8 +2222,7 @@
 /obj/machinery/computer/general_air_control/supermatter_core{
 	input_tag = "rust_injector";
 	output_tag = "rust_vent";
-	sensors = list("rust_sensor" = "RUST Engine Sensor");
-	frequency = 1445
+	sensors = list("rustengine_sensor" = "RUST Engine Sensor")
 	},
 /obj/effect/floor_decal/corner/orange/full{
 	dir = 1
@@ -2542,14 +2541,15 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/rust_entry)
 "ga" = (
-/obj/machinery/air_sensor{
-	id_tag = "rust_sensor";
-	frequency = 1445
-	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
 /obj/effect/floor_decal/industrial/warning,
+/obj/machinery/air_sensor{
+	frequency = 1433;
+	id_tag = "rustengine_sensor";
+	output = 63
+	},
 /turf/simulated/floor/reinforced,
 /area/offworld/orbital/station/rust_core)
 "gb" = (
@@ -2937,18 +2937,22 @@
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/atmos_primary)
 "gW" = (
-/obj/machinery/atmospherics/unary/vent_pump/engine{
-	dir = 1;
-	id_tag = "rust_vent";
-	frequency = 1445;
-	use_power = 1;
-	icon_state = "map_vent_out"
-	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
+	},
+/obj/machinery/atmospherics/unary/vent_pump/engine{
+	dir = 1;
+	external_pressure_bound = 100;
+	external_pressure_bound_default = 0;
+	frequency = 1433;
+	icon_state = "map_vent_in";
+	id_tag = "rust_vent";
+	initialize_directions = 1;
+	pump_direction = 0;
+	use_power = 1
 	},
 /turf/simulated/floor/reinforced,
 /area/offworld/orbital/station/rust_core)
@@ -4802,14 +4806,17 @@
 /area/offworld/orbital/station/access_shaft/lower)
 "kz" = (
 /obj/structure/table/rack/shelf/steel,
-/obj/item/smes_coil/super_capacity,
-/obj/item/smes_coil/super_capacity,
-/obj/item/smes_coil/super_capacity,
 /obj/machinery/light{
 	dir = 4
 	},
 /obj/effect/floor_decal/corner/orange{
 	dir = 6
+	},
+/obj/fiftyspawner/plastic{
+	pixel_x = -6
+	},
+/obj/fiftyspawner/phoron{
+	pixel_x = 6
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/rust_tool_storage)
@@ -5564,6 +5571,10 @@
 	pixel_x = 22
 	},
 /obj/machinery/light,
+/obj/item/clothing/head/radiation/teshari,
+/obj/item/clothing/head/radiation/teshari,
+/obj/item/clothing/head/radiation/teshari,
+/obj/item/clothing/head/radiation/teshari,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/rust_entry)
 "lK" = (
@@ -7596,18 +7607,21 @@
 /turf/simulated/floor/airless,
 /area/offworld/orbital/exterior/rust_cooling)
 "pR" = (
-/obj/machinery/atmospherics/unary/outlet_injector{
-	dir = 1;
-	id = "rust_injector";
-	frequency = 1445;
-	use_power = 1;
-	volume_rate = 700
-	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
+	},
+/obj/machinery/atmospherics/unary/outlet_injector{
+	dir = 1;
+	frequency = 1433;
+	id = "rust_injector";
+	name = "Coolant Injector";
+	pixel_y = 1;
+	power_rating = 30000;
+	use_power = 1;
+	volume_rate = 700
 	},
 /turf/simulated/floor/reinforced,
 /area/offworld/orbital/station/rust_core)
@@ -7830,12 +7844,12 @@
 /turf/space,
 /area/space)
 "qo" = (
-/obj/machinery/power/fusion_core{
-	id_tag = "Rust Fusion Core"
-	},
 /obj/effect/floor_decal/industrial/warning/full,
 /obj/structure/cable/yellow{
 	icon_state = "0-4"
+	},
+/obj/machinery/power/fusion_core/mapped{
+	id_tag = "Rust Fusion Core"
 	},
 /turf/simulated/floor/reinforced,
 /area/offworld/orbital/station/rust_core)
@@ -8628,6 +8642,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
+/obj/machinery/floodlight,
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/rust_core)
 "rK" = (
@@ -10300,10 +10315,10 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
+/obj/effect/floor_decal/industrial/outline/purple,
 /obj/effect/floor_decal/corner/orange{
 	dir = 5
 	},
-/obj/effect/floor_decal/industrial/outline/purple,
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/rust_core)
 "ve" = (
@@ -10707,6 +10722,13 @@
 /obj/structure/reagent_dispensers/foam,
 /turf/simulated/floor/plating,
 /area/maintenance/orbital/lower/fore)
+"vY" = (
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/lightgrey/border,
+/obj/item/geiger/wall/south,
+/obj/effect/landmark/redspaceexit,
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/access_shaft/lower)
 "vZ" = (
 /obj/machinery/alarm{
 	dir = 4;
@@ -10731,6 +10753,50 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/lower/fore)
+"wb" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 9
+	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/machinery/floodlight,
+/turf/simulated/floor/plating,
+/area/offworld/orbital/station/rust_core)
+"wc" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 9
+	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/machinery/power/thermoregulator,
+/turf/simulated/floor/plating,
+/area/offworld/orbital/station/rust_core)
+"wd" = (
+/obj/item/clothing/head/welding,
+/turf/simulated/floor/plating,
+/area/offworld/orbital/station/rust_core)
+"we" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/fiftyspawner/titanium{
+	pixel_x = -6
+	},
+/obj/fiftyspawner/plasteel{
+	pixel_x = 6
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/rust_tool_storage)
+"wf" = (
+/obj/structure/table/rack/shelf/steel,
+/obj/fiftyspawner/steel{
+	pixel_x = -6
+	},
+/obj/fiftyspawner/steel{
+	pixel_x = 6
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/rust_tool_storage)
 "wm" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -10888,7 +10954,8 @@
 /area/offworld/orbital/station/rust_core)
 "xI" = (
 /obj/machinery/power/emitter/gyrotron{
-	dir = 1
+	dir = 1;
+	id_tag = "Rust Gyrotron"
 	},
 /obj/effect/floor_decal/corner/orange/full,
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -11547,6 +11614,7 @@
 /obj/effect/floor_decal/corner/orange{
 	dir = 10
 	},
+/obj/item/clothing/glasses/welding,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/rust_tool_storage)
 "CU" = (
@@ -11634,7 +11702,14 @@
 /turf/simulated/floor/tiled,
 /area/offworld/orbital/station/lower_medical_treatment)
 "Dn" = (
-/obj/machinery/door/airlock/hatch,
+/obj/machinery/door/airlock/hatch{
+	icon_state = "door_locked";
+	id_tag = "engine_access_hatch";
+	locked = 1;
+	name = "Reactor Core";
+	rad_insulation = 0;
+	req_access = list(11)
+	},
 /turf/simulated/floor/reinforced,
 /area/offworld/orbital/station/rust_core)
 "Do" = (
@@ -12331,6 +12406,10 @@
 	dir = 8
 	},
 /obj/item/geiger/wall/east,
+/obj/item/clothing/head/radiation/teshari,
+/obj/item/clothing/head/radiation/teshari,
+/obj/item/clothing/head/radiation/teshari,
+/obj/item/clothing/head/radiation/teshari,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/rust_entry)
 "IF" = (
@@ -12599,9 +12678,6 @@
 /area/offworld/orbital/station/rust_gas_storage)
 "Ku" = (
 /obj/structure/table/rack/shelf/steel,
-/obj/item/smes_coil/super_io,
-/obj/item/smes_coil/super_io,
-/obj/item/smes_coil/super_io,
 /obj/item/radio/intercom{
 	dir = 4;
 	name = "Station Intercom (General)";
@@ -12609,6 +12685,9 @@
 	},
 /obj/effect/floor_decal/corner/orange{
 	dir = 6
+	},
+/obj/item/stack/material/glass/phoronrglass{
+	amount = 50
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/rust_tool_storage)
@@ -12868,7 +12947,7 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/effect/floor_decal/industrial/outline/purple,
 /obj/effect/floor_decal/corner/orange{
 	dir = 5
 	},
@@ -13840,6 +13919,7 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/portable_atmospherics/canister,
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/rust_core)
 "TO" = (
@@ -14646,7 +14726,8 @@
 /area/offworld/orbital/station/rust_core)
 "ZU" = (
 /obj/machinery/power/emitter/gyrotron{
-	dir = 1
+	dir = 1;
+	id_tag = "Rust Gyrotron"
 	},
 /obj/machinery/light,
 /obj/effect/floor_decal/corner/orange{
@@ -27499,11 +27580,11 @@ RE
 zf
 vk
 uZ
-uZ
+wc
 bg
 be
 rJ
-uZ
+wb
 sM
 sL
 sL
@@ -27882,7 +27963,7 @@ dl
 by
 it
 lF
-rM
+vY
 it
 xM
 xM
@@ -28154,7 +28235,7 @@ av
 wq
 eg
 eo
-ei
+wd
 sG
 Wt
 sA
@@ -30573,8 +30654,8 @@ ev
 tc
 ey
 ey
-ey
-ey
+wf
+we
 sT
 se
 sP
