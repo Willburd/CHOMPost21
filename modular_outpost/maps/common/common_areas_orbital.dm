@@ -408,25 +408,35 @@ EXTERIOR_AREA_BEHAVIOR(/area/offworld/orbital/exterior/starboard_solars)
 
 
 // Main engines
+// Tesla
 /area/offworld/orbital/exterior/engine_core_port
 	name = "\improper Port Engine Core"
 	icon_state = "engine"
-	sound_env = LARGE_ENCLOSED
-	ambience = AMBIENCE_ENGINEERING
+	sound_env = SOUND_ENVIRONMENT_CAVE
+	ambience = AMBIENCE_GENERIC
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 
+// Singulo
 /area/offworld/orbital/exterior/engine_core_starboard
 	name = "\improper Starboard Engine Core"
 	icon_state = "engine"
-	sound_env = LARGE_ENCLOSED
-	ambience = AMBIENCE_ENGINEERING
+	sound_env = SOUND_ENVIRONMENT_CAVE
+	ambience = AMBIENCE_GENERIC
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+
+/area/offworld/orbital/exterior/engine_core_starboard/singo_hole
+	name = "\improper Starboard Engine Core Airgap"
+	icon_state = "orange"
+	sound_env = SOUND_ENVIRONMENT_CAVE
+	ambience = AMBIENCE_GENERIC
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+	base_turf = /turf/space
 
 /area/offworld/orbital/station/engine_core_aux
 	name = "\improper Auxiliary Engine Core"
 	icon_state = "engine"
 	sound_env = LARGE_ENCLOSED
-	ambience = AMBIENCE_ENGINEERING
+	ambience = AMBIENCE_GENERIC
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 
 /area/offworld/orbital/station/port_equipment

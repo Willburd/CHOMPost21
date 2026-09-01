@@ -106,6 +106,7 @@
 		/area/offworld/orbital/station/south_engine_access_east,
 		/area/muriki/lowerelev,
 		/area/muriki/lowerevac,
+		/area/offworld/orbital/exterior/engine_core_starboard/singo_hole
 		)
 
 	var/list/forced_hallway = list(

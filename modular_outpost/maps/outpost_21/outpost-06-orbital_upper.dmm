@@ -3402,6 +3402,8 @@
 /obj/structure/cable/yellow{
 	icon_state = "0-4"
 	},
+/obj/effect/floor_decal/industrial/warning,
+/obj/effect/floor_decal/industrial/warning/color/red,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/power_distribution)
 "gz" = (
@@ -4948,7 +4950,7 @@
 "jB" = (
 /obj/machinery/the_singularitygen,
 /turf/simulated/floor/airless,
-/area/offworld/orbital/exterior/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_starboard/singo_hole)
 "jC" = (
 /obj/structure/cable,
 /obj/machinery/power/emitter/antique{
@@ -5411,6 +5413,13 @@
 "kB" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/warning/color{
+	light_color = "#00ff00";
+	dir = 8
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/power_distribution)
@@ -5941,12 +5950,10 @@
 /turf/simulated/floor/tiled/old_tile/white,
 /area/offworld/orbital/station/medical_treatment)
 "lF" = (
-/obj/effect/floor_decal/corner/orange{
-	dir = 9
-	},
 /obj/machinery/power/smes/buildable{
 	RCon_tag = "PTL - Interior";
-	is_critical = 1
+	is_critical = 1;
+	name = "SMES - PTL Interior"
 	},
 /obj/item/smes_coil/super_capacity,
 /obj/structure/cable/green{
@@ -5956,7 +5963,7 @@
 	icon_state = "0-1"
 	},
 /obj/item/smes_coil/super_io,
-/turf/simulated/floor/tiled/milspec,
+/turf/simulated/floor,
 /area/offworld/orbital/station/power_distribution)
 "lG" = (
 /obj/machinery/light/small{
@@ -7308,6 +7315,12 @@
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/warning/color/corner/red{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/power_distribution)
 "op" = (
@@ -8261,6 +8274,13 @@
 	},
 /obj/structure/cable/yellow{
 	icon_state = "0-2"
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/warning/color{
+	light_color = "#00ff00";
+	dir = 1
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/power_distribution)
@@ -9313,12 +9333,10 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/halls/fore)
 "sj" = (
-/obj/effect/floor_decal/corner/orange{
-	dir = 9
-	},
 /obj/machinery/power/smes/buildable{
 	RCon_tag = "PTL - Engine Emitters";
-	is_critical = 1
+	is_critical = 1;
+	name = "SMES - Engine Emitters"
 	},
 /obj/item/smes_coil/super_io,
 /obj/structure/cable{
@@ -9328,7 +9346,7 @@
 	dir = 8
 	},
 /obj/item/smes_coil/super_io,
-/turf/simulated/floor/tiled/milspec,
+/turf/simulated/floor,
 /area/offworld/orbital/station/power_distribution)
 "sk" = (
 /obj/machinery/ai_status_display,
@@ -13421,6 +13439,12 @@
 	name = "Powernet Sensor - PLT Platform Input";
 	name_tag = "PTL Platform Input"
 	},
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/warning/color/corner/red{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/power_distribution)
 "zu" = (
@@ -14918,6 +14942,7 @@
 	icon_state = "4-8"
 	},
 /obj/structure/railing/grey,
+/obj/machinery/light/floortube,
 /turf/simulated/floor/airless,
 /area/offworld/orbital/exterior/engine_core_starboard)
 "Ce" = (
@@ -16239,6 +16264,9 @@
 /obj/fiftyspawner/wood{
 	pixel_x = -6
 	},
+/obj/fiftyspawner/glass{
+	pixel_x = 6
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/storage)
 "EN" = (
@@ -17248,12 +17276,19 @@
 /obj/structure/reagent_dispensers/fueltank/high,
 /turf/simulated/floor/tiled/milspec/airless,
 /area/offworld/orbital/station/storage_engine_core)
+"GP" = (
+/turf/space,
+/area/offworld/orbital/exterior/engine_core_starboard/singo_hole)
 "GQ" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/airless,
 /area/offworld/orbital/exterior/engine_core_port)
+"GR" = (
+/obj/structure/lattice,
+/turf/space,
+/area/offworld/orbital/exterior/engine_core_starboard/singo_hole)
 "GS" = (
 /obj/machinery/alarm{
 	dir = 1;
@@ -17274,6 +17309,9 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/halls/fore)
+"GU" = (
+/turf/simulated/floor/airless,
+/area/offworld/orbital/exterior/engine_core_starboard/singo_hole)
 "GV" = (
 /obj/effect/floor_decal/corner/orange/full{
 	dir = 8
@@ -17318,6 +17356,41 @@
 	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/ai_upload)
+"GX" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 9
+	},
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/warning/color/red{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/power_distribution)
+"GY" = (
+/obj/effect/floor_decal/industrial/warning/color/corner/yellow{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/warning/color/corner{
+	dir = 1;
+	light_color = "#00ff00"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/power_distribution)
+"GZ" = (
+/obj/machinery/pointdefense{
+	id_tag = "orbital_point_def"
+	},
+/obj/effect/floor_decal/industrial/warning/full,
+/turf/simulated/floor/airless,
+/area/space)
 "Ha" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/aux{
 	dir = 10
@@ -17330,6 +17403,13 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/dockingarm)
+"Hb" = (
+/obj/machinery/pointdefense{
+	id_tag = "orbital_point_def"
+	},
+/obj/effect/floor_decal/industrial/warning/full,
+/turf/simulated/floor/airless,
+/area/ai_sat/core_external)
 "Hc" = (
 /turf/simulated/wall/r_wall,
 /area/offworld/orbital/station/power_distribution)
@@ -20156,6 +20236,13 @@
 /obj/effect/floor_decal/corner/orange{
 	dir = 5
 	},
+/obj/effect/floor_decal/industrial/warning/color/corner/yellow{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/warning/color/corner{
+	dir = 8;
+	light_color = "#00ff00"
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/power_distribution)
 "Ru" = (
@@ -21498,6 +21585,12 @@
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/warning/color/red{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/power_distribution)
 "VL" = (
@@ -22322,6 +22415,10 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "0-2"
+	},
+/obj/effect/floor_decal/industrial/warning,
+/obj/effect/floor_decal/industrial/warning/color{
+	light_color = "#00ff00"
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/power_distribution)
@@ -27530,7 +27627,7 @@ Fn
 Ed
 lk
 Fn
-TZ
+iY
 TZ
 cX
 cX
@@ -30735,7 +30832,7 @@ cX
 pi
 GJ
 rw
-zg
+Hb
 cX
 cX
 cX
@@ -33165,7 +33262,7 @@ cX
 pi
 GJ
 fv
-qz
+bn
 cX
 cX
 cX
@@ -34653,7 +34750,7 @@ qz
 fv
 fv
 fv
-qz
+bn
 cX
 cX
 cX
@@ -34679,7 +34776,7 @@ cX
 cX
 cX
 cX
-cX
+GZ
 cX
 cX
 cX
@@ -35083,7 +35180,7 @@ aw
 Pv
 fv
 qz
-cX
+fv
 cX
 cX
 cX
@@ -35245,7 +35342,7 @@ aw
 OQ
 fv
 qz
-cX
+fv
 cX
 cX
 cX
@@ -35407,7 +35504,7 @@ aw
 Au
 qz
 qz
-cX
+fv
 cX
 cX
 cX
@@ -35569,7 +35666,7 @@ aw
 OQ
 fv
 qz
-cX
+fv
 cX
 cX
 cX
@@ -35731,7 +35828,7 @@ aw
 Pv
 fv
 qz
-cX
+fv
 cX
 cX
 cX
@@ -36334,7 +36431,7 @@ cX
 cX
 cX
 cX
-OQ
+Au
 rC
 rC
 fj
@@ -36379,7 +36476,7 @@ aw
 qz
 fv
 qz
-cX
+fv
 cX
 cX
 cX
@@ -36541,7 +36638,7 @@ aw
 qz
 qz
 qz
-cX
+fv
 cX
 cX
 cX
@@ -36658,7 +36755,7 @@ cX
 cX
 cX
 OQ
-Au
+OQ
 rC
 rC
 OQ
@@ -36703,7 +36800,7 @@ aw
 qz
 fv
 qz
-cX
+fv
 cX
 cX
 cX
@@ -36820,9 +36917,9 @@ cX
 cX
 cX
 OQ
-CF
-rC
 OQ
+rC
+CF
 Au
 Au
 OQ
@@ -36865,7 +36962,7 @@ aw
 OQ
 fv
 qz
-cX
+fv
 cX
 cX
 cX
@@ -36983,7 +37080,7 @@ cX
 cX
 OQ
 OQ
-tP
+bn
 IW
 IW
 IW
@@ -37027,7 +37124,7 @@ aw
 OQ
 fv
 qz
-qz
+fv
 cX
 cX
 cX
@@ -37189,7 +37286,7 @@ aw
 Pv
 fv
 qz
-qz
+fv
 cX
 cX
 cX
@@ -38810,7 +38907,7 @@ qz
 qz
 fv
 qz
-OQ
+fv
 cX
 cX
 cX
@@ -38972,7 +39069,7 @@ qz
 qz
 fv
 qz
-qz
+fv
 cX
 cX
 cX
@@ -39134,7 +39231,7 @@ qz
 qz
 qz
 qz
-qz
+fv
 cX
 cX
 cX
@@ -39296,7 +39393,7 @@ OQ
 qz
 fv
 qz
-qz
+fv
 cX
 cX
 cX
@@ -39433,7 +39530,7 @@ qh
 Yf
 gy
 sj
-iK
+GX
 iK
 RM
 iK
@@ -39458,7 +39555,7 @@ OQ
 qz
 fv
 qz
-qz
+fv
 cX
 cX
 cX
@@ -39591,7 +39688,7 @@ Hy
 zq
 Rt
 kB
-Jg
+GY
 BT
 oo
 VJ
@@ -39620,7 +39717,7 @@ OQ
 rC
 fv
 qz
-OQ
+fv
 cX
 cX
 cX
@@ -41726,7 +41823,7 @@ OQ
 OQ
 fv
 qz
-qz
+fv
 cX
 cX
 cX
@@ -41888,7 +41985,7 @@ OQ
 Pv
 qz
 qz
-qz
+fv
 cX
 cX
 cX
@@ -42050,7 +42147,7 @@ OQ
 qz
 qz
 qz
-qz
+fv
 cX
 cX
 cX
@@ -42212,7 +42309,7 @@ qz
 qz
 fv
 qz
-qz
+fv
 cX
 cX
 cX
@@ -43009,11 +43106,11 @@ yR
 xl
 Zt
 vj
-aR
-bW
-aR
-bW
-aR
+GP
+GR
+GP
+GR
+GP
 vj
 Zt
 Zt
@@ -43022,7 +43119,7 @@ OQ
 qz
 fv
 qz
-cX
+fv
 cX
 cX
 cX
@@ -43170,21 +43267,21 @@ aR
 Zt
 Cd
 Zt
-aR
-aR
-bW
-aR
-bW
-aR
-aR
+GP
+GP
+GR
+GP
+GR
+GP
+GP
 Zt
-Zt
+bF
 Zt
 OQ
 OQ
 fv
 qz
-cX
+fv
 cX
 cX
 cX
@@ -43332,21 +43429,21 @@ aR
 Zt
 Bc
 Zt
-bW
-bW
-Zt
-Zt
-Zt
-bW
-bW
+GR
+GR
+GU
+GU
+GU
+GR
+GR
 Zt
 Zt
 Zt
 OQ
 OQ
 fv
-OQ
-cX
+qz
+fv
 cX
 cX
 cX
@@ -43494,21 +43591,21 @@ cF
 cF
 SA
 Zt
-aR
-aR
-Zt
+GP
+GP
+GU
 jB
-Zt
-aR
-aR
+GU
+GP
+GP
 Zt
 Zt
 Zt
 OQ
 OQ
 OQ
-OQ
-cX
+qz
+fv
 cX
 cX
 cX
@@ -43656,21 +43753,21 @@ aR
 Zt
 cC
 Zt
-bW
-bW
-Zt
-Zt
-Zt
-bW
-bW
+GR
+GR
+GU
+GU
+GU
+GR
+GR
 Zt
 Zt
 Zt
 OQ
 OQ
 fv
-Au
-cX
+qz
+fv
 cX
 cX
 cX
@@ -43818,21 +43915,21 @@ LZ
 Zt
 BQ
 QR
-aR
-aR
-bW
-aR
-bW
-aR
-aR
+GP
+GP
+GR
+GP
+GR
+GP
+GP
 Zt
-Zt
+bF
 Zt
 Pv
 OQ
 fv
 qz
-cX
+fv
 cX
 cX
 cX
@@ -43981,11 +44078,11 @@ hi
 Sk
 Zt
 vj
-aR
-bW
-aR
-bW
-aR
+GP
+GR
+GP
+GR
+GP
 vj
 Zt
 Zt
