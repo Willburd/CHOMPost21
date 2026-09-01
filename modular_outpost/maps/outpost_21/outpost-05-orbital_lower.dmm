@@ -2939,7 +2939,9 @@
 /obj/machinery/atmospherics/unary/vent_pump/engine{
 	dir = 1;
 	id_tag = "rust_vent";
-	frequency = 1445
+	frequency = 1445;
+	use_power = 1;
+	icon_state = "map_vent_out"
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
