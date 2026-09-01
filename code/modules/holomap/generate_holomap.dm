@@ -66,7 +66,7 @@
 			// Outpost 21 edit begin - Hide map spoilers
 			var/static_color = pick("#FFFFFF22","#FFFFFF11","#FFFFFF44","#FFFFFF55")
 			var/area/check_area = get_area(tile)
-			if(tile.z == /datum/map_z_level/outpost/deepdark::z )
+			if(tile.z == 1) // Outpost Deepdark
 				if(prob(90)) // Let SOME things poke through the static
 					canvas.DrawBox(static_color, x, y) // Censor
 					continue
@@ -76,7 +76,7 @@
 				else
 					canvas.DrawBox(static_color, x, y) // Censor
 				continue
-			if(tile.z == /datum/map_z_level/outpost/orbital_facility_lower::z || tile.z == /datum/map_z_level/outpost/orbital_facility_upper::z)
+			if(tile.z == 5 || tile.z == 6) // Outpost Asteroid yard
 				if(prob(90)) // Let SOME things poke through the static
 					if(istype(check_area, /area/offworld/orbital/exterior/yardzone) \
 					|| istype(check_area, /area/submap/outpost21/asteroid_generic) \
