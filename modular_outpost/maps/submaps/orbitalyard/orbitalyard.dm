@@ -30,6 +30,10 @@
 #include "delight_A.dmm"
 #include "delight_B.dmm"
 #include "bear_A.dmm"
+#include "oldptl_A.dmm"
+#include "oldptl_B.dmm"
+#include "oldptl_C.dmm"
+#include "oldptl_D.dmm"
 #endif
 
 /datum/map_template/outpost21/space/orbitalyard
@@ -267,7 +271,41 @@
 	mappath = "modular_outpost/maps/submaps/orbitalyard/asteroid_maze_A.dmm"
 	allow_duplicates = FALSE
 	discard_prob = 40
-	cost = 60
+	cost = 40
+
+/datum/map_template/outpost21/space/orbitalyard_huge/oldptl_A
+	name = "Old PTL A"
+	desc = "Remains of the old PTL structure."
+	mappath = "modular_outpost/maps/submaps/orbitalyard/oldptl_A.dmm"
+	allow_duplicates = FALSE
+	discard_prob = 10
+	cost = 50
+
+/datum/map_template/outpost21/space/orbitalyard_huge/oldptl_B
+	name = "Old PTL B"
+	desc = "Remains of the old PTL structure."
+	mappath = "modular_outpost/maps/submaps/orbitalyard/oldptl_B.dmm"
+	allow_duplicates = FALSE
+	discard_prob = 10
+	cost = 50
+
+/datum/map_template/outpost21/space/orbitalyard_huge/oldptl_C
+	name = "Old PTL C"
+	desc = "Remains of the old PTL structure."
+	mappath = "modular_outpost/maps/submaps/orbitalyard/oldptl_C.dmm"
+	allow_duplicates = FALSE
+	discard_prob = 10
+	cost = 50
+
+/datum/map_template/outpost21/space/orbitalyard_huge/oldptl_D
+	name = "Old PTL D"
+	desc = "Remains of the old PTL structure."
+	mappath = "modular_outpost/maps/submaps/orbitalyard/oldptl_D.dmm"
+	allow_duplicates = FALSE
+	discard_prob = 10
+	cost = 80
+
+
 //////////////////////////////////////////////////////////////
 // Area definitions
 /area/submap/outpost21/asteroid_generic
