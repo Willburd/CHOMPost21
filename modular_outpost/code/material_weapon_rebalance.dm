@@ -110,7 +110,7 @@
 			ranged_disarm(target, user, hit_zone)
 	..()
 
-/proc/outpost_structure_damage_bonus(var/obj/item/weapon)
+/proc/outpost_structure_damage_bonus(obj/item/weapon)
 	if(istype(weapon, /obj/item/material/twohanded/sledgehammer))
 		return weapon.force * 2 // Double structure damage
 	return weapon.force
