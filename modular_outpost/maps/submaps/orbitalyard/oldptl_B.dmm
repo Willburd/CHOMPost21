@@ -1537,7 +1537,7 @@
 	},
 /obj/structure/sign/christmas/lights,
 /obj/item/stack/rods,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/airless,
 /area/submap/outpost21/yard_generic)
 "Ff" = (
 /obj/structure/cable/green{
