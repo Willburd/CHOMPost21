@@ -61,8 +61,13 @@
 	return
 
 /turf/simulated/floor/lava/Entered(atom/movable/AM)
+	// Outpost 21 edit begin - Water ignores throwing
+	if(AM.throwing)
+		return ..()
+	// Outpost 21 edit end
 	if(burn_stuff(AM))
 		START_PROCESSING(SSturfs, src)
+	. = ..() // Outpost 21 edit(port) - Lava breaks signal logic
 
 /turf/simulated/floor/lava/hitby(atom/movable/source, datum/thrownthing/throwingdatum)
 	if(burn_stuff(source))
