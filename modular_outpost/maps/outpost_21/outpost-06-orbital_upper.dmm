@@ -7891,6 +7891,9 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/ai_transit_hub)
 "pt" = (
@@ -15078,6 +15081,12 @@
 	health = 1e+006
 	},
 /obj/machinery/door/firedoor,
+/obj/structure/cable/green{
+	icon_state = "0-1"
+	},
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/ai_transit_hub)
 "Cq" = (
@@ -17356,6 +17365,15 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/halls/fore)
+"GU" = (
+/obj/effect/floor_decal/corner/white{
+	dir = 9
+	},
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/ai_transit_hub)
 "GV" = (
 /obj/effect/floor_decal/corner/orange/full{
 	dir = 8
@@ -18793,6 +18811,9 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/ai_transit_hub)
@@ -38511,7 +38532,7 @@ nf
 IA
 pt
 kw
-kw
+GU
 Mp
 oj
 cX
