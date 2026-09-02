@@ -64,18 +64,22 @@
 	title = JOB_ALT_CO_ASSIST_MED_OFFICER
 	title_blurb = "A " + JOB_ALT_CO_ASSIST_MED_OFFICER + " is the introductory role to the " + JOB_CHIEF_MEDICAL_OFFICER + " position. Tasked with training their department staff, and assisting the " + JOB_CHIEF_MEDICAL_OFFICER + " directly."
 	additional_access = list(ACCESS_CMO, ACCESS_MEDICAL, ACCESS_MEDICAL_EQUIP, ACCESS_MORGUE, ACCESS_GENETICS, ACCESS_CHEMISTRY, ACCESS_VIROLOGY, ACCESS_SURGERY, ACCESS_PSYCHIATRIST)
+	title_outfit = /datum/decl/hierarchy/outfit/job/command_officer/med_co
 
 /datum/alt_title/co_sec_officer
 	title = JOB_ALT_CO_ASSIST_SEC_OFFICER
 	title_blurb = "A " + JOB_ALT_CO_ASSIST_SEC_OFFICER + " is the introductory role to the " + JOB_HEAD_OF_SECURITY + " position. Tasked with training their department staff, and assisting the " + JOB_HEAD_OF_SECURITY + " directly."
 	additional_access = list(ACCESS_HOS, ACCESS_SECURITY, ACCESS_SEC_DOORS, ACCESS_BRIG, ACCESS_ARMORY, ACCESS_FORENSICS_LOCKERS, ACCESS_MORGUE)
+	title_outfit = /datum/decl/hierarchy/outfit/job/command_officer/sec_co
 
 /datum/alt_title/co_eng_officer
 	title = JOB_ALT_CO_ASSIST_ENG_OFFICER
 	title_blurb = "A " + JOB_ALT_CO_ASSIST_ENG_OFFICER + " is the introductory role to the " + JOB_CHIEF_ENGINEER + " position. Tasked with training their department staff, and assisting the " + JOB_CHIEF_ENGINEER + " directly."
 	additional_access = list(ACCESS_CE, ACCESS_ENGINE, ACCESS_ENGINE_EQUIP, ACCESS_TECH_STORAGE, ACCESS_ATMOSPHERICS, ACCESS_CONSTRUCTION, ACCESS_TCOMSAT, ACCESS_AI_UPLOAD)
+	title_outfit = /datum/decl/hierarchy/outfit/job/command_officer/eng_co
 
 /datum/alt_title/co_sci_officer
 	title = JOB_ALT_CO_ASSIST_SCI_OFFICER
 	title_blurb = "A " + JOB_ALT_CO_ASSIST_SCI_OFFICER + " is the introductory role to the " + JOB_RESEARCH_DIRECTOR + " position. Tasked with training their department staff, and assisting the " + JOB_RESEARCH_DIRECTOR + " directly."
 	additional_access = list(ACCESS_RD, ACCESS_TOX, ACCESS_MORGUE, ACCESS_RESEARCH, ACCESS_XENOBIOLOGY, ACCESS_TECH_STORAGE, ACCESS_XENOARCH, ACCESS_EXPLORER, ACCESS_PATHFINDER, ACCESS_XENOBOTANY)
+	title_outfit = /datum/decl/hierarchy/outfit/job/command_officer/sci_co
