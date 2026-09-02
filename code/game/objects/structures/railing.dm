@@ -231,7 +231,7 @@
 
 	else
 		playsound(src, 'sound/effects/grillehit.ogg', 50, 1)
-		take_damage(W.force)
+		take_damage(outpost_structure_damage_bonus(W)) // Outpost 21 edit - Some weapons do more damage to structures
 		user.setClickCooldown(user.get_attack_speed(W))
 
 	return ..()

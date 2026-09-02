@@ -244,7 +244,7 @@
 				var/obj/item/I = W
 				if (I.hitsound)
 					playsound(src, I.hitsound, 50, 1, -1)
-		take_damage(W.force)
+		take_damage(outpost_structure_damage_bonus(W)) // Outpost 21 edit - Some weapons do more damage to structures
 
 	else
 		..()

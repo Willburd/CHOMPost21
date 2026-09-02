@@ -87,6 +87,9 @@
 /obj/item/material/twohanded/sledgehammer
 	force_divisor = 1.5
 
+/obj/item/material/twohanded/sledgehammer/gravity
+	force_divisor = 1.2
+
 // disarms and non lethal
 /obj/item/material/twohanded/staff
 	force_divisor = 0.6
@@ -97,3 +100,8 @@
 		if(prob(min(90, force * 3)) && ishuman(target) && (hit_zone in list(BP_L_LEG, BP_R_LEG, BP_L_FOOT, BP_R_FOOT, BP_L_ARM, BP_R_ARM, BP_L_HAND, BP_R_HAND)))
 			ranged_disarm(target, user, hit_zone)
 	..()
+
+/proc/outpost_structure_damage_bonus(var/obj/item/weapon)
+	if(istype(weapon, /obj/item/material/twohanded/sledgehammer))
+		return weapon.force * 2 // Double structure damage
+	return weapon.force
