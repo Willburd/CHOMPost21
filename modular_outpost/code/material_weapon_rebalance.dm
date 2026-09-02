@@ -87,6 +87,15 @@
 /obj/item/material/twohanded/sledgehammer
 	force_divisor = 1.5
 
+// Knockback on base sledge
+/obj/item/material/twohanded/sledgehammer/apply_hit_effect(mob/living/target, mob/living/user, hit_zone)
+	. = ..()
+	if(istype(src,/obj/item/material/twohanded/sledgehammer/gravity)) // This has the same code. Don't do it twice.
+		return
+	var/atom/target_zone = get_edge_target_turf(user,get_dir(user, target))
+	if(!target.anchored)
+		target.throw_at(target_zone, 2, 2, user, FALSE)
+
 /obj/item/material/twohanded/sledgehammer/gravity
 	force_divisor = 1.2
 
