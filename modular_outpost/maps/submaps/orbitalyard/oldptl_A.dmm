@@ -1,4 +1,54 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/sign/christmas/lights,
+/turf/simulated/floor/airless,
+/area/submap/outpost21/yard_generic)
+"ab" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/sign/christmas/lights,
+/turf/simulated/floor/airless,
+/area/submap/outpost21/yard_generic)
+"ac" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
+/turf/simulated/floor/airless,
+/area/submap/outpost21/yard_generic)
+"ad" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
+/turf/simulated/floor/airless,
+/area/submap/outpost21/yard_generic)
 "ae" = (
 /obj/structure/cable/green{
 	icon_state = "0-4"
@@ -1931,7 +1981,7 @@
 /obj/structure/sign/christmas/lights{
 	dir = 1
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/airless,
 /area/submap/outpost21/yard_generic)
 "JJ" = (
 /mob/living/simple_mob/vore/alienanimals/space_jellyfish,
@@ -3191,9 +3241,9 @@ ZP
 ZP
 aW
 ZP
-Wz
+ac
 Fr
-aq
+aa
 ZP
 Xi
 ZP
@@ -3238,9 +3288,9 @@ Cp
 Dq
 ZP
 TV
-Qb
+ad
 Fr
-QV
+ab
 TV
 ZP
 ZP
