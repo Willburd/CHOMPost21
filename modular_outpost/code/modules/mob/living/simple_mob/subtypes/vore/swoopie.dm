@@ -38,6 +38,9 @@
 	add_atom_colour(color_to_use, FIXED_COLOUR_PRIORITY)
 	custom_eye_color = "#f1d414"
 
+/mob/living/simple_mob/vore/aggressive/corrupthound/swoopie/prim/GetAccess()
+	return list(ACCESS_SYNTH)
+
 // Randomized type
 /mob/living/simple_mob/vore/aggressive/corrupthound/swoopie/randomized/Initialize(mapload)
 	. = ..()
