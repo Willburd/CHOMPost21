@@ -2290,7 +2290,6 @@
 "fp" = (
 /obj/machinery/door/airlock/maintenance/int,
 /obj/structure/blade_trap/start_active,
-/obj/item/grenade/explosive/frag,
 /turf/simulated/floor/tiled/techmaint,
 /area/maintenance/orbital/lower/aft)
 "fq" = (
@@ -9226,6 +9225,12 @@
 /obj/effect/floor_decal/corner/orange{
 	dir = 10
 	},
+/obj/item/stack/cable_coil,
+/obj/item/stack/cable_coil,
+/obj/item/stack/cable_coil,
+/obj/item/stack/cable_coil,
+/obj/item/stack/cable_coil,
+/obj/structure/table/reinforced,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/rust_tool_storage)
 "sS" = (
@@ -10863,13 +10868,6 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/beam_emitter)
-"wA" = (
-/obj/random/maintenance/misc,
-/obj/effect/mine/claymore{
-	dir = 8
-	},
-/turf/simulated/floor/plating,
-/area/maintenance/orbital/lower/aft)
 "wO" = (
 /turf/simulated/wall/r_wall{
 	can_open = 1
@@ -34956,7 +34954,7 @@ FP
 bo
 bm
 bo
-wA
+cW
 bo
 df
 fk
@@ -35937,7 +35935,7 @@ bo
 Rg
 jc
 bq
-bo
+wO
 bq
 bq
 eP
