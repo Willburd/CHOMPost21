@@ -6296,9 +6296,6 @@
 	},
 /obj/item/folder/white,
 /obj/item/folder/white,
-/obj/structure/cable/green{
-	icon_state = "0-2"
-	},
 /obj/structure/window/reinforced{
 	dir = 1
 	},
@@ -20820,6 +20817,13 @@
 /obj/item/geiger/wall/south,
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/engineering_hallway)
+"aWp" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/reception)
 "aWq" = (
 /obj/machinery/light{
 	dir = 4
@@ -20840,6 +20844,12 @@
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/kitchen)
+"aWr" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/reception)
 "aWs" = (
 /obj/machinery/door/airlock/glass_research{
 	name = "Research and Development"
@@ -42172,6 +42182,12 @@
 /obj/structure/bed/chair/office/light{
 	dir = 1
 	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals_central7{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/reception)
 "hSA" = (
@@ -55624,6 +55640,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
 	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/reception)
 "lVE" = (
@@ -57616,6 +57635,9 @@
 	},
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/reception)
@@ -81936,6 +81958,9 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "2-8"
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals_central7{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/chemistry)
@@ -138815,7 +138840,7 @@ awx
 keu
 aVH
 aVF
-tky
+aWp
 sTm
 jRZ
 wSx
@@ -138977,7 +139002,7 @@ pSX
 ufC
 aVI
 idW
-pSX
+aWr
 jwP
 aED
 fed
