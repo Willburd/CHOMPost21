@@ -85,7 +85,18 @@
 	if(source.buckled || source.throwing || source.movement_type & (source.is_ventcrawling | source.flying))
 		return
 
+	// Outpost 21 edit begin - Silent movement trait
+	if(HAS_TRAIT(source, TRAIT_SILENTMOTION))
+		return
+	// Outpost 21 edit begin - end
+
 	if(source.lying) //play crawling sound if we're lying
+		// Outpost 21 edit begin - Crawling while walking is silent
+		if(iscarbon(source))
+			var/mob/living/carbon/carbon_source = source
+			if(carbon_source.m_intent == I_WALK)
+				return// stealth
+		// Outpost 21 edit begin - end
 		if(turf.footstep)
 			playsound(turf, 'sound/effects/footstep/crawl1.ogg', 15 * volume, falloff = 1, vary = sound_vary)
 		return
