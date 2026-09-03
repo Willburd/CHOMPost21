@@ -97,7 +97,7 @@
 	. += "The slot for restocking and inserting a [vending_account] department ID is [cargo_locked ? "locked behind a small screwed on panel" : "unlocked"]."
 
 // Remove empty products from machine on final vend
-/obj/machinery/vending/delayed_vend(datum/stored_item/vending_product/R, mob/user)
+/obj/machinery/vending/cargo_resale/delayed_vend(datum/stored_item/vending_product/R, mob/user)
 	. = ..()
 	if(R && !LAZYLEN(R.instances))
 		product_records.Remove(R)
