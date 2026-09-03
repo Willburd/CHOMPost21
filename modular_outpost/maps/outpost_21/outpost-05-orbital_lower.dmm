@@ -8500,9 +8500,6 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/structure/cable/green{
-	icon_state = "5-8"
-	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/lower/aft)
 "rx" = (
@@ -8565,9 +8562,6 @@
 	},
 /obj/effect/floor_decal/corner/lightgrey/bordercorner{
 	dir = 1
-	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/lower/aft)
@@ -9549,9 +9543,6 @@
 	},
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 1
-	},
-/obj/structure/cable/green{
-	icon_state = "4-10"
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/lower/aft)
@@ -10812,13 +10803,6 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/offworld/orbital/station/halls/lower/aft)
-"wi" = (
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/obj/machinery/door/airlock/maintenance/rnd,
-/turf/simulated/floor/tiled/techmaint,
 /area/offworld/orbital/station/halls/lower/aft)
 "wm" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -33178,7 +33162,7 @@ rH
 rH
 rE
 rE
-wi
+rE
 rE
 rE
 ax
