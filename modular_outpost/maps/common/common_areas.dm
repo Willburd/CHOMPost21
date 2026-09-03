@@ -2859,3 +2859,8 @@
 	sound_env = LARGE_SOFTFLOOR
 	ambience = AMBIENCE_GENERIC
 	color_grading = COLORTINT_COZY
+
+/area/specialty/expie_clubhouse/archive
+	name = "\improper Dog House Archive"
+	icon_state = "storage"
+	flags = RAD_SHIELDED | AREA_BLOCK_INSTANT_BUILDING

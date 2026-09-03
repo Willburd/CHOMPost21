@@ -77,6 +77,7 @@
 	unit_test_z_levels = list(Z_LEVEL_OUTPOST_DEEPDARK,Z_LEVEL_OUTPOST_BASEMENT,Z_LEVEL_OUTPOST_SURFACE,Z_LEVEL_OUTPOST_UPPER,Z_LEVEL_OUTPOST_ORBITAL_LOWER,Z_LEVEL_OUTPOST_ORBITAL_UPPER)
 	unit_test_exempt_areas = list(
 										/area/specialty/expie_clubhouse,
+										/area/specialty/expie_clubhouse/archive,
 										/area/specialty/stowaway_clubhouse,
 										/area/specialty/stowaway_clubhouse/upper,
 	)

@@ -72579,6 +72579,66 @@
 	ignore_mapgen = 1
 	},
 /area/mine/unexplored/muriki/mountainbasenorth)
+"cRy" = (
+/obj/effect/auto_crayon{
+	icon_state = "seven_resolve"
+	},
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/unexplored/muriki/mountainbase)
+"cRz" = (
+/turf/simulated/wall,
+/area/specialty/expie_clubhouse/archive)
+"cRA" = (
+/obj/structure/simple_door/wood,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/specialty/expie_clubhouse/archive)
+"cRB" = (
+/obj/structure/table/woodentable,
+/obj/item/paper_bin,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/specialty/expie_clubhouse/archive)
+"cRC" = (
+/obj/item/flashlight/lamp/clown{
+	pixel_y = 7;
+	pixel_x = 7
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/specialty/expie_clubhouse/archive)
+"cRD" = (
+/obj/item/storage/pill_bottle/dice_nerd,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/specialty/expie_clubhouse/archive)
+"cRE" = (
+/obj/effect/floorbreak,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/specialty/expie_clubhouse/archive)
+"cRF" = (
+/obj/item/paper{
+	pixel_y = -3;
+	pixel_x = 9
+	},
+/obj/item/paper{
+	pixel_x = 1;
+	pixel_y = 5
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/specialty/expie_clubhouse/archive)
+"cRG" = (
+/obj/item/paper{
+	pixel_x = -7;
+	pixel_y = 13
+	},
+/obj/item/paper{
+	pixel_x = 6
+	},
+/obj/item/paper{
+	pixel_x = -3;
+	pixel_y = -6
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/specialty/expie_clubhouse/archive)
 "cRH" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -72594,6 +72654,102 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/medical/tankstore)
+"cRI" = (
+/obj/item/paperplane{
+	dir = 4;
+	pixel_y = 5;
+	pixel_x = 7
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/specialty/expie_clubhouse/archive)
+"cRJ" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/camera_film,
+/obj/item/camera_film,
+/obj/item/camera_film,
+/obj/item/camera{
+	pixel_x = -2;
+	pixel_y = 4
+	},
+/obj/item/tape_roll,
+/obj/item/tape_roll,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/specialty/expie_clubhouse/archive)
+"cRK" = (
+/obj/item/paper{
+	pixel_x = -3;
+	pixel_y = -6
+	},
+/obj/item/paper{
+	pixel_x = -7;
+	pixel_y = 13
+	},
+/obj/effect/floorbreak,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/specialty/expie_clubhouse/archive)
+"cRL" = (
+/obj/structure/table/woodentable,
+/obj/item/pen/crayon/marker/rainbow,
+/obj/item/pen/crayon/red{
+	pixel_y = 4;
+	pixel_x = -8
+	},
+/obj/item/pen/crayon/blue{
+	pixel_x = 4
+	},
+/obj/item/clothing/head/collectable/paper{
+	pixel_y = 10
+	},
+/obj/item/pen/blue,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/specialty/expie_clubhouse/archive)
+"cRM" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/clipboard,
+/obj/item/clipboard,
+/obj/item/clipboard,
+/obj/item/clipboard,
+/obj/item/folder/yellow{
+	pixel_x = 9;
+	pixel_y = 5
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/specialty/expie_clubhouse/archive)
+"cRN" = (
+/obj/structure/table/woodentable,
+/obj/item/pen/crayon/orange,
+/obj/item/pen/crayon/purple{
+	pixel_y = 3;
+	pixel_x = -3
+	},
+/obj/item/pen/red,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/specialty/expie_clubhouse/archive)
+"cRO" = (
+/obj/item/paper_bin{
+	pixel_x = 7;
+	pixel_y = -6
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/specialty/expie_clubhouse/archive)
+"cRP" = (
+/obj/structure/noticeboard/expie{
+	pixel_y = 32
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/specialty/expie_clubhouse/archive)
+"cRQ" = (
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/specialty/expie_clubhouse/archive)
+"cRR" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/clothing/head/paper_crown,
+/obj/item/taperecorder,
+/obj/item/rectape,
+/obj/item/rectape,
+/obj/item/rectape,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/specialty/expie_clubhouse/archive)
 "cSh" = (
 /obj/machinery/atmospherics/unary/heater{
 	dir = 4;
@@ -152665,10 +152821,10 @@ vSb
 vSb
 vSb
 vSb
-vSb
-vSb
-vSb
-coc
+cRz
+cRz
+cRz
+cRz
 bSm
 bSe
 bGD
@@ -152827,11 +152983,11 @@ vSb
 vSb
 vSb
 vSb
-vSb
-vSb
-vSb
-coc
-coc
+cRz
+cRN
+cRJ
+cRz
+cRz
 bSf
 coc
 coc
@@ -152989,11 +153145,11 @@ vSb
 vSb
 vSb
 vSb
-vSb
-vSb
-vSb
-vSb
-coc
+cRz
+cRO
+cRK
+cRD
+cRz
 cei
 cei
 bDl
@@ -153151,12 +153307,12 @@ vSb
 vSb
 vSb
 vSb
-vSb
-vSb
-vSb
-vSb
-coc
-coc
+cRz
+cRP
+cRE
+cRE
+cRA
+cRy
 cei
 bGA
 bzI
@@ -153313,12 +153469,12 @@ vSb
 vSb
 vSb
 vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-coc
+cRz
+cRE
+cRL
+cRF
+cRz
+cRz
 coc
 coc
 aBg
@@ -153475,12 +153631,12 @@ vSb
 vSb
 vSb
 vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
+cRz
+cRQ
+cRE
+cRG
+cRB
+cRz
 vSb
 vSb
 bGT
@@ -153637,12 +153793,12 @@ vSb
 vSb
 vSb
 vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
+cRz
+cRR
+cRM
+cRI
+cRC
+cRz
 vSb
 vSb
 vSb
@@ -153799,12 +153955,12 @@ vSb
 vSb
 vSb
 vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
+cRz
+cRz
+cRz
+cRz
+cRz
+cRz
 vSb
 vSb
 vSb

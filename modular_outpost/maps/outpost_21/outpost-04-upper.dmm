@@ -4277,12 +4277,6 @@
 /obj/item/flashlight/lamp/green,
 /turf/simulated/floor/tiled/turfpack/muriki,
 /area/specialty/expie_clubhouse)
-"aka" = (
-/obj/structure/noticeboard/expie{
-	pixel_x = 32
-	},
-/turf/simulated/floor/tiled/turfpack/muriki,
-/area/specialty/expie_clubhouse)
 "akb" = (
 /obj/structure/bed/bath,
 /obj/random/soap,
@@ -119050,7 +119044,7 @@ ajQ
 ajQ
 ajQ
 awl
-aka
+ajQ
 ajQ
 ajZ
 ajR

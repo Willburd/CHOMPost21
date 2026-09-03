@@ -92,6 +92,7 @@
 		/area/specialty/stowaway_clubhouse,
 		/area/specialty/stowaway_clubhouse/upper,
 		/area/specialty/expie_clubhouse,
+		/area/specialty/expie_clubhouse/archive,
 		/area/offworld/orbital/exterior/engine_core_port,
 		/area/offworld/orbital/exterior/engine_core_starboard,
 		/area/offworld/orbital/station/storage_engine_core,
