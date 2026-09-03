@@ -58761,9 +58761,6 @@
 /area/maintenance/cargo)
 "cjN" = (
 /obj/machinery/door/airlock/maintenance/int,
-/obj/structure/cable/orange{
-	icon_state = "6-8"
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 4;
 	icon_state = "pipe-c"
