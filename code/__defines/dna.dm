@@ -124,7 +124,7 @@
 // Needs to match the highest number above.
 #define DNA_UI_LENGTH      65
 
-#define DNA_SE_LENGTH 102 // Traitgenes // Outpost 21 edit - Increased again
+#define DNA_SE_LENGTH 109 // Traitgenes // Outpost 21 edit - Increased again
 
 // This leaves room for future expansion. This can be arbitrarily raised without worry if genes start to get crowded.
 // Should have more than 10 empty genes after setup. - Willbird)
