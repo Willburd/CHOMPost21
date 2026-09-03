@@ -10,9 +10,10 @@
 			continue
 		if(node.starting_node)
 			continue
-		if(node.announce_channels.len > 1)
-			continue
-		if(node.announce_channels[1] != CHANNEL_SCIENCE)
+		var/list/test_list = node.announce_channels.Copy()
+		test_list -= CHANNEL_SCIENCE
+		test_list -= CHANNEL_COMMON
+		if(node.announce_channels.len > 0)
 			continue
 		TEST_NOTICE(src, "TECHWEB NODE - [node.type] only had research department, it must be accessible by at least one other department.")
 		failed = TRUE
