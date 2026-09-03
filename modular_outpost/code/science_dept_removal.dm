@@ -41,6 +41,3 @@
 
 /datum/techweb_node/fireworks
 	announce_channels = list(CHANNEL_SCIENCE, CHANNEL_ENGINEERING, CHANNEL_SUPPLY)
-
-/datum/techweb_node/outpost_telesci_probes
-	announce_channels = list(CHANNEL_SCIENCE, CHANNEL_ENGINEERING, CHANNEL_SUPPLY, CHANNEL_SECURITY)

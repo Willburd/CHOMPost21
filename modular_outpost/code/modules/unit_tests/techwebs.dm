@@ -11,7 +11,7 @@
 		if(node.starting_node)
 			continue
 		var/list/test_list = node.announce_channels.Copy()
-		test_list -= list(CHANNEL_SCIENCE, CHANNEL_COMMON)
+		test_list -= list(CHANNEL_SCIENCE)
 		if(length(test_list))
 			continue
 		TEST_NOTICE(src, "TECHWEB NODE - [node.type] only had research department, it must be accessible by at least one other department.")
