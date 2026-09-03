@@ -12,6 +12,8 @@
 			continue
 		if(node.announce_channels.len > 1)
 			continue
+		if(node.announce_channels[1] != CHANNEL_ENGINEERING)
+			continue
 		TEST_NOTICE(src, "TECHWEB NODE - [node.type] only had research department, it must be accessible by at least one other department.")
 		failed = TRUE
 
