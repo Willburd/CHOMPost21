@@ -8,7 +8,7 @@
 		"telesci_probe",
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_2_POINTS)
-	announce_channels = list(CHANNEL_SCIENCE)
+	announce_channels = list(CHANNEL_SCIENCE, CHANNEL_ENGINEERING, CHANNEL_SUPPLY, CHANNEL_SECURITY)
 
 /datum/techweb_node/applied_bluespace
 	required_experiments = list(/datum/experiment/scanning/points/bluespace_containing_items)
