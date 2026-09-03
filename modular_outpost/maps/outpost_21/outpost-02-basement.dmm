@@ -33713,6 +33713,7 @@
 /area/muriki/bathroom/cargolower)
 "bkP" = (
 /obj/machinery/disposal,
+/obj/structure/disposalpipe/trunk,
 /turf/simulated/floor/tiled/old_tile/white,
 /area/muriki/bathroom/cargolower)
 "bkQ" = (
@@ -34060,6 +34061,7 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/old_tile/white,
 /area/muriki/bathroom/cargolower)
 "blG" = (
@@ -34626,9 +34628,6 @@
 /turf/simulated/floor/tiled/old_tile/white,
 /area/muriki/bathroom/cargolower)
 "bmz" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
@@ -34644,6 +34643,10 @@
 /obj/effect/floor_decal/steeldecal/steel_decals3,
 /obj/effect/floor_decal/steeldecal/steel_decals3{
 	dir = 6
+	},
+/obj/structure/disposalpipe/junction{
+	dir = 4;
+	icon_state = "pipe-j2"
 	},
 /turf/simulated/floor/tiled/old_tile/white,
 /area/muriki/bathroom/cargolower)
@@ -42690,10 +42693,6 @@
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/cargo)
 "bBG" = (
-/obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
 	},
@@ -44916,10 +44915,6 @@
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/cargo)
 "bFV" = (
-/obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
 	},
@@ -51569,10 +51564,6 @@
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/sec)
 "bTf" = (
-/obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
 	},
@@ -56703,10 +56694,6 @@
 /turf/simulated/floor/plating/external/turfpack/muriki,
 /area/maintenance/civ/west)
 "ceC" = (
-/obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
 	},
@@ -59314,10 +59301,6 @@
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/cargo)
 "clb" = (
-/obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
 	},
@@ -70052,6 +70035,9 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 6
 	},
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/lowmain)
 "cLh" = (
@@ -72747,6 +72733,55 @@
 /obj/item/rectape,
 /turf/simulated/floor/wood/turfpack/muriki,
 /area/specialty/expie_clubhouse/archive)
+"cRS" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "0-4"
+	},
+/obj/structure/cable/heavyduty,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/cargo)
+"cRT" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "0-2"
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/cargo)
+"cRU" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "0-4"
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "0-2"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/cargo)
+"cRV" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/white,
+/area/rnd/hallway/lowmain)
 "cSh" = (
 /obj/machinery/atmospherics/unary/heater{
 	dir = 4;
@@ -77155,6 +77190,9 @@
 	},
 /obj/effect/floor_decal/corner/orange{
 	dir = 10
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/lowmain)
@@ -87031,6 +87069,9 @@
 "tLO" = (
 /obj/machinery/door/firedoor/multi_tile{
 	dir = 2
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/old_cargo/white,
 /area/rnd/hallway/lowmain)
@@ -119144,7 +119185,7 @@ bge
 bge
 bge
 bge
-bOh
+cRU
 ceC
 bge
 bge
@@ -120117,7 +120158,7 @@ bWb
 bzH
 bge
 clb
-bFR
+cRS
 bge
 aNL
 aNL
@@ -120765,7 +120806,7 @@ cEj
 bcX
 aQg
 cFz
-bFS
+cRT
 bOq
 bIW
 bVl
@@ -144207,7 +144248,7 @@ uEM
 cOg
 cOg
 axN
-fKk
+cRV
 cOb
 cNY
 cqy
