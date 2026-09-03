@@ -13,10 +13,10 @@
 	announce_channels = list(CHANNEL_SCIENCE, CHANNEL_ENGINEERING)
 
 /datum/techweb_node/bluespace_theory
-	announce_channels = list(CHANNEL_SCIENCE, CHANNEL_ENGINEERING)
+	announce_channels = list(CHANNEL_SCIENCE, CHANNEL_ENGINEERING, CHANNEL_SUPPLY)
 
 /datum/techweb_node/bluespace_travel
-	announce_channels = list(CHANNEL_SCIENCE, CHANNEL_ENGINEERING)
+	announce_channels = list(CHANNEL_SCIENCE, CHANNEL_ENGINEERING, CHANNEL_SUPPLY)
 
 /datum/techweb_node/xenoarch
 	announce_channels = list(CHANNEL_SCIENCE, CHANNEL_SUPPLY)
@@ -43,4 +43,4 @@
 	announce_channels = list(CHANNEL_SCIENCE, CHANNEL_ENGINEERING, CHANNEL_SUPPLY)
 
 /datum/techweb_node/outpost_telesci_probes
-	announce_channels = list(CHANNEL_SCIENCE, CHANNEL_SECURITY)
+	announce_channels = list(CHANNEL_SCIENCE, CHANNEL_ENGINEERING, CHANNEL_SUPPLY, CHANNEL_SECURITY)
