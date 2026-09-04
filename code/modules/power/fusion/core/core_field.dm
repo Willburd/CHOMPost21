@@ -531,7 +531,7 @@
 //All procs below this point are called in _core.dm, starting at line 41.
 //Stability monitoring. Gives radio annoucements if field stability is below 80%
 /obj/effect/fusion_em_field/proc/stability_monitor()
-	var/warnpoint = 0.10 //start warning at 10% instability
+	var/warnpoint = 0.20 //start warning at 10% instability // Outpost 21 edit - up to 20% instead to avoid annoyance
 	var/warnmessage = "Warning! Field unstable! Instability at [percent_unstable * 100]%, plasma temperature at [plasma_temperature + 295]k."
 	var/stablemessage = "Containment field returning to stable conditions."
 
