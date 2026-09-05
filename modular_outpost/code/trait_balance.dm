@@ -18,6 +18,7 @@
 
 /datum/trait/positive/radioactive_heal // Cannot be irradiated and gain healing from it
 	cost = 8 // upstream is: 6
+	can_take = ORGANICS // Not functional on FBP
 
 /datum/trait/positive/rad_resistance_extreme // like above but lesser
 	cost = 5 // upstream is: 2
