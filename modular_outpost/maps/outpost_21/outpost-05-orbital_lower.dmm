@@ -2216,7 +2216,6 @@
 "fg" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/power/hydromagnetic_trap,
-/obj/machinery/power/hydromagnetic_trap,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/rust_tool_storage)
 "fh" = (
@@ -4707,9 +4706,6 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/access_shaft/lower)
 "kq" = (
-/obj/effect/floor_decal/corner/orange{
-	dir = 5
-	},
 /obj/structure/table/rack{
 	dir = 8;
 	layer = 2.9
@@ -4725,7 +4721,7 @@
 	name = "Hazmat Storage";
 	req_one_access = list(11,24)
 	},
-/turf/simulated/floor/tiled/milspec,
+/turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/halls/rust_entry)
 "kr" = (
 /obj/effect/floor_decal/steeldecal/steel_decals10{
@@ -6291,9 +6287,6 @@
 /turf/simulated/mineral/ignore_cavegen,
 /area/ai_sat/core_external)
 "nh" = (
-/obj/effect/floor_decal/corner/orange{
-	dir = 5
-	},
 /obj/structure/cable/green{
 	icon_state = "2-5"
 	},
@@ -6312,7 +6305,7 @@
 	name = "Hazmat Storage";
 	req_one_access = list(11,24)
 	},
-/turf/simulated/floor/tiled/milspec,
+/turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/halls/rust_entry)
 "ni" = (
 /obj/machinery/light{
