@@ -27675,6 +27675,10 @@
 /obj/effect/floor_decal/corner/red{
 	dir = 5
 	},
+/obj/item/radio/intercom/department/security{
+	dir = 1;
+	pixel_y = 21
+	},
 /turf/simulated/floor/tiled/dark,
 /area/security/kennels)
 "deS" = (
@@ -60445,15 +60449,15 @@
 /turf/simulated/floor/tiled/freezer,
 /area/security/detectives_office)
 "nwr" = (
-/obj/item/radio/intercom/department/security{
-	dir = 8;
-	pixel_x = -21
-	},
 /obj/effect/floor_decal/corner/red{
 	dir = 9
 	},
 /obj/machinery/light{
 	dir = 8
+	},
+/obj/machinery/alarm{
+	dir = 4;
+	pixel_x = -26
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/kennels)
