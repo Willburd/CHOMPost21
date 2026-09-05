@@ -318,4 +318,7 @@
 	custom_only = FALSE // Allow non-custom species
 	banned_species = list(SPECIES_PROMETHEAN)
 
+/datum/trait/negative/rad_weakness
+	banned_species = list(SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW)
+
 #endif
