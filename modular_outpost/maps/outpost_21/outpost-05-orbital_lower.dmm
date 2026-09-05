@@ -3654,10 +3654,6 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/backup_power)
 "is" = (
-/obj/machinery/firealarm{
-	dir = 4;
-	pixel_x = 26
-	},
 /obj/effect/floor_decal/corner/orange{
 	dir = 6
 	},
@@ -3668,6 +3664,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
+/obj/structure/dispenser/oxygen,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/rust_entry)
 "it" = (
@@ -12296,6 +12293,10 @@
 /obj/structure/disposalpipe/junction{
 	dir = 2;
 	icon_state = "pipe-j2"
+	},
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -28
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/rust_entry)

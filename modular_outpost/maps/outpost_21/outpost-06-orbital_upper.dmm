@@ -17546,6 +17546,10 @@
 /obj/machinery/door/airlock/glass,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/offworld/orbital/station/bar)
+"Hi" = (
+/obj/machinery/power/hydromagnetic_trap,
+/turf/simulated/mineral/vacuum,
+/area/offworld/orbital/exterior/engine_core_starboard)
 "Hl" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced{
@@ -42853,7 +42857,7 @@ ia
 hA
 bX
 bX
-bX
+Hi
 bX
 bX
 aR
