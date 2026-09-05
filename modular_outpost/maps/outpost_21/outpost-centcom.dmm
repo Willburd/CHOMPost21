@@ -30049,6 +30049,10 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 6
 	},
+/obj/item/material/sword{
+	desc = "A long, two-handed sword.. acid pitted and slightly warped from a serious battle."
+	},
+/obj/item/gun/projectile/deagle/gold,
 /turf/simulated/floor/carpet/purple,
 /area/centcom/living)
 "nil" = (
@@ -46852,7 +46856,12 @@
 "xio" = (
 /obj/structure/table/rack/shelf/steel,
 /obj/item/digestion_remains/skull/unknown/anthro{
-	desc = "A bleached skull. It looks very weakened. It looks like it used to belong to some kind of rat."
+	desc = "A bleached skull. It looks very weakened. It looks like it used to belong to some kind of rat.";
+	pixel_x = 3
+	},
+/obj/item/digestion_remains/skull/teshari{
+	desc = "A bleached skull. It looks very weakened. Seems like it belonged to a teshari... it smells faintly of oil and capscian";
+	pixel_x = -5
 	},
 /turf/simulated/floor/carpet/purple,
 /area/centcom/living)
