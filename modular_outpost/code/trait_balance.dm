@@ -143,6 +143,12 @@
 /// NEUTRAL
 /////////////////////////////////////////////////////////////////////////////////////////////////
 //You need to redefine the trait. change it from TRAIT_TYPE_NEUTRAL to  TRAIT_TYPE_NEGATIVE or TRAIT_TYPE_POSITIVE
+/datum/trait/neutral/allergy
+	can_take = ORGANICS // Unwanted on FBPs
+
+/datum/trait/neutral/allergy_reaction
+	can_take = ORGANICS // Unwanted on FBPs
+
 /datum/trait/neutral/allergy_reaction/gibbing // Sploot gives some bonus points
 	cost = -2 // upstream is: 0
 
