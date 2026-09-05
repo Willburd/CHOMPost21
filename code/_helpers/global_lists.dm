@@ -724,7 +724,7 @@ GLOBAL_LIST_INIT(radio_channels_by_freq, list(
 	num2text(CULTURE_FREQ) = CHANNEL_CULTURE,
 	// Outpost 21 edit begin - Security squad channels
 	num2text(SEC_ALPHA_FREQ) = CHANNEL_SEC_ALPHA,
-	num2text(SEC_BETA_FREQ) = CHANNEL_SEC_BETA,
+	num2text(SEC_BRAVO_FREQ) = CHANNEL_SEC_BRAVO,
 	num2text(SEC_CHARLIE_FREQ) = CHANNEL_SEC_CHARLIE,
 	num2text(SEC_DELTA_FREQ) = CHANNEL_SEC_DELTA,
 	// Outpost 21 edit end
@@ -751,7 +751,7 @@ GLOBAL_LIST_INIT(default_internal_channels, list(
 	num2text(EXP_FREQ) = list(ACCESS_EXPLORER, ACCESS_PILOT), // CHOMPEdit
 	// Outpost 21 edit begin - Security squad channels
 	num2text(SEC_ALPHA_FREQ) = list(ACCESS_SECURITY),
-	num2text(SEC_BETA_FREQ) = list(ACCESS_SECURITY),
+	num2text(SEC_BRAVO_FREQ) = list(ACCESS_SECURITY),
 	num2text(SEC_CHARLIE_FREQ) = list(ACCESS_SECURITY),
 	num2text(SEC_DELTA_FREQ) = list(ACCESS_SECURITY),
 	// Outpost 21 edit end

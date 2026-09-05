@@ -127,7 +127,7 @@
 		num2text(SEC_I_FREQ) = list(ACCESS_SECURITY),
 		// Outpost 21 edit begin - Security squad channels
 		num2text(SEC_ALPHA_FREQ) = list(ACCESS_SECURITY),
-		num2text(SEC_BETA_FREQ) = list(ACCESS_SECURITY),
+		num2text(SEC_BRAVO_FREQ) = list(ACCESS_SECURITY),
 		num2text(SEC_CHARLIE_FREQ) = list(ACCESS_SECURITY),
 		num2text(SEC_DELTA_FREQ) = list(ACCESS_SECURITY),
 		// Outpost 21 edit end

@@ -192,7 +192,7 @@ export const RADIO_CHANNELS = [
     color: '#af2212',
   },
   {
-    name: 'Beta Squad',
+    name: 'Bravo Squad',
     freq: 1423,
     color: '#af2212',
   },
