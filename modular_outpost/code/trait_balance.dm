@@ -18,6 +18,7 @@
 
 /datum/trait/positive/radioactive_heal // Cannot be irradiated and gain healing from it
 	cost = 8 // upstream is: 6
+	can_take = ORGANICS // Not functional on FBP
 
 /datum/trait/positive/rad_resistance_extreme // like above but lesser
 	cost = 5 // upstream is: 2
@@ -142,6 +143,12 @@
 /// NEUTRAL
 /////////////////////////////////////////////////////////////////////////////////////////////////
 //You need to redefine the trait. change it from TRAIT_TYPE_NEUTRAL to  TRAIT_TYPE_NEGATIVE or TRAIT_TYPE_POSITIVE
+/datum/trait/neutral/allergy
+	can_take = ORGANICS // Unwanted on FBPs
+
+/datum/trait/neutral/allergy_reaction
+	can_take = ORGANICS // Unwanted on FBPs
+
 /datum/trait/neutral/allergy_reaction/gibbing // Sploot gives some bonus points
 	cost = -2 // upstream is: 0
 
@@ -317,5 +324,8 @@
 /datum/trait/negative/meltable_major
 	custom_only = FALSE // Allow non-custom species
 	banned_species = list(SPECIES_PROMETHEAN)
+
+/datum/trait/negative/rad_weakness
+	banned_species = list(SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW)
 
 #endif
