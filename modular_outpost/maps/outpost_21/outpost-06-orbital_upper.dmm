@@ -12153,6 +12153,9 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/power_distribution)
 "xg" = (
@@ -17446,6 +17449,27 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/power_distribution)
+"GZ" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 6
+	},
+/obj/structure/table/rack{
+	dir = 8;
+	layer = 2.6
+	},
+/obj/item/clothing/shoes/magboots,
+/obj/item/clothing/suit/space/void/engineering/hazmat,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/head/helmet/space/void/engineering/hazmat,
+/obj/structure/window/reinforced{
+	health = 1e+006
+	},
+/obj/machinery/door/window/westright{
+	name = "Hazmat Storage";
+	req_one_access = list(11,24)
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/power_distribution)
 "Ha" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/aux{
 	dir = 10
@@ -17467,6 +17491,27 @@
 /area/ai_sat/core_external)
 "Hc" = (
 /turf/simulated/wall/r_wall,
+/area/offworld/orbital/station/power_distribution)
+"Hd" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 6
+	},
+/obj/structure/table/rack{
+	dir = 8;
+	layer = 2.6
+	},
+/obj/item/clothing/shoes/magboots,
+/obj/item/clothing/suit/space/void/engineering/hazmat,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/head/helmet/space/void/engineering/hazmat,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/machinery/door/window/westleft{
+	req_one_access = list(11,24);
+	name = "Hazmat Storage"
+	},
+/turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/power_distribution)
 "He" = (
 /obj/machinery/door/airlock/glass_command{
@@ -17501,6 +17546,10 @@
 /obj/machinery/door/airlock/glass,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/offworld/orbital/station/bar)
+"Hi" = (
+/obj/machinery/power/hydromagnetic_trap,
+/turf/simulated/mineral/vacuum,
+/area/offworld/orbital/exterior/engine_core_starboard)
 "Hl" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced{
@@ -20729,20 +20778,6 @@
 	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/ai_upload)
-"SF" = (
-/obj/machinery/door/firedoor/glass,
-/obj/structure/grille,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/turf/simulated/floor/plating,
-/area/offworld/orbital/station/power_distribution)
 "SH" = (
 /obj/item/weldingtool,
 /turf/simulated/mineral/floor/ignore_cavegen/turfpack/airless,
@@ -40884,8 +40919,8 @@ Ck
 EU
 Lo
 oN
-hS
-hS
+Hd
+GZ
 hS
 hS
 Pt
@@ -41047,7 +41082,7 @@ Hc
 Hc
 Hc
 Hc
-SF
+Hc
 xf
 rk
 Hc
@@ -42822,7 +42857,7 @@ ia
 hA
 bX
 bX
-bX
+Hi
 bX
 bX
 aR
