@@ -1920,11 +1920,11 @@
 /turf/simulated/wall/r_wall,
 /area/offworld/orbital/station/rust_tool_storage)
 "ew" = (
-/obj/structure/reflector/box,
 /obj/effect/floor_decal/corner/orange{
 	dir = 9
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/power/hydromagnetic_trap,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/rust_tool_storage)
 "ex" = (
@@ -2213,6 +2213,12 @@
 "ff" = (
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/lower/port)
+"fg" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/power/hydromagnetic_trap,
+/obj/machinery/power/hydromagnetic_trap,
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/rust_tool_storage)
 "fh" = (
 /obj/machinery/computer/general_air_control/supermatter_core{
 	input_tag = "rust_injector";
@@ -4704,9 +4710,23 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/access_shaft/lower)
 "kq" = (
-/obj/machinery/vending/foodmeat,
 /obj/effect/floor_decal/corner/orange{
 	dir = 5
+	},
+/obj/structure/table/rack{
+	dir = 8;
+	layer = 2.9
+	},
+/obj/item/clothing/shoes/magboots,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/suit/space/void/engineering/hazmat,
+/obj/item/clothing/head/helmet/space/void/engineering/hazmat,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/machinery/door/window/southleft{
+	name = "Hazmat Storage";
+	req_one_access = list(11,24)
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/rust_entry)
@@ -6280,7 +6300,21 @@
 /obj/structure/cable/green{
 	icon_state = "2-5"
 	},
-/obj/machinery/vending/fitness,
+/obj/structure/table/rack{
+	dir = 8;
+	layer = 2.9
+	},
+/obj/item/clothing/shoes/magboots,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/suit/space/void/engineering/hazmat,
+/obj/item/clothing/head/helmet/space/void/engineering/hazmat,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/door/window/southright{
+	name = "Hazmat Storage";
+	req_one_access = list(11,24)
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/rust_entry)
 "ni" = (
@@ -9335,6 +9369,8 @@
 /obj/effect/floor_decal/corner/orange{
 	dir = 5
 	},
+/obj/structure/reflector/box,
+/obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/rust_tool_storage)
 "td" = (
@@ -30345,7 +30381,7 @@ pH
 ev
 sh
 Oj
-ey
+fg
 OS
 OS
 OS
