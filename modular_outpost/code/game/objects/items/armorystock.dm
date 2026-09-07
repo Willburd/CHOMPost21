@@ -17,6 +17,11 @@
 		for(var/obj/item/found_item in closet.contents)
 			append_stock(stock, found_item)
 
+	for(var/obj/machinery/machine in get_area.contents)
+		if(machine.anchored)
+			continue
+		append_stock(stock, machine)
+
 	name = "[get_area] Stock"
 	info += "[get_area]:<br>"
 	gen_list(stock)
@@ -43,7 +48,7 @@
 	info += "<th><center>Count</center></th>"
 	info += "</tr>"
 
-	for(var/obj/item/pathcheck as anything in current_list)
+	for(var/obj/pathcheck as anything in current_list)
 		info += "<tr>"
 		var/count = current_list[pathcheck]
 		// Custom name support

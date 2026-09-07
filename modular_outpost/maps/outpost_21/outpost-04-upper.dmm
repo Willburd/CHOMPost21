@@ -4283,12 +4283,8 @@
 	dir = 1
 	},
 /obj/item/paper/armorystock{
-	area_path = /area/engineering/storage
-	},
-/obj/item/paper/armorystock{
 	area_path = /area/engineering/hardsuitstore;
-	pixel_y = 5;
-	pixel_x = 3
+	pixel_y = 5
 	},
 /obj/item/paper/armorystock{
 	area_path = /area/engineering/auxstore;
@@ -4296,7 +4292,7 @@
 	},
 /obj/item/paper/armorystock{
 	area_path = /area/storage/tech;
-	pixel_x = -2;
+	pixel_x = -11;
 	pixel_y = 3
 	},
 /turf/simulated/floor/carpet/oracarpet,
@@ -53170,6 +53166,15 @@
 /obj/structure/table/reinforced,
 /obj/effect/floor_decal/spline/plain{
 	dir = 1
+	},
+/obj/item/paper/armorystock{
+	area_path = /area/engineering/storage;
+	pixel_x = 10
+	},
+/obj/item/paper/armorystock{
+	area_path = /area/engineering/enginestorage;
+	pixel_y = 4;
+	pixel_x = 16
 	},
 /turf/simulated/floor/carpet/oracarpet,
 /area/crew_quarters/heads/chief)
