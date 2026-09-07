@@ -140,7 +140,7 @@ GLOBAL_DATUM(planet_muriki, /datum/planet/muriki)
 
 /datum/weather/muriki/proc/wet_plating(chance)
 	if(holder.our_planet.planet_floors.len)
-		var/i = rand(6,18)
+		var/i = rand(18,36)
 		while(i-- > 0)
 			if(!prob(chance))
 				continue
@@ -1081,6 +1081,7 @@ GLOBAL_DATUM(planet_muriki, /datum/planet/muriki)
 		WEATHER_COLDDARKNESS = 99,
 		WEATHER_CLEAR = 1,
 		)
+	effect_flags = HAS_PLANET_EFFECT
 	color_grading = COLORTINT_UNDERDARK
 	observed_message = "The world feels still."
 	transition_messages = list(
@@ -1089,6 +1090,27 @@ GLOBAL_DATUM(planet_muriki, /datum/planet/muriki)
 	hazardous_weather = TRUE
 	shuttle_crash_chance = 3 // rare
 
+/datum/weather/muriki/clear/hidden_evildarkness/process_effects()
+	. = ..()
+	if(!length(holder.our_planet.planet_floors))
+		return
+	var/i = rand(16,24)
+	while(i-- > 0)
+		var/turf/simulated/T = pick(holder.our_planet.planet_floors)
+		if(!istype(T) || !T.is_outdoors())
+			continue
+		if(!T.zone || T.zone.air.temperature > (T0C - 70)) // Needs to be cold enough
+			continue
+		// Try to shatter things a few times
+		var/t = rand(3,5)
+		while(t-- > 0)
+			var/turf/step_turf = get_step(T, pick(GLOB.cardinal))
+			if(!step_turf)
+				return
+			var/obj/structure/window/win = locate() in step_turf.contents
+			if(win)
+				win.shatter()
+				return // Shatter only one window at a time... may as well have SOME optimization here.
 
 /////////////////////////////////////////////////////////////////////////////////////////
 // Muriki enzymatic rain effects
