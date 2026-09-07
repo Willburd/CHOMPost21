@@ -2277,6 +2277,10 @@
 	sound_env = LARGE_ENCLOSED
 	base_turf = /turf/simulated/open
 
+/area/security/tactical/red
+	name = "\improper Security - Emergency Equipment"
+
+
 //
 // Science-----------------------------------------------------------------------
 //
