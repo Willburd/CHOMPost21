@@ -428,6 +428,7 @@
 /turf/simulated/floor/plating,
 /area/ai_sat/fore_airlock)
 "aY" = (
+/obj/item/tool/crowbar,
 /turf/simulated/floor/plating,
 /area/offworld/orbital/exterior/engine_core_port)
 "aZ" = (
@@ -1135,6 +1136,23 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
 	},
+/obj/structure/table/rack,
+/obj/item/airlock_brace,
+/obj/item/airlock_brace,
+/obj/item/airlock_brace,
+/obj/item/airlock_brace,
+/obj/item/airlock_brace,
+/obj/item/airlock_brace,
+/obj/item/airlock_brace,
+/obj/item/airlock_brace,
+/obj/item/airlock_brace,
+/obj/item/airlock_brace,
+/obj/item/airlock_brace,
+/obj/item/airlock_brace,
+/obj/item/airlock_brace,
+/obj/item/airlock_brace,
+/obj/item/tool/crowbar/brace_jack,
+/obj/item/tool/crowbar/brace_jack,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/storage)
 "co" = (
@@ -4094,6 +4112,7 @@
 /obj/machinery/door/airlock/glass,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/access_shaft/upper)
 "hN" = (
@@ -4775,6 +4794,7 @@
 /area/offworld/orbital/station/halls/central)
 "ji" = (
 /obj/machinery/door/airlock/glass,
+/obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/offworld/orbital/station/bar)
 "jj" = (
@@ -4858,6 +4878,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/dockinghanger)
 "js" = (
@@ -6937,6 +6958,7 @@
 /area/ai_sat/access_shaft)
 "nI" = (
 /obj/machinery/door/airlock/maintenance/common,
+/obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/techmaint,
 /area/offworld/orbital/station/halls/fore)
 "nJ" = (
@@ -6955,6 +6977,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
+/obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/techmaint,
 /area/maintenance/orbital/fore)
 "nL" = (
@@ -7090,6 +7113,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-6"
 	},
+/obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/dockinghanger)
 "nW" = (
@@ -12245,6 +12269,7 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/glass,
+/obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/central)
 "xo" = (
@@ -12547,6 +12572,7 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/glass,
+/obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/central)
 "xN" = (
@@ -12601,6 +12627,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
+/obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/access_shaft/upper)
 "xS" = (
@@ -12719,14 +12746,14 @@
 /area/offworld/orbital/station/port_observation)
 "yc" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/door/firedoor,
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/aux,
 /obj/machinery/door/airlock/maintenance/engi,
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
+/obj/machinery/door/firedoor,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/orbital/aft)
 "yd" = (
@@ -13216,6 +13243,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
 	},
+/obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/access_shaft/upper_connector)
 "yV" = (
@@ -13345,6 +13373,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 8
 	},
+/obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/access_shaft/upper_connector)
 "zg" = (
@@ -17449,24 +17478,6 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/power_distribution)
-"GZ" = (
-/obj/structure/table/rack{
-	dir = 8;
-	layer = 2.6
-	},
-/obj/item/clothing/shoes/magboots,
-/obj/item/clothing/suit/space/void/engineering/hazmat,
-/obj/item/clothing/mask/breath,
-/obj/item/clothing/head/helmet/space/void/engineering/hazmat,
-/obj/structure/window/reinforced{
-	health = 1e+006
-	},
-/obj/machinery/door/window/westright{
-	name = "Hazmat Storage";
-	req_one_access = list(11,24)
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/offworld/orbital/station/power_distribution)
 "Ha" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/aux{
 	dir = 10
@@ -17488,24 +17499,6 @@
 /area/ai_sat/core_external)
 "Hc" = (
 /turf/simulated/wall/r_wall,
-/area/offworld/orbital/station/power_distribution)
-"Hd" = (
-/obj/structure/table/rack{
-	dir = 8;
-	layer = 2.6
-	},
-/obj/item/clothing/shoes/magboots,
-/obj/item/clothing/suit/space/void/engineering/hazmat,
-/obj/item/clothing/mask/breath,
-/obj/item/clothing/head/helmet/space/void/engineering/hazmat,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/machinery/door/window/westleft{
-	req_one_access = list(11,24);
-	name = "Hazmat Storage"
-	},
-/turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/power_distribution)
 "He" = (
 /obj/machinery/door/airlock/glass_command{
@@ -17540,6 +17533,42 @@
 /obj/machinery/door/airlock/glass,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/offworld/orbital/station/bar)
+"Hi" = (
+/obj/machinery/door/airlock/maintenance/common,
+/obj/machinery/door/firedoor,
+/turf/simulated/floor/tiled/techmaint,
+/area/maintenance/orbital/fore)
+"Hj" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 6
+	},
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/power_distribution)
+"Hk" = (
+/obj/structure/table/rack{
+	dir = 8;
+	layer = 2.6
+	},
+/obj/item/clothing/shoes/magboots,
+/obj/item/clothing/suit/space/void/engineering/hazmat,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/head/helmet/space/void/engineering/hazmat,
+/obj/structure/window/reinforced{
+	health = 1e+006
+	},
+/obj/machinery/door/window/westright{
+	name = "Hazmat Storage";
+	req_one_access = list(11,24)
+	},
+/obj/structure/window/reinforced{
+	dir = 4;
+	health = 1e+006
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/offworld/orbital/station/power_distribution)
 "Hl" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced{
@@ -17557,6 +17586,28 @@
 "Hm" = (
 /turf/simulated/wall/r_wall,
 /area/ai_cyborg_station)
+"Hn" = (
+/obj/structure/table/rack{
+	dir = 8;
+	layer = 2.6
+	},
+/obj/item/clothing/shoes/magboots,
+/obj/item/clothing/suit/space/void/engineering/hazmat,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/head/helmet/space/void/engineering/hazmat,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/machinery/door/window/westleft{
+	req_one_access = list(11,24);
+	name = "Hazmat Storage"
+	},
+/obj/structure/window/reinforced{
+	dir = 4;
+	health = 1e+006
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/offworld/orbital/station/power_distribution)
 "Ht" = (
 /obj/structure/railing/grey,
 /obj/machinery/power/terminal{
@@ -17918,6 +17969,7 @@
 /obj/structure/cable/green{
 	icon_state = "2-9"
 	},
+/obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/orbital/aft)
 "IW" = (
@@ -18087,13 +18139,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/ai_sat/access_shaft)
-"JC" = (
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/obj/item/tool/crowbar,
-/turf/simulated/floor/airless,
-/area/offworld/orbital/exterior/engine_core_port)
 "JD" = (
 /obj/structure/cable/cyan{
 	icon_state = "0-8"
@@ -19732,9 +19777,6 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/aft)
 "Pt" = (
-/obj/machinery/light{
-	dir = 4
-	},
 /obj/effect/floor_decal/corner/orange{
 	dir = 6
 	},
@@ -22570,6 +22612,7 @@
 /obj/structure/cable/green{
 	icon_state = "4-10"
 	},
+/obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/dockinghanger)
 "Zp" = (
@@ -22778,6 +22821,7 @@
 	name = "Common Channel";
 	pixel_x = 21
 	},
+/obj/machinery/power/rad_collector,
 /turf/simulated/floor/tiled/milspec/airless,
 /area/offworld/orbital/station/storage_engine_core)
 "ZY" = (
@@ -38324,7 +38368,7 @@ cc
 lD
 cc
 cc
-JC
+cc
 cc
 cc
 Qh
@@ -40842,7 +40886,7 @@ HJ
 Pz
 kN
 lj
-kX
+Hi
 eD
 Fy
 kd
@@ -40909,9 +40953,9 @@ Ck
 EU
 Lo
 oN
-Hd
-GZ
-hS
+Jg
+Jg
+Hj
 hS
 Pt
 Hc
@@ -41071,11 +41115,11 @@ Hc
 Hc
 Hc
 Hc
-Hc
+Hn
+Hk
 Hc
 xf
 rk
-Hc
 Hc
 yf
 aQ
@@ -41232,10 +41276,10 @@ bX
 bX
 bX
 bX
-bX
-bX
-aR
-aR
+Hc
+Hc
+Hc
+Hc
 aR
 aR
 bB
@@ -42462,7 +42506,7 @@ mg
 rK
 lx
 lj
-kX
+Hi
 eD
 kq
 kd

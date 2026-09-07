@@ -2,15 +2,15 @@
 	announceWhen 	= 1
 	startWhen		= 10
 	endWhen			= 35
-
+// Outpost 21 edit start - fixes the wording to be less ass
 /datum/event/clang/announce()
-	GLOB.command_announcement.Announce("Attention [station_name()]. Unknown ultra-dense high-velocity object entering stratosphere!", "General Alert", ANNOUNCER_MSG_CLANG)
+	GLOB.command_announcement.Announce("Attention [station_name()]. Ultra-dense 'immovable rod' detected on rapid approach to Outpost-21 facilities. All hands, brace for impact!", "General Alert", ANNOUNCER_MSG_CLANG)
 	if(seclevel2num(get_security_level()) < SEC_LEVEL_BLUE)
 		set_security_level(SEC_LEVEL_BLUE) // OHNO
 
 /datum/event/clang/end()
-	GLOB.command_announcement.Announce("What the fuck was that?!", "General Alert")
-
+	GLOB.command_announcement.Announce("'Immovable rod' observed leaving Muriki orbit, all clear. Assess damage and lower alert as needed.", "General Alert")
+// Outpost 21 edit end
 /datum/event/clang/start()
 	affecting_z = using_map.station_levels
 

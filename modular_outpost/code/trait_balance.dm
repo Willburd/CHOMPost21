@@ -66,8 +66,8 @@
 	cost = 3 //base 2. Extra attack and slowdown for the same cost as less slowdown? Seems a bit too strong.
 
 /datum/trait/positive/shredding_attacks
-	hidden = FALSE //Base: true. It's 6 points.. seems fair? This is pretty nuts though.
-	cost = 6 //Base 6. Just incase, though...
+	hidden = FALSE //Base: true.
+	cost = 4 //Base 6.
 
 /datum/trait/positive/linguist
 	cost = 1 //Base 2. I think it's fine? Just means more RP sillies.
@@ -138,6 +138,19 @@
 /datum/trait/positive/endurance_extremely_high
 	banned_species = list(SPECIES_TESHARI, SPECIES_SHADEKIN_CREW, SPECIES_SHADEKIN) // Consistant restriction list
 
+/datum/trait/positive/shredding_attacks
+	excludes = list(/datum/trait/positive/melee_attack_fangs/xenochimera)
+
+/datum/trait/positive/melee_attack_fangs/xenochimera
+	desc = "Your hunting instincts manifest in earnest! You have grown numbing fangs alongside your naturally grown hunting weapons. Allows for shredding attacks."
+	category = TRAIT_TYPE_POSITIVE
+	cost = 2 // Buffed so costs more
+	excludes = list(/datum/trait/positive/shredding_attacks)
+
+/datum/trait/positive/melee_attack_fangs/xenochimera/New()
+	. = ..()
+	var_changes |= list("shredding" = TRUE)
+
 
 /////////////////////////////////////////////////////////////////////////////////////////////////
 /// NEUTRAL
@@ -151,6 +164,7 @@
 
 /datum/trait/neutral/allergy_reaction/gibbing // Sploot gives some bonus points
 	cost = -2 // upstream is: 0
+	category = TRAIT_TYPE_NEGATIVE
 
 /datum/trait/neutral/venom_bite
 	cost = 2 // Base 0. Lets you give various toxins for mechanical benefit, too stronk for free.
@@ -189,9 +203,11 @@
 /////////////////////////////////////////////////////////////////////////////////////////////////
 /datum/trait/negative/disability_censored // Free points begone
 	cost = 0 // upstream is: -1
+	category = TRAIT_TYPE_NEUTRAL
 
 /datum/trait/negative/disability_nervousness // Free points begone
 	cost = 0 // upstream is: -1
+	category = TRAIT_TYPE_NEUTRAL
 
 /datum/trait/negative/speed_slow
 	cost = -4 //Base -3. Haste is 4, this is the same numbers. Should match.
@@ -327,5 +343,8 @@
 
 /datum/trait/negative/rad_weakness
 	banned_species = list(SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW)
+
+/datum/trait/negative/deep_sleeper
+	cost = -3 //Base -1
 
 #endif

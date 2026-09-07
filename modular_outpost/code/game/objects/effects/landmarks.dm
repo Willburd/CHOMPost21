@@ -144,7 +144,7 @@
 		prob(20);/mob/living/simple_mob/animal/giant_spider/pepper,
 		prob(10);/mob/living/simple_mob/animal/giant_spider/tunneler,
 		prob(10);/mob/living/simple_mob/animal/giant_spider/webslinger,
-		prob(5);/mob/living/simple_mob/animal/giant_spider/phorogenic,
+		// prob(5);/mob/living/simple_mob/animal/giant_spider/phorogenic,
 		prob(5);/mob/living/simple_mob/animal/giant_spider/thermic,
 		prob(1);/mob/living/simple_mob/animal/giant_spider/broodmother,
 		prob(35);/mob/living/simple_mob/vore/leopardmander,
