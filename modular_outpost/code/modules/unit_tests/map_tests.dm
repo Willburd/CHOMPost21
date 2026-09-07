@@ -231,6 +231,7 @@
 		/area/medical/medbay,
 		/area/muriki/crew/kitchenfreezer,
 		/area/security/tactical,
+		/area/security/tactical/red,
 		/area/security/armoury,
 		/area/muriki/cybstorage,
 		/area/muriki/arriveelev,
@@ -326,6 +327,7 @@
 		// Armory
 		/area/security/armoury,
 		/area/security/tactical,
+		/area/security/tactical/red,
 		/area/security/nuke_storage,
 		/area/security/brig,
 		/area/security/surgery,

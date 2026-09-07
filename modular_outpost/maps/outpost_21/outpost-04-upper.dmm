@@ -4277,6 +4277,30 @@
 /obj/item/flashlight/lamp/green,
 /turf/simulated/floor/tiled/turfpack/muriki,
 /area/specialty/expie_clubhouse)
+"aka" = (
+/obj/structure/table/reinforced,
+/obj/effect/floor_decal/spline/plain{
+	dir = 1
+	},
+/obj/item/paper/armorystock{
+	area_path = /area/engineering/storage
+	},
+/obj/item/paper/armorystock{
+	area_path = /area/engineering/hardsuitstore;
+	pixel_y = 5;
+	pixel_x = 3
+	},
+/obj/item/paper/armorystock{
+	area_path = /area/engineering/auxstore;
+	pixel_x = -6
+	},
+/obj/item/paper/armorystock{
+	area_path = /area/storage/tech;
+	pixel_x = -2;
+	pixel_y = 3
+	},
+/turf/simulated/floor/carpet/oracarpet,
+/area/crew_quarters/heads/chief)
 "akb" = (
 /obj/structure/bed/bath,
 /obj/random/soap,
@@ -79330,7 +79354,7 @@ aXE
 qFT
 orL
 imu
-wGB
+aka
 xgc
 ezE
 hVa
