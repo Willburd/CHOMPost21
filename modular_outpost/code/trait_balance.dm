@@ -143,8 +143,6 @@
 
 /datum/trait/positive/melee_attack_fangs/xenochimera
 	desc = "Your hunting instincts manifest in earnest! You have grown numbing fangs alongside your naturally grown hunting weapons. Allows for shredding attacks."
-	category = TRAIT_TYPE_POSITIVE
-	cost = 2 // Buffed so costs more
 	excludes = list(/datum/trait/positive/shredding_attacks)
 
 /datum/trait/positive/melee_attack_fangs/xenochimera/New()
