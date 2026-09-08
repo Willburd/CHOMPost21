@@ -1,6 +1,7 @@
 /datum/weather
-	var/hazardous_weather
+	var/hazardous_weather = FALSE
 	var/shuttle_crash_chance = 0
+	var/limits_vision = FALSE
 
 /datum/weather_holder/advance_forecast()
 	. = ..()

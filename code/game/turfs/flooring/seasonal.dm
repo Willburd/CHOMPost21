@@ -2,22 +2,23 @@ GLOBAL_VAR(world_time_season)
 GLOBAL_VAR(world_time_year)
 GLOBAL_VAR(world_time_month)
 GLOBAL_VAR(world_time_day)
-
+// Outpost 21 edit begin - Changed season limits
 /proc/setup_season()
 	GLOB.world_time_month = text2num(time2text(world.timeofday, "MM")) 	// get the current month
 	switch(GLOB.world_time_month)
 		if(1 to 2)
 			GLOB.world_time_season = "winter"
-		if(3 to 5)
+		if(3 to 4)
 			GLOB.world_time_season = "spring"
-		if(6 to 8)
+		if(5 to 8)
 			GLOB.world_time_season = "summer"
-		if(9 to 11)
+		if(9 to 10)
 			GLOB.world_time_season = "autumn"
-		if(12)
+		if(11 to 12)
 			GLOB.world_time_season = "winter"
 	GLOB.world_time_day = text2num(time2text(world.timeofday, "DD"))
 	GLOB.world_time_year = text2num(time2text(world.timeofday, "YYYY"))
+// Outpost 21 edit end
 
 /turf/simulated/floor/outdoors/grass/seasonal
 	name = "grass"

@@ -172,7 +172,7 @@ GLOBAL_DATUM(planet_muriki, /datum/planet/muriki)
 		WEATHER_STORM		= new /datum/weather/muriki/acid_storm(),
 		WEATHER_HAIL		= new /datum/weather/muriki/acid_hail(),
 		WEATHER_HOT			= new /datum/weather/muriki/heatwave(),
-		WEATHER_ASH_STORM	= new /datum/weather/muriki/heatwave/lethal(),
+		WEATHER_LETHALHEAT	= new /datum/weather/muriki/heatwave/lethal(),
 		WEATHER_DOWNPOURWARNING = new /datum/weather/muriki/downpourwarning(),
 		WEATHER_DOWNPOUR 		= new /datum/weather/muriki/downpour(),
 		WEATHER_DOWNPOURFATAL 	= new /datum/weather/muriki/downpourfatal(),
@@ -180,6 +180,7 @@ GLOBAL_DATUM(planet_muriki, /datum/planet/muriki)
 		WEATHER_CONFETTI		= new /datum/weather/muriki/confetti(),
 		WEATHER_COLDDARKNESS	= new /datum/weather/muriki/clear/hidden_evildarkness(),
 		WEATHER_LONGBLIZZARD	= new /datum/weather/muriki/blizzard/hidden_dangerous(),
+		WEATHER_ASH_STORM 		= new /datum/weather/muriki/ash_storm(),
 		WEATHER_EMBERFALL 		= new /datum/weather/muriki/emberfall(),
 		WEATHER_BLOOD_MOON 		= new /datum/weather/muriki/blood_moon(),
 		)
@@ -189,7 +190,6 @@ GLOBAL_DATUM(planet_muriki, /datum/planet/muriki)
 	switch(GLOB.world_time_season)
 		if("spring")
 			roundstart_weather_chances = list(
-				WEATHER_CLEAR = 0,
 				WEATHER_LIGHT_SNOW = 25,
 				WEATHER_OVERCAST = 3,
 				WEATHER_FOG = 2,
@@ -199,8 +199,6 @@ GLOBAL_DATUM(planet_muriki, /datum/planet/muriki)
 				)
 		if("summer")
 			roundstart_weather_chances = list(
-				WEATHER_CLEAR = 0,
-				WEATHER_LIGHT_SNOW = 0,
 				WEATHER_OVERCAST = 5,
 				WEATHER_FOG = 5,
 				WEATHER_RAIN = 40,
@@ -209,20 +207,15 @@ GLOBAL_DATUM(planet_muriki, /datum/planet/muriki)
 				)
 		if("autumn")
 			roundstart_weather_chances = list(
-				WEATHER_CLEAR = 0,
 				WEATHER_LIGHT_SNOW = 10,
-				WEATHER_OVERCAST = 0,
-				WEATHER_FOG = 0,
 				WEATHER_RAIN = 40,
 				WEATHER_STORM = 40,
 				WEATHER_HAIL = 15
 				)
 		if("winter")
 			roundstart_weather_chances = list(
-				WEATHER_CLEAR = 0,
 				WEATHER_LIGHT_SNOW = 50,
 				WEATHER_OVERCAST = 0,
-				WEATHER_FOG = 0,
 				WEATHER_RAIN = 20,
 				WEATHER_STORM = 10,
 				WEATHER_HAIL = 24,
@@ -270,7 +263,7 @@ GLOBAL_DATUM(planet_muriki, /datum/planet/muriki)
 				WEATHER_RAIN = 60,
 				WEATHER_HAIL = 5,
 				WEATHER_HOT = 5,
-				WEATHER_ASH_STORM = 5, // Lethal heatwave
+				WEATHER_LETHALHEAT = 5,
 				WEATHER_FOG = 5,
 				)
 		if("autumn")
@@ -305,7 +298,7 @@ GLOBAL_DATUM(planet_muriki, /datum/planet/muriki)
 		WEATHER_RAIN = 10,
 		WEATHER_OVERCAST = 25,
 		WEATHER_HOT = 20,
-		WEATHER_ASH_STORM = 15 // Lethal heatwave
+		WEATHER_LETHALHEAT = 15
 	) // Only used in the summer
 	observed_message = "The heat is unbearable."
 	transition_messages = list(
@@ -347,6 +340,7 @@ GLOBAL_DATUM(planet_muriki, /datum/planet/muriki)
 	color_grading = COLORTINT_WARM
 
 	hazardous_weather = TRUE
+	limits_vision = TRUE
 
 /datum/weather/muriki/acid_overcast/New()
 	switch(GLOB.world_time_season)
@@ -377,10 +371,9 @@ GLOBAL_DATUM(planet_muriki, /datum/planet/muriki)
 		if("winter")
 			transition_chances = list(
 				WEATHER_OVERCAST = 10,
-				WEATHER_FOG = 5,
 				WEATHER_RAIN = 40,
 				WEATHER_LIGHT_SNOW = 20,
-				WEATHER_HAIL = 25
+				WEATHER_HAIL = 30
 				)
 	. = ..()
 
@@ -448,8 +441,7 @@ GLOBAL_DATUM(planet_muriki, /datum/planet/muriki)
 			)
 		if("winter")
 			transition_chances = list(
-				WEATHER_OVERCAST = 3,
-				WEATHER_FOG = 2,
+				WEATHER_OVERCAST = 5,
 				WEATHER_RAIN = 15,
 				WEATHER_STORM = 50,
 				WEATHER_LIGHT_SNOW = 10,
@@ -549,9 +541,8 @@ GLOBAL_DATUM(planet_muriki, /datum/planet/muriki)
 				WEATHER_RAIN = 55,
 				WEATHER_STORM = 10,
 				WEATHER_DOWNPOURWARNING = 3, // Fun times ahead
-				WEATHER_HAIL = 25,
+				WEATHER_HAIL = 27,
 				WEATHER_OVERCAST = 5,
-				WEATHER_FOG = 2,
 				)
 	. = ..()
 
@@ -658,6 +649,7 @@ GLOBAL_DATUM(planet_muriki, /datum/planet/muriki)
 
 	hazardous_weather = TRUE
 	shuttle_crash_chance = 10
+	limits_vision = TRUE
 
 /datum/weather/muriki/downpour/process_effects()
 	..()
@@ -721,6 +713,7 @@ GLOBAL_DATUM(planet_muriki, /datum/planet/muriki)
 
 	hazardous_weather = TRUE
 	shuttle_crash_chance = 25
+	limits_vision = TRUE
 
 /datum/weather/muriki/downpourfatal/process_effects()
 	..()
@@ -931,7 +924,8 @@ GLOBAL_DATUM(planet_muriki, /datum/planet/muriki)
 	color_grading = COLORTINT_COLD
 
 	hazardous_weather = TRUE
-	shuttle_crash_chance = 3 // rare
+	shuttle_crash_chance = 10
+	limits_vision = TRUE
 
 /datum/weather/muriki/blizzard/planet_effect(mob/living/L)
 	if(L.z in holder.our_planet.expected_z_levels)
@@ -1006,6 +1000,40 @@ GLOBAL_DATUM(planet_muriki, /datum/planet/muriki)
 	hazardous_weather = TRUE
 	shuttle_crash_chance = 10
 
+// Like the above but a lot more harmful.
+/datum/weather/muriki/ash_storm
+	name = "ash storm"
+	icon_state = "ashfall_heavy"
+	light_modifier = 0.1
+	light_color = "#FF0000"
+	temp_high = T0C +80
+	temp_low = T0C +50
+	wind_high = 6
+	wind_low = 3
+	flight_failure_modifier = 50
+	transition_chances = list(
+		WEATHER_ASH_STORM = 100
+		)
+	observed_message = "All that can be seen is black smoldering ash."
+	transition_messages = list(
+		"Smoldering clouds of scorching ash billow down around you!"
+	)
+	// Lets recycle.
+	outdoor_sounds_type = /datum/looping_sound/weather/outside_blizzard
+	indoor_sounds_type = /datum/looping_sound/weather/inside_blizzard
+	effect_flags = HAS_PLANET_EFFECT | EFFECT_ONLY_LIVING
+	hazardous_weather = TRUE
+	shuttle_crash_chance = 30
+	limits_vision = TRUE
+
+/datum/weather/muriki/ash_storm/planet_effect(mob/living/L)
+	if(L.z in holder.our_planet.expected_z_levels)
+		var/turf/T = get_turf(L)
+		if(!T.is_outdoors())
+			return // They're indoors, so no need to burn them with ash.
+
+		L.inflict_heat_damage(rand(1, 3))
+
 /////////////////////////////////////////////////////////////////////////////////////////
 // FIREWORKS
 /////////////////////////////////////////////////////////////////////////////////////////
@@ -1037,7 +1065,7 @@ GLOBAL_DATUM(planet_muriki, /datum/planet/muriki)
 	)
 	imminent_transition_message = "A rain is starting... A rain of confetti...?"
 	color_grading = COLORTINT_OMEN
-	shuttle_crash_chance = 8
+	shuttle_crash_chance = 12
 
 
 
@@ -1066,6 +1094,7 @@ GLOBAL_DATUM(planet_muriki, /datum/planet/muriki)
 	)
 	hazardous_weather = TRUE
 	shuttle_crash_chance = 15
+	limits_vision = TRUE
 
 /////////////////////////////////////////////////////////////////////////////////////////
 // EVIL DARKNESS
@@ -1089,6 +1118,7 @@ GLOBAL_DATUM(planet_muriki, /datum/planet/muriki)
 	)
 	hazardous_weather = TRUE
 	shuttle_crash_chance = 3 // rare
+	limits_vision = TRUE
 
 /datum/weather/muriki/clear/hidden_evildarkness/process_effects()
 	. = ..()

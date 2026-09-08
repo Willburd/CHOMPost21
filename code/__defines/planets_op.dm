@@ -3,3 +3,4 @@
 
 #define WEATHER_COLDDARKNESS "frigid darkness"
 #define WEATHER_LONGBLIZZARD "extreme blizzard"
+#define WEATHER_LETHALHEAT "lethal heatwave"

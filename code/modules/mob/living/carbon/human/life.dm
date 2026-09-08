@@ -1651,6 +1651,14 @@
 						if((O.offline && O.offline_vision_restriction == 1) || (!O.offline && O.vision_restriction == 1))
 							found_welder = 1
 				if(absorbed) found_welder = 1
+			// outpost 21 edit addition - Some weather affects vision!
+			var/turf/ground = get_turf(src)
+			if(ground && ground.is_outdoors() && ground.z > 0 && length(SSplanets.z_to_planet) >= ground.z)
+				var/datum/planet/P = SSplanets.z_to_planet[ground.z]
+				var/datum/weather/cur_weather = P?.weather_holder?.current_weather
+				if(cur_weather?.limits_vision)
+					found_welder = 1
+			// outpost 21 edit end
 			if(found_welder)
 				client.screen |= GLOB.global_hud.darkMask
 
