@@ -512,7 +512,7 @@
 	name = "fray wire 50%"
 	chance = 50
 
-/obj/effect/landmark/fray_wire/always_lubed
+/obj/effect/landmark/fray_wire/always_frayed
 	name = "fray wire 100%"
 	chance = 100
 

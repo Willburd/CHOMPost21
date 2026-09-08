@@ -17,4 +17,11 @@
 
 /datum/weather_holder/proc/weather_alarm()
 	SHOULD_NOT_OVERRIDE(TRUE)
-	GLOB.priority_announcement.Announce("Crew are advised to delay EVA activities or prepare and shelter accordingly for approaching weather.", "Attention! Severe weather warning is in effect!", new_sound = ANNOUNCER_MSG_WEATHER_ALERT, zlevel = our_planet.expected_z_levels[1])
+	if(!forecast.len)
+		return
+	var/next_weather = forecast[1]
+	var/datum/weather/new_data = allowed_weather_types[next_weather]
+	var/alarm_sound = ANNOUNCER_MSG_WEATHER_ALERT
+	if(istype(new_data, /datum/weather/muriki/acid_overcast))
+		alarm_sound = ANNOUNCER_MSG_WEATHER_FOG
+	GLOB.priority_announcement.Announce("Crew are advised to delay EVA activities or prepare and shelter accordingly for approaching weather.", "Attention! Severe weather warning is in effect!", new_sound = alarm_sound, zlevel = our_planet.expected_z_levels[1])

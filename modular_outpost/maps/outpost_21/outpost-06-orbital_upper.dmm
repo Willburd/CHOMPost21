@@ -17478,6 +17478,10 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/power_distribution)
+"GZ" = (
+/obj/structure/ladder,
+/turf/simulated/floor/airless,
+/area/offworld/orbital/exterior)
 "Ha" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/aux{
 	dir = 10
@@ -45625,12 +45629,12 @@ Uw
 CR
 Dc
 CR
-Uw
-Uw
-Uw
-Uw
-Uw
-Uw
+bi
+tP
+tP
+tP
+tP
+tP
 CR
 Dc
 CR
@@ -45788,11 +45792,11 @@ CR
 Dc
 CR
 Uw
-Uw
-Uw
-Uw
-Uw
-Uw
+bi
+tP
+GZ
+tP
+bi
 CR
 Dc
 CR
@@ -45951,9 +45955,9 @@ Dc
 CR
 Uw
 Uw
-Uw
-Uw
-Uw
+bi
+bi
+bi
 Uw
 CR
 Dc

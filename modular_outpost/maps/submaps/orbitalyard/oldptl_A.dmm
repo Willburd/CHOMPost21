@@ -1367,12 +1367,6 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/submap/outpost21/yard_generic)
-"xU" = (
-/obj/item/perfect_tele_beacon/stationary{
-	tele_name = "PTL"
-	},
-/turf/simulated/floor/plating,
-/area/submap/outpost21/yard_generic)
 "xV" = (
 /obj/machinery/portable_atmospherics/canister/air,
 /turf/simulated/floor/tiled/milspec,
@@ -4035,7 +4029,7 @@ Wz
 XQ
 Lm
 sU
-xU
+nB
 Kr
 RV
 Ys

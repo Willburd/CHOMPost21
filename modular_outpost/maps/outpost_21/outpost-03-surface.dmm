@@ -10423,7 +10423,8 @@
 	dir = 9
 	},
 /obj/item/perfect_tele_beacon/stationary{
-	tele_name = "Engineering"
+	tele_name = "Engineering";
+	tele_network = "outpost"
 	},
 /turf/simulated/floor/tiled,
 /area/muriki/tramstation/cargeng)
@@ -12079,7 +12080,8 @@
 	icon_state = "4-8"
 	},
 /obj/item/perfect_tele_beacon/stationary{
-	tele_name = "Bar"
+	tele_name = "Bar";
+	tele_network = "outpost"
 	},
 /turf/simulated/floor/tiled/steel,
 /area/hallway/primary/central_two)
@@ -20565,7 +20567,8 @@
 	dir = 1
 	},
 /obj/item/perfect_tele_beacon/stationary{
-	tele_name = "Medical"
+	tele_name = "Medical";
+	tele_network = "outpost"
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/reception)
@@ -47994,7 +47997,8 @@
 	name = "vinestart"
 	},
 /obj/item/perfect_tele_beacon/stationary{
-	tele_name = "Evac"
+	tele_name = "Evac";
+	tele_network = "outpost"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/secondary/exit)
