@@ -301,15 +301,13 @@ GLOBAL_LIST_EMPTY(mannequins)
 	///These are icons that you DO NOT want to be selectable!
 	var/list/blacklisted_icons = list(SPECIES_CUSTOM,SPECIES_PROMETHEAN)
 	///These are icons that you WANT to be selectable, even if they're a whitelist species!
-	var/list/whitelisted_icons = list(SPECIES_FENNEC,SPECIES_XENOHYBRID,SPECIES_VOX,SPECIES_ZORREN_DARK,SPECIES_SHADEKIN) //CHOMEdit
+	var/list/whitelisted_icons = list(SPECIES_FENNEC,SPECIES_XENOHYBRID,SPECIES_VOX,SPECIES_ZORREN_DARK,SPECIES_SHADEKIN,SPECIES_WEREBEAST,SPECIES_VASILISSAN,SPECIES_VOX,SPECIES_XENOCHIMERA,SPECIES_LLEILL) //CHOMEdit // Outpost 21 edit - Allow any custom species base
 	for(var/species_name in GLOB.playable_species)
 		if(species_name in blacklisted_icons)
 			continue
-		/* Outpost 21 edit - Allow any custom species base
 		var/datum/species/S = GLOB.all_species[species_name]
 		if(S.spawn_flags & SPECIES_IS_WHITELISTED)
 			continue
-		*/
 		GLOB.custom_species_bases += species_name
 	for(var/species_name in whitelisted_icons)
 		GLOB.custom_species_bases += species_name
