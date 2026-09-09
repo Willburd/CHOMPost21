@@ -17,7 +17,7 @@
 	can_dirty = FALSE
 	initial_flooring = /datum/decl/flooring/lava // Defining this in case someone DOES step on lava and survive. Somehow.
 	flags = TURF_ACID_IMMUNE
-	// var/datum/looping_sound/lava/soundloop // Outpost 21 edit - Disable lava sound loop
+	// var/datum/looping_sound/lava/soundloop //CHOMPADD // Outpost 21 edit - Disable lava sound loop
 
 /turf/simulated/floor/lava/outdoors
 	outdoors = OUTDOORS_YES
@@ -29,16 +29,18 @@
 	update_icon()
 	update_light()
 	/* Outpost 21 edit - Disable lava sound loop
-	soundloop = new(list(src), FALSE)
-	soundloop.start()
+	soundloop = new(list(src), FALSE) //CHOMPADD
+	soundloop.start() //CHOMPADD
 	*/
 	return ..()
 
 /turf/simulated/floor/lava/Destroy()
 	/* Outpost 21 edit - Disable lava sound loop
-	soundloop.stop()
-	QDEL_NULL(soundloop)
+	soundloop.stop() //CHOMPADD
+	QDEL_NULL(soundloop) //CHOMPADD
 	*/
+	if(datum_flags & DF_ISPROCESSING)
+		STOP_PROCESSING(SSturfs, src)
 	. = ..()
 
 /turf/simulated/floor/lava/make_outdoors()
@@ -67,7 +69,7 @@
 	// Outpost 21 edit end
 	if(burn_stuff(AM))
 		START_PROCESSING(SSturfs, src)
-	. = ..() // Outpost 21 edit(port) - Lava breaks signal logic
+	. = ..()
 
 /turf/simulated/floor/lava/hitby(atom/movable/source, datum/thrownthing/throwingdatum)
 	if(burn_stuff(source))
@@ -89,24 +91,26 @@
 	if(is_safe())
 		return FALSE
 
+	// If argument is set, we're only burning JUST that thing. Otherwise this burns all turf contents.
 	var/thing_to_check = src
 	if(AM)
 		thing_to_check = list(AM)
 
-	for(var/thing in thing_to_check)
+	for(var/atom/movable/thing in thing_to_check)
+		if(thing.throwing || thing.is_incorporeal())
+			continue
 		if(isobj(thing))
 			var/obj/O = thing
-			if(O.throwing || O.is_incorporeal())
-				continue
 			. = TRUE
 			O.lava_act()
-
-		else if(isliving(thing))
+			continue
+		if(isliving(thing))
 			var/mob/living/L = thing
-			if(L.hovering || L.throwing || L.is_incorporeal()) // Flying over the lava. We're just gonna pretend convection doesn't exist.
+			if(L.hovering || L.flying) // Flying over the lava. We're just gonna pretend convection doesn't exist.
 				continue
 			. = TRUE
 			L.lava_act()
+			continue
 
 // Lava that does nothing at all.
 /turf/simulated/floor/lava/harmless/burn_stuff(atom/movable/AM)
