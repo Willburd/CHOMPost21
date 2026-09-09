@@ -6024,6 +6024,7 @@
 #include "modular_outpost\code\modules\maint_recycler\hangout_entries.dm"
 #include "modular_outpost\code\modules\materials\fifty_spawner_mats.dm"
 #include "modular_outpost\code\modules\materials\materials\alien_alloy.dm"
+#include "modular_outpost\code\modules\materials\materials\metals\metals.dm"
 #include "modular_outpost\code\modules\materials\sheets\organic\wood.dm"
 #include "modular_outpost\code\modules\media\juke_remote.dm"
 #include "modular_outpost\code\modules\mining\mine_turfs.dm"
