@@ -286,6 +286,7 @@
 	lateload_z_levels = list(
 			list(Z_NAME_OUTPOST_MISC),
 			list(Z_NAME_OUTPOST_CENTCOM),
+			list(Z_NAME_OUTPOST_TERRACE),
 			list(Z_NAME_OUTPOST_ROGUEMINE_1,Z_NAME_OUTPOST_ROGUEMINE_2)
 		)
 
@@ -307,14 +308,16 @@
 		Z_LEVEL_OUTPOST_SURFACE,
 		Z_LEVEL_OUTPOST_UPPER,
 		Z_LEVEL_OUTPOST_ORBITAL_LOWER,
-		Z_LEVEL_OUTPOST_ORBITAL_UPPER
+		Z_LEVEL_OUTPOST_ORBITAL_UPPER,
+		Z_NAME_OUTPOST_TERRACE
 		)
 
 	confinement_beam_z_levels = list(
 		// Z_LEVEL_OUTPOST_DEEPDARK,
 		Z_LEVEL_OUTPOST_BASEMENT,
 		Z_LEVEL_OUTPOST_SURFACE,
-		Z_LEVEL_OUTPOST_UPPER
+		Z_LEVEL_OUTPOST_UPPER,
+		Z_NAME_OUTPOST_TERRACE
 	)
 
 	// Zlevels with rare ores
@@ -368,7 +371,8 @@
 		Z_LEVEL_OUTPOST_DEEPDARK,
 		Z_LEVEL_OUTPOST_BASEMENT,
 		Z_LEVEL_OUTPOST_SURFACE,
-		Z_LEVEL_OUTPOST_UPPER
+		Z_LEVEL_OUTPOST_UPPER,
+		Z_NAME_ALIAS_SURFACE_WILDS
 	)
 
 
@@ -443,7 +447,6 @@
 	name = "Virtual"
 	flags = MAP_LEVEL_ADMIN|MAP_LEVEL_CONTACT|MAP_LEVEL_XENOARCH_EXEMPT|MAP_LEVEL_SEALED|MAP_LEVEL_BELOW_BLOCKED
 
-
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Muriki overmap sector
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -473,7 +476,9 @@
 		"Rokkaku-Dako" = list("dako_airdrop_muriki_central", "outpost_security_hangar", "outpost_security_hangar", "airdrop_muriki_central", "lake_muriki_southeast", "airdrop_muriki_southwest", "airdrop_muriki_northeast", "airdrop_muriki_northwest"),
 		"Mercenary" = list("airdrop_muriki_central", "lake_muriki_southeast", "airdrop_muriki_southwest", "airdrop_muriki_northeast", "airdrop_muriki_northwest"))
 	//Despite not being in the multi-z complex, these levels are part of the overmap sector
-	extra_z_levels = list()
+	extra_z_levels = list(
+		Z_NAME_ALIAS_SURFACE_WILDS
+	)
 	var/airspace_lockdown = FALSE
 	var/list/recent_targets = list()
 
