@@ -32206,9 +32206,14 @@
 	req_access = list(58)
 	},
 /obj/structure/table/rack,
-/obj/item/perfect_tele/one_beacon,
+/obj/item/perfect_tele/one_beacon{
+	pixel_x = 6
+	},
 /obj/item/key/heavyarmor_tank{
 	pixel_x = -12
+	},
+/obj/item/perfect_tele/station_only{
+	pixel_x = -5
 	},
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/heads/hos)
@@ -71725,6 +71730,9 @@
 /obj/effect/landmark{
 	name = "nukeitem"
 	},
+/obj/item/perfect_tele{
+	name = "Director's translocator"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/security/nuke_storage)
 "rhZ" = (
@@ -84250,12 +84258,10 @@
 /obj/item/universal_translator/ear,
 /obj/item/clothing/accessory/holster/hip/black,
 /obj/item/storage/belt/security,
-/obj/item/perfect_tele{
-	name = "Director's translocator"
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/item/perfect_tele/station_only,
 /turf/simulated/floor/wood,
 /area/crew_quarters/captain)
 "vhk" = (
