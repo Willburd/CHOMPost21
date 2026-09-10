@@ -5966,6 +5966,7 @@
 #include "modular_outpost\code\modules\client\preference_setup\loadout\loadout_fluffitems.dm"
 #include "modular_outpost\code\modules\client\preference_setup\loadout\loadout_general.dm"
 #include "modular_outpost\code\modules\client\preference_setup\loadout\loadout_head.dm"
+#include "modular_outpost\code\modules\client\preference_setup\loadout\loadout_science_removal.dm"
 #include "modular_outpost\code\modules\client\preference_setup\loadout\loadout_uniform.dm"
 #include "modular_outpost\code\modules\clothing\clothing.dm"
 #include "modular_outpost\code\modules\clothing\accessories\accessory.dm"
