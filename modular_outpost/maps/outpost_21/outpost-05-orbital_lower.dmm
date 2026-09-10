@@ -8597,7 +8597,7 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
 	},
-/obj/effect/floor_decal/corner/orange/border{
+/obj/effect/floor_decal/corner/black/border{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
@@ -10913,7 +10913,7 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
 	},
-/obj/effect/floor_decal/corner/orange/border{
+/obj/effect/floor_decal/corner/black/border{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
@@ -11548,11 +11548,11 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 9
 	},
-/obj/effect/floor_decal/corner/orange{
+/obj/machinery/meter,
+/obj/effect/floor_decal/corner/black{
 	dir = 1
 	},
-/obj/effect/floor_decal/corner/orange,
-/obj/machinery/meter,
+/obj/effect/floor_decal/corner/black,
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/phoronics)
 "xD" = (
@@ -11567,7 +11567,7 @@
 	dir = 1;
 	pixel_y = -26
 	},
-/obj/effect/floor_decal/corner/orange,
+/obj/effect/floor_decal/corner/black,
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/phoronics)
 "xE" = (
@@ -11579,7 +11579,7 @@
 	dir = 10
 	},
 /obj/machinery/light,
-/obj/effect/floor_decal/corner/orange,
+/obj/effect/floor_decal/corner/black,
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/phoronics)
 "xF" = (
@@ -11611,7 +11611,7 @@
 	c_tag = "REX - Phoronics South";
 	dir = 1
 	},
-/obj/effect/floor_decal/corner/orange,
+/obj/effect/floor_decal/corner/black,
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/phoronics)
 "xI" = (
@@ -11639,10 +11639,10 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 10
 	},
-/obj/effect/floor_decal/corner/orange,
 /obj/effect/floor_decal/spline/plain{
 	dir = 4
 	},
+/obj/effect/floor_decal/corner/black,
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/phoronics)
 "xL" = (
@@ -11653,17 +11653,17 @@
 	dir = 10
 	},
 /obj/structure/extinguisher_cabinet{
-	pixel_x = -6;
+	pixel_x = 6;
 	pixel_y = -32;
 	dir = 1
 	},
 /obj/structure/filingcabinet{
 	pixel_x = -4
 	},
-/obj/effect/floor_decal/corner/orange,
 /obj/structure/window/basic{
 	dir = 8
 	},
+/obj/effect/floor_decal/corner/black,
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/phoronics/burn_chamber)
 "xM" = (
@@ -11681,7 +11681,6 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 10
 	},
-/obj/effect/floor_decal/corner/orange,
 /obj/machinery/power/apc{
 	name = "south bump";
 	pixel_y = -24
@@ -11694,6 +11693,7 @@
 	pixel_y = 2
 	},
 /obj/item/pen,
+/obj/effect/floor_decal/corner/black,
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/phoronics/burn_chamber)
 "xO" = (
@@ -11718,7 +11718,7 @@
 	dir = 10
 	},
 /obj/machinery/light,
-/obj/effect/floor_decal/corner/orange,
+/obj/effect/floor_decal/corner/black,
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/phoronics/burn_chamber)
 "xP" = (
@@ -12118,7 +12118,7 @@
 /obj/structure/table/standard,
 /obj/item/cargo_scanner,
 /obj/item/cargo_scanner,
-/obj/effect/floor_decal/corner/orange{
+/obj/effect/floor_decal/corner/black{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
@@ -12386,7 +12386,7 @@
 /obj/structure/sign/periodic{
 	pixel_x = -32
 	},
-/obj/effect/floor_decal/corner/orange{
+/obj/effect/floor_decal/corner/black{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
@@ -12494,11 +12494,11 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 5
 	},
-/obj/effect/floor_decal/corner/orange,
-/obj/effect/floor_decal/corner/orange{
+/obj/machinery/light{
 	dir = 1
 	},
-/obj/machinery/light{
+/obj/effect/floor_decal/corner/black,
+/obj/effect/floor_decal/corner/black{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
@@ -12641,7 +12641,7 @@
 /obj/item/analyzer,
 /obj/item/tool/screwdriver,
 /obj/item/tool/wrench/pipe,
-/obj/effect/floor_decal/corner/orange{
+/obj/effect/floor_decal/corner/black{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
@@ -12920,10 +12920,10 @@
 /obj/structure/closet/firecloset/full,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/effect/floor_decal/corner/orange{
+/obj/effect/floor_decal/corner/black{
 	dir = 1
 	},
-/obj/effect/floor_decal/corner/orange,
+/obj/effect/floor_decal/corner/black,
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/phoronics)
 "zO" = (
@@ -12933,7 +12933,7 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 10
 	},
-/obj/effect/floor_decal/corner/orange,
+/obj/effect/floor_decal/corner/black,
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/phoronics)
 "zP" = (
@@ -12983,8 +12983,8 @@
 /area/offworld/orbital/station/halls/stairs_lower)
 "zU" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/effect/floor_decal/corner/orange,
 /obj/effect/floor_decal/spline/plain,
+/obj/effect/floor_decal/corner/black,
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/phoronics)
 "zV" = (
@@ -12996,8 +12996,8 @@
 	},
 /obj/structure/closet/bombcloset,
 /obj/machinery/light,
-/obj/effect/floor_decal/corner/orange,
 /obj/effect/floor_decal/spline/plain,
+/obj/effect/floor_decal/corner/black,
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/phoronics)
 "zW" = (
@@ -13026,10 +13026,10 @@
 	pixel_y = -26;
 	dir = 1
 	},
-/obj/effect/floor_decal/corner/orange,
-/obj/effect/floor_decal/corner/orange{
+/obj/effect/floor_decal/corner/black{
 	dir = 1
 	},
+/obj/effect/floor_decal/corner/black,
 /turf/simulated/floor/tiled/steel,
 /area/offworld/orbital/phoronics/bomb_test_range)
 "zY" = (
@@ -13043,7 +13043,7 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 10
 	},
-/obj/effect/floor_decal/corner/orange,
+/obj/effect/floor_decal/corner/black,
 /turf/simulated/floor/tiled/steel,
 /area/offworld/orbital/phoronics/bomb_test_range)
 "zZ" = (
@@ -13072,7 +13072,7 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 10
 	},
-/obj/effect/floor_decal/corner/orange,
+/obj/effect/floor_decal/corner/black,
 /turf/simulated/floor/tiled/steel,
 /area/offworld/orbital/phoronics/bomb_test_range)
 "Ab" = (
@@ -13095,7 +13095,7 @@
 	c_tag = "REX - Phoronics Mass Driver";
 	dir = 1
 	},
-/obj/effect/floor_decal/corner/orange,
+/obj/effect/floor_decal/corner/black,
 /turf/simulated/floor/tiled/steel,
 /area/offworld/orbital/phoronics/bomb_test_range)
 "Ac" = (
@@ -13317,7 +13317,7 @@
 	c_tag = "REX - Phoronics East";
 	dir = 8
 	},
-/obj/effect/floor_decal/corner/orange,
+/obj/effect/floor_decal/corner/black,
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/phoronics)
 "AD" = (
@@ -13328,9 +13328,6 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 9
 	},
-/obj/effect/floor_decal/corner/orange{
-	dir = 1
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
 	},
@@ -13338,6 +13335,9 @@
 	dir = 8;
 	name = "Station Intercom (General)";
 	pixel_x = -21
+	},
+/obj/effect/floor_decal/corner/black{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/steel,
 /area/offworld/orbital/phoronics/bomb_test_range)
@@ -13355,10 +13355,10 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 6
 	},
-/obj/effect/floor_decal/corner/orange,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
+/obj/effect/floor_decal/corner/black,
 /turf/simulated/floor/tiled/steel,
 /area/offworld/orbital/phoronics/bomb_test_range)
 "AH" = (
@@ -13810,7 +13810,7 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 9
 	},
-/obj/effect/floor_decal/corner/orange{
+/obj/effect/floor_decal/corner/black{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
@@ -13928,7 +13928,7 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 4
 	},
-/obj/effect/floor_decal/corner/orange,
+/obj/effect/floor_decal/corner/black,
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/phoronics)
 "BN" = (
@@ -13938,7 +13938,7 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 9
 	},
-/obj/effect/floor_decal/corner/orange{
+/obj/effect/floor_decal/corner/black{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/steel,
@@ -13960,11 +13960,11 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 6
 	},
-/obj/effect/floor_decal/corner/orange,
 /obj/structure/disposalpipe/segment{
 	dir = 8;
 	icon_state = "pipe-c"
 	},
+/obj/effect/floor_decal/corner/black,
 /turf/simulated/floor/tiled/steel,
 /area/offworld/orbital/phoronics/bomb_test_range)
 "BQ" = (
@@ -14039,10 +14039,10 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 10
 	},
-/obj/effect/floor_decal/corner/orange{
+/obj/effect/floor_decal/corner/black,
+/obj/effect/floor_decal/corner/black{
 	dir = 1
 	},
-/obj/effect/floor_decal/corner/orange,
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/phoronics)
 "BZ" = (
@@ -14179,12 +14179,12 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/effect/floor_decal/corner/orange{
-	dir = 1
-	},
 /obj/structure/extinguisher_cabinet{
 	pixel_x = -5;
 	pixel_y = 30
+	},
+/obj/effect/floor_decal/corner/black{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/phoronics)
@@ -14231,7 +14231,7 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 5
 	},
-/obj/effect/floor_decal/corner/orange{
+/obj/effect/floor_decal/corner/black{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
@@ -14256,10 +14256,10 @@
 	},
 /obj/structure/closet/firecloset/full,
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
-/obj/effect/floor_decal/corner/orange,
-/obj/effect/floor_decal/corner/orange{
+/obj/effect/floor_decal/corner/black{
 	dir = 1
 	},
+/obj/effect/floor_decal/corner/black,
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/phoronics)
 "Cm" = (
@@ -14276,10 +14276,10 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 9
 	},
-/obj/effect/floor_decal/corner/orange{
+/obj/item/geiger/wall/west,
+/obj/effect/floor_decal/corner/black{
 	dir = 1
 	},
-/obj/item/geiger/wall/west,
 /turf/simulated/floor/tiled/steel,
 /area/offworld/orbital/phoronics/bomb_test_range)
 "Cn" = (
@@ -14287,7 +14287,7 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 5
 	},
-/obj/effect/floor_decal/corner/orange{
+/obj/effect/floor_decal/corner/black{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/steel,
@@ -14297,7 +14297,7 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 5
 	},
-/obj/effect/floor_decal/corner/orange{
+/obj/effect/floor_decal/corner/black{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/steel,
@@ -14329,16 +14329,16 @@
 	pixel_x = 26;
 	pixel_y = -6
 	},
-/obj/effect/floor_decal/corner/orange{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/orange,
 /obj/machinery/disposal/wall{
 	pixel_y = 32
 	},
 /obj/structure/disposalpipe/trunk{
 	dir = 2
 	},
+/obj/effect/floor_decal/corner/black{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/black,
 /turf/simulated/floor/tiled/steel,
 /area/offworld/orbital/phoronics/bomb_test_range)
 "Cr" = (
@@ -14794,7 +14794,7 @@
 	icon_state = "pipe-c";
 	dir = 8
 	},
-/obj/effect/floor_decal/corner/orange,
+/obj/effect/floor_decal/corner/black,
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/phoronics/airlock)
 "De" = (
@@ -14840,7 +14840,7 @@
 	dir = 8;
 	pixel_y = -6
 	},
-/obj/effect/floor_decal/corner/orange,
+/obj/effect/floor_decal/corner/black,
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/phoronics/airlock)
 "Dg" = (
@@ -14869,10 +14869,10 @@
 	c_tag = "REX - Phoronics EVA Chamber";
 	dir = 4
 	},
-/obj/effect/floor_decal/corner/orange{
+/obj/effect/floor_decal/corner/black,
+/obj/effect/floor_decal/corner/black{
 	dir = 1
 	},
-/obj/effect/floor_decal/corner/orange,
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/phoronics/airlock)
 "Di" = (
@@ -14905,7 +14905,7 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 10
 	},
-/obj/effect/floor_decal/corner/orange,
+/obj/effect/floor_decal/corner/black,
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/phoronics/airlock)
 "Dl" = (
@@ -14932,7 +14932,7 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 6
 	},
-/obj/effect/floor_decal/corner/orange,
+/obj/effect/floor_decal/corner/black,
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/phoronics/airlock)
 "Dn" = (
@@ -15100,7 +15100,7 @@
 	dir = 5
 	},
 /obj/structure/closet/bombcloset,
-/obj/effect/floor_decal/corner/orange{
+/obj/effect/floor_decal/corner/black{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
@@ -15117,7 +15117,7 @@
 	dir = 4
 	},
 /obj/machinery/vending/phoronresearch,
-/obj/effect/floor_decal/corner/orange{
+/obj/effect/floor_decal/corner/black{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
@@ -15378,10 +15378,10 @@
 /obj/structure/cable/green{
 	icon_state = "0-8"
 	},
-/obj/effect/floor_decal/corner/orange,
-/obj/effect/floor_decal/corner/orange{
+/obj/effect/floor_decal/corner/black{
 	dir = 1
 	},
+/obj/effect/floor_decal/corner/black,
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/phoronics)
 "Ea" = (
@@ -15436,7 +15436,7 @@
 /obj/machinery/disposal/wall{
 	pixel_y = 32
 	},
-/obj/effect/floor_decal/corner/orange{
+/obj/effect/floor_decal/corner/black{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
@@ -15457,10 +15457,10 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/effect/floor_decal/corner/orange,
-/obj/effect/floor_decal/corner/orange{
+/obj/effect/floor_decal/corner/black{
 	dir = 1
 	},
+/obj/effect/floor_decal/corner/black,
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/phoronics/airlock)
 "Eg" = (
@@ -15477,7 +15477,7 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 9
 	},
-/obj/effect/floor_decal/corner/orange{
+/obj/effect/floor_decal/corner/black{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
@@ -15499,7 +15499,7 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 5
 	},
-/obj/effect/floor_decal/corner/orange{
+/obj/effect/floor_decal/corner/black{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
@@ -15515,10 +15515,10 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 6
 	},
-/obj/effect/floor_decal/corner/orange,
-/obj/effect/floor_decal/corner/orange{
+/obj/effect/floor_decal/corner/black{
 	dir = 1
 	},
+/obj/effect/floor_decal/corner/black,
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/phoronics/airlock)
 "Ej" = (
@@ -15543,7 +15543,7 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 1
 	},
-/obj/effect/floor_decal/corner/orange,
+/obj/effect/floor_decal/corner/black,
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/phoronics)
 "En" = (
@@ -15557,7 +15557,7 @@
 	c_tag = "REX - Phoronics Entrance";
 	dir = 1
 	},
-/obj/effect/floor_decal/corner/orange,
+/obj/effect/floor_decal/corner/black,
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/phoronics)
 "Eo" = (
@@ -15575,7 +15575,7 @@
 	pixel_x = 30;
 	pixel_y = 10
 	},
-/obj/effect/floor_decal/corner/orange,
+/obj/effect/floor_decal/corner/black,
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/phoronics)
 "Ep" = (
@@ -15802,7 +15802,7 @@
 	pixel_x = 26;
 	pixel_y = 0
 	},
-/obj/effect/floor_decal/corner/orange,
+/obj/effect/floor_decal/corner/black,
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/phoronics)
 "EB" = (
@@ -15860,7 +15860,7 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/obj/effect/floor_decal/corner/orange{
+/obj/effect/floor_decal/corner/black{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
@@ -15964,7 +15964,7 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 4
 	},
-/obj/effect/floor_decal/corner/orange{
+/obj/effect/floor_decal/corner/black{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
@@ -16426,7 +16426,7 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 6
 	},
-/obj/effect/floor_decal/corner/orange/border{
+/obj/effect/floor_decal/corner/black/border{
 	dir = 6
 	},
 /turf/simulated/floor/tiled/milspec,
@@ -16468,7 +16468,7 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
 	},
-/obj/effect/floor_decal/corner/orange/border{
+/obj/effect/floor_decal/corner/black/border{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
