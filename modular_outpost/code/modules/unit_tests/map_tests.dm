@@ -108,6 +108,7 @@
 		/area/muriki/lowerelev,
 		/area/muriki/lowerevac,
 		/area/offworld/orbital/phoronics/burn_chamber,
+		/area/rnd/xenobiology/lost,
 		)
 
 	var/list/forced_hallway = list(
