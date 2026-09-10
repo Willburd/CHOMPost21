@@ -26060,10 +26060,6 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 10
 	},
-/obj/machinery/button/ignition{
-	pixel_x = 9;
-	pixel_y = -38
-	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/phoronics/burn)
 "iCq" = (
