@@ -636,13 +636,19 @@ EXTERIOR_AREA_BEHAVIOR(/area/offworld/orbital/exterior/starboard_solars)
 /area/offworld/orbital/phoronics/burn_chamber
 	name = "\improper Orbital Phoronics Burn Chamber"
 	icon_state = "red"
+	sound_env = SMALL_ENCLOSED
 
 /area/offworld/orbital/phoronics/overflow_storage
 	name = "\improper Orbital Phoronics Overflow Storage"
 	icon_state = "locker"
+	sound_env = SMALL_ENCLOSED
 
 /area/offworld/orbital/phoronics/pressure_release
 	name = "\improper Orbital Phoronics Pressure Release Chamber"
+	sound_env = SMALL_ENCLOSED
+	flags = /area/muriki/bathroom::flags
+	use_emergency_overlay = TRUE
+	color_grading = COLORTINT_CHILL
 
 /area/offworld/orbital/phoronics/breakroom
 	name = "\improper Orbital Phoronics Breakroom"

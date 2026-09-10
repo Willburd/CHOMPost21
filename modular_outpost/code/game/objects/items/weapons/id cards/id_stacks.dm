@@ -13,3 +13,8 @@
 /obj/item/card/id/engineering/roboticist
 	name = "Roboticist's ID"
 	initial_sprite_stack = list("base-stamp", "top-orange", "stamp-n", "stripe-purple")
+
+/obj/item/card/id/science/phoronics
+	name = JOB_ALT_PHORON_RESEARCHER + "'s ID"
+	initial_sprite_stack = list("base-stamp", "top-orange", "stamp-n", "stripe-purple")
+	rank = JOB_ATMOSPHERIC_TECHNICIAN

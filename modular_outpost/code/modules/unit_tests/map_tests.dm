@@ -107,6 +107,7 @@
 		/area/offworld/orbital/station/south_engine_access_east,
 		/area/muriki/lowerelev,
 		/area/muriki/lowerevac,
+		/area/offworld/orbital/phoronics/burn_chamber,
 		)
 
 	var/list/forced_hallway = list(
@@ -464,7 +465,7 @@
 		var/area/A = get_area(P)
 		if(!A)
 			continue
-		if(A.type == /area/maintenance/incinerator || A.type == /area/rnd/research/phoronics/burn) // Exempt
+		if(A.type == /area/maintenance/incinerator || A.type == /area/rnd/research/phoronics/burn || A.type == /area/offworld/orbital/phoronics/burn_chamber) // Exempt
 			continue
 		var/turf/T = get_turf(P)
 		if(!istype(A,/area/shuttle) && iswall(T))

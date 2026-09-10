@@ -12,8 +12,9 @@
 
 /datum/job/atmos/New()
 	. = ..()
-	access |= list(ACCESS_ROBOTICS)
+	access |= list(ACCESS_ROBOTICS, ACCESS_TOX, ACCESS_TOX_STORAGE)
 	alt_titles |= list(JOB_ALT_DISPOSALS_TECHNICIAN = /datum/alt_title/disposals_tech)
+	alt_titles |= list(JOB_ALT_PHORON_RESEARCHER = /datum/alt_title/phoron_research, JOB_ALT_GAS_PHYSICIST = /datum/alt_title/gas_physicist)
 
 
 // Alt titles

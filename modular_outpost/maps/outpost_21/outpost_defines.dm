@@ -204,6 +204,7 @@
 										/area/maintenance/damaged_resleeverC,
 										/area/security/brig_hole,
 										/area/muriki/crew/bunker,
+										/area/offworld/orbital/phoronics/burn_chamber,
 										// Shadekin exclusions
 										/area/maintenance/shadekin_dark/waste,
 										/area/maintenance/shadekin_dark/sec,

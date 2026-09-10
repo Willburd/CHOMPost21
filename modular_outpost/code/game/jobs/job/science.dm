@@ -9,7 +9,7 @@
 /datum/job/scientist/New()
 	. = ..()
 	access -= list(ACCESS_ROBOTICS, ACCESS_XENOBOTANY)
-	alt_titles -= list(JOB_ALT_CIRCUIT_DESIGNER, JOB_ALT_CIRCUIT_PROGRAMMER)
+	alt_titles -= list(JOB_ALT_CIRCUIT_DESIGNER, JOB_ALT_CIRCUIT_PROGRAMMER, JOB_ALT_PHORON_RESEARCHER, JOB_ALT_GAS_PHYSICIST)
 	alt_titles[JOB_ALT_TELEPORT_OPERATOR] = /datum/alt_title/teleport_operation
 
 
@@ -51,3 +51,17 @@
 /datum/alt_title/teleport_operation
 	title = JOB_ALT_TELEPORT_OPERATOR
 	title_blurb = "A " + JOB_ALT_TELEPORT_OPERATOR + " is a " + JOB_SCIENTIST + " who operates the public teleporter using telescience expertise to get crew to remote locations safely."
+
+/datum/alt_title/phoron_research
+	title_outfit = /datum/decl/hierarchy/outfit/job/engineering/atmos/phoronics
+
+/datum/alt_title/gas_physicist
+	title_outfit = /datum/decl/hierarchy/outfit/job/engineering/atmos/phoronics
+
+
+// Outfits
+/datum/decl/hierarchy/outfit/job/engineering/atmos/phoronics
+	name = OUTFIT_JOB_NAME(JOB_SCIENTIST)
+	id_type = /obj/item/card/id/science/phoronics
+	suit = /obj/item/clothing/suit/storage/toggle/labcoat/science
+	l_pocket = /obj/item/experi_scanner

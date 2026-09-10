@@ -11658,6 +11658,9 @@
 /obj/structure/sign/nosmoking_2{
 	pixel_x = -32
 	},
+/obj/machinery/medical_kiosk{
+	pixel_y = 2
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/central)
 "wh" = (
@@ -17480,6 +17483,9 @@
 /area/offworld/orbital/station/power_distribution)
 "GZ" = (
 /obj/structure/ladder,
+/obj/structure/railing/grey{
+	dir = 4
+	},
 /turf/simulated/floor/airless,
 /area/offworld/orbital/exterior)
 "Ha" = (
@@ -17504,6 +17510,10 @@
 "Hc" = (
 /turf/simulated/wall/r_wall,
 /area/offworld/orbital/station/power_distribution)
+"Hd" = (
+/obj/structure/railing/grey,
+/turf/simulated/floor/airless,
+/area/offworld/orbital/exterior)
 "He" = (
 /obj/machinery/door/airlock/glass_command{
 	req_one_access = list(16,52,56)
@@ -17612,6 +17622,29 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/power_distribution)
+"Ho" = (
+/obj/structure/railing/grey{
+	dir = 4
+	},
+/obj/structure/railing/grey,
+/turf/simulated/floor/airless,
+/area/offworld/orbital/exterior)
+"Hp" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/stand_clear/yellow,
+/turf/simulated/floor/airless,
+/area/offworld/orbital/exterior)
+"Hq" = (
+/obj/structure/railing/grey{
+	dir = 4
+	},
+/obj/structure/railing/grey{
+	dir = 1
+	},
+/turf/simulated/floor/airless,
+/area/offworld/orbital/exterior)
 "Ht" = (
 /obj/structure/railing/grey,
 /obj/machinery/power/terminal{
@@ -19787,6 +19820,9 @@
 /obj/effect/floor_decal/corner/orange{
 	dir = 10
 	},
+/obj/machinery/medical_kiosk{
+	pixel_y = 2
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/power_distribution)
 "Pu" = (
@@ -21580,6 +21616,9 @@
 	dir = 5
 	},
 /obj/item/geiger/wall/north,
+/obj/machinery/medical_kiosk{
+	pixel_y = 2
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/ai_transit_hub)
 "Vp" = (
@@ -45468,8 +45507,8 @@ rC
 tP
 rC
 CS
-DM
-DM
+tP
+tP
 bn
 CF
 OQ
@@ -45626,21 +45665,21 @@ Uw
 Uw
 Uw
 Uw
-CR
-Dc
-CR
+bi
+Uw
+bi
 bi
 tP
 tP
 tP
 tP
 tP
-CR
-Dc
-CR
-Uw
-Uw
-Uw
+Dl
+tP
+CQ
+tP
+Hd
+bi
 Uw
 Uw
 Uw
@@ -45788,21 +45827,21 @@ Uw
 Uw
 Uw
 Uw
-CR
-Dc
-CR
+bi
 Uw
 bi
-tP
+Uw
+bi
+Hq
 GZ
-tP
+Ho
 bi
-CR
-Dc
-CR
-Uw
-Uw
-Uw
+Dp
+tP
+CT
+tP
+Hd
+bi
 Uw
 Uw
 Uw
@@ -45950,20 +45989,20 @@ Uw
 Uw
 Uw
 Uw
-CR
-Dc
-CR
+bi
+Uw
+bi
 Uw
 Uw
 bi
 bi
 bi
 Uw
-CR
-Dc
-CR
-Uw
-Uw
+Hp
+tP
+CS
+tP
+Ho
 Uw
 Uw
 Uw
@@ -46112,18 +46151,18 @@ Uw
 Uw
 Uw
 Uw
-CR
-Dc
-CR
+bi
+Uw
+bi
 Uw
 Uw
 Uw
 Uw
 Uw
 Uw
-CR
-Dc
-CR
+bi
+Uw
+bi
 Uw
 Uw
 Uw
@@ -46283,9 +46322,9 @@ Uw
 Uw
 Uw
 Uw
-Uw
-Uw
-Uw
+bi
+bi
+bi
 Uw
 Uw
 Uw
@@ -46445,9 +46484,9 @@ Uw
 Uw
 Uw
 Uw
+bi
 Uw
-Uw
-Uw
+bi
 Uw
 Uw
 Uw
@@ -46607,9 +46646,9 @@ Uw
 Uw
 Uw
 Uw
+bi
 Uw
-Uw
-Uw
+bi
 Uw
 Uw
 Uw
@@ -46769,9 +46808,9 @@ Uw
 Uw
 Uw
 Uw
+bi
 Uw
-Uw
-Uw
+bi
 Uw
 Uw
 Uw
@@ -46933,7 +46972,7 @@ Uw
 Uw
 Uw
 Uw
-Uw
+bi
 Uw
 Uw
 Uw

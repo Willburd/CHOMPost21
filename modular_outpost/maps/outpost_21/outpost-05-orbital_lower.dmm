@@ -46,6 +46,11 @@
 	dir = 1
 	},
 /obj/machinery/vending/coffee,
+/obj/item/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 24
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/stairs_lower)
 "ag" = (
@@ -3172,11 +3177,6 @@
 /area/offworld/orbital/station/rust_gas_storage)
 "hu" = (
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/glass_research{
-	id_tag = "researchdoor";
-	req_one_access = list(40,47)
-	},
-/obj/item/tape/engineering,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
@@ -3192,6 +3192,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/aux{
 	dir = 4
 	},
+/obj/machinery/door/airlock/glass,
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/halls/lower/aft)
 "hv" = (
@@ -3845,11 +3846,7 @@
 /area/offworld/orbital/station/halls/lower/port)
 "iL" = (
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/glass_research{
-	id_tag = "researchdoor";
-	req_one_access = list(40,47)
-	},
-/obj/item/tape/engineering,
+/obj/machinery/door/airlock/glass,
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/halls/lower/aft)
 "iM" = (
@@ -4002,6 +3999,9 @@
 	},
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/halls/lower/port)
+"jc" = (
+/turf/simulated/wall/r_wall,
+/area/offworld/orbital/phoronics)
 "jd" = (
 /obj/structure/cable/green{
 	icon_state = "1-4"
@@ -8452,6 +8452,12 @@
 	dir = 4;
 	pixel_x = -30
 	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/lower/aft)
 "rp" = (
@@ -8464,6 +8470,14 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/backup_power)
+"rq" = (
+/obj/machinery/light_switch{
+	dir = 4;
+	pixel_x = -26;
+	pixel_y = -20
+	},
+/turf/simulated/wall/plastitanium,
+/area/offworld/orbital/phoronics/burn_chamber)
 "rr" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-8"
@@ -8480,6 +8494,12 @@
 "rs" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
+	},
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/lightgrey/bordercorner{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/lower/aft)
@@ -8505,6 +8525,12 @@
 	dir = 4;
 	name = "Station Intercom (General)";
 	pixel_x = 24
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/purple/border{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/lower/aft)
@@ -8551,7 +8577,8 @@
 /obj/structure/cable/green{
 	icon_state = "2-8"
 	},
-/turf/simulated/floor/tiled/milspec,
+/obj/effect/catwalk_plated,
+/turf/simulated/floor/plating,
 /area/offworld/orbital/station/halls/lower/aft)
 "ry" = (
 /obj/machinery/firealarm{
@@ -8562,6 +8589,12 @@
 /obj/structure/disposalpipe/segment{
 	dir = 8;
 	icon_state = "pipe-c"
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/orange/border{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/lower/aft)
@@ -8595,11 +8628,11 @@
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 1
 	},
-/obj/effect/floor_decal/corner/lightgrey/border{
-	dir = 4
-	},
 /obj/effect/floor_decal/corner/lightgrey/bordercorner{
 	dir = 1
+	},
+/obj/effect/floor_decal/corner/purple/border{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/lower/aft)
@@ -10873,6 +10906,12 @@
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/orange/border{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/lower/aft)
 "wi" = (
@@ -11281,7 +11320,7 @@
 /area/offworld/orbital/exterior)
 "xc" = (
 /turf/simulated/wall/r_wall,
-/area/offworld/orbital/phoronics/burn_chamber)
+/area/offworld/orbital/exterior)
 "xd" = (
 /turf/simulated/wall/r_wall,
 /area/offworld/orbital/phoronics/overflow_storage)
@@ -11297,19 +11336,19 @@
 	dir = 5
 	},
 /turf/simulated/floor/plating,
-/area/offworld/orbital/phoronics/burn_chamber)
+/area/offworld/orbital/exterior)
 "xg" = (
 /obj/machinery/atmospherics/pipe/simple/visible/purple{
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/offworld/orbital/phoronics/burn_chamber)
+/area/offworld/orbital/exterior)
 "xh" = (
 /obj/machinery/atmospherics/pipe/simple/visible/purple{
 	dir = 9
 	},
 /turf/simulated/floor/plating,
-/area/offworld/orbital/phoronics/burn_chamber)
+/area/offworld/orbital/exterior)
 "xi" = (
 /obj/effect/floor_decal/borderfloor/corner,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -11331,6 +11370,10 @@
 "xk" = (
 /obj/machinery/portable_atmospherics/powered/pump/filled,
 /obj/effect/floor_decal/industrial/outline/blue,
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "REX - Phoronics Overflow Storage";
+	dir = 1
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/phoronics/overflow_storage)
 "xl" = (
@@ -11359,6 +11402,11 @@
 "xn" = (
 /obj/machinery/pipedispenser,
 /obj/effect/floor_decal/industrial/outline/blue,
+/obj/item/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = 26
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/phoronics/overflow_storage)
 "xo" = (
@@ -11367,14 +11415,14 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/red,
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/offworld/orbital/phoronics/burn_chamber)
+/area/offworld/orbital/phoronics)
 "xp" = (
 /obj/machinery/atmospherics/pipe/simple/visible/purple,
 /obj/structure/window/maintenance_panel{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/offworld/orbital/phoronics/burn_chamber)
+/area/offworld/orbital/phoronics)
 "xq" = (
 /turf/simulated/wall/plastitanium,
 /area/offworld/orbital/phoronics/burn_chamber)
@@ -11467,11 +11515,6 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/phoronics/overflow_storage)
 "xz" = (
-/obj/item/radio/intercom{
-	dir = 4;
-	name = "Station Intercom (General)";
-	pixel_x = 26
-	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
@@ -11501,8 +11544,12 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 9
 	},
+/obj/effect/floor_decal/corner/orange{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/orange,
 /turf/simulated/floor/tiled/white,
-/area/offworld/orbital/phoronics/burn_chamber)
+/area/offworld/orbital/phoronics)
 "xD" = (
 /obj/machinery/atmospherics/portables_connector{
 	dir = 4
@@ -11515,8 +11562,9 @@
 	dir = 1;
 	pixel_y = -26
 	},
+/obj/effect/floor_decal/corner/orange,
 /turf/simulated/floor/tiled/white,
-/area/offworld/orbital/phoronics/burn_chamber)
+/area/offworld/orbital/phoronics)
 "xE" = (
 /obj/machinery/atmospherics/binary/pump{
 	dir = 4;
@@ -11526,8 +11574,9 @@
 	dir = 10
 	},
 /obj/machinery/light,
+/obj/effect/floor_decal/corner/orange,
 /turf/simulated/floor/tiled/white,
-/area/offworld/orbital/phoronics/burn_chamber)
+/area/offworld/orbital/phoronics)
 "xF" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/plating,
@@ -11553,8 +11602,13 @@
 	dir = 10
 	},
 /obj/item/geiger/wall/south,
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "REX - Phoronics South";
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/orange,
 /turf/simulated/floor/tiled/white,
-/area/offworld/orbital/phoronics/burn_chamber)
+/area/offworld/orbital/phoronics)
 "xI" = (
 /obj/machinery/power/emitter/gyrotron{
 	dir = 1;
@@ -11577,8 +11631,12 @@
 /obj/machinery/atmospherics/pipe/simple/visible/purple{
 	dir = 10
 	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 10
+	},
+/obj/effect/floor_decal/corner/orange,
 /turf/simulated/floor/tiled/white,
-/area/offworld/orbital/phoronics/burn_chamber)
+/area/offworld/orbital/phoronics)
 "xL" = (
 /obj/machinery/atmospherics/pipe/simple/visible/red{
 	dir = 5
@@ -11594,8 +11652,9 @@
 /obj/structure/filingcabinet{
 	pixel_x = 8
 	},
+/obj/effect/floor_decal/corner/orange,
 /turf/simulated/floor/tiled/white,
-/area/offworld/orbital/phoronics/burn_chamber)
+/area/offworld/orbital/phoronics)
 "xM" = (
 /turf/space,
 /area/space)
@@ -11611,8 +11670,9 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 10
 	},
+/obj/effect/floor_decal/corner/orange,
 /turf/simulated/floor/tiled/white,
-/area/offworld/orbital/phoronics/burn_chamber)
+/area/offworld/orbital/phoronics)
 "xO" = (
 /obj/machinery/atmospherics/pipe/simple/visible/red{
 	dir = 4
@@ -11635,8 +11695,9 @@
 	dir = 10
 	},
 /obj/machinery/light,
+/obj/effect/floor_decal/corner/orange,
 /turf/simulated/floor/tiled/white,
-/area/offworld/orbital/phoronics/burn_chamber)
+/area/offworld/orbital/phoronics)
 "xP" = (
 /obj/structure/grille,
 /obj/structure/window/plastitanium{
@@ -11682,7 +11743,15 @@
 /obj/effect/floor_decal/industrial/warning/color/red{
 	dir = 4
 	},
-/turf/simulated/floor/reinforced/airless,
+/obj/machinery/light,
+/obj/machinery/power/apc{
+	name = "south bump";
+	pixel_y = -24
+	},
+/obj/structure/cable/green{
+	icon_state = "0-1"
+	},
+/turf/simulated/floor/reinforced,
 /area/offworld/orbital/phoronics/burn_chamber)
 "xS" = (
 /obj/machinery/atmospherics/unary/vent_pump/siphon/on{
@@ -11723,10 +11792,6 @@
 	},
 /turf/simulated/floor/airless,
 /area/offworld/orbital/phoronics/burn_chamber)
-"xX" = (
-/obj/structure/lattice,
-/turf/space,
-/area/offworld/orbital/phoronics/bomb_test_range)
 "xY" = (
 /obj/machinery/autolathe,
 /obj/fiftyspawner/steel,
@@ -11777,24 +11842,20 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/rust_tool_storage)
 "yd" = (
-/obj/machinery/door/airlock/glass_research{
-	name = "Phoronics Supply";
-	req_access = list(8);
-	req_one_access = list(8,47,52)
-	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/machinery/door/airlock/glass_atmos{
+	name = "Phoronics Supply";
+	req_one_access = list(24,40)
+	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/offworld/orbital/phoronics/overflow_storage)
 "ye" = (
 /obj/machinery/atmospherics/pipe/simple/visible/red,
-/obj/effect/floor_decal/corner/purple{
-	dir = 9
-	},
 /obj/structure/cable/green{
 	icon_state = "1-8"
 	},
@@ -11802,28 +11863,45 @@
 	icon_state = "pipe-c";
 	dir = 8
 	},
+/obj/machinery/light_switch{
+	dir = 4;
+	pixel_x = -25;
+	pixel_y = -21
+	},
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
 /turf/simulated/floor/tiled/white,
-/area/offworld/orbital/phoronics/burn_chamber)
+/area/offworld/orbital/phoronics)
 "yf" = (
 /obj/machinery/atmospherics/pipe/simple/visible/red{
 	dir = 5
 	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/white,
-/area/offworld/orbital/phoronics/burn_chamber)
+/area/offworld/orbital/phoronics)
 "yg" = (
 /obj/machinery/atmospherics/binary/pump{
 	dir = 8;
 	name = "Exchange pipe insert"
 	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/white,
-/area/offworld/orbital/phoronics/burn_chamber)
+/area/offworld/orbital/phoronics)
 "yh" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/purple{
 	dir = 4
 	},
 /obj/machinery/meter,
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/white,
-/area/offworld/orbital/phoronics/burn_chamber)
+/area/offworld/orbital/phoronics)
 "yi" = (
 /obj/item/geiger/wall/north,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -11847,14 +11925,20 @@
 /obj/machinery/atmospherics/pipe/simple/visible/red{
 	dir = 10
 	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/white,
-/area/offworld/orbital/phoronics/burn_chamber)
+/area/offworld/orbital/phoronics)
 "yk" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
 	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/white,
-/area/offworld/orbital/phoronics/burn_chamber)
+/area/offworld/orbital/phoronics)
 "yl" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -11866,8 +11950,11 @@
 /obj/effect/floor_decal/industrial/warning/color/red{
 	dir = 4
 	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/white,
-/area/offworld/orbital/phoronics/burn_chamber)
+/area/offworld/orbital/phoronics)
 "ym" = (
 /obj/structure/lattice,
 /obj/machinery/atmospherics/pipe/simple/visible/red{
@@ -11885,14 +11972,17 @@
 	name = "Phoronics Burn Chamber Blast Door";
 	dir = 4
 	},
-/obj/machinery/door/airlock/glass_research{
-	name = "Phoronics";
-	req_one_access = list(8,47,52)
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
 /obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/glass_atmos{
+	name = "Burn Chamber";
+	req_one_access = list(24,40)
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/phoronics/burn_chamber)
 "yo" = (
@@ -11911,7 +12001,10 @@
 /obj/effect/floor_decal/industrial/warning/color/red{
 	dir = 8
 	},
-/turf/simulated/floor/reinforced/airless,
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/reinforced,
 /area/offworld/orbital/phoronics/burn_chamber)
 "yp" = (
 /obj/machinery/door/blast/regular/open{
@@ -11919,11 +12012,11 @@
 	name = "Phoronics Burn Chamber Blast Door";
 	dir = 4
 	},
-/obj/machinery/door/airlock/glass_research{
-	name = "Phoronics";
-	req_one_access = list(8,47,52)
-	},
 /obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/glass_atmos{
+	name = "Burn Chamber";
+	req_one_access = list(24,40)
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/phoronics/burn_chamber)
 "yq" = (
@@ -11965,8 +12058,9 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/lower/fore)
 "yv" = (
+/obj/machinery/shield_diffuser,
 /turf/simulated/floor/airless,
-/area/offworld/orbital/phoronics/bomb_test_range)
+/area/space)
 "yw" = (
 /turf/simulated/wall/r_wall,
 /area/offworld/orbital/phoronics/bomb_test_range)
@@ -12014,14 +12108,17 @@
 /obj/structure/table/standard,
 /obj/item/cargo_scanner,
 /obj/item/cargo_scanner,
+/obj/effect/floor_decal/corner/orange{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/white,
-/area/offworld/orbital/phoronics/burn_chamber)
+/area/offworld/orbital/phoronics)
 "yC" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/red{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
-/area/offworld/orbital/phoronics/burn_chamber)
+/area/offworld/orbital/phoronics)
 "yD" = (
 /obj/machinery/atmospherics/portables_connector{
 	dir = 8
@@ -12029,7 +12126,7 @@
 /obj/machinery/portable_atmospherics/canister,
 /obj/effect/floor_decal/industrial/outline/red,
 /turf/simulated/floor/tiled/white,
-/area/offworld/orbital/phoronics/burn_chamber)
+/area/offworld/orbital/phoronics)
 "yE" = (
 /obj/machinery/atmospherics/unary/heat_exchanger,
 /obj/structure/window/plastitanium,
@@ -12054,7 +12151,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
-/area/offworld/orbital/phoronics/burn_chamber)
+/area/offworld/orbital/phoronics)
 "yF" = (
 /obj/effect/floor_decal/industrial/outline/cut_corners/blue,
 /turf/simulated/floor/plating,
@@ -12062,13 +12159,13 @@
 "yG" = (
 /obj/machinery/atmospherics/pipe/simple/visible/red,
 /turf/simulated/floor/tiled/white,
-/area/offworld/orbital/phoronics/burn_chamber)
+/area/offworld/orbital/phoronics)
 "yH" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
 	dir = 5
 	},
 /turf/simulated/floor/tiled/white,
-/area/offworld/orbital/phoronics/burn_chamber)
+/area/offworld/orbital/phoronics)
 "yI" = (
 /obj/machinery/meter,
 /obj/machinery/atmospherics/pipe/simple/visible/red,
@@ -12080,7 +12177,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
-/area/offworld/orbital/phoronics/burn_chamber)
+/area/offworld/orbital/phoronics)
 "yK" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
 	dir = 4
@@ -12091,8 +12188,11 @@
 /obj/effect/floor_decal/industrial/warning/color/corner/red{
 	dir = 2
 	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/white,
-/area/offworld/orbital/phoronics/burn_chamber)
+/area/offworld/orbital/phoronics)
 "yL" = (
 /obj/structure/grille,
 /obj/structure/window/plastitanium{
@@ -12136,7 +12236,7 @@
 /obj/effect/floor_decal/industrial/warning/color/red{
 	dir = 8
 	},
-/turf/simulated/floor/reinforced/airless,
+/turf/simulated/floor/reinforced,
 /area/offworld/orbital/phoronics/burn_chamber)
 "yN" = (
 /obj/machinery/atmospherics/unary/outlet_injector{
@@ -12188,7 +12288,7 @@
 "yR" = (
 /obj/structure/trailblazer/red,
 /turf/simulated/floor/airless,
-/area/offworld/orbital/phoronics/bomb_test_range)
+/area/space)
 "yS" = (
 /turf/simulated/wall/r_wall,
 /area/offworld/orbital/phoronics/pressure_release)
@@ -12272,22 +12372,28 @@
 /obj/structure/table/standard,
 /obj/item/hand_labeler,
 /obj/item/hand_labeler,
+/obj/structure/sign/periodic{
+	pixel_x = -32
+	},
+/obj/effect/floor_decal/corner/orange{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/white,
-/area/offworld/orbital/phoronics/burn_chamber)
+/area/offworld/orbital/phoronics)
 "zd" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/red{
 	dir = 8
 	},
 /obj/machinery/meter,
 /turf/simulated/floor/tiled/white,
-/area/offworld/orbital/phoronics/burn_chamber)
+/area/offworld/orbital/phoronics)
 "ze" = (
 /obj/machinery/atmospherics/portables_connector{
 	dir = 8
 	},
 /obj/effect/floor_decal/industrial/outline/red,
 /turf/simulated/floor/plating,
-/area/offworld/orbital/phoronics/burn_chamber)
+/area/offworld/orbital/phoronics)
 "zf" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 9
@@ -12335,17 +12441,20 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
-/area/offworld/orbital/phoronics/burn_chamber)
+/area/offworld/orbital/phoronics)
 "zh" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow,
 /obj/machinery/meter,
 /turf/simulated/floor/tiled/white,
-/area/offworld/orbital/phoronics/burn_chamber)
+/area/offworld/orbital/phoronics)
 "zi" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/binary/passive_gate,
+/obj/effect/floor_decal/corner/purple{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/white,
-/area/offworld/orbital/phoronics/burn_chamber)
+/area/offworld/orbital/phoronics)
 "zj" = (
 /obj/machinery/button/remote/blast_door{
 	desc = "A remote control-switch for shutters.";
@@ -12375,8 +12484,12 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 5
 	},
+/obj/effect/floor_decal/corner/orange,
+/obj/effect/floor_decal/corner/orange{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/white,
-/area/offworld/orbital/phoronics/burn_chamber)
+/area/offworld/orbital/phoronics)
 "zk" = (
 /obj/structure/sign/warning/deathsposal,
 /turf/simulated/wall/r_wall,
@@ -12459,7 +12572,7 @@
 /obj/machinery/computer/security/telescreen/entertainment{
 	pixel_y = -3
 	},
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall,
 /area/offworld/orbital/phoronics/breakroom)
 "zt" = (
 /obj/structure/window/maintenance_panel{
@@ -12515,15 +12628,18 @@
 /obj/item/analyzer,
 /obj/item/tool/screwdriver,
 /obj/item/tool/wrench/pipe,
+/obj/effect/floor_decal/corner/orange{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/white,
-/area/offworld/orbital/phoronics/burn_chamber)
+/area/offworld/orbital/phoronics)
 "zx" = (
 /obj/machinery/atmospherics/portables_connector{
 	dir = 8
 	},
 /obj/effect/floor_decal/industrial/outline/red,
 /turf/simulated/floor/tiled/white,
-/area/offworld/orbital/phoronics/burn_chamber)
+/area/offworld/orbital/phoronics)
 "zy" = (
 /obj/machinery/status_display{
 	pixel_y = 32
@@ -12551,7 +12667,7 @@
 "zz" = (
 /obj/machinery/atmospherics/pipe/simple/visible/purple,
 /turf/simulated/floor/tiled/white,
-/area/offworld/orbital/phoronics/burn_chamber)
+/area/offworld/orbital/phoronics)
 "zA" = (
 /obj/machinery/atmospherics/portables_connector,
 /obj/effect/floor_decal/industrial/warning/cee{
@@ -12562,7 +12678,7 @@
 	},
 /obj/effect/floor_decal/industrial/outline/blue,
 /turf/simulated/floor/tiled/white,
-/area/offworld/orbital/phoronics/burn_chamber)
+/area/offworld/orbital/phoronics)
 "zB" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/portables_connector,
@@ -12577,7 +12693,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
-/area/offworld/orbital/phoronics/burn_chamber)
+/area/offworld/orbital/phoronics)
 "zC" = (
 /obj/machinery/disposal/wall{
 	dir = 4;
@@ -12628,6 +12744,11 @@
 	pixel_y = -21;
 	dir = 8
 	},
+/obj/machinery/light_switch{
+	pixel_x = 25;
+	pixel_y = 24;
+	dir = 8
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/offworld/orbital/phoronics/pressure_release)
 "zG" = (
@@ -12636,7 +12757,7 @@
 	dir = 8
 	},
 /obj/machinery/door/airlock{
-	name = "Drop Pod"
+	name = "Pressure Release Chamber"
 	},
 /obj/structure/sign/botany{
 	desc = "Space Bathroom";
@@ -12687,6 +12808,11 @@
 	icon_state = "pipe-j2"
 	},
 /obj/machinery/light,
+/obj/machinery/light_switch{
+	dir = 4;
+	pixel_x = -25;
+	pixel_y = 24
+	},
 /turf/simulated/floor/wood,
 /area/offworld/orbital/phoronics/breakroom)
 "zJ" = (
@@ -12762,6 +12888,9 @@
 	icon_state = "8-9"
 	},
 /obj/machinery/light,
+/obj/machinery/medical_kiosk{
+	pixel_y = 2
+	},
 /turf/simulated/floor/wood,
 /area/offworld/orbital/phoronics/breakroom)
 "zN" = (
@@ -12772,24 +12901,22 @@
 /obj/structure/closet/firecloset/full,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/effect/floor_decal/corner/orange{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/orange,
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/phoronics)
 "zO" = (
-/obj/machinery/power/apc{
-	name = "south bump";
-	pixel_y = -24
-	},
 /obj/machinery/atmospherics/pipe/simple/visible/red{
 	dir = 5
 	},
 /obj/effect/floor_decal/corner/purple{
 	dir = 10
 	},
-/obj/structure/cable/green{
-	icon_state = "0-1"
-	},
+/obj/effect/floor_decal/corner/orange,
 /turf/simulated/floor/tiled/white,
-/area/offworld/orbital/phoronics/burn_chamber)
+/area/offworld/orbital/phoronics)
 "zP" = (
 /obj/machinery/atmospherics/pipe/simple/visible/red{
 	dir = 10
@@ -12797,21 +12924,18 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 8
 	},
-/obj/structure/cable/green{
-	icon_state = "2-9"
-	},
 /obj/structure/disposalpipe/segment,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/white,
-/area/offworld/orbital/phoronics/burn_chamber)
+/area/offworld/orbital/phoronics)
 "zQ" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/purple{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
-/area/offworld/orbital/phoronics/burn_chamber)
-"zR" = (
-/turf/simulated/floor/tiled/white,
-/area/offworld/orbital/phoronics/burn_chamber)
+/area/offworld/orbital/phoronics)
 "zS" = (
 /obj/structure/table/woodentable,
 /obj/random/maintenance/foodstuff,
@@ -12833,13 +12957,9 @@
 /area/offworld/orbital/station/halls/stairs_lower)
 "zU" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/light_switch{
-	pixel_x = 25;
-	pixel_y = -21;
-	dir = 8
-	},
+/obj/effect/floor_decal/corner/orange,
 /turf/simulated/floor/tiled/white,
-/area/offworld/orbital/phoronics/burn_chamber)
+/area/offworld/orbital/phoronics)
 "zV" = (
 /obj/effect/floor_decal/corner/purple{
 	dir = 10
@@ -12849,8 +12969,9 @@
 	},
 /obj/structure/closet/bombcloset,
 /obj/machinery/light,
+/obj/effect/floor_decal/corner/orange,
 /turf/simulated/floor/tiled/white,
-/area/offworld/orbital/phoronics/burn_chamber)
+/area/offworld/orbital/phoronics)
 "zW" = (
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging{
 	dir = 8
@@ -12864,9 +12985,6 @@
 	dir = 4;
 	pixel_x = -30
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 5
-	},
 /obj/structure/cable/green{
 	icon_state = "1-4"
 	},
@@ -12876,6 +12994,14 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 9
 	},
+/obj/machinery/firealarm{
+	pixel_y = -26;
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/orange,
+/obj/effect/floor_decal/corner/orange{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/steel,
 /area/offworld/orbital/phoronics/bomb_test_range)
 "zY" = (
@@ -12883,18 +13009,13 @@
 	name = "south bump";
 	pixel_y = -24
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
-	},
 /obj/structure/cable/green{
 	icon_state = "0-8"
-	},
-/obj/structure/cable/green{
-	icon_state = "0-4"
 	},
 /obj/effect/floor_decal/corner/purple{
 	dir = 10
 	},
+/obj/effect/floor_decal/corner/orange,
 /turf/simulated/floor/tiled/steel,
 /area/offworld/orbital/phoronics/bomb_test_range)
 "zZ" = (
@@ -12920,15 +13041,10 @@
 	pixel_y = -2;
 	name = "Camera monitor"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
-	},
-/obj/structure/cable/green{
-	icon_state = "0-8"
-	},
 /obj/effect/floor_decal/corner/purple{
 	dir = 10
 	},
+/obj/effect/floor_decal/corner/orange,
 /turf/simulated/floor/tiled/steel,
 /area/offworld/orbital/phoronics/bomb_test_range)
 "Ab" = (
@@ -12941,15 +13057,17 @@
 	layer = 4;
 	pixel_y = -32
 	},
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 8
-	},
 /obj/effect/floor_decal/corner/purple{
 	dir = 10
 	},
 /obj/effect/floor_decal/corner/purple{
 	dir = 6
 	},
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "REX - Phoronics Mass Driver";
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/orange,
 /turf/simulated/floor/tiled/steel,
 /area/offworld/orbital/phoronics/bomb_test_range)
 "Ac" = (
@@ -13092,10 +13210,9 @@
 /area/offworld/orbital/station/rust_core)
 "As" = (
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/glass_research{
+/obj/machinery/door/airlock/glass_atmos{
 	name = "Phoronics Break Room";
-	req_access = list(8);
-	req_one_access = list(8,47,52)
+	req_one_access = list(24,40)
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/phoronics/breakroom)
@@ -13108,22 +13225,19 @@
 /obj/machinery/atmospherics/pipe/simple/visible/red{
 	dir = 6
 	},
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
-/obj/structure/cable/green{
-	icon_state = "1-6"
-	},
 /turf/simulated/floor/tiled/white,
-/area/offworld/orbital/phoronics/burn_chamber)
+/area/offworld/orbital/phoronics)
 "Av" = (
 /obj/machinery/atmospherics/binary/pump{
 	dir = 8;
 	name = "Exchange pipe insert"
 	},
 /obj/structure/disposalpipe/segment,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/white,
-/area/offworld/orbital/phoronics/burn_chamber)
+/area/offworld/orbital/phoronics)
 "Aw" = (
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging{
 	dir = 9
@@ -13133,13 +13247,13 @@
 "Ax" = (
 /obj/machinery/atmospherics/pipe/manifold4w/visible/red,
 /turf/simulated/floor/tiled/white,
-/area/offworld/orbital/phoronics/burn_chamber)
+/area/offworld/orbital/phoronics)
 "Ay" = (
 /obj/machinery/atmospherics/pipe/simple/visible/red{
 	dir = 9
 	},
 /turf/simulated/floor/tiled/white,
-/area/offworld/orbital/phoronics/burn_chamber)
+/area/offworld/orbital/phoronics)
 "Az" = (
 /obj/machinery/atmospherics/portables_connector,
 /obj/effect/floor_decal/industrial/warning/cee,
@@ -13151,19 +13265,13 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
-/area/offworld/orbital/phoronics/burn_chamber)
-"AA" = (
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/white,
-/area/offworld/orbital/phoronics/burn_chamber)
+/area/offworld/orbital/phoronics)
 "AB" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
-/area/offworld/orbital/phoronics/burn_chamber)
+/area/offworld/orbital/phoronics)
 "AC" = (
 /obj/effect/floor_decal/corner/purple{
 	dir = 6
@@ -13172,30 +13280,37 @@
 	dir = 4;
 	pixel_x = 26
 	},
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "REX - Phoronics East";
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/orange,
 /turf/simulated/floor/tiled/white,
-/area/offworld/orbital/phoronics/burn_chamber)
+/area/offworld/orbital/phoronics)
 "AD" = (
 /obj/structure/table/standard,
-/obj/item/geiger/wall/west,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/corner/purple{
 	dir = 9
 	},
-/turf/simulated/floor/tiled/steel,
-/area/offworld/orbital/phoronics/bomb_test_range)
-"AE" = (
-/obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
+/obj/effect/floor_decal/corner/orange{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
+	},
+/obj/item/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -21
 	},
 /turf/simulated/floor/tiled/steel,
 /area/offworld/orbital/phoronics/bomb_test_range)
-"AF" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
+"AE" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/steel,
 /area/offworld/orbital/phoronics/bomb_test_range)
@@ -13203,11 +13318,8 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 6
 	},
-/obj/machinery/disposal/wall{
-	dir = 8;
-	pixel_x = 32
-	},
-/obj/structure/disposalpipe/trunk{
+/obj/effect/floor_decal/corner/orange,
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/steel,
@@ -13307,15 +13419,15 @@
 	icon_state = "pipe-c";
 	dir = 4
 	},
+/obj/machinery/light_switch{
+	pixel_x = 25;
+	pixel_y = 24;
+	dir = 8
+	},
 /turf/simulated/floor/wood,
 /area/offworld/orbital/phoronics/breakroom)
 "AU" = (
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/glass_research{
-	name = "Phoronics Break Room";
-	req_access = list(8);
-	req_one_access = list(8,47,52)
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
 	},
@@ -13324,6 +13436,10 @@
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
+	},
+/obj/machinery/door/airlock/glass_atmos{
+	name = "Phoronics Break Room";
+	req_one_access = list(24,40)
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/phoronics/breakroom)
@@ -13337,6 +13453,11 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 1
 	},
+/obj/machinery/light_switch{
+	dir = 4;
+	pixel_x = -25;
+	pixel_y = 24
+	},
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/phoronics)
 "AW" = (
@@ -13345,9 +13466,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
-	},
-/obj/structure/cable/green{
-	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -13365,20 +13483,23 @@
 	dir = 1;
 	icon_state = "pipe-j2"
 	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/white,
-/area/offworld/orbital/phoronics/burn_chamber)
+/area/offworld/orbital/phoronics)
 "AY" = (
 /obj/machinery/atmospherics/valve/digital{
 	name = "Chamber capture valve"
 	},
 /turf/simulated/floor/tiled/white,
-/area/offworld/orbital/phoronics/burn_chamber)
+/area/offworld/orbital/phoronics)
 "AZ" = (
 /obj/machinery/atmospherics/binary/pump{
 	name = "Hot gas E dump"
 	},
 /turf/simulated/floor/tiled/white,
-/area/offworld/orbital/phoronics/burn_chamber)
+/area/offworld/orbital/phoronics)
 "Ba" = (
 /obj/machinery/atmospherics/pipe/simple/visible/red,
 /obj/structure/disposalpipe/segment{
@@ -13386,14 +13507,14 @@
 	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled/white,
-/area/offworld/orbital/phoronics/burn_chamber)
+/area/offworld/orbital/phoronics)
 "Bb" = (
 /obj/machinery/hologram/holopad,
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
-/area/offworld/orbital/phoronics/burn_chamber)
+/area/offworld/orbital/phoronics)
 "Bc" = (
 /obj/effect/floor_decal/corner/orange/full{
 	dir = 8
@@ -13404,7 +13525,6 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/south_power_airlock)
 "Bd" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
 	},
@@ -13414,8 +13534,11 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/white,
-/area/offworld/orbital/phoronics/burn_chamber)
+/area/offworld/orbital/phoronics)
 "Be" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
@@ -13426,12 +13549,20 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/light_switch{
+	pixel_x = 25;
+	pixel_y = 27;
+	dir = 8
+	},
 /turf/simulated/floor/tiled/white,
-/area/offworld/orbital/phoronics/burn_chamber)
+/area/offworld/orbital/phoronics)
 "Bf" = (
 /obj/machinery/door/airlock/glass_external{
 	name = "Bomb Range Access";
-	req_one_access = list(47)
+	req_one_access = list(24,40)
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
@@ -13441,6 +13572,9 @@
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -13455,13 +13589,21 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
+/obj/machinery/light_switch{
+	dir = 4;
+	pixel_x = -28;
+	pixel_y = 27
+	},
 /turf/simulated/floor/tiled/steel,
 /area/offworld/orbital/phoronics/bomb_test_range)
 "Bh" = (
 /obj/machinery/hologram/holopad,
 /obj/structure/disposalpipe/segment{
-	icon_state = "pipe-c";
-	dir = 2
+	dir = 8;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled/steel,
 /area/offworld/orbital/phoronics/bomb_test_range)
@@ -13593,6 +13735,10 @@
 	dir = 4;
 	pixel_x = -7
 	},
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "REX - Phoronics Breakroom";
+	dir = 4
+	},
 /turf/simulated/floor/wood,
 /area/offworld/orbital/phoronics/breakroom)
 "Bx" = (
@@ -13627,11 +13773,19 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 9
 	},
+/obj/effect/floor_decal/corner/orange{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/phoronics)
 "BC" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
+	},
+/obj/machinery/light_switch{
+	dir = 1;
+	pixel_x = -23;
+	pixel_y = -27
 	},
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/phoronics)
@@ -13639,19 +13793,16 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/disposalpipe/segment,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/white,
-/area/offworld/orbital/phoronics/burn_chamber)
+/area/offworld/orbital/phoronics)
 "BE" = (
 /obj/machinery/atmospherics/portables_connector,
 /obj/effect/floor_decal/industrial/outline/red,
 /turf/simulated/floor/tiled/white,
-/area/offworld/orbital/phoronics/burn_chamber)
-"BF" = (
-/obj/machinery/atmospherics/pipe/simple/visible/red{
-	dir = 6
-	},
-/turf/simulated/floor/tiled/white,
-/area/offworld/orbital/phoronics/burn_chamber)
+/area/offworld/orbital/phoronics)
 "BG" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced{
@@ -13670,7 +13821,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
-/area/offworld/orbital/phoronics/burn_chamber)
+/area/offworld/orbital/phoronics)
 "BI" = (
 /obj/machinery/atmospherics/pipe/simple/visible/red{
 	dir = 10
@@ -13691,7 +13842,7 @@
 	dir = 5
 	},
 /turf/simulated/floor/tiled/white,
-/area/offworld/orbital/phoronics/burn_chamber)
+/area/offworld/orbital/phoronics)
 "BJ" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -13709,7 +13860,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
-/area/offworld/orbital/phoronics/burn_chamber)
+/area/offworld/orbital/phoronics)
 "BK" = (
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-c";
@@ -13724,38 +13875,33 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/aux{
 	dir = 9
 	},
-/obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
-/obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
+/obj/effect/floor_decal/steeldecal/steel_decals_central7{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/white,
-/area/offworld/orbital/phoronics/burn_chamber)
+/area/offworld/orbital/phoronics)
 "BL" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+/obj/effect/floor_decal/corner/purple{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 9
-	},
+/obj/effect/floor_decal/corner/orange,
 /turf/simulated/floor/tiled/white,
-/area/offworld/orbital/phoronics/burn_chamber)
-"BM" = (
-/obj/machinery/door/airlock/glass_external{
-	name = "Bomb Range Access";
-	req_one_access = list(47)
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/door/firedoor/glass,
-/turf/simulated/floor/tiled/techfloor,
-/area/offworld/orbital/phoronics/bomb_test_range)
+/area/offworld/orbital/phoronics)
 "BN" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
+	dir = 6
 	},
-/obj/machinery/light_switch{
-	dir = 4;
-	pixel_x = -28;
-	pixel_y = 27
+/obj/effect/floor_decal/corner/purple{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/orange{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/steel,
 /area/offworld/orbital/phoronics/bomb_test_range)
@@ -13763,27 +13909,23 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
+/obj/structure/disposalpipe/segment{
+	icon_state = "pipe-c";
+	dir = 4
+	},
 /turf/simulated/floor/tiled/steel,
 /area/offworld/orbital/phoronics/bomb_test_range)
 "BP" = (
-/obj/machinery/button/remote/blast_door{
-	desc = "A remote control-switch for shutters.";
-	id = "phoronics_launch_blast";
-	name = "Launch Pad Blast Door";
-	pixel_x = 26;
-	pixel_y = 6;
-	dir = 8
-	},
-/obj/machinery/button/remote/driver{
-	id = "phoronics_bomb";
-	pixel_x = 26;
-	pixel_y = -6
-	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
 /obj/effect/floor_decal/corner/purple{
 	dir = 6
+	},
+/obj/effect/floor_decal/corner/orange,
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled/steel,
 /area/offworld/orbital/phoronics/bomb_test_range)
@@ -13800,7 +13942,8 @@
 	name = "Launch Pad Blast Door";
 	pixel_x = 26;
 	pixel_y = 6;
-	dir = 8
+	dir = 8;
+	req_one_access = list(24,40)
 	},
 /turf/simulated/floor/airless,
 /area/offworld/orbital/phoronics/bomb_test_range)
@@ -13813,7 +13956,7 @@
 "BS" = (
 /obj/machinery/power/grounding_rod/pre_mapped,
 /turf/simulated/floor/airless,
-/area/offworld/orbital/phoronics/bomb_test_range)
+/area/space)
 "BT" = (
 /obj/structure/table/standard,
 /obj/item/storage/box/cups{
@@ -13858,6 +14001,10 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 10
 	},
+/obj/effect/floor_decal/corner/orange{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/orange,
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/phoronics)
 "BZ" = (
@@ -13901,9 +14048,6 @@
 	dir = 8
 	},
 /obj/structure/cable/green{
-	icon_state = "2-9"
-	},
-/obj/structure/cable/green{
 	icon_state = "4-9"
 	},
 /obj/structure/disposalpipe/segment{
@@ -13931,8 +14075,14 @@
 	dir = 8;
 	icon_state = "pipe-j2"
 	},
+/obj/effect/floor_decal/steeldecal/steel_decals_central7{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
 /turf/simulated/floor/tiled/white,
-/area/offworld/orbital/phoronics/burn_chamber)
+/area/offworld/orbital/phoronics)
 "Cd" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 8
@@ -13950,11 +14100,8 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
-/area/offworld/orbital/phoronics/burn_chamber)
+/area/offworld/orbital/phoronics)
 "Ce" = (
-/obj/effect/floor_decal/corner/purple{
-	dir = 4
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
@@ -13971,7 +14118,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
-/area/offworld/orbital/phoronics/burn_chamber)
+/area/offworld/orbital/phoronics)
 "Cf" = (
 /obj/effect/floor_decal/corner/purple{
 	dir = 5
@@ -13994,8 +14141,11 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/effect/floor_decal/corner/orange{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/white,
-/area/offworld/orbital/phoronics/burn_chamber)
+/area/offworld/orbital/phoronics)
 "Cg" = (
 /obj/structure/disposalpipe/junction{
 	dir = 8;
@@ -14014,7 +14164,7 @@
 	dir = 10
 	},
 /turf/simulated/floor/tiled/white,
-/area/offworld/orbital/phoronics/burn_chamber)
+/area/offworld/orbital/phoronics)
 "Ch" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/effect/floor_decal/corner/blue{
@@ -14039,15 +14189,22 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 5
 	},
+/obj/effect/floor_decal/corner/orange{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/white,
-/area/offworld/orbital/phoronics/burn_chamber)
+/area/offworld/orbital/phoronics)
 "Ck" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/aux,
+/obj/machinery/light_switch{
+	pixel_x = 24;
+	pixel_y = 26
+	},
 /turf/simulated/floor/tiled/white,
-/area/offworld/orbital/phoronics/burn_chamber)
+/area/offworld/orbital/phoronics)
 "Cl" = (
 /obj/effect/floor_decal/corner/purple{
 	dir = 6
@@ -14057,8 +14214,12 @@
 	},
 /obj/structure/closet/firecloset/full,
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/effect/floor_decal/corner/orange,
+/obj/effect/floor_decal/corner/orange{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/white,
-/area/offworld/orbital/phoronics/burn_chamber)
+/area/offworld/orbital/phoronics)
 "Cm" = (
 /obj/structure/closet/secure_closet{
 	req_one_access = list(7,47)
@@ -14073,6 +14234,10 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 9
 	},
+/obj/effect/floor_decal/corner/orange{
+	dir = 1
+	},
+/obj/item/geiger/wall/west,
 /turf/simulated/floor/tiled/steel,
 /area/offworld/orbital/phoronics/bomb_test_range)
 "Cn" = (
@@ -14080,12 +14245,18 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 5
 	},
+/obj/effect/floor_decal/corner/orange{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/steel,
 /area/offworld/orbital/phoronics/bomb_test_range)
 "Co" = (
 /obj/machinery/bomb_tester,
 /obj/effect/floor_decal/corner/purple{
 	dir = 5
+	},
+/obj/effect/floor_decal/corner/orange{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/steel,
 /area/offworld/orbital/phoronics/bomb_test_range)
@@ -14096,21 +14267,35 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/backup_power)
 "Cq" = (
-/obj/machinery/firealarm{
-	dir = 4;
-	pixel_x = 26;
-	pixel_y = 0
-	},
 /obj/effect/floor_decal/corner/purple{
 	dir = 5
 	},
 /obj/effect/floor_decal/corner/purple{
 	dir = 6
 	},
-/obj/item/radio/intercom{
-	dir = 1;
-	name = "Station Intercom (General)";
-	pixel_y = 24
+/obj/machinery/button/remote/blast_door{
+	desc = "A remote control-switch for shutters.";
+	id = "phoronics_launch_blast";
+	name = "Launch Pad Blast Door";
+	pixel_x = 26;
+	pixel_y = 6;
+	dir = 8;
+	req_one_access = list(24,40)
+	},
+/obj/machinery/button/remote/driver{
+	id = "phoronics_bomb";
+	pixel_x = 26;
+	pixel_y = -6
+	},
+/obj/effect/floor_decal/corner/orange{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/orange,
+/obj/machinery/disposal/wall{
+	pixel_y = 32
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 2
 	},
 /turf/simulated/floor/tiled/steel,
 /area/offworld/orbital/phoronics/bomb_test_range)
@@ -14210,6 +14395,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/aux{
 	dir = 5
 	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/phoronics)
 "CB" = (
@@ -14285,8 +14473,8 @@
 /turf/simulated/floor/plating,
 /area/offworld/orbital/phoronics)
 "CH" = (
-/obj/machinery/door/airlock/maintenance/rnd,
 /obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/maintenance/engi,
 /turf/simulated/floor/tiled/techmaint,
 /area/maintenance/orbital/lower/aft)
 "CI" = (
@@ -14305,11 +14493,6 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/lower/fore)
 "CK" = (
-/obj/machinery/door/airlock/glass_research{
-	name = "Phoronics";
-	req_access = list(8);
-	req_one_access = list(8,47,52)
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/door/firedoor/glass,
@@ -14318,12 +14501,17 @@
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
+/obj/machinery/door/airlock/glass_atmos{
+	name = "Phoronics EVA";
+	req_one_access = list(24,40)
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/phoronics/airlock)
 "CL" = (
 /obj/machinery/light/small{
 	dir = 8
 	},
+/obj/machinery/shield_diffuser,
 /turf/simulated/floor/airless,
 /area/space)
 "CM" = (
@@ -14456,6 +14644,9 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
+/obj/effect/floor_decal/steeldecal/steel_decals_central7{
+	dir = 4
+	},
 /turf/simulated/floor/wood,
 /area/offworld/orbital/phoronics/breakroom)
 "CW" = (
@@ -14504,6 +14695,10 @@
 "Db" = (
 /obj/machinery/atmospherics/binary/pump{
 	dir = 1
+	},
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "REX - Phoronics North";
+	dir = 8
 	},
 /turf/simulated/floor/plating,
 /area/offworld/orbital/phoronics)
@@ -14557,6 +14752,7 @@
 	icon_state = "pipe-c";
 	dir = 8
 	},
+/obj/effect/floor_decal/corner/orange,
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/phoronics/airlock)
 "De" = (
@@ -14602,6 +14798,7 @@
 	dir = 8;
 	pixel_y = -6
 	},
+/obj/effect/floor_decal/corner/orange,
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/phoronics/airlock)
 "Dg" = (
@@ -14626,6 +14823,14 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 9
 	},
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "REX - Phoronics EVA Chamber";
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/orange{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/orange,
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/phoronics/airlock)
 "Di" = (
@@ -14658,6 +14863,7 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 10
 	},
+/obj/effect/floor_decal/corner/orange,
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/phoronics/airlock)
 "Dl" = (
@@ -14684,6 +14890,7 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 6
 	},
+/obj/effect/floor_decal/corner/orange,
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/phoronics/airlock)
 "Dn" = (
@@ -14770,7 +14977,6 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/obj/item/geiger/wall/north,
 /turf/simulated/floor/wood,
 /area/offworld/orbital/phoronics/breakroom)
 "Du" = (
@@ -14793,17 +14999,15 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/wood,
-/area/offworld/orbital/phoronics/breakroom)
-"Dw" = (
 /obj/machinery/light_switch{
-	pixel_x = 27;
-	pixel_y = 28
+	pixel_x = -23;
+	pixel_y = 26
 	},
 /turf/simulated/floor/wood,
 /area/offworld/orbital/phoronics/breakroom)
 "Dx" = (
 /obj/machinery/vending/foodfast,
+/obj/item/geiger/wall/north,
 /turf/simulated/floor/wood,
 /area/offworld/orbital/phoronics/breakroom)
 "Dy" = (
@@ -14854,6 +15058,9 @@
 	dir = 5
 	},
 /obj/structure/closet/bombcloset,
+/obj/effect/floor_decal/corner/orange{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/phoronics)
 "DC" = (
@@ -14868,6 +15075,9 @@
 	dir = 4
 	},
 /obj/machinery/vending/phoronresearch,
+/obj/effect/floor_decal/corner/orange{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/phoronics)
 "DD" = (
@@ -14887,12 +15097,12 @@
 /turf/simulated/floor/plating,
 /area/offworld/orbital/phoronics)
 "DF" = (
-/obj/machinery/atmospherics/unary/freezer,
 /obj/item/radio/intercom{
 	dir = 1;
 	name = "Common Channel";
 	pixel_y = 21
 	},
+/obj/machinery/atmospherics/unary/heater,
 /turf/simulated/floor/plating,
 /area/offworld/orbital/phoronics)
 "DG" = (
@@ -14997,7 +15207,8 @@
 /obj/machinery/airlock_sensor/airlock_interior/shuttle{
 	dir = 8;
 	pixel_y = -25;
-	pixel_x = -9
+	pixel_x = -9;
+	req_one_access = list(24,40)
 	},
 /obj/effect/map_helper/airlock/door/int_door,
 /obj/effect/map_helper/airlock/sensor/int_sensor,
@@ -15024,7 +15235,8 @@
 /obj/machinery/airlock_sensor/airlock_exterior/shuttle{
 	pixel_x = 9;
 	dir = 4;
-	pixel_y = 25
+	pixel_y = 25;
+	req_one_access = list(24,40)
 	},
 /obj/effect/map_helper/airlock/door/ext_door,
 /obj/effect/map_helper/airlock/sensor/ext_sensor,
@@ -15032,17 +15244,17 @@
 /area/offworld/orbital/phoronics/airlock)
 "DU" = (
 /obj/structure/ladder/up,
+/obj/machinery/shield_diffuser,
 /turf/simulated/floor/airless,
 /area/space)
 "DV" = (
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/glass_research{
-	name = "Phoronics Break Room";
-	req_access = list(8);
-	req_one_access = list(8,47,52)
-	},
 /obj/structure/cable/green{
 	icon_state = "1-2"
+	},
+/obj/machinery/door/airlock/glass_atmos{
+	name = "Phoronics Break Room";
+	req_one_access = list(24,40)
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/phoronics/breakroom)
@@ -15075,6 +15287,9 @@
 /obj/structure/disposalpipe/segment{
 	dir = 1;
 	icon_state = "pipe-c"
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/phoronics)
@@ -15120,6 +15335,10 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "0-8"
+	},
+/obj/effect/floor_decal/corner/orange,
+/obj/effect/floor_decal/corner/orange{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/phoronics)
@@ -15175,6 +15394,9 @@
 /obj/machinery/disposal/wall{
 	pixel_y = 32
 	},
+/obj/effect/floor_decal/corner/orange{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/phoronics/airlock)
 "Ef" = (
@@ -15193,6 +15415,10 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/effect/floor_decal/corner/orange,
+/obj/effect/floor_decal/corner/orange{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/phoronics/airlock)
 "Eg" = (
@@ -15208,6 +15434,9 @@
 	},
 /obj/effect/floor_decal/corner/purple{
 	dir = 9
+	},
+/obj/effect/floor_decal/corner/orange{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/phoronics/airlock)
@@ -15228,6 +15457,9 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 5
 	},
+/obj/effect/floor_decal/corner/orange{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/phoronics/airlock)
 "Ei" = (
@@ -15241,30 +15473,23 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 6
 	},
+/obj/effect/floor_decal/corner/orange,
+/obj/effect/floor_decal/corner/orange{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/phoronics/airlock)
 "Ej" = (
-/obj/machinery/door/airlock/glass_research{
+/obj/machinery/door/airlock/glass_atmos{
 	name = "Phoronics";
-	req_access = list(8);
-	req_one_access = list(8,47,52)
+	req_one_access = list(24,40)
 	},
-/obj/item/tape/engineering,
 /turf/simulated/floor/tiled/techfloor,
-/area/offworld/orbital/station/halls/lower/aft)
+/area/offworld/orbital/phoronics)
 "Ek" = (
 /obj/structure/dispenser,
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/aux_equipment)
-"El" = (
-/obj/effect/floor_decal/corner/purple{
-	dir = 10
-	},
-/obj/effect/floor_decal/corner/purple{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/white,
-/area/offworld/orbital/phoronics)
 "Em" = (
 /obj/effect/floor_decal/corner/purple{
 	dir = 10
@@ -15276,6 +15501,7 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 1
 	},
+/obj/effect/floor_decal/corner/orange,
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/phoronics)
 "En" = (
@@ -15285,6 +15511,11 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
 	},
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "REX - Phoronics Entrance";
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/orange,
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/phoronics)
 "Eo" = (
@@ -15302,6 +15533,7 @@
 	pixel_x = 30;
 	pixel_y = 10
 	},
+/obj/effect/floor_decal/corner/orange,
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/phoronics)
 "Ep" = (
@@ -15324,7 +15556,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/aux{
 	dir = 5
 	},
-/turf/simulated/floor/tiled/milspec,
+/obj/effect/catwalk_plated,
+/turf/simulated/floor/plating,
 /area/offworld/orbital/station/halls/lower/aft)
 "Eq" = (
 /obj/structure/disposalpipe/segment{
@@ -15357,21 +15590,16 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/obj/machinery/door/airlock/glass_research{
-	name = "Phoronics";
-	req_access = list(8);
-	req_one_access = list(8,47,52)
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/aux{
 	dir = 4
 	},
-/obj/item/tape/engineering,
-/turf/simulated/floor/tiled/techfloor,
-/area/offworld/orbital/station/halls/lower/aft)
-"Es" = (
-/obj/effect/floor_decal/corner/purple{
-	dir = 9
+/obj/machinery/door/airlock/glass_atmos{
+	name = "Phoronics";
+	req_one_access = list(24,40)
 	},
+/turf/simulated/floor/tiled/techfloor,
+/area/offworld/orbital/phoronics)
+"Es" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -15532,6 +15760,7 @@
 	pixel_x = 26;
 	pixel_y = 0
 	},
+/obj/effect/floor_decal/corner/orange,
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/phoronics)
 "EB" = (
@@ -15588,6 +15817,9 @@
 	},
 /obj/machinery/light{
 	dir = 8
+	},
+/obj/effect/floor_decal/corner/orange{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/phoronics)
@@ -15690,6 +15922,9 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 4
 	},
+/obj/effect/floor_decal/corner/orange{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/phoronics)
 "ER" = (
@@ -15717,9 +15952,6 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/machinery/alarm{
-	pixel_y = 26
-	},
 /turf/simulated/floor/tiled/steel,
 /area/offworld/orbital/phoronics)
 "EU" = (
@@ -15756,13 +15988,11 @@
 /turf/simulated/floor/tiled/steel,
 /area/offworld/orbital/phoronics)
 "EY" = (
-/obj/structure/sign/warning/compressed_gas,
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall,
 /area/offworld/orbital/phoronics/gas_storage)
 "EZ" = (
 /obj/machinery/door/airlock/highsecurity{
-	req_access = list(8);
-	req_one_access = list(47,52);
+	req_one_access = list(24,40);
 	name = "Gas Storage"
 	},
 /obj/machinery/door/firedoor/glass,
@@ -15770,8 +16000,7 @@
 /area/offworld/orbital/phoronics/gas_storage)
 "Fa" = (
 /obj/machinery/door/airlock/highsecurity{
-	req_access = list(8);
-	req_one_access = list(47,52);
+	req_one_access = list(24,40);
 	name = "Gas Storage"
 	},
 /obj/machinery/door/firedoor/glass,
@@ -15802,6 +16031,8 @@
 	name = "Station Intercom (General)";
 	pixel_x = -21
 	},
+/obj/item/tool/wrench/pipe,
+/obj/structure/table/standard,
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/phoronics/gas_storage)
 "Fe" = (
@@ -15816,11 +16047,6 @@
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
-/obj/machinery/light_switch{
-	dir = 1;
-	pixel_x = 24;
-	pixel_y = -28
-	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/phoronics/gas_storage)
 "Fg" = (
@@ -15833,16 +16059,13 @@
 /obj/machinery/meter,
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/rust_core)
-"Fh" = (
+"Fi" = (
+/obj/machinery/portable_atmospherics/canister/carbon_dioxide,
+/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/alarm{
 	dir = 1;
 	pixel_y = -26
 	},
-/turf/simulated/floor/tiled/techfloor,
-/area/offworld/orbital/phoronics/gas_storage)
-"Fi" = (
-/obj/machinery/portable_atmospherics/canister/carbon_dioxide,
-/obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/phoronics/gas_storage)
 "Fj" = (
@@ -15955,6 +16178,9 @@
 /obj/machinery/portable_atmospherics/canister/phoron,
 /obj/item/geiger/wall/north,
 /obj/effect/floor_decal/industrial/outline/purple,
+/obj/machinery/light{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/phoronics/gas_storage)
 "Fy" = (
@@ -16076,11 +16302,70 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/orbital/lower/fore)
+"FL" = (
+/turf/simulated/wall,
+/area/offworld/orbital/phoronics/overflow_storage)
+"FM" = (
+/turf/simulated/wall,
+/area/offworld/orbital/phoronics/breakroom)
+"FN" = (
+/turf/simulated/wall,
+/area/offworld/orbital/phoronics/bomb_test_range)
+"FO" = (
+/obj/machinery/atmospherics/binary/pump{
+	dir = 8;
+	name = "Exchange pipe insert"
+	},
+/turf/simulated/floor/tiled/white,
+/area/offworld/orbital/phoronics)
 "FP" = (
 /obj/machinery/door/airlock/maintenance/int,
 /obj/effect/landmark/electrify_door/ten,
 /turf/simulated/floor/plating,
 /area/maintenance/orbital/lower/aft)
+"FQ" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/lower/aft)
+"FR" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/lower/aft)
+"FS" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/steel,
+/area/offworld/orbital/phoronics/bomb_test_range)
+"FT" = (
+/obj/structure/sign/warning/vacuum,
+/turf/simulated/wall/r_wall,
+/area/offworld/orbital/phoronics/bomb_test_range)
+"FU" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/lower/aft)
+"FV" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/lower/aft)
 "FW" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/lightgrey/border,
@@ -16090,6 +16375,124 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/access_shaft/lower)
+"FX" = (
+/obj/effect/floor_decal/borderfloor/corner,
+/obj/effect/floor_decal/corner/lightgrey/bordercorner,
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/lower/aft)
+"FY" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/orange/border{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/lower/aft)
+"FZ" = (
+/turf/simulated/wall,
+/area/offworld/orbital/phoronics/airlock)
+"Ga" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/purple/border{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/lower/aft)
+"Gb" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 9
+	},
+/obj/machinery/medical_kiosk{
+	pixel_y = 2
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/lower/aft)
+"Gc" = (
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/lightgrey/bordercorner{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/lower/aft)
+"Gd" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/orange/border{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/lower/aft)
+"Ge" = (
+/obj/structure/sign/explosive,
+/turf/simulated/wall/r_wall,
+/area/offworld/orbital/phoronics/breakroom)
+"Gf" = (
+/obj/item/geiger/wall/north,
+/turf/simulated/wall,
+/area/offworld/orbital/phoronics/breakroom)
+"Gg" = (
+/obj/structure/reagent_dispensers/coolanttank,
+/turf/simulated/floor/plating,
+/area/maintenance/orbital/lower/aft)
+"Gh" = (
+/obj/machinery/light_switch{
+	pixel_x = -23;
+	pixel_y = 26
+	},
+/turf/simulated/floor/tiled/white,
+/area/offworld/orbital/phoronics)
+"Gi" = (
+/obj/machinery/atmospherics/omni/mixer,
+/obj/machinery/alarm{
+	pixel_y = 26
+	},
+/turf/simulated/floor/tiled/steel,
+/area/offworld/orbital/phoronics)
+"Gj" = (
+/obj/structure/sign/warning/compressed_gas,
+/turf/simulated/wall,
+/area/offworld/orbital/phoronics/gas_storage)
+"Gk" = (
+/obj/machinery/light_switch{
+	dir = 1;
+	pixel_x = -23;
+	pixel_y = -27
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/offworld/orbital/phoronics/gas_storage)
+"Gl" = (
+/obj/machinery/portable_atmospherics/canister/carbon_dioxide,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "REX - Phoronics Gas Storage";
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/offworld/orbital/phoronics/gas_storage)
+"Gm" = (
+/obj/machinery/portable_atmospherics/canister/oxygen,
+/obj/effect/floor_decal/industrial/outline/blue,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/offworld/orbital/phoronics/gas_storage)
+"Gn" = (
+/obj/machinery/medical_kiosk{
+	pixel_y = 2
+	},
+/obj/effect/floor_decal/steeldecal/monofloor,
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/stairs_lower)
 "Gq" = (
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging{
 	dir = 6
@@ -16254,24 +16657,19 @@
 /turf/simulated/wall,
 /area/offworld/orbital/station/halls/rust_entry)
 "HP" = (
-/obj/item/radio/intercom{
-	dir = 1;
-	name = "Station Intercom (General)";
-	pixel_y = 24
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
-	},
-/obj/effect/floor_decal/borderfloor{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/orange/border{
-	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/orange/bordercorner{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
@@ -17283,6 +17681,9 @@
 /obj/effect/floor_decal/corner/orange{
 	dir = 10
 	},
+/obj/machinery/medical_kiosk{
+	pixel_y = 2
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/rust_entry)
 "OS" = (
@@ -17807,14 +18208,8 @@
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 1
 	},
-/obj/effect/floor_decal/borderfloor/corner{
-	dir = 4
-	},
 /obj/effect/floor_decal/corner/lightgrey/bordercorner{
 	dir = 1
-	},
-/obj/effect/floor_decal/corner/orange/bordercorner{
-	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -35836,7 +36231,7 @@ gm
 gl
 bx
 br
-rK
+Gn
 HP
 ci
 ci
@@ -36510,11 +36905,11 @@ ax
 ax
 ax
 ax
-AJ
-AJ
-AJ
-AJ
-AJ
+Gb
+FU
+FU
+FU
+FQ
 AJ
 ic
 ic
@@ -36667,12 +37062,12 @@ rz
 rw
 rs
 ro
-AJ
-AJ
-AJ
-AJ
-AJ
-AJ
+FU
+FU
+FU
+FU
+FU
+Gc
 CO
 AL
 AL
@@ -36836,9 +37231,9 @@ rl
 Ds
 Ds
 CQ
-AJ
-AJ
-AJ
+FX
+FV
+FR
 AJ
 ic
 ic
@@ -36991,14 +37386,14 @@ rB
 ry
 ru
 wh
-AJ
-AJ
+Ga
+Gd
 Eq
 AJ
-AJ
-AJ
-AJ
-AJ
+Ga
+Gd
+Ga
+FY
 yS
 yS
 yS
@@ -37147,17 +37542,17 @@ bq
 bo
 bo
 bo
-ax
-ax
-ax
-ax
-ax
-ax
-ax
-ax
+bo
+Fb
+Fb
+Fb
+Fb
+Fb
+jc
+jc
 Er
 Ej
-zq
+Ge
 zq
 zq
 zq
@@ -37318,8 +37713,8 @@ EY
 EQ
 EG
 Es
-El
-zq
+Cz
+FM
 Dt
 CT
 Cr
@@ -37475,9 +37870,9 @@ bo
 Fx
 Fr
 Fm
-Fe
+Gk
 EZ
-Cz
+Gh
 EI
 Et
 BC
@@ -37644,7 +38039,7 @@ EK
 Eu
 Cz
 As
-Dw
+BV
 CW
 Cu
 Ag
@@ -37799,13 +38194,13 @@ bo
 FA
 Fu
 Fp
-Fh
-Fb
+Fe
+Gj
 ET
 EL
 Ew
 Em
-zq
+Gf
 Dx
 BV
 Cv
@@ -37962,12 +38357,12 @@ FD
 Fe
 Fp
 Fi
-Fb
-EU
+EY
+Gi
 EM
 Ex
 En
-zq
+FM
 Dy
 BV
 Cw
@@ -38123,13 +38518,13 @@ bo
 FE
 Fv
 Fq
-Fi
-Fb
+Gl
+EY
 EV
 EM
 Ey
 BZ
-BB
+BY
 BX
 BW
 Cx
@@ -38282,17 +38677,17 @@ bo
 bo
 bq
 bo
-Fw
+Gm
 Fw
 Fj
 Fj
-Fb
+EY
 EU
 EM
 Ez
 CX
 DX
-Cz
+BY
 BX
 BW
 BV
@@ -38448,14 +38843,14 @@ Fw
 Fw
 Fj
 Fj
-Fb
+EY
 EX
 EO
 EA
 Eo
 DY
 CA
-Cz
+BY
 BX
 BW
 Bz
@@ -38618,13 +39013,13 @@ bo
 DZ
 Dz
 CA
-Cz
+BY
 BX
 BA
 AT
 Aq
 zM
-zq
+FM
 yV
 yy
 xZ
@@ -38782,11 +39177,11 @@ DB
 CX
 CA
 BY
-zq
+FM
 AU
 As
-zq
-zq
+FM
+FM
 yW
 yz
 ya
@@ -39106,15 +39501,15 @@ DD
 CZ
 CD
 Cb
-BC
+Cz
 AW
 Au
 zO
-xd
-xd
-xd
+FL
+FL
+FL
 yd
-xd
+FL
 xd
 xd
 eW
@@ -39439,7 +39834,7 @@ zd
 yC
 yf
 xD
-xc
+jc
 wW
 eW
 eW
@@ -39592,16 +39987,16 @@ DL
 Db
 CG
 Ce
-BF
+Au
 AZ
 Ay
-yg
+FO
 zx
 ze
 yD
 yg
 xE
-xc
+jc
 xe
 xb
 wV
@@ -39747,7 +40142,7 @@ lW
 bo
 PP
 bo
-bq
+Gg
 Rg
 bo
 bo
@@ -39755,7 +40150,7 @@ bo
 bo
 Cf
 BH
-zR
+Cz
 Az
 zQ
 zz
@@ -39763,7 +40158,7 @@ zg
 yE
 yh
 xH
-xc
+jc
 xc
 xc
 wW
@@ -40070,24 +40465,24 @@ bo
 bo
 bo
 bo
-wO
+bq
+bq
 bo
-CI
-CI
-CI
-CI
-CI
+bo
+bo
+bo
+bo
 Cj
 BJ
 Bb
-AA
-zR
+EI
+Cz
 zA
 zh
 yH
 yj
 xL
-xc
+jc
 xg
 xc
 wW
@@ -40234,7 +40629,7 @@ bo
 bo
 hl
 bo
-CI
+bo
 Eb
 DM
 Dc
@@ -40249,7 +40644,7 @@ zi
 yJ
 yk
 xN
-xc
+jc
 xg
 xc
 wW
@@ -40396,22 +40791,22 @@ bq
 eK
 bq
 an
-CI
+bo
 Ee
 DN
 Dd
-CI
+FZ
 Cl
 BL
 Be
 AC
 zV
-xc
+jc
 zj
 yK
 yl
 xO
-xc
+jc
 xg
 xc
 wW
@@ -40558,17 +40953,17 @@ aD
 eM
 eK
 kd
-CI
+bo
 Ef
 DO
 Df
-CI
-yw
-BM
+FZ
+FN
+FN
 Bf
-yw
-yw
-yw
+FN
+FN
+FN
 xq
 yL
 yn
@@ -40720,22 +41115,22 @@ XD
 aD
 XD
 XD
-CI
-CI
+bo
+FZ
 DP
-CI
-CI
+FZ
+FZ
 Cm
 BN
 Bg
 AD
 zX
-yw
+FN
 xq
 yM
 yo
 xR
-xq
+rq
 xg
 xc
 wW
@@ -40882,17 +41277,17 @@ eL
 df
 bq
 pw
-CI
+bo
 Eg
 DQ
 Dh
-CI
+FZ
 Cn
 BO
 Bh
 AE
 zY
-yw
+FN
 xr
 yL
 yp
@@ -41044,17 +41439,17 @@ eK
 eN
 df
 aD
-CI
+bo
 Eh
 DQ
 Dk
-CI
+FZ
 Co
-BO
+FS
 Bi
-AF
+AE
 Aa
-yw
+FN
 xq
 yN
 ys
@@ -41206,17 +41601,17 @@ eL
 bq
 eL
 XC
-CI
+bo
 Ei
 DR
 Dm
-CI
+FZ
 Cq
 BP
 Bj
 AG
 Ab
-yw
+FN
 xq
 yO
 yt
@@ -41368,13 +41763,13 @@ Zi
 Zi
 Zi
 CU
-CI
+bo
 CI
 DT
 CI
 CI
 yw
-yw
+FT
 Bk
 AH
 yw
@@ -41540,7 +41935,7 @@ yw
 Bl
 yw
 yw
-xM
+dG
 xr
 xW
 xW
@@ -41693,9 +42088,9 @@ xM
 xM
 xM
 dG
-Dp
+yv
 DU
-Dp
+yv
 dG
 yw
 BQ
@@ -42022,9 +42417,9 @@ xM
 xM
 xM
 xM
-xX
+dG
 yv
-xX
+dG
 xM
 xM
 xM
@@ -42184,9 +42579,9 @@ xM
 xM
 xM
 xM
-xX
-yv
-xX
+dG
+Dp
+dG
 xM
 xM
 xM
@@ -42346,9 +42741,9 @@ xM
 xM
 xM
 xM
-xX
-yv
-xX
+dG
+Dp
+dG
 xM
 xM
 xM
@@ -42508,9 +42903,9 @@ xM
 xM
 xM
 xM
-xX
-yv
-xX
+dG
+Dp
+dG
 xM
 ah
 xM
@@ -42670,9 +43065,9 @@ xM
 xM
 xM
 xM
-xX
-yv
-xX
+dG
+Dp
+dG
 xM
 xM
 xM
@@ -42832,9 +43227,9 @@ xM
 xM
 xM
 xM
-xX
-yv
-xX
+dG
+Dp
+dG
 xM
 xM
 xM
@@ -42994,9 +43389,9 @@ xM
 xM
 xM
 xM
-xX
-yv
-xX
+dG
+Dp
+dG
 xM
 xM
 xM
@@ -43156,9 +43551,9 @@ xM
 xM
 xM
 xM
-xX
-yv
-xX
+dG
+Dp
+dG
 xM
 xM
 xM
@@ -43318,9 +43713,9 @@ xM
 xM
 xM
 xM
-xX
-yv
-xX
+dG
+Dp
+dG
 xM
 xM
 xM
@@ -43480,9 +43875,9 @@ xM
 xM
 xM
 xM
-xX
-yv
-xX
+dG
+Dp
+dG
 xM
 xM
 xM
@@ -43642,9 +44037,9 @@ xM
 xM
 xM
 xM
-xX
-yv
-xX
+dG
+Dp
+dG
 xM
 xM
 xM
@@ -43804,9 +44199,9 @@ xM
 xM
 xM
 xM
-xX
-yv
-xX
+dG
+Dp
+dG
 xM
 xM
 xM
@@ -43966,9 +44361,9 @@ xM
 xM
 xM
 xM
-xX
-yv
-xX
+dG
+Dp
+dG
 xM
 xM
 xM
@@ -44128,9 +44523,9 @@ xM
 xM
 xM
 xM
-xX
-yv
-xX
+dG
+Dp
+dG
 xM
 xM
 xM
@@ -44290,9 +44685,9 @@ xM
 xM
 xM
 xM
-xX
-yv
-xX
+dG
+Dp
+dG
 xM
 xM
 xM
@@ -44452,9 +44847,9 @@ xM
 xM
 xM
 xM
-xX
-yv
-xX
+dG
+Dp
+dG
 xM
 xM
 xM
@@ -44614,9 +45009,9 @@ xM
 xM
 xM
 xM
-xX
-yv
-xX
+dG
+Dp
+dG
 xM
 xM
 xM
@@ -44776,9 +45171,9 @@ xM
 xM
 xM
 xM
-xX
-yv
-xX
+dG
+Dp
+dG
 xM
 xM
 xM
@@ -44938,9 +45333,9 @@ xM
 xM
 xM
 xM
-xX
-yv
-xX
+dG
+Dp
+dG
 xM
 xM
 xM
@@ -45100,9 +45495,9 @@ xM
 xM
 xM
 xM
-xX
-yv
-xX
+dG
+Dp
+dG
 xM
 xM
 xM
@@ -45262,9 +45657,9 @@ xM
 xM
 xM
 xM
-yw
-yv
-xX
+vS
+Dp
+dG
 xM
 xM
 xM
@@ -45424,9 +45819,9 @@ xM
 xM
 xM
 xM
-xX
-yv
-xX
+dG
+Dp
+dG
 xM
 xM
 xM
@@ -45586,9 +45981,9 @@ xM
 xM
 xM
 xM
-xX
-yv
-xX
+dG
+Dp
+dG
 xM
 xM
 xM
@@ -45748,9 +46143,9 @@ xM
 xM
 xM
 xM
-xX
-yv
-xX
+dG
+Dp
+dG
 xM
 xM
 xM
@@ -45910,9 +46305,9 @@ xM
 xM
 xM
 xM
-xX
-yv
-xX
+dG
+Dp
+dG
 xM
 xM
 xM
@@ -46072,9 +46467,9 @@ xM
 xM
 xM
 xM
-xX
-yv
-xX
+dG
+Dp
+dG
 xM
 xM
 xM
@@ -46234,9 +46629,9 @@ xM
 xM
 xM
 xM
-xX
-yv
-xX
+dG
+Dp
+dG
 xM
 xM
 xM
@@ -46396,9 +46791,9 @@ xM
 xM
 xM
 xM
-xX
-yv
-xX
+dG
+Dp
+dG
 xM
 xM
 xM
@@ -46558,9 +46953,9 @@ xM
 xM
 xM
 xM
-xX
-yv
-xX
+dG
+Dp
+dG
 xM
 xM
 xM
@@ -46720,9 +47115,9 @@ xM
 xM
 xM
 xM
-xX
-yv
-xX
+dG
+Dp
+dG
 xM
 xM
 xM
@@ -46882,9 +47277,9 @@ xM
 xM
 xM
 xM
-xX
-yv
-xX
+dG
+Dp
+dG
 xM
 xM
 xM
@@ -47044,9 +47439,9 @@ xM
 xM
 xM
 xM
-xX
-yv
-xX
+dG
+Dp
+dG
 xM
 xM
 xM
@@ -47206,9 +47601,9 @@ xM
 xM
 xM
 xM
-xX
-yv
-xX
+dG
+Dp
+dG
 xM
 xM
 xM
@@ -47368,9 +47763,9 @@ xM
 xM
 xM
 xM
-xX
-yv
-xX
+dG
+Dp
+dG
 xM
 xM
 xM
@@ -47530,9 +47925,9 @@ xM
 xM
 xM
 xM
-xX
-yv
-xX
+dG
+Dp
+dG
 xM
 xM
 xM
@@ -47692,9 +48087,9 @@ xM
 xM
 xM
 xM
-xX
-yv
-xX
+dG
+Dp
+dG
 xM
 xM
 xM
@@ -47854,9 +48249,9 @@ xM
 xM
 xM
 xM
-xX
-yv
-xX
+dG
+Dp
+dG
 xM
 xM
 xM
@@ -48016,9 +48411,9 @@ xM
 xM
 xM
 xM
-xX
-yv
-xX
+dG
+Dp
+dG
 xM
 xM
 xM
@@ -48178,9 +48573,9 @@ xM
 xM
 xM
 xM
-xX
-yv
-xX
+dG
+Dp
+dG
 xM
 xM
 xM
@@ -48337,15 +48732,15 @@ xM
 xM
 xM
 xM
-xX
-xX
-xX
+dG
+dG
+dG
 BS
-yv
-yv
-xX
-xX
-xX
+Dp
+Dp
+dG
+dG
+dG
 xM
 xM
 xM
@@ -48497,19 +48892,19 @@ xM
 xM
 xM
 xM
-xX
-xX
-xX
-yv
-yv
-yw
-yv
-yw
-yv
-yv
-xX
-xX
-xX
+dG
+dG
+dG
+Dp
+Dp
+vS
+Dp
+vS
+Dp
+Dp
+dG
+dG
+dG
 xM
 xM
 xM
@@ -48659,19 +49054,19 @@ xM
 xM
 xM
 xM
-xX
+dG
 yR
-yv
-yv
-yv
-yv
-yv
-yv
-yv
-yv
-yv
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
 yR
-xX
+dG
 xM
 xM
 xM
@@ -48820,20 +49215,20 @@ xM
 xM
 xM
 xM
-xX
-xX
-yv
-yv
-yv
-yv
-yv
-yv
-yv
-yv
-yv
-yv
-yv
-xX
+dG
+dG
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+dG
 dG
 xM
 xM
@@ -48982,21 +49377,21 @@ xM
 xM
 xM
 xM
-xX
-yv
-yv
-yv
-yv
-yv
-yv
-yv
-yv
-yv
-yv
-yv
-yv
-yv
-xX
+dG
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+dG
 xM
 xM
 xM
@@ -49144,21 +49539,21 @@ xM
 xM
 xM
 xM
-xX
-yv
-yv
-yv
-yv
-yv
-yv
-yv
-yv
-yv
-yv
-yv
-yv
-yv
-xX
+dG
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+dG
 xM
 xM
 xM
@@ -49306,21 +49701,21 @@ xM
 xM
 xM
 xM
-xX
-yv
-yv
-yv
-yv
-yv
-yv
-yv
-yv
-yv
-yv
-yv
-yv
-yv
-xX
+dG
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+dG
 xM
 xM
 xM
@@ -49468,21 +49863,21 @@ xM
 xM
 xM
 xM
-xX
-yw
-yv
-yv
-yv
-yv
-yv
-yv
-yv
-yv
-yv
-yv
-yv
-yw
-xX
+dG
+vS
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+vS
+dG
 xM
 xM
 xM
@@ -49630,21 +50025,21 @@ xM
 xM
 xM
 xM
-xX
-yv
-yv
-yv
-yv
-yv
-yv
-yw
-yv
-yv
-yv
-yv
-yv
-yv
-xX
+dG
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+vS
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+dG
 xM
 xM
 xM
@@ -49792,21 +50187,21 @@ xM
 xM
 xM
 xM
-xX
-yv
-yv
-yv
-yv
-yv
-yv
-yv
-yv
-yv
-yv
-yv
-yv
-yv
-xX
+dG
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+dG
 xM
 xM
 xM
@@ -49954,21 +50349,21 @@ xM
 xM
 xM
 xM
-xX
-yv
-yv
-yv
-yv
-yv
-yv
-yv
-yv
-yv
-yv
-yv
-yv
-yv
-xX
+dG
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+dG
 xM
 xM
 xM
@@ -50116,21 +50511,21 @@ xM
 xM
 xM
 xM
-xX
-xX
-yv
-yv
-yv
-yv
-yv
-yv
-yv
-yv
-yv
-yv
-yv
-xX
-xX
+dG
+dG
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+dG
+dG
 xM
 xM
 xM
@@ -50278,20 +50673,20 @@ xM
 xM
 xM
 xM
-xX
-xX
+dG
+dG
 yR
-yv
-yv
-yv
-yv
-yv
-yv
-yv
-yv
-yv
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
 yR
-xX
+dG
 xM
 xM
 xM
@@ -50441,19 +50836,19 @@ xM
 xM
 xM
 xM
-xX
-xX
-xX
-yv
-yv
-yv
-yv
-yv
-yv
-yv
-xX
-xX
-xX
+dG
+dG
+dG
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+Dp
+dG
+dG
+dG
 xM
 xM
 xM
@@ -50605,15 +51000,15 @@ xM
 xM
 xM
 xM
-xX
-xX
-xX
-yv
-yw
-yv
-xX
-xX
-xX
+dG
+dG
+dG
+Dp
+vS
+Dp
+dG
+dG
+dG
 xM
 xM
 xM
@@ -50769,11 +51164,11 @@ xM
 xM
 xM
 xM
-xX
-xX
-xX
-xX
-xX
+dG
+dG
+dG
+dG
+dG
 xM
 xM
 xM

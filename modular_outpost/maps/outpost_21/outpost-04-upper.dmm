@@ -13812,10 +13812,6 @@
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging{
 	dir = 6
 	},
-/obj/machinery/sparker{
-	name = "Burn Chamber Igniter";
-	pixel_x = -26
-	},
 /turf/simulated/floor/reinforced/airless,
 /area/rnd/research/phoronics/burn)
 "bZs" = (
@@ -26946,10 +26942,6 @@
 	c_tag = "TOX - Phoronics Impact Burn";
 	dir = 8
 	},
-/obj/machinery/sparker{
-	name = "Burn Chamber Igniter";
-	pixel_x = 28
-	},
 /turf/simulated/floor/reinforced/airless,
 /area/rnd/research/phoronics/burn)
 "iWN" = (
@@ -27394,6 +27386,7 @@
 /area/hallway/secondary/engineering_hallway)
 "jjq" = (
 /obj/machinery/door/airlock/maintenance/common,
+/obj/item/taperoll/engineering,
 /turf/simulated/floor,
 /area/maintenance/substation/phoronics)
 "jjF" = (
@@ -27803,9 +27796,6 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/gravgen)
 "juj" = (
-/obj/machinery/air_sensor{
-	frequency = 1441
-	},
 /turf/simulated/floor/reinforced/airless,
 /area/rnd/research/phoronics/burn)
 "juC" = (
@@ -34013,6 +34003,7 @@
 	req_one_access = null
 	},
 /obj/machinery/door/firedoor/glass,
+/obj/item/taperoll/engineering,
 /turf/simulated/floor/tiled/techfloor,
 /area/rnd/research/phoronics/bombrange)
 "mLj" = (
@@ -43431,8 +43422,7 @@
 	},
 /obj/machinery/door/airlock/glass_research{
 	name = "Phoronics";
-	req_access = list(8);
-	req_one_access = list(8,47,52)
+	req_access = list(8)
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/rnd/hallway/phoronicsbridge)
