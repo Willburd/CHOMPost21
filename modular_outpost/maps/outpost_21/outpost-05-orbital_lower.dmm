@@ -11650,11 +11650,14 @@
 	dir = 1
 	},
 /obj/structure/filingcabinet{
-	pixel_x = 8
+	pixel_x = -4
 	},
 /obj/effect/floor_decal/corner/orange,
+/obj/structure/window/basic{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/white,
-/area/offworld/orbital/phoronics)
+/area/offworld/orbital/phoronics/burn_chamber)
 "xM" = (
 /turf/space,
 /area/space)
@@ -11671,8 +11674,20 @@
 	dir = 10
 	},
 /obj/effect/floor_decal/corner/orange,
+/obj/machinery/power/apc{
+	name = "south bump";
+	pixel_y = -24
+	},
+/obj/structure/cable/green{
+	icon_state = "0-1"
+	},
+/obj/item/paper_bin{
+	pixel_x = -3;
+	pixel_y = 2
+	},
+/obj/item/pen,
 /turf/simulated/floor/tiled/white,
-/area/offworld/orbital/phoronics)
+/area/offworld/orbital/phoronics/burn_chamber)
 "xO" = (
 /obj/machinery/atmospherics/pipe/simple/visible/red{
 	dir = 4
@@ -11697,7 +11712,7 @@
 /obj/machinery/light,
 /obj/effect/floor_decal/corner/orange,
 /turf/simulated/floor/tiled/white,
-/area/offworld/orbital/phoronics)
+/area/offworld/orbital/phoronics/burn_chamber)
 "xP" = (
 /obj/structure/grille,
 /obj/structure/window/plastitanium{
@@ -11744,13 +11759,6 @@
 	dir = 4
 	},
 /obj/machinery/light,
-/obj/machinery/power/apc{
-	name = "south bump";
-	pixel_y = -24
-	},
-/obj/structure/cable/green{
-	icon_state = "0-1"
-	},
 /turf/simulated/floor/reinforced,
 /area/offworld/orbital/phoronics/burn_chamber)
 "xS" = (
@@ -11791,6 +11799,9 @@
 	id = "phoronic_burn_vent"
 	},
 /turf/simulated/floor/airless,
+/area/offworld/orbital/phoronics/burn_chamber)
+"xX" = (
+/turf/simulated/wall/r_wall,
 /area/offworld/orbital/phoronics/burn_chamber)
 "xY" = (
 /obj/machinery/autolathe,
@@ -11929,16 +11940,16 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/white,
-/area/offworld/orbital/phoronics)
+/area/offworld/orbital/phoronics/burn_chamber)
 "yk" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
 	},
 /obj/structure/cable/green{
-	icon_state = "4-8"
+	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled/white,
-/area/offworld/orbital/phoronics)
+/area/offworld/orbital/phoronics/burn_chamber)
 "yl" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -11950,11 +11961,8 @@
 /obj/effect/floor_decal/industrial/warning/color/red{
 	dir = 4
 	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
 /turf/simulated/floor/tiled/white,
-/area/offworld/orbital/phoronics)
+/area/offworld/orbital/phoronics/burn_chamber)
 "ym" = (
 /obj/structure/lattice,
 /obj/machinery/atmospherics/pipe/simple/visible/red{
@@ -11980,9 +11988,6 @@
 	name = "Burn Chamber";
 	req_one_access = list(24,40)
 	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/phoronics/burn_chamber)
 "yo" = (
@@ -12000,9 +12005,6 @@
 	},
 /obj/effect/floor_decal/industrial/warning/color/red{
 	dir = 8
-	},
-/obj/structure/cable/green{
-	icon_state = "2-8"
 	},
 /turf/simulated/floor/reinforced,
 /area/offworld/orbital/phoronics/burn_chamber)
@@ -12165,7 +12167,7 @@
 	dir = 5
 	},
 /turf/simulated/floor/tiled/white,
-/area/offworld/orbital/phoronics)
+/area/offworld/orbital/phoronics/burn_chamber)
 "yI" = (
 /obj/machinery/meter,
 /obj/machinery/atmospherics/pipe/simple/visible/red,
@@ -12177,7 +12179,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
-/area/offworld/orbital/phoronics)
+/area/offworld/orbital/phoronics/burn_chamber)
 "yK" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
 	dir = 4
@@ -12192,7 +12194,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
-/area/offworld/orbital/phoronics)
+/area/offworld/orbital/phoronics/burn_chamber)
 "yL" = (
 /obj/structure/grille,
 /obj/structure/window/plastitanium{
@@ -12446,7 +12448,7 @@
 /obj/machinery/atmospherics/pipe/simple/visible/yellow,
 /obj/machinery/meter,
 /turf/simulated/floor/tiled/white,
-/area/offworld/orbital/phoronics)
+/area/offworld/orbital/phoronics/burn_chamber)
 "zi" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/binary/passive_gate,
@@ -12454,7 +12456,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
-/area/offworld/orbital/phoronics)
+/area/offworld/orbital/phoronics/burn_chamber)
 "zj" = (
 /obj/machinery/button/remote/blast_door{
 	desc = "A remote control-switch for shutters.";
@@ -12488,8 +12490,11 @@
 /obj/effect/floor_decal/corner/orange{
 	dir = 1
 	},
+/obj/machinery/light{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/white,
-/area/offworld/orbital/phoronics)
+/area/offworld/orbital/phoronics/burn_chamber)
 "zk" = (
 /obj/structure/sign/warning/deathsposal,
 /turf/simulated/wall/r_wall,
@@ -12677,8 +12682,14 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/industrial/outline/blue,
+/obj/structure/window/basic{
+	dir = 1
+	},
+/obj/structure/window/basic{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/white,
-/area/offworld/orbital/phoronics)
+/area/offworld/orbital/phoronics/burn_chamber)
 "zB" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/portables_connector,
@@ -12689,11 +12700,11 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/industrial/outline/blue,
-/obj/machinery/light{
-	dir = 4
+/obj/structure/window/basic{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
-/area/offworld/orbital/phoronics)
+/area/offworld/orbital/phoronics/burn_chamber)
 "zC" = (
 /obj/machinery/disposal/wall{
 	dir = 4;
@@ -14143,6 +14154,10 @@
 	},
 /obj/effect/floor_decal/corner/orange{
 	dir = 1
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -5;
+	pixel_y = 30
 	},
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/phoronics)
@@ -40482,7 +40497,7 @@ zh
 yH
 yj
 xL
-jc
+xX
 xg
 xc
 wW
@@ -40644,7 +40659,7 @@ zi
 yJ
 yk
 xN
-jc
+xX
 xg
 xc
 wW
@@ -40801,12 +40816,12 @@ BL
 Be
 AC
 zV
-jc
+xX
 zj
 yK
 yl
 xO
-jc
+xX
 xg
 xc
 wW
