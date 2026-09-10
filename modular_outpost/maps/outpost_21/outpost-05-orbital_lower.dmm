@@ -8470,14 +8470,6 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/backup_power)
-"rq" = (
-/obj/machinery/light_switch{
-	dir = 4;
-	pixel_x = -26;
-	pixel_y = -20
-	},
-/turf/simulated/wall/plastitanium,
-/area/offworld/orbital/phoronics/burn_chamber)
 "rr" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-8"
@@ -12166,6 +12158,7 @@
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
 	dir = 5
 	},
+/obj/machinery/meter,
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/phoronics/burn_chamber)
 "yI" = (
@@ -12446,7 +12439,6 @@
 /area/offworld/orbital/phoronics)
 "zh" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow,
-/obj/machinery/meter,
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/phoronics/burn_chamber)
 "zi" = (
@@ -16449,10 +16441,6 @@
 "Ge" = (
 /obj/structure/sign/explosive,
 /turf/simulated/wall/r_wall,
-/area/offworld/orbital/phoronics/breakroom)
-"Gf" = (
-/obj/item/geiger/wall/north,
-/turf/simulated/wall,
 /area/offworld/orbital/phoronics/breakroom)
 "Gg" = (
 /obj/structure/reagent_dispensers/coolanttank,
@@ -38215,7 +38203,7 @@ ET
 EL
 Ew
 Em
-Gf
+FM
 Dx
 BV
 Cv
@@ -41145,7 +41133,7 @@ xq
 yM
 yo
 xR
-rq
+xq
 xg
 xc
 wW
