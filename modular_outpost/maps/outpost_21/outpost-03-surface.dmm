@@ -33417,6 +33417,9 @@
 /obj/effect/floor_decal/corner/brown{
 	dir = 6
 	},
+/obj/machinery/computer/security/telescreen/entertainment{
+	pixel_x = 32
+	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/office)
 "eXp" = (
