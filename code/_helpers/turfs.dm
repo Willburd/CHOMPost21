@@ -155,13 +155,11 @@
 	//Move the objects. Not forceMove because the object isn't "moving" really, it's supposed to be on the "same" turf.
 	for(var/obj/O in T)
 		if(O.simulated)
-			// Outpost 21 edit(port) begin - multi-loc objects need to check if it's their actual loc, and not just a corner!
-			if(O.locs.len > 1)
+			if(O.locs.len > 1) // multi-loc objects need to check if it's their actual loc, and not just a corner!
 				if(O.loc == T)
 					O.loc = X
 			else
 				O.loc = X
-			// Outpost 21 edit end
 			if(O.light_system == STATIC_LIGHT)
 				O.update_light()
 			if(z_level_change) // The objects still need to know if their z-level changed.

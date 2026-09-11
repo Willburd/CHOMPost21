@@ -43,10 +43,7 @@
 		light_amount = T.get_lumcount(0,1)
 	// outpost 21 edit end
 
-	// outpost 21 edit(port) begin - More intense gradiant
-	if(light_amount)
-		light_amount = light_amount ** 3
-	// outpost 21 edit end
+	light_amount = light_amount ** 3 // Make the gradiant from 0 light to 1 light more clear.
 
 	// Apply damage if beyond the minimum light threshold, actually makes zaddat SLIGHTLY more forgiving!
 	if(light_amount > 0 && light_amount > threshold) // Checks light_amount, as threshold of 0 can pass 0s to the damage procs otherwise.

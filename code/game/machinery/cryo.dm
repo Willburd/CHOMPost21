@@ -295,7 +295,7 @@
 	if(occupant)
 		to_chat(usr, span_danger("The cryo cell is already occupied!"))
 		return
-	/* Outpost 21 edit(port) - Disable abiotic lockout
+	/* Disable abiotic lockout
 	if(M.abiotic())
 		to_chat(usr, span_warning("Subject may not have abiotic items on."))
 		return
