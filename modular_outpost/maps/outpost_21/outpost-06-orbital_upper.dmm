@@ -1034,7 +1034,6 @@
 	locked = 1;
 	req_one_access = list(13,48,52)
 	},
-/obj/machinery/door/firedoor,
 /obj/machinery/shield_diffuser,
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/dockingarm)
@@ -1698,7 +1697,6 @@
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
-/obj/machinery/door/firedoor/glass,
 /obj/effect/map_helper/airlock/door/ext_door,
 /obj/effect/map_helper/airlock/sensor/ext_sensor,
 /obj/machinery/airlock_sensor/airlock_exterior/shuttle{
@@ -2030,6 +2028,7 @@
 /area/offworld/orbital/station/halls/aft)
 "dX" = (
 /obj/machinery/door/airlock/glass,
+/obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/offworld/orbital/station/halls/fore)
 "dY" = (
@@ -2515,7 +2514,6 @@
 	locked = 1;
 	icon_state = "door_locked"
 	},
-/obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/halls/aft)
 "eO" = (
@@ -5350,7 +5348,6 @@
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
-/obj/machinery/door/firedoor/glass,
 /obj/effect/map_helper/airlock/door/ext_door,
 /obj/machinery/airlock_sensor/airlock_exterior/shuttle{
 	pixel_x = 10;
@@ -9267,6 +9264,7 @@
 "rY" = (
 /obj/machinery/door/airlock/glass,
 /obj/machinery/door/firedoor/multi_tile/glass,
+/obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/offworld/orbital/station/halls/fore)
 "rZ" = (
@@ -9371,6 +9369,7 @@
 	},
 /obj/structure/disposalpipe/segment,
 /obj/machinery/metal_detector,
+/obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/halls/fore)
 "sh" = (
@@ -9394,6 +9393,7 @@
 	req_one_access = list(1,40,63)
 	},
 /obj/machinery/metal_detector,
+/obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/halls/fore)
 "sj" = (
@@ -10722,7 +10722,6 @@
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
-/obj/machinery/door/firedoor/glass,
 /obj/effect/map_helper/airlock/sensor/ext_sensor,
 /obj/machinery/airlock_sensor/airlock_exterior/shuttle{
 	pixel_x = -10;
@@ -12029,7 +12028,6 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/obj/machinery/door/firedoor/glass,
 /obj/effect/map_helper/airlock/door/ext_door,
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/power_distribution)
@@ -15470,7 +15468,6 @@
 	id_tag = "beam_sat_door";
 	locked = 1
 	},
-/obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/aft)
 "Db" = (
@@ -18247,7 +18244,6 @@
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
-/obj/machinery/door/firedoor/glass,
 /obj/effect/map_helper/airlock/door/int_door,
 /obj/effect/map_helper/airlock/sensor/int_sensor,
 /obj/machinery/airlock_sensor/airlock_interior/shuttle{
@@ -19163,7 +19159,6 @@
 	locked = 1;
 	req_one_access = list(13,48,52)
 	},
-/obj/machinery/door/firedoor,
 /obj/machinery/shield_diffuser,
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -19650,7 +19645,6 @@
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
-/obj/machinery/door/firedoor/glass,
 /obj/effect/map_helper/airlock/door/int_door,
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/power_distribution)
@@ -20347,7 +20341,6 @@
 	locked = 1;
 	req_one_access = list(13,48,52)
 	},
-/obj/machinery/door/firedoor/border_only,
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/dockingarm)
 "Rh" = (
@@ -20528,7 +20521,6 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/obj/machinery/door/firedoor/glass,
 /obj/effect/map_helper/airlock/door/int_door,
 /obj/machinery/airlock_sensor/airlock_interior/shuttle{
 	dir = 1;
@@ -20763,7 +20755,6 @@
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
-/obj/machinery/door/firedoor/glass,
 /obj/effect/map_helper/airlock/door/int_door,
 /obj/effect/map_helper/airlock/sensor/int_sensor,
 /obj/machinery/airlock_sensor/airlock_interior/shuttle{
@@ -22152,7 +22143,6 @@
 	locked = 1;
 	req_one_access = list(13,48,52)
 	},
-/obj/machinery/door/firedoor/border_only,
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
