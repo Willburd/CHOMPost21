@@ -17788,10 +17788,9 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/obj/machinery/atmospherics/pipe/simple/visible/blue{
+/obj/machinery/atmospherics/valve/digital/open{
 	dir = 4
 	},
-/obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/muriki/atmos/voxdump)
 "aGX" = (
@@ -17803,6 +17802,7 @@
 /obj/machinery/atmospherics/pipe/simple/visible/blue{
 	dir = 9
 	},
+/obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/muriki/atmos/voxdump)
 "aGY" = (
