@@ -6488,6 +6488,10 @@
 	dir = 1;
 	pixel_y = -26
 	},
+/obj/machinery/camera/network/ai_sat{
+	c_tag = "AI - Backup Power";
+	dir = 1
+	},
 /turf/simulated/floor/tiled/milspec/raised/turfpack,
 /area/offworld/orbital/station/telecomms)
 "nG" = (
@@ -7070,6 +7074,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 6
 	},
+/obj/machinery/camera/network/ai_sat{
+	c_tag = "AI - Satellite Atmos West";
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/ai_sat/atmos)
 "oI" = (
@@ -7121,6 +7129,10 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/rust_tool_storage)
 "oN" = (
+/obj/machinery/camera/network/ai_sat{
+	c_tag = "AI - Satellite Atmos East";
+	dir = 8
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/ai_sat/atmos)
 "oO" = (
@@ -7234,6 +7246,10 @@
 "oZ" = (
 /obj/effect/floor_decal/corner/white{
 	dir = 9
+	},
+/obj/machinery/camera/network/ai_sat{
+	c_tag = "AI - Telecom and Fire Control";
+	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec/raised/turfpack,
 /area/offworld/orbital/station/telecomms)
@@ -16474,6 +16490,12 @@
 /obj/structure/sign/explosive,
 /turf/simulated/wall/r_wall,
 /area/offworld/orbital/phoronics/breakroom)
+"Gf" = (
+/obj/machinery/camera/network/ai_sat{
+	c_tag = "AI - Lower South turret"
+	},
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/airless,
+/area/ai_sat/core_external)
 "Gg" = (
 /obj/structure/reagent_dispensers/coolanttank,
 /turf/simulated/floor/plating,
@@ -16528,6 +16550,20 @@
 /obj/effect/floor_decal/steeldecal/monofloor,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/stairs_lower)
+"Go" = (
+/obj/machinery/camera/network/ai_sat{
+	c_tag = "AI - Lower Southeast turret";
+	dir = 4
+	},
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/airless,
+/area/ai_sat/core_external)
+"Gp" = (
+/obj/machinery/camera/network/ai_sat{
+	c_tag = "AI - Lower Southwest turret";
+	dir = 8
+	},
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/airless,
+/area/ai_sat/core_external)
 "Gq" = (
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging{
 	dir = 6
@@ -16535,6 +16571,20 @@
 /obj/structure/lattice,
 /turf/space,
 /area/space)
+"Gr" = (
+/obj/machinery/camera/network/ai_sat{
+	c_tag = "AI - Lower East turret";
+	dir = 4
+	},
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/airless,
+/area/ai_sat/core_external)
+"Gs" = (
+/obj/machinery/camera/network/ai_sat{
+	c_tag = "AI - Lower West turret";
+	dir = 8
+	},
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/airless,
+/area/ai_sat/core_external)
 "Gt" = (
 /obj/machinery/door/blast/radproof/open{
 	id = "PTL_Cont_Blast"
@@ -16549,6 +16599,20 @@
 /obj/structure/window/phoronreinforced,
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/rust_core)
+"Gu" = (
+/obj/machinery/camera/network/ai_sat{
+	c_tag = "AI - Lower Northwest turret";
+	dir = 1
+	},
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/airless,
+/area/ai_sat/core_external)
+"Gv" = (
+/obj/machinery/camera/network/ai_sat{
+	c_tag = "AI - Lower Northeast turret";
+	dir = 1
+	},
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/airless,
+/area/ai_sat/core_external)
 "Gx" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-4"
@@ -22757,11 +22821,11 @@ ng
 nj
 nj
 nl
-nj
+Gs
 nj
 oz
 nj
-nj
+Gp
 nl
 nj
 nj
@@ -23577,7 +23641,7 @@ nE
 fx
 nw
 np
-nj
+Gf
 nj
 ng
 ng
@@ -23724,7 +23788,7 @@ xM
 xM
 ng
 nj
-nj
+Gu
 np
 nw
 fx
@@ -24858,7 +24922,7 @@ xM
 xM
 ng
 nj
-nj
+Gv
 ns
 nx
 nB
@@ -25519,7 +25583,7 @@ nB
 nx
 ns
 nl
-nj
+Go
 nj
 ng
 ng
@@ -25999,7 +26063,7 @@ ng
 nj
 nj
 nl
-nj
+Gr
 nj
 ng
 ng
