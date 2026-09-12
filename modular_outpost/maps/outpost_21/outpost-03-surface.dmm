@@ -33840,6 +33840,13 @@
 /obj/structure/sign/painting/public{
 	pixel_y = 32
 	},
+/obj/item/text_to_speech,
+/obj/item/text_to_speech,
+/obj/item/text_to_speech,
+/obj/item/text_to_speech,
+/obj/item/text_to_speech,
+/obj/item/text_to_speech,
+/obj/item/text_to_speech,
 /turf/simulated/floor/wood,
 /area/medical/psych)
 "ffi" = (
