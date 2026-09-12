@@ -1120,9 +1120,6 @@
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/beam_emitter)
 "cu" = (
-/obj/machinery/atmospherics/pipe/simple/visible/red{
-	dir = 4
-	},
 /obj/effect/floor_decal/industrial/warning,
 /obj/effect/floor_decal/industrial/warning/color/red,
 /obj/machinery/atmospherics/binary/pump/high_power{
@@ -2623,6 +2620,7 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
+/obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/rust_core)
 "gi" = (
@@ -3779,7 +3777,6 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/lower/port)
 "iE" = (
-/obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/glass_external/public{
 	req_one_access = list(1,5,10,19,31,47,48,52)
 	},
@@ -3956,7 +3953,6 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/lower/port)
 "iZ" = (
-/obj/machinery/door/firedoor/glass,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
@@ -5407,6 +5403,7 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
+/obj/machinery/door/firedoor/glass,
 /turf/simulated/floor,
 /area/offworld/orbital/station/solar_control)
 "lw" = (
@@ -5956,8 +5953,13 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/lower/central)
 "my" = (
-/obj/item/storage/toolbox/electrical,
+/obj/item/storage/toolbox/electrical{
+	pixel_y = -6
+	},
 /obj/structure/table/reinforced,
+/obj/item/binoculars{
+	pixel_y = 6
+	},
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/beam_emitter)
 "mz" = (
@@ -6228,6 +6230,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/beam_emitter)
 "nb" = (
@@ -7039,7 +7042,7 @@
 /area/offworld/orbital/station/rust_gas_storage)
 "oD" = (
 /obj/structure/sign/signnew/explosives,
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall,
 /area/offworld/orbital/station/rust_aux_tool_storage)
 "oE" = (
 /obj/machinery/light{
@@ -11876,6 +11879,7 @@
 	name = "Phoronics Supply";
 	req_one_access = list(24,40)
 	},
+/obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/offworld/orbital/phoronics/overflow_storage)
 "ye" = (
@@ -13232,6 +13236,7 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
+/obj/machinery/door/firedoor/glass,
 /turf/simulated/floor,
 /area/offworld/orbital/station/solar_control)
 "Aq" = (
@@ -13850,6 +13855,13 @@
 /obj/effect/floor_decal/industrial/outline/red,
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/phoronics)
+"BF" = (
+/obj/effect/floor_decal/industrial/warning/full,
+/obj/machinery/pointdefense{
+	id_tag = "orbital_point_def"
+	},
+/turf/simulated/floor/airless,
+/area/offworld/orbital/phoronics/burn_chamber)
 "BG" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced{
@@ -13861,6 +13873,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
+/obj/machinery/door/firedoor/glass,
 /turf/simulated/floor,
 /area/offworld/orbital/station/solar_control)
 "BH" = (
@@ -13941,6 +13954,10 @@
 /obj/effect/floor_decal/corner/black,
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/phoronics)
+"BM" = (
+/obj/structure/lattice,
+/turf/space,
+/area/offworld/orbital/phoronics/airlock)
 "BN" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
@@ -14430,6 +14447,9 @@
 "Cz" = (
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/phoronics)
+"CA" = (
+/turf/space,
+/area/offworld/orbital/phoronics/airlock)
 "CB" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
@@ -14543,7 +14563,7 @@
 	},
 /obj/machinery/shield_diffuser,
 /turf/simulated/floor/airless,
-/area/space)
+/area/offworld/orbital/phoronics/airlock)
 "CM" = (
 /obj/structure/cable/yellow{
 	icon_state = "6-9"
@@ -14932,6 +14952,7 @@
 	rad_insulation = 0;
 	req_access = list(11)
 	},
+/obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/reinforced,
 /area/offworld/orbital/station/rust_core)
 "Do" = (
@@ -15035,6 +15056,9 @@
 	},
 /turf/simulated/floor/wood,
 /area/offworld/orbital/phoronics/breakroom)
+"Dw" = (
+/turf/simulated/floor/airless,
+/area/offworld/orbital/phoronics/airlock)
 "Dx" = (
 /obj/machinery/vending/foodfast,
 /obj/item/geiger/wall/north,
@@ -15052,6 +15076,10 @@
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
 /area/offworld/orbital/phoronics/breakroom)
+"Dz" = (
+/obj/machinery/shield_diffuser,
+/turf/simulated/floor/airless,
+/area/offworld/orbital/phoronics/airlock)
 "DA" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -15254,7 +15282,7 @@
 /obj/structure/ladder/up,
 /obj/machinery/shield_diffuser,
 /turf/simulated/floor/airless,
-/area/space)
+/area/offworld/orbital/phoronics/airlock)
 "DV" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/cable/green{
@@ -15483,12 +15511,20 @@
 	name = "Phoronics";
 	req_one_access = list(24,40)
 	},
+/obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/phoronics)
 "Ek" = (
 /obj/structure/dispenser,
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/aux_equipment)
+"El" = (
+/obj/effect/floor_decal/industrial/warning/full,
+/obj/machinery/pointdefense{
+	id_tag = "orbital_point_def"
+	},
+/turf/simulated/floor/airless,
+/area/offworld/orbital/phoronics/airlock)
 "Em" = (
 /obj/effect/floor_decal/corner/purple{
 	dir = 10
@@ -15596,6 +15632,7 @@
 	name = "Phoronics";
 	req_one_access = list(24,40)
 	},
+/obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/phoronics)
 "Es" = (
@@ -16058,6 +16095,9 @@
 /obj/machinery/meter,
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/rust_core)
+"Fh" = (
+/turf/simulated/wall,
+/area/offworld/orbital/station/rust_aux_tool_storage)
 "Fi" = (
 /obj/machinery/portable_atmospherics/canister/carbon_dioxide,
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -17659,6 +17699,7 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
+/obj/machinery/door/firedoor/glass,
 /turf/simulated/floor,
 /area/offworld/orbital/station/solar_control)
 "OM" = (
@@ -18996,9 +19037,6 @@
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/rust_core)
 "YS" = (
-/obj/machinery/atmospherics/pipe/simple/visible/red{
-	dir = 4
-	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
@@ -31463,7 +31501,7 @@ iT
 ty
 wI
 wG
-iT
+Fh
 wy
 iT
 eW
@@ -32145,9 +32183,9 @@ eW
 eW
 eW
 eW
-xM
-xM
-by
+dG
+dG
+bH
 ez
 pC
 pC
@@ -32309,7 +32347,7 @@ eW
 eW
 eW
 xM
-by
+bH
 es
 pC
 pC
@@ -32470,8 +32508,8 @@ eW
 eW
 eW
 eW
-xM
-by
+dG
+bH
 fN
 fr
 pC
@@ -33443,7 +33481,7 @@ eW
 eW
 eW
 eW
-by
+bH
 ez
 pC
 pC
@@ -33605,7 +33643,7 @@ eW
 eW
 eW
 eW
-by
+bH
 es
 pC
 pC
@@ -33767,7 +33805,7 @@ eW
 eW
 eW
 eW
-by
+bH
 fN
 fr
 pC
@@ -41921,9 +41959,9 @@ xM
 xM
 xM
 CL
-Dp
-Dp
-Dp
+Dw
+Dw
+Dw
 CL
 yw
 yw
@@ -42082,11 +42120,11 @@ xM
 xM
 xM
 xM
-dG
-yv
+BM
+Dz
 DU
-yv
-dG
+Dz
+BM
 yw
 BQ
 Bp
@@ -42097,7 +42135,7 @@ xM
 xM
 xM
 xM
-xM
+BF
 xM
 xM
 wZ
@@ -42244,11 +42282,11 @@ xM
 xM
 xM
 xM
-xM
-dG
-dG
-dG
-xM
+El
+BM
+BM
+BM
+CA
 yw
 yw
 Bp
