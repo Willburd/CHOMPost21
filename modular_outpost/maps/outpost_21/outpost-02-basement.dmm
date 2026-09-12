@@ -15637,20 +15637,30 @@
 /obj/structure/window/phoronreinforced{
 	dir = 8
 	},
+/obj/machinery/door/blast/regular{
+	density = 0;
+	dir = 4;
+	icon_state = "pdoor0";
+	id = "virologyquar";
+	name = "Virology Emergency Quarantine Blast Doors";
+	opacity = 0
+	},
 /turf/simulated/floor/plating,
 /area/medical/voxlab/airlock)
 "aDh" = (
-/obj/effect/floor_decal/corner/black/border{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/blue/border,
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/tiled/white{
-	oxygen = 0;
-	phoron = 21.8366
+/obj/machinery/door/blast/regular{
+	density = 0;
+	dir = 4;
+	icon_state = "pdoor0";
+	id = "virologyquar";
+	name = "Virology Emergency Quarantine Blast Doors";
+	opacity = 0
 	},
+/obj/effect/floor_decal/milspec/hatchmarks,
+/turf/simulated/floor/tiled/techfloor,
 /area/medical/voxlab/airlock)
 "aDi" = (
 /obj/structure/ladder/up,
@@ -17778,10 +17788,9 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/obj/machinery/atmospherics/pipe/simple/visible/blue{
+/obj/machinery/atmospherics/valve/digital/open{
 	dir = 4
 	},
-/obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/muriki/atmos/voxdump)
 "aGX" = (
@@ -17793,6 +17802,7 @@
 /obj/machinery/atmospherics/pipe/simple/visible/blue{
 	dir = 9
 	},
+/obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/muriki/atmos/voxdump)
 "aGY" = (
@@ -39831,6 +39841,8 @@
 	layer = 4;
 	pixel_y = 32
 	},
+/obj/item/paint_brush,
+/obj/item/paint_brush,
 /turf/simulated/floor/tiled/dark,
 /area/security/brig)
 "bvL" = (
@@ -39862,6 +39874,8 @@
 /obj/effect/floor_decal/corner/red{
 	dir = 5
 	},
+/obj/item/paint_brush,
+/obj/item/paint_brush,
 /turf/simulated/floor/tiled/dark,
 /area/security/brig)
 "bvP" = (
@@ -121921,7 +121935,7 @@ aQt
 wuC
 aQt
 cNO
-aNL
+aQt
 aNL
 aNL
 bzH

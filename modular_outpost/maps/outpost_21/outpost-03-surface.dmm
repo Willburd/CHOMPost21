@@ -20648,6 +20648,10 @@
 	pixel_x = 11
 	},
 /obj/effect/floor_decal/corner/blue/border,
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -26
+	},
 /turf/simulated/floor/tiled/old_tile/white,
 /area/medical/laundry)
 "aVS" = (
@@ -33840,6 +33844,13 @@
 /obj/structure/sign/painting/public{
 	pixel_y = 32
 	},
+/obj/item/text_to_speech,
+/obj/item/text_to_speech,
+/obj/item/text_to_speech,
+/obj/item/text_to_speech,
+/obj/item/text_to_speech,
+/obj/item/text_to_speech,
+/obj/item/text_to_speech,
 /turf/simulated/floor/wood,
 /area/medical/psych)
 "ffi" = (
@@ -69538,10 +69549,6 @@
 /turf/simulated/floor/tiled/milspec,
 /area/medical/locker)
 "qwR" = (
-/obj/machinery/firealarm{
-	dir = 4;
-	pixel_x = 26
-	},
 /obj/machinery/disposal,
 /obj/item/radio/intercom{
 	dir = 1;
