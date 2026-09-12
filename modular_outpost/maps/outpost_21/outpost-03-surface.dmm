@@ -30224,6 +30224,9 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
+/obj/effect/floor_decal/steeldecal/steel_decals_central7{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay_primary_storage)
 "dVM" = (
