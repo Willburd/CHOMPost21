@@ -220,7 +220,10 @@
 
 	if(prob(1))
 		var/turf/T = get_turf(holder.my_atom)
-		explosion(T, -1, rand(-1, 1), rand(1,2), rand(3,5))
+		// Outpost 21 edit begin - Brute juice anti-farm actually works
+		holder.clear_reagents()
+		explosion(T, 0, rand(1, 2), rand(1,2), rand(3,5))
+		// Outpost 21 edit end
 	return
 
 /datum/decl/chemical_reaction/distilling/cryogel
