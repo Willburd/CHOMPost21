@@ -215,16 +215,17 @@
 	temp_range = list(T0C + 600, T0C + 700)
 	temp_shift = 4
 
+// Outpost 21 edit begin - Brute juice anti-farm actually works
+#ifndef UNIT_TESTS
 /datum/decl/chemical_reaction/distilling/berserkjuice/on_reaction(datum/reagents/holder, created_volume)
 	..()
-
 	if(prob(1))
 		var/turf/T = get_turf(holder.my_atom)
-		// Outpost 21 edit begin - Brute juice anti-farm actually works
 		holder.clear_reagents()
 		explosion(T, 0, rand(1, 2), rand(1,2), rand(3,5))
-		// Outpost 21 edit end
 	return
+#endif
+// Outpost 21 edit end
 
 /datum/decl/chemical_reaction/distilling/cryogel
 	name = "Distilling Cryogellatin"
