@@ -17645,13 +17645,17 @@
 /turf/simulated/floor/airless,
 /area/offworld/orbital/exterior)
 "Hr" = (
-/obj/machinery/hologram/holopad,
-/turf/simulated/floor/tiled/milspec/airless,
+/obj/structure/railing/grey,
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/item/tool/wirecutters,
+/turf/simulated/floor/airless,
 /area/offworld/orbital/exterior/engine_core_port)
 "Hs" = (
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/milspec/airless,
-/area/offworld/orbital/exterior/engine_core_starboard)
+/area/offworld/orbital/exterior/engine_core_port)
 "Ht" = (
 /obj/structure/railing/grey,
 /obj/machinery/power/terminal{
@@ -17680,6 +17684,10 @@
 /turf/simulated/floor/tiled/dark,
 /area/ai_sat/solar_airlock)
 "Hv" = (
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/tiled/milspec/airless,
+/area/offworld/orbital/exterior/engine_core_starboard)
+"Hw" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 4
 	},
@@ -17689,16 +17697,6 @@
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/stairs_upper)
-"Hw" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 8
-	},
-/obj/effect/floor_decal/corner/lightgrey/border{
-	dir = 8
-	},
-/obj/machinery/hologram/holopad,
-/turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/halls/central)
 "Hx" = (
 /obj/structure/cable/cyan{
 	icon_state = "0-8"
@@ -17733,40 +17731,42 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/south_engine_access_west)
 "Hz" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 8
+	},
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/central)
+"HA" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/lightgrey/border,
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/starboard)
-"HA" = (
+"HB" = (
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/port_observation)
-"HB" = (
+"HC" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/lightgrey/border,
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/fore)
-"HC" = (
+"HD" = (
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/ai_transit_hub)
-"HD" = (
+"HE" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/security/armory)
-"HE" = (
-/obj/structure/railing/grey,
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/obj/item/tool/wirecutters,
-/turf/simulated/floor/airless,
-/area/offworld/orbital/exterior/engine_core_port)
 "HH" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/grille,
@@ -37161,7 +37161,7 @@ GQ
 GQ
 GQ
 fN
-HE
+Hr
 br
 br
 br
@@ -38126,7 +38126,7 @@ Yx
 wM
 ag
 SM
-Hr
+Hs
 jY
 nm
 hx
@@ -38395,7 +38395,7 @@ bO
 vZ
 ik
 ik
-HA
+HB
 er
 ik
 ik
@@ -38863,7 +38863,7 @@ HH
 pA
 Ke
 sO
-HC
+HD
 sr
 ok
 cX
@@ -39696,7 +39696,7 @@ ke
 kK
 jH
 jI
-Hw
+Hz
 jv
 jH
 jH
@@ -40204,7 +40204,7 @@ qo
 Ex
 Ry
 nO
-Hv
+Hw
 Ci
 jZ
 Jd
@@ -41960,7 +41960,7 @@ rK
 lx
 rK
 kP
-Hz
+HA
 kd
 Fq
 tP
@@ -42107,7 +42107,7 @@ dO
 oH
 rW
 od
-HB
+HC
 rW
 Qy
 HJ
@@ -42500,7 +42500,7 @@ qz
 qz
 yr
 oP
-Hs
+Hv
 ia
 ck
 aR
@@ -43399,7 +43399,7 @@ ui
 tQ
 sK
 tp
-HD
+HE
 sF
 sk
 Us

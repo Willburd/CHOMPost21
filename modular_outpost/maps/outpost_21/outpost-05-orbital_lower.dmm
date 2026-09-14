@@ -16745,20 +16745,21 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/rust_entry)
 "GI" = (
+/obj/effect/floor_decal/industrial/warning,
+/obj/item/tool/wrench/pipe,
+/turf/simulated/floor/plating,
+/area/offworld/orbital/station/beam_emitter)
+"GJ" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 10
 	},
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/lower/central)
-"GJ" = (
+"GK" = (
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled,
 /area/offworld/orbital/station/lower_medical_treatment)
-"GK" = (
-/obj/machinery/hologram/holopad,
-/turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/halls/rust_entry)
 "GL" = (
 /obj/structure/cable/cyan{
 	icon_state = "1-6"
@@ -16766,6 +16767,10 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/beam_emitter)
 "GM" = (
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/rust_entry)
+"GN" = (
 /obj/machinery/door/blast/radproof/open{
 	id = "PTL_Cont_Blast"
 	},
@@ -16782,7 +16787,7 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/rust_core)
-"GN" = (
+"GO" = (
 /obj/machinery/door/blast/radproof/open{
 	id = "PTL_Cont_Blast"
 	},
@@ -16799,7 +16804,7 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/rust_core)
-"GO" = (
+"GP" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
@@ -16814,15 +16819,10 @@
 	},
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/rust_core)
-"GP" = (
+"GQ" = (
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/rust_gas_storage)
-"GQ" = (
-/obj/effect/floor_decal/industrial/warning,
-/obj/item/tool/wrench/pipe,
-/turf/simulated/floor/plating,
-/area/offworld/orbital/station/beam_emitter)
 "GZ" = (
 /obj/structure/confinement_beam_generator/focus{
 	dir = 8
@@ -33175,8 +33175,8 @@ fY
 vA
 SB
 sI
-GO
-GM
+GP
+GN
 aW
 wT
 UB
@@ -33500,7 +33500,7 @@ nm
 SB
 JG
 sB
-GN
+GO
 bd
 kb
 EW
@@ -34318,7 +34318,7 @@ ed
 kq
 gE
 gx
-GK
+GM
 dN
 ZG
 dW
@@ -36402,7 +36402,7 @@ rj
 uf
 td
 td
-GP
+GQ
 eB
 sW
 sq
@@ -37584,7 +37584,7 @@ mC
 Pp
 fi
 UV
-GQ
+GI
 RF
 uc
 PS
@@ -39360,7 +39360,7 @@ qs
 dk
 SJ
 LG
-GJ
+GK
 vv
 XQ
 Vv
@@ -39851,7 +39851,7 @@ aq
 lT
 lP
 lN
-GI
+GJ
 PW
 eW
 eW
