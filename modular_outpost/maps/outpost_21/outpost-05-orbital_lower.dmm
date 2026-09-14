@@ -951,11 +951,6 @@
 "ca" = (
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/beam_emitter)
-"cb" = (
-/obj/item/tool/wrench/pipe,
-/obj/effect/floor_decal/industrial/warning,
-/turf/simulated/floor/plating,
-/area/offworld/orbital/station/beam_emitter)
 "cc" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
@@ -16823,6 +16818,11 @@
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/rust_gas_storage)
+"GQ" = (
+/obj/effect/floor_decal/industrial/warning,
+/obj/item/tool/wrench/pipe,
+/turf/simulated/floor/plating,
+/area/offworld/orbital/station/beam_emitter)
 "GZ" = (
 /obj/structure/confinement_beam_generator/focus{
 	dir = 8
@@ -37584,7 +37584,7 @@ mC
 Pp
 fi
 UV
-mu
+GQ
 RF
 uc
 PS
@@ -37746,7 +37746,7 @@ cw
 my
 rY
 mw
-cb
+mu
 bX
 uc
 bI

@@ -4100,14 +4100,6 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/starboard_airlock)
-"hL" = (
-/obj/structure/railing/grey,
-/obj/item/tool/wirecutters,
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/airless,
-/area/offworld/orbital/exterior/engine_core_port)
 "hM" = (
 /obj/machinery/door/airlock/glass,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -17767,6 +17759,14 @@
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/security/armory)
+"HE" = (
+/obj/structure/railing/grey,
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/item/tool/wirecutters,
+/turf/simulated/floor/airless,
+/area/offworld/orbital/exterior/engine_core_port)
 "HH" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/grille,
@@ -37161,7 +37161,7 @@ GQ
 GQ
 GQ
 fN
-Sg
+HE
 br
 br
 br
@@ -37323,7 +37323,7 @@ aw
 aw
 br
 br
-hL
+Sg
 Bu
 vd
 aL
