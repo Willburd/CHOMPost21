@@ -111,4 +111,4 @@
 	default = 2.5
 
 /datum/config_entry/flag/roundstart_frayed_wires
-	default = FALSE
+	default = TRUE // Outpost 21 edit - Frayed wires round start
