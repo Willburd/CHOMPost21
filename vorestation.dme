@@ -5721,6 +5721,7 @@
 #include "modular_outpost\code\_helpers\roundstats.dm"
 #include "modular_outpost\code\_onclick\hud\alert.dm"
 #include "modular_outpost\code\ATMOSPHERICS\components\binary_devices\circulator.dm"
+#include "modular_outpost\code\ATMOSPHERICS\components\binary_devices\pipeturbine.dm"
 #include "modular_outpost\code\books\wiki_books.dm"
 #include "modular_outpost\code\controllers\subsystems\chemistry.dm"
 #include "modular_outpost\code\controllers\subsystems\events.dm"
