@@ -30,7 +30,7 @@ type Circulator = {
   inletTemperature: number;
   outletPressure: number;
   outletTemperature: number;
-  reversed: BooleanLike; // Outpost 21 edit - Reversible TEGs
+  reversed: BooleanLike;
 };
 
 export const TEGenerator = (props) => {
@@ -45,7 +45,6 @@ export const TEGenerator = (props) => {
         <Section
           title="Status"
           buttons={
-            //Outpost 21 edit begin - Reversible TEGs
             <>
               <Button
                 icon="refresh"
@@ -64,7 +63,6 @@ export const TEGenerator = (props) => {
                 Reverse Secondary
               </Button>
             </>
-            //Outpost 21 edit end
           }
         >
           <LabeledList>
