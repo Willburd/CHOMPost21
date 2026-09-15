@@ -2638,11 +2638,6 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/light_switch{
-	pixel_x = -27;
-	pixel_y = -27;
-	dir = 1
-	},
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/rust_core)
 "gi" = (
@@ -11187,6 +11182,11 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
+	},
+/obj/machinery/light_switch{
+	pixel_x = 7;
+	pixel_y = -27;
+	dir = 1
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/rust_aux_tool_storage)
