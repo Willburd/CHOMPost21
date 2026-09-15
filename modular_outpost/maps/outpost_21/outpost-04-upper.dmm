@@ -29758,8 +29758,8 @@
 	},
 /obj/machinery/light_switch{
 	dir = 4;
-	pixel_x = -28;
-	pixel_y = -28
+	pixel_x = -26;
+	pixel_y = -25
 	},
 /turf/simulated/floor/tiled/dark,
 /area/chapel/chapel_morgue)
@@ -31189,8 +31189,7 @@
 /obj/machinery/button/crematorium{
 	id = "chapcrem";
 	pixel_x = 28;
-	pixel_y = 28;
-	req_access = null
+	pixel_y = 28
 	},
 /obj/effect/landmark{
 	name = "blobstart"
