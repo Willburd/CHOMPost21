@@ -39,6 +39,7 @@ SUBSYSTEM_DEF(haunting)
 	VAR_PRIVATE/list/prior_haunts = list()
 
 	var/list/used_haunt_entities = list()
+	var/is_paused = FALSE
 
 /datum/controller/subsystem/haunting/Initialize()
 	hauntings["[MODE_CALM]"] = list(
@@ -174,7 +175,10 @@ SUBSYSTEM_DEF(haunting)
 	return SS_INIT_SUCCESS
 
 /datum/controller/subsystem/haunting/stat_entry(msg)
-	msg = "Score: [haunt_score] | Mode: [world_mode] | Change: [new_score] | Who: [current_player_target?.resolve()] | Event: [last_event][current_haunt ? "" : "(finished)"] | Total: [total_haunts]/[length(prior_haunts)]"
+	if(is_paused)
+		msg = "EVENTS PAUSED"
+	else
+		msg = "Score: [haunt_score] | Mode: [world_mode] | Change: [new_score] | Who: [current_player_target?.resolve()] | Event: [last_event][current_haunt ? "" : "(finished)"] | Total: [total_haunts]/[length(prior_haunts)]"
 	return ..()
 
 /datum/controller/subsystem/haunting/fire()
@@ -211,6 +215,9 @@ SUBSYSTEM_DEF(haunting)
 /datum/controller/subsystem/haunting/proc/find_player_target()
 	PRIVATE_PROC(TRUE)
 	SHOULD_NOT_OVERRIDE(TRUE)
+	if(is_paused)
+		current_player_target = null
+		return
 	var/mob/potential = get_random_player()
 	if(!potential)
 		return
@@ -322,6 +329,8 @@ SUBSYSTEM_DEF(haunting)
 	else
 		if(!isnull(current_haunt))
 			current_haunt.end()
+	if(is_paused)
+		return
 	// swapping players
 	switch(world_mode)
 		// Idly mess with players
@@ -415,6 +424,8 @@ SUBSYSTEM_DEF(haunting)
 /datum/controller/subsystem/haunting/proc/set_haunting(path)
 	SHOULD_NOT_OVERRIDE(TRUE)
 	// has to handle a verb input too...
+	if(is_paused)
+		return
 	if(!path)
 		return
 	if(current_haunt)

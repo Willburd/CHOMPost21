@@ -6,6 +6,11 @@ ADMIN_VERB(test_haunting_controller, R_EVENT, "Test Station Haunting", "Selects 
 		var/list/all_haunt = subtypesof(/datum/station_haunt)
 		SShaunting.set_haunting(tgui_input_list(usr,"Select haunting type","Select Haunt",all_haunt))
 
+ADMIN_VERB(pause_haunting_controller, R_EVENT, "Toggle Station Hauntings", "Pauses and resumes the haunting controller.", ADMIN_CATEGORY_EVENTS)
+	SShaunting.is_paused = !SShaunting.is_paused
+	to_chat(usr, "haunting controller [SShaunting.is_paused ? "PAUSED" : "RESUMED"]")
+	log_world("## DEBUG: haunting controller [SShaunting.is_paused ? "PAUSED" : "RESUMED"]")
+
 ADMIN_VERB(spawn_bad_body, R_EVENT, "Spawn Badbody", "Spawns a badbody haunting from a selectable list of the current crew.", ADMIN_CATEGORY_EVENTS)
 	var/list/checks = list()
 	for(var/client/C in GLOB.clients)

@@ -1129,7 +1129,8 @@ GLOBAL_DATUM(planet_muriki, /datum/planet/muriki)
 		var/turf/simulated/T = pick(holder.our_planet.planet_floors)
 		if(!istype(T) || !T.is_outdoors())
 			continue
-		if(!T.zone || T.zone.air.temperature > (T0C - 70)) // Needs to be cold enough
+		var/datum/gas_mixture/air = T.return_air()
+		if(!air || air.temperature > (T0C - 70)) // Needs to be cold enough
 			continue
 		// Try to shatter things a few times
 		var/t = rand(3,5)
