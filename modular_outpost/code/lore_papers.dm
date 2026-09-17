@@ -155,3 +155,36 @@
 /obj/item/paper/scavmark/Uboa
 	name = "Menace"
 	info = "On the paper is a horrifying visage of a ghoulish face. The surrounding paper is scribbled with attempts of drawing... something. The drawing seems to radiate an unnatural menace, but you're not even sure what it's trying to warn you of."
+
+
+
+
+/obj/item/expi_pamphlet
+	name = "Expeditionary Pamphlet"
+	desc = "A pamphlet containing info on expeditionaries."
+	gender = /obj/item/paper::gender
+	icon = 'icons/obj/bureaucracy.dmi'
+	icon_state = "pamphlet"
+	item_state = "paper"
+	throwforce = /obj/item/paper::throwforce
+	w_class = /obj/item/paper::w_class
+	throw_range = /obj/item/paper::throw_range
+	throw_speed = /obj/item/paper::throw_speed
+	plane = /obj/item/paper::plane
+	layer = /obj/item/paper::layer
+	pressure_resistance = /obj/item/paper::pressure_resistance
+	drop_sound = /obj/item/paper::drop_sound
+	pickup_sound = /obj/item/paper::pickup_sound
+	attack_verb = list("bapped")
+
+/obj/item/expi_pamphlet/attack_self(mob/living/user)
+	. = ..(user)
+	if(.)
+		return TRUE
+	user.examinate(src)
+
+/obj/item/expi_pamphlet/examine(mob/user, infix, suffix)
+	. = ..()
+	if(in_range(user, src) || isobserver(user))
+		user << browse("<HTML><HEAD><TITLE>[name]</TITLE></HEAD><BODY><img src=\ref['html/images/outpost/expi_poster.png']></BODY></HTML>", "window=[name]")
+		onclose(user, "[name]")

@@ -8938,6 +8938,14 @@
 /obj/item/trash/smolburger,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/wastedisposalnear)
+"aqE" = (
+/obj/effect/floorbreak,
+/obj/item/expi_pamphlet{
+	pixel_x = -9;
+	pixel_y = -6
+	},
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/specialty/expie_clubhouse/archive)
 "aqF" = (
 /obj/machinery/hologram/holopad,
 /obj/structure/cable/green{
@@ -72682,6 +72690,10 @@
 "cRP" = (
 /obj/structure/noticeboard/expie{
 	pixel_y = 32
+	},
+/obj/item/expi_pamphlet{
+	pixel_x = 10;
+	pixel_y = -5
 	},
 /turf/simulated/floor/wood/turfpack/muriki,
 /area/specialty/expie_clubhouse/archive)
@@ -153651,7 +153663,7 @@ vSb
 vSb
 cRz
 cRQ
-cRE
+aqE
 cRG
 cRB
 cRz
