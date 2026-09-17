@@ -33113,6 +33113,7 @@
 	name = "bookcase (Reference)"
 	},
 /obj/item/book/codex/lore/vir,
+/obj/item/expi_pamphlet,
 /turf/simulated/floor/wood,
 /area/library)
 "mmN" = (
@@ -33766,6 +33767,10 @@
 /area/medical/sleevecheck)
 "mFG" = (
 /obj/structure/table/standard,
+/obj/item/expi_pamphlet,
+/obj/item/expi_pamphlet,
+/obj/item/expi_pamphlet,
+/obj/item/expi_pamphlet,
 /turf/simulated/floor/wood,
 /area/crew_quarters/medbreak)
 "mFK" = (
@@ -44592,6 +44597,11 @@
 "snf" = (
 /obj/structure/table/woodentable,
 /obj/item/toy/eight_ball,
+/obj/item/expi_pamphlet,
+/obj/item/expi_pamphlet,
+/obj/item/expi_pamphlet,
+/obj/item/expi_pamphlet,
+/obj/item/expi_pamphlet,
 /turf/simulated/floor/tiled,
 /area/quartermaster/cargupbreak)
 "snm" = (

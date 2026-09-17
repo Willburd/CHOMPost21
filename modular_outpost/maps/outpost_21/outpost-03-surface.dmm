@@ -7331,6 +7331,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
+/obj/item/expi_pamphlet,
 /turf/simulated/floor/carpet/purcarpet,
 /area/crew_quarters/bar)
 "alF" = (
@@ -10918,6 +10919,10 @@
 /area/security/briefing_room)
 "atR" = (
 /obj/structure/table/woodentable,
+/obj/item/expi_pamphlet,
+/obj/item/expi_pamphlet,
+/obj/item/expi_pamphlet,
+/obj/item/expi_pamphlet,
 /turf/simulated/floor/wood,
 /area/security/briefing_room)
 "atS" = (
@@ -12007,6 +12012,8 @@
 	dir = 5
 	},
 /obj/structure/table/standard,
+/obj/item/expi_pamphlet,
+/obj/item/expi_pamphlet,
 /turf/simulated/floor/tiled,
 /area/quartermaster/mining)
 "awj" = (
@@ -13587,6 +13594,10 @@
 /obj/item/clothing/accessory/bodycam/yobro,
 /obj/item/clothing/accessory/bodycam/yobro,
 /obj/effect/floor_decal/spline/plain,
+/obj/item/expi_pamphlet,
+/obj/item/expi_pamphlet,
+/obj/item/expi_pamphlet,
+/obj/item/expi_pamphlet,
 /turf/simulated/floor/carpet/purple,
 /area/rnd/breakroom)
 "aAs" = (
@@ -20949,6 +20960,14 @@
 	},
 /turf/simulated/floor/tiled,
 /area/muriki/tramstation/waste)
+"aWC" = (
+/obj/structure/table/fancyblack,
+/obj/item/expi_pamphlet,
+/obj/item/expi_pamphlet,
+/obj/item/expi_pamphlet,
+/obj/item/expi_pamphlet,
+/turf/simulated/floor/carpet/blucarpet,
+/area/bridge/meeting_room)
 "aWI" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/structure/table/rack,
@@ -28610,6 +28629,14 @@
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /obj/structure/table/standard,
+/obj/item/expi_pamphlet,
+/obj/item/expi_pamphlet,
+/obj/item/expi_pamphlet,
+/obj/item/expi_pamphlet,
+/obj/item/expi_pamphlet,
+/obj/item/expi_pamphlet,
+/obj/item/expi_pamphlet,
+/obj/item/expi_pamphlet,
 /turf/simulated/floor/tiled,
 /area/security/lobby)
 "dta" = (
@@ -34479,6 +34506,7 @@
 	pixel_x = 32
 	},
 /obj/structure/table/marble,
+/obj/item/expi_pamphlet,
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cafeteria)
 "fpq" = (
@@ -57731,6 +57759,7 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
+/obj/item/expi_pamphlet,
 /turf/simulated/floor/tiled/white,
 /area/medical/reception)
 "mCI" = (
@@ -69988,6 +70017,7 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 4
 	},
+/obj/item/expi_pamphlet,
 /turf/simulated/floor/carpet/turcarpet,
 /area/hallway/secondary/entry/docking_lounge)
 "qEC" = (
@@ -94040,6 +94070,10 @@
 	},
 /obj/structure/disposalpipe/segment,
 /obj/structure/table/oak,
+/obj/item/expi_pamphlet,
+/obj/item/expi_pamphlet,
+/obj/item/expi_pamphlet,
+/obj/item/expi_pamphlet,
 /turf/simulated/floor/carpet/oracarpet,
 /area/engineering/break_room)
 "yla" = (
@@ -144933,7 +144967,7 @@ tTV
 pOb
 aKb
 peU
-drY
+aWC
 mAB
 gHJ
 tuK
