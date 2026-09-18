@@ -7,6 +7,6 @@ pub fn generate_automata(
     input: Vec<ByondValue>,
 ) -> ByondResult<Vec<ByondValue>> {
 
-    let byond_list: Vec<ByondValue>;
+    let byond_list: Vec<ByondValue> = Vec::new();
     Ok(byond_list)
 }
