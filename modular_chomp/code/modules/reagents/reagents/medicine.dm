@@ -426,7 +426,7 @@
 	industrial_use = REFINERYEXPORT_REASON_MEDSCI
 	modifier_to_add = /datum/modifier/life_cloak
 	modifier_duration = 3 SECONDS
-
+*/
 
 /datum/reagent/dryagent
 	name = REAGENT_DRYAGENT
@@ -461,4 +461,3 @@
 			if(F.wet)
 				F.wet = 0
 	return
-*/
