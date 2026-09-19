@@ -29462,9 +29462,7 @@
 /area/maintenance/civ/west)
 "bcN" = (
 /obj/structure/stairs/spawner/west,
-/turf/simulated/floor/plating/external/turfpack/muriki{
-	outdoors = 0
-	},
+/turf/simulated/floor/plating/external/turfpack/muriki,
 /area/maintenance/cave)
 "bcO" = (
 /obj/effect/catwalk_plated,
@@ -31686,9 +31684,7 @@
 /obj/effect/floor_decal/industrial/warning/dust/corner{
 	dir = 4
 	},
-/turf/simulated/floor/plating/external/turfpack/muriki{
-	outdoors = 0
-	},
+/turf/simulated/floor/plating/external/turfpack/muriki,
 /area/maintenance/cave)
 "bhe" = (
 /obj/structure/cable/heavyduty{
@@ -42005,9 +42001,7 @@
 /obj/effect/floor_decal/steeldecal/steel_decals10{
 	dir = 1
 	},
-/turf/simulated/floor/plating/external/turfpack/muriki{
-	outdoors = 0
-	},
+/turf/simulated/floor/plating/external/turfpack/muriki,
 /area/maintenance/cave)
 "bAj" = (
 /obj/effect/floor_decal/corner/red/border{
@@ -51731,9 +51725,7 @@
 /turf/simulated/wall,
 /area/maintenance/cave)
 "bTz" = (
-/turf/simulated/floor/plating/external/turfpack/muriki{
-	outdoors = 0
-	},
+/turf/simulated/floor/plating/external/turfpack/muriki,
 /area/maintenance/cave)
 "bTA" = (
 /obj/structure/cable/orange{
@@ -87040,9 +87032,7 @@
 /obj/effect/floor_decal/steeldecal/steel_decals10{
 	dir = 1
 	},
-/turf/simulated/floor/plating/external/turfpack/muriki{
-	outdoors = 0
-	},
+/turf/simulated/floor/plating/external/turfpack/muriki,
 /area/maintenance/cave)
 "tJv" = (
 /obj/effect/floor_decal/industrial/outline/cut_corners/yellow,
