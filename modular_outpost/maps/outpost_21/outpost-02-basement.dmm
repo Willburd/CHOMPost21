@@ -8930,7 +8930,9 @@
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/maintenance/wastedisposalnear)
 "aqC" = (
-/obj/machinery/door/airlock/maintenance/int,
+/obj/machinery/door/airlock/maintenance/rnd{
+	name = "Science Maintenance"
+	},
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/rnd/research/exp_prep)
 "aqD" = (
@@ -67987,7 +67989,7 @@
 /obj/structure/railing{
 	dir = 8
 	},
-/obj/structure/spring_trap/start_active{
+/obj/structure/spring_trap/self_resetting/start_active{
 	dir = 1;
 	distance = 8
 	},
