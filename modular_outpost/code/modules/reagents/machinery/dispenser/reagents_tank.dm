@@ -2,6 +2,9 @@
  * Tanks
  */
 
+/obj/structure/reagent_dispensers
+	var/hide_contents = FALSE
+
 //SOUP
 /obj/structure/reagent_dispensers/souppot
 	name = "soup cart"
@@ -11,6 +14,7 @@
 	amount_per_transfer_from_this = 10
 	open_top = TRUE
 	flags = OPENCONTAINER
+	hide_contents = TRUE
 	var/inuse = FALSE
 	var/list/holdingitems = list()
 
