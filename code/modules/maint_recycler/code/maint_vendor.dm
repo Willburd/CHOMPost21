@@ -133,6 +133,7 @@
 	if(attempted_entry.per_round_cap > 0 && attempted_entry.getPurchasedCount() >= attempted_entry.per_round_cap)
 		purchase_failed(user, "Out of Stock")
 		return FALSE
+	/* Outpost 21 edit - Remove access requirement for items on maint vendor
 	if(LAZYLEN(attempted_entry.required_access)) //access check
 		req_one_access = attempted_entry.required_access
 		if(!allowed(user))
@@ -140,6 +141,7 @@
 			req_one_access = list()
 			return FALSE
 		req_one_access = list()
+	*/
 
 	return TRUE
 
