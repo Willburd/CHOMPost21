@@ -20247,14 +20247,14 @@
 "aUT" = (
 /obj/effect/zone_divider,
 /turf/simulated/open/muriki,
-/area/muriki/grounds/med/garage_entrance)
+/area/muriki/skyline/cent)
 "aUU" = (
 /obj/effect/zone_divider,
 /turf/simulated/open/muriki,
 /area/muriki/grounds/civ/garage_entrance)
 "aUV" = (
 /turf/simulated/open/muriki,
-/area/muriki/grounds/med/garage_entrance)
+/area/muriki/skyline/cent)
 "aUW" = (
 /turf/simulated/open/muriki,
 /area/muriki/grounds/civ/garage_entrance)
