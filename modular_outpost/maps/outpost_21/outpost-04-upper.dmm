@@ -27382,7 +27382,7 @@
 /area/hallway/secondary/engineering_hallway)
 "jjq" = (
 /obj/machinery/door/airlock/maintenance/common,
-/obj/item/taperoll/engineering,
+/obj/item/taperoll/engineering/applied,
 /turf/simulated/floor,
 /area/maintenance/substation/phoronics)
 "jjF" = (
@@ -27787,8 +27787,8 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/machinery/door/airlock/maintenance/command,
 /obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/maintenance/sec,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/gravgen)
 "juj" = (
@@ -34003,7 +34003,7 @@
 	req_one_access = null
 	},
 /obj/machinery/door/firedoor/glass,
-/obj/item/taperoll/engineering,
+/obj/item/taperoll/engineering/applied,
 /turf/simulated/floor/tiled/techfloor,
 /area/rnd/research/phoronics/bombrange)
 "mLj" = (
@@ -43410,7 +43410,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/door/firedoor/glass,
-/obj/item/taperoll/engineering,
 /obj/structure/cable/green{
 	icon_state = "2-4"
 	},
@@ -43424,6 +43423,7 @@
 	name = "Phoronics";
 	req_access = list(8)
 	},
+/obj/item/taperoll/engineering/applied,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/rnd/hallway/phoronicsbridge)
 "rKY" = (
@@ -47916,8 +47916,8 @@
 "tXw" = (
 /obj/structure/disposalpipe/segment,
 /obj/item/airlock_brace,
-/obj/machinery/door/airlock/maintenance/command,
 /obj/machinery/door/firedoor/border_only,
+/obj/machinery/door/airlock/maintenance/sec,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/gravgen)
 "tXR" = (
