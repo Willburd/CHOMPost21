@@ -4,6 +4,7 @@
 	desc = "A barrel with warning labels painted all over it."
 	icon = 'icons/obj/objects_vr.dmi'
 	icon_state = "barrel2"
+	hide_contents = TRUE
 	var/static/list/random_allowed_chems = list(
 		REAGENT_ID_BICARIDAZE,
 		REAGENT_ID_BICARIDINE,
