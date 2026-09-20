@@ -32,6 +32,12 @@
 "aah" = (
 /turf/simulated/floor/reinforced,
 /area/rnd/xenobiology/xenobioh)
+"aai" = (
+/obj/machinery/atmospherics/pipe/vent/high_volume{
+	dir = 1
+	},
+/turf/simulated/floor/reinforced,
+/area/rnd/xenobiology)
 "aaj" = (
 /obj/structure/disposaloutlet{
 	dir = 8
@@ -39,6 +45,12 @@
 /obj/structure/disposalpipe/trunk,
 /turf/simulated/floor/reinforced,
 /area/rnd/xenobiology/xenobioh)
+"aak" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
+	dir = 8
+	},
+/turf/simulated/floor/reinforced,
+/area/rnd/xenobiology)
 "aal" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/light/small{
@@ -13550,6 +13562,9 @@
 /area/medical/robotics)
 "aAd" = (
 /mob/living/simple_mob/slime/xenobio,
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
+	dir = 8
+	},
 /turf/simulated/floor/reinforced,
 /area/rnd/xenobiology)
 "aAe" = (
@@ -20397,6 +20412,9 @@
 	pixel_x = 7;
 	pixel_y = -32;
 	dir = 1
+	},
+/obj/machinery/light{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/old_cargo/white,
 /area/rnd/xenobiology)
@@ -55588,6 +55606,9 @@
 	opacity = 0;
 	dir = 4
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/rnd/xenobiology)
 "ccW" = (
@@ -71902,6 +71923,9 @@
 	dir = 4;
 	c_tag = "SCI - Slime Pen 4"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
+	dir = 6
+	},
 /turf/simulated/floor/reinforced,
 /area/rnd/xenobiology)
 "cRn" = (
@@ -72226,6 +72250,9 @@
 	opacity = 0;
 	dir = 4
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/rnd/xenobiology)
 "cRZ" = (
@@ -72242,6 +72269,10 @@
 	dir = 4;
 	name = "Containment Pen";
 	req_access = list(55)
+	},
+/obj/machinery/meter,
+/obj/machinery/atmospherics/pipe/cap/hidden{
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology)
@@ -72296,6 +72327,10 @@
 /obj/structure/cable/green{
 	icon_state = "2-8"
 	},
+/obj/machinery/meter,
+/obj/machinery/atmospherics/pipe/cap/hidden{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology)
 "cSe" = (
@@ -72315,6 +72350,9 @@
 	opacity = 0;
 	dir = 4
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/rnd/xenobiology)
 "cSf" = (
@@ -72322,6 +72360,9 @@
 /obj/machinery/camera/network/research/xenobio{
 	dir = 8;
 	c_tag = "SCI - Slime Pen 3"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
+	dir = 10
 	},
 /turf/simulated/floor/reinforced,
 /area/rnd/xenobiology)
@@ -72529,6 +72570,9 @@
 	dir = 4;
 	c_tag = "SCI - Slime Pen 5"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
+	dir = 6
+	},
 /turf/simulated/floor/reinforced,
 /area/rnd/xenobiology)
 "cSt" = (
@@ -72546,6 +72590,9 @@
 	name = "Containment Blast Doors";
 	opacity = 0;
 	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/rnd/xenobiology)
@@ -72585,6 +72632,9 @@
 	opacity = 0;
 	dir = 4
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/rnd/xenobiology)
 "cSw" = (
@@ -72592,6 +72642,9 @@
 /obj/machinery/camera/network/research/xenobio{
 	dir = 8;
 	c_tag = "SCI - Slime Pen 2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
+	dir = 10
 	},
 /turf/simulated/floor/reinforced,
 /area/rnd/xenobiology)
@@ -72809,6 +72862,9 @@
 	dir = 4;
 	c_tag = "SCI - Slime Pen 6"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
+	dir = 6
+	},
 /turf/simulated/floor/reinforced,
 /area/rnd/xenobiology)
 "cSM" = (
@@ -72826,6 +72882,9 @@
 	name = "Containment Blast Doors";
 	opacity = 0;
 	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/rnd/xenobiology)
@@ -72855,6 +72914,9 @@
 /obj/machinery/camera/network/research/xenobio{
 	dir = 8;
 	c_tag = "SCI - Slime Pen 1"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow{
+	dir = 10
 	},
 /turf/simulated/floor/reinforced,
 /area/rnd/xenobiology)
@@ -73291,6 +73353,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/machinery/meter,
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology)
 "cTA" = (
@@ -73438,6 +73501,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
+/obj/machinery/meter,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/cargo)
 "cTK" = (
@@ -74314,7 +74378,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/red,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/tiled/steel_ridged,
 /area/rnd/research/xenobio_storage)
 "cVb" = (
 /obj/effect/floor_decal/corner/brown/full{
@@ -77837,6 +77901,9 @@
 /area/muriki/processor/hall)
 "gQC" = (
 /obj/machinery/processor,
+/obj/machinery/light{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/old_cargo/white,
 /area/rnd/xenobiology)
 "gQH" = (
@@ -114524,15 +114591,15 @@ cTc
 aqc
 cSg
 cSL
-aqd
+aai
 cSA
 cSg
 cSs
-aqd
+aai
 aqc
 cSg
 cRm
-aqd
+aai
 aqc
 aNL
 aNL
@@ -114689,11 +114756,11 @@ aAd
 aqd
 cSA
 avu
-aqd
+aak
 aqd
 aqc
 avu
-aqd
+aak
 aqd
 aqc
 aNL
@@ -114847,15 +114914,15 @@ cTm
 axa
 aqc
 avu
-aqd
+aak
 aqd
 cSA
 avu
-aqd
+aak
 aqd
 aqc
 avu
-aqd
+aak
 aqd
 aqc
 aNL
@@ -116467,15 +116534,15 @@ cTk
 cvI
 aqc
 avu
-aqd
+aak
 aqd
 ayi
 avu
-aqd
+aak
 aqd
 aqc
 avu
-aqd
+aak
 aqd
 aqc
 aNL
@@ -116629,11 +116696,11 @@ cTk
 cvI
 aqc
 avu
-aqd
+aak
 aqd
 ayi
 avu
-aqd
+aak
 aqd
 aqc
 avu
@@ -116792,15 +116859,15 @@ cvI
 aqc
 avv
 cSO
-aqd
+aai
 ayi
 avv
 cSw
-aqd
+aai
 aqc
 avv
 cSf
-aqd
+aai
 aqc
 aNL
 aNL

@@ -24,3 +24,8 @@
 
 
 // Overrides
+/datum/design_techweb/slimebaton
+	departmental_flags = DEPARTMENT_BITFLAG_CARGO | DEPARTMENT_BITFLAG_SCIENCE
+
+/datum/design_techweb/slimetaser
+	departmental_flags = DEPARTMENT_BITFLAG_CARGO | DEPARTMENT_BITFLAG_SCIENCE
