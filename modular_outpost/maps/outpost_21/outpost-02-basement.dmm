@@ -6588,12 +6588,11 @@
 /area/maintenance/incinerator)
 "amN" = (
 /obj/structure/table/standard,
-/obj/machinery/recharger{
-	pixel_x = -6
-	},
-/obj/machinery/recharger{
-	pixel_x = 6
-	},
+/obj/item/storage/box/monkeycubes,
+/obj/item/storage/box/monkeycubes,
+/obj/item/storage/box/monkeycubes,
+/obj/item/storage/box/monkeycubes,
+/obj/item/reagent_containers/food/snacks/monkeycube/wrapped,
 /turf/simulated/floor/tiled/old_cargo/white,
 /area/rnd/xenobiology)
 "amO" = (
@@ -33500,6 +33499,14 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 1
 	},
+/obj/item/clothing/suit/radiation/teshari,
+/obj/item/clothing/suit/radiation/teshari,
+/obj/item/clothing/suit/radiation/teshari,
+/obj/item/clothing/suit/radiation/teshari,
+/obj/item/clothing/head/radiation/teshari,
+/obj/item/clothing/head/radiation/teshari,
+/obj/item/clothing/head/radiation/teshari,
+/obj/item/clothing/head/radiation/teshari,
 /turf/simulated/floor/tiled,
 /area/rnd/research/xenobio_storage)
 "bly" = (
@@ -50566,11 +50573,16 @@
 /obj/machinery/alarm{
 	pixel_y = 24
 	},
-/obj/structure/reagent_dispensers/watertank,
 /obj/effect/floor_decal/corner/purple,
 /obj/effect/floor_decal/corner/purple{
 	dir = 1
 	},
+/obj/item/stack/hose,
+/obj/item/stack/hose,
+/obj/item/stack/hose,
+/obj/item/reagent_containers/spray/chemsprayer/hosed,
+/obj/item/reagent_containers/glass/bucket,
+/obj/structure/reagent_dispensers/watertank/high,
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology)
 "bRQ" = (
@@ -58635,6 +58647,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/structure/reagent_dispensers/medical_waste_tank,
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology)
 "ckK" = (
@@ -73763,11 +73776,6 @@
 /area/rnd/xenobiology)
 "cUd" = (
 /obj/structure/table/standard,
-/obj/item/storage/box/monkeycubes,
-/obj/item/storage/box/monkeycubes,
-/obj/item/storage/box/monkeycubes,
-/obj/item/storage/box/monkeycubes,
-/obj/item/reagent_containers/food/snacks/monkeycube/wrapped,
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
@@ -73776,6 +73784,12 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/red{
 	dir = 4
+	},
+/obj/machinery/recharger{
+	pixel_x = -6
+	},
+/obj/machinery/recharger{
+	pixel_x = 6
 	},
 /turf/simulated/floor/tiled/old_cargo/white,
 /area/rnd/xenobiology)
@@ -74273,6 +74287,7 @@
 	opacity = 0
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/item/airlock_brace,
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/maintenance/cargo)
 "cUQ" = (
@@ -74403,7 +74418,9 @@
 	icon_state = "0-2"
 	},
 /obj/structure/table/steel,
-/obj/item/clothing/glasses/science,
+/obj/item/experi_scanner,
+/obj/item/experi_scanner,
+/obj/item/experi_scanner,
 /obj/item/clothing/glasses/science,
 /obj/item/clothing/glasses/science,
 /obj/item/clothing/glasses/science,
@@ -74579,6 +74596,7 @@
 	id = "cargolock";
 	name = "Cargo Lockdown"
 	},
+/obj/item/airlock_brace,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/spine/eng)
 "cVq" = (
