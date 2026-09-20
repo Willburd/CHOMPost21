@@ -59,9 +59,23 @@
 	title_outfit = /datum/decl/hierarchy/outfit/job/engineering/atmos/phoronics
 
 
-// Outfits
-/datum/decl/hierarchy/outfit/job/engineering/atmos/phoronics
-	name = OUTFIT_JOB_NAME(JOB_SCIENTIST)
-	id_type = /obj/item/card/id/science/phoronics
-	suit = /obj/item/clothing/suit/storage/toggle/labcoat/science
-	l_pocket = /obj/item/experi_scanner
+
+// Moving to cargo
+/datum/job/xenobiologist
+	departments = list(DEPARTMENT_CARGO)
+	pto_type = PTO_CARGO
+	supervisors = "the " + JOB_QUARTERMASTER
+	selection_color = "#7a4f33"
+	access = list(ACCESS_MAINT_TUNNELS, ACCESS_MAILSORTING, ACCESS_CARGO, ACCESS_CARGO_BOT, ACCESS_MINING, ACCESS_MINING_STATION, ACCESS_XENOBIOLOGY)
+	minimal_access = list(ACCESS_MAINT_TUNNELS, ACCESS_CARGO, ACCESS_CARGO_BOT, ACCESS_MAILSORTING, ACCESS_XENOBIOLOGY)
+	banned_job_species = list(FBP_DIGITAL)
+	mail_color = COMMS_COLOR_SUPPLY
+
+/datum/job/xenobiologist/New()
+	. = ..()
+	alt_titles |= list(
+		JOB_ALT_XENOHUSBANDRY = /datum/alt_title/xenohusbandry
+	)
+
+/datum/alt_title/xenohusbandry
+	title = JOB_ALT_XENOHUSBANDRY

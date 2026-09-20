@@ -11954,6 +11954,7 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 5
 	},
+/obj/effect/landmark/start/xenobio,
 /turf/simulated/floor/carpet/brown,
 /area/quartermaster/cargupbreak)
 "bcu" = (
@@ -12268,6 +12269,7 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 10
 	},
+/obj/effect/landmark/start/xenobio,
 /turf/simulated/floor/wood,
 /area/quartermaster/cargupbreak)
 "blC" = (
@@ -49882,6 +49884,7 @@
 /obj/structure/bed/chair/sofa/right/brown{
 	dir = 4
 	},
+/obj/effect/landmark/start/xenobio,
 /turf/simulated/floor/carpet/brown,
 /area/quartermaster/cargupbreak)
 "uRf" = (

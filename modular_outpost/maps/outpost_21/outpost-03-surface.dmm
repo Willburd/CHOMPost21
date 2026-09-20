@@ -20985,6 +20985,23 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/cargomid)
+"aWF" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/effect/landmark/start/xenobio,
+/turf/simulated/floor/tiled,
+/area/quartermaster/office)
+"aWG" = (
+/obj/effect/landmark/start/xenobio,
+/turf/simulated/floor/tiled,
+/area/quartermaster/office)
 "aWI" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/structure/table/rack,
@@ -87175,7 +87192,6 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 9
 	},
-/obj/effect/landmark/start/xenobio,
 /turf/simulated/floor/carpet/purple,
 /area/rnd/breakroom)
 "vZM" = (
@@ -93446,7 +93462,6 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 1
 	},
-/obj/effect/landmark/start/xenobio,
 /turf/simulated/floor/carpet/purple,
 /area/rnd/breakroom)
 "xZI" = (
@@ -116161,7 +116176,7 @@ lHR
 kwh
 laQ
 ojs
-uxB
+aWF
 eOq
 wbD
 ddW
@@ -117128,7 +117143,7 @@ uHp
 kcg
 gCL
 kwh
-kwh
+aWG
 qya
 tXC
 tXC
