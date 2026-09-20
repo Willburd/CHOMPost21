@@ -1154,13 +1154,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/beam_emitter)
-"cw" = (
-/obj/machinery/hologram/holopad,
-/obj/effect/floor_decal/industrial/warning{
-	dir = 1
-	},
-/turf/simulated/floor/plating,
-/area/offworld/orbital/station/beam_emitter)
 "cx" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -37839,7 +37832,7 @@ uc
 bI
 uc
 bX
-cw
+mC
 my
 rY
 mw
