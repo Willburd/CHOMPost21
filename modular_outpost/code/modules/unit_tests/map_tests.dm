@@ -109,6 +109,8 @@
 		/area/muriki/lowerevac,
 		/area/offworld/orbital/phoronics/burn_chamber,
 		/area/rnd/xenobiology/lost,
+		/area/rnd/xenobiology/xenobioh,
+		/area/rnd/xenobiology/xenobiohstore,
 		)
 
 	var/list/forced_hallway = list(
@@ -223,7 +225,6 @@
 		/area/rnd/research/xenobio_storage,
 		/area/rnd/xenobiology/burn,
 		/area/server,
-		/area/rnd/xenobiology/xenobiohstore,
 		/area/comms,
 		/area/tcomfoyer,
 		/area/tcommsat/computer,
