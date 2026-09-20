@@ -6422,7 +6422,8 @@
 /area/mine/unexplored/sinkhole)
 "nl" = (
 /obj/effect/fancy_shuttle/delivery{
-	dir = 1
+	dir = 1;
+	fancy_shuttle_tag = "supply_shuttle_cosmetic"
 	},
 /turf/space,
 /area/centcom/simulated/cent_cargo_sat)
