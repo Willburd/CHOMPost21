@@ -4585,6 +4585,7 @@
 	dir = 4
 	},
 /obj/machinery/door/firedoor/glass,
+/obj/item/tape/engineering,
 /turf/simulated/floor/tiled/steel_grid,
 /area/rnd/xenobiology/xenobioh)
 "aiZ" = (
@@ -7567,6 +7568,7 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/industrial/outline/red,
+/obj/item/tape/engineering,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/rnd/xenobiology/xenobioh)
 "aoE" = (
@@ -7614,6 +7616,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/item/tape/engineering,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/rnd/xenobiology/xenobioh)
 "aoI" = (
@@ -8323,6 +8326,7 @@
 	name = "Xenobiology";
 	req_one_access = null
 	},
+/obj/item/tape/engineering,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/rnd/xenobiology/xenobioh)
 "apR" = (
@@ -8376,6 +8380,7 @@
 /obj/machinery/door/airlock/research{
 	name = "Xenobiology Lab"
 	},
+/obj/item/tape/engineering,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/rnd/xenobiology/xenobioh)
 "apV" = (
@@ -18306,6 +18311,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/firedoor/glass,
+/obj/item/tape/engineering,
 /turf/simulated/floor/tiled/techfloor,
 /area/rnd/xenobiology/xenobiohstore)
 "aJj" = (
