@@ -28,9 +28,9 @@
 #define REAGENT_ID_LIQUIDHEALER "liquidhealer"
 #define REAGENT_PHOENIXBREATH "Phoenix Breath"
 #define REAGENT_ID_PHOENIXBREATH "phoenixbreath"
+*/
 #define REAGENT_DRYAGENT "Dry Agent"
 #define REAGENT_ID_DRYAGENT "dryagent"
-*/
 #define REAGENT_SORBITOL "Sorbitol"
 #define REAGENT_ID_SORBITOL "sorbitol"
 /* Outpost 21 edit - Removing badly designed chems
