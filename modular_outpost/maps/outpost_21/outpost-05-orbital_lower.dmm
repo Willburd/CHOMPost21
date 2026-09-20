@@ -654,10 +654,6 @@
 "bo" = (
 /turf/simulated/wall/r_wall,
 /area/maintenance/orbital/lower/aft)
-"bp" = (
-/obj/machinery/door/airlock/maintenance/int,
-/turf/simulated/floor/plating,
-/area/maintenance/orbital/lower/aft)
 "bq" = (
 /turf/simulated/floor/plating,
 /area/maintenance/orbital/lower/aft)
@@ -2025,6 +2021,10 @@
 	},
 /turf/simulated/floor/reinforced,
 /area/offworld/orbital/station/rust_core)
+"eD" = (
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/plating,
+/area/offworld/orbital/station/atmos_primary)
 "eE" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -2468,6 +2468,10 @@
 /obj/effect/landmark/redspaceexit,
 /turf/simulated/floor/wood/alt/broken,
 /area/maintenance/orbital/lower/aft)
+"fQ" = (
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/beam_emitter)
 "fR" = (
 /obj/machinery/status_display{
 	pixel_y = 32
@@ -2694,6 +2698,16 @@
 "gp" = (
 /turf/simulated/floor/reinforced/airless,
 /area/offworld/orbital/station/atmos_primary)
+"gq" = (
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/beam_emitter)
 "gr" = (
 /obj/machinery/atmospherics/unary/vent_pump{
 	dir = 4;
@@ -6537,6 +6551,7 @@
 /obj/effect/floor_decal/corner/orange{
 	dir = 10
 	},
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/rust_tool_storage)
 "nN" = (
@@ -10340,6 +10355,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/rust_backup_power)
 "uY" = (
@@ -10798,6 +10814,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/rust_entry)
 "vW" = (
@@ -19351,6 +19368,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "1-4"
 	},
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/rust_core)
 "Zx" = (
@@ -36083,7 +36101,7 @@ hH
 jV
 dT
 gy
-gy
+eD
 gy
 gS
 gN
@@ -37006,7 +37024,7 @@ uM
 uc
 uc
 uc
-uc
+fQ
 tF
 uH
 cM
@@ -37020,7 +37038,7 @@ bT
 bO
 GL
 vK
-uc
+fQ
 uc
 uc
 uc
@@ -38147,7 +38165,7 @@ za
 qE
 qE
 qE
-jJ
+gq
 Fn
 qE
 qE
@@ -39624,9 +39642,9 @@ fy
 ab
 bq
 bo
-bp
+bq
 fs
-bp
+bq
 FP
 bo
 bm
@@ -39789,7 +39807,7 @@ bo
 bo
 bo
 bo
-bp
+bq
 bo
 bm
 bo
@@ -39950,7 +39968,7 @@ bq
 bo
 vR
 ft
-lW
+bq
 vR
 bo
 bo
@@ -40110,7 +40128,7 @@ eK
 wO
 bq
 bo
-bp
+bq
 bo
 bo
 bo
@@ -40273,9 +40291,9 @@ bo
 wO
 bo
 FP
-bp
+bq
 fq
-bp
+bq
 bo
 bo
 fo
