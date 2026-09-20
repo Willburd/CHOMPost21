@@ -20968,6 +20968,23 @@
 /obj/item/expi_pamphlet,
 /turf/simulated/floor/carpet/blucarpet,
 /area/bridge/meeting_room)
+"aWD" = (
+/obj/structure/lattice,
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/structure/disposalpipe/down{
+	dir = 4
+	},
+/turf/simulated/open,
+/area/maintenance/cargomid)
+"aWE" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/cargomid)
 "aWI" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/structure/table/rack,
@@ -27227,7 +27244,7 @@
 	c_tag = "EXT - Cargo West";
 	dir = 8
 	},
-/turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
+/turf/simulated/floor/water/acidic/deep/turfpack/muriki,
 /area/muriki/grounds/tramborder)
 "cVV" = (
 /obj/structure/cable/orange,
@@ -83795,14 +83812,11 @@
 /turf/simulated/floor/plating,
 /area/muriki/processor/hall)
 "uZt" = (
-/obj/structure/disposalpipe/down{
-	dir = 4
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
 	},
-/obj/structure/railing{
-	dir = 4
-	},
-/obj/structure/lattice,
-/turf/simulated/open,
+/turf/simulated/floor/plating,
 /area/maintenance/cargomid)
 "uZy" = (
 /obj/effect/floor_decal/corner_techfloor_grid,
@@ -86567,10 +86581,10 @@
 /turf/simulated/floor/tiled/milspec,
 /area/engineering/foyer)
 "vRh" = (
-/obj/structure/ladder/updown,
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/structure/ladder/up,
 /turf/simulated/floor/plating,
 /area/maintenance/cargomid)
 "vRo" = (
@@ -89857,6 +89871,10 @@
 	},
 /obj/structure/sign/department/cargo_dock{
 	pixel_x = 30
+	},
+/obj/structure/sign/xenobio{
+	desc = "A sign marking the area for research into slimes.";
+	pixel_y = -32
 	},
 /turf/simulated/open,
 /area/quartermaster/office)
@@ -115505,10 +115523,10 @@ aqZ
 aHB
 aqM
 cVy
-aHB
+cEY
 aCt
 aqr
-aHB
+aqr
 asV
 asV
 asV
@@ -115668,9 +115686,9 @@ jJx
 mzr
 ydI
 ydI
-aCu
+uMJ
+uMJ
 aqr
-aHB
 asV
 asV
 asV
@@ -115830,9 +115848,9 @@ mQv
 xhS
 vBp
 ydI
-aCu
+aWD
+uMJ
 aqr
-aHB
 asV
 asV
 asV
@@ -115992,9 +116010,9 @@ dJa
 nvW
 wse
 ydI
-aCu
+bNe
+uMJ
 aqr
-aHB
 asV
 aMK
 asV
@@ -116154,10 +116172,10 @@ lSC
 vUe
 gYw
 ydI
-aCu
+bNe
+uMJ
 aqr
-aHB
-asV
+rnn
 asV
 asV
 asV
@@ -116315,9 +116333,9 @@ dUV
 fpF
 idX
 qcO
-ydI
-aCv
-aqr
+pom
+bNe
+uMJ
 aqr
 aHB
 asV
@@ -116477,9 +116495,9 @@ hTX
 mBI
 alP
 uhk
-ydI
-aCv
-hZu
+pom
+bNe
+uMJ
 aqr
 aHB
 asV
@@ -116639,8 +116657,8 @@ vYI
 gjj
 iVo
 dxn
-uMJ
-uMJ
+dxn
+bNe
 uMJ
 rQH
 aHB
@@ -116802,7 +116820,7 @@ lRG
 wOB
 dxn
 uZt
-prJ
+aWE
 uMJ
 aqr
 aHB

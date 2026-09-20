@@ -2358,8 +2358,9 @@
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
 
 /area/rnd/xenobiology
+	name = "\improper Xenohusbandry Pens"
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
-	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
+	holomap_color = HOLOMAP_AREACOLOR_CARGO
 
 /area/rnd/xenobiology/xenoflora2
 	name = "\improper Xenoflora Hazard Lab"
@@ -2369,18 +2370,16 @@
 	flags = /area/rnd::flags
 
 /area/rnd/xenobiology/xenobioh
-	name = "\improper Hazardous Xenobiology Lab"
+	name = "\improper Abandoned Xenobiology Lab"
 	icon_state = "xeno_f_lab"
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
-	flags = BLUE_SHIELDED|AREA_BLOCK_PHASE_SHIFT
 
 /area/rnd/xenobiology/xenobiohstore
-	name = "\improper Hazardous Xenobiology Storage"
+	name = "\improper Abandoned Xenobiology Storage"
 	icon_state = "research_storage"
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
-	flags = BLUE_SHIELDED|AREA_BLOCK_PHASE_SHIFT
 
 /area/rnd/xenobiology/burn
 	name = "\improper Xenobiology Threat Supression"
@@ -2456,9 +2455,14 @@
 	color_grading = COLORTINT_DIM
 
 /area/rnd/research/xenobio_storage
-	name = "\improper Xenolab Storage"
+	name = "\improper Xenohusbandry Storage"
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
-	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
+	holomap_color = HOLOMAP_AREACOLOR_CARGO
+	color_grading = COLORTINT_DIM
+
+/area/rnd/xenobiology/hallway
+	name = "\improper Xenohusbandry Access"
+	holomap_color = HOLOMAP_AREACOLOR_CARGO
 	color_grading = COLORTINT_DIM
 
 /area/rnd/research/mailing
