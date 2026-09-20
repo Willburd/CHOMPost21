@@ -32,10 +32,6 @@
 "aah" = (
 /turf/simulated/floor/reinforced,
 /area/rnd/xenobiology/xenobioh)
-"aai" = (
-/mob/living/simple_mob/vore/vore_hostile/gelatinous_cube,
-/turf/simulated/floor/reinforced,
-/area/rnd/xenobiology/xenobioh)
 "aaj" = (
 /obj/structure/disposaloutlet{
 	dir = 8
@@ -605,13 +601,6 @@
 	},
 /turf/simulated/floor/wood/alt,
 /area/maintenance/oldbridge)
-"abp" = (
-/obj/effect/landmark{
-	name = "xeno_spawn";
-	pixel_x = -1
-	},
-/turf/simulated/floor/reinforced,
-/area/rnd/xenobiology/xenobioh)
 "abq" = (
 /obj/machinery/atmospherics/binary/pump{
 	dir = 8
@@ -974,13 +963,6 @@
 /obj/structure/table/standard,
 /turf/simulated/floor/tiled/techfloor,
 /area/rnd/xenobiology/xenobioh)
-"acl" = (
-/obj/structure/table/rack/shelf,
-/obj/effect/floor_decal/milspec/color/purple/half{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/dark,
-/area/rnd/xenobiology/xenobiohstore)
 "acm" = (
 /turf/simulated/floor/tiled/dark,
 /area/rnd/xenobiology/xenobiohstore)
@@ -1232,6 +1214,13 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/rnd/xenobiology/xenobioh)
+"acP" = (
+/obj/structure/table/rack/shelf,
+/obj/effect/floor_decal/milspec/color/purple/half{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark,
+/area/rnd/xenobiology/xenobiohstore)
 "acQ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
@@ -74585,6 +74574,10 @@
 /turf/simulated/floor/tiled/steel_ridged,
 /area/muriki/bathroom/cargolower)
 "cVw" = (
+/mob/living/simple_mob/vore/vore_hostile/gelatinous_cube,
+/turf/simulated/floor/reinforced,
+/area/rnd/xenobiology/xenobioh)
+"cVx" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 6
 	},
@@ -74597,16 +74590,16 @@
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/rnd/xenobiology/xenobioh)
-"cVx" = (
+"cVy" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology/xenobioh)
-"cVy" = (
+"cVz" = (
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology/xenobioh)
-"cVz" = (
+"cVA" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 5
 	},
@@ -74620,18 +74613,18 @@
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/rnd/xenobiology/xenobioh)
-"cVA" = (
+"cVB" = (
 /obj/structure/table/standard,
 /turf/simulated/floor/tiled/old_cargo/white,
 /area/rnd/xenobiology/xenobioh)
-"cVB" = (
+"cVC" = (
 /obj/machinery/atmospherics/portables_connector{
 	dir = 1
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/plating,
 /area/rnd/xenobiology/xenobioh)
-"cVC" = (
+"cVD" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 10
 	},
@@ -74644,12 +74637,19 @@
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/rnd/xenobiology/xenobioh)
-"cVD" = (
+"cVE" = (
+/obj/effect/landmark{
+	name = "xeno_spawn";
+	pixel_x = -1
+	},
+/turf/simulated/floor/reinforced,
+/area/rnd/xenobiology/xenobioh)
+"cVF" = (
 /obj/structure/window/reinforced/full,
 /obj/structure/grille,
 /turf/simulated/floor/plating,
 /area/rnd/xenobiology/xenobioh)
-"cVE" = (
+"cVG" = (
 /obj/machinery/disposal,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 9
@@ -74663,7 +74663,7 @@
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/rnd/xenobiology/xenobioh)
-"cVF" = (
+"cVH" = (
 /obj/structure/disposaloutlet,
 /obj/structure/disposalpipe/trunk{
 	dir = 8
@@ -74673,7 +74673,7 @@
 	},
 /turf/simulated/floor/reinforced,
 /area/rnd/xenobiology/xenobioh)
-"cVG" = (
+"cVI" = (
 /turf/simulated/wall,
 /area/rnd/xenobiology/xenobioh)
 "cVM" = (
@@ -146331,7 +146331,7 @@ pmN
 pmN
 aaf
 aaZ
-abp
+cVE
 acc
 acD
 add
@@ -146992,14 +146992,14 @@ aah
 aah
 aaf
 alA
-cVy
+cVz
 aoF
 apS
 arc
 aaf
 ijP
 auc
-cVy
+cVz
 awo
 aaf
 aaf
@@ -147325,7 +147325,7 @@ atc
 aue
 avj
 awq
-cVB
+cVC
 aaf
 azh
 aAe
@@ -147483,15 +147483,15 @@ aoI
 apV
 are
 aaf
-cVD
+cVF
 auf
 azj
-cVD
+cVF
 aaf
 aaf
-cVz
+cVA
 bGR
-cVw
+cVx
 aaf
 aaf
 aaf
@@ -147652,12 +147652,12 @@ gsU
 axb
 ayc
 gsU
-cVx
+cVy
 hvv
 aCx
 aDC
 aah
-aai
+cVw
 aah
 aaf
 adC
@@ -147971,11 +147971,11 @@ ayg
 aaf
 atg
 aud
-cVx
+cVy
 axc
 axc
 fwe
-cVA
+cVB
 ijP
 fwe
 aCz
@@ -148108,7 +148108,7 @@ pmN
 pmN
 aaf
 aah
-abp
+cVE
 aah
 aaC
 aaK
@@ -148295,7 +148295,7 @@ ahf
 asf
 ati
 auh
-cVy
+cVz
 awu
 axe
 ayd
@@ -148448,11 +148448,11 @@ aaf
 aaf
 aaf
 seM
-cVG
+cVI
 aiY
-cVG
-cVG
-cVG
+cVI
+cVI
+cVI
 ari
 aaf
 atj
@@ -148620,11 +148620,11 @@ aaf
 aaf
 aaf
 avp
-cVx
 cVy
-cVy
+cVz
+cVz
 bpj
-cVy
+cVz
 fwe
 aCz
 aDH
@@ -148762,8 +148762,8 @@ iLO
 pmN
 abi
 abJ
-acl
-acl
+acP
+acP
 ado
 abi
 akm
@@ -148782,11 +148782,11 @@ aah
 atk
 auj
 ijP
-cVx
+cVy
 ayg
 ayf
 bpj
-cVy
+cVz
 aBo
 aaf
 aaf
@@ -148947,8 +148947,8 @@ avq
 aww
 ayg
 ayg
-cVy
-cVy
+cVz
+cVz
 fwe
 aCx
 aDI
@@ -149268,11 +149268,11 @@ aaf
 aaf
 aaf
 ozn
-cVx
+cVy
 oLE
 ayh
 oLE
-cVx
+cVy
 dyB
 aCz
 aDK
@@ -149429,9 +149429,9 @@ pmN
 pmN
 pmN
 aaf
-cVE
+cVG
 awy
-cVC
+cVD
 aaf
 azn
 awy
@@ -149917,7 +149917,7 @@ pmN
 aaf
 aba
 aah
-abp
+cVE
 aah
 aah
 aah
@@ -150077,7 +150077,7 @@ pmN
 pmN
 pmN
 aaf
-cVF
+cVH
 aah
 aah
 aah
