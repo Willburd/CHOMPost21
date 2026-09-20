@@ -429,6 +429,9 @@
 /area/ai_sat/fore_airlock)
 "aY" = (
 /obj/item/tool/crowbar,
+/obj/machinery/light/floortube{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/offworld/orbital/exterior/engine_core_port)
 "aZ" = (
@@ -1891,6 +1894,12 @@
 /obj/structure/sign/poster{
 	dir = 4
 	},
+/obj/item/storage/pouch/flares/full_flare,
+/obj/item/storage/pouch/flares/full_flare,
+/obj/item/storage/pouch/flares/full_flare,
+/obj/item/storage/pouch/flares/full_flare,
+/obj/item/storage/pouch/flares/full_flare,
+/obj/structure/table/rack/shelf,
 /turf/simulated/floor/tiled/milspec/airless,
 /area/offworld/orbital/station/storage_engine_core)
 "dK" = (
@@ -4100,6 +4109,10 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/starboard_airlock)
+"hL" = (
+/obj/machinery/light/floortube,
+/turf/simulated/floor/airless,
+/area/offworld/orbital/exterior/engine_core_port)
 "hM" = (
 /obj/machinery/door/airlock/glass,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -11569,6 +11582,7 @@
 	pixel_x = 32;
 	pixel_y = -34
 	},
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/access_shaft/upper)
 "vY" = (
@@ -17767,6 +17781,17 @@
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/security/armory)
+"HF" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 9
+	},
+/obj/machinery/floodlight,
+/turf/simulated/floor/tiled/milspec/airless,
+/area/offworld/orbital/station/storage_engine_core)
+"HG" = (
+/obj/machinery/floodlight,
+/turf/simulated/floor/tiled/milspec/airless,
+/area/offworld/orbital/station/storage_engine_core)
 "HH" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/grille,
@@ -17794,6 +17819,31 @@
 "HJ" = (
 /turf/simulated/floor/wood,
 /area/offworld/orbital/station/bar)
+"HK" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 9
+	},
+/obj/item/storage/pouch/flares/full_flare,
+/obj/item/storage/pouch/flares/full_flare,
+/obj/item/storage/pouch/flares/full_flare,
+/obj/item/storage/pouch/flares/full_flare,
+/obj/item/storage/pouch/flares/full_flare,
+/obj/structure/table/rack/shelf,
+/turf/simulated/floor/tiled/milspec/airless,
+/area/offworld/orbital/station/storage_engine_core)
+"HL" = (
+/obj/machinery/light/floortube{
+	dir = 8
+	},
+/turf/simulated/floor/airless,
+/area/offworld/orbital/exterior/engine_core_port)
+"HM" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 5
+	},
+/obj/machinery/floodlight,
+/turf/simulated/floor/tiled/milspec/airless,
+/area/offworld/orbital/station/storage_engine_core)
 "HN" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 10
@@ -20031,6 +20081,22 @@
 	c_tag = "REX - Primary Storage West";
 	dir = 4
 	},
+/obj/structure/table/rack,
+/obj/item/storage/pouch/eng_parts,
+/obj/item/storage/pouch/eng_parts,
+/obj/item/storage/pouch/eng_parts,
+/obj/item/storage/pouch/eng_parts,
+/obj/item/storage/pouch/eng_parts,
+/obj/item/storage/pouch/eng_supply,
+/obj/item/storage/pouch/eng_supply,
+/obj/item/storage/pouch/eng_supply,
+/obj/item/storage/pouch/eng_supply,
+/obj/item/storage/pouch/eng_supply,
+/obj/item/storage/pouch/flares/full_flare,
+/obj/item/storage/pouch/flares/full_flare,
+/obj/item/storage/pouch/flares/full_flare,
+/obj/item/storage/pouch/flares/full_flare,
+/obj/item/storage/pouch/flares/full_flare,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/storage)
 "Qa" = (
@@ -35066,7 +35132,7 @@ aw
 br
 aw
 aw
-br
+HL
 aw
 aw
 br
@@ -36676,7 +36742,7 @@ gp
 gh
 cY
 On
-br
+BO
 aw
 aL
 aw
@@ -36696,7 +36762,7 @@ aw
 aw
 aL
 aw
-br
+hL
 br
 aw
 qz
@@ -39930,7 +39996,7 @@ is
 is
 is
 eX
-aQ
+HG
 dl
 aQ
 aQ
@@ -40573,7 +40639,7 @@ cr
 dt
 Hc
 Hc
-yf
+HM
 zJ
 aQ
 hp
@@ -41061,12 +41127,12 @@ Pt
 Hc
 Cn
 Df
-Df
+HK
 SY
 YT
 Pm
-Df
-Df
+HF
+HF
 QJ
 Wj
 bs
