@@ -213,6 +213,9 @@
 /obj/structure/low_wall/bay/update_icon()
 	cut_overlays()
 
+	if(QDELETED(src)) // Outpost 21 edit - I'm tired of this runtime
+		return
+
 	var/image/I
 	var/main_color = material.icon_colour
 	for(var/i = 1 to 4)
