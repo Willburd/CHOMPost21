@@ -526,8 +526,12 @@
 
 	for(var/obj/machinery/camera/network/research/C in world)
 		set background=1
-		if(!validate_camera(C, "SCI", used_cams))
-			failed = TRUE
+		if(istype(C, /obj/machinery/camera/network/research/xenobio))
+			if(!validate_camera(C, "CRG", used_cams))
+				failed = TRUE
+		else
+			if(!validate_camera(C, "SCI", used_cams))
+				failed = TRUE
 
 	for(var/obj/machinery/camera/network/research_outpost/C in world)
 		set background=1

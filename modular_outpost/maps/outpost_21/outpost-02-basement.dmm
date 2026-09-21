@@ -759,7 +759,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/rnd/xenobiology/xenobiohstore)
 "abL" = (
-/obj/machinery/hologram/holopad,
 /obj/effect/floor_decal/milspec/color/purple/half{
 	dir = 1
 	},
@@ -1376,15 +1375,6 @@
 "adg" = (
 /obj/effect/floor_decal/corner_techfloor_grid{
 	dir = 4
-	},
-/turf/simulated/floor/tiled/milspec,
-/area/rnd/xenobiology/xenobioh)
-"adh" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/red,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/hologram/holopad,
-/obj/structure/cable/green{
-	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/xenobiology/xenobioh)
@@ -7663,7 +7653,6 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology/xenobioh)
 "aoN" = (
@@ -10460,13 +10449,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology/xenobioh)
-"auc" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/red{
-	dir = 4
-	},
-/obj/machinery/hologram/holopad,
-/turf/simulated/floor/tiled/white,
-/area/rnd/xenobiology/xenobioh)
 "aud" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/red{
 	dir = 4
@@ -12583,7 +12565,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/red{
 	dir = 9
 	},
-/obj/machinery/hologram/holopad,
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
@@ -32091,7 +32072,7 @@
 	},
 /obj/machinery/camera/network/research/xenobio{
 	dir = 4;
-	c_tag = "SCI - Xenobiology Entrance"
+	c_tag = "CRG - Xenohusbandry Entrance"
 	},
 /obj/machinery/doorbell_chime{
 	id_tag = "cargodinger";
@@ -33577,6 +33558,10 @@
 /obj/item/cargo_scanner,
 /obj/item/cargo_scanner,
 /obj/item/cargo_scanner,
+/obj/machinery/camera/network/research/xenobio{
+	dir = 1;
+	c_tag = "CRG - Xenohusbandry Lab"
+	},
 /turf/simulated/floor/tiled/old_cargo/white,
 /area/rnd/xenobiology)
 "blJ" = (
@@ -72349,6 +72334,10 @@
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/machinery/vending/wallmed1{
+	pixel_y = -32;
+	dir = 1
+	},
 /turf/simulated/floor/tiled/old_cargo/white,
 /area/rnd/xenobiology)
 "cSs" = (
@@ -72471,7 +72460,7 @@
 /obj/item/geiger/wall/west,
 /obj/machinery/camera/network/research/xenobio{
 	dir = 4;
-	c_tag = "SCI - Slime Pen 4"
+	c_tag = "CRG - Slime Pen 4"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 6
@@ -72616,7 +72605,7 @@
 /obj/item/geiger/wall/east,
 /obj/machinery/camera/network/research/xenobio{
 	dir = 8;
-	c_tag = "SCI - Slime Pen 3"
+	c_tag = "CRG - Slime Pen 3"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 10
@@ -72898,7 +72887,7 @@
 /obj/item/geiger/wall/west,
 /obj/machinery/camera/network/research/xenobio{
 	dir = 4;
-	c_tag = "SCI - Slime Pen 5"
+	c_tag = "CRG - Slime Pen 5"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 6
@@ -72971,7 +72960,7 @@
 /obj/item/geiger/wall/east,
 /obj/machinery/camera/network/research/xenobio{
 	dir = 8;
-	c_tag = "SCI - Slime Pen 2"
+	c_tag = "CRG - Slime Pen 2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 10
@@ -73229,7 +73218,7 @@
 /obj/item/geiger/wall/west,
 /obj/machinery/camera/network/research/xenobio{
 	dir = 4;
-	c_tag = "SCI - Slime Pen 6"
+	c_tag = "CRG - Slime Pen 6"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 6
@@ -73282,7 +73271,7 @@
 /obj/item/geiger/wall/east,
 /obj/machinery/camera/network/research/xenobio{
 	dir = 8;
-	c_tag = "SCI - Slime Pen 1"
+	c_tag = "CRG - Slime Pen 1"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
 	dir = 10
@@ -73706,6 +73695,10 @@
 	},
 /obj/effect/floor_decal/corner/purple,
 /obj/item/geiger/wall/south,
+/obj/machinery/camera/network/research/xenobio{
+	dir = 4;
+	c_tag = "CRG - Xenohusbandry Storage"
+	},
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology)
 "cUu" = (
@@ -74889,7 +74882,7 @@
 	},
 /obj/machinery/camera/network/research/xenobio{
 	dir = 8;
-	c_tag = "SCI - Xenobiology Foyer"
+	c_tag = "CRG - Xenohusbandry Foyer"
 	},
 /obj/structure/closet/secure_closet/personal,
 /obj/machinery/doorbell_chime{
@@ -75006,6 +74999,10 @@
 	},
 /obj/effect/floor_decal/corner/purple{
 	dir = 1
+	},
+/obj/machinery/camera/network/research/xenobio{
+	dir = 4;
+	c_tag = "CRG - Xenohusbandry Suit Storage"
 	},
 /turf/simulated/floor/tiled,
 /area/rnd/research/xenobio_storage)
@@ -147470,7 +147467,7 @@ apS
 arc
 aaf
 ijP
-auc
+aud
 cWx
 awo
 aaf
@@ -147940,7 +147937,7 @@ abf
 abd
 acg
 acI
-adh
+adH
 adH
 aeq
 afi

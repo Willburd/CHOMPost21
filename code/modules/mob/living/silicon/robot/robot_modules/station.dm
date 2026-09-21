@@ -799,6 +799,7 @@
 	src.modules += new /obj/item/melee/robotic/baton/slime(src) // Outpost 21 edit - Xenobio to cargo
 	src.modules += new /obj/item/gun/energy/robotic/taser/xeno(src) // Outpost 21 edit - Xenobio to cargo
 	src.modules += new /obj/item/reagent_containers/syringe(src) // Outpost 21 edit - Xenobio to cargo
+	src.modules += new /obj/item/reagent_containers/glass/bucket/cyborg(src) // Outpost 21 edit - Xenobio to cargo
 
 	var/datum/matter_synth/beacon = new /datum/matter_synth/beacon(10000)
 	synths += beacon
@@ -831,7 +832,7 @@
 	// src.modules += new /obj/item/surgical/surgicaldrill/cyborg(src) //NIF repair // Outpost 21 edit - Robotics moved to engineering
 	// src.modules += new /obj/item/surgical/circular_saw/cyborg(src) // Synth limb replacement // Outpost 21 edit - Robotics moved to engineering
 	// src.modules += new /obj/item/reagent_containers/syringe(src) // Outpost 21 edit - Xenobio to cargo
-	src.modules += new /obj/item/reagent_containers/glass/beaker/large/borg(src)
+	// src.modules += new /obj/item/reagent_containers/glass/beaker/large/borg(src) // Outpost 21 edit - Xenobio to cargo
 	src.modules += new /obj/item/storage/part_replacer(src)
 	src.modules += new /obj/item/shockpaddles/robot/jumper(src)
 	// src.modules += new /obj/item/melee/robotic/baton/slime(src) // Outpost 21 edit - Xenobio to cargo
