@@ -335,6 +335,7 @@
 	// Xenobiologist alt titles
 	#define JOB_ALT_XENOZOOLOGIST "Xenozoologist"
 	#define JOB_ALT_XENOANTHROPOLOGIST "Xenoanthropologist"
+	#define JOB_ALT_XENOHUSBANDRY "Xenohusbandry Technician" // Outpost 21 edit - Xenohusbandry
 
 #define JOB_ROBOTICIST "Roboticist"
 	// Roboticist alt titles
