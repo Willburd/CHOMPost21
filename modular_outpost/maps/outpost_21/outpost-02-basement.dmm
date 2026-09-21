@@ -11358,12 +11358,14 @@
 /turf/simulated/floor/reinforced,
 /area/rnd/xenobiology)
 "avv" = (
-/obj/structure/disposaloutlet,
 /obj/structure/disposalpipe/trunk{
 	dir = 8
 	},
 /obj/machinery/light/small{
 	dir = 4
+	},
+/obj/structure/disposaloutlet{
+	eject_range = 1
 	},
 /turf/simulated/floor/reinforced,
 /area/rnd/xenobiology)
@@ -12173,6 +12175,11 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/doorbell_chime{
+	id_tag = "cargodinger";
+	name = "Cargo Dinger";
+	pixel_x = -30
+	},
 /turf/simulated/floor/plating,
 /area/rnd/xenobiology)
 "axb" = (
@@ -23155,17 +23162,6 @@
 /area/medical/robotics)
 "aRN" = (
 /obj/structure/grille,
-/obj/structure/window/phoronreinforced/full,
-/obj/structure/window/phoronreinforced,
-/obj/structure/window/phoronreinforced{
-	dir = 1
-	},
-/obj/structure/window/phoronreinforced{
-	dir = 4
-	},
-/obj/structure/window/phoronreinforced{
-	dir = 8
-	},
 /obj/structure/cable/green{
 	icon_state = "0-4"
 	},
@@ -23177,6 +23173,17 @@
 	opacity = 0;
 	dir = 4
 	},
+/obj/structure/window/phoronreinforced/full,
+/obj/structure/window/phoronreinforced{
+	dir = 8
+	},
+/obj/structure/window/phoronreinforced{
+	dir = 1
+	},
+/obj/structure/window/phoronreinforced{
+	dir = 4
+	},
+/obj/structure/window/phoronreinforced,
 /turf/simulated/floor/plating,
 /area/rnd/xenobiology)
 "aRO" = (
@@ -32334,6 +32341,11 @@
 /obj/machinery/camera/network/research/xenobio{
 	dir = 4;
 	c_tag = "SCI - Xenobiology Entrance"
+	},
+/obj/machinery/doorbell_chime{
+	id_tag = "cargodinger";
+	name = "Cargo Dinger";
+	pixel_x = -30
 	},
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology/hallway)
@@ -52012,6 +52024,24 @@
 /obj/random/junk,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/spine/waste)
+"bUv" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 6
+	},
+/obj/structure/table/steel_reinforced,
+/obj/structure/window/phoronreinforced{
+	dir = 1
+	},
+/obj/structure/cable/green{
+	icon_state = "1-8"
+	},
+/obj/machinery/doorbell_chime{
+	id_tag = "cargodinger";
+	name = "Cargo Dinger";
+	pixel_y = -32
+	},
+/turf/simulated/floor/tiled/steel_ridged,
+/area/rnd/xenobiology)
 "bUw" = (
 /obj/structure/disposalpipe/segment{
 	dir = 1;
@@ -55078,6 +55108,18 @@
 /obj/item/trash/material/circuit,
 /turf/simulated/floor/plating/external/turfpack/muriki,
 /area/maintenance/civ/west)
+"caS" = (
+/obj/structure/disposaloutlet{
+	eject_range = 1
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 4
+	},
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/simulated/floor/reinforced,
+/area/rnd/xenobiology)
 "caT" = (
 /turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1
@@ -72683,12 +72725,14 @@
 /turf/simulated/floor/reinforced,
 /area/rnd/xenobiology)
 "cSg" = (
-/obj/structure/disposaloutlet,
 /obj/structure/disposalpipe/trunk{
 	dir = 4
 	},
 /obj/machinery/light/small{
 	dir = 8
+	},
+/obj/structure/disposaloutlet{
+	eject_range = 1
 	},
 /turf/simulated/floor/reinforced,
 /area/rnd/xenobiology)
@@ -74682,6 +74726,13 @@
 	},
 /obj/effect/floor_decal/corner/purple,
 /obj/structure/closet/secure_closet/personal,
+/obj/machinery/button/remote/blast_door{
+	id = "Xenobiolock";
+	name = "Xenohusbandry Lockdown";
+	pixel_x = 28;
+	pixel_y = -4;
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology/hallway)
 "cUX" = (
@@ -74783,6 +74834,11 @@
 	c_tag = "SCI - Xenobiology Foyer"
 	},
 /obj/structure/closet/secure_closet/personal,
+/obj/machinery/doorbell_chime{
+	id_tag = "cargodinger";
+	name = "Cargo Dinger";
+	pixel_x = 30
+	},
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology/hallway)
 "cVf" = (
@@ -114920,7 +114976,7 @@ bBy
 cTl
 cTc
 aqc
-cSg
+caS
 cSL
 aai
 cSA
@@ -115578,7 +115634,7 @@ aBm
 aqc
 azi
 cRZ
-aBm
+bUv
 aqc
 baR
 baR
@@ -117511,10 +117567,10 @@ cTS
 cTJ
 cTs
 bge
-aNL
-aNL
-aNL
-aNL
+baR
+baR
+baR
+baR
 bge
 bpy
 bJH
@@ -117673,10 +117729,10 @@ cTT
 cTK
 cTu
 bge
-aNL
-aNL
-aNL
-aNL
+baR
+baR
+baR
+baR
 bge
 bge
 bge
@@ -117835,14 +117891,14 @@ bsK
 reT
 bge
 bge
-aNL
-aNL
-aNL
-aNL
-aNL
-aNL
-aNL
-aNL
+baR
+baR
+baR
+baR
+baR
+baR
+baR
+baR
 bge
 aUQ
 bge
@@ -117997,12 +118053,12 @@ cTU
 cTL
 bge
 baR
-aNL
-aNL
-aNL
-aNL
-aNL
-aNL
+baR
+baR
+baR
+baR
+baR
+baR
 bge
 bge
 bge

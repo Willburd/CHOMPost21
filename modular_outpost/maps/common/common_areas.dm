@@ -2361,6 +2361,7 @@
 	name = "\improper Xenohusbandry Pens"
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	holomap_color = HOLOMAP_AREACOLOR_CARGO
+	flags = AREA_BLOCK_INSTANT_BUILDING | AREA_FIRE_SUPRESSION
 
 /area/rnd/xenobiology/xenoflora2
 	name = "\improper Xenoflora Hazard Lab"
