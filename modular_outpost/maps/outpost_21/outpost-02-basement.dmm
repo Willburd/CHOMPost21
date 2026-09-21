@@ -616,6 +616,9 @@
 "abp" = (
 /obj/item/trash/tray,
 /obj/structure/catwalk,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/cargo)
 "abq" = (
@@ -685,6 +688,10 @@
 "abz" = (
 /obj/random/junk,
 /obj/structure/catwalk,
+/obj/structure/disposalpipe/segment{
+	icon_state = "pipe-c";
+	dir = 2
+	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/cargo)
 "abA" = (
@@ -990,6 +997,7 @@
 	dir = 1
 	},
 /obj/structure/catwalk,
+/mob/living/simple_mob/vore/aggressive/rat,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/cargo)
 "acm" = (
@@ -1450,6 +1458,7 @@
 /obj/structure/railing{
 	flags = null
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/cargo)
 "adl" = (
@@ -6672,6 +6681,11 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology/xenobioh)
+"amR" = (
+/turf/simulated/floor/outdoors/mud/turfpack/muriki{
+	outdoors = 0
+	},
+/area/mine/unexplored/muriki/cave/cargo)
 "amS" = (
 /obj/structure/sink{
 	dir = 4;
@@ -8852,6 +8866,11 @@
 /obj/structure/catwalk,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/spine/civ)
+"aqM" = (
+/obj/structure/grille,
+/obj/structure/window/basic/full,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/cargo)
 "aqN" = (
 /obj/machinery/door/airlock/maintenance/medical,
 /turf/simulated/floor/tiled/techfloor,
@@ -9012,12 +9031,21 @@
 	},
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology/xenobioh)
+"arh" = (
+/turf/simulated/floor/wood/alt/turfpack/muriki,
+/area/maintenance/cargo)
 "ari" = (
 /obj/structure/sign/xenobio{
 	desc = "A sign marking the area for research into slimes."
 	},
 /turf/simulated/wall,
 /area/rnd/xenobiology/xenobioh)
+"arj" = (
+/obj/structure/bed/chair/bay/chair/padded/green{
+	dir = 4
+	},
+/turf/simulated/floor/wood/alt/turfpack/muriki,
+/area/maintenance/cargo)
 "ark" = (
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
@@ -9930,6 +9958,10 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/med)
+"asS" = (
+/obj/structure/table/woodentable,
+/turf/simulated/floor/wood/alt/turfpack/muriki,
+/area/maintenance/cargo)
 "asT" = (
 /obj/structure/disposalpipe/segment{
 	dir = 2;
@@ -9986,6 +10018,13 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology/xenobioh)
+"ata" = (
+/obj/structure/bed/chair/bay/chair/padded/green{
+	dir = 8
+	},
+/obj/effect/landmark/event_spawn/maintpred,
+/turf/simulated/floor/wood/alt/turfpack/muriki,
+/area/maintenance/cargo)
 "atb" = (
 /obj/structure/table/rack/shelf,
 /obj/effect/floor_decal/corner/purple{
@@ -10429,6 +10468,10 @@
 /obj/structure/reagent_dispensers/medical_waste_tank,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/med)
+"atS" = (
+/obj/random/junk,
+/turf/simulated/floor/wood/alt/turfpack/muriki,
+/area/maintenance/cargo)
 "atT" = (
 /obj/machinery/door/airlock/maintenance/int,
 /obj/effect/landmark/step_trap,
@@ -11207,6 +11250,13 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology/xenobioh)
+"avk" = (
+/obj/structure/table/woodentable,
+/obj/structure/sign/poster/eshui{
+	dir = 1
+	},
+/turf/simulated/floor/wood/alt/turfpack/muriki,
+/area/maintenance/cargo)
 "avl" = (
 /obj/structure/cable/green{
 	icon_state = "2-4"
@@ -11252,6 +11302,12 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology/xenobioh)
+"avr" = (
+/obj/structure/bed/chair/bay/chair/padded/green{
+	dir = 8
+	},
+/turf/simulated/floor/wood/alt/turfpack/muriki,
+/area/maintenance/cargo)
 "avs" = (
 /obj/machinery/disposal,
 /obj/effect/floor_decal/industrial/warning{
@@ -11706,6 +11762,15 @@
 /obj/machinery/door/airlock/maintenance/int,
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/maintenance/cargo)
+"awd" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/door/airlock/maintenance/int,
+/obj/item/beartrap{
+	anchored = 1;
+	deployed = 1
+	},
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/maintenance/cargo)
 "awe" = (
 /obj/effect/auto_crayon{
 	icon_state = "water"
@@ -11785,6 +11850,20 @@
 	},
 /turf/simulated/floor/plating,
 /area/rnd/xenobiology/xenobioh)
+"awr" = (
+/obj/random/junk,
+/obj/item/bikehorn,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/cargo)
+"aws" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/effect/mine/claymore{
+	dir = 4
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/cargo)
 "awt" = (
 /obj/structure/table/standard,
 /obj/machinery/atmospherics/pipe/manifold/hidden/black{
@@ -11884,6 +11963,13 @@
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/rnd/xenobiology/xenobioh)
+"awA" = (
+/obj/random/junk,
+/obj/effect/auto_crayon{
+	icon_state = "x"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/cargo)
 "awB" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -12139,6 +12225,9 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology/xenobioh)
+"axg" = (
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
+/area/mine/unexplored/muriki/cave/cargo)
 "axh" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 10
@@ -13198,6 +13287,18 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/medical/autosleever)
+"azl" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/cargo)
+"azm" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/cargo)
 "azn" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 9
@@ -13564,9 +13665,7 @@
 /obj/structure/disposalpipe/broken{
 	dir = 4
 	},
-/obj/structure/spring_trap/start_active{
-	dir = 4
-	},
+/obj/item/clothing/head/cone,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/cargo)
 "azY" = (
@@ -13607,6 +13706,11 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/medical/robotics)
+"aAc" = (
+/obj/random/junk,
+/obj/effect/landmark/step_trap,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/cargo)
 "aAd" = (
 /mob/living/simple_mob/slime/xenobio,
 /obj/machinery/atmospherics/pipe/simple/hidden/yellow{
@@ -15397,6 +15501,12 @@
 	},
 /turf/simulated/floor/plating,
 /area/rnd/xenobiology/xenobioh)
+"aDG" = (
+/obj/structure/spring_trap/start_active{
+	dir = 4
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/cargo)
 "aDH" = (
 /obj/structure/grille,
 /obj/machinery/door/blast/regular{
@@ -15444,6 +15554,9 @@
 	},
 /turf/simulated/floor/plating,
 /area/rnd/xenobiology/xenobioh)
+"aDJ" = (
+/turf/simulated/floor/water/acidic/indoor/turfpack/muriki,
+/area/maintenance/cargo)
 "aDK" = (
 /obj/structure/grille,
 /obj/machinery/door/blast/regular{
@@ -16976,6 +17089,9 @@
 /obj/item/lightreplacer,
 /turf/simulated/floor/plating,
 /area/constructionsite/atmospherics)
+"aGz" = (
+/turf/simulated/floor/water/acidic/indoor/turfpack/muriki,
+/area/mine/unexplored/muriki/cave/cargo)
 "aGA" = (
 /obj/structure/disposaloutlet{
 	dir = 8
@@ -25106,6 +25222,12 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay2)
+"aVH" = (
+/obj/structure/disposalpipe/broken{
+	dir = 1
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/cargo)
 "aVI" = (
 /obj/machinery/alarm{
 	pixel_y = 26
@@ -28716,6 +28838,13 @@
 /obj/item/stack/marker_beacon/thirty,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/muriki/crew/arcade/lasertagstore)
+"bcl" = (
+/obj/random/junk,
+/obj/structure/disposalpipe/broken{
+	dir = 4
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/cargo)
 "bcm" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -31853,6 +31982,20 @@
 /obj/structure/table/steel,
 /turf/simulated/floor/wood/broken/turfpack/muriki,
 /area/maintenance/cargo)
+"bio" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/obj/item/clothing/suit/caution,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/cargo)
+"bip" = (
+/obj/machinery/door/airlock/maintenance/int,
+/obj/structure/disposalpipe/segment,
+/obj/effect/landmark/step_trap,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/maintenance/cargo)
 "biq" = (
 /turf/simulated/wall{
 	can_open = 1
@@ -33206,6 +33349,31 @@
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/Dorm_1)
+"bkH" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/structure/flora/mushroom,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/cargo)
+"bkI" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/cargo)
+"bkJ" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/cargo)
 "bkK" = (
 /obj/effect/floor_decal/corner/brown{
 	dir = 10
@@ -33575,6 +33743,13 @@
 	},
 /turf/simulated/floor/tiled,
 /area/rnd/research/xenobio_storage)
+"blz" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/cargo)
 "blA" = (
 /obj/machinery/door/airlock/glass_mining{
 	name = "Xenohusbandry Isolation Airlock";
@@ -33611,6 +33786,11 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/red,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/rnd/xenobiology/hallway)
+"blC" = (
+/obj/structure/trash_pile/disable_mouse_spawn,
+/obj/structure/catwalk,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/cargo)
 "blD" = (
 /obj/structure/table/glass,
 /obj/item/storage/laundry_basket,
@@ -34087,6 +34267,11 @@
 	},
 /turf/simulated/floor/tiled,
 /area/rnd/research/xenobio_storage)
+"bms" = (
+/obj/structure/catwalk,
+/obj/item/bikehorn,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/cargo)
 "bmt" = (
 /obj/machinery/shower{
 	dir = 4
@@ -34132,6 +34317,12 @@
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/rnd/xenobiology/hallway)
+"bmw" = (
+/obj/structure/catwalk,
+/obj/random/junk,
+/obj/effect/landmark/step_trap,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/cargo)
 "bmx" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -34760,6 +34951,16 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled,
 /area/rnd/research/xenobio_storage)
+"bnw" = (
+/obj/structure/catwalk,
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/cargo)
+"bnx" = (
+/obj/machinery/door/airlock/maintenance/int,
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/maintenance/cargo)
 "bny" = (
 /obj/machinery/door/airlock/glass_mining{
 	name = "Xenohusbandry Isolation Airlock";
@@ -34797,6 +34998,11 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/red,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/rnd/xenobiology/hallway)
+"bnA" = (
+/obj/structure/disposalpipe/segment,
+/obj/item/clothing/head/cone,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/cargo)
 "bnB" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -35985,6 +36191,13 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/dark/turfpack/muriki,
+/area/maintenance/cargo)
+"bpS" = (
+/obj/random/junk,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/cargo)
 "bpT" = (
 /obj/effect/floor_decal/borderfloor{
@@ -39325,6 +39538,14 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/spine/eng)
+"bvF" = (
+/obj/machinery/door/airlock/maintenance/int,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/landmark/step_trap,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/maintenance/cargo)
 "bvG" = (
 /obj/structure/disposalpipe/segment{
 	dir = 8;
@@ -45509,6 +45730,14 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/cargo)
+"bHK" = (
+/obj/random/junk,
+/obj/structure/disposalpipe/junction{
+	dir = 1;
+	icon_state = "pipe-j2"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/cargo)
 "bHL" = (
 /obj/effect/mine/lube,
 /turf/simulated/floor/plating/turfpack/muriki,
@@ -45596,6 +45825,10 @@
 /obj/machinery/atmospherics/pipe/manifold4w/visible/cyan,
 /turf/simulated/floor/plating,
 /area/maintenance/incinerator)
+"bHZ" = (
+/obj/structure/inflatable/door,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/cargo)
 "bIa" = (
 /obj/machinery/doorbell_chime{
 	id_tag = "engdinger";
@@ -46292,6 +46525,14 @@
 /obj/item/trash/tray,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/cargo)
+"bJw" = (
+/obj/structure/catwalk,
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/cargo)
 "bJx" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
@@ -46352,6 +46593,11 @@
 "bJG" = (
 /turf/simulated/wall,
 /area/maintenance/research/north)
+"bJH" = (
+/obj/structure/flora/mushroom,
+/obj/effect/landmark/step_trap,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/cargo)
 "bJI" = (
 /obj/machinery/door/airlock/maintenance/sec{
 	name = "Security Maintenance";
@@ -48374,6 +48620,13 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/spine/eng)
+"bNT" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/cargo)
 "bNU" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
@@ -48386,6 +48639,10 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/spine/eng)
+"bNV" = (
+/obj/effect/landmark/pengmark,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/cargo)
 "bNW" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "0-8"
@@ -57602,11 +57859,11 @@
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/spine/waste)
 "cii" = (
-/obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
-	},
 /obj/item/assembly/mousetrap/armed,
+/obj/structure/disposalpipe/junction{
+	dir = 1;
+	icon_state = "pipe-j2"
+	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/cargo)
 "cij" = (
@@ -73515,6 +73772,7 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
+/obj/effect/landmark/pengmark,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/rnd/xenobiology/hallway)
 "cTH" = (
@@ -112082,7 +112340,7 @@ aNL
 aNL
 aNL
 aNL
-aNL
+axg
 aNL
 aNL
 aNL
@@ -112244,7 +112502,7 @@ bge
 bge
 aNL
 aNL
-aNL
+axg
 aNL
 aNL
 aNL
@@ -112406,8 +112664,8 @@ bfr
 bge
 aNL
 aNL
-aNL
-aNL
+axg
+axg
 aNL
 aNL
 aNL
@@ -112566,10 +112824,10 @@ bge
 bge
 aUQ
 bge
-aNL
-aNL
-aNL
-aNL
+bge
+bge
+axg
+axg
 aNL
 aNL
 aNL
@@ -112727,11 +112985,11 @@ boL
 ceF
 bge
 aUQ
-bge
-aNL
-aNL
-aNL
-aNL
+bcX
+aQg
+aQg
+ayQ
+ayQ
 aNL
 aNL
 aNL
@@ -112890,11 +113148,11 @@ aNa
 aNa
 aMa
 bge
-aNL
-aNL
-aNL
-aNL
-aNL
+bge
+bge
+aEq
+axg
+axg
 aNL
 aNL
 aNL
@@ -113056,8 +113314,8 @@ aNL
 aNL
 aNL
 aNL
-aNL
-aNL
+axg
+axg
 aNL
 aNL
 aNL
@@ -113219,7 +113477,7 @@ aNL
 aNL
 aNL
 aNL
-aNL
+axg
 aNL
 aNL
 aNL
@@ -113380,8 +113638,8 @@ aNL
 aNL
 aNL
 aNL
-aNL
-aNL
+aEq
+axg
 aNL
 aNL
 aNL
@@ -113542,8 +113800,8 @@ aNL
 aNL
 aNL
 aNL
-aNL
-aNL
+aEq
+ayQ
 aNL
 aNL
 aNL
@@ -113704,9 +113962,9 @@ aNL
 aNL
 aNL
 aNL
-aNL
-aNL
-aNL
+bge
+aQg
+bge
 aNL
 aNL
 aNL
@@ -113866,9 +114124,9 @@ aNL
 aNL
 aNL
 aNL
-aNL
-aNL
-aNL
+bge
+cdd
+bge
 aNL
 aNL
 aNL
@@ -114012,14 +114270,14 @@ aUR
 aNP
 aNa
 cii
-bcX
-aQg
-axP
-afo
-aQg
+bnx
+aNa
+cVf
+bNT
+aNa
 adk
-cjI
-cjI
+bnw
+bJw
 bge
 cvt
 aNL
@@ -114027,11 +114285,11 @@ aNL
 aNL
 aNL
 aNL
-aNL
-aNL
-aNL
-aNL
-aNL
+bge
+bge
+bcX
+bge
+bge
 aNL
 aNL
 mGE
@@ -114186,14 +114444,14 @@ biq
 biq
 biq
 biq
-aNL
-aNL
-aNL
-aNL
-aNL
-aNL
-aNL
-aNL
+biq
+biq
+biq
+bge
+cFz
+axP
+aQg
+bge
 aNL
 aNL
 aNL
@@ -114344,18 +114602,18 @@ baR
 biq
 acl
 abz
-bcX
+bnx
+aNa
+bnA
+bzZ
+cPs
+aNa
+aNa
+bip
+aVH
+bge
 aQg
-aQg
-aQg
-aNL
-aNL
-aNL
-aNL
-aNL
-aNL
-aNL
-aNL
+bge
 aNL
 aNL
 aNL
@@ -114512,12 +114770,12 @@ aqc
 aqc
 aqc
 aqc
-aNL
-aNL
-aNL
-aNL
-aNL
-aNL
+biq
+bge
+bge
+azl
+axP
+bge
 aNL
 aNL
 aNL
@@ -114674,12 +114932,12 @@ cSg
 cRm
 aai
 aqc
-aNL
-aNL
-aNL
-aNL
-aNL
-aNL
+baR
+bge
+bge
+bcX
+bge
+bge
 aNL
 aNL
 aNL
@@ -114813,7 +115071,7 @@ pge
 bBm
 bzP
 bge
-aQg
+bNV
 bge
 cTx
 cTx
@@ -114836,12 +115094,12 @@ avu
 aak
 aqd
 aqc
-aNL
-aNL
-aNL
-aNL
-aNL
-aNL
+baR
+baR
+bge
+aQg
+bpy
+bge
 aNL
 aNL
 aNL
@@ -114998,17 +115256,17 @@ avu
 aak
 aqd
 aqc
-aNL
-aNL
-aNL
-aNL
-aNL
-aNL
-aNL
-aNL
-aNL
-aNL
-aNL
+baR
+baR
+bge
+azm
+awr
+bge
+bge
+bge
+bge
+bge
+amR
 bMy
 mGE
 mGE
@@ -115160,17 +115418,17 @@ cSi
 cRY
 aRN
 aqc
-aNL
-aNL
-aNL
-aNL
-aNL
-aNL
-aNL
-aNL
-aNL
-aNL
-aNL
+baR
+baR
+bge
+aAc
+aQg
+bge
+arj
+arj
+arh
+aqM
+amR
 fBh
 mGE
 mGE
@@ -115322,17 +115580,17 @@ azi
 cRZ
 aBm
 aqc
-aNL
-aNL
-aNL
-aNL
-aNL
-aNL
-aNL
-aNL
-aNL
-aNL
-aNL
+baR
+baR
+bge
+aMu
+aQg
+bge
+avk
+asS
+arh
+aqM
+amR
 fBh
 mGE
 mGE
@@ -115485,16 +115743,16 @@ avh
 aSr
 aqc
 aqc
-aNL
-aNL
-aNL
-aNL
-aNL
-aNL
-aNL
-aNL
-aNL
-aNL
+baR
+bge
+aMu
+cFz
+bge
+avr
+ata
+arh
+aqM
+amR
 fBh
 mGE
 mGE
@@ -115647,16 +115905,16 @@ cSa
 bAW
 aMY
 aqc
-aNL
-aNL
-aNL
-aNL
-aNL
-aNL
-aNL
-aNL
-aNL
-aNL
+baR
+bge
+bge
+aQg
+bcX
+arh
+atS
+arh
+aqM
+amR
 fBh
 fBh
 mGE
@@ -115809,16 +116067,16 @@ cSb
 bAW
 aNc
 aqc
-aNL
-aNL
-aNL
-aNL
-aNL
-aNL
-aNL
-aNL
-aNL
-aNL
+baR
+baR
+bge
+axP
+bge
+bge
+bge
+bge
+bge
+amR
 cFq
 tUP
 mGE
@@ -115971,11 +116229,11 @@ cSc
 bAW
 gQC
 aqc
-aNL
-aNL
-aNL
-aNL
-aNL
+baR
+baR
+bge
+aws
+bge
 aNL
 aNL
 aNL
@@ -116133,11 +116391,11 @@ avh
 bFq
 aqc
 aqc
-aNL
-aNL
-aNL
-aNL
-aNL
+baR
+baR
+bge
+aQg
+bge
 aNL
 aNL
 aNL
@@ -116294,12 +116552,12 @@ avs
 cSd
 axh
 aqc
-aNL
-aNL
-aNL
-aNL
-aNL
-aNL
+baR
+baR
+baR
+bge
+bcX
+bge
 aNL
 aNL
 aNL
@@ -116456,12 +116714,12 @@ cSm
 cSe
 bIx
 aqc
-aNL
-aNL
-aNL
-aNL
-aNL
-aNL
+bge
+bge
+bge
+bge
+awA
+bge
 aNL
 aNL
 aNL
@@ -116618,12 +116876,12 @@ avu
 aak
 aqd
 aqc
-aNL
-aNL
-aNL
-aNL
-aNL
-aNL
+blC
+bkH
+aQg
+aQg
+aQg
+bge
 aNL
 aNL
 aNL
@@ -116780,12 +117038,12 @@ avu
 aAd
 aqd
 aqc
-aNL
-aNL
-aNL
-aNL
-aNL
-aNL
+cjI
+bkI
+bcl
+bge
+bge
+bge
 aNL
 aNL
 aNL
@@ -116942,10 +117200,10 @@ avv
 cSf
 aai
 aqc
-aNL
-aNL
-aNL
-aNL
+bms
+bge
+aUQ
+bge
 aNL
 aNL
 aNL
@@ -117104,11 +117362,11 @@ aqc
 aqc
 aqc
 aqc
-aNL
-aNL
-aNL
-aNL
-aNL
+bmw
+bkJ
+aUQ
+bge
+bge
 aNL
 aNL
 aNL
@@ -117257,20 +117515,20 @@ aNL
 aNL
 aNL
 aNL
-aEq
-ayQ
-ayQ
-ayQ
-ayQ
-ayQ
-ayQ
-ayQ
-ayQ
-aNL
-aNL
-aNL
-aNL
-aNL
+bge
+bpy
+bJH
+bHZ
+afo
+bir
+aNa
+cVf
+bnx
+bnw
+blz
+bio
+axP
+bge
 aNL
 aNL
 aNL
@@ -117419,20 +117677,20 @@ aNL
 aNL
 aNL
 aNL
-aEq
-aEq
-aEq
-aEq
-aEq
-ayQ
-aNL
-aNL
-aNL
-aNL
-aNL
-aNL
-aNL
-aNL
+bge
+bge
+bge
+bge
+bge
+bpS
+bge
+bge
+bge
+bge
+bge
+bge
+aDG
+bge
 aNL
 aNL
 aNL
@@ -117585,16 +117843,16 @@ aNL
 aNL
 aNL
 aNL
-aEq
-ayQ
+bge
+aUQ
+bge
 aNL
 aNL
 aNL
 aNL
-aNL
-aNL
-aNL
-aNL
+bge
+aDJ
+bge
 aNL
 aNL
 aNL
@@ -117748,14 +118006,14 @@ aNL
 bge
 bge
 bge
-bcX
+bvF
 bge
 bge
 aNL
 aNL
 aNL
-aNL
-aNL
+aEq
+aGz
 aNL
 aNL
 aNL
@@ -117910,14 +118168,14 @@ bge
 bge
 bge
 bir
-aNP
+bHK
 bfr
 bge
 aNL
 aNL
 aNL
 aNL
-aNL
+aGz
 aNL
 aNL
 aNL
@@ -118079,7 +118337,7 @@ aNL
 aNL
 aNL
 aNL
-aNL
+amR
 aNL
 aNL
 aNL
@@ -118240,9 +118498,9 @@ bge
 aNL
 aNL
 aNL
-aNL
-aNL
-aNL
+bge
+aQg
+bge
 aNL
 aNL
 aNL
@@ -118565,7 +118823,7 @@ baR
 baR
 baR
 bge
-aUQ
+ays
 bge
 aNL
 aNL
@@ -119216,7 +119474,7 @@ aEL
 bge
 ccA
 axM
-awc
+awd
 aEv
 atf
 fBh
