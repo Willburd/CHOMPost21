@@ -1,5 +1,6 @@
 /datum/decl/hierarchy/outfit/job/science/xenobiologist
 	uniform = /obj/item/clothing/under/rank/cargo
+	suit = /obj/item/clothing/suit/storage/toggle/labcoat
 	shoes = /obj/item/clothing/shoes/brown
 	pda_type = /obj/item/pda/cargo
 

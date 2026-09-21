@@ -18,5 +18,5 @@
 /datum/decl/hierarchy/outfit/job/engineering/atmos/phoronics
 	name = OUTFIT_JOB_NAME(JOB_SCIENTIST)
 	id_type = /obj/item/card/id/science/phoronics
-	suit = /obj/item/clothing/suit/storage/toggle/labcoat/science
+	suit = /obj/item/clothing/suit/storage/toggle/labcoat
 	l_pocket = /obj/item/experi_scanner
