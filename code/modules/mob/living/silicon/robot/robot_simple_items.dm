@@ -660,7 +660,7 @@
 	desc = "A simple grasping tool for the maintenance of heavy drilling machines."
 	icon_state = "gripper-mining"
 
-	can_hold = list(MINER_GRIPPER)
+	can_hold = list(MINER_GRIPPER, RESEARCH_GRIPPER) // Outpost 21 edit - Xenobio to cargo
 
 /obj/item/gripper/security
 	name = "security gripper"

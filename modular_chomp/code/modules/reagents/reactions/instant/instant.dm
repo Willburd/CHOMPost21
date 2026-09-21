@@ -103,6 +103,8 @@
 	required_reagents = list(REAGENT_ID_VERMICETOL = 1, REAGENT_ID_LIQUIDLIFE = 1, REAGENT_ID_NEOLIQUIDFIRE = 1, REAGENT_ID_SOULDEW = 1, REAGENT_ID_PHORON = 1, REAGENT_ID_DERMALINE = 1)
 	result_amount = 6
 */
+*/
+
 /datum/decl/chemical_reaction/instant/dryagent
 	name = REAGENT_DRYAGENT
 	id = REAGENT_ID_DRYAGENT
@@ -111,6 +113,7 @@
 	catalysts = list(REAGENT_ID_PHORON = 5)
 	result_amount = 4
 
+/*
 //Xenobotany update
 /datum/decl/chemical_reaction/instant/neoliquidfire
 	name = REAGENT_ID_NEOLIQUIDFIRE //distil phoron dragon blood from basic dragon blood
