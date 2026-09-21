@@ -613,6 +613,11 @@
 	},
 /turf/simulated/floor/wood/alt,
 /area/maintenance/oldbridge)
+"abp" = (
+/obj/item/trash/tray,
+/obj/structure/catwalk,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/cargo)
 "abq" = (
 /obj/machinery/atmospherics/binary/pump{
 	dir = 8
@@ -677,6 +682,11 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/atmos)
+"abz" = (
+/obj/random/junk,
+/obj/structure/catwalk,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/cargo)
 "abA" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/window/brigdoor/eastright{
@@ -975,6 +985,13 @@
 /obj/structure/table/standard,
 /turf/simulated/floor/tiled/techfloor,
 /area/rnd/xenobiology/xenobioh)
+"acl" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/structure/catwalk,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/cargo)
 "acm" = (
 /turf/simulated/floor/tiled/dark,
 /area/rnd/xenobiology/xenobiohstore)
@@ -1428,6 +1445,13 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/rnd/xenobiology/xenobioh)
+"adk" = (
+/obj/random/junk,
+/obj/structure/railing{
+	flags = null
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/cargo)
 "adl" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/black,
 /obj/structure/cable/green{
@@ -2359,6 +2383,12 @@
 /obj/effect/floor_decal/milspec/color/purple/corner,
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/xenobiology/xenobioh)
+"afo" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/cargo)
 "afp" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/red{
 	dir = 4
@@ -3852,6 +3882,12 @@
 "ahT" = (
 /turf/simulated/wall,
 /area/rnd/xenobiology/burn)
+"ahU" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white,
+/area/rnd/xenobiology)
 "ahV" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -4564,6 +4600,10 @@
 	},
 /turf/simulated/floor/plating,
 /area/rnd/xenobiology/burn)
+"aiU" = (
+/obj/random/plushielarge,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/cargo)
 "aiV" = (
 /obj/structure/disposalpipe/trunk{
 	dir = 1
@@ -5899,6 +5939,14 @@
 /obj/machinery/door/airlock/maintenance/int,
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/maintenance/civ/south)
+"aly" = (
+/obj/structure/window/basic{
+	dir = 4
+	},
+/obj/structure/window/basic,
+/obj/structure/catwalk,
+/turf/simulated/floor/plating,
+/area/rnd/xenobiology/hallway)
 "alz" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 9
@@ -20397,11 +20445,6 @@
 /area/rnd/hallway/lowmain)
 "aMY" = (
 /obj/structure/table/standard,
-/obj/item/slime_extract/grey,
-/obj/item/slime_extract/grey,
-/obj/item/slime_extract/grey,
-/obj/item/slime_extract/grey,
-/obj/item/slime_extract/grey,
 /obj/structure/extinguisher_cabinet{
 	pixel_x = -8;
 	pixel_y = -32;
@@ -20415,6 +20458,13 @@
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/item/storage/bag/xeno,
+/obj/item/storage/bag/xeno,
+/obj/item/slime_extract/grey,
+/obj/item/slime_extract/grey,
+/obj/item/slime_extract/grey,
+/obj/item/slime_extract/grey,
+/obj/item/slime_extract/grey,
 /turf/simulated/floor/tiled/old_cargo/white,
 /area/rnd/xenobiology)
 "aMZ" = (
@@ -33204,6 +33254,7 @@
 	pixel_y = -4;
 	dir = 8
 	},
+/obj/machinery/light,
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology/hallway)
 "bkN" = (
@@ -34048,11 +34099,6 @@
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
-	},
-/obj/item/radio/intercom{
-	dir = 8;
-	name = "Station Intercom (General)";
-	pixel_x = -22
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/rnd/xenobiology/hallway)
@@ -50406,7 +50452,7 @@
 	name = "Cargo Lockdown"
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
-/turf/simulated/floor/plating/turfpack/muriki,
+/turf/simulated/floor/tiled/techfloor/grid/turfpack/muriki,
 /area/maintenance/cargo)
 "bRD" = (
 /obj/structure/disposalpipe/segment{
@@ -58647,7 +58693,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/structure/reagent_dispensers/medical_waste_tank,
+/obj/machinery/needle_cleaner,
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology)
 "ckK" = (
@@ -72517,6 +72563,7 @@
 	name = "Pen 3 Lockdown";
 	pixel_x = 25
 	},
+/obj/item/toy/plushie/slimeplushie,
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology)
 "cSp" = (
@@ -72950,9 +72997,6 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/industrial/outline/grey,
-/obj/structure/railing{
-	dir = 1
-	},
 /turf/simulated/floor/plating,
 /area/maintenance/cargo)
 "cSS" = (
@@ -73066,7 +73110,9 @@
 /area/rnd/xenobiology)
 "cSY" = (
 /obj/structure/disposalpipe/segment,
-/obj/structure/catwalk,
+/obj/structure/railing{
+	dir = 1
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/cargo)
 "cSZ" = (
@@ -73129,9 +73175,6 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/effect/floor_decal/industrial/warning{
-	dir = 4
-	},
 /obj/machinery/light,
 /turf/simulated/floor/plating,
 /area/rnd/xenobiology)
@@ -73166,6 +73209,9 @@
 /obj/item/radio/intercom{
 	name = "Station Intercom (General)";
 	pixel_y = -25
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/old_cargo/white,
 /area/rnd/xenobiology)
@@ -73231,9 +73277,6 @@
 /obj/machinery/atmospherics/binary/pump{
 	dir = 1
 	},
-/obj/effect/floor_decal/industrial/warning{
-	dir = 1
-	},
 /obj/structure/extinguisher_cabinet{
 	pixel_x = -30;
 	pixel_y = 8;
@@ -73244,9 +73287,6 @@
 "cTn" = (
 /obj/machinery/atmospherics/binary/pump{
 	dir = 1
-	},
-/obj/effect/floor_decal/industrial/warning{
-	dir = 5
 	},
 /turf/simulated/floor/plating,
 /area/rnd/xenobiology)
@@ -73291,6 +73331,10 @@
 /obj/machinery/firealarm{
 	dir = 4;
 	pixel_x = 26
+	},
+/obj/item/sticky_pad/random{
+	pixel_x = 8;
+	pixel_y = 9
 	},
 /turf/simulated/floor/tiled/old_cargo/white,
 /area/rnd/xenobiology)
@@ -73357,6 +73401,7 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 1
 	},
+/obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology)
 "cTz" = (
@@ -73367,6 +73412,7 @@
 	dir = 4
 	},
 /obj/machinery/meter,
+/obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology)
 "cTA" = (
@@ -73375,6 +73421,9 @@
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
+	},
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology)
@@ -73403,15 +73452,16 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/machinery/atmospherics/binary/pump/on{
-	dir = 4;
-	name = "Xenohusbandry Scrubber Out";
-	target_pressure = 15000
-	},
-/obj/effect/catwalk_plated/white,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
+/obj/machinery/atmospherics/binary/volume_pump/on{
+	name = "Xenohusbandry Scrubber Out";
+	dir = 4;
+	transfer_rate = 200
+	},
+/obj/effect/catwalk_plated/white,
+/obj/structure/reagent_dispensers/medical_waste_tank,
 /turf/simulated/floor/plating,
 /area/rnd/xenobiology)
 "cTE" = (
@@ -73447,7 +73497,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/turf/simulated/floor/plating/turfpack/muriki,
+/turf/simulated/floor/tiled/techfloor/grid/turfpack/muriki,
 /area/rnd/xenobiology/hallway)
 "cTG" = (
 /obj/structure/disposalpipe/segment{
@@ -73484,7 +73534,7 @@
 	dir = 4
 	},
 /obj/random/junk,
-/turf/simulated/floor/plating/turfpack/muriki,
+/turf/simulated/floor/tiled/techfloor/grid/turfpack/muriki,
 /area/rnd/xenobiology/hallway)
 "cTI" = (
 /obj/structure/disposalpipe/segment{
@@ -73501,7 +73551,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/turf/simulated/floor/plating/turfpack/muriki,
+/turf/simulated/floor/tiled/techfloor/grid/turfpack/muriki,
 /area/rnd/xenobiology/hallway)
 "cTJ" = (
 /obj/structure/disposalpipe/segment{
@@ -73831,6 +73881,15 @@
 /obj/machinery/ai_status_display{
 	pixel_y = -32
 	},
+/obj/item/clothing/accessory/bodycam/yobro,
+/obj/item/clothing/accessory/bodycam/yobro,
+/obj/item/clothing/accessory/bodycam/yobro,
+/obj/item/clothing/accessory/bodycam/yobro,
+/obj/item/clothing/accessory/bodycam/yobro,
+/obj/item/sticky_pad/random{
+	pixel_x = 8;
+	pixel_y = 9
+	},
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology/hallway)
 "cUh" = (
@@ -73906,7 +73965,7 @@
 	name = "Cargo Lockdown"
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
-/turf/simulated/floor/plating/turfpack/muriki,
+/turf/simulated/floor/tiled/techfloor/grid/turfpack/muriki,
 /area/rnd/xenobiology/hallway)
 "cUl" = (
 /obj/structure/disposalpipe/segment{
@@ -74357,9 +74416,6 @@
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology/hallway)
 "cUW" = (
-/obj/structure/closet/secure_closet{
-	req_one_access = list(7,47)
-	},
 /obj/effect/floor_decal/corner/brown{
 	dir = 6
 	},
@@ -74367,6 +74423,7 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/corner/purple,
+/obj/structure/closet/secure_closet/personal,
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology/hallway)
 "cUX" = (
@@ -74448,9 +74505,6 @@
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology/hallway)
 "cVe" = (
-/obj/structure/closet/secure_closet{
-	req_one_access = list(7,47)
-	},
 /obj/effect/floor_decal/corner/brown/full{
 	dir = 1
 	},
@@ -74470,6 +74524,7 @@
 	dir = 8;
 	c_tag = "SCI - Xenobiology Foyer"
 	},
+/obj/structure/closet/secure_closet/personal,
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology/hallway)
 "cVf" = (
@@ -113957,15 +114012,15 @@ aUR
 aNP
 aNa
 cii
+bcX
+aQg
+axP
+afo
+aQg
+adk
+cjI
+cjI
 bge
-bpz
-bpz
-aNL
-aNL
-aNL
-cvt
-cvt
-cvt
 cvt
 aNL
 aNL
@@ -114123,14 +114178,14 @@ pge
 pge
 pge
 pge
-aNL
-aNL
-cvt
-cvt
-cvt
-cvt
-aNL
-aNL
+biq
+biq
+cjI
+abp
+biq
+biq
+biq
+biq
 aNL
 aNL
 aNL
@@ -114285,14 +114340,14 @@ cTb
 cSY
 cSR
 pge
-aNL
-aNL
-aNL
-cvt
-cvt
-cvt
-aNL
-aNL
+baR
+biq
+acl
+abz
+bcX
+aQg
+aQg
+aQg
 aNL
 aNL
 aNL
@@ -114920,7 +114975,7 @@ aNf
 aNf
 cVn
 bge
-aQg
+aiU
 bge
 cdR
 cUE
@@ -115252,7 +115307,7 @@ pXD
 cUb
 avn
 cTA
-avn
+ahU
 cTf
 aqc
 azi
@@ -116376,7 +116431,7 @@ bjb
 bjX
 bkK
 cTk
-cTk
+aly
 bpQ
 cTk
 cVb
@@ -117202,15 +117257,15 @@ aNL
 aNL
 aNL
 aNL
-aNL
-aNL
-aNL
-aNL
-aNL
-aNL
-aNL
-aNL
-aNL
+aEq
+ayQ
+ayQ
+ayQ
+ayQ
+ayQ
+ayQ
+ayQ
+ayQ
 aNL
 aNL
 aNL
@@ -117364,12 +117419,12 @@ aNL
 aNL
 aNL
 aNL
-aNL
-aNL
-aNL
-aNL
-aNL
-aNL
+aEq
+aEq
+aEq
+aEq
+aEq
+ayQ
 aNL
 aNL
 aNL
@@ -117530,8 +117585,8 @@ aNL
 aNL
 aNL
 aNL
-aNL
-aNL
+aEq
+ayQ
 aNL
 aNL
 aNL

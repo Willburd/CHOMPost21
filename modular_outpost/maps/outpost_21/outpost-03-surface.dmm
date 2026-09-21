@@ -21002,6 +21002,13 @@
 /obj/effect/landmark/start/xenobio,
 /turf/simulated/floor/tiled,
 /area/quartermaster/office)
+"aWH" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/catwalk,
+/turf/simulated/floor/plating,
+/area/maintenance/cargomid)
 "aWI" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/structure/table/rack,
@@ -21043,6 +21050,23 @@
 /obj/item/tool/crowbar/brace_jack,
 /turf/simulated/floor/tiled/milspec,
 /area/security/armoury)
+"aWJ" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/light/small,
+/obj/structure/catwalk,
+/turf/simulated/floor/plating,
+/area/maintenance/cargomid)
+"aWK" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/railing{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/cargomid)
 "aWU" = (
 /obj/effect/floor_decal/corner/red{
 	dir = 5
@@ -116025,7 +116049,7 @@ dJa
 nvW
 wse
 ydI
-bNe
+aWH
 uMJ
 aqr
 asV
@@ -116187,7 +116211,7 @@ lSC
 vUe
 gYw
 ydI
-bNe
+aWJ
 uMJ
 aqr
 rnn
@@ -116349,7 +116373,7 @@ fpF
 idX
 qcO
 pom
-bNe
+aWH
 uMJ
 aqr
 aHB
@@ -116511,7 +116535,7 @@ mBI
 alP
 uhk
 pom
-bNe
+aWH
 uMJ
 aqr
 aHB
@@ -116673,7 +116697,7 @@ gjj
 iVo
 dxn
 dxn
-bNe
+aWK
 uMJ
 rQH
 aHB

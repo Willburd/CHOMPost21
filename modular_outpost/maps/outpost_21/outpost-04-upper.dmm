@@ -49683,10 +49683,10 @@
 	pixel_y = -24
 	},
 /obj/structure/cable/green,
-/obj/machinery/vending/fooddessert{
+/obj/effect/floor_decal/spline/fancy/wood,
+/obj/machinery/vending/snack{
 	dir = 1
 	},
-/obj/effect/floor_decal/spline/fancy/wood,
 /turf/simulated/floor/wood,
 /area/quartermaster/cargupbreak)
 "uNp" = (
