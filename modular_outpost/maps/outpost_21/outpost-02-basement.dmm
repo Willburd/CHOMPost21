@@ -32,6 +32,12 @@
 "aah" = (
 /turf/simulated/floor/reinforced,
 /area/rnd/xenobiology/xenobioh)
+"aai" = (
+/obj/effect/auto_crayon{
+	icon_state = "right"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/cargo)
 "aaj" = (
 /obj/structure/disposaloutlet{
 	dir = 8
@@ -33574,6 +33580,9 @@
 /obj/item/hand_labeler,
 /obj/item/cargo_scanner,
 /obj/effect/floor_decal/industrial/warning/corner,
+/obj/item/cargo_scanner,
+/obj/item/cargo_scanner,
+/obj/item/cargo_scanner,
 /turf/simulated/floor/tiled/old_cargo/white,
 /area/rnd/xenobiology)
 "blJ" = (
@@ -72857,6 +72866,9 @@
 /obj/structure/disposalpipe/segment{
 	dir = 1;
 	icon_state = "pipe-c"
+	},
+/obj/effect/auto_crayon{
+	icon_state = "left"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/cargo)
@@ -114009,7 +114021,7 @@ aKe
 ckw
 bge
 aQg
-aQg
+aai
 aQg
 bge
 aNL
