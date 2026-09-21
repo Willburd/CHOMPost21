@@ -47,7 +47,7 @@ GLOBAL_VAR_INIT(next_station_date_change, 1 DAY)
 		GLOB.next_station_date_change += 1 DAY
 		update_time = TRUE
 	if(!GLOB.station_date || update_time)
-		GLOB.station_date = num2text((text2num(time2text(REALTIMEOFDAY, "YYYY"))+544)) + "-" + time2text(REALTIMEOFDAY, "MM-DD") //CHOMP EDIT
+		GLOB.station_date = num2text((text2num(time2text(REALTIMEOFDAY, "YYYY"))+STATION_YEAR_OFFSET)) + "-" + time2text(REALTIMEOFDAY, "MM-DD") //CHOMP EDIT
 	return GLOB.station_date
 
 /// Returns UTC timestamp with the specifified format and optionally deciseconds
@@ -119,7 +119,9 @@ GLOBAL_VAR_INIT(rollover_safety_date, 0) // set in world/New to the server start
 	return GLOB.midnight_rollovers
 
 ///Increases delay as the server gets more overloaded, as sleeps aren't cheap and sleeping only to wake up and sleep again is wasteful
-#define DELTA_CALC min(3,max(((max(TICK_USAGE, world.cpu) / 100) * max(Master.sleep_delta-1,1)), 1)) // Outpost 21 edit(port) - Clamp in bounds of a max
+//#define DELTA_CALC max(((max(TICK_USAGE, world.cpu) / 100) * max(Master.sleep_delta-1,1)), 1) // Upstream's uncapped delta
+#define DELTA_CALC min(SSticker?.IsRoundInProgress() ? 3 : 1000,max(((max(TICK_USAGE, world.cpu) / 100) * max(Master.sleep_delta-1,1)), 1)) // Outpost 21 edit(port) - Clamp in bounds of a max
+
 
 ///returns the number of ticks slept
 /proc/stoplag(initial_delay)

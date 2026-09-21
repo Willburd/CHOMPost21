@@ -9,7 +9,7 @@
 /datum/job/scientist/New()
 	. = ..()
 	access -= list(ACCESS_ROBOTICS, ACCESS_XENOBOTANY)
-	alt_titles -= list(JOB_ALT_CIRCUIT_DESIGNER, JOB_ALT_CIRCUIT_PROGRAMMER)
+	alt_titles -= list(JOB_ALT_CIRCUIT_DESIGNER, JOB_ALT_CIRCUIT_PROGRAMMER, JOB_ALT_PHORON_RESEARCHER, JOB_ALT_GAS_PHYSICIST)
 	alt_titles[JOB_ALT_TELEPORT_OPERATOR] = /datum/alt_title/teleport_operation
 
 
@@ -51,3 +51,31 @@
 /datum/alt_title/teleport_operation
 	title = JOB_ALT_TELEPORT_OPERATOR
 	title_blurb = "A " + JOB_ALT_TELEPORT_OPERATOR + " is a " + JOB_SCIENTIST + " who operates the public teleporter using telescience expertise to get crew to remote locations safely."
+
+/datum/alt_title/phoron_research
+	title_outfit = /datum/decl/hierarchy/outfit/job/engineering/atmos/phoronics
+
+/datum/alt_title/gas_physicist
+	title_outfit = /datum/decl/hierarchy/outfit/job/engineering/atmos/phoronics
+
+
+
+// Moving to cargo
+/datum/job/xenobiologist
+	departments = list(DEPARTMENT_CARGO)
+	pto_type = PTO_CARGO
+	supervisors = "the " + JOB_QUARTERMASTER
+	selection_color = "#7a4f33"
+	access = list(ACCESS_MAINT_TUNNELS, ACCESS_MAILSORTING, ACCESS_CARGO, ACCESS_CARGO_BOT, ACCESS_MINING, ACCESS_MINING_STATION, ACCESS_XENOBIOLOGY)
+	minimal_access = list(ACCESS_MAINT_TUNNELS, ACCESS_CARGO, ACCESS_CARGO_BOT, ACCESS_MAILSORTING, ACCESS_XENOBIOLOGY)
+	banned_job_species = list(FBP_DIGITAL)
+	mail_color = COMMS_COLOR_SUPPLY
+
+/datum/job/xenobiologist/New()
+	. = ..()
+	alt_titles |= list(
+		JOB_ALT_XENOHUSBANDRY = /datum/alt_title/xenohusbandry
+	)
+
+/datum/alt_title/xenohusbandry
+	title = JOB_ALT_XENOHUSBANDRY

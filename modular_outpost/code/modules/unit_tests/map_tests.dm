@@ -107,6 +107,10 @@
 		/area/offworld/orbital/station/south_engine_access_east,
 		/area/muriki/lowerelev,
 		/area/muriki/lowerevac,
+		/area/offworld/orbital/phoronics/burn_chamber,
+		/area/rnd/xenobiology/lost,
+		/area/rnd/xenobiology/xenobioh,
+		/area/rnd/xenobiology/xenobiohstore,
 		)
 
 	var/list/forced_hallway = list(
@@ -221,7 +225,6 @@
 		/area/rnd/research/xenobio_storage,
 		/area/rnd/xenobiology/burn,
 		/area/server,
-		/area/rnd/xenobiology/xenobiohstore,
 		/area/comms,
 		/area/tcomfoyer,
 		/area/tcommsat/computer,
@@ -464,7 +467,7 @@
 		var/area/A = get_area(P)
 		if(!A)
 			continue
-		if(A.type == /area/maintenance/incinerator || A.type == /area/rnd/research/phoronics/burn) // Exempt
+		if(A.type == /area/maintenance/incinerator || A.type == /area/rnd/research/phoronics/burn || A.type == /area/offworld/orbital/phoronics/burn_chamber) // Exempt
 			continue
 		var/turf/T = get_turf(P)
 		if(!istype(A,/area/shuttle) && iswall(T))
@@ -523,8 +526,12 @@
 
 	for(var/obj/machinery/camera/network/research/C in world)
 		set background=1
-		if(!validate_camera(C, "SCI", used_cams))
-			failed = TRUE
+		if(istype(C, /obj/machinery/camera/network/research/xenobio))
+			if(!validate_camera(C, "CRG", used_cams))
+				failed = TRUE
+		else
+			if(!validate_camera(C, "SCI", used_cams))
+				failed = TRUE
 
 	for(var/obj/machinery/camera/network/research_outpost/C in world)
 		set background=1

@@ -18,6 +18,13 @@ GLOBAL_VAR_INIT(spawned_theta,FALSE) // Only one a ROUND
 
 
 /datum/element/lootable
+	var/static/list/outpost_common_table = list(
+		/obj/item/expi_pamphlet,
+		/obj/item/reagent_containers/glass/beaker/wheymax,
+		/obj/item/paper,
+		/obj/item/pen,
+		/obj/item/tape_roll,
+	)
 	var/static/list/outpost_uncommon_table = list(
 		/obj/item/research_sample/uncommon,
 		/obj/item/clothing/head/fishing,
@@ -31,7 +38,6 @@ GLOBAL_VAR_INIT(spawned_theta,FALSE) // Only one a ROUND
 		/obj/item/storage/box/monkeycubes/pets/outpost_B,
 		/obj/item/storage/box/monkeycubes/pets/NT_standard,
 		/obj/item/storage/box/monkeycubes/pets/NT_special,
-		/obj/item/reagent_containers/glass/beaker/wheymax,
 	)
 	var/static/list/outpost_rare_table = list(
 		/obj/item/prop/alien/junk,
@@ -51,17 +57,20 @@ GLOBAL_VAR_INIT(spawned_theta,FALSE) // Only one a ROUND
 
 /datum/element/lootable/maint/technical/New()
 	. = ..()
+	common_loot |= outpost_common_table
 	uncommon_loot |= outpost_uncommon_table
 	rare_loot |= outpost_rare_table
 
 
 /datum/element/lootable/maint/trash/New()
 	. = ..()
+	common_loot |= outpost_common_table
 	uncommon_loot |= outpost_uncommon_table
 	rare_loot |= outpost_rare_table
 
 
 /datum/element/lootable/trash_pile/New()
 	. = ..()
+	common_loot |= outpost_common_table
 	uncommon_loot |= outpost_uncommon_table
 	rare_loot |= outpost_rare_table

@@ -93,6 +93,7 @@
 </tr>
 <tr>
 	<td>2393</td>
+	<td>- Creation of the first Positronic brain.</td><br>
 	<td>- First contact with Kitsuhana Heavy Industries. Little is known at the time, as they rarely interact with civilizations outside of their own. First introduction of NIF technology through KHI technomancers.</td>
 </tr>
 <tr>

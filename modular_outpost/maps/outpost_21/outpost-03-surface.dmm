@@ -7331,6 +7331,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
+/obj/item/expi_pamphlet,
 /turf/simulated/floor/carpet/purcarpet,
 /area/crew_quarters/bar)
 "alF" = (
@@ -10918,6 +10919,10 @@
 /area/security/briefing_room)
 "atR" = (
 /obj/structure/table/woodentable,
+/obj/item/expi_pamphlet,
+/obj/item/expi_pamphlet,
+/obj/item/expi_pamphlet,
+/obj/item/expi_pamphlet,
 /turf/simulated/floor/wood,
 /area/security/briefing_room)
 "atS" = (
@@ -12007,6 +12012,8 @@
 	dir = 5
 	},
 /obj/structure/table/standard,
+/obj/item/expi_pamphlet,
+/obj/item/expi_pamphlet,
 /turf/simulated/floor/tiled,
 /area/quartermaster/mining)
 "awj" = (
@@ -13587,6 +13594,10 @@
 /obj/item/clothing/accessory/bodycam/yobro,
 /obj/item/clothing/accessory/bodycam/yobro,
 /obj/effect/floor_decal/spline/plain,
+/obj/item/expi_pamphlet,
+/obj/item/expi_pamphlet,
+/obj/item/expi_pamphlet,
+/obj/item/expi_pamphlet,
 /turf/simulated/floor/carpet/purple,
 /area/rnd/breakroom)
 "aAs" = (
@@ -20236,14 +20247,14 @@
 "aUT" = (
 /obj/effect/zone_divider,
 /turf/simulated/open/muriki,
-/area/muriki/grounds/med/garage_entrance)
+/area/muriki/skyline/cent)
 "aUU" = (
 /obj/effect/zone_divider,
 /turf/simulated/open/muriki,
 /area/muriki/grounds/civ/garage_entrance)
 "aUV" = (
 /turf/simulated/open/muriki,
-/area/muriki/grounds/med/garage_entrance)
+/area/muriki/skyline/cent)
 "aUW" = (
 /turf/simulated/open/muriki,
 /area/muriki/grounds/civ/garage_entrance)
@@ -20648,6 +20659,10 @@
 	pixel_x = 11
 	},
 /obj/effect/floor_decal/corner/blue/border,
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -26
+	},
 /turf/simulated/floor/tiled/old_tile/white,
 /area/medical/laundry)
 "aVS" = (
@@ -20945,6 +20960,55 @@
 	},
 /turf/simulated/floor/tiled,
 /area/muriki/tramstation/waste)
+"aWC" = (
+/obj/structure/table/fancyblack,
+/obj/item/expi_pamphlet,
+/obj/item/expi_pamphlet,
+/obj/item/expi_pamphlet,
+/obj/item/expi_pamphlet,
+/turf/simulated/floor/carpet/blucarpet,
+/area/bridge/meeting_room)
+"aWD" = (
+/obj/structure/lattice,
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/structure/disposalpipe/down{
+	dir = 4
+	},
+/turf/simulated/open,
+/area/maintenance/cargomid)
+"aWE" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/catwalk,
+/turf/simulated/floor/plating,
+/area/maintenance/cargomid)
+"aWF" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/light/small,
+/obj/structure/catwalk,
+/turf/simulated/floor/plating,
+/area/maintenance/cargomid)
+"aWG" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/railing{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/cargomid)
+"aWH" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/cargomid)
 "aWI" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/structure/table/rack,
@@ -20986,6 +21050,23 @@
 /obj/item/tool/crowbar/brace_jack,
 /turf/simulated/floor/tiled/milspec,
 /area/security/armoury)
+"aWJ" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/effect/landmark/start/xenobio,
+/turf/simulated/floor/tiled,
+/area/quartermaster/office)
+"aWK" = (
+/obj/effect/landmark/start/xenobio,
+/turf/simulated/floor/tiled,
+/area/quartermaster/office)
 "aWU" = (
 /obj/effect/floor_decal/corner/red{
 	dir = 5
@@ -24761,11 +24842,11 @@
 	pixel_x = 6;
 	pixel_y = 4
 	},
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
 /obj/effect/floor_decal/milspec/color/orange/half{
 	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "2-9"
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/engineering/storage)
@@ -27204,7 +27285,7 @@
 	c_tag = "EXT - Cargo West";
 	dir = 8
 	},
-/turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
+/turf/simulated/floor/water/acidic/deep/turfpack/muriki,
 /area/muriki/grounds/tramborder)
 "cVV" = (
 /obj/structure/cable/orange,
@@ -28606,6 +28687,14 @@
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /obj/structure/table/standard,
+/obj/item/expi_pamphlet,
+/obj/item/expi_pamphlet,
+/obj/item/expi_pamphlet,
+/obj/item/expi_pamphlet,
+/obj/item/expi_pamphlet,
+/obj/item/expi_pamphlet,
+/obj/item/expi_pamphlet,
+/obj/item/expi_pamphlet,
 /turf/simulated/floor/tiled,
 /area/security/lobby)
 "dta" = (
@@ -28705,9 +28794,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
-	},
-/obj/structure/cable/green{
-	icon_state = "2-4"
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -30219,6 +30305,9 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals_central7{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay_primary_storage)
@@ -33417,6 +33506,9 @@
 /obj/effect/floor_decal/corner/brown{
 	dir = 6
 	},
+/obj/machinery/computer/security/telescreen/entertainment{
+	pixel_x = 32
+	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/office)
 "eXp" = (
@@ -33837,6 +33929,13 @@
 /obj/structure/sign/painting/public{
 	pixel_y = 32
 	},
+/obj/item/text_to_speech,
+/obj/item/text_to_speech,
+/obj/item/text_to_speech,
+/obj/item/text_to_speech,
+/obj/item/text_to_speech,
+/obj/item/text_to_speech,
+/obj/item/text_to_speech,
 /turf/simulated/floor/wood,
 /area/medical/psych)
 "ffi" = (
@@ -34462,6 +34561,7 @@
 	pixel_x = 32
 	},
 /obj/structure/table/marble,
+/obj/item/expi_pamphlet,
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cafeteria)
 "fpq" = (
@@ -47208,6 +47308,12 @@
 /obj/structure/cable/green{
 	icon_state = "2-4"
 	},
+/obj/structure/cable/green{
+	icon_state = "4-6"
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals_central7{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/engineering/storage)
 "jsQ" = (
@@ -57714,6 +57820,7 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
+/obj/item/expi_pamphlet,
 /turf/simulated/floor/tiled/white,
 /area/medical/reception)
 "mCI" = (
@@ -69535,10 +69642,6 @@
 /turf/simulated/floor/tiled/milspec,
 /area/medical/locker)
 "qwR" = (
-/obj/machinery/firealarm{
-	dir = 4;
-	pixel_x = 26
-	},
 /obj/machinery/disposal,
 /obj/item/radio/intercom{
 	dir = 1;
@@ -69975,6 +70078,7 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 4
 	},
+/obj/item/expi_pamphlet,
 /turf/simulated/floor/carpet/turcarpet,
 /area/hallway/secondary/entry/docking_lounge)
 "qEC" = (
@@ -83749,14 +83853,11 @@
 /turf/simulated/floor/plating,
 /area/muriki/processor/hall)
 "uZt" = (
-/obj/structure/disposalpipe/down{
-	dir = 4
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
 	},
-/obj/structure/railing{
-	dir = 4
-	},
-/obj/structure/lattice,
-/turf/simulated/open,
+/turf/simulated/floor/plating,
 /area/maintenance/cargomid)
 "uZy" = (
 /obj/effect/floor_decal/corner_techfloor_grid,
@@ -86521,10 +86622,10 @@
 /turf/simulated/floor/tiled/milspec,
 /area/engineering/foyer)
 "vRh" = (
-/obj/structure/ladder/updown,
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/structure/ladder/up,
 /turf/simulated/floor/plating,
 /area/maintenance/cargomid)
 "vRo" = (
@@ -87115,7 +87216,6 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 9
 	},
-/obj/effect/landmark/start/xenobio,
 /turf/simulated/floor/carpet/purple,
 /area/rnd/breakroom)
 "vZM" = (
@@ -89811,6 +89911,10 @@
 	},
 /obj/structure/sign/department/cargo_dock{
 	pixel_x = 30
+	},
+/obj/structure/sign/xenobio{
+	desc = "A sign marking the area for research into slimes.";
+	pixel_y = -32
 	},
 /turf/simulated/open,
 /area/quartermaster/office)
@@ -93382,7 +93486,6 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 1
 	},
-/obj/effect/landmark/start/xenobio,
 /turf/simulated/floor/carpet/purple,
 /area/rnd/breakroom)
 "xZI" = (
@@ -94027,6 +94130,10 @@
 	},
 /obj/structure/disposalpipe/segment,
 /obj/structure/table/oak,
+/obj/item/expi_pamphlet,
+/obj/item/expi_pamphlet,
+/obj/item/expi_pamphlet,
+/obj/item/expi_pamphlet,
 /turf/simulated/floor/carpet/oracarpet,
 /area/engineering/break_room)
 "yla" = (
@@ -115455,10 +115562,10 @@ aqZ
 aHB
 aqM
 cVy
-aHB
+cEY
 aCt
 aqr
-aHB
+aqr
 asV
 asV
 asV
@@ -115618,9 +115725,9 @@ jJx
 mzr
 ydI
 ydI
-aCu
+uMJ
+uMJ
 aqr
-aHB
 asV
 asV
 asV
@@ -115780,9 +115887,9 @@ mQv
 xhS
 vBp
 ydI
-aCu
+aWD
+uMJ
 aqr
-aHB
 asV
 asV
 asV
@@ -115942,9 +116049,9 @@ dJa
 nvW
 wse
 ydI
-aCu
+aWE
+uMJ
 aqr
-aHB
 asV
 aMK
 asV
@@ -116093,7 +116200,7 @@ lHR
 kwh
 laQ
 ojs
-uxB
+aWJ
 eOq
 wbD
 ddW
@@ -116104,10 +116211,10 @@ lSC
 vUe
 gYw
 ydI
-aCu
+aWF
+uMJ
 aqr
-aHB
-asV
+rnn
 asV
 asV
 asV
@@ -116265,9 +116372,9 @@ dUV
 fpF
 idX
 qcO
-ydI
-aCv
-aqr
+pom
+aWE
+uMJ
 aqr
 aHB
 asV
@@ -116427,9 +116534,9 @@ hTX
 mBI
 alP
 uhk
-ydI
-aCv
-hZu
+pom
+aWE
+uMJ
 aqr
 aHB
 asV
@@ -116589,8 +116696,8 @@ vYI
 gjj
 iVo
 dxn
-uMJ
-uMJ
+dxn
+aWG
 uMJ
 rQH
 aHB
@@ -116752,7 +116859,7 @@ lRG
 wOB
 dxn
 uZt
-prJ
+aWH
 uMJ
 aqr
 aHB
@@ -117060,7 +117167,7 @@ uHp
 kcg
 gCL
 kwh
-kwh
+aWK
 qya
 tXC
 tXC
@@ -144920,7 +145027,7 @@ tTV
 pOb
 aKb
 peU
-drY
+aWC
 mAB
 gHJ
 tuK

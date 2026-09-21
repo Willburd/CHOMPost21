@@ -432,7 +432,6 @@
 	if(cool_rotations <= 0)
 		cool_rotations = 0.5
 	cool_rotations = default_power_gen / cool_rotations
-	// Outpost 21 edit(port) begin - Borgs on wheel generators
 	if(!isrobot(runner))
 		switch(runner.nutrition)
 			if(1000 to INFINITY)	//VERY WELL FED, ZOOM!!!!
@@ -472,11 +471,10 @@
 			else
 				cool_rotations = 0
 				return // Nope nothing!
-		bot.cell.charge -= 5 // Faster for borgs cause they have more to drain
+		bot.cell.charge -= 10 // Faster for borgs cause they have more to drain
 	if(part_mult > 1)
 		cool_rotations += (cool_rotations * (part_mult - 1)) / 4
 	power_gen = cool_rotations
-	// Outpost 21 edit(port) end
 
 /obj/item/circuitboard/machine/reg_d
 	name = T_BOARD("D-Type-REG")

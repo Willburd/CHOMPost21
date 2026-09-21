@@ -214,7 +214,7 @@
 	cut_overlays()
 
 	var/image/I
-	var/main_color = material.icon_colour
+	var/main_color = material ? material.icon_colour : "#ffffff" // Outpost 21 edit(port) - I'm tired of this runtime
 	for(var/i = 1 to 4)
 		if(other_connections[i] != "0")
 			I = image(icon, "frame_other[other_connections[i]]", dir = 1<<(i-1))
@@ -238,7 +238,7 @@
 	cut_overlays()
 
 	var/image/I
-	var/main_color = material.icon_colour
+	var/main_color = material ? material.icon_colour : "#ffffff" // Outpost 21 edit(port) - I'm tired of this runtime
 	for(var/i = 1 to 4)
 		I = image(icon, "frame[connections[i]]", dir = 1<<(i-1))
 		I.color = main_color
