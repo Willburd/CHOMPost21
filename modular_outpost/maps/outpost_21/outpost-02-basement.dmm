@@ -32,6 +32,10 @@
 "aah" = (
 /turf/simulated/floor/reinforced,
 /area/rnd/xenobiology/xenobioh)
+"aai" = (
+/obj/structure/closet/firecloset,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/cargo)
 "aaj" = (
 /obj/structure/disposaloutlet{
 	dir = 8
@@ -39,6 +43,15 @@
 /obj/structure/disposalpipe/trunk,
 /turf/simulated/floor/reinforced,
 /area/rnd/xenobiology/xenobioh)
+"aak" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/effect/auto_crayon{
+	icon_state = "right"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/cargo)
 "aal" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/light/small{
@@ -601,6 +614,10 @@
 	},
 /turf/simulated/floor/wood/alt,
 /area/maintenance/oldbridge)
+"abp" = (
+/obj/structure/closet,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/cargo)
 "abq" = (
 /obj/machinery/atmospherics/binary/pump{
 	dir = 8
@@ -665,6 +682,10 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/atmos)
+"abz" = (
+/obj/machinery/door/airlock/maintenance/common,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/area/maintenance/cargo)
 "abA" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/window/brigdoor/eastright{
@@ -962,6 +983,16 @@
 /obj/structure/table/standard,
 /turf/simulated/floor/tiled/techfloor,
 /area/rnd/xenobiology/xenobioh)
+"acl" = (
+/obj/structure/table/standard,
+/obj/item/flashlight/lamp/green{
+	pixel_x = -15;
+	pixel_y = 12
+	},
+/obj/item/storage/box/donkpockets/gondola,
+/obj/machinery/microwave/advanced,
+/turf/simulated/floor/wood,
+/area/maintenance/cargo)
 "acm" = (
 /turf/simulated/floor/tiled/dark,
 /area/rnd/xenobiology/xenobiohstore)
@@ -1378,6 +1409,9 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/xenobiology/xenobioh)
+"adh" = (
+/turf/simulated/floor/wood/broken,
+/area/maintenance/cargo)
 "adi" = (
 /obj/effect/floor_decal/milspec/color/purple/half{
 	dir = 4
@@ -1406,6 +1440,20 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/rnd/xenobiology/xenobioh)
+"adk" = (
+/obj/machinery/door/window/southright{
+	name = "Shower";
+	dir = 8
+	},
+/obj/structure/toilet{
+	dir = 8
+	},
+/obj/machinery/shower{
+	dir = 8;
+	pixel_x = -1
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/maintenance/cargo)
 "adl" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/black,
 /obj/structure/cable/green{
@@ -2337,6 +2385,15 @@
 /obj/effect/floor_decal/milspec/color/purple/corner,
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/xenobiology/xenobioh)
+"afo" = (
+/obj/structure/bed/double/padded,
+/obj/item/bedsheet/bluedouble,
+/obj/machinery/computer/security/telescreen/entertainment{
+	pixel_y = 28
+	},
+/obj/effect/landmark/start/stowaway,
+/turf/simulated/floor/wood,
+/area/maintenance/cargo)
 "afp" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/red{
 	dir = 4
@@ -3830,6 +3887,9 @@
 "ahT" = (
 /turf/simulated/wall,
 /area/rnd/xenobiology/burn)
+"ahU" = (
+/turf/simulated/floor/wood,
+/area/maintenance/cargo)
 "ahV" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -4542,6 +4602,17 @@
 	},
 /turf/simulated/floor/plating,
 /area/rnd/xenobiology/burn)
+"aiU" = (
+/obj/structure/table/standard,
+/obj/structure/sink/countertop,
+/obj/item/soap{
+	pixel_y = 10
+	},
+/obj/structure/window/reinforced/tinted{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/maintenance/cargo)
 "aiV" = (
 /obj/structure/disposalpipe/trunk{
 	dir = 1
@@ -44652,6 +44723,9 @@
 	icon_state = "1-8"
 	},
 /obj/random/junk,
+/obj/effect/auto_crayon{
+	icon_state = "shelter"
+	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/cargo)
 "bGu" = (
@@ -118685,11 +118759,11 @@ bge
 bge
 bge
 bge
-aNL
-aNL
-aNL
-aNL
-aNL
+bge
+bge
+bge
+bge
+bge
 aNL
 bge
 bvb
@@ -118846,12 +118920,12 @@ bge
 aQg
 aQg
 bge
-aNL
-aNL
-aNL
-aNL
-aNL
-aNL
+aMu
+bge
+aQg
+cdf
+aQg
+bge
 bge
 bge
 bOc
@@ -119007,14 +119081,14 @@ bUe
 bcX
 aQg
 aQg
+biq
+aQg
+aQg
+aQg
 bge
-aNL
-aNL
-aNL
-aNL
-aNL
-aNL
-bge
+aQg
+aQg
+biq
 bOh
 bOd
 hyo
@@ -119170,12 +119244,12 @@ bge
 aQg
 aQg
 bge
-aNL
-aNL
-aNL
-aNL
-aNL
-aNL
+bge
+aai
+bge
+aQg
+aQg
+bge
 bge
 bVx
 bge
@@ -119333,11 +119407,11 @@ bge
 bge
 bge
 bge
-aNL
-aNL
-aNL
-aNL
-aNL
+bge
+bpy
+aQg
+bge
+bge
 bge
 bFS
 ceL
@@ -119495,10 +119569,10 @@ axP
 cfB
 aQg
 bge
-aNL
-aNL
-aNL
-aNL
+baR
+bge
+aQg
+bge
 aNL
 bge
 bge
@@ -119657,10 +119731,10 @@ aQg
 axP
 cfB
 bge
-aNL
-aNL
-aNL
-aNL
+bge
+bge
+aQg
+bge
 aNL
 aNL
 bge
@@ -119819,10 +119893,10 @@ aQg
 cfB
 aQg
 bge
-aNL
-aNL
-aNL
-aNL
+aQg
+aQg
+aQg
+bge
 aNL
 aNL
 bge
@@ -119981,10 +120055,10 @@ bge
 bge
 bge
 bge
-aNL
-aNL
-aNL
-aNL
+aak
+bge
+bge
+bge
 aNL
 aNL
 bge
@@ -120139,12 +120213,12 @@ cjR
 cgb
 cae
 bge
-aNL
-aNL
-aNL
-aNL
-aNL
-aNL
+afo
+acl
+bge
+abp
+aQg
+bge
 aNL
 aNL
 aNL
@@ -120301,12 +120375,12 @@ aUQ
 bBE
 caV
 bge
-aNL
-aNL
-aNL
-aNL
-aNL
-aNL
+ahU
+adh
+abz
+aQg
+aQg
+bge
 aNL
 aNL
 aNL
@@ -120463,12 +120537,12 @@ bDL
 cjJ
 bPC
 bge
-aNL
-aNL
-aNL
-aNL
-aNL
-aNL
+aiU
+adk
+bge
+bpy
+aQg
+bge
 aNL
 aNL
 aNL
@@ -120625,12 +120699,12 @@ bge
 bge
 bZb
 bge
-aNL
-aNL
-aNL
-aNL
-aNL
-aNL
+bge
+bge
+bge
+bge
+aQg
+bge
 aNL
 aNL
 aNL
@@ -120787,12 +120861,12 @@ aKe
 cjK
 cae
 bge
-aNL
-aNL
-aNL
-aNL
-aNL
-aNL
+baR
+baR
+baR
+bge
+aQg
+bge
 aNL
 aNL
 aNL
@@ -120949,11 +121023,11 @@ bge
 bge
 bPE
 bge
-aNL
-aNL
-aNL
+baR
+baR
+baR
 bge
-bge
+biq
 bge
 bge
 bge
