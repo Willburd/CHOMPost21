@@ -75,7 +75,7 @@ When editing the list, please try and keep similar probabilities near each other
 		if("lore")
 			var/info = "The following is a tip for understanding the lore of Outpost21! You can disable them using the periodic tips toggle in the Global tab of the character setup! \n"
 			return pick(
-				prob(25); "[info] Our lore is somewhat in line with other servers. The year is 2568 (current year+544).",
+				prob(25); "[info] Our lore is somewhat in line with other servers. The year is [CURRENT_STATION_YEAR] (current year+[STATION_YEAR_OFFSET]).",
 				prob(25); "[info] Unlike other servers, you don't work for Nanotrasen, instead working for E-Shui; a separate company that focuses on terraforming.",
 				prob(50); "[info] You are currently working in the SL-340 system on Outpost 21, on the planet Muriki. A planet undergoing a terraforming process.",
 				prob(50); "[info] The majority of employees live down the elevators, near the core of the planet. Infact, every E-Shui employee has a room, even if it's not mapped.",

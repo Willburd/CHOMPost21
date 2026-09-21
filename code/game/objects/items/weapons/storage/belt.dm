@@ -70,6 +70,7 @@
 		/obj/item/pda,
 		/obj/item/megaphone,
 		/obj/item/taperoll,
+		/obj/item/tape_roll,
 		/obj/item/radio/headset,
 		/obj/item/robotanalyzer,
 		/obj/item/material/minihoe,
@@ -134,6 +135,16 @@
 		/obj/item/extinguisher/mini //Vorestation edit. As above, the mini's much more handy to have rather than lugging a big one around
 	)
 
+/obj/item/storage/belt/utility/telecomms
+	starts_with = list(
+		/obj/item/tool/screwdriver,
+		/obj/item/tool/wrench,
+		/obj/item/tool/crowbar,
+		/obj/item/tool/wirecutters,
+		/obj/item/stack/cable_coil/random_belt,
+		/obj/item/multitool/station_buffered
+	)
+
 /obj/item/storage/belt/utility/chief
 	name = "chief engineer's toolbelt"
 	desc = "Holds tools, looks snazzy."
@@ -162,6 +173,7 @@
 		/obj/item/pda,
 		/obj/item/megaphone,
 		/obj/item/taperoll,
+		/obj/item/tape_roll,
 		/obj/item/radio/headset,
 		/obj/item/robotanalyzer,
 		/obj/item/material/minihoe,
@@ -215,6 +227,7 @@
 		/obj/item/pda,
 		/obj/item/megaphone,
 		/obj/item/taperoll,
+		/obj/item/tape_roll,
 		/obj/item/radio/headset,
 		/obj/item/robotanalyzer,
 		/obj/item/material/minihoe,
@@ -261,6 +274,7 @@
 		/obj/item/radio/headset,
 		/obj/item/pda,
 		/obj/item/taperoll,
+		/obj/item/tape_roll,
 		/obj/item/megaphone,
 		/obj/item/clothing/mask/surgical,
 		/obj/item/clothing/head/surgery,
@@ -327,6 +341,7 @@
 		/obj/item/gun/projectile/sec,
 		/obj/item/gun/projectile/p92x,
 		/obj/item/taperoll,
+		/obj/item/tape_roll,
 		/obj/item/gun/projectile/colt/detective,
 		/obj/item/holowarrant,
 		/obj/item/shield/energy, // Outpost 21 edit - Add shield to belt
@@ -367,6 +382,7 @@
 		/obj/item/radio/headset,
 		/obj/item/clothing/gloves,
 		/obj/item/taperoll,
+		/obj/item/tape_roll,
 		/obj/item/reagent_containers/spray/pepper,
 		/obj/item/handcuffs,
 		/obj/item/flash,
@@ -432,6 +448,7 @@
 		/obj/item/radio/headset,
 		/obj/item/pda,
 		/obj/item/taperoll,
+		/obj/item/tape_roll,
 		/obj/item/megaphone,
 		/obj/item/clothing/mask/surgical,
 		/obj/item/clothing/head/surgery,
@@ -518,6 +535,7 @@
 		/obj/item/flame/lighter,
 		/obj/item/megaphone,
 		/obj/item/taperoll,
+		/obj/item/tape_roll,
 		/obj/item/reagent_containers/spray,
 		/obj/item/soap,
 		/obj/item/holosign_creator, //CHOMPAdd

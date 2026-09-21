@@ -351,7 +351,7 @@
 		user.setClickCooldown(user.get_attack_speed(W))
 		if(W.damtype == BRUTE || W.damtype == BURN)
 			user.do_attack_animation(src)
-			hit(W.force)
+			hit(outpost_structure_damage_bonus(W)) // Outpost 21 edit - Some weapons do more damage to structures
 			if(health <= 7)
 				anchored = FALSE
 				update_nearby_icons()

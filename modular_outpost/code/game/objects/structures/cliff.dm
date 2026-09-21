@@ -32,6 +32,7 @@ two tiles on initialization, and which way a cliff is facing may change during m
 
 	anchored = TRUE
 	density = TRUE
+	throwpass = TRUE
 	opacity = FALSE
 	unacidable = TRUE
 	block_turf_edges = TRUE // Don't want turf edges popping up from the cliff edge.
@@ -123,6 +124,12 @@ two tiles on initialization, and which way a cliff is facing may change during m
 
 // Movement-related code.
 /obj/structure/cliff/CanPass(atom/movable/mover, turf/target)
+	if(mover.z > z) // Allow falling from above
+		return TRUE
+
+	if(mover.throwing) // Weeee
+		return TRUE
+
 	if(isliving(mover))
 		var/mob/living/L = mover
 		if(L.hovering || L.flying || L.is_incorporeal()) // Flying mobs can always pass.
@@ -130,12 +137,13 @@ two tiles on initialization, and which way a cliff is facing may change during m
 		return ..()
 
 	// Projectiles and objects flying 'upward' have a chance to hit the cliff instead, wasting the shot.
-	else if(istype(mover, /obj))
+	if(istype(mover, /obj))
 		var/obj/O = mover
 		if(check_shield_arc(src, dir, O)) // This is actually for mobs but it will work for our purposes as well.
 			if(prob(uphill_penalty)) // Firing upwards facing NORTH means it will likely have to pass through two cliffs, so the chance is halved.
 				return FALSE
 		return TRUE
+	return FALSE
 
 /obj/structure/cliff/Bumped(atom/A)
 	if(isliving(A))
@@ -146,7 +154,7 @@ two tiles on initialization, and which way a cliff is facing may change during m
 	..()
 
 /obj/structure/cliff/proc/should_fall(mob/living/L)
-	if(L.hovering || L.flying || L.is_incorporeal())
+	if(L.hovering || L.flying || L.is_incorporeal() || L.throwing)
 		return FALSE
 
 	var/turf/T = get_turf(L)
@@ -215,12 +223,6 @@ two tiles on initialization, and which way a cliff is facing may change during m
 	if(should_fall(L))
 		return FALSE
 	return ..()
-
-/obj/structure/cliff/CanPass(atom/movable/mover, turf/target)
-	return mover.z > z // Allow falling from above
-
-
-
 
 
 /obj/structure/cliff_end

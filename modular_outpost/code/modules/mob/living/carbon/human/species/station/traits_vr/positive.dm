@@ -87,3 +87,25 @@
 /datum/trait/positive/radio_jammer/unapply(datum/species/S, mob/living/carbon/human/H, trait_prefs)
 	. = ..()
 	qdel(H.GetComponent(/datum/component/radio_jammer))
+
+/datum/trait/positive/silent_motion
+	name = "Silent Motion"
+	desc = "You move silently without making a sound. Some surfaces may still make sounds for you however..."
+	cost = 2
+
+	is_genetrait = TRUE
+	activity_bounds = DNA_DEFAULT_BOUNDS
+
+	activation_message="You light on your feet."
+	deactivation_message="You feel less sneaky."
+	primitive_expression_messages=list("sneaks around.","walks silently.")
+
+	excludes = list(/datum/trait/negative/heavy_landing)
+
+/datum/trait/positive/silent_motion/apply(datum/species/S, mob/living/carbon/human/H, trait_prefs)
+	. = ..()
+	ADD_TRAIT(H, TRAIT_SILENTMOTION, ROUNDSTART_TRAIT)
+
+/datum/trait/positive/silent_motion/unapply(datum/species/S, mob/living/carbon/human/H, trait_prefs)
+	. = ..()
+	REMOVE_TRAIT(H, TRAIT_SILENTMOTION, ROUNDSTART_TRAIT)

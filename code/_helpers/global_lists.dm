@@ -301,7 +301,7 @@ GLOBAL_LIST_EMPTY(mannequins)
 	///These are icons that you DO NOT want to be selectable!
 	var/list/blacklisted_icons = list(SPECIES_CUSTOM,SPECIES_PROMETHEAN)
 	///These are icons that you WANT to be selectable, even if they're a whitelist species!
-	var/list/whitelisted_icons = list(SPECIES_FENNEC,SPECIES_XENOHYBRID,SPECIES_VOX,SPECIES_ZORREN_DARK,SPECIES_SHADEKIN) //CHOMEdit
+	var/list/whitelisted_icons = list(SPECIES_FENNEC,SPECIES_XENOHYBRID,SPECIES_VOX,SPECIES_ZORREN_DARK,SPECIES_SHADEKIN,SPECIES_WEREBEAST,SPECIES_VASILISSAN,SPECIES_VOX,SPECIES_XENOCHIMERA,SPECIES_LLEILL) //CHOMEdit // Outpost 21 edit - Allow any custom species base
 	for(var/species_name in GLOB.playable_species)
 		if(species_name in blacklisted_icons)
 			continue
@@ -724,7 +724,7 @@ GLOBAL_LIST_INIT(radio_channels_by_freq, list(
 	num2text(CULTURE_FREQ) = CHANNEL_CULTURE,
 	// Outpost 21 edit begin - Security squad channels
 	num2text(SEC_ALPHA_FREQ) = CHANNEL_SEC_ALPHA,
-	num2text(SEC_BETA_FREQ) = CHANNEL_SEC_BETA,
+	num2text(SEC_BRAVO_FREQ) = CHANNEL_SEC_BRAVO,
 	num2text(SEC_CHARLIE_FREQ) = CHANNEL_SEC_CHARLIE,
 	num2text(SEC_DELTA_FREQ) = CHANNEL_SEC_DELTA,
 	// Outpost 21 edit end
@@ -751,7 +751,7 @@ GLOBAL_LIST_INIT(default_internal_channels, list(
 	num2text(EXP_FREQ) = list(ACCESS_EXPLORER, ACCESS_PILOT), // CHOMPEdit
 	// Outpost 21 edit begin - Security squad channels
 	num2text(SEC_ALPHA_FREQ) = list(ACCESS_SECURITY),
-	num2text(SEC_BETA_FREQ) = list(ACCESS_SECURITY),
+	num2text(SEC_BRAVO_FREQ) = list(ACCESS_SECURITY),
 	num2text(SEC_CHARLIE_FREQ) = list(ACCESS_SECURITY),
 	num2text(SEC_DELTA_FREQ) = list(ACCESS_SECURITY),
 	// Outpost 21 edit end
@@ -1672,6 +1672,8 @@ GLOBAL_LIST_INIT(ventcrawl_machinery, list(
 	))
 
 GLOBAL_LIST_BOILERPLATE(papers_dockingcode, /obj/item/paper/dockingcodes)
+
+GLOBAL_LIST_EMPTY(storage_filters)
 
 //Chamelion clothing was all stupid so it's done here instead.
 //Jumpsuit

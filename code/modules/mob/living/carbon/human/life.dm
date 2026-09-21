@@ -1651,6 +1651,14 @@
 						if((O.offline && O.offline_vision_restriction == 1) || (!O.offline && O.vision_restriction == 1))
 							found_welder = 1
 				if(absorbed) found_welder = 1
+			// outpost 21 edit addition - Some weather affects vision!
+			var/turf/ground = get_turf(src)
+			if(ground && ground.is_outdoors() && ground.z > 0 && length(SSplanets.z_to_planet) >= ground.z)
+				var/datum/planet/P = SSplanets.z_to_planet[ground.z]
+				var/datum/weather/cur_weather = P?.weather_holder?.current_weather
+				if(cur_weather?.limits_vision)
+					found_welder = 1
+			// outpost 21 edit end
 			if(found_welder)
 				client.screen |= GLOB.global_hud.darkMask
 
@@ -2126,6 +2134,14 @@
 	This proc below is only called when those HUD elements need to change as determined by the mobs hud_updateflag.
 */
 /mob/living/carbon/human/proc/handle_hud_list()
+	// Outpost 21 edit begin - Health hud requires suit sensors
+	var/has_suit_sensors = FALSE
+	if(istype(w_uniform, /obj/item/clothing/under))
+		var/obj/item/clothing/under/undersuit = w_uniform
+		if(undersuit.has_sensor && undersuit.sensor_mode)
+			has_suit_sensors = TRUE
+	// Outpost 21 edit end
+
 	if (BITTEST(hud_updateflag, HEALTH_HUD))
 		var/image/holder = grab_hud(HEALTH_HUD)
 		var/image/health_us = grab_hud(HEALTH_VR_HUD)
@@ -2133,7 +2149,7 @@
 			holder.icon_state = "-100" 	// X_X
 		else
 			holder.icon_state = RoundHealth((health-get_crit_point())/(getMaxHealth()-get_crit_point())*100)
-		if(block_hud)
+		if(block_hud || !has_suit_sensors) // Outpost 21 edit - Health hud requires suit sensors
 			holder.icon_state = "hudblank"
 		health_us.icon_state = holder.icon_state
 		apply_hud(HEALTH_HUD, holder)
@@ -2147,7 +2163,7 @@
 			holder.icon_state = "huddead"
 		else
 			holder.icon_state = "hudhealthy"
-		if(block_hud)
+		if(block_hud || !has_suit_sensors) // Outpost 21 edit - Health hud requires suit sensors
 			holder.icon_state = "hudblank"
 		apply_hud(LIFE_HUD, holder)
 
@@ -2169,7 +2185,7 @@
 				holder2.icon_state = "hudill"
 			else
 				holder2.icon_state = "hudhealthy"
-		if(block_hud)
+		if(block_hud || !has_suit_sensors) // Outpost 21 edit - Health hud requires suit sensors
 			holder.icon_state = "hudblank"
 			holder2.icon_state = "hudblank"
 
@@ -2189,7 +2205,7 @@
 		else
 			holder.icon_state = "hudunknown"
 
-		if(block_hud)
+		if(block_hud || !has_suit_sensors) // Outpost 21 edit - Health hud requires suit sensors
 			holder.icon_state = "hudblank"
 		apply_hud(ID_HUD, holder)
 
@@ -2225,7 +2241,7 @@
 			holder.icon_state = "hudwanted"
 		// Outpost 21 edit end
 
-		if(block_hud)
+		if(block_hud || !has_suit_sensors) // Outpost 21 edit - Health hud requires suit sensors
 			holder.icon_state = "hudblank"
 		apply_hud(WANTED_HUD, holder)
 
@@ -2250,6 +2266,11 @@
 						holder2.icon_state = "hud_imp_loyal"
 					if(istype(I,/obj/item/implant/chem))
 						holder3.icon_state = "hud_imp_chem"
+
+		if(!has_suit_sensors) // Outpost 21 edit - Health hud requires suit sensors
+			holder1.icon_state = "hudblank"
+			holder2.icon_state = "hudblank"
+			holder3.icon_state = "hudblank"
 
 		apply_hud(IMPTRACK_HUD, holder1)
 		apply_hud(IMPLOYAL_HUD, holder2)
@@ -2283,7 +2304,7 @@
 					else
 						holder.icon_state = "hud_backup_norm"
 		*/
-		if(block_hud)
+		if(block_hud || !has_suit_sensors) // Outpost 21 edit - Health hud requires suit sensors
 			holder.icon_state = "hudblank"
 		apply_hud(BACKUP_HUD, holder)
 

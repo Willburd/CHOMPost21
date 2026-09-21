@@ -81,7 +81,7 @@
 /obj/item/encryptionkey/heads/hos
 	name = "head of security's encryption key"
 	icon_state = "hos_cypherkey"
-	channels = list(CHANNEL_SECURITY = 1)
+	channels = list(CHANNEL_SECURITY = 1, CHANNEL_COMMAND = 1)
 
 /obj/item/encryptionkey/heads/ce
 	name = "chief engineer's encryption key"

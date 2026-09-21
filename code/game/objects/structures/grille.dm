@@ -154,11 +154,12 @@
 		user.setClickCooldown(user.get_attack_speed(W))
 		user.do_attack_animation(src)
 		playsound(src, 'sound/effects/grillehit.ogg', 80, 1)
+		var/outpost_structure_damage = outpost_structure_damage_bonus(W) // Outpost 21 edit - Some weapons do more damage to structures
 		switch(W.damtype)
 			if(BURN)
-				health -= W.force
+				health -= outpost_structure_damage
 			if(BRUTE)
-				health -= W.force * 0.1
+				health -= outpost_structure_damage * 0.1
 	healthcheck()
 	..()
 	return

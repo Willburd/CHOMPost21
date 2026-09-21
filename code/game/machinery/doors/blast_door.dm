@@ -16,6 +16,7 @@
 /obj/machinery/door/blast
 	name = "Blast Door"
 	desc = "That looks like it doesn't open easily."
+	description_antag = "Dangerous if they close on you normally, but you could probably make it worse with an emag."
 	icon = 'icons/obj/doors/rapid_pdoor.dmi'
 	icon_state = null
 	min_force = 20 //minimum amount of force needed to damage the door with a melee weapon
@@ -186,12 +187,13 @@
 			user.setClickCooldown(user.get_attack_speed(W))
 			if(W.damtype == BRUTE || W.damtype == BURN)
 				user.do_attack_animation(src)
-				if(W.force < min_force)
+				var/outpost_structure_damage = outpost_structure_damage_bonus(W) // Outpost 21 edit - Some weapons do more damage to structures
+				if(outpost_structure_damage < min_force)
 					user.visible_message(span_danger("\The [user] hits \the [src] with \the [W] with no visible effect."))
 				else
 					user.visible_message(span_danger("\The [user] forcefully strikes \the [src] with \the [W]!"))
 					playsound(src, hitsound, 100, 1)
-					take_damage(W.force*0.35) //it's a blast door, it should take a while. -Luke
+					take_damage(outpost_structure_damage*0.35) //it's a blast door, it should take a while. -Luke
 				return
 
 	else if(istype(C, /obj/item/stack/material) && C.get_material_name() == MAT_PLASTEEL) // Repairing.
@@ -216,12 +218,13 @@
 		user.setClickCooldown(user.get_attack_speed(W))
 		if(istype(W) && (W.damtype == BRUTE || W.damtype == BURN))
 			user.do_attack_animation(src)
-			if(W.force < min_force) //No actual non-weapon item shouls have a force greater than the min_force, but let's include this just in case.
+			var/outpost_structure_damage = outpost_structure_damage_bonus(W) // Outpost 21 edit - Some weapons do more damage to structures
+			if(outpost_structure_damage < min_force) //No actual non-weapon item shouls have a force greater than the min_force, but let's include this just in case.
 				user.visible_message(span_danger("\The [user] hits \the [src] with \the [W] with no visible effect."))
 			else
 				user.visible_message(span_danger("\The [user] forcefully strikes \the [src] with \the [W]!"))
 				playsound(src, hitsound, 100, 1)
-				take_damage(W.force*0.15) //If the item isn't a weapon, let's make this take longer than usual to break it down.
+				take_damage(outpost_structure_damage*0.15) //If the item isn't a weapon, let's make this take longer than usual to break it down.
 			return
 
 // Proc: attack_alien()

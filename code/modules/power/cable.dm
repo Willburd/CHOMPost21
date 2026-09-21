@@ -58,7 +58,7 @@ GLOBAL_LIST_INIT(possible_cable_coil_colours, list(
 	layer = WIRES_LAYER
 	color = COLOR_RED
 	var/obj/machinery/power/breakerbox/breaker_box
-	var/broken = FALSE // Outpost 21 edit(port) - broken wire trap
+	var/broken = FALSE
 
 /obj/structure/cable/drain_power(drain_check, surge, amount = 0)
 	if(drain_check)
@@ -105,20 +105,14 @@ GLOBAL_LIST_INIT(possible_cable_coil_colours, list(
 	if(level==1) hide(!T.is_plating())
 	GLOB.cable_list += src //add it to the global cable list
 
-// Outpost 21 edit(port) begin - broken wire trap
-/obj/structure/cable/Initialize(mapload)
-	. = ..()
-	if(mapload && prob(1))
+	if(mapload && prob(1) && CONFIG_GET(flag/roundstart_frayed_wires))
 		var/area/A = get_area(src)
 		if(istype(A,/area/maintenance) || istype(A,/area/mine))
 			fray()
-// Outpost 21 edit end
 
 /obj/structure/cable/Destroy()					// called when a cable is deleted
-	// Outpost 21 edit(port) begin - broken wire trap
 	if(broken)
 		unsense_proximity(range = 0, callback = TYPE_PROC_REF(/atom,HasProximity))
-	// Outpost 21 edit end
 
 	if(powernet)
 		cut_cable_from_powernet()				// update the powernets
@@ -127,10 +121,8 @@ GLOBAL_LIST_INIT(possible_cable_coil_colours, list(
 
 /obj/structure/cable/examine(mob/user)
 	. = ..()
-	// Outpost 21 edit(port) begin - broken wire trap
 	if(broken)
 		. += span_warning("It looks frayed! Some tape might help.")
-	// Outpost 21 edit end
 	if(isobserver(user))
 		. += span_warning("[powernet?.avail > 0 ? "[DisplayPower(powernet.avail)] in power network." : "The cable is not powered."]")
 
@@ -182,7 +174,6 @@ GLOBAL_LIST_INIT(possible_cable_coil_colours, list(
 		return
 	icon_state = "[d1]-[d2]"
 	alpha = invisibility ? 127 : 255
-	// Outpost 21 edit(port) begin - broken wire trap
 	cut_overlays()
 	if(broken && !invisibility)
 		var/image/broke = image('icons/obj/power_cond_damaged.dmi', src, "[d1]-[d2]")
@@ -195,9 +186,7 @@ GLOBAL_LIST_INIT(possible_cable_coil_colours, list(
 		spark.plane = OBJ_PLANE
 		spark.layer = UNDER_JUNK_LAYER-0.001 // Spark above most things
 		add_overlay(spark)
-	// Outpost 21 edit end
 
-// Outpost 21 edit(port) begin - broken wire trap
 /obj/structure/cable/proc/fray()
 	if(d1 >= 16 || breaker_box)
 		return // Invalid
@@ -227,7 +216,7 @@ GLOBAL_LIST_INIT(possible_cable_coil_colours, list(
 		var/mob/living/carbon/human/H = AM
 		if(H.is_incorporeal())
 			return
-		if(H.shoes && H.shoes.flags & NOCONDUCT)
+		if(H.shoes && H.shoes.flags & NOCONDUCT) // The janitor is too powerful!
 			return
 	if(isliving(AM))
 		var/mob/living/M = AM
@@ -235,7 +224,6 @@ GLOBAL_LIST_INIT(possible_cable_coil_colours, list(
 			return
 		shock(M,80,1)
 		return
-// Outpost 21 edit end
 
 //Telekinesis has no effect on a cable
 /obj/structure/cable/attack_tk(mob/user)
@@ -245,8 +233,8 @@ GLOBAL_LIST_INIT(possible_cable_coil_colours, list(
 //   - Wirecutters : cut it duh !
 //   - Cable coil : merge cables
 //   - Multitool : get the power currently passing through the cable
-//   - Sharp Items : frays wires - Outpost 21 edit
-//   - Tape Roll : repairs wires if frayed - Outpost 21 edit
+//   - Sharp Items : frays wires
+//   - Tape Roll : repairs wires if frayed
 //
 
 /obj/structure/cable/attackby(obj/item/W, mob/user)
@@ -255,7 +243,6 @@ GLOBAL_LIST_INIT(possible_cable_coil_colours, list(
 	if(!T.is_plating())
 		return
 
-	// Outpost 21 edit(port) begin - broken wire trap
 	if(broken && istype(W,/obj/item/tape_roll))
 		if(do_after(user,2 SECONDS,src))
 			if(broken)
@@ -265,7 +252,6 @@ GLOBAL_LIST_INIT(possible_cable_coil_colours, list(
 		return
 
 	else if(W.has_tool_quality(TOOL_WIRECUTTER))
-	// Outpost 21 edit end
 		var/obj/item/stack/cable_coil/CC
 		if(d1 == UP || d2 == UP)
 			to_chat(user, span_warning("You must cut this cable from above."))
@@ -298,7 +284,7 @@ GLOBAL_LIST_INIT(possible_cable_coil_colours, list(
 
 		investigate_log("was cut by [key_name(user, user.client)] in [user.loc.loc]","wires")
 
-		if(broken) // Outpost 21 edit(port) - Cutting cable off should fix it too, somehow it was persisting broken state...?
+		if(broken) // Cutting cable off should fix it too, somehow it was persisting broken state...?
 			unfray()
 
 		qdel(src)
@@ -311,7 +297,7 @@ GLOBAL_LIST_INIT(possible_cable_coil_colours, list(
 			to_chat(user, "Not enough cable")
 			return
 		coil.cable_join(src, user)
-		if(broken) // Outpost 21 edit - Adding cable autofixes others
+		if(broken) // Adding cable autofixes others
 			unfray()
 
 	if(W.has_tool_quality(TOOL_MULTITOOL))
@@ -321,10 +307,8 @@ GLOBAL_LIST_INIT(possible_cable_coil_colours, list(
 	else
 		if(!(W.flags & NOCONDUCT))
 			shock(user, 50, 0.7)
-		// Outpost 21 edit(port) begin - broken wire trap
 		if(is_sharp(W))
 			fray()
-		// Outpost 21 edit end
 
 	add_fingerprint(user)
 
@@ -346,21 +330,17 @@ GLOBAL_LIST_INIT(possible_cable_coil_colours, list(
 		if(1.0)
 			qdel(src)
 		if(2.0)
-			// Outpost 21 edit(port) begin - broken wire trap
 			if (prob(10))
 				fray()
 			else if (prob(50))
-			// Outpost 21 edit end
 				new/obj/item/stack/cable_coil(src.loc, src.d1 ? 2 : 1, color)
 				qdel(src)
 
 		if(3.0)
 			if (prob(25))
-				// Outpost 21 edit(port) begin - broken wire trap
 				fray()
 				//new/obj/item/stack/cable_coil(src.loc, src.d1 ? 2 : 1, color)
 				//qdel(src)
-				// Outpost 21 edit end
 	return
 
 /obj/structure/cable/proc/cableColor(colorC)

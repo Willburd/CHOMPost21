@@ -32,3 +32,9 @@
 /datum/alt_title/hall_monitor
 	title = JOB_ALT_HALLMONITOR
 	title_blurb = "A " + JOB_ALT_HALLMONITOR + " is a junior security officer, but commands even less respect and authority."
+
+
+// Raises job cap
+/datum/job/officer
+	total_positions = 8
+	spawn_positions = 8

@@ -64,7 +64,7 @@ GLOBAL_LIST_INIT(department_radio_keys, list(
 
 	// Outpost 21 edit begin - Security squad channels
 	":1" = CHANNEL_SEC_ALPHA,
-	":2" = CHANNEL_SEC_BETA,
+	":2" = CHANNEL_SEC_BRAVO,
 	":3" = CHANNEL_SEC_CHARLIE,
 	":4" = CHANNEL_SEC_DELTA,
 	// Outpost 21 edit end

@@ -79,6 +79,7 @@
 #define ANNOUNCER_MSG_EARTHQUAKE "announcer_msg_earthquake"
 #define ANNOUNCER_MSG_DISPOSAL_FAIL "announcer_msg_disposal_fail"
 #define ANNOUNCER_MSG_STS_COUNTER "announcer_msg_sts_counter"
+#define ANNOUNCER_MSG_WEATHER_FOG "announcer_msg_weather_fog"
 // Outpost 21 edit end
 
 // Sets the current voice for the station PA
@@ -159,6 +160,7 @@ GLOBAL_LIST_INIT(announcer_library, list(
 		ANNOUNCER_MSG_EARTHQUAKE = null,
 		ANNOUNCER_MSG_DISPOSAL_FAIL = null,
 		ANNOUNCER_MSG_STS_COUNTER = null,
+		ANNOUNCER_MSG_WEATHER_FOG = null,
 		// Outpost 21 edit end
 	),
 	ANNOUNCER_VOICE_VIRGO = list(
@@ -316,6 +318,7 @@ GLOBAL_LIST_INIT(announcer_library, list(
 			ANNOUNCER_MSG_EARTHQUAKE = 'modular_outpost/sound/AI/earthquake.ogg',
 			ANNOUNCER_MSG_DISPOSAL_FAIL = 'modular_outpost/sound/AI/disposal_fail.ogg',
 			ANNOUNCER_MSG_STS_COUNTER = 'modular_outpost/sound/AI/surface_to_space_counter.ogg',
+			ANNOUNCER_MSG_WEATHER_FOG = 'modular_outpost/sound/effects/FogBark.ogg',
 		),
 		// Outpost 21 edit end
 ))

@@ -1,0 +1,5659 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/sign/christmas/lights,
+/turf/simulated/floor/airless,
+/area/submap/outpost21/yard_generic)
+"ab" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/sign/christmas/lights,
+/turf/simulated/floor/airless,
+/area/submap/outpost21/yard_generic)
+"ac" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
+/turf/simulated/floor/airless,
+/area/submap/outpost21/yard_generic)
+"ad" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
+/turf/simulated/floor/airless,
+/area/submap/outpost21/yard_generic)
+"ae" = (
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
+/obj/effect/floor_decal/corner/orange/full{
+	dir = 8
+	},
+/obj/structure/particle_accelerator/particle_emitter/left{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"ak" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/turf/simulated/floor/airless,
+/area/submap/outpost21/yard_generic)
+"an" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
+/obj/structure/cable/green{
+	icon_state = "2-4"
+	},
+/obj/effect/catwalk_plated/dark,
+/obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
+/obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"aq" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/sign/christmas/lights,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"aA" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/window/reinforced/full,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"aE" = (
+/obj/machinery/atmospherics/pipe/simple/heat_exchanging{
+	dir = 6
+	},
+/turf/space,
+/area/submap/outpost21/yard_generic)
+"aN" = (
+/obj/machinery/atmospherics/pipe/manifold4w/hidden,
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/yard_generic)
+"aW" = (
+/obj/item/stack/rods,
+/turf/simulated/floor/airless,
+/area/submap/outpost21/yard_generic)
+"be" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"br" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"bw" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 6
+	},
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"bJ" = (
+/obj/structure/confinement_beam_generator/gen{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"bO" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 10
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 4
+	},
+/obj/machinery/disposal/wall{
+	desc = "A secure, and safe, location to deposit any contraband without getting in trouble.";
+	dir = 1;
+	name = "Evidence Turn-In";
+	pixel_y = -36
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"bX" = (
+/obj/structure/window/maintenance_panel{
+	dir = 8
+	},
+/obj/structure/window/maintenance_panel{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/submap/outpost21/yard_generic)
+"ca" = (
+/obj/structure/particle_accelerator/particle_emitter/right{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"ce" = (
+/obj/effect/floor_decal/industrial/warning,
+/obj/effect/floor_decal/industrial/warning/color/red,
+/obj/effect/floor_decal/industrial/stand_clear/yellow{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"cj" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/warning/color/red{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/stand_clear/yellow,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"cA" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/obj/machinery/light,
+/obj/item/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -21
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"cF" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/item/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -21
+	},
+/obj/item/stack/cable_coil/yellow,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"cM" = (
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"cO" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"cS" = (
+/turf/simulated/floor/tiled,
+/area/submap/outpost21/yard_generic)
+"cV" = (
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
+/mob/living/simple_mob/animal/space/bats,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"cW" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"cY" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 6
+	},
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/yard_generic)
+"dr" = (
+/obj/machinery/portable_atmospherics/canister/empty,
+/obj/effect/floor_decal/corner/orange{
+	dir = 5
+	},
+/obj/item/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 21
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"du" = (
+/obj/structure/disposalpipe/junction{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"dv" = (
+/obj/machinery/atmospherics/pipe/simple/heat_exchanging{
+	dir = 4
+	},
+/turf/space,
+/area/submap/outpost21/yard_generic)
+"dC" = (
+/obj/machinery/atmospherics/pipe/simple/heat_exchanging,
+/turf/space,
+/area/submap/outpost21/yard_generic)
+"dQ" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 9
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/machinery/power/tesla_coil,
+/obj/machinery/disposal/wall{
+	dir = 4;
+	pixel_x = -32
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 4
+	},
+/mob/living/simple_mob/animal/space/bats,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"eb" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/turf/simulated/floor/tiled,
+/area/submap/outpost21/yard_generic)
+"ei" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"ek" = (
+/obj/structure/cable/green{
+	icon_state = "1-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-6"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-10"
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals_central7{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"ep" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/item/geiger/wall/north,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"eE" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 9
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/structure/extinguisher_cabinet{
+	dir = 4;
+	pixel_x = -30;
+	pixel_y = -6
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"eF" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/vending/coffee{
+	dir = 4;
+	pixel_x = -8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"fg" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 9
+	},
+/obj/structure/cable/green,
+/turf/simulated/floor/tiled,
+/area/submap/outpost21/yard_generic)
+"fh" = (
+/obj/machinery/power/rad_collector,
+/obj/effect/floor_decal/corner/orange{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"fi" = (
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled,
+/area/submap/outpost21/yard_generic)
+"fj" = (
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/sign/christmas/lights,
+/obj/structure/lattice,
+/turf/space,
+/area/submap/outpost21/yard_generic)
+"fB" = (
+/obj/effect/floor_decal/corner/orange/full{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"fE" = (
+/obj/effect/floor_decal/industrial/warning,
+/obj/effect/floor_decal/industrial/warning/color/red,
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"fF" = (
+/obj/machinery/atmospherics/pipe/simple/heat_exchanging{
+	dir = 9
+	},
+/turf/space,
+/area/submap/outpost21/yard_generic)
+"fN" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/disposalpipe/segment,
+/obj/structure/sign/christmas/wreath,
+/turf/simulated/floor/tiled/steel_ridged,
+/area/submap/outpost21/yard_generic)
+"gd" = (
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/door/airlock/glass_external{
+	frequency = 1381;
+	icon_state = "door_locked";
+	locked = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/obj/structure/sign/christmas/wreath{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/submap/outpost21/yard_generic)
+"gi" = (
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"gn" = (
+/obj/machinery/portable_atmospherics/canister/oxygen,
+/obj/effect/floor_decal/corner/orange/full{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"go" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"gs" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 10
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/submap/outpost21/yard_generic)
+"gA" = (
+/obj/structure/confinement_beam_generator/lens/inner_lens{
+	dir = 8
+	},
+/turf/space,
+/area/submap/outpost21/yard_generic)
+"gF" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/structure/sign/christmas/wreath,
+/turf/simulated/floor/tiled/steel_ridged,
+/area/submap/outpost21/yard_generic)
+"gX" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/turf/simulated/floor/tiled,
+/area/submap/outpost21/yard_generic)
+"hp" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"hz" = (
+/obj/machinery/atmospherics/unary/heat_exchanger,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"hL" = (
+/obj/item/tool/wrench/pipe,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"hV" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"ie" = (
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/structure/disposalpipe/segment,
+/obj/structure/sign/christmas/wreath{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/steel_ridged,
+/area/submap/outpost21/yard_generic)
+"ij" = (
+/obj/structure/railing/grey,
+/turf/simulated/floor/airless,
+/area/submap/outpost21/yard_generic)
+"in" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
+/obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
+/obj/effect/floor_decal/eshui/emblem/eshui_r,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"ix" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/yard_generic)
+"iA" = (
+/obj/machinery/portable_atmospherics/canister/empty,
+/obj/effect/floor_decal/corner/orange/full{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"iD" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"jh" = (
+/obj/structure/confinement_beam_generator/lens/outer_lens,
+/turf/simulated/floor/airless,
+/area/submap/outpost21/yard_generic)
+"jv" = (
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/door/airlock/glass_external{
+	frequency = 1381;
+	icon_state = "door_locked";
+	locked = 1
+	},
+/obj/machinery/airlock_sensor/airlock_exterior/shuttle{
+	dir = 8;
+	pixel_x = -10;
+	pixel_y = -25
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/submap/outpost21/yard_generic)
+"jy" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/structure/disposalpipe/broken{
+	dir = 4
+	},
+/obj/item/material/shard,
+/turf/space,
+/area/submap/outpost21/yard_generic)
+"jD" = (
+/obj/machinery/atmospherics/pipe/simple/heat_exchanging{
+	dir = 10
+	},
+/mob/living/simple_mob/animal/space/carp/large,
+/turf/space,
+/area/submap/outpost21/yard_generic)
+"jN" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/submap/outpost21/yard_generic)
+"jW" = (
+/obj/effect/floor_decal/corner/orange/full,
+/obj/machinery/portable_atmospherics/canister/phoron,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"ks" = (
+/obj/structure/particle_accelerator/end_cap{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"kD" = (
+/obj/machinery/atmospherics/pipe/simple/heat_exchanging{
+	dir = 5
+	},
+/turf/space,
+/area/submap/outpost21/yard_generic)
+"kE" = (
+/obj/item/material/shard,
+/obj/structure/lattice,
+/turf/space,
+/area/submap/outpost21/yard_generic)
+"kO" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 9
+	},
+/obj/structure/particle_accelerator/power_box{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"kV" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/yard_generic)
+"lz" = (
+/obj/effect/floor_decal/corner/orange/full,
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 5
+	},
+/obj/structure/extinguisher_cabinet{
+	dir = 4;
+	pixel_x = -30;
+	pixel_y = -6
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"lI" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/airless,
+/area/submap/outpost21/yard_generic)
+"ma" = (
+/obj/machinery/atmospherics/binary/pump,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"ms" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"mv" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/yard_generic)
+"mx" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 9
+	},
+/obj/machinery/particle_accelerator/control_box,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"mB" = (
+/obj/machinery/power/rad_collector,
+/obj/effect/floor_decal/corner/orange/full,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"mD" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/effect/floor_decal/eshui/emblem/eshui_c,
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"mH" = (
+/obj/effect/floor_decal/industrial/warning/corner,
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/turf/simulated/floor/tiled,
+/area/submap/outpost21/yard_generic)
+"mP" = (
+/obj/effect/floor_decal/corner/orange,
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/turf/simulated/floor/tiled,
+/area/submap/outpost21/yard_generic)
+"ne" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/submap/outpost21/yard_generic)
+"nh" = (
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"nq" = (
+/obj/effect/floor_decal/industrial/outline/cut_corners/blue,
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"nr" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/door/airlock/glass_external{
+	frequency = 1381;
+	icon_state = "door_locked";
+	locked = 1
+	},
+/obj/structure/sign/christmas/wreath{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/submap/outpost21/yard_generic)
+"nB" = (
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"nM" = (
+/obj/machinery/access_button/airlock_exterior{
+	frequency = 1381;
+	pixel_y = -24;
+	dir = 8;
+	pixel_x = 22
+	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	frequency = 1381;
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/yard_generic)
+"nV" = (
+/obj/effect/floor_decal/corner/orange/full,
+/obj/item/geiger/wall/south,
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/yard_generic)
+"of" = (
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/disposalpipe/segment,
+/obj/structure/sign/christmas/wreath{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/steel_ridged,
+/area/submap/outpost21/yard_generic)
+"oi" = (
+/obj/structure/confinement_beam_generator/lens/inner_lens{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"om" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/industrial/stand_clear/yellow{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"or" = (
+/obj/structure/particle_accelerator/power_box{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"os" = (
+/obj/structure/cable/orange{
+	icon_state = "4-8"
+	},
+/obj/structure/window/basic{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"oF" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 10
+	},
+/obj/machinery/airlock_sensor/airlock_exterior{
+	pixel_y = -24;
+	frequency = 1381;
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/yard_generic)
+"oL" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden{
+	dir = 4
+	},
+/obj/structure/disposalpipe/junction{
+	dir = 8;
+	icon_state = "pipe-j2"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"oV" = (
+/obj/machinery/portable_atmospherics/canister/empty,
+/obj/effect/floor_decal/corner/orange{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"oW" = (
+/obj/effect/floor_decal/corner/orange/full,
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/yard_generic)
+"pg" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"py" = (
+/turf/space,
+/area/submap/outpost21/yard_generic)
+"pA" = (
+/obj/effect/floor_decal/corner/orange/full,
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 5
+	},
+/obj/machinery/recharge_station,
+/obj/item/geiger/wall/south,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"pC" = (
+/obj/machinery/atmospherics/unary/freezer{
+	dir = 4;
+	icon_state = "freezer"
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"pG" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/turf/simulated/floor/tiled,
+/area/submap/outpost21/yard_generic)
+"pI" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"pM" = (
+/obj/machinery/atmospherics/pipe/simple/heat_exchanging{
+	dir = 8
+	},
+/turf/space,
+/area/submap/outpost21/yard_generic)
+"pX" = (
+/obj/machinery/atmospherics/pipe/simple/heat_exchanging/junction{
+	dir = 1
+	},
+/turf/simulated/floor/airless,
+/area/submap/outpost21/yard_generic)
+"qe" = (
+/mob/living/simple_mob/animal/space/bats,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"qh" = (
+/obj/structure/confinement_beam_generator/lens/outer_lens{
+	dir = 1
+	},
+/turf/simulated/floor/airless,
+/area/submap/outpost21/yard_generic)
+"qu" = (
+/turf/simulated/wall/r_wall,
+/area/submap/outpost21/yard_generic)
+"qE" = (
+/obj/structure/lattice,
+/obj/structure/confinement_beam_generator/lens/outer_lens,
+/turf/space,
+/area/submap/outpost21/yard_generic)
+"rd" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/warning/color/red{
+	dir = 1
+	},
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"re" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 10
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"rg" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/warning/color/red{
+	dir = 1
+	},
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"rr" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/power/grounding_rod,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"rE" = (
+/obj/machinery/atmospherics/pipe/simple/heat_exchanging/junction{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/warning,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"rH" = (
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"rS" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 5
+	},
+/obj/machinery/airlock_sensor/airlock_exterior{
+	pixel_y = 25;
+	frequency = 1381
+	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	frequency = 1381
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/yard_generic)
+"rU" = (
+/obj/item/toy/plushie/borgplushie/drake/eng{
+	name = "Raz";
+	desc = "An adorable stuffed toy of a familiar robot!"
+	},
+/obj/structure/table/standard,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"rY" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/obj/structure/cable/orange{
+	icon_state = "4-9"
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/submap/outpost21/yard_generic)
+"sd" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/turf/simulated/floor/tiled,
+/area/submap/outpost21/yard_generic)
+"sv" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"sw" = (
+/obj/structure/confinement_beam_generator/focus{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"sM" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"sO" = (
+/obj/effect/floor_decal/corner/orange/full{
+	dir = 1
+	},
+/obj/structure/table/rack/shelf/steel,
+/obj/fiftyspawner/uranium,
+/obj/fiftyspawner/uranium,
+/obj/fiftyspawner/uranium,
+/obj/fiftyspawner/uranium,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"sU" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"sV" = (
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/effect/floor_decal/corner/orange{
+	dir = 9
+	},
+/turf/simulated/floor/tiled,
+/area/submap/outpost21/yard_generic)
+"tf" = (
+/obj/effect/floor_decal/industrial/stand_clear/yellow{
+	dir = 4
+	},
+/obj/machinery/airlock_sensor/airlock_interior{
+	dir = 4;
+	pixel_x = -23;
+	frequency = 1381;
+	pixel_y = -25
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"ti" = (
+/obj/effect/floor_decal/corner/orange/full{
+	dir = 4
+	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	frequency = 1381;
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/yard_generic)
+"ts" = (
+/obj/machinery/atmospherics/unary/heat_exchanger{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"tY" = (
+/obj/structure/confinement_beam_generator/lens/outer_lens{
+	dir = 1
+	},
+/turf/space,
+/area/submap/outpost21/yard_generic)
+"tZ" = (
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/airless,
+/area/submap/outpost21/yard_generic)
+"ua" = (
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/mob/living/simple_mob/animal/space/bats,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"uf" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 5
+	},
+/turf/simulated/floor/tiled,
+/area/submap/outpost21/yard_generic)
+"um" = (
+/obj/structure/cable/yellow{
+	icon_state = "2-9"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"us" = (
+/obj/item/material/shard,
+/turf/space,
+/area/submap/outpost21/yard_generic)
+"ux" = (
+/obj/effect/floor_decal/corner/orange/full{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/yard_generic)
+"uM" = (
+/obj/machinery/portable_atmospherics/canister/methane,
+/obj/effect/floor_decal/corner/orange{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"uR" = (
+/obj/machinery/atmospherics/pipe/simple/heat_exchanging{
+	dir = 10
+	},
+/turf/space,
+/area/submap/outpost21/yard_generic)
+"vl" = (
+/obj/structure/confinement_beam_generator/control_box,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"vm" = (
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"vr" = (
+/obj/structure/particle_accelerator/particle_emitter/center{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"vt" = (
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"vG" = (
+/obj/machinery/atmospherics/pipe/manifold/visible,
+/obj/machinery/meter,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"wg" = (
+/obj/structure/cable/green{
+	icon_state = "2-4"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"wi" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/yard_generic)
+"wm" = (
+/obj/item/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = 21
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"wq" = (
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"wz" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/disposal,
+/obj/structure/disposalpipe/trunk,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"wA" = (
+/obj/machinery/atmospherics/portables_connector,
+/obj/machinery/portable_atmospherics/canister/phoron,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"wI" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 10
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_y = -30;
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"wO" = (
+/obj/machinery/portable_atmospherics/canister/air,
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"xp" = (
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/item/radio/beacon,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"xu" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 9
+	},
+/obj/machinery/field_generator,
+/obj/structure/disposalpipe/trunk{
+	dir = 4
+	},
+/obj/machinery/disposal/wall{
+	dir = 4;
+	pixel_x = -32
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"xx" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/sign/christmas/wreath{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/steel_ridged,
+/area/submap/outpost21/yard_generic)
+"xz" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/obj/structure/particle_accelerator/particle_emitter/right{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"xA" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/obj/structure/disposalpipe/segment,
+/obj/structure/sign/christmas/wreath,
+/turf/simulated/floor/tiled/steel_ridged,
+/area/submap/outpost21/yard_generic)
+"xG" = (
+/obj/machinery/atmospherics/pipe/simple/heat_exchanging/junction,
+/turf/simulated/floor/airless,
+/area/submap/outpost21/yard_generic)
+"xN" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/sign/christmas/wreath{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/steel_ridged,
+/area/submap/outpost21/yard_generic)
+"xO" = (
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/yard_generic)
+"xR" = (
+/obj/structure/cable/yellow{
+	icon_state = "6-8"
+	},
+/obj/effect/floor_decal/industrial/stand_clear/yellow{
+	dir = 4
+	},
+/obj/machinery/airlock_sensor/airlock_interior{
+	dir = 4;
+	pixel_x = -23;
+	frequency = 1381;
+	pixel_y = -25
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"xV" = (
+/obj/machinery/portable_atmospherics/canister/air,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"yX" = (
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/door/airlock/glass_external{
+	frequency = 1381;
+	icon_state = "door_locked";
+	locked = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/obj/structure/sign/christmas/wreath{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/submap/outpost21/yard_generic)
+"zp" = (
+/obj/structure/window/basic{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"zt" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/machinery/atmospherics/pipe/simple/heat_exchanging,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/sign/christmas/lights,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"zA" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"zE" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 10
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/light,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"zX" = (
+/obj/structure/cable/green{
+	icon_state = "5-10"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/disposalpipe/junction{
+	dir = 8;
+	icon_state = "pipe-j2"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"AA" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"AT" = (
+/obj/machinery/hologram/holopad,
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"AY" = (
+/obj/effect/floor_decal/corner/orange/full,
+/obj/structure/extinguisher_cabinet{
+	dir = 4;
+	pixel_x = -30;
+	pixel_y = -6
+	},
+/obj/item/geiger/wall/south,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"Bn" = (
+/obj/structure/lattice,
+/turf/space,
+/area/submap/outpost21/yard_generic)
+"Bp" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/airless,
+/area/submap/outpost21/yard_generic)
+"Br" = (
+/obj/machinery/atmospherics/portables_connector,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"Bu" = (
+/obj/machinery/atmospherics/binary/pump{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"Bx" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/sign/christmas/lights,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"BE" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/structure/sign/christmas/wreath{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/steel_ridged,
+/area/submap/outpost21/yard_generic)
+"BG" = (
+/obj/structure/cable/green{
+	icon_state = "5-8"
+	},
+/obj/effect/floor_decal/corner/orange{
+	dir = 5
+	},
+/obj/structure/particle_accelerator/particle_emitter/center{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"BP" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/machinery/pipedispenser,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"BQ" = (
+/obj/machinery/atmospherics/pipe/simple/heat_exchanging/junction,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"BT" = (
+/obj/effect/floor_decal/corner/orange/full{
+	dir = 8
+	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	frequency = 1381
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/yard_generic)
+"BU" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 4;
+	health = 1e+006
+	},
+/obj/structure/sign/christmas/lights,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"BX" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/sign/christmas/lights,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"BZ" = (
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"Cg" = (
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"Cp" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/airless,
+/area/submap/outpost21/yard_generic)
+"Ct" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"CT" = (
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/disposalpipe/junction{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"CW" = (
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
+/obj/effect/floor_decal/corner/orange/full{
+	dir = 4
+	},
+/obj/item/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -21
+	},
+/obj/machinery/power/emitter/antique,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"CX" = (
+/obj/machinery/portable_atmospherics/canister/oxygen,
+/obj/effect/floor_decal/corner/orange{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"CY" = (
+/obj/item/geiger/wall/north,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"Dc" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"Dg" = (
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -5;
+	pixel_y = 30
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"Dq" = (
+/mob/living/simple_mob/vore/alienanimals/space_jellyfish,
+/turf/simulated/floor/airless,
+/area/submap/outpost21/yard_generic)
+"DE" = (
+/obj/machinery/power/tesla_coil,
+/obj/effect/floor_decal/corner/orange{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"DQ" = (
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/machinery/access_button/airlock_exterior{
+	frequency = 1381;
+	pixel_y = -24;
+	dir = 8;
+	pixel_x = 22
+	},
+/obj/machinery/atmospherics/pipe/manifold4w/hidden,
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/yard_generic)
+"DY" = (
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"DZ" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 4;
+	health = 1e+006
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"Es" = (
+/obj/machinery/atmospherics/pipe/manifold/visible{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"Fb" = (
+/obj/structure/window/maintenance_panel{
+	dir = 4
+	},
+/obj/structure/window/maintenance_panel{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/submap/outpost21/yard_generic)
+"Fr" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/airless,
+/area/submap/outpost21/yard_generic)
+"FA" = (
+/turf/space,
+/area/template_noop)
+"FD" = (
+/mob/living/simple_mob/animal/space/carp/large,
+/turf/space,
+/area/submap/outpost21/yard_generic)
+"FO" = (
+/obj/structure/sign/department/engine,
+/turf/simulated/wall/rshull,
+/area/submap/outpost21/yard_generic)
+"FQ" = (
+/obj/effect/floor_decal/industrial/stand_clear/yellow{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"FS" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	frequency = 1381
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/yard_generic)
+"FT" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 5
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"FX" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"FY" = (
+/obj/machinery/atmospherics/portables_connector{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"Gl" = (
+/mob/living/simple_mob/animal/space/carp/large/huge,
+/turf/space,
+/area/submap/outpost21/yard_generic)
+"Gp" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"Gq" = (
+/obj/structure/disposalpipe/trunk{
+	dir = 4
+	},
+/obj/machinery/disposal,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"Gz" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 8
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"GG" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"GR" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"GU" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"Hl" = (
+/obj/machinery/power/tesla_coil,
+/obj/effect/floor_decal/corner/orange/full{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"Ho" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 6
+	},
+/obj/structure/dispenser/phoron,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"Hq" = (
+/obj/machinery/particle_accelerator/control_box,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"Hv" = (
+/obj/machinery/access_button/airlock_interior{
+	frequency = 1381;
+	pixel_y = -24;
+	pixel_x = -22;
+	dir = 4
+	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	frequency = 1381;
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/yard_generic)
+"HJ" = (
+/obj/machinery/atmospherics/unary/heat_exchanger,
+/turf/simulated/floor/airless,
+/area/submap/outpost21/yard_generic)
+"HK" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/effect/floor_decal/eshui/emblem/eshui_l,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"Id" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 5
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -5;
+	pixel_y = 30
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 8;
+	pixel_y = 30
+	},
+/turf/simulated/floor/tiled,
+/area/submap/outpost21/yard_generic)
+"Ig" = (
+/obj/machinery/atmospherics/pipe/manifold/visible,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"Iq" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"ID" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden,
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/yard_generic)
+"IP" = (
+/turf/simulated/wall/rshull,
+/area/submap/outpost21/yard_generic)
+"Jl" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 5
+	},
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"Jm" = (
+/obj/structure/cable/orange{
+	icon_state = "2-8"
+	},
+/obj/structure/cable/orange{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"Jw" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
+	},
+/obj/machinery/vending/foodmeat{
+	dir = 4;
+	pixel_x = 8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"Jz" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"JC" = (
+/obj/structure/cable{
+	icon_state = "1-4"
+	},
+/obj/effect/floor_decal/corner/orange{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"JG" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
+/turf/simulated/floor/airless,
+/area/submap/outpost21/yard_generic)
+"JJ" = (
+/mob/living/simple_mob/vore/alienanimals/space_jellyfish,
+/turf/space,
+/area/submap/outpost21/yard_generic)
+"JR" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"JS" = (
+/obj/structure/confinement_beam_generator/inductor{
+	dir = 1
+	},
+/obj/structure/cable/orange{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"JY" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/machinery/atmospherics/pipe/simple/heat_exchanging,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"JZ" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/sign/christmas/wreath,
+/turf/simulated/floor/tiled/steel_ridged,
+/area/submap/outpost21/yard_generic)
+"Kd" = (
+/obj/structure/cable/orange{
+	icon_state = "6-9"
+	},
+/turf/simulated/floor/tiled,
+/area/submap/outpost21/yard_generic)
+"Kq" = (
+/obj/structure/railing/grey{
+	dir = 1
+	},
+/turf/simulated/floor/airless,
+/area/submap/outpost21/yard_generic)
+"Kr" = (
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"Ku" = (
+/obj/effect/floor_decal/corner/orange/full{
+	dir = 8
+	},
+/obj/item/geiger/wall/north,
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/yard_generic)
+"KF" = (
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	frequency = 1381
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"KG" = (
+/obj/machinery/atmospherics/pipe/simple/heat_exchanging{
+	dir = 4
+	},
+/obj/structure/lattice,
+/turf/space,
+/area/submap/outpost21/yard_generic)
+"KM" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 9
+	},
+/obj/structure/particle_accelerator/end_cap{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"KP" = (
+/obj/item/stack/rods,
+/turf/space,
+/area/submap/outpost21/yard_generic)
+"KX" = (
+/obj/machinery/power/grounding_rod,
+/obj/effect/floor_decal/corner/orange{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"Lm" = (
+/obj/machinery/power/emitter{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"Lo" = (
+/obj/effect/floor_decal/corner/orange/full{
+	dir = 8
+	},
+/obj/structure/dispenser/oxygen,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"LB" = (
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"LJ" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/yard_generic)
+"LK" = (
+/obj/structure/confinement_beam_generator/inductor,
+/obj/structure/cable/orange{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"Md" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/machinery/atmospherics/pipe/simple/heat_exchanging,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/sign/christmas/lights,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"Mi" = (
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"MA" = (
+/obj/structure/sign/directions/evac{
+	dir = 8;
+	pixel_y = 6
+	},
+/turf/simulated/wall/rshull,
+/area/submap/outpost21/yard_generic)
+"MC" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"MF" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden,
+/turf/simulated/floor/tiled,
+/area/submap/outpost21/yard_generic)
+"MT" = (
+/obj/structure/cable/orange{
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"Nb" = (
+/obj/structure/cable/yellow{
+	icon_state = "2-8"
+	},
+/obj/effect/floor_decal/industrial/warning,
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"Nd" = (
+/obj/structure/confinement_beam_generator/lens/outer_lens,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"Nh" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 6
+	},
+/turf/simulated/floor/tiled,
+/area/submap/outpost21/yard_generic)
+"Ni" = (
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/door/airlock/glass_external{
+	frequency = 1381;
+	icon_state = "door_locked";
+	locked = 1
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/submap/outpost21/yard_generic)
+"Nj" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 9
+	},
+/obj/item/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -21
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"Nk" = (
+/obj/effect/floor_decal/corner/orange,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"Nl" = (
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"Ns" = (
+/obj/structure/confinement_beam_generator/lens/outer_lens{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"NA" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"NC" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"NW" = (
+/obj/structure/railing/grey,
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/airless,
+/area/submap/outpost21/yard_generic)
+"Oz" = (
+/obj/machinery/atmospherics/pipe/manifold/visible{
+	dir = 1
+	},
+/obj/machinery/meter,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"OB" = (
+/obj/structure/cable/orange{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"OR" = (
+/obj/machinery/power/rad_collector,
+/obj/effect/floor_decal/corner/orange/full{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"OS" = (
+/obj/structure/cable/yellow{
+	icon_state = "1-8"
+	},
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"OU" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 9
+	},
+/turf/simulated/floor/tiled,
+/area/submap/outpost21/yard_generic)
+"Pv" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/item/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -21
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 5
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"Py" = (
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/glass_external{
+	req_one_access = list(5,10,11,18,19)
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/sign/christmas/wreath{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/steel_ridged,
+/area/submap/outpost21/yard_generic)
+"PD" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/turf/simulated/floor/tiled,
+/area/submap/outpost21/yard_generic)
+"PF" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"PH" = (
+/obj/effect/floor_decal/corner/orange/full{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"Qb" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"Qc" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 9
+	},
+/obj/structure/particle_accelerator/particle_emitter/left{
+	dir = 1
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"Qe" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"Qm" = (
+/obj/machinery/field_generator,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"Qp" = (
+/obj/structure/railing/grey{
+	dir = 1
+	},
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/airless,
+/area/submap/outpost21/yard_generic)
+"Qs" = (
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/turf/simulated/floor/tiled,
+/area/submap/outpost21/yard_generic)
+"Qy" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"QJ" = (
+/obj/effect/floor_decal/industrial/warning,
+/obj/effect/floor_decal/industrial/warning/color/red,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"QV" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/sign/christmas/lights,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"Rf" = (
+/obj/machinery/atmospherics/unary/heat_exchanger{
+	dir = 1
+	},
+/turf/simulated/floor/airless,
+/area/submap/outpost21/yard_generic)
+"Rw" = (
+/obj/effect/floor_decal/corner/orange/full{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/yard_generic)
+"Rx" = (
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/industrial/warning,
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"Rz" = (
+/obj/machinery/power/grounding_rod,
+/obj/effect/floor_decal/corner/orange/full{
+	dir = 1
+	},
+/obj/item/geiger/wall/north,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"RG" = (
+/obj/item/stack/cable_coil/lime,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"RT" = (
+/obj/effect/floor_decal/corner/orange/full,
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	frequency = 1381;
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/yard_generic)
+"RV" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"Sb" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"Sh" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 5
+	},
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"Si" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"Sk" = (
+/obj/structure/cable/yellow{
+	icon_state = "1-4"
+	},
+/obj/effect/floor_decal/industrial/warning/corner,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"St" = (
+/turf/template_noop,
+/area/template_noop)
+"SI" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"SN" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"SQ" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"SU" = (
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
+/obj/item/smes_coil/super_capacity,
+/obj/item/smes_coil/super_capacity,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"Ta" = (
+/obj/machinery/power/tesla_coil,
+/obj/effect/floor_decal/corner/orange{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"Tb" = (
+/obj/item/storage/toolbox/electrical,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"Tl" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/machinery/atmospherics/pipe/simple/heat_exchanging,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"To" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/disposal,
+/obj/structure/disposalpipe/trunk,
+/obj/structure/sign/warning/deathsposal{
+	pixel_x = -32
+	},
+/turf/simulated/floor/tiled,
+/area/submap/outpost21/yard_generic)
+"Tp" = (
+/obj/machinery/portable_atmospherics/canister/oxygen,
+/obj/effect/floor_decal/corner/orange{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"Tu" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 10
+	},
+/obj/structure/cable/green{
+	icon_state = "4-9"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/item/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -21
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"Tw" = (
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden,
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/yard_generic)
+"TH" = (
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"TM" = (
+/obj/structure/lattice,
+/turf/space,
+/area/template_noop)
+"TP" = (
+/obj/effect/floor_decal/corner/orange/full{
+	dir = 1
+	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	frequency = 1381
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/yard_generic)
+"TS" = (
+/obj/structure/particle_accelerator/fuel_chamber{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"TU" = (
+/obj/machinery/atmospherics/pipe/simple/heat_exchanging{
+	dir = 8
+	},
+/obj/structure/lattice,
+/turf/space,
+/area/submap/outpost21/yard_generic)
+"TV" = (
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/simulated/floor/airless,
+/area/submap/outpost21/yard_generic)
+"TX" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"Ua" = (
+/obj/effect/floor_decal/corner/orange/full{
+	dir = 4
+	},
+/obj/machinery/portable_atmospherics/canister/phoron,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"Ub" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/sign/christmas/wreath{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/steel_ridged,
+/area/submap/outpost21/yard_generic)
+"Uj" = (
+/obj/machinery/light,
+/obj/item/geiger/wall/south,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"Uu" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"Ux" = (
+/obj/machinery/power/grounding_rod,
+/obj/effect/floor_decal/corner/orange{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"UB" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/yard_generic)
+"UC" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/sign/christmas/wreath{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/steel_ridged,
+/area/submap/outpost21/yard_generic)
+"UH" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"UO" = (
+/obj/effect/floor_decal/industrial/stand_clear/yellow{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"UR" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"UZ" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 6
+	},
+/obj/structure/dispenser/phoron,
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"Vv" = (
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/obj/machinery/power/grounding_rod,
+/obj/effect/floor_decal/corner/orange{
+	dir = 6
+	},
+/obj/item/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = 21
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"Vw" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"Wa" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 9
+	},
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"Wp" = (
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"Wz" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"WA" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 9
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 6
+	},
+/obj/item/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -36
+	},
+/turf/simulated/floor/tiled,
+/area/submap/outpost21/yard_generic)
+"WP" = (
+/obj/machinery/atmospherics/pipe/manifold/visible{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"Xf" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/cable/green{
+	icon_state = "5-10"
+	},
+/obj/structure/sign/christmas/wreath{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/steel_ridged,
+/area/submap/outpost21/yard_generic)
+"Xh" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"Xi" = (
+/obj/item/material/shard,
+/turf/simulated/floor/airless,
+/area/submap/outpost21/yard_generic)
+"Xl" = (
+/obj/machinery/field_generator,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"Xu" = (
+/obj/machinery/recharge_station,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"XQ" = (
+/obj/machinery/power/emitter{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"XU" = (
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/machinery/access_button/airlock_interior{
+	frequency = 1381;
+	pixel_y = -24;
+	pixel_x = -22;
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/submap/outpost21/yard_generic)
+"XX" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 10
+	},
+/obj/structure/disposalpipe/junction{
+	dir = 8
+	},
+/obj/structure/sign/warning/deathsposal{
+	pixel_y = -32
+	},
+/obj/machinery/light,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"Yg" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/structure/window/maintenance_panel{
+	dir = 8
+	},
+/obj/structure/window/maintenance_panel{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/submap/outpost21/yard_generic)
+"Yk" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"Yr" = (
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/door/airlock/glass_external{
+	frequency = 1381;
+	icon_state = "door_locked";
+	locked = 1
+	},
+/obj/structure/sign/christmas/wreath{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/submap/outpost21/yard_generic)
+"Ys" = (
+/obj/effect/floor_decal/industrial/warning,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/power/breakerbox{
+	name = "Engine Priming Breaker";
+	RCon_tag = "Engine Priming Breaker"
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"Yu" = (
+/obj/structure/lattice,
+/obj/item/stack/rods,
+/turf/space,
+/area/submap/outpost21/yard_generic)
+"YA" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_y = -30;
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"YF" = (
+/obj/structure/lattice,
+/obj/structure/confinement_beam_generator/focus{
+	dir = 4
+	},
+/turf/space,
+/area/submap/outpost21/yard_generic)
+"YH" = (
+/obj/structure/cable/yellow{
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"YN" = (
+/obj/structure/cable/yellow{
+	icon_state = "1-4"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden,
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"YV" = (
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"Zd" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/submap/outpost21/yard_generic)
+"Zs" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/submap/outpost21/yard_generic)
+"Zt" = (
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 10
+	},
+/obj/item/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 21
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+"Zz" = (
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/door/airlock/glass_external{
+	frequency = 1381;
+	icon_state = "door_locked";
+	locked = 1
+	},
+/obj/machinery/airlock_sensor/airlock_exterior/shuttle{
+	dir = 8;
+	pixel_x = -10;
+	pixel_y = -25
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/submap/outpost21/yard_generic)
+"ZM" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/door/airlock/glass_external{
+	frequency = 1381;
+	icon_state = "door_locked";
+	locked = 1
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/submap/outpost21/yard_generic)
+"ZP" = (
+/turf/simulated/floor/airless,
+/area/submap/outpost21/yard_generic)
+"ZW" = (
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/plating,
+/area/submap/outpost21/yard_generic)
+
+(1,1,1) = {"
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+"}
+(2,1,1) = {"
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+FA
+FA
+FA
+FA
+py
+us
+KP
+py
+kE
+py
+py
+py
+py
+FA
+FA
+FA
+FA
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+"}
+(3,1,1) = {"
+St
+St
+St
+St
+St
+St
+St
+St
+St
+FA
+FA
+FA
+FA
+FA
+FA
+py
+py
+py
+Bn
+ZP
+py
+JG
+jy
+fj
+Yu
+py
+ZP
+Bn
+Bn
+py
+py
+py
+FA
+FA
+FA
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+"}
+(4,1,1) = {"
+St
+St
+St
+St
+St
+St
+FA
+FA
+py
+KP
+py
+py
+py
+py
+py
+py
+py
+ZP
+ZP
+aW
+ZP
+ac
+Fr
+aa
+ZP
+Xi
+ZP
+ZP
+ZP
+py
+py
+py
+py
+py
+py
+py
+St
+St
+St
+St
+St
+St
+St
+St
+St
+"}
+(5,1,1) = {"
+St
+St
+St
+St
+St
+St
+py
+py
+py
+py
+KP
+py
+py
+py
+py
+Kq
+ZP
+Cp
+Dq
+ZP
+TV
+ad
+Fr
+ab
+TV
+ZP
+ZP
+ZP
+ZP
+ij
+py
+py
+py
+KP
+py
+py
+KP
+py
+py
+FA
+St
+St
+St
+St
+St
+"}
+(6,1,1) = {"
+St
+St
+St
+St
+St
+py
+py
+py
+py
+Bn
+py
+py
+JJ
+py
+py
+Qp
+ZP
+Cp
+tZ
+ZP
+IP
+ak
+Bp
+lI
+IP
+ZP
+ZP
+ZP
+ZP
+NW
+py
+py
+py
+py
+py
+py
+py
+py
+py
+py
+St
+St
+St
+St
+St
+"}
+(7,1,1) = {"
+St
+St
+St
+St
+FA
+py
+py
+py
+py
+Bn
+Bn
+py
+py
+py
+py
+IP
+IP
+ZM
+jv
+IP
+IP
+MA
+Py
+IP
+IP
+IP
+Ni
+Zz
+IP
+IP
+py
+py
+py
+py
+Bn
+Bn
+py
+py
+py
+py
+FA
+St
+St
+St
+St
+"}
+(8,1,1) = {"
+St
+St
+St
+St
+FA
+py
+py
+py
+py
+py
+Bn
+Bn
+py
+IP
+IP
+IP
+BT
+kV
+XU
+RT
+IP
+PH
+hp
+pA
+IP
+KF
+mv
+Hv
+oW
+IP
+IP
+IP
+py
+Bn
+Bn
+JJ
+py
+py
+py
+py
+FA
+St
+St
+St
+St
+"}
+(9,1,1) = {"
+St
+St
+St
+St
+FA
+py
+py
+py
+py
+py
+py
+Bn
+Bn
+IP
+Ku
+wi
+LJ
+FS
+Tw
+oF
+IP
+iD
+JR
+SQ
+IP
+rS
+ID
+xO
+ix
+wi
+nV
+IP
+Bn
+Bn
+py
+py
+py
+py
+JJ
+py
+FA
+FA
+St
+St
+St
+"}
+(10,1,1) = {"
+St
+St
+St
+St
+py
+py
+py
+py
+py
+py
+py
+py
+Bn
+IP
+Rw
+Jz
+UB
+FS
+DQ
+ti
+IP
+NA
+Si
+cA
+IP
+TP
+aN
+nM
+UB
+cY
+ux
+IP
+Bn
+py
+py
+py
+py
+py
+py
+py
+py
+FA
+St
+St
+St
+"}
+(11,1,1) = {"
+St
+St
+St
+St
+py
+py
+py
+py
+aE
+kD
+aE
+kD
+IP
+IP
+IP
+IP
+IP
+nr
+yX
+IP
+IP
+nB
+Si
+YA
+IP
+IP
+gd
+Yr
+IP
+IP
+IP
+IP
+IP
+aE
+kD
+aE
+kD
+py
+py
+py
+py
+FA
+St
+St
+St
+"}
+(12,1,1) = {"
+St
+St
+St
+St
+py
+qu
+py
+py
+dv
+dv
+dv
+pM
+sM
+Hl
+nB
+UH
+dQ
+om
+xR
+lz
+FO
+nB
+SN
+br
+FO
+Lo
+UO
+tf
+eE
+xu
+fh
+mB
+Bx
+dv
+dv
+dv
+pM
+py
+py
+qu
+py
+FA
+St
+St
+St
+"}
+(13,1,1) = {"
+St
+St
+St
+St
+py
+qu
+py
+py
+dv
+dv
+dv
+pM
+Wz
+Ta
+wq
+wq
+SI
+Vw
+GU
+um
+gF
+YN
+cW
+oL
+ie
+DY
+Wa
+ei
+vm
+GR
+wq
+Uu
+aq
+dv
+dv
+dv
+pM
+py
+py
+qu
+py
+FA
+St
+St
+St
+"}
+(14,1,1) = {"
+St
+St
+St
+St
+py
+qu
+py
+py
+dv
+dv
+dv
+pM
+DZ
+fB
+DE
+wq
+AT
+Gp
+ms
+wg
+fN
+TH
+an
+CT
+Ub
+ua
+TX
+hV
+BZ
+wq
+wq
+OR
+BU
+dv
+dv
+dv
+pM
+py
+py
+qu
+py
+FA
+St
+St
+St
+"}
+(15,1,1) = {"
+St
+St
+St
+St
+py
+qu
+Bn
+Bn
+KG
+KG
+KG
+TU
+IP
+IP
+KX
+nB
+wq
+rr
+pI
+sU
+IP
+Sh
+GG
+re
+IP
+NC
+Dc
+Iq
+nB
+nB
+wq
+IP
+IP
+KG
+KG
+KG
+TU
+Bn
+Bn
+qu
+py
+FA
+St
+St
+St
+"}
+(16,1,1) = {"
+St
+St
+St
+St
+py
+qu
+py
+py
+dv
+dv
+dv
+pM
+py
+IP
+Rz
+Ux
+bw
+Vv
+JC
+CW
+IP
+Sh
+wz
+XX
+IP
+sO
+nB
+wm
+nB
+UZ
+Ho
+IP
+py
+dv
+dv
+dv
+pM
+JJ
+py
+qu
+py
+FA
+St
+St
+St
+"}
+(17,1,1) = {"
+St
+St
+St
+St
+py
+qu
+py
+py
+dv
+dv
+dv
+pM
+py
+IP
+IP
+bX
+IP
+IP
+Yg
+IP
+IP
+BE
+aA
+xx
+IP
+IP
+IP
+IP
+IP
+IP
+IP
+IP
+py
+dv
+dv
+dv
+pM
+py
+py
+qu
+py
+FA
+St
+St
+St
+"}
+(18,1,1) = {"
+St
+St
+St
+St
+py
+qu
+py
+py
+dv
+dv
+dv
+pM
+py
+IP
+Dg
+SU
+nB
+cF
+nh
+Gq
+IP
+cM
+eF
+re
+IP
+ae
+Qc
+kO
+KM
+mx
+AY
+IP
+py
+dv
+dv
+dv
+pM
+py
+py
+qu
+py
+FA
+St
+St
+St
+"}
+(19,1,1) = {"
+St
+St
+St
+St
+py
+py
+py
+py
+dv
+dv
+dv
+pM
+IP
+IP
+gi
+sv
+nB
+YH
+rH
+Sk
+IP
+Sh
+HK
+wI
+IP
+BG
+vr
+or
+ks
+Hq
+bO
+IP
+IP
+dv
+dv
+dv
+pM
+py
+py
+py
+py
+FA
+St
+St
+St
+"}
+(20,1,1) = {"
+St
+St
+St
+St
+py
+qu
+py
+py
+dv
+dv
+dv
+pM
+sM
+XQ
+nB
+sU
+RG
+xp
+Qe
+Nb
+xA
+OS
+mD
+du
+Xf
+ca
+xz
+TS
+TS
+wq
+Gz
+jW
+Bx
+dv
+dv
+dv
+pM
+py
+py
+qu
+py
+FA
+St
+St
+St
+"}
+(21,1,1) = {"
+St
+St
+St
+St
+py
+qu
+py
+py
+dv
+dv
+dv
+pM
+Wz
+XQ
+Lm
+sU
+nB
+Kr
+RV
+Ys
+zA
+UR
+in
+zX
+of
+go
+Ct
+Nl
+vm
+vm
+GR
+Uu
+aq
+dv
+dv
+dv
+pM
+py
+py
+qu
+py
+FA
+St
+St
+St
+"}
+(22,1,1) = {"
+St
+St
+St
+St
+py
+qu
+py
+py
+dv
+dv
+dv
+pM
+DZ
+wq
+wq
+Cg
+ZW
+LB
+Mi
+Rx
+JZ
+cV
+ek
+re
+IP
+oV
+wO
+BZ
+nB
+nB
+Nk
+Ua
+BU
+dv
+dv
+dv
+pM
+py
+py
+qu
+py
+FA
+St
+St
+St
+"}
+(23,1,1) = {"
+St
+St
+St
+St
+py
+qu
+Bn
+Bn
+KG
+KG
+KG
+TU
+IP
+IP
+wq
+nB
+Xl
+Qm
+qe
+Wp
+IP
+Jl
+Zs
+Tu
+IP
+dr
+xV
+nB
+nB
+nB
+Tp
+IP
+IP
+KG
+KG
+KG
+TU
+Bn
+Bn
+qu
+py
+FA
+St
+St
+St
+"}
+(24,1,1) = {"
+St
+St
+St
+St
+py
+qu
+py
+py
+dv
+dv
+dv
+pM
+py
+IP
+CY
+wq
+nB
+be
+nB
+Sb
+IP
+FT
+Jw
+zE
+IP
+iA
+bw
+nB
+uM
+CX
+gn
+IP
+py
+dv
+dv
+dv
+pM
+py
+py
+qu
+py
+FA
+St
+St
+St
+"}
+(25,1,1) = {"
+St
+St
+St
+St
+py
+qu
+py
+py
+dv
+dv
+dv
+pM
+py
+IP
+IP
+IP
+IP
+IP
+IP
+Fb
+IP
+UC
+Yk
+xN
+IP
+IP
+IP
+Fb
+IP
+IP
+IP
+IP
+py
+dv
+dv
+dv
+pM
+py
+py
+qu
+py
+FA
+St
+St
+St
+"}
+(26,1,1) = {"
+St
+St
+St
+St
+py
+qu
+qu
+py
+dv
+dv
+dv
+jD
+dC
+dC
+Tl
+rE
+eb
+vt
+Pv
+nB
+OU
+cS
+To
+fi
+fg
+OU
+WA
+sV
+eb
+BQ
+zt
+dC
+dC
+fF
+dv
+dv
+pM
+py
+qu
+qu
+py
+FA
+St
+St
+St
+"}
+(27,1,1) = {"
+St
+St
+St
+St
+py
+py
+qu
+py
+dv
+uR
+fF
+py
+py
+py
+Wz
+Xu
+nB
+nB
+Xh
+nB
+Kd
+gX
+pG
+ne
+nB
+nB
+Zd
+cS
+cS
+BP
+aq
+py
+py
+py
+uR
+fF
+pM
+py
+qu
+py
+py
+FA
+St
+St
+St
+"}
+(28,1,1) = {"
+St
+St
+St
+St
+py
+py
+qu
+py
+uR
+dC
+dC
+dC
+dC
+dC
+JY
+rE
+sd
+mH
+MF
+jN
+jN
+rY
+PD
+cO
+nB
+nB
+pg
+Qs
+mP
+BQ
+Md
+dC
+dC
+dC
+dC
+dC
+fF
+py
+qu
+py
+py
+FA
+St
+St
+St
+"}
+(29,1,1) = {"
+St
+St
+St
+St
+FA
+py
+py
+py
+py
+py
+py
+py
+py
+py
+IP
+IP
+Id
+Nh
+Xh
+nB
+nB
+os
+rU
+zp
+qe
+nB
+Xh
+uf
+gs
+IP
+IP
+py
+py
+py
+py
+py
+py
+py
+py
+py
+py
+FA
+St
+St
+St
+"}
+(30,1,1) = {"
+St
+St
+St
+St
+FA
+py
+py
+py
+py
+py
+py
+py
+py
+py
+Bn
+sM
+Br
+Bu
+Ig
+nB
+nB
+OB
+YV
+nB
+nB
+hL
+Es
+ma
+FY
+Bx
+Bn
+py
+py
+py
+py
+py
+py
+py
+py
+py
+py
+FA
+St
+St
+St
+"}
+(31,1,1) = {"
+St
+St
+St
+St
+FA
+py
+py
+py
+qu
+FD
+py
+py
+py
+Bn
+Bn
+Qb
+wA
+ma
+vG
+nB
+nB
+OB
+vl
+Tb
+nB
+nB
+Oz
+Bu
+FY
+QV
+Bn
+Bn
+py
+py
+py
+py
+py
+py
+qu
+py
+py
+FA
+St
+St
+St
+"}
+(32,1,1) = {"
+St
+St
+St
+St
+FA
+py
+py
+qu
+qu
+py
+py
+py
+Bn
+Bn
+py
+IP
+IP
+ep
+Xh
+nB
+nB
+Jm
+nq
+MT
+nB
+nB
+Xh
+Uj
+IP
+IP
+py
+Bn
+Bn
+py
+py
+py
+py
+qu
+qu
+py
+py
+FA
+St
+St
+St
+"}
+(33,1,1) = {"
+St
+St
+St
+St
+FA
+py
+py
+qu
+py
+py
+py
+Bn
+Bn
+py
+py
+py
+MC
+FQ
+Xh
+pC
+FQ
+LK
+bJ
+JS
+FQ
+pC
+Xh
+FQ
+BX
+py
+py
+py
+Bn
+Bn
+py
+py
+py
+qu
+py
+py
+py
+FA
+St
+St
+St
+"}
+(34,1,1) = {"
+St
+St
+St
+St
+St
+py
+py
+qu
+py
+py
+Bn
+Bn
+Gl
+py
+py
+py
+IP
+IP
+Zt
+WP
+vt
+ts
+sw
+hz
+vt
+WP
+Nj
+IP
+IP
+py
+py
+py
+py
+Bn
+Bn
+py
+py
+qu
+py
+py
+py
+FA
+St
+St
+St
+"}
+(35,1,1) = {"
+St
+St
+St
+St
+St
+py
+py
+qu
+py
+Bn
+Bn
+py
+py
+py
+py
+py
+py
+MC
+nB
+nB
+QJ
+FX
+FX
+FX
+rd
+nB
+nB
+BX
+py
+py
+py
+py
+py
+py
+Bn
+Bn
+py
+qu
+py
+py
+py
+FA
+St
+St
+St
+"}
+(36,1,1) = {"
+St
+St
+St
+St
+St
+py
+py
+qu
+Bn
+Bn
+py
+py
+FD
+py
+py
+py
+py
+IP
+IP
+nB
+ce
+Nd
+oi
+Ns
+cj
+nB
+IP
+IP
+py
+py
+py
+py
+py
+py
+py
+Bn
+Bn
+qu
+py
+py
+FA
+FA
+St
+St
+St
+"}
+(37,1,1) = {"
+St
+St
+St
+St
+St
+py
+py
+qu
+Bn
+py
+py
+py
+py
+py
+py
+py
+py
+py
+IP
+IP
+fE
+nB
+nB
+nB
+rg
+IP
+IP
+py
+py
+py
+py
+py
+py
+py
+py
+py
+Bn
+qu
+py
+py
+FA
+St
+St
+St
+St
+"}
+(38,1,1) = {"
+St
+St
+St
+St
+St
+FA
+py
+qu
+qu
+py
+py
+py
+py
+py
+py
+py
+py
+Bn
+Bn
+IP
+IP
+nB
+nB
+nB
+IP
+IP
+Bn
+Bn
+py
+py
+py
+py
+py
+py
+py
+py
+qu
+qu
+py
+py
+FA
+St
+St
+St
+St
+"}
+(39,1,1) = {"
+St
+St
+St
+St
+St
+FA
+py
+py
+qu
+qu
+qu
+qu
+qu
+qu
+py
+py
+Bn
+Bn
+py
+py
+IP
+PF
+AA
+Qy
+IP
+py
+py
+Bn
+Bn
+py
+py
+qu
+qu
+qu
+qu
+qu
+qu
+py
+py
+py
+FA
+St
+St
+St
+St
+"}
+(40,1,1) = {"
+St
+St
+St
+St
+St
+FA
+py
+py
+py
+py
+py
+py
+py
+qu
+qu
+qu
+qu
+py
+py
+py
+Bn
+py
+py
+py
+Bn
+py
+py
+py
+qu
+qu
+qu
+qu
+py
+py
+py
+py
+py
+py
+py
+py
+FA
+St
+St
+St
+St
+"}
+(41,1,1) = {"
+St
+St
+St
+St
+St
+FA
+FA
+FA
+py
+py
+py
+py
+py
+py
+py
+py
+py
+py
+py
+py
+Bn
+py
+py
+py
+Bn
+gA
+tY
+py
+py
+py
+py
+py
+py
+py
+py
+py
+py
+py
+py
+FA
+St
+St
+St
+St
+St
+"}
+(42,1,1) = {"
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+py
+py
+py
+py
+py
+py
+py
+py
+Bn
+jh
+ZP
+ZP
+Bn
+py
+py
+py
+py
+py
+py
+py
+py
+py
+py
+py
+py
+FA
+FA
+St
+St
+St
+St
+St
+St
+"}
+(43,1,1) = {"
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+FA
+FA
+py
+pX
+Rf
+ZP
+HJ
+xG
+py
+py
+py
+FA
+FA
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+"}
+(44,1,1) = {"
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+FA
+qE
+ZP
+ZP
+qh
+Bn
+py
+FA
+FA
+FA
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+"}
+(45,1,1) = {"
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+FA
+Bn
+gA
+py
+py
+Bn
+py
+FA
+FA
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+"}
+(46,1,1) = {"
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+FA
+YF
+py
+py
+py
+py
+py
+FA
+FA
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+"}
+(47,1,1) = {"
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+FA
+Bn
+py
+py
+py
+py
+py
+FA
+FA
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+"}
+(48,1,1) = {"
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+FA
+Bn
+py
+py
+py
+Bn
+py
+FA
+FA
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+"}
+(49,1,1) = {"
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+FA
+py
+py
+py
+py
+Bn
+py
+FA
+FA
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+"}
+(50,1,1) = {"
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+FA
+Bn
+py
+py
+py
+Bn
+py
+FA
+FA
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+"}
+(51,1,1) = {"
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+FA
+Bn
+py
+py
+py
+py
+py
+FA
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+"}
+(52,1,1) = {"
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+FA
+Bn
+py
+Bn
+py
+py
+py
+FA
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+"}
+(53,1,1) = {"
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+FA
+FA
+Bn
+ZP
+Bn
+py
+FA
+FA
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+"}
+(54,1,1) = {"
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+FA
+FA
+TM
+TM
+FA
+FA
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+"}
+(55,1,1) = {"
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+St
+"}

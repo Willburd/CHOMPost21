@@ -28,5 +28,5 @@
 
 /obj/machinery/button/remote/blast_door/radproof
 	name = "Reactor Shroud Control"
-	desc = "It the reactor shroud remotely."
+	desc = "It controls the reactor shroud remotely." // Outpost 21 edit(port) - Typo fix
 	id = "EngineShroud"

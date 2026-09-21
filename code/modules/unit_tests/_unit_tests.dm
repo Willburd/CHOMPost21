@@ -125,6 +125,7 @@
 #include "unit_test.dm"
 // Outpost 21 edit begin - Our tests
 #include "../../../modular_outpost/code/modules/unit_tests/map_tests.dm"
+#include "../../../modular_outpost/code/modules/unit_tests/techwebs.dm"
 // Outpost 21 edit end
 #include "vbo_tests.dm"
 #include "vore_tests.dm"

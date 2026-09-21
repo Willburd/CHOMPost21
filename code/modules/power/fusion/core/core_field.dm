@@ -335,10 +335,10 @@
 
 	radiation_pulse(
 		src,
-		max_range = 7,
-		threshold = RAD_HEAVY_INSULATION,
-		chance = URANIUM_IRRADIATION_CHANCE,
-		strength = energy * 0.001 //Might need to be increased.
+		max_range = 14,
+		threshold = RAD_EXTREME_INSULATION,
+		chance = 100,
+		strength = radiation * 0.01 //This is what happens when it EXPLODES.
 		)
 	Radiate()
 
@@ -531,7 +531,7 @@
 //All procs below this point are called in _core.dm, starting at line 41.
 //Stability monitoring. Gives radio annoucements if field stability is below 80%
 /obj/effect/fusion_em_field/proc/stability_monitor()
-	var/warnpoint = 0.10 //start warning at 10% instability
+	var/warnpoint = 0.20 //start warning at 10% instability // Outpost 21 edit - up to 20% instead to avoid annoyance
 	var/warnmessage = "Warning! Field unstable! Instability at [percent_unstable * 100]%, plasma temperature at [plasma_temperature + 295]k."
 	var/stablemessage = "Containment field returning to stable conditions."
 
@@ -544,13 +544,13 @@
 	return
 
 //Reaction radiation is fairly buggy and there's at least three procs dealing with radiation here, this is to ensure constant radiation output.
-/obj/effect/fusion_em_field/proc/radiation_scale()
+/obj/effect/fusion_em_field/proc/radiation_scale() // Power sits ~50. Sometimes higher, sometimes lower.cal
 	radiation_pulse(
 		src,
-		max_range = 5,
-		threshold = RAD_MEDIUM_INSULATION,
+		max_range = CLAMP(round(energy * 0.25), 7, 50),
+		threshold = RAD_EXTREME_INSULATION,
 		chance = (URANIUM_IRRADIATION_CHANCE + (plasma_temperature / PLASMA_TEMP_RADIATION_DIVISIOR)),
-		strength = energy * 0.01 //Might need to be increased.
+		strength = max(round(plasma_temperature / PLASMA_TEMP_RADIATION_DIVISIOR) * 0.7, 100) //Increased. Now on par with the mag traps. This room is LETHAL when it's running.
 	)
 
 //Somehow fixing the radiation issue managed to break this, but moving it to it's own proc seemed to have fixed it. I don't know.

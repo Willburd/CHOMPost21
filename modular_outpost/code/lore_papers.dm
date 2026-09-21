@@ -8,6 +8,9 @@
 /obj/random/scavmark_paper/item_to_spawn()
 	return pick(subtypesof(/obj/item/paper/scavmark))
 
+/obj/item/paper/missingman
+	name = "Missing Man Table"
+	info = "This table is intentionally left empty for all those who have yet to come home to us, to show that they are still here with us in spirit.<hr><br>It is set for one; to show their isolation in their dark hours.<br>The chair is empty; for they are not here with us.<br>The glass is inverted; for they can not drink with us tonight.<br>The cloth is white; to show the purity of their motives when answering the call to serve.<br>The slice of lemon; for the bitter fate of the missing.<br>The spilled salt; for the tears shed by the waiting family and friends.<br>The lit candle; a light to guide them home, and to keep hope in our hearts of their safe return.<br>The single red rose; the love of family and friends who keep the faith, awaiting the return of the missing.<br>The ketchup; the blood spilled for our safety.<br>The red ribbon; our continued resolve to find those that are missing.<br>The yellow ribbon; the love for community that inspired them to serve.<br>The bible; for the faith we hold to keep us together."
 
 /obj/item/paper/scavmark
 	name = "Scav paper"
@@ -152,3 +155,36 @@
 /obj/item/paper/scavmark/Uboa
 	name = "Menace"
 	info = "On the paper is a horrifying visage of a ghoulish face. The surrounding paper is scribbled with attempts of drawing... something. The drawing seems to radiate an unnatural menace, but you're not even sure what it's trying to warn you of."
+
+
+
+
+/obj/item/expi_pamphlet
+	name = "Expeditionary Pamphlet"
+	desc = "A pamphlet containing info on expeditionaries."
+	gender = /obj/item/paper::gender
+	icon = 'icons/obj/bureaucracy.dmi'
+	icon_state = "pamphlet"
+	item_state = "paper"
+	throwforce = /obj/item/paper::throwforce
+	w_class = /obj/item/paper::w_class
+	throw_range = /obj/item/paper::throw_range
+	throw_speed = /obj/item/paper::throw_speed
+	plane = /obj/item/paper::plane
+	layer = /obj/item/paper::layer
+	pressure_resistance = /obj/item/paper::pressure_resistance
+	drop_sound = /obj/item/paper::drop_sound
+	pickup_sound = /obj/item/paper::pickup_sound
+	attack_verb = list("bapped")
+
+/obj/item/expi_pamphlet/attack_self(mob/living/user)
+	. = ..(user)
+	if(.)
+		return TRUE
+	user.examinate(src)
+
+/obj/item/expi_pamphlet/examine(mob/user, infix, suffix)
+	. = ..()
+	if(in_range(user, src) || isobserver(user))
+		user << browse("<HTML><HEAD><TITLE>[name]</TITLE></HEAD><BODY><img src=\ref['html/images/outpost/expi_poster.png']></BODY></HTML>", "window=[name]")
+		onclose(user, "[name]")

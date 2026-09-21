@@ -24,7 +24,7 @@ GLOBAL_LIST_INIT(radiochannels, list(
 	CHANNEL_CULTURE			= CULTURE_FREQ,
 	// Outpost 21 edit begin - Security squad channels
 	CHANNEL_SEC_ALPHA 		= SEC_ALPHA_FREQ,
-	CHANNEL_SEC_BETA 		= SEC_BETA_FREQ,
+	CHANNEL_SEC_BRAVO 		= SEC_BRAVO_FREQ,
 	CHANNEL_SEC_CHARLIE 	= SEC_CHARLIE_FREQ,
 	CHANNEL_SEC_DELTA 		= SEC_DELTA_FREQ,
 	// Outpost 21 edit end
@@ -111,7 +111,7 @@ GLOBAL_LIST_INIT(offmap_frequencies, list(TALON_FREQ, CSN_FREQ, OUT_FREQ)) var/l
 	// Outpost 21 edit begin - Security squad channels
 	if(frequency == SEC_ALPHA_FREQ)
 		return "secradio"
-	if(frequency == SEC_BETA_FREQ)
+	if(frequency == SEC_BRAVO_FREQ)
 		return "secradio"
 	if(frequency == SEC_CHARLIE_FREQ)
 		return "secradio"

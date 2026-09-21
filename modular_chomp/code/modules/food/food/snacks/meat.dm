@@ -5,7 +5,7 @@
 	center_of_mass_x = 17 //CHOMPEdit
 	center_of_mass_y= 16 //CHOMPEdit
 	nutriment_amt = 3
-	nutriment_desc = list(REAGENT_ID_PROTEIN = 6, REAGENT_ID_DEATHBLOOD = 6)
+	nutriment_desc = list(REAGENT_ID_PROTEIN = 6, REAGENT_ID_RADIUM = 6) // REAGENT_ID_LIQUIDLIFE Outpost 21 edit - Removing badly designed chems
 	bitesize = 6
 
 /obj/item/reagent_containers/food/snacks/deathclawmeat/Initialize(mapload)
@@ -35,7 +35,7 @@
 	center_of_mass_x = 17 //CHOMPEdit
 	center_of_mass_y= 16 //CHOMPEdit
 	nutriment_amt = 3
-	nutriment_desc = list(REAGENT_ID_PROTEIN = 6, REAGENT_ID_NEOLIQUIDFIRE = 6, REAGENT_ID_PHORON = 3)
+	nutriment_desc = list(REAGENT_ID_PROTEIN = 6, REAGENT_ID_PHORON = 3) // REAGENT_ID_LIQUIDLIFE Outpost 21 edit - Removing badly designed chems
 	bitesize = 6
 
 /obj/item/reagent_containers/food/snacks/phorondragonmeat/Initialize(mapload)
@@ -51,7 +51,7 @@
 	center_of_mass_x = 17 //CHOMPEdit
 	center_of_mass_y= 16 //CHOMPEdit
 	nutriment_amt = 3
-	nutriment_desc = list(REAGENT_ID_PROTEIN = 3, REAGENT_ID_LIQUIDLIFE = 3)
+	nutriment_desc = list(REAGENT_ID_PROTEIN = 3, REAGENT_ID_PHORON = 3) // , REAGENT_ID_LIQUIDLIFE = 3) // REAGENT_ID_LIQUIDLIFE Outpost 21 edit - Removing badly designed chems
 	bitesize = 6
 
 /obj/item/reagent_containers/food/snacks/metroidmeat/Initialize(mapload)

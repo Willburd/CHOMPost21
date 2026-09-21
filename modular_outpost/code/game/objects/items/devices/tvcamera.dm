@@ -24,3 +24,15 @@
 	. = ..()
 	bcamera.network = list(NETWORK_MERCENARY)
 	bradio.set_frequency(SYND_FREQ)
+
+
+// Bodycameras are blocked by radio jammers
+/obj/item/clothing/accessory/bodycam/hear_talk(mob/M, list/message_pieces, verb)
+	if(islist(check_radio_jammers(get_turf(src))))
+		return
+	. = ..()
+
+/obj/machinery/camera/network/bodycamera/can_use()
+	. = ..() // Check the base proc, if we can't see, then don't run an expensive jammer check, if we can see, then run the jammer check to see if that's blocked too.
+	if(. && islist(check_radio_jammers(get_turf(src))))
+		return FALSE

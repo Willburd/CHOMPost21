@@ -2689,6 +2689,10 @@
 /obj/machinery/pointdefense{
 	id_tag = "pd_dako"
 	},
+/obj/item/stock_parts/manipulator/pico,
+/obj/item/stock_parts/manipulator/pico,
+/obj/item/stock_parts/capacitor/super,
+/obj/item/stock_parts/capacitor/super,
 /turf/simulated/shuttle/floor/voidcraft/dark/turfpack/airless,
 /area/shuttle/ninja_overmap)
 "fQ" = (
@@ -3603,15 +3607,19 @@
 /obj/structure/table/darkglass,
 /obj/item/storage/pouch/ifak,
 /obj/item/storage/pouch/ifak,
-/obj/item/cell/slime{
-	pixel_x = -11;
-	pixel_y = -4
-	},
 /obj/structure/cable/orange{
 	icon_state = "4-10"
 	},
 /obj/structure/cable/orange{
 	icon_state = "1-4"
+	},
+/obj/item/cell/slime{
+	pixel_x = -11;
+	pixel_y = -4
+	},
+/obj/item/cell/slime{
+	pixel_x = -11;
+	pixel_y = -4
 	},
 /turf/simulated/shuttle/floor/voidcraft/dark,
 /area/shuttle/ninja_overmap)
@@ -3647,7 +3655,8 @@
 "hn" = (
 /obj/machinery/power/apc/alarms_hidden{
 	pixel_y = -24;
-	nightshift_setting = 3
+	nightshift_setting = 3;
+	locked = 0
 	},
 /obj/item/storage/firstaid/adv{
 	pixel_x = 8;
@@ -3947,12 +3956,12 @@
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "hP" = (
+/obj/structure/fans/hardlight/colorable{
+	color = "#1cb52d"
+	},
 /obj/machinery/door/airlock/glass_external{
 	req_one_access = list(150);
 	id_tag = "dako_docking_hanger_doors"
-	},
-/obj/structure/fans/hardlight/colorable{
-	color = "#1cb52d"
 	},
 /turf/simulated/floor/tiled,
 /area/ninja_dojo/dojo)
@@ -4095,6 +4104,9 @@
 	dir = 8;
 	id_tag = "dako_sensor_ext";
 	master_tag = "dako_docker"
+	},
+/obj/structure/fans/hardlight/colorable{
+	color = "#1cb52d"
 	},
 /turf/simulated/shuttle/floor/voidcraft/dark,
 /area/shuttle/ninja_overmap)
@@ -4526,12 +4538,6 @@
 	icon_state = "dark"
 	},
 /area/syndicate_mothership)
-"iS" = (
-/obj/machinery/shipsensors{
-	dir = 1
-	},
-/turf/simulated/shuttle/floor/voidcraft/dark/turfpack/airless,
-/area/shuttle/ninja_overmap)
 "iT" = (
 /turf/unsimulated/wall/fakeglass,
 /area/ninja_dojo/dojo)
@@ -6416,7 +6422,8 @@
 /area/mine/unexplored/sinkhole)
 "nl" = (
 /obj/effect/fancy_shuttle/delivery{
-	dir = 1
+	dir = 1;
+	fancy_shuttle_tag = "supply_shuttle_cosmetic"
 	},
 /turf/space,
 /area/centcom/simulated/cent_cargo_sat)
@@ -80810,7 +80817,7 @@ mN
 mN
 mN
 fS
-iS
+fS
 gd
 iI
 iC

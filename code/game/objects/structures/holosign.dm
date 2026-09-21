@@ -35,7 +35,7 @@
 	user.setClickCooldown(user.get_attack_speed(W))
 	user.do_attack_animation(src)
 	playsound(loc, 'sound/weapons/egloves.ogg', 80, 1)
-	take_damage(W.force)
+	take_damage(outpost_structure_damage_bonus(W)) // Outpost 21 edit - Some weapons do more damage to structures
 
 /obj/structure/holosign/take_damage(damage)
 	health -= damage

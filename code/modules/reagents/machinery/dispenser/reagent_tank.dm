@@ -34,7 +34,7 @@
 
 /obj/structure/reagent_dispensers/examine(mob/user)
 	. = ..()
-	if(get_dist(user, src) <= 2 && !istype(src,/obj/structure/reagent_dispensers/souppot)) // Outpost 21 edit - Hide soup!
+	if(get_dist(user, src) <= 2 && !hide_contents) // Outpost 21 edit - Hide soup!
 		. += span_notice("It contains:")
 		if(reagents && reagents.reagent_list.len)
 			for(var/datum/reagent/R in reagents.reagent_list)
@@ -116,7 +116,8 @@
 //Fuel
 /obj/structure/reagent_dispensers/fueltank
 	name = "fuel tank"
-	desc = "A fuel tank."
+	desc = "A fuel tank. Filled with flammable fuel suitable for welding tools, or some small engines. Unless someone siphoned it again!"
+	description_antag = "Explosive if filled with fuel. Can be wrenched open to spill fuel over the floor."
 	icon_state = REAGENT_ID_FUEL
 	amount_per_transfer_from_this = 10
 	var/modded = 0

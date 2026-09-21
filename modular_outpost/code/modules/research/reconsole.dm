@@ -21,7 +21,7 @@
 	desc = "Used to remotely work with the research and development lab. Locked by default."
 	locked = TRUE
 	req_access = null
-	req_one_access = list(ACCESS_RESEARCH, ACCESS_ROBOTICS)
+	req_one_access = list(ACCESS_RESEARCH, ACCESS_ENGINE)
 	circuit = /obj/item/circuitboard/rdconsole/robotics_locked
 	filter_department = CHANNEL_ENGINEERING
 	is_remote = TRUE
@@ -37,7 +37,7 @@
 	desc = "Used to remotely work with the research and development lab. Locked by default."
 	locked = TRUE
 	req_access = null
-	req_one_access = list(ACCESS_RESEARCH, ACCESS_GENETICS)
+	req_one_access = list(ACCESS_RESEARCH, ACCESS_MEDICAL)
 	circuit = /obj/item/circuitboard/rdconsole/genetics_locked
 	filter_department = CHANNEL_MEDICAL
 	is_remote = TRUE
@@ -53,7 +53,7 @@
 	desc = "Used to remotely work with the research and development lab. Locked by default."
 	locked = TRUE
 	req_access = null
-	req_one_access = list(ACCESS_RESEARCH, ACCESS_HYDROPONICS, ACCESS_XENOBOTANY)
+	req_one_access = list(ACCESS_RESEARCH, ACCESS_HYDROPONICS, ACCESS_XENOBOTANY, ACCESS_KITCHEN)
 	circuit = /obj/item/circuitboard/rdconsole/botany_locked
 	filter_department = CHANNEL_SERVICE
 	is_remote = TRUE
@@ -70,7 +70,7 @@
 	desc = "Used to remotely work with the research and development lab. Locked by default."
 	locked = TRUE
 	req_access = null
-	req_one_access = list(ACCESS_CARGO, ACCESS_MINING, ACCESS_JANITOR)
+	req_one_access = list(ACCESS_CARGO, ACCESS_MINING, ACCESS_JANITOR, ACCESS_KITCHEN)
 	circuit = /obj/item/circuitboard/rdconsole/cargo_locked
 	filter_department = CHANNEL_SERVICE
 	is_remote = TRUE
@@ -87,7 +87,7 @@
 	desc = "Used to remotely work with the research and development lab. Locked by default."
 	locked = TRUE
 	req_access = null
-	req_one_access = list(ACCESS_ARMORY) // Warden
+	req_one_access = list(ACCESS_SECURITY) // Warden
 	circuit = /obj/item/circuitboard/rdconsole/security_locked
 	filter_department = CHANNEL_SECURITY
 	is_remote = TRUE

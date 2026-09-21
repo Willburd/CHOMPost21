@@ -172,7 +172,7 @@
 	if(WC)
 		to_chat(usr, span_warning("The scanner is already occupied!"))
 		return
-	/* Outpost 21 edit(port) - Disable abiotic lockout
+	/* Disable abiotic lockout
 	if(usr.abiotic())
 		to_chat(usr, span_warning("The subject cannot have abiotic items on."))
 		return
@@ -229,7 +229,7 @@
 	if(get_occupant())
 		to_chat(user, span_warning("The scanner is already occupied!"))
 		return
-	/* Outpost 21 edit(port) - Disable abiotic lockout
+	/* Disable abiotic lockout
 	if(G.affecting.abiotic())
 		to_chat(user, span_warning("The subject cannot have abiotic items on."))
 		return

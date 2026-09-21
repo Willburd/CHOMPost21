@@ -1075,7 +1075,7 @@
 	color_grading = COLORTINT_COZY
 
 /area/rnd/xenobiology/lost // ported secret
-	name = "\improper Abandoned Xenobiology Lab"
+	name = "\improper Ancient Xenobiology Lab"
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	icon_state = "blue"
 	sound_env = SOUND_ENVIRONMENT_ARENA

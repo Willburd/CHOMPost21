@@ -2277,6 +2277,10 @@
 	sound_env = LARGE_ENCLOSED
 	base_turf = /turf/simulated/open
 
+/area/security/tactical/red
+	name = "\improper Security - Emergency Equipment"
+
+
 //
 // Science-----------------------------------------------------------------------
 //
@@ -2354,8 +2358,10 @@
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
 
 /area/rnd/xenobiology
+	name = "\improper Xenohusbandry Pens"
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
-	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
+	holomap_color = HOLOMAP_AREACOLOR_CARGO
+	flags = AREA_BLOCK_INSTANT_BUILDING | AREA_FIRE_SUPRESSION
 
 /area/rnd/xenobiology/xenoflora2
 	name = "\improper Xenoflora Hazard Lab"
@@ -2365,18 +2371,16 @@
 	flags = /area/rnd::flags
 
 /area/rnd/xenobiology/xenobioh
-	name = "\improper Hazardous Xenobiology Lab"
+	name = "\improper Abandoned Xenobiology Lab"
 	icon_state = "xeno_f_lab"
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
-	flags = BLUE_SHIELDED|AREA_BLOCK_PHASE_SHIFT
 
 /area/rnd/xenobiology/xenobiohstore
-	name = "\improper Hazardous Xenobiology Storage"
+	name = "\improper Abandoned Xenobiology Storage"
 	icon_state = "research_storage"
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
-	flags = BLUE_SHIELDED|AREA_BLOCK_PHASE_SHIFT
 
 /area/rnd/xenobiology/burn
 	name = "\improper Xenobiology Threat Supression"
@@ -2452,9 +2456,14 @@
 	color_grading = COLORTINT_DIM
 
 /area/rnd/research/xenobio_storage
-	name = "\improper Xenolab Storage"
+	name = "\improper Xenohusbandry Storage"
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
-	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
+	holomap_color = HOLOMAP_AREACOLOR_CARGO
+	color_grading = COLORTINT_DIM
+
+/area/rnd/xenobiology/hallway
+	name = "\improper Xenohusbandry Access"
+	holomap_color = HOLOMAP_AREACOLOR_CARGO
 	color_grading = COLORTINT_DIM
 
 /area/rnd/research/mailing
@@ -2498,7 +2507,7 @@
 	holomap_color = HOLOMAP_AREACOLOR_HYDROPONICS
 
 /area/rnd/research/phoronics
-	name = "\improper Phoronics"
+	name = "\improper Abandoned Phoronics"
 	icon = 'icons/turf/areas_vr.dmi'
 	icon_state = "magblacir"
 	base_turf = /turf/simulated/open
@@ -2506,40 +2515,40 @@
 	lightswitch = 1
 
 /area/rnd/research/phoronics/burn
-	name = "\improper Phoronics Burn Chamber"
+	name = "\improper Abandoned Burn Chamber"
 	icon_state = "redblacir"
 	base_turf = /turf/simulated/open
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
 	color_grading = COLORTINT_DIM
 
 /area/rnd/research/phoronics/clean
-	name = "\improper Phoronics Cleaning Closet"
+	name = "\improper Abandoned Cleaning Closet"
 	icon_state = "purwhitri"
 	base_turf = /turf/simulated/open
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
 
 /area/rnd/research/phoronics/breakroom
-	name = "\improper Phoronics Break Room"
+	name = "\improper Abandoned Phoronics Break Room"
 	icon_state = "purwhicir"
 	base_turf = /turf/simulated/open
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
 	color_grading = COLORTINT_WARM
 
 /area/rnd/research/phoronics/gasstore
-	name = "\improper Phoronics Gas Storage"
+	name = "\improper Abandoned Phoronics Gas Storage"
 	icon_state = "magblasqu"
 	base_turf = /turf/simulated/open
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
 	color_grading = COLORTINT_DIM
 
 /area/rnd/research/phoronics/extrastore
-	name = "\improper Phoronics Overflow Storage"
+	name = "\improper Abandoned Phoronics Overflow Storage"
 	icon_state = "magwhicir"
 	base_turf = /turf/simulated/open
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
 
 /area/rnd/research/phoronics/bombrange
-	name = "\improper Phoronics Bomb Testing Range"
+	name = "\improper Abandoned Bomb Testing Range"
 	icon_state = "redwhitri"
 	base_turf = /turf/simulated/open
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
@@ -2547,14 +2556,14 @@
 	use_emergency_overlay = FALSE
 
 /area/rnd/research/phoronics/med
-	name = "\improper Phoronics Medical Station"
+	name = "\improper Abandoned Phoronics Medical Station"
 	icon_state = "blublacir"
 	base_turf = /turf/simulated/open
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
 	flags = /area/medical/first_aid_station::flags
 
 /area/maintenance/substation/phoronics
-	name = "Phoronics Substation"
+	name = "Abandoned Phoronics Substation"
 	base_turf = /turf/simulated/open
 
 //----------------
@@ -2615,7 +2624,7 @@
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
 
 /area/rnd/hallway/phoronicsmainhall
-	name = "\improper Phoronics Main Hallway"
+	name = "\improper Abandoned Phoronics Hallway"
 	icon_state = "magblatri"
 	base_turf = /turf/simulated/open
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
@@ -2859,3 +2868,8 @@
 	sound_env = LARGE_SOFTFLOOR
 	ambience = AMBIENCE_GENERIC
 	color_grading = COLORTINT_COZY
+
+/area/specialty/expie_clubhouse/archive
+	name = "\improper Dog House Archive"
+	icon_state = "storage"
+	flags = RAD_SHIELDED | AREA_BLOCK_INSTANT_BUILDING

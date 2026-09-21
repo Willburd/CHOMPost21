@@ -38,9 +38,18 @@
 	add_atom_colour(color_to_use, FIXED_COLOUR_PRIORITY)
 	custom_eye_color = "#f1d414"
 
+/mob/living/simple_mob/vore/aggressive/corrupthound/swoopie/prim/GetAccess()
+	return list(ACCESS_SYNTH)
+
 // Randomized type
 /mob/living/simple_mob/vore/aggressive/corrupthound/swoopie/randomized/Initialize(mapload)
 	. = ..()
 	var/color_to_use = color_matrix_hsv(pick(0,50,70,130,180,220,300,320), 1, 1)
 	add_atom_colour(color_to_use, FIXED_COLOUR_PRIORITY)
 	custom_eye_color = pick("#00CC00","#24bdd1","#ee3225")
+
+// Stops turrets killing prim/swoopies
+/obj/siliconaccess(mob/user)
+	if(istype(user, /mob/living/simple_mob/vore/aggressive/corrupthound/swoopie))
+		return TRUE
+	. = ..()

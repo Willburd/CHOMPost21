@@ -1,0 +1,1275 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"ax" = (
+/obj/structure/cable,
+/obj/machinery/power/emitter/antique{
+	dir = 4
+	},
+/turf/simulated/floor/airless,
+/area/submap/outpost21/yard_generic)
+"bd" = (
+/obj/structure/lattice,
+/obj/item/tool/wirecutters,
+/turf/space,
+/area/submap/outpost21/yard_generic)
+"cA" = (
+/obj/machinery/field_generator,
+/turf/simulated/floor/airless,
+/area/submap/outpost21/yard_generic)
+"dm" = (
+/obj/structure/cable/yellow{
+	icon_state = "6-9"
+	},
+/turf/simulated/floor/airless,
+/area/submap/outpost21/yard_generic)
+"eP" = (
+/turf/simulated/wall/r_wall,
+/area/submap/outpost21/yard_generic)
+"hu" = (
+/obj/effect/floor_decal/industrial/stand_clear/red{
+	dir = 1
+	},
+/turf/simulated/floor/airless,
+/area/submap/outpost21/yard_generic)
+"hG" = (
+/obj/structure/cable/yellow{
+	icon_state = "6-8"
+	},
+/turf/simulated/floor/airless,
+/area/submap/outpost21/yard_generic)
+"jC" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/airless,
+/area/submap/outpost21/yard_generic)
+"kv" = (
+/obj/structure/cable{
+	icon_state = "5-10"
+	},
+/turf/simulated/floor/airless,
+/area/submap/outpost21/yard_generic)
+"kL" = (
+/obj/structure/cable/yellow{
+	icon_state = "1-4"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/airless,
+/area/submap/outpost21/yard_generic)
+"lF" = (
+/obj/structure/cable/yellow{
+	icon_state = "1-4"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/airless,
+/area/submap/outpost21/yard_generic)
+"nR" = (
+/obj/structure/particle_accelerator/fuel_chamber,
+/turf/simulated/floor/airless,
+/area/submap/outpost21/yard_generic)
+"oN" = (
+/obj/structure/lattice,
+/obj/item/weldingtool,
+/turf/space,
+/area/submap/outpost21/yard_generic)
+"oU" = (
+/obj/structure/cable/yellow{
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/airless,
+/area/submap/outpost21/yard_generic)
+"pq" = (
+/obj/structure/cable{
+	icon_state = "4-10"
+	},
+/turf/simulated/floor/airless,
+/area/submap/outpost21/yard_generic)
+"qh" = (
+/obj/structure/particle_accelerator/particle_emitter/right,
+/turf/simulated/floor/airless,
+/area/submap/outpost21/yard_generic)
+"qS" = (
+/obj/machinery/power/rad_collector,
+/turf/simulated/floor/airless,
+/area/submap/outpost21/yard_generic)
+"rW" = (
+/obj/structure/cable/yellow{
+	icon_state = "1-8"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/airless,
+/area/submap/outpost21/yard_generic)
+"tn" = (
+/obj/structure/cable{
+	icon_state = "6-9"
+	},
+/turf/simulated/floor/airless,
+/area/submap/outpost21/yard_generic)
+"tZ" = (
+/obj/structure/particle_accelerator/end_cap,
+/turf/simulated/floor/airless,
+/area/submap/outpost21/yard_generic)
+"uN" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/structure/cable,
+/obj/machinery/power/emitter/antique{
+	dir = 8
+	},
+/turf/simulated/floor/airless,
+/area/submap/outpost21/yard_generic)
+"vy" = (
+/obj/item/tool/wrench,
+/turf/simulated/floor/airless,
+/area/submap/outpost21/yard_generic)
+"vG" = (
+/obj/structure/cable/yellow{
+	icon_state = "5-10"
+	},
+/turf/simulated/floor/airless,
+/area/submap/outpost21/yard_generic)
+"vL" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/airless,
+/area/submap/outpost21/yard_generic)
+"wd" = (
+/obj/structure/window/phoronreinforced{
+	dir = 4
+	},
+/obj/machinery/power/rad_collector,
+/obj/structure/cable/yellow{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/airless,
+/area/submap/outpost21/yard_generic)
+"zi" = (
+/obj/structure/cable{
+	icon_state = "2-5"
+	},
+/turf/simulated/floor/airless,
+/area/submap/outpost21/yard_generic)
+"zN" = (
+/obj/effect/floor_decal/eshui/emblem/eshui_c,
+/turf/simulated/floor/airless,
+/area/submap/outpost21/yard_generic)
+"Bk" = (
+/turf/space,
+/area/submap/outpost21/yard_generic)
+"Fr" = (
+/obj/structure/cable/yellow{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/airless,
+/area/submap/outpost21/yard_generic)
+"Fv" = (
+/obj/effect/floor_decal/eshui/emblem/eshui_r,
+/turf/simulated/floor/airless,
+/area/submap/outpost21/yard_generic)
+"Fz" = (
+/obj/structure/lattice,
+/obj/item/stack/cable_coil,
+/turf/space,
+/area/submap/outpost21/yard_generic)
+"GY" = (
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
+/obj/structure/cable,
+/turf/simulated/floor/airless,
+/area/submap/outpost21/yard_generic)
+"Hy" = (
+/obj/effect/floor_decal/industrial/rad_floor/red,
+/turf/simulated/floor/airless,
+/area/submap/outpost21/yard_generic)
+"It" = (
+/obj/structure/cable/yellow{
+	icon_state = "4-10"
+	},
+/turf/simulated/floor/airless,
+/area/submap/outpost21/yard_generic)
+"Iu" = (
+/obj/structure/window/phoronreinforced{
+	dir = 8
+	},
+/obj/machinery/power/rad_collector,
+/obj/structure/cable/yellow{
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/airless,
+/area/submap/outpost21/yard_generic)
+"IF" = (
+/obj/structure/window/phoronreinforced{
+	dir = 4
+	},
+/obj/structure/cable/yellow{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/airless,
+/area/submap/outpost21/yard_generic)
+"LP" = (
+/obj/structure/cable/yellow{
+	icon_state = "1-6"
+	},
+/obj/effect/floor_decal/industrial/stand_clear/red{
+	dir = 1
+	},
+/turf/simulated/floor/airless,
+/area/submap/outpost21/yard_generic)
+"Mu" = (
+/obj/structure/particle_accelerator/particle_emitter/left,
+/turf/simulated/floor/airless,
+/area/submap/outpost21/yard_generic)
+"NJ" = (
+/obj/machinery/particle_accelerator/control_box,
+/turf/simulated/floor/airless,
+/area/submap/outpost21/yard_generic)
+"NQ" = (
+/obj/structure/particle_accelerator/power_box,
+/turf/simulated/floor/airless,
+/area/submap/outpost21/yard_generic)
+"Oh" = (
+/obj/structure/cable/yellow{
+	icon_state = "2-9"
+	},
+/turf/simulated/floor/airless,
+/area/submap/outpost21/yard_generic)
+"Ox" = (
+/turf/template_noop,
+/area/template_noop)
+"OE" = (
+/obj/effect/floor_decal/eshui/emblem/eshui_l,
+/turf/simulated/floor/airless,
+/area/submap/outpost21/yard_generic)
+"PU" = (
+/obj/structure/cable/yellow{
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/airless,
+/area/submap/outpost21/yard_generic)
+"Sk" = (
+/obj/structure/particle_accelerator/particle_emitter/center,
+/turf/simulated/floor/airless,
+/area/submap/outpost21/yard_generic)
+"Sq" = (
+/obj/structure/railing/grey,
+/turf/simulated/floor/airless,
+/area/submap/outpost21/yard_generic)
+"SR" = (
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/airless,
+/area/submap/outpost21/yard_generic)
+"TZ" = (
+/obj/structure/lattice,
+/turf/space,
+/area/submap/outpost21/yard_generic)
+"Uj" = (
+/obj/machinery/power/emitter/antique{
+	dir = 4
+	},
+/turf/simulated/floor/airless,
+/area/submap/outpost21/yard_generic)
+"Wk" = (
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/obj/item/clothing/head/welding,
+/turf/simulated/floor/airless,
+/area/submap/outpost21/yard_generic)
+"Xm" = (
+/turf/simulated/floor/airless,
+/area/submap/outpost21/yard_generic)
+"XA" = (
+/obj/item/tool/crowbar,
+/turf/simulated/floor/airless,
+/area/submap/outpost21/yard_generic)
+"XC" = (
+/obj/structure/cable/yellow{
+	icon_state = "2-5"
+	},
+/turf/simulated/floor/airless,
+/area/submap/outpost21/yard_generic)
+"Yu" = (
+/obj/structure/cable,
+/obj/machinery/power/emitter/antique{
+	dir = 8
+	},
+/turf/simulated/floor/airless,
+/area/submap/outpost21/yard_generic)
+"ZP" = (
+/obj/structure/cable/yellow{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/airless,
+/area/submap/outpost21/yard_generic)
+"ZZ" = (
+/turf/space,
+/area/template_noop)
+
+(1,1,1) = {"
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+"}
+(2,1,1) = {"
+Ox
+Ox
+ZZ
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+TZ
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+ZZ
+Ox
+Ox
+Ox
+Ox
+Ox
+"}
+(3,1,1) = {"
+Ox
+ZZ
+Bk
+Bk
+TZ
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+TZ
+Bk
+Bk
+Bk
+TZ
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+ZZ
+Ox
+Ox
+Ox
+"}
+(4,1,1) = {"
+Ox
+Bk
+Bk
+Xm
+TZ
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Xm
+Xm
+Uj
+Xm
+Xm
+Xm
+Xm
+Xm
+Xm
+Bk
+Bk
+Bk
+Bk
+Bk
+eP
+ZZ
+Ox
+Ox
+"}
+(5,1,1) = {"
+Ox
+Bk
+Bk
+Bk
+TZ
+zi
+vL
+Xm
+TZ
+Bk
+TZ
+vL
+vL
+GY
+vL
+vL
+vL
+vL
+vL
+ax
+Xm
+Xm
+TZ
+TZ
+TZ
+TZ
+eP
+Bk
+Ox
+Ox
+"}
+(6,1,1) = {"
+Ox
+Bk
+TZ
+TZ
+kv
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+TZ
+Bk
+Bk
+TZ
+Bk
+Bk
+TZ
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+eP
+Bk
+Ox
+Ox
+"}
+(7,1,1) = {"
+Ox
+Bk
+TZ
+kv
+Xm
+Xm
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+TZ
+Bk
+Bk
+oN
+Bk
+Bk
+TZ
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+eP
+Bk
+Ox
+Ox
+"}
+(8,1,1) = {"
+Ox
+Bk
+kv
+Xm
+Bk
+Xm
+Xm
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+XC
+kL
+kL
+kL
+kL
+PU
+qS
+Bk
+Bk
+Bk
+Bk
+eP
+Bk
+Bk
+Bk
+Ox
+Ox
+"}
+(9,1,1) = {"
+Ox
+pq
+Xm
+Bk
+Bk
+Bk
+Xm
+Xm
+Bk
+Bk
+Bk
+Bk
+vG
+Xm
+wd
+wd
+wd
+wd
+IF
+Xm
+Xm
+Bk
+Bk
+Bk
+eP
+Bk
+Bk
+Bk
+Ox
+Ox
+"}
+(10,1,1) = {"
+Ox
+jC
+Bk
+Bk
+Bk
+Bk
+Bk
+Xm
+Sq
+TZ
+bd
+It
+Xm
+cA
+Bk
+TZ
+Bk
+TZ
+Bk
+Xm
+Xm
+Xm
+Bk
+Bk
+eP
+Bk
+Bk
+Bk
+Ox
+Ox
+"}
+(11,1,1) = {"
+Ox
+jC
+TZ
+TZ
+Fr
+Fr
+LP
+Hy
+Sq
+Bk
+Bk
+ZP
+Xm
+Bk
+Bk
+TZ
+Bk
+TZ
+Bk
+Bk
+cA
+Xm
+TZ
+TZ
+eP
+Bk
+Bk
+Bk
+Ox
+Ox
+"}
+(12,1,1) = {"
+Ox
+TZ
+OE
+Xm
+NJ
+Xm
+qh
+dm
+Xm
+Bk
+Bk
+Wk
+Xm
+TZ
+TZ
+Xm
+Xm
+Xm
+TZ
+TZ
+Xm
+Xm
+Bk
+Bk
+eP
+Bk
+Bk
+Bk
+Ox
+Ox
+"}
+(13,1,1) = {"
+Ox
+Xm
+zN
+tZ
+nR
+NQ
+Sk
+Xm
+Oh
+Fr
+Fr
+lF
+Xm
+Bk
+Bk
+Xm
+Xm
+Xm
+Bk
+Bk
+Xm
+Xm
+Bk
+Bk
+eP
+Bk
+Bk
+Bk
+Ox
+Ox
+"}
+(14,1,1) = {"
+Ox
+Xm
+Fv
+Xm
+Xm
+Xm
+Mu
+Xm
+Xm
+Bk
+Bk
+ZP
+Xm
+TZ
+TZ
+Xm
+Xm
+Xm
+TZ
+TZ
+Xm
+Xm
+Bk
+Bk
+eP
+Bk
+Bk
+Bk
+Ox
+Ox
+"}
+(15,1,1) = {"
+Ox
+TZ
+Xm
+Xm
+Xm
+SR
+hu
+Hy
+Sq
+Bk
+Bk
+ZP
+vy
+Bk
+Bk
+TZ
+Bk
+TZ
+Bk
+Bk
+Xm
+Xm
+TZ
+TZ
+eP
+Bk
+Bk
+Bk
+ZZ
+Ox
+"}
+(16,1,1) = {"
+Ox
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Xm
+Sq
+TZ
+Fz
+hG
+Xm
+cA
+Bk
+TZ
+Bk
+TZ
+Bk
+cA
+Xm
+Xm
+Bk
+Bk
+eP
+Bk
+Bk
+Bk
+ZZ
+Ox
+"}
+(17,1,1) = {"
+Ox
+Bk
+TZ
+Bk
+Bk
+Bk
+TZ
+TZ
+Bk
+Bk
+Bk
+Bk
+dm
+Xm
+Iu
+Iu
+Iu
+Iu
+Iu
+Xm
+Xm
+Bk
+Bk
+Bk
+eP
+Bk
+eP
+Bk
+ZZ
+Ox
+"}
+(18,1,1) = {"
+Ox
+Bk
+tn
+Xm
+Bk
+Xm
+Xm
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Oh
+rW
+rW
+rW
+rW
+oU
+Xm
+Bk
+Bk
+Bk
+Bk
+eP
+Bk
+eP
+eP
+ZZ
+Ox
+"}
+(19,1,1) = {"
+Ox
+TZ
+TZ
+tn
+Xm
+Xm
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+TZ
+Bk
+Bk
+TZ
+Bk
+Bk
+TZ
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+eP
+ZZ
+Ox
+"}
+(20,1,1) = {"
+Ox
+TZ
+Bk
+Bk
+Xm
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+TZ
+Bk
+Bk
+TZ
+Bk
+Bk
+TZ
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+eP
+ZZ
+Ox
+"}
+(21,1,1) = {"
+Ox
+Bk
+Bk
+Bk
+TZ
+TZ
+Bk
+TZ
+vL
+vL
+vL
+vL
+vL
+uN
+vL
+vL
+vL
+vL
+vL
+Yu
+Xm
+Xm
+TZ
+TZ
+TZ
+TZ
+TZ
+eP
+ZZ
+Ox
+"}
+(22,1,1) = {"
+Ox
+ZZ
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+TZ
+Bk
+Bk
+Xm
+Xm
+Xm
+Xm
+Xm
+XA
+Xm
+Xm
+Xm
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+eP
+ZZ
+Ox
+"}
+(23,1,1) = {"
+Ox
+Ox
+ZZ
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+TZ
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+TZ
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+eP
+ZZ
+Ox
+"}
+(24,1,1) = {"
+Ox
+Ox
+Ox
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+TZ
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+TZ
+Bk
+Bk
+Bk
+Bk
+Bk
+eP
+eP
+ZZ
+Ox
+"}
+(25,1,1) = {"
+Ox
+Ox
+Ox
+ZZ
+Bk
+Bk
+Bk
+eP
+eP
+eP
+eP
+eP
+eP
+Xm
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+TZ
+Bk
+Bk
+Bk
+Bk
+Bk
+eP
+Bk
+ZZ
+Ox
+"}
+(26,1,1) = {"
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+ZZ
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+Bk
+eP
+eP
+Bk
+Bk
+TZ
+Bk
+Bk
+eP
+eP
+Bk
+Bk
+Bk
+ZZ
+Ox
+"}
+(27,1,1) = {"
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+ZZ
+Bk
+Bk
+eP
+eP
+eP
+eP
+eP
+eP
+eP
+Bk
+Bk
+Bk
+ZZ
+Ox
+Ox
+"}
+(28,1,1) = {"
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+ZZ
+ZZ
+ZZ
+ZZ
+ZZ
+ZZ
+ZZ
+ZZ
+ZZ
+ZZ
+ZZ
+Ox
+Ox
+Ox
+"}
+(29,1,1) = {"
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+"}
+(30,1,1) = {"
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+Ox
+"}

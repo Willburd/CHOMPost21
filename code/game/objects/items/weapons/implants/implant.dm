@@ -581,6 +581,11 @@ the implant may become unstable and either pre-maturely inject the subject or si
 	if(!t) // Failsafe
 		STOP_PROCESSING(SSobj, src)
 		return
+	// Outpost 21 edit begin - Radio jammer affects death alarm implants
+	if(islist(check_radio_jammers(get_turf(M))))
+		STOP_PROCESSING(SSobj, src)
+		return
+	// Outpost 21 edit end
 	switch (cause)
 		if("death")
 			var/obj/item/radio/headset/a = new /obj/item/radio/headset/heads/captain(null)

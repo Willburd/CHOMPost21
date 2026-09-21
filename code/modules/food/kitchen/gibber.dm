@@ -2,6 +2,7 @@
 /obj/machinery/gibber
 	name = "gibber"
 	desc = "The name isn't descriptive enough?"
+	description_antag = "An emag could disable the safety guard. You sicko."
 	icon = 'icons/obj/kitchen.dmi'
 	icon_state = "grinder"
 	density = TRUE
@@ -144,11 +145,12 @@
 		to_chat(user, span_danger("The gibber safety guard is engaged!"))
 		return
 
-	/* Outpost 21 edit(port) - Disable abiotic lockout
+	/* Disable abiotic lockout
 	if(victim.abiotic(1))
 		to_chat(user, span_danger("Subject may not have abiotic items on."))
 		return
 	*/
+
 	user.visible_message(span_danger("[user] starts to put [victim] into the gibber!"))
 	src.add_fingerprint(user)
 	if(do_after(user, 3 SECONDS, target = src) && victim.Adjacent(src) && user.Adjacent(src) && victim.Adjacent(user) && !occupant)

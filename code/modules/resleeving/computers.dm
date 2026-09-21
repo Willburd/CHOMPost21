@@ -260,7 +260,6 @@
 		if("clear_m_rec")
 			current_mr = null
 			. = TRUE
-		// Outpost 21 edit(port) begin - Updated transcore dump process
 		if("coredump")
 			var/area/find_area = get_area(src)
 			if(!find_area)
@@ -280,7 +279,6 @@
 			disk.forceMove(get_turf(src))
 			disk = null
 			. = TRUE
-		// Outpost 21 edit(port) end
 		if("create")
 			. = TRUE
 			var/datum/transhuman/body_record/active_br = current_br?.resolve()

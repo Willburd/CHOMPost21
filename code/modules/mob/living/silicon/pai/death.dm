@@ -2,14 +2,17 @@
 /mob/living/silicon/pai/death(gibbed,deathmessage="fizzles out and clatters to the floor...")
 	if(paiDA && card)
 		var/area/t = get_area(src)
-		var/obj/item/radio/headset/a = new /obj/item/radio/headset/heads/captain(null)
-		if(istype(t, /area/syndicate_station) || istype(t, /area/syndicate_mothership) || istype(t, /area/shuttle/syndicate_elite) )
-			//give the syndies a bit of stealth
-			a.autosay("PAI \"[src]\" has died in Space!", "PAI [src]'s Death Alarm")
-		else
-			a.autosay("PAI \"[src]\" has died in [t.name]!", "PAI [src]'s Death Alarm")
+		// Outpost 21 edit begin - Radio jammer affects death alarm implants
+		if(!islist(check_radio_jammers(get_turf(src))))
+			var/obj/item/radio/headset/a = new /obj/item/radio/headset/heads/captain(null)
+			if(istype(t, /area/syndicate_station) || istype(t, /area/syndicate_mothership) || istype(t, /area/shuttle/syndicate_elite) )
+				//give the syndies a bit of stealth
+				a.autosay("PAI \"[src]\" has died in Space!", "PAI [src]'s Death Alarm")
+			else
+				a.autosay("PAI \"[src]\" has died in [t.name]!", "PAI [src]'s Death Alarm")
+			qdel(a)
 		paiDA = FALSE // no repeats we died already
-		qdel(a)
+		// Outpost 21 edit end
 
 //	set_respawn_timer()
 	release_vore_contents()

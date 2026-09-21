@@ -57,6 +57,15 @@
 
 	var/turf/targloc = get_turf(target)
 
+	if(targloc && targloc.z > 0 && length(SSplanets.z_to_planet) >= targloc.z)
+		var/datum/planet/P = SSplanets.z_to_planet[targloc.z]
+		if(!P)
+			to_chat(user, span_warning("\The [src] flashes \"Out of range!\" and refuses to lock on!"))
+			return
+	if(istype(targloc, /area/muriki/processor))
+		to_chat(user, span_warning("\The [src] flashes \"CRITICAL AREA!\" and refuses to lock on!"))
+		return
+
 	//laser pointer image
 	icon_state = "[item_state]_used"
 	var/list/showto = list()
