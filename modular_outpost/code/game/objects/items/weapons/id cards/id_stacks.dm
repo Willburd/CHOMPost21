@@ -21,3 +21,11 @@
 
 /obj/item/card/id/science/xenobiologist
 	initial_sprite_stack = list("base-stamp", "top-brown", "stamp-n", "stripe-purple")
+
+/obj/item/card/id/science/xenoarcheologist
+	initial_sprite_stack = list("base-stamp", "top-brown", "stamp-n", "stripe-purple")
+
+/obj/item/card/id/silver/command_scientist
+	name = "Scientist's ID"
+	initial_sprite_stack = list("base-stamp", "top-blue", "stamp-n", "stripe-purple")
+	rank = JOB_SCIENTIST
