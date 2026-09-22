@@ -105,8 +105,6 @@
 	rank_pin = RANK_PIN_PATH
 /datum/alt_title/salvage_tech
 	rank_pin = RANK_PIN_PATH
-/datum/alt_title/lab_assistant
-	rank_pin = RANK_PIN_PATH
 #undef RANK_PIN_PATH
 
 
@@ -131,8 +129,6 @@
 
 // Enlisted 5
 #define RANK_PIN_PATH /obj/item/clothing/accessory/rank_eshui/enlisted5
-/datum/job/scientist
-	rank_pin = RANK_PIN_PATH
 /datum/job/engineer
 	rank_pin = RANK_PIN_PATH
 /datum/alt_title/junior_brigphys
@@ -146,6 +142,8 @@
 /datum/alt_title/co_petty_officer
 	rank_pin = RANK_PIN_PATH
 /datum/alt_title/co_cadet
+	rank_pin = RANK_PIN_PATH
+/datum/alt_title/lab_assistant
 	rank_pin = RANK_PIN_PATH
 #undef RANK_PIN_PATH
 
@@ -190,6 +188,8 @@
 // Warrent 1
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 #define RANK_PIN_PATH /obj/item/clothing/accessory/rank_eshui/warrant1
+/datum/job/scientist
+	rank_pin = RANK_PIN_PATH
 /datum/job/geneticist
 	rank_pin = RANK_PIN_PATH
 /datum/job/chemist
