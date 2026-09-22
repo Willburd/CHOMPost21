@@ -112,8 +112,6 @@
 
 // Enlisted 4
 #define RANK_PIN_PATH /obj/item/clothing/accessory/rank_eshui/enlisted4
-/datum/job/scientist
-	rank_pin = RANK_PIN_PATH
 /datum/alt_title/orderly
 	rank_pin = RANK_PIN_PATH
 /datum/alt_title/chem_tech
@@ -133,6 +131,8 @@
 
 // Enlisted 5
 #define RANK_PIN_PATH /obj/item/clothing/accessory/rank_eshui/enlisted5
+/datum/job/scientist
+	rank_pin = RANK_PIN_PATH
 /datum/job/engineer
 	rank_pin = RANK_PIN_PATH
 /datum/alt_title/junior_brigphys
