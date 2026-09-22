@@ -5757,6 +5757,7 @@
 #include "modular_outpost\code\datums\helper_datums\teleport.dm"
 #include "modular_outpost\code\datums\looping_sounds\weather_sounds.dm"
 #include "modular_outpost\code\datums\Outfits\outfit.dm"
+#include "modular_outpost\code\datums\Outfits\jobs\cargo.dm"
 #include "modular_outpost\code\datums\Outfits\jobs\command.dm"
 #include "modular_outpost\code\datums\Outfits\jobs\engineering.dm"
 #include "modular_outpost\code\datums\Outfits\jobs\medical.dm"

@@ -21,3 +21,6 @@
 
 /obj/item/card/id/science/xenobiologist
 	initial_sprite_stack = list("base-stamp", "top-brown", "stamp-n", "stripe-purple")
+
+/obj/item/card/id/science/xenoarcheologist
+	initial_sprite_stack = list("base-stamp", "top-brown", "stamp-n", "stripe-purple")
