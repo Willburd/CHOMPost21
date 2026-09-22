@@ -27238,9 +27238,6 @@
 /obj/structure/disposalpipe/down{
 	dir = 8
 	},
-/obj/structure/cable/green{
-	icon_state = "32-1"
-	},
 /obj/structure/window/maintenance_panel{
 	dir = 8
 	},
@@ -33259,6 +33256,7 @@
 /obj/effect/floor_decal/steeldecal/steel_decals10{
 	dir = 6
 	},
+/obj/item/clothing/head/cone,
 /turf/simulated/floor/tiled/dark,
 /area/rnd/stairwell)
 "eTH" = (
@@ -47227,6 +47225,7 @@
 /obj/effect/floor_decal/steeldecal/steel_decals10{
 	dir = 6
 	},
+/obj/item/clothing/head/cone,
 /turf/simulated/floor/tiled/dark,
 /area/rnd/stairwell)
 "jrn" = (
@@ -54058,16 +54057,13 @@
 /turf/simulated/floor/outdoors/rocks/turfpack/muriki,
 /area/mine/explored/muriki/river/hole)
 "lvm" = (
-/obj/structure/cable/green{
-	icon_state = "2-8"
-	},
-/obj/structure/cable/green{
-	icon_state = "0-2"
-	},
 /obj/machinery/power/apc{
 	dir = 1;
 	name = "north bump";
 	pixel_y = 24
+	},
+/obj/structure/cable/green{
+	icon_state = "0-8"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/scielev)

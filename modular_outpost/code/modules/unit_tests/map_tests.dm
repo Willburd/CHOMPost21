@@ -111,6 +111,10 @@
 		/area/rnd/xenobiology/lost,
 		/area/rnd/xenobiology/xenobioh,
 		/area/rnd/xenobiology/xenobiohstore,
+		/area/rnd/xenobiology/burn,
+		/area/rnd/research/anomaly,
+		/area/rnd/research/exp_prep,
+		/area/rnd/research/medical,
 		)
 
 	var/list/forced_hallway = list(
