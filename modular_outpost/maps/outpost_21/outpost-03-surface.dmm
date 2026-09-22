@@ -3927,15 +3927,7 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/obj/structure/window/reinforced{
-	dir = 8
-	},
 /obj/structure/table/rack,
-/obj/machinery/door/window/brigdoor/northleft{
-	name = "Detection Tools";
-	req_access = list(2);
-	dir = 2
-	},
 /obj/item/motiontracker,
 /obj/item/motiontracker,
 /obj/item/motiontracker,
@@ -4074,10 +4066,14 @@
 	dir = 1;
 	pixel_y = -26
 	},
+/obj/structure/table/woodentable,
+/obj/item/storage/box/sinpockets{
+	pixel_x = 8;
+	pixel_y = 6
+	},
 /obj/item/juke_remote{
 	autolinkareajuke_onspawn = /area/djstation
 	},
-/obj/structure/table/woodentable,
 /turf/simulated/floor/wood,
 /area/security/briefing_room)
 "afI" = (
@@ -7794,6 +7790,7 @@
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/effect/floor_decal/corner/paleblue,
 /turf/simulated/floor/tiled,
 /area/security/brig/observation)
 "ams" = (
@@ -10812,6 +10809,7 @@
 	dir = 1;
 	pixel_y = -26
 	},
+/obj/effect/floor_decal/industrial/outline/red,
 /turf/simulated/floor/tiled/dark,
 /area/security/tactical)
 "atA" = (
@@ -10996,10 +10994,10 @@
 /obj/structure/window/reinforced/tinted/frosted{
 	dir = 8
 	},
-/obj/structure/table/glass,
 /obj/effect/floor_decal/milspec/color/red/half{
 	dir = 8
 	},
+/obj/machinery/washing_machine,
 /turf/simulated/floor/tiled/freezer,
 /area/muriki/bathroom/security)
 "aud" = (
@@ -16788,7 +16786,6 @@
 	},
 /obj/structure/closet/secure_closet/brigmedic,
 /obj/item/stack/medical/splint,
-/obj/item/storage/pouch/baton/full,
 /obj/item/storage/backpack/dufflebag/syndie/med{
 	name = "combat medic dufflebag"
 	},
@@ -16802,6 +16799,10 @@
 /obj/item/reagent_containers/hypospray/autoinjector/biginjector/combat_recovery,
 /obj/item/reagent_containers/hypospray/autoinjector/biginjector/combat_recovery,
 /obj/item/reagent_containers/hypospray/autoinjector/biginjector/combat_recovery,
+/obj/effect/floor_decal/corner/paleblue,
+/obj/item/clothing/accessory/bodycam,
+/obj/item/clothing/accessory/holster/waist/lanyard,
+/obj/item/melee/baton/loaded,
 /turf/simulated/floor/tiled,
 /area/security/brig/observation)
 "aKG" = (
@@ -18546,6 +18547,8 @@
 /obj/effect/floor_decal/corner/red{
 	dir = 10
 	},
+/obj/effect/floor_decal/corner/paleblue,
+/obj/structure/table/rack,
 /turf/simulated/floor/tiled,
 /area/security/brig/observation)
 "aQW" = (
@@ -18581,6 +18584,9 @@
 /obj/effect/floor_decal/corner/red/full{
 	dir = 8
 	},
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/security/brig/observation)
 "aRb" = (
@@ -18596,6 +18602,12 @@
 /obj/effect/floor_decal/corner/red{
 	dir = 5
 	},
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 1
+	},
+/obj/item/clothing/accessory/bodycam/yobro,
+/obj/item/clothing/accessory/bodycam/yobro,
+/obj/structure/table/woodentable,
 /turf/simulated/floor/tiled,
 /area/security/brig/observation)
 "aRc" = (
@@ -18615,6 +18627,9 @@
 	},
 /obj/effect/floor_decal/corner/red{
 	dir = 5
+	},
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/security/brig/observation)
@@ -18657,6 +18672,9 @@
 "aRh" = (
 /obj/effect/floor_decal/corner/red{
 	dir = 9
+	},
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/security/brig/observation)
@@ -19064,13 +19082,6 @@
 /obj/structure/lightpost,
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
 /area/muriki/grounds/shutt)
-"aSu" = (
-/obj/machinery/alarm{
-	dir = 1;
-	pixel_y = -26
-	},
-/turf/simulated/floor/glass,
-/area/security/brig/observation)
 "aSv" = (
 /obj/machinery/alarm{
 	dir = 1;
@@ -19078,6 +19089,15 @@
 	},
 /obj/effect/floor_decal/corner/red{
 	dir = 10
+	},
+/obj/effect/floor_decal/corner/paleblue,
+/obj/structure/table/rack,
+/obj/item/roller,
+/obj/item/roller{
+	pixel_y = 8
+	},
+/obj/item/roller{
+	pixel_y = 16
 	},
 /turf/simulated/floor/tiled,
 /area/security/brig/observation)
@@ -19094,6 +19114,9 @@
 	},
 /obj/effect/floor_decal/corner/red{
 	dir = 10
+	},
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/security/brig/observation)
@@ -19139,6 +19162,9 @@
 /obj/effect/floor_decal/corner/red{
 	dir = 9
 	},
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/security/brig/observation)
 "aSC" = (
@@ -19149,6 +19175,9 @@
 	},
 /obj/effect/floor_decal/corner/red{
 	dir = 9
+	},
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/security/brig/observation)
@@ -19826,6 +19855,9 @@
 /obj/effect/landmark/start{
 	name = "Brig Physician"
 	},
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/security/brig/observation)
 "aTM" = (
@@ -19864,11 +19896,17 @@
 /obj/structure/bed/chair/bay/comfy/blue{
 	dir = 4
 	},
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/security/brig/observation)
 "aTR" = (
 /obj/machinery/hologram/holopad,
 /obj/effect/floor_decal/corner/red/full,
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/security/brig/observation)
 "aTS" = (
@@ -19878,10 +19916,19 @@
 /obj/effect/floor_decal/corner/red{
 	dir = 10
 	},
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/security/brig/observation)
 "aTT" = (
 /obj/machinery/vending/foodasian,
+/obj/effect/floor_decal/corner/red{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/security/brig/observation)
 "aTU" = (
@@ -19892,6 +19939,16 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/effect/floor_decal/corner/red/full{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/paleblue,
+/obj/machinery/alarm{
+	pixel_y = 24
+	},
 /turf/simulated/floor/tiled,
 /area/security/brig/observation)
 "aTV" = (
@@ -19900,6 +19957,12 @@
 	},
 /obj/machinery/computer/security/telescreen/bodycamera{
 	pixel_y = 30
+	},
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 1
+	},
+/obj/machinery/medical_kiosk{
+	pixel_y = 2
 	},
 /turf/simulated/floor/tiled,
 /area/security/brig/observation)
@@ -21069,6 +21132,41 @@
 /obj/effect/landmark/start/xenobio,
 /turf/simulated/floor/tiled,
 /area/quartermaster/office)
+"aWL" = (
+/obj/structure/cable/orange{
+	icon_state = "4-8"
+	},
+/obj/machinery/bluespace_denier,
+/turf/simulated/floor/plating,
+/area/maintenance/secelev)
+"aWM" = (
+/obj/machinery/bluespace_denier,
+/turf/simulated/floor/plating,
+/area/maintenance/secelev)
+"aWN" = (
+/obj/structure/table/woodentable,
+/obj/item/hand_labeler,
+/turf/simulated/floor/tiled,
+/area/security/brig/observation)
+"aWO" = (
+/obj/effect/floor_decal/corner/red{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/paleblue,
+/turf/simulated/floor/tiled,
+/area/security/brig/observation)
+"aWP" = (
+/obj/effect/floor_decal/corner/red{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/security/brig/observation)
+"aWQ" = (
+/turf/simulated/wall,
+/area/security/brig/observation)
 "aWU" = (
 /obj/effect/floor_decal/corner/red{
 	dir = 5
@@ -21794,6 +21892,7 @@
 	dir = 8;
 	pixel_x = 5
 	},
+/obj/effect/floor_decal/corner/paleblue,
 /turf/simulated/floor/tiled,
 /area/security/brig/observation)
 "bgZ" = (
@@ -25359,10 +25458,6 @@
 	name = "Station Intercom (General)";
 	pixel_x = 22
 	},
-/obj/item/radio/intercom/department/security{
-	dir = 4;
-	pixel_x = 33
-	},
 /turf/simulated/floor/tiled/techfloor,
 /area/security/secmail)
 "cnO" = (
@@ -27826,10 +27921,6 @@
 /obj/effect/floor_decal/corner/red{
 	dir = 5
 	},
-/obj/item/radio/intercom/department/security{
-	dir = 1;
-	pixel_y = 21
-	},
 /turf/simulated/floor/tiled/dark,
 /area/security/kennels)
 "deS" = (
@@ -28506,7 +28597,7 @@
 /turf/simulated/open,
 /area/medical/reception)
 "drd" = (
-/obj/machinery/vending/security_armor,
+/obj/effect/floor_decal/industrial/outline/blue,
 /turf/simulated/floor/tiled/milspec,
 /area/security/armoury)
 "drj" = (
@@ -29415,10 +29506,6 @@
 /turf/simulated/wall/r_wall,
 /area/muriki/grounds/civ)
 "dGr" = (
-/obj/item/radio/intercom/department/security{
-	dir = 8;
-	pixel_x = -21
-	},
 /obj/random/maintenance/security,
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -30478,18 +30565,10 @@
 /turf/simulated/floor/tiled,
 /area/storage/tools)
 "dZW" = (
-/obj/machinery/washing_machine,
-/obj/structure/cable/green{
-	icon_state = "0-2"
-	},
-/obj/machinery/power/apc{
-	dir = 1;
-	name = "north bump";
-	pixel_y = 24
-	},
 /obj/effect/floor_decal/corner/red{
 	dir = 5
 	},
+/obj/machinery/gear_painter,
 /turf/simulated/floor/tiled/old_tile/white,
 /area/security/security_equiptment_storage)
 "eaa" = (
@@ -30915,14 +30994,13 @@
 	dir = 4;
 	pixel_x = 26
 	},
-/obj/item/storage/box/sinpockets{
+/obj/item/storage/box/holobadge{
+	pixel_y = 10;
 	pixel_x = 8
 	},
-/obj/item/storage/box/sinpockets{
-	pixel_x = 8
-	},
-/obj/item/storage/box{
-	pixel_x = -6
+/obj/item/storage/box/cdeathalarm_kit{
+	pixel_x = -8;
+	pixel_y = 10
 	},
 /turf/simulated/floor/tiled/old_tile/white,
 /area/security/security_equiptment_storage)
@@ -33283,6 +33361,9 @@
 /obj/effect/floor_decal/corner/red{
 	dir = 5
 	},
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/security/brig/observation)
 "eTT" = (
@@ -34510,6 +34591,14 @@
 /obj/item/hand_labeler{
 	pixel_x = 16
 	},
+/obj/machinery/power/apc{
+	dir = 8;
+	name = "west bump";
+	pixel_x = -24
+	},
+/obj/structure/cable/green{
+	icon_state = "0-5"
+	},
 /turf/simulated/floor/tiled/old_tile/white,
 /area/security/security_equiptment_storage)
 "fov" = (
@@ -35724,7 +35813,6 @@
 	},
 /obj/item/storage/box/frags,
 /obj/item/storage/box/frags,
-/obj/item/storage/box/frags,
 /obj/item/plastique,
 /obj/item/plastique,
 /obj/item/plastique,
@@ -35837,8 +35925,6 @@
 	dir = 8;
 	name = "Energy"
 	},
-/obj/item/personal_shield_generator/belt/security/loaded,
-/obj/item/personal_shield_generator/belt/security/loaded,
 /obj/item/melee/energy/sword/ionic_rapier/lance,
 /obj/item/melee/energy/sword/ionic_rapier/lance,
 /turf/simulated/floor/tiled/dark,
@@ -38610,13 +38696,11 @@
 /turf/simulated/floor/tiled/milspec,
 /area/janitor)
 "gLT" = (
-/obj/machinery/vending/sol{
-	dir = 8;
-	pixel_x = 5
-	},
 /obj/effect/floor_decal/corner/red/full{
 	dir = 4
 	},
+/obj/effect/floor_decal/corner/paleblue,
+/obj/structure/table/rack,
 /turf/simulated/floor/tiled,
 /area/security/brig/observation)
 "gLW" = (
@@ -40325,9 +40409,6 @@
 	},
 /turf/simulated/floor/wood,
 /area/bridge/meeting_room)
-"hnb" = (
-/turf/simulated/wall/r_wall,
-/area/muriki/bathroom/security)
 "hnc" = (
 /obj/machinery/hologram/holopad,
 /obj/structure/disposalpipe/segment{
@@ -44878,6 +44959,11 @@
 /obj/effect/floor_decal/corner/red{
 	dir = 6
 	},
+/obj/effect/floor_decal/corner/paleblue,
+/obj/machinery/vending/sol{
+	dir = 8;
+	pixel_x = 5
+	},
 /turf/simulated/floor/tiled,
 /area/security/brig/observation)
 "iDO" = (
@@ -45904,7 +45990,8 @@
 /area/maintenance/medicelev)
 "iVw" = (
 /obj/machinery/computer/security/telescreen/entertainment{
-	pixel_x = -32
+	pixel_x = -32;
+	pixel_y = -2
 	},
 /obj/structure/bed/chair/sofa{
 	dir = 4
@@ -48590,10 +48677,6 @@
 	name = "Station Intercom (General)";
 	pixel_x = 22
 	},
-/obj/item/radio/intercom/department/security{
-	dir = 4;
-	pixel_x = 33
-	},
 /turf/simulated/floor/tiled,
 /area/security/security_processing)
 "jLc" = (
@@ -48770,6 +48853,7 @@
 /obj/effect/floor_decal/corner/red{
 	dir = 10
 	},
+/obj/effect/floor_decal/corner/paleblue,
 /turf/simulated/floor/tiled,
 /area/security/brig/observation)
 "jOY" = (
@@ -52044,6 +52128,12 @@
 "kNm" = (
 /obj/structure/cable/green{
 	icon_state = "1-4"
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals_central7{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "1-10"
 	},
 /turf/simulated/floor/tiled/old_tile/white,
 /area/security/security_equiptment_storage)
@@ -56535,6 +56625,7 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
+/obj/effect/floor_decal/corner/paleblue,
 /turf/simulated/floor/tiled,
 /area/security/brig/observation)
 "mgo" = (
@@ -57533,7 +57624,6 @@
 /obj/structure/fireaxecabinet{
 	pixel_x = -32
 	},
-/obj/machinery/vending/security_armory_armor,
 /turf/simulated/floor/tiled/dark,
 /area/security/tactical)
 "myU" = (
@@ -59616,12 +59706,6 @@
 /obj/item/ammo_magazine/ammo_box/b45/emp{
 	pixel_y = 12
 	},
-/obj/item/ammo_magazine/ammo_box/b45/emp{
-	pixel_y = 12
-	},
-/obj/item/ammo_magazine/ammo_box/b45/emp{
-	pixel_y = 12
-	},
 /turf/simulated/floor/tiled/dark,
 /area/security/tactical)
 "nif" = (
@@ -59784,6 +59868,10 @@
 /obj/machinery/disposal,
 /obj/structure/disposalpipe/trunk{
 	dir = 4
+	},
+/obj/item/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -21
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/kennels)
@@ -62014,7 +62102,6 @@
 	},
 /obj/structure/closet/secure_closet/brigmedic,
 /obj/item/stack/medical/splint,
-/obj/item/storage/pouch/baton/full,
 /obj/item/storage/backpack/dufflebag/syndie/med{
 	name = "combat medic dufflebag"
 	},
@@ -62028,6 +62115,10 @@
 /obj/item/reagent_containers/hypospray/autoinjector/biginjector/combat_recovery,
 /obj/item/reagent_containers/hypospray/autoinjector/biginjector/combat_recovery,
 /obj/item/reagent_containers/hypospray/autoinjector/biginjector/combat_recovery,
+/obj/effect/floor_decal/corner/paleblue,
+/obj/item/clothing/accessory/bodycam,
+/obj/item/clothing/accessory/holster/waist/lanyard,
+/obj/item/melee/baton/loaded,
 /turf/simulated/floor/tiled,
 /area/security/brig/observation)
 "nYp" = (
@@ -62888,6 +62979,7 @@
 	dir = 8;
 	pixel_x = 30
 	},
+/obj/effect/floor_decal/corner/paleblue,
 /turf/simulated/floor/tiled,
 /area/security/brig/observation)
 "ooQ" = (
@@ -63018,10 +63110,6 @@
 /obj/effect/floor_decal/milspec/stripe{
 	dir = 1
 	},
-/obj/item/blade_trap_kit,
-/obj/item/blade_trap_kit,
-/obj/item/blade_trap_kit,
-/obj/item/blade_trap_kit,
 /obj/item/blade_trap_kit,
 /obj/item/blade_trap_kit,
 /obj/item/blade_trap_kit,
@@ -64397,6 +64485,9 @@
 /obj/effect/floor_decal/corner/black/full{
 	dir = 4
 	},
+/obj/machinery/ai_status_display{
+	pixel_y = -32
+	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/security/tactical/red)
 "oMl" = (
@@ -64899,78 +64990,14 @@
 	},
 /area/muriki/grounds/tramborder)
 "oTw" = (
-/obj/structure/window/reinforced{
-	health = 1e+006
-	},
-/obj/machinery/door/window/brigdoor/westleft{
-	name = "Energy"
-	},
-/obj/structure/closet/crate/secure/large/reinforced{
-	name = "Thermal Grenades"
-	},
 /obj/effect/floor_decal/corner/red/full{
 	dir = 4
 	},
-/obj/item/grenade/chem_grenade/incendiary{
-	pixel_x = -6
+/obj/structure/table/rack,
+/obj/machinery/door/window/brigdoor/westright{
+	name = "Energy"
 	},
-/obj/item/grenade/chem_grenade/incendiary{
-	pixel_x = -6
-	},
-/obj/item/grenade/chem_grenade/incendiary{
-	pixel_x = -6
-	},
-/obj/item/grenade/chem_grenade/incendiary{
-	pixel_x = -6
-	},
-/obj/item/grenade/chem_grenade/incendiary{
-	pixel_x = -6
-	},
-/obj/item/grenade/chem_grenade/incendiary{
-	pixel_x = -6
-	},
-/obj/item/grenade/chem_grenade/incendiary{
-	pixel_x = -6
-	},
-/obj/item/grenade/chem_grenade/incendiary{
-	pixel_x = -6
-	},
-/obj/item/grenade/chem_grenade/incendiary{
-	pixel_x = -6
-	},
-/obj/item/grenade/chem_grenade/incendiary{
-	pixel_x = -6
-	},
-/obj/item/grenade/chem_grenade/frost{
-	pixel_x = 6
-	},
-/obj/item/grenade/chem_grenade/frost{
-	pixel_x = 6
-	},
-/obj/item/grenade/chem_grenade/frost{
-	pixel_x = 6
-	},
-/obj/item/grenade/chem_grenade/frost{
-	pixel_x = 6
-	},
-/obj/item/grenade/chem_grenade/frost{
-	pixel_x = 6
-	},
-/obj/item/grenade/chem_grenade/frost{
-	pixel_x = 6
-	},
-/obj/item/grenade/chem_grenade/frost{
-	pixel_x = 6
-	},
-/obj/item/grenade/chem_grenade/frost{
-	pixel_x = 6
-	},
-/obj/item/grenade/chem_grenade/frost{
-	pixel_x = 6
-	},
-/obj/item/grenade/chem_grenade/frost{
-	pixel_x = 6
-	},
+/obj/item/gun/energy/bfgtaser,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/security/tactical/red)
 "oTO" = (
@@ -68980,7 +69007,7 @@
 	dir = 8
 	},
 /obj/item/melee/energy/spear,
-/obj/item/personal_shield_generator/security/strong/loaded,
+/obj/item/personal_shield_generator/belt/security/loaded,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/security/tactical/red)
 "qmt" = (
@@ -69347,7 +69374,6 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay)
 "qsR" = (
-/obj/effect/floor_decal/industrial/outline/grey,
 /obj/item/grenade/shooter/rubber,
 /obj/item/grenade/shooter/rubber,
 /obj/item/grenade/shooter/rubber,
@@ -69374,6 +69400,7 @@
 	dir = 4;
 	pixel_x = 26
 	},
+/obj/effect/floor_decal/industrial/outline/red,
 /turf/simulated/floor/tiled/dark,
 /area/security/tactical)
 "qsS" = (
@@ -69733,13 +69760,6 @@
 /obj/effect/floor_decal/corner/red{
 	dir = 6
 	},
-/obj/structure/table/standard,
-/obj/item/storage/box/holobadge{
-	pixel_y = 10;
-	pixel_x = 6
-	},
-/obj/item/storage/box/cdeathalarm_kit,
-/obj/item/storage/box/cdeathalarm_kit,
 /turf/simulated/floor/tiled/old_tile/white,
 /area/security/security_equiptment_storage)
 "qzF" = (
@@ -73095,14 +73115,11 @@
 /turf/simulated/floor/lino,
 /area/crew_quarters/bar)
 "rFf" = (
-/obj/machinery/vending/cigarette{
-	dir = 8;
-	pixel_x = 5
-	},
 /obj/effect/floor_decal/corner/red{
 	dir = 6
 	},
 /obj/item/geiger/wall/east,
+/obj/effect/floor_decal/corner/paleblue,
 /turf/simulated/floor/tiled,
 /area/security/brig/observation)
 "rFr" = (
@@ -74444,13 +74461,7 @@
 /obj/structure/cable/green{
 	icon_state = "2-8"
 	},
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
 /obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals_central7{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/old_tile/white,
@@ -80280,10 +80291,10 @@
 /obj/structure/window/reinforced/tinted/frosted{
 	dir = 8
 	},
-/obj/structure/table/glass,
 /obj/effect/floor_decal/milspec/color/red/half{
 	dir = 10
 	},
+/obj/machinery/washing_machine,
 /turf/simulated/floor/tiled/freezer,
 /area/muriki/bathroom/security)
 "tVs" = (
@@ -80442,6 +80453,10 @@
 	name = "Anti-Material"
 	},
 /obj/effect/floor_decal/corner/black/full,
+/obj/machinery/status_display{
+	layer = 4;
+	pixel_y = -32
+	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/security/tactical/red)
 "tXr" = (
@@ -89964,10 +89979,6 @@
 /obj/machinery/door/window/brigdoor/eastright{
 	name = "Ballistics"
 	},
-/obj/machinery/status_display{
-	layer = 4;
-	pixel_y = -32
-	},
 /obj/item/gun/projectile/automatic/serdy/m4a1{
 	pixel_x = -10
 	},
@@ -90369,7 +90380,6 @@
 /obj/effect/floor_decal/corner/red/full{
 	dir = 1
 	},
-/obj/item/gun/energy/bfgtaser,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/security/tactical/red)
 "wYW" = (
@@ -91404,7 +91414,6 @@
 /obj/effect/floor_decal/corner/red/full,
 /obj/structure/closet/secure_closet/brigmedic,
 /obj/item/stack/medical/splint,
-/obj/item/storage/pouch/baton/full,
 /obj/item/storage/backpack/dufflebag/syndie/med{
 	name = "combat medic dufflebag"
 	},
@@ -91418,6 +91427,13 @@
 /obj/item/reagent_containers/hypospray/autoinjector/biginjector/combat_recovery,
 /obj/item/reagent_containers/hypospray/autoinjector/biginjector/combat_recovery,
 /obj/item/reagent_containers/hypospray/autoinjector/biginjector/combat_recovery,
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/paleblue,
+/obj/item/clothing/accessory/bodycam,
+/obj/item/clothing/accessory/holster/waist/lanyard,
+/obj/item/melee/baton/loaded,
 /turf/simulated/floor/tiled,
 /area/security/brig/observation)
 "xpE" = (
@@ -93809,7 +93825,6 @@
 /turf/simulated/floor/tiled,
 /area/security/detectives_office)
 "yhn" = (
-/obj/structure/table/rack,
 /obj/structure/window/reinforced{
 	dir = 4
 	},
@@ -93818,21 +93833,10 @@
 	req_access = null;
 	req_one_access = list(1)
 	},
-/obj/item/clothing/shoes/leg_guard/combat,
-/obj/item/clothing/shoes/leg_guard/combat,
-/obj/item/clothing/shoes/leg_guard/combat,
-/obj/item/clothing/gloves/arm_guard/combat,
-/obj/item/clothing/gloves/arm_guard/combat,
-/obj/item/clothing/gloves/arm_guard/combat,
-/obj/item/clothing/suit/armor/combat,
-/obj/item/clothing/suit/armor/combat,
-/obj/item/clothing/suit/armor/combat,
-/obj/item/clothing/head/helmet/combat,
-/obj/item/clothing/head/helmet/combat,
-/obj/item/clothing/head/helmet/combat,
 /obj/effect/floor_decal/corner/red/full{
 	dir = 4
 	},
+/obj/machinery/vending/security_armor,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/security/tactical/red)
 "yhr" = (
@@ -129292,7 +129296,7 @@ amB
 amn
 fWC
 iqv
-bLr
+qah
 dHT
 dHT
 dHT
@@ -129454,7 +129458,7 @@ mrc
 qah
 csu
 jkt
-bLr
+qah
 lnx
 dHT
 dHT
@@ -129778,8 +129782,8 @@ coJ
 wRV
 wRV
 oxG
-bLr
-iXR
+qah
+aWP
 iXR
 aSx
 dHT
@@ -129940,7 +129944,7 @@ aWa
 aWa
 aWa
 aWa
-hnb
+aWa
 aTT
 iXR
 aTS
@@ -129948,7 +129952,7 @@ dHT
 dHT
 dHT
 dHT
-aSu
+dHT
 vEe
 vwv
 xgD
@@ -130102,9 +130106,9 @@ aWa
 jYw
 aWa
 jYw
-hnb
+aWa
 aTU
-iXR
+aWO
 aTS
 dHT
 dHT
@@ -130264,8 +130268,8 @@ aWa
 azZ
 aWa
 azZ
-hnb
-mlS
+aWa
+aWQ
 mlS
 uEy
 mlS
@@ -130426,7 +130430,7 @@ xQW
 aAa
 jEi
 pYn
-hnb
+aWa
 aRa
 aRh
 aSy
@@ -130588,13 +130592,13 @@ qhj
 aAc
 auc
 tVq
-hnb
+aWa
 aRb
 iXR
 aSy
 aTM
 aTM
-aTM
+aWN
 iXR
 nYo
 vEe
@@ -130750,7 +130754,7 @@ poe
 poe
 poe
 uoc
-hnb
+aWa
 aTV
 iXR
 aSy
@@ -130912,7 +130916,7 @@ iyQ
 iyQ
 iyQ
 fIs
-hnb
+aWa
 eTP
 iXR
 aSy
@@ -131074,7 +131078,7 @@ aWa
 aWa
 aWa
 aWa
-hnb
+aWa
 aRc
 iXR
 aSy
@@ -132053,8 +132057,8 @@ ala
 dxZ
 apb
 fyW
-onG
-afL
+aWM
+aWL
 eLh
 dYc
 aHh
@@ -135926,7 +135930,7 @@ wRM
 wjd
 iMm
 dZW
-gZH
+avS
 scd
 gZH
 kNm

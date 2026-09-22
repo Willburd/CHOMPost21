@@ -21199,6 +21199,10 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/item/roller/massage,
+/obj/item/roller/massage,
+/obj/item/roller/massage,
+/obj/structure/table/rack,
 /turf/simulated/floor/wood,
 /area/muriki/crew/judge)
 "aOG" = (
@@ -31713,10 +31717,6 @@
 /obj/item/implantcase/tracking,
 /obj/item/implantcase/tracking,
 /obj/item/implantcase/tracking,
-/obj/item/implantcase/tracking,
-/obj/item/implantcase/tracking,
-/obj/item/implantcase/tracking,
-/obj/item/implantcase/tracking,
 /obj/item/implanter,
 /turf/simulated/floor/tiled/milspec/sterile,
 /area/security/surgery)
@@ -38633,7 +38633,6 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/firedoor/border_only,
-/obj/item/grenade/chem_grenade/teargas,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/secelevbasement)
 "bva" = (

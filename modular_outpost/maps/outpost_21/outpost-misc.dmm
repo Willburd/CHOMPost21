@@ -4538,6 +4538,14 @@
 	icon_state = "dark"
 	},
 /area/syndicate_mothership)
+"iS" = (
+/obj/structure/table/rack,
+/obj/item/gun/energy/plasmastun,
+/obj/item/gun/energy/plasmastun,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
 "iT" = (
 /turf/unsimulated/wall/fakeglass,
 /area/ninja_dojo/dojo)
@@ -17120,9 +17128,7 @@
 /area/syndicate_mothership)
 "IL" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/machinery/vending/security_armor{
-	req_access = null
-	},
+/obj/machinery/vending/security_armory_armor,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -17171,11 +17177,6 @@
 "IP" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/table/rack,
-/obj/item/clothing/head/helmet/swat,
-/obj/item/clothing/head/helmet/swat,
-/obj/item/clothing/head/helmet/swat,
-/obj/item/clothing/head/helmet/swat,
-/obj/item/clothing/head/helmet/swat,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -59602,7 +59603,7 @@ mN
 ab
 yb
 hm
-kQ
+iS
 bM
 fg
 fm
