@@ -204,7 +204,7 @@
 /area/offworld/orbital/station/aux_equipment)
 "ax" = (
 /turf/simulated/wall/r_wall,
-/area/offworld/orbital/station/halls/lower/aft)
+/area/maintenance/orbital/lower/aft)
 "ay" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
@@ -655,7 +655,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/offworld/orbital/station/halls/lower/aft)
+/area/maintenance/orbital/lower/aft)
 "bq" = (
 /turf/simulated/floor/plating,
 /area/maintenance/orbital/lower/starboard)
@@ -1159,7 +1159,7 @@
 "cw" = (
 /obj/machinery/light/small,
 /turf/simulated/floor/plating,
-/area/offworld/orbital/station/halls/lower/aft)
+/area/maintenance/orbital/lower/aft)
 "cx" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -3524,7 +3524,7 @@
 /area/offworld/orbital/station/beam_emitter)
 "ic" = (
 /turf/simulated/floor/plating,
-/area/offworld/orbital/station/halls/lower/aft)
+/area/maintenance/orbital/lower/aft)
 "id" = (
 /obj/machinery/ai_status_display{
 	pixel_y = 32
@@ -4306,7 +4306,7 @@
 "jz" = (
 /obj/machinery/door/airlock/maintenance/int,
 /turf/simulated/floor/plating,
-/area/offworld/orbital/station/halls/lower/aft)
+/area/maintenance/orbital/lower/aft)
 "jA" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -5860,7 +5860,7 @@
 	name = "Lasertag light fixture"
 	},
 /turf/simulated/floor/plating,
-/area/offworld/orbital/station/halls/lower/aft)
+/area/maintenance/orbital/lower/aft)
 "mp" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 6
@@ -7575,7 +7575,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/plating,
-/area/offworld/orbital/station/halls/lower/aft)
+/area/maintenance/orbital/lower/aft)
 "pH" = (
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging{
 	dir = 4
@@ -7705,6 +7705,11 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "0-5"
+	},
+/obj/item/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -21
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/offworld/orbital/xenoarcheology/blackhole)
@@ -11111,13 +11116,13 @@
 	dir = 8
 	},
 /turf/simulated/floor/plating,
-/area/offworld/orbital/station/halls/lower/aft)
+/area/maintenance/orbital/lower/aft)
 "wE" = (
 /obj/structure/window/maintenance_panel{
 	dir = 1
 	},
 /turf/simulated/floor/plating,
-/area/offworld/orbital/station/halls/lower/aft)
+/area/maintenance/orbital/lower/aft)
 "wF" = (
 /obj/structure/sign/warning/deathsposal,
 /turf/simulated/wall/r_wall,
@@ -17022,7 +17027,7 @@
 /obj/machinery/light/small,
 /obj/machinery/floodlight,
 /turf/simulated/floor/plating,
-/area/offworld/orbital/station/halls/lower/aft)
+/area/maintenance/orbital/lower/aft)
 "HB" = (
 /obj/structure/disposalpipe/trunk{
 	dir = 4
@@ -17043,16 +17048,15 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/obj/item/radio/intercom{
-	dir = 4;
-	name = "Common Channel";
-	pixel_x = 21
+/obj/structure/extinguisher_cabinet{
+	dir = 8;
+	pixel_x = 30
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/offworld/orbital/xenoarcheology/blackhole)
 "HD" = (
 /turf/simulated/mineral/ignore_cavegen,
-/area/offworld/orbital/station/halls/lower/aft)
+/area/maintenance/orbital/lower/aft)
 "HE" = (
 /obj/machinery/alarm{
 	dir = 1;
@@ -17069,7 +17073,7 @@
 "HG" = (
 /obj/machinery/power/thermoregulator,
 /turf/simulated/floor/plating,
-/area/offworld/orbital/station/halls/lower/aft)
+/area/maintenance/orbital/lower/aft)
 "HH" = (
 /obj/structure/sign/warning/ionizing,
 /turf/simulated/wall,
@@ -17077,7 +17081,7 @@
 "HI" = (
 /obj/machinery/floodlight,
 /turf/simulated/floor/plating,
-/area/offworld/orbital/station/halls/lower/aft)
+/area/maintenance/orbital/lower/aft)
 "HJ" = (
 /obj/structure/sink{
 	dir = 8;
@@ -17098,6 +17102,10 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "1-2"
+	},
+/obj/machinery/light_switch{
+	pixel_x = 24;
+	pixel_y = 26
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/offworld/orbital/xenoarcheology/blackhole)
@@ -17352,7 +17360,7 @@
 "Ia" = (
 /obj/structure/trash_pile,
 /turf/simulated/floor/wood/alt/broken,
-/area/offworld/orbital/station/halls/lower/aft)
+/area/maintenance/orbital/lower/aft)
 "Ib" = (
 /obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/corner/orange{
@@ -17378,7 +17386,7 @@
 /turf/simulated/wall/r_wall{
 	can_open = 1
 	},
-/area/offworld/orbital/station/halls/lower/aft)
+/area/maintenance/orbital/lower/aft)
 "Ie" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/table/standard,
@@ -17398,11 +17406,11 @@
 "If" = (
 /obj/random/flashlight,
 /turf/simulated/floor/wood/alt/broken,
-/area/offworld/orbital/station/halls/lower/aft)
+/area/maintenance/orbital/lower/aft)
 "Ig" = (
 /obj/effect/floorbreak,
 /turf/simulated/floor/wood/alt/broken,
-/area/offworld/orbital/station/halls/lower/aft)
+/area/maintenance/orbital/lower/aft)
 "Ih" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -17527,23 +17535,23 @@
 "Iw" = (
 /obj/random/maintenance,
 /turf/simulated/floor/wood/alt,
-/area/offworld/orbital/station/halls/lower/aft)
+/area/maintenance/orbital/lower/aft)
 "Ix" = (
 /obj/effect/floorbreak,
 /obj/machinery/light/small,
 /turf/simulated/floor/plating,
-/area/offworld/orbital/station/halls/lower/aft)
+/area/maintenance/orbital/lower/aft)
 "Iy" = (
 /turf/simulated/floor/wood/alt/broken,
-/area/offworld/orbital/station/halls/lower/aft)
+/area/maintenance/orbital/lower/aft)
 "Iz" = (
 /obj/random/junk,
 /turf/simulated/floor/wood/alt,
-/area/offworld/orbital/station/halls/lower/aft)
+/area/maintenance/orbital/lower/aft)
 "IA" = (
 /obj/effect/floorbreak,
 /turf/simulated/floor/wood/alt,
-/area/offworld/orbital/station/halls/lower/aft)
+/area/maintenance/orbital/lower/aft)
 "IB" = (
 /obj/effect/floor_decal/corner/purple/full,
 /obj/machinery/light{
@@ -17816,7 +17824,7 @@
 "Jb" = (
 /mob/living/simple_mob/vore/alienanimals/jil,
 /turf/simulated/floor/wood/alt/broken,
-/area/offworld/orbital/station/halls/lower/aft)
+/area/maintenance/orbital/lower/aft)
 "Jc" = (
 /obj/structure/catwalk,
 /obj/structure/cable/yellow{
@@ -17830,7 +17838,7 @@
 "Jd" = (
 /obj/random/junk,
 /turf/simulated/floor/plating,
-/area/offworld/orbital/station/halls/lower/aft)
+/area/maintenance/orbital/lower/aft)
 "Je" = (
 /obj/machinery/firealarm{
 	dir = 8;
@@ -17968,11 +17976,11 @@
 /area/offworld/orbital/xenoarcheology/exp_prep)
 "Js" = (
 /turf/simulated/floor/wood/alt,
-/area/offworld/orbital/station/halls/lower/aft)
+/area/maintenance/orbital/lower/aft)
 "Jt" = (
 /obj/random/maintenance,
 /turf/simulated/floor/wood/alt/broken,
-/area/offworld/orbital/station/halls/lower/aft)
+/area/maintenance/orbital/lower/aft)
 "Ju" = (
 /obj/effect/floor_decal/corner/purple{
 	dir = 9
@@ -18285,11 +18293,11 @@
 "Kc" = (
 /mob/living/simple_mob/vore/alienanimals/jil,
 /turf/simulated/floor/wood/alt,
-/area/offworld/orbital/station/halls/lower/aft)
+/area/maintenance/orbital/lower/aft)
 "Kd" = (
 /obj/structure/trash_pile,
 /turf/simulated/floor/plating,
-/area/offworld/orbital/station/halls/lower/aft)
+/area/maintenance/orbital/lower/aft)
 "Ke" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/maintenance/rnd{
@@ -18661,16 +18669,16 @@
 "KO" = (
 /obj/effect/floorbreak,
 /turf/simulated/floor/plating,
-/area/offworld/orbital/station/halls/lower/aft)
+/area/maintenance/orbital/lower/aft)
 "KP" = (
 /obj/random/flashlight,
 /turf/simulated/floor/plating,
-/area/offworld/orbital/station/halls/lower/aft)
+/area/maintenance/orbital/lower/aft)
 "KQ" = (
 /obj/effect/floorbreak,
 /obj/structure/trash_pile,
 /turf/simulated/floor/wood/alt,
-/area/offworld/orbital/station/halls/lower/aft)
+/area/maintenance/orbital/lower/aft)
 "KR" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 9
@@ -19195,7 +19203,6 @@
 /turf/simulated/floor/plating,
 /area/offworld/orbital/xenoarcheology)
 "LV" = (
-/obj/structure/grille,
 /obj/structure/grille,
 /obj/structure/window/reinforced{
 	dir = 4;
@@ -21048,7 +21055,7 @@
 	icon_state = "0-1"
 	},
 /turf/simulated/floor/plating,
-/area/offworld/orbital/station/halls/lower/aft)
+/area/maintenance/orbital/lower/aft)
 "Pl" = (
 /turf/simulated/wall,
 /area/offworld/orbital/phoronics)
@@ -21066,7 +21073,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating,
-/area/offworld/orbital/station/halls/lower/aft)
+/area/maintenance/orbital/lower/aft)
 "Po" = (
 /obj/machinery/door/airlock/maintenance/int,
 /obj/machinery/door/firedoor/glass,
