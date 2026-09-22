@@ -645,6 +645,7 @@ EXTERIOR_AREA_BEHAVIOR(/area/offworld/orbital/exterior/starboard_solars)
 
 /area/offworld/orbital/phoronics/pressure_release
 	name = "\improper Orbital Phoronics Pressure Release Chamber"
+	icon_state = "cyablatri"
 	sound_env = SMALL_ENCLOSED
 	flags = /area/muriki/bathroom::flags
 	use_emergency_overlay = TRUE
@@ -660,3 +661,36 @@ EXTERIOR_AREA_BEHAVIOR(/area/offworld/orbital/exterior/starboard_solars)
 /area/offworld/orbital/phoronics/airlock
 	name = "\improper Orbital Phoronics Airlock"
 	icon_state = "decontamination"
+
+//
+//-----------------------------------------------------------------------
+// Orbital : Xenoarch
+
+/area/offworld/orbital/xenoarcheology
+	name = "\improper Orbital Xenoarcheology"
+	icon_state = "xeno_lab"
+
+/area/offworld/orbital/xenoarcheology/isolation_a
+	name = "Orbital Xenoarcheology Isolation A"
+
+/area/offworld/orbital/xenoarcheology/isolation_b
+	name = "Orbital Xenoarcheology Isolation B"
+
+/area/offworld/orbital/xenoarcheology/isolation_c
+	name = "Orbital Xenoarcheology Isolation C"
+
+/area/offworld/orbital/xenoarcheology/longtermstorage
+	name = "Orbital Xenoarcheology Long-Term Anomalous Storage"
+	icon_state = "locker"
+
+/area/offworld/orbital/xenoarcheology/exp_prep
+	name = "Orbital Xenoarcheology Expedition Preperation"
+	icon_state = "dark128"
+
+/area/offworld/orbital/xenoarcheology/blackhole
+	name = "\improper Orbital Black Hole"
+	icon_state = "cyablatri"
+	sound_env = SMALL_ENCLOSED
+	flags = /area/muriki/bathroom::flags
+	use_emergency_overlay = TRUE
+	color_grading = COLORTINT_CHILL
