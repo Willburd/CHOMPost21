@@ -118,6 +118,7 @@
 		/area/offworld/orbital/xenoarcheology/isolation_a,
 		/area/offworld/orbital/xenoarcheology/isolation_b,
 		/area/offworld/orbital/xenoarcheology/isolation_c,
+		/area/security/mechent,
 		)
 
 	var/list/forced_hallway = list(
@@ -254,7 +255,6 @@
 		/area/teleporter/engineering,
 		/area/security/nuke_storage,
 		/area/muriki/tramstation/waste,
-		/area/security/mechent,
 		/area/engineering/engine_smes,
 		/area/engineering/gravgen,
 		/area/quartermaster/warehouse,
