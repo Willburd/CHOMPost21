@@ -89,6 +89,9 @@ SUBSYSTEM_DEF(outpost_voice)
 /datum/controller/subsystem/outpost_voice/proc/assemble_sequence(list/clip_list, post_delay)
 	return list(list(clip_list, post_delay)) // Wrapped list for easy sequence addition
 
+/datum/controller/subsystem/outpost_voice/proc/cap_sequence(datum/callback/callback, post_delay)
+	return list(callback, post_delay) // Wrap up the callback
+
 /datum/controller/subsystem/outpost_voice/proc/play_sequence(list/full_sequence)
 	var/list/sequence_data = full_sequence[1]
 	play_sentance(sequence_data[1])
@@ -96,11 +99,22 @@ SUBSYSTEM_DEF(outpost_voice)
 	// Next sequence
 	full_sequence[1] = null
 	full_sequence -= null
-	if(!length(full_sequence))
+	if(length(full_sequence) == 2)
+		var/datum/callback/calling = full_sequence[1]
+		var/time = full_sequence[2]
+		if(istype(calling))
+			addtimer(calling, time, TIMER_DELETE_ME)
 		return
 	addtimer(CALLBACK(src, PROC_REF(play_sequence), full_sequence), delay)
 
-/datum/controller/subsystem/outpost_voice/proc/event_countdown(minutes, callout_id, do_seconds_countdown = TRUE, do_all_minutes = TRUE)
+/// Dynamically counts downward from a set amounts of minutes, then seconds in 10s, till it reaches 10 itself, then all remaining seconds. Customizable to fit most needs.
+/datum/controller/subsystem/outpost_voice/proc/event_countdown(minutes, callout_id, do_seconds_countdown = TRUE, do_all_minutes = TRUE, datum/callback/callback = null)
+	var/final_minute_gap = 1 MINUTE // Gap from 1 minute to next number
+	if(do_seconds_countdown == 1) // include all 10s
+		final_minute_gap = 10 SECONDS
+	if(do_seconds_countdown == 2) // only include last 10
+		final_minute_gap = 50 SECONDS
+
 	var/seq = list()
 	if(do_all_minutes)
 		// Call out all minutes on way
@@ -108,21 +122,20 @@ SUBSYSTEM_DEF(outpost_voice)
 			if(minutes > 1)
 				seq += assemble_sequence(list(number_to_id["[minutes]"],"minutes",callout_id), 1 MINUTE)
 			else
-				seq += assemble_sequence(list(number_to_id["[minutes]"],"minute",callout_id), 10 SECONDS)
+				seq += assemble_sequence(list("one","minute",callout_id), final_minute_gap)
 			minutes--
 	else
 		// Only call out total time, and then 1 minute before
 		if(minutes > 1)
-			seq += assemble_sequence(list(number_to_id["[minutes]"],"minutes",callout_id), minutes MINUTES)
-			seq += assemble_sequence(list("one","minute",callout_id), 10 SECONDS)
-		else
-			seq += assemble_sequence(list(number_to_id["[minutes]"],"minute",callout_id), 10 SECONDS)
+			seq += assemble_sequence(list(number_to_id["[minutes]"],"minutes",callout_id), (minutes - 1) MINUTES)
+		seq += assemble_sequence(list("one","minute",callout_id), final_minute_gap)
 
-	if(do_seconds_countdown) // Final countdown isn't always desired
-		seq += assemble_sequence(list("fifty","seconds",callout_id), 10 SECONDS)
-		seq += assemble_sequence(list("fourty","seconds",callout_id), 10 SECONDS)
-		seq += assemble_sequence(list("thirty","seconds",callout_id), 10 SECONDS)
-		seq += assemble_sequence(list("twenty","seconds",callout_id), 10 SECONDS)
+	if(do_seconds_countdown > 0) // Final countdown isn't always desired
+		if(do_seconds_countdown == 1)
+			seq += assemble_sequence(list("fifty","seconds",callout_id), 10 SECONDS)
+			seq += assemble_sequence(list("fourty","seconds",callout_id), 10 SECONDS)
+			seq += assemble_sequence(list("thirty","seconds",callout_id), 10 SECONDS)
+			seq += assemble_sequence(list("twenty","seconds",callout_id), 10 SECONDS)
 		seq += assemble_sequence(list("ten"), 1 SECOND)
 		seq += assemble_sequence(list("nine"), 1 SECOND)
 		seq += assemble_sequence(list("eight"), 1 SECOND)
@@ -134,9 +147,13 @@ SUBSYSTEM_DEF(outpost_voice)
 		seq += assemble_sequence(list("two"), 1 SECOND)
 		seq += assemble_sequence(list("one"), 1 SECOND)
 		seq += assemble_sequence(list("zero"), 1 SECOND)
+		seq += cap_sequence(callback, 1)
+	else
+		seq += cap_sequence(callback, 1 MINUTE)
 	play_sequence(seq)
 
-/datum/controller/subsystem/outpost_voice/proc/event_seconds_countdown(seconds, callout_id)
+/// Provides a countdown for a single minute, every 10 seconds till 10 seconds itself, then all remaining to 0
+/datum/controller/subsystem/outpost_voice/proc/event_seconds_countdown(seconds, callout_id, datum/callback/callback)
 	var/seq = list()
 	if(seconds >= 60)
 		seq += assemble_sequence(list("one","minute",callout_id), 10 SECONDS)
@@ -159,4 +176,6 @@ SUBSYSTEM_DEF(outpost_voice)
 	seq += assemble_sequence(list("two"), 1 SECOND)
 	seq += assemble_sequence(list("one"), 1 SECOND)
 	seq += assemble_sequence(list("zero"), 1 SECOND)
+
+	seq += cap_sequence(callback, 1)
 	play_sequence(seq)

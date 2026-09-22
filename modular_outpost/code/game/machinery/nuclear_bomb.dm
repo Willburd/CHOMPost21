@@ -121,7 +121,7 @@
 	set_security_level(SEC_LEVEL_DELTA)
 	if(countdown_timer)
 		deltimer(countdown_timer, SStimer)
-	countdown_timer = addtimer(CALLBACK(src, PROC_REF(explode)), countdown_start_minutes, TIMER_DELETE_ME|TIMER_STOPPABLE)
+	countdown_timer = addtimer(CALLBACK(src, PROC_REF(fake_explode)), countdown_start_minutes, TIMER_DELETE_ME|TIMER_STOPPABLE)
 	cache_full_time = timeleft(countdown_timer, SStimer) // we need to do this for dumb reasons
 	update_icon()
 	announced = FALSE
@@ -146,7 +146,7 @@
 		if(countdown_too_far_gone() && !announced)
 			GLOB.priority_announcement.Announce("The self-destruct sequence has reached terminal countdown, abort systems have been disabled.", "Self-Destruct Control Computer")
 			announced = TRUE
-			SSoutpost_voice.event_countdown(self_destruct_cutoff / (1 MINUTES), "to_detonation", TRUE, TRUE) // C I N E M A T I C   V O I C E
+			SSoutpost_voice.event_countdown(self_destruct_cutoff / (1 MINUTES), "to_detonation", 1, TRUE, CALLBACK(src, PROC_REF(explode))) // C I N E M A T I C   V O I C E
 	return 0
 
 /obj/machinery/nuclearbomb/station/proc/has_timer()
@@ -262,6 +262,9 @@
 	)
 
 	return data
+
+/obj/machinery/nuclearbomb/station/proc/fake_explode()
+	return // Exists just for a timer, the countdown itself handles the explode call
 
 /obj/machinery/nuclearbomb/station/explode()
 	if(!has_timer() || safety || !auth || !yes_code)
