@@ -47,10 +47,13 @@
 	SEND_SIGNAL(src,COMSIG_REMOTE_VIEW_CLEAR)
 
 /datum/data/pda/app/uav_control/proc/get_signal_to(atom/movable/AM)
-	if(get_z(tgui_host()) in using_map.get_map_levels(get_z(AM), FALSE))
-		if(get_dist(tgui_host(), AM) < adhoc_range) // strong range
+	var/atom/host = tgui_host()
+	if(is_jammed(host) || is_jammed(AM)) // Nope
+		return 0
+	if(get_z(host) in using_map.get_map_levels(get_z(AM), FALSE))
+		if(get_dist(host, AM) < adhoc_range) // strong range
 			return 2
-		if(get_dist(tgui_host(), AM) < adhoc_range + 10) // weak range
+		if(get_dist(host, AM) < adhoc_range + 10) // weak range
 			return 1
 	return 0 // nope
 
