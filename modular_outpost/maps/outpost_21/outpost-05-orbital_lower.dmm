@@ -3881,6 +3881,20 @@
 /obj/effect/floor_decal/corner/black/bordercorner,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/lower/port)
+"iL" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 4
+	},
+/obj/item/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = 22
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/lower/port)
 "iM" = (
 /obj/item/radio/intercom{
 	name = "Station Intercom (General)";
@@ -5719,6 +5733,19 @@
 	},
 /turf/space,
 /area/space)
+"lT" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/black/border{
+	dir = 4
+	},
+/obj/machinery/alarm{
+	dir = 8;
+	pixel_x = 26
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/lower/port)
 "lU" = (
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging,
 /obj/structure/railing/grey,
@@ -8613,9 +8640,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/obj/structure/cable/green{
-	icon_state = "1-8"
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -8662,23 +8686,6 @@
 	},
 /obj/effect/floor_decal/corner/black/border{
 	dir = 4
-	},
-/turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/halls/lower/port)
-"rz" = (
-/obj/machinery/power/apc{
-	dir = 1;
-	name = "north bump";
-	pixel_y = 24
-	},
-/obj/structure/cable/green{
-	icon_state = "0-2"
-	},
-/obj/effect/floor_decal/borderfloor/corner{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/lightgrey/bordercorner{
-	dir = 1
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/lower/port)
@@ -40392,7 +40399,7 @@ OI
 Po
 rG
 rG
-rz
+Gc
 rw
 rs
 ro
@@ -40567,8 +40574,8 @@ Ds
 CQ
 kc
 jX
-NX
-MZ
+lT
+iL
 NX
 MZ
 NX
