@@ -111,6 +111,13 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/reinforced,
 /area/rnd/xenobiology/xenobioh)
+"aav" = (
+/obj/effect/floor_decal/corner/purple{
+	dir = 6
+	},
+/obj/machinery/floodlight,
+/turf/simulated/floor/tiled/white,
+/area/rnd/hallway/lowmain)
 "aaw" = (
 /obj/structure/grille,
 /obj/machinery/door/blast/regular{
@@ -19572,6 +19579,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/disposalpipe/segment,
+/obj/machinery/floodlight{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/lowmain)
 "aLV" = (
@@ -69290,6 +69300,9 @@
 /obj/structure/cable/orange{
 	icon_state = "2-8"
 	},
+/obj/machinery/floodlight{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/lowmain)
 "cLh" = (
@@ -84435,10 +84448,6 @@
 /obj/effect/landmark/event_spawn/maintpred,
 /turf/simulated/floor,
 /area/maintenance/oldbridge)
-"oIJ" = (
-/obj/machinery/floodlight,
-/turf/simulated/floor/plating,
-/area/maintenance/scielevbasement)
 "oJk" = (
 /obj/structure/bed/chair{
 	dir = 4
@@ -142037,7 +142046,7 @@ def
 alc
 gTh
 kKh
-oIJ
+adE
 agc
 afb
 apw
@@ -144472,7 +144481,7 @@ asS
 cOi
 asS
 aEu
-apy
+aav
 apy
 mac
 aBa
@@ -145605,8 +145614,8 @@ aaO
 aat
 uEM
 uEM
-rOS
-rOS
+aGu
+aGu
 uEM
 aPT
 ihP
