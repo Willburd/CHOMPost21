@@ -115,6 +115,9 @@
 		/area/rnd/research/anomaly,
 		/area/rnd/research/exp_prep,
 		/area/rnd/research/medical,
+		/area/offworld/orbital/xenoarcheology/isolation_a,
+		/area/offworld/orbital/xenoarcheology/isolation_b,
+		/area/offworld/orbital/xenoarcheology/isolation_c,
 		)
 
 	var/list/forced_hallway = list(
