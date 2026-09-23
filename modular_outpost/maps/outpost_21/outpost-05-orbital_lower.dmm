@@ -4066,13 +4066,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/access_shaft/lower)
-"jg" = (
-/obj/machinery/light/small{
-	light_type = /obj/item/light/bulb/blue;
-	name = "Lasertag light fixture"
-	},
-/turf/simulated/floor/plating,
-/area/maintenance/orbital/lower/aft)
 "jh" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/cable/green{
@@ -17431,12 +17424,12 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/stairs_lower)
 "HQ" = (
-/obj/structure/table/steel,
 /obj/item/geiger/wall/south,
 /obj/effect/floor_decal/corner/brown{
 	dir = 10
 	},
 /obj/effect/floor_decal/corner/purple,
+/obj/machinery/rnd/production/protolathe/department/engineering,
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/xenoarcheology/exp_prep)
 "HR" = (
@@ -17448,6 +17441,7 @@
 	dir = 10
 	},
 /obj/effect/floor_decal/corner/purple,
+/obj/machinery/autolathe,
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/xenoarcheology/exp_prep)
 "HS" = (
@@ -18205,6 +18199,7 @@
 /area/offworld/orbital/station/beam_emitter)
 "Jm" = (
 /obj/structure/table/standard,
+/obj/item/folder,
 /obj/item/tape_roll,
 /obj/item/tape_roll,
 /turf/simulated/floor/tiled/monotile,
@@ -18956,8 +18951,7 @@
 /turf/simulated/floor/tiled/monotile,
 /area/offworld/orbital/xenoarcheology)
 "KJ" = (
-/obj/structure/table/standard,
-/obj/item/folder,
+/obj/machinery/rnd/destructive_analyzer,
 /turf/simulated/floor/tiled/monotile,
 /area/offworld/orbital/xenoarcheology)
 "KK" = (
@@ -19255,7 +19249,6 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/rust_tool_storage)
 "Li" = (
-/obj/machinery/recharge_station,
 /obj/machinery/light{
 	dir = 8
 	},
@@ -19265,6 +19258,7 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 1
 	},
+/obj/machinery/recharge_station,
 /turf/simulated/floor/tiled,
 /area/offworld/orbital/xenoarcheology)
 "Lj" = (
@@ -20486,6 +20480,9 @@
 /area/offworld/orbital/xenoarcheology)
 "Nl" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/structure/bed/chair/office/dark{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/offworld/orbital/xenoarcheology)
 "Nm" = (
@@ -20493,6 +20490,9 @@
 	dir = 6
 	},
 /obj/effect/floor_decal/corner/purple,
+/obj/machinery/computer/supply_request_computeralt/cargo{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/offworld/orbital/xenoarcheology)
 "Nn" = (
@@ -40330,7 +40330,7 @@ HM
 bo
 iL
 bq
-jg
+ac
 bo
 eW
 eW
