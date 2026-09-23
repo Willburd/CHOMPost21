@@ -694,6 +694,11 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/stairs_lower)
+"bv" = (
+/obj/effect/floor_decal/industrial/warning,
+/obj/effect/floor_decal/industrial/caution/yellow,
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
 "bw" = (
 /turf/simulated/mineral{
 	ignore_cavegen = 1
@@ -2291,6 +2296,10 @@
 /obj/random/maintenance/medical,
 /turf/simulated/floor/wood/alt,
 /area/maintenance/orbital/lower/starboard)
+"fm" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/tiled/monotile,
+/area/offworld/orbital/xenoarcheology)
 "fn" = (
 /obj/item/radio/intercom{
 	dir = 1;
@@ -2420,6 +2429,10 @@
 	},
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/beam_emitter)
+"fH" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/turf/simulated/floor/tiled/monotile,
+/area/offworld/orbital/xenoarcheology)
 "fI" = (
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/rust_entry)
@@ -3629,6 +3642,9 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/atmos_primary)
+"im" = (
+/turf/simulated/floor/tiled/monotile,
+/area/offworld/orbital/xenoarcheology)
 "in" = (
 /obj/machinery/door/airlock/glass_engineeringatmos,
 /obj/machinery/door/firedoor/glass,
@@ -5264,6 +5280,14 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/stairs_lower)
+"lf" = (
+/obj/machinery/portable_atmospherics/canister/phoron,
+/obj/effect/floor_decal/industrial/outline/purple,
+/obj/structure/sign/warning/deathsposal{
+	pixel_x = -32
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/offworld/orbital/phoronics/gas_storage)
 "lg" = (
 /obj/structure/cable/yellow{
 	icon_state = "2-9"
@@ -5683,6 +5707,9 @@
 /obj/effect/floor_decal/corner/purple,
 /obj/structure/cable/green{
 	icon_state = "4-8"
+	},
+/obj/structure/sign/warning/deathsposal{
+	pixel_y = -32
 	},
 /turf/simulated/floor/tiled,
 /area/offworld/orbital/xenoarcheology)
@@ -11840,6 +11867,9 @@
 /obj/fiftyspawner/steel,
 /obj/fiftyspawner/steel,
 /obj/fiftyspawner/glass,
+/obj/structure/sign/warning/deathsposal{
+	pixel_x = -32
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/phoronics/overflow_storage)
 "xZ" = (
@@ -17603,6 +17633,9 @@
 	dir = 6
 	},
 /obj/effect/floor_decal/corner/purple,
+/obj/structure/sign/warning/deathsposal{
+	pixel_x = 32
+	},
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/xenoarcheology/exp_prep)
 "Il" = (
@@ -17792,6 +17825,12 @@
 	dir = 10
 	},
 /obj/effect/floor_decal/corner/purple,
+/obj/structure/sign/botany{
+	desc = "Space Bathroom";
+	icon_state = "restroom";
+	name = "\improper SPACE BATHROOM";
+	pixel_y = -32
+	},
 /turf/simulated/floor/tiled,
 /area/offworld/orbital/xenoarcheology)
 "ID" = (
@@ -17926,6 +17965,7 @@
 /area/offworld/orbital/xenoarcheology)
 "IO" = (
 /obj/effect/floor_decal/industrial/warning,
+/obj/effect/floor_decal/industrial/stand_clear/yellow,
 /turf/simulated/floor/tiled,
 /area/offworld/orbital/xenoarcheology)
 "IP" = (
@@ -18266,6 +18306,9 @@
 	dir = 10
 	},
 /obj/effect/floor_decal/corner/purple,
+/obj/structure/sign/nosmoking_2{
+	pixel_y = -32
+	},
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/xenoarcheology/tank_storage)
 "Jw" = (
@@ -18279,6 +18322,10 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/corner/purple,
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = 26
+	},
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/xenoarcheology/tank_storage)
 "Jy" = (
@@ -18470,21 +18517,21 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/monotile,
 /area/offworld/orbital/xenoarcheology)
 "JS" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
 	},
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/monotile,
 /area/offworld/orbital/xenoarcheology)
 "JT" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/monotile,
 /area/offworld/orbital/xenoarcheology)
 "JU" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -18588,9 +18635,12 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 1
 	},
-/obj/machinery/firealarm{
-	dir = 8;
-	pixel_x = -26
+/obj/machinery/disposal/wall{
+	dir = 4;
+	pixel_x = -32
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/xenoarcheology/tank_storage)
@@ -18598,6 +18648,9 @@
 /obj/machinery/portable_atmospherics/canister/nitrogen,
 /obj/structure/cable/green{
 	icon_state = "4-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/xenoarcheology/tank_storage)
@@ -18611,6 +18664,10 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "1-2"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/xenoarcheology/tank_storage)
@@ -18896,7 +18953,7 @@
 /area/offworld/orbital/station/south_power_airlock)
 "KH" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/tiled,
+/turf/simulated/floor/tiled/monotile,
 /area/offworld/orbital/xenoarcheology)
 "KJ" = (
 /obj/structure/table/standard,
@@ -18942,11 +18999,7 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 1
 	},
-/obj/structure/disposalpipe/trunk{
-	dir = 4
-	},
-/obj/machinery/disposal/wall{
-	dir = 4;
+/obj/structure/sign/warning/deathsposal{
 	pixel_x = -32
 	},
 /turf/simulated/floor/tiled/white,
@@ -18960,9 +19013,6 @@
 	},
 /obj/effect/floor_decal/corner/purple{
 	dir = 1
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/xenoarcheology/tank_storage)
@@ -18980,10 +19030,7 @@
 	pixel_x = -27;
 	pixel_y = 28
 	},
-/obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
-	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/xenoarcheology/tank_storage)
 "KQ" = (
@@ -19261,14 +19308,14 @@
 /obj/machinery/atmospherics/pipe/simple/visible/universal{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/monotile,
+/obj/effect/catwalk_plated,
+/turf/simulated/floor/plating,
 /area/offworld/orbital/xenoarcheology)
 "Ln" = (
-/obj/effect/catwalk_plated,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/tiled/monotile,
 /area/offworld/orbital/xenoarcheology)
 "Lo" = (
 /obj/structure/table/standard,
@@ -19279,11 +19326,10 @@
 /turf/simulated/floor/tiled/monotile,
 /area/offworld/orbital/xenoarcheology)
 "Lp" = (
-/obj/effect/catwalk_plated,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/tiled/monotile,
 /area/offworld/orbital/xenoarcheology)
 "Lr" = (
 /obj/machinery/atmospherics/binary/pump{
@@ -19423,6 +19469,7 @@
 /obj/structure/cable/green{
 	icon_state = "0-4"
 	},
+/obj/structure/sign/warning/compressed_gas,
 /turf/simulated/floor/plating,
 /area/offworld/orbital/xenoarcheology/tank_storage)
 "LD" = (
@@ -19591,14 +19638,19 @@
 	name = "south bump";
 	pixel_y = -24
 	},
-/obj/machinery/alarm/monitor/isolation{
-	alarm_id = "orbital_isolation_one";
-	dir = 8;
-	pixel_x = 26;
-	rcon_setting = 3
-	},
 /obj/structure/cable/green{
 	icon_state = "0-5"
+	},
+/obj/structure/table/standard,
+/obj/item/anomaly_scanner,
+/obj/item/tool/wrench,
+/obj/structure/extinguisher_cabinet{
+	dir = 4;
+	pixel_x = -30;
+	pixel_y = 6
+	},
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/offworld/orbital/xenoarcheology/isolation_a)
@@ -20008,15 +20060,27 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/lower/port)
 "Ms" = (
-/obj/machinery/camera/network/engineering_outpost{
-	c_tag = "REX - Xenoarcheology Isolation A";
+/obj/machinery/power/emitter{
+	anchored = 1;
+	state = 2;
 	dir = 1
 	},
-/turf/simulated/floor/tiled,
+/obj/effect/floor_decal/industrial/warning/full,
+/obj/effect/floor_decal/industrial/outline/red,
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/plating,
 /area/offworld/orbital/xenoarcheology/isolation_a)
 "Mt" = (
 /obj/machinery/atmospherics/unary/vent_scrubber{
 	dir = 1
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/offworld/orbital/xenoarcheology/isolation_a)
@@ -20025,6 +20089,9 @@
 	icon_state = "5-10"
 	},
 /obj/machinery/light,
+/obj/structure/cable/green{
+	icon_state = "5-8"
+	},
 /turf/simulated/floor/tiled,
 /area/offworld/orbital/xenoarcheology/isolation_a)
 "Mv" = (
@@ -20324,22 +20391,22 @@
 /obj/machinery/door/airlock/maintenance/common,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/offworld/orbital/station/halls/lower/port)
-"Nb" = (
-/obj/item/geiger/wall/north,
-/turf/simulated/wall/r_wall,
-/area/offworld/orbital/xenoarcheology/isolation_a)
 "Nc" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 1
+/obj/machinery/anomaly_harvester{
+	anchored = 1
 	},
-/turf/simulated/floor/tiled,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/simulated/floor/tiled/dark,
 /area/offworld/orbital/xenoarcheology/isolation_a)
 "Nd" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 1
-	},
 /obj/machinery/atmospherics/pipe/manifold/visible/yellow{
 	dir = 8
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/stand_clear/yellow{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/offworld/orbital/xenoarcheology/isolation_a)
@@ -20354,9 +20421,6 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/rust_tool_storage)
 "Nf" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 1
-	},
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
 	dir = 4
 	},
@@ -20505,14 +20569,6 @@
 /area/offworld/orbital/station/solar_control)
 "Nt" = (
 /obj/structure/table/standard,
-/obj/item/anomaly_releaser{
-	pixel_y = -5
-	},
-/obj/item/anomaly_releaser/science,
-/obj/item/anomaly_neutralizer{
-	pixel_x = 5;
-	pixel_y = 14
-	},
 /turf/simulated/floor/tiled/dark,
 /area/offworld/orbital/xenoarcheology/isolation_a)
 "Nu" = (
@@ -20531,16 +20587,18 @@
 /area/maintenance/orbital/lower/fore)
 "Nw" = (
 /obj/machinery/atmospherics/unary/vent_pump,
-/turf/simulated/floor/tiled/dark,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/monotile,
 /area/offworld/orbital/xenoarcheology/isolation_a)
 "Nx" = (
-/obj/structure/table/standard,
-/obj/item/anomaly_scanner,
-/obj/structure/extinguisher_cabinet{
-	pixel_x = -5;
-	pixel_y = 30
+/obj/machinery/alarm/monitor/isolation{
+	alarm_id = "orbital_isolation_one";
+	rcon_setting = 3;
+	pixel_y = 26
 	},
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/tiled,
 /area/offworld/orbital/xenoarcheology/isolation_a)
 "Ny" = (
 /obj/structure/table/standard,
@@ -20729,9 +20787,24 @@
 /turf/simulated/floor/tiled,
 /area/offworld/orbital/xenoarcheology)
 "NN" = (
-/obj/machinery/anomaly_harvester,
-/obj/effect/floor_decal/industrial/outline/yellow,
-/turf/simulated/floor/tiled/dark,
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "REX - Xenoarcheology Isolation A"
+	},
+/obj/structure/table/standard,
+/obj/item/assembly/signaler/anomaly/choice,
+/obj/item/anomaly_neutralizer{
+	pixel_x = 5;
+	pixel_y = 14
+	},
+/obj/item/anomaly_releaser/science,
+/obj/item/anomaly_releaser{
+	pixel_y = -5
+	},
+/obj/item/geiger/wall/west,
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
 /area/offworld/orbital/xenoarcheology/isolation_a)
 "NO" = (
 /turf/simulated/wall/r_wall,
@@ -20934,6 +21007,10 @@
 	icon_state = "0-6"
 	},
 /obj/item/geiger/wall/north,
+/obj/structure/table/standard,
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/offworld/orbital/xenoarcheology/isolation_b)
 "Oi" = (
@@ -20993,6 +21070,7 @@
 /obj/machinery/atmospherics/pipe/manifold/visible/yellow{
 	dir = 1
 	},
+/obj/effect/floor_decal/industrial/stand_clear/yellow,
 /turf/simulated/floor/tiled,
 /area/offworld/orbital/xenoarcheology/isolation_b)
 "Oo" = (
@@ -21036,6 +21114,10 @@
 	c_tag = "REX - Xenoarcheology Isolation B";
 	dir = 8
 	},
+/obj/structure/table/standard,
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/offworld/orbital/xenoarcheology/isolation_b)
 "Os" = (
@@ -21072,6 +21154,7 @@
 /obj/machinery/atmospherics/pipe/manifold/visible/yellow{
 	dir = 1
 	},
+/obj/effect/floor_decal/industrial/stand_clear/yellow,
 /turf/simulated/floor/tiled,
 /area/offworld/orbital/xenoarcheology/isolation_c)
 "Ov" = (
@@ -21088,6 +21171,10 @@
 /obj/machinery/camera/network/engineering_outpost{
 	c_tag = "REX - Xenoarcheology Isolation C";
 	dir = 8
+	},
+/obj/structure/table/standard,
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/offworld/orbital/xenoarcheology/isolation_c)
@@ -35531,7 +35618,7 @@ bq
 bq
 Lg
 Lg
-Nb
+Lg
 Lg
 Lg
 bo
@@ -36348,7 +36435,7 @@ Lj
 KA
 JQ
 Ji
-IO
+bv
 It
 bo
 bq
@@ -36831,7 +36918,7 @@ JP
 MA
 cw
 Ln
-KF
+fm
 JR
 tz
 KJ
@@ -36992,8 +37079,8 @@ NC
 JP
 Lo
 LU
-Ix
-Nl
+im
+fH
 JS
 Jk
 Jj
@@ -41344,7 +41431,7 @@ Pf
 OI
 OH
 Fr
-Fr
+lf
 Fl
 Fd
 EY
