@@ -9270,12 +9270,6 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/port_observation)
-"rY" = (
-/obj/machinery/door/airlock/glass,
-/obj/machinery/door/firedoor/multi_tile/glass,
-/obj/machinery/door/firedoor/glass,
-/turf/simulated/floor/tiled/steel_ridged,
-/area/offworld/orbital/station/halls/fore)
 "rZ" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 6
@@ -9370,7 +9364,6 @@
 	name = "Security Wing";
 	req_one_access = list(1,40,63)
 	},
-/obj/machinery/door/firedoor/multi_tile/glass,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable/green{
@@ -41853,7 +41846,7 @@ oG
 op
 hb
 nQ
-rY
+dX
 nu
 HJ
 mO
