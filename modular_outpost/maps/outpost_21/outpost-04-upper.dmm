@@ -10765,6 +10765,14 @@
 /obj/effect/floor_decal/spline/fancy/wood/corner,
 /turf/simulated/floor/wood,
 /area/quartermaster/cargupbreak)
+"awM" = (
+/obj/effect/floor_decal/spline/plain,
+/obj/machinery/camera/network/thunder{
+	dir = 1;
+	c_tag = "Sec Boxing Ring"
+	},
+/turf/simulated/floor/boxing/gym,
+/area/security/brig/lowobservation)
 "awP" = (
 /obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/spline/fancy/wood{
@@ -44553,7 +44561,6 @@
 	default_material = "durasteel"
 	},
 /obj/item/clothing/gloves/black,
-/obj/item/tool/wirecutters,
 /turf/simulated/floor/tiled,
 /area/security/vacantoffice)
 "skn" = (
@@ -50448,6 +50455,12 @@
 /obj/structure/cable/green{
 	icon_state = "0-8"
 	},
+/obj/structure/table/standard{
+	name = "plastic table frame"
+	},
+/obj/item/clothing/accessory/bodycam/yobro,
+/obj/item/clothing/accessory/bodycam/yobro,
+/obj/item/clothing/accessory/bodycam/yobro,
 /turf/simulated/floor/tiled,
 /area/security/brig/lowobservation)
 "vjY" = (
@@ -91813,7 +91826,7 @@ pfq
 pfq
 pfq
 pfq
-abS
+awM
 wWk
 goV
 goV

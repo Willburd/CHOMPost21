@@ -35,7 +35,7 @@
 	#define JOB_ALT_CO_ASSIST_MED_OFFICER "Assistant Medical Officer"
 	#define JOB_ALT_CO_ASSIST_SEC_OFFICER "Combat Control Officer"
 	#define JOB_ALT_CO_ASSIST_ENG_OFFICER "Engineering Specialist"
-	#define JOB_ALT_CO_ASSIST_SCI_OFFICER "Command Intelligence Officer"
+	#define JOB_ALT_CO_ASSIST_SCI_OFFICER "Research Specialist"
 // Outpost 21 edit end
 
 #define JOB_HEAD_OF_SECURITY "Head of Security"

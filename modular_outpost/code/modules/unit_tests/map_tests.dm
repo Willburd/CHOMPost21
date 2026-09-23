@@ -111,6 +111,14 @@
 		/area/rnd/xenobiology/lost,
 		/area/rnd/xenobiology/xenobioh,
 		/area/rnd/xenobiology/xenobiohstore,
+		/area/rnd/xenobiology/burn,
+		/area/rnd/research/anomaly,
+		/area/rnd/research/exp_prep,
+		/area/rnd/research/medical,
+		/area/offworld/orbital/xenoarcheology/isolation_a,
+		/area/offworld/orbital/xenoarcheology/isolation_b,
+		/area/offworld/orbital/xenoarcheology/isolation_c,
+		/area/security/mechent,
 		)
 
 	var/list/forced_hallway = list(
@@ -247,7 +255,6 @@
 		/area/teleporter/engineering,
 		/area/security/nuke_storage,
 		/area/muriki/tramstation/waste,
-		/area/security/mechent,
 		/area/engineering/engine_smes,
 		/area/engineering/gravgen,
 		/area/quartermaster/warehouse,

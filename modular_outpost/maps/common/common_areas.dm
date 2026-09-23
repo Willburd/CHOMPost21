@@ -2383,7 +2383,7 @@
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
 
 /area/rnd/xenobiology/burn
-	name = "\improper Xenobiology Threat Supression"
+	name = "\improper Abandoned Xenobiology Threat Supression"
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	icon_state = "red2"
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
@@ -2407,12 +2407,12 @@
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
 
 /area/rnd/research/anomaly
-	name = "\improper Anomalous Materials Lab"
+	name = "\improper Abandoned Materials Lab"
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
 
 /area/rnd/research/medical
-	name = "\improper Xenolab First aid"
+	name = "\improper Abandoned Xenolab First aid"
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
 	flags = /area/medical/first_aid_station::flags
@@ -2450,7 +2450,7 @@
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
 
 /area/rnd/research/exp_prep
-	name = "\improper Xenolab Expedition Preperation"
+	name = "\improper Abandoned Expedition Preperation"
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
 	color_grading = COLORTINT_DIM

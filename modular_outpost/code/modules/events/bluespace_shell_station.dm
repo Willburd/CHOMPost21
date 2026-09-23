@@ -20,7 +20,6 @@
 	var/department_name = "surface facility"
 	var/list/area/grand_list_of_areas = list()
 	var/list/area/finalareas = list()
-	var/shotdelaytime = 0
 	var/seclevel = SEC_LEVEL_RED // it's the entire facility by default, all others give red alert
 
 	// regional impact limits. AKA only hit inside the box
@@ -53,36 +52,41 @@
 	set_security_level(seclevel)
 
 	// Countdown
-	if(department == -1)
-		addtimer(CALLBACK(SSoutpost_voice, TYPE_PROC_REF(/datum/controller/subsystem/outpost_voice, event_seconds_countdown), 30, "to_detonation"), 30 SECONDS, TIMER_DELETE_ME)
+	addtimer(CALLBACK(SSoutpost_voice, TYPE_PROC_REF(/datum/controller/subsystem/outpost_voice, event_seconds_countdown), 30, "to_detonation", CALLBACK(src, PROC_REF(shell_fire))), 30 SECONDS, TIMER_DELETE_ME)
 
 /datum/event/bluespace_shelling/tick()
+	return // Updated to shell_fire()
+
+/datum/event/bluespace_shelling/proc/shell_fire()
 	if(finalareas.len == 0)
 		return
 
-	if(world.time > shotdelaytime && spawncount >= 0)
-		if(spawncount > 0)
-			boom(2)
-			boom(2)
-			if(prob(20))
-				boom(2)
-			if(prob(10))
-				boom(1)
+	if(spawncount < 0)
+		// end it
+		boom(2)
+		boom(2)
+		boom(2)
+		if(prob(20))
+			boom(1)
+		if(prob(20))
+			boom(1)
+		endWhen = 0 // Now
+		GLOB.command_announcement.Announce("Cease Fire. Cease Fire. Bluespace artillery shelling has finalized. Assess damage, and begin repair operations.", "Bluespace Shelling")
+		return
 
-			if(spawncount == 1)
-				GLOB.command_announcement.Announce("Attention [station_name()]. Commencing final volley, brace for impact.", "Bluespace Shelling")
-		else
-			// end it
-			boom(2)
-			boom(2)
-			boom(2)
-			if(prob(20))
-				boom(1)
-			if(prob(20))
-				boom(1)
-			endWhen = 0 // Now
-			GLOB.command_announcement.Announce("Cease Fire. Cease Fire. Bluespace artillery shelling has finalized. Assess damage, and begin repair operations.", "Bluespace Shelling")
-		spawncount--
+	// Shell until we're clean
+	boom(2)
+	boom(2)
+	if(prob(20))
+		boom(2)
+	if(prob(10))
+		boom(1)
+
+	if(spawncount == 1)
+		GLOB.command_announcement.Announce("Attention [station_name()]. Commencing final volley, brace for impact.", "Bluespace Shelling")
+
+	spawncount--
+	addtimer(CALLBACK(src, PROC_REF(shell_fire)), rand(2,5) SECONDS, TIMER_DELETE_ME)
 
 /datum/event/bluespace_shelling/proc/boom(mult)
 	var/hitsize = rand(1,2) * mult
@@ -97,8 +101,6 @@
 			explosion(picked, 2, hitsize,hitsize * 1.5)
 			break
 		escape--
-
-	shotdelaytime = world.time + (rand(hitsize * 2,hitsize * 5) SECONDS)
 
 
 /datum/event/bluespace_shelling/engineering

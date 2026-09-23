@@ -9,7 +9,7 @@
 	pixel_y = -3
 	},
 /turf/simulated/floor/plating,
-/area/maintenance/orbital/lower/aft)
+/area/maintenance/orbital/lower/starboard)
 "ab" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -207,8 +207,13 @@
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/aux_equipment)
 "ax" = (
-/turf/simulated/wall/r_wall,
-/area/offworld/orbital/station/halls/lower/aft)
+/obj/machinery/door/firedoor/glass,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/machinery/door/airlock/maintenance/common,
+/turf/simulated/floor/plating,
+/area/maintenance/orbital/lower/aft)
 "ay" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
@@ -248,7 +253,7 @@
 "aB" = (
 /obj/random/cutout,
 /turf/simulated/floor/wood/alt,
-/area/maintenance/orbital/lower/aft)
+/area/maintenance/orbital/lower/starboard)
 "aC" = (
 /obj/machinery/atmospheric_field_generator,
 /turf/simulated/floor/reinforced/airless,
@@ -368,7 +373,7 @@
 /obj/structure/sign/redcross{
 	name = "FirstAid"
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/wall,
 /area/offworld/orbital/station/lower_medical_treatment)
 "aP" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
@@ -654,12 +659,12 @@
 "bo" = (
 /turf/simulated/wall/r_wall,
 /area/maintenance/orbital/lower/aft)
+"bp" = (
+/turf/simulated/wall/r_wall,
+/area/offworld/orbital/xenoarcheology/blackhole)
 "bq" = (
 /turf/simulated/floor/plating,
 /area/maintenance/orbital/lower/aft)
-"br" = (
-/turf/simulated/wall/r_wall,
-/area/offworld/orbital/station/halls/stairs_lower)
 "bs" = (
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/halls/stairs_lower)
@@ -753,7 +758,7 @@
 	icon_state = "16-0"
 	},
 /turf/simulated/floor/plating,
-/area/maintenance/orbital/lower/aft)
+/area/maintenance/orbital/lower/starboard)
 "bD" = (
 /obj/structure/catwalk,
 /obj/structure/cable/yellow{
@@ -1352,11 +1357,6 @@
 /obj/structure/sign/warning/nosmoking_2,
 /turf/simulated/wall/r_wall,
 /area/offworld/orbital/station/atmos_primary)
-"cU" = (
-/turf/simulated/wall/r_wall{
-	can_open = 1
-	},
-/area/maintenance/orbital/lower/fore)
 "cV" = (
 /obj/random/trash,
 /obj/effect/mine/claymore{
@@ -1367,7 +1367,7 @@
 "cW" = (
 /obj/random/maintenance/misc,
 /turf/simulated/floor/plating,
-/area/maintenance/orbital/lower/aft)
+/area/maintenance/orbital/lower/starboard)
 "cX" = (
 /obj/machinery/door/airlock/maintenance/int,
 /obj/effect/landmark/step_trap,
@@ -1455,7 +1455,7 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/stairs_lower)
 "dk" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall,
 /area/offworld/orbital/station/lower_medical_treatment)
 "dl" = (
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging{
@@ -1545,7 +1545,7 @@
 /obj/random/trash,
 /obj/structure/trash_pile,
 /turf/simulated/floor/plating,
-/area/maintenance/orbital/lower/aft)
+/area/maintenance/orbital/lower/starboard)
 "dw" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 6
@@ -1694,8 +1694,8 @@
 /area/offworld/orbital/station/halls/rust_entry)
 "dO" = (
 /obj/structure/sign/science,
-/turf/simulated/wall/r_wall,
-/area/offworld/orbital/station/halls/lower/aft)
+/turf/simulated/wall,
+/area/maintenance/orbital/lower/aft)
 "dP" = (
 /obj/structure/cable/green{
 	icon_state = "0-8"
@@ -2086,7 +2086,7 @@
 /mob/living/simple_mob/vore/alienanimals/jil,
 /obj/random/junk,
 /turf/simulated/floor/plating,
-/area/maintenance/orbital/lower/aft)
+/area/maintenance/orbital/lower/starboard)
 "eN" = (
 /obj/random/junk,
 /turf/simulated/floor/wood/alt,
@@ -2099,7 +2099,7 @@
 /obj/item/assembly/mousetrap/armed,
 /obj/random/junk,
 /turf/simulated/floor/plating,
-/area/maintenance/orbital/lower/aft)
+/area/maintenance/orbital/lower/starboard)
 "eQ" = (
 /obj/machinery/atmospherics/pipe/simple/visible/red{
 	dir = 4
@@ -2127,7 +2127,7 @@
 "eT" = (
 /obj/random/junk,
 /turf/simulated/floor/wood/alt/broken,
-/area/maintenance/orbital/lower/aft)
+/area/maintenance/orbital/lower/starboard)
 "eU" = (
 /obj/machinery/firealarm{
 	dir = 4;
@@ -2151,13 +2151,13 @@
 /mob/living/simple_mob/vore/alienanimals/jil,
 /obj/effect/floorbreak,
 /turf/simulated/floor/wood/alt/broken,
-/area/maintenance/orbital/lower/aft)
+/area/maintenance/orbital/lower/starboard)
 "eY" = (
 /obj/structure/bed/chair/comfy/green{
 	dir = 4
 	},
 /turf/simulated/floor/wood/alt,
-/area/maintenance/orbital/lower/aft)
+/area/maintenance/orbital/lower/starboard)
 "eZ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
@@ -2209,7 +2209,7 @@
 /area/offworld/orbital/station/halls/lower/central)
 "fc" = (
 /turf/simulated/floor/weird_things/dark,
-/area/maintenance/orbital/lower/aft)
+/area/maintenance/orbital/lower/starboard)
 "fd" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
@@ -2220,7 +2220,7 @@
 "fe" = (
 /obj/structure/prop/dark_node/dust,
 /turf/simulated/floor/weird_things/dark,
-/area/maintenance/orbital/lower/aft)
+/area/maintenance/orbital/lower/starboard)
 "ff" = (
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/lower/port)
@@ -2273,11 +2273,11 @@
 /obj/random/maintenance/misc,
 /obj/effect/floorbreak,
 /turf/simulated/floor/wood/alt,
-/area/maintenance/orbital/lower/aft)
+/area/maintenance/orbital/lower/starboard)
 "fl" = (
 /obj/random/maintenance/medical,
 /turf/simulated/floor/wood/alt,
-/area/maintenance/orbital/lower/aft)
+/area/maintenance/orbital/lower/starboard)
 "fm" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -2302,12 +2302,12 @@
 /obj/machinery/door/airlock/maintenance/int,
 /obj/item/grenade/shooter/energy/flash,
 /turf/simulated/floor/plating,
-/area/maintenance/orbital/lower/aft)
+/area/maintenance/orbital/lower/starboard)
 "fp" = (
 /obj/machinery/door/airlock/maintenance/int,
 /obj/structure/blade_trap/start_active,
 /turf/simulated/floor/tiled/techmaint,
-/area/maintenance/orbital/lower/aft)
+/area/maintenance/orbital/lower/starboard)
 "fq" = (
 /obj/machinery/door/airlock/maintenance/int,
 /obj/item/grenade/smokebomb{
@@ -2315,7 +2315,7 @@
 	smoke_color = "#ff0000"
 	},
 /turf/simulated/floor/plating,
-/area/maintenance/orbital/lower/aft)
+/area/maintenance/orbital/lower/starboard)
 "fr" = (
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging{
 	dir = 6
@@ -2329,20 +2329,20 @@
 	smoke_color = "#0000ff"
 	},
 /turf/simulated/floor/plating,
-/area/maintenance/orbital/lower/aft)
+/area/maintenance/orbital/lower/starboard)
 "ft" = (
 /obj/machinery/door/airlock/maintenance/int,
 /obj/structure/blade_trap/start_active,
 /obj/item/grenade/concussion,
 /turf/simulated/floor/plating,
-/area/maintenance/orbital/lower/aft)
+/area/maintenance/orbital/lower/starboard)
 "fu" = (
 /obj/structure/table/woodentable,
 /obj/random/maintenance/engineering,
 /obj/random/maintenance/medical,
 /obj/effect/floorbreak,
 /turf/simulated/floor/wood/alt/broken,
-/area/maintenance/orbital/lower/aft)
+/area/maintenance/orbital/lower/starboard)
 "fv" = (
 /obj/machinery/light{
 	dir = 1
@@ -2362,7 +2362,7 @@
 /obj/machinery/door/airlock/maintenance/int,
 /obj/item/grenade/shooter/energy/lasertagall,
 /turf/simulated/floor/tiled/techmaint,
-/area/maintenance/orbital/lower/aft)
+/area/maintenance/orbital/lower/starboard)
 "fz" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan,
 /obj/structure/cable/yellow{
@@ -2378,7 +2378,7 @@
 /obj/random/maintenance,
 /obj/effect/floorbreak,
 /turf/simulated/floor/wood/alt/broken,
-/area/maintenance/orbital/lower/aft)
+/area/maintenance/orbital/lower/starboard)
 "fC" = (
 /turf/simulated/mineral{
 	ignore_cavegen = 1
@@ -2396,7 +2396,7 @@
 /obj/random/maintenance,
 /obj/effect/floorbreak,
 /turf/simulated/floor/plating,
-/area/maintenance/orbital/lower/aft)
+/area/maintenance/orbital/lower/starboard)
 "fF" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
@@ -2460,7 +2460,7 @@
 /obj/item/bedsheet/yellow,
 /obj/effect/landmark/redspaceexit,
 /turf/simulated/floor/wood/alt/broken,
-/area/maintenance/orbital/lower/aft)
+/area/maintenance/orbital/lower/starboard)
 "fQ" = (
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/milspec,
@@ -2476,7 +2476,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/halls/lower/aft)
+/area/offworld/orbital/station/halls/lower/port)
 "fS" = (
 /mob/living/simple_mob/vore/alienanimals/jil,
 /turf/simulated/floor/plating,
@@ -2640,7 +2640,7 @@
 "gi" = (
 /obj/structure/sign/department/engine,
 /turf/simulated/wall/r_wall,
-/area/maintenance/orbital/lower/fore)
+/area/offworld/orbital/station/halls/lower/fore)
 "gj" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -2650,7 +2650,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating,
-/area/maintenance/orbital/lower/aft)
+/area/maintenance/orbital/lower/starboard)
 "gk" = (
 /obj/structure/sign/warning/compressed_gas,
 /turf/simulated/wall,
@@ -2750,6 +2750,10 @@
 	},
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/rust_backup_power)
+"gv" = (
+/obj/machinery/door/airlock/maintenance/int,
+/turf/simulated/floor/plating,
+/area/maintenance/orbital/lower/aft)
 "gw" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
 	dir = 9
@@ -2993,7 +2997,7 @@
 	dir = 8
 	},
 /turf/simulated/wall,
-/area/offworld/orbital/station/halls/lower/aft)
+/area/offworld/orbital/station/halls/lower/port)
 "gY" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 10
@@ -3090,7 +3094,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/halls/lower/aft)
+/area/offworld/orbital/station/halls/lower/port)
 "hi" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -3115,7 +3119,7 @@
 "hl" = (
 /obj/machinery/door/airlock/maintenance/int,
 /turf/simulated/floor/tiled/techmaint,
-/area/maintenance/orbital/lower/aft)
+/area/maintenance/orbital/lower/starboard)
 "hm" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 4;
@@ -3206,7 +3210,7 @@
 	},
 /obj/machinery/door/airlock/glass,
 /turf/simulated/floor/tiled/techfloor,
-/area/offworld/orbital/station/halls/lower/aft)
+/area/offworld/orbital/station/halls/lower/port)
 "hv" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 5
@@ -3422,7 +3426,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/halls/lower/aft)
+/area/offworld/orbital/station/halls/lower/port)
 "hV" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
@@ -3514,8 +3518,20 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/beam_emitter)
 "ic" = (
-/turf/simulated/floor/plating,
-/area/offworld/orbital/station/halls/lower/aft)
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 8
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/black/border{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/lower/port)
 "id" = (
 /obj/machinery/ai_status_display{
 	pixel_y = 32
@@ -3527,7 +3543,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/halls/lower/aft)
+/area/offworld/orbital/station/halls/lower/port)
 "ie" = (
 /obj/machinery/atmospherics/portables_connector,
 /obj/effect/floor_decal/industrial/outline/blue,
@@ -3621,7 +3637,7 @@
 	deployed = 1
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/maintenance/orbital/lower/aft)
+/area/maintenance/orbital/lower/starboard)
 "in" = (
 /obj/machinery/door/airlock/glass_engineeringatmos,
 /obj/machinery/door/firedoor/glass,
@@ -3767,7 +3783,7 @@
 /obj/machinery/door/airlock/maintenance/common,
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/techmaint,
-/area/maintenance/orbital/lower/aft)
+/area/maintenance/orbital/lower/starboard)
 "iC" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/machinery/light,
@@ -3855,10 +3871,8 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/lower/port)
 "iL" = (
-/obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/glass,
-/turf/simulated/floor/tiled/techfloor,
-/area/offworld/orbital/station/halls/lower/aft)
+/turf/simulated/wall,
+/area/maintenance/orbital/lower/aft)
 "iM" = (
 /obj/item/radio/intercom{
 	name = "Station Intercom (General)";
@@ -4045,6 +4059,13 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/access_shaft/lower)
+"jg" = (
+/obj/machinery/light/small{
+	light_type = /obj/item/light/bulb/blue;
+	name = "Lasertag light fixture"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/orbital/lower/aft)
 "jh" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/cable/green{
@@ -4293,6 +4314,26 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/access_shaft/lower)
+"jz" = (
+/obj/structure/sink{
+	dir = 8;
+	pixel_x = -12;
+	pixel_y = 2
+	},
+/obj/machinery/power/apc{
+	name = "south bump";
+	pixel_y = -24
+	},
+/obj/structure/cable/green{
+	icon_state = "0-5"
+	},
+/obj/item/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -21
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/offworld/orbital/xenoarcheology/blackhole)
 "jA" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -4326,7 +4367,7 @@
 	distance = 10
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/maintenance/orbital/lower/aft)
+/area/maintenance/orbital/lower/starboard)
 "jE" = (
 /obj/structure/window/phoronreinforced{
 	dir = 4
@@ -4578,7 +4619,7 @@
 "kd" = (
 /mob/living/simple_mob/vore/alienanimals/jil,
 /turf/simulated/floor/plating,
-/area/maintenance/orbital/lower/aft)
+/area/maintenance/orbital/lower/starboard)
 "ke" = (
 /obj/structure/bed/chair/bay/chair/padded/brown{
 	dir = 1
@@ -4630,7 +4671,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/plating,
-/area/maintenance/orbital/lower/aft)
+/area/maintenance/orbital/lower/starboard)
 "ki" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
@@ -5039,7 +5080,7 @@
 /obj/machinery/door/airlock/maintenance/int,
 /obj/item/assembly/mousetrap/armed,
 /turf/simulated/floor/tiled/techmaint,
-/area/maintenance/orbital/lower/aft)
+/area/maintenance/orbital/lower/starboard)
 "kT" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 6
@@ -5671,13 +5712,19 @@
 /turf/space,
 /area/space)
 "lT" = (
-/obj/structure/cable/green{
-	icon_state = "1-2"
+/obj/effect/floor_decal/corner/brown{
+	dir = 10
 	},
-/obj/machinery/door/airlock/maintenance/common,
-/obj/machinery/door/firedoor,
-/turf/simulated/floor/tiled/techmaint,
-/area/maintenance/orbital/lower/fore)
+/obj/machinery/disposal,
+/obj/structure/disposalpipe/trunk{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/purple,
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
 "lU" = (
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging,
 /obj/structure/railing/grey,
@@ -5696,7 +5743,7 @@
 	deployed = 1
 	},
 /turf/simulated/floor/plating,
-/area/maintenance/orbital/lower/aft)
+/area/maintenance/orbital/lower/starboard)
 "lX" = (
 /obj/structure/railing/grey,
 /obj/machinery/power/apc{
@@ -5728,7 +5775,7 @@
 /obj/machinery/door/airlock/maintenance/int,
 /obj/effect/landmark/step_trap,
 /turf/simulated/floor/tiled/techmaint,
-/area/maintenance/orbital/lower/aft)
+/area/maintenance/orbital/lower/starboard)
 "ma" = (
 /obj/structure/catwalk,
 /obj/machinery/power/apc{
@@ -5848,6 +5895,17 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/aux,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/lower/central)
+"mo" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = 26;
+	pixel_y = 0
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/offworld/orbital/xenoarcheology/blackhole)
 "mp" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 6
@@ -6390,7 +6448,7 @@
 /obj/machinery/door/airlock/maintenance/int,
 /obj/effect/landmark/electrify_door/twentyfive,
 /turf/simulated/floor/plating,
-/area/maintenance/orbital/lower/aft)
+/area/maintenance/orbital/lower/starboard)
 "nv" = (
 /obj/effect/shuttle_landmark/premade/generic/beltmine{
 	docking_controller = "yardciv_bay_controller"
@@ -7492,7 +7550,7 @@
 /obj/machinery/light/small,
 /obj/effect/floorbreak,
 /turf/simulated/floor/wood/alt,
-/area/maintenance/orbital/lower/aft)
+/area/maintenance/orbital/lower/starboard)
 "px" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
@@ -7557,6 +7615,9 @@
 	},
 /turf/simulated/mineral/floor/ignore_cavegen/turfpack/airless,
 /area/offworld/orbital/exterior/rust_cooling)
+"pG" = (
+/turf/simulated/wall,
+/area/offworld/orbital/xenoarcheology/blackhole)
 "pH" = (
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging{
 	dir = 4
@@ -7674,6 +7735,15 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/stairs_lower)
+"pW" = (
+/obj/structure/toilet{
+	dir = 1
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/offworld/orbital/xenoarcheology/blackhole)
 "pX" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -7754,9 +7824,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/beam_emitter)
-"qe" = (
-/turf/simulated/wall/r_wall,
-/area/offworld/orbital/station/spelunker)
 "qf" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -8432,19 +8499,14 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/offworld/orbital/station/spelunker)
 "rl" = (
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
-/obj/structure/disposalpipe/broken,
-/obj/machinery/atmospherics/pipe/cap/visible/aux,
-/obj/machinery/atmospherics/pipe/cap/visible/supply,
-/obj/machinery/atmospherics/pipe/cap/visible/scrubbers,
-/turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/halls/lower/aft)
-"rm" = (
-/obj/structure/foamedmetal,
-/turf/simulated/floor/plating,
-/area/offworld/orbital/station/halls/lower/aft)
+/obj/structure/table/standard,
+/obj/item/clothing/gloves/sterile/latex,
+/obj/item/clothing/gloves/sterile/latex,
+/obj/item/clothing/gloves/sterile/latex,
+/obj/item/analyzer,
+/obj/item/analyzer,
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
 "rn" = (
 /obj/machinery/atmospherics/portables_connector,
 /obj/effect/floor_decal/industrial/outline/blue,
@@ -8462,8 +8524,11 @@
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 8
 	},
+/obj/effect/floor_decal/corner/black/border{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/halls/lower/aft)
+/area/offworld/orbital/station/halls/lower/port)
 "rp" = (
 /obj/effect/floor_decal/corner/orange/full{
 	dir = 1
@@ -8506,11 +8571,11 @@
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 8
 	},
-/obj/effect/floor_decal/corner/lightgrey/bordercorner{
+/obj/effect/floor_decal/corner/black/bordercorner{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/halls/lower/aft)
+/area/offworld/orbital/station/halls/lower/port)
 "rt" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 8
@@ -8524,7 +8589,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/halls/lower/aft)
+/area/offworld/orbital/station/halls/lower/port)
 "ru" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
@@ -8541,7 +8606,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/halls/lower/aft)
+/area/offworld/orbital/station/halls/lower/port)
 "rv" = (
 /obj/machinery/atmospherics/pipe/simple/visible/red,
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -8554,9 +8619,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/obj/structure/cable/green{
-	icon_state = "1-8"
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -8567,7 +8629,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/halls/lower/aft)
+/area/offworld/orbital/station/halls/lower/port)
 "rx" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
@@ -8587,7 +8649,7 @@
 	},
 /obj/effect/catwalk_plated,
 /turf/simulated/floor/plating,
-/area/offworld/orbital/station/halls/lower/aft)
+/area/offworld/orbital/station/halls/lower/port)
 "ry" = (
 /obj/machinery/firealarm{
 	dir = 4;
@@ -8605,40 +8667,28 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/halls/lower/aft)
+/area/offworld/orbital/station/halls/lower/port)
 "rz" = (
-/obj/machinery/power/apc{
-	dir = 1;
-	name = "north bump";
-	pixel_y = 24
-	},
-/obj/structure/cable/green{
-	icon_state = "0-2"
-	},
-/obj/effect/floor_decal/borderfloor{
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/anomaly_container,
+/turf/simulated/floor/tiled/techmaint,
+/area/offworld/orbital/xenoarcheology/exp_prep)
+"rA" = (
+/obj/structure/window/maintenance_panel{
 	dir = 1
 	},
-/obj/effect/floor_decal/corner/lightgrey/border{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/halls/lower/aft)
+/turf/simulated/floor/plating,
+/area/maintenance/orbital/lower/aft)
 "rB" = (
 /obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
 	},
-/obj/effect/floor_decal/borderfloor/corner{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/lightgrey/bordercorner{
-	dir = 1
-	},
 /obj/effect/floor_decal/corner/purple/border{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/halls/lower/aft)
+/area/offworld/orbital/station/halls/lower/port)
 "rC" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -8671,8 +8721,10 @@
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/rust_core)
 "rE" = (
-/turf/simulated/wall,
-/area/offworld/orbital/station/halls/lower/aft)
+/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/maintenance/common,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/offworld/orbital/station/halls/lower/port)
 "rF" = (
 /obj/machinery/disposal,
 /obj/effect/floor_decal/steeldecal/monofloor,
@@ -8681,13 +8733,13 @@
 	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/halls/lower/aft)
+/area/offworld/orbital/station/halls/lower/port)
 "rG" = (
 /turf/simulated/wall,
 /area/offworld/orbital/station/halls/lower/port)
 "rH" = (
 /turf/simulated/wall,
-/area/maintenance/orbital/lower/aft)
+/area/maintenance/orbital/lower/starboard)
 "rI" = (
 /obj/structure/confinement_beam_generator/inductor{
 	dir = 1
@@ -9493,13 +9545,15 @@
 /area/offworld/orbital/station/atmos_primary)
 "tm" = (
 /obj/machinery/camera/network/engineering_outpost{
-	c_tag = "REX - Construction Area";
+	c_tag = "REX - Research Hallway North";
 	dir = 1
 	},
 /obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/corner/lightgrey/border,
+/obj/effect/floor_decal/corner/black/border{
+	dir = 2
+	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/halls/lower/aft)
+/area/offworld/orbital/station/halls/lower/port)
 "tn" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -9598,11 +9652,19 @@
 /turf/simulated/floor/plating,
 /area/muriki/elevator/yardlower)
 "tw" = (
-/obj/machinery/light,
-/obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/corner/lightgrey/border,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 8
+	},
+/obj/effect/floor_decal/borderfloor/corner,
+/obj/effect/floor_decal/corner/black/bordercorner,
+/obj/effect/floor_decal/corner/black/bordercorner{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/halls/lower/aft)
+/area/offworld/orbital/station/halls/lower/port)
 "tx" = (
 /obj/machinery/power/apc{
 	dir = 4;
@@ -9631,14 +9693,10 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/rust_aux_tool_storage)
 "tz" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/lightgrey/border{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/halls/lower/aft)
+/obj/structure/table/standard,
+/obj/item/flashlight/lamp,
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
 "tA" = (
 /obj/machinery/atmospherics/pipe/simple/visible/red{
 	dir = 4
@@ -9671,7 +9729,7 @@
 	icon_state = "0-1"
 	},
 /turf/simulated/floor/plating,
-/area/maintenance/orbital/lower/aft)
+/area/maintenance/orbital/lower/starboard)
 "tC" = (
 /turf/simulated/wall/lead,
 /area/offworld/orbital/station/rust_backup_power)
@@ -10191,7 +10249,7 @@
 /obj/machinery/door/airlock/maintenance/int,
 /obj/item/assembly/mousetrap/armed,
 /turf/simulated/floor/plating,
-/area/maintenance/orbital/lower/aft)
+/area/maintenance/orbital/lower/starboard)
 "uG" = (
 /obj/machinery/light,
 /obj/effect/floor_decal/corner/orange{
@@ -10523,7 +10581,7 @@
 	dir = 8;
 	pixel_y = -2
 	},
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall,
 /area/offworld/orbital/station/halls/lower/central)
 "vq" = (
 /obj/structure/sign/warning/nosmoking_2,
@@ -10774,7 +10832,7 @@
 /obj/machinery/door/airlock/maintenance/int,
 /obj/effect/landmark/step_trap,
 /turf/simulated/floor/plating,
-/area/maintenance/orbital/lower/aft)
+/area/maintenance/orbital/lower/starboard)
 "vS" = (
 /turf/simulated/wall/r_wall,
 /area/space)
@@ -10921,7 +10979,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/halls/lower/aft)
+/area/offworld/orbital/station/halls/lower/port)
 "wi" = (
 /turf/simulated/floor/tiled,
 /area/offworld/orbital/station/lower_medical_treatment)
@@ -10981,6 +11039,10 @@
 /obj/structure/grille,
 /turf/simulated/floor/reinforced,
 /area/offworld/orbital/station/rust_core)
+"wr" = (
+/obj/structure/sign/warning/deathsposal,
+/turf/simulated/wall/r_wall,
+/area/offworld/orbital/xenoarcheology/blackhole)
 "ws" = (
 /obj/machinery/atmospherics/binary/pump{
 	dir = 4
@@ -10994,7 +11056,7 @@
 	},
 /obj/effect/floorbreak,
 /turf/simulated/floor/wood/alt,
-/area/maintenance/orbital/lower/aft)
+/area/maintenance/orbital/lower/starboard)
 "wu" = (
 /obj/machinery/portable_atmospherics/canister/oxygen,
 /obj/effect/floor_decal/industrial/outline/blue,
@@ -11016,6 +11078,11 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/beam_emitter)
+"wx" = (
+/obj/structure/table/standard,
+/obj/random/soap,
+/turf/simulated/floor/tiled/kafel_full,
+/area/offworld/orbital/xenoarcheology/blackhole)
 "wy" = (
 /obj/machinery/light{
 	dir = 8
@@ -11067,6 +11134,48 @@
 	},
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/rust_core)
+"wD" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
+	},
+/obj/structure/cable/green{
+	icon_state = "1-10"
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/offworld/orbital/xenoarcheology/blackhole)
+"wE" = (
+/obj/machinery/door/airlock/silver{
+	name = "Toilet"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/item/bananapeel,
+/turf/simulated/floor/tiled/kafel_full,
+/area/offworld/orbital/xenoarcheology/blackhole)
+"wF" = (
+/obj/structure/handrail,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/offworld/orbital/xenoarcheology/blackhole)
+"wG" = (
+/obj/machinery/light/small,
+/obj/machinery/floodlight,
+/turf/simulated/floor/plating,
+/area/maintenance/orbital/lower/aft)
+"wH" = (
+/obj/structure/disposalpipe/trunk{
+	dir = 4
+	},
+/obj/machinery/disposal/wall{
+	dir = 4;
+	pixel_x = -35
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/offworld/orbital/xenoarcheology/blackhole)
 "wI" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
@@ -11112,11 +11221,6 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/lower/fore)
-"wO" = (
-/turf/simulated/wall/r_wall{
-	can_open = 1
-	},
-/area/maintenance/orbital/lower/aft)
 "wP" = (
 /obj/structure/dispenser/oxygen,
 /obj/machinery/light{
@@ -12352,13 +12456,6 @@
 /obj/machinery/meter,
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/phoronics)
-"ze" = (
-/obj/machinery/atmospherics/portables_connector{
-	dir = 8
-	},
-/obj/effect/floor_decal/industrial/outline/red,
-/turf/simulated/floor/plating,
-/area/offworld/orbital/phoronics)
 "zf" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 9
@@ -12920,7 +13017,7 @@
 /obj/structure/table/woodentable,
 /obj/random/maintenance/foodstuff,
 /turf/simulated/floor/wood/alt,
-/area/maintenance/orbital/lower/aft)
+/area/maintenance/orbital/lower/starboard)
 "zT" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 10
@@ -13053,23 +13150,21 @@
 /turf/simulated/floor/tiled/steel,
 /area/offworld/orbital/phoronics/bomb_test_range)
 "Ac" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
 /obj/structure/cable/green{
-	icon_state = "0-1"
+	icon_state = "4-8"
 	},
-/obj/structure/disposalpipe/broken{
-	dir = 1
+/obj/structure/table/standard,
+/obj/item/storage/box/beakers,
+/obj/item/melee/baton/loaded,
+/obj/item/multitool,
+/obj/item/tool/screwdriver{
+	pixel_y = 15
 	},
-/obj/machinery/atmospherics/pipe/cap/visible/aux{
-	dir = 1
-	},
-/obj/machinery/atmospherics/pipe/cap/visible/supply{
-	dir = 1
-	},
-/obj/machinery/atmospherics/pipe/cap/visible/scrubbers{
-	dir = 1
-	},
-/turf/simulated/floor/plating,
-/area/offworld/orbital/station/halls/lower/aft)
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
 "Ad" = (
 /obj/machinery/firealarm{
 	pixel_y = 26
@@ -13328,8 +13423,19 @@
 /turf/simulated/floor/airless,
 /area/offworld/orbital/phoronics/bomb_test_range)
 "AJ" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/item/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = 22
+	},
+/obj/effect/floor_decal/corner/black/border{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/halls/lower/aft)
+/area/offworld/orbital/station/halls/lower/port)
 "AK" = (
 /obj/machinery/partslathe,
 /obj/effect/floor_decal/corner/orange{
@@ -13343,11 +13449,10 @@
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
-/obj/machinery/atmospherics/pipe/simple/hidden/aux,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/turf/simulated/floor/plating,
-/area/offworld/orbital/station/halls/lower/aft)
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/lower/port)
 "AM" = (
 /obj/effect/floor_decal/corner/orange/full{
 	dir = 4
@@ -14464,7 +14569,7 @@
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/maintenance/engi,
 /turf/simulated/floor/tiled/techmaint,
-/area/maintenance/orbital/lower/aft)
+/area/maintenance/orbital/lower/starboard)
 "CI" = (
 /turf/simulated/wall/r_wall,
 /area/offworld/orbital/phoronics/airlock)
@@ -14538,11 +14643,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/aux{
-	dir = 6
-	},
-/turf/simulated/floor/plating,
-/area/offworld/orbital/station/halls/lower/aft)
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/lower/port)
 "CP" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -14569,11 +14671,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/aux{
-	dir = 9
-	},
-/turf/simulated/floor/plating,
-/area/offworld/orbital/station/halls/lower/aft)
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/lower/port)
 "CR" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
@@ -14623,7 +14722,7 @@
 /obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
-/area/maintenance/orbital/lower/aft)
+/area/maintenance/orbital/lower/starboard)
 "CV" = (
 /obj/structure/cable/green{
 	icon_state = "1-4"
@@ -14954,13 +15053,12 @@
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
-/obj/machinery/atmospherics/pipe/simple/hidden/aux,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 1
 	},
-/turf/simulated/floor/plating,
-/area/offworld/orbital/station/halls/lower/aft)
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/lower/port)
 "Dt" = (
 /obj/machinery/recharge_station,
 /obj/machinery/light{
@@ -15018,6 +15116,22 @@
 /obj/machinery/shield_diffuser,
 /turf/simulated/floor/airless,
 /area/offworld/orbital/phoronics/airlock)
+"DA" = (
+/obj/structure/disposalpipe/segment{
+	icon_state = "pipe-c";
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/extinguisher_cabinet{
+	dir = 8;
+	pixel_x = 30
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/offworld/orbital/xenoarcheology/blackhole)
 "DB" = (
 /obj/effect/floor_decal/corner/purple{
 	dir = 5
@@ -15304,7 +15418,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/maintenance/orbital/lower/aft)
+/area/maintenance/orbital/lower/starboard)
 "Eb" = (
 /obj/structure/table/rack,
 /obj/machinery/door/window/westleft{
@@ -15507,22 +15621,21 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 5
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 5
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/aux{
 	dir = 5
 	},
 /obj/effect/catwalk_plated,
+/obj/structure/disposalpipe/junction{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 8
+	},
 /turf/simulated/floor/plating,
-/area/offworld/orbital/station/halls/lower/aft)
+/area/offworld/orbital/station/halls/lower/port)
 "Eq" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -15539,8 +15652,14 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/aux{
 	dir = 4
 	},
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/purple/bordercorner{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/halls/lower/aft)
+/area/offworld/orbital/station/halls/lower/port)
 "Er" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -15741,7 +15860,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/plating,
-/area/maintenance/orbital/lower/aft)
+/area/maintenance/orbital/lower/starboard)
 "ED" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 6
@@ -15766,7 +15885,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/halls/lower/aft)
+/area/offworld/orbital/station/halls/lower/port)
 "EF" = (
 /obj/machinery/light{
 	dir = 1
@@ -15879,7 +15998,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/plating,
-/area/maintenance/orbital/lower/aft)
+/area/maintenance/orbital/lower/starboard)
 "EQ" = (
 /obj/machinery/portable_atmospherics/canister,
 /obj/effect/floor_decal/corner/purple{
@@ -15981,8 +16100,20 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/phoronics/gas_storage)
 "Fb" = (
-/turf/simulated/wall/r_wall,
-/area/offworld/orbital/phoronics/gas_storage)
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/brown/border,
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/lower/port)
 "Fc" = (
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging,
 /obj/structure/lattice,
@@ -16241,7 +16372,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/maintenance/orbital/lower/aft)
+/area/maintenance/orbital/lower/starboard)
 "FG" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -16254,7 +16385,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/plating,
-/area/maintenance/orbital/lower/aft)
+/area/maintenance/orbital/lower/starboard)
 "FI" = (
 /obj/random/junk,
 /obj/machinery/light/small{
@@ -16296,19 +16427,35 @@
 /obj/machinery/door/airlock/maintenance/int,
 /obj/effect/landmark/electrify_door/ten,
 /turf/simulated/floor/plating,
-/area/maintenance/orbital/lower/aft)
+/area/maintenance/orbital/lower/starboard)
 "FQ" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 8
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 4
+	},
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/brown/bordercorner{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/purple/bordercorner{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/halls/lower/aft)
+/area/offworld/orbital/station/halls/lower/port)
 "FR" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
 	},
+/obj/machinery/alarm{
+	dir = 8;
+	pixel_x = 26
+	},
+/obj/effect/floor_decal/corner/purple/border{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/halls/lower/aft)
+/area/offworld/orbital/station/halls/lower/port)
 "FS" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -16323,23 +16470,23 @@
 /turf/simulated/wall/r_wall,
 /area/offworld/orbital/phoronics/bomb_test_range)
 "FU" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 8
-	},
-/obj/effect/floor_decal/corner/lightgrey/border{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/halls/lower/aft)
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/maintenance/common,
+/turf/simulated/floor/plating,
+/area/maintenance/orbital/lower/aft)
 "FV" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
 	},
-/obj/effect/floor_decal/corner/lightgrey/border{
+/obj/effect/floor_decal/corner/purple/border{
 	dir = 4
 	},
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "REX - Research Hallway South";
+	dir = 8
+	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/halls/lower/aft)
+/area/offworld/orbital/station/halls/lower/port)
 "FW" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/lightgrey/border,
@@ -16350,10 +16497,17 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/access_shaft/lower)
 "FX" = (
-/obj/effect/floor_decal/borderfloor/corner,
-/obj/effect/floor_decal/corner/lightgrey/bordercorner,
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/black/border{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/halls/lower/aft)
+/area/offworld/orbital/station/halls/lower/port)
 "FY" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 6
@@ -16362,7 +16516,7 @@
 	dir = 6
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/halls/lower/aft)
+/area/offworld/orbital/station/halls/lower/port)
 "FZ" = (
 /turf/simulated/wall,
 /area/offworld/orbital/phoronics/airlock)
@@ -16373,8 +16527,11 @@
 /obj/effect/floor_decal/corner/purple/border{
 	dir = 4
 	},
+/obj/machinery/light{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/halls/lower/aft)
+/area/offworld/orbital/station/halls/lower/port)
 "Gb" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 9
@@ -16385,8 +16542,11 @@
 /obj/machinery/medical_kiosk{
 	pixel_y = 2
 	},
+/obj/effect/floor_decal/corner/black/border{
+	dir = 9
+	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/halls/lower/aft)
+/area/offworld/orbital/station/halls/lower/port)
 "Gc" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 1
@@ -16395,16 +16555,19 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/halls/lower/aft)
+/area/offworld/orbital/station/halls/lower/port)
 "Gd" = (
 /obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/machinery/light{
 	dir = 4
 	},
 /obj/effect/floor_decal/corner/black/border{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/halls/lower/aft)
+/area/offworld/orbital/station/halls/lower/port)
 "Ge" = (
 /obj/structure/sign/explosive,
 /turf/simulated/wall/r_wall,
@@ -16418,7 +16581,7 @@
 "Gg" = (
 /obj/structure/reagent_dispensers/coolanttank,
 /turf/simulated/floor/plating,
-/area/maintenance/orbital/lower/aft)
+/area/maintenance/orbital/lower/starboard)
 "Gh" = (
 /obj/machinery/light_switch{
 	pixel_x = -23;
@@ -16566,7 +16729,7 @@
 	},
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/halls/lower/aft)
+/area/offworld/orbital/station/halls/lower/port)
 "GA" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -17005,6 +17168,44 @@
 	},
 /turf/space,
 /area/space)
+"Hz" = (
+/turf/simulated/wall/r_wall,
+/area/offworld/orbital/xenoarcheology/exp_prep)
+"HA" = (
+/obj/machinery/power/thermoregulator,
+/turf/simulated/floor/plating,
+/area/maintenance/orbital/lower/aft)
+"HB" = (
+/obj/machinery/floodlight,
+/turf/simulated/floor/plating,
+/area/maintenance/orbital/lower/aft)
+"HC" = (
+/obj/structure/sink{
+	dir = 8;
+	pixel_x = -12;
+	pixel_y = 2
+	},
+/obj/machinery/alarm{
+	pixel_y = 24
+	},
+/obj/item/geiger/wall/west,
+/turf/simulated/floor/tiled/kafel_full,
+/area/offworld/orbital/xenoarcheology/blackhole)
+"HD" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
+	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/machinery/light_switch{
+	pixel_x = 24;
+	pixel_y = 26
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/offworld/orbital/xenoarcheology/blackhole)
 "HE" = (
 /obj/machinery/alarm{
 	dir = 1;
@@ -17015,10 +17216,178 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/rust_tool_storage)
+"HF" = (
+/obj/machinery/door/airlock/silver{
+	name = "Toilet"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/offworld/orbital/xenoarcheology/blackhole)
+"HG" = (
+/obj/structure/handrail,
+/obj/structure/toilet{
+	dir = 8
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/offworld/orbital/xenoarcheology/blackhole)
 "HH" = (
 /obj/structure/sign/warning/ionizing,
 /turf/simulated/wall,
 /area/offworld/orbital/station/halls/rust_entry)
+"HI" = (
+/obj/structure/table/steel,
+/obj/item/core_sampler,
+/obj/effect/floor_decal/corner/brown/full,
+/obj/effect/floor_decal/corner/purple{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/purple,
+/turf/simulated/floor/tiled/white,
+/area/offworld/orbital/xenoarcheology/exp_prep)
+"HJ" = (
+/obj/machinery/light,
+/obj/effect/floor_decal/corner/brown{
+	dir = 10
+	},
+/obj/effect/floor_decal/corner/purple,
+/turf/simulated/floor/tiled/white,
+/area/offworld/orbital/xenoarcheology/exp_prep)
+"HK" = (
+/obj/structure/table/steel,
+/obj/item/taperecorder{
+	pixel_x = -4;
+	pixel_y = 2
+	},
+/obj/item/rectape,
+/obj/item/rectape,
+/obj/item/rectape,
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -26
+	},
+/obj/effect/floor_decal/corner/brown{
+	dir = 10
+	},
+/obj/effect/floor_decal/corner/brown{
+	dir = 10
+	},
+/obj/effect/floor_decal/corner/purple,
+/turf/simulated/floor/tiled/white,
+/area/offworld/orbital/xenoarcheology/exp_prep)
+"HL" = (
+/obj/item/anobattery{
+	pixel_x = -6;
+	pixel_y = 2
+	},
+/obj/item/anobattery{
+	pixel_x = -2;
+	pixel_y = -2
+	},
+/obj/item/anobattery{
+	pixel_x = 2;
+	pixel_y = 2
+	},
+/obj/item/anobattery{
+	pixel_x = 6;
+	pixel_y = 6
+	},
+/obj/structure/table/steel,
+/obj/item/anobattery{
+	pixel_x = -6;
+	pixel_y = 2
+	},
+/obj/item/anobattery{
+	pixel_x = -6;
+	pixel_y = 2
+	},
+/obj/item/anobattery{
+	pixel_x = -6;
+	pixel_y = 2
+	},
+/obj/item/anobattery{
+	pixel_x = -6;
+	pixel_y = 2
+	},
+/obj/item/anobattery{
+	pixel_x = -2;
+	pixel_y = -2
+	},
+/obj/item/anobattery{
+	pixel_x = -2;
+	pixel_y = -2
+	},
+/obj/item/anobattery{
+	pixel_x = -2;
+	pixel_y = -2
+	},
+/obj/item/anobattery{
+	pixel_x = -2;
+	pixel_y = -2
+	},
+/obj/item/anobattery{
+	pixel_x = 2;
+	pixel_y = 2
+	},
+/obj/item/anobattery{
+	pixel_x = 2;
+	pixel_y = 2
+	},
+/obj/item/anobattery{
+	pixel_x = 2;
+	pixel_y = 2
+	},
+/obj/item/anobattery{
+	pixel_x = 2;
+	pixel_y = 2
+	},
+/obj/item/anobattery{
+	pixel_x = 6;
+	pixel_y = 6
+	},
+/obj/item/anobattery{
+	pixel_x = 6;
+	pixel_y = 6
+	},
+/obj/item/anobattery{
+	pixel_x = 6;
+	pixel_y = 6
+	},
+/obj/item/anobattery{
+	pixel_x = 6;
+	pixel_y = 6
+	},
+/obj/effect/floor_decal/corner/brown{
+	dir = 10
+	},
+/obj/effect/floor_decal/corner/purple,
+/turf/simulated/floor/tiled/white,
+/area/offworld/orbital/xenoarcheology/exp_prep)
+"HM" = (
+/obj/structure/anomaly_container,
+/obj/effect/floor_decal/corner/brown{
+	dir = 10
+	},
+/obj/effect/floor_decal/corner/purple,
+/turf/simulated/floor/tiled/white,
+/area/offworld/orbital/xenoarcheology/exp_prep)
+"HO" = (
+/obj/item/anodevice{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/anodevice,
+/obj/structure/table/steel,
+/obj/effect/floor_decal/corner/brown{
+	dir = 10
+	},
+/obj/effect/floor_decal/corner/purple,
+/turf/simulated/floor/tiled/white,
+/area/offworld/orbital/xenoarcheology/exp_prep)
 "HP" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -17037,6 +17406,46 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/stairs_lower)
+"HQ" = (
+/obj/structure/table/steel,
+/obj/item/geiger/wall/south,
+/obj/effect/floor_decal/corner/brown{
+	dir = 10
+	},
+/obj/effect/floor_decal/corner/purple,
+/turf/simulated/floor/tiled/white,
+/area/offworld/orbital/xenoarcheology/exp_prep)
+"HR" = (
+/obj/item/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -21
+	},
+/obj/effect/floor_decal/corner/brown{
+	dir = 10
+	},
+/obj/effect/floor_decal/corner/purple,
+/turf/simulated/floor/tiled/white,
+/area/offworld/orbital/xenoarcheology/exp_prep)
+"HS" = (
+/obj/machinery/mineral/equipment_vendor/survey,
+/obj/effect/floor_decal/corner/brown/full{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/purple,
+/turf/simulated/floor/tiled/white,
+/area/offworld/orbital/xenoarcheology/exp_prep)
+"HT" = (
+/obj/random/flashlight,
+/turf/simulated/floor/wood/alt/broken,
+/area/maintenance/orbital/lower/aft)
+"HU" = (
+/turf/simulated/wall/r_wall,
+/area/offworld/orbital/xenoarcheology/tank_storage)
+"HV" = (
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/maintenance/cargo,
+/turf/simulated/floor/plating,
+/area/maintenance/orbital/lower/aft)
 "HW" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -17079,6 +17488,43 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/rust_aux_tool_storage)
+"HY" = (
+/obj/machinery/door/airlock,
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/offworld/orbital/xenoarcheology/blackhole)
+"HZ" = (
+/obj/structure/closet/secure_closet{
+	req_one_access = list(7,47)
+	},
+/obj/machinery/power/apc{
+	cell_type = /obj/item/cell/super;
+	dir = 8;
+	name = "west bump";
+	pixel_x = -24
+	},
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
+/obj/effect/floor_decal/corner/brown{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/offworld/orbital/xenoarcheology/exp_prep)
+"Ia" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/white,
+/area/offworld/orbital/xenoarcheology/exp_prep)
 "Ib" = (
 /obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/corner/orange{
@@ -17099,7 +17545,13 @@
 /obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
-/area/maintenance/orbital/lower/aft)
+/area/maintenance/orbital/lower/starboard)
+"Id" = (
+/obj/structure/cable/green{
+	icon_state = "5-8"
+	},
+/turf/simulated/floor/tiled/white,
+/area/offworld/orbital/xenoarcheology/exp_prep)
 "Ie" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/table/standard,
@@ -17116,6 +17568,16 @@
 /obj/item/tape_roll,
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/rust_control)
+"If" = (
+/turf/simulated/floor/tiled/white,
+/area/offworld/orbital/xenoarcheology/exp_prep)
+"Ig" = (
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled/white,
+/area/offworld/orbital/xenoarcheology/exp_prep)
 "Ih" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -17128,10 +17590,27 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/rust_tool_storage)
+"Ii" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/offworld/orbital/xenoarcheology/exp_prep)
 "Ij" = (
 /obj/structure/sign/department/engine,
 /turf/simulated/wall/r_wall,
 /area/offworld/orbital/station/beam_emitter)
+"Ik" = (
+/obj/machinery/disposal,
+/obj/structure/disposalpipe/trunk{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/brown{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/purple,
+/turf/simulated/floor/tiled/white,
+/area/offworld/orbital/xenoarcheology/exp_prep)
 "Il" = (
 /obj/structure/lattice,
 /obj/machinery/light/small{
@@ -17139,12 +17618,87 @@
 	},
 /turf/space,
 /area/space)
+"Im" = (
+/obj/random/maintenance,
+/turf/simulated/floor/wood/alt,
+/area/maintenance/orbital/lower/aft)
+"In" = (
+/obj/effect/floorbreak,
+/obj/machinery/light/small,
+/turf/simulated/floor/plating,
+/area/maintenance/orbital/lower/aft)
+"Io" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/brown/full,
+/obj/effect/floor_decal/corner/purple{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/purple,
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
+"Ip" = (
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/machinery/door/window{
+	dir = 8;
+	req_one_access = list(31,48)
+	},
+/obj/machinery/conveyor{
+	dir = 8;
+	id = "orbanom"
+	},
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
+"Iq" = (
+/obj/structure/plasticflaps/mining,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/machinery/conveyor{
+	dir = 8;
+	id = "orbanom"
+	},
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
+"Ir" = (
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/machinery/conveyor{
+	dir = 8;
+	id = "orbanom"
+	},
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
 "Is" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
 	dir = 8
 	},
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/rust_core)
+"It" = (
+/obj/machinery/conveyor{
+	dir = 8;
+	id = "orbanom"
+	},
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
+"Iu" = (
+/obj/effect/floor_decal/corner/brown{
+	dir = 10
+	},
+/obj/machinery/ai_status_display{
+	pixel_y = -32
+	},
+/obj/effect/floor_decal/corner/purple,
+/obj/effect/floor_decal/industrial/loading{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
 "Iv" = (
 /obj/structure/closet/radiation,
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -17161,12 +17715,271 @@
 /obj/item/clothing/head/radiation/teshari,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/rust_entry)
+"Iw" = (
+/obj/machinery/status_display{
+	layer = 4;
+	pixel_y = -32
+	},
+/obj/effect/floor_decal/corner/brown{
+	dir = 10
+	},
+/obj/effect/floor_decal/corner/purple,
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
+"Ix" = (
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
+"Iy" = (
+/obj/machinery/light,
+/obj/effect/floor_decal/corner/brown{
+	dir = 10
+	},
+/obj/effect/floor_decal/corner/purple,
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
+"Iz" = (
+/obj/effect/floor_decal/corner/brown{
+	dir = 10
+	},
+/obj/effect/floor_decal/corner/purple,
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
+/obj/machinery/power/apc{
+	name = "south bump";
+	pixel_y = -24
+	},
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
+"IA" = (
+/obj/effect/floor_decal/corner/brown{
+	dir = 10
+	},
+/obj/effect/floor_decal/corner/purple,
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 6;
+	pixel_y = -32;
+	dir = 1
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
+"IB" = (
+/obj/structure/disposalpipe/segment{
+	icon_state = "pipe-c";
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/obj/structure/cable/green{
+	icon_state = "2-4"
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
+"IC" = (
+/obj/machinery/light,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/corner/brown{
+	dir = 10
+	},
+/obj/effect/floor_decal/corner/purple,
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
+"ID" = (
+/obj/structure/reagent_dispensers/water_cooler/full,
+/obj/structure/disposalpipe/segment{
+	icon_state = "pipe-c";
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
+/obj/structure/cable/green{
+	icon_state = "1-8"
+	},
+/obj/effect/floor_decal/corner/brown/full{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/purple,
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
+"IE" = (
+/obj/structure/closet/secure_closet/xenoarchaeologist{
+	req_access = list(47)
+	},
+/obj/machinery/ai_status_display{
+	pixel_x = -32
+	},
+/obj/effect/floor_decal/corner/brown{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/offworld/orbital/xenoarcheology/exp_prep)
 "IF" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
 	dir = 6
 	},
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/rust_core)
+"IG" = (
+/obj/structure/anomaly_container,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/simulated/floor/tiled/techmaint,
+/area/offworld/orbital/xenoarcheology/exp_prep)
+"IH" = (
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/tiled/white,
+/area/offworld/orbital/xenoarcheology/exp_prep)
+"II" = (
+/obj/structure/table/rack,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/item/clothing/suit/bio_suit/anomaly,
+/obj/item/clothing/head/bio_hood/anomaly,
+/obj/item/clothing/gloves/sterile/latex,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/glasses/goggles,
+/obj/structure/window/reinforced,
+/obj/machinery/door/window/westleft,
+/obj/structure/cable/green{
+	icon_state = "5-10"
+	},
+/obj/effect/floor_decal/corner/brown{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/offworld/orbital/xenoarcheology/exp_prep)
+"IJ" = (
+/obj/machinery/suit_cycler/engineering{
+	req_access = null;
+	name = "Exploration suit cycler"
+	},
+/obj/effect/floor_decal/corner/brown{
+	dir = 9
+	},
+/obj/structure/window/reinforced,
+/turf/simulated/floor/tiled/techmaint,
+/area/offworld/orbital/xenoarcheology/exp_prep)
+"IK" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/white,
+/area/offworld/orbital/xenoarcheology/exp_prep)
+"IL" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white,
+/area/offworld/orbital/xenoarcheology/exp_prep)
+"IM" = (
+/obj/structure/sign/nosmoking_2{
+	pixel_x = 32
+	},
+/obj/machinery/suspension_gen,
+/obj/effect/floor_decal/corner/brown{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/purple,
+/turf/simulated/floor/tiled/white,
+/area/offworld/orbital/xenoarcheology/exp_prep)
+"IN" = (
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -26
+	},
+/obj/effect/floor_decal/corner/brown{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/loading{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
+"IO" = (
+/obj/effect/floor_decal/industrial/warning,
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
+"IP" = (
+/obj/effect/floor_decal/industrial/warning,
+/obj/machinery/conveyor_switch{
+	id = "orbanom"
+	},
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
+"IQ" = (
+/obj/effect/floor_decal/industrial/warning,
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
+"IS" = (
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
+"IT" = (
+/obj/machinery/firealarm{
+	dir = 4;
+	layer = 3.3;
+	pixel_x = 26
+	},
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/corner/brown{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/purple,
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
+"IU" = (
+/obj/structure/closet/secure_closet/xenoarchaeologist{
+	req_access = list(47)
+	},
+/obj/machinery/status_display{
+	pixel_x = -32
+	},
+/obj/effect/floor_decal/corner/brown{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/offworld/orbital/xenoarcheology/exp_prep)
 "IV" = (
 /obj/structure/cable/green{
 	icon_state = "2-8"
@@ -17176,6 +17989,38 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/solar_control)
+"IW" = (
+/obj/structure/anomaly_container,
+/obj/structure/anomaly_container,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/simulated/floor/tiled/techmaint,
+/area/offworld/orbital/xenoarcheology/exp_prep)
+"IX" = (
+/obj/structure/table/rack,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/item/clothing/suit/bio_suit/anomaly,
+/obj/item/clothing/head/bio_hood/anomaly,
+/obj/item/clothing/gloves/sterile/latex,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/glasses/goggles,
+/obj/machinery/door/window/westright,
+/obj/effect/floor_decal/corner/brown{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/offworld/orbital/xenoarcheology/exp_prep)
+"IY" = (
+/obj/machinery/suit_storage_unit/hazmat,
+/obj/structure/cable/green{
+	icon_state = "5-10"
+	},
+/obj/effect/floor_decal/corner/brown{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/offworld/orbital/xenoarcheology/exp_prep)
 "IZ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
@@ -17205,6 +18050,11 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/beam_emitter)
+"Jb" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/tiled/white,
+/area/offworld/orbital/xenoarcheology/exp_prep)
 "Jc" = (
 /obj/structure/catwalk,
 /obj/structure/cable/yellow{
@@ -17215,6 +18065,70 @@
 	},
 /turf/simulated/floor/airless,
 /area/offworld/orbital/exterior/starboard_solars)
+"Jd" = (
+/obj/structure/extinguisher_cabinet{
+	dir = 8;
+	pixel_x = 30
+	},
+/obj/machinery/suspension_gen,
+/obj/effect/floor_decal/corner/brown{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/purple,
+/turf/simulated/floor/tiled/white,
+/area/offworld/orbital/xenoarcheology/exp_prep)
+"Je" = (
+/obj/item/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -21
+	},
+/obj/effect/floor_decal/corner/brown{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
+"Jf" = (
+/obj/machinery/power/emitter{
+	anchored = 1;
+	state = 2
+	},
+/obj/effect/floor_decal/industrial/warning/full,
+/obj/effect/floor_decal/industrial/outline/red,
+/obj/structure/cable/green{
+	icon_state = "0-5"
+	},
+/turf/simulated/floor/plating,
+/area/offworld/orbital/xenoarcheology)
+"Jg" = (
+/obj/item/stool/padded,
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
+"Jh" = (
+/obj/machinery/artifact_analyser,
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
+"Ji" = (
+/obj/machinery/artifact_scanpad,
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
+"Jj" = (
+/obj/structure/table/standard,
+/obj/machinery/cell_charger,
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
+"Jk" = (
+/obj/structure/table/standard,
+/obj/item/camera,
+/obj/item/paper_bin,
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
 "Jl" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -17235,11 +18149,108 @@
 /obj/effect/catwalk_plated,
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/beam_emitter)
+"Jm" = (
+/obj/structure/table/standard,
+/obj/item/tape_roll,
+/obj/item/tape_roll,
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
+"Jo" = (
+/obj/machinery/atmospherics/portables_connector{
+	dir = 1
+	},
+/obj/machinery/portable_atmospherics/canister,
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
+"Jp" = (
+/obj/machinery/portable_atmospherics/canister,
+/obj/machinery/atmospherics/portables_connector{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
+"Jq" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/corner/brown{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/purple,
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
+"Jr" = (
+/obj/machinery/portable_atmospherics/canister/carbon_dioxide,
+/obj/item/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -21
+	},
+/obj/effect/floor_decal/corner/brown/full,
+/obj/effect/floor_decal/corner/purple{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/purple,
+/turf/simulated/floor/tiled/white,
+/area/offworld/orbital/xenoarcheology/tank_storage)
+"Js" = (
+/obj/machinery/portable_atmospherics/canister/phoron,
+/obj/effect/floor_decal/corner/brown{
+	dir = 10
+	},
+/obj/effect/floor_decal/corner/purple,
+/turf/simulated/floor/tiled/white,
+/area/offworld/orbital/xenoarcheology/tank_storage)
+"Jt" = (
+/obj/effect/floor_decal/corner/brown{
+	dir = 10
+	},
+/obj/effect/floor_decal/corner/purple,
+/obj/structure/cable/green,
+/obj/machinery/power/apc{
+	name = "south bump";
+	pixel_y = -24
+	},
+/turf/simulated/floor/tiled/white,
+/area/offworld/orbital/xenoarcheology/tank_storage)
+"Ju" = (
+/obj/machinery/alarm{
+	dir = 1;
+	pixel_y = -26
+	},
+/obj/effect/floor_decal/corner/brown{
+	dir = 10
+	},
+/obj/effect/floor_decal/corner/purple,
+/turf/simulated/floor/tiled/white,
+/area/offworld/orbital/xenoarcheology/tank_storage)
+"Jv" = (
+/obj/machinery/portable_atmospherics/canister/methane,
+/obj/effect/floor_decal/corner/brown{
+	dir = 10
+	},
+/obj/effect/floor_decal/corner/purple,
+/turf/simulated/floor/tiled/white,
+/area/offworld/orbital/xenoarcheology/tank_storage)
 "Jw" = (
 /obj/machinery/meter,
 /obj/machinery/atmospherics/pipe/simple/visible/cyan,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/beam_emitter)
+"Jx" = (
+/obj/machinery/portable_atmospherics/canister,
+/obj/effect/floor_decal/corner/brown/full{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/purple,
+/turf/simulated/floor/tiled/white,
+/area/offworld/orbital/xenoarcheology/tank_storage)
 "Jy" = (
 /obj/structure/cable/green{
 	icon_state = "1-4"
@@ -17252,10 +18263,48 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/port_airlock)
+"Jz" = (
+/obj/structure/dispenser/oxygen,
+/obj/effect/floor_decal/corner/brown{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/offworld/orbital/xenoarcheology/exp_prep)
 "JA" = (
 /obj/structure/ladder/up,
 /turf/simulated/floor/plating,
 /area/muriki/elevator/yardlower)
+"JB" = (
+/obj/structure/table/rack,
+/obj/item/storage/belt/archaeology,
+/obj/item/clothing/suit/space/anomaly,
+/obj/item/clothing/head/helmet/space/anomaly,
+/obj/item/clothing/mask/breath,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/door/window/westleft,
+/obj/effect/floor_decal/corner/brown{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/offworld/orbital/xenoarcheology/exp_prep)
+"JC" = (
+/obj/item/storage/excavation,
+/obj/item/pickaxe,
+/obj/item/tool/wrench,
+/obj/item/stack/flag/yellow,
+/obj/structure/table/steel,
+/obj/item/xenoarch_multi_tool,
+/obj/effect/floor_decal/corner/brown{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/offworld/orbital/xenoarcheology/exp_prep)
 "JD" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
@@ -17269,6 +18318,12 @@
 	},
 /turf/simulated/floor/tiled,
 /area/offworld/orbital/station/lower_medical_treatment)
+"JE" = (
+/obj/structure/cable/green{
+	icon_state = "5-10"
+	},
+/turf/simulated/floor/tiled/white,
+/area/offworld/orbital/xenoarcheology/exp_prep)
 "JF" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -17298,6 +18353,26 @@
 	},
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/rust_core)
+"JH" = (
+/obj/item/radio/intercom{
+	dir = 4;
+	name = "Common Channel";
+	pixel_x = 21
+	},
+/obj/effect/floor_decal/corner/brown{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/purple,
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "REX - Research Hallway South";
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white,
+/area/offworld/orbital/xenoarcheology/exp_prep)
+"JI" = (
+/mob/living/simple_mob/vore/alienanimals/jil,
+/turf/simulated/floor/wood/alt,
+/area/maintenance/orbital/lower/aft)
 "JK" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -17311,6 +18386,12 @@
 	},
 /turf/simulated/floor/airless,
 /area/offworld/orbital/exterior/starboard_solars)
+"JL" = (
+/obj/machinery/atmospherics/pipe/simple/visible/yellow{
+	dir = 5
+	},
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
 "JM" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
@@ -17329,6 +18410,113 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
 /area/maintenance/orbital/lower/fore)
+"JO" = (
+/obj/machinery/atmospherics/pipe/manifold/visible/yellow{
+	dir = 2
+	},
+/obj/structure/cable/green{
+	icon_state = "5-10"
+	},
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
+"JP" = (
+/obj/machinery/atmospherics/pipe/simple/visible/yellow{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
+"JQ" = (
+/obj/machinery/atmospherics/pipe/simple/visible/yellow{
+	dir = 9
+	},
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
+"JR" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
+	},
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
+"JS" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
+"JT" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
+"JU" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
+"JV" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
+"JW" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/binary/pump{
+	dir = 1;
+	name = "Custom Gas In"
+	},
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
+"JX" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/binary/pump{
+	name = "Custom Gas Out"
+	},
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
+"JY" = (
+/obj/item/radio/intercom{
+	dir = 4;
+	name = "Common Channel";
+	pixel_x = 21
+	},
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/corner/brown{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/purple,
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
 "JZ" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 4
@@ -17351,6 +18539,48 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/beam_emitter)
+"Kb" = (
+/obj/machinery/portable_atmospherics/canister/oxygen,
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/brown{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/offworld/orbital/xenoarcheology/tank_storage)
+"Kc" = (
+/obj/machinery/portable_atmospherics/canister/nitrogen,
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/white,
+/area/offworld/orbital/xenoarcheology/tank_storage)
+"Kd" = (
+/obj/machinery/hologram/holopad,
+/obj/structure/cable/green{
+	icon_state = "1-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/white,
+/area/offworld/orbital/xenoarcheology/tank_storage)
+"Ke" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/white,
+/area/offworld/orbital/xenoarcheology/tank_storage)
 "Kf" = (
 /obj/machinery/door/airlock/glass_external{
 	frequency = 1381;
@@ -17384,6 +18614,21 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/solar_control)
+"Kh" = (
+/obj/machinery/portable_atmospherics/canister,
+/obj/structure/cable/green{
+	icon_state = "1-8"
+	},
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/item/geiger/wall/east,
+/obj/effect/floor_decal/corner/brown{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/purple,
+/turf/simulated/floor/tiled/white,
+/area/offworld/orbital/xenoarcheology/tank_storage)
 "Ki" = (
 /obj/structure/grille,
 /obj/structure/cable/green{
@@ -17409,6 +18654,66 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/stairs_lower)
+"Kk" = (
+/obj/effect/floor_decal/corner/brown{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/offworld/orbital/xenoarcheology/exp_prep)
+"Kl" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/offworld/orbital/xenoarcheology/exp_prep)
+"Km" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white,
+/area/offworld/orbital/xenoarcheology/exp_prep)
+"Kn" = (
+/obj/structure/table/rack,
+/obj/item/storage/belt/archaeology,
+/obj/item/clothing/suit/space/anomaly,
+/obj/item/clothing/head/helmet/space/anomaly,
+/obj/item/clothing/mask/breath,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/door/window/westright,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/brown{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/offworld/orbital/xenoarcheology/exp_prep)
+"Ko" = (
+/obj/item/storage/excavation,
+/obj/item/pickaxe,
+/obj/item/tool/wrench,
+/obj/item/stack/flag/yellow,
+/obj/structure/table/steel,
+/obj/item/xenoarch_multi_tool,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/brown{
+	dir = 9
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/offworld/orbital/xenoarcheology/exp_prep)
 "Kp" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/camera/network/engineering_outpost{
@@ -17420,6 +18725,37 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/rust_gas_storage)
+"Kq" = (
+/obj/machinery/hologram/holopad,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white,
+/area/offworld/orbital/xenoarcheology/exp_prep)
+"Kr" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
+/obj/structure/cable/green{
+	icon_state = "1-10"
+	},
+/turf/simulated/floor/tiled/white,
+/area/offworld/orbital/xenoarcheology/exp_prep)
+"Ks" = (
+/obj/machinery/portable_atmospherics/canister/oxygen,
+/obj/effect/floor_decal/corner/brown{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/purple,
+/turf/simulated/floor/tiled/white,
+/area/offworld/orbital/xenoarcheology/exp_prep)
+"Kt" = (
+/obj/effect/floorbreak,
+/obj/structure/trash_pile,
+/turf/simulated/floor/wood/alt,
+/area/maintenance/orbital/lower/aft)
 "Ku" = (
 /obj/structure/table/rack/shelf/steel,
 /obj/item/radio/intercom{
@@ -17435,6 +18771,41 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/rust_tool_storage)
+"Kv" = (
+/obj/item/geiger/wall/west,
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/brown/full{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
+"Kw" = (
+/obj/machinery/atmospherics/unary/freezer{
+	icon_state = "freezer"
+	},
+/obj/effect/floor_decal/corner/brown{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
+"Kx" = (
+/obj/machinery/atmospherics/unary/heater,
+/obj/effect/floor_decal/corner/brown{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
 "Ky" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 6
@@ -17445,10 +18816,28 @@
 	},
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/rust_core)
+"Kz" = (
+/obj/structure/cable/green{
+	icon_state = "5-10"
+	},
+/obj/effect/floor_decal/corner/brown{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
+"KA" = (
+/obj/machinery/atmospherics/pipe/simple/visible/yellow{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
 "KB" = (
 /obj/effect/landmark/redspaceexit,
 /turf/simulated/floor/plating,
-/area/maintenance/orbital/lower/aft)
+/area/maintenance/orbital/lower/starboard)
 "KC" = (
 /obj/machinery/door/airlock/glass_external{
 	frequency = 1381;
@@ -17459,6 +18848,10 @@
 /obj/effect/map_helper/airlock/door/int_door,
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/halls/lower/central)
+"KF" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
 "KG" = (
 /obj/machinery/door/airlock/glass_external{
 	frequency = 1381;
@@ -17472,12 +18865,166 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/south_power_airlock)
+"KH" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
+"KJ" = (
+/obj/structure/table/standard,
+/obj/item/folder,
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
+"KK" = (
+/obj/machinery/atmospherics/pipe/manifold/visible/yellow{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
+"KL" = (
+/obj/machinery/atmospherics/pipe/simple/visible/yellow{
+	dir = 10
+	},
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
+"KM" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/corner/brown{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/purple,
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
+"KN" = (
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -26
+	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/corner/brown/full{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/offworld/orbital/xenoarcheology/tank_storage)
+"KO" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/brown{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/offworld/orbital/xenoarcheology/tank_storage)
+"KP" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
+	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/machinery/light_switch{
+	pixel_x = -27;
+	pixel_y = 28
+	},
+/turf/simulated/floor/tiled/white,
+/area/offworld/orbital/xenoarcheology/tank_storage)
+"KQ" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/brown{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/offworld/orbital/xenoarcheology/tank_storage)
 "KR" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 9
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/beam_emitter)
+"KS" = (
+/obj/effect/floor_decal/corner/brown{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/offworld/orbital/xenoarcheology/tank_storage)
+"KT" = (
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/corner/brown/full{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/purple,
+/obj/effect/floor_decal/corner/purple{
+	dir = 1
+	},
+/obj/structure/extinguisher_cabinet{
+	dir = 8;
+	pixel_x = 30
+	},
+/turf/simulated/floor/tiled/white,
+/area/offworld/orbital/xenoarcheology/tank_storage)
+"KU" = (
+/obj/structure/closet/excavation,
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/brown/full{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/offworld/orbital/xenoarcheology/exp_prep)
+"KV" = (
+/obj/structure/closet/excavation,
+/mob/living/simple_mob/vore/alienanimals/jil,
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -5;
+	pixel_y = 30
+	},
+/obj/effect/floor_decal/corner/brown{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/offworld/orbital/xenoarcheology/exp_prep)
+"KW" = (
+/obj/structure/closet/excavation,
+/obj/effect/floor_decal/corner/brown{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/offworld/orbital/xenoarcheology/exp_prep)
 "KX" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 1
@@ -17499,12 +19046,60 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/access_shaft/lower)
+"KY" = (
+/obj/machinery/suspension_gen,
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
+/obj/effect/floor_decal/corner/brown{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/offworld/orbital/xenoarcheology/exp_prep)
 "KZ" = (
 /obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
 /obj/structure/window/reinforced/full,
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/backup_power)
+"La" = (
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/corner/brown{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/offworld/orbital/xenoarcheology/exp_prep)
+"Lb" = (
+/obj/machinery/alarm{
+	pixel_y = 26;
+	pixel_x = 5
+	},
+/obj/machinery/light_switch{
+	pixel_x = -8;
+	pixel_y = 28
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/corner/brown{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/offworld/orbital/xenoarcheology/exp_prep)
 "Lc" = (
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging{
 	dir = 5
@@ -17512,6 +19107,50 @@
 /obj/structure/lattice,
 /turf/space,
 /area/space)
+"Ld" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/tiled/white,
+/area/offworld/orbital/xenoarcheology/exp_prep)
+"Le" = (
+/obj/structure/cable/green{
+	icon_state = "1-8"
+	},
+/obj/effect/floor_decal/corner/brown{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/offworld/orbital/xenoarcheology/exp_prep)
+"Lf" = (
+/obj/machinery/recharge_station,
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/brown/full{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/purple,
+/obj/effect/floor_decal/corner/purple{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/offworld/orbital/xenoarcheology/exp_prep)
+"Lg" = (
+/turf/simulated/wall/r_wall,
+/area/offworld/orbital/xenoarcheology/isolation_a)
 "Lh" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
@@ -17522,6 +19161,43 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/rust_tool_storage)
+"Li" = (
+/obj/machinery/recharge_station,
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/brown/full{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
+"Lj" = (
+/obj/machinery/atmospherics/pipe/manifold/visible/yellow{
+	dir = 8
+	},
+/obj/machinery/meter,
+/obj/structure/cable/green{
+	icon_state = "5-10"
+	},
+/obj/effect/floor_decal/corner/brown{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
+"Lk" = (
+/obj/machinery/atmospherics/binary/pump{
+	dir = 4;
+	name = "Station line - Dump"
+	},
+/obj/effect/floor_decal/industrial/bot_outline/red,
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
 "Ll" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
@@ -17535,6 +19211,43 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/lower/fore)
+"Lm" = (
+/obj/machinery/atmospherics/pipe/simple/visible/universal{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
+"Ln" = (
+/obj/effect/catwalk_plated,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 10
+	},
+/turf/simulated/floor/plating,
+/area/offworld/orbital/xenoarcheology)
+"Lo" = (
+/obj/structure/table/standard,
+/obj/machinery/computer/atmoscontrol/laptop{
+	monitored_alarm_ids = list("orbital_isolation_one","orbital_isolation_two","orbital_isolation_three");
+	req_one_access = list(47,24,11)
+	},
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
+"Lp" = (
+/obj/effect/catwalk_plated,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
+/turf/simulated/floor/plating,
+/area/offworld/orbital/xenoarcheology)
+"Lr" = (
+/obj/machinery/atmospherics/binary/pump{
+	dir = 4;
+	name = "Station line - Refill"
+	},
+/obj/effect/floor_decal/industrial/outline/blue,
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
 "Ls" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 4
@@ -17544,12 +19257,72 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/lower/central)
+"Lt" = (
+/obj/machinery/atmospherics/pipe/manifold/visible/yellow{
+	dir = 4
+	},
+/obj/machinery/meter,
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
+"Lu" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/corner/brown{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/purple,
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
+"Lv" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 8;
+	health = 1e+006
+	},
+/obj/structure/window/reinforced{
+	health = 1e+006
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
+/turf/simulated/floor/plating,
+/area/offworld/orbital/xenoarcheology/tank_storage)
 "Lw" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/beam_emitter)
+"Lx" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 4;
+	health = 1e+006
+	},
+/obj/structure/window/reinforced{
+	health = 1e+006
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/plating,
+/area/offworld/orbital/xenoarcheology/tank_storage)
 "Ly" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -17557,6 +19330,16 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/aux,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/beam_emitter)
+"Lz" = (
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/machinery/door/airlock/glass_mining,
+/turf/simulated/floor/tiled/techfloor,
+/area/offworld/orbital/xenoarcheology/tank_storage)
 "LA" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 5
@@ -17575,6 +19358,39 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/beam_emitter)
+"LC" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 8;
+	health = 1e+006
+	},
+/obj/structure/window/reinforced{
+	health = 1e+006
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/plating,
+/area/offworld/orbital/xenoarcheology/tank_storage)
+"LD" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	health = 1e+006
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/plating,
+/area/offworld/orbital/xenoarcheology/tank_storage)
 "LE" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 4
@@ -17591,12 +19407,79 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/rust_core)
+"LF" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 4;
+	health = 1e+006
+	},
+/obj/structure/window/reinforced{
+	health = 1e+006
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/plating,
+/area/offworld/orbital/xenoarcheology/tank_storage)
 "LG" = (
 /obj/structure/cable/green{
 	icon_state = "5-10"
 	},
 /turf/simulated/floor/tiled,
 /area/offworld/orbital/station/lower_medical_treatment)
+"LH" = (
+/turf/simulated/wall,
+/area/offworld/orbital/xenoarcheology/exp_prep)
+"LI" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 8;
+	health = 1e+006
+	},
+/obj/structure/window/reinforced{
+	health = 1e+006
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/plating,
+/area/offworld/orbital/xenoarcheology/exp_prep)
+"LJ" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 4;
+	health = 1e+006
+	},
+/obj/structure/window/reinforced{
+	health = 1e+006
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/plating,
+/area/offworld/orbital/xenoarcheology/exp_prep)
+"LK" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/machinery/door/airlock/glass_mining{
+	name = "Xenoarcheology Equipment Storage"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/offworld/orbital/xenoarcheology/exp_prep)
 "LL" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 8
@@ -17622,6 +19505,219 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/access_shaft/lower)
+"LN" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 4;
+	health = 1e+006
+	},
+/obj/structure/window/reinforced{
+	dir = 8;
+	health = 1e+006
+	},
+/obj/structure/window/reinforced{
+	health = 1e+006
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
+/turf/simulated/floor/plating,
+/area/offworld/orbital/xenoarcheology/exp_prep)
+"LO" = (
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/machinery/door/airlock/glass_mining{
+	name = "Xenoarcheology Equipment Storage"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/offworld/orbital/xenoarcheology/exp_prep)
+"LP" = (
+/obj/machinery/power/apc{
+	name = "south bump";
+	pixel_y = -24
+	},
+/obj/machinery/alarm/monitor/isolation{
+	alarm_id = "orbital_isolation_one";
+	dir = 8;
+	pixel_x = 26;
+	rcon_setting = 3
+	},
+/obj/structure/cable/green{
+	icon_state = "0-5"
+	},
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology/isolation_a)
+"LQ" = (
+/obj/structure/reagent_dispensers/acid{
+	pixel_x = -30
+	},
+/obj/machinery/atmospherics/pipe/simple/visible/yellow{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/brown{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
+"LR" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-10"
+	},
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
+"LS" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
+"LT" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
+"LU" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/machinery/hologram/holopad,
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/bed/chair/office/dark{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
+"LW" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/disposalpipe/segment{
+	icon_state = "pipe-c";
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
+"LX" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/visible/yellow{
+	dir = 1
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
+"LY" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
+"LZ" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/disposalpipe/junction{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "2-4"
+	},
+/obj/effect/catwalk_plated,
+/turf/simulated/floor/plating,
+/area/offworld/orbital/xenoarcheology)
+"Ma" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/alarm{
+	dir = 1;
+	pixel_y = -26
+	},
+/obj/machinery/door/airlock/glass_mining{
+	name = "Xenoarcheology"
+	},
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/tiled/steel_ridged,
+/area/offworld/orbital/xenoarcheology)
+"Mb" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/purple/border,
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/lower/port)
 "Mc" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 4
@@ -17629,6 +19725,92 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/rust_core)
+"Md" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/brown/border,
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/lower/port)
+"Me" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
+	},
+/obj/structure/cable/green{
+	icon_state = "2-4"
+	},
+/obj/effect/catwalk_plated,
+/turf/simulated/floor/plating,
+/area/offworld/orbital/station/halls/lower/port)
+"Mg" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/light,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/purple/border,
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/lower/port)
+"Mh" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/brown/border,
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/lower/port)
+"Mi" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/purple/border,
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/lower/port)
 "Mj" = (
 /obj/structure/cable/green{
 	icon_state = "0-4"
@@ -17641,6 +19823,29 @@
 	},
 /turf/simulated/floor/plating,
 /area/muriki/elevator/yardlower)
+"Mk" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/borderfloor/corner,
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/brown/bordercorner,
+/obj/effect/floor_decal/corner/purple/bordercorner{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/lower/port)
 "Ml" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 6
@@ -17654,6 +19859,23 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/lower/central)
+"Mm" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/purple/border,
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/lower/port)
 "Mn" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
@@ -17670,6 +19892,103 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/rust_tool_storage)
+"Mo" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/machinery/door/firedoor/glass/hidden,
+/turf/simulated/floor/tiled/techfloor,
+/area/offworld/orbital/station/halls/lower/port)
+"Mp" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/purple/border,
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/lower/port)
+"Mq" = (
+/obj/structure/cable/green{
+	icon_state = "1-8"
+	},
+/obj/structure/disposalpipe/junction{
+	dir = 1;
+	icon_state = "pipe-j2"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/effect/catwalk_plated,
+/turf/simulated/floor/plating,
+/area/offworld/orbital/station/halls/lower/port)
+"Mr" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/brown/border{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/lower/port)
+"Ms" = (
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology/isolation_a)
+"Mt" = (
+/obj/machinery/atmospherics/unary/vent_scrubber{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology/isolation_a)
+"Mu" = (
+/obj/structure/cable/green{
+	icon_state = "5-10"
+	},
+/obj/machinery/light,
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology/isolation_a)
+"Mv" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 8;
+	pixel_x = -3
+	},
+/obj/structure/window/reinforced{
+	dir = 4;
+	health = 1e+006
+	},
+/obj/structure/window/reinforced,
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/plating,
+/area/offworld/orbital/xenoarcheology/isolation_a)
 "Mw" = (
 /obj/machinery/door/airlock/glass_medical{
 	name = "First-Aid Station";
@@ -17684,6 +20003,30 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/lower_medical_treatment)
+"Mx" = (
+/obj/machinery/atmospherics/pipe/simple/visible/yellow{
+	dir = 6
+	},
+/obj/structure/cable/green{
+	icon_state = "1-8"
+	},
+/obj/effect/floor_decal/corner/brown{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
+"My" = (
+/obj/machinery/atmospherics/pipe/simple/visible/yellow{
+	dir = 9
+	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
 "Mz" = (
 /obj/machinery/portable_atmospherics/canister/phoron,
 /obj/structure/cable/green{
@@ -17695,6 +20038,52 @@
 	},
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/rust_core)
+"MA" = (
+/obj/machinery/chem_master,
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
+"MC" = (
+/obj/machinery/chemical_dispenser/full,
+/obj/structure/table/standard,
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
+"ME" = (
+/obj/machinery/atmospherics/pipe/simple/visible/yellow,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
+"MF" = (
+/obj/effect/floor_decal/corner/brown{
+	dir = 4
+	},
+/obj/machinery/light_switch{
+	pixel_x = 25;
+	pixel_y = 27;
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
+"MG" = (
+/obj/machinery/door/airlock/glass_mining{
+	name = "Xenoarcheology"
+	},
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/tiled/steel_ridged,
+/area/offworld/orbital/xenoarcheology)
+"MH" = (
+/obj/machinery/firealarm{
+	pixel_y = 26
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/brown/border{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/lower/port)
 "MI" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -17712,6 +20101,76 @@
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/beam_emitter)
+"MJ" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/purple/border{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/lower/port)
+"MK" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/brown/border{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/lower/port)
+"ML" = (
+/obj/machinery/alarm{
+	pixel_y = 24
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/purple/border{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/lower/port)
+"MM" = (
+/obj/machinery/hologram/holopad,
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -5;
+	pixel_y = 30
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/brown/border{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/lower/port)
+"MN" = (
+/obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/purple/border{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/lower/port)
+"MO" = (
+/obj/machinery/status_display{
+	layer = 4;
+	pixel_y = 32
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/brown/border{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/lower/port)
 "MP" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 4
@@ -17728,12 +20187,61 @@
 	},
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/rust_core)
+"MR" = (
+/obj/machinery/ai_status_display{
+	pixel_y = 32
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/purple/border{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/lower/port)
 "MS" = (
 /obj/machinery/atmospherics/pipe/simple/visible/red{
 	dir = 10
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/beam_emitter)
+"MT" = (
+/obj/item/radio/intercom{
+	dir = 1;
+	name = "Common Channel";
+	pixel_y = 21
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/brown/border{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/lower/port)
+"MV" = (
+/obj/machinery/door/firedoor/glass/hidden,
+/turf/simulated/floor/tiled/techfloor,
+/area/offworld/orbital/station/halls/lower/port)
+"MW" = (
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/black/bordercorner{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/lower/port)
+"MX" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/lower/port)
 "MY" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 9
@@ -17743,6 +20251,41 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/lower/central)
+"MZ" = (
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 4
+	},
+/obj/effect/floor_decal/borderfloor/corner,
+/obj/effect/floor_decal/corner/purple/bordercorner,
+/obj/effect/floor_decal/corner/brown/bordercorner{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/lower/port)
+"Na" = (
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/maintenance/common,
+/turf/simulated/floor/plating,
+/area/offworld/orbital/station/halls/lower/port)
+"Nb" = (
+/obj/item/geiger/wall/north,
+/turf/simulated/wall/r_wall,
+/area/offworld/orbital/xenoarcheology/isolation_a)
+"Nc" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology/isolation_a)
+"Nd" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/manifold/visible/yellow{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology/isolation_a)
 "Ne" = (
 /obj/structure/extinguisher_cabinet{
 	pixel_y = -30;
@@ -17753,13 +20296,122 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/rust_tool_storage)
+"Nf" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/visible/yellow{
+	dir = 4
+	},
+/obj/machinery/meter,
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology/isolation_a)
+"Ng" = (
+/obj/machinery/atmospherics/pipe/simple/visible/yellow{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/glass,
+/obj/structure/cable/green{
+	icon_state = "4-10"
+	},
+/obj/machinery/door/airlock/glass_mining{
+	name = "Isolation A"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/offworld/orbital/xenoarcheology/isolation_a)
+"Nh" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/atmospherics/valve/digital/open{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
+/obj/structure/cable/green{
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
+"Ni" = (
+/obj/machinery/atmospherics/pipe/simple/visible/yellow{
+	dir = 8
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
+"Nj" = (
+/obj/machinery/atmospherics/pipe/manifold4w/visible/yellow,
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
+"Nk" = (
+/obj/machinery/atmospherics/pipe/manifold/visible/yellow{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
+"Nl" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
+"Nm" = (
+/obj/effect/floor_decal/corner/brown{
+	dir = 6
+	},
+/obj/effect/floor_decal/corner/purple,
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
+"Nn" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/machinery/hologram/holopad,
+/obj/structure/sign/department/anomaly{
+	pixel_x = -32
+	},
+/obj/effect/floor_decal/corner/black/border{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/lower/port)
 "No" = (
 /obj/random/trash,
 /obj/effect/mine/claymore{
 	dir = 8
 	},
 /turf/simulated/floor/plating,
-/area/maintenance/orbital/lower/aft)
+/area/maintenance/orbital/lower/starboard)
+"Np" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/lower/port)
+"Nq" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/purple/border{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/lower/port)
 "Nr" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
@@ -17794,6 +20446,18 @@
 	},
 /turf/simulated/floor,
 /area/offworld/orbital/station/solar_control)
+"Nt" = (
+/obj/structure/table/standard,
+/obj/item/anomaly_releaser{
+	pixel_y = -5
+	},
+/obj/item/anomaly_releaser/science,
+/obj/item/anomaly_neutralizer{
+	pixel_x = 5;
+	pixel_y = 14
+	},
+/turf/simulated/floor/tiled/dark,
+/area/offworld/orbital/xenoarcheology/isolation_a)
 "Nu" = (
 /obj/structure/window/phoronreinforced,
 /obj/structure/window/phoronreinforced{
@@ -17808,6 +20472,98 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/orbital/lower/fore)
+"Nw" = (
+/obj/machinery/atmospherics/unary/vent_pump,
+/turf/simulated/floor/tiled/dark,
+/area/offworld/orbital/xenoarcheology/isolation_a)
+"Nx" = (
+/obj/structure/table/standard,
+/obj/item/anomaly_scanner,
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -5;
+	pixel_y = 30
+	},
+/turf/simulated/floor/tiled/dark,
+/area/offworld/orbital/xenoarcheology/isolation_a)
+"Ny" = (
+/obj/structure/table/standard,
+/obj/item/anodevice{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 21
+	},
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
+/obj/effect/floor_decal/corner/brown/full{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
+"Nz" = (
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
+/obj/effect/floor_decal/corner/brown{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
+"NA" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/atmospherics/valve/digital/open,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/cable/green{
+	icon_state = "2-4"
+	},
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
+"NB" = (
+/obj/structure/cable/green{
+	icon_state = "1-8"
+	},
+/obj/effect/floor_decal/corner/brown{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
+"NC" = (
+/obj/structure/table/standard,
+/obj/item/ano_scanner,
+/obj/effect/floor_decal/corner/brown{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 1
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -6;
+	pixel_y = 30
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 7;
+	pixel_y = 30
+	},
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
 "ND" = (
 /obj/structure/lattice,
 /obj/machinery/atmospherics/pipe/simple/visible/red{
@@ -17815,6 +20571,26 @@
 	},
 /turf/space,
 /area/offworld/orbital/exterior/emitter_cooling)
+"NE" = (
+/obj/structure/table/rack/shelf,
+/obj/item/clothing/head/welding,
+/obj/item/weldingtool,
+/obj/item/tool/crowbar,
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/machinery/status_display{
+	layer = 4;
+	pixel_y = 32
+	},
+/obj/effect/floor_decal/corner/brown{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
 "NF" = (
 /obj/item/geiger/wall/west,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -17828,11 +20604,39 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/rust_control)
+"NG" = (
+/obj/structure/table/standard,
+/obj/item/flame/lighter/random,
+/obj/machinery/ai_status_display{
+	pixel_y = 32
+	},
+/obj/effect/floor_decal/corner/brown{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
 "NI" = (
 /obj/machinery/light,
 /obj/effect/floor_decal/corner/orange/full,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/south_power_airlock)
+"NJ" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/atmospherics/valve/digital/open,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
 "NK" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/glass_engineering{
@@ -17844,6 +20648,97 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/beam_emitter)
+"NM" = (
+/obj/structure/table/standard,
+/obj/item/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 21
+	},
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/item/laser_pointer/purple,
+/obj/effect/floor_decal/corner/brown/full{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/purple,
+/obj/effect/floor_decal/corner/purple{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology)
+"NN" = (
+/obj/machinery/anomaly_harvester,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/simulated/floor/tiled/dark,
+/area/offworld/orbital/xenoarcheology/isolation_a)
+"NO" = (
+/turf/simulated/wall/r_wall,
+/area/offworld/orbital/xenoarcheology/isolation_b)
+"NP" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 8;
+	pixel_x = -3
+	},
+/obj/structure/window/reinforced{
+	dir = 4;
+	health = 1e+006
+	},
+/obj/structure/window/reinforced,
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
+/turf/simulated/floor/plating,
+/area/offworld/orbital/xenoarcheology/isolation_b)
+"NQ" = (
+/obj/machinery/atmospherics/pipe/simple/visible/yellow,
+/obj/machinery/door/firedoor/glass,
+/obj/structure/cable/green{
+	icon_state = "2-9"
+	},
+/obj/machinery/door/airlock/glass_mining{
+	name = "Isolation B"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/offworld/orbital/xenoarcheology/isolation_b)
+"NR" = (
+/turf/simulated/wall/r_wall,
+/area/offworld/orbital/xenoarcheology/isolation_c)
+"NS" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 8;
+	pixel_x = -3
+	},
+/obj/structure/window/reinforced{
+	dir = 4;
+	health = 1e+006
+	},
+/obj/structure/window/reinforced,
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
+/turf/simulated/floor/plating,
+/area/offworld/orbital/xenoarcheology/isolation_c)
+"NT" = (
+/obj/machinery/atmospherics/pipe/simple/visible/yellow,
+/obj/machinery/door/firedoor/glass,
+/obj/structure/cable/green{
+	icon_state = "2-9"
+	},
+/obj/machinery/door/airlock/glass_mining{
+	name = "Isolation C"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/offworld/orbital/xenoarcheology/isolation_c)
 "NU" = (
 /obj/machinery/atmospherics/binary/circulator{
 	dir = 1;
@@ -17879,11 +20774,66 @@
 /obj/structure/reagent_dispensers/fueltank/high,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/beam_emitter)
+"NX" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/black/border{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/lower/port)
+"NY" = (
+/obj/structure/cable/green{
+	icon_state = "6-9"
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology/isolation_b)
+"NZ" = (
+/obj/machinery/atmospherics/pipe/simple/visible/yellow,
+/obj/machinery/meter,
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology/isolation_b)
 "Oa" = (
 /obj/machinery/door/airlock/maintenance/int,
 /obj/effect/landmark/electrify_door/five,
 /turf/simulated/floor/plating,
-/area/maintenance/orbital/lower/aft)
+/area/maintenance/orbital/lower/starboard)
+"Ob" = (
+/obj/machinery/alarm/monitor/isolation{
+	alarm_id = "orbital_isolation_two";
+	dir = 8;
+	pixel_x = 26;
+	rcon_setting = 3
+	},
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology/isolation_b)
+"Oc" = (
+/obj/structure/cable/green{
+	icon_state = "6-9"
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology/isolation_c)
+"Od" = (
+/obj/machinery/atmospherics/pipe/simple/visible/yellow,
+/obj/machinery/meter,
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology/isolation_c)
+"Oe" = (
+/obj/machinery/alarm/monitor/isolation{
+	alarm_id = "orbital_isolation_three";
+	dir = 8;
+	pixel_x = 26;
+	rcon_setting = 3
+	},
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology/isolation_c)
 "Of" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 10
@@ -17914,6 +20864,27 @@
 	},
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/halls/stairs_lower)
+"Oh" = (
+/obj/machinery/power/apc{
+	dir = 8;
+	name = "west bump";
+	pixel_x = -24
+	},
+/obj/structure/cable/green{
+	icon_state = "0-6"
+	},
+/obj/item/geiger/wall/north,
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology/isolation_b)
+"Oi" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/machinery/atmospherics/unary/vent_pump{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology/isolation_b)
 "Oj" = (
 /obj/machinery/fusion_fuel_injector{
 	dir = 2;
@@ -17955,6 +20926,24 @@
 	},
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/beam_emitter)
+"On" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/manifold/visible/yellow{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology/isolation_b)
+"Oo" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology/isolation_b)
 "Op" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
@@ -17978,6 +20967,77 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/beam_emitter)
+"Or" = (
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -5;
+	pixel_y = 30
+	},
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology/isolation_b)
+"Os" = (
+/obj/machinery/power/apc{
+	dir = 8;
+	name = "west bump";
+	pixel_x = -24
+	},
+/obj/structure/table/standard,
+/obj/item/storage/box/monkeycubes,
+/obj/item/reagent_containers/food/snacks/monkeycube/wrapped,
+/obj/structure/cable/green{
+	icon_state = "0-6"
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -5;
+	pixel_y = 30
+	},
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology/isolation_c)
+"Ot" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/machinery/atmospherics/unary/vent_pump{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology/isolation_c)
+"Ou" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/manifold/visible/yellow{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology/isolation_c)
+"Ov" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology/isolation_c)
+"Ow" = (
+/obj/item/geiger/wall/north,
+/turf/simulated/floor/tiled,
+/area/offworld/orbital/xenoarcheology/isolation_c)
+"Ox" = (
+/obj/structure/table/standard,
+/obj/item/flashlight/lamp,
+/turf/simulated/floor/tiled/dark,
+/area/offworld/orbital/xenoarcheology/isolation_b)
+"Oy" = (
+/obj/machinery/artifact_scanpad,
+/obj/machinery/artifact,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/simulated/floor/tiled/dark,
+/area/offworld/orbital/xenoarcheology/isolation_b)
+"Oz" = (
+/obj/machinery/artifact_analyser,
+/turf/simulated/floor/tiled/dark,
+/area/offworld/orbital/xenoarcheology/isolation_b)
 "OA" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -17997,6 +21057,10 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/lower/central)
+"OB" = (
+/obj/machinery/artifact_harvester,
+/turf/simulated/floor/tiled/dark,
+/area/offworld/orbital/xenoarcheology/isolation_c)
 "OC" = (
 /obj/structure/confinement_beam_generator/inductor,
 /obj/structure/cable/heavyduty{
@@ -18004,6 +21068,23 @@
 	},
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/beam_emitter)
+"OD" = (
+/obj/machinery/artifact_scanpad,
+/obj/effect/floor_decal/industrial/rad_floor/yellow,
+/obj/effect/floor_decal/industrial/outline/yellow,
+/turf/simulated/floor/tiled/dark,
+/area/offworld/orbital/xenoarcheology/isolation_c)
+"OE" = (
+/obj/structure/table/standard,
+/obj/item/flashlight/lamp,
+/turf/simulated/floor/tiled/dark,
+/area/offworld/orbital/xenoarcheology/isolation_c)
+"OH" = (
+/turf/simulated/wall/r_wall,
+/area/maintenance/orbital/lower/starboard)
+"OI" = (
+/turf/simulated/floor/plating,
+/area/maintenance/orbital/lower/starboard)
 "OJ" = (
 /obj/structure/cable/green{
 	icon_state = "4-10"
@@ -18014,6 +21095,12 @@
 	},
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/aux_equipment)
+"OK" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/orbital/lower/starboard)
 "OL" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced{
@@ -18036,6 +21123,17 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/beam_emitter)
+"ON" = (
+/obj/structure/trash_pile,
+/turf/simulated/floor/wood/alt/broken,
+/area/maintenance/orbital/lower/starboard)
+"OO" = (
+/turf/simulated/floor/wood/alt/broken,
+/area/maintenance/orbital/lower/starboard)
+"OP" = (
+/obj/effect/floorbreak,
+/turf/simulated/floor/plating,
+/area/maintenance/orbital/lower/starboard)
 "OQ" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 9
@@ -18048,11 +21146,27 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/rust_entry)
+"OR" = (
+/obj/random/maintenance,
+/turf/simulated/floor/wood/alt/broken,
+/area/maintenance/orbital/lower/starboard)
 "OS" = (
 /obj/machinery/power/rad_collector,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/rust_tool_storage)
+"OT" = (
+/obj/machinery/power/apc{
+	dir = 4;
+	name = "east bump";
+	pixel_x = 24;
+	nightshift_setting = 2
+	},
+/obj/structure/cable/green{
+	icon_state = "0-1"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/orbital/lower/aft)
 "OU" = (
 /obj/structure/grille,
 /obj/structure/window/phoronreinforced{
@@ -18078,6 +21192,13 @@
 /obj/structure/sign/warning/high_voltage,
 /turf/simulated/wall/r_wall,
 /area/offworld/orbital/station/beam_emitter)
+"OY" = (
+/obj/effect/floorbreak,
+/turf/simulated/floor/wood/alt/broken,
+/area/maintenance/orbital/lower/starboard)
+"OZ" = (
+/turf/simulated/floor/wood/alt,
+/area/maintenance/orbital/lower/starboard)
 "Pa" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -18091,6 +21212,70 @@
 /obj/machinery/atmospherics/unary/heat_exchanger,
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/beam_emitter)
+"Pc" = (
+/obj/effect/floorbreak,
+/turf/simulated/floor/wood/alt,
+/area/maintenance/orbital/lower/starboard)
+"Pd" = (
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/orbital/lower/aft)
+"Pe" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/orbital/lower/starboard)
+"Pf" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/orbital/lower/starboard)
+"Pg" = (
+/obj/random/junk,
+/turf/simulated/floor/wood/alt,
+/area/maintenance/orbital/lower/starboard)
+"Ph" = (
+/obj/random/junk,
+/turf/simulated/floor/plating,
+/area/maintenance/orbital/lower/starboard)
+"Pi" = (
+/turf/simulated/wall/r_wall{
+	can_open = 1
+	},
+/area/maintenance/orbital/lower/starboard)
+"Pj" = (
+/obj/random/flashlight,
+/turf/simulated/floor/plating,
+/area/maintenance/orbital/lower/starboard)
+"Pk" = (
+/mob/living/simple_mob/vore/alienanimals/jil,
+/turf/simulated/floor/wood/alt/broken,
+/area/maintenance/orbital/lower/starboard)
+"Pl" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/aux{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/lower/port)
 "Pm" = (
 /obj/structure/cable/green{
 	icon_state = "2-8"
@@ -18100,12 +21285,69 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/lower/fore)
+"Pn" = (
+/turf/simulated/mineral/ignore_cavegen,
+/area/maintenance/orbital/lower/starboard)
+"Po" = (
+/obj/machinery/light/small,
+/turf/simulated/floor/plating,
+/area/maintenance/orbital/lower/starboard)
 "Pp" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/beam_emitter)
+"Pq" = (
+/obj/machinery/door/airlock/maintenance/int,
+/turf/simulated/floor/plating,
+/area/maintenance/orbital/lower/starboard)
+"Pr" = (
+/obj/structure/trash_pile,
+/turf/simulated/floor/plating,
+/area/maintenance/orbital/lower/starboard)
+"Ps" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 8
+	},
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "REX - Research Hallway Central";
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/black/border{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/lower/port)
+"Pt" = (
+/obj/effect/floor_decal/borderfloor/corner,
+/obj/effect/floor_decal/corner/purple/bordercorner,
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/lower/port)
+"Pu" = (
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/lightgrey/bordercorner{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/black/bordercorner{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/lower/port)
+"Pv" = (
+/turf/simulated/wall/r_wall,
+/area/offworld/orbital/phoronics/gas_storage)
+"Pw" = (
+/turf/simulated/wall,
+/area/muriki/elevator/yardlower)
+"Px" = (
+/turf/simulated/wall,
+/area/offworld/orbital/station/halls/lower/central)
 "Py" = (
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging{
 	dir = 6
@@ -18158,7 +21400,7 @@
 /obj/machinery/door/airlock/maintenance/int,
 /obj/effect/landmark/electrify_door/fifty,
 /turf/simulated/floor/plating,
-/area/maintenance/orbital/lower/aft)
+/area/maintenance/orbital/lower/starboard)
 "PS" = (
 /obj/machinery/atmospherics/binary/pump{
 	dir = 4
@@ -18186,12 +21428,16 @@
 /obj/random/trash,
 /obj/item/assembly/mousetrap/armed,
 /turf/simulated/floor/plating,
-/area/maintenance/orbital/lower/aft)
+/area/maintenance/orbital/lower/starboard)
 "Qk" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/lightgrey/border,
+/obj/machinery/light,
+/obj/effect/floor_decal/corner/black/border{
+	dir = 2
+	},
 /turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/halls/lower/aft)
+/area/offworld/orbital/station/halls/lower/port)
 "Ql" = (
 /obj/structure/confinement_beam_generator/gen{
 	dir = 8
@@ -18261,7 +21507,7 @@
 "Rg" = (
 /obj/random/trash,
 /turf/simulated/floor/plating,
-/area/maintenance/orbital/lower/aft)
+/area/maintenance/orbital/lower/starboard)
 "Rh" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
@@ -18609,7 +21855,6 @@
 /turf/simulated/floor,
 /area/offworld/orbital/station/solar_control)
 "TI" = (
-/obj/machinery/door/airlock/maintenance/engi,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/aux,
@@ -18618,8 +21863,9 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/maintenance/common,
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/maintenance/orbital/lower/aft)
+/area/maintenance/orbital/lower/starboard)
 "TK" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
@@ -18656,7 +21902,7 @@
 "TT" = (
 /obj/structure/table/woodentable,
 /turf/simulated/floor/wood/alt,
-/area/maintenance/orbital/lower/aft)
+/area/maintenance/orbital/lower/starboard)
 "TU" = (
 /obj/machinery/portable_atmospherics/canister/carbon_dioxide,
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -18703,7 +21949,7 @@
 /obj/machinery/door/airlock/maintenance/common,
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/techfloor,
-/area/maintenance/orbital/lower/fore)
+/area/offworld/orbital/station/halls/lower/fore)
 "Ur" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -18965,7 +22211,7 @@
 "Wj" = (
 /obj/item/assembly/mousetrap/armed,
 /turf/simulated/floor/plating,
-/area/maintenance/orbital/lower/aft)
+/area/maintenance/orbital/lower/starboard)
 "Wl" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
@@ -19347,7 +22593,7 @@
 /obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
-/area/maintenance/orbital/lower/aft)
+/area/maintenance/orbital/lower/starboard)
 "Zp" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 5
@@ -31726,13 +34972,13 @@ xM
 xM
 RS
 RS
-RS
-RS
-RS
-RS
-eW
-eW
-eW
+bo
+bo
+bo
+bo
+bo
+bo
+bo
 eW
 eW
 eW
@@ -31887,24 +35133,24 @@ xM
 xM
 xM
 RS
-RS
-RS
-RS
-RS
-RS
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
+bo
+bo
+bq
+ag
+gv
+ab
+bq
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
 eW
 eW
 eW
@@ -32048,26 +35294,26 @@ xM
 xM
 xM
 xM
-RS
-RS
-RS
-RS
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
+bo
+bo
+bq
+bq
+iL
+iL
+iL
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+ab
+gv
+ag
+bo
+bo
 eW
 eW
 eW
@@ -32210,27 +35456,27 @@ xM
 xM
 xM
 RS
-RS
-RS
-RS
-RS
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
+bo
+bq
+bq
+Lg
+Lg
+Nb
+Lg
+Lg
+bo
+bo
+HV
+bo
+bo
+bo
+bo
+iL
+iL
+bq
+bq
+bo
+bo
 eW
 eW
 eW
@@ -32371,28 +35617,28 @@ xM
 xM
 xM
 RS
-RS
-RS
-RS
-RS
-RS
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
+bo
+bo
+bq
+Lg
+Lg
+Nt
+Nc
+Ms
+Lg
+Lg
+Kv
+Ix
+Je
+IN
+Io
+bo
+bq
+iL
+iL
+bq
+bq
+bo
 eW
 eW
 eW
@@ -32532,29 +35778,29 @@ xM
 xM
 xM
 xM
-RS
-RS
-RS
-RS
-RS
-RS
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
+bo
+bo
+bq
+bq
+Lg
+NN
+Nw
+Nd
+Mt
+LP
+Lg
+Kw
+JL
+Jf
+IO
+Ip
+bo
+bq
+bq
+iL
+iL
+bq
+bo
 eW
 eW
 eW
@@ -32693,30 +35939,30 @@ xM
 xM
 xM
 xM
-RS
-RS
-RS
-RS
-RS
-RS
-RS
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
+bo
+bo
+bq
+bq
+bo
+Lg
+Lg
+Nx
+Nf
+Mu
+Lg
+Lg
+Kx
+JO
+Jg
+IP
+Iq
+bo
+bq
+bq
+ab
+gv
+ac
+bo
 eW
 eW
 eW
@@ -32854,31 +36100,31 @@ xM
 xM
 xM
 xM
-RS
-RS
-RS
-RS
-RS
-RS
-RS
-RS
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
+bo
+bo
+bq
+bq
+NO
+NO
+NO
+Lg
+Mv
+Ng
+Mv
+Lg
+Li
+Kz
+JP
+Jh
+IQ
+Ir
+bo
+bq
+iL
+iL
+iL
+bq
+bo
 eW
 eW
 eW
@@ -33016,31 +36262,31 @@ xM
 xM
 xM
 xM
-RS
-RS
-RS
-RS
-RS
-RS
-RS
-RS
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
+bo
+bq
+bq
+NO
+NO
+Oh
+NO
+NO
+Ny
+Nh
+Mx
+LQ
+Lj
+KA
+JQ
+Ji
+IO
+It
+bo
+bq
+iL
+bq
+bq
+bq
+bo
 eW
 eW
 eW
@@ -33178,31 +36424,31 @@ xM
 xM
 xM
 xM
-RS
-RS
-RS
-RS
-RS
-RS
-RS
-RS
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
+bo
+bq
+iL
+NO
+Ox
+Oi
+NY
+NP
+Nz
+Ni
+JP
+LR
+Lk
+Ix
+Ix
+Ix
+Ix
+Iu
+bo
+iL
+iL
+bq
+iL
+bo
+bo
 eW
 eW
 eW
@@ -33340,30 +36586,30 @@ xM
 xM
 xM
 xM
-RS
-RS
-RS
-RS
-RS
-RS
-RS
-RS
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
+bo
+bq
+iL
+NO
+Oy
+On
+NZ
+NQ
+NA
+Nj
+My
+LS
+Lm
+Ix
+Ix
+Ix
+Ix
+Iw
+bo
+HA
+iL
+bq
+bq
+bo
 eW
 eW
 eW
@@ -33502,31 +36748,31 @@ xM
 xM
 xM
 jM
-RS
-RS
-RS
-RS
-RS
-RS
-RS
-RS
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
+bo
+bq
+iL
+NO
+Oz
+Oo
+Ob
+NP
+NB
+JP
+MA
+LT
+Ln
+KF
+JR
+tz
+KJ
+Ix
+HV
+bq
+iL
+iL
+EB
+bo
+bo
 eW
 eW
 eW
@@ -33664,32 +36910,32 @@ xM
 xM
 xM
 gn
-RS
-RS
-RS
-RS
-RS
-RS
-RS
-RS
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
+iL
+bq
+ag
+NO
+NO
+Or
+NO
+NO
+NC
+JP
+Lo
+LU
+Ix
+Nl
+JS
+Jk
+Jj
+Iy
+bo
+bq
+bq
+rA
+bq
+bq
+bo
+bo
 eW
 eW
 eW
@@ -33826,32 +37072,32 @@ xM
 xM
 xM
 gn
-RS
-RS
-RS
-RS
-RS
-RS
-RS
-RS
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
+iL
+iL
+gv
+bo
+NO
+NO
+NO
+NO
+NE
+JP
+MC
+Ac
+Lp
+KH
+JT
+Jm
+rl
+Iz
+bo
+HB
+wG
+iL
+iL
+bq
+bq
+bo
 eW
 eW
 eW
@@ -33988,32 +37234,32 @@ xM
 xM
 xM
 gn
-RS
-RS
-RS
-RS
-RS
-RS
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
+iL
+bq
+ab
+NR
+NR
+Os
+NR
+NR
+NG
+JP
+Ix
+LT
+Lm
+Ix
+JU
+Ix
+Ix
+IA
+bp
+bp
+bp
+wr
+bp
+bo
+bq
+bo
 eW
 eW
 eW
@@ -34150,32 +37396,32 @@ xM
 xM
 xM
 gn
-RS
-RS
-RS
-RS
-RS
-RS
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
+iL
+bq
+iL
+NR
+OB
+Ot
+Oc
+NS
+Nz
+JP
+Ix
+LW
+Lr
+IS
+JV
+IS
+IS
+lT
+pG
+HC
+wH
+wx
+jz
+bo
+bq
+bo
 eW
 eW
 eW
@@ -34312,32 +37558,32 @@ xM
 xM
 xM
 gn
-RS
-RS
-RS
-RS
-RS
-RS
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
+iL
+bq
+iL
+NR
+OD
+Ou
+Od
+NT
+NJ
+Nk
+ME
+LX
+Lt
+KK
+JW
+Jo
+Ix
+IB
+HY
+HD
+DA
+wD
+mo
+rA
+bq
+bo
 eW
 eW
 eW
@@ -34474,33 +37720,33 @@ xM
 xM
 hm
 gn
-RS
-RS
-RS
-RS
-RS
-RS
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
+iL
+bq
+iL
+NR
+OE
+Ov
+Oe
+NS
+NB
+Nl
+KF
+LY
+Ix
+KL
+JX
+Jp
+Ix
+IC
+pG
+HF
+pG
+wE
+pG
+bo
+bq
+bo
+bo
 eW
 eW
 eW
@@ -34636,34 +37882,34 @@ xM
 xM
 hn
 gn
-RS
-RS
-RS
-RS
-RS
-RS
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
+iL
+bq
+bq
+NR
+NR
+Ow
+NR
+NR
+NM
+Nm
+MF
+LZ
+Lu
+KM
+JY
+Jq
+IT
+ID
+pG
+HG
+pG
+wF
+pW
+bo
+bq
+bq
+bo
+bo
 eW
 eW
 eW
@@ -34798,34 +38044,34 @@ xM
 xM
 tk
 gn
-RS
-RS
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
+iL
+bq
+bq
+bq
+NR
+NR
+NR
+bo
+bo
+bo
+MG
+Ma
+HU
+HU
+HU
+HU
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+iL
+bq
+bq
+bo
 eW
 eW
 eW
@@ -34960,34 +38206,34 @@ dG
 dG
 hn
 gn
-RS
-RS
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
+iL
+iL
+bq
+bq
+bq
+bq
+ab
+gv
+bq
+bo
+MH
+Mb
+Lv
+KN
+Kb
+Jr
+bo
+ag
+bq
+bq
+bq
+bq
+bq
+iL
+iL
+bq
+bq
+bo
 eW
 eW
 eW
@@ -35130,26 +38376,26 @@ gn
 gn
 gn
 gn
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
+EB
+bo
+MJ
+Md
+Lx
+KO
+Kc
+Js
+bo
+gv
+iL
+iL
+iL
+iL
+bq
+iL
+bq
+bq
+bo
+bo
 eW
 eW
 eW
@@ -35215,10 +38461,10 @@ cF
 cF
 cF
 cF
-qs
-qs
-qs
-qs
+sx
+sx
+sx
+fw
 vz
 fF
 Ty
@@ -35292,25 +38538,25 @@ gp
 gz
 gp
 gn
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
+bq
+bo
+MK
+Me
+Lz
+KP
+Kd
+Jt
+bo
+ab
+bq
+iL
+bm
+iL
+EB
+gv
+ab
+bo
+bo
 eW
 eW
 eW
@@ -35377,7 +38623,7 @@ cF
 cF
 cF
 cF
-qs
+sx
 hY
 aV
 Ul
@@ -35454,24 +38700,24 @@ gp
 gp
 bl
 gn
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
+bq
+bo
+ML
+Mb
+LC
+KQ
+Ke
+Ju
+bo
+iL
+bq
+iL
+iL
+iL
+bo
+bo
+bo
+bo
 eW
 eW
 eW
@@ -35539,10 +38785,10 @@ cF
 cF
 cF
 cF
-qs
+sx
 fK
-qs
-qs
+sx
+fw
 vB
 fF
 vx
@@ -35616,21 +38862,21 @@ gJ
 gC
 gr
 gn
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
+bq
+bo
+MM
+Md
+LD
+KS
+Ke
+Jv
+bo
+iL
+bq
+bq
+iL
+iL
+bo
 eW
 eW
 eW
@@ -35691,20 +38937,20 @@ pt
 nM
 qs
 cF
-qs
+sx
 ep
-qs
+sx
 cF
 cF
 cF
 cF
 cF
-qs
-qs
-qs
+sx
+sx
+sx
 Nv
-qs
-qs
+sx
+fw
 ne
 fF
 Ww
@@ -35778,21 +39024,21 @@ gK
 gD
 gs
 gn
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
+EB
+FU
+FQ
+Mb
+LF
+KT
+Kh
+Jx
+bo
+iL
+iL
+bq
+bq
+bq
+bo
 eW
 eW
 eW
@@ -35853,20 +39099,20 @@ yi
 nN
 qs
 qs
-qs
+sx
 cN
-qs
+sx
 cF
 cF
 cF
 cF
-qs
-qs
+sx
+sx
 hY
 JN
 RC
-qs
-qs
+sx
+fw
 sl
 fF
 vy
@@ -35909,10 +39155,10 @@ lj
 JF
 un
 it
-aG
-aG
+Pw
+Pw
 HW
-aG
+Pw
 ka
 tv
 tv
@@ -35940,22 +39186,22 @@ gt
 gG
 gt
 gn
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
+bq
+bo
+MN
+Fb
+HU
+HU
+HU
+HU
+bo
+bo
+bo
+bo
+bo
+bq
+bo
+bo
 eW
 eW
 eW
@@ -36015,20 +39261,20 @@ sa
 gY
 sN
 qs
-qs
+sx
 fJ
-qs
-qs
+sx
+sx
 cF
 cF
-qs
-qs
+sx
+sx
 Vz
 RC
-qs
-qs
-qs
-qs
+sx
+sx
+sx
+fw
 wa
 fF
 Ty
@@ -36102,22 +39348,22 @@ gL
 gH
 gw
 gn
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
+bq
+bo
+MO
+Mg
+LH
+KU
+Kk
+Jz
+IU
+IE
+HZ
+HI
+bo
+bq
+bq
+bo
 eW
 eW
 eW
@@ -36180,17 +39426,17 @@ qs
 qs
 cR
 cR
-qs
-qs
-qs
-qs
+sx
+sx
+sx
+sx
 hY
 SM
-qs
-qs
+sx
+sx
 cF
 cF
-qs
+fw
 CJ
 fF
 lY
@@ -36228,7 +39474,7 @@ md
 Dg
 NI
 bx
-br
+rK
 rK
 zy
 ly
@@ -36264,22 +39510,22 @@ gt
 gy
 iM
 gn
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
+bq
+bo
+MR
+Mh
+LH
+KV
+Kl
+If
+If
+If
+Ia
+HJ
+bo
+iL
+bq
+bo
 eW
 eW
 eW
@@ -36340,19 +39586,19 @@ nQ
 qs
 cF
 qs
-qs
+sx
 bc
 JN
 JN
 oB
 oB
 bb
-qs
-qs
+sx
+sx
 cF
 cF
 cF
-qs
+fw
 yu
 Ll
 Vi
@@ -36390,7 +39636,7 @@ VU
 pb
 ea
 bx
-br
+rK
 xJ
 Tk
 ci
@@ -36426,23 +39672,23 @@ gw
 gy
 ti
 gn
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
+bq
+bo
+MT
+Mi
+LI
+KW
+Km
+IG
+IW
+IG
+Ia
+HK
+bo
+iL
+bq
+bo
+bo
 eW
 eW
 eW
@@ -36502,19 +39748,19 @@ hs
 qs
 cF
 qs
-qs
+sx
 qG
-qs
-qs
-qs
-qs
+sx
+sx
+sx
+sx
 cX
-qs
+sx
 cF
 cF
 cF
 cF
-qs
+fw
 Ye
 ph
 Bn
@@ -36552,7 +39798,7 @@ mf
 gm
 gl
 bx
-br
+rK
 Gn
 HP
 ci
@@ -36588,23 +39834,23 @@ GS
 GR
 cb
 gn
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
+bq
+bo
+MJ
+Md
+LJ
+KY
+Km
+IW
+rz
+IG
+Ia
+HL
+bo
+iL
+ab
+bq
+bo
 eW
 eW
 eW
@@ -36669,14 +39915,14 @@ Nv
 cN
 cN
 fJ
-qs
+sx
 ba
-qs
+sx
 cF
 cF
 cF
 cF
-qs
+fw
 PC
 iI
 vQ
@@ -36732,9 +39978,9 @@ kj
 ke
 rG
 gX
-iL
+kI
 hu
-iL
+kI
 cT
 gn
 gn
@@ -36750,23 +39996,23 @@ gn
 gn
 gn
 gn
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
+bq
+bo
+MK
+Mk
+LK
+Ia
+Km
+If
+If
+IH
+Id
+HM
+bo
+iL
+iL
+gv
+bo
 eW
 eW
 eW
@@ -36831,14 +40077,14 @@ DJ
 lo
 fU
 fJ
-qs
+sx
 cN
-qs
-qs
+sx
+sx
 cF
 cF
 cF
-qs
+fw
 yu
 fF
 nc
@@ -36893,42 +40139,42 @@ rG
 rG
 rG
 rG
-rE
+rG
 hh
 hU
 Qk
 dO
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
+ag
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+bq
+ab
+gv
+bq
+bo
+MJ
+Mm
+LN
+La
+Kn
+JB
+IX
+II
+If
+HM
+bo
+iL
+bq
+jg
+bo
 eW
 eW
 eW
@@ -36993,14 +40239,14 @@ cN
 yX
 cN
 fS
-qs
+sx
 dp
 cN
-qs
-qs
-qs
-qs
-qs
+sx
+sx
+sx
+sx
+fw
 aS
 fF
 Ty
@@ -37050,47 +40296,47 @@ SI
 bs
 gA
 rK
-eW
-eW
-eW
-eW
-eW
-rE
+OI
+OI
+OI
+OI
+OI
+rG
 fR
-hU
+Pl
 tw
 ax
-eW
-eW
-eW
-ax
-ax
-ax
-ax
-ax
-ax
-ax
-ax
-ax
-ax
-ax
-ax
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
+Pd
+OT
+bq
+iL
+iL
+iL
+iL
+iL
+iL
+iL
+iL
+iL
+iL
+iL
+iL
+bo
+MV
+Mo
+LH
+Lb
+Ko
+JC
+IY
+IJ
+If
+HO
+bo
+iL
+bq
+bo
+bo
 eW
 eW
 eW
@@ -37155,8 +40401,8 @@ cN
 cN
 cN
 fU
-qs
-qs
+sx
+sx
 cN
 fJ
 cN
@@ -37212,46 +40458,46 @@ QQ
 bs
 gA
 rK
-eW
-eW
-eW
-eW
-eW
-rE
+OI
+OI
+OI
+OI
+OI
+rG
 id
 hU
 tm
-ax
-ax
-ax
-ax
-ax
-ax
+iL
+iL
+iL
+iL
+iL
+iL
 Gb
-FU
-FU
-FU
-FQ
-AJ
 ic
+Ps
+FX
+FX
+FX
 ic
-rm
-rm
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
+FX
+FX
+FX
+Nn
+MW
+Mp
+LN
+La
+Kq
+JE
+If
+If
+If
+HQ
+bo
+bq
+bq
+bo
 eW
 eW
 eW
@@ -37374,46 +40620,46 @@ rL
 rK
 rK
 rK
-bo
-bo
-eW
-eW
-eW
-rE
-rz
+rH
+rH
+OI
+Po
+rG
+rG
+Gc
 rw
 rs
 ro
-FU
-FU
-FU
-FU
-FU
-Gc
+FX
+ic
+FX
+FX
+FX
+Pu
 CO
 AL
 AL
 AL
 AL
-Ac
-ic
-rm
-rm
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
+Np
+Np
+Np
+Np
+Np
+MX
+Mq
+LO
+Ld
+Kr
+Jb
+Jb
+IK
+Ig
+HR
+bo
+ac
+iL
+bo
 eW
 eW
 eW
@@ -37537,45 +40783,45 @@ TI
 gj
 bC
 kh
-bo
-eW
-eW
+rH
+OK
+OI
 rE
-rE
-tz
+ff
+ff
 rx
 rt
 EE
 EE
 EE
 Ep
-rl
+Ds
 Ds
 Ds
 CQ
-FX
-FV
+Pt
+Gd
 FR
 AJ
-ic
-ic
-rm
-rm
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
+Nq
+NX
+Nq
+Gd
+FV
+MZ
+Mr
+LN
+Le
+If
+If
+If
+IL
+Ii
+HJ
+bo
+gv
+iL
+bo
 eW
 eW
 eW
@@ -37647,8 +40893,8 @@ cF
 qs
 qs
 ba
-qs
-qs
+sx
+fw
 aT
 em
 Ty
@@ -37698,23 +40944,23 @@ iy
 rH
 rH
 rH
-EB
-bo
-eW
-eW
-rE
+OK
+Pq
+OI
+OI
+rG
 rF
 rB
 ry
 ru
 wh
-Ga
+Nq
 Gz
 Eq
-AJ
+iK
 Ga
-Gd
-Ga
+NX
+Nq
 FY
 yS
 yS
@@ -37723,21 +40969,21 @@ yS
 yS
 zk
 yS
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
+rG
+Na
+rG
+Hz
+Lf
+Ks
+JH
+Jd
+IM
+Ik
+HS
+bo
+EB
+bq
+bo
 eW
 eW
 eW
@@ -37809,8 +41055,8 @@ qs
 qs
 cN
 cN
-qs
-qs
+sx
+fw
 sp
 em
 Ty
@@ -37858,18 +41104,18 @@ rK
 rK
 rK
 rH
-bm
-bo
-bq
-bo
-bo
-bo
-bo
-Fb
-Fb
-Fb
-Fb
-Fb
+Pn
+rH
+OI
+rH
+rH
+rH
+OH
+Pv
+Pv
+Pv
+Pv
+Pv
 jc
 jc
 Er
@@ -37885,21 +41131,21 @@ Ad
 zC
 zl
 yS
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
+ag
+bq
+iL
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+iL
+bq
+bo
 eW
 eW
 eW
@@ -37970,9 +41216,9 @@ cF
 qs
 cN
 cN
-qs
-qs
-qs
+sx
+sx
+fw
 eF
 em
 Ty
@@ -38020,13 +41266,13 @@ qg
 qa
 kR
 rH
-bm
-bo
+Pn
+rH
 Rg
-bq
-ab
-bq
-bo
+OI
+Pf
+OI
+OH
 Fr
 Fr
 Fl
@@ -38047,21 +41293,21 @@ Ae
 zD
 zn
 yS
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
+bq
+bq
+iL
+bq
+XC
+aD
+an
+ag
+eK
+bq
+an
+iL
+iL
+bq
+bo
 eW
 eW
 eW
@@ -38182,13 +41428,13 @@ qp
 qc
 kR
 rH
-bm
-bo
-bo
-bo
-bo
+Pn
+rH
+rH
+rH
+rH
 hl
-bo
+OH
 Fx
 Fr
 Fm
@@ -38209,21 +41455,21 @@ Af
 zE
 zl
 yS
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
+bq
+ab
+iL
+eK
+eO
+eL
+XD
+df
+eR
+Im
+iL
+iL
+bq
+bq
+bo
 eW
 eW
 eW
@@ -38346,11 +41592,11 @@ kR
 rH
 rH
 rH
-bo
-EB
+rH
+OK
 Rg
-ab
-bo
+Pf
+OH
 Fz
 Fs
 Fo
@@ -38371,21 +41617,21 @@ Ae
 zF
 zp
 yS
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
+gv
+iL
+iL
+iL
+iL
+da
+JI
+eL
+eO
+In
+iL
+bq
+bq
+bo
+bo
 eW
 eW
 eW
@@ -38506,13 +41752,13 @@ qq
 qw
 qw
 iB
-ac
+Po
 rH
-bo
+rH
 kS
-bo
-bo
-bo
+rH
+rH
+OH
 FA
 Fu
 GA
@@ -38533,20 +41779,20 @@ Ag
 zG
 yS
 yS
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
+bq
+bq
+ab
+bq
+iL
+Kt
+lR
+bq
+eL
+XD
+iL
+bq
+bq
+bo
 eW
 eW
 eW
@@ -38665,16 +41911,16 @@ qV
 qO
 qy
 qr
-qe
-bo
-bo
-bq
-bo
-bo
-ab
-eO
-bq
-bo
+qz
+rH
+rH
+OI
+rH
+rH
+Pf
+Ph
+OI
+OH
 FD
 Fe
 Fp
@@ -38694,21 +41940,21 @@ AP
 Ah
 zI
 zq
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
+iL
+iL
+iL
+iL
+gv
+iL
+iL
+iL
+eL
+bq
+eN
+iL
+iL
+EB
+bo
 eW
 eW
 eW
@@ -38777,7 +42023,7 @@ eW
 eW
 qs
 fJ
-qs
+sx
 fw
 wR
 wQ
@@ -38809,17 +42055,17 @@ Vv
 FB
 Rx
 vp
-bm
-bm
-bo
-bo
-bo
-bo
-bo
-bo
-bo
-bo
-bo
+Pn
+Pn
+rH
+rH
+OH
+OH
+OH
+rH
+rH
+rH
+rH
 rh
 qz
 qY
@@ -38827,16 +42073,16 @@ qz
 qt
 qz
 qt
-qe
-bq
+qz
+OI
 Rg
-bq
-ac
-bo
-bo
-bo
+OI
+Po
+rH
+rH
+rH
 Oa
-bo
+OH
 FE
 Fv
 Fq
@@ -38859,18 +42105,18 @@ zq
 eW
 eW
 eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
+iL
+EB
+bq
+bq
+iL
+EB
+eR
+eL
+bq
+iL
+gv
+bo
 eW
 eW
 eW
@@ -38939,7 +42185,7 @@ eW
 eW
 qs
 ba
-qs
+sx
 fw
 wS
 wQ
@@ -38947,11 +42193,11 @@ wM
 tX
 pk
 fw
-qs
-qs
-qs
-qs
-qs
+sx
+sx
+sx
+sx
+sx
 cF
 cZ
 OJ
@@ -38970,18 +42216,18 @@ XQ
 Ch
 Sc
 uG
-PW
-bm
-bm
-bo
+Px
+Pn
+Pn
+rH
 FH
-bq
+OI
 cW
-bq
-eO
-bq
+OI
+Ph
+OI
 Rg
-bo
+rH
 rk
 qz
 qZ
@@ -38989,16 +42235,16 @@ qz
 sn
 qz
 qv
-qe
-bq
-bq
-bo
+qz
+OI
+OI
+OH
 im
-bo
-bo
-bo
-bq
-bo
+rH
+rH
+rH
+OI
+OH
 Gm
 Fw
 Fj
@@ -39024,16 +42270,16 @@ xd
 xd
 xd
 xd
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
+EB
+iL
+XC
+XD
+eK
+HT
+iL
+EB
+bo
+bo
 eW
 eW
 eW
@@ -39113,7 +42359,7 @@ cN
 fJ
 cN
 cR
-qs
+sx
 cF
 cZ
 sc
@@ -39132,35 +42378,35 @@ XQ
 Vv
 uV
 mm
-PW
-bo
-bo
-bo
-bq
-bo
-bo
-bo
-bo
-bo
+Px
+rH
+rH
+rH
+OI
+rH
+rH
+rH
+rH
+rH
 lZ
-bo
-bo
-bo
-bo
-bo
-bo
-bo
-bo
-bo
-bo
-bq
-bo
-ab
-bq
-bq
-bq
+rH
+rH
+rH
+rH
+rH
+rH
+rH
+rH
+rH
+rH
+OI
+OH
+Pf
+OI
+OI
+OI
 Rg
-bo
+OH
 Fw
 Fw
 Fj
@@ -39186,16 +42432,16 @@ xY
 xv
 xk
 xd
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
+gv
+iL
+an
+eL
+Im
+eK
+iL
+bq
+bq
+bo
 eW
 eW
 eW
@@ -39266,25 +42512,25 @@ qs
 cN
 cN
 cN
-qs
-qs
+sx
+sx
 dU
 cX
 dU
 cN
-qs
-qs
+sx
+sx
 cN
+sx
+sx
 qs
 qs
 qs
 qs
 qs
 qs
-qs
-qs
-qs
-qs
+sx
+sx
 dk
 zH
 wi
@@ -39296,42 +42542,42 @@ cP
 lP
 dg
 tB
-bq
-bq
+OI
+OI
 Rg
-bo
+rH
 eW
 eW
-bo
-bo
-bq
-bq
-bo
-bo
+rH
+rH
+OI
+OI
+OH
+OH
 jD
-bq
+OI
 Rg
-ag
-bq
+Pe
+OI
 cW
-bq
-eO
-bo
-bo
-wO
-bo
-wO
-bo
-bo
-bo
-bo
-bo
-bo
-bo
-bo
-bo
-bo
-bo
+OI
+Ph
+rH
+rH
+rH
+rH
+rH
+rH
+OH
+OH
+OH
+OH
+OH
+OH
+OH
+OH
+OH
+OH
 DZ
 CX
 BZ
@@ -39348,16 +42594,16 @@ xZ
 xx
 xl
 xd
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
+EB
+iL
+iL
+XD
+ab
+eK
+iL
+iL
+bq
+bo
 eW
 eW
 eW
@@ -39431,22 +42677,22 @@ cN
 cR
 cR
 cN
-qs
-qs
-qs
-qs
-qs
+sx
+sx
+sx
+sx
+sx
 cR
 cN
-qs
-qs
-qs
+sx
+sx
+sx
 cN
 cR
 cR
 cN
 cN
-qs
+sx
 dk
 SJ
 LG
@@ -39456,45 +42702,45 @@ XQ
 Vv
 uV
 mm
-PW
-bo
-bo
-bo
-bo
-bo
+Px
+rH
+rH
+rH
+rH
+rH
 eW
 eW
-bo
-bq
-eO
-bq
-ag
-bo
-bo
-bq
-bo
+OH
+OI
+Ph
+OI
+Pe
+OH
+OH
+OI
+OH
 kS
-bo
-bo
-bo
-bo
-bo
-bo
-bq
-bo
-eL
+OH
+OH
+OH
+rH
+rH
+rH
+OI
+rH
+Pc
 fc
 fc
-eL
+Pc
 eY
-bo
-bo
-eO
-bq
+rH
+rH
+Ph
+OI
 EP
-bq
-bo
-bo
+OI
+OH
+OH
 DB
 CX
 BZ
@@ -39510,16 +42756,16 @@ ya
 xy
 xm
 xd
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
+bq
+bq
+iL
+iL
+iL
+iL
+iL
+iL
+bq
+bo
 eW
 eW
 eW
@@ -39590,25 +42836,25 @@ eW
 eW
 qs
 qs
-qs
-cU
-qs
-qs
+sx
+sx
+sx
+sx
 cF
 cF
 cF
-qs
-qs
+sx
+sx
 cN
 cN
-qs
+sx
 FJ
 cN
 qs
-qs
-qs
+sx
+sx
 cN
-qs
+sx
 dk
 mT
 wk
@@ -39618,7 +42864,7 @@ XQ
 Vv
 vs
 rX
-PW
+Px
 eW
 eW
 eW
@@ -39626,37 +42872,37 @@ eW
 eW
 eW
 eW
-bo
-wO
-bo
-bo
-bq
+OH
+Pi
+OH
+OH
+OI
 fy
-ab
-bq
-bo
-bq
+Pf
+OI
+OH
+OI
 fs
-bq
+OI
 FP
-bo
-bm
-bo
+rH
+Pn
+rH
 cW
-bo
-df
+rH
+OZ
 fk
 fe
 fc
 zS
-bo
+rH
 Qf
-bq
-bo
-bo
-EB
+OI
+rH
+rH
+OK
 Rg
-bo
+OH
 DC
 CY
 CB
@@ -39672,16 +42918,16 @@ yb
 xz
 xn
 xd
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
+bq
+bq
+iL
+iL
+ag
+gv
+bq
+iL
+EB
+bo
 eW
 eW
 eW
@@ -39754,71 +43000,71 @@ eW
 qs
 qs
 cN
-qs
+sx
 cF
 cF
 cF
 cF
 cF
-qs
-qs
+sx
+sx
 dz
 mZ
 cN
-qs
-qs
+sx
+sx
 cF
-qs
+sx
 cN
-qs
-qs
-qs
-qs
-qs
-qs
-qs
+sx
+sx
+sx
+sx
+sx
+sx
+Px
 ks
 uV
 mm
-PW
+Px
 eW
 eW
 eW
 eW
 eW
 eW
-bo
-bo
+OH
+OH
 No
-bo
-bo
-bo
-bo
-bo
-wO
-bo
-bo
-bo
-bo
-bq
-bo
-bm
-bo
-bq
-bo
+OH
+OH
+OH
+OH
+OH
+Pi
+OH
+OH
+OH
+OH
+OI
+rH
+Pn
+rH
+OI
+rH
 fl
 fc
 fc
 fc
-eL
-wO
-bq
-bo
-bo
-bo
-bo
+Pc
+rH
+OI
+rH
+rH
+rH
+rH
 vR
-bo
+OH
 DD
 CZ
 CD
@@ -39834,16 +43080,16 @@ yd
 FL
 xd
 xd
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
+bo
+EB
+gv
+ab
+bq
+iL
+ab
+gv
+bq
+bo
 eW
 eW
 eW
@@ -39916,71 +43162,71 @@ eW
 eW
 qs
 fD
-qs
-qs
-qs
-qs
+sx
+sx
+sx
+sx
 cF
 cF
 cF
-qs
-qs
-qs
-qs
-qs
+sx
+sx
+sx
+sx
+sx
 cF
 cF
-qs
+sx
 fJ
-qs
+sx
 cN
 cR
 mt
 ml
 aq
-lT
+dg
 lP
 lN
 GJ
-PW
+Px
 eW
 eW
 eW
 eW
 eW
 eW
-bo
-bq
-bq
-wO
-XD
-eK
+OH
+OI
+OI
+Pi
+OO
+OY
 fB
-bo
-bq
-bo
+OH
+OI
+OH
 vR
 ft
-bq
+OI
 vR
-bo
-bo
-bo
-bq
-bo
-bo
-bo
-bo
-bo
-bo
-bo
+rH
+rH
+rH
+OI
+rH
+rH
+rH
+rH
+rH
+rH
+rH
 EC
-bo
-bo
-bo
+rH
+rH
+rH
 EC
-bq
-bo
+OI
+OH
 DE
 Da
 CE
@@ -39996,16 +43242,16 @@ ye
 xC
 xo
 wV
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
-eW
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
+bo
 eW
 eW
 eW
@@ -40081,7 +43327,7 @@ cN
 cN
 fJ
 cN
-qs
+sx
 cF
 cF
 cF
@@ -40092,7 +43338,7 @@ cF
 cF
 cF
 cF
-qs
+sx
 ba
 cN
 ep
@@ -40100,49 +43346,49 @@ qs
 qs
 qs
 qs
-qs
+PW
 co
 ck
 VM
-PW
+Px
 eW
 eW
 eW
 eW
 eW
-bo
-bo
-bq
-bo
-bo
+OH
+OH
+OI
+OH
+OH
 fE
-eK
-eK
-wO
-bq
-bo
-bq
-bo
-bo
-bo
-bo
-bo
-ag
+OY
+OY
+Pi
+OI
+OH
+OI
+OH
+OH
+OH
+rH
+rH
+Pe
 Qf
-bo
-ag
-bq
+rH
+Pe
+OI
 FF
-bq
-bo
-bo
-bq
-bo
-ag
+OI
+rH
+rH
+OI
+rH
+Pe
 Rg
-bq
-bo
-bo
+OI
+rH
+OH
 DF
 Da
 CF
@@ -40239,11 +43485,11 @@ eW
 eW
 eW
 qs
-qs
-qs
-qs
+sx
+sx
+sx
 cR
-qs
+sx
 cF
 cF
 cF
@@ -40254,8 +43500,8 @@ cF
 cF
 cF
 cF
-qs
-qs
+sx
+sx
 mL
 qs
 qs
@@ -40266,45 +43512,45 @@ PW
 LA
 uV
 mx
-PW
+Px
 eW
 eW
 eW
 eW
 eW
-bo
-eO
+OH
+Ph
 cW
-bo
-bo
-bo
-bo
-bo
-bo
-wO
-bo
+OH
+OH
+OH
+OH
+OH
+OH
+Pi
+OH
 FP
-bq
+OI
 fq
-bq
-bo
-bo
+OI
+rH
+rH
 fo
-bo
-bo
-bq
-bo
-bo
+rH
+rH
+OI
+rH
+rH
 vR
-bo
-bo
-EB
-bo
-bq
-bo
-bo
-bo
-bo
+rH
+rH
+OK
+rH
+OI
+rH
+rH
+rH
+OH
 DL
 Db
 CG
@@ -40314,7 +43560,7 @@ AZ
 Ay
 FO
 zx
-ze
+zx
 yD
 yg
 xE
@@ -40401,23 +43647,23 @@ eW
 qs
 qs
 qs
-qs
-qs
-qs
+sx
+sx
+sx
 cN
-qs
+sx
 cF
 cF
-qs
-qs
-qs
-qs
-qs
+sx
+sx
+sx
+sx
+sx
 cF
 cF
 cF
 cF
-qs
+sx
 ba
 qs
 eW
@@ -40428,48 +43674,48 @@ PW
 am
 uV
 TO
-PW
+Px
 eW
 eW
 eW
 eW
 eW
-bo
-bq
-bo
-bo
-bo
-bq
-eO
-bq
+OH
+OI
+OH
+OH
+OH
+OI
+Ph
+OI
 Rg
-bq
-bo
-bo
-bo
-bo
+OI
+OH
+OH
+OH
+OH
 kS
-bo
+rH
 KB
-bq
-bo
-bo
+OI
+rH
+rH
 cW
-bo
-bo
-bq
-bq
-bo
+rH
+rH
+OI
+OI
+rH
 lW
-bo
+rH
 PP
-bo
+rH
 Gg
 Rg
-bo
-bo
-bo
-bo
+OH
+OH
+OH
+OH
 Cf
 BH
 Cz
@@ -40564,22 +43810,22 @@ qs
 dp
 cN
 cN
-qs
+sx
 fJ
 cN
-qs
+sx
 cF
 cF
-qs
+sx
 dU
 dA
 dU
-qs
-qs
-qs
-qs
-qs
-qs
+sx
+sx
+sx
+sx
+sx
+sx
 cN
 qs
 eW
@@ -40590,47 +43836,47 @@ PW
 mz
 uV
 ts
-PW
+Px
 eW
 eW
 eW
 eW
 eW
-bo
-bq
-bo
-bm
-bo
+OH
+OI
+OH
+Pn
+OH
 cW
-bo
-bo
-bo
-bq
-wO
-eK
+OH
+OH
+OH
+OI
+Pi
+OY
 fu
-bo
-EB
+OH
+OK
 fp
-bq
-bo
-bo
-bo
-bq
-bo
-bo
-bo
+OI
+rH
+rH
+rH
+OI
+rH
+rH
+rH
 Rg
-ab
-bq
-wO
-ab
-bq
+Pf
+OI
+rH
+Pf
+OI
 eP
-bq
+OI
 Ea
-bq
-bq
+OI
+OI
 CH
 Cg
 BI
@@ -40724,24 +43970,24 @@ xM
 eW
 qs
 fJ
-qs
+sx
 cN
 dY
 cN
-qs
-qs
+sx
+sx
 cF
 cF
-qs
+sx
 cN
-qs
+sx
 cN
-qs
-qs
+sx
+sx
 dd
 dd
-qs
-qs
+sx
+sx
 cV
 qs
 eW
@@ -40752,48 +43998,48 @@ mI
 Ib
 OA
 VM
-PW
-PW
-PW
-PW
-PW
+Px
+Px
+Px
+Px
+Px
 eW
-bo
+OH
 Qf
-bo
-bm
-bo
-bq
-bo
-bo
-bo
-EB
-bo
-bo
-bo
-bo
-bq
-bo
-ab
-bq
-bo
-bo
+OH
+Pn
+OH
+OI
+OH
+OH
+OH
+OK
+OH
+OH
+OH
+OH
+OI
+rH
+Pf
+OI
+rH
+rH
 Wj
-bo
-bm
-bo
-bo
-bo
-bo
-bo
-bo
-bq
-bq
-bo
-bo
-bo
-bo
-bo
+rH
+Pn
+rH
+rH
+rH
+rH
+rH
+rH
+OI
+OI
+OH
+OH
+OH
+OH
+OH
 Cj
 BJ
 Bb
@@ -40886,24 +44132,24 @@ xM
 eW
 qs
 FK
-qs
-qs
-qs
-qs
-qs
-qs
-qs
-qs
-qs
+sx
+sx
+sx
+sx
+sx
+sx
+sx
+sx
+sx
 cN
-qs
+sx
 fJ
-qs
-qs
+sx
+sx
 cN
 cN
 cN
-qs
+sx
 cN
 qs
 eW
@@ -40918,40 +44164,40 @@ mq
 mq
 MY
 iV
-PW
+Px
 eW
-bo
-bq
-bo
-bo
-bo
-bq
-bq
-bo
-bo
-bq
+OH
+OI
+OH
+OH
+OH
+OI
+OI
+OH
+OH
+OI
 uF
-ab
-bq
-bq
+Pf
+OI
+OI
 Rg
-bo
-bo
-eO
+rH
+rH
+Ph
 FP
-bq
+OI
 Rg
-bo
-bo
-bo
-bo
-bo
-bo
-bo
-bo
+rH
+rH
+rH
+rH
+rH
+rH
+rH
+rH
 hl
-bo
-bo
+rH
+OH
 Eb
 DM
 Dc
@@ -41048,24 +44294,24 @@ xM
 xM
 qs
 cR
-qs
-qs
+sx
+sx
 cF
 cF
-qs
+sx
 dd
 dd
-qs
-qs
+sx
+sx
 cN
-qs
+sx
 dp
-qs
-qs
+sx
+sx
 cR
-qs
+sx
 cN
-qs
+sx
 cR
 qs
 eW
@@ -41080,40 +44326,40 @@ ur
 ur
 Ls
 mm
-PW
+Px
 eW
-bo
-bq
-bq
-bo
-bo
-bo
-bq
-bq
-bo
-bo
-bo
-bo
-bo
-bo
-bo
-bo
-bo
-bo
-bo
-bo
-bo
-bo
-an
-eK
-bq
+OH
+OI
+OI
+OH
+OH
+OH
+OI
+OI
+OH
+OH
+OH
+OH
+OH
+OH
+OH
+OH
+OH
+OH
+OH
+OH
+OH
+OH
+ON
+OY
+OI
 aa
-da
-bq
-eK
-bq
-an
-bo
+Pj
+OI
+OY
+OI
+ON
+OH
 Ee
 DN
 Dd
@@ -41211,23 +44457,23 @@ eW
 qs
 cR
 cN
-qs
-qs
-qs
-qs
+sx
+sx
+sx
+sx
 cN
 cN
 cN
 cN
 cN
-qs
+sx
 cN
-qs
+sx
 cN
 cN
-qs
+sx
 cN
-qs
+sx
 cN
 qs
 eW
@@ -41244,15 +44490,15 @@ bR
 KC
 PW
 eW
-bo
-bo
-bq
-bq
-bo
-bo
-bo
-EB
-bo
+OH
+OH
+OI
+OI
+OH
+OH
+OH
+OK
+OH
 eW
 eW
 eW
@@ -41265,17 +44511,17 @@ eW
 eW
 eW
 eW
-bo
+OH
 kd
-bq
-eO
-eK
-XD
-aD
+OI
+Ph
+OY
+OO
+OP
 eM
-eK
+OY
 kd
-bo
+OH
 Ef
 DO
 Df
@@ -41373,21 +44619,21 @@ eW
 qs
 qs
 cN
-qs
-qs
+sx
+sx
 fJ
 cN
 cN
-qs
+sx
 dp
 fJ
-qs
-qs
+sx
+sx
 dz
 dn
 dz
-qs
-qs
+sx
+sx
 dz
 cX
 FI
@@ -41407,14 +44653,14 @@ rV
 PW
 eW
 eW
-bo
-bo
+OH
+OH
 cW
-bq
-ag
+OI
+Pe
 nu
-bq
-bo
+OI
+OH
 eW
 eW
 eW
@@ -41427,17 +44673,17 @@ eW
 eW
 eW
 eW
-bo
-XD
-aD
+OH
+OO
+OP
 eX
-XD
-eR
-XD
-aD
-XD
-XD
-bo
+OO
+Pk
+OO
+OP
+OO
+OO
+OH
 FZ
 DP
 FZ
@@ -41569,14 +44815,14 @@ bL
 PW
 eW
 eW
-bm
-bo
-bo
-lR
+Pn
+OH
+OH
+Pr
 dv
-bo
-bo
-bo
+OH
+OH
+OH
 eW
 eW
 eW
@@ -41589,17 +44835,17 @@ eW
 eW
 eW
 eW
-bo
+OH
 wt
-XD
-eL
-eN
-bq
-eL
-df
-bq
+OO
+Pc
+Pg
+OI
+Pc
+OZ
+OI
 pw
-bo
+OH
 Eg
 DQ
 Dh
@@ -41733,10 +44979,10 @@ eW
 eW
 eW
 eW
-bo
-bo
-bo
-bo
+OH
+OH
+OH
+OH
 eW
 eW
 eW
@@ -41751,17 +44997,17 @@ eW
 eW
 eW
 eW
-bo
-eK
-aD
-bq
+OH
+OY
+OP
+OI
 eT
-df
-eK
-eN
-df
-aD
-bo
+OZ
+OY
+Pg
+OZ
+OP
+OH
 Eh
 DQ
 Dk
@@ -41913,17 +45159,17 @@ eW
 eW
 eW
 eW
-bo
+OH
 zS
 fP
 TT
-eL
+Pc
 aB
-eL
-bq
-eL
-XC
-bo
+Pc
+OI
+Pc
+OR
+OH
 Ei
 DR
 Dm
@@ -42075,7 +45321,7 @@ xM
 eW
 eW
 eW
-bo
+OH
 Ic
 Zi
 Zi
@@ -42085,7 +45331,7 @@ Zi
 Zi
 Zi
 CU
-bo
+OH
 CI
 DT
 CI
