@@ -373,7 +373,7 @@
 /obj/structure/sign/redcross{
 	name = "FirstAid"
 	},
-/turf/simulated/wall,
+/turf/simulated/floor/plating,
 /area/offworld/orbital/station/lower_medical_treatment)
 "aP" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
@@ -18588,6 +18588,10 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 1
 	},
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -26
+	},
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/xenoarcheology/tank_storage)
 "Kc" = (
@@ -18929,10 +18933,6 @@
 /turf/simulated/floor/tiled,
 /area/offworld/orbital/xenoarcheology)
 "KN" = (
-/obj/machinery/firealarm{
-	dir = 8;
-	pixel_x = -26
-	},
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
@@ -18941,6 +18941,13 @@
 	},
 /obj/effect/floor_decal/corner/purple{
 	dir = 1
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 4
+	},
+/obj/machinery/disposal/wall{
+	dir = 4;
+	pixel_x = -32
 	},
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/xenoarcheology/tank_storage)
@@ -18953,6 +18960,9 @@
 	},
 /obj/effect/floor_decal/corner/purple{
 	dir = 1
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/xenoarcheology/tank_storage)
@@ -18969,6 +18979,10 @@
 /obj/machinery/light_switch{
 	pixel_x = -27;
 	pixel_y = 28
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
 	},
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/xenoarcheology/tank_storage)
@@ -19373,6 +19387,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock/glass_mining,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/xenoarcheology/tank_storage)
 "LA" = (
@@ -19781,9 +19796,6 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/lower/port)
 "Me" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
@@ -19797,6 +19809,9 @@
 	icon_state = "2-4"
 	},
 /obj/effect/catwalk_plated,
+/obj/structure/disposalpipe/junction{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/halls/lower/port)
 "Mg" = (
