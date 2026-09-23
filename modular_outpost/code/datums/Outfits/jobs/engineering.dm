@@ -22,8 +22,16 @@
 	suit = /obj/item/clothing/suit/storage/toggle/labcoat
 	l_pocket = /obj/item/experi_scanner
 
+	headset = /obj/item/radio/headset/headset_eng
+	headset_alt = /obj/item/radio/headset/alt/headset_eng
+	headset_earbud = /obj/item/radio/headset/earbud/headset_eng
+
 /datum/decl/hierarchy/outfit/job/science/scientist/anomalist
 	id_type = /obj/item/card/id/science/anomalist
 	uniform = /obj/item/clothing/under/rank/engineer
 	suit = /obj/item/clothing/suit/storage/toggle/labcoat
 	l_pocket = /obj/item/experi_scanner
+
+	headset = /obj/item/radio/headset/headset_eng
+	headset_alt = /obj/item/radio/headset/alt/headset_eng
+	headset_earbud = /obj/item/radio/headset/earbud/headset_eng

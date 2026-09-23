@@ -5,3 +5,7 @@
 	l_pocket = /obj/item/experi_scanner
 	pda_type = /obj/item/pda/science
 	backpack = /obj/item/storage/backpack
+
+	headset = /obj/item/radio/headset/miner
+	headset_alt = /obj/item/radio/headset/alt/miner
+	headset_earbud = /obj/item/radio/headset/earbud/miner
