@@ -8823,6 +8823,10 @@
 /area/maintenance/spine/civ)
 "aqO" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/portables_connector/scrubbers{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/outline/red,
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/outpost/anomaly_lab)
 "aqP" = (
@@ -13224,6 +13228,16 @@
 /obj/item/juke_remote{
 	autolinkareajuke_onspawn = /area/djstation
 	},
+/obj/machinery/button/remote/blast_door{
+	dir = 4;
+	id = "anom_lock";
+	name = "Anomaly Lab Blastshield";
+	pixel_x = -27;
+	pixel_y = -8
+	},
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/outpost/anomaly_lab)
 "azn" = (
@@ -13654,6 +13668,16 @@
 	},
 /obj/structure/sign/electricshock{
 	pixel_y = -32
+	},
+/obj/machinery/button/remote/blast_door{
+	dir = 1;
+	id = "anom_lock";
+	name = "Anomaly Lab Blastshield";
+	pixel_x = 11;
+	pixel_y = -26
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/atmoshall)
@@ -15439,6 +15463,11 @@
 	dir = 8
 	},
 /obj/machinery/door/firedoor/glass,
+/obj/machinery/door/blast/regular/open{
+	name = "Anomaly Lab Blastshield";
+	id = "anom_lock"
+	},
+/obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/rnd/outpost/anomaly_lab)
 "aDH" = (
@@ -15507,6 +15536,9 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/milspec,
@@ -16393,6 +16425,10 @@
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 1
 	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -5;
+	pixel_y = 30
+	},
 /turf/simulated/floor/tiled,
 /area/engineering/atmoshall)
 "aFx" = (
@@ -17037,6 +17073,11 @@
 	name = "Anomaly Lab"
 	},
 /obj/machinery/door/firedoor/glass,
+/obj/machinery/door/blast/regular/open{
+	name = "Anomaly Lab Blastshield";
+	id = "anom_lock"
+	},
+/obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/rnd/outpost/anomaly_lab)
 "aGA" = (
@@ -19970,6 +20011,9 @@
 /obj/item/geiger/wall/north,
 /obj/machinery/camera/network/engineering{
 	c_tag = "ENG - Anomaly Lab North"
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/outpost/anomaly_lab)
@@ -40859,9 +40903,6 @@
 /turf/simulated/floor/plating,
 /area/maintenance/incinerator)
 "byx" = (
-/obj/structure/sign/warning/acid{
-	pixel_x = 32
-	},
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
@@ -50356,6 +50397,9 @@
 /obj/machinery/vending/wallmed1/public{
 	pixel_y = 32
 	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/engineering/atmoshall)
 "bRl" = (
@@ -53709,8 +53753,8 @@
 /area/maintenance/spine/eng)
 "bYn" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 5
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/outpost/anomaly_lab)
@@ -59239,6 +59283,9 @@
 	},
 /obj/random/junk,
 /obj/effect/floor_decal/industrial/warning,
+/obj/structure/sign/warning/acid{
+	pixel_y = 32
+	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/atmos_control)
 "clJ" = (
@@ -116088,7 +116135,7 @@ aKz
 aJu
 aMA
 aSl
-aHD
+aHE
 aGz
 aDG
 aQh
@@ -116250,7 +116297,7 @@ aHD
 aJv
 aHD
 qVG
-aHD
+aHE
 aMc
 aDJ
 azm
