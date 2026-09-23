@@ -746,7 +746,7 @@
 	dir = 1
 	},
 /obj/structure/window/reinforced,
-/turf/simulated/wall,
+/turf/simulated/floor/airless,
 /area/offworld/orbital/exterior/engine_core_starboard)
 "bE" = (
 /obj/structure/prop/rock/small/alt,
@@ -1835,7 +1835,7 @@
 /obj/structure/window/reinforced{
 	dir = 8
 	},
-/turf/simulated/wall,
+/turf/simulated/floor/airless,
 /area/offworld/orbital/exterior/engine_core_starboard)
 "dF" = (
 /obj/effect/floor_decal/industrial/warning/corner{
@@ -19460,7 +19460,7 @@
 	dir = 4;
 	health = 1e+006
 	},
-/turf/simulated/wall,
+/turf/simulated/floor/airless,
 /area/offworld/orbital/exterior/engine_core_starboard)
 "NN" = (
 /obj/effect/floor_decal/eshui/emblem/eshui_l,
@@ -41750,7 +41750,7 @@ tP
 tP
 fv
 qz
-Bq
+yr
 Vs
 fl
 ia
@@ -41912,7 +41912,7 @@ CJ
 CD
 fv
 qz
-Bq
+yr
 Vs
 fl
 ia
@@ -42074,7 +42074,7 @@ OQ
 OQ
 Au
 qz
-Bq
+yr
 Vs
 fl
 ia
@@ -42236,7 +42236,7 @@ OQ
 CF
 Pv
 qz
-Bq
+yr
 Vs
 fl
 ia
@@ -42398,7 +42398,7 @@ OQ
 OQ
 qz
 qz
-Bq
+yr
 Vs
 Cr
 ia
@@ -42560,7 +42560,7 @@ OQ
 OQ
 qz
 qz
-Bq
+yr
 oP
 Hv
 ia
@@ -43208,7 +43208,7 @@ OQ
 OQ
 qz
 Au
-Bq
+yr
 AH
 fl
 ia
@@ -43370,7 +43370,7 @@ OQ
 OQ
 qz
 qz
-Bq
+yr
 Vs
 fl
 ia
@@ -43532,7 +43532,7 @@ OQ
 OQ
 OQ
 qz
-Bq
+yr
 Vs
 fl
 ia
@@ -43694,7 +43694,7 @@ OQ
 OQ
 OQ
 qz
-Bq
+yr
 Vs
 fl
 gz
@@ -43856,7 +43856,7 @@ OQ
 Au
 OQ
 OQ
-Bq
+yr
 Vs
 fl
 fl
