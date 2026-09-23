@@ -27,3 +27,9 @@ GLOBAL_VAR_INIT(hyperspeed_runtime_meows,0)
 		C.visible_message("\The [C] meows!")
 		if(prob(1) && prob(5))
 			new /mob/living/simple_mob/animal/passive/cat/kitten(get_turf(C))
+
+
+// Show on examine
+/mob/living/simple_mob/animal/passive/cat/runtime/examine(mob/user)
+	. = ..()
+	. += span_info("[p_Their()] collar has the number: [GLOB.total_runtimes](skipped: [GLOB.total_runtimes_skipped])")
