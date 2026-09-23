@@ -7,5 +7,5 @@
 	backpack = /obj/item/storage/backpack
 
 	headset = /obj/item/radio/headset/miner
-	headset_alt = /obj/item/radio/headset/alt/miner
-	headset_earbud = /obj/item/radio/headset/earbud/miner
+	headset_alt = /obj/item/radio/headset/miner
+	headset_earbud = /obj/item/radio/headset/miner
