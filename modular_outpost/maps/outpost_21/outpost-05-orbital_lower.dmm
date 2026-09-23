@@ -18140,7 +18140,8 @@
 "Jf" = (
 /obj/machinery/power/emitter{
 	anchored = 1;
-	state = 2
+	state = 2;
+	icon_state = "emitter2"
 	},
 /obj/effect/floor_decal/industrial/warning/full,
 /obj/effect/floor_decal/industrial/outline/red,

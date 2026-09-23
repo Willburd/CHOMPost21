@@ -22,16 +22,16 @@
 	announce_channels = list(CHANNEL_SCIENCE, CHANNEL_SUPPLY)
 
 /datum/techweb_node/anomaly_research
-	announce_channels = list(CHANNEL_SCIENCE, CHANNEL_ENGINEERING, CHANNEL_SUPPLY)
+	announce_channels = list(CHANNEL_SCIENCE, CHANNEL_ENGINEERING)
 
 /datum/techweb_node/anomaly_shells
-	announce_channels = list(CHANNEL_SCIENCE, CHANNEL_ENGINEERING, CHANNEL_SUPPLY)
+	announce_channels = list(CHANNEL_SCIENCE, CHANNEL_ENGINEERING)
 
 /datum/techweb_node/anomaly_harvesting
-	announce_channels = list(CHANNEL_SCIENCE, CHANNEL_ENGINEERING, CHANNEL_SUPPLY)
+	announce_channels = list(CHANNEL_SCIENCE, CHANNEL_ENGINEERING)
 
 /datum/techweb_node/applied_anomaly_harvesting
-	announce_channels = list(CHANNEL_SCIENCE, CHANNEL_ENGINEERING, CHANNEL_SUPPLY)
+	announce_channels = list(CHANNEL_SCIENCE, CHANNEL_ENGINEERING)
 
 /datum/techweb_node/telekinetics
 	announce_channels = list(CHANNEL_SCIENCE, CHANNEL_ENGINEERING, CHANNEL_SUPPLY)
