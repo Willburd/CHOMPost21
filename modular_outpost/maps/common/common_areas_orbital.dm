@@ -687,6 +687,10 @@ EXTERIOR_AREA_BEHAVIOR(/area/offworld/orbital/exterior/starboard_solars)
 	name = "Orbital Xenoarcheology Expedition Preperation"
 	icon_state = "dark128"
 
+/area/offworld/orbital/xenoarcheology/tank_storage
+	name = "Orbital Xenoarcheology Tank Storage"
+	icon_state = "dark128"
+
 /area/offworld/orbital/xenoarcheology/blackhole
 	name = "\improper Orbital Black Hole"
 	icon_state = "cyablatri"
