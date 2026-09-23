@@ -1565,9 +1565,6 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/spine/waste)
-"ady" = (
-/turf/simulated/wall/r_wall,
-/area/rnd/outpost/anomaly_lab)
 "adz" = (
 /obj/structure/catwalk,
 /obj/structure/ladder/up,
@@ -1586,6 +1583,11 @@
 /obj/structure/disposalpipe/junction,
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/exp_prep)
+"adB" = (
+/obj/structure/catwalk,
+/obj/random/junk,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/eng)
 "adC" = (
 /turf/simulated/mineral/alt/turfpack/muriki,
 /area/mine/explored/muriki/cave/sci/east_access)
@@ -13219,6 +13221,9 @@
 	dir = 8
 	},
 /obj/structure/disposalpipe/segment,
+/obj/item/juke_remote{
+	autolinkareajuke_onspawn = /area/djstation
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/outpost/anomaly_lab)
 "azn" = (
@@ -13646,6 +13651,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 8
+	},
+/obj/structure/sign/electricshock{
+	pixel_y = -32
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/atmoshall)
@@ -17846,6 +17854,9 @@
 /obj/structure/disposalpipe/up{
 	dir = 8
 	},
+/obj/structure/railing{
+	dir = 8
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/eng)
 "aId" = (
@@ -20189,6 +20200,13 @@
 /obj/item/geiger/wall/east,
 /turf/simulated/floor/tiled,
 /area/engineering/atmoshall)
+"aMz" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/structure/trash_pile,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/eng)
 "aMA" = (
 /obj/machinery/firealarm{
 	dir = 4;
@@ -21002,6 +21020,10 @@
 /obj/effect/floor_decal/milspec/hatchmarks,
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/atmoshall)
+"aNX" = (
+/obj/structure/catwalk,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/eng)
 "aNY" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -22361,6 +22383,13 @@
 /obj/random/junk,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/spine/waste)
+"aQs" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/random/junk,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/eng)
 "aQt" = (
 /turf/simulated/wall,
 /area/maintenance/eng)
@@ -25086,6 +25115,9 @@
 	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
+	},
+/obj/structure/cable/green{
+	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/outpost/anomaly_lab)
@@ -31880,6 +31912,7 @@
 	opacity = 0;
 	dir = 2
 	},
+/obj/item/airlock_brace,
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/maintenance/atmos_control)
 "bip" = (
@@ -45411,7 +45444,7 @@
 	pixel_y = 32
 	},
 /obj/structure/cable/green{
-	icon_state = "0-2"
+	icon_state = "0-4"
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/outpost/anomaly_lab)
@@ -50123,6 +50156,7 @@
 	dir = 1;
 	icon_state = "pipe-c"
 	},
+/obj/structure/catwalk,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/eng)
 "bQT" = (
@@ -59163,9 +59197,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
-	},
-/obj/structure/cable/green{
-	icon_state = "1-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
@@ -77815,6 +77846,7 @@
 	},
 /obj/item/weldingtool,
 /obj/item/clothing/head/welding,
+/obj/item/clothing/gloves/yellow,
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/outpost/anomaly_lab)
 "fUd" = (
@@ -115571,11 +115603,11 @@ aHD
 aHD
 aFw
 bRd
-aQt
-aQt
-aQt
 aQh
-abn
+aQh
+aQh
+aQh
+aQh
 abn
 abn
 abn
@@ -115735,9 +115767,9 @@ bRj
 bRe
 bRc
 bQS
-aQt
-wuC
-abn
+aNX
+adB
+aQh
 amh
 ali
 akN
@@ -115895,11 +115927,11 @@ fhe
 aHD
 bRk
 aAd
-aQt
+aQh
 aIc
-aQt
-wuC
-abn
+aQs
+aMz
+aQh
 amk
 alj
 afS
@@ -116057,11 +116089,11 @@ aSl
 aHD
 aGz
 aDG
-acV
-acV
-acV
-acV
-acV
+aQh
+aQh
+aQh
+aQh
+aQh
 amy
 all
 akO
@@ -116225,7 +116257,7 @@ aiL
 ahL
 acV
 acV
-acV
+abn
 akS
 ajH
 afT
@@ -116387,7 +116419,7 @@ ciN
 ahM
 afd
 fTo
-acV
+abn
 ala
 afT
 afT
@@ -116549,7 +116581,7 @@ aiR
 ahN
 afe
 aeL
-acV
+abn
 ale
 ajM
 afW
@@ -116711,7 +116743,7 @@ agf
 ahS
 agf
 afc
-ady
+aeb
 aeb
 aeb
 aeb
@@ -116865,16 +116897,16 @@ adu
 adu
 aPt
 akx
-ady
+akx
 aiA
 aiS
 aiA
 aiS
 aiA
 agj
-ady
-ady
-bMZ
+akx
+akx
+bLp
 adu
 cbL
 cbH
@@ -117036,7 +117068,7 @@ aiJ
 agm
 akx
 akx
-bMZ
+bLp
 adu
 bXJ
 adu
@@ -117197,8 +117229,8 @@ akx
 akx
 akx
 akx
-adu
-bMZ
+bLp
+bLp
 adu
 cls
 adu
@@ -117358,9 +117390,9 @@ akx
 akx
 akx
 akx
-bLx
 adu
-bMZ
+adu
+bLp
 adu
 bLx
 cJz
