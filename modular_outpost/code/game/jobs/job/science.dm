@@ -21,7 +21,7 @@
 	access = list(ACCESS_RESEARCH, ACCESS_HEADS, ACCESS_KEYCARD_AUTH, ACCESS_RC_ANNOUNCE)
 	minimal_access = list(ACCESS_RESEARCH, ACCESS_HEADS, ACCESS_KEYCARD_AUTH, ACCESS_RC_ANNOUNCE)
 	job_description = "A " + JOB_SCIENTIST + " is a researcher working in the Command department, with general knowledge of the scientific process, as well as the principles and requirements of Research and Development. Often assists with command paperwork."
-	alt_titles = list(JOB_ALT_RESEARCHER = /datum/alt_title/researcher, JOB_ALT_LAB_ASSISTANT = /datum/alt_title/lab_assistant, JOB_ALT_ANOMALIST = /datum/alt_title/anomalist, JOB_ALT_TELEPORT_OPERATOR = /datum/alt_title/teleport_operation)
+	alt_titles = list(JOB_ALT_RESEARCHER = /datum/alt_title/researcher, JOB_ALT_LAB_ASSISTANT = /datum/alt_title/lab_assistant, JOB_ALT_TELEPORT_OPERATOR = /datum/alt_title/teleport_operation)
 
 
 // Massive edit, so just redefined entirely to be engineering now

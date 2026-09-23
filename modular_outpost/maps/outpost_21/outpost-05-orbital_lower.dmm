@@ -9688,8 +9688,9 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/rust_aux_tool_storage)
 "tz" = (
-/obj/structure/table/standard,
-/obj/item/flashlight/lamp,
+/obj/machinery/computer/rdconsole_tg/cargo_remote{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/monotile,
 /area/offworld/orbital/xenoarcheology)
 "tA" = (
@@ -18172,6 +18173,10 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
+/obj/item/flashlight/lamp{
+	pixel_x = 12;
+	pixel_y = -8
+	},
 /turf/simulated/floor/tiled/monotile,
 /area/offworld/orbital/xenoarcheology)
 "Jl" = (
@@ -18512,6 +18517,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
 	},
+/obj/structure/bed/chair/office/dark,
 /turf/simulated/floor/tiled/monotile,
 /area/offworld/orbital/xenoarcheology)
 "JS" = (
@@ -19628,16 +19634,6 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/xenoarcheology/exp_prep)
 "LP" = (
-/obj/machinery/power/apc{
-	name = "south bump";
-	pixel_y = -24
-	},
-/obj/structure/cable/green{
-	icon_state = "0-5"
-	},
-/obj/structure/table/standard,
-/obj/item/anomaly_scanner,
-/obj/item/tool/wrench,
 /obj/structure/extinguisher_cabinet{
 	dir = 4;
 	pixel_x = -30;
@@ -19646,6 +19642,9 @@
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 1
 	},
+/obj/structure/table/standard,
+/obj/item/storage/box/monkeycubes,
+/obj/item/reagent_containers/food/snacks/monkeycube/wrapped,
 /turf/simulated/floor/tiled,
 /area/offworld/orbital/xenoarcheology/isolation_a)
 "LQ" = (
@@ -20054,17 +20053,8 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/lower/port)
 "Ms" = (
-/obj/machinery/power/emitter{
-	anchored = 1;
-	state = 2;
-	dir = 1
-	},
-/obj/effect/floor_decal/industrial/warning/full,
-/obj/effect/floor_decal/industrial/outline/red,
-/obj/structure/cable/green{
-	icon_state = "0-4"
-	},
-/turf/simulated/floor/plating,
+/obj/machinery/artifact_harvester,
+/turf/simulated/floor/tiled/dark,
 /area/offworld/orbital/xenoarcheology/isolation_a)
 "Mt" = (
 /obj/machinery/atmospherics/unary/vent_scrubber{
@@ -20073,18 +20063,16 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
 /turf/simulated/floor/tiled/monotile,
 /area/offworld/orbital/xenoarcheology/isolation_a)
 "Mu" = (
-/obj/structure/cable/green{
-	icon_state = "5-10"
-	},
 /obj/machinery/light,
+/obj/machinery/power/apc{
+	name = "south bump";
+	pixel_y = -24
+	},
 /obj/structure/cable/green{
-	icon_state = "5-8"
+	icon_state = "0-5"
 	},
 /turf/simulated/floor/tiled,
 /area/offworld/orbital/xenoarcheology/isolation_a)
@@ -20386,10 +20374,8 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/offworld/orbital/station/halls/lower/port)
 "Nc" = (
-/obj/machinery/anomaly_harvester{
-	anchored = 1
-	},
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/artifact_scanpad,
 /turf/simulated/floor/tiled/dark,
 /area/offworld/orbital/xenoarcheology/isolation_a)
 "Nd" = (
@@ -20569,6 +20555,7 @@
 /area/offworld/orbital/station/solar_control)
 "Nt" = (
 /obj/structure/table/standard,
+/obj/item/flashlight/lamp,
 /turf/simulated/floor/tiled/dark,
 /area/offworld/orbital/xenoarcheology/isolation_a)
 "Nu" = (
@@ -20791,19 +20778,20 @@
 	c_tag = "REX - Xenoarcheology Isolation A"
 	},
 /obj/structure/table/standard,
-/obj/item/assembly/signaler/anomaly/choice,
-/obj/item/anomaly_neutralizer{
-	pixel_x = 5;
-	pixel_y = 14
-	},
-/obj/item/anomaly_releaser/science,
-/obj/item/anomaly_releaser{
-	pixel_y = -5
-	},
 /obj/item/geiger/wall/west,
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 8
 	},
+/obj/item/anodevice{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/anodevice{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/anobattery,
+/obj/item/anobattery,
 /turf/simulated/floor/tiled,
 /area/offworld/orbital/xenoarcheology/isolation_a)
 "NO" = (
@@ -21176,6 +21164,26 @@
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 1
 	},
+/obj/item/anodevice{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/anodevice{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/anodevice{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/anodevice{
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/item/anobattery,
+/obj/item/anobattery,
+/obj/item/anobattery,
+/obj/item/anobattery,
 /turf/simulated/floor/tiled,
 /area/offworld/orbital/xenoarcheology/isolation_c)
 "Ox" = (
