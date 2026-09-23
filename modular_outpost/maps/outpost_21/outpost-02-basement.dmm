@@ -1565,6 +1565,12 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/spine/waste)
+"ady" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/railing/grey,
+/obj/item/assembly/signaler/anomaly/choice,
+/turf/simulated/floor/plating,
+/area/rnd/outpost/anomaly_lab)
 "adz" = (
 /obj/structure/catwalk,
 /obj/structure/ladder/up,
@@ -4307,6 +4313,7 @@
 /obj/effect/floor_decal/industrial/stand_clear/yellow{
 	dir = 8
 	},
+/obj/structure/railing/grey,
 /turf/simulated/floor/plating,
 /area/rnd/outpost/anomaly_lab)
 "aiB" = (
@@ -4436,6 +4443,7 @@
 /area/rnd/research/anomaly)
 "aiJ" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/railing/grey,
 /turf/simulated/floor/plating,
 /area/rnd/outpost/anomaly_lab)
 "aiK" = (
@@ -28806,7 +28814,6 @@
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 1
 	},
-/obj/item/assembly/signaler/anomaly/choice,
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/outpost/anomaly_lab)
 "bcm" = (
@@ -117111,7 +117118,7 @@ cqA
 clv
 akx
 akx
-aiJ
+ady
 amt
 aiJ
 amt
