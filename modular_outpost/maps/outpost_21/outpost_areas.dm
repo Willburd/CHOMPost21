@@ -689,3 +689,5 @@
 	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	use_emergency_overlay = TRUE
+	color_grading = COLORTINT_DIM
+	ambience = AMBIENCE_ENGINEERING

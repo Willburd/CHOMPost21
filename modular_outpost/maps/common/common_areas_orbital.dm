@@ -669,15 +669,21 @@ EXTERIOR_AREA_BEHAVIOR(/area/offworld/orbital/exterior/starboard_solars)
 /area/offworld/orbital/xenoarcheology
 	name = "\improper Orbital Xenoarcheology"
 	icon_state = "xeno_lab"
+	sound_env = LARGE_ENCLOSED
+	ambience = AMBIENCE_GENERIC
+	holomap_color = HOLOMAP_AREACOLOR_CARGO
 
 /area/offworld/orbital/xenoarcheology/isolation_a
 	name = "Orbital Xenoarcheology Isolation A"
+	sound_env = SMALL_ENCLOSED
 
 /area/offworld/orbital/xenoarcheology/isolation_b
 	name = "Orbital Xenoarcheology Isolation B"
+	sound_env = SMALL_ENCLOSED
 
 /area/offworld/orbital/xenoarcheology/isolation_c
 	name = "Orbital Xenoarcheology Isolation C"
+	sound_env = SMALL_ENCLOSED
 
 /area/offworld/orbital/xenoarcheology/longtermstorage
 	name = "Orbital Xenoarcheology Long-Term Anomalous Storage"
@@ -690,6 +696,7 @@ EXTERIOR_AREA_BEHAVIOR(/area/offworld/orbital/exterior/starboard_solars)
 /area/offworld/orbital/xenoarcheology/tank_storage
 	name = "Orbital Xenoarcheology Tank Storage"
 	icon_state = "dark128"
+	sound_env = SMALL_ENCLOSED
 
 /area/offworld/orbital/xenoarcheology/blackhole
 	name = "\improper Orbital Black Hole"
