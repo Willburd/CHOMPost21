@@ -3851,7 +3851,8 @@
 	anchored = 1;
 	state = 2;
 	dir = 4;
-	anomalous = 1
+	anomalous = 1;
+	icon_state = "emitter2"
 	},
 /obj/structure/cable/green{
 	icon_state = "0-8"
@@ -9941,7 +9942,8 @@
 	anchored = 1;
 	state = 2;
 	dir = 4;
-	anomalous = 1
+	anomalous = 1;
+	icon_state = "emitter2"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/rnd/outpost/anomaly_lab)
