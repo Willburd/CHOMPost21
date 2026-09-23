@@ -89,6 +89,7 @@ GLOBAL_LIST_INIT(ai_status_emotions, list(
 	if(!emote)
 		return
 	emotion = emote
+	update() // Outpost 21 edit(port) - Allow AI to change single AI status displays
 
 /obj/machinery/ai_status_display/process()
 	return
