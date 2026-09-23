@@ -19082,6 +19082,12 @@
 /obj/structure/lightpost,
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
 /area/muriki/grounds/shutt)
+"aSu" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/obj/machinery/door/firedoor/glass,
+/turf/space,
+/area/rnd/otherlab)
 "aSv" = (
 /obj/machinery/alarm{
 	dir = 1;
@@ -19711,7 +19717,6 @@
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
 /obj/machinery/door/firedoor/glass,
-/obj/item/taperoll/engineering,
 /turf/simulated/floor/plating,
 /area/rnd/otherlab)
 "aTB" = (
@@ -19761,7 +19766,7 @@
 	name = "Auxillary Lab";
 	req_one_access = list(30,47,52)
 	},
-/obj/item/taperoll/engineering,
+/obj/item/taperoll/engineering/applied,
 /turf/simulated/floor/tiled/techfloor,
 /area/rnd/otherlab)
 "aTE" = (
@@ -33782,7 +33787,6 @@
 /obj/machinery/door/firedoor/glass,
 /obj/structure/window/reinforced/full,
 /obj/structure/disposalpipe/segment,
-/obj/item/taperoll/engineering,
 /turf/simulated/floor/plating,
 /area/rnd/hallway/main)
 "fbW" = (
@@ -34068,7 +34072,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/door/firedoor/glass,
-/obj/item/taperoll/engineering,
+/obj/item/taperoll/engineering/applied,
 /turf/simulated/floor/tiled/techfloor,
 /area/rnd/hallway/main)
 "fge" = (
@@ -145419,7 +145423,7 @@ czI
 kwD
 kwD
 kwD
-aTA
+aSu
 aTD
 aTA
 kwD

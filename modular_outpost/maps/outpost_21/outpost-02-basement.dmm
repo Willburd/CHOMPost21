@@ -956,10 +956,6 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
-/obj/structure/prop/machine/core/starts_on{
-	name = "Bluespace Inhibitor";
-	desc = "An E-Shui proprietary machine that de-phases Shadekin that enter its area of effect. It's unclear how it works, or why it smells vaguely floral..."
-	},
 /turf/simulated/floor/tiled/techfloor,
 /area/rnd/xenobiology/xenobioh)
 "acj" = (
@@ -4604,7 +4600,7 @@
 	dir = 4
 	},
 /obj/machinery/door/firedoor/glass,
-/obj/item/tape/engineering,
+/obj/item/taperoll/engineering/applied,
 /turf/simulated/floor/tiled/steel_grid,
 /area/rnd/xenobiology/xenobioh)
 "aiZ" = (
@@ -7585,7 +7581,7 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/industrial/outline/red,
-/obj/item/tape/engineering,
+/obj/item/taperoll/engineering/applied,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/rnd/xenobiology/xenobioh)
 "aoE" = (
@@ -7633,7 +7629,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/item/tape/engineering,
+/obj/item/taperoll/engineering/applied,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/rnd/xenobiology/xenobioh)
 "aoI" = (
@@ -8342,7 +8338,7 @@
 	name = "Xenobiology";
 	req_one_access = null
 	},
-/obj/item/tape/engineering,
+/obj/item/taperoll/engineering/applied,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/rnd/xenobiology/xenobioh)
 "apR" = (
@@ -8396,7 +8392,7 @@
 /obj/machinery/door/airlock/research{
 	name = "Xenobiology Lab"
 	},
-/obj/item/tape/engineering,
+/obj/item/taperoll/engineering/applied,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/rnd/xenobiology/xenobioh)
 "apV" = (
@@ -8762,7 +8758,7 @@
 /obj/machinery/door/airlock{
 	name = "Science Lavoreatory"
 	},
-/obj/item/tape/engineering,
+/obj/item/taperoll/engineering/applied,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/muriki/bathroom/scilower)
 "aqH" = (
@@ -9398,7 +9394,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/item/tape/engineering,
+/obj/item/taperoll/engineering/applied,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/muriki/bathroom/scilower)
 "arP" = (
@@ -11151,7 +11147,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/obj/item/tape/engineering,
+/obj/item/taperoll/engineering/applied,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/rnd/research/anomaly)
 "ave" = (
@@ -15981,7 +15977,7 @@
 	},
 /obj/item/rectape,
 /obj/item/rectape,
-/obj/item/rectape,
+/obj/item/rectape/anna_lore,
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/exp_prep)
 "aED" = (
@@ -18483,7 +18479,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/firedoor/glass,
-/obj/item/tape/engineering,
+/obj/item/taperoll/engineering/applied,
 /turf/simulated/floor/tiled/techfloor,
 /area/rnd/xenobiology/xenobiohstore)
 "aJj" = (
@@ -59733,7 +59729,7 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/item/tape/engineering,
+/obj/item/taperoll/engineering/applied,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/rnd/research/exp_prep)
 "cmT" = (
@@ -59766,7 +59762,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/firedoor/border_only,
-/obj/item/tape/engineering,
+/obj/item/taperoll/engineering/applied,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/rnd/research/exp_prep)
 "cmW" = (
@@ -59954,7 +59950,7 @@
 	name = "Expedition Prep"
 	},
 /obj/machinery/door/firedoor/border_only,
-/obj/item/tape/engineering,
+/obj/item/taperoll/engineering/applied,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/mine/explored/muriki/cave/sci/west_access)
 "cnv" = (
@@ -59965,7 +59961,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/firedoor/border_only,
-/obj/item/tape/engineering,
+/obj/item/taperoll/engineering/applied,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/mine/explored/muriki/cave/sci/west_access)
 "cnw" = (
@@ -70874,7 +70870,7 @@
 "cNU" = (
 /obj/machinery/door/airlock/glass_science,
 /obj/machinery/door/firedoor/glass,
-/obj/item/tape/engineering,
+/obj/item/taperoll/engineering/applied,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/rnd/hallway/lowmain)
 "cNV" = (
@@ -70883,7 +70879,7 @@
 /obj/structure/cable/orange{
 	icon_state = "1-2"
 	},
-/obj/item/tape/engineering,
+/obj/item/taperoll/engineering/applied,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/rnd/hallway/lowmain)
 "cNW" = (
@@ -71234,7 +71230,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/item/tape/engineering,
+/obj/item/taperoll/engineering/applied,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/rnd/research/exp_prep)
 "cOP" = (
@@ -76563,7 +76559,7 @@
 	name = "Expedition Prep";
 	req_one_access = null
 	},
-/obj/item/tape/engineering,
+/obj/item/taperoll/engineering/applied,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/rnd/research/exp_prep)
 "eiR" = (
@@ -77764,7 +77760,7 @@
 	name = "Anomaly Lab";
 	req_one_access = null
 	},
-/obj/item/tape/engineering,
+/obj/item/taperoll/engineering/applied,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/rnd/research/anomaly)
 "fJz" = (
