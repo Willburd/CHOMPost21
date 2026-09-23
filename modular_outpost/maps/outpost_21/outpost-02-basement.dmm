@@ -77847,6 +77847,8 @@
 /obj/item/weldingtool,
 /obj/item/clothing/head/welding,
 /obj/item/clothing/gloves/yellow,
+/obj/item/cargo_scanner,
+/obj/item/cargo_scanner,
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/outpost/anomaly_lab)
 "fUd" = (
