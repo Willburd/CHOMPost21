@@ -19082,12 +19082,6 @@
 /obj/structure/lightpost,
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
 /area/muriki/grounds/shutt)
-"aSu" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced/full,
-/obj/machinery/door/firedoor/glass,
-/turf/space,
-/area/rnd/otherlab)
 "aSv" = (
 /obj/machinery/alarm{
 	dir = 1;
@@ -145423,7 +145417,7 @@ czI
 kwD
 kwD
 kwD
-aSu
+aTA
 aTD
 aTA
 kwD

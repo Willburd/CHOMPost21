@@ -1,17 +1,4 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
-"aa" = (
-/obj/effect/floor_decal/stairs/station{
-	dir = 8;
-	icon_state = "stair_u"
-	},
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/mine/explored/muriki/cave/deepdark)
-"ab" = (
-/obj/effect/floor_decal/stairs/station{
-	dir = 8
-	},
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/mine/explored/muriki/cave/deepdark)
 "ac" = (
 /obj/effect/auto_crayon{
 	icon_state = "one_wrath"
@@ -1839,7 +1826,7 @@ Oe
 Qv
 tr
 Oe
-aa
+WO
 kC
 WO
 AT
@@ -1876,7 +1863,7 @@ Oe
 LJ
 WO
 bO
-ab
+WO
 zg
 wT
 AT
