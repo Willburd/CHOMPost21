@@ -718,9 +718,6 @@
 /turf/simulated/mineral/floor/ignore_cavegen/turfpack/airless,
 /area/offworld/orbital/exterior/engine_core_starboard)
 "bA" = (
-/obj/structure/window/phoronreinforced{
-	dir = 8
-	},
 /obj/machinery/power/rad_collector,
 /obj/structure/cable/yellow{
 	icon_state = "0-4"
@@ -2239,7 +2236,6 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/storage)
 "er" = (
-/obj/machinery/hologram/holopad,
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -19872,9 +19868,6 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/observation)
 "Pk" = (
-/obj/structure/window/phoronreinforced{
-	dir = 4
-	},
 /obj/machinery/power/rad_collector,
 /obj/structure/cable/yellow{
 	icon_state = "0-8"

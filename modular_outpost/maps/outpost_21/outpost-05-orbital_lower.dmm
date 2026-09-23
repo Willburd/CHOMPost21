@@ -4066,6 +4066,13 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/access_shaft/lower)
+"jg" = (
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "REX - RUST Suit Storage";
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/lower/fore)
 "jh" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/cable/green{
@@ -7735,6 +7742,9 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
 	},
+/obj/structure/disposalpipe/trunk{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/offworld/orbital/xenoarcheology/blackhole)
 "pX" = (
@@ -11126,6 +11136,10 @@
 /obj/structure/cable/green{
 	icon_state = "1-10"
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/offworld/orbital/xenoarcheology/blackhole)
 "wE" = (
@@ -11136,12 +11150,19 @@
 	dir = 4
 	},
 /obj/item/bananapeel,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/offworld/orbital/xenoarcheology/blackhole)
 "wF" = (
 /obj/structure/handrail,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
+	},
+/obj/structure/disposalpipe/segment{
+	icon_state = "pipe-c";
+	dir = 2
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/offworld/orbital/xenoarcheology/blackhole)
@@ -12792,11 +12813,12 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
 	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
+	},
+/obj/structure/disposalpipe/junction{
+	dir = 4;
+	icon_state = "pipe-j2"
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/offworld/orbital/phoronics/pressure_release)
@@ -12814,9 +12836,6 @@
 /area/offworld/orbital/phoronics/pressure_release)
 "zF" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 8
 	},
@@ -12832,6 +12851,10 @@
 	pixel_x = 25;
 	pixel_y = 24;
 	dir = 8
+	},
+/obj/structure/disposalpipe/junction{
+	dir = 4;
+	icon_state = "pipe-j2"
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/offworld/orbital/phoronics/pressure_release)
@@ -13191,6 +13214,7 @@
 /area/offworld/orbital/phoronics/pressure_release)
 "Ae" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/kafel_full,
 /area/offworld/orbital/phoronics/pressure_release)
 "Af" = (
@@ -13482,6 +13506,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 1
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/phoronics/pressure_release)
 "AO" = (
@@ -13805,6 +13830,9 @@
 /obj/structure/handrail{
 	dir = 8
 	},
+/obj/structure/disposalpipe/trunk{
+	dir = 2
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/offworld/orbital/phoronics/pressure_release)
 "Bt" = (
@@ -13835,6 +13863,9 @@
 	},
 /obj/machinery/light/small{
 	dir = 1
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 2
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/offworld/orbital/phoronics/pressure_release)
@@ -15128,10 +15159,6 @@
 /turf/simulated/floor/airless,
 /area/offworld/orbital/phoronics/airlock)
 "DA" = (
-/obj/structure/disposalpipe/segment{
-	icon_state = "pipe-c";
-	dir = 8
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable/green{
@@ -15140,6 +15167,10 @@
 /obj/structure/extinguisher_cabinet{
 	dir = 8;
 	pixel_x = 30
+	},
+/obj/structure/disposalpipe/junction{
+	dir = 1;
+	icon_state = "pipe-j2"
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/offworld/orbital/xenoarcheology/blackhole)
@@ -16111,6 +16142,10 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/brown/border,
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "REX - Research Hallway West";
+	dir = 1
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/lower/port)
 "Fc" = (
@@ -17194,7 +17229,6 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/offworld/orbital/xenoarcheology/blackhole)
 "HD" = (
-/obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 8
@@ -17205,6 +17239,9 @@
 /obj/machinery/light_switch{
 	pixel_x = 24;
 	pixel_y = 26
+	},
+/obj/structure/disposalpipe/junction{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/offworld/orbital/xenoarcheology/blackhole)
@@ -17225,6 +17262,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/offworld/orbital/xenoarcheology/blackhole)
 "HG" = (
@@ -17233,6 +17273,9 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/obj/structure/disposalpipe/trunk{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/kafel_full,
@@ -42354,7 +42397,7 @@ ba
 sx
 fw
 wS
-wQ
+jg
 wM
 tX
 pk
