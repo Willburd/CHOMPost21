@@ -683,3 +683,9 @@
 
 /area/medical/reception
 	lightswitch = 1
+
+/area/rnd/outpost/anomaly_lab
+	name = "Anomaly Lab"
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
+	use_emergency_overlay = TRUE

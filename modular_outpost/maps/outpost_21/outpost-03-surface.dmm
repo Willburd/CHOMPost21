@@ -85028,7 +85028,6 @@
 /turf/simulated/floor/plating,
 /area/muriki/bathroom/engineering)
 "vsm" = (
-/obj/structure/ladder/updown,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
 	},
@@ -85036,6 +85035,7 @@
 	dir = 10
 	},
 /obj/effect/floor_decal/industrial/outline/grey,
+/obj/structure/ladder/up,
 /turf/simulated/floor/plating,
 /area/muriki/bathroom/engineering)
 "vsx" = (

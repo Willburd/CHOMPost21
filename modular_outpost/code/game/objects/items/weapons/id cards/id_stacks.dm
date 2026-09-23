@@ -29,3 +29,8 @@
 	name = "Scientist's ID"
 	initial_sprite_stack = list("base-stamp", "top-blue", "stamp-n", "stripe-purple")
 	rank = JOB_SCIENTIST
+
+/obj/item/card/id/science/anomalist
+	name = JOB_ALT_ANOMALIST + "'s ID"
+	initial_sprite_stack = list("base-stamp", "top-orange", "stamp-n", "stripe-purple")
+	rank = JOB_ENGINEER

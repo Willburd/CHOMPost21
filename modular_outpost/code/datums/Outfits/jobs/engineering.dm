@@ -17,6 +17,13 @@
 
 /datum/decl/hierarchy/outfit/job/engineering/atmos/phoronics
 	name = OUTFIT_JOB_NAME(JOB_SCIENTIST)
+	uniform = /obj/item/clothing/under/rank/atmospheric_technician
 	id_type = /obj/item/card/id/science/phoronics
+	suit = /obj/item/clothing/suit/storage/toggle/labcoat
+	l_pocket = /obj/item/experi_scanner
+
+/datum/decl/hierarchy/outfit/job/science/scientist/anomalist
+	id_type = /obj/item/card/id/science/anomalist
+	uniform = /obj/item/clothing/under/rank/engineer
 	suit = /obj/item/clothing/suit/storage/toggle/labcoat
 	l_pocket = /obj/item/experi_scanner

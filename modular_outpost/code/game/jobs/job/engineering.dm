@@ -7,7 +7,7 @@
 /datum/job/engineer/New()
 	. = ..()
 	access |= list(ACCESS_ROBOTICS, ACCESS_ATMOSPHERICS)
-	alt_titles |= list(	JOB_ALT_SHIPBREAKER = /datum/alt_title/ship_breaker)
+	alt_titles |= list(	JOB_ALT_SHIPBREAKER = /datum/alt_title/ship_breaker, JOB_ALT_ANOMALIST = /datum/alt_title/anomalist)
 
 
 /datum/job/atmos/New()
