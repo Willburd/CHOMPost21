@@ -10137,7 +10137,7 @@
 /turf/simulated/wall/r_wall,
 /area/muriki/tramstation/civ)
 "avf" = (
-/obj/structure/spring_trap/start_active{
+/obj/structure/spring_trap/self_resetting/start_active{
 	dir = 8
 	},
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki{
@@ -10153,7 +10153,7 @@
 /turf/simulated/floor/outpost_roof/turfpack/muriki,
 /area/muriki/rooftop/engineering)
 "avh" = (
-/obj/structure/spring_trap/start_active{
+/obj/structure/spring_trap/self_resetting/start_active{
 	distance = 5
 	},
 /turf/simulated/mineral/floor/turfpack/muriki{
