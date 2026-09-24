@@ -4373,7 +4373,7 @@
 /area/offworld/orbital/station/rust_tool_storage)
 "jD" = (
 /obj/machinery/door/airlock/maintenance/int,
-/obj/structure/spring_trap/start_active{
+/obj/structure/spring_trap/self_resetting/start_active{
 	distance = 10
 	},
 /turf/simulated/floor/tiled/techfloor/grid,

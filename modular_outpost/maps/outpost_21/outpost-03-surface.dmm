@@ -14869,7 +14869,7 @@
 /turf/simulated/floor/outdoors/sidewalk/slab/turfpack/muriki,
 /area/muriki/grounds/terraform)
 "aDH" = (
-/obj/structure/spring_trap/start_active{
+/obj/structure/spring_trap/self_resetting/start_active{
 	dir = 1;
 	distance = 7
 	},
@@ -72566,7 +72566,7 @@
 /obj/structure/railing{
 	dir = 8
 	},
-/obj/structure/spring_trap/start_active{
+/obj/structure/spring_trap/self_resetting/start_active{
 	dir = 1;
 	distance = 4
 	},

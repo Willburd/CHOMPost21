@@ -42401,7 +42401,7 @@
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/sec)
 "bBH" = (
-/obj/structure/spring_trap/start_active{
+/obj/structure/spring_trap/self_resetting/start_active{
 	dir = 4;
 	distance = 6
 	},
@@ -44630,7 +44630,7 @@
 	pixel_y = 27;
 	desc = "Not as sturdy as it looks"
 	},
-/obj/structure/spring_trap/start_active{
+/obj/structure/spring_trap/self_resetting/start_active{
 	distance = 9;
 	dir = 1
 	},
@@ -56164,7 +56164,7 @@
 /area/maintenance/cargo)
 "cdS" = (
 /obj/item/clothing/suit/caution,
-/obj/structure/spring_trap/start_active{
+/obj/structure/spring_trap/self_resetting/start_active{
 	distance = 5
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
@@ -67101,7 +67101,7 @@
 "cEs" = (
 /obj/structure/catwalk,
 /obj/structure/lattice,
-/obj/structure/spring_trap/start_active{
+/obj/structure/spring_trap/self_resetting/start_active{
 	dir = 8
 	},
 /turf/simulated/open/muriki,
@@ -67112,7 +67112,7 @@
 	dir = 1
 	},
 /obj/structure/lattice,
-/obj/structure/spring_trap/start_active{
+/obj/structure/spring_trap/self_resetting/start_active{
 	dir = 8;
 	distance = 4
 	},
@@ -67328,7 +67328,7 @@
 /obj/structure/catwalk,
 /obj/structure/railing,
 /obj/structure/lattice,
-/obj/structure/spring_trap/start_active{
+/obj/structure/spring_trap/self_resetting/start_active{
 	distance = 5;
 	dir = 4
 	},
@@ -67760,7 +67760,7 @@
 /turf/simulated/floor/water/acidic/indoor/turfpack/muriki,
 /area/mine/explored/muriki/river/end)
 "cFG" = (
-/obj/structure/spring_trap/start_active{
+/obj/structure/spring_trap/self_resetting/start_active{
 	dir = 4;
 	distance = 8
 	},
@@ -69221,7 +69221,7 @@
 /turf/simulated/floor/plating,
 /area/maintenance/research)
 "cJX" = (
-/obj/structure/spring_trap/start_active{
+/obj/structure/spring_trap/self_resetting/start_active{
 	distance = 6;
 	dir = 8
 	},
@@ -71359,7 +71359,7 @@
 /turf/simulated/floor/gas_crack/terrible,
 /area/mine/unexplored/muriki/cave/west)
 "cPh" = (
-/obj/structure/spring_trap/start_active{
+/obj/structure/spring_trap/self_resetting/start_active{
 	distance = 6
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
@@ -71421,7 +71421,7 @@
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/cargo)
 "cPt" = (
-/obj/structure/spring_trap/start_active{
+/obj/structure/spring_trap/self_resetting/start_active{
 	dir = 8;
 	distance = 8
 	},
@@ -71485,7 +71485,7 @@
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/spine/waste)
 "cPF" = (
-/obj/structure/spring_trap/start_active{
+/obj/structure/spring_trap/self_resetting/start_active{
 	distance = 10
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
@@ -71598,7 +71598,7 @@
 /obj/structure/railing{
 	dir = 1
 	},
-/obj/structure/spring_trap/start_active{
+/obj/structure/spring_trap/self_resetting/start_active{
 	dir = 8;
 	distance = 5
 	},
@@ -71618,7 +71618,7 @@
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/spine/eng)
 "cQc" = (
-/obj/structure/spring_trap/start_active{
+/obj/structure/spring_trap/self_resetting/start_active{
 	distance = 5;
 	dir = 4
 	},
@@ -71632,7 +71632,7 @@
 	dir = 1
 	},
 /obj/structure/lattice,
-/obj/structure/spring_trap/start_active{
+/obj/structure/spring_trap/self_resetting/start_active{
 	distance = 5;
 	dir = 8
 	},
@@ -71659,7 +71659,7 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
-/obj/structure/spring_trap/start_active{
+/obj/structure/spring_trap/self_resetting/start_active{
 	dir = 4
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
@@ -72415,8 +72415,9 @@
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/cargo)
 "cRZ" = (
-/obj/structure/spring_trap/start_active{
-	dir = 4
+/obj/structure/spring_trap/self_resetting/start_active{
+	dir = 4;
+	distance = 4
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/cargo)
