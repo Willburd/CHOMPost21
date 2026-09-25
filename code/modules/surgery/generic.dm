@@ -189,10 +189,10 @@
 	surgery_name = "Clamp Bleeders"
 	allowed_tools = list(
 		/obj/item/surgical/hemostat = 100,	\
-		/obj/item/tool/wirecutters = 80, \ // Outpost 21 edit(port) - Allow wirecutters for hemostat
+		/obj/item/tool/wirecutters = 80, \
 		/obj/item/stack/cable_coil = 75, 	\
 		/obj/item/assembly/mousetrap = 25
-	)
+	) // Outpost 21 edit(port) - Allow wirecutters for hemostat
 
 	min_duration = 30 //CHOMPedit
 	max_duration = 30 //CHOMPedit
