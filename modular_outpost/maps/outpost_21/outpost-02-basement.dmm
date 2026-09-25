@@ -48674,6 +48674,9 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
+/obj/machinery/light/small/emergency{
+	dir = 1
+	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/engineering/coreproctunnel)
 "bNW" = (
@@ -62408,9 +62411,6 @@
 	},
 /obj/structure/window/reinforced{
 	dir = 4
-	},
-/obj/machinery/light/small/emergency{
-	dir = 1
 	},
 /obj/machinery/camera/network/engineering{
 	c_tag = "ENG - Terraformer Conveyor";
