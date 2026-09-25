@@ -38,7 +38,7 @@ GLOBAL_VAR_INIT(spawned_theta,FALSE) // Only one a ROUND
 		/obj/item/storage/box/monkeycubes/pets/outpost_B,
 		/obj/item/storage/box/monkeycubes/pets/NT_standard,
 		/obj/item/storage/box/monkeycubes/pets/NT_special,
-		/obj/item/random/tool,
+		/obj/random/tool,
 		/obj/random/design_disks,
 	)
 	var/static/list/outpost_rare_table = list(
