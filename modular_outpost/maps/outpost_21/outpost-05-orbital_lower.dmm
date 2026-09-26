@@ -654,6 +654,9 @@
 	req_one_access = list(10,24,29,40)
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/aux,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/beam_emitter)
 "bo" = (
