@@ -10773,6 +10773,10 @@
 	},
 /turf/simulated/floor/boxing/gym,
 /area/security/brig/lowobservation)
+"awN" = (
+/obj/machinery/medical_kiosk,
+/turf/simulated/floor/carpet/blucarpet/turfpack/muriki,
+/area/specialty/expie_clubhouse)
 "awP" = (
 /obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/spline/fancy/wood{
@@ -119481,7 +119485,7 @@ akE
 akA
 akB
 ajR
-akc
+awN
 akc
 akc
 akc
