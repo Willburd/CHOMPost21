@@ -31379,6 +31379,9 @@
 	icon_state = "4-10"
 	},
 /obj/effect/landmark/redspaceexit,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/civ)
 "bhq" = (
@@ -31391,6 +31394,14 @@
 	},
 /obj/effect/floor_decal/milspec/hatchmarks,
 /obj/item/airlock_brace,
+/obj/machinery/door/blast/regular{
+	density = 0;
+	dir = 8;
+	icon_state = "pdoor0";
+	id = "bridge blast";
+	name = "Bridge Blast Doors";
+	opacity = 0
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/civ)
 "bhr" = (
@@ -31404,6 +31415,9 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/lightgrey/bordercorner{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/steel,
@@ -31580,6 +31594,9 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "4-9"
+	},
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/steel,
 /area/hallway/muriki/dorm)
@@ -34036,6 +34053,7 @@
 /obj/machinery/disposal/mail_reciever{
 	name = "disposal mail destination(Locker Room)"
 	},
+/obj/effect/floor_decal/industrial/warning/corner,
 /turf/simulated/floor/tiled/steel,
 /area/crew_quarters/locker)
 "bmc" = (
@@ -34050,6 +34068,9 @@
 	dir = 8;
 	name = "west bump";
 	pixel_x = -24
+	},
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 8
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/dormitory)
@@ -34806,6 +34827,9 @@
 /obj/structure/cable/orange{
 	icon_state = "4-8"
 	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/steel,
 /area/crew_quarters/locker)
 "bng" = (
@@ -35420,6 +35444,9 @@
 /obj/structure/extinguisher_cabinet{
 	pixel_y = -30;
 	dir = 1
+	},
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/steel,
 /area/crew_quarters/locker)
@@ -51711,6 +51738,22 @@
 /obj/structure/reagent_dispensers/watertank,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/sec)
+"bTK" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 8
+	},
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -26
+	},
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/steel,
+/area/hallway/muriki/dorm)
 "bTL" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/red{
 	dir = 4
@@ -89468,6 +89511,9 @@
 	},
 /obj/structure/cable/orange{
 	icon_state = "1-8"
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/dormitory)
@@ -147757,7 +147803,7 @@ bfC
 bfW
 bgp
 unx
-bnj
+bTK
 bhr
 bhK
 bid

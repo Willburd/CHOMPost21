@@ -1477,7 +1477,8 @@
 		return TRUE
 	if(isliving(digest_target))
 		var/mob/living/L = digest_target
-		if(L.unacidable || !L.digestable || L.buckled || L.hovering || L.throwing || L.is_incorporeal())
+		// if(L.unacidable || !L.digestable || L.buckled || L.hovering || L.throwing || L.is_incorporeal()) // Outpost 21 edit - Increase threat of digestive turfs
+		if(L.unacidable || L.buckled || L.hovering || L.throwing || L.is_incorporeal())
 			return FALSE
 		if(ishuman(L))
 			var/mob/living/carbon/human/H = L
@@ -1490,7 +1491,7 @@
 /turf/simulated/floor/water/digestive_enzymes/proc/digest_stuff(atom/movable/digest_target)	//I'm so sorry
 	. = FALSE
 
-	var/damage = 1
+	var/damage = 5 // Outpost 21 edit - Increase threat of digestive turfs
 	if(mobstuff && !linked_mob)	//You might be wondering how we got here. It all started when I decided that I would make a vore level and make some of the turfs affect some mob somewhere in the world. So I used some convenient tools that people who are actually smart made, to make this horrible abomination.
 		var/obj/effect/overmap/visitable/ship/simplemob/stardog/s = get_overmap_sector(z)
 		if(s && istype(s,/obj/effect/overmap/visitable/ship/simplemob/stardog))

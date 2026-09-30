@@ -1,7 +1,7 @@
 /datum/decl/chemical_reaction/distilling/sapoformator
 	name = "Distilling Sapoformator"
 	id = "distill_sapoformator"
-	result = REAGENT_ID_SPACOMYCAZE
+	result = REAGENT_ID_SAPOFORMATOR
 	required_reagents = list(REAGENT_ID_CLEANER = 1, REAGENT_ID_FOAMINGAGENT = 1, REAGENT_ID_PHORON = 0.1)
 	catalysts = list(REAGENT_ID_PHORON = 1)
 	temp_range = list(T0C + 160, T0C + 220)
