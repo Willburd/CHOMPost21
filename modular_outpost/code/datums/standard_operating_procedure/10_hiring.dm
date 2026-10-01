@@ -32,6 +32,8 @@
 			<br><b>Chief Medical Officer:</b> You must have taken the E-Shui confidentiality course, as well as all Terraformer Health and Wellness classes. You must have ability to coordinate and manage a team of doctors in stressful situations, and have taken the E-Shui Leadership Training Course. You must have referral from an acting Captain, or HoP. In understaffed areas, recommendations from at least two other heads of staff may substitute. You must have at least 5 years medical experience, 10 years requested.
 			<hr>
 			<br><center><b>Security:</b></center>
+			<br><b>Penetration Tester:</b> You must be able to pass an E-Shui Fitness Exam. You must have a basic first-aid course, or equivalent knowledge. You must have a Survival, Concealment, Resistance, Escape, and Evasion training course, or equivalent knowledge. All other security and civilian hiring requirements are waived, except for SolGov Standard Requirements.
+			<br>
 			<br><b>Cadet/Junior officer:</b> You must be able to pass an E-Shui combat fitness exam. You must have a valid secret clearance.
 			<br>
 			<br><b>Security Officer:</b> You must have the following weapon certifications: Small arms, Long arms, Laser weaponry, Melee Combatives. You must have a thorough understanding of Station SoP, with emphasis on Station Law and Contraband.
