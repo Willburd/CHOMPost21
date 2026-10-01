@@ -23579,11 +23579,11 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/obj/effect/floor_decal/corner/yellow/border{
-	dir = 8
-	},
 /obj/structure/sign/painting/public{
 	pixel_x = -32
+	},
+/obj/effect/floor_decal/corner/lime/border{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/steel,
 /area/crew_quarters/recreation_area_hallway)
@@ -24451,7 +24451,7 @@
 /obj/structure/cable/green{
 	icon_state = "0-4"
 	},
-/obj/effect/floor_decal/corner/yellow/border{
+/obj/effect/floor_decal/corner/lime/border{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/steel,
@@ -24839,7 +24839,7 @@
 	name = "Station Intercom (General)";
 	pixel_x = -21
 	},
-/obj/effect/floor_decal/corner/yellow/border{
+/obj/effect/floor_decal/corner/lime/border{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/steel,
@@ -25250,7 +25250,7 @@
 	dir = 4;
 	pixel_x = -26
 	},
-/obj/effect/floor_decal/corner/yellow/border{
+/obj/effect/floor_decal/corner/lime/border{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/steel,
@@ -86527,7 +86527,7 @@
 /obj/structure/sign/poster{
 	dir = 8
 	},
-/obj/effect/floor_decal/corner/yellow/border{
+/obj/effect/floor_decal/corner/lime/border{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/steel,
@@ -90665,7 +90665,7 @@
 	dir = 4;
 	pixel_x = -30
 	},
-/obj/effect/floor_decal/corner/yellow/border{
+/obj/effect/floor_decal/corner/lime/border{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/steel,
@@ -92541,11 +92541,11 @@
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 1
 	},
-/obj/effect/floor_decal/corner/yellow/bordercorner{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/yellow/bordercorner{
+/obj/effect/floor_decal/corner/lime/bordercorner{
 	dir = 8
+	},
+/obj/effect/floor_decal/corner/lime/bordercorner{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/steel,
 /area/crew_quarters/recreation_area_hallway)
