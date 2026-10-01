@@ -8,7 +8,7 @@
 		if(istype(J, /datum/component/radio_jammer))
 			var/datum/component/radio_jammer/comp = J
 			var/turf/Tcj = comp.get_host_turf()
-			if(!Tcj)
+			if(!Tcj || !comp.enabled)
 				continue
 			if(Tcj.z != Tr.z)
 				continue
