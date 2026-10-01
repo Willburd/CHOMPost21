@@ -64415,10 +64415,6 @@
 	dir = 8
 	},
 /obj/structure/table/standard,
-/obj/structure/candybowl/cargo,
-/obj/structure/candybowl/engineering{
-	pixel_x = 15
-	},
 /obj/item/candybowl{
 	pixel_y = 9
 	},
@@ -64426,17 +64422,10 @@
 /area/maintenance/cargo)
 "cyi" = (
 /obj/structure/table/standard,
-/obj/structure/candybowl/medical{
-	pixel_x = -4
-	},
-/obj/structure/candybowl/science{
-	pixel_x = 12
-	},
 /turf/simulated/floor/tiled/milspec/turfpack,
 /area/maintenance/cargo)
 "cyj" = (
 /obj/structure/table/standard,
-/obj/structure/candybowl/security,
 /obj/item/toy/gnome{
 	pixel_y = 18
 	},
@@ -64527,11 +64516,6 @@
 /obj/machinery/light/small/fairylights,
 /obj/item/clothing/head/pumpkinhead,
 /obj/item/clothing/head/pumpkinhead,
-/turf/simulated/floor/tiled/milspec/turfpack,
-/area/maintenance/cargo)
-"cys" = (
-/obj/machinery/light/small/fairylights,
-/obj/effect/landmark/carved_pumpkin_spawn,
 /turf/simulated/floor/tiled/milspec/turfpack,
 /area/maintenance/cargo)
 "cyt" = (
@@ -114436,7 +114420,7 @@ gWL
 gWL
 bge
 cyw
-cys
+cyt
 cye
 cyi
 cye
@@ -114598,7 +114582,7 @@ bpz
 bpz
 bge
 cyx
-cys
+cyt
 cye
 cyj
 cye

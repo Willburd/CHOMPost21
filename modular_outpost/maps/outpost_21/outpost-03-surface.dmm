@@ -5186,6 +5186,9 @@
 	dir = 4
 	},
 /obj/structure/table/standard,
+/obj/structure/candybowl/engineering{
+	pixel_x = 15
+	},
 /turf/simulated/floor/tiled,
 /area/muriki/tramstation/cargeng)
 "ahr" = (
@@ -23056,10 +23059,7 @@
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 9
 	},
-/obj/structure/table/standard,
-/obj/item/juke_remote{
-	autolinkareajuke_onspawn = /area/djstation
-	},
+/obj/effect/landmark/holiday_event_spawn,
 /turf/simulated/floor/tiled/white,
 /area/medical/reception)
 "bzZ" = (
@@ -32750,7 +32750,8 @@
 /obj/effect/floor_decal/corner/blue/bordercorner{
 	dir = 1
 	},
-/obj/effect/landmark/holiday_event_spawn,
+/obj/structure/candybowl/medical,
+/obj/structure/table/standard,
 /turf/simulated/floor/tiled/white,
 /area/medical/reception)
 "eHT" = (
@@ -46046,6 +46047,7 @@
 	pixel_y = -6
 	},
 /obj/machinery/door/firedoor/glass,
+/obj/structure/candybowl/science,
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/lab)
 "iWR" = (
@@ -52102,6 +52104,7 @@
 /obj/effect/floor_decal/industrial/warning/dust/corner{
 	dir = 1
 	},
+/obj/effect/landmark/carved_pumpkin_spawn,
 /turf/simulated/floor/plating,
 /area/muriki/tramstation/civ)
 "kMJ" = (
@@ -58266,6 +58269,7 @@
 	dir = 8;
 	pixel_x = 26
 	},
+/obj/effect/landmark/carved_pumpkin_spawn,
 /turf/simulated/floor/tiled/neutral,
 /area/crew_quarters/cafeteria)
 "mJn" = (
@@ -65612,6 +65616,7 @@
 	pixel_x = -30;
 	pixel_y = 9
 	},
+/obj/effect/landmark/carved_pumpkin_spawn,
 /turf/simulated/floor/wood,
 /area/crew_quarters/bar)
 "pfO" = (
@@ -66032,6 +66037,7 @@
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 4
 	},
+/obj/effect/landmark/carved_pumpkin_spawn,
 /turf/simulated/floor/tiled/white,
 /area/medical/reception)
 "ppG" = (
@@ -71080,6 +71086,9 @@
 	dir = 8
 	},
 /obj/structure/table/standard,
+/obj/item/juke_remote{
+	autolinkareajuke_onspawn = /area/djstation
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/reception)
 "qTf" = (
@@ -78023,12 +78032,11 @@
 	dir = 6
 	},
 /obj/structure/table/standard,
-/obj/item/storage/box/cups,
-/obj/item/storage/box/cups,
 /obj/structure/extinguisher_cabinet{
 	dir = 8;
 	pixel_x = 30
 	},
+/obj/structure/candybowl/security,
 /turf/simulated/floor/tiled,
 /area/security/lobby)
 "tlq" = (
@@ -81196,10 +81204,10 @@
 	dir = 4;
 	pixel_x = 26
 	},
-/obj/effect/landmark/holiday_event_spawn,
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/effect/landmark/carved_pumpkin_spawn,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/aft)
 "uhJ" = (
@@ -82299,6 +82307,7 @@
 	pixel_x = -6
 	},
 /obj/structure/table/standard,
+/obj/structure/candybowl/cargo,
 /turf/simulated/floor/tiled,
 /area/quartermaster/foyer)
 "uzo" = (
@@ -84564,6 +84573,7 @@
 /obj/effect/floor_decal/industrial/warning/dust/corner{
 	dir = 8
 	},
+/obj/effect/landmark/carved_pumpkin_spawn,
 /turf/simulated/floor/plating,
 /area/muriki/tramstation/civ)
 "vkv" = (
