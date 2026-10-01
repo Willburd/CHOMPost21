@@ -30,7 +30,7 @@
 
 /obj/item/reagent_containers/pill/tercozolam
 	name = "Tercozolam (5u)"
-	desc = "Used in the treatment of schizophrenia, and periodic delerium. Medicate cautiously."
+	desc = "Used in the treatment of schizophrenia, and periodic delirium. Medicate cautiously."
 	icon_state = "pill10"
 
 /obj/item/reagent_containers/pill/tercozolam/Initialize(mapload)
