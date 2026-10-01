@@ -51,7 +51,7 @@
 			<br>
 			<br><b>Roboticist:</b> You must have a thorough understanding of electrical components and diagnostics. You must have certifications in Drone, Positronic, and Cyborg operations and repairs. You must have taken an E-Shui FBP maintenance and surgical course.
 			<br>
-			<br><b>Anomalist:</b> You must fill the requirements for 'Engineer' and 'Atmospherics Technician'. And in addition, must have training in anomaly core handling and harvesting, and a thorough understanding of safety procedures of anomaly exploitation.
+			<br><b>Anomalist:</b> You must fill the requirements for 'Engineer' and 'Atmospherics Technician'. In addition they must have training in anomaly core handling and harvesting, and a thorough understanding of safety procedures of anomaly exploitation.
 			<br>
 			<br><b>CE:</b> You must have a thorough understanding of all engineering aspects and responsibilities. You must have ability to coordinate and manage a team of engineers in stressful situations, and have taken the E-Shui Leadership Training Course. You must have referral from an acting Captain, or HoP. In understaffed areas, recommendations from at least two other heads of staff may substitute. At least 5 years engineering experience is requested.
 			<hr>
