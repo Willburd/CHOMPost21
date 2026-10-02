@@ -7,5 +7,5 @@
 	pda_type = null
 
 /datum/decl/hierarchy/outfit/job/stowaway/pentester
-	name = OUTFIT_JOB_NAME( "Penetration Tester" )
-	id_type = /obj/item/card/id/generic
+	name = OUTFIT_JOB_NAME(JOB_ALT_PENETRATIONTESTER)
+	id_type = /obj/item/card/id/pentester

@@ -34,3 +34,7 @@
 	name = JOB_ALT_ANOMALIST + "'s ID"
 	initial_sprite_stack = list("base-stamp", "top-orange", "stamp-n", "stripe-purple")
 	rank = JOB_ENGINEER
+
+/obj/item/card/id/pentester
+	name = JOB_ALT_PENETRATIONTESTER + "'s ID"
+	initial_sprite_stack = list("base-stamp", "top-generic", "stamp-n", "clip", "stripe-red")
