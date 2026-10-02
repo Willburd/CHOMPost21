@@ -109,10 +109,15 @@
 
 	if(isliving(user))
 		var/mob/living/L = user
-		for(var/datum/modifier/M in L.modifiers)
-			if(!isnull(M.wire_colors_replace))
-				replace_colors = M.wire_colors_replace
-				break
+		// Outpost 21 edit begin - Blinded shows greyscale wires
+		if(L.blinded)
+			replace_colors = GREYSCALE_COLOR_REPLACE
+		else
+			for(var/datum/modifier/M in L.modifiers)
+				if(!isnull(M.wire_colors_replace))
+					replace_colors = M.wire_colors_replace
+					break
+		// Outpost 21 edit end
 
 	var/list/wires_list = list()
 
