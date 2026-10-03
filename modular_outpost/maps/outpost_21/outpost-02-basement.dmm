@@ -51757,8 +51757,7 @@
 	},
 /obj/structure/spring_trap/self_resetting/start_active{
 	dir = 8;
-	distance = 2;
-	reset_time = 60
+	reset_time = 30
 	},
 /obj/machinery/door/airlock/maintenance/int,
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
@@ -62444,7 +62443,8 @@
 /obj/machinery/conveyor_switch/oneway{
 	id = "terratrap";
 	position = 1;
-	name = "Terraformer Conveyor Shutoff"
+	name = "Terraformer Conveyor Shutoff";
+	speed_active = 1
 	},
 /obj/structure/window/reinforced{
 	dir = 4
