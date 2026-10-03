@@ -365,7 +365,8 @@
 					/obj/item/toy/tennis = 15)
 
 	contraband = list(/obj/item/reagent_containers/syringe/steroid = 4,
-						/obj/item/reagent_containers/food/drinks/glass2/fitnessflask/proteanshake = 2,
+						// /obj/item/reagent_containers/food/drinks/glass2/fitnessflask/proteanshake = 2, // Outpost 21 edit - Absolutely not lore wise
+						/obj/item/reagent_containers/glass/beaker/wheymax = 8, // Outpost 21 edit - Replacement drink
 						/obj/item/toy/baseball = 2)
 
 /obj/machinery/vending/cart
