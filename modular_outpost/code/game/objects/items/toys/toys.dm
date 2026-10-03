@@ -65,9 +65,9 @@
 	if(src != my_mob.wear_mask)
 		return
 
-	var/datum/language/speaking = message_data[SPEECH_SPEAKINGLANG]
-	if(speaking.flags & NONVERBAL|SIGNLANG|HIVEMIND|INAUDIBLE)
-		return
+	for(var/datum/multilingual_say_piece/S in message_data[SPEECH_MSGPIECES])
+		if((S.speaking.flags & NONVERBAL) || (S.speaking.flags & INAUDIBLE))
+			return
 
 	my_mob.emote("squeak")
 	return COMSIG_SAY_FORBID_SPEAK
