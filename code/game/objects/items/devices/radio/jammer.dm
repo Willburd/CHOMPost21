@@ -1,25 +1,3 @@
-GLOBAL_LIST_EMPTY(active_radio_jammers)
-
-/proc/is_jammed(obj/radio)
-	var/turf/Tr = get_turf(radio)
-	if(!Tr) return 0 //Nullspace radios don't get jammed.
-
-	// Outpost 21 edit begin - Disable phased shadekin radios
-	var/atom/find_top_mob = radio.loc
-	while(find_top_mob && !isturf(find_top_mob))
-		if(ismob(find_top_mob))
-			var/mob/found_mob = find_top_mob
-			if(found_mob.is_incorporeal())
-				return TRUE
-		find_top_mob = find_top_mob.loc
-	// Outpost 21 edit end
-
-	var/area/our_area = get_area(Tr)
-
-	if(our_area.no_comms)
-		return TRUE
-	return check_radio_jammers(Tr) // Outpost 21 edit - Radio jamming component
-
 /obj/item/radio_jammer
 	name = "subspace jammer"
 	desc = "Primarily for blocking subspace communications, preventing the use of headsets, PDAs, and communicators. Also masks suit sensors."	// Added suit sensor jamming
@@ -28,8 +6,7 @@ GLOBAL_LIST_EMPTY(active_radio_jammers)
 	var/active_state = "jammer1"
 	var/last_overlay_percent = null // Stores overlay icon_state to avoid excessive recreation of overlays.
 
-	var/on = 0
-	var/jam_range = 7
+	var/on = TRUE
 	var/obj/item/cell/device/weapon/power_source
 	var/tick_cost = 5 //VOREStation Edit - For the ERPs.
 
@@ -42,7 +19,8 @@ GLOBAL_LIST_EMPTY(active_radio_jammers)
 
 /obj/item/radio_jammer/Initialize(mapload)
 	. = ..()
-	update_icon() // So it starts with the full overlay. Outpost 21 edit - overlay runtime fix
+	update_icon()
+	AddComponent(/datum/component/radio_jammer, 7)
 
 /obj/item/radio_jammer/Destroy()
 	if(on)
@@ -57,16 +35,16 @@ GLOBAL_LIST_EMPTY(active_radio_jammers)
 	if(user)
 		to_chat(user,span_warning("\The [src] deactivates."))
 	STOP_PROCESSING(SSobj, src)
-	GLOB.active_radio_jammers -= src
-	on = FALSE
+	var/datum/component/radio_jammer/comp = GetComponent(/datum/component/radio_jammer)
+	on = comp.disable()
 	update_icon()
 
 /obj/item/radio_jammer/proc/turn_on(mob/user)
 	if(user)
 		to_chat(user,span_notice("\The [src] is now active."))
 	START_PROCESSING(SSobj, src)
-	GLOB.active_radio_jammers += src
-	on = TRUE
+	var/datum/component/radio_jammer/comp = GetComponent(/datum/component/radio_jammer)
+	on = comp.enable()
 	update_icon()
 
 /obj/item/radio_jammer/process()
@@ -130,8 +108,11 @@ GLOBAL_LIST_EMPTY(active_radio_jammers)
 
 //Unlimited use, unlimited range jammer for admins. Turn it on, drop it somewhere, it works.
 /obj/item/radio_jammer/admin
-	jam_range = 255
 	tick_cost = 0
+
+/obj/item/radio_jammer/admin/Initialize(mapload)
+	. = ..()
+	AddComponent(/datum/component/radio_jammer, 255)
 
 ///Checks to see if the clothing is in a belly that jams sensors or blocks tracking.
 /proc/is_vore_jammed(atom/current)
