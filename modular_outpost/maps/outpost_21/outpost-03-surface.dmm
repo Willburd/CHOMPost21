@@ -30512,7 +30512,8 @@
 /area/security/checkpoint2)
 "dYN" = (
 /obj/machinery/conveyor_switch/oneway{
-	id = "QMLoad"
+	id = "QMLoad";
+	speed_active = 1
 	},
 /obj/effect/floor_decal/industrial/outline/red,
 /turf/simulated/floor/tiled{
@@ -68380,7 +68381,8 @@
 /area/muriki/grounds/med)
 "qcF" = (
 /obj/machinery/conveyor_switch/oneway{
-	id = "QMLoad2"
+	id = "QMLoad2";
+	speed_active = 1
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
