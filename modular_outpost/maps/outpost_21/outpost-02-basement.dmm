@@ -43747,12 +43747,6 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/sec)
-"bDX" = (
-/obj/effect/auto_crayon{
-	icon_state = "violence"
-	},
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/cargo)
 "bDY" = (
 /obj/structure/cable/orange{
 	icon_state = "1-2"
@@ -73426,9 +73420,6 @@
 	dir = 1;
 	icon_state = "pipe-c"
 	},
-/obj/effect/auto_crayon{
-	icon_state = "left"
-	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/cargo)
 "cTg" = (
@@ -73445,6 +73436,9 @@
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-c";
 	dir = 2
+	},
+/obj/effect/auto_crayon{
+	icon_state = "left"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/cargo)
@@ -74412,9 +74406,6 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/red{
-	dir = 4
-	},
-/obj/structure/window/maintenance_panel{
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -75546,9 +75537,6 @@
 	},
 /obj/structure/window/maintenance_panel{
 	dir = 4
-	},
-/obj/structure/window/maintenance_panel{
-	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor/grid/turfpack/muriki,
 /area/maintenance/cargo)
@@ -112632,7 +112620,7 @@ bWa
 bOI
 bOI
 bOA
-bvA
+gWL
 csJ
 gWL
 cPC
@@ -112794,7 +112782,7 @@ gWL
 ceV
 cfr
 gWL
-bvA
+gWL
 iaW
 gWL
 bge
@@ -112956,9 +112944,9 @@ gWL
 gWL
 gWL
 gWL
-bvA
+gWL
 iaW
-bvA
+gWL
 bvH
 bhS
 bge
@@ -113279,8 +113267,8 @@ wrE
 jDf
 aXN
 coO
-bvA
-bvA
+gWL
+gWL
 iaW
 gWL
 bge
@@ -113441,7 +113429,7 @@ bPu
 bIF
 aXN
 coO
-bvA
+gWL
 cfu
 anw
 gWL
@@ -113603,8 +113591,8 @@ crK
 coN
 aXN
 coO
-bvA
-bvA
+gWL
+gWL
 bVM
 gWL
 gWL
@@ -113765,7 +113753,7 @@ wrE
 bow
 aXN
 cpr
-bvA
+gWL
 bOr
 bOn
 bRb
@@ -113927,7 +113915,7 @@ wrE
 drJ
 aXN
 cwf
-bvA
+gWL
 iaW
 gWL
 gWL
@@ -114089,7 +114077,7 @@ wrE
 drJ
 aXN
 coO
-bvA
+gWL
 iaW
 gWL
 cqX
@@ -114115,7 +114103,7 @@ ayp
 bge
 bge
 bge
-bDX
+bge
 bge
 bge
 bge
@@ -114251,7 +114239,7 @@ wrE
 lne
 aXN
 coO
-bvA
+gWL
 iaW
 gWL
 aOJ
@@ -114413,7 +114401,7 @@ iVw
 drJ
 aXN
 coO
-bvA
+gWL
 cix
 gWL
 gWL
@@ -114575,7 +114563,7 @@ wrE
 drJ
 aXN
 coO
-bvA
+gWL
 iaW
 bvA
 bpz
@@ -114737,7 +114725,7 @@ bOU
 bXd
 bAq
 bzG
-bvA
+gWL
 cfm
 bvA
 cId
@@ -114899,10 +114887,10 @@ wrE
 drJ
 aXN
 bOJ
-bvA
+gWL
 byM
-bvA
-bvA
+gWL
+gWL
 bpz
 bge
 cyz
@@ -114930,13 +114918,13 @@ biq
 biq
 cjI
 cTg
-biq
-biq
-biq
-biq
-biq
-biq
-biq
+bge
+bge
+bge
+bge
+bge
+bge
+bge
 bge
 cFz
 axP
@@ -115061,11 +115049,11 @@ wrE
 drJ
 aXN
 bVY
-bvA
+gWL
 bOs
 bOo
-bvA
-bvA
+gWL
+gWL
 bge
 bge
 bge
@@ -115227,8 +115215,8 @@ bOB
 bOt
 bOp
 bNO
-bvA
-bvA
+gWL
+gWL
 aNL
 aNL
 aNL
@@ -115260,7 +115248,7 @@ aqc
 aqc
 aqc
 aqc
-biq
+bge
 bge
 bge
 cdR
@@ -115384,14 +115372,14 @@ xWz
 wrE
 lne
 aXN
-bvA
-bvA
+gWL
+gWL
 cJu
 btU
 bOe
 bNO
-bvA
-bvA
+gWL
+gWL
 aNL
 aNL
 pge
@@ -115547,14 +115535,14 @@ wrE
 drJ
 aXN
 bpz
-bvA
-bvA
+gWL
+gWL
 cey
 bVJ
 bOe
 bVA
-bvA
-bvA
+gWL
+gWL
 aNL
 pge
 pge
@@ -115710,14 +115698,14 @@ drJ
 aXN
 bpz
 bpz
-bvA
-bvA
+gWL
+gWL
 coS
 cex
 bOe
 bNO
-bvA
-bvA
+gWL
+gWL
 gWL
 aNf
 aNf
@@ -115873,8 +115861,8 @@ aXN
 bpz
 bpz
 bpz
-bvA
-bvA
+gWL
+gWL
 ceW
 btU
 bNP
@@ -116036,8 +116024,8 @@ bpz
 bpz
 bpz
 bpz
-bvA
-bvA
+gWL
+gWL
 coS
 bNQ
 coO
@@ -116199,11 +116187,11 @@ bpz
 bpz
 bpz
 bpz
-bvA
-bvA
+gWL
+gWL
 buK
 bto
-bvA
+gWL
 cWq
 cWo
 cWn
@@ -116362,7 +116350,7 @@ aEq
 aEq
 aEq
 aEq
-bvA
+gWL
 bNS
 bVt
 bsD
@@ -116524,9 +116512,9 @@ aXN
 bpz
 bpz
 bpz
-bvA
+gWL
 cew
-bvA
+gWL
 coO
 aNf
 aNf
@@ -116686,7 +116674,7 @@ aXN
 bpz
 bpz
 bpz
-bvA
+gWL
 bNP
 nvw
 bvG
@@ -116848,7 +116836,7 @@ aXN
 bpz
 bpz
 bpz
-bvA
+gWL
 bNU
 aNf
 aNf
@@ -117009,8 +116997,8 @@ cMZ
 aXN
 bpz
 bpz
-bvA
-bvA
+gWL
+gWL
 bOa
 aNf
 bja
@@ -117171,7 +117159,7 @@ bge
 bpz
 bpz
 bpz
-bvA
+gWL
 bOf
 bNW
 aNf
@@ -117335,7 +117323,7 @@ ayQ
 ayQ
 bvA
 ckX
-bvA
+gWL
 aNf
 bjc
 cWs
@@ -117495,7 +117483,7 @@ bge
 bpz
 ayQ
 bpz
-bvA
+gWL
 cAc
 cAb
 aNf
@@ -117657,7 +117645,7 @@ bge
 bpz
 ayQ
 bpz
-bvA
+gWL
 bOg
 bNX
 aNf
@@ -117819,8 +117807,8 @@ bge
 bpz
 bpz
 bpz
-bvA
-bvA
+gWL
+gWL
 bNY
 aNf
 biB
@@ -139172,8 +139160,8 @@ bsg
 clA
 bQZ
 cbP
-bQM
-cAg
+aKP
+aEF
 uKK
 cCD
 cCA
@@ -154738,7 +154726,7 @@ coc
 coc
 coc
 aTO
-aTO
+coc
 vSb
 vSb
 vSb
@@ -154900,7 +154888,7 @@ bGD
 bGB
 coc
 bgc
-aTO
+coc
 vSb
 vSb
 vSb
@@ -155062,7 +155050,7 @@ bJR
 bGD
 coc
 bry
-aTO
+coc
 vSb
 vSb
 vSb
@@ -155224,7 +155212,7 @@ bGD
 bJe
 aTO
 bry
-aTO
+coc
 vSb
 vSb
 aBg
@@ -155385,8 +155373,8 @@ bSl
 bSd
 bJR
 coc
-aTO
-aTO
+coc
+coc
 bGT
 bGT
 bGT
