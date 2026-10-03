@@ -5,6 +5,16 @@ GLOBAL_LIST_EMPTY(active_radio_jammers)
 /proc/is_jammed(atom/movable/check_thing)
 	RETURN_TYPE(/list)
 
+	// Outpost 21 edit begin - Disable phased shadekin radios
+	var/atom/find_top_mob = check_thing.loc
+	while(find_top_mob && !isturf(find_top_mob))
+		if(ismob(find_top_mob))
+			var/mob/found_mob = find_top_mob
+			if(found_mob.is_incorporeal())
+				return TRUE
+		find_top_mob = find_top_mob.loc
+	// Outpost 21 edit end
+
 	// Allows /obj to be passed, but we always work by turf.
 	var/turf/jammed_turf = check_thing
 	if(!isturf(jammed_turf))
