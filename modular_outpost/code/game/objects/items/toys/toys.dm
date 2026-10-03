@@ -42,6 +42,37 @@
 	icon_state = "plushie_pillowb"
 
 
+// bitable chewtoy
+/obj/item/toy/chewtoy
+	slot_flags = SLOT_MASK
+
+/obj/item/toy/chewtoy/equipped(mob/living/user, slot_equipped)
+	. = ..()
+
+/obj/item/toy/chewtoy/equipped(mob/user)
+	. = ..()
+	RegisterSignal(user, COMSIG_MOB_SAY_PREPARE, PROC_REF(handle_prepare_say))
+
+/obj/item/toy/chewtoy/dropped(mob/user, equipping, slot)
+	. = ..()
+	UnregisterSignal(user, COMSIG_MOB_SAY_PREPARE)
+
+/obj/item/toy/chewtoy/proc/handle_prepare_say(atom/source, list/message_data)
+	SIGNAL_HANDLER
+	if(loc != source || !isliving(source))
+		return
+	var/mob/living/my_mob = source
+	if(src != my_mob.wear_mask)
+		return
+
+	var/datum/language/speaking = message_data[SPEECH_SPEAKINGLANG]
+	if(speaking.flags & NONVERBAL|SIGNLANG|HIVEMIND|INAUDIBLE)
+		return
+
+	my_mob.emote("squeak")
+	return COMSIG_SAY_FORBID_SPEAK
+
+
 //Large plushies.
 /obj/structure/plushie/tesh/taaa
 	name = "Silly Teshari Plush"
