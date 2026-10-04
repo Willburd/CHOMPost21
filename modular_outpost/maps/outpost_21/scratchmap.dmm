@@ -1,4 +1,130 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aaa" = (
+/obj/effect/floor_decal/corner/white{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/dark,
+/area/space)
+"aab" = (
+/obj/effect/floor_decal/corner/white/full{
+	dir = 4
+	},
+/obj/item/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = 26
+	},
+/turf/simulated/floor/tiled/dark,
+/area/space)
+"aac" = (
+/obj/machinery/camera/network/research{
+	c_tag = "SCI - Server Room";
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/white{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/dark,
+/area/space)
+"aad" = (
+/obj/effect/floor_decal/corner/white{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
+/area/space)
+"aae" = (
+/obj/effect/floor_decal/corner/white{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/dark,
+/area/space)
+"aaf" = (
+/obj/effect/floor_decal/corner/white{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/dark,
+/area/space)
+"aag" = (
+/obj/machinery/door/window/eastleft{
+	name = "Server Room";
+	dir = 2
+	},
+/obj/machinery/door/window/westleft{
+	name = "Server Room";
+	opacity = 1;
+	req_access = list(30);
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/warning/full,
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/tiled/steel_grid,
+/area/space)
+"aah" = (
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -26
+	},
+/turf/simulated/floor/bluegrid{
+	name = "Server Base";
+	nitrogen = 500;
+	oxygen = 0;
+	temperature = 80
+	},
+/area/space)
+"aai" = (
+/obj/structure/extinguisher_cabinet{
+	dir = 8;
+	pixel_x = 30
+	},
+/turf/simulated/floor/bluegrid{
+	name = "Server Base";
+	nitrogen = 500;
+	oxygen = 0;
+	temperature = 80
+	},
+/area/space)
+"aaj" = (
+/obj/effect/floor_decal/corner/white/full{
+	dir = 8
+	},
+/obj/item/geiger/wall/north,
+/turf/simulated/floor/tiled/dark,
+/area/space)
+"aak" = (
+/obj/effect/floor_decal/corner/white/full{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/space)
+"aal" = (
+/obj/structure/railing,
+/turf/simulated/open/muriki,
+/area/space)
+"aam" = (
+/obj/structure/railing,
+/obj/structure/railing{
+	dir = 4
+	},
+/turf/simulated/open/muriki,
+/area/space)
+"aan" = (
+/obj/machinery/power/tesla_coil/pre_mapped,
+/obj/structure/cable/orange{
+	icon_state = "0-8"
+	},
+/obj/structure/railing{
+	dir = 4
+	},
+/turf/simulated/open/muriki,
+/area/space)
+"aao" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/machinery/power/grounding_rod/pre_mapped,
+/obj/effect/zone_divider,
+/turf/simulated/open/muriki,
+/area/space)
 "aap" = (
 /obj/structure/table/wooden_reinforced,
 /obj/effect/floor_decal/spline/fancy/wood,
@@ -11,6 +137,192 @@
 	dir = 4
 	},
 /turf/simulated/floor/wood,
+/area/space)
+"aaq" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/turf/simulated/open/muriki,
+/area/space)
+"aar" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/structure/cable/orange{
+	icon_state = "1-10"
+	},
+/turf/simulated/open/muriki,
+/area/space)
+"aas" = (
+/obj/item/geiger/wall/west,
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor,
+/area/space)
+"aat" = (
+/obj/structure/reagent_dispensers/watertank,
+/turf/simulated/floor,
+/area/space)
+"aau" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -26
+	},
+/obj/machinery/camera/network/research{
+	c_tag = "SCI - Upper Hall N";
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"aav" = (
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/cable/green{
+	icon_state = "2-5"
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals_central7{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"aaw" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 9
+	},
+/turf/simulated/floor,
+/area/space)
+"aax" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/machinery/atmospherics/unary/freezer,
+/turf/simulated/floor,
+/area/space)
+"aay" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/machinery/atmospherics/binary/pump/high_power{
+	dir = 1;
+	name = "Emergency Exterior Vent"
+	},
+/turf/simulated/floor,
+/area/space)
+"aaz" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 5
+	},
+/turf/simulated/floor,
+/area/space)
+"aaA" = (
+/obj/item/radio/intercom{
+	dir = 4;
+	pixel_x = 24
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"aaB" = (
+/obj/structure/cable/green{
+	icon_state = "1-10"
+	},
+/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/area/space)
+"aaC" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+/turf/simulated/open/muriki,
+/area/space)
+"aaD" = (
+/obj/machinery/power/apc{
+	dir = 4;
+	name = "east bump";
+	pixel_x = 24
+	},
+/obj/structure/cable/green,
+/turf/simulated/floor,
+/area/space)
+"aaE" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable/green{
+	icon_state = "5-9"
+	},
+/turf/simulated/floor,
+/area/space)
+"aaF" = (
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor,
+/area/space)
+"aaG" = (
+/obj/structure/lattice,
+/obj/machinery/atmospherics/pipe/zpipe/down/supply{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/zpipe/down/scrubbers{
+	dir = 8
+	},
+/obj/structure/cable/green{
+	icon_state = "32-8"
+	},
+/obj/structure/disposalpipe/down{
+	dir = 8
+	},
+/obj/structure/window/maintenance_panel{
+	dir = 1
+	},
+/obj/structure/window/maintenance_panel,
+/obj/structure/window/maintenance_panel{
+	dir = 8
+	},
+/turf/simulated/open,
+/area/space)
+"aaH" = (
+/obj/structure/disposalpipe/segment,
+/obj/item/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -21
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"aaI" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/machinery/power/apc{
+	dir = 1;
+	name = "north bump";
+	pixel_y = 24
+	},
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
+/turf/simulated/floor/tiled/white,
 /area/space)
 "aaJ" = (
 /obj/structure/cable/green{
@@ -33,6 +345,16 @@
 	},
 /turf/simulated/floor/tiled/steel,
 /area/space)
+"aaK" = (
+/obj/structure/cable/green{
+	icon_state = "1-10"
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"aaL" = (
+/obj/machinery/atmospherics/pipe/simple/visible/red,
+/turf/simulated/floor/tiled/white,
+/area/space)
 "aaM" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
@@ -51,6 +373,405 @@
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/space)
+"aaN" = (
+/obj/machinery/doorbell_chime{
+	id_tag = "sciding";
+	name = "Research Call";
+	pixel_y = 30
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/machinery/alarm{
+	dir = 8;
+	pixel_x = 26
+	},
+/obj/structure/table/rack/shelf/steel,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"aaO" = (
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/machinery/door/airlock/glass_external{
+	req_one_access = list(47);
+	name = "Research Backup Generator"
+	},
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/tiled/techfloor,
+/area/space)
+"aaP" = (
+/obj/structure/grille,
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/window/reinforced/full,
+/obj/structure/window/reinforced,
+/turf/simulated/floor/plating,
+/area/space)
+"aaQ" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+/obj/machinery/camera/network/outside{
+	c_tag = "EXT - Sci Roof Northeast";
+	dir = 4
+	},
+/turf/simulated/open/muriki,
+/area/space)
+"aaR" = (
+/obj/structure/cable/green{
+	icon_state = "2-5"
+	},
+/turf/simulated/floor,
+/area/space)
+"aaS" = (
+/obj/structure/lattice,
+/obj/structure/cable/orange{
+	icon_state = "32-4"
+	},
+/obj/structure/disposalpipe/down{
+	dir = 4
+	},
+/obj/structure/window/maintenance_panel{
+	dir = 8
+	},
+/obj/structure/window/maintenance_panel{
+	dir = 1
+	},
+/turf/simulated/open,
+/area/space)
+"aaT" = (
+/obj/structure/cable/orange{
+	icon_state = "4-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "6-9"
+	},
+/turf/simulated/floor,
+/area/space)
+"aaU" = (
+/obj/structure/cable/orange{
+	icon_state = "4-8"
+	},
+/obj/structure/cable/orange{
+	icon_state = "1-8"
+	},
+/obj/machinery/camera/network/substations{
+	dir = 1;
+	c_tag = "PWR - Substation Science"
+	},
+/obj/item/assembly/mousetrap/armed,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "6-10"
+	},
+/turf/simulated/floor,
+/area/space)
+"aaV" = (
+/obj/machinery/power/terminal{
+	dir = 1
+	},
+/obj/machinery/light/small,
+/obj/structure/cable/orange{
+	icon_state = "0-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "6-10"
+	},
+/turf/simulated/floor,
+/area/space)
+"aaW" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor,
+/area/space)
+"aaX" = (
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-10"
+	},
+/turf/simulated/floor,
+/area/space)
+"aaY" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/doorbell_chime{
+	id_tag = "sciding";
+	name = "Research Call";
+	pixel_x = -30
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"aaZ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"aba" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/noticeboard/phoronics{
+	pixel_x = 32;
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"abb" = (
+/obj/structure/grille,
+/obj/machinery/door/firedoor/glass,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
+/turf/simulated/floor/plating,
+/area/space)
+"abc" = (
+/obj/structure/grille,
+/obj/machinery/door/firedoor/glass,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/plating,
+/area/space)
+"abd" = (
+/obj/structure/grille,
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/atmospherics/pipe/simple/visible/red,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/plating,
+/area/space)
+"abe" = (
+/obj/structure/grille,
+/obj/machinery/door/firedoor/glass,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/plating,
+/area/space)
+"abf" = (
+/obj/item/beartrap{
+	anchored = 1;
+	deployed = 1
+	},
+/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/area/space)
+"abg" = (
+/obj/structure/cable/green{
+	icon_state = "2-4"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/item/paper{
+	name = "Note from Central";
+	info = "This is EMERGENCY uranium fuel, for EMERGENCIES. In the GENERATOR. Your lack of materials for R&D is not an emergency, contact cargo."
+	},
+/turf/simulated/floor,
+/area/space)
+"abh" = (
+/obj/structure/cable/green{
+	icon_state = "1-8"
+	},
+/obj/machinery/power/apc{
+	dir = 4;
+	name = "east bump";
+	pixel_x = 24
+	},
+/obj/structure/cable/green,
+/turf/simulated/floor,
+/area/space)
+"abi" = (
+/obj/structure/cable/green{
+	icon_state = "4-10"
+	},
+/turf/simulated/floor,
+/area/space)
+"abj" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor,
+/area/space)
+"abk" = (
+/obj/structure/cable/green{
+	icon_state = "6-8"
+	},
+/turf/simulated/floor,
+/area/space)
+"abl" = (
+/obj/machinery/power/breakerbox/activated{
+	RCon_tag = "Command Substation Bypass";
+	name = "Command Bypass"
+	},
+/turf/simulated/floor,
+/area/space)
+"abm" = (
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
+/obj/machinery/power/smes/buildable{
+	RCon_tag = "Substation - Command"
+	},
+/turf/simulated/floor/plating,
+/area/space)
+"abn" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
+/obj/machinery/power/sensor{
+	name = "Powernet Sensor - Bridge";
+	name_tag = "Bridge Subgrid"
+	},
+/turf/simulated/floor,
+/area/space)
+"abo" = (
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
+/obj/machinery/power/apc{
+	dir = 1;
+	name = "north bump";
+	pixel_y = 24
+	},
+/turf/simulated/floor,
+/area/space)
+"abp" = (
+/obj/structure/micro_tunnel{
+	dir = 1;
+	pixel_y = 32
+	},
+/turf/simulated/floor,
+/area/space)
+"abq" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/button/remote/blast_door{
+	dir = 4;
+	id = "phoronic_lockdown";
+	name = "Phoronics Emergency Lockdown";
+	pixel_x = -28;
+	pixel_y = 6
+	},
+/obj/effect/floor_decal/corner/purple/full{
+	dir = 8
+	},
+/obj/structure/closet/secure_closet{
+	req_one_access = list(7,47)
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"abr" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/green{
+	icon_state = "2-4"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"abs" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/purple/full{
+	dir = 1
+	},
+/obj/structure/disposalpipe/segment,
+/obj/machinery/power/thermoregulator/cryogaia{
+	pixel_x = 32
+	},
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
+/obj/effect/landmark/holiday_event_spawn,
+/turf/simulated/floor/tiled/white,
+/area/space)
+"abt" = (
+/obj/structure/prop/war/tgmc_missile_rack/keeper,
+/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/area/space)
+"abu" = (
+/obj/machinery/atmospherics/unary/outlet_injector{
+	frequency = 1441;
+	id = "phoronics_eject";
+	pixel_y = 1;
+	use_power = 1;
+	injecting = 1
+	},
+/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/area/space)
+"abv" = (
+/obj/machinery/camera/network/outside{
+	c_tag = "EXT - Sci Roof North";
+	dir = 1
+	},
+/obj/effect/zone_divider,
+/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/area/space)
 "abw" = (
 /obj/machinery/light{
 	dir = 4
@@ -59,6 +780,457 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
+/area/space)
+"abx" = (
+/obj/structure/fence/door/locked{
+	dir = 4
+	},
+/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/area/space)
+"aby" = (
+/obj/structure/table/rack,
+/obj/fiftyspawner/uranium,
+/obj/fiftyspawner/uranium,
+/turf/simulated/floor,
+/area/space)
+"abz" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
+/obj/machinery/power/port_gen/pacman/super{
+	anchored = 1
+	},
+/turf/simulated/floor,
+/area/space)
+"abA" = (
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
+/obj/machinery/camera/network/research{
+	c_tag = "SCI - Backup Generator"
+	},
+/obj/machinery/power/port_gen/pacman/super{
+	anchored = 1
+	},
+/turf/simulated/floor,
+/area/space)
+"abB" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/obj/machinery/door/firedoor/glass,
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/plating,
+/area/space)
+"abC" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/door/firedoor/glass,
+/obj/structure/cable/green{
+	icon_state = "2-4"
+	},
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/machinery/door/airlock/glass_research{
+	name = "Phoronics";
+	req_access = list(8)
+	},
+/obj/item/taperoll/engineering/applied,
+/turf/simulated/floor/tiled/steel_ridged,
+/area/space)
+"abD" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/obj/machinery/door/firedoor/glass,
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/plating,
+/area/space)
+"abE" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/area/space)
+"abF" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/effect/zone_divider,
+/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/area/space)
+"abG" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/structure/fence,
+/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/area/space)
+"abH" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/machinery/power/tesla_coil/pre_mapped,
+/obj/structure/cable/orange{
+	icon_state = "0-2"
+	},
+/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/area/space)
+"abI" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/machinery/power/grounding_rod/pre_mapped,
+/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/area/space)
+"abJ" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/machinery/power/tesla_coil/pre_mapped,
+/obj/structure/cable/orange{
+	icon_state = "0-2"
+	},
+/turf/simulated/open/muriki,
+/area/space)
+"abK" = (
+/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/corner/purple/full,
+/obj/machinery/alarm{
+	dir = 4;
+	pixel_x = -26
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"abL" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals_central7{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"abM" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
+/obj/effect/floor_decal/corner/purple/full{
+	dir = 4
+	},
+/obj/machinery/power/apc{
+	dir = 4;
+	name = "east bump";
+	pixel_x = 24;
+	nightshift_setting = 3
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"abN" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 9
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/structure/extinguisher_cabinet{
+	dir = 4;
+	pixel_x = -30;
+	pixel_y = -7
+	},
+/obj/structure/extinguisher_cabinet{
+	dir = 4;
+	pixel_x = -30;
+	pixel_y = 9
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"abO" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"abP" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/obj/machinery/camera/network/research_outpost{
+	c_tag = "TOX - Phoronics Bridge South";
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 6
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = 26
+	},
+/turf/simulated/floor/tiled/white,
+/area/space)
+"abQ" = (
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/structure/disposalpipe/segment,
+/obj/machinery/door/blast/regular{
+	density = 0;
+	dir = 4;
+	icon_state = "pdoor0";
+	id = "Biohazard";
+	name = "Biohazard Shutter";
+	opacity = 0
+	},
+/obj/item/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -21
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/space)
+"abR" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/door/blast/regular{
+	density = 0;
+	dir = 4;
+	icon_state = "pdoor0";
+	id = "Biohazard";
+	name = "Biohazard Shutter";
+	opacity = 0
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/space)
+"abS" = (
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/structure/disposalpipe/segment,
+/obj/structure/sign/warning/nosmoking_2{
+	pixel_x = 32
+	},
+/obj/machinery/door/blast/regular{
+	density = 0;
+	dir = 4;
+	icon_state = "pdoor0";
+	id = "Biohazard";
+	name = "Biohazard Shutter";
+	opacity = 0
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/space)
+"abT" = (
+/obj/effect/floor_decal/spline/plain{
+	dir = 5
+	},
+/obj/item/geiger/wall/east,
+/turf/simulated/floor/carpet/tealcarpet,
+/area/space)
+"abU" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 10
+	},
+/obj/machinery/light,
+/obj/structure/cable/green{
+	icon_state = "1-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/space)
+"abV" = (
+/obj/effect/floor_decal/spline/fancy/wood,
+/obj/machinery/camera/motion/command{
+	c_tag = "COM - Colony Director's Office (M)";
+	dir = 1
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/space)
+"abW" = (
+/obj/effect/floor_decal/spline/fancy/wood,
+/obj/machinery/keycard_auth{
+	pixel_y = -24
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/space)
+"abX" = (
+/obj/effect/floor_decal/spline/fancy/wood,
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/space)
+"abY" = (
+/obj/structure/table/wooden_reinforced,
+/obj/effect/floor_decal/spline/fancy/wood,
+/obj/machinery/alarm{
+	dir = 1;
+	pixel_y = -26
+	},
+/turf/simulated/floor/wood,
+/area/space)
+"abZ" = (
+/obj/structure/table/wooden_reinforced,
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 6
+	},
+/obj/machinery/light,
+/obj/structure/extinguisher_cabinet{
+	dir = 8;
+	pixel_x = 30;
+	pixel_y = -4
+	},
+/turf/simulated/floor/wood,
+/area/space)
+"aca" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 4
+	},
+/obj/item/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = 26
+	},
+/turf/simulated/floor/wood,
+/area/space)
+"acb" = (
+/obj/structure/table/wooden_reinforced,
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 1
+	},
+/obj/item/storage/lockbox/medal,
+/obj/item/storage/secure/safe{
+	pixel_x = 6;
+	pixel_y = 28
+	},
+/turf/simulated/floor/wood,
+/area/space)
+"acc" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 1
+	},
+/obj/item/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 21
+	},
+/turf/simulated/floor/wood,
+/area/space)
+"acd" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 4
+	},
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = 26
+	},
+/turf/simulated/floor/wood,
+/area/space)
+"ace" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 8
+	},
+/obj/machinery/newscaster{
+	pixel_x = -32
+	},
+/turf/simulated/floor/wood,
+/area/space)
+"acf" = (
+/obj/machinery/light_switch{
+	pixel_x = -22;
+	pixel_y = 31
+	},
+/turf/simulated/floor/wood,
+/area/space)
+"acg" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/wood,
+/area/space)
+"ach" = (
+/obj/structure/table/wooden_reinforced,
+/obj/machinery/door/window/southright{
+	dir = 1;
+	name = "Captain's Desk Door";
+	req_access = list(20)
+	},
+/turf/simulated/floor/wood,
+/area/space)
+"aci" = (
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 4
+	},
+/obj/structure/sign/painting/public{
+	pixel_x = 30
+	},
+/turf/simulated/floor/wood,
+/area/space)
+"acj" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/wood,
 /area/space)
 "ads" = (
 /obj/structure/table/rack/shelf/steel,
@@ -73148,34 +74320,34 @@ vUE
 vUE
 vUE
 vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
+pPY
+pPY
+pPY
+pPY
+pPY
+pPY
+pPY
+pPY
+pPY
+pPY
+vNM
+pPY
+pPY
+hgs
+fMb
+smR
+smR
+smR
+fMb
+iMu
+iMu
+iMu
+iMu
+iMu
+iMu
+iMu
+iMu
+fMb
 vUE
 vUE
 vUE
@@ -73405,34 +74577,34 @@ pPY
 pPY
 vUE
 vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
+pPY
+pPY
+pPY
+pPY
+pPY
+pPY
+pPY
+pPY
+pPY
+pPY
+vNM
+pPY
+pPY
+jqp
+asS
+rWC
+lFe
+lFe
+xcz
+iMu
+iMu
+ihd
+iMu
+iMu
+ihd
+iMu
+iMu
+vRk
 vUE
 vUE
 vUE
@@ -73662,34 +74834,34 @@ pPY
 pPY
 vUE
 vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
+pPY
+pPY
+pPY
+tTN
+tTN
+tTN
+tTN
+tTN
+tTN
+tTN
+tTN
+tTN
+tTN
+jqp
+iMu
+iMu
+iMu
+iMu
+iMu
+iMu
+iMu
+iMu
+iMu
+iMu
+iMu
+iMu
+iMu
+fMb
 vUE
 vUE
 vUE
@@ -73919,34 +75091,34 @@ pPY
 pPY
 vUE
 vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
+pPY
+pPY
+pPY
+tTN
+lsK
+aaR
+aaD
+lsK
+lsK
+sad
+lsK
+tTN
+tTN
+tTN
+nhv
+cSx
+cSx
+wtG
+tTN
+tTN
+iMu
+iMu
+iMu
+iMu
+iMu
+iMu
+iMu
+xVN
 vUE
 vUE
 vUE
@@ -74176,34 +75348,34 @@ pPY
 pPY
 vUE
 vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
+pPY
+pPY
+pPY
+tTN
+abi
+wmK
+nUk
+nUk
+nUk
+nUk
+nUk
+nqz
+ctP
+vOs
+cUT
+txo
+kys
+dCN
+tPM
+tTN
+iMu
+iMu
+iMu
+iMu
+iMu
+iMu
+iMu
+fMb
 vUE
 vUE
 vUE
@@ -74433,34 +75605,34 @@ pPY
 pPY
 vUE
 vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
+pPY
+pPY
+pPY
+tTN
+abj
+lsK
+nUk
+hoT
+hoT
+hoT
+hoT
+nUk
+uVO
+nKQ
+fTT
+xoZ
+fEM
+yfb
+cAM
+tTN
+tTN
+tTN
+tTN
+tTN
+tTN
+tTN
+uSC
+eez
 vUE
 vUE
 vUE
@@ -74690,34 +75862,34 @@ pPY
 pPY
 vUE
 vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
+pPY
+pPY
+pPY
+tTN
+abk
+aaS
+nUk
+hoT
+hoT
+hoT
+hoT
+xdK
+bvr
+tsG
+lfT
+cUM
+tFh
+vqh
+gnV
+oBz
+orl
+bdC
+qXC
+qxJ
+fuz
+tTN
+iMu
+fMb
 vUE
 vUE
 vUE
@@ -74947,34 +76119,34 @@ pPY
 pPY
 vUE
 vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
+pPY
+pPY
+pPY
+tTN
+lsK
+aaT
+nUk
+hoT
+hoT
+hoT
+hoT
+xdK
+bvr
+tsG
+nqd
+hoT
+igx
+jAH
+ioQ
+bWo
+bWo
+aXI
+utv
+isS
+wAY
+tTN
+iMu
+fMb
 vUE
 vUE
 vUE
@@ -75204,34 +76376,34 @@ pPY
 pPY
 vUE
 vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
+pPY
+pPY
+pPY
+tTN
+abl
+aaU
+nUk
+hoT
+hoT
+hoT
+hoT
+nUk
+sTT
+piI
+tTN
+tTN
+tTN
+tTN
+tTN
+tTN
+tTN
+tTN
+tTN
+xoX
+llr
+tTN
+iMu
+fMb
 vUE
 vUE
 vUE
@@ -75461,34 +76633,34 @@ pPY
 pPY
 vUE
 vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
+pPY
+pPY
+pPY
+tTN
+abm
+aaV
+nUk
+nUk
+nUk
+nUk
+nUk
+nUk
+rHo
+vJg
+tTN
+tTN
+aaj
+qYV
+ceB
+nmc
+qbf
+osn
+edO
+gSa
+ove
+tTN
+deg
+cdm
 vUE
 vUE
 vUE
@@ -75718,34 +76890,34 @@ pPY
 pPY
 vUE
 vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
+pPY
+pPY
+pPY
+tTN
+abn
+aaW
+aaE
+aas
+tWu
+kxK
+fjQ
+kKU
+bFx
+iTI
+tTN
+tTN
+aak
+aaf
+aaf
+aad
+eqK
+tTN
+tTN
+kVl
+vbY
+tTN
+oen
+pIm
 vUE
 vUE
 vUE
@@ -75975,34 +77147,34 @@ pPY
 pPY
 vUE
 vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
+pPY
+pPY
+pPY
+tTN
+abo
+aaX
+aaF
+iVj
+iVj
+iVj
+iVj
+uJS
+kqo
+xmF
+tTN
+tTN
+tTN
+tTN
+bLn
+aae
+euf
+bkQ
+aMY
+cSm
+iaI
+uFi
+wOE
+eye
 vUE
 vUE
 vUE
@@ -76232,34 +77404,34 @@ pPY
 pPY
 vUE
 vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
+pPY
+pPY
+pPY
+tTN
+abp
+lsK
+aaG
+aat
+kpp
+wmK
+wmK
+twb
+khv
+iTI
+tTN
+tTN
+lOY
+aah
+xzg
+gis
+wWz
+gUp
+tTN
+eDe
+aGU
+tTN
+tTN
+tTN
 vUE
 vUE
 vUE
@@ -76489,34 +77661,34 @@ pPY
 pPY
 vUE
 vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
+tTN
+tTN
+tTN
+tTN
+twb
+twb
+twb
+twb
+twb
+twb
+twb
+twb
+mWz
+aQR
+tTN
+tTN
+vJs
+lOY
+aag
+wWz
+wWz
+aaa
+wjo
+eDe
+cSC
+tTN
+qNn
+ddd
 vUE
 vUE
 vUE
@@ -76746,34 +77918,34 @@ pPY
 pPY
 vUE
 vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
+abQ
+abN
+abK
+abB
+abq
+aaY
+aaH
+aau
+ppq
+fvV
+rez
+mwm
+lUL
+cJq
+tTN
+tTN
+lOY
+aai
+wKB
+abw
+aac
+aab
+vWQ
+eDe
+vSa
+tTN
+uRT
+lbD
 vUE
 vUE
 vUE
@@ -77003,34 +78175,34 @@ pPY
 pPY
 vUE
 vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
+abR
+abO
+abL
+abC
+abr
+aaZ
+waR
+waR
+rYd
+vNw
+waR
+jot
+bNj
+vJg
+tTN
+tTN
+tTN
+tTN
+tTN
+tTN
+tTN
+tTN
+tTN
+tfk
+hvV
+tTN
+lrk
+lbD
 vUE
 vUE
 vUE
@@ -77260,34 +78432,34 @@ pPY
 pPY
 vUE
 vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
+abS
+abP
+abM
+abD
+abs
+aba
+ngg
+ngg
+jHX
+pSk
+odT
+eap
+dBm
+hln
+rcN
+mPf
+mEi
+kvN
+wfk
+xbs
+ykU
+xaU
+syq
+xpL
+jHo
+asd
+ctB
+lbD
 vUE
 vUE
 vUE
@@ -77517,34 +78689,34 @@ pDt
 pDt
 vUE
 vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
+tTN
+tTN
+tTN
+tTN
+tTN
+tTN
+fBl
+fBl
+qqQ
+fBl
+twb
+cTL
+aUQ
+bzB
+twb
+xnh
+enG
+xLQ
+xLQ
+gUA
+xLQ
+akW
+twb
+eDe
+fAN
+eFL
+ctB
+lbD
 vUE
 vUE
 vUE
@@ -77774,34 +78946,34 @@ rfV
 fhs
 vUE
 vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
+pPY
+pPY
+pPY
+abE
+iMu
+tTN
+aaI
+aav
+bPL
+nCn
+oup
+twb
+vPj
+dMu
+fBl
+xnh
+wWz
+mLT
+ads
+gis
+xLQ
+sRG
+fBl
+eDe
+vIq
+khg
+rex
+qiC
 vUE
 vUE
 vUE
@@ -78031,34 +79203,34 @@ kMe
 sur
 vUE
 vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
+pPY
+pPY
+pPY
+abE
+abt
+abb
+aaK
+aaw
+kgm
+fOe
+tWD
+fBl
+wcF
+iTI
+fBl
+xnh
+wWz
+ads
+ads
+wWz
+xLQ
+sRG
+fBl
+eDe
+dLM
+ppR
+nSl
+mPm
 vUE
 vUE
 vUE
@@ -78288,34 +79460,34 @@ rPQ
 pas
 vUE
 vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
+pPY
+pPY
+pPY
+abE
+iMu
+abc
+tsG
+aax
+hUu
+sbm
+cwI
+fBl
+wcF
+jWr
+twb
+sup
+fHl
+usb
+usb
+fHl
+cxk
+aYX
+twb
+jRp
+mzZ
+dSE
+iZB
+wBm
 vUE
 vUE
 vUE
@@ -78545,34 +79717,34 @@ hKQ
 aBj
 vUE
 vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
+pPY
+pPY
+pPY
+abE
+abu
+abd
+aaL
+aay
+tvv
+eIX
+giv
+bSd
+pEN
+goX
+twb
+twb
+fBl
+fBl
+fBl
+fBl
+fBl
+twb
+twb
+niL
+mzZ
+tTN
+ybD
+tdC
 vUE
 vUE
 vUE
@@ -78802,34 +79974,34 @@ mtK
 twb
 vUE
 vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
+pPY
+pPY
+pPY
+abE
+iMu
+abc
+tsG
+fLG
+ncs
+sbm
+bZN
+fBl
+mWz
+wmS
+utv
+rDA
+dCN
+dCN
+dCN
+dCN
+hws
+fqz
+eMR
+mfE
+rXQ
+dCN
+dCN
+tsG
 vUE
 vUE
 vUE
@@ -79059,34 +80231,34 @@ jLt
 sdr
 vUE
 vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
+pPY
+pPY
+pPY
+abE
+abt
+abe
+tsG
+aaz
+ivn
+vVY
+wcC
+fBl
+vHV
+iYW
+rsV
+cUX
+sdD
+sdD
+sdD
+sdD
+ivY
+ewc
+omD
+sdD
+npK
+vLy
+mee
+tsG
 vUE
 vUE
 vUE
@@ -79316,34 +80488,34 @@ mVP
 sWN
 vUE
 vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
+vNM
+vNM
+vNM
+abF
+abv
+tTN
+aaN
+aaA
+xkL
+cEJ
+mtE
+twb
+yfd
+ndl
+eap
+pSk
+ngg
+ngg
+jsH
+ngg
+xNr
+oac
+djP
+kGF
+lTX
+azl
+rmf
+tsG
 vUE
 vUE
 vUE
@@ -79573,34 +80745,34 @@ vwM
 wPi
 vUE
 vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
+pPY
+pPY
+pPY
+abG
+abx
+tTN
+twb
+twb
+twb
+twb
+twb
+twb
+tTN
+sMP
+cSx
+cSx
+cSx
+wtG
+tTN
+wag
+tWY
+sWK
+tTN
+cjd
+sbx
+kam
+iuK
+kVj
 vUE
 vUE
 vUE
@@ -79830,34 +81002,34 @@ gAS
 twb
 vUE
 vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
+pPY
+pPY
+pPY
+abH
+lFe
+lFe
+lFe
+lFe
+lFe
+lFe
+xUM
+lFe
+ifq
+ovH
+lFe
+awF
+iMu
+iMu
+iMu
+ber
+hzR
+lgh
+tTN
+cMC
+tsG
+gNk
+tsG
+qje
 vUE
 vUE
 vUE
@@ -80087,34 +81259,34 @@ uFr
 jRx
 vUE
 vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
+pPY
+pPY
+pPY
+abI
+iMu
+iMu
+iMu
+iMu
+pKY
+iMu
+qbd
+iMu
+bFR
+siw
+iMu
+iMu
+wwW
+iMu
+iMu
+tLH
+gOL
+lmN
+tTN
+ylM
+ebx
+xMj
+nVt
+nvq
 vUE
 vUE
 vUE
@@ -80344,34 +81516,34 @@ fDE
 rFL
 vUE
 vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
+pPY
+pPY
+pPY
+abE
+iMu
+abf
+iMu
+iMu
+iMu
+iMu
+qbd
+bFR
+iMu
+siw
+iMu
+eni
+lFe
+wJj
+lFe
+gnr
+lVs
+dVM
+tTN
+tTN
+tTN
+tTN
+tTN
+tTN
 vUE
 vUE
 vUE
@@ -80601,34 +81773,34 @@ xRz
 kji
 vUE
 vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
+pPY
+pPY
+pPY
+abE
+iMu
+iMu
+iMu
+iMu
+iMu
+iMu
+uNz
+iMu
+iMu
+siw
+liK
+iMu
+iMu
+fMb
+iMu
+cMQ
+gKI
+dvZ
+dvO
+lFe
+lFe
+jyQ
+lFe
+tJp
 vUE
 vUE
 vUE
@@ -80858,34 +82030,34 @@ jiH
 kos
 vUE
 vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
+pPY
+pPY
+pPY
+tTN
+tTN
+tTN
+tTN
+iMu
+iMu
+bFR
+qbd
+iMu
+iMu
+gaW
+nBd
+nBd
+nBd
+eWp
+uqV
+tTN
+rly
+rly
+tTN
+eex
+wTo
+jii
+eex
+miS
 vUE
 vUE
 vUE
@@ -81077,10 +82249,10 @@ twb
 eaw
 lbD
 vUE
-vUE
-vUE
-vUE
-iMu
+tTN
+tTN
+tTN
+tTN
 bFR
 qbd
 iMu
@@ -81115,34 +82287,34 @@ gUZ
 jeH
 vUE
 vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
+pPY
+pPY
+pPY
+tTN
+aby
+lsK
+tTN
+iMu
+bFR
+iMu
+qbd
+iMu
+liK
+iMu
+iMu
+iMu
+iMu
+fMb
+iMu
+iMu
+bhY
+pPY
+pPY
+pPY
+pPY
+pPY
+pPY
+kFc
 vUE
 vUE
 vUE
@@ -81334,10 +82506,10 @@ twb
 iWn
 uYi
 vUE
-vUE
-vUE
-vUE
-bFR
+tTN
+aby
+lsK
+tTN
 iMu
 qbd
 iMu
@@ -81372,34 +82544,34 @@ tTN
 tTN
 vUE
 vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
+pPY
+pPY
+pPY
+pPY
+abz
+abg
+aaO
+aaB
+iMu
+iMu
+qbd
+fxn
+iMu
+eex
+eex
+eex
+wTo
+jii
+eex
+eex
+wMI
+pPY
+pPY
+pPY
+pPY
+pPY
+pPY
+kFc
 vUE
 vUE
 vUE
@@ -81591,10 +82763,10 @@ twb
 twb
 twb
 vUE
-vUE
-vUE
-vUE
-iMu
+pPY
+abz
+abg
+aaO
 iMu
 qbd
 fxn
@@ -81629,34 +82801,34 @@ kCW
 qIo
 vUE
 vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
+pPY
+pPY
+pPY
+pPY
+abA
+abh
+aaP
+iMu
+iMu
+iMu
+eJW
+fMb
+bhY
+pPY
+pPY
+pPY
+pPY
+pPY
+pPY
+pPY
+pPY
+pPY
+pPY
+pPY
+pPY
+pPY
+pPY
+kFc
 vUE
 vUE
 vUE
@@ -81848,10 +83020,10 @@ twb
 cwl
 oPQ
 vUE
-vUE
-vUE
-vUE
-iMu
+pPY
+abA
+abh
+aaP
 iMu
 eJW
 fMb
@@ -81886,34 +83058,34 @@ mjw
 qqr
 vUE
 vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
+pPY
+pPY
+pPY
+pPY
+pPY
+tTN
+tTN
+iMu
+iMu
+vsm
+qbd
+fMb
+aal
+pPY
+pPY
+pPY
+pPY
+pPY
+pPY
+pPY
+pPY
+pPY
+pPY
+pPY
+pPY
+pPY
+pPY
+kFc
 vUE
 vUE
 vUE
@@ -82105,10 +83277,10 @@ twb
 ihB
 uMJ
 vUE
-vUE
-vUE
-vUE
-iMu
+pPY
+pPY
+tTN
+tTN
 vsm
 qbd
 fMb
@@ -82143,34 +83315,34 @@ vRn
 gLa
 vUE
 vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
+pPY
+pPY
+pPY
+abJ
+aaC
+aaC
+aaQ
+aaC
+aar
+aaq
+aao
+aan
+aam
+pPY
+pPY
+pPY
+pPY
+pPY
+pPY
+pPY
+pPY
+pPY
+pPY
+pPY
+pPY
+pPY
+pPY
+kFc
 vUE
 vUE
 vUE
@@ -84160,6 +85332,18 @@ vUE
 vUE
 vUE
 vUE
+twb
+cfF
+uyz
+ibQ
+gjq
+tTN
+tTN
+gqd
+tTN
+tTN
+tTN
+tTN
 vUE
 vUE
 vUE
@@ -84167,24 +85351,12 @@ vUE
 vUE
 vUE
 vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
+tTN
+pan
+kBj
+hTj
+tTN
+tTN
 vUE
 vUE
 vUE
@@ -84417,6 +85589,18 @@ vUE
 vUE
 vUE
 vUE
+twb
+pnT
+bev
+iWk
+tTN
+rkL
+bbL
+abU
+twb
+vUE
+vUE
+tTN
 vUE
 vUE
 vUE
@@ -84424,24 +85608,12 @@ vUE
 vUE
 vUE
 vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
+cRJ
+sbC
+cuD
+cvK
+ndQ
+xvV
 vUE
 vUE
 vUE
@@ -84674,6 +85846,18 @@ vUE
 vUE
 vUE
 vUE
+rcg
+jFZ
+kQW
+gGh
+tTN
+acb
+ujH
+lbD
+twb
+vUE
+vUE
+tTN
 vUE
 vUE
 vUE
@@ -84681,24 +85865,12 @@ vUE
 vUE
 vUE
 vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
+tlv
+mCf
+mpK
+mCf
+tBS
+cUN
 vUE
 vUE
 vUE
@@ -84931,6 +86103,18 @@ vUE
 vUE
 vUE
 vUE
+rgD
+ckt
+bev
+nCy
+tTN
+dsi
+ujH
+lbD
+twb
+vUE
+vUE
+tTN
 vUE
 vUE
 vUE
@@ -84938,24 +86122,12 @@ vUE
 vUE
 vUE
 vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
+nBo
+jyd
+mpK
+mCf
+mCf
+wXh
 vUE
 vUE
 vUE
@@ -85188,6 +86360,18 @@ vUE
 vUE
 vUE
 vUE
+tTN
+bdY
+qEy
+oZZ
+tTN
+acc
+qIi
+lbD
+twb
+twb
+dTA
+tTN
 vUE
 vUE
 vUE
@@ -85195,24 +86379,12 @@ vUE
 vUE
 vUE
 vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
+bQg
+mhs
+nbi
+uTW
+yhJ
+pUo
 vUE
 vUE
 vUE
@@ -85445,6 +86617,18 @@ vUE
 vUE
 vUE
 vUE
+tTN
+pTg
+rEJ
+cvo
+tTN
+nIt
+ujH
+abV
+rcg
+vUE
+aLa
+tTN
 vUE
 vUE
 vUE
@@ -85452,24 +86636,12 @@ vUE
 vUE
 vUE
 vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
+bds
+wrB
+kde
+wNp
+mCf
+fmy
 vUE
 vUE
 vUE
@@ -85702,6 +86874,18 @@ vUE
 vUE
 vUE
 vUE
+tTN
+mMT
+gNw
+giP
+ace
+qWh
+ujH
+abW
+twb
+vUE
+ocN
+tTN
 vUE
 vUE
 vUE
@@ -85709,24 +86893,12 @@ vUE
 vUE
 vUE
 vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
+uxQ
+mCf
+sUX
+dEE
+mCf
+tVL
 vUE
 vUE
 vUE
@@ -85959,6 +87131,18 @@ vUE
 vUE
 vUE
 vUE
+tTN
+hKb
+acj
+ach
+acf
+nBI
+nLK
+abX
+twb
+vUE
+lcX
+tTN
 vUE
 vUE
 vUE
@@ -85966,24 +87150,12 @@ vUE
 vUE
 vUE
 vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
+mRS
+mhs
+gUS
+uTW
+mCf
+gEF
 vUE
 vUE
 vUE
@@ -86216,6 +87388,18 @@ vUE
 vUE
 vUE
 vUE
+tTN
+tLW
+lHl
+ijf
+acg
+hos
+ydE
+aKm
+mOd
+nVs
+dyj
+tTN
 vUE
 vUE
 vUE
@@ -86223,24 +87407,12 @@ vUE
 vUE
 vUE
 vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
+lyS
+wrB
+wcV
+mCf
+brd
+pAe
 vUE
 vUE
 vUE
@@ -86473,6 +87645,18 @@ vUE
 vUE
 vUE
 vUE
+tTN
+kFi
+lbD
+iTO
+lbD
+qiC
+lbD
+hwk
+twb
+kYa
+sVO
+tTN
 vUE
 vUE
 vUE
@@ -86480,24 +87664,12 @@ vUE
 vUE
 vUE
 vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
+nyK
+mCf
+wcV
+ndn
+jBC
+iDB
 vUE
 vUE
 vUE
@@ -86730,6 +87902,18 @@ vUE
 vUE
 vUE
 vUE
+tTN
+dey
+nIO
+aci
+qvb
+lbD
+lbD
+abY
+twb
+vUE
+sVO
+tTN
 vUE
 vUE
 vUE
@@ -86737,24 +87921,12 @@ vUE
 vUE
 vUE
 vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
+xXA
+mCf
+xSq
+eEz
+iDB
+dut
 vUE
 vUE
 vUE
@@ -86987,6 +88159,18 @@ vUE
 vUE
 vUE
 vUE
+tTN
+tTN
+tTN
+tTN
+vUE
+acd
+aca
+abZ
+twb
+abT
+jCh
+tTN
 vUE
 vUE
 vUE
@@ -86994,24 +88178,12 @@ vUE
 vUE
 vUE
 vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
+nAB
+uVN
+sNW
+iDB
+dut
+fqV
 vUE
 vUE
 vUE
@@ -87244,6 +88416,18 @@ vUE
 vUE
 vUE
 vUE
+fqV
+fqV
+bTK
+tTN
+tTN
+tTN
+tTN
+tTN
+tTN
+tTN
+tTN
+tTN
 vUE
 vUE
 vUE
@@ -87251,24 +88435,12 @@ vUE
 vUE
 vUE
 vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
-vUE
+hjx
+cht
+gtX
+dut
+fqV
+fqV
 vUE
 vUE
 vUE

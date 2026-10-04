@@ -5350,6 +5350,14 @@
 /obj/structure/window/reinforced,
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/access_shaft/lower)
+"lm" = (
+/obj/machinery/atmospherics/portables_connector,
+/obj/machinery/portable_atmospherics/canister/nitrogen,
+/obj/effect/floor_decal/corner/white{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/milspec/raised/turfpack,
+/area/offworld/orbital/station/telecomms)
 "ln" = (
 /obj/effect/floor_decal/borderfloor/corner,
 /obj/effect/floor_decal/borderfloor/corner{
@@ -5462,6 +5470,13 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/access_shaft/lower)
+"ly" = (
+/obj/machinery/atmospherics/unary/freezer,
+/obj/effect/floor_decal/corner/white/full{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec/raised/turfpack,
+/area/offworld/orbital/station/telecomms)
 "lz" = (
 /obj/structure/table/standard,
 /obj/item/book/manual/rust_engine,
@@ -5475,6 +5490,24 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/rust_control)
+"lA" = (
+/obj/machinery/door/window/eastleft{
+	name = "Server Room";
+	dir = 2
+	},
+/obj/machinery/door/window/westleft{
+	name = "Server Room";
+	opacity = 1;
+	req_access = list(30);
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/warning/full,
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/tiled/steel_grid,
+/area/offworld/orbital/station/telecomms)
 "lB" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -6791,11 +6824,11 @@
 /turf/simulated/floor/airless,
 /area/offworld/orbital/station/telecomms)
 "of" = (
-/obj/structure/window/maintenance_panel{
-	dir = 8
-	},
 /obj/structure/cable/cyan{
 	icon_state = "4-8"
+	},
+/obj/structure/window/maintenance_panel{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/offworld/orbital/station/telecomms)
@@ -6824,14 +6857,14 @@
 /obj/structure/cable/cyan{
 	icon_state = "4-8"
 	},
-/obj/effect/floor_decal/corner/white{
-	dir = 10
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
+	},
+/obj/effect/floor_decal/corner/white{
+	dir = 10
 	},
 /turf/simulated/floor/tiled/milspec/raised/turfpack,
 /area/offworld/orbital/station/telecomms)
@@ -6842,11 +6875,11 @@
 /obj/structure/cable/cyan{
 	icon_state = "2-8"
 	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
-	dir = 8
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
 	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
-	dir = 8
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
 	},
 /turf/simulated/floor/tiled/milspec/raised/turfpack,
 /area/offworld/orbital/station/telecomms)
@@ -7011,10 +7044,12 @@
 /turf/simulated/floor/plating,
 /area/ai_sat/atmos)
 "ov" = (
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 4
+/obj/effect/catwalk_plated/techfloor,
+/obj/machinery/meter,
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 5
 	},
-/turf/simulated/floor/tiled/milspec/raised/turfpack,
+/turf/simulated/floor/plating,
 /area/offworld/orbital/station/telecomms)
 "ow" = (
 /obj/machinery/power/apc{
@@ -7052,12 +7087,8 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/south_power_airlock)
 "oy" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 6
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 10
-	},
+/obj/machinery/atmospherics/pipe/manifold/hidden,
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/milspec/raised/turfpack,
 /area/offworld/orbital/station/telecomms)
 "oz" = (
@@ -7114,13 +7145,13 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/obj/structure/window/reinforced,
-/obj/machinery/pointdefense_control{
-	id_tag = "orbital_point_def"
+/obj/effect/floor_decal/corner/white{
+	dir = 9
 	},
-/turf/simulated/floor/bluegrid,
+/turf/simulated/floor/tiled/milspec/raised/turfpack,
 /area/offworld/orbital/station/telecomms)
 "oF" = (
+/obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled/milspec/raised/turfpack,
 /area/offworld/orbital/station/telecomms)
 "oG" = (
@@ -7198,11 +7229,13 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/ai_sat/atmos)
 "oO" = (
-/obj/machinery/telecomms/relay/preset/outpost/recyard,
-/obj/structure/window/reinforced{
-	dir = 1
+/obj/machinery/pointdefense_control{
+	id_tag = "orbital_point_def"
 	},
-/turf/simulated/floor/bluegrid,
+/obj/effect/floor_decal/corner/white/full{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec/raised/turfpack,
 /area/offworld/orbital/station/telecomms)
 "oP" = (
 /obj/structure/stairs/spawner/north,
@@ -7306,20 +7339,26 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/ai_sat/atmos)
 "oZ" = (
-/obj/effect/floor_decal/corner/white{
-	dir = 9
-	},
-/obj/machinery/camera/network/ai_sat{
-	c_tag = "AI - Telecom and Fire Control";
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/milspec/raised/turfpack,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 5
+	},
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/plating,
 /area/offworld/orbital/station/telecomms)
 "pa" = (
-/obj/effect/floor_decal/corner/white{
-	dir = 6
-	},
-/turf/simulated/floor/tiled/milspec/raised/turfpack,
+/obj/structure/sign/warning/cold,
+/turf/simulated/wall/r_wall,
 /area/offworld/orbital/station/telecomms)
 "pb" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/aux,
@@ -7430,50 +7469,48 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/lower/fore)
 "pl" = (
-/obj/effect/floor_decal/corner/white/full{
-	dir = 8
+/obj/machinery/atmospherics/unary/vent_pump{
+	external_pressure_bound = 0;
+	external_pressure_bound_default = 0;
+	icon_state = "map_vent_in";
+	initialize_directions = 1;
+	internal_pressure_bound = 4000;
+	internal_pressure_bound_default = 4000;
+	pressure_checks = 2;
+	pressure_checks_default = 2;
+	pump_direction = 0;
+	use_power = 1
 	},
-/obj/machinery/alarm{
-	pixel_y = 26
+/obj/machinery/camera/network/ai_sat{
+	c_tag = "AI - Telecom and Fire Control";
+	dir = 4
 	},
-/turf/simulated/floor/tiled/milspec/raised/turfpack,
+/turf/simulated/floor/bluegrid{
+	name = "Server Base";
+	nitrogen = 500;
+	oxygen = 0;
+	temperature = 80
+	},
 /area/offworld/orbital/station/telecomms)
 "pm" = (
-/obj/effect/floor_decal/corner/white{
-	dir = 5
+/turf/simulated/floor/bluegrid{
+	name = "Server Base";
+	nitrogen = 500;
+	oxygen = 0;
+	temperature = 80
 	},
-/obj/machinery/firealarm{
-	pixel_y = 26
-	},
-/turf/simulated/floor/tiled/milspec/raised/turfpack,
 /area/offworld/orbital/station/telecomms)
 "pn" = (
-/obj/machinery/light{
-	dir = 1
+/obj/machinery/atmospherics/unary/vent_pump{
+	icon_state = "map_vent_out";
+	use_power = 1
 	},
-/obj/effect/floor_decal/corner/white{
-	dir = 5
+/turf/simulated/floor/bluegrid{
+	name = "Server Base";
+	nitrogen = 500;
+	oxygen = 0;
+	temperature = 80
 	},
-/obj/item/radio/intercom/department/security{
-	dir = 1;
-	pixel_y = 21
-	},
-/turf/simulated/floor/tiled/milspec/raised/turfpack,
-/area/offworld/orbital/station/telecomms)
-"po" = (
-/obj/effect/floor_decal/corner/white/full{
-	dir = 1
-	},
-/obj/item/radio/intercom/locked/ai_private{
-	dir = 1;
-	pixel_y = 32
-	},
-/obj/item/radio/intercom{
-	dir = 1;
-	name = "Station Intercom (General)";
-	pixel_y = 21
-	},
-/turf/simulated/floor/tiled/milspec/raised/turfpack,
 /area/offworld/orbital/station/telecomms)
 "pp" = (
 /obj/machinery/atmospherics/pipe/tank/air{
@@ -7555,8 +7592,11 @@
 /turf/simulated/floor/wood/alt,
 /area/maintenance/orbital/lower/starboard)
 "px" = (
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 8
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 9
+	},
+/obj/effect/floor_decal/corner/white{
+	dir = 6
 	},
 /turf/simulated/floor/tiled/milspec/raised/turfpack,
 /area/offworld/orbital/station/telecomms)
@@ -8081,6 +8121,24 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/beam_emitter)
+"qC" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden{
+	dir = 9
+	},
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/plating,
+/area/offworld/orbital/station/telecomms)
 "qD" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -10418,6 +10476,18 @@
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/rust_backup_power)
+"uY" = (
+/obj/machinery/alarm{
+	pixel_y = 26
+	},
+/obj/machinery/rnd/server,
+/turf/simulated/floor/bluegrid{
+	name = "Server Base";
+	nitrogen = 500;
+	oxygen = 0;
+	temperature = 80
+	},
+/area/offworld/orbital/station/telecomms)
 "uZ" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 9
@@ -15487,6 +15557,18 @@
 	},
 /turf/space,
 /area/space)
+"Ed" = (
+/obj/machinery/firealarm{
+	pixel_y = 26
+	},
+/obj/machinery/telecomms/relay/preset/outpost/recyard,
+/turf/simulated/floor/bluegrid{
+	name = "Server Base";
+	nitrogen = 500;
+	oxygen = 0;
+	temperature = 80
+	},
+/area/offworld/orbital/station/telecomms)
 "Ee" = (
 /obj/effect/floor_decal/corner/purple{
 	dir = 5
@@ -17924,6 +18006,22 @@
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/offworld/orbital/xenoarcheology/exp_prep)
+"IH" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/item/radio/intercom/department/security{
+	dir = 1;
+	pixel_y = 21
+	},
+/obj/machinery/rnd/server/master,
+/turf/simulated/floor/bluegrid{
+	name = "Server Base";
+	nitrogen = 500;
+	oxygen = 0;
+	temperature = 80
+	},
+/area/offworld/orbital/station/telecomms)
 "II" = (
 /obj/structure/table/rack,
 /obj/structure/window/reinforced{
@@ -18982,6 +19080,31 @@
 /obj/effect/map_helper/airlock/door/int_door,
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/halls/lower/central)
+"KD" = (
+/obj/item/radio/intercom/locked/ai_private{
+	dir = 1;
+	pixel_y = 32
+	},
+/obj/item/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 21
+	},
+/turf/simulated/floor/bluegrid{
+	name = "Server Base";
+	nitrogen = 500;
+	oxygen = 0;
+	temperature = 80
+	},
+/area/offworld/orbital/station/telecomms)
+"KE" = (
+/obj/structure/grille,
+/obj/structure/cable/cyan,
+/obj/structure/cable/cyan{
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/airless,
+/area/ai_sat/atmos)
 "KF" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled,
@@ -19003,6 +19126,16 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/monotile,
 /area/offworld/orbital/xenoarcheology)
+"KI" = (
+/obj/structure/cable/cyan{
+	icon_state = "0-8"
+	},
+/obj/structure/grille,
+/obj/structure/cable/cyan{
+	icon_state = "0-2"
+	},
+/turf/simulated/floor/airless,
+/area/ai_sat/atmos)
 "KJ" = (
 /obj/machinery/rnd/destructive_analyzer,
 /turf/simulated/floor/tiled/monotile,
@@ -26661,7 +26794,7 @@ ng
 ng
 ng
 ng
-ng
+np
 np
 np
 np
@@ -26823,9 +26956,9 @@ ng
 ng
 ng
 ng
-ng
 np
 pz
+nA
 nA
 nA
 nA
@@ -26981,13 +27114,13 @@ xM
 xM
 xM
 xM
-xM
 ng
 ng
 ng
 nj
 np
 nw
+fx
 fx
 fx
 fx
@@ -27143,14 +27276,14 @@ xM
 xM
 xM
 xM
-xM
-xM
 ng
-nj
+ng
+ng
 nj
 np
 nw
 fx
+uY
 pl
 oZ
 oO
@@ -27306,15 +27439,15 @@ xM
 xM
 xM
 xM
-xM
 ng
-nj
+ng
 nl
 np
 nw
 fx
+Ed
 pm
-oF
+lA
 oF
 ov
 oh
@@ -27468,16 +27601,16 @@ xM
 xM
 xM
 xM
-xM
 ng
-nj
+ng
 Gu
 np
 nw
 fx
+IH
 pn
-oF
-oF
+qC
+lm
 oy
 oj
 ob
@@ -27630,16 +27763,16 @@ xM
 xM
 xM
 xM
-xM
 ng
 ng
 nj
 np
 nw
 fx
-po
+KD
+pm
 pa
-oF
+ly
 px
 oi
 fx
@@ -27795,9 +27928,9 @@ xM
 xM
 ng
 ng
-ng
 np
 nw
+fx
 fx
 fx
 fx
@@ -27957,9 +28090,9 @@ xM
 xM
 ng
 ng
-nB
 ns
-nx
+KI
+KE
 nB
 nB
 nB
@@ -28118,8 +28251,8 @@ xM
 xM
 xM
 ng
-ng
-nB
+oz
+ns
 ns
 nx
 nB

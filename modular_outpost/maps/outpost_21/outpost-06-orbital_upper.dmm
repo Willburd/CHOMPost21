@@ -7504,6 +7504,9 @@
 /obj/effect/floor_decal/corner/white{
 	dir = 4
 	},
+/obj/structure/sign/warning/server_room{
+	pixel_y = 32
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/ai_server_room)
 "oC" = (
@@ -8689,11 +8692,11 @@
 /obj/machinery/door/window/westleft{
 	name = "Telecoms";
 	opacity = 1;
-	req_one_access = list(16,52,56)
+	req_one_access = list(16,30,52,56)
 	},
 /obj/machinery/door/window/eastleft{
 	name = "Telecoms";
-	req_one_access = list(16,52,56)
+	req_one_access = list(16,30,52,56)
 	},
 /obj/effect/floor_decal/industrial/warning/full,
 /obj/machinery/door/firedoor/glass,
@@ -8745,6 +8748,11 @@
 	},
 /obj/effect/floor_decal/corner/white{
 	dir = 4
+	},
+/obj/structure/sign/securearea{
+	desc = "A warning sign which reads 'SERVER ROOM'.";
+	name = "SERVER ROOM";
+	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/ai_server_room)
@@ -9266,6 +9274,17 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/port_observation)
+"rY" = (
+/obj/effect/floor_decal/corner/white{
+	dir = 9
+	},
+/obj/machinery/computer/rdservercontrol{
+	dir = 4;
+	pixel_y = 0;
+	pixel_x = -4
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/ai_server_room)
 "rZ" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 6
@@ -12989,10 +13008,6 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/access_shaft/upper_connector)
-"yy" = (
-/obj/machinery/hologram/holopad,
-/turf/simulated/floor/tiled/techmaint,
-/area/ai_server_room)
 "yz" = (
 /obj/structure/table/standard,
 /obj/item/storage/firstaid/regular,
@@ -17842,6 +17857,16 @@
 "HO" = (
 /turf/simulated/wall,
 /area/offworld/orbital/station/halls/aft)
+"HP" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/tiled/techmaint,
+/area/ai_server_room)
 "HQ" = (
 /turf/simulated/wall/r_wall,
 /area/ai_upload)
@@ -19121,8 +19146,8 @@
 /obj/effect/step_trigger/dephase_shadekin,
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/highsecurity{
-	name = "Telecoms and Generator";
-	req_one_access = list(16,52,56)
+	name = "Telecoms and Server";
+	req_one_access = list(16,30,52,56)
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
@@ -22931,7 +22956,6 @@
 /obj/machinery/alarm{
 	pixel_y = 26
 	},
-/obj/machinery/hologram/holopad,
 /obj/effect/floor_decal/corner/orange{
 	dir = 5
 	},
@@ -28202,7 +28226,7 @@ zY
 qV
 bY
 YZ
-bY
+rY
 DK
 HQ
 Gp
@@ -28364,7 +28388,7 @@ zY
 oB
 ox
 or
-yy
+qy
 QS
 HQ
 Vd
@@ -28849,7 +28873,7 @@ Hx
 zY
 lg
 qy
-os
+HP
 qy
 ZT
 HQ

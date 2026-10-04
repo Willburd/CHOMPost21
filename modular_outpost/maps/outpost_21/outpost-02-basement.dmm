@@ -638,9 +638,6 @@
 	icon_state = "16-0"
 	},
 /obj/structure/cable/orange{
-	icon_state = "4-8"
-	},
-/obj/structure/cable/orange{
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/plating,
@@ -1680,6 +1677,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/structure/foamedmetal,
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/lowmain)
 "adN" = (
@@ -6393,6 +6391,15 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
+/obj/machinery/door/blast/regular{
+	density = 0;
+	dir = 8;
+	icon_state = "pdoor0";
+	id = "bridge blast";
+	name = "Bridge Blast Doors";
+	opacity = 0
+	},
+/obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/scielevbasement)
 "amv" = (
@@ -7270,6 +7277,7 @@
 /obj/machinery/holoposter{
 	pixel_y = 32
 	},
+/obj/structure/foamedmetal,
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/lowmain)
 "aoa" = (
@@ -7288,6 +7296,7 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 10
 	},
+/obj/structure/foamedmetal,
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/lowmain)
 "aod" = (
@@ -7320,6 +7329,7 @@
 	dir = 10
 	},
 /obj/machinery/light/broken,
+/obj/structure/foamedmetal,
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/lowmain)
 "aog" = (
@@ -7333,6 +7343,7 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
+/obj/structure/foamedmetal,
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/lowmain)
 "aoh" = (
@@ -7563,7 +7574,6 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/industrial/outline/red,
-/obj/item/taperoll/engineering/applied,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/rnd/xenobiology/xenobioh)
 "aoE" = (
@@ -7611,7 +7621,6 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/item/taperoll/engineering/applied,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/rnd/xenobiology/xenobioh)
 "aoI" = (
@@ -8022,6 +8031,8 @@
 /obj/effect/floor_decal/steeldecal/steel_decals10{
 	dir = 9
 	},
+/obj/structure/foamedmetal,
+/obj/structure/barricade,
 /turf/simulated/floor/tiled/techfloor,
 /area/muriki/elevator/scibase)
 "apu" = (
@@ -8320,7 +8331,6 @@
 	name = "Xenobiology";
 	req_one_access = null
 	},
-/obj/item/taperoll/engineering/applied,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/rnd/xenobiology/xenobioh)
 "apR" = (
@@ -8374,7 +8384,6 @@
 /obj/machinery/door/airlock/research{
 	name = "Xenobiology Lab"
 	},
-/obj/item/taperoll/engineering/applied,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/rnd/xenobiology/xenobioh)
 "apV" = (
@@ -8740,7 +8749,6 @@
 /obj/machinery/door/airlock{
 	name = "Science Lavoreatory"
 	},
-/obj/item/taperoll/engineering/applied,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/muriki/bathroom/scilower)
 "aqH" = (
@@ -9376,7 +9384,6 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/item/taperoll/engineering/applied,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/muriki/bathroom/scilower)
 "arP" = (
@@ -9968,15 +9975,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology/xenobioh)
-"ata" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
-/obj/structure/foamedmetal,
-/turf/simulated/floor/tiled/white,
-/area/rnd/hallway/lowmain)
 "atb" = (
 /obj/structure/table/rack/shelf,
 /obj/effect/floor_decal/corner/purple{
@@ -11129,7 +11127,6 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/obj/item/taperoll/engineering/applied,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/rnd/research/anomaly)
 "ave" = (
@@ -11771,6 +11768,25 @@
 	},
 /turf/simulated/floor/plating,
 /area/rnd/xenobiology/xenobioh)
+"awr" = (
+/turf/simulated/wall/r_wall,
+/area/muriki/bathroom/scilower)
+"aws" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+/obj/machinery/door/blast/regular{
+	density = 0;
+	dir = 8;
+	icon_state = "pdoor0";
+	id = "bridge blast";
+	name = "Bridge Blast Doors";
+	opacity = 0
+	},
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/turf/simulated/floor/tiled/techfloor,
+/area/maintenance/scielevbasement)
 "awt" = (
 /obj/structure/table/standard,
 /obj/machinery/atmospherics/pipe/manifold/hidden/black{
@@ -11870,6 +11886,22 @@
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/rnd/xenobiology/xenobioh)
+"awA" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/orange{
+	icon_state = "4-8"
+	},
+/obj/machinery/power/apc{
+	name = "south bump";
+	pixel_y = -24
+	},
+/obj/structure/cable/orange{
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/scielevbasement)
 "awB" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -12554,6 +12586,16 @@
 /obj/effect/floor_decal/industrial/loading,
 /turf/simulated/floor/tiled/milspec,
 /area/medical/robotics)
+"axX" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/black{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/orange{
+	dir = 5
+	},
+/obj/structure/foamedmetal,
+/turf/simulated/floor/tiled/white,
+/area/rnd/hallway/lowmain)
 "axY" = (
 /obj/item/material/barbedwire/start_active,
 /turf/simulated/floor/plating/turfpack/muriki,
@@ -14073,8 +14115,7 @@
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/spine/waste)
 "aAT" = (
-/obj/turbolift_map_holder/muriki/scievator,
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/plating,
 /area/muriki/elevator/scibase)
 "aAU" = (
 /turf/simulated/floor/flesh/turfpack/muriki,
@@ -14190,10 +14231,6 @@
 "aBg" = (
 /turf/simulated/wall,
 /area/mine/unexplored/muriki/cave/underdark_pit/east_civ)
-"aBh" = (
-/obj/structure/reagent_dispensers/watertank,
-/turf/simulated/floor/plating,
-/area/maintenance/scielevbasement)
 "aBi" = (
 /obj/machinery/door/airlock/maintenance/common,
 /obj/item/airlock_brace,
@@ -15795,6 +15832,13 @@
 	},
 /turf/simulated/floor/tiled,
 /area/rnd/research/anomaly)
+"aEp" = (
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/barricade,
+/turf/simulated/floor/tiled/white,
+/area/rnd/research/exp_prep)
 "aEq" = (
 /turf/simulated/wall,
 /area/mine/unexplored/muriki/cave/cargo)
@@ -18763,6 +18807,7 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 9
 	},
+/obj/structure/barricade,
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/lowmain)
 "aJS" = (
@@ -44988,14 +45033,7 @@
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology/xenobioh)
 "bGJ" = (
-/obj/machinery/power/apc{
-	name = "south bump";
-	pixel_y = -24
-	},
-/obj/structure/cable/orange{
-	icon_state = "0-4"
-	},
-/turf/simulated/floor/plating,
+/turf/simulated/wall/r_wall,
 /area/muriki/elevator/scibase)
 "bGK" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
@@ -58243,12 +58281,6 @@
 /obj/structure/window/maintenance_panel,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/atmos_control)
-"cjq" = (
-/obj/structure/window/maintenance_panel{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/muriki/bathroom/scilower)
 "cjr" = (
 /obj/effect/floor_decal/corner/red/border{
 	dir = 1
@@ -59749,7 +59781,6 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/item/taperoll/engineering/applied,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/rnd/research/exp_prep)
 "cmT" = (
@@ -59782,7 +59813,6 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/firedoor/border_only,
-/obj/item/taperoll/engineering/applied,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/rnd/research/exp_prep)
 "cmW" = (
@@ -71185,7 +71215,6 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/item/taperoll/engineering/applied,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/rnd/research/exp_prep)
 "cOP" = (
@@ -71274,6 +71303,7 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 5
 	},
+/obj/structure/barricade,
 /turf/simulated/floor/tiled,
 /area/rnd/research/anomaly)
 "cPb" = (
@@ -76403,7 +76433,6 @@
 	name = "Expedition Prep";
 	req_one_access = null
 	},
-/obj/item/taperoll/engineering/applied,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/rnd/research/exp_prep)
 "eiR" = (
@@ -76761,7 +76790,6 @@
 /obj/structure/sign/scenery/map/left_outpost21{
 	pixel_y = -32
 	},
-/obj/structure/foamedmetal,
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/lowmain)
 "eBa" = (
@@ -77547,6 +77575,7 @@
 	pixel_y = 26
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/structure/foamedmetal,
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/lowmain)
 "fGD" = (
@@ -77600,7 +77629,6 @@
 	name = "Anomaly Lab";
 	req_one_access = null
 	},
-/obj/item/taperoll/engineering/applied,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/rnd/research/anomaly)
 "fJz" = (
@@ -78076,22 +78104,6 @@
 /obj/effect/landmark/start/stowaway,
 /turf/simulated/floor/wood/alt/broken,
 /area/maintenance/oldbridge)
-"guE" = (
-/obj/structure/cable/orange{
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/purple{
-	dir = 10
-	},
-/obj/structure/foamedmetal,
-/turf/simulated/floor/tiled/white,
-/area/rnd/hallway/lowmain)
 "guI" = (
 /obj/machinery/atmospherics/pipe/simple/visible/black{
 	dir = 4
@@ -78439,7 +78451,6 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/dorm)
 "gTh" = (
-/obj/structure/ladder/up,
 /obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/plating,
 /area/maintenance/scielevbasement)
@@ -78533,9 +78544,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/security/surgery)
-"gXS" = (
-/turf/simulated/floor/tiled/dark,
-/area/muriki/elevator/scibase)
 "gXU" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/black{
 	dir = 4
@@ -80497,6 +80505,7 @@
 /obj/structure/sign/department/anomaly{
 	pixel_x = -32
 	},
+/obj/structure/foamedmetal,
 /turf/simulated/floor/tiled/old_cargo/white,
 /area/rnd/hallway/lowmain)
 "jvh" = (
@@ -81395,7 +81404,6 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 5
 	},
-/obj/structure/foamedmetal,
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/lowmain)
 "ksG" = (
@@ -82727,6 +82735,7 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 5
 	},
+/obj/structure/foamedmetal,
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/lowmain)
 "lVh" = (
@@ -85455,6 +85464,7 @@
 "pvF" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/barricade,
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/exp_prep)
 "pvI" = (
@@ -92362,7 +92372,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/foamedmetal,
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/lowmain)
 "xOw" = (
@@ -141338,7 +141347,7 @@ ajW
 ajI
 euR
 akR
-ajL
+aqQ
 bGJ
 anY
 anY
@@ -141500,12 +141509,12 @@ ahD
 xPt
 kJj
 aEx
-ajL
+aqQ
 abt
 anY
-gXS
-gXS
-gXS
+aAT
+aAT
+aAT
 aAT
 anY
 agT
@@ -141662,13 +141671,13 @@ agQ
 lGO
 jNz
 aaU
-ajL
+aqQ
 wJT
 anY
-gXS
-gXS
-gXS
-gXS
+aAT
+aAT
+aAT
+aAT
 apt
 bZK
 eLb
@@ -141824,13 +141833,13 @@ fXH
 ajW
 daZ
 ifM
-ajL
-wJT
+aqQ
+awA
 anY
-gXS
-gXS
-gXS
-gXS
+aAT
+aAT
+aAT
+aAT
 apt
 aDy
 acq
@@ -141986,13 +141995,13 @@ uaZ
 aFy
 aEK
 ajJ
-ajL
+aqQ
 wJT
 anY
-gXS
-gXS
-gXS
-gXS
+aAT
+aAT
+aAT
+aAT
 anY
 bZL
 aGm
@@ -142148,7 +142157,7 @@ amD
 ajW
 aqI
 kqR
-ajL
+aqQ
 wJT
 anY
 anY
@@ -142310,16 +142319,16 @@ abV
 cOP
 xTM
 vKz
-ajL
+aqQ
 oLp
 def
 alc
 gTh
 kKh
 adE
-agc
+bEW
 afb
-apw
+aCl
 apw
 apw
 apw
@@ -142472,16 +142481,16 @@ fXH
 ajW
 chq
 cOL
-ajL
+aqQ
 aqK
 agc
 dMb
 ajT
 ucm
 ajT
-ajT
+aws
 aEy
-apw
+aCl
 upO
 akX
 bRX
@@ -142634,16 +142643,16 @@ aLY
 lGO
 aiz
 abv
-ajL
+aqQ
 amr
 agc
 agc
 agc
 agc
 qEz
-aBh
+bEW
 gTh
-apw
+aCl
 upO
 akX
 bRX
@@ -142796,16 +142805,16 @@ amG
 ajW
 cON
 azP
-ajL
+aqQ
 amu
-agc
-agc
-aDp
-aDp
-aDp
-cjq
-aDp
-aDp
+bEW
+bEW
+awr
+awr
+awr
+awr
+awr
+awr
 aDp
 aDp
 cOe
@@ -143458,7 +143467,7 @@ aFn
 xAe
 aDp
 amR
-guE
+kqS
 apw
 cJU
 cLW
@@ -143619,7 +143628,7 @@ rAD
 rAD
 iWc
 aDp
-amR
+axN
 eAA
 apw
 bDc
@@ -143781,7 +143790,7 @@ aFn
 aFn
 lQq
 aDp
-amR
+axN
 foh
 apw
 bzA
@@ -144105,7 +144114,7 @@ avZ
 arj
 eUO
 aDp
-amR
+axN
 gmU
 apw
 bDB
@@ -144408,7 +144417,7 @@ cnk
 cng
 axg
 cmV
-cmD
+aEp
 cmD
 cmD
 cmD
@@ -144586,7 +144595,7 @@ iwK
 acX
 hsT
 xOn
-ata
+fnR
 fnR
 rhW
 fnR
@@ -144747,7 +144756,7 @@ aEu
 faP
 arQ
 asI
-asS
+apy
 cOi
 asS
 aEu
@@ -145563,7 +145572,7 @@ cWJ
 axU
 ayZ
 ajV
-axN
+amR
 aly
 aJc
 atW
@@ -146037,7 +146046,7 @@ alw
 ake
 alw
 ahd
-anV
+axX
 apC
 ajL
 aaN
