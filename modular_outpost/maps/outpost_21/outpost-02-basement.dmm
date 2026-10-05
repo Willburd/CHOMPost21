@@ -640,6 +640,7 @@
 /obj/structure/cable/orange{
 	icon_state = "0-4"
 	},
+/obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/plating,
 /area/maintenance/scielevbasement)
 "abu" = (
@@ -5638,7 +5639,7 @@
 "akT" = (
 /obj/structure/sign/deck/first,
 /turf/simulated/wall/titanium,
-/area/muriki/elevator/scibase)
+/area/maintenance/scielevbasement)
 "akU" = (
 /turf/simulated/open/muriki,
 /area/mine/unexplored/muriki/cave/underdark_pit/south_west_waste)
@@ -7264,7 +7265,7 @@
 /area/rnd/hallway/lowmain)
 "anY" = (
 /turf/simulated/wall/titanium,
-/area/muriki/elevator/scibase)
+/area/maintenance/scielevbasement)
 "anZ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/black{
 	dir = 4
@@ -8032,7 +8033,7 @@
 /obj/structure/foamedmetal,
 /obj/structure/barricade,
 /turf/simulated/floor/tiled/techfloor,
-/area/muriki/elevator/scibase)
+/area/maintenance/scielevbasement)
 "apu" = (
 /obj/structure/cable/orange{
 	icon_state = "1-4"
@@ -11903,13 +11904,6 @@
 /obj/structure/cable/orange{
 	icon_state = "4-8"
 	},
-/obj/machinery/power/apc{
-	name = "south bump";
-	pixel_y = -24
-	},
-/obj/structure/cable/orange{
-	icon_state = "0-4"
-	},
 /obj/structure/ladder/up,
 /turf/simulated/floor/plating,
 /area/maintenance/scielevbasement)
@@ -14119,9 +14113,6 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/spine/waste)
-"aAT" = (
-/turf/simulated/floor/plating,
-/area/muriki/elevator/scibase)
 "aAU" = (
 /turf/simulated/floor/flesh/turfpack/muriki,
 /area/muriki/processor/hall/entrance)
@@ -45094,9 +45085,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology/xenobioh)
-"bGJ" = (
-/turf/simulated/wall/r_wall,
-/area/muriki/elevator/scibase)
 "bGK" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
@@ -69153,10 +69141,8 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/research)
 "cJP" = (
-/obj/machinery/door/airlock/maintenance/rnd{
-	name = "Science Maintenance"
-	},
 /obj/item/airlock_brace,
+/obj/machinery/door/airlock/maintenance/command,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/research)
 "cJQ" = (
@@ -71226,7 +71212,7 @@
 	},
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/techfloor,
-/area/rnd/research/anomaly)
+/area/maintenance/scielevbasement)
 "cOI" = (
 /obj/structure/cable/green{
 	icon_state = "0-2"
@@ -141096,7 +141082,7 @@ ajW
 ajW
 vxO
 cju
-ajL
+agc
 agc
 agc
 agc
@@ -141420,8 +141406,8 @@ ajW
 ajI
 euR
 akR
-aqQ
-bGJ
+bEW
+bEW
 anY
 anY
 anY
@@ -141582,13 +141568,13 @@ ahD
 xPt
 kJj
 aEx
-aqQ
+bEW
 abt
 anY
-aAT
-aAT
-aAT
-aAT
+adE
+adE
+adE
+adE
 anY
 agT
 aCi
@@ -141744,13 +141730,13 @@ agQ
 lGO
 jNz
 aaU
-aqQ
+bEW
 wJT
 anY
-aAT
-aAT
-aAT
-aAT
+adE
+adE
+adE
+adE
 apt
 bZK
 eLb
@@ -141906,13 +141892,13 @@ fXH
 ajW
 daZ
 ifM
-aqQ
+bEW
 awA
 anY
-aAT
-aAT
-aAT
-aAT
+adE
+adE
+adE
+adE
 apt
 aDy
 acq
@@ -142068,13 +142054,13 @@ uaZ
 aFy
 aEK
 ajJ
-aqQ
+bEW
 wJT
 anY
-aAT
-aAT
-aAT
-aAT
+adE
+adE
+adE
+adE
 anY
 bZL
 aGm
@@ -142230,7 +142216,7 @@ amD
 ajW
 aqI
 kqR
-aqQ
+bEW
 ata
 anY
 anY
@@ -142392,7 +142378,7 @@ abV
 cOP
 xTM
 vKz
-aqQ
+bEW
 oLp
 def
 alc
@@ -142401,7 +142387,7 @@ kKh
 adE
 bEW
 afb
-aCl
+bEW
 apw
 apw
 apw
@@ -142554,7 +142540,7 @@ fXH
 ajW
 chq
 cOL
-aqQ
+bEW
 aqK
 agc
 dMb
@@ -142563,7 +142549,7 @@ ucm
 ajT
 aws
 aEy
-aCl
+bEW
 upO
 akX
 bRX
@@ -142716,7 +142702,7 @@ aLY
 lGO
 aiz
 abv
-aqQ
+bEW
 amr
 agc
 agc
@@ -142725,7 +142711,7 @@ agc
 qEz
 bEW
 gTh
-aCl
+bEW
 upO
 akX
 bRX
@@ -142878,7 +142864,7 @@ amG
 ajW
 cON
 azP
-aqQ
+bEW
 amu
 bEW
 bEW

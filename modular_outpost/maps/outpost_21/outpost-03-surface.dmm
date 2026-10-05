@@ -7883,6 +7883,9 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 9
 	},
+/obj/machinery/camera/network/command{
+	c_tag = "COM - HoP Office West"
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/heads/hop)
 "amK" = (
@@ -9717,6 +9720,12 @@
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "2-4"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/crew_quarters/heads/hop)
 "arn" = (
@@ -19402,6 +19411,9 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
 	},
+/obj/machinery/camera/network/command{
+	c_tag = "COM - Internal Affairs North"
+	},
 /turf/simulated/floor/wood,
 /area/lawoffice)
 "aTp" = (
@@ -21917,6 +21929,10 @@
 	pixel_y = -3
 	},
 /obj/effect/floor_decal/corner/white/full,
+/obj/machinery/camera/network/command{
+	c_tag = "COM - Bridge Operations South";
+	dir = 1
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/bridge)
 "aYw" = (
@@ -22990,6 +23006,9 @@
 	name = "Station Intercom (General)";
 	pixel_y = 21
 	},
+/obj/machinery/camera/network/command{
+	c_tag = "COM - Bridge Teleporter"
+	},
 /turf/simulated/floor/tiled,
 /area/teleporter/bridge)
 "baf" = (
@@ -23047,6 +23066,9 @@
 	},
 /obj/effect/floor_decal/corner/white{
 	dir = 5
+	},
+/obj/machinery/camera/network/command{
+	c_tag = "COM - Bridge Operations North"
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/bridge)
@@ -23628,6 +23650,53 @@
 	dir = 1
 	},
 /area/muriki/processor/hall/waterway_upper)
+"bbv" = (
+/obj/effect/floor_decal/corner/white{
+	dir = 10
+	},
+/obj/machinery/camera/network/command{
+	c_tag = "COM - Bridge Access Hallway West";
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/bridge/hallway)
+"bbw" = (
+/obj/effect/floor_decal/corner/white{
+	dir = 6
+	},
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/machinery/camera/network/command{
+	c_tag = "COM - Stairwell Hallway";
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark,
+/area/bridge/hallway)
+"bbx" = (
+/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/corner/white{
+	dir = 9
+	},
+/obj/machinery/camera/network/command{
+	c_tag = "COM - Bridge Access Hallway Central";
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
+/area/bridge/hallway)
+"bby" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/white{
+	dir = 5
+	},
+/obj/machinery/camera/network/command{
+	c_tag = "COM - Bridge Access Hallway North"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/bridge/hallway)
 "bbA" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/glass_external{
@@ -24064,9 +24133,6 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "bjr" = (
-/obj/machinery/camera/network/research{
-	c_tag = "SCI - Main floor staircase"
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 2;
 	icon_state = "pipe-c"
@@ -25208,9 +25274,8 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/machinery/door/airlock/command{
-	name = "Showers";
-	req_one_access = null
+/obj/machinery/door/airlock{
+	name = "Shower Locker Room"
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/muriki/bathroom/bridge)
@@ -25756,6 +25821,10 @@
 /obj/structure/filingcabinet/chestdrawer,
 /obj/effect/floor_decal/spline/plain{
 	dir = 6
+	},
+/obj/machinery/camera/network/command{
+	c_tag = "COM - HoP Office East";
+	dir = 8
 	},
 /turf/simulated/floor/carpet/tealcarpet,
 /area/crew_quarters/heads/hop)
@@ -26412,10 +26481,6 @@
 /obj/structure/disposalpipe/segment{
 	dir = 1;
 	icon_state = "pipe-c"
-	},
-/obj/machinery/camera/network/command{
-	c_tag = "COM - Bridge Hall East";
-	dir = 1
 	},
 /turf/simulated/floor/tiled/steel,
 /area/bridge/hallway)
@@ -30503,7 +30568,7 @@
 /area/muriki/grounds/tramlineeast)
 "dwk" = (
 /obj/machinery/door/airlock/glass_command{
-	name = "Bridge"
+	name = "Bridge Operations"
 	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -33389,7 +33454,7 @@
 /area/muriki/arriveelev)
 "ewH" = (
 /obj/machinery/door/airlock/glass_external{
-	req_one_access = list(7,47)
+	req_one_access = list(19)
 	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -33403,7 +33468,8 @@
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/access_button/airlock_interior{
 	frequency = 1381;
-	pixel_y = 25
+	pixel_y = 25;
+	req_one_access = list(19)
 	},
 /obj/effect/map_helper/airlock/door/int_door,
 /obj/effect/map_helper/airlock/button/int_button,
@@ -33621,8 +33687,6 @@
 /turf/simulated/floor/plating/external/turfpack/muriki,
 /area/engineering/engine_room)
 "eBq" = (
-/obj/effect/floor_decal/industrial/outline/grey,
-/obj/structure/ladder/up,
 /turf/simulated/floor/plating,
 /area/maintenance/scielev)
 "eBw" = (
@@ -34808,10 +34872,6 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/obj/machinery/camera/network/command{
-	c_tag = "COM - Head of Personell's Office";
-	dir = 1
-	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/heads/hop)
 "eUK" = (
@@ -35044,10 +35104,6 @@
 /turf/simulated/floor/tiled,
 /area/muriki/tramstation/civ)
 "eYW" = (
-/obj/machinery/camera/network/research{
-	c_tag = "SCI - Break Room";
-	dir = 1
-	},
 /obj/effect/floor_decal/spline/fancy/wood,
 /obj/item/radio/intercom{
 	name = "Station Intercom (General)";
@@ -38308,6 +38364,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
 	},
+/obj/machinery/door/airlock/glass_command{
+	name = "Breakroom"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/rnd/breakroom)
 "gjL" = (
@@ -40875,10 +40934,6 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/bridge)
 "hel" = (
-/obj/machinery/camera/network/research{
-	c_tag = "SCI - Lockers";
-	dir = 1
-	},
 /obj/machinery/recharge_station,
 /obj/item/radio/intercom{
 	name = "Station Intercom (General)";
@@ -47020,9 +47075,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/obj/machinery/door/airlock/command{
-	name = "Bridge Privy";
-	req_one_access = null
+/obj/machinery/door/airlock{
+	name = "Bridge Privy"
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/muriki/bathroom/bridge)
@@ -47503,6 +47557,10 @@
 /obj/machinery/status_display{
 	layer = 4;
 	pixel_x = 32
+	},
+/obj/machinery/camera/network/command{
+	c_tag = "COM - Breakroom";
+	dir = 8
 	},
 /turf/simulated/floor/wood,
 /area/rnd/breakroom)
@@ -50092,6 +50150,7 @@
 /obj/structure/window/maintenance_panel{
 	dir = 1
 	},
+/obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/plating,
 /area/maintenance/scielev)
 "kaP" = (
@@ -53343,11 +53402,6 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/virology/quarantine_airlock)
 "lde" = (
-/obj/machinery/camera/network/research{
-	c_tag = "SCI - Main Floor EVA";
-	dir = 4;
-	network = list("Research","Miscellaneous Reseach")
-	},
 /obj/machinery/embedded_controller/radio/airlock/access_controller{
 	id_tag = "sci_exterior_north";
 	name = "Research North Airlock";
@@ -54701,6 +54755,10 @@
 /area/storage/tools)
 "lAF" = (
 /obj/effect/floor_decal/spline/fancy/wood,
+/obj/machinery/camera/network/command{
+	c_tag = "COM - Internal Affairs South";
+	dir = 1
+	},
 /turf/simulated/floor/wood,
 /area/lawoffice)
 "lAM" = (
@@ -55063,16 +55121,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/qm)
-"lFG" = (
-/obj/effect/floor_decal/corner/white{
-	dir = 9
-	},
-/obj/machinery/camera/network/command{
-	c_tag = "COM - Bridge Hall West";
-	dir = 4
-	},
-/turf/simulated/floor/tiled/steel,
-/area/bridge/hallway)
 "lFM" = (
 /obj/structure/disposalpipe/down{
 	dir = 2
@@ -57284,9 +57332,6 @@
 /turf/simulated/floor/plating,
 /area/hallway/primary/central_two)
 "mte" = (
-/obj/machinery/camera/network/command{
-	c_tag = "COM - Site Manager's office North"
-	},
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
 	},
@@ -58828,10 +58873,6 @@
 /obj/structure/sign/yessmoking_1{
 	pixel_y = -32
 	},
-/obj/machinery/camera/network/command{
-	c_tag = "COM - Legal Office South";
-	dir = 1
-	},
 /turf/simulated/floor/wood,
 /area/lawoffice)
 "mXd" = (
@@ -59754,16 +59795,6 @@
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/kitchen)
-"nnv" = (
-/obj/effect/floor_decal/corner/white{
-	dir = 6
-	},
-/obj/machinery/camera/network/command{
-	c_tag = "COM - Bridge Hall Entry";
-	dir = 8
-	},
-/turf/simulated/floor/tiled/steel,
-/area/bridge/hallway)
 "nnL" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -62257,26 +62288,6 @@
 /obj/effect/landmark/holiday_event_spawn,
 /turf/simulated/floor/tiled/freezer,
 /area/security/detectives_office)
-"ofY" = (
-/obj/machinery/door/firedoor/glass,
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/machinery/door/airlock/command{
-	name = "Locker Room";
-	req_one_access = null
-	},
-/turf/simulated/floor/tiled/steel_ridged,
-/area/muriki/bathroom/bridge)
 "ogd" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
@@ -67212,10 +67223,6 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/obj/machinery/camera/network/command{
-	c_tag = "COM - Bridge West";
-	dir = 4
-	},
 /obj/item/radio/intercom{
 	dir = 8;
 	name = "Station Intercom (General)";
@@ -68529,6 +68536,10 @@
 /obj/effect/floor_decal/corner/white{
 	dir = 9
 	},
+/obj/machinery/camera/network/command{
+	c_tag = "COM - Bridge Access Hallway South";
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge/hallway)
 "qqI" = (
@@ -69323,11 +69334,12 @@
 	icon_state = "2-8"
 	},
 /obj/machinery/door/airlock/glass_external{
-	req_one_access = list(7,47)
+	req_one_access = list(19)
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/access_button/airlock_exterior{
-	pixel_x = -25
+	pixel_x = -25;
+	req_one_access = list(19)
 	},
 /obj/effect/map_helper/airlock/door/ext_door,
 /obj/effect/map_helper/airlock/button/ext_button,
@@ -75655,9 +75667,6 @@
 /turf/simulated/floor/tiled/milspec/turfpack/muriki,
 /area/mine/unexplored/muriki/mountaineast)
 "sOH" = (
-/obj/machinery/camera/network/command{
-	c_tag = "COM - Legal Office North"
-	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 5
 	},
@@ -76719,15 +76728,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/muriki/arriveelev)
-"tfF" = (
-/obj/effect/floor_decal/spline/fancy/wood{
-	dir = 1
-	},
-/obj/machinery/camera/network/command{
-	c_tag = "COM - Bridge Meeting Room"
-	},
-/turf/simulated/floor/wood,
-/area/bridge/meeting_room)
 "tfK" = (
 /obj/structure/window/reinforced/tinted/frosted,
 /obj/structure/table/glass,
@@ -78872,9 +78872,8 @@
 /area/storage/tech)
 "tSI" = (
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/command{
-	name = "Bridge Privy";
-	req_one_access = null
+/obj/machinery/door/airlock{
+	name = "Bridge Privy"
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/muriki/bathroom/bridge)
@@ -80370,10 +80369,6 @@
 /turf/simulated/floor/outdoors/rocks/turfpack/muriki,
 /area/muriki/grounds/terraform)
 "upl" = (
-/obj/machinery/door/airlock/glass_research{
-	name = "Public Teleporter Office";
-	req_one_access = list(7,47)
-	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
@@ -80386,6 +80381,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
+/obj/machinery/door/airlock/glass_command{
+	name = "Public Teleporter Office"
+	},
+/obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled/techfloor,
 /area/rnd/telesci)
 "upn" = (
@@ -85083,15 +85082,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/hallway/secondary/exit)
-"vQV" = (
-/obj/machinery/camera/network/command{
-	c_tag = "COM - Bridge East"
-	},
-/obj/effect/floor_decal/corner/white{
-	dir = 5
-	},
-/turf/simulated/floor/tiled/milspec,
-/area/bridge)
 "vRd" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -85794,7 +85784,8 @@
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/medical/chemistry)
 "waD" = (
-/obj/structure/ladder,
+/obj/structure/ladder/updown,
+/obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/plating,
 /area/maintenance/scielev)
 "waN" = (
@@ -86006,13 +85997,13 @@
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/heads/hop)
 "weP" = (
-/obj/machinery/camera/network/research{
-	c_tag = "SCI - Public Teleporter Chamber";
-	dir = 4
-	},
 /obj/machinery/alarm{
 	dir = 4;
 	pixel_x = -26
+	},
+/obj/machinery/camera/network/command{
+	c_tag = "COM - Public Teleporter Chamber";
+	dir = 4
 	},
 /turf/simulated/floor/reinforced,
 /area/rnd/telesci)
@@ -87735,6 +87726,10 @@
 	pixel_x = -5;
 	pixel_y = 30
 	},
+/obj/machinery/camera/network/command{
+	c_tag = "COM - Public Teleporter Office";
+	dir = 8
+	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/telesci)
 "wKn" = (
@@ -88435,6 +88430,10 @@
 /obj/effect/floor_decal/corner/white/full{
 	dir = 1
 	},
+/obj/machinery/camera/network/command{
+	c_tag = "COM - Stairwell";
+	dir = 8
+	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge/hallway)
 "wTZ" = (
@@ -88680,18 +88679,6 @@
 	},
 /turf/simulated/floor,
 /area/hallway/secondary/engineering_hallway)
-"wYL" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/green/border{
-	dir = 1
-	},
-/obj/machinery/camera/network/command{
-	c_tag = "COM - Bridge Access Hallway"
-	},
-/turf/simulated/floor/tiled/steel,
-/area/hallway/primary/central_two)
 "wYR" = (
 /obj/item/ammo_magazine/mg42,
 /obj/item/ammo_magazine/mg42,
@@ -91177,9 +91164,8 @@
 /area/muriki/grounds/civ)
 "xSo" = (
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/command{
-	name = "Bridge Privy";
-	req_one_access = null
+/obj/machinery/door/airlock{
+	name = "Bridge Privy"
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/muriki/research/showers)
@@ -141304,7 +141290,7 @@ jaA
 rxd
 rxd
 rxd
-ofY
+bCN
 kTG
 kTG
 kWc
@@ -141781,7 +141767,7 @@ xLW
 rSz
 rSz
 eHD
-aTr
+bbw
 aTu
 aTr
 aTj
@@ -142112,7 +142098,7 @@ sDP
 qxZ
 aSR
 aBw
-baE
+bbv
 kWc
 iXC
 mui
@@ -143290,7 +143276,7 @@ xAJ
 bJi
 vuE
 pOb
-tfF
+tiz
 ggk
 eEA
 xop
@@ -143555,7 +143541,7 @@ bbh
 aZI
 aZx
 qUe
-bbe
+bby
 bbc
 bbb
 kwD
@@ -143725,7 +143711,7 @@ baS
 aXq
 baV
 bbk
-baV
+bbx
 baS
 aTs
 aTm
@@ -143942,7 +143928,7 @@ rGO
 fFa
 noJ
 cvD
-lFG
+uFr
 uFr
 bHh
 kTG
@@ -146529,7 +146515,7 @@ atZ
 lPz
 qPL
 rht
-nnv
+gqW
 kIt
 tpx
 gqW
@@ -146682,7 +146668,7 @@ mSF
 rKN
 eId
 exh
-wYL
+jAp
 auO
 idk
 fft
@@ -148313,7 +148299,7 @@ qEZ
 wiy
 nsQ
 rvN
-vQV
+dhQ
 rfZ
 xpk
 koN
