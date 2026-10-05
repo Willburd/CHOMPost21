@@ -699,6 +699,12 @@
 		popDown()
 		return
 
+	// Outpost 21 edit begin - AI controlled turrets
+	if(ai_currently_inhabited)
+		popUp()
+		return
+	// Outpost 21 edit end
+
 	if(!enabled)
 		//if the turret is off, make it pop down
 		popDown()

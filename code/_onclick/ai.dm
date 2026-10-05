@@ -14,6 +14,12 @@
 		build_click(src, client.buildmode, params, A)
 		return
 
+	// Outpost 21 edit begin - AI controlled turrets
+	var/datum/component/remote_view/comp = user.GetComponent(/datum/component/remote_view)
+	if(istype(comp?.get_target(), /obj/machinery/porta_turret))
+		return
+	// Outpost 21 edit end
+
 	if(control_disabled || stat) return
 
 	if(ismob(A))
