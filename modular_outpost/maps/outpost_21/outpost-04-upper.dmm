@@ -11439,6 +11439,14 @@
 /obj/structure/cable/green{
 	icon_state = "1-4"
 	},
+/obj/machinery/door/blast/shutters{
+	density = 0;
+	dir = 8;
+	icon_state = "shutter0";
+	id = "cap_office";
+	name = "Captain's Shutters";
+	opacity = 0
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/crew_quarters/captain)
 "axK" = (
