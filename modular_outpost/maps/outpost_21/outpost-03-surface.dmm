@@ -57514,7 +57514,6 @@
 /turf/simulated/floor,
 /area/engineering/corepower)
 "myT" = (
-/obj/effect/floor_decal/industrial/outline/grey,
 /obj/structure/fireaxecabinet{
 	pixel_x = -32
 	},
