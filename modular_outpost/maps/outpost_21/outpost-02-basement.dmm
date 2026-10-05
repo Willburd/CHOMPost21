@@ -69118,15 +69118,15 @@
 /turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/unexplored/muriki/cave/west)
 "cJO" = (
+/obj/effect/floor_decal/milspec/hatchmarks,
 /obj/machinery/door/blast/regular{
 	density = 0;
-	dir = 4;
+	dir = 8;
 	icon_state = "pdoor0";
-	id = "Scilock";
-	name = "Science Lockdown";
+	id = "bridge blast";
+	name = "Bridge Blast Doors";
 	opacity = 0
 	},
-/obj/effect/floor_decal/milspec/hatchmarks,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/research)
 "cJP" = (
@@ -69151,12 +69151,6 @@
 /obj/machinery/light/small{
 	dir = 4
 	},
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/research)
-"cJS" = (
-/obj/structure/ladder/up,
-/obj/effect/floor_decal/industrial/outline/grey,
-/obj/structure/catwalk,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/research)
 "cJT" = (
@@ -70067,12 +70061,6 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/spine/eng)
-"cLQ" = (
-/obj/structure/ladder/up,
-/obj/structure/catwalk,
-/obj/effect/floor_decal/industrial/outline/grey,
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/research)
 "cLR" = (
 /obj/structure/catwalk,
 /obj/structure/trash_pile,
@@ -143184,9 +143172,9 @@ fKk
 bsQ
 aCl
 ahC
-agP
-agP
-agP
+ahC
+ahC
+ahC
 ahC
 amq
 amq
@@ -143347,7 +143335,7 @@ aiB
 aCl
 agP
 agP
-cJS
+agP
 agP
 ahC
 amq
@@ -144643,7 +144631,7 @@ aqJ
 apw
 cGf
 agP
-cKB
+adz
 cKz
 agP
 ahC
@@ -144805,7 +144793,7 @@ aBa
 aCn
 cJV
 agP
-cLQ
+cKB
 agP
 agP
 ahC

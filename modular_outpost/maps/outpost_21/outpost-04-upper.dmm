@@ -6849,6 +6849,12 @@
 "apo" = (
 /turf/simulated/wall/r_wall,
 /area/crew_quarters/captain)
+"app" = (
+/obj/effect/landmark{
+	name = "vinestart"
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/captain)
 "apq" = (
 /obj/machinery/door/blast/shutters{
 	density = 0;
@@ -7023,6 +7029,9 @@
 	},
 /obj/effect/floor_decal/corner/white/full{
 	dir = 1
+	},
+/obj/effect/landmark{
+	name = "vinestart"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/research/sci_req_lab)
@@ -7361,6 +7370,9 @@
 /obj/machinery/camera/network/command{
 	c_tag = "COM - Holdout Armory";
 	dir = 8
+	},
+/obj/effect/landmark{
+	name = "blobstart"
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/bridge/holdout_armory)
@@ -11844,6 +11856,12 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/hallway/upper)
+"aym" = (
+/obj/effect/landmark{
+	name = "vinestart"
+	},
+/turf/simulated/floor,
+/area/maintenance/substation/research)
 "ayn" = (
 /obj/machinery/light,
 /obj/structure/disposalpipe/segment{
@@ -103733,7 +103751,7 @@ cmS
 vDy
 adl
 adl
-adl
+rlX
 adl
 adl
 adl
@@ -105012,7 +105030,7 @@ kxr
 kxr
 bri
 vOa
-jHp
+aym
 ruw
 kia
 lYL
@@ -105351,7 +105369,7 @@ axz
 eMt
 axz
 axz
-axz
+app
 nDI
 apo
 adl
@@ -107292,7 +107310,7 @@ tpl
 vDy
 pYM
 adl
-adl
+rlX
 adl
 adl
 adl

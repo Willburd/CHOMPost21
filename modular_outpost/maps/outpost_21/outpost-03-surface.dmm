@@ -14206,10 +14206,6 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 5
 	},
-/obj/machinery/firealarm{
-	dir = 4;
-	pixel_x = 26
-	},
 /turf/simulated/floor/wood,
 /area/lawoffice)
 "aBS" = (
@@ -19241,21 +19237,6 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled/old_tile/white,
 /area/medical/laundry)
-"aSP" = (
-/obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/machinery/door/blast/regular{
-	density = 0;
-	dir = 8;
-	icon_state = "pdoor0";
-	id = "bridge blast";
-	name = "Bridge Blast Doors";
-	opacity = 0
-	},
-/obj/structure/sign/department/bridge{
-	pixel_x = 32
-	},
-/turf/simulated/floor/tiled/techfloor,
-/area/bridge/hallway)
 "aSQ" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/glass_centcom{
@@ -19689,18 +19670,6 @@
 /obj/structure/table/fancyblack,
 /obj/effect/floor_decal/spline/plain/corner,
 /turf/simulated/floor/carpet/sblucarpet,
-/area/bridge/meeting_room)
-"aTG" = (
-/obj/structure/grille,
-/obj/structure/cable/green,
-/obj/structure/cable/green{
-	icon_state = "0-2"
-	},
-/obj/structure/window/reinforced/polarized/full{
-	id = "meet_window_tint"
-	},
-/obj/machinery/door/firedoor/glass,
-/turf/simulated/floor,
 /area/bridge/meeting_room)
 "aTH" = (
 /obj/structure/bed/chair/bay/comfy/purple{
@@ -21222,7 +21191,9 @@
 /turf/simulated/floor/tiled/dark,
 /area/bridge/hallway)
 "aXb" = (
-/obj/structure/reagent_dispensers/water_cooler/full,
+/obj/structure/reagent_dispensers/water_cooler/full{
+	pixel_x = -10
+	},
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 8
 	},
@@ -21704,7 +21675,8 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 1
 	},
-/obj/effect/landmark/holiday_event_spawn,
+/obj/structure/dogbed,
+/mob/living/simple_mob/animal/passive/fox/renault,
 /turf/simulated/floor/carpet/tealcarpet,
 /area/bridge/hallway)
 "aXR" = (
@@ -22145,6 +22117,13 @@
 	},
 /turf/simulated/floor/plating,
 /area/bridge)
+"aYC" = (
+/obj/effect/floor_decal/corner/white{
+	dir = 6
+	},
+/obj/structure/ladder/top_hatch,
+/turf/simulated/floor/tiled/dark,
+/area/bridge/hallway)
 "aYD" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -23121,8 +23100,6 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/bridge)
 "bai" = (
-/obj/structure/dogbed,
-/mob/living/simple_mob/animal/passive/fox/renault,
 /obj/effect/floor_decal/corner/white/full{
 	dir = 8
 	},
@@ -23485,6 +23462,10 @@
 	},
 /obj/machinery/light{
 	dir = 4
+	},
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = 26
 	},
 /turf/simulated/floor/wood,
 /area/lawoffice)
@@ -24027,6 +24008,32 @@
 /obj/effect/landmark/vines,
 /turf/simulated/floor/tiled/milspec,
 /area/bridge)
+"bbQ" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/sign/painting/public/west,
+/obj/machinery/door/firedoor/glass/hidden{
+	dir = 2
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/bridge/hallway)
+"bbR" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/door/firedoor/glass/hidden{
+	dir = 2
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/bridge/hallway)
+"bbS" = (
+/obj/machinery/door/firedoor/glass/hidden{
+	dir = 2
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/bridge/hallway)
 "bbX" = (
 /obj/structure/catwalk,
 /obj/machinery/light/small,
@@ -143779,7 +143786,7 @@ aXq
 baV
 bbk
 bbx
-baS
+bbQ
 aTs
 aTm
 aSZ
@@ -143941,7 +143948,7 @@ bbO
 amT
 aWC
 amT
-amT
+bbR
 amT
 amT
 aTa
@@ -144103,18 +144110,18 @@ baX
 baA
 baR
 baA
-baA
+bbS
 aTq
 aWW
 aTc
-baA
+aYC
 baA
 baX
 alM
 baA
 baw
 aSQ
-aSP
+aSN
 aGH
 agy
 aln
@@ -144261,8 +144268,8 @@ dwk
 njP
 njP
 pGH
+pGH
 kDY
-aTG
 mRP
 aXu
 pGH
