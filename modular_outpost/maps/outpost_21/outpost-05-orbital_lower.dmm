@@ -10486,9 +10486,6 @@
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/rust_backup_power)
 "uY" = (
-/obj/machinery/alarm{
-	pixel_y = 26
-	},
 /obj/machinery/rnd/server,
 /turf/simulated/floor/bluegrid{
 	name = "Server Base";
