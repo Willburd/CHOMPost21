@@ -14198,6 +14198,11 @@
 /obj/effect/zone_divider,
 /turf/simulated/floor/water/acidic/turfpack/muriki,
 /area/muriki/grounds/waste)
+"aCd" = (
+/turf/simulated/floor/flesh/mover/turfpack/muriki{
+	dir = 1
+	},
+/area/muriki/processor/hall)
 "aCe" = (
 /obj/effect/landmark{
 	name = "carpspawn"
@@ -19344,6 +19349,9 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge/hallway)
+"aTk" = (
+/turf/simulated/floor/flesh/mover/turfpack/muriki,
+/area/muriki/processor/hall)
 "aTl" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable/green{
@@ -23571,6 +23579,11 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge/hallway)
+"bbl" = (
+/turf/simulated/floor/flesh/mover/turfpack/muriki{
+	dir = 8
+	},
+/area/muriki/processor/pools/cropbig)
 "bbm" = (
 /obj/machinery/mineral/input,
 /obj/machinery/conveyor{
@@ -23579,6 +23592,42 @@
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/mining/processing)
+"bbn" = (
+/turf/simulated/floor/flesh/mover/turfpack/muriki{
+	dir = 4
+	},
+/area/muriki/processor/pools/cropbig)
+"bbo" = (
+/turf/simulated/floor/flesh/mover/turfpack/muriki{
+	dir = 5
+	},
+/area/muriki/processor/pools/cropbig)
+"bbp" = (
+/turf/simulated/floor/flesh/mover/turfpack/muriki{
+	dir = 9
+	},
+/area/muriki/processor/pools/cropbig)
+"bbq" = (
+/turf/simulated/open/indoor/turfpack/muriki,
+/area/muriki/processor/pools/cropbig)
+"bbr" = (
+/turf/simulated/floor/flesh/mover/turfpack/muriki{
+	dir = 6
+	},
+/area/muriki/processor/pools/cropbig)
+"bbs" = (
+/turf/simulated/floor/flesh/mover/turfpack/muriki{
+	dir = 10
+	},
+/area/muriki/processor/pools/cropbig)
+"bbt" = (
+/turf/simulated/floor/flesh/mover/turfpack/muriki,
+/area/muriki/processor/pools/cropbig)
+"bbu" = (
+/turf/simulated/floor/flesh/mover/turfpack/muriki{
+	dir = 1
+	},
+/area/muriki/processor/hall/waterway_upper)
 "bbA" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/glass_external{
@@ -26854,7 +26903,9 @@
 /area/hallway/security/main)
 "cgh" = (
 /obj/effect/map_effect/interval/atmogland/bodyheat,
-/turf/simulated/floor/flesh/turfpack/muriki,
+/turf/simulated/floor/flesh/mover/turfpack/muriki{
+	dir = 4
+	},
 /area/muriki/processor/pools/cropbig)
 "cgm" = (
 /obj/effect/floor_decal/corner/blue{
@@ -31763,10 +31814,6 @@
 	},
 /turf/simulated/floor/plating/external/turfpack/muriki,
 /area/engineering/engine_room)
-"dTQ" = (
-/obj/structure/lattice,
-/turf/simulated/open/indoor/turfpack/muriki,
-/area/muriki/processor/pools/cropbig)
 "dUi" = (
 /obj/structure/disposalpipe/up{
 	dir = 1
@@ -34570,7 +34617,9 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/kitchen)
 "eQU" = (
-/turf/simulated/floor/flesh/turfpack/muriki,
+/turf/simulated/floor/flesh/mover/turfpack/muriki{
+	dir = 1
+	},
 /area/muriki/processor/pools/cropbig)
 "eRj" = (
 /obj/effect/floor_decal/spline/fancy/wood{
@@ -35505,11 +35554,6 @@
 "fjo" = (
 /turf/simulated/wall/r_wall,
 /area/maintenance/scielev)
-"fjA" = (
-/obj/structure/lattice,
-/obj/effect/map_effect/interval/effect_emitter/smoke/mist/passive,
-/turf/simulated/open/indoor/turfpack/muriki,
-/area/muriki/processor/pools/cropbig)
 "fjF" = (
 /obj/effect/floor_decal/corner/white{
 	dir = 1
@@ -37758,7 +37802,9 @@
 /obj/effect/floor_decal/flesh{
 	dir = 1
 	},
-/turf/simulated/floor/flesh/turfpack/muriki,
+/turf/simulated/floor/flesh/mover/turfpack/muriki{
+	dir = 1
+	},
 /area/muriki/processor/pools/cropbig)
 "gae" = (
 /turf/simulated/open,
@@ -47170,10 +47216,6 @@
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/hallway/primary/central_three)
-"jey" = (
-/mob/living/simple_mob/vore/alienanimals/jil,
-/turf/simulated/floor/flesh/turfpack/muriki,
-/area/muriki/processor/pools/cropbig)
 "jez" = (
 /obj/effect/floor_decal/corner/blue{
 	dir = 10
@@ -51569,7 +51611,9 @@
 /area/muriki/grounds/engi)
 "kxu" = (
 /obj/effect/floor_decal/flesh,
-/turf/simulated/floor/flesh/turfpack/muriki,
+/turf/simulated/floor/flesh/mover/turfpack/muriki{
+	dir = 1
+	},
 /area/muriki/processor/pools/cropbig)
 "kxL" = (
 /obj/effect/floor_decal/borderfloor/corner,
@@ -71482,10 +71526,6 @@
 /obj/structure/closet/crate/mimic/cointoss,
 /turf/simulated/floor/plating,
 /area/maintenance/substation/virology)
-"rrV" = (
-/mob/living/simple_mob/animal/synx/ai,
-/turf/simulated/floor/flesh/turfpack/muriki,
-/area/muriki/processor/pools/cropbig)
 "rrY" = (
 /obj/effect/floor_decal/corner/white/full,
 /turf/simulated/floor/tiled/dark,
@@ -93301,9 +93341,9 @@ aAQ
 nyl
 nyl
 nyl
-ixt
+aTk
 dsu
-ixt
+aCd
 nyl
 nyl
 frJ
@@ -99752,10 +99792,10 @@ nyl
 xHC
 wKT
 wKT
-eQU
-eQU
+bbn
+bbn
 xHC
-eQU
+bbn
 aRY
 nyl
 nyl
@@ -99913,12 +99953,12 @@ gtF
 gtF
 xHC
 wKT
+bbo
+bbo
+bbo
 eQU
 eQU
-eQU
-eQU
-eQU
-eQU
+bbo
 xHC
 nyl
 dsu
@@ -100073,10 +100113,10 @@ lAk
 nyl
 xHC
 xHC
-eQU
-eQU
+bbn
+bbn
 cgh
-eQU
+bbn
 eQU
 eQU
 eQU
@@ -100232,15 +100272,15 @@ ngI
 ngI
 ngI
 nrl
-deD
+bbu
 xHC
 xHC
+bbq
+bbq
+bbq
+bbq
 eQU
-dTQ
 eQU
-eQU
-eQU
-rrV
 eQU
 eQU
 eQU
@@ -100394,15 +100434,15 @@ bti
 ngI
 ngI
 nrl
-deD
+bbu
 xHC
 xHC
+bbs
+bbq
+bbq
 eQU
 eQU
-eQU
-eQU
-eQU
-eQU
+bbn
 eQU
 eQU
 wKT
@@ -100556,16 +100596,16 @@ ngI
 ngI
 ngI
 nrl
-deD
+bbu
 uCr
-eQU
-eQU
+bbt
+bbl
 xHC
 xHC
 xHC
 xHC
-eQU
-eQU
+bbn
+bbo
 eQU
 wKT
 wKT
@@ -100726,9 +100766,9 @@ xHC
 xHC
 wKT
 wKT
-eQU
-eQU
-eQU
+bbn
+bbo
+bbo
 wKT
 wKT
 nyl
@@ -100887,11 +100927,11 @@ ixt
 nyl
 xHC
 wKT
-eQU
-eQU
-jey
-eQU
-eQU
+bbr
+bbn
+bbo
+bbo
+bbn
 xHC
 nyl
 nyl
@@ -101049,12 +101089,12 @@ eao
 ixt
 nyl
 xHC
-eQU
-eQU
-eQU
-eQU
-eQU
-eQU
+bbr
+bbq
+bbo
+bbo
+bbo
+bbn
 eQU
 nyl
 nyl
@@ -101211,12 +101251,12 @@ ixt
 nyl
 nyl
 xHC
-eQU
-eQU
-eQU
-eQU
-eQU
-eQU
+bbq
+bbq
+bbq
+bbq
+bbo
+bbo
 ojd
 taT
 lFh
@@ -101373,10 +101413,10 @@ nyl
 nyl
 nyl
 xHC
-eQU
-fjA
-eQU
-eQU
+bbq
+bbq
+bbq
+bbq
 eQU
 eQU
 qjG
@@ -101535,12 +101575,12 @@ xBx
 tpG
 tpG
 xHC
-eQU
-eQU
-eQU
-eQU
-eQU
-eQU
+bbs
+bbq
+bbq
+bbp
+bbp
+bbp
 eQU
 qjG
 nKa
@@ -101698,11 +101738,11 @@ aRT
 aRT
 tpG
 xHC
-eQU
-eQU
-eQU
-eQU
-eQU
+bbl
+bbq
+bbp
+bbp
+bbp
 eQU
 xHC
 nyl
@@ -101860,11 +101900,11 @@ xBx
 tpG
 xBx
 xHC
-eQU
-eQU
-eQU
-eQU
-eQU
+bbl
+bbl
+bbl
+bbp
+bbp
 xHC
 xHC
 nyl
@@ -102022,11 +102062,11 @@ xBx
 xBx
 xBx
 xHC
-eQU
-eQU
-eQU
-eQU
-eQU
+bbl
+bbl
+bbl
+bbp
+bbp
 kxu
 xHC
 aRW
@@ -102184,12 +102224,12 @@ qJz
 xBx
 xBx
 xHC
-eQU
-eQU
-eQU
-eQU
+bbl
+bbl
+bbl
+bbp
 xHC
-eQU
+bbl
 uCr
 ixt
 ixt

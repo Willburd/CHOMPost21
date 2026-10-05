@@ -20901,6 +20901,12 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/spine/civ)
+"aNH" = (
+/obj/effect/map_effect/interval/atmogland/bodyheat,
+/turf/simulated/floor/flesh/mover/turfpack/muriki{
+	dir = 5
+	},
+/area/muriki/processor/hall)
 "aNI" = (
 /turf/simulated/wall/r_wall,
 /area/muriki/crew/judge)
@@ -21932,6 +21938,11 @@
 /obj/item/trash/snack_bowl,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/atmos_control)
+"aPr" = (
+/turf/simulated/floor/flesh/mover/turfpack/muriki{
+	dir = 4
+	},
+/area/muriki/processor/hall)
 "aPs" = (
 /obj/effect/auto_crayon{
 	icon_state = "fire"
@@ -26121,6 +26132,13 @@
 	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/muriki/crew/arcade/lasertag)
+"aXt" = (
+/obj/effect/map_effect/interval/atmogland/bodyheat,
+/obj/effect/mist,
+/turf/simulated/floor/flesh/mover/turfpack/muriki{
+	dir = 8
+	},
+/area/muriki/processor/hall)
 "aXu" = (
 /turf/simulated/floor/tiled/milspec/raised,
 /area/muriki/crew/arcade/lasertag)
@@ -26479,6 +26497,11 @@
 	},
 /turf/simulated/floor/carpet/geo,
 /area/muriki/crew/arcade/lasertag)
+"aYm" = (
+/turf/simulated/floor/flesh/mover/turfpack/muriki{
+	dir = 8
+	},
+/area/muriki/processor/hall)
 "aYn" = (
 /turf/simulated/wall,
 /area/muriki/crew/arcade/lasertagstore)
@@ -26902,6 +26925,16 @@
 /obj/structure/window/basic/full,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/muriki/crew/arcade/lasertag)
+"aZo" = (
+/turf/simulated/floor/flesh/mover/turfpack/muriki{
+	dir = 6
+	},
+/area/muriki/processor/hall)
+"aZp" = (
+/turf/simulated/floor/flesh/mover/turfpack/muriki{
+	dir = 10
+	},
+/area/muriki/processor/hall)
 "aZq" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 8
@@ -27112,6 +27145,12 @@
 	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/muriki/crew/arcade/lasertag)
+"aZN" = (
+/obj/effect/mist,
+/turf/simulated/floor/flesh/mover/turfpack/muriki{
+	dir = 8
+	},
+/area/muriki/processor/hall)
 "aZO" = (
 /obj/structure/table/rack,
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -29906,6 +29945,14 @@
 	},
 /turf/simulated/floor/carpet/geo,
 /area/muriki/crew/arcade/lasertag)
+"bey" = (
+/obj/machinery/atmospherics/pipe/simple/visible/red{
+	dir = 4
+	},
+/turf/simulated/floor/flesh/mover/turfpack/muriki{
+	dir = 4
+	},
+/area/muriki/processor/hall)
 "bez" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
@@ -36163,6 +36210,14 @@
 /obj/effect/landmark/pengmark,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/cargo)
+"bpT" = (
+/obj/machinery/atmospherics/pipe/simple/visible/red{
+	dir = 4
+	},
+/turf/simulated/floor/flesh/mover/turfpack/muriki{
+	dir = 8
+	},
+/area/muriki/processor/hall)
 "bpU" = (
 /obj/structure/catwalk,
 /obj/item/radio/intercom{
@@ -46059,6 +46114,20 @@
 	oxygen = 0
 	},
 /area/muriki/processor/gland/space)
+"bID" = (
+/obj/machinery/atmospherics/pipe/simple/visible/red{
+	dir = 4
+	},
+/obj/structure/catwalk,
+/obj/effect/floor_decal/flesh{
+	dir = 1
+	},
+/obj/effect/floor_decal/flesh,
+/obj/structure/window/maintenance_panel{
+	dir = 4
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/muriki/processor/hall)
 "bIE" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -47315,6 +47384,11 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/river/north)
+"bLk" = (
+/turf/simulated/floor/flesh/mover/turfpack/muriki{
+	dir = 1
+	},
+/area/muriki/processor/hall)
 "bLl" = (
 /obj/structure/reagent_dispensers/fueltank,
 /obj/structure/railing,
@@ -47416,6 +47490,9 @@
 "bLx" = (
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/atmos_control)
+"bLy" = (
+/turf/simulated/floor/flesh/mover/turfpack/muriki,
+/area/muriki/processor/hall)
 "bLz" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -50627,6 +50704,11 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/techfloor/grid/turfpack/muriki,
 /area/maintenance/cargo)
+"bRD" = (
+/turf/simulated/floor/flesh/mover/turfpack/muriki{
+	dir = 9
+	},
+/area/muriki/processor/hall)
 "bRE" = (
 /obj/structure/cable/orange{
 	icon_state = "2-9"
@@ -50642,6 +50724,9 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/research)
+"bRG" = (
+/turf/simulated/floor/flesh/mover/turfpack/muriki,
+/area/muriki/processor/hall/waterway_low)
 "bRH" = (
 /obj/machinery/door/firedoor/multi_tile{
 	dir = 2
@@ -50675,6 +50760,11 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/research)
+"bRJ" = (
+/turf/simulated/floor/flesh/mover/turfpack/muriki{
+	dir = 4
+	},
+/area/muriki/processor)
 "bRK" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "0-4"
@@ -53954,6 +54044,11 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/river/north)
+"bYE" = (
+/turf/simulated/floor/flesh/mover/turfpack/muriki{
+	dir = 5
+	},
+/area/muriki/processor)
 "bYF" = (
 /obj/structure/disposalpipe/segment{
 	dir = 8;
@@ -54402,6 +54497,9 @@
 /obj/random/junk,
 /obj/machinery/light/small{
 	dir = 1
+	},
+/obj/structure/sign/secure_eshui_facility_highsec{
+	pixel_y = 32
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/engineering/coreproctunnel)
@@ -55590,6 +55688,11 @@
 /obj/item/bikehorn,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/research)
+"cco" = (
+/turf/simulated/floor/flesh/mover/turfpack/muriki{
+	dir = 1
+	},
+/area/muriki/processor)
 "ccp" = (
 /obj/structure/cable/orange{
 	icon_state = "4-9"
@@ -58287,6 +58390,11 @@
 /obj/structure/window/maintenance_panel,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/atmos_control)
+"cjq" = (
+/turf/simulated/floor/flesh/mover/turfpack/muriki{
+	dir = 8
+	},
+/area/muriki/processor)
 "cjr" = (
 /obj/effect/floor_decal/corner/red/border{
 	dir = 1
@@ -61517,18 +61625,6 @@
 /obj/effect/mist,
 /turf/simulated/floor/flesh/turfpack/muriki,
 /area/muriki/processor/gland/airmix)
-"crF" = (
-/obj/machinery/atmospherics/pipe/simple/visible/red,
-/obj/effect/mist,
-/turf/simulated/floor/flesh/turfpack/muriki,
-/area/muriki/processor/hall)
-"crG" = (
-/obj/machinery/atmospherics/pipe/simple/visible/red{
-	dir = 6
-	},
-/obj/effect/mist,
-/turf/simulated/floor/flesh/turfpack/muriki,
-/area/muriki/processor/hall)
 "crH" = (
 /obj/structure/catwalk,
 /obj/effect/floor_decal/flesh{
@@ -88250,7 +88346,6 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/red,
-/obj/effect/mist,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/muriki/processor/hall)
 "ssD" = (
@@ -93536,9 +93631,9 @@ axj
 axj
 crB
 axj
-axj
+bLy
 czg
-axj
+bLk
 avy
 axj
 axj
@@ -95792,7 +95887,7 @@ axj
 cMy
 axj
 gPG
-axj
+aPr
 avw
 avy
 aBY
@@ -95954,7 +96049,7 @@ axj
 avw
 axj
 avy
-axj
+aPr
 avw
 avw
 axj
@@ -96116,7 +96211,7 @@ axj
 czg
 axj
 avw
-axj
+aPr
 avw
 avw
 avw
@@ -97252,8 +97347,8 @@ cMw
 nRl
 nRl
 avw
-axj
-axj
+aYm
+bLk
 axj
 aMh
 csp
@@ -97414,8 +97509,8 @@ sJS
 nRl
 nRl
 avw
-axj
-axj
+aYm
+bRD
 avw
 avy
 csn
@@ -97575,8 +97670,8 @@ vyQ
 nRl
 nRl
 sJS
-axj
-axj
+bLy
+aYm
 avw
 cMs
 avw
@@ -97737,11 +97832,11 @@ vyQ
 nRl
 nRl
 sJS
-axj
-axj
-axj
-axj
-axj
+aZp
+aYm
+bLk
+bLk
+bLk
 csn
 csn
 csn
@@ -97903,7 +97998,7 @@ aBY
 avy
 avw
 cMs
-axj
+aYm
 csn
 csn
 csn
@@ -98060,8 +98155,8 @@ vyQ
 nRl
 efP
 sJS
-axj
-axj
+aPr
+bLk
 avw
 avw
 avw
@@ -98222,7 +98317,7 @@ sJS
 nRl
 hWn
 jxp
-axj
+bLk
 avw
 avy
 avw
@@ -98267,8 +98362,8 @@ gYq
 gYq
 qnS
 avw
-axj
-iHJ
+aPr
+aNH
 avw
 aac
 aad
@@ -98384,8 +98479,8 @@ cMw
 nRl
 nRl
 nLL
-axj
-axj
+bLk
+bLk
 gPG
 axj
 axj
@@ -98428,7 +98523,7 @@ gYq
 gYq
 gYq
 duS
-axj
+aZo
 lNV
 qVF
 gwt
@@ -98752,7 +98847,7 @@ gYq
 cMz
 cMs
 avw
-axj
+aZp
 lNV
 ehk
 xJd
@@ -98914,7 +99009,7 @@ gYq
 qnS
 cMs
 avw
-crB
+aZN
 fEw
 ehk
 xJd
@@ -99077,7 +99172,7 @@ qnS
 avw
 czg
 cMC
-crD
+aXt
 ehk
 xJd
 eRP
@@ -99238,8 +99333,8 @@ qnS
 avw
 avw
 avw
-crB
-axj
+aZN
+aYm
 ehk
 xJd
 wXs
@@ -99662,7 +99757,7 @@ aac
 axj
 axj
 axj
-mWT
+bRG
 nRl
 nRl
 nRl
@@ -99986,7 +100081,7 @@ aac
 aac
 aac
 axj
-mWT
+bRG
 nRl
 nRl
 nRl
@@ -100148,7 +100243,7 @@ aac
 ugO
 aac
 avw
-mWT
+bRG
 nRl
 nRl
 nRl
@@ -100633,7 +100728,7 @@ aaa
 aac
 aac
 cMA
-tHM
+bRJ
 mWT
 vyQ
 nRl
@@ -100794,8 +100889,8 @@ hzt
 aaa
 cMr
 aac
-tHM
-tHM
+bRJ
+bRJ
 sJS
 sJS
 nRl
@@ -100956,8 +101051,8 @@ hzt
 aaa
 aac
 aac
-tHM
-tHM
+bRJ
+bRJ
 sJS
 nRl
 nRl
@@ -101119,7 +101214,7 @@ aaa
 aac
 aac
 oWx
-tHM
+bYE
 vyQ
 nRl
 nRl
@@ -101281,7 +101376,7 @@ aaa
 aac
 qab
 qab
-tHM
+cco
 vyQ
 nRl
 nRl
@@ -101443,7 +101538,7 @@ aaa
 cMr
 qab
 qab
-tHM
+cco
 vyQ
 nRl
 nRl
@@ -101603,8 +101698,8 @@ hzt
 (55,1,1) = {"
 aaa
 aac
-tHM
-tHM
+cjq
+cjq
 cMr
 sJS
 nRl
@@ -101805,9 +101900,9 @@ avw
 avw
 avw
 avw
-crG
+bsL
 ssB
-crF
+pxd
 hUB
 cMs
 aac
@@ -102295,7 +102390,7 @@ cMs
 avw
 avw
 cMs
-ayj
+bey
 avw
 cMr
 aac
@@ -102457,7 +102552,7 @@ tHM
 aac
 avw
 avw
-ayj
+bey
 cMs
 aac
 aac
@@ -102619,7 +102714,7 @@ tHM
 aac
 avw
 avw
-ayj
+bey
 avw
 aac
 cMr
@@ -102943,7 +103038,7 @@ aac
 aac
 avw
 avw
-ayj
+bpT
 avw
 aac
 aac
@@ -103105,7 +103200,7 @@ aac
 aac
 avw
 cMs
-ayj
+bpT
 avw
 aac
 aad
@@ -103267,7 +103362,7 @@ cMr
 aac
 avy
 avy
-ayl
+bID
 avy
 aad
 aad

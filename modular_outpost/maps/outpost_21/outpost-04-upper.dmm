@@ -10068,6 +10068,11 @@
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/medical_roof)
+"auU" = (
+/turf/simulated/floor/flesh/mover/turfpack/muriki{
+	dir = 8
+	},
+/area/muriki/processor/hall)
 "auV" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -10134,6 +10139,11 @@
 	},
 /turf/simulated/floor/plating,
 /area/muriki/rooftop/science)
+"avc" = (
+/turf/simulated/floor/flesh/mover/turfpack/muriki{
+	dir = 6
+	},
+/area/muriki/processor/hall)
 "avd" = (
 /obj/structure/grille,
 /obj/structure/cable/green{
@@ -10738,6 +10748,9 @@
 	icon_state = "rock_grey"
 	},
 /area/mine/unexplored/muriki/mountaintopnorth)
+"awD" = (
+/turf/simulated/floor/flesh/mover/turfpack/muriki,
+/area/muriki/processor/hall)
 "awE" = (
 /obj/structure/railing{
 	dir = 8
@@ -10822,9 +10835,25 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/muriki/elevator/civupper)
+"awS" = (
+/obj/effect/map_effect/interval/atmogland/bodyheat,
+/turf/simulated/floor/flesh/mover/turfpack/muriki{
+	dir = 10
+	},
+/area/muriki/processor/hall)
 "awT" = (
 /turf/simulated/open/muriki,
 /area/muriki/rooftop/science)
+"awU" = (
+/turf/simulated/floor/flesh/mover/turfpack/muriki{
+	dir = 4
+	},
+/area/muriki/processor/hall)
+"awV" = (
+/turf/simulated/floor/flesh/mover/turfpack/muriki{
+	dir = 5
+	},
+/area/muriki/processor/hall)
 "awW" = (
 /obj/machinery/button/remote/airlock{
 	id = "tcomext";
@@ -10846,6 +10875,11 @@
 	},
 /turf/simulated/floor/tiled/steel,
 /area/rnd/research/phoronics/bombrange)
+"awY" = (
+/turf/simulated/floor/flesh/mover/turfpack/muriki{
+	dir = 1
+	},
+/area/muriki/processor/hall)
 "awZ" = (
 /obj/structure/table/fancyblack,
 /turf/simulated/floor/wood/sif,
@@ -10892,6 +10926,11 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/roof_tube_access)
+"axf" = (
+/turf/simulated/floor/flesh/mover/turfpack/muriki{
+	dir = 9
+	},
+/area/muriki/processor/hall)
 "axg" = (
 /obj/machinery/portable_atmospherics/hydroponics,
 /obj/machinery/atmospherics/portables_connector{
@@ -10923,6 +10962,11 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/xenobiology/xenoflora)
+"axj" = (
+/turf/simulated/floor/flesh/mover/turfpack/muriki{
+	dir = 1
+	},
+/area/muriki/processor/pools/pylorus)
 "axk" = (
 /obj/effect/floor_decal/corner/lime{
 	dir = 5
@@ -10944,6 +10988,11 @@
 	},
 /turf/simulated/floor/outpost_roof/turfpack/muriki,
 /area/muriki/rooftop/science)
+"axm" = (
+/turf/simulated/floor/flesh/mover/turfpack/muriki{
+	dir = 4
+	},
+/area/muriki/processor/pools/pylorus)
 "axn" = (
 /obj/structure/fence/end/electric{
 	dir = 4
@@ -11005,6 +11054,11 @@
 	},
 /turf/simulated/floor/grass,
 /area/hydroponics/publicgarden)
+"axt" = (
+/turf/simulated/floor/flesh/mover/turfpack/muriki{
+	dir = 8
+	},
+/area/muriki/processor/pools/pylorus)
 "axu" = (
 /obj/structure/grille,
 /obj/machinery/door/blast/shutters{
@@ -11869,6 +11923,9 @@
 	},
 /turf/simulated/floor/outpost_roof/turfpack/muriki,
 /area/muriki/rooftop/science)
+"ayC" = (
+/turf/simulated/floor/flesh/mover/turfpack/muriki,
+/area/muriki/processor/pools/pylorus)
 "ayD" = (
 /obj/structure/cable/green{
 	icon_state = "5-10"
@@ -11952,6 +12009,16 @@
 	},
 /turf/simulated/floor/outpost_roof/turfpack/muriki,
 /area/muriki/rooftop/science)
+"ayN" = (
+/turf/simulated/floor/flesh/mover/turfpack/muriki{
+	dir = 6
+	},
+/area/muriki/processor/pools/pylorus)
+"ayO" = (
+/turf/simulated/floor/flesh/mover/turfpack/muriki{
+	dir = 10
+	},
+/area/muriki/processor/pools/pylorus)
 "azf" = (
 /obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/spline/fancy/wood{
@@ -55388,8 +55455,8 @@ ssD
 ssD
 amt
 ssD
-fqq
-fqq
+ayN
+ayN
 qYo
 qYo
 ssD
@@ -55549,8 +55616,8 @@ ssD
 ssD
 amt
 amt
-fqq
-fqq
+ayN
+ayN
 qYo
 qYo
 qYo
@@ -55707,11 +55774,11 @@ dXn
 hxn
 ssD
 ssD
-fqq
-fqq
-fqq
-fqq
-fqq
+axm
+axm
+axm
+ayC
+ayC
 qYo
 qYo
 yks
@@ -55720,9 +55787,9 @@ qYo
 qYo
 qYo
 qYo
-fqq
-fqq
-fqq
+axj
+axj
+axj
 ssD
 wlx
 amq
@@ -55868,12 +55935,12 @@ kPb
 dXn
 hxn
 ssD
-fqq
+ayC
 lqY
 lqY
 lqY
-fqq
-fqq
+ayC
+ayC
 qYo
 qYo
 qYo
@@ -55882,9 +55949,9 @@ qYo
 qYo
 qYo
 amx
-fqq
+axt
 gNR
-fqq
+axm
 ssD
 wlx
 amq
@@ -56030,12 +56097,12 @@ kPb
 dXn
 hxn
 ssD
-fqq
+ayC
 lqY
 lqY
 lqY
-fqq
-fqq
+ayC
+ayC
 qYo
 qYo
 qYo
@@ -56044,9 +56111,9 @@ qYo
 qYo
 qYo
 ssD
-fqq
-fqq
-fqq
+axt
+axm
+axm
 ssD
 amq
 amq
@@ -56192,12 +56259,12 @@ kPb
 dXn
 hxn
 ssD
-fqq
+ayC
 lqY
 lqY
 lqY
 lqY
-fqq
+ayC
 qYo
 qYo
 qYo
@@ -56207,8 +56274,8 @@ qYo
 qYo
 amt
 amt
-fqq
-fqq
+axm
+axm
 ssD
 wlx
 wlx
@@ -56354,12 +56421,12 @@ kPb
 dXn
 hxn
 ssD
-fqq
+ayC
 lqY
 lqY
 lqY
-fqq
-fqq
+ayC
+ayC
 qYo
 qYo
 qYo
@@ -56369,8 +56436,8 @@ qYo
 qYo
 qYo
 qYo
-fqq
-fqq
+axj
+axj
 ssD
 wlx
 wlx
@@ -56516,12 +56583,12 @@ kPb
 dXn
 hxn
 ssD
-fqq
-fqq
-fqq
-fqq
-fqq
-fqq
+ayO
+axt
+axt
+axt
+ayC
+ayC
 qYo
 qYo
 qYo
@@ -56681,9 +56748,9 @@ ssD
 ssD
 ssD
 ssD
-fqq
+axt
 ssD
-fqq
+ayC
 qYo
 qYo
 qYo
@@ -56694,8 +56761,8 @@ qYo
 qYo
 qYo
 qYo
-fqq
-fqq
+axj
+axj
 ssD
 wlx
 wlx
@@ -56857,7 +56924,7 @@ qYo
 qYo
 qYo
 qYo
-fqq
+axj
 nzI
 cgR
 cgR
@@ -57019,7 +57086,7 @@ yks
 qYo
 qYo
 qYo
-fqq
+axj
 ssD
 cgR
 amA
@@ -57167,8 +57234,8 @@ fQF
 hxn
 hxn
 amp
-fqq
-fqq
+ayC
+axm
 amt
 yks
 qYo
@@ -57181,7 +57248,7 @@ qYo
 qYo
 qYo
 qYo
-fqq
+axj
 ssD
 cgR
 cgR
@@ -57330,9 +57397,9 @@ hxn
 hxn
 amp
 ssD
-fqq
-fqq
-fqq
+ayC
+ayC
+ayO
 qYo
 qYo
 qYo
@@ -57342,7 +57409,7 @@ qYo
 qYo
 qYo
 qYo
-fqq
+axj
 ssD
 fqq
 wlx
@@ -57493,9 +57560,9 @@ hxn
 hxn
 ssD
 ssD
-fqq
-fqq
-fqq
+ayC
+ayC
+ayO
 qYo
 qYo
 qYo
@@ -57504,7 +57571,7 @@ qYo
 qYo
 qYo
 qYo
-fqq
+axj
 ssD
 cgR
 cgR
@@ -57657,16 +57724,16 @@ ssD
 gcn
 ivn
 gcn
-fqq
-fqq
-fqq
+ayO
+axt
+axt
 qYo
 qYo
 qYo
 gcn
 qYo
 amt
-fqq
+axt
 ssD
 wlx
 cgR
@@ -57816,19 +57883,19 @@ fQF
 fQF
 hxn
 ssD
-fqq
+axm
 fqq
 ssD
 ssD
 amt
 amt
 ssD
-fqq
-fqq
+axt
+axt
 cum
-fqq
-fqq
-fqq
+axt
+axj
+axt
 ssD
 wlx
 wlx
@@ -57983,14 +58050,14 @@ ssD
 amx
 ssD
 gcn
-fqq
+ayC
 nzI
-fqq
+axt
 ssD
 gcn
 ssD
-fqq
-fqq
+axt
+axt
 ssD
 wlx
 cgR
@@ -58140,7 +58207,7 @@ fQF
 fQF
 hxn
 wlx
-cgR
+auU
 cgR
 cgR
 cgR
@@ -61732,10 +61799,10 @@ wlx
 wlx
 wlx
 wlx
-cgR
-cgR
-cgR
-cgR
+awU
+awD
+awD
+auU
 aeL
 aeL
 aeL
@@ -61893,11 +61960,11 @@ wlx
 wlx
 wlx
 wlx
-cgR
-cgR
+awV
+awV
 qMg
-cXh
-cgR
+awS
+auU
 aeL
 aeL
 aeL
@@ -62055,11 +62122,11 @@ wlx
 wlx
 dZJ
 cgR
-cgR
-cgR
+awY
+awY
 qMg
 qMg
-cgR
+avc
 olf
 dZJ
 aeL
@@ -62217,11 +62284,11 @@ cgR
 cgR
 aiC
 cgR
-cgR
-cgR
+awY
+awY
 qMg
 qMg
-cgR
+awD
 cgR
 aiz
 aeK
@@ -62379,11 +62446,11 @@ wlx
 wlx
 dZJ
 teM
-cgR
-cgR
+axf
+awY
 qMg
 qMg
-cgR
+awD
 cgR
 dZJ
 aeL
@@ -62541,11 +62608,11 @@ wlx
 wlx
 wlx
 wlx
-cgR
-cgR
+auU
+axf
 qMg
-cXh
-cgR
+awS
+auU
 wlx
 wlx
 aeL
@@ -62704,9 +62771,9 @@ fbz
 wlx
 wlx
 wlx
-cgR
-cgR
-cgR
+auU
+awD
+auU
 wlx
 wlx
 aeL
