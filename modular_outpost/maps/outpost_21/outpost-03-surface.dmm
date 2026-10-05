@@ -48333,7 +48333,7 @@
 	opacity = 0
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/hallway/primary/aft)
+/area/rnd/telesci)
 "jvQ" = (
 /turf/simulated/floor/tiled/dark,
 /area/bridge/hallway)
@@ -65367,7 +65367,7 @@
 "pmx" = (
 /obj/machinery/door/airlock/glass_command{
 	name = "Teleporter";
-	id = "tsci_bridge"
+	id_tag = "tsci_bridge"
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/structure/cable/green{
@@ -67005,7 +67005,7 @@
 	opacity = 0
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/hallway/primary/aft)
+/area/rnd/telesci)
 "pPZ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -141296,7 +141296,7 @@ kTG
 kWc
 kWc
 kWc
-mCo
+kWc
 mCo
 uqQ
 mOT
@@ -141944,7 +141944,7 @@ aWZ
 aWY
 aWT
 kWc
-vgX
+kWc
 aSu
 eCN
 kvb
