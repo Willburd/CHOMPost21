@@ -248,6 +248,11 @@
 /obj/random/cutout,
 /turf/simulated/floor/plating,
 /area/maintenance/gravgen)
+"aaA" = (
+/obj/structure/bed/chair/office/light,
+/obj/effect/landmark/start/scientist,
+/turf/simulated/floor/glass/reinforced/turfpack/muriki,
+/area/rnd/research/sci_req_lab)
 "aaB" = (
 /obj/structure/cable/green{
 	icon_state = "0-2"
@@ -851,6 +856,9 @@
 /obj/effect/floor_decal/corner/white{
 	dir = 10
 	},
+/obj/effect/floor_decal/spline/plain/corner{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/research/sci_req_lab)
 "abR" = (
@@ -1050,6 +1058,14 @@
 	},
 /obj/effect/floor_decal/corner/white{
 	dir = 10
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 1
+	},
+/obj/machinery/doorbell_chime{
+	id_tag = "bridding";
+	name = "Bridge Bell";
+	pixel_y = -32
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/research/sci_req_lab)
@@ -2346,6 +2362,11 @@
 /obj/machinery/recharger{
 	pixel_x = -6;
 	pixel_y = 4
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 7;
+	pixel_y = -32;
+	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/research/sci_req_lab)
@@ -6780,9 +6801,14 @@
 /obj/effect/floor_decal/corner/white{
 	dir = 10
 	},
-/obj/machinery/disposal,
 /obj/structure/disposalpipe/trunk{
 	dir = 4
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 1
+	},
+/obj/machinery/disposal/mail_reciever{
+	name = "disposal mail destination(RnD)"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/research/sci_req_lab)
@@ -6875,6 +6901,7 @@
 /obj/effect/floor_decal/corner/white{
 	dir = 6
 	},
+/obj/effect/floor_decal/spline/plain/corner,
 /turf/simulated/floor/tiled/dark,
 /area/rnd/research/sci_req_lab)
 "aps" = (
@@ -6907,6 +6934,7 @@
 /obj/effect/floor_decal/corner/white{
 	dir = 5
 	},
+/obj/effect/floor_decal/spline/plain,
 /turf/simulated/floor/tiled/dark,
 /area/rnd/research/sci_req_lab)
 "apv" = (
@@ -6923,6 +6951,7 @@
 /obj/effect/floor_decal/corner/white{
 	dir = 5
 	},
+/obj/effect/floor_decal/spline/plain,
 /turf/simulated/floor/tiled/dark,
 /area/rnd/research/sci_req_lab)
 "apx" = (
@@ -6961,6 +6990,11 @@
 /obj/effect/floor_decal/corner/white{
 	dir = 5
 	},
+/obj/effect/floor_decal/spline/plain,
+/obj/item/toy/figure/scientist{
+	pixel_x = -10;
+	pixel_y = 10
+	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/research/sci_req_lab)
 "apA" = (
@@ -6997,6 +7031,9 @@
 	},
 /obj/effect/floor_decal/corner/white{
 	dir = 5
+	},
+/obj/effect/floor_decal/spline/plain/corner{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/research/sci_req_lab)
@@ -10119,6 +10156,9 @@
 	icon_state = "pipe-c";
 	dir = 4
 	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/research/sci_req_lab)
 "auS" = (
@@ -10167,22 +10207,29 @@
 	dir = 10
 	},
 /obj/machinery/doppler_array,
+/obj/effect/floor_decal/spline/plain{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/research/sci_req_lab)
 "auX" = (
 /obj/structure/table/steel_reinforced,
 /obj/machinery/light,
-/obj/structure/extinguisher_cabinet{
-	pixel_x = 7;
-	pixel_y = -32;
-	dir = 1
-	},
 /obj/effect/floor_decal/corner/white{
 	dir = 10
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 8;
 	icon_state = "pipe-c"
+	},
+/obj/machinery/computer/security/telescreen/entertainment{
+	pixel_y = -32
+	},
+/obj/item/flashlight/lamp{
+	pixel_y = 5
+	},
+/obj/effect/floor_decal/spline/plain/corner{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/research/sci_req_lab)
@@ -10195,6 +10242,13 @@
 	},
 /turf/simulated/floor/outpost_roof/turfpack/muriki,
 /area/muriki/rooftop/science)
+"ava" = (
+/obj/structure/bed/chair/office/light{
+	dir = 1
+	},
+/obj/effect/landmark/start/scientist,
+/turf/simulated/floor/glass/reinforced/turfpack/muriki,
+/area/rnd/research/sci_req_lab)
 "avb" = (
 /obj/structure/grille,
 /obj/structure/cable/green{
@@ -11672,6 +11726,11 @@
 /obj/machinery/firealarm{
 	pixel_y = 26
 	},
+/obj/machinery/doorbell_chime{
+	id_tag = "bridding";
+	name = "Bridge Bell";
+	pixel_x = 32
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/captain)
 "ayc" = (
@@ -12150,13 +12209,22 @@
 /obj/effect/floor_decal/corner/white{
 	dir = 9
 	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/research/sci_req_lab)
 "ayZ" = (
 /obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/spline/plain{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/research/sci_req_lab)
 "aza" = (
+/obj/effect/floor_decal/spline/plain{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/research/sci_req_lab)
 "azb" = (
@@ -35070,6 +35138,11 @@
 	dir = 1
 	},
 /obj/item/geiger/wall/north,
+/obj/machinery/doorbell_chime{
+	id_tag = "bridding";
+	name = "Bridge Bell";
+	pixel_x = 32
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/bridge/holdout_armory)
 "naD" = (
@@ -38901,6 +38974,11 @@
 /obj/machinery/firealarm{
 	pixel_y = 26
 	},
+/obj/machinery/doorbell_chime{
+	id_tag = "bridding";
+	name = "Bridge Bell";
+	pixel_x = 32
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/medical_roof)
 "phL" = (
@@ -40638,7 +40716,11 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 4
 	},
-/obj/structure/disposalpipe/junction,
+/obj/structure/disposalpipe/sortjunction{
+	dir = 2;
+	name = "RnD";
+	sortType = "RnD"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/hallway/upper)
 "qhO" = (
@@ -102782,7 +102864,7 @@ avb
 apu
 auY
 auY
-auY
+aaA
 ach
 ayi
 adl
@@ -102942,7 +103024,7 @@ kxr
 kxr
 avb
 apw
-auY
+ava
 auY
 auY
 auW

@@ -3680,6 +3680,20 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/storage/tech)
+"afl" = (
+/obj/effect/floor_decal/corner/white{
+	dir = 6
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/obj/machinery/doorbell_chime{
+	id_tag = "bridding";
+	name = "Bridge Bell";
+	pixel_x = 32
+	},
+/turf/simulated/floor/tiled/dark,
+/area/bridge/hallway)
 "afm" = (
 /obj/effect/floor_decal/spline/fancy/wood,
 /obj/machinery/alarm{
@@ -4762,6 +4776,11 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/spline/plain,
+/obj/machinery/doorbell_chime{
+	id_tag = "bridding";
+	name = "Bridge Bell";
+	pixel_y = -32
+	},
 /turf/simulated/floor/carpet/tealcarpet,
 /area/bridge/hallway)
 "agV" = (
@@ -15576,6 +15595,13 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
+/obj/machinery/button/doorbell{
+	id = "bridding";
+	name = "Bridge Notice";
+	pixel_x = 24;
+	pixel_y = 25;
+	desc = "A doorbell to request a member of medical staff. For emergencies, please utilize the station radio."
+	},
 /turf/simulated/floor/tiled/steel,
 /area/hallway/primary/central_three)
 "aGI" = (
@@ -20561,6 +20587,11 @@
 /obj/effect/floor_decal/corner/white{
 	dir = 5
 	},
+/obj/machinery/doorbell_chime{
+	id_tag = "bridding";
+	name = "Bridge Bell";
+	pixel_y = 32
+	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge/hallway)
 "aVZ" = (
@@ -21507,6 +21538,11 @@
 /obj/structure/closet/secure_closet/hop2,
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 9
+	},
+/obj/machinery/doorbell_chime{
+	id_tag = "bridding";
+	name = "Bridge Bell";
+	pixel_y = 32
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/heads/hop)
@@ -23048,6 +23084,11 @@
 /obj/machinery/computer/security{
 	dir = 2;
 	pixel_y = 2
+	},
+/obj/machinery/doorbell_chime{
+	id_tag = "bridding";
+	name = "Bridge Bell";
+	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/bridge)
@@ -50698,8 +50739,8 @@
 "khu" = (
 /obj/structure/table/gamblingtable,
 /obj/machinery/computer/security/telescreen/entertainment{
-	pixel_x = 5;
-	pixel_y = -4
+	pixel_x = 10;
+	pixel_y = -10
 	},
 /turf/simulated/floor/carpet/sblucarpet,
 /area/rnd/breakroom)
@@ -52599,7 +52640,11 @@
 	pixel_x = -4
 	},
 /obj/effect/floor_decal/corner/white/full,
-/obj/item/geiger/wall/south,
+/obj/machinery/doorbell_chime{
+	id_tag = "bridding";
+	name = "Bridge Bell";
+	pixel_y = -32
+	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/telesci)
 "kNw" = (
@@ -63720,13 +63765,13 @@
 /turf/simulated/floor/tiled,
 /area/security/security_processing)
 "oHH" = (
-/obj/machinery/doorbell_chime{
-	id_tag = "sciding";
-	name = "Research Call";
-	pixel_x = -30
-	},
 /obj/structure/closet/firecloset/full,
 /obj/effect/floor_decal/corner/white/full,
+/obj/machinery/doorbell_chime{
+	id_tag = "bridding";
+	name = "Bridge Bell";
+	pixel_y = -32
+	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge/hallway)
 "oHX" = (
@@ -70697,15 +70742,15 @@
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/unexplored/muriki/mountainnorth)
 "rbR" = (
-/obj/machinery/doorbell_chime{
-	id_tag = "sciding";
-	name = "Research Call";
-	pixel_y = 30
-	},
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
 	},
 /obj/machinery/vending/coffee,
+/obj/machinery/doorbell_chime{
+	id_tag = "bridding";
+	name = "Bridge Bell";
+	pixel_y = 32
+	},
 /turf/simulated/floor/wood,
 /area/rnd/breakroom)
 "rcm" = (
@@ -143860,7 +143905,7 @@ aYH
 baw
 aXI
 baA
-bbJ
+afl
 baA
 baR
 baA
