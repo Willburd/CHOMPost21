@@ -3680,13 +3680,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/storage/tech)
-"afl" = (
-/obj/machinery/camera/network/outside{
-	c_tag = "EXT - Bridge Northeast";
-	dir = 4
-	},
-/turf/simulated/floor/outdoors/mud/turfpack/muriki,
-/area/muriki/grounds/sci)
 "afm" = (
 /obj/effect/floor_decal/spline/fancy/wood,
 /obj/machinery/alarm{
@@ -24010,6 +24003,13 @@
 /turf/simulated/floor/plating,
 /area/maintenance/substation/security)
 "bbY" = (
+/obj/machinery/camera/network/outside{
+	c_tag = "EXT - Bridge Northeast";
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/mud/turfpack/muriki,
+/area/muriki/grounds/sci)
+"bbZ" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -24022,7 +24022,7 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge/hallway)
-"bbZ" = (
+"bca" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -24032,7 +24032,7 @@
 /obj/item/geiger/wall/north,
 /turf/simulated/floor/tiled/dark,
 /area/bridge/hallway)
-"bca" = (
+"bcb" = (
 /obj/effect/landmark/vines,
 /turf/simulated/floor/tiled/milspec,
 /area/bridge)
@@ -143457,7 +143457,7 @@ aZw
 aZf
 aYT
 aYE
-bbY
+bbZ
 uhB
 eXa
 aYj
@@ -143779,7 +143779,7 @@ aZy
 aZy
 aZy
 njP
-bbZ
+bca
 bbc
 aYr
 baV
@@ -144749,7 +144749,7 @@ njP
 ban
 aZV
 rfZ
-bca
+bcb
 aYX
 aYZ
 aYK
@@ -145565,7 +145565,7 @@ aZc
 aYQ
 aYA
 aYn
-afl
+bbY
 nVv
 nVv
 are
