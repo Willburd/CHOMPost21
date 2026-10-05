@@ -45,7 +45,7 @@
 	reagent_type = "water"
 
 /turf/simulated/floor/water/acidic/Entered(atom/movable/AM, atom/oldloc)
-	if(isliving(AM))
+	if(isliving(AM) && !AM.throwing)
 		var/allowburn = TRUE
 		var/mob/living/L = AM
 		if(L.buckled && L.buckled.riding_datum)
