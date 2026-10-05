@@ -12451,11 +12451,11 @@
 /turf/simulated/wall,
 /area/mine/explored/muriki/river/hole)
 "axS" = (
-/obj/structure/closet{
-	name = "Evidence Closet"
-	},
 /obj/effect/floor_decal/corner/red{
 	dir = 10
+	},
+/obj/structure/closet/secure_closet{
+	req_one_access = list(1)
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/security/evidence_storage)
@@ -25543,6 +25543,7 @@
 /obj/effect/floor_decal/corner/red{
 	dir = 9
 	},
+/obj/effect/floor_decal/industrial/outline/cut_corners/orange,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/security/tactical/red)
 "bKQ" = (
@@ -42246,7 +42247,10 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/milspec/stripe,
-/obj/structure/closet/secure_closet/guncabinet,
+/obj/structure/closet/secure_closet/guncabinet{
+	name = "overflow cabinet";
+	req_one_access = list(1)
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/security/tactical)
 "hCK" = (
@@ -49721,14 +49725,14 @@
 /turf/simulated/floor/plating,
 /area/medical/virology/prep)
 "jVu" = (
-/obj/structure/closet{
-	name = "Evidence Closet"
-	},
 /obj/effect/floor_decal/corner/red{
 	dir = 9
 	},
 /obj/machinery/light{
 	dir = 8
+	},
+/obj/structure/closet/secure_closet{
+	req_one_access = list(1)
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/security/evidence_storage)
@@ -62733,12 +62737,6 @@
 /turf/simulated/floor/plating/external/turfpack/muriki,
 /area/engineering/engine_room)
 "oqJ" = (
-/obj/structure/closet/crate/secure/large/reinforced{
-	anchored = 1;
-	desc = "A hefty, reinforced metal crate with an electronic locking system. It's securely bolted to the floor and cannot be moved.";
-	name = "gun safe";
-	req_access = list(1)
-	},
 /obj/item/gun/projectile/revolver/consul,
 /obj/item/ammo_magazine/s44,
 /obj/item/ammo_magazine/s44,
@@ -62750,6 +62748,7 @@
 	dir = 1;
 	icon_state = "pipe-c"
 	},
+/obj/structure/closet/secure_closet/guncabinet,
 /turf/simulated/floor/tiled/dark,
 /area/security/nuke_storage)
 "oqR" = (
@@ -71521,6 +71520,7 @@
 /obj/effect/floor_decal/corner/red{
 	dir = 10
 	},
+/obj/effect/floor_decal/industrial/outline/cut_corners/blue,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/security/tactical/red)
 "rtj" = (
@@ -73721,13 +73721,13 @@
 /turf/simulated/floor/plating,
 /area/muriki/processor/hall)
 "sen" = (
-/obj/structure/closet{
-	name = "Evidence Closet"
-	},
 /obj/effect/floor_decal/corner/red/full,
 /obj/machinery/alarm{
 	dir = 4;
 	pixel_x = -26
+	},
+/obj/structure/closet/secure_closet{
+	req_one_access = list(1)
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/security/evidence_storage)
@@ -79237,6 +79237,7 @@
 /obj/effect/floor_decal/corner/red{
 	dir = 10
 	},
+/obj/effect/floor_decal/industrial/hatch/red,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/security/tactical/red)
 "tXr" = (
@@ -80226,12 +80227,14 @@
 /turf/simulated/floor/tiled/milspec,
 /area/security/brig/drunk)
 "umq" = (
-/obj/structure/closet{
-	name = "Evidence Closet"
-	},
 /obj/effect/floor_decal/corner/red/full{
 	dir = 8
 	},
+/obj/structure/closet/secure_closet{
+	req_one_access = list(1);
+	name = "Aiek's Evidence Locker"
+	},
+/obj/item/gun/launcher/crossbow,
 /turf/simulated/floor/tiled/techmaint,
 /area/security/evidence_storage)
 "umx" = (
@@ -88292,6 +88295,7 @@
 	name = "Assault Rifle cabinet";
 	req_one_access = list(1)
 	},
+/obj/effect/floor_decal/industrial/outline/cut_corners/orange,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/security/tactical/red)
 "wTD" = (
@@ -88664,6 +88668,7 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
+/obj/effect/floor_decal/industrial/outline/red,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/security/tactical/red)
 "wYW" = (
@@ -88885,6 +88890,7 @@
 /obj/effect/floor_decal/corner/red/full{
 	dir = 4
 	},
+/obj/effect/floor_decal/industrial/hatch/red,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/security/tactical/red)
 "xcu" = (
@@ -91893,7 +91899,6 @@
 /turf/simulated/floor/outdoors/mud/turfpack/muriki,
 /area/mine/unexplored/muriki/valleyeast)
 "yga" = (
-/obj/structure/table/rack/gun_rack/steel,
 /obj/item/gun/energy/soapenergy/gaussrifle,
 /obj/effect/floor_decal/corner/white{
 	dir = 9
@@ -91903,6 +91908,7 @@
 	icon_state = "pipe-c"
 	},
 /obj/item/gun/projectile/deagle/camo,
+/obj/structure/closet/secure_closet/guncabinet,
 /turf/simulated/floor/tiled/dark,
 /area/security/nuke_storage)
 "ygk" = (
@@ -91948,6 +91954,7 @@
 /obj/effect/floor_decal/corner/red{
 	dir = 10
 	},
+/obj/effect/floor_decal/industrial/outline/cut_corners/blue,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/security/tactical/red)
 "yhr" = (

@@ -7712,6 +7712,18 @@
 /obj/effect/floor_decal/corner/red{
 	dir = 5
 	},
+/obj/structure/closet/secure_closet/guncabinet{
+	name = "Sidearm cabinet";
+	req_one_access = list(1,19,20,53,58)
+	},
+/obj/item/gun/projectile/revolver/consul,
+/obj/item/gun/projectile/revolver/consul,
+/obj/item/ammo_magazine/s44,
+/obj/item/ammo_magazine/s44,
+/obj/item/ammo_magazine/ammo_box/b44,
+/obj/item/ammo_magazine/ammo_box/b44,
+/obj/item/ammo_magazine/ammo_box/b44,
+/obj/item/ammo_magazine/ammo_box/b44,
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/misc_lab)
 "aqX" = (
@@ -7746,6 +7758,14 @@
 /obj/effect/floor_decal/corner/red{
 	dir = 5
 	},
+/obj/structure/closet/secure_closet/guncabinet{
+	name = "Ion Weaponry";
+	req_one_access = list(1,19,20,53,58)
+	},
+/obj/item/gun/energy/ionrifle{
+	pixel_x = -14
+	},
+/obj/item/cell/device/weapon,
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/misc_lab)
 "arc" = (
@@ -15541,7 +15561,6 @@
 /turf/simulated/floor/grass,
 /area/library)
 "crF" = (
-/obj/structure/table/rack,
 /obj/item/cell/device/weapon,
 /obj/item/gun/energy/gun/burst,
 /obj/machinery/light{
@@ -15552,6 +15571,10 @@
 	},
 /obj/machinery/firealarm{
 	pixel_y = 26
+	},
+/obj/structure/closet/secure_closet/guncabinet{
+	name = "Energy cabinet";
+	req_one_access = list(1,19,20,53,58)
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/misc_lab)
@@ -15893,13 +15916,16 @@
 /turf/simulated/floor/wood,
 /area/chapel/chapel_music)
 "cyP" = (
-/obj/structure/table/rack,
 /obj/item/gun/projectile/shotgun/pump/shorty{
 	pixel_x = -15
 	},
 /obj/item/ammo_magazine/ammo_box/b12g,
 /obj/effect/floor_decal/corner/red{
 	dir = 5
+	},
+/obj/structure/closet/secure_closet/guncabinet{
+	name = "Shotgun cabinet";
+	req_one_access = list(1,19,20,53,58)
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/misc_lab)
@@ -34772,14 +34798,6 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/quartermaster/mining/secpi)
 "nak" = (
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 4
-	},
-/obj/structure/table/rack,
-/obj/item/gun/energy/ionrifle{
-	pixel_x = -14
-	},
-/obj/item/cell/device/weapon,
 /obj/machinery/light{
 	dir = 1
 	},
@@ -49000,12 +49018,15 @@
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/chapel_hallway)
 "uKC" = (
-/obj/structure/table/rack,
 /obj/item/gun/projectile/shotgun/pump/rifle/lever{
 	name = "Listening outpost lever-action rifle";
 	desc = "The Weissen Company's version of an iconic manually operated lever action rifle, the Bushhog, offering adequate stopping power due to it's still powerful cartridge while at the same time having a rather respectable firing rate due to it's mechanism. It is very probable this is a replica instead of a museum piece, but rifles of this pattern still see usage as colonist guns in some far off regions. Uses 7.62mm rounds. Engraved on the side is stamped: 'Property of E-Shui Listening Outpost. ESLO-04-11473' Not authorized for station usage."
 	},
 /obj/item/ammo_magazine/ammo_box/b762/hunter,
+/obj/structure/closet/secure_closet/guncabinet{
+	req_one_access = list(19,61,72);
+	name = "Hunting Rifle Cabinet"
+	},
 /turf/simulated/floor/wood,
 /area/djstation)
 "uKT" = (
