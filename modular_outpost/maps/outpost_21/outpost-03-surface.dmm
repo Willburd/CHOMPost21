@@ -3680,6 +3680,13 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/storage/tech)
+"afl" = (
+/obj/machinery/camera/network/outside{
+	c_tag = "EXT - Bridge Northeast";
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/mud/turfpack/muriki,
+/area/muriki/grounds/sci)
 "afm" = (
 /obj/effect/floor_decal/spline/fancy/wood,
 /obj/machinery/alarm{
@@ -21166,6 +21173,11 @@
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/structure/extinguisher_cabinet{
+	dir = 8;
+	pixel_x = 30;
+	pixel_y = 6
+	},
 /turf/simulated/floor/wood,
 /area/lawoffice)
 "aXd" = (
@@ -21643,13 +21655,6 @@
 /obj/effect/floor_decal/corner/white/full,
 /turf/simulated/floor/tiled/milspec,
 /area/bridge)
-"aXU" = (
-/obj/machinery/camera/network/outside{
-	c_tag = "EXT - Bridge Northeast";
-	dir = 4
-	},
-/turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
-/area/muriki/grounds/sci)
 "aXV" = (
 /obj/effect/floor_decal/corner/white{
 	dir = 10
@@ -26485,7 +26490,7 @@
 /area/muriki/grounds/med)
 "bSX" = (
 /obj/machinery/camera/network/outside{
-	c_tag = "EXT - Bridge South"
+	c_tag = "EXT - Civ South"
 	},
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
 /area/muriki/grounds/civ)
@@ -26977,7 +26982,7 @@
 /area/hallway/secondary/exit)
 "caF" = (
 /obj/machinery/camera/network/outside{
-	c_tag = "EXT - Bridge Bathroom South"
+	c_tag = "EXT - Civ South West"
 	},
 /obj/effect/zone_divider,
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
@@ -59975,7 +59980,7 @@
 /area/crew_quarters/kitchen)
 "nnL" = (
 /obj/machinery/camera/network/outside{
-	c_tag = "EXT - Bridge SMES"
+	c_tag = "EXT - Civ South East"
 	},
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
 /area/muriki/grounds/civ)
@@ -63829,7 +63834,7 @@
 /area/muriki/processor)
 "oHc" = (
 /obj/machinery/camera/network/outside{
-	c_tag = "EXT - Heads meeting North";
+	c_tag = "EXT - Civ West";
 	dir = 8
 	},
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
@@ -64548,9 +64553,6 @@
 	},
 /obj/effect/landmark/redspaceexit,
 /obj/machinery/light/small,
-/obj/structure/micro_tunnel{
-	pixel_y = -32
-	},
 /obj/effect/floor_decal/steeldecal/steel_decals3{
 	dir = 1
 	},
@@ -71513,7 +71515,7 @@
 /area/quartermaster/mining)
 "rpo" = (
 /obj/machinery/camera/network/outside{
-	c_tag = "EXT - Bridge North";
+	c_tag = "EXT - Civ East";
 	dir = 5
 	},
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
@@ -87988,7 +87990,7 @@
 /area/hallway/security/main)
 "wNz" = (
 /obj/machinery/camera/network/outside{
-	c_tag = "EXT - Psych";
+	c_tag = "EXT - Internal Affairs";
 	dir = 1
 	},
 /turf/simulated/floor/outdoors/mud/turfpack/muriki,
@@ -145563,7 +145565,7 @@ aZc
 aYQ
 aYA
 aYn
-aJX
+afl
 nVv
 nVv
 are
@@ -145883,7 +145885,7 @@ aJY
 aZO
 aJY
 aJY
-aXU
+aJY
 aJY
 aJY
 aJX

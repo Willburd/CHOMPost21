@@ -182,6 +182,7 @@
 		/area/muriki/crew/bunker_deep/main,
 		/area/muriki/crew/bunker_deep/comm,
 		/area/muriki/crew/bunker_deep/med,
+		/area/bridge/holdout_armory,
 	)
 
 	var/list/does_not_have_disposals = list(

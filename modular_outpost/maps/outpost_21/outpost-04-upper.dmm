@@ -18011,6 +18011,11 @@
 	c_tag = "COM - Medical Station";
 	dir = 4
 	},
+/obj/item/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -21
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/medical_roof)
 "dCm" = (
@@ -54590,6 +54595,11 @@
 "xMH" = (
 /obj/effect/floor_decal/corner/red/full{
 	dir = 4
+	},
+/obj/item/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = 27
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/bridge/holdout_armory)
