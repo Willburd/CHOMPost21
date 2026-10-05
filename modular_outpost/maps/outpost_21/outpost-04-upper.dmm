@@ -6742,6 +6742,14 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/supermatter)
+"apl" = (
+/obj/structure/table/steel_reinforced,
+/obj/machinery/alarm{
+	dir = 1;
+	pixel_y = -26
+	},
+/turf/simulated/floor/tiled/dark,
+/area/muriki/rooftop/science)
 "apm" = (
 /obj/structure/grille,
 /obj/machinery/door/blast/shutters{
@@ -6770,10 +6778,6 @@
 	},
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
-/area/crew_quarters/captain)
-"apn" = (
-/obj/machinery/ai_status_display,
-/turf/simulated/wall/r_wall,
 /area/crew_quarters/captain)
 "apo" = (
 /turf/simulated/wall/r_wall,
@@ -6928,6 +6932,9 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/machinery/firealarm{
+	pixel_y = 26
+	},
 /turf/simulated/floor/tiled/dark,
 /area/muriki/rooftop/science)
 "apE" = (
@@ -6999,6 +7006,10 @@
 	dir = 10
 	},
 /obj/machinery/light,
+/obj/machinery/alarm{
+	dir = 1;
+	pixel_y = -26
+	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/hallway/upper)
 "apJ" = (
@@ -7054,12 +7065,33 @@
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
 /area/rnd/misc_lab)
+"apP" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/corner/white{
+	dir = 10
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 7;
+	pixel_y = -32;
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/rnd/hallway/upper)
 "apQ" = (
 /obj/effect/floor_decal/spline/plain,
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
 /obj/machinery/light/small,
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -26
+	},
 /turf/simulated/floor/carpet/tealcarpet,
 /area/crew_quarters/captain)
 "apR" = (
@@ -10003,6 +10035,11 @@
 "auX" = (
 /obj/structure/table/steel_reinforced,
 /obj/machinery/light,
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 7;
+	pixel_y = -32;
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/muriki/rooftop/science)
 "auY" = (
@@ -10917,32 +10954,6 @@
 	},
 /turf/simulated/floor/grass,
 /area/hydroponics/publicgarden)
-"axt" = (
-/obj/structure/grille,
-/obj/machinery/door/blast/shutters{
-	density = 0;
-	dir = 2;
-	icon_state = "shutter0";
-	id = "cap_office";
-	name = "Captain's Shutters";
-	opacity = 0
-	},
-/obj/machinery/door/blast/regular{
-	density = 0;
-	dir = 8;
-	icon_state = "pdoor0";
-	id = "bridge blast";
-	name = "Bridge Blast Doors";
-	opacity = 0
-	},
-/obj/structure/window/phoronreinforced/full,
-/obj/structure/window/phoronreinforced,
-/obj/structure/cable/green{
-	icon_state = "0-8"
-	},
-/obj/machinery/door/firedoor/glass,
-/turf/simulated/floor/plating,
-/area/crew_quarters/captain)
 "axu" = (
 /obj/structure/grille,
 /obj/machinery/door/blast/shutters{
@@ -10999,6 +11010,9 @@
 /obj/item/gun/projectile/shotgun/pump/rifle/ceremonial,
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 6
+	},
+/obj/machinery/ai_status_display{
+	pixel_y = -32
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/captain)
@@ -11146,6 +11160,10 @@
 "axH" = (
 /obj/structure/closet/cabinet,
 /obj/effect/floor_decal/spline/plain,
+/obj/machinery/alarm{
+	dir = 1;
+	pixel_y = -26
+	},
 /turf/simulated/floor/carpet/tealcarpet,
 /area/crew_quarters/captain)
 "axI" = (
@@ -11465,6 +11483,9 @@
 	},
 /obj/machinery/light{
 	dir = 4
+	},
+/obj/machinery/firealarm{
+	pixel_y = 26
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/captain)
@@ -15496,6 +15517,9 @@
 	},
 /obj/effect/floor_decal/corner/red/full{
 	dir = 8
+	},
+/obj/machinery/firealarm{
+	pixel_y = 26
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/misc_lab)
@@ -20328,9 +20352,6 @@
 	icon_state = "0-5"
 	},
 /obj/structure/cable/green{
-	icon_state = "0-4"
-	},
-/obj/structure/cable/green{
 	icon_state = "0-8"
 	},
 /obj/machinery/door/firedoor/glass,
@@ -21559,6 +21580,11 @@
 /obj/item/storage/firstaid/toxin,
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 6
+	},
+/obj/structure/extinguisher_cabinet{
+	dir = 8;
+	pixel_x = 30;
+	pixel_y = 8
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/medical_roof)
@@ -24634,6 +24660,10 @@
 	},
 /obj/random/toy,
 /obj/effect/floor_decal/spline/fancy/wood,
+/obj/machinery/alarm{
+	dir = 1;
+	pixel_y = -26
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/captain)
 "hza" = (
@@ -35724,6 +35754,9 @@
 	req_access = list(20)
 	},
 /obj/effect/floor_decal/spline/fancy/wood,
+/obj/machinery/status_display{
+	pixel_y = -32
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/captain)
 "nDY" = (
@@ -37712,6 +37745,11 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
+/obj/structure/extinguisher_cabinet{
+	dir = 4;
+	pixel_x = -30;
+	pixel_y = -7
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/misc_lab)
 "oJY" = (
@@ -38018,6 +38056,11 @@
 	},
 /obj/effect/floor_decal/spline/fancy/wood,
 /obj/machinery/light,
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 7;
+	pixel_y = -32;
+	dir = 1
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/captain)
 "oTt" = (
@@ -38544,6 +38587,9 @@
 	},
 /obj/machinery/light{
 	dir = 4
+	},
+/obj/machinery/firealarm{
+	pixel_y = 26
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/medical_roof)
@@ -42098,10 +42144,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/hallway/upper)
-"rfO" = (
-/obj/machinery/status_display,
-/turf/simulated/wall/r_wall,
-/area/crew_quarters/captain)
 "rgc" = (
 /obj/machinery/door/firedoor/multi_tile{
 	dir = 2
@@ -45900,6 +45942,9 @@
 /obj/effect/floor_decal/corner/white{
 	dir = 5
 	},
+/obj/machinery/firealarm{
+	pixel_y = 26
+	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/hallway/upper)
 "tjI" = (
@@ -45929,6 +45974,11 @@
 	},
 /obj/effect/floor_decal/corner/white{
 	dir = 10
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 7;
+	pixel_y = -32;
+	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/hallway/upper)
@@ -102782,7 +102832,7 @@ apz
 auY
 auY
 auY
-afi
+apl
 ayi
 adl
 adl
@@ -104730,7 +104780,7 @@ apL
 apv
 apv
 oSW
-axt
+apo
 adl
 adl
 pYM
@@ -104892,7 +104942,7 @@ apM
 axz
 axz
 hyO
-apn
+apo
 adl
 adl
 pYM
@@ -105054,7 +105104,7 @@ axz
 axz
 axz
 nDI
-rfO
+apo
 adl
 adl
 pYM
@@ -105369,7 +105419,7 @@ ayD
 abP
 rAT
 lJr
-apH
+apP
 apo
 apo
 apo

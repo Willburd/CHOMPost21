@@ -3693,6 +3693,14 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/substation/command)
+"afm" = (
+/obj/effect/floor_decal/spline/fancy/wood,
+/obj/machinery/alarm{
+	dir = 1;
+	pixel_y = -26
+	},
+/turf/simulated/floor/wood,
+/area/lawoffice)
 "afn" = (
 /obj/structure/sign/nosmoking_1{
 	pixel_y = 32
@@ -13010,7 +13018,7 @@
 /area/maintenance/security_starboard)
 "azG" = (
 /obj/machinery/camera/network/outside{
-	c_tag = "EXT - Sci west hole";
+	c_tag = "EXT - Bridge West Hole";
 	dir = 8
 	},
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
@@ -17460,6 +17468,12 @@
 /obj/structure/flora/rocks2,
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
 /area/muriki/grounds/shutt)
+"aNG" = (
+/obj/machinery/door/firedoor/glass/hidden{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/bridge/hallway)
 "aNH" = (
 /obj/structure/flora/rocks2,
 /turf/simulated/floor/outdoors/mud/turfpack/muriki,
@@ -19395,6 +19409,21 @@
 	},
 /turf/simulated/floor/wood,
 /area/lawoffice)
+"aTp" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/door/firedoor/glass/hidden{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/bridge/hallway)
 "aTq" = (
 /obj/structure/sign/department/conference_room{
 	pixel_x = 32;
@@ -21021,6 +21050,37 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/security/armor)
+"aWV" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/door/firedoor/glass/hidden{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/bridge/hallway)
+"aWW" = (
+/obj/effect/floor_decal/corner/white{
+	dir = 6
+	},
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/structure/extinguisher_cabinet{
+	dir = 8;
+	pixel_x = 30;
+	pixel_y = -7
+	},
+/obj/structure/extinguisher_cabinet{
+	dir = 8;
+	pixel_x = 30;
+	pixel_y = 8
+	},
+/turf/simulated/floor/tiled/dark,
+/area/bridge/hallway)
 "aWX" = (
 /obj/machinery/camera/network/outside{
 	c_tag = "EXT - Civilian Bridge North"
@@ -21186,6 +21246,22 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/heads/hop)
+"aXk" = (
+/obj/effect/floor_decal/corner/white{
+	dir = 10
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -8;
+	pixel_y = -32;
+	dir = 1
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 7;
+	pixel_y = -32;
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/bridge/hallway)
 "aXl" = (
 /obj/structure/table/woodentable,
 /obj/machinery/photocopier/faxmachine{
@@ -21247,6 +21323,17 @@
 	},
 /turf/simulated/floor/carpet/blucarpet,
 /area/rnd/otherlab)
+"aXq" = (
+/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/corner/white{
+	dir = 9
+	},
+/obj/machinery/alarm{
+	dir = 4;
+	pixel_x = -26
+	},
+/turf/simulated/floor/tiled/dark,
+/area/bridge/hallway)
 "aXr" = (
 /obj/structure/window/phoronreinforced{
 	dir = 4
@@ -21443,6 +21530,16 @@
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/rnd/telesci)
+"aXI" = (
+/obj/effect/floor_decal/corner/white{
+	dir = 6
+	},
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = 26
+	},
+/turf/simulated/floor/tiled/dark,
+/area/bridge/hallway)
 "aXJ" = (
 /obj/structure/closet/secure_closet/hop2,
 /obj/effect/floor_decal/spline/fancy/wood{
@@ -21542,11 +21639,31 @@
 /area/bridge)
 "aXU" = (
 /obj/machinery/camera/network/outside{
-	c_tag = "EXT - Sci Northeast";
+	c_tag = "EXT - Bridge Northeast";
 	dir = 4
 	},
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
 /area/muriki/grounds/sci)
+"aXV" = (
+/obj/effect/floor_decal/corner/white{
+	dir = 10
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -8;
+	pixel_y = -32;
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/bridge)
+"aXW" = (
+/obj/effect/floor_decal/corner/white{
+	dir = 5
+	},
+/obj/machinery/firealarm{
+	pixel_y = 26
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/bridge)
 "aXX" = (
 /obj/effect/mine/claymore/flechette{
 	dir = 1
@@ -22420,6 +22537,10 @@
 /obj/structure/dispenser{
 	phorontanks = 0
 	},
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -26
+	},
 /turf/simulated/floor/tiled,
 /area/teleporter/bridge)
 "aZy" = (
@@ -22865,6 +22986,9 @@
 /obj/effect/floor_decal/corner/white/full{
 	dir = 1
 	},
+/obj/machinery/alarm{
+	pixel_y = 26
+	},
 /turf/simulated/floor/tiled,
 /area/teleporter/bridge)
 "bah" = (
@@ -22942,6 +23066,9 @@
 	},
 /obj/machinery/light{
 	dir = 1
+	},
+/obj/machinery/alarm{
+	pixel_y = 26
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/bridge)
@@ -23235,6 +23362,10 @@
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = 26
+	},
 /turf/simulated/floor/wood,
 /area/lawoffice)
 "baN" = (
@@ -23262,6 +23393,10 @@
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
+	},
+/obj/machinery/alarm{
+	dir = 8;
+	pixel_x = 26
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/heads/hop)
@@ -24320,6 +24455,9 @@
 /obj/machinery/papershredder,
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
+	},
+/obj/machinery/alarm{
+	pixel_y = 26
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/heads/hop)
@@ -54316,6 +54454,10 @@
 /obj/structure/cable/green{
 	icon_state = "1-10"
 	},
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = 26
+	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge/hallway)
 "lxi" = (
@@ -55385,6 +55527,11 @@
 /obj/structure/reagent_dispensers/water_cooler/full,
 /obj/effect/floor_decal/spline/plain{
 	dir = 10
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -8;
+	pixel_y = -32;
+	dir = 1
 	},
 /turf/simulated/floor/carpet/tealcarpet,
 /area/bridge/hallway)
@@ -58584,7 +58731,7 @@
 /area/hallway/secondary/entry/docking_lounge)
 "mVf" = (
 /obj/machinery/camera/network/outside{
-	c_tag = "EXT - Sci East";
+	c_tag = "EXT - Bridge East";
 	dir = 4
 	},
 /turf/simulated/floor/water/acidic/turfpack/muriki,
@@ -71027,7 +71174,7 @@
 /area/security/kennels)
 "riS" = (
 /obj/machinery/camera/network/outside{
-	c_tag = "EXT - Sci Northwest";
+	c_tag = "EXT - Bridge Northwest";
 	dir = 8
 	},
 /obj/structure/flora/rocks2,
@@ -74367,7 +74514,7 @@
 /area/medical/surgeryobs)
 "srr" = (
 /obj/machinery/camera/network/outside{
-	c_tag = "EXT - Sci North Range";
+	c_tag = "EXT - Bridge North";
 	dir = 1
 	},
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
@@ -76582,6 +76729,11 @@
 	},
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 5
+	},
+/obj/structure/extinguisher_cabinet{
+	dir = 8;
+	pixel_x = 30;
+	pixel_y = -7
 	},
 /turf/simulated/floor/wood,
 /area/rnd/otherlab)
@@ -80045,6 +80197,10 @@
 	},
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -5;
+	pixel_y = 30
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/heads/hop)
@@ -84667,7 +84823,7 @@
 /area/crew_quarters/bar)
 "vKg" = (
 /obj/machinery/camera/network/outside{
-	c_tag = "EXT - Sci North Access";
+	c_tag = "EXT - Bridge North Access";
 	dir = 1
 	},
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
@@ -85962,6 +86118,10 @@
 /obj/machinery/camera/network/research{
 	c_tag = "SCI - Public Teleporter Chamber";
 	dir = 4
+	},
+/obj/machinery/alarm{
+	dir = 4;
+	pixel_x = -26
 	},
 /turf/simulated/floor/reinforced,
 /area/rnd/telesci)
@@ -87667,6 +87827,9 @@
 	},
 /obj/machinery/light{
 	dir = 1
+	},
+/obj/machinery/alarm{
+	pixel_y = 26
 	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge/hallway)
@@ -141290,7 +141453,7 @@ ikH
 cPo
 wJz
 baR
-baE
+aXk
 rxd
 cPw
 jaA
@@ -141941,9 +142104,9 @@ uhB
 ihq
 kjG
 uhB
-aSR
-aBw
-baE
+aWV
+aTp
+aNG
 kWc
 upl
 kWc
@@ -143715,7 +143878,7 @@ bbc
 aYr
 baV
 baS
-baV
+aXq
 baV
 baV
 baV
@@ -144029,7 +144192,7 @@ aLb
 aQj
 aDP
 njP
-dhQ
+aXW
 aZS
 aZK
 aZA
@@ -144037,7 +144200,7 @@ aZh
 akH
 aYH
 baw
-baA
+aXI
 baA
 baA
 baA
@@ -144045,7 +144208,7 @@ baR
 baA
 baA
 aTq
-baw
+aWW
 aTc
 baA
 baA
@@ -144194,7 +144357,7 @@ njP
 baj
 rfZ
 rfZ
-wee
+aXV
 njP
 eqe
 dwk
@@ -144539,7 +144702,7 @@ fGZ
 dxE
 baC
 bJi
-lAF
+afm
 pOb
 vAh
 agA
