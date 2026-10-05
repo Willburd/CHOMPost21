@@ -1002,8 +1002,15 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/atmos)
 "acq" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+/obj/item/clothing/head/cone,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 10
 	},
 /turf/simulated/floor/tiled/white,
 /area/maintenance/scielevbasement)
@@ -5703,6 +5710,9 @@
 	icon_state = "pipe-c"
 	},
 /obj/structure/barricade,
+/obj/effect/floor_decal/corner/purple{
+	dir = 6
+	},
 /turf/simulated/floor/tiled/white,
 /area/maintenance/scielevbasement)
 "ale" = (
@@ -8020,9 +8030,6 @@
 	name = "Research Call";
 	pixel_y = -30
 	},
-/obj/effect/floor_decal/corner/purple{
-	dir = 10
-	},
 /obj/machinery/camera/network/research{
 	c_tag = "SCI - Lower Hall Stairwell";
 	dir = 1
@@ -8030,10 +8037,10 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/structure/cable/orange{
+/obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/tiled/white,
+/turf/simulated/floor/plating,
 /area/rnd/hallway/lowmain)
 "apv" = (
 /obj/structure/disposalpipe/segment{
@@ -14632,7 +14639,7 @@
 	dir = 1;
 	icon_state = "pipe-j2"
 	},
-/obj/structure/cable/orange{
+/obj/structure/cable/heavyduty{
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating,
@@ -14664,6 +14671,7 @@
 	pixel_y = -30;
 	dir = 1
 	},
+/obj/effect/floor_decal/corner/purple/full,
 /turf/simulated/floor/tiled/white,
 /area/maintenance/scielevbasement)
 "aCj" = (
@@ -15183,7 +15191,6 @@
 	dir = 5
 	},
 /obj/machinery/light,
-/obj/machinery/hologram/holopad,
 /obj/structure/extinguisher_cabinet{
 	pixel_y = -30;
 	dir = 1
@@ -15192,8 +15199,9 @@
 	dir = 1;
 	icon_state = "pipe-c"
 	},
-/obj/structure/cable/orange{
-	icon_state = "1-4"
+/obj/structure/cable/heavyduty,
+/obj/structure/cable/heavyduty{
+	icon_state = "0-4"
 	},
 /turf/simulated/floor/plating,
 /area/rnd/hallway/lowmain)
@@ -15269,10 +15277,10 @@
 /turf/simulated/floor/flesh/turfpack/muriki,
 /area/muriki/processor/hall)
 "aDy" = (
-/obj/machinery/atmospherics/unary/vent_pump/on,
 /obj/structure/cable/orange{
 	icon_state = "4-8"
 	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled/white,
 /area/maintenance/scielevbasement)
 "aDz" = (
@@ -16840,7 +16848,6 @@
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/spine/waste)
 "aGm" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
 	},
@@ -16848,11 +16855,14 @@
 	dir = 4;
 	icon_state = "pipe-c"
 	},
-/obj/structure/cable/orange{
-	icon_state = "1-2"
+/obj/structure/cable/heavyduty{
+	icon_state = "0-2"
 	},
-/obj/item/clothing/head/cone,
-/turf/simulated/floor/tiled/white,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 10
+	},
+/obj/structure/cable/orange,
+/turf/simulated/floor/plating,
 /area/maintenance/scielevbasement)
 "aGn" = (
 /obj/effect/landmark/event_spawn/maintpred,
@@ -19854,6 +19864,9 @@
 /obj/structure/disposalpipe/segment,
 /obj/machinery/floodlight{
 	dir = 4
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating,
 /area/rnd/hallway/lowmain)
@@ -47865,14 +47878,6 @@
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/engineering/refinery/lab)
-"bMH" = (
-/obj/structure/disposalpipe/segment,
-/obj/structure/cable/heavyduty{
-	icon_state = "0-2"
-	},
-/obj/structure/cable/orange,
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/research)
 "bMI" = (
 /obj/machinery/door/airlock/maintenance/int,
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
@@ -47926,7 +47931,7 @@
 	},
 /obj/effect/floor_decal/milspec/hatchmarks,
 /obj/structure/disposalpipe/segment,
-/obj/structure/cable/orange{
+/obj/structure/cable/heavyduty{
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor,
@@ -47957,11 +47962,11 @@
 "bMR" = (
 /obj/machinery/door/firedoor,
 /obj/structure/disposalpipe/segment,
-/obj/structure/cable/orange{
-	icon_state = "1-2"
-	},
 /obj/machinery/door/airlock/maintenance/rnd{
 	name = "Science Maintenance"
+	},
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/rnd/hallway/lowmain)
@@ -54489,12 +54494,17 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/lowmain)
 "bZL" = (
-/obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/structure/cable/orange{
 	icon_state = "2-8"
 	},
 /obj/structure/cable/orange{
 	icon_state = "2-4"
+	},
+/obj/structure/cable/orange{
+	icon_state = "2-4"
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 5
 	},
 /turf/simulated/floor/tiled/white,
 /area/maintenance/scielevbasement)
@@ -59241,6 +59251,7 @@
 /obj/structure/cable/orange{
 	icon_state = "4-8"
 	},
+/obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/tiled/white,
 /area/maintenance/scielevbasement)
 "clq" = (
@@ -76956,6 +76967,12 @@
 	c_tag = "SCI - Lower Hall Elevator";
 	dir = 1
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 10
+	},
 /turf/simulated/floor/tiled/white,
 /area/maintenance/scielevbasement)
 "eMH" = (
@@ -80356,9 +80373,6 @@
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/cable/orange{
-	icon_state = "1-2"
-	},
 /obj/machinery/door/airlock/maintenance/command,
 /obj/machinery/door/blast/regular{
 	density = 0;
@@ -80369,6 +80383,9 @@
 	opacity = 0
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/old_cargo/white,
 /area/maintenance/scielevbasement)
 "jmZ" = (
@@ -84921,17 +84938,11 @@
 /turf/simulated/floor/tiled/dark/turfpack/muriki,
 /area/engineering/refinery/main)
 "oTe" = (
-/obj/structure/cable/orange{
-	icon_state = "4-8"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
-	},
-/obj/effect/floor_decal/corner/purple{
-	dir = 10
 	},
 /obj/item/radio/intercom{
 	name = "Station Intercom (General)";
@@ -84941,7 +84952,10 @@
 	dir = 4
 	},
 /obj/item/clothing/head/cone,
-/turf/simulated/floor/tiled/white,
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/plating,
 /area/rnd/hallway/lowmain)
 "oTh" = (
 /obj/structure/disposalpipe/segment,
@@ -86029,7 +86043,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 4
 	},
-/obj/structure/cable/orange{
+/obj/structure/cable/heavyduty{
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating,
@@ -91390,9 +91404,6 @@
 /turf/simulated/mineral/alt/turfpack/muriki,
 /area/maintenance/eng)
 "wvl" = (
-/obj/structure/cable/orange{
-	icon_state = "4-8"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
@@ -91403,10 +91414,16 @@
 	dir = 2;
 	icon_state = "pipe-c"
 	},
-/obj/structure/cable/orange{
-	icon_state = "2-8"
+/obj/structure/cable/heavyduty{
+	icon_state = "0-2"
 	},
-/turf/simulated/floor/tiled/white,
+/obj/structure/cable/heavyduty{
+	icon_state = "0-8"
+	},
+/obj/structure/cable/orange{
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/plating,
 /area/rnd/hallway/lowmain)
 "wvx" = (
 /obj/machinery/alarm/alarms_hidden{
@@ -142515,7 +142532,7 @@ fKk
 wvl
 bMR
 bMN
-bMH
+bRF
 cJR
 bRF
 bRF

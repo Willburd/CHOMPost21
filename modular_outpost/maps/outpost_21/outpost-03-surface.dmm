@@ -44404,21 +44404,21 @@
 /turf/simulated/floor/water/acidic/deep/turfpack/muriki,
 /area/mine/explored/muriki/mountaineast)
 "ieZ" = (
-/obj/structure/sign/directions/security{
+/obj/structure/sign/directions/engineering{
 	dir = 8;
 	pixel_y = -1
 	},
-/obj/structure/sign/directions/science{
-	dir = 1;
+/obj/structure/sign/directions/cargo{
+	dir = 8;
 	pixel_y = 5
 	},
-/obj/structure/sign/directions/medical{
-	dir = 1;
+/obj/structure/sign/directions/security{
+	dir = 8;
 	pixel_y = 11
 	},
-/obj/structure/sign/directions/recreation{
-	dir = 1;
-	pixel_y = -7
+/obj/structure/sign/directions/outpost/robotics{
+	dir = 8;
+	pixel_y = -8
 	},
 /turf/simulated/wall,
 /area/hallway/secondary/exit)
@@ -77660,17 +77660,17 @@
 	dir = 1;
 	pixel_y = 5
 	},
-/obj/structure/sign/directions/cargo{
-	dir = 8;
-	pixel_y = 11
-	},
-/obj/structure/sign/directions/engineering{
-	dir = 8;
-	pixel_y = -1
-	},
 /obj/structure/sign/directions/bar{
 	dir = 1;
 	pixel_y = -7
+	},
+/obj/structure/sign/directions/recreation{
+	dir = 1;
+	pixel_y = -1
+	},
+/obj/structure/sign/directions/medical{
+	dir = 1;
+	pixel_y = 11
 	},
 /turf/simulated/wall,
 /area/maintenance/arrivals)
