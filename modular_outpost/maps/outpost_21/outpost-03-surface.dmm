@@ -21839,6 +21839,13 @@
 /obj/effect/floor_decal/corner/white/full,
 /turf/simulated/floor/tiled/dark,
 /area/bridge/hallway)
+"aYp" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/obj/item/radio/beacon,
+/turf/simulated/floor/tiled,
+/area/teleporter/bridge)
 "aYq" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -143368,7 +143375,7 @@ aLy
 aJY
 qUe
 bae
-aZG
+aYp
 aZG
 aZu
 aZd
