@@ -248,10 +248,6 @@
 /obj/random/cutout,
 /turf/simulated/floor/plating,
 /area/maintenance/gravgen)
-"aaA" = (
-/obj/structure/prop/war/tgmc_30mm/loaded,
-/turf/simulated/floor/outpost_roof/turfpack/muriki,
-/area/muriki/rooftop/civilian)
 "aaB" = (
 /obj/structure/cable/green{
 	icon_state = "0-2"
@@ -856,7 +852,7 @@
 	dir = 10
 	},
 /turf/simulated/floor/tiled/dark,
-/area/rnd/research)
+/area/rnd/research/sci_req_lab)
 "abR" = (
 /obj/structure/extinguisher_cabinet{
 	dir = 8;
@@ -1056,7 +1052,7 @@
 	dir = 10
 	},
 /turf/simulated/floor/tiled/dark,
-/area/rnd/research)
+/area/rnd/research/sci_req_lab)
 "aci" = (
 /obj/structure/window/reinforced/full{
 	color = "#dd003c"
@@ -2352,7 +2348,7 @@
 	pixel_y = 4
 	},
 /turf/simulated/floor/tiled/dark,
-/area/rnd/research)
+/area/rnd/research/sci_req_lab)
 "afj" = (
 /obj/structure/grille,
 /obj/structure/cable/green,
@@ -2370,7 +2366,7 @@
 	opacity = 0
 	},
 /turf/simulated/floor/plating,
-/area/rnd/research)
+/area/rnd/research/sci_req_lab)
 "afk" = (
 /obj/effect/zone_divider,
 /turf/simulated/open/muriki,
@@ -2913,7 +2909,7 @@
 	dir = 6
 	},
 /turf/simulated/floor/tiled/dark,
-/area/rnd/research)
+/area/rnd/research/sci_req_lab)
 "agK" = (
 /obj/effect/zone_divider,
 /obj/structure/cable/orange{
@@ -6389,7 +6385,7 @@
 	opacity = 0
 	},
 /turf/simulated/floor/plating,
-/area/rnd/research)
+/area/rnd/research/sci_req_lab)
 "aoB" = (
 /obj/structure/cable/green{
 	icon_state = "1-4"
@@ -6400,8 +6396,11 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark,
-/area/rnd/research)
+/area/rnd/research/sci_req_lab)
 "aoC" = (
 /obj/structure/cable/orange{
 	icon_state = "1-2"
@@ -6738,7 +6737,7 @@
 	dir = 6
 	},
 /turf/simulated/floor/tiled/dark,
-/area/rnd/research)
+/area/rnd/research/sci_req_lab)
 "aph" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
@@ -6774,7 +6773,6 @@
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/supermatter)
 "apl" = (
-/obj/structure/table/steel_reinforced,
 /obj/machinery/alarm{
 	dir = 1;
 	pixel_y = -26
@@ -6782,8 +6780,12 @@
 /obj/effect/floor_decal/corner/white{
 	dir = 10
 	},
+/obj/machinery/disposal,
+/obj/structure/disposalpipe/trunk{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark,
-/area/rnd/research)
+/area/rnd/research/sci_req_lab)
 "apm" = (
 /obj/structure/grille,
 /obj/machinery/door/blast/shutters{
@@ -6835,7 +6837,7 @@
 /obj/structure/cable/green,
 /obj/structure/window/reinforced/full,
 /turf/simulated/floor/plating,
-/area/rnd/research)
+/area/rnd/research/sci_req_lab)
 "apq" = (
 /obj/machinery/door/blast/shutters{
 	density = 0;
@@ -6875,7 +6877,7 @@
 	dir = 6
 	},
 /turf/simulated/floor/tiled/dark,
-/area/rnd/research)
+/area/rnd/research/sci_req_lab)
 "aps" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
@@ -6907,7 +6909,7 @@
 	dir = 5
 	},
 /turf/simulated/floor/tiled/dark,
-/area/rnd/research)
+/area/rnd/research/sci_req_lab)
 "apv" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -6923,7 +6925,7 @@
 	dir = 5
 	},
 /turf/simulated/floor/tiled/dark,
-/area/rnd/research)
+/area/rnd/research/sci_req_lab)
 "apx" = (
 /obj/effect/floor_decal/steeldecal/steel_decals3{
 	dir = 1
@@ -6961,7 +6963,7 @@
 	dir = 5
 	},
 /turf/simulated/floor/tiled/dark,
-/area/rnd/research)
+/area/rnd/research/sci_req_lab)
 "apA" = (
 /obj/structure/railing{
 	dir = 4
@@ -6998,7 +7000,7 @@
 	dir = 5
 	},
 /turf/simulated/floor/tiled/dark,
-/area/rnd/research)
+/area/rnd/research/sci_req_lab)
 "apE" = (
 /obj/machinery/power/apc{
 	dir = 1;
@@ -7012,7 +7014,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
-/area/rnd/research)
+/area/rnd/research/sci_req_lab)
 "apF" = (
 /obj/structure/grille,
 /obj/structure/cable/green{
@@ -7038,7 +7040,7 @@
 	opacity = 0
 	},
 /turf/simulated/floor/plating,
-/area/rnd/research)
+/area/rnd/research/sci_req_lab)
 "apG" = (
 /obj/machinery/door/airlock{
 	name = "Oval Office"
@@ -7126,7 +7128,7 @@
 	},
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
-/area/rnd/misc_lab)
+/area/bridge/holdout_armory)
 "apP" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -7231,7 +7233,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/rnd/misc_lab)
+/area/bridge/holdout_armory)
 "apY" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 8
@@ -7336,7 +7338,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/rnd/misc_lab)
+/area/bridge/holdout_armory)
 "aqh" = (
 /obj/effect/floor_decal/corner/red{
 	dir = 6
@@ -7346,7 +7348,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/rnd/misc_lab)
+/area/bridge/holdout_armory)
 "aqi" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
@@ -7363,6 +7365,9 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/rnd/hallway/upper)
+"aqj" = (
+/turf/simulated/floor/tiled/dark,
+/area/rnd/research/sci_req_lab)
 "aqk" = (
 /obj/machinery/power/apc{
 	dir = 8;
@@ -7780,7 +7785,7 @@
 /obj/item/ammo_magazine/ammo_box/b44,
 /obj/item/ammo_magazine/ammo_box/b44,
 /turf/simulated/floor/tiled/milspec,
-/area/rnd/misc_lab)
+/area/bridge/holdout_armory)
 "aqX" = (
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
 /area/muriki/skyline/cent)
@@ -7822,7 +7827,7 @@
 	},
 /obj/item/cell/device/weapon,
 /turf/simulated/floor/tiled/milspec,
-/area/rnd/misc_lab)
+/area/bridge/holdout_armory)
 "arc" = (
 /obj/effect/floor_decal/corner/blue{
 	dir = 5
@@ -10101,8 +10106,12 @@
 /area/muriki/rooftop/science)
 "auR" = (
 /obj/machinery/hologram/holopad,
+/obj/structure/disposalpipe/segment{
+	icon_state = "pipe-c";
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark,
-/area/rnd/research)
+/area/rnd/research/sci_req_lab)
 "auS" = (
 /obj/structure/railing{
 	dir = 8
@@ -10150,7 +10159,7 @@
 	},
 /obj/machinery/doppler_array,
 /turf/simulated/floor/tiled/dark,
-/area/rnd/research)
+/area/rnd/research/sci_req_lab)
 "auX" = (
 /obj/structure/table/steel_reinforced,
 /obj/machinery/light,
@@ -10162,11 +10171,15 @@
 /obj/effect/floor_decal/corner/white{
 	dir = 10
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled/dark,
-/area/rnd/research)
+/area/rnd/research/sci_req_lab)
 "auY" = (
 /turf/simulated/floor/glass/reinforced/turfpack/muriki,
-/area/rnd/research)
+/area/rnd/research/sci_req_lab)
 "auZ" = (
 /obj/structure/cable/orange{
 	icon_state = "2-8"
@@ -10181,7 +10194,7 @@
 	},
 /obj/structure/window/reinforced/full,
 /turf/simulated/floor/plating,
-/area/rnd/research)
+/area/rnd/research/sci_req_lab)
 "avb" = (
 /obj/structure/grille,
 /obj/structure/cable/green{
@@ -10204,7 +10217,7 @@
 	opacity = 0
 	},
 /turf/simulated/floor/plating,
-/area/rnd/research)
+/area/rnd/research/sci_req_lab)
 "avc" = (
 /turf/simulated/floor/flesh/mover/turfpack/muriki{
 	dir = 6
@@ -10232,7 +10245,7 @@
 	opacity = 0
 	},
 /turf/simulated/floor/plating,
-/area/rnd/research)
+/area/rnd/research/sci_req_lab)
 "ave" = (
 /turf/simulated/wall/r_wall,
 /area/muriki/tramstation/civ)
@@ -10691,6 +10704,10 @@
 	},
 /turf/simulated/floor/carpet/blucarpet/turfpack/muriki,
 /area/specialty/expie_clubhouse)
+"awn" = (
+/obj/machinery/floodlight,
+/turf/simulated/floor,
+/area/maintenance/substation/research)
 "awo" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 8
@@ -10905,6 +10922,10 @@
 	dir = 10
 	},
 /area/muriki/processor/hall)
+"awT" = (
+/obj/structure/ladder,
+/turf/simulated/floor,
+/area/maintenance/substation/research)
 "awU" = (
 /turf/simulated/floor/flesh/mover/turfpack/muriki{
 	dir = 4
@@ -11784,7 +11805,7 @@
 /area/crew_quarters/captain)
 "ayi" = (
 /turf/simulated/wall/r_wall,
-/area/rnd/research)
+/area/rnd/research/sci_req_lab)
 "ayj" = (
 /obj/structure/cable/orange{
 	icon_state = "1-2"
@@ -11837,6 +11858,7 @@
 /obj/effect/floor_decal/corner/white{
 	dir = 10
 	},
+/obj/item/geiger/wall/south,
 /turf/simulated/floor/tiled/dark,
 /area/rnd/hallway/upper)
 "ayo" = (
@@ -11941,7 +11963,7 @@
 	pixel_y = -8
 	},
 /turf/simulated/wall/r_wall,
-/area/rnd/misc_lab)
+/area/bridge/holdout_armory)
 "ayx" = (
 /obj/structure/cable/orange{
 	icon_state = "1-2"
@@ -12137,10 +12159,11 @@
 	dir = 9
 	},
 /turf/simulated/floor/tiled/dark,
-/area/rnd/research)
+/area/rnd/research/sci_req_lab)
 "ayX" = (
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/dark,
-/area/rnd/research)
+/area/rnd/research/sci_req_lab)
 "ayY" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
@@ -12192,6 +12215,15 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor,
 /area/rnd/hallway/phoronicsbridge)
+"aze" = (
+/obj/structure/window/maintenance_panel{
+	dir = 1
+	},
+/obj/structure/window/maintenance_panel{
+	dir = 8
+	},
+/turf/simulated/floor,
+/area/maintenance/substation/research)
 "azf" = (
 /obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/spline/fancy/wood{
@@ -12401,6 +12433,7 @@
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/item/geiger/wall/north,
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/medical_roof)
 "aDZ" = (
@@ -12743,13 +12776,6 @@
 	desc = "Sand."
 	},
 /area/hydroponics/publicgarden)
-"aNt" = (
-/obj/structure/railing,
-/obj/structure/railing{
-	dir = 8
-	},
-/turf/simulated/floor/outpost_roof/turfpack/muriki,
-/area/muriki/rooftop/civilian)
 "aNz" = (
 /obj/structure/cliff/corner{
 	dir = 5
@@ -13289,8 +13315,11 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark,
-/area/rnd/research)
+/area/rnd/research/sci_req_lab)
 "bet" = (
 /obj/machinery/door/flesh,
 /turf/simulated/floor/flesh/turfpack/muriki,
@@ -14004,7 +14033,7 @@
 	opacity = 0
 	},
 /turf/simulated/floor/plating,
-/area/rnd/misc_lab)
+/area/bridge/holdout_armory)
 "bAR" = (
 /obj/structure/catwalk,
 /obj/structure/railing{
@@ -15813,7 +15842,7 @@
 	req_one_access = list(1,19,20,53,58)
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/rnd/misc_lab)
+/area/bridge/holdout_armory)
 "crP" = (
 /obj/structure/cable/yellow{
 	icon_state = "0-8"
@@ -16164,7 +16193,7 @@
 	req_one_access = list(1,19,20,53,58)
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/rnd/misc_lab)
+/area/bridge/holdout_armory)
 "czv" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -16240,7 +16269,7 @@
 	},
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
-/area/rnd/misc_lab)
+/area/bridge/holdout_armory)
 "cCM" = (
 /obj/machinery/door/blast/regular{
 	id = "old_phoronic_burn_vent"
@@ -19128,7 +19157,7 @@
 /obj/structure/cable/green,
 /obj/structure/window/reinforced/full,
 /turf/simulated/floor/plating,
-/area/rnd/research)
+/area/rnd/research/sci_req_lab)
 "egx" = (
 /obj/structure/prop/war/tgmc_30mm/loaded,
 /turf/simulated/floor/outpost_roof/turfpack/muriki,
@@ -19432,7 +19461,7 @@
 "eoX" = (
 /obj/structure/sign/warning/secure_area/armory,
 /turf/simulated/wall/r_wall,
-/area/rnd/misc_lab)
+/area/bridge/holdout_armory)
 "epO" = (
 /obj/machinery/camera/network/medbay{
 	c_tag = "MED - Backup Generators";
@@ -27447,7 +27476,6 @@
 /obj/structure/cable/orange{
 	icon_state = "8-9"
 	},
-/obj/structure/ladder,
 /obj/structure/disposalpipe/segment{
 	dir = 8;
 	icon_state = "pipe-c"
@@ -27805,7 +27833,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/techfloor,
-/area/rnd/misc_lab)
+/area/bridge/holdout_armory)
 "jbi" = (
 /obj/structure/table/woodentable,
 /obj/machinery/alarm{
@@ -29350,7 +29378,7 @@
 "jRK" = (
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/milspec,
-/area/rnd/misc_lab)
+/area/bridge/holdout_armory)
 "jRV" = (
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/medical)
@@ -31291,9 +31319,6 @@
 	},
 /obj/structure/disposalpipe/down{
 	dir = 4
-	},
-/obj/structure/window/maintenance_panel{
-	dir = 8
 	},
 /obj/structure/window/maintenance_panel{
 	dir = 1
@@ -34512,7 +34537,7 @@
 	dir = 10
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/rnd/misc_lab)
+/area/bridge/holdout_armory)
 "mNT" = (
 /obj/effect/map_effect/interval/atmogland/bodyheat,
 /turf/simulated/floor/flesh/turfpack/muriki,
@@ -35020,8 +35045,9 @@
 /obj/effect/floor_decal/corner/red/full{
 	dir = 1
 	},
+/obj/item/geiger/wall/north,
 /turf/simulated/floor/tiled/milspec,
-/area/rnd/misc_lab)
+/area/bridge/holdout_armory)
 "naD" = (
 /obj/structure/prop/rock/ice/flat,
 /turf/simulated/floor/indoorrocks/turfpack/muriki{
@@ -35235,7 +35261,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/milspec,
-/area/rnd/misc_lab)
+/area/bridge/holdout_armory)
 "nhy" = (
 /obj/machinery/light_switch{
 	dir = 4;
@@ -38015,7 +38041,7 @@
 	pixel_y = -7
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/rnd/misc_lab)
+/area/bridge/holdout_armory)
 "oJY" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -38735,15 +38761,6 @@
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/hydroponics/publicgarden)
-"pfj" = (
-/obj/structure/railing{
-	dir = 1
-	},
-/obj/structure/railing{
-	dir = 4
-	},
-/turf/simulated/floor/outpost_roof/turfpack/muriki,
-/area/muriki/rooftop/civilian)
 "pfq" = (
 /turf/simulated/floor/boxing/gym,
 /area/security/brig/lowobservation)
@@ -39370,7 +39387,7 @@
 	},
 /obj/effect/floor_decal/corner/red/full,
 /turf/simulated/floor/tiled/milspec,
-/area/rnd/misc_lab)
+/area/bridge/holdout_armory)
 "pwi" = (
 /turf/simulated/floor/water/beach/indoors{
 	dir = 8
@@ -39424,7 +39441,7 @@
 /area/muriki/bathroom/phoronics)
 "pwQ" = (
 /turf/simulated/wall/r_wall,
-/area/rnd/misc_lab)
+/area/bridge/holdout_armory)
 "pwY" = (
 /obj/effect/map_effect/interval/atmogland/bodyheat,
 /turf/simulated/floor/water/digestive_enzymes/turfpack/muriki,
@@ -40584,7 +40601,6 @@
 /turf/simulated/floor/plating,
 /area/muriki/processor/hall)
 "qhB" = (
-/obj/structure/disposalpipe/segment,
 /obj/structure/cable/green{
 	icon_state = "1-8"
 	},
@@ -40594,6 +40610,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 4
 	},
+/obj/structure/disposalpipe/junction,
 /turf/simulated/floor/tiled/dark,
 /area/rnd/hallway/upper)
 "qhO" = (
@@ -45644,13 +45661,6 @@
 	outdoors = 0
 	},
 /area/muriki/rooftop/disposal)
-"sUM" = (
-/obj/structure/railing,
-/obj/structure/railing{
-	dir = 4
-	},
-/turf/simulated/floor/outpost_roof/turfpack/muriki,
-/area/muriki/rooftop/civilian)
 "sUR" = (
 /obj/machinery/door/airlock/command{
 	name = "Colony Director's Quarters";
@@ -46925,6 +46935,7 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 6
 	},
+/obj/item/geiger/wall/south,
 /turf/simulated/floor/carpet/tealcarpet,
 /area/crew_quarters/captain)
 "tDp" = (
@@ -48384,15 +48395,6 @@
 	color = "#999999"
 	},
 /area/chapel/main)
-"uqR" = (
-/obj/structure/railing{
-	dir = 1
-	},
-/obj/structure/railing{
-	dir = 8
-	},
-/turf/simulated/floor/outpost_roof/turfpack/muriki,
-/area/muriki/rooftop/civilian)
 "urv" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
@@ -48841,7 +48843,7 @@
 	opacity = 0
 	},
 /turf/simulated/floor/plating,
-/area/rnd/misc_lab)
+/area/bridge/holdout_armory)
 "uCH" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -51700,7 +51702,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/rnd/misc_lab)
+/area/bridge/holdout_armory)
 "wdF" = (
 /turf/simulated/open/muriki,
 /area/djstation)
@@ -54417,6 +54419,7 @@
 /obj/structure/cable/orange{
 	icon_state = "4-8"
 	},
+/obj/item/geiger/wall/north,
 /turf/simulated/floor/tiled/techfloor,
 /area/rnd/hallway/upper)
 "xIX" = (
@@ -54554,7 +54557,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
-/area/rnd/misc_lab)
+/area/bridge/holdout_armory)
 "xMX" = (
 /obj/structure/bed/chair/bay/shuttle{
 	dir = 8
@@ -103218,7 +103221,7 @@ kxr
 kxr
 ayi
 apD
-ayX
+aqj
 auR
 ayX
 auX
@@ -103856,7 +103859,7 @@ kxr
 kxr
 bri
 aql
-jHp
+aze
 ejR
 lou
 lou
@@ -104669,9 +104672,9 @@ jUH
 jHp
 aqk
 uoy
-jHp
+awT
 fRy
-jHp
+awn
 iNm
 oMB
 kdO
@@ -111708,10 +111711,10 @@ qQa
 qQa
 qQa
 qQa
-uqR
-qGk
-qGk
-aNt
+qQa
+qQa
+qQa
+qQa
 sAt
 sAt
 sAt
@@ -111870,10 +111873,10 @@ qQa
 qQa
 qQa
 qQa
-adc
-aaA
-acQ
-acP
+qQa
+qQa
+qQa
+qQa
 sAt
 sAt
 sAt
@@ -112032,10 +112035,10 @@ qQa
 qQa
 qQa
 qQa
-adc
-acQ
-acX
-acP
+qQa
+qQa
+qQa
+qQa
 sAt
 sAt
 sAt
@@ -112194,10 +112197,10 @@ qQa
 qQa
 qQa
 qQa
-pfj
-tDp
-tDp
-sUM
+qQa
+qQa
+qQa
+qQa
 sAt
 sAt
 sAt

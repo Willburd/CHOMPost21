@@ -151,7 +151,6 @@
 										/area/muriki/elevator/secbase,
 										/area/muriki/elevator/medibasement,
 										/area/muriki/elevator/civbase,
-										/area/muriki/elevator/scibase,
 										/area/muriki/elevator/secmain,
 										/area/muriki/elevator/medical,
 										/area/muriki/elevator/civmain,

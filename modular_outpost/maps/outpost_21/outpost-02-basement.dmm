@@ -11897,16 +11897,6 @@
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/rnd/xenobiology/xenobioh)
-"awA" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/structure/cable/orange{
-	icon_state = "4-8"
-	},
-/obj/structure/ladder/up,
-/turf/simulated/floor/plating,
-/area/maintenance/scielevbasement)
 "awB" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -14113,6 +14103,11 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/spine/waste)
+"aAT" = (
+/obj/effect/floor_decal/industrial/outline/grey,
+/obj/structure/ladder/up,
+/turf/simulated/floor/plating,
+/area/maintenance/scielevbasement)
 "aAU" = (
 /turf/simulated/floor/flesh/turfpack/muriki,
 /area/muriki/processor/hall/entrance)
@@ -141893,7 +141888,7 @@ ajW
 daZ
 ifM
 bEW
-awA
+wJT
 anY
 adE
 adE
@@ -142382,7 +142377,7 @@ bEW
 oLp
 def
 alc
-gTh
+aAT
 kKh
 adE
 bEW
