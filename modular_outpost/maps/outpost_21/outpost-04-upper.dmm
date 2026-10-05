@@ -248,27 +248,6 @@
 /obj/random/cutout,
 /turf/simulated/floor/plating,
 /area/maintenance/gravgen)
-"aaA" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/structure/cable/orange{
-	icon_state = "4-8"
-	},
-/obj/effect/floor_decal/corner/white{
-	dir = 5
-	},
-/obj/machinery/firealarm{
-	pixel_y = 26
-	},
-/turf/simulated/floor/tiled/dark,
-/area/rnd/hallway/upper)
 "aaB" = (
 /obj/structure/cable/green{
 	icon_state = "0-2"
@@ -6850,11 +6829,14 @@
 /turf/simulated/wall/r_wall,
 /area/crew_quarters/captain)
 "app" = (
-/obj/effect/landmark{
-	name = "vinestart"
+/obj/structure/grille,
+/obj/machinery/door/firedoor/glass,
+/obj/structure/cable/green{
+	icon_state = "0-2"
 	},
-/turf/simulated/floor/wood,
-/area/crew_quarters/captain)
+/obj/structure/window/reinforced/full,
+/turf/simulated/floor/plating,
+/area/rnd/research/sci_req_lab)
 "apq" = (
 /obj/machinery/door/blast/shutters{
 	density = 0;
@@ -7392,9 +7374,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/rnd/hallway/upper)
-"aqj" = (
-/turf/simulated/floor/tiled/dark,
-/area/rnd/research/sci_req_lab)
 "aqk" = (
 /obj/machinery/power/apc{
 	dir = 8;
@@ -10213,15 +10192,6 @@
 	},
 /turf/simulated/floor/outpost_roof/turfpack/muriki,
 /area/muriki/rooftop/science)
-"ava" = (
-/obj/structure/grille,
-/obj/machinery/door/firedoor/glass,
-/obj/structure/cable/green{
-	icon_state = "0-2"
-	},
-/obj/structure/window/reinforced/full,
-/turf/simulated/floor/plating,
-/area/rnd/research/sci_req_lab)
 "avb" = (
 /obj/structure/grille,
 /obj/structure/cable/green{
@@ -10731,10 +10701,6 @@
 	},
 /turf/simulated/floor/carpet/blucarpet/turfpack/muriki,
 /area/specialty/expie_clubhouse)
-"awn" = (
-/obj/machinery/floodlight,
-/turf/simulated/floor,
-/area/maintenance/substation/research)
 "awo" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 8
@@ -10949,10 +10915,6 @@
 	dir = 10
 	},
 /area/muriki/processor/hall)
-"awT" = (
-/obj/structure/ladder,
-/turf/simulated/floor,
-/area/maintenance/substation/research)
 "awU" = (
 /turf/simulated/floor/flesh/mover/turfpack/muriki{
 	dir = 4
@@ -11855,12 +11817,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/hallway/upper)
-"aym" = (
-/obj/effect/landmark{
-	name = "vinestart"
-	},
-/turf/simulated/floor,
-/area/maintenance/substation/research)
 "ayn" = (
 /obj/machinery/light,
 /obj/structure/disposalpipe/segment{
@@ -12172,16 +12128,25 @@
 /turf/simulated/floor/outpost_roof/turfpack/muriki,
 /area/muriki/rooftop/science)
 "ayW" = (
+/obj/effect/landmark{
+	name = "vinestart"
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/captain)
+"ayX" = (
 /obj/effect/floor_decal/corner/white{
 	dir = 9
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/research/sci_req_lab)
-"ayX" = (
+"ayY" = (
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/dark,
 /area/rnd/research/sci_req_lab)
-"ayY" = (
+"ayZ" = (
+/turf/simulated/floor/tiled/dark,
+/area/rnd/research/sci_req_lab)
+"aza" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
 	},
@@ -12204,48 +12169,46 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/hallway/upper)
-"ayZ" = (
+"azb" = (
 /obj/structure/disposalpipe/segment{
-	icon_state = "pipe-c";
 	dir = 4
 	},
-/turf/simulated/floor,
-/area/maintenance/substation/research)
-"aza" = (
-/obj/structure/disposalpipe/segment{
-	icon_state = "pipe-c";
-	dir = 2
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
 	},
-/turf/simulated/floor,
-/area/maintenance/substation/research)
-"azb" = (
-/obj/structure/foamedmetal,
-/obj/machinery/atmospherics/pipe/cap/visible/scrubbers{
-	dir = 1
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/cap/visible/supply{
-	dir = 1
+/obj/structure/cable/orange{
+	icon_state = "4-8"
 	},
-/turf/simulated/floor,
-/area/rnd/hallway/phoronicsbridge)
+/obj/effect/floor_decal/corner/white{
+	dir = 5
+	},
+/obj/machinery/firealarm{
+	pixel_y = 26
+	},
+/turf/simulated/floor/tiled/dark,
+/area/rnd/hallway/upper)
 "azc" = (
-/obj/structure/railing{
-	dir = 1
-	},
-/obj/effect/landmark/pengmark,
-/turf/simulated/floor/outpost_roof/turfpack/muriki,
-/area/muriki/rooftop/science)
-"azd" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor,
-/area/rnd/hallway/phoronicsbridge)
-"aze" = (
 /obj/structure/window/maintenance_panel{
 	dir = 1
 	},
 /obj/structure/window/maintenance_panel{
 	dir = 8
+	},
+/turf/simulated/floor,
+/area/maintenance/substation/research)
+"azd" = (
+/obj/effect/landmark{
+	name = "vinestart"
+	},
+/turf/simulated/floor,
+/area/maintenance/substation/research)
+"aze" = (
+/obj/structure/disposalpipe/segment{
+	icon_state = "pipe-c";
+	dir = 4
 	},
 /turf/simulated/floor,
 /area/maintenance/substation/research)
@@ -12263,12 +12226,32 @@
 /turf/simulated/floor/tiled/monotile,
 /area/hydroponics/publicgarden)
 "azg" = (
-/obj/structure/foamedmetal,
-/obj/structure/extinguisher_cabinet{
-	dir = 4;
-	pixel_x = -30;
-	pixel_y = -7
+/obj/structure/disposalpipe/segment{
+	icon_state = "pipe-c";
+	dir = 2
 	},
+/turf/simulated/floor,
+/area/maintenance/substation/research)
+"azh" = (
+/obj/structure/foamedmetal,
+/obj/machinery/atmospherics/pipe/cap/visible/scrubbers{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/cap/visible/supply{
+	dir = 1
+	},
+/turf/simulated/floor,
+/area/rnd/hallway/phoronicsbridge)
+"azi" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/effect/landmark/pengmark,
+/turf/simulated/floor/outpost_roof/turfpack/muriki,
+/area/muriki/rooftop/science)
+"azj" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor,
 /area/rnd/hallway/phoronicsbridge)
 "azs" = (
@@ -28971,6 +28954,10 @@
 	temperature = 80
 	},
 /area/comms)
+"jGb" = (
+/obj/machinery/floodlight,
+/turf/simulated/floor,
+/area/maintenance/substation/research)
 "jGA" = (
 /obj/structure/sign/department/telecoms,
 /obj/effect/step_trigger/dephase_shadekin,
@@ -42334,6 +42321,10 @@
 /obj/machinery/door/firedoor/border_only,
 /turf/simulated/floor/tiled/techfloor,
 /area/muriki/tramstation/waste)
+"rdU" = (
+/obj/structure/ladder,
+/turf/simulated/floor,
+/area/maintenance/substation/research)
 "rdZ" = (
 /obj/structure/table/gamblingtable,
 /obj/item/juke_remote{
@@ -42863,6 +42854,15 @@
 "rsI" = (
 /turf/simulated/wall/r_wall,
 /area/engineering/gravgen)
+"rsP" = (
+/obj/structure/foamedmetal,
+/obj/structure/extinguisher_cabinet{
+	dir = 4;
+	pixel_x = -30;
+	pixel_y = -7
+	},
+/turf/simulated/floor,
+/area/rnd/hallway/phoronicsbridge)
 "rsQ" = (
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
@@ -102609,9 +102609,9 @@ kxr
 kxr
 avb
 apr
-ayW
-ayW
-ayW
+ayX
+ayX
+ayX
 abQ
 ayi
 adl
@@ -103257,9 +103257,9 @@ kxr
 kxr
 ayi
 apD
-aqj
+ayZ
 auR
-ayX
+ayY
 auX
 ayi
 ayV
@@ -103570,7 +103570,7 @@ kxr
 kxr
 kxr
 bri
-ayZ
+aze
 bMu
 ayz
 ayz
@@ -103581,7 +103581,7 @@ ayv
 ayp
 ayi
 ayi
-ava
+app
 beg
 egq
 ayi
@@ -103895,7 +103895,7 @@ kxr
 kxr
 bri
 aql
-aze
+azc
 ejR
 lou
 lou
@@ -104218,7 +104218,7 @@ kxr
 kxr
 kxr
 bri
-aza
+azg
 iRk
 ejR
 lou
@@ -104550,7 +104550,7 @@ ejR
 ejR
 ejR
 ejR
-ayY
+aza
 xci
 apo
 axV
@@ -104708,9 +104708,9 @@ jUH
 jHp
 aqk
 uoy
-awT
+rdU
 fRy
-awn
+jGb
 iNm
 oMB
 kdO
@@ -105029,7 +105029,7 @@ kxr
 kxr
 bri
 vOa
-aym
+azd
 ruw
 kia
 lYL
@@ -105350,7 +105350,7 @@ wAN
 wAN
 wTp
 lXR
-azg
+rsP
 eMZ
 axo
 adl
@@ -105368,7 +105368,7 @@ axz
 eMt
 axz
 axz
-app
+ayW
 nDI
 apo
 adl
@@ -105508,12 +105508,12 @@ gJN
 oZp
 pHA
 naM
-azd
+azj
 xGR
 eZf
 aCS
 tjN
-azb
+azh
 cit
 adl
 adl
@@ -105999,7 +105999,7 @@ kxr
 kxr
 kxr
 kxr
-azc
+azi
 adl
 adl
 adl
@@ -106170,7 +106170,7 @@ thK
 thK
 thK
 thK
-aaA
+azb
 apH
 apo
 ayd

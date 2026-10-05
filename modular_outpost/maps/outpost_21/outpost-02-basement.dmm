@@ -11857,12 +11857,6 @@
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/rnd/xenobiology/xenobioh)
-"awA" = (
-/obj/structure/cable/orange{
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/tiled/white,
-/area/maintenance/scielevbasement)
 "awB" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -14070,10 +14064,8 @@
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/spine/waste)
 "aAT" = (
-/obj/effect/floor_decal/industrial/outline/grey,
-/obj/structure/ladder/up,
 /turf/simulated/floor/plating,
-/area/maintenance/scielevbasement)
+/area/muriki/elevator/scibase)
 "aAU" = (
 /turf/simulated/floor/flesh/turfpack/muriki,
 /area/muriki/processor/hall/entrance)
@@ -45045,10 +45037,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology/xenobioh)
-"bGJ" = (
-/obj/turbolift_map_holder/muriki/scievator,
-/turf/simulated/floor/plating,
-/area/muriki/elevator/scibase)
 "bGK" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
@@ -59258,8 +59246,11 @@
 	},
 /area/mine/explored/muriki/cave/civ/east_access)
 "clp" = (
-/turf/simulated/floor/plating,
-/area/muriki/elevator/scibase)
+/obj/structure/cable/orange{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/white,
+/area/maintenance/scielevbasement)
 "clq" = (
 /obj/structure/cable/orange{
 	icon_state = "1-2"
@@ -61582,6 +61573,10 @@
 /turf/simulated/floor/flesh/turfpack/muriki,
 /area/muriki/processor/gland/airmix)
 "crF" = (
+/obj/turbolift_map_holder/muriki/scievator,
+/turf/simulated/floor/plating,
+/area/muriki/elevator/scibase)
+"crG" = (
 /obj/machinery/power/apc{
 	dir = 8;
 	name = "west bump";
@@ -61592,16 +61587,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/muriki/elevator/scibase)
-"crG" = (
-/obj/structure/disposalpipe/segment,
-/obj/structure/cable/orange{
-	icon_state = "1-2"
-	},
-/obj/structure/cable/orange{
-	icon_state = "2-8"
-	},
-/turf/simulated/floor/plating,
-/area/maintenance/scielevbasement)
 "crH" = (
 /obj/structure/catwalk,
 /obj/effect/floor_decal/flesh{
@@ -62209,6 +62194,16 @@
 /obj/structure/ladder,
 /turf/simulated/open/muriki,
 /area/mine/unexplored/muriki/cave/underdark_pit/east_civ)
+"ctn" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+/obj/structure/cable/orange{
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/scielevbasement)
 "cto" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/catwalk,
@@ -62979,6 +62974,11 @@
 /obj/structure/sign/yessmoking_1,
 /turf/simulated/wall,
 /area/muriki/crew/casino)
+"cuP" = (
+/obj/effect/floor_decal/industrial/outline/grey,
+/obj/structure/ladder/up,
+/turf/simulated/floor/plating,
+/area/maintenance/scielevbasement)
 "cuV" = (
 /obj/random/junk,
 /obj/machinery/light/small{
@@ -141538,10 +141538,10 @@ aEx
 bEW
 abt
 anY
-clp
-clp
-clp
-bGJ
+aAT
+aAT
+aAT
+crF
 anY
 agT
 aCi
@@ -141700,12 +141700,12 @@ aaU
 bEW
 wJT
 anY
-clp
-clp
-clp
-clp
+aAT
+aAT
+aAT
+aAT
 apt
-awA
+clp
 eLb
 bEW
 amq
@@ -141862,10 +141862,10 @@ ifM
 bEW
 wJT
 anY
-clp
-clp
-clp
-clp
+aAT
+aAT
+aAT
+aAT
 apt
 aDy
 acq
@@ -142024,10 +142024,10 @@ ajJ
 bEW
 wJT
 anY
-clp
-clp
-clp
-clp
+aAT
+aAT
+aAT
+aAT
 anY
 bZL
 aGm
@@ -142349,9 +142349,9 @@ bEW
 oLp
 def
 alc
-aAT
+cuP
 kKh
-crF
+crG
 bEW
 afb
 bEW
@@ -142513,7 +142513,7 @@ agc
 dMb
 ajT
 ucm
-crG
+ctn
 ajT
 aEy
 bEW
