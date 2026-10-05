@@ -7700,6 +7700,7 @@
 /obj/effect/floor_decal/corner/white{
 	dir = 10
 	},
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/dark,
 /area/rnd/hallway/upper)
 "aqW" = (
@@ -9994,6 +9995,10 @@
 /obj/structure/cable/orange,
 /turf/simulated/floor/outpost_roof/turfpack/muriki,
 /area/muriki/rooftop/science)
+"auN" = (
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/wood,
+/area/crew_quarters/captain)
 "auO" = (
 /obj/structure/railing{
 	dir = 8
@@ -10017,6 +10022,10 @@
 	},
 /turf/simulated/floor/outpost_roof/turfpack/muriki,
 /area/muriki/rooftop/science)
+"auR" = (
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/tiled/dark,
+/area/muriki/rooftop/science)
 "auS" = (
 /obj/structure/railing{
 	dir = 8
@@ -10027,6 +10036,16 @@
 	},
 /turf/simulated/floor/outpost_roof/turfpack/muriki,
 /area/muriki/rooftop/science)
+"auT" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 10
+	},
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/tiled/white,
+/area/rnd/research/medical_roof)
 "auV" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -17950,6 +17969,7 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/techfloor,
 /area/rnd/hallway/upper)
 "dLE" = (
@@ -29078,6 +29098,7 @@
 /turf/simulated/floor/plating,
 /area/medical/hangar)
 "jRK" = (
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/misc_lab)
 "jRV" = (
@@ -103003,7 +103024,7 @@ kxr
 ayi
 apD
 auW
-auW
+auR
 auW
 auX
 ayi
@@ -104950,7 +104971,7 @@ axZ
 tLp
 bRI
 apM
-axz
+auN
 axz
 hyO
 apo
@@ -105427,7 +105448,7 @@ adl
 uvN
 gNh
 ayD
-abP
+auT
 rAT
 lJr
 apP
