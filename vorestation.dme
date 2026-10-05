@@ -5813,6 +5813,7 @@
 #include "modular_outpost\code\game\jobs\job\engineering.dm"
 #include "modular_outpost\code\game\jobs\job\medical.dm"
 #include "modular_outpost\code\game\jobs\job\offduty.dm"
+#include "modular_outpost\code\game\jobs\job\pentester.dm"
 #include "modular_outpost\code\game\jobs\job\science.dm"
 #include "modular_outpost\code\game\jobs\job\security.dm"
 #include "modular_outpost\code\game\jobs\job\special.dm"

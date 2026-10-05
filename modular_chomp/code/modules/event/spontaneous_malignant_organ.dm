@@ -12,7 +12,7 @@
 		if(!(A.z in using_map.event_levels))
 			continue
 		//Not needed for us
-		if(H.job == JOB_STOWAWAY && prob(90)) // stowaways only have a 10% chance to proc
+		if((H.job == JOB_STOWAWAY || H.job == JOB_PENETRATIONTESTER) && prob(90)) // stowaways only have a 10% chance to proc
 			continue
 		// outpost 21 edit end
 		if(H.client && H.random_malignant_organ(TRUE,TRUE,prob(20)))
