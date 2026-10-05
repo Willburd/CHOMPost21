@@ -12366,6 +12366,7 @@
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/access_shaft/upper)
 "xt" = (
@@ -12495,7 +12496,6 @@
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 1
 	},
-/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/access_shaft/upper)
 "xE" = (
@@ -12552,6 +12552,7 @@
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 1
 	},
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/access_shaft/upper)
 "xI" = (
@@ -13008,6 +13009,14 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/access_shaft/upper_connector)
+"yy" = (
+/obj/machinery/hologram/holopad,
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "REX - Primary Port Engine Core South";
+	dir = 1
+	},
+/turf/simulated/floor/airless,
+/area/offworld/orbital/exterior/engine_core_port)
 "yz" = (
 /obj/structure/table/standard,
 /obj/item/storage/firstaid/regular,
@@ -13103,7 +13112,6 @@
 	name = "Station Intercom (General)";
 	pixel_x = 32
 	},
-/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/access_shaft/upper_connector)
 "yF" = (
@@ -13365,6 +13373,7 @@
 /obj/machinery/camera/network/engineering_outpost{
 	c_tag = "REX - Docking Arm Upper Airlock"
 	},
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/access_shaft/upper_connector)
 "zd" = (
@@ -14829,6 +14838,7 @@
 /obj/structure/cable/green{
 	icon_state = "2-9"
 	},
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/dockinghanger)
 "BF" = (
@@ -17515,6 +17525,7 @@
 /obj/effect/floor_decal/corner/brown/bordercorner{
 	dir = 4
 	},
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/dockingarm)
 "Hb" = (
@@ -17774,10 +17785,6 @@
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/fore)
-"HD" = (
-/obj/machinery/hologram/holopad,
-/turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/ai_transit_hub)
 "HE" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -17906,12 +17913,55 @@
 	},
 /turf/simulated/floor/airless,
 /area/offworld/orbital/exterior/engine_core_port)
+"HU" = (
+/obj/machinery/hologram/holopad,
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "REX - Primary Port Engine Core North"
+	},
+/turf/simulated/floor/airless,
+/area/offworld/orbital/exterior/engine_core_port)
+"HV" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 1
+	},
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/access_shaft/upper)
+"HW" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 1
+	},
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/central)
 "HX" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 6
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ai)
+"HY" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/access_shaft/upper_connector)
 "HZ" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -20706,14 +20756,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/ai_sat/fore_airlock)
-"RP" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/structure/disposalpipe/segment,
-/obj/machinery/atmospherics/pipe/simple/hidden/aux,
-/obj/machinery/hologram/holopad,
-/turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/halls/aft)
 "RR" = (
 /obj/machinery/firealarm{
 	dir = 1;
@@ -35252,7 +35294,7 @@ ym
 yd
 tW
 rG
-ws
+HV
 wU
 rG
 cX
@@ -35568,7 +35610,7 @@ xx
 yE
 uR
 yC
-xY
+HY
 xY
 xY
 yt
@@ -36758,8 +36800,8 @@ On
 BO
 aw
 aL
-aw
-aw
+Bu
+HU
 aL
 Yv
 aw
@@ -36771,8 +36813,8 @@ aw
 aw
 Yv
 aL
-aw
-aw
+yy
+Bu
 aL
 aw
 hL
@@ -37846,7 +37888,7 @@ cX
 rG
 xG
 xg
-vL
+vM
 cX
 cX
 cX
@@ -38008,7 +38050,7 @@ cX
 rG
 xH
 BA
-vL
+rG
 cX
 cX
 cX
@@ -38170,7 +38212,7 @@ cX
 vK
 xE
 xg
-vL
+vK
 cX
 cX
 cX
@@ -38942,7 +38984,7 @@ HH
 pA
 Ke
 sO
-HD
+UI
 sr
 ok
 cX
@@ -39464,7 +39506,7 @@ qz
 qz
 OQ
 jg
-xN
+HW
 BD
 jg
 cu
@@ -40457,7 +40499,7 @@ gG
 AL
 ha
 Zu
-RP
+dU
 dU
 dU
 yh
@@ -40474,7 +40516,7 @@ dS
 kl
 dS
 yP
-RP
+dU
 im
 SN
 lt
