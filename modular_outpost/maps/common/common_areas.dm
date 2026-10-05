@@ -909,6 +909,12 @@
 	base_turf = /turf/simulated/open
 	use_emergency_overlay = TRUE
 
+/area/bridge/holdout_armory
+	name = "\improper Holdout Armory"
+	holomap_color = HOLOMAP_AREACOLOR_COMMAND
+	base_turf = /turf/simulated/open
+	use_emergency_overlay = TRUE
+
 //AI sat
 /area/ai_sat
 	holomap_color = HOLOMAP_AREACOLOR_COMMAND
@@ -1000,15 +1006,15 @@
 	flags = AREA_FLAG_IS_NOT_PERSISTENT
 	base_turf = /turf/simulated/open
 /area/muriki/elevator/scibase
-	name = "Science Sublevel 1"
+	name = "Bridge Sublevel 1"
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	flags = AREA_FLAG_IS_NOT_PERSISTENT
 /area/muriki/elevator/scimain
-	name = "Science First Floor"
+	name = "Bridge First Floor"
 	flags = AREA_FLAG_IS_NOT_PERSISTENT
 	base_turf = /turf/simulated/open
 /area/muriki/elevator/sciupper
-	name = "Science Second Floor"
+	name = "Bridge Second Floor"
 	flags = AREA_FLAG_IS_NOT_PERSISTENT
 	base_turf = /turf/simulated/open
 /area/muriki/elevator/yardlower
@@ -1104,30 +1110,30 @@
 	lift_announce_str = "Arriving at Second Floor."
 	holomap_color = HOLOMAP_AREACOLOR_CIV
 
-//Science
-/area/turbolift/scibase
-	name = "Science Sublevel 1"
+// Bridge
+/area/turbolift/commandbase
+	name = "Bridge Sublevel 1"
 	base_turf = /turf/simulated/floor/plating
-	lift_floor_label = "Research Basement"
-	lift_floor_name = "Xenobio, Xenoarch, Anomaly Lab, Cavern Access"
+	lift_floor_label = "Bridge Basement"
+	lift_floor_name = "Maintenance"
 	lift_announce_str = "Arriving at Basement."
-	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
+	holomap_color = HOLOMAP_AREACOLOR_COMMAND
 
-/area/turbolift/scimain
-	name = "Science First Floor"
+/area/turbolift/commandmain
+	name = "Bridge First Floor"
 	base_turf = /turf/simulated/open
-	lift_floor_label = "Research First Floor"
-	lift_floor_name = "RnD, Telesci, Laboratory, Firing Range."
+	lift_floor_label = "Bridge First Floor"
+	lift_floor_name = "Bridge, HoP Office, IAA Office, Public Teleporter, Meeting Room, Breakroom, Showers, Command Lobby"
 	lift_announce_str = "Arriving at First Floor."
-	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
+	holomap_color = HOLOMAP_AREACOLOR_COMMAND
 
-/area/turbolift/sciupper
-	name = "Science Second Floor"
+/area/turbolift/commandupper
+	name = "Bridge Second Floor"
 	base_turf = /turf/simulated/open
-	lift_floor_label = "Research Second Floor"
-	lift_floor_name = "Server, Tool Storage, Phoronics, RD."
+	lift_floor_label = "Bridge Second Floor"
+	lift_floor_name = "Site Manager's Office, RnD Office, Holdout Armory."
 	lift_announce_str = "Arriving at Second Floor."
-	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
+	holomap_color = HOLOMAP_AREACOLOR_COMMAND
 
 //Orbital yard
 /area/turbolift/orbitalyard_lower
@@ -1660,12 +1666,12 @@
 	icon_state = "maint_security_port"
 
 /area/maintenance/secelevbasement
-	name = "\improper Security Elevator Maintenance Foundation"
+	name = "\improper Bridge Elevator Maintenance Foundation"
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	icon_state = "pmaint"
 
 /area/maintenance/scielev
-	name = "\improper Research Elevator Maintenance Shaft"
+	name = "\improper Bridge Elevator Maintenance Shaft"
 	base_turf = /turf/simulated/open
 	icon_state = "maint_research_shuttle"
 
@@ -2312,10 +2318,10 @@
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
 
 /area/rnd/breakroom
-	name = "\improper Research Breakroom"
+	name = "\improper Bridge Breakroom"
 	icon_state = "locker"
 	base_turf = /turf/simulated/open
-	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
+	holomap_color = HOLOMAP_AREACOLOR_COMMAND
 	color_grading = COLORTINT_WARM
 
 /area/rnd/lockers
@@ -2355,7 +2361,7 @@
 	name = "\improper Research Telescience"
 	icon_state = "teleporter"
 	base_turf = /turf/simulated/open
-	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
+	holomap_color = HOLOMAP_AREACOLOR_COMMAND
 
 /area/rnd/xenobiology
 	name = "\improper Xenohusbandry Pens"
@@ -2490,7 +2496,7 @@
 	color_grading = COLORTINT_WARM
 
 /area/rnd/research/medical_roof
-	name = "\improper Research First aid"
+	name = "\improper Bridge First aid"
 	base_turf = /turf/simulated/open
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
 	flags = /area/medical/first_aid_station::flags
@@ -2591,7 +2597,7 @@
 	name = "\improper Upper Research hallway"
 	icon_state = "hallC"
 	base_turf = /turf/simulated/open
-	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
+	holomap_color = HOLOMAP_AREACOLOR_COMMAND
 
 /area/rnd/hallway/lowmain
 	name = "\improper Lower Main Research hallway"
@@ -2629,18 +2635,19 @@
 	base_turf = /turf/simulated/open
 	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
 
-/area/muriki/research/isolation_hall
-	name = "Research Isolation Hall"
-	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
-	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
-	use_emergency_overlay = TRUE
-
-/area/muriki/research/showers
-	name = "\improper Research Showers"
+/area/muriki/bridge/showers
+	name = "\improper Bridge Showers"
 	base_turf = /turf/simulated/open
 	icon_state = "locker"
 	sound_env = SMALL_ENCLOSED
-	holomap_color = HOLOMAP_AREACOLOR_SCIENCE
+	holomap_color = HOLOMAP_AREACOLOR_COMMAND
+
+/area/muriki/bridge/lockers
+	name = "\improper Bridge Showers"
+	base_turf = /turf/simulated/open
+	icon_state = "locker"
+	sound_env = SMALL_ENCLOSED
+	holomap_color = HOLOMAP_AREACOLOR_COMMAND
 
 //
 // Tramline --------------------------------------------------

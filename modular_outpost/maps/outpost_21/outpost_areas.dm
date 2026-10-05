@@ -615,6 +615,10 @@
 /area/medical/resleeving
 	flags = AREA_FIRE_SUPRESSION
 
+/area/rnd/research/sci_req_lab
+	name = "\improper Science Requisitions Office"
+	holomap_color = HOLOMAP_AREACOLOR_COMMAND
+	base_turf = /turf/simulated/open/muriki
 
 /area/rnd/workshop
 	name = "\improper Circuitry Lab"
