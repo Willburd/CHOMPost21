@@ -46,7 +46,7 @@ GLOBAL_LIST_INIT(spawntypes, populate_spawn_points())
 	display_name = "Arrivals Shuttle"
 	// msg = "will arrive to the station shortly by shuttle"
 	msg = "has arrived on station by shuttle" // Outpost 21 edit
-	disallow_job = list(JOB_STOWAWAY) //CHOMPEdit add // Outpost 21 edit
+	disallow_job = list(JOB_STOWAWAY, JOB_PENETRATIONTESTER) //CHOMPEdit add // Outpost 21 edit
 
 /datum/spawnpoint/arrivals/New()
 	..()

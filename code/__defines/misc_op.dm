@@ -4,6 +4,6 @@
 #define RESIZE_MAXIMUM_DORMS 3
 
 #define JOB_STOWAWAY            "Stowaway"
-#define JOB_ALT_PENETRATIONTESTER "Penetration Tester"
+#define JOB_PENETRATIONTESTER "Penetration Tester"
 
 #define SHADEKIN_DEATH_NOTICE "gasps and falls backwards, flickering as they fall unconscious and phase out, leaving behind fur and lingering blood... they very likely won't be coming back for a long while."
