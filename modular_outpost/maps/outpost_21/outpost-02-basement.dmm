@@ -18830,9 +18830,6 @@
 	c_tag = "ENG - Terraformer Conveyor";
 	dir = 4
 	},
-/obj/machinery/light/small/emergency{
-	dir = 1
-	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
@@ -62272,6 +62269,9 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/industrial/outline/red,
+/obj/machinery/light/small/emergency{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/engineering/coreproctunnel)
 "cty" = (
