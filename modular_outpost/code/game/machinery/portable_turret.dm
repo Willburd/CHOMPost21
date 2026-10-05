@@ -10,16 +10,18 @@
 	if(forbid_ai_control)
 		to_chat(user, span_warning("This turret is beyond your control!"))
 		return
+	if(ai_currently_inhabited == user) // Yoink
+		return
 	if(ai_currently_inhabited && ai_currently_inhabited != user)
 		to_chat(user, span_warning("This turret is already being directly controlled!"))
 		return
 	if(!(src.z in using_map.ai_shell_allowed_levels))
 		return
-	user.AddComponent(/datum/component/remote_view, focused_on = src, viewsize = 10, vconfig_path = /datum/remote_view_config/ai_turret_view)
-	var/obj/item/gun/energy/E = installation
+	user.AddComponent(/datum/component/remote_view, focused_on = src, vconfig_path = /datum/remote_view_config/ai_turret_view)
+	var/obj/item/gun/equipped = installation
 	var/armed = "nothing"
-	if(E)
-		armed = "a [E?.name]"
+	if(equipped)
+		armed = "a [equipped.name]"
 	to_chat(user, span_notice("You've assumed direct control of \the [src], armed with [armed]."))
 
 // Remote view

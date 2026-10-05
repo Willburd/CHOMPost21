@@ -925,7 +925,7 @@
 /obj/machinery/porta_turret/proc/shootAt(mob/living/target)
 	//any emagged turrets will shoot extremely fast! This not only is deadly, but drains a lot power!
 	var/current_delay = shot_delay
-	if(emagged || attacked)	//prevents rapid-fire shooting, unless it's been emagged
+	if(emagged || attacked || ai_currently_inhabited)	//prevents rapid-fire shooting, unless it's been emagged // Outpost 21 edit - AI controlled turrets
 		current_delay = min(shot_delay,TURRET_EMAG_FIRERATE) // Emag fire rate
 
 	// Can't fire until our reload finishes, AND we have fully raised up.
