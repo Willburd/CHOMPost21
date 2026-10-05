@@ -23,7 +23,7 @@
 	pixel_y = 24
 	},
 /turf/simulated/floor,
-/area/maintenance/substation/research)
+/area/maintenance/substation/command)
 "aad" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -1419,7 +1419,7 @@
 	},
 /obj/item/assembly/mousetrap/armed,
 /turf/simulated/floor,
-/area/maintenance/substation/research)
+/area/maintenance/substation/command)
 "acW" = (
 /obj/structure/cable/orange{
 	icon_state = "1-2"
@@ -7393,7 +7393,7 @@
 	dir = 4
 	},
 /turf/simulated/floor,
-/area/maintenance/substation/research)
+/area/maintenance/substation/command)
 "aqm" = (
 /obj/structure/cable/orange{
 	icon_state = "6-8"
@@ -7402,7 +7402,7 @@
 	dir = 4
 	},
 /turf/simulated/floor,
-/area/maintenance/substation/research)
+/area/maintenance/substation/command)
 "aqn" = (
 /obj/effect/floor_decal/corner/lime{
 	dir = 10
@@ -11928,7 +11928,7 @@
 	},
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/maintenance/substation/research)
+/area/maintenance/substation/command)
 "ayw" = (
 /obj/structure/sign/directions/outpost/gen{
 	dir = 4;
@@ -11970,7 +11970,7 @@
 	},
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor,
-/area/maintenance/substation/research)
+/area/maintenance/substation/command)
 "ayA" = (
 /obj/effect/zone_divider,
 /obj/structure/cable/green{
@@ -12197,20 +12197,20 @@
 	dir = 8
 	},
 /turf/simulated/floor,
-/area/maintenance/substation/research)
+/area/maintenance/substation/command)
 "azd" = (
 /obj/effect/landmark{
 	name = "vinestart"
 	},
 /turf/simulated/floor,
-/area/maintenance/substation/research)
+/area/maintenance/substation/command)
 "aze" = (
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-c";
 	dir = 4
 	},
 /turf/simulated/floor,
-/area/maintenance/substation/research)
+/area/maintenance/substation/command)
 "azf" = (
 /obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/spline/fancy/wood{
@@ -12230,7 +12230,7 @@
 	dir = 2
 	},
 /turf/simulated/floor,
-/area/maintenance/substation/research)
+/area/maintenance/substation/command)
 "azh" = (
 /obj/structure/foamedmetal,
 /obj/machinery/atmospherics/pipe/cap/visible/scrubbers{
@@ -12370,7 +12370,7 @@
 	dir = 4
 	},
 /turf/simulated/floor,
-/area/maintenance/substation/research)
+/area/maintenance/substation/command)
 "aCf" = (
 /obj/effect/floor_decal/industrial/warning/dust,
 /obj/structure/cable/orange{
@@ -13773,7 +13773,7 @@
 /area/security/brig/lowobservation)
 "bri" = (
 /turf/simulated/wall/r_wall,
-/area/maintenance/substation/research)
+/area/maintenance/substation/command)
 "brF" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -14246,7 +14246,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor,
-/area/maintenance/substation/research)
+/area/maintenance/substation/command)
 "bFc" = (
 /obj/structure/table/woodentable,
 /obj/item/flame/candle/candelabra/everburn{
@@ -14561,7 +14561,7 @@
 	},
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor,
-/area/maintenance/substation/research)
+/area/maintenance/substation/command)
 "bMv" = (
 /turf/unsimulated/mineral/muriki/crystal,
 /area/muriki/crystal)
@@ -19320,7 +19320,7 @@
 "ekG" = (
 /obj/structure/trash_pile,
 /turf/simulated/floor,
-/area/maintenance/substation/research)
+/area/maintenance/substation/command)
 "ekK" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced,
@@ -20089,7 +20089,7 @@
 	name = "Command Bypass"
 	},
 /turf/simulated/floor,
-/area/maintenance/substation/research)
+/area/maintenance/substation/command)
 "eFC" = (
 /obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/open/muriki,
@@ -22210,7 +22210,7 @@
 	},
 /obj/machinery/floodlight,
 /turf/simulated/floor,
-/area/maintenance/substation/research)
+/area/maintenance/substation/command)
 "fRT" = (
 /obj/structure/window/reinforced/full{
 	color = "#dd003c"
@@ -26517,7 +26517,7 @@
 	icon_state = "0-8"
 	},
 /turf/simulated/floor,
-/area/maintenance/substation/research)
+/area/maintenance/substation/command)
 "ioP" = (
 /turf/simulated/wall,
 /area/rnd/research/phoronics/gasstore)
@@ -27346,7 +27346,7 @@
 /area/hydroponics/hallway)
 "iNm" = (
 /turf/simulated/wall,
-/area/maintenance/substation/research)
+/area/maintenance/substation/command)
 "iNK" = (
 /obj/item/stack/material/morphium{
 	amount = 25
@@ -27497,7 +27497,7 @@
 	icon_state = "pipe-c"
 	},
 /turf/simulated/floor,
-/area/maintenance/substation/research)
+/area/maintenance/substation/command)
 "iRz" = (
 /obj/machinery/light_switch{
 	dir = 8;
@@ -28961,7 +28961,7 @@
 "jGb" = (
 /obj/machinery/floodlight,
 /turf/simulated/floor,
-/area/maintenance/substation/research)
+/area/maintenance/substation/command)
 "jGA" = (
 /obj/structure/sign/department/telecoms,
 /obj/effect/step_trigger/dephase_shadekin,
@@ -29000,7 +29000,7 @@
 /area/muriki/rooftop/civilian)
 "jHp" = (
 /turf/simulated/floor,
-/area/maintenance/substation/research)
+/area/maintenance/substation/command)
 "jHt" = (
 /obj/random/plushie,
 /turf/simulated/floor/plating,
@@ -29465,7 +29465,7 @@
 	name_tag = "Bridge Subgrid"
 	},
 /turf/simulated/floor,
-/area/maintenance/substation/research)
+/area/maintenance/substation/command)
 "jUJ" = (
 /obj/effect/floor_decal/rust,
 /obj/structure/prop/war/tgmc_missile_rack/napalm,
@@ -29963,7 +29963,7 @@
 "kia" = (
 /obj/structure/reagent_dispensers/watertank,
 /turf/simulated/floor,
-/area/maintenance/substation/research)
+/area/maintenance/substation/command)
 "kig" = (
 /obj/machinery/power/apc{
 	dir = 8;
@@ -31344,7 +31344,7 @@
 	dir = 1
 	},
 /turf/simulated/open,
-/area/maintenance/substation/research)
+/area/maintenance/substation/command)
 "kQN" = (
 /obj/machinery/atmospherics/omni/mixer,
 /turf/simulated/floor/tiled/steel,
@@ -33122,7 +33122,7 @@
 "lYL" = (
 /obj/structure/reagent_dispensers/fueltank,
 /turf/simulated/floor,
-/area/maintenance/substation/research)
+/area/maintenance/substation/command)
 "lYP" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
@@ -42328,7 +42328,7 @@
 "rdU" = (
 /obj/structure/ladder,
 /turf/simulated/floor,
-/area/maintenance/substation/research)
+/area/maintenance/substation/command)
 "rdZ" = (
 /obj/structure/table/gamblingtable,
 /obj/item/juke_remote{
@@ -42946,7 +42946,7 @@
 	dir = 8
 	},
 /turf/simulated/open,
-/area/maintenance/substation/research)
+/area/maintenance/substation/command)
 "ruA" = (
 /obj/machinery/chemical_analyzer{
 	name = "produce safety scanner"
@@ -48353,7 +48353,7 @@
 "uoy" = (
 /obj/item/geiger/wall/west,
 /turf/simulated/floor,
-/area/maintenance/substation/research)
+/area/maintenance/substation/command)
 "upe" = (
 /obj/structure/flora/tree/palm,
 /turf/simulated/floor/grass,
@@ -49428,7 +49428,7 @@
 	},
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor,
-/area/maintenance/substation/research)
+/area/maintenance/substation/command)
 "uPJ" = (
 /obj/structure/catwalk,
 /obj/effect/zone_divider,
@@ -51225,7 +51225,7 @@
 	pixel_y = 32
 	},
 /turf/simulated/floor,
-/area/maintenance/substation/research)
+/area/maintenance/substation/command)
 "vOn" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -51873,7 +51873,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor,
-/area/maintenance/substation/research)
+/area/maintenance/substation/command)
 "wjo" = (
 /turf/simulated/wall,
 /area/mine/unexplored/muriki/mountaintopeast)
@@ -52748,7 +52748,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor,
-/area/maintenance/substation/research)
+/area/maintenance/substation/command)
 "wMu" = (
 /obj/structure/railing{
 	dir = 8
@@ -53000,7 +53000,7 @@
 	RCon_tag = "Substation - Command"
 	},
 /turf/simulated/floor/plating,
-/area/maintenance/substation/research)
+/area/maintenance/substation/command)
 "wUq" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 4
@@ -53685,7 +53685,7 @@
 	},
 /obj/machinery/door/airlock/maintenance/command,
 /turf/simulated/floor/tiled/techfloor,
-/area/maintenance/substation/research)
+/area/maintenance/substation/command)
 "xkz" = (
 /obj/effect/step_trigger/dephase_shadekin,
 /obj/structure/prop/machine/core/starts_on{

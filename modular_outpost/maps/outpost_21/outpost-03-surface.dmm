@@ -4205,14 +4205,6 @@
 /obj/item/bikehorn/rubberducky,
 /obj/structure/table/standard,
 /obj/machinery/atmospherics/unary/vent_pump/on,
-/obj/machinery/power/apc{
-	dir = 1;
-	name = "north bump";
-	pixel_y = 24
-	},
-/obj/structure/cable/green{
-	icon_state = "0-2"
-	},
 /turf/simulated/floor/tiled/freezer,
 /area/muriki/bathroom/captain)
 "aga" = (
@@ -4234,9 +4226,6 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals_central7{
 	dir = 4
-	},
-/obj/structure/cable/green{
-	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/muriki/bathroom/captain)
@@ -9038,12 +9027,6 @@
 "apj" = (
 /turf/simulated/floor/tiled,
 /area/teleporter/bridge)
-"apk" = (
-/obj/structure/cable/green{
-	icon_state = "5-10"
-	},
-/turf/simulated/floor/tiled/kafel_full,
-/area/muriki/bathroom/bridge)
 "apl" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -9076,9 +9059,6 @@
 /obj/effect/floor_decal/steeldecal/steel_decals3{
 	dir = 10
 	},
-/obj/structure/cable/green{
-	icon_state = "1-10"
-	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/bridge)
 "apo" = (
@@ -9092,14 +9072,6 @@
 "app" = (
 /obj/effect/floor_decal/corner/white{
 	dir = 5
-	},
-/obj/machinery/power/apc{
-	dir = 1;
-	name = "north bump";
-	pixel_y = 24
-	},
-/obj/structure/cable/green{
-	icon_state = "0-4"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
@@ -11842,9 +11814,6 @@
 	},
 /obj/effect/floor_decal/corner/white{
 	dir = 5
-	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/bridge)
@@ -17012,25 +16981,6 @@
 	outdoors = 0
 	},
 /area/mine/unexplored/muriki/mountainnorth)
-"aMf" = (
-/obj/structure/cable/green{
-	icon_state = "2-4"
-	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/machinery/hologram/holopad,
-/turf/simulated/floor/tiled/steel,
-/area/bridge/hallway)
 "aMg" = (
 /obj/machinery/door/window/brigdoor/northright,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -21939,9 +21889,6 @@
 	pixel_x = 26;
 	pixel_y = -26
 	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
@@ -25873,9 +25820,6 @@
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/engineering_hallway)
 "bKD" = (
-/obj/structure/cable/green{
-	icon_state = "2-4"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
 	},
@@ -26953,17 +26897,6 @@
 	},
 /turf/simulated/floor/tiled/steel,
 /area/hallway/secondary/exit)
-"cap" = (
-/obj/effect/floor_decal/corner/white{
-	dir = 10
-	},
-/obj/machinery/power/apc{
-	name = "south bump";
-	pixel_y = -24
-	},
-/obj/structure/cable/green,
-/turf/simulated/floor/tiled/steel,
-/area/bridge/hallway)
 "cav" = (
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/milspec,
@@ -27050,9 +26983,6 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 4
-	},
-/obj/structure/cable/green{
-	icon_state = "2-8"
 	},
 /obj/machinery/light_switch{
 	pixel_x = 24;
@@ -27796,9 +27726,6 @@
 /obj/effect/floor_decal/corner/white{
 	dir = 5
 	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/bridge)
 "cpO" = (
@@ -28473,9 +28400,6 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/spline/fancy/wood/corner,
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/disposalpipe/segment{
@@ -29716,9 +29640,6 @@
 /turf/simulated/open/indoor/turfpack/muriki,
 /area/muriki/processor/hall/waterway_upper)
 "dbp" = (
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
@@ -30294,9 +30215,6 @@
 /obj/effect/floor_decal/corner/white{
 	dir = 5
 	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/bridge)
 "dkD" = (
@@ -30858,9 +30776,6 @@
 /obj/machinery/door/firedoor/glass,
 /obj/structure/cable/green{
 	icon_state = "1-8"
-	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -31632,9 +31547,6 @@
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/civ)
 "dKg" = (
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/light_switch{
@@ -32122,14 +32034,6 @@
 /obj/effect/floor_decal/corner/white{
 	dir = 5
 	},
-/obj/machinery/power/apc{
-	dir = 1;
-	name = "north bump";
-	pixel_y = 24
-	},
-/obj/structure/cable/green{
-	icon_state = "0-4"
-	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/bridge)
 "dTm" = (
@@ -32299,15 +32203,6 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/steel_grid,
 /area/security/security_processing)
-"dXz" = (
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/obj/structure/cable/green{
-	icon_state = "2-8"
-	},
-/turf/simulated/floor/wood,
-/area/crew_quarters/captain)
 "dXB" = (
 /obj/structure/railing{
 	dir = 4
@@ -33146,9 +33041,6 @@
 /area/maintenance/disposal)
 "emk" = (
 /obj/effect/floor_decal/spline/plain,
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
@@ -35476,11 +35368,6 @@
 /area/crew_quarters/heads/hos)
 "fbZ" = (
 /obj/structure/table/reinforced,
-/obj/machinery/power/apc{
-	name = "south bump";
-	pixel_y = -24
-	},
-/obj/structure/cable/green,
 /obj/machinery/newscaster{
 	pixel_x = -32
 	},
@@ -36169,9 +36056,6 @@
 	},
 /obj/structure/disposalpipe/junction{
 	dir = 4
-	},
-/obj/structure/cable/green{
-	icon_state = "2-4"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 1
@@ -40753,9 +40637,6 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay)
 "gYv" = (
-/obj/structure/cable/green{
-	icon_state = "2-8"
-	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 4
 	},
@@ -41701,9 +41582,6 @@
 /area/crew_quarters/kitchen)
 "hmf" = (
 /obj/effect/floor_decal/spline/plain,
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
@@ -43318,15 +43196,6 @@
 /obj/item/rectape,
 /turf/simulated/floor/wood,
 /area/security/briefing_room)
-"hMF" = (
-/obj/effect/floor_decal/spline/plain{
-	dir = 4
-	},
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/carpet/blucarpet,
-/area/bridge/meeting_room)
 "hMI" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -45001,9 +44870,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
-	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/teleporter/bridge)
@@ -48737,9 +48603,6 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 8
 	},
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/disposalpipe/segment,
@@ -49929,9 +49792,6 @@
 /obj/machinery/light_switch{
 	dir = 1;
 	pixel_y = -26
-	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -51868,9 +51728,6 @@
 /obj/machinery/door/airlock{
 	name = "Oval Office"
 	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
@@ -52631,9 +52488,6 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals3{
 	dir = 1
-	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
 	},
 /obj/structure/disposalpipe/junction{
 	dir = 1
@@ -57341,9 +57195,6 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
 /obj/effect/floor_decal/spline/plain/corner{
 	dir = 4
 	},
@@ -59413,9 +59264,6 @@
 /turf/simulated/floor/tiled,
 /area/engineering/eva)
 "ndQ" = (
-/obj/structure/cable/green{
-	icon_state = "2-8"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
@@ -61981,9 +61829,6 @@
 	name = "Showers"
 	},
 /obj/machinery/door/firedoor/border_only,
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/disposalpipe/segment,
@@ -63285,9 +63130,6 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/spline/fancy/wood/corner,
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/light_switch{
@@ -66002,9 +65844,6 @@
 /obj/effect/floor_decal/steeldecal/steel_decals3{
 	dir = 4
 	},
-/obj/structure/cable/green{
-	icon_state = "5-8"
-	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/bridge)
 "pvf" = (
@@ -66875,9 +66714,6 @@
 /turf/simulated/floor/wood,
 /area/bridge/meeting_room)
 "pLN" = (
-/obj/structure/cable/green{
-	icon_state = "2-8"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
 	},
@@ -66951,9 +66787,7 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 4
 	},
-/obj/machinery/disposal/mail_reciever{
-	name = "disposal mail destination(Captain)"
-	},
+/obj/machinery/disposal,
 /turf/simulated/floor/wood,
 /area/crew_quarters/captain)
 "pMX" = (
@@ -67344,9 +67178,6 @@
 /area/engineering/corepower)
 "pUw" = (
 /obj/structure/table/reinforced,
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
 /obj/item/radio/intercom{
 	dir = 8;
 	name = "Station Intercom (General)";
@@ -68046,14 +67877,6 @@
 "qfh" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 6
-	},
-/obj/machinery/power/apc{
-	dir = 4;
-	name = "east bump";
-	pixel_x = 24
-	},
-/obj/structure/cable/green{
-	icon_state = "0-8"
 	},
 /obj/machinery/light,
 /turf/simulated/floor/wood,
@@ -69651,9 +69474,6 @@
 "qGq" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 6
-	},
-/obj/structure/cable/green{
-	icon_state = "1-2"
 	},
 /turf/simulated/floor/carpet/blucarpet,
 /area/bridge/meeting_room)
@@ -73408,9 +73228,6 @@
 /obj/structure/cable/green{
 	icon_state = "2-8"
 	},
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
 /turf/simulated/floor/plating,
 /area/maintenance/substation/command)
 "rYu" = (
@@ -75434,12 +75251,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/medicelev)
-"sIv" = (
-/obj/structure/cable/green{
-	icon_state = "2-4"
-	},
-/turf/simulated/floor/wood,
-/area/lawoffice)
 "sIF" = (
 /obj/effect/floor_decal/corner/red/full{
 	dir = 1
@@ -77618,9 +77429,6 @@
 /turf/simulated/floor/water/acidic/turfpack/muriki,
 /area/muriki/processor/hall)
 "tuS" = (
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
@@ -78508,9 +78316,6 @@
 /obj/effect/floor_decal/corner/white{
 	dir = 5
 	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/bridge)
 "tLi" = (
@@ -79127,11 +78932,6 @@
 /turf/simulated/floor/wood,
 /area/lawoffice)
 "tUd" = (
-/obj/machinery/power/apc{
-	name = "south bump";
-	pixel_y = -24
-	},
-/obj/structure/cable/green,
 /obj/effect/floor_decal/spline/fancy/wood,
 /turf/simulated/floor/wood,
 /area/bridge/meeting_room)
@@ -80144,9 +79944,6 @@
 /obj/effect/floor_decal/corner/white{
 	dir = 5
 	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/bridge)
 "uiv" = (
@@ -80887,9 +80684,6 @@
 /obj/machinery/door/airlock/command{
 	name = "Bridge Privy"
 	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/muriki/bathroom/bridge)
 "uvv" = (
@@ -81282,14 +81076,6 @@
 /turf/simulated/floor/plating,
 /area/security/lobby)
 "uBc" = (
-/obj/machinery/power/apc{
-	dir = 1;
-	name = "north bump";
-	pixel_y = 24
-	},
-/obj/structure/cable/green{
-	icon_state = "0-2"
-	},
 /obj/machinery/light/small{
 	dir = 8
 	},
@@ -83041,18 +82827,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/lawoffice)
-"vhc" = (
-/obj/effect/floor_decal/spline/fancy/wood,
-/obj/machinery/power/apc{
-	name = "south bump";
-	pixel_y = -24
-	},
-/obj/structure/cable/green,
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/turf/simulated/floor/wood,
-/area/crew_quarters/captain)
 "vhk" = (
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 8
@@ -83881,9 +83655,6 @@
 /area/engineering/drone_fabrication)
 "vvV" = (
 /obj/structure/table/reinforced,
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
 /obj/effect/floor_decal/corner/white{
 	dir = 9
 	},
@@ -85109,9 +84880,6 @@
 "vPB" = (
 /obj/effect/floor_decal/corner/white{
 	dir = 5
-	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
 	},
 /obj/machinery/disposal/wall{
 	pixel_y = 32
@@ -86754,11 +86522,6 @@
 /area/medical/surgery)
 "wpr" = (
 /obj/effect/floor_decal/spline/fancy/wood,
-/obj/machinery/power/apc{
-	name = "south bump";
-	pixel_y = -24
-	},
-/obj/structure/cable/green,
 /turf/simulated/floor/wood,
 /area/lawoffice)
 "wpx" = (
@@ -89712,9 +89475,6 @@
 	dir = 4
 	},
 /obj/structure/cable/green{
-	icon_state = "2-4"
-	},
-/obj/structure/cable/green{
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/carpet/blucarpet,
@@ -90886,9 +90646,6 @@
 /obj/effect/floor_decal/corner/white{
 	dir = 1
 	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
 /obj/effect/floor_decal/steeldecal/steel_decals3{
 	dir = 6
 	},
@@ -91852,9 +91609,6 @@
 /area/maintenance/engineering)
 "ycs" = (
 /obj/effect/floor_decal/spline/plain,
-/obj/structure/cable/green{
-	icon_state = "1-8"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
 	},
@@ -143356,7 +143110,7 @@ tiz
 ggk
 eEA
 xop
-hMF
+eEA
 qGq
 tUd
 kTG
@@ -143673,7 +143427,7 @@ hre
 vgJ
 eXR
 xAJ
-sIv
+bJi
 wpr
 pOb
 aaY
@@ -145141,7 +144895,7 @@ gkm
 hFF
 kTG
 eVe
-apk
+iZt
 ptG
 neF
 woe
@@ -145300,7 +145054,7 @@ rUi
 bij
 ggg
 fos
-fPM
+hSM
 nYT
 apn
 sTI
@@ -145947,8 +145701,8 @@ qfh
 uhB
 uhB
 haD
-aMf
-cap
+auN
+dFx
 qUe
 app
 apm
@@ -147397,8 +147151,8 @@ cOQ
 nem
 rvN
 aew
-dXz
-vhc
+tBf
+rpJ
 oQq
 oQq
 kwK

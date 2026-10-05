@@ -389,11 +389,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/research/closet)
-"aaO" = (
-/obj/structure/ladder/up,
-/obj/structure/catwalk,
-/turf/simulated/floor/plating,
-/area/maintenance/research/closet)
 "aaP" = (
 /obj/structure/railing{
 	dir = 8
@@ -145911,7 +145906,7 @@ cOB
 ajL
 aat
 cOp
-aaO
+aat
 aat
 uEM
 uEM
