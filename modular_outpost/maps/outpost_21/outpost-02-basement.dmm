@@ -70739,10 +70739,6 @@
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/maintenance/cargo)
-"cNG" = (
-/obj/turbolift_map_holder/muriki/civevator,
-/turf/simulated/mineral/alt/turfpack/muriki,
-/area/mine/explored/muriki/cave/sci/east_access)
 "cNH" = (
 /obj/structure/railing{
 	dir = 8
@@ -147394,7 +147390,7 @@ adC
 adC
 adC
 adC
-cNG
+adC
 adC
 fJz
 fJz
