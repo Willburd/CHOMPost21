@@ -266,12 +266,27 @@
 
 // We are responsible for restoring the health UI's icons on removal
 /datum/remote_view_config/interior_vehicle/attached_to_mob(datum/component/remote_view/owner_component, mob/host_mob)
+	host_mob.click_intercept = src
 	original_health_hud_icon = host_mob.healths?.icon
 
 /datum/remote_view_config/interior_vehicle/detatch_from_mob(datum/component/remote_view/owner_component, mob/host_mob)
+	host_mob.click_intercept = null
 	if(host_mob.healths && original_health_hud_icon)
 		host_mob.healths.icon = original_health_hud_icon
 		host_mob.healths.appearance = null
+
+/datum/remote_view_config/interior_vehicle/proc/InterceptClickOn(mob/user, params, atom/target)
+	if(user.stat || user.paralysis || user.stunned)
+		return FALSE
+	var/datum/component/remote_view/comp = user.GetComponent(/datum/component/remote_view)
+	if(!comp)
+		return FALSE
+	if(!(isturf(target) || isturf(target.loc)))
+		return FALSE
+	var/obj/machinery/computer/vehicle_interior_console/C = comp.get_coordinator()
+	if(!istype(C))
+		return FALSE
+	return C.click_action(target, user, params)
 
 // Show the uav health instead of the mob's while it is viewing
 /datum/remote_view_config/interior_vehicle/handle_hud_health(mob/host_mob)
