@@ -2228,10 +2228,9 @@
 /obj/structure/cable/orange{
 	icon_state = "4-8"
 	},
-/obj/machinery/door/airlock/maintenance/rnd{
-	name = "Science Maintenance"
-	},
 /obj/machinery/door/firedoor/border_only,
+/obj/machinery/door/airlock/maintenance/command,
+/obj/item/airlock_brace,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/scielevbasement)
 "afc" = (
@@ -6378,9 +6377,6 @@
 /turf/simulated/floor/plating,
 /area/rnd/outpost/anomaly_lab)
 "amu" = (
-/obj/machinery/door/airlock/maintenance/rnd{
-	name = "Science Maintenance"
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -6400,6 +6396,8 @@
 	opacity = 0
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/door/airlock/maintenance/command,
+/obj/item/airlock_brace,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/scielevbasement)
 "amv" = (
@@ -9975,6 +9973,18 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology/xenobioh)
+"ata" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/orange{
+	icon_state = "4-8"
+	},
+/obj/effect/mine/claymore/flechette{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/scielevbasement)
 "atb" = (
 /obj/structure/table/rack/shelf,
 /obj/effect/floor_decal/corner/purple{
@@ -11900,6 +11910,7 @@
 /obj/structure/cable/orange{
 	icon_state = "0-4"
 	},
+/obj/structure/ladder/up,
 /turf/simulated/floor/plating,
 /area/maintenance/scielevbasement)
 "awB" = (
@@ -16408,9 +16419,6 @@
 /obj/effect/floor_decal/corner/orange{
 	dir = 5
 	},
-/obj/effect/floor_decal/industrial/warning/corner{
-	dir = 1
-	},
 /obj/structure/extinguisher_cabinet{
 	pixel_x = -5;
 	pixel_y = 30
@@ -20644,7 +20652,6 @@
 /obj/effect/floor_decal/corner/black{
 	dir = 6
 	},
-/obj/effect/floor_decal/industrial/warning,
 /obj/item/radio/intercom{
 	dir = 4;
 	name = "Station Intercom (General)";
@@ -21009,32 +21016,16 @@
 /turf/simulated/floor/plating,
 /area/maintenance/spine/eng)
 "aNV" = (
-/obj/machinery/door/blast/regular{
-	density = 0;
-	icon_state = "pdoor0";
-	id = "atmoslockdown";
-	name = "Atmospherics Lockdown";
-	opacity = 0
-	},
-/obj/effect/floor_decal/milspec/hatchmarks,
 /obj/structure/disposalpipe/segment,
-/turf/simulated/floor/tiled/techfloor,
+/turf/simulated/floor/tiled,
 /area/engineering/atmoshall)
 "aNW" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/door/blast/regular{
-	density = 0;
-	icon_state = "pdoor0";
-	id = "atmoslockdown";
-	name = "Atmospherics Lockdown";
-	opacity = 0
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/obj/effect/floor_decal/milspec/hatchmarks,
-/turf/simulated/floor/tiled/techfloor,
+/turf/simulated/floor/tiled,
 /area/engineering/atmoshall)
 "aNX" = (
 /obj/structure/catwalk,
@@ -21667,9 +21658,6 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/spine/eng)
 "aOR" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 1
-	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 1
 	},
@@ -21690,9 +21678,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
-	},
-/obj/effect/floor_decal/industrial/warning{
-	dir = 1
 	},
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -45770,7 +45755,6 @@
 /obj/effect/floor_decal/corner/black{
 	dir = 9
 	},
-/obj/effect/floor_decal/industrial/warning,
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/engineering/atmoshall)
@@ -75379,6 +75363,10 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock/maintenance/int,
+/obj/item/grenade/smokebomb{
+	name = "universal team smoke grenade";
+	smoke_color = "#ee30ff"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/scielevbasement)
 "dfZ" = (
@@ -142158,7 +142146,7 @@ ajW
 aqI
 kqR
 aqQ
-wJT
+ata
 anY
 anY
 anY
