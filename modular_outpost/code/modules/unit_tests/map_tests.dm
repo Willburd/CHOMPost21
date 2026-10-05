@@ -150,7 +150,6 @@
 		/area/engineering/refinery/tugstorage,
 		/area/rnd/stairwell,
 		/area/quartermaster/foyer,
-		/area/muriki/research/isolation_hall,
 		/area/medical/stairwell,
 		/area/medical/patient_wing,
 		/area/rnd/research/phoronics,
@@ -183,6 +182,7 @@
 		/area/muriki/crew/bunker_deep/main,
 		/area/muriki/crew/bunker_deep/comm,
 		/area/muriki/crew/bunker_deep/med,
+		/area/bridge/holdout_armory,
 	)
 
 	var/list/does_not_have_disposals = list(
@@ -229,7 +229,6 @@
 		/area/medical/voxlab/chem,
 		/area/medical/voxlab/surgery,
 		/area/medical/voxlab/recov,
-		/area/muriki/research/isolation_hall,
 		/area/rnd/research/xenobio_storage,
 		/area/rnd/xenobiology/burn,
 		/area/server,
@@ -297,7 +296,6 @@
 		/area/rnd/research/phoronics,
 		/area/engineering/refinery/tugstorage,
 		/area/medical/medbay4,
-		/area/muriki/research/isolation_hall,
 		/area/rnd/hallway/hazard,
 		/area/muriki/crewstairwell,
 		/area/medical/medbay,

@@ -389,11 +389,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/research/closet)
-"aaO" = (
-/obj/structure/ladder/up,
-/obj/structure/catwalk,
-/turf/simulated/floor/plating,
-/area/maintenance/research/closet)
 "aaP" = (
 /obj/structure/railing{
 	dir = 8
@@ -640,6 +635,7 @@
 /obj/structure/cable/orange{
 	icon_state = "0-4"
 	},
+/obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/plating,
 /area/maintenance/scielevbasement)
 "abu" = (
@@ -1009,11 +1005,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
 	},
-/obj/effect/floor_decal/corner/purple{
-	dir = 10
-	},
 /turf/simulated/floor/tiled/white,
-/area/rnd/hallway/lowmain)
+/area/maintenance/scielevbasement)
 "acr" = (
 /obj/effect/landmark/pengmark,
 /turf/simulated/floor/outdoors/mud/turfpack/muriki{
@@ -2964,16 +2957,11 @@
 	icon_state = "pipe-c"
 	},
 /obj/structure/cable/orange{
-	icon_state = "2-4"
+	icon_state = "4-8"
 	},
-/obj/effect/floor_decal/corner/purple{
-	dir = 5
-	},
-/obj/structure/cable/orange{
-	icon_state = "2-8"
-	},
+/obj/structure/barricade,
 /turf/simulated/floor/tiled/white,
-/area/rnd/hallway/lowmain)
+/area/maintenance/scielevbasement)
 "agu" = (
 /obj/effect/floor_decal/spline/fancy/wood,
 /obj/machinery/door/window/southright,
@@ -3340,14 +3328,11 @@
 /obj/structure/sign/warning/acid{
 	pixel_y = 32
 	},
-/obj/effect/floor_decal/corner/purple/full{
-	dir = 8
-	},
 /obj/structure/cable/orange{
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/white,
-/area/rnd/hallway/lowmain)
+/area/maintenance/scielevbasement)
 "agU" = (
 /obj/item/stack/rods,
 /turf/simulated/floor/tiled,
@@ -5717,17 +5702,9 @@
 	dir = 8;
 	icon_state = "pipe-c"
 	},
-/obj/effect/floor_decal/corner/purple{
-	dir = 6
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals_central7{
-	dir = 4
-	},
-/obj/structure/cable/orange{
-	icon_state = "1-2"
-	},
+/obj/structure/barricade,
 /turf/simulated/floor/tiled/white,
-/area/rnd/hallway/lowmain)
+/area/maintenance/scielevbasement)
 "ale" = (
 /obj/structure/bed/chair/sofa/corner/blue,
 /obj/effect/floor_decal/milspec/color/orange/half{
@@ -8029,14 +8006,9 @@
 /obj/effect/floor_decal/steeldecal/steel_decals10{
 	dir = 9
 	},
-/obj/structure/foamedmetal,
-/obj/structure/barricade,
 /turf/simulated/floor/tiled/techfloor,
 /area/muriki/elevator/scibase)
 "apu" = (
-/obj/structure/cable/orange{
-	icon_state = "1-4"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
@@ -8057,6 +8029,9 @@
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
+	},
+/obj/structure/cable/orange{
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/lowmain)
@@ -11068,9 +11043,6 @@
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/muriki/bathroom/scilower)
 "auX" = (
-/obj/structure/cable/orange{
-	icon_state = "1-2"
-	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
@@ -11781,22 +11753,6 @@
 "awr" = (
 /turf/simulated/wall/r_wall,
 /area/muriki/bathroom/scilower)
-"aws" = (
-/obj/structure/disposalpipe/segment,
-/obj/structure/cable/orange{
-	icon_state = "1-2"
-	},
-/obj/machinery/door/blast/regular{
-	density = 0;
-	dir = 8;
-	icon_state = "pdoor0";
-	id = "bridge blast";
-	name = "Bridge Blast Doors";
-	opacity = 0
-	},
-/obj/effect/floor_decal/industrial/hatch/yellow,
-/turf/simulated/floor/tiled/techfloor,
-/area/maintenance/scielevbasement)
 "awt" = (
 /obj/structure/table/standard,
 /obj/machinery/atmospherics/pipe/manifold/hidden/black{
@@ -11896,23 +11852,6 @@
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/rnd/xenobiology/xenobioh)
-"awA" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/structure/cable/orange{
-	icon_state = "4-8"
-	},
-/obj/machinery/power/apc{
-	name = "south bump";
-	pixel_y = -24
-	},
-/obj/structure/cable/orange{
-	icon_state = "0-4"
-	},
-/obj/structure/ladder/up,
-/turf/simulated/floor/plating,
-/area/maintenance/scielevbasement)
 "awB" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -14689,14 +14628,14 @@
 "aCe" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/effect/floor_decal/corner/purple{
-	dir = 1
-	},
 /obj/structure/disposalpipe/junction{
 	dir = 1;
 	icon_state = "pipe-j2"
 	},
-/turf/simulated/floor/tiled/white,
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/plating,
 /area/rnd/hallway/lowmain)
 "aCf" = (
 /obj/structure/disposalpipe/segment{
@@ -14725,10 +14664,8 @@
 	pixel_y = -30;
 	dir = 1
 	},
-/obj/effect/floor_decal/corner/purple/full,
-/obj/machinery/vending/wardrobe/scidrobe,
 /turf/simulated/floor/tiled/white,
-/area/rnd/hallway/lowmain)
+/area/maintenance/scielevbasement)
 "aCj" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/catwalk,
@@ -15245,9 +15182,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
 	},
-/obj/effect/floor_decal/corner/purple{
-	dir = 10
-	},
 /obj/machinery/light,
 /obj/machinery/hologram/holopad,
 /obj/structure/extinguisher_cabinet{
@@ -15258,7 +15192,10 @@
 	dir = 1;
 	icon_state = "pipe-c"
 	},
-/turf/simulated/floor/tiled/white,
+/obj/structure/cable/orange{
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/plating,
 /area/rnd/hallway/lowmain)
 "aDm" = (
 /obj/structure/disposalpipe/segment{
@@ -15337,7 +15274,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/white,
-/area/rnd/hallway/lowmain)
+/area/maintenance/scielevbasement)
 "aDz" = (
 /obj/effect/auto_crayon{
 	icon_state = "uboa"
@@ -16907,15 +16844,16 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
 	},
-/obj/effect/floor_decal/corner/purple{
-	dir = 8
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 4;
 	icon_state = "pipe-c"
 	},
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+/obj/item/clothing/head/cone,
 /turf/simulated/floor/tiled/white,
-/area/rnd/hallway/lowmain)
+/area/maintenance/scielevbasement)
 "aGn" = (
 /obj/effect/landmark/event_spawn/maintpred,
 /turf/simulated/floor/plating,
@@ -18887,9 +18825,6 @@
 	c_tag = "ENG - Terraformer Conveyor";
 	dir = 4
 	},
-/obj/machinery/light/small/emergency{
-	dir = 1
-	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
@@ -19920,7 +19855,7 @@
 /obj/machinery/floodlight{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/white,
+/turf/simulated/floor/plating,
 /area/rnd/hallway/lowmain)
 "aLV" = (
 /obj/machinery/camera/network/civilian{
@@ -45094,9 +45029,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology/xenobioh)
-"bGJ" = (
-/turf/simulated/wall/r_wall,
-/area/muriki/elevator/scibase)
 "bGK" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
@@ -54558,14 +54490,14 @@
 /area/rnd/hallway/lowmain)
 "bZL" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
-/obj/effect/floor_decal/corner/purple{
-	dir = 5
+/obj/structure/cable/orange{
+	icon_state = "2-8"
 	},
 /obj/structure/cable/orange{
-	icon_state = "4-8"
+	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled/white,
-/area/rnd/hallway/lowmain)
+/area/maintenance/scielevbasement)
 "bZM" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -54638,6 +54570,7 @@
 /obj/structure/cable/orange{
 	icon_state = "4-8"
 	},
+/obj/item/grenade/shooter/energy/lasertagall,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/scielevbasement)
 "bZS" = (
@@ -59304,6 +59237,12 @@
 	ignore_mapgen = 1
 	},
 /area/mine/explored/muriki/cave/civ/east_access)
+"clp" = (
+/obj/structure/cable/orange{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/white,
+/area/maintenance/scielevbasement)
 "clq" = (
 /obj/structure/cable/orange{
 	icon_state = "1-2"
@@ -61625,6 +61564,21 @@
 /obj/effect/mist,
 /turf/simulated/floor/flesh/turfpack/muriki,
 /area/muriki/processor/gland/airmix)
+"crF" = (
+/obj/turbolift_map_holder/muriki/scievator,
+/turf/simulated/floor/plating,
+/area/muriki/elevator/scibase)
+"crG" = (
+/obj/machinery/power/apc{
+	dir = 8;
+	name = "west bump";
+	pixel_x = -24
+	},
+/obj/structure/cable/orange{
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/plating,
+/area/muriki/elevator/scibase)
 "crH" = (
 /obj/structure/catwalk,
 /obj/effect/floor_decal/flesh{
@@ -62232,6 +62186,16 @@
 /obj/structure/ladder,
 /turf/simulated/open/muriki,
 /area/mine/unexplored/muriki/cave/underdark_pit/east_civ)
+"ctn" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+/obj/structure/cable/orange{
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/scielevbasement)
 "cto" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/catwalk,
@@ -62300,6 +62264,9 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/industrial/outline/red,
+/obj/machinery/light/small/emergency{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/engineering/coreproctunnel)
 "cty" = (
@@ -63002,6 +62969,11 @@
 /obj/structure/sign/yessmoking_1,
 /turf/simulated/wall,
 /area/muriki/crew/casino)
+"cuP" = (
+/obj/effect/floor_decal/industrial/outline/grey,
+/obj/structure/ladder/up,
+/turf/simulated/floor/plating,
+/area/maintenance/scielevbasement)
 "cuV" = (
 /obj/random/junk,
 /obj/machinery/light/small{
@@ -69141,22 +69113,20 @@
 /turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/unexplored/muriki/cave/west)
 "cJO" = (
+/obj/effect/floor_decal/milspec/hatchmarks,
 /obj/machinery/door/blast/regular{
 	density = 0;
-	dir = 4;
+	dir = 8;
 	icon_state = "pdoor0";
-	id = "Scilock";
-	name = "Science Lockdown";
+	id = "bridge blast";
+	name = "Bridge Blast Doors";
 	opacity = 0
 	},
-/obj/effect/floor_decal/milspec/hatchmarks,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/research)
 "cJP" = (
-/obj/machinery/door/airlock/maintenance/rnd{
-	name = "Science Maintenance"
-	},
 /obj/item/airlock_brace,
+/obj/machinery/door/airlock/maintenance/command,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/research)
 "cJQ" = (
@@ -69176,12 +69146,6 @@
 /obj/machinery/light/small{
 	dir = 4
 	},
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/research)
-"cJS" = (
-/obj/structure/ladder/up,
-/obj/effect/floor_decal/industrial/outline/grey,
-/obj/structure/catwalk,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/research)
 "cJT" = (
@@ -70092,12 +70056,6 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/spine/eng)
-"cLQ" = (
-/obj/structure/ladder/up,
-/obj/structure/catwalk,
-/obj/effect/floor_decal/industrial/outline/grey,
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/research)
 "cLR" = (
 /obj/structure/catwalk,
 /obj/structure/trash_pile,
@@ -70776,10 +70734,6 @@
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/maintenance/cargo)
-"cNG" = (
-/obj/turbolift_map_holder/muriki/civevator,
-/turf/simulated/mineral/alt/turfpack/muriki,
-/area/mine/explored/muriki/cave/sci/east_access)
 "cNH" = (
 /obj/structure/railing{
 	dir = 8
@@ -71226,7 +71180,7 @@
 	},
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/techfloor,
-/area/rnd/research/anomaly)
+/area/maintenance/scielevbasement)
 "cOI" = (
 /obj/structure/cable/green{
 	icon_state = "0-2"
@@ -76998,15 +76952,12 @@
 	dir = 1;
 	pixel_y = -26
 	},
-/obj/effect/floor_decal/corner/purple{
-	dir = 10
-	},
 /obj/machinery/camera/network/research{
 	c_tag = "SCI - Lower Hall Elevator";
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
-/area/rnd/hallway/lowmain)
+/area/maintenance/scielevbasement)
 "eMH" = (
 /obj/machinery/vr_sleeper{
 	dir = 1
@@ -80403,13 +80354,23 @@
 /area/mine/explored/muriki/river/south)
 "jmX" = (
 /obj/structure/disposalpipe/segment,
-/obj/machinery/door/firedoor/glass/hidden{
-	dir = 1
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+/obj/machinery/door/airlock/maintenance/command,
+/obj/machinery/door/blast/regular{
+	density = 0;
+	dir = 8;
+	icon_state = "pdoor0";
+	id = "bridge blast";
+	name = "Bridge Blast Doors";
+	opacity = 0
+	},
+/obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/old_cargo/white,
-/area/rnd/hallway/lowmain)
+/area/maintenance/scielevbasement)
 "jmZ" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
@@ -81351,15 +81312,6 @@
 "kmW" = (
 /turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/unexplored/muriki/cave/terra)
-"knD" = (
-/obj/structure/cable/orange{
-	icon_state = "1-2"
-	},
-/obj/effect/floor_decal/corner/purple{
-	dir = 6
-	},
-/turf/simulated/floor/tiled/white,
-/area/rnd/hallway/lowmain)
 "koo" = (
 /obj/structure/reagent_dispensers/fueltank,
 /turf/simulated/floor/plating,
@@ -82144,14 +82096,21 @@
 /turf/simulated/floor/tiled/dark,
 /area/medical/autosleever)
 "leE" = (
-/obj/machinery/door/airlock/maintenance/rnd{
-	name = "Science Maintenance"
-	},
 /obj/machinery/door/firedoor/border_only,
 /obj/structure/cable/orange{
 	icon_state = "4-8"
 	},
-/obj/item/grenade/shooter/energy/lasertagall,
+/obj/machinery/door/airlock/maintenance/command,
+/obj/item/airlock_brace,
+/obj/machinery/door/blast/regular{
+	density = 0;
+	dir = 8;
+	icon_state = "pdoor0";
+	id = "bridge blast";
+	name = "Bridge Blast Doors";
+	opacity = 0
+	},
+/obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/scielevbasement)
 "leR" = (
@@ -86070,7 +86029,10 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 4
 	},
-/turf/simulated/floor/tiled/white,
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/plating,
 /area/rnd/hallway/lowmain)
 "pXp" = (
 /obj/structure/bed/chair/bay/comfy/brown{
@@ -86147,15 +86109,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/muriki/crew/vr_train)
-"qbx" = (
-/obj/machinery/door/firedoor/glass/hidden{
-	dir = 1
-	},
-/obj/structure/cable/orange{
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/tiled/old_cargo/white,
-/area/rnd/hallway/lowmain)
 "qcl" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -88573,15 +88526,6 @@
 /obj/machinery/mech_recharger,
 /turf/simulated/floor/greengrid,
 /area/medical/robotics)
-"sGx" = (
-/obj/structure/cable/orange{
-	icon_state = "1-2"
-	},
-/obj/effect/floor_decal/corner/purple{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/white,
-/area/rnd/hallway/lowmain)
 "sGD" = (
 /turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/unexplored/muriki/cave/waste)
@@ -141096,7 +141040,7 @@ ajW
 ajW
 vxO
 cju
-ajL
+agc
 agc
 agc
 agc
@@ -141420,8 +141364,8 @@ ajW
 ajI
 euR
 akR
-aqQ
-bGJ
+bEW
+bEW
 anY
 anY
 anY
@@ -141430,7 +141374,7 @@ anY
 akT
 leE
 bEW
-agP
+bEW
 bZo
 bZo
 bZo
@@ -141582,17 +141526,17 @@ ahD
 xPt
 kJj
 aEx
-aqQ
+bEW
 abt
 anY
 aAT
 aAT
 aAT
-aAT
+crF
 anY
 agT
 aCi
-agP
+bEW
 amq
 bZF
 bZo
@@ -141744,7 +141688,7 @@ agQ
 lGO
 jNz
 aaU
-aqQ
+bEW
 wJT
 anY
 aAT
@@ -141752,9 +141696,9 @@ aAT
 aAT
 aAT
 apt
-bZK
+clp
 eLb
-agP
+bEW
 amq
 amq
 bSZ
@@ -141906,8 +141850,8 @@ fXH
 ajW
 daZ
 ifM
-aqQ
-awA
+bEW
+wJT
 anY
 aAT
 aAT
@@ -141916,7 +141860,7 @@ aAT
 apt
 aDy
 acq
-apw
+bEW
 ycM
 awR
 aJR
@@ -142068,7 +142012,7 @@ uaZ
 aFy
 aEK
 ajJ
-aqQ
+bEW
 wJT
 anY
 aAT
@@ -142230,7 +142174,7 @@ amD
 ajW
 aqI
 kqR
-aqQ
+bEW
 ata
 anY
 anY
@@ -142240,10 +142184,10 @@ anY
 anY
 agt
 ald
-qbx
-knD
+bEW
+apy
 auX
-sGx
+efy
 apu
 aCl
 ahC
@@ -142392,17 +142336,17 @@ abV
 cOP
 xTM
 vKz
-aqQ
+bEW
 oLp
 def
 alc
-gTh
+cuP
 kKh
-adE
+crG
 bEW
 afb
-aCl
-apw
+bEW
+bEW
 apw
 apw
 axN
@@ -142554,16 +142498,16 @@ fXH
 ajW
 chq
 cOL
-aqQ
+bEW
 aqK
 agc
 dMb
 ajT
 ucm
+ctn
 ajT
-aws
 aEy
-aCl
+bEW
 upO
 akX
 bRX
@@ -142716,7 +142660,7 @@ aLY
 lGO
 aiz
 abv
-aqQ
+bEW
 amr
 agc
 agc
@@ -142725,7 +142669,7 @@ agc
 qEz
 bEW
 gTh
-aCl
+bEW
 upO
 akX
 bRX
@@ -142878,7 +142822,7 @@ amG
 ajW
 cON
 azP
-aqQ
+bEW
 amu
 bEW
 bEW
@@ -143219,9 +143163,9 @@ fKk
 bsQ
 aCl
 ahC
-agP
-agP
-agP
+ahC
+ahC
+ahC
 ahC
 amq
 amq
@@ -143382,7 +143326,7 @@ aiB
 aCl
 agP
 agP
-cJS
+agP
 agP
 ahC
 amq
@@ -144678,7 +144622,7 @@ aqJ
 apw
 cGf
 agP
-cKB
+adz
 cKz
 agP
 ahC
@@ -144840,7 +144784,7 @@ aBa
 aCn
 cJV
 agP
-cLQ
+cKB
 agP
 agP
 ahC
@@ -145962,7 +145906,7 @@ cOB
 ajL
 aat
 cOp
-aaO
+aat
 aat
 uEM
 uEM
@@ -147441,7 +147385,7 @@ adC
 adC
 adC
 adC
-cNG
+adC
 adC
 fJz
 fJz

@@ -47,12 +47,12 @@
 	lift_size_x = 3
 	lift_size_y = 3
 	dir = SOUTH
-	name = "Science Elevator map placeholder"
+	name = "Bridge Elevator map placeholder"
 
 	areas_to_use = list(
-		/area/turbolift/scibase,
-		/area/turbolift/scimain,
-		/area/turbolift/sciupper,
+		/area/turbolift/commandbase,
+		/area/turbolift/commandmain,
+		/area/turbolift/commandupper,
 		)
 
 /obj/turbolift_map_holder/muriki/orbital_yard
