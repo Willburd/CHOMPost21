@@ -248,17 +248,6 @@
 /obj/random/cutout,
 /turf/simulated/floor/plating,
 /area/maintenance/gravgen)
-"aaA" = (
-/obj/structure/cable/green{
-	icon_state = "0-10"
-	},
-/obj/machinery/power/apc{
-	dir = 4;
-	name = "east bump";
-	pixel_x = 24
-	},
-/turf/simulated/floor,
-/area/muriki/elevator/civupper)
 "aaB" = (
 /obj/structure/cable/green{
 	icon_state = "0-2"
@@ -12096,70 +12085,81 @@
 	},
 /area/muriki/processor/pools/pylorus)
 "ayP" = (
+/obj/structure/cable/green{
+	icon_state = "0-10"
+	},
+/obj/machinery/power/apc{
+	dir = 4;
+	name = "east bump";
+	pixel_x = 24
+	},
+/turf/simulated/floor,
+/area/muriki/elevator/civupper)
+"ayQ" = (
 /obj/machinery/camera/network/outside{
 	c_tag = "EXT - Bridge Roof Tube Access";
 	dir = 8
 	},
 /turf/simulated/floor/outpost_roof/turfpack/muriki,
 /area/muriki/rooftop/science)
-"ayQ" = (
+"ayR" = (
 /obj/effect/zone_divider,
 /obj/effect/landmark/pengmark,
 /turf/simulated/floor/outpost_roof/turfpack/muriki,
 /area/muriki/rooftop/science)
-"ayR" = (
+"ayS" = (
 /obj/structure/fence/electric{
 	dir = 4
 	},
 /obj/effect/zone_divider,
 /turf/simulated/floor/outpost_roof/turfpack/muriki,
 /area/muriki/rooftop/science)
-"ayS" = (
+"ayT" = (
 /obj/structure/cable/orange{
 	icon_state = "4-8"
 	},
 /obj/effect/zone_divider,
 /turf/simulated/floor/outpost_roof/turfpack/muriki,
 /area/muriki/rooftop/science)
-"ayT" = (
+"ayU" = (
 /obj/machinery/camera/network/outside{
 	c_tag = "EXT - Bridge Roof South"
 	},
 /turf/simulated/floor/outpost_roof/turfpack/muriki,
 /area/muriki/rooftop/science)
-"ayU" = (
+"ayV" = (
 /obj/machinery/camera/network/outside{
 	c_tag = "EXT - Bridge Roof South East";
 	dir = 4
 	},
 /turf/simulated/floor/outpost_roof/turfpack/muriki,
 /area/muriki/rooftop/science)
-"ayV" = (
+"ayW" = (
 /obj/machinery/camera/network/outside{
 	c_tag = "EXT - Bridge Roof South West"
 	},
 /turf/simulated/floor/outpost_roof/turfpack/muriki,
 /area/muriki/rooftop/science)
-"ayW" = (
+"ayX" = (
 /obj/effect/landmark{
 	name = "vinestart"
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/captain)
-"ayX" = (
+"ayY" = (
 /obj/effect/floor_decal/corner/white{
 	dir = 9
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/research/sci_req_lab)
-"ayY" = (
+"ayZ" = (
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/dark,
 /area/rnd/research/sci_req_lab)
-"ayZ" = (
+"aza" = (
 /turf/simulated/floor/tiled/dark,
 /area/rnd/research/sci_req_lab)
-"aza" = (
+"azb" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
 	},
@@ -12182,7 +12182,7 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/hallway/upper)
-"azb" = (
+"azc" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -12203,7 +12203,7 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/hallway/upper)
-"azc" = (
+"azd" = (
 /obj/structure/window/maintenance_panel{
 	dir = 1
 	},
@@ -12212,16 +12212,9 @@
 	},
 /turf/simulated/floor,
 /area/maintenance/substation/command)
-"azd" = (
+"aze" = (
 /obj/effect/landmark{
 	name = "vinestart"
-	},
-/turf/simulated/floor,
-/area/maintenance/substation/command)
-"aze" = (
-/obj/structure/disposalpipe/segment{
-	icon_state = "pipe-c";
-	dir = 4
 	},
 /turf/simulated/floor,
 /area/maintenance/substation/command)
@@ -12241,11 +12234,18 @@
 "azg" = (
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-c";
-	dir = 2
+	dir = 4
 	},
 /turf/simulated/floor,
 /area/maintenance/substation/command)
 "azh" = (
+/obj/structure/disposalpipe/segment{
+	icon_state = "pipe-c";
+	dir = 2
+	},
+/turf/simulated/floor,
+/area/maintenance/substation/command)
+"azi" = (
 /obj/structure/foamedmetal,
 /obj/machinery/atmospherics/pipe/cap/visible/scrubbers{
 	dir = 1
@@ -12255,14 +12255,14 @@
 	},
 /turf/simulated/floor,
 /area/rnd/hallway/phoronicsbridge)
-"azi" = (
+"azj" = (
 /obj/structure/railing{
 	dir = 1
 	},
 /obj/effect/landmark/pengmark,
 /turf/simulated/floor/outpost_roof/turfpack/muriki,
 /area/muriki/rooftop/science)
-"azj" = (
+"azk" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor,
@@ -102618,9 +102618,9 @@ kxr
 kxr
 avb
 apr
-ayX
-ayX
-ayX
+ayY
+ayY
+ayY
 abQ
 ayi
 adl
@@ -103266,12 +103266,12 @@ kxr
 kxr
 ayi
 apD
-ayZ
+aza
 auR
-ayY
+ayZ
 auX
 ayi
-ayV
+ayW
 adl
 adl
 adl
@@ -103579,7 +103579,7 @@ kxr
 kxr
 kxr
 bri
-aze
+azg
 bMu
 ayz
 ayz
@@ -103904,7 +103904,7 @@ kxr
 kxr
 bri
 aql
-azc
+azd
 ejR
 lou
 lou
@@ -104227,7 +104227,7 @@ kxr
 kxr
 kxr
 bri
-azg
+azh
 iRk
 ejR
 lou
@@ -104559,7 +104559,7 @@ ejR
 ejR
 ejR
 ejR
-aza
+azb
 xci
 apo
 axV
@@ -105038,7 +105038,7 @@ kxr
 kxr
 bri
 vOa
-azd
+aze
 ruw
 kia
 lYL
@@ -105056,7 +105056,7 @@ apv
 apv
 oSW
 apo
-ayT
+ayU
 adl
 pYM
 axp
@@ -105377,7 +105377,7 @@ axz
 eMt
 axz
 axz
-ayW
+ayX
 nDI
 apo
 adl
@@ -105385,10 +105385,10 @@ adl
 pYM
 axo
 adl
-ayP
+ayQ
 adl
 apS
-aaA
+ayP
 dVB
 xdv
 hJL
@@ -105517,12 +105517,12 @@ gJN
 oZp
 pHA
 naM
-azj
+azk
 xGR
 eZf
 aCS
 tjN
-azh
+azi
 cit
 adl
 adl
@@ -106008,7 +106008,7 @@ kxr
 kxr
 kxr
 kxr
-azi
+azj
 adl
 adl
 adl
@@ -106179,7 +106179,7 @@ thK
 thK
 thK
 thK
-azb
+azc
 apH
 apo
 ayd
@@ -106674,7 +106674,7 @@ adl
 adl
 adl
 adl
-ayU
+ayV
 adl
 adl
 adl
@@ -107002,9 +107002,9 @@ agI
 agI
 agI
 agI
+ayT
 ayS
 ayR
-ayQ
 cwU
 axb
 aKf
