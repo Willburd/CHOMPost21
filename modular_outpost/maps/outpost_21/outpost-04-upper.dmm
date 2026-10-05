@@ -6779,6 +6779,16 @@
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
 /area/crew_quarters/captain)
+"apn" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/corner/white,
+/turf/simulated/floor/tiled/dark,
+/area/rnd/hallway/upper)
 "apo" = (
 /turf/simulated/wall/r_wall,
 /area/crew_quarters/captain)
@@ -103961,7 +103971,7 @@ lou
 lou
 ciC
 apN
-ayl
+apn
 rMF
 sGL
 rZV
@@ -108334,7 +108344,7 @@ sgl
 cHE
 ayB
 wTx
-awT
+kxr
 qQa
 qQa
 qQa
@@ -108496,7 +108506,7 @@ kxr
 kxr
 ags
 kxr
-qQa
+kxr
 qQa
 qQa
 qQa

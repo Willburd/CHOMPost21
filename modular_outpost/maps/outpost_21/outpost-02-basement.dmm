@@ -53948,6 +53948,9 @@
 	name = "south bump";
 	pixel_y = -24
 	},
+/obj/structure/cable/orange{
+	icon_state = "0-8"
+	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/muriki/elevator/civbase)
 "bYG" = (
