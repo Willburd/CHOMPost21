@@ -12709,9 +12709,6 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/flesh,
-/obj/structure/window/maintenance_panel{
-	dir = 8
-	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/muriki/processor/hall)
 "ayl" = (
@@ -12726,9 +12723,6 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/flesh,
-/obj/effect/mine/claymore/flechette{
-	dir = 4
-	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/muriki/processor/hall)
 "aym" = (
@@ -14242,6 +14236,21 @@
 "aBg" = (
 /turf/simulated/wall,
 /area/mine/unexplored/muriki/cave/underdark_pit/east_civ)
+"aBh" = (
+/obj/machinery/porta_turret/heavy/disabler{
+	req_one_access = list(199);
+	check_access = 0;
+	check_anomalies = 0;
+	check_arrest = 0;
+	check_records = 0;
+	enabled = 0;
+	check_all = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/engineering/coreproctunnel)
 "aBi" = (
 /obj/machinery/door/airlock/maintenance/common,
 /obj/item/airlock_brace,
@@ -18873,6 +18882,19 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/rnd/research/atmosia)
+"aJY" = (
+/obj/machinery/camera/network/engineering{
+	c_tag = "ENG - Terraformer Conveyor";
+	dir = 4
+	},
+/obj/machinery/light/small/emergency{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/engineering/coreproctunnel)
 "aJZ" = (
 /obj/structure/catwalk,
 /obj/structure/railing{
@@ -48514,9 +48536,6 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
-/obj/machinery/light/small/emergency{
-	dir = 1
-	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/engineering/coreproctunnel)
 "bNW" = (
@@ -62184,10 +62203,6 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/obj/machinery/camera/network/engineering{
-	c_tag = "ENG - Terraformer Conveyor";
-	dir = 4
-	},
 /obj/effect/floor_decal/industrial/outline/red,
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/engineering/coreproctunnel)
@@ -63821,24 +63836,6 @@
 /obj/machinery/porta_turret/heavy,
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/muriki/processor/hall/entrance)
-"cxR" = (
-/obj/machinery/atmospherics/pipe/simple/visible/red{
-	dir = 4
-	},
-/obj/machinery/light/small/emergency{
-	dir = 1
-	},
-/obj/structure/catwalk,
-/obj/effect/floor_decal/flesh{
-	dir = 1
-	},
-/obj/effect/floor_decal/flesh,
-/obj/structure/window/maintenance_panel{
-	dir = 4
-	},
-/obj/effect/mine/portal,
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/muriki/processor/hall)
 "cxS" = (
 /obj/structure/window/phoronreinforced,
 /obj/machinery/porta_turret/heavy,
@@ -71722,15 +71719,6 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/spine/eng)
-"cQw" = (
-/obj/machinery/atmospherics/pipe/simple/visible/red{
-	dir = 4
-	},
-/obj/effect/mine/claymore/flechette{
-	dir = 4
-	},
-/turf/simulated/floor/flesh/turfpack/muriki,
-/area/muriki/processor/hall/entrance)
 "cQx" = (
 /obj/structure/table/steel,
 /turf/simulated/floor/plating,
@@ -88263,7 +88251,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/red,
 /obj/effect/mist,
-/obj/structure/ladder/up,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/muriki/processor/hall)
 "ssD" = (
@@ -103280,7 +103267,7 @@ cMr
 aac
 avy
 avy
-cxR
+ayl
 avy
 aad
 aad
@@ -103442,7 +103429,7 @@ aac
 aNd
 cxS
 aAU
-cQw
+azx
 aAU
 cxP
 aad
@@ -105220,9 +105207,9 @@ kwU
 kwU
 kwU
 kwU
-kwU
-kwU
-kwU
+gKH
+gKH
+gKH
 gKH
 bTh
 gKH
@@ -105381,9 +105368,9 @@ kwU
 kwU
 kwU
 kwU
-kwU
 gKH
 gKH
+aBh
 gKH
 gKH
 bTh
@@ -105544,7 +105531,7 @@ kwU
 kwU
 kwU
 gKH
-gKH
+aJY
 bNV
 bHZ
 bTr
@@ -106676,8 +106663,8 @@ kwU
 kwU
 kwU
 kwU
-bSS
-bSS
+gKH
+bRm
 gKH
 cet
 gKH
@@ -106839,7 +106826,7 @@ kwU
 kwU
 kwU
 gKH
-gKH
+bRm
 gKH
 bTM
 gKH
