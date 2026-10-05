@@ -809,6 +809,7 @@
 /obj/effect/floor_decal/corner/white/full{
 	dir = 4
 	},
+/obj/structure/sign/painting/public/south,
 /turf/simulated/floor/tiled/dark,
 /area/rnd/hallway/upper)
 "abO" = (
@@ -4349,6 +4350,7 @@
 /obj/effect/floor_decal/corner/white{
 	dir = 10
 	},
+/obj/structure/sign/painting/public/south,
 /turf/simulated/floor/tiled/dark,
 /area/rnd/hallway/upper)
 "ako" = (
@@ -7037,19 +7039,19 @@
 /obj/structure/cable/green{
 	icon_state = "5-10"
 	},
-/turf/simulated/floor/carpet/blucarpet,
+/turf/simulated/floor/carpet/sblucarpet,
 /area/crew_quarters/captain)
 "apL" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/carpet/blucarpet,
+/turf/simulated/floor/carpet/sblucarpet,
 /area/crew_quarters/captain)
 "apM" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
-/turf/simulated/floor/carpet/blucarpet,
+/turf/simulated/floor/carpet/sblucarpet,
 /area/crew_quarters/captain)
 "apN" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -7165,7 +7167,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/carpet/blucarpet,
+/turf/simulated/floor/carpet/sblucarpet,
 /area/crew_quarters/captain)
 "apX" = (
 /obj/effect/floor_decal/corner/red{
@@ -11248,7 +11250,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/turf/simulated/floor/carpet/blucarpet,
+/turf/simulated/floor/carpet/sblucarpet,
 /area/crew_quarters/captain)
 "axL" = (
 /obj/structure/disposalpipe/segment{
@@ -11369,7 +11371,7 @@
 	pixel_x = 6;
 	pixel_y = -14
 	},
-/turf/simulated/floor/carpet/blucarpet,
+/turf/simulated/floor/carpet/sblucarpet,
 /area/crew_quarters/captain)
 "axS" = (
 /obj/machinery/keycard_auth{
@@ -14560,7 +14562,7 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
-/turf/simulated/floor/carpet/blucarpet,
+/turf/simulated/floor/carpet/sblucarpet,
 /area/crew_quarters/captain)
 "bRV" = (
 /obj/structure/cable/green{
@@ -47009,7 +47011,7 @@
 "tLp" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
-/turf/simulated/floor/carpet/blucarpet,
+/turf/simulated/floor/carpet/sblucarpet,
 /area/crew_quarters/captain)
 "tLJ" = (
 /turf/simulated/wall,
@@ -50380,7 +50382,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/turf/simulated/floor/carpet/blucarpet,
+/turf/simulated/floor/carpet/sblucarpet,
 /area/crew_quarters/captain)
 "vux" = (
 /obj/effect/floor_decal/industrial/warning/dust{

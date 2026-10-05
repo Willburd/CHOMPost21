@@ -4191,7 +4191,7 @@
 /obj/effect/floor_decal/steeldecal/steel_decals_central7{
 	dir = 4
 	},
-/turf/simulated/floor/carpet/blucarpet,
+/turf/simulated/floor/carpet/sblucarpet,
 /area/rnd/breakroom)
 "afX" = (
 /obj/structure/cable/green{
@@ -6612,7 +6612,7 @@
 /area/muriki/grounds/shutt)
 "akt" = (
 /obj/structure/prop/rock/small,
-/obj/effect/floor_decal/industrial/warning/dust{
+/obj/effect/floor_decal/industrial/warning/dust/corner{
 	dir = 4
 	},
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
@@ -8973,7 +8973,7 @@
 	dir = 1
 	},
 /obj/effect/landmark/start/scientist,
-/turf/simulated/floor/carpet/blucarpet,
+/turf/simulated/floor/carpet/sblucarpet,
 /area/rnd/breakroom)
 "apg" = (
 /obj/structure/toilet,
@@ -11244,19 +11244,21 @@
 /obj/machinery/firealarm{
 	pixel_y = 26
 	},
-/obj/structure/table/rack,
-/obj/machinery/door/window/brigdoor/eastright{
-	name = "Ballistics"
+/obj/item/ammo_magazine/m44,
+/obj/item/ammo_magazine/m44,
+/obj/item/ammo_magazine/m44,
+/obj/item/ammo_magazine/m44,
+/obj/item/ammo_magazine/m44,
+/obj/item/ammo_magazine/m44,
+/obj/item/gun/projectile/deagle,
+/obj/item/gun/projectile/deagle,
+/obj/structure/closet/secure_closet/guncabinet{
+	name = "Handgun cabinet";
+	req_one_access = list(1)
 	},
-/obj/item/ammo_magazine/m44,
-/obj/item/ammo_magazine/m44,
-/obj/item/ammo_magazine/m44,
-/obj/item/ammo_magazine/m44,
-/obj/item/ammo_magazine/m44,
-/obj/item/ammo_magazine/m44,
-/obj/item/gun/projectile/deagle,
-/obj/item/gun/projectile/deagle,
-/obj/effect/floor_decal/corner/red/borderfull,
+/obj/effect/floor_decal/corner/red/full{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/security/tactical/red)
 "avg" = (
@@ -11840,14 +11842,13 @@
 /area/muriki/bathroom/bridge)
 "awh" = (
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/glass_command{
-	name = "Bridge";
-	req_one_access = null
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/door/airlock/glass_centcom{
+	name = "Bridge Access"
+	},
 /turf/simulated/floor/tiled/techfloor,
-/area/hallway/primary/central_three)
+/area/bridge/hallway)
 "awi" = (
 /obj/effect/floor_decal/corner/brown{
 	dir = 5
@@ -13430,7 +13431,7 @@
 /obj/item/expi_pamphlet,
 /obj/item/expi_pamphlet,
 /obj/item/expi_pamphlet,
-/turf/simulated/floor/carpet/blucarpet,
+/turf/simulated/floor/carpet/sblucarpet,
 /area/rnd/breakroom)
 "aAs" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -13747,7 +13748,7 @@
 	dir = 8
 	},
 /obj/effect/landmark/start/scientist,
-/turf/simulated/floor/carpet/blucarpet,
+/turf/simulated/floor/carpet/sblucarpet,
 /area/rnd/breakroom)
 "aAX" = (
 /obj/effect/floor_decal/milspec/color/red/half{
@@ -14197,21 +14198,6 @@
 /obj/effect/zone_divider,
 /turf/simulated/floor/water/acidic/turfpack/muriki,
 /area/muriki/grounds/waste)
-"aCd" = (
-/obj/structure/grille{
-	desc = "A flimsy lattice of metal rods, with screws to secure it to the floor. This grille seems slightly more sturdy than others probably reinforced to withstand the wildlife.";
-	health = 25;
-	name = "Reinforced Grille"
-	},
-/obj/structure/cable/orange{
-	icon_state = "0-8"
-	},
-/obj/structure/cable/orange{
-	icon_state = "0-4"
-	},
-/obj/effect/zone_divider,
-/turf/simulated/floor/plating/external/turfpack/muriki,
-/area/security/tactical)
 "aCe" = (
 /obj/effect/landmark{
 	name = "carpspawn"
@@ -16559,7 +16545,6 @@
 /turf/simulated/floor/water/acidic/turfpack/muriki,
 /area/muriki/grounds/sci)
 "aKu" = (
-/obj/effect/floor_decal/industrial/stand_clear/yellow,
 /obj/machinery/door/blast/regular{
 	density = 0;
 	dir = 8;
@@ -16570,8 +16555,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/effect/floor_decal/industrial/stand_clear,
 /turf/simulated/floor/tiled/techfloor,
-/area/hallway/primary/central_three)
+/area/bridge/hallway)
 "aKv" = (
 /obj/structure/prop/rock/water,
 /turf/simulated/floor/water/acidic/deep/turfpack/muriki,
@@ -19145,6 +19131,9 @@
 	dir = 1;
 	pixel_y = -8
 	},
+/obj/structure/sign/department/bridge{
+	pixel_y = 8
+	},
 /turf/simulated/wall/r_wall,
 /area/hallway/primary/central_three)
 "aSN" = (
@@ -19157,11 +19146,8 @@
 	name = "Bridge Blast Doors";
 	opacity = 0
 	},
-/obj/structure/sign/department/bridge{
-	pixel_x = -32
-	},
 /turf/simulated/floor/tiled/techfloor,
-/area/hallway/primary/central_three)
+/area/bridge/hallway)
 "aSO" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
@@ -19181,15 +19167,14 @@
 	pixel_x = 32
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/hallway/primary/central_three)
+/area/bridge/hallway)
 "aSQ" = (
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/glass_command{
-	name = "Bridge";
-	req_one_access = null
+/obj/machinery/door/airlock/glass_centcom{
+	name = "Bridge Access"
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/hallway/primary/central_three)
+/area/bridge/hallway)
 "aSR" = (
 /obj/effect/floor_decal/corner/white{
 	dir = 5
@@ -19359,12 +19344,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge/hallway)
-"aTk" = (
-/obj/structure/cable/orange{
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/outdoors/sidewalk/slab/turfpack/muriki,
-/area/security/tactical)
 "aTl" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable/green{
@@ -19540,7 +19519,7 @@
 /obj/effect/floor_decal/spline/plain/corner{
 	dir = 8
 	},
-/turf/simulated/floor/carpet/blucarpet,
+/turf/simulated/floor/carpet/sblucarpet,
 /area/rnd/otherlab)
 "aTz" = (
 /obj/structure/disposalpipe/segment,
@@ -19565,13 +19544,13 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/tealcarpet,
 /area/crew_quarters/heads/hop)
 "aTB" = (
 /obj/structure/cable/green{
 	icon_state = "8-9"
 	},
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/tealcarpet,
 /area/crew_quarters/heads/hop)
 "aTC" = (
 /obj/structure/table/reinforced,
@@ -19607,12 +19586,12 @@
 /obj/structure/cable/green{
 	icon_state = "6-9"
 	},
-/turf/simulated/floor/carpet/blucarpet,
+/turf/simulated/floor/carpet/sblucarpet,
 /area/rnd/otherlab)
 "aTF" = (
 /obj/structure/table/fancyblack,
 /obj/effect/floor_decal/spline/plain/corner,
-/turf/simulated/floor/carpet/blucarpet,
+/turf/simulated/floor/carpet/sblucarpet,
 /area/rnd/otherlab)
 "aTG" = (
 /obj/structure/grille,
@@ -19643,7 +19622,7 @@
 /obj/effect/floor_decal/spline/plain/corner{
 	dir = 1
 	},
-/turf/simulated/floor/carpet/blucarpet,
+/turf/simulated/floor/carpet/sblucarpet,
 /area/rnd/otherlab)
 "aTJ" = (
 /obj/effect/floor_decal/corner/brown/full{
@@ -19698,7 +19677,7 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 6
 	},
-/turf/simulated/floor/carpet/blucarpet,
+/turf/simulated/floor/carpet/sblucarpet,
 /area/rnd/otherlab)
 "aTP" = (
 /obj/structure/bed/chair/bay/comfy/blue{
@@ -20281,13 +20260,13 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 4
 	},
-/turf/simulated/floor/carpet/blucarpet,
+/turf/simulated/floor/carpet/sblucarpet,
 /area/rnd/breakroom)
 "aVt" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/carpet/blucarpet,
+/turf/simulated/floor/carpet/sblucarpet,
 /area/rnd/breakroom)
 "aVu" = (
 /obj/structure/cable/green{
@@ -20296,7 +20275,7 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 4
 	},
-/turf/simulated/floor/carpet/blucarpet,
+/turf/simulated/floor/carpet/sblucarpet,
 /area/rnd/breakroom)
 "aVv" = (
 /obj/effect/floor_decal/borderfloor,
@@ -20689,7 +20668,7 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/tealcarpet,
 /area/crew_quarters/heads/hop)
 "aWi" = (
 /obj/effect/shuttle_landmark/premade/orbital_escape/landing_site/pod_three,
@@ -20774,7 +20753,7 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 1
 	},
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/tealcarpet,
 /area/crew_quarters/heads/hop)
 "aWt" = (
 /obj/effect/floor_decal/corner/red{
@@ -21295,7 +21274,7 @@
 	name = "Head of Personnel"
 	},
 /obj/effect/floor_decal/spline/plain,
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/tealcarpet,
 /area/crew_quarters/heads/hop)
 "aXn" = (
 /obj/structure/table/reinforced,
@@ -21303,7 +21282,7 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/spline/plain,
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/tealcarpet,
 /area/crew_quarters/heads/hop)
 "aXo" = (
 /obj/effect/floor_decal/spline/plain{
@@ -21315,7 +21294,7 @@
 /obj/structure/cable/green{
 	icon_state = "4-9"
 	},
-/turf/simulated/floor/carpet/blucarpet,
+/turf/simulated/floor/carpet/sblucarpet,
 /area/rnd/otherlab)
 "aXp" = (
 /obj/structure/bed/chair/bay/comfy/teal{
@@ -21329,7 +21308,7 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/carpet/blucarpet,
+/turf/simulated/floor/carpet/sblucarpet,
 /area/rnd/otherlab)
 "aXq" = (
 /obj/structure/disposalpipe/segment,
@@ -21374,7 +21353,7 @@
 /turf/simulated/floor/carpet/turcarpet,
 /area/hallway/secondary/entry/docking_lounge)
 "aXt" = (
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/tealcarpet,
 /area/crew_quarters/heads/hop)
 "aXu" = (
 /obj/structure/grille,
@@ -21390,11 +21369,11 @@
 /obj/effect/landmark{
 	name = "vinestart"
 	},
-/turf/simulated/floor/carpet/blucarpet,
+/turf/simulated/floor/carpet/sblucarpet,
 /area/rnd/otherlab)
 "aXw" = (
 /obj/structure/table/fancyblack,
-/turf/simulated/floor/carpet/blucarpet,
+/turf/simulated/floor/carpet/sblucarpet,
 /area/rnd/otherlab)
 "aXx" = (
 /obj/structure/disposalpipe/segment,
@@ -21437,7 +21416,7 @@
 	dir = 8;
 	icon_state = "pipe-c"
 	},
-/turf/simulated/floor/carpet/blucarpet,
+/turf/simulated/floor/carpet/sblucarpet,
 /area/rnd/otherlab)
 "aXA" = (
 /obj/structure/cliff{
@@ -21450,7 +21429,7 @@
 /obj/effect/landmark{
 	name = "lightsout"
 	},
-/turf/simulated/floor/carpet/blucarpet,
+/turf/simulated/floor/carpet/sblucarpet,
 /area/rnd/otherlab)
 "aXC" = (
 /obj/structure/table/fancyblack,
@@ -21461,7 +21440,7 @@
 	pixel_x = -6;
 	pixel_y = 9
 	},
-/turf/simulated/floor/carpet/blucarpet,
+/turf/simulated/floor/carpet/sblucarpet,
 /area/rnd/otherlab)
 "aXD" = (
 /obj/machinery/recharger/wallcharger{
@@ -21481,7 +21460,7 @@
 	dir = 9
 	},
 /obj/structure/disposalpipe/segment,
-/turf/simulated/floor/carpet/blucarpet,
+/turf/simulated/floor/carpet/sblucarpet,
 /area/rnd/otherlab)
 "aXF" = (
 /obj/structure/bed/chair/bay/comfy/brown{
@@ -21492,7 +21471,7 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 1
 	},
-/turf/simulated/floor/carpet/blucarpet,
+/turf/simulated/floor/carpet/sblucarpet,
 /area/rnd/otherlab)
 "aXG" = (
 /obj/structure/window/phoronreinforced{
@@ -21709,7 +21688,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/simulated/floor/carpet/blucarpet,
+/turf/simulated/floor/carpet/sblucarpet,
 /area/rnd/otherlab)
 "aYa" = (
 /obj/structure/disposalpipe/segment{
@@ -21752,13 +21731,13 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 9
 	},
-/turf/simulated/floor/carpet/blucarpet,
+/turf/simulated/floor/carpet/sblucarpet,
 /area/rnd/otherlab)
 "aYg" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 5
 	},
-/turf/simulated/floor/carpet/blucarpet,
+/turf/simulated/floor/carpet/sblucarpet,
 /area/rnd/otherlab)
 "aYh" = (
 /obj/structure/cable/green{
@@ -22090,6 +22069,12 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge/hallway)
+"aYF" = (
+/obj/structure/fence/electric_sign{
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
+/area/security/tactical)
 "aYG" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -22290,6 +22275,12 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/dark,
 /area/bridge/hallway)
+"aYU" = (
+/obj/structure/fence/eshui_sign_high_sec/electric{
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
+/area/security/tactical)
 "aYV" = (
 /obj/structure/cable/green{
 	icon_state = "2-5"
@@ -22303,6 +22294,10 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge/hallway)
+"aYW" = (
+/obj/structure/fence/electric_sign,
+/turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
+/area/security/tactical)
 "aYX" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/tiled/milspec,
@@ -23180,6 +23175,10 @@
 	},
 /turf/simulated/floor/plating,
 /area/bridge)
+"bas" = (
+/obj/structure/fence/eshui_sign_high_sec/electric,
+/turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
+/area/security/tactical)
 "bat" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/brown/border,
@@ -23319,6 +23318,10 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge/hallway)
+"baI" = (
+/obj/structure/fence/electric,
+/turf/simulated/floor/water/acidic/turfpack/muriki,
+/area/security/tactical)
 "baJ" = (
 /obj/effect/floor_decal/corner/white{
 	dir = 5
@@ -23421,6 +23424,7 @@
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/structure/sign/painting/public/west,
 /turf/simulated/floor/tiled/dark,
 /area/bridge/hallway)
 "baT" = (
@@ -23436,7 +23440,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
 	},
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/tealcarpet,
 /area/crew_quarters/heads/hop)
 "baV" = (
 /obj/structure/disposalpipe/segment,
@@ -23547,6 +23551,26 @@
 	},
 /turf/simulated/floor/tiled,
 /area/teleporter/bridge)
+"bbi" = (
+/obj/structure/fence/eshui_sign_high_sec/electric,
+/turf/simulated/floor/water/acidic/turfpack/muriki,
+/area/security/tactical)
+"bbj" = (
+/obj/effect/floor_decal/spline/plain{
+	dir = 1
+	},
+/turf/simulated/floor/carpet/tealcarpet,
+/area/crew_quarters/heads/hop)
+"bbk" = (
+/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/corner/white{
+	dir = 9
+	},
+/obj/structure/sign/poster{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark,
+/area/bridge/hallway)
 "bbm" = (
 /obj/machinery/mineral/input,
 /obj/machinery/conveyor{
@@ -23575,15 +23599,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/quartermaster/mining)
-"bbJ" = (
-/obj/structure/railing{
-	dir = 4
-	},
-/obj/structure/cable/orange{
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/plating/external/turfpack/muriki,
-/area/muriki/grounds/sec)
 "bbX" = (
 /obj/structure/catwalk,
 /obj/machinery/light/small,
@@ -24234,7 +24249,7 @@
 /obj/structure/cable/green{
 	icon_state = "0-4"
 	},
-/obj/effect/floor_decal/corner/lightgrey/border{
+/obj/effect/floor_decal/corner/white/border{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/steel,
@@ -25060,13 +25075,6 @@
 /obj/structure/cable/green,
 /turf/simulated/floor/plating,
 /area/hallway/secondary/engineering_hallway)
-"bBw" = (
-/obj/structure/catwalk,
-/obj/structure/cable/orange{
-	icon_state = "2-4"
-	},
-/turf/simulated/floor/plating/external/turfpack/muriki,
-/area/muriki/grounds/sec)
 "bBy" = (
 /obj/structure/cliff{
 	dir = 1
@@ -25481,13 +25489,6 @@
 /turf/simulated/floor/wood,
 /area/crew_quarters/heads/hop)
 "bKL" = (
-/obj/structure/table/rack,
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/machinery/door/window/brigdoor/eastleft{
-	name = "Ballistics"
-	},
 /obj/item/gun/projectile/automatic/serdy/type901,
 /obj/item/gun/projectile/automatic/serdy/type901,
 /obj/item/gun/projectile/automatic/serdy/type901,
@@ -25525,9 +25526,6 @@
 	},
 /obj/item/ammo_magazine/type901/ap{
 	pixel_x = 6
-	},
-/obj/effect/floor_decal/corner/red/full{
-	dir = 8
 	},
 /obj/machinery/power/apc{
 	dir = 8;
@@ -25537,6 +25535,13 @@
 	},
 /obj/structure/cable/orange{
 	icon_state = "0-4"
+	},
+/obj/structure/closet/secure_closet/guncabinet{
+	name = "Battle Rifle cabinet";
+	req_one_access = list(1)
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 9
 	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/security/tactical/red)
@@ -25702,7 +25707,7 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 6
 	},
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/tealcarpet,
 /area/crew_quarters/heads/hop)
 "bMl" = (
 /obj/structure/cable/green{
@@ -26127,13 +26132,6 @@
 /turf/simulated/floor/carpet/purcarpet,
 /area/crew_quarters/bar)
 "bTD" = (
-/obj/structure/table/rack,
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/machinery/door/window/brigdoor/northleft{
-	name = "Ammo"
-	},
 /obj/item/storage/box/scattershot/large,
 /obj/item/storage/box/scattershot/large,
 /obj/item/storage/box/scattershot/large,
@@ -26148,6 +26146,10 @@
 /obj/item/ammo_magazine/ammo_box/b12g,
 /obj/item/ammo_magazine/ammo_box/b12g,
 /obj/effect/floor_decal/corner/red/full,
+/obj/structure/closet/secure_closet/guncabinet{
+	name = "Shotgun Ammunition cabinet";
+	req_one_access = list(1)
+	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/security/tactical/red)
 "bTH" = (
@@ -27961,7 +27963,7 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/spline/plain,
-/turf/simulated/floor/carpet/blucarpet,
+/turf/simulated/floor/carpet/sblucarpet,
 /area/rnd/breakroom)
 "cCh" = (
 /obj/structure/table/rack,
@@ -29023,16 +29025,8 @@
 /turf/simulated/floor/water/acidic/deep/turfpack/muriki,
 /area/muriki/grounds/tramborder)
 "cVV" = (
-/obj/structure/cable/orange,
-/obj/structure/grille{
-	desc = "A flimsy lattice of metal rods, with screws to secure it to the floor. This grille seems slightly more sturdy than others probably reinforced to withstand the wildlife.";
-	health = 25;
-	name = "Reinforced Grille"
-	},
-/obj/structure/cable/orange{
-	icon_state = "0-2"
-	},
-/turf/simulated/floor/plating/external/turfpack/muriki,
+/obj/structure/fence/electric,
+/turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
 /area/security/tactical)
 "cWh" = (
 /obj/structure/grille,
@@ -33117,7 +33111,7 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 10
 	},
-/turf/simulated/floor/carpet/blucarpet,
+/turf/simulated/floor/carpet/sblucarpet,
 /area/rnd/breakroom)
 "esT" = (
 /turf/simulated/floor/water/acidic/turfpack/muriki,
@@ -33449,6 +33443,7 @@
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/structure/sign/painting/public/west,
 /turf/simulated/floor/tiled/dark,
 /area/bridge/hallway)
 "eyb" = (
@@ -33937,7 +33932,7 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 5
 	},
-/turf/simulated/floor/carpet/blucarpet,
+/turf/simulated/floor/carpet/sblucarpet,
 /area/rnd/otherlab)
 "eGx" = (
 /obj/machinery/hologram/holopad,
@@ -34459,19 +34454,10 @@
 /turf/simulated/floor/tiled,
 /area/crew_quarters/cafeteria)
 "eOW" = (
-/obj/structure/grille{
-	desc = "A flimsy lattice of metal rods, with screws to secure it to the floor. This grille seems slightly more sturdy than others probably reinforced to withstand the wildlife.";
-	health = 25;
-	name = "Reinforced Grille"
+/obj/structure/fence/end/electric{
+	dir = 8
 	},
-/obj/structure/cable/orange,
-/obj/structure/cable/orange{
-	icon_state = "0-8"
-	},
-/obj/structure/cable/orange{
-	icon_state = "0-2"
-	},
-/turf/simulated/floor/plating/external/turfpack/muriki,
+/turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
 /area/security/tactical)
 "ePc" = (
 /obj/structure/cable/green{
@@ -34832,23 +34818,6 @@
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/bridge)
-"eVn" = (
-/obj/structure/grille{
-	desc = "A flimsy lattice of metal rods, with screws to secure it to the floor. This grille seems slightly more sturdy than others probably reinforced to withstand the wildlife.";
-	health = 25;
-	name = "Reinforced Grille"
-	},
-/obj/structure/cable/orange{
-	icon_state = "0-8"
-	},
-/obj/structure/cable/orange{
-	icon_state = "0-4"
-	},
-/obj/structure/cable/orange{
-	icon_state = "0-2"
-	},
-/turf/simulated/floor/plating/external/turfpack/muriki,
-/area/security/tactical)
 "eVp" = (
 /obj/machinery/bluespace_denier,
 /obj/effect/floor_decal/industrial/hatch/yellow,
@@ -35278,7 +35247,7 @@
 	dir = 4
 	},
 /obj/structure/disposalpipe/segment,
-/turf/simulated/floor/carpet/blucarpet,
+/turf/simulated/floor/carpet/sblucarpet,
 /area/rnd/otherlab)
 "feI" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/green{
@@ -35394,12 +35363,6 @@
 /obj/structure/fence/door,
 /turf/simulated/floor/outdoors/sidewalk/slab/turfpack/muriki,
 /area/muriki/grounds/graveyard)
-"fgn" = (
-/obj/structure/cable/orange{
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/outdoors/sidewalk/slab/turfpack/muriki,
-/area/muriki/grounds/sec)
 "fhe" = (
 /turf/simulated/floor/maglev{
 	icon_state = "magleveasttonorth"
@@ -36016,18 +35979,6 @@
 	},
 /turf/simulated/floor,
 /area/bridge/meeting_room)
-"fsv" = (
-/obj/machinery/power/tesla_coil/pre_mapped,
-/obj/structure/railing,
-/obj/structure/railing{
-	dir = 8
-	},
-/obj/structure/cable/orange,
-/obj/structure/railing{
-	dir = 4
-	},
-/turf/simulated/floor/plating/external/turfpack/muriki,
-/area/muriki/grounds/sec)
 "fsz" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 6
@@ -37000,15 +36951,6 @@
 /turf/simulated/floor/redgrid/off,
 /area/muriki/processor/euth)
 "fLI" = (
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/machinery/door/window/brigdoor/southright{
-	name = "High Explosives"
-	},
-/obj/structure/window/reinforced{
-	dir = 1
-	},
 /obj/structure/closet/crate/secure/large/reinforced{
 	anchored = 1;
 	desc = "A hefty, reinforced metal crate with an electronic locking system. It's securely bolted to the floor and cannot be moved.";
@@ -37020,7 +36962,12 @@
 /obj/item/plastique,
 /obj/item/plastique,
 /obj/item/plastique,
-/obj/effect/floor_decal/corner/red/borderfull,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/red/full{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/security/tactical/red)
 "fLQ" = (
@@ -37425,7 +37372,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/outdoors/sidewalk/slab/turfpack/muriki,
-/area/muriki/grounds/sci)
+/area/rnd/hallway/main)
 "fTL" = (
 /obj/effect/floor_decal/corner/black{
 	dir = 5
@@ -38111,7 +38058,7 @@
 /obj/effect/floor_decal/industrial/warning/dust,
 /obj/machinery/door/window/northright,
 /turf/simulated/floor/outdoors/sidewalk/slab/turfpack/muriki,
-/area/muriki/grounds/sci)
+/area/rnd/hallway/main)
 "ggg" = (
 /obj/effect/floor_decal/corner/white{
 	dir = 5
@@ -38764,18 +38711,6 @@
 /obj/structure/sign/signnew/danger,
 /turf/simulated/wall/r_wall,
 /area/engineering/engine_room)
-"grV" = (
-/obj/machinery/power/tesla_coil/pre_mapped,
-/obj/structure/cable/orange,
-/obj/structure/railing{
-	dir = 4
-	},
-/obj/structure/railing{
-	dir = 8
-	},
-/obj/structure/railing,
-/turf/simulated/floor/plating/external/turfpack/muriki,
-/area/security/tactical)
 "gst" = (
 /obj/structure/bed/chair/bay/chair/padded,
 /obj/effect/floor_decal/borderfloor{
@@ -39649,7 +39584,7 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 5
 	},
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/tealcarpet,
 /area/crew_quarters/heads/hop)
 "gIE" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
@@ -39880,7 +39815,7 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 8
 	},
-/turf/simulated/floor/carpet/blucarpet,
+/turf/simulated/floor/carpet/sblucarpet,
 /area/rnd/breakroom)
 "gMY" = (
 /turf/simulated/floor/tiled/techfloor,
@@ -40590,7 +40525,7 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 9
 	},
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/tealcarpet,
 /area/crew_quarters/heads/hop)
 "haC" = (
 /obj/structure/cliff_end{
@@ -41598,7 +41533,7 @@
 "hpY" = (
 /obj/structure/prop/rock/small,
 /obj/effect/floor_decal/industrial/warning/dust{
-	dir = 5
+	dir = 1
 	},
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
 /area/security/tactical)
@@ -42311,7 +42246,7 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/milspec/stripe,
-/obj/effect/floor_decal/industrial/outline/cut_corners/orange,
+/obj/structure/closet/secure_closet/guncabinet,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/security/tactical)
 "hCK" = (
@@ -45542,17 +45477,14 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/security/evidence_storage)
 "iAY" = (
-/obj/structure/table/rack,
-/obj/machinery/door/window/brigdoor/northright{
-	name = "Ammo"
-	},
-/obj/structure/window/reinforced{
-	dir = 4
-	},
 /obj/item/gun/projectile/shotgun/pump/USDF,
 /obj/item/gun/projectile/shotgun/pump/USDF,
-/obj/effect/floor_decal/corner/red/full{
-	dir = 4
+/obj/structure/closet/secure_closet/guncabinet{
+	name = "Shotgun cabinet";
+	req_one_access = list(1)
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 10
 	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/security/tactical/red)
@@ -46154,7 +46086,7 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 1
 	},
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/tealcarpet,
 /area/crew_quarters/heads/hop)
 "iKx" = (
 /obj/effect/floor_decal/flesh{
@@ -49059,11 +48991,6 @@
 	name = "Station Intercom (General)";
 	pixel_y = 32
 	},
-/obj/structure/window/reinforced,
-/obj/structure/table/rack/steel,
-/obj/machinery/door/window/brigdoor/westright{
-	name = "Shadekin"
-	},
 /obj/item/clothing/glasses/ghost{
 	pixel_y = 6
 	},
@@ -49084,6 +49011,10 @@
 	pixel_y = -6
 	},
 /obj/effect/floor_decal/industrial/outline/cut_corners/purple,
+/obj/structure/closet/secure_closet/guncabinet{
+	name = "Shadekin Kit Cabinet";
+	req_one_access = list(1)
+	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/security/tactical/red)
 "jJx" = (
@@ -50557,7 +50488,7 @@
 	pixel_x = 5;
 	pixel_y = -4
 	},
-/turf/simulated/floor/carpet/blucarpet,
+/turf/simulated/floor/carpet/sblucarpet,
 /area/rnd/breakroom)
 "khA" = (
 /obj/structure/cable/yellow{
@@ -50809,19 +50740,15 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/virology/quarantine_airlock)
 "kkj" = (
-/obj/structure/table/rack,
-/obj/machinery/door/window/brigdoor/westright{
-	name = "Energy"
-	},
 /obj/item/gun/energy/sniperrifle{
 	pixel_x = -10
 	},
 /obj/item/gun/energy/sniperrifle{
 	pixel_x = -10
 	},
-/obj/structure/window/reinforced,
-/obj/effect/floor_decal/corner/red/full{
-	dir = 1
+/obj/structure/closet/secure_closet/guncabinet{
+	name = "Laser Marksman Cabinet";
+	req_one_access = list(1)
 	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/security/tactical/red)
@@ -53912,12 +53839,6 @@
 /obj/structure/sign/warning/compressed_gas,
 /turf/simulated/wall/r_wall,
 /area/engineering/engine_smes)
-"loF" = (
-/obj/effect/floor_decal/industrial/warning/dust{
-	dir = 9
-	},
-/turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
-/area/security/tactical)
 "loK" = (
 /obj/structure/cliff/corner{
 	dir = 9
@@ -55293,16 +55214,8 @@
 /turf/simulated/floor/tiled/milspec,
 /area/bridge)
 "lJP" = (
-/obj/structure/grille{
-	desc = "A flimsy lattice of metal rods, with screws to secure it to the floor. This grille seems slightly more sturdy than others probably reinforced to withstand the wildlife.";
-	health = 25;
-	name = "Reinforced Grille"
-	},
-/obj/structure/cable/orange,
-/obj/structure/cable/orange{
-	icon_state = "0-2"
-	},
-/turf/simulated/floor/plating/external/turfpack/muriki,
+/obj/structure/fence/electric_sign,
+/turf/simulated/floor/water/acidic/deep/turfpack/muriki,
 /area/security/tactical)
 "lJZ" = (
 /obj/effect/floor_decal/borderfloor,
@@ -55516,12 +55429,6 @@
 /obj/structure/catwalk,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/civ)
-"lPn" = (
-/obj/effect/floor_decal/industrial/warning/dust{
-	dir = 5
-	},
-/turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
-/area/security/tactical)
 "lPp" = (
 /obj/structure/reagent_dispensers/water_cooler/full,
 /obj/effect/floor_decal/spline/plain{
@@ -56826,7 +56733,7 @@
 	pixel_y = -35;
 	pixel_x = -14
 	},
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/tealcarpet,
 /area/crew_quarters/heads/hop)
 "mhN" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -57004,7 +56911,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/outdoors/sidewalk/slab/turfpack/muriki,
-/area/muriki/grounds/sci)
+/area/rnd/hallway/main)
 "mlS" = (
 /obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
@@ -58609,11 +58516,11 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
-/obj/effect/floor_decal/corner/lightgrey/border{
-	dir = 8
-	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
+	},
+/obj/effect/floor_decal/corner/white/border{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/steel,
 /area/hallway/primary/central_three)
@@ -58778,7 +58685,7 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 10
 	},
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/tealcarpet,
 /area/crew_quarters/heads/hop)
 "mVD" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -60553,7 +60460,7 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/turf/simulated/floor/carpet/blucarpet,
+/turf/simulated/floor/carpet/sblucarpet,
 /area/rnd/otherlab)
 "nxX" = (
 /obj/effect/floor_decal/industrial/warning/corner{
@@ -61534,12 +61441,6 @@
 "nSL" = (
 /turf/simulated/wall,
 /area/rnd/breakroom)
-"nSZ" = (
-/obj/effect/floor_decal/industrial/warning/dust/corner{
-	dir = 4
-	},
-/turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
-/area/security/tactical)
 "nTd" = (
 /obj/machinery/door/airlock/glass_external{
 	frequency = 1381;
@@ -63408,18 +63309,10 @@
 /turf/simulated/wall/r_wall,
 /area/muriki/bathroom/securitypub)
 "ozB" = (
-/obj/structure/grille{
-	desc = "A flimsy lattice of metal rods, with screws to secure it to the floor. This grille seems slightly more sturdy than others probably reinforced to withstand the wildlife.";
-	health = 25;
-	name = "Reinforced Grille"
+/obj/structure/fence/electric{
+	dir = 4
 	},
-/obj/structure/cable/orange{
-	icon_state = "0-8"
-	},
-/obj/structure/cable/orange{
-	icon_state = "0-4"
-	},
-/turf/simulated/floor/plating/external/turfpack/muriki,
+/turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
 /area/security/tactical)
 "oAe" = (
 /obj/structure/disposalpipe/junction{
@@ -64056,7 +63949,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/muriki/arriveelev)
 "oMh" = (
-/obj/structure/table/rack,
 /obj/item/ammo_magazine/hectate/ap{
 	pixel_x = -8
 	},
@@ -64088,18 +63980,19 @@
 	pixel_x = 8
 	},
 /obj/item/gun/projectile/automatic/serdy/hectate,
-/obj/machinery/door/window/brigdoor/northright{
-	name = "Anti-Material"
-	},
 /obj/machinery/camera/motion/security{
 	c_tag = "SEC - Red Armory (M)";
 	dir = 1
 	},
-/obj/effect/floor_decal/corner/black/full{
-	dir = 4
-	},
 /obj/machinery/ai_status_display{
 	pixel_y = -32
+	},
+/obj/structure/closet/secure_closet/guncabinet{
+	name = "Anti-Material Cabinet";
+	req_one_access = list(1)
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 10
 	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/security/tactical/red)
@@ -64572,9 +64465,9 @@
 /obj/effect/floor_decal/corner/red/full{
 	dir = 4
 	},
-/obj/structure/table/rack,
-/obj/machinery/door/window/brigdoor/westright{
-	name = "Energy"
+/obj/structure/closet/secure_closet/guncabinet{
+	name = "BTL Cabinet";
+	req_one_access = list(1)
 	},
 /obj/item/gun/energy/bfgtaser,
 /turf/simulated/floor/tiled/milspec/raised,
@@ -64972,6 +64865,7 @@
 	},
 /obj/effect/floor_decal/spline/plain,
 /obj/machinery/light,
+/obj/structure/sign/poster,
 /turf/simulated/floor/carpet/tealcarpet,
 /area/bridge/hallway)
 "pbL" = (
@@ -68410,24 +68304,15 @@
 /turf/simulated/floor/plating,
 /area/maintenance/wastedisposal)
 "qmm" = (
-/obj/structure/table/rack,
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/machinery/door/window/brigdoor/southleft{
-	name = "Overflow"
-	},
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/effect/landmark{
-	name = "nukeitem"
-	},
-/obj/effect/floor_decal/corner/red/full{
-	dir = 8
-	},
 /obj/item/melee/energy/spear,
 /obj/item/personal_shield_generator/belt/security/loaded,
+/obj/structure/closet/secure_closet/guncabinet{
+	req_one_access = list(1);
+	name = "Energy Melee cabinet"
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 5
+	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/security/tactical/red)
 "qmt" = (
@@ -69236,18 +69121,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/reception)
-"qAH" = (
-/obj/structure/railing{
-	dir = 4
-	},
-/obj/structure/railing{
-	dir = 8
-	},
-/obj/structure/cable/orange{
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/plating/external/turfpack/muriki,
-/area/muriki/grounds/sec)
 "qAN" = (
 /obj/effect/floor_decal/corner/brown{
 	dir = 5
@@ -70799,7 +70672,7 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/tealcarpet,
 /area/crew_quarters/heads/hop)
 "rbs" = (
 /obj/structure/cable/green{
@@ -71629,29 +71502,25 @@
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/exit)
 "rtb" = (
-/obj/structure/table/rack,
-/obj/structure/window/reinforced{
-	dir = 8;
-	health = 1e+006
+/obj/item/clothing/shoes/leg_guard/combat,
+/obj/item/clothing/shoes/leg_guard/combat,
+/obj/item/clothing/shoes/leg_guard/combat,
+/obj/item/clothing/gloves/arm_guard/combat,
+/obj/item/clothing/gloves/arm_guard/combat,
+/obj/item/clothing/gloves/arm_guard/combat,
+/obj/item/clothing/suit/armor/combat,
+/obj/item/clothing/suit/armor/combat,
+/obj/item/clothing/suit/armor/combat,
+/obj/item/clothing/head/helmet/combat,
+/obj/item/clothing/head/helmet/combat,
+/obj/item/clothing/head/helmet/combat,
+/obj/structure/closet/secure_closet/guncabinet{
+	name = "Combat Armor cabinet";
+	req_one_access = list(1)
 	},
-/obj/machinery/door/window/brigdoor/northleft{
-	name = "Combat Armor";
-	req_access = null;
-	req_one_access = list(2)
+/obj/effect/floor_decal/corner/red{
+	dir = 10
 	},
-/obj/item/clothing/shoes/leg_guard/combat,
-/obj/item/clothing/shoes/leg_guard/combat,
-/obj/item/clothing/shoes/leg_guard/combat,
-/obj/item/clothing/gloves/arm_guard/combat,
-/obj/item/clothing/gloves/arm_guard/combat,
-/obj/item/clothing/gloves/arm_guard/combat,
-/obj/item/clothing/suit/armor/combat,
-/obj/item/clothing/suit/armor/combat,
-/obj/item/clothing/suit/armor/combat,
-/obj/item/clothing/head/helmet/combat,
-/obj/item/clothing/head/helmet/combat,
-/obj/item/clothing/head/helmet/combat,
-/obj/effect/floor_decal/corner/red/full,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/security/tactical/red)
 "rtj" = (
@@ -74851,7 +74720,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/hallway/primary/central_two)
 "szw" = (
-/turf/simulated/floor/carpet/blucarpet,
+/turf/simulated/floor/carpet/sblucarpet,
 /area/rnd/breakroom)
 "szF" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
@@ -78212,7 +78081,7 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 4
 	},
-/turf/simulated/floor/carpet/blucarpet,
+/turf/simulated/floor/carpet/sblucarpet,
 /area/rnd/otherlab)
 "tFG" = (
 /obj/structure/fence/corner{
@@ -79334,7 +79203,6 @@
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/engineering_hallway)
 "tXm" = (
-/obj/structure/table/rack,
 /obj/item/ammo_casing/rocket,
 /obj/item/ammo_casing/rocket,
 /obj/item/ammo_casing/rocket,
@@ -79358,13 +79226,16 @@
 /obj/item/gun/launcher/rocket{
 	pixel_x = -7
 	},
-/obj/machinery/door/window/brigdoor/northleft{
-	name = "Anti-Material"
-	},
-/obj/effect/floor_decal/corner/black/full,
 /obj/machinery/status_display{
 	layer = 4;
 	pixel_y = -32
+	},
+/obj/structure/closet/secure_closet/guncabinet{
+	name = "Rocket Launcher cabinet";
+	req_one_access = list(1)
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 10
 	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/security/tactical/red)
@@ -79814,19 +79685,10 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/reception)
 "ufd" = (
-/obj/structure/grille{
-	desc = "A flimsy lattice of metal rods, with screws to secure it to the floor. This grille seems slightly more sturdy than others probably reinforced to withstand the wildlife.";
-	health = 25;
-	name = "Reinforced Grille"
+/obj/structure/fence/end/electric{
+	dir = 4
 	},
-/obj/structure/cable/orange,
-/obj/structure/cable/orange{
-	icon_state = "0-4"
-	},
-/obj/structure/cable/orange{
-	icon_state = "0-2"
-	},
-/turf/simulated/floor/plating/external/turfpack/muriki,
+/turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
 /area/security/tactical)
 "uff" = (
 /obj/effect/floor_decal/spline/fancy/wood{
@@ -81000,7 +80862,7 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 5
 	},
-/turf/simulated/floor/carpet/blucarpet,
+/turf/simulated/floor/carpet/sblucarpet,
 /area/rnd/breakroom)
 "uxh" = (
 /obj/structure/cable/green{
@@ -82494,15 +82356,6 @@
 /obj/effect/landmark/vines,
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
-"uWT" = (
-/obj/structure/fence/door{
-	dir = 4
-	},
-/obj/structure/cable/orange{
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/outdoors/sidewalk/slab/turfpack/muriki,
-/area/muriki/grounds/sec)
 "uXg" = (
 /obj/structure/cable/green{
 	icon_state = "1-4"
@@ -82752,7 +82605,7 @@
 	dir = 6
 	},
 /obj/item/material/ashtray/bronze,
-/turf/simulated/floor/carpet/blucarpet,
+/turf/simulated/floor/carpet/sblucarpet,
 /area/rnd/breakroom)
 "vbq" = (
 /obj/effect/floor_decal/corner/orange{
@@ -83069,9 +82922,6 @@
 	},
 /obj/machinery/camera/network/outside{
 	c_tag = "EXT - Armory West"
-	},
-/obj/structure/cable/orange{
-	icon_state = "4-8"
 	},
 /turf/simulated/floor/outdoors/sidewalk/slab/turfpack/muriki,
 /area/security/tactical)
@@ -85789,7 +85639,7 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 9
 	},
-/turf/simulated/floor/carpet/blucarpet,
+/turf/simulated/floor/carpet/sblucarpet,
 /area/rnd/breakroom)
 "vZM" = (
 /obj/structure/table/reinforced,
@@ -86860,7 +86710,7 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
 	},
-/obj/effect/floor_decal/corner/lightgrey/border{
+/obj/effect/floor_decal/corner/white/border{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/steel,
@@ -87910,7 +87760,7 @@
 	icon_state = "2-9"
 	},
 /obj/effect/floor_decal/spline/plain,
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/tealcarpet,
 /area/crew_quarters/heads/hop)
 "wLm" = (
 /obj/random/cash/big,
@@ -88418,13 +88268,6 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "wTA" = (
-/obj/structure/table/rack,
-/obj/structure/window/reinforced{
-	health = 1e+006
-	},
-/obj/machinery/door/window/brigdoor/eastright{
-	name = "Ballistics"
-	},
 /obj/item/gun/projectile/automatic/serdy/m4a1{
 	pixel_x = -10
 	},
@@ -88445,6 +88288,10 @@
 /obj/item/ammo_magazine/m16,
 /obj/item/ammo_magazine/m16,
 /obj/effect/floor_decal/corner/red/full,
+/obj/structure/closet/secure_closet/guncabinet{
+	name = "Assault Rifle cabinet";
+	req_one_access = list(1)
+	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/security/tactical/red)
 "wTD" = (
@@ -88803,27 +88650,19 @@
 /turf/simulated/floor/tiled/steel,
 /area/hallway/primary/central_two)
 "wYR" = (
-/obj/structure/closet/crate/secure/large/reinforced{
-	anchored = 1;
-	desc = "A hefty, reinforced metal crate with an electronic locking system. It's securely bolted to the floor and cannot be moved.";
-	name = "Crew Serves";
-	req_access = list(1)
-	},
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/structure/window/reinforced{
-	dir = 1
-	},
-/obj/machinery/door/window/brigdoor/southright{
-	name = "Heavy Weapons"
-	},
 /obj/item/ammo_magazine/mg42,
 /obj/item/ammo_magazine/mg42,
 /obj/item/ammo_magazine/mg42,
 /obj/item/gun/projectile/automatic/mg42,
 /obj/effect/floor_decal/corner/red/full{
 	dir = 1
+	},
+/obj/structure/closet/secure_closet/guncabinet{
+	req_one_access = list(1);
+	name = "LMG cabinet"
+	},
+/obj/structure/window/reinforced{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/security/tactical/red)
@@ -89043,19 +88882,9 @@
 	name = "Target Designator";
 	req_access = list(1)
 	},
-/obj/structure/window/reinforced{
+/obj/effect/floor_decal/corner/red/full{
 	dir = 4
 	},
-/obj/structure/window/reinforced{
-	dir = 8;
-	health = 1e+006
-	},
-/obj/machinery/door/window/brigdoor/northright{
-	name = "Target Designator";
-	req_access = null;
-	req_one_access = list(1)
-	},
-/obj/effect/floor_decal/corner/red/borderfull,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/security/tactical/red)
 "xcu" = (
@@ -90279,15 +90108,6 @@
 	},
 /turf/simulated/floor/wood,
 /area/engineering/break_room)
-"xxI" = (
-/obj/effect/floor_decal/industrial/warning/dust{
-	dir = 4
-	},
-/obj/structure/cable/orange{
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/outdoors/sidewalk/slab/turfpack/muriki,
-/area/security/tactical)
 "xxJ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -90388,19 +90208,10 @@
 /turf/simulated/floor/outdoors/mud/turfpack/muriki,
 /area/muriki/grounds/sci)
 "xAk" = (
-/obj/structure/cable/orange,
-/obj/structure/grille{
-	desc = "A flimsy lattice of metal rods, with screws to secure it to the floor. This grille seems slightly more sturdy than others probably reinforced to withstand the wildlife.";
-	health = 25;
-	name = "Reinforced Grille"
+/obj/structure/fence/door/electric{
+	dir = 4
 	},
-/obj/structure/cable/orange{
-	icon_state = "0-2"
-	},
-/obj/structure/cable/orange{
-	icon_state = "0-8"
-	},
-/turf/simulated/floor/plating/external/turfpack/muriki,
+/turf/simulated/floor/water/acidic/deep/turfpack/muriki,
 /area/security/tactical)
 "xAo" = (
 /obj/structure/grille,
@@ -91020,7 +90831,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
 	},
-/turf/simulated/floor/carpet,
+/turf/simulated/floor/carpet/tealcarpet,
 /area/crew_quarters/heads/hop)
 "xLZ" = (
 /obj/structure/cliff{
@@ -91788,7 +91599,7 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 1
 	},
-/turf/simulated/floor/carpet/blucarpet,
+/turf/simulated/floor/carpet/sblucarpet,
 /area/rnd/breakroom)
 "xZI" = (
 /obj/structure/table/marble,
@@ -92133,18 +91944,10 @@
 /turf/simulated/floor/tiled,
 /area/security/detectives_office)
 "yhn" = (
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/machinery/door/window/brigdoor/northright{
-	name = "Combat Armor";
-	req_access = null;
-	req_one_access = list(1)
-	},
-/obj/effect/floor_decal/corner/red/full{
-	dir = 4
-	},
 /obj/machinery/vending/security_armor,
+/obj/effect/floor_decal/corner/red{
+	dir = 10
+	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/security/tactical/red)
 "yhr" = (
@@ -128255,7 +128058,7 @@ gBL
 gBL
 gBL
 gBL
-aGh
+gBL
 aGh
 aGh
 aMT
@@ -128415,8 +128218,8 @@ gBL
 gBL
 gBL
 gBL
-aGh
-aGh
+gBL
+gBL
 aGh
 aGh
 aMT
@@ -128571,16 +128374,16 @@ mlS
 mlS
 vEe
 aqi
-bBw
-qAH
-bbJ
-bbJ
-bbJ
-bbJ
-qAH
-qAH
-qAH
-fsv
+xgD
+aGh
+gBL
+gBL
+gBL
+gBL
+gBL
+gBL
+aGh
+aGh
 aGS
 aqi
 aqi
@@ -128733,7 +128536,7 @@ aRh
 xps
 vEe
 aqi
-fgn
+xgD
 aGh
 aGh
 aGh
@@ -128895,7 +128698,7 @@ iXR
 nYo
 vEe
 aqi
-fgn
+xgD
 aGh
 aGh
 aGB
@@ -129057,7 +128860,7 @@ iXR
 aKF
 vEe
 aqk
-uWT
+trj
 aGr
 aGr
 aGr
@@ -129219,7 +129022,7 @@ iXR
 jOO
 vEe
 aqp
-fgn
+xgD
 aGi
 aGh
 aGh
@@ -129381,7 +129184,7 @@ iXR
 aSv
 vEe
 aqj
-fgn
+xgD
 aGi
 aGD
 aGh
@@ -129704,8 +129507,8 @@ bgV
 rFf
 gLT
 vEe
-aqa
-aTk
+aHh
+aHh
 aqa
 aqa
 aqa
@@ -129866,9 +129669,9 @@ eLh
 eLh
 eLh
 eLh
-gNI
-xxI
-gNI
+dYc
+aHh
+aHh
 gNI
 aNk
 gNI
@@ -129878,7 +129681,7 @@ gNI
 gNI
 gNI
 akt
-nSZ
+aqa
 tBt
 aqj
 aqi
@@ -130030,17 +129833,17 @@ afK
 hSA
 lJP
 xAk
+bbi
+baI
 cVV
-cVV
-cVV
-cVV
+aYW
 cVV
 cVV
 cVV
 cVV
 ufd
-grV
 aku
+aqa
 akx
 aqi
 aqi
@@ -130201,8 +130004,8 @@ aqa
 aqa
 rnB
 ozB
-loF
-akv
+aku
+aqa
 akx
 aqi
 aqi
@@ -130686,7 +130489,7 @@ aqa
 aqa
 aqa
 aqa
-ozB
+aYF
 aku
 aMU
 akx
@@ -130848,7 +130651,7 @@ aqa
 iId
 aqa
 aqa
-ozB
+aYU
 aku
 aqa
 tBt
@@ -131334,7 +131137,7 @@ aBY
 iId
 aBY
 aBY
-aCd
+ozB
 aCb
 aBY
 mRH
@@ -131496,7 +131299,7 @@ aqa
 aqa
 aqa
 aqa
-ozB
+aYF
 aku
 aqa
 akx
@@ -131822,7 +131625,7 @@ aqa
 aqa
 ozB
 hpY
-nSZ
+aqa
 tBt
 aqj
 aqp
@@ -131982,9 +131785,9 @@ aqa
 iId
 aqa
 rnB
-eVn
-grV
+ozB
 aku
+aqa
 akx
 aqi
 aqi
@@ -132145,8 +131948,8 @@ aqa
 aqa
 aqa
 ozB
-loF
-akv
+aku
+aqa
 akx
 aqi
 aqi
@@ -132306,7 +132109,7 @@ aqa
 avk
 aqa
 aqa
-ozB
+aYF
 aku
 aqa
 mRH
@@ -132954,7 +132757,7 @@ aqa
 swd
 aqa
 aqa
-ozB
+aYU
 aku
 aqa
 akx
@@ -133116,7 +132919,7 @@ aqa
 iId
 aqa
 aqa
-ozB
+aYF
 aMX
 aqa
 akx
@@ -133765,8 +133568,8 @@ aqa
 aqa
 rnB
 ozB
-lPn
-nSZ
+aku
+aqa
 tBt
 aqj
 aqi
@@ -133922,13 +133725,13 @@ qsX
 usK
 cVV
 cVV
-cVV
-cVV
+bas
+aYW
 cVV
 cVV
 eOW
-grV
 aku
+aqa
 akx
 aqi
 aqi
@@ -134089,8 +133892,8 @@ aqe
 aqe
 aqe
 aqe
-aqe
 akv
+aqa
 akx
 aqi
 aqi
@@ -143389,7 +143192,7 @@ uhB
 ujx
 aYi
 aTC
-pCF
+bbj
 aXt
 aXn
 vid
@@ -143725,8 +143528,8 @@ asF
 akO
 aXd
 agM
-uKA
-uKA
+atZ
+atZ
 uKA
 uKA
 aSM
@@ -143875,7 +143678,7 @@ baV
 baS
 aXq
 baV
-baV
+bbk
 baV
 baS
 aTs
