@@ -43,13 +43,14 @@
 
 /obj/turbolift_map_holder/muriki/scievator
 	icon = 'icons/obj/turbolift_preview_3x3.dmi'
-	depth = 2
+	depth = 3
 	lift_size_x = 3
 	lift_size_y = 3
 	dir = SOUTH
 	name = "Bridge Elevator map placeholder"
 
 	areas_to_use = list(
+		/area/turbolift/commandbase,
 		/area/turbolift/commandmain,
 		/area/turbolift/commandupper,
 		)

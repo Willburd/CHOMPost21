@@ -1005,12 +1005,10 @@
 	name = "Civilian Second Floor"
 	flags = AREA_FLAG_IS_NOT_PERSISTENT
 	base_turf = /turf/simulated/open
-/*
 /area/muriki/elevator/scibase
 	name = "Bridge Sublevel 1"
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	flags = AREA_FLAG_IS_NOT_PERSISTENT
-*/
 /area/muriki/elevator/scimain
 	name = "Bridge First Floor"
 	flags = AREA_FLAG_IS_NOT_PERSISTENT
@@ -1113,15 +1111,13 @@
 	holomap_color = HOLOMAP_AREACOLOR_CIV
 
 // Bridge
-/*
-/area/turbolift/scibase
-	name = "Science Sublevel 1"
+/area/turbolift/commandbase
+	name = "Bridge Sublevel 1"
 	base_turf = /turf/simulated/floor/plating
-	lift_floor_label = "Research Basement"
-	lift_floor_name = "Xenobio, Xenoarch, Anomaly Lab, Cavern Access"
+	lift_floor_label = "Bridge Basement"
+	lift_floor_name = "Maintenance"
 	lift_announce_str = "Arriving at Basement."
 	holomap_color = HOLOMAP_AREACOLOR_COMMAND
-*/
 
 /area/turbolift/commandmain
 	name = "Bridge First Floor"
@@ -2601,7 +2597,7 @@
 	name = "\improper Upper Research hallway"
 	icon_state = "hallC"
 	base_turf = /turf/simulated/open
-	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
+	holomap_color = HOLOMAP_AREACOLOR_COMMAND
 
 /area/rnd/hallway/lowmain
 	name = "\improper Lower Main Research hallway"

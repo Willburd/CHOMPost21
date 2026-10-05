@@ -3680,12 +3680,26 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/storage/tech)
+"afl" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 4
+	},
+/obj/structure/sign/directions/elevator{
+	pixel_y = -3;
+	pixel_x = 32
+	},
+/turf/simulated/floor/tiled,
+/area/hallway/secondary/exit)
 "afm" = (
 /obj/effect/floor_decal/spline/fancy/wood,
 /obj/machinery/alarm{
 	dir = 1;
 	pixel_y = -26
 	},
+/obj/effect/landmark/holiday_event_spawn,
 /turf/simulated/floor/wood,
 /area/lawoffice)
 "afn" = (
@@ -4158,6 +4172,29 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled/steel,
 /area/bridge/hallway)
+"afV" = (
+/obj/structure/grille,
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/blast/regular{
+	id = "tscilab";
+	name = "Test Chamber Blast Doors";
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
+/obj/structure/window/phoronreinforced{
+	dir = 1
+	},
+/obj/structure/window/phoronreinforced{
+	dir = 8
+	},
+/obj/structure/window/phoronreinforced{
+	dir = 4
+	},
+/obj/structure/window/phoronreinforced,
+/turf/simulated/floor/plating,
+/area/rnd/telesci)
 "afW" = (
 /obj/structure/cable/green{
 	icon_state = "1-4"
@@ -4713,6 +4750,9 @@
 /obj/structure/sign/directions/eva{
 	pixel_y = 4;
 	dir = 1
+	},
+/obj/structure/sign/directions/medical{
+	pixel_y = 10
 	},
 /turf/simulated/wall,
 /area/bridge/hallway)
@@ -6674,6 +6714,9 @@
 	},
 /obj/effect/floor_decal/spline/plain,
 /obj/item/geiger/wall/south,
+/obj/effect/landmark/start{
+	name = "Command Secretary"
+	},
 /turf/simulated/floor/carpet/tealcarpet,
 /area/bridge/hallway)
 "akH" = (
@@ -6754,6 +6797,9 @@
 	},
 /obj/effect/floor_decal/spline/plain{
 	dir = 4
+	},
+/obj/effect/landmark/start{
+	name = "Internal Affairs Agent"
 	},
 /turf/simulated/floor/carpet/tealcarpet,
 /area/bridge/hallway)
@@ -7462,6 +7508,12 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/glass_command{
+	name = "High Security Area"
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/bridge/hallway)
 "amb" = (
@@ -9014,6 +9066,9 @@
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 8
 	},
+/obj/machinery/atm{
+	pixel_x = -28
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/aft)
 "apj" = (
@@ -10476,8 +10531,12 @@
 /obj/structure/cable/green{
 	icon_state = "1-6"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge/hallway)
 "atb" = (
@@ -10606,6 +10665,29 @@
 /obj/structure/prop/rock/watersharp,
 /turf/simulated/floor/water/acidic/turfpack/muriki,
 /area/muriki/grounds/engi)
+"atx" = (
+/obj/structure/grille,
+/obj/machinery/door/firedoor/glass,
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
+/obj/machinery/door/blast/regular{
+	id = "tscilab";
+	name = "Test Chamber Blast Doors";
+	dir = 4
+	},
+/obj/structure/window/phoronreinforced{
+	dir = 1
+	},
+/obj/structure/window/phoronreinforced{
+	dir = 8
+	},
+/obj/structure/window/phoronreinforced{
+	dir = 4
+	},
+/obj/structure/window/phoronreinforced,
+/turf/simulated/floor/plating,
+/area/rnd/telesci)
 "aty" = (
 /obj/structure/trailblazer/yellow,
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
@@ -18943,10 +19025,22 @@
 /obj/structure/sign/directions/teleporter{
 	dir = 1;
 	name = "\improper Public Teleporter";
+	pixel_y = -1
+	},
+/obj/structure/sign/directions/bridge{
+	dir = 4;
 	pixel_y = -8
 	},
+/obj/structure/sign/directions/evac{
+	dir = 8;
+	pixel_y = 6
+	},
+/obj/structure/sign/directions/medical{
+	dir = 8;
+	pixel_y = 12
+	},
 /turf/simulated/wall/r_wall,
-/area/rnd/lab)
+/area/rnd/telesci)
 "aSv" = (
 /obj/machinery/alarm{
 	dir = 1;
@@ -19121,12 +19215,12 @@
 /turf/simulated/floor/outdoors/mud/turfpack/muriki,
 /area/muriki/grounds/terraform)
 "aSM" = (
-/obj/structure/sign/directions/outpost/internal_affairs{
-	dir = 1;
-	pixel_y = -8
-	},
 /obj/structure/sign/department/bridge{
 	pixel_y = 8
+	},
+/obj/structure/sign/directions/bridge{
+	dir = 1;
+	pixel_y = -8
 	},
 /turf/simulated/wall/r_wall,
 /area/hallway/primary/central_three)
@@ -21158,6 +21252,9 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 6
 	},
+/obj/effect/landmark/start{
+	name = "Head of Personnel"
+	},
 /turf/simulated/floor/carpet/tealcarpet,
 /area/bridge/hallway)
 "aXe" = (
@@ -21324,6 +21421,9 @@
 /obj/machinery/alarm{
 	dir = 4;
 	pixel_x = -26
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge/hallway)
@@ -21600,6 +21700,13 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/lawoffice)
+"aXQ" = (
+/obj/effect/floor_decal/spline/plain{
+	dir = 1
+	},
+/obj/effect/landmark/holiday_event_spawn,
+/turf/simulated/floor/carpet/tealcarpet,
+/area/bridge/hallway)
 "aXR" = (
 /obj/structure/disposalpipe/trunk,
 /obj/machinery/disposal/wall{
@@ -22038,10 +22145,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/bridge)
-"aYC" = (
-/obj/turbolift_map_holder/muriki/scievator,
-/turf/simulated/open,
-/area/muriki/elevator/scimain)
 "aYD" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -22531,6 +22634,12 @@
 	},
 /turf/simulated/floor/tiled,
 /area/teleporter/bridge)
+"aZv" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
+/area/bridge/hallway)
 "aZw" = (
 /obj/structure/cable/green{
 	icon_state = "2-8"
@@ -23043,6 +23152,7 @@
 /obj/machinery/camera/network/command{
 	c_tag = "COM - Bridge Operations North"
 	},
+/obj/effect/landmark/holiday_event_spawn,
 /turf/simulated/floor/tiled/milspec,
 /area/bridge)
 "bal" = (
@@ -23440,6 +23550,7 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 8
 	},
+/obj/effect/landmark/holiday_event_spawn,
 /turf/simulated/floor/wood,
 /area/bridge/meeting_room)
 "baU" = (
@@ -23464,6 +23575,28 @@
 	},
 /turf/simulated/floor/outdoors/rocks/turfpack/muriki,
 /area/mine/unexplored/muriki/valleyeast)
+"baX" = (
+/obj/effect/floor_decal/corner/white{
+	dir = 6
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark,
+/area/bridge/hallway)
+"baY" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/effect/landmark/vines,
+/turf/simulated/floor/tiled/dark,
+/area/bridge/hallway)
 "baZ" = (
 /obj/structure/disposalpipe/segment{
 	dir = 1;
@@ -23823,6 +23956,77 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge/hallway)
+"bbK" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/effect/landmark{
+	name = "lightsout"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/bridge/hallway)
+"bbL" = (
+/obj/effect/floor_decal/corner/white{
+	dir = 5
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/status_display{
+	pixel_y = 32
+	},
+/turf/simulated/floor/tiled/dark,
+/area/bridge/hallway)
+"bbM" = (
+/obj/effect/floor_decal/corner/white{
+	dir = 5
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/ai_status_display{
+	pixel_y = 32
+	},
+/turf/simulated/floor/tiled/dark,
+/area/bridge/hallway)
+"bbN" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark,
+/area/bridge/hallway)
+"bbO" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
+/area/bridge/hallway)
+"bbP" = (
+/obj/effect/landmark/vines,
+/turf/simulated/floor/tiled/milspec,
+/area/bridge)
 "bbX" = (
 /obj/structure/catwalk,
 /obj/machinery/light/small,
@@ -27596,7 +27800,14 @@
 "cpO" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/disposalpipe/segment,
-/turf/simulated/floor/tiled/techfloor,
+/obj/structure/window/reinforced/polarized/full{
+	id = "legal"
+	},
+/obj/structure/grille,
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/plating,
 /area/bridge/hallway)
 "cpP" = (
 /obj/structure/table/woodentable,
@@ -27735,15 +27946,21 @@
 /turf/simulated/floor/water/acidic/deep/turfpack/muriki,
 /area/mine/explored/muriki/mountainnorth)
 "csb" = (
-/obj/structure/sign/directions/teleporter{
-	pixel_y = 5
-	},
-/obj/structure/sign/directions/bridge{
-	pixel_y = 11
-	},
 /obj/structure/sign/directions/outpost/bunker{
 	dir = 8;
 	pixel_y = -1
+	},
+/obj/structure/sign/directions/bridge{
+	dir = 8;
+	pixel_y = -8
+	},
+/obj/structure/sign/directions/evac{
+	dir = 8;
+	pixel_y = 6
+	},
+/obj/structure/sign/directions/medical{
+	dir = 8;
+	pixel_y = 12
 	},
 /turf/simulated/wall/r_wall,
 /area/crew_quarters/heads/hop)
@@ -27816,9 +28033,6 @@
 "cux" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/light,
-/obj/machinery/atm{
-	pixel_x = -28
-	},
 /obj/structure/foamedmetal,
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/central_two)
@@ -28193,19 +28407,6 @@
 "cDk" = (
 /obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/structure/window/reinforced{
-	dir = 4;
-	health = 1e+006
-	},
-/obj/structure/window/reinforced{
-	health = 1e+006
-	},
-/obj/structure/window/reinforced{
-	dir = 1
-	},
 /obj/machinery/door/blast/regular{
 	id = "tscilab";
 	name = "Test Chamber Blast Doors";
@@ -28213,6 +28414,16 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "0-4"
+	},
+/obj/structure/window/phoronreinforced,
+/obj/structure/window/phoronreinforced{
+	dir = 1
+	},
+/obj/structure/window/phoronreinforced{
+	dir = 8
+	},
+/obj/structure/window/phoronreinforced{
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/rnd/telesci)
@@ -33051,10 +33262,6 @@
 /turf/simulated/floor/plating/external/turfpack/muriki,
 /area/engineering/engine_room)
 "epw" = (
-/obj/structure/sign/directions/science{
-	dir = 4;
-	pixel_y = 10
-	},
 /obj/structure/sign/directions/bar{
 	dir = 4;
 	pixel_y = 4
@@ -33066,6 +33273,10 @@
 /obj/structure/sign/directions/outpost/bunker{
 	dir = 4;
 	pixel_y = -8
+	},
+/obj/structure/sign/directions/dorms{
+	dir = 4;
+	pixel_y = 10
 	},
 /turf/simulated/wall,
 /area/hallway/primary/aft)
@@ -33557,7 +33768,7 @@
 	dir = 4
 	},
 /turf/simulated/open,
-/area/rnd/lab)
+/area/rnd/telesci)
 "exh" = (
 /turf/simulated/wall,
 /area/hallway/primary/central_two)
@@ -34265,7 +34476,17 @@
 	},
 /obj/structure/disposalpipe/segment,
 /obj/machinery/door/firedoor/glass,
-/turf/simulated/floor/tiled/techfloor,
+/obj/structure/window/reinforced/polarized/full{
+	id = "legal"
+	},
+/obj/structure/grille,
+/obj/structure/cable/green{
+	icon_state = "0-1"
+	},
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/plating,
 /area/bridge/hallway)
 "eHG" = (
 /obj/item/pickaxe,
@@ -35475,10 +35696,6 @@
 /obj/effect/floor_decal/eshui/emblem/eshui_c,
 /turf/simulated/floor/tiled,
 /area/quartermaster/foyer)
-"fft" = (
-/obj/structure/sign/department/bridge,
-/turf/simulated/wall/r_wall,
-/area/crew_quarters/captain)
 "ffv" = (
 /obj/machinery/turretid/lethal{
 	control_area = /area/security/tactical;
@@ -41399,25 +41616,22 @@
 "hlD" = (
 /obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/structure/window/reinforced{
-	dir = 4;
-	health = 1e+006
-	},
-/obj/structure/window/reinforced{
-	health = 1e+006
-	},
-/obj/structure/window/reinforced{
-	dir = 1
-	},
 /obj/structure/cable/green{
 	icon_state = "0-8"
 	},
 /obj/machinery/door/blast/regular{
 	id = "tscilab";
 	name = "Test Chamber Blast Doors";
+	dir = 4
+	},
+/obj/structure/window/phoronreinforced,
+/obj/structure/window/phoronreinforced{
+	dir = 1
+	},
+/obj/structure/window/phoronreinforced{
+	dir = 8
+	},
+/obj/structure/window/phoronreinforced{
 	dir = 4
 	},
 /turf/simulated/floor/plating,
@@ -45475,7 +45689,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/techfloor,
-/area/rnd/lab)
+/area/rnd/telesci)
 "iyw" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/green/border,
@@ -46890,7 +47104,7 @@
 "iXC" = (
 /obj/machinery/light_switch{
 	pixel_x = -28;
-	pixel_y = -23;
+	pixel_y = -25;
 	dir = 4
 	},
 /obj/machinery/alarm{
@@ -48470,6 +48684,7 @@
 /obj/effect/floor_decal/corner/white{
 	dir = 6
 	},
+/obj/effect/landmark/holiday_event_spawn,
 /turf/simulated/floor/tiled/dark,
 /area/rnd/telesci)
 "jxy" = (
@@ -52117,6 +52332,7 @@
 	dir = 8
 	},
 /obj/item/geiger/wall/north,
+/obj/effect/landmark/holiday_event_spawn,
 /turf/simulated/floor/tiled/dark,
 /area/bridge/hallway)
 "kHQ" = (
@@ -54471,6 +54687,9 @@
 	dir = 4;
 	pixel_x = 26
 	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge/hallway)
 "lxi" = (
@@ -55526,6 +55745,7 @@
 	pixel_y = -32;
 	dir = 1
 	},
+/obj/item/geiger/wall/west,
 /turf/simulated/floor/carpet/tealcarpet,
 /area/bridge/hallway)
 "lPz" = (
@@ -56062,6 +56282,9 @@
 	dir = 9
 	},
 /obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge/hallway)
 "lYi" = (
@@ -57380,16 +57603,14 @@
 /turf/simulated/open,
 /area/engineering/gravgen)
 "mui" = (
-/obj/machinery/firealarm{
-	dir = 8;
-	pixel_x = -26;
-	pixel_y = -4
-	},
 /obj/structure/cable/green{
 	icon_state = "1-10"
 	},
 /obj/effect/floor_decal/corner/white{
 	dir = 9
+	},
+/obj/machinery/light{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/telesci)
@@ -64824,6 +65045,7 @@
 /obj/effect/floor_decal/spline/plain,
 /obj/machinery/light,
 /obj/structure/sign/poster,
+/obj/effect/landmark/start/scientist,
 /turf/simulated/floor/carpet/tealcarpet,
 /area/bridge/hallway)
 "pbL" = (
@@ -65173,7 +65395,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/plating,
-/area/rnd/lab)
+/area/rnd/telesci)
 "pkz" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
@@ -71432,6 +71654,7 @@
 /area/maintenance/substation/virology)
 "rrY" = (
 /obj/effect/floor_decal/corner/white/full,
+/obj/effect/landmark/holiday_event_spawn,
 /turf/simulated/floor/tiled/dark,
 /area/bridge/hallway)
 "rsn" = (
@@ -72011,8 +72234,9 @@
 	dir = 9;
 	pixel_y = 11
 	},
-/obj/structure/sign/directions/outpost/internal_affairs{
-	pixel_y = -7
+/obj/structure/sign/directions/bridge{
+	dir = 1;
+	pixel_y = -8
 	},
 /turf/simulated/wall,
 /area/muriki/crewstairwell)
@@ -74864,6 +75088,7 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 10
 	},
+/obj/effect/landmark/holiday_event_spawn,
 /turf/simulated/floor/wood,
 /area/crew_quarters/heads/hop)
 "sEr" = (
@@ -78515,12 +78740,21 @@
 /turf/simulated/wall/r_wall,
 /area/medical/surgery)
 "tOK" = (
-/obj/structure/sign/directions/outpost/internal_affairs{
-	pixel_y = -7
-	},
 /obj/structure/sign/directions/outpost/bunker{
-	pixel_y = -1;
-	dir = 1
+	dir = 1;
+	pixel_y = -1
+	},
+/obj/structure/sign/directions/bridge{
+	dir = 1;
+	pixel_y = -8
+	},
+/obj/structure/sign/directions/evac{
+	dir = 1;
+	pixel_y = 6
+	},
+/obj/structure/sign/directions/medical{
+	dir = 1;
+	pixel_y = 12
 	},
 /turf/simulated/wall/r_wall,
 /area/security/brig/drunk)
@@ -78557,10 +78791,6 @@
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/river/hole)
 "tPv" = (
-/obj/structure/sign/directions/outpost/internal_affairs{
-	dir = 1;
-	pixel_y = 9
-	},
 /obj/structure/sign/directions/outpost/robotics{
 	dir = 8;
 	pixel_y = -9
@@ -78573,6 +78803,10 @@
 	dir = 8;
 	pixel_y = -3;
 	name = "\improper Chemical Refinery"
+	},
+/obj/structure/sign/directions/bridge{
+	dir = 1;
+	pixel_y = 10
 	},
 /turf/simulated/wall,
 /area/hallway/secondary/exit)
@@ -82796,9 +83030,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/lawoffice)
-"vgX" = (
-/turf/simulated/wall/r_wall,
-/area/rnd/lab)
 "vhc" = (
 /obj/effect/floor_decal/spline/fancy/wood,
 /obj/machinery/power/apc{
@@ -83314,13 +83545,9 @@
 	dir = 5;
 	pixel_y = -9
 	},
-/obj/structure/sign/directions/science{
-	dir = 1;
-	pixel_y = 3
-	},
-/obj/structure/sign/directions/bridge{
-	dir = 1;
-	pixel_y = -3
+/obj/structure/sign/directions/evac{
+	pixel_y = 3;
+	dir = 6
 	},
 /turf/simulated/wall/r_wall,
 /area/maintenance/arrivals)
@@ -86389,9 +86616,6 @@
 /obj/structure/sign/directions/recreation{
 	pixel_y = 1
 	},
-/obj/structure/sign/directions/bridge{
-	pixel_y = -11
-	},
 /obj/structure/sign/directions/kitchen{
 	dir = 4;
 	pixel_y = 7
@@ -86402,6 +86626,9 @@
 /obj/structure/sign/directions/evac{
 	dir = 8;
 	pixel_y = 13
+	},
+/obj/structure/sign/directions/dorms{
+	pixel_y = -11
 	},
 /turf/simulated/wall,
 /area/hallway/primary/central_two)
@@ -87577,6 +87804,10 @@
 /obj/machinery/camera/network/command{
 	c_tag = "COM - Public Teleporter Office";
 	dir = 8
+	},
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = 26
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/telesci)
@@ -137911,7 +138142,7 @@ anK
 clv
 vgj
 ktR
-ddS
+afl
 bmU
 rzd
 oqs
@@ -140786,7 +141017,7 @@ rJE
 say
 say
 say
-aYC
+say
 rJE
 kvg
 nSL
@@ -141289,7 +141520,7 @@ axV
 exY
 hCW
 iUl
-cDk
+afV
 apq
 weP
 gjw
@@ -141445,7 +141676,7 @@ aXS
 aTt
 aXS
 aTf
-aXS
+bbN
 aSD
 aAT
 amT
@@ -141613,7 +141844,7 @@ aBw
 baD
 baA
 aPw
-hlD
+atx
 avP
 dQl
 dQl
@@ -141943,7 +142174,7 @@ agK
 kNv
 kWc
 exg
-vgX
+kWc
 ceY
 kvb
 tcV
@@ -142267,7 +142498,7 @@ jtp
 alk
 kWc
 all
-vgX
+kWc
 qQb
 qGZ
 bVz
@@ -142419,7 +142650,7 @@ uhB
 uhB
 uhB
 baJ
-aBw
+baY
 baE
 kWc
 kWc
@@ -142581,7 +142812,7 @@ uhB
 igI
 baN
 aSV
-aBw
+bbK
 aoi
 akJ
 lPp
@@ -142742,7 +142973,7 @@ aXm
 qqU
 weM
 czI
-aSR
+bbL
 aBw
 aoE
 akM
@@ -142904,9 +143135,9 @@ wLj
 gHG
 igI
 czI
-aSR
+bbM
 aBw
-aoE
+aXQ
 akM
 ajS
 cPo
@@ -143554,7 +143785,7 @@ aTm
 aSZ
 aSX
 aBw
-jvQ
+aZv
 jvQ
 bax
 qqC
@@ -143706,7 +143937,7 @@ aYG
 aYs
 amT
 amT
-amT
+bbO
 amT
 aWC
 amT
@@ -143868,7 +144099,7 @@ aYH
 baw
 aXI
 baA
-baA
+baX
 baA
 baR
 baA
@@ -143878,7 +144109,7 @@ aWW
 aTc
 baA
 baA
-baA
+baX
 alM
 baA
 baw
@@ -144509,7 +144740,7 @@ njP
 ban
 aZV
 rfZ
-rfZ
+bbP
 aYX
 aYZ
 aYK
@@ -146507,7 +146738,7 @@ exh
 jAp
 auO
 idk
-fft
+rvN
 rvN
 rvN
 arG

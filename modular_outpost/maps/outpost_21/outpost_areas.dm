@@ -70,7 +70,7 @@
 	base_turf = /turf/simulated/open
 
 /area/bridge/hallway
-	holomap_color = HOLOMAP_AREACOLOR_HALLWAYS
+	holomap_color = HOLOMAP_AREACOLOR_COMMAND
 	base_turf = /turf/simulated/open
 	lightswitch = 1
 

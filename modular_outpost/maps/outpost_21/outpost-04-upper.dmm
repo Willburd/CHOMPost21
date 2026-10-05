@@ -248,6 +248,27 @@
 /obj/random/cutout,
 /turf/simulated/floor/plating,
 /area/maintenance/gravgen)
+"aaA" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable/orange{
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/corner/white{
+	dir = 5
+	},
+/obj/machinery/firealarm{
+	pixel_y = 26
+	},
+/turf/simulated/floor/tiled/dark,
+/area/rnd/hallway/upper)
 "aaB" = (
 /obj/structure/cable/green{
 	icon_state = "0-2"
@@ -6828,16 +6849,6 @@
 "apo" = (
 /turf/simulated/wall/r_wall,
 /area/crew_quarters/captain)
-"app" = (
-/obj/structure/grille,
-/obj/machinery/door/firedoor/glass,
-/obj/structure/cable/green{
-	icon_state = "0-2"
-	},
-/obj/structure/cable/green,
-/obj/structure/window/reinforced/full,
-/turf/simulated/floor/plating,
-/area/rnd/research/sci_req_lab)
 "apq" = (
 /obj/machinery/door/blast/shutters{
 	density = 0;
@@ -7287,6 +7298,7 @@
 /obj/effect/floor_decal/corner/white{
 	dir = 9
 	},
+/obj/item/geiger/wall/west,
 /turf/simulated/floor/tiled/dark,
 /area/rnd/hallway/upper)
 "aqd" = (
@@ -7298,13 +7310,16 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/obj/item/geiger/wall/west,
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable/green{
 	icon_state = "2-4"
 	},
 /obj/effect/floor_decal/corner/white{
 	dir = 9
+	},
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -28
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/hallway/upper)
@@ -11829,21 +11844,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/hallway/upper)
-"aym" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/obj/structure/cable/green{
-	icon_state = "1-8"
-	},
-/obj/effect/floor_decal/corner/white{
-	dir = 10
-	},
-/turf/simulated/floor/tiled/dark,
-/area/rnd/hallway/upper)
 "ayn" = (
 /obj/machinery/light,
 /obj/structure/disposalpipe/segment{
@@ -12177,6 +12177,14 @@
 /obj/effect/floor_decal/corner/white{
 	dir = 5
 	},
+/obj/machinery/power/apc{
+	dir = 1;
+	name = "north bump";
+	pixel_y = 24
+	},
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/hallway/upper)
 "ayZ" = (
@@ -12237,6 +12245,15 @@
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/hydroponics/publicgarden)
+"azg" = (
+/obj/structure/foamedmetal,
+/obj/structure/extinguisher_cabinet{
+	dir = 4;
+	pixel_x = -30;
+	pixel_y = -7
+	},
+/turf/simulated/floor,
+/area/rnd/hallway/phoronicsbridge)
 "azs" = (
 /obj/structure/railing,
 /obj/structure/railing{
@@ -12715,19 +12732,14 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
 	},
-/obj/machinery/power/apc{
-	dir = 1;
-	name = "north bump";
-	pixel_y = 24
-	},
-/obj/structure/cable/green{
-	icon_state = "0-2"
-	},
 /obj/structure/cable/orange{
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/corner/white{
 	dir = 5
+	},
+/obj/machinery/ai_status_display{
+	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/hallway/upper)
@@ -39272,6 +39284,10 @@
 	dir = 8
 	},
 /obj/structure/barricade,
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = 26
+	},
 /turf/simulated/floor,
 /area/rnd/hallway/phoronicsbridge)
 "ptf" = (
@@ -46201,8 +46217,8 @@
 /obj/effect/floor_decal/corner/white{
 	dir = 5
 	},
-/obj/machinery/firealarm{
-	pixel_y = 26
+/obj/machinery/status_display{
+	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/hallway/upper)
@@ -53272,6 +53288,9 @@
 	},
 /obj/effect/floor_decal/corner/white{
 	dir = 10
+	},
+/obj/structure/cable/green{
+	icon_state = "1-8"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/hallway/upper)
@@ -103544,8 +103563,8 @@ ayz
 ayv
 ayp
 ayi
+ayi
 ava
-app
 beg
 egq
 ayi
@@ -105001,7 +105020,7 @@ jHp
 ekG
 iNm
 aMm
-aym
+apH
 ayf
 axY
 apW
@@ -105314,7 +105333,7 @@ wAN
 wAN
 wTp
 lXR
-eMZ
+azg
 eMZ
 axo
 adl
@@ -106134,7 +106153,7 @@ thK
 thK
 thK
 thK
-sPb
+aaA
 apH
 apo
 ayd
