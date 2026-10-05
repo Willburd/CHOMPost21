@@ -248,6 +248,17 @@
 /obj/random/cutout,
 /turf/simulated/floor/plating,
 /area/maintenance/gravgen)
+"aaA" = (
+/obj/structure/cable/green{
+	icon_state = "0-10"
+	},
+/obj/machinery/power/apc{
+	dir = 4;
+	name = "east bump";
+	pixel_x = 24
+	},
+/turf/simulated/floor,
+/area/muriki/elevator/civupper)
 "aaB" = (
 /obj/structure/cable/green{
 	icon_state = "0-2"
@@ -26239,15 +26250,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
 	},
-/obj/machinery/power/apc{
-	name = "south bump";
-	pixel_y = -24
-	},
 /obj/structure/cable/green{
-	icon_state = "0-8"
-	},
-/obj/structure/cable/green{
-	icon_state = "0-4"
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/rnd/hallway/upper)
@@ -41053,12 +41057,8 @@
 /turf/simulated/floor/tiled,
 /area/hallway/security/upper)
 "quS" = (
-/obj/machinery/power/apc{
-	name = "south bump";
-	pixel_y = -24
-	},
 /obj/structure/cable/green{
-	icon_state = "0-6"
+	icon_state = "5-6"
 	},
 /turf/simulated/floor,
 /area/maintenance/roof_tube_access)
@@ -53405,7 +53405,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/cable/green{
-	icon_state = "1-9"
+	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/roof_tube_access)
@@ -105388,7 +105388,7 @@ adl
 ayP
 adl
 apS
-cPh
+aaA
 dVB
 xdv
 hJL

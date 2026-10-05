@@ -20552,14 +20552,6 @@
 /obj/structure/cable/green{
 	icon_state = "2-4"
 	},
-/obj/machinery/power/apc{
-	dir = 1;
-	name = "north bump";
-	pixel_y = 24
-	},
-/obj/structure/cable/green{
-	icon_state = "0-4"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 8
 	},
@@ -41103,6 +41095,9 @@
 	name = "Station Intercom (General)";
 	pixel_y = -21
 	},
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/muriki/bridge/lockers)
 "heq" = (
@@ -58607,6 +58602,9 @@
 	},
 /obj/item/bikehorn/rubberducky/galaxy_harmless{
 	pixel_y = 11
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/kafel_full/white,
 /area/muriki/bridge/showers)
