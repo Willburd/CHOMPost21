@@ -7374,6 +7374,9 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/rnd/hallway/upper)
+"aqj" = (
+/turf/simulated/wall,
+/area/maintenance/substation/command)
 "aqk" = (
 /obj/machinery/power/apc{
 	dir = 8;
@@ -27344,9 +27347,6 @@
 	},
 /turf/simulated/floor/tiled/hydro,
 /area/hydroponics/hallway)
-"iNm" = (
-/turf/simulated/wall,
-/area/maintenance/substation/command)
 "iNK" = (
 /obj/item/stack/material/morphium{
 	amount = 25
@@ -104720,7 +104720,7 @@ uoy
 rdU
 fRy
 jGb
-iNm
+aqj
 oMB
 kdO
 apo
@@ -105044,7 +105044,7 @@ kia
 lYL
 jHp
 ekG
-iNm
+aqj
 aMm
 apH
 ayf
@@ -105203,10 +105203,10 @@ bri
 bri
 bri
 bri
-iNm
-iNm
-iNm
-iNm
+aqj
+aqj
+aqj
+aqj
 tjf
 aqV
 ayg

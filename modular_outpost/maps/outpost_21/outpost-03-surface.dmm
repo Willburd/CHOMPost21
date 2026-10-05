@@ -23611,31 +23611,16 @@
 /turf/simulated/wall/r_wall,
 /area/muriki/bridge/lockers)
 "bby" = (
-/turf/simulated/wall,
-/area/muriki/bridge/showers)
-"bbz" = (
-/obj/structure/grille,
-/obj/machinery/door/firedoor/glass,
-/obj/machinery/door/blast/regular{
-	id = "tscilab";
-	name = "Test Chamber Blast Doors";
-	dir = 4
-	},
-/obj/structure/cable/green{
-	icon_state = "0-4"
-	},
-/obj/structure/window/phoronreinforced{
+/obj/effect/floor_decal/spline/fancy/wood,
+/obj/machinery/camera/network/command{
+	c_tag = "COM - Internal Affairs South";
 	dir = 1
 	},
-/obj/structure/window/phoronreinforced{
-	dir = 8
-	},
-/obj/structure/window/phoronreinforced{
-	dir = 4
-	},
-/obj/structure/window/phoronreinforced,
-/turf/simulated/floor/plating,
-/area/rnd/telesci)
+/turf/simulated/floor/wood,
+/area/lawoffice)
+"bbz" = (
+/turf/simulated/wall,
+/area/muriki/bridge/showers)
 "bbA" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/glass_external{
@@ -23659,6 +23644,29 @@
 "bbB" = (
 /obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
+/obj/machinery/door/blast/regular{
+	id = "tscilab";
+	name = "Test Chamber Blast Doors";
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "0-4"
+	},
+/obj/structure/window/phoronreinforced{
+	dir = 1
+	},
+/obj/structure/window/phoronreinforced{
+	dir = 8
+	},
+/obj/structure/window/phoronreinforced{
+	dir = 4
+	},
+/obj/structure/window/phoronreinforced,
+/turf/simulated/floor/plating,
+/area/rnd/telesci)
+"bbC" = (
+/obj/structure/grille,
+/obj/machinery/door/firedoor/glass,
 /obj/structure/cable/green{
 	icon_state = "0-8"
 	},
@@ -23679,7 +23687,7 @@
 /obj/structure/window/phoronreinforced,
 /turf/simulated/floor/plating,
 /area/rnd/telesci)
-"bbC" = (
+"bbD" = (
 /obj/structure/window/phoronreinforced{
 	dir = 4
 	},
@@ -23699,10 +23707,10 @@
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
 /area/lawoffice)
-"bbD" = (
+"bbE" = (
 /turf/simulated/wall,
 /area/muriki/bridge/lockers)
-"bbE" = (
+"bbF" = (
 /obj/structure/window/phoronreinforced{
 	dir = 4
 	},
@@ -23727,7 +23735,7 @@
 	},
 /turf/simulated/floor/plating,
 /area/lawoffice)
-"bbF" = (
+"bbG" = (
 /obj/effect/floor_decal/corner/white{
 	dir = 10
 	},
@@ -23737,7 +23745,7 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge/hallway)
-"bbG" = (
+"bbH" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 1
 	},
@@ -23745,13 +23753,13 @@
 /mob/living/simple_mob/animal/passive/fox/renault,
 /turf/simulated/floor/carpet/tealcarpet,
 /area/bridge/hallway)
-"bbH" = (
+"bbI" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge/hallway)
-"bbI" = (
+"bbJ" = (
 /obj/effect/floor_decal/corner/white{
 	dir = 6
 	},
@@ -23760,7 +23768,7 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge/hallway)
-"bbJ" = (
+"bbK" = (
 /obj/structure/window/phoronreinforced{
 	dir = 4
 	},
@@ -23782,7 +23790,7 @@
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
 /area/lawoffice)
-"bbK" = (
+"bbL" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -23795,7 +23803,7 @@
 /obj/effect/landmark/vines,
 /turf/simulated/floor/tiled/dark,
 /area/bridge/hallway)
-"bbL" = (
+"bbM" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -23810,7 +23818,7 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge/hallway)
-"bbM" = (
+"bbN" = (
 /obj/structure/window/phoronreinforced{
 	dir = 4
 	},
@@ -23834,7 +23842,7 @@
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
 /area/lawoffice)
-"bbN" = (
+"bbO" = (
 /obj/effect/floor_decal/corner/white{
 	dir = 5
 	},
@@ -23849,7 +23857,7 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge/hallway)
-"bbO" = (
+"bbP" = (
 /obj/effect/floor_decal/corner/white{
 	dir = 5
 	},
@@ -23864,14 +23872,14 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge/hallway)
-"bbP" = (
+"bbQ" = (
 /obj/effect/floor_decal/corner/white{
 	dir = 6
 	},
 /obj/structure/ladder/top_hatch,
 /turf/simulated/floor/tiled/dark,
 /area/bridge/hallway)
-"bbQ" = (
+"bbR" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 4
 	},
@@ -23880,7 +23888,7 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge/hallway)
-"bbR" = (
+"bbS" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/sign/painting/public/west,
 /obj/machinery/door/firedoor/glass/hidden{
@@ -23888,7 +23896,7 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/bridge/hallway)
-"bbS" = (
+"bbT" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -23900,13 +23908,13 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/bridge/hallway)
-"bbT" = (
+"bbU" = (
 /obj/machinery/door/firedoor/glass/hidden{
 	dir = 2
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/bridge/hallway)
-"bbU" = (
+"bbV" = (
 /obj/effect/floor_decal/corner/white{
 	dir = 6
 	},
@@ -23920,7 +23928,7 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge/hallway)
-"bbV" = (
+"bbW" = (
 /obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/corner/white{
 	dir = 9
@@ -23931,7 +23939,12 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge/hallway)
-"bbW" = (
+"bbX" = (
+/obj/structure/catwalk,
+/obj/machinery/light/small,
+/turf/simulated/floor/plating,
+/area/maintenance/substation/security)
+"bbY" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -23944,19 +23957,14 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge/hallway)
-"bbX" = (
-/obj/structure/catwalk,
-/obj/machinery/light/small,
-/turf/simulated/floor/plating,
-/area/maintenance/substation/security)
-"bbY" = (
+"bbZ" = (
 /obj/machinery/camera/network/outside{
 	c_tag = "EXT - Bridge Northeast";
 	dir = 4
 	},
 /turf/simulated/floor/outdoors/mud/turfpack/muriki,
 /area/muriki/grounds/sci)
-"bbZ" = (
+"bca" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -23969,7 +23977,7 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge/hallway)
-"bca" = (
+"bcb" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
@@ -23979,7 +23987,7 @@
 /obj/item/geiger/wall/north,
 /turf/simulated/floor/tiled/dark,
 /area/bridge/hallway)
-"bcb" = (
+"bcc" = (
 /obj/effect/landmark/vines,
 /turf/simulated/floor/tiled/milspec,
 /area/bridge)
@@ -54814,10 +54822,6 @@
 /area/storage/tools)
 "lAF" = (
 /obj/effect/floor_decal/spline/fancy/wood,
-/obj/machinery/camera/network/command{
-	c_tag = "COM - Internal Affairs South";
-	dir = 1
-	},
 /turf/simulated/floor/wood,
 /area/lawoffice)
 "lAM" = (
@@ -86520,10 +86524,6 @@
 	},
 /turf/simulated/floor/tiled/milspec/sterile,
 /area/medical/surgery)
-"wpr" = (
-/obj/effect/floor_decal/spline/fancy/wood,
-/turf/simulated/floor/wood,
-/area/lawoffice)
 "wpx" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -139336,7 +139336,7 @@ kTG
 bQW
 amK
 mhN
-bby
+bbz
 vrx
 vrx
 fJr
@@ -139498,7 +139498,7 @@ rxd
 rxd
 rxd
 cpl
-bby
+bbz
 gqJ
 uYl
 xSz
@@ -139822,7 +139822,7 @@ rxd
 rxd
 rxd
 cPm
-bby
+bbz
 est
 dfg
 mRW
@@ -139984,7 +139984,7 @@ rxd
 wyQ
 amK
 eHi
-bby
+bbz
 jIl
 bkd
 hIf
@@ -140146,10 +140146,10 @@ rxd
 rxd
 rxd
 aMd
-bby
-bby
+bbz
+bbz
 bCN
-bby
+bbz
 hJG
 aWX
 aJX
@@ -140308,7 +140308,7 @@ rxd
 qXE
 euo
 qiG
-bbD
+bbE
 tRs
 anB
 kwx
@@ -140470,7 +140470,7 @@ rxd
 mbg
 lJD
 oKz
-bbD
+bbE
 qQs
 sQS
 aVA
@@ -140632,7 +140632,7 @@ rxd
 mbg
 rAc
 hXd
-bbD
+bbE
 jaY
 xsF
 hel
@@ -140794,7 +140794,7 @@ rxd
 swt
 axJ
 qlH
-bbD
+bbE
 uDQ
 xhF
 jZb
@@ -141118,8 +141118,8 @@ rxd
 cPw
 jaA
 rxd
-bbD
-bbD
+bbE
+bbE
 ofY
 bbx
 bbx
@@ -141283,7 +141283,7 @@ axV
 exY
 hCW
 iUl
-bbz
+bbB
 apq
 weP
 gjw
@@ -141439,7 +141439,7 @@ aXS
 aTt
 aXS
 aTf
-bbQ
+bbR
 aSD
 aAT
 amT
@@ -141597,7 +141597,7 @@ xLW
 rSz
 rSz
 eHD
-bbU
+bbV
 aTu
 aTr
 aTj
@@ -141607,7 +141607,7 @@ aBw
 baD
 baA
 aPw
-bbB
+bbC
 avP
 dQl
 dQl
@@ -142413,8 +142413,8 @@ uhB
 uhB
 uhB
 baJ
-bbK
-bbF
+bbL
+bbG
 kWc
 kWc
 kWc
@@ -142575,7 +142575,7 @@ uhB
 igI
 baN
 aSV
-bbL
+bbM
 aoi
 akJ
 lPp
@@ -142736,7 +142736,7 @@ aXm
 qqU
 weM
 czI
-bbN
+bbO
 aBw
 aoE
 akM
@@ -142898,9 +142898,9 @@ wLj
 gHG
 igI
 czI
-bbO
+bbP
 aBw
-bbG
+bbH
 akM
 ajS
 cPo
@@ -143211,7 +143211,7 @@ aZw
 aZf
 aYT
 aYE
-bbZ
+bca
 uhB
 eXa
 aYj
@@ -143428,7 +143428,7 @@ vgJ
 eXR
 xAJ
 bJi
-wpr
+lAF
 pOb
 aaY
 dHj
@@ -143533,7 +143533,7 @@ aZy
 aZy
 aZy
 njP
-bca
+bcb
 bbc
 aYr
 baV
@@ -143541,14 +143541,14 @@ baS
 aXq
 baV
 bbk
-bbV
-bbR
+bbW
+bbS
 aTs
 aTm
 aSZ
 aSX
 aBw
-bbH
+bbI
 jvQ
 bax
 qqC
@@ -143700,11 +143700,11 @@ aYG
 aYs
 amT
 amT
-bbW
+bbY
 amT
 aWC
 amT
-bbS
+bbT
 amT
 amT
 aTa
@@ -143862,17 +143862,17 @@ aYH
 baw
 aXI
 baA
-bbI
+bbJ
 baA
 baR
 baA
-bbT
+bbU
 aTq
 aWW
 aTc
-bbP
+bbQ
 baA
-bbI
+bbJ
 alM
 baA
 baw
@@ -144503,7 +144503,7 @@ njP
 ban
 aZV
 rfZ
-bcb
+bcc
 aYX
 aYZ
 aYK
@@ -144524,7 +144524,7 @@ wmR
 aTg
 bJi
 bJi
-lAF
+bby
 pOb
 kXQ
 agA
@@ -144843,10 +144843,10 @@ jqu
 pGH
 pOb
 pOb
-bbM
-bbJ
-bbE
-bbC
+bbN
+bbK
+bbF
+bbD
 pOb
 pOb
 pOb
@@ -145319,7 +145319,7 @@ aZc
 aYQ
 aYA
 aYn
-bbY
+bbZ
 nVv
 nVv
 are
