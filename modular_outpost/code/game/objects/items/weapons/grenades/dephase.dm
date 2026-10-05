@@ -35,3 +35,11 @@
 	starts_with = list(/obj/item/grenade/dephasing = 7)
 	drop_sound = 'sound/items/drop/ammobox.ogg'
 	pickup_sound = 'sound/items/pickup/ammobox.ogg'
+
+/obj/item/storage/box/rubber_pellet
+	name = "box of rubber pellets"
+	desc = "A box containing 7 rubber pellet grenades."
+	icon_state = "flashbang"
+	starts_with = list(/obj/item/grenade/shooter/rubber = 7)
+	drop_sound = 'sound/items/drop/ammobox.ogg'
+	pickup_sound = 'sound/items/pickup/ammobox.ogg'
