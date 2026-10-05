@@ -11348,7 +11348,6 @@
 	},
 /obj/structure/window/reinforced,
 /obj/structure/cable/green,
-/obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
 /area/crew_quarters/captain)
 "axF" = (
