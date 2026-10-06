@@ -25767,18 +25767,6 @@
 	},
 /turf/simulated/floor/plating/external/turfpack/muriki,
 /area/maintenance/civ/east)
-"aXs" = (
-/obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/corner/lightgrey/border,
-/obj/machinery/item_bank{
-	dir = 1;
-	pixel_y = -32
-	},
-/obj/structure/window/maintenance_panel{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/steel,
-/area/crew_quarters/locker)
 "aXt" = (
 /obj/effect/map_effect/interval/atmogland/bodyheat,
 /obj/effect/mist,
@@ -26764,6 +26752,34 @@
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/pool)
+"aZP" = (
+/obj/structure/sign/directions/eva{
+	pixel_y = -8;
+	dir = 4
+	},
+/turf/simulated/wall,
+/area/engineering/trammaint)
+"aZQ" = (
+/obj/structure/sign/directions/eva{
+	pixel_y = -8;
+	dir = 4
+	},
+/turf/simulated/wall,
+/area/maintenance/civ/east)
+"aZR" = (
+/obj/structure/sign/directions/eva{
+	pixel_y = -8
+	},
+/turf/simulated/wall,
+/area/hallway/muriki/dorm)
+"aZS" = (
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/lightgrey/border,
+/obj/structure/sign/yessmoking_1{
+	pixel_y = -32
+	},
+/turf/simulated/floor/tiled/steel,
+/area/crew_quarters/recreation_area_hallway)
 "aZT" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -26815,6 +26831,44 @@
 "aZW" = (
 /turf/simulated/mineral/alt/ignore_mapgen/turfpack/muriki,
 /area/maintenance/civ/south)
+"aZX" = (
+/obj/structure/sign/directions/eva{
+	pixel_y = -8;
+	dir = 8
+	},
+/obj/structure/sign/directions/dorms{
+	pixel_y = -2;
+	dir = 4
+	},
+/obj/structure/sign/directions/evac{
+	dir = 1;
+	pixel_y = 11
+	},
+/obj/structure/sign/directions/stairs_up{
+	pixel_y = 5;
+	dir = 1
+	},
+/turf/simulated/wall,
+/area/maintenance/civ/closet)
+"aZY" = (
+/obj/structure/sign/directions/pool{
+	pixel_y = -9;
+	dir = 1
+	},
+/obj/structure/sign/directions/bar{
+	pixel_y = 4;
+	dir = 1
+	},
+/obj/structure/sign/directions/tram{
+	pixel_y = 11;
+	dir = 1
+	},
+/obj/structure/sign/directions/elevator{
+	pixel_y = -2;
+	dir = 1
+	},
+/turf/simulated/wall,
+/area/hallway/muriki/dorm)
 "aZZ" = (
 /obj/structure/disposalpipe/segment{
 	dir = 2;
@@ -26822,6 +26876,68 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/cave/waste)
+"baa" = (
+/obj/structure/sign/directions/tram{
+	pixel_y = 11;
+	dir = 9
+	},
+/obj/structure/sign/directions/bar{
+	pixel_y = 4;
+	dir = 9
+	},
+/obj/structure/sign/directions/kitchen{
+	pixel_y = -3;
+	dir = 9
+	},
+/obj/structure/sign/directions/evac{
+	dir = 9;
+	pixel_y = -9
+	},
+/turf/simulated/wall,
+/area/crew_quarters/recreation_area_hallway)
+"bab" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 4
+	},
+/obj/structure/sign/yessmoking_1{
+	pixel_x = 32
+	},
+/turf/simulated/floor/tiled/steel,
+/area/crew_quarters/recreation_area_hallway)
+"bac" = (
+/obj/structure/sign/directions/eva{
+	pixel_y = -8
+	},
+/turf/simulated/wall,
+/area/maintenance/civ/bunker)
+"bad" = (
+/obj/structure/sign/directions/dorms{
+	pixel_y = 9
+	},
+/obj/structure/sign/directions/stairs_up{
+	pixel_y = 2
+	},
+/turf/simulated/wall,
+/area/muriki/crew/poollocker)
+"bae" = (
+/obj/structure/sign/yessmoking_1{
+	pixel_x = 32
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/crew_quarters/pool)
+"baf" = (
+/obj/structure/sign/directions/eva{
+	pixel_y = -8
+	},
+/turf/simulated/wall/r_wall,
+/area/hallway/muriki/bunkerhall)
+"bag" = (
+/obj/structure/sign/deck/first,
+/turf/simulated/wall/titanium,
+/area/muriki/elevator/civbase)
 "bah" = (
 /obj/machinery/organ_printer/flesh/full,
 /obj/item/reagent_containers/glass/bottle/biomass,
@@ -26836,6 +26952,20 @@
 	},
 /turf/simulated/floor/tiled/freezer/cold,
 /area/medical/surgery_storage)
+"bai" = (
+/obj/structure/sign/directions/eva{
+	pixel_y = -8;
+	dir = 1
+	},
+/turf/simulated/wall,
+/area/rnd/research/exp_prep)
+"baj" = (
+/obj/structure/sign/directions/eva{
+	pixel_y = -8;
+	dir = 1
+	},
+/turf/simulated/wall/r_wall,
+/area/maintenance/research/north)
 "ban" = (
 /obj/structure/blade_trap/start_active,
 /obj/random/junk,
@@ -28697,10 +28827,6 @@
 /turf/simulated/floor/plating,
 /area/crew_quarters/locker)
 "biO" = (
-/obj/machinery/light_switch{
-	pixel_x = -25;
-	pixel_y = -5
-	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 9
 	},
@@ -45543,6 +45669,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/railing,
+/obj/structure/sign/warning/acid{
+	pixel_x = -32
+	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/research)
 "bRF" = (
@@ -70415,11 +70544,11 @@
 /turf/simulated/floor/tiled/steel_ridged,
 /area/muriki/crew/poollocker)
 "cXW" = (
-/obj/structure/flora/pottedplant/decorative,
 /obj/machinery/camera/network/civilian{
 	c_tag = "CIV - Pool Central";
 	dir = 8
 	},
+/obj/structure/flora/pottedplant/decorative,
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/pool)
 "cXX" = (
@@ -85256,9 +85385,6 @@
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 8
 	},
-/obj/structure/sign/painting/public{
-	pixel_x = -32
-	},
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
@@ -92243,7 +92369,7 @@ coq
 coq
 bmq
 bmq
-bmq
+aZP
 fYc
 fYc
 dPi
@@ -137082,7 +137208,7 @@ mXl
 mXl
 cvs
 cvo
-aRR
+aZS
 bix
 biP
 cXg
@@ -137090,7 +137216,7 @@ cXg
 aXz
 cXg
 cXg
-aXs
+cXb
 bix
 aXy
 aXy
@@ -137387,7 +137513,7 @@ chl
 bTO
 aPS
 cYd
-aRR
+aZS
 bcq
 sQj
 iiP
@@ -137546,7 +137672,7 @@ chl
 chl
 chl
 chl
-bDX
+bag
 aPQ
 cYd
 aRR
@@ -137874,7 +138000,7 @@ amq
 aZI
 cYd
 aRR
-bcq
+bad
 bcq
 cXV
 bcq
@@ -137882,14 +138008,14 @@ bcq
 bcq
 aKP
 rJg
-aPO
+baa
 aXb
 aXb
 mXl
 bFs
 aYS
 mXl
-mXl
+aZX
 cuj
 cvr
 cuj
@@ -138312,13 +138438,13 @@ cnB
 cnG
 cnB
 bUU
-bUU
+baj
 bJG
 cpS
 bJG
 bJG
 bJG
-aDw
+bai
 nVz
 aFA
 aFA
@@ -138368,7 +138494,7 @@ aoj
 cXN
 aQZ
 aQZ
-aQZ
+bab
 aZd
 aQZ
 aQZ
@@ -138537,7 +138663,7 @@ blS
 blS
 blS
 blS
-beJ
+aZY
 cXm
 bbf
 cXm
@@ -139980,7 +140106,7 @@ bff
 aQe
 aZE
 bff
-bff
+bae
 cXW
 tvn
 aSE
@@ -140335,7 +140461,7 @@ bfn
 rVG
 bmh
 cMe
-beJ
+aZR
 aXy
 aWL
 doY
@@ -140500,7 +140626,7 @@ gSf
 bsH
 aXy
 aXy
-aXy
+aZQ
 aWy
 aXy
 aXy
@@ -144030,10 +144156,10 @@ pmN
 lOq
 hiX
 jkb
-lOq
+baf
 bJD
 aEI
-fJz
+bac
 cWK
 vSb
 vSb

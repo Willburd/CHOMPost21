@@ -4755,21 +4755,17 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/reception)
 "agM" = (
-/obj/structure/sign/directions/teleporter{
-	dir = 1;
-	name = "\improper Public Teleporter";
-	pixel_y = -8
-	},
 /obj/structure/sign/directions/stairwell{
 	dir = 9;
-	pixel_y = -2
+	pixel_y = -6
 	},
 /obj/structure/sign/directions/eva{
-	pixel_y = 4;
+	pixel_y = 12;
 	dir = 1
 	},
-/obj/structure/sign/directions/medical{
-	pixel_y = 10
+/obj/structure/sign/directions/medical,
+/obj/structure/sign/directions/security{
+	pixel_y = 6
 	},
 /turf/simulated/wall,
 /area/bridge/hallway)
@@ -5884,13 +5880,13 @@
 	dir = 8;
 	pixel_y = 4
 	},
-/obj/structure/sign/directions/science/exploration{
-	dir = 8;
-	pixel_y = -2
-	},
 /obj/structure/sign/directions/engineering{
 	dir = 1;
 	pixel_y = -8
+	},
+/obj/structure/sign/directions/outpost/robotics{
+	pixel_y = -2;
+	dir = 1
 	},
 /turf/simulated/wall,
 /area/quartermaster/foyer)
@@ -5899,17 +5895,17 @@
 	dir = 4;
 	pixel_y = -2
 	},
-/obj/structure/sign/directions/science{
-	dir = 4;
-	pixel_y = 4
-	},
 /obj/structure/sign/directions/medical{
 	dir = 4;
-	pixel_y = 10
+	pixel_y = 4
 	},
 /obj/structure/sign/directions/evac{
 	dir = 4;
 	pixel_y = -8
+	},
+/obj/structure/sign/directions/bridge{
+	dir = 4;
+	pixel_y = 10
 	},
 /turf/simulated/wall,
 /area/quartermaster/foyer)
@@ -5918,9 +5914,9 @@
 	dir = 4;
 	pixel_y = 4
 	},
-/obj/structure/sign/directions/bridge{
-	dir = 4;
-	pixel_y = 10
+/obj/structure/sign/directions/cryo{
+	pixel_y = 10;
+	dir = 4
 	},
 /turf/simulated/wall,
 /area/quartermaster/foyer)
@@ -6764,25 +6760,6 @@
 	},
 /turf/simulated/floor/carpet/tealcarpet,
 /area/bridge/hallway)
-"akK" = (
-/obj/structure/sign/directions/security{
-	dir = 8;
-	pixel_y = 4
-	},
-/obj/structure/sign/directions/medical{
-	dir = 8;
-	pixel_y = 10
-	},
-/obj/structure/sign/directions/engineering{
-	dir = 8;
-	pixel_y = -2
-	},
-/obj/structure/sign/directions/outpost/bunker{
-	dir = 4;
-	pixel_y = -8
-	},
-/turf/simulated/wall/titanium,
-/area/muriki/elevator/civmain)
 "akL" = (
 /obj/structure/railing,
 /obj/effect/floor_decal/industrial/warning/dust,
@@ -12849,6 +12826,16 @@
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/hallway/security/main)
+"azd" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 9
+	},
+/obj/structure/sign/directions/exit{
+	pixel_y = -24;
+	pixel_x = -31
+	},
+/turf/simulated/floor/tiled,
+/area/hallway/secondary/engineering_hallway)
 "aze" = (
 /obj/structure/prop/rock,
 /turf/simulated/mineral/floor/turfpack/muriki{
@@ -13928,6 +13915,24 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/reception)
+"aBj" = (
+/obj/structure/sign/directions/dorms{
+	pixel_y = 6;
+	dir = 8
+	},
+/obj/structure/sign/directions/evac{
+	dir = 8;
+	pixel_y = 12
+	},
+/obj/structure/sign/directions/medical{
+	dir = 8
+	},
+/obj/structure/sign/directions/cryo{
+	pixel_y = -6;
+	dir = 8
+	},
+/turf/simulated/wall,
+/area/muriki/crew/kitchenfreezer)
 "aBk" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -18959,12 +18964,7 @@
 "aSu" = (
 /obj/structure/sign/directions/teleporter{
 	dir = 1;
-	name = "\improper Public Teleporter";
-	pixel_y = -1
-	},
-/obj/structure/sign/directions/bridge{
-	dir = 4;
-	pixel_y = -8
+	name = "\improper Public Teleporter"
 	},
 /obj/structure/sign/directions/evac{
 	dir = 8;
@@ -18973,6 +18973,10 @@
 /obj/structure/sign/directions/medical{
 	dir = 8;
 	pixel_y = 12
+	},
+/obj/structure/sign/directions/cryo{
+	pixel_y = -6;
+	dir = 8
 	},
 /turf/simulated/wall/r_wall,
 /area/rnd/telesci)
@@ -19470,7 +19474,7 @@
 	name = "Bridge Lockdown";
 	dir = 4;
 	pixel_x = -28;
-	pixel_y = 0
+	pixel_y = 7
 	},
 /obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/corner/white{
@@ -23759,19 +23763,6 @@
 /obj/structure/sign/poster,
 /turf/simulated/floor/carpet/purcarpet,
 /area/muriki/crew/casino)
-"bbw" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/lightgrey/border{
-	dir = 4
-	},
-/obj/structure/sign/directions/elevator{
-	pixel_y = -3;
-	pixel_x = 32
-	},
-/turf/simulated/floor/tiled,
-/area/hallway/secondary/exit)
 "bbx" = (
 /turf/simulated/wall/r_wall,
 /area/muriki/bridge/lockers)
@@ -24191,6 +24182,24 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/milspec,
 /area/medical/sleeper)
+"bch" = (
+/obj/structure/sign/directions/security{
+	dir = 8;
+	pixel_y = 6
+	},
+/obj/structure/sign/directions/engineering{
+	dir = 8
+	},
+/obj/structure/sign/directions/outpost/bunker{
+	dir = 4;
+	pixel_y = -6
+	},
+/obj/structure/sign/directions/medical{
+	dir = 8;
+	pixel_y = 12
+	},
+/turf/simulated/wall/titanium,
+/area/muriki/elevator/civmain)
 "bci" = (
 /obj/machinery/scale,
 /obj/effect/floor_decal/spline/plain,
@@ -24566,6 +24575,17 @@
 	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/muriki/crew/arcade/lasertagstore)
+"bcS" = (
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/glass_centcom{
+	name = "Bridge Access"
+	},
+/obj/structure/sign/directions/exit{
+	pixel_y = 24;
+	pixel_x = 32
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/bridge/hallway)
 "bcT" = (
 /obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
@@ -25082,6 +25102,18 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/carpet/purcarpet,
 /area/muriki/crew/casino)
+"bdS" = (
+/obj/structure/sign/directions/teleporter{
+	dir = 1;
+	name = "\improper Public Teleporter";
+	pixel_y = -8
+	},
+/obj/structure/sign/directions/bridge{
+	dir = 1;
+	pixel_y = -2
+	},
+/turf/simulated/wall/r_wall,
+/area/crew_quarters/heads/hop)
 "bdT" = (
 /obj/effect/landmark/holiday_event_spawn,
 /obj/effect/floor_decal/spline/fancy/wood{
@@ -28012,7 +28044,6 @@
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/green/border,
 /obj/machinery/light,
-/obj/structure/sign/poster,
 /turf/simulated/floor/tiled/steel,
 /area/hallway/primary/central_three)
 "bNP" = (
@@ -30824,6 +30855,10 @@
 /obj/machinery/light_switch{
 	pixel_x = -24;
 	pixel_y = 28
+	},
+/obj/structure/sign/directions/exit{
+	pixel_y = 21;
+	pixel_x = -32
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/office)
@@ -45748,7 +45783,7 @@
 	},
 /obj/structure/sign/directions/outpost/robotics{
 	dir = 8;
-	pixel_y = -8
+	pixel_y = -7
 	},
 /turf/simulated/wall,
 /area/hallway/secondary/exit)
@@ -46240,8 +46275,8 @@
 /area/quartermaster/office)
 "imP" = (
 /obj/structure/sign/directions/medical{
-	dir = 8;
-	pixel_y = 4
+	dir = 1;
+	pixel_y = -2
 	},
 /obj/structure/sign/directions/recreation{
 	dir = 1;
@@ -46250,8 +46285,9 @@
 /obj/structure/sign/directions/evac{
 	pixel_y = -8
 	},
-/obj/structure/sign/directions/elevator{
-	pixel_y = -2
+/obj/structure/sign/directions/bar{
+	dir = 1;
+	pixel_y = 4
 	},
 /turf/simulated/wall,
 /area/hallway/secondary/entry/docking_lounge)
@@ -55104,12 +55140,12 @@
 	dir = 8;
 	pixel_y = 4
 	},
-/obj/structure/sign/directions/science/exploration{
-	dir = 8;
-	pixel_y = -2
-	},
 /obj/structure/sign/directions/cargo{
 	pixel_y = -8
+	},
+/obj/structure/sign/directions/engineering{
+	dir = 1;
+	pixel_y = -2
 	},
 /turf/simulated/wall,
 /area/muriki/tramstation/cargeng)
@@ -56735,10 +56771,6 @@
 	dir = 4;
 	pixel_y = 10
 	},
-/obj/structure/sign/directions/science/exploration{
-	dir = 4;
-	pixel_y = 4
-	},
 /obj/structure/sign/directions/stairwell{
 	dir = 8;
 	pixel_y = -2
@@ -56746,6 +56778,10 @@
 /obj/structure/sign/directions/eva{
 	dir = 4;
 	pixel_y = -8
+	},
+/obj/structure/sign/directions/cargo/refinery{
+	pixel_y = 4;
+	dir = 4
 	},
 /turf/simulated/wall/r_wall,
 /area/muriki/bathroom/sanitorium)
@@ -60726,9 +60762,9 @@
 	dir = 4;
 	pixel_y = -2
 	},
-/obj/structure/sign/directions/bridge{
-	dir = 4;
-	pixel_y = -8
+/obj/structure/sign/directions/cryo{
+	pixel_y = -8;
+	dir = 4
 	},
 /turf/simulated/wall,
 /area/muriki/tramstation/cargeng)
@@ -68874,6 +68910,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/eshui/emblem/eshui_small_l,
+/obj/structure/sign/directions/exit{
+	pixel_y = 21;
+	pixel_x = -32
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/security/main)
 "qkN" = (
@@ -70845,17 +70885,17 @@
 	dir = 4;
 	pixel_y = -2
 	},
-/obj/structure/sign/directions/science{
-	dir = 4;
-	pixel_y = 4
-	},
 /obj/structure/sign/directions/medical{
 	dir = 4;
-	pixel_y = 10
+	pixel_y = 4
 	},
 /obj/structure/sign/directions/evac{
 	dir = 4;
 	pixel_y = -8
+	},
+/obj/structure/sign/directions/bridge{
+	dir = 4;
+	pixel_y = 10
 	},
 /turf/simulated/wall,
 /area/muriki/tramstation/cargeng)
@@ -72553,9 +72593,9 @@
 	dir = 9;
 	pixel_y = 11
 	},
-/obj/structure/sign/directions/bridge{
-	dir = 1;
-	pixel_y = -8
+/obj/structure/sign/directions/pool{
+	pixel_y = -7;
+	dir = 10
 	},
 /turf/simulated/wall,
 /area/muriki/crewstairwell)
@@ -81136,12 +81176,12 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
-/obj/machinery/atm{
-	pixel_y = -32;
-	pixel_x = -6
-	},
 /obj/structure/table/standard,
 /obj/structure/candybowl/cargo,
+/obj/item/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -21
+	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/foyer)
 "uzo" = (
@@ -83424,17 +83464,24 @@
 /turf/simulated/floor/plating,
 /area/crew_quarters/kitchen)
 "vpz" = (
-/obj/structure/sign/directions/outpost/bunker{
-	dir = 1;
-	pixel_y = 9
-	},
 /obj/structure/sign/directions/outpost/gen{
 	dir = 5;
-	pixel_y = -9
+	pixel_y = -5
 	},
 /obj/structure/sign/directions/evac{
-	pixel_y = 3;
+	pixel_y = 7;
 	dir = 6
+	},
+/obj/structure/sign/directions/outpost/bunker{
+	dir = 1;
+	pixel_y = -11
+	},
+/obj/structure/sign/directions/cryo{
+	pixel_y = 13
+	},
+/obj/structure/sign/directions/dorms{
+	pixel_y = 1;
+	dir = 1
 	},
 /turf/simulated/wall/r_wall,
 /area/maintenance/arrivals)
@@ -85182,10 +85229,8 @@
 /obj/effect/floor_decal/corner/brown/border{
 	dir = 4
 	},
-/obj/item/radio/intercom{
-	dir = 4;
-	name = "Station Intercom (General)";
-	pixel_x = 21
+/obj/machinery/atm{
+	pixel_x = 28
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/foyer)
@@ -86456,7 +86501,7 @@
 	pixel_y = 1
 	},
 /obj/structure/sign/directions/kitchen{
-	dir = 4;
+	dir = 6;
 	pixel_y = 7
 	},
 /obj/structure/sign/directions/stairwell{
@@ -113251,7 +113296,7 @@ blU
 snE
 qtk
 ahM
-qtk
+azd
 vAk
 agY
 ahi
@@ -137884,7 +137929,7 @@ anK
 clv
 vgj
 ktR
-bbw
+ddS
 bmU
 rzd
 oqs
@@ -143050,7 +143095,7 @@ dov
 dov
 dov
 dov
-aWR
+bch
 uqQ
 wAv
 kxL
@@ -143212,7 +143257,7 @@ aWR
 aWR
 aWR
 aWR
-akK
+aWR
 amW
 hAd
 jQM
@@ -143360,7 +143405,7 @@ uhB
 uhB
 uhB
 uhB
-uhB
+bdS
 aXj
 ezh
 aSW
@@ -143855,7 +143900,7 @@ bbJ
 alM
 baA
 baw
-aSQ
+bcS
 aSN
 aGH
 agy
@@ -147104,7 +147149,7 @@ oJb
 iZo
 gJj
 bNN
-gzS
+aBj
 wgM
 del
 wOt
