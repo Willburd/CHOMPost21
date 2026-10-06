@@ -24239,6 +24239,7 @@
 /obj/structure/micro_tunnel{
 	pixel_y = -32
 	},
+/obj/structure/ladder/top_hatch,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/muriki/crew/arcade/lasertagstore)
 "bcn" = (
