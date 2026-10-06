@@ -116,8 +116,7 @@
 
 /area/crew_quarters/recreation_area_hallway
 	holomap_color = HOLOMAP_AREACOLOR_CIV
-	base_turf = /turf/simulated/open
-	lightswitch = 1
+	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 
 /area/hallway/secondary/construction
 	holomap_color = HOLOMAP_AREACOLOR_CIV
@@ -175,7 +174,7 @@
 
 /area/crew_quarters/fitness
 	holomap_color = HOLOMAP_AREACOLOR_CIV
-	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
+	base_turf = /turf/simulated/open
 
 /area/crew_quarters/pool
 	holomap_color = HOLOMAP_AREACOLOR_CIV

@@ -5666,6 +5666,9 @@
 /turf/simulated/floor/plating,
 /area/maintenance/civ/east)
 "akX" = (
+/obj/effect/floor_decal/stairs/station{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/hallway/lowmain)
 "akY" = (
@@ -83748,7 +83751,10 @@
 /turf/simulated/floor/water/acidic/indoor/turfpack/muriki,
 /area/mine/explored/muriki/river/north)
 "upO" = (
-/obj/structure/stairs/spawner/north,
+/obj/effect/floor_decal/stairs/station{
+	dir = 1;
+	icon_state = "stair_u"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/hallway/lowmain)
 "upU" = (
