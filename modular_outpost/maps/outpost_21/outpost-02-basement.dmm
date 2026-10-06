@@ -22033,7 +22033,6 @@
 /obj/machinery/station_map{
 	pixel_y = 32
 	},
-/obj/structure/closet/firecloset/full,
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
 	},
@@ -24000,6 +23999,7 @@
 /obj/machinery/light/small{
 	dir = 4
 	},
+/obj/item/bikehorn,
 /turf/simulated/floor/plating/external/turfpack/muriki,
 /area/maintenance/civ/east)
 "aUn" = (
@@ -24298,6 +24298,7 @@
 /obj/structure/cable/green{
 	icon_state = "2-5"
 	},
+/obj/machinery/floodlight,
 /turf/simulated/floor/plating,
 /area/maintenance/civ/bunker)
 "aUN" = (
@@ -26099,6 +26100,23 @@
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/pool)
+"aXX" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/obj/item/bikehorn,
+/turf/simulated/floor/plating,
+/area/maintenance/civ/east)
+"aXY" = (
+/obj/random/plushielarge,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/civ/east)
+"aXZ" = (
+/obj/machinery/door/airlock/maintenance/int,
+/obj/item/reagent_containers/glass/bucket/prankster_mix,
+/turf/simulated/floor/tiled/techfloor,
+/area/maintenance/civ/east)
 "aYa" = (
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 1
@@ -26115,6 +26133,30 @@
 	},
 /turf/simulated/floor/tiled/dark/turfpack/muriki,
 /area/engineering/refinery/main)
+"aYb" = (
+/obj/random/junk,
+/obj/item/bikehorn,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/civ/east)
+"aYc" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/item/bikehorn,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/civ/east)
+"aYd" = (
+/obj/machinery/door/airlock/maintenance/int,
+/obj/structure/blade_trap/start_active,
+/turf/simulated/floor/tiled/techfloor,
+/area/maintenance/civ/east)
+"aYe" = (
+/obj/structure/catwalk,
+/obj/effect/auto_crayon{
+	icon_state = "x"
+	},
+/turf/simulated/floor/plating/external/turfpack/muriki,
+/area/maintenance/civ/east)
 "aYf" = (
 /obj/item/material/barbedwire/glass/start_active,
 /turf/simulated/floor/plating/turfpack/muriki,
@@ -26142,11 +26184,26 @@
 /obj/effect/floorbreak,
 /turf/simulated/floor/wood/alt/parquet,
 /area/maintenance/civ/bunker)
+"aYk" = (
+/obj/structure/catwalk,
+/obj/item/bikehorn,
+/turf/simulated/floor/plating/external/turfpack/muriki,
+/area/maintenance/civ/east)
+"aYl" = (
+/obj/structure/catwalk,
+/obj/structure/reagent_dispensers/fueltank,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/civ/east)
 "aYm" = (
 /turf/simulated/floor/flesh/mover/turfpack/muriki{
 	dir = 8
 	},
 /area/muriki/processor/hall)
+"aYn" = (
+/obj/structure/disposalpipe/segment,
+/obj/item/bikehorn,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/civ/east)
 "aYo" = (
 /obj/structure/stairs/spawner/north,
 /turf/simulated/floor/plating,
@@ -26217,6 +26274,26 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/civ/closet)
+"aYw" = (
+/obj/effect/landmark/holiday_event_spawn,
+/turf/simulated/floor/tiled/dark/turfpack/muriki,
+/area/mine/explored/muriki/cave/civ/east_access)
+"aYx" = (
+/obj/structure/cable/orange{
+	icon_state = "2-8"
+	},
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/simulated/floor/plating/external/turfpack/muriki,
+/area/maintenance/civ/east)
+"aYy" = (
+/obj/random/greaterportalloot,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/civ/east)
+"aYz" = (
+/turf/simulated/floor/water/acidic/indoor/turfpack/muriki,
+/area/mine/unexplored/muriki/mountainbase)
 "aYA" = (
 /turf/simulated/wall{
 	can_open = 1
@@ -26248,6 +26325,15 @@
 /obj/structure/flora/mushroom,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/civ/south)
+"aYG" = (
+/turf/simulated/floor/water/acidic/deep/indoor/turfpack/muriki,
+/area/mine/unexplored/muriki/mountainbase)
+"aYH" = (
+/obj/structure/spring_trap/self_resetting/start_active{
+	distance = 6
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/civ/bunker)
 "aYI" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/door/blast/regular/open{
@@ -26257,6 +26343,35 @@
 	},
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/maintenance/sec)
+"aYJ" = (
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/civ/bunker)
+"aYK" = (
+/obj/structure/flora/mushroom,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/civ/bunker)
+"aYL" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 1
+	},
+/obj/machinery/station_map{
+	pixel_y = 32
+	},
+/turf/simulated/floor/tiled/steel,
+/area/hallway/muriki/dorm)
+"aYM" = (
+/obj/structure/catwalk,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/civ/bunker)
+"aYN" = (
+/obj/structure/ladder/up,
+/obj/structure/catwalk,
+/obj/effect/floor_decal/industrial/outline/grey,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/civ/bunker)
 "aYO" = (
 /obj/structure/railing{
 	dir = 4
@@ -26311,6 +26426,19 @@
 /obj/structure/railing,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/tug)
+"aYV" = (
+/obj/structure/trash_pile,
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/structure/railing,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/civ/bunker)
+"aYW" = (
+/obj/random/junk,
+/obj/structure/catwalk,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/civ/bunker)
 "aYX" = (
 /obj/structure/cable/green{
 	icon_state = "6-9"
@@ -26326,6 +26454,43 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/spine/waste)
+"aYZ" = (
+/obj/effect/auto_crayon{
+	icon_state = "two_lust"
+	},
+/obj/structure/catwalk,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/civ/bunker)
+"aZa" = (
+/obj/effect/auto_crayon{
+	icon_state = "x"
+	},
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/civ/bunker)
+"aZb" = (
+/obj/random/junk,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/civ/bunker)
+"aZc" = (
+/obj/effect/auto_crayon{
+	icon_state = "left"
+	},
+/obj/structure/catwalk,
+/obj/structure/micro_tunnel{
+	dir = 1;
+	pixel_y = 32
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/civ/bunker)
+"aZd" = (
+/obj/effect/auto_crayon{
+	icon_state = "depart"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/civ/bunker)
 "aZe" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -26333,6 +26498,17 @@
 /obj/structure/flora/mushroom,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/cargo)
+"aZf" = (
+/obj/effect/auto_crayon{
+	icon_state = "left"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/civ/bunker)
+"aZg" = (
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/maintenance/civ/bunker)
 "aZh" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -26340,6 +26516,37 @@
 /obj/item/clothing/suit/caution,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/cargo)
+"aZi" = (
+/obj/structure/trash_pile,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/civ/bunker)
+"aZj" = (
+/turf/simulated/mineral/alt/turfpack/muriki,
+/area/maintenance/civ/bunker)
+"aZk" = (
+/obj/structure/foamedmetal,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/civ/bunker)
+"aZl" = (
+/obj/structure/trash_pile,
+/obj/structure/railing{
+	dir = 4
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/civ/bunker)
+"aZm" = (
+/obj/random/junk,
+/obj/structure/railing{
+	dir = 4
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/civ/bunker)
+"aZn" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/civ/bunker)
 "aZo" = (
 /turf/simulated/floor/flesh/mover/turfpack/muriki{
 	dir = 6
@@ -26350,6 +26557,21 @@
 	dir = 10
 	},
 /area/muriki/processor/hall)
+"aZq" = (
+/obj/random/toolbox,
+/turf/simulated/floor/plating,
+/area/maintenance/civ/bunker)
+"aZr" = (
+/obj/structure/window/maintenance_panel{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/crew_quarters/pool)
+"aZs" = (
+/obj/structure/catwalk,
+/obj/structure/closet/firecloset/full,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/research)
 "aZx" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -26957,6 +27179,7 @@
 /obj/machinery/light,
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/lightgrey/border,
+/obj/random/plushie,
 /turf/simulated/floor/tiled/steel,
 /area/hallway/muriki/dorm)
 "bct" = (
@@ -35818,6 +36041,7 @@
 	dir = 4
 	},
 /obj/item/material/ashtray/plastic,
+/obj/random/plushie,
 /turf/simulated/floor/tiled/steel,
 /area/maintenance/civ/east)
 "byv" = (
@@ -45235,6 +45459,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/railing,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/research)
 "bRF" = (
@@ -55389,6 +55614,9 @@
 /obj/effect/auto_crayon{
 	icon_state = "two_lust"
 	},
+/obj/machinery/light/small{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/civ/bunker)
 "cqC" = (
@@ -58673,9 +58901,6 @@
 /obj/machinery/light,
 /turf/simulated/floor/tiled/steel,
 /area/crew_quarters/recreation_area_hallway)
-"czt" = (
-/turf/simulated/floor/tiled/techfloor,
-/area/maintenance/civ/east)
 "czu" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -64201,6 +64426,10 @@
 "cLR" = (
 /obj/structure/catwalk,
 /obj/structure/trash_pile,
+/obj/structure/extinguisher_cabinet{
+	dir = 8;
+	pixel_x = 30
+	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/research)
 "cLS" = (
@@ -74331,9 +74560,7 @@
 /obj/structure/cable/orange{
 	icon_state = "4-8"
 	},
-/obj/structure/window/maintenance_panel{
-	dir = 8
-	},
+/obj/machinery/door/airlock/maintenance/common,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/crew_quarters/pool)
 "iyw" = (
@@ -136004,7 +136231,7 @@ vka
 vka
 vka
 aXy
-aoC
+aXX
 avx
 aXy
 aXy
@@ -137731,8 +137958,8 @@ bzB
 bLz
 bRI
 amq
-amq
-amq
+aZs
+aZs
 amq
 aPU
 cYe
@@ -138264,7 +138491,7 @@ aId
 aXy
 aXy
 aOG
-aId
+aNI
 aId
 aXy
 aXy
@@ -138401,7 +138628,7 @@ bHc
 bps
 blS
 beJ
-biW
+aYL
 mVo
 bfW
 bcr
@@ -138417,7 +138644,7 @@ buA
 bvd
 bwb
 bsG
-cQw
+aYx
 czx
 aXy
 aXy
@@ -138426,7 +138653,7 @@ bSa
 aXy
 aXy
 aXy
-ceU
+aYd
 aXy
 aXy
 vka
@@ -138588,7 +138815,7 @@ aXy
 aXy
 syy
 aXy
-aQa
+aYe
 aXy
 vka
 vka
@@ -138912,7 +139139,7 @@ aVi
 aXy
 syy
 aXy
-aQa
+aYk
 aXy
 aXy
 aXy
@@ -139389,7 +139616,7 @@ bsG
 bvj
 bwh
 bsG
-aTx
+aYy
 aXy
 aVO
 doY
@@ -139839,7 +140066,7 @@ adC
 adC
 beA
 beA
-beA
+aZr
 beA
 beA
 beA
@@ -139880,7 +140107,7 @@ awa
 aXy
 cWN
 boK
-doY
+aYn
 awa
 aXy
 bcS
@@ -140177,9 +140404,9 @@ cXL
 bhm
 bhm
 beH
-blW
-blW
-blW
+fJz
+fJz
+fJz
 biY
 biY
 biY
@@ -140216,7 +140443,7 @@ cdL
 cdL
 cdL
 aXy
-aTx
+aXY
 cuS
 cuR
 aXy
@@ -140365,7 +140592,7 @@ bhJ
 bic
 xMD
 biT
-ehN
+aYw
 cWK
 aXy
 bma
@@ -140654,7 +140881,7 @@ cJJ
 bKN
 fJz
 fJz
-bKs
+aZq
 fJz
 bKk
 beH
@@ -140858,7 +141085,7 @@ aXy
 aTx
 ceU
 aTx
-cot
+aYb
 aXy
 aTx
 ccc
@@ -140988,7 +141215,7 @@ cXH
 bhm
 beH
 fJz
-fJz
+cQf
 fJz
 biY
 bjR
@@ -141017,7 +141244,7 @@ ehN
 cWK
 cQX
 aTx
-aTx
+aPv
 aXy
 aXy
 aXy
@@ -141149,9 +141376,9 @@ aVu
 cXI
 bhm
 beH
-vSb
-vSb
-vSb
+aZi
+aZf
+aZb
 biY
 bjS
 bkF
@@ -141311,9 +141538,9 @@ beH
 cXJ
 beH
 beH
-vSb
-vSb
-vSb
+fJz
+fJz
+aYJ
 biY
 bjT
 bkG
@@ -141350,7 +141577,7 @@ aXy
 aXy
 aXy
 aXy
-ceU
+aXZ
 aXy
 aXy
 aXy
@@ -141472,10 +141699,10 @@ aUM
 aVw
 aVR
 fJz
-vSb
-vSb
-vSb
-vSb
+aZj
+aZj
+fJz
+cQf
 biY
 biY
 biY
@@ -141634,20 +141861,20 @@ aUN
 cqB
 fJz
 fJz
+aZj
+aZj
+fJz
+aZc
+aYZ
+aYW
+aYM
+aYM
+fJz
 vSb
 vSb
 vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
+cei
+cei
 vSb
 vSb
 vSb
@@ -141792,26 +142019,26 @@ bcm
 aDA
 fJz
 fJz
+bsd
 fJz
 fJz
+aZj
+aZj
+fJz
+fJz
+bsd
+fJz
+fJz
+aYV
+aYN
 fJz
 vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
+cei
+aYz
+aYz
+aYz
+cei
+cei
 vSb
 vSb
 vSb
@@ -141953,28 +142180,28 @@ cbQ
 bjr
 bXX
 fJz
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
+aZn
+aZm
+aZl
+fJz
+fJz
+fJz
+fJz
+fJz
+aYJ
+aYK
+fJz
+fJz
+fJz
+fJz
+fJz
+aYz
+aYG
+aYG
+aYG
+aYz
+aYz
+cei
 vSb
 vSb
 vSb
@@ -141987,7 +142214,7 @@ vSb
 vSb
 aXy
 cWL
-aUP
+aYl
 aUO
 aXy
 vSb
@@ -142115,28 +142342,28 @@ cbQ
 aTe
 aDA
 fJz
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
+aYJ
+aYK
+aYJ
+aZk
+aZk
+aZk
+bsd
+aYJ
+fJz
+aZa
+bsd
+aYJ
+aYJ
+aYK
+aYJ
+aYH
+aYz
+aYG
+aYG
+aYz
+cei
+cei
 vSb
 vSb
 vSb
@@ -142277,28 +142504,28 @@ lOq
 fJz
 aDB
 fJz
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
+fJz
+fJz
+fJz
+fJz
+fJz
+fJz
+fJz
+aZb
+aYJ
+aYJ
+fJz
+fJz
+fJz
+fJz
+fJz
+fJz
+aYz
+aYz
+aYz
+cei
+cei
+cei
 vSb
 vSb
 vSb
@@ -142445,20 +142672,20 @@ vSb
 vSb
 vSb
 vSb
+fJz
+fJz
+bsd
+fJz
+fJz
 vSb
 vSb
 vSb
 vSb
 vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
+cei
+cei
+cei
+cei
 vSb
 vSb
 vSb
@@ -142608,9 +142835,9 @@ vSb
 vSb
 vSb
 vSb
-vSb
-vSb
-vSb
+fJz
+aZd
+fJz
 vSb
 vSb
 vSb
@@ -142770,9 +142997,9 @@ vSb
 vSb
 vSb
 vSb
-vSb
-vSb
-vSb
+aZg
+aYJ
+fJz
 vSb
 vSb
 vSb
@@ -142802,7 +143029,7 @@ vSb
 vSb
 vSb
 aXy
-cJy
+aYc
 aXy
 aXy
 aXy
@@ -142932,8 +143159,8 @@ vSb
 vSb
 vSb
 vSb
-vSb
-vSb
+cei
+cei
 vSb
 vSb
 vSb
@@ -143094,9 +143321,9 @@ vSb
 vSb
 vSb
 vSb
-vSb
-vSb
-vSb
+cei
+cei
+cei
 vSb
 vSb
 vSb
@@ -143128,7 +143355,7 @@ vSb
 aXy
 aXy
 aXy
-czt
+ceU
 aXy
 vSb
 vSb
@@ -143256,9 +143483,9 @@ vSb
 vSb
 vSb
 vSb
-vSb
-vSb
-vSb
+cei
+cei
+cei
 vSb
 vSb
 vSb
@@ -143419,7 +143646,7 @@ vSb
 vSb
 vSb
 vSb
-vSb
+cei
 vSb
 vSb
 vSb
@@ -143581,8 +143808,8 @@ vSb
 vSb
 vSb
 vSb
-vSb
-vSb
+cei
+cei
 vSb
 vSb
 vSb
@@ -143613,7 +143840,7 @@ vSb
 vSb
 aXy
 aTx
-aTx
+aPv
 aTx
 aXy
 vSb
@@ -143741,11 +143968,11 @@ vSb
 vSb
 vSb
 vSb
-vSb
-vSb
-vSb
-vSb
-vSb
+cei
+cei
+cei
+cei
+cei
 vSb
 vSb
 vSb
@@ -143903,12 +144130,12 @@ cei
 vSb
 vSb
 vSb
+cei
+cei
 vSb
-vSb
-vSb
-vSb
-vSb
-vSb
+cei
+cei
+cei
 vSb
 vSb
 vSb
@@ -144064,14 +144291,14 @@ ceR
 cei
 cei
 vSb
+cei
+cei
+cei
 vSb
 vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
+cei
+cei
+cei
 vSb
 vSb
 vSb
@@ -144226,14 +144453,14 @@ ceR
 cei
 cei
 aYE
+cei
+cei
 vSb
 vSb
 vSb
 vSb
-vSb
-vSb
-vSb
-vSb
+cei
+cei
 vSb
 vSb
 vSb
@@ -144395,8 +144622,8 @@ vSb
 vSb
 vSb
 vSb
-vSb
-vSb
+cei
+cei
 vSb
 vSb
 vSb
@@ -144558,9 +144785,9 @@ vSb
 vSb
 vSb
 vSb
-vSb
-vSb
-vSb
+cei
+cei
+cei
 vSb
 vSb
 vSb
@@ -144721,10 +144948,10 @@ vSb
 vSb
 vSb
 vSb
-vSb
-vSb
-vSb
-vSb
+cei
+cei
+cei
+cei
 vSb
 vSb
 vSb
@@ -144885,9 +145112,9 @@ vSb
 vSb
 vSb
 vSb
-vSb
-vSb
-vSb
+cei
+cei
+cei
 vSb
 cpf
 cpf
@@ -145048,9 +145275,9 @@ vSb
 vSb
 vSb
 vSb
-vSb
-vSb
-vSb
+cei
+cei
+cei
 cpf
 cpf
 cpf
@@ -145210,8 +145437,8 @@ vSb
 vSb
 vSb
 vSb
-vSb
-vSb
+cei
+cei
 cei
 cei
 cei

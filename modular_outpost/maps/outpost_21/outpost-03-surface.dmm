@@ -9874,6 +9874,7 @@
 	dir = 8;
 	pixel_x = 30
 	},
+/obj/structure/sign/poster,
 /turf/simulated/floor/carpet/purcarpet,
 /area/muriki/crew/casino)
 "arH" = (
@@ -12829,6 +12830,25 @@
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/hallway/security/main)
+"azd" = (
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/machinery/door/blast/regular{
+	density = 0;
+	icon_state = "pdoor0";
+	id = "bridge blast";
+	name = "Bridge Blast Doors";
+	opacity = 0
+	},
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/muriki/crew/judge)
 "aze" = (
 /obj/structure/prop/rock,
 /turf/simulated/mineral/floor/turfpack/muriki{
@@ -22110,10 +22130,6 @@
 /obj/fiftyspawner/turcarpet,
 /obj/structure/closet/crate,
 /obj/effect/floor_decal/spline/fancy/wood,
-/obj/machinery/firealarm{
-	dir = 1;
-	pixel_y = -26
-	},
 /turf/simulated/floor/wood,
 /area/muriki/crew/judge)
 "aYD" = (
@@ -24173,6 +24189,7 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 10
 	},
+/obj/structure/sign/painting/public/south,
 /turf/simulated/floor/carpet/graycarpet,
 /area/crew_quarters/fitness)
 "bcg" = (
@@ -24186,11 +24203,6 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/milspec,
 /area/medical/sleeper)
-"bch" = (
-/obj/effect/floor_decal/spline/plain,
-/obj/structure/sign/painting/public/south,
-/turf/simulated/floor/carpet/graycarpet,
-/area/crew_quarters/fitness)
 "bci" = (
 /obj/machinery/scale,
 /obj/effect/floor_decal/spline/plain,
@@ -24204,6 +24216,10 @@
 /obj/machinery/firealarm{
 	dir = 4;
 	pixel_x = 26
+	},
+/obj/machinery/alarm{
+	dir = 1;
+	pixel_y = -26
 	},
 /turf/simulated/floor/carpet/graycarpet,
 /area/crew_quarters/fitness)
@@ -24562,6 +24578,22 @@
 	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/muriki/crew/arcade/lasertagstore)
+"bcS" = (
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/machinery/door/blast/regular{
+	density = 0;
+	icon_state = "pdoor0";
+	id = "bridge blast";
+	name = "Bridge Blast Doors";
+	opacity = 0
+	},
+/obj/structure/window/reinforced,
+/turf/simulated/floor/plating,
+/area/muriki/crew/judge)
 "bcT" = (
 /obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
@@ -25078,12 +25110,6 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/carpet/purcarpet,
 /area/muriki/crew/casino)
-"bdS" = (
-/obj/structure/sign/poster{
-	dir = 4
-	},
-/turf/simulated/floor/carpet/purcarpet,
-/area/muriki/crew/casino)
 "bdT" = (
 /obj/effect/landmark/holiday_event_spawn,
 /obj/effect/floor_decal/spline/fancy/wood{
@@ -25303,6 +25329,25 @@
 	},
 /turf/simulated/floor/carpet/geo,
 /area/muriki/crew/arcade)
+"beo" = (
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/machinery/door/blast/regular{
+	density = 0;
+	icon_state = "pdoor0";
+	id = "bridge blast";
+	name = "Bridge Blast Doors";
+	opacity = 0
+	},
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/muriki/crew/judge)
 "bep" = (
 /obj/structure/window/reinforced{
 	dir = 4
@@ -25913,6 +25958,12 @@
 /obj/effect/floor_decal/spline/fancy/wood,
 /turf/simulated/floor/wood,
 /area/crew_quarters/bar)
+"bfo" = (
+/obj/machinery/camera/network/outside{
+	c_tag = "EXT - Civ Souh East Fence Gate"
+	},
+/turf/simulated/floor/outdoors/mud/turfpack/muriki,
+/area/muriki/grounds/civ)
 "bfp" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -26030,12 +26081,106 @@
 /obj/structure/sign/painting/public/north,
 /turf/simulated/floor/tiled/steel,
 /area/hallway/primary/central_two)
+"bfA" = (
+/obj/machinery/light,
+/turf/simulated/floor/carpet/purcarpet,
+/area/muriki/crew/casino)
+"bfB" = (
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/machinery/door/blast/regular{
+	density = 0;
+	icon_state = "pdoor0";
+	id = "bridge blast";
+	name = "Bridge Blast Doors";
+	opacity = 0
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/muriki/crew/casino)
+"bfC" = (
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/machinery/door/blast/regular{
+	density = 0;
+	icon_state = "pdoor0";
+	id = "bridge blast";
+	name = "Bridge Blast Doors";
+	opacity = 0
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/muriki/crew/casino)
 "bfD" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/steel,
 /area/medical/medbay_emt_bay)
+"bfE" = (
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/machinery/door/blast/regular{
+	density = 0;
+	icon_state = "pdoor0";
+	id = "bridge blast";
+	name = "Bridge Blast Doors";
+	opacity = 0
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/muriki/crew/casino)
+"bfF" = (
+/obj/structure/table/fancyblack,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/material/gold,
+/area/muriki/crew/casino)
+"bfG" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/lightgrey/border,
+/obj/machinery/station_map{
+	pixel_y = -32;
+	dir = 1
+	},
+/turf/simulated/floor/tiled/steel,
+/area/hallway/primary/central_two)
+"bfH" = (
+/obj/structure/sink{
+	dir = 8;
+	pixel_x = -12;
+	pixel_y = 2
+	},
+/obj/structure/mirror{
+	dir = 8;
+	pixel_x = -32
+	},
+/obj/structure/ladder/top_hatch,
+/turf/simulated/floor/tiled/kafel_full,
+/area/muriki/bathroom/bar)
 "bfM" = (
 /obj/structure/railing/grey{
 	dir = 8
@@ -27089,7 +27234,6 @@
 	dir = 1;
 	pixel_y = -30
 	},
-/obj/machinery/light,
 /turf/simulated/floor/carpet/purcarpet,
 /area/muriki/crew/casino)
 "bzk" = (
@@ -31595,6 +31739,9 @@
 	dir = 4;
 	pixel_x = -26
 	},
+/obj/machinery/firealarm{
+	pixel_y = 26
+	},
 /turf/simulated/floor/wood,
 /area/muriki/crew/judge)
 "dhQ" = (
@@ -35343,12 +35490,6 @@
 /obj/structure/bed/chair/backed_red,
 /turf/simulated/floor/tiled,
 /area/security/lobby)
-"eCh" = (
-/obj/machinery/light{
-	dir = 4
-	},
-/turf/simulated/floor/carpet/purcarpet,
-/area/muriki/crew/casino)
 "eCt" = (
 /obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/wall/r_wall,
@@ -72020,6 +72161,7 @@
 "rvw" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/ladder/top_hatch,
 /turf/simulated/floor/carpet/geo,
 /area/muriki/crew/arcade/lasertag)
 "rvx" = (
@@ -80662,14 +80804,6 @@
 "uut" = (
 /turf/simulated/wall/r_wall,
 /area/quartermaster/mining/firstaid)
-"uuA" = (
-/obj/effect/floor_decal/spline/plain,
-/obj/machinery/alarm{
-	dir = 1;
-	pixel_y = -26
-	},
-/turf/simulated/floor/carpet/graycarpet,
-/area/crew_quarters/fitness)
 "uuO" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -83122,9 +83256,6 @@
 	dir = 8
 	},
 /obj/structure/sign/painting/public/north,
-/obj/machinery/light{
-	dir = 1
-	},
 /turf/simulated/floor/carpet/purcarpet,
 /area/muriki/crew/casino)
 "vml" = (
@@ -142952,7 +143083,7 @@ cOX
 pSe
 bcp
 aYC
-apk
+azd
 aqw
 aqw
 aqw
@@ -143114,7 +143245,7 @@ cOX
 hRb
 bcp
 oSO
-apk
+bcS
 aOa
 aqw
 aqw
@@ -143276,7 +143407,7 @@ tKT
 vhu
 bcq
 aZv
-apk
+bcS
 aqw
 aqw
 aqw
@@ -143438,7 +143569,7 @@ cOX
 bcw
 sPD
 baX
-apk
+bcS
 aqw
 aqw
 aNT
@@ -143600,7 +143731,7 @@ cOX
 bay
 sPD
 baY
-apk
+beo
 aqw
 aqw
 aqw
@@ -144247,8 +144378,8 @@ gYH
 xKW
 aow
 bcs
-bch
-atx
+dRa
+aMf
 aOb
 aqw
 aqw
@@ -144410,7 +144541,7 @@ uvm
 bcy
 bct
 bci
-aMf
+aSP
 aqw
 aNY
 aqw
@@ -144714,7 +144845,7 @@ kgm
 tpU
 nOx
 beT
-oFm
+bfG
 cUF
 hQU
 evf
@@ -144896,10 +145027,10 @@ bct
 bct
 bct
 gHh
-aXQ
+aSP
 aqw
 aqw
-aqw
+aIp
 akr
 apP
 apP
@@ -145057,8 +145188,8 @@ sTI
 bct
 bct
 bct
-uuA
-atx
+dRa
+aXQ
 aqw
 aqw
 aqw
@@ -147303,7 +147434,7 @@ prn
 prn
 prn
 eIz
-jAK
+prn
 bre
 yjl
 hRO
@@ -147461,11 +147592,11 @@ iMn
 prn
 gFq
 oHk
-oHk
+bfH
 ioR
 hcf
 sTy
-jAK
+prn
 beK
 beK
 beO
@@ -147627,7 +147758,7 @@ hDH
 ugL
 xah
 pOE
-jAK
+prn
 mte
 pQk
 cIt
@@ -147636,12 +147767,12 @@ hbd
 gYv
 ovC
 bft
-nsQ
+bfF
 ycs
 jLf
 qnX
 jLf
-jLf
+bfA
 bre
 wNa
 lJN
@@ -147789,7 +147920,7 @@ eDB
 prn
 abt
 xwb
-jAK
+prn
 hEs
 beY
 beQ
@@ -147951,7 +148082,7 @@ kqi
 prn
 prn
 prn
-jAK
+prn
 wrJ
 fmy
 lyL
@@ -147969,7 +148100,7 @@ apo
 bre
 aXU
 aXU
-aHR
+bfo
 aHR
 aqw
 aqw
@@ -148124,8 +148255,8 @@ rRm
 bft
 mSJ
 hcG
-bdS
-eCh
+jLf
+jLf
 qng
 arG
 hGk
@@ -148285,10 +148416,10 @@ bfu
 bfu
 bfu
 hGk
-hGk
-hGk
-hGk
-hGk
+bfE
+bfC
+bfC
+bfB
 hGk
 hGk
 aqw
@@ -148446,9 +148577,9 @@ aqw
 aqw
 aOb
 aqw
-aqw
-aqw
 rpo
+aqw
+aqw
 aqw
 aqw
 aqw
