@@ -22068,16 +22068,21 @@
 /turf/simulated/floor/wood,
 /area/maintenance/civ/east)
 "aQb" = (
-/obj/machinery/power/apc{
-	dir = 4;
-	name = "east bump";
-	pixel_x = 24
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
 	},
-/obj/structure/cable/green{
-	icon_state = "0-8"
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 4
 	},
-/turf/simulated/floor/tiled/kafel_full,
-/area/muriki/bathroom/dorm)
+/obj/structure/disposalpipe/trunk{
+	dir = 1
+	},
+/obj/machinery/disposal/wall{
+	dir = 8;
+	pixel_x = 32
+	},
+/turf/simulated/floor/tiled/steel,
+/area/crew_quarters/recreation_area_hallway)
 "aQc" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/lightgrey/border,
@@ -23617,6 +23622,17 @@
 /turf/simulated/floor/tiled/steel,
 /area/crew_quarters/recreation_area_hallway)
 "aTu" = (
+/obj/machinery/power/apc{
+	dir = 4;
+	name = "east bump";
+	pixel_x = 24
+	},
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/tiled/kafel_full,
+/area/muriki/bathroom/dorm)
+"aTv" = (
 /obj/structure/cable/orange{
 	icon_state = "1-2"
 	},
@@ -23626,26 +23642,13 @@
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/pool)
-"aTv" = (
-/obj/item/radio/intercom{
-	dir = 4;
-	name = "Station Intercom (General)";
-	pixel_x = 21
-	},
-/turf/simulated/floor/tiled/freezer,
-/area/crew_quarters/pool)
 "aTw" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 1
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/green{
+	icon_state = "1-2"
 	},
-/obj/effect/floor_decal/corner/lightgrey/border{
-	dir = 1
-	},
-/obj/item/radio/intercom{
-	dir = 1;
-	name = "Common Channel";
-	pixel_y = 21
-	},
+/obj/structure/disposalpipe/junction,
 /turf/simulated/floor/tiled/steel,
 /area/crew_quarters/recreation_area_hallway)
 "aTx" = (
@@ -23972,9 +23975,10 @@
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/atmos_control)
 "aUg" = (
-/obj/machinery/firealarm{
-	dir = 8;
-	pixel_x = -26
+/obj/item/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = 21
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/pool)
@@ -23983,16 +23987,19 @@
 /turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/unexplored/muriki/cave/east)
 "aUi" = (
-/obj/structure/extinguisher_cabinet{
-	pixel_x = -8;
-	pixel_y = 30
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
 	},
-/obj/structure/extinguisher_cabinet{
-	pixel_x = 7;
-	pixel_y = 30
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 1
 	},
-/turf/simulated/floor/tiled/freezer,
-/area/crew_quarters/pool)
+/obj/item/radio/intercom{
+	dir = 1;
+	name = "Common Channel";
+	pixel_y = 21
+	},
+/turf/simulated/floor/tiled/steel,
+/area/crew_quarters/recreation_area_hallway)
 "aUj" = (
 /obj/structure/cable/green{
 	icon_state = "1-10"
@@ -24013,30 +24020,23 @@
 	},
 /area/mine/explored/muriki/cave/waste)
 "aUl" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/lightgrey/border{
-	dir = 4
-	},
-/obj/structure/disposalpipe/trunk{
-	dir = 1
-	},
-/obj/machinery/disposal/wall{
+/obj/machinery/firealarm{
 	dir = 8;
-	pixel_x = 32
+	pixel_x = -26
 	},
-/turf/simulated/floor/tiled/steel,
-/area/crew_quarters/recreation_area_hallway)
+/turf/simulated/floor/tiled/freezer,
+/area/crew_quarters/pool)
 "aUm" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/structure/cable/green{
-	icon_state = "1-2"
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -8;
+	pixel_y = 30
 	},
-/obj/structure/disposalpipe/junction,
-/turf/simulated/floor/tiled/steel,
-/area/crew_quarters/recreation_area_hallway)
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 7;
+	pixel_y = 30
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/crew_quarters/pool)
 "aUp" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -137020,7 +137020,7 @@ amq
 amq
 amq
 amq
-aTw
+aUi
 cYd
 aRR
 bcq
@@ -137351,7 +137351,7 @@ eHc
 eHc
 mlz
 aQY
-aUm
+aTw
 aUE
 aRT
 cXt
@@ -137528,7 +137528,7 @@ aQZ
 aPS
 bbe
 beu
-aUl
+aQb
 aQZ
 cXk
 bdY
@@ -137829,7 +137829,7 @@ aJc
 aJc
 cMb
 ybE
-aUg
+aUl
 bLT
 bff
 bff
@@ -138476,7 +138476,7 @@ agY
 aJc
 aJc
 cMb
-aUi
+aUm
 bff
 bff
 bff
@@ -139127,14 +139127,14 @@ beA
 moF
 bff
 aQe
-aTv
+aUg
 bff
 bff
 cXW
 tvn
 aSE
 cXS
-aTu
+aTv
 iYi
 cXD
 aWu
@@ -139945,7 +139945,7 @@ cQe
 bKk
 beH
 aUG
-aQb
+aTu
 cXG
 bhm
 beH
