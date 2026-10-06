@@ -6971,18 +6971,10 @@
 /area/maintenance/medicelev)
 "alf" = (
 /obj/structure/cable/green{
-	icon_state = "0-2"
-	},
-/obj/structure/cable/green{
 	icon_state = "2-8"
 	},
-/obj/machinery/power/apc{
-	dir = 1;
-	name = "north bump";
-	pixel_y = 24
-	},
 /turf/simulated/floor/plating,
-/area/muriki/elevator/medical)
+/area/maintenance/medicelev)
 "alg" = (
 /turf/simulated/floor/water/acidic/indoor/turfpack/muriki,
 /area/muriki/processor/hall)
@@ -7057,12 +7049,6 @@
 /obj/structure/disposalpipe/up{
 	dir = 8
 	},
-/obj/structure/cable/green{
-	icon_state = "16-0"
-	},
-/obj/structure/cable/green{
-	icon_state = "0-8"
-	},
 /obj/machinery/atmospherics/pipe/zpipe/up/scrubbers{
 	dir = 8
 	},
@@ -7073,6 +7059,12 @@
 	dir = 4;
 	name = "east bump";
 	pixel_x = 24
+	},
+/obj/structure/cable/orange{
+	icon_state = "0-8"
+	},
+/obj/structure/cable/orange{
+	icon_state = "16-0"
 	},
 /turf/simulated/floor/plating,
 /area/muriki/elevator/civmain)
@@ -12857,6 +12849,12 @@
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/hallway/security/main)
+"azd" = (
+/obj/structure/cable/orange{
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/scielev)
 "aze" = (
 /obj/structure/prop/rock,
 /turf/simulated/mineral/floor/turfpack/muriki{
@@ -13903,18 +13901,18 @@
 /area/muriki/tramstation/civ)
 "aBg" = (
 /obj/structure/disposalpipe/segment,
-/obj/structure/cable/green,
 /obj/machinery/power/apc{
 	dir = 4;
 	name = "east bump";
 	pixel_x = 24
 	},
+/obj/structure/cable/orange,
 /turf/simulated/floor/plating,
 /area/muriki/elevator/scimain)
 "aBh" = (
 /obj/structure/disposalpipe/segment,
-/obj/structure/cable/green{
-	icon_state = "1-2"
+/obj/structure/cable/orange{
+	icon_state = "2-5"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/scielev)
@@ -13936,18 +13934,12 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/reception)
-"aBj" = (
-/obj/structure/cable/green{
-	icon_state = "4-9"
-	},
-/turf/simulated/floor/plating,
-/area/maintenance/scielev)
 "aBk" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
+/obj/structure/cable/orange{
+	icon_state = "4-10"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/scielev)
@@ -13955,8 +13947,8 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/structure/cable/green{
-	icon_state = "6-8"
+/obj/structure/cable/orange{
+	icon_state = "2-8"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/scielev)
@@ -24205,6 +24197,15 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/milspec,
 /area/medical/sleeper)
+"bch" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/orange{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/scielev)
 "bci" = (
 /obj/machinery/scale,
 /obj/effect/floor_decal/spline/plain,
@@ -35286,14 +35287,14 @@
 	dir = 4
 	},
 /obj/structure/lattice,
-/obj/structure/cable/green{
-	icon_state = "32-4"
-	},
 /obj/machinery/atmospherics/pipe/zpipe/down/supply{
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/zpipe/down/scrubbers{
 	dir = 4
+	},
+/obj/structure/cable/orange{
+	icon_state = "32-4"
 	},
 /turf/simulated/open,
 /area/rnd/telesci)
@@ -50715,12 +50716,6 @@
 	},
 /turf/simulated/floor/tiled/steel,
 /area/hallway/primary/central_two)
-"jNX" = (
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/plating,
-/area/maintenance/scielev)
 "jOO" = (
 /obj/machinery/doorbell_chime{
 	id_tag = "secding";
@@ -51421,6 +51416,9 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/industrial/outline/grey,
+/obj/structure/cable/orange{
+	icon_state = "0-4"
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/scielev)
 "kaP" = (
@@ -65049,9 +65047,6 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
-/obj/structure/cable/green{
-	icon_state = "2-4"
-	},
 /turf/simulated/floor/plating,
 /area/maintenance/scielev)
 "oQk" = (
@@ -65978,9 +65973,6 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
 /obj/machinery/light/small{
 	dir = 1
 	},
@@ -65989,6 +65981,9 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 1
+	},
+/obj/structure/cable/orange{
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
 /area/rnd/telesci)
@@ -66342,9 +66337,6 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/engineering/engine_smes)
 "pqI" = (
-/obj/structure/cable/orange{
-	icon_state = "4-8"
-	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 1
 	},
@@ -66354,8 +66346,19 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/machinery/power/apc{
+	dir = 1;
+	name = "north bump";
+	pixel_y = 24
+	},
+/obj/structure/cable/orange{
+	icon_state = "0-8"
+	},
+/obj/structure/cable/orange{
+	icon_state = "0-4"
+	},
 /turf/simulated/floor/plating,
-/area/maintenance/medicelev)
+/area/muriki/elevator/medical)
 "pqW" = (
 /obj/machinery/cell_charger,
 /obj/structure/table/steel,
@@ -67103,15 +67106,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/muriki/arriveelev)
-"pEW" = (
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
-/obj/structure/cable/green{
-	icon_state = "2-8"
-	},
-/turf/simulated/floor/plating,
-/area/maintenance/scielev)
 "pFg" = (
 /obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/steeldecal/steel_decals3{
@@ -77208,9 +77202,6 @@
 	pixel_x = 7;
 	pixel_y = -32;
 	dir = 1
-	},
-/obj/item/juke_remote{
-	autolinkareajuke_onspawn = /area/djstation
 	},
 /turf/simulated/floor/carpet/geo,
 /area/muriki/crew/arcade)
@@ -140762,7 +140753,7 @@ aJX
 aJX
 aJY
 fjo
-aBk
+bch
 ciC
 rJE
 say
@@ -140924,7 +140915,7 @@ aJX
 aJX
 aPB
 fjo
-aBk
+bch
 kaM
 rJE
 say
@@ -141087,7 +141078,7 @@ aJX
 aJY
 fjo
 aBl
-waD
+azd
 rJE
 say
 say
@@ -141249,7 +141240,7 @@ aJY
 aJY
 fjo
 wTr
-aBj
+waD
 rJE
 say
 say
@@ -141411,7 +141402,7 @@ aJY
 aJY
 fjo
 cCh
-jNX
+waD
 rJE
 rJE
 rJE
@@ -141573,7 +141564,7 @@ aPB
 aJY
 fjo
 wWH
-pEW
+dFD
 dFD
 bId
 eBq

@@ -19895,17 +19895,17 @@
 /obj/structure/disposalpipe/up{
 	dir = 4
 	},
-/obj/structure/cable/green{
-	icon_state = "16-0"
-	},
-/obj/structure/cable/green{
-	icon_state = "0-6"
-	},
 /obj/machinery/atmospherics/pipe/zpipe/up/supply{
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/zpipe/up/scrubbers{
 	dir = 8
+	},
+/obj/structure/cable/orange{
+	icon_state = "0-8"
+	},
+/obj/structure/cable/orange{
+	icon_state = "16-0"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/research)
@@ -23842,14 +23842,25 @@
 /obj/structure/cable/orange{
 	icon_state = "0-8"
 	},
+/obj/structure/cable/orange{
+	icon_state = "0-4"
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/medicelevbasement)
 "aTU" = (
 /obj/effect/floor_decal/industrial/outline/grey,
 /obj/structure/railing,
 /obj/item/bikehorn,
+/obj/machinery/power/apc{
+	dir = 1;
+	name = "north bump";
+	pixel_y = 24
+	},
+/obj/structure/cable/orange{
+	icon_state = "0-8"
+	},
 /turf/simulated/floor/plating,
-/area/maintenance/medicelevbasement)
+/area/muriki/elevator/medibasement)
 "aTV" = (
 /obj/structure/railing,
 /obj/random/junk,
@@ -23871,16 +23882,8 @@
 /obj/structure/cable/green{
 	icon_state = "2-8"
 	},
-/obj/structure/cable/green{
-	icon_state = "0-2"
-	},
-/obj/machinery/power/apc{
-	dir = 1;
-	name = "north bump";
-	pixel_y = 24
-	},
 /turf/simulated/floor/plating,
-/area/muriki/elevator/medibasement)
+/area/maintenance/medicelevbasement)
 "aTY" = (
 /obj/effect/floor_decal/corner/blue{
 	dir = 9
@@ -45459,6 +45462,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
+	},
+/obj/structure/cable/orange{
+	icon_state = "0-4"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/research)
@@ -80860,9 +80866,6 @@
 /turf/simulated/floor/tiled/white,
 /area/muriki/crew/dormaid)
 "qBj" = (
-/obj/structure/cable/green{
-	icon_state = "1-4"
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
@@ -81514,9 +81517,6 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay2)
 "rlJ" = (
-/obj/structure/cable/green{
-	icon_state = "2-9"
-	},
 /obj/structure/window/maintenance_panel,
 /turf/simulated/floor/tiled/techfloor/grid/turfpack/muriki,
 /area/muriki/crew/dormaid)
@@ -82475,9 +82475,6 @@
 	},
 /obj/machinery/recharger{
 	pixel_x = 6
-	},
-/obj/structure/cable/green{
-	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/white,
 /area/muriki/crew/dormaid)
