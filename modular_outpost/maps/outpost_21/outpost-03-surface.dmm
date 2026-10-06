@@ -9091,14 +9091,17 @@
 /turf/simulated/wall,
 /area/crew_quarters/recreation_area)
 "apo" = (
-/obj/structure/disposalpipe/segment,
-/obj/effect/floor_decal/borderfloor{
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals_central7{
 	dir = 4
 	},
-/obj/effect/floor_decal/corner/lightgrey/border{
-	dir = 4
+/obj/structure/cable/green{
+	icon_state = "1-4"
 	},
-/obj/item/geiger/wall/east,
 /turf/simulated/floor/tiled/steel,
 /area/hallway/primary/central_two)
 "app" = (
@@ -9860,10 +9863,13 @@
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 4
 	},
-/obj/item/radio/intercom{
+/obj/machinery/power/apc{
 	dir = 4;
-	name = "Station Intercom (General)";
-	pixel_x = 22
+	name = "east bump";
+	pixel_x = 24
+	},
+/obj/structure/cable/green{
+	icon_state = "0-8"
 	},
 /turf/simulated/floor/tiled/steel,
 /area/hallway/primary/central_two)
@@ -11812,8 +11818,20 @@
 /turf/simulated/floor/water/deep/indoors/turfpack/muriki,
 /area/mine/unexplored/muriki/mountaineast)
 "awg" = (
-/turf/simulated/wall,
-/area/muriki/crew/casinostore)
+/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 4
+	},
+/obj/item/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = 22
+	},
+/turf/simulated/floor/tiled/steel,
+/area/hallway/primary/central_two)
 "awh" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -16423,7 +16441,7 @@
 /turf/simulated/floor/water/acidic/deep/turfpack/muriki,
 /area/muriki/grounds/med)
 "aKb" = (
-/turf/simulated/wall/r_wall,
+/turf/simulated/wall,
 /area/muriki/crew/casinostore)
 "aKc" = (
 /obj/structure/prop/rock/water,
@@ -17300,13 +17318,8 @@
 /turf/simulated/floor/outdoors/mud/turfpack/muriki,
 /area/muriki/grounds/waste)
 "aNh" = (
-/obj/machinery/computer/arcade/battle,
-/obj/effect/floor_decal/spline/plain{
-	dir = 1
-	},
-/obj/structure/sign/painting/public/north,
-/turf/simulated/floor/carpet/geo,
-/area/muriki/crew/arcade)
+/turf/simulated/wall/r_wall,
+/area/muriki/crew/casinostore)
 "aNi" = (
 /obj/structure/boulder,
 /obj/structure/flora/mushroom,
@@ -21565,17 +21578,14 @@
 /turf/simulated/floor/wood,
 /area/crew_quarters/heads/hop)
 "aXM" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals_central7{
+/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/borderfloor{
 	dir = 4
 	},
-/obj/structure/cable/green{
-	icon_state = "1-4"
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 4
 	},
+/obj/item/geiger/wall/east,
 /turf/simulated/floor/tiled/steel,
 /area/hallway/primary/central_two)
 "aXN" = (
@@ -23692,23 +23702,13 @@
 	},
 /area/muriki/processor/hall/waterway_upper)
 "bbv" = (
-/obj/structure/disposalpipe/segment,
-/obj/effect/floor_decal/borderfloor{
-	dir = 4
+/obj/machinery/computer/arcade/battle,
+/obj/effect/floor_decal/spline/plain{
+	dir = 1
 	},
-/obj/effect/floor_decal/corner/lightgrey/border{
-	dir = 4
-	},
-/obj/machinery/power/apc{
-	dir = 4;
-	name = "east bump";
-	pixel_x = 24
-	},
-/obj/structure/cable/green{
-	icon_state = "0-8"
-	},
-/turf/simulated/floor/tiled/steel,
-/area/hallway/primary/central_two)
+/obj/structure/sign/painting/public/north,
+/turf/simulated/floor/carpet/geo,
+/area/muriki/crew/arcade)
 "bbw" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -143953,7 +143953,7 @@ cux
 jIc
 jIc
 jIc
-aXM
+apo
 jIc
 jIc
 jIc
@@ -144111,11 +144111,11 @@ bfd
 beT
 beM
 beF
-apo
+aXM
 mhG
 hUr
+awg
 arG
-bbv
 vBu
 mhG
 bdH
@@ -145083,7 +145083,7 @@ mta
 pqf
 oFm
 cUF
-aNh
+bbv
 lAW
 vtp
 bel
@@ -147188,11 +147188,11 @@ jAK
 beK
 beK
 beO
-awg
-awg
+aKb
+aKb
 nqb
-awg
-awg
+aKb
+aKb
 vmj
 emk
 bdR
@@ -147350,11 +147350,11 @@ jAK
 mte
 pQk
 cIt
-awg
+aKb
 hbd
 gYv
 ovC
-awg
+aKb
 nsQ
 ycs
 jLf
@@ -147512,11 +147512,11 @@ jAK
 hEs
 beY
 beQ
-awg
+aKb
 ant
 sgv
 dAu
-awg
+aKb
 wiy
 nsQ
 jLf
@@ -147674,11 +147674,11 @@ jAK
 wrJ
 fmy
 lyL
-awg
+aKb
 beE
 sgv
 fJG
-awg
+aKb
 nsQ
 bec
 jLf
@@ -147836,11 +147836,11 @@ jAK
 beR
 beR
 beR
-awg
+aKb
 lvw
 pZU
 rRm
-awg
+aKb
 mSJ
 hcG
 bdS
@@ -147997,12 +147997,12 @@ aqw
 aqw
 aqw
 aNT
-aKb
-aKb
-aKb
-aKb
-aKb
-aKb
+aNh
+aNh
+aNh
+aNh
+aNh
+aNh
 hGk
 hGk
 hGk

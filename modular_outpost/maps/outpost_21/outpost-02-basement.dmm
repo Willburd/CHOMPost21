@@ -1298,8 +1298,11 @@
 /turf/simulated/wall/r_wall,
 /area/engineering/atmos)
 "acU" = (
-/obj/random/junk,
-/turf/simulated/floor/plating/turfpack/muriki,
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/plating,
 /area/maintenance/civ/east)
 "acV" = (
 /turf/simulated/wall,
@@ -1775,9 +1778,10 @@
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/spine/waste)
 "adX" = (
-/obj/structure/window/maintenance_panel,
-/obj/random/junk,
-/turf/simulated/floor/tiled/techfloor/grid/turfpack/muriki,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
 /area/maintenance/civ/east)
 "adY" = (
 /obj/effect/landmark/late_antag/borer,
@@ -1785,9 +1789,9 @@
 /area/maintenance/spine/waste)
 "adZ" = (
 /obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
+	dir = 4
 	},
+/obj/machinery/light/small,
 /turf/simulated/floor/plating,
 /area/maintenance/civ/east)
 "aea" = (
@@ -5645,10 +5649,8 @@
 /turf/simulated/floor/tiled/dark,
 /area/rnd/xenobiology/xenobioh)
 "akW" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/turf/simulated/floor/plating,
+/obj/machinery/door/airlock/maintenance/int,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/maintenance/civ/east)
 "akX" = (
 /turf/simulated/floor/tiled/dark,
@@ -7217,7 +7219,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/machinery/light/small,
+/obj/random/junk,
 /turf/simulated/floor/plating,
 /area/maintenance/civ/east)
 "anU" = (
@@ -7413,14 +7415,17 @@
 /turf/simulated/floor/plating,
 /area/engineering/atmos)
 "aoq" = (
-/obj/machinery/door/airlock/maintenance/int,
-/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/plating,
 /area/maintenance/civ/east)
 "aor" = (
 /obj/structure/disposalpipe/segment{
-	dir = 4
+	dir = 8;
+	icon_state = "pipe-c"
 	},
-/obj/random/junk,
 /turf/simulated/floor/plating,
 /area/maintenance/civ/east)
 "aos" = (
@@ -7519,17 +7524,17 @@
 /area/maintenance/sec)
 "aoB" = (
 /obj/structure/disposalpipe/segment{
-	dir = 4;
+	dir = 1;
 	icon_state = "pipe-c"
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/civ/east)
 "aoC" = (
 /obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
+	dir = 4
 	},
-/turf/simulated/floor/plating,
+/obj/machinery/door/airlock/maintenance/int,
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/maintenance/civ/east)
 "aoD" = (
 /obj/machinery/door/firedoor/glass,
@@ -11270,11 +11275,7 @@
 /turf/simulated/flesh,
 /area/muriki/processor/hall)
 "avx" = (
-/obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
-	},
-/turf/simulated/floor/plating/turfpack/muriki,
+/turf/simulated/floor/plating/external/turfpack/muriki,
 /area/maintenance/civ/east)
 "avy" = (
 /turf/simulated/wall/r_wall,
@@ -11653,11 +11654,8 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/scilower)
 "awa" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/machinery/door/airlock/maintenance/int,
-/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/plating,
 /area/maintenance/civ/east)
 "awb" = (
 /obj/structure/disposalpipe/segment,
@@ -14592,6 +14590,9 @@
 	},
 /area/muriki/processor/pools/eastfund)
 "aCa" = (
+/obj/effect/auto_crayon{
+	icon_state = "x"
+	},
 /turf/simulated/floor/plating/external/turfpack/muriki,
 /area/maintenance/civ/east)
 "aCb" = (
@@ -17844,8 +17845,8 @@
 /turf/simulated/floor/plating,
 /area/maintenance/eng)
 "aId" = (
-/obj/structure/disposalpipe/segment,
-/turf/simulated/floor/plating,
+/obj/effect/floorbreak,
+/turf/simulated/floor/plating/external/turfpack/muriki,
 /area/maintenance/civ/east)
 "aIe" = (
 /obj/effect/floor_decal/borderfloor{
@@ -18012,10 +18013,11 @@
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/spine/waste)
 "aIt" = (
-/obj/effect/auto_crayon{
-	icon_state = "x"
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
 	},
-/turf/simulated/floor/plating/external/turfpack/muriki,
+/turf/simulated/floor/plating,
 /area/maintenance/civ/east)
 "aIu" = (
 /obj/machinery/alarm{
@@ -20745,7 +20747,7 @@
 /turf/simulated/wall,
 /area/medical/surgtrain)
 "aNx" = (
-/obj/effect/floorbreak,
+/obj/item/bikehorn,
 /turf/simulated/floor/plating/external/turfpack/muriki,
 /area/maintenance/civ/east)
 "aNy" = (
@@ -20829,18 +20831,20 @@
 	},
 /area/muriki/processor/hall)
 "aNI" = (
+/obj/random/junk,
+/turf/simulated/floor/plating/external/turfpack/muriki,
+/area/maintenance/civ/east)
+"aNJ" = (
 /obj/structure/disposalpipe/segment{
 	dir = 2;
 	icon_state = "pipe-c"
 	},
-/turf/simulated/floor/plating,
-/area/maintenance/civ/east)
-"aNJ" = (
-/obj/item/bikehorn,
-/turf/simulated/floor/plating/external/turfpack/muriki,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/civ/east)
 "aNK" = (
-/obj/random/junk,
+/obj/machinery/light/small{
+	dir = 8
+	},
 /turf/simulated/floor/plating/external/turfpack/muriki,
 /area/maintenance/civ/east)
 "aNL" = (
@@ -21375,28 +21379,28 @@
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/pool)
 "aOD" = (
-/obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
-	},
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/civ/east)
-"aOE" = (
-/obj/machinery/light/small{
-	dir = 8
-	},
-/turf/simulated/floor/plating/external/turfpack/muriki,
-/area/maintenance/civ/east)
-"aOF" = (
 /obj/structure/closet,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/civ/east)
-"aOG" = (
+"aOE" = (
 /obj/random/junk,
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating/external/turfpack/muriki,
+/area/maintenance/civ/east)
+"aOF" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/plating/external/turfpack/muriki,
+/area/maintenance/civ/east)
+"aOG" = (
+/obj/machinery/door/airlock/maintenance/int,
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/maintenance/civ/east)
 "aOH" = (
 /obj/structure/disposalpipe/segment,
@@ -21760,16 +21764,15 @@
 /area/maintenance/med_refinery)
 "aPo" = (
 /obj/structure/cable/heavyduty{
-	icon_state = "1-8"
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating/external/turfpack/muriki,
 /area/maintenance/civ/east)
 "aPp" = (
-/obj/machinery/door/airlock/maintenance/int,
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
+/obj/machinery/light/small{
+	dir = 4
 	},
-/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
+/turf/simulated/floor/plating/external/turfpack/muriki,
 /area/maintenance/civ/east)
 "aPq" = (
 /obj/item/trash/snack_bowl,
@@ -21796,9 +21799,8 @@
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/atmos_control)
 "aPv" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
-	},
+/obj/structure/ladder/up,
+/obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/plating/external/turfpack/muriki,
 /area/maintenance/civ/east)
 "aPw" = (
@@ -22045,25 +22047,25 @@
 /turf/simulated/floor/tiled/steel,
 /area/crew_quarters/recreation_area_hallway)
 "aPX" = (
-/obj/machinery/light/small{
-	dir = 4
-	},
-/turf/simulated/floor/plating/external/turfpack/muriki,
-/area/maintenance/civ/east)
-"aPY" = (
-/obj/structure/ladder/up,
-/obj/effect/floor_decal/industrial/outline/grey,
-/turf/simulated/floor/plating/external/turfpack/muriki,
-/area/maintenance/civ/east)
-"aPZ" = (
 /obj/effect/auto_crayon{
 	icon_state = "air"
 	},
 /turf/simulated/floor/plating/external/turfpack/muriki,
 /area/maintenance/civ/east)
-"aQa" = (
+"aPY" = (
 /obj/structure/trash_pile,
 /turf/simulated/floor/plating/external/turfpack/muriki,
+/area/maintenance/civ/east)
+"aPZ" = (
+/obj/structure/window/maintenance_panel,
+/obj/random/junk,
+/turf/simulated/floor/tiled/techfloor/grid/turfpack/muriki,
+/area/maintenance/civ/east)
+"aQa" = (
+/obj/structure/bed,
+/obj/item/bedsheet/yellow,
+/obj/effect/landmark/redspaceexit,
+/turf/simulated/floor/wood,
 /area/maintenance/civ/east)
 "aQb" = (
 /obj/machinery/power/apc{
@@ -54129,6 +54131,10 @@
 "cor" = (
 /turf/simulated/mineral/alt/turfpack/muriki,
 /area/maintenance/civ/west)
+"cot" = (
+/obj/random/junk,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/civ/east)
 "cou" = (
 /obj/structure/window/maintenance_panel,
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
@@ -56390,14 +56396,8 @@
 	},
 /turf/simulated/floor/plating/external/turfpack/muriki,
 /area/maintenance/civ/east)
-"cuY" = (
+"cuW" = (
 /obj/machinery/light/small,
-/turf/simulated/floor/wood,
-/area/maintenance/civ/east)
-"cuZ" = (
-/obj/structure/bed,
-/obj/item/bedsheet/yellow,
-/obj/effect/landmark/redspaceexit,
 /turf/simulated/floor/wood,
 /area/maintenance/civ/east)
 "cva" = (
@@ -133317,7 +133317,7 @@ vka
 aXy
 cQN
 cNG
-aCa
+avx
 aXy
 vka
 cnU
@@ -133326,7 +133326,7 @@ cnU
 vka
 vka
 aXy
-akW
+adX
 aXy
 aHS
 aHS
@@ -133477,9 +133477,9 @@ vka
 vka
 vka
 aXy
-aPv
+aPo
 aXy
-aIt
+aCa
 aXy
 vka
 cnU
@@ -133650,7 +133650,7 @@ cnU
 vka
 vka
 aXy
-aor
+anT
 aXy
 aXy
 aHS
@@ -133813,7 +133813,7 @@ vka
 vka
 aXy
 brL
-adZ
+acU
 aXy
 aHS
 aHS
@@ -133975,7 +133975,7 @@ vka
 vka
 aXy
 aXy
-akW
+adX
 aXy
 aHS
 aHS
@@ -134137,7 +134137,7 @@ vka
 vka
 aXy
 aXy
-anT
+adZ
 aXy
 aHS
 aHS
@@ -134287,9 +134287,9 @@ vka
 vka
 vka
 aXy
-aOG
+aOE
 aXy
-aIt
+aCa
 aXy
 vka
 vka
@@ -134298,7 +134298,7 @@ vka
 vka
 vka
 aXy
-aoB
+aoq
 bHs
 aXy
 aHS
@@ -134451,7 +134451,7 @@ vka
 aXy
 cQP
 czx
-aCa
+avx
 aXy
 vka
 vka
@@ -134460,7 +134460,7 @@ vka
 vka
 vka
 aXy
-akW
+adX
 aXy
 aXy
 aHS
@@ -134612,7 +134612,7 @@ vka
 vka
 aXy
 aXy
-aPp
+aOG
 aXy
 aXy
 aXy
@@ -134755,9 +134755,9 @@ cve
 cvd
 cvb
 bWC
-aCa
-aNK
-aCa
+avx
+aNI
+avx
 bSL
 aXy
 vka
@@ -134778,13 +134778,13 @@ cQw
 czx
 aXy
 aXy
-aNJ
+aNx
 bOx
 bOl
-aIt
+aCa
 aXy
 aXy
-akW
+adX
 aXy
 aHS
 aHS
@@ -134920,7 +134920,7 @@ aXy
 aXy
 aXy
 aXy
-aoq
+akW
 aXy
 aXy
 aXy
@@ -134937,16 +134937,16 @@ cQN
 cQQ
 cee
 aXy
-aOG
-aIt
+aOE
+aCa
 bVN
 bOD
 aXy
 aXy
-aNx
-aCa
+aId
+avx
 brN
-aoC
+aor
 aXy
 aHS
 fUK
@@ -135076,17 +135076,17 @@ bME
 bME
 cvh
 aXy
-cuZ
+aQa
 cuS
 cuR
 cuS
 aXy
-aQa
-aCa
-aCa
+aPY
+avx
+avx
 cuV
 cit
-aoq
+akW
 bSa
 aXy
 bWd
@@ -135095,18 +135095,18 @@ cQw
 cQQ
 cQL
 cQT
-aPo
+aOF
 aXy
 cQw
 cQL
-aPo
+aOF
 aXy
 aXy
 aXy
 aXy
 aXy
 aXy
-aoB
+aoq
 cFO
 aXy
 aXy
@@ -135267,8 +135267,8 @@ vka
 vka
 vka
 aXy
-aoB
-aoC
+aoq
+aor
 aXy
 aXy
 aHS
@@ -135403,7 +135403,7 @@ aXy
 cva
 cva
 cuS
-cuY
+cuW
 aXy
 aXy
 aXy
@@ -135414,7 +135414,7 @@ aXy
 aXy
 aXy
 aXy
-aPp
+aOG
 aXy
 syy
 syy
@@ -135429,7 +135429,7 @@ vka
 vka
 vka
 aXy
-akW
+adX
 aXy
 aXy
 aHS
@@ -135567,17 +135567,17 @@ aXy
 aXy
 aXy
 aXy
-aCa
-aNK
-aCa
-aNK
-aCa
+avx
+aNI
+avx
+aNI
+avx
 aXy
 aXy
-aQa
+aPY
 aXy
-aPv
-aNK
+aPo
+aNI
 aXy
 syy
 syy
@@ -135591,7 +135591,7 @@ vka
 vka
 vka
 aXy
-akW
+adX
 aXy
 cop
 aHS
@@ -135732,10 +135732,10 @@ bix
 bix
 cXa
 bix
-aCa
+avx
 aXy
-aCa
-adX
+avx
+aPZ
 cQN
 ceT
 cNG
@@ -135894,11 +135894,11 @@ blZ
 bna
 bof
 bix
-aCa
-aCa
-aCa
+avx
+avx
+avx
 aXy
-aPv
+aPo
 aXy
 aXy
 aXy
@@ -135915,9 +135915,9 @@ vka
 vka
 vka
 aXy
-aNI
-aId
-adZ
+aIt
+awa
+acU
 aXy
 aHS
 aHS
@@ -136079,7 +136079,7 @@ vka
 aXy
 aXy
 aXy
-aor
+anT
 aXy
 aHS
 aHS
@@ -136222,12 +136222,12 @@ syy
 syy
 aXy
 cQN
-aPo
+aOF
 aXy
 aWa
 bjt
 bjt
-aPY
+aPv
 aXy
 vka
 vka
@@ -136241,7 +136241,7 @@ vka
 vka
 syy
 aXy
-akW
+adX
 aXy
 aHS
 aHS
@@ -136383,13 +136383,13 @@ bix
 syy
 syy
 aXy
-aPv
+aPo
 aXy
 aXy
 czu
-aCa
-aCa
-aCa
+avx
+avx
+avx
 aXy
 vka
 vka
@@ -136545,10 +136545,10 @@ bix
 syy
 syy
 aXy
-aPv
+aPo
 aXy
 aXy
-aCa
+avx
 aXy
 aXy
 ceU
@@ -136565,7 +136565,7 @@ vka
 vka
 aXy
 cdD
-akW
+adX
 aXy
 aHS
 aHS
@@ -136710,11 +136710,11 @@ aXy
 cQw
 czx
 aXy
-aQa
+aPY
 aXy
-aPZ
-aCa
-aCa
+aPX
+avx
+avx
 aXy
 aXy
 aXy
@@ -136876,10 +136876,10 @@ aXy
 aXy
 bSL
 aXy
-aCa
+avx
 ceU
-aCa
-aNK
+avx
+aNI
 aXy
 vka
 vka
@@ -136889,7 +136889,7 @@ cdF
 cdF
 aXy
 aXy
-aor
+anT
 aXy
 aHS
 aHS
@@ -137027,7 +137027,7 @@ aPO
 aXy
 bjt
 cXd
-aCa
+avx
 aXy
 aXy
 aXy
@@ -137036,8 +137036,8 @@ cQw
 czx
 aXy
 aXy
-aCa
-aNK
+avx
+aNI
 aXy
 aXy
 aXy
@@ -137051,7 +137051,7 @@ aXy
 aXy
 aXy
 aXy
-awa
+aoC
 aXy
 aXy
 aHS
@@ -137186,35 +137186,35 @@ aQY
 bbK
 bdX
 bep
-aCa
-aCa
-aCa
-aCa
-aNK
-aCa
+avx
+avx
+avx
+avx
+aNI
+avx
 ceU
-aCa
+avx
 aXy
-aPv
-aNK
-aCa
-aCa
-aCa
+aPo
+aNI
+avx
+avx
+avx
 aXy
 aXy
-aCa
-aPX
+avx
+aPp
 aXy
 aXy
 aXy
 aXy
 aTx
-acU
+cot
 aTx
 aXy
 ccL
 bdv
-avx
+aoB
 aXy
 fUK
 cmi
@@ -137349,35 +137349,35 @@ cXk
 bdY
 aPO
 aXy
-aCa
-aQa
-aQa
+avx
+aPY
+aPY
 aXy
 aXy
 aXy
-aCa
+avx
 cQN
 cWR
 aXy
 aXy
 aXy
-aCa
+avx
 ceU
-aCa
-aCa
+avx
+avx
 aXy
-aCa
+avx
 ceU
-aOE
 aNK
+aNI
 cvd
 aXy
 aTx
 cou
-acU
+cot
 aXy
 cuQ
-aoq
+akW
 cdv
 aVD
 aOr
@@ -137518,17 +137518,17 @@ bsG
 bsG
 bsG
 bsG
-aPv
+aPo
 aXy
 aXy
 aXy
-aQa
-aCa
+aPY
+avx
 aXy
 aXy
-aNK
-aCa
-aCa
+aNI
+avx
+avx
 aXy
 aXy
 aXy
@@ -137684,8 +137684,8 @@ cQw
 czx
 aXy
 aXy
-aCa
-aCa
+avx
+avx
 aXy
 aXy
 aXy
@@ -137699,7 +137699,7 @@ cdF
 cdF
 aXy
 aXy
-awa
+aoC
 aXy
 aXy
 vka
@@ -137843,15 +137843,15 @@ bve
 bwc
 bsG
 aXy
-aPv
+aPo
 aXy
 aXy
-aCa
+avx
 aXy
 aXy
 syy
 aXy
-aCa
+avx
 aXy
 vka
 vka
@@ -138005,7 +138005,7 @@ bvf
 bwd
 bsG
 aXy
-aPv
+aPo
 aXy
 biL
 cQL
@@ -138013,7 +138013,7 @@ bkn
 aXy
 syy
 aXy
-aCa
+avx
 aXy
 vka
 vka
@@ -138167,15 +138167,15 @@ bvg
 bwe
 bsG
 aXy
-aPv
+aPo
 aXy
-aPv
+aPo
 aXy
-aPv
+aPo
 aXy
 syy
 aXy
-aCa
+avx
 aXy
 aXy
 aXy
@@ -138331,16 +138331,16 @@ bsG
 aXy
 cQw
 cQL
-aPo
+aOF
 aXy
-aPv
+aPo
 aXy
 syy
 aXy
-aCa
-aNK
-aCa
-aCa
+avx
+aNI
+avx
+avx
 aXy
 cdF
 cdF
@@ -138664,7 +138664,7 @@ aXy
 syy
 syy
 aXy
-aCa
+avx
 aXy
 cdF
 cdF
@@ -138826,7 +138826,7 @@ aXy
 aXy
 aXy
 aXy
-aNK
+aNI
 aXy
 aXy
 cdF
@@ -138979,7 +138979,7 @@ beJ
 aXy
 aXy
 cWO
-avx
+aoB
 aXy
 aTx
 aXy
@@ -138989,7 +138989,7 @@ buz
 boK
 buz
 lkh
-avx
+aoB
 aXy
 aXy
 aXy
@@ -139139,19 +139139,19 @@ bfi
 cWU
 stx
 buz
-avx
+aoB
 aXy
 cWN
 boK
 buz
-avx
+aoB
 aXy
 bcS
 aXy
 aXy
 bWI
-aOF
 aOD
+aNJ
 buz
 gPi
 lkh
@@ -139301,7 +139301,7 @@ bmh
 cMe
 beJ
 aXy
-aOD
+aNJ
 buz
 biR
 aXy
@@ -140121,7 +140121,7 @@ aXy
 aTx
 ceU
 aTx
-acU
+cot
 aXy
 aTx
 ccc
@@ -140285,7 +140285,7 @@ aXy
 aXy
 aXy
 aXy
-acU
+cot
 aXy
 aXy
 cuR
@@ -140926,8 +140926,8 @@ cfG
 cfG
 aXy
 aTx
-acU
-acU
+cot
+cot
 aTx
 aTx
 ceU
@@ -141097,7 +141097,7 @@ aTx
 aTx
 aXy
 aXy
-acU
+cot
 aTx
 aws
 cwM
@@ -141742,7 +141742,7 @@ vSb
 vSb
 aXy
 aTx
-acU
+cot
 aXy
 vSb
 vSb
@@ -142227,7 +142227,7 @@ vSb
 vSb
 vSb
 aXy
-acU
+cot
 aTx
 aTx
 aXy
