@@ -25489,10 +25489,6 @@
 	name = "Station Intercom (General)";
 	pixel_y = 23
 	},
-/obj/machinery/camera/network/civilian{
-	c_tag = "CIV - Drunk Tank Hallway";
-	dir = 8
-	},
 /turf/simulated/floor/tiled/material/gold,
 /area/muriki/crew/casinostore)
 "beF" = (
@@ -55351,9 +55347,6 @@
 /obj/structure/table/fancyblack,
 /obj/effect/floor_decal/spline/plain{
 	dir = 5
-	},
-/obj/machinery/camera/network/civilian{
-	c_tag = "CIV - Casino Storage"
 	},
 /turf/simulated/floor/tiled/material/gold,
 /area/muriki/crew/casinostore)
