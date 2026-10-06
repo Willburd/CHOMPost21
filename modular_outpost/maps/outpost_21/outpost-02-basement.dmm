@@ -69957,14 +69957,6 @@
 "doF" = (
 /turf/simulated/floor/water/blood/turfpack/muriki,
 /area/muriki/processor/gland/airmix)
-"doY" = (
-/obj/structure/disposalpipe/segment,
-/obj/structure/micro_tunnel{
-	dir = 4;
-	pixel_x = 32
-	},
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/civ/east)
 "dqN" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
@@ -139340,7 +139332,7 @@ aNJ
 buz
 gPi
 lkh
-doY
+buz
 buz
 aLW
 aXy

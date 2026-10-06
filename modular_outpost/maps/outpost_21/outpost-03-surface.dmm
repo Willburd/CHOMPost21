@@ -12828,9 +12828,6 @@
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/hallway/security/main)
-"azd" = (
-/turf/simulated/wall,
-/area/maintenance/civ)
 "aze" = (
 /obj/structure/prop/rock,
 /turf/simulated/mineral/floor/turfpack/muriki{
@@ -12875,7 +12872,7 @@
 /obj/machinery/door/airlock/maintenance/int,
 /obj/structure/blade_trap/start_active,
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
-/area/maintenance/civ)
+/area/mine/unexplored/muriki/mountaineast)
 "azk" = (
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/carpet/graycarpet,
@@ -12887,7 +12884,7 @@
 "azm" = (
 /obj/machinery/door/airlock/maintenance/int,
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
-/area/maintenance/civ)
+/area/mine/unexplored/muriki/mountaineast)
 "azn" = (
 /turf/simulated/wall,
 /area/mine/unexplored/muriki/mountaineast)
@@ -12948,7 +12945,7 @@
 /obj/structure/catwalk,
 /obj/random/junk,
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/civ)
+/area/mine/unexplored/muriki/mountaineast)
 "azy" = (
 /obj/effect/floorbreak,
 /turf/simulated/floor/wood/turfpack/muriki,
@@ -17438,7 +17435,7 @@
 	},
 /obj/structure/flora/mushroom,
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/civ)
+/area/mine/unexplored/muriki/mountaineast)
 "aNA" = (
 /obj/structure/flora/bboulder1,
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
@@ -21689,6 +21686,12 @@
 "aXT" = (
 /obj/machinery/doppler_array,
 /obj/effect/floor_decal/corner/white/full,
+/obj/item/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -23;
+	pixel_y = -6
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/bridge)
 "aXU" = (
@@ -29957,7 +29960,7 @@
 /obj/item/assembly/mousetrap/armed,
 /obj/structure/catwalk,
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/civ)
+/area/mine/unexplored/muriki/mountaineast)
 "cEq" = (
 /obj/effect/landmark{
 	name = "bluespacerift"
@@ -31298,7 +31301,7 @@
 	},
 /obj/structure/catwalk,
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/civ)
+/area/mine/unexplored/muriki/mountaineast)
 "dee" = (
 /obj/structure/cable/yellow{
 	icon_state = "2-4"
@@ -33002,7 +33005,7 @@
 /obj/structure/disposalpipe/segment,
 /obj/item/assembly/mousetrap/armed,
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/civ)
+/area/mine/unexplored/muriki/mountaineast)
 "dKl" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
@@ -33474,7 +33477,7 @@
 	},
 /obj/random/junk,
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/civ)
+/area/mine/unexplored/muriki/mountaineast)
 "dUG" = (
 /obj/machinery/light/floortube,
 /obj/effect/floor_decal/industrial/warning/dust/corner{
@@ -44396,7 +44399,7 @@
 	icon_state = "shelter"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/civ)
+/area/mine/unexplored/muriki/mountaineast)
 "hOr" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -56392,7 +56395,7 @@
 	},
 /obj/structure/catwalk,
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/civ)
+/area/mine/unexplored/muriki/mountaineast)
 "lPp" = (
 /obj/structure/reagent_dispensers/water_cooler/full,
 /obj/effect/floor_decal/spline/plain{
@@ -56987,7 +56990,7 @@
 	icon_state = "x"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/civ)
+/area/mine/unexplored/muriki/mountaineast)
 "lZs" = (
 /obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
@@ -64420,7 +64423,7 @@
 	},
 /obj/structure/catwalk,
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/civ)
+/area/mine/unexplored/muriki/mountaineast)
 "oKR" = (
 /obj/effect/floor_decal/milspec/color/red/half{
 	dir = 1
@@ -70793,7 +70796,7 @@
 	},
 /obj/structure/catwalk,
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/civ)
+/area/mine/unexplored/muriki/mountaineast)
 "qVF" = (
 /obj/structure/cable/orange{
 	icon_state = "2-4"
@@ -81550,7 +81553,7 @@
 /obj/structure/disposalpipe/segment,
 /obj/structure/catwalk,
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/civ)
+/area/mine/unexplored/muriki/mountaineast)
 "uKV" = (
 /turf/simulated/wall/r_wall,
 /area/medical/virology/quarantine_quarantine)
@@ -84114,7 +84117,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/civ)
+/area/mine/unexplored/muriki/mountaineast)
 "vFS" = (
 /obj/structure/sign/directions/exit{
 	pixel_y = -7
@@ -85648,9 +85651,6 @@
 /obj/item/tool/wrench,
 /turf/simulated/floor/tiled/milspec,
 /area/security/armoury)
-"wdu" = (
-/turf/simulated/mineral/alt/ignore_mapgen/turfpack/muriki,
-/area/maintenance/civ)
 "wdK" = (
 /obj/structure/cliff{
 	dir = 1
@@ -152260,11 +152260,11 @@ pNM
 mho
 mho
 mho
-azd
-azd
-azd
+azn
+azn
+azn
 azj
-azd
+azn
 rJa
 iwS
 fhs
@@ -152426,7 +152426,7 @@ ddY
 uKL
 dJM
 lZo
-azd
+azn
 rJa
 rJa
 fhs
@@ -152583,12 +152583,12 @@ wGg
 rBR
 mho
 mho
-wdu
+rZO
 lPc
-azd
-azd
+azn
+azn
 vFG
-azd
+azn
 rJa
 rJa
 fhs
@@ -152747,11 +152747,11 @@ cEo
 uKL
 azx
 oKM
-azd
-azd
+azn
+azn
 aNz
-azd
-azd
+azn
+azn
 rJa
 aIe
 axy
@@ -152910,10 +152910,10 @@ rZO
 azn
 azn
 azn
-azd
+azn
 hNX
 dUi
-azd
+azn
 rJa
 ayU
 axy
@@ -153072,10 +153072,10 @@ rJa
 rJa
 rJa
 rJa
-azd
+azn
 azm
-azd
-azd
+azn
+azn
 rJa
 fhs
 rJa
