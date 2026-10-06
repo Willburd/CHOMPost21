@@ -111,12 +111,12 @@
 
 /area/crew_quarters/courtroom
 	holomap_color = HOLOMAP_AREACOLOR_CIV
-	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
+	base_turf = /turf/simulated/open
 	color_grading = COLORTINT_WARM
 
 /area/crew_quarters/recreation_area_hallway
 	holomap_color = HOLOMAP_AREACOLOR_CIV
-	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
+	base_turf = /turf/simulated/open
 	lightswitch = 1
 
 /area/hallway/secondary/construction
@@ -125,7 +125,7 @@
 
 /area/crew_quarters/recreation_area
 	holomap_color = HOLOMAP_AREACOLOR_CIV
-	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
+	base_turf = /turf/simulated/open
 
 /area/mint
 	holomap_color = HOLOMAP_AREACOLOR_CARGO

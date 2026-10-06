@@ -8738,6 +8738,14 @@
 	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/muriki/crew/arcade/lasertagstore)
+"aou" = (
+/obj/effect/floor_decal/spline/fancy/wood,
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Multipurpose Room South";
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/courtroom)
 "aov" = (
 /obj/item/radio/intercom{
 	dir = 1;
@@ -12856,7 +12864,7 @@
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/lightgrey/border,
 /obj/machinery/camera/network/civilian{
-	c_tag = "CIV - Casino Hallway";
+	c_tag = "CIV - Recreation Hallway North";
 	dir = 1
 	},
 /turf/simulated/floor/tiled/steel,
@@ -24209,23 +24217,6 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/milspec,
 /area/medical/sleeper)
-"bch" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/green/border{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
-/obj/machinery/camera/network/civilian{
-	c_tag = "CIV - Drunk Tank Hallway";
-	dir = 8
-	},
-/turf/simulated/floor/tiled/steel,
-/area/hallway/primary/central_two)
 "bci" = (
 /obj/machinery/scale,
 /obj/effect/floor_decal/spline/plain,
@@ -24500,10 +24491,6 @@
 "bcG" = (
 /obj/effect/floor_decal/spline/fancy/wood,
 /obj/structure/sign/painting/public/south,
-/obj/machinery/camera/network/civilian{
-	c_tag = "CIV - Multipurpose Room South";
-	dir = 1
-	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/courtroom)
 "bcH" = (
@@ -24605,6 +24592,23 @@
 	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/muriki/crew/arcade/lasertagstore)
+"bcS" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/green/border{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Drunk Tank Hallway";
+	dir = 8
+	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/steel,
+/area/hallway/primary/central_two)
 "bcT" = (
 /obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
@@ -36127,10 +36131,6 @@
 	},
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 8
-	},
-/obj/machinery/camera/network/civilian{
-	c_tag = "CIV - Kitchen Hallway";
-	dir = 4
 	},
 /turf/simulated/floor/tiled/steel,
 /area/hallway/primary/central_two)
@@ -143259,7 +143259,7 @@ mMH
 tUd
 tUd
 tUd
-bcH
+aou
 cOX
 hRb
 bcp
@@ -143887,8 +143887,8 @@ uvI
 qOk
 hrR
 vhX
-bch
 bfp
+bcS
 ujR
 gom
 oDb

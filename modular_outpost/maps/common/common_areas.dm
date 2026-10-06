@@ -283,7 +283,7 @@
 
 /area/muriki/bathroom/casino
 	name = "\improper Casino Royal Flush"
-	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
+	base_turf = /turf/simulated/open
 	holomap_color = HOLOMAP_AREACOLOR_CIV
 
 /area/muriki/bathroom/phoronics
@@ -480,21 +480,21 @@
 
 /area/muriki/crew/arcade
 	name = "\improper Arcade"
-	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
+	base_turf = /turf/simulated/open
 	icon_state = "cyawhicir"
 	holomap_color = HOLOMAP_AREACOLOR_CIV
 	color_grading = COLORTINT_WARM
 
 /area/muriki/crew/casino
 	name = "\improper Casino and Smoke Lounge"
-	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
+	base_turf = /turf/simulated/open
 	icon_state = "cyawhicir"
 	holomap_color = HOLOMAP_AREACOLOR_CIV
 	color_grading = COLORTINT_WARM
 
 /area/muriki/crew/casinostore
 	name = "\improper Casino Storage"
-	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
+	base_turf = /turf/simulated/open
 	icon_state = "orawhicir"
 	holomap_color = HOLOMAP_AREACOLOR_CIV
 	color_grading = COLORTINT_WARM
@@ -508,13 +508,13 @@
 
 /area/muriki/crew/arcade/lasertag
 	name = "\improper Laser Tag Arena"
-	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
+	base_turf = /turf/simulated/open
 	icon_state = "purwhitri"
 	holomap_color = HOLOMAP_AREACOLOR_CIV
 
 /area/muriki/crew/arcade/lasertagstore
 	name = "\improper Laser Tag Storage"
-	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
+	base_turf = /turf/simulated/open
 	icon_state = "purwhicir"
 	holomap_color = HOLOMAP_AREACOLOR_CIV
 	color_grading = COLORTINT_DIM
@@ -544,7 +544,7 @@
 
 /area/muriki/crew/judge
 	name = "\improper Judge's Office"
-	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
+	base_turf = /turf/simulated/open
 	icon_state = "bluenew"
 	sound_env = SMALL_ENCLOSED
 	holomap_color = HOLOMAP_AREACOLOR_CIV
