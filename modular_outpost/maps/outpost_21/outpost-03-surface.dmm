@@ -25284,6 +25284,17 @@
 	},
 /turf/simulated/floor/carpet/geo,
 /area/muriki/crew/arcade)
+"beo" = (
+/obj/structure/closet/lasertag/red,
+/obj/effect/floor_decal/spline/plain{
+	dir = 4
+	},
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = 26
+	},
+/turf/simulated/floor/carpet/geo,
+/area/muriki/crew/arcade/lasertag)
 "bep" = (
 /obj/structure/window/reinforced{
 	dir = 4
@@ -70396,6 +70407,10 @@
 	},
 /obj/effect/floor_decal/spline/plain{
 	dir = 6
+	},
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = 26
 	},
 /turf/simulated/floor/carpet/geo,
 /area/muriki/crew/arcade)
@@ -146062,7 +146077,7 @@ qPL
 cUF
 beb
 tpx
-tpx
+beo
 gqW
 sfu
 xKb

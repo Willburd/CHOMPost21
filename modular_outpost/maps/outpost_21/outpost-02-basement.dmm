@@ -24012,6 +24012,31 @@
 	phoron = 500
 	},
 /area/mine/explored/muriki/cave/waste)
+"aUl" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 4
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 1
+	},
+/obj/machinery/disposal/wall{
+	dir = 8;
+	pixel_x = 32
+	},
+/turf/simulated/floor/tiled/steel,
+/area/crew_quarters/recreation_area_hallway)
+"aUm" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/disposalpipe/junction,
+/turf/simulated/floor/tiled/steel,
+/area/crew_quarters/recreation_area_hallway)
 "aUp" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -26154,7 +26179,6 @@
 /turf/simulated/floor/plating,
 /area/engineering/trammaint)
 "bbd" = (
-/obj/effect/catwalk_plated,
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
 /obj/structure/cable/green{
@@ -26171,6 +26195,7 @@
 	name = "Locker Room";
 	sortType = "Locker Room"
 	},
+/obj/effect/catwalk_plated,
 /turf/simulated/floor/plating,
 /area/crew_quarters/recreation_area_hallway)
 "bbe" = (
@@ -26183,7 +26208,7 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/obj/structure/disposalpipe/segment{
+/obj/structure/disposalpipe/junction{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/steel,
@@ -26911,6 +26936,7 @@
 "beu" = (
 /obj/effect/floor_decal/borderfloor/corner,
 /obj/effect/floor_decal/corner/lightgrey/bordercorner,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/steel,
 /area/crew_quarters/recreation_area_hallway)
 "bey" = (
@@ -84899,6 +84925,13 @@
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/machinery/disposal/wall{
+	dir = 4;
+	pixel_x = -32
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/steel,
 /area/crew_quarters/recreation_area_hallway)
 "xhN" = (
@@ -137318,7 +137351,7 @@ eHc
 eHc
 mlz
 aQY
-aQY
+aUm
 aUE
 aRT
 cXt
@@ -137495,7 +137528,7 @@ aQZ
 aPS
 bbe
 beu
-aQZ
+aUl
 aQZ
 cXk
 bdY
@@ -146904,7 +146937,7 @@ cpf
 cpf
 cpf
 vSb
-vSb
+syy
 vSb
 vSb
 vSb
