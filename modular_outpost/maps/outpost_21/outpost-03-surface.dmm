@@ -26156,7 +26156,7 @@
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/lightgrey/border,
 /obj/machinery/camera/network/civilian{
-	c_tag = "CIV - Recreation Hallway North";
+	c_tag = "CIV - Casino Hallway";
 	dir = 1
 	},
 /turf/simulated/floor/tiled/steel,
@@ -27381,7 +27381,7 @@
 	dir = 6
 	},
 /obj/machinery/camera/network/civilian{
-	c_tag = "CIV - Civilian Stairwell. Ground Level";
+	c_tag = "CIV - Stairwell";
 	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
@@ -36114,6 +36114,10 @@
 	},
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 8
+	},
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Stairwell Hallway";
+	dir = 4
 	},
 /turf/simulated/floor/tiled/steel,
 /area/hallway/primary/central_two)
@@ -69572,7 +69576,7 @@
 	dir = 10
 	},
 /obj/machinery/camera/network/security{
-	c_tag = "SEC - Ground floor stairwell";
+	c_tag = "SEC - Stairwell";
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
@@ -88439,7 +88443,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/camera/network/medbay{
-	c_tag = "MED - Ground Floor Stairs'";
+	c_tag = "MED - Stairwell'";
 	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
