@@ -4158,6 +4158,9 @@
 	pixel_y = 21;
 	pixel_x = 3
 	},
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Lasertag Storage"
+	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/muriki/crew/arcade/lasertagstore)
 "afS" = (
@@ -8738,6 +8741,10 @@
 	dir = 8;
 	icon_state = "pipe-c"
 	},
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Recreation Hallway South";
+	dir = 8
+	},
 /turf/simulated/floor/tiled/steel,
 /area/hallway/primary/central_two)
 "aow" = (
@@ -11932,6 +11939,7 @@
 	layer = 4;
 	pixel_y = 32
 	},
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/steel,
 /area/hallway/primary/central_two)
 "aws" = (
@@ -12828,6 +12836,14 @@
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/hallway/security/main)
+"azd" = (
+/obj/effect/floor_decal/spline/fancy/wood,
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Multipurpose Room South";
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/crew_quarters/courtroom)
 "aze" = (
 /obj/structure/prop/rock,
 /turf/simulated/mineral/floor/turfpack/muriki{
@@ -17193,6 +17209,9 @@
 /obj/structure/extinguisher_cabinet{
 	pixel_x = 5;
 	pixel_y = 28
+	},
+/obj/item/juke_remote{
+	autolinkareajuke_onspawn = /area/djstation
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/courtroom)
@@ -24267,6 +24286,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-4"
 	},
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/wood,
 /area/muriki/crew/judge)
 "bcr" = (
@@ -24355,6 +24375,9 @@
 	dir = 4;
 	name = "Station Intercom (General)";
 	pixel_x = 21
+	},
+/obj/item/juke_remote{
+	autolinkareajuke_onspawn = /area/djstation
 	},
 /turf/simulated/floor/carpet/graycarpet,
 /area/crew_quarters/fitness)
@@ -24520,14 +24543,18 @@
 /area/crew_quarters/fitness)
 "bcN" = (
 /obj/structure/table/glass,
-/obj/item/reagent_containers/spray/cleaner,
-/obj/item/reagent_containers/spray/cleaner,
 /obj/effect/floor_decal/spline/plain{
 	dir = 1
 	},
 /obj/structure/extinguisher_cabinet{
 	pixel_x = -5;
 	pixel_y = 30
+	},
+/obj/item/reagent_containers/spray/cleaner,
+/obj/item/reagent_containers/spray/cleaner,
+/obj/item/reagent_containers/spray/cleaner,
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Fitness Room"
 	},
 /turf/simulated/floor/carpet/graycarpet,
 /area/crew_quarters/fitness)
@@ -24568,6 +24595,13 @@
 	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/muriki/crew/arcade/lasertagstore)
+"bcS" = (
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Casino Dance Platform";
+	dir = 1
+	},
+/turf/simulated/floor/carpet/purcarpet,
+/area/muriki/crew/casino)
 "bcT" = (
 /obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
@@ -24665,6 +24699,10 @@
 /obj/item/clothing/accessory/bodycam/yobro,
 /obj/item/clothing/accessory/bodycam/yobro,
 /obj/item/clothing/accessory/bodycam/yobro,
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Lasertag Equipment South";
+	dir = 4
+	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/muriki/crew/arcade/lasertag)
 "bdc" = (
@@ -25113,6 +25151,9 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
 	},
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Multipurpose Room North"
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/courtroom)
 "bdX" = (
@@ -25228,6 +25269,10 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/spline/plain,
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Artroom";
+	dir = 1
+	},
 /turf/simulated/floor/carpet,
 /area/crew_quarters/recreation_area)
 "beh" = (
@@ -25247,6 +25292,9 @@
 	pixel_y = -34
 	},
 /obj/effect/floor_decal/spline/plain,
+/obj/item/juke_remote{
+	autolinkareajuke_onspawn = /area/djstation
+	},
 /turf/simulated/floor/carpet,
 /area/crew_quarters/recreation_area)
 "bej" = (
@@ -25295,6 +25343,13 @@
 	},
 /turf/simulated/floor/carpet/geo,
 /area/muriki/crew/arcade)
+"beo" = (
+/obj/structure/extinguisher_cabinet{
+	dir = 8;
+	pixel_x = 30
+	},
+/turf/simulated/floor/carpet/purcarpet,
+/area/muriki/crew/casino)
 "bep" = (
 /obj/structure/window/reinforced{
 	dir = 4
@@ -25480,6 +25535,10 @@
 	dir = 1;
 	name = "Station Intercom (General)";
 	pixel_y = 23
+	},
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Drunk Tank Hallway";
+	dir = 8
 	},
 /turf/simulated/floor/tiled/material/gold,
 /area/muriki/crew/casinostore)
@@ -25905,6 +25964,10 @@
 /obj/effect/floor_decal/spline/fancy/wood,
 /turf/simulated/floor/wood,
 /area/crew_quarters/bar)
+"bfo" = (
+/obj/structure/ladder/top_hatch,
+/turf/simulated/floor/carpet,
+/area/crew_quarters/recreation_area)
 "bfp" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -25938,6 +26001,10 @@
 	dir = 4
 	},
 /obj/item/geiger/wall/east,
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Recreation Hallway North";
+	dir = 8
+	},
 /turf/simulated/floor/tiled/steel,
 /area/hallway/primary/central_two)
 "bfu" = (
@@ -43887,6 +43954,9 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 10
 	},
+/obj/item/juke_remote{
+	autolinkareajuke_onspawn = /area/djstation
+	},
 /turf/simulated/floor/carpet/geo,
 /area/muriki/crew/arcade/lasertag)
 "hFG" = (
@@ -44568,6 +44638,9 @@
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
+	},
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Multipurpose Storage Room"
 	},
 /turf/simulated/floor/wood,
 /area/muriki/crew/judge)
@@ -46519,6 +46592,9 @@
 /obj/effect/floor_decal/spline/fancy/wood,
 /obj/machinery/ai_status_display{
 	pixel_y = -32
+	},
+/obj/item/juke_remote{
+	autolinkareajuke_onspawn = /area/djstation
 	},
 /turf/simulated/floor/wood/sif/parquet,
 /area/muriki/crew/casino)
@@ -49093,6 +49169,9 @@
 	dir = 1
 	},
 /obj/structure/sign/painting/public/north,
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Lasertag Equipment North"
+	},
 /turf/simulated/floor/carpet/geo,
 /area/muriki/crew/arcade/lasertag)
 "jqu" = (
@@ -54835,6 +54914,11 @@
 /obj/structure/bed/chair/bay/comfy/brown{
 	dir = 4
 	},
+/obj/item/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -21
+	},
 /turf/simulated/floor/tiled/material/gold{
 	dir = 1
 	},
@@ -55267,6 +55351,9 @@
 /obj/structure/table/fancyblack,
 /obj/effect/floor_decal/spline/plain{
 	dir = 5
+	},
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Casino Storage"
 	},
 /turf/simulated/floor/tiled/material/gold,
 /area/muriki/crew/casinostore)
@@ -59978,6 +60065,15 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 10
 	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -8;
+	pixel_y = -32;
+	dir = 1
+	},
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Casino South";
+	dir = 1
+	},
 /turf/simulated/floor/wood/sif/parquet,
 /area/muriki/crew/casino)
 "ndT" = (
@@ -60467,6 +60563,11 @@
 "nmH" = (
 /obj/structure/bed/chair/bay/comfy/black{
 	dir = 4
+	},
+/obj/item/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -21
 	},
 /turf/simulated/floor/tiled/material/gold{
 	dir = 1
@@ -66011,6 +66112,9 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
 	},
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Casino North"
+	},
 /turf/simulated/floor/wood/sif/parquet,
 /area/muriki/crew/casino)
 "pqf" = (
@@ -67232,6 +67336,10 @@
 	},
 /obj/machinery/light{
 	dir = 4
+	},
+/obj/structure/extinguisher_cabinet{
+	dir = 8;
+	pixel_x = 30
 	},
 /turf/simulated/floor/wood/sif/parquet,
 /area/muriki/crew/casino)
@@ -69717,6 +69825,10 @@
 /obj/structure/casino_table/board_game/chess,
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 4
+	},
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Casino Central";
+	dir = 8
 	},
 /turf/simulated/floor/wood/sif/parquet,
 /area/muriki/crew/casino)
@@ -75548,10 +75660,6 @@
 /obj/effect/landmark/start/command_officer,
 /turf/simulated/floor/carpet/turcarpet,
 /area/hallway/secondary/entry/docking_lounge)
-"sLG" = (
-/obj/structure/table/glass,
-/turf/simulated/floor/carpet/graycarpet,
-/area/crew_quarters/fitness)
 "sLR" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/dispenser,
@@ -76945,6 +77053,9 @@
 	pixel_x = 7;
 	pixel_y = -32;
 	dir = 1
+	},
+/obj/item/juke_remote{
+	autolinkareajuke_onspawn = /area/djstation
 	},
 /turf/simulated/floor/carpet/geo,
 /area/muriki/crew/arcade)
@@ -143005,7 +143116,7 @@ mMH
 tUd
 tUd
 tUd
-bcH
+azd
 cOX
 hRb
 bcp
@@ -143318,7 +143429,7 @@ hrS
 bej
 beB
 bev
-xAJ
+bfo
 dbp
 aKb
 bdX
@@ -144951,7 +145062,7 @@ bdc
 aos
 sTI
 bct
-sLG
+bct
 bct
 uuA
 atx
@@ -147861,7 +147972,7 @@ bec
 jLf
 jLf
 bdD
-jLf
+bcS
 bre
 aXU
 aXU
@@ -148023,7 +148134,7 @@ hcG
 bdS
 eCh
 qng
-jLf
+beo
 hGk
 aXU
 aqw
