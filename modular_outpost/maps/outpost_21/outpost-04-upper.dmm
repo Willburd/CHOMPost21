@@ -53495,7 +53495,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/cable/green{
-	icon_state = "1-4"
+	icon_state = "2-9"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/roof_tube_access)
