@@ -283,7 +283,7 @@
 
 /area/muriki/bathroom/casino
 	name = "\improper Casino Royal Flush"
-	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
+	base_turf = /turf/simulated/open
 	holomap_color = HOLOMAP_AREACOLOR_CIV
 
 /area/muriki/bathroom/phoronics
@@ -480,21 +480,21 @@
 
 /area/muriki/crew/arcade
 	name = "\improper Arcade"
-	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
+	base_turf = /turf/simulated/open
 	icon_state = "cyawhicir"
 	holomap_color = HOLOMAP_AREACOLOR_CIV
 	color_grading = COLORTINT_WARM
 
 /area/muriki/crew/casino
 	name = "\improper Casino and Smoke Lounge"
-	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
+	base_turf = /turf/simulated/open
 	icon_state = "cyawhicir"
 	holomap_color = HOLOMAP_AREACOLOR_CIV
 	color_grading = COLORTINT_WARM
 
 /area/muriki/crew/casinostore
 	name = "\improper Casino Storage"
-	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
+	base_turf = /turf/simulated/open
 	icon_state = "orawhicir"
 	holomap_color = HOLOMAP_AREACOLOR_CIV
 	color_grading = COLORTINT_WARM
@@ -508,13 +508,13 @@
 
 /area/muriki/crew/arcade/lasertag
 	name = "\improper Laser Tag Arena"
-	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
+	base_turf = /turf/simulated/open
 	icon_state = "purwhitri"
 	holomap_color = HOLOMAP_AREACOLOR_CIV
 
 /area/muriki/crew/arcade/lasertagstore
 	name = "\improper Laser Tag Storage"
-	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
+	base_turf = /turf/simulated/open
 	icon_state = "purwhicir"
 	holomap_color = HOLOMAP_AREACOLOR_CIV
 	color_grading = COLORTINT_DIM
@@ -544,7 +544,7 @@
 
 /area/muriki/crew/judge
 	name = "\improper Judge's Office"
-	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
+	base_turf = /turf/simulated/open
 	icon_state = "bluenew"
 	sound_env = SMALL_ENCLOSED
 	holomap_color = HOLOMAP_AREACOLOR_CIV
@@ -1048,7 +1048,7 @@
 	name = "Security First Floor"
 	base_turf = /turf/simulated/open
 	lift_floor_label = "Security Main"
-	lift_floor_name = "Primary Security."
+	lift_floor_name = "Offices, Armory, Forensics, Kennals, Interogations, Processing."
 	lift_announce_str = "Arriving at Security Primary."
 	holomap_color = HOLOMAP_AREACOLOR_SECURITY
 
@@ -1056,7 +1056,7 @@
 	name = "Security Second Floor"
 	base_turf = /turf/simulated/open
 	lift_floor_label = "Security High Level"
-	lift_floor_name = "AI, Telecoms, Evac shuttle."
+	lift_floor_name = "Firing Range, Sparing Ring, Storage, Medical Access Bridge, Shuttle Hanger."
 	lift_announce_str = "Arriving at Security Upper Floor."
 	holomap_color = HOLOMAP_AREACOLOR_SECURITY
 
@@ -1065,7 +1065,7 @@
 	name = "Medbay Sublevel 1"
 	base_turf = /turf/simulated/floor/plating
 	lift_floor_label = "Medical Basement"
-	lift_floor_name = "Vox Treatment, Morgue, Surgery Training, Cavern Access."
+	lift_floor_name = "Vox Treatment, Morgue, Surgery Training, Chemical Refinery, Garage, Autosleever, Cavern Access."
 	lift_announce_str = "Arriving at Medical Basement."
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
 
@@ -1073,7 +1073,7 @@
 	name = "Medbay First Floor"
 	base_turf = /turf/simulated/open
 	lift_floor_label = "Medbay"
-	lift_floor_name = "Lobby, Surgery, Primary Treatment, Psychology."
+	lift_floor_name = "Lobby, Surgery, Primary Treatment, Checkup, Showers, EMT Bay, Virology."
 	lift_announce_str = "Arriving at Medbay Primary."
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
 
@@ -1081,7 +1081,7 @@
 	name = "Medbay Second Floor"
 	base_turf = /turf/simulated/open
 	lift_floor_label = "Medical Recovery"
-	lift_floor_name = "Resleeving, CMO, Checkup, Recovery ward, Hangar."
+	lift_floor_name = "Resleeving, CMO, Genetics, Breakroom, Recovery ward, Security Access Bridge, Shuttle Hangar."
 	lift_announce_str = "Arriving at Medical Loft."
 	holomap_color = HOLOMAP_AREACOLOR_MEDICAL
 
@@ -1090,7 +1090,7 @@
 	name = "Civilian Sublevel 1"
 	base_turf = /turf/simulated/floor/plating
 	lift_floor_label = "Basement"
-	lift_floor_name = "Cafe, Pool, Dorms, Arcade, Cavern Access."
+	lift_floor_name = "Showers, Pool, Dorms, Cavern Access."
 	lift_announce_str = "Arriving at Basement."
 	holomap_color = HOLOMAP_AREACOLOR_CIV
 
@@ -1098,7 +1098,7 @@
 	name = "Civilian First Floor"
 	base_turf = /turf/simulated/open
 	lift_floor_label = "First Floor"
-	lift_floor_name = "Bar, Bridge, Evac Hallway."
+	lift_floor_name = "Bar, Bridge, Kitchen, Recreation, Arcade, Lasertag, Casino, Evac Hallway."
 	lift_announce_str = "Arriving at First Floor."
 	holomap_color = HOLOMAP_AREACOLOR_CIV
 
@@ -1106,7 +1106,7 @@
 	name = "Civilian Second Floor"
 	base_turf = /turf/simulated/open
 	lift_floor_label = "Second Floor"
-	lift_floor_name = "Chapel, Library, Garden."
+	lift_floor_name = "Chapel, Cafe, Hydroponics, Library, Garden."
 	lift_announce_str = "Arriving at Second Floor."
 	holomap_color = HOLOMAP_AREACOLOR_CIV
 
@@ -1115,7 +1115,7 @@
 	name = "Bridge Sublevel 1"
 	base_turf = /turf/simulated/floor/plating
 	lift_floor_label = "Bridge Basement"
-	lift_floor_name = "Maintenance"
+	lift_floor_name = "Maintenance, Cavern Access."
 	lift_announce_str = "Arriving at Basement."
 	holomap_color = HOLOMAP_AREACOLOR_COMMAND
 
