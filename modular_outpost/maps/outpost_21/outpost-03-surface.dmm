@@ -12857,18 +12857,6 @@
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/hallway/security/main)
-"azd" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/corner/lightgrey/border,
-/obj/machinery/camera/network/civilian{
-	c_tag = "CIV - Recreation Hallway North";
-	dir = 1
-	},
-/turf/simulated/floor/tiled/steel,
-/area/hallway/primary/central_two)
 "aze" = (
 /obj/structure/prop/rock,
 /turf/simulated/mineral/floor/turfpack/muriki{
@@ -24592,23 +24580,6 @@
 	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/muriki/crew/arcade/lasertagstore)
-"bcS" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/green/border{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/camera/network/civilian{
-	c_tag = "CIV - Drunk Tank Hallway";
-	dir = 8
-	},
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/tiled/steel,
-/area/hallway/primary/central_two)
 "bcT" = (
 /obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
@@ -26179,6 +26150,18 @@
 /turf/simulated/floor/tiled/steel,
 /area/hallway/primary/central_two)
 "bfK" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/lightgrey/border,
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Recreation Hallway North";
+	dir = 1
+	},
+/turf/simulated/floor/tiled/steel,
+/area/hallway/primary/central_two)
+"bfL" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
 	},
@@ -26197,7 +26180,16 @@
 /obj/structure/sign/painting/public/north,
 /turf/simulated/floor/tiled/steel,
 /area/hallway/primary/central_two)
-"bfL" = (
+"bfM" = (
+/obj/structure/railing/grey{
+	dir = 8
+	},
+/obj/structure/railing/grey{
+	dir = 4
+	},
+/turf/simulated/floor/plating/external/turfpack/muriki,
+/area/muriki/grounds/tramborder)
+"bfN" = (
 /obj/structure/sink{
 	dir = 8;
 	pixel_x = -12;
@@ -26210,15 +26202,6 @@
 /obj/structure/ladder/top_hatch,
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/bar)
-"bfM" = (
-/obj/structure/railing/grey{
-	dir = 8
-	},
-/obj/structure/railing/grey{
-	dir = 4
-	},
-/turf/simulated/floor/plating/external/turfpack/muriki,
-/area/muriki/grounds/tramborder)
 "bfW" = (
 /obj/structure/table/reinforced,
 /obj/effect/floor_decal/corner/red/border{
@@ -81887,6 +81870,23 @@
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/mining/processing)
+"uLF" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/green/border{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Drunk Tank Hallway";
+	dir = 8
+	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/steel,
+/area/hallway/primary/central_two)
 "uMh" = (
 /obj/structure/cable/green{
 	icon_state = "2-8"
@@ -143888,7 +143888,7 @@ qOk
 hrR
 vhX
 bfp
-bcS
+uLF
 ujR
 gom
 oDb
@@ -145998,7 +145998,7 @@ cLQ
 dVC
 tpU
 awr
-azd
+bfK
 cUF
 xla
 bex
@@ -146321,7 +146321,7 @@ azf
 gST
 bfn
 tpU
-bfK
+bfL
 oFm
 cUF
 knn
@@ -147611,7 +147611,7 @@ iMn
 prn
 gFq
 oHk
-bfL
+bfN
 ioR
 hcf
 sTy
