@@ -8738,14 +8738,6 @@
 	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/muriki/crew/arcade/lasertagstore)
-"aou" = (
-/obj/effect/floor_decal/spline/fancy/wood,
-/obj/machinery/camera/network/civilian{
-	c_tag = "CIV - Multipurpose Room South";
-	dir = 1
-	},
-/turf/simulated/floor/wood,
-/area/crew_quarters/courtroom)
 "aov" = (
 /obj/item/radio/intercom{
 	dir = 1;
@@ -12857,6 +12849,18 @@
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/hallway/security/main)
+"azd" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/lightgrey/border,
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Casino Hallway";
+	dir = 1
+	},
+/turf/simulated/floor/tiled/steel,
+/area/hallway/primary/central_two)
 "aze" = (
 /obj/structure/prop/rock,
 /turf/simulated/mineral/floor/turfpack/muriki{
@@ -24205,6 +24209,23 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/milspec,
 /area/medical/sleeper)
+"bch" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/green/border{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Drunk Tank Hallway";
+	dir = 8
+	},
+/turf/simulated/floor/tiled/steel,
+/area/hallway/primary/central_two)
 "bci" = (
 /obj/machinery/scale,
 /obj/effect/floor_decal/spline/plain,
@@ -24479,6 +24500,10 @@
 "bcG" = (
 /obj/effect/floor_decal/spline/fancy/wood,
 /obj/structure/sign/painting/public/south,
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Multipurpose Room South";
+	dir = 1
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/courtroom)
 "bcH" = (
@@ -36102,6 +36127,10 @@
 	},
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 8
+	},
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Kitchen Hallway";
+	dir = 4
 	},
 /turf/simulated/floor/tiled/steel,
 /area/hallway/primary/central_two)
@@ -66925,6 +66954,10 @@
 /obj/machinery/vending/loadout/costume{
 	dir = 1
 	},
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Arcade South";
+	dir = 1
+	},
 /turf/simulated/floor/carpet/geo,
 /area/muriki/crew/arcade)
 "pCS" = (
@@ -81854,23 +81887,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/mining/processing)
-"uLF" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/green/border{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/camera/network/civilian{
-	c_tag = "CIV - Drunk Tank Hallway";
-	dir = 8
-	},
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/tiled/steel,
-/area/hallway/primary/central_two)
 "uMh" = (
 /obj/structure/cable/green{
 	icon_state = "2-8"
@@ -89338,6 +89354,9 @@
 	dir = 1
 	},
 /obj/structure/sign/painting/public/north,
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Arcade North"
+	},
 /turf/simulated/floor/carpet/geo,
 /area/muriki/crew/arcade)
 "xlq" = (
@@ -143240,7 +143259,7 @@ mMH
 tUd
 tUd
 tUd
-aou
+bcH
 cOX
 hRb
 bcp
@@ -143868,8 +143887,8 @@ uvI
 qOk
 hrR
 vhX
+bch
 bfp
-uLF
 ujR
 gom
 oDb
@@ -145979,7 +145998,7 @@ cLQ
 dVC
 tpU
 awr
-oFm
+azd
 cUF
 xla
 bex

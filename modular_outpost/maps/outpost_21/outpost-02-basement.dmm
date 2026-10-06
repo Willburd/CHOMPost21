@@ -26574,6 +26574,35 @@
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/pool)
+"aZt" = (
+/obj/machinery/power/apc{
+	dir = 8;
+	name = "west bump";
+	pixel_x = -24
+	},
+/obj/structure/cable/orange{
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/tiled/steel,
+/area/maintenance/civ/east)
+"aZu" = (
+/obj/structure/cable/orange{
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/tiled/steel,
+/area/maintenance/civ/east)
+"aZv" = (
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/steel,
+/area/maintenance/civ/east)
+"aZw" = (
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/civ/east)
 "aZx" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -26616,6 +26645,22 @@
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating,
 /area/engineering/refinery/main)
+"aZB" = (
+/obj/machinery/door/airlock/maintenance/int,
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/maintenance/civ/east)
+"aZC" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/structure/cable/orange{
+	icon_state = "2-9"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/civ/east)
 "aZD" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/lightgrey/border,
@@ -26625,6 +26670,12 @@
 	},
 /turf/simulated/floor/tiled/steel,
 /area/hallway/muriki/dorm)
+"aZE" = (
+/obj/structure/cable/orange{
+	icon_state = "5-6"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/civ/east)
 "aZF" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -26657,6 +26708,41 @@
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/sleep/Dorm_1)
+"aZI" = (
+/obj/structure/cable/orange{
+	icon_state = "1-10"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/civ/east)
+"aZJ" = (
+/obj/structure/cable/orange{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/civ/east)
+"aZK" = (
+/obj/random/junk,
+/obj/structure/cable/orange{
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/civ/east)
+"aZL" = (
+/obj/machinery/door/airlock/maintenance/common,
+/turf/simulated/floor/tiled/techfloor,
+/area/maintenance/civ/east)
+"aZM" = (
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/lightgrey/border,
+/obj/machinery/item_bank{
+	dir = 1;
+	pixel_y = -32
+	},
+/obj/structure/window/maintenance_panel{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/steel,
+/area/crew_quarters/locker)
 "aZN" = (
 /obj/effect/mist,
 /turf/simulated/floor/flesh/mover/turfpack/muriki{
@@ -28273,6 +28359,7 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
+/obj/item/geiger/wall/west,
 /turf/simulated/floor/tiled/dark/turfpack/muriki,
 /area/mine/explored/muriki/cave/civ/east_access)
 "bhN" = (
@@ -28359,14 +28446,6 @@
 "bhW" = (
 /turf/simulated/wall,
 /area/maintenance/sec)
-"bic" = (
-/obj/item/geiger/wall/west,
-/obj/machinery/camera/network/civilian{
-	c_tag = "CIV - Eastern Cavern Access";
-	dir = 5
-	},
-/turf/simulated/floor/tiled/dark/turfpack/muriki,
-/area/mine/explored/muriki/cave/civ/east_access)
 "bih" = (
 /obj/structure/sign/warning/fire,
 /turf/simulated/wall/r_wall,
@@ -28652,17 +28731,6 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/civ/east)
-"biT" = (
-/obj/machinery/power/apc{
-	dir = 8;
-	name = "west bump";
-	pixel_x = -24
-	},
-/obj/structure/cable/orange{
-	icon_state = "0-6"
-	},
-/turf/simulated/floor/tiled/dark/turfpack/muriki,
-/area/mine/explored/muriki/cave/civ/east_access)
 "biW" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -28916,20 +28984,18 @@
 /turf/simulated/floor/plating/external/turfpack/muriki,
 /area/maintenance/civ/east)
 "bjI" = (
+/obj/machinery/power/apc{
+	name = "south bump";
+	pixel_y = -24
+	},
 /obj/structure/cable/orange{
-	icon_state = "4-9"
+	icon_state = "0-4"
 	},
 /turf/simulated/floor/tiled/dark/turfpack/muriki,
 /area/mine/explored/muriki/cave/civ/east_access)
 "bjJ" = (
 /obj/structure/cable/orange{
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/tiled/dark/turfpack/muriki,
-/area/mine/explored/muriki/cave/civ/east_access)
-"bjK" = (
-/obj/structure/cable/orange{
-	icon_state = "2-8"
+	icon_state = "6-8"
 	},
 /turf/simulated/floor/tiled/dark/turfpack/muriki,
 /area/mine/explored/muriki/cave/civ/east_access)
@@ -29190,9 +29256,11 @@
 /turf/simulated/floor/tiled/steel,
 /area/crew_quarters/locker)
 "bkz" = (
-/obj/machinery/door/airlock/maintenance/common,
+/obj/structure/window/maintenance_panel{
+	dir = 1
+	},
 /obj/structure/cable/orange{
-	icon_state = "1-2"
+	icon_state = "2-9"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/mine/explored/muriki/cave/civ/east_access)
@@ -66281,13 +66349,8 @@
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/civ/east)
 "cQX" = (
-/obj/machinery/power/apc{
-	dir = 4;
-	name = "east bump";
-	pixel_x = 24
-	},
 /obj/structure/cable/orange{
-	icon_state = "0-8"
+	icon_state = "6-8"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/civ/east)
@@ -137018,7 +137081,7 @@ cXg
 aXh
 cXg
 cXg
-cXb
+aZM
 bix
 aXy
 aXy
@@ -140429,7 +140492,7 @@ bsH
 aXy
 aXy
 aXy
-aXy
+aZL
 aXy
 aXy
 aXy
@@ -140589,9 +140652,9 @@ bgF
 bwl
 bsH
 bhJ
-bic
+ehN
 xMD
-biT
+ehN
 aVO
 cWK
 aXy
@@ -141078,7 +141141,7 @@ gEm
 ehN
 cvF
 ehN
-bjK
+ehN
 bkz
 cQW
 aXy
@@ -141405,7 +141468,7 @@ rmT
 rmT
 cWK
 aXy
-ceU
+aWy
 aXy
 syy
 syy
@@ -141567,7 +141630,7 @@ cfG
 cfG
 cWK
 aXy
-aTx
+aZJ
 aXy
 syy
 syy
@@ -141729,18 +141792,18 @@ cfG
 aXy
 aXy
 aXy
-cJy
+bma
 aXy
 aXy
 aXy
 aTx
-aTx
+aZE
 aTx
 aXy
 aTx
 aws
 aTx
-aws
+aZt
 aTx
 aws
 aXy
@@ -141891,18 +141954,18 @@ cfG
 aXy
 aVz
 cot
-cot
-aTx
-aTx
-ceU
-aTx
+aZK
+aZw
+aZw
+aZB
+aZI
 aXy
-aPZ
-ceU
-aTx
-aTx
-aws
-aws
+aZC
+aZB
+aZw
+aZw
+aZv
+aZu
 aws
 aws
 bwU
