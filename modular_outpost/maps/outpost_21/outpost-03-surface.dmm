@@ -12849,12 +12849,6 @@
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/hallway/security/main)
-"azd" = (
-/obj/structure/cable/orange{
-	icon_state = "1-8"
-	},
-/turf/simulated/floor/plating,
-/area/maintenance/scielev)
 "aze" = (
 /obj/structure/prop/rock,
 /turf/simulated/mineral/floor/turfpack/muriki{
@@ -24197,15 +24191,6 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/milspec,
 /area/medical/sleeper)
-"bch" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/structure/cable/orange{
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/plating,
-/area/maintenance/scielev)
 "bci" = (
 /obj/machinery/scale,
 /obj/effect/floor_decal/spline/plain,
@@ -26203,6 +26188,21 @@
 /obj/structure/ladder/top_hatch,
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/bar)
+"bfO" = (
+/obj/structure/cable/orange{
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/scielev)
+"bfP" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/orange{
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/scielev)
 "bfW" = (
 /obj/structure/table/reinforced,
 /obj/effect/floor_decal/corner/red/border{
@@ -140753,7 +140753,7 @@ aJX
 aJX
 aJY
 fjo
-bch
+bfP
 ciC
 rJE
 say
@@ -140915,7 +140915,7 @@ aJX
 aJX
 aPB
 fjo
-bch
+bfP
 kaM
 rJE
 say
@@ -141078,7 +141078,7 @@ aJX
 aJY
 fjo
 aBl
-azd
+bfO
 rJE
 say
 say
