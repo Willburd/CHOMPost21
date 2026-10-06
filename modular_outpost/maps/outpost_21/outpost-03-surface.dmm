@@ -4152,17 +4152,13 @@
 /turf/simulated/floor/tiled/steel,
 /area/hallway/primary/central_three)
 "afR" = (
-/obj/item/radio/intercom{
-	dir = 1;
-	name = "Common Channel";
-	pixel_y = 21;
-	pixel_x = 3
-	},
+/obj/effect/floor_decal/spline/fancy/wood,
 /obj/machinery/camera/network/civilian{
-	c_tag = "CIV - Lasertag Storage"
+	c_tag = "CIV - Multipurpose Room South";
+	dir = 1
 	},
-/turf/simulated/floor/tiled/milspec/raised,
-/area/muriki/crew/arcade/lasertagstore)
+/turf/simulated/floor/wood,
+/area/crew_quarters/courtroom)
 "afS" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 8
@@ -4174,8 +4170,14 @@
 /turf/simulated/floor/tiled/steel,
 /area/hallway/primary/central_two)
 "afT" = (
-/obj/machinery/light{
-	dir = 4
+/obj/item/radio/intercom{
+	dir = 1;
+	name = "Common Channel";
+	pixel_y = 21;
+	pixel_x = 3
+	},
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Lasertag Storage"
 	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/muriki/crew/arcade/lasertagstore)
@@ -7463,18 +7465,11 @@
 /turf/simulated/floor/wood,
 /area/crew_quarters/bar)
 "alX" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 8
+/obj/machinery/light{
+	dir = 4
 	},
-/obj/effect/floor_decal/corner/lightgrey/border{
-	dir = 8
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 1;
-	icon_state = "pipe-c"
-	},
-/turf/simulated/floor/tiled/steel,
-/area/hallway/primary/central_two)
+/turf/simulated/floor/tiled/milspec/raised,
+/area/muriki/crew/arcade/lasertagstore)
 "alY" = (
 /obj/effect/floor_decal/industrial/danger{
 	dir = 8
@@ -8716,6 +8711,19 @@
 /turf/simulated/floor/tiled/milspec/raised,
 /area/muriki/crew/arcade/lasertagstore)
 "aou" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 8
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled/steel,
+/area/hallway/primary/central_two)
+"aov" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable/green{
@@ -8726,7 +8734,16 @@
 	},
 /turf/simulated/floor/tiled/steel,
 /area/hallway/primary/central_two)
-"aov" = (
+"aow" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/carpet/graycarpet,
+/area/crew_quarters/fitness)
+"aox" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
 	},
@@ -8747,22 +8764,6 @@
 	},
 /turf/simulated/floor/tiled/steel,
 /area/hallway/primary/central_two)
-"aow" = (
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 1
-	},
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/carpet/graycarpet,
-/area/crew_quarters/fitness)
-"aox" = (
-/obj/machinery/firealarm{
-	dir = 1;
-	pixel_y = -26
-	},
-/turf/simulated/floor/carpet/purcarpet,
-/area/muriki/crew/casino)
 "aoy" = (
 /turf/simulated/wall/r_wall,
 /area/mine/unexplored/muriki/cave/shelter/north_west_far)
@@ -9104,27 +9105,19 @@
 /turf/simulated/floor/tiled/milspec/raised,
 /area/muriki/crew/arcade/lasertagstore)
 "apn" = (
-/obj/effect/floor_decal/spline/plain{
-	dir = 8
-	},
-/obj/machinery/light_switch{
-	dir = 4;
-	pixel_x = -28;
-	pixel_y = 25
-	},
-/turf/simulated/floor/carpet/geo,
-/area/muriki/crew/arcade/lasertag)
-"apo" = (
-/obj/structure/closet/lasertag/red,
-/obj/effect/floor_decal/spline/plain{
-	dir = 4
-	},
 /obj/machinery/firealarm{
-	dir = 4;
-	pixel_x = 26
+	dir = 1;
+	pixel_y = -26
 	},
-/turf/simulated/floor/carpet/geo,
-/area/muriki/crew/arcade/lasertag)
+/turf/simulated/floor/carpet/purcarpet,
+/area/muriki/crew/casino)
+"apo" = (
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Casino Dance Platform";
+	dir = 1
+	},
+/turf/simulated/floor/carpet/purcarpet,
+/area/muriki/crew/casino)
 "app" = (
 /turf/simulated/wall,
 /area/muriki/crew/arcade/lasertagstore)
@@ -9877,20 +9870,12 @@
 /turf/simulated/floor/carpet/geo,
 /area/muriki/crew/arcade)
 "arG" = (
-/obj/structure/disposalpipe/segment,
-/obj/effect/floor_decal/borderfloor{
-	dir = 8
-	},
-/obj/effect/floor_decal/corner/lightgrey/border{
-	dir = 8
-	},
 /obj/structure/extinguisher_cabinet{
-	dir = 4;
-	pixel_x = -30;
-	pixel_y = -7
+	dir = 8;
+	pixel_x = 30
 	},
-/turf/simulated/floor/tiled/steel,
-/area/hallway/primary/central_two)
+/turf/simulated/floor/carpet/purcarpet,
+/area/muriki/crew/casino)
 "arH" = (
 /obj/structure/window/maintenance_panel{
 	dir = 1
@@ -11836,8 +11821,16 @@
 /turf/simulated/floor/water/deep/indoors/turfpack/muriki,
 /area/mine/unexplored/muriki/mountaineast)
 "awg" = (
-/turf/simulated/wall/r_wall,
-/area/crew_quarters/recreation_area)
+/obj/effect/floor_decal/spline/plain{
+	dir = 8
+	},
+/obj/machinery/light_switch{
+	dir = 4;
+	pixel_x = -28;
+	pixel_y = 25
+	},
+/turf/simulated/floor/carpet/geo,
+/area/muriki/crew/arcade/lasertag)
 "awh" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -12836,14 +12829,6 @@
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/hallway/security/main)
-"azd" = (
-/obj/effect/floor_decal/spline/fancy/wood,
-/obj/machinery/camera/network/civilian{
-	c_tag = "CIV - Multipurpose Room South";
-	dir = 1
-	},
-/turf/simulated/floor/wood,
-/area/crew_quarters/courtroom)
 "aze" = (
 /obj/structure/prop/rock,
 /turf/simulated/mineral/floor/turfpack/muriki{
@@ -16462,8 +16447,16 @@
 /turf/simulated/floor/water/acidic/deep/turfpack/muriki,
 /area/muriki/grounds/med)
 "aKb" = (
-/turf/simulated/wall,
-/area/crew_quarters/recreation_area)
+/obj/structure/closet/lasertag/red,
+/obj/effect/floor_decal/spline/plain{
+	dir = 4
+	},
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = 26
+	},
+/turf/simulated/floor/carpet/geo,
+/area/muriki/crew/arcade/lasertag)
 "aKc" = (
 /obj/structure/prop/rock/water,
 /turf/simulated/floor/water/acidic/turfpack/muriki,
@@ -17342,16 +17335,17 @@
 /turf/simulated/floor/outdoors/mud/turfpack/muriki,
 /area/muriki/grounds/waste)
 "aNh" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/structure/cable/green{
-	icon_state = "1-2"
+/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
 	},
-/obj/effect/floor_decal/steeldecal/steel_decals_central7{
-	dir = 4
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 8
 	},
-/obj/structure/cable/green{
-	icon_state = "1-4"
+/obj/structure/extinguisher_cabinet{
+	dir = 4;
+	pixel_x = -30;
+	pixel_y = -7
 	},
 /turf/simulated/floor/tiled/steel,
 /area/hallway/primary/central_two)
@@ -21618,23 +21612,8 @@
 /turf/simulated/floor/wood,
 /area/crew_quarters/heads/hop)
 "aXM" = (
-/obj/structure/disposalpipe/segment,
-/obj/effect/floor_decal/borderfloor{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/lightgrey/border{
-	dir = 4
-	},
-/obj/machinery/power/apc{
-	dir = 4;
-	name = "east bump";
-	pixel_x = 24
-	},
-/obj/structure/cable/green{
-	icon_state = "0-8"
-	},
-/turf/simulated/floor/tiled/steel,
-/area/hallway/primary/central_two)
+/turf/simulated/wall/r_wall,
+/area/crew_quarters/recreation_area)
 "aXN" = (
 /obj/structure/dogbed,
 /mob/living/simple_mob/animal/passive/dog/corgi/Ian,
@@ -23774,20 +23753,8 @@
 	},
 /area/muriki/processor/hall/waterway_upper)
 "bbv" = (
-/obj/structure/disposalpipe/segment,
-/obj/effect/floor_decal/borderfloor{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/lightgrey/border{
-	dir = 4
-	},
-/obj/item/radio/intercom{
-	dir = 4;
-	name = "Station Intercom (General)";
-	pixel_x = 22
-	},
-/turf/simulated/floor/tiled/steel,
-/area/hallway/primary/central_two)
+/turf/simulated/wall,
+/area/crew_quarters/recreation_area)
 "bbw" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -24595,13 +24562,6 @@
 	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/muriki/crew/arcade/lasertagstore)
-"bcS" = (
-/obj/machinery/camera/network/civilian{
-	c_tag = "CIV - Casino Dance Platform";
-	dir = 1
-	},
-/turf/simulated/floor/carpet/purcarpet,
-/area/muriki/crew/casino)
 "bcT" = (
 /obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
@@ -25343,13 +25303,6 @@
 	},
 /turf/simulated/floor/carpet/geo,
 /area/muriki/crew/arcade)
-"beo" = (
-/obj/structure/extinguisher_cabinet{
-	dir = 8;
-	pixel_x = 30
-	},
-/turf/simulated/floor/carpet/purcarpet,
-/area/muriki/crew/casino)
 "bep" = (
 /obj/structure/window/reinforced{
 	dir = 4
@@ -25964,10 +25917,6 @@
 /obj/effect/floor_decal/spline/fancy/wood,
 /turf/simulated/floor/wood,
 /area/crew_quarters/bar)
-"bfo" = (
-/obj/structure/ladder/top_hatch,
-/turf/simulated/floor/carpet,
-/area/crew_quarters/recreation_area)
 "bfp" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -25982,17 +25931,68 @@
 /turf/simulated/floor/tiled/steel,
 /area/hallway/primary/central_two)
 "bfq" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals_central7{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
+/turf/simulated/floor/tiled/steel,
+/area/hallway/primary/central_two)
+"bfr" = (
+/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 4
+	},
+/obj/machinery/power/apc{
+	dir = 4;
+	name = "east bump";
+	pixel_x = 24
+	},
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/tiled/steel,
+/area/hallway/primary/central_two)
+"bfs" = (
+/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 4
+	},
+/obj/item/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = 22
+	},
+/turf/simulated/floor/tiled/steel,
+/area/hallway/primary/central_two)
+"bft" = (
 /turf/simulated/wall,
 /area/muriki/crew/casinostore)
-"bfr" = (
+"bfu" = (
 /turf/simulated/wall/r_wall,
 /area/muriki/crew/casinostore)
-"bfs" = (
+"bfv" = (
+/obj/structure/ladder/top_hatch,
+/turf/simulated/floor/carpet,
+/area/crew_quarters/recreation_area)
+"bfw" = (
 /turf/simulated/floor/tiled/material/gold{
 	dir = 1
 	},
 /area/muriki/crew/casinostore)
-"bft" = (
+"bfx" = (
 /obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -26007,7 +26007,7 @@
 	},
 /turf/simulated/floor/tiled/steel,
 /area/hallway/primary/central_two)
-"bfu" = (
+"bfy" = (
 /obj/machinery/computer/arcade/battle,
 /obj/effect/floor_decal/spline/plain{
 	dir = 1
@@ -26015,7 +26015,7 @@
 /obj/structure/sign/painting/public/north,
 /turf/simulated/floor/carpet/geo,
 /area/muriki/crew/arcade)
-"bfv" = (
+"bfz" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
 	},
@@ -142621,7 +142621,7 @@ bep
 bep
 bep
 bee
-awg
+aXM
 bcE
 bdL
 tUd
@@ -142783,7 +142783,7 @@ bul
 jxr
 bul
 bef
-aKb
+bbv
 bdT
 oUz
 tUd
@@ -142945,7 +142945,7 @@ xAJ
 eXR
 xAJ
 beg
-aKb
+bbv
 bdU
 tUd
 tUd
@@ -143107,7 +143107,7 @@ cKv
 xAJ
 xAJ
 beh
-aKb
+bbv
 bdV
 tUd
 tUd
@@ -143116,7 +143116,7 @@ mMH
 tUd
 tUd
 tUd
-azd
+afR
 cOX
 hRb
 bcp
@@ -143269,7 +143269,7 @@ vgJ
 beu
 beq
 bei
-aKb
+bbv
 bdW
 tUd
 tUd
@@ -143429,9 +143429,9 @@ hrS
 bej
 beB
 bev
-bfo
+bfv
 dbp
-aKb
+bbv
 bdX
 qVw
 qVw
@@ -143593,7 +143593,7 @@ hJH
 kyf
 nLm
 pLN
-aKb
+bbv
 aMF
 tUd
 fFa
@@ -143755,7 +143755,7 @@ iGL
 cwO
 ber
 vKD
-aKb
+bbv
 bdY
 bdM
 kQx
@@ -143912,12 +143912,12 @@ tpU
 eIe
 beT
 beL
-aKb
+bbv
 bej
 bej
 bej
 bej
-aKb
+bbv
 bcK
 bcK
 hYv
@@ -144080,12 +144080,12 @@ bdn
 bdn
 bdn
 bed
-arG
+aNh
 bdn
 bdn
 bdn
 tcd
-alX
+aou
 jEG
 bcT
 bcL
@@ -144241,13 +144241,13 @@ cux
 jIc
 jIc
 jIc
-aNh
+bfq
 jIc
 jIc
 jIc
 lyj
 gkm
-aou
+aov
 bcW
 bcU
 gYH
@@ -144399,17 +144399,17 @@ bfd
 beT
 beM
 beF
-bft
+bfx
 mhG
 hUr
-bbv
-aXM
+bfs
+bfr
 vBu
 mhG
 bdH
 ykU
 hxB
-aov
+aox
 bcX
 bcT
 bcM
@@ -144730,7 +144730,7 @@ lxM
 cUF
 fyJ
 nwX
-apn
+awg
 ggg
 bdr
 hFF
@@ -145209,7 +145209,7 @@ icN
 hhM
 oFm
 cUF
-bfu
+bfy
 lAW
 bvp
 tkE
@@ -146178,7 +146178,7 @@ azf
 gST
 bfn
 tpU
-bfv
+bfz
 oFm
 cUF
 knn
@@ -146188,7 +146188,7 @@ qPL
 cUF
 beb
 tpx
-apo
+aKb
 gqW
 sfu
 xKb
@@ -146356,7 +146356,7 @@ bre
 bre
 app
 app
-afR
+afT
 xUS
 bcn
 bcn
@@ -146842,7 +146842,7 @@ bdu
 bre
 pUw
 sXT
-afT
+alX
 rLv
 aez
 bco
@@ -147476,11 +147476,11 @@ jAK
 beK
 beK
 beO
-bfq
-bfq
+bft
+bft
 nqb
-bfq
-bfq
+bft
+bft
 vmj
 emk
 bdR
@@ -147638,11 +147638,11 @@ jAK
 mte
 pQk
 cIt
-bfq
+bft
 hbd
 gYv
 ovC
-bfq
+bft
 nsQ
 ycs
 jLf
@@ -147800,17 +147800,17 @@ jAK
 hEs
 beY
 beQ
-bfq
+bft
 ant
 sgv
 dAu
-bfq
+bft
 wiy
 nsQ
 jLf
 jLf
 bdC
-aox
+apn
 bre
 bdl
 aXU
@@ -147962,17 +147962,17 @@ jAK
 wrJ
 fmy
 lyL
-bfq
+bft
 beE
-bfs
+bfw
 fJG
-bfq
+bft
 nsQ
 bec
 jLf
 jLf
 bdD
-bcS
+apo
 bre
 aXU
 aXU
@@ -148124,17 +148124,17 @@ jAK
 beR
 beR
 beR
-bfq
+bft
 lvw
 pZU
 rRm
-bfq
+bft
 mSJ
 hcG
 bdS
 eCh
 qng
-beo
+arG
 hGk
 aXU
 aqw
@@ -148285,12 +148285,12 @@ aqw
 aqw
 aqw
 aNT
-bfr
-bfr
-bfr
-bfr
-bfr
-bfr
+bfu
+bfu
+bfu
+bfu
+bfu
+bfu
 hGk
 hGk
 hGk
