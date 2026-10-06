@@ -1297,6 +1297,10 @@
 "acT" = (
 /turf/simulated/wall/r_wall,
 /area/engineering/atmos)
+"acU" = (
+/obj/random/junk,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/civ/east)
 "acV" = (
 /turf/simulated/wall,
 /area/rnd/outpost/anomaly_lab)
@@ -1770,6 +1774,11 @@
 /obj/effect/landmark/late_antag/synx,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/spine/waste)
+"adX" = (
+/obj/structure/window/maintenance_panel,
+/obj/random/junk,
+/turf/simulated/floor/tiled/techfloor/grid/turfpack/muriki,
+/area/maintenance/civ/west)
 "adY" = (
 /obj/effect/landmark/late_antag/borer,
 /turf/simulated/floor/plating/turfpack/muriki,
@@ -134924,9 +134933,9 @@ bME
 bME
 cvh
 cnU
-cnU
 cuZ
 cuW
+cuX
 cuW
 cnU
 ceX
@@ -135086,11 +135095,11 @@ bSt
 cul
 bSt
 cnU
-cnU
 cuW
 cuX
-cuW
-ayD
+cuX
+cuX
+cnU
 cPK
 bWj
 cdD
@@ -135248,10 +135257,10 @@ cup
 cum
 csm
 cnU
-cnU
 cva
-cuY
+cva
 cuW
+cuY
 cnU
 cnU
 cnU
@@ -135416,9 +135425,9 @@ cnU
 cnU
 cnU
 aOU
+bLI
 aOU
-aOU
-aOU
+bLI
 aOU
 cnU
 cnU
@@ -135583,7 +135592,7 @@ bix
 aOU
 cnU
 aOU
-byC
+adX
 cQN
 ceT
 cNG
@@ -136075,7 +136084,7 @@ cnU
 aWa
 bjt
 bjt
-aOU
+cJp
 cnU
 vka
 vka
@@ -136727,7 +136736,7 @@ cnU
 aOU
 bJh
 aOU
-aOU
+bLI
 cnU
 vka
 vka
@@ -136885,7 +136894,7 @@ czx
 cnU
 cnU
 aOU
-aOU
+bLI
 cnU
 cnU
 cnU
@@ -137038,13 +137047,13 @@ beE
 aOU
 aOU
 aOU
-aOU
+bLI
 aOU
 bJh
 aOU
 cnU
 bhi
-aOU
+bLI
 aOU
 aOU
 aOU
@@ -137217,7 +137226,7 @@ cnU
 aOU
 bJh
 bVk
-aOU
+bLI
 cvd
 cnU
 cov
@@ -137374,7 +137383,7 @@ ceX
 aOU
 cnU
 cnU
-aOU
+bLI
 aOU
 aOU
 cnU
@@ -138186,7 +138195,7 @@ cnU
 vka
 cnU
 aOU
-aOU
+bLI
 aOU
 aOU
 cnU
@@ -138674,7 +138683,7 @@ cnU
 cnU
 cnU
 cnU
-aOU
+bLI
 cnU
 cnU
 cdF
@@ -139969,7 +139978,7 @@ aXy
 aTx
 ceU
 aTx
-aTx
+acU
 aXy
 aTx
 ccc
@@ -140133,7 +140142,7 @@ aXy
 aXy
 aXy
 aXy
-aTx
+acU
 aXy
 aXy
 cuR
@@ -140774,8 +140783,8 @@ cfG
 cfG
 aXy
 aTx
-aTx
-aTx
+acU
+acU
 aTx
 aTx
 ceU
@@ -140945,7 +140954,7 @@ aTx
 aTx
 aXy
 aXy
-aTx
+acU
 aTx
 aws
 cwM
@@ -141099,7 +141108,7 @@ vSb
 aXy
 cWL
 aTx
-aTx
+ccc
 aXy
 vSb
 aXy
@@ -141590,7 +141599,7 @@ vSb
 vSb
 aXy
 aTx
-aTx
+acU
 aXy
 vSb
 vSb
@@ -142075,7 +142084,7 @@ vSb
 vSb
 vSb
 aXy
-aTx
+acU
 aTx
 aTx
 aXy
