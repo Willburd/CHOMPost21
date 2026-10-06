@@ -22078,6 +22078,23 @@
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/dorm)
+"aQc" = (
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/lightgrey/border,
+/obj/machinery/ai_status_display{
+	pixel_y = -32
+	},
+/turf/simulated/floor/tiled/steel,
+/area/hallway/muriki/dorm)
+"aQd" = (
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/lightgrey/border,
+/obj/machinery/status_display{
+	layer = 4;
+	pixel_y = -32
+	},
+/turf/simulated/floor/tiled/steel,
+/area/hallway/muriki/dorm)
 "aQe" = (
 /obj/machinery/light{
 	dir = 4
@@ -22559,6 +22576,18 @@
 	},
 /turf/simulated/floor/tiled/steel,
 /area/crew_quarters/recreation_area_hallway)
+"aRa" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 1
+	},
+/obj/machinery/firealarm{
+	pixel_y = 26
+	},
+/turf/simulated/floor/tiled/steel,
+/area/hallway/muriki/dorm)
 "aRb" = (
 /obj/item/trash/salo,
 /turf/simulated/floor/plating/turfpack/muriki,
@@ -22907,6 +22936,22 @@
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/item/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -21
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/crew_quarters/pool)
+"aRV" = (
+/obj/effect/landmark/holiday_event_spawn,
+/obj/machinery/power/apc{
+	name = "south bump";
+	pixel_y = -24
+	},
+/obj/structure/cable/green{
+	icon_state = "0-1"
+	},
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/pool)
 "aRW" = (
@@ -22916,6 +22961,13 @@
 /obj/item/trash/sun_snax,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/atmos_control)
+"aRX" = (
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/crew_quarters/pool)
 "aRY" = (
 /obj/effect/mine/claymore{
 	dir = 4
@@ -23071,6 +23123,15 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/chem_storage)
+"aSu" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/crew_quarters/pool)
 "aSv" = (
 /obj/structure/reagent_dispensers/watertank,
 /turf/simulated/floor/plating/turfpack/muriki,
@@ -23114,6 +23175,22 @@
 /obj/effect/landmark/bslocker,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/atmos_control)
+"aSA" = (
+/obj/structure/cable/orange{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/disposalpipe/junction{
+	dir = 8;
+	icon_state = "pipe-j2"
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/crew_quarters/pool)
 "aSB" = (
 /obj/item/trash/turkeybones,
 /turf/simulated/floor/plating/turfpack/muriki,
@@ -23539,6 +23616,38 @@
 	},
 /turf/simulated/floor/tiled/steel,
 /area/crew_quarters/recreation_area_hallway)
+"aTu" = (
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = 26
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/crew_quarters/pool)
+"aTv" = (
+/obj/item/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = 21
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/crew_quarters/pool)
+"aTw" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 1
+	},
+/obj/item/radio/intercom{
+	dir = 1;
+	name = "Common Channel";
+	pixel_y = 21
+	},
+/turf/simulated/floor/tiled/steel,
+/area/crew_quarters/recreation_area_hallway)
 "aTx" = (
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/civ/east)
@@ -23862,10 +23971,28 @@
 /mob/living/simple_mob/vore/aggressive/rat,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/atmos_control)
+"aUg" = (
+/obj/machinery/firealarm{
+	dir = 8;
+	pixel_x = -26
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/crew_quarters/pool)
 "aUh" = (
 /obj/structure/flora/mushroom,
 /turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/unexplored/muriki/cave/east)
+"aUi" = (
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -8;
+	pixel_y = 30
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 7;
+	pixel_y = 30
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/crew_quarters/pool)
 "aUj" = (
 /obj/structure/cable/green{
 	icon_state = "1-10"
@@ -24494,14 +24621,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
 	},
-/obj/machinery/power/apc{
-	dir = 8;
-	name = "west bump";
-	pixel_x = -24
-	},
-/obj/structure/cable/green{
-	icon_state = "0-6"
-	},
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/pool)
 "aVl" = (
@@ -24955,12 +25074,15 @@
 /obj/effect/floor_decal/steeldecal/steel_decals3{
 	dir = 8
 	},
-/obj/structure/disposalpipe/segment,
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/pool)
 "aWv" = (
@@ -25517,6 +25639,10 @@
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
+	},
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -26
 	},
 /turf/simulated/floor/tiled/white,
 /area/muriki/crew/dormaid)
@@ -54080,6 +54206,11 @@
 /obj/effect/floor_decal/corner/blue/full{
 	dir = 8
 	},
+/obj/item/radio/intercom{
+	dir = 1;
+	name = "Common Channel";
+	pixel_y = 21
+	},
 /turf/simulated/floor/tiled/white,
 /area/muriki/crew/dormaid)
 "coi" = (
@@ -69127,10 +69258,12 @@
 /obj/structure/cable/green{
 	icon_state = "5-8"
 	},
+/obj/structure/disposalpipe/junction{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/pool)
 "cXD" = (
-/obj/structure/disposalpipe/segment,
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
@@ -69138,6 +69271,13 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/light{
 	dir = 4
+	},
+/obj/machinery/disposal/wall{
+	dir = 8;
+	pixel_x = 32
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/pool)
@@ -74035,10 +74175,6 @@
 /turf/simulated/floor/tiled/steel_ridged,
 /area/rnd/xenobiology/hallway)
 "iYi" = (
-/obj/structure/disposalpipe/junction{
-	dir = 8;
-	icon_state = "pipe-j2"
-	},
 /obj/structure/cable/orange{
 	icon_state = "1-8"
 	},
@@ -74053,6 +74189,9 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 1
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/pool)
@@ -75190,6 +75329,10 @@
 	},
 /obj/effect/floor_decal/corner/blue{
 	dir = 5
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 7;
+	pixel_y = 30
 	},
 /turf/simulated/floor/tiled/white,
 /area/muriki/crew/dormaid)
@@ -81023,6 +81166,10 @@
 	c_tag = "CIV - Dorm Hall South";
 	dir = 8
 	},
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = 26
+	},
 /turf/simulated/floor/tiled/steel,
 /area/hallway/muriki/dorm)
 "rWc" = (
@@ -82406,6 +82553,11 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
+	},
+/obj/machinery/light_switch{
+	dir = 4;
+	pixel_x = -25;
+	pixel_y = -24
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/pool)
@@ -136835,7 +136987,7 @@ amq
 amq
 amq
 amq
-aPQ
+aTw
 cYd
 aRR
 bcq
@@ -137644,7 +137796,7 @@ aJc
 aJc
 cMb
 ybE
-bff
+aUg
 bLT
 bff
 bff
@@ -138291,7 +138443,7 @@ agY
 aJc
 aJc
 cMb
-bff
+aUi
 bff
 bff
 bff
@@ -138312,9 +138464,9 @@ boJ
 bpv
 blS
 beJ
-biW
+aRa
 mVo
-bkA
+aQc
 aNF
 boM
 bpD
@@ -138465,8 +138617,8 @@ bgB
 bgB
 aSY
 aVn
-beU
-moF
+aSu
+aRV
 blS
 blS
 blS
@@ -138476,7 +138628,7 @@ blS
 cXu
 cXr
 bbg
-bkA
+aQd
 aNF
 aYT
 bpE
@@ -138788,9 +138940,9 @@ bgB
 bgB
 bgB
 bgB
-aVn
+aSA
 cXC
-bff
+aRX
 blX
 bmY
 bqd
@@ -138942,14 +139094,14 @@ beA
 moF
 bff
 aQe
-bff
+aTv
 bff
 bff
 cXW
 tvn
 aSE
 cXS
-aSE
+aTu
 iYi
 cXD
 aWu
