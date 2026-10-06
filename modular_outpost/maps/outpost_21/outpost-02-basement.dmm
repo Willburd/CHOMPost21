@@ -25702,15 +25702,12 @@
 /turf/simulated/floor/water/acidic/deep/indoor/turfpack/muriki,
 /area/mine/unexplored/muriki/mountainbase)
 "aXk" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/lightgrey/border{
-	dir = 4
-	},
 /obj/machinery/camera/network/civilian{
 	c_tag = "CIV - Dorm Hall North";
 	dir = 8
+	},
+/obj/effect/floor_decal/stairs/station{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/steel,
 /area/hallway/muriki/dorm)
@@ -26752,6 +26749,18 @@
 	dir = 8
 	},
 /area/muriki/processor/hall)
+"aZO" = (
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/effect/floor_decal/stairs/station{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/steel,
+/area/hallway/muriki/dorm)
 "aZT" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -28190,11 +28199,8 @@
 /turf/simulated/floor/plating,
 /area/maintenance/sec)
 "bgT" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 8
-	},
-/obj/effect/floor_decal/corner/lightgrey/border{
-	dir = 8
+/obj/effect/floor_decal/stairs/station{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/steel,
 /area/hallway/muriki/dorm)
@@ -140160,7 +140166,7 @@ bbp
 bfm
 bfm
 bfm
-bfm
+aZO
 cWZ
 eKP
 bXA
