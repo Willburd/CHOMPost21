@@ -1,2 +1,0 @@
-///MISC BALLISTIC FOLDER///
-

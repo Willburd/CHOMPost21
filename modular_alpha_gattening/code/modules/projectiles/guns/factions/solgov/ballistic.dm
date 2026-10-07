@@ -1,2 +1,0 @@
-///Solgov BALLISTIC FOLDER///
-
