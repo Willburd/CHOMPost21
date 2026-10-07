@@ -12,6 +12,9 @@
 	rank_pin = /obj/item/clothing/accessory/rank_eshui/drone
 /datum/job/ai
 	rank_pin = /obj/item/clothing/accessory/rank_eshui/ai
+/datum/job/pentester
+	rank_pin = /obj/item/clothing/accessory/rank_eshui
+
 
 // Lowest rank, no duty
 #define RANK_PIN_PATH /obj/item/clothing/accessory/rank_eshui

@@ -28,7 +28,7 @@
 	display_name = "On-Site Dorms"
 	msg = "has clocked in from the on-site dorms"
 	allowed_mob_types = JOB_CARBON
-	disallow_job = list(JOB_STOWAWAY)
+	disallow_job = list(JOB_STOWAWAY, JOB_PENETRATIONTESTER)
 
 /datum/spawnpoint/dorm/New()
 	..()

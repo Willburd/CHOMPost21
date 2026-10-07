@@ -338,7 +338,7 @@ GLOBAL_LIST_EMPTY(PDA_Manifest)
 		var/hidden
 		var/datum/job/J = SSjob.get_job(H.mind.assigned_role)
 		hidden = J?.offmap_spawn
-		if(assignment == JOB_ALT_PENETRATIONTESTER) // Outpost 21 edit - Pentesters get records despite being hidden normally
+		if(H.mind.assigned_role == JOB_PENETRATIONTESTER) // Outpost 21 edit - Pentesters get records despite being hidden normally
 			hidden = FALSE
 
 		H.ImmediateOverlayUpdate()
