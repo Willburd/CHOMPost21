@@ -6760,6 +6760,24 @@
 	},
 /turf/simulated/floor/carpet/tealcarpet,
 /area/bridge/hallway)
+"akK" = (
+/obj/structure/sign/directions/outpost/bunker{
+	dir = 4;
+	pixel_y = -6
+	},
+/obj/structure/sign/directions/engineering{
+	dir = 8
+	},
+/obj/structure/sign/directions/security{
+	dir = 8;
+	pixel_y = 6
+	},
+/obj/structure/sign/directions/medical{
+	dir = 8;
+	pixel_y = 12
+	},
+/turf/simulated/wall/titanium,
+/area/muriki/elevator/civmain)
 "akL" = (
 /obj/structure/railing,
 /obj/effect/floor_decal/industrial/warning/dust,
@@ -21283,6 +21301,9 @@
 /obj/effect/floor_decal/corner/white/full{
 	dir = 8
 	},
+/obj/machinery/light{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/heads/hop)
 "aXk" = (
@@ -23763,6 +23784,13 @@
 /obj/structure/sign/poster,
 /turf/simulated/floor/carpet/purcarpet,
 /area/muriki/crew/casino)
+"bbw" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark,
+/area/crew_quarters/heads/hop)
 "bbx" = (
 /turf/simulated/wall/r_wall,
 /area/muriki/bridge/lockers)
@@ -24182,24 +24210,6 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled/milspec,
 /area/medical/sleeper)
-"bch" = (
-/obj/structure/sign/directions/security{
-	dir = 8;
-	pixel_y = 6
-	},
-/obj/structure/sign/directions/engineering{
-	dir = 8
-	},
-/obj/structure/sign/directions/outpost/bunker{
-	dir = 4;
-	pixel_y = -6
-	},
-/obj/structure/sign/directions/medical{
-	dir = 8;
-	pixel_y = 12
-	},
-/turf/simulated/wall/titanium,
-/area/muriki/elevator/civmain)
 "bci" = (
 /obj/machinery/scale,
 /obj/effect/floor_decal/spline/plain,
@@ -40785,6 +40795,13 @@
 	},
 /obj/structure/table/woodentable,
 /obj/item/reagent_containers/food/drinks/glass2/coffeemug/tall/rainbow,
+/obj/machinery/button/remote/blast_door{
+	id = "bridge blast";
+	name = "Bridge Lockdown";
+	dir = 8;
+	pixel_x = 28;
+	pixel_y = -7
+	},
 /turf/simulated/floor/wood,
 /area/rnd/breakroom)
 "gAc" = (
@@ -44202,7 +44219,7 @@
 /obj/machinery/light_switch{
 	dir = 8;
 	pixel_x = 28;
-	pixel_y = -28
+	pixel_y = -24
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -49375,6 +49392,7 @@
 	pixel_y = -26
 	},
 /obj/effect/floor_decal/spline/fancy/wood,
+/obj/machinery/light,
 /turf/simulated/floor/wood,
 /area/bridge/meeting_room)
 "jqx" = (
@@ -77198,6 +77216,9 @@
 /area/muriki/arrivejani)
 "tiz" = (
 /obj/effect/floor_decal/spline/fancy/wood{
+	dir = 1
+	},
+/obj/machinery/light{
 	dir = 1
 	},
 /turf/simulated/floor/wood,
@@ -142597,7 +142618,7 @@ aWh
 baU
 mhI
 uhB
-igI
+bbw
 baN
 aSV
 bbM
@@ -143096,7 +143117,7 @@ dov
 dov
 dov
 dov
-bch
+aWR
 uqQ
 wAv
 kxL
@@ -143258,7 +143279,7 @@ aWR
 aWR
 aWR
 aWR
-aWR
+akK
 amW
 hAd
 jQM
