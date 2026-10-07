@@ -49650,13 +49650,6 @@
 /obj/effect/landmark/dangerous_situation,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/sec)
-"bZu" = (
-/obj/random/junk,
-/obj/machinery/light/small{
-	dir = 1
-	},
-/turf/simulated/floor/plating,
-/area/maintenance/research)
 "bZv" = (
 /obj/item/assembly/mousetrap/armed,
 /turf/simulated/floor/plating/turfpack/muriki,
@@ -132839,7 +132832,7 @@ amq
 bMU
 amq
 amq
-bZo
+bZZ
 amq
 amq
 amq
@@ -133001,7 +132994,7 @@ amq
 bMU
 amq
 bbv
-bZu
+bZA
 amq
 ahC
 amq
