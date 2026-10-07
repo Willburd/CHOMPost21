@@ -1,2 +1,0 @@
-///VOX BALLISTIC FOLDER///
-

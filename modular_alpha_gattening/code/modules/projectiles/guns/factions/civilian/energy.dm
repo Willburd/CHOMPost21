@@ -1,2 +1,0 @@
-///CIVILIAN ENERGY FOLDER///
-

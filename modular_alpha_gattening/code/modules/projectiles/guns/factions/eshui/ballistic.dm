@@ -1,2 +1,0 @@
-///E-SHUI BALLISTIC FOLDER///
-
