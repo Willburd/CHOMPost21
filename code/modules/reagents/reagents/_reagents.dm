@@ -83,12 +83,15 @@
 /datum/reagent/proc/on_mob_life(mob/living/carbon/M, alien, datum/reagents/metabolism/location) // Currently, on_mob_life is called on carbons. Any interaction with non-carbon mobs (lube) will need to be done in touch_mob.
 	if(!istype(M))
 		return
-	/* Outpost 21 edit begin - Strictly obey affects_dead flag
+	/* Outpost 21 edit begin - Forbid stablizer/cpr from processing most chems
 	if(!affects_dead && M.stat == DEAD && !M.has_modifier_of_type(/datum/modifier/bloodpump_corpse))
 		return
 	*/
-	if(!affects_dead && M.stat == DEAD)
-		return
+	if(M.stat == DEAD && !affects_dead) // If we're a chem that doesn't affect the dead, lets handle some special cases if our affecting mob is dead.
+		if(!allow_stabilizer) // check if we're allowed to respond to cpr/stablizer!
+			return
+		if(!M.has_modifier_of_type(/datum/modifier/bloodpump_corpse)) // No stablizer? No luck...
+			return
 	// Outpost 21 edit end
 	if(M.isSynthetic() && (!M.synth_reag_processing || !affects_robots)) //CHOMPEdit
 		return

@@ -3,6 +3,7 @@
  */
 /datum/reagent
 	affects_dead = FALSE
+	var/allow_stabilizer = FALSE // If cpr/stablizer is allowed to process chems
 
 /******************************************************************
  * 							REBALANCES
