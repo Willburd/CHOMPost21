@@ -104,7 +104,8 @@
 /datum/reagent/tricordrazine
 	overdose = REAGENTS_OVERDOSE * 2
 
-/datum/reagent/tricordrazine/overdose(mob/living/carbon/M, alien)
+/datum/reagent/tricordrazine/overdose(mob/living/carbon/M, alien, removed)
+	var/chem_effective = 1 * M.species.chem_strength_tox
 	M.adjustBruteLoss(1 * removed * chem_effective) // Does brute damage
 	M.adjustFireLoss(1 * removed * chem_effective) // Does burn damage
 	. = ..()
@@ -119,7 +120,7 @@
  */
 /datum/reagent/bicaridine/topical
 	affects_dead = TRUE
-	description = REAGENT_BICARIDAZE + " is a post-humous variant of the chemical " + REAGENT_BICARDINE + " that affects necrotic tissues. Has toxic byproducts when metabolized by living tissues."
+	description = REAGENT_BICARIDAZE + " is a post-humous variant of the chemical " + REAGENT_BICARIDINE + " that affects necrotic tissues. Has toxic byproducts when metabolized by living tissues."
 
 /datum/reagent/bicaridine/topical/affect_blood(mob/living/carbon/M, alien, removed)
 	var/chem_effective = 1 * M.species.chem_strength_heal
