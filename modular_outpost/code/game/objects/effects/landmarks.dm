@@ -521,3 +521,34 @@
 		return
 	var/obj/structure/cable/wire = locate() in get_turf(src)
 	wire.fray()
+
+
+// Weld Doors
+/obj/effect/landmark/weld_doors
+	name = "weld door 0%"
+	var/chance = 0
+	delete_me = TRUE
+
+/obj/effect/landmark/weld_doors/Initialize(mapload)
+	..()
+	return INITIALIZE_HINT_LATELOAD
+
+/obj/effect/landmark/weld_doors/twentyfive
+	name = "weld door 25%"
+	chance = 25
+
+/obj/effect/landmark/weld_doors/fifty
+	name = "weld door 50%"
+	chance = 50
+
+/obj/effect/landmark/weld_doors/always_frayed
+	name = "weld door 100%"
+	chance = 100
+
+/obj/effect/landmark/weld_doors/LateInitialize()
+	if(!prob(chance))
+		return
+	var/obj/machinery/door/airlock/A = locate() in get_turf(src)
+	if(A)
+		A.welded = TRUE
+		A.update_icon()
