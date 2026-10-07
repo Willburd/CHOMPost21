@@ -50,3 +50,16 @@
 
 /datum/reagent/dermaline/topical/affect_touch(mob/living/carbon/M, alien, removed)
 	return // Disable this
+
+
+/**
+ * Dylovene: Works on the dead, but at a much slower rate
+ */
+
+/datum/reagent/dylovene
+	description = REAGENT_ANTITOXIN + " is a broad-spectrum antitoxin. Works even in necrotic tissues, but much more slowly."
+
+/datum/reagent/dylovene/affect_blood(mob/living/carbon/M, alien, removed)
+	if(M.stat == DEAD)
+		return ..(M, alien, removed * 0.1) // work at 10% the rate while dead
+	. = ..()
