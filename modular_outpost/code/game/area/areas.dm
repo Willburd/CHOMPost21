@@ -43,6 +43,6 @@
 			H.add_modifier(/datum/modifier/redspace_drain)
 			H.AddComponent(/datum/component/haunting_vision)
 
-		else if(haunted && H.job != JOB_STOWAWAY && H.job != JOB_PENETRATIONTESTER && prob(4))
+		else if(haunted && !IS_OUTPOST_MAINT_JOB(H.job) && prob(4))
 			// Just give them sparkly haunted vision
 			H.AddComponent(/datum/component/haunting_vision)

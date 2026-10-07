@@ -16,7 +16,7 @@
 		//	continue
 		if(isbelly(H.loc))
 			continue
-		if((H.job == JOB_STOWAWAY || H.job == JOB_PENETRATIONTESTER) && prob(90)) // stowaways only have a 10% chance to proc
+		if(IS_OUTPOST_MAINT_JOB(H.job) && prob(90)) // stowaways only have a 10% chance to proc
 			continue
 		if(is_changeling(H)) // Changelings immune to organ based events
 			continue

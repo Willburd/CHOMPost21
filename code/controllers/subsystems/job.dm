@@ -1037,7 +1037,7 @@ SUBSYSTEM_DEF(job)
 		.["vorgans"] = vorgans
 		.["itemtf"] = item_to_be
 	// Outpost 21 edit begin - Stowaway cancels standard spawns
-	if(rank == JOB_STOWAWAY || rank == JOB_PENETRATIONTESTER)
+	if(IS_OUTPOST_MAINT_JOB(rank))
 		var/list/safespawns = list();
 		var/list/spawnlist = list();
 		for(var/obj/effect/landmark/start/S in GLOB.landmarks_list)

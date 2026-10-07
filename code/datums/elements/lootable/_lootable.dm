@@ -54,7 +54,15 @@
 	var/obj/item/loot = null
 	var/span = "notice" // Blue
 
-	if(HAS_TRAIT(L, TRAIT_UNLUCKY) && unlucky_loot.len && prob(15)) // If you're unlucky, you will probably find bad stuff.
+	// Outpost 21 edit begin - Stowaways get better loot
+	var/job = L?.mind?.assigned_role
+	if (prob(4) && IS_OUTPOST_MAINT_JOB(job))
+		var/path = pick(GLOB.unique_stowaway_loot)
+		loot = new path(get_turf(source))
+		span = "cult" // Green
+
+	else if(HAS_TRAIT(L, TRAIT_UNLUCKY) && unlucky_loot.len && prob(15)) // If you're unlucky, you will probably find bad stuff.
+	// Outpost 21 edit end
 		loot = produce_unlucky_item(source)
 		span = "cult" // Purple and bold.
 		if(prob(6))
