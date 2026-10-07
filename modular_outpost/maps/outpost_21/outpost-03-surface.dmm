@@ -7902,7 +7902,7 @@
 	pixel_x = 30
 	},
 /turf/simulated/floor/tiled/dark,
-/area/crew_quarters/heads/hop)
+/area/bridge/hallway)
 "amI" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 10
@@ -21305,7 +21305,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/dark,
-/area/crew_quarters/heads/hop)
+/area/bridge/hallway)
 "aXk" = (
 /obj/effect/floor_decal/corner/white{
 	dir = 10
@@ -23509,13 +23509,13 @@
 "baN" = (
 /obj/effect/floor_decal/industrial/loading,
 /turf/simulated/floor/tiled/techfloor,
-/area/crew_quarters/heads/hop)
+/area/bridge/hallway)
 "baO" = (
 /obj/effect/floor_decal/industrial/loading{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/crew_quarters/heads/hop)
+/area/bridge/hallway)
 "baP" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 8
@@ -23790,7 +23790,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/dark,
-/area/crew_quarters/heads/hop)
+/area/bridge/hallway)
 "bbx" = (
 /turf/simulated/wall/r_wall,
 /area/muriki/bridge/lockers)
@@ -30057,9 +30057,6 @@
 	},
 /turf/simulated/open,
 /area/muriki/bathroom/cargo)
-"czI" = (
-/turf/simulated/wall,
-/area/crew_quarters/heads/hop)
 "czV" = (
 /obj/effect/landmark/holiday_event_spawn,
 /obj/effect/floor_decal/spline/fancy/wood{
@@ -35444,7 +35441,7 @@
 	dir = 9
 	},
 /turf/simulated/floor/tiled/dark,
-/area/crew_quarters/heads/hop)
+/area/bridge/hallway)
 "ezO" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 6
@@ -45947,7 +45944,7 @@
 "igI" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/dark,
-/area/crew_quarters/heads/hop)
+/area/bridge/hallway)
 "igR" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/grille,
@@ -86000,7 +85997,7 @@
 "weM" = (
 /obj/effect/floor_decal/industrial/outline/cut_corners/orange,
 /turf/simulated/floor/tiled/dark,
-/area/crew_quarters/heads/hop)
+/area/bridge/hallway)
 "weP" = (
 /obj/machinery/alarm{
 	dir = 4;
@@ -142781,7 +142778,7 @@ aTA
 aXm
 qqU
 weM
-czI
+cPo
 bbO
 aBw
 aoE
@@ -142943,7 +142940,7 @@ aTB
 wLj
 gHG
 igI
-czI
+cPo
 bbP
 aBw
 bbH
@@ -143266,8 +143263,8 @@ gIz
 rbr
 bLX
 uhB
-czI
-czI
+cPo
+cPo
 baK
 aBw
 arb
