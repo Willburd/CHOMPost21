@@ -83,8 +83,13 @@
 /datum/reagent/proc/on_mob_life(mob/living/carbon/M, alien, datum/reagents/metabolism/location) // Currently, on_mob_life is called on carbons. Any interaction with non-carbon mobs (lube) will need to be done in touch_mob.
 	if(!istype(M))
 		return
+	/* Outpost 21 edit begin - Strictly obey affects_dead flag
 	if(!affects_dead && M.stat == DEAD && !M.has_modifier_of_type(/datum/modifier/bloodpump_corpse))
 		return
+	*/
+	if(!affects_dead && M.stat == DEAD)
+		return
+	// Outpost 21 edit end
 	if(M.isSynthetic() && (!M.synth_reag_processing || !affects_robots)) //CHOMPEdit
 		return
 	if(!istype(location))
