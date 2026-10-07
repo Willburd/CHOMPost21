@@ -54,7 +54,15 @@
 	var/obj/item/loot = null
 	var/span = "notice" // Blue
 
-	if(HAS_TRAIT(L, TRAIT_UNLUCKY) && unlucky_loot.len && prob(15)) // If you're unlucky, you will probably find bad stuff.
+	// Outpost 21 edit begin - Stowaways get better loot
+	var/job = L?.mind?.assigned_role
+	if (prob(4) && IS_OUTPOST_MAINT_JOB(job))
+		var/path = pick(GLOB.unique_stowaway_loot)
+		loot = new path(get_turf(source))
+		span = "cult" // Green
+
+	else if(HAS_TRAIT(L, TRAIT_UNLUCKY) && unlucky_loot.len && prob(15)) // If you're unlucky, you will probably find bad stuff.
+	// Outpost 21 edit end
 		loot = produce_unlucky_item(source)
 		span = "cult" // Purple and bold.
 		if(prob(6))
@@ -92,9 +100,9 @@
 		QDEL_SWAP(loot,new_I)
 
 	//We either have an item to hand over or we don't, at this point!
-	if(!loot)
+	if(QDELETED(loot))
 		return
-	loot.forceMove(get_turf(source))
+
 	var/final_message = "You found \a [loot]!"
 	switch(span)
 		if("notice")
@@ -131,19 +139,19 @@
 
 /datum/element/lootable/proc/produce_unlucky_item(atom/source)
 	var/path = pick(unlucky_loot)
-	return new path(source)
+	return new path(get_turf(source))
 
 /datum/element/lootable/proc/produce_common_item(atom/source)
 	var/path = pick(common_loot)
-	return new path(source)
+	return new path(get_turf(source))
 
 /datum/element/lootable/proc/produce_uncommon_item(atom/source)
 	var/path = pick(uncommon_loot)
-	return new path(source)
+	return new path(get_turf(source))
 
 /datum/element/lootable/proc/produce_rare_item(atom/source)
 	var/path = pick(rare_loot)
-	return new path(source)
+	return new path(get_turf(source))
 
 /// These are types that can only spawn once, and then will be removed from this list.
 /datum/element/lootable/proc/produce_gamma_item(atom/source)
@@ -158,7 +166,7 @@
 				break
 
 	if(path)
-		var/obj/item/I = new path(source)
+		var/obj/item/I = new path(get_turf(source))
 		GLOB.allocated_gamma_loot[path] = WEAKREF(I)
 		return I
 

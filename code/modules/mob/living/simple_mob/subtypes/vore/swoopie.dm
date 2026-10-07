@@ -393,6 +393,14 @@
 				continue
 			if(!isliving(possible_target) && !swoop_trash) // Otherwise, are we allowed to swoop trash?
 				continue
+			// Outpost 21 edit begin - Stop attacking structures and machines
+			if(ismachinery(possible_target))
+				continue
+			if(istype(possible_target,/obj/vehicle))
+				continue
+			if(istype(possible_target,/obj/mecha))
+				continue
+			// Outpost 21 edit end
 			. += possible_target
 
 	var/new_target = pick_target(.)

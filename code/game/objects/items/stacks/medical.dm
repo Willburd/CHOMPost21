@@ -117,7 +117,7 @@
 					continue
 				if(used == amount)
 					break
-				if(!do_after(user, W.damage/3, affecting))
+				if(!do_after(user, (W.damage / (2 + ((user != M)*3))) SECONDS, affecting)) // Outpost 21 edit - Bandage to seconds instead of ticks. other people bandaging you helps massively
 					balloon_alert(user, "stand still to bandage wounds.")
 					break
 

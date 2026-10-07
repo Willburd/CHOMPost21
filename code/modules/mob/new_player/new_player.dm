@@ -328,7 +328,7 @@
 	*/ //CHOMPEdit End
 
 	// Outpost 21 edit begin - Stowaways behave the same as above!
-	if(rank == JOB_STOWAWAY)
+	if(IS_OUTPOST_MAINT_JOB(rank))
 		log_and_message_admins("has joined the round as non-crew. (<A href='byond://?_src_=holder;[HrefToken()];adminplayerobservecoodjump=1;X=[T.x];Y=[T.y];Z=[T.z]'>JMP</a>)",character)
 		if(!(J.mob_type & JOB_SILICON))
 			SSticker.minds += character.mind

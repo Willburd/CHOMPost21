@@ -32,10 +32,12 @@
 /obj/item/reagent_containers/food/drinks/glass2/fitnessflask/proteinshake/Initialize(mapload)
 	. = ..()
 	cut_overlays()
-	reagents.add_reagent(REAGENT_ID_NUTRIMENT, 30)
-	reagents.add_reagent(REAGENT_ID_IRON, 10)
-	reagents.add_reagent(REAGENT_ID_PROTEIN, 35)
-	reagents.add_reagent(REAGENT_ID_WATER, 25)
+	// Outpost 21 edit begin - Nerf protein shakes
+	reagents.add_reagent(REAGENT_ID_NUTRIMENT, 10)
+	//reagents.add_reagent(REAGENT_ID_IRON, 10)
+	reagents.add_reagent(REAGENT_ID_PROTEIN, 20)
+	reagents.add_reagent(REAGENT_ID_WATER, 30)
+	// Outpost 21 edit end
 
 /obj/item/reagent_containers/food/drinks/glass2/fitnessflask/proteinshake/update_icon()
 	return

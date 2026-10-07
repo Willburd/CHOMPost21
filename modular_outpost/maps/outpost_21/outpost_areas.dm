@@ -111,13 +111,12 @@
 
 /area/crew_quarters/courtroom
 	holomap_color = HOLOMAP_AREACOLOR_CIV
-	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
+	base_turf = /turf/simulated/open
 	color_grading = COLORTINT_WARM
 
 /area/crew_quarters/recreation_area_hallway
 	holomap_color = HOLOMAP_AREACOLOR_CIV
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
-	lightswitch = 1
 
 /area/hallway/secondary/construction
 	holomap_color = HOLOMAP_AREACOLOR_CIV
@@ -125,7 +124,7 @@
 
 /area/crew_quarters/recreation_area
 	holomap_color = HOLOMAP_AREACOLOR_CIV
-	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
+	base_turf = /turf/simulated/open
 
 /area/mint
 	holomap_color = HOLOMAP_AREACOLOR_CARGO
@@ -175,7 +174,7 @@
 
 /area/crew_quarters/fitness
 	holomap_color = HOLOMAP_AREACOLOR_CIV
-	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
+	base_turf = /turf/simulated/open
 
 /area/crew_quarters/pool
 	holomap_color = HOLOMAP_AREACOLOR_CIV
@@ -615,6 +614,10 @@
 /area/medical/resleeving
 	flags = AREA_FIRE_SUPRESSION
 
+/area/rnd/research/sci_req_lab
+	name = "\improper Science Requisitions Office"
+	holomap_color = HOLOMAP_AREACOLOR_COMMAND
+	base_turf = /turf/simulated/open/muriki
 
 /area/rnd/workshop
 	name = "\improper Circuitry Lab"

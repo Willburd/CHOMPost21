@@ -36,7 +36,7 @@
 	desc = "This box contains empty medication IV bags."
 	icon_state = "sterile"
 
-/obj/item/storage/box/bloodpacks_full/Initialize(mapload)
+/obj/item/storage/box/iv_medpacks/Initialize(mapload)
 	. = ..()
 	new /obj/item/reagent_containers/blood/refillable(src)
 	new /obj/item/reagent_containers/blood/refillable(src)

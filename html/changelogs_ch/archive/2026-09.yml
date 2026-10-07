@@ -157,3 +157,40 @@
 2026-09-23:
   CHOMPStation2StaffMirrorBot:
   - bugfix: persistent smart storages
+2026-09-24:
+  Diana:
+  - bugfix: Being electrocuted will properly stun you at high damage and weaken you
+      at low damage
+  Will:
+  - bugfix: Surgery is no longer attempted when any item is used on a mob
+2026-09-25:
+  Will:
+  - bugfix: astral collective shield aura mob properly applies shield modifier
+  - code_imp: Fixes a SDMM warning about unreachable code
+2026-09-28:
+  Diana:
+  - qol: Hard feet stops mousetraps from stunning you.
+2026-09-29:
+  CHOMPStation2StaffMirrorBot:
+  - rscadd: Powerloader footstep sounds are able to be selected.
+  - bugfix: Clown shoes now no longer play the squeak and footstep sound at the same
+      time.
+  Diana:
+  - bugfix: Batons will no longer do lethal damage when on grab intent
+  - bugfix: Tasers will no longer do lethal damage if you shoot yourself.
+  - qol: Makes the jackboot variants accessible via the security wardrobe vendor instead
+      of loadout only.
+  Lira:
+  - bugfix: Fixed round end timer skipping 1 minute remaining warning.
+  - bugfix: Give the final Rebooting World message a one second buffer before reboot
+      as intended.
+  - bugfix: config time for round end and start now uses full seconds only
+2026-09-30:
+  DIana:
+  - bugfix: APC Authentication error shows up if hacked by malf AI
+  - qol: AI can now speak/understand more languages
+  Will:
+  - qol: holding a TTS device in your active hand will allow you to speak through
+      it by using the say input
+  - code_imp: Adds radio_creeper element
+  - code_imp: Signal handling for say code

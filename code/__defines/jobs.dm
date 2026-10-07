@@ -429,6 +429,7 @@
 #define JOB_TALON_ENGINEER "Talon Engineer"
 	// Talon Engineer alt titles
 	#define JOB_ALT_TALON_TECHNICIAN "Talon Technician"
+	#define JOB_ALT_TALON_ATMOSTECHIAN "Talon Atmospheric Technician"
 
 #define JOB_TALON_GUARD "Talon Guard"
 	// Talon Guard alt titles
@@ -572,6 +573,7 @@
 #define NONCREW (1<<0)
 // define ANOMALY (1<<0) //VOREStation Note: Unused on VS. Used downstream. // Outpost 21 edit - removed job
 #define STOWAWAY (1<<1) // Outpost 21 edit - stowaways!
+#define PENTESTER (1<<2) // Outpost 21 edit - stowaways!
 
 /* Outpost 21 edit - removed job
 #define TALON (1<<3)

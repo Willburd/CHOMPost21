@@ -28,9 +28,13 @@
 	return ITEM_INTERACT_SUCCESS
 
 /obj/item/slime_scanner/afterattack(atom/target, mob/user, proximity_flag, click_parameters)
+	if(istype(target, /obj/item/slime_extract))
+		if(user.Adjacent(target))
+			perform_slime_scan(target, user)
+			return
 	if(!is_advanced)
 		return
-	if(!istype(target, /mob/living/simple_mob/slime/xenobio))
+	if(!istype(target, /mob/living/simple_mob/slime/xenobio) && !istype(target, /obj/item/slime_extract))
 		return
 	var/turf/user_turf = get_turf(user)
 	var/turf/target_turf = get_turf(target)
@@ -41,6 +45,11 @@
 
 /obj/item/slime_scanner/proc/perform_slime_scan(mob/living/M, mob/living/user)
 	playsound(src, 'sound/machines/beep.ogg', 50)
+
+	if(istype(M, /obj/item/slime_extract))
+		var/obj/item/slime_extract/extract = M
+		user.show_message("[initial(extract.description_info)]")
+		return
 
 	var/mob/living/simple_mob/slime/xenobio/S = M
 	user.show_message("Slime scan results:<br>[S.slime_color] [S.is_adult ? "adult" : "baby"] slime<br>Health: [S.health]<br>Mutation Probability: [S.mutation_chance]")
@@ -69,4 +78,9 @@
 		user.show_message("Subject is friendly to other slime colors.")
 
 	user.show_message("Growth progress: [S.amount_grown]/10")
+
+	// Only show the desc info here.
+	var/obj/item/slime_extract/extract = S.coretype
+	if(extract)
+		user.show_message("Core Extract: [initial(extract.description_info)]")
 // Outpost 21 edit end

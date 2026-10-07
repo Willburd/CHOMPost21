@@ -481,17 +481,17 @@
 	src.modules += new /obj/item/floor_painter(src)
 	src.modules += new /obj/item/rms(src)
 	src.modules += new /obj/item/inflatable_dispenser/robot(src)
-	src.emag += new /obj/item/melee/robotic/baton/arm(src)
 	src.modules += new /obj/item/rcd/electric/mounted/borg(src)
 	src.modules += new /obj/item/pickaxe/plasmacutter/borg(src)
 	src.modules += new /obj/item/dogborg/stasis_clamp(src)
 	src.modules += new /obj/item/storage/pouch/eng_parts/borg(src)
 	src.modules += new /obj/item/holosign_creator/combifan(src) //CHOMPAdd
 	src.modules += new /obj/item/tool/crowbar/brace_jack(src) // Outpost 21 edit - Doorbraces
-
 	src.modules += new /obj/item/surgical/hemostat/cyborg(src) //Synth repair // Outpost 21 edit - Robotics moved to engineering
 	src.modules += new /obj/item/surgical/surgicaldrill/cyborg(src) //NIF repair // Outpost 21 edit - Robotics moved to engineering
 	src.modules += new /obj/item/surgical/circular_saw/cyborg(src) // Synth limb replacement // Outpost 21 edit - Robotics moved to engineering
+
+	src.emag += new /obj/item/melee/robotic/baton/arm(src)
 
 	var/datum/matter_synth/metal = new /datum/matter_synth/metal(40000)
 	var/datum/matter_synth/glass = new /datum/matter_synth/glass(40000)
@@ -913,6 +913,9 @@
 	src.modules += new /obj/item/tool/crowbar/cyborg(src)
 	src.modules += new /obj/item/tool/wirecutters/cyborg(src)
 	src.modules += new /obj/item/t_scanner(src)
+	src.modules += new /obj/item/analyzer(src)
+	src.modules += new /obj/item/assembly/signaler(src)
+	src.modules += new /obj/item/gripper/engineering(src)
 	src.modules += new /obj/item/multitool/cyborg(src)
 	src.modules += new /obj/item/lightreplacer(src)
 	src.modules += new /obj/item/gripper/drone(src)
