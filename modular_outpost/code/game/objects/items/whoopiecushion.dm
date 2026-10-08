@@ -34,10 +34,10 @@
 	icon_state = "whoopee_bursted"
 
 /obj/item/latexballon/whoopee/Crossed(atom/movable/AM as mob|obj)
-	// poot
+	. = ..()
 	if (!air_contents)
-		return
-	if(istype(loc,/turf/))
+		return // poot
+	if(isturf(loc))
 		poot()
 
 

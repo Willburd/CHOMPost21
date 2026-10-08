@@ -11,6 +11,7 @@
 	light_color = "#eccb0d"
 
 /obj/effect/map_effect/interval/burnpit/Crossed(atom/movable/AM as mob|obj)
+	. = ..()
 	// break and delete things that are destroyed in the pit!
 	var/update_falling = FALSE
 

@@ -3626,7 +3626,6 @@
 #include "code\modules\mob\living\carbon\carbon_defense.dm"
 #include "code\modules\mob\living\carbon\carbon_defines.dm"
 #include "code\modules\mob\living\carbon\carbon_movement.dm"
-#include "code\modules\mob\living\carbon\carbon_powers.dm"
 #include "code\modules\mob\living\carbon\give.dm"
 #include "code\modules\mob\living\carbon\lick_wounds.dm"
 #include "code\modules\mob\living\carbon\resist.dm"
