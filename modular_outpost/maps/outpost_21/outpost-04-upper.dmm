@@ -20984,7 +20984,7 @@
 /turf/simulated/floor/tiled/milspec,
 /area/quartermaster/mining/secpi)
 "fbz" = (
-/turf/simulated/floor/water/blood/turfpack/muriki,
+/turf/simulated/floor/water/blood/indoor/turfpack/muriki,
 /area/muriki/processor/hall)
 "fbH" = (
 /obj/effect/floor_decal/corner/red{
@@ -22268,7 +22268,7 @@
 	},
 /area/muriki/rooftop/cargo)
 "fQF" = (
-/turf/simulated/floor/water/blood/turfpack/muriki,
+/turf/simulated/floor/water/blood/indoor/turfpack/muriki,
 /area/muriki/processor)
 "fRq" = (
 /obj/machinery/door/window/brigdoor/northright{
@@ -36929,7 +36929,7 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/hallway/muriki/civup)
 "obe" = (
-/turf/simulated/floor/water/blood/turfpack/muriki,
+/turf/simulated/floor/water/blood/indoor/turfpack/muriki,
 /area/muriki/processor/pools/antrum)
 "obp" = (
 /obj/structure/railing,

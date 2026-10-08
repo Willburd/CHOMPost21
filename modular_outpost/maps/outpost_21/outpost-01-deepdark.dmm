@@ -3290,7 +3290,7 @@
 	},
 /area/mine/explored/muriki/cave/deepdark)
 "pvd" = (
-/turf/simulated/floor/water/blood/turfpack/muriki,
+/turf/simulated/floor/water/blood/indoor/turfpack/muriki,
 /area/muriki/processor/depths)
 "pPA" = (
 /obj/effect/map_effect/interval/atmogland/bodyheat,

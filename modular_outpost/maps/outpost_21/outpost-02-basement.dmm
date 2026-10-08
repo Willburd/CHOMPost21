@@ -71369,7 +71369,7 @@
 /turf/simulated/floor/reinforced,
 /area/medical/robotics)
 "doF" = (
-/turf/simulated/floor/water/blood/turfpack/muriki,
+/turf/simulated/floor/water/blood/indoor/turfpack/muriki,
 /area/muriki/processor/gland/airmix)
 "doY" = (
 /obj/structure/disposalpipe/segment,
@@ -72523,7 +72523,7 @@
 /turf/simulated/floor/tiled/milspec,
 /area/maintenance/oldbridge)
 "eGs" = (
-/turf/simulated/floor/water/blood/turfpack/muriki,
+/turf/simulated/floor/water/blood/indoor/turfpack/muriki,
 /area/muriki/processor/hall)
 "eHc" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -84217,7 +84217,7 @@
 /turf/simulated/floor/tiled/milspec,
 /area/medical/robotics)
 "ugO" = (
-/turf/simulated/floor/water/blood/turfpack/muriki,
+/turf/simulated/floor/water/blood/indoor/turfpack/muriki,
 /area/muriki/processor)
 "uig" = (
 /turf/simulated/floor/water/acidic/shoreline/corner/corner_flesh/indoor/turfpack/muriki,
