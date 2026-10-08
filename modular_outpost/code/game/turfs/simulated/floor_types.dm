@@ -77,13 +77,3 @@
 	icon = 'icons/turf/snow.dmi'
 	icon_state = "gravsnow"
 	demote_to = /turf/simulated/floor/outdoors/newdirt_nograss
-
-// Unique types
-/turf/simulated/floor/outdoors/snow/roofing_under
-	demote_to = /turf/simulated/floor/outpost_roof
-
-/turf/simulated/floor/outdoors/snow/snow2/newdirt_under
-	demote_to = /turf/simulated/floor/outdoors/newdirt_nograss
-
-/turf/simulated/floor/outdoors/snow/gravsnow/sidewalk_under
-	demote_to = /turf/simulated/floor/outdoors/sidewalk
