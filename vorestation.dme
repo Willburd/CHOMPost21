@@ -5920,6 +5920,7 @@
 #include "modular_outpost\code\game\objects\items\weapons\storage\boxes.dm"
 #include "modular_outpost\code\game\objects\items\weapons\storage\firstaid.dm"
 #include "modular_outpost\code\game\objects\items\weapons\tanks\tank_types.dm"
+#include "modular_outpost\code\game\objects\items\weapons\tanks\tanks.dm"
 #include "modular_outpost\code\game\objects\structures\atmospherepost.dm"
 #include "modular_outpost\code\game\objects\structures\blade_trap.dm"
 #include "modular_outpost\code\game\objects\structures\chem_barrel.dm"
