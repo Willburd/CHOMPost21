@@ -13574,7 +13574,6 @@
 /obj/effect/floor_decal/milspec/color/red/half{
 	dir = 6
 	},
-/obj/item/card/id/gold/security/spare,
 /obj/item/tool/crowbar/red,
 /obj/item/megaphone,
 /obj/item/binoculars,
@@ -28372,23 +28371,16 @@
 /turf/simulated/floor/carpet/purcarpet,
 /area/crew_quarters/bar)
 "bTD" = (
-/obj/item/storage/box/scattershot/large,
-/obj/item/storage/box/scattershot/large,
-/obj/item/storage/box/scattershot/large,
-/obj/item/ammo_magazine/ammo_box/b12g/flechette,
-/obj/item/ammo_magazine/ammo_box/b12g/flechette,
-/obj/item/ammo_magazine/ammo_box/b12g/flechette,
-/obj/item/ammo_magazine/ammo_box/b12g/flechette,
-/obj/item/ammo_magazine/ammo_box/b12g/flechette,
-/obj/item/ammo_magazine/ammo_box/b12g,
-/obj/item/ammo_magazine/ammo_box/b12g,
-/obj/item/ammo_magazine/ammo_box/b12g,
-/obj/item/ammo_magazine/ammo_box/b12g,
-/obj/item/ammo_magazine/ammo_box/b12g,
 /obj/effect/floor_decal/corner/red/full,
 /obj/structure/closet/secure_closet/guncabinet{
-	name = "Shotgun Ammunition cabinet";
+	name = "Tank Keys";
 	req_one_access = list(1)
+	},
+/obj/item/key/heavyarmor_carrier{
+	pixel_y = -7
+	},
+/obj/item/key/heavyarmor_tank{
+	pixel_y = 6
 	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/security/tactical/red)
@@ -32255,6 +32247,9 @@
 /area/medical/reception)
 "drd" = (
 /obj/effect/floor_decal/industrial/outline/blue,
+/obj/machinery/computer/rdconsole_tg/security_remote{
+	dir = 2
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/security/armoury)
 "drj" = (
@@ -35671,9 +35666,6 @@
 /obj/structure/table/rack,
 /obj/item/perfect_tele/one_beacon{
 	pixel_x = 6
-	},
-/obj/item/key/heavyarmor_tank{
-	pixel_x = -12
 	},
 /obj/item/perfect_tele/station_only{
 	pixel_x = -5
@@ -43911,9 +43903,10 @@
 	},
 /obj/effect/floor_decal/milspec/stripe,
 /obj/structure/closet/secure_closet/guncabinet{
-	name = "overflow cabinet";
+	name = "Spare ID Cards";
 	req_one_access = list(1)
 	},
+/obj/item/card/id/gold/security/spare,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/security/tactical)
 "hCK" = (
@@ -47087,8 +47080,6 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/security/evidence_storage)
 "iAY" = (
-/obj/item/gun/projectile/shotgun/pump/USDF,
-/obj/item/gun/projectile/shotgun/pump/USDF,
 /obj/structure/closet/secure_closet/guncabinet{
 	name = "Shotgun cabinet";
 	req_one_access = list(1)
@@ -47096,6 +47087,57 @@
 /obj/effect/floor_decal/corner/red{
 	dir = 10
 	},
+/obj/item/storage/box/scattershot/large{
+	pixel_y = -5
+	},
+/obj/item/storage/box/scattershot/large{
+	pixel_y = -5
+	},
+/obj/item/storage/box/scattershot/large{
+	pixel_y = -5
+	},
+/obj/item/ammo_magazine/ammo_box/b12g{
+	pixel_y = -5;
+	pixel_x = 6
+	},
+/obj/item/ammo_magazine/ammo_box/b12g{
+	pixel_y = -5;
+	pixel_x = 6
+	},
+/obj/item/ammo_magazine/ammo_box/b12g{
+	pixel_y = -5;
+	pixel_x = 6
+	},
+/obj/item/ammo_magazine/ammo_box/b12g{
+	pixel_y = -5;
+	pixel_x = 6
+	},
+/obj/item/ammo_magazine/ammo_box/b12g{
+	pixel_y = -5;
+	pixel_x = 6
+	},
+/obj/item/ammo_magazine/ammo_box/b12g/flechette{
+	pixel_y = -5;
+	pixel_x = -5
+	},
+/obj/item/ammo_magazine/ammo_box/b12g/flechette{
+	pixel_y = -5;
+	pixel_x = -5
+	},
+/obj/item/ammo_magazine/ammo_box/b12g/flechette{
+	pixel_y = -5;
+	pixel_x = -5
+	},
+/obj/item/ammo_magazine/ammo_box/b12g/flechette{
+	pixel_y = -5;
+	pixel_x = -5
+	},
+/obj/item/ammo_magazine/ammo_box/b12g/flechette{
+	pixel_y = -5;
+	pixel_x = -5
+	},
+/obj/item/gun/projectile/shotgun/pump/USDF,
+/obj/item/gun/projectile/shotgun/pump/USDF,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/security/tactical/red)
 "iBg" = (
@@ -49615,10 +49657,6 @@
 	},
 /obj/machinery/computer/security/telescreen/entertainment{
 	pixel_x = 32
-	},
-/obj/machinery/computer/rdconsole_tg/security_remote{
-	dir = 8;
-	pixel_x = 2
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/warden)
@@ -91746,7 +91784,6 @@
 	dir = 9
 	},
 /obj/structure/table/steel_reinforced,
-/obj/item/key/heavyarmor_carrier,
 /turf/simulated/floor/tiled/dark,
 /area/security/warden)
 "yeN" = (
