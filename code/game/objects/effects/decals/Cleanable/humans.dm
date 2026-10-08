@@ -17,6 +17,7 @@
 	var/basecolor="#A10808" // Color when wet.
 	var/synthblood = 0
 	var/list/datum/disease/viruses = list()
+	var/infectious = TRUE // Because copying code makes you pregnant
 	var/amount = 5
 	generic_filth = TRUE
 	persistent = FALSE
@@ -80,6 +81,7 @@
 	add_janitor_hud_overlay()
 
 /obj/effect/decal/cleanable/blood/Crossed(mob/living/carbon/human/perp)
+	. = ..()
 	if(perp.is_incorporeal())
 		return
 	if(!istype(perp))
@@ -121,7 +123,7 @@
 		var/obj/structure/bed/chair/wheelchair/W = perp.buckled
 		W.bloodiness = 4
 
-	if(viruses)
+	if(viruses && infectious)
 		for(var/datum/disease/D in viruses)
 			if(D.IsSpreadByTouch())
 				perp.ContractDisease(D, BP_R_FOOT)
@@ -279,6 +281,7 @@
 	return ..()
 
 /obj/effect/decal/cleanable/mucus/Crossed(mob/living/carbon/human/perp)
+	. = ..()
 	if(perp.is_incorporeal())
 		return
 	if(!istype(perp))
@@ -301,11 +304,12 @@
 			perp.ContractDisease(D, BP_R_HAND)
 
 /obj/effect/decal/cleanable/vomit/Crossed(mob/living/carbon/human/perp)
+	. = ..()
 	if(perp.is_incorporeal())
 		return
 	if(!istype(perp))
 		return
-	if(viruses)
+	if(viruses && infectious)
 		for(var/datum/disease/D in viruses)
 			if(D.spread_flags & (DISEASE_SPREAD_SPECIAL | DISEASE_SPREAD_NON_CONTAGIOUS))
 				continue
