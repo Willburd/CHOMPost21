@@ -454,12 +454,7 @@
 	if(!prob(chance))
 		return
 	var/turf/simulated/floor/T = get_turf(src)
-	T.wet = TURFSLIP_WET
-	if(T.wet_overlay)
-		return
-	T.wet_overlay = image('icons/effects/water.dmi', icon_state = "wet_floor")
-	T.add_overlay(T.wet_overlay)
-
+	T.MakeSlippery(TURF_WET_WATER, INFINITY, 0, INFINITY, TRUE)
 
 // lube floor with no end timer
 /obj/effect/landmark/lube_floor
@@ -487,11 +482,7 @@
 	if(!prob(chance))
 		return
 	var/turf/simulated/floor/T = get_turf(src)
-	T.wet = TURFSLIP_LUBE
-	if(T.wet_overlay)
-		return
-	T.wet_overlay = image('icons/effects/water.dmi', icon_state = "wet_floor")
-	T.add_overlay(T.wet_overlay)
+	T.MakeSlippery(TURF_WET_SUPERLUBE, INFINITY, 0, INFINITY, TRUE)
 
 
 // Damage wires
