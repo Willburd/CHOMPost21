@@ -6130,6 +6130,7 @@
 #include "modular_outpost\code\modules\reagents\reagent_containers\hypospray.dm"
 #include "modular_outpost\code\modules\reagents\reagent_containers\pill.dm"
 #include "modular_outpost\code\modules\reagents\reagent_containers\spray.dm"
+#include "modular_outpost\code\modules\reagents\reagents\_reagents.dm"
 #include "modular_outpost\code\modules\reagents\reagents\food_drinks.dm"
 #include "modular_outpost\code\modules\reagents\reagents\medicine.dm"
 #include "modular_outpost\code\modules\reagents\reagents\other.dm"

@@ -284,7 +284,7 @@
 				// If they're mashing the highest concentration, they get one warning
 				if(temp.overdose && reagent_amount + 10 > (temp.overdose * occupant?.species.chemOD_threshold))
 					caution = 1
-				if(temp.overdose && reagent_amount > (temp.overdose * occupant?.species.chemOD_threshold))
+				if(temp.is_overdosing(occupant)) // Outpost 21 edit(port) - Overdosing chems retain their overdose even if you go under the OD
 					overdosing = 1
 
 			pretty_amount = round(reagent_amount, 0.05)
