@@ -11176,7 +11176,6 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/obj/machinery/hologram/holopad,
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/dark,
 /area/bridge/hallway)
@@ -21773,6 +21772,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/carpet/sblucarpet,
 /area/bridge/meeting_room)
 "aYa" = (
@@ -22774,6 +22774,7 @@
 	dir = 4;
 	icon_state = "pipe-c"
 	},
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled,
 /area/teleporter/bridge)
 "aZI" = (
@@ -30543,6 +30544,7 @@
 	pixel_y = -5
 	},
 /obj/structure/disposalpipe/segment,
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/dark,
 /area/rnd/telesci)
 "cJW" = (
