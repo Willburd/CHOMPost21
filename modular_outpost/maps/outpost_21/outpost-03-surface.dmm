@@ -21959,7 +21959,6 @@
 /obj/structure/table/hardwoodtable,
 /obj/item/paper_bin,
 /obj/item/pen/fountain6,
-/obj/structure/closet/walllocker/medical/south,
 /obj/item/sticky_pad/random{
 	pixel_x = 12;
 	pixel_y = 9
@@ -23132,6 +23131,7 @@
 /obj/effect/floor_decal/corner/white/full{
 	dir = 8
 	},
+/obj/structure/closet/walllocker/medical/north,
 /turf/simulated/floor/tiled/milspec,
 /area/bridge)
 "baj" = (
@@ -25273,6 +25273,7 @@
 	c_tag = "CIV - Artroom";
 	dir = 1
 	},
+/obj/machinery/light,
 /turf/simulated/floor/carpet,
 /area/crew_quarters/recreation_area)
 "beh" = (
@@ -30871,10 +30872,10 @@
 /turf/simulated/floor/tiled,
 /area/hallway/security/main)
 "cOQ" = (
-/obj/machinery/media/jukebox/casinojukebox,
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
 	},
+/obj/machinery/media/jukebox,
 /turf/simulated/floor/wood/sif/parquet,
 /area/muriki/crew/casino)
 "cOS" = (
@@ -44141,6 +44142,9 @@
 	name = "Canvas - Standard"
 	},
 /obj/structure/sign/painting/public/north,
+/obj/machinery/light{
+	dir = 1
+	},
 /turf/simulated/floor/carpet,
 /area/crew_quarters/recreation_area)
 "hFF" = (
@@ -67517,6 +67521,7 @@
 	pixel_y = -32;
 	dir = 1
 	},
+/obj/machinery/light,
 /turf/simulated/floor/carpet,
 /area/crew_quarters/recreation_area)
 "pMe" = (
@@ -67838,6 +67843,7 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/spline/plain,
+/obj/machinery/light,
 /turf/simulated/floor/carpet/geo,
 /area/muriki/crew/arcade)
 "pSX" = (
