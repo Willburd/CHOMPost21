@@ -21,6 +21,8 @@
 
 /obj/structure/noticeboard/bridge/Initialize(mapload)
 	var/obj/item/paper/P
+	ADD_NOTICE("Command Notice: Oct 2570 Renovation","<br>The research facility has undergone extensive renovations and has been replaced by a dedicated command facility. The old bridge has been replaced with various civilian recreational areas moved up from the basement. This follows the retirement of the research department. Be sure to report any construction issues to central command, so that construction drone blueprints can be updated.",list(/obj/item/stamp/centcomm))
+	ADD_NOTICE("Research Notice: Department Relocations","<br>Research and it's sub-departments have been relocated throughout the various other departments. As such, the scientist role has been moved to an warrant officer command position, and acts primarily as advisor and gear acquisition for other departments.<br><br>Departments moved as follows:<br>Anomaly Harvesting -> Engineering<br>Particle Physics -> Engineering<br>Phoronics -> Atmospherics<br>RnD Office -> Command<br>Public Teleporter -> Command<br>Xenoarcheology -> Mining<br>Xenobiology -> Cargo<br>Xenoflora -> Hydroponics",null)
 	ADD_NOTICE("Command Notice: Free Refills","<br>More coffee she says! More coffee! I haven't faxed something in weeks! All I am is a coffee jockey! What is my purpose in life? Captain says TWO FUCKING SCOOPS AND CREAM.",null)
 	. = ..()
 

@@ -283,8 +283,8 @@
 				reagentData[++reagentData.len] = list(
 					"name" = R.name,
 					"amount" = R.volume,
-					"overdose" = (R.overdose && R.volume > R.overdose) ? TRUE : FALSE,
-				)
+					"overdose" = R.is_overdosing(H) ? TRUE : FALSE,
+				) // Outpost 21 edit(port) - Overdosing chems retain their overdose even if you go under the OD
 		else
 			reagentData = null
 
@@ -296,8 +296,8 @@
 				ingestedData[++ingestedData.len] = list(
 					"name" = R.name,
 					"amount" = R.volume,
-					"overdose" = (R.overdose && R.volume > R.overdose) ? TRUE : FALSE,
-				)
+					"overdose" = R.is_overdosing(H) ? TRUE : FALSE,
+				) // Outpost 21 edit(port) - Overdosing chems retain their overdose even if you go under the OD
 		else
 			ingestedData = null
 

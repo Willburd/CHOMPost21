@@ -12,3 +12,10 @@
 	headset = /obj/item/radio/headset/cargo
 	headset_alt = /obj/item/radio/headset/alt/cargo
 	headset_earbud = /obj/item/radio/headset/earbud/cargo
+
+/datum/decl/hierarchy/outfit/job/science/scientist
+	id_type = /obj/item/card/id/silver/command_scientist
+
+	headset = /obj/item/radio/headset/headset_com
+	headset_alt = /obj/item/radio/headset/alt/headset_com
+	headset_earbud = /obj/item/radio/headset/earbud/headset_com

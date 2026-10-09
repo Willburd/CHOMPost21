@@ -76,12 +76,12 @@
 	// turn toward!
 	if(dir != angledir)
 		update_weapon_turn( angledir)
-		return FALSE
+		return TRUE
 
 	// intent check
 	if(user_calling.a_intent == I_HELP && user_calling.client?.prefs?.read_preference(/datum/preference/toggle/safefiring))
 		to_chat(user_calling, "<span class='warning'>You refrain from firing the mounted \the [src] as your intent is set to help.</span>")
-		return FALSE
+		return TRUE
 
 	// check if it uses a loader, and is loaded
 	var/obj/machinery/ammo_loader/loader
@@ -90,7 +90,7 @@
 	if(loader)
 		if(!loader.loaded)
 			to_chat(user_calling, "<span class='warning'>You are unable to fire \the [src] as there is no shell loaded.</span>")
-			return FALSE
+			return TRUE
 		loader.fire()
 
 	// ACTUALLY fire

@@ -32,13 +32,12 @@
 	zz = T.z
 	var/minutes = 10
 	GLOB.command_announcement.Announce("A test-fire target has been acquired. Coordinates [xx].[yy].[zz] calibrated. Stay clear for firing. T-[minutes] Minutes", "Announcement")
-	addtimer(CALLBACK(src, PROC_REF(test_fire)), minutes MINUTE, TIMER_DELETE_ME)
-	SSoutpost_voice.event_countdown(minutes, "bsa_test", FALSE, FALSE)
+	SSoutpost_voice.event_countdown(minutes, "bsa_test", 2, FALSE, CALLBACK(src, PROC_REF(test_fire)))
 
 /datum/event/bsa_test_fire/proc/test_fire()
 	var/datum/bsa_shell_controller/BSA = new /datum/bsa_shell_controller
 	BSA.random_setup(xx, yy, zz)
-	addtimer(CALLBACK(src, PROC_REF(conclude)), 30 SECONDS, TIMER_DELETE_ME)
+	addtimer(CALLBACK(src, PROC_REF(conclude)), 40 SECONDS, TIMER_DELETE_ME)
 
 /datum/event/bsa_test_fire/proc/conclude()
 	GLOB.command_announcement.Announce("Test-fire has concluded, impact confirmed. Adjusting aim by [rand(2,6)] degrees. Test-fire of bluespace artillery successful. Please have a safe and productive shift.", "Announcement")

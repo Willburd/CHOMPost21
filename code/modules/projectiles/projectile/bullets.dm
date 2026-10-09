@@ -204,7 +204,7 @@
 /obj/item/projectile/bullet/rifle
 	fire_sound = 'sound/weapons/gunshot_generic_rifle.ogg'
 	armor_penetration = 15
-	//penetrating = 1 CHOMPedit: This is the only thing I see that could cause stun and unsure what can be pierced with a penetrating of 1.
+	penetrating = 1 //Outpost edit: Re-adding rifle pen, for extra gunfight chaos.
 	hud_state = "rifle"
 	hud_state_empty = "rifle_empty"
 

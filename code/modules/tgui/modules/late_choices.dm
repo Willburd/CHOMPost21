@@ -76,6 +76,8 @@
 
 	for(var/datum/job/job in SSjob.occupations)
 		if(job && user.IsJobAvailable(job.title))
+			if(job.title == JOB_VR) // Threre's no implementation for this
+				continue
 			// Check for jobs with minimum age requirements
 			if(!character_old_enough_for_job(user.client.prefs, job))
 				continue
@@ -104,7 +106,7 @@
 				"current_positions" = job.current_positions,
 				"active" = active,
 				"offmap" = job.offmap_spawn,
-				"hidden" = job.title == JOB_STOWAWAY // Outpost 21 edit - Hide stowaways
+				"hidden" = (job.title == JOB_STOWAWAY) // Outpost 21 edit - Hide stowaways
 			))
 
 	data["jobs"] = jobs

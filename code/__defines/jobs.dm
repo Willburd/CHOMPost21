@@ -35,7 +35,7 @@
 	#define JOB_ALT_CO_ASSIST_MED_OFFICER "Assistant Medical Officer"
 	#define JOB_ALT_CO_ASSIST_SEC_OFFICER "Combat Control Officer"
 	#define JOB_ALT_CO_ASSIST_ENG_OFFICER "Engineering Specialist"
-	#define JOB_ALT_CO_ASSIST_SCI_OFFICER "Command Intelligence Officer"
+	#define JOB_ALT_CO_ASSIST_SCI_OFFICER "Research Specialist"
 // Outpost 21 edit end
 
 #define JOB_HEAD_OF_SECURITY "Head of Security"
@@ -429,6 +429,7 @@
 #define JOB_TALON_ENGINEER "Talon Engineer"
 	// Talon Engineer alt titles
 	#define JOB_ALT_TALON_TECHNICIAN "Talon Technician"
+	#define JOB_ALT_TALON_ATMOSTECHIAN "Talon Atmospheric Technician"
 
 #define JOB_TALON_GUARD "Talon Guard"
 	// Talon Guard alt titles
@@ -572,6 +573,7 @@
 #define NONCREW (1<<0)
 // define ANOMALY (1<<0) //VOREStation Note: Unused on VS. Used downstream. // Outpost 21 edit - removed job
 #define STOWAWAY (1<<1) // Outpost 21 edit - stowaways!
+#define PENTESTER (1<<2) // Outpost 21 edit - stowaways!
 
 /* Outpost 21 edit - removed job
 #define TALON (1<<3)

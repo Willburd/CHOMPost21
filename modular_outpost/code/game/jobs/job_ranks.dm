@@ -12,6 +12,9 @@
 	rank_pin = /obj/item/clothing/accessory/rank_eshui/drone
 /datum/job/ai
 	rank_pin = /obj/item/clothing/accessory/rank_eshui/ai
+/datum/job/pentester
+	rank_pin = /obj/item/clothing/accessory/rank_eshui
+
 
 // Lowest rank, no duty
 #define RANK_PIN_PATH /obj/item/clothing/accessory/rank_eshui
@@ -105,15 +108,11 @@
 	rank_pin = RANK_PIN_PATH
 /datum/alt_title/salvage_tech
 	rank_pin = RANK_PIN_PATH
-/datum/alt_title/lab_assistant
-	rank_pin = RANK_PIN_PATH
 #undef RANK_PIN_PATH
 
 
 // Enlisted 4
 #define RANK_PIN_PATH /obj/item/clothing/accessory/rank_eshui/enlisted4
-/datum/job/scientist
-	rank_pin = RANK_PIN_PATH
 /datum/alt_title/orderly
 	rank_pin = RANK_PIN_PATH
 /datum/alt_title/chem_tech
@@ -146,6 +145,8 @@
 /datum/alt_title/co_petty_officer
 	rank_pin = RANK_PIN_PATH
 /datum/alt_title/co_cadet
+	rank_pin = RANK_PIN_PATH
+/datum/alt_title/lab_assistant
 	rank_pin = RANK_PIN_PATH
 #undef RANK_PIN_PATH
 
@@ -190,6 +191,8 @@
 // Warrent 1
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 #define RANK_PIN_PATH /obj/item/clothing/accessory/rank_eshui/warrant1
+/datum/job/scientist
+	rank_pin = RANK_PIN_PATH
 /datum/job/geneticist
 	rank_pin = RANK_PIN_PATH
 /datum/job/chemist

@@ -102,7 +102,7 @@ GLOBAL_LIST_EMPTY(GPS_list)
 	. = ..()
 
 /obj/item/gps/proc/can_track(obj/item/gps/other, reachable_z_levels)
-	if(!other.tracking || other.emped || other.hide_signal || is_vore_jammed(other))
+	if(!other.tracking || other.emped || other.hide_signal || is_vore_jammed(other) || is_jammed(src)) // Outpost 21 edit - Radio jammer blocks GPS too
 		return FALSE
 	var/turf/origin = get_turf(src)
 	var/turf/target = get_turf(other)
