@@ -189,11 +189,11 @@
 			var/unknownreagents[0]
 			for(var/datum/reagent/R as anything in C.reagents.reagent_list)
 				if(R.scannable && advscan >= R.scannable)
-					reagentdata["[R.id]"] = span_notice("\t[round(C.reagents.get_reagent_amount(R.id), 1)]u [R.name][(R.overdose && R.volume > R.overdose) ? " - [span_danger("Overdose")]" : ""]")
+					reagentdata["[R.id]"] = span_notice("\t[round(C.reagents.get_reagent_amount(R.id), 1)]u [R.name][R.is_overdosing(C) ? " - [span_danger("Overdose")]" : ""]") // Outpost 21 edit(port) - Overdosing chems retain their overdose even if you go under the OD
 					reagentdata["[R.id]"] += "<br>"
 				else
 					unknown++
-					unknownreagents["[R.id]"] = span_notice("\t[round(C.reagents.get_reagent_amount(R.id), 1)]u [R.name][(R.overdose && R.volume > R.overdose) ? " - [span_danger("Overdose")]" : ""]")
+					unknownreagents["[R.id]"] = span_notice("\t[round(C.reagents.get_reagent_amount(R.id), 1)]u [R.name][R.is_overdosing(C) ? " - [span_danger("Overdose")]" : ""]") // Outpost 21 edit(port) - Overdosing chems retain their overdose even if you go under the OD
 					unknownreagents["[R.id]"] += "<br>"
 			if(reagentdata.len)
 				dat += span_notice("Beneficial reagents detected in subject's blood:")
@@ -209,14 +209,14 @@
 			var/stomachunknownreagents[0]
 			for(var/datum/reagent/R as anything in C.ingested.reagent_list)
 				if(R.scannable && advscan >= R.scannable)
-					stomachreagentdata["[R.id]"] = span_notice("\t[round(C.ingested.get_reagent_amount(R.id), 1)]u [R.name][(R.overdose && R.volume > R.overdose) ? " - [span_danger("Overdose")]" : ""]")
+					stomachreagentdata["[R.id]"] = span_notice("\t[round(C.ingested.get_reagent_amount(R.id), 1)]u [R.name][R.is_overdosing(C) ? " - [span_danger("Overdose")]" : ""]") // Outpost 21 edit(port) - Overdosing chems retain their overdose even if you go under the OD
 					stomachreagentdata["[R.id]"] += "<br>"
 					if(!advscan || !showadvscan)
 						dat += span_notice("[R.name] found in subject's stomach.")
 						dat += "<br>"
 				else
 					++unknown
-					stomachunknownreagents["[R.id]"] = span_notice("\t[round(C.ingested.get_reagent_amount(R.id), 1)]u [R.name][(R.overdose && R.volume > R.overdose) ? " - [span_danger("Overdose")]" : ""]")
+					stomachunknownreagents["[R.id]"] = span_notice("\t[round(C.ingested.get_reagent_amount(R.id), 1)]u [R.name][R.is_overdosing(C) ? " - [span_danger("Overdose")]" : ""]") // Outpost 21 edit(port) - Overdosing chems retain their overdose even if you go under the OD
 					stomachunknownreagents["[R.id]"] += "<br>"
 			if(showadvscan == 1)
 				dat += span_notice("Beneficial reagents detected in subject's stomach:")
@@ -232,14 +232,14 @@
 			var/touchunknownreagents[0]
 			for(var/datum/reagent/R as anything in C.touching.reagent_list)
 				if(R.scannable && advscan >= R.scannable)
-					touchreagentdata["[R.id]"] = span_notice("\t[round(C.touching.get_reagent_amount(R.id), 1)]u [R.name][(R.overdose && R.can_overdose_touch && R.volume > R.overdose) ? " - [span_danger("Overdose")]" : ""]")
+					touchreagentdata["[R.id]"] = span_notice("\t[round(C.touching.get_reagent_amount(R.id), 1)]u [R.name][(R.is_overdosing(C) && R.can_overdose_touch) ? " - [span_danger("Overdose")]" : ""]") // Outpost 21 edit(port) - Overdosing chems retain their overdose even if you go under the OD
 					touchreagentdata["[R.id]"] += "<br>"
 					if(!advscan || !showadvscan)
 						dat += span_notice("[R.name] found in subject's dermis.")
 						dat += "<br>"
 				else
 					++unknown
-					touchunknownreagents["[R.id]"] = span_notice("\t[round(C.ingested.get_reagent_amount(R.id), 1)]u [R.name][(R.overdose && R.can_overdose_touch && R.volume > R.overdose) ? " - [span_danger("Overdose")]" : ""]")
+					touchunknownreagents["[R.id]"] = span_notice("\t[round(C.ingested.get_reagent_amount(R.id), 1)]u [R.name][(R.is_overdosing(C) && R.can_overdose_touch) ? " - [span_danger("Overdose")]" : ""]") // Outpost 21 edit(port) - Overdosing chems retain their overdose even if you go under the OD
 					touchunknownreagents["[R.id]"] += "<br>"
 			if(showadvscan == 1)
 				dat += span_notice("Beneficial reagents detected in subject's dermis:")
