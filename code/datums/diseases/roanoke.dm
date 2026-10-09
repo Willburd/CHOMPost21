@@ -83,7 +83,7 @@
 
 ///Attempts infecting the target with roanoke.
 /mob/living/proc/attempt_xenochimera_infection(mob/living/user, mob/living/target, armour, attack_damage, zone)
-	var/enabled = FALSE //Disabled on virgo, used downstream.
+	var/enabled = TRUE // Outpost 21 edit - Enables roanoke disease spread
 	if(!enabled || (target == user))
 		return
 	var/datum/component/xenochimera/xc = user.get_xenochimera_component()
