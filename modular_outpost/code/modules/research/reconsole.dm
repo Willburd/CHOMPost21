@@ -72,7 +72,7 @@
 	req_access = null
 	req_one_access = list(ACCESS_CARGO, ACCESS_MINING, ACCESS_JANITOR, ACCESS_KITCHEN)
 	circuit = /obj/item/circuitboard/rdconsole/cargo_locked
-	filter_department = CHANNEL_SERVICE
+	filter_department = CHANNEL_SUPPLY
 	is_remote = TRUE
 
 /obj/item/circuitboard/rdconsole/cargo_locked
