@@ -100,6 +100,7 @@
 #include "stowaway_C.dmm"
 #include "stowaway_D.dmm"
 #include "stowaway_E.dmm"
+#include "stowaway_F.dmm"
 #include "sinkhole_A.dmm"
 #include "hideout_A.dmm"
 #endif
@@ -919,6 +920,14 @@
 	allow_duplicates = FALSE
 	discard_prob = 20
 	cost = 40
+
+/datum/map_template/outpost21/muriki/caves_deepdark_huge/stowaway_F
+	name = "Stowaway F"
+	desc = "An old stowaway structure."
+	mappath = "modular_outpost/maps/submaps/deepdark/stowaway_F.dmm"
+	allow_duplicates = FALSE
+	discard_prob = 10
+	cost = 30
 
 /datum/map_template/outpost21/muriki/caves_deepdark_huge/sinkhole_A
 	name = "Sinkhole A"
