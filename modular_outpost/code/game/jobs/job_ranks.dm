@@ -241,6 +241,8 @@
 	rank_pin = RANK_PIN_PATH
 /datum/job/atmos
 	rank_pin = RANK_PIN_PATH
+/datum/job/telecomms_specialist
+	rank_pin = RANK_PIN_PATH
 #undef RANK_PIN_PATH
 
 
