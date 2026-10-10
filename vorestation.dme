@@ -6025,6 +6025,7 @@
 #include "modular_outpost\code\modules\food\drinks\bottle.dm"
 #include "modular_outpost\code\modules\food\kitchen\gibber.dm"
 #include "modular_outpost\code\modules\games\cards.dm"
+#include "modular_outpost\code\modules\halloween\items.dm"
 #include "modular_outpost\code\modules\hydroponics\spreading\spreading.dm"
 #include "modular_outpost\code\modules\kitchen\smartfridge\research.dm"
 #include "modular_outpost\code\modules\maint_recycler\hangout_entries.dm"
