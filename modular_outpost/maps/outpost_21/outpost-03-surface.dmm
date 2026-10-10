@@ -5176,7 +5176,8 @@
 	},
 /obj/structure/table/standard,
 /obj/structure/candybowl/engineering{
-	pixel_x = 15
+	pixel_x = 15;
+	pixel_y = 6
 	},
 /turf/simulated/floor/tiled,
 /area/muriki/tramstation/cargeng)
@@ -25344,6 +25345,16 @@
 	},
 /turf/simulated/floor/carpet/geo,
 /area/muriki/crew/arcade)
+"beo" = (
+/obj/structure/table/gamblingtable,
+/obj/effect/floor_decal/spline/plain{
+	dir = 1
+	},
+/obj/structure/candybowl/command{
+	pixel_y = 8
+	},
+/turf/simulated/floor/carpet/tealcarpet,
+/area/bridge/hallway)
 "bep" = (
 /obj/structure/window/reinforced{
 	dir = 4
@@ -36037,7 +36048,9 @@
 /obj/effect/floor_decal/corner/blue/bordercorner{
 	dir = 1
 	},
-/obj/structure/candybowl/medical,
+/obj/structure/candybowl/medical{
+	pixel_y = 8
+	},
 /obj/structure/table/standard,
 /turf/simulated/floor/tiled/white,
 /area/medical/reception)
@@ -77339,7 +77352,9 @@
 	dir = 8;
 	pixel_x = 30
 	},
-/obj/structure/candybowl/security,
+/obj/structure/candybowl/security{
+	pixel_y = 7
+	},
 /turf/simulated/floor/tiled,
 /area/security/lobby)
 "tlq" = (
@@ -81249,7 +81264,9 @@
 	dir = 4
 	},
 /obj/structure/table/standard,
-/obj/structure/candybowl/cargo,
+/obj/structure/candybowl/cargo{
+	pixel_y = 6
+	},
 /obj/item/radio/intercom{
 	name = "Station Intercom (General)";
 	pixel_y = -21
@@ -143319,7 +143336,7 @@ cPo
 cPo
 baK
 aBw
-arb
+beo
 akM
 akG
 cPo
