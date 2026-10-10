@@ -56,7 +56,7 @@
 
 	// Outpost 21 edit begin - Stowaways get better loot
 	var/job = L?.mind?.assigned_role
-	if (prob(4) && IS_OUTPOST_MAINT_JOB(job))
+	if (prob(3) && IS_OUTPOST_MAINT_JOB(job))
 		var/path = pick(GLOB.unique_stowaway_loot)
 		loot = new path(get_turf(source))
 		span = "cult" // Green
