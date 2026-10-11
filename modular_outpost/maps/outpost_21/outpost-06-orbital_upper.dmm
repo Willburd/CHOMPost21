@@ -1650,6 +1650,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
+/obj/effect/landmark/holiday_event_spawn,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/aft)
 "dr" = (
@@ -2149,6 +2150,7 @@
 /obj/effect/floor_decal/corner/orange{
 	dir = 5
 	},
+/obj/effect/landmark/holiday_event_spawn,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/power_distribution)
 "ek" = (
@@ -2376,6 +2378,7 @@
 	dir = 1
 	},
 /obj/item/geiger/wall/north,
+/obj/effect/landmark/holiday_event_spawn,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/fore)
 "eC" = (
@@ -5250,6 +5253,7 @@
 "kc" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/lightgrey/border,
+/obj/effect/landmark/holiday_event_spawn,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/port_observation)
 "kd" = (
@@ -5513,6 +5517,7 @@
 /obj/effect/floor_decal/corner/white/border{
 	dir = 9
 	},
+/obj/effect/landmark/holiday_event_spawn,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/fore)
 "kG" = (
@@ -8151,6 +8156,7 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
+/obj/effect/landmark/holiday_event_spawn,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/fore)
 "pN" = (
@@ -8926,6 +8932,7 @@
 /obj/structure/cable/green{
 	icon_state = "2-9"
 	},
+/obj/effect/landmark/holiday_event_spawn,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/starboard)
 "ro" = (
@@ -11722,6 +11729,7 @@
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 5
 	},
+/obj/effect/landmark/holiday_event_spawn,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/access_shaft/upper)
 "wm" = (
@@ -13358,6 +13366,7 @@
 /obj/structure/sign/poster/eshui{
 	dir = 1
 	},
+/obj/effect/landmark/holiday_event_spawn,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/access_shaft/upper_connector)
 "zc" = (
@@ -14703,8 +14712,8 @@
 /turf/simulated/wall,
 /area/offworld/orbital/exterior/engine_core_starboard)
 "Br" = (
-/obj/machinery/camera/network/engineering_outpost{
-	c_tag = "REX - Primary Port Engine Emitter"
+/obj/machinery/light{
+	dir = 1
 	},
 /turf/simulated/floor/airless,
 /area/offworld/orbital/exterior/engine_core_port)
@@ -14731,6 +14740,7 @@
 /obj/structure/sign/department/miner_dock{
 	pixel_x = 32
 	},
+/obj/effect/landmark/holiday_event_spawn,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/central)
 "Bw" = (
@@ -14738,8 +14748,9 @@
 /turf/simulated/wall/r_wall,
 /area/ai)
 "Bx" = (
-/obj/machinery/light{
-	dir = 8
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "REX - Primary Port Engine Emitter";
+	dir = 4
 	},
 /turf/simulated/floor/airless,
 /area/offworld/orbital/exterior/engine_core_port)
@@ -15106,6 +15117,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/effect/landmark/holiday_event_spawn,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/power_distribution)
 "Cm" = (
@@ -15377,6 +15389,7 @@
 /obj/structure/sign/poster/eshui{
 	dir = 4
 	},
+/obj/effect/landmark/holiday_event_spawn,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/aft)
 "CN" = (
@@ -15569,6 +15582,7 @@
 /obj/effect/floor_decal/corner/orange/border{
 	dir = 4
 	},
+/obj/effect/landmark/holiday_event_spawn,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/aft)
 "Di" = (
@@ -15601,6 +15615,7 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/power_distribution)
 "Dn" = (
@@ -17785,6 +17800,12 @@
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/fore)
+"HD" = (
+/obj/machinery/camera/network/engineering_outpost{
+	c_tag = "REX - Primary Port Engine Core North"
+	},
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/airless,
+/area/offworld/orbital/exterior/engine_core_port)
 "HE" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -17913,13 +17934,6 @@
 	},
 /turf/simulated/floor/airless,
 /area/offworld/orbital/exterior/engine_core_port)
-"HU" = (
-/obj/machinery/hologram/holopad,
-/obj/machinery/camera/network/engineering_outpost{
-	c_tag = "REX - Primary Port Engine Core North"
-	},
-/turf/simulated/floor/airless,
-/area/offworld/orbital/exterior/engine_core_port)
 "HV" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -17983,6 +17997,36 @@
 	},
 /turf/simulated/floor/airless,
 /area/offworld/orbital/exterior/engine_core_starboard)
+"Ib" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 8
+	},
+/obj/effect/landmark/holiday_event_spawn,
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/access_shaft/upper)
+"Ic" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 1
+	},
+/obj/effect/landmark/holiday_event_spawn,
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/port_observation)
+"Id" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 4
+	},
+/obj/effect/landmark/holiday_event_spawn,
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/observation)
 "Ig" = (
 /obj/structure/cable/cyan{
 	icon_state = "0-2"
@@ -18821,6 +18865,8 @@
 /obj/structure/sign/poster{
 	dir = 4
 	},
+/obj/structure/candybowl/engineering,
+/obj/structure/table/standard,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/power_distribution)
 "Lp" = (
@@ -21032,7 +21078,7 @@
 /area/ai_upload)
 "SH" = (
 /obj/item/weldingtool,
-/turf/simulated/mineral/floor/ignore_cavegen/turfpack/airless,
+/turf/simulated/floor/airless,
 /area/offworld/orbital/exterior/engine_core_port)
 "SI" = (
 /obj/structure/cable/yellow{
@@ -22890,6 +22936,7 @@
 	name = "Station Intercom (General)";
 	pixel_x = 23
 	},
+/obj/effect/landmark/holiday_event_spawn,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/central)
 "ZB" = (
@@ -33076,8 +33123,8 @@ cX
 cX
 cX
 cX
-cX
-cX
+qz
+qz
 qz
 qz
 kY
@@ -33239,11 +33286,11 @@ cX
 cX
 qz
 qz
-qz
-qz
-qz
-qz
-qz
+OQ
+OQ
+OQ
+OQ
+OQ
 qz
 qz
 qz
@@ -33401,12 +33448,12 @@ qz
 qz
 qz
 qz
+OQ
 qz
 qz
 qz
-qz
-qz
-qz
+OQ
+OQ
 qz
 qz
 qz
@@ -33553,29 +33600,29 @@ cX
 qz
 qz
 qz
+OQ
+OQ
+OQ
+OQ
+OQ
+OQ
 qz
 qz
 qz
 qz
+OQ
+OQ
+OQ
 qz
 qz
+OQ
 qz
+OQ
 qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
+OQ
+OQ
+OQ
+OQ
 qz
 qz
 qz
@@ -33689,7 +33736,7 @@ wa
 wa
 ww
 wa
-wa
+Ib
 vP
 rG
 rG
@@ -33713,31 +33760,31 @@ cX
 qz
 qz
 qz
+OQ
+OQ
+OQ
+qz
+qz
+qz
+qz
+OQ
+OQ
 qz
 qz
 qz
 qz
 qz
+OQ
 qz
 qz
+OQ
+OQ
+OQ
+OQ
+OQ
 qz
 qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
+OQ
 qz
 qz
 qz
@@ -33873,6 +33920,9 @@ cX
 cX
 qz
 qz
+OQ
+OQ
+OQ
 qz
 qz
 qz
@@ -33880,26 +33930,23 @@ qz
 qz
 qz
 qz
+OQ
+qz
+qz
+OQ
+OQ
+OQ
+OQ
+qz
+OQ
+OQ
 qz
 qz
 qz
 qz
 qz
 qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
+OQ
 qz
 qz
 qz
@@ -34033,6 +34080,22 @@ cX
 cX
 cX
 qz
+OQ
+OQ
+OQ
+qz
+qz
+qz
+qz
+qz
+qz
+qz
+qz
+qz
+OQ
+qz
+qz
+OQ
 qz
 qz
 qz
@@ -34045,24 +34108,8 @@ qz
 qz
 qz
 qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
+OQ
+OQ
 qz
 qz
 qz
@@ -34195,22 +34242,22 @@ cX
 cX
 qz
 qz
+OQ
 qz
 qz
 qz
+OQ
+OQ
+OQ
+OQ
+OQ
+OQ
+OQ
 qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
+OQ
+OQ
+OQ
+OQ
 qz
 qz
 rC
@@ -34223,8 +34270,8 @@ aw
 aw
 qz
 qz
-qz
-qz
+fj
+OQ
 qz
 qz
 qz
@@ -34357,20 +34404,20 @@ qz
 qz
 qz
 qz
+OQ
+OQ
+OQ
+OQ
+OQ
 qz
 qz
 qz
 qz
 qz
+OQ
 qz
 qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
+OQ
 qz
 qz
 qz
@@ -34385,7 +34432,7 @@ aw
 aw
 aw
 aw
-qz
+fj
 qz
 qz
 qz
@@ -34512,6 +34559,10 @@ cX
 cX
 cX
 qz
+OQ
+OQ
+OQ
+OQ
 qz
 qz
 qz
@@ -34521,15 +34572,11 @@ qz
 qz
 qz
 qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
+OQ
+OQ
+OQ
+OQ
+OQ
 qz
 qz
 qz
@@ -34674,20 +34721,20 @@ cX
 cX
 cX
 qz
+OQ
 qz
 qz
+OQ
+OQ
 qz
 qz
+OQ
+OQ
+OQ
 qz
 qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
+OQ
+OQ
 qz
 qz
 qz
@@ -34836,19 +34883,19 @@ cX
 cX
 cX
 qz
+OQ
+OQ
 qz
 qz
+OQ
 qz
 qz
+OQ
 qz
+OQ
+OQ
 qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
+OQ
 qz
 aO
 aL
@@ -34999,18 +35046,18 @@ cX
 cX
 qz
 qz
+OQ
+OQ
+qz
+OQ
+OQ
+OQ
+OQ
 qz
 qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
-qz
+OQ
+OQ
+OQ
 qz
 aO
 aL
@@ -35160,13 +35207,13 @@ cX
 cX
 qz
 qz
+OQ
+OQ
+OQ
 qz
 qz
-qz
-qz
-qz
-qz
-qz
+OQ
+OQ
 qz
 qz
 qz
@@ -35321,14 +35368,14 @@ cX
 cX
 cX
 qz
+OQ
+OQ
+OQ
+OQ
 qz
 qz
 qz
-qz
-qz
-qz
-qz
-qz
+OQ
 qz
 aO
 aO
@@ -35483,14 +35530,14 @@ cX
 cX
 cX
 qz
+OQ
+OQ
+OQ
 qz
 qz
-qz
-qz
-qz
-qz
-qz
-qz
+OQ
+OQ
+OQ
 qz
 aO
 aO
@@ -35649,8 +35696,8 @@ qz
 qz
 qz
 qz
-qz
-qz
+OQ
+OQ
 qz
 qz
 qz
@@ -35810,8 +35857,8 @@ qz
 qz
 qz
 qz
-qz
-qz
+OQ
+OQ
 qz
 qz
 qz
@@ -35972,7 +36019,7 @@ fj
 qz
 qz
 qz
-qz
+OQ
 qz
 qz
 qz
@@ -35992,17 +36039,17 @@ aw
 aL
 aw
 aw
-aL
-aL
-aL
-aL
-aL
-aL
-aL
-aL
-aL
-aL
-aL
+aw
+br
+br
+br
+br
+br
+br
+br
+br
+br
+aw
 aw
 aw
 aL
@@ -36134,9 +36181,9 @@ fj
 qz
 qz
 qz
-qz
-qz
-qz
+OQ
+OQ
+OQ
 qz
 qz
 Pv
@@ -36154,7 +36201,7 @@ vd
 aL
 aw
 aw
-aL
+br
 Yh
 cN
 Qq
@@ -36164,7 +36211,7 @@ GQ
 zl
 re
 Yh
-aL
+br
 aw
 aw
 aL
@@ -36298,7 +36345,7 @@ qz
 qz
 qz
 qz
-qz
+OQ
 qz
 qz
 OQ
@@ -36316,17 +36363,17 @@ br
 br
 aL
 aL
-aL
+br
 cY
 cj
-aw
-aL
-aw
-aL
-aw
+br
+br
+br
+br
+br
 cj
 tN
-aL
+br
 aL
 aL
 br
@@ -36460,8 +36507,8 @@ qz
 qz
 qz
 qz
-qz
-qz
+OQ
+OQ
 fj
 OQ
 br
@@ -36476,19 +36523,19 @@ Sg
 aw
 aw
 aL
-aw
-aw
-aL
+Bu
+HD
+br
 yL
-aw
-aw
-aL
-aw
-aL
-aw
-aw
+br
+br
+br
+br
+br
+br
+br
 Tq
-aL
+br
 aw
 aw
 aL
@@ -36642,15 +36689,15 @@ GQ
 GQ
 BR
 FW
-aL
-aL
+br
+br
 cH
 br
 br
-aL
-aL
+br
+br
 Yv
-aL
+br
 aw
 aw
 aL
@@ -36800,19 +36847,19 @@ On
 BO
 aw
 aL
-Bu
-HU
-aL
+aw
+gM
+br
 Yv
-aw
-aw
+br
+br
 br
 Qz
 br
-aw
-aw
+br
+br
 Yv
-aL
+br
 yy
 Bu
 aL
@@ -36964,17 +37011,17 @@ GQ
 GQ
 GQ
 GQ
-GQ
+BR
 Io
-aL
-aL
 br
 br
 br
-aL
-aL
+br
+br
+br
+br
 Yv
-aL
+br
 aw
 aw
 aL
@@ -37126,17 +37173,17 @@ aw
 aL
 aw
 aw
-aL
+br
 yL
-aw
-aw
-aL
-aw
-aL
-aw
-aw
+br
+br
+br
+br
+br
+br
+br
 Nv
-aL
+br
 aw
 aw
 aL
@@ -37288,17 +37335,17 @@ br
 br
 aL
 aL
-aL
+br
 dz
 cj
-aw
-aL
+br
+br
 SH
-aL
-aw
+br
+br
 cj
 mw
-aL
+br
 aL
 aL
 br
@@ -37450,7 +37497,7 @@ vd
 aL
 aw
 aw
-aL
+br
 Yh
 cS
 Qq
@@ -37460,7 +37507,7 @@ GQ
 zl
 wz
 Yh
-aL
+br
 aw
 aw
 aL
@@ -37612,17 +37659,17 @@ aw
 aL
 aw
 aw
-aL
-aL
-aL
-aL
-aL
-aL
-aL
-aL
-aL
-aL
-aL
+aw
+br
+br
+br
+br
+br
+br
+br
+br
+br
+aw
 aw
 aw
 aL
@@ -38513,7 +38560,7 @@ cX
 cX
 cX
 bO
-vZ
+Ic
 ik
 ik
 HB
@@ -42617,7 +42664,7 @@ rC
 CS
 OQ
 OQ
-qz
+OQ
 qz
 yr
 oP
@@ -42779,7 +42826,7 @@ OQ
 CQ
 OQ
 OQ
-qz
+OQ
 OQ
 dE
 Vs
@@ -42941,7 +42988,7 @@ rC
 rC
 Pv
 OQ
-qz
+OQ
 OQ
 bD
 Vs
@@ -43103,7 +43150,7 @@ OQ
 CQ
 OQ
 Au
-qz
+OQ
 OQ
 NM
 Vs
@@ -43265,7 +43312,7 @@ rC
 CT
 OQ
 OQ
-qz
+OQ
 Au
 yr
 AH
@@ -43427,7 +43474,7 @@ OQ
 CQ
 OQ
 OQ
-qz
+OQ
 qz
 yr
 Vs
@@ -45310,13 +45357,13 @@ bn
 lf
 lf
 TN
+Id
 fL
 fL
 fL
 fL
 fL
-fL
-fL
+Id
 cB
 lf
 lf

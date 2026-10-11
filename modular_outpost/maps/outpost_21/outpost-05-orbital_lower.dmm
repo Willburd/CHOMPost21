@@ -855,6 +855,7 @@
 /obj/effect/floor_decal/corner/orange{
 	dir = 10
 	},
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/lower/central)
 "bM" = (
@@ -2314,6 +2315,7 @@
 /obj/effect/floor_decal/corner/orange{
 	dir = 5
 	},
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/port_airlock)
 "fo" = (
@@ -4293,6 +4295,7 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
+/obj/effect/landmark/holiday_event_spawn,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/stairs_lower)
 "jx" = (
@@ -5662,6 +5665,7 @@
 /obj/effect/floor_decal/corner/orange/border{
 	dir = 1
 	},
+/obj/effect/landmark/holiday_event_spawn,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/stairs_lower)
 "lM" = (
@@ -8580,6 +8584,13 @@
 /obj/item/analyzer,
 /turf/simulated/floor/tiled/monotile,
 /area/offworld/orbital/xenoarcheology)
+"rm" = (
+/obj/machinery/alarm{
+	dir = 8;
+	pixel_x = 26
+	},
+/turf/simulated/floor/plating,
+/area/offworld/orbital/station/atmos_primary)
 "rn" = (
 /obj/machinery/atmospherics/portables_connector,
 /obj/effect/floor_decal/industrial/outline/blue,
@@ -9061,6 +9072,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/lower/fore)
 "sh" = (
@@ -9694,6 +9706,7 @@
 	dir = 1;
 	c_tag = "REX - Starboard Solar Hallway Central"
 	},
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/lower/central)
 "tt" = (
@@ -14249,6 +14262,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/aux{
 	dir = 5
 	},
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/phoronics)
 "Ca" = (
@@ -14271,14 +14287,14 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 8
 	},
-/obj/structure/cable/green{
-	icon_state = "4-9"
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/aux{
 	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/phoronics)
@@ -14430,6 +14446,9 @@
 /obj/machinery/light_switch{
 	pixel_x = 24;
 	pixel_y = 26
+	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/phoronics)
@@ -14620,9 +14639,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
 	},
-/obj/structure/cable/green{
-	icon_state = "6-9"
-	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
@@ -14636,6 +14652,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/aux{
 	dir = 10
+	},
+/obj/structure/cable/green{
+	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/phoronics)
@@ -14868,15 +14887,15 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
 	},
-/obj/structure/cable/green{
-	icon_state = "6-9"
-	},
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-c";
 	dir = 2
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/aux{
 	dir = 10
+	},
+/obj/structure/cable/green{
+	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/phoronics)
@@ -15487,6 +15506,9 @@
 	dir = 1;
 	icon_state = "pipe-c"
 	},
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/phoronics)
 "DY" = (
@@ -15496,9 +15518,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
 	},
-/obj/structure/cable/green{
-	icon_state = "6-9"
-	},
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-c";
 	dir = 2
@@ -15507,7 +15526,10 @@
 	dir = 10
 	},
 /obj/structure/cable/green{
-	icon_state = "4-9"
+	icon_state = "2-8"
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/phoronics)
@@ -15933,15 +15955,15 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
 	},
-/obj/structure/cable/green{
-	icon_state = "6-8"
-	},
 /obj/structure/disposalpipe/segment{
 	icon_state = "pipe-c";
 	dir = 2
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/aux{
 	dir = 10
+	},
+/obj/structure/cable/green{
+	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/phoronics)
@@ -16656,6 +16678,7 @@
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/effect/landmark/holiday_event_spawn,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/lower/port)
 "Gb" = (
@@ -16680,6 +16703,7 @@
 /obj/effect/floor_decal/corner/lightgrey/bordercorner{
 	dir = 1
 	},
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/lower/port)
 "Gd" = (
@@ -16853,7 +16877,7 @@
 /obj/effect/floor_decal/corner/black/border{
 	dir = 4
 	},
-/obj/machinery/hologram/holopad,
+/obj/effect/landmark/holiday_event_spawn,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/lower/port)
 "GA" = (
@@ -16896,6 +16920,11 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/backup_power)
+"GF" = (
+/obj/structure/table/reinforced,
+/obj/structure/candybowl/engineering,
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/halls/stairs_lower)
 "GG" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -20250,6 +20279,7 @@
 /obj/effect/floor_decal/corner/brown/border{
 	dir = 6
 	},
+/obj/effect/landmark/holiday_event_spawn,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/lower/port)
 "Ms" = (
@@ -21710,6 +21740,7 @@
 /obj/effect/floor_decal/corner/black/border{
 	dir = 8
 	},
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/lower/port)
 "Pt" = (
@@ -40217,7 +40248,7 @@ il
 hZ
 hK
 eU
-gy
+rm
 tj
 gI
 GT
@@ -40519,7 +40550,7 @@ KR
 qd
 yP
 Kj
-ci
+GF
 GD
 la
 Kj
@@ -43094,7 +43125,7 @@ vv
 XQ
 Vv
 uV
-mm
+GJ
 Px
 rH
 rH
@@ -43580,7 +43611,7 @@ aq
 dg
 lP
 lN
-GJ
+mm
 Px
 eW
 eW
