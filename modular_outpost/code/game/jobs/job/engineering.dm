@@ -7,7 +7,7 @@
 /datum/job/engineer/New()
 	. = ..()
 	access |= list(ACCESS_ROBOTICS, ACCESS_ATMOSPHERICS)
-	alt_titles |= list(	JOB_ALT_SHIPBREAKER = /datum/alt_title/ship_breaker, JOB_ALT_ANOMALIST = /datum/alt_title/anomalist)
+	alt_titles |= list(JOB_ALT_SHIPBREAKER = /datum/alt_title/ship_breaker, JOB_ALT_ANOMALIST = /datum/alt_title/anomalist)
 
 
 /datum/job/atmos/New()
@@ -15,6 +15,11 @@
 	access |= list(ACCESS_ROBOTICS, ACCESS_TOX, ACCESS_TOX_STORAGE)
 	alt_titles |= list(JOB_ALT_DISPOSALS_TECHNICIAN = /datum/alt_title/disposals_tech)
 	alt_titles |= list(JOB_ALT_PHORON_RESEARCHER = /datum/alt_title/phoron_research, JOB_ALT_GAS_PHYSICIST = /datum/alt_title/gas_physicist)
+
+
+/datum/job/telecomms_specialist/New()
+	. = ..()
+	access |= list(ACCESS_ROBOTICS, ACCESS_ATMOSPHERICS)
 
 
 // Alt titles
