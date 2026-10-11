@@ -75,7 +75,7 @@
 /datum/alt_title/co_eng_officer
 	title = JOB_ALT_CO_ASSIST_ENG_OFFICER
 	title_blurb = "A " + JOB_ALT_CO_ASSIST_ENG_OFFICER + " is the introductory role to the " + JOB_CHIEF_ENGINEER + " position. Tasked with training their department staff, and assisting the " + JOB_CHIEF_ENGINEER + " directly."
-	additional_access = list(ACCESS_CE, ACCESS_ENGINE, ACCESS_ENGINE_EQUIP, ACCESS_TECH_STORAGE, ACCESS_ATMOSPHERICS, ACCESS_CONSTRUCTION, ACCESS_TCOMSAT, ACCESS_AI_UPLOAD)
+	additional_access = list(ACCESS_CE, ACCESS_ENGINE, ACCESS_ENGINE_EQUIP, ACCESS_TECH_STORAGE, ACCESS_ATMOSPHERICS, ACCESS_CONSTRUCTION, ACCESS_TCOMSAT, ACCESS_AI_UPLOAD, ACCESS_ROBOTICS)
 	title_outfit = /datum/decl/hierarchy/outfit/job/command_officer/eng_co
 
 /datum/alt_title/co_sci_officer
