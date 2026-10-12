@@ -20,7 +20,7 @@
 		//		if(1)
 		//			return new /obj/item/toy/figure/clown(here)
 
-		if(3)   //April
+		if(3)   //March
 			switch(DD)
 				if(11)
 					var/pillow = pick(/obj/item/toy/plushie/pillow,/obj/item/toy/plushie/pillow/red,/obj/item/toy/plushie/pillow/green,/obj/item/toy/plushie/pillow/blue)

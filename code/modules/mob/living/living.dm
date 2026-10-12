@@ -755,11 +755,11 @@
 
 	// shut down ongoing problems
 	radiation = 0
-	nutrition = 400
+	if(nutrition < 400)
+		nutrition = 400
 	bodytemperature = T20C
 	sdisabilities = 0
 	disabilities = 0
-	resting = FALSE
 
 	if(viruses)
 		viruses.Cut()
@@ -781,6 +781,8 @@
 		GLOB.living_mob_list += src
 		tod = null
 		timeofdeath = 0
+		// Arise!
+		GLOB.cultnet.updateVisibility(src, 0)
 
 	// restore us to conciousness
 	set_stat(CONSCIOUS)
