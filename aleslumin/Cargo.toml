@@ -1,0 +1,24 @@
+[package]
+name = "aleslumin"
+version = "0.0.1"
+edition = "2024"
+
+[lib]
+crate-type = ["cdylib"]
+
+[profile.release]
+debug = "full"
+lto = "thin"
+split-debuginfo = "packed"
+
+[profile.dev]
+debug = "full"
+opt-level = 0
+
+[dependencies]
+const_format = "0.2.33"
+eyre = "0.6.12"
+meowtonin = "0.3.1"
+
+[build-dependencies]
+bosion = "2.0.0"
