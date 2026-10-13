@@ -3,6 +3,10 @@
 	name = "Fire aberration"
 	effect_to_spawn = /obj/effect/abstract/aberration/fire
 
+/obj/effect/abstract/aberration/spawner/fire/small
+	range = 2
+	percent_drop = 30
+
 //The things that actually light you on fire.
 /obj/effect/abstract/aberration/fire
 	icon = 'icons/obj/traps/abberations.dmi'

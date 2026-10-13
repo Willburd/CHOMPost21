@@ -5,6 +5,10 @@
 	start_active = TRUE
 	delete_after_placement = FALSE
 
+/obj/effect/abstract/aberration/spawner/glass/small
+	range = 2
+	percent_drop = 30
+
 /obj/effect/abstract/aberration/spawner/glass/perform_pulse()
 	place_effects()
 	return
