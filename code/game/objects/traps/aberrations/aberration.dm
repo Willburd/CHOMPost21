@@ -1,6 +1,6 @@
 
 /obj/effect/abstract/aberration
-	name = "aberration"
+	name = "Aberration"
 	desc = "Some sort of weird, pulsating entity."
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "pre_confuse"
