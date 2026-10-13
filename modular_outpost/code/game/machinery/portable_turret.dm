@@ -3,10 +3,13 @@
 	var/ai_currently_inhabited = null
 	/// Forbids the AI from manually controlling this turret
 	var/forbid_ai_control = FALSE
+	description_silicon = "Alt-click to assume direct control and fire the turret manually with its own camera system."
 
 /obj/machinery/porta_turret/click_alt(mob/user)
-	if(!isAI(user))
-		return
+	if(isAI(user))
+		BorgAltClick(user)
+
+/obj/machinery/porta_turret/BorgAltClick(mob/living/silicon/robot/user)
 	if(forbid_ai_control)
 		to_chat(user, span_warning("This turret is beyond your control!"))
 		return
@@ -15,7 +18,7 @@
 	if(ai_currently_inhabited && ai_currently_inhabited != user)
 		to_chat(user, span_warning("This turret is already being directly controlled!"))
 		return
-	if(!(src.z in using_map.ai_shell_allowed_levels))
+	if(isAI(user) && !(src.z in using_map.ai_shell_allowed_levels))
 		return
 	user.AddComponent(/datum/component/remote_view, focused_on = src, vconfig_path = /datum/remote_view_config/ai_turret_view)
 	var/obj/item/gun/equipped = installation
