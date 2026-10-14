@@ -15,7 +15,7 @@
 	blinded = FALSE
 	anchored = TRUE	//  don't get pushed around
 	var/list/visibleChunks = list()
-	var/datum/visualnet/visualnet // Outpost 21 edit - Ghosts use camera network
+	var/datum/visualnet/ghost/visualnet
 	var/static_visibility_range = 16
 
 	var/can_reenter_corpse
@@ -103,17 +103,15 @@
 	animate(pixel_y = default_pixel_y, time = 10, loop = -1)
 	GLOB.observer_mob_list += src
 	. = ..()
-	visualnet = GLOB.cameranet // Outpost 21 edit - Ghosts use camera network
+	visualnet = GLOB.ghostnet
 
 /mob/observer/dead/proc/checkStatic()
 	return !(check_rights_for(src.client, R_ADMIN|R_FUN|R_EVENT|R_SERVER) || (client && client.buildmode) || isbelly(loc))
 
 /mob/observer/dead/Moved(atom/old_loc, direction, forced)
 	. = ..()
-	/* // Outpost 21 edit - Ghosts use camera network
 	if(isbelly(loc) && !isbelly(old_loc))
 		visualnet.addVisibility()
-	*/
 	if(visualnet && checkStatic())
 		visualnet.visibility(src, client)
 
@@ -163,8 +161,9 @@ Works together with spawning an observer, noted above.
 
 	handle_regular_hud_updates()
 	handle_vision()
-	check_area()
+	check_area()	//RS Port #658
 
+//RS Port #658 Start
 /mob/observer/dead/proc/check_area()
 	if(check_rights_for(client, R_HOLDER))
 		return
@@ -182,6 +181,7 @@ Works together with spawning an observer, noted above.
 	if(istype(O))
 		to_chat(src, span_notice("Now teleporting."))
 		forceMove(O.loc)
+//RS Port #658 End
 
 /mob/proc/ghostize(can_reenter_corpse = 1, aghost = FALSE)
 	reset_perspective(src) // End any remoteview we're in
@@ -263,9 +263,11 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	if(mind.current.key && copytext(mind.current.key,1,2)!="@")	//makes sure we don't accidentally kick any clients
 		to_chat(src, span_warning("Another consciousness is in your body... it is resisting you."))
 		return
+	//VOREStation Add
 	if(GLOB.prevent_respawns.Find(mind.name))
 		to_chat(src, span_warning("You already quit this round as this character, sorry!"))
 		return
+	//VOREStation Add End
 	if(mind.current.ajourn && mind.current.stat != DEAD) //check if the corpse is astral-journeying (it's client ghosted using a cultist rune).
 		var/found_rune
 		for(var/obj/effect/rune/R in mind.current.loc)   //whilst corpse is alive, we can only reenter the body if it's on the rune
@@ -352,25 +354,15 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 
 /mob/observer/dead/proc/jumpable_mobs()
 	var/list/mobs = getmobs()
-	var/admin = check_rights_for(client, R_HOLDER)
+	if(check_rights_for(client, R_HOLDER))
+		return mobs
 
-	for(var/mob/key in mobs)
-
-		if(isnewplayer(key) || isnull(key.loc)) //Nullspace or not in the game yet.
-			mobs -= key
-			continue
-
-		if(admin) //Admins can jump to people in secret/hidden areas.
-			continue
-
+	for(var/key in mobs)
 		var/mobz = get_z(mobs[key])
 		if(mobz in using_map?.secret_levels)
 			mobs -= key
-			continue
-
 		if(mobz in using_map?.hidden_levels)
 			mobs -= key
-			continue
 
 	return mobs
 
@@ -435,12 +427,14 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 			stop_following()
 		return
 
+	//RS Port #658 Start
 	var/area/A = get_area(destination)
 	if(A?.flag_check(AREA_BLOCK_GHOSTS) && !isbelly(destination) && !admin_ghosted && !just_spawned)
 		to_chat(src,span_warning("Sorry, that area does not allow ghosts."))
 		if(following)
 			stop_following()
 		return
+	//RS Port #658 End
 	return ..()
 
 /mob/observer/dead/Move(atom/newloc, direct = 0, movetime)
@@ -553,7 +547,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		body_backup.moveToNullspace() //YEET
 		qdel(body_backup)
 		body_backup = null
-	// visualnet.addVisibility(src, src.client) // Outpost 21 edit - Ghosts use camera network
+	visualnet.addVisibility(src, src.client)
 	visualnet = null
 	if(ismob(following))
 		var/mob/M = following
