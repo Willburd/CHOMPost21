@@ -43,6 +43,12 @@
 #define NETWORK_TALON_HELMETS "TalonHelmets" //VOREStation Add
 #define NETWORK_TALON_SHIP "TalonShip" //VOREStation Add
 
+// Outpost 21 edit begin - Our camera networks
+#define NETWORK_TCOMMS "Telecommunications"
+#define NETWORK_SUBSTATIONS "Substations"
+#define NETWORK_BODYCAM "Bodycameras"
+// Outpost 21 edit end
+
 //Camera networks
 #define NETWORK_TETHER "Tether"
 #define NETWORK_OUTSIDE "Outside"
