@@ -166,7 +166,7 @@ GLOBAL_LIST_INIT(ai_verbs_default, list(
 	add_language(LANGUAGE_AKHANI, 1)
 	add_language(LANGUAGE_SKRELLIAN, 1)
 	add_language(LANGUAGE_TRADEBAND, 1)
-	// add_language(LANGUAGE_GUTTER, 1) Outpost 21 edit - Not for borgs
+	add_language(LANGUAGE_GUTTER, 1)
 	add_language(LANGUAGE_EAL, 1)
 	add_language(LANGUAGE_SCHECHI, 1)
 	add_language(LANGUAGE_SIGN, 1)
@@ -262,6 +262,7 @@ GLOBAL_LIST_INIT(ai_verbs_default, list(
 	destroy_eyeobj()
 	return ..()
 
+
 /mob/living/silicon/ai/get_status_tab_items()
 	. = ..()
 	. += ""
@@ -282,6 +283,7 @@ GLOBAL_LIST_INIT(ai_verbs_default, list(
 		. += "AI shell beacons detected: [LAZYLEN(GLOB.available_ai_shells)]" //Count of total AI shells
 	else
 		. += "Systems nonfunctional"
+
 
 /mob/living/silicon/ai/proc/setup_icon()
 	var/file = file2text("config/custom_sprites.txt")
@@ -482,7 +484,7 @@ GLOBAL_LIST_INIT(ai_verbs_default, list(
 		unset_machine()
 		src << browse(null, t1)
 	if (href_list["switchcamera"])
-		switchCamera(locate(href_list["switchcamera"])) in GLOB.cameranet.cameras
+		switchCamera(locate(href_list["switchcamera"])) in SScameras.cameras
 	if (href_list["showalerts"])
 		subsystem_alarm_monitor()
 	//Carn: holopad requests
@@ -519,7 +521,7 @@ GLOBAL_LIST_INIT(ai_verbs_default, list(
 	return
 
 /mob/living/silicon/ai/proc/camera_visibility(mob/observer/eye/aiEye/moved_eye)
-	GLOB.cameranet.visibility(moved_eye, client, all_eyes)
+	SScameras.update_eye_chunk(moved_eye)
 
 /mob/living/silicon/ai/forceMove(atom/destination, direction, movetime)
 	. = ..()
@@ -571,7 +573,7 @@ GLOBAL_LIST_INIT(ai_verbs_default, list(
 		return
 
 	var/list/cameralist = new()
-	for (var/obj/machinery/camera/C in GLOB.cameranet.cameras)
+	for (var/obj/machinery/camera/C in SScameras.cameras)
 		if(!C.can_use())
 			continue
 		var/list/tempnetwork = difflist(C.network, GLOB.restricted_camera_networks, 1)
@@ -595,7 +597,7 @@ GLOBAL_LIST_INIT(ai_verbs_default, list(
 
 	src.network = network
 
-	for(var/obj/machinery/camera/C in GLOB.cameranet.cameras)
+	for(var/obj/machinery/camera/C in SScameras.cameras)
 		if(!C.can_use())
 			continue
 		if(network in C.network)
