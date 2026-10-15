@@ -202,7 +202,7 @@
 		overdose(M, alien, removed)
 		has_overdosed = TRUE
 	// Outpost 21 edit end
-	if((M.species.allergens & allergen_type))	//uhoh, we can't handle this!
+	if((M.species && (M.species.allergens & allergen_type)))	//uhoh, we can't handle this!
 		M.add_chemical_effect(CE_ALLERGEN, allergen_factor * removed)
 	remove_self(removed)
 	return

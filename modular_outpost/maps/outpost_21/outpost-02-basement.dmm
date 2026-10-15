@@ -66425,7 +66425,7 @@
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/spine/waste)
 "cPA" = (
-/obj/effect/abstract/abberation/spawner/fire,
+/obj/effect/abstract/aberration/spawner/fire,
 /turf/simulated/mineral/alt/turfpack/muriki,
 /area/mine/explored/muriki/cave/waste)
 "cPB" = (
