@@ -26350,6 +26350,10 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/civ/bunker)
+"aYM" = (
+/obj/machinery/computer/security/telescreen/entertainment,
+/turf/simulated/wall/r_wall,
+/area/rnd/xenobiology)
 "aYN" = (
 /obj/effect/auto_crayon{
 	icon_state = "left"
@@ -68673,9 +68677,6 @@
 	pixel_x = 28;
 	dir = 8
 	},
-/obj/machinery/computer/security/telescreen/entertainment{
-	pixel_y = -32
-	},
 /turf/simulated/floor/tiled/old_cargo/white,
 /area/rnd/xenobiology)
 "cUh" = (
@@ -110612,7 +110613,7 @@ cUO
 cUA
 cUq
 cUg
-aqc
+aYM
 cTT
 avh
 cSR
