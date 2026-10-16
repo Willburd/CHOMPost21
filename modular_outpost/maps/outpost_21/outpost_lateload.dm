@@ -46,6 +46,20 @@
 	mappath = "modular_outpost/maps/outpost_21/outpost-misc.dmm"
 	associated_map_datum = /datum/map_z_level/outpost_lateload/misc
 
+
+//////////////////////////////////////////////////////////////////////////////////////
+// Terrace Z-Level
+/datum/map_z_level/outpost_lateload/terrace
+	name = Z_NAME_OUTPOST_TERRACE
+	flags = MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_XENOARCH_EXEMPT|MAP_LEVEL_SEALED|MAP_LEVEL_EVENTS|MAP_LEVEL_AIRMIX_CLEANS|MAP_LEVEL_VORESPAWN|MAP_LEVEL_BELOW_BLOCKED
+
+/datum/map_template/outpost_lateload/terrace
+	name = Z_NAME_OUTPOST_TERRACE
+	name_alias = Z_NAME_ALIAS_SURFACE_WILDS
+	mappath = "modular_outpost/maps/outpost_21/outpost-terrace.dmm"
+	associated_map_datum = /datum/map_z_level/outpost_lateload/terrace
+
+
 //////////////////////////////////////////////////////////////////////////////
 //Rogue Mines Stuff
 /datum/map_template/outpost_lateload/outpost_roguemines1
