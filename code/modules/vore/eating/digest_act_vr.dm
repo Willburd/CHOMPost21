@@ -182,7 +182,7 @@
 /////////////
 
 /obj/item/card/id/digest_act(atom/movable/item_storage = null)
-	desc = "A partially digested card that has seen better days. The damage appears to be only cosmetic."
+	desc = "A partially digested card that has seen better days. The damage appears to be only cosmetic, but the access codes need to be reprogrammed at the HoP office or ID restoration terminal." //Outpost 21 edit - reenabling ID access digestion
 	if(!sprite_stack || !istype(sprite_stack) || !(sprite_stack.len))
 		icon = 'icons/obj/card.dmi'
 		icon_state = "[initial(icon_state)]_digested"
@@ -190,6 +190,9 @@
 		if(!sprite_stack.Find("digested"))
 			sprite_stack += "digested"
 	update_icon()
+	if(!(LAZYLEN(lost_access)) && LAZYLEN(access)) //Outpost 21 edit start - reenabling ID access digestion
+		lost_access = access	//Do not forget what access we lose
+	access = list()	// Then lose it 	//Outpost 21 edit end - reenabling ID access digestion
 	return FALSE
 
 /obj/item/holder/digest_act(atom/movable/item_storage = null)
