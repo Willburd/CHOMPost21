@@ -1239,7 +1239,6 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/obj/random/aberration,
 /turf/simulated/floor/tiled/dark,
 /area/rnd/xenobiology/xenobioh)
 "acO" = (
@@ -27597,6 +27596,10 @@
 /obj/effect/floorbreak,
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/xenobiology/xenobioh)
+"bbF" = (
+/obj/random/aberration,
+/turf/simulated/floor/tiled,
+/area/rnd/research/anomaly)
 "bbG" = (
 /obj/structure/trash_pile/disable_mouse_spawn,
 /turf/simulated/floor/plating/turfpack/muriki,
@@ -134986,7 +134989,7 @@ aaQ
 fNv
 leR
 ajW
-ajW
+bbF
 ajW
 atS
 ajW

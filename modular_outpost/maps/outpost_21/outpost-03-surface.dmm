@@ -88210,6 +88210,7 @@
 "wSa" = (
 /obj/effect/mine/frag,
 /obj/item/strangerock,
+/obj/random/aberration,
 /turf/simulated/floor/plating/external/turfpack/muriki,
 /area/mine/unexplored/muriki/mountaineast)
 "wSq" = (
