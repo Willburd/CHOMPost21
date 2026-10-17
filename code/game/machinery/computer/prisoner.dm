@@ -60,7 +60,7 @@
 				loc_display = pick(GLOB.teleportlocs)
 				xyz = "[rand(1,300)].[rand(1,300)].[rand(1,10)]"
 			var/area/A = get_area(L)
-			if(is_vore_jammed(track) || !A || A.flag_check(AREA_BLOCK_SUIT_SENSORS)) // || is_jammed(T)) // Outpost 21 edit - Don't jam tracking implants
+			if(is_vore_jammed(track) || !A || A.flag_check(AREA_BLOCK_SUIT_SENSORS) || is_jammed(T))
 				loc_display = "E4R@4"
 				xyz = "[rand(1,300)].[rand(1,300)].[rand(1,10)]"
 			trackImplants.Add(list(list(
