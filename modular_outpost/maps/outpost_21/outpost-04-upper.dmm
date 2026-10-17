@@ -35208,6 +35208,7 @@
 /obj/effect/floor_decal/industrial/warning/corner,
 /obj/machinery/atmospherics/pipe/simple/visible/red,
 /obj/effect/floor_decal/industrial/warning/color/corner/red,
+/obj/random/aberration,
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/phoronics/burn)
 "ndp" = (
