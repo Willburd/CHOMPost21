@@ -214,6 +214,7 @@
 					modify.access -= access_type
 					if(!access_allowed)
 						modify.access += access_type
+				modify.lost_access = list() //Outpost 21 edit - reenabling ID access digestion
 			. = TRUE
 
 		if("assign")
@@ -238,6 +239,7 @@
 					modify.access = access
 					modify.assignment = t1
 					modify.rank = t1
+					modify.lost_access = list() //Outpost 21 edit - reenabling ID access digestion
 
 				SEND_GLOBAL_SIGNAL(COMSIG_GLOB_REASSIGN_EMPLOYEE_IDCARD, modify)
 			. = TRUE
@@ -295,6 +297,7 @@
 			if(is_authenticated())
 				modify.assignment = "Dismissed"	//VOREStation Edit: setting adjustment
 				modify.access = list()
+				modify.lost_access = list() //Outpost 21 edit - reenabling ID access digestion
 				SEND_GLOBAL_SIGNAL(COMSIG_GLOB_TERMINATE_EMPLOYEE_IDCARD, modify)
 
 			. = TRUE
