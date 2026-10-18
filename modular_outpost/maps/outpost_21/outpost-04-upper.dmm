@@ -16388,6 +16388,14 @@
 	icon_state = "0-4"
 	},
 /obj/machinery/door/firedoor/glass,
+/obj/machinery/door/blast/regular{
+	density = 0;
+	dir = 8;
+	icon_state = "pdoor0";
+	id = "bridge blast";
+	name = "Bridge Blast Doors";
+	opacity = 0
+	},
 /turf/simulated/floor/plating,
 /area/bridge/holdout_armory)
 "cCM" = (
