@@ -11235,21 +11235,21 @@
 /obj/machinery/firealarm{
 	pixel_y = 26
 	},
-/obj/item/ammo_magazine/m44,
-/obj/item/ammo_magazine/m44,
-/obj/item/ammo_magazine/m44,
-/obj/item/ammo_magazine/m44,
-/obj/item/ammo_magazine/m44,
-/obj/item/ammo_magazine/m44,
-/obj/item/gun/projectile/deagle,
-/obj/item/gun/projectile/deagle,
 /obj/structure/closet/secure_closet/guncabinet{
-	name = "Handgun cabinet";
+	name = "Flamethrower Cabinet";
 	req_one_access = list(1)
 	},
 /obj/effect/floor_decal/corner/red/full{
 	dir = 8
 	},
+/obj/effect/floor_decal/industrial/outline/cut_corners/orange,
+/obj/item/tank/methane,
+/obj/item/tank/methane,
+/obj/item/tank/methane,
+/obj/item/tank/methane,
+/obj/item/stock_parts/capacitor/super,
+/obj/item/cell/device/weapon/empproof,
+/obj/item/gun/magnetic/gasthrower,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/security/tactical/red)
 "avg" = (
@@ -18922,6 +18922,16 @@
 	dir = 4
 	},
 /obj/machinery/elevator_warning,
+/obj/machinery/embedded_controller/radio/simple_docking_controller{
+	dir = 8;
+	frequency = 1381;
+	id_tag = "escape_dock";
+	name = "docking port controller";
+	pixel_x = 25;
+	req_one_access = list(13);
+	tag_door = "escape_dock";
+	pixel_y = 8
+	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/secondary/exit)
 "aSp" = (
@@ -35744,6 +35754,15 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
 	},
+/obj/machinery/porta_turret/heavy/disabler{
+	req_one_access = list(199);
+	check_access = 0;
+	check_anomalies = 0;
+	check_arrest = 0;
+	check_records = 0;
+	enabled = 0;
+	check_all = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/secondary/exit)
 "eFQ" = (
@@ -39380,12 +39399,16 @@
 	name = "Ammo";
 	req_access = list(2)
 	},
-/obj/item/ammo_magazine/m10mm/rubber,
-/obj/item/ammo_magazine/m10mm/rubber,
-/obj/item/ammo_magazine/m10mm/rubber,
-/obj/item/ammo_magazine/m10mm/rubber,
-/obj/item/ammo_magazine/m10mm/rubber,
-/obj/item/ammo_magazine/m10mm/rubber,
+/obj/item/ammo_magazine/m44/rubber,
+/obj/item/ammo_magazine/m44/rubber,
+/obj/item/ammo_magazine/m44/rubber,
+/obj/item/ammo_magazine/m44/rubber,
+/obj/item/ammo_magazine/m44/rubber,
+/obj/item/ammo_magazine/m44/rubber,
+/obj/item/ammo_magazine/m44/rubber,
+/obj/item/ammo_magazine/m44/rubber,
+/obj/item/gun/projectile/deagle,
+/obj/item/gun/projectile/deagle,
 /turf/simulated/floor/tiled/dark,
 /area/security/tactical)
 "fYt" = (
@@ -75768,14 +75791,14 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
 	},
-/obj/machinery/embedded_controller/radio/simple_docking_controller{
-	dir = 8;
-	frequency = 1381;
-	id_tag = "escape_dock";
-	name = "docking port controller";
-	pixel_x = 25;
-	req_one_access = list(13);
-	tag_door = "escape_dock"
+/obj/machinery/porta_turret/heavy/disabler{
+	req_one_access = list(199);
+	check_access = 0;
+	check_anomalies = 0;
+	check_arrest = 0;
+	check_records = 0;
+	enabled = 0;
+	check_all = 1
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/secondary/exit)

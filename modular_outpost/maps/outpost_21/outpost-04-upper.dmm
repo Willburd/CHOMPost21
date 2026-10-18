@@ -89,6 +89,9 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Radio entry"
+	},
 /turf/simulated/floor/tiled/monotile{
 	color = "#999999"
 	},
@@ -7016,7 +7019,15 @@
 /area/crew_quarters/captain)
 "apC" = (
 /obj/structure/table/wooden_reinforced,
-/obj/item/gold_star_printer,
+/obj/item/paper_bin{
+	pixel_x = -3;
+	pixel_y = 7
+	},
+/obj/item/stamp/captain{
+	pixel_x = 9;
+	pixel_y = 10
+	},
+/obj/item/pen/fountain5,
 /turf/simulated/floor/wood,
 /area/crew_quarters/captain)
 "apD" = (
@@ -7966,6 +7977,11 @@
 /turf/simulated/wall,
 /area/tcomfoyer)
 "arp" = (
+/obj/machinery/porta_turret/heavy/lmg{
+	req_one_access = list(199);
+	enabled = 0;
+	check_all = 1
+	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/tcomfoyer)
 "arq" = (
@@ -11388,6 +11404,9 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 4
 	},
+/obj/item/gold_star_printer{
+	pixel_y = 10
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/captain)
 "axG" = (
@@ -12362,6 +12381,13 @@
 	},
 /turf/simulated/floor,
 /area/maintenance/substation/command)
+"azm" = (
+/obj/machinery/camera/motion/telecom{
+	c_tag = "TCM - Exterior";
+	dir = 8
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/tcomfoyer)
 "azs" = (
 /obj/structure/railing,
 /obj/structure/railing{
@@ -21448,7 +21474,7 @@
 /obj/effect/floor_decal/industrial/warning,
 /obj/structure/window/reinforced,
 /obj/machinery/camera/motion/telecom{
-	c_tag = "Telecomms Access Corridor North"
+	c_tag = "TCM - Telecomms Access Corridor North"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -27755,7 +27781,7 @@
 /area/muriki/bathroom/phoronics)
 "iVr" = (
 /obj/machinery/camera/motion/telecom{
-	c_tag = "Telecomms Access Room"
+	c_tag = "TCM - Telecomms Access Room"
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/machinery/recharge_station,
@@ -30589,7 +30615,7 @@
 /area/mine/unexplored/muriki/mountaintop_pathway)
 "kxn" = (
 /obj/machinery/camera/motion/telecom{
-	c_tag = "Telecomms Access Corridor Central";
+	c_tag = "TCM - Telecomms Access Corridor Central";
 	dir = 8
 	},
 /turf/simulated/floor/reinforced/airless,
@@ -40297,6 +40323,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/universal{
 	dir = 4
 	},
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Radio exterior";
+	dir = 1
+	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/djstation)
 "pWH" = (
@@ -43816,6 +43846,9 @@
 /area/quartermaster/mining/secpi)
 "rQG" = (
 /obj/machinery/seed_extractor,
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Radio Growbed"
+	},
 /turf/simulated/floor/tiled/hydro,
 /area/djstation)
 "rQH" = (
@@ -44188,7 +44221,7 @@
 /area/muriki/rooftop/medgen)
 "sbM" = (
 /obj/machinery/camera/motion/telecom{
-	c_tag = "Telecomms Access Corridor South";
+	c_tag = "TCM - Telecomms Access Corridor South";
 	dir = 1
 	},
 /turf/simulated/floor/reinforced/airless,
@@ -49282,6 +49315,10 @@
 	name = "Journalist News Uploader";
 	pixel_y = -32
 	},
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Radio Workroom";
+	dir = 1
+	},
 /turf/simulated/floor/wood,
 /area/djstation)
 "uJC" = (
@@ -53751,6 +53788,9 @@
 /obj/random/mre,
 /obj/random/mre,
 /obj/random/mre,
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Radio break room"
+	},
 /turf/simulated/floor/wood,
 /area/djstation)
 "xjG" = (
@@ -115746,7 +115786,7 @@ luR
 luR
 luR
 luR
-arp
+azm
 awW
 arp
 aro
