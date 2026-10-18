@@ -390,25 +390,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/research/closet)
-"aaO" = (
-/obj/effect/floor_decal/corner/red/border{
-	dir = 8
-	},
-/obj/machinery/porta_turret/heavy/lmg{
-	req_one_access = list(199);
-	enabled = 0;
-	check_all = 1
-	},
-/obj/structure/window/basic,
-/obj/structure/window/basic{
-	dir = 1
-	},
-/obj/structure/window/basic{
-	dir = 4
-	},
-/obj/effect/floor_decal/industrial/hatch/red,
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/security/tankstore)
 "aaP" = (
 /obj/structure/railing{
 	dir = 8
@@ -1239,7 +1220,6 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/obj/random/aberration,
 /turf/simulated/floor/tiled/dark,
 /area/rnd/xenobiology/xenobioh)
 "acO" = (
@@ -26350,6 +26330,10 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/civ/bunker)
+"aYM" = (
+/obj/machinery/computer/security/telescreen/entertainment,
+/turf/simulated/wall/r_wall,
+/area/rnd/xenobiology)
 "aYN" = (
 /obj/effect/auto_crayon{
 	icon_state = "left"
@@ -27593,10 +27577,18 @@
 /obj/effect/floorbreak,
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/xenobiology/xenobioh)
+"bbF" = (
+/obj/random/aberration,
+/turf/simulated/floor/tiled,
+/area/rnd/research/anomaly)
 "bbG" = (
 /obj/structure/trash_pile/disable_mouse_spawn,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/sec)
+"bbH" = (
+/obj/effect/step_trigger/dephase_shadekin,
+/turf/simulated/wall/rplastitanium,
+/area/muriki/crew/bunker)
 "bbI" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -27626,6 +27618,21 @@
 	},
 /turf/simulated/floor/tiled/steel,
 /area/crew_quarters/recreation_area_hallway)
+"bbL" = (
+/obj/machinery/porta_turret/heavy/disabler{
+	req_one_access = list(199);
+	check_access = 0;
+	check_anomalies = 0;
+	check_arrest = 0;
+	check_records = 0;
+	enabled = 0;
+	check_all = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/turf/simulated/floor/reinforced,
+/area/muriki/crew/bunker)
 "bbM" = (
 /obj/effect/floor_decal/borderfloor/corner,
 /obj/effect/floor_decal/corner/lightgrey/bordercorner,
@@ -58348,6 +58355,10 @@
 "cwm" = (
 /obj/structure/table/standard,
 /obj/item/assembly/mousetrap,
+/obj/item/reagent_containers/glass/mortar_pestle{
+	pixel_x = 10;
+	pixel_y = 0
+	},
 /turf/simulated/floor/tiled/old_tile/turfpack/muriki,
 /area/maintenance/oldbridge)
 "cwn" = (
@@ -68672,9 +68683,6 @@
 	name = "Emergency NanoMed";
 	pixel_x = 28;
 	dir = 8
-	},
-/obj/machinery/computer/security/telescreen/entertainment{
-	pixel_y = -32
 	},
 /turf/simulated/floor/tiled/old_cargo/white,
 /area/rnd/xenobiology)
@@ -110612,7 +110620,7 @@ cUO
 cUA
 cUq
 cUg
-aqc
+aYM
 cTT
 avh
 cSR
@@ -124240,7 +124248,7 @@ nbk
 cQF
 cQF
 bEP
-aaO
+bEU
 ihy
 bEU
 whZ
@@ -134985,7 +134993,7 @@ aaQ
 fNv
 leR
 ajW
-ajW
+bbF
 ajW
 atS
 ajW
@@ -146685,7 +146693,7 @@ cgX
 xTO
 xTO
 xTO
-xTO
+bbL
 xTO
 xTO
 cgX
@@ -146846,9 +146854,9 @@ pmN
 cgY
 cgX
 cgX
-cgX
-cgX
-cgX
+bbH
+bbH
+bbH
 cgX
 cgY
 vSb
