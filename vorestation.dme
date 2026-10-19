@@ -5750,6 +5750,7 @@
 #include "modular_outpost\code\datums\components\undead_revival.dm"
 #include "modular_outpost\code\datums\components\waterbuckettrap.dm"
 #include "modular_outpost\code\datums\components\antags\changeling\powers\flesh_spiders.dm"
+#include "modular_outpost\code\datums\components\crafting\recipes\weapons.dm"
 #include "modular_outpost\code\datums\components\reagent_hose\connector.dm"
 #include "modular_outpost\code\datums\departmentgoals\outpostunique.dm"
 #include "modular_outpost\code\datums\elements\headbonker.dm"
