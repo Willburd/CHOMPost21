@@ -5730,6 +5730,7 @@
 #include "modular_outpost\code\_helpers\roundstats.dm"
 #include "modular_outpost\code\_onclick\hud\alert.dm"
 #include "modular_outpost\code\ATMOSPHERICS\components\binary_devices\pipeturbine.dm"
+#include "modular_outpost\code\ATMOSPHERICS\components\unary\heat_exchanger.dm"
 #include "modular_outpost\code\books\wiki_books.dm"
 #include "modular_outpost\code\controllers\subsystems\chemistry.dm"
 #include "modular_outpost\code\controllers\subsystems\events.dm"
@@ -6206,6 +6207,7 @@
 #include "modular_outpost\code\modules\vore\eating\digest_act_vr.dm"
 #include "modular_outpost\code\modules\xenobio\extracts.dm"
 #include "modular_outpost\code\modules\xenobio\extracts_worth.dm"
+#include "modular_outpost\code\objects\items\age_verification.dm"
 #include "modular_outpost\code\outpost_lore\crashed_ships.dm"
 #include "modular_outpost\code\outpost_lore\cultists.dm"
 #include "modular_outpost\code\outpost_lore\eclipse.dm"
@@ -6304,5 +6306,4 @@
 #include "modular_outpost\maps\~turfpacks\unsim_turfs\unsim_turfs_walls.dm"
 #include "modular_zubbers\code\modules\blooper\voice\bark_list.dm"
 #include "modular_zubbers\code\modules\emotes\definitions\audible.dm"
-#include "modular_outpost\code\objects\items\age_verification.dm"
 // END_INCLUDE
