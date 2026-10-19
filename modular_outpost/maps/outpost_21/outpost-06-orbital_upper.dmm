@@ -19360,7 +19360,6 @@
 	pixel_x = -32;
 	pixel_y = 32
 	},
-/obj/machinery/hologram/holopad,
 /obj/structure/extinguisher_cabinet{
 	pixel_x = -30;
 	pixel_y = 8;
