@@ -50,7 +50,6 @@
 				adjustHalLoss(10)
 
 // Upstream will never allow themselves to bathe
-#ifndef OUTPOST_FRIENDSHIP_MODE
 /mob/living/carbon/human
 	VAR_PRIVATE/feels_gross = 0
 
@@ -100,4 +99,3 @@
 		if(6)
 			if(prob(70))
 				to_chat(src,span_warning("You feel itchy."))
-#endif
