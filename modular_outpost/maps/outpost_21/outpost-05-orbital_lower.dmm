@@ -3702,7 +3702,7 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/glass_engineering{
-	name = "Engineering Hallway";
+	name = "Wheel Of Shame";
 	req_one_access = list(10,24,29,40)
 	},
 /obj/structure/disposalpipe/segment{
@@ -11237,7 +11237,7 @@
 /area/offworld/orbital/xenoarcheology/blackhole)
 "wE" = (
 /obj/machinery/door/airlock/silver{
-	name = "Toilet"
+	name = "Player Two"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -17368,7 +17368,7 @@
 /area/offworld/orbital/station/rust_tool_storage)
 "HF" = (
 /obj/machinery/door/airlock/silver{
-	name = "Toilet"
+	name = "Player One"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -17662,7 +17662,9 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/rust_aux_tool_storage)
 "HY" = (
-/obj/machinery/door/airlock,
+/obj/machinery/door/airlock{
+	name = "Black Hole"
+	},
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -19643,7 +19645,9 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/obj/machinery/door/airlock/glass_mining,
+/obj/machinery/door/airlock/glass_mining{
+	name = "Xenoarcheology Tank Storage"
+	},
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/xenoarcheology/tank_storage)
