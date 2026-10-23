@@ -121,7 +121,7 @@
 		// Panel open, stay uncloaked, or uncloak if already cloaked. If you don't cloak on place, ignore it and just be normal alpha.
 		alpha = camo_net ? (panel_open ? 255 : 50) : 255
 
-	else if((W.has_tool_quality(TOOL_WIRECUTTER) || istype(W, /obj/item/multitool)) && panel_open)
+	else if((W.has_tool_quality(TOOL_WIRECUTTER) || istype(W, /obj/item/multitool) || istype(W, /obj/item/assembly/signaler)) && panel_open) // Outpost 21 edit(port) - Signaler can open landmine wires UI
 		interact(user)
 	else
 		..()

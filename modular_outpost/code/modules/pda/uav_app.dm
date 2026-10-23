@@ -121,6 +121,19 @@
 		return linked_uav.relaymove(host_mob, direction, tgui_owner.signal_strength)
 	return FALSE
 
+/datum/remote_view_config/uav_control_pda/handle_attempt_zmovement(datum/component/remote_view/owner_component, mob/host_mob, direction, turf/destination)
+	var/datum/data/pda/app/uav_control/tgui_owner = owner_component.get_coordinator()
+	var/obj/item/uav/linked_uav = tgui_owner.our_uav?.resolve()
+	if(!linked_uav)
+		return ..()
+
+	var/turf/start = get_turf(linked_uav)
+	if(!start.CanZPass(linked_uav, direction))
+		to_chat(host_mob, span_warning("\The [start] is in the way."))
+		return TRUE
+	linked_uav.relaymove(host_mob, direction, tgui_owner.signal_strength)
+	return TRUE
+
 /datum/remote_view_config/uav_control_pda/handle_apply_visuals( mob/host_mob)
 	var/datum/data/pda/app/uav_control/tgui_owner = get_component_coordinator(host_mob)
 	if(!tgui_owner)

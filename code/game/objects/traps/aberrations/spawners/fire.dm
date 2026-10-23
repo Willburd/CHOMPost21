@@ -9,7 +9,7 @@
 
 //The things that actually light you on fire.
 /obj/effect/abstract/aberration/fire
-	icon = 'icons/obj/traps/abberations.dmi'
+	icon = 'icons/obj/traps/aberrations.dmi'
 	icon_state = "abb_fire"
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
 	COOLDOWN_DECLARE(fire_timer)
@@ -18,7 +18,7 @@
 	. = ..()
 	if(AM.is_incorporeal() || isobserver(AM) || istype(AM, /obj/effect/abstract))
 		return
-	if(isitem(AM)) // Outpost 21 edit(port) - Crash fix
+	if(isitem(AM))
 		var/obj/item/item_check = AM
 		if(item_check.item_flags & ABSTRACT)
 			return

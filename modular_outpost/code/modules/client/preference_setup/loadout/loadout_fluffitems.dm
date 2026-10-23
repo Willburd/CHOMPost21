@@ -49,14 +49,14 @@
 /datum/gear/fluff/ESHUI_medaldefop
 	display_name = "ESHUI Defensive Operations Medal"
 	path = /obj/item/clothing/accessory/medal/solgov/iron/star/eshui
-	ckeywhitelist = list("jollytjerry11","synxplushy","darklord92","niilomarvy","thewatcherxacol","ikidarsha","niilomarvy")
-	character_name = list("Ed'Reith Foley","Zeeshi","Vi'Akit","Ral'Hathamee","Krae Anraschia","P10-N33R","Iskgarl")
+	ckeywhitelist = list("jollytjerry11","synxplushy","darklord92","niilomarvy","thewatcherxacol","ikidarsha","niilomarvy","atcman","natesaruli","drakefrostpaw")
+	character_name = list("Ed'Reith Foley","Zeeshi","Vi'Akit","Ral'Hathamee","Krae Anraschia","P10-N33R","Iskgarl","Russel Ter","Feztha","Zarkhan Azurhe","Drake Downcrest")
 
 /datum/gear/fluff/ESHUI_medalcomb
 	display_name = "ESHUI Combat Action Medal"
 	path = /obj/item/clothing/accessory/medal/solgov/silver/sword/eshui
-	ckeywhitelist = list("ozydev","synxplushy","remthebold","cameron653","ironicleo","caramelion","pirakahunter788","haliaeetus","valinari","silencedmp5a5","natesaruli","spectralriot","th3l3gend27")
-	character_name = list("Raine Rattlewag","Cracker","Zeeshi","Trashfire","Diana Kuznetsova","Nikel","Tasesii","Calza Colfax","Atus","Valinari Sandivi Gloria","Russo","Cecil Colfax","Victim","ES-HASD #408","Magnus")
+	ckeywhitelist = list("ozydev","synxplushy","remthebold","cameron653","ironicleo","caramelion","pirakahunter788","haliaeetus","valinari","silencedmp5a5","natesaruli","spectralriot","th3l3gend27","ikidarsha","chaosneo")
+	character_name = list("Raine Rattlewag","Cracker","Zeeshi","Trashfire","Diana Kuznetsova","Nikel","Tasesii","Calza Colfax","Atus","Valinari Sandivi Gloria","Russo","Cecil Colfax","Victim","ES-HASD #408","Magnus","P10-N33R","K.I.L.O.","Seth Reyson")
 
 /datum/gear/fluff/ESHUI_commanderpin //A good goal for an antag to steal
 	display_name = "ESHUI Captaincy Medal"
