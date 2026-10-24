@@ -149,6 +149,11 @@
 	. = ..()
 	var_changes |= list("shredding" = TRUE)
 
+/datum/trait/positive/hardy_weakspecies
+	hidden = TRUE // Balance issues
+
+/datum/trait/positive/hardy_major_weakspecies
+	hidden = TRUE // Balance issues
 
 /////////////////////////////////////////////////////////////////////////////////////////////////
 /// NEUTRAL
