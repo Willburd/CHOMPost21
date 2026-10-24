@@ -21616,6 +21616,8 @@
 	name = "Bridge Bell";
 	pixel_y = 32
 	},
+/obj/item/clothing/under/teshari/smock/formal,
+/obj/item/clothing/suit/storage/teshari/beltcloak/jobs/command,
 /turf/simulated/floor/wood,
 /area/crew_quarters/heads/hop)
 "aXK" = (
@@ -38844,7 +38846,7 @@
 	},
 /obj/machinery/door/window/brigdoor/eastright{
 	dir = 8;
-	name = "Energy"
+	name = "Ion"
 	},
 /obj/item/melee/energy/sword/ionic_rapier/lance,
 /obj/item/melee/energy/sword/ionic_rapier/lance,
@@ -60637,7 +60639,7 @@
 	},
 /obj/machinery/door/window/brigdoor/eastleft{
 	dir = 8;
-	name = "Energy"
+	name = "Ion"
 	},
 /obj/item/ammo_magazine/ammo_box/b45/emp{
 	pixel_y = 12
@@ -63565,7 +63567,7 @@
 	health = 1e+006
 	},
 /obj/machinery/door/window/brigdoor/westleft{
-	name = "Energy"
+	name = "Riot Ballistics"
 	},
 /obj/structure/table/rack,
 /obj/item/gun/projectile/automatic/serdy/mp5,

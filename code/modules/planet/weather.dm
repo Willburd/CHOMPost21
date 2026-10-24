@@ -242,9 +242,7 @@
 					continue
 				planet_effect(M)
 		if(effect_flags & EFFECT_ONLY_LIVING)
-			for(var/mob/living/L as anything in GLOB.living_mob_list)
-				if(isobserver(L)) // Outpost 21 edit - AI eye is in mob list
-					return
+			for(var/mob/living/L in GLOB.living_mob_list)
 				if(L.is_incorporeal() && !(effect_flags & EFFECT_ALWAYS_HITS))
 					continue
 				planet_effect(L)
