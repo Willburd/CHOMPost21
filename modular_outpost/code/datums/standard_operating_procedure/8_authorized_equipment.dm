@@ -9,6 +9,7 @@
 			<br>
 			<b>Vehicles:</b>
 			<br>Some departments are authorized vehicles, such as: Cargo trolleys, kitchen trolleys, kitchen carts, security ATVs, security armored combat units, medical heavy recovery vehicles, janitorial electric carts, and any mechs produced by engineering staff. These vehicles are authorized to the department in order of seniority. The department head, or senior staff, is responsible for the safekeeping of vehicle keys. Vehicles are not to be parked in any way as to impede station foot traffic. Vehicles are to be returned to the department with the engine stopped and key removed upon cessation of usage. Vehicles with live ammunition must have their ammunition safely returned to secured storage and unloaded from the firing chamber upon return to the department.
+			<br>
 			<b>Weapon Permits:</b>
 			<br>Weapon permits are able to be issued by only; Central command, the station captain, or the head of security. And only able to be signed by the above, in addition to a head of personnel. Weapon permits must be registered to the owner and must have accompanying paperwork stamped and signed, explaining the specific usage of the weapon, reasoning for approval, and exact make and model of the weapon. Weapons with a permit are not authorized to be concealed in any way, and must be worn on one's belt, back, or kept in a holster which may be issued by security upon approval of a weapon permit. Weapons without an accompanying permit, paperwork, or in situations where the paperwork and permit do not match the weapon or owner, are to be immediately seized, individual searched for additional contraband, with security discretion on additional charges.
 			<hr>
@@ -23,26 +24,35 @@
 			<hr>
 			<b>Security:</b>
 			<br>Security staff are authorized many pieces of equipment based on the security level of the station. In specific, officers are authorized additional equipment based on condition code. During conditions Green and Yellow, only equipment from the Green armory and locker room is authorized, as defined below. During conditions Blue, Orange, and Magenta, any equipment in the Blue armory is allowed to replace, or enhance, the gear defined below. Security personnel are not authorized to 'stack' their gear, allowing other officers to utilize equipment and to ensure hostile forces do not gain excess equipment on death of an officer. During conditions Red and Delta, any equipment located in the Red armory and security Garage are authorized to be utilized as security forces see fit.
+			<br>
 			<br>Officers are required to have the following items on them at all times: A helmet, either worn or in their backpack. An armored vest worn on their chest. Backpack, satchel, or duffel bag worn on their back. A security belt on their waist. Jackboots or other authorized footwear worn. Black combat gloves worn on the hands. Authorized flash-proof sunglasses of: Black, Gray, Smoke, Navy, Dark red, or Clear in color. A holster worn on their person. A flash and/or pepper spray in the pocket. A stun baton kept in either a holster or in the belt. A taser OR handgun either holstered or kept in the belt. Up to 2 pairs of handcuffs, kept in the belt. Up to 1 spare power cell OR magazine kept in the belt. A mag-light kept in the belt. A body camera worn on the uniform, and enabled at all times when on patrol.
+			<br>
 			<br>Security personnel are authorized, but not required to have: 1 roll of tape. 1 security hailer or mask hailer. Up to 2 spare power cells OR spare magazines determined by weapon choice. A ticket printer. Holo-warrant printer. Winter clothing as required for species. Or any other device or tool found in the green armory or locker room, with respect to usage of other officers during, or after the shift.
 			<hr>
 			<b>Engineering:</b>
 			<br>Due to the nature of work, engineering is authorized: A tool belt, worn on the hips. A screwdriver, wrench, wire cutters, crowbar, cable coil, gas analyzer, T-ray scanner, welder, fire extinguishers, and a multi-tool. Any crew possessing a multi-tool outside of engineering staff is considered to be a minimum Infraction Contraband. Department-issued multi-tools are only authorized for their intended purpose, in the authorized area, and are not to leave the area they were issued to for that task.
+			<br>
 			<br>Engineering is authorized a void suit, for any usage in hazardous environments such as: exterior repair, engine repair, gas leaks, or any other system. Engineering is not authorized to wear these hard suits when not actively using them, but engineering is authorized to keep their suit within arm's reach, so long as they are capable of securing it from thievery.
 			<hr>
 			<b>Research:</b>
 			<br>Research is granted many freedoms with their equipment, due to the nature of research requiring multiple tools, potential experimental weaponry, or even actual weaponry for dealing with alien artifacts and hostile wildlife. However, these tools are authorized for those tasks only, and are not to leave research, or be used in any method inconsistent with their research of that specific tool or artifact.
+			<br>
 			<br>Xenoarcheology is issued various pieces of mining equipment to include hard suits, and a stun baton for usage on alien artifacts to stimulate electrical and stun response. These pieces of equipment are not to be taken out of the work area, and mining equipment used is to be returned immediately upon return to the station, unless hazardous radioactive sources are identified.
+			<br>
 			<br>Xenobiology is equipped with various instances of stun weaponry, typically slime-safe stun weapons. These pieces of equipment are not to leave the Xenobiology premises. Any wildlife escaping from the Xenobiology lab are to be considered a threat to the station and euthanized promptly by security staff.
 			<hr>
 			<b>Cargo/Mining:</b>
 			<br>Cargo and mining, while both under the Quartermaster and sharing department do have different authorized equipment based on listed job role in the crew manifest, and on role partaking during the shift. A shaft miner working in the cargo office is only authorized cargo technician equipment, and a cargo technician operating in a mining situation is authorized mining level equipment.
+			<br>
 			<br>While within Cargo, technicians are only authorized basic level equipment. While tool belts are provided, they are only for storing crowbars for usage of the cargo tug and opening supplied wooden crates. All other engineering tools are prohibited from cargo technician usage.
+			<br>
 			<br>While during Mining operations, shaft miners are authorized a RIG or other hard suit for EVA operations, both in the depths of the mines, and on off-planet excursions. They are authorized drills, picks, marker lights, glow sticks, flares, and are additionally authorized most engineering tools, with the exception of multi-tools, for entry into derelicts, or emergency escape from decompressed compartments. Miners are to turn in their gear to a known storage location upon cessation of their duties.
 			<hr>
 			<b>Hydroponics:</b>
 			<br>Hydroponics is authorized supplied kitchen gear, while within kitchen space. Botany gloves are authorized to protect from plant stings, apiarist uniforms for beekeeping, plant killer, and any other tools needed for safe growing of plants and foods within the kitchen space.
+			<br>
 			<br>Chefs are authorized butcher knifes, meat hooks, and other cutting or hazardous utensils for meal preparation. These tools are not to leave kitchen space. Any of these tools leaving kitchen space is grounds for contraband and station theft, with severity decided by security with context.
+			<br>
 			<br>The Bartender is authorized an issued weapon permit and break-action shotgun with beanbag rounds. This shotgun is only authorized to be used by the bartender, in defense of the bar. Standard weapon permit rules apply: The shotgun may not be concealed in any way. The weapon permit must be on-hand, and registered to the bartender. The shotgun may not leave the bar for any reason. The bartender is liable for any injury or destruction of personnel or crew caused by the shotgun. The bartender is responsible for the security of the weapon, and if found missing under a bartender's shift, the bartender is liable for negligence or conspiracy if evidence proves the weapon was knowingly removed. This weapon is to be specially serialized, and any damage to the serialization will be found to be a felony.
 			<hr>
 			<b>Sanitation:</b>
@@ -50,4 +60,5 @@
 			<hr>
 			<b>Civilian:</b>
 			<br>Civilian roles include: Chaplain, librarian, visitors, residents, lawyers, IAAs, or any other role that does not belong to any prior listed department. Civilian positions are not authorized any additional equipment. Possession of a tool belt, gloves, flash-proof glasses, or any other visible department equipment is grounds for immediate search and seizure under contraband SoP found in SOP document; Station Law.
+			<br>
 			<br>The radio listening outpost is authorized 1 serialized bolt-action rifle, with one box of hunting rounds for self-defense against hostile wildlife and the defense of the listening outpost and telecommunications. This rifle is not to leave the listening outpost premises, and is grounds for immediate felonious arrest if located on station property. Any damage or injury to the station or crew from long-range fire is considered an act of sabotage and to be treated as a red-level threat."}
