@@ -1824,7 +1824,7 @@
 	desc = "Whatever strain of xenochimera you are is not immediately infectious to others, resulting in no spread through slices, bites, or other forms of contact."
 	sort = TRAIT_SORT_SPECIES
 	allowed_species = list(SPECIES_XENOCHIMERA)
-	hidden = TRUE //Disabled on Virgo. Used downstream.
+	hidden = FALSE //Disabled on Virgo. Used downstream. //Outpost 21 edit - Enabling trait
 	cost = 0
 
 /datum/trait/neutral/non_infectious/apply(datum/species/S,mob/living/carbon/human/H, list/trait_prefs)
