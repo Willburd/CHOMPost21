@@ -335,6 +335,10 @@
 	},
 /turf/simulated/mineral/alt/turfpack/muriki,
 /area/mine/unexplored/muriki/mountaintopeast)
+"aaL" = (
+/obj/structure/ladder,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/unexplored/muriki/mountaintopeast)
 "aaM" = (
 /obj/structure/fence{
 	dir = 4
@@ -115593,7 +115597,7 @@ luR
 luR
 ahX
 afe
-afe
+aaL
 ahZ
 ahX
 luR
