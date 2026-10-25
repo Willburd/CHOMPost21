@@ -3616,6 +3616,12 @@
 	},
 /turf/simulated/floor/tiled/steel,
 /area/hallway/primary/central_three)
+"afc" = (
+/obj/machinery/door/airlock/glass_external{
+	req_one_access = null
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/unexplored/muriki/mountaineast)
 "afd" = (
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 1
@@ -8209,6 +8215,10 @@
 	},
 /turf/simulated/floor/wood/sif/parquet,
 /area/muriki/crew/casino)
+"ani" = (
+/obj/structure/flora/mushroom,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/unexplored/muriki/mountaineast)
 "anj" = (
 /obj/structure/cable/green{
 	icon_state = "0-4"
@@ -9299,6 +9309,11 @@
 /obj/structure/prop/rock,
 /turf/simulated/floor/outdoors/ice/turfpack/muriki,
 /area/mine/unexplored/muriki/valleyeast)
+"apH" = (
+/obj/structure/ladder/up,
+/obj/effect/floor_decal/industrial/outline/grey,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/unexplored/muriki/mountaineast)
 "apI" = (
 /obj/structure/fence/eshui_sign{
 	dir = 1
@@ -152059,8 +152074,8 @@ rJa
 fhs
 fhs
 fhs
-rJa
-rJa
+fhs
+fhs
 rJa
 rJa
 rJa
@@ -152222,7 +152237,7 @@ rJa
 fhs
 fhs
 fhs
-rJa
+fhs
 fhs
 aIe
 fhs
@@ -152380,10 +152395,10 @@ rJa
 rJa
 rJa
 rJa
-rJa
-rJa
-rJa
-fhs
+azn
+azn
+afc
+azn
 fhs
 fhs
 fhs
@@ -152542,10 +152557,10 @@ rJa
 rJa
 rJa
 rJa
-rJa
-rJa
-rJa
-aIe
+azn
+ayd
+ayd
+azn
 fhs
 rJa
 rJa
@@ -152704,10 +152719,10 @@ rJa
 rJa
 rJa
 rJa
-rJa
-rJa
-rJa
-rJa
+azn
+apH
+ani
+azn
 rJa
 rJa
 rJa
@@ -152866,10 +152881,10 @@ rJa
 rJa
 rJa
 rJa
-rJa
-rJa
-rJa
-rJa
+azn
+azn
+azn
+azn
 rJa
 rJa
 rJa

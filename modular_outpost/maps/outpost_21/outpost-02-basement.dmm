@@ -394,7 +394,7 @@
 /obj/structure/bed/bath,
 /obj/random/soap,
 /turf/simulated/floor/reinforced,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "aaP" = (
 /obj/structure/railing{
 	dir = 8
@@ -1222,6 +1222,12 @@
 	icon_state = "1-8"
 	},
 /obj/effect/catwalk_plated/dark,
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
+/obj/structure/cable/green{
+	icon_state = "2-4"
+	},
 /turf/simulated/floor/plating,
 /area/rnd/xenobiology/xenobioh)
 "acN" = (
@@ -1237,6 +1243,13 @@
 	id_tag = "sciding";
 	name = "Research Call";
 	pixel_y = 32
+	},
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
+/obj/machinery/power/apc/alarms_hidden{
+	dir = 4;
+	pixel_x = 24
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/rnd/xenobiology/xenobioh)
@@ -2053,6 +2066,7 @@
 /obj/effect/floor_decal/milspec/color/purple/half{
 	dir = 5
 	},
+/obj/structure/foamedmetal,
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/xenobiology/xenobioh)
 "aeB" = (
@@ -2423,6 +2437,7 @@
 /obj/effect/floor_decal/milspec/color/purple/half{
 	dir = 6
 	},
+/obj/structure/foamedmetal,
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/xenobiology/xenobioh)
 "aft" = (
@@ -3432,12 +3447,12 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "ahf" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/red,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "ahg" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
@@ -3888,7 +3903,7 @@
 	dir = 9
 	},
 /turf/simulated/floor/tiled,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "ahZ" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
@@ -4586,6 +4601,9 @@
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/item/taperoll/engineering/applied,
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/specialty/expie_clubhouse/archive)
 "aiZ" = (
@@ -5200,13 +5218,16 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "akk" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/red{
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/specialty/expie_clubhouse/archive)
@@ -5216,6 +5237,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/red{
 	dir = 9
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/specialty/expie_clubhouse/archive)
@@ -5238,6 +5262,13 @@
 	dir = 6
 	},
 /obj/item/assembly/mousetrap/armed,
+/obj/structure/cable/green{
+	icon_state = "0-8"
+	},
+/obj/machinery/power/apc/alarms_hidden{
+	dir = 4;
+	pixel_x = 24
+	},
 /turf/simulated/floor/tiled/dark,
 /area/specialty/expie_clubhouse/archive)
 "ako" = (
@@ -5659,9 +5690,6 @@
 "akU" = (
 /turf/simulated/open/muriki,
 /area/mine/unexplored/muriki/cave/underdark_pit/south_west_waste)
-"akV" = (
-/turf/simulated/floor/tiled/dark,
-/area/rnd/xenobiology/xenobioh)
 "akW" = (
 /obj/structure/disposalpipe/segment{
 	dir = 1;
@@ -5760,6 +5788,9 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/civ/south)
+"alh" = (
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
+/area/mine/unexplored/muriki/mountainbase)
 "ali" = (
 /obj/effect/floor_decal/milspec/color/orange/half{
 	dir = 8
@@ -5815,6 +5846,9 @@
 	},
 /turf/simulated/floor/tiled,
 /area/rnd/research/anomaly)
+"alq" = (
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
+/area/mine/explored/muriki/cave/sci/east_access)
 "alr" = (
 /obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/wall/durasteel,
@@ -5896,7 +5930,7 @@
 /obj/effect/landmark/redspaceexit,
 /obj/item/material/barbedwire/start_active,
 /turf/simulated/floor/tiled/white,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "alA" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
@@ -5911,7 +5945,7 @@
 	},
 /obj/item/material/barbedwire/start_active,
 /turf/simulated/floor/tiled/white,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "alB" = (
 /obj/effect/map_effect/interval/burnpit,
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
@@ -5957,14 +5991,14 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "alE" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/effect/floor_decal/corner/purple{
 	dir = 5
 	},
 /turf/simulated/floor/tiled,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "alF" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /obj/effect/floor_decal/corner/purple{
@@ -5972,7 +6006,7 @@
 	},
 /obj/machinery/space_heater,
 /turf/simulated/floor/tiled,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "alG" = (
 /obj/machinery/atmospherics/unary/outlet_injector{
 	dir = 4;
@@ -5997,7 +6031,7 @@
 	pixel_x = 6
 	},
 /turf/simulated/floor/tiled,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "alH" = (
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/black,
 /obj/structure/cable/green{
@@ -6006,8 +6040,11 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 1
 	},
+/obj/structure/cable/green{
+	icon_state = "2-4"
+	},
 /turf/simulated/floor/tiled,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "alI" = (
 /obj/machinery/atmospherics/unary/outlet_injector{
 	dir = 8;
@@ -6025,8 +6062,11 @@
 /obj/effect/auto_crayon{
 	icon_state = "seven_resolve"
 	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "alJ" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/scrubbers{
 	dir = 8
@@ -6507,6 +6547,12 @@
 /obj/structure/table/standard,
 /turf/simulated/floor/tiled,
 /area/rnd/research/anomaly)
+"amE" = (
+/turf/simulated/wall/r_wall,
+/area/specialty/expie_clubhouse)
+"amF" = (
+/turf/simulated/floor/reinforced,
+/area/specialty/expie_clubhouse)
 "amG" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/yellow,
 /obj/machinery/meter,
@@ -6611,13 +6657,13 @@
 "amP" = (
 /obj/structure/sign/warning/caution,
 /turf/simulated/wall/r_wall,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "amQ" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "amR" = (
 /obj/effect/floor_decal/corner/purple{
 	dir = 5
@@ -6638,18 +6684,18 @@
 	dir = 10
 	},
 /turf/simulated/floor/tiled/freezer,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "amT" = (
 /turf/simulated/floor/tiled,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "amU" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/red,
 /turf/simulated/floor/tiled,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "amV" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "amW" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
 	dir = 6
@@ -7525,7 +7571,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/freezer,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "aoz" = (
 /obj/effect/zone_divider,
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -7565,7 +7611,7 @@
 	},
 /obj/effect/floor_decal/industrial/outline/red,
 /turf/simulated/floor/tiled/steel_ridged,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "aoE" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -7577,7 +7623,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "aoF" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/black{
 	dir = 4
@@ -7588,7 +7634,7 @@
 	},
 /obj/structure/barricade/sandbag,
 /turf/simulated/floor/plating,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "aoG" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -7603,7 +7649,7 @@
 	icon_state = "three_trade"
 	},
 /turf/simulated/floor/tiled/white,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "aoH" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/research{
@@ -7616,7 +7662,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_ridged,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "aoI" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/black{
 	dir = 4
@@ -7625,7 +7671,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "aoJ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/black{
 	dir = 4
@@ -7635,7 +7681,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "aoK" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/black{
 	dir = 4
@@ -7645,7 +7691,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "aoL" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/black{
 	dir = 4
@@ -7654,7 +7700,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/plating,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "aoM" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/black{
 	dir = 4
@@ -7663,7 +7709,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "aoN" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/red,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -7674,7 +7720,7 @@
 	pixel_x = 32
 	},
 /turf/simulated/floor/tiled,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "aoO" = (
 /obj/machinery/camera/network/engineering{
 	c_tag = "ENG - Atmo Tank - Nitrogen";
@@ -8322,7 +8368,7 @@
 	req_one_access = null
 	},
 /turf/simulated/floor/tiled/steel_ridged,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "apR" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -8339,7 +8385,7 @@
 	pixel_y = -26
 	},
 /turf/simulated/floor/plating,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "apS" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/red{
 	dir = 4
@@ -8350,7 +8396,7 @@
 /obj/effect/catwalk_plated/white,
 /obj/structure/barricade/sandbag,
 /turf/simulated/floor/plating,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "apT" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -8365,7 +8411,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/white,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "apU" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/atmospherics/pipe/simple/hidden/red{
@@ -8381,7 +8427,7 @@
 	name = "Xenobiology Lab"
 	},
 /turf/simulated/floor/tiled/steel_ridged,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "apV" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/red{
 	dir = 4
@@ -8393,7 +8439,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "apW" = (
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/red,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -8403,7 +8449,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "apX" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/red{
 	dir = 4
@@ -8413,7 +8459,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "apY" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/red{
 	dir = 4
@@ -8425,7 +8471,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "apZ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/black,
 /obj/machinery/atmospherics/pipe/simple/hidden/red{
@@ -8444,7 +8490,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "aqa" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/red{
 	dir = 4
@@ -8460,7 +8506,7 @@
 	pixel_x = 30
 	},
 /turf/simulated/floor/tiled,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "aqb" = (
 /turf/simulated/wall,
 /area/rnd/xenobiology)
@@ -8482,7 +8528,7 @@
 	},
 /obj/structure/window/basic,
 /turf/simulated/floor/reinforced,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "aqf" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -8913,7 +8959,7 @@
 	},
 /obj/item/material/barbedwire/start_active,
 /turf/simulated/floor/tiled/white,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "arc" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -8926,7 +8972,7 @@
 /obj/machinery/light,
 /obj/item/material/barbedwire/start_active,
 /turf/simulated/floor/tiled/white,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "ard" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 6
@@ -8939,7 +8985,7 @@
 	pixel_y = -26
 	},
 /turf/simulated/floor/tiled/white,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "are" = (
 /obj/structure/table/steel,
 /obj/machinery/light,
@@ -8949,7 +8995,7 @@
 	},
 /obj/effect/floor_decal/corner/purple/full,
 /turf/simulated/floor/tiled,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "arf" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
@@ -8962,7 +9008,7 @@
 	dir = 10
 	},
 /turf/simulated/floor/tiled,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "arg" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
@@ -8971,7 +9017,7 @@
 	dir = 10
 	},
 /turf/simulated/floor/tiled,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "arh" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -8985,7 +9031,7 @@
 	desc = "A sign marking the area for research into slimes."
 	},
 /turf/simulated/wall,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "arj" = (
 /obj/structure/curtain/open/shower,
 /obj/effect/floor_decal/spline/plain{
@@ -9544,7 +9590,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/steel_ridged,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "asf" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/atmospherics/pipe/simple/hidden/red,
@@ -9554,7 +9600,7 @@
 	req_one_access = null
 	},
 /turf/simulated/floor/tiled/steel_ridged,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "asg" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -9972,7 +10018,7 @@
 /obj/random/firstaid,
 /obj/random/firstaid,
 /turf/simulated/floor/wood/turfpack/muriki,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "ata" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -9996,7 +10042,7 @@
 	pixel_y = -3
 	},
 /turf/simulated/floor/wood/turfpack/muriki,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "atc" = (
 /obj/structure/table/rack/shelf,
 /obj/random/medical,
@@ -10004,7 +10050,7 @@
 /obj/random/medical,
 /obj/random/medical,
 /turf/simulated/floor/wood/turfpack/muriki,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "atd" = (
 /obj/structure/window/reinforced/full,
 /obj/structure/grille,
@@ -10020,7 +10066,7 @@
 	},
 /obj/machinery/medical_kiosk,
 /turf/simulated/floor/tiled/white,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "atf" = (
 /obj/structure/disposalpipe/broken{
 	dir = 1
@@ -10034,7 +10080,7 @@
 	},
 /obj/item/toy/plushie/expie,
 /turf/simulated/floor/tiled/white,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "ath" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/black,
 /obj/structure/cable/green{
@@ -10044,12 +10090,12 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_ridged,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "ati" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/red,
 /turf/simulated/floor/tiled/steel_ridged,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "atj" = (
 /obj/structure/reagent_dispensers/water_cooler/full{
 	pixel_x = 5
@@ -10062,7 +10108,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "atk" = (
 /obj/structure/grille,
 /obj/machinery/door/blast/regular{
@@ -10079,7 +10125,7 @@
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/plating,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "atl" = (
 /obj/structure/prop/rock/small/wateralt,
 /turf/simulated/floor/outdoors/ice/turfpack/muriki{
@@ -10110,7 +10156,7 @@
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/plating,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "atn" = (
 /obj/machinery/atmospherics/portables_connector{
 	dir = 1
@@ -10486,13 +10532,13 @@
 	dir = 8
 	},
 /turf/simulated/floor/wood/turfpack/muriki,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "auc" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/red{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "aud" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -10508,7 +10554,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/wood/turfpack/muriki,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "auf" = (
 /obj/structure/window/reinforced/full,
 /obj/structure/grille,
@@ -10516,7 +10562,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "aug" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/black,
 /obj/machinery/atmospherics/pipe/simple/hidden/red{
@@ -10527,7 +10573,7 @@
 	},
 /obj/effect/catwalk_plated/white,
 /turf/simulated/floor/plating,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "auh" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/red,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -10535,7 +10581,7 @@
 	},
 /obj/effect/catwalk_plated/white,
 /turf/simulated/floor/plating,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "aui" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/red{
 	dir = 10
@@ -10549,7 +10595,7 @@
 	dir = 6
 	},
 /turf/simulated/floor/tiled/white,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "auj" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 10
@@ -10559,7 +10605,7 @@
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled/steel_ridged,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "auk" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/structure/cable/green{
@@ -10569,7 +10615,7 @@
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "aul" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 6
@@ -10578,7 +10624,7 @@
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/tiled/steel_ridged,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "aum" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -11117,7 +11163,7 @@
 	pixel_y = 2
 	},
 /turf/simulated/floor/wood/turfpack/muriki,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "avh" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -11129,13 +11175,13 @@
 	dir = 6
 	},
 /turf/simulated/floor/wood/turfpack/muriki,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "avj" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/red{
 	dir = 4
 	},
 /turf/simulated/floor/wood/turfpack/muriki,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "avk" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -11148,7 +11194,7 @@
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/plating,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "avm" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/black,
 /obj/structure/cable/green{
@@ -11161,7 +11207,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "avn" = (
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology)
@@ -11172,7 +11218,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "avp" = (
 /obj/machinery/light{
 	dir = 1
@@ -11181,13 +11227,13 @@
 	dir = 5
 	},
 /turf/simulated/floor/tiled/white,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "avq" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/white,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "avr" = (
 /obj/effect/landmark{
 	name = "xeno_spawn";
@@ -11237,7 +11283,7 @@
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/plating,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "avu" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -11253,7 +11299,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/carpet/bcarpet/turfpack/muriki,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "avw" = (
 /turf/simulated/flesh,
 /area/muriki/processor/hall)
@@ -11713,7 +11759,7 @@
 /obj/item/storage/firstaid/surgery,
 /obj/structure/table/steel,
 /turf/simulated/floor/wood/turfpack/muriki,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "awo" = (
 /obj/machinery/holoposter{
 	dir = 1;
@@ -11721,7 +11767,7 @@
 	},
 /obj/structure/table/steel,
 /turf/simulated/floor/wood/turfpack/muriki,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "awp" = (
 /obj/machinery/atmospherics/binary/pump{
 	dir = 1
@@ -11730,7 +11776,7 @@
 	dir = 9
 	},
 /turf/simulated/floor/plating,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "awq" = (
 /obj/machinery/atmospherics/binary/pump{
 	dir = 1
@@ -11739,7 +11785,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/plating,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "awr" = (
 /turf/simulated/wall/r_wall,
 /area/muriki/bathroom/scilower)
@@ -11754,7 +11800,7 @@
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/carpet/turfpack/muriki,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "awu" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
@@ -11763,7 +11809,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/carpet/turfpack/muriki,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "awv" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/red,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -11776,7 +11822,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/carpet/turfpack/muriki,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "aww" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -11788,7 +11834,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "awx" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -11797,7 +11843,7 @@
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled/white,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "awy" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -11815,21 +11861,13 @@
 	dir = 10
 	},
 /turf/simulated/floor/tiled,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "awz" = (
-/obj/machinery/door/blast/regular{
-	density = 0;
-	icon_state = "pdoor0";
-	id = "xenobio1";
-	name = "Containment Blast Doors";
-	opacity = 0;
-	dir = 4
-	},
 /obj/machinery/shower{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/steel_ridged,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "awA" = (
 /obj/effect/floorbreak,
 /turf/simulated/floor/wood/alt/turfpack/muriki,
@@ -12032,14 +12070,14 @@
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/plating,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "axa" = (
 /obj/machinery/atmospherics/portables_connector{
 	dir = 1
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/plating,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "axb" = (
 /obj/structure/table/standard,
 /obj/item/geiger/wall{
@@ -12050,7 +12088,7 @@
 	dir = 9
 	},
 /turf/simulated/floor/tiled/white,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "axc" = (
 /obj/machinery/atmospherics/unary/outlet_injector{
 	dir = 4;
@@ -12062,7 +12100,7 @@
 /obj/structure/bed/double/padded,
 /obj/item/bedsheet/orangedouble,
 /turf/simulated/floor/carpet/turfpack/muriki,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "axd" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/black{
 	dir = 9
@@ -12070,7 +12108,7 @@
 /obj/structure/bed/double/padded,
 /obj/item/bedsheet/double,
 /turf/simulated/floor/carpet/turfpack/muriki,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "axe" = (
 /obj/structure/prop/rock/water,
 /turf/simulated/floor/outdoors/ice/turfpack/muriki{
@@ -12085,7 +12123,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/carpet/turfpack/muriki,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "axg" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -12134,7 +12172,7 @@
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/plating,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "axj" = (
 /turf/simulated/floor/flesh/turfpack/muriki,
 /area/muriki/processor/hall)
@@ -12560,13 +12598,13 @@
 	dir = 9
 	},
 /turf/simulated/floor/tiled/white,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "ayd" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
 	},
 /turf/simulated/floor/carpet/turfpack/muriki,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "aye" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/red{
 	dir = 9
@@ -12575,7 +12613,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/carpet/turfpack/muriki,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "ayf" = (
 /turf/simulated/floor/outdoors/ice/turfpack/muriki{
 	outdoors = 0
@@ -12583,7 +12621,7 @@
 /area/mine/explored/muriki/river/east)
 "ayg" = (
 /turf/simulated/floor/plating,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "ayh" = (
 /obj/structure/table/standard,
 /obj/machinery/light{
@@ -12593,7 +12631,7 @@
 	dir = 6
 	},
 /turf/simulated/floor/tiled/white,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "ayi" = (
 /obj/machinery/door/blast/regular{
 	id = "xenobiovs";
@@ -13065,7 +13103,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/plating,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "azh" = (
 /obj/structure/grille,
 /obj/machinery/door/blast/regular{
@@ -13089,7 +13127,7 @@
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/plating,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "azi" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 5
@@ -13109,7 +13147,7 @@
 	icon_state = "pill"
 	},
 /turf/simulated/floor/tiled/old_cargo/white,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "azk" = (
 /obj/machinery/gibber/autogibber{
 	emagged = 1
@@ -13156,7 +13194,7 @@
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled/steel_ridged,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "azo" = (
 /obj/structure/grille,
 /obj/machinery/door/blast/regular{
@@ -13182,7 +13220,7 @@
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/plating,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "azp" = (
 /obj/machinery/button/remote/blast_door{
 	id = "procatmodoor";
@@ -13585,7 +13623,7 @@
 /area/engineering/atmoshall)
 "aAe" = (
 /turf/simulated/floor/tiled/steel_ridged,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "aAf" = (
 /obj/structure/disposalpipe/segment{
 	dir = 1;
@@ -13605,7 +13643,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/white,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "aAh" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -13614,13 +13652,13 @@
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled/white,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "aAi" = (
 /obj/machinery/shower{
 	pixel_y = 3
 	},
 /turf/simulated/floor/tiled/steel_ridged,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "aAj" = (
 /turf/simulated/floor/reinforced/airmix,
 /area/engineering/atmos)
@@ -14174,7 +14212,7 @@
 	icon_state = "0-4"
 	},
 /turf/simulated/floor/plating,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "aBm" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 6
@@ -14195,7 +14233,7 @@
 	dir = 10
 	},
 /turf/simulated/floor/tiled/white,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "aBo" = (
 /obj/machinery/sparker{
 	id = "Xenobiofire";
@@ -14208,7 +14246,7 @@
 	dir = 10
 	},
 /turf/simulated/floor/tiled/white,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "aBp" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 10
@@ -14224,7 +14262,7 @@
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled/steel_ridged,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "aBq" = (
 /obj/structure/grille,
 /obj/machinery/door/blast/regular{
@@ -14253,7 +14291,7 @@
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/plating,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "aBr" = (
 /obj/structure/disposalpipe/trunk{
 	dir = 8
@@ -14265,7 +14303,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/carpet/bcarpet/turfpack/muriki,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "aBs" = (
 /turf/simulated/open/muriki,
 /area/mine/unexplored/muriki/cave/underdark_pit/east_civ)
@@ -14734,7 +14772,7 @@
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled/steel_ridged,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "aCy" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
@@ -14752,7 +14790,7 @@
 	dir = 10
 	},
 /turf/simulated/floor/tiled,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "aCz" = (
 /obj/machinery/disposal,
 /obj/structure/disposalpipe/trunk{
@@ -14768,7 +14806,7 @@
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled/steel_ridged,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "aCA" = (
 /obj/random/junk,
 /turf/simulated/floor/plating,
@@ -15265,13 +15303,13 @@
 	},
 /obj/structure/cable/green,
 /turf/simulated/floor/plating,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "aDD" = (
 /obj/machinery/shower{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/steel_ridged,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "aDE" = (
 /obj/structure/grille,
 /obj/structure/disposalpipe/segment,
@@ -15295,7 +15333,7 @@
 	opacity = 0
 	},
 /turf/simulated/floor/plating,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "aDF" = (
 /obj/structure/grille,
 /obj/machinery/door/blast/regular{
@@ -15318,7 +15356,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/plating,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "aDG" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -15367,7 +15405,7 @@
 	},
 /obj/structure/cable/green,
 /turf/simulated/floor/plating,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "aDI" = (
 /obj/structure/grille,
 /obj/machinery/door/blast/regular{
@@ -15390,7 +15428,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/plating,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "aDJ" = (
 /obj/effect/floor_decal/milspec/color/orange/corner{
 	dir = 8
@@ -15440,7 +15478,7 @@
 	},
 /obj/structure/cable/green,
 /turf/simulated/floor/plating,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "aDL" = (
 /obj/structure/window/reinforced{
 	dir = 4
@@ -16967,7 +17005,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/reinforced,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "aGB" = (
 /obj/machinery/light_switch{
 	pixel_x = 26;
@@ -27470,7 +27508,7 @@
 "bby" = (
 /obj/effect/floorbreak,
 /turf/simulated/floor/tiled/white,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "bbz" = (
 /obj/structure/closet/grave{
 	opened = 0
@@ -27488,7 +27526,7 @@
 	},
 /obj/effect/floorbreak,
 /turf/simulated/floor/tiled/white,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "bbC" = (
 /obj/effect/floorbreak,
 /turf/simulated/floor/tiled,
@@ -27570,7 +27608,7 @@
 /obj/structure/disposalpipe/segment,
 /obj/structure/reagent_dispensers/watertank/barrel,
 /turf/simulated/floor/reinforced,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "bbO" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-8"
@@ -27596,7 +27634,7 @@
 	icon_state = "water"
 	},
 /turf/simulated/floor/tiled/steel_ridged,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "bbR" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 9
@@ -27613,7 +27651,7 @@
 	pixel_y = 7
 	},
 /turf/simulated/floor/tiled/steel_ridged,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "bbS" = (
 /obj/effect/floor_decal/corner/purple{
 	dir = 5
@@ -27624,28 +27662,28 @@
 "bbT" = (
 /obj/structure/table/steel,
 /turf/simulated/floor/plating,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "bbU" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
 /turf/simulated/floor/carpet/bcarpet/turfpack/muriki,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "bbV" = (
 /obj/effect/auto_crayon{
 	icon_state = "five_life"
 	},
 /turf/simulated/floor/plating,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "bbW" = (
 /turf/simulated/floor/carpet/bcarpet/turfpack/muriki,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "bbX" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "bbY" = (
 /obj/structure/table/standard,
 /obj/random/maintenance/foodstuff,
@@ -27653,7 +27691,7 @@
 /obj/random/maintenance/foodstuff,
 /obj/random/maintenance/foodstuff,
 /turf/simulated/floor/carpet/bcarpet/turfpack/muriki,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "bbZ" = (
 /obj/effect/floorbreak,
 /turf/simulated/floor/wood,
@@ -27662,12 +27700,12 @@
 /obj/structure/bed/double/padded,
 /obj/item/bedsheet/orangedouble,
 /turf/simulated/floor/carpet/turfpack/muriki,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "bcb" = (
 /obj/structure/bed/double/padded,
 /obj/item/bedsheet/double,
 /turf/simulated/floor/carpet/turfpack/muriki,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "bcc" = (
 /obj/machinery/atmospherics/unary/outlet_injector{
 	dir = 4;
@@ -27677,7 +27715,7 @@
 	volume_rate = 700
 	},
 /turf/simulated/floor/carpet/turfpack/muriki,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "bcd" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -27686,14 +27724,14 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "bce" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
 /obj/structure/table/standard,
 /turf/simulated/floor/tiled/white,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "bcf" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -27702,7 +27740,7 @@
 	icon_state = "food"
 	},
 /turf/simulated/floor/tiled/white,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "bcg" = (
 /obj/item/reagent_containers/glass/bucket{
 	pixel_y = 16;
@@ -27722,10 +27760,10 @@
 	pixel_y = -10
 	},
 /turf/simulated/floor/carpet/bcarpet/turfpack/muriki,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "bch" = (
 /turf/simulated/floor/wood/turfpack/muriki,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "bci" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -27733,20 +27771,20 @@
 /obj/structure/hookah/randomized_drugs,
 /obj/item/flame/lighter/random,
 /turf/simulated/floor/carpet/bcarpet/turfpack/muriki,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "bcj" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
 /obj/structure/reagent_dispensers/souppot/half,
 /turf/simulated/floor/carpet/bcarpet/turfpack/muriki,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "bck" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/red{
 	dir = 4
 	},
 /turf/simulated/floor/wood/turfpack/muriki,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "bcl" = (
 /obj/structure/cable/green{
 	icon_state = "0-8"
@@ -27868,11 +27906,11 @@
 	},
 /obj/structure/table/standard,
 /turf/simulated/floor/tiled/white,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "bcw" = (
 /obj/effect/floorbreak,
 /turf/simulated/floor/plating,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "bcx" = (
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 9
@@ -27884,7 +27922,7 @@
 	icon_state = "night"
 	},
 /turf/simulated/floor/reinforced,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "bcz" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -27904,7 +27942,7 @@
 "bcB" = (
 /obj/machinery/cryopod,
 /turf/simulated/floor/reinforced,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "bcC" = (
 /obj/machinery/light,
 /obj/structure/table/rack/shelf/steel,
@@ -27920,6 +27958,9 @@
 /turf/simulated/wall/r_wall,
 /area/specialty/expie_clubhouse/archive)
 "bcE" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/specialty/expie_clubhouse/archive)
 "bcF" = (
@@ -28479,6 +28520,39 @@
 /obj/effect/landmark/holiday_event_spawn,
 /turf/simulated/floor/tiled/steel,
 /area/crew_quarters/recreation_area_hallway)
+"bdZ" = (
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/reinforced,
+/area/specialty/expie_clubhouse)
+"bea" = (
+/obj/structure/closet/l3closet/scientist/phoronics,
+/turf/simulated/floor/plating,
+/area/maintenance/research/closet)
+"beb" = (
+/obj/structure/closet/l3closet/scientist/double,
+/turf/simulated/floor/plating,
+/area/maintenance/research/closet)
+"bec" = (
+/obj/structure/prop/rock/flat,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
+/area/mine/unexplored/muriki/cave/sci)
+"bed" = (
+/obj/random/junk,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
+/area/mine/unexplored/muriki/cave/sci)
+"bee" = (
+/obj/structure/closet/grave,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
+/area/mine/unexplored/muriki/cave/sci)
+"bef" = (
+/obj/effect/floor_decal/milspec/color/purple/half,
+/obj/structure/foamedmetal,
+/turf/simulated/floor/tiled/milspec,
+/area/rnd/xenobiology/xenobioh)
+"beg" = (
+/obj/structure/barricade,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/rnd/xenobiology/xenobioh)
 "beh" = (
 /obj/machinery/shower{
 	dir = 1
@@ -28521,6 +28595,10 @@
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/crew/poollocker)
+"bel" = (
+/obj/structure/prop/rock/small/alt,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
+/area/mine/unexplored/muriki/cave/sci)
 "bem" = (
 /obj/machinery/washing_machine,
 /obj/structure/extinguisher_cabinet{
@@ -28533,6 +28611,14 @@
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/crew/poollocker)
+"ben" = (
+/obj/structure/prop/rock/small,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
+/area/mine/unexplored/muriki/cave/sci)
+"beo" = (
+/obj/structure/trash_pile,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
+/area/mine/unexplored/muriki/cave/sci)
 "bep" = (
 /obj/machinery/door/airlock/maintenance/common,
 /obj/machinery/door/firedoor/glass,
@@ -34152,7 +34238,7 @@
 	pixel_x = 32
 	},
 /turf/simulated/floor/tiled,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "bsV" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/green{
 	dir = 8
@@ -40886,7 +40972,7 @@
 	pixel_x = 24
 	},
 /turf/simulated/floor/tiled,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "bGJ" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -41010,7 +41096,7 @@
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "bGS" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/cable/green{
@@ -48910,7 +48996,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/carpet/turfpack/muriki,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "bXv" = (
 /obj/structure/disposalpipe/segment{
 	dir = 8;
@@ -70222,16 +70308,16 @@
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/tiled/steel_ridged,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "cWw" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/white,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "cWx" = (
 /turf/simulated/floor/tiled/white,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "cWy" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 5
@@ -70244,10 +70330,10 @@
 	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled/steel_ridged,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "cWz" = (
 /turf/simulated/floor/carpet/turfpack/muriki,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "cWA" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 10
@@ -70260,7 +70346,7 @@
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled/steel_ridged,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "cWB" = (
 /obj/effect/landmark{
 	name = "xeno_spawn";
@@ -70272,7 +70358,7 @@
 /obj/structure/window/reinforced/full,
 /obj/structure/grille,
 /turf/simulated/floor/plating,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "cWD" = (
 /obj/machinery/disposal,
 /obj/effect/floor_decal/industrial/warning{
@@ -70286,10 +70372,10 @@
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/tiled/steel_ridged,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "cWE" = (
 /turf/simulated/wall,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "cWF" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
@@ -71494,7 +71580,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "dzn" = (
 /obj/structure/window/reinforced/full,
 /obj/structure/grille,
@@ -73138,7 +73224,7 @@
 	dir = 10
 	},
 /turf/simulated/floor/tiled/white,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "fxi" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -73573,7 +73659,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "geo" = (
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/dark,
@@ -73736,7 +73822,7 @@
 	dir = 9
 	},
 /turf/simulated/floor/tiled/white,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "gsY" = (
 /obj/effect/floor_decal/borderfloor/corner,
 /obj/effect/floor_decal/corner/lightgrey/bordercorner,
@@ -74504,7 +74590,7 @@
 "hvv" = (
 /obj/effect/floor_decal/corner/purple/full,
 /turf/simulated/floor/tiled/white,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "hyo" = (
 /turf/simulated/wall/r_wall,
 /area/muriki/bathroom/cargolower)
@@ -74998,7 +75084,7 @@
 	dir = 5
 	},
 /turf/simulated/floor/tiled/white,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "iki" = (
 /obj/structure/salvageable/console,
 /obj/effect/step_trigger/dephase_shadekin,
@@ -75686,7 +75772,7 @@
 	dir = 9
 	},
 /turf/simulated/floor/tiled,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "jcd" = (
 /obj/machinery/light{
 	dir = 1
@@ -75754,13 +75840,6 @@
 	outdoors = 0
 	},
 /area/maintenance/oldbridge)
-"jfw" = (
-/obj/structure/prop/machine/core/starts_on{
-	name = "Bluespace Inhibitor";
-	desc = "An E-Shui proprietary machine that de-phases Shadekin that enter its area of effect. It's unclear how it works, or why it smells vaguely floral..."
-	},
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/mine/unexplored/muriki/cave/sci)
 "jfD" = (
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 1
@@ -78693,7 +78772,7 @@
 	dir = 9
 	},
 /turf/simulated/floor/tiled/white,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "mSy" = (
 /obj/structure/grille{
 	desc = "A flimsy lattice of metal rods, with screws to secure it to the floor. This grille seems slightly more sturdy than others probably reinforced to withstand the wildlife.";
@@ -79725,7 +79804,7 @@
 	},
 /obj/machinery/floodlight,
 /turf/simulated/floor/tiled/white,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "ozC" = (
 /obj/item/assembly/mousetrap/armed,
 /obj/item/stack/rods,
@@ -79928,7 +80007,7 @@
 	dir = 6
 	},
 /turf/simulated/floor/tiled/white,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "oMb" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable/heavyduty{
@@ -82573,7 +82652,7 @@
 	dir = 9
 	},
 /turf/simulated/floor/tiled,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "rTK" = (
 /obj/structure/grille{
 	desc = "A flimsy lattice of metal rods, with screws to secure it to the floor. This grille seems slightly more sturdy than others probably reinforced to withstand the wildlife.";
@@ -87078,7 +87157,7 @@
 	dir = 6
 	},
 /turf/simulated/floor/tiled,
-/area/rnd/xenobiology/xenobioh)
+/area/specialty/expie_clubhouse)
 "ydT" = (
 /obj/structure/closet/emcloset,
 /turf/simulated/floor/tiled/dark/turfpack/muriki,
@@ -140192,8 +140271,8 @@ aat
 aat
 uEM
 uEM
-aGu
-aGu
+beb
+bea
 uEM
 aPT
 ihP
@@ -141315,22 +141394,22 @@ aaf
 aaf
 aaf
 aaf
-aaf
+amE
 amP
 aoD
 apQ
-aaf
-aaf
-aaf
-aaf
-aaf
-aaf
-aaf
-aaf
-aaf
-aaf
-aaf
-aaf
+amE
+amE
+amE
+amE
+amE
+amE
+amE
+amE
+amE
+amE
+amE
+amE
 aHb
 hWH
 lCR
@@ -141482,17 +141561,17 @@ amQ
 aoE
 apR
 arb
-aaf
+amE
 asZ
 aub
 avg
 awn
-aaf
-aaf
+amE
+amE
 azg
 ayg
 bbT
-aaf
+amE
 cJK
 cOa
 uVN
@@ -141644,17 +141723,17 @@ cWx
 aoF
 apS
 arc
-aaf
+amE
 bch
 bck
 bch
 awo
-aaf
-aaf
+amE
+amE
 bbX
 bbV
 bbT
-aaf
+amE
 cJK
 aEJ
 aEJ
@@ -141806,17 +141885,17 @@ amS
 aoG
 apT
 ard
-aaf
+amE
 atb
 bck
 avi
 awp
 awZ
-aaf
+amE
 bbX
 ayg
 ayg
-aaf
+amE
 adC
 adC
 adC
@@ -141963,22 +142042,22 @@ aaf
 aaf
 aaf
 aaf
-aaf
-aaf
+amE
+amE
 aoH
 apU
-aaf
-aaf
+amE
+amE
 atc
 aue
 avj
 awq
 axa
-aaf
+amE
 azh
 aAe
 aBl
-aaf
+amE
 adC
 adC
 adC
@@ -142130,25 +142209,25 @@ jbw
 aoI
 apV
 are
-aaf
+amE
 cWC
 auf
 azj
 cWC
-aaf
-aaf
+amE
+amE
 cWy
 bGR
 cWv
-aaf
-aaf
-aaf
-aaf
-aaf
-aaf
+amE
+amE
+amE
+amE
+amE
+amE
 bLf
 bLf
-adC
+alq
 adC
 adC
 adC
@@ -142292,7 +142371,7 @@ amU
 aoJ
 apW
 arf
-aaf
+amE
 ate
 mRp
 gcz
@@ -142304,14 +142383,14 @@ cWw
 hvv
 aCx
 aDC
-aah
-aah
-aah
-aaf
+amF
+amF
+amF
+amE
 adC
 adC
-adC
-adC
+alq
+alq
 adC
 adC
 adC
@@ -142454,7 +142533,7 @@ amV
 aoK
 apX
 arg
-aaf
+amE
 bcv
 auc
 avl
@@ -142466,15 +142545,15 @@ aAg
 avq
 aCy
 aDD
-aah
-aah
-aah
-aaf
+amF
+amF
+amF
+amE
 adC
 adC
 adC
-adC
-adC
+alq
+alq
 adC
 adC
 adC
@@ -142616,7 +142695,7 @@ amT
 aoL
 apY
 bcw
-aaf
+amE
 atg
 auc
 cWw
@@ -142628,15 +142707,15 @@ cWx
 fwe
 aCz
 aDE
-aau
-aau
+bdZ
+bdZ
 aGA
-aaf
+amE
 pmN
 pmN
 pmN
-pmN
-pmN
+pup
+pup
 pmN
 pmN
 pmN
@@ -142788,18 +142867,18 @@ bcb
 cWz
 cWx
 aBn
-aaf
-aaf
-aaf
-aaf
-aaf
-aaf
+amE
+amE
+amE
+amE
+amE
+amE
 pmN
 pmN
 pmN
 pmN
-pmN
-pmN
+pup
+pup
 pmN
 pmN
 cbQ
@@ -142925,7 +143004,7 @@ aaH
 abg
 abH
 ack
-akV
+acN
 adm
 adL
 aev
@@ -142952,16 +143031,16 @@ cWx
 fwe
 aCx
 aDF
-aah
-aah
+amF
+amF
 aaO
-aaf
+amE
 pmN
 pmN
 pmN
 pmN
-pmN
-pmN
+pup
+pup
 pmN
 pmN
 cbQ
@@ -143102,7 +143181,7 @@ cRz
 cRz
 cWE
 ari
-aaf
+amE
 atj
 aui
 avo
@@ -143114,16 +143193,16 @@ avq
 avq
 aCy
 bbQ
-aah
-aah
-aah
-aaf
+amF
+amF
+amF
+amE
 pmN
 pmN
 pmN
 pmN
-pmN
-pmN
+pup
+pup
 pmN
 pmN
 pmN
@@ -143262,11 +143341,11 @@ ajX
 akk
 alK
 bcD
-aaf
-aaf
-aaf
-aaf
-aaf
+amE
+amE
+amE
+amE
+amE
 avp
 bcd
 cWx
@@ -143277,15 +143356,15 @@ fwe
 aCz
 aDH
 bbN
-aau
+bdZ
 aGA
-aaf
+amE
 pmN
 pmN
 pmN
 pmN
-pmN
-pmN
+pup
+pup
 pmN
 pmN
 pmN
@@ -143424,9 +143503,9 @@ aMe
 akl
 alL
 bcD
-aah
-aah
-aah
+amF
+amF
+amF
 atk
 auj
 ijP
@@ -143436,18 +143515,18 @@ cWx
 cWx
 cWx
 aBo
-aaf
-aaf
-aaf
-aaf
-aaf
-aaf
+amE
+amE
+amE
+amE
+amE
+amE
 pmN
 pmN
 pmN
 pmN
-pmN
-pmN
+pup
+pup
 pmN
 pmN
 pmN
@@ -143588,7 +143667,7 @@ alM
 bcD
 bcB
 bcy
-aah
+amF
 aAe
 auk
 avq
@@ -143600,15 +143679,15 @@ cWx
 fwe
 bbR
 aDI
-aah
-aah
-aah
-aaf
+amF
+amF
+amF
+amE
 pmN
 pmN
 pmN
-pmN
-pmN
+pup
+pup
 pmN
 pmN
 pmN
@@ -143739,9 +143818,9 @@ acR
 adq
 abi
 uPE
-abH
+bef
 aaf
-jfw
+iLO
 iLO
 bcD
 aiZ
@@ -143749,8 +143828,8 @@ akn
 alN
 bcD
 aqe
-aah
-aah
+amF
+amF
 atm
 aul
 ijP
@@ -143762,15 +143841,15 @@ aAh
 avq
 aCy
 aDD
-aah
-aah
-aah
-aaf
+amF
+amF
+amF
+amE
 pmN
 pmN
 pmN
-pmN
-pmN
+pup
+pup
 pmN
 pmN
 pmN
@@ -143910,11 +143989,11 @@ bcD
 bcD
 bcD
 bcD
-aaf
-aaf
-aaf
-aaf
-aaf
+amE
+amE
+amE
+amE
+amE
 ozn
 bcf
 oLE
@@ -143924,14 +144003,14 @@ cWw
 dyB
 aCz
 aDK
-aau
-aau
+bdZ
+bdZ
 aGA
-aaf
+amE
 pmN
 pmN
-pmN
-pmN
+pup
+pup
 pmN
 pmN
 pmN
@@ -144062,9 +144141,10 @@ abi
 abi
 abi
 abi
+beg
+beg
 aaf
-aaf
-aaf
+bec
 pmN
 pmN
 pmN
@@ -144075,24 +144155,23 @@ pmN
 pmN
 pmN
 pmN
-pmN
-aaf
+amE
 cWD
 awy
 cWA
-aaf
+amE
 azn
 awy
 aBp
-aaf
-aaf
-aaf
-aaf
-aaf
-aaf
+amE
+amE
+amE
+amE
+amE
+amE
 pmN
 pmN
-pmN
+pup
 pmN
 pmN
 pmN
@@ -144223,6 +144302,11 @@ pmN
 pmN
 pmN
 pmN
+beo
+ben
+pup
+bed
+pup
 pmN
 pmN
 pmN
@@ -144233,20 +144317,15 @@ pmN
 pmN
 pmN
 pmN
-pmN
-pmN
-pmN
-pmN
-pmN
-aaf
+amE
 avt
 awz
 axi
-aaf
+amE
 azo
 aAi
 aBq
-aaf
+amE
 pmN
 pmN
 pmN
@@ -144254,7 +144333,7 @@ pmN
 pmN
 pmN
 pmN
-pmN
+pup
 pmN
 pmN
 pmN
@@ -144385,6 +144464,10 @@ pmN
 pmN
 pmN
 pmN
+pup
+bed
+pup
+bee
 pmN
 pmN
 pmN
@@ -144396,11 +144479,7 @@ pmN
 pmN
 pmN
 pmN
-pmN
-pmN
-pmN
-pmN
-aaf
+amE
 bci
 bcg
 bbW
@@ -144408,7 +144487,7 @@ bbY
 bbY
 bbW
 bbU
-aaf
+amE
 pmN
 pmN
 pmN
@@ -144416,8 +144495,8 @@ pmN
 pmN
 pmN
 pmN
-pmN
-pmN
+pup
+pup
 pmN
 pmN
 pmN
@@ -144547,6 +144626,9 @@ pmN
 pmN
 pmN
 pmN
+cJb
+pup
+cGW
 pmN
 pmN
 pmN
@@ -144559,10 +144641,7 @@ pmN
 pmN
 pmN
 pmN
-pmN
-pmN
-pmN
-aaf
+amE
 bcj
 bbW
 bbW
@@ -144570,7 +144649,7 @@ bbW
 bbW
 bbW
 bbU
-aaf
+amE
 pmN
 pmN
 pmN
@@ -144579,7 +144658,7 @@ pmN
 pmN
 pmN
 pmN
-pmN
+pup
 pmN
 pmN
 pmN
@@ -144710,6 +144789,8 @@ pmN
 pmN
 pmN
 pmN
+pup
+bel
 pmN
 pmN
 pmN
@@ -144722,9 +144803,7 @@ pmN
 pmN
 pmN
 pmN
-pmN
-pmN
-aaf
+amE
 avv
 bbW
 bbW
@@ -144732,7 +144811,7 @@ bbW
 bbW
 bbW
 aBr
-aaf
+amE
 pmN
 pmN
 pmN
@@ -144741,8 +144820,8 @@ pmN
 pmN
 pmN
 pmN
-pmN
-pmN
+pup
+pup
 pmN
 pmN
 pmN
@@ -144872,6 +144951,8 @@ pmN
 pmN
 pmN
 pmN
+pup
+pup
 pmN
 pmN
 pmN
@@ -144884,18 +144965,15 @@ pmN
 pmN
 pmN
 pmN
-pmN
-pmN
-aaf
-aaf
-aaf
-aaf
-aaf
-aaf
-aaf
-aaf
-aaf
-pmN
+amE
+amE
+amE
+amE
+amE
+amE
+amE
+amE
+amE
 pmN
 pmN
 pmN
@@ -144904,7 +144982,8 @@ pmN
 pmN
 pmN
 pmN
-pmN
+pup
+pup
 pmN
 pmN
 pmN
@@ -145035,6 +145114,8 @@ pmN
 pmN
 pmN
 pmN
+pup
+pup
 pmN
 pmN
 pmN
@@ -145063,10 +145144,8 @@ pmN
 pmN
 pmN
 pmN
-pmN
-pmN
-pmN
-pmN
+pup
+pup
 pmN
 pmN
 pmN
@@ -145198,6 +145277,7 @@ pmN
 pmN
 pmN
 pmN
+pup
 pmN
 pmN
 pmN
@@ -145227,9 +145307,8 @@ pmN
 pmN
 pmN
 pmN
-pmN
-pmN
-pmN
+pup
+pup
 pmN
 pmN
 pmN
@@ -145360,6 +145439,8 @@ pmN
 pmN
 pmN
 pmN
+pup
+pup
 pmN
 pmN
 pmN
@@ -145388,10 +145469,8 @@ pmN
 pmN
 pmN
 pmN
-pmN
-pmN
-pmN
-pmN
+pup
+pup
 pmN
 pmN
 pmN
@@ -145523,6 +145602,8 @@ pmN
 pmN
 pmN
 pmN
+pup
+pup
 pmN
 pmN
 pmN
@@ -145549,11 +145630,9 @@ pmN
 pmN
 pmN
 pmN
-pmN
-pmN
-pmN
-pmN
-pmN
+pup
+pup
+pup
 pmN
 pmN
 pmN
@@ -145686,6 +145765,9 @@ pmN
 pmN
 pmN
 pmN
+pup
+pup
+pup
 pmN
 pmN
 pmN
@@ -145698,6 +145780,11 @@ pmN
 pmN
 pmN
 pmN
+pup
+pup
+pup
+pup
+pup
 pmN
 pmN
 pmN
@@ -145705,16 +145792,8 @@ pmN
 pmN
 pmN
 pmN
-pmN
-pmN
-pmN
-pmN
-pmN
-pmN
-pmN
-pmN
-pmN
-pmN
+pup
+pup
 pmN
 pmN
 pmN
@@ -145850,6 +145929,10 @@ pmN
 pmN
 pmN
 pmN
+pup
+pup
+pup
+pup
 pmN
 pmN
 pmN
@@ -145857,26 +145940,22 @@ pmN
 pmN
 pmN
 pmN
+pup
+pup
+pup
+pup
+pup
+pup
+pup
+pup
 pmN
 pmN
 pmN
 pmN
 pmN
 pmN
-pmN
-pmN
-pmN
-pmN
-pmN
-pmN
-pmN
-pmN
-pmN
-pmN
-pmN
-pmN
-pmN
-pmN
+pup
+pup
 pmN
 pmN
 pmN
@@ -146014,6 +146093,23 @@ pmN
 pmN
 pmN
 pmN
+pup
+pup
+pmN
+pmN
+pmN
+pmN
+pup
+pup
+pup
+pup
+pup
+pmN
+pmN
+pup
+pup
+pup
+pup
 pmN
 pmN
 pmN
@@ -146021,24 +146117,7 @@ pmN
 pmN
 pmN
 pmN
-pmN
-pmN
-pmN
-pmN
-pmN
-pmN
-pmN
-pmN
-pmN
-pmN
-pmN
-pmN
-pmN
-pmN
-pmN
-pmN
-pmN
-pmN
+pup
 pmN
 pmN
 pmN
@@ -146177,6 +146256,22 @@ pmN
 pmN
 pmN
 pmN
+pup
+pup
+pup
+pup
+pup
+pup
+pup
+pup
+pup
+pmN
+pmN
+pmN
+pmN
+pmN
+pup
+pup
 pmN
 pmN
 pmN
@@ -146184,24 +146279,8 @@ pmN
 pmN
 pmN
 pmN
-pmN
-pmN
-pmN
-pmN
-pmN
-pmN
-pmN
-pmN
-pmN
-pmN
-pmN
-pmN
-pmN
-pmN
-pmN
-pmN
-pmN
-pmN
+pup
+pup
 pmN
 pmN
 cgX
@@ -146340,6 +146419,11 @@ pmN
 pmN
 pmN
 pmN
+pup
+pup
+pup
+pup
+pup
 pmN
 pmN
 pmN
@@ -146349,21 +146433,16 @@ pmN
 pmN
 pmN
 pmN
+pup
+pup
 pmN
 pmN
 pmN
 pmN
 pmN
 pmN
-pmN
-pmN
-pmN
-pmN
-pmN
-pmN
-pmN
-pmN
-pmN
+pup
+pup
 pmN
 pmN
 cgX
@@ -146516,6 +146595,8 @@ pmN
 pmN
 pmN
 pmN
+pup
+pup
 pmN
 pmN
 pmN
@@ -146523,9 +146604,7 @@ pmN
 pmN
 pmN
 pmN
-pmN
-pmN
-pmN
+pup
 pmN
 pmN
 cgX
@@ -146540,7 +146619,7 @@ vSb
 vSb
 cei
 cei
-cei
+alh
 vSb
 vSb
 vSb
@@ -146678,16 +146757,16 @@ pmN
 pmN
 pmN
 pmN
+pup
+pup
+pup
 pmN
 pmN
 pmN
 pmN
 pmN
 pmN
-pmN
-pmN
-pmN
-pmN
+pup
 pmN
 pmN
 cgX
@@ -146702,7 +146781,7 @@ vSb
 vSb
 vSb
 vSb
-vSb
+alh
 vSb
 vSb
 vSb
@@ -146841,16 +146920,16 @@ pmN
 pmN
 pmN
 pmN
+pup
+pup
 pmN
 pmN
 pmN
 pmN
 pmN
 pmN
-pmN
-pmN
-pmN
-pmN
+pup
+pup
 pmN
 cgY
 cgX
@@ -146864,7 +146943,7 @@ vSb
 vSb
 vSb
 vSb
-vSb
+alh
 vSb
 vSb
 vSb
@@ -147004,17 +147083,17 @@ pmN
 pmN
 pmN
 pmN
+pup
 pmN
 pmN
 pmN
 pmN
 pmN
 pmN
+pup
+pup
 pmN
 pmN
-pmN
-pmN
-pmN
 vSb
 vSb
 vSb
@@ -147026,7 +147105,7 @@ vSb
 vSb
 vSb
 vSb
-vSb
+alh
 vSb
 vSb
 vSb
@@ -147166,17 +147245,17 @@ pmN
 pmN
 pmN
 pmN
+pup
+pup
 pmN
 pmN
 pmN
 pmN
 pmN
 pmN
+pup
 pmN
 pmN
-pmN
-pmN
-pmN
 vSb
 vSb
 vSb
@@ -147188,7 +147267,7 @@ vSb
 vSb
 vSb
 vSb
-vSb
+alh
 vSb
 vSb
 vSb
@@ -147329,16 +147408,16 @@ pmN
 pmN
 pmN
 pmN
+pup
+pup
 pmN
 pmN
 pmN
 pmN
 pmN
+pup
 pmN
 pmN
-pmN
-pmN
-pmN
 vSb
 vSb
 vSb
@@ -147350,7 +147429,7 @@ vSb
 vSb
 vSb
 vSb
-vSb
+alh
 vSb
 vSb
 vSb
@@ -147492,15 +147571,15 @@ pmN
 pmN
 pmN
 pmN
+pup
 pmN
 pmN
 pmN
 pmN
+pup
+pup
 pmN
 pmN
-pmN
-pmN
-pmN
 vSb
 vSb
 vSb
@@ -147512,7 +147591,7 @@ vSb
 vSb
 vSb
 vSb
-vSb
+alh
 vSb
 vSb
 vSb
@@ -147654,15 +147733,15 @@ pmN
 pmN
 pmN
 pmN
+pup
+pup
 pmN
 pmN
 pmN
-pmN
-pmN
-pmN
-pmN
-pmN
-pmN
+pup
+pup
+pup
+pup
 vSb
 vSb
 vSb
@@ -147673,8 +147752,8 @@ vSb
 vSb
 vSb
 vSb
-vSb
-vSb
+alh
+alh
 vSb
 vSb
 vSb
@@ -147816,27 +147895,27 @@ pmN
 pmN
 pmN
 pmN
+pup
+pup
 pmN
 pmN
 pmN
 pmN
 pmN
-pmN
-pmN
-pmN
-pmN
+pup
+pup
+alh
+alh
+alh
+alh
 vSb
 vSb
 vSb
 vSb
 vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
+alh
+alh
+alh
 vSb
 vSb
 vSb
@@ -147977,27 +148056,27 @@ pmN
 pmN
 pmN
 pmN
+pup
+pup
+pup
 pmN
 pmN
 pmN
 pmN
 pmN
 pmN
-pmN
-pmN
-pmN
-pmN
+pup
+alh
+vSb
+alh
+alh
+alh
 vSb
 vSb
 vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
+alh
+alh
+alh
 vSb
 vSb
 vSb
@@ -148139,6 +148218,9 @@ pmN
 pmN
 pmN
 pmN
+pup
+pup
+pup
 pmN
 pmN
 pmN
@@ -148146,20 +148228,17 @@ pmN
 pmN
 pmN
 pmN
-pmN
-pmN
-pmN
 vSb
 vSb
 vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
+alh
+alh
+alh
+alh
+alh
+alh
+alh
+alh
 vSb
 vSb
 vSb
@@ -148301,6 +148380,8 @@ pmN
 pmN
 pmN
 pmN
+pup
+pup
 pmN
 pmN
 pmN
@@ -148309,21 +148390,19 @@ pmN
 pmN
 pmN
 pmN
-pmN
-pmN
 vSb
 vSb
 vSb
 vSb
 vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
+alh
+alh
+alh
+alh
+alh
+alh
+alh
+alh
 vSb
 vSb
 vSb
@@ -148462,6 +148541,8 @@ bIM
 bRw
 cIQ
 pmN
+pup
+pup
 pmN
 pmN
 pmN
@@ -148471,8 +148552,6 @@ pmN
 pmN
 pmN
 pmN
-pmN
-pmN
 vSb
 vSb
 vSb
@@ -148485,8 +148564,8 @@ vSb
 vSb
 vSb
 vSb
-vSb
-vSb
+alh
+alh
 vSb
 vSb
 vSb
@@ -148624,6 +148703,7 @@ cbZ
 cHg
 bRw
 bRw
+pup
 pmN
 pmN
 pmN
@@ -148634,7 +148714,6 @@ pmN
 pmN
 pmN
 pmN
-pmN
 vSb
 vSb
 vSb
@@ -148647,9 +148726,9 @@ vSb
 vSb
 vSb
 vSb
-vSb
-vSb
-vSb
+alh
+alh
+alh
 vSb
 vSb
 vSb
@@ -148785,6 +148864,9 @@ sos
 bIM
 cml
 bRw
+pup
+pup
+pup
 pmN
 pmN
 pmN
@@ -148794,9 +148876,6 @@ pmN
 pmN
 pmN
 pmN
-pmN
-pmN
-pmN
 vSb
 vSb
 vSb
@@ -148809,9 +148888,9 @@ vSb
 vSb
 vSb
 vSb
-vSb
-vSb
-vSb
+alh
+alh
+alh
 vSb
 vSb
 vSb
@@ -148949,6 +149028,8 @@ vSb
 vSb
 vSb
 vSb
+alh
+alh
 vSb
 vSb
 vSb
@@ -148969,11 +149050,9 @@ vSb
 vSb
 vSb
 vSb
-vSb
-vSb
-vSb
-vSb
-vSb
+alh
+alh
+alh
 vSb
 vSb
 vSb
@@ -149111,6 +149190,9 @@ vSb
 vSb
 vSb
 vSb
+alh
+alh
+alh
 vSb
 vSb
 vSb
@@ -149130,12 +149212,9 @@ vSb
 vSb
 vSb
 vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
+alh
+alh
+alh
 vSb
 vSb
 vSb
@@ -149274,6 +149353,9 @@ vSb
 vSb
 vSb
 vSb
+alh
+alh
+alh
 vSb
 vSb
 vSb
@@ -149291,13 +149373,10 @@ vSb
 vSb
 vSb
 vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
+alh
+alh
+alh
+alh
 vSb
 vSb
 vSb
@@ -149437,6 +149516,9 @@ vSb
 vSb
 vSb
 vSb
+alh
+alh
+alh
 vSb
 vSb
 vSb
@@ -149452,13 +149534,10 @@ vSb
 vSb
 vSb
 vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
+alh
+alh
+alh
+alh
 vSb
 vSb
 vSb
@@ -149600,6 +149679,9 @@ vSb
 vSb
 vSb
 vSb
+alh
+alh
+alh
 vSb
 vSb
 vSb
@@ -149613,13 +149695,10 @@ vSb
 vSb
 vSb
 vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
+alh
+alh
+alh
+alh
 vSb
 vSb
 vSb
@@ -149764,6 +149843,9 @@ vSb
 vSb
 vSb
 vSb
+alh
+alh
+alh
 vSb
 vSb
 vSb
@@ -149774,12 +149856,9 @@ vSb
 vSb
 vSb
 vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
+alh
+alh
+alh
 vSb
 vSb
 vSb
@@ -149927,21 +150006,21 @@ vSb
 vSb
 vSb
 vSb
+alh
+alh
+alh
+alh
+alh
 vSb
 vSb
 vSb
 vSb
 vSb
 vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
+alh
+alh
+alh
+alh
 vSb
 vSb
 vSb
@@ -150090,18 +150169,18 @@ vSb
 vSb
 vSb
 vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
+alh
+alh
+alh
+alh
+alh
+alh
+alh
+alh
+alh
+alh
+alh
+alh
 vSb
 vSb
 vSb
@@ -150256,13 +150335,13 @@ vSb
 vSb
 vSb
 vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
-vSb
+alh
+alh
+alh
+alh
+alh
+alh
+alh
 vSb
 vSb
 vSb
