@@ -6,8 +6,11 @@
 			<hr>
 			<br><center><b>All positions:</b></center>
 			<br>You must eligible to work in SolGov space, and hold a Secret security clearance. All crew must be willing, and able, to protect their station, themselves, and fellow crew from threats. Under SolGov law, ANY individual that is: Demonic in origin, ghost/spectral, or otherwise mortally challenged is ineligible for hire. All hiring and firing MUST be done through Central Command Sapient Resources (CC-SR). No main-station crew may hire, or fire, or promote individuals. No individual currently wanted for arrest by SolGov or their allies may be hired or given guest status for any reason, and must be held in an incarcerated status.
+			<br>
 			<br>Department heads of staff may temporarily promote, or authorize already cleared individuals to work in their department, or may temporarily release one of their staff from duty up until shift change.
+			<br>
 			<br>If a position is not listed below, contact a head of staff for further requirements and clarifications, otherwise, they fall to the above standard.
+			<br>
 			<br>All positions and requirements are additive. Meaning, if you apply for a position of a higher rank, you must meet all requirements for all previous ranks in that position. See chain of command for clarification. (EX: To be a Doctor, you must be eligible to be a nurse.) Failing to meet and maintain the standard is grounds for demotion.
 			<br>
 			<br>To this end, 'civilian' is ground-level requirements for all personnel.
