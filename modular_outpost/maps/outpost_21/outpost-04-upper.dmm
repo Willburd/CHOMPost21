@@ -3495,15 +3495,15 @@
 /area/mine/unexplored/muriki/mountaintopeast)
 "ahX" = (
 /turf/simulated/wall/r_wall,
-/area/maintenance/damaged_resleeverC)
+/area/mine/unexplored/muriki/mountaintopeast)
 "ahY" = (
 /obj/machinery/door/airlock/maintenance/common,
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/damaged_resleeverC)
+/area/mine/unexplored/muriki/mountaintopeast)
 "ahZ" = (
 /obj/item/flame/candle/everburn,
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/damaged_resleeverC)
+/area/mine/unexplored/muriki/mountaintopeast)
 "aia" = (
 /obj/machinery/atmospherics/portables_connector{
 	dir = 4
@@ -3515,15 +3515,15 @@
 "aib" = (
 /obj/random/trash,
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/damaged_resleeverC)
+/area/mine/unexplored/muriki/mountaintopeast)
 "aic" = (
 /obj/random/thermalponcho,
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/damaged_resleeverC)
+/area/mine/unexplored/muriki/mountaintopeast)
 "aid" = (
 /obj/structure/trash_pile,
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/damaged_resleeverC)
+/area/mine/unexplored/muriki/mountaintopeast)
 "aie" = (
 /obj/item/radio/intercom/department/security{
 	dir = 4;
@@ -3564,20 +3564,20 @@
 /obj/machinery/mineral/input,
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/damaged_resleeverC)
+/area/mine/unexplored/muriki/mountaintopeast)
 "aii" = (
 /obj/machinery/transhuman/autoresleever/rogue,
 /obj/machinery/camera/network/outside{
 	c_tag = "EXT - Expie Sleever"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/damaged_resleeverC)
+/area/mine/unexplored/muriki/mountaintopeast)
 "aij" = (
 /obj/machinery/gibber/autogibber{
 	emagged = 1
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/damaged_resleeverC)
+/area/mine/unexplored/muriki/mountaintopeast)
 "aik" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -3770,13 +3770,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/muriki/processor/hall)
-"aiD" = (
-/obj/structure/lattice,
-/obj/effect/mine/claymore{
-	dir = 8
-	},
-/turf/simulated/open/muriki,
-/area/mine/explored/muriki/river/hole)
 "aiE" = (
 /obj/effect/floor_decal/corner/brown/diagonal,
 /obj/structure/bed/chair/wood{
@@ -3787,9 +3780,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/coffee_shop)
-"aiF" = (
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/damaged_resleeverC)
 "aiG" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
@@ -4001,36 +3991,10 @@
 	ignore_mapgen = 1
 	},
 /area/mine/unexplored/muriki/mountaintopnorth)
-"ajr" = (
-/obj/structure/lattice,
-/obj/structure/ladder,
-/turf/simulated/open/muriki,
-/area/mine/explored/muriki/river/hole)
 "ajs" = (
 /obj/effect/shuttle_landmark/premade/specops/station,
 /turf/simulated/open/muriki,
 /area/muriki/skyline/east)
-"ajt" = (
-/obj/structure/inflatable/door,
-/turf/simulated/floor/tiled/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"aju" = (
-/obj/effect/auto_crayon{
-	icon_state = "three_trade"
-	},
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
-/area/mine/unexplored/muriki/mountaintopeast)
-"ajv" = (
-/obj/effect/auto_crayon{
-	icon_state = "fire"
-	},
-/obj/effect/auto_crayon{
-	icon_state = "depart"
-	},
-/turf/simulated/floor/tiled/turfpack/muriki,
-/area/specialty/expie_clubhouse)
 "ajw" = (
 /obj/structure/window/reinforced/full,
 /obj/structure/grille,
@@ -4045,26 +4009,6 @@
 	},
 /turf/simulated/floor,
 /area/djstation)
-"ajx" = (
-/obj/effect/auto_crayon{
-	icon_state = "survival"
-	},
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
-/area/mine/unexplored/muriki/mountaintopeast)
-"ajy" = (
-/obj/structure/table/rack/shelf/wood,
-/obj/random/flashlight,
-/obj/random/flashlight,
-/obj/random/flashlight,
-/obj/random/flashlight,
-/obj/random/flashlight,
-/obj/random/flashlight,
-/obj/random/flashlight,
-/obj/random/flashlight,
-/turf/simulated/floor/tiled/turfpack/muriki,
-/area/specialty/expie_clubhouse)
 "ajz" = (
 /obj/effect/floor_decal/corner/brown/diagonal,
 /obj/machinery/light_switch{
@@ -4230,71 +4174,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/quartermaster/mining/secpi)
-"ajO" = (
-/obj/structure/table/steel,
-/obj/item/storage/firstaid/surgery,
-/obj/item/cell/slime{
-	pixel_y = 10;
-	pixel_x = -8
-	},
-/turf/simulated/floor/carpet/blucarpet/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"ajP" = (
-/turf/simulated/wall{
-	can_open = 1
-	},
-/area/specialty/expie_clubhouse)
-"ajQ" = (
-/turf/simulated/floor/tiled/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"ajR" = (
-/turf/simulated/wall,
-/area/specialty/expie_clubhouse)
-"ajS" = (
-/obj/machinery/light/small,
-/turf/simulated/floor/tiled/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"ajT" = (
-/obj/structure/table/rack/shelf/wood,
-/obj/item/clothing/suit/space/emergency,
-/obj/item/clothing/suit/space/emergency,
-/obj/item/clothing/head/helmet/space/emergency,
-/obj/item/clothing/head/helmet/space/emergency,
-/obj/item/tank/emergency/oxygen/double,
-/obj/item/tank/emergency/oxygen/double,
-/obj/item/clothing/mask/breath/transparent,
-/obj/item/clothing/mask/breath/transparent,
-/turf/simulated/floor/tiled/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"ajU" = (
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"ajV" = (
-/turf/simulated/floor/grass/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"ajW" = (
-/obj/structure/table/rack/shelf/wood,
-/obj/item/clothing/mask/gas/clear,
-/turf/simulated/floor/tiled/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"ajX" = (
-/obj/structure/table/rack/shelf/wood,
-/obj/random/maintenance/morestuff,
-/obj/random/maintenance/morestuff,
-/obj/random/maintenance/misc,
-/obj/random/maintenance/misc,
-/turf/simulated/floor/tiled/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"ajY" = (
-/obj/effect/auto_crayon{
-	icon_state = "earth"
-	},
-/turf/simulated/floor/tiled/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"ajZ" = (
-/obj/item/flashlight/lamp/green,
-/turf/simulated/floor/tiled/turfpack/muriki,
-/area/specialty/expie_clubhouse)
 "aka" = (
 /obj/structure/table/reinforced,
 /obj/effect/floor_decal/spline/plain{
@@ -4315,33 +4194,6 @@
 	},
 /turf/simulated/floor/carpet/oracarpet,
 /area/crew_quarters/heads/chief)
-"akb" = (
-/obj/structure/bed/bath,
-/obj/random/soap,
-/obj/machinery/light,
-/turf/simulated/floor/carpet/blucarpet/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"akc" = (
-/turf/simulated/floor/carpet/blucarpet/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"akd" = (
-/obj/structure/table/standard,
-/obj/random/firstaid,
-/obj/random/firstaid,
-/obj/random/firstaid,
-/obj/random/firstaid,
-/obj/random/firstaid,
-/turf/simulated/floor/carpet/blucarpet/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"ake" = (
-/obj/structure/table/standard,
-/obj/random/medical,
-/obj/random/medical,
-/obj/random/medical,
-/obj/random/medical,
-/obj/random/medical,
-/turf/simulated/floor/carpet/blucarpet/turfpack/muriki,
-/area/specialty/expie_clubhouse)
 "akf" = (
 /obj/structure/cliff{
 	dir = 1
@@ -4350,41 +4202,6 @@
 	icon_state = "rock_grey"
 	},
 /area/muriki/crystal)
-"akg" = (
-/obj/structure/closet,
-/obj/item/material/twohanded/sledgehammer/gravity/ed,
-/obj/item/tool/crowbar/brace_jack,
-/turf/simulated/floor/carpet/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"akh" = (
-/turf/simulated/floor/carpet/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"aki" = (
-/obj/effect/auto_crayon{
-	icon_state = "pill"
-	},
-/turf/simulated/floor/tiled/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"akj" = (
-/obj/effect/auto_crayon{
-	icon_state = "five_life"
-	},
-/turf/simulated/floor/carpet/blucarpet/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"akk" = (
-/obj/structure/bed/pillowpile/teal,
-/turf/simulated/floor/carpet/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"akl" = (
-/obj/structure/bed/pillowpile/green,
-/turf/simulated/floor/carpet/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"akm" = (
-/obj/effect/auto_crayon{
-	icon_state = "six_tranquility"
-	},
-/turf/simulated/floor/carpet/turfpack/muriki,
-/area/specialty/expie_clubhouse)
 "akn" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -4402,61 +4219,11 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/hallway/upper)
-"ako" = (
-/obj/structure/bed/double/padded,
-/obj/item/bedsheet/greendouble,
-/obj/item/toy/plushie/pillow/red,
-/turf/simulated/floor/carpet/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"akp" = (
-/obj/structure/bed/double/padded,
-/obj/item/bedsheet/mimedouble,
-/turf/simulated/floor/carpet/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"akq" = (
-/obj/structure/bed/double/padded,
-/obj/item/bedsheet/bluedouble,
-/obj/item/toy/plushie/pillow/green,
-/turf/simulated/floor/carpet/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"akr" = (
-/obj/structure/bed/double/padded,
-/obj/item/bedsheet/purpledouble,
-/obj/item/toy/plushie/pillow/blue,
-/turf/simulated/floor/carpet/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"aks" = (
-/obj/structure/bed/double/padded,
-/obj/item/bedsheet/cedouble,
-/obj/item/toy/plushie/pillow/green,
-/turf/simulated/floor/carpet/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"akt" = (
-/obj/structure/bed/double/padded,
-/obj/item/bedsheet/double,
-/obj/item/toy/plushie/pillow/green,
-/obj/item/toy/plushie/pillow/green,
-/obj/item/toy/plushie/pillow/green,
-/turf/simulated/floor/carpet/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"aku" = (
-/obj/structure/hookah/randomized_drugs,
-/obj/item/flame/lighter/random,
-/turf/simulated/floor/carpet/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"akv" = (
-/obj/machinery/space_heater,
-/turf/simulated/floor/carpet/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"akw" = (
-/obj/random/contraband,
-/turf/simulated/floor/tiled/turfpack/muriki,
-/area/specialty/expie_clubhouse)
 "akx" = (
 /turf/simulated/wall/r_wall{
 	can_open = 1
 	},
-/area/maintenance/damaged_resleeverC)
+/area/mine/unexplored/muriki/mountaintopeast)
 "aky" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -4472,121 +4239,9 @@
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/hydroponics/publicgarden)
-"akz" = (
-/obj/effect/auto_crayon{
-	icon_state = "left"
-	},
-/obj/item/flashlight/lamp/green,
-/turf/simulated/floor/tiled/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"akA" = (
-/turf/simulated/floor/carpet/bcarpet/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"akB" = (
-/obj/structure/table/standard,
-/obj/random/maintenance/foodstuff,
-/obj/random/maintenance/foodstuff,
-/obj/random/maintenance/foodstuff,
-/obj/random/maintenance/foodstuff,
-/turf/simulated/floor/carpet/bcarpet/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"akC" = (
-/obj/structure/table/standard,
-/obj/random/drinksoft,
-/turf/simulated/floor/carpet/bcarpet/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"akD" = (
-/obj/random/mre,
-/obj/random/mre,
-/obj/random/mre,
-/obj/random/mre,
-/turf/simulated/floor/carpet/bcarpet/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"akE" = (
-/obj/item/reagent_containers/glass/bucket{
-	pixel_y = 16;
-	pixel_x = 9
-	},
-/obj/item/reagent_containers/glass/bucket{
-	pixel_y = 12;
-	pixel_x = -7
-	},
-/obj/item/reagent_containers/glass/bucket{
-	pixel_y = -3;
-	pixel_x = -7
-	},
-/obj/item/reagent_containers/glass/bucket,
-/obj/item/reagent_containers/glass/bucket{
-	pixel_x = 10;
-	pixel_y = -10
-	},
-/turf/simulated/floor/carpet/bcarpet/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"akF" = (
-/obj/structure/reagent_dispensers/souppot/half,
-/turf/simulated/floor/carpet/bcarpet/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"akG" = (
-/obj/random/meat,
-/obj/random/meat,
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"akH" = (
-/obj/effect/auto_crayon{
-	icon_state = "fire"
-	},
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"akI" = (
-/obj/effect/auto_crayon{
-	icon_state = "food"
-	},
-/turf/simulated/floor/tiled/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"akJ" = (
-/obj/structure/bonfire,
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"akK" = (
-/obj/effect/auto_crayon{
-	icon_state = "water"
-	},
-/turf/simulated/floor/tiled/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"akL" = (
-/obj/structure/reagent_dispensers/watertank/barrel,
-/turf/simulated/floor/tiled/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"akM" = (
-/obj/machinery/portable_atmospherics/hydroponics/soil,
-/turf/simulated/floor/outdoors/mud/turfpack/muriki{
-	outdoors = 0
-	},
-/area/specialty/expie_clubhouse)
 "akN" = (
 /turf/simulated/wall/r_wall,
 /area/tcommsat/powercontrol)
-"akO" = (
-/obj/item/material/minihoe,
-/turf/simulated/floor/grass/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"akP" = (
-/turf/simulated/floor/outdoors/mud/turfpack/muriki{
-	outdoors = 0
-	},
-/area/specialty/expie_clubhouse)
-"akQ" = (
-/obj/structure/sink/puddle,
-/turf/simulated/floor/outdoors/mud/turfpack/muriki{
-	outdoors = 0
-	},
-/area/specialty/expie_clubhouse)
-"akR" = (
-/obj/structure/reagent_dispensers/watertank/high,
-/turf/simulated/floor/outdoors/mud/turfpack/muriki{
-	outdoors = 0
-	},
-/area/specialty/expie_clubhouse)
 "akS" = (
 /obj/structure/window/reinforced/full,
 /obj/structure/grille,
@@ -4706,14 +4361,6 @@
 	},
 /turf/simulated/floor,
 /area/djstation)
-"alc" = (
-/obj/effect/auto_crayon{
-	icon_state = "companion"
-	},
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
-/area/mine/unexplored/muriki/mountaintopeast)
 "ald" = (
 /obj/structure/flora/mushroom,
 /obj/effect/zone_divider,
@@ -4745,60 +4392,6 @@
 	ignore_mapgen = 1
 	},
 /area/mine/unexplored/muriki/mountaintopeast)
-"alh" = (
-/obj/machinery/recharger{
-	pixel_x = -5
-	},
-/obj/structure/table/steel,
-/obj/item/reagent_containers/glass/mortar_pestle{
-	pixel_x = 8
-	},
-/turf/simulated/floor/tiled/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"ali" = (
-/obj/structure/simple_door/wood,
-/turf/simulated/floor/tiled/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"alj" = (
-/obj/machinery/power/apc/alarms_hidden{
-	dir = 4;
-	pixel_x = 24;
-	locked = 0
-	},
-/turf/simulated/floor/carpet/blucarpet/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"alk" = (
-/obj/machinery/light{
-	dir = 1
-	},
-/obj/machinery/light_switch{
-	pixel_y = 28
-	},
-/turf/simulated/floor/carpet/blucarpet/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"all" = (
-/obj/structure/table/steel,
-/turf/simulated/floor/carpet/blucarpet/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"alm" = (
-/obj/item/clothing/ears/earring/dangle/gold,
-/obj/item/clothing/ears/earring/dangle/gold,
-/obj/item/clothing/ears/earring/dangle/gold,
-/obj/item/clothing/ears/earring/dangle/gold,
-/obj/item/clothing/ears/earring/dangle/gold,
-/obj/item/clothing/ears/earring/dangle/gold,
-/turf/simulated/floor/tiled/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"aln" = (
-/obj/fiftyspawner/wood,
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"alo" = (
-/obj/machinery/light{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/turfpack/muriki,
-/area/specialty/expie_clubhouse)
 "alp" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
@@ -4814,14 +4407,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/muriki/civup)
-"alq" = (
-/obj/structure/simple_door/sandstone,
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"alr" = (
-/obj/item/flashlight/lamp/green,
-/turf/simulated/floor/grass/turfpack/muriki,
-/area/specialty/expie_clubhouse)
 "als" = (
 /turf/simulated/mineral/crystal_shiny/ignore_mapgen/turfpack/muriki,
 /area/muriki/crystal)
@@ -4954,18 +4539,6 @@
 	icon_state = "rock_grey"
 	},
 /area/muriki/crystal)
-"alE" = (
-/obj/effect/auto_crayon{
-	icon_state = "nine_removal"
-	},
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
-/area/mine/unexplored/muriki/mountaintopeast)
-"alF" = (
-/obj/structure/tanning_rack,
-/turf/simulated/floor/tiled/turfpack/muriki,
-/area/specialty/expie_clubhouse)
 "alG" = (
 /obj/structure/cliff{
 	dir = 4
@@ -5194,38 +4767,6 @@
 /obj/structure/ladder/top_hatch,
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/phoronics/burn)
-"amk" = (
-/obj/effect/auto_crayon{
-	icon_state = "night"
-	},
-/turf/simulated/floor/tiled/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"aml" = (
-/obj/machinery/cryopod,
-/turf/simulated/floor/tiled/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"amm" = (
-/obj/structure/cryofeed{
-	dir = 4
-	},
-/obj/structure/window/basic,
-/obj/structure/window/basic{
-	dir = 8
-	},
-/obj/machinery/computer/cryopod{
-	pixel_x = 32
-	},
-/obj/machinery/light/small{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"amn" = (
-/obj/effect/auto_crayon{
-	icon_state = "night"
-	},
-/turf/simulated/floor/carpet/blucarpet/turfpack/muriki,
-/area/specialty/expie_clubhouse)
 "amo" = (
 /turf/simulated/flesh/indestructable,
 /area/muriki/processor/gland/co2)
@@ -5312,10 +4853,6 @@
 	},
 /turf/simulated/floor/outpost_roof/turfpack/muriki,
 /area/muriki/rooftop/disposal)
-"amG" = (
-/obj/structure/inflatable,
-/turf/simulated/floor/tiled/turfpack/muriki,
-/area/specialty/expie_clubhouse)
 "amH" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/effect/floor_decal/steeldecal/steel_decals3{
@@ -8400,13 +7937,6 @@
 /obj/random/outcrop,
 /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki,
 /area/muriki/skyline/cent)
-"asg" = (
-/obj/item/stack/emptysandbag{
-	amount = 30
-	},
-/obj/structure/table/steel,
-/turf/simulated/floor/tiled/turfpack/muriki,
-/area/specialty/expie_clubhouse)
 "ash" = (
 /obj/structure/window/plastitanium/full,
 /obj/structure/grille,
@@ -8678,13 +8208,6 @@
 	},
 /turf/simulated/floor/reinforced,
 /area/rnd/supermatter)
-"asI" = (
-/obj/structure/closet,
-/obj/item/gun/projectile/revolver,
-/obj/item/ammo_magazine/s357,
-/obj/item/ammo_magazine/s357,
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/specialty/expie_clubhouse)
 "asJ" = (
 /obj/effect/floor_decal/industrial/rad_floor/red,
 /obj/structure/cable/yellow{
@@ -8786,12 +8309,6 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/supermatter)
-"asR" = (
-/obj/effect/auto_crayon{
-	icon_state = "one_wrath"
-	},
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/specialty/expie_clubhouse)
 "asS" = (
 /obj/effect/floor_decal/milspec/color/orange/half{
 	dir = 4
@@ -10374,36 +9891,6 @@
 "avm" = (
 /turf/simulated/floor/tiled/kafel_full,
 /area/djstation)
-"avn" = (
-/obj/item/toy/tennis/blue{
-	pixel_y = 10;
-	pixel_x = 10
-	},
-/obj/item/toy/tennis/purple{
-	pixel_y = 10
-	},
-/obj/item/toy/tennis/random{
-	pixel_y = 10;
-	pixel_x = -10
-	},
-/obj/item/toy/eight_ball,
-/obj/item/toy/baseball{
-	pixel_x = -9
-	},
-/obj/item/toy/tennis/cyan{
-	pixel_x = -3;
-	pixel_y = 7
-	},
-/obj/item/toy/tennis/cyan{
-	pixel_x = 9;
-	pixel_y = 0
-	},
-/obj/item/toy/tennis/blue{
-	pixel_x = 5;
-	pixel_y = -9
-	},
-/turf/simulated/floor/tiled/turfpack/muriki,
-/area/specialty/expie_clubhouse)
 "avo" = (
 /obj/structure/window/maintenance_panel{
 	dir = 4
@@ -10471,23 +9958,6 @@
 /obj/random_multi/single_item/sfr_headset,
 /turf/simulated/floor/wood,
 /area/djstation)
-"avv" = (
-/obj/structure/table/rack,
-/turf/simulated/floor/tiled/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"avw" = (
-/obj/structure/table/rack,
-/obj/item/holosign_creator/combifan{
-	pixel_x = -5;
-	pixel_y = 7
-	},
-/turf/simulated/floor/tiled/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"avx" = (
-/obj/structure/table/rack/shelf,
-/obj/item/gun/projectile/shotgun/pump/empty,
-/turf/simulated/floor/tiled/turfpack/muriki,
-/area/specialty/expie_clubhouse)
 "avy" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 4
@@ -10500,11 +9970,6 @@
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/medbreak)
-"avA" = (
-/obj/structure/table/rack/shelf,
-/obj/item/material/knife/tacknife/survival,
-/turf/simulated/floor/tiled/turfpack/muriki,
-/area/specialty/expie_clubhouse)
 "avB" = (
 /obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/corner/purple{
@@ -10707,16 +10172,6 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/supermatter)
-"awc" = (
-/obj/item/paper_bin,
-/obj/structure/table/steel,
-/obj/item/pen/blue,
-/turf/simulated/floor/tiled/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"awd" = (
-/obj/item/toy/plushie/expie,
-/turf/simulated/floor/carpet/turfpack/muriki,
-/area/specialty/expie_clubhouse)
 "awe" = (
 /obj/effect/landmark/start/roboticist,
 /turf/simulated/floor/tiled/milspec,
@@ -10731,50 +10186,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/muriki/processor/hall)
-"awg" = (
-/obj/structure/table/rack/shelf,
-/turf/simulated/floor/tiled/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"awh" = (
-/obj/structure/closet,
-/turf/simulated/floor/tiled/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"awi" = (
-/obj/item/radio,
-/obj/item/radio,
-/turf/simulated/floor/tiled/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"awj" = (
-/obj/structure/table/rack/shelf,
-/obj/item/tape_roll{
-	pixel_x = -5;
-	pixel_y = 7
-	},
-/turf/simulated/floor/tiled/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"awk" = (
-/obj/structure/closet/crate,
-/turf/simulated/floor/tiled/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"awl" = (
-/obj/effect/auto_crayon{
-	icon_state = "right"
-	},
-/turf/simulated/floor/tiled/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"awm" = (
-/obj/structure/table/standard,
-/obj/random/medical,
-/obj/random/medical,
-/obj/random/medical,
-/obj/random/medical,
-/obj/random/medical,
-/obj/item/storage/pill_bottle/maintenance{
-	pixel_x = 14;
-	pixel_y = -3
-	},
-/turf/simulated/floor/carpet/blucarpet/turfpack/muriki,
-/area/specialty/expie_clubhouse)
 "awn" = (
 /obj/structure/table/reinforced,
 /turf/simulated/floor,
@@ -10956,14 +10367,6 @@
 	},
 /turf/simulated/floor/boxing/gym,
 /area/security/brig/lowobservation)
-"awN" = (
-/obj/machinery/medical_kiosk,
-/turf/simulated/floor/carpet/blucarpet/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"awO" = (
-/obj/machinery/portable_atmospherics/hydroponics,
-/turf/simulated/floor/grass/turfpack/muriki,
-/area/specialty/expie_clubhouse)
 "awP" = (
 /obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/spline/fancy/wood{
@@ -115303,7 +114706,7 @@ luR
 luR
 luR
 luR
-alc
+idv
 idv
 idv
 idv
@@ -116382,8 +115785,8 @@ luR
 luR
 luR
 ahX
-aiF
-aiF
+afe
+afe
 ahZ
 ahX
 luR
@@ -116545,7 +115948,7 @@ luR
 luR
 ahX
 aih
-aiF
+afe
 aib
 ahY
 ahW
@@ -116696,26 +116099,26 @@ pEi
 pEi
 hIk
 hIk
-hIk
-hIk
-hIk
-hIk
-hIk
-hIk
-ajR
-ajR
-ajR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
 ahX
 aii
-aiF
+afe
 aic
 ahX
 luR
 luR
 luR
 luR
-ajx
-aju
+idv
+idv
 idv
 luR
 luR
@@ -116858,28 +116261,28 @@ pEi
 pEi
 hIk
 hIk
-hIk
-hIk
-hIk
-hIk
-hIk
-hIk
-ajR
-ajU
-asI
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
 ahX
 aij
-aiF
+afe
 aid
 ahX
 luR
 luR
 luR
-ajR
-ajR
-ali
-ajR
-ajR
+luR
+luR
+luR
+luR
+luR
 luR
 luR
 luR
@@ -117020,15 +116423,15 @@ pEi
 pEi
 hIk
 hIk
-hIk
-hIk
-hIk
-hIk
-ajR
-ajR
-ajR
-ajP
-ajR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
 ahX
 ahX
 akx
@@ -117037,11 +116440,11 @@ ahX
 luR
 luR
 luR
-ajR
-ajy
-ajv
-ajS
-ajR
+luR
+luR
+luR
+luR
+luR
 luR
 luR
 luR
@@ -117182,28 +116585,28 @@ hIk
 pEi
 hIk
 hIk
-hIk
-hIk
-hIk
-hIk
-ajR
-ajU
-ajU
-asR
-ajU
-ajR
-ajR
-ajP
-ajR
-ajR
-ajR
-ajR
-ajR
-ajR
-ajW
-ajQ
-ajT
-ajR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
 luR
 luR
 luR
@@ -117344,28 +116747,28 @@ hIk
 hIk
 hIk
 hIk
-hIk
-hIk
-hIk
-hIk
-ajR
-ajU
-ajU
-akG
-ajU
-ajR
-alm
-ajQ
-akr
-ako
-akh
-akh
-akg
-ajR
-ajX
-ajQ
-ajT
-ajR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
 luR
 luR
 luR
@@ -117506,28 +116909,28 @@ hIk
 hIk
 hIk
 hIk
-hIk
-hIk
-hIk
-hIk
-ajR
-ajU
-akJ
-akH
-aln
-ajR
-ajQ
-akz
-aks
-akp
-akk
-akh
-akh
-ajR
-ajR
-ajt
-ajR
-ajR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
 luR
 luR
 luR
@@ -117668,28 +117071,28 @@ hIk
 hIk
 hIk
 hIk
-hIk
-hIk
-hIk
-hIk
-ajR
-ajU
-ajU
-akG
-ajU
-ajQ
-ajQ
-ajQ
-akt
-akq
-akl
-akh
-akh
-awc
-asg
-ajQ
-ajR
-ajR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
 aaY
 avC
 avC
@@ -117830,29 +117233,29 @@ hIk
 hIk
 hIk
 hIk
-hIk
-hIk
-hIk
-hIk
-ajR
-ajU
-ajU
-ajU
-ajU
-ajR
-ajQ
-ajQ
-awd
-akh
-akm
-akh
-akh
-ajQ
-ajQ
-ajQ
-amG
-ajR
-aiD
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+avC
 avC
 avC
 avC
@@ -117992,29 +117395,29 @@ hIk
 hIk
 hIk
 hIk
-ajR
-ajR
-ajR
-ajR
-ajR
-ajR
-ajR
-ajR
-ajR
-ajR
-avn
-ajQ
-aku
-akh
-akh
-akh
-akh
-ajQ
-ajQ
-ajY
-ajt
-ajP
-ajr
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+avC
 avC
 avC
 avC
@@ -118154,28 +117557,28 @@ hIk
 hIk
 hIk
 hIk
-ajR
-ajV
-awO
-awO
-awO
-ajR
-alh
-ajQ
-alo
-ajQ
-ajQ
-ajQ
-akv
-akh
-akh
-akh
-akh
-ajQ
-ajQ
-ajQ
-ajR
-ajR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
 aaY
 avC
 avC
@@ -118316,28 +117719,28 @@ hIk
 hIk
 hIk
 hIk
-ajR
-alr
-akO
-ajV
-ajV
-ajR
-ajQ
-ajQ
-ajQ
-ajQ
-ajQ
-ajQ
-ajQ
-ajQ
-ajQ
-ajQ
-awl
-ajQ
-ajQ
-ajZ
-ajR
-hIk
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
 luR
 luR
 avC
@@ -118478,27 +117881,27 @@ hIk
 hIk
 hIk
 hIk
-ajR
-akQ
-akP
-ajV
-ajV
-ajQ
-ajQ
-ajQ
-ajQ
-ajQ
-ajQ
-ajQ
-akw
-ajQ
-ajQ
-aki
-ajQ
-ajR
-ajR
-ajR
-ajR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
 luR
 luR
 luR
@@ -118640,33 +118043,33 @@ hIk
 hIk
 hIk
 hIk
-ajR
-akP
-akP
-akP
-akP
-ajR
-alF
-akI
-akA
-akA
-akA
-akA
-ajR
-alk
-akc
-akc
-akc
-akb
-ajR
-ajR
-ajR
-ajR
-ajR
-ajR
-ajR
-ajR
-ajR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
 hIk
 hIk
 hIk
@@ -118802,33 +118205,33 @@ hIk
 hIk
 hIk
 luR
-ajR
-akR
-akP
-akP
-akM
-ajR
-ajQ
-ajQ
-akA
-akE
-akA
-akB
-ajR
-awN
-akc
-akc
-akc
-amn
-ali
-amk
-ajQ
-ajR
-awh
-ajQ
-ajQ
-avv
-ajR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
 hIk
 hIk
 hIk
@@ -118964,33 +118367,33 @@ hIk
 hIk
 hIk
 luR
-ajR
-akM
-akP
-akP
-akM
-ajR
-ajQ
-ajQ
-akA
-akF
-akA
-akB
-ajR
-all
-akc
-akj
-akc
-akd
-ajR
-aml
-ajQ
-ajR
-awi
-ajQ
-ajQ
-avv
-ajR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
 hIk
 hIk
 hIk
@@ -119126,33 +118529,33 @@ hIk
 hIk
 hIk
 hIk
-ajR
-ajR
-akP
-akP
-akM
-ajR
-akK
-ajQ
-akA
-akA
-akA
-akC
-ajR
-all
-akc
-akc
-akc
-awm
-ajR
-amm
-ajQ
-ajR
-awj
-ajQ
-ajQ
-avw
-ajR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
 hIk
 hIk
 hIk
@@ -119288,33 +118691,33 @@ hIk
 hIk
 hIk
 hIk
-hIk
-ajR
-ajR
-ajR
-ajR
-ajR
-akL
-ajZ
-akA
-akA
-akA
-akD
-ajR
-ajO
-alj
-akc
-akc
-ake
-ajR
-ajR
-ajR
-ajR
-ajZ
-ajQ
-ajQ
-avx
-ajR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
 hIk
 hIk
 hIk
@@ -119455,28 +118858,28 @@ hIk
 luR
 luR
 luR
-ajR
-ajR
-ajR
-alq
-ajR
-ajR
-ajR
-ajR
-ajR
-ajR
-ajR
-ajR
-ajR
-ajR
-awg
-awk
-ajQ
-ajQ
-ajQ
-ajQ
-avA
-ajR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
 hIk
 hIk
 hIk
@@ -119616,29 +119019,29 @@ hIk
 hIk
 luR
 luR
-idv
-idv
-idv
-alE
-idv
-hIk
-hIk
-hIk
-hIk
-hIk
-hIk
-ajR
-ajQ
-ajQ
-ajQ
-ajQ
-ajQ
-ajQ
-ajQ
-ajQ
-ajQ
-awg
-ajR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
 hIk
 hIk
 hIk
@@ -119780,27 +119183,27 @@ luR
 luR
 luR
 luR
-idv
-idv
-idv
-hIk
-hIk
-hIk
-hIk
-hIk
-hIk
-ajR
-ajR
-ajR
-ajR
-ajR
-ajR
-ajR
-ajR
-ajR
-ajR
-ajR
-ajR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
+luR
 hIk
 hIk
 hIk

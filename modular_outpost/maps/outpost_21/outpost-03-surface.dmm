@@ -18247,16 +18247,6 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/unexplored/muriki/mountaineast)
-"aQC" = (
-/obj/structure/lattice,
-/obj/structure/ladder,
-/turf/simulated/open/muriki,
-/area/mine/explored/muriki/river/hole)
-"aQD" = (
-/obj/structure/lattice,
-/obj/structure/ladder/up,
-/turf/simulated/open/muriki,
-/area/mine/explored/muriki/river/hole)
 "aQE" = (
 /obj/machinery/portable_atmospherics/hydroponics/soil,
 /obj/item/material/minihoe,
@@ -154730,7 +154720,7 @@ rJa
 rJa
 rJa
 rJa
-aQC
+jnX
 jnX
 jnX
 jnX
@@ -154892,7 +154882,7 @@ rJa
 rJa
 rJa
 rJa
-aQD
+jnX
 jnX
 jnX
 jnX
