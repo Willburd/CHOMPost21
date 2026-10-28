@@ -212,6 +212,11 @@ GLOBAL_LIST_EMPTY(PDA_Manifest)
 		var/rank = sanitize(t.fields["rank"])
 		var/real_rank = make_list_rank(t.fields["real_rank"])
 
+		// Outpost 21 edit begin - Don't show pentesters in the manifest
+		if(IS_OUTPOST_MAINT_JOB(rank))
+			continue
+		// Outpost 21 edit end
+
 		var/isactive = t.fields["p_stat"]
 		var/department = 0
 		var/depthead = 0 			// Department Heads will be placed at the top of their lists.
