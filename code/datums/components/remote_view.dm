@@ -288,11 +288,13 @@
 	// Remote view mutation stops viewing when mobs die or if we lose the mutation/gene
 	RegisterSignal(host_mob, COMSIG_MOB_DNA_MUTATION, PROC_REF(on_mutation))
 	RegisterSignal(remote_view_target, COMSIG_MOB_DEATH, PROC_REF(handle_endview))
+	RegisterSignal(remote_view_target, COMSIG_MOB_HEAR_SAY, PROC_REF(on_hearsay)) // Outpost 21 edit(port) - Mob hear signal
 
 /datum/component/remote_view/mremote_mutation/UnregisterFromParent()
 	. = ..()
 	UnregisterSignal(host_mob, COMSIG_MOB_DNA_MUTATION)
 	UnregisterSignal(remote_view_target, COMSIG_MOB_DEATH)
+	UnregisterSignal(remote_view_target, COMSIG_MOB_HEAR_SAY) // Outpost 21 edit(port) - Mob hear signal
 
 /datum/component/remote_view/mremote_mutation/proc/on_mutation(datum/source)
 	SIGNAL_HANDLER
@@ -301,3 +303,13 @@
 	if(host_mob.stat == CONSCIOUS && (mRemote in host_mob.mutations) && remote_mob && remote_mob.stat == CONSCIOUS)
 		return
 	release_remote_view()
+
+// Outpost 21 edit(port) begin - Mob hear signal
+/datum/component/remote_view/mremote_mutation/proc/on_hearsay(datum/source, list/message_pieces, verb, italics, mob/speaker, sound/speech_sound, sound_vol)
+	SIGNAL_HANDLER
+	PRIVATE_PROC(TRUE)
+	var/mob/remote_mob = remote_view_target
+	if(remote_mob.stat != CONSCIOUS)
+		return
+	host_mob.hear_say(message_pieces, verb, italics, speaker, speech_sound, sound_vol) // TODO - still not working
+// Outpost 21 edit end
