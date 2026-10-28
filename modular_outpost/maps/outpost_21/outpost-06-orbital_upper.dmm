@@ -17060,7 +17060,7 @@
 	pixel_x = -32
 	},
 /turf/simulated/floor/greengrid,
-/area/ai_upload)
+/area/ai)
 "FZ" = (
 /obj/structure/extinguisher_cabinet{
 	pixel_x = 5;
