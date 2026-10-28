@@ -1,19 +1,30 @@
 /mob/living/simple_mob/horror/longdemon
 	name = "long demon"
 	desc = "An abnormally long taur-like weasel beast with a madly twisted toothy smile, sixteen irregularly spaced limbs, and bulging snake like eyes that seem to pierce into your mind as they glow."
+	icon = 'modular_outpost/icons/mob/longdemon.dmi'
 	icon_state = "longdemon"
 	icon_living = "longdemon"
 	icon_rest = "longdemon_rest"
 	icon_dead = "longdemon_dead"
-	has_eye_glow = TRUE
+
 	maxHealth = 900
 	health = 900
 	movement_cooldown = 3			// Lower is faster.
+
+	has_eye_glow = TRUE
 	seedarkness = FALSE
 	universal_understand = TRUE
-	armor = list(melee = 10, bullet = 10, laser = 0, energy = 0, bomb = 40, bio = 100, rad = -20)
+	supernatural = TRUE
+	injury_enrages = TRUE
+
 	var/used_dominate = 0
 	var/psychic_attack_range = 8
+	friendly = list("snuggles", "hugs", "cuddles", "squishes") // lets be cute :3
+
+	melee_damage_lower = 24
+	melee_damage_upper = 32
+	armor = list(melee = 10, bullet = 10, laser = 0, energy = 0, bomb = 40, bio = 100, rad = -20)
+	threshold = 0.2
 
 /mob/living/simple_mob/horror/longdemon/Initialize(mapload)
 	. = ..()
