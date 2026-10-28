@@ -1,8 +1,14 @@
 /mob/living/simple_mob/horror/longdemon
 	name = "long demon"
 	desc = "An abnormally long taur-like weasel beast with a madly twisted toothy smile, sixteen irregularly spaced limbs, and bulging snake like eyes that seem to pierce into your mind as they glow."
+	icon_state = "longdemon"
+	icon_living = "longdemon"
+	icon_rest = "longdemon_rest"
+	icon_dead = "longdemon_dead"
+	has_eye_glow = TRUE
 	maxHealth = 900
 	health = 900
+	movement_cooldown = 3			// Lower is faster.
 	seedarkness = FALSE
 	universal_understand = TRUE
 	armor = list(melee = 10, bullet = 10, laser = 0, energy = 0, bomb = 40, bio = 100, rad = -20)
@@ -14,9 +20,12 @@
 	// psychic critter
 	mutations.Add(TK)
 	mutations.Add(mRemote)
-	mutations.Add(mRemoteTalk)
+	mutations.Add(mRemotetalk)
 	add_verb(src, list(/mob/living/carbon/human/proc/remoteobserve, /mob/living/carbon/human/proc/remotesay))
-	motiontracker_subscribe() // Can sense things nearby, but doesn't have shadekin wall vision
+	// Can sense things nearby, but doesn't have shadekin wall vision
+	motiontracker_subscribe()
+	// Spawns in UD, so would be trapped if they cannot dig
+	ADD_TRAIT(src, TRAIT_NATURALTUNNELER, ROUNDSTART_TRAIT)
 
 /mob/living/simple_mob/horror/longdemon/verb/knockout_victim()
 	set category = "Abilities.Superpower"
