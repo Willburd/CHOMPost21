@@ -52,6 +52,13 @@
 	// Spawns in UD, so would be trapped if they cannot dig
 	ADD_TRAIT(src, TRAIT_NATURALTUNNELER, ROUNDSTART_TRAIT)
 
+/mob/living/simple_mob/horror/longdemon/update_icon()
+	. = ..()
+	// Just assume we always have eyeglow instead of the horrible mess that our parent mob does for resting sprites
+	if(has_eye_glow)
+		remove_eyes()
+		add_eyes()
+
 /mob/living/simple_mob/horror/longdemon/verb/paralyze_victim()
 	set category = "Abilities.Superpower"
 	set name = "Paralyze Victim"
