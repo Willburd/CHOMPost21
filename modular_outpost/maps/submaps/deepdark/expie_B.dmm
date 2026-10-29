@@ -266,6 +266,7 @@
 	pixel_x = -3
 	},
 /obj/item/pen/red,
+/obj/effect/landmark/pengmark,
 /turf/simulated/floor/wood/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "Z" = (

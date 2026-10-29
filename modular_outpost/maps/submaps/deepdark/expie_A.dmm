@@ -1,4 +1,8 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/obj/effect/landmark/pengmark,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
 "ao" = (
 /obj/item/toy/eight_ball,
 /turf/simulated/mineral/floor/turfpack/muriki{
@@ -1025,7 +1029,7 @@ Eq
 Eq
 wH
 nX
-ij
+aa
 AH
 nX
 wH

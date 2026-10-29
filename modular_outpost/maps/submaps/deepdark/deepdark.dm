@@ -18,6 +18,7 @@
 #include "den_G.dmm"
 #include "pond_A.dmm"
 #include "pond_B.dmm"
+#include "pond_C.dmm"
 #include "cave_A.dmm"
 #include "cave_B.dmm"
 #include "hall_A.dmm"
@@ -542,6 +543,14 @@
 	name = "Pond B"
 	desc = "Tiny pond."
 	mappath = "modular_outpost/maps/submaps/deepdark/pond_B.dmm"
+	allow_duplicates = TRUE
+	discard_prob = 20
+	cost = 15
+
+/datum/map_template/outpost21/muriki/caves_deepdark/pond_C
+	name = "Pond C"
+	desc = "Frog pond."
+	mappath = "modular_outpost/maps/submaps/deepdark/pond_C.dmm"
 	allow_duplicates = TRUE
 	discard_prob = 20
 	cost = 15
