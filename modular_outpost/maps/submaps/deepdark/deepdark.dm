@@ -103,6 +103,8 @@
 #include "stowaway_F.dmm"
 #include "sinkhole_A.dmm"
 #include "hideout_A.dmm"
+#include "expie_A.dmm"
+#include "expie_B.dmm"
 #endif
 
 /datum/map_template/outpost21/muriki/caves_deepdark
@@ -934,7 +936,7 @@
 	desc = "An unstable section of cavern waiting to collapse."
 	mappath = "modular_outpost/maps/submaps/deepdark/sinkhole_A.dmm"
 	allow_duplicates = TRUE
-	discard_prob = 40
+	discard_prob = 10
 	cost = 30
 
 /datum/map_template/outpost21/muriki/caves_deepdark_huge/hideout_A
@@ -943,6 +945,23 @@
 	mappath = "modular_outpost/maps/submaps/deepdark/hideout_A.dmm"
 	discard_prob = 35
 	cost = 40
+
+/datum/map_template/outpost21/muriki/caves_deepdark_huge/expie_A
+	name = "Expie A"
+	desc = "The ruins of an old expie outpost."
+	mappath = "modular_outpost/maps/submaps/deepdark/expie_A.dmm"
+	allow_duplicates = FALSE
+	discard_prob = 25
+	cost = 40
+
+/datum/map_template/outpost21/muriki/caves_deepdark_huge/expie_B
+	name = "Expie B"
+	desc = "The ruins of an old expie outpost."
+	mappath = "modular_outpost/maps/submaps/deepdark/expie_B.dmm"
+	allow_duplicates = FALSE
+	discard_prob = 15
+	cost = 20
+
 
 //////////////////////////////////////////////////////////////
 // Area definitions

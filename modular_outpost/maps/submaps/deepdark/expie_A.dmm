@@ -1,0 +1,1658 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"ao" = (
+/obj/item/toy/eight_ball,
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"bI" = (
+/obj/random/trash_pile,
+/turf/simulated/floor/tiled/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"cC" = (
+/obj/effect/auto_crayon{
+	icon_state = "right"
+	},
+/turf/simulated/floor/tiled/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"cG" = (
+/obj/structure/bed/double/padded,
+/obj/item/bedsheet/double,
+/obj/item/toy/plushie/pillow/green,
+/obj/item/toy/plushie/pillow/green,
+/turf/simulated/floor/carpet/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"cI" = (
+/obj/structure/closet/crate,
+/turf/simulated/floor/tiled/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"cL" = (
+/obj/random/trash_pile,
+/turf/simulated/floor/carpet/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"dG" = (
+/obj/structure/sink/puddle,
+/turf/simulated/floor/outdoors/mud/turfpack/muriki{
+	outdoors = 0
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"eh" = (
+/turf/simulated/floor/carpet/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"eq" = (
+/turf/simulated/wall/r_wall,
+/area/mine/explored/muriki/cave/deepdark)
+"eE" = (
+/obj/structure/table/steel,
+/turf/simulated/floor/carpet/blucarpet/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"fp" = (
+/obj/item/flashlight/lamp/green,
+/turf/simulated/floor/tiled/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"fY" = (
+/obj/random/junk,
+/turf/simulated/floor/carpet/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"gh" = (
+/obj/structure/table/rack/shelf,
+/turf/simulated/floor/tiled/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"gl" = (
+/obj/random/junk,
+/obj/effect/floorbreak,
+/turf/simulated/floor/tiled/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"go" = (
+/obj/item/flashlight/lamp/green,
+/turf/simulated/floor/grass/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"gF" = (
+/obj/item/reagent_containers/glass/bucket{
+	pixel_y = 16;
+	pixel_x = 9
+	},
+/obj/item/reagent_containers/glass/bucket{
+	pixel_y = 12;
+	pixel_x = -7
+	},
+/obj/item/reagent_containers/glass/bucket{
+	pixel_x = 10;
+	pixel_y = -10
+	},
+/turf/simulated/floor/carpet/bcarpet/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"gQ" = (
+/obj/structure/table/rack,
+/obj/item/holosign_creator/combifan{
+	pixel_x = -5;
+	pixel_y = 7
+	},
+/turf/simulated/floor/tiled/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"hr" = (
+/turf/simulated/floor/grass/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"hR" = (
+/turf/simulated/wall{
+	can_open = 1
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"ij" = (
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"io" = (
+/obj/structure/bed/bath,
+/obj/random/soap,
+/obj/machinery/light,
+/turf/simulated/floor/carpet/blucarpet/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"iK" = (
+/obj/structure/bed/double/padded,
+/obj/item/bedsheet/mimedouble,
+/turf/simulated/floor/carpet/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"je" = (
+/obj/item/toy/tennis/blue{
+	pixel_x = 5;
+	pixel_y = -9
+	},
+/turf/simulated/floor/tiled/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"jn" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/random/flashlight,
+/obj/random/flashlight,
+/obj/random/flashlight,
+/obj/random/flashlight,
+/obj/random/flashlight,
+/obj/random/flashlight,
+/obj/random/flashlight,
+/obj/random/flashlight,
+/turf/simulated/floor/tiled/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"jB" = (
+/obj/random/junk,
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"jS" = (
+/obj/random/trash,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"jW" = (
+/obj/structure/table/rack,
+/turf/simulated/floor/tiled/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"kD" = (
+/obj/random/trash,
+/turf/simulated/floor/tiled/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"kP" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/random/trash_pile,
+/turf/simulated/floor/tiled/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"kS" = (
+/obj/structure/inflatable/door,
+/turf/simulated/floor/tiled/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"lO" = (
+/obj/item/reagent_containers/glass/bucket{
+	pixel_y = -3;
+	pixel_x = -7
+	},
+/turf/simulated/floor/tiled/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"mA" = (
+/obj/structure/reagent_dispensers/watertank/barrel,
+/turf/simulated/floor/tiled/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"mR" = (
+/obj/machinery/transhuman/autoresleever/rogue,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"na" = (
+/obj/random/trash_pile,
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"nk" = (
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"nM" = (
+/obj/item/radio,
+/obj/item/radio,
+/turf/simulated/floor/tiled/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"nX" = (
+/obj/effect/floorbreak,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"oD" = (
+/obj/structure/table/rack/shelf,
+/obj/item/material/knife/tacknife/survival,
+/turf/simulated/floor/tiled/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"oS" = (
+/obj/item/toy/tennis/cyan{
+	pixel_x = 9;
+	pixel_y = 0
+	},
+/turf/simulated/floor/tiled/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"oU" = (
+/obj/structure/inflatable,
+/turf/simulated/floor/tiled/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"ps" = (
+/obj/item/toy/baseball{
+	pixel_x = -9
+	},
+/turf/simulated/floor/tiled/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"pQ" = (
+/obj/effect/auto_crayon{
+	icon_state = "one_wrath"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"qK" = (
+/obj/structure/bed/double/padded,
+/obj/item/bedsheet/purpledouble,
+/obj/item/toy/plushie/pillow/blue,
+/turf/simulated/floor/carpet/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"qP" = (
+/obj/structure/table/rack/shelf,
+/obj/item/gun/projectile/shotgun/pump/empty,
+/turf/simulated/floor/tiled/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"rh" = (
+/obj/structure/reagent_dispensers/watertank/high,
+/turf/simulated/floor/outdoors/mud/turfpack/muriki{
+	outdoors = 0
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"rU" = (
+/obj/machinery/portable_atmospherics/hydroponics,
+/turf/simulated/floor/grass/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"tc" = (
+/obj/random/junk,
+/turf/simulated/floor/tiled/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"th" = (
+/obj/effect/auto_crayon{
+	icon_state = "fire"
+	},
+/obj/effect/auto_crayon{
+	icon_state = "depart"
+	},
+/turf/simulated/floor/tiled/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"to" = (
+/obj/structure/simple_door/wood,
+/turf/simulated/floor/tiled/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"tF" = (
+/obj/effect/auto_crayon{
+	icon_state = "skull"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"tW" = (
+/obj/effect/auto_crayon{
+	icon_state = "left"
+	},
+/obj/item/flashlight/lamp/green,
+/turf/simulated/floor/tiled/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"uC" = (
+/obj/item/reagent_containers/glass/bucket,
+/turf/simulated/floor/carpet/bcarpet/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"vw" = (
+/obj/machinery/light/small,
+/obj/random/trash,
+/turf/simulated/floor/tiled/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"wH" = (
+/turf/simulated/wall,
+/area/mine/explored/muriki/cave/deepdark)
+"wK" = (
+/obj/effect/auto_crayon{
+	icon_state = "fire"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"xT" = (
+/obj/item/toy/tennis/random{
+	pixel_y = 10;
+	pixel_x = -10
+	},
+/turf/simulated/floor/carpet/blucarpet/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"yC" = (
+/obj/machinery/recharger{
+	pixel_x = -5
+	},
+/obj/structure/table/steel,
+/obj/item/reagent_containers/glass/mortar_pestle{
+	pixel_x = 8
+	},
+/turf/simulated/floor/tiled/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"yK" = (
+/obj/structure/closet,
+/obj/item/tool/crowbar/brace_jack,
+/turf/simulated/floor/carpet/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"zo" = (
+/obj/item/toy/tennis/purple{
+	pixel_y = 10
+	},
+/turf/simulated/floor/tiled/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"zt" = (
+/turf/template_noop,
+/area/mine/explored/muriki/cave/deepdark)
+"Al" = (
+/obj/structure/table/standard,
+/obj/random/medical,
+/obj/random/medical,
+/obj/random/medical,
+/obj/random/medical,
+/obj/random/medical,
+/turf/simulated/floor/carpet/blucarpet/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Aq" = (
+/obj/structure/table/standard,
+/obj/random/medical,
+/obj/random/medical,
+/obj/random/medical,
+/obj/random/medical,
+/obj/random/medical,
+/obj/item/storage/pill_bottle/maintenance{
+	pixel_x = 14;
+	pixel_y = -3
+	},
+/turf/simulated/floor/carpet/blucarpet/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"AH" = (
+/obj/random/meat,
+/obj/random/meat,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Bi" = (
+/obj/machinery/gibber/autogibber{
+	emagged = 1
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Bp" = (
+/obj/effect/auto_crayon{
+	icon_state = "six_tranquility"
+	},
+/turf/simulated/floor/carpet/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Ca" = (
+/obj/effect/auto_crayon{
+	icon_state = "five_life"
+	},
+/turf/simulated/floor/carpet/blucarpet/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Cb" = (
+/turf/simulated/mineral/alt/ignore_cavegen/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"CM" = (
+/obj/random/mre,
+/obj/random/mre,
+/obj/random/mre,
+/obj/random/mre,
+/turf/simulated/floor/carpet/bcarpet/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"DQ" = (
+/obj/random/thermalponcho,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"DT" = (
+/obj/structure/bonfire,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Ea" = (
+/obj/item/toy/plushie/pillow/green,
+/turf/simulated/floor/carpet/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"El" = (
+/obj/effect/auto_crayon{
+	icon_state = "survival"
+	},
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"Eq" = (
+/turf/simulated/mineral/alt/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"ER" = (
+/turf/simulated/floor/tiled/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"EV" = (
+/obj/structure/tanning_rack,
+/turf/simulated/floor/tiled/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Fd" = (
+/obj/random/junk,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Gd" = (
+/obj/machinery/mineral/input,
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"HN" = (
+/obj/structure/closet,
+/turf/simulated/floor/tiled/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"HR" = (
+/obj/item/paper_bin,
+/obj/structure/table/steel,
+/obj/item/pen/blue,
+/turf/simulated/floor/tiled/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"IN" = (
+/obj/effect/floorbreak,
+/turf/simulated/floor/carpet/blucarpet/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Jb" = (
+/obj/effect/auto_crayon{
+	icon_state = "three_trade"
+	},
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"Jh" = (
+/obj/structure/bed/pillowpile/teal,
+/turf/simulated/floor/carpet/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Jj" = (
+/obj/structure/table/standard,
+/obj/random/maintenance/foodstuff,
+/obj/random/maintenance/foodstuff,
+/obj/random/maintenance/foodstuff,
+/obj/random/maintenance/foodstuff,
+/turf/simulated/floor/carpet/bcarpet/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"JS" = (
+/obj/structure/reagent_dispensers/souppot/half,
+/turf/simulated/floor/carpet/bcarpet/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"JW" = (
+/obj/item/toy/tennis/blue{
+	pixel_y = 10;
+	pixel_x = 10
+	},
+/turf/simulated/floor/tiled/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Kg" = (
+/turf/simulated/mineral/floor/turfpack/muriki{
+	ignore_mapgen = 1
+	},
+/area/template_noop)
+"Kn" = (
+/obj/effect/auto_crayon{
+	icon_state = "pill"
+	},
+/turf/simulated/floor/tiled/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"KY" = (
+/obj/random/trash,
+/turf/simulated/floor/carpet/blucarpet/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"La" = (
+/obj/item/toy/plushie/expie,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"LM" = (
+/turf/simulated/floor/outdoors/mud/turfpack/muriki{
+	outdoors = 0
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"Mj" = (
+/obj/random/trash,
+/obj/random/junk,
+/turf/simulated/floor/tiled/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Mv" = (
+/turf/simulated/floor/carpet/blucarpet/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"MA" = (
+/obj/effect/floorbreak,
+/turf/simulated/floor/tiled/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"MC" = (
+/obj/effect/landmark/vines,
+/turf/simulated/floor/outdoors/mud/turfpack/muriki{
+	outdoors = 0
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"ME" = (
+/turf/simulated/floor/carpet/bcarpet/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"ML" = (
+/turf/simulated/mineral/alt/turfpack/muriki,
+/area/template_noop)
+"MW" = (
+/obj/structure/closet,
+/obj/item/gun/projectile/revolver,
+/obj/item/ammo_magazine/s357,
+/obj/item/ammo_magazine/s357,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Nr" = (
+/obj/structure/bed/double/padded,
+/obj/item/bedsheet/greendouble,
+/obj/item/toy/plushie/pillow/red,
+/turf/simulated/floor/carpet/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Nu" = (
+/obj/effect/auto_crayon{
+	icon_state = "water"
+	},
+/turf/simulated/floor/tiled/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"NF" = (
+/obj/fiftyspawner/wood,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Oj" = (
+/obj/item/material/minihoe,
+/turf/simulated/floor/grass/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Om" = (
+/obj/structure/table/standard,
+/obj/random/drinksoft,
+/turf/simulated/floor/carpet/bcarpet/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Oz" = (
+/turf/template_noop,
+/area/template_noop)
+"OD" = (
+/obj/structure/bed/double/padded,
+/obj/item/bedsheet/bluedouble,
+/turf/simulated/floor/carpet/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"OO" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/clothing/mask/gas/clear,
+/turf/simulated/floor/tiled/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Pt" = (
+/obj/item/stack/emptysandbag{
+	amount = 30
+	},
+/obj/structure/table/steel,
+/turf/simulated/floor/tiled/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Pw" = (
+/obj/machinery/door/airlock/maintenance/common,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Qq" = (
+/obj/random/junk,
+/turf/simulated/floor/carpet/bcarpet/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Qt" = (
+/obj/item/flame/candle/everburn,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"QF" = (
+/obj/structure/trash_pile,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Rz" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/machinery/light_switch{
+	pixel_y = 28
+	},
+/turf/simulated/floor/carpet/blucarpet/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"RM" = (
+/turf/simulated/mineral/alt/ignore_cavegen/turfpack/muriki,
+/area/template_noop)
+"TI" = (
+/obj/structure/table/steel,
+/obj/item/storage/firstaid/surgery,
+/obj/item/cell/slime{
+	pixel_y = 10;
+	pixel_x = -8
+	},
+/turf/simulated/floor/carpet/blucarpet/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"TO" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"TW" = (
+/obj/structure/bed/double/padded,
+/obj/item/bedsheet/cedouble,
+/obj/item/toy/plushie/pillow/green,
+/turf/simulated/floor/carpet/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Ux" = (
+/obj/item/toy/tennis/cyan{
+	pixel_x = -3;
+	pixel_y = 7
+	},
+/turf/simulated/floor/tiled/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"UB" = (
+/obj/structure/simple_door/sandstone,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"VE" = (
+/obj/structure/table/standard,
+/obj/random/firstaid,
+/obj/random/firstaid,
+/obj/random/firstaid,
+/obj/random/firstaid,
+/obj/random/firstaid,
+/turf/simulated/floor/carpet/blucarpet/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"VS" = (
+/turf/simulated/wall/r_wall{
+	can_open = 1
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"Wv" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/random/maintenance/morestuff,
+/obj/random/maintenance/morestuff,
+/obj/random/maintenance/misc,
+/obj/random/maintenance/misc,
+/turf/simulated/floor/tiled/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"WJ" = (
+/obj/structure/table/rack/shelf,
+/obj/item/tape_roll{
+	pixel_x = -5;
+	pixel_y = 7
+	},
+/turf/simulated/floor/tiled/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Xo" = (
+/obj/machinery/portable_atmospherics/hydroponics/soil,
+/turf/simulated/floor/outdoors/mud/turfpack/muriki{
+	outdoors = 0
+	},
+/area/mine/explored/muriki/cave/deepdark)
+"XE" = (
+/obj/structure/bed/pillowpile/green,
+/turf/simulated/floor/carpet/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"XR" = (
+/obj/item/clothing/ears/earring/dangle/gold,
+/obj/item/clothing/ears/earring/dangle/gold,
+/obj/item/clothing/ears/earring/dangle/gold,
+/obj/item/clothing/ears/earring/dangle/gold,
+/obj/item/clothing/ears/earring/dangle/gold,
+/obj/item/clothing/ears/earring/dangle/gold,
+/turf/simulated/floor/tiled/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"YB" = (
+/obj/effect/auto_crayon{
+	icon_state = "food"
+	},
+/turf/simulated/floor/tiled/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"ZQ" = (
+/obj/structure/table/rack/shelf/wood,
+/obj/item/clothing/suit/space/emergency,
+/obj/item/clothing/suit/space/emergency,
+/obj/item/clothing/head/helmet/space/emergency,
+/obj/item/clothing/head/helmet/space/emergency,
+/obj/item/tank/emergency/oxygen/double,
+/obj/item/tank/emergency/oxygen/double,
+/obj/item/clothing/mask/breath/transparent,
+/obj/item/clothing/mask/breath/transparent,
+/turf/simulated/floor/tiled/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"ZW" = (
+/obj/random/junk,
+/turf/simulated/floor/outdoors/mud/turfpack/muriki{
+	outdoors = 0
+	},
+/area/mine/explored/muriki/cave/deepdark)
+
+(1,1,1) = {"
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+"}
+(2,1,1) = {"
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+"}
+(3,1,1) = {"
+Oz
+Oz
+Oz
+Oz
+RM
+Cb
+Cb
+Cb
+Cb
+Cb
+zt
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Kg
+nk
+nk
+nk
+nk
+Kg
+Oz
+Oz
+Oz
+Oz
+"}
+(4,1,1) = {"
+Oz
+Oz
+ML
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+eq
+eq
+eq
+eq
+eq
+Cb
+Cb
+Cb
+nk
+nk
+nk
+nk
+nk
+nk
+nk
+Kg
+Oz
+Oz
+Oz
+"}
+(5,1,1) = {"
+Oz
+Oz
+ML
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+eq
+ij
+DQ
+Qt
+eq
+Cb
+Cb
+Cb
+nk
+nk
+nk
+nk
+nk
+nk
+nk
+Oz
+Oz
+Oz
+Oz
+"}
+(6,1,1) = {"
+Oz
+RM
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+eq
+Gd
+ij
+jS
+Pw
+tF
+nk
+nk
+nk
+nk
+nk
+nk
+Cb
+Cb
+zt
+Oz
+Oz
+Oz
+Oz
+"}
+(7,1,1) = {"
+Oz
+RM
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+wH
+wH
+wH
+eq
+mR
+nX
+Fd
+eq
+Cb
+Cb
+Cb
+Cb
+El
+Jb
+nk
+Cb
+Cb
+Cb
+Oz
+Oz
+Oz
+Oz
+"}
+(8,1,1) = {"
+Oz
+RM
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+wH
+ij
+MW
+eq
+Bi
+ij
+QF
+eq
+Cb
+Cb
+Cb
+wH
+wH
+to
+wH
+wH
+Cb
+Cb
+Oz
+Oz
+Oz
+Oz
+"}
+(9,1,1) = {"
+Oz
+RM
+Eq
+Eq
+Eq
+Eq
+wH
+wH
+wH
+hR
+wH
+eq
+eq
+VS
+eq
+eq
+Cb
+Cb
+Cb
+wH
+jn
+th
+vw
+wH
+Cb
+Cb
+Cb
+Oz
+Oz
+Oz
+"}
+(10,1,1) = {"
+Oz
+RM
+Eq
+Eq
+Eq
+Eq
+wH
+ij
+ij
+pQ
+ij
+wH
+wH
+hR
+wH
+wH
+wH
+wH
+wH
+wH
+OO
+MA
+ZQ
+wH
+Cb
+Cb
+Cb
+Oz
+Oz
+Oz
+"}
+(11,1,1) = {"
+Oz
+RM
+ML
+Eq
+Eq
+Eq
+wH
+nX
+ij
+AH
+nX
+wH
+XR
+zo
+qK
+Nr
+eh
+cL
+yK
+wH
+Wv
+ER
+ZQ
+wH
+Cb
+Cb
+Cb
+Cb
+Oz
+Oz
+"}
+(12,1,1) = {"
+Oz
+RM
+ML
+Eq
+Eq
+Eq
+wH
+ij
+DT
+wK
+NF
+wH
+ER
+tW
+TW
+iK
+Jh
+eh
+eh
+wH
+wH
+kS
+wH
+wH
+Cb
+Cb
+Cb
+Cb
+Oz
+Oz
+"}
+(13,1,1) = {"
+Oz
+Oz
+ML
+Eq
+Eq
+Eq
+wH
+ij
+La
+AH
+ij
+Ux
+MA
+ER
+cG
+OD
+XE
+eh
+eh
+HR
+Pt
+ER
+wH
+wH
+jB
+Cb
+Cb
+Cb
+Oz
+Oz
+"}
+(14,1,1) = {"
+Oz
+Oz
+Eq
+Eq
+Eq
+Eq
+wH
+ij
+nX
+ij
+ij
+wH
+ER
+ER
+fY
+eh
+Bp
+eh
+Ea
+ER
+JW
+ER
+oU
+wH
+nk
+ao
+Cb
+Cb
+Oz
+Oz
+"}
+(15,1,1) = {"
+Oz
+Oz
+wH
+wH
+wH
+wH
+wH
+wH
+wH
+wH
+wH
+wH
+ER
+MA
+eh
+eh
+eh
+eh
+eh
+kD
+ER
+ER
+kS
+hR
+nk
+nk
+Cb
+Oz
+Oz
+Oz
+"}
+(16,1,1) = {"
+Oz
+Oz
+wH
+hr
+rU
+rU
+rU
+wH
+yC
+ER
+TO
+ps
+ER
+ER
+eh
+eh
+Ea
+eh
+eh
+ER
+MA
+Mj
+wH
+wH
+nk
+Cb
+Cb
+Oz
+Oz
+Oz
+"}
+(17,1,1) = {"
+Oz
+Oz
+wH
+go
+Oj
+hr
+hr
+wH
+ER
+MA
+Mj
+ER
+ER
+ER
+ER
+MA
+ER
+ER
+cC
+ER
+ER
+fp
+wH
+nk
+nk
+Cb
+Cb
+Oz
+Oz
+Oz
+"}
+(18,1,1) = {"
+Oz
+RM
+wH
+dG
+LM
+hr
+hr
+kD
+ER
+ER
+lO
+MA
+kD
+oS
+ER
+je
+ER
+Kn
+ER
+wH
+wH
+wH
+wH
+na
+nk
+Cb
+Cb
+Cb
+zt
+Oz
+"}
+(19,1,1) = {"
+Oz
+RM
+wH
+LM
+LM
+MC
+LM
+wH
+EV
+YB
+ME
+ME
+uC
+ME
+wH
+Rz
+IN
+Mv
+Mv
+io
+wH
+wH
+wH
+wH
+wH
+wH
+wH
+wH
+wH
+Oz
+"}
+(20,1,1) = {"
+Oz
+RM
+wH
+LM
+LM
+ZW
+Xo
+wH
+ER
+MA
+ME
+gF
+ME
+Jj
+wH
+Mv
+Mv
+Mv
+Mv
+Mv
+to
+ER
+bI
+wH
+HN
+tc
+ER
+jW
+wH
+Oz
+"}
+(21,1,1) = {"
+Oz
+RM
+wH
+Xo
+LM
+LM
+Xo
+wH
+MA
+ER
+ME
+ME
+Qq
+Jj
+wH
+eE
+xT
+Ca
+Mv
+VE
+wH
+MA
+kD
+wH
+nM
+ER
+kD
+jW
+wH
+Oz
+"}
+(22,1,1) = {"
+Oz
+RM
+wH
+wH
+LM
+rh
+Xo
+wH
+Nu
+kD
+ME
+ME
+JS
+Om
+wH
+eE
+Mv
+Mv
+KY
+Aq
+wH
+kP
+tc
+wH
+WJ
+MA
+ER
+gQ
+wH
+Oz
+"}
+(23,1,1) = {"
+Oz
+RM
+Eq
+wH
+wH
+wH
+wH
+wH
+mA
+fp
+ME
+ME
+ME
+CM
+wH
+TI
+Mv
+Mv
+Mv
+Al
+wH
+wH
+wH
+wH
+fp
+ER
+ER
+qP
+wH
+Oz
+"}
+(24,1,1) = {"
+Oz
+RM
+Eq
+Eq
+Cb
+Cb
+Cb
+wH
+wH
+wH
+UB
+wH
+wH
+wH
+wH
+wH
+wH
+wH
+wH
+wH
+wH
+gh
+cI
+ER
+ER
+ER
+gl
+oD
+wH
+Oz
+"}
+(25,1,1) = {"
+Oz
+Oz
+ML
+Eq
+Cb
+Cb
+nk
+jB
+El
+Jb
+nk
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+wH
+bI
+ER
+ER
+MA
+ER
+MA
+kD
+ER
+ER
+gh
+wH
+Oz
+"}
+(26,1,1) = {"
+Oz
+Oz
+ML
+Cb
+Cb
+Cb
+Cb
+Cb
+nk
+nk
+nk
+Eq
+Eq
+Eq
+Eq
+Eq
+Eq
+wH
+wH
+wH
+wH
+wH
+wH
+wH
+wH
+wH
+wH
+wH
+wH
+Oz
+"}
+(27,1,1) = {"
+Oz
+Oz
+Oz
+zt
+Cb
+Cb
+Cb
+Cb
+nk
+nk
+na
+Cb
+Cb
+Cb
+Cb
+Cb
+Cb
+Cb
+Cb
+Cb
+Cb
+Cb
+Cb
+Cb
+Cb
+Cb
+Cb
+Cb
+Cb
+Oz
+"}
+(28,1,1) = {"
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Cb
+Cb
+nk
+nk
+Cb
+Cb
+RM
+Oz
+Oz
+Oz
+RM
+Cb
+Cb
+Cb
+Cb
+Cb
+Cb
+RM
+RM
+RM
+Oz
+Oz
+Oz
+Oz
+"}
+(29,1,1) = {"
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Kg
+Kg
+Kg
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+RM
+RM
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+"}
+(30,1,1) = {"
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+Oz
+"}
