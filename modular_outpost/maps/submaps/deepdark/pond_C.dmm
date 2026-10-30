@@ -1,6 +1,6 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
 "a" = (
-/turf/simulated/mineral/floor/ignore_mapgen/cave,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "e" = (
 /turf/simulated/mineral/alt/turfpack/muriki,
@@ -12,15 +12,15 @@
 /turf/simulated/mineral/alt/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "E" = (
-/turf/simulated/mineral/floor/ignore_mapgen/cave,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/template_noop)
 "F" = (
 /mob/living/simple_mob/vore/aggressive/frog,
-/turf/simulated/mineral/floor/ignore_mapgen/cave,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "K" = (
 /obj/structure/flora/mushroom,
-/turf/simulated/mineral/floor/ignore_mapgen/cave,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "P" = (
 /obj/effect/landmark/pengmark,

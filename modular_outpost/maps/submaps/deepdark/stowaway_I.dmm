@@ -212,7 +212,7 @@
 /turf/simulated/floor/reinforced,
 /area/mine/explored/muriki/cave/deepdark)
 "xJ" = (
-/turf/simulated/mineral/floor/ignore_mapgen/cave,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/template_noop)
 "xW" = (
 /obj/machinery/atmospherics/pipe/simple/visible{
@@ -421,7 +421,7 @@
 /turf/simulated/floor/plating,
 /area/mine/explored/muriki/cave/deepdark)
 "Vm" = (
-/turf/simulated/mineral/floor/ignore_mapgen/cave,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "VX" = (
 /obj/machinery/atmospherics/binary/pump,

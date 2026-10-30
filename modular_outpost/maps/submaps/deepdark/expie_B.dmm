@@ -57,9 +57,7 @@
 /obj/effect/auto_crayon{
 	icon_state = "seven_resolve"
 	},
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "p" = (
 /obj/item/paper{
@@ -251,9 +249,7 @@
 /turf/simulated/floor/wood/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "W" = (
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "X" = (
 /turf/simulated/wall,

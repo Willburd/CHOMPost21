@@ -53,7 +53,7 @@
 /turf/simulated/floor/wood,
 /area/mine/explored/muriki/cave/deepdark)
 "dr" = (
-/turf/simulated/mineral/floor/ignore_mapgen/cave,
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "dz" = (
 /obj/structure/bed/chair/bay/comfy/blue{

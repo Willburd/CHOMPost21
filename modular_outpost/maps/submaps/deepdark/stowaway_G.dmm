@@ -116,9 +116,7 @@
 /obj/effect/auto_crayon{
 	icon_state = "shelter"
 	},
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "lw" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
@@ -271,9 +269,7 @@
 /turf/simulated/floor/plating,
 /area/mine/explored/muriki/cave/deepdark)
 "IE" = (
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "Ke" = (
 /turf/simulated/floor/tiled/white,
