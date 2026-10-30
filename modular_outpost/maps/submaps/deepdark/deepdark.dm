@@ -1042,7 +1042,7 @@
 	sound_env = TUNNEL_ENCLOSED
 	icon_state = "orange"
 	always_unpowered = TRUE
-	flags = AREA_BLOCK_GHOST_SIGHT | AREA_FORBID_EVENTS | AREA_FLAG_IS_NOT_PERSISTENT
+	flags = AREA_FORBID_EVENTS | AREA_FLAG_IS_NOT_PERSISTENT
 	haunted = TRUE
 	color_grading = COLORTINT_UNDERDARK
 	ambience = AMBIENCE_UNDERDARK
@@ -1051,7 +1051,7 @@
 	sound_env = TUNNEL_ENCLOSED
 	icon_state = "yellow"
 	always_unpowered = TRUE
-	flags = AREA_BLOCK_GHOST_SIGHT | AREA_FORBID_EVENTS | AREA_FLAG_IS_NOT_PERSISTENT
+	flags = AREA_FORBID_EVENTS | AREA_FLAG_IS_NOT_PERSISTENT
 	haunted = TRUE
 	color_grading = COLORTINT_UNDERDARK
 	ambience = AMBIENCE_UNDERDARK
@@ -1059,7 +1059,7 @@
 /area/submap/outpost21/cave_liminal_A
 	name = "\improper Come Closer"
 	icon_state = "red2"
-	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS | AREA_SECRET_NAME | AREA_BLOCK_GHOST_SIGHT
+	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS | AREA_SECRET_NAME
 	sound_env = SOUND_ENVIRONMENT_PSYCHOTIC
 	ambience = AMBIENCE_UNDERDARK
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
@@ -1070,7 +1070,7 @@
 	name = "\improper GET OUT"
 	var/show_name = "GET OUT" // replaces name
 	icon_state = "red2"
-	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS | AREA_SECRET_NAME | AREA_BLOCK_GHOST_SIGHT
+	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS | AREA_SECRET_NAME
 	always_unpowered = FALSE
 	requires_power = FALSE
 	sound_env = SOUND_ENVIRONMENT_AUDITORIUM
@@ -1085,7 +1085,7 @@
 /area/submap/outpost21/cave_liminal_D
 	name = "\improper It Hurts"
 	icon_state = "red2"
-	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS | AREA_SECRET_NAME | AREA_BLOCK_GHOST_SIGHT
+	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS | AREA_SECRET_NAME
 	sound_env = SOUND_ENVIRONMENT_PSYCHOTIC
 	ambience = AMBIENCE_UNDERDARK
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
@@ -1095,7 +1095,7 @@
 /area/submap/outpost21/cave_red_A
 	name = "\improper Our Pulsing Mass"
 	icon_state = "red2"
-	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS | AREA_SECRET_NAME | AREA_BLOCK_GHOST_SIGHT
+	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS | AREA_SECRET_NAME
 	sound_env = SOUND_ENVIRONMENT_CAVE
 	ambience = AMBIENCE_UNDERDARK
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
@@ -1104,7 +1104,7 @@
 
 /area/submap/outpost21/cave_red_B
 	name = "\improper Inside Us"
-	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS | AREA_SECRET_NAME | AREA_BLOCK_GHOST_SIGHT
+	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS | AREA_SECRET_NAME
 	icon_state = "red2"
 	sound_env = SOUND_ENVIRONMENT_CAVE
 	ambience = AMBIENCE_OTHERWORLDLY
@@ -1115,7 +1115,7 @@
 /area/submap/outpost21/cave_red_C
 	name = "\improper Touch Our Skin"
 	icon_state = "red2"
-	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS | AREA_SECRET_NAME | AREA_BLOCK_GHOST_SIGHT
+	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS | AREA_SECRET_NAME
 	sound_env = SOUND_ENVIRONMENT_CAVE
 	ambience = AMBIENCE_OTHERWORLDLY
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
@@ -1125,7 +1125,7 @@
 /area/submap/outpost21/yawn_A
 	name = "\improper We See"
 	icon_state = "red2"
-	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS | AREA_SECRET_NAME | AREA_BLOCK_GHOST_SIGHT
+	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS | AREA_SECRET_NAME
 	sound_env = SOUND_ENVIRONMENT_CARPETED_HALLWAY
 	ambience = AMBIENCE_GENERIC
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
@@ -1135,7 +1135,7 @@
 /area/submap/outpost21/yawn_B
 	name = "\improper We Remember"
 	icon_state = "red2"
-	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS | AREA_SECRET_NAME | AREA_BLOCK_GHOST_SIGHT
+	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS | AREA_SECRET_NAME
 	sound_env = SOUND_ENVIRONMENT_STONEROOM
 	ambience = AMBIENCE_OUTPOST
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
@@ -1145,7 +1145,7 @@
 /area/submap/outpost21/cross_A
 	name = "\improper We Are Found"
 	icon_state = "red2"
-	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS | AREA_SECRET_NAME | AREA_BLOCK_GHOST_SIGHT
+	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS | AREA_SECRET_NAME
 	sound_env = SOUND_ENVIRONMENT_BATHROOM
 	ambience = AMBIENCE_ARRIVALS
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
@@ -1155,7 +1155,7 @@
 /area/submap/outpost21/crashed_ufo
 	name = "\improper Unknown"
 	requires_power = FALSE
-	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS | AREA_SECRET_NAME | AREA_BLOCK_GHOST_SIGHT
+	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS | AREA_SECRET_NAME
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	sound_env = SOUND_ENVIRONMENT_STONEROOM
 	ambience = AMBIENCE_OTHERWORLDLY
@@ -1165,7 +1165,7 @@
 /area/submap/outpost21/dark_wizard_den
 	name = "\improper Stale Donut"
 	icon_state = "red2"
-	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS | AREA_SECRET_NAME | AREA_BLOCK_GHOST_SIGHT
+	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS | AREA_SECRET_NAME
 	sound_env = SOUND_ENVIRONMENT_LIVINGROOM
 	ambience = AMBIENCE_FOREBODING
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
@@ -1181,7 +1181,6 @@
 	sound_env = SOUND_ENVIRONMENT_ARENA
 	ambience = AMBIENCE_UNDERDARK
 	use_emergency_overlay = FALSE
-	flags = AREA_BLOCK_GHOST_SIGHT
 	haunted = TRUE
 	color_grading = COLORTINT_UNDERDARK
 

@@ -110,6 +110,6 @@ GLOBAL_LIST_EMPTY(collapsing_cave_effects)
 	name = "\improper Sink Hole"
 	base_turf = /turf/simulated/open
 	sound_env = SOUND_ENVIRONMENT_PARKING_LOT
-	flags = AREA_BLOCK_GHOST_SIGHT|AREA_FLAG_IS_NOT_PERSISTENT
+	flags = AREA_FLAG_IS_NOT_PERSISTENT
 	icon_state = "dk_yellow"
 	color_grading = COLORTINT_DIM
