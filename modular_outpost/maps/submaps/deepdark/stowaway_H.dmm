@@ -73,7 +73,7 @@
 /turf/simulated/floor/tiled/material/gold,
 /area/mine/explored/muriki/cave/deepdark)
 "fc" = (
-/turf/simulated/mineral/floor/ignore_mapgen/cave,
+/turf/simulated/mineral/floor/turfpack/muriki,
 /area/template_noop)
 "fX" = (
 /obj/item/spacecasinocash/c1000,
@@ -521,7 +521,7 @@
 /area/mine/explored/muriki/cave/deepdark)
 "Hk" = (
 /obj/structure/flora/mushroom,
-/turf/simulated/mineral/floor/ignore_mapgen/cave,
+/turf/simulated/mineral/floor/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "Hm" = (
 /turf/simulated/mineral/alt/ignore_cavegen/turfpack/muriki,
@@ -549,7 +549,7 @@
 /turf/simulated/floor/tiled/material/gold,
 /area/mine/explored/muriki/cave/deepdark)
 "Jl" = (
-/turf/simulated/mineral/floor/ignore_mapgen/cave,
+/turf/simulated/mineral/floor/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "JV" = (
 /obj/structure/table/fancyblack,
