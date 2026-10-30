@@ -49,7 +49,6 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 10
 	},
-/obj/structure/ladder/top_hatch,
 /turf/simulated/floor/wood,
 /area/mine/explored/muriki/cave/deepdark)
 "dr" = (

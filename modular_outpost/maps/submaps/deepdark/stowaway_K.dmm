@@ -1,4 +1,10 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/template_noop)
+"ab" = (
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
 "ap" = (
 /turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
@@ -397,10 +403,6 @@
 /obj/structure/catwalk,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
-"tM" = (
-/obj/machinery/hologram/holopad,
-/turf/simulated/floor/tiled/freezer,
-/area/mine/explored/muriki/cave/deepdark)
 "uI" = (
 /obj/structure/table/glass,
 /obj/item/clothing/shoes/sandal,
@@ -709,9 +711,6 @@
 "NG" = (
 /obj/machinery/ai_status_display{
 	pixel_y = 32
-	},
-/obj/item/juke_remote{
-	autolinkareajuke_onspawn = /area/djstation
 	},
 /obj/machinery/vending/wallmed1/public{
 	dir = 4;
@@ -1130,8 +1129,8 @@ GX
 GX
 Gm
 ap
-ap
-ap
+ab
+ab
 GX
 GX
 GX
@@ -1161,9 +1160,9 @@ GX
 GX
 GX
 Gm
-ap
-ap
-ap
+ab
+ab
+ab
 Gm
 GX
 GX
@@ -1249,7 +1248,7 @@ Nh
 Iu
 xk
 xk
-ap
+ab
 Gm
 DK
 je
@@ -1280,11 +1279,11 @@ Nh
 Nh
 Iu
 Iu
-xk
-ap
+aa
+ab
 zR
 Ql
-tM
+je
 je
 uU
 je
@@ -1377,7 +1376,7 @@ Nh
 Iu
 Iu
 Iu
-ap
+ab
 gO
 Un
 je
@@ -1409,7 +1408,7 @@ Nh
 Nh
 Iu
 xk
-ap
+ab
 kL
 Xo
 je
@@ -1440,8 +1439,8 @@ Nh
 Nh
 Nh
 Nh
-xk
-ap
+aa
+ab
 gO
 Un
 je
@@ -1473,7 +1472,7 @@ Nh
 Nh
 Nh
 Nh
-ap
+ab
 qc
 je
 je
@@ -1505,7 +1504,7 @@ Nh
 Nh
 Nh
 Nh
-ap
+ab
 kL
 je
 je
@@ -1569,7 +1568,7 @@ Nh
 Nh
 Nh
 xk
-ap
+ab
 kL
 zn
 je
@@ -1601,7 +1600,7 @@ Nh
 Nh
 Nh
 xk
-ap
+ab
 kL
 Al
 je
@@ -1636,7 +1635,7 @@ Nh
 ap
 kL
 FD
-tM
+je
 je
 je
 je
@@ -1665,7 +1664,7 @@ Nh
 Nh
 Nh
 Nh
-xk
+aa
 Gm
 sJ
 XT
@@ -1733,17 +1732,17 @@ Iu
 ZA
 GX
 GX
-ap
-ap
-ap
+ab
+ab
+ab
 GX
 GX
 GX
 Gm
-ap
-ap
-xk
-xk
+ab
+ab
+aa
+aa
 xk
 ZA
 GX
@@ -1765,15 +1764,15 @@ Iu
 ZA
 Iu
 xk
-ap
-ap
+ab
+ab
 ap
 ap
 GX
 GX
 ZA
 xk
-xk
+aa
 xk
 Nh
 Nh
