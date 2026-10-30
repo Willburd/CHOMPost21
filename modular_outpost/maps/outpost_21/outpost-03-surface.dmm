@@ -9333,6 +9333,9 @@
 /obj/effect/mine/frag,
 /turf/simulated/floor/outdoors/ice/dark/turfpack/muriki,
 /area/mine/unexplored/muriki/valleyeast)
+"apM" = (
+/turf/simulated/wall/wood,
+/area/mine/unexplored/muriki/mountaineast)
 "apN" = (
 /obj/structure/fence/eshui_sign,
 /turf/simulated/floor/outdoors/ice/dark/turfpack/muriki,
@@ -9341,6 +9344,10 @@
 /obj/item/beartrap/start_active,
 /turf/simulated/floor/outdoors/ice/dark/turfpack/muriki,
 /area/mine/unexplored/muriki/valleyeast)
+"apP" = (
+/obj/item/inflatable/torn,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/unexplored/muriki/mountaineast)
 "apQ" = (
 /obj/structure/cliff/corner{
 	dir = 5
@@ -9378,6 +9385,10 @@
 	},
 /turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
 /area/mine/explored/muriki/valley)
+"apX" = (
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/unexplored/muriki/mountaineast)
 "apY" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/lightgrey/border,
@@ -9455,6 +9466,10 @@
 /obj/structure/fence/post,
 /turf/simulated/floor/outdoors/ice/dark/turfpack/muriki,
 /area/muriki/grounds/terraform)
+"aqm" = (
+/obj/item/material/shard/shrapnel,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/unexplored/muriki/mountaineast)
 "aqn" = (
 /obj/structure/trailblazer/yellow,
 /turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
@@ -9781,6 +9796,10 @@
 /obj/random/outcrop,
 /turf/simulated/floor/outdoors/ice/dark/turfpack/muriki,
 /area/mine/explored/muriki/mountainnorth)
+"ars" = (
+/obj/item/stack/material/wood/oak,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/unexplored/muriki/mountaineast)
 "art" = (
 /obj/structure/trailblazer/yellow,
 /turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
@@ -10453,6 +10472,10 @@
 /obj/structure/fence/post/electric,
 /turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
 /area/muriki/grounds/terraform)
+"asR" = (
+/obj/item/material/shard,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/unexplored/muriki/mountaineast)
 "asS" = (
 /obj/random/landmine,
 /turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
@@ -10484,6 +10507,11 @@
 /obj/structure/prop/rock/small/alt,
 /turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
 /area/muriki/yard)
+"asZ" = (
+/obj/effect/floorbreak,
+/obj/item/material/shard,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/unexplored/muriki/mountaineast)
 "ata" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable/green{
@@ -10510,6 +10538,15 @@
 /obj/structure/prop/rock/small/alt,
 /turf/simulated/floor/outdoors/ice/dark/turfpack/muriki,
 /area/muriki/grounds/shutt)
+"ate" = (
+/obj/item/stack/rods,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/unexplored/muriki/mountaineast)
+"atf" = (
+/obj/effect/floorbreak,
+/obj/item/stack/material/wood/oak,
+/turf/simulated/floor/wood/turfpack/muriki,
+/area/mine/unexplored/muriki/mountaineast)
 "atj" = (
 /obj/item/beartrap{
 	anchored = 1;
@@ -153533,8 +153570,8 @@ rJa
 rJa
 rJa
 rJa
-rJa
-rJa
+apM
+apM
 rJa
 rJa
 rJa
@@ -153689,17 +153726,17 @@ rJa
 aIe
 fhs
 fhs
+fhs
 rJa
 rJa
 rJa
 rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
+apM
+azv
+aqm
+ars
+apP
+azv
 rJa
 rJa
 rJa
@@ -153851,18 +153888,18 @@ rJa
 rJa
 rJa
 rJa
+fhs
+fhs
 rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
+ars
+ars
+azv
+ate
+apX
+azy
+asZ
+ars
+apM
 rJa
 rJa
 rJa
@@ -154014,17 +154051,17 @@ rJa
 rJa
 rJa
 rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
+azv
+ars
+azv
+azy
+atf
+azv
+aqm
+ate
+azv
+asR
+azy
 rJa
 rJa
 cCp
@@ -154175,18 +154212,18 @@ rJa
 rJa
 rJa
 rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
+aqm
+azy
+azv
+aqm
+azy
+azv
+ate
+azy
+apX
+azy
+azy
+apP
 rJa
 rJa
 jnX
@@ -154338,17 +154375,17 @@ rJa
 rJa
 rJa
 rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
+ars
+apX
+asR
+azv
+azv
+ars
+azy
+aqm
+azv
+apP
+apX
 rJa
 rJa
 jnX
@@ -154499,18 +154536,18 @@ rJa
 rJa
 rJa
 rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
+apM
+ate
+azy
+ate
+azy
+azv
+asR
+azv
+azv
+azy
+apX
+aqm
 rJa
 rJa
 cCp
@@ -154661,17 +154698,17 @@ rJa
 rJa
 rJa
 rJa
+apM
+apM
 rJa
+asR
 rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
-rJa
+apM
+azv
+azy
+ars
+azv
+aqm
 rJa
 rJa
 rJa
@@ -154829,8 +154866,8 @@ rJa
 rJa
 rJa
 rJa
-rJa
-rJa
+apM
+apM
 rJa
 rJa
 rJa
