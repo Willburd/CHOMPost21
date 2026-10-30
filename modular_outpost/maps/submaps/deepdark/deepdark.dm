@@ -18,6 +18,7 @@
 #include "den_G.dmm"
 #include "pond_A.dmm"
 #include "pond_B.dmm"
+#include "pond_C.dmm"
 #include "cave_A.dmm"
 #include "cave_B.dmm"
 #include "hall_A.dmm"
@@ -101,8 +102,14 @@
 #include "stowaway_D.dmm"
 #include "stowaway_E.dmm"
 #include "stowaway_F.dmm"
+#include "stowaway_G.dmm"
+#include "stowaway_H.dmm"
+#include "stowaway_I.dmm"
+#include "stowaway_J.dmm"
 #include "sinkhole_A.dmm"
 #include "hideout_A.dmm"
+#include "expie_A.dmm"
+#include "expie_B.dmm"
 #endif
 
 /datum/map_template/outpost21/muriki/caves_deepdark
@@ -544,6 +551,14 @@
 	discard_prob = 20
 	cost = 15
 
+/datum/map_template/outpost21/muriki/caves_deepdark/pond_C
+	name = "Pond C"
+	desc = "Frog pond."
+	mappath = "modular_outpost/maps/submaps/deepdark/pond_C.dmm"
+	allow_duplicates = TRUE
+	discard_prob = 20
+	cost = 15
+
 //////////////////////////////////////////////////////////////
 // Huge structures in the cave
 /datum/map_template/outpost21/muriki/caves_deepdark_huge/pit_A
@@ -929,12 +944,44 @@
 	discard_prob = 10
 	cost = 30
 
+/datum/map_template/outpost21/muriki/caves_deepdark_huge/stowaway_G
+	name = "Stowaway G"
+	desc = "An old stowaway structure."
+	mappath = "modular_outpost/maps/submaps/deepdark/stowaway_G.dmm"
+	allow_duplicates = FALSE
+	discard_prob = 10
+	cost = 30
+
+/datum/map_template/outpost21/muriki/caves_deepdark_huge/stowaway_H
+	name = "Stowaway H"
+	desc = "An old stowaway structure."
+	mappath = "modular_outpost/maps/submaps/deepdark/stowaway_H.dmm"
+	allow_duplicates = FALSE
+	discard_prob = 20
+	cost = 30
+
+/datum/map_template/outpost21/muriki/caves_deepdark_huge/stowaway_I
+	name = "Stowaway I"
+	desc = "An old stowaway structure."
+	mappath = "modular_outpost/maps/submaps/deepdark/stowaway_I.dmm"
+	allow_duplicates = FALSE
+	discard_prob = 10
+	cost = 30
+
+/datum/map_template/outpost21/muriki/caves_deepdark_huge/stowaway_J
+	name = "Stowaway J"
+	desc = "An old stowaway structure."
+	mappath = "modular_outpost/maps/submaps/deepdark/stowaway_J.dmm"
+	allow_duplicates = FALSE
+	discard_prob = 20
+	cost = 30
+
 /datum/map_template/outpost21/muriki/caves_deepdark_huge/sinkhole_A
 	name = "Sinkhole A"
 	desc = "An unstable section of cavern waiting to collapse."
 	mappath = "modular_outpost/maps/submaps/deepdark/sinkhole_A.dmm"
 	allow_duplicates = TRUE
-	discard_prob = 40
+	discard_prob = 10
 	cost = 30
 
 /datum/map_template/outpost21/muriki/caves_deepdark_huge/hideout_A
@@ -943,6 +990,23 @@
 	mappath = "modular_outpost/maps/submaps/deepdark/hideout_A.dmm"
 	discard_prob = 35
 	cost = 40
+
+/datum/map_template/outpost21/muriki/caves_deepdark_huge/expie_A
+	name = "Expie A"
+	desc = "The ruins of an old expie outpost."
+	mappath = "modular_outpost/maps/submaps/deepdark/expie_A.dmm"
+	allow_duplicates = FALSE
+	discard_prob = 25
+	cost = 40
+
+/datum/map_template/outpost21/muriki/caves_deepdark_huge/expie_B
+	name = "Expie B"
+	desc = "The ruins of an old expie outpost."
+	mappath = "modular_outpost/maps/submaps/deepdark/expie_B.dmm"
+	allow_duplicates = FALSE
+	discard_prob = 15
+	cost = 20
+
 
 //////////////////////////////////////////////////////////////
 // Area definitions

@@ -25,8 +25,11 @@
 	var/psychic_attack_range = 8
 	var/used_dominate = FALSE
 	var/making_someone_dream = FALSE
+
 	friendly = list("snuggles", "hugs", "cuddles", "squishes") // lets be cute :3
-	ai_holder_type = /datum/ai_holder/simple_mob/ranged/careful
+	response_help = "hugs"
+	response_disarm = "rudely paps"
+	response_harm = "punches"
 
 	melee_damage_lower = 24
 	melee_damage_upper = 32
@@ -41,6 +44,13 @@
 	icon_expected_height = 64
 	vis_height = 64
 
+	// Not exactly appetizing
+	vore_taste = "disgustingly greasy and hairy"
+	vore_smell = "some kind of wet and moldy dog"
+
+/mob/living/simple_mob/horror/longdemon/ai
+	ai_holder_type = /datum/ai_holder/simple_mob/ranged/careful
+
 /mob/living/simple_mob/horror/longdemon/Initialize(mapload)
 	. = ..()
 	// psychic critter
@@ -49,8 +59,15 @@
 	add_verb(src, list(/mob/living/carbon/human/proc/remoteobserve, /mob/living/carbon/human/proc/remotesay, /mob/living/proc/long_vore))
 	// Can sense things nearby, but doesn't have shadekin wall vision
 	motiontracker_subscribe()
-	// Spawns in UD, so would be trapped if they cannot dig
+	// Spawns in UD, so would be trapped if they cannot dig, remember, grab intent digs on simplemobs!
 	ADD_TRAIT(src, TRAIT_NATURALTUNNELER, ROUNDSTART_TRAIT)
+
+/mob/living/simple_mob/horror/longdemon/update_icon()
+	. = ..()
+	// Just assume we always have eyeglow instead of the horrible mess that our parent mob does for resting sprites
+	if(has_eye_glow)
+		remove_eyes()
+		add_eyes()
 
 /mob/living/simple_mob/horror/longdemon/verb/paralyze_victim()
 	set category = "Abilities.Superpower"

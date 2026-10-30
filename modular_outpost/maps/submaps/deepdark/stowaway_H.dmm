@@ -1,0 +1,1261 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"ap" = (
+/obj/structure/table/gamblingtable,
+/obj/structure/casino_table/blackjack_m,
+/turf/simulated/floor/tiled/material/gold,
+/area/mine/explored/muriki/cave/deepdark)
+"aD" = (
+/obj/machinery/door/airlock/silver{
+	id_tag = "casinobath";
+	name = "The Royal Flush"
+	},
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/tiled/kafel_full,
+/area/mine/explored/muriki/cave/deepdark)
+"bP" = (
+/obj/machinery/vending/foodmeat{
+	dir = 4;
+	pixel_x = -9
+	},
+/turf/simulated/floor/carpet,
+/area/mine/explored/muriki/cave/deepdark)
+"bS" = (
+/obj/effect/floor_decal/spline/plain{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/carpet,
+/area/mine/explored/muriki/cave/deepdark)
+"cs" = (
+/obj/machinery/holoposter{
+	pixel_y = 32
+	},
+/obj/effect/landmark/holiday_event_spawn,
+/obj/effect/floor_decal/spline/plain{
+	dir = 9
+	},
+/turf/simulated/floor/carpet/purcarpet,
+/area/mine/explored/muriki/cave/deepdark)
+"cD" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 10
+	},
+/turf/simulated/floor/wood/alt,
+/area/mine/explored/muriki/cave/deepdark)
+"cU" = (
+/obj/structure/table/fancyblack,
+/obj/item/flame/lighter/zippo/gold,
+/turf/simulated/floor/tiled/material/gold,
+/area/mine/explored/muriki/cave/deepdark)
+"dm" = (
+/obj/item/material/ashtray/bronze,
+/obj/structure/table/gamblingtable,
+/obj/item/deck/cards/casino,
+/obj/item/deck/cards/casino,
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/material/gold,
+/area/mine/explored/muriki/cave/deepdark)
+"eX" = (
+/obj/effect/floor_decal/spline/plain{
+	dir = 4
+	},
+/obj/effect/floor_decal/spline/plain/corner{
+	dir = 8
+	},
+/obj/machinery/light_switch{
+	dir = 1;
+	pixel_x = -27;
+	pixel_y = -28
+	},
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled/material/gold,
+/area/mine/explored/muriki/cave/deepdark)
+"fc" = (
+/turf/simulated/mineral/floor/turfpack/muriki,
+/area/template_noop)
+"fX" = (
+/obj/item/spacecasinocash/c1000,
+/obj/item/spacecasinocash/c1000,
+/obj/item/spacecasinocash/c1000,
+/obj/item/spacecasinocash/c1000,
+/obj/item/spacecasinocash/c1000,
+/obj/item/spacecasinocash/c1000,
+/obj/item/spacecasinocash/c1000,
+/obj/item/spacecasinocash/c1000,
+/obj/item/spacecasinocash/c1000,
+/obj/item/spacecasinocash/c1000,
+/obj/item/spacecasinocash/c1000,
+/obj/item/spacecasinocash/c1000,
+/obj/item/spacecasinocash/c1000,
+/obj/item/spacecasinocash/c1000,
+/obj/item/spacecasinocash/c1000,
+/obj/item/spacecasinocash/c1000,
+/obj/item/spacecasinocash/c1000,
+/obj/item/spacecasinocash/c1000,
+/obj/item/spacecasinocash/c1000,
+/obj/item/spacecasinocash/c1000,
+/obj/item/storage/bag/cash,
+/obj/structure/table/fancyblack,
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/material/gold,
+/area/mine/explored/muriki/cave/deepdark)
+"fZ" = (
+/turf/simulated/floor/carpet,
+/area/mine/explored/muriki/cave/deepdark)
+"gr" = (
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/gold{
+	name = "Casino Storage";
+	req_one_access = list(19,72)
+	},
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled/techfloor,
+/area/mine/explored/muriki/cave/deepdark)
+"gJ" = (
+/obj/item/tape/engineering,
+/obj/machinery/door/airlock/maintenance/common,
+/obj/machinery/door/firedoor,
+/turf/simulated/floor/tiled/techmaint,
+/area/mine/explored/muriki/cave/deepdark)
+"hc" = (
+/obj/machinery/disposal,
+/obj/structure/disposalpipe/trunk{
+	dir = 8
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 8
+	},
+/turf/simulated/floor/wood/alt,
+/area/mine/explored/muriki/cave/deepdark)
+"hr" = (
+/obj/structure/disposalpipe/broken{
+	dir = 4
+	},
+/turf/simulated/floor/carpet,
+/area/mine/explored/muriki/cave/deepdark)
+"hu" = (
+/obj/structure/sign/poster{
+	dir = 8
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 8
+	},
+/turf/simulated/floor/carpet/purcarpet,
+/area/mine/explored/muriki/cave/deepdark)
+"hA" = (
+/obj/item/storage/wallet/casino,
+/obj/item/flame/lighter/zippo/royal,
+/obj/structure/closet/crate,
+/obj/structure/table/fancyblack,
+/obj/effect/floor_decal/spline/plain{
+	dir = 9
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -5;
+	pixel_y = 30
+	},
+/turf/simulated/floor/tiled/material/gold,
+/area/mine/explored/muriki/cave/deepdark)
+"ia" = (
+/obj/structure/table/fancyblack,
+/obj/item/material/ashtray/bronze,
+/obj/structure/stripper_pole{
+	pixel_y = -6
+	},
+/turf/simulated/floor/tiled/material/gold,
+/area/mine/explored/muriki/cave/deepdark)
+"iI" = (
+/turf/simulated/wall,
+/area/template_noop)
+"jf" = (
+/obj/structure/window/reinforced/tinted{
+	dir = 4
+	},
+/obj/machinery/vending/wallmed1/public{
+	dir = 1;
+	pixel_y = -30
+	},
+/obj/structure/bed/chair/bay/comfy/brown{
+	dir = 8
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 6
+	},
+/turf/simulated/floor/carpet/purcarpet,
+/area/mine/explored/muriki/cave/deepdark)
+"jW" = (
+/obj/structure/bed/chair/bay/comfy/brown{
+	dir = 8
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 4
+	},
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/wood/alt,
+/area/mine/explored/muriki/cave/deepdark)
+"kM" = (
+/obj/structure/flora/pottedplant{
+	icon_state = "plant-20"
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 10
+	},
+/turf/simulated/floor/wood/alt,
+/area/mine/explored/muriki/cave/deepdark)
+"lt" = (
+/obj/machinery/holoposter{
+	dir = 8;
+	pixel_x = 30
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 6
+	},
+/turf/simulated/floor/wood/alt,
+/area/mine/explored/muriki/cave/deepdark)
+"lI" = (
+/obj/machinery/vending/deluxe_cigs/open{
+	dir = 4;
+	pixel_x = -8
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 1
+	},
+/turf/simulated/floor/carpet,
+/area/mine/explored/muriki/cave/deepdark)
+"lW" = (
+/obj/structure/casino_table/roulette_table/long,
+/obj/item/storage/box/roulette_balls_normal,
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 4
+	},
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = 26
+	},
+/turf/simulated/floor/tiled/material/gold,
+/area/mine/explored/muriki/cave/deepdark)
+"mc" = (
+/obj/machinery/light_switch{
+	dir = 8;
+	pixel_x = 25;
+	pixel_y = -26
+	},
+/obj/effect/floor_decal/spline/plain,
+/obj/effect/floor_decal/spline/plain{
+	dir = 1
+	},
+/turf/simulated/floor/carpet,
+/area/mine/explored/muriki/cave/deepdark)
+"mw" = (
+/obj/structure/sign/poster{
+	dir = 1
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 1
+	},
+/turf/simulated/floor/wood/alt,
+/area/mine/explored/muriki/cave/deepdark)
+"pQ" = (
+/obj/effect/floor_decal/spline/plain{
+	dir = 4
+	},
+/obj/effect/floor_decal/spline/plain/corner{
+	dir = 8
+	},
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/carpet,
+/area/mine/explored/muriki/cave/deepdark)
+"qc" = (
+/obj/structure/disposalpipe/junction{
+	dir = 4;
+	icon_state = "pipe-j2"
+	},
+/obj/effect/floor_decal/spline/plain/corner{
+	dir = 1
+	},
+/turf/simulated/floor/carpet,
+/area/mine/explored/muriki/cave/deepdark)
+"qx" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 5
+	},
+/obj/effect/landmark/holiday_event_spawn,
+/turf/simulated/floor/wood/alt,
+/area/mine/explored/muriki/cave/deepdark)
+"qU" = (
+/obj/structure/sign/yessmoking_1{
+	pixel_y = -32
+	},
+/obj/effect/floor_decal/spline/fancy/wood,
+/turf/simulated/floor/wood/alt,
+/area/mine/explored/muriki/cave/deepdark)
+"rc" = (
+/obj/structure/window/maintenance_panel,
+/turf/simulated/floor/tiled/techfloor/grid/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"sY" = (
+/obj/structure/bed/chair/bay/comfy/brown{
+	dir = 4
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 8
+	},
+/turf/simulated/floor/carpet/purcarpet,
+/area/mine/explored/muriki/cave/deepdark)
+"ty" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/floor_decal/spline/plain,
+/obj/effect/floor_decal/spline/plain{
+	dir = 1
+	},
+/turf/simulated/floor/carpet,
+/area/mine/explored/muriki/cave/deepdark)
+"uf" = (
+/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/spline/plain{
+	dir = 4
+	},
+/turf/simulated/floor/carpet,
+/area/mine/explored/muriki/cave/deepdark)
+"un" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 1
+	},
+/turf/simulated/floor/carpet,
+/area/mine/explored/muriki/cave/deepdark)
+"uy" = (
+/obj/structure/disposalpipe/junction{
+	dir = 2;
+	icon_state = "pipe-j2"
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 4
+	},
+/turf/simulated/floor/carpet,
+/area/mine/explored/muriki/cave/deepdark)
+"vy" = (
+/obj/structure/window/reinforced/tinted{
+	dir = 4
+	},
+/obj/structure/bed/chair/bay/comfy/brown{
+	dir = 8
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/purcarpet,
+/area/mine/explored/muriki/cave/deepdark)
+"wc" = (
+/obj/item/deck/holder/casino,
+/obj/item/deck/cards/casino,
+/obj/structure/table/gamblingtable,
+/obj/structure/sign/poster,
+/obj/effect/floor_decal/spline/plain,
+/turf/simulated/floor/carpet,
+/area/mine/explored/muriki/cave/deepdark)
+"wg" = (
+/obj/structure/casino_table/roulette_long,
+/obj/item/deck/cards/casino,
+/turf/simulated/floor/tiled/material/gold,
+/area/mine/explored/muriki/cave/deepdark)
+"ww" = (
+/obj/structure/table/gamblingtable,
+/obj/structure/casino_table/blackjack_r,
+/turf/simulated/floor/tiled/material/gold,
+/area/mine/explored/muriki/cave/deepdark)
+"wI" = (
+/obj/structure/sign/yessmoking_1,
+/turf/simulated/wall,
+/area/mine/explored/muriki/cave/deepdark)
+"yK" = (
+/obj/structure/bed/chair/bay/comfy/black,
+/obj/structure/sign/yessmoking_1{
+	pixel_y = 32
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/material/gold,
+/area/mine/explored/muriki/cave/deepdark)
+"yQ" = (
+/obj/machinery/media/jukebox,
+/obj/structure/sign/poster,
+/obj/effect/floor_decal/spline/plain,
+/turf/simulated/floor/carpet,
+/area/mine/explored/muriki/cave/deepdark)
+"zq" = (
+/obj/structure/table/gamblingtable,
+/obj/structure/casino_table/blackjack_l,
+/turf/simulated/floor/tiled/material/gold,
+/area/mine/explored/muriki/cave/deepdark)
+"zL" = (
+/turf/simulated/mineral/alt/ignore_cavegen/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"zP" = (
+/obj/structure/bed/chair/bay/comfy/brown{
+	dir = 4
+	},
+/turf/simulated/floor/wood/alt,
+/area/mine/explored/muriki/cave/deepdark)
+"Ax" = (
+/obj/item/deck/holder/casino,
+/obj/structure/table/fancyblack,
+/obj/item/deck/cards/casino,
+/obj/item/deck/cards/casino,
+/obj/item/deck/cards/casino,
+/obj/item/deck/cards/casino,
+/obj/item/deck/cards/casino,
+/obj/item/pen/fountain7,
+/obj/effect/floor_decal/spline/plain,
+/turf/simulated/floor/tiled/material/gold,
+/area/mine/explored/muriki/cave/deepdark)
+"Be" = (
+/turf/simulated/floor/wood/alt,
+/area/mine/explored/muriki/cave/deepdark)
+"Bv" = (
+/obj/item/clothing/shoes/slippers,
+/obj/effect/floor_decal/spline/plain{
+	dir = 10
+	},
+/obj/structure/table/fancyblack,
+/turf/simulated/floor/tiled/material/gold,
+/area/mine/explored/muriki/cave/deepdark)
+"BF" = (
+/obj/effect/floor_decal/spline/plain{
+	dir = 1
+	},
+/obj/effect/floor_decal/spline/plain/corner,
+/obj/structure/disposalpipe/junction{
+	dir = 4
+	},
+/turf/simulated/floor/carpet,
+/area/mine/explored/muriki/cave/deepdark)
+"BJ" = (
+/obj/effect/floor_decal/spline/fancy/wood,
+/turf/simulated/floor/wood/alt,
+/area/mine/explored/muriki/cave/deepdark)
+"BW" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 6
+	},
+/turf/simulated/floor/wood/alt,
+/area/mine/explored/muriki/cave/deepdark)
+"Ce" = (
+/obj/structure/table/gamblingtable,
+/turf/simulated/floor/tiled/material/gold,
+/area/mine/explored/muriki/cave/deepdark)
+"Cl" = (
+/obj/effect/floor_decal/spline/plain{
+	dir = 8
+	},
+/obj/item/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -21
+	},
+/turf/simulated/floor/tiled/material/gold,
+/area/mine/explored/muriki/cave/deepdark)
+"CB" = (
+/turf/simulated/floor/carpet/purcarpet,
+/area/mine/explored/muriki/cave/deepdark)
+"CR" = (
+/obj/machinery/vending/deluxe_boozeomat/open{
+	dir = 4;
+	pixel_x = -8
+	},
+/turf/simulated/floor/carpet,
+/area/mine/explored/muriki/cave/deepdark)
+"EI" = (
+/obj/structure/window/reinforced/tinted{
+	dir = 4
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/purcarpet,
+/area/mine/explored/muriki/cave/deepdark)
+"Fe" = (
+/obj/structure/bed/chair/bay/comfy/black,
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/material/gold,
+/area/mine/explored/muriki/cave/deepdark)
+"Fy" = (
+/turf/simulated/wall,
+/area/mine/explored/muriki/cave/deepdark)
+"GD" = (
+/obj/machinery/hologram/holopad,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/floor_decal/spline/plain,
+/obj/effect/floor_decal/spline/plain{
+	dir = 1
+	},
+/turf/simulated/floor/carpet,
+/area/mine/explored/muriki/cave/deepdark)
+"Hg" = (
+/obj/structure/table/fancyblack,
+/obj/item/storage/fancy/cigar/havana,
+/obj/item/storage/fancy/cigar/havana,
+/obj/machinery/computer/security/telescreen/entertainment{
+	pixel_y = -35
+	},
+/obj/effect/floor_decal/spline/plain,
+/turf/simulated/floor/tiled/material/gold,
+/area/mine/explored/muriki/cave/deepdark)
+"Hk" = (
+/obj/structure/flora/mushroom,
+/turf/simulated/mineral/floor/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Hm" = (
+/turf/simulated/mineral/alt/ignore_cavegen/turfpack/muriki,
+/area/template_noop)
+"Ib" = (
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/carpet/purcarpet,
+/area/mine/explored/muriki/cave/deepdark)
+"Jb" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 8
+	},
+/turf/simulated/floor/wood/alt,
+/area/mine/explored/muriki/cave/deepdark)
+"Jc" = (
+/obj/structure/table/gamblingtable,
+/obj/item/deck/cards/casino,
+/obj/item/deck/cards/casino,
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/material/gold,
+/area/mine/explored/muriki/cave/deepdark)
+"Jl" = (
+/turf/simulated/mineral/floor/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"JV" = (
+/obj/structure/table/fancyblack,
+/obj/structure/sign/poster,
+/obj/effect/floor_decal/spline/plain,
+/turf/simulated/floor/tiled/material/gold,
+/area/mine/explored/muriki/cave/deepdark)
+"KH" = (
+/obj/item/storage/box/casino,
+/obj/item/clothing/accessory/medal/gold/casino,
+/obj/structure/closet/crate,
+/obj/structure/table/fancyblack,
+/obj/effect/floor_decal/spline/plain,
+/turf/simulated/floor/tiled/material/gold,
+/area/mine/explored/muriki/cave/deepdark)
+"KT" = (
+/obj/item/material/ashtray/bronze,
+/obj/structure/casino_table/roulette_chart,
+/turf/simulated/floor/tiled/material/gold,
+/area/mine/explored/muriki/cave/deepdark)
+"LH" = (
+/obj/structure/table/gamblingtable,
+/obj/machinery/atm{
+	pixel_y = -32
+	},
+/obj/item/cargo_scanner,
+/obj/effect/floor_decal/spline/plain,
+/turf/simulated/floor/carpet,
+/area/mine/explored/muriki/cave/deepdark)
+"Ms" = (
+/obj/effect/floor_decal/spline/fancy/wood,
+/obj/machinery/light,
+/obj/structure/sign/yessmoking_1{
+	pixel_y = -32
+	},
+/obj/structure/table/fancyblack,
+/obj/item/storage/fancy/cigar/havana,
+/obj/item/storage/fancy/cigar/havana,
+/obj/effect/floor_decal/spline/plain,
+/turf/simulated/floor/tiled/material/gold,
+/area/mine/explored/muriki/cave/deepdark)
+"MY" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 5
+	},
+/turf/simulated/floor/wood/alt,
+/area/mine/explored/muriki/cave/deepdark)
+"Nv" = (
+/obj/item/storage/box/roulette_balls_cheat,
+/obj/item/storage/box/roulette_balls_fancy,
+/obj/structure/table/fancyblack,
+/obj/machinery/alarm{
+	pixel_y = 26
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/material/gold,
+/area/mine/explored/muriki/cave/deepdark)
+"Nz" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 1
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -5;
+	pixel_y = 30
+	},
+/turf/simulated/floor/wood/alt,
+/area/mine/explored/muriki/cave/deepdark)
+"Ou" = (
+/obj/structure/bed/chair/bay/comfy/brown{
+	dir = 1
+	},
+/turf/simulated/floor/carpet/purcarpet,
+/area/mine/explored/muriki/cave/deepdark)
+"Pi" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 1
+	},
+/turf/simulated/floor/wood/alt,
+/area/mine/explored/muriki/cave/deepdark)
+"Qc" = (
+/obj/effect/floor_decal/spline/plain{
+	dir = 8
+	},
+/turf/simulated/floor/carpet/purcarpet,
+/area/mine/explored/muriki/cave/deepdark)
+"QF" = (
+/obj/effect/floor_decal/spline/plain{
+	dir = 4
+	},
+/obj/effect/floor_decal/spline/plain/corner{
+	dir = 4
+	},
+/obj/machinery/firealarm{
+	dir = 4;
+	pixel_x = 26
+	},
+/turf/simulated/floor/tiled/material/gold,
+/area/mine/explored/muriki/cave/deepdark)
+"Ro" = (
+/obj/structure/table/gamblingtable,
+/obj/item/material/ashtray/bronze,
+/obj/effect/floor_decal/spline/plain{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/material/gold,
+/area/mine/explored/muriki/cave/deepdark)
+"Rs" = (
+/obj/effect/floor_decal/spline/plain{
+	dir = 4
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 2
+	},
+/obj/machinery/disposal/wall{
+	dir = 8;
+	pixel_x = 32
+	},
+/turf/simulated/floor/tiled/material/gold,
+/area/mine/explored/muriki/cave/deepdark)
+"RH" = (
+/turf/template_noop,
+/area/template_noop)
+"Ss" = (
+/obj/structure/window/reinforced/tinted{
+	dir = 4
+	},
+/obj/structure/bed/chair/bay/comfy/brown{
+	dir = 8
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 5
+	},
+/turf/simulated/floor/carpet/purcarpet,
+/area/mine/explored/muriki/cave/deepdark)
+"Su" = (
+/obj/item/geiger/wall/west,
+/obj/effect/floor_decal/spline/plain{
+	dir = 4
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 8
+	},
+/obj/structure/disposalpipe/broken{
+	dir = 1
+	},
+/turf/simulated/floor/carpet,
+/area/mine/explored/muriki/cave/deepdark)
+"SA" = (
+/obj/structure/bed/chair/bay/comfy/brown{
+	dir = 4
+	},
+/obj/item/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -21
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 8
+	},
+/turf/simulated/floor/carpet/purcarpet,
+/area/mine/explored/muriki/cave/deepdark)
+"SQ" = (
+/obj/effect/floor_decal/spline/plain,
+/obj/effect/floor_decal/spline/plain{
+	dir = 1
+	},
+/obj/structure/disposalpipe/broken{
+	dir = 8
+	},
+/turf/simulated/floor/carpet,
+/area/mine/explored/muriki/cave/deepdark)
+"TA" = (
+/obj/machinery/alarm{
+	pixel_y = 26
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/effect/landmark/holiday_event_spawn,
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 9
+	},
+/turf/simulated/floor/wood/alt,
+/area/mine/explored/muriki/cave/deepdark)
+"TX" = (
+/obj/effect/floor_decal/spline/plain{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/purcarpet,
+/area/mine/explored/muriki/cave/deepdark)
+"Uc" = (
+/obj/effect/floor_decal/spline/fancy/wood,
+/obj/machinery/light,
+/obj/machinery/computer/security/telescreen/entertainment{
+	pixel_y = -35
+	},
+/turf/simulated/floor/wood/alt,
+/area/mine/explored/muriki/cave/deepdark)
+"Uk" = (
+/obj/machinery/light_switch{
+	pixel_x = -25;
+	pixel_y = 28
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals_central7{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/spline/plain{
+	dir = 4
+	},
+/obj/effect/floor_decal/spline/plain/corner{
+	dir = 4
+	},
+/turf/simulated/floor/carpet,
+/area/mine/explored/muriki/cave/deepdark)
+"UB" = (
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/gold{
+	name = "Casino and Lounge"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/mine/explored/muriki/cave/deepdark)
+"UC" = (
+/obj/machinery/light,
+/obj/structure/table/gamblingtable,
+/obj/item/book/codex/casino,
+/obj/effect/floor_decal/spline/plain,
+/turf/simulated/floor/carpet,
+/area/mine/explored/muriki/cave/deepdark)
+"Vr" = (
+/turf/simulated/floor/tiled/material/gold,
+/area/mine/explored/muriki/cave/deepdark)
+"Vs" = (
+/obj/structure/bed/chair/bay/comfy/brown{
+	dir = 1
+	},
+/obj/effect/floor_decal/spline/fancy/wood,
+/turf/simulated/floor/wood/alt,
+/area/mine/explored/muriki/cave/deepdark)
+"Ww" = (
+/obj/structure/table/gamblingtable,
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 1
+	},
+/obj/item/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 21
+	},
+/turf/simulated/floor/tiled/material/gold,
+/area/mine/explored/muriki/cave/deepdark)
+"Xs" = (
+/obj/structure/bed/chair/bay/comfy/brown{
+	dir = 4
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 10
+	},
+/turf/simulated/floor/carpet/purcarpet,
+/area/mine/explored/muriki/cave/deepdark)
+"Zj" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 9
+	},
+/turf/simulated/floor/wood/alt,
+/area/mine/explored/muriki/cave/deepdark)
+
+(1,1,1) = {"
+RH
+RH
+RH
+RH
+RH
+RH
+RH
+RH
+RH
+RH
+RH
+RH
+RH
+RH
+RH
+RH
+RH
+RH
+RH
+RH
+"}
+(2,1,1) = {"
+RH
+RH
+RH
+RH
+RH
+RH
+RH
+Hm
+zL
+zL
+Jl
+Jl
+Hk
+zL
+zL
+zL
+zL
+RH
+RH
+RH
+"}
+(3,1,1) = {"
+RH
+RH
+RH
+RH
+RH
+RH
+Hm
+zL
+Fy
+Fy
+Fy
+gJ
+Fy
+Fy
+Fy
+Fy
+zL
+Hm
+RH
+RH
+"}
+(4,1,1) = {"
+RH
+RH
+RH
+zL
+zL
+zL
+zL
+zL
+Fy
+cs
+SA
+Qc
+hu
+sY
+Xs
+Fy
+zL
+zL
+RH
+RH
+"}
+(5,1,1) = {"
+RH
+Hm
+zL
+zL
+zL
+zL
+zL
+zL
+Fy
+Jc
+Ce
+Ou
+CB
+cU
+Hg
+Fy
+zL
+zL
+RH
+RH
+"}
+(6,1,1) = {"
+RH
+Hm
+zL
+zL
+Fy
+Fy
+Fy
+Fy
+Fy
+yK
+Ce
+Ou
+Ib
+ia
+JV
+Fy
+zL
+zL
+Hm
+RH
+"}
+(7,1,1) = {"
+RH
+RH
+Hm
+zL
+Fy
+hA
+Cl
+Bv
+Fy
+Ro
+Ce
+Ou
+CB
+cU
+Ms
+Fy
+zL
+zL
+zL
+RH
+"}
+(8,1,1) = {"
+RH
+RH
+RH
+zL
+Fy
+fX
+Vr
+KH
+Fy
+Ss
+vy
+EI
+TX
+vy
+jf
+Fy
+zL
+zL
+zL
+RH
+"}
+(9,1,1) = {"
+RH
+RH
+RH
+Jl
+Fy
+Nv
+Vr
+Ax
+Fy
+lI
+bP
+CR
+hr
+fZ
+yQ
+Fy
+zL
+zL
+zL
+RH
+"}
+(10,1,1) = {"
+RH
+RH
+RH
+Jl
+rc
+QF
+Rs
+eX
+gr
+Uk
+uy
+uf
+qc
+fZ
+UC
+Fy
+zL
+zL
+zL
+RH
+"}
+(11,1,1) = {"
+RH
+RH
+RH
+Jl
+Fy
+Fy
+Fy
+Fy
+Fy
+TA
+hc
+kM
+un
+fZ
+LH
+Fy
+zL
+zL
+zL
+RH
+"}
+(12,1,1) = {"
+RH
+RH
+RH
+zL
+zL
+zL
+zL
+zL
+Fy
+Nz
+Be
+BJ
+un
+fZ
+wc
+Fy
+Fy
+Jl
+fc
+RH
+"}
+(13,1,1) = {"
+RH
+RH
+RH
+RH
+Hm
+zL
+zL
+zL
+Fy
+mw
+zP
+BJ
+BF
+bS
+pQ
+Su
+aD
+Jl
+RH
+RH
+"}
+(14,1,1) = {"
+RH
+RH
+RH
+RH
+RH
+Hm
+zL
+zL
+Fy
+Ww
+zq
+Vs
+ty
+Zj
+Jb
+cD
+Fy
+Jl
+RH
+RH
+"}
+(15,1,1) = {"
+RH
+RH
+RH
+RH
+RH
+RH
+zL
+zL
+wI
+Fe
+ap
+Vs
+GD
+Pi
+KT
+qU
+Fy
+zL
+RH
+RH
+"}
+(16,1,1) = {"
+RH
+RH
+RH
+RH
+RH
+Hm
+zL
+zL
+Fy
+dm
+ww
+Vs
+SQ
+Pi
+wg
+Uc
+Fy
+Hm
+RH
+RH
+"}
+(17,1,1) = {"
+RH
+RH
+RH
+RH
+RH
+Hm
+zL
+zL
+Fy
+qx
+jW
+lt
+mc
+MY
+lW
+BW
+Fy
+RH
+RH
+RH
+"}
+(18,1,1) = {"
+RH
+RH
+RH
+RH
+RH
+RH
+zL
+zL
+Fy
+Fy
+Fy
+Fy
+UB
+Fy
+Fy
+iI
+iI
+RH
+RH
+RH
+"}
+(19,1,1) = {"
+RH
+RH
+RH
+RH
+RH
+RH
+RH
+Hm
+zL
+zL
+zL
+Jl
+Jl
+Jl
+zL
+Hm
+RH
+RH
+RH
+RH
+"}
+(20,1,1) = {"
+RH
+RH
+RH
+RH
+RH
+RH
+RH
+RH
+RH
+RH
+RH
+RH
+RH
+RH
+RH
+RH
+RH
+RH
+RH
+RH
+"}

@@ -12282,71 +12282,9 @@
 	},
 /turf/simulated/floor/wood,
 /area/space)
-"awh" = (
-/obj/effect/auto_crayon{
-	icon_state = "down"
-	},
-/obj/effect/mine/claymore{
-	dir = 8
-	},
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/space)
-"awi" = (
-/obj/effect/auto_crayon{
-	icon_state = "left"
-	},
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/space)
-"awj" = (
-/obj/item/flashlight/glowstick/red,
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/space)
 "awk" = (
 /obj/item/material/twohanded/sledgehammer/gravity/ed,
 /turf/simulated/floor/carpet/turfpack/muriki,
-/area/space)
-"awl" = (
-/obj/structure/simple_door/wood,
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
-/area/space)
-"awm" = (
-/obj/structure/inflatable,
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
-/area/space)
-"awn" = (
-/obj/structure/bed/double/padded,
-/obj/item/bedsheet/double,
-/turf/simulated/floor/tiled/dark,
-/area/space)
-"awo" = (
-/obj/effect/auto_crayon{
-	icon_state = "down"
-	},
-/turf/simulated/floor/tiled/dark,
-/area/space)
-"awp" = (
-/obj/effect/floorbreak,
-/turf/simulated/floor/tiled/dark,
-/area/space)
-"awq" = (
-/obj/effect/auto_crayon{
-	icon_state = "companion"
-	},
-/turf/simulated/floor/tiled/dark,
-/area/space)
-"awr" = (
-/obj/effect/auto_crayon{
-	icon_state = "shelter"
-	},
-/turf/simulated/floor/tiled/dark,
-/area/space)
-"aws" = (
-/obj/structure/inflatable/door,
-/turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/space)
 "awt" = (
 /obj/structure/disposalpipe/segment,
@@ -12357,14 +12295,6 @@
 	dir = 9
 	},
 /turf/simulated/floor/tiled/dark,
-/area/space)
-"awu" = (
-/obj/effect/auto_crayon{
-	icon_state = "seven_resolve"
-	},
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
 /area/space)
 "awv" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
@@ -12390,168 +12320,18 @@
 	},
 /turf/simulated/floor/tiled/steel,
 /area/space)
-"aww" = (
-/turf/simulated/wall,
-/area/specialty/expie_clubhouse/archive)
-"awx" = (
-/obj/structure/bed/double/padded,
-/obj/item/bedsheet/greendouble,
-/turf/simulated/floor/tiled/dark,
-/area/space)
-"awy" = (
-/obj/item/flashlight/lamp,
-/turf/simulated/floor/tiled/dark,
-/area/space)
-"awz" = (
-/obj/structure/closet,
-/obj/item/gun/projectile/pirate,
-/turf/simulated/floor/tiled/dark,
-/area/space)
-"awA" = (
-/obj/structure/simple_door/wood,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/expie_clubhouse/archive)
 "awB" = (
 /obj/machinery/camera/network/outside{
 	c_tag = "EXT - Civilian Bridge North"
 	},
 /turf/simulated/floor/outdoors/mud/turfpack/muriki,
 /area/space)
-"awC" = (
-/obj/structure/table/woodentable,
-/obj/item/paper_bin,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/expie_clubhouse/archive)
-"awD" = (
-/obj/item/flashlight/lamp/clown{
-	pixel_y = 7;
-	pixel_x = 7
-	},
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/expie_clubhouse/archive)
-"awE" = (
-/obj/item/storage/pill_bottle/dice_nerd,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/expie_clubhouse/archive)
 "awF" = (
 /obj/structure/cable/orange{
 	icon_state = "1-6"
 	},
 /turf/simulated/floor/outpost_roof/turfpack/muriki,
 /area/space)
-"awG" = (
-/obj/effect/floorbreak,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/expie_clubhouse/archive)
-"awH" = (
-/obj/item/paper{
-	pixel_y = -3;
-	pixel_x = 9
-	},
-/obj/item/paper{
-	pixel_x = 1;
-	pixel_y = 5
-	},
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/expie_clubhouse/archive)
-"awI" = (
-/obj/item/paper{
-	pixel_x = -7;
-	pixel_y = 13
-	},
-/obj/item/paper{
-	pixel_x = 6
-	},
-/obj/item/paper{
-	pixel_x = -3;
-	pixel_y = -6
-	},
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/expie_clubhouse/archive)
-"awJ" = (
-/obj/item/paperplane{
-	dir = 4;
-	pixel_y = 5;
-	pixel_x = 7
-	},
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/expie_clubhouse/archive)
-"awK" = (
-/turf/simulated/wall,
-/area/specialty/expie_clubhouse)
-"awL" = (
-/obj/structure/table/rack/shelf/wood,
-/obj/item/camera_film,
-/obj/item/camera_film,
-/obj/item/camera_film,
-/obj/item/camera{
-	pixel_x = -2;
-	pixel_y = 4
-	},
-/obj/item/tape_roll,
-/obj/item/tape_roll,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/expie_clubhouse/archive)
-"awM" = (
-/obj/item/paper{
-	pixel_x = -3;
-	pixel_y = -6
-	},
-/obj/item/paper{
-	pixel_x = -7;
-	pixel_y = 13
-	},
-/obj/effect/floorbreak,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/expie_clubhouse/archive)
-"awN" = (
-/obj/structure/table/woodentable,
-/obj/item/pen/crayon/marker/rainbow,
-/obj/item/pen/crayon/red{
-	pixel_y = 4;
-	pixel_x = -8
-	},
-/obj/item/pen/crayon/blue{
-	pixel_x = 4
-	},
-/obj/item/clothing/head/collectable/paper{
-	pixel_y = 10
-	},
-/obj/item/pen/blue,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/expie_clubhouse/archive)
-"awO" = (
-/obj/effect/floorbreak,
-/obj/item/expi_pamphlet{
-	pixel_x = -9;
-	pixel_y = -6
-	},
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/expie_clubhouse/archive)
-"awP" = (
-/obj/structure/table/rack/shelf/wood,
-/obj/item/clipboard,
-/obj/item/clipboard,
-/obj/item/clipboard,
-/obj/item/clipboard,
-/obj/item/folder/yellow{
-	pixel_x = 9;
-	pixel_y = 5
-	},
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/expie_clubhouse/archive)
-"awQ" = (
-/obj/structure/table/rack,
-/turf/simulated/floor/tiled/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"awR" = (
-/obj/structure/table/rack,
-/obj/item/holosign_creator/combifan{
-	pixel_x = -5;
-	pixel_y = 7
-	},
-/turf/simulated/floor/tiled/turfpack/muriki,
-/area/specialty/expie_clubhouse)
 "awS" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
@@ -12566,651 +12346,6 @@
 /obj/structure/prop/rock/waterflat,
 /turf/simulated/floor/water/acidic/deep/turfpack/muriki,
 /area/space)
-"awU" = (
-/obj/structure/table/rack/shelf,
-/obj/item/gun/projectile/shotgun/pump/empty,
-/turf/simulated/floor/tiled/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"awV" = (
-/obj/structure/table/rack/shelf,
-/obj/item/material/knife/tacknife/survival,
-/turf/simulated/floor/tiled/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"awW" = (
-/obj/structure/table/rack/shelf,
-/turf/simulated/floor/tiled/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"awX" = (
-/obj/structure/table/woodentable,
-/obj/item/pen/crayon/orange,
-/obj/item/pen/crayon/purple{
-	pixel_y = 3;
-	pixel_x = -3
-	},
-/obj/item/pen/red,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/expie_clubhouse/archive)
-"awY" = (
-/obj/item/paper_bin{
-	pixel_x = 7;
-	pixel_y = -6
-	},
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/expie_clubhouse/archive)
-"awZ" = (
-/obj/structure/noticeboard/expie{
-	pixel_y = 32
-	},
-/obj/item/expi_pamphlet{
-	pixel_x = 10;
-	pixel_y = -5
-	},
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/expie_clubhouse/archive)
-"axa" = (
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/expie_clubhouse/archive)
-"axb" = (
-/obj/structure/table/rack/shelf/wood,
-/obj/item/clothing/head/paper_crown,
-/obj/item/taperecorder,
-/obj/item/rectape,
-/obj/item/rectape,
-/obj/item/rectape,
-/turf/simulated/floor/wood/turfpack/muriki,
-/area/specialty/expie_clubhouse/archive)
-"axc" = (
-/turf/simulated/floor/tiled/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"axd" = (
-/obj/structure/closet,
-/turf/simulated/floor/tiled/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"axe" = (
-/obj/item/radio,
-/obj/item/radio,
-/turf/simulated/floor/tiled/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"axf" = (
-/obj/structure/table/rack/shelf,
-/obj/item/tape_roll{
-	pixel_x = -5;
-	pixel_y = 7
-	},
-/turf/simulated/floor/tiled/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"axg" = (
-/obj/item/flashlight/lamp/green,
-/turf/simulated/floor/tiled/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"axh" = (
-/turf/simulated/wall{
-	can_open = 1
-	},
-/area/specialty/expie_clubhouse)
-"axi" = (
-/turf/simulated/mineral/alt/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"axj" = (
-/obj/machinery/light/small,
-/turf/simulated/floor/tiled/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"axk" = (
-/obj/structure/table/rack/shelf/wood,
-/obj/item/clothing/suit/space/emergency,
-/obj/item/clothing/suit/space/emergency,
-/obj/item/clothing/head/helmet/space/emergency,
-/obj/item/clothing/head/helmet/space/emergency,
-/obj/item/tank/emergency/oxygen/double,
-/obj/item/tank/emergency/oxygen/double,
-/obj/item/clothing/mask/breath/transparent,
-/obj/item/clothing/mask/breath/transparent,
-/turf/simulated/floor/tiled/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"axl" = (
-/obj/structure/inflatable,
-/turf/simulated/floor/tiled/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"axm" = (
-/obj/structure/inflatable/door,
-/turf/simulated/floor/tiled/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"axn" = (
-/obj/structure/closet/crate,
-/turf/simulated/floor/tiled/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"axo" = (
-/obj/effect/auto_crayon{
-	icon_state = "three_trade"
-	},
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
-/area/space)
-"axp" = (
-/obj/structure/simple_door/wood,
-/turf/simulated/floor/tiled/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"axq" = (
-/obj/effect/auto_crayon{
-	icon_state = "fire"
-	},
-/obj/effect/auto_crayon{
-	icon_state = "depart"
-	},
-/turf/simulated/floor/tiled/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"axr" = (
-/obj/effect/auto_crayon{
-	icon_state = "earth"
-	},
-/turf/simulated/floor/tiled/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"axs" = (
-/obj/effect/auto_crayon{
-	icon_state = "night"
-	},
-/turf/simulated/floor/tiled/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"axt" = (
-/obj/machinery/cryopod,
-/turf/simulated/floor/tiled/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"axu" = (
-/obj/structure/cryofeed{
-	dir = 4
-	},
-/obj/structure/window/basic,
-/obj/structure/window/basic{
-	dir = 8
-	},
-/obj/machinery/computer/cryopod{
-	pixel_x = 32
-	},
-/obj/machinery/light/small{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"axv" = (
-/obj/effect/auto_crayon{
-	icon_state = "survival"
-	},
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
-/area/space)
-"axw" = (
-/obj/structure/table/rack/shelf/wood,
-/obj/random/flashlight,
-/obj/random/flashlight,
-/obj/random/flashlight,
-/obj/random/flashlight,
-/obj/random/flashlight,
-/obj/random/flashlight,
-/obj/random/flashlight,
-/obj/random/flashlight,
-/turf/simulated/floor/tiled/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"axx" = (
-/obj/structure/table/rack/shelf/wood,
-/obj/item/clothing/mask/gas/clear,
-/turf/simulated/floor/tiled/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"axy" = (
-/obj/structure/table/rack/shelf/wood,
-/obj/random/maintenance/morestuff,
-/obj/random/maintenance/morestuff,
-/obj/random/maintenance/misc,
-/obj/random/maintenance/misc,
-/turf/simulated/floor/tiled/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"axz" = (
-/obj/item/stack/emptysandbag{
-	amount = 30
-	},
-/obj/structure/table/steel,
-/turf/simulated/floor/tiled/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"axA" = (
-/obj/item/paper_bin,
-/obj/structure/table/steel,
-/obj/item/pen/blue,
-/turf/simulated/floor/tiled/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"axB" = (
-/obj/structure/bed/bath,
-/obj/random/soap,
-/obj/machinery/light,
-/turf/simulated/floor/carpet/blucarpet/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"axC" = (
-/obj/effect/auto_crayon{
-	icon_state = "night"
-	},
-/turf/simulated/floor/carpet/blucarpet/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"axD" = (
-/obj/structure/table/standard,
-/obj/random/firstaid,
-/obj/random/firstaid,
-/obj/random/firstaid,
-/obj/random/firstaid,
-/obj/random/firstaid,
-/turf/simulated/floor/carpet/blucarpet/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"axE" = (
-/obj/structure/table/standard,
-/obj/random/medical,
-/obj/random/medical,
-/obj/random/medical,
-/obj/random/medical,
-/obj/random/medical,
-/obj/item/storage/pill_bottle/maintenance{
-	pixel_x = 14;
-	pixel_y = -3
-	},
-/turf/simulated/floor/carpet/blucarpet/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"axF" = (
-/obj/structure/table/standard,
-/obj/random/medical,
-/obj/random/medical,
-/obj/random/medical,
-/obj/random/medical,
-/obj/random/medical,
-/turf/simulated/floor/carpet/blucarpet/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"axG" = (
-/obj/structure/closet,
-/obj/item/tool/crowbar/brace_jack,
-/turf/simulated/floor/carpet/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"axH" = (
-/turf/simulated/floor/carpet/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"axI" = (
-/obj/effect/auto_crayon{
-	icon_state = "right"
-	},
-/turf/simulated/floor/tiled/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"axJ" = (
-/turf/simulated/floor/carpet/blucarpet/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"axK" = (
-/obj/effect/auto_crayon{
-	icon_state = "pill"
-	},
-/turf/simulated/floor/tiled/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"axL" = (
-/obj/effect/auto_crayon{
-	icon_state = "five_life"
-	},
-/turf/simulated/floor/carpet/blucarpet/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"axM" = (
-/obj/effect/auto_crayon{
-	icon_state = "skull"
-	},
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/space)
-"axN" = (
-/obj/structure/bed/pillowpile/teal,
-/turf/simulated/floor/carpet/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"axO" = (
-/obj/structure/bed/pillowpile/green,
-/turf/simulated/floor/carpet/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"axP" = (
-/obj/effect/auto_crayon{
-	icon_state = "six_tranquility"
-	},
-/turf/simulated/floor/carpet/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"axQ" = (
-/obj/machinery/power/apc/alarms_hidden{
-	dir = 4;
-	pixel_x = 24;
-	locked = 0
-	},
-/turf/simulated/floor/carpet/blucarpet/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"axR" = (
-/turf/simulated/wall/r_wall,
-/area/maintenance/damaged_resleeverC)
-"axS" = (
-/obj/machinery/door/airlock/maintenance/common,
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/damaged_resleeverC)
-"axT" = (
-/obj/structure/bed/double/padded,
-/obj/item/bedsheet/greendouble,
-/obj/item/toy/plushie/pillow/red,
-/turf/simulated/floor/carpet/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"axU" = (
-/obj/structure/bed/double/padded,
-/obj/item/bedsheet/mimedouble,
-/turf/simulated/floor/carpet/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"axV" = (
-/obj/structure/bed/double/padded,
-/obj/item/bedsheet/bluedouble,
-/obj/item/toy/plushie/pillow/green,
-/turf/simulated/floor/carpet/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"axW" = (
-/obj/machinery/light{
-	dir = 1
-	},
-/obj/machinery/light_switch{
-	pixel_y = 28
-	},
-/turf/simulated/floor/carpet/blucarpet/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"axX" = (
-/obj/machinery/medical_kiosk,
-/turf/simulated/floor/carpet/blucarpet/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"axY" = (
-/obj/structure/table/steel,
-/turf/simulated/floor/carpet/blucarpet/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"axZ" = (
-/obj/structure/table/steel,
-/obj/item/storage/firstaid/surgery,
-/obj/item/cell/slime{
-	pixel_y = 10;
-	pixel_x = -8
-	},
-/turf/simulated/floor/carpet/blucarpet/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"aya" = (
-/obj/item/flame/candle/everburn,
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/damaged_resleeverC)
-"ayb" = (
-/obj/random/trash,
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/damaged_resleeverC)
-"ayc" = (
-/obj/random/thermalponcho,
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/damaged_resleeverC)
-"ayd" = (
-/obj/structure/trash_pile,
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/damaged_resleeverC)
-"aye" = (
-/obj/structure/bed/double/padded,
-/obj/item/bedsheet/purpledouble,
-/obj/item/toy/plushie/pillow/blue,
-/turf/simulated/floor/carpet/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"ayf" = (
-/obj/structure/bed/double/padded,
-/obj/item/bedsheet/cedouble,
-/obj/item/toy/plushie/pillow/green,
-/turf/simulated/floor/carpet/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"ayg" = (
-/obj/structure/bed/double/padded,
-/obj/item/bedsheet/double,
-/obj/item/toy/plushie/pillow/green,
-/obj/item/toy/plushie/pillow/green,
-/obj/item/toy/plushie/pillow/green,
-/turf/simulated/floor/carpet/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"ayh" = (
-/obj/item/toy/plushie/expie,
-/turf/simulated/floor/carpet/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"ayi" = (
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/damaged_resleeverC)
-"ayj" = (
-/turf/simulated/wall/r_wall{
-	can_open = 1
-	},
-/area/maintenance/damaged_resleeverC)
-"ayk" = (
-/obj/effect/auto_crayon{
-	icon_state = "left"
-	},
-/obj/item/flashlight/lamp/green,
-/turf/simulated/floor/tiled/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"ayl" = (
-/turf/simulated/floor/carpet/bcarpet/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"aym" = (
-/obj/structure/table/standard,
-/obj/random/maintenance/foodstuff,
-/obj/random/maintenance/foodstuff,
-/obj/random/maintenance/foodstuff,
-/obj/random/maintenance/foodstuff,
-/turf/simulated/floor/carpet/bcarpet/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"ayn" = (
-/obj/structure/table/standard,
-/obj/random/drinksoft,
-/turf/simulated/floor/carpet/bcarpet/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"ayo" = (
-/obj/random/mre,
-/obj/random/mre,
-/obj/random/mre,
-/obj/random/mre,
-/turf/simulated/floor/carpet/bcarpet/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"ayp" = (
-/obj/machinery/mineral/input,
-/obj/effect/decal/cleanable/blood,
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/damaged_resleeverC)
-"ayq" = (
-/obj/machinery/transhuman/autoresleever/rogue,
-/obj/machinery/camera/network/outside{
-	c_tag = "EXT - Expie Sleever"
-	},
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/damaged_resleeverC)
-"ayr" = (
-/obj/machinery/gibber/autogibber{
-	emagged = 1
-	},
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/maintenance/damaged_resleeverC)
-"ays" = (
-/obj/item/clothing/ears/earring/dangle/gold,
-/obj/item/clothing/ears/earring/dangle/gold,
-/obj/item/clothing/ears/earring/dangle/gold,
-/obj/item/clothing/ears/earring/dangle/gold,
-/obj/item/clothing/ears/earring/dangle/gold,
-/obj/item/clothing/ears/earring/dangle/gold,
-/turf/simulated/floor/tiled/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"ayt" = (
-/obj/item/toy/tennis/blue{
-	pixel_y = 10;
-	pixel_x = 10
-	},
-/obj/item/toy/tennis/purple{
-	pixel_y = 10
-	},
-/obj/item/toy/tennis/random{
-	pixel_y = 10;
-	pixel_x = -10
-	},
-/obj/item/toy/eight_ball,
-/obj/item/toy/baseball{
-	pixel_x = -9
-	},
-/obj/item/toy/tennis/cyan{
-	pixel_x = -3;
-	pixel_y = 7
-	},
-/obj/item/toy/tennis/cyan{
-	pixel_x = 9;
-	pixel_y = 0
-	},
-/obj/item/toy/tennis/blue{
-	pixel_x = 5;
-	pixel_y = -9
-	},
-/turf/simulated/floor/tiled/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"ayu" = (
-/obj/item/reagent_containers/glass/bucket{
-	pixel_y = 16;
-	pixel_x = 9
-	},
-/obj/item/reagent_containers/glass/bucket{
-	pixel_y = 12;
-	pixel_x = -7
-	},
-/obj/item/reagent_containers/glass/bucket{
-	pixel_y = -3;
-	pixel_x = -7
-	},
-/obj/item/reagent_containers/glass/bucket,
-/obj/item/reagent_containers/glass/bucket{
-	pixel_x = 10;
-	pixel_y = -10
-	},
-/turf/simulated/floor/carpet/bcarpet/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"ayv" = (
-/obj/structure/reagent_dispensers/souppot/half,
-/turf/simulated/floor/carpet/bcarpet/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"ayw" = (
-/obj/structure/closet,
-/obj/item/gun/projectile/revolver,
-/obj/item/ammo_magazine/s357,
-/obj/item/ammo_magazine/s357,
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"ayx" = (
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"ayy" = (
-/obj/fiftyspawner/wood,
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"ayz" = (
-/obj/machinery/light{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"ayA" = (
-/obj/structure/simple_door/sandstone,
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"ayB" = (
-/obj/effect/auto_crayon{
-	icon_state = "one_wrath"
-	},
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"ayC" = (
-/obj/random/meat,
-/obj/random/meat,
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"ayD" = (
-/obj/effect/auto_crayon{
-	icon_state = "fire"
-	},
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"ayE" = (
-/obj/effect/auto_crayon{
-	icon_state = "food"
-	},
-/turf/simulated/floor/tiled/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"ayF" = (
-/obj/effect/auto_crayon{
-	icon_state = "nine_removal"
-	},
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
-/area/space)
-"ayG" = (
-/obj/structure/bonfire,
-/turf/simulated/floor/plating/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"ayH" = (
-/obj/machinery/recharger{
-	pixel_x = -5
-	},
-/obj/structure/table/steel,
-/obj/item/reagent_containers/glass/mortar_pestle{
-	pixel_x = 8
-	},
-/turf/simulated/floor/tiled/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"ayI" = (
-/obj/structure/tanning_rack,
-/turf/simulated/floor/tiled/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"ayJ" = (
-/obj/effect/auto_crayon{
-	icon_state = "water"
-	},
-/turf/simulated/floor/tiled/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"ayK" = (
-/obj/structure/reagent_dispensers/watertank/barrel,
-/turf/simulated/floor/tiled/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"ayL" = (
-/obj/machinery/portable_atmospherics/hydroponics,
-/turf/simulated/floor/grass/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"ayM" = (
-/turf/simulated/floor/grass/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"ayN" = (
-/turf/simulated/floor/outdoors/mud/turfpack/muriki{
-	outdoors = 0
-	},
-/area/specialty/expie_clubhouse)
-"ayO" = (
-/obj/machinery/portable_atmospherics/hydroponics/soil,
-/turf/simulated/floor/outdoors/mud/turfpack/muriki{
-	outdoors = 0
-	},
-/area/specialty/expie_clubhouse)
-"ayP" = (
-/turf/simulated/mineral/alt/ignore_cavegen/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"ayQ" = (
-/obj/item/material/minihoe,
-/turf/simulated/floor/grass/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"ayR" = (
-/obj/item/flashlight/lamp/green,
-/turf/simulated/floor/grass/turfpack/muriki,
-/area/specialty/expie_clubhouse)
-"ayS" = (
-/obj/structure/sink/puddle,
-/turf/simulated/floor/outdoors/mud/turfpack/muriki{
-	outdoors = 0
-	},
-/area/specialty/expie_clubhouse)
-"ayT" = (
-/obj/structure/reagent_dispensers/watertank/high,
-/turf/simulated/floor/outdoors/mud/turfpack/muriki{
-	outdoors = 0
-	},
-/area/specialty/expie_clubhouse)
 "azl" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
@@ -80208,7 +79343,7 @@ vUE
 vUE
 vUE
 vUE
-twb
+vUE
 vUE
 vUE
 vUE
@@ -80465,7 +79600,7 @@ vUE
 vUE
 vUE
 vUE
-cqy
+vUE
 vUE
 vUE
 vUE
@@ -80722,7 +79857,7 @@ vUE
 vUE
 vUE
 vUE
-twb
+vUE
 vUE
 vUE
 vUE
@@ -80979,7 +80114,7 @@ vUE
 vUE
 vUE
 vUE
-twb
+vUE
 vUE
 vUE
 vUE
@@ -81486,17 +80621,17 @@ vUE
 vUE
 vUE
 vUE
-twb
-twb
-twb
-twb
-twb
-twb
-asL
-twb
-twb
-twb
-twb
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
 vUE
 vUE
 vUE
@@ -81743,17 +80878,17 @@ vUE
 vUE
 vUE
 vUE
-twb
-xDq
-xDq
-twb
-cwl
-oPQ
-ass
-asq
-arX
-ary
-twb
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
 vUE
 vUE
 vUE
@@ -82000,17 +81135,17 @@ vUE
 vUE
 vUE
 vUE
-twb
-xDq
-xDq
-twb
-ihB
-uMJ
-asM
-asr
-arY
-arz
-twb
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
 vUE
 vUE
 vUE
@@ -82257,17 +81392,17 @@ vUE
 vUE
 vUE
 vUE
-twb
-twb
-twb
-twb
-twb
-nMS
-ndK
-ass
-arZ
-arA
-twb
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
 vUE
 vUE
 vUE
@@ -82514,17 +81649,17 @@ vUE
 vUE
 vUE
 vUE
-twb
-bcq
-atD
-twb
-atb
-asT
-asN
-ast
-asa
-arB
-arm
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
 vUE
 vUE
 vUE
@@ -82771,17 +81906,17 @@ vUE
 vUE
 vUE
 vUE
-atZ
-atR
-atE
-ato
-atc
-asU
-asO
-ndK
-asb
-arC
-aiZ
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
 vUE
 vUE
 vUE
@@ -83028,17 +82163,17 @@ vUE
 vUE
 vUE
 vUE
-twb
-atS
-atF
-atp
-arA
-arY
-arA
-asu
-lMV
-ndK
-twb
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
 vUE
 vUE
 vUE
@@ -83285,17 +82420,17 @@ vUE
 vUE
 vUE
 vUE
-twb
-atT
-tsG
-atp
-lbD
-lbD
-alP
-asv
-ndK
-lMV
-twb
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
 vUE
 vUE
 vUE
@@ -83542,17 +82677,17 @@ vUE
 vUE
 vUE
 vUE
-twb
-tsG
-atG
-twb
-atd
-asV
-asP
-asw
-asc
-arD
-twb
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
 vUE
 vUE
 vUE
@@ -83799,17 +82934,17 @@ vUE
 vUE
 vUE
 vUE
-twb
-atU
-twb
-twb
-twb
-twb
-twb
-twb
-twb
-twb
-twb
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
 vUE
 vUE
 vUE
@@ -95693,39 +94828,39 @@ vUE
 vUE
 vUE
 vUE
-xDq
-xDq
-xDq
-xDq
-xDq
-xDq
-xDq
-xDq
-xDq
-axR
-axR
-axR
-axR
-axR
-vuk
-vuk
-vuk
-sjo
-sjo
-sjo
-sjo
-sjo
 vUE
-xDq
-xDq
-xDq
-twb
-twb
-twb
-twb
-twb
-cqy
-twb
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
 vUE
 vUE
 vUE
@@ -95950,39 +95085,39 @@ vUE
 vUE
 vUE
 vUE
-xDq
-xDq
-xDq
-xDq
-xDq
-xDq
-xDq
-xDq
-xDq
-axR
-ayi
-ayi
-aya
-axR
-vuk
-vuk
-vuk
-sjo
-sjo
-sjo
-sjo
-sjo
 vUE
-xDq
-xDq
-xDq
-twb
-awx
-wWz
-awn
-twb
-awh
-twb
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
 vUE
 vUE
 vUE
@@ -96207,39 +95342,39 @@ vUE
 vUE
 vUE
 vUE
-xDq
-xDq
-xDq
-xDq
-xDq
-xDq
-xDq
-xDq
-xDq
-axR
-ayp
-ayi
-ayb
-axS
-axM
-sjo
-sjo
-sjo
-sjo
-sjo
-sjo
-vuk
 vUE
-xDq
-xDq
-xDq
-twb
-wWz
-awp
-wWz
-twb
-awi
-twb
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
 vUE
 vUE
 vUE
@@ -96464,39 +95599,39 @@ vUE
 vUE
 vUE
 vUE
-xDq
-xDq
-xDq
-xDq
-xDq
-xDq
-awK
-awK
-awK
-axR
-ayq
-ayi
-ayc
-axR
-vuk
-vuk
-vuk
-vuk
-axv
-axo
-sjo
-vuk
 vUE
-xDq
-xDq
-xDq
-twb
-wWz
-wWz
-awo
-cqy
-awi
-twb
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
 vUE
 vUE
 vUE
@@ -96721,39 +95856,39 @@ vUE
 vUE
 vUE
 vUE
-xDq
-xDq
-xDq
-xDq
-xDq
-xDq
-awK
-ayx
-ayw
-axR
-ayr
-ayi
-ayd
-axR
-vuk
-vuk
-vuk
-awK
-awK
-axp
-awK
-awK
 vUE
-xDq
-xDq
-xDq
-twb
-awy
-awq
-awp
-twb
-twb
-twb
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
 vUE
 vUE
 vUE
@@ -96978,39 +96113,39 @@ vUE
 vUE
 vUE
 vUE
-xDq
-xDq
-xDq
-xDq
-awK
-awK
-awK
-axh
-awK
-axR
-axR
-ayj
-axR
-axR
-vuk
-vuk
-vuk
-awK
-axw
-axq
-axj
-awK
 vUE
-aww
-aww
-aww
-aww
-awz
-awr
-wWz
-twb
-xDq
-xDq
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
 vUE
 vUE
 vUE
@@ -97235,39 +96370,39 @@ vUE
 vUE
 vUE
 vUE
-xDq
-xDq
-xDq
-xDq
-awK
-ayx
-ayx
-ayB
-ayx
-awK
-awK
-axh
-awK
-awK
-awK
-awK
-awK
-awK
-axx
-axc
-axk
-awK
 vUE
-aww
-awX
-awL
-aww
-aww
-aws
-twb
-twb
-twb
-twb
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
 vUE
 vUE
 vUE
@@ -97492,39 +96627,39 @@ vUE
 vUE
 vUE
 vUE
-xDq
-xDq
-xDq
-xDq
-awK
-ayx
-ayx
-ayC
-ayx
-awK
-ays
-axc
-aye
-axT
-axH
-axH
-axG
-awK
-axy
-axc
-axk
-awK
 vUE
-aww
-awY
-awM
-awE
-aww
-sjo
-sjo
-awl
-jqR
-sjo
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
 vUE
 vUE
 vUE
@@ -97749,39 +96884,39 @@ twb
 vUE
 vUE
 vUE
-xDq
-xDq
-xDq
-xDq
-awK
-ayx
-ayG
-ayD
-ayy
-awK
-axc
-ayk
-ayf
-axU
-axN
-axH
-axH
-awK
-awK
-axm
-awK
-awK
 vUE
-aww
-awZ
-awG
-awG
-awA
-awu
-sjo
-awm
-awj
-sjo
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
 vUE
 vUE
 vUE
@@ -98006,39 +97141,39 @@ jqR
 vUE
 vUE
 vUE
-xDq
-xDq
-xDq
-xDq
-awK
-ayx
-ayx
-ayC
-ayx
-axc
-axc
-axc
-ayg
-axV
-axO
-axH
-axH
-axA
-axz
-axc
-awK
-awK
 vUE
-aww
-awG
-awN
-awH
-aww
-aww
-twb
-twb
-twb
-twb
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
 vUE
 vUE
 vUE
@@ -98263,39 +97398,39 @@ jqR
 vUE
 vUE
 vUE
-xDq
-xDq
-xDq
-xDq
-awK
-ayx
-ayx
-ayx
-ayx
-awK
-axc
-axc
-ayh
-axH
-axP
-axH
-axH
-axc
-axc
-axc
-axl
-awK
 vUE
-aww
-axa
-awO
-awI
-awC
-aww
-xDq
-xDq
-xDq
-xDq
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
 vUE
 vUE
 vUE
@@ -98520,39 +97655,39 @@ fUl
 vUE
 vUE
 vUE
-awK
-awK
-awK
-awK
-awK
-awK
-awK
-awK
-awK
-awK
-ayt
-axc
-axH
-axH
-axH
-axH
-axH
-axc
-axc
-axr
-axm
-axh
 vUE
-aww
-axb
-awP
-awJ
-awD
-aww
-xDq
-xDq
-xDq
-xDq
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
 vUE
 vUE
 vUE
@@ -98777,39 +97912,39 @@ jqR
 vUE
 vUE
 vUE
-awK
-ayM
-ayL
-ayL
-ayL
-awK
-ayH
-axc
-ayz
-axc
-axc
-axc
-axH
-axH
-axH
-axH
-axH
-axc
-axc
-axc
-awK
-awK
 vUE
-aww
-aww
-aww
-aww
-aww
-aww
-xDq
-xDq
-xDq
-xDq
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
 vUE
 vUE
 vUE
@@ -99034,28 +98169,28 @@ jqR
 vUE
 vUE
 vUE
-awK
-ayR
-ayQ
-ayM
-ayM
-awK
-axc
-axc
-axc
-axc
-axc
-axc
-axc
-axc
-axc
-axc
-axI
-axc
-axc
-axg
-awK
-axi
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
 vUE
 vUE
 vUE
@@ -99291,28 +98426,28 @@ twb
 vUE
 vUE
 vUE
-awK
-ayS
-ayN
-ayM
-ayM
-axc
-axc
-axc
-axc
-axc
-axc
-axc
-axc
-axc
-axc
-axK
-axc
-awK
-awK
-awK
-awK
-axi
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
 vUE
 vUE
 vUE
@@ -99548,33 +98683,33 @@ wPT
 vUE
 vUE
 vUE
-awK
-ayN
-ayN
-ayN
-ayN
-awK
-ayI
-ayE
-ayl
-ayl
-ayl
-ayl
-awK
-axW
-axJ
-axJ
-axJ
-axB
-awK
-awK
-awK
-awK
-awK
-awK
-awK
-awK
-awK
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
 vUE
 vUE
 vUE
@@ -99805,33 +98940,33 @@ twb
 vUE
 vUE
 vUE
-awK
-ayT
-ayN
-ayN
-ayO
-awK
-axc
-axc
-ayl
-ayu
-ayl
-aym
-awK
-axX
-axJ
-axJ
-axJ
-axC
-axp
-axs
-axc
-awK
-axd
-axc
-axc
-awQ
-awK
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
 vUE
 vUE
 vUE
@@ -100062,33 +99197,33 @@ gAH
 vUE
 vUE
 vUE
-awK
-ayO
-ayN
-ayN
-ayO
-awK
-axc
-axc
-ayl
-ayv
-ayl
-aym
-awK
-axY
-axJ
-axL
-axJ
-axD
-awK
-axt
-axc
-awK
-axe
-axc
-axc
-awQ
-awK
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
 vUE
 vUE
 vUE
@@ -100319,33 +99454,33 @@ twb
 vUE
 vUE
 vUE
-awK
-awK
-ayN
-ayN
-ayO
-awK
-ayJ
-axc
-ayl
-ayl
-ayl
-ayn
-awK
-axY
-axJ
-axJ
-axJ
-axE
-awK
-axu
-axc
-awK
-axf
-axc
-axc
-awR
-awK
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
 vUE
 vUE
 vUE
@@ -100576,33 +99711,33 @@ twb
 vUE
 vUE
 vUE
-xDq
-awK
-awK
-awK
-awK
-awK
-ayK
-axg
-ayl
-ayl
-ayl
-ayo
-awK
-axZ
-axQ
-axJ
-axJ
-axF
-awK
-awK
-awK
-awK
-axg
-axc
-axc
-awU
-awK
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
 vUE
 vUE
 vUE
@@ -100833,33 +99968,33 @@ twb
 vUE
 vUE
 vUE
-xDq
-xDq
-vuk
-vuk
-ayP
-awK
-awK
-awK
-ayA
-awK
-awK
-awK
-awK
-awK
-awK
-awK
-awK
-awK
-awK
-awW
-axn
-axc
-axc
-axc
-axc
-awV
-awK
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
 vUE
 vUE
 vUE
@@ -101090,33 +100225,33 @@ twb
 vUE
 vUE
 vUE
-xDq
-xDq
-vuk
-vuk
-sjo
-sjo
-sjo
-ayF
-sjo
-xDq
-xDq
-xDq
-xDq
-xDq
-xDq
-awK
-axc
-axc
-axc
-axc
-axc
-axc
-axc
-axc
-axc
-awW
-awK
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
 vUE
 vUE
 vUE
@@ -101347,33 +100482,33 @@ twb
 vUE
 vUE
 vUE
-xDq
-xDq
-vuk
-vuk
-vuk
-vuk
-sjo
-sjo
-sjo
-xDq
-xDq
-xDq
-xDq
-xDq
-xDq
-awK
-awK
-awK
-awK
-awK
-awK
-awK
-awK
-awK
-awK
-awK
-awK
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
+vUE
 vUE
 vUE
 vUE
