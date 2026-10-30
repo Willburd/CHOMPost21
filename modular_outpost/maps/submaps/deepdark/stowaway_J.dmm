@@ -1,0 +1,876 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"am" = (
+/obj/structure/bed/chair/bay/comfy/brown{
+	dir = 8;
+	name = "Quartermaster's Chair";
+	override_name = 1
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/blucarpet,
+/area/mine/explored/muriki/cave/deepdark)
+"aE" = (
+/obj/structure/disposalpipe/broken{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"bk" = (
+/obj/item/material/ashtray/glass,
+/obj/structure/table/fancyblack,
+/turf/simulated/floor/carpet/blucarpet,
+/area/mine/explored/muriki/cave/deepdark)
+"bC" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/polarized{
+	dir = 1;
+	id = "meet_window_tint"
+	},
+/obj/machinery/door/firedoor/glass,
+/obj/structure/window/reinforced/polarized{
+	dir = 8;
+	id = "meet_window_tint"
+	},
+/obj/machinery/door/blast/regular{
+	density = 0;
+	icon_state = "pdoor0";
+	id = "bridge blast";
+	name = "Bridge Blast Doors";
+	opacity = 0
+	},
+/turf/simulated/floor,
+/area/mine/explored/muriki/cave/deepdark)
+"cb" = (
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"cX" = (
+/obj/structure/flora/pottedplant/decorative,
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 10
+	},
+/obj/structure/ladder/top_hatch,
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"dr" = (
+/turf/simulated/mineral/floor/ignore_mapgen/cave,
+/area/mine/explored/muriki/cave/deepdark)
+"dz" = (
+/obj/structure/bed/chair/bay/comfy/blue{
+	dir = 8;
+	name = "Chief Medical Officer's Chair";
+	override_name = 1
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/blucarpet,
+/area/mine/explored/muriki/cave/deepdark)
+"dR" = (
+/turf/simulated/mineral/alt/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"gd" = (
+/obj/effect/floor_decal/spline/fancy/wood,
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"jf" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/polarized{
+	dir = 8;
+	id = "meet_window_tint"
+	},
+/obj/structure/window/reinforced/polarized{
+	dir = 4;
+	id = "meet_window_tint"
+	},
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/blast/regular{
+	density = 0;
+	icon_state = "pdoor0";
+	id = "bridge blast";
+	name = "Bridge Blast Doors";
+	opacity = 0
+	},
+/turf/simulated/floor,
+/area/mine/explored/muriki/cave/deepdark)
+"jo" = (
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/glass_command/polarized{
+	id_tag = "meet_window_tint";
+	name = "Heads Meeting Office"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/mine/explored/muriki/cave/deepdark)
+"kl" = (
+/obj/effect/floor_decal/spline/plain{
+	dir = 5
+	},
+/turf/simulated/floor/carpet/blucarpet,
+/area/mine/explored/muriki/cave/deepdark)
+"kJ" = (
+/obj/structure/table/woodentable,
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"kW" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"ls" = (
+/obj/structure/flora/pottedplant/smalltree,
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 9
+	},
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"lK" = (
+/obj/structure/table/woodentable,
+/obj/effect/floor_decal/spline/fancy/wood,
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"ov" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/polarized{
+	id = "meet_window_tint"
+	},
+/obj/machinery/door/firedoor/glass,
+/obj/structure/window/reinforced/polarized{
+	dir = 8;
+	id = "meet_window_tint"
+	},
+/obj/machinery/door/blast/regular{
+	density = 0;
+	icon_state = "pdoor0";
+	id = "bridge blast";
+	name = "Bridge Blast Doors";
+	opacity = 0
+	},
+/turf/simulated/floor,
+/area/mine/explored/muriki/cave/deepdark)
+"oB" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/polarized{
+	dir = 8;
+	id = "meet_window_tint"
+	},
+/obj/structure/window/reinforced/polarized{
+	dir = 1;
+	id = "meet_window_tint"
+	},
+/obj/machinery/door/firedoor/glass,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/simulated/floor,
+/area/mine/explored/muriki/cave/deepdark)
+"oI" = (
+/obj/structure/table/fancyblack,
+/obj/item/storage/box/donut,
+/turf/simulated/floor/carpet/blucarpet,
+/area/mine/explored/muriki/cave/deepdark)
+"rx" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/polarized{
+	dir = 8;
+	id = "meet_window_tint"
+	},
+/obj/structure/window/reinforced/polarized{
+	dir = 1;
+	id = "meet_window_tint"
+	},
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/blast/regular{
+	density = 0;
+	icon_state = "pdoor0";
+	id = "bridge blast";
+	name = "Bridge Blast Doors";
+	opacity = 0
+	},
+/turf/simulated/floor,
+/area/mine/explored/muriki/cave/deepdark)
+"sj" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/polarized{
+	id = "meet_window_tint"
+	},
+/obj/structure/window/reinforced/polarized{
+	dir = 4;
+	id = "meet_window_tint"
+	},
+/obj/structure/window/reinforced/polarized{
+	dir = 1;
+	id = "meet_window_tint"
+	},
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/blast/regular{
+	density = 0;
+	icon_state = "pdoor0";
+	id = "bridge blast";
+	name = "Bridge Blast Doors";
+	opacity = 0
+	},
+/turf/simulated/floor,
+/area/mine/explored/muriki/cave/deepdark)
+"sB" = (
+/obj/effect/floor_decal/spline/plain{
+	dir = 8
+	},
+/turf/simulated/floor/carpet/blucarpet,
+/area/mine/explored/muriki/cave/deepdark)
+"sK" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/polarized{
+	id = "meet_window_tint"
+	},
+/obj/structure/window/reinforced/polarized{
+	dir = 8;
+	id = "meet_window_tint"
+	},
+/obj/machinery/door/firedoor/glass,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/simulated/floor,
+/area/mine/explored/muriki/cave/deepdark)
+"ta" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"td" = (
+/obj/structure/bed/chair/comfy/black{
+	dir = 4;
+	name = "Scribe's Chair"
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"uY" = (
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"vn" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/polarized{
+	id = "meet_window_tint"
+	},
+/obj/structure/window/reinforced/polarized{
+	dir = 4;
+	id = "meet_window_tint"
+	},
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/blast/regular{
+	density = 0;
+	icon_state = "pdoor0";
+	id = "bridge blast";
+	name = "Bridge Blast Doors";
+	opacity = 0
+	},
+/turf/simulated/floor,
+/area/mine/explored/muriki/cave/deepdark)
+"xi" = (
+/obj/structure/sign/yessmoking_1{
+	pixel_y = -32
+	},
+/obj/effect/floor_decal/spline/fancy/wood,
+/obj/machinery/light,
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"xo" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 1
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"yb" = (
+/obj/effect/floor_decal/spline/fancy/wood/corner{
+	dir = 8
+	},
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"zy" = (
+/turf/simulated/wall/r_wall,
+/area/mine/explored/muriki/cave/deepdark)
+"zN" = (
+/obj/structure/bed/chair/bay/comfy/yellow{
+	name = "Chief Engineer's Chair";
+	override_name = 1
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 1
+	},
+/turf/simulated/floor/carpet/blucarpet,
+/area/mine/explored/muriki/cave/deepdark)
+"AP" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/polarized{
+	dir = 4;
+	id = "meet_window_tint"
+	},
+/obj/structure/window/reinforced/polarized{
+	dir = 1;
+	id = "meet_window_tint"
+	},
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/blast/regular{
+	density = 0;
+	icon_state = "pdoor0";
+	id = "bridge blast";
+	name = "Bridge Blast Doors";
+	opacity = 0
+	},
+/turf/simulated/floor,
+/area/mine/explored/muriki/cave/deepdark)
+"DT" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/polarized{
+	id = "meet_window_tint"
+	},
+/obj/structure/window/reinforced/polarized{
+	dir = 8;
+	id = "meet_window_tint"
+	},
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/blast/regular{
+	density = 0;
+	icon_state = "pdoor0";
+	id = "bridge blast";
+	name = "Bridge Blast Doors";
+	opacity = 0
+	},
+/turf/simulated/floor,
+/area/mine/explored/muriki/cave/deepdark)
+"Ez" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 10
+	},
+/obj/item/flag/eshui,
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"GK" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 4
+	},
+/obj/machinery/papershredder,
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"HB" = (
+/obj/structure/table/woodentable,
+/obj/structure/flora/pottedplant{
+	pixel_y = 10
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 6
+	},
+/obj/structure/extinguisher_cabinet{
+	dir = 8;
+	pixel_x = 30;
+	pixel_y = -7
+	},
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"IB" = (
+/obj/structure/table/fancyblack,
+/turf/simulated/floor/carpet/blucarpet,
+/area/mine/explored/muriki/cave/deepdark)
+"IE" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 8
+	},
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"IO" = (
+/obj/structure/flora/pottedplant/decorative,
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 9
+	},
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"Jl" = (
+/obj/effect/floor_decal/spline/fancy/wood,
+/obj/item/radio/intercom{
+	name = "Station Intercom (General)";
+	pixel_y = -21
+	},
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"Jx" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 9
+	},
+/obj/item/flag/eshui,
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"JG" = (
+/obj/structure/table/fancyblack,
+/obj/item/expi_pamphlet,
+/obj/item/expi_pamphlet,
+/obj/item/expi_pamphlet,
+/obj/item/expi_pamphlet,
+/turf/simulated/floor/carpet/blucarpet,
+/area/mine/explored/muriki/cave/deepdark)
+"KZ" = (
+/obj/effect/floor_decal/spline/fancy/wood/corner{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"Mp" = (
+/obj/structure/flora/pottedplant/smalltree,
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 10
+	},
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"Mz" = (
+/obj/effect/floor_decal/spline/plain{
+	dir = 6
+	},
+/turf/simulated/floor/carpet/blucarpet,
+/area/mine/explored/muriki/cave/deepdark)
+"OT" = (
+/obj/effect/floor_decal/spline/fancy/wood/corner,
+/obj/effect/floor_decal/spline/fancy/wood/corner{
+	dir = 1
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"Pg" = (
+/obj/structure/table/woodentable,
+/obj/item/paper_bin{
+	pixel_x = -3;
+	pixel_y = 7
+	},
+/obj/item/pen/blue{
+	pixel_y = -5
+	},
+/obj/item/pen,
+/obj/item/pen/red{
+	pixel_y = 5
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 5
+	},
+/obj/machinery/newscaster{
+	pixel_x = 32
+	},
+/obj/item/taperecorder{
+	pixel_x = 8;
+	pixel_y = 4
+	},
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"Qp" = (
+/turf/simulated/mineral/alt/turfpack/muriki,
+/area/template_noop)
+"QW" = (
+/obj/structure/bed/chair/bay/comfy/captain{
+	dir = 4;
+	override_name = 1
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 8
+	},
+/turf/simulated/floor/carpet/blucarpet,
+/area/mine/explored/muriki/cave/deepdark)
+"Tq" = (
+/obj/structure/fireaxecabinet{
+	pixel_y = 32
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"TP" = (
+/turf/template_noop,
+/area/template_noop)
+"Uu" = (
+/obj/structure/bed/chair/bay/comfy/red{
+	dir = 8;
+	name = "Head of Security's Chair";
+	override_name = 1
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/blucarpet,
+/area/mine/explored/muriki/cave/deepdark)
+"UG" = (
+/obj/structure/table/woodentable,
+/obj/item/storage/box/donut,
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"Vp" = (
+/obj/effect/floor_decal/spline/plain{
+	dir = 10
+	},
+/obj/effect/floor_decal/spline/fancy/wood/corner{
+	dir = 8
+	},
+/turf/simulated/floor/carpet/blucarpet,
+/area/mine/explored/muriki/cave/deepdark)
+"Vs" = (
+/obj/structure/bed/chair/bay/comfy/green{
+	name = "Head of Personnel's Chair";
+	override_name = 1
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 1
+	},
+/turf/simulated/floor/carpet/blucarpet,
+/area/mine/explored/muriki/cave/deepdark)
+"VI" = (
+/obj/effect/floor_decal/spline/plain{
+	dir = 9
+	},
+/obj/effect/floor_decal/spline/fancy/wood/corner{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/blucarpet,
+/area/mine/explored/muriki/cave/deepdark)
+"VN" = (
+/turf/simulated/wall,
+/area/mine/explored/muriki/cave/deepdark)
+"XZ" = (
+/obj/structure/bed/chair/bay/comfy/teal{
+	dir = 1;
+	name = "Lawyer's Chair";
+	override_name = 1
+	},
+/obj/effect/floor_decal/spline/plain,
+/turf/simulated/floor/carpet/blucarpet,
+/area/mine/explored/muriki/cave/deepdark)
+"Zl" = (
+/obj/structure/bed/chair/bay/comfy/purple{
+	dir = 1;
+	name = "Research Director's Chair";
+	override_name = 1
+	},
+/obj/effect/floor_decal/spline/plain,
+/turf/simulated/floor/carpet/blucarpet,
+/area/mine/explored/muriki/cave/deepdark)
+"Zv" = (
+/obj/machinery/disposal,
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 4
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"ZX" = (
+/obj/effect/floor_decal/corner/white{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+
+(1,1,1) = {"
+TP
+TP
+TP
+TP
+TP
+TP
+TP
+TP
+TP
+TP
+TP
+TP
+TP
+TP
+TP
+TP
+"}
+(2,1,1) = {"
+TP
+TP
+TP
+TP
+dr
+dr
+dr
+dr
+dr
+dr
+dr
+dr
+dr
+TP
+TP
+TP
+"}
+(3,1,1) = {"
+TP
+TP
+dr
+dr
+dr
+dr
+dr
+dr
+dr
+dr
+dr
+dr
+dr
+dr
+TP
+TP
+"}
+(4,1,1) = {"
+TP
+TP
+dr
+dr
+dr
+dr
+rx
+jf
+jf
+jf
+DT
+dr
+dr
+dr
+dr
+TP
+"}
+(5,1,1) = {"
+TP
+dr
+dr
+dr
+dr
+rx
+vn
+ls
+IE
+Mp
+AP
+DT
+dr
+dr
+dr
+TP
+"}
+(6,1,1) = {"
+TP
+dR
+dr
+dr
+bC
+vn
+IO
+KZ
+uY
+yb
+cX
+AP
+ov
+dr
+dr
+TP
+"}
+(7,1,1) = {"
+TP
+dR
+dr
+dr
+sj
+Jx
+VI
+sB
+QW
+sB
+Vp
+Ez
+sj
+dr
+dR
+TP
+"}
+(8,1,1) = {"
+TP
+zy
+zy
+zy
+zy
+kW
+Vs
+bk
+IB
+IB
+XZ
+Jl
+zy
+zy
+zy
+TP
+"}
+(9,1,1) = {"
+TP
+dR
+dR
+dR
+zy
+xo
+zN
+JG
+IB
+oI
+Zl
+xi
+zy
+dR
+dR
+TP
+"}
+(10,1,1) = {"
+TP
+dR
+dR
+dR
+zy
+Tq
+kl
+dz
+am
+Uu
+Mz
+gd
+zy
+dR
+dR
+TP
+"}
+(11,1,1) = {"
+TP
+TP
+dR
+dR
+zy
+td
+uY
+uY
+uY
+uY
+uY
+lK
+zy
+dR
+dR
+TP
+"}
+(12,1,1) = {"
+TP
+Qp
+dR
+dR
+zy
+Pg
+kJ
+GK
+OT
+Zv
+UG
+HB
+zy
+dR
+dR
+TP
+"}
+(13,1,1) = {"
+TP
+Qp
+zy
+zy
+zy
+VN
+oB
+sK
+jo
+oB
+sK
+VN
+zy
+zy
+Qp
+TP
+"}
+(14,1,1) = {"
+TP
+TP
+Qp
+dR
+zy
+cb
+ZX
+ZX
+ta
+cb
+dr
+dR
+zy
+dR
+TP
+TP
+"}
+(15,1,1) = {"
+TP
+TP
+Qp
+Qp
+TP
+dr
+dr
+cb
+aE
+dr
+TP
+TP
+Qp
+Qp
+TP
+TP
+"}
+(16,1,1) = {"
+TP
+TP
+TP
+TP
+TP
+TP
+TP
+TP
+TP
+TP
+TP
+TP
+TP
+TP
+TP
+TP
+"}
