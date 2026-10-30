@@ -5,9 +5,7 @@
 /area/mine/explored/muriki/cave/deepdark)
 "ao" = (
 /obj/item/toy/eight_ball,
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "bI" = (
 /obj/random/trash_pile,
@@ -137,9 +135,7 @@
 /area/mine/explored/muriki/cave/deepdark)
 "jB" = (
 /obj/random/junk,
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "jS" = (
 /obj/random/trash,
@@ -181,14 +177,10 @@
 /area/mine/explored/muriki/cave/deepdark)
 "na" = (
 /obj/random/trash_pile,
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "nk" = (
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "nM" = (
 /obj/item/radio,
@@ -398,9 +390,7 @@
 /obj/effect/auto_crayon{
 	icon_state = "survival"
 	},
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "Eq" = (
 /turf/simulated/mineral/alt/turfpack/muriki,
@@ -439,9 +429,7 @@
 /obj/effect/auto_crayon{
 	icon_state = "three_trade"
 	},
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "Jh" = (
 /obj/structure/bed/pillowpile/teal,
@@ -467,9 +455,7 @@
 /turf/simulated/floor/tiled/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
 "Kg" = (
-/turf/simulated/mineral/floor/turfpack/muriki{
-	ignore_mapgen = 1
-	},
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
 /area/template_noop)
 "Kn" = (
 /obj/effect/auto_crayon{
