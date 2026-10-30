@@ -16,7 +16,6 @@
 	icon_state = "red2"
 	ambience = AMBIENCE_MURIKICAVE
 	base_turf = /turf/simulated/mineral/floor/vacuum
-	flags = AREA_BLOCK_GHOST_SIGHT
 	ambience = AMBIENCE_SPACE
 
 
