@@ -1,0 +1,946 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"ar" = (
+/obj/item/radio/intercom{
+	dir = 4;
+	name = "Station Intercom (General)";
+	pixel_x = 21
+	},
+/obj/machinery/rnd/production/circuit_imprinter,
+/obj/effect/floor_decal/milspec/color/white,
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"ba" = (
+/obj/structure/table/standard,
+/obj/item/disk/design_disk,
+/obj/item/disk/design_disk,
+/obj/item/disk/tech_disk,
+/obj/item/disk/tech_disk,
+/obj/item/reagent_containers/spray/cleaner,
+/obj/item/reagent_containers/spray/cleaner,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"cR" = (
+/obj/structure/disposalpipe/segment{
+	icon_state = "pipe-c";
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"dB" = (
+/obj/structure/table/standard{
+	name = "plastic table frame"
+	},
+/obj/item/stock_parts/motor,
+/obj/item/stock_parts/motor,
+/obj/item/stock_parts/capacitor,
+/obj/item/stock_parts/capacitor,
+/obj/item/stock_parts/capacitor,
+/obj/item/stock_parts/capacitor,
+/obj/item/stock_parts/gear,
+/obj/item/stock_parts/gear,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"dU" = (
+/obj/item/paper_bin{
+	pixel_x = -3;
+	pixel_y = 7
+	},
+/obj/structure/table/standard{
+	name = "plastic table frame"
+	},
+/obj/item/clipboard,
+/obj/item/folder/white,
+/obj/item/pen,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"es" = (
+/obj/structure/table/reinforced,
+/obj/machinery/door/window/brigdoor/eastright{
+	name = "Research and Development Desk";
+	req_one_access = list(47);
+	req_access = null;
+	dir = 1
+	},
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"eQ" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/floorbreak,
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"fm" = (
+/obj/structure/disposalpipe/broken{
+	dir = 4
+	},
+/obj/effect/floorbreak,
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"fQ" = (
+/obj/effect/floor_decal/milspec/color/white/half{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"gg" = (
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/obj/effect/floor_decal/milspec/color/white/half{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"il" = (
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/effect/floorbreak,
+/turf/simulated/floor/tiled/techfloor,
+/area/mine/explored/muriki/cave/deepdark)
+"ip" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/floor_decal/milspec/color/white/half,
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"iE" = (
+/obj/machinery/autolathe{
+	desc = "Your typical Autolathe. It appears to have much more options than your regular one, however...";
+	hacked = 1;
+	name = "Unlocked Autolathe"
+	},
+/obj/effect/floor_decal/milspec/color/white,
+/turf/simulated/floor/tiled/dark,
+/area/mine/explored/muriki/cave/deepdark)
+"jm" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/structure/closet/secure_closet{
+	req_one_access = list(7,47)
+	},
+/obj/effect/floor_decal/milspec/color/white/half{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"jX" = (
+/obj/effect/floor_decal/industrial/warning,
+/obj/effect/floor_decal/spline/plain{
+	dir = 1
+	},
+/obj/effect/floorbreak,
+/turf/simulated/floor/tiled/dark,
+/area/mine/explored/muriki/cave/deepdark)
+"jZ" = (
+/obj/structure/reagent_dispensers/water_cooler/full,
+/obj/effect/floor_decal/milspec/color/white/half{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"kl" = (
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/template_noop)
+"kG" = (
+/obj/machinery/light,
+/obj/machinery/computer/security/telescreen/entertainment{
+	pixel_x = 32
+	},
+/obj/machinery/rnd/destructive_analyzer,
+/obj/effect/floor_decal/milspec/color/white,
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"lc" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/obj/effect/floorbreak,
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"ml" = (
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/glass_command{
+	name = "Research and Development"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/mine/explored/muriki/cave/deepdark)
+"nd" = (
+/obj/effect/floor_decal/spline/plain,
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"nk" = (
+/obj/structure/disposalpipe/segment{
+	icon_state = "pipe-c";
+	dir = 4
+	},
+/obj/effect/floor_decal/milspec/color/white/half{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"pi" = (
+/obj/structure/table/standard,
+/obj/machinery/recharger{
+	pixel_x = 6
+	},
+/obj/machinery/recharger{
+	pixel_x = -5
+	},
+/obj/item/cell/device,
+/obj/item/cell/device,
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/effect/floor_decal/milspec/color/white/half{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"pE" = (
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"qh" = (
+/obj/effect/floor_decal/industrial/warning,
+/turf/simulated/floor/tiled/dark,
+/area/mine/explored/muriki/cave/deepdark)
+"rg" = (
+/turf/template_noop,
+/area/template_noop)
+"rj" = (
+/obj/effect/floor_decal/industrial/warning,
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/machinery/atm{
+	pixel_x = -28
+	},
+/turf/simulated/floor/tiled/dark,
+/area/mine/explored/muriki/cave/deepdark)
+"ro" = (
+/obj/effect/floor_decal/industrial/warning,
+/obj/effect/floor_decal/spline/plain{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/mine/explored/muriki/cave/deepdark)
+"sq" = (
+/obj/machinery/vending/cargo_resale/sci,
+/obj/machinery/door/window/brigdoor/northleft{
+	req_one_access = list(47);
+	req_access = null
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"td" = (
+/obj/structure/closet/secure_closet{
+	req_one_access = list(7,47)
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"vk" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/obj/effect/floorbreak,
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"wT" = (
+/obj/structure/table/standard,
+/obj/effect/floor_decal/milspec/color/white/half,
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"wZ" = (
+/obj/structure/table/standard,
+/obj/machinery/holoposter{
+	dir = 1;
+	pixel_y = -32
+	},
+/obj/effect/floor_decal/milspec/color/white/half{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"xt" = (
+/obj/machinery/camera/network/research{
+	c_tag = "SCI - RnD West";
+	dir = 4
+	},
+/obj/machinery/atm{
+	pixel_x = -28
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/obj/effect/floor_decal/milspec/color/white/half{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"yk" = (
+/obj/structure/table/standard,
+/obj/item/tape_roll,
+/obj/item/tape_roll,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"yP" = (
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"zl" = (
+/obj/structure/disposalpipe/broken,
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"zt" = (
+/obj/structure/bed/chair/office/dark{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	icon_state = "pipe-c";
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"zW" = (
+/obj/structure/table/rack/shelf,
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/material/glass{
+	amount = 50;
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/machinery/vending/wallmed1/public{
+	pixel_y = 30
+	},
+/obj/item/stack/material/steel{
+	amount = 50
+	},
+/obj/item/stack/material/glass{
+	amount = 50;
+	pixel_x = 3;
+	pixel_y = 3
+	},
+/obj/effect/floor_decal/milspec/color/white/half{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"AD" = (
+/obj/machinery/camera/network/research{
+	c_tag = "SCI - RnD East";
+	dir = 8
+	},
+/obj/machinery/status_display{
+	layer = 4;
+	pixel_x = 32
+	},
+/obj/machinery/computer/rdconsole_tg{
+	dir = 8
+	},
+/obj/effect/floor_decal/milspec/color/white,
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"AO" = (
+/turf/simulated/wall/r_wall,
+/area/mine/explored/muriki/cave/deepdark)
+"Dg" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"Dj" = (
+/turf/simulated/mineral/alt/turfpack/muriki,
+/area/template_noop)
+"Dy" = (
+/obj/structure/table/standard,
+/obj/item/storage/box/cups,
+/obj/item/storage/box/cups,
+/obj/machinery/light,
+/obj/structure/sign/painting/public{
+	pixel_y = -32
+	},
+/obj/item/hand_labeler,
+/obj/effect/floor_decal/milspec/color/white/half,
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"Fc" = (
+/obj/structure/table/standard,
+/obj/item/stock_parts/console_screen,
+/obj/item/stock_parts/console_screen,
+/obj/item/stock_parts/console_screen,
+/obj/item/stock_parts/console_screen,
+/obj/item/stock_parts/matter_bin,
+/obj/item/stock_parts/matter_bin,
+/obj/item/stock_parts/manipulator,
+/obj/item/stock_parts/manipulator,
+/obj/item/stock_parts/manipulator,
+/obj/item/stock_parts/scanning_module,
+/obj/item/stock_parts/scanning_module,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"Fw" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/floor_decal/milspec/color/white/half{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/outline/cut_corners/yellow,
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"FB" = (
+/obj/structure/table/standard,
+/obj/item/sticky_pad/random{
+	pixel_x = -5;
+	pixel_y = 10
+	},
+/obj/item/cargo_scanner,
+/obj/item/clothing/glasses/omnihud/rnd,
+/obj/effect/floor_decal/milspec/color/white/half{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"FP" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/floor_decal/milspec/color/white/corner,
+/obj/effect/floorbreak,
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"Gr" = (
+/obj/machinery/ai_status_display{
+	pixel_x = 32
+	},
+/obj/machinery/computer/supply_request_computeralt/research{
+	dir = 8
+	},
+/obj/effect/floor_decal/milspec/color/white,
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"Hx" = (
+/obj/structure/table/standard,
+/obj/item/lightreplacer,
+/obj/effect/floor_decal/milspec/color/white/half{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"Iu" = (
+/obj/machinery/cell_charger,
+/obj/structure/table/standard,
+/obj/item/cataloguer/compact,
+/obj/item/cell/high{
+	charge = 100;
+	maxcharge = 15000
+	},
+/obj/item/cell/high{
+	charge = 100;
+	maxcharge = 15000
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 5;
+	pixel_y = 32
+	},
+/obj/effect/floor_decal/milspec/color/white/half{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"Km" = (
+/obj/structure/table/standard,
+/obj/item/storage/toolbox/mechanical{
+	pixel_x = 2;
+	pixel_y = 3
+	},
+/obj/item/storage/toolbox/mechanical{
+	pixel_x = -2;
+	pixel_y = -1
+	},
+/obj/item/clothing/glasses/welding,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"LO" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/turf/simulated/floor/plating,
+/area/mine/explored/muriki/cave/deepdark)
+"MY" = (
+/obj/machinery/hologram/holopad,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"Nn" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/plating,
+/area/mine/explored/muriki/cave/deepdark)
+"NS" = (
+/obj/machinery/disposal/mail_reciever{
+	name = "disposal mail destination(Science)"
+	},
+/obj/structure/disposalpipe/trunk,
+/obj/effect/floor_decal/milspec/color/white/half{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"Oh" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/floor_decal/milspec/color/white/corner{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"Om" = (
+/obj/effect/floor_decal/spline/plain,
+/obj/structure/bed/chair/office/dark{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"Qa" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"QI" = (
+/turf/simulated/wall,
+/area/mine/explored/muriki/cave/deepdark)
+"RL" = (
+/obj/structure/table/standard,
+/obj/item/experi_scanner,
+/obj/item/experi_scanner,
+/obj/item/experi_scanner,
+/obj/item/experi_scanner,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"Si" = (
+/obj/machinery/doppler_array,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/floor_decal/milspec/color/white/corner{
+	dir = 8
+	},
+/obj/effect/floor_decal/milspec/color/white/corner{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"Tr" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/turf/simulated/floor/plating,
+/area/mine/explored/muriki/cave/deepdark)
+"Ul" = (
+/obj/machinery/disposal/wall/cleaner{
+	dir = 4;
+	name = "Research Amnesty Dropoff";
+	pixel_x = -36
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 4
+	},
+/obj/effect/floor_decal/milspec/color/white/half{
+	dir = 8
+	},
+/obj/effect/floorbreak,
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"Um" = (
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"Uw" = (
+/obj/effect/floor_decal/steeldecal/steel_decals_central7{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"UN" = (
+/obj/structure/grille,
+/obj/machinery/door/firedoor/glass,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/mine/explored/muriki/cave/deepdark)
+"VE" = (
+/turf/simulated/mineral/alt/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Wd" = (
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
+/area/template_noop)
+"Wi" = (
+/obj/effect/landmark/redspaceexit,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/floor_decal/milspec/color/white/half{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/outline/cut_corners/yellow,
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"WA" = (
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/turf/simulated/floor/tiled/techfloor,
+/area/mine/explored/muriki/cave/deepdark)
+"YZ" = (
+/obj/machinery/smartfridge/sheets{
+	description_info = "Materials stored in here will not last in-between rounds";
+	name = "\improper temporary Smart Sheet Storage"
+	},
+/obj/effect/floor_decal/milspec/color/white,
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"Zo" = (
+/obj/item/geiger/wall/east,
+/obj/machinery/rnd/production/protolathe/department/science,
+/obj/effect/floor_decal/milspec/color/white,
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+
+(1,1,1) = {"
+rg
+rg
+rg
+rg
+rg
+rg
+rg
+rg
+rg
+rg
+rg
+rg
+rg
+rg
+rg
+rg
+"}
+(2,1,1) = {"
+rg
+rg
+rg
+Wd
+Wd
+pE
+pE
+yP
+VE
+VE
+Dj
+Dj
+Dj
+Dj
+rg
+rg
+"}
+(3,1,1) = {"
+rg
+rg
+Dj
+QI
+QI
+LO
+ml
+QI
+QI
+QI
+QI
+AO
+Dj
+Dj
+Dj
+rg
+"}
+(4,1,1) = {"
+rg
+Dj
+Dj
+QI
+NS
+gg
+fm
+nk
+xt
+Ul
+jZ
+AO
+VE
+Dj
+rg
+rg
+"}
+(5,1,1) = {"
+rg
+Dj
+Dj
+QI
+jm
+Dg
+Dg
+Dg
+Dg
+Dg
+Dy
+AO
+VE
+Dj
+Dj
+rg
+"}
+(6,1,1) = {"
+rg
+Dj
+VE
+QI
+zW
+eQ
+yk
+td
+FP
+Wi
+wZ
+AO
+VE
+Dj
+Dj
+rg
+"}
+(7,1,1) = {"
+rg
+rg
+VE
+Nn
+iE
+Dg
+Fc
+RL
+ip
+Si
+Tr
+AO
+AO
+AO
+Wd
+rg
+"}
+(8,1,1) = {"
+rg
+rg
+yP
+Nn
+YZ
+eQ
+ba
+dB
+Oh
+Fw
+FB
+UN
+rj
+WA
+pE
+rg
+"}
+(9,1,1) = {"
+rg
+rg
+pE
+Nn
+fQ
+Dg
+Km
+dU
+eQ
+MY
+Om
+sq
+jX
+Tr
+pE
+rg
+"}
+(10,1,1) = {"
+rg
+Wd
+pE
+ml
+zl
+lc
+Uw
+eQ
+eQ
+eQ
+nd
+es
+ro
+Tr
+yP
+rg
+"}
+(11,1,1) = {"
+rg
+kl
+kl
+QI
+Iu
+Um
+vk
+cR
+Qa
+zt
+wT
+UN
+qh
+il
+yP
+rg
+"}
+(12,1,1) = {"
+rg
+Wd
+Dj
+QI
+pi
+Hx
+ar
+Zo
+Gr
+AD
+kG
+AO
+AO
+AO
+Dj
+rg
+"}
+(13,1,1) = {"
+rg
+rg
+Dj
+QI
+QI
+AO
+AO
+AO
+AO
+AO
+AO
+AO
+AO
+Dj
+Dj
+rg
+"}
+(14,1,1) = {"
+rg
+rg
+Dj
+Dj
+Dj
+Dj
+VE
+VE
+pE
+yP
+yP
+Dj
+Dj
+Dj
+rg
+rg
+"}
+(15,1,1) = {"
+rg
+rg
+rg
+Dj
+Dj
+Dj
+Wd
+Wd
+Wd
+Wd
+rg
+rg
+rg
+rg
+rg
+rg
+"}
+(16,1,1) = {"
+rg
+rg
+rg
+rg
+rg
+rg
+rg
+rg
+rg
+rg
+rg
+rg
+rg
+rg
+rg
+rg
+"}

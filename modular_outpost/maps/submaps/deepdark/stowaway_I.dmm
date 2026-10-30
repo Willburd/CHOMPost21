@@ -1,0 +1,741 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"bh" = (
+/obj/effect/floor_decal/milspec/color/purple/half,
+/obj/structure/table/reinforced,
+/obj/item/clothing/mask/gas,
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"bm" = (
+/obj/effect/floor_decal/milspec/color/purple/half{
+	dir = 8
+	},
+/obj/structure/extinguisher_cabinet{
+	dir = 4;
+	pixel_x = -30
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"bL" = (
+/turf/simulated/mineral/alt/turfpack/muriki,
+/area/template_noop)
+"bO" = (
+/obj/effect/floor_decal/milspec/color/purple/half{
+	dir = 9
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 4
+	},
+/obj/machinery/disposal,
+/obj/item/geiger/wall/west,
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"bP" = (
+/obj/machinery/atmospherics/pipe/simple/visible,
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"bU" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals_central7{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"bV" = (
+/obj/effect/floor_decal/milspec/color/purple/half{
+	dir = 1
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"ck" = (
+/obj/structure/reagent_dispensers/watertank,
+/turf/simulated/floor/reinforced,
+/area/mine/explored/muriki/cave/deepdark)
+"dr" = (
+/obj/structure/table/standard,
+/turf/simulated/floor/reinforced,
+/area/mine/explored/muriki/cave/deepdark)
+"en" = (
+/obj/structure/stasis_cage,
+/turf/simulated/floor/reinforced,
+/area/mine/explored/muriki/cave/deepdark)
+"fy" = (
+/obj/effect/floor_decal/milspec/color/purple/half,
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"hh" = (
+/turf/simulated/wall,
+/area/template_noop)
+"hD" = (
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"hH" = (
+/obj/structure/reagent_dispensers/fueltank,
+/turf/simulated/floor/reinforced,
+/area/mine/explored/muriki/cave/deepdark)
+"hW" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/red{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"ib" = (
+/turf/simulated/wall,
+/area/mine/explored/muriki/cave/deepdark)
+"iO" = (
+/obj/item/stack/cable_coil,
+/obj/item/multitool,
+/obj/machinery/cell_charger,
+/obj/item/cell/high{
+	charge = 100;
+	maxcharge = 15000
+	},
+/obj/item/cell/high{
+	charge = 100;
+	maxcharge = 15000
+	},
+/obj/structure/table/standard,
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/reinforced,
+/area/mine/explored/muriki/cave/deepdark)
+"lX" = (
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"mv" = (
+/obj/structure/bed/chair/office/light,
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"mA" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/mine/explored/muriki/cave/deepdark)
+"mJ" = (
+/obj/effect/floor_decal/milspec/color/purple/half{
+	dir = 1
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/obj/structure/table/reinforced,
+/obj/item/tool/crowbar/brass,
+/obj/item/tool/wrench,
+/obj/item/clothing/glasses/science,
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"nS" = (
+/obj/machinery/door/firedoor/glass,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/door/airlock/glass_research{
+	name = "Auxillary Lab";
+	req_one_access = list(30,47,52)
+	},
+/obj/item/taperoll/engineering/applied,
+/turf/simulated/floor/tiled/techfloor,
+/area/mine/explored/muriki/cave/deepdark)
+"os" = (
+/obj/structure/disposalpipe/broken{
+	dir = 4
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"oG" = (
+/obj/effect/floor_decal/milspec/color/purple/half{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"qo" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/red{
+	dir = 6
+	},
+/obj/effect/landmark/redspaceexit,
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"sH" = (
+/obj/item/assembly/igniter,
+/obj/structure/table/standard,
+/turf/simulated/floor/reinforced,
+/area/mine/explored/muriki/cave/deepdark)
+"vD" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 10
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"vF" = (
+/obj/machinery/door/window/southleft{
+	dir = 4;
+	name = "Test Chamber";
+	req_one_access = list(30,47,52)
+	},
+/obj/machinery/door/window/southright{
+	dir = 8;
+	name = "Test Chamber";
+	req_one_access = list(30,47,52)
+	},
+/obj/machinery/atmospherics/pipe/simple/visible{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/steel_ridged,
+/area/mine/explored/muriki/cave/deepdark)
+"wS" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/turf/simulated/floor/reinforced,
+/area/mine/explored/muriki/cave/deepdark)
+"xJ" = (
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
+/area/template_noop)
+"xW" = (
+/obj/machinery/atmospherics/pipe/simple/visible{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/red,
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"zI" = (
+/obj/effect/floor_decal/milspec/color/purple/half{
+	dir = 1
+	},
+/obj/machinery/atmospherics/portables_connector,
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"Ak" = (
+/turf/simulated/wall/r_wall,
+/area/mine/explored/muriki/cave/deepdark)
+"As" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/red{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/mine/explored/muriki/cave/deepdark)
+"Db" = (
+/obj/effect/floor_decal/milspec/color/purple/half{
+	dir = 10
+	},
+/obj/structure/closet/secure_closet{
+	req_one_access = list(7,47)
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"DG" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/red{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/mine/explored/muriki/cave/deepdark)
+"DS" = (
+/turf/simulated/floor/reinforced,
+/area/mine/explored/muriki/cave/deepdark)
+"Ey" = (
+/obj/effect/floor_decal/milspec/color/purple/half{
+	dir = 1
+	},
+/obj/machinery/vending/wallmed1/public{
+	pixel_y = 30
+	},
+/obj/structure/table/reinforced,
+/obj/item/toy/plushie/expie{
+	pixel_y = 5
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"Fk" = (
+/obj/machinery/atmospherics/pipe/simple/visible{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"Gs" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/mine/explored/muriki/cave/deepdark)
+"Ha" = (
+/obj/machinery/shieldwallgen{
+	anchored = 1;
+	req_access = list(47)
+	},
+/obj/effect/floor_decal/milspec/color/purple,
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"In" = (
+/obj/structure/closet/crate,
+/turf/simulated/floor/reinforced,
+/area/mine/explored/muriki/cave/deepdark)
+"Jh" = (
+/obj/machinery/atmospherics/binary/pump{
+	dir = 8;
+	name = "Research Lab Vent"
+	},
+/obj/effect/floor_decal/industrial/warning/cee{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/mine/explored/muriki/cave/deepdark)
+"Mz" = (
+/obj/effect/floor_decal/milspec/color/purple/half{
+	dir = 8
+	},
+/obj/structure/closet/bombcloset,
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/item/radio/intercom{
+	dir = 8;
+	name = "Station Intercom (General)";
+	pixel_x = -21
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"NH" = (
+/obj/machinery/portable_atmospherics/canister,
+/turf/simulated/floor/reinforced,
+/area/mine/explored/muriki/cave/deepdark)
+"Oy" = (
+/obj/machinery/atmospherics/pipe/simple/visible{
+	dir = 4
+	},
+/turf/simulated/floor/reinforced,
+/area/mine/explored/muriki/cave/deepdark)
+"Pa" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/universal{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/warning,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/mine/explored/muriki/cave/deepdark)
+"PU" = (
+/obj/machinery/door/window/southleft{
+	dir = 8;
+	name = "Test Chamber";
+	req_one_access = list(30,47,52)
+	},
+/obj/machinery/door/window/southright{
+	dir = 4;
+	name = "Test Chamber";
+	req_one_access = list(30,47,52)
+	},
+/turf/simulated/floor/tiled/steel_ridged,
+/area/mine/explored/muriki/cave/deepdark)
+"Qv" = (
+/obj/effect/floor_decal/milspec/color/purple/half,
+/obj/machinery/light,
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"QF" = (
+/turf/template_noop,
+/area/template_noop)
+"Ri" = (
+/turf/simulated/mineral/alt/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Tx" = (
+/obj/machinery/atmospherics/unary/outlet_injector{
+	dir = 8;
+	frequency = 1441;
+	id = "n2_in";
+	use_power = 1
+	},
+/turf/simulated/floor/reinforced,
+/area/mine/explored/muriki/cave/deepdark)
+"TR" = (
+/obj/effect/floor_decal/milspec/color/purple/half,
+/obj/structure/table/reinforced,
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 7;
+	pixel_y = -32;
+	dir = 1
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"UH" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/red{
+	dir = 5
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"UM" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
+	},
+/obj/effect/floor_decal/industrial/warning/cee{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/mine/explored/muriki/cave/deepdark)
+"Vm" = (
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"VX" = (
+/obj/machinery/atmospherics/binary/pump,
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"Xx" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/structure/closet/crate,
+/turf/simulated/floor/reinforced,
+/area/mine/explored/muriki/cave/deepdark)
+"Yb" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/plating,
+/area/mine/explored/muriki/cave/deepdark)
+"Yw" = (
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+"ZS" = (
+/obj/effect/floor_decal/milspec/color/purple/half{
+	dir = 8
+	},
+/obj/structure/closet/firecloset/full,
+/turf/simulated/floor/tiled/milspec,
+/area/mine/explored/muriki/cave/deepdark)
+
+(1,1,1) = {"
+QF
+QF
+QF
+QF
+QF
+QF
+QF
+QF
+QF
+QF
+QF
+QF
+QF
+QF
+QF
+QF
+"}
+(2,1,1) = {"
+QF
+QF
+QF
+QF
+xJ
+Vm
+hD
+os
+hD
+hD
+xJ
+hh
+bL
+bL
+QF
+QF
+"}
+(3,1,1) = {"
+QF
+QF
+QF
+ib
+ib
+ib
+Yb
+nS
+Yb
+ib
+ib
+ib
+ib
+bL
+bL
+QF
+"}
+(4,1,1) = {"
+QF
+QF
+bL
+ib
+bO
+bm
+oG
+bU
+oG
+ZS
+Mz
+Db
+ib
+bL
+bL
+QF
+"}
+(5,1,1) = {"
+QF
+bL
+Ri
+ib
+mJ
+lX
+lX
+vD
+UM
+Yw
+Yw
+fy
+ib
+Ri
+QF
+QF
+"}
+(6,1,1) = {"
+QF
+bL
+Ri
+ib
+Ey
+Yw
+Yw
+Yw
+Pa
+Yw
+Yw
+bh
+ib
+Ri
+QF
+QF
+"}
+(7,1,1) = {"
+QF
+bL
+Ri
+Ak
+zI
+VX
+bP
+Fk
+Jh
+Yw
+mv
+TR
+ib
+Ri
+QF
+QF
+"}
+(8,1,1) = {"
+QF
+bL
+Ri
+Ak
+bV
+Yw
+qo
+xW
+hW
+UH
+Yw
+Qv
+ib
+Ri
+bL
+QF
+"}
+(9,1,1) = {"
+QF
+bL
+Ri
+Ak
+Ha
+Gs
+DG
+vF
+PU
+As
+mA
+Ha
+ib
+Ri
+bL
+QF
+"}
+(10,1,1) = {"
+QF
+bL
+Ri
+Ak
+Ak
+Ak
+wS
+Oy
+DS
+wS
+Ak
+Ak
+Ak
+bL
+QF
+QF
+"}
+(11,1,1) = {"
+QF
+QF
+Ri
+Ak
+dr
+Xx
+DS
+Oy
+DS
+DS
+iO
+sH
+Ak
+bL
+QF
+QF
+"}
+(12,1,1) = {"
+QF
+QF
+Ri
+Ak
+DS
+DS
+DS
+Tx
+DS
+DS
+DS
+DS
+Ak
+QF
+QF
+QF
+"}
+(13,1,1) = {"
+QF
+QF
+bL
+Ak
+NH
+NH
+In
+DS
+hH
+ck
+DS
+en
+Ak
+QF
+QF
+QF
+"}
+(14,1,1) = {"
+QF
+QF
+QF
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+Ak
+QF
+QF
+QF
+"}
+(15,1,1) = {"
+QF
+QF
+QF
+QF
+QF
+bL
+Ri
+Ri
+Ri
+Ri
+bL
+QF
+QF
+QF
+QF
+QF
+"}
+(16,1,1) = {"
+QF
+QF
+QF
+QF
+QF
+QF
+QF
+QF
+QF
+QF
+QF
+QF
+QF
+QF
+QF
+QF
+"}
