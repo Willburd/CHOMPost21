@@ -79155,6 +79155,9 @@
 	pixel_x = -8;
 	pixel_y = 30
 	},
+/obj/machinery/camera/network/engineering{
+	c_tag = "ENG - Mail Room"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/mail)
 "nAX" = (
