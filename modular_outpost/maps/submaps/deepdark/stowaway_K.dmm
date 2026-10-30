@@ -403,10 +403,6 @@
 /obj/structure/catwalk,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/explored/muriki/cave/deepdark)
-"tM" = (
-/obj/machinery/hologram/holopad,
-/turf/simulated/floor/tiled/freezer,
-/area/mine/explored/muriki/cave/deepdark)
 "uI" = (
 /obj/structure/table/glass,
 /obj/item/clothing/shoes/sandal,
@@ -715,9 +711,6 @@
 "NG" = (
 /obj/machinery/ai_status_display{
 	pixel_y = 32
-	},
-/obj/item/juke_remote{
-	autolinkareajuke_onspawn = /area/djstation
 	},
 /obj/machinery/vending/wallmed1/public{
 	dir = 4;
@@ -1290,7 +1283,7 @@ aa
 ab
 zR
 Ql
-tM
+je
 je
 uU
 je
@@ -1642,7 +1635,7 @@ Nh
 ap
 kL
 FD
-tM
+je
 je
 je
 je
