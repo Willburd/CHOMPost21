@@ -80,7 +80,7 @@
 		return FALSE
 
 	var/species_key = P.read_preference(/datum/preference/choiced/species);
-	if(species_key == SPECIES_DIONA || species_key == SPECIES_SHADEKIN || species_key == SPECIES_PROMETHEAN || species_key == SPECIES_PROTEAN) // species that don't leave bodies
+	if(species_key == SPECIES_DIONA || species_key == SPECIES_PROMETHEAN || species_key == SPECIES_PROTEAN) // species that don't leave bodies
 		return FALSE
 	var/list/organ_data = P.read_preference(/datum/preference/organ_data)
 	if(!organ_data || organ_data[BP_TORSO] == "cyborg") // no FBP, too easy to "repair"

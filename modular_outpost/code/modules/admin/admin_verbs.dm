@@ -77,7 +77,7 @@ ADMIN_VERB_AND_CONTEXT_MENU(creepyradiomessage, R_EVENT, "Creepy Radio Message",
 	var/speak_verb = tgui_input_text(user, "The verb used to describe what is being says, ex: says, states, whispers, roars, screams.", "Say Verb","Says", MAX_NAME_LEN)
 	if(!speak_verb)
 		return
-	var/message = tgui_input_text(user, "The contents of the message. Can include language keys.", "Say Message","", MAX_NAME_LEN, encode = FALSE)
+	var/message = tgui_input_text(user, "The contents of the message. Can include language keys.", "Say Message","", MAX_MESSAGE_LEN, encode = FALSE)
 	if(!message)
 		return
 	var/list/message_pieces = current.parse_languages(message)

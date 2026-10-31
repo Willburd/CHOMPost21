@@ -1,3 +1,9 @@
+// Gazer dream
+/datum/component/out_of_body_experience/no_bad_body/gazer_dream
+	landmark_id = "halluspawn"
+	min_time = 55 SECONDS
+	max_time = 2 MINUTES
+
 /mob/living/simple_mob/horror/longdemon
 	name = "\improper gazer"
 	desc = "An abnormally long taur-like weasel beast with a madly twisted toothy smile, sixteen irregularly spaced limbs, and bulging snake like eyes that seem to pierce into your mind as they glow."
@@ -33,7 +39,7 @@
 
 	melee_damage_lower = 24
 	melee_damage_upper = 32
-	armor = list(melee = 10, bullet = 10, laser = 0, energy = 0, bomb = 40, bio = 100, rad = -20)
+	armor = list(melee = 20, bullet = 30, laser = 10, energy = 10, bomb = 40, bio = 100, rad = -20)
 	poison_resist = 1.0
 	shock_resist = -0.2
 	threshold = 0.2
@@ -94,7 +100,7 @@
 		return
 	var/mob/living/carbon/human/attack_target = choices[1]
 	if(choices.len > 1)
-		tgui_input_list(src, "Who do you wish to dominate?", "Target Choice", choices)
+		attack_target = tgui_input_list(src, "Who do you wish to dominate?", "Target Choice", choices)
 
 	if(!attack_target || QDELETED(src))
 		return
@@ -153,7 +159,10 @@
 		making_someone_dream = FALSE
 		return
 
-	var/mob/target = input ("Who do you want to project your mind to?") as mob in creatures
+	var/mob/living/carbon/target = creatures[1]
+	if(creatures.len > 1)
+		target = tgui_input_list(src, "Who do you want to project your mind to?", "Target Choice", creatures)
+
 	if(!target)
 		making_someone_dream = FALSE
 		return
@@ -169,6 +178,6 @@
 		return
 
 	// Zoop
-	var/datum/component/out_of_body_experience/comp = target.AddComponent(/datum/component/out_of_body_experience/no_bad_body/shadow_realm)
+	var/datum/component/out_of_body_experience/comp = target.AddComponent(/datum/component/out_of_body_experience/no_bad_body/gazer_dream)
 	comp.force_move_badbody(spawn_pos)
 	VARSET_IN(src, making_someone_dream, FALSE, 20 SECONDS)
