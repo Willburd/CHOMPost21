@@ -306,11 +306,13 @@
 	left_leg?.fracture()
 	var/obj/item/organ/external/right_leg = body.get_organ(BP_R_LEG)
 	right_leg?.fracture()
+	/* Requested removal
 	// Brainrot
 	var/obj/item/organ/internal/brain/B = body.internal_organs_by_name[O_BRAIN]
 	if(!isnull(B))
 		B.removed(null)
 		qdel(B)
+	*/
 	// Damage organs
 	for(var/org in body.organs_by_name)
 		var/obj/item/organ/internal/O = body.internal_organs_by_name[org]
