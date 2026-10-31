@@ -28,7 +28,7 @@
 // AI pet subtype
 /mob/living/simple_mob/vore/aggressive/corrupthound/swoopie/prim
 	name = "PR1M-N-PR0P3R"
-	faction = "outpost21"
+	faction = FACTION_STATION
 	// Desc todo for pet
 	allow_mind_transfer = FALSE
 

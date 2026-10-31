@@ -206,9 +206,13 @@
 /turf/unsimulated/wall/r_wall,
 /area/centcom)
 "aaL" = (
-/turf/unsimulated/wall/fakeglass{
-	dir = 8
+/obj/structure/grille{
+	name = "Reinforced Grille";
+	desc = "A flimsy lattice of metal rods, with screws to secure it to the floor. This grille seems slightly more sturdy than others probably reinforced to withstand the wildlife.";
+	health = 25
 	},
+/obj/structure/window/basic/full,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/centcom/medical)
 "aaM" = (
 /turf/unsimulated/wall/r_wall,
@@ -3278,10 +3282,14 @@
 /turf/simulated/floor/carpet/purple,
 /area/centcom/living)
 "aht" = (
-/obj/structure/sign/nosmoking_1,
-/turf/unsimulated/wall/fakeglass{
-	dir = 4
+/obj/structure/grille{
+	name = "Reinforced Grille";
+	desc = "A flimsy lattice of metal rods, with screws to secure it to the floor. This grille seems slightly more sturdy than others probably reinforced to withstand the wildlife.";
+	health = 25
 	},
+/obj/structure/window/basic/full,
+/obj/structure/sign/nosmoking_1,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/centcom/medical)
 "ahu" = (
 /obj/structure/sign/greencross,
@@ -7203,6 +7211,36 @@
 	icon_state = "milspec"
 	},
 /area/centcom/main_hall)
+"aqd" = (
+/turf/unsimulated/wall/fakeglass2,
+/area/centcom/main_hall)
+"aqe" = (
+/obj/structure/grille{
+	name = "Reinforced Grille";
+	desc = "A flimsy lattice of metal rods, with screws to secure it to the floor. This grille seems slightly more sturdy than others probably reinforced to withstand the wildlife.";
+	health = 25
+	},
+/obj/structure/window/basic/full,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/centcom/main_hall)
+"aqf" = (
+/obj/structure/grille{
+	name = "Reinforced Grille";
+	desc = "A flimsy lattice of metal rods, with screws to secure it to the floor. This grille seems slightly more sturdy than others probably reinforced to withstand the wildlife.";
+	health = 25
+	},
+/obj/structure/window/basic/full,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/centcom/control)
+"aqg" = (
+/obj/structure/grille{
+	name = "Reinforced Grille";
+	desc = "A flimsy lattice of metal rods, with screws to secure it to the floor. This grille seems slightly more sturdy than others probably reinforced to withstand the wildlife.";
+	health = 25
+	},
+/obj/structure/window/basic/full,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/centcom/security)
 "aqp" = (
 /obj/machinery/button/remote/blast_door{
 	name = "Bridge Blastdoors";
@@ -15540,12 +15578,6 @@
 "eSC" = (
 /turf/simulated/floor/carpet/geo,
 /area/centcom/living)
-"eSE" = (
-/turf/unsimulated/wall/fakeglass{
-	icon_state = "fakewindows2";
-	dir = 1
-	},
-/area/centcom/medical)
 "eSV" = (
 /obj/structure/table/woodentable,
 /obj/item/flashlight/lamp/green,
@@ -45264,9 +45296,13 @@
 /turf/simulated/floor/tiled,
 /area/specialty/redspace)
 "wnS" = (
-/turf/unsimulated/wall/fakeglass2{
-	dir = 4
+/obj/structure/grille{
+	name = "Reinforced Grille";
+	desc = "A flimsy lattice of metal rods, with screws to secure it to the floor. This grille seems slightly more sturdy than others probably reinforced to withstand the wildlife.";
+	health = 25
 	},
+/obj/structure/window/basic/full,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/centcom/restaurant)
 "wof" = (
 /obj/structure/table/rack,
@@ -63133,7 +63169,7 @@ aBJ
 hvg
 fsi
 fkA
-xEr
+aqf
 xmP
 rRh
 ccA
@@ -63295,7 +63331,7 @@ anN
 mDT
 nPb
 fkA
-vmO
+aqf
 xmP
 rRh
 ccA
@@ -67026,7 +67062,7 @@ bwr
 rRh
 yaJ
 ajg
-eSE
+aaL
 sCj
 fse
 oOX
@@ -67188,7 +67224,7 @@ bwr
 rRh
 yaJ
 eqO
-eSE
+aaL
 sCj
 vWP
 ahn
@@ -67505,9 +67541,9 @@ kSy
 sAJ
 akl
 tpV
-dZE
+aqg
 thW
-vVE
+aqe
 bwr
 rRh
 yaJ
@@ -67669,7 +67705,7 @@ akm
 tpV
 ajV
 ajJ
-ogh
+aqe
 aps
 apo
 apd
@@ -67829,9 +67865,9 @@ qwG
 sAJ
 wSx
 gQX
-dZE
+aqg
 ajK
-sBo
+aqe
 dPa
 ajs
 rJh
@@ -68160,7 +68196,7 @@ apt
 app
 sCq
 eqO
-vVE
+aqe
 aiX
 vVE
 wBs
@@ -68322,7 +68358,7 @@ apu
 app
 ajk
 apc
-ogh
+aqe
 aiY
 ogh
 wBs
@@ -68484,7 +68520,7 @@ yaJ
 aju
 ajl
 eqO
-ogh
+aqe
 aiY
 ogh
 wBs
@@ -68646,7 +68682,7 @@ apv
 eKr
 jdl
 eqO
-ogh
+aqe
 aiY
 sBo
 wBs
@@ -68808,7 +68844,7 @@ ajv
 ajv
 rJh
 apc
-sBo
+aqe
 aiX
 tjK
 uho
@@ -69790,11 +69826,11 @@ tjK
 tjK
 tjK
 tjK
-taE
-taE
-taE
-taE
-taE
+aiQ
+aqd
+aqd
+aqd
+aiP
 cYP
 wVP
 wVP
@@ -69957,7 +69993,7 @@ wBs
 wBs
 wBs
 wBs
-taE
+vVE
 cMi
 yaJ
 wFO
@@ -70119,7 +70155,7 @@ wBs
 wBs
 wBs
 wBs
-taE
+ogh
 cMi
 yaJ
 hRS
@@ -70281,7 +70317,7 @@ wBs
 wBs
 wBs
 wBs
-taE
+sBo
 cMi
 yaJ
 wFO
@@ -71089,7 +71125,7 @@ uho
 uho
 uho
 wBs
-taE
+vVE
 cMi
 fgm
 gTL
@@ -71097,7 +71133,7 @@ gTL
 gTL
 fgm
 hRS
-taE
+vVE
 wBs
 wBs
 uho
@@ -71251,7 +71287,7 @@ uho
 uho
 wBs
 wBs
-taE
+ogh
 cMi
 pmD
 giS
@@ -71259,7 +71295,7 @@ iCP
 giS
 vZe
 hRS
-taE
+ogh
 wBs
 wBs
 wBs
@@ -71413,7 +71449,7 @@ uho
 uho
 wBs
 wBs
-taE
+ogh
 cMi
 vvU
 giS
@@ -71421,7 +71457,7 @@ uks
 giS
 fgm
 hRS
-taE
+ogh
 wBs
 wBs
 wBs
@@ -71575,7 +71611,7 @@ uho
 uho
 wBs
 wBs
-taE
+ogh
 cMi
 pmD
 giS
@@ -71583,7 +71619,7 @@ qdO
 giS
 vZe
 hRS
-taE
+ogh
 wBs
 wBs
 wBs
@@ -71737,7 +71773,7 @@ uho
 uho
 uho
 wBs
-taE
+sBo
 cMi
 fgm
 bFa
@@ -71745,7 +71781,7 @@ qfm
 bFa
 fgm
 hRS
-taE
+sBo
 wBs
 wBs
 uho
@@ -72063,11 +72099,11 @@ uho
 wBs
 tjK
 tjK
-taE
-taE
-taE
-taE
-taE
+aiQ
+aqd
+aqd
+aqd
+aiP
 tjK
 tjK
 uho
