@@ -758,7 +758,7 @@
 /turf/unsimulated/floor/steel{
 	icon_state = "milspec"
 	},
-/area/centcom/security)
+/area/centcom/main_hall)
 "abT" = (
 /obj/effect/floor_decal/corner/grey{
 	dir = 9
@@ -795,7 +795,7 @@
 /obj/structure/fans/hardlight,
 /obj/machinery/door/airlock/glass_security,
 /turf/unsimulated/floor/reinforced,
-/area/centcom/security)
+/area/centcom/main_hall)
 "abY" = (
 /obj/machinery/computer/security/telescreen/entertainment{
 	pixel_y = -32
@@ -1183,6 +1183,10 @@
 "acI" = (
 /turf/simulated/wall/wood,
 /area/centcom/living)
+"acJ" = (
+/obj/effect/step_trigger/dephase_shadekin,
+/turf/unsimulated/wall/r_wall,
+/area/centcom/main_hall)
 "acK" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/vending/security_armor,
@@ -3959,10 +3963,10 @@
 	enabled = 0
 	},
 /turf/unsimulated/floor/reinforced,
-/area/centcom)
+/area/centcom/main_hall)
 "aiY" = (
 /turf/unsimulated/floor/reinforced,
-/area/centcom)
+/area/centcom/main_hall)
 "aiZ" = (
 /obj/effect/floor_decal/corner/black{
 	dir = 8
@@ -4263,7 +4267,7 @@
 	},
 /obj/structure/window/plastitanium,
 /turf/unsimulated/floor/reinforced,
-/area/centcom/security)
+/area/centcom/main_hall)
 "ajE" = (
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/steel_grid,
@@ -4645,7 +4649,7 @@
 /turf/unsimulated/floor/steel{
 	icon_state = "milspec"
 	},
-/area/centcom/security)
+/area/centcom/main_hall)
 "akx" = (
 /obj/effect/floor_decal/corner/white/full{
 	dir = 4
@@ -4701,7 +4705,7 @@
 /turf/unsimulated/floor/steel{
 	icon_state = "milspec"
 	},
-/area/centcom/security)
+/area/centcom/main_hall)
 "akE" = (
 /obj/effect/floor_decal/corner/white{
 	dir = 6
@@ -4802,7 +4806,7 @@
 /turf/unsimulated/floor/steel{
 	icon_state = "milspec"
 	},
-/area/centcom/security)
+/area/centcom/main_hall)
 "akN" = (
 /obj/effect/floor_decal/corner/red{
 	dir = 5
@@ -4816,7 +4820,7 @@
 /turf/unsimulated/floor/steel{
 	icon_state = "milspec"
 	},
-/area/centcom/security)
+/area/centcom/main_hall)
 "akO" = (
 /obj/effect/floor_decal/corner/white{
 	dir = 6
@@ -5083,6 +5087,14 @@
 	icon_state = "milspec"
 	},
 /area/centcom/control)
+"alp" = (
+/obj/effect/floor_decal/corner/red{
+	dir = 9
+	},
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/centcom/main_hall)
 "alq" = (
 /obj/structure/table/standard,
 /obj/item/rectape,
@@ -7094,6 +7106,14 @@
 /obj/effect/shuttle_landmark/premade/orbital_escape/pod_one/transit,
 /turf/space/transit/west,
 /area/space)
+"apV" = (
+/obj/effect/floor_decal/corner/red{
+	dir = 10
+	},
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/centcom/main_hall)
 "apW" = (
 /obj/effect/floor_decal/corner/black/full{
 	dir = 8
@@ -7178,6 +7198,11 @@
 	icon_state = "milspec"
 	},
 /area/centcom/specops)
+"aqc" = (
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/centcom/main_hall)
 "aqp" = (
 /obj/machinery/button/remote/blast_door{
 	name = "Bridge Blastdoors";
@@ -11370,7 +11395,7 @@
 	},
 /obj/effect/floor_decal/industrial/stand_clear/yellow,
 /turf/unsimulated/floor/reinforced,
-/area/centcom/security)
+/area/centcom/main_hall)
 "cJV" = (
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/tiled/dark,
@@ -12971,7 +12996,7 @@
 /turf/unsimulated/floor/steel{
 	icon_state = "milspec"
 	},
-/area/centcom/security)
+/area/centcom/main_hall)
 "dDF" = (
 /obj/structure/table/woodentable,
 /turf/simulated/floor/lino,
@@ -13553,7 +13578,7 @@
 	dir = 1
 	},
 /turf/unsimulated/floor/reinforced,
-/area/centcom/security)
+/area/centcom/main_hall)
 "dUW" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 4
@@ -20572,7 +20597,7 @@
 "hyx" = (
 /obj/structure/window/plastitanium,
 /turf/unsimulated/floor/reinforced,
-/area/centcom/security)
+/area/centcom/main_hall)
 "hzq" = (
 /obj/structure/table/standard,
 /obj/structure/sign/directions/ladder_down{
@@ -25187,7 +25212,7 @@
 /turf/unsimulated/floor/steel{
 	icon_state = "milspec"
 	},
-/area/centcom/security)
+/area/centcom/main_hall)
 "kaV" = (
 /obj/machinery/ai_status_display{
 	layer = 4;
@@ -30415,7 +30440,7 @@
 /turf/unsimulated/floor/steel{
 	icon_state = "milspec"
 	},
-/area/centcom/security)
+/area/centcom/main_hall)
 "nvD" = (
 /obj/machinery/door/airlock/glass_security{
 	name = "Security Hallway";
@@ -39152,7 +39177,7 @@
 /turf/unsimulated/floor/steel{
 	icon_state = "milspec"
 	},
-/area/centcom/security)
+/area/centcom/main_hall)
 "syY" = (
 /obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/flesh,
@@ -40175,12 +40200,6 @@
 /obj/item/tool/wrench/pipe,
 /turf/simulated/floor/flesh,
 /area/specialty/redspace)
-"thA" = (
-/obj/structure/sign/deck3{
-	name = "DECK III - Crew Habitation, Recreation, Legal, Security, Medical."
-	},
-/turf/unsimulated/wall/r_wall,
-/area/centcom)
 "thW" = (
 /obj/effect/floor_decal/industrial/arrows/blue{
 	dir = 8
@@ -41836,7 +41855,7 @@
 /turf/unsimulated/floor/steel{
 	icon_state = "milspec"
 	},
-/area/centcom/security)
+/area/centcom/main_hall)
 "uiO" = (
 /obj/structure/bed/chair/wood/wings{
 	dir = 8
@@ -44324,9 +44343,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/specialty/redspace)
-"vLN" = (
-/turf/unsimulated/floor/reinforced,
-/area/centcom/security)
 "vLU" = (
 /obj/machinery/door/window/westright{
 	name = "Range Access";
@@ -45041,7 +45057,7 @@
 	dir = 5
 	},
 /turf/unsimulated/floor/reinforced,
-/area/centcom/security)
+/area/centcom/main_hall)
 "wix" = (
 /obj/machinery/door/airlock/voidcraft/vertical{
 	name = "Vox Habitation"
@@ -48453,7 +48469,7 @@
 	},
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/dark,
-/area/centcom/security)
+/area/centcom/main_hall)
 "yaC" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 8
@@ -67983,8 +67999,8 @@ ajt
 jdl
 apc
 tjK
-aaK
-aaK
+tjK
+tjK
 aaK
 aaK
 aaM
@@ -68146,7 +68162,7 @@ sCq
 eqO
 vVE
 aiX
-ion
+vVE
 wBs
 uho
 aaM
@@ -68308,7 +68324,7 @@ ajk
 apc
 ogh
 aiY
-ahH
+ogh
 wBs
 uho
 aaM
@@ -68470,7 +68486,7 @@ ajl
 eqO
 ogh
 aiY
-ahH
+ogh
 wBs
 wBs
 aaM
@@ -68632,7 +68648,7 @@ jdl
 eqO
 ogh
 aiY
-qxV
+sBo
 wBs
 wBs
 aaM
@@ -68794,7 +68810,7 @@ rJh
 apc
 sBo
 aiX
-aaK
+tjK
 uho
 wBs
 aaM
@@ -68940,14 +68956,14 @@ kzR
 kzR
 kzR
 akR
-tOV
-tOV
-jfi
-bOi
-bOi
-bOi
-bOi
-bOi
+aqc
+aqc
+apV
+tjK
+tjK
+tjK
+tjK
+tjK
 ajN
 tjK
 ajw
@@ -69103,11 +69119,11 @@ kzR
 kzR
 hPE
 akM
-tOV
+aqc
 akD
-pnx
+alp
 syR
-bOi
+tjK
 ahz
 ajY
 vOD
@@ -69269,7 +69285,7 @@ uip
 uip
 uip
 nvB
-bOi
+tjK
 abR
 yaJ
 ajO
@@ -69427,9 +69443,9 @@ cFQ
 ulc
 cex
 cJR
-vLN
-vLN
-vLN
+aiY
+aiY
+aiY
 wip
 abX
 ffc
@@ -69589,9 +69605,9 @@ xzD
 hOH
 cex
 dUP
-vLN
-vLN
-vLN
+aiY
+aiY
+aiY
 wip
 abX
 akg
@@ -69751,9 +69767,9 @@ iLC
 lAP
 cex
 cJR
-vLN
-vLN
-vLN
+aiY
+aiY
+aiY
 wip
 abX
 ffc
@@ -69917,7 +69933,7 @@ dDx
 kaF
 akw
 kaF
-bOi
+tjK
 eIz
 ajd
 apA
@@ -70074,25 +70090,25 @@ cFQ
 cFQ
 hPE
 hPE
-hPE
-dDw
-dDw
-dDw
-dDw
-dDw
-dDw
-aaK
+tjK
+acJ
+acJ
+acJ
+acJ
+acJ
+acJ
+tjK
 hVx
 hVx
 hVx
 hVx
 hVx
 hVx
-aaK
-thA
-aaK
-dDw
-dDw
+tjK
+ioC
+tjK
+acJ
+acJ
 dDw
 dDw
 uho
