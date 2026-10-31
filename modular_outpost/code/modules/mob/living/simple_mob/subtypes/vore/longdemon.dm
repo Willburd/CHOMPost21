@@ -33,7 +33,7 @@
 
 	melee_damage_lower = 24
 	melee_damage_upper = 32
-	armor = list(melee = 10, bullet = 10, laser = 0, energy = 0, bomb = 40, bio = 100, rad = -20)
+	armor = list(melee = 20, bullet = 30, laser = 10, energy = 10, bomb = 40, bio = 100, rad = -20)
 	poison_resist = 1.0
 	shock_resist = -0.2
 	threshold = 0.2
