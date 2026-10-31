@@ -206,9 +206,13 @@
 /turf/unsimulated/wall/r_wall,
 /area/centcom)
 "aaL" = (
-/turf/unsimulated/wall/fakeglass{
-	dir = 8
+/obj/structure/grille{
+	name = "Reinforced Grille";
+	desc = "A flimsy lattice of metal rods, with screws to secure it to the floor. This grille seems slightly more sturdy than others probably reinforced to withstand the wildlife.";
+	health = 25
 	},
+/obj/structure/window/basic/full,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/centcom/medical)
 "aaM" = (
 /turf/unsimulated/wall/r_wall,
@@ -758,7 +762,7 @@
 /turf/unsimulated/floor/steel{
 	icon_state = "milspec"
 	},
-/area/centcom/security)
+/area/centcom/main_hall)
 "abT" = (
 /obj/effect/floor_decal/corner/grey{
 	dir = 9
@@ -795,7 +799,7 @@
 /obj/structure/fans/hardlight,
 /obj/machinery/door/airlock/glass_security,
 /turf/unsimulated/floor/reinforced,
-/area/centcom/security)
+/area/centcom/main_hall)
 "abY" = (
 /obj/machinery/computer/security/telescreen/entertainment{
 	pixel_y = -32
@@ -1183,6 +1187,10 @@
 "acI" = (
 /turf/simulated/wall/wood,
 /area/centcom/living)
+"acJ" = (
+/obj/effect/step_trigger/dephase_shadekin,
+/turf/unsimulated/wall/r_wall,
+/area/centcom/main_hall)
 "acK" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/vending/security_armor,
@@ -3274,10 +3282,14 @@
 /turf/simulated/floor/carpet/purple,
 /area/centcom/living)
 "aht" = (
-/obj/structure/sign/nosmoking_1,
-/turf/unsimulated/wall/fakeglass{
-	dir = 4
+/obj/structure/grille{
+	name = "Reinforced Grille";
+	desc = "A flimsy lattice of metal rods, with screws to secure it to the floor. This grille seems slightly more sturdy than others probably reinforced to withstand the wildlife.";
+	health = 25
 	},
+/obj/structure/window/basic/full,
+/obj/structure/sign/nosmoking_1,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/centcom/medical)
 "ahu" = (
 /obj/structure/sign/greencross,
@@ -3959,10 +3971,10 @@
 	enabled = 0
 	},
 /turf/unsimulated/floor/reinforced,
-/area/centcom)
+/area/centcom/main_hall)
 "aiY" = (
 /turf/unsimulated/floor/reinforced,
-/area/centcom)
+/area/centcom/main_hall)
 "aiZ" = (
 /obj/effect/floor_decal/corner/black{
 	dir = 8
@@ -4263,7 +4275,7 @@
 	},
 /obj/structure/window/plastitanium,
 /turf/unsimulated/floor/reinforced,
-/area/centcom/security)
+/area/centcom/main_hall)
 "ajE" = (
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/steel_grid,
@@ -4645,7 +4657,7 @@
 /turf/unsimulated/floor/steel{
 	icon_state = "milspec"
 	},
-/area/centcom/security)
+/area/centcom/main_hall)
 "akx" = (
 /obj/effect/floor_decal/corner/white/full{
 	dir = 4
@@ -4701,7 +4713,7 @@
 /turf/unsimulated/floor/steel{
 	icon_state = "milspec"
 	},
-/area/centcom/security)
+/area/centcom/main_hall)
 "akE" = (
 /obj/effect/floor_decal/corner/white{
 	dir = 6
@@ -4802,7 +4814,7 @@
 /turf/unsimulated/floor/steel{
 	icon_state = "milspec"
 	},
-/area/centcom/security)
+/area/centcom/main_hall)
 "akN" = (
 /obj/effect/floor_decal/corner/red{
 	dir = 5
@@ -4816,7 +4828,7 @@
 /turf/unsimulated/floor/steel{
 	icon_state = "milspec"
 	},
-/area/centcom/security)
+/area/centcom/main_hall)
 "akO" = (
 /obj/effect/floor_decal/corner/white{
 	dir = 6
@@ -5083,6 +5095,14 @@
 	icon_state = "milspec"
 	},
 /area/centcom/control)
+"alp" = (
+/obj/effect/floor_decal/corner/red{
+	dir = 9
+	},
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/centcom/main_hall)
 "alq" = (
 /obj/structure/table/standard,
 /obj/item/rectape,
@@ -7094,6 +7114,14 @@
 /obj/effect/shuttle_landmark/premade/orbital_escape/pod_one/transit,
 /turf/space/transit/west,
 /area/space)
+"apV" = (
+/obj/effect/floor_decal/corner/red{
+	dir = 10
+	},
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/centcom/main_hall)
 "apW" = (
 /obj/effect/floor_decal/corner/black/full{
 	dir = 8
@@ -7178,6 +7206,41 @@
 	icon_state = "milspec"
 	},
 /area/centcom/specops)
+"aqc" = (
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/centcom/main_hall)
+"aqd" = (
+/turf/unsimulated/wall/fakeglass2,
+/area/centcom/main_hall)
+"aqe" = (
+/obj/structure/grille{
+	name = "Reinforced Grille";
+	desc = "A flimsy lattice of metal rods, with screws to secure it to the floor. This grille seems slightly more sturdy than others probably reinforced to withstand the wildlife.";
+	health = 25
+	},
+/obj/structure/window/basic/full,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/centcom/main_hall)
+"aqf" = (
+/obj/structure/grille{
+	name = "Reinforced Grille";
+	desc = "A flimsy lattice of metal rods, with screws to secure it to the floor. This grille seems slightly more sturdy than others probably reinforced to withstand the wildlife.";
+	health = 25
+	},
+/obj/structure/window/basic/full,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/centcom/control)
+"aqg" = (
+/obj/structure/grille{
+	name = "Reinforced Grille";
+	desc = "A flimsy lattice of metal rods, with screws to secure it to the floor. This grille seems slightly more sturdy than others probably reinforced to withstand the wildlife.";
+	health = 25
+	},
+/obj/structure/window/basic/full,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/centcom/security)
 "aqp" = (
 /obj/machinery/button/remote/blast_door{
 	name = "Bridge Blastdoors";
@@ -11370,7 +11433,7 @@
 	},
 /obj/effect/floor_decal/industrial/stand_clear/yellow,
 /turf/unsimulated/floor/reinforced,
-/area/centcom/security)
+/area/centcom/main_hall)
 "cJV" = (
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/tiled/dark,
@@ -12971,7 +13034,7 @@
 /turf/unsimulated/floor/steel{
 	icon_state = "milspec"
 	},
-/area/centcom/security)
+/area/centcom/main_hall)
 "dDF" = (
 /obj/structure/table/woodentable,
 /turf/simulated/floor/lino,
@@ -13553,7 +13616,7 @@
 	dir = 1
 	},
 /turf/unsimulated/floor/reinforced,
-/area/centcom/security)
+/area/centcom/main_hall)
 "dUW" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 4
@@ -15515,12 +15578,6 @@
 "eSC" = (
 /turf/simulated/floor/carpet/geo,
 /area/centcom/living)
-"eSE" = (
-/turf/unsimulated/wall/fakeglass{
-	icon_state = "fakewindows2";
-	dir = 1
-	},
-/area/centcom/medical)
 "eSV" = (
 /obj/structure/table/woodentable,
 /obj/item/flashlight/lamp/green,
@@ -20572,7 +20629,7 @@
 "hyx" = (
 /obj/structure/window/plastitanium,
 /turf/unsimulated/floor/reinforced,
-/area/centcom/security)
+/area/centcom/main_hall)
 "hzq" = (
 /obj/structure/table/standard,
 /obj/structure/sign/directions/ladder_down{
@@ -25187,7 +25244,7 @@
 /turf/unsimulated/floor/steel{
 	icon_state = "milspec"
 	},
-/area/centcom/security)
+/area/centcom/main_hall)
 "kaV" = (
 /obj/machinery/ai_status_display{
 	layer = 4;
@@ -30415,7 +30472,7 @@
 /turf/unsimulated/floor/steel{
 	icon_state = "milspec"
 	},
-/area/centcom/security)
+/area/centcom/main_hall)
 "nvD" = (
 /obj/machinery/door/airlock/glass_security{
 	name = "Security Hallway";
@@ -39152,7 +39209,7 @@
 /turf/unsimulated/floor/steel{
 	icon_state = "milspec"
 	},
-/area/centcom/security)
+/area/centcom/main_hall)
 "syY" = (
 /obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/flesh,
@@ -40175,12 +40232,6 @@
 /obj/item/tool/wrench/pipe,
 /turf/simulated/floor/flesh,
 /area/specialty/redspace)
-"thA" = (
-/obj/structure/sign/deck3{
-	name = "DECK III - Crew Habitation, Recreation, Legal, Security, Medical."
-	},
-/turf/unsimulated/wall/r_wall,
-/area/centcom)
 "thW" = (
 /obj/effect/floor_decal/industrial/arrows/blue{
 	dir = 8
@@ -41836,7 +41887,7 @@
 /turf/unsimulated/floor/steel{
 	icon_state = "milspec"
 	},
-/area/centcom/security)
+/area/centcom/main_hall)
 "uiO" = (
 /obj/structure/bed/chair/wood/wings{
 	dir = 8
@@ -44324,9 +44375,6 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/specialty/redspace)
-"vLN" = (
-/turf/unsimulated/floor/reinforced,
-/area/centcom/security)
 "vLU" = (
 /obj/machinery/door/window/westright{
 	name = "Range Access";
@@ -45041,7 +45089,7 @@
 	dir = 5
 	},
 /turf/unsimulated/floor/reinforced,
-/area/centcom/security)
+/area/centcom/main_hall)
 "wix" = (
 /obj/machinery/door/airlock/voidcraft/vertical{
 	name = "Vox Habitation"
@@ -45248,9 +45296,13 @@
 /turf/simulated/floor/tiled,
 /area/specialty/redspace)
 "wnS" = (
-/turf/unsimulated/wall/fakeglass2{
-	dir = 4
+/obj/structure/grille{
+	name = "Reinforced Grille";
+	desc = "A flimsy lattice of metal rods, with screws to secure it to the floor. This grille seems slightly more sturdy than others probably reinforced to withstand the wildlife.";
+	health = 25
 	},
+/obj/structure/window/basic/full,
+/turf/simulated/floor/plating/turfpack/muriki,
 /area/centcom/restaurant)
 "wof" = (
 /obj/structure/table/rack,
@@ -48453,7 +48505,7 @@
 	},
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/dark,
-/area/centcom/security)
+/area/centcom/main_hall)
 "yaC" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 8
@@ -63117,7 +63169,7 @@ aBJ
 hvg
 fsi
 fkA
-xEr
+aqf
 xmP
 rRh
 ccA
@@ -63279,7 +63331,7 @@ anN
 mDT
 nPb
 fkA
-vmO
+aqf
 xmP
 rRh
 ccA
@@ -67010,7 +67062,7 @@ bwr
 rRh
 yaJ
 ajg
-eSE
+aaL
 sCj
 fse
 oOX
@@ -67172,7 +67224,7 @@ bwr
 rRh
 yaJ
 eqO
-eSE
+aaL
 sCj
 vWP
 ahn
@@ -67489,9 +67541,9 @@ kSy
 sAJ
 akl
 tpV
-dZE
+aqg
 thW
-vVE
+aqe
 bwr
 rRh
 yaJ
@@ -67653,7 +67705,7 @@ akm
 tpV
 ajV
 ajJ
-ogh
+aqe
 aps
 apo
 apd
@@ -67813,9 +67865,9 @@ qwG
 sAJ
 wSx
 gQX
-dZE
+aqg
 ajK
-sBo
+aqe
 dPa
 ajs
 rJh
@@ -67983,8 +68035,8 @@ ajt
 jdl
 apc
 tjK
-aaK
-aaK
+tjK
+tjK
 aaK
 aaK
 aaM
@@ -68144,9 +68196,9 @@ apt
 app
 sCq
 eqO
-vVE
+aqe
 aiX
-ion
+vVE
 wBs
 uho
 aaM
@@ -68306,9 +68358,9 @@ apu
 app
 ajk
 apc
-ogh
+aqe
 aiY
-ahH
+ogh
 wBs
 uho
 aaM
@@ -68468,9 +68520,9 @@ yaJ
 aju
 ajl
 eqO
-ogh
+aqe
 aiY
-ahH
+ogh
 wBs
 wBs
 aaM
@@ -68630,9 +68682,9 @@ apv
 eKr
 jdl
 eqO
-ogh
+aqe
 aiY
-qxV
+sBo
 wBs
 wBs
 aaM
@@ -68792,9 +68844,9 @@ ajv
 ajv
 rJh
 apc
-sBo
+aqe
 aiX
-aaK
+tjK
 uho
 wBs
 aaM
@@ -68940,14 +68992,14 @@ kzR
 kzR
 kzR
 akR
-tOV
-tOV
-jfi
-bOi
-bOi
-bOi
-bOi
-bOi
+aqc
+aqc
+apV
+tjK
+tjK
+tjK
+tjK
+tjK
 ajN
 tjK
 ajw
@@ -69103,11 +69155,11 @@ kzR
 kzR
 hPE
 akM
-tOV
+aqc
 akD
-pnx
+alp
 syR
-bOi
+tjK
 ahz
 ajY
 vOD
@@ -69269,7 +69321,7 @@ uip
 uip
 uip
 nvB
-bOi
+tjK
 abR
 yaJ
 ajO
@@ -69427,9 +69479,9 @@ cFQ
 ulc
 cex
 cJR
-vLN
-vLN
-vLN
+aiY
+aiY
+aiY
 wip
 abX
 ffc
@@ -69589,9 +69641,9 @@ xzD
 hOH
 cex
 dUP
-vLN
-vLN
-vLN
+aiY
+aiY
+aiY
 wip
 abX
 akg
@@ -69751,9 +69803,9 @@ iLC
 lAP
 cex
 cJR
-vLN
-vLN
-vLN
+aiY
+aiY
+aiY
 wip
 abX
 ffc
@@ -69774,11 +69826,11 @@ tjK
 tjK
 tjK
 tjK
-taE
-taE
-taE
-taE
-taE
+aiQ
+aqd
+aqd
+aqd
+aiP
 cYP
 wVP
 wVP
@@ -69917,7 +69969,7 @@ dDx
 kaF
 akw
 kaF
-bOi
+tjK
 eIz
 ajd
 apA
@@ -69941,7 +69993,7 @@ wBs
 wBs
 wBs
 wBs
-taE
+vVE
 cMi
 yaJ
 wFO
@@ -70074,25 +70126,25 @@ cFQ
 cFQ
 hPE
 hPE
-hPE
-dDw
-dDw
-dDw
-dDw
-dDw
-dDw
-aaK
+tjK
+acJ
+acJ
+acJ
+acJ
+acJ
+acJ
+tjK
 hVx
 hVx
 hVx
 hVx
 hVx
 hVx
-aaK
-thA
-aaK
-dDw
-dDw
+tjK
+ioC
+tjK
+acJ
+acJ
 dDw
 dDw
 uho
@@ -70103,7 +70155,7 @@ wBs
 wBs
 wBs
 wBs
-taE
+ogh
 cMi
 yaJ
 hRS
@@ -70265,7 +70317,7 @@ wBs
 wBs
 wBs
 wBs
-taE
+sBo
 cMi
 yaJ
 wFO
@@ -71073,7 +71125,7 @@ uho
 uho
 uho
 wBs
-taE
+vVE
 cMi
 fgm
 gTL
@@ -71081,7 +71133,7 @@ gTL
 gTL
 fgm
 hRS
-taE
+vVE
 wBs
 wBs
 uho
@@ -71235,7 +71287,7 @@ uho
 uho
 wBs
 wBs
-taE
+ogh
 cMi
 pmD
 giS
@@ -71243,7 +71295,7 @@ iCP
 giS
 vZe
 hRS
-taE
+ogh
 wBs
 wBs
 wBs
@@ -71397,7 +71449,7 @@ uho
 uho
 wBs
 wBs
-taE
+ogh
 cMi
 vvU
 giS
@@ -71405,7 +71457,7 @@ uks
 giS
 fgm
 hRS
-taE
+ogh
 wBs
 wBs
 wBs
@@ -71559,7 +71611,7 @@ uho
 uho
 wBs
 wBs
-taE
+ogh
 cMi
 pmD
 giS
@@ -71567,7 +71619,7 @@ qdO
 giS
 vZe
 hRS
-taE
+ogh
 wBs
 wBs
 wBs
@@ -71721,7 +71773,7 @@ uho
 uho
 uho
 wBs
-taE
+sBo
 cMi
 fgm
 bFa
@@ -71729,7 +71781,7 @@ qfm
 bFa
 fgm
 hRS
-taE
+sBo
 wBs
 wBs
 uho
@@ -72047,11 +72099,11 @@ uho
 wBs
 tjK
 tjK
-taE
-taE
-taE
-taE
-taE
+aiQ
+aqd
+aqd
+aqd
+aiP
 tjK
 tjK
 uho

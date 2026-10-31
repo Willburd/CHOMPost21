@@ -59,12 +59,12 @@
 			M.enabled = !M.enabled
 			if(M.enabled)
 				M.visible_message(pick("Get down on the floor!","Drop to the ground and stay down!","Get down and do not move!","Get down, don't move!"))
-				M.check_synth = FALSE
+				M.check_synth = TRUE // Kills anything not a synth that isn't on the ground
 				M.check_access = FALSE
-				M.check_arrest = TRUE
-				M.check_records = TRUE
-				M.check_weapons = TRUE
+				M.check_arrest = FALSE
+				M.check_records = FALSE
+				M.check_weapons = FALSE
 				M.check_anomalies = FALSE
 				M.check_all = FALSE
-				M.check_down = TRUE
+				M.check_down = FALSE
 				M.lethal = TRUE
