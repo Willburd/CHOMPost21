@@ -1,3 +1,9 @@
+// Gazer dream
+/datum/component/out_of_body_experience/no_bad_body/gazer_dream
+	landmark_id = "halluspawn"
+	min_time = 55 SECONDS
+	max_time = 2 MINUTES
+
 /mob/living/simple_mob/horror/longdemon
 	name = "\improper gazer"
 	desc = "An abnormally long taur-like weasel beast with a madly twisted toothy smile, sixteen irregularly spaced limbs, and bulging snake like eyes that seem to pierce into your mind as they glow."
@@ -172,6 +178,6 @@
 		return
 
 	// Zoop
-	var/datum/component/out_of_body_experience/comp = target.AddComponent(/datum/component/out_of_body_experience/no_bad_body/shadow_realm)
+	var/datum/component/out_of_body_experience/comp = target.AddComponent(/datum/component/out_of_body_experience/no_bad_body/gazer_dream)
 	comp.force_move_badbody(spawn_pos)
 	VARSET_IN(src, making_someone_dream, FALSE, 20 SECONDS)
