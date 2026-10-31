@@ -94,7 +94,7 @@
 		return
 	var/mob/living/carbon/human/attack_target = choices[1]
 	if(choices.len > 1)
-		tgui_input_list(src, "Who do you wish to dominate?", "Target Choice", choices)
+		attack_target = tgui_input_list(src, "Who do you wish to dominate?", "Target Choice", choices)
 
 	if(!attack_target || QDELETED(src))
 		return
@@ -153,7 +153,10 @@
 		making_someone_dream = FALSE
 		return
 
-	var/mob/target = input ("Who do you want to project your mind to?") as mob in creatures
+	var/mob/living/carbon/target = creatures[1]
+	if(creatures.len > 1)
+		target = tgui_input_list(src, "Who do you want to project your mind to?", "Target Choice", creatures)
+
 	if(!target)
 		making_someone_dream = FALSE
 		return
