@@ -955,6 +955,7 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
+/obj/machinery/chemical_analyzer,
 /turf/simulated/floor/tiled/techfloor,
 /area/rnd/xenobiology/xenobioh)
 "acj" = (
@@ -971,6 +972,9 @@
 /obj/structure/table/standard,
 /obj/item/reagent_containers/glass/mortar_pestle{
 	pixel_x = 8
+	},
+/obj/item/reagent_containers/glass/bucket/wood{
+	pixel_x = -7
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/rnd/xenobiology/xenobioh)
@@ -1686,6 +1690,8 @@
 "adK" = (
 /obj/structure/table/standard,
 /obj/structure/window/reinforced,
+/obj/item/reagent_containers/rollingpaper,
+/obj/item/reagent_containers/rollingpaper,
 /turf/simulated/floor/tiled/techfloor,
 /area/rnd/xenobiology/xenobioh)
 "adL" = (
@@ -1867,6 +1873,17 @@
 	},
 /obj/effect/floor_decal/corner/purple/full{
 	dir = 8
+	},
+/obj/structure/table/steel,
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -5;
+	pixel_y = 30
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/exp_prep)
@@ -4600,7 +4617,6 @@
 	dir = 4
 	},
 /obj/machinery/door/firedoor/glass,
-/obj/item/taperoll/engineering/applied,
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
@@ -5690,10 +5706,6 @@
 "akU" = (
 /turf/simulated/open/muriki,
 /area/mine/unexplored/muriki/cave/underdark_pit/south_west_waste)
-"akV" = (
-/obj/item/clothing/suit/storage/hooded/wintercoat/science,
-/turf/simulated/wall,
-/area/rnd/research/exp_prep)
 "akW" = (
 /obj/structure/disposalpipe/segment{
 	dir = 1;
@@ -6690,6 +6702,7 @@
 /turf/simulated/floor/tiled/freezer,
 /area/specialty/expie_clubhouse)
 "amT" = (
+/obj/effect/floorbreak,
 /turf/simulated/floor/tiled,
 /area/specialty/expie_clubhouse)
 "amU" = (
@@ -8474,6 +8487,9 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
+/obj/structure/cable/green{
+	icon_state = "2-8"
+	},
 /turf/simulated/floor/plating,
 /area/specialty/expie_clubhouse)
 "apZ" = (
@@ -8755,6 +8771,7 @@
 /obj/machinery/door/airlock/maintenance/rnd{
 	name = "Science Maintenance"
 	},
+/obj/item/grenade/confetti,
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/rnd/research/exp_prep)
 "aqD" = (
@@ -9809,6 +9826,10 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 9
 	},
+/obj/structure/table/steel,
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/exp_prep)
 "asB" = (
@@ -10350,6 +10371,19 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 9
 	},
+/obj/machinery/light/small/fairylights,
+/obj/structure/flora/pottedplant/xmas{
+	pixel_y = 12
+	},
+/obj/structure/flora/pottedplant/xmas{
+	pixel_x = 7
+	},
+/obj/structure/flora/pottedplant/xmas{
+	pixel_x = -7
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/exp_prep)
 "atH" = (
@@ -10417,6 +10451,33 @@
 	},
 /obj/effect/floor_decal/corner/purple{
 	dir = 6
+	},
+/obj/structure/table/steel,
+/obj/item/material/butterfly/boxcutter,
+/obj/item/clothing/head/poppy_crown{
+	pixel_x = 5;
+	pixel_y = 9
+	},
+/obj/item/clothing/head/poppy_crown{
+	pixel_x = 5;
+	pixel_y = 9
+	},
+/obj/item/clothing/head/rose_crown{
+	pixel_y = 9;
+	pixel_x = -7
+	},
+/obj/item/clothing/head/rose_crown{
+	pixel_y = 9;
+	pixel_x = -7
+	},
+/obj/item/toy/mistletoe{
+	pixel_x = -11
+	},
+/obj/item/toy/mistletoe{
+	pixel_x = -11
+	},
+/obj/item/toy/mistletoe{
+	pixel_x = -11
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/exp_prep)
@@ -11017,11 +11078,38 @@
 /turf/simulated/wall/r_wall,
 /area/medical/voxlab/storage)
 "auP" = (
+/obj/structure/closet/crate,
+/obj/item/clothing/head/santa/green{
+	pixel_x = 5
+	},
+/obj/item/clothing/head/santa/green{
+	pixel_x = 5
+	},
+/obj/item/clothing/head/santa{
+	pixel_x = -5
+	},
+/obj/item/clothing/head/santa{
+	pixel_x = -5
+	},
+/obj/item/clothing/accessory/scarf/christmas,
+/obj/item/clothing/accessory/scarf/christmas,
+/obj/item/clothing/suit/storage/hooded/wintercoat/christmasgreen,
+/obj/item/clothing/suit/storage/hooded/wintercoat/christmasgreen,
+/obj/item/clothing/suit/storage/hooded/wintercoat/christmasred,
+/obj/item/clothing/suit/storage/hooded/wintercoat/christmasred,
+/obj/item/clothing/under/christmas/red,
+/obj/item/clothing/under/christmas/red,
+/obj/item/clothing/under/christmas/green,
+/obj/item/clothing/under/christmas/green,
+/obj/item/clothing/under/christmas/croptop/red,
+/obj/item/clothing/under/christmas/croptop/red,
+/obj/item/clothing/under/christmas/croptop/green,
+/obj/item/clothing/under/christmas/croptop/green,
 /obj/effect/floor_decal/corner/purple{
 	dir = 9
 	},
-/obj/machinery/newscaster{
-	pixel_x = -32
+/obj/structure/sign/christmas/lights{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/exp_prep)
@@ -11060,6 +11148,9 @@
 	dir = 9
 	},
 /obj/structure/table/steel,
+/obj/item/candybowl{
+	pixel_y = 9
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/exp_prep)
 "auU" = (
@@ -11269,19 +11360,12 @@
 	opacity = 0;
 	dir = 4
 	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
 /obj/structure/window/phoronreinforced/full,
-/obj/structure/window/phoronreinforced,
 /obj/structure/window/phoronreinforced{
 	dir = 1
 	},
 /obj/structure/window/phoronreinforced{
 	dir = 4
-	},
-/obj/structure/window/phoronreinforced{
-	dir = 8
 	},
 /obj/structure/cable/green{
 	icon_state = "0-8"
@@ -11295,12 +11379,25 @@
 /turf/simulated/floor/reinforced,
 /area/rnd/xenobiology)
 "avv" = (
-/obj/structure/disposaloutlet,
-/obj/structure/disposalpipe/trunk{
-	dir = 8
-	},
 /obj/machinery/light/small{
 	dir = 4
+	},
+/obj/item/reagent_containers/glass/bucket{
+	pixel_y = 12;
+	pixel_x = -7
+	},
+/obj/item/reagent_containers/glass/bucket{
+	pixel_y = 16;
+	pixel_x = 9
+	},
+/obj/item/reagent_containers/glass/bucket/wood,
+/obj/item/reagent_containers/glass/bucket{
+	pixel_y = -3;
+	pixel_x = -7
+	},
+/obj/item/reagent_containers/glass/bucket{
+	pixel_x = 10;
+	pixel_y = -10
 	},
 /turf/simulated/floor/carpet/bcarpet/turfpack/muriki,
 /area/specialty/expie_clubhouse)
@@ -12941,6 +13038,7 @@
 /obj/effect/floor_decal/corner/purple/full{
 	dir = 4
 	},
+/obj/structure/reagent_dispensers/cookingoil,
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/exp_prep)
 "ayP" = (
@@ -12953,6 +13051,13 @@
 	pixel_y = -21
 	},
 /obj/structure/table/steel,
+/obj/item/toy/xmastree,
+/obj/item/toy/xmastree,
+/obj/item/toy/xmastree,
+/obj/item/toy/xmastree,
+/obj/item/toy/xmastree,
+/obj/item/toy/xmastree,
+/obj/item/toy/xmastree,
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/exp_prep)
 "ayQ" = (
@@ -13556,12 +13661,21 @@
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/civ/south)
 "azZ" = (
+/obj/structure/closet/crate,
+/obj/item/toy/xmas_cracker,
+/obj/item/toy/xmas_cracker,
+/obj/item/toy/xmas_cracker,
+/obj/item/toy/xmas_cracker,
+/obj/item/toy/xmas_cracker,
 /obj/effect/floor_decal/corner/purple{
 	dir = 9
 	},
 /obj/machinery/firealarm{
 	dir = 8;
 	pixel_x = -26
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/exp_prep)
@@ -16396,6 +16510,7 @@
 	},
 /obj/machinery/door/window/westright,
 /obj/effect/floor_decal/corner/purple,
+/obj/machinery/light/small/fairylights,
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/exp_prep)
 "aFC" = (
@@ -16960,6 +17075,11 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 6
 	},
+/obj/item/clothing/accessory/sweater/uglyxmas,
+/obj/item/clothing/accessory/sweater/uglyxmas,
+/obj/item/clothing/accessory/sweater/uglyxmas,
+/obj/item/clothing/accessory/sweater/uglyxmas,
+/obj/item/clothing/accessory/sweater/uglyxmas,
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/exp_prep)
 "aGx" = (
@@ -17776,6 +17896,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
+/obj/item/taperoll/engineering/applied,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/rnd/xenobiology/xenobioh)
 "aHX" = (
@@ -18388,6 +18509,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/firedoor/glass,
+/obj/item/reagent_containers/glass/bucket/prankster_mix,
 /turf/simulated/floor/tiled/techfloor,
 /area/rnd/xenobiology/xenobiohstore)
 "aJj" = (
@@ -18730,6 +18852,10 @@
 	pixel_y = 24
 	},
 /obj/structure/foamedmetal,
+/obj/structure/sign/christmas/wreath,
+/obj/structure/sign/christmas/wreath{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/exp_prep)
 "aJR" = (
@@ -23917,7 +24043,7 @@
 /area/maintenance/spine/civ)
 "aUf" = (
 /obj/structure/closet{
-	name = "Rat closet"
+	name = "DONT RAT OPEN INSIDE"
 	},
 /mob/living/simple_mob/vore/aggressive/rat,
 /mob/living/simple_mob/vore/aggressive/rat,
@@ -24006,12 +24132,11 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
+/obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/command{
 	name = "Nurse Bradley's Office";
-	req_access = list(5);
-	req_one_access = list(19,40,52)
+	req_one_access = list(5,66)
 	},
-/obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled/old_cargo/white,
 /area/medical/tankstore)
 "aUs" = (
@@ -24317,16 +24442,9 @@
 	},
 /obj/machinery/door/airlock/command{
 	name = "Nurse Bradley's Office";
-	req_access = list(5);
-	req_one_access = list(19,40,52)
+	req_one_access = list(5,66)
 	},
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/button/remote/blast_door{
-	id = "medgaragein";
-	name = "Nurse Bradley's Privacy Shutters";
-	pixel_y = 30;
-	req_one_access = list(20,40)
-	},
 /turf/simulated/floor/tiled/old_cargo/white,
 /area/medical/tankstore)
 "aUU" = (
@@ -25437,15 +25555,10 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay2)
 "aWR" = (
-/obj/structure/cable/green{
-	icon_state = "1-4"
-	},
-/obj/machinery/light_switch{
-	dir = 1;
-	pixel_x = 6;
-	pixel_y = -28
-	},
 /obj/effect/floor_decal/techfloor/orange,
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/medical/tankstore)
 "aWS" = (
@@ -25937,7 +26050,6 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/machinery/medical_kiosk,
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 1
 	},
@@ -26339,10 +26451,6 @@
 /turf/simulated/floor/plating,
 /area/maintenance/tug)
 "aYR" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 10
-	},
 /obj/structure/table/standard,
 /obj/item/storage/firstaid/adv{
 	pixel_x = 4;
@@ -26808,8 +26916,6 @@
 	dir = 8;
 	pixel_x = 26
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/table/standard,
 /obj/item/storage/firstaid/clotting{
 	pixel_x = 5;
@@ -27000,8 +27106,6 @@
 /obj/structure/cable/green{
 	icon_state = "0-2"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/table/standard,
 /obj/item/storage/firstaid/regular{
 	pixel_x = 5;
@@ -27531,11 +27635,13 @@
 /obj/structure/closet/grave{
 	opened = 0
 	},
-/obj/item/gun/launcher/confetti_cannon/fake_shottie,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/med)
 "bbA" = (
 /obj/item/material/gravemarker,
+/obj/item/gun/launcher/confetti_cannon/fake_shottie{
+	pixel_y = -27
+	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/med)
 "bbB" = (
@@ -27759,41 +27865,15 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/specialty/expie_clubhouse)
-"bcg" = (
-/obj/item/reagent_containers/glass/bucket{
-	pixel_y = 16;
-	pixel_x = 9
-	},
-/obj/item/reagent_containers/glass/bucket{
-	pixel_y = 12;
-	pixel_x = -7
-	},
-/obj/item/reagent_containers/glass/bucket{
-	pixel_y = -3;
-	pixel_x = -7
-	},
-/obj/item/reagent_containers/glass/bucket,
-/obj/item/reagent_containers/glass/bucket{
-	pixel_x = 10;
-	pixel_y = -10
-	},
-/turf/simulated/floor/carpet/bcarpet/turfpack/muriki,
-/area/specialty/expie_clubhouse)
 "bch" = (
 /turf/simulated/floor/wood/turfpack/muriki,
 /area/specialty/expie_clubhouse)
 "bci" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
 /obj/structure/hookah/randomized_drugs,
 /obj/item/flame/lighter/random,
 /turf/simulated/floor/carpet/bcarpet/turfpack/muriki,
 /area/specialty/expie_clubhouse)
 "bcj" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
 /obj/structure/reagent_dispensers/souppot/half,
 /turf/simulated/floor/carpet/bcarpet/turfpack/muriki,
 /area/specialty/expie_clubhouse)
@@ -27926,7 +28006,12 @@
 /turf/simulated/floor/tiled/white,
 /area/specialty/expie_clubhouse)
 "bcw" = (
-/obj/effect/floorbreak,
+/obj/machinery/power/thermoregulator/cryogaia{
+	pixel_y = -32
+	},
+/obj/structure/cable/green{
+	icon_state = "0-1"
+	},
 /turf/simulated/floor/plating,
 /area/specialty/expie_clubhouse)
 "bcx" = (
@@ -28569,6 +28654,7 @@
 /area/rnd/xenobiology/xenobioh)
 "beg" = (
 /obj/structure/barricade,
+/obj/structure/inflatable/door,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/rnd/xenobiology/xenobioh)
 "beh" = (
@@ -28642,11 +28728,93 @@
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled/techfloor,
 /area/crew_quarters/recreation_area_hallway)
+"beq" = (
+/obj/item/reagent_containers/rollingpaper{
+	pixel_x = 5;
+	pixel_y = -4
+	},
+/obj/item/reagent_containers/rollingpaper{
+	pixel_x = 5;
+	pixel_y = -4
+	},
+/obj/item/reagent_containers/rollingpaper{
+	pixel_x = 5;
+	pixel_y = -4
+	},
+/obj/item/reagent_containers/rollingpaper{
+	pixel_x = 5;
+	pixel_y = -4
+	},
+/obj/item/reagent_containers/rollingpaper{
+	pixel_x = 5;
+	pixel_y = -4
+	},
+/obj/item/reagent_containers/rollingpaper/blunt{
+	pixel_x = -7;
+	pixel_y = -9
+	},
+/turf/simulated/floor/carpet/bcarpet/turfpack/muriki,
+/area/specialty/expie_clubhouse)
+"ber" = (
+/obj/effect/floorbreak,
+/obj/item/clothing/head/pumpkinhead,
+/obj/item/clothing/head/pumpkinhead,
+/obj/item/clothing/head/pumpkinhead,
+/turf/simulated/floor/tiled/white,
+/area/rnd/research/exp_prep)
+"bes" = (
+/obj/effect/floor_decal/corner/purple{
+	dir = 9
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/reagent_dispensers/beerkeg/pirate,
+/turf/simulated/floor/tiled/white,
+/area/rnd/research/exp_prep)
+"bet" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/black,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 9
+	},
+/obj/effect/auto_crayon{
+	icon_state = "violence"
+	},
+/turf/simulated/floor/tiled,
+/area/specialty/expie_clubhouse)
 "beu" = (
 /obj/effect/floor_decal/borderfloor/corner,
 /obj/effect/floor_decal/corner/lightgrey/bordercorner,
 /turf/simulated/floor/tiled/steel,
 /area/crew_quarters/recreation_area_hallway)
+"bev" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/red,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/effect/floor_decal/corner/purple{
+	dir = 6
+	},
+/obj/effect/auto_crayon{
+	icon_state = "market"
+	},
+/obj/effect/auto_crayon{
+	icon_state = "depart"
+	},
+/turf/simulated/floor/tiled,
+/area/specialty/expie_clubhouse)
+"bew" = (
+/obj/machinery/light/small/fairylights,
+/turf/simulated/floor/tiled/white,
+/area/rnd/research/exp_prep)
+"bex" = (
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+/obj/machinery/light/small/fairylights,
+/turf/simulated/floor/tiled/white,
+/area/rnd/research/exp_prep)
 "bey" = (
 /obj/machinery/atmospherics/pipe/simple/visible/red{
 	dir = 4
@@ -28655,9 +28823,45 @@
 	dir = 4
 	},
 /area/muriki/processor/hall)
+"bez" = (
+/obj/effect/floor_decal/corner/purple{
+	dir = 9
+	},
+/obj/structure/table/steel,
+/obj/structure/candybowl/command{
+	pixel_y = 16;
+	pixel_x = 6
+	},
+/obj/structure/candybowl/medical{
+	pixel_y = 16;
+	pixel_x = -8
+	},
+/obj/structure/candybowl/security{
+	pixel_y = 10;
+	pixel_x = -8
+	},
+/obj/structure/candybowl/engineering{
+	pixel_x = 7;
+	pixel_y = 11
+	},
+/obj/structure/candybowl/cargo{
+	pixel_y = 4;
+	pixel_x = -8
+	},
+/obj/structure/candybowl/science{
+	pixel_x = 7;
+	pixel_y = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/rnd/research/exp_prep)
 "beA" = (
 /turf/simulated/wall,
 /area/crew_quarters/pool)
+"beB" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/closet/crate/wooden,
+/turf/simulated/floor/reinforced,
+/area/rnd/xenobiology/xenobioh)
 "beC" = (
 /obj/structure/closet/secure_closet/personal,
 /obj/effect/floor_decal/borderfloor{
@@ -28668,6 +28872,16 @@
 	},
 /turf/simulated/floor/tiled/steel,
 /area/crew_quarters/locker)
+"beD" = (
+/obj/structure/closet/crate/wooden,
+/obj/item/gun/projectile/automatic/serdy/m4a1,
+/obj/item/tool/crowbar/brace_jack,
+/turf/simulated/floor/reinforced,
+/area/rnd/xenobiology/xenobioh)
+"beE" = (
+/obj/structure/closet,
+/turf/simulated/floor/reinforced,
+/area/rnd/xenobiology/xenobioh)
 "beH" = (
 /turf/simulated/wall,
 /area/muriki/bathroom/dorm)
@@ -32247,16 +32461,7 @@
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 8
 	},
-/obj/structure/extinguisher_cabinet{
-	dir = 4;
-	pixel_x = -30;
-	pixel_y = -7
-	},
-/obj/structure/extinguisher_cabinet{
-	dir = 4;
-	pixel_x = -30;
-	pixel_y = 9
-	},
+/obj/machinery/medical_kiosk,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/medical/tankstore)
 "bpg" = (
@@ -32639,6 +32844,15 @@
 	dir = 8;
 	pixel_x = 30
 	},
+/obj/structure/table/steel,
+/obj/item/wrapping_paper,
+/obj/item/wrapping_paper,
+/obj/item/wrapping_paper,
+/obj/item/wrapping_paper,
+/obj/item/wrapping_paper,
+/obj/item/reagent_containers/pill/maintenance,
+/obj/item/reagent_containers/pill/maintenance,
+/obj/item/reagent_containers/pill/maintenance,
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/exp_prep)
 "bpY" = (
@@ -55298,6 +55512,7 @@
 "cmF" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/light/small/fairylights,
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/exp_prep)
 "cmG" = (
@@ -58585,7 +58800,7 @@
 /area/maintenance/wastedisposalnear)
 "cvS" = (
 /obj/structure/closet{
-	name = "Rat closet"
+	name = "DONT RAT OPEN INSIDE"
 	},
 /mob/living/simple_mob/vore/aggressive/rat,
 /mob/living/simple_mob/vore/aggressive/rat,
@@ -59234,7 +59449,6 @@
 /turf/simulated/floor/plating,
 /area/maintenance/cargo)
 "cxX" = (
-/obj/structure/sign/christmas/lights,
 /obj/effect/floor_decal/borderfloor{
 	dir = 10
 	},
@@ -59242,119 +59456,15 @@
 	dir = 10
 	},
 /obj/structure/table/standard,
-/obj/item/storage/box,
-/obj/item/storage/box,
-/obj/item/storage/box,
-/obj/item/storage/box,
-/obj/item/storage/box,
-/obj/item/storage/box,
-/obj/item/storage/box,
-/obj/item/storage/box,
 /turf/simulated/floor/tiled/milspec/turfpack,
 /area/maintenance/cargo)
 "cxY" = (
-/obj/structure/sign/christmas/lights,
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/lightgrey/border,
-/obj/item/tape_roll,
-/obj/item/tape_roll,
-/obj/item/tape_roll,
 /obj/structure/table/standard,
-/turf/simulated/floor/tiled/milspec/turfpack,
-/area/maintenance/cargo)
-"cxZ" = (
-/obj/structure/sign/christmas/lights,
-/obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/corner/lightgrey/border,
-/obj/item/wrapping_paper,
-/obj/item/wrapping_paper,
-/obj/item/wrapping_paper,
-/obj/item/wrapping_paper,
-/obj/item/wrapping_paper,
-/obj/item/wrapping_paper,
-/obj/item/wrapping_paper,
-/obj/item/wrapping_paper,
-/obj/item/wrapping_paper,
-/obj/item/wrapping_paper,
-/obj/item/wrapping_paper,
-/obj/item/wrapping_paper,
-/obj/item/wrapping_paper,
-/obj/item/wrapping_paper,
-/obj/item/wrapping_paper,
-/obj/structure/table/standard,
-/obj/item/toy/partypopper{
-	pixel_x = -12;
-	pixel_y = 4
-	},
-/obj/item/toy/partypopper{
-	pixel_x = -12;
-	pixel_y = 4
-	},
-/obj/item/toy/partypopper{
-	pixel_x = -12;
-	pixel_y = 4
-	},
-/obj/item/toy/partypopper{
-	pixel_x = -12;
-	pixel_y = 4
-	},
-/obj/item/toy/partypopper{
-	pixel_x = -12;
-	pixel_y = 4
-	},
-/obj/item/reagent_containers/pill/maintenance,
-/turf/simulated/floor/tiled/milspec/turfpack,
-/area/maintenance/cargo)
-"cya" = (
-/obj/structure/sign/christmas/lights,
-/obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/corner/lightgrey/border,
-/obj/item/material/butterfly/boxcutter,
-/obj/structure/table/standard,
-/obj/item/toy/mistletoe{
-	pixel_x = -11
-	},
-/obj/item/toy/mistletoe{
-	pixel_x = -11
-	},
-/obj/item/toy/mistletoe{
-	pixel_x = -11
-	},
-/obj/item/toy/mistletoe{
-	pixel_x = -11
-	},
-/obj/item/toy/mistletoe{
-	pixel_x = -11
-	},
-/obj/item/toy/mistletoe{
-	pixel_x = -11
-	},
-/obj/item/toy/mistletoe{
-	pixel_x = -11
-	},
-/obj/item/clothing/head/poppy_crown{
-	pixel_x = 5;
-	pixel_y = 9
-	},
-/obj/item/clothing/head/poppy_crown{
-	pixel_x = 5;
-	pixel_y = 9
-	},
-/obj/item/clothing/head/rose_crown{
-	pixel_y = 9;
-	pixel_x = -7
-	},
-/obj/item/clothing/head/rose_crown{
-	pixel_y = 9;
-	pixel_x = -7
-	},
 /turf/simulated/floor/tiled/milspec/turfpack,
 /area/maintenance/cargo)
 "cyb" = (
-/obj/structure/sign/christmas/lights,
-/obj/structure/sign/christmas/lights{
-	dir = 4
-	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 6
 	},
@@ -59362,35 +59472,13 @@
 	dir = 6
 	},
 /obj/structure/table/rack,
-/obj/fiftyspawner/cardboard,
 /turf/simulated/floor/tiled/milspec/turfpack,
 /area/maintenance/cargo)
 "cyc" = (
 /obj/structure/loot_pile/maint/boxfort,
 /turf/simulated/floor/plating,
 /area/maintenance/cargo)
-"cyd" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 8
-	},
-/obj/effect/floor_decal/corner/lightgrey/border{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/milspec/turfpack,
-/area/maintenance/cargo)
 "cye" = (
-/turf/simulated/floor/tiled/milspec/turfpack,
-/area/maintenance/cargo)
-"cyf" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/lightgrey/border{
-	dir = 4
-	},
-/obj/structure/sign/christmas/lights{
-	dir = 4
-	},
 /turf/simulated/floor/tiled/milspec/turfpack,
 /area/maintenance/cargo)
 "cyg" = (
@@ -59405,20 +59493,10 @@
 	dir = 8
 	},
 /obj/structure/table/standard,
-/obj/item/candybowl{
-	pixel_y = 9
-	},
 /turf/simulated/floor/tiled/milspec/turfpack,
 /area/maintenance/cargo)
 "cyi" = (
 /obj/structure/table/standard,
-/turf/simulated/floor/tiled/milspec/turfpack,
-/area/maintenance/cargo)
-"cyj" = (
-/obj/structure/table/standard,
-/obj/item/toy/gnome{
-	pixel_y = 18
-	},
 /turf/simulated/floor/tiled/milspec/turfpack,
 /area/maintenance/cargo)
 "cyk" = (
@@ -59426,11 +59504,6 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/corner/lightgrey/border{
-	dir = 4
-	},
-/obj/structure/reagent_dispensers/beerkeg/wine,
-/obj/item/toy/stickhorse,
-/obj/structure/sign/christmas/lights{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec/turfpack,
@@ -59466,14 +59539,6 @@
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 4
 	},
-/obj/item/clothing/accessory/sweater/uglyxmas,
-/obj/item/clothing/accessory/sweater/uglyxmas,
-/obj/item/clothing/accessory/sweater/uglyxmas,
-/obj/item/clothing/accessory/sweater/uglyxmas,
-/obj/structure/closet/crate,
-/obj/machinery/light/small{
-	dir = 4
-	},
 /obj/structure/showcase/life_preserver{
 	pixel_x = 32
 	},
@@ -59500,12 +59565,7 @@
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 8
 	},
-/obj/machinery/light/small{
-	dir = 8
-	},
-/obj/machinery/light/small/fairylights,
-/obj/item/clothing/head/pumpkinhead,
-/obj/item/clothing/head/pumpkinhead,
+/obj/random/mob/candycritter,
 /turf/simulated/floor/tiled/milspec/turfpack,
 /area/maintenance/cargo)
 "cys" = (
@@ -59516,138 +59576,13 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/research)
-"cyt" = (
-/obj/machinery/light/small/fairylights,
-/turf/simulated/floor/tiled/milspec/turfpack,
-/area/maintenance/cargo)
-"cyu" = (
-/obj/structure/sign/christmas/wreath{
-	dir = 8
-	},
-/obj/effect/floor_decal/borderfloor{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/lightgrey/border{
-	dir = 4
-	},
-/obj/machinery/light/small/fairylights,
-/obj/item/toy/xmastree,
-/obj/item/toy/xmastree,
-/obj/item/toy/xmastree,
-/obj/item/toy/xmastree,
-/obj/item/toy/xmastree,
-/obj/item/toy/xmastree,
-/turf/simulated/floor/tiled/milspec/turfpack,
-/area/maintenance/cargo)
-"cyv" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 9
-	},
-/obj/effect/floor_decal/corner/lightgrey/border{
-	dir = 9
-	},
-/obj/structure/flora/pottedplant/xmas{
-	pixel_y = 12
-	},
-/obj/structure/flora/pottedplant/xmas{
-	pixel_x = 7
-	},
-/obj/structure/flora/pottedplant/xmas{
-	pixel_x = -7
-	},
-/obj/structure/sign/christmas/lights{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/milspec/turfpack,
-/area/maintenance/cargo)
 "cyw" = (
-/obj/structure/flora/tree/pine/xmas,
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 1
 	},
-/obj/structure/flora/tree/pine/xmas{
-	pixel_x = 0
-	},
-/obj/item/a_gift,
-/obj/machinery/firework_launcher{
-	pixel_x = -13
-	},
-/obj/structure/sign/christmas/lights{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/milspec/turfpack,
-/area/maintenance/cargo)
-"cyx" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/lightgrey/border{
-	dir = 1
-	},
-/obj/item/a_gift,
-/obj/structure/sign/christmas/lights{
-	dir = 1
-	},
-/obj/structure/flora/tree/pine/xmas,
-/turf/simulated/floor/tiled/milspec/turfpack,
-/area/maintenance/cargo)
-"cyy" = (
-/obj/structure/sign/christmas/wreath,
-/obj/effect/floor_decal/borderfloor{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/lightgrey/border{
-	dir = 1
-	},
-/obj/structure/closet/crate,
-/obj/item/clothing/head/santa/green{
-	pixel_x = 5
-	},
-/obj/item/clothing/head/santa/green{
-	pixel_x = 5
-	},
-/obj/item/clothing/head/santa{
-	pixel_x = -5
-	},
-/obj/item/clothing/head/santa{
-	pixel_x = -5
-	},
-/obj/item/clothing/accessory/scarf/christmas,
-/obj/item/clothing/accessory/scarf/christmas,
-/obj/item/clothing/suit/storage/hooded/wintercoat/christmasgreen,
-/obj/item/clothing/suit/storage/hooded/wintercoat/christmasgreen,
-/obj/item/clothing/suit/storage/hooded/wintercoat/christmasred,
-/obj/item/clothing/suit/storage/hooded/wintercoat/christmasred,
-/obj/item/clothing/under/christmas/red,
-/obj/item/clothing/under/christmas/red,
-/obj/item/clothing/under/christmas/green,
-/obj/item/clothing/under/christmas/green,
-/obj/item/clothing/under/christmas/croptop/red,
-/obj/item/clothing/under/christmas/croptop/red,
-/obj/item/clothing/under/christmas/croptop/green,
-/obj/item/clothing/under/christmas/croptop/green,
-/turf/simulated/floor/tiled/milspec/turfpack,
-/area/maintenance/cargo)
-"cyz" = (
-/obj/structure/sign/christmas/wreath,
-/obj/structure/sign/christmas/wreath{
-	dir = 8
-	},
-/obj/effect/floor_decal/borderfloor{
-	dir = 5
-	},
-/obj/effect/floor_decal/corner/lightgrey/border{
-	dir = 5
-	},
-/obj/structure/closet/crate,
-/obj/item/toy/xmas_cracker,
-/obj/item/toy/xmas_cracker,
-/obj/item/toy/xmas_cracker,
-/obj/item/toy/xmas_cracker,
-/obj/item/toy/xmas_cracker,
 /turf/simulated/floor/tiled/milspec/turfpack,
 /area/maintenance/cargo)
 "cyA" = (
@@ -67345,17 +67280,14 @@
 /turf/simulated/wall,
 /area/specialty/expie_clubhouse/archive)
 "cRH" = (
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 5
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 5
-	},
 /obj/effect/floor_decal/techfloor/orange/corner{
 	dir = 4
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "1-6"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/medical/tankstore)
@@ -70377,14 +70309,9 @@
 /turf/simulated/floor/plating,
 /area/specialty/expie_clubhouse)
 "cWD" = (
-/obj/machinery/disposal,
 /obj/effect/floor_decal/industrial/warning{
 	dir = 9
 	},
-/obj/structure/disposalpipe/trunk{
-	dir = 4
-	},
-/obj/structure/window/phoronreinforced,
 /obj/structure/cable/green{
 	icon_state = "2-4"
 	},
@@ -71302,16 +71229,6 @@
 /obj/structure/flora/pottedplant/tropical,
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/pool)
-"dhi" = (
-/obj/machinery/light{
-	dir = 1
-	},
-/obj/machinery/atmospherics/unary/vent_pump/on,
-/obj/effect/floor_decal/techfloor/orange{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/medical/tankstore)
 "dij" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 9
@@ -73438,6 +73355,7 @@
 /obj/structure/sign/nosmoking_2{
 	pixel_x = 32
 	},
+/obj/effect/floorbreak,
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/exp_prep)
 "fNv" = (
@@ -73776,7 +73694,14 @@
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 1
 	},
-/obj/item/flag/eshui,
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 7;
+	pixel_y = 30
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = -8;
+	pixel_y = 30
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/medical/tankstore)
 "gpr" = (
@@ -73932,6 +73857,8 @@
 	},
 /obj/effect/floor_decal/corner/purple/full,
 /obj/structure/table/steel,
+/obj/item/tape_roll,
+/obj/item/tape_roll,
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/exp_prep)
 "gAG" = (
@@ -74530,6 +74457,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/item/toy/gnome{
+	pixel_x = 8
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/exp_prep)
 "hnS" = (
@@ -75261,12 +75191,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/oldbridge)
-"ivq" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 5
-	},
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/medical/tankstore)
 "ivw" = (
 /obj/machinery/door/firedoor/multi_tile,
 /obj/structure/cable/green{
@@ -76257,6 +76181,11 @@
 	},
 /obj/machinery/alarm{
 	pixel_y = 26
+	},
+/obj/structure/reagent_dispensers/beerkeg/wine,
+/obj/item/toy/stickhorse,
+/obj/structure/sign/christmas/lights{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/exp_prep)
@@ -77684,11 +77613,11 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/medical/tankstore)
@@ -77723,6 +77652,9 @@
 /obj/machinery/power/apc/alarms_hidden{
 	dir = 8;
 	pixel_x = -24
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/exp_prep)
@@ -79477,6 +79409,7 @@
 	dir = 5
 	},
 /obj/structure/foamedmetal,
+/obj/structure/sign/christmas/wreath,
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/exp_prep)
 "nVT" = (
@@ -81300,6 +81233,11 @@
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 8
 	},
+/obj/structure/closet/secure_closet/guncabinet{
+	name = "Tank Keys";
+	req_one_access = list(1)
+	},
+/obj/item/key/heavyarmor_medic,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/medical/tankstore)
 "qlM" = (
@@ -84191,11 +84129,11 @@
 /turf/simulated/floor/plating,
 /area/maintenance/medicelevbasement)
 "tWB" = (
-/obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/machinery/elevator_warning,
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 5
 	},
+/obj/item/flag/eshui,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/medical/tankstore)
 "tXL" = (
@@ -84279,9 +84217,13 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 5
 	},
-/obj/structure/extinguisher_cabinet{
-	pixel_x = -5;
-	pixel_y = 30
+/obj/structure/flora/tree/pine/xmas{
+	pixel_x = -4
+	},
+/obj/item/a_gift,
+/obj/item/a_gift,
+/obj/machinery/firework_launcher{
+	pixel_x = -13
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/exp_prep)
@@ -84308,6 +84250,7 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 6
 	},
+/obj/fiftyspawner/cardboard,
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/exp_prep)
 "udL" = (
@@ -86173,6 +86116,10 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 5
 	},
+/obj/structure/flora/tree/pine/xmas,
+/obj/structure/flora/tree/pine/xmas{
+	pixel_x = 0
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/exp_prep)
 "wNb" = (
@@ -86522,6 +86469,21 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/item/toy/partypopper{
+	pixel_y = 4
+	},
+/obj/item/toy/partypopper{
+	pixel_y = 4
+	},
+/obj/item/toy/partypopper{
+	pixel_y = 4
+	},
+/obj/item/toy/partypopper{
+	pixel_y = 4
+	},
+/obj/item/toy/partypopper{
+	pixel_y = 4
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/exp_prep)
 "xpq" = (
@@ -86588,13 +86550,18 @@
 /turf/simulated/floor/wood/alt,
 /area/maintenance/oldbridge)
 "xuo" = (
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/obj/machinery/door/blast/multi_tile/two_tile_ver{
-	id = "medgaragein"
-	},
 /obj/effect/floor_decal/techfloor/orange,
+/obj/machinery/light_switch{
+	dir = 1;
+	pixel_x = 6;
+	pixel_y = -28
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
+/obj/structure/cable/green{
+	icon_state = "4-9"
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/medical/tankstore)
 "xve" = (
@@ -108110,11 +108077,11 @@ gWL
 aOJ
 gWL
 gWL
-cyv
+cye
 cyr
 cym
 cyh
-cyd
+cye
 cxX
 bge
 baR
@@ -108273,7 +108240,7 @@ gWL
 gWL
 bge
 cyw
-cyt
+cye
 cye
 cyi
 cye
@@ -108434,12 +108401,12 @@ bvA
 bpz
 bpz
 bge
-cyx
-cyt
+cyw
 cye
-cyj
+cyn
+cyi
 cye
-cxZ
+cye
 bge
 baR
 baR
@@ -108596,12 +108563,12 @@ bvA
 cId
 bpz
 bge
-cyy
-cyt
 cyn
 cye
 cye
-cya
+cye
+cyn
+cye
 bge
 baR
 baR
@@ -108758,11 +108725,11 @@ gWL
 gWL
 bpz
 bge
-cyz
-cyu
+cye
+cyk
 cyo
 cyk
-cyf
+cye
 cyb
 bge
 baR
@@ -125251,8 +125218,8 @@ bQU
 cfe
 aKA
 gTT
-dhi
-ivq
+aXO
+aSe
 aSe
 aSe
 aSe
@@ -137689,7 +137656,7 @@ aDw
 aDw
 cOO
 aDw
-akV
+aDw
 bsR
 fKk
 ekP
@@ -138007,7 +137974,7 @@ bJG
 aDw
 ucC
 avr
-aFA
+bew
 aKQ
 bcF
 iqB
@@ -138331,7 +138298,7 @@ bUM
 agX
 aKW
 cmK
-aeZ
+bex
 aCg
 pCe
 aeZ
@@ -138655,9 +138622,9 @@ cmZ
 cmS
 pvF
 cmN
+bez
 auT
-auT
-awS
+bes
 opO
 iqB
 aJV
@@ -138982,8 +138949,8 @@ aFA
 aFA
 aFA
 uOL
-aFA
-aFA
+bcF
+ber
 ayP
 aDw
 cmU
@@ -141558,7 +141525,7 @@ pmN
 pmN
 pmN
 aaf
-aah
+beD
 aah
 aah
 aaw
@@ -142206,7 +142173,7 @@ pmN
 pmN
 pmN
 aaf
-aah
+beE
 aah
 aah
 aaz
@@ -142868,7 +142835,7 @@ acj
 aeu
 afm
 aHW
-rTB
+bet
 ahY
 rTB
 akj
@@ -143030,7 +142997,7 @@ adL
 aev
 afn
 pyp
-ydP
+bev
 ydP
 ydP
 bGI
@@ -143180,7 +143147,7 @@ pmN
 aaf
 aaj
 aal
-aau
+beB
 aaE
 aaM
 abh
@@ -143531,7 +143498,7 @@ auj
 ijP
 bce
 ayg
-cWx
+bby
 cWx
 cWx
 aBo
@@ -144501,8 +144468,8 @@ pmN
 pmN
 amE
 bci
-bcg
 bbW
+beq
 bbY
 bbY
 bbW
