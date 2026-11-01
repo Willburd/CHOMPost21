@@ -5690,6 +5690,10 @@
 "akU" = (
 /turf/simulated/open/muriki,
 /area/mine/unexplored/muriki/cave/underdark_pit/south_west_waste)
+"akV" = (
+/obj/item/clothing/suit/storage/hooded/wintercoat/science,
+/turf/simulated/wall,
+/area/rnd/research/exp_prep)
 "akW" = (
 /obj/structure/disposalpipe/segment{
 	dir = 1;
@@ -13034,6 +13038,7 @@
 /area/muriki/bathroom/scilower)
 "ayX" = (
 /obj/machinery/hologram/holopad,
+/mob/living/simple_mob/vore/alienanimals/jil,
 /turf/simulated/floor/wood,
 /area/rnd/hallway/lowmain)
 "ayY" = (
@@ -15219,10 +15224,14 @@
 /turf/simulated/wall,
 /area/rnd/research/atmosia)
 "aDu" = (
-/obj/structure/table/steel,
 /obj/effect/floor_decal/corner/purple{
 	dir = 10
 	},
+/obj/structure/closet,
+/obj/item/clothing/suit/storage/hooded/hoodie/purpletrim,
+/obj/item/clothing/suit/storage/hooded/hoodie/purpletrim,
+/obj/item/clothing/suit/storage/hooded/raincoat,
+/obj/item/clothing/suit/storage/hooded/raincoat,
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/exp_prep)
 "aDv" = (
@@ -18759,6 +18768,15 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 10
 	},
+/obj/structure/closet,
+/obj/item/clothing/shoes/boots/winter/science,
+/obj/item/clothing/shoes/boots/winter/science,
+/obj/item/clothing/shoes/boots/winter/science,
+/obj/item/clothing/shoes/boots/winter/science,
+/obj/item/clothing/suit/storage/hooded/wintercoat/science,
+/obj/item/clothing/suit/storage/hooded/wintercoat/science,
+/obj/item/clothing/suit/storage/hooded/wintercoat/science,
+/obj/item/clothing/suit/storage/hooded/wintercoat/science,
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/exp_prep)
 "aJW" = (
@@ -55280,7 +55298,6 @@
 "cmF" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/mob/living/simple_mob/vore/alienanimals/jil,
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/exp_prep)
 "cmG" = (
@@ -137672,7 +137689,7 @@ aDw
 aDw
 cOO
 aDw
-aDw
+akV
 bsR
 fKk
 ekP
