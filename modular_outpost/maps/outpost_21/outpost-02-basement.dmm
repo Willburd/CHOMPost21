@@ -65603,7 +65603,7 @@
 "cMV" = (
 /obj/structure/railing,
 /obj/machinery/power/breakerbox/activated{
-	RCon_tag = "Atmospherics Substation Bypass";
+	RCon_tag = "Tram Control Breaker";
 	name = "Tram Control Breaker"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
