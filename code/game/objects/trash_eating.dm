@@ -41,7 +41,9 @@
 	if(is_type_in_list(src, GLOB.edible_tech) && user.isSynthetic())
 		return TRUE
 
-	//CHOMPEdit Start. Enabling the middle ground.
+// Outpost 21 edit begin - Restoring object vore limit
+	return FALSE
+/*  //CHOMPEdit Start. Enabling the middle ground.
 	// return FALSE
 
 	//The below allows checks for certain crtieria to decline it, otherwise allow it. Comented out until
@@ -55,6 +57,7 @@
 
 	return TRUE
 	//CHOMPEdit End
+*/ // Outpost 21 edit end
 
 ///Recursively searches through items for invalid items.
 ///Returns the blacklisted item.
