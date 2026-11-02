@@ -478,7 +478,7 @@
 	containername = "Medical Self-Scanner Implant crate"
 	access = ACCESS_MEDICAL
 
-
+/* Outpost 21 edit - Nif removal
 /datum/supply_pack/med/augments/normal_nif
 	name = "Nanite Implant Framework crate"
 	desc = "A NIF, also known as a nanite brain implant that allows you to check your phone at anytime.  Requires Medical access."
@@ -496,3 +496,4 @@
 	containertype = /obj/structure/closet/crate/secure
 	containername = "Bioadaptive Nanite Implant Framework crate"
 	access = ACCESS_MEDICAL
+*/
