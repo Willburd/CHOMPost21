@@ -215,7 +215,7 @@
 
 	// Randomly do stuff to scare people
 	var/area/A = get_area(body.loc)
-	var/picking_val = rand(1,8)
+	var/picking_val = rand(1,9)
 	if(walk_mode && prob(70))
 		picking_val = 3 // Force walk
 
@@ -280,6 +280,9 @@
 		if(8)
 			body.make_jittery(450)
 			return world.time + rand(700,1200)
+		if(9)
+			give_vision_of_body()
+			return world.time + rand(700,1200)
 
 /datum/component/badbody/proc/set_items()
 	// Strip body of some stuff
@@ -337,3 +340,20 @@
 					if(!istype( body.loc, /obj/structure/morgue))
 						org.droplimb(TRUE, DROPLIMB_ACID)
 		body.updatehealth()
+
+/datum/component/badbody/proc/locate_origin_mob()
+	if(body)
+		for(var/mob/living/carbon/human/check in GLOB.human_mob_list)
+			if(check.name != body.name)
+				continue
+			return check
+	return null
+
+/datum/component/badbody/proc/give_vision_of_body()
+	var/mob/living/carbon/human/victim = locate_origin_mob()
+	if(!victim)
+		return
+	if(victim.is_remote_viewing())
+		return
+	victim.AddComponent(/datum/component/remote_view, focused_on = body, viewsize = null, vconfig_path = null)
+	addtimer(CALLBACK(victim, TYPE_PROC_REF(/mob/living/carbon/human, reset_perspective)), rand(3,6) SECONDS, TIMER_DELETE_ME)
