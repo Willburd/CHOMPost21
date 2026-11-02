@@ -215,7 +215,7 @@
 
 	// Randomly do stuff to scare people
 	var/area/A = get_area(body.loc)
-	var/picking_val = rand(1,9)
+	var/picking_val = rand(1,10)
 	if(walk_mode && prob(70))
 		picking_val = 3 // Force walk
 
@@ -282,6 +282,9 @@
 			return world.time + rand(700,1200)
 		if(9)
 			give_vision_of_body()
+			return world.time + rand(700,1200)
+		if(10)
+			haunt_victim()
 			return world.time + rand(700,1200)
 
 /datum/component/badbody/proc/set_items()
@@ -350,6 +353,31 @@
 				continue
 			return check
 	return null
+
+/datum/component/badbody/proc/haunt_victim()
+	var/mob/living/carbon/human/victim = locate_origin_mob()
+	if(!victim)
+		return
+	var/message = null
+	switch(rand(1,8))
+		if(1)
+			message = "Something feels wrong..."
+		if(2)
+			message = "Part of you feels missing..."
+		if(3)
+			message = "You remember dying..."
+		if(4)
+			message = "You see a glimpse of your own death..."
+		if(5)
+			message = "Somehow, you feel like you are in \the [get_area(body)]..."
+		if(6)
+			message = "A cold chill fills your body..."
+		if(7)
+			message = "Something's watching you..."
+		if(8)
+			message = "You feel like something is stealing your thoughts..."
+	to_chat(victim, span_alium(message))
+
 
 // remote view config for nightmare vision of body event
 //////////////////////////////////////////////////////////////////////////////////////////////////////
