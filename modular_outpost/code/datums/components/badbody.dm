@@ -25,6 +25,8 @@
 
 /datum/component/badbody/Destroy(force = FALSE)
 	. = ..()
+	if(QDELETED(body))
+		body_destroyed_event()
 	body = null
 
 /datum/component/badbody/RegisterWithParent()
@@ -377,6 +379,15 @@
 		if(8)
 			message = "You feel like something is stealing your thoughts..."
 	to_chat(victim, span_alium(message))
+
+/datum/component/badbody/proc/body_destroyed_event()
+	var/mob/living/carbon/human/victim = locate_origin_mob()
+	if(!victim)
+		return
+	to_chat(victim, span_vdanger("An intense bolt of psychic pain thrashes your mind!"))
+	victim.adjustHalLoss(120)
+	victim.make_jittery(50)
+	victim.Life() // Instant feedback
 
 
 // remote view config for nightmare vision of body event
