@@ -344,10 +344,15 @@
 /datum/component/badbody/proc/locate_origin_mob()
 	if(body)
 		for(var/mob/living/carbon/human/check in GLOB.human_mob_list)
-			if(check.name != body.name)
+			if(!check.client)
+				continue
+			if(check.real_name != body.real_name)
 				continue
 			return check
 	return null
+
+// remote view config for nightmare vision of body event
+//////////////////////////////////////////////////////////////////////////////////////////////////////
 
 /datum/component/badbody/proc/give_vision_of_body()
 	var/mob/living/carbon/human/victim = locate_origin_mob()
@@ -355,5 +360,46 @@
 		return
 	if(victim.is_remote_viewing())
 		return
-	victim.AddComponent(/datum/component/remote_view, focused_on = body, viewsize = null, vconfig_path = null)
-	addtimer(CALLBACK(victim, TYPE_PROC_REF(/mob/living/carbon/human, reset_perspective)), rand(3,6) SECONDS, TIMER_DELETE_ME)
+	victim.AddComponent(/datum/component/remote_view, focused_on = body, viewsize = null, vconfig_path = /datum/remote_view_config/badbody_nightmare)
+	addtimer(CALLBACK(victim, TYPE_PROC_REF(/mob/living/carbon/human, reset_perspective)), rand(5,8) SECONDS, TIMER_DELETE_ME)
+
+
+/datum/remote_view_config/badbody_nightmare
+	relay_movement = TRUE
+
+// We are responsible for restoring the health UI's icons on removal
+/datum/remote_view_config/badbody_nightmare/attached_to_mob(datum/component/remote_view/owner_component, mob/host_mob)
+	host_mob.click_intercept = src
+	RegisterSignal(host_mob, COMSIG_MOB_SAY_PREPARE, PROC_REF(handle_prepare_say))
+
+/datum/remote_view_config/badbody_nightmare/detatch_from_mob(datum/component/remote_view/owner_component, mob/host_mob)
+	host_mob.click_intercept = null
+	UnregisterSignal(host_mob, COMSIG_MOB_SAY_PREPARE)
+
+/datum/remote_view_config/badbody_nightmare/handle_relay_movement(datum/component/remote_view/owner_component, mob/host_mob, direction)
+	var/mob/living/carbon/human/body = owner_component.get_target()
+	if(!body)
+		return FALSE
+	body.IMove(get_step(body.loc,direction))
+	return TRUE
+
+/datum/remote_view_config/badbody_nightmare/proc/InterceptClickOn(mob/user, params, atom/target)
+	var/datum/component/remote_view/comp = user.GetComponent(/datum/component/remote_view)
+	if(!comp)
+		return FALSE
+	var/mob/living/carbon/human/body = comp.get_target()
+	if(!body)
+		return FALSE
+	body.ClickOn(target, params)
+	return TRUE
+
+/datum/remote_view_config/badbody_nightmare/proc/handle_prepare_say(atom/source, list/message_data)
+	SIGNAL_HANDLER
+	var/datum/component/remote_view/comp = source.GetComponent(/datum/component/remote_view)
+	if(!comp)
+		return 0
+	var/mob/living/carbon/human/body = comp.get_target()
+	if(!body)
+		return 0
+	body.direct_say(message_data[SPEECH_MESSAGE], message_data[SPEECH_SPEAKINGLANG], message_data[SPEECH_WHISPERING])
+	return COMSIG_SAY_FORBID_SPEAK
