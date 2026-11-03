@@ -9,6 +9,8 @@
 	VAR_PRIVATE/start_y = 0
 	VAR_PRIVATE/walk_mode = FALSE
 	VAR_PRIVATE/can_lunge = TRUE
+	VAR_PRIVATE/list/queued_speak = list()
+	VAR_PRIVATE/speak_queue_delay = 16 SECONDS
 
 /datum/component/badbody/Initialize()
 	if(!ishuman(parent))
@@ -18,6 +20,7 @@
 	start_y = body.loc.y
 	body.SetSpecialVoice("Unknown") // Hide voice at first
 	body.stat = DEAD
+	body.see_in_dark = 10 // Autodarksight
 	var/area/A = get_area(body)
 	if(istype(A, /area/specialty)) // Redspace returns don't lunge
 		can_lunge = FALSE
@@ -98,12 +101,12 @@
 		if(speak != "")
 			if(istype( body.loc, /obj/structure/morgue) && prob(20))
 				long_delay_mode = TRUE
-				next_speak = world.time + rand(1000,7000)
+				next_speak = world.time + rand(1000,3000)
 				next_spooky = world.time + rand(700,1200)
 				return
 			else if(start_x != body.x || start_y != body.y)
 				long_delay_mode = TRUE
-				next_speak = world.time + rand(1000,7000)
+				next_speak = world.time + rand(1000,3000)
 				next_spooky = world.time + rand(700,1200)
 				return
 	else
@@ -188,9 +191,13 @@
 // End hacky
 
 /datum/component/badbody/proc/do_a_spooky()
-	// Anticheeze
+	// Rot limbs if people grab them
 	var/mob/living/carbon/human/H = locate(/mob/living/carbon/human) in orange(2,get_turf(body))
-	if(prob(60) && isturf(body.loc) && H && can_lunge && body.pulledby)
+	if(ishuman(body.pulledby))
+		body.pulledby.AddComponent(/datum/component/limb_rot/hands)
+
+	// Anticheeze
+	if(prob(60) && isturf(body.loc) && H && can_lunge)
 		// Make this more picky
 		var/valid_to_explode = prob(75)
 		if(locate(/obj/machinery/conveyor) in orange(5,get_turf(body)))
