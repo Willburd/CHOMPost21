@@ -9,8 +9,10 @@
 	VAR_PRIVATE/start_y = 0
 	VAR_PRIVATE/walk_mode = FALSE
 	VAR_PRIVATE/can_lunge = TRUE
+
+	VAR_PRIVATE/mob/living/carbon/human/bound_victim = null
 	VAR_PRIVATE/list/queued_speak = list()
-	VAR_PRIVATE/speak_queue_delay = 16 SECONDS
+	VAR_PRIVATE/speak_queue_delay = 20 SECONDS
 
 /datum/component/badbody/Initialize()
 	if(!ishuman(parent))
@@ -25,9 +27,11 @@
 	if(istype(A, /area/specialty)) // Redspace returns don't lunge
 		can_lunge = FALSE
 	body.can_be_afk_prey = TRUE // force allow
+	locate_origin_mob()
 
 /datum/component/badbody/Destroy(force = FALSE)
 	. = ..()
+	victim_qdeled()
 	if(QDELETED(body))
 		body_destroyed_event()
 	body = null
@@ -376,16 +380,6 @@
 						org.droplimb(TRUE, DROPLIMB_ACID)
 		body.updatehealth()
 
-/datum/component/badbody/proc/locate_origin_mob()
-	if(body)
-		for(var/mob/living/carbon/human/check in GLOB.human_mob_list)
-			if(!check.client)
-				continue
-			if(check.real_name != body.real_name)
-				continue
-			return check
-	return null
-
 /datum/component/badbody/proc/haunt_victim()
 	var/mob/living/carbon/human/victim = locate_origin_mob()
 	if(!victim)
@@ -427,6 +421,59 @@
 		message = pick("Where are you [victim]?", "I'm so alone [victim]." ,"I need you [victim]...", "[victim]... Where are you?")
 	var/list/message_pieces = body.parse_languages(message)
 	victim.hear_say(message_pieces, pick("begs","sobs","cowers","whispers"), TRUE, body, null, 0)
+
+
+// Binding to victim
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/datum/component/badbody/proc/locate_origin_mob()
+	if(bound_victim)
+		return bound_victim
+	if(body)
+		for(var/mob/living/carbon/human/check in GLOB.human_mob_list)
+			if(!check.client)
+				continue
+			if(check.real_name != body.real_name)
+				continue
+			bound_victim = check
+			RegisterSignal(bound_victim, COMSIG_QDELETING, PROC_REF(victim_qdeled))
+			RegisterSignal(bound_victim, COMSIG_MOB_SAY, PROC_REF(victim_speak))
+			return check
+	return null
+
+/datum/component/badbody/proc/victim_qdeled()
+	SIGNAL_HANDLER
+	if(!bound_victim)
+		return
+	UnregisterSignal(bound_victim, COMSIG_QDELETING)
+	UnregisterSignal(bound_victim, COMSIG_MOB_SAY)
+	bound_victim = null
+
+/datum/component/badbody/proc/victim_speak(datum/source, list/message_data)
+	SIGNAL_HANDLER
+	if(body.z != bound_victim.z)
+		return
+	var/turf/A = get_turf(body)
+	var/turf/B = get_turf(bound_victim)
+	if(A.Distance(B) > 6)
+		return
+	queued_speak.Add(message_data[SPEECH_MESSAGE])
+	if(speak_queue_delay < (1 SECOND))
+		// instant talking causes brain damage in victim
+		bound_victim.adjustBrainLoss(rand(2,3))
+		mimic_victim()
+		return
+	addtimer(CALLBACK(src, PROC_REF(mimic_victim)), speak_queue_delay, TIMER_DELETE_ME)
+
+/datum/component/badbody/proc/mimic_victim()
+	if(!body)
+		return
+	if(!bound_victim)
+		return
+	var/quemsg = queued_speak[1]
+	queued_speak -= quemsg
+	body.direct_say(quemsg, null, rand(0,1))
+	speak_queue_delay -= rand(1,3) SECONDS
 
 
 // remote view config for nightmare vision of body event
