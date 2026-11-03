@@ -244,7 +244,7 @@
 
 	// Randomly do stuff to scare people
 	var/area/A = get_area(body.loc)
-	var/picking_val = rand(1,10)
+	var/picking_val = rand(1,11)
 	if(walk_mode && prob(70))
 		picking_val = 3 // Force walk
 
@@ -314,6 +314,9 @@
 			return world.time + rand(700,1200)
 		if(10)
 			haunt_victim()
+			return world.time + rand(700,1200)
+		if(11)
+			haunt_body_victim()
 			return world.time + rand(700,1200)
 
 /datum/component/badbody/proc/set_items()
@@ -415,6 +418,15 @@
 	victim.adjustHalLoss(120)
 	victim.make_jittery(50)
 	victim.Life() // Instant feedback
+
+/datum/component/badbody/proc/haunt_body_victim(message)
+	var/mob/living/carbon/human/victim = locate_origin_mob()
+	if(!victim)
+		return
+	if(!message)
+		message = pick("Where are you [victim]?", "I'm so alone [victim]." ,"I need you [victim]...", "[victim]... Where are you?")
+	var/list/message_pieces = body.parse_languages(message)
+	victim.hear_say(message_pieces, pick("begs","sobs","cowers","whispers"), TRUE, body, null, 0)
 
 
 // remote view config for nightmare vision of body event
