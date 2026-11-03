@@ -193,8 +193,28 @@
 /datum/component/badbody/proc/do_a_spooky()
 	// Rot limbs if people grab them
 	var/mob/living/carbon/human/H = locate(/mob/living/carbon/human) in orange(2,get_turf(body))
-	if(ishuman(body.pulledby))
-		body.pulledby.AddComponent(/datum/component/limb_rot/hands)
+
+	// Handle being picked up or pulled
+	var/mob/living/carbon/human/puller_target = body.pulledby
+	if(istype(body.loc, /obj/item/holder))
+		var/atom/movable/check_loc = body.loc
+		while(!isturf(check_loc))
+			if(ismob(check_loc))
+				puller_target = check_loc
+				break
+			check_loc = check_loc.loc
+	if(ishuman(puller_target))
+		var/has_comp = puller_target.GetComponent(/datum/component/limb_rot/hands)
+		if(!has_comp)
+			to_chat(puller_target, span_warning(pick("Your hand feels cold.", "Your hand's skin starts to sag.", "Your hand feels sore and cold.")))
+		var/list/limb_targ = list(BP_L_HAND, BP_R_HAND)
+		if(istype(body.loc, /obj/item/holder))
+			// checking for what hand the holder is in
+			if(puller_target.get_right_hand() == body.loc)
+				limb_targ = list(BP_R_HAND)
+			else
+				limb_targ = list(BP_L_HAND)
+		puller_target.AddComponent(/datum/component/limb_rot, limb_targ)
 
 	// Anticheeze
 	if(prob(60) && isturf(body.loc) && H && can_lunge)
