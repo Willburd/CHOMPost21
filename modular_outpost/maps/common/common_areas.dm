@@ -2812,6 +2812,16 @@
 	haunted = TRUE
 	color_grading = COLORTINT_OMEN
 
+/area/specialty/horror_cavern
+	name = "\improper Somewhere Underground"
+	sound_env = TUNNEL_ENCLOSED
+	icon_state = "orange"
+	always_unpowered = TRUE
+	flags = AREA_FORBID_EVENTS | AREA_FLAG_IS_NOT_PERSISTENT
+	haunted = TRUE
+	color_grading = COLORTINT_UNDERDARK
+	ambience = AMBIENCE_UNDERDARK
+
 /area/vr/lighting // virtual reality, but cooler
 	dynamic_lighting = 1 // literally the only change, I just wanted neat lights for the hazard course.
 
