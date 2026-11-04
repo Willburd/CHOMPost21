@@ -65,7 +65,8 @@ SUBSYSTEM_DEF(haunting)
 		/datum/station_haunt/change_nearby_display,
 		/datum/station_haunt/camera_stare,
 		/datum/station_haunt/deck_hatch_open,
-		/datum/station_haunt/terraformer_song
+		/datum/station_haunt/terraformer_song,
+		/datum/station_haunt/overload_apc
 		)
 	hauntings["[MODE_UNNERVING]"] = list(
 		/datum/station_haunt/light_flicker,
@@ -92,7 +93,8 @@ SUBSYSTEM_DEF(haunting)
 		/datum/station_haunt/lurker/can_appear,
 		/datum/station_haunt/change_nearby_display,
 		/datum/station_haunt/camera_stare,
-		/datum/station_haunt/deck_hatch_open
+		/datum/station_haunt/deck_hatch_open,
+		/datum/station_haunt/overload_apc
 		)
 	hauntings["[MODE_SPOOKY]"] = list(
 		/datum/station_haunt/light_flicker,
@@ -119,7 +121,8 @@ SUBSYSTEM_DEF(haunting)
 		/datum/station_haunt/change_nearby_display,
 		/datum/station_haunt/camera_stare,
 		/datum/station_haunt/deck_hatch_open,
-		/datum/station_haunt/poltergeist
+		/datum/station_haunt/poltergeist,
+		/datum/station_haunt/overload_apc
 		)
 	hauntings["[MODE_SCARY]"] = list(
 		/datum/station_haunt/ghost_write,

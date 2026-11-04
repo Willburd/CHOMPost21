@@ -301,6 +301,18 @@
 	end()
 
 
+// overload APC
+/datum/station_haunt/overload_apc
+	name = "Overload Apc"
+
+/datum/station_haunt/overload_apc/fire()
+	var/area/targ_area = SShaunting.get_haunt_area()
+	var/obj/machinery/power/apc/check_apc = targ_area?.get_apc()
+	if(check_apc)
+		check_apc.overload_lighting()
+	end()
+
+
 // Lock doors
 /datum/station_haunt/lock_doors
 	name = "Lock Doors In Area"
