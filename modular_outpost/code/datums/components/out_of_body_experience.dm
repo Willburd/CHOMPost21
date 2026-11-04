@@ -81,3 +81,6 @@
 	else
 		QDEL_NULL(badbody)
 	qdel(src)
+
+/datum/component/out_of_body_experience/proc/force_move_badbody(turf/position)
+	badbody.forceMove(position)

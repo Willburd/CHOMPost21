@@ -72,6 +72,10 @@ GLOBAL_LIST_INIT(unique_stowaway_loot, list(
 		/obj/item/tool/transforming/powerdrill,
 		/obj/item/weldingtool/experimental,
 		/obj/item/tool/transforming/jawsoflife,
+		/obj/random/energy,
+		/obj/random/projectile,
+		/obj/random/ammo,
+		/obj/random/grenade,
 	))
 
 GLOBAL_VAR_INIT(spawned_theta,FALSE) // Only one a ROUND

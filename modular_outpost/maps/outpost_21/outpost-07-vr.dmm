@@ -7171,7 +7171,7 @@
 	dir = 9
 	},
 /obj/effect/floor_decal/spline/plain,
-/turf/simulated/floor/water/blood/turfpack/station,
+/turf/simulated/floor/water/blood/indoor/turfpack/station,
 /area/vr/bloodstar)
 "bKp" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -12136,7 +12136,7 @@
 	dir = 1
 	},
 /obj/structure/window/reinforced,
-/turf/simulated/floor/water/blood/turfpack/station,
+/turf/simulated/floor/water/blood/indoor/turfpack/station,
 /area/vr/bloodstar)
 "dja" = (
 /obj/effect/floor_decal/corner/white/full{
@@ -14546,13 +14546,13 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 8
 	},
-/turf/simulated/floor/water/blood/turfpack/station,
+/turf/simulated/floor/water/blood/indoor/turfpack/station,
 /area/vr/bloodstar)
 "dZY" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 6
 	},
-/turf/simulated/floor/water/blood/turfpack/station,
+/turf/simulated/floor/water/blood/indoor/turfpack/station,
 /area/vr/bloodstar)
 "eaa" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -21583,7 +21583,7 @@
 	dir = 5
 	},
 /obj/effect/floor_decal/spline/plain,
-/turf/simulated/floor/water/blood/turfpack/station,
+/turf/simulated/floor/water/blood/indoor/turfpack/station,
 /area/vr/bloodstar)
 "ghX" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
@@ -23319,7 +23319,7 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 10
 	},
-/turf/simulated/floor/water/blood/turfpack/station,
+/turf/simulated/floor/water/blood/indoor/turfpack/station,
 /area/vr/bloodstar)
 "gJv" = (
 /obj/structure/table/woodentable,
@@ -29371,7 +29371,7 @@
 	dir = 8
 	},
 /obj/structure/window/reinforced,
-/turf/simulated/floor/water/blood/turfpack/station,
+/turf/simulated/floor/water/blood/indoor/turfpack/station,
 /area/vr/bloodstar)
 "iEx" = (
 /obj/effect/floor_decal/borderfloor{
@@ -31427,7 +31427,7 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/turf/simulated/floor/water/blood/turfpack/station,
+/turf/simulated/floor/water/blood/indoor/turfpack/station,
 /area/vr/bloodstar)
 "jiR" = (
 /turf/simulated/floor/tiled/dark,
@@ -36526,7 +36526,7 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/turf/simulated/floor/water/blood/turfpack/station,
+/turf/simulated/floor/water/blood/indoor/turfpack/station,
 /area/vr/bloodstar)
 "kFW" = (
 /obj/structure/closet/secure_closet/medical3{
@@ -43410,7 +43410,7 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 5
 	},
-/turf/simulated/floor/water/blood/turfpack/station,
+/turf/simulated/floor/water/blood/indoor/turfpack/station,
 /area/vr/bloodstar)
 "mTx" = (
 /obj/machinery/vending/fitness,
@@ -48538,7 +48538,7 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/turf/simulated/floor/water/blood/turfpack/station,
+/turf/simulated/floor/water/blood/indoor/turfpack/station,
 /area/vr/bloodstar)
 "osH" = (
 /obj/effect/floor_decal/borderfloor{
@@ -51308,7 +51308,7 @@
 /area/vr/bloodstar)
 "poh" = (
 /obj/effect/floor_decal/spline/plain,
-/turf/simulated/floor/water/blood/turfpack/station,
+/turf/simulated/floor/water/blood/indoor/turfpack/station,
 /area/vr/bloodstar)
 "poE" = (
 /obj/structure/table/rack,
@@ -56293,7 +56293,7 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
-/turf/simulated/floor/water/blood/turfpack/station,
+/turf/simulated/floor/water/blood/indoor/turfpack/station,
 /area/vr/bloodstar)
 "qTW" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
@@ -58554,7 +58554,7 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/turf/simulated/floor/water/blood/turfpack/station,
+/turf/simulated/floor/water/blood/indoor/turfpack/station,
 /area/vr/bloodstar)
 "rJj" = (
 /obj/item/stack/material/wood/oak,
@@ -61865,7 +61865,7 @@
 /turf/simulated/floor/plating,
 /area/vr/bloodstar)
 "sNx" = (
-/turf/simulated/floor/water/blood/turfpack/station,
+/turf/simulated/floor/water/blood/indoor/turfpack/station,
 /area/vr/bloodstar)
 "sNz" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -63953,7 +63953,7 @@
 /obj/structure/window/reinforced{
 	dir = 4
 	},
-/turf/simulated/floor/water/blood/turfpack/station,
+/turf/simulated/floor/water/blood/indoor/turfpack/station,
 /area/vr/bloodstar)
 "tvz" = (
 /obj/effect/floor_decal/corner/red{
@@ -66528,7 +66528,7 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 9
 	},
-/turf/simulated/floor/water/blood/turfpack/station,
+/turf/simulated/floor/water/blood/indoor/turfpack/station,
 /area/vr/bloodstar)
 "uiQ" = (
 /obj/effect/floor_decal/borderfloor{
@@ -71300,7 +71300,7 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 1
 	},
-/turf/simulated/floor/water/blood/turfpack/station,
+/turf/simulated/floor/water/blood/indoor/turfpack/station,
 /area/vr/bloodstar)
 "vIi" = (
 /obj/structure/grille,
@@ -76815,7 +76815,7 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 4
 	},
-/turf/simulated/floor/water/blood/turfpack/station,
+/turf/simulated/floor/water/blood/indoor/turfpack/station,
 /area/vr/bloodstar)
 "xtf" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{

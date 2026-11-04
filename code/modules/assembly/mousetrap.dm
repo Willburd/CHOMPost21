@@ -90,6 +90,7 @@
 	..()
 
 /obj/item/assembly/mousetrap/Crossed(atom/movable/AM)
+	. = ..()
 	if(AM.is_incorporeal())
 		return
 	if(armed)
@@ -101,7 +102,6 @@
 								  span_warning("You accidentally step on [src]"))
 		if(ismouse(AM) || istype(AM,/mob/living/simple_mob/vore/alienanimals/jil)) // Outpost 21 edit begin - Jils get snapped too
 			triggered(AM)
-	..()
 
 /obj/item/assembly/mousetrap/on_found(mob/living/finder)
 	if(armed)

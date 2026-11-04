@@ -1,0 +1,638 @@
+//MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/obj/effect/auto_crayon{
+	icon_state = "companion"
+	},
+/obj/effect/auto_crayon{
+	icon_state = "depart"
+	},
+/turf/simulated/floor/wood/broken,
+/area/mine/explored/muriki/cave/deepdark)
+"aC" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/turf/simulated/floor/plating,
+/area/mine/explored/muriki/cave/deepdark)
+"aO" = (
+/turf/simulated/floor/wood/broken,
+/area/mine/explored/muriki/cave/deepdark)
+"bU" = (
+/obj/effect/floorbreak,
+/turf/simulated/floor/tiled/white,
+/area/mine/explored/muriki/cave/deepdark)
+"cd" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/random/junk,
+/turf/simulated/floor/wood/broken,
+/area/mine/explored/muriki/cave/deepdark)
+"cr" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/full{
+	dir = 10;
+	icon_state = "fwindow"
+	},
+/obj/structure/barricade/planks,
+/turf/simulated/floor/plating,
+/area/mine/explored/muriki/cave/deepdark)
+"cL" = (
+/turf/template_noop,
+/area/template_noop)
+"cQ" = (
+/obj/structure/table/standard,
+/obj/random/maintenance/medical,
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"cW" = (
+/turf/simulated/mineral/alt/turfpack/muriki,
+/area/template_noop)
+"dU" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/obj/machinery/vending/coffee,
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"et" = (
+/obj/effect/floor_decal/corner/brown/diagonal,
+/turf/simulated/floor/tiled/white,
+/area/mine/explored/muriki/cave/deepdark)
+"eL" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/mine/explored/muriki/cave/deepdark)
+"eY" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/plating,
+/area/mine/explored/muriki/cave/deepdark)
+"fw" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"fY" = (
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white,
+/area/mine/explored/muriki/cave/deepdark)
+"kZ" = (
+/obj/effect/floor_decal/spline/plain{
+	dir = 8
+	},
+/turf/simulated/wall,
+/area/mine/explored/muriki/cave/deepdark)
+"lj" = (
+/obj/effect/auto_crayon{
+	icon_state = "shelter"
+	},
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"lw" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/mine/explored/muriki/cave/deepdark)
+"lF" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"pM" = (
+/obj/structure/sink/kitchen{
+	dir = 4;
+	pixel_x = 12
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_y = -30;
+	dir = 1
+	},
+/obj/effect/auto_crayon{
+	icon_state = "water"
+	},
+/turf/simulated/floor/tiled/white,
+/area/mine/explored/muriki/cave/deepdark)
+"qj" = (
+/obj/machinery/holoposter{
+	dir = 4;
+	pixel_x = -30
+	},
+/obj/effect/floor_decal/corner/brown/diagonal,
+/obj/structure/tanning_rack,
+/turf/simulated/floor/tiled/white,
+/area/mine/explored/muriki/cave/deepdark)
+"si" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"sr" = (
+/obj/structure/sign/poster{
+	dir = 4
+	},
+/turf/simulated/floor/wood/broken,
+/area/mine/explored/muriki/cave/deepdark)
+"sQ" = (
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"tg" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/wood/broken,
+/area/mine/explored/muriki/cave/deepdark)
+"un" = (
+/obj/random/junk,
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"uU" = (
+/obj/effect/auto_crayon{
+	icon_state = "suspicious"
+	},
+/turf/simulated/floor/wood/broken,
+/area/mine/explored/muriki/cave/deepdark)
+"vT" = (
+/obj/item/material/barbedwire/start_active,
+/turf/simulated/floor/plating,
+/area/mine/explored/muriki/cave/deepdark)
+"xD" = (
+/obj/item/reagent_containers/pill/maintenance,
+/turf/simulated/floor/plating,
+/area/mine/explored/muriki/cave/deepdark)
+"zb" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/disposalpipe/broken{
+	dir = 1
+	},
+/turf/simulated/floor/wood/broken,
+/area/mine/explored/muriki/cave/deepdark)
+"Al" = (
+/obj/structure/table/rack/shelf/wood,
+/turf/simulated/floor/wood/broken,
+/area/mine/explored/muriki/cave/deepdark)
+"Ao" = (
+/obj/structure/bed/chair/hammock_kbraid_n,
+/obj/item/radio/intercom{
+	dir = 4;
+	name = "Common Channel";
+	pixel_x = 21
+	},
+/obj/effect/landmark/start/stowaway,
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"CP" = (
+/obj/machinery/disposal,
+/obj/structure/disposalpipe/trunk,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/mine/explored/muriki/cave/deepdark)
+"Dr" = (
+/obj/structure/hammock_kbraid_s,
+/obj/structure/dancepole{
+	name = "hammock pole"
+	},
+/turf/simulated/floor/wood/broken,
+/area/mine/explored/muriki/cave/deepdark)
+"DJ" = (
+/obj/structure/table/standard,
+/obj/random/maintenance/foodstuff,
+/obj/random/maintenance/foodstuff,
+/obj/random/maintenance/foodstuff,
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"EX" = (
+/obj/structure/window/maintenance_panel,
+/turf/simulated/floor/tiled/techfloor,
+/area/mine/explored/muriki/cave/deepdark)
+"Fz" = (
+/turf/simulated/mineral/alt/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Hz" = (
+/turf/simulated/wall,
+/area/mine/explored/muriki/cave/deepdark)
+"HE" = (
+/obj/random/junk,
+/turf/simulated/floor/plating,
+/area/mine/explored/muriki/cave/deepdark)
+"Ir" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/machinery/newscaster{
+	pixel_x = 32
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_y = -30;
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/mine/explored/muriki/cave/deepdark)
+"IE" = (
+/turf/simulated/mineral/floor/ignore_cavegen/turfpack/muriki,
+/area/mine/explored/muriki/cave/deepdark)
+"Ke" = (
+/turf/simulated/floor/tiled/white,
+/area/mine/explored/muriki/cave/deepdark)
+"Mb" = (
+/obj/machinery/disposal,
+/obj/structure/disposalpipe/trunk{
+	dir = 4
+	},
+/obj/item/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 24
+	},
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"Mx" = (
+/obj/effect/floorbreak,
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"MB" = (
+/obj/random/junk,
+/turf/simulated/floor/wood/broken,
+/area/mine/explored/muriki/cave/deepdark)
+"MN" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/turf/simulated/floor/wood/broken,
+/area/mine/explored/muriki/cave/deepdark)
+"Nq" = (
+/obj/structure/disposalpipe/junction,
+/obj/random/junk,
+/turf/simulated/floor/plating,
+/area/mine/explored/muriki/cave/deepdark)
+"Od" = (
+/obj/structure/disposalpipe/junction{
+	dir = 2;
+	icon_state = "pipe-j2"
+	},
+/obj/item/reagent_containers/pill/maintenance,
+/turf/simulated/floor/plating,
+/area/mine/explored/muriki/cave/deepdark)
+"Py" = (
+/obj/item/material/barbedwire/start_active,
+/obj/effect/floor_decal/corner/brown/diagonal,
+/turf/simulated/floor/tiled/white,
+/area/mine/explored/muriki/cave/deepdark)
+"QQ" = (
+/obj/structure/sign/yessmoking_1{
+	pixel_x = -32
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/mine/explored/muriki/cave/deepdark)
+"SA" = (
+/obj/structure/window/maintenance_panel{
+	dir = 8
+	},
+/obj/structure/disposalpipe/broken{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/mine/explored/muriki/cave/deepdark)
+"SQ" = (
+/turf/simulated/floor/plating,
+/area/mine/explored/muriki/cave/deepdark)
+"UF" = (
+/obj/machinery/door/airlock/maintenance/int,
+/turf/simulated/floor/tiled/techfloor,
+/area/mine/explored/muriki/cave/deepdark)
+"UW" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/item/assembly/mousetrap/armed,
+/obj/structure/simple_door/wood,
+/turf/simulated/floor/tiled/techfloor,
+/area/mine/explored/muriki/cave/deepdark)
+"Ws" = (
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"Yx" = (
+/obj/structure/table/standard,
+/obj/item/flame/candle/everburn,
+/obj/item/storage/pill_bottle/maintenance{
+	pixel_x = -6
+	},
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+"Zv" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/mine/explored/muriki/cave/deepdark)
+"ZF" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/mine/explored/muriki/cave/deepdark)
+
+(1,1,1) = {"
+cL
+cL
+cL
+cL
+cL
+cL
+cL
+cL
+cL
+cL
+cL
+cL
+cL
+cL
+cL
+"}
+(2,1,1) = {"
+cL
+cL
+cL
+cW
+cW
+cW
+Fz
+IE
+IE
+IE
+Fz
+Fz
+cW
+cL
+cL
+"}
+(3,1,1) = {"
+cL
+cL
+cW
+cW
+cW
+Hz
+Hz
+Hz
+SA
+Hz
+Hz
+Hz
+Hz
+cW
+cL
+"}
+(4,1,1) = {"
+cL
+cW
+cW
+Fz
+Fz
+Hz
+Mb
+cd
+ZF
+Al
+qj
+et
+Hz
+cW
+cL
+"}
+(5,1,1) = {"
+cL
+cW
+cW
+Fz
+Fz
+Hz
+dU
+Od
+Nq
+sQ
+un
+Py
+Hz
+Fz
+cL
+"}
+(6,1,1) = {"
+cL
+cW
+Hz
+Hz
+Hz
+Hz
+Hz
+Zv
+HE
+ZF
+eL
+Mx
+Hz
+IE
+cL
+"}
+(7,1,1) = {"
+cL
+Fz
+Hz
+vT
+QQ
+Hz
+MB
+MN
+tg
+si
+eY
+zb
+EX
+IE
+cL
+"}
+(8,1,1) = {"
+cL
+lj
+UF
+SQ
+aC
+UW
+lF
+fw
+aa
+HE
+lw
+uU
+EX
+IE
+cL
+"}
+(9,1,1) = {"
+cL
+IE
+Hz
+CP
+fY
+cr
+Mx
+un
+Mx
+DJ
+SQ
+HE
+Hz
+IE
+cL
+"}
+(10,1,1) = {"
+cL
+IE
+Hz
+bU
+Ke
+cr
+Ws
+Ws
+aO
+cQ
+HE
+SQ
+Hz
+Fz
+cL
+"}
+(11,1,1) = {"
+cL
+cL
+Hz
+Ke
+pM
+Hz
+Ao
+Dr
+sr
+Yx
+xD
+Ir
+Hz
+cW
+cL
+"}
+(12,1,1) = {"
+cL
+cL
+Hz
+kZ
+Hz
+Hz
+Hz
+Hz
+Hz
+Hz
+Hz
+Hz
+Hz
+cL
+cL
+"}
+(13,1,1) = {"
+cL
+cL
+cL
+cW
+cW
+cW
+Fz
+Fz
+Fz
+Fz
+cW
+cW
+cL
+cL
+cL
+"}
+(14,1,1) = {"
+cL
+cL
+cL
+cL
+cL
+cW
+cW
+cW
+cW
+cW
+cL
+cL
+cL
+cL
+cL
+"}
+(15,1,1) = {"
+cL
+cL
+cL
+cL
+cL
+cL
+cL
+cL
+cL
+cL
+cL
+cL
+cL
+cL
+cL
+"}

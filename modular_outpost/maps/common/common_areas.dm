@@ -61,7 +61,7 @@
 	base_turf = /turf/simulated/open
 	icon = 'icons/turf/areas.dmi'
 	icon_state = "blue"
-	flags = RAD_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT | AREA_BLOCK_GHOST_SIGHT
+	flags = RAD_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT
 	sound_env = SPACE
 	ambience = AMBIENCE_MEATZONE
 	music = 'sound/ambience/approaching_planet.ogg'
@@ -158,7 +158,7 @@
 	name = "\improper Bathroom. Don't use."
 	icon_state = "cyablatri"
 	sound_env = SMALL_ENCLOSED
-	flags = RAD_SHIELDED | AREA_BLOCK_TRACKING | AREA_FORBID_EVENTS | AREA_BLOCK_GHOST_SIGHT
+	flags = RAD_SHIELDED | AREA_BLOCK_TRACKING | AREA_FORBID_EVENTS
 	use_emergency_overlay = TRUE
 	base_turf = /turf/simulated/open
 	color_grading = COLORTINT_CHILL
@@ -1272,7 +1272,7 @@
 	name = "\improper Facility Tunnels"
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	sound_env = TUNNEL_ENCLOSED
-	flags = AREA_BLOCK_GHOST_SIGHT | AREA_FLAG_IS_NOT_PERSISTENT
+	flags = AREA_FLAG_IS_NOT_PERSISTENT
 	color_grading = COLORTINT_DARK
 	ambience = AMBIENCE_MURIKICAVE
 
@@ -1280,7 +1280,7 @@
 	name = "\improper Muriki Caverns"
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	sound_env = TUNNEL_ENCLOSED
-	flags = AREA_BLOCK_GHOST_SIGHT | AREA_FLAG_IS_NOT_PERSISTENT
+	flags = AREA_FLAG_IS_NOT_PERSISTENT
 	color_grading = COLORTINT_DARK
 	ambience = AMBIENCE_MURIKICAVE
 
@@ -1581,7 +1581,7 @@
 	name = "\improper Tug Graveyard"
 	base_turf = /turf/simulated/open/muriki
 	sound_env = TUNNEL_ENCLOSED
-	flags = AREA_BLOCK_GHOST_SIGHT|AREA_FLAG_IS_NOT_PERSISTENT
+	flags = AREA_FLAG_IS_NOT_PERSISTENT
 	icon_state = "dk_yellow"
 	color_grading = COLORTINT_UNDERDARK
 	ambience = AMBIENCE_UNDERDARK
@@ -1590,7 +1590,7 @@
 	name = "\improper Disposal Return Maintenance"
 	base_turf = /turf/simulated/open/muriki
 	sound_env = TUNNEL_ENCLOSED
-	flags = AREA_BLOCK_GHOST_SIGHT|AREA_FLAG_IS_NOT_PERSISTENT
+	flags = AREA_FLAG_IS_NOT_PERSISTENT
 	icon_state = "dk_yellow"
 	color_grading = COLORTINT_DARK
 	ambience = AMBIENCE_UNDERDARK
@@ -1601,7 +1601,7 @@
 	icon_state = "blue2"
 	base_turf = /turf/simulated/floor/water/acidic/deep/turfpack/muriki
 	sound_env = SOUND_ENVIRONMENT_SEWER_PIPE
-	flags = AREA_BLOCK_GHOST_SIGHT|AREA_FLAG_IS_NOT_PERSISTENT
+	flags = AREA_FLAG_IS_NOT_PERSISTENT
 	music = 'sound/ambience/ruins/ruins3.ogg'
 	color_grading = COLORTINT_DIM
 
@@ -1629,7 +1629,7 @@
 //
 /area/maintenance
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
-	flags = RAD_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT | AREA_BLOCK_GHOST_SIGHT
+	flags = RAD_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT
 	color_grading = COLORTINT_DARK
 
 /area/maintenance/basement
@@ -1716,7 +1716,7 @@
 	name = "\improper Collapsed Structure"
 	base_turf = /turf/simulated/open
 	icon_state = "maint_research_shuttle"
-	flags = RAD_SHIELDED | AREA_BLOCK_SUIT_SENSORS | AREA_FLAG_IS_NOT_PERSISTENT | AREA_BLOCK_TRACKING | AREA_FORBID_EVENTS | AREA_BLOCK_GHOST_SIGHT
+	flags = RAD_SHIELDED | AREA_BLOCK_SUIT_SENSORS | AREA_FLAG_IS_NOT_PERSISTENT | AREA_BLOCK_TRACKING | AREA_FORBID_EVENTS
 	requires_power = FALSE
 	haunted = TRUE
 	color_grading = COLORTINT_OMEN
@@ -1725,7 +1725,7 @@
 	name = "\improper Damaged Structure"
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	icon_state = "maint_research_shuttle"
-	flags = RAD_SHIELDED | AREA_BLOCK_SUIT_SENSORS | AREA_FLAG_IS_NOT_PERSISTENT | AREA_BLOCK_TRACKING | AREA_FORBID_EVENTS | AREA_BLOCK_GHOST_SIGHT
+	flags = RAD_SHIELDED | AREA_BLOCK_SUIT_SENSORS | AREA_FLAG_IS_NOT_PERSISTENT | AREA_BLOCK_TRACKING | AREA_FORBID_EVENTS
 	requires_power = FALSE
 	haunted = TRUE
 	color_grading = COLORTINT_OMEN
@@ -1734,7 +1734,7 @@
 	name = "\improper Broken Structure"
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	icon_state = "maint_research_shuttle"
-	flags = RAD_SHIELDED | AREA_BLOCK_SUIT_SENSORS | AREA_FLAG_IS_NOT_PERSISTENT | AREA_BLOCK_TRACKING | AREA_FORBID_EVENTS | AREA_BLOCK_GHOST_SIGHT
+	flags = RAD_SHIELDED | AREA_BLOCK_SUIT_SENSORS | AREA_FLAG_IS_NOT_PERSISTENT | AREA_BLOCK_TRACKING | AREA_FORBID_EVENTS
 	requires_power = FALSE
 	haunted = TRUE
 	color_grading = COLORTINT_OMEN
@@ -1802,7 +1802,7 @@
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	icon = 'icons/turf/areas.dmi'
 	icon_state = "bridge"
-	flags = RAD_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT | AREA_BLOCK_TRACKING | AREA_FORBID_EVENTS | AREA_BLOCK_GHOST_SIGHT
+	flags = RAD_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT | AREA_BLOCK_TRACKING | AREA_FORBID_EVENTS
 	broken_light_chance = 85
 	haunted = TRUE
 	color_grading = COLORTINT_DIM
@@ -1843,7 +1843,7 @@
 	icon = 'icons/turf/areas_vr.dmi'
 	icon_state = "debrisexplored"
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
-	flags = RAD_SHIELDED | AREA_BLOCK_GHOST_SIGHT | AREA_FLAG_IS_NOT_PERSISTENT
+	flags = RAD_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT
 	color_grading = COLORTINT_UNDERDARK
 
 /area/maintenance/shadekin_dark/mountain
@@ -1873,7 +1873,7 @@
 	icon_state = "deckmaint1"
 	base_turf = /turf/simulated/open/muriki
 	sound_env = SOUND_ENVIRONMENT_SEWER_PIPE
-	flags = AREA_BLOCK_GHOST_SIGHT | AREA_FLAG_IS_NOT_PERSISTENT
+	flags = AREA_FLAG_IS_NOT_PERSISTENT
 	color_grading = COLORTINT_UNDERDARK
 
 /area/mine/unexplored/muriki/cave/underdark_pit/south_west_waste
@@ -1902,7 +1902,7 @@
 	icon_state = "deckmaint1"
 	base_turf = /turf/simulated/open/muriki
 	sound_env = SOUND_ENVIRONMENT_BATHROOM
-	flags = AREA_BLOCK_GHOST_SIGHT | AREA_FLAG_IS_NOT_PERSISTENT
+	flags = AREA_FLAG_IS_NOT_PERSISTENT
 	color_grading = COLORTINT_DIM
 
 /area/mine/unexplored/muriki/cave/shelter/north_west_far
@@ -2736,7 +2736,7 @@
 /area/submap/outpost21/foundation_block
 	name = "\improper Foundation Block"
 	icon_state = "red2"
-	flags = AREA_FORBID_EVENTS | AREA_BLOCK_GHOST_SIGHT | RAD_SHIELDED
+	flags = AREA_FORBID_EVENTS | RAD_SHIELDED
 	sound_env = SOUND_ENVIRONMENT_HANGAR
 	ambience = AMBIENCE_UNDERDARK
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
@@ -2792,7 +2792,7 @@
 	base_turf = /turf/simulated/floor/flesh
 	icon = 'icons/turf/areas.dmi'
 	icon_state = "blue"
-	flags = AREA_BLOCK_INSTANT_BUILDING | RAD_SHIELDED | AREA_BLOCK_SUIT_SENSORS | AREA_FLAG_IS_NOT_PERSISTENT | AREA_BLOCK_TRACKING | AREA_FORBID_EVENTS | AREA_BLOCK_GHOST_SIGHT | AREA_BLOCK_PHASE_SHIFT
+	flags = AREA_BLOCK_INSTANT_BUILDING | RAD_SHIELDED | AREA_BLOCK_SUIT_SENSORS | AREA_FLAG_IS_NOT_PERSISTENT | AREA_BLOCK_TRACKING | AREA_FORBID_EVENTS | AREA_BLOCK_PHASE_SHIFT
 	sound_env = SPACE
 	ambience = AMBIENCE_MEATZONE
 	music = 'sound/ambience/approaching_planet.ogg'

@@ -18,6 +18,7 @@
 #include "den_G.dmm"
 #include "pond_A.dmm"
 #include "pond_B.dmm"
+#include "pond_C.dmm"
 #include "cave_A.dmm"
 #include "cave_B.dmm"
 #include "hall_A.dmm"
@@ -100,8 +101,18 @@
 #include "stowaway_C.dmm"
 #include "stowaway_D.dmm"
 #include "stowaway_E.dmm"
+#include "stowaway_F.dmm"
+#include "stowaway_G.dmm"
+#include "stowaway_H.dmm"
+#include "stowaway_I.dmm"
+#include "stowaway_J.dmm"
+#include "stowaway_K.dmm"
+#include "stowaway_L.dmm"
+#include "stowaway_M.dmm"
 #include "sinkhole_A.dmm"
 #include "hideout_A.dmm"
+#include "expie_A.dmm"
+#include "expie_B.dmm"
 #endif
 
 /datum/map_template/outpost21/muriki/caves_deepdark
@@ -543,6 +554,14 @@
 	discard_prob = 20
 	cost = 15
 
+/datum/map_template/outpost21/muriki/caves_deepdark/pond_C
+	name = "Pond C"
+	desc = "Frog pond."
+	mappath = "modular_outpost/maps/submaps/deepdark/pond_C.dmm"
+	allow_duplicates = TRUE
+	discard_prob = 20
+	cost = 15
+
 //////////////////////////////////////////////////////////////
 // Huge structures in the cave
 /datum/map_template/outpost21/muriki/caves_deepdark_huge/pit_A
@@ -920,12 +939,76 @@
 	discard_prob = 20
 	cost = 40
 
+/datum/map_template/outpost21/muriki/caves_deepdark_huge/stowaway_F
+	name = "Stowaway F"
+	desc = "An old stowaway structure."
+	mappath = "modular_outpost/maps/submaps/deepdark/stowaway_F.dmm"
+	allow_duplicates = FALSE
+	discard_prob = 10
+	cost = 30
+
+/datum/map_template/outpost21/muriki/caves_deepdark_huge/stowaway_G
+	name = "Stowaway G"
+	desc = "An old stowaway structure."
+	mappath = "modular_outpost/maps/submaps/deepdark/stowaway_G.dmm"
+	allow_duplicates = FALSE
+	discard_prob = 10
+	cost = 30
+
+/datum/map_template/outpost21/muriki/caves_deepdark_huge/stowaway_H
+	name = "Stowaway H"
+	desc = "An old stowaway structure."
+	mappath = "modular_outpost/maps/submaps/deepdark/stowaway_H.dmm"
+	allow_duplicates = FALSE
+	discard_prob = 20
+	cost = 30
+
+/datum/map_template/outpost21/muriki/caves_deepdark_huge/stowaway_I
+	name = "Stowaway I"
+	desc = "An old stowaway structure."
+	mappath = "modular_outpost/maps/submaps/deepdark/stowaway_I.dmm"
+	allow_duplicates = FALSE
+	discard_prob = 10
+	cost = 30
+
+/datum/map_template/outpost21/muriki/caves_deepdark_huge/stowaway_J
+	name = "Stowaway J"
+	desc = "An old stowaway structure."
+	mappath = "modular_outpost/maps/submaps/deepdark/stowaway_J.dmm"
+	allow_duplicates = FALSE
+	discard_prob = 20
+	cost = 30
+
+/datum/map_template/outpost21/muriki/caves_deepdark_huge/stowaway_K
+	name = "Stowaway K"
+	desc = "An old stowaway structure."
+	mappath = "modular_outpost/maps/submaps/deepdark/stowaway_K.dmm"
+	allow_duplicates = FALSE
+	discard_prob = 20
+	cost = 40
+
+/datum/map_template/outpost21/muriki/caves_deepdark_huge/stowaway_L
+	name = "Stowaway L"
+	desc = "An old stowaway structure."
+	mappath = "modular_outpost/maps/submaps/deepdark/stowaway_L.dmm"
+	allow_duplicates = FALSE
+	discard_prob = 30
+	cost = 45
+
+/datum/map_template/outpost21/muriki/caves_deepdark_huge/stowaway_M
+	name = "Stowaway M"
+	desc = "An old stowaway structure."
+	mappath = "modular_outpost/maps/submaps/deepdark/stowaway_M.dmm"
+	allow_duplicates = FALSE
+	discard_prob = 30
+	cost = 45
+
 /datum/map_template/outpost21/muriki/caves_deepdark_huge/sinkhole_A
 	name = "Sinkhole A"
 	desc = "An unstable section of cavern waiting to collapse."
 	mappath = "modular_outpost/maps/submaps/deepdark/sinkhole_A.dmm"
 	allow_duplicates = TRUE
-	discard_prob = 40
+	discard_prob = 10
 	cost = 30
 
 /datum/map_template/outpost21/muriki/caves_deepdark_huge/hideout_A
@@ -935,6 +1018,23 @@
 	discard_prob = 35
 	cost = 40
 
+/datum/map_template/outpost21/muriki/caves_deepdark_huge/expie_A
+	name = "Expie A"
+	desc = "The ruins of an old expie outpost."
+	mappath = "modular_outpost/maps/submaps/deepdark/expie_A.dmm"
+	allow_duplicates = FALSE
+	discard_prob = 25
+	cost = 40
+
+/datum/map_template/outpost21/muriki/caves_deepdark_huge/expie_B
+	name = "Expie B"
+	desc = "The ruins of an old expie outpost."
+	mappath = "modular_outpost/maps/submaps/deepdark/expie_B.dmm"
+	allow_duplicates = FALSE
+	discard_prob = 15
+	cost = 20
+
+
 //////////////////////////////////////////////////////////////
 // Area definitions
 /area/mine/explored/muriki/cave/deepdark
@@ -942,7 +1042,7 @@
 	sound_env = TUNNEL_ENCLOSED
 	icon_state = "orange"
 	always_unpowered = TRUE
-	flags = AREA_BLOCK_GHOST_SIGHT | AREA_FORBID_EVENTS | AREA_FLAG_IS_NOT_PERSISTENT
+	flags = AREA_FORBID_EVENTS | AREA_FLAG_IS_NOT_PERSISTENT
 	haunted = TRUE
 	color_grading = COLORTINT_UNDERDARK
 	ambience = AMBIENCE_UNDERDARK
@@ -951,7 +1051,7 @@
 	sound_env = TUNNEL_ENCLOSED
 	icon_state = "yellow"
 	always_unpowered = TRUE
-	flags = AREA_BLOCK_GHOST_SIGHT | AREA_FORBID_EVENTS | AREA_FLAG_IS_NOT_PERSISTENT
+	flags = AREA_FORBID_EVENTS | AREA_FLAG_IS_NOT_PERSISTENT
 	haunted = TRUE
 	color_grading = COLORTINT_UNDERDARK
 	ambience = AMBIENCE_UNDERDARK
@@ -959,7 +1059,7 @@
 /area/submap/outpost21/cave_liminal_A
 	name = "\improper Come Closer"
 	icon_state = "red2"
-	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS | AREA_SECRET_NAME | AREA_BLOCK_GHOST_SIGHT
+	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS | AREA_SECRET_NAME
 	sound_env = SOUND_ENVIRONMENT_PSYCHOTIC
 	ambience = AMBIENCE_UNDERDARK
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
@@ -970,7 +1070,7 @@
 	name = "\improper GET OUT"
 	var/show_name = "GET OUT" // replaces name
 	icon_state = "red2"
-	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS | AREA_SECRET_NAME | AREA_BLOCK_GHOST_SIGHT
+	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS | AREA_SECRET_NAME
 	always_unpowered = FALSE
 	requires_power = FALSE
 	sound_env = SOUND_ENVIRONMENT_AUDITORIUM
@@ -985,7 +1085,7 @@
 /area/submap/outpost21/cave_liminal_D
 	name = "\improper It Hurts"
 	icon_state = "red2"
-	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS | AREA_SECRET_NAME | AREA_BLOCK_GHOST_SIGHT
+	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS | AREA_SECRET_NAME
 	sound_env = SOUND_ENVIRONMENT_PSYCHOTIC
 	ambience = AMBIENCE_UNDERDARK
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
@@ -995,7 +1095,7 @@
 /area/submap/outpost21/cave_red_A
 	name = "\improper Our Pulsing Mass"
 	icon_state = "red2"
-	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS | AREA_SECRET_NAME | AREA_BLOCK_GHOST_SIGHT
+	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS | AREA_SECRET_NAME
 	sound_env = SOUND_ENVIRONMENT_CAVE
 	ambience = AMBIENCE_UNDERDARK
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
@@ -1004,7 +1104,7 @@
 
 /area/submap/outpost21/cave_red_B
 	name = "\improper Inside Us"
-	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS | AREA_SECRET_NAME | AREA_BLOCK_GHOST_SIGHT
+	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS | AREA_SECRET_NAME
 	icon_state = "red2"
 	sound_env = SOUND_ENVIRONMENT_CAVE
 	ambience = AMBIENCE_OTHERWORLDLY
@@ -1015,7 +1115,7 @@
 /area/submap/outpost21/cave_red_C
 	name = "\improper Touch Our Skin"
 	icon_state = "red2"
-	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS | AREA_SECRET_NAME | AREA_BLOCK_GHOST_SIGHT
+	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS | AREA_SECRET_NAME
 	sound_env = SOUND_ENVIRONMENT_CAVE
 	ambience = AMBIENCE_OTHERWORLDLY
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
@@ -1025,7 +1125,7 @@
 /area/submap/outpost21/yawn_A
 	name = "\improper We See"
 	icon_state = "red2"
-	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS | AREA_SECRET_NAME | AREA_BLOCK_GHOST_SIGHT
+	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS | AREA_SECRET_NAME
 	sound_env = SOUND_ENVIRONMENT_CARPETED_HALLWAY
 	ambience = AMBIENCE_GENERIC
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
@@ -1035,7 +1135,7 @@
 /area/submap/outpost21/yawn_B
 	name = "\improper We Remember"
 	icon_state = "red2"
-	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS | AREA_SECRET_NAME | AREA_BLOCK_GHOST_SIGHT
+	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS | AREA_SECRET_NAME
 	sound_env = SOUND_ENVIRONMENT_STONEROOM
 	ambience = AMBIENCE_OUTPOST
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
@@ -1045,7 +1145,7 @@
 /area/submap/outpost21/cross_A
 	name = "\improper We Are Found"
 	icon_state = "red2"
-	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS | AREA_SECRET_NAME | AREA_BLOCK_GHOST_SIGHT
+	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS | AREA_SECRET_NAME
 	sound_env = SOUND_ENVIRONMENT_BATHROOM
 	ambience = AMBIENCE_ARRIVALS
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
@@ -1055,7 +1155,7 @@
 /area/submap/outpost21/crashed_ufo
 	name = "\improper Unknown"
 	requires_power = FALSE
-	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS | AREA_SECRET_NAME | AREA_BLOCK_GHOST_SIGHT
+	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS | AREA_SECRET_NAME
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
 	sound_env = SOUND_ENVIRONMENT_STONEROOM
 	ambience = AMBIENCE_OTHERWORLDLY
@@ -1065,7 +1165,7 @@
 /area/submap/outpost21/dark_wizard_den
 	name = "\improper Stale Donut"
 	icon_state = "red2"
-	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS | AREA_SECRET_NAME | AREA_BLOCK_GHOST_SIGHT
+	flags = AREA_FLAG_IS_NOT_PERSISTENT | AREA_FORBID_EVENTS | AREA_SECRET_NAME
 	sound_env = SOUND_ENVIRONMENT_LIVINGROOM
 	ambience = AMBIENCE_FOREBODING
 	base_turf = /turf/simulated/mineral/floor/turfpack/muriki
@@ -1081,7 +1181,6 @@
 	sound_env = SOUND_ENVIRONMENT_ARENA
 	ambience = AMBIENCE_UNDERDARK
 	use_emergency_overlay = FALSE
-	flags = AREA_BLOCK_GHOST_SIGHT
 	haunted = TRUE
 	color_grading = COLORTINT_UNDERDARK
 

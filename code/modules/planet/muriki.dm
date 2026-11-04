@@ -146,8 +146,7 @@ GLOBAL_DATUM(planet_muriki, /datum/planet/muriki)
 				continue
 			var/turf/T = pick(holder.our_planet.planet_floors)
 			if((istype(T,/turf/simulated/floor/plating) || istype(T,/turf/simulated/floor/outpost_roof)) && T.is_outdoors())
-				var/turf/simulated/floor/F = T
-				F.wet_floor(1)
+				T.MakeSlippery(TURF_WET_WATER, 30 SECONDS, 60 SECONDS)
 
 // This gets called to do lightning periodically.
 // There is a seperate function to do the actual lightning strike, so that badmins can play with it.
@@ -1306,5 +1305,4 @@ GLOBAL_DATUM(planet_muriki, /datum/planet/muriki)
 							applied_damage = TRUE
 
 	if(applied_damage && ((org.damage >= 10 && prob(5)) || (org.damage >= 30 && prob(15)) || org.damage >= 80))
-		if(!(pick_zone == BP_GROIN || pick_zone == BP_TORSO))
-			org.droplimb(TRUE, DROPLIMB_ACID)
+		org.droplimb(TRUE, DROPLIMB_ACID)

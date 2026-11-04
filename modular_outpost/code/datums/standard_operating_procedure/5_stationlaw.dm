@@ -34,113 +34,115 @@
 			<hr>
 			<center><b>Confinement</center></b>
 			<br>Upon being processed by security and sentenced to a brig stay. A crew member is to have their clothing and all equipment removed from them. Upon being put into the brig, they must be supplied with shoes, clothing, a PDA, and any required medications. These items must not be the ones seized from them, with the exception of medications after reviewing contents. Their items must be returned to them upon their release from custody. Detained crew are entitled to medical examination upon request.
+			<br>
 			<br>Security officers are allowed Internal Confinement methods, also known as 'belly brigging', provided they have passed the appropriate 'internal confinement' exam (see related document) in lieu of any brig time or detention methods, to include initial arrest conditions. Security officers must have their grade reflected in their employment records for the method to be authorized. Security officers with a valid grade are encouraged to utilize this method with 'flighty' prisoners.
+			<br>
 			<br>All individuals charged with a felony, or any other 'hold until transfer' crime, are authorized to be 'bellybrigged' even by individuals not certified. Prisoners must be mind-scanned post arrest, and prior to any injury occurring. Individuals are authorized to be digested, presumed they are resleeved immediately upon an IAA, head of staff, or centcom representative for their trial, and may not be resleeved without security present to re-confine for the trial. Medical staff that knowingly resleeve individuals in such long-term confinement methods will be liable for the escape, or actions of the charged individual and may be charged under station SoP.
 			<hr>
 			<center><b>Infractions</center></b>
 			<br>
-			<br>Animal Cruelty: To inflict unnecessary suffering or harm upon animals with malicious intent. To include harassing or killing non-hazardous wildlife. Minimum sentence: 5 minutes, or 550 Thalers.
+			<br><b>Animal Cruelty</b>: To inflict unnecessary suffering or harm upon animals with malicious intent. To include harassing or killing non-hazardous wildlife. Minimum sentence: 5 minutes, or 550 Thalers.
 			<br>
-			<br>Assault: To use or threaten physical force against someone, without intent to kill or seriously injure. Minimum sentence: 10 minutes brig, 1000 Thalers
+			<br><b>Assault</b>: To use or threaten physical force against someone, without intent to kill or seriously injure. Minimum sentence: 10 minutes brig, 1000 Thalers
 			<br>
-			<br>Assault With a Deadly Weapon: To use or threaten physical force against someone with usage of a deadly weapon. Biting is considered a deadly weapon. Minimum sentence: 30 minutes, 1500 Thalers.
+			<br><b>Assault</b> With a Deadly Weapon: To use or threaten physical force against someone with usage of a deadly weapon. Biting is considered a deadly weapon. Minimum sentence: 30 minutes, 1500 Thalers.
 			<br>
-			<br>Attempted Murder: To attempt, with intent, to kill another crewmember but fail in the efforts to do so. Minimum sentence: 2000 thalers, trial required.
+			<br><b>Attempted Murder</b>: To attempt, with intent, to kill another crewmember but fail in the efforts to do so. Minimum sentence: 2000 thalers, trial required.
 			<br>
-			<br>Battery: To have unwanted, intentional, physical contact, even where the contact is nonviolent. Minimum sentence: 350 Thalers.
+			<br><b>Battery</b>: To have unwanted, intentional, physical contact, even where the contact is nonviolent. Minimum sentence: 350 Thalers.
 			<br>
-			<br>Bribery: To attempt to convince security or command to waive punishment or grant freedoms, through the usage of money or favors. Minimum charge: 30 minutes brig, 300 Thalers.
+			<br><b>Bribery</b>: To attempt to convince security or command to waive punishment or grant freedoms, through the usage of money or favors. Minimum charge: 30 minutes brig, 300 Thalers.
 			<br>
-			<br>Coercion: To force another crew member, through blackmail, force, or other methods, to commit crimes in your stead. Minimum sentence: 20 minutes brig, 300 Thalers, in addition to the charges of the coerced crimes.
+			<br><b>Coercion</b>: To force another crew member, through blackmail, force, or other methods, to commit crimes in your stead. Minimum sentence: 20 minutes brig, 300 Thalers, in addition to the charges of the coerced crimes.
 			<br>
-			<br>Conspiracy: To collaborate, but not directly assist, another individual who acts against the station or crew in violent or destructive manners. Minimum sentence: 30 minutes brig, 700 Thalers.
+			<br><b>Conspiracy</b>: To collaborate, but not directly assist, another individual who acts against the station or crew in violent or destructive manners. Minimum sentence: 30 minutes brig, 700 Thalers.
 			<br>
-			<br>Contraband: To be in possession of contraband that could pose a threat to the crew or station. Minimum sentence: Immediate search and seizure, 200 Thalers.
+			<br><b>Contraband</b>: To be in possession of contraband that could pose a threat to the crew or station. Minimum sentence: Immediate search and seizure, 200 Thalers.
 			<br>
-			<br>Dereliction of Duty: Deliberate or accidental failure to perform an obligation of one's profession without a valid excuse. Minimum sentence: 15 minutes brig, 1200 Thaler fine. If Felonious: Permanent Demotion.
+			<br><b>Dereliction of Duty</b>: Deliberate or accidental failure to perform an obligation of one's profession without a valid excuse. Minimum sentence: 15 minutes brig, 1200 Thaler fine. If Felonious: Permanent Demotion.
 			<br>
-			<br>Disrespect to the Dead: To abuse bodies of dead or previously dead employees, or to prevent the resleeving of a deceased crew member. Minimum sentence: 10 minutes brig, or 1000 Thalers.
+			<br><b>Disrespect to the Dead</b>: To abuse bodies of dead or previously dead employees, or to prevent the resleeving of a deceased crew member. Minimum sentence: 10 minutes brig, or 1000 Thalers.
 			<br>
-			<br>Disturbing the Peace: Engaging in public erotic acts, nudity without permit, excessive yelling for no reason, hazardously throwing items, minor harassment, etc. Minimum sentence: 3 minutes brig, or 300 Thalers.
+			<br><b>Disturbing the Peace</b>: Engaging in public erotic acts, nudity without permit, excessive yelling for no reason, hazardously throwing items, minor harassment, etc. Minimum sentence: 3 minutes brig, or 300 Thalers.
 			<br>
-			<br>Endangerment: To intentionally and consciously create an unsafe situation by disregarding proper precautions or safety. Minimum Sentence: 40 minutes brig, 1000 thalers.
+			<br><b>Endangerment</b>: To intentionally and consciously create an unsafe situation by disregarding proper precautions or safety. Minimum Sentence: 40 minutes brig, 1000 thalers.
 			<br>
-			<br>Escape from Confinement: To escape from confinement as someone who was serving a sentence or awaiting a court judgment. Minimum sentence: Re-capture, re-application of any previous crimes, 30 minutes brig. If escaping from a felony, lethal force is authorized.
+			<br><b>Escape from Confinement</b>: To escape from confinement as someone who was serving a sentence or awaiting a court judgment. Minimum sentence: Re-capture, re-application of any previous crimes, 30 minutes brig. If escaping from a felony, lethal force is authorized.
 			<br>
-			<br>Exceeding Official Powers: To act outside of what is allowed by the chain of command. Minimum sentence: 30 minutes brig.
+			<br><b>Exceeding Official Powers</b>: To act outside of what is allowed by the chain of command. Minimum sentence: 30 minutes brig.
 			<br>
-			<br>Excessive Use of Force: To use noticeably more than the required force to subdue a suspect or threat. Minimum sentence: 10 minutes brig, 550 Thalers, potential demotion.
+			<br><b>Excessive Use of Force</b>: To use noticeably more than the required force to subdue a suspect or threat. Minimum sentence: 10 minutes brig, 550 Thalers, potential demotion.
 			<br>
-			<br>Failure to Execute an Order: To ignore or disregard a lawful order from a superior. Minimum sentence: 5 minutes brig, 250 Thalers.
+			<br><b>Failure to Execute an Order</b>: To ignore or disregard a lawful order from a superior. Minimum sentence: 5 minutes brig, 250 Thalers.
 			<br>
-			<br>Failure to Obey Safety Protocol: To willfully ignore safety measures keeping crew out of a crisis zone. Minimum sentence: 10 minutes brig starting after the crisis is resolved, 600 Thalers.
+			<br><b>Failure to Obey Safety Protocol</b>: To willfully ignore safety measures keeping crew out of a crisis zone. Minimum sentence: 10 minutes brig starting after the crisis is resolved, 600 Thalers.
 			<br>
-			<br>Forgery: To falsify official documents or orders. Minimum sentence: Immediate search. 5 minutes brig, or 500 Thalers.
+			<br><b>Forgery</b>: To falsify official documents or orders. Minimum sentence: Immediate search. 5 minutes brig, or 500 Thalers.
 			<br>
-			<br>Grand Theft: To steal multiple items that either becomes felonious, or exceeds 2000 Thalers in value. Minimum sentence: Immediate search and seizure. Hold until transfer.
+			<br><b>Grand Theft</b>: To steal multiple items that either becomes felonious, or exceeds 2000 Thalers in value. Minimum sentence: Immediate search and seizure. Hold until transfer.
 			<br>
-			<br>Harassment: To persistently insult, stalk, ridicule, or otherwise bring undue stress upon another crew member. Minimum sentence: 5 minutes brig, 450 Thalers. Security should ensure to append any additional charges of Sexual Harassment, Slander, or other appropriate crimes on the nature of the harassment.
+			<br><b>Harassment</b>: To persistently insult, stalk, ridicule, or otherwise bring undue stress upon another crew member. Minimum sentence: 5 minutes brig, 450 Thalers. Security should ensure to append any additional charges of Sexual Harassment, Slander, or other appropriate crimes on the nature of the harassment.
 			<br>
-			<br>Illegal Detention: To arrest, brig, or punish a crew member without proper cause or reason. Minimum sentence: 30 minutes brig, demotion.
+			<br><b>Illegal Detention</b>: To arrest, brig, or punish a crew member without proper cause or reason. Minimum sentence: 30 minutes brig, demotion.
 			<br>
-			<br>Illegal parking: To park a vehicle in such a way that it becomes a nuisance or hazard to crew movement. Minimum sentence: Immediate impound of the vehicle, 500 Thalers. Vehicle cannot be returned from impound until the fine is paid.
+			<br><b>Illegal parking</b>: To park a vehicle in such a way that it becomes a nuisance or hazard to crew movement. Minimum sentence: Immediate impound of the vehicle, 500 Thalers. Vehicle cannot be returned from impound until the fine is paid.
 			<br>
-			<br>Kidnapping: To forcibly imprison, detain, or restrict movement of a crew member, when NOT acting in a lawful security manner. Minimum sentence: 1 hour brig, 2000 Thalers.
+			<br><b>Kidnapping</b>: To forcibly imprison, detain, or restrict movement of a crew member, when NOT acting in a lawful security manner. Minimum sentence: 1 hour brig, 2000 Thalers.
 			<br>
-			<br>Littering:  To negligently leave trash, gibs, spills, or other bits of waste around the station. Or failing to restart a malfunctioning disposal outlet.  Minimum sentence:  5 minutes brig, or 200 Thalers and appropriate community service.
+			<br><b>Littering</b>:  To negligently leave trash, gibs, spills, or other bits of waste around the station. Or failing to restart a malfunctioning disposal outlet.  Minimum sentence:  5 minutes brig, or 200 Thalers and appropriate community service.
 			<br>
-			<br>Manslaughter: To accidentally kill a crew member, often through negligence, without malice or forethought. Minimum sentence: 1 hour brig, 2000 Thalers. Trial required.
+			<br><b>Manslaughter</b>: To accidentally kill a crew member, often through negligence, without malice or forethought. Minimum sentence: 1 hour brig, 2000 Thalers. Trial required.
 			<br>
-			<br>Medical Malpractice: To fail to deliver a reasonable, professional standard of medical treatment to a patient, or to interfere in the delivery of medical care to a patient. Minimum sentence: 1 hour brig, 2000 thaler fine. Extreme situations may cause revocation of medical license.
+			<br><b>Medical Malpractice</b>: To fail to deliver a reasonable, professional standard of medical treatment to a patient, or to interfere in the delivery of medical care to a patient. Minimum sentence: 1 hour brig, 2000 thaler fine. Extreme situations may cause revocation of medical license.
 			<br>
-			<br>Mistreatment of Prisoners To intentionally act, or cause an act, that puts a non-hostile prisoner's well-being in danger. Minimum sentence: 20 minutes brig.
+			<br><b>Mistreatment of Prisoners</b>: To intentionally act, or cause an act, that puts a non-hostile prisoner's well-being in danger. Minimum sentence: 20 minutes brig.
 			<br>
-			<br>Misuse of public radio: To continually broadcast unimportant, untrue, or insignificant messages on public comms, or to continually speak in a non-standard language on public comms. Minimum sentence: Warning, 150 Thalers.
+			<br><b>Misuse of public radio</b>: To continually broadcast unimportant, untrue, or insignificant messages on public comms, or to continually speak in a non-standard language on public comms. Minimum sentence: Warning, 150 Thalers.
 			<br>
-			<br>Murder: To intentionally kill a crew member with premeditated intent. Minimum Sentence: Hold Until Transfer. Trial required.
+			<br><b>Murder</b>: To intentionally kill a crew member with premeditated intent. Minimum Sentence: Hold Until Transfer. Trial required.
 			<br>
-			<br>Negligence: To fail to perform a job to a safe standard, or create a dangerous situation by lack of proper precautions. Minimum sentence: 200 Thalers.
+			<br><b>Negligence</b>: To fail to perform a job to a safe standard, or create a dangerous situation by lack of proper precautions. Minimum sentence: 200 Thalers.
 			<br>
-			<br>Obstruction of Duty: To negatively interfere with the duties of the crew. Minimum sentence: Warning, 200 Thalers. (See also: Sabotage)
+			<br><b>Obstruction of Duty</b>: To negatively interfere with the duties of the crew. Minimum sentence: Warning, 200 Thalers. (See also: Sabotage)
 			<br>
-			<br>Operating Under the Influence: To operate heavy machinery, vehicles, or sensitive/dangerous equipment while under the influence of drugs or alcohol. Minimum sentence: Indefinite hold until sobriety, 400 Thalers. Security must review any additional consequences of the operation to verify other charges.
+			<br><b>Operating Under the Influence</b>: To operate heavy machinery, vehicles, or sensitive/dangerous equipment while under the influence of drugs or alcohol. Minimum sentence: Indefinite hold until sobriety, 400 Thalers. Security must review any additional consequences of the operation to verify other charges.
 			<br>
-			<br>Organizing a Breakout: To attempt, or succeed, in freeing criminals from the brig or other holding areas. Minimum sentence: 30 minutes brig.
+			<br><b>Organizing a Breakout</b>: To attempt, or succeed, in freeing criminals from the brig or other holding areas. Minimum sentence: 30 minutes brig.
 			<br>
-			<br>Piracy: To rob a visiting vessel of goods, and/or injure its crew while aboard said vessel. Minimum sentence: Hold Until Transfer. Central Command Tribunal required.
+			<br><b>Piracy</b>: To rob a visiting vessel of goods, and/or injure its crew while aboard said vessel. Minimum sentence: Hold Until Transfer. Central Command Tribunal required.
 			<br>
-			<br>Resisting Arrest: To not cooperate with an officer who attempts a lawful arrest, or to evade search. Minimum sentence: 10 minutes brig.
+			<br><b>Resisting Arrest</b>: To not cooperate with an officer who attempts a lawful arrest, or to evade search. Minimum sentence: 10 minutes brig.
 			<br>
-			<br>Rubbernecking: Arriving at the scene of an emergency with no other intention than to observe. Minimum sentence: Forceful removal as a code-yellow threat, indefinite hold until the crisis is resolved.
+			<br><b>Rubbernecking</b>: Arriving at the scene of an emergency with no other intention than to observe. Minimum sentence: Forceful removal as a code-yellow threat, indefinite hold until the crisis is resolved.
 			<br>
-			<br>Terrorism: To engage in acts of violence or destruction, aimed to cause fear to further one's political, religious, or ideological cause. Minimum sentence: Hold Until Transfer.
+			<br><b>Terrorism</b>: To engage in acts of violence or destruction, aimed to cause fear to further one's political, religious, or ideological cause. Minimum sentence: Hold Until Transfer.
 			<br>
-			<br>Theft: To take items from areas one does not have access to, or to take items belonging to others or the station. Minimum sentence: Immediate search, seizure of any illicit items, 5 minutes brig.
+			<br><b>Theft</b>: To take items from areas one does not have access to, or to take items belonging to others or the station. Minimum sentence: Immediate search, seizure of any illicit items, 5 minutes brig.
 			<br>
-			<br>Trespassing: To be in an area which a person does not have access to, without permission from those that have access. Or: to be located near a department that has asked you to leave the area. Minimum sentence: 10 minutes brig, or 300 Thalers. Borgs are not exempt from trespassing. Though they have station access, they must have a reason for their presence.
+			<br><b>Trespassing</b>: To be in an area which a person does not have access to, without permission from those that have access. Or: to be located near a department that has asked you to leave the area. Minimum sentence: 10 minutes brig, or 300 Thalers. Borgs are not exempt from trespassing. Though they have station access, they must have a reason for their presence.
 			<br>
-			<br>Sabotage: To hinder the efforts of the crew of station with malicious intent. Minimum sentence: 1 hour brig, 3000 Thaler fine.
+			<br><b>Sabotage</b>: To hinder the efforts of the crew of station with malicious intent. Minimum sentence: 1 hour brig, 3000 Thaler fine.
 			<br>
-			<br>Sedition/Mutiny: To incite rebellion, or rally against the chain of command. Minimum sentence: Felony. Lethal force authorized.
+			<br><b>Sedition/Mutiny</b>: To incite rebellion, or rally against the chain of command. Minimum sentence: Felony. Lethal force authorized.
 			<br>
-			<br>Suspicious Conduct: To possess a suspiciously large skill set not indicated in records, inquiry about sensitive areas or topics, attempts of impersonation, attempting to conceal identity, possessing equipment not related to a current job or department, etc. Minimum sentence: Immediate search, indefinite hold until investigations are complete, 1000 Thaler fine.
+			<br><b>Suspicious Conduct</b>: To possess a suspiciously large skill set not indicated in records, inquiry about sensitive areas or topics, attempts of impersonation, attempting to conceal identity, possessing equipment not related to a current job or department, etc. Minimum sentence: Immediate search, indefinite hold until investigations are complete, 1000 Thaler fine.
 			<br>
-			<br>Sexual Assault: To assault, or attempt to assault, another crew member sexually. Minimum sentence: Infraction. 2 hours brig, 2700 Thalers, demotion.
+			<br><b>Sexual Assault</b>: To assault, or attempt to assault, another crew member sexually. Minimum sentence: Infraction. 2 hours brig, 2700 Thalers, demotion.
 			<br>
-			<br>Sexual Harassment: To make unwanted sexual advances or obscene remarks towards another employee. Minimum Sentence: 10 minutes brig, OR 650 Thalers.
+			<br><b>Sexual Harassment</b>: To make unwanted sexual advances or obscene remarks towards another employee. Minimum Sentence: 10 minutes brig, OR 650 Thalers.
 			<br>
-			<br>Slander: To spread false rumors in order to damage another crew member's reputation. Minimum sentence: 5 minutes brig, or 450 Thaler fine.
+			<br><b>Slander</b>: To spread false rumors in order to damage another crew member's reputation. Minimum sentence: 5 minutes brig, or 450 Thaler fine.
 			<br>
-			<br>Suicide Attempt:  To attempt, or threaten with intent, to commit suicide.  Minimum sentence:  Indefinite hold in solitary confinement until a psychiatric review is able to be performed.
+			<br><b>Suicide Attempt</b>:  To attempt, or threaten with intent, to commit suicide.  Minimum sentence:  Indefinite hold in solitary confinement until a psychiatric review is able to be performed.
 			<br>
-			<br>Unlawful Modification of Cyborg/AI laws:  To modify the laws of a Cyborg or artificial intelligence without: need, proper access, or authority.  Minimum sentence:  20 minutes, 1400 Thaler fine. Security should apply any trespassing charges as necessary.
+			<br><b>Unlawful Modification of Cyborg/AI laws</b>:  To modify the laws of a Cyborg or artificial intelligence without: need, proper access, or authority.  Minimum sentence:  20 minutes, 1400 Thaler fine. Security should apply any trespassing charges as necessary.
 			<br>
-			<br>Wrongful Execution:  To execute a crew member that was later found to be innocent.  Minimum charge:  Hold Until Tribunal.
+			<br><b>Wrongful Execution</b>:  To execute a crew member that was later found to be innocent.  Minimum charge:  Hold Until Tribunal.
 			<br>
-			<br>Vandalism:  To deliberately damage or deface the station without malicious intent, to include damage or defacement to robots.  Minimum sentence:  10 minutes brig, or 400 Thalers and appropriate community service.
+			<br><b>Vandalism</b>:  To deliberately damage or deface the station without malicious intent, to include damage or defacement to robots.  Minimum sentence:  10 minutes brig, or 400 Thalers and appropriate community service.
 			<br>
-			<br>Violation of Employee Rights:  To deliberately deny an employee rights outlined in the Employee Rights SoP.  Minimum sentence:  Warning, 100 Thalers.
+			<br><b>Violation of Employee Rights</b>:  To deliberately deny an employee rights outlined in the Employee Rights SoP.  Minimum sentence:  Warning, 100 Thalers.
 			<br>
-			<br>Violation of Employee Privacy:  To conduct illegal searches and seizures, covertly surveying crew or conducting prolonged camera observation, or a breach of patient confidentiality.  Minimum sentence:  30 minutes. All evidence gathered illegally is null.
+			<br><b>Violation of Employee Privacy</b>:  To conduct illegal searches and seizures, covertly surveying crew or conducting prolonged camera observation, or a breach of patient confidentiality.  Minimum sentence:  30 minutes. All evidence gathered illegally is null.
 			<br>
-			<br>Violation of Injunction:  To violate the terms of any injunction made by security staff, command staff, or any other legal authority.  Minimum sentence:  10 minutes brig, 400 Thalers."}
+			<br><b>Violation of Injunction</b>:  To violate the terms of any injunction made by security staff, command staff, or any other legal authority.  Minimum sentence:  10 minutes brig, 400 Thalers."}

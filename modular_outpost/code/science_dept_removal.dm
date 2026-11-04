@@ -41,3 +41,18 @@
 
 /datum/techweb_node/fireworks
 	announce_channels = list(CHANNEL_SCIENCE, CHANNEL_ENGINEERING, CHANNEL_SUPPLY)
+
+/datum/techweb_node/mining
+	announce_channels = list(CHANNEL_SUPPLY)
+
+/datum/techweb_node/low_pressure_excavation
+	announce_channels = list(CHANNEL_SUPPLY)
+
+/datum/techweb_node/plasma_mining
+	announce_channels = list(CHANNEL_SUPPLY)
+
+/datum/techweb_node/mining_adv
+	announce_channels = list(CHANNEL_SUPPLY)
+
+/datum/techweb_node/mining_lights
+	announce_channels = list(CHANNEL_SUPPLY)

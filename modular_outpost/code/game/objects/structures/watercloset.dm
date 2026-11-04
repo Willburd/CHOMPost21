@@ -10,6 +10,7 @@
 		process()
 		soundloop.start()
 	addtimer(CALLBACK(src, PROC_REF(auto_stop)), 10 SECONDS, TIMER_DELETE_ME)
+	. = ..()
 
 /obj/machinery/shower/automated/proc/auto_stop()
 	if(!on)

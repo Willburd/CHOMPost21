@@ -13,6 +13,10 @@
 /turf/simulated/floor/water/break_tile()
 	return
 
+// Fix blood
+/turf/simulated/floor/water/blood/indoor
+	outdoors = OUTDOORS_NO
+
 // Outpost unique water
 
 /turf/simulated/floor/water/acidic

@@ -21,3 +21,21 @@
 /obj/item/encryptionkey/omni/Initialize(mapload)
 	channels |= list(CHANNEL_SEC_ALPHA = 1, CHANNEL_SEC_BRAVO = 1, CHANNEL_SEC_CHARLIE = 1, CHANNEL_SEC_DELTA = 1)
 	. = ..()
+
+/obj/item/encryptionkey/heads/Initialize(mapload)
+	channels |= list(CHANNEL_SCIENCE)
+	. = ..()
+
+/obj/item/encryptionkey/headset_com/Initialize(mapload)
+	channels |= list(CHANNEL_SCIENCE)
+	. = ..()
+
+
+// Robots
+/obj/item/robot_module/robot/clerical/Initialize(mapload)
+	. = ..()
+	channels |= list(CHANNEL_SCIENCE = 1)
+
+/obj/item/robot_module/robot/research/Initialize(mapload)
+	. = ..()
+	channels |= list(CHANNEL_COMMAND = 1)

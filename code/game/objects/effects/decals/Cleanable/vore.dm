@@ -14,9 +14,9 @@
 /obj/effect/decal/cleanable/blood/reagent/Initialize(mapload, spill_name, spill_color, spill_reagentid, new_amount, ckey_user, ckey_spawn)
 	. = ..()
 	switch(spill_reagentid)	//To ensure that if people spill some liquids, it wont cause issues with spawning, like spilling blood. Also allow for spilling of certain things to
-		if(REAGENT_ID_BLOOD)
+		if("blood")
 			return
-		if(REAGENT_ID_WATER)		//Dont recall if we have a water puddle system, but keeping this blacklisted, would be silly with dried water puddles.
+		if("water")		//Dont recall if we have a water puddle system, but keeping this blacklisted, would be silly with dried water puddles.
 			return
 
 	ckey_source = ckey_spawn
@@ -43,8 +43,9 @@
 	name = custombasename
 	desc = custombasedesc
 
-	cut_overlays()
-	add_janitor_hud_overlay()
-
+//This will just be an issue until someone fixes this which will probably not happen
 /obj/effect/decal/cleanable/blood/reagent/Crossed(mob/living/carbon/human/perp)
 	//Nothing, we dont wanna spread our mess all over, at least not until people want that
+	//return //Not anymore
+	amount = 0 //Reo, you're so smart. This really need to be refactored to not be a blood subtype holy shit.
+	. = ..() //Fuck you.

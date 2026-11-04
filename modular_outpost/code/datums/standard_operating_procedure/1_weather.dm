@@ -3,10 +3,15 @@
 	author = "E-Shui Official"
 	body = {"<center><b>Weather</center></b>
 			<br>There are many hazards in a world undergoing the E-Shui terraforming process, crew are expected to be aware of these hazards and act accordingly to their station and common sense.
+			<br>
 			<br>Outside the station, the planet's weather contains an acidic enzymatic rainfall, this is an intentional product of the Terraformer that reacts with the native ground soil to produce a thick atmosphere of Nitrogen and Oxygen, and force the climate to begin altering. It is also incredibly hostile to station organic life, and will cause massive acid burns and melted limbs. In foggy conditions, the acidic vapors remain in the air in a smaller concentration, which can cause severe lung damage when inhaled, and severe eye damage with prolonged exposure.
+			<br>
 			<br>Crew going outside must prepare accordingly. Umbrellas to protect from rain and hail. Masks, goggles, and internal air supplies are highly recommended incase weather changes.
+			<br>
 			<br>Underground has a runoff river from the Terraformer's waste products and condensation. This river is even more hazardous than the rain and can dissolve limbs in minutes. Crew must beware of any waterways, puddles, and rapids within the river.<hr>
+			<br>
 			<br>Crew are not to swim in the river.<br>Crew are not to drink water from the river.<br>
+			<br>
 			<br>Crew are not to play in puddles outside.<br>Crew are not to collect rainwater, except for research, quality control, and terraformer health analysis.<br>Crew are not to play along river banks.<br>Crew are not to go rafting in river rapids.<br>Crew are not to go diving or snorkling in the river.<br>Crew are not to go fishing in the river.<br>Crew are not to go water-skiing in the river.<br>Crew are not to go 'lazy river tubing' in the river.<br>Crew are allowed to use boats carefully when in the river.<br>
 			<hr>
 			<center><b>Terraformer</center></b>

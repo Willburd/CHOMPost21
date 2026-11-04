@@ -454,12 +454,7 @@
 	if(!prob(chance))
 		return
 	var/turf/simulated/floor/T = get_turf(src)
-	T.wet = TURFSLIP_WET
-	if(T.wet_overlay)
-		return
-	T.wet_overlay = image('icons/effects/water.dmi', icon_state = "wet_floor")
-	T.add_overlay(T.wet_overlay)
-
+	T.MakeSlippery(TURF_WET_WATER, INFINITY, 0, INFINITY, TRUE)
 
 // lube floor with no end timer
 /obj/effect/landmark/lube_floor
@@ -487,11 +482,7 @@
 	if(!prob(chance))
 		return
 	var/turf/simulated/floor/T = get_turf(src)
-	T.wet = TURFSLIP_LUBE
-	if(T.wet_overlay)
-		return
-	T.wet_overlay = image('icons/effects/water.dmi', icon_state = "wet_floor")
-	T.add_overlay(T.wet_overlay)
+	T.MakeSlippery(TURF_WET_SUPERLUBE, INFINITY, 0, INFINITY, TRUE)
 
 
 // Damage wires
@@ -521,3 +512,34 @@
 		return
 	var/obj/structure/cable/wire = locate() in get_turf(src)
 	wire.fray()
+
+
+// Weld Doors
+/obj/effect/landmark/weld_doors
+	name = "weld door 0%"
+	var/chance = 0
+	delete_me = TRUE
+
+/obj/effect/landmark/weld_doors/Initialize(mapload)
+	..()
+	return INITIALIZE_HINT_LATELOAD
+
+/obj/effect/landmark/weld_doors/twentyfive
+	name = "weld door 25%"
+	chance = 25
+
+/obj/effect/landmark/weld_doors/fifty
+	name = "weld door 50%"
+	chance = 50
+
+/obj/effect/landmark/weld_doors/always_frayed
+	name = "weld door 100%"
+	chance = 100
+
+/obj/effect/landmark/weld_doors/LateInitialize()
+	if(!prob(chance))
+		return
+	var/obj/machinery/door/airlock/A = locate() in get_turf(src)
+	if(A)
+		A.welded = TRUE
+		A.update_icon()

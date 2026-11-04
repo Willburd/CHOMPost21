@@ -63,6 +63,8 @@
 		return stars(SP.message)
 
 /mob/proc/hear_say(list/message_pieces, verb = "says", italics = 0, mob/speaker = null, sound/speech_sound, sound_vol)
+	SEND_SIGNAL(src, COMSIG_MOB_HEAR_SAY, message_pieces, verb, italics, speaker, speech_sound, sound_vol) // Outpost 21 edit(port) - Mob hear signal
+
 	if(!client && !teleop)
 		return FALSE
 
@@ -193,6 +195,8 @@
 	return tagged_message
 
 /mob/proc/hear_radio(list/message_pieces, verb = "says", part_a, part_b, part_c, part_d, part_e, mob/speaker = null, hard_to_hear = 0, vname = "")
+	SEND_SIGNAL(src, COMSIG_MOB_HEAR_SAY, message_pieces, verb, FALSE, speaker, null, 0) // Outpost 21 edit(port) - Mob hear signal
+
 	if(!client)
 		return
 

@@ -33,7 +33,7 @@
 			<br><center><b>OPERATION:</b></center>
 			<br>Usage of the station's resleever device has been attempted to be simplified for standard medical usage. All medical professionals should be trained on its operation within 3 months of hire.
 			<br>
-			<br><center>For standard crew:</center>
+			<br><center><b>For standard crew</b>:</center>
 			<br>To operate the machine; fist ensure appropriate biomass is loaded into the growth pod. Unused biomass must be cleaned out at the end of the day to avoid spoilage.
 			<br>Check the patient's medical record PRIOR to resleeving to ensure there is no breach of patient rights, and ensure the patient is confirmed deceased.
 			<br>Utilize the control console to review the station list of all known body and mind records, and to select the correct machines, especially in a setup with multiple resleevers present, a local wireless connection will list the nearby machines. Ensure a record of both exists for your patient. If they do, utilizing the body record section, initiate a growth cycle.

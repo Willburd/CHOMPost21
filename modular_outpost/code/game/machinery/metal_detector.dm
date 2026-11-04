@@ -63,6 +63,7 @@
 		return
 
 /obj/machinery/metal_detector/Crossed(atom/movable/AM)
+	. = ..()
 	if(stat & (NOPOWER|BROKEN) || !anchored)
 		return
 	if(istype(AM, /obj/effect/abstract))

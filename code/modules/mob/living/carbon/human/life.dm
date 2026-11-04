@@ -68,7 +68,7 @@
 
 			SEND_SIGNAL(src,COMSIG_HANDLE_ALLERGENS, chem_effects[CE_ALLERGEN])
 
-			handle_medical_side_effects()
+			//handle_medical_side_effects() // Disabled, the code was non-functional for a decade, randomly readding it because it's suddenly fixed is undesired currently.
 
 			handle_heartbeat()
 			// handle_nif() // Outpost 21 edit - Nif removal
@@ -2086,7 +2086,7 @@
 				temp = PULSE_NONE
 				break //No amount of medications is getting you out of this.
 			if(R.id in GLOB.cheartstopper) //Conditional heart-stoppage
-				if(R.volume >= R.overdose)
+				if(R.is_overdosing(src)) // Outpost 21 edit(port) - Overdosing chems retain their overdose even if you go under the OD
 					temp = PULSE_NONE
 					break //No amount of medications is getting you out of this.
 		return CLAMP(round(temp * brain_modifier), 0, PULSE_THREADY)
@@ -2102,7 +2102,7 @@
 		if(R.id in GLOB.heartstopper) //To avoid using fakedeath
 			temp = PULSE_NONE
 		if(R.id in GLOB.cheartstopper) //Conditional heart-stoppage
-			if(R.volume >= R.overdose)
+			if(R.is_overdosing(src)) // Outpost 21 edit(port) - Overdosing chems retain their overdose even if you go under the OD
 				temp = PULSE_NONE
 
 	return CLAMP(round(temp * brain_modifier), 0, PULSE_THREADY)

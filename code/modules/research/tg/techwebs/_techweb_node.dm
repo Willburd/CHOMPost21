@@ -118,17 +118,12 @@
 /datum/techweb_node/proc/on_station_research(atom/research_source)
 	SHOULD_CALL_PARENT(TRUE)
 	// Outpost 21 edit begin - Allow radio messages
-	/* // Disabled again, but keeping outpost code
-	var/source_dept = "Science"
+	var/source_dept = CHANNEL_COMMAND
 	if(istype(research_source, /obj/machinery/computer/rdconsole_tg)) // Show if a remote research console researched a tech instead of science!
 		var/obj/machinery/computer/rdconsole_tg/console = research_source
 		if(console.filter_department)
 			source_dept = console.filter_department
-	var/channels_to_use = announce_channels
-	if(length(channels_to_use) && !starting_node)
-		for(var/channel in channels_to_use)
-			GLOB.global_announcer.autosay("[source_dept] just researched node \"[display_name]\".", "Science Announcer", channel)
-	*/
+	GLOB.global_announcer.autosay("[source_dept] just researched node \"[display_name]\".", "Research Announcer", CHANNEL_SCIENCE)
 	// Outpost 21 edit end
 	// if(istype(research_source, /obj/machinery/computer/rdconsole))
 	// 	var/obj/machinery/computer/rdconsole/console = research_source

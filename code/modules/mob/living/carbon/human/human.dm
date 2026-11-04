@@ -288,12 +288,11 @@
 // called when something steps onto a human
 // this handles mobs on fire - mulebot and vehicle code has been relocated to /mob/living/Crossed()
 /mob/living/carbon/human/Crossed(atom/movable/AM)
+	. = ..() // call parent because we moved behavior to parent
 	if(AM.is_incorporeal())
 		return
 
 	spreadFire(AM)
-
-	..() // call parent because we moved behavior to parent
 
 // Get rank from ID, ID inside PDA, PDA, ID in wallet, etc.
 /mob/living/carbon/human/proc/get_authentification_rank(if_no_id = "No id", if_no_job = "No job")
@@ -979,6 +978,8 @@
 	for(var/mob/living/carbon/h in GLOB.mob_list)
 		if(h == src || istype(h,/mob/living/carbon/human/monkey/auto_doc)) // Outpost 21 edit(port) - autodocs hidden
 			continue
+		if(!h.client) // Outpost 21 edit - Do not show clientless mobs in remote speakto list
+			continue
 		creatures += h
 	var/mob/target = tgui_input_list(src, "Who do you want to project your mind to?", "Project Mind", creatures)
 	if (isnull(target))
@@ -1494,23 +1495,6 @@
 		if(lungs && istype(lungs) && !(lungs.status & ORGAN_CUT_AWAY))
 			return TRUE
 	return FALSE
-
-/mob/living/carbon/human/slip(slipped_on, stun_duration=8)
-	var/list/equipment = list(src.w_uniform,src.wear_suit,src.shoes)
-	var/footcoverage_check = FALSE
-	for(var/obj/item/clothing/C in equipment)
-		if(C.body_parts_covered & FEET)
-			footcoverage_check = TRUE
-			break
-	if(lying)
-		playsound(src, 'sound/misc/slip.ogg', 25, 1, -1)
-		drop_both_hands()
-		return FALSE
-	if((species.flags & NO_SLIP && !footcoverage_check) || (shoes && (shoes.item_flags & NOSLIP))) //Footwear negates a species' natural traction.
-		return FALSE
-	if(..(slipped_on,stun_duration))
-		drop_both_hands()
-		return TRUE
 
 /mob/living/carbon/human/proc/relocate()
 	set category = "Object"

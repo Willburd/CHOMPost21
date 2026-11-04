@@ -197,9 +197,12 @@
 		if(CHEM_TOUCH)
 			affect_touch(M, alien, removed)
 	on_mob_metabolize(M, location)
-	if(overdose && (volume > overdose * M?.species.chemOD_threshold) && (active_metab.metabolism_class != CHEM_TOUCH || can_overdose_touch))
+	// Outpost 21 edit(port) begin - Overdosing chems retain their overdose even if you go under the OD
+	if(is_overdosing(M) && (active_metab.metabolism_class != CHEM_TOUCH || can_overdose_touch))
 		overdose(M, alien, removed)
-	if((M.species.allergens & allergen_type))	//uhoh, we can't handle this!
+		has_overdosed = TRUE
+	// Outpost 21 edit end
+	if((M.species && (M.species.allergens & allergen_type)))	//uhoh, we can't handle this!
 		M.add_chemical_effect(CE_ALLERGEN, allergen_factor * removed)
 	remove_self(removed)
 	return

@@ -472,7 +472,10 @@ GLOBAL_VAR_INIT(message_delay, 0) // To make sure restarting the recentmessages 
 		if(data == DATA_ANTAG) // intercepted radio message
 			part_b_extra = " <i>(Intercepted)</i>"
 		var/part_a = "<span class='[frequency_span_class(display_freq)]'>"
-		var/part_b = "[icon2html(radio, heard_masked + heard_normal + heard_voice + heard_garbled + heard_gibberish)]<b>\[[freq_text]\][part_b_extra]</b> <span class='name'>" // goes in the actual output
+		// Outpost 21 edit begin - Hide radio icons
+		var/image/I = image(icon = 'icons/obj/radio.dmi', icon_state = "radio", dir = SOUTH)
+		var/part_b = "[icon2html(I, heard_masked + heard_normal + heard_voice + heard_garbled + heard_gibberish)]<b>\[[freq_text]\][part_b_extra]</b> <span class='name'>" // goes in the actual output
+		// Outpost 21 edit end
 
 		// --- Some more pre-message formatting ---
 		var/part_c = "</span> <span class='message'>" // Tweaked for security headsets -- TLE

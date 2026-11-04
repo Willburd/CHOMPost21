@@ -26,6 +26,10 @@ GLOBAL_LIST_EMPTY(active_radio_jammers)
 	var/area/our_area = get_area(jammed_turf)
 	if(our_area?.no_comms)
 		return TRUE
+	// Outpost 21 edit begin - Redspace radios have a chance to jam
+	if(our_area?.haunted && prob(60))
+		return TRUE
+	// Outpost 21 edit end
 	if(!length(GLOB.active_radio_jammers))
 		return null
 

@@ -180,7 +180,7 @@
 
 /obj/machinery/telecomms/server/presets/unused/Initialize(mapload)
 	for(var/i = PUBLIC_LOW_FREQ, i < PUBLIC_HIGH_FREQ, i += 2)
-		if(i == AI_FREQ || i == PUB_FREQ)
+		if(i == AI_FREQ || i == PUB_FREQ || i == ENT_FREQ) // Outpost 21 edit - Duplicate entertainment freq
 			continue
 		freq_listening |= i
 	. = ..()
@@ -192,7 +192,7 @@
 
 /obj/machinery/telecomms/server/presets/engineering
 	id = "Engineering Server"
-	freq_listening = list(ENG_FREQ, AI_FREQ) // Outpost 21 edit begin - Telecomms modifications (AI on engineering)
+	freq_listening = list(ENG_FREQ, AI_FREQ) // Outpost 21 edit - Telecomms modifications (AI on engineering)
 	autolinkers = list("engineering")
 
 /obj/machinery/telecomms/server/presets/security

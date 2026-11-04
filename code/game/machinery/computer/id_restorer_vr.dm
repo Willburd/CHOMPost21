@@ -18,7 +18,7 @@
 	var/obj/item/card/id/inserted
 
 /obj/machinery/computer/id_restorer/attackby(obj/I, mob/user)
-	/*
+	/**/ //Outpost 21 edit - reenabling ID access digestion
 	if(istype(I, /obj/item/card/id) && !(istype(I,/obj/item/card/id/guest)))
 		if(!inserted && user.unEquip(I))
 			I.forceMove(src)
@@ -26,14 +26,14 @@
 		else if(inserted)
 			to_chat(user, span_warning("There is already ID card inside."))
 		return
-	*/
+	/**/ //Outpost 21 edit - reenabling ID access digestion
 	..()
 
 /obj/machinery/computer/id_restorer/attack_hand(mob/user)
 	if(..()) return
 	if(stat & (NOPOWER|BROKEN)) return
 
-	/*
+	/**/ //Outpost 21 edit - reenabling ID access digestion
 	if(!inserted) // No point in giving you an option what to do if there's no ID to do things with.
 		to_chat(user, span_notice("No ID is inserted."))
 		return
@@ -82,7 +82,7 @@
 			return
 		if("Cancel")
 			return
-	*/
+	/**/ //Outpost 21 edit - reenabling ID access digestion
 
 
 //Frame

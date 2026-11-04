@@ -185,7 +185,7 @@
 			continue
 		if(istype(target, /turf/simulated/floor/water))
 			continue
-		target.wet_floor(2) // loob
+		target.MakeSlippery(TURF_WET_LUBE, 30 SECONDS, 2 MINUTES)
 	visible_message("\The [src.name] detonates!")
 	spawn(0)
 		qdel(src)

@@ -3,7 +3,7 @@
 	set category = "Abilities.General"
 	set desc = "Disinfect and heal small wounds with your saliva."
 
-	if(stat || paralysis || weakened || stunned)
+	if(stat || paralysis || stunned) // Outpost 21 edit(port) - Removed weakened due to gameplay changes
 		to_chat(src, span_warning("You can't do that in your current state."))
 		return
 

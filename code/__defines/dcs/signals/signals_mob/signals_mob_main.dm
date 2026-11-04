@@ -157,6 +157,9 @@
 #define COMSIG_MOB_SAY_FINALIZE "mob_say_finalize"
 	// Reuses the comsig flags of COMSIG_MOB_PRESAY
 
+///from /mob/proc/hear_say(): (list/message_pieces, verb, italics, mob/speaker, sound/speech_sound, sound_vol) // Outpost 21 edit(port) - Mob hear signal
+#define COMSIG_MOB_HEAR_SAY "mob_hear_say"
+
 ///from /datum/component/speechmod/handle_speech(): ()
 #define COMSIG_TRY_MODIFY_SPEECH "try_modify_speech"
 	///Return value if we prevent speech from being modified
@@ -271,7 +274,7 @@
 /// from /mob/proc/change_mob_type_unchecked() : ()
 #define COMSIG_MOB_CHANGED_TYPE "mob_changed_type"
 
-/// from /mob/proc/slip(): (knockdown_amonut, obj/slipped_on, lube_flags [mobs.dm], paralyze, force_drop)
+/// from /mob/proc/slip(): (knockdown_amonut, obj/slipped_on, slip_flags [mobs.dm], paralyze, force_drop)
 #define COMSIG_MOB_SLIPPED "mob_slipped"
 
 /// From the base of /datum/component/callouts/proc/callout_picker(mob/user, atom/clicked_atom): (datum/callout_option/callout, atom/target)
