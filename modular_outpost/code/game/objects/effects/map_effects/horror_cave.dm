@@ -35,6 +35,8 @@ GLOBAL_LIST_EMPTY(horror_cave_exits)
 	. = ..()
 	if(world.time < cooldown_time)
 		return
+	if(isanimal(AM)) // Avoids simplemob crowding
+		return
 	if(!isliving(AM))
 		return
 	var/mob/living/check_mob = AM
@@ -56,4 +58,6 @@ GLOBAL_LIST_EMPTY(horror_cave_exits)
 	spawn(1)
 		check_mob.AdjustBlinded(2, TRUE)
 		check_mob.Life()
+		if(check_mob.pulling) // can bring pulled things with you
+			check_mob.pulling.forceMove(goal_spot)
 		check_mob.forceMove(goal_spot)
