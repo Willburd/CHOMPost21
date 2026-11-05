@@ -64,6 +64,16 @@ x/proc/disable_goggles()\
 	}\
 }\
 \
+x/attack_self(mob/user)\
+{\
+	if(!ignore_cell && !cell)\
+	{\
+		to_chat(user, span_info("It won't turn on, it has no powercell."));\
+		return;\
+	}\
+	. = ..();\
+}\
+\
 x/attack_hand(mob/user)\
 {\
 	if(user.get_inactive_hand() != src || ignore_cell || !cell)\
@@ -115,6 +125,22 @@ x/process()\
 		disable_goggles();\
 		visible_message(span_warning("\The [src] flickers and turn off."));\
 	}\
+}\
+\
+x/examine(mob/user)\
+{\
+	. = ..();\
+	if(ignore_cell)\
+	{\
+		return;\
+	}\
+	if(!cell)\
+	{\
+		. += span_info("It has no powercell.");\
+		return;\
+	}\
+	var/charge = cell.charge / cell.maxcharge;\
+	. += span_info("It has a charge of [FLOOR(charge * 100, 1)]%");\
 };
 
 VISION_GOGGLE_USES_CELL(/obj/item/clothing/glasses/meson)
