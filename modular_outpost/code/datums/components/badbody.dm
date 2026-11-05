@@ -10,6 +10,10 @@
 	VAR_PRIVATE/walk_mode = FALSE
 	VAR_PRIVATE/can_lunge = TRUE
 
+	VAR_PRIVATE/mob/living/carbon/human/bound_victim = null
+	VAR_PRIVATE/list/queued_speak = list()
+	VAR_PRIVATE/speak_queue_delay = 20 SECONDS
+
 /datum/component/badbody/Initialize()
 	if(!ishuman(parent))
 		return COMPONENT_INCOMPATIBLE
@@ -18,13 +22,18 @@
 	start_y = body.loc.y
 	body.SetSpecialVoice("Unknown") // Hide voice at first
 	body.stat = DEAD
+	body.see_in_dark = 10 // Autodarksight
 	var/area/A = get_area(body)
 	if(istype(A, /area/specialty)) // Redspace returns don't lunge
 		can_lunge = FALSE
 	body.can_be_afk_prey = TRUE // force allow
+	locate_origin_mob()
 
 /datum/component/badbody/Destroy(force = FALSE)
 	. = ..()
+	victim_qdeled()
+	if(QDELETED(body))
+		body_destroyed_event()
 	body = null
 
 /datum/component/badbody/RegisterWithParent()
@@ -96,12 +105,12 @@
 		if(speak != "")
 			if(istype( body.loc, /obj/structure/morgue) && prob(20))
 				long_delay_mode = TRUE
-				next_speak = world.time + rand(1000,7000)
+				next_speak = world.time + rand(1000,3000)
 				next_spooky = world.time + rand(700,1200)
 				return
 			else if(start_x != body.x || start_y != body.y)
 				long_delay_mode = TRUE
-				next_speak = world.time + rand(1000,7000)
+				next_speak = world.time + rand(1000,3000)
 				next_spooky = world.time + rand(700,1200)
 				return
 	else
@@ -186,9 +195,33 @@
 // End hacky
 
 /datum/component/badbody/proc/do_a_spooky()
-	// Anticheeze
+	// Rot limbs if people grab them
 	var/mob/living/carbon/human/H = locate(/mob/living/carbon/human) in orange(2,get_turf(body))
-	if(prob(60) && isturf(body.loc) && H && can_lunge && body.pulledby)
+
+	// Handle being picked up or pulled
+	var/mob/living/carbon/human/puller_target = body.pulledby
+	if(istype(body.loc, /obj/item/holder))
+		var/atom/movable/check_loc = body.loc
+		while(!isturf(check_loc))
+			if(ismob(check_loc))
+				puller_target = check_loc
+				break
+			check_loc = check_loc.loc
+	if(ishuman(puller_target))
+		var/has_comp = puller_target.GetComponent(/datum/component/limb_rot/hands)
+		if(!has_comp)
+			to_chat(puller_target, span_warning(pick("Your hand feels cold.", "Your hand's skin starts to sag.", "Your hand feels sore and cold.")))
+		var/list/limb_targ = list(BP_L_HAND, BP_R_HAND)
+		if(istype(body.loc, /obj/item/holder))
+			// checking for what hand the holder is in
+			if(puller_target.get_right_hand() == body.loc)
+				limb_targ = list(BP_R_HAND)
+			else
+				limb_targ = list(BP_L_HAND)
+		puller_target.AddComponent(/datum/component/limb_rot, limb_targ)
+
+	// Anticheeze
+	if(prob(60) && isturf(body.loc) && H && can_lunge)
 		// Make this more picky
 		var/valid_to_explode = prob(75)
 		if(locate(/obj/machinery/conveyor) in orange(5,get_turf(body)))
@@ -215,7 +248,7 @@
 
 	// Randomly do stuff to scare people
 	var/area/A = get_area(body.loc)
-	var/picking_val = rand(1,8)
+	var/picking_val = rand(1,11)
 	if(walk_mode && prob(70))
 		picking_val = 3 // Force walk
 
@@ -280,6 +313,15 @@
 		if(8)
 			body.make_jittery(450)
 			return world.time + rand(700,1200)
+		if(9)
+			give_vision_of_body()
+			return world.time + rand(700,1200)
+		if(10)
+			haunt_victim()
+			return world.time + rand(700,1200)
+		if(11)
+			haunt_body_victim()
+			return world.time + rand(700,1200)
 
 /datum/component/badbody/proc/set_items()
 	// Strip body of some stuff
@@ -337,3 +379,152 @@
 					if(!istype( body.loc, /obj/structure/morgue))
 						org.droplimb(TRUE, DROPLIMB_ACID)
 		body.updatehealth()
+
+/datum/component/badbody/proc/haunt_victim()
+	var/mob/living/carbon/human/victim = locate_origin_mob()
+	if(!victim)
+		return
+	var/message = null
+	switch(rand(1,8))
+		if(1)
+			message = "Something feels wrong..."
+		if(2)
+			message = "Part of you feels missing..."
+		if(3)
+			message = "You remember dying..."
+		if(4)
+			message = "You see a glimpse of your own death..."
+		if(5)
+			message = "Somehow, you feel like you are in \the [get_area(body)]..."
+		if(6)
+			message = "A cold chill fills your body..."
+		if(7)
+			message = "Something's watching you..."
+		if(8)
+			message = "You feel like something is stealing your thoughts..."
+	to_chat(victim, span_alium(message))
+
+/datum/component/badbody/proc/body_destroyed_event()
+	var/mob/living/carbon/human/victim = locate_origin_mob()
+	if(!victim)
+		return
+	to_chat(victim, span_vdanger("An intense bolt of psychic pain thrashes your mind!"))
+	victim.adjustHalLoss(120)
+	victim.make_jittery(50)
+	victim.Life() // Instant feedback
+
+/datum/component/badbody/proc/haunt_body_victim(message)
+	var/mob/living/carbon/human/victim = locate_origin_mob()
+	if(!victim)
+		return
+	if(!message)
+		message = pick("Where are you [victim]?", "I'm so alone [victim]." ,"I need you [victim]...", "[victim]... Where are you?")
+	var/list/message_pieces = body.parse_languages(message)
+	victim.hear_say(message_pieces, pick("begs","sobs","cowers","whispers"), TRUE, body, null, 0)
+
+
+// Binding to victim
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/datum/component/badbody/proc/locate_origin_mob()
+	if(bound_victim)
+		return bound_victim
+	if(body)
+		for(var/mob/living/carbon/human/check in GLOB.human_mob_list)
+			if(!check.client)
+				continue
+			if(check.real_name != body.real_name)
+				continue
+			bound_victim = check
+			RegisterSignal(bound_victim, COMSIG_QDELETING, PROC_REF(victim_qdeled))
+			RegisterSignal(bound_victim, COMSIG_MOB_SAY, PROC_REF(victim_speak))
+			return check
+	return null
+
+/datum/component/badbody/proc/victim_qdeled()
+	SIGNAL_HANDLER
+	if(!bound_victim)
+		return
+	UnregisterSignal(bound_victim, COMSIG_QDELETING)
+	UnregisterSignal(bound_victim, COMSIG_MOB_SAY)
+	bound_victim = null
+
+/datum/component/badbody/proc/victim_speak(datum/source, list/message_data)
+	SIGNAL_HANDLER
+	if(body.z != bound_victim.z)
+		return
+	var/turf/A = get_turf(body)
+	var/turf/B = get_turf(bound_victim)
+	if(A.Distance(B) > 6)
+		return
+	queued_speak.Add(message_data[SPEECH_MESSAGE])
+	if(speak_queue_delay < (1 SECOND))
+		// instant talking causes brain damage in victim
+		bound_victim.adjustBrainLoss(rand(2,3))
+		mimic_victim()
+		return
+	addtimer(CALLBACK(src, PROC_REF(mimic_victim)), speak_queue_delay, TIMER_DELETE_ME)
+
+/datum/component/badbody/proc/mimic_victim()
+	if(!body)
+		return
+	if(!bound_victim)
+		return
+	var/quemsg = queued_speak[1]
+	queued_speak -= quemsg
+	body.direct_say(quemsg, null, rand(0,1))
+	speak_queue_delay -= rand(1,3) SECONDS
+
+
+// remote view config for nightmare vision of body event
+//////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/datum/component/badbody/proc/give_vision_of_body()
+	var/mob/living/carbon/human/victim = locate_origin_mob()
+	if(!victim)
+		return
+	if(victim.is_remote_viewing())
+		return
+	victim.AddComponent(/datum/component/remote_view, focused_on = body, viewsize = null, vconfig_path = /datum/remote_view_config/badbody_nightmare)
+	addtimer(CALLBACK(victim, TYPE_PROC_REF(/mob/living/carbon/human, reset_perspective)), rand(5,8) SECONDS, TIMER_DELETE_ME)
+
+
+/datum/remote_view_config/badbody_nightmare
+	relay_movement = TRUE
+
+// We are responsible for restoring the health UI's icons on removal
+/datum/remote_view_config/badbody_nightmare/attached_to_mob(datum/component/remote_view/owner_component, mob/host_mob)
+	host_mob.click_intercept = src
+	RegisterSignal(host_mob, COMSIG_MOB_SAY_PREPARE, PROC_REF(handle_prepare_say))
+
+/datum/remote_view_config/badbody_nightmare/detatch_from_mob(datum/component/remote_view/owner_component, mob/host_mob)
+	host_mob.click_intercept = null
+	UnregisterSignal(host_mob, COMSIG_MOB_SAY_PREPARE)
+
+/datum/remote_view_config/badbody_nightmare/handle_relay_movement(datum/component/remote_view/owner_component, mob/host_mob, direction)
+	var/mob/living/carbon/human/body = owner_component.get_target()
+	if(!body)
+		return FALSE
+	body.IMove(get_step(body.loc,direction))
+	return TRUE
+
+/datum/remote_view_config/badbody_nightmare/proc/InterceptClickOn(mob/user, params, atom/target)
+	var/datum/component/remote_view/comp = user.GetComponent(/datum/component/remote_view)
+	if(!comp)
+		return FALSE
+	var/mob/living/carbon/human/body = comp.get_target()
+	if(!body)
+		return FALSE
+	body.ClickOn(target, params)
+	return TRUE
+
+/datum/remote_view_config/badbody_nightmare/proc/handle_prepare_say(atom/source, list/message_data)
+	SIGNAL_HANDLER
+	var/datum/component/remote_view/comp = source.GetComponent(/datum/component/remote_view)
+	if(!comp)
+		return 0
+	var/mob/living/carbon/human/body = comp.get_target()
+	if(!body)
+		return 0
+	body.direct_say(message_data[SPEECH_MESSAGE], message_data[SPEECH_SPEAKINGLANG], message_data[SPEECH_WHISPERING])
+	return COMSIG_SAY_FORBID_SPEAK

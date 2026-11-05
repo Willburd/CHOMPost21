@@ -312,5 +312,5 @@
 	var/mob/remote_mob = remote_view_target
 	if(remote_mob.stat != CONSCIOUS)
 		return
-	host_mob.hear_say(message_pieces, verb, italics, speaker, speech_sound, sound_vol) // TODO - still not working
+	host_mob.hear_say(message_pieces, verb, italics, speaker, speech_sound, sound_vol)
 // Outpost 21 edit end

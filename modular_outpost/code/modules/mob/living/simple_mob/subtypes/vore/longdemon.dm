@@ -44,6 +44,11 @@
 	shock_resist = -0.2
 	threshold = 0.2
 
+	mob_size = MOB_HUGE
+	devourable = 0	//No
+	resizable = 0 //No size gun cheesing~
+	capture_crystal = FALSE
+
 	pixel_x = -16
 	old_x = -16
 	icon_expected_width = 64

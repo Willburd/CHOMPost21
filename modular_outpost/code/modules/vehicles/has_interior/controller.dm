@@ -307,6 +307,8 @@
 	if(istype(newloc,/turf/))
 		var/turf/T = newloc
 		for(var/atom/A in T.contents)
+			if(A == src) // Not ourselves
+				continue
 			smash_things(A) // what is in the turf
 		smash_things(T) // turf itself
 
