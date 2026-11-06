@@ -18872,8 +18872,6 @@
 /obj/structure/sign/poster{
 	dir = 4
 	},
-/obj/structure/candybowl/engineering,
-/obj/structure/table/standard,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/power_distribution)
 "Lp" = (
