@@ -23,6 +23,8 @@
 	body.SetSpecialVoice("Unknown") // Hide voice at first
 	body.stat = DEAD
 	body.see_in_dark = 10 // Autodarksight
+	if(body.species)
+		body.species.flags |= NO_DEFIB
 	var/area/A = get_area(body)
 	if(istype(A, /area/specialty)) // Redspace returns don't lunge
 		can_lunge = FALSE

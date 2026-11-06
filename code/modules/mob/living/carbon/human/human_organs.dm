@@ -73,6 +73,9 @@
 	if (istype(buckled, /obj/structure/bed))
 		return
 
+	if(SEND_SIGNAL(src, COMSIG_EXTERNAL_ORGAN_STANCE_DAMAGE_APPLICATION) & COMPONENT_CANCEL_EXTERNAL_ORGAN_DAMAGE) // Outpost 21 edit(port) - stance damage doesn't affect godmode
+		return // If the signal returns, we don't apply damage, it's done its own special thing.
+
 	var/limb_pain = FALSE
 	for(var/limb_tag in list(BP_L_LEG,BP_R_LEG,BP_L_FOOT,BP_R_FOOT))
 		var/obj/item/organ/external/E = organs_by_name[limb_tag]
@@ -121,6 +124,9 @@
 /mob/living/carbon/human/proc/handle_grasp()
 	if(!l_hand && !r_hand)
 		return
+
+	if(SEND_SIGNAL(src, COMSIG_EXTERNAL_ORGAN_GRASP_DAMAGE_APPLICATION) & COMPONENT_CANCEL_EXTERNAL_ORGAN_DAMAGE) // Outpost 21 edit(port) - grasp damage doesn't affect godmode
+		return // If the signal returns, we don't apply damage, it's done its own special thing.
 
 	// You should not be able to pick anything up, but stranger things have happened.
 	if(l_hand)
