@@ -5750,6 +5750,7 @@
 #include "modular_outpost\code\datums\components\haunting_vision.dm"
 #include "modular_outpost\code\datums\components\health_hud_blocker.dm"
 #include "modular_outpost\code\datums\components\hear_dead.dm"
+#include "modular_outpost\code\datums\components\necromorph.dm"
 #include "modular_outpost\code\datums\components\out_of_body_experience.dm"
 #include "modular_outpost\code\datums\components\rot_limb.dm"
 #include "modular_outpost\code\datums\components\undead_revival.dm"
