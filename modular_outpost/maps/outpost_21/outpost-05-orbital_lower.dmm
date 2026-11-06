@@ -16920,11 +16920,6 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/backup_power)
-"GF" = (
-/obj/structure/table/reinforced,
-/obj/structure/candybowl/engineering,
-/turf/simulated/floor/tiled/milspec,
-/area/offworld/orbital/station/halls/stairs_lower)
 "GG" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -20753,6 +20748,12 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/lower/port)
+"No" = (
+/obj/effect/floorbreak,
+/obj/structure/table/reinforced,
+/obj/structure/candybowl/engineering,
+/turf/simulated/floor/wood/alt,
+/area/maintenance/orbital/lower/starboard)
 "Np" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable/green{
@@ -21015,6 +21016,11 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/beam_emitter)
+"NL" = (
+/obj/structure/table/reinforced,
+/obj/structure/candybowl/engineering,
+/turf/simulated/floor/plating,
+/area/maintenance/orbital/lower/starboard)
 "NM" = (
 /obj/structure/table/standard,
 /obj/item/radio/intercom{
@@ -40554,7 +40560,7 @@ KR
 qd
 yP
 Kj
-GF
+ci
 GD
 la
 Kj
@@ -41532,7 +41538,7 @@ rK
 rK
 rK
 rH
-Pn
+NL
 rH
 OI
 rH
@@ -41694,8 +41700,8 @@ qg
 qa
 kR
 rH
-Pn
-rH
+OI
+Pi
 Rg
 OI
 Pf
@@ -41856,7 +41862,7 @@ qp
 qc
 kR
 rH
-Pn
+OI
 rH
 rH
 rH
@@ -43156,7 +43162,7 @@ rH
 rH
 OI
 rH
-Pc
+No
 fc
 fc
 Pc
