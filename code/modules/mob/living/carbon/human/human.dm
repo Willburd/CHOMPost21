@@ -978,6 +978,8 @@
 	for(var/mob/living/carbon/h in GLOB.mob_list)
 		if(h == src || istype(h,/mob/living/carbon/human/monkey/auto_doc)) // Outpost 21 edit(port) - autodocs hidden
 			continue
+		if(!h.client) // Outpost 21 edit - Do not show clientless mobs in remote speakto list
+			continue
 		creatures += h
 	var/mob/target = tgui_input_list(src, "Who do you want to project your mind to?", "Project Mind", creatures)
 	if (isnull(target))

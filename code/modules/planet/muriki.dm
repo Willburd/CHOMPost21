@@ -1305,5 +1305,4 @@ GLOBAL_DATUM(planet_muriki, /datum/planet/muriki)
 							applied_damage = TRUE
 
 	if(applied_damage && ((org.damage >= 10 && prob(5)) || (org.damage >= 30 && prob(15)) || org.damage >= 80))
-		if(!(pick_zone == BP_GROIN || pick_zone == BP_TORSO))
-			org.droplimb(TRUE, DROPLIMB_ACID)
+		org.droplimb(TRUE, DROPLIMB_ACID)

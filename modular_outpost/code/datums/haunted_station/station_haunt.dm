@@ -301,6 +301,18 @@
 	end()
 
 
+// overload APC
+/datum/station_haunt/overload_apc
+	name = "Overload Apc"
+
+/datum/station_haunt/overload_apc/fire()
+	var/area/targ_area = SShaunting.get_haunt_area()
+	var/obj/machinery/power/apc/check_apc = targ_area?.get_apc()
+	if(check_apc)
+		check_apc.overload_lighting()
+	end()
+
+
 // Lock doors
 /datum/station_haunt/lock_doors
 	name = "Lock Doors In Area"
@@ -315,7 +327,8 @@
 	targ_area = SShaunting.get_haunt_area()
 	if(targ_area && !targ_area.haunted)
 		for(var/obj/machinery/door/airlock/A in targ_area)
-			A.lock()
+			spawn(rand(1,3) SECONDS)
+				A.lock()
 
 /datum/station_haunt/lock_doors/fire()
 	if(world.time > (start_time + dur))
@@ -326,7 +339,8 @@
 
 /datum/station_haunt/lock_doors/end()
 	for(var/obj/machinery/door/airlock/A in targ_area)
-		A.unlock()
+		spawn(rand(1,3) SECONDS)
+			A.unlock()
 	. = ..()
 
 
@@ -839,6 +853,52 @@
 		end()
 		return
 	end()
+
+// poltergeist attack
+/datum/station_haunt/poltergeist
+	name = "Poltergeist"
+	var/start_time = 0
+	var/dur = 1 MINUTES
+	var/obj/effect/abstract/poltergeist_wanderer/ghost
+
+/datum/station_haunt/poltergeist/New()
+	. = ..()
+	start_time = world.time
+	dur = rand(90,220) SECONDS
+	var/mob/living/carbon/human/target_mob = SShaunting.get_player_target()
+	if(target_mob)
+		to_chat(target_mob,span_danger("You feel an unsettling chill."))
+	ghost = new(get_turf(target_mob))
+
+/datum/station_haunt/poltergeist/end()
+	qdel(ghost)
+	. = ..()
+
+/datum/station_haunt/poltergeist/fire()
+	if(world.time > (start_time + dur))
+		end()
+
+/obj/effect/abstract/poltergeist_wanderer
+	name = ""
+	desc = DEVELOPER_WARNING_NAME
+	var/datum/artifact_effect/poltergeist/affect
+
+/obj/effect/abstract/poltergeist_wanderer/Initialize(mapload)
+	. = ..()
+	affect = new()
+	affect.master = src
+	addtimer(CALLBACK(src, PROC_REF(tick_ghost)), 1 SECOND, TIMER_DELETE_ME)
+
+/obj/effect/abstract/poltergeist_wanderer/Destroy()
+	qdel(affect)
+	. = ..()
+
+/obj/effect/abstract/poltergeist_wanderer/proc/tick_ghost()
+	var/count = rand(1,3)
+	while(count-- > 0)
+		step(src, pick(ALL_CARDINALS))
+		affect.DoEffectAura()
+	addtimer(CALLBACK(src, PROC_REF(tick_ghost)), rand(1,3) SECONDS, TIMER_DELETE_ME)
 
 //////////////////////////////////////////////////////////////////////////////////////
 // HAUNTING ENITIES, Things that go bump in the night!
