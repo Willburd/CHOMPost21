@@ -342,7 +342,7 @@
 	reagent_state = LIQUID
 	dermal_absorption = 0.2
 	color = "#8040FF"
-	overdose = REAGENTS_OVERDOSE * 8 //240 overdose // Outpost 21 edit - raised overdose
+	overdose = REAGENTS_OVERDOSE
 	scannable = SCANNABLE_BENEFICIAL
 	supply_conversion_value = REFINERYEXPORT_VALUE_PROCESSED
 	industrial_use = REFINERYEXPORT_REASON_DRUG
