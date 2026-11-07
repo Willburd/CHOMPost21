@@ -6,6 +6,7 @@ GLOBAL_LIST_EMPTY(horror_cave_exits)
 	name = "horror cave warp"
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "redgate_hole"
+	alpha = 0
 	var/cooldown_time = 0
 
 /obj/effect/abstract/horror_cave_warp/Initialize(mapload)
