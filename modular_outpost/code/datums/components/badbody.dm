@@ -12,7 +12,7 @@
 
 	VAR_PRIVATE/mob/living/carbon/human/bound_victim = null
 	VAR_PRIVATE/list/queued_speak = list()
-	VAR_PRIVATE/speak_queue_delay = 20 SECONDS
+	VAR_PRIVATE/speak_queue_delay = 15 SECONDS
 
 /datum/component/badbody/Initialize()
 	if(!ishuman(parent))
@@ -484,6 +484,8 @@
 /datum/component/badbody/proc/give_vision_of_body()
 	var/mob/living/carbon/human/victim = locate_origin_mob()
 	if(!victim)
+		return
+	if(!victim.client) // Don't give remote views to mobs without clients
 		return
 	if(victim.is_remote_viewing())
 		return

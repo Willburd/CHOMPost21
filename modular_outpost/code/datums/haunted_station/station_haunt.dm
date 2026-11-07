@@ -896,7 +896,10 @@
 /obj/effect/abstract/poltergeist_wanderer/proc/tick_ghost()
 	var/count = rand(1,3)
 	while(count-- > 0)
-		step(src, pick(ALL_CARDINALS))
+		var/dir_picked = pick(ALL_CARDINALS)
+		var/turf/found_turf = get_step(src,dir_picked)
+		if(!found_turf.density) // Don't go through walls
+			step(src, dir_picked)
 		affect.DoEffectAura()
 	addtimer(CALLBACK(src, PROC_REF(tick_ghost)), rand(1,3) SECONDS, TIMER_DELETE_ME)
 
