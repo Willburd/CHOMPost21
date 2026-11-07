@@ -15,7 +15,7 @@
 	blinded = FALSE
 	anchored = TRUE	//  don't get pushed around
 	var/list/visibleChunks = list()
-	var/datum/visualnet/visualnet // Outpost 21 edit - Ghosts use camera network
+	var/datum/visualnet/ghost/visualnet
 	var/static_visibility_range = 16
 
 	var/can_reenter_corpse
@@ -103,17 +103,15 @@
 	animate(pixel_y = default_pixel_y, time = 10, loop = -1)
 	GLOB.observer_mob_list += src
 	. = ..()
-	visualnet = GLOB.cameranet // Outpost 21 edit - Ghosts use camera network
+	visualnet = GLOB.ghostnet
 
 /mob/observer/dead/proc/checkStatic()
 	return !(check_rights_for(src.client, R_ADMIN|R_FUN|R_EVENT|R_SERVER) || (client && client.buildmode) || isbelly(loc))
 
 /mob/observer/dead/Moved(atom/old_loc, direction, forced)
 	. = ..()
-	/* // Outpost 21 edit - Ghosts use camera network
 	if(isbelly(loc) && !isbelly(old_loc))
 		visualnet.addVisibility()
-	*/
 	if(visualnet && checkStatic())
 		visualnet.visibility(src, client)
 
@@ -352,25 +350,15 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 
 /mob/observer/dead/proc/jumpable_mobs()
 	var/list/mobs = getmobs()
-	var/admin = check_rights_for(client, R_HOLDER)
+	if(check_rights_for(client, R_HOLDER))
+		return mobs
 
-	for(var/mob/key in mobs)
-
-		if(isnewplayer(key) || isnull(key.loc)) //Nullspace or not in the game yet.
-			mobs -= key
-			continue
-
-		if(admin) //Admins can jump to people in secret/hidden areas.
-			continue
-
+	for(var/key in mobs)
 		var/mobz = get_z(mobs[key])
 		if(mobz in using_map?.secret_levels)
 			mobs -= key
-			continue
-
 		if(mobz in using_map?.hidden_levels)
 			mobs -= key
-			continue
 
 	return mobs
 
@@ -553,7 +541,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		body_backup.moveToNullspace() //YEET
 		qdel(body_backup)
 		body_backup = null
-	// visualnet.addVisibility(src, src.client) // Outpost 21 edit - Ghosts use camera network
+	visualnet.addVisibility(src, src.client)
 	visualnet = null
 	if(ismob(following))
 		var/mob/M = following
@@ -562,10 +550,6 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	GLOB.observer_mob_list -= src
 	for(var/datum/chunk/ghost/ghost_chunks in visibleChunks)
 		ghost_chunks.remove(src)
-	//ChompEDIT START - deal with weird behavior on qdelled ghosts
-	if(client) //qdelling a ghost with a client = make a new ghost i guess
-		ghostize()
-	//ChompEDIT END
 	if(key)
 		key = null
 	return ..()
