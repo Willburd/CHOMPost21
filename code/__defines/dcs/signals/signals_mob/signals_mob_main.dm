@@ -157,7 +157,7 @@
 #define COMSIG_MOB_SAY_FINALIZE "mob_say_finalize"
 	// Reuses the comsig flags of COMSIG_MOB_PRESAY
 
-///from /mob/proc/hear_say(): (list/message_pieces, verb, italics, mob/speaker, sound/speech_sound, sound_vol) // Outpost 21 edit(port) - Mob hear signal
+///from /mob/proc/hear_say(): (list/message_pieces, verb, italics, mob/speaker, sound/speech_sound, sound_vol)
 #define COMSIG_MOB_HEAR_SAY "mob_hear_say"
 
 ///from /datum/component/speechmod/handle_speech(): ()
