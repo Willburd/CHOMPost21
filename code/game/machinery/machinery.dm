@@ -239,11 +239,14 @@ Class Procs:
 
 	if(inoperable(MAINT))
 		return 1
-	if(user.lying || user.stat)
-		return 1
-	if(!user.IsAdvancedToolUser())  //Vorestation edit
-		to_chat(user, span_warning("You don't have the dexterity to do this!"))
-		return 1
+	// Outpost 21 edit(port) begin - Suppress runtime that EMs will not care about
+	if(isliving(user))
+		if(user.lying || user.stat)
+			return 1
+		if(!user.IsAdvancedToolUser())  //Vorestation edit
+			to_chat(user, span_warning("You don't have the dexterity to do this!"))
+			return 1
+	// Outpost 21 edit(port) end
 	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
 		if(H.getBrainLoss() >= 55)
