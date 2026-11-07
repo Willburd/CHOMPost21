@@ -492,7 +492,6 @@
 	victim.AddComponent(/datum/component/remote_view, focused_on = body, viewsize = null, vconfig_path = /datum/remote_view_config/badbody_nightmare)
 	addtimer(CALLBACK(victim, TYPE_PROC_REF(/mob/living/carbon/human, reset_perspective)), rand(8,16) SECONDS, TIMER_DELETE_ME)
 
-
 /datum/remote_view_config/badbody_nightmare
 	relay_movement = TRUE
 
