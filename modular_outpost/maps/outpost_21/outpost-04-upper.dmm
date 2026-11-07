@@ -338,7 +338,7 @@
 "aaL" = (
 /obj/structure/ladder,
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/mine/unexplored/muriki/mountaintopeast)
+/area/maintenance/damaged_resleeverC)
 "aaM" = (
 /obj/structure/fence{
 	dir = 4
@@ -2299,7 +2299,7 @@
 /area/rnd/supermatter)
 "afe" = (
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/mine/unexplored/muriki/mountaintopeast)
+/area/maintenance/damaged_resleeverC)
 "aff" = (
 /turf/simulated/wall/stonelogs/turfpack/muriki,
 /area/mine/unexplored/muriki/mountaintopeast)
@@ -3464,15 +3464,15 @@
 /area/mine/unexplored/muriki/mountaintopeast)
 "ahX" = (
 /turf/simulated/wall/r_wall,
-/area/mine/unexplored/muriki/mountaintopeast)
+/area/maintenance/damaged_resleeverC)
 "ahY" = (
 /obj/machinery/door/airlock/maintenance/common,
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/mine/unexplored/muriki/mountaintopeast)
+/area/maintenance/damaged_resleeverC)
 "ahZ" = (
 /obj/item/flame/candle/everburn,
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/mine/unexplored/muriki/mountaintopeast)
+/area/maintenance/damaged_resleeverC)
 "aia" = (
 /obj/machinery/atmospherics/portables_connector{
 	dir = 4
@@ -3484,15 +3484,15 @@
 "aib" = (
 /obj/random/trash,
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/mine/unexplored/muriki/mountaintopeast)
+/area/maintenance/damaged_resleeverC)
 "aic" = (
 /obj/random/thermalponcho,
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/mine/unexplored/muriki/mountaintopeast)
+/area/maintenance/damaged_resleeverC)
 "aid" = (
 /obj/structure/trash_pile,
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/mine/unexplored/muriki/mountaintopeast)
+/area/maintenance/damaged_resleeverC)
 "aie" = (
 /obj/item/radio/intercom/department/security{
 	dir = 4;
@@ -3533,20 +3533,20 @@
 /obj/machinery/mineral/input,
 /obj/effect/decal/cleanable/blood,
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/mine/unexplored/muriki/mountaintopeast)
+/area/maintenance/damaged_resleeverC)
 "aii" = (
 /obj/machinery/transhuman/autoresleever/rogue,
 /obj/machinery/camera/network/outside{
 	c_tag = "EXT - Expie Sleever"
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/mine/unexplored/muriki/mountaintopeast)
+/area/maintenance/damaged_resleeverC)
 "aij" = (
 /obj/machinery/gibber/autogibber{
 	emagged = 1
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
-/area/mine/unexplored/muriki/mountaintopeast)
+/area/maintenance/damaged_resleeverC)
 "aik" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -4213,7 +4213,7 @@
 /turf/simulated/wall/r_wall{
 	can_open = 1
 	},
-/area/mine/unexplored/muriki/mountaintopeast)
+/area/maintenance/damaged_resleeverC)
 "aky" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4

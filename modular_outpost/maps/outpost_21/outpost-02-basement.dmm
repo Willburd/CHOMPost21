@@ -27895,6 +27895,15 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/specialty/expie_clubhouse)
+"bcg" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/auto_crayon{
+	icon_state = "skull"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/spine/waste)
 "bch" = (
 /turf/simulated/floor/wood/turfpack/muriki,
 /area/specialty/expie_clubhouse)
@@ -28912,12 +28921,53 @@
 /obj/structure/closet,
 /turf/simulated/floor/reinforced,
 /area/rnd/xenobiology/xenobioh)
+"beF" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/obj/structure/flora/mushroom,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/spine/waste)
+"beG" = (
+/turf/simulated/wall,
+/area/maintenance/damaged_resleeverB)
 "beH" = (
 /turf/simulated/wall,
 /area/muriki/bathroom/dorm)
+"beI" = (
+/obj/random/trash,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/damaged_resleeverB)
 "beJ" = (
 /turf/simulated/wall,
 /area/hallway/muriki/dorm)
+"beK" = (
+/obj/machinery/light/small,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/damaged_resleeverB)
+"beL" = (
+/obj/structure/trash_pile/disable_mouse_spawn,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/damaged_resleeverB)
+"beM" = (
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/damaged_resleeverB)
+"beN" = (
+/obj/machinery/light/small,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/spine/waste)
+"beO" = (
+/obj/effect/auto_crayon{
+	icon_state = "right"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/damaged_resleeverB)
+"beP" = (
+/turf/simulated/wall{
+	can_open = 1
+	},
+/area/maintenance/damaged_resleeverB)
 "beQ" = (
 /obj/machinery/light{
 	dir = 4
@@ -28932,18 +28982,32 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/tug)
+"beR" = (
+/obj/structure/closet,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/spine/waste)
 "beS" = (
 /obj/effect/landmark{
 	name = "vinestart"
 	},
 /turf/simulated/floor/tiled/steel,
 /area/crew_quarters/locker)
+"beT" = (
+/obj/machinery/transhuman/autoresleever/rogue,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/damaged_resleeverB)
 "beU" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/pool)
+"beV" = (
+/obj/machinery/gibber/autogibber{
+	emagged = 1
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/damaged_resleeverB)
 "bfa" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled/freezer,
@@ -96750,12 +96814,12 @@ kwU
 kwU
 kwU
 kwU
-kwU
-kwU
-kwU
-kwU
-kwU
-kwU
+beG
+beG
+beG
+beG
+beG
+beG
 ayb
 bAr
 ayb
@@ -96912,12 +96976,12 @@ kwU
 kwU
 kwU
 kwU
-kwU
-kwU
-kwU
-kwU
-kwU
-kwU
+beG
+beT
+beM
+beO
+beM
+beI
 ayb
 ayb
 ayb
@@ -97074,13 +97138,13 @@ kwU
 kwU
 kwU
 kwU
-kwU
-kwU
-kwU
-kwU
-kwU
-kwU
-kwU
+beG
+beV
+beM
+beM
+beM
+beK
+beG
 kwU
 kMh
 aLS
@@ -97236,13 +97300,13 @@ kwU
 kwU
 kwU
 kwU
-kwU
-kwU
-kwU
-kwU
-kwU
-kwU
-kwU
+beG
+beG
+beM
+beI
+beM
+beL
+beG
 kwU
 kMh
 aLS
@@ -97399,12 +97463,12 @@ kwU
 kwU
 kwU
 kwU
-kwU
-kwU
-kwU
-kwU
-kwU
-kwU
+beG
+beG
+beP
+beG
+beG
+beG
 kwU
 kMh
 aYY
@@ -97560,14 +97624,14 @@ kwU
 kwU
 kwU
 kwU
-kwU
-kwU
-kwU
-kwU
-kwU
-kwU
-kwU
-kwU
+kMh
+kMh
+kMh
+beR
+kMh
+kMh
+kMh
+kMh
 kMh
 ciA
 kMh
@@ -97722,14 +97786,14 @@ kwU
 kwU
 kwU
 kwU
-kwU
-kwU
-kwU
-kwU
-kwU
-kwU
-kwU
-kwU
+kMh
+kMh
+aSa
+cFp
+kMh
+kMh
+bhb
+kMh
 kMh
 aDo
 kMh
@@ -97884,14 +97948,14 @@ kwU
 kwU
 kwU
 kwU
-kwU
-kwU
-kwU
-kwU
-kwU
-kwU
-kwU
-kwU
+kMh
+aSa
+aSa
+kMh
+aSa
+aSa
+aSa
+kMh
 kMh
 aUB
 kMh
@@ -98046,16 +98110,16 @@ kwU
 kwU
 kwU
 kwU
-kwU
-kwU
-kwU
-kwU
-kwU
-kwU
-kwU
-kwU
 kMh
-cFK
+kMh
+aSa
+aSa
+beN
+kMh
+aSa
+aSa
+cdt
+bcg
 kMh
 aLS
 kMh
@@ -98209,15 +98273,15 @@ kwU
 kwU
 kwU
 kwU
-kwU
-kwU
-kwU
-kwU
-kwU
-kwU
-kwU
 kMh
-aRr
+kMh
+aSa
+kMh
+kMh
+kMh
+kMh
+kMh
+beF
 aLc
 aQr
 kMh
@@ -98372,9 +98436,9 @@ kwU
 kwU
 kwU
 kwU
-kwU
-kwU
-kwU
+kMh
+kMh
+kMh
 kwU
 kwU
 kwU
