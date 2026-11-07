@@ -5,7 +5,7 @@
 	if(severity + emp_resistance >= EMP_NONE)
 		return
 
-	var/adjusted_resistance = FLOOR(emp_resistance / (emp_resistance > 0) ? 2 : 1,1) // Positive resistance to emp is halved
+	var/adjusted_resistance = FLOOR(emp_resistance / ((emp_resistance > 0) ? 2 : 1),1) // Positive resistance to emp is halved
 	if(severity + adjusted_resistance >= EMP_NONE)
 		return
 	severity = clamp(severity + adjusted_resistance, EMP_HEAVY, EMP_HARMLESS)
