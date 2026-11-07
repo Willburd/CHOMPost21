@@ -12,7 +12,7 @@
 
 	VAR_PRIVATE/mob/living/carbon/human/bound_victim = null
 	VAR_PRIVATE/list/queued_speak = list()
-	VAR_PRIVATE/speak_queue_delay = 20 SECONDS
+	VAR_PRIVATE/speak_queue_delay = 15 SECONDS
 
 /datum/component/badbody/Initialize()
 	if(!ishuman(parent))
