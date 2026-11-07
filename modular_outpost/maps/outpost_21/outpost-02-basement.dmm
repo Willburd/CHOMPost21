@@ -5706,6 +5706,13 @@
 "akU" = (
 /turf/simulated/open/muriki,
 /area/mine/unexplored/muriki/cave/underdark_pit/south_west_waste)
+"akV" = (
+/obj/structure/disposalpipe/segment,
+/obj/item/reagent_containers/glass/bucket/wood{
+	pixel_y = 16
+	},
+/turf/simulated/floor/reinforced,
+/area/specialty/expie_clubhouse)
 "akW" = (
 /obj/structure/disposalpipe/segment{
 	dir = 1;
@@ -10691,6 +10698,26 @@
 /obj/structure/cable/green{
 	icon_state = "1-8"
 	},
+/obj/item/toy/tennis/cyan{
+	pixel_x = -10;
+	pixel_y = -6
+	},
+/obj/item/toy/tennis/cyan{
+	pixel_x = 5;
+	pixel_y = -6
+	},
+/obj/item/toy/tennis/blue{
+	pixel_x = -9;
+	pixel_y = 5
+	},
+/obj/item/toy/tennis/purple{
+	pixel_x = 2;
+	pixel_y = 5
+	},
+/obj/item/toy/tennis/blue{
+	pixel_x = -4;
+	pixel_y = -4
+	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/specialty/expie_clubhouse)
 "aum" = (
@@ -11393,7 +11420,6 @@
 	pixel_y = 16;
 	pixel_x = 9
 	},
-/obj/item/reagent_containers/glass/bucket/wood,
 /obj/item/reagent_containers/glass/bucket{
 	pixel_y = -3;
 	pixel_x = -7
@@ -11402,6 +11428,7 @@
 	pixel_x = 10;
 	pixel_y = -10
 	},
+/obj/item/reagent_containers/glass/bucket,
 /turf/simulated/floor/carpet/bcarpet/turfpack/muriki,
 /area/specialty/expie_clubhouse)
 "avw" = (
@@ -143346,7 +143373,7 @@ fwe
 aCz
 aDH
 bbN
-bdZ
+akV
 aGA
 amE
 pmN
