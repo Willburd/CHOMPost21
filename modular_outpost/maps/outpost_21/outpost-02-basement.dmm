@@ -29008,10 +29008,38 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/damaged_resleeverB)
+"beW" = (
+/obj/random/aberration,
+/turf/simulated/mineral/alt/turfpack/muriki,
+/area/mine/unexplored/muriki/cave/sec)
+"beX" = (
+/obj/random/aberration,
+/turf/simulated/floor/water/acidic/deep/indoor/turfpack/muriki,
+/area/mine/explored/muriki/river/south)
+"beY" = (
+/obj/random/aberration,
+/turf/simulated/mineral/alt/turfpack/muriki,
+/area/mine/explored/muriki/cave/waste)
+"beZ" = (
+/obj/random/aberration,
+/turf/simulated/mineral/alt/turfpack/muriki,
+/area/mine/unexplored/muriki/mountainbase)
 "bfa" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/pool)
+"bfb" = (
+/obj/random/aberration,
+/turf/simulated/mineral/alt/turfpack/muriki,
+/area/mine/unexplored/muriki/cave/terra)
+"bfc" = (
+/obj/random/aberration,
+/turf/simulated/floor/water/acidic/deep/turfpack/muriki,
+/area/mine/explored/muriki/river/mouth)
+"bfd" = (
+/obj/random/aberration,
+/turf/simulated/mineral/alt/turfpack/muriki,
+/area/mine/unexplored/muriki/cave/sci)
 "bff" = (
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/pool)
@@ -66746,10 +66774,6 @@
 /obj/item/material/barbedwire/glass/start_active,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/spine/waste)
-"cPA" = (
-/obj/effect/abstract/aberration/spawner/fire,
-/turf/simulated/mineral/alt/turfpack/muriki,
-/area/mine/explored/muriki/cave/waste)
 "cPB" = (
 /obj/effect/auto_crayon{
 	icon_state = "market"
@@ -89859,7 +89883,7 @@ kwU
 kwU
 kwU
 kwU
-kwU
+bfb
 kwU
 cfv
 cfv
@@ -96347,7 +96371,7 @@ aIY
 aIY
 aIY
 aIY
-aIY
+beY
 aIY
 aIY
 aIY
@@ -96510,7 +96534,7 @@ aIY
 aIY
 aIY
 aIY
-cPA
+aIY
 aIY
 aIY
 aIY
@@ -100683,7 +100707,7 @@ aqY
 wZz
 fVT
 lOA
-lOA
+bfc
 lOA
 lOA
 lOA
@@ -106268,7 +106292,7 @@ blV
 blV
 blV
 blV
-mGE
+beX
 mGE
 iCS
 iCS
@@ -119395,7 +119419,7 @@ glX
 glX
 glX
 glX
-glX
+beW
 glX
 glX
 glX
@@ -143969,7 +143993,7 @@ vSb
 vSb
 vSb
 vSb
-vSb
+beZ
 vSb
 vSb
 vSb
@@ -147302,7 +147326,7 @@ pmN
 pmN
 pmN
 pmN
-pmN
+bfd
 pmN
 pmN
 pmN
