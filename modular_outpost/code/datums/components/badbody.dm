@@ -485,6 +485,8 @@
 	var/mob/living/carbon/human/victim = locate_origin_mob()
 	if(!victim)
 		return
+	if(!victim.client) // Don't give remote views to mobs without clients
+		return
 	if(victim.is_remote_viewing())
 		return
 	victim.AddComponent(/datum/component/remote_view, focused_on = body, viewsize = null, vconfig_path = /datum/remote_view_config/badbody_nightmare)
