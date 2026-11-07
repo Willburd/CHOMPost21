@@ -8547,6 +8547,9 @@
 	dir = 8
 	},
 /obj/structure/window/basic,
+/obj/machinery/computer/cryopod{
+	pixel_x = 32
+	},
 /turf/simulated/floor/reinforced,
 /area/specialty/expie_clubhouse)
 "aqf" = (
