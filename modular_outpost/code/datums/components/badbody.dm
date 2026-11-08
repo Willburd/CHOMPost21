@@ -223,7 +223,7 @@
 		puller_target.AddComponent(/datum/component/limb_rot, limb_targ)
 
 	// Anticheeze
-	if(prob(60) && isturf(body.loc) && H && can_lunge)
+	if(prob(60) && isturf(body.loc) && H?.client && can_lunge)
 		// Make this more picky
 		var/valid_to_explode = prob(75)
 		if(locate(/obj/machinery/conveyor) in orange(5,get_turf(body)))
