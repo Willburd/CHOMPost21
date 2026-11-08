@@ -454,6 +454,12 @@
 
 /datum/component/badbody/proc/victim_speak(datum/source, list/message_data)
 	SIGNAL_HANDLER
+	if(!body)
+		return
+	var/datum/component/remote_view/comp = body.GetComponent(/datum/component/remote_view)
+	if(comp?.get_target() == body)
+		deadsay(message_data[SPEECH_MESSAGE])
+		return COMSIG_SAY_FORBID_SPEAK
 	if(body.z != bound_victim.z)
 		return
 	var/turf/A = get_turf(body)
