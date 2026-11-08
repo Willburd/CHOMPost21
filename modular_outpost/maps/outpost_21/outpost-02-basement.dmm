@@ -1253,7 +1253,8 @@
 	},
 /obj/machinery/power/apc/alarms_hidden{
 	dir = 4;
-	pixel_x = 24
+	pixel_x = 24;
+	req_access = null
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/rnd/xenobiology/xenobioh)
@@ -1297,7 +1298,8 @@
 	},
 /obj/machinery/power/apc/alarms_hidden{
 	dir = 4;
-	pixel_x = 24
+	pixel_x = 24;
+	req_access = null
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/xenobiology/xenobiohstore)
@@ -5283,7 +5285,8 @@
 	},
 /obj/machinery/power/apc/alarms_hidden{
 	dir = 4;
-	pixel_x = 24
+	pixel_x = 24;
+	req_access = null
 	},
 /turf/simulated/floor/tiled/dark,
 /area/specialty/expie_clubhouse/archive)
@@ -10710,14 +10713,19 @@
 	pixel_x = -9;
 	pixel_y = 5
 	},
-/obj/item/toy/tennis/purple{
-	pixel_x = 2;
-	pixel_y = 5
-	},
 /obj/item/toy/tennis/blue{
 	pixel_x = -4;
 	pixel_y = -4
 	},
+/obj/item/toy/baseball{
+	pixel_x = 9;
+	pixel_y = 5
+	},
+/obj/item/toy/tennis/purple{
+	pixel_x = 2;
+	pixel_y = 5
+	},
+/obj/item/toy/tennis,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/specialty/expie_clubhouse)
 "aum" = (
@@ -29040,6 +29048,13 @@
 /obj/random/aberration,
 /turf/simulated/mineral/alt/turfpack/muriki,
 /area/mine/unexplored/muriki/cave/sci)
+"bfe" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/reagent_dispensers/beerkeg/pirate,
+/turf/simulated/floor/carpet/bcarpet/turfpack/muriki,
+/area/specialty/expie_clubhouse)
 "bff" = (
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/pool)
@@ -41323,7 +41338,8 @@
 	},
 /obj/machinery/power/apc/alarms_hidden{
 	dir = 4;
-	pixel_x = 24
+	pixel_x = 24;
+	req_access = null
 	},
 /turf/simulated/floor/tiled,
 /area/specialty/expie_clubhouse)
@@ -144753,7 +144769,7 @@ bbW
 bbW
 bbW
 bbW
-bbU
+bfe
 amE
 pmN
 pmN
