@@ -410,7 +410,8 @@
 	var/mob/living/carbon/human/victim = locate_origin_mob()
 	if(!victim)
 		return
-	to_chat(victim, span_danger("An intense bolt of psychic pain thrashes your mind!"))
+	victim.emote("scream")
+	to_chat(victim, span_userdanger("An intense bolt of psychic pain thrashes your mind!"))
 	victim.adjustHalLoss(120)
 	victim.make_jittery(50)
 	victim.Life() // Instant feedback
