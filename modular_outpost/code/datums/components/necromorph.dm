@@ -5,9 +5,9 @@
 		return COMPONENT_INCOMPATIBLE
 
 /datum/component/necromorph/Destroy(force = FALSE)
-	. = ..()
 	var/mob/living/carbon/human/zombie = parent
 	zombie.death()
+	. = ..()
 
 /datum/component/necromorph/RegisterWithParent()
 	var/mob/living/carbon/human/zombie = parent
