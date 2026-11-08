@@ -42437,10 +42437,6 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/kitchen)
 "hmf" = (
-/obj/machinery/vending/deluxe_dinner/open{
-	dir = 8;
-	pixel_x = 8
-	},
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 4
 	},
