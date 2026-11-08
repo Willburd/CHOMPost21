@@ -29058,6 +29058,15 @@
 "bff" = (
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/pool)
+"bfg" = (
+/obj/effect/auto_crayon{
+	icon_state = "companion"
+	},
+/obj/effect/auto_crayon{
+	icon_state = "depart"
+	},
+/turf/simulated/floor/tiled,
+/area/maintenance/oldbridge)
 "bfi" = (
 /obj/structure/cable/green{
 	icon_state = "1-4"
@@ -92970,7 +92979,7 @@ dwP
 iVB
 vNc
 rBM
-qgn
+bfg
 jrr
 erX
 bKn
@@ -93132,7 +93141,7 @@ dwP
 iVB
 awj
 akf
-rBM
+qgn
 cqk
 fgQ
 aAO
