@@ -51,6 +51,7 @@
 	zombie.SetSleeping(0, TRUE)
 	zombie.set_stat(CONSCIOUS)
 	zombie.hallucination = 0
+	zombie.eye_blurry = 0
 
 	zombie.SetWeakened(0, TRUE)
 	zombie.status_flags &= ~CANWEAKEN
