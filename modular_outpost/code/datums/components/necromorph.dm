@@ -48,10 +48,11 @@
 	zombie.setToxLoss(0)
 	zombie.SetBlinded(0, TRUE)
 	zombie.SetSleeping(0, TRUE)
-	zombie.set_stat(CONSCIOUS)
 	zombie.hallucination = 0
 	zombie.eye_blurry = 0
 
+	zombie.set_stat(CONSCIOUS)
+	zombie.status_flags |= FAKEDEATH
 	zombie.SetWeakened(0, TRUE)
 	zombie.status_flags &= ~CANWEAKEN
 	zombie.SetStunned(0, TRUE)
@@ -69,9 +70,9 @@
 	COMSIG_TAKING_BRUTE_DAMAGE, COMSIG_TAKING_BRAIN_DAMAGE, COMSIG_TAKING_CLONE_DAMAGE, COMSIG_TAKING_HALO_DAMAGE, \
 	COMSIG_LIVING_HEALTH_UPDATE, COMSIG_TAKING_APPLY_EFFECT, COMSIG_CHECK_FOR_GODMODE, COMSIG_BEING_ELECTROCUTED, COMSIG_EMBED_OBJECT))
 
-	//And finally, remove the fact we're in godmode.
-	zombie.status_flags |= CANSTUN|CANWEAKEN|CANPARALYSE
-	zombie.species.flags &= ~(UNDEAD)
+	zombie.status_flags |= CANSTUN | CANWEAKEN | CANPARALYSE
+	zombie.status_flags &= ~FAKEDEATH
+	zombie.species.flags &= ~UNDEAD
 
 /datum/component/necromorph/proc/on_after_apply_damage(mob/living/carbon/human/zombie, damage, damagetype, def_zone, blocked, sharp, edge, used_weapon, projectile)
 	SIGNAL_HANDLER
