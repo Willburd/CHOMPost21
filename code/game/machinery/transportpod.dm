@@ -94,6 +94,7 @@
 	pixel_y = 300
 	alpha = 0
 	forceMove(goal)
+	update_icon()
 
 	animate(src, pixel_y = 0, time = 1 SECONDS, easing = SINE_EASING|EASE_OUT)
 	animate(src, alpha = 255, time = 1 SECOND, flags = ANIMATION_PARALLEL)
@@ -115,6 +116,7 @@
 	plane = initial(plane)
 	anchored = FALSE
 	in_transit = FALSE
+	update_icon()
 	if(ispath(occupant))
 		addtimer(CALLBACK(src, PROC_REF(go_out)), rand(1,3) SECONDS, TIMER_DELETE_ME)
 
@@ -208,4 +210,18 @@
 
 /obj/machinery/transportpod/return_air_for_internal_lifeform()
 	return air
+
+
+// Alt pod style
+/obj/machinery/transportpod/alt
+	icon = 'icons/obj/structures/droppod.dmi'
+	icon_state = "pod_open"
+
+/obj/machinery/transportpod/alt/update_icon()
+	if(in_transit)
+		icon_state = "pod_falling"
+	else if(occupant)
+		icon_state = "pod"
+	else
+		icon_state = "pod_open"
 /// Outpost 21 edit(port) end
