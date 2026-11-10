@@ -399,7 +399,7 @@
 	)
 
 /datum/design_techweb/ammobox_9mm_rubber
-	SET_AMMO_DESIGN_NAMEDESC("ammo box (9mm hollow point)")
+	SET_AMMO_DESIGN_NAMEDESC("ammo box (9mm rubber)") // Outpost 21 edit(port) - Wrong ammo name
 	id = "ammobox_9mm_rubber"
 	materials = list(MAT_STEEL = MATERIAL_COST(0.55))
 	build_type = AUTOLATHE
