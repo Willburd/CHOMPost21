@@ -347,3 +347,11 @@
 		return FALSE
 
 	SK.tgui_interact(src)
+
+// Outpost 21 edit begin - Shadekin component can be interacted with while unconcious
+/datum/component/shadekin/tgui_status(mob/user, datum/tgui_state/state)
+	. = ..()
+	if(user.stat == DEAD || . == STATUS_CLOSE)
+		return
+	return STATUS_INTERACTIVE
+// Outpost 21 edit end
