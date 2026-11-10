@@ -1449,7 +1449,7 @@
 /obj/machinery/camera/network/research{
 	c_tag = "SCI - Secure Xenobiology aft";
 	dir = 1;
-	network = list("Research","Miscellaneous Reseach")
+	network = list("Research","Miscellaneous Research")
 	},
 /obj/structure/window/reinforced{
 	dir = 8
@@ -66304,7 +66304,7 @@
 /obj/machinery/camera/network/research{
 	c_tag = "SCI - Xenobio Medprep";
 	dir = 1;
-	network = list("Research","Miscellaneous Reseach")
+	network = list("Research","Miscellaneous Research")
 	},
 /obj/machinery/firealarm{
 	dir = 1;
