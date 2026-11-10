@@ -1,4 +1,10 @@
+// Corrected wirecutters to igniter
+/datum/crafting_recipe/stunprod
+	reqs = list(list(/obj/item/handcuffs/cable = 1),
+				list(/obj/item/stack/rods = 1),
+				list(/obj/item/assembly/igniter = 1))
 
+// Many accessible weapons to make
 /datum/crafting_recipe/claymore
 	name = /obj/item/material/sword::name
 	result = /obj/item/material/sword
