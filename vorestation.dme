@@ -6038,6 +6038,7 @@
 #include "modular_outpost\code\modules\events\weeping_statue.dm"
 #include "modular_outpost\code\modules\flufftext\hallucination_events.dm"
 #include "modular_outpost\code\modules\food\drinks\bottle.dm"
+#include "modular_outpost\code\modules\food\food\cans.dm"
 #include "modular_outpost\code\modules\food\kitchen\gibber.dm"
 #include "modular_outpost\code\modules\games\cards.dm"
 #include "modular_outpost\code\modules\halloween\items.dm"
