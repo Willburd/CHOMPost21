@@ -114,7 +114,7 @@
 		return
 
 	to_chat(src, span_alien("You focus your psychic lance on [attack_target] and freeze their limbs with a wave of terrible dread."))
-	to_chat(attack_target, span_vdanger("You feel a creeping, horrible sense of dread come over you, freezing your limbs and setting your heart racing."))
+	to_chat(attack_target, span_danger("You feel a creeping, horrible sense of dread come over you, freezing your limbs and setting your heart racing."))
 	attack_target.Paralyse(10)
 	used_dominate = world.time
 	add_attack_logs(src, attack_target, "psychic knockout (longdemon)")

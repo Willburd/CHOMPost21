@@ -1253,7 +1253,8 @@
 	},
 /obj/machinery/power/apc/alarms_hidden{
 	dir = 4;
-	pixel_x = 24
+	pixel_x = 24;
+	req_access = null
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/rnd/xenobiology/xenobioh)
@@ -1297,7 +1298,8 @@
 	},
 /obj/machinery/power/apc/alarms_hidden{
 	dir = 4;
-	pixel_x = 24
+	pixel_x = 24;
+	req_access = null
 	},
 /turf/simulated/floor/tiled/dark,
 /area/rnd/xenobiology/xenobiohstore)
@@ -1447,7 +1449,7 @@
 /obj/machinery/camera/network/research{
 	c_tag = "SCI - Secure Xenobiology aft";
 	dir = 1;
-	network = list("Research","Miscellaneous Reseach")
+	network = list("Research","Miscellaneous Research")
 	},
 /obj/structure/window/reinforced{
 	dir = 8
@@ -5283,7 +5285,8 @@
 	},
 /obj/machinery/power/apc/alarms_hidden{
 	dir = 4;
-	pixel_x = 24
+	pixel_x = 24;
+	req_access = null
 	},
 /turf/simulated/floor/tiled/dark,
 /area/specialty/expie_clubhouse/archive)
@@ -10710,14 +10713,19 @@
 	pixel_x = -9;
 	pixel_y = 5
 	},
-/obj/item/toy/tennis/purple{
-	pixel_x = 2;
-	pixel_y = 5
-	},
 /obj/item/toy/tennis/blue{
 	pixel_x = -4;
 	pixel_y = -4
 	},
+/obj/item/toy/baseball{
+	pixel_x = 9;
+	pixel_y = 5
+	},
+/obj/item/toy/tennis/purple{
+	pixel_x = 2;
+	pixel_y = 5
+	},
+/obj/item/toy/tennis,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/specialty/expie_clubhouse)
 "aum" = (
@@ -27895,6 +27903,15 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/specialty/expie_clubhouse)
+"bcg" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/auto_crayon{
+	icon_state = "skull"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/spine/waste)
 "bch" = (
 /turf/simulated/floor/wood/turfpack/muriki,
 /area/specialty/expie_clubhouse)
@@ -28912,12 +28929,53 @@
 /obj/structure/closet,
 /turf/simulated/floor/reinforced,
 /area/rnd/xenobiology/xenobioh)
+"beF" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/obj/structure/flora/mushroom,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/spine/waste)
+"beG" = (
+/turf/simulated/wall,
+/area/maintenance/damaged_resleeverB)
 "beH" = (
 /turf/simulated/wall,
 /area/muriki/bathroom/dorm)
+"beI" = (
+/obj/random/trash,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/damaged_resleeverB)
 "beJ" = (
 /turf/simulated/wall,
 /area/hallway/muriki/dorm)
+"beK" = (
+/obj/machinery/light/small,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/damaged_resleeverB)
+"beL" = (
+/obj/structure/trash_pile/disable_mouse_spawn,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/damaged_resleeverB)
+"beM" = (
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/damaged_resleeverB)
+"beN" = (
+/obj/machinery/light/small,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/spine/waste)
+"beO" = (
+/obj/effect/auto_crayon{
+	icon_state = "right"
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/damaged_resleeverB)
+"beP" = (
+/turf/simulated/wall{
+	can_open = 1
+	},
+/area/maintenance/damaged_resleeverB)
 "beQ" = (
 /obj/machinery/light{
 	dir = 4
@@ -28932,25 +28990,83 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/tug)
+"beR" = (
+/obj/structure/closet,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/spine/waste)
 "beS" = (
 /obj/effect/landmark{
 	name = "vinestart"
 	},
 /turf/simulated/floor/tiled/steel,
 /area/crew_quarters/locker)
+"beT" = (
+/obj/machinery/transhuman/autoresleever/rogue,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/damaged_resleeverB)
 "beU" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/pool)
+"beV" = (
+/obj/machinery/gibber/autogibber{
+	emagged = 1
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/damaged_resleeverB)
+"beW" = (
+/obj/random/aberration,
+/turf/simulated/mineral/alt/turfpack/muriki,
+/area/mine/unexplored/muriki/cave/sec)
+"beX" = (
+/obj/random/aberration,
+/turf/simulated/floor/water/acidic/deep/indoor/turfpack/muriki,
+/area/mine/explored/muriki/river/south)
+"beY" = (
+/obj/random/aberration,
+/turf/simulated/mineral/alt/turfpack/muriki,
+/area/mine/explored/muriki/cave/waste)
+"beZ" = (
+/obj/random/aberration,
+/turf/simulated/mineral/alt/turfpack/muriki,
+/area/mine/unexplored/muriki/mountainbase)
 "bfa" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/pool)
+"bfb" = (
+/obj/random/aberration,
+/turf/simulated/mineral/alt/turfpack/muriki,
+/area/mine/unexplored/muriki/cave/terra)
+"bfc" = (
+/obj/random/aberration,
+/turf/simulated/floor/water/acidic/deep/turfpack/muriki,
+/area/mine/explored/muriki/river/mouth)
+"bfd" = (
+/obj/random/aberration,
+/turf/simulated/mineral/alt/turfpack/muriki,
+/area/mine/unexplored/muriki/cave/sci)
+"bfe" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/reagent_dispensers/beerkeg/pirate,
+/turf/simulated/floor/carpet/bcarpet/turfpack/muriki,
+/area/specialty/expie_clubhouse)
 "bff" = (
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/pool)
+"bfg" = (
+/obj/effect/auto_crayon{
+	icon_state = "companion"
+	},
+/obj/effect/auto_crayon{
+	icon_state = "depart"
+	},
+/turf/simulated/floor/tiled,
+/area/maintenance/oldbridge)
 "bfi" = (
 /obj/structure/cable/green{
 	icon_state = "1-4"
@@ -41231,7 +41347,8 @@
 	},
 /obj/machinery/power/apc/alarms_hidden{
 	dir = 4;
-	pixel_x = 24
+	pixel_x = 24;
+	req_access = null
 	},
 /turf/simulated/floor/tiled,
 /area/specialty/expie_clubhouse)
@@ -66187,7 +66304,7 @@
 /obj/machinery/camera/network/research{
 	c_tag = "SCI - Xenobio Medprep";
 	dir = 1;
-	network = list("Research","Miscellaneous Reseach")
+	network = list("Research","Miscellaneous Research")
 	},
 /obj/machinery/firealarm{
 	dir = 1;
@@ -66682,10 +66799,6 @@
 /obj/item/material/barbedwire/glass/start_active,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/spine/waste)
-"cPA" = (
-/obj/effect/abstract/aberration/spawner/fire,
-/turf/simulated/mineral/alt/turfpack/muriki,
-/area/mine/explored/muriki/cave/waste)
 "cPB" = (
 /obj/effect/auto_crayon{
 	icon_state = "market"
@@ -89795,7 +89908,7 @@ kwU
 kwU
 kwU
 kwU
-kwU
+bfb
 kwU
 cfv
 cfv
@@ -92866,7 +92979,7 @@ dwP
 iVB
 vNc
 rBM
-qgn
+bfg
 jrr
 erX
 bKn
@@ -93028,7 +93141,7 @@ dwP
 iVB
 awj
 akf
-rBM
+qgn
 cqk
 fgQ
 aAO
@@ -96283,7 +96396,7 @@ aIY
 aIY
 aIY
 aIY
-aIY
+beY
 aIY
 aIY
 aIY
@@ -96446,7 +96559,7 @@ aIY
 aIY
 aIY
 aIY
-cPA
+aIY
 aIY
 aIY
 aIY
@@ -96750,12 +96863,12 @@ kwU
 kwU
 kwU
 kwU
-kwU
-kwU
-kwU
-kwU
-kwU
-kwU
+beG
+beG
+beG
+beG
+beG
+beG
 ayb
 bAr
 ayb
@@ -96912,12 +97025,12 @@ kwU
 kwU
 kwU
 kwU
-kwU
-kwU
-kwU
-kwU
-kwU
-kwU
+beG
+beT
+beM
+beO
+beM
+beI
 ayb
 ayb
 ayb
@@ -97074,13 +97187,13 @@ kwU
 kwU
 kwU
 kwU
-kwU
-kwU
-kwU
-kwU
-kwU
-kwU
-kwU
+beG
+beV
+beM
+beM
+beM
+beK
+beG
 kwU
 kMh
 aLS
@@ -97236,13 +97349,13 @@ kwU
 kwU
 kwU
 kwU
-kwU
-kwU
-kwU
-kwU
-kwU
-kwU
-kwU
+beG
+beG
+beM
+beI
+beM
+beL
+beG
 kwU
 kMh
 aLS
@@ -97399,12 +97512,12 @@ kwU
 kwU
 kwU
 kwU
-kwU
-kwU
-kwU
-kwU
-kwU
-kwU
+beG
+beG
+beP
+beG
+beG
+beG
 kwU
 kMh
 aYY
@@ -97560,14 +97673,14 @@ kwU
 kwU
 kwU
 kwU
-kwU
-kwU
-kwU
-kwU
-kwU
-kwU
-kwU
-kwU
+kMh
+kMh
+kMh
+beR
+kMh
+kMh
+kMh
+kMh
 kMh
 ciA
 kMh
@@ -97722,14 +97835,14 @@ kwU
 kwU
 kwU
 kwU
-kwU
-kwU
-kwU
-kwU
-kwU
-kwU
-kwU
-kwU
+kMh
+kMh
+aSa
+cFp
+kMh
+kMh
+bhb
+kMh
 kMh
 aDo
 kMh
@@ -97884,14 +97997,14 @@ kwU
 kwU
 kwU
 kwU
-kwU
-kwU
-kwU
-kwU
-kwU
-kwU
-kwU
-kwU
+kMh
+aSa
+aSa
+kMh
+aSa
+aSa
+aSa
+kMh
 kMh
 aUB
 kMh
@@ -98046,16 +98159,16 @@ kwU
 kwU
 kwU
 kwU
-kwU
-kwU
-kwU
-kwU
-kwU
-kwU
-kwU
-kwU
 kMh
-cFK
+kMh
+aSa
+aSa
+beN
+kMh
+aSa
+aSa
+cdt
+bcg
 kMh
 aLS
 kMh
@@ -98209,15 +98322,15 @@ kwU
 kwU
 kwU
 kwU
-kwU
-kwU
-kwU
-kwU
-kwU
-kwU
-kwU
 kMh
-aRr
+kMh
+aSa
+kMh
+kMh
+kMh
+kMh
+kMh
+beF
 aLc
 aQr
 kMh
@@ -98372,9 +98485,9 @@ kwU
 kwU
 kwU
 kwU
-kwU
-kwU
-kwU
+kMh
+kMh
+kMh
 kwU
 kwU
 kwU
@@ -100619,7 +100732,7 @@ aqY
 wZz
 fVT
 lOA
-lOA
+bfc
 lOA
 lOA
 lOA
@@ -106204,7 +106317,7 @@ blV
 blV
 blV
 blV
-mGE
+beX
 mGE
 iCS
 iCS
@@ -119331,7 +119444,7 @@ glX
 glX
 glX
 glX
-glX
+beW
 glX
 glX
 glX
@@ -143905,7 +144018,7 @@ vSb
 vSb
 vSb
 vSb
-vSb
+beZ
 vSb
 vSb
 vSb
@@ -144665,7 +144778,7 @@ bbW
 bbW
 bbW
 bbW
-bbU
+bfe
 amE
 pmN
 pmN
@@ -147238,7 +147351,7 @@ pmN
 pmN
 pmN
 pmN
-pmN
+bfd
 pmN
 pmN
 pmN

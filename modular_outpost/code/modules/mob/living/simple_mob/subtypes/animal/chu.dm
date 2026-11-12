@@ -313,6 +313,14 @@
 	max_home_distance = 50
 	var/obj/machinery/atmospherics/unary/vent_pump/vent_found = null
 
+/datum/ai_holder/simple_mob/melee/evasive/chu/handle_wander_movement()
+	if(!holder)
+		return
+	if(isturf(holder.loc) && can_act())
+		if((wander_delay - 1) <= 0 && attempt_mouse_hole_warp(holder))
+			return
+	. = ..()
+
 /datum/ai_holder/simple_mob/melee/evasive/chu/handle_special_strategical()
 	if(!isnull(vent_found))
 		// sanity

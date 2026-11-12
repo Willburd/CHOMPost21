@@ -216,7 +216,6 @@
 	name = "Common Channel";
 	pixel_x = 21
 	},
-/obj/effect/landmark/start/stowaway,
 /turf/simulated/floor/wood,
 /area/mine/explored/muriki/cave/deepdark)
 "CP" = (

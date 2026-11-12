@@ -223,7 +223,7 @@
 		puller_target.AddComponent(/datum/component/limb_rot, limb_targ)
 
 	// Anticheeze
-	if(prob(60) && isturf(body.loc) && H && can_lunge)
+	if(prob(60) && isturf(body.loc) && H?.client && can_lunge)
 		// Make this more picky
 		var/valid_to_explode = prob(75)
 		if(locate(/obj/machinery/conveyor) in orange(5,get_turf(body)))
@@ -410,7 +410,8 @@
 	var/mob/living/carbon/human/victim = locate_origin_mob()
 	if(!victim)
 		return
-	to_chat(victim, span_vdanger("An intense bolt of psychic pain thrashes your mind!"))
+	victim.emote("scream")
+	to_chat(victim, span_userdanger("An intense bolt of psychic pain thrashes your mind!"))
 	victim.adjustHalLoss(120)
 	victim.make_jittery(50)
 	victim.Life() // Instant feedback
@@ -453,6 +454,12 @@
 
 /datum/component/badbody/proc/victim_speak(datum/source, list/message_data)
 	SIGNAL_HANDLER
+	if(!body)
+		return
+	var/datum/component/remote_view/comp = body.GetComponent(/datum/component/remote_view)
+	if(comp?.get_target() == body)
+		deadsay(message_data[SPEECH_MESSAGE])
+		return COMSIG_SAY_FORBID_SPEAK
 	if(body.z != bound_victim.z)
 		return
 	var/turf/A = get_turf(body)

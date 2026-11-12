@@ -1,3 +1,6 @@
+/obj/structure/micro_tunnel
+	name = "jil hole"
+
 /obj/structure/micro_tunnel/attackby(obj/item/I, mob/user)
 	if(I.has_tool_quality(TOOL_WELDER))
 		var/obj/item/weldingtool/WT = I.get_welder()

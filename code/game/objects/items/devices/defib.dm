@@ -482,7 +482,7 @@
 		return // No brain.
 
 	var/obj/item/organ/internal/brain/brain = H.internal_organs_by_name[O_BRAIN]
-	if(!brain)
+	if(!istype(brain)) // Outpost 21 edit(port) - Should be a typecheck due to MMI holders
 		return // Still no brain.
 
 	// If the brain'd `defib_timer` var gets below this number, brain damage will happen at a linear rate.

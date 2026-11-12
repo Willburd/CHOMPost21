@@ -85,7 +85,7 @@
 		to_chat(user, span_warning("There is already a [GT.nade] rigged to \the [src]!"))
 		return
 	if(nade.active)
-		to_chat(user, span_vdanger("OH SHIT!"))
+		to_chat(user, span_danger("OH SHIT!"))
 		return
 	to_chat(user, span_danger("You begin to carefully rig \the [nade] to \the [src]..."))
 	if(do_after(user, 2 SECONDS, target = src))
@@ -95,7 +95,7 @@
 		AddComponent(/datum/component/grenadetrap,nade)
 		to_chat(user, span_notice("You finish rigging \the [src]."))
 	else
-		to_chat(user, span_vdanger("\The [nade] slips and goes off!"))
+		to_chat(user, span_danger("\The [nade] slips and goes off!"))
 		nade.det_time = 1.2 SECONDS
 		nade.activate()
 
