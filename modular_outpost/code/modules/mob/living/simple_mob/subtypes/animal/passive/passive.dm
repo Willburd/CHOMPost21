@@ -10,7 +10,7 @@
 			return
 	. = ..()
 
-/proc/attempt_mouse_hole_warp(var/mob/mob_doing_warp)
+/proc/attempt_mouse_hole_warp(mob/mob_doing_warp)
 	var/obj/structure/micro_tunnel/hole = locate() in mob_doing_warp.loc
 	if(!hole || prob(90)) // low chance to warp
 		return FALSE
