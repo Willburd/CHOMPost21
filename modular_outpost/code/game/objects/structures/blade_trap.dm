@@ -7,7 +7,7 @@
 
 /obj/structure/blade_trap
 	name = "bear slap"
-	gender = PLURAL
+	gender = NEUTER
 	icon = 'modular_outpost/icons/obj/bladetrap.dmi'
 	icon_state = "bladetrap_1"
 	layer = 2.6

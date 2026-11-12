@@ -13,8 +13,6 @@
 	drop_sound = 'sound/items/drop/cardboardbox.ogg'
 	pickup_sound = 'sound/items/pickup/cardboardbox.ogg'
 
-	var/upgrade_to	// The type path this stack can be upgraded to.
-
 /obj/item/stack/medical/attack(mob/living/M, mob/living/user, target_zone, attack_modifier)
 	if(!iscarbon(M))
 		balloon_alert(user, "\the [src] cannot be applied to [M]!")
@@ -69,16 +67,12 @@
 	M.updatehealth()
 	return ITEM_INTERACT_SUCCESS
 
-/obj/item/stack/medical/proc/upgrade_stack(upgrade_amount)
-	. = FALSE
-
+/obj/item/stack/medical/proc/upgrade_stack(upgrade_amount, upgrade_to)
 	var/turf/T = get_turf(src)
-
-	if(ispath(upgrade_to) && use(upgrade_amount))
+	if(use(upgrade_amount))
 		var/obj/item/stack/medical/M = new upgrade_to(T, upgrade_amount)
 		return M
-
-	return .
+	return null
 
 /obj/item/stack/medical/crude_pack
 	name = "crude bandage"
@@ -87,8 +81,6 @@
 	icon_state = "gauze"
 	no_variants = FALSE
 	apply_sounds = list('sound/effects/rip1.ogg','sound/effects/rip2.ogg')
-
-	upgrade_to = /obj/item/stack/medical/bruise_pack
 
 /obj/item/stack/medical/crude_pack/attack(mob/living/M, mob/living/user, target_zone, attack_modifier)
 	if(..() == ITEM_INTERACT_FAILURE)
@@ -157,8 +149,6 @@
 	drop_sound = 'sound/items/drop/gloves.ogg'
 	pickup_sound = 'sound/items/pickup/gloves.ogg'
 
-	upgrade_to = /obj/item/stack/medical/advanced/bruise_pack
-
 /obj/item/stack/medical/bruise_pack/attack(mob/living/M, mob/living/user, target_zone, attack_modifier)
 	if(..() == ITEM_INTERACT_FAILURE)
 		return ITEM_INTERACT_FAILURE
@@ -186,7 +176,7 @@
 					continue
 				if(used == amount)
 					break
-				if(!do_after(user, W.damage/5, affecting))
+				if(!do_after(user, (W.damage / (2 + ((user != M)*3))) SECONDS, M)) // Outpost 21 edit - Bandage to seconds instead of ticks. other people bandaging you helps massively
 					balloon_alert(user, "stand still to bandage wounds.")
 					break
 
@@ -251,7 +241,7 @@
 		else
 			user.balloon_alert_visible("\the [user] starts salving wounds on [M]'s [affecting.name].", \
 										"salving the wounds on [M]'s [affecting.name]." )
-			if(!do_after(user, 1 SECOND, affecting))
+			if(!do_after(user, (2 + ((user == M)*3)) SECONDS, M)) // Outpost 21 edit - Bandage to seconds instead of ticks. other people bandaging you helps massively
 				user.balloon_alert(user, "stand still to salve wounds.")
 				return ITEM_INTERACT_FAILURE
 			if(affecting.is_salved()) // We do a second check after the delay, in case it was bandaged after the first check.
@@ -305,7 +295,7 @@
 					continue
 				//if(used == amount)
 				//	break
-				if(!do_after(user, W.damage/5, affecting))
+				if(!do_after(user, (W.damage / (2 + ((user != M)*3))) SECONDS, M)) // Outpost 21 edit - Bandage to seconds instead of ticks. other people bandaging you helps massively
 					balloon_alert(user, "stand still to bandage wounds.")
 					break
 				if(affecting.is_bandaged() && affecting.is_disinfected()) // We do a second check after the delay, in case it was bandaged after the first check.
@@ -366,7 +356,7 @@
 		else
 			user.balloon_alert_visible("\the [user] starts salving wounds on [M]'s [affecting.name].", \
 										"salving the wounds on [M]'s [affecting.name]." )
-			if(!do_after(user, 1 SECOND, affecting))
+			if(!do_after(user, (2 + ((user == M)*3)) SECONDS, M)) // Outpost 21 edit - Bandage to seconds instead of ticks. other people bandaging you helps massively
 				user.balloon_alert(user, "stand still to salve wounds.")
 				return ITEM_INTERACT_FAILURE
 			if(affecting.is_salved()) // We do a second check after the delay, in case it was bandaged after the first check.
@@ -416,7 +406,7 @@
 				balloon_alert(user, "you can't apply a splint to the arm you're using!")
 				return ITEM_INTERACT_FAILURE
 			user.balloon_alert_visible("[user] starts to apply \the [src] to their [limb].", "applying \the [src] to your [limb].", "You hear something being wrapped.")
-		if(do_after(user, 5 SECONDS, affecting))
+		if(!do_after(user, (2 + ((user == M)*3)) SECONDS, M)) // Outpost 21 edit - Bandage to seconds instead of ticks. other people bandaging you helps massively
 			if(affecting.splinted)
 				balloon_alert(user, "[M]'s [limb] is already splinted!")
 				return ITEM_INTERACT_FAILURE

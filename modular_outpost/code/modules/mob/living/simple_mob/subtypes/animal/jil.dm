@@ -363,6 +363,14 @@
 	// set first home
 	home_turf_original = home_turf
 
+/datum/ai_holder/simple_mob/intentional/jil/handle_wander_movement()
+	if(!holder)
+		return
+	if(isturf(holder.loc) && can_act())
+		if((wander_delay - 1) <= 0 && attempt_mouse_hole_warp(holder))
+			set_new_home(get_turf(holder))
+			return
+	. = ..()
 
 /datum/ai_holder/simple_mob/intentional/jil/proc/set_new_home(atom/A)
 	if(holder.loc && istype(A,/turf))

@@ -89,6 +89,9 @@
 	var/flagcheck = P.read_preference(/datum/preference/numeric/human/job_engsec_high)
 	if(flagcheck & CYBORG || flagcheck & AI_DEPT) // No borgs! If they don't have it as their high job, they spawn as something else anyway, or are abusing code diving to cheese this... Hello by the way.
 		return FALSE
+	flagcheck = P.read_preference(/datum/preference/numeric/human/job_civilian_high)
+	if(flagcheck & CHAPLAIN) // Chappy is barred too
+		return FALSE
 
 	return TRUE
 
