@@ -25953,6 +25953,7 @@
 /area/muriki/rooftop/medical)
 "inL" = (
 /obj/structure/table/steel_reinforced,
+/obj/item/binoculars,
 /turf/simulated/floor/wood,
 /area/djstation)
 "iog" = (
@@ -48691,6 +48692,7 @@
 	req_one_access = list(19,61,72);
 	name = "Hunting Rifle Cabinet"
 	},
+/obj/item/binoculars/scope,
 /turf/simulated/floor/wood,
 /area/djstation)
 "uKT" = (
