@@ -29067,6 +29067,10 @@
 	},
 /turf/simulated/floor/tiled,
 /area/maintenance/oldbridge)
+"bfh" = (
+/obj/effect/floorbreak,
+/turf/simulated/floor/plating,
+/area/maintenance/incinerator)
 "bfi" = (
 /obj/structure/cable/green{
 	icon_state = "1-4"
@@ -29083,6 +29087,30 @@
 	},
 /turf/simulated/floor/plating,
 /area/hallway/muriki/dorm)
+"bfj" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/structure/stairs/bottom{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/engineering/trammaint)
+"bfk" = (
+/obj/effect/floor_decal/techfloor/orange,
+/obj/item/clothing/head/cone,
+/obj/item/clothing/head/cone{
+	pixel_y = 5
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/engineering/trammaint)
+"bfl" = (
+/obj/effect/catwalk_plated,
+/obj/structure/railing{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/engineering/trammaint)
 "bfm" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -29155,6 +29183,20 @@
 "bfu" = (
 /turf/simulated/floor/gorefloor2/turfpack/muriki,
 /area/muriki/processor/gland/airmix)
+"bfv" = (
+/turf/simulated/mineral/floor/turfpack,
+/area/engineering/trammaint)
+"bfw" = (
+/obj/effect/catwalk_plated,
+/turf/simulated/floor/plating,
+/area/engineering/trammaint)
+"bfx" = (
+/obj/effect/catwalk_plated,
+/obj/structure/railing{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/engineering/trammaint)
 "bfy" = (
 /obj/structure/toilet,
 /obj/machinery/light/small{
@@ -29168,6 +29210,13 @@
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/sleep/Dorm_4)
+"bfz" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/structure/stairs/bottom,
+/turf/simulated/floor/plating,
+/area/engineering/trammaint)
 "bfA" = (
 /obj/effect/landmark{
 	name = "vinestart"
@@ -29187,6 +29236,23 @@
 	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/sleep/Dorm_5)
+"bfC" = (
+/obj/effect/floor_decal/industrial/warning,
+/turf/simulated/mineral/floor/turfpack,
+/area/engineering/trammaint)
+"bfD" = (
+/obj/item/flashlight,
+/turf/simulated/mineral/floor/turfpack,
+/area/maintenance/oldbridge)
+"bfE" = (
+/turf/simulated/mineral/floor/turfpack,
+/area/maintenance/oldbridge)
+"bfF" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 4
+	},
+/turf/simulated/mineral/floor/turfpack,
+/area/maintenance/oldbridge)
 "bfN" = (
 /turf/simulated/wall/r_wall,
 /area/muriki/processor/gland/space)
@@ -31070,7 +31136,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/mineral/floor/turfpack,
 /area/engineering/trammaint)
 "blR" = (
 /turf/simulated/wall/r_wall,
@@ -32576,9 +32642,6 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/engineering/trammaint)
 "bpb" = (
-/obj/structure/railing{
-	dir = 4
-	},
 /obj/structure/railing{
 	dir = 8
 	},
@@ -47061,7 +47124,7 @@
 /area/maintenance/sec)
 "bSx" = (
 /obj/item/material/barbedwire/glass/start_active,
-/turf/simulated/floor,
+/turf/simulated/mineral/floor/turfpack,
 /area/maintenance/oldbridge)
 "bSy" = (
 /obj/item/material/barbedwire/glass/start_active,
@@ -76409,6 +76472,7 @@
 /obj/machinery/light_construct{
 	dir = 1
 	},
+/obj/effect/floorbreak,
 /turf/simulated/floor/wood/alt,
 /area/maintenance/oldbridge)
 "jKd" = (
@@ -78321,6 +78385,7 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 6
 	},
+/obj/effect/floorbreak,
 /turf/simulated/floor/wood/alt,
 /area/maintenance/oldbridge)
 "mfT" = (
@@ -85992,6 +86057,7 @@
 	dir = 8;
 	pixel_x = 32
 	},
+/obj/effect/floorbreak,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/oldbridge)
 "wxe" = (
@@ -88634,7 +88700,7 @@ bns
 kNr
 bsI
 gVD
-bns
+bfv
 bnu
 bvu
 aHo
@@ -88955,7 +89021,7 @@ boW
 bpM
 bpM
 bpM
-bns
+bfv
 bpM
 bpM
 bpM
@@ -89113,17 +89179,17 @@ cfv
 bmq
 bBA
 bop
-boX
+bfz
+bpN
+bfw
+bfw
 bpN
 bpN
 bpN
-bpN
-bpN
-bpN
-bpN
-bpN
-bpN
-bwv
+bfx
+bfw
+bfl
+bfj
 bwX
 bxD
 bmq
@@ -89435,7 +89501,7 @@ cfv
 cfv
 cfv
 bmq
-bns
+bfv
 bop
 boY
 bns
@@ -89597,11 +89663,11 @@ cfv
 cfv
 cfv
 bmq
-bns
+bfv
 bop
 boY
 bpO
-bpO
+bfv
 vXL
 bpO
 bbc
@@ -89940,7 +90006,7 @@ bao
 bwy
 bwy
 bwy
-bxI
+bfh
 byD
 bCx
 alX
@@ -90088,14 +90154,14 @@ bop
 boX
 bpN
 bpN
+bfl
+bfl
+bfl
+bfw
+bfx
+bfx
 bpN
-bpN
-bpN
-bpN
-bpN
-bpN
-bpN
-bwv
+bfj
 aRf
 aMi
 bap
@@ -90249,11 +90315,11 @@ bns
 bop
 boY
 bpO
+bfv
 bpO
 bpO
 bpO
-bpO
-bpO
+bfv
 bpO
 bpO
 ckz
@@ -90419,7 +90485,7 @@ bpO
 bns
 bpO
 ckz
-ckx
+bfk
 bcV
 aQX
 bxb
@@ -90742,7 +90808,7 @@ cEi
 xpa
 bpO
 bpO
-bpO
+bfv
 bww
 bwX
 bxN
@@ -91061,7 +91127,7 @@ boY
 bpO
 bpO
 bpO
-bpO
+bns
 bpO
 bpO
 bns
@@ -91223,9 +91289,9 @@ boX
 bpN
 bpN
 bpN
-bpN
-bpN
-bpN
+bfx
+bfw
+bfl
 bpN
 bpN
 bpN
@@ -91547,7 +91613,7 @@ boY
 bpO
 bpO
 bpO
-bpO
+bfv
 bpO
 bpO
 bpO
@@ -91704,10 +91770,10 @@ bIU
 bFQ
 bvI
 bii
-bop
+bfC
 boY
 bpO
-bpO
+bfv
 bns
 bpO
 vXL
@@ -91874,7 +91940,7 @@ bpO
 bpO
 vTE
 bpO
-bpO
+bfv
 cHJ
 bpO
 bww
@@ -92036,7 +92102,7 @@ bpO
 bpO
 bpO
 bpO
-bpO
+bfv
 bpO
 bpO
 bww
@@ -92194,10 +92260,10 @@ bop
 bpb
 bcO
 bpN
+bfx
+bfw
 bpN
-bpN
-bpN
-bpN
+bfx
 bpN
 bpN
 bpN
@@ -92491,7 +92557,7 @@ tdB
 kZt
 dwP
 iVB
-uoh
+bfE
 rBM
 rBM
 cqk
@@ -92514,7 +92580,7 @@ igM
 igM
 bmq
 eqw
-bop
+bfC
 bpc
 bpP
 bpP
@@ -92525,7 +92591,7 @@ fFA
 bpP
 bpP
 bpP
-bns
+cHR
 bwX
 bxV
 kMh
@@ -92839,7 +92905,7 @@ xDC
 bmq
 eue
 eue
-bns
+bfv
 bns
 bns
 bns
@@ -92973,7 +93039,7 @@ bGp
 rqp
 kKa
 iVB
-tdB
+bfE
 bEx
 dwP
 iVB
@@ -93789,7 +93855,7 @@ bPV
 iVB
 xkR
 eID
-uoh
+bfE
 bSx
 yjs
 aAO
@@ -93952,7 +94018,7 @@ iVB
 jvX
 nsH
 rNr
-uoh
+bfD
 xGm
 bIV
 aAO
@@ -94260,7 +94326,7 @@ aad
 xJd
 iki
 eFK
-eFK
+bfE
 ajU
 cti
 xxJ
@@ -94599,7 +94665,7 @@ eQg
 hfb
 ozC
 qlM
-uoh
+bfE
 uoh
 yjs
 yjs
@@ -95231,7 +95297,7 @@ alr
 rDH
 iBE
 ezJ
-sNP
+cIu
 sNP
 iBE
 isA
@@ -95563,7 +95629,7 @@ iBE
 iBE
 jIJ
 ksG
-sNP
+bfE
 iBE
 iBE
 iBE
@@ -95880,11 +95946,11 @@ vCI
 usq
 xee
 kxl
-uUo
+bfF
 uUo
 vHY
 uyP
-sNP
+bfE
 fMI
 uxd
 jxV
@@ -95894,7 +95960,7 @@ uUo
 flv
 sNP
 xTd
-sNP
+cIu
 kUm
 bAS
 iBE
@@ -96036,7 +96102,7 @@ xOw
 aad
 dlv
 qQg
-uoh
+cIt
 arp
 mtM
 iBE
@@ -96198,7 +96264,7 @@ xOw
 fYz
 mvP
 qSo
-uoh
+cIt
 bMi
 imU
 iBE
@@ -96539,7 +96605,7 @@ qvo
 jCt
 iBE
 mim
-sNP
+cIu
 sNP
 iBE
 rMW
