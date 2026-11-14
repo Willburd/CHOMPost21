@@ -20565,13 +20565,13 @@
 /turf/simulated/floor/wood,
 /area/crew_quarters/heads/hop)
 "aXj" = (
-/obj/machinery/recharge_station,
 /obj/effect/floor_decal/corner/white/full{
 	dir = 8
 	},
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/machinery/vending/cargo_resale/sci,
 /turf/simulated/floor/tiled/dark,
 /area/bridge/hallway)
 "aXk" = (
