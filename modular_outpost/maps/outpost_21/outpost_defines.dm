@@ -356,10 +356,10 @@
 	new /datum/random_map/automata/cave_system(null, 1, 1, Z_LEVEL_OUTPOST_UPPER, world.maxx, world.maxy) // Create the mining Z-level.
 	new /datum/random_map/noise/ore(null, 1, 1, Z_LEVEL_OUTPOST_UPPER, world.maxx, world.maxy)         // Create the mining ore distribution map.
 
-	new /datum/random_map/automata/cave_system(null, 128, 1,  Z_LEVEL_OUTPOST_ORBITAL_LOWER, world.maxx, world.maxy) // Create the mining Z-level.
+	new /datum/random_map/automata/cave_system(null, 150, 1, Z_LEVEL_OUTPOST_ORBITAL_LOWER, world.maxx, world.maxy) // Create the mining Z-level.
 	new /datum/random_map/noise/ore(null, 1, 1, Z_LEVEL_OUTPOST_ORBITAL_LOWER, world.maxx, world.maxy)         // Create the mining ore distribution map.
 
-	new /datum/random_map/automata/cave_system(null, 128, 1,  Z_LEVEL_OUTPOST_ORBITAL_UPPER, world.maxx, world.maxy) // Create the mining Z-level.
+	new /datum/random_map/automata/cave_system(null, 150, 1, Z_LEVEL_OUTPOST_ORBITAL_UPPER, world.maxx, world.maxy) // Create the mining Z-level.
 	new /datum/random_map/noise/ore(null, 1, 1, Z_LEVEL_OUTPOST_ORBITAL_UPPER, world.maxx, world.maxy)         // Create the mining ore distribution map.
 
 	return 1
