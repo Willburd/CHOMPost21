@@ -6,9 +6,13 @@
 	var/zz = 0
 
 /datum/event/bsa_test_fire/announce()
+	if(GLOB.outpost_bsa_disabled)
+		return
 	GLOB.command_announcement.Announce("A scheduled bluespace artillery test-fire will be performed in ten minutes. Await further announcements for designated target coordinates.", "Announcement")
 
 /datum/event/bsa_test_fire/start()
+	if(GLOB.outpost_bsa_disabled)
+		return
 	addtimer(CALLBACK(src, PROC_REF(locate_target)), 1 MINUTE, TIMER_DELETE_ME)
 
 /datum/event/bsa_test_fire/proc/locate_target()

@@ -100,6 +100,9 @@
 		hithere = get_turf(target)
 	if(!target && !hithere)
 		return
+	if(GLOB.outpost_bsa_disabled)
+		to_chat(user, span_danger("You pull the trigger, but nothing happens!"))
+		return
 
 	if(GLOB.security_level < SEC_LEVEL_RED)
 		set_security_level(SEC_LEVEL_RED)
@@ -108,8 +111,11 @@
 
 	spawn(10 SECONDS)
 		if(hithere)
-			var/hitsize = 3
-			explosion(hithere, 2, hitsize,hitsize * 1.5)
+			var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread()
+			s.set_up(2, 1, hithere)
+			s.start()
+			var/obj/structure/ship_munition/disperser_charge/C = new /obj/structure/ship_munition/disperser_charge/explosive(hithere)
+			addtimer(CALLBACK(C, TYPE_PROC_REF(/obj/structure/ship_munition/disperser_charge, bsa_shell_event)), rand(1,15), TIMER_DELETE_ME)
 
 /obj/item/laser_designator/process()
 	if(prob(5))

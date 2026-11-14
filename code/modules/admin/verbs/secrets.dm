@@ -451,6 +451,9 @@ ADMIN_VERB(secrets, R_HOLDER, "Secrets", "Abuse harder than you ever have before
 		if("bsafire")
 			if(!is_funmin)
 				return
+			if(GLOB.outpost_bsa_disabled)
+				message_admins("[key_name_admin(holder)] attempted to BSA, but BSA is disabled!.")
+				return
 			var/datum/bsa_shell_controller/BSA = new /datum/bsa_shell_controller
 			BSA.ask(ui.user)
 
