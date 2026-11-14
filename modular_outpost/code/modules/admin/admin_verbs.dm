@@ -93,3 +93,9 @@ ADMIN_VERB_AND_CONTEXT_MENU(creepyradiomessage, R_EVENT, "Creepy Radio Message",
 
 	// We don't need the rest of saycode. So we also need to log what was said as well.
 	current.log_talk(message, LOG_SAY, color="#c0c0c0")
+
+GLOBAL_VAR_INIT(outpost_bsa_disabled, FALSE)
+
+ADMIN_VERB(toggle_bsa_use, R_EVENT, "Toggle BSA", "Toggles the ability to use BSA tools.", ADMIN_CATEGORY_EVENTS)
+	GLOB.outpost_bsa_disabled = !GLOB.outpost_bsa_disabled
+	to_chat(user, span_danger("BSA is now [GLOB.outpost_bsa_disabled ? "DISABLED" : "ENABLED"]."))
