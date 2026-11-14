@@ -2866,6 +2866,11 @@
 /obj/effect/floor_decal/corner/brown/border{
 	dir = 6
 	},
+/obj/structure/table/rack,
+/obj/machinery/door/window{
+	dir = 8
+	},
+/obj/item/storage/briefcase/inflatable,
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/trawler)
 "adP" = (
@@ -15292,6 +15297,9 @@
 	},
 /turf/simulated/floor/plating,
 /area/muriki/processor)
+"aET" = (
+/turf/simulated/wall/snowbrick/turfpack/muriki,
+/area/muriki/grounds/engi)
 "aEU" = (
 /obj/effect/auto_crayon{
 	icon_state = "skull"
@@ -15317,6 +15325,10 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/unexplored/muriki/mountainnorth)
+"aEY" = (
+/obj/structure/simple_door/snowbrick,
+/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
+/area/muriki/grounds/engi)
 "aEZ" = (
 /obj/structure/prop/rock/small/alt,
 /turf/simulated/floor/outdoors/ice/turfpack/muriki,
@@ -15331,6 +15343,16 @@
 "aFc" = (
 /turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
 /area/mine/explored/muriki/mountaineast)
+"aFd" = (
+/obj/effect/zone_divider,
+/turf/simulated/wall/snowbrick/turfpack/muriki,
+/area/muriki/grounds/engi)
+"aFe" = (
+/obj/structure/bed/chair/backed_grey{
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
+/area/muriki/grounds/engi)
 "aFf" = (
 /obj/structure/prop/rock/sharp,
 /turf/simulated/floor/outdoors/ice/turfpack/muriki,
@@ -15342,6 +15364,16 @@
 "aFh" = (
 /turf/simulated/floor/outdoors/snow/gravsnow/sidewalk_under/turfpack/muriki,
 /area/mine/unexplored/muriki/valleyeast)
+"aFi" = (
+/obj/structure/bonfire,
+/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
+/area/muriki/grounds/engi)
+"aFj" = (
+/obj/structure/bed/chair/backed_grey{
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
+/area/muriki/grounds/engi)
 "aFk" = (
 /obj/structure/prop/rock/flat,
 /turf/simulated/floor/outdoors/shelfice/turfpack/muriki,
@@ -15356,6 +15388,15 @@
 /obj/structure/prop/rock/sharp,
 /turf/simulated/floor/outdoors/ice/turfpack/muriki,
 /area/mine/unexplored/muriki/valleyeast)
+"aFn" = (
+/obj/structure/bed/double,
+/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
+/area/muriki/grounds/engi)
+"aFo" = (
+/obj/fiftyspawner/wood,
+/obj/fiftyspawner/wood,
+/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
+/area/muriki/grounds/engi)
 "aFp" = (
 /obj/random/outcrop,
 /turf/simulated/floor/outdoors/ice/turfpack/muriki,
@@ -32220,9 +32261,6 @@
 /obj/structure/window/reinforced/holiday{
 	dir = 1
 	},
-/obj/structure/window/reinforced{
-	health = 1e+006
-	},
 /obj/machinery/door/firedoor/glass,
 /obj/structure/grille{
 	desc = "A flimsy lattice of metal rods, with screws to secure it to the floor. This grille seems slightly more sturdy than others probably reinforced to withstand the wildlife.";
@@ -32236,6 +32274,7 @@
 /obj/structure/cable/orange{
 	icon_state = "0-8"
 	},
+/obj/structure/window/reinforced/holiday,
 /turf/simulated/floor/plating,
 /area/security/tactical/red)
 "dBp" = (
@@ -33355,6 +33394,9 @@
 /area/quartermaster/storage)
 "dYI" = (
 /obj/structure/window/reinforced/tinted/frosted,
+/obj/structure/mopbucket,
+/obj/item/reagent_containers/glass/bucket,
+/obj/item/mop,
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/security)
 "dYK" = (
@@ -78821,9 +78863,6 @@
 /obj/structure/window/reinforced/holiday{
 	dir = 1
 	},
-/obj/structure/window/reinforced{
-	health = 1e+006
-	},
 /obj/machinery/door/firedoor/glass,
 /obj/structure/grille{
 	desc = "A flimsy lattice of metal rods, with screws to secure it to the floor. This grille seems slightly more sturdy than others probably reinforced to withstand the wildlife.";
@@ -78838,6 +78877,7 @@
 /obj/structure/window/reinforced/holiday/vertical{
 	dir = 8
 	},
+/obj/structure/window/reinforced/holiday,
 /turf/simulated/floor/plating,
 /area/security/tactical/red)
 "tTf" = (
@@ -82956,9 +82996,6 @@
 /obj/structure/window/reinforced/holiday{
 	dir = 1
 	},
-/obj/structure/window/reinforced{
-	health = 1e+006
-	},
 /obj/machinery/door/firedoor/glass,
 /obj/structure/grille{
 	desc = "A flimsy lattice of metal rods, with screws to secure it to the floor. This grille seems slightly more sturdy than others probably reinforced to withstand the wildlife.";
@@ -82972,6 +83009,7 @@
 /obj/structure/window/reinforced/holiday/vertical{
 	dir = 4
 	},
+/obj/structure/window/reinforced/holiday,
 /turf/simulated/floor/plating,
 /area/security/tactical/red)
 "vmm" = (
@@ -121189,7 +121227,7 @@ ara
 ara
 ara
 ara
-ara
+aET
 ara
 ara
 ara
@@ -123441,9 +123479,9 @@ ara
 ara
 mIy
 ara
-ara
-ara
-ara
+aET
+aET
+aET
 ara
 ara
 ara
@@ -123602,11 +123640,11 @@ ara
 ara
 ara
 ara
+aET
 ara
+aFe
 ara
-ara
-ara
-ara
+aET
 ara
 ara
 ara
@@ -123764,11 +123802,11 @@ ara
 ara
 ara
 ara
+aET
+aFn
+aFi
 ara
-ara
-ara
-ara
-ara
+aEY
 ara
 ara
 ara
@@ -123926,11 +123964,11 @@ ara
 ara
 ara
 ara
-aOW
+aET
+aFo
+aFj
 ara
-ara
-ara
-ara
+aET
 ara
 ara
 ara
@@ -124089,9 +124127,9 @@ aOV
 aOV
 aOV
 aOV
-aOV
-aOV
-aDB
+aFd
+aFd
+aFd
 aOV
 aOV
 aOV

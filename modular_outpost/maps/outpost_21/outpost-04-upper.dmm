@@ -446,20 +446,6 @@
 "aaX" = (
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/unexplored/muriki/cave/shelter/north_west_far)
-"aaY" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced/holiday/vertical{
-	dir = 8
-	},
-/obj/structure/window/reinforced/holiday,
-/obj/machinery/door/firedoor/glass,
-/obj/structure/cable/yellow{
-	icon_state = "0-4"
-	},
-/obj/structure/cable/yellow,
-/obj/structure/window/reinforced/full/holiday/random,
-/turf/simulated/floor,
-/area/djstation)
 "aaZ" = (
 /obj/structure/cliff_end{
 	dir = 4
@@ -1704,12 +1690,6 @@
 /obj/machinery/deployable/barrier,
 /turf/simulated/floor/tiled,
 /area/security/vacantoffice)
-"adF" = (
-/obj/structure/blade_trap/start_active,
-/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki{
-	outdoors = 0
-	},
-/area/muriki/crystal)
 "adG" = (
 /turf/simulated/mineral/floor/turfpack/muriki{
 	ignore_mapgen = 1;
@@ -2857,9 +2837,7 @@
 /area/medical/patient_wing)
 "agu" = (
 /obj/effect/zone_divider,
-/turf/simulated/floor/outdoors/rocks/turfpack/muriki{
-	outdoors = 0
-	},
+/turf/simulated/mineral/crystal_shiny/ignore_mapgen/turfpack/muriki,
 /area/muriki/crystal)
 "agv" = (
 /obj/structure/railing,
@@ -4356,7 +4334,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "0-2"
 	},
-/obj/structure/window/reinforced/full/holiday/random,
+/obj/structure/window/reinforced/full/holiday,
 /turf/simulated/floor,
 /area/djstation)
 "akX" = (
@@ -4383,7 +4361,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "0-4"
 	},
-/obj/structure/window/reinforced/full/holiday/random,
+/obj/structure/window/reinforced/full/holiday,
 /turf/simulated/floor,
 /area/djstation)
 "akZ" = (
@@ -13030,7 +13008,7 @@
 	opacity = 0;
 	open_layer = 1
 	},
-/obj/structure/window/reinforced/full/holiday/random,
+/obj/structure/window/reinforced/full/holiday,
 /turf/simulated/floor/plating,
 /area/maintenance/substation/medical)
 "biZ" = (
@@ -17772,7 +17750,7 @@
 	opacity = 0;
 	open_layer = 1
 	},
-/obj/structure/window/reinforced/full/holiday/random,
+/obj/structure/window/reinforced/full/holiday,
 /turf/simulated/floor/plating,
 /area/maintenance/substation/medical)
 "dHw" = (
@@ -21335,7 +21313,7 @@
 "fGR" = (
 /obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
-/obj/structure/window/reinforced/full/holiday/random,
+/obj/structure/window/reinforced/full/holiday,
 /turf/simulated/floor/plating,
 /area/quartermaster/cargupbreak)
 "fHC" = (
@@ -44356,7 +44334,7 @@
 	opacity = 0;
 	open_layer = 1
 	},
-/obj/structure/window/reinforced/full/holiday/random,
+/obj/structure/window/reinforced/full/holiday,
 /turf/simulated/floor/plating,
 /area/maintenance/substation/medical)
 "swT" = (
@@ -52900,7 +52878,7 @@
 	opacity = 0;
 	open_layer = 1
 	},
-/obj/structure/window/reinforced/full/holiday/random,
+/obj/structure/window/reinforced/full/holiday,
 /turf/simulated/floor/plating,
 /area/maintenance/substation/medical)
 "xdP" = (
@@ -113751,8 +113729,8 @@ bMv
 bMv
 bMv
 bMv
-adF
-mxz
+als
+als
 bMv
 bMv
 bMv
@@ -114076,7 +114054,7 @@ bMv
 bMv
 bMv
 tVJ
-qOs
+als
 bMv
 bMv
 bMv
@@ -114333,7 +114311,7 @@ bxz
 bxH
 uGL
 akW
-aaY
+oKa
 sAt
 sAt
 sAt
@@ -114496,7 +114474,7 @@ inL
 eQI
 kLO
 akY
-aaY
+oKa
 sAt
 sAt
 sAt
@@ -116178,7 +116156,7 @@ qOs
 qOs
 qOs
 alH
-qOs
+als
 qOs
 qOs
 qOs
