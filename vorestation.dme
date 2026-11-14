@@ -5814,6 +5814,7 @@
 #include "modular_outpost\code\datums\supplypacks\science.dm"
 #include "modular_outpost\code\datums\supplypacks\supply.dm"
 #include "modular_outpost\code\defines\gases.dm"
+#include "modular_outpost\code\defines\obj.dm"
 #include "modular_outpost\code\game\antagonist\antagonist_objectives.dm"
 #include "modular_outpost\code\game\antagonist\alien\chu.dm"
 #include "modular_outpost\code\game\antagonist\alien\synx.dm"

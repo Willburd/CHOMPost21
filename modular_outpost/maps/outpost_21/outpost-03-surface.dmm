@@ -15405,6 +15405,10 @@
 /obj/structure/prop/rock/small/alt,
 /turf/simulated/floor/outdoors/ice/turfpack/muriki,
 /area/mine/unexplored/muriki/valleywest)
+"aFr" = (
+/obj/structure/signpostwood/kobolds_folly,
+/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
+/area/muriki/grounds/med)
 "aFs" = (
 /obj/structure/prop/rock/sharp,
 /turf/simulated/floor/outdoors/shelfice/turfpack/muriki,
@@ -126250,8 +126254,8 @@ ybq
 ybq
 ybq
 cMN
-cMN
-cMN
+aJx
+aJx
 cMN
 cMN
 wdK
@@ -126411,9 +126415,9 @@ aJx
 aJx
 aJx
 ybq
-ybq
-ybq
 aJx
+arf
+arf
 aJx
 lve
 qvv
@@ -126573,9 +126577,9 @@ aJx
 aJx
 aJx
 aJx
-aJx
-aJx
-aJx
+arf
+arf
+aFr
 lve
 qvv
 lve
