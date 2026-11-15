@@ -2356,6 +2356,14 @@
 	icon_state = "dark"
 	},
 /area/syndicate_mothership)
+"fa" = (
+/obj/structure/table/rack,
+/obj/item/medigun_backpack,
+/obj/item/medigun_backpack,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
 "fb" = (
 /obj/item/clothing/under/psysuit,
 /obj/item/clothing/suit/wizrobe/psypurple,
@@ -5627,6 +5635,16 @@
 	req_one_access = list()
 	},
 /obj/structure/disposalpipe/segment,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"kC" = (
+/obj/structure/table/rack,
+/obj/item/storage/belt/utility/chief/full,
+/obj/item/storage/belt/utility/chief/full,
+/obj/item/storage/belt/utility/chief/full,
+/obj/item/storage/belt/utility/chief/full,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -60962,7 +60980,7 @@ mN
 ab
 yb
 sg
-kQ
+fa
 kQ
 jq
 IX
@@ -63229,7 +63247,7 @@ mN
 mN
 ab
 yb
-kQ
+kC
 jc
 ek
 hD
