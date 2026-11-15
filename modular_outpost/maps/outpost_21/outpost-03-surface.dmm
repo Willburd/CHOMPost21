@@ -666,13 +666,6 @@
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/structure/grille,
-/obj/machinery/door/blast/regular{
-	density = 0;
-	icon_state = "pdoor0";
-	id = "bridge blast";
-	name = "Bridge Blast Doors";
-	opacity = 0
-	},
 /obj/structure/window/reinforced/holiday,
 /obj/structure/window/reinforced/holiday/vertical{
 	dir = 8
@@ -3247,13 +3240,6 @@
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/structure/grille,
-/obj/machinery/door/blast/regular{
-	density = 0;
-	icon_state = "pdoor0";
-	id = "bridge blast";
-	name = "Bridge Blast Doors";
-	opacity = 0
-	},
 /obj/structure/window/reinforced/holiday,
 /turf/simulated/floor/plating,
 /area/muriki/crew/judge)
@@ -3275,13 +3261,6 @@
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/structure/grille,
-/obj/machinery/door/blast/regular{
-	density = 0;
-	icon_state = "pdoor0";
-	id = "bridge blast";
-	name = "Bridge Blast Doors";
-	opacity = 0
-	},
 /obj/structure/window/reinforced/holiday,
 /obj/structure/window/reinforced/holiday/vertical{
 	dir = 4
@@ -15417,6 +15396,18 @@
 /obj/structure/prop/rock/flat,
 /turf/simulated/floor/outdoors/ice/turfpack/muriki,
 /area/mine/unexplored/muriki/valleyeast)
+"aFu" = (
+/obj/structure/window/reinforced/holiday{
+	dir = 1
+	},
+/obj/machinery/door/firedoor/glass,
+/obj/structure/window/reinforced/holiday,
+/obj/structure/window/reinforced/holiday/vertical{
+	dir = 4
+	},
+/obj/structure/grille,
+/turf/simulated/floor/plating,
+/area/crew_quarters/courtroom)
 "aFv" = (
 /obj/random/outcrop,
 /turf/simulated/floor/outdoors/ice/turfpack/muriki,
@@ -16863,13 +16854,6 @@
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/structure/grille,
-/obj/machinery/door/blast/regular{
-	density = 0;
-	icon_state = "pdoor0";
-	id = "bridge blast";
-	name = "Bridge Blast Doors";
-	opacity = 0
-	},
 /obj/structure/window/reinforced/holiday,
 /obj/structure/window/reinforced/holiday/vertical{
 	dir = 8
@@ -18099,26 +18083,6 @@
 "aRK" = (
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/research/north)
-"aRL" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced/polarized{
-	dir = 1;
-	id = "meet_window_tint"
-	},
-/obj/machinery/door/firedoor/glass,
-/obj/structure/window/reinforced/polarized{
-	dir = 8;
-	id = "meet_window_tint"
-	},
-/obj/machinery/door/blast/regular{
-	density = 0;
-	icon_state = "pdoor0";
-	id = "bridge blast";
-	name = "Bridge Blast Doors";
-	opacity = 0
-	},
-/turf/simulated/floor,
-/area/crew_quarters/courtroom)
 "aRM" = (
 /obj/structure/trailblazer/yellow,
 /turf/simulated/floor/water/turfpack/muriki,
@@ -18540,13 +18504,6 @@
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/structure/grille,
-/obj/machinery/door/blast/regular{
-	density = 0;
-	icon_state = "pdoor0";
-	id = "bridge blast";
-	name = "Bridge Blast Doors";
-	opacity = 0
-	},
 /obj/structure/window/reinforced/holiday,
 /turf/simulated/floor/plating,
 /area/crew_quarters/fitness)
@@ -20949,13 +20906,6 @@
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/structure/grille,
-/obj/machinery/door/blast/regular{
-	density = 0;
-	icon_state = "pdoor0";
-	id = "bridge blast";
-	name = "Bridge Blast Doors";
-	opacity = 0
-	},
 /obj/structure/window/reinforced/holiday,
 /obj/structure/window/reinforced/holiday/vertical{
 	dir = 4
@@ -24512,22 +24462,15 @@
 /turf/simulated/floor/tiled/steel,
 /area/hallway/primary/central_two)
 "bee" = (
-/obj/structure/window/reinforced/holiday,
-/obj/structure/window/reinforced/holiday/vertical{
-	dir = 4
-	},
 /obj/machinery/door/firedoor/glass,
 /obj/structure/grille,
-/obj/machinery/door/blast/regular{
-	density = 0;
-	icon_state = "pdoor0";
-	id = "bridge blast";
-	name = "Bridge Blast Doors";
-	opacity = 0
-	},
 /obj/structure/window/reinforced/holiday/vertical{
 	dir = 8
 	},
+/obj/structure/window/reinforced/holiday/vertical{
+	dir = 4
+	},
+/obj/structure/window/reinforced/holiday,
 /turf/simulated/floor/plating,
 /area/crew_quarters/recreation_area)
 "bef" = (
@@ -24619,20 +24562,13 @@
 /turf/simulated/floor/carpet/geo,
 /area/muriki/crew/arcade)
 "bep" = (
-/obj/structure/window/reinforced/holiday/vertical{
-	dir = 4
-	},
 /obj/machinery/door/firedoor/glass,
 /obj/structure/grille,
-/obj/machinery/door/blast/regular{
-	density = 0;
-	icon_state = "pdoor0";
-	id = "bridge blast";
-	name = "Bridge Blast Doors";
-	opacity = 0
-	},
 /obj/structure/window/reinforced/holiday/vertical{
 	dir = 8
+	},
+/obj/structure/window/reinforced/holiday/vertical{
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/crew_quarters/recreation_area)
@@ -27349,25 +27285,6 @@
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled/steel_grid,
 /area/medical/virology)
-"bLa" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced/polarized{
-	id = "meet_window_tint"
-	},
-/obj/structure/window/reinforced/polarized{
-	dir = 8;
-	id = "meet_window_tint"
-	},
-/obj/machinery/door/firedoor/glass,
-/obj/machinery/door/blast/regular{
-	density = 0;
-	icon_state = "pdoor0";
-	id = "bridge blast";
-	name = "Bridge Blast Doors";
-	opacity = 0
-	},
-/turf/simulated/floor,
-/area/crew_quarters/courtroom)
 "bLc" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 5
@@ -37220,23 +37137,13 @@
 /turf/simulated/flesh,
 /area/muriki/processor/gland/airmix)
 "fsa" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced/polarized{
-	id = "meet_window_tint"
-	},
 /obj/machinery/door/firedoor/glass,
-/obj/structure/window/reinforced/polarized{
-	dir = 8;
-	id = "meet_window_tint"
+/obj/structure/grille,
+/obj/structure/window/reinforced/holiday,
+/obj/structure/window/reinforced/holiday/vertical{
+	dir = 8
 	},
-/obj/machinery/door/blast/regular{
-	density = 0;
-	icon_state = "pdoor0";
-	id = "bridge blast";
-	name = "Bridge Blast Doors";
-	opacity = 0
-	},
-/turf/simulated/floor,
+/turf/simulated/floor/plating,
 /area/crew_quarters/courtroom)
 "fsz" = (
 /obj/effect/floor_decal/borderfloor{
@@ -48350,24 +48257,15 @@
 /turf/simulated/floor/outdoors/rocks/turfpack/muriki,
 /area/mine/unexplored/muriki/valleywest)
 "jfF" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced/polarized{
-	dir = 8;
-	id = "meet_window_tint"
-	},
-/obj/structure/window/reinforced/polarized{
-	dir = 1;
-	id = "meet_window_tint"
-	},
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/blast/regular{
-	density = 0;
-	icon_state = "pdoor0";
-	id = "bridge blast";
-	name = "Bridge Blast Doors";
-	opacity = 0
+/obj/structure/grille,
+/obj/structure/window/reinforced/holiday{
+	dir = 1
 	},
-/turf/simulated/floor,
+/obj/structure/window/reinforced/holiday/vertical{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
 /area/crew_quarters/courtroom)
 "jgx" = (
 /obj/effect/floor_decal/borderfloor{
@@ -65309,24 +65207,15 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/muriki/processor/euth)
 "pbd" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced/polarized{
-	dir = 8;
-	id = "meet_window_tint"
-	},
-/obj/structure/window/reinforced/polarized{
-	dir = 4;
-	id = "meet_window_tint"
-	},
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/blast/regular{
-	density = 0;
-	icon_state = "pdoor0";
-	id = "bridge blast";
-	name = "Bridge Blast Doors";
-	opacity = 0
+/obj/structure/grille,
+/obj/structure/window/reinforced/holiday/vertical{
+	dir = 8
 	},
-/turf/simulated/floor,
+/obj/structure/window/reinforced/holiday/vertical{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
 /area/crew_quarters/courtroom)
 "pbl" = (
 /obj/structure/cable/green{
@@ -66960,27 +66849,16 @@
 /turf/simulated/floor/tiled/dark,
 /area/security/tactical)
 "pHQ" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced/polarized{
-	id = "meet_window_tint"
-	},
-/obj/structure/window/reinforced/polarized{
-	dir = 4;
-	id = "meet_window_tint"
-	},
-/obj/structure/window/reinforced/polarized{
-	dir = 1;
-	id = "meet_window_tint"
+/obj/structure/window/reinforced/holiday{
+	dir = 1
 	},
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/blast/regular{
-	density = 0;
-	icon_state = "pdoor0";
-	id = "bridge blast";
-	name = "Bridge Blast Doors";
-	opacity = 0
+/obj/structure/grille,
+/obj/structure/window/reinforced/holiday,
+/obj/structure/window/reinforced/holiday/vertical{
+	dir = 4
 	},
-/turf/simulated/floor,
+/turf/simulated/floor/plating,
 /area/crew_quarters/courtroom)
 "pHW" = (
 /obj/structure/bed/chair,
@@ -70091,24 +69969,15 @@
 /turf/simulated/floor/tiled/steel,
 /area/hallway/primary/central_two)
 "qMp" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced/polarized{
-	dir = 4;
-	id = "meet_window_tint"
-	},
-/obj/structure/window/reinforced/polarized{
-	dir = 1;
-	id = "meet_window_tint"
-	},
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/blast/regular{
-	density = 0;
-	icon_state = "pdoor0";
-	id = "bridge blast";
-	name = "Bridge Blast Doors";
-	opacity = 0
+/obj/structure/grille,
+/obj/structure/window/reinforced/holiday{
+	dir = 1
 	},
-/turf/simulated/floor,
+/obj/structure/window/reinforced/holiday/vertical{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
 /area/crew_quarters/courtroom)
 "qMq" = (
 /obj/effect/floor_decal/corner/beige/full{
@@ -72324,23 +72193,16 @@
 /turf/simulated/floor/tiled,
 /area/muriki/tramstation/cargeng)
 "rDF" = (
-/obj/structure/window/reinforced/holiday{
-	dir = 1
+/obj/machinery/door/firedoor/glass,
+/obj/structure/grille,
+/obj/structure/window/reinforced/holiday/vertical{
+	dir = 8
 	},
 /obj/structure/window/reinforced/holiday/vertical{
 	dir = 4
 	},
-/obj/machinery/door/firedoor/glass,
-/obj/structure/grille,
-/obj/machinery/door/blast/regular{
-	density = 0;
-	icon_state = "pdoor0";
-	id = "bridge blast";
-	name = "Bridge Blast Doors";
-	opacity = 0
-	},
-/obj/structure/window/reinforced/holiday/vertical{
-	dir = 8
+/obj/structure/window/reinforced/holiday{
+	dir = 1
 	},
 /turf/simulated/floor/plating,
 /area/crew_quarters/recreation_area)
@@ -88661,23 +88523,13 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/engineering)
 "xej" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced/polarized{
-	id = "meet_window_tint"
-	},
-/obj/structure/window/reinforced/polarized{
-	dir = 4;
-	id = "meet_window_tint"
-	},
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/blast/regular{
-	density = 0;
-	icon_state = "pdoor0";
-	id = "bridge blast";
-	name = "Bridge Blast Doors";
-	opacity = 0
+/obj/structure/grille,
+/obj/structure/window/reinforced/holiday,
+/obj/structure/window/reinforced/holiday/vertical{
+	dir = 4
 	},
-/turf/simulated/floor,
+/turf/simulated/floor/plating,
 /area/crew_quarters/courtroom)
 "xek" = (
 /obj/item/geiger/wall/south,
@@ -141843,7 +141695,7 @@ jfF
 pbd
 pbd
 pbd
-bLa
+fsa
 fHN
 fHN
 dKo
@@ -142006,7 +141858,7 @@ reg
 miz
 mSl
 qMp
-bLa
+fsa
 fHN
 dKo
 dKo
@@ -142161,7 +142013,7 @@ aHR
 eDS
 lwo
 aHR
-aRL
+jfF
 xej
 reg
 oUz
@@ -142323,7 +142175,7 @@ aqw
 aqw
 oHc
 aqx
-pHQ
+aFu
 reg
 oUz
 tUd
