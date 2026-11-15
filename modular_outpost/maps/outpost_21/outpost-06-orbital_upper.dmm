@@ -334,7 +334,8 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/glass_engineering{
-	req_one_access = null
+	name = "Engineering Hallway";
+	req_one_access = list(1,5,10,24,29,40)
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/storage_engine_core)
@@ -2062,7 +2063,7 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/glass_engineering{
 	name = "Engineering Hallway";
-	req_one_access = list(10,24,29,40)
+	req_one_access = list(1,5,10,24,29,40)
 	},
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
@@ -5324,7 +5325,7 @@
 /obj/structure/disposalpipe/segment,
 /obj/machinery/door/airlock/glass_engineering{
 	name = "Engineering Hallway";
-	req_one_access = list(10,24,29,40)
+	req_one_access = list(1,5,10,24,29,40)
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/aux,
 /turf/simulated/floor/tiled/milspec,
@@ -13402,7 +13403,8 @@
 /area/offworld/orbital/station/access_shaft/upper_connector)
 "zd" = (
 /obj/machinery/door/airlock/glass_engineering{
-	req_one_access = null
+	name = "Engineering Hallway";
+	req_one_access = list(1,5,10,24,29,40)
 	},
 /obj/machinery/door/firedoor,
 /obj/structure/cable/green{
@@ -19063,7 +19065,8 @@
 /area/ai)
 "Ls" = (
 /obj/machinery/door/airlock/glass_engineering{
-	req_one_access = null
+	name = "Engineering Hallway";
+	req_one_access = list(1,5,10,24,29,40)
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/storage_engine_core)
@@ -19473,8 +19476,8 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/glass_engineering{
-	name = "Tool Storage";
-	req_one_access = list(10,24,29,40)
+	name = "Engineering Hallway";
+	req_one_access = list(1,5,10,24,29,40)
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/halls/aft)
@@ -21544,7 +21547,7 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/glass_engineering{
 	name = "Engineering Hallway";
-	req_one_access = list(10,24,29,40)
+	req_one_access = list(1,5,10,24,29,40)
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/aft)
@@ -22699,8 +22702,8 @@
 	dir = 8
 	},
 /obj/machinery/door/airlock/glass_engineering{
-	name = "Tool Storage";
-	req_one_access = list(10,24,29,40)
+	name = "Engineering Hallway";
+	req_one_access = list(1,5,10,24,29,40)
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/halls/aft)
@@ -22881,7 +22884,8 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/glass_engineering{
-	req_one_access = null
+	name = "Engineering Hallway";
+	req_one_access = list(1,5,10,24,29,40)
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/storage_engine_core)
