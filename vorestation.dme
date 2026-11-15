@@ -5966,6 +5966,7 @@
 #include "modular_outpost\code\game\turfs\flooring\flooring_decals.dm"
 #include "modular_outpost\code\game\turfs\flooring\flooring_premade.dm"
 #include "modular_outpost\code\game\turfs\flooring\gas_cracks.dm"
+#include "modular_outpost\code\game\turfs\outdoors\snow.dm"
 #include "modular_outpost\code\game\turfs\simulated\fancy_shuttles.dm"
 #include "modular_outpost\code\game\turfs\simulated\flesh_rework.dm"
 #include "modular_outpost\code\game\turfs\simulated\floor_types.dm"
