@@ -141,6 +141,9 @@
 /mob/living/simple_mob/vore/alienanimals/jil/Initialize(mapload)
 	. = ..()
 
+	if(mob_size == MOB_TINY && prob(30))
+		adjust_scale(rand(9, 11) / 10) // random sizes for most jils
+
 	verbs += /mob/living/proc/ventcrawl
 	verbs += /mob/living/proc/hide
 
