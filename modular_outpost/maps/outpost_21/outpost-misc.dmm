@@ -262,6 +262,9 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/industrial/loading,
+/obj/structure/barricade{
+	material = "steel"
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/tram)
 "aM" = (
@@ -288,6 +291,9 @@
 	padding_color = "#99AAFF"
 	},
 /obj/random/forgotten_tram,
+/obj/structure/barricade{
+	material = "steel"
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/tram)
 "aP" = (
@@ -298,12 +304,18 @@
 	c_tag = "CIV - Tram Starboard";
 	dir = 1
 	},
+/obj/structure/barricade{
+	material = "steel"
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/tram)
 "aQ" = (
 /obj/structure/bed/chair/sofa/bench/right{
 	dir = 1;
 	padding_color = "#99AAFF"
+	},
+/obj/structure/barricade{
+	material = "steel"
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/tram)
@@ -353,6 +365,9 @@
 	dir = 1;
 	padding_color = "#99AAFF"
 	},
+/obj/structure/barricade{
+	material = "steel"
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/tram)
 "aV" = (
@@ -371,6 +386,9 @@
 	},
 /obj/effect/floor_decal/milspec/color/black/half,
 /obj/random/forgotten_tram,
+/obj/structure/barricade{
+	material = "steel"
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/tram)
 "aX" = (
@@ -582,6 +600,9 @@
 "bv" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
+	},
+/obj/structure/barricade{
+	material = "steel"
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/tram)
@@ -834,6 +855,9 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/eshui/emblem/eshui_l,
+/obj/structure/barricade{
+	material = "steel"
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/tram)
 "bZ" = (
@@ -865,6 +889,9 @@
 /obj/machinery/camera/network/civilian{
 	c_tag = "CIV - Tram Fore";
 	dir = 8
+	},
+/obj/structure/barricade{
+	material = "steel"
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/tram)
@@ -1071,6 +1098,9 @@
 /area/shuttle/tram)
 "cC" = (
 /obj/structure/bed/chair/sofa/bench/right,
+/obj/structure/barricade{
+	material = "steel"
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/tram)
 "cD" = (
@@ -1078,10 +1108,16 @@
 /obj/machinery/camera/network/civilian{
 	c_tag = "CIV - Tram Port"
 	},
+/obj/structure/barricade{
+	material = "steel"
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/tram)
 "cE" = (
 /obj/structure/bed/chair/sofa/bench/left,
+/obj/structure/barricade{
+	material = "steel"
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/tram)
 "cF" = (
@@ -5940,6 +5976,16 @@
 	},
 /turf/unsimulated/floor/techfloor_grid,
 /area/centcom/simulated/cent_sat)
+"lr" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/loading,
+/obj/structure/barricade{
+	material = "steel"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/shuttle/tram)
 "ls" = (
 /turf/unsimulated/wall/fakeglass,
 /area/centcom/simulated/cent_sat)
@@ -10893,6 +10939,10 @@
 	icon_state = "milspec_outerhull"
 	},
 /area/shuttle/specialops_overmap)
+"uY" = (
+/obj/structure/barricade/sandbag,
+/turf/simulated/floor/tiled/milspec,
+/area/shuttle/tram)
 "uZ" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 10
@@ -11114,6 +11164,15 @@
 	icon_state = "milspec_outerhull"
 	},
 /area/shuttle/specialops_overmap)
+"vt" = (
+/obj/effect/floor_decal/milspec/color/black/half{
+	dir = 4
+	},
+/obj/structure/barricade{
+	material = "steel"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/shuttle/tram)
 "vu" = (
 /obj/structure/ship_munition/disperser_charge/fire,
 /turf/unsimulated/floor/steel{
@@ -11208,6 +11267,25 @@
 	icon_state = "milspec_outerhull"
 	},
 /area/shuttle/specialops_overmap)
+"vC" = (
+/obj/effect/floor_decal/milspec/cargo,
+/obj/structure/barricade{
+	material = "steel"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/tram)
+"vD" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/loading{
+	dir = 1
+	},
+/obj/structure/barricade{
+	material = "steel"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/shuttle/tram)
 "vE" = (
 /obj/mecha/combat/fighter/pinnace/loaded{
 	dir = 1
@@ -11237,6 +11315,18 @@
 /obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/shuttle/specialops_overmap)
+"vH" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/loading{
+	dir = 1
+	},
+/obj/structure/barricade{
+	material = "steel"
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/shuttle/tram)
 "vI" = (
 /obj/mecha/combat/fighter/pinnace/loaded{
 	dir = 1
@@ -21287,7 +21377,7 @@ ag
 ai
 ai
 as
-bs
+vC
 bX
 bs
 bs
@@ -21449,7 +21539,7 @@ ag
 ai
 ai
 as
-bs
+vC
 bX
 bs
 bs
@@ -21937,11 +22027,11 @@ an
 cN
 cz
 bi
-bi
+uY
 bi
 cb
 bi
-bi
+uY
 bi
 aK
 av
@@ -22097,13 +22187,13 @@ ak
 an
 an
 cO
-cA
+vD
 bi
-bi
+uY
 bi
 cc
 bi
-bi
+uY
 bi
 aL
 aw
@@ -23393,15 +23483,15 @@ ak
 an
 an
 cP
-cz
+vH
 bi
-bi
+uY
 bi
 ce
 bi
+uY
 bi
-bi
-aK
+lr
 ax
 an
 an
@@ -23557,11 +23647,11 @@ an
 cO
 cA
 bi
-bi
+uY
 bi
 cb
 bi
-bi
+uY
 bi
 aS
 aw
@@ -24368,9 +24458,9 @@ ap
 cM
 bp
 bV
-bV
+vt
 cf
-bV
+vt
 bJ
 bp
 aZ

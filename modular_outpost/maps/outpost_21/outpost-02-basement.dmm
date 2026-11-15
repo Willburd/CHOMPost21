@@ -1735,6 +1735,7 @@
 	req_access = list(24)
 	},
 /obj/machinery/door/firedoor/border_only,
+/obj/item/airlock_brace,
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/atmos)
 "adQ" = (
@@ -1819,6 +1820,7 @@
 /obj/structure/cable/orange{
 	icon_state = "6-8"
 	},
+/obj/effect/mine/claymore/flechette,
 /turf/simulated/floor/plating,
 /area/rnd/hallway/lowmain)
 "aeb" = (
@@ -2145,6 +2147,7 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
 	},
+/obj/item/airlock_brace,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/cave)
 "aeL" = (
@@ -3007,7 +3010,9 @@
 	icon_state = "4-8"
 	},
 /obj/effect/mine/incendiary,
-/obj/structure/barricade,
+/obj/structure/barricade{
+	material = "steel"
+	},
 /obj/structure/foamedmetal,
 /turf/simulated/floor/tiled/white,
 /area/maintenance/scielevbasement)
@@ -5780,10 +5785,10 @@
 	dir = 8;
 	icon_state = "pipe-c"
 	},
-/obj/structure/barricade,
 /obj/effect/floor_decal/corner/purple{
 	dir = 6
 	},
+/obj/structure/barricade,
 /turf/simulated/floor/tiled/white,
 /area/maintenance/scielevbasement)
 "ale" = (
@@ -6892,6 +6897,7 @@
 	pixel_x = -8;
 	pixel_y = 30
 	},
+/obj/item/material/barbedwire/start_active,
 /turf/simulated/floor/plating,
 /area/engineering/atmos)
 "anq" = (
@@ -6899,6 +6905,7 @@
 	dir = 8;
 	name = "Virology Air Inlet"
 	},
+/obj/item/material/barbedwire/start_active,
 /turf/simulated/floor/plating,
 /area/engineering/atmos)
 "anr" = (
@@ -7540,6 +7547,7 @@
 	req_one_access = null
 	},
 /obj/effect/zone_divider,
+/obj/item/airlock_brace,
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/crew_quarters/recreation_area_hallway)
 "aov" = (
@@ -8775,6 +8783,7 @@
 	name = "Science Maintenance"
 	},
 /obj/item/grenade/confetti,
+/obj/item/airlock_brace,
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/rnd/research/exp_prep)
 "aqD" = (
@@ -12355,6 +12364,7 @@
 	name = "Atmospherics";
 	req_access = list(24)
 	},
+/obj/item/airlock_brace,
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/atmos)
 "axo" = (
@@ -12914,12 +12924,14 @@
 /obj/machinery/atmospherics/pipe/manifold/visible/purple{
 	dir = 8
 	},
+/obj/machinery/portable_atmospherics/powered/pump/filled,
 /turf/simulated/floor/plating,
 /area/engineering/atmos)
 "ayy" = (
 /obj/machinery/atmospherics/binary/pump{
 	dir = 8
 	},
+/obj/machinery/portable_atmospherics/powered/pump/filled,
 /turf/simulated/floor/plating,
 /area/engineering/atmos)
 "ayz" = (
@@ -13893,6 +13905,7 @@
 	dir = 6
 	},
 /obj/effect/floor_decal/industrial/warning/corner,
+/obj/item/material/barbedwire/start_active,
 /turf/simulated/floor/plating,
 /area/engineering/atmos)
 "aAs" = (
@@ -13900,7 +13913,7 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/industrial/warning,
-/obj/machinery/portable_atmospherics/powered/pump/filled,
+/obj/item/material/barbedwire/start_active,
 /turf/simulated/floor/plating,
 /area/engineering/atmos)
 "aAt" = (
@@ -13914,7 +13927,7 @@
 /obj/machinery/atmospherics/pipe/simple/visible/red{
 	dir = 4
 	},
-/obj/machinery/portable_atmospherics/powered/pump/filled,
+/obj/item/material/barbedwire/start_active,
 /turf/simulated/floor/plating,
 /area/engineering/atmos)
 "aAv" = (
@@ -14819,6 +14832,7 @@
 /obj/machinery/door/firedoor,
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/item/airlock_brace,
 /turf/simulated/floor/tiled/techfloor,
 /area/rnd/hallway/lowmain)
 "aCo" = (
@@ -15287,6 +15301,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/item/airlock_brace,
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/mine/explored/muriki/cave/med/resleever_exit)
 "aDl" = (
@@ -15658,6 +15673,7 @@
 	dir = 4
 	},
 /obj/effect/landmark/holiday_event_spawn,
+/obj/item/material/barbedwire/start_active,
 /turf/simulated/floor/plating,
 /area/engineering/atmos)
 "aDO" = (
@@ -15907,7 +15923,9 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/obj/structure/barricade,
+/obj/structure/barricade{
+	material = "steel"
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/exp_prep)
 "aEq" = (
@@ -16187,6 +16205,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
+/obj/item/material/barbedwire/start_active,
 /turf/simulated/floor/plating,
 /area/engineering/atmos)
 "aEV" = (
@@ -16542,6 +16561,7 @@
 /obj/structure/railing{
 	dir = 8
 	},
+/obj/effect/decal/cleanable/blood/old,
 /turf/simulated/floor/plating,
 /area/maintenance/tug)
 "aFD" = (
@@ -17171,6 +17191,7 @@
 	pixel_x = -30;
 	pixel_y = -7
 	},
+/obj/item/material/barbedwire/start_active,
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/atmos)
 "aGC" = (
@@ -17653,6 +17674,7 @@
 	name = "Atmospherics";
 	req_access = list(24)
 	},
+/obj/item/airlock_brace,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/spine/eng)
 "aHw" = (
@@ -18117,6 +18139,7 @@
 	dir = 8;
 	icon_state = "pipe-c"
 	},
+/obj/item/material/barbedwire/start_active,
 /turf/simulated/floor/plating,
 /area/engineering/atmos)
 "aIr" = (
@@ -18579,6 +18602,7 @@
 	},
 /obj/machinery/door/firedoor/border_only,
 /obj/structure/disposalpipe/segment,
+/obj/item/airlock_brace,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/substation/atmos)
 "aJm" = (
@@ -18590,12 +18614,14 @@
 /area/engineering/atmos)
 "aJn" = (
 /obj/machinery/atmospherics/pipe/simple/visible/universal,
+/obj/structure/barricade/sandbag,
 /turf/simulated/floor/plating,
 /area/engineering/atmos)
 "aJo" = (
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/item/material/barbedwire/start_active,
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/atmos)
 "aJp" = (
@@ -18883,7 +18909,9 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 9
 	},
-/obj/structure/barricade,
+/obj/structure/barricade{
+	material = "steel"
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/lowmain)
 "aJS" = (
@@ -19500,6 +19528,7 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 5
 	},
+/obj/structure/blade_trap/start_active,
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/exp_prep)
 "aKX" = (
@@ -19982,9 +20011,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/disposalpipe/segment,
-/obj/machinery/floodlight{
-	dir = 4
-	},
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
 	},
@@ -21658,6 +21684,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/item/airlock_brace,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/spine/eng)
 "aOR" = (
@@ -22176,6 +22203,7 @@
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 5
 	},
+/obj/structure/blade_trap/start_active,
 /turf/simulated/floor/tiled/steel,
 /area/crew_quarters/recreation_area_hallway)
 "aPX" = (
@@ -22419,6 +22447,7 @@
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/item/material/barbedwire/start_active,
 /turf/simulated/floor/plating,
 /area/engineering/atmos)
 "aQB" = (
@@ -22687,6 +22716,7 @@
 	},
 /obj/structure/railing,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/effect/decal/cleanable/blood/old,
 /turf/simulated/floor/tiled,
 /area/engineering/trammaint)
 "aQY" = (
@@ -22733,6 +22763,7 @@
 /area/muriki/processor/gland/space)
 "aRf" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/effect/decal/cleanable/blood/old,
 /turf/simulated/floor/tiled,
 /area/engineering/trammaint)
 "aRg" = (
@@ -24258,6 +24289,7 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
+/obj/item/airlock_brace,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/medicelevbasement)
 "aUy" = (
@@ -24491,6 +24523,7 @@
 /obj/machinery/door/airlock/maintenance/medical,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/item/airlock_brace,
 /turf/simulated/floor/tiled/techfloor,
 /area/medical/medbay2)
 "aUX" = (
@@ -24884,6 +24917,7 @@
 /obj/structure/sign/painting/public{
 	pixel_x = 30
 	},
+/obj/item/material/barbedwire/start_active,
 /turf/simulated/floor/tiled/steel,
 /area/crew_quarters/recreation_area_hallway)
 "aVw" = (
@@ -26415,6 +26449,9 @@
 	icon_state = "pipe-c";
 	dir = 4
 	},
+/obj/effect/mine/claymore/flechette{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/steel,
 /area/crew_quarters/recreation_area_hallway)
 "aYI" = (
@@ -26505,6 +26542,7 @@
 	dir = 6
 	},
 /obj/structure/railing,
+/obj/item/material/barbedwire/start_active,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/tug)
 "aYV" = (
@@ -26734,6 +26772,7 @@
 	dir = 4;
 	pixel_x = 26
 	},
+/obj/effect/decal/cleanable/blood/old,
 /turf/simulated/floor/plating,
 /area/maintenance/tug)
 "aZz" = (
@@ -26930,6 +26969,7 @@
 /obj/structure/railing{
 	dir = 8
 	},
+/obj/effect/decal/cleanable/blood/old,
 /turf/simulated/floor/plating,
 /area/maintenance/tug)
 "aZV" = (
@@ -27682,6 +27722,7 @@
 	req_one_access = null
 	},
 /obj/item/tape/engineering,
+/obj/item/airlock_brace,
 /turf/simulated/floor/tiled/techfloor,
 /area/rnd/research/anomaly)
 "bbE" = (
@@ -27727,6 +27768,7 @@
 	dir = 8;
 	icon_state = "pipe-c"
 	},
+/obj/effect/mine/claymore/flechette,
 /turf/simulated/floor/tiled/steel,
 /area/crew_quarters/recreation_area_hallway)
 "bbL" = (
@@ -28188,6 +28230,7 @@
 "bcR" = (
 /obj/machinery/door/airlock/maintenance/common,
 /obj/machinery/door/firedoor/border_only,
+/obj/item/airlock_brace,
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/maintenance/cargo)
 "bcS" = (
@@ -28220,6 +28263,7 @@
 /area/muriki/bathroom/scilower)
 "bcV" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/effect/decal/cleanable/blood/old,
 /turf/simulated/floor/tiled,
 /area/engineering/trammaint)
 "bcW" = (
@@ -28394,6 +28438,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 8
 	},
+/obj/item/airlock_brace,
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/maintenance/cargo)
 "bds" = (
@@ -28683,7 +28728,9 @@
 /turf/simulated/floor/tiled/milspec,
 /area/rnd/xenobiology/xenobioh)
 "beg" = (
-/obj/structure/barricade,
+/obj/structure/barricade{
+	material = "steel"
+	},
 /obj/structure/inflatable/door,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/rnd/xenobiology/xenobioh)
@@ -28756,6 +28803,7 @@
 "bep" = (
 /obj/machinery/door/airlock/maintenance/common,
 /obj/machinery/door/firedoor/glass,
+/obj/item/airlock_brace,
 /turf/simulated/floor/tiled/techfloor,
 /area/crew_quarters/recreation_area_hallway)
 "beq" = (
@@ -28970,9 +29018,7 @@
 	name = "Station Intercom (General)";
 	pixel_x = 21
 	},
-/obj/structure/railing{
-	dir = 8
-	},
+/obj/effect/decal/cleanable/blood/old,
 /turf/simulated/floor/plating,
 /area/maintenance/tug)
 "beR" = (
@@ -29115,13 +29161,12 @@
 /turf/simulated/floor/tiled/steel,
 /area/hallway/muriki/dorm)
 "bfo" = (
-/obj/structure/railing{
-	dir = 4
-	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
-/obj/random/junk,
+/obj/structure/barricade{
+	material = "steel"
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/tug)
 "bfp" = (
@@ -29134,9 +29179,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/maintenance/tug)
 "bfq" = (
-/obj/structure/railing{
-	dir = 8
-	},
 /obj/random/junk,
 /turf/simulated/floor/plating,
 /area/maintenance/tug)
@@ -29319,6 +29361,36 @@
 /mob/living/simple_mob/vore/horse/kelpie,
 /turf/simulated/floor/water/turfpack/muriki,
 /area/mine/unexplored/muriki/cave/sci)
+"bfS" = (
+/obj/effect/floor_decal/corner/red/border{
+	dir = 8
+	},
+/obj/structure/barricade/sandbag,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/security/tankstore)
+"bfT" = (
+/obj/structure/barricade/sandbag,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/security/tankstore)
+"bfU" = (
+/obj/item/material/barbedwire/start_active,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/security/tankstore)
+"bfV" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/orange/border{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/barricade{
+	material = "steel"
+	},
+/obj/structure/blade_trap/start_active,
+/turf/simulated/floor/tiled,
+/area/engineering/trammaint)
 "bfW" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 8
@@ -29328,10 +29400,33 @@
 	},
 /turf/simulated/floor/tiled/steel,
 /area/hallway/muriki/dorm)
+"bfX" = (
+/obj/effect/decal/cleanable/blood/old,
+/turf/simulated/floor/tiled,
+/area/engineering/trammaint)
+"bfY" = (
+/obj/structure/barricade/sandbag,
+/turf/simulated/floor/tiled,
+/area/engineering/trammaint)
+"bfZ" = (
+/obj/item/material/barbedwire/start_active,
+/turf/simulated/floor/tiled,
+/area/engineering/trammaint)
+"bga" = (
+/obj/structure/barricade{
+	material = "steel"
+	},
+/turf/simulated/floor/tiled,
+/area/engineering/trammaint)
 "bgb" = (
 /obj/structure/stairs/spawner/south,
 /turf/simulated/floor/plating,
 /area/maintenance/tug)
+"bgc" = (
+/obj/effect/floor_decal/techfloor/orange,
+/obj/structure/barricade/sandbag,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/engineering/trammaint)
 "bgd" = (
 /obj/structure/table/gamblingtable,
 /obj/item/gun/projectile/shotgun/pump/empty{
@@ -29355,6 +29450,72 @@
 	},
 /turf/simulated/floor/wood/turfpack/muriki,
 /area/maintenance/cargo)
+"bgg" = (
+/obj/effect/floor_decal/techfloor/orange,
+/obj/structure/barricade/sandbag,
+/obj/item/material/barbedwire/start_active,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/engineering/trammaint)
+"bgh" = (
+/obj/effect/floor_decal/techfloor/orange,
+/obj/item/material/barbedwire/start_active,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/engineering/trammaint)
+"bgi" = (
+/obj/item/material/barbedwire/start_active,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/engineering/trammaint)
+"bgj" = (
+/obj/item/assembly/mousetrap/armed,
+/obj/item/material/barbedwire/start_active,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/engineering/trammaint)
+"bgk" = (
+/obj/effect/catwalk_plated,
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/item/material/barbedwire/start_active,
+/turf/simulated/floor/plating,
+/area/engineering/trammaint)
+"bgl" = (
+/obj/effect/decal/cleanable/blood/old,
+/turf/simulated/floor/plating,
+/area/maintenance/tug)
+"bgm" = (
+/obj/effect/floor_decal/steeldecal/steel_decals10{
+	dir = 6
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals10{
+	dir = 5
+	},
+/obj/effect/decal/cleanable/blood/old,
+/turf/simulated/floor/tiled/dark,
+/area/maintenance/tug)
+"bgn" = (
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/lightgrey/border,
+/obj/item/material/barbedwire/start_active,
+/turf/simulated/floor/tiled/dark,
+/area/maintenance/tug)
+"bgo" = (
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/lightgrey/border,
+/obj/structure/barricade{
+	material = "steel"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/maintenance/tug)
+"bgp" = (
+/obj/machinery/light,
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/lightgrey/border,
+/obj/item/material/barbedwire/start_active,
+/turf/simulated/floor/tiled/dark,
+/area/maintenance/tug)
 "bgq" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 4
@@ -29364,6 +29525,35 @@
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/Dorm_5)
+"bgr" = (
+/obj/effect/decal/cleanable/blood/old,
+/turf/simulated/floor/tiled/dark,
+/area/maintenance/tug)
+"bgs" = (
+/obj/item/material/barbedwire/start_active,
+/turf/simulated/floor/tiled/dark,
+/area/maintenance/tug)
+"bgt" = (
+/obj/structure/barricade/sandbag,
+/turf/simulated/floor/tiled/dark,
+/area/maintenance/tug)
+"bgu" = (
+/obj/effect/floor_decal/techfloor/orange,
+/obj/structure/railing,
+/obj/item/material/barbedwire/start_active,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/maintenance/tug)
+"bgv" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/obj/item/material/barbedwire/start_active,
+/turf/simulated/floor/tiled/dark,
+/area/maintenance/tug)
+"bgw" = (
+/obj/effect/decal/cleanable/blood/old,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/maintenance/tug)
 "bgx" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4;
@@ -29372,12 +29562,61 @@
 /obj/item/trash/plate,
 /turf/simulated/floor/plating,
 /area/maintenance/sec)
+"bgy" = (
+/obj/random/trash,
+/obj/effect/decal/cleanable/blood/old,
+/turf/simulated/floor/plating,
+/area/maintenance/tug)
+"bgz" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/random/trash,
+/obj/effect/decal/cleanable/blood/old,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/maintenance/tug)
 "bgA" = (
 /turf/simulated/floor/water/pool,
 /area/crew_quarters/pool)
 "bgB" = (
 /turf/simulated/floor/water/deep/pool,
 /area/crew_quarters/pool)
+"bgC" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/blood/old,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/maintenance/tug)
+"bgD" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/item/material/barbedwire/start_active,
+/turf/simulated/floor/tiled/dark,
+/area/maintenance/tug)
+"bgE" = (
+/obj/effect/decal/cleanable/blood/old,
+/turf/simulated/floor/tiled/dark,
+/area/maintenance/cave)
 "bgF" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -29450,6 +29689,12 @@
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/Dorm_5)
+"bgJ" = (
+/obj/effect/mine/claymore/flechette{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark,
+/area/maintenance/cave)
 "bgK" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 4
@@ -29470,6 +29715,15 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/spine/eng)
+"bgM" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/obj/structure/barricade{
+	material = "steel"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/maintenance/cave)
 "bgN" = (
 /obj/structure/disposalpipe/segment{
 	dir = 2;
@@ -29512,12 +29766,66 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/sec)
+"bgR" = (
+/obj/structure/barricade{
+	material = "steel"
+	},
+/obj/item/material/barbedwire/start_active,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/maintenance/tug)
+"bgS" = (
+/obj/effect/floor_decal/techfloor/orange{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/blood/old,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/maintenance/tug)
 "bgT" = (
 /obj/effect/floor_decal/stairs/station{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/hallway/muriki/dorm)
+"bgU" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/effect/catwalk_plated/dark,
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/effect/decal/cleanable/blood/old,
+/turf/simulated/floor/plating,
+/area/maintenance/cave)
+"bgV" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/effect/catwalk_plated/dark,
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/effect/mine/claymore/flechette{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/cave)
+"bgW" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 8
+	},
+/obj/item/material/barbedwire/start_active,
+/turf/simulated/floor/tiled/steel,
+/area/crew_quarters/recreation_area_hallway)
 "bgX" = (
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 1
@@ -29604,6 +29912,28 @@
 	},
 /turf/simulated/floor/plating/external/turfpack/muriki,
 /area/maintenance/civ/west)
+"bhj" = (
+/obj/effect/floor_decal/techfloor/orange/corner{
+	dir = 1
+	},
+/obj/structure/barricade{
+	material = "steel"
+	},
+/obj/structure/blade_trap/start_active,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/maintenance/tug)
+"bhk" = (
+/obj/effect/floorbreak,
+/obj/effect/decal/cleanable/blood/old,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/maintenance/tug)
+"bhl" = (
+/obj/structure/barricade{
+	material = "steel"
+	},
+/obj/structure/blade_trap/start_active,
+/turf/simulated/floor/tiled/dark,
+/area/maintenance/tug)
 "bhm" = (
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/dorm)
@@ -29618,12 +29948,48 @@
 /obj/machinery/door/airlock/maintenance/int,
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/maintenance/cargo)
+"bhp" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "1-2"
+	},
+/obj/effect/catwalk_plated/dark,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/barricade{
+	material = "steel"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/cave)
+"bhq" = (
+/obj/effect/floor_decal/techfloor/orange{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/blood/old,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/maintenance/tug)
+"bhr" = (
+/obj/structure/catwalk,
+/obj/effect/mine/claymore/flechette{
+	dir = 1
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/spine/eng)
 "bhs" = (
 /obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
 /obj/structure/window/reinforced/full/holiday/vertical,
 /turf/simulated/floor/plating,
 /area/muriki/crew/dormaid)
+"bht" = (
+/obj/structure/railing,
+/obj/effect/decal/cleanable/blood/old,
+/turf/simulated/floor/tiled/dark,
+/area/maintenance/tug)
+"bhu" = (
+/obj/effect/floor_decal/industrial/warning,
+/obj/effect/mine/claymore/flechette,
+/turf/simulated/floor/tiled/dark,
+/area/maintenance/tug)
 "bhv" = (
 /turf/simulated/wall,
 /area/muriki/crew/dormaid)
@@ -29677,6 +30043,62 @@
 "bhC" = (
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/sec)
+"bhD" = (
+/obj/structure/railing,
+/obj/item/material/barbedwire/start_active,
+/turf/simulated/floor/tiled/dark,
+/area/maintenance/tug)
+"bhE" = (
+/obj/structure/blade_trap/start_active,
+/turf/simulated/floor/tiled/dark,
+/area/maintenance/cave)
+"bhF" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/mine/claymore/flechette{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/steel,
+/area/crew_quarters/recreation_area_hallway)
+"bhG" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/barricade/sandbag,
+/turf/simulated/floor/tiled/steel,
+/area/crew_quarters/recreation_area_hallway)
+"bhH" = (
+/obj/effect/mine/claymore/flechette{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark,
+/area/maintenance/tug)
+"bhI" = (
+/obj/structure/catwalk,
+/obj/effect/mine/claymore/flechette{
+	dir = 1
+	},
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/cargo)
 "bhJ" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -29684,6 +30106,25 @@
 /obj/item/geiger/wall/west,
 /turf/simulated/floor/tiled/dark/turfpack/muriki,
 /area/mine/explored/muriki/cave/civ/east_access)
+"bhK" = (
+/obj/structure/catwalk,
+/obj/structure/blade_trap/start_active,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/crew_quarters/recreation_area_hallway)
+"bhL" = (
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/orange/bordercorner{
+	dir = 1
+	},
+/obj/structure/barricade/sandbag,
+/turf/simulated/floor/tiled/dark,
+/area/maintenance/tug)
+"bhM" = (
+/obj/item/material/barbedwire/start_active,
+/turf/simulated/floor/tiled/dark,
+/area/maintenance/cave)
 "bhN" = (
 /obj/machinery/door/airlock/glass_medical{
 	name = "First-Aid Station";
@@ -29701,6 +30142,37 @@
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/muriki/crew/dormaid)
+"bhO" = (
+/obj/structure/catwalk,
+/obj/structure/barricade{
+	material = "steel"
+	},
+/obj/item/material/barbedwire/start_active,
+/turf/simulated/floor/plating/turfpack/muriki,
+/area/maintenance/cargo)
+"bhP" = (
+/obj/structure/barricade/sandbag,
+/turf/simulated/floor/tiled/dark,
+/area/maintenance/cave)
+"bhQ" = (
+/obj/effect/floor_decal/steeldecal/steel_decals10{
+	dir = 10
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals10{
+	dir = 9
+	},
+/obj/effect/floor_decal/industrial/warning/dust,
+/obj/effect/decal/cleanable/blood/old,
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
+	},
+/area/maintenance/spine/eng)
+"bhR" = (
+/obj/effect/decal/cleanable/blood/old,
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
+	},
+/area/maintenance/cave)
 "bhS" = (
 /obj/structure/disposalpipe/up{
 	dir = 4
@@ -29768,6 +30240,99 @@
 "bhW" = (
 /turf/simulated/wall,
 /area/maintenance/sec)
+"bhX" = (
+/obj/effect/decal/cleanable/blood/old,
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 0
+	},
+/area/maintenance/cave)
+"bhY" = (
+/obj/item/material/barbedwire/start_active,
+/obj/effect/decal/cleanable/blood/old,
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 0
+	},
+/area/maintenance/cave)
+"bhZ" = (
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/blood/old,
+/turf/simulated/floor/tiled/dark/turfpack/muriki,
+/area/maintenance/cave)
+"bia" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/blood/old,
+/turf/simulated/floor/tiled/dark,
+/area/maintenance/cave)
+"bib" = (
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/stand_clear/blue,
+/obj/effect/decal/cleanable/blood/old,
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 0
+	},
+/area/maintenance/cave)
+"bic" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/blue/border{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/blood/old,
+/turf/simulated/floor/tiled/dark,
+/area/maintenance/cave)
+"bid" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 8
+	},
+/obj/structure/barricade/sandbag,
+/turf/simulated/floor/tiled/steel,
+/area/crew_quarters/recreation_area_hallway)
+"bie" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/barricade/sandbag,
+/turf/simulated/floor/tiled/steel,
+/area/crew_quarters/recreation_area_hallway)
+"bif" = (
+/obj/machinery/door/blast/gate/thin/open{
+	dir = 2;
+	icon_state = "shutter2_0";
+	id = "medbayquar";
+	name = "Medbay Emergency Lockdown"
+	},
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/structure/barricade{
+	material = "steel"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/medical/medbay2)
+"big" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 9
+	},
+/obj/structure/barricade/sandbag,
+/turf/simulated/floor/tiled,
+/area/engineering/atmoshall)
 "bih" = (
 /obj/structure/sign/warning/fire,
 /turf/simulated/wall/r_wall,
@@ -29786,6 +30351,7 @@
 	dir = 8;
 	icon_state = "pipe-c"
 	},
+/obj/structure/blade_trap/start_active,
 /turf/simulated/floor/plating,
 /area/engineering/trammaint)
 "bij" = (
@@ -29818,6 +30384,7 @@
 	name = "Security Maintenance";
 	req_access = list(1,12)
 	},
+/obj/item/airlock_brace,
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/maintenance/sec)
 "bil" = (
@@ -29912,6 +30479,32 @@
 /obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/sec)
+"biu" = (
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 8
+	},
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/lightgrey/bordercorner{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/lightgrey/bordercorner{
+	dir = 8
+	},
+/obj/item/material/barbedwire/start_active,
+/turf/simulated/floor/tiled/steel,
+/area/crew_quarters/recreation_area_hallway)
+"biv" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/item/material/barbedwire/start_active,
+/turf/simulated/floor/tiled/steel,
+/area/crew_quarters/recreation_area_hallway)
 "biw" = (
 /obj/structure/foamedmetal,
 /turf/simulated/floor/plating/turfpack/muriki,
@@ -29919,6 +30512,25 @@
 "bix" = (
 /turf/simulated/wall,
 /area/crew_quarters/locker)
+"biy" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+/obj/structure/barricade/sandbag,
+/turf/simulated/floor/tiled/steel,
+/area/crew_quarters/recreation_area_hallway)
+"biz" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 4
+	},
+/obj/structure/barricade/sandbag,
+/turf/simulated/floor/tiled/steel,
+/area/crew_quarters/recreation_area_hallway)
 "biA" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/door/firedoor/border_only,
@@ -29993,10 +30605,34 @@
 /obj/item/implanter,
 /turf/simulated/floor/tiled/milspec/sterile,
 /area/security/surgery)
+"biI" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+/obj/item/material/barbedwire/start_active,
+/turf/simulated/floor/tiled/steel,
+/area/crew_quarters/recreation_area_hallway)
+"biJ" = (
+/obj/effect/mine/claymore/flechette{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/crew_quarters/pool)
+"biK" = (
+/obj/structure/blade_trap/start_active,
+/turf/simulated/floor/tiled/freezer,
+/area/crew_quarters/pool)
 "biL" = (
 /obj/effect/landmark/event_spawn/maintpred,
 /turf/simulated/floor/plating/external/turfpack/muriki,
 /area/maintenance/civ/east)
+"biM" = (
+/obj/machinery/atmospherics/pipe/simple/visible/cyan,
+/obj/item/material/barbedwire/start_active,
+/turf/simulated/floor/plating,
+/area/engineering/atmos)
 "biN" = (
 /obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
@@ -30046,6 +30682,32 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/civ/east)
+"biS" = (
+/obj/machinery/atmospherics/pipe/simple/visible/red,
+/obj/item/material/barbedwire/start_active,
+/turf/simulated/floor/plating,
+/area/engineering/atmos)
+"biT" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/obj/item/material/barbedwire/start_active,
+/turf/simulated/floor/tiled/techfloor,
+/area/engineering/atmos)
+"biU" = (
+/obj/effect/mine/claymore/flechette{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/rnd/hallway/lowmain)
+"biV" = (
+/obj/machinery/atmospherics/pipe/manifold/visible/purple{
+	dir = 4
+	},
+/obj/machinery/meter,
+/obj/machinery/portable_atmospherics/powered/pump/filled,
+/turf/simulated/floor/plating,
+/area/engineering/atmos)
 "biW" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -30055,6 +30717,16 @@
 	},
 /turf/simulated/floor/tiled/steel,
 /area/hallway/muriki/dorm)
+"biX" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/orange{
+	icon_state = "4-8"
+	},
+/obj/structure/blade_trap/start_active,
+/turf/simulated/floor/plating,
+/area/maintenance/scielevbasement)
 "biY" = (
 /turf/simulated/wall,
 /area/crew_quarters/sleep/Dorm_1)
@@ -30202,6 +30874,7 @@
 /obj/item/towel/random,
 /obj/item/towel/random,
 /obj/item/towel/random,
+/obj/structure/blade_trap/start_active,
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/cargolower)
 "bjj" = (
@@ -30685,7 +31358,9 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/structure/barricade,
+/obj/structure/barricade{
+	material = "steel"
+	},
 /obj/structure/blade_trap/start_active,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/engineering/coreproctunnel)
@@ -31591,6 +32266,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
+/obj/item/airlock_brace,
 /turf/simulated/floor/tiled/techfloor,
 /area/muriki/bathroom/cargolower)
 "bmB" = (
@@ -32358,6 +33034,7 @@
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 10
 	},
+/obj/structure/blade_trap/start_active,
 /turf/simulated/floor/tiled/steel,
 /area/crew_quarters/locker)
 "bom" = (
@@ -32423,6 +33100,7 @@
 	name = "Security Maintenance";
 	req_access = list(1,12)
 	},
+/obj/item/airlock_brace,
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/maintenance/sec)
 "bov" = (
@@ -32432,6 +33110,7 @@
 	name = "Security Maintenance";
 	req_access = list(1,12)
 	},
+/obj/item/airlock_brace,
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/maintenance/sec)
 "bow" = (
@@ -33488,6 +34167,7 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/airlock/maintenance/medical,
 /obj/structure/disposalpipe/segment,
+/obj/item/airlock_brace,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/spine/civ)
 "bqM" = (
@@ -35863,6 +36543,7 @@
 /obj/machinery/atmospherics/pipe/simple/visible/red{
 	dir = 4
 	},
+/obj/item/material/barbedwire/start_active,
 /turf/simulated/floor/plating,
 /area/maintenance/incinerator)
 "bvd" = (
@@ -36188,6 +36869,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
+/obj/item/airlock_brace,
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/engineering/trammaint)
 "bvJ" = (
@@ -36693,6 +37375,7 @@
 	icon_state = "4-8"
 	},
 /obj/structure/railing,
+/obj/structure/barricade/sandbag,
 /turf/simulated/floor/tiled,
 /area/engineering/trammaint)
 "bxa" = (
@@ -37074,6 +37757,7 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
+/obj/item/material/barbedwire/start_active,
 /turf/simulated/floor/tiled,
 /area/engineering/trammaint)
 "bxO" = (
@@ -37242,12 +37926,18 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 4
 	},
+/obj/structure/barricade{
+	material = "steel"
+	},
 /turf/simulated/floor/tiled,
 /area/engineering/trammaint)
 "bxX" = (
 /obj/machinery/light,
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/orange/border,
+/obj/structure/barricade{
+	material = "steel"
+	},
 /turf/simulated/floor/tiled,
 /area/engineering/trammaint)
 "bxY" = (
@@ -37543,6 +38233,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
+/obj/item/airlock_brace,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/spine/waste)
 "byK" = (
@@ -38220,6 +38911,7 @@
 /obj/effect/floor_decal/industrial/warning/dust/corner{
 	dir = 1
 	},
+/obj/effect/decal/cleanable/blood/old,
 /turf/simulated/floor/plating/snow/plating/turfpack/muriki{
 	outdoors = 0
 	},
@@ -38341,6 +39033,7 @@
 /obj/machinery/door/airlock/maintenance/common,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/item/airlock_brace,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/tug)
 "bAr" = (
@@ -38534,6 +39227,9 @@
 	dir = 10
 	},
 /obj/machinery/hologram/holopad,
+/obj/structure/barricade{
+	material = "steel"
+	},
 /turf/simulated/floor/tiled,
 /area/engineering/trammaint)
 "bAN" = (
@@ -38547,6 +39243,9 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/barricade{
+	material = "steel"
+	},
 /turf/simulated/floor/tiled,
 /area/engineering/trammaint)
 "bAO" = (
@@ -39084,6 +39783,7 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/airlock/maintenance/common,
 /obj/effect/landmark/step_trap,
+/obj/item/airlock_brace,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/cave)
 "bCa" = (
@@ -39378,6 +40078,9 @@
 	dir = 4
 	},
 /obj/effect/catwalk_plated/dark,
+/obj/structure/barricade{
+	material = "steel"
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/cave)
 "bCD" = (
@@ -39796,12 +40499,6 @@
 /obj/item/mine/claymore,
 /obj/item/mine/claymore,
 /obj/item/mine/claymore,
-/obj/item/mine/claymore,
-/obj/item/mine/claymore,
-/obj/item/mine/claymore,
-/obj/item/mine/claymore,
-/obj/item/mine/claymore,
-/obj/item/mine/claymore,
 /turf/simulated/floor/tiled/milspec,
 /area/security/tankstore)
 "bDr" = (
@@ -39999,6 +40696,9 @@
 	dir = 9
 	},
 /obj/effect/floor_decal/industrial/hatch/red,
+/obj/structure/barricade{
+	material = "steel"
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/security/tankstore)
 "bDK" = (
@@ -40150,6 +40850,9 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/industrial/hatch/red,
+/obj/structure/barricade{
+	material = "steel"
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/security/tankstore)
 "bEa" = (
@@ -40188,6 +40891,7 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
+/obj/structure/barricade/sandbag,
 /turf/simulated/floor/tiled/milspec,
 /area/security/tankstore)
 "bEf" = (
@@ -40248,6 +40952,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/structure/blade_trap/start_active,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/security/tankstore)
 "bEn" = (
@@ -40350,6 +41055,7 @@
 /obj/effect/floor_decal/corner/red/bordercorner{
 	dir = 4
 	},
+/obj/item/material/barbedwire/start_active,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/security/tankstore)
 "bEv" = (
@@ -40787,6 +41493,7 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
+/obj/item/airlock_brace,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/civ/closet)
 "bFt" = (
@@ -40805,6 +41512,7 @@
 /obj/effect/floor_decal/corner/lightgrey/bordercorner{
 	dir = 8
 	},
+/obj/item/material/barbedwire/start_active,
 /turf/simulated/floor/tiled/steel,
 /area/crew_quarters/recreation_area_hallway)
 "bFu" = (
@@ -40817,6 +41525,7 @@
 	icon_state = "1-8"
 	},
 /obj/structure/disposalpipe/segment,
+/obj/item/material/barbedwire/start_active,
 /turf/simulated/floor/tiled/steel,
 /area/crew_quarters/recreation_area_hallway)
 "bFv" = (
@@ -41138,6 +41847,9 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/milspec/box,
+/obj/structure/barricade{
+	material = "steel"
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/security/tankstore)
 "bGe" = (
@@ -41308,6 +42020,7 @@
 /obj/effect/floor_decal/industrial/warning,
 /obj/effect/floor_decal/eshui/emblem/eshui_l,
 /obj/structure/disposalpipe/segment,
+/obj/structure/barricade/sandbag,
 /turf/simulated/floor/reinforced,
 /area/medical/robotics)
 "bGt" = (
@@ -41755,6 +42468,9 @@
 	},
 /obj/structure/cable/orange{
 	icon_state = "0-8"
+	},
+/obj/structure/barricade{
+	material = "steel"
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/cave)
@@ -43307,6 +44023,7 @@
 	name = "Civilian Substation";
 	req_one_access = list(11,24)
 	},
+/obj/item/airlock_brace,
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/maintenance/civ/bunker)
 "bKR" = (
@@ -45575,6 +46292,7 @@
 /obj/structure/cable/orange{
 	icon_state = "0-4"
 	},
+/obj/effect/decal/cleanable/blood/old,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/spine/eng)
 "bPx" = (
@@ -45594,6 +46312,7 @@
 /obj/effect/auto_crayon{
 	icon_state = "light"
 	},
+/obj/effect/decal/cleanable/blood/old,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/spine/eng)
 "bPy" = (
@@ -45692,6 +46411,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/effect/catwalk_plated/dark,
+/obj/structure/barricade{
+	material = "steel"
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/cave)
 "bPH" = (
@@ -45807,6 +46529,7 @@
 /area/maintenance/eng)
 "bPS" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/effect/decal/cleanable/blood/old,
 /turf/simulated/floor/tiled/dark,
 /area/maintenance/cave)
 "bPT" = (
@@ -46968,6 +47691,7 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
+/obj/item/airlock_brace,
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/maintenance/spine/eng)
 "bRS" = (
@@ -47728,6 +48452,7 @@
 /obj/structure/cable/orange{
 	icon_state = "4-8"
 	},
+/obj/effect/decal/cleanable/blood/old,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/tug)
 "bTQ" = (
@@ -49346,6 +50071,7 @@
 /obj/effect/floor_decal/corner/lightgrey/bordercorner{
 	dir = 8
 	},
+/obj/item/material/barbedwire/start_active,
 /turf/simulated/floor/tiled/dark,
 /area/maintenance/tug)
 "bXe" = (
@@ -50062,6 +50788,7 @@
 /obj/structure/sign/warning/enzyme{
 	pixel_y = -32
 	},
+/obj/item/material/barbedwire/start_active,
 /turf/simulated/floor/plating/snow/plating/turfpack/muriki{
 	outdoors = 0
 	},
@@ -50575,6 +51302,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
+/obj/effect/decal/cleanable/blood/old,
 /turf/simulated/floor/tiled/dark/turfpack/muriki,
 /area/maintenance/cave)
 "bZK" = (
@@ -51103,6 +51831,10 @@
 /obj/effect/auto_crayon{
 	icon_state = "travel"
 	},
+/obj/structure/barricade{
+	material = "steel"
+	},
+/obj/item/material/barbedwire/start_active,
 /turf/simulated/floor/tiled/dark,
 /area/maintenance/tug)
 "caQ" = (
@@ -53050,6 +53782,8 @@
 /obj/effect/floor_decal/techfloor/orange/corner{
 	dir = 8
 	},
+/obj/item/material/barbedwire/start_active,
+/obj/effect/decal/cleanable/blood/old,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/maintenance/tug)
 "cfU" = (
@@ -54366,6 +55100,7 @@
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/milspec/box,
+/obj/structure/blade_trap/start_active,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/security/tankstore)
 "cjs" = (
@@ -54662,6 +55397,9 @@
 /obj/structure/sign/warning/acid{
 	pixel_x = 32
 	},
+/obj/structure/barricade{
+	material = "steel"
+	},
 /turf/simulated/floor/plating/snow/plating/turfpack/muriki{
 	outdoors = 0
 	},
@@ -54751,6 +55489,9 @@
 /obj/structure/sign/warning/acid{
 	pixel_x = -32
 	},
+/obj/structure/barricade{
+	material = "steel"
+	},
 /turf/simulated/floor/plating/snow/plating/turfpack/muriki{
 	outdoors = 0
 	},
@@ -54759,6 +55500,9 @@
 /obj/structure/catwalk,
 /obj/structure/sign/warning/acid{
 	pixel_x = 32
+	},
+/obj/structure/barricade{
+	material = "steel"
 	},
 /turf/simulated/floor/plating/snow/plating/turfpack/muriki{
 	outdoors = 0
@@ -54783,6 +55527,9 @@
 /obj/structure/catwalk,
 /obj/structure/sign/warning/acid{
 	pixel_x = -32
+	},
+/obj/structure/barricade{
+	material = "steel"
 	},
 /turf/simulated/floor/plating/snow/plating/turfpack/muriki{
 	outdoors = 0
@@ -55856,6 +56603,7 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/item/airlock_brace,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/rnd/research/exp_prep)
 "cmT" = (
@@ -55888,6 +56636,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/firedoor/border_only,
+/obj/item/airlock_brace,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/rnd/research/exp_prep)
 "cmW" = (
@@ -56467,6 +57216,7 @@
 /obj/structure/sign/secure_eshui_facility{
 	pixel_y = 32
 	},
+/obj/effect/decal/cleanable/blood/old,
 /turf/simulated/floor/plating/snow/plating/turfpack/muriki{
 	outdoors = 0
 	},
@@ -56590,6 +57340,7 @@
 /area/maintenance/spine/eng)
 "cps" = (
 /obj/machinery/door/airlock/maintenance/common,
+/obj/item/airlock_brace,
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/maintenance/cave)
 "cpu" = (
@@ -56757,6 +57508,7 @@
 /obj/machinery/door/airlock/glass_external{
 	req_one_access = null
 	},
+/obj/item/airlock_brace,
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/maintenance/cargo)
 "cpX" = (
@@ -56767,6 +57519,10 @@
 /obj/structure/sign/secure_eshui_facility{
 	pixel_x = 32
 	},
+/obj/structure/barricade{
+	material = "steel"
+	},
+/obj/item/material/barbedwire/start_active,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/cargo)
 "cpY" = (
@@ -57383,6 +58139,7 @@
 /obj/structure/cable/orange{
 	icon_state = "6-9"
 	},
+/obj/structure/barricade/sandbag,
 /turf/simulated/floor/tiled/dark,
 /area/maintenance/cave)
 "crM" = (
@@ -57394,6 +58151,7 @@
 /obj/structure/cable/orange{
 	icon_state = "0-4"
 	},
+/obj/structure/blade_trap/start_active,
 /turf/simulated/floor/tiled/dark/turfpack/muriki,
 /area/maintenance/cave)
 "crN" = (
@@ -57418,6 +58176,7 @@
 /obj/structure/cable/orange{
 	icon_state = "6-8"
 	},
+/obj/structure/barricade/sandbag,
 /turf/simulated/floor/tiled/dark,
 /area/maintenance/cave)
 "crP" = (
@@ -57922,7 +58681,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/red{
 	dir = 4
 	},
-/obj/structure/barricade,
+/obj/structure/barricade{
+	material = "steel"
+	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/engineering/coreproctunnel)
 "ctq" = (
@@ -57953,7 +58714,9 @@
 /turf/simulated/floor/plating,
 /area/engineering/atmos)
 "ctu" = (
-/obj/structure/barricade,
+/obj/structure/barricade{
+	material = "steel"
+	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/med)
 "ctv" = (
@@ -58444,6 +59207,7 @@
 /obj/machinery/door/airlock/glass_external{
 	req_one_access = null
 	},
+/obj/item/airlock_brace,
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/crew_quarters/recreation_area_hallway)
 "cum" = (
@@ -58516,6 +59280,10 @@
 	pixel_y = 30
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/structure/barricade{
+	material = "steel"
+	},
+/obj/structure/blade_trap/start_active,
 /turf/simulated/floor/tiled/steel,
 /area/crew_quarters/recreation_area_hallway)
 "cur" = (
@@ -58554,6 +59322,7 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/item/material/barbedwire/start_active,
 /turf/simulated/floor/tiled/steel,
 /area/crew_quarters/recreation_area_hallway)
 "cuu" = (
@@ -58566,6 +59335,7 @@
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 1
 	},
+/obj/structure/barricade/sandbag,
 /turf/simulated/floor/tiled/steel,
 /area/crew_quarters/recreation_area_hallway)
 "cuv" = (
@@ -58791,6 +59561,10 @@
 	c_tag = "CIV - Lower Hallway West";
 	dir = 1
 	},
+/obj/structure/barricade{
+	material = "steel"
+	},
+/obj/item/material/barbedwire/start_active,
 /turf/simulated/floor/tiled/steel,
 /area/crew_quarters/recreation_area_hallway)
 "cvj" = (
@@ -58812,6 +59586,7 @@
 	dir = 1;
 	pixel_y = -26
 	},
+/obj/item/material/barbedwire/start_active,
 /turf/simulated/floor/tiled/steel,
 /area/crew_quarters/recreation_area_hallway)
 "cvl" = (
@@ -58821,6 +59596,7 @@
 	dir = 1;
 	pixel_y = -26
 	},
+/obj/structure/barricade/sandbag,
 /turf/simulated/floor/tiled/steel,
 /area/crew_quarters/recreation_area_hallway)
 "cvm" = (
@@ -58889,6 +59665,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/item/material/barbedwire/start_active,
 /turf/simulated/floor/tiled/steel,
 /area/crew_quarters/recreation_area_hallway)
 "cvr" = (
@@ -59581,6 +60358,7 @@
 	dir = 1;
 	pixel_y = -30
 	},
+/obj/effect/decal/cleanable/blood/old,
 /turf/simulated/floor/tiled/dark,
 /area/maintenance/tug)
 "cxI" = (
@@ -60274,6 +61052,7 @@
 /obj/structure/sign/warning/acid{
 	pixel_y = -32
 	},
+/obj/structure/blade_trap/start_active,
 /turf/simulated/floor/plating/snow/plating/turfpack/muriki{
 	outdoors = 0
 	},
@@ -60520,7 +61299,9 @@
 /turf/simulated/floor/wood/turfpack/muriki,
 /area/specialty/stowaway_clubhouse)
 "cAC" = (
-/obj/structure/barricade,
+/obj/structure/barricade{
+	material = "steel"
+	},
 /turf/simulated/floor/wood/turfpack/muriki,
 /area/specialty/stowaway_clubhouse)
 "cAD" = (
@@ -61087,6 +61868,7 @@
 "cBC" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/airlock/maintenance/common,
+/obj/item/airlock_brace,
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/muriki/bathroom/vr_coop)
 "cBD" = (
@@ -61425,6 +62207,9 @@
 	dir = 1
 	},
 /obj/structure/disposalpipe/segment,
+/obj/effect/mine/claymore/flechette{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/vr_coop)
 "cCd" = (
@@ -61840,6 +62625,9 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
+/obj/effect/mine/claymore/flechette{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark,
 /area/muriki/crew/vr_train)
 "cCL" = (
@@ -62006,6 +62794,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
+/obj/item/material/barbedwire/start_active,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/security/tankstore)
 "cDk" = (
@@ -62018,6 +62807,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
+/obj/item/material/barbedwire/start_active,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/security/tankstore)
 "cDl" = (
@@ -62027,6 +62817,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
+/obj/item/material/barbedwire/start_active,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/security/tankstore)
 "cDm" = (
@@ -62036,6 +62827,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
+/obj/item/material/barbedwire/start_active,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/security/tankstore)
 "cDn" = (
@@ -62066,6 +62858,9 @@
 "cDp" = (
 /obj/effect/floor_decal/milspec/stripe,
 /obj/effect/floor_decal/milspec/box,
+/obj/structure/barricade{
+	material = "steel"
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/security/tankstore)
 "cDq" = (
@@ -62102,6 +62897,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 4
 	},
+/obj/structure/barricade/sandbag,
 /turf/simulated/floor/tiled/milspec,
 /area/security/tankstore)
 "cDu" = (
@@ -62110,6 +62906,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
 	},
+/obj/structure/barricade/sandbag,
 /turf/simulated/floor/tiled/milspec,
 /area/security/tankstore)
 "cDv" = (
@@ -62126,6 +62923,7 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
+/obj/structure/barricade/sandbag,
 /turf/simulated/floor/tiled/milspec,
 /area/security/tankstore)
 "cDx" = (
@@ -66276,6 +67074,7 @@
 /obj/machinery/door/airlock/glass_science{
 	req_one_access = null
 	},
+/obj/item/airlock_brace,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/rnd/hallway/lowmain)
 "cNV" = (
@@ -66287,6 +67086,7 @@
 	icon_state = "1-2"
 	},
 /obj/item/taperoll/engineering/applied,
+/obj/item/airlock_brace,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/rnd/hallway/lowmain)
 "cNW" = (
@@ -66341,6 +67141,7 @@
 /area/mine/explored/muriki/cave/sci/east_access)
 "cOb" = (
 /obj/effect/catwalk_plated/white,
+/obj/effect/mine/claymore/flechette,
 /turf/simulated/floor/plating,
 /area/rnd/hallway/lowmain)
 "cOc" = (
@@ -66348,6 +67149,7 @@
 /obj/structure/cable/orange{
 	icon_state = "1-2"
 	},
+/obj/effect/mine/claymore/flechette,
 /turf/simulated/floor/plating,
 /area/rnd/hallway/lowmain)
 "cOd" = (
@@ -66499,6 +67301,7 @@
 	name = "Science Maintenance";
 	req_one_access = null
 	},
+/obj/item/airlock_brace,
 /turf/simulated/floor/tiled/techfloor,
 /area/rnd/research/anomaly)
 "cOx" = (
@@ -66601,6 +67404,7 @@
 	name = "Science Maintenance";
 	req_one_access = null
 	},
+/obj/item/airlock_brace,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/scielevbasement)
 "cOI" = (
@@ -66759,7 +67563,9 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 5
 	},
-/obj/structure/barricade,
+/obj/structure/barricade{
+	material = "steel"
+	},
 /turf/simulated/floor/tiled,
 /area/rnd/research/anomaly)
 "cPb" = (
@@ -69006,6 +69812,7 @@
 	opacity = 0
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/item/airlock_brace,
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/maintenance/cargo)
 "cUj" = (
@@ -69690,6 +70497,7 @@
 	opacity = 0
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/item/airlock_brace,
 /turf/simulated/floor/tiled/techfloor,
 /area/rnd/xenobiology/hallway)
 "cVi" = (
@@ -70124,6 +70932,9 @@
 	dir = 5
 	},
 /obj/effect/floor_decal/corner/purple{
+	dir = 1
+	},
+/obj/effect/mine/claymore/flechette{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
@@ -71100,6 +71911,7 @@
 	dir = 4
 	},
 /obj/machinery/door/firedoor,
+/obj/item/airlock_brace,
 /turf/simulated/floor/tiled/techfloor,
 /area/muriki/bathroom/dorm)
 "cXK" = (
@@ -71468,6 +72280,7 @@
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/item/airlock_brace,
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/maintenance/cave)
 "dhh" = (
@@ -71834,6 +72647,10 @@
 "dDe" = (
 /obj/effect/floor_decal/borderfloor/corner,
 /obj/effect/floor_decal/corner/lightgrey/bordercorner,
+/obj/structure/barricade{
+	material = "steel"
+	},
+/obj/item/material/barbedwire/start_active,
 /turf/simulated/floor/tiled/dark/turfpack/muriki,
 /area/maintenance/cave)
 "dDH" = (
@@ -71850,6 +72667,7 @@
 /obj/effect/floor_decal/corner/orange/bordercorner{
 	dir = 4
 	},
+/obj/item/material/barbedwire/start_active,
 /turf/simulated/floor/tiled/dark,
 /area/maintenance/tug)
 "dEE" = (
@@ -72046,6 +72864,8 @@
 	icon_state = "4-8"
 	},
 /obj/item/grenade/flashbang,
+/obj/item/airlock_brace,
+/obj/effect/decal/cleanable/blood/old,
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/maintenance/spine/eng)
 "dMb" = (
@@ -72316,6 +73136,10 @@
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 8
 	},
+/obj/structure/barricade{
+	material = "steel"
+	},
+/obj/item/material/barbedwire/start_active,
 /turf/simulated/floor/tiled/dark/turfpack/muriki,
 /area/maintenance/cave)
 "edh" = (
@@ -72336,6 +73160,9 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/rnd/research/oldrd)
 "efy" = (
+/obj/machinery/floodlight{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/rnd/hallway/lowmain)
 "efP" = (
@@ -72502,6 +73329,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
 	},
+/obj/structure/blade_trap/start_active,
 /turf/simulated/floor/plating,
 /area/engineering/trammaint)
 "eqE" = (
@@ -73444,6 +74272,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
 	},
+/obj/effect/decal/cleanable/blood/old,
 /turf/simulated/floor/tiled/dark/turfpack/muriki,
 /area/maintenance/cave)
 "fBz" = (
@@ -73473,6 +74302,7 @@
 /obj/effect/floor_decal/steeldecal/steel_decals10{
 	dir = 9
 	},
+/obj/effect/decal/cleanable/blood/old,
 /turf/simulated/floor/tiled/dark,
 /area/maintenance/tug)
 "fDP" = (
@@ -73636,6 +74466,7 @@
 "fQy" = (
 /obj/machinery/door/airlock/maintenance/engi,
 /obj/machinery/door/firedoor/glass,
+/obj/item/airlock_brace,
 /turf/simulated/floor/tiled/techfloor,
 /area/rnd/research/oldrd)
 "fRn" = (
@@ -73736,6 +74567,7 @@
 	req_one_access = null
 	},
 /obj/machinery/door/firedoor/glass,
+/obj/item/airlock_brace,
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/trammaint)
 "fYr" = (
@@ -73970,6 +74802,9 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals10,
+/obj/structure/barricade{
+	material = "steel"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/maintenance/cave)
 "gsw" = (
@@ -74200,6 +75035,7 @@
 	pixel_x = 7;
 	pixel_y = 30
 	},
+/obj/item/material/barbedwire/start_active,
 /turf/simulated/floor/tiled/dark,
 /area/maintenance/tug)
 "gKH" = (
@@ -75206,6 +76042,7 @@
 	c_tag = "SEC - Tank Garage Northwest (M)";
 	dir = 4
 	},
+/obj/item/material/barbedwire/start_active,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/security/tankstore)
 "ihP" = (
@@ -75396,6 +76233,7 @@
 	req_access = list(24)
 	},
 /obj/machinery/door/firedoor/border_only,
+/obj/item/airlock_brace,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/atmos_control)
 "irR" = (
@@ -75442,6 +76280,7 @@
 	name = "Refinery";
 	req_one_access = list(5,10)
 	},
+/obj/item/airlock_brace,
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/engineering/refinery/main)
 "ivA" = (
@@ -75468,6 +76307,7 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/airlock/maintenance/common,
+/obj/item/airlock_brace,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/crew_quarters/pool)
 "iyw" = (
@@ -75676,6 +76516,10 @@
 /obj/effect/floor_decal/corner/blue/bordercorner{
 	dir = 4
 	},
+/obj/structure/barricade{
+	material = "steel"
+	},
+/obj/item/material/barbedwire/start_active,
 /turf/simulated/floor/tiled/dark/turfpack/muriki,
 /area/maintenance/cave)
 "iNY" = (
@@ -76563,6 +77407,7 @@
 	pixel_x = 7;
 	pixel_y = 30
 	},
+/obj/item/material/barbedwire/start_active,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/security/tankstore)
 "jMT" = (
@@ -78397,6 +79242,7 @@
 /obj/structure/cable/orange{
 	icon_state = "4-8"
 	},
+/obj/item/material/barbedwire/start_active,
 /turf/simulated/floor/tiled/dark,
 /area/maintenance/cave)
 "mdx" = (
@@ -78889,6 +79735,7 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals10,
+/obj/effect/decal/cleanable/blood/old,
 /turf/simulated/floor/tiled/dark,
 /area/maintenance/cave)
 "mPb" = (
@@ -79008,6 +79855,7 @@
 /obj/machinery/door/airlock/maintenance/common{
 	name = "Cavern Access"
 	},
+/obj/item/airlock_brace,
 /turf/simulated/floor/tiled/techfloor,
 /area/hallway/muriki/bunkerhall)
 "mVo" = (
@@ -79097,6 +79945,9 @@
 /obj/effect/floor_decal/corner/orange/border{
 	dir = 4
 	},
+/obj/structure/barricade{
+	material = "steel"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/maintenance/tug)
 "ngt" = (
@@ -79182,6 +80033,8 @@
 "nnR" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/structure/disposalpipe/segment,
+/obj/effect/mine/claymore/flechette,
+/obj/effect/decal/cleanable/blood/old,
 /turf/simulated/floor/tiled/dark,
 /area/maintenance/tug)
 "noY" = (
@@ -79367,6 +80220,9 @@
 /obj/effect/floor_decal/industrial/danger{
 	dir = 1
 	},
+/obj/structure/barricade{
+	material = "steel"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/maintenance/tug)
 "nBC" = (
@@ -79414,6 +80270,9 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/barricade{
+	material = "steel"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/medical/medbay2)
 "nEo" = (
@@ -79498,6 +80357,7 @@
 /obj/structure/cable/orange{
 	icon_state = "4-8"
 	},
+/obj/effect/decal/cleanable/blood/old,
 /turf/simulated/floor/tiled/dark,
 /area/maintenance/cave)
 "nLz" = (
@@ -79543,6 +80403,9 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals10{
 	dir = 9
+	},
+/obj/structure/barricade{
+	material = "steel"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/maintenance/tug)
@@ -79980,6 +80843,7 @@
 /obj/structure/cable/orange{
 	icon_state = "4-9"
 	},
+/obj/item/material/barbedwire/start_active,
 /turf/simulated/floor/tiled/dark,
 /area/maintenance/cave)
 "ovL" = (
@@ -80075,6 +80939,7 @@
 "oBW" = (
 /obj/machinery/door/airlock/maintenance/common,
 /obj/machinery/door/firedoor/border_only,
+/obj/item/airlock_brace,
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/maintenance/spine/eng)
 "oDo" = (
@@ -80468,6 +81333,7 @@
 	},
 /obj/effect/landmark/vines,
 /obj/item/geiger/wall/east,
+/obj/item/material/barbedwire/start_active,
 /turf/simulated/floor/tiled/steel,
 /area/crew_quarters/recreation_area_hallway)
 "pge" = (
@@ -80510,6 +81376,7 @@
 /obj/structure/cable/orange{
 	icon_state = "4-8"
 	},
+/obj/effect/decal/cleanable/blood/old,
 /turf/simulated/floor/tiled/dark,
 /area/maintenance/cave)
 "phM" = (
@@ -80813,7 +81680,10 @@
 "pvF" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/barricade,
+/obj/structure/barricade{
+	material = "steel"
+	},
+/obj/structure/blade_trap/start_active,
 /turf/simulated/floor/tiled/white,
 /area/rnd/research/exp_prep)
 "pvI" = (
@@ -81066,6 +81936,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
 	},
+/obj/structure/barricade{
+	material = "steel"
+	},
 /turf/simulated/floor/plating,
 /area/engineering/trammaint)
 "pKJ" = (
@@ -81159,6 +82032,7 @@
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 1
 	},
+/obj/item/material/barbedwire/start_active,
 /turf/simulated/floor/tiled/dark,
 /area/maintenance/cave)
 "pQR" = (
@@ -81186,6 +82060,7 @@
 /obj/machinery/light{
 	dir = 4
 	},
+/obj/structure/barricade/sandbag,
 /turf/simulated/floor/reinforced,
 /area/medical/robotics)
 "pTK" = (
@@ -81221,6 +82096,7 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "4-8"
 	},
+/obj/item/airlock_brace,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/cave)
 "pVi" = (
@@ -81889,6 +82765,7 @@
 /obj/effect/floor_decal/corner/lightgrey/bordercorner{
 	dir = 8
 	},
+/obj/structure/barricade/sandbag,
 /turf/simulated/floor/tiled/dark,
 /area/maintenance/tug)
 "qMR" = (
@@ -82104,6 +82981,7 @@
 	pixel_x = -8;
 	pixel_y = 30
 	},
+/obj/structure/barricade/sandbag,
 /turf/simulated/floor/tiled/dark,
 /area/maintenance/cave)
 "qYe" = (
@@ -82223,6 +83101,7 @@
 /area/rnd/research/anomaly)
 "rdH" = (
 /obj/structure/disposalpipe/segment,
+/obj/structure/blade_trap/start_active,
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway/lowmain)
 "rdU" = (
@@ -82260,6 +83139,7 @@
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 4
 	},
+/obj/structure/barricade/sandbag,
 /turf/simulated/floor/tiled/dark,
 /area/maintenance/cave)
 "reK" = (
@@ -82389,6 +83269,7 @@
 	req_one_access = list(5,10)
 	},
 /obj/machinery/door/firedoor/multi_tile,
+/obj/item/airlock_brace,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/med_refinery)
 "roQ" = (
@@ -82688,6 +83569,9 @@
 /obj/structure/window/maintenance_panel,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/barricade{
+	material = "steel"
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/engineering/atmos/monitoring)
 "rFZ" = (
@@ -82726,6 +83610,7 @@
 /area/maintenance/oldbridge)
 "rJg" = (
 /obj/machinery/door/airlock/maintenance/common,
+/obj/item/airlock_brace,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/spine/civ)
 "rKp" = (
@@ -82996,6 +83881,7 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
+/obj/effect/decal/cleanable/blood/old,
 /turf/simulated/floor/tiled/dark,
 /area/maintenance/cave)
 "saL" = (
@@ -83074,6 +83960,7 @@
 /obj/structure/cable/orange{
 	icon_state = "2-8"
 	},
+/obj/effect/decal/cleanable/blood/old,
 /turf/simulated/floor/plating,
 /area/maintenance/tug)
 "sdq" = (
@@ -83312,6 +84199,7 @@
 /obj/machinery/recharger{
 	pixel_x = 6
 	},
+/obj/structure/blade_trap/start_active,
 /turf/simulated/floor/tiled/white,
 /area/muriki/crew/dormaid)
 "srp" = (
@@ -83363,6 +84251,7 @@
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/maintenance/common,
 /obj/structure/disposalpipe/segment,
+/obj/item/airlock_brace,
 /turf/simulated/floor/tiled/techfloor,
 /area/hallway/muriki/dorm)
 "suQ" = (
@@ -83472,6 +84361,7 @@
 "szY" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/effect/floor_decal/eshui/emblem/eshui_c,
+/obj/structure/barricade/sandbag,
 /turf/simulated/floor/reinforced,
 /area/medical/robotics)
 "sAy" = (
@@ -84590,6 +85480,7 @@
 	name = "Science Maintenance";
 	req_one_access = null
 	},
+/obj/item/airlock_brace,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/research/closet)
 "uoW" = (
@@ -84922,6 +85813,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
 	},
+/obj/effect/decal/cleanable/blood/old,
 /turf/simulated/floor/tiled/dark,
 /area/maintenance/cave)
 "uKK" = (
@@ -85211,6 +86103,9 @@
 	},
 /obj/effect/floor_decal/industrial/stand_clear/yellow,
 /obj/structure/disposalpipe/segment,
+/obj/structure/barricade{
+	material = "steel"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/maintenance/tug)
 "vka" = (
@@ -85242,6 +86137,7 @@
 	dir = 2;
 	icon_state = "pipe-c"
 	},
+/obj/effect/mine/claymore/flechette,
 /turf/simulated/floor/tiled,
 /area/engineering/trammaint)
 "vmz" = (
@@ -85598,6 +86494,9 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals10,
+/obj/structure/barricade{
+	material = "steel"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/maintenance/cave)
 "vJP" = (
@@ -86304,6 +87203,7 @@
 "wHF" = (
 /obj/structure/railing,
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/effect/decal/cleanable/blood/old,
 /turf/simulated/floor/tiled/dark,
 /area/maintenance/tug)
 "wJR" = (
@@ -87418,6 +88318,7 @@
 	name = "Pump Station";
 	req_one_access = list(5,10)
 	},
+/obj/item/airlock_brace,
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/refinery/pump_station)
 "ygu" = (
@@ -89371,13 +90272,13 @@ cHJ
 bns
 bpO
 bpO
-bpO
+bgi
 bww
 bwX
 bxE
 byv
 bzm
-bzm
+bfV
 bAN
 ams
 bCY
@@ -89533,8 +90434,8 @@ bpO
 bpO
 xpa
 bpO
-bpO
-bww
+bgi
+bgc
 bwX
 bxF
 hqv
@@ -89695,9 +90596,9 @@ bbc
 bpO
 bpO
 bpO
-bpO
-bww
-bwX
+bgi
+bgc
+bfX
 bxG
 aRQ
 aRQ
@@ -89857,8 +90758,8 @@ bpO
 bpO
 cHJ
 bpO
-vXL
-bww
+bgj
+bgc
 bwX
 bis
 aVJ
@@ -90019,8 +90920,8 @@ bpO
 bpO
 bpO
 bpO
-bpO
-bww
+bgi
+bgc
 bwX
 aLf
 bao
@@ -90181,7 +91082,7 @@ bfl
 bfw
 bfx
 bfx
-bpN
+bgk
 bfj
 aRf
 aMi
@@ -90667,9 +91568,9 @@ uOA
 bpO
 bpO
 bpO
-bpO
-bww
-bwX
+bgi
+bgg
+bfY
 bwZ
 bvc
 bwV
@@ -90830,8 +91731,8 @@ xpa
 bpO
 bpO
 bfv
-bww
-bwX
+bgh
+bfZ
 bxN
 bxc
 bAf
@@ -92937,7 +93838,7 @@ koo
 buI
 bvv
 bop
-bwX
+bga
 bxX
 bAQ
 bsp
@@ -105694,11 +106595,11 @@ csM
 gWL
 ckm
 ckl
-ckk
+bhQ
 bdG
 cpY
 bJz
-bJz
+bhr
 cpU
 bJz
 bJz
@@ -105856,7 +106757,7 @@ cPX
 gWL
 ckm
 ckl
-ckk
+bhQ
 ckh
 aos
 bJz
@@ -107158,8 +108059,8 @@ aYr
 aYP
 frq
 uCv
-jCO
-aHq
+bhj
+bgR
 cfT
 nVT
 lCE
@@ -107287,8 +108188,8 @@ aBv
 aCC
 aDL
 acT
-aFF
-aFF
+biT
+biT
 gWL
 aIn
 aJl
@@ -107483,7 +108384,7 @@ aYP
 aYQ
 iJf
 csT
-aYP
+bgl
 sdm
 bTa
 bST
@@ -107806,10 +108707,10 @@ pif
 aYP
 tlS
 iJf
-aHq
+bgw
 aHq
 bcz
-aHq
+bgw
 kDL
 wrE
 bow
@@ -107938,7 +108839,7 @@ aCG
 azt
 azt
 aoi
-azt
+biM
 aJn
 mBK
 aLl
@@ -107968,7 +108869,7 @@ jTF
 aYP
 aYQ
 iJf
-aHq
+bgw
 csV
 bcz
 csT
@@ -108100,7 +109001,7 @@ aER
 aFH
 aFH
 aol
-azt
+biM
 aJn
 aKp
 aLm
@@ -108262,7 +109163,7 @@ aES
 aop
 ank
 aon
-anm
+biS
 aJn
 aKo
 aLn
@@ -108451,7 +109352,7 @@ mIy
 uDz
 aao
 xQq
-wrE
+bhH
 cDv
 rRB
 bPJ
@@ -108622,7 +109523,7 @@ bcz
 aHq
 xWz
 wrE
-drJ
+bgn
 aXN
 coO
 gWL
@@ -108776,7 +109677,7 @@ umT
 gHV
 oFc
 wrE
-auQ
+bht
 iJf
 aHq
 rHK
@@ -108946,7 +109847,7 @@ oFr
 csU
 xWz
 wrE
-drJ
+bgo
 aXN
 bOJ
 gWL
@@ -109262,9 +110163,9 @@ qHY
 etQ
 dYU
 wrE
-oaR
+bhu
 iJf
-aHq
+bgw
 aHq
 csX
 aHq
@@ -109426,8 +110327,8 @@ aZz
 wrE
 auQ
 iJf
-cIk
-aHq
+bhk
+bgw
 bcz
 aHq
 xWz
@@ -109590,8 +110491,8 @@ auQ
 iJf
 aHq
 aYP
-csX
-csV
+bgz
+bgy
 cPL
 wrE
 drJ
@@ -109739,7 +110640,7 @@ mRo
 tZn
 afX
 raS
-raS
+big
 aTi
 ygu
 atJ
@@ -109870,7 +110771,7 @@ ads
 auv
 alR
 awI
-acB
+biV
 ayx
 azw
 ads
@@ -109911,11 +110812,11 @@ nbu
 dDP
 wrE
 auQ
-iJf
+bhq
 aHq
 aHq
 bcz
-aHq
+bgw
 xWz
 wrE
 drJ
@@ -110072,11 +110973,11 @@ aIh
 dVV
 alC
 wrE
-auQ
+bht
 iJf
 aHq
-aHq
-bcz
+bgw
+bgC
 aHq
 xWz
 wrE
@@ -110402,9 +111303,9 @@ csT
 aHq
 bcz
 csU
-xWz
-wrE
-lne
+bgu
+bgs
+bgp
 aXN
 aXN
 aXN
@@ -110557,15 +111458,15 @@ aXN
 aXN
 aXN
 gKF
-wrE
-auQ
+bgs
+bhD
 tRZ
 byE
-byE
+bgS
 bdF
 byE
 aYU
-wrE
+bgt
 qLB
 bfo
 aYO
@@ -110718,19 +111619,19 @@ adu
 aYo
 aYP
 nNl
-fCf
-wrE
-wrE
+bhL
+bgt
+bgs
 aZx
 aZx
 aZx
 bdD
 aZx
-aZx
-wrE
-wrE
-bfp
-aYP
+bgv
+bgt
+bgr
+bgm
+bgl
 bgb
 aXN
 bpz
@@ -110880,17 +111781,17 @@ adu
 aYo
 aYP
 fDs
-wrE
-wrE
-wrE
+bgr
+bgt
+bgs
 wrE
 wrE
 wrE
 kfN
 wrE
-wrE
-wrE
-wrE
+bgs
+bgt
+bgr
 bfp
 aYP
 bgb
@@ -111046,9 +111947,9 @@ aZU
 aFC
 cjU
 asB
-wrE
+bhl
 caP
-kfN
+bgD
 bdP
 ngt
 rdU
@@ -113957,7 +114858,7 @@ cjY
 ckj
 aow
 cjI
-cjI
+bhO
 cjI
 cjI
 cpV
@@ -114121,7 +115022,7 @@ aox
 cjI
 cjI
 cjI
-cjI
+bhI
 cpW
 cjI
 cjP
@@ -124547,7 +125448,7 @@ cQF
 bEP
 bEU
 ihy
-bEU
+bfS
 whZ
 sJp
 whZ
@@ -124708,8 +125609,8 @@ bEh
 bEh
 bEh
 bEh
-bEh
-bEh
+bfU
+bfT
 bEh
 bEh
 bEh
@@ -124809,7 +125710,7 @@ aYq
 gTT
 gTT
 bhd
-bTz
+bhR
 bTz
 alY
 czb
@@ -124869,9 +125770,9 @@ bEh
 bEh
 bEh
 bEh
-bEh
-bEh
-bEh
+bfU
+bfU
+bfT
 hqy
 hqy
 hqy
@@ -124971,7 +125872,7 @@ dmL
 hjS
 bFw
 csz
-kqO
+bhX
 kqO
 alY
 czb
@@ -125031,9 +125932,9 @@ cDi
 bEh
 bEh
 bEh
-bEh
-bEh
-bEh
+bfU
+bfT
+bfT
 bEh
 bEh
 bEh
@@ -125193,8 +126094,8 @@ bEh
 bEh
 bEh
 bEh
-bEh
-bEh
+bfU
+bfT
 bEh
 bEh
 bEh
@@ -125294,8 +126195,8 @@ aSe
 icW
 lBJ
 aoz
-csz
-kqO
+bib
+bhX
 kqO
 alY
 czb
@@ -125619,7 +126520,7 @@ aWR
 gTT
 gTT
 coC
-kqO
+bhY
 bYB
 alY
 czb
@@ -125781,7 +126682,7 @@ xuo
 gTT
 gTT
 xpK
-kqO
+bhX
 czT
 alY
 czb
@@ -125943,7 +126844,7 @@ aUr
 gTT
 gTT
 ecn
-ecn
+bhZ
 ecn
 bTy
 cqD
@@ -127237,9 +128138,9 @@ rki
 gEv
 aWc
 iIa
-byA
+bif
 rZd
-saQ
+bia
 phL
 alY
 bQX
@@ -127725,7 +128626,7 @@ aWf
 aVN
 bAV
 pQH
-lOX
+bhM
 mbI
 jRN
 lmO
@@ -127887,16 +128788,16 @@ aWg
 aWT
 aVN
 qXV
-lOX
+bhP
 crO
+bhP
+bhM
+bgE
 lOX
-lOX
-lOX
-lOX
-lOX
-lOX
-bCA
-lOX
+bgE
+bgE
+bgU
+bgE
 alY
 bMU
 bMU
@@ -128048,17 +128949,17 @@ aSt
 aWh
 aWU
 aVN
-aXR
-lOX
-lOX
+bic
+bgE
+bgE
 crL
-lOX
+bhM
 afU
+bgE
 lOX
-lOX
-lOX
-bCA
-lOX
+bgE
+bgV
+bgJ
 alY
 bMU
 bMU
@@ -128216,8 +129117,8 @@ gqf
 reJ
 ovI
 lOX
-lOX
-lOX
+bgE
+bgE
 bPS
 bPO
 bPF
@@ -128378,11 +129279,11 @@ lOX
 alY
 aZT
 lOX
-lOX
+bhE
 lOX
 bPS
 bPP
-bPF
+bgM
 alY
 alY
 alY
@@ -128539,10 +129440,10 @@ aXS
 aXS
 alY
 bHj
+bhp
+bhp
 vKx
-vKx
-vKx
-vKx
+bhp
 bCC
 bPG
 gBg
@@ -136267,7 +137168,7 @@ lGO
 jNz
 aaU
 bEW
-wJT
+biX
 anY
 aAT
 aAT
@@ -136765,7 +137666,7 @@ ald
 bEW
 apy
 auX
-efy
+biU
 apu
 aCl
 ahC
@@ -136963,7 +137864,7 @@ cuI
 cuE
 cuB
 aot
-bME
+bhK
 bME
 cvh
 aXy
@@ -138098,7 +138999,7 @@ cuH
 fPM
 mXl
 cus
-cvp
+bhF
 cvj
 bix
 biQ
@@ -138422,7 +139323,7 @@ nZz
 rHk
 mXl
 cuu
-cvp
+bhG
 cvl
 bix
 bdf
@@ -138898,11 +139799,11 @@ uMW
 xgN
 aUD
 aVg
-cum
-aTt
+biu
+bid
 aPR
 aRS
-aTt
+bid
 bFt
 aTt
 uXX
@@ -138911,7 +139812,7 @@ cXp
 cXo
 aRS
 aTt
-aTt
+bgW
 bqF
 bdW
 aPO
@@ -139052,19 +139953,19 @@ clH
 bGV
 bGW
 crc
-eHc
-eHc
+biI
+biy
 eHc
 mlz
 aQY
 aZw
 aUE
 aRT
+biv
+bie
 cXt
 cXt
-cXt
-cXt
-cXt
+bie
 bFu
 cXt
 cXt
@@ -139215,7 +140116,7 @@ amq
 aPW
 aIe
 pga
-aQZ
+biz
 aQZ
 aQZ
 jdM
@@ -140345,7 +141246,7 @@ aJc
 fCx
 beA
 aOA
-bff
+biJ
 bgB
 bgB
 bgB
@@ -140831,7 +141732,7 @@ adC
 adC
 beA
 moF
-bff
+biK
 aQe
 aZE
 bff
