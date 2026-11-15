@@ -1466,6 +1466,57 @@
 /mob/living/simple_mob/animal/passive/crab/Coffee,
 /turf/unsimulated/beach/sand,
 /area/beach)
+"ds" = (
+/obj/structure/table/rack,
+/obj/item/storage/box/brainzsnax{
+	pixel_x = -5
+	},
+/obj/item/storage/box/brainzsnax{
+	pixel_x = -5
+	},
+/obj/item/storage/box/brainzsnax{
+	pixel_x = -5
+	},
+/obj/item/storage/box/brainzsnax{
+	pixel_x = -5
+	},
+/obj/item/storage/box/brainzsnax{
+	pixel_x = -5
+	},
+/obj/item/storage/box/brainzsnax{
+	pixel_x = -5
+	},
+/obj/item/storage/box/brainzsnax{
+	pixel_x = -5
+	},
+/obj/item/storage/box/brainzsnax/red{
+	pixel_x = 5
+	},
+/obj/item/storage/box/brainzsnax/red{
+	pixel_x = 5
+	},
+/obj/item/storage/box/brainzsnax/red{
+	pixel_x = 5
+	},
+/obj/item/storage/box/brainzsnax/red{
+	pixel_x = 5
+	},
+/obj/item/storage/box/brainzsnax/red{
+	pixel_x = 5
+	},
+/obj/item/storage/box/brainzsnax/red{
+	pixel_x = 5
+	},
+/obj/item/storage/box/brainzsnax/red{
+	pixel_x = 5
+	},
+/obj/item/storage/box/brainzsnax/red{
+	pixel_x = 5
+	},
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
 "dt" = (
 /obj/machinery/transportpod/alt,
 /turf/unsimulated/floor{
@@ -60623,7 +60674,7 @@ mN
 ab
 yb
 sg
-kQ
+ds
 kQ
 ju
 gC

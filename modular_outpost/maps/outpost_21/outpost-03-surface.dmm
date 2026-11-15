@@ -6744,6 +6744,11 @@
 /obj/effect/floor_decal/corner/white/full{
 	dir = 1
 	},
+/obj/machinery/porta_turret/heavy/lmg{
+	req_one_access = list(199);
+	enabled = 0;
+	check_all = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/bridge/hallway)
 "akI" = (

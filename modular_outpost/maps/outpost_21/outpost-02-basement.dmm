@@ -28890,6 +28890,7 @@
 "beB" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/closet/crate/wooden,
+/obj/item/chainsaw/alt/sword,
 /turf/simulated/floor/reinforced,
 /area/rnd/xenobiology/xenobioh)
 "beC" = (
@@ -28906,6 +28907,7 @@
 /obj/structure/closet/crate/wooden,
 /obj/item/gun/projectile/automatic/serdy/m4a1,
 /obj/item/tool/crowbar/brace_jack,
+/obj/item/gun/projectile/p92x/rubber,
 /turf/simulated/floor/reinforced,
 /area/rnd/xenobiology/xenobioh)
 "beE" = (
@@ -29301,6 +29303,14 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/cargo)
+"bfP" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/item/grenade/flashbang,
+/turf/simulated/floor/reinforced,
+/area/rnd/xenobiology/xenobioh)
 "bfQ" = (
 /obj/machinery/light/floortube,
 /turf/simulated/floor/tiled/freezer,
@@ -142066,7 +142076,7 @@ pmN
 pmN
 aaf
 aaj
-aal
+bfP
 aau
 aay
 aaI
