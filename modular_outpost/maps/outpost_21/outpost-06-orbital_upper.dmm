@@ -9302,19 +9302,6 @@
 /obj/structure/reagent_dispensers/fueltank/high,
 /turf/simulated/floor/tiled/milspec/airless,
 /area/offworld/orbital/station/storage_engine_core)
-"sa" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1381
-	},
-/obj/machinery/light{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/brown/border{
-	dir = 1
-	},
-/obj/effect/map_helper/airlock/atmos/chamber_pump,
-/turf/simulated/floor/tiled/steel_grid,
-/area/offworld/orbital/station/starboard_airlock)
 "sb" = (
 /obj/structure/cable/cyan{
 	icon_state = "0-2"
@@ -12704,6 +12691,9 @@
 	dir = 1
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
+/obj/machinery/light{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/offworld/orbital/station/starboard_airlock)
 "xW" = (
@@ -17941,6 +17931,10 @@
 	},
 /turf/simulated/floor/airless,
 /area/offworld/orbital/exterior/engine_core_port)
+"HU" = (
+/obj/structure/window/plastitanium,
+/turf/simulated/floor/airless,
+/area/offworld/orbital/station/starboard_airlock)
 "HV" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
@@ -18034,6 +18028,22 @@
 /obj/effect/landmark/holiday_event_spawn,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/observation)
+"Ie" = (
+/obj/structure/handrail{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/brown/border,
+/obj/machinery/atmospherics/pipe/simple/hidden/aux{
+	dir = 9
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/offworld/orbital/station/starboard_airlock)
+"If" = (
+/obj/effect/floor_decal/industrial/loading{
+	dir = 8
+	},
+/turf/simulated/floor/airless,
+/area/offworld/orbital/station/starboard_airlock)
 "Ig" = (
 /obj/structure/cable/cyan{
 	icon_state = "0-2"
@@ -18041,6 +18051,9 @@
 /obj/structure/grille,
 /turf/simulated/floor/airless,
 /area/ai)
+"Ih" = (
+/turf/simulated/floor/airless,
+/area/offworld/orbital/station/starboard_airlock)
 "Ii" = (
 /obj/structure/table/standard,
 /obj/item/storage/firstaid/o2{
@@ -19663,9 +19676,7 @@
 /area/shuttle/belter)
 "Od" = (
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/glass_command{
-	req_one_access = list(16,52,56)
-	},
+/obj/machinery/door/airlock/glass_command,
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/halls/fore)
 "Oe" = (
@@ -22631,9 +22642,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/door/firedoor,
 /obj/structure/disposalpipe/segment,
-/obj/machinery/door/airlock/glass_command{
-	req_one_access = list(16,52,56)
-	},
+/obj/machinery/door/airlock/glass_command,
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
@@ -22743,14 +22752,6 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/observation)
-"YS" = (
-/obj/machinery/light,
-/obj/machinery/atmospherics/pipe/simple/hidden/aux{
-	dir = 9
-	},
-/obj/effect/floor_decal/corner/brown/border,
-/turf/simulated/floor/tiled/steel_grid,
-/area/offworld/orbital/station/starboard_airlock)
 "YT" = (
 /obj/structure/cable{
 	icon_state = "5-8"
@@ -45070,7 +45071,7 @@ qz
 qz
 Sn
 ZB
-PW
+Ie
 Sn
 Ti
 bJ
@@ -45231,8 +45232,8 @@ qz
 qz
 qz
 Sn
-sa
-YS
+Aj
+tq
 Sn
 Ip
 aK
@@ -45392,10 +45393,10 @@ qz
 qz
 qz
 qz
-Sn
-Aj
-tq
-Sn
+Ih
+If
+If
+HU
 YD
 ON
 tP
@@ -45558,7 +45559,7 @@ tP
 tP
 tP
 tP
-tP
+Eh
 tP
 tP
 tP
@@ -45717,8 +45718,8 @@ Uw
 Uw
 bn
 Em
-Eh
-Eh
+tP
+tP
 DM
 tP
 tP
