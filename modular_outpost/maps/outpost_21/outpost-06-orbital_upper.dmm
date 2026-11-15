@@ -3690,6 +3690,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/aux{
 	dir = 5
 	},
+/obj/structure/cable/green{
+	icon_state = "1-4"
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/fore)
 "gW" = (
@@ -18125,6 +18128,9 @@
 /obj/effect/floor_decal/corner/white/bordercorner{
 	dir = 1
 	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/fore)
 "Io" = (
@@ -18183,6 +18189,9 @@
 	},
 /obj/effect/map_helper/airlock/sensor/int_sensor,
 /obj/effect/map_helper/airlock/door/int_door,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/north_civ_airlock)
 "Iu" = (
@@ -18240,6 +18249,9 @@
 	id_tag = "yard_north_civ_lock";
 	pixel_x = 30
 	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/north_civ_airlock)
 "Iy" = (
@@ -18249,6 +18261,14 @@
 /obj/machinery/camera/network/engineering_outpost{
 	dir = 8;
 	c_tag = "REX - North Civ Airlock"
+	},
+/obj/structure/cable/green{
+	icon_state = "0-2"
+	},
+/obj/machinery/power/apc{
+	dir = 1;
+	name = "north bump";
+	pixel_y = 24
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/north_civ_airlock)
