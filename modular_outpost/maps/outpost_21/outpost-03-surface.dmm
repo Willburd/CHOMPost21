@@ -72919,6 +72919,11 @@
 	},
 /obj/structure/cable/green,
 /obj/structure/window/reinforced/full/holiday,
+/obj/machinery/door/blast/gate/open{
+	dir = 2;
+	id = "englockdown";
+	name = "Engineering Lockdown"
+	},
 /turf/simulated/floor/plating,
 /area/engineering/foyer)
 "rRm" = (
