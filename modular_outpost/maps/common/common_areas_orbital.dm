@@ -207,6 +207,13 @@ EXTERIOR_AREA_BEHAVIOR(/area/offworld/orbital/exterior/emitter_cooling)
 //-----------------------------------------------------------------------
 // Orbital : Airlocks and docking
 
+/area/offworld/orbital/station/north_civ_airlock
+	name = "\improper Orbital North Civilian Airlock"
+	icon_state = "shuttle2"
+	sound_env = SMALL_ENCLOSED
+	ambience = AMBIENCE_GENERIC
+	holomap_color = HOLOMAP_AREACOLOR_ENGINEERING
+
 /area/offworld/orbital/station/port_airlock
 	name = "\improper Orbital Port Airlock"
 	icon_state = "shuttle2"
