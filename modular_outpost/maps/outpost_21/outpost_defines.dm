@@ -171,6 +171,7 @@
 										/area/offworld/orbital/station/south_engine_access_east,
 										/area/offworld/orbital/exterior/starboard_solars,
 										/area/offworld/orbital/station/port_airlock,
+										/area/offworld/orbital/station/north_civ_airlock,
 										/area/offworld/orbital/exterior/rust_cooling,
 										/area/offworld/orbital/exterior/engine_core_port,
 										/area/offworld/orbital/exterior/engine_core_starboard,
