@@ -9198,6 +9198,12 @@
 	},
 /turf/simulated/floor/plating,
 /area/quartermaster/foyer)
+"apv" = (
+/obj/structure/simple_door/snowbrick,
+/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki{
+	outdoors = 0
+	},
+/area/muriki/grounds/engi)
 "apw" = (
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 1
@@ -15313,10 +15319,6 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/unexplored/muriki/mountainnorth)
-"aEY" = (
-/obj/structure/simple_door/snowbrick,
-/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
-/area/muriki/grounds/engi)
 "aEZ" = (
 /obj/structure/prop/rock/small/alt,
 /turf/simulated/floor/outdoors/ice/turfpack/muriki,
@@ -15331,16 +15333,6 @@
 "aFc" = (
 /turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
 /area/mine/explored/muriki/mountaineast)
-"aFd" = (
-/obj/effect/zone_divider,
-/turf/simulated/wall/snowbrick/turfpack/muriki,
-/area/muriki/grounds/engi)
-"aFe" = (
-/obj/structure/bed/chair/backed_grey{
-	dir = 4
-	},
-/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
-/area/muriki/grounds/engi)
 "aFf" = (
 /obj/structure/prop/rock/sharp,
 /turf/simulated/floor/outdoors/ice/turfpack/muriki,
@@ -15352,16 +15344,6 @@
 "aFh" = (
 /turf/simulated/floor/outdoors/snow/gravsnow/sidewalk_under/turfpack/muriki,
 /area/mine/unexplored/muriki/valleyeast)
-"aFi" = (
-/obj/structure/bonfire,
-/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
-/area/muriki/grounds/engi)
-"aFj" = (
-/obj/structure/bed/chair/backed_grey{
-	dir = 8
-	},
-/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
-/area/muriki/grounds/engi)
 "aFk" = (
 /obj/structure/prop/rock/flat,
 /turf/simulated/floor/outdoors/shelfice/turfpack/muriki,
@@ -15376,15 +15358,6 @@
 /obj/structure/prop/rock/sharp,
 /turf/simulated/floor/outdoors/ice/turfpack/muriki,
 /area/mine/unexplored/muriki/valleyeast)
-"aFn" = (
-/obj/structure/bed/double,
-/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
-/area/muriki/grounds/engi)
-"aFo" = (
-/obj/fiftyspawner/wood,
-/obj/fiftyspawner/wood,
-/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
-/area/muriki/grounds/engi)
 "aFp" = (
 /obj/random/outcrop,
 /turf/simulated/floor/outdoors/ice/turfpack/muriki,
@@ -16650,6 +16623,11 @@
 	},
 /turf/simulated/floor/outdoors/ice/turfpack/muriki,
 /area/muriki/grounds/engi)
+"aJN" = (
+/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki{
+	outdoors = 0
+	},
+/area/muriki/grounds/engi)
 "aJO" = (
 /obj/structure/prop/rock/small,
 /turf/simulated/floor/outdoors/ice/turfpack/muriki,
@@ -16670,6 +16648,14 @@
 /obj/structure/prop/rock/sharp,
 /turf/simulated/floor/outdoors/shelfice/turfpack/muriki,
 /area/mine/explored/muriki/mountaineast)
+"aJT" = (
+/obj/structure/bed/chair/backed_grey{
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki{
+	outdoors = 0
+	},
+/area/muriki/grounds/engi)
 "aJU" = (
 /obj/item/extraction_pack,
 /obj/item/extraction_pack,
@@ -16699,6 +16685,12 @@
 "aJY" = (
 /turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
 /area/muriki/grounds/sci)
+"aJZ" = (
+/obj/structure/bonfire,
+/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki{
+	outdoors = 0
+	},
+/area/muriki/grounds/engi)
 "aKa" = (
 /obj/structure/prop/rock/flat,
 /turf/simulated/floor/outdoors/shelfice/turfpack/muriki,
@@ -16719,6 +16711,14 @@
 /obj/structure/prop/rock/small/alt,
 /turf/simulated/floor/outdoors/shelfice/turfpack/muriki,
 /area/muriki/grounds/sci)
+"aKf" = (
+/obj/structure/bed/chair/backed_grey{
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki{
+	outdoors = 0
+	},
+/area/muriki/grounds/engi)
 "aKg" = (
 /obj/structure/prop/rock/small,
 /turf/simulated/floor/outdoors/shelfice/turfpack/muriki,
@@ -16758,6 +16758,12 @@
 /obj/effect/landmark/late_antag/zombie,
 /turf/simulated/floor/outdoors/ice/dark/turfpack/muriki,
 /area/muriki/grounds/med)
+"aKl" = (
+/obj/structure/bed/double,
+/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki{
+	outdoors = 0
+	},
+/area/muriki/grounds/engi)
 "aKm" = (
 /obj/structure/prop/rock/sharp,
 /turf/simulated/floor/outdoors/shelfice/turfpack/muriki,
@@ -16765,6 +16771,13 @@
 "aKn" = (
 /obj/random/outcrop,
 /turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
+/area/muriki/grounds/engi)
+"aKo" = (
+/obj/fiftyspawner/wood,
+/obj/fiftyspawner/wood,
+/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki{
+	outdoors = 0
+	},
 /area/muriki/grounds/engi)
 "aKr" = (
 /obj/structure/trailblazer/yellow,
@@ -123481,9 +123494,9 @@ ara
 ara
 ara
 ara
-ara
-ara
-ara
+aET
+aET
+aET
 ara
 ara
 fxo
@@ -123622,9 +123635,9 @@ ara
 ara
 mIy
 ara
-aET
-aET
-aET
+ara
+ara
+ara
 ara
 ara
 ara
@@ -123642,11 +123655,11 @@ fxo
 ara
 ara
 ara
-ara
-ara
-ara
-ara
-ara
+aET
+aJN
+aJT
+aJN
+aET
 ara
 fxo
 aqq
@@ -123783,32 +123796,32 @@ ara
 ara
 ara
 ara
+ara
+ara
+ara
+ara
+ara
+ara
+ara
+ara
+ara
+ara
+ara
+ara
+ara
+ara
+fxo
+fxo
+fxo
+fxo
+ara
+ara
+ara
 aET
-ara
-aFe
-ara
-aET
-ara
-ara
-ara
-ara
-ara
-ara
-ara
-ara
-ara
-fxo
-fxo
-fxo
-fxo
-ara
-ara
-ara
-ara
-ara
-ara
-ara
-ara
+aKl
+aJZ
+aJN
+apv
 ara
 ara
 aqq
@@ -123945,32 +123958,32 @@ ara
 ara
 ara
 ara
+ara
+ara
+ara
+ara
+ara
+ara
+ara
+ara
+ara
+ara
+ara
+ara
+ara
+ara
+fxo
+fxo
+fxo
+fxo
+ara
+ara
+ara
 aET
-aFn
-aFi
-ara
-aEY
-ara
-ara
-ara
-ara
-ara
-ara
-ara
-ara
-ara
-fxo
-fxo
-fxo
-fxo
-ara
-ara
-ara
-ara
-ara
-ara
-ara
-ara
+aKo
+aKf
+aJN
+aET
 ara
 ara
 aHB
@@ -124107,31 +124120,31 @@ ara
 ara
 ara
 ara
+ara
+ara
+ara
+ara
+ara
+ara
+ara
+ara
+ara
+ara
+ara
+ara
+ara
+fxo
+fxo
+ara
+ara
+ara
+ara
+fxo
+fxo
+fxo
 aET
-aFo
-aFj
-ara
 aET
-ara
-ara
-ara
-ara
-ara
-ara
-ara
-ara
-fxo
-fxo
-ara
-ara
-ara
-ara
-fxo
-fxo
-fxo
-ara
-ara
-ara
+aET
 ara
 ara
 ara
@@ -124270,9 +124283,9 @@ aOV
 aOV
 aOV
 aOV
-aFd
-aFd
-aFd
+aOV
+aOV
+aOV
 aOV
 aOV
 aOV
