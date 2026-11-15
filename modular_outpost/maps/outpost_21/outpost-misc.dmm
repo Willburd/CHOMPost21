@@ -1466,14 +1466,8 @@
 /mob/living/simple_mob/animal/passive/crab/Coffee,
 /turf/unsimulated/beach/sand,
 /area/beach)
-"ds" = (
-/obj/machinery/teleport/hub,
-/turf/unsimulated/floor{
-	icon_state = "dark"
-	},
-/area/syndicate_mothership)
 "dt" = (
-/obj/machinery/teleport/station,
+/obj/machinery/transportpod/alt,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -1777,6 +1771,7 @@
 /obj/effect/floor_decal/milspec/color/orange/half{
 	dir = 10
 	},
+/obj/machinery/transportpod/alt,
 /turf/simulated/floor/reinforced,
 /area/shuttle/mercenary)
 "ee" = (
@@ -4897,6 +4892,36 @@
 	icon_state = "dark"
 	},
 /area/syndicate_mothership)
+"jw" = (
+/obj/structure/lattice,
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/turf/space,
+/area/space)
+"jx" = (
+/obj/structure/lattice,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/space,
+/area/space)
+"jy" = (
+/obj/structure/lattice,
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/space,
+/area/space)
+"jz" = (
+/obj/structure/lattice,
+/obj/structure/disposalpipe/broken{
+	dir = 4
+	},
+/turf/space,
+/area/space)
 "jA" = (
 /obj/structure/table/rack,
 /obj/item/shield_projector/rectangle,
@@ -4907,6 +4932,14 @@
 	icon_state = "dark"
 	},
 /area/syndicate_mothership)
+"jB" = (
+/obj/structure/lattice,
+/obj/structure/disposalpipe/segment{
+	icon_state = "pipe-c";
+	dir = 2
+	},
+/turf/space,
+/area/space)
 "jC" = (
 /turf/unsimulated/wall/fakeglass{
 	dir = 8
@@ -4920,6 +4953,11 @@
 	icon_state = "vault"
 	},
 /area/wizard_station)
+"jE" = (
+/obj/structure/lattice,
+/obj/structure/disposalpipe/segment,
+/turf/space,
+/area/space)
 "jF" = (
 /turf/unsimulated/wall/fakeglass{
 	dir = 4
@@ -4936,6 +4974,18 @@
 	icon_state = "dark"
 	},
 /area/syndicate_mothership)
+"jH" = (
+/obj/structure/window/maintenance_panel{
+	dir = 1
+	},
+/obj/structure/lattice,
+/obj/structure/disposalpipe/segment,
+/turf/space,
+/area/space)
+"jI" = (
+/obj/structure/disposalpipe/segment,
+/turf/unsimulated/floor/reinforced,
+/area/syndicate_mothership)
 "jJ" = (
 /obj/machinery/door/airlock/centcom{
 	name = "Medical";
@@ -4949,6 +4999,32 @@
 "jK" = (
 /turf/simulated/floor/carpet/geo,
 /area/planet/clown)
+"jL" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/warning/color/red{
+	dir = 8
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"jM" = (
+/obj/effect/floor_decal/industrial/loading{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
 "jN" = (
 /obj/item/storage/firstaid/vox{
 	pixel_x = 5;
@@ -5048,6 +5124,17 @@
 	},
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/trade/centcom)
+"jT" = (
+/obj/structure/fans/hardlight,
+/obj/machinery/door/blast/angled_shutter{
+	dir = 4;
+	id = "vali_backdoor"
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/unsimulated/floor/reinforced,
+/area/syndicate_mothership)
 "jU" = (
 /obj/machinery/door/airlock/centcom{
 	name = "Heavy Armor";
@@ -5074,6 +5161,13 @@
 	icon_state = "dark"
 	},
 /area/syndicate_mothership)
+"jX" = (
+/obj/structure/disposalpipe/segment{
+	icon_state = "pipe-c";
+	dir = 2
+	},
+/turf/unsimulated/floor/reinforced,
+/area/syndicate_mothership)
 "jY" = (
 /obj/structure/table/reinforced,
 /obj/item/mecha_parts/mecha_equipment/weapon/energy/laser/heavy,
@@ -5097,6 +5191,18 @@
 	icon_state = "dark"
 	},
 /area/syndicate_mothership)
+"ka" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/warning/color/red{
+	dir = 8
+	},
+/obj/structure/disposalpipe/segment,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
 "kb" = (
 /obj/structure/table/reinforced,
 /obj/item/mecha_parts/component/armor/marshal/reinforced,
@@ -5107,6 +5213,19 @@
 /obj/item/mecha_parts/component/gas/reinforced,
 /obj/item/mecha_parts/component/electrical/high_current,
 /obj/item/mecha_parts/component/electrical/high_current,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"kc" = (
+/obj/effect/floor_decal/industrial/arrows/yellow,
+/obj/machinery/disposal/wall/burn_pit{
+	dir = 8;
+	pixel_x = 32
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 8
+	},
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -5380,11 +5499,24 @@
 	icon_state = "dark"
 	},
 /area/syndicate_mothership)
+"kw" = (
+/obj/structure/disposalpipe/segment,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
 "kx" = (
 /obj/structure/table/rack,
 /obj/item/storage/belt/medical/alien,
 /obj/item/storage/belt/medical/alien,
 /obj/item/storage/belt/medical/alien,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"ky" = (
+/obj/effect/floor_decal/industrial/arrows/yellow,
+/obj/structure/disposalpipe/segment,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -5395,6 +5527,29 @@
 	req_access = list(150);
 	req_one_access = list()
 	},
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"kA" = (
+/obj/machinery/disposal/wall/burn_pit{
+	dir = 8;
+	pixel_x = 32
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 1
+	},
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
+"kB" = (
+/obj/machinery/door/airlock/vault{
+	name = "Friend Storage";
+	req_access = list(150);
+	req_one_access = list()
+	},
+/obj/structure/disposalpipe/segment,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -5824,6 +5979,13 @@
 /obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/plating/airless/carry,
 /area/shuttle/specialops_overmap)
+"lK" = (
+/obj/effect/floor_decal/industrial/danger,
+/obj/structure/disposalpipe/segment,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
 "lL" = (
 /obj/structure/artilleryplaceholder/decorative{
 	icon_state = "13"
@@ -6102,6 +6264,15 @@
 	},
 /turf/unsimulated/floor/steel,
 /area/tdome/tdomeadmin)
+"mu" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
 "mv" = (
 /obj/structure/artilleryplaceholder/decorative{
 	icon_state = "7"
@@ -6241,6 +6412,14 @@
 "mL" = (
 /turf/space/bluespace,
 /area/wizard_station)
+"mM" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
 "mN" = (
 /turf/space,
 /area/space)
@@ -8551,6 +8730,14 @@
 	phoron = 21.8366
 	},
 /area/syndicate_mothership)
+"rL" = (
+/obj/structure/disposalpipe/junction{
+	dir = 8
+	},
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
 "rM" = (
 /obj/machinery/shipsensors{
 	dir = 8
@@ -8579,6 +8766,15 @@
 	},
 /turf/simulated/floor/reinforced,
 /area/shuttle/specialops_overmap)
+"rP" = (
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
 "rQ" = (
 /obj/structure/fuel_port/heavy{
 	pixel_y = 32
@@ -10446,12 +10642,6 @@
 	icon_state = "milspec_outerhull"
 	},
 /area/shuttle/specialops_overmap)
-"uY" = (
-/obj/machinery/transportpod,
-/turf/unsimulated/floor/steel{
-	icon_state = "milspec"
-	},
-/area/centcom/simulated/cent_sat)
 "uZ" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 10
@@ -10537,6 +10727,19 @@
 	icon_state = "white"
 	},
 /area/tdome/tdomeobserve)
+"vh" = (
+/obj/machinery/disposal/wall/burn_pit{
+	dir = 8;
+	pixel_x = 32
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 8
+	},
+/turf/unsimulated/floor{
+	icon_state = "cult";
+	name = "plating"
+	},
+/area/syndicate_mothership)
 "vi" = (
 /obj/structure/table/alien/blue,
 /obj/item/reagent_containers/spray/cleaner,
@@ -10598,6 +10801,12 @@
 	icon_state = "vault"
 	},
 /area/wizard_station)
+"vp" = (
+/obj/machinery/transportpod/alt,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/centcom/simulated/cent_sat)
 "vq" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 1
@@ -11300,12 +11509,6 @@
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/shuttle/specialops_overmap)
-"wK" = (
-/obj/structure/drop_pod,
-/turf/unsimulated/floor/steel{
-	icon_state = "milspec"
-	},
-/area/centcom/simulated/cent_sat)
 "wL" = (
 /obj/structure/table/steel_reinforced,
 /obj/item/cell/infinite,
@@ -12905,6 +13108,7 @@
 /obj/effect/floor_decal/milspec/color/orange/half{
 	dir = 8
 	},
+/obj/machinery/transportpod/alt,
 /turf/simulated/floor/reinforced,
 /area/shuttle/mercenary)
 "Ag" = (
@@ -13854,6 +14058,10 @@
 /obj/machinery/recharger{
 	pixel_x = 6;
 	pixel_y = 4
+	},
+/obj/item/reagent_containers/glass/beaker/large{
+	pixel_x = 11;
+	pixel_y = -8
 	},
 /turf/simulated/floor/tiled/white,
 /area/shuttle/mercenary)
@@ -15398,6 +15606,7 @@
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 9
 	},
+/obj/machinery/transportpod/alt,
 /turf/simulated/floor/reinforced,
 /area/shuttle/mercenary)
 "Fc" = (
@@ -15440,6 +15649,7 @@
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 5
 	},
+/obj/machinery/transportpod/alt,
 /turf/simulated/floor/reinforced,
 /area/shuttle/mercenary)
 "Fj" = (
@@ -15720,6 +15930,10 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/industrial/arrows/yellow,
+/obj/structure/disposalpipe/junction{
+	dir = 2;
+	icon_state = "pipe-j2"
+	},
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -15921,6 +16135,7 @@
 /obj/effect/floor_decal/industrial/warning/color/corner/red{
 	dir = 8
 	},
+/obj/structure/disposalpipe/segment,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -16326,15 +16541,6 @@
 	phoron = 21.8366
 	},
 /area/shuttle/skipjack)
-"He" = (
-/obj/machinery/computer/teleporter{
-	pixel_x = 4;
-	dir = 8
-	},
-/turf/unsimulated/floor{
-	icon_state = "dark"
-	},
-/area/syndicate_mothership)
 "Hf" = (
 /obj/structure/table/standard,
 /obj/machinery/microwave,
@@ -16378,6 +16584,7 @@
 /obj/effect/floor_decal/industrial/warning/color/corner/red{
 	dir = 1
 	},
+/obj/structure/disposalpipe/segment,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -16906,6 +17113,9 @@
 "Io" = (
 /obj/effect/floor_decal/industrial/arrows/yellow{
 	dir = 8
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/unsimulated/floor{
 	icon_state = "dark"
@@ -29795,8 +30005,8 @@ mN
 mN
 mN
 kj
+vp
 nL
-kj
 nL
 nL
 nL
@@ -29957,8 +30167,8 @@ mN
 mN
 mN
 kj
-uY
-kj
+vp
+nL
 nL
 nL
 nL
@@ -30119,8 +30329,8 @@ mN
 mN
 mN
 kj
-wK
-kj
+vp
+nL
 nL
 nL
 nL
@@ -30281,8 +30491,8 @@ mN
 mN
 mN
 kj
+vp
 nL
-kj
 nL
 nL
 nL
@@ -30443,8 +30653,8 @@ mN
 mN
 mN
 kj
+vp
 nL
-kj
 nL
 nL
 nL
@@ -55417,7 +55627,7 @@ fu
 fu
 dx
 yb
-mN
+jz
 mN
 mN
 mN
@@ -55579,7 +55789,7 @@ jW
 jZ
 CM
 yb
-mN
+jx
 mN
 mN
 mN
@@ -55741,7 +55951,7 @@ sg
 sg
 sg
 yb
-mN
+jx
 mN
 mN
 mN
@@ -55903,7 +56113,7 @@ sg
 sg
 kd
 yb
-mN
+jx
 mN
 mN
 mN
@@ -56065,8 +56275,8 @@ sg
 sg
 CN
 yb
-mN
-mN
+jB
+jw
 mN
 mN
 mN
@@ -56228,7 +56438,7 @@ jU
 dl
 yb
 yb
-mN
+jx
 mN
 mN
 mN
@@ -56372,25 +56582,25 @@ yb
 yb
 yb
 sg
-sg
-Hz
-Ij
-FP
-sg
+mu
+lK
+kB
+ky
+kw
 Gh
-CO
+ka
 Hj
-sg
-sg
+kw
+kw
 Gh
 FN
-CO
-CO
-CO
+ka
+ka
+jL
 CO
 Cb
 yb
-mN
+jx
 mN
 mN
 mN
@@ -56534,7 +56744,7 @@ gk
 Iz
 yb
 sg
-sg
+mM
 Hz
 Ij
 FP
@@ -56545,14 +56755,14 @@ sg
 sg
 sg
 sg
-FP
+kc
 Fm
 CP
-CP
+jM
 CP
 di
 yb
-mN
+jx
 mN
 mN
 mN
@@ -56696,7 +56906,7 @@ gk
 gk
 yb
 sg
-sg
+mM
 yb
 dS
 fu
@@ -56710,11 +56920,11 @@ yb
 yb
 yb
 CQ
-CQ
+jT
 CQ
 yb
 yb
-mN
+jx
 mN
 mN
 mN
@@ -56872,11 +57082,11 @@ mN
 mN
 uL
 CR
-CR
-CR
-ss
-mN
-mN
+jX
+jI
+jH
+jE
+jy
 mN
 mN
 mN
@@ -57020,7 +57230,7 @@ gk
 IC
 gI
 Iq
-sg
+rL
 Hc
 mN
 mN
@@ -57182,7 +57392,7 @@ gk
 gk
 yb
 Iq
-sg
+mM
 Hc
 mN
 mN
@@ -57340,11 +57550,11 @@ gk
 gk
 gk
 gk
-gk
+vh
 iY
 yb
 sg
-sg
+mM
 Hc
 mN
 mN
@@ -57668,7 +57878,7 @@ nu
 sg
 dl
 sg
-sg
+mM
 yb
 mN
 fR
@@ -57830,7 +58040,7 @@ sg
 sg
 kz
 Is
-sg
+mM
 jC
 fR
 fR
@@ -57992,7 +58202,7 @@ sg
 sg
 jC
 sg
-sg
+mM
 Hc
 fR
 If
@@ -58316,7 +58526,7 @@ sg
 sg
 kz
 Is
-sg
+mM
 Hc
 fR
 fo
@@ -58478,7 +58688,7 @@ lQ
 Iq
 dl
 sg
-sg
+mM
 jF
 fR
 Ig
@@ -58640,7 +58850,7 @@ dx
 gZ
 yb
 sg
-sg
+mM
 yb
 fR
 fo
@@ -58802,7 +59012,7 @@ gO
 Iq
 dl
 sg
-sg
+mM
 jC
 fR
 Ii
@@ -58964,7 +59174,7 @@ sg
 sg
 gZ
 sg
-sg
+mM
 Hc
 fR
 hO
@@ -59126,7 +59336,7 @@ sg
 sg
 jC
 sg
-sg
+mM
 Hc
 fR
 Ia
@@ -59450,7 +59660,7 @@ sg
 sg
 gZ
 sg
-sg
+mM
 jF
 fd
 fR
@@ -59612,7 +59822,7 @@ nW
 Iq
 dl
 sg
-sg
+mM
 yb
 mN
 mN
@@ -59774,7 +59984,7 @@ dx
 he
 yb
 sg
-sg
+mM
 jC
 mN
 mN
@@ -59936,7 +60146,7 @@ gP
 Iq
 dl
 sg
-sg
+mM
 Hc
 mN
 mN
@@ -60098,7 +60308,7 @@ sg
 sg
 he
 sg
-sg
+mM
 Hc
 mN
 mN
@@ -60422,7 +60632,7 @@ kv
 sg
 jF
 Iq
-sg
+mM
 jF
 mN
 mN
@@ -60584,7 +60794,7 @@ sg
 sg
 he
 sg
-sg
+mM
 yb
 mN
 mN
@@ -60746,7 +60956,7 @@ kQ
 Iq
 dl
 sg
-sg
+mM
 jC
 mN
 mN
@@ -60908,7 +61118,7 @@ dx
 kR
 yb
 sg
-sg
+mM
 Hc
 mN
 mN
@@ -61070,7 +61280,7 @@ sg
 Iq
 dl
 sg
-sg
+mM
 Hc
 mN
 mN
@@ -61232,7 +61442,7 @@ sg
 sg
 kR
 sg
-sg
+mM
 Hc
 mN
 mN
@@ -61556,7 +61766,7 @@ sg
 sg
 jF
 Iq
-sg
+mM
 yb
 mN
 mN
@@ -61718,7 +61928,7 @@ sg
 sg
 kR
 sg
-sg
+mM
 jC
 mN
 mN
@@ -61880,7 +62090,7 @@ sg
 Iq
 dl
 sg
-sg
+mM
 Hc
 mN
 mN
@@ -62042,7 +62252,7 @@ dx
 hz
 yb
 sg
-sg
+mM
 Hc
 mN
 mN
@@ -62204,7 +62414,7 @@ hT
 Iq
 dl
 sg
-sg
+mM
 jF
 mN
 mN
@@ -62366,7 +62576,7 @@ sg
 sg
 hz
 sg
-sg
+mM
 yb
 dS
 fu
@@ -62690,7 +62900,7 @@ sg
 sg
 jF
 Iq
-sg
+mM
 Hc
 eS
 hc
@@ -62852,7 +63062,7 @@ sg
 sg
 hz
 sg
-sg
+mM
 Hc
 iL
 hc
@@ -63014,7 +63224,7 @@ fV
 Iq
 dl
 sg
-sg
+mM
 Hc
 iM
 hc
@@ -63176,7 +63386,7 @@ dx
 ih
 yb
 sg
-sg
+mM
 Hc
 iR
 hc
@@ -63338,7 +63548,7 @@ ie
 sg
 dl
 sg
-sg
+mM
 Hc
 jd
 hc
@@ -63662,7 +63872,7 @@ sg
 sg
 jC
 sg
-sg
+mM
 yb
 dS
 dx
@@ -63986,10 +64196,10 @@ sg
 sg
 ih
 sg
-sg
-sg
-sg
-sg
+rP
+kw
+kw
+kA
 sg
 FP
 Hz
@@ -64480,8 +64690,8 @@ TW
 TW
 TW
 yb
-He
-ds
+dt
+dt
 dt
 yb
 hZ
