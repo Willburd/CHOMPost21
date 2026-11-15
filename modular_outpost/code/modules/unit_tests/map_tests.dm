@@ -99,6 +99,7 @@
 		/area/ai_sat/solar_airlock,
 		/area/offworld/orbital/station/solar_control,
 		/area/offworld/orbital/station/port_airlock,
+		/area/offworld/orbital/station/north_civ_airlock,
 		/area/offworld/orbital/station/starboard_airlock,
 		/area/offworld/orbital/station/dockingarm,
 		/area/offworld/orbital/station/access_shaft,

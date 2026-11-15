@@ -5089,9 +5089,6 @@
 /obj/effect/floor_decal/corner/orange/bordercorner{
 	dir = 4
 	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
@@ -5100,6 +5097,10 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
+	},
+/obj/structure/disposalpipe/junction{
+	dir = 8;
+	icon_state = "pipe-j2"
 	},
 /turf/simulated/floor/tiled,
 /area/muriki/tramstation/cargeng)
@@ -5500,6 +5501,7 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/muriki/tramstation/cargeng)
 "ahI" = (
@@ -5740,6 +5742,9 @@
 	dir = 1;
 	id_tag = "tram_eng";
 	pixel_y = -20
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/muriki/tramstation/cargeng)
@@ -8059,6 +8064,9 @@
 	dir = 1;
 	pixel_y = 21
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/muriki/tramstation/civ)
 "amW" = (
@@ -8157,6 +8165,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
 	},
+/obj/structure/disposalpipe/junction/yjunction,
 /turf/simulated/floor/tiled,
 /area/quartermaster/foyer)
 "ang" = (
@@ -8165,6 +8174,9 @@
 	},
 /obj/machinery/light{
 	dir = 1
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/muriki/tramstation/civ)
@@ -8991,13 +9003,15 @@
 /turf/simulated/wall,
 /area/muriki/grounds/tramborder)
 "ape" = (
-/obj/structure/railing{
-	dir = 8
-	},
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 1
 	},
-/obj/structure/railing,
+/obj/structure/window/reinforced/holiday{
+	dir = 1
+	},
+/obj/machinery/disposal,
+/obj/structure/disposalpipe/trunk,
+/obj/effect/floor_decal/industrial/warning/full,
 /turf/simulated/floor/plating,
 /area/quartermaster/foyer)
 "apf" = (
@@ -9149,7 +9163,9 @@
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 1
 	},
-/obj/structure/railing,
+/obj/structure/window/reinforced/holiday{
+	dir = 1
+	},
 /turf/simulated/floor/plating,
 /area/quartermaster/foyer)
 "apu" = (
@@ -9167,18 +9183,11 @@
 /turf/simulated/floor/plating,
 /area/quartermaster/foyer)
 "apv" = (
-/obj/structure/railing{
-	dir = 4
+/obj/structure/simple_door/snowbrick,
+/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki{
+	outdoors = 0
 	},
-/obj/effect/floor_decal/industrial/warning/dust{
-	dir = 1
-	},
-/obj/structure/railing{
-	dir = 1
-	},
-/obj/effect/landmark/holiday_event_spawn,
-/turf/simulated/floor/plating,
-/area/quartermaster/foyer)
+/area/muriki/grounds/engi)
 "apw" = (
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 1
@@ -9222,12 +9231,12 @@
 /turf/simulated/floor/tiled/dark,
 /area/maintenance/disposal)
 "apz" = (
-/obj/structure/railing{
-	dir = 4
-	},
 /obj/effect/floor_decal/industrial/warning/dust,
-/obj/structure/railing,
-/obj/effect/landmark/holiday_event_spawn,
+/obj/machinery/disposal,
+/obj/structure/disposalpipe/trunk{
+	dir = 1
+	},
+/obj/structure/window/reinforced/holiday,
 /turf/simulated/floor/plating,
 /area/muriki/tramstation/cargeng)
 "apA" = (
@@ -15302,9 +15311,20 @@
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/mine/unexplored/muriki/mountainnorth)
 "aEY" = (
-/obj/structure/simple_door/snowbrick,
-/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
-/area/muriki/grounds/engi)
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/structure/barricade{
+	material = "steel"
+	},
+/turf/simulated/floor/plating/external/turfpack/muriki,
+/area/muriki/grounds/waste)
 "aEZ" = (
 /obj/structure/prop/rock/small/alt,
 /turf/simulated/floor/outdoors/ice/turfpack/muriki,
@@ -15320,15 +15340,17 @@
 /turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
 /area/mine/explored/muriki/mountaineast)
 "aFd" = (
-/obj/effect/zone_divider,
-/turf/simulated/wall/snowbrick/turfpack/muriki,
-/area/muriki/grounds/engi)
-"aFe" = (
-/obj/structure/bed/chair/backed_grey{
-	dir = 4
+/obj/structure/barricade{
+	material = "steel"
 	},
-/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
-/area/muriki/grounds/engi)
+/turf/simulated/floor/outdoors/ice/dark/turfpack/muriki,
+/area/muriki/grounds/waste)
+"aFe" = (
+/obj/structure/barricade{
+	material = "steel"
+	},
+/turf/simulated/floor/outdoors/ice/turfpack/muriki,
+/area/muriki/grounds/waste)
 "aFf" = (
 /obj/structure/prop/rock/sharp,
 /turf/simulated/floor/outdoors/ice/turfpack/muriki,
@@ -15341,15 +15363,14 @@
 /turf/simulated/floor/outdoors/snow/gravsnow/sidewalk_under/turfpack/muriki,
 /area/mine/unexplored/muriki/valleyeast)
 "aFi" = (
-/obj/structure/bonfire,
+/obj/item/material/barbedwire/start_active,
 /turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
-/area/muriki/grounds/engi)
+/area/muriki/grounds/sec)
 "aFj" = (
-/obj/structure/bed/chair/backed_grey{
-	dir = 8
-	},
+/obj/structure/trailblazer/red,
+/obj/item/material/barbedwire/start_active,
 /turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
-/area/muriki/grounds/engi)
+/area/muriki/grounds/sec)
 "aFk" = (
 /obj/structure/prop/rock/flat,
 /turf/simulated/floor/outdoors/shelfice/turfpack/muriki,
@@ -15365,14 +15386,19 @@
 /turf/simulated/floor/outdoors/ice/turfpack/muriki,
 /area/mine/unexplored/muriki/valleyeast)
 "aFn" = (
-/obj/structure/bed/double,
-/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
-/area/muriki/grounds/engi)
+/obj/item/material/barbedwire/start_active,
+/turf/simulated/floor/outdoors/ice/dark/turfpack/muriki,
+/area/muriki/grounds/sec)
 "aFo" = (
-/obj/fiftyspawner/wood,
-/obj/fiftyspawner/wood,
-/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
-/area/muriki/grounds/engi)
+/obj/item/beartrap{
+	anchored = 1;
+	deployed = 1
+	},
+/obj/structure/barricade{
+	material = "steel"
+	},
+/turf/simulated/floor/outdoors/ice/dark/turfpack/muriki,
+/area/muriki/grounds/waste)
 "aFp" = (
 /obj/random/outcrop,
 /turf/simulated/floor/outdoors/ice/turfpack/muriki,
@@ -15430,25 +15456,21 @@
 /area/quartermaster/storage)
 "aFz" = (
 /obj/structure/cable/green{
-	icon_state = "1-2"
+	icon_state = "4-8"
 	},
-/obj/structure/railing{
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/structure/railing{
-	dir = 8
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
 	},
-/obj/structure/barricade{
-	material = "steel"
-	},
-/turf/simulated/floor/plating/external/turfpack/muriki,
-/area/muriki/grounds/waste)
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled/dark,
+/area/maintenance/disposal)
 "aFA" = (
-/obj/structure/barricade{
-	material = "steel"
-	},
-/turf/simulated/floor/outdoors/ice/dark/turfpack/muriki,
-/area/muriki/grounds/waste)
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled,
+/area/maintenance/disposal)
 "aFB" = (
 /obj/effect/landmark{
 	name = "carpspawn"
@@ -15468,11 +15490,15 @@
 /turf/simulated/floor/outdoors/ice/turfpack/muriki,
 /area/mine/explored/muriki/mountaineast)
 "aFF" = (
-/obj/structure/barricade{
-	material = "steel"
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
 	},
-/turf/simulated/floor/outdoors/ice/turfpack/muriki,
-/area/muriki/grounds/waste)
+/obj/effect/floor_decal/industrial/danger{
+	dir = 1
+	},
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled,
+/area/muriki/tramstation/waste)
 "aFG" = (
 /obj/structure/prop/rock/flat,
 /turf/simulated/floor/outdoors/shelfice/turfpack/muriki,
@@ -15512,9 +15538,16 @@
 /turf/simulated/floor/outdoors/ice/dark/turfpack/muriki,
 /area/mine/explored/muriki/valley)
 "aFQ" = (
-/obj/item/material/barbedwire/start_active,
-/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
-/area/muriki/grounds/sec)
+/obj/structure/railing,
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 1
+	},
+/obj/effect/landmark/holiday_event_spawn,
+/turf/simulated/floor/plating,
+/area/muriki/tramstation/waste)
 "aFR" = (
 /obj/structure/prop/rock,
 /turf/simulated/floor/outdoors/ice/turfpack/muriki,
@@ -15533,10 +15566,16 @@
 /turf/simulated/floor/plating,
 /area/maintenance/wastedisposal)
 "aFU" = (
-/obj/structure/trailblazer/red,
-/obj/item/material/barbedwire/start_active,
-/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
-/area/muriki/grounds/sec)
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 1
+	},
+/obj/machinery/disposal/burn_pit,
+/obj/structure/window/reinforced/holiday{
+	dir = 1
+	},
+/obj/structure/disposalpipe/trunk,
+/turf/simulated/floor/plating,
+/area/muriki/tramstation/waste)
 "aFV" = (
 /obj/structure/fence{
 	dir = 4
@@ -15608,22 +15647,25 @@
 /turf/simulated/floor/outdoors/ice/dark/turfpack/muriki,
 /area/muriki/grounds/sec)
 "aGj" = (
-/obj/item/material/barbedwire/start_active,
-/turf/simulated/floor/outdoors/ice/dark/turfpack/muriki,
-/area/muriki/grounds/sec)
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 1
+	},
+/obj/structure/window/reinforced/holiday{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/muriki/tramstation/waste)
 "aGk" = (
 /turf/simulated/floor/outdoors/ice/turfpack/muriki,
 /area/muriki/grounds/waste)
 "aGl" = (
-/obj/item/beartrap{
-	anchored = 1;
-	deployed = 1
+/obj/structure/railing,
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 1
 	},
-/obj/structure/barricade{
-	material = "steel"
-	},
-/turf/simulated/floor/outdoors/ice/dark/turfpack/muriki,
-/area/muriki/grounds/waste)
+/obj/effect/landmark/holiday_event_spawn,
+/turf/simulated/floor/plating,
+/area/muriki/tramstation/waste)
 "aGm" = (
 /obj/structure/fence,
 /turf/simulated/floor/outdoors/ice/dark/turfpack/muriki,
@@ -15667,9 +15709,11 @@
 /turf/simulated/floor/outdoors/ice/dark/turfpack/muriki,
 /area/muriki/grounds/waste)
 "aGv" = (
-/obj/item/material/barbedwire/start_active,
-/turf/simulated/floor/outdoors/snow/gravsnow/sidewalk_under/turfpack/muriki,
-/area/muriki/grounds/sec)
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/milspec,
+/area/janitor)
 "aGw" = (
 /obj/structure/prop/rock/sharp,
 /turf/simulated/floor/outdoors/shelfice/turfpack/muriki,
@@ -15683,13 +15727,18 @@
 /turf/simulated/floor/outdoors/ice/dark/turfpack/muriki,
 /area/mine/explored/muriki/valley)
 "aGz" = (
-/obj/item/beartrap{
-	anchored = 1;
-	deployed = 1
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
 	},
-/obj/item/material/barbedwire/start_active,
-/turf/simulated/floor/outdoors/snow/gravsnow/sidewalk_under/turfpack/muriki,
-/area/muriki/grounds/sec)
+/obj/effect/floor_decal/industrial/danger{
+	dir = 1
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled,
+/area/quartermaster/foyer)
 "aGA" = (
 /obj/structure/fence{
 	dir = 4
@@ -15834,10 +15883,17 @@
 /turf/simulated/floor/plating,
 /area/medical/exam_room)
 "aGY" = (
-/obj/effect/floor_decal/milspec/cargo,
-/obj/effect/decal/cleanable/blood/old,
-/turf/simulated/floor/tiled/techmaint,
-/area/shuttle/trawler)
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/danger{
+	dir = 1
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/quartermaster/foyer)
 "aGZ" = (
 /obj/random/landmine,
 /turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
@@ -15875,9 +15931,18 @@
 /turf/simulated/floor/outdoors/ice/turfpack/muriki,
 /area/security/tactical)
 "aHi" = (
-/obj/effect/decal/cleanable/blood/old,
-/turf/simulated/floor/tiled/techmaint,
-/area/shuttle/trawler)
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/danger{
+	dir = 1
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled,
+/area/quartermaster/foyer)
 "aHj" = (
 /obj/machinery/porta_turret/heavy,
 /turf/simulated/floor/outdoors/ice/dark/turfpack/muriki,
@@ -15897,9 +15962,15 @@
 /turf/simulated/floor/outdoors/ice/turfpack/muriki,
 /area/muriki/yard)
 "aHn" = (
-/obj/item/material/barbedwire/start_active,
-/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
-/area/muriki/grounds/shutt)
+/obj/effect/floor_decal/industrial/danger{
+	dir = 1
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled,
+/area/muriki/tramstation/civ)
 "aHo" = (
 /obj/structure/prop/rock/sharp,
 /turf/simulated/floor/outdoors/shelfice/turfpack/muriki,
@@ -15911,9 +15982,14 @@
 /turf/simulated/floor/outdoors/snow/gravsnow/sidewalk_under/turfpack/muriki,
 /area/muriki/grounds/sec)
 "aHq" = (
-/obj/effect/decal/cleanable/blood/old,
-/turf/simulated/floor/tiled/techfloor,
-/area/shuttle/trawler)
+/obj/effect/floor_decal/industrial/danger{
+	dir = 1
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/muriki/tramstation/civ)
 "aHr" = (
 /obj/random/landmine,
 /turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
@@ -15931,8 +16007,15 @@
 /turf/simulated/floor/outdoors/shelfice/turfpack/muriki,
 /area/muriki/grounds/shutt)
 "aHv" = (
-/turf/simulated/floor/outdoors/snow/gravsnow/turfpack/muriki,
-/area/muriki/grounds/shutt)
+/obj/effect/floor_decal/industrial/danger{
+	dir = 1
+	},
+/obj/structure/disposalpipe/junction{
+	dir = 4;
+	icon_state = "pipe-j2"
+	},
+/turf/simulated/floor/tiled,
+/area/muriki/tramstation/civ)
 "aHw" = (
 /obj/machinery/power/grounding_rod/pre_mapped,
 /turf/simulated/floor/outdoors/ice/dark/turfpack/muriki,
@@ -15942,12 +16025,14 @@
 /turf/simulated/floor/outdoors/ice/dark/turfpack/muriki,
 /area/muriki/grounds/shutt)
 "aHy" = (
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 1
+/obj/effect/floor_decal/industrial/danger/corner{
+	dir = 8
 	},
-/obj/effect/decal/cleanable/blood/old,
-/turf/simulated/floor/tiled/techmaint,
-/area/shuttle/trawler)
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/muriki/tramstation/civ)
 "aHz" = (
 /obj/structure/fence{
 	dir = 1
@@ -15971,9 +16056,14 @@
 /turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
 /area/muriki/grounds/tramborder)
 "aHC" = (
-/obj/structure/barricade/sandbag,
-/turf/simulated/floor/tiled/techfloor,
-/area/shuttle/trawler)
+/obj/effect/floor_decal/industrial/danger/corner{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/muriki/tramstation/civ)
 "aHE" = (
 /obj/structure/bed/padded,
 /obj/effect/floor_decal/corner/black{
@@ -15985,9 +16075,13 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "aHF" = (
-/obj/item/material/barbedwire/start_active,
-/turf/simulated/floor/glass,
-/area/security/brig/observation)
+/obj/structure/railing,
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 1
+	},
+/obj/effect/landmark/holiday_event_spawn,
+/turf/simulated/floor/plating,
+/area/quartermaster/foyer)
 "aHG" = (
 /obj/structure/prop/rock/sharp,
 /turf/simulated/floor/outdoors/shelfice/turfpack/muriki,
@@ -16032,13 +16126,13 @@
 /turf/simulated/floor/outdoors/shelfice/turfpack/muriki,
 /area/muriki/grounds/shutt)
 "aHP" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+/obj/structure/railing,
+/obj/effect/floor_decal/industrial/warning/dust{
 	dir = 1
 	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
-/obj/effect/decal/cleanable/blood/old,
-/turf/simulated/floor/tiled/techfloor,
-/area/shuttle/trawler)
+/obj/effect/landmark/holiday_event_spawn,
+/turf/simulated/floor/plating,
+/area/muriki/tramstation/civ)
 "aHQ" = (
 /obj/structure/fence{
 	dir = 4
@@ -16061,9 +16155,14 @@
 /turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
 /area/muriki/grounds/civ)
 "aHV" = (
-/obj/effect/decal/cleanable/blood/old,
-/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
-/area/muriki/grounds/shutt)
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 1
+	},
+/obj/structure/window/reinforced/holiday{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/muriki/tramstation/civ)
 "aHW" = (
 /obj/structure/prop/rock/sharp,
 /turf/simulated/floor/outdoors/shelfice/turfpack/muriki,
@@ -16183,22 +16282,27 @@
 /turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
 /area/muriki/grounds/terraform)
 "aIu" = (
-/obj/structure/barricade{
-	material = "steel"
+/obj/structure/railing{
+	dir = 1
 	},
-/turf/simulated/floor/tiled,
-/area/quartermaster/mining)
+/obj/effect/floor_decal/industrial/warning/dust,
+/obj/effect/landmark/holiday_event_spawn,
+/turf/simulated/floor/plating,
+/area/muriki/tramstation/cargeng)
 "aIv" = (
-/obj/machinery/porta_turret/alien/destroyed{
-	dir = 9
+/obj/effect/floor_decal/industrial/warning/dust,
+/obj/structure/window/reinforced/holiday,
+/obj/machinery/disposal,
+/obj/structure/disposalpipe/trunk{
+	dir = 1
 	},
-/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
-	outdoors = 1
-	},
-/area/muriki/grounds/shutt)
+/turf/simulated/floor/plating,
+/area/muriki/tramstation/cargeng)
 "aIw" = (
-/turf/simulated/wall/plastihull,
-/area/muriki/grounds/shutt)
+/obj/effect/floor_decal/industrial/warning/dust,
+/obj/structure/window/reinforced/holiday,
+/turf/simulated/floor/plating,
+/area/muriki/tramstation/cargeng)
 "aIx" = (
 /obj/structure/flora/ausbushes/reedbush,
 /turf/simulated/floor/water/deep/indoors/turfpack/muriki,
@@ -16257,19 +16361,18 @@
 /turf/simulated/floor/outdoors/ice/turfpack/muriki,
 /area/muriki/grounds/civ)
 "aIK" = (
-/obj/machinery/porta_turret/alien/destroyed{
-	dir = 10
+/obj/structure/railing{
+	dir = 1
 	},
-/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
-	outdoors = 1
-	},
-/area/muriki/grounds/shutt)
+/obj/effect/floor_decal/industrial/warning/dust,
+/obj/effect/landmark/holiday_event_spawn,
+/turf/simulated/floor/plating,
+/area/muriki/tramstation/civ)
 "aIL" = (
-/obj/structure/catwalk,
-/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
-	outdoors = 1
-	},
-/area/muriki/grounds/shutt)
+/obj/effect/floor_decal/industrial/warning/dust,
+/obj/structure/window/reinforced/holiday,
+/turf/simulated/floor/plating,
+/area/muriki/tramstation/civ)
 "aIM" = (
 /obj/effect/zone_divider,
 /turf/simulated/floor/outdoors/ice/dark/turfpack/muriki,
@@ -16400,12 +16503,22 @@
 /turf/simulated/floor/outdoors/ice/turfpack/muriki,
 /area/muriki/grounds/tramborder)
 "aJj" = (
-/obj/structure/catwalk,
-/obj/effect/decal/cleanable/blood/old,
-/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
-	outdoors = 1
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/industrial/danger,
+/obj/structure/barricade/sandbag,
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
 	},
-/area/muriki/grounds/shutt)
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/industrial/danger,
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
+/turf/simulated/floor/tiled,
+/area/muriki/tramstation/cargeng)
 "aJk" = (
 /turf/simulated/floor/outdoors/ice/turfpack/muriki,
 /area/muriki/grounds/engi)
@@ -16434,26 +16547,25 @@
 /turf/simulated/floor/outdoors/ice/dark/turfpack/muriki,
 /area/muriki/grounds/terraform)
 "aJr" = (
-/obj/machinery/porta_turret/alien/destroyed{
-	dir = 5
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/industrial/danger,
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
-/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
-	outdoors = 1
-	},
-/area/muriki/grounds/shutt)
+/turf/simulated/floor/tiled,
+/area/muriki/tramstation/cargeng)
 "aJs" = (
 /obj/machinery/power/grounding_rod/pre_mapped,
 /turf/simulated/floor/outdoors/ice/dark/turfpack/muriki,
 /area/muriki/grounds/civ)
 "aJt" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/structure/barricade{
-	material = "steel"
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/industrial/danger,
+/obj/structure/disposalpipe/junction/yjunction{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
-/area/maintenance/disposal)
+/area/muriki/tramstation/cargeng)
 "aJu" = (
 /obj/structure/prop/rock/small/alt,
 /turf/simulated/floor/outdoors/ice/turfpack/muriki,
@@ -16495,29 +16607,30 @@
 /area/mine/explored/muriki/mountaineast)
 "aJB" = (
 /obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/corner/brown/border,
-/obj/structure/barricade{
-	material = "steel"
+/obj/effect/floor_decal/industrial/danger,
+/obj/structure/disposalpipe/segment{
+	icon_state = "pipe-c";
+	dir = 2
 	},
 /turf/simulated/floor/tiled,
-/area/maintenance/disposal)
+/area/muriki/tramstation/cargeng)
 "aJC" = (
-/obj/structure/barricade{
-	material = "steel"
-	},
-/obj/item/material/barbedwire/start_active,
-/turf/simulated/floor/glass,
-/area/security/brig/observation)
+/obj/effect/floor_decal/industrial/danger,
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled,
+/area/muriki/tramstation/civ)
 "aJD" = (
 /obj/structure/trailblazer/yellow,
 /turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
 /area/muriki/grounds/engi)
 "aJE" = (
-/obj/structure/hull_corner/long_vert{
-	dir = 6
+/obj/effect/floor_decal/industrial/danger,
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
 	},
-/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
-/area/muriki/grounds/shutt)
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled,
+/area/muriki/tramstation/civ)
 "aJF" = (
 /obj/random/landmine,
 /turf/simulated/floor/outdoors/ice/dark/turfpack/muriki,
@@ -16527,16 +16640,30 @@
 /turf/simulated/floor/outdoors/ice/turfpack/muriki,
 /area/muriki/grounds/engi)
 "aJH" = (
-/obj/effect/auto_roof,
-/turf/simulated/wall/plastihull,
-/area/muriki/grounds/shutt)
-"aJI" = (
-/obj/machinery/atmospherics/unary/engine{
-	dir = 1
+/obj/item/material/barbedwire/start_active,
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
 	},
-/obj/effect/auto_roof,
-/turf/simulated/floor,
-/area/muriki/grounds/shutt)
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled,
+/area/muriki/tramstation/cargeng)
+"aJI" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 8
+	},
+/obj/structure/disposalpipe/junction{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/muriki/tramstation/civ)
 "aJJ" = (
 /obj/structure/trailblazer/yellow,
 /turf/simulated/floor/outdoors/ice/turfpack/muriki,
@@ -16556,14 +16683,10 @@
 /turf/simulated/floor/outdoors/ice/turfpack/muriki,
 /area/muriki/grounds/engi)
 "aJN" = (
-/obj/machinery/door/airlock/angled_bay/external/red,
-/obj/structure/fans/hardlight/colorable/abductor,
-/obj/machinery/door/firedoor/glass,
-/obj/effect/auto_roof,
-/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
-	outdoors = 1
+/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki{
+	outdoors = 0
 	},
-/area/muriki/grounds/shutt)
+/area/muriki/grounds/engi)
 "aJO" = (
 /obj/structure/prop/rock/small,
 /turf/simulated/floor/outdoors/ice/turfpack/muriki,
@@ -16585,14 +16708,13 @@
 /turf/simulated/floor/outdoors/shelfice/turfpack/muriki,
 /area/mine/explored/muriki/mountaineast)
 "aJT" = (
-/obj/machinery/atmospherics/unary/engine{
-	dir = 1
+/obj/structure/bed/chair/backed_grey{
+	dir = 4
 	},
-/obj/effect/auto_roof,
-/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
-	outdoors = 1
+/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki{
+	outdoors = 0
 	},
-/area/muriki/grounds/shutt)
+/area/muriki/grounds/engi)
 "aJU" = (
 /obj/item/extraction_pack,
 /obj/item/extraction_pack,
@@ -16623,11 +16745,11 @@
 /turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
 /area/muriki/grounds/sci)
 "aJZ" = (
-/obj/structure/hull_corner/long_vert{
-	dir = 10
+/obj/structure/bonfire,
+/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki{
+	outdoors = 0
 	},
-/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
-/area/muriki/grounds/shutt)
+/area/muriki/grounds/engi)
 "aKa" = (
 /obj/structure/prop/rock/flat,
 /turf/simulated/floor/outdoors/shelfice/turfpack/muriki,
@@ -16649,16 +16771,13 @@
 /turf/simulated/floor/outdoors/shelfice/turfpack/muriki,
 /area/muriki/grounds/sci)
 "aKf" = (
-/obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/corner/brown/border,
-/obj/structure/disposalpipe/segment{
-	dir = 4
+/obj/structure/bed/chair/backed_grey{
+	dir = 8
 	},
-/obj/structure/barricade{
-	material = "steel"
+/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki{
+	outdoors = 0
 	},
-/turf/simulated/floor/tiled/dark,
-/area/maintenance/disposal)
+/area/muriki/grounds/engi)
 "aKg" = (
 /obj/structure/prop/rock/small,
 /turf/simulated/floor/outdoors/shelfice/turfpack/muriki,
@@ -16699,9 +16818,11 @@
 /turf/simulated/floor/outdoors/ice/dark/turfpack/muriki,
 /area/muriki/grounds/med)
 "aKl" = (
-/obj/structure/barricade/sandbag,
-/turf/simulated/floor/glass,
-/area/security/brig/observation)
+/obj/structure/bed/double,
+/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki{
+	outdoors = 0
+	},
+/area/muriki/grounds/engi)
 "aKm" = (
 /obj/structure/prop/rock/sharp,
 /turf/simulated/floor/outdoors/shelfice/turfpack/muriki,
@@ -16711,28 +16832,24 @@
 /turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
 /area/muriki/grounds/engi)
 "aKo" = (
-/obj/effect/decal/cleanable/blood/old,
-/turf/simulated/floor/outdoors/ice/dark/turfpack/muriki,
-/area/muriki/grounds/shutt)
+/obj/fiftyspawner/wood,
+/obj/fiftyspawner/wood,
+/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki{
+	outdoors = 0
+	},
+/area/muriki/grounds/engi)
 "aKp" = (
-/obj/effect/auto_roof,
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/muriki/grounds/shutt)
+/obj/item/material/barbedwire/start_active,
+/turf/simulated/floor/outdoors/snow/gravsnow/sidewalk_under/turfpack/muriki,
+/area/muriki/grounds/sec)
 "aKq" = (
-/obj/structure/cable/green{
-	icon_state = "4-8"
+/obj/item/beartrap{
+	anchored = 1;
+	deployed = 1
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/structure/barricade{
-	material = "steel"
-	},
-/turf/simulated/floor/tiled,
-/area/maintenance/disposal)
+/obj/item/material/barbedwire/start_active,
+/turf/simulated/floor/outdoors/snow/gravsnow/sidewalk_under/turfpack/muriki,
+/area/muriki/grounds/sec)
 "aKr" = (
 /obj/structure/trailblazer/yellow,
 /turf/simulated/floor/outdoors/ice/dark/turfpack/muriki,
@@ -16749,18 +16866,10 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/medical/virology)
 "aKt" = (
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
+/obj/effect/floor_decal/milspec/cargo,
 /obj/effect/decal/cleanable/blood/old,
-/turf/simulated/floor/tiled,
-/area/maintenance/disposal)
+/turf/simulated/floor/tiled/techmaint,
+/area/shuttle/trawler)
 "aKu" = (
 /obj/machinery/door/blast/regular{
 	density = 0;
@@ -16834,18 +16943,9 @@
 /turf/simulated/floor/outdoors/shelfice/turfpack/muriki,
 /area/mine/explored/muriki/mountaineast)
 "aKE" = (
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/structure/barricade/sandbag,
-/turf/simulated/floor/tiled,
-/area/maintenance/disposal)
+/obj/effect/decal/cleanable/blood/old,
+/turf/simulated/floor/tiled/techmaint,
+/area/shuttle/trawler)
 "aKF" = (
 /obj/effect/floor_decal/corner/red{
 	dir = 10
@@ -16931,9 +17031,8 @@
 /turf/simulated/floor/outdoors/ice/turfpack/muriki,
 /area/mine/explored/muriki/mountainnorth)
 "aKS" = (
-/obj/structure/table/rack/gun_rack/steel,
-/obj/effect/auto_roof,
-/turf/simulated/floor/tiled/techfloor/grid,
+/obj/item/material/barbedwire/start_active,
+/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
 /area/muriki/grounds/shutt)
 "aKT" = (
 /obj/effect/floor_decal/industrial/warning/dust,
@@ -16944,12 +17043,9 @@
 /turf/simulated/floor/outdoors/ice/dark/turfpack/muriki,
 /area/muriki/grounds/med)
 "aKV" = (
-/obj/machinery/door/airlock/angled_bay/external/red,
-/obj/structure/fans/hardlight/colorable/abductor,
-/obj/machinery/door/firedoor/glass,
-/obj/effect/auto_roof,
-/turf/simulated/floor/reinforced,
-/area/muriki/grounds/shutt)
+/obj/effect/decal/cleanable/blood/old,
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/trawler)
 "aKW" = (
 /turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
 /area/mine/explored/muriki/mountainnorth)
@@ -16958,25 +17054,19 @@
 /turf/simulated/floor/outdoors/ice/dark/turfpack/muriki,
 /area/muriki/grounds/sci)
 "aKY" = (
-/obj/structure/table/rack/gun_rack/steel,
-/obj/effect/auto_roof,
-/obj/effect/map_effect/event_explosions/start_explosion/small,
-/turf/simulated/floor/tiled/techfloor/grid,
+/turf/simulated/floor/outdoors/snow/gravsnow/turfpack/muriki,
 /area/muriki/grounds/shutt)
 "aKZ" = (
 /obj/structure/lattice,
 /turf/simulated/open,
 /area/muriki/crewstairwell)
 "aLa" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 1
-	},
-/obj/effect/floor_decal/industrial/danger{
+/obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
 /obj/effect/decal/cleanable/blood/old,
-/turf/simulated/floor/tiled,
-/area/maintenance/disposal)
+/turf/simulated/floor/tiled/techmaint,
+/area/shuttle/trawler)
 "aLb" = (
 /obj/effect/zone_divider,
 /turf/simulated/floor/outdoors/ice/dark/turfpack/muriki,
@@ -17021,15 +17111,9 @@
 /turf/simulated/floor/outdoors/ice/turfpack/muriki,
 /area/mine/explored/muriki/mountainnorth)
 "aLl" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 1
-	},
-/obj/effect/floor_decal/industrial/danger{
-	dir = 1
-	},
 /obj/structure/barricade/sandbag,
-/turf/simulated/floor/tiled,
-/area/maintenance/disposal)
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/trawler)
 "aLm" = (
 /obj/structure/fence/electric{
 	dir = 1
@@ -17037,24 +17121,21 @@
 /turf/simulated/floor/outdoors/ice/dark/turfpack/muriki,
 /area/engineering/engine_room)
 "aLn" = (
-/obj/machinery/atmospherics/unary/engine{
-	dir = 1
-	},
-/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
-	outdoors = 1
-	},
-/area/muriki/grounds/shutt)
+/obj/item/material/barbedwire/start_active,
+/turf/simulated/floor/glass,
+/area/security/brig/observation)
 "aLo" = (
 /obj/structure/prop/rock,
 /turf/simulated/floor/outdoors/shelfice/turfpack/muriki,
 /area/mine/explored/muriki/mountainnorth)
 "aLp" = (
-/obj/structure/bed/chair/bay/shuttle{
-	dir = 4
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
 	},
-/obj/effect/auto_roof,
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/muriki/grounds/shutt)
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/effect/decal/cleanable/blood/old,
+/turf/simulated/floor/tiled/techfloor,
+/area/shuttle/trawler)
 "aLq" = (
 /obj/structure/fence/electric_sign{
 	dir = 4
@@ -17068,16 +17149,15 @@
 /turf/simulated/floor/outdoors/ice/turfpack/muriki,
 /area/engineering/engine_room)
 "aLs" = (
-/obj/effect/auto_roof,
-/turf/simulated/floor/blackhole,
+/obj/effect/decal/cleanable/blood/old,
+/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
 /area/muriki/grounds/shutt)
 "aLt" = (
-/obj/structure/bed/chair/bay/shuttle{
-	dir = 8
+/obj/structure/barricade{
+	material = "steel"
 	},
-/obj/effect/auto_roof,
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/muriki/grounds/shutt)
+/turf/simulated/floor/tiled,
+/area/quartermaster/mining)
 "aLu" = (
 /obj/item/beartrap{
 	anchored = 1;
@@ -17094,17 +17174,13 @@
 /turf/simulated/floor/outdoors/shelfice/turfpack/muriki,
 /area/mine/explored/muriki/mountainnorth)
 "aLx" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 1
+/obj/machinery/porta_turret/alien/destroyed{
+	dir = 9
 	},
-/obj/effect/floor_decal/industrial/danger{
-	dir = 1
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
 	},
-/obj/structure/barricade{
-	material = "steel"
-	},
-/turf/simulated/floor/tiled,
-/area/muriki/tramstation/waste)
+/area/muriki/grounds/shutt)
 "aLy" = (
 /obj/structure/atmopost,
 /turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
@@ -17114,17 +17190,8 @@
 /turf/simulated/floor/outdoors/ice/dark/turfpack/muriki,
 /area/muriki/grounds/engi)
 "aLA" = (
-/obj/effect/floor_decal/borderfloor/corner{
-	dir = 1
-	},
-/obj/effect/floor_decal/industrial/danger/corner{
-	dir = 8
-	},
-/obj/structure/barricade{
-	material = "steel"
-	},
-/turf/simulated/floor/tiled,
-/area/muriki/tramstation/waste)
+/turf/simulated/wall/plastihull,
+/area/muriki/grounds/shutt)
 "aLB" = (
 /obj/structure/trailblazer/blue,
 /turf/simulated/floor/outdoors/ice/turfpack/muriki,
@@ -17140,30 +17207,30 @@
 	},
 /area/mine/unexplored/muriki/mountaineast)
 "aLE" = (
-/obj/effect/floor_decal/borderfloor/corner{
-	dir = 4
+/obj/machinery/porta_turret/alien/destroyed{
+	dir = 10
 	},
-/obj/effect/floor_decal/industrial/danger/corner{
-	dir = 4
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
 	},
-/obj/structure/barricade{
-	material = "steel"
-	},
-/turf/simulated/floor/tiled,
-/area/muriki/tramstation/waste)
+/area/muriki/grounds/shutt)
 "aLF" = (
 /obj/structure/trailblazer/yellow,
 /turf/simulated/floor/outdoors/ice/turfpack/muriki,
 /area/muriki/grounds/engi)
 "aLG" = (
-/obj/structure/railing,
-/obj/effect/decal/cleanable/blood/old,
-/turf/simulated/floor/plating,
-/area/muriki/tramstation/waste)
+/obj/structure/catwalk,
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
+	},
+/area/muriki/grounds/shutt)
 "aLH" = (
+/obj/structure/catwalk,
 /obj/effect/decal/cleanable/blood/old,
-/turf/simulated/floor/plating,
-/area/muriki/tramstation/waste)
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
+	},
+/area/muriki/grounds/shutt)
 "aLI" = (
 /obj/effect/landmark{
 	name = "carpspawn"
@@ -17171,32 +17238,41 @@
 /turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
 /area/mine/explored/muriki/mountainnorth)
 "aLJ" = (
-/obj/structure/barricade/sandbag,
-/turf/simulated/floor/plating,
-/area/muriki/tramstation/waste)
+/obj/machinery/porta_turret/alien/destroyed{
+	dir = 5
+	},
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
+	},
+/area/muriki/grounds/shutt)
 "aLK" = (
 /obj/structure/prop/rock/small/alt,
 /turf/simulated/floor/outdoors/ice/dark/turfpack/muriki,
 /area/mine/explored/muriki/mountainnorth)
 "aLL" = (
-/obj/item/material/barbedwire/start_active,
-/turf/simulated/floor/plating,
-/area/muriki/tramstation/waste)
-"aLM" = (
-/obj/item/beartrap{
-	anchored = 1;
-	deployed = 1
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /obj/structure/barricade{
 	material = "steel"
 	},
-/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
-/area/muriki/grounds/shutt)
+/turf/simulated/floor/tiled,
+/area/maintenance/disposal)
+"aLM" = (
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/brown/border,
+/obj/structure/barricade{
+	material = "steel"
+	},
+/turf/simulated/floor/tiled,
+/area/maintenance/disposal)
 "aLN" = (
-/obj/effect/auto_roof,
-/obj/machinery/porta_turret/alien/destroyed,
-/turf/simulated/floor,
-/area/muriki/grounds/shutt)
+/obj/structure/barricade{
+	material = "steel"
+	},
+/obj/item/material/barbedwire/start_active,
+/turf/simulated/floor/glass,
+/area/security/brig/observation)
 "aLO" = (
 /obj/structure/prop/rock/sharp,
 /turf/simulated/floor/outdoors/shelfice/turfpack/muriki,
@@ -17208,17 +17284,11 @@
 /turf/simulated/floor/tiled/techfloor/turfpack/muriki,
 /area/mine/explored/muriki/river/hole)
 "aLQ" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 9
+/obj/structure/hull_corner/long_vert{
+	dir = 6
 	},
-/obj/effect/floor_decal/industrial/danger{
-	dir = 9
-	},
-/obj/structure/barricade{
-	material = "steel"
-	},
-/turf/simulated/floor/tiled/steel_grid,
-/area/muriki/tramstation/waste)
+/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
+/area/muriki/grounds/shutt)
 "aLR" = (
 /obj/structure/prop/rock/flat,
 /turf/simulated/floor/outdoors/ice/turfpack/muriki,
@@ -17230,17 +17300,9 @@
 /turf/simulated/floor/outdoors/ice/turfpack/muriki,
 /area/mine/explored/muriki/mountainnorth)
 "aLT" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 5
-	},
-/obj/effect/floor_decal/industrial/danger{
-	dir = 5
-	},
-/obj/structure/barricade{
-	material = "steel"
-	},
-/turf/simulated/floor/tiled/steel_grid,
-/area/muriki/tramstation/waste)
+/obj/effect/auto_roof,
+/turf/simulated/wall/plastihull,
+/area/muriki/grounds/shutt)
 "aLU" = (
 /obj/structure/prop/rock/small,
 /turf/simulated/floor/outdoors/ice/turfpack/muriki,
@@ -17264,10 +17326,11 @@
 /turf/simulated/floor/outdoors/ice/turfpack/muriki,
 /area/mine/explored/muriki/mountainnorth)
 "aLZ" = (
-/obj/structure/barricade{
-	material = "steel"
+/obj/machinery/atmospherics/unary/engine{
+	dir = 1
 	},
-/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
+/obj/effect/auto_roof,
+/turf/simulated/floor,
 /area/muriki/grounds/shutt)
 "aMa" = (
 /obj/machinery/self_destruct,
@@ -17278,11 +17341,13 @@
 /turf/simulated/floor/outdoors/ice/turfpack/muriki,
 /area/muriki/grounds/terraform)
 "aMc" = (
-/obj/effect/zone_divider,
-/obj/structure/barricade{
-	material = "steel"
+/obj/machinery/door/airlock/angled_bay/external/red,
+/obj/structure/fans/hardlight/colorable/abductor,
+/obj/machinery/door/firedoor/glass,
+/obj/effect/auto_roof,
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
 	},
-/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
 /area/muriki/grounds/shutt)
 "aMd" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -17367,20 +17432,31 @@
 /turf/simulated/floor/outdoors/ice/turfpack/muriki,
 /area/muriki/grounds/terraform)
 "aMn" = (
-/obj/machinery/atmospherics/unary/engine,
+/obj/machinery/atmospherics/unary/engine{
+	dir = 1
+	},
+/obj/effect/auto_roof,
 /turf/simulated/floor/plating/snow/plating/turfpack/muriki{
 	outdoors = 1
 	},
 /area/muriki/grounds/shutt)
 "aMo" = (
-/obj/structure/bed/chair/bay/shuttle,
-/obj/effect/auto_roof,
-/turf/simulated/floor/tiled/techfloor/grid,
+/obj/structure/hull_corner/long_vert{
+	dir = 10
+	},
+/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
 /area/muriki/grounds/shutt)
 "aMp" = (
-/obj/effect/decal/cleanable/blood/old,
-/turf/simulated/floor/outdoors/snow/gravsnow/sidewalk_under/turfpack/muriki,
-/area/muriki/grounds/tramborder)
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/brown/border,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/barricade{
+	material = "steel"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/maintenance/disposal)
 "aMq" = (
 /obj/structure/flora/ausbushes/reedbush,
 /turf/simulated/floor/water/turfpack/muriki,
@@ -17409,22 +17485,18 @@
 /turf/simulated/flesh,
 /area/muriki/processor/gland/space)
 "aMv" = (
-/obj/effect/decal/cleanable/blood/old,
-/turf/simulated/floor/outdoors/ice/turfpack/muriki,
-/area/muriki/grounds/shutt)
+/obj/structure/barricade/sandbag,
+/turf/simulated/floor/glass,
+/area/security/brig/observation)
 "aMw" = (
-/obj/structure/window/reinforced/survival_pod,
-/obj/effect/auto_roof,
-/turf/simulated/floor/tiled/techfloor/grid,
+/obj/effect/decal/cleanable/blood/old,
+/turf/simulated/floor/outdoors/ice/dark/turfpack/muriki,
 /area/muriki/grounds/shutt)
 "aMx" = (
 /obj/structure/flora/mushroom,
 /turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
 /area/mine/explored/muriki/mountainnorth)
 "aMy" = (
-/obj/machinery/door/window/survival_pod{
-	dir = 2
-	},
 /obj/effect/auto_roof,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/muriki/grounds/shutt)
@@ -17434,18 +17506,33 @@
 /turf/simulated/floor/outdoors/ice/dark/turfpack/muriki,
 /area/muriki/grounds/terraform)
 "aMA" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
 /obj/structure/barricade{
 	material = "steel"
 	},
-/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
-/area/muriki/grounds/sec)
+/turf/simulated/floor/tiled,
+/area/maintenance/disposal)
 "aMB" = (
-/obj/structure/bed/chair/bay/chair/padded/purple{
-	dir = 1
+/obj/structure/cable/green{
+	icon_state = "4-8"
 	},
-/obj/effect/auto_roof,
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/muriki/grounds/shutt)
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/blood/old,
+/turf/simulated/floor/tiled,
+/area/maintenance/disposal)
 "aMC" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -17486,10 +17573,18 @@
 /turf/simulated/floor/wood,
 /area/crew_quarters/courtroom)
 "aMG" = (
-/obj/effect/auto_roof,
-/obj/effect/map_effect/event_explosions/start_explosion/small,
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/muriki/grounds/shutt)
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/barricade/sandbag,
+/turf/simulated/floor/tiled,
+/area/maintenance/disposal)
 "aMH" = (
 /obj/structure/closet/tent/B,
 /turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
@@ -17498,23 +17593,17 @@
 /turf/simulated/floor/outdoors/ice/dark/turfpack/muriki,
 /area/muriki/grounds/waste)
 "aMJ" = (
-/obj/item/beartrap{
-	anchored = 1;
-	deployed = 1
-	},
-/obj/structure/barricade{
-	material = "steel"
-	},
-/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
-/area/muriki/grounds/tramborder)
+/obj/structure/table/rack/gun_rack/steel,
+/obj/effect/auto_roof,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/muriki/grounds/shutt)
 "aMK" = (
-/obj/effect/floor_decal/corner/red{
-	dir = 10
-	},
-/obj/effect/step_trigger/dephase_shadekin,
-/obj/structure/girder/reinforced,
-/turf/simulated/floor/tiled,
-/area/hallway/security/armor)
+/obj/machinery/door/airlock/angled_bay/external/red,
+/obj/structure/fans/hardlight/colorable/abductor,
+/obj/machinery/door/firedoor/glass,
+/obj/effect/auto_roof,
+/turf/simulated/floor/reinforced,
+/area/muriki/grounds/shutt)
 "aML" = (
 /obj/structure/prop/rock,
 /turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
@@ -17524,19 +17613,10 @@
 /turf/simulated/floor/outdoors/shelfice/turfpack/muriki,
 /area/muriki/yard)
 "aMN" = (
-/obj/structure/window/reinforced/survival_pod{
-	dir = 4
-	},
-/obj/structure/window/reinforced/survival_pod{
-	dir = 1
-	},
-/obj/structure/grille/bay,
-/obj/structure/window/reinforced/survival_pod{
-	dir = 8
-	},
-/obj/structure/window/reinforced/survival_pod,
+/obj/structure/table/rack/gun_rack/steel,
 /obj/effect/auto_roof,
-/turf/simulated/floor,
+/obj/effect/map_effect/event_explosions/start_explosion/small,
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/muriki/grounds/shutt)
 "aMO" = (
 /obj/structure/prop/rock/ice,
@@ -17562,64 +17642,87 @@
 /turf/simulated/floor/plating,
 /area/medical/reception)
 "aMQ" = (
-/obj/item/modular_computer/console,
-/obj/effect/auto_roof,
-/obj/effect/map_effect/event_explosions/start_explosion/small,
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/muriki/grounds/shutt)
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/danger{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/blood/old,
+/turf/simulated/floor/tiled,
+/area/maintenance/disposal)
 "aMR" = (
-/obj/item/modular_computer/console,
-/obj/effect/auto_roof,
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/muriki/grounds/shutt)
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/danger{
+	dir = 1
+	},
+/obj/structure/barricade/sandbag,
+/turf/simulated/floor/tiled,
+/area/maintenance/disposal)
 "aMS" = (
-/obj/structure/barricade{
-	material = "steel"
-	},
-/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
-/area/muriki/grounds/tramborder)
-"aMT" = (
-/obj/effect/floor_decal/steeldecal/steel_decals10{
-	dir = 10
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals10{
-	dir = 9
-	},
-/obj/machinery/deployable/barrier,
-/turf/simulated/floor/tiled,
-/area/hallway/security/armor)
-"aMU" = (
-/obj/effect/floor_decal/steeldecal/steel_decals10{
-	dir = 9
-	},
-/obj/effect/floor_decal/steeldecal/steel_decals10{
-	dir = 10
-	},
-/obj/machinery/deployable/barrier,
-/turf/simulated/floor/tiled,
-/area/hallway/security/armor)
-"aMV" = (
-/obj/structure/hull_corner,
-/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
-/area/muriki/grounds/shutt)
-"aMW" = (
-/obj/structure/hull_corner{
-	dir = 8
-	},
-/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
-/area/muriki/grounds/shutt)
-"aMX" = (
-/obj/machinery/shipsensors{
+/obj/machinery/atmospherics/unary/engine{
 	dir = 1
 	},
 /turf/simulated/floor/plating/snow/plating/turfpack/muriki{
 	outdoors = 1
 	},
 /area/muriki/grounds/shutt)
+"aMT" = (
+/obj/structure/bed/chair/bay/shuttle{
+	dir = 4
+	},
+/obj/effect/auto_roof,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/muriki/grounds/shutt)
+"aMU" = (
+/obj/effect/auto_roof,
+/turf/simulated/floor/blackhole,
+/area/muriki/grounds/shutt)
+"aMV" = (
+/obj/structure/bed/chair/bay/shuttle{
+	dir = 8
+	},
+/obj/effect/auto_roof,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/muriki/grounds/shutt)
+"aMW" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/danger{
+	dir = 1
+	},
+/obj/structure/barricade{
+	material = "steel"
+	},
+/turf/simulated/floor/tiled,
+/area/muriki/tramstation/waste)
+"aMX" = (
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/danger/corner{
+	dir = 8
+	},
+/obj/structure/barricade{
+	material = "steel"
+	},
+/turf/simulated/floor/tiled,
+/area/muriki/tramstation/waste)
 "aMY" = (
-/obj/effect/decal/cleanable/blood/old,
-/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
-/area/muriki/yard)
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 4
+	},
+/obj/effect/floor_decal/industrial/danger/corner{
+	dir = 4
+	},
+/obj/structure/barricade{
+	material = "steel"
+	},
+/turf/simulated/floor/tiled,
+/area/muriki/tramstation/waste)
 "aMZ" = (
 /obj/structure/prop/rock/round,
 /turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
@@ -17629,19 +17732,14 @@
 /turf/simulated/floor/outdoors/shelfice/turfpack/muriki,
 /area/muriki/yard)
 "aNc" = (
-/obj/structure/trailblazer/yellow,
-/obj/structure/barricade{
-	material = "steel"
-	},
-/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
-/area/muriki/grounds/tramborder)
-"aNd" = (
-/obj/structure/fence/cut/large{
-	dir = 4
-	},
+/obj/structure/railing,
 /obj/effect/decal/cleanable/blood/old,
-/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
-/area/muriki/grounds/shutt)
+/turf/simulated/floor/plating,
+/area/muriki/tramstation/waste)
+"aNd" = (
+/obj/effect/decal/cleanable/blood/old,
+/turf/simulated/floor/plating,
+/area/muriki/tramstation/waste)
 "aNe" = (
 /obj/structure/prop/rock/ice,
 /turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
@@ -17669,22 +17767,13 @@
 	},
 /area/specialty/stowaway_clubhouse)
 "aNj" = (
-/obj/structure/fence/cut/large{
-	dir = 4
-	},
-/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
-/area/muriki/grounds/shutt)
+/obj/structure/barricade/sandbag,
+/turf/simulated/floor/plating,
+/area/muriki/tramstation/waste)
 "aNk" = (
-/obj/structure/cable/orange{
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/barricade{
-	material = "steel"
-	},
-/turf/simulated/floor/tiled,
-/area/hallway/security/armor)
+/obj/item/material/barbedwire/start_active,
+/turf/simulated/floor/plating,
+/area/muriki/tramstation/waste)
 "aNl" = (
 /obj/structure/flora/mushroom,
 /turf/simulated/floor/wood/turfpack/muriki,
@@ -17700,9 +17789,15 @@
 /turf/simulated/floor/plating,
 /area/maintenance/wastedisposal)
 "aNo" = (
-/obj/effect/decal/cleanable/blood/old,
+/obj/item/beartrap{
+	anchored = 1;
+	deployed = 1
+	},
+/obj/structure/barricade{
+	material = "steel"
+	},
 /turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
-/area/muriki/grounds/civ)
+/area/muriki/grounds/shutt)
 "aNp" = (
 /obj/structure/sign/warning/high_voltage{
 	pixel_x = -32
@@ -17711,25 +17806,34 @@
 /turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
 /area/muriki/grounds/tramborder)
 "aNq" = (
-/obj/effect/decal/cleanable/blood/old,
-/turf/simulated/floor/outdoors/ice/dark/turfpack/muriki,
-/area/muriki/yard)
+/obj/effect/auto_roof,
+/obj/machinery/porta_turret/alien/destroyed,
+/turf/simulated/floor,
+/area/muriki/grounds/shutt)
 "aNr" = (
-/obj/machinery/conveyor{
-	dir = 4;
-	id = "QMLoad"
+/obj/effect/floor_decal/borderfloor{
+	dir = 9
 	},
-/obj/structure/closet/crate,
-/turf/simulated/floor/tiled,
-/area/quartermaster/storage)
+/obj/effect/floor_decal/industrial/danger{
+	dir = 9
+	},
+/obj/structure/barricade{
+	material = "steel"
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/muriki/tramstation/waste)
 "aNs" = (
-/obj/machinery/porta_turret/alien/destroyed{
-	dir = 8
+/obj/effect/floor_decal/borderfloor{
+	dir = 5
 	},
-/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
-	outdoors = 1
+/obj/effect/floor_decal/industrial/danger{
+	dir = 5
 	},
-/area/muriki/yard)
+/obj/structure/barricade{
+	material = "steel"
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/muriki/tramstation/waste)
 "aNt" = (
 /obj/structure/prop/rock/ice,
 /turf/simulated/floor/outdoors/ice/dark/turfpack/muriki,
@@ -17743,10 +17847,8 @@
 /obj/structure/barricade{
 	material = "steel"
 	},
-/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
-	outdoors = 1
-	},
-/area/muriki/grounds/tramborder)
+/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
+/area/muriki/grounds/shutt)
 "aNw" = (
 /obj/effect/floor_decal/corner_kafel/white/diagonal,
 /obj/structure/cable/green{
@@ -17764,15 +17866,12 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/kitchen)
 "aNx" = (
-/obj/effect/floor_decal/corner/red{
-	dir = 10
+/obj/effect/zone_divider,
+/obj/structure/barricade{
+	material = "steel"
 	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/item/material/barbedwire/start_active,
-/turf/simulated/floor/tiled,
-/area/hallway/security/main)
+/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
+/area/muriki/grounds/shutt)
 "aNy" = (
 /obj/structure/prop/rock/round,
 /turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
@@ -17792,12 +17891,11 @@
 /turf/simulated/floor/plating/external/turfpack/muriki,
 /area/mine/unexplored/muriki/mountaineast)
 "aNC" = (
-/obj/effect/floor_decal/corner/red{
-	dir = 10
+/obj/machinery/atmospherics/unary/engine,
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
 	},
-/obj/structure/girder/reinforced,
-/turf/simulated/floor/tiled,
-/area/hallway/security/main)
+/area/muriki/grounds/shutt)
 "aND" = (
 /obj/structure/prop/rock/round,
 /turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
@@ -17807,9 +17905,10 @@
 /turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
 /area/muriki/grounds/tramborder)
 "aNF" = (
-/obj/effect/decal/cleanable/blood/old,
-/turf/simulated/floor/outdoors/ice/dark/turfpack/muriki,
-/area/muriki/grounds/civ)
+/obj/structure/bed/chair/bay/shuttle,
+/obj/effect/auto_roof,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/muriki/grounds/shutt)
 "aNG" = (
 /obj/machinery/door/firedoor/glass/hidden{
 	dir = 8
@@ -17817,8 +17916,9 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/bridge/hallway)
 "aNH" = (
-/turf/simulated/floor/outdoors/snow/gravsnow/turfpack/muriki,
-/area/muriki/grounds/civ)
+/obj/effect/decal/cleanable/blood/old,
+/turf/simulated/floor/outdoors/snow/gravsnow/sidewalk_under/turfpack/muriki,
+/area/muriki/grounds/tramborder)
 "aNI" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/beige/border,
@@ -17835,8 +17935,9 @@
 /turf/simulated/floor/tiled,
 /area/quartermaster/foyer)
 "aNJ" = (
-/turf/simulated/wall/plastihull,
-/area/muriki/yard)
+/obj/effect/decal/cleanable/blood/old,
+/turf/simulated/floor/outdoors/ice/turfpack/muriki,
+/area/muriki/grounds/shutt)
 "aNK" = (
 /obj/structure/flora/mushroom,
 /turf/simulated/floor/tiled/milspec/raised/turfpack/muriki,
@@ -17865,11 +17966,10 @@
 /turf/simulated/floor/outdoors/ice/dark/turfpack/muriki,
 /area/muriki/yard)
 "aNP" = (
-/obj/structure/hull_corner/long_horiz{
-	dir = 9
-	},
-/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
-/area/muriki/yard)
+/obj/structure/window/reinforced/survival_pod,
+/obj/effect/auto_roof,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/muriki/grounds/shutt)
 "aNQ" = (
 /obj/structure/flora/mushroom,
 /turf/simulated/mineral/floor/turfpack/muriki{
@@ -17877,17 +17977,18 @@
 	},
 /area/mine/explored/muriki/river/hole)
 "aNR" = (
-/obj/machinery/atmospherics/unary/engine{
-	dir = 4
+/obj/machinery/door/window/survival_pod{
+	dir = 2
 	},
-/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
-	outdoors = 1
-	},
-/area/muriki/yard)
-"aNS" = (
 /obj/effect/auto_roof,
-/turf/simulated/wall/plastihull,
-/area/muriki/yard)
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/muriki/grounds/shutt)
+"aNS" = (
+/obj/structure/barricade{
+	material = "steel"
+	},
+/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
+/area/muriki/grounds/sec)
 "aNT" = (
 /obj/structure/prop/rock/round,
 /turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
@@ -17897,13 +17998,12 @@
 /turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
 /area/muriki/grounds/civ)
 "aNV" = (
-/obj/machinery/atmospherics/unary/engine{
-	dir = 8
+/obj/structure/bed/chair/bay/chair/padded/purple{
+	dir = 1
 	},
-/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
-	outdoors = 1
-	},
-/area/muriki/yard)
+/obj/effect/auto_roof,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/muriki/grounds/shutt)
 "aNW" = (
 /obj/random/landmine,
 /turf/simulated/floor/outdoors/ice/dark/turfpack/muriki,
@@ -17913,41 +18013,53 @@
 /turf/simulated/floor/outdoors/ice/dark/turfpack/muriki,
 /area/muriki/grounds/civ)
 "aNY" = (
-/obj/effect/decal/cleanable/blood/old,
-/turf/simulated/floor/outdoors/snow/gravsnow/turfpack/muriki,
-/area/muriki/grounds/civ)
+/obj/effect/auto_roof,
+/obj/effect/map_effect/event_explosions/start_explosion/small,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/muriki/grounds/shutt)
 "aNZ" = (
-/obj/machinery/porta_turret/alien/destroyed{
-	dir = 9
+/obj/item/beartrap{
+	anchored = 1;
+	deployed = 1
 	},
-/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
-	outdoors = 1
+/obj/structure/barricade{
+	material = "steel"
 	},
-/area/muriki/yard)
-"aOa" = (
-/obj/effect/mine/frag,
-/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
-/area/muriki/yard)
-"aOb" = (
-/obj/effect/decal/cleanable/blood/old,
 /turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
 /area/muriki/grounds/tramborder)
+"aOa" = (
+/obj/effect/floor_decal/corner/red{
+	dir = 10
+	},
+/obj/effect/step_trigger/dephase_shadekin,
+/obj/structure/girder/reinforced,
+/turf/simulated/floor/tiled,
+/area/hallway/security/armor)
+"aOb" = (
+/obj/structure/window/reinforced/survival_pod{
+	dir = 4
+	},
+/obj/structure/window/reinforced/survival_pod{
+	dir = 1
+	},
+/obj/structure/grille/bay,
+/obj/structure/window/reinforced/survival_pod{
+	dir = 8
+	},
+/obj/structure/window/reinforced/survival_pod,
+/obj/effect/auto_roof,
+/turf/simulated/floor,
+/area/muriki/grounds/shutt)
 "aOc" = (
 /obj/structure/prop/rock/ice,
 /turf/simulated/floor/outdoors/ice/dark/turfpack/muriki,
 /area/muriki/yard)
 "aOd" = (
-/obj/effect/floor_decal/corner/red{
-	dir = 5
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/structure/barricade{
-	material = "steel"
-	},
-/turf/simulated/floor/tiled,
-/area/hallway/security/main)
+/obj/item/modular_computer/console,
+/obj/effect/auto_roof,
+/obj/effect/map_effect/event_explosions/start_explosion/small,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/muriki/grounds/shutt)
 "aOe" = (
 /obj/structure/prop/rock/ice,
 /turf/simulated/floor/outdoors/ice/dark/turfpack/muriki,
@@ -17967,43 +18079,48 @@
 	},
 /area/maintenance/wastedisposal)
 "aOh" = (
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/obj/effect/decal/cleanable/blood/old,
-/turf/simulated/floor/tiled/old_tile/white,
-/area/security/security_aid_station)
+/obj/item/modular_computer/console,
+/obj/effect/auto_roof,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/muriki/grounds/shutt)
 "aOi" = (
-/obj/item/beartrap{
-	anchored = 1;
-	deployed = 1
-	},
 /obj/structure/barricade{
 	material = "steel"
 	},
-/turf/simulated/floor/outdoors/ice/dark/turfpack/muriki,
-/area/muriki/grounds/civ)
+/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
+/area/muriki/grounds/tramborder)
 "aOj" = (
-/obj/effect/decal/cleanable/blood/old,
-/turf/simulated/floor/outdoors/ice/turfpack/muriki,
-/area/muriki/grounds/civ)
+/obj/effect/floor_decal/steeldecal/steel_decals10{
+	dir = 10
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals10{
+	dir = 9
+	},
+/obj/machinery/deployable/barrier,
+/turf/simulated/floor/tiled,
+/area/hallway/security/armor)
 "aOk" = (
 /obj/structure/prop/rock,
 /turf/simulated/floor/outdoors/ice/dark/turfpack/muriki,
 /area/muriki/grounds/waste)
 "aOl" = (
-/obj/effect/decal/cleanable/blood/old,
-/turf/simulated/floor/outdoors/snow/gravsnow/sidewalk_under/turfpack/muriki,
-/area/muriki/yard)
+/obj/effect/floor_decal/steeldecal/steel_decals10{
+	dir = 9
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals10{
+	dir = 10
+	},
+/obj/machinery/deployable/barrier,
+/turf/simulated/floor/tiled,
+/area/hallway/security/armor)
 "aOn" = (
 /obj/structure/prop/rock/flat,
 /turf/simulated/floor/outdoors/ice/dark/turfpack/muriki,
 /area/muriki/grounds/waste)
 "aOo" = (
-/obj/structure/table/rack/gun_rack/steel,
-/obj/effect/auto_roof,
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/muriki/yard)
+/obj/structure/hull_corner,
+/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
+/area/muriki/grounds/shutt)
 "aOp" = (
 /obj/structure/prop/rock/sharp,
 /turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
@@ -18021,45 +18138,37 @@
 /turf/simulated/floor/outdoors/ice/dark/turfpack/muriki,
 /area/muriki/grounds/tramborder)
 "aOt" = (
-/obj/structure/bed/chair/bay/shuttle{
+/obj/structure/hull_corner{
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
+/area/muriki/grounds/shutt)
+"aOu" = (
+/obj/machinery/shipsensors{
 	dir = 1
 	},
-/obj/effect/auto_roof,
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/muriki/yard)
-"aOu" = (
-/obj/structure/window/reinforced/survival_pod{
-	dir = 4
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
 	},
-/obj/structure/grille/bay,
-/obj/structure/window/reinforced/survival_pod,
-/obj/effect/auto_roof,
-/turf/simulated/floor,
-/area/muriki/yard)
+/area/muriki/grounds/shutt)
 "aOv" = (
+/obj/effect/decal/cleanable/blood/old,
+/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
+/area/muriki/yard)
+"aOw" = (
+/obj/structure/trailblazer/yellow,
 /obj/structure/barricade{
 	material = "steel"
 	},
-/turf/simulated/floor/outdoors/snow/gravsnow/sidewalk_under/turfpack/muriki,
+/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
 /area/muriki/grounds/tramborder)
-"aOw" = (
-/obj/effect/floor_decal/corner/red{
-	dir = 10
-	},
-/obj/structure/disposalpipe/segment{
+"aOx" = (
+/obj/structure/fence/cut/large{
 	dir = 4
 	},
-/obj/structure/barricade{
-	material = "steel"
-	},
-/turf/simulated/floor/tiled,
-/area/hallway/security/main)
-"aOx" = (
-/obj/structure/barricade{
-	material = "steel"
-	},
-/turf/simulated/floor/outdoors/ice/dark/turfpack/muriki,
-/area/muriki/grounds/civ)
+/obj/effect/decal/cleanable/blood/old,
+/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
+/area/muriki/grounds/shutt)
 "aOy" = (
 /obj/random/landmine,
 /obj/structure/fence/cut/large{
@@ -18068,72 +18177,75 @@
 /turf/simulated/floor/outdoors/ice/dark/turfpack/muriki,
 /area/muriki/grounds/tramlinewest)
 "aOz" = (
-/obj/structure/catwalk,
+/obj/structure/fence/cut/large{
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
+/area/muriki/grounds/shutt)
+"aOA" = (
+/obj/structure/cable/orange{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/barricade{
+	material = "steel"
+	},
+/turf/simulated/floor/tiled,
+/area/hallway/security/armor)
+"aOB" = (
 /obj/effect/decal/cleanable/blood/old,
+/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
+/area/muriki/grounds/civ)
+"aOC" = (
+/obj/effect/decal/cleanable/blood/old,
+/turf/simulated/floor/outdoors/ice/dark/turfpack/muriki,
+/area/muriki/yard)
+"aOD" = (
+/obj/machinery/conveyor{
+	dir = 4;
+	id = "QMLoad"
+	},
+/obj/structure/closet/crate,
+/turf/simulated/floor/tiled,
+/area/quartermaster/storage)
+"aOE" = (
+/obj/machinery/porta_turret/alien/destroyed{
+	dir = 8
+	},
 /turf/simulated/floor/plating/snow/plating/turfpack/muriki{
 	outdoors = 1
 	},
 /area/muriki/yard)
-"aOA" = (
-/obj/effect/decal/cleanable/blood/old,
-/obj/effect/auto_roof,
-/turf/simulated/floor/blackhole,
-/area/muriki/yard)
-"aOB" = (
-/obj/effect/auto_roof,
-/turf/simulated/floor/blackhole,
-/area/muriki/yard)
-"aOC" = (
-/obj/structure/bed/chair/bay/shuttle{
-	dir = 8
-	},
-/obj/effect/auto_roof,
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/muriki/yard)
-"aOD" = (
-/obj/item/modular_computer/console{
-	dir = 4
-	},
-/obj/structure/window/reinforced/survival_pod{
-	dir = 8
-	},
-/obj/effect/auto_roof,
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/muriki/yard)
-"aOE" = (
-/obj/structure/bed/chair/bay/chair/padded/purple{
-	dir = 4
-	},
-/obj/effect/auto_roof,
-/turf/simulated/floor/blackhole/grate,
-/area/muriki/yard)
 "aOF" = (
-/obj/item/modular_computer/console{
-	dir = 8
+/obj/structure/barricade{
+	material = "steel"
 	},
-/obj/effect/auto_roof,
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/muriki/yard)
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
+	},
+/area/muriki/grounds/tramborder)
 "aOG" = (
 /obj/structure/prop/rock/flat,
 /turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
 /area/muriki/grounds/tramborder)
 "aOH" = (
-/obj/structure/hull_corner{
-	dir = 1
+/obj/effect/floor_decal/corner/red{
+	dir = 10
 	},
-/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
-/area/muriki/yard)
-"aOI" = (
-/obj/structure/disposalpipe/segment,
-/obj/structure/cable/green{
-	icon_state = "1-2"
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/item/storage/firstaid/regular,
+/obj/item/material/barbedwire/start_active,
 /turf/simulated/floor/tiled,
-/area/quartermaster/storage)
+/area/hallway/security/main)
+"aOI" = (
+/obj/effect/floor_decal/corner/red{
+	dir = 10
+	},
+/obj/structure/girder/reinforced,
+/turf/simulated/floor/tiled,
+/area/hallway/security/main)
 "aOJ" = (
 /obj/effect/zone_divider,
 /obj/structure/prop/rock/round,
@@ -18154,23 +18266,11 @@
 /turf/simulated/floor/outdoors/ice/dark/turfpack/muriki,
 /area/muriki/grounds/tramborder)
 "aON" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/obj/machinery/deployable/barrier,
-/turf/simulated/floor/tiled,
-/area/hallway/security/main)
+/obj/effect/decal/cleanable/blood/old,
+/turf/simulated/floor/outdoors/ice/dark/turfpack/muriki,
+/area/muriki/grounds/civ)
 "aOO" = (
-/obj/structure/barricade{
-	material = "steel"
-	},
-/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
+/turf/simulated/floor/outdoors/snow/gravsnow/turfpack/muriki,
 /area/muriki/grounds/civ)
 "aOP" = (
 /obj/structure/cable/green{
@@ -18195,9 +18295,8 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay)
 "aOQ" = (
-/obj/item/material/barbedwire/start_active,
-/turf/simulated/floor/outdoors/ice/dark/turfpack/muriki,
-/area/muriki/grounds/civ)
+/turf/simulated/wall/plastihull,
+/area/muriki/yard)
 "aOR" = (
 /obj/structure/prop/rock/flat,
 /turf/simulated/floor/outdoors/ice/dark/turfpack/muriki,
@@ -18211,16 +18310,10 @@
 /turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
 /area/muriki/grounds/terraform)
 "aOU" = (
-/obj/machinery/door/airlock/angled_bay/external/red{
-	dir = 4
+/obj/structure/hull_corner/long_horiz{
+	dir = 9
 	},
-/obj/structure/fans/hardlight/colorable/abductor,
-/obj/machinery/door/firedoor/glass,
-/obj/effect/decal/cleanable/blood/old,
-/obj/effect/auto_roof,
-/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
-	outdoors = 1
-	},
+/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
 /area/muriki/yard)
 "aOV" = (
 /obj/effect/zone_divider,
@@ -18231,24 +18324,20 @@
 /turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
 /area/muriki/grounds/engi)
 "aOX" = (
-/obj/effect/map_effect/event_explosions/start_explosion/small,
-/obj/effect/decal/cleanable/blood/old,
-/obj/effect/auto_roof,
-/turf/simulated/floor/tiled/techfloor/grid,
+/obj/machinery/atmospherics/unary/engine{
+	dir = 4
+	},
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
+	},
 /area/muriki/yard)
 "aOY" = (
 /obj/structure/prop/rock/round,
 /turf/simulated/floor/outdoors/ice/dark/turfpack/muriki,
 /area/muriki/grounds/engi)
 "aOZ" = (
-/obj/machinery/door/airlock/angled_bay/external/red{
-	dir = 4
-	},
-/obj/structure/fans/hardlight/colorable/abductor,
-/obj/machinery/door/firedoor/glass,
-/obj/effect/decal/cleanable/blood/old,
 /obj/effect/auto_roof,
-/turf/simulated/floor/reinforced,
+/turf/simulated/wall/plastihull,
 /area/muriki/yard)
 "aPa" = (
 /obj/structure/prop/rock/round,
@@ -18266,109 +18355,89 @@
 /turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
 /area/muriki/grounds/terraform)
 "aPe" = (
-/obj/machinery/porta_turret/alien/destroyed{
+/obj/machinery/atmospherics/unary/engine{
 	dir = 8
-	},
-/obj/effect/auto_roof,
-/turf/simulated/floor,
-/area/muriki/yard)
-"aPf" = (
-/obj/effect/auto_roof,
-/turf/simulated/floor/blackhole/grate,
-/area/muriki/yard)
-"aPg" = (
-/obj/machinery/door/window/survival_pod{
-	dir = 8
-	},
-/obj/effect/decal/cleanable/blood/old,
-/obj/effect/auto_roof,
-/turf/simulated/floor/blackhole/grate,
-/area/muriki/yard)
-"aPh" = (
-/obj/effect/map_effect/event_explosions/start_explosion/medium,
-/obj/effect/decal/cleanable/blood/old,
-/obj/effect/auto_roof,
-/turf/simulated/floor/blackhole/spirals,
-/area/muriki/yard)
-"aPi" = (
-/obj/item/modular_computer/console{
-	dir = 8
-	},
-/obj/effect/auto_roof,
-/turf/simulated/floor/blackhole/grate,
-/area/muriki/yard)
-"aPj" = (
-/obj/machinery/porta_turret/alien/destroyed{
-	dir = 5
 	},
 /turf/simulated/floor/plating/snow/plating/turfpack/muriki{
 	outdoors = 1
 	},
 /area/muriki/yard)
+"aPf" = (
+/obj/effect/decal/cleanable/blood/old,
+/turf/simulated/floor/outdoors/snow/gravsnow/turfpack/muriki,
+/area/muriki/grounds/civ)
+"aPg" = (
+/obj/machinery/porta_turret/alien/destroyed{
+	dir = 9
+	},
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
+	},
+/area/muriki/yard)
+"aPh" = (
+/obj/effect/mine/frag,
+/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
+/area/muriki/yard)
+"aPi" = (
+/obj/effect/decal/cleanable/blood/old,
+/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
+/area/muriki/grounds/tramborder)
+"aPj" = (
+/obj/effect/floor_decal/corner/red{
+	dir = 5
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/barricade{
+	material = "steel"
+	},
+/turf/simulated/floor/tiled,
+/area/hallway/security/main)
 "aPk" = (
 /obj/structure/prop/rock,
 /turf/simulated/floor/outdoors/ice/dark/turfpack/muriki,
 /area/muriki/grounds/terraform)
 "aPl" = (
-/obj/effect/floor_decal/industrial/outline/yellow,
-/obj/random/material,
-/obj/random/material,
-/obj/random/material,
-/obj/random/material,
-/obj/random/material,
-/obj/random/material,
-/obj/random/material,
-/obj/random/material,
-/obj/random/material,
-/obj/random/material,
-/obj/random/material,
-/obj/random/material,
-/obj/random/material,
-/obj/structure/closet/crate/miningcar,
-/turf/simulated/floor/tiled{
-	icon_state = "monotile"
+/obj/structure/cable/green{
+	icon_state = "4-8"
 	},
-/area/quartermaster/storage)
+/obj/effect/decal/cleanable/blood/old,
+/turf/simulated/floor/tiled/old_tile/white,
+/area/security/security_aid_station)
 "aPm" = (
-/obj/machinery/scale,
-/turf/simulated/floor/carpet/graycarpet,
-/area/crew_quarters/fitness)
+/obj/item/beartrap{
+	anchored = 1;
+	deployed = 1
+	},
+/obj/structure/barricade{
+	material = "steel"
+	},
+/turf/simulated/floor/outdoors/ice/dark/turfpack/muriki,
+/area/muriki/grounds/civ)
 "aPn" = (
-/obj/structure/bed/chair/bay/shuttle{
-	dir = 8
-	},
 /obj/effect/decal/cleanable/blood/old,
-/obj/effect/auto_roof,
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/muriki/yard)
+/turf/simulated/floor/outdoors/ice/turfpack/muriki,
+/area/muriki/grounds/civ)
 "aPo" = (
-/obj/item/modular_computer/console{
-	dir = 4
-	},
-/obj/structure/window/reinforced/survival_pod{
-	dir = 8
-	},
 /obj/effect/decal/cleanable/blood/old,
-/obj/effect/auto_roof,
-/turf/simulated/floor/tiled/techfloor/grid,
+/turf/simulated/floor/outdoors/snow/gravsnow/sidewalk_under/turfpack/muriki,
 /area/muriki/yard)
 "aPp" = (
 /obj/structure/prop/rock/round,
 /turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
 /area/muriki/grounds/med)
 "aPq" = (
-/obj/structure/bed/chair/bay/chair/padded/purple{
-	dir = 4
-	},
-/obj/effect/decal/cleanable/blood/old,
+/obj/structure/table/rack/gun_rack/steel,
 /obj/effect/auto_roof,
-/turf/simulated/floor/blackhole/grate,
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/muriki/yard)
 "aPr" = (
-/obj/structure/hull_corner{
-	dir = 8
+/obj/structure/bed/chair/bay/shuttle{
+	dir = 1
 	},
-/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
+/obj/effect/auto_roof,
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/muriki/yard)
 "aPs" = (
 /obj/structure/prop/rock/ice,
@@ -18401,58 +18470,45 @@
 /turf/simulated/floor/tiled/dark,
 /area/bridge/hallway)
 "aPx" = (
-/obj/effect/floor_decal/industrial/outline/yellow,
-/obj/random/material/precious,
-/obj/random/material/precious,
-/obj/random/material/precious,
-/obj/random/material/precious,
-/obj/random/material/precious,
-/obj/random/material/precious,
-/obj/random/material/precious,
-/obj/random/material/precious,
-/obj/random/material/precious,
-/obj/random/material/precious,
-/obj/random/material/precious,
-/obj/random/material/precious,
-/obj/random/material/precious,
-/obj/random/material/precious,
-/obj/random/material/precious,
-/obj/structure/closet/crate/miningcar,
-/turf/simulated/floor/tiled{
-	icon_state = "monotile"
+/obj/structure/window/reinforced/survival_pod{
+	dir = 4
 	},
-/area/quartermaster/storage)
+/obj/structure/grille/bay,
+/obj/structure/window/reinforced/survival_pod,
+/obj/effect/auto_roof,
+/turf/simulated/floor,
+/area/muriki/yard)
 "aPy" = (
-/obj/structure/bed/chair/bay/shuttle,
-/obj/effect/auto_roof,
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/muriki/yard)
+/obj/structure/barricade{
+	material = "steel"
+	},
+/turf/simulated/floor/outdoors/snow/gravsnow/sidewalk_under/turfpack/muriki,
+/area/muriki/grounds/tramborder)
 "aPz" = (
-/obj/structure/bed/chair/bay/shuttle,
-/obj/effect/decal/cleanable/blood/old,
-/obj/effect/auto_roof,
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/muriki/yard)
+/obj/effect/floor_decal/corner/red{
+	dir = 10
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/barricade{
+	material = "steel"
+	},
+/turf/simulated/floor/tiled,
+/area/hallway/security/main)
 "aPA" = (
 /mob/living/simple_mob/animal/passive/snake,
 /turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
 /area/muriki/grounds/engi)
 "aPB" = (
-/obj/structure/window/reinforced/survival_pod{
-	dir = 4
+/obj/structure/barricade{
+	material = "steel"
 	},
-/obj/structure/window/reinforced/survival_pod{
-	dir = 1
-	},
-/obj/structure/grille/bay,
-/obj/structure/window/reinforced/survival_pod{
-	dir = 8
-	},
-/obj/effect/auto_roof,
-/turf/simulated/floor,
-/area/muriki/yard)
+/turf/simulated/floor/outdoors/ice/dark/turfpack/muriki,
+/area/muriki/grounds/civ)
 "aPC" = (
-/obj/effect/map_effect/event_explosions/start_explosion/small,
+/obj/structure/catwalk,
+/obj/effect/decal/cleanable/blood/old,
 /turf/simulated/floor/plating/snow/plating/turfpack/muriki{
 	outdoors = 1
 	},
@@ -18478,53 +18534,29 @@
 	},
 /area/mine/unexplored/muriki/mountaineast)
 "aPG" = (
-/obj/effect/floor_decal/industrial/outline/yellow,
-/obj/random/material/precious,
-/obj/random/material/precious,
-/obj/random/material/precious,
-/obj/random/material/precious,
-/obj/random/material/precious,
-/obj/random/material/precious,
-/obj/random/material/precious,
-/obj/random/material/precious,
-/obj/random/material/precious,
-/obj/random/material/precious,
-/obj/random/material/precious,
-/obj/random/material/precious,
-/obj/random/material/precious,
-/obj/structure/closet/crate/miningcar,
-/turf/simulated/floor/tiled{
-	icon_state = "monotile"
-	},
-/area/quartermaster/storage)
+/obj/effect/decal/cleanable/blood/old,
+/obj/effect/auto_roof,
+/turf/simulated/floor/blackhole,
+/area/muriki/yard)
 "aPH" = (
 /obj/structure/prop/rock,
 /turf/simulated/floor/outdoors/ice/turfpack/muriki,
 /area/muriki/grounds/med)
 "aPI" = (
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/effect/decal/cleanable/blood/old,
-/turf/simulated/floor/tiled,
-/area/hallway/security/main)
+/obj/effect/auto_roof,
+/turf/simulated/floor/blackhole,
+/area/muriki/yard)
 "aPJ" = (
 /obj/structure/prop/rock/round,
 /turf/simulated/floor/outdoors/ice/dark/turfpack/muriki,
 /area/muriki/grounds/terraform)
 "aPK" = (
-/obj/effect/mine/frag,
-/turf/simulated/floor/outdoors/snow/gravsnow/turfpack/muriki,
-/area/muriki/grounds/civ)
+/obj/structure/bed/chair/bay/shuttle{
+	dir = 8
+	},
+/obj/effect/auto_roof,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/muriki/yard)
 "aPL" = (
 /obj/structure/prop/rock/round,
 /turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
@@ -18534,18 +18566,21 @@
 /turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
 /area/muriki/grounds/sci)
 "aPN" = (
-/obj/machinery/porta_turret/alien/destroyed{
-	dir = 10
+/obj/item/modular_computer/console{
+	dir = 4
 	},
-/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
-	outdoors = 1
+/obj/structure/window/reinforced/survival_pod{
+	dir = 8
 	},
+/obj/effect/auto_roof,
+/turf/simulated/floor/tiled/techfloor/grid,
 /area/muriki/yard)
 "aPO" = (
-/obj/structure/hull_corner/long_horiz{
-	dir = 10
+/obj/structure/bed/chair/bay/chair/padded/purple{
+	dir = 4
 	},
-/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
+/obj/effect/auto_roof,
+/turf/simulated/floor/blackhole/grate,
 /area/muriki/yard)
 "aPP" = (
 /obj/structure/prop/rock/round,
@@ -18556,12 +18591,12 @@
 /turf/simulated/floor/outdoors/ice/dark/turfpack/muriki,
 /area/mine/explored/muriki/mountaineast)
 "aPR" = (
-/obj/effect/floor_decal/industrial/outline/yellow,
-/obj/structure/barricade/sandbag,
-/turf/simulated/floor/tiled{
-	icon_state = "monotile"
+/obj/item/modular_computer/console{
+	dir = 8
 	},
-/area/quartermaster/storage)
+/obj/effect/auto_roof,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/muriki/yard)
 "aPS" = (
 /obj/structure/prop/rock/round,
 /turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
@@ -18571,41 +18606,46 @@
 /turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
 /area/mine/explored/muriki/mountainnorth)
 "aPU" = (
-/obj/effect/floor_decal/industrial/outline/yellow,
-/obj/structure/cable/green{
-	icon_state = "4-8"
+/obj/structure/hull_corner{
+	dir = 1
 	},
-/obj/structure/reagent_dispensers/lube_tank,
-/turf/simulated/floor/tiled{
-	icon_state = "monotile"
-	},
-/area/quartermaster/storage)
-"aPV" = (
-/obj/machinery/porta_turret/alien/destroyed{
-	pixel_y = 1;
-	dir = 5
-	},
-/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
-	outdoors = 1
-	},
+/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
 /area/muriki/yard)
+"aPV" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/item/storage/firstaid/regular,
+/turf/simulated/floor/tiled,
+/area/quartermaster/storage)
 "aPW" = (
 /obj/structure/prop/rock/round,
 /turf/simulated/floor/outdoors/ice/dark/turfpack/muriki,
 /area/mine/explored/muriki/mountainnorth)
 "aPX" = (
-/obj/item/beartrap{
-	anchored = 1;
-	deployed = 1
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
 	},
-/turf/simulated/floor/outdoors/snow/gravsnow/turfpack/muriki,
-/area/muriki/grounds/civ)
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/deployable/barrier,
+/turf/simulated/floor/tiled,
+/area/hallway/security/main)
 "aPY" = (
 /obj/random/landmine,
 /turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
 /area/muriki/grounds/sci)
 "aPZ" = (
-/obj/item/material/barbedwire/start_active,
+/obj/structure/barricade{
+	material = "steel"
+	},
 /turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
 /area/muriki/grounds/civ)
 "aQa" = (
@@ -18626,7 +18666,7 @@
 /area/hallway/security/main)
 "aQc" = (
 /obj/item/material/barbedwire/start_active,
-/turf/simulated/floor/outdoors/snow/gravsnow/turfpack/muriki,
+/turf/simulated/floor/outdoors/ice/dark/turfpack/muriki,
 /area/muriki/grounds/civ)
 "aQd" = (
 /obj/structure/curtain/open/shower/medical,
@@ -18644,9 +18684,17 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/medical)
 "aQe" = (
-/obj/structure/barricade/sandbag,
-/turf/simulated/floor/outdoors/snow/gravsnow/turfpack/muriki,
-/area/muriki/grounds/civ)
+/obj/machinery/door/airlock/angled_bay/external/red{
+	dir = 4
+	},
+/obj/structure/fans/hardlight/colorable/abductor,
+/obj/machinery/door/firedoor/glass,
+/obj/effect/decal/cleanable/blood/old,
+/obj/effect/auto_roof,
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
+	},
+/area/muriki/yard)
 "aQf" = (
 /obj/structure/prop/rock/flat,
 /turf/simulated/floor/outdoors/ice/dark/turfpack/muriki,
@@ -18657,23 +18705,32 @@
 /turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
 /area/mine/explored/muriki/mountainnorth)
 "aQh" = (
-/obj/structure/barricade/sandbag,
+/obj/effect/map_effect/event_explosions/start_explosion/small,
 /obj/effect/decal/cleanable/blood/old,
-/turf/simulated/floor/outdoors/snow/gravsnow/turfpack/muriki,
-/area/muriki/grounds/civ)
+/obj/effect/auto_roof,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/muriki/yard)
 "aQi" = (
+/obj/machinery/door/airlock/angled_bay/external/red{
+	dir = 4
+	},
+/obj/structure/fans/hardlight/colorable/abductor,
+/obj/machinery/door/firedoor/glass,
 /obj/effect/decal/cleanable/blood/old,
-/turf/simulated/floor/carpet/purcarpet,
-/area/muriki/crew/casino)
+/obj/effect/auto_roof,
+/turf/simulated/floor/reinforced,
+/area/muriki/yard)
 "aQj" = (
-/obj/structure/barricade/sandbag,
-/turf/simulated/floor/tiled,
-/area/quartermaster/foyer)
+/obj/machinery/porta_turret/alien/destroyed{
+	dir = 8
+	},
+/obj/effect/auto_roof,
+/turf/simulated/floor,
+/area/muriki/yard)
 "aQk" = (
-/obj/effect/decal/cleanable/blood/old,
-/obj/effect/decal/cleanable/blood/old,
-/turf/simulated/floor/outdoors/snow/gravsnow/turfpack/muriki,
-/area/muriki/grounds/civ)
+/obj/effect/auto_roof,
+/turf/simulated/floor/blackhole/grate,
+/area/muriki/yard)
 "aQl" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -18682,12 +18739,13 @@
 /turf/simulated/floor/plating,
 /area/maintenance/substation/virology)
 "aQm" = (
-/obj/effect/floor_decal/spline/plain{
-	dir = 4
+/obj/machinery/door/window/survival_pod{
+	dir = 8
 	},
 /obj/effect/decal/cleanable/blood/old,
-/turf/simulated/floor/carpet,
-/area/muriki/crew/casino)
+/obj/effect/auto_roof,
+/turf/simulated/floor/blackhole/grate,
+/area/muriki/yard)
 "aQn" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 4
@@ -18711,41 +18769,50 @@
 /turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
 /area/muriki/grounds/engi)
 "aQq" = (
-/obj/item/material/barbedwire/start_active,
-/turf/simulated/floor/tiled,
-/area/quartermaster/foyer)
+/obj/effect/map_effect/event_explosions/start_explosion/medium,
+/obj/effect/decal/cleanable/blood/old,
+/obj/effect/auto_roof,
+/turf/simulated/floor/blackhole/spirals,
+/area/muriki/yard)
 "aQr" = (
 /obj/structure/prop/rock/flat,
 /turf/simulated/floor/outdoors/ice/dark/turfpack/muriki,
 /area/mine/explored/muriki/mountainnorth)
 "aQs" = (
-/obj/effect/floor_decal/spline/plain{
+/obj/item/modular_computer/console{
 	dir = 8
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/disposalpipe/segment,
-/obj/effect/decal/cleanable/blood/old,
-/turf/simulated/floor/carpet,
-/area/muriki/crew/casino)
+/obj/effect/auto_roof,
+/turf/simulated/floor/blackhole/grate,
+/area/muriki/yard)
 "aQt" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
+/obj/machinery/porta_turret/alien/destroyed{
+	dir = 5
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
 	},
-/obj/structure/girder/reinforced,
-/turf/simulated/floor/tiled,
-/area/quartermaster/foyer)
+/area/muriki/yard)
 "aQu" = (
-/obj/structure/barricade{
-	material = "steel"
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/random/material,
+/obj/random/material,
+/obj/random/material,
+/obj/random/material,
+/obj/random/material,
+/obj/random/material,
+/obj/random/material,
+/obj/random/material,
+/obj/random/material,
+/obj/random/material,
+/obj/random/material,
+/obj/random/material,
+/obj/random/material,
+/obj/structure/closet/crate/miningcar,
+/turf/simulated/floor/tiled{
+	icon_state = "monotile"
 	},
-/turf/simulated/floor/outdoors/snow/snow2/turfpack/muriki{
-	outdoors = 0
-	},
-/area/muriki/grounds/tramborder)
+/area/quartermaster/storage)
 "aQv" = (
 /obj/structure/prop/rock/flat,
 /turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
@@ -19305,13 +19372,9 @@
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/research/north)
 "aRL" = (
-/obj/structure/barricade{
-	material = "steel"
-	},
-/turf/simulated/floor/outdoors/ice/dark_smooth/turfpack/muriki{
-	outdoors = 0
-	},
-/area/muriki/grounds/tramborder)
+/obj/machinery/scale,
+/turf/simulated/floor/carpet/graycarpet,
+/area/crew_quarters/fitness)
 "aRM" = (
 /obj/structure/trailblazer/yellow,
 /turf/simulated/floor/water/turfpack/muriki,
@@ -20598,44 +20661,36 @@
 /turf/simulated/floor/outdoors/ice/turfpack/muriki,
 /area/mine/unexplored/muriki/valleyeast)
 "aUB" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
+/obj/structure/bed/chair/bay/shuttle{
+	dir = 8
 	},
 /obj/effect/decal/cleanable/blood/old,
-/turf/simulated/floor/tiled,
-/area/muriki/tramstation/civ)
+/obj/effect/auto_roof,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/muriki/yard)
 "aUC" = (
 /obj/effect/shuttle_landmark/premade/airdrop/muriki_southeast,
 /turf/simulated/floor/outdoors/shelfice/turfpack/muriki,
 /area/mine/unexplored/muriki/valleyeast)
 "aUD" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 1
+/obj/item/modular_computer/console{
+	dir = 4
 	},
-/obj/effect/floor_decal/industrial/danger{
-	dir = 1
+/obj/structure/window/reinforced/survival_pod{
+	dir = 8
 	},
-/obj/structure/girder/reinforced,
-/turf/simulated/floor/tiled,
-/area/quartermaster/foyer)
+/obj/effect/decal/cleanable/blood/old,
+/obj/effect/auto_roof,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/muriki/yard)
 "aUE" = (
-/obj/effect/floor_decal/borderfloor/corner{
+/obj/structure/bed/chair/bay/chair/padded/purple{
 	dir = 4
 	},
-/obj/effect/floor_decal/industrial/danger/corner{
-	dir = 4
-	},
-/obj/structure/barricade{
-	material = "steel"
-	},
-/turf/simulated/floor/tiled,
-/area/quartermaster/foyer)
+/obj/effect/decal/cleanable/blood/old,
+/obj/effect/auto_roof,
+/turf/simulated/floor/blackhole/grate,
+/area/muriki/yard)
 "aUF" = (
 /obj/structure/flora/log2,
 /turf/simulated/floor/outdoors/ice/turfpack/muriki,
@@ -20649,47 +20704,58 @@
 /turf/simulated/floor/outdoors/ice/turfpack/muriki,
 /area/mine/unexplored/muriki/valleyeast)
 "aUI" = (
-/obj/structure/bed/chair,
-/obj/effect/floor_decal/borderfloor{
-	dir = 1
+/obj/structure/hull_corner{
+	dir = 8
 	},
-/obj/effect/floor_decal/industrial/danger{
-	dir = 1
-	},
-/obj/structure/barricade{
-	material = "steel"
-	},
-/turf/simulated/floor/tiled,
-/area/quartermaster/foyer)
-"aUJ" = (
-/obj/item/material/barbedwire/start_active,
 /turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
-/area/muriki/grounds/tramborder)
+/area/muriki/yard)
+"aUJ" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/random/material/precious,
+/obj/random/material/precious,
+/obj/random/material/precious,
+/obj/random/material/precious,
+/obj/random/material/precious,
+/obj/random/material/precious,
+/obj/random/material/precious,
+/obj/random/material/precious,
+/obj/random/material/precious,
+/obj/random/material/precious,
+/obj/random/material/precious,
+/obj/random/material/precious,
+/obj/random/material/precious,
+/obj/random/material/precious,
+/obj/random/material/precious,
+/obj/structure/closet/crate/miningcar,
+/turf/simulated/floor/tiled{
+	icon_state = "monotile"
+	},
+/area/quartermaster/storage)
 "aUK" = (
-/obj/effect/floor_decal/industrial/danger{
+/obj/structure/bed/chair/bay/shuttle,
+/obj/effect/auto_roof,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/muriki/yard)
+"aUL" = (
+/obj/structure/bed/chair/bay/shuttle,
+/obj/effect/decal/cleanable/blood/old,
+/obj/effect/auto_roof,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/muriki/yard)
+"aUM" = (
+/obj/structure/window/reinforced/survival_pod{
+	dir = 4
+	},
+/obj/structure/window/reinforced/survival_pod{
 	dir = 1
 	},
-/obj/structure/barricade{
-	material = "steel"
+/obj/structure/grille/bay,
+/obj/structure/window/reinforced/survival_pod{
+	dir = 8
 	},
-/turf/simulated/floor/tiled,
-/area/muriki/tramstation/civ)
-"aUL" = (
-/obj/effect/decal/cleanable/blood/old,
-/turf/simulated/floor/outdoors/shelfice/turfpack/muriki,
-/area/muriki/grounds/civ)
-"aUM" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 9
-	},
-/obj/effect/floor_decal/industrial/danger{
-	dir = 9
-	},
-/obj/structure/barricade{
-	material = "steel"
-	},
-/turf/simulated/floor/tiled/steel_grid,
-/area/quartermaster/foyer)
+/obj/effect/auto_roof,
+/turf/simulated/floor,
+/area/muriki/yard)
 "aUN" = (
 /turf/simulated/mineral/alt/ignore_cavegen/turfpack/muriki,
 /area/muriki/grounds/engi)
@@ -20746,34 +20812,31 @@
 /turf/simulated/open/muriki,
 /area/muriki/grounds/civ/garage_entrance)
 "aUX" = (
-/obj/structure/disposalpipe/segment,
-/obj/effect/floor_decal/borderfloor{
-	dir = 8
+/obj/effect/map_effect/event_explosions/start_explosion/small,
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
 	},
-/obj/effect/floor_decal/corner/lightgrey/border{
-	dir = 8
-	},
-/obj/structure/barricade{
-	material = "steel"
-	},
-/turf/simulated/floor/tiled/steel,
-/area/hallway/primary/central_two)
+/area/muriki/yard)
 "aUY" = (
-/obj/structure/disposalpipe/segment,
-/obj/effect/floor_decal/borderfloor{
-	dir = 4
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/random/material/precious,
+/obj/random/material/precious,
+/obj/random/material/precious,
+/obj/random/material/precious,
+/obj/random/material/precious,
+/obj/random/material/precious,
+/obj/random/material/precious,
+/obj/random/material/precious,
+/obj/random/material/precious,
+/obj/random/material/precious,
+/obj/random/material/precious,
+/obj/random/material/precious,
+/obj/random/material/precious,
+/obj/structure/closet/crate/miningcar,
+/turf/simulated/floor/tiled{
+	icon_state = "monotile"
 	},
-/obj/effect/floor_decal/corner/lightgrey/border{
-	dir = 4
-	},
-/obj/machinery/light{
-	dir = 4
-	},
-/obj/structure/barricade{
-	material = "steel"
-	},
-/turf/simulated/floor/tiled/steel,
-/area/hallway/primary/central_two)
+/area/quartermaster/storage)
 "aUZ" = (
 /obj/effect/floor_decal/corner/brown{
 	dir = 5
@@ -20784,10 +20847,21 @@
 /turf/simulated/floor/tiled,
 /area/quartermaster/mining)
 "aVa" = (
-/obj/structure/table/gamblingtable,
-/obj/item/material/barbedwire/start_active,
-/turf/simulated/floor/tiled/material/gold,
-/area/muriki/crew/casino)
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/blood/old,
+/turf/simulated/floor/tiled,
+/area/hallway/security/main)
 "aVb" = (
 /obj/structure/cliff_end{
 	dir = 4
@@ -20824,12 +20898,9 @@
 /turf/simulated/floor/outdoors/ice/turfpack/muriki,
 /area/mine/explored/muriki/river/hole)
 "aVi" = (
-/obj/structure/bed/chair/bay/comfy/brown{
-	dir = 8
-	},
-/obj/structure/barricade/sandbag,
-/turf/simulated/floor/wood/sif/parquet,
-/area/muriki/crew/casino)
+/obj/effect/mine/frag,
+/turf/simulated/floor/outdoors/snow/gravsnow/turfpack/muriki,
+/area/muriki/grounds/civ)
 "aVj" = (
 /obj/machinery/power/breakerbox/activated{
 	RCon_tag = "Security Substation Bypass";
@@ -21252,9 +21323,6 @@
 /turf/simulated/wall,
 /area/muriki/bathroom/security)
 "aWb" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
@@ -21263,6 +21331,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
+	},
+/obj/structure/disposalpipe/junction{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/muriki/tramstation/civ)
@@ -25939,12 +26010,13 @@
 /turf/simulated/floor/carpet/geo,
 /area/muriki/crew/arcade)
 "beo" = (
-/obj/structure/cable/green{
-	icon_state = "1-2"
+/obj/machinery/porta_turret/alien/destroyed{
+	dir = 10
 	},
-/obj/item/material/barbedwire/start_active,
-/turf/simulated/floor/tiled/steel,
-/area/hallway/secondary/exit)
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
+	},
+/area/muriki/yard)
 "bep" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/grille,
@@ -27047,25 +27119,37 @@
 	},
 /area/mine/unexplored/muriki/mountainnorth)
 "bgx" = (
-/obj/item/material/barbedwire/start_active,
-/turf/simulated/floor/tiled,
-/area/hallway/secondary/exit)
-"bgy" = (
-/obj/structure/ladder/top_hatch,
-/obj/effect/decal/cleanable/blood/old,
-/turf/simulated/floor/tiled/dark,
-/area/hallway/secondary/exit)
-"bgz" = (
-/obj/structure/cable/green{
-	icon_state = "1-2"
+/obj/structure/hull_corner/long_horiz{
+	dir = 10
 	},
+/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
+/area/muriki/yard)
+"bgy" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/barricade/sandbag,
-/turf/simulated/floor/tiled/steel,
-/area/hallway/secondary/exit)
+/turf/simulated/floor/tiled{
+	icon_state = "monotile"
+	},
+/area/quartermaster/storage)
+"bgz" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/reagent_dispensers/lube_tank,
+/turf/simulated/floor/tiled{
+	icon_state = "monotile"
+	},
+/area/quartermaster/storage)
 "bgA" = (
-/obj/structure/barricade/sandbag,
-/turf/simulated/floor/tiled,
-/area/hallway/secondary/exit)
+/obj/machinery/porta_turret/alien/destroyed{
+	pixel_y = 1;
+	dir = 5
+	},
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
+	},
+/area/muriki/yard)
 "bgB" = (
 /obj/effect/floor_decal/spline/fancy/wood/corner,
 /obj/effect/floor_decal/spline/fancy/wood/corner{
@@ -27074,92 +27158,73 @@
 /turf/simulated/floor/wood/sif/parquet,
 /area/muriki/crew/casino)
 "bgC" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/effect/decal/cleanable/blood/old,
-/turf/simulated/floor/tiled/dark,
-/area/hallway/secondary/exit)
-"bgD" = (
 /obj/item/beartrap{
 	anchored = 1;
 	deployed = 1
 	},
-/obj/structure/barricade{
-	material = "steel"
-	},
+/turf/simulated/floor/outdoors/snow/gravsnow/turfpack/muriki,
+/area/muriki/grounds/civ)
+"bgD" = (
+/obj/item/material/barbedwire/start_active,
 /turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
 /area/muriki/grounds/civ)
 "bgE" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/corner/lightgrey/border,
-/obj/structure/barricade{
-	material = "steel"
-	},
-/turf/simulated/floor/tiled/steel,
-/area/hallway/primary/central_two)
+/obj/item/material/barbedwire/start_active,
+/turf/simulated/floor/outdoors/snow/gravsnow/turfpack/muriki,
+/area/muriki/grounds/civ)
 "bgF" = (
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
-/obj/effect/decal/cleanable/blood/old,
-/turf/simulated/floor/tiled/steel,
-/area/hallway/secondary/exit)
+/obj/structure/barricade/sandbag,
+/turf/simulated/floor/outdoors/snow/gravsnow/turfpack/muriki,
+/area/muriki/grounds/civ)
 "bgG" = (
-/obj/structure/prop/rock/small/alt,
+/obj/structure/barricade/sandbag,
+/obj/effect/decal/cleanable/blood/old,
 /turf/simulated/floor/outdoors/snow/gravsnow/turfpack/muriki,
 /area/muriki/grounds/civ)
 "bgH" = (
-/obj/effect/floor_decal/spline/fancy/wood,
-/obj/structure/bed/chair/wood/wings{
-	dir = 4
-	},
-/turf/simulated/floor/wood,
-/area/crew_quarters/bar)
-"bgI" = (
-/obj/effect/floor_decal/spline/fancy/wood,
 /obj/effect/decal/cleanable/blood/old,
-/turf/simulated/floor/wood,
-/area/crew_quarters/bar)
+/turf/simulated/floor/carpet/purcarpet,
+/area/muriki/crew/casino)
+"bgI" = (
+/obj/structure/barricade/sandbag,
+/turf/simulated/floor/tiled,
+/area/quartermaster/foyer)
 "bgJ" = (
 /obj/effect/decal/cleanable/blood/old,
-/turf/simulated/floor/tiled/dark,
-/area/hallway/secondary/exit)
+/obj/effect/decal/cleanable/blood/old,
+/turf/simulated/floor/outdoors/snow/gravsnow/turfpack/muriki,
+/area/muriki/grounds/civ)
 "bgK" = (
-/obj/item/material/barbedwire/start_active,
-/turf/simulated/floor/glass,
-/area/hallway/primary/central_two)
+/obj/effect/floor_decal/spline/plain{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/blood/old,
+/turf/simulated/floor/carpet,
+/area/muriki/crew/casino)
 "bgL" = (
-/obj/effect/floor_decal/spline/fancy/wood/corner{
-	dir = 8
-	},
-/obj/structure/bed/chair/wood/wings{
-	dir = 8
-	},
-/obj/effect/decal/cleanable/blood/old,
-/turf/simulated/floor/wood,
-/area/crew_quarters/bar)
+/obj/item/material/barbedwire/start_active,
+/turf/simulated/floor/tiled,
+/area/quartermaster/foyer)
 "bgM" = (
+/obj/effect/floor_decal/spline/plain{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/disposalpipe/segment,
 /obj/effect/decal/cleanable/blood/old,
-/turf/simulated/floor/wood,
-/area/crew_quarters/bar)
+/turf/simulated/floor/carpet,
+/area/muriki/crew/casino)
 "bgN" = (
-/obj/structure/disposalpipe/segment{
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/obj/effect/decal/cleanable/blood/old,
-/turf/simulated/floor/wood,
-/area/crew_quarters/bar)
+/obj/structure/girder/reinforced,
+/turf/simulated/floor/tiled,
+/area/quartermaster/foyer)
 "bgO" = (
 /obj/effect/floor_decal/corner/blue/full,
 /obj/item/radio/intercom/department/medbay{
@@ -27170,44 +27235,69 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/muriki/bathroom/medical)
 "bgP" = (
-/obj/structure/barricade/sandbag,
-/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
-/area/muriki/grounds/civ)
+/obj/structure/barricade{
+	material = "steel"
+	},
+/turf/simulated/floor/outdoors/snow/snow2/turfpack/muriki{
+	outdoors = 0
+	},
+/area/muriki/grounds/tramborder)
 "bgQ" = (
-/obj/structure/barricade/sandbag,
-/turf/simulated/floor/glass,
-/area/hallway/primary/central_two)
+/obj/structure/barricade{
+	material = "steel"
+	},
+/turf/simulated/floor/outdoors/ice/dark_smooth/turfpack/muriki{
+	outdoors = 0
+	},
+/area/muriki/grounds/tramborder)
 "bgR" = (
-/obj/structure/bed/chair/wood/wings{
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
 	dir = 4
 	},
 /obj/effect/decal/cleanable/blood/old,
-/turf/simulated/floor/wood,
-/area/crew_quarters/bar)
+/turf/simulated/floor/tiled,
+/area/muriki/tramstation/civ)
 "bgS" = (
-/obj/structure/cable/green{
-	icon_state = "1-2"
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/disposalpipe/segment,
-/obj/structure/barricade/sandbag,
-/turf/simulated/floor/tiled/steel,
-/area/hallway/secondary/exit)
+/obj/effect/floor_decal/industrial/danger{
+	dir = 1
+	},
+/obj/structure/girder/reinforced,
+/turf/simulated/floor/tiled,
+/area/quartermaster/foyer)
 "bgT" = (
-/obj/structure/cable/green{
-	icon_state = "4-8"
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 4
 	},
-/obj/structure/barricade/sandbag,
-/turf/simulated/floor/wood,
-/area/crew_quarters/bar)
+/obj/effect/floor_decal/industrial/danger/corner{
+	dir = 4
+	},
+/obj/structure/barricade{
+	material = "steel"
+	},
+/turf/simulated/floor/tiled,
+/area/quartermaster/foyer)
 "bgU" = (
-/obj/structure/cable/green{
-	icon_state = "4-8"
+/obj/structure/bed/chair,
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
 	},
-/obj/effect/decal/cleanable/blood/old,
-/turf/simulated/floor/wood,
-/area/crew_quarters/bar)
+/obj/effect/floor_decal/industrial/danger{
+	dir = 1
+	},
+/obj/structure/barricade{
+	material = "steel"
+	},
+/turf/simulated/floor/tiled,
+/area/quartermaster/foyer)
 "bgV" = (
 /obj/effect/floor_decal/corner/red{
 	dir = 6
@@ -27220,200 +27310,159 @@
 /turf/simulated/floor/tiled,
 /area/security/brig/observation)
 "bgW" = (
-/obj/effect/decal/cleanable/blood/old,
-/turf/simulated/floor/outdoors/snow/gravsnow/sidewalk_under/turfpack/muriki,
-/area/muriki/grounds/tramlinewest)
+/obj/item/material/barbedwire/start_active,
+/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
+/area/muriki/grounds/tramborder)
 "bgX" = (
-/obj/effect/decal/cleanable/blood/old,
-/turf/simulated/floor/tiled/steel,
-/area/hallway/primary/central_two)
+/obj/effect/floor_decal/industrial/danger{
+	dir = 1
+	},
+/obj/structure/barricade{
+	material = "steel"
+	},
+/turf/simulated/floor/tiled,
+/area/muriki/tramstation/civ)
 "bgY" = (
-/obj/structure/sign/warning/acid{
-	pixel_x = -32
-	},
-/obj/machinery/door/airlock/glass_external{
-	req_one_access = null
-	},
-/obj/machinery/access_button/airlock_exterior{
-	pixel_x = -23;
-	dir = 4
-	},
-/obj/effect/map_helper/airlock/door/ext_door,
-/obj/effect/map_helper/airlock/button/ext_button,
 /obj/effect/decal/cleanable/blood/old,
-/turf/simulated/floor/tiled/steel_grid,
-/area/muriki/tramstation/cargeng)
+/turf/simulated/floor/outdoors/shelfice/turfpack/muriki,
+/area/muriki/grounds/civ)
 "bgZ" = (
 /obj/item/wheelchair/motor/small,
 /turf/simulated/floor/plating,
 /area/maintenance/medicelev)
 "bha" = (
 /obj/effect/floor_decal/borderfloor{
-	dir = 10
+	dir = 9
 	},
 /obj/effect/floor_decal/industrial/danger{
-	dir = 10
+	dir = 9
 	},
 /obj/structure/barricade{
 	material = "steel"
 	},
 /turf/simulated/floor/tiled/steel_grid,
-/area/muriki/tramstation/cargeng)
+/area/quartermaster/foyer)
 "bhb" = (
-/obj/structure/barricade/sandbag,
-/turf/simulated/floor/wood,
-/area/crew_quarters/bar)
-"bhc" = (
-/obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/industrial/danger,
-/obj/effect/decal/cleanable/blood/old,
-/turf/simulated/floor/tiled,
-/area/muriki/tramstation/cargeng)
-"bhd" = (
-/obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/industrial/danger,
-/obj/structure/barricade{
-	material = "steel"
-	},
-/turf/simulated/floor/tiled,
-/area/muriki/tramstation/cargeng)
-"bhe" = (
-/obj/effect/floor_decal/borderfloor/corner{
+/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/borderfloor{
 	dir = 8
 	},
-/obj/effect/floor_decal/industrial/danger/corner{
-	dir = 1
+/obj/effect/floor_decal/corner/lightgrey/border{
+	dir = 8
 	},
 /obj/structure/barricade{
 	material = "steel"
 	},
-/turf/simulated/floor/tiled,
-/area/muriki/tramstation/cargeng)
-"bhf" = (
-/obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/industrial/danger,
-/obj/structure/barricade/sandbag,
-/turf/simulated/floor/tiled,
-/area/muriki/tramstation/cargeng)
-"bhg" = (
-/obj/effect/floor_decal/borderfloor/corner,
-/obj/effect/floor_decal/industrial/danger/corner,
-/obj/structure/barricade{
-	material = "steel"
-	},
-/turf/simulated/floor/tiled,
-/area/muriki/tramstation/cargeng)
-"bhh" = (
-/obj/effect/floor_decal/borderfloor,
-/obj/effect/floor_decal/industrial/danger,
-/obj/structure/bed/chair/sofa/bench/right,
-/obj/structure/barricade{
-	material = "steel"
-	},
-/turf/simulated/floor/tiled,
-/area/muriki/tramstation/cargeng)
-"bhi" = (
-/obj/effect/zone_divider,
-/obj/item/material/barbedwire/start_active,
-/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
-/area/muriki/grounds/tramborder)
-"bhj" = (
-/obj/effect/floor_decal/industrial/danger,
-/obj/machinery/flasher/portable,
-/turf/simulated/floor/tiled,
-/area/muriki/tramstation/civ)
-"bhk" = (
-/obj/effect/zone_divider,
-/turf/simulated/floor/outdoors/snow/gravsnow/turfpack/muriki,
-/area/muriki/grounds/civ)
-"bhl" = (
-/obj/effect/decal/cleanable/blood/old,
-/turf/simulated/floor/glass,
+/turf/simulated/floor/tiled/steel,
 /area/hallway/primary/central_two)
-"bhm" = (
+"bhc" = (
+/obj/structure/disposalpipe/segment,
 /obj/effect/floor_decal/borderfloor{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/orange/border{
-	dir = 1
-	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/obj/effect/decal/cleanable/blood/old,
-/turf/simulated/floor/tiled,
-/area/muriki/tramstation/cargeng)
-"bhn" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/orange/border{
-	dir = 1
-	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+/obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 4
 	},
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/structure/barricade{
+	material = "steel"
+	},
+/turf/simulated/floor/tiled/steel,
+/area/hallway/primary/central_two)
+"bhd" = (
+/obj/structure/table/gamblingtable,
 /obj/item/material/barbedwire/start_active,
-/turf/simulated/floor/tiled,
-/area/muriki/tramstation/cargeng)
-"bho" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/orange/border{
-	dir = 1
-	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+/turf/simulated/floor/tiled/material/gold,
+/area/muriki/crew/casino)
+"bhe" = (
+/obj/structure/bed/chair/bay/comfy/brown{
 	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
 	},
 /obj/structure/barricade/sandbag,
-/turf/simulated/floor/tiled,
-/area/muriki/tramstation/cargeng)
-"bhp" = (
+/turf/simulated/floor/wood/sif/parquet,
+/area/muriki/crew/casino)
+"bhf" = (
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/item/material/barbedwire/start_active,
+/turf/simulated/floor/tiled/steel,
+/area/hallway/secondary/exit)
+"bhg" = (
 /obj/item/material/barbedwire/start_active,
 /turf/simulated/floor/tiled,
-/area/muriki/tramstation/cargeng)
-"bhq" = (
+/area/hallway/secondary/exit)
+"bhh" = (
+/obj/structure/ladder/top_hatch,
+/obj/effect/decal/cleanable/blood/old,
+/turf/simulated/floor/tiled/dark,
+/area/hallway/secondary/exit)
+"bhi" = (
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/barricade/sandbag,
+/turf/simulated/floor/tiled/steel,
+/area/hallway/secondary/exit)
+"bhj" = (
+/obj/structure/barricade/sandbag,
+/turf/simulated/floor/tiled,
+/area/hallway/secondary/exit)
+"bhk" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/effect/decal/cleanable/blood/old,
+/turf/simulated/floor/tiled/dark,
+/area/hallway/secondary/exit)
+"bhl" = (
+/obj/item/beartrap{
+	anchored = 1;
+	deployed = 1
+	},
+/obj/structure/barricade{
+	material = "steel"
+	},
+/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
+/area/muriki/grounds/civ)
+"bhm" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/corner/lightgrey/border,
+/obj/structure/barricade{
+	material = "steel"
+	},
+/turf/simulated/floor/tiled/steel,
+/area/hallway/primary/central_two)
+"bhn" = (
 /obj/structure/cable/green{
-	icon_state = "4-8"
+	icon_state = "1-2"
 	},
 /obj/effect/decal/cleanable/blood/old,
-/turf/simulated/floor/tiled,
-/area/muriki/tramstation/civ)
-"bhr" = (
-/obj/machinery/atmospherics/unary/vent_pump/on{
+/turf/simulated/floor/tiled/steel,
+/area/hallway/secondary/exit)
+"bho" = (
+/obj/structure/prop/rock/small/alt,
+/turf/simulated/floor/outdoors/snow/gravsnow/turfpack/muriki,
+/area/muriki/grounds/civ)
+"bhp" = (
+/obj/effect/floor_decal/spline/fancy/wood,
+/obj/structure/bed/chair/wood/wings{
 	dir = 4
 	},
-/obj/effect/floor_decal/borderfloor{
-	dir = 8
-	},
-/obj/effect/floor_decal/corner/orange/border{
-	dir = 8
-	},
-/obj/structure/barricade/sandbag,
-/turf/simulated/floor/tiled,
-/area/muriki/tramstation/cargeng)
+/turf/simulated/floor/wood,
+/area/crew_quarters/bar)
+"bhq" = (
+/obj/effect/floor_decal/spline/fancy/wood,
+/obj/effect/decal/cleanable/blood/old,
+/turf/simulated/floor/wood,
+/area/crew_quarters/bar)
+"bhr" = (
+/obj/effect/decal/cleanable/blood/old,
+/turf/simulated/floor/tiled/dark,
+/area/hallway/secondary/exit)
 "bhs" = (
 /obj/structure/table/glass,
 /obj/item/storage/box/monkeycubes,
@@ -27433,158 +27482,187 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "bht" = (
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
+/obj/item/material/barbedwire/start_active,
+/turf/simulated/floor/glass,
+/area/hallway/primary/central_two)
+"bhu" = (
+/obj/effect/floor_decal/spline/fancy/wood/corner{
 	dir = 8
 	},
-/obj/structure/barricade/sandbag,
-/turf/simulated/floor/tiled,
-/area/muriki/tramstation/cargeng)
-"bhu" = (
-/obj/structure/barricade/sandbag,
-/turf/simulated/floor/tiled,
-/area/muriki/tramstation/cargeng)
+/obj/structure/bed/chair/wood/wings{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/blood/old,
+/turf/simulated/floor/wood,
+/area/crew_quarters/bar)
 "bhv" = (
-/obj/structure/barricade{
-	material = "steel"
-	},
-/turf/simulated/floor/outdoors/ice/dark/turfpack/muriki,
-/area/muriki/grounds/tramborder)
+/obj/effect/decal/cleanable/blood/old,
+/turf/simulated/floor/wood,
+/area/crew_quarters/bar)
 "bhw" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 1
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
-/obj/effect/floor_decal/corner/blue/border{
-	dir = 1
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
 	},
-/obj/structure/barricade{
-	material = "steel"
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
 	},
-/turf/simulated/floor/tiled,
-/area/muriki/tramstation/civ)
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/effect/decal/cleanable/blood/old,
+/turf/simulated/floor/wood,
+/area/crew_quarters/bar)
 "bhx" = (
-/obj/effect/floor_decal/borderfloor{
+/obj/effect/floor_decal/borderfloor/corner{
 	dir = 1
 	},
-/obj/effect/floor_decal/corner/blue/border{
+/obj/effect/floor_decal/corner/lightgrey/bordercorner{
 	dir = 1
 	},
-/obj/item/material/barbedwire/start_active,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/blood/old,
 /turf/simulated/floor/tiled,
-/area/muriki/tramstation/civ)
+/area/hallway/secondary/exit)
 "bhy" = (
-/obj/effect/floor_decal/borderfloor{
+/obj/structure/barricade/sandbag,
+/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
+/area/muriki/grounds/civ)
+"bhz" = (
+/obj/structure/barricade/sandbag,
+/turf/simulated/floor/glass,
+/area/hallway/primary/central_two)
+"bhA" = (
+/obj/structure/bed/chair/wood/wings{
 	dir = 4
 	},
-/obj/effect/floor_decal/corner/green/border{
-	dir = 4
-	},
+/obj/effect/decal/cleanable/blood/old,
+/turf/simulated/floor/wood,
+/area/crew_quarters/bar)
+"bhB" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/disposalpipe/segment,
 /obj/structure/barricade/sandbag,
 /turf/simulated/floor/tiled/steel,
-/area/hallway/primary/central_two)
-"bhz" = (
-/obj/effect/decal/cleanable/blood/old,
-/turf/simulated/floor/tiled/neutral,
-/area/crew_quarters/cafeteria)
-"bhA" = (
-/obj/item/beartrap{
-	anchored = 1;
-	deployed = 1
-	},
-/obj/structure/barricade{
-	material = "steel"
-	},
-/turf/simulated/floor/outdoors/ice/dark/turfpack/muriki,
-/area/muriki/grounds/tramborder)
-"bhB" = (
-/obj/structure/barricade,
-/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
-/area/muriki/grounds/tramborder)
+/area/hallway/secondary/exit)
 "bhC" = (
-/obj/structure/railing{
-	dir = 1
+/obj/structure/cable/green{
+	icon_state = "4-8"
 	},
-/obj/structure/prop/rock/round,
-/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
-/area/muriki/grounds/tramborder)
+/obj/structure/barricade/sandbag,
+/turf/simulated/floor/wood,
+/area/crew_quarters/bar)
 "bhD" = (
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/trawler)
 "bhE" = (
-/obj/structure/railing{
-	dir = 1
+/obj/structure/cable/green{
+	icon_state = "4-8"
 	},
-/obj/item/material/barbedwire/start_active,
-/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
-/area/muriki/grounds/tramborder)
+/obj/effect/decal/cleanable/blood/old,
+/turf/simulated/floor/wood,
+/area/crew_quarters/bar)
 "bhF" = (
-/obj/item/material/barbedwire/start_active,
-/turf/simulated/floor/outdoors/ice/dark/turfpack/muriki,
-/area/muriki/grounds/engi)
+/obj/effect/decal/cleanable/blood/old,
+/turf/simulated/floor/outdoors/snow/gravsnow/sidewalk_under/turfpack/muriki,
+/area/muriki/grounds/tramlinewest)
 "bhG" = (
-/obj/item/material/barbedwire/start_active,
-/turf/simulated/floor/outdoors/snow/gravsnow/sidewalk_under/turfpack/muriki,
-/area/muriki/grounds/engi)
+/obj/effect/decal/cleanable/blood/old,
+/turf/simulated/floor/tiled/steel,
+/area/hallway/primary/central_two)
 "bhH" = (
-/obj/structure/barricade{
-	material = "steel"
+/obj/structure/sign/warning/acid{
+	pixel_x = -32
 	},
-/turf/simulated/floor/outdoors/snow/gravsnow/sidewalk_under/turfpack/muriki,
-/area/muriki/grounds/engi)
+/obj/machinery/door/airlock/glass_external{
+	req_one_access = null
+	},
+/obj/machinery/access_button/airlock_exterior{
+	pixel_x = -23;
+	dir = 4
+	},
+/obj/effect/map_helper/airlock/door/ext_door,
+/obj/effect/map_helper/airlock/button/ext_button,
+/obj/effect/decal/cleanable/blood/old,
+/turf/simulated/floor/tiled/steel_grid,
+/area/muriki/tramstation/cargeng)
 "bhI" = (
-/obj/effect/decal/cleanable/blood/old,
-/turf/simulated/floor/outdoors/snow/gravsnow/sidewalk_under/turfpack/muriki,
-/area/muriki/grounds/engi)
-"bhJ" = (
-/obj/structure/barricade{
-	material = "steel"
-	},
-/turf/simulated/floor/outdoors/ice/turfpack/muriki,
-/area/muriki/grounds/tramborder)
-"bhK" = (
-/obj/structure/blade_trap/start_active,
-/turf/simulated/floor/outdoors/ice/dark/turfpack/muriki,
-/area/muriki/grounds/civ)
-"bhL" = (
-/obj/effect/decal/cleanable/blood/old,
-/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
-/area/muriki/grounds/engi)
-"bhM" = (
-/obj/structure/barricade{
-	material = "steel"
-	},
-/turf/simulated/floor/outdoors/ice/turfpack/muriki,
-/area/muriki/grounds/engi)
-"bhN" = (
-/obj/structure/girder/reinforced,
-/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
-	outdoors = 1
-	},
-/area/muriki/grounds/engi)
-"bhO" = (
 /obj/effect/floor_decal/borderfloor{
+	dir = 10
+	},
+/obj/effect/floor_decal/industrial/danger{
+	dir = 10
+	},
+/obj/structure/barricade{
+	material = "steel"
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/muriki/tramstation/cargeng)
+"bhJ" = (
+/obj/structure/barricade/sandbag,
+/turf/simulated/floor/wood,
+/area/crew_quarters/bar)
+"bhK" = (
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/industrial/danger,
+/obj/effect/decal/cleanable/blood/old,
+/turf/simulated/floor/tiled,
+/area/muriki/tramstation/cargeng)
+"bhL" = (
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/industrial/danger,
+/obj/structure/barricade{
+	material = "steel"
+	},
+/turf/simulated/floor/tiled,
+/area/muriki/tramstation/cargeng)
+"bhM" = (
+/obj/effect/floor_decal/borderfloor/corner{
 	dir = 8
 	},
-/obj/effect/floor_decal/corner/blue/border{
-	dir = 8
+/obj/effect/floor_decal/industrial/danger/corner{
+	dir = 1
 	},
 /obj/structure/barricade{
 	material = "steel"
 	},
 /turf/simulated/floor/tiled,
-/area/hallway/primary/aft)
+/area/muriki/tramstation/cargeng)
+"bhN" = (
+/obj/effect/floor_decal/borderfloor/corner,
+/obj/effect/floor_decal/industrial/danger/corner,
+/obj/structure/barricade{
+	material = "steel"
+	},
+/turf/simulated/floor/tiled,
+/area/muriki/tramstation/cargeng)
+"bhO" = (
+/obj/effect/floor_decal/borderfloor,
+/obj/effect/floor_decal/industrial/danger,
+/obj/structure/bed/chair/sofa/bench/right,
+/obj/structure/barricade{
+	material = "steel"
+	},
+/turf/simulated/floor/tiled,
+/area/muriki/tramstation/cargeng)
 "bhP" = (
-/obj/effect/landmark/step_trap,
+/obj/effect/zone_divider,
 /obj/item/material/barbedwire/start_active,
-/turf/simulated/floor/outdoors/ice/dark/turfpack/muriki,
-/area/muriki/grounds/civ)
-"bhQ" = (
-/obj/effect/mine/frag,
 /turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
-/area/muriki/grounds/engi)
+/area/muriki/grounds/tramborder)
+"bhQ" = (
+/obj/effect/floor_decal/industrial/danger,
+/obj/machinery/flasher/portable,
+/turf/simulated/floor/tiled,
+/area/muriki/tramstation/civ)
 "bhR" = (
 /obj/effect/floor_decal/corner/red{
 	dir = 9
@@ -27607,12 +27685,274 @@
 /turf/simulated/floor/tiled,
 /area/hallway/security/armor)
 "bhS" = (
+/obj/effect/zone_divider,
+/turf/simulated/floor/outdoors/snow/gravsnow/turfpack/muriki,
+/area/muriki/grounds/civ)
+"bhT" = (
+/obj/effect/decal/cleanable/blood/old,
+/turf/simulated/floor/glass,
+/area/hallway/primary/central_two)
+"bhU" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/orange/border{
+	dir = 1
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/blood/old,
+/turf/simulated/floor/tiled,
+/area/muriki/tramstation/cargeng)
+"bhV" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/orange/border{
+	dir = 1
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/item/material/barbedwire/start_active,
+/turf/simulated/floor/tiled,
+/area/muriki/tramstation/cargeng)
+"bhW" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/orange/border{
+	dir = 1
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/barricade/sandbag,
+/turf/simulated/floor/tiled,
+/area/muriki/tramstation/cargeng)
+"bhX" = (
+/obj/item/material/barbedwire/start_active,
+/turf/simulated/floor/tiled,
+/area/muriki/tramstation/cargeng)
+"bhY" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/effect/decal/cleanable/blood/old,
+/turf/simulated/floor/tiled,
+/area/muriki/tramstation/civ)
+"bhZ" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/orange/border{
+	dir = 8
+	},
+/obj/structure/barricade/sandbag,
+/turf/simulated/floor/tiled,
+/area/muriki/tramstation/cargeng)
+"bia" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/obj/structure/barricade/sandbag,
+/obj/merge_conflict_marker{
+	name = "---Merge Conflict Marker---";
+	
+	desc = "A best-effort merge was performed. You must resolve this conflict yourself (manually) and remove this object once complete."
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/obj/structure/disposalpipe/segment,
+/turf/simulated/floor/tiled,
+/area/muriki/tramstation/cargeng)
+"bib" = (
+/obj/structure/barricade/sandbag,
+/turf/simulated/floor/tiled,
+/area/muriki/tramstation/cargeng)
+"bic" = (
+/obj/structure/barricade{
+	material = "steel"
+	},
+/turf/simulated/floor/outdoors/ice/dark/turfpack/muriki,
+/area/muriki/grounds/tramborder)
+"bid" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/blue/border{
+	dir = 1
+	},
+/obj/structure/barricade{
+	material = "steel"
+	},
+/turf/simulated/floor/tiled,
+/area/muriki/tramstation/civ)
+"bie" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner/blue/border{
+	dir = 1
+	},
+/obj/item/material/barbedwire/start_active,
+/turf/simulated/floor/tiled,
+/area/muriki/tramstation/civ)
+"bif" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/green/border{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/barricade/sandbag,
+/turf/simulated/floor/tiled/steel,
+/area/hallway/primary/central_two)
+"big" = (
+/obj/effect/decal/cleanable/blood/old,
+/turf/simulated/floor/tiled/neutral,
+/area/crew_quarters/cafeteria)
+"bih" = (
+/obj/item/beartrap{
+	anchored = 1;
+	deployed = 1
+	},
+/obj/structure/barricade{
+	material = "steel"
+	},
+/turf/simulated/floor/outdoors/ice/dark/turfpack/muriki,
+/area/muriki/grounds/tramborder)
+"bii" = (
+/obj/structure/barricade,
+/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
+/area/muriki/grounds/tramborder)
+"bij" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/turf/simulated/floor/carpet/geo,
+/area/muriki/crew/arcade/lasertag)
+"bik" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/structure/prop/rock/round,
+/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
+/area/muriki/grounds/tramborder)
+"bil" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/item/material/barbedwire/start_active,
+/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
+/area/muriki/grounds/tramborder)
+"bim" = (
+/obj/item/material/barbedwire/start_active,
+/turf/simulated/floor/outdoors/ice/dark/turfpack/muriki,
+/area/muriki/grounds/engi)
+"bin" = (
+/obj/item/material/barbedwire/start_active,
+/turf/simulated/floor/outdoors/snow/gravsnow/sidewalk_under/turfpack/muriki,
+/area/muriki/grounds/engi)
+"bio" = (
+/obj/structure/barricade{
+	material = "steel"
+	},
+/turf/simulated/floor/outdoors/snow/gravsnow/sidewalk_under/turfpack/muriki,
+/area/muriki/grounds/engi)
+"bip" = (
+/obj/effect/decal/cleanable/blood/old,
+/turf/simulated/floor/outdoors/snow/gravsnow/sidewalk_under/turfpack/muriki,
+/area/muriki/grounds/engi)
+"biq" = (
+/obj/structure/barricade{
+	material = "steel"
+	},
+/turf/simulated/floor/outdoors/ice/turfpack/muriki,
+/area/muriki/grounds/tramborder)
+"bir" = (
+/obj/structure/blade_trap/start_active,
+/turf/simulated/floor/outdoors/ice/dark/turfpack/muriki,
+/area/muriki/grounds/civ)
+"bis" = (
+/obj/effect/decal/cleanable/blood/old,
+/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
+/area/muriki/grounds/engi)
+"bit" = (
+/obj/structure/barricade{
+	material = "steel"
+	},
+/turf/simulated/floor/outdoors/ice/turfpack/muriki,
+/area/muriki/grounds/engi)
+"biu" = (
+/obj/structure/girder/reinforced,
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
+	},
+/area/muriki/grounds/engi)
+"biv" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/blue/border{
+	dir = 8
+	},
+/obj/structure/barricade{
+	material = "steel"
+	},
+/turf/simulated/floor/tiled,
+/area/hallway/primary/aft)
+"biw" = (
+/obj/effect/landmark/step_trap,
+/obj/item/material/barbedwire/start_active,
+/turf/simulated/floor/outdoors/ice/dark/turfpack/muriki,
+/area/muriki/grounds/civ)
+"bix" = (
+/obj/effect/mine/frag,
+/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
+/area/muriki/grounds/engi)
+"biy" = (
+/obj/machinery/vending/sol{
+	dir = 1
+	},
+/obj/effect/floor_decal/spline/plain,
+/turf/simulated/floor/carpet/geo,
+/area/muriki/crew/arcade)
+"biz" = (
 /obj/structure/barricade{
 	material = "steel"
 	},
 /turf/simulated/floor/outdoors/shelfice/turfpack/muriki,
 /area/muriki/grounds/engi)
-"bhT" = (
+"biA" = (
 /obj/structure/trailblazer/yellow,
 /obj/structure/railing/grey{
 	dir = 4
@@ -27625,7 +27965,7 @@
 	outdoors = 1
 	},
 /area/muriki/grounds/engi)
-"bhU" = (
+"biB" = (
 /obj/effect/floor_decal/steeldecal/steel_decals10{
 	dir = 6
 	},
@@ -27637,7 +27977,14 @@
 	outdoors = 1
 	},
 /area/muriki/grounds/engi)
-"bhV" = (
+"biC" = (
+/obj/machinery/conveyor{
+	id = "burnpit"
+	},
+/obj/random/junk,
+/turf/simulated/floor/plating,
+/area/maintenance/wastedisposal)
+"biD" = (
 /obj/structure/trailblazer/yellow,
 /obj/structure/railing/grey{
 	dir = 8
@@ -27650,7 +27997,7 @@
 	outdoors = 1
 	},
 /area/muriki/grounds/engi)
-"bhW" = (
+"biE" = (
 /obj/structure/table/woodentable,
 /obj/machinery/recharger{
 	pixel_x = -5
@@ -27660,22 +28007,22 @@
 	},
 /turf/simulated/floor/carpet/turcarpet,
 /area/hallway/secondary/entry/docking_lounge)
-"bhX" = (
+"biF" = (
 /obj/effect/decal/cleanable/blood/old,
 /turf/simulated/floor/outdoors/snow/gravsnow/sidewalk_under/turfpack/muriki,
 /area/muriki/grounds/civ)
-"bhY" = (
+"biG" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 9
 	},
 /obj/structure/girder/reinforced,
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/engineering_hallway)
-"bhZ" = (
+"biH" = (
 /obj/structure/barricade,
 /turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
 /area/muriki/grounds/engi)
-"bia" = (
+"biI" = (
 /obj/item/beartrap{
 	anchored = 1;
 	deployed = 1
@@ -27683,7 +28030,7 @@
 /obj/effect/decal/cleanable/blood/old,
 /turf/simulated/floor/outdoors/snow/gravsnow/sidewalk_under/turfpack/muriki,
 /area/muriki/grounds/engi)
-"bib" = (
+"biJ" = (
 /obj/effect/floor_decal/corner/blue{
 	dir = 10
 	},
@@ -27693,7 +28040,7 @@
 /obj/effect/decal/cleanable/blood/old,
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay3)
-"bic" = (
+"biK" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
 	},
@@ -27703,14 +28050,14 @@
 /obj/item/material/barbedwire/start_active,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/aft)
-"bid" = (
+"biL" = (
 /obj/effect/zone_divider,
 /obj/structure/girder/reinforced,
 /turf/simulated/floor/plating/snow/plating/turfpack/muriki{
 	outdoors = 1
 	},
 /area/muriki/grounds/engi)
-"bie" = (
+"biM" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
@@ -27726,11 +28073,11 @@
 /obj/effect/decal/cleanable/blood/old,
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay3)
-"bif" = (
+"biN" = (
 /obj/structure/blade_trap/start_active,
 /turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
 /area/muriki/grounds/civ)
-"big" = (
+"biO" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
@@ -27740,7 +28087,7 @@
 /obj/item/material/barbedwire/start_active,
 /turf/simulated/floor/tiled/steel,
 /area/hallway/primary/central_two)
-"bih" = (
+"biP" = (
 /obj/effect/floor_decal/corner_kafel/white/diagonal,
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -27750,49 +28097,45 @@
 /obj/structure/barricade/sandbag,
 /turf/simulated/floor/tiled/kafel_full,
 /area/crew_quarters/kitchen)
-"bii" = (
+"biQ" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 6
 	},
 /obj/structure/girder/reinforced,
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/engineering_hallway)
-"bij" = (
-/obj/machinery/atmospherics/unary/vent_scrubber/on,
-/turf/simulated/floor/carpet/geo,
-/area/muriki/crew/arcade/lasertag)
-"bik" = (
+"biR" = (
 /obj/item/material/barbedwire/start_active,
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/engineering_hallway)
-"bil" = (
+"biS" = (
 /obj/effect/floor_decal/corner/blue{
 	dir = 5
 	},
 /obj/effect/decal/cleanable/blood/old,
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay3)
-"bim" = (
+"biT" = (
 /obj/machinery/door/firedoor/glass/hidden{
 	dir = 1
 	},
 /obj/structure/barricade/sandbag,
 /turf/simulated/floor/tiled/steel_grid,
 /area/hallway/primary/central_three)
-"bin" = (
+"biU" = (
 /obj/effect/step_trigger/dephase_shadekin,
 /obj/structure/barricade{
 	material = "steel"
 	},
 /turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
 /area/muriki/grounds/terraform)
-"bio" = (
+"biV" = (
 /obj/structure/barricade{
 	material = "steel"
 	},
 /turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
 /area/muriki/grounds/terraform)
-"bip" = (
+"biW" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/lightgrey/border,
 /obj/structure/barricade{
@@ -27800,7 +28143,7 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/aft)
-"biq" = (
+"biX" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/lightgrey/border,
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -27811,7 +28154,7 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/aft)
-"bir" = (
+"biY" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/lightgrey/border,
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -27820,19 +28163,30 @@
 /obj/structure/barricade/sandbag,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/aft)
-"bis" = (
+"biZ" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/lightgrey/border,
 /obj/structure/barricade/sandbag,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/aft)
-"bit" = (
+"bja" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/green/border,
 /obj/effect/decal/cleanable/blood/old,
 /turf/simulated/floor/tiled/steel,
 /area/hallway/primary/central_three)
-"biu" = (
+"bjb" = (
+/obj/structure/table/glass,
+/obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/effect/floor_decal/corner/black{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/blue{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/virology)
+"bjc" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/green/border,
 /obj/machinery/holoposter{
@@ -27844,7 +28198,7 @@
 	},
 /turf/simulated/floor/tiled/steel,
 /area/hallway/primary/central_three)
-"biv" = (
+"bjd" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
@@ -27857,11 +28211,11 @@
 /obj/structure/barricade/sandbag,
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/engineering_hallway)
-"biw" = (
+"bje" = (
 /obj/effect/decal/cleanable/blood/old,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/aft)
-"bix" = (
+"bjf" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
@@ -27871,14 +28225,7 @@
 /obj/effect/decal/cleanable/blood/old,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/aft)
-"biy" = (
-/obj/machinery/vending/sol{
-	dir = 1
-	},
-/obj/effect/floor_decal/spline/plain,
-/turf/simulated/floor/carpet/geo,
-/area/muriki/crew/arcade)
-"biz" = (
+"bjg" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
@@ -27894,7 +28241,7 @@
 /obj/effect/decal/cleanable/blood/old,
 /turf/simulated/floor/tiled/steel,
 /area/hallway/primary/central_three)
-"biA" = (
+"bjh" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
@@ -27910,7 +28257,7 @@
 /obj/structure/barricade/sandbag,
 /turf/simulated/floor/tiled/steel,
 /area/hallway/primary/central_three)
-"biB" = (
+"bji" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 1
@@ -27924,14 +28271,7 @@
 /obj/item/material/barbedwire/start_active,
 /turf/simulated/floor/tiled/steel,
 /area/hallway/primary/central_three)
-"biC" = (
-/obj/machinery/conveyor{
-	id = "burnpit"
-	},
-/obj/random/junk,
-/turf/simulated/floor/plating,
-/area/maintenance/wastedisposal)
-"biD" = (
+"bjj" = (
 /obj/machinery/door/blast/gate/open{
 	dir = 4;
 	id = "englockdown";
@@ -27941,14 +28281,14 @@
 /obj/item/material/barbedwire/start_active,
 /turf/simulated/floor/tiled/dark,
 /area/hallway/secondary/engineering_hallway)
-"biE" = (
+"bjk" = (
 /obj/effect/floor_decal/corner/pink{
 	dir = 5
 	},
 /obj/effect/decal/cleanable/blood/old,
 /turf/simulated/floor/tiled/white,
 /area/medical/sleeper)
-"biF" = (
+"bjl" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
 	},
@@ -27960,7 +28300,7 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/aft)
-"biG" = (
+"bjm" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
 	},
@@ -27970,7 +28310,7 @@
 /obj/effect/decal/cleanable/blood/old,
 /turf/simulated/floor/tiled/steel,
 /area/hallway/primary/central_three)
-"biH" = (
+"bjn" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 1
 	},
@@ -27982,16 +28322,16 @@
 	},
 /turf/simulated/floor/tiled/steel,
 /area/hallway/primary/central_three)
-"biI" = (
+"bjo" = (
 /obj/effect/step_trigger/dephase_shadekin,
 /obj/item/material/barbedwire/start_active,
 /turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
 /area/muriki/grounds/terraform)
-"biJ" = (
+"bjp" = (
 /obj/item/material/barbedwire/start_active,
 /turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
 /area/muriki/grounds/terraform)
-"biK" = (
+"bjq" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 10
 	},
@@ -28002,262 +28342,6 @@
 /obj/effect/decal/cleanable/blood/old,
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/engineering_hallway)
-"biL" = (
-/obj/effect/floor_decal/corner/orange{
-	dir = 10
-	},
-/obj/machinery/firealarm{
-	dir = 1;
-	pixel_y = -26
-	},
-/obj/effect/decal/cleanable/blood/old,
-/turf/simulated/floor/tiled,
-/area/hallway/secondary/engineering_hallway)
-"biM" = (
-/obj/effect/floor_decal/corner/orange{
-	dir = 10
-	},
-/obj/machinery/holoposter{
-	dir = 1;
-	pixel_y = -32
-	},
-/obj/effect/decal/cleanable/blood/old,
-/turf/simulated/floor/tiled,
-/area/hallway/secondary/engineering_hallway)
-"biN" = (
-/obj/effect/floor_decal/corner/orange{
-	dir = 10
-	},
-/obj/structure/girder/reinforced,
-/turf/simulated/floor/tiled,
-/area/hallway/secondary/engineering_hallway)
-"biO" = (
-/obj/structure/barricade/sandbag,
-/turf/simulated/floor/tiled/white,
-/area/medical/reception)
-"biP" = (
-/obj/item/material/barbedwire/start_active,
-/turf/simulated/floor/tiled/white,
-/area/medical/reception)
-"biQ" = (
-/obj/machinery/flasher/portable,
-/turf/simulated/floor/tiled,
-/area/hallway/primary/aft)
-"biR" = (
-/obj/effect/step_trigger/dephase_shadekin,
-/obj/structure/barricade/sandbag,
-/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
-/area/muriki/grounds/terraform)
-"biS" = (
-/obj/structure/barricade/sandbag,
-/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
-/area/muriki/grounds/terraform)
-"biT" = (
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/structure/barricade/sandbag,
-/turf/simulated/floor/tiled,
-/area/hallway/secondary/engineering_hallway)
-"biU" = (
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/effect/decal/cleanable/blood/old,
-/turf/simulated/floor/tiled,
-/area/hallway/secondary/engineering_hallway)
-"biV" = (
-/obj/effect/floor_decal/corner/blue{
-	dir = 5
-	},
-/obj/effect/decal/cleanable/blood/old,
-/turf/simulated/floor/tiled,
-/area/hallway/secondary/engineering_hallway)
-"biW" = (
-/obj/effect/floor_decal/corner/blue{
-	dir = 5
-	},
-/obj/structure/girder/reinforced,
-/turf/simulated/floor/tiled,
-/area/hallway/secondary/engineering_hallway)
-"biX" = (
-/obj/effect/floor_decal/corner/orange{
-	dir = 5
-	},
-/obj/structure/girder/reinforced,
-/turf/simulated/floor/tiled,
-/area/hallway/secondary/engineering_hallway)
-"biY" = (
-/obj/effect/floor_decal/corner/paleblue{
-	dir = 5
-	},
-/obj/effect/decal/cleanable/blood/old,
-/turf/simulated/floor/tiled/white,
-/area/medical/sleeper)
-"biZ" = (
-/obj/item/material/barbedwire/start_active,
-/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
-/area/muriki/grounds/sci)
-"bja" = (
-/obj/effect/floor_decal/corner/white{
-	dir = 6
-	},
-/obj/machinery/light{
-	dir = 4
-	},
-/obj/machinery/deployable/barrier,
-/turf/simulated/floor/tiled/dark,
-/area/bridge/hallway)
-"bjb" = (
-/obj/structure/table/glass,
-/obj/machinery/atmospherics/unary/vent_pump/on,
-/obj/effect/floor_decal/corner/black{
-	dir = 5
-	},
-/obj/effect/floor_decal/corner/blue{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/white,
-/area/medical/virology)
-"bjc" = (
-/obj/structure/barricade{
-	material = "steel"
-	},
-/turf/simulated/floor/outdoors/shelfice/turfpack/muriki,
-/area/muriki/grounds/sci)
-"bjd" = (
-/obj/effect/floor_decal/corner/white{
-	dir = 5
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/obj/structure/barricade/sandbag,
-/turf/simulated/floor/tiled/dark,
-/area/bridge/hallway)
-"bje" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
-	},
-/obj/structure/barricade{
-	material = "steel"
-	},
-/turf/simulated/floor/outdoors/snow/gravsnow/sidewalk_under/turfpack/muriki,
-/area/muriki/grounds/engi)
-"bjf" = (
-/obj/structure/girder/reinforced,
-/turf/simulated/floor/tiled/techfloor/grid/turfpack/muriki{
-	outdoors = 0
-	},
-/area/engineering/engine_room)
-"bjg" = (
-/obj/structure/prop/rock/small,
-/obj/structure/barricade{
-	material = "steel"
-	},
-/turf/simulated/floor/outdoors/ice/turfpack/muriki,
-/area/muriki/grounds/sci)
-"bjh" = (
-/obj/structure/railing{
-	dir = 1
-	},
-/obj/structure/girder/reinforced,
-/turf/simulated/floor/tiled/techfloor/grid/turfpack/muriki{
-	outdoors = 0
-	},
-/area/engineering/engine_room)
-"bji" = (
-/obj/item/material/barbedwire/start_active,
-/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
-/area/muriki/grounds/med)
-"bjj" = (
-/obj/item/beartrap{
-	anchored = 1;
-	deployed = 1
-	},
-/obj/structure/barricade{
-	material = "steel"
-	},
-/turf/simulated/floor/outdoors/ice/dark/turfpack/muriki,
-/area/muriki/grounds/sci)
-"bjk" = (
-/obj/structure/girder/reinforced,
-/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
-	outdoors = 1
-	},
-/area/engineering/engine_room)
-"bjl" = (
-/obj/structure/barricade{
-	material = "steel"
-	},
-/turf/simulated/floor/outdoors/ice/turfpack/muriki,
-/area/muriki/grounds/sci)
-"bjm" = (
-/obj/structure/disposalpipe/segment,
-/obj/effect/floor_decal/corner/white{
-	dir = 9
-	},
-/obj/structure/barricade{
-	material = "steel"
-	},
-/turf/simulated/floor/tiled/dark,
-/area/bridge/hallway)
-"bjn" = (
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
-/obj/structure/disposalpipe/segment,
-/obj/effect/floor_decal/corner/white{
-	dir = 6
-	},
-/obj/structure/barricade{
-	material = "steel"
-	},
-/turf/simulated/floor/tiled/dark,
-/area/bridge/hallway)
-"bjo" = (
-/obj/structure/disposalpipe/segment,
-/obj/effect/floor_decal/corner/white{
-	dir = 9
-	},
-/obj/machinery/deployable/barrier,
-/turf/simulated/floor/tiled/dark,
-/area/bridge/hallway)
-"bjp" = (
-/obj/structure/disposalpipe/segment,
-/obj/structure/cable/green{
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/deployable/barrier,
-/turf/simulated/floor/tiled/dark,
-/area/bridge/hallway)
-"bjq" = (
-/obj/effect/mine/frag,
-/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
-/area/engineering/engine_room)
 "bjr" = (
 /obj/structure/disposalpipe/segment{
 	dir = 2;
@@ -28269,33 +28353,55 @@
 /turf/simulated/floor/tiled/dark,
 /area/bridge/hallway)
 "bjs" = (
-/obj/structure/barricade{
-	material = "steel"
+/obj/effect/floor_decal/corner/orange{
+	dir = 10
 	},
-/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
-	outdoors = 1
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -26
 	},
-/area/engineering/engine_room)
+/obj/effect/decal/cleanable/blood/old,
+/turf/simulated/floor/tiled,
+/area/hallway/secondary/engineering_hallway)
 "bjt" = (
-/obj/structure/cable/green{
-	icon_state = "4-8"
+/obj/effect/floor_decal/corner/orange{
+	dir = 10
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
+/obj/machinery/holoposter{
+	dir = 1;
+	pixel_y = -32
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/structure/blade_trap/start_active,
-/turf/simulated/floor/tiled/dark,
-/area/bridge/hallway)
+/obj/effect/decal/cleanable/blood/old,
+/turf/simulated/floor/tiled,
+/area/hallway/secondary/engineering_hallway)
 "bju" = (
-/obj/machinery/atmospherics/pipe/simple/heat_exchanging{
-	dir = 6
+/obj/effect/floor_decal/corner/orange{
+	dir = 10
 	},
-/obj/effect/mine/frag,
+/obj/structure/girder/reinforced,
+/turf/simulated/floor/tiled,
+/area/hallway/secondary/engineering_hallway)
+"bjv" = (
+/obj/structure/barricade/sandbag,
+/turf/simulated/floor/tiled/white,
+/area/medical/reception)
+"bjw" = (
+/obj/item/material/barbedwire/start_active,
+/turf/simulated/floor/tiled/white,
+/area/medical/reception)
+"bjx" = (
+/obj/machinery/flasher/portable,
+/turf/simulated/floor/tiled,
+/area/hallway/primary/aft)
+"bjy" = (
+/obj/effect/step_trigger/dephase_shadekin,
+/obj/structure/barricade/sandbag,
 /turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
-/area/engineering/engine_room)
+/area/muriki/grounds/terraform)
+"bjz" = (
+/obj/structure/barricade/sandbag,
+/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
+/area/muriki/grounds/terraform)
 "bjA" = (
 /obj/effect/floor_decal/corner/blue/full{
 	dir = 8
@@ -28324,6 +28430,66 @@
 /obj/item/clothing/head/helmet/laserproof,
 /turf/simulated/floor/tiled/dark,
 /area/security/tactical)
+"bjB" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/barricade/sandbag,
+/turf/simulated/floor/tiled,
+/area/hallway/secondary/engineering_hallway)
+"bjC" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/blood/old,
+/turf/simulated/floor/tiled,
+/area/hallway/secondary/engineering_hallway)
+"bjD" = (
+/obj/effect/floor_decal/corner/blue{
+	dir = 5
+	},
+/obj/effect/decal/cleanable/blood/old,
+/turf/simulated/floor/tiled,
+/area/hallway/secondary/engineering_hallway)
+"bjE" = (
+/obj/effect/floor_decal/corner/blue{
+	dir = 5
+	},
+/obj/structure/girder/reinforced,
+/turf/simulated/floor/tiled,
+/area/hallway/secondary/engineering_hallway)
+"bjF" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 5
+	},
+/obj/structure/girder/reinforced,
+/turf/simulated/floor/tiled,
+/area/hallway/secondary/engineering_hallway)
+"bjG" = (
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 5
+	},
+/obj/effect/decal/cleanable/blood/old,
+/turf/simulated/floor/tiled/white,
+/area/medical/sleeper)
 "bjH" = (
 /obj/structure/cable/green{
 	icon_state = "2-8"
@@ -28348,6 +28514,141 @@
 /obj/structure/catwalk,
 /turf/simulated/floor,
 /area/maintenance/substation/security)
+"bjI" = (
+/obj/item/material/barbedwire/start_active,
+/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
+/area/muriki/grounds/sci)
+"bjJ" = (
+/obj/effect/floor_decal/corner/white{
+	dir = 6
+	},
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/machinery/deployable/barrier,
+/turf/simulated/floor/tiled/dark,
+/area/bridge/hallway)
+"bjK" = (
+/obj/structure/barricade{
+	material = "steel"
+	},
+/turf/simulated/floor/outdoors/shelfice/turfpack/muriki,
+/area/muriki/grounds/sci)
+"bjL" = (
+/obj/effect/floor_decal/corner/white{
+	dir = 5
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/structure/barricade/sandbag,
+/turf/simulated/floor/tiled/dark,
+/area/bridge/hallway)
+"bjM" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/structure/barricade{
+	material = "steel"
+	},
+/turf/simulated/floor/outdoors/snow/gravsnow/sidewalk_under/turfpack/muriki,
+/area/muriki/grounds/engi)
+"bjN" = (
+/obj/structure/girder/reinforced,
+/turf/simulated/floor/tiled/techfloor/grid/turfpack/muriki{
+	outdoors = 0
+	},
+/area/engineering/engine_room)
+"bjO" = (
+/obj/structure/prop/rock/small,
+/obj/structure/barricade{
+	material = "steel"
+	},
+/turf/simulated/floor/outdoors/ice/turfpack/muriki,
+/area/muriki/grounds/sci)
+"bjP" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/structure/girder/reinforced,
+/turf/simulated/floor/tiled/techfloor/grid/turfpack/muriki{
+	outdoors = 0
+	},
+/area/engineering/engine_room)
+"bjQ" = (
+/obj/item/material/barbedwire/start_active,
+/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
+/area/muriki/grounds/med)
+"bjR" = (
+/obj/item/beartrap{
+	anchored = 1;
+	deployed = 1
+	},
+/obj/structure/barricade{
+	material = "steel"
+	},
+/turf/simulated/floor/outdoors/ice/dark/turfpack/muriki,
+/area/muriki/grounds/sci)
+"bjS" = (
+/obj/structure/girder/reinforced,
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
+	},
+/area/engineering/engine_room)
+"bjT" = (
+/obj/structure/barricade{
+	material = "steel"
+	},
+/turf/simulated/floor/outdoors/ice/turfpack/muriki,
+/area/muriki/grounds/sci)
+"bjU" = (
+/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/corner/white{
+	dir = 9
+	},
+/obj/structure/barricade{
+	material = "steel"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/bridge/hallway)
+"bjV" = (
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/corner/white{
+	dir = 6
+	},
+/obj/structure/barricade{
+	material = "steel"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/bridge/hallway)
+"bjW" = (
+/obj/structure/disposalpipe/segment,
+/obj/effect/floor_decal/corner/white{
+	dir = 9
+	},
+/obj/machinery/deployable/barrier,
+/turf/simulated/floor/tiled/dark,
+/area/bridge/hallway)
+"bjX" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/deployable/barrier,
+/turf/simulated/floor/tiled/dark,
+/area/bridge/hallway)
+"bjY" = (
+/obj/effect/mine/frag,
+/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
+/area/engineering/engine_room)
 "bjZ" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -28357,6 +28658,34 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/maintenance/disposal)
+"bka" = (
+/obj/structure/barricade{
+	material = "steel"
+	},
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki{
+	outdoors = 1
+	},
+/area/engineering/engine_room)
+"bkb" = (
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/blade_trap/start_active,
+/turf/simulated/floor/tiled/dark,
+/area/bridge/hallway)
+"bkc" = (
+/obj/machinery/atmospherics/pipe/simple/heat_exchanging{
+	dir = 6
+	},
+/obj/effect/mine/frag,
+/turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
+/area/engineering/engine_room)
 "bkd" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -28436,6 +28765,9 @@
 	},
 /obj/machinery/alarm{
 	pixel_y = 26
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/muriki/tramstation/civ)
@@ -29178,6 +29510,9 @@
 	},
 /obj/machinery/station_map{
 	pixel_y = 32
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/muriki/tramstation/civ)
@@ -30688,7 +31023,6 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/effect/decal/cleanable/blood/old,
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/exit)
 "caF" = (
@@ -36105,7 +36439,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
-/obj/structure/disposalpipe/segment,
+/obj/structure/disposalpipe/junction,
 /turf/simulated/floor/tiled/steel,
 /area/hallway/secondary/exit)
 "ecm" = (
@@ -37145,15 +37479,6 @@
 /obj/effect/decal/cleanable/blood/old,
 /turf/simulated/floor/carpet,
 /area/muriki/crew/casino)
-"euQ" = (
-/obj/structure/railing{
-	dir = 4
-	},
-/obj/effect/floor_decal/industrial/warning/dust,
-/obj/structure/railing,
-/obj/effect/landmark/holiday_event_spawn,
-/turf/simulated/floor/plating,
-/area/muriki/tramstation/civ)
 "euX" = (
 /obj/machinery/disposal,
 /obj/structure/disposalpipe/trunk{
@@ -41516,6 +41841,9 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/foyer)
 "gai" = (
@@ -43445,6 +43773,7 @@
 	pixel_x = -28;
 	pixel_y = 27
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/milspec,
 /area/janitor)
 "gLT" = (
@@ -44417,6 +44746,9 @@
 	name = "Station Intercom (General)";
 	pixel_y = 21
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/foyer)
 "hcG" = (
@@ -44740,6 +45072,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/effect/floor_decal/industrial/warning,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/quartermaster/foyer)
 "hhM" = (
@@ -44791,6 +45124,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 4
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/quartermaster/foyer)
 "him" = (
@@ -45328,9 +45662,6 @@
 /turf/simulated/floor,
 /area/maintenance/substation/phoronics)
 "hro" = (
-/obj/structure/railing{
-	dir = 4
-	},
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 1
 	},
@@ -45338,7 +45669,8 @@
 	dir = 1;
 	flags = null
 	},
-/obj/effect/landmark/holiday_event_spawn,
+/obj/machinery/disposal,
+/obj/structure/disposalpipe/trunk,
 /turf/simulated/floor/plating,
 /area/muriki/tramstation/civ)
 "hrt" = (
@@ -47505,7 +47837,9 @@
 	},
 /obj/machinery/disposal,
 /obj/structure/disposalpipe/trunk,
-/obj/effect/floor_decal/industrial/warning/full,
+/obj/effect/floor_decal/corner/beige/full{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/janitor)
 "hZL" = (
@@ -53262,6 +53596,9 @@
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 1
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/muriki/tramstation/civ)
 "jUF" = (
@@ -55204,6 +55541,7 @@
 	id = "cargolock";
 	name = "Cargo Lockdown"
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/techmaint,
 /area/janitor)
 "kAu" = (
@@ -55312,10 +55650,11 @@
 /turf/simulated/wall/r_wall,
 /area/maintenance/engineering)
 "kDw" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
 /obj/machinery/hologram/holopad,
+/obj/structure/disposalpipe/junction{
+	dir = 4;
+	icon_state = "pipe-j2"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/maintenance/disposal)
 "kDA" = (
@@ -58788,13 +59127,14 @@
 /turf/simulated/floor/tiled,
 /area/security/lobby)
 "lMp" = (
-/obj/structure/railing,
-/obj/structure/railing{
-	dir = 8
-	},
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 1
 	},
+/obj/machinery/disposal,
+/obj/structure/window/reinforced/holiday{
+	dir = 1
+	},
+/obj/structure/disposalpipe/trunk,
 /turf/simulated/floor/plating,
 /area/muriki/tramstation/civ)
 "lMu" = (
@@ -73515,10 +73855,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/office)
-"rby" = (
-/obj/machinery/door/airlock/glass,
-/turf/simulated/floor/tiled/steel_grid,
-/area/hallway/secondary/exit)
 "rbJ" = (
 /obj/machinery/door/airlock/maintenance/int,
 /turf/simulated/floor/plating/turfpack/muriki,
@@ -74298,15 +74634,6 @@
 /obj/effect/landmark/holiday_event_spawn,
 /turf/simulated/floor/tiled/dark,
 /area/bridge/hallway)
-"rsn" = (
-/obj/effect/floor_decal/borderfloor/corner{
-	dir = 1
-	},
-/obj/effect/floor_decal/corner/lightgrey/bordercorner{
-	dir = 1
-	},
-/turf/simulated/floor/tiled,
-/area/hallway/secondary/exit)
 "rtb" = (
 /obj/item/clothing/shoes/leg_guard/combat,
 /obj/item/clothing/shoes/leg_guard/combat,
@@ -75345,13 +75672,14 @@
 "rMu" = (
 /obj/effect/floor_decal/borderfloor,
 /obj/effect/floor_decal/corner/brown/border,
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
 /obj/structure/sign/scenery/map/right_outpost21{
 	pixel_y = -32
 	},
 /obj/machinery/light,
+/obj/structure/disposalpipe/junction{
+	dir = 4;
+	icon_state = "pipe-j2"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/maintenance/disposal)
 "rML" = (
@@ -79268,6 +79596,9 @@
 	c_tag = "CIV - Engineering Tram Northwest";
 	dir = 1
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/muriki/tramstation/cargeng)
 "tfr" = (
@@ -82474,19 +82805,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/quartermaster/delivery)
-"uic" = (
-/obj/structure/railing{
-	dir = 4
-	},
-/obj/effect/floor_decal/industrial/warning/dust{
-	dir = 1
-	},
-/obj/effect/landmark/holiday_event_spawn,
-/obj/structure/railing{
-	dir = 1
-	},
-/turf/simulated/floor/plating,
-/area/muriki/tramstation/waste)
 "uik" = (
 /mob/living/simple_mob/vore/alienanimals/jil,
 /turf/simulated/floor/flesh/turfpack/muriki,
@@ -82682,9 +83000,8 @@
 /turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
 /area/muriki/grounds/terraform)
 "ulQ" = (
-/obj/structure/disposalpipe/segment{
-	dir = 8;
-	icon_state = "pipe-c"
+/obj/structure/disposalpipe/junction{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/janitor)
@@ -83517,13 +83834,12 @@
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/engineering_hallway)
 "uAf" = (
-/obj/structure/railing{
+/obj/effect/floor_decal/industrial/warning/dust,
+/obj/machinery/disposal,
+/obj/structure/disposalpipe/trunk{
 	dir = 1
 	},
-/obj/structure/railing{
-	dir = 8
-	},
-/obj/effect/floor_decal/industrial/warning/dust,
+/obj/structure/window/reinforced/holiday,
 /turf/simulated/floor/plating,
 /area/muriki/tramstation/civ)
 "uAB" = (
@@ -92293,6 +92609,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/janitor)
 "xwC" = (
@@ -96075,7 +96395,7 @@ aGP
 aGP
 aGP
 aGP
-eoE
+aFQ
 uBv
 axk
 xzw
@@ -96724,7 +97044,7 @@ aGP
 aGP
 aGP
 eoE
-aLx
+aMW
 vaN
 hIW
 oIq
@@ -97047,8 +97367,8 @@ aGP
 aGP
 aGP
 aGP
-aLQ
-aLA
+aNr
+aMX
 vaN
 kXY
 jwu
@@ -97371,10 +97691,10 @@ aGP
 aGP
 aGP
 aGP
-gIo
-sBU
-vaN
-kXY
+aFU
+aFF
+aFA
+aFz
 rMu
 ikC
 hMt
@@ -97533,7 +97853,7 @@ aGP
 aGP
 aGP
 aGP
-gAF
+aGj
 sBU
 vaN
 ulW
@@ -98343,10 +98663,10 @@ aGP
 aGP
 aGP
 aGP
-uic
-sBU
-vaN
-kXY
+aFU
+aFF
+aFA
+aFz
 kDw
 abd
 dLx
@@ -98667,8 +98987,8 @@ aGP
 aGP
 aeC
 aGP
-aLT
-aLE
+aNs
+aMY
 vaN
 kXY
 rPM
@@ -98830,7 +99150,7 @@ aGP
 aGP
 aGP
 gIo
-aLx
+aMW
 vaN
 vSh
 lQL
@@ -98992,10 +99312,10 @@ aGP
 aGP
 aGP
 gAF
-aLx
+aMW
 amC
 kXY
-aKf
+aMp
 foE
 biC
 aun
@@ -99639,7 +99959,7 @@ aGP
 aGP
 aGP
 aGP
-gAF
+aGl
 sBU
 vaN
 kXY
@@ -100288,7 +100608,7 @@ wUG
 cOq
 cOq
 jHV
-aLG
+aNc
 oYY
 klO
 lzA
@@ -100450,11 +100770,11 @@ wUG
 cOq
 cOq
 jHV
-aLG
+aNc
 oYY
-aKq
-aJt
-aJt
+aMA
+aLL
+aLL
 yiH
 awi
 amM
@@ -100612,11 +100932,11 @@ wUG
 cOq
 cOq
 jHV
-aLG
+aNc
 oYY
 crK
 wjC
-aJt
+aLL
 akX
 qAN
 vtA
@@ -100775,7 +101095,7 @@ cOq
 cOq
 jHV
 igC
-aLa
+aMQ
 huB
 emb
 jSy
@@ -100936,9 +101256,9 @@ wUG
 cOq
 cOq
 jHV
-aLH
+aNd
 oYY
-aKt
+aMB
 vaN
 jwV
 pvP
@@ -101098,11 +101418,11 @@ wUG
 cOq
 cOq
 jHV
-aLH
-aLa
+aNd
+aMQ
 qit
 vaN
-aJB
+aLM
 avy
 tph
 toQ
@@ -101259,10 +101579,10 @@ cOq
 wUG
 cOq
 cOq
-aLJ
-aLJ
-aLl
-aKE
+aNj
+aNj
+aMR
+aMG
 hcT
 xze
 avz
@@ -101421,8 +101741,8 @@ cOq
 wUG
 cOq
 cOq
-aLL
-aLL
+aNk
+aNk
 jqI
 xEF
 gAm
@@ -101583,7 +101903,7 @@ cOq
 wUG
 cOq
 cOq
-aLL
+aNk
 igC
 wpx
 fOy
@@ -101602,7 +101922,7 @@ egO
 ckb
 sSm
 vwb
-aFz
+aEY
 fVD
 fVD
 fVD
@@ -101745,7 +102065,7 @@ cOq
 wUG
 cOq
 cOq
-aLL
+aNk
 igC
 oYY
 qId
@@ -101764,7 +102084,7 @@ kzM
 flF
 wkm
 ykJ
-aFA
+aFd
 aGk
 aGk
 jXH
@@ -101907,7 +102227,7 @@ mWW
 fhe
 cOq
 cOq
-aLL
+aNk
 igC
 oYY
 hqG
@@ -101926,7 +102246,7 @@ qxk
 ows
 sjF
 ykJ
-aFF
+aFe
 aGk
 jXH
 jXH
@@ -102069,9 +102389,9 @@ cOq
 cOq
 cOq
 cOq
-aLL
+aNk
 igC
-aLa
+aMQ
 nfs
 aQw
 oBL
@@ -102500,7 +102820,7 @@ jms
 jms
 jms
 jms
-bin
+biU
 mFd
 aIt
 fBh
@@ -102570,8 +102890,8 @@ fcb
 wlY
 sbr
 bGw
-aFA
-aFA
+aFd
+aFd
 aMI
 aGq
 aMI
@@ -102662,7 +102982,7 @@ jms
 jms
 jms
 cnb
-bin
+biU
 cle
 aIt
 aIt
@@ -102713,9 +103033,9 @@ bfT
 bfT
 bfT
 bfT
-aMp
-aMp
-aMp
+aNH
+aNH
+aNH
 qDk
 lTy
 qVJ
@@ -102732,7 +103052,7 @@ boN
 jWE
 xGE
 tqt
-aFA
+aFd
 tAo
 aMI
 aMI
@@ -102824,7 +103144,7 @@ jms
 jms
 jms
 cnb
-bio
+biV
 asD
 aIt
 aIt
@@ -102894,7 +103214,7 @@ gaU
 iya
 vYf
 kaC
-aGl
+aFo
 aGu
 aMI
 aMI
@@ -102986,7 +103306,7 @@ jms
 jms
 cnb
 cnb
-bio
+biV
 asD
 aIt
 aIt
@@ -103047,7 +103367,7 @@ jbS
 jbS
 oLo
 wIv
-aIu
+aLt
 wCM
 tVm
 uut
@@ -103145,10 +103465,10 @@ jms
 jms
 jms
 jms
-biI
+bjo
 cnb
 aIt
-bio
+biV
 gyb
 aIt
 aIr
@@ -103306,11 +103626,11 @@ nLl
 jms
 jms
 jms
-biR
-biI
+bjy
+bjo
 aIt
 aIt
-bio
+biV
 asD
 aIt
 aIr
@@ -103468,11 +103788,11 @@ awE
 nLl
 jms
 awz
-biR
-biJ
+bjy
+bjp
 aIt
 aIt
-bio
+biV
 asD
 aIt
 aIr
@@ -103630,11 +103950,11 @@ ecA
 awD
 nLl
 awA
-biS
-biJ
+bjz
+bjp
 aIt
 aIt
-bio
+biV
 cle
 aIt
 aIr
@@ -103792,11 +104112,11 @@ jsm
 ecA
 awC
 iku
-biJ
-biJ
+bjp
+bjp
 aIt
 aIt
-bio
+biV
 asD
 aIt
 aIr
@@ -103958,7 +104278,7 @@ aIt
 aIt
 aIt
 aIt
-bio
+biV
 asD
 aIt
 aIr
@@ -104115,12 +104435,12 @@ nLl
 awF
 aSd
 vRJ
-biR
-biS
-biJ
+bjy
+bjz
+bjp
 aIt
 aIt
-bio
+biV
 gyb
 aIt
 aIr
@@ -104276,13 +104596,13 @@ awz
 awK
 awG
 cnb
-biR
+bjy
 awB
-biS
-biJ
+bjz
+bjp
 aIt
 aIt
-bio
+biV
 asD
 aIt
 aIt
@@ -104433,18 +104753,18 @@ jms
 jms
 jms
 jms
-biR
-biR
-biS
-biJ
+bjy
+bjy
+bjz
+bjp
 aIt
-biS
-biS
-biS
-biJ
+bjz
+bjz
+bjz
+bjp
 aIt
 aIt
-bio
+biV
 asI
 hcb
 aIt
@@ -104594,16 +104914,16 @@ jms
 jms
 jms
 jms
-biI
-biI
-biJ
-biJ
-biJ
+bjo
+bjo
+bjp
+bjp
+bjp
 aIt
-biJ
-biJ
-biJ
-biJ
+bjp
+bjp
+bjp
+bjp
 aIt
 aIt
 bVH
@@ -104768,7 +105088,7 @@ aIt
 aIt
 aIt
 aIt
-bio
+biV
 cle
 ulD
 aIt
@@ -104930,7 +105250,7 @@ aIt
 aIt
 aIt
 aIt
-bio
+biV
 asD
 aIt
 aIt
@@ -105092,7 +105412,7 @@ aIt
 aIt
 aIt
 aIt
-bio
+biV
 gyb
 aIt
 aIt
@@ -105254,7 +105574,7 @@ aIt
 aIt
 aIt
 aIt
-bio
+biV
 asD
 aIt
 aIt
@@ -105402,20 +105722,20 @@ lRN
 lRN
 lRN
 pkz
-bio
-bio
-bio
-bio
-bio
-bio
-bio
-bio
-bio
-bio
-bio
-bio
-bio
-bio
+biV
+biV
+biV
+biV
+biV
+biV
+biV
+biV
+biV
+biV
+biV
+biV
+biV
+biV
 fBh
 cle
 aIt
@@ -106453,7 +106773,7 @@ act
 qVQ
 ady
 ady
-aGY
+aKt
 ady
 bhD
 aeh
@@ -106612,10 +106932,10 @@ aal
 aal
 abZ
 acu
-aHP
-aHy
+aLp
+aLa
 bhD
-aHi
+aKE
 bhD
 adV
 aei
@@ -106775,8 +107095,8 @@ abM
 aca
 avw
 acR
-aHq
-aHq
+aKV
+aKV
 pAZ
 pAZ
 adn
@@ -106936,8 +107256,8 @@ aby
 abN
 acb
 pAZ
-aHq
-aHq
+aKV
+aKV
 adn
 adz
 adG
@@ -107098,8 +107418,8 @@ abz
 aal
 dCZ
 acv
-aHC
-aHC
+aLl
+aLl
 ifl
 aal
 aal
@@ -109183,7 +109503,7 @@ aGf
 iYO
 iYO
 iYO
-aOl
+aPo
 iYO
 aGg
 aGf
@@ -109342,16 +109662,16 @@ asV
 asV
 iYO
 iYO
-aOl
-aOl
-aOl
-aOl
+aPo
+aPo
+aPo
+aPo
 iYO
 iYO
 aGg
-aNq
-aNq
-aMY
+aOC
+aOC
+aOv
 asV
 aGf
 asV
@@ -109501,19 +109821,19 @@ aHB
 asV
 asV
 asV
-aPV
-aNJ
-aPN
+bgA
+aOQ
+beo
 iYO
-aOz
-aOz
-aOz
-aOl
-aNZ
-aNJ
-aNs
+aPC
+aPC
+aPC
+aPo
+aPg
+aOQ
+aOE
 aGf
-aMY
+aOv
 asV
 asV
 asV
@@ -109664,19 +109984,19 @@ asV
 asV
 asV
 asV
-aPO
-aNS
-aNR
-aNS
+bgx
+aOZ
+aOX
+aOZ
+aQe
+aOZ
+aOX
+aOZ
 aOU
-aNS
-aNR
-aNS
-aNP
 asV
-aMY
+aOv
 asV
-aMY
+aOv
 asV
 asV
 asV
@@ -109827,17 +110147,17 @@ asV
 asV
 asV
 asV
-aNS
-aNS
-aNS
-aOX
-aNS
-aNS
-aNS
+aOZ
+aOZ
+aOZ
+aQh
+aOZ
+aOZ
+aOZ
 asV
 asV
-aMY
-aMY
+aOv
+aOv
 asV
 asV
 asV
@@ -109989,13 +110309,13 @@ asV
 asV
 asV
 asV
-aNS
-aOo
-aNS
 aOZ
-aNS
-aOo
-aNS
+aPq
+aOZ
+aQi
+aOZ
+aPq
+aOZ
 asV
 asV
 asV
@@ -110143,22 +110463,22 @@ aIh
 aqS
 aID
 aqq
-aMp
+aNH
 aHB
 aHB
 asV
 asV
 asV
 asV
-aNR
-aNS
-aPy
-aOB
-aOA
-aOA
-aOt
-aNS
-aNR
+aOX
+aOZ
+aUK
+aPI
+aPG
+aPG
+aPr
+aOZ
+aOX
 asV
 asV
 asV
@@ -110312,15 +110632,15 @@ asV
 asV
 asV
 asV
-aNS
-aNS
-aPz
-aOA
-aPe
-aOB
-aOt
-aNS
-aNS
+aOZ
+aOZ
+aUL
+aPG
+aQj
+aPI
+aPr
+aOZ
+aOZ
 asV
 asV
 asV
@@ -110467,22 +110787,22 @@ aIh
 aIh
 aID
 aHB
-aMp
+aNH
 aHB
-aOb
+aPi
 asV
 asV
 asV
 asV
-aNS
-aNS
-aPz
-aOA
-aOB
-aOB
-aOt
-aNS
-aNS
+aOZ
+aOZ
+aUL
+aPG
+aPI
+aPI
+aPr
+aOZ
+aOZ
 asV
 asV
 asV
@@ -110629,22 +110949,22 @@ aIh
 aIh
 aIE
 aHB
-aMp
-aOb
-aOb
+aNH
+aPi
+aPi
 asV
 asV
 aML
 asV
-aNV
-aNS
-aNS
-aPn
-aPf
-aOC
-aNS
-aNS
-aNV
+aPe
+aOZ
+aOZ
+aUB
+aQk
+aPK
+aOZ
+aOZ
+aPe
 asV
 asV
 asV
@@ -110799,13 +111119,13 @@ asV
 asV
 asV
 asV
-aPO
-aNS
-aPo
-aPg
-aOD
-aNS
-aNP
+bgx
+aOZ
+aUD
+aQm
+aPN
+aOZ
+aOU
 asV
 asV
 asV
@@ -110962,11 +111282,11 @@ asV
 asV
 asV
 asV
-aNS
-aPq
-aPh
-aOE
-aNS
+aOZ
+aUE
+aQq
+aPO
+aOZ
 asV
 asV
 asV
@@ -111124,11 +111444,11 @@ asV
 asV
 asV
 asV
-aPB
-aOF
-aPi
-aOF
-aOu
+aUM
+aPR
+aQs
+aPR
+aPx
 asV
 asV
 asV
@@ -111286,11 +111606,11 @@ aGf
 asV
 asV
 asV
-aNS
-aNS
-aNS
-aNS
-aNS
+aOZ
+aOZ
+aOZ
+aOZ
+aOZ
 asV
 asV
 asV
@@ -111448,10 +111768,10 @@ aGf
 asV
 asV
 asV
-aPC
-aPr
-aNS
-aOH
+aUX
+aUI
+aOZ
+aPU
 asV
 asV
 asV
@@ -111612,7 +111932,7 @@ asV
 asV
 asV
 asV
-aPj
+aQt
 asV
 asV
 asV
@@ -112392,7 +112712,7 @@ fxo
 fxo
 fxo
 fxo
-bhF
+bim
 asb
 arZ
 arQ
@@ -112554,7 +112874,7 @@ fxo
 fxo
 aPb
 fxo
-bhG
+bin
 asc
 arY
 arY
@@ -112714,7 +113034,7 @@ ara
 pXe
 ara
 ara
-bhQ
+bix
 ara
 arI
 asc
@@ -112862,9 +113182,9 @@ ara
 ara
 aJD
 ara
-bhL
-bhL
-bhL
+bis
+bis
+bis
 aJD
 nhe
 ara
@@ -112878,7 +113198,7 @@ ara
 ara
 ara
 ara
-bhG
+bin
 asc
 arY
 arY
@@ -113023,13 +113343,13 @@ arI
 arI
 arI
 arI
-bhI
-bia
-bhI
-bhI
-bhI
-bhI
-bhI
+bip
+biI
+bip
+bip
+bip
+bip
+bip
 arI
 arI
 arI
@@ -113040,7 +113360,7 @@ ara
 ara
 ara
 ara
-bhG
+bin
 asd
 asa
 arR
@@ -113059,11 +113379,11 @@ aIH
 aIH
 aqO
 aHB
-aMp
-aOb
+aNH
+aPi
 aHB
 asV
-aMY
+aOv
 asV
 asV
 asV
@@ -113187,22 +113507,22 @@ ara
 ara
 ara
 uvb
-bhN
-bhN
-bhN
-bhN
-bhN
-bhN
-bhN
-bhN
+biu
+biu
+biu
+biu
+biu
+biu
+biu
+biu
 ara
 arI
 arI
 arI
 arI
 arI
-bhI
-bhH
+bip
+bio
 iCx
 iCx
 iCx
@@ -113222,10 +113542,10 @@ aIH
 aqP
 aHB
 bfT
-aOb
-aOb
-aMY
-aMY
+aPi
+aPi
+aOv
+aOv
 aML
 asV
 asV
@@ -113356,21 +113676,21 @@ dqj
 sCB
 sCB
 vVi
-bhN
+biu
 ara
-bhI
+bip
 arI
 arI
 ara
 ara
-bhL
-bhI
+bis
+bip
 asm
 asw
 asq
 aso
-bgY
-bgW
+bhH
+bhF
 aqD
 rwx
 aqD
@@ -113501,7 +113821,7 @@ ara
 asE
 fxo
 mej
-bje
+bjM
 pZP
 pZP
 pZP
@@ -113518,9 +113838,9 @@ mCR
 tYd
 smH
 qap
-bhN
-bia
-bhI
+biu
+biI
+bip
 arI
 ara
 ara
@@ -113680,9 +114000,9 @@ sVN
 ndG
 fdp
 bgh
-bhI
-bhI
-bhI
+bip
+bip
+bip
 ara
 ara
 fxo
@@ -113842,7 +114162,7 @@ uze
 pMX
 otG
 smw
-bid
+biL
 aDB
 bQd
 aOV
@@ -114178,8 +114498,8 @@ iZk
 aie
 wXr
 osD
-bhc
-iHl
+bhK
+aIu
 ahV
 ahV
 ahV
@@ -114191,7 +114511,7 @@ ahV
 ahV
 ahV
 ahV
-mgo
+aHF
 npt
 tXP
 jzH
@@ -114203,7 +114523,7 @@ hgu
 aHB
 aHB
 bfT
-aOb
+aPi
 asV
 asV
 asV
@@ -114365,9 +114685,9 @@ hgu
 aHB
 aHB
 bfT
-aOb
-aMY
-aMY
+aPi
+aOv
+aOv
 asV
 asV
 asV
@@ -114501,7 +114821,7 @@ sfF
 heJ
 xxw
 avK
-bhm
+bhU
 aia
 tQY
 ahV
@@ -114646,7 +114966,7 @@ aDx
 wtE
 tbP
 vYR
-biT
+bjB
 cKn
 qOH
 uZU
@@ -114807,8 +115127,8 @@ qAc
 vvd
 meJ
 wQC
-biV
-biU
+bjD
+bjC
 asg
 qOH
 ili
@@ -114969,9 +115289,9 @@ qAc
 rPu
 agD
 wQC
-biW
-biU
-biK
+bjE
+bjC
+bjq
 qOH
 vbB
 oNO
@@ -114988,7 +115308,7 @@ lSk
 wHz
 avK
 ahQ
-bhd
+bhL
 wKn
 ahV
 ahV
@@ -115002,8 +115322,8 @@ ahV
 ahV
 ahV
 ain
-aUD
-aQt
+bgS
+bgN
 jzn
 rtD
 rtD
@@ -115133,7 +115453,7 @@ agE
 agG
 agH
 agI
-biL
+bjs
 qOH
 vhM
 oNO
@@ -115150,20 +115470,20 @@ cDq
 xjg
 avK
 ahR
-bhe
+bhM
+bhI
+ahV
+ahV
+ahV
+ahV
+ahV
+ahV
+ahV
+ahV
+ahV
+ahV
+ahV
 bha
-ahV
-ahV
-ahV
-ahV
-ahV
-ahV
-ahV
-ahV
-ahV
-ahV
-ahV
-aUM
 fQZ
 ahY
 wJa
@@ -115179,7 +115499,7 @@ bfT
 bfT
 hZu
 aHB
-aOa
+aPh
 asV
 asV
 asV
@@ -115293,9 +115613,9 @@ qAc
 rSo
 agF
 wQC
-biW
+bjE
 vRP
-biM
+bjt
 qOH
 vjJ
 vzI
@@ -115311,7 +115631,7 @@ agW
 vRd
 lCr
 avK
-bhn
+bhV
 aid
 kSS
 ahV
@@ -115341,7 +115661,7 @@ cEY
 bfT
 bfT
 aOq
-aOb
+aPi
 asV
 asV
 asV
@@ -115473,9 +115793,9 @@ iKZ
 occ
 miB
 rQT
-bho
-bhf
-wre
+bhW
+aJj
+aIv
 ahV
 ahV
 ahV
@@ -115488,7 +115808,7 @@ ahV
 ahV
 ahV
 ape
-npt
+aGz
 rzp
 aNI
 uMJ
@@ -115504,8 +115824,8 @@ cEY
 bfT
 bfT
 aHB
-aMY
-aMY
+aOv
+aOv
 asV
 aML
 asV
@@ -115621,12 +115941,12 @@ gAr
 dKF
 ukc
 uAe
-bhY
-bhY
-bhY
+biG
+biG
+biG
 blU
 snE
-bhY
+biG
 ahM
 azd
 vAk
@@ -115634,10 +115954,10 @@ agY
 ahi
 ahn
 ahF
-bhr
+bhZ
 ahS
-ahX
-iHl
+aJr
+aIw
 ahV
 ahV
 ahV
@@ -115650,7 +115970,7 @@ ahV
 ahV
 ahV
 apt
-npt
+aGY
 rzp
 qAP
 pZn
@@ -115665,7 +115985,7 @@ uMJ
 uMJ
 apc
 eWW
-aMp
+aNH
 bfT
 bfT
 bfT
@@ -115817,7 +116137,7 @@ rzp
 anJ
 pZn
 kiM
-myk
+aGv
 mJp
 uMJ
 uMJ
@@ -115826,16 +116146,16 @@ prJ
 nWg
 dSe
 uMJ
-aOv
+aPy
 bfT
-aMS
+aOi
 sxD
 aHB
-aMJ
-aNc
+aNZ
+aOw
 aqZ
-aMS
-aMJ
+aOi
+aNZ
 cVy
 cEY
 aCt
@@ -115947,7 +116267,7 @@ blU
 blU
 opE
 hrt
-bii
+biQ
 xMx
 xjX
 arA
@@ -115958,9 +116278,9 @@ ahh
 ahk
 ahp
 ahH
-bht
-bhp
-ahX
+bia
+aJH
+aJt
 qSz
 ahV
 ahV
@@ -116120,8 +116440,8 @@ hGb
 gsK
 ahq
 ahI
-bhu
-bhp
+bib
+bhX
 aig
 nmK
 ahV
@@ -116267,7 +116587,7 @@ sEN
 qtk
 tyd
 tPq
-biN
+bju
 uFX
 vli
 vVD
@@ -116282,9 +116602,9 @@ ngf
 hGb
 ahr
 ahJ
-bhp
-bhp
-ahX
+bhX
+bhX
+aJr
 apx
 ahV
 ahV
@@ -116298,7 +116618,7 @@ ahV
 ahV
 ahV
 apu
-npt
+aGY
 amx
 obD
 pZn
@@ -116407,7 +116727,7 @@ ara
 ara
 fxo
 aEc
-bjq
+bjY
 ark
 ark
 ark
@@ -116429,7 +116749,7 @@ blU
 blU
 blU
 tgJ
-biN
+bju
 wpO
 vIY
 vIY
@@ -116446,7 +116766,7 @@ ahs
 ahI
 amv
 ahI
-ahX
+aJB
 apz
 ahV
 ahV
@@ -116459,8 +116779,8 @@ ahV
 ahV
 ahV
 ahV
-apv
-npt
+ape
+aHi
 tXP
 mQR
 pZn
@@ -116591,7 +116911,7 @@ blU
 tkt
 blU
 tPw
-biN
+bju
 wpO
 vIY
 vIY
@@ -116725,7 +117045,7 @@ ara
 aOW
 ara
 ajL
-bju
+bkc
 nGu
 gUH
 gUH
@@ -116770,7 +117090,7 @@ ahw
 ahI
 wfL
 ahI
-bhg
+bhN
 mXX
 ahV
 ahV
@@ -116784,7 +117104,7 @@ ahV
 aeA
 ahV
 aiu
-aUE
+bgT
 tXP
 raP
 pZn
@@ -116932,7 +117252,7 @@ ahy
 ahI
 ahI
 ahI
-bhh
+bhO
 wre
 ahV
 ahV
@@ -116946,7 +117266,7 @@ ahV
 ahV
 ahV
 aiq
-aUI
+bgU
 tXP
 obw
 atr
@@ -117110,8 +117430,8 @@ ahV
 mgo
 oum
 tXP
-aQq
-aQj
+bgL
+bgI
 vns
 uzl
 cuG
@@ -117385,8 +117705,8 @@ eBp
 jPB
 grI
 sOP
-bjh
-bjf
+bjP
+bjN
 nIV
 ePd
 kWn
@@ -117419,7 +117739,7 @@ ahI
 ahI
 ahI
 aih
-iHl
+aIu
 ahV
 ahV
 ahV
@@ -117431,7 +117751,7 @@ ahV
 ahV
 ahV
 ahV
-mgo
+aHF
 oum
 tXP
 tXP
@@ -117598,7 +117918,7 @@ jPH
 xjU
 bcl
 ffn
-aQj
+bgI
 rPS
 gvn
 gqA
@@ -117708,7 +118028,7 @@ mzs
 ajM
 tGe
 kQt
-bjk
+bjS
 pyj
 ckI
 vWt
@@ -117725,7 +118045,7 @@ lxi
 rVQ
 kNf
 sut
-biN
+bju
 cGQ
 vtc
 vMD
@@ -117870,7 +118190,7 @@ hYc
 bAJ
 eZc
 prD
-bjk
+bjS
 pyj
 bBF
 hrG
@@ -118047,7 +118367,7 @@ xGo
 vIv
 sMw
 tkR
-biX
+bjF
 uOd
 oka
 uKK
@@ -118063,7 +118383,7 @@ puz
 ivE
 xMb
 rDC
-bhu
+bib
 ahN
 vHD
 arP
@@ -118194,7 +118514,7 @@ hZb
 aCH
 eZc
 hDW
-bjk
+bjS
 pyj
 bBS
 mWc
@@ -118209,9 +118529,9 @@ xGo
 lZf
 lxi
 tkR
-biX
+bjF
 tXc
-biN
+bju
 rTY
 xxF
 rmn
@@ -118225,9 +118545,9 @@ txp
 ivE
 lWD
 rDC
-bhp
-bhp
-bhp
+bhX
+bhX
+bhX
 joj
 ahm
 aje
@@ -118356,7 +118676,7 @@ kjQ
 pcs
 bls
 kQt
-bjk
+bjS
 pyj
 nhw
 nRh
@@ -118373,7 +118693,7 @@ sPs
 rVQ
 oWe
 snE
-biN
+bju
 rTY
 vxe
 vOA
@@ -118681,7 +119001,7 @@ eEC
 jUg
 grI
 sOP
-bjh
+bjP
 rDR
 nIV
 oth
@@ -118738,9 +119058,9 @@ wFZ
 drS
 klr
 gis
-aPG
-aPx
-aPl
+aUY
+aUJ
+aQu
 guA
 rvF
 jqq
@@ -118863,7 +119183,7 @@ uWL
 uWL
 lNE
 xZu
-bik
+biR
 wYg
 xBy
 bWF
@@ -118903,7 +119223,7 @@ rwp
 rwp
 rwp
 dYH
-aOI
+aPV
 pvz
 oAx
 jUM
@@ -119023,7 +119343,7 @@ miP
 aUn
 cch
 tbH
-biv
+bjd
 iNM
 lfj
 aUf
@@ -119060,7 +119380,7 @@ aEC
 cHO
 cHO
 vKq
-aPU
+bgz
 guA
 hDI
 gis
@@ -119232,7 +119552,7 @@ iBq
 iBq
 iBq
 bWX
-aNr
+aOD
 twY
 ogo
 frc
@@ -119346,7 +119666,7 @@ tnG
 qww
 ubG
 pvU
-biD
+bjj
 age
 uPB
 aUm
@@ -119479,13 +119799,13 @@ ara
 ara
 fxo
 ajL
-bjq
+bjY
 ark
 aKH
 fbx
 nKv
 aEj
-bjs
+bka
 aZZ
 bTU
 bTU
@@ -119680,11 +120000,11 @@ aUb
 aTY
 oNd
 hts
-bhS
-bhM
-bhJ
-bhA
-bhv
+biz
+bit
+biq
+bih
+bic
 bfT
 aCu
 aIF
@@ -119709,7 +120029,7 @@ aqq
 uLx
 col
 rxz
-aPR
+bgy
 rOo
 gjS
 gis
@@ -120041,7 +120361,7 @@ shM
 eOK
 iNJ
 idx
-aNv
+aOF
 rUQ
 aiK
 aHB
@@ -120642,9 +120962,9 @@ ara
 ara
 mCp
 uRl
-bhN
-bhN
-bhN
+biu
+biu
+biu
 ara
 ara
 ara
@@ -120814,8 +121134,8 @@ ara
 ara
 ara
 arI
-bhT
-bhN
+biA
+biu
 bfM
 bfM
 bfM
@@ -120976,7 +121296,7 @@ arI
 arI
 arI
 arI
-bhU
+biB
 arY
 arY
 arY
@@ -121295,12 +121615,12 @@ ara
 ara
 ara
 ara
-bhZ
-bhZ
+biH
+biH
 ara
 ara
 ara
-bhU
+biB
 arY
 arY
 arY
@@ -121462,8 +121782,8 @@ ara
 ara
 ara
 rzX
-bhV
-bhN
+biD
+biu
 bfM
 bfM
 bfM
@@ -122598,7 +122918,7 @@ ara
 ara
 ara
 ara
-bhB
+bii
 aHB
 bfT
 atv
@@ -122760,7 +123080,7 @@ ara
 ara
 ara
 ara
-bhB
+bii
 aHB
 bfT
 aHB
@@ -122922,7 +123242,7 @@ ara
 ara
 ara
 ara
-bhB
+bii
 aHB
 bfT
 aOq
@@ -125994,9 +126314,9 @@ ara
 ara
 ara
 ara
-ara
-ara
-ara
+aET
+aET
+aET
 ara
 ara
 fxo
@@ -126135,9 +126455,9 @@ ara
 ara
 mIy
 ara
-aET
-aET
-aET
+ara
+ara
+ara
 ara
 ara
 ara
@@ -126155,11 +126475,11 @@ fxo
 ara
 ara
 ara
-ara
-ara
-ara
-ara
-ara
+aET
+aJN
+aJT
+aJN
+aET
 ara
 fxo
 aqq
@@ -126296,32 +126616,32 @@ ara
 ara
 ara
 ara
+ara
+ara
+ara
+ara
+ara
+ara
+ara
+ara
+ara
+ara
+ara
+ara
+ara
+ara
+fxo
+fxo
+fxo
+fxo
+ara
+ara
+ara
 aET
-ara
-aFe
-ara
-aET
-ara
-ara
-ara
-ara
-ara
-ara
-ara
-ara
-ara
-fxo
-fxo
-fxo
-fxo
-ara
-ara
-ara
-ara
-ara
-ara
-ara
-ara
+aKl
+aJZ
+aJN
+apv
 ara
 ara
 aqq
@@ -126458,32 +126778,32 @@ ara
 ara
 ara
 ara
+ara
+ara
+ara
+ara
+ara
+ara
+ara
+ara
+ara
+ara
+ara
+ara
+ara
+ara
+fxo
+fxo
+fxo
+fxo
+ara
+ara
+ara
 aET
-aFn
-aFi
-ara
-aEY
-ara
-ara
-ara
-ara
-ara
-ara
-ara
-ara
-ara
-fxo
-fxo
-fxo
-fxo
-ara
-ara
-ara
-ara
-ara
-ara
-ara
-ara
+aKo
+aKf
+aJN
+aET
 ara
 ara
 aHB
@@ -126620,31 +126940,31 @@ ara
 ara
 ara
 ara
+ara
+ara
+ara
+ara
+ara
+ara
+ara
+ara
+ara
+ara
+ara
+ara
+ara
+fxo
+fxo
+ara
+ara
+ara
+ara
+fxo
+fxo
+fxo
 aET
-aFo
-aFj
-ara
 aET
-ara
-ara
-ara
-ara
-ara
-ara
-ara
-ara
-fxo
-fxo
-ara
-ara
-ara
-ara
-fxo
-fxo
-fxo
-ara
-ara
-ara
+aET
 ara
 ara
 ara
@@ -126783,9 +127103,9 @@ aOV
 aOV
 aOV
 aOV
-aFd
-aFd
-aFd
+aOV
+aOV
+aOV
 aOV
 aOV
 aOV
@@ -127152,7 +127472,7 @@ sHp
 aII
 aII
 qez
-aUJ
+bgW
 aHB
 aHB
 bfT
@@ -127945,7 +128265,7 @@ arf
 arf
 arf
 aHB
-bhB
+bii
 bfT
 aqq
 aHI
@@ -128107,7 +128427,7 @@ arf
 arf
 arf
 aHB
-bhB
+bii
 bfT
 aqq
 aHI
@@ -128144,11 +128464,11 @@ aqi
 aqi
 aqi
 aQL
-aMA
-aMA
-aMA
-aMA
-aMA
+aNS
+aNS
+aNS
+aNS
+aNS
 aQL
 aBK
 aqi
@@ -128163,14 +128483,14 @@ aqi
 aqi
 aqi
 aqi
-aFQ
-aFQ
+aFi
+aFi
 xgD
 aHp
 aHp
 aHp
-aFQ
-aFQ
+aFi
+aFi
 aqi
 aqi
 aqi
@@ -128325,14 +128645,14 @@ vEe
 vEe
 nYj
 aqp
-aGv
+aKp
 oBE
 ann
 ann
 ann
 ann
 oBE
-aFU
+aFj
 aqi
 aqi
 aqi
@@ -128487,14 +128807,14 @@ dHT
 vEe
 aqi
 aqi
-aGv
+aKp
 oBE
 bnE
 bnE
 bnE
 bnE
 oBE
-aFQ
+aFi
 aqi
 aqi
 aGx
@@ -128649,14 +128969,14 @@ dHT
 vEe
 aqi
 aqi
-aGv
+aKp
 oBE
 xgw
 xgw
 xgw
 xgw
 oBE
-aFQ
+aFi
 aqi
 aqi
 aqi
@@ -128811,14 +129131,14 @@ uMF
 vEe
 aqi
 xgD
-aGv
+aKp
 oBE
 xgw
 xgw
 xgw
 xgw
 oBE
-aFQ
+aFi
 aqi
 aqi
 aqi
@@ -128973,14 +129293,14 @@ dHT
 vEe
 aqi
 xgD
-aGv
+aKp
 oBE
 xgw
 xgw
 xgw
 xgw
 oBE
-aFQ
+aFi
 aqi
 aqi
 aqi
@@ -129135,14 +129455,14 @@ tDT
 vEe
 aqi
 xgD
-aGz
+aKq
 oBE
 oBE
 oBE
 oBE
 oBE
 oBE
-aGj
+aFn
 aGi
 aGC
 aEu
@@ -129403,7 +129723,7 @@ jnX
 jnX
 kWi
 kWi
-bhC
+bik
 aHB
 bfT
 aCu
@@ -129610,11 +129930,11 @@ amn
 fWC
 iqv
 qah
-aJC
-aJC
-aJC
-aJC
-aJC
+aLN
+aLN
+aLN
+aLN
+aLN
 dHT
 dHT
 dHT
@@ -129773,10 +130093,10 @@ csu
 jkt
 qah
 lnx
-aKl
-aKl
-aKl
-aJC
+aMv
+aMv
+aMv
+aLN
 dHT
 dHT
 dHT
@@ -129937,8 +130257,8 @@ oRo
 aSC
 aSB
 aTR
-aKl
-aJC
+aMv
+aLN
 dHT
 dHT
 dHT
@@ -130099,8 +130419,8 @@ qah
 aWP
 iXR
 aSx
-aKl
-aJC
+aMv
+aLN
 dHT
 dHT
 mRO
@@ -130261,8 +130581,8 @@ aWa
 aTT
 iXR
 aTS
-aKl
-aJC
+aMv
+aLN
 dHT
 dHT
 dHT
@@ -130423,11 +130743,11 @@ aWa
 aTU
 aWO
 aTS
-aKl
-aJC
-aHF
-aHF
-aHF
+aMv
+aLN
+aLn
+aLn
+aLn
 vEe
 aqi
 xgD
@@ -130571,7 +130891,7 @@ fbW
 uAD
 aWt
 sbe
-aNx
+aOH
 aWa
 bwq
 thv
@@ -130699,8 +131019,8 @@ aHB
 aNM
 aHB
 aHB
-bhE
-aUJ
+bil
+bgW
 bfT
 aCu
 aIF
@@ -130861,7 +131181,7 @@ aHB
 aHB
 xeV
 xeV
-aUJ
+bgW
 bfT
 bfT
 aCt
@@ -131182,8 +131502,8 @@ arf
 arf
 arf
 aHB
-bhB
-aUJ
+bii
+bgW
 bfT
 bfM
 tpb
@@ -131344,8 +131664,8 @@ arf
 arf
 arf
 aHB
-bhB
-aUJ
+bii
+bgW
 bfT
 bfM
 aUV
@@ -131505,9 +131825,9 @@ arf
 arf
 arf
 arf
-bhB
-bhB
-aUJ
+bii
+bii
+bgW
 bfT
 bfM
 aUV
@@ -131543,7 +131863,7 @@ lvo
 uAD
 ift
 wNw
-aNC
+aOI
 iZl
 cUt
 ens
@@ -131669,7 +131989,7 @@ kQC
 arf
 aOq
 aHB
-aUJ
+bgW
 bfT
 bfM
 aUV
@@ -131831,7 +132151,7 @@ qiE
 qiE
 jjF
 ajX
-aUJ
+bgW
 bfT
 bfM
 aUV
@@ -131865,9 +132185,9 @@ yga
 nwl
 myz
 jJH
-aOd
+aPj
 wNw
-aNC
+aOI
 iZl
 huL
 fBg
@@ -132033,7 +132353,7 @@ xhl
 svz
 eyO
 gLK
-aMT
+aOj
 nNi
 ewZ
 akW
@@ -132157,10 +132477,10 @@ cHY
 aHB
 aHB
 bfT
-aUJ
-aUJ
-aUJ
-bhi
+bgW
+bgW
+bgW
+bhP
 aIF
 aII
 aII
@@ -132519,7 +132839,7 @@ anH
 svz
 sGn
 kke
-aMU
+aOl
 oZv
 ewZ
 akW
@@ -132825,7 +133145,7 @@ aIF
 aqZ
 aHB
 bfT
-aOv
+aPy
 anW
 bQR
 vSC
@@ -133003,7 +133323,7 @@ vOi
 hVh
 aNL
 jrn
-aNk
+aOA
 bXH
 gWw
 kow
@@ -133471,7 +133791,7 @@ aII
 aII
 aIF
 aHB
-aMS
+aOi
 jtf
 hAG
 gdr
@@ -133633,7 +133953,7 @@ aII
 aII
 aIF
 aHB
-aMS
+aOi
 qjw
 dFv
 nek
@@ -133776,8 +134096,8 @@ alh
 hAj
 kNy
 cEY
-aUJ
-aUJ
+bgW
+bgW
 bfT
 aOq
 aIX
@@ -133795,7 +134115,7 @@ aII
 aqQ
 aiY
 aHB
-aMJ
+aNZ
 tYr
 tzS
 kHk
@@ -134261,7 +134581,7 @@ hHA
 kDA
 tHY
 hHA
-aQu
+bgP
 uCF
 bgi
 bgi
@@ -134443,7 +134763,7 @@ dwe
 dwe
 dwe
 bfX
-aQu
+bgP
 jtf
 hte
 kRQ
@@ -134585,10 +134905,10 @@ maY
 tFQ
 vEB
 maY
-aQu
-aQu
-aQu
-aRL
+bgP
+bgP
+bgP
+bgQ
 bfX
 bgg
 vUU
@@ -134605,7 +134925,7 @@ dwe
 dwe
 aIG
 eOf
-aQu
+bgP
 qjw
 qIs
 nek
@@ -134750,7 +135070,7 @@ yaI
 oNc
 hVK
 tOp
-aRL
+bgQ
 eOf
 aDt
 xXx
@@ -134767,7 +135087,7 @@ aIG
 aIG
 xXx
 eOf
-aRL
+bgQ
 tYr
 tZH
 vFd
@@ -134912,7 +135232,7 @@ yaI
 cmI
 adg
 wso
-aMJ
+aNZ
 aHB
 aIX
 aIF
@@ -134951,7 +135271,7 @@ mEH
 iGY
 xMw
 aWU
-aMK
+aOa
 lIY
 orl
 fYe
@@ -135064,7 +135384,7 @@ vzP
 xEf
 kDU
 dPc
-bie
+biM
 whG
 pkd
 hUs
@@ -135113,7 +135433,7 @@ iQj
 qRy
 xMw
 oiO
-aMK
+aOa
 eqi
 rqL
 rWl
@@ -135388,8 +135708,8 @@ ork
 jVg
 kDU
 dPc
-bie
-bib
+biM
+biJ
 pkd
 lbc
 ebQ
@@ -135549,7 +135869,7 @@ xhm
 nwj
 sdt
 kny
-bil
+biS
 iiU
 tNE
 pzo
@@ -135887,7 +136207,7 @@ wAE
 oUQ
 oYd
 lFi
-xTg
+aIK
 rhE
 rhE
 rhE
@@ -135899,7 +136219,7 @@ rhE
 rhE
 rhE
 rhE
-cBd
+aHP
 iER
 vHt
 lBa
@@ -136062,7 +136382,7 @@ rhE
 rhE
 rhE
 cBd
-aUK
+bgX
 vHt
 iMZ
 sQM
@@ -136077,7 +136397,7 @@ cgm
 axn
 bOX
 hJK
-aOh
+aPl
 hru
 iMm
 sFS
@@ -136191,10 +136511,10 @@ qOJ
 oGS
 qVd
 goh
-biY
+bjG
 sov
 jED
-biE
+bjk
 rYH
 kny
 agp
@@ -136224,7 +136544,7 @@ rhE
 rhE
 rhE
 cBd
-aUK
+bgX
 vHt
 ngv
 aBc
@@ -136353,10 +136673,10 @@ qOJ
 kzS
 qVd
 aAb
-biY
+bjG
 sov
 aRq
-biE
+bjk
 vMX
 kDU
 dPc
@@ -136386,7 +136706,7 @@ rhE
 rhE
 rhE
 gSj
-aUK
+bgX
 vHt
 twe
 aBd
@@ -136396,7 +136716,7 @@ wLi
 gSP
 aAB
 vmL
-aPI
+aVa
 cgm
 axn
 hOP
@@ -136521,7 +136841,7 @@ xhm
 nwj
 vMX
 kDU
-bil
+biS
 wGT
 mZb
 fZW
@@ -136857,8 +137177,8 @@ tTq
 aAo
 qGT
 oWl
-vcZ
-lFi
+aJI
+aJC
 uAf
 rhE
 rhE
@@ -136872,7 +137192,7 @@ rhE
 rhE
 rhE
 lMp
-iER
+aHn
 vze
 hvz
 sQM
@@ -137020,8 +137340,8 @@ cKi
 axq
 djp
 vcZ
-bhj
-xTg
+bhQ
+aIL
 rhE
 rhE
 rhE
@@ -137033,8 +137353,8 @@ rhE
 rhE
 rhE
 rhE
-cBd
-iER
+aHV
+aHq
 vze
 aBf
 aBe
@@ -137666,7 +137986,7 @@ pXs
 tLE
 gxc
 hcd
-bhw
+bid
 ahx
 lFi
 apA
@@ -137682,7 +138002,7 @@ rhE
 rhE
 rhE
 apw
-iER
+aHq
 vze
 hvz
 xKG
@@ -137830,8 +138150,8 @@ tnI
 qGT
 hqd
 aWb
-iCQ
-euQ
+aJE
+uAf
 rhE
 rhE
 rhE
@@ -137844,7 +138164,7 @@ rhE
 rhE
 rhE
 hro
-iER
+aHv
 vze
 hvz
 xKG
@@ -137858,7 +138178,7 @@ uAW
 qEC
 kpT
 gLa
-aOw
+aPz
 iKi
 agd
 hPD
@@ -138006,7 +138326,7 @@ rhE
 rhE
 rhE
 iQw
-hGQ
+aHy
 vze
 hvz
 xKG
@@ -138168,7 +138488,7 @@ rhE
 aeB
 rhE
 uPZ
-dsz
+aHC
 wsZ
 cXJ
 rQa
@@ -138182,7 +138502,7 @@ fcG
 slO
 odq
 gLa
-aOw
+aPz
 iKi
 uVq
 wim
@@ -138330,7 +138650,7 @@ rhE
 rhE
 rhE
 lLi
-iER
+aHq
 tSU
 vmg
 bOK
@@ -138492,7 +138812,7 @@ rhE
 rhE
 rhE
 cBd
-iER
+aHq
 tSU
 jEv
 seG
@@ -138506,7 +138826,7 @@ skI
 gnn
 uSL
 gLa
-aOw
+aPz
 iKi
 icd
 ebP
@@ -138654,7 +138974,7 @@ rhE
 rhE
 rhE
 cBd
-iER
+aHq
 tSU
 pVu
 gEv
@@ -138803,7 +139123,7 @@ gVl
 djp
 dSR
 apD
-xTg
+aIK
 rhE
 rhE
 rhE
@@ -138816,7 +139136,7 @@ rhE
 rhE
 rhE
 cBd
-iER
+aHq
 tSU
 dlY
 gEv
@@ -138947,7 +139267,7 @@ iBg
 gqT
 iBg
 vnd
-biO
+bjv
 ayl
 otT
 tye
@@ -138977,9 +139297,9 @@ rhE
 rhE
 rhE
 rhE
-cBd
-iER
-aUB
+aHP
+aHq
+bgR
 tDj
 laG
 atC
@@ -138991,7 +139311,7 @@ bzk
 epT
 bQi
 viT
-aON
+aPX
 afF
 iHa
 uqT
@@ -139109,7 +139429,7 @@ wRk
 wgU
 ett
 eHL
-biP
+bjw
 lod
 ueL
 feY
@@ -139124,8 +139444,8 @@ uZy
 kTF
 npG
 tho
-bhx
-bhq
+bie
+bhY
 lFi
 xTg
 rhE
@@ -139140,7 +139460,7 @@ rhE
 aoX
 rhE
 cBd
-iER
+aHq
 tSU
 tDj
 euf
@@ -139286,7 +139606,7 @@ hlM
 dZi
 tmk
 tho
-bhx
+bie
 eql
 lFi
 vkt
@@ -139302,7 +139622,7 @@ hVH
 ofQ
 ofQ
 kMt
-iER
+aHq
 tSU
 tDj
 giN
@@ -139448,7 +139768,7 @@ mFB
 kTF
 npG
 bKh
-bhx
+bie
 eql
 rfk
 lfC
@@ -139788,7 +140108,7 @@ eIO
 eIO
 eIO
 gBN
-rby
+imR
 gpq
 imR
 ieZ
@@ -139903,7 +140223,7 @@ cMN
 aJx
 aJx
 arf
-bji
+bjQ
 arf
 eUK
 qck
@@ -139924,14 +140244,14 @@ fSy
 uPO
 maD
 cUf
-bic
-bic
+biK
+biK
 ltk
 ltk
-bhO
-bhO
+biv
+biv
 aVC
-bhO
+biv
 fNU
 ana
 jmP
@@ -139941,7 +140261,7 @@ iPg
 lhL
 mur
 wpM
-cax
+bhx
 oqs
 lwd
 oqs
@@ -139950,7 +140270,7 @@ rMl
 qBK
 pTz
 dSG
-rsn
+cax
 aVV
 jIf
 xKE
@@ -140065,7 +140385,7 @@ cMN
 aJx
 arf
 arf
-bji
+bjQ
 arf
 arf
 arg
@@ -140102,14 +140422,14 @@ qXA
 qXA
 qXA
 bZW
-bgS
+bhB
 njz
 btv
 qoP
 aVZ
-bgF
-bgz
-beo
+bhn
+bhi
+bhf
 sJP
 aVW
 ece
@@ -140227,7 +140547,7 @@ aJx
 aJx
 arf
 arf
-bji
+bjQ
 arf
 arf
 arg
@@ -140264,14 +140584,14 @@ ktR
 ddS
 bmU
 rzd
-bgA
+bhj
 nGk
 oqs
 jlc
 oqs
 amw
-bgA
-bgx
+bhj
+bhg
 vLA
 dta
 ddS
@@ -140389,7 +140709,7 @@ arf
 arf
 arf
 arf
-bji
+bjQ
 arf
 arf
 arf
@@ -140428,12 +140748,12 @@ brH
 rtj
 ggo
 aRf
-bgJ
+bhr
 jEo
 ggo
 ggo
 ggo
-bgy
+bhh
 jMg
 jjI
 ugo
@@ -140593,8 +140913,8 @@ pvB
 pvB
 xSG
 fyy
-bgC
-bgC
+bhk
+bhk
 fyy
 udl
 tqD
@@ -140632,8 +140952,8 @@ qIt
 qIt
 qIt
 qPM
-aHv
-aHv
+aKY
+aKY
 bfQ
 bfQ
 bfQ
@@ -140795,8 +141115,8 @@ aGo
 atj
 aGo
 aGo
-aHv
-aHv
+aKY
+aKY
 bfQ
 bfQ
 bfQ
@@ -140886,7 +141206,7 @@ aJY
 aJY
 aJY
 aJY
-biZ
+bjI
 xzL
 are
 are
@@ -140957,7 +141277,7 @@ pjW
 pjW
 pjW
 pjW
-aHv
+aKY
 aGo
 aGo
 aGo
@@ -141048,13 +141368,13 @@ aJY
 aJY
 aJY
 aJn
-biZ
+bjI
 aJX
 aJX
 are
 are
 lfk
-biF
+bjl
 wAv
 tSA
 seC
@@ -141119,7 +141439,7 @@ aHu
 oGL
 oGL
 pjW
-aHv
+aKY
 pjW
 aGo
 aGo
@@ -141210,13 +141530,13 @@ aJY
 dMI
 aJY
 aJY
-biZ
+bjI
 aJY
 aJX
 aJX
 are
 lfk
-biF
+bjl
 wAv
 tSA
 seC
@@ -141224,7 +141544,7 @@ tEZ
 jIn
 sVJ
 aXs
-bhW
+biE
 aWn
 mVa
 kzV
@@ -141281,7 +141601,7 @@ pjW
 oGL
 oGL
 oGL
-aHv
+aKY
 pjW
 pjW
 pjW
@@ -141372,13 +141692,13 @@ jYa
 aJY
 aJY
 aJY
-biZ
+bjI
 nXA
 aJY
 aJX
 aJX
 lfk
-biF
+bjl
 wAv
 tSA
 seC
@@ -141443,7 +141763,7 @@ pjW
 oGL
 oGL
 oGL
-aHv
+aKY
 oGL
 pjW
 pjW
@@ -141520,9 +141840,9 @@ aJY
 aDP
 aJY
 azG
-biZ
-biZ
-biZ
+bjI
+bjI
+bjI
 atK
 atI
 jnX
@@ -141540,7 +141860,7 @@ aJY
 aJY
 aJX
 hXY
-biF
+bjl
 hEb
 tSA
 seC
@@ -141578,14 +141898,14 @@ ybW
 xcm
 aqx
 nyM
-aOO
-aOO
+aPZ
+aPZ
 aqw
 aqw
-aOO
-aOO
-aOx
-aOi
+aPZ
+aPZ
+aPB
+aPm
 aHR
 sqx
 aHR
@@ -141595,17 +141915,17 @@ bfQ
 bfQ
 bfQ
 bfQ
-aLZ
-aMc
-aLZ
-aLM
+aNv
+aNx
+aNv
+aNo
 aGo
 aGo
 pjW
 oGL
 oGL
 oGL
-aHv
+aKY
 oGL
 oGL
 oGL
@@ -141738,7 +142058,7 @@ mug
 lLo
 ybW
 ftS
-aOO
+aPZ
 cAi
 aqw
 aqw
@@ -141767,7 +142087,7 @@ pjW
 aHt
 pjW
 oGL
-aHv
+aKY
 oGL
 aHl
 oGL
@@ -141929,7 +142249,7 @@ aGo
 aGo
 bzZ
 pjW
-aHv
+aKY
 oGL
 oGL
 pjW
@@ -142091,7 +142411,7 @@ aGo
 aGo
 pjW
 pjW
-aHv
+aKY
 oGL
 oGL
 pjW
@@ -142188,9 +142508,9 @@ aJX
 aJY
 aJY
 pVL
-biF
+bjl
 kvb
-bip
+biW
 pVL
 aHR
 aHR
@@ -142253,7 +142573,7 @@ aGo
 aGo
 aGo
 pjW
-aHv
+aKY
 pjW
 pjW
 pjW
@@ -142350,9 +142670,9 @@ aJX
 aJX
 aJY
 lfk
-biF
+bjl
 kvb
-bip
+biW
 lfk
 aHR
 fHN
@@ -142415,7 +142735,7 @@ aGo
 aGo
 aGo
 aGo
-aHv
+aKY
 aGo
 aGo
 aGo
@@ -142514,7 +142834,7 @@ aJY
 lfk
 tQu
 uMD
-biq
+biX
 lfk
 fHN
 fHN
@@ -142576,9 +142896,9 @@ bfQ
 bfQ
 bfQ
 aGo
-aHv
-aHv
-aHv
+aKY
+aKY
+aKY
 aGo
 aUx
 aGo
@@ -142674,9 +142994,9 @@ are
 aJX
 aJX
 lfk
-biF
+bjl
 lWX
-bip
+biW
 lfk
 fHN
 dKo
@@ -142741,7 +143061,7 @@ bfQ
 bfQ
 bfQ
 bfQ
-aHn
+aKS
 aUw
 bfQ
 bfQ
@@ -142836,7 +143156,7 @@ are
 are
 aJX
 hXY
-biF
+bjl
 mGR
 aQQ
 hXY
@@ -143202,9 +143522,9 @@ aIk
 aqw
 aqw
 uUd
-aOQ
-aNF
-aNF
+aQc
+aON
+aON
 aHR
 aHR
 aHR
@@ -143333,8 +143653,8 @@ dKo
 dKo
 fHN
 fHN
-bhK
-bhK
+bir
+bir
 ybW
 lLo
 lLo
@@ -143364,12 +143684,12 @@ aqw
 aqw
 aqw
 aqw
-aNo
-aOQ
-aNF
+aOB
+aQc
+aON
 aHR
 aHR
-aNF
+aON
 aNW
 aqw
 aks
@@ -143485,8 +143805,8 @@ kWc
 kWc
 mCo
 uqQ
-biw
-bip
+bje
+biW
 qFo
 aHR
 aHR
@@ -143519,19 +143839,19 @@ ybW
 ybW
 ybW
 ybW
-aPZ
-aPZ
-aNH
+bgD
+bgD
+aOO
 aqw
 aqw
 aqw
-aNo
-aNY
-aNY
-aNY
-aNY
-aNY
-aNH
+aOB
+aPf
+aPf
+aPf
+aPf
+aPf
+aOO
 aqw
 aqw
 akr
@@ -143627,7 +143947,7 @@ rJE
 bjr
 mUh
 baV
-bjm
+bjU
 cpO
 fjF
 aQT
@@ -143648,9 +143968,9 @@ pPY
 api
 pRf
 gAN
-bir
+biY
 lfk
-bhK
+bir
 aHR
 aNX
 aHR
@@ -143665,10 +143985,10 @@ aUW
 aUU
 awj
 aqw
-aNo
+aOB
 aqw
 aIN
-aPZ
+bgD
 aqw
 glu
 aqw
@@ -143679,22 +143999,22 @@ aHR
 fHN
 fHN
 aHR
-aNH
+aOO
 oXh
-aQe
-aQc
-aNH
+bgF
+bgE
+aOO
 bfU
 aqw
 aqw
-aNo
+aOB
 aHR
-aOQ
+aQc
 aNX
-aNF
-aNF
-aNo
-aNo
+aON
+aON
+aOB
+aOB
 aqw
 apJ
 atj
@@ -143807,12 +144127,12 @@ amS
 dvb
 aXH
 jvL
-biQ
-biw
-bix
-bis
+bjx
+bje
+bjf
+biZ
 lfk
-bif
+biN
 aHR
 aHR
 aHR
@@ -143827,10 +144147,10 @@ aUW
 aUU
 awj
 aqw
-aNo
-aNo
-bgP
-aPZ
+aOB
+aOB
+bhy
+bgD
 aqw
 aHR
 aHR
@@ -143841,22 +144161,22 @@ fHN
 fHN
 fHN
 fHN
-aNY
-aNY
-aQh
+aPf
+aPf
+bgG
+bgE
+aOO
+aqw
+aOB
+aHR
+aHR
 aQc
-aNH
-aqw
-aNo
-aHR
-aHR
-aOQ
 aHR
 aNW
-aNF
-aNF
-aNo
-aNo
+aON
+aON
+aOB
+aOB
 aqX
 kgt
 xlx
@@ -143951,7 +144271,7 @@ vnA
 aVY
 xLW
 rSz
-bjn
+bjV
 eHD
 bbV
 aTu
@@ -143971,8 +144291,8 @@ hlD
 pPY
 apl
 aoO
-bix
-bis
+bjf
+biZ
 lfk
 aqw
 aqw
@@ -143989,40 +144309,40 @@ aUW
 aUU
 awj
 aqw
-aNo
-aNo
-bgP
-aPZ
+aOB
+aOB
+bhy
+bgD
 aqw
-aOQ
+aQc
 aHR
 aHR
 aIJ
 fHN
 dKo
-aUL
+bgY
 dKo
 dKo
-aNH
-aQk
-aQh
+aOO
+bgJ
+bgG
+bgE
+aOO
 aQc
-aNH
-aOQ
-aNF
+aON
 aHR
 aHR
 fHN
 fHN
 aHR
 aHR
-aNF
+aON
 aqw
-aNo
+aOB
 aqw
 akr
 aHs
-aKo
+aMw
 pjW
 pjW
 oGL
@@ -144134,16 +144454,16 @@ kWc
 aSu
 eCN
 kvb
-bip
+biW
 eUP
 aqx
 aqw
 aqw
 aqw
-aPZ
-aPZ
-aPZ
-aPZ
+bgD
+bgD
+bgD
+bgD
 aqw
 awk
 awo
@@ -144152,11 +144472,11 @@ awn
 awk
 aqw
 aqw
-aNo
-bgP
-aPZ
+aOB
+bhy
+bgD
 aHR
-aOQ
+aQc
 aHR
 fHN
 fHN
@@ -144164,28 +144484,28 @@ dKo
 dKo
 aHY
 dKo
-aNH
-aNY
-aNH
-aQe
+aOO
+aPf
+aOO
+bgF
+bgE
+aOO
 aQc
-aNH
-aOQ
-aOQ
+aQc
 fHN
 fHN
 aHZ
 fHN
 fHN
-aOj
+aPn
 hDf
 aHR
 aHR
-aNo
+aOB
 akr
 aGo
-aKo
-aMv
+aMw
+aNJ
 oGL
 oGL
 aHL
@@ -144302,44 +144622,44 @@ aqw
 aqw
 aqw
 aqw
-bgP
-bgP
-bgP
-aPZ
-aNH
-aNH
-aNH
-aNY
-bhk
-aNH
-aNY
-aNH
-aNH
-aNH
-aNH
-bgG
-aNH
-aNH
-aNH
-aNH
-aNY
-aNY
-aNY
-aNY
-aNY
-aNY
-aNH
-aNH
-aNH
-aPX
-aNH
-aNH
-aPK
+bhy
+bhy
+bhy
+bgD
+aOO
+aOO
+aOO
+aPf
+bhS
+aOO
+aPf
+aOO
+aOO
+aOO
+aOO
+bho
+aOO
+aOO
+aOO
+aOO
+aPf
+aPf
+aPf
+aPf
+aPf
+aPf
+aOO
+aOO
+aOO
+bgC
+aOO
+aOO
+aVi
 fHN
 dKo
 dKo
 fHN
-aOj
+aPn
 fHN
 aHR
 aHR
@@ -144463,11 +144783,11 @@ mCo
 tdT
 aqw
 aqw
-aNo
-aNo
-aNo
-bgP
-aPZ
+aOB
+aOB
+aOB
+bhy
+bgD
 aHR
 fHN
 fHN
@@ -144476,21 +144796,21 @@ aIZ
 fHN
 fHN
 fHN
-aOQ
-aNF
+aQc
+aON
 aHR
 aHR
-aOQ
+aQc
 aHR
 aHR
-aOj
-aOj
-aOj
+aPn
+aPn
+aPn
 fHN
 fHN
 fHN
-aNH
-aOQ
+aOO
+aQc
 jfF
 pbd
 pbd
@@ -144510,8 +144830,8 @@ akr
 bfQ
 aGo
 pjW
-aMv
-aMv
+aNJ
+aNJ
 aHK
 aGo
 pjW
@@ -144606,7 +144926,7 @@ fUz
 baQ
 aXi
 aXh
-bjd
+bjL
 aBw
 aXa
 kWc
@@ -144625,11 +144945,11 @@ mCo
 aqX
 aqX
 aqX
-bhX
+biF
 aqY
-aNo
-bgP
-bhP
+aOB
+bhy
+biw
 aHR
 fHN
 dKo
@@ -144672,14 +144992,14 @@ akr
 bfQ
 aGo
 aGo
-aKo
+aMw
 aGo
 aCB
 aGo
 aGo
 aGo
-aKo
-aKo
+aMw
+aMw
 bfQ
 kaq
 aNm
@@ -144782,16 +145102,16 @@ aWR
 aWR
 uqQ
 wAv
-bip
+biW
 cWO
 ard
 aqX
 aqX
 oqq
 aqX
-aNo
-bgP
-aOQ
+aOB
+bhy
+aQc
 aHR
 fHN
 fHN
@@ -144835,15 +145155,15 @@ bfQ
 bfQ
 bfQ
 bfQ
-aHV
+aLs
 bfQ
-aHV
-aHV
-aHV
+aLs
+aLs
+aLs
 bfQ
-aHV
-aHV
-aIv
+aLs
+aLs
+aLx
 mAK
 kaq
 aNm
@@ -144968,11 +145288,11 @@ aHR
 aHR
 aqw
 aqw
-bgD
-aOO
-aOO
-aOO
-aOO
+bhl
+aPZ
+aPZ
+aPZ
+aPZ
 oHc
 aqx
 aFu
@@ -144993,19 +145313,19 @@ aHR
 aHR
 aqw
 akr
-aHV
+aLs
 bfQ
 bfQ
 bfQ
 bfQ
-aMn
-aJH
-aJH
-aLn
+aNC
+aLT
+aLT
+aMS
 bfQ
 bfQ
-aJE
-aIw
+aLQ
+aLA
 kaq
 aNm
 mAK
@@ -145156,18 +145476,18 @@ aNX
 aqw
 akr
 bfQ
-aIv
+aLx
 bfQ
 bfQ
-aJE
-aJH
-aJH
-aJH
-aJH
-aJH
-aJH
-aJH
-aIK
+aLQ
+aLT
+aLT
+aLT
+aLT
+aLT
+aLT
+aLT
+aLE
 bfQ
 mAK
 kaq
@@ -145242,7 +145562,7 @@ aZE
 aZt
 qUe
 bbd
-bjt
+bkb
 aYo
 uhB
 bqQ
@@ -145316,21 +145636,21 @@ apk
 aqw
 aqw
 aqw
-aNd
+aOx
 bfQ
-aJH
-aMN
-aJH
-aJH
-aJH
-aLp
-aLp
-aLp
-aKS
-aJH
-aJI
+aLT
+aOb
+aLT
+aLT
+aLT
+aMT
+aMT
+aMT
+aMJ
+aLT
+aLZ
 bfQ
-aHV
+aLs
 kaq
 aNm
 mAK
@@ -145478,21 +145798,21 @@ aaY
 aqw
 aqw
 aqw
-aNj
-aMV
-aJH
-aMQ
-aMB
-aMw
-aMo
+aOz
+aOo
+aLT
+aOd
+aNV
+aNP
+aNF
+aMU
+aMU
+aMU
+aLT
+aLT
+aLT
+aLG
 aLs
-aLs
-aLs
-aJH
-aJH
-aJH
-aIL
-aHV
 aNy
 mAK
 mAK
@@ -145640,20 +145960,20 @@ aex
 aqw
 aqw
 aqw
-aIv
-aJH
-aJH
-aMR
-aMG
+aLx
+aLT
+aLT
+aOh
+aNY
+aNR
 aMy
-aKp
-aLs
-aLN
-aLs
-aKV
-aKp
-aJN
-aJj
+aMU
+aNq
+aMU
+aMK
+aMy
+aMc
+aLH
 bfQ
 bfQ
 mAK
@@ -145802,20 +146122,20 @@ aex
 aqw
 aqw
 aqw
-aNj
-aMW
-aJH
-aMR
-aMB
-aMw
-aMo
-aLs
-aLs
-aLs
-aJH
-aJH
-aJH
-aIL
+aOz
+aOt
+aLT
+aOh
+aNV
+aNP
+aNF
+aMU
+aMU
+aMU
+aLT
+aLT
+aLT
+aLG
 bfQ
 bfQ
 mAK
@@ -145892,7 +146212,7 @@ njP
 bcb
 bbc
 aYr
-bjo
+bjW
 baS
 aXq
 baV
@@ -145917,7 +146237,7 @@ aWS
 aST
 mjk
 iam
-bim
+biT
 fGM
 qQB
 qLI
@@ -145964,19 +146284,19 @@ aex
 aqw
 aqw
 aNT
-aNj
-aMX
-aJH
+aOz
+aOu
+aLT
+aOb
+aLT
+aLT
+aLT
+aMV
+aMV
+aMV
 aMN
-aJH
-aJH
-aJH
-aLt
-aLt
-aLt
-aKY
-aJH
-aJT
+aLT
+aMn
 bfQ
 bfQ
 fKh
@@ -146054,7 +146374,7 @@ aZg
 aYV
 aYG
 aYs
-bjp
+bjX
 amT
 bbY
 amT
@@ -146080,7 +146400,7 @@ lGj
 afg
 gHV
 amZ
-big
+biO
 rau
 tWD
 sLT
@@ -146092,13 +146412,13 @@ tet
 juV
 inW
 uch
-bhl
+bhT
 uch
-bgX
+bhG
 iHH
 uch
-bgQ
-bgK
+bhz
+bht
 bfj
 bfa
 beS
@@ -146126,20 +146446,20 @@ aez
 aqw
 aqw
 aqw
-aNj
+aOz
 bfQ
-aJr
+aLJ
 bfQ
 bfQ
-aJZ
-aJH
-aJH
-aJH
-aJH
-aJH
-aJH
-aJH
-aIK
+aMo
+aLT
+aLT
+aLT
+aLT
+aLT
+aLT
+aLT
+aLE
 bfQ
 mAK
 fKh
@@ -146231,7 +146551,7 @@ baA
 bbJ
 alM
 baA
-bja
+bjJ
 bcS
 aSN
 aGH
@@ -146252,7 +146572,7 @@ gjL
 hOr
 hOr
 uMv
-bhy
+bif
 wTP
 qOO
 uvI
@@ -146264,7 +146584,7 @@ uLF
 ujR
 gom
 oDb
-bgE
+bhm
 ayJ
 iGL
 cwO
@@ -146294,14 +146614,14 @@ bfQ
 bfQ
 bfQ
 bfQ
-aMn
-aJH
-aJH
-aLn
+aNC
+aLT
+aLT
+aMS
 bfQ
 bfQ
-aJZ
-aIw
+aMo
+aLA
 aBB
 aBA
 aBA
@@ -146463,7 +146783,7 @@ bfQ
 bfQ
 bfQ
 bfQ
-aJr
+aLJ
 bfQ
 mAK
 mAK
@@ -146581,7 +146901,7 @@ cKb
 tpU
 pfF
 ajW
-bgT
+bhC
 wDp
 upn
 bTk
@@ -146590,8 +146910,8 @@ kIz
 beU
 afS
 beF
-aUX
-aUX
+bhb
+bhb
 bdn
 bdn
 bed
@@ -146900,10 +147220,10 @@ dne
 dLd
 dne
 alN
-bhz
+big
 ajA
 sWb
-bhb
+bhJ
 oQV
 lcp
 kNq
@@ -146915,7 +147235,7 @@ beT
 beM
 beF
 bfH
-aUY
+bhc
 hUr
 bfB
 bfz
@@ -147048,8 +147368,8 @@ agw
 agC
 xUv
 xRy
-biG
-biz
+bjm
+bjg
 cnz
 cto
 kcH
@@ -147211,7 +147531,7 @@ ufG
 ufG
 ufG
 fim
-biA
+bjh
 cnz
 cto
 ilv
@@ -147252,7 +147572,7 @@ hFF
 bdb
 aos
 bcN
-aPm
+aRL
 bcy
 bct
 dRa
@@ -147363,7 +147683,7 @@ aJX
 aJX
 aJX
 are
-bjc
+bjK
 aHW
 les
 oKL
@@ -147373,7 +147693,7 @@ dCf
 bZC
 rTi
 afN
-biB
+bji
 iLX
 jKw
 oOM
@@ -147414,7 +147734,7 @@ bdo
 nYT
 aos
 sTI
-aPm
+aRL
 bct
 bct
 dRa
@@ -147676,11 +147996,11 @@ aYQ
 aYA
 aYn
 bbZ
-bjc
-bjc
-bjl
-bjj
-bjg
+bjK
+bjK
+bjT
+bjR
+bjO
 mVf
 are
 are
@@ -147700,7 +148020,7 @@ bJY
 wfZ
 vJa
 jce
-bih
+biP
 wNM
 inp
 gzr
@@ -147717,7 +148037,7 @@ oTq
 aZe
 lcp
 alQ
-bgR
+bhA
 alV
 aBq
 icN
@@ -147880,7 +148200,7 @@ igh
 lcp
 alR
 enw
-bgL
+bhu
 bfk
 icN
 pqf
@@ -148039,10 +148359,10 @@ vkv
 wlU
 kpX
 igh
-bgU
+bhE
 pjd
 pxu
-bgM
+bhv
 bfl
 icN
 hhM
@@ -148367,7 +148687,7 @@ pbl
 bdh
 utT
 cLQ
-bgH
+bhp
 tpU
 awr
 bfK
@@ -148690,7 +149010,7 @@ rhj
 xhO
 mSF
 azf
-bgN
+bhw
 bfn
 tpU
 bfL
@@ -148832,7 +149152,7 @@ buH
 oJb
 uTc
 nmA
-bit
+bja
 gzS
 nGj
 mVD
@@ -148853,7 +149173,7 @@ pxj
 mSF
 rKN
 gST
-bgI
+bhq
 tpU
 auO
 beN
@@ -149182,8 +149502,8 @@ akF
 euu
 xpp
 glR
-aVa
-aVa
+bhd
+bhd
 rpJ
 bdy
 glR
@@ -149344,7 +149664,7 @@ bff
 beX
 swn
 beH
-aVi
+bhe
 anh
 anh
 eqg
@@ -149509,8 +149829,8 @@ beI
 aew
 tBf
 bet
-aQs
-aQs
+bgM
+bgM
 bdO
 bdO
 mpn
@@ -149640,9 +149960,9 @@ cFR
 cFR
 emO
 oJb
-biH
+bjn
 vnv
-biu
+bjc
 iNX
 iNX
 iNX
@@ -149672,9 +149992,9 @@ eRj
 bez
 bdP
 bdP
-aQm
-aQm
-aQm
+bgK
+bgK
+bgK
 bdK
 bdz
 bgB
@@ -150323,7 +150643,7 @@ bfC
 wiy
 nsQ
 jLf
-aQi
+bgH
 bdC
 aNh
 bre
@@ -150485,7 +150805,7 @@ bfC
 nsQ
 bec
 jLf
-aQi
+bgH
 bdD
 aXM
 bre
@@ -150646,7 +150966,7 @@ rRm
 bfC
 mSJ
 hcG
-aQi
+bgH
 jLf
 qng
 bbv
