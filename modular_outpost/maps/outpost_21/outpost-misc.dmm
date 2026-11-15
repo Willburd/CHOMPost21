@@ -3001,7 +3001,9 @@
 /obj/structure/cable/orange{
 	icon_state = "0-2"
 	},
-/obj/machinery/power/smes/buildable/engine_default,
+/obj/machinery/power/smes/buildable/engine_default{
+	is_critical = 1
+	},
 /obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/specialops_overmap)
@@ -16963,7 +16965,9 @@
 /turf/simulated/floor/reinforced,
 /area/shuttle/mercenary)
 "GU" = (
-/obj/machinery/power/smes/buildable/engine_default,
+/obj/machinery/power/smes/buildable/engine_default{
+	is_critical = 1
+	},
 /obj/structure/cable/orange,
 /obj/effect/floor_decal/milspec/color/orange/half{
 	dir = 6
