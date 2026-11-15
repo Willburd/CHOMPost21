@@ -160,6 +160,7 @@
 "ay" = (
 /obj/fiftyspawner/steel,
 /obj/structure/table/alien/blue,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -390,6 +391,7 @@
 	pixel_x = -5
 	},
 /obj/item/multitool,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -1310,6 +1312,7 @@
 /obj/structure/prop/alien/computer{
 	dir = 8
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alien/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -1574,6 +1577,7 @@
 /obj/item/bluespace_crystal,
 /obj/item/bluespace_crystal,
 /obj/item/bluespace_crystal,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -1599,6 +1603,7 @@
 /obj/structure/cable/orange{
 	icon_state = "1-2"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/mercenary)
 "dD" = (
@@ -1755,6 +1760,7 @@
 /obj/structure/cable/orange{
 	icon_state = "0-2"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/shuttle/mercenary)
 "dX" = (
@@ -1823,6 +1829,7 @@
 	dir = 10
 	},
 /obj/machinery/transportpod/alt,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/mercenary)
 "ee" = (
@@ -1832,6 +1839,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 5
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/mercenary)
 "ef" = (
@@ -1843,6 +1851,7 @@
 /obj/structure/cable/orange{
 	icon_state = "4-8"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/mercenary)
 "eg" = (
@@ -1854,6 +1863,7 @@
 /obj/structure/cable/orange{
 	icon_state = "4-8"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/shuttle/mercenary)
 "ei" = (
@@ -1869,6 +1879,7 @@
 /obj/structure/cable/orange{
 	icon_state = "4-8"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/shuttle/mercenary)
 "ek" = (
@@ -1912,6 +1923,7 @@
 /obj/effect/floor_decal/milspec/color/orange/half{
 	dir = 4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/mercenary)
 "eo" = (
@@ -1930,6 +1942,7 @@
 /obj/structure/cable/orange{
 	icon_state = "0-4"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/plating,
 /area/shuttle/mercenary)
 "ep" = (
@@ -1946,6 +1959,7 @@
 /obj/structure/cable/orange{
 	icon_state = "1-2"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "eq" = (
@@ -1964,6 +1978,7 @@
 	req_access = list(150);
 	req_one_access = null
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/shuttle/mercenary)
 "es" = (
@@ -1973,6 +1988,7 @@
 /obj/structure/cable/orange{
 	icon_state = "1-2"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/mercenary)
 "et" = (
@@ -2014,6 +2030,7 @@
 /obj/effect/floor_decal/steeldecal/steel_decals_central7{
 	dir = 4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "ey" = (
@@ -2030,6 +2047,7 @@
 /obj/effect/floor_decal/steeldecal/steel_decals_central7{
 	dir = 4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "ez" = (
@@ -2082,6 +2100,7 @@
 /obj/effect/floor_decal/steeldecal/steel_decals_central7{
 	dir = 4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "eD" = (
@@ -2091,6 +2110,7 @@
 /obj/effect/floor_decal/milspec/color/orange/half{
 	dir = 6
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "eE" = (
@@ -2115,6 +2135,7 @@
 	pixel_x = 32;
 	pixel_y = -4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "eF" = (
@@ -2123,10 +2144,12 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/industrial/bot_outline,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "eG" = (
 /obj/machinery/atmospherics/pipe/manifold4w/hidden,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "eH" = (
@@ -2141,6 +2164,7 @@
 /area/beach)
 "eJ" = (
 /obj/machinery/light/small,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/kafel_full/beige,
 /area/shuttle/mercenary)
 "eK" = (
@@ -2154,6 +2178,7 @@
 /obj/structure/cable/orange{
 	icon_state = "1-2"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "eL" = (
@@ -2173,12 +2198,14 @@
 /obj/structure/mirror/raider{
 	pixel_y = 34
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/kafel_full/beige,
 /area/shuttle/mercenary)
 "eO" = (
 /obj/structure/handrail{
 	dir = 1
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -2270,12 +2297,14 @@
 /obj/effect/floor_decal/steeldecal/steel_decals_central7{
 	dir = 4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "eU" = (
 /obj/effect/floor_decal/corner/red/full{
 	dir = 4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "eV" = (
@@ -2283,6 +2312,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/mercenary)
 "eW" = (
@@ -2299,6 +2329,7 @@
 /obj/machinery/light/floortube{
 	dir = 1
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "eY" = (
@@ -2309,6 +2340,7 @@
 	dir = 5
 	},
 /obj/effect/floor_decal/industrial/bot_outline/red,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/mercenary)
 "eZ" = (
@@ -2324,33 +2356,6 @@
 	icon_state = "dark"
 	},
 /area/syndicate_mothership)
-"fa" = (
-/obj/structure/grille{
-	desc = "A flimsy lattice of metal rods, with screws to secure it to the floor. This grille seems slightly more sturdy than others probably reinforced to withstand the wildlife.";
-	health = 25;
-	name = "Reinforced Grille"
-	},
-/obj/structure/window/phoronreinforced{
-	dir = 8
-	},
-/obj/structure/window/phoronreinforced{
-	dir = 4
-	},
-/obj/structure/window/phoronreinforced{
-	dir = 1
-	},
-/obj/machinery/door/blast/regular{
-	id = "skipjackshutters";
-	name = "Skipjack Blast Shielding"
-	},
-/obj/structure/cable/cyan{
-	icon_state = "0-2"
-	},
-/turf/simulated/shuttle/floor/alienplating/blue{
-	oxygen = 0;
-	phoron = 21.8366
-	},
-/area/shuttle/skipjack)
 "fb" = (
 /obj/item/clothing/under/psysuit,
 /obj/item/clothing/suit/wizrobe/psypurple,
@@ -2515,6 +2520,7 @@
 /obj/item/holosign_creator/combifan,
 /obj/structure/table/alien/blue,
 /obj/item/holosign_creator/combifan,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -2555,6 +2561,7 @@
 /obj/effect/floor_decal/milspec/color/orange/half{
 	dir = 4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/mercenary)
 "fy" = (
@@ -2708,6 +2715,7 @@
 	dir = 8;
 	name = "Co-pilot seat"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/shuttle/mercenary)
 "fM" = (
@@ -2839,6 +2847,7 @@
 	dir = 6
 	},
 /obj/effect/floor_decal/industrial/bot_outline/yellow,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/mercenary)
 "gb" = (
@@ -2985,6 +2994,7 @@
 	icon_state = "0-2"
 	},
 /obj/machinery/power/smes/buildable/engine_default,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/specialops_overmap)
 "gu" = (
@@ -3004,6 +3014,7 @@
 /obj/structure/cable/orange{
 	icon_state = "1-2"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "gv" = (
@@ -3068,6 +3079,7 @@
 /obj/structure/cable/orange{
 	icon_state = "4-8"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "gA" = (
@@ -3404,6 +3416,7 @@
 /obj/effect/floor_decal/corner/red/border{
 	dir = 1
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -3512,6 +3525,7 @@
 /obj/effect/floor_decal/corner/red/bordercorner{
 	dir = 8
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -3538,6 +3552,7 @@
 	dir = 10
 	},
 /obj/effect/floor_decal/industrial/bot_outline,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "he" = (
@@ -3603,6 +3618,7 @@
 	dir = 8;
 	pixel_x = 5
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/shuttle/mercenary)
 "hi" = (
@@ -3674,6 +3690,7 @@
 	dir = 4
 	},
 /obj/machinery/power/breakerbox,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/mercenary)
 "hm" = (
@@ -3842,6 +3859,7 @@
 /obj/structure/cable/orange{
 	icon_state = "4-8"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/white,
 /area/shuttle/mercenary)
 "hz" = (
@@ -3870,6 +3888,7 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/industrial/bot_outline,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "hC" = (
@@ -3952,6 +3971,7 @@
 /obj/effect/floor_decal/corner/paleblue/full{
 	dir = 1
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/white,
 /area/shuttle/mercenary)
 "hJ" = (
@@ -3984,6 +4004,7 @@
 "hM" = (
 /obj/structure/ship_munition/disperser_charge/fire,
 /obj/effect/floor_decal/industrial/bot_outline/yellow,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "hN" = (
@@ -3999,6 +4020,7 @@
 	dir = 5
 	},
 /obj/effect/floor_decal/industrial/bot_outline/blue,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "hP" = (
@@ -4114,6 +4136,7 @@
 /obj/structure/cable/orange{
 	icon_state = "1-2"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "ib" = (
@@ -4605,6 +4628,7 @@
 /obj/effect/floor_decal/milspec/color/orange/half{
 	dir = 4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/mercenary)
 "iW" = (
@@ -4760,6 +4784,7 @@
 /obj/effect/floor_decal/corner/lightgrey/bordercorner{
 	dir = 4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "jh" = (
@@ -5312,6 +5337,7 @@
 	dir = 1;
 	pixel_y = 32
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -5605,18 +5631,9 @@
 	icon_state = "dark"
 	},
 /area/syndicate_mothership)
-"kC" = (
-/obj/machinery/porta_turret/alien{
-	check_all = 0;
-	check_anomalies = 0;
-	check_arrest = 0;
-	check_records = 0;
-	faction = "vox"
-	},
-/turf/simulated/shuttle/floor/voidcraft/turfpack/airless,
-/area/shuttle/skipjack)
 "kD" = (
 /obj/machinery/floor_light,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/voidcraft/turfpack/airless,
 /area/shuttle/skipjack)
 "kE" = (
@@ -5861,6 +5878,7 @@
 /obj/structure/handrail{
 	dir = 1
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/specialops_overmap)
 "lm" = (
@@ -5872,6 +5890,7 @@
 /obj/machinery/ai_status_display{
 	pixel_y = -32
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -5892,6 +5911,7 @@
 /obj/structure/handrail{
 	dir = 1
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/specialops_overmap)
 "lq" = (
@@ -5900,12 +5920,6 @@
 	},
 /turf/unsimulated/floor/techfloor_grid,
 /area/centcom/simulated/cent_sat)
-"lr" = (
-/obj/machinery/porta_turret/stationary/CIWS{
-	req_one_access = list(101,103)
-	},
-/turf/simulated/floor/reinforced/airless,
-/area/shuttle/specialops_overmap)
 "ls" = (
 /turf/unsimulated/wall/fakeglass,
 /area/centcom/simulated/cent_sat)
@@ -5915,6 +5929,7 @@
 	},
 /obj/structure/ship_munition/disperser_charge/explosive,
 /obj/effect/floor_decal/industrial/outline/cut_corners/red,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/specialops_overmap)
 "lu" = (
@@ -5986,6 +6001,7 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/industrial/hatch/red,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/specialops_overmap)
 "lF" = (
@@ -6157,6 +6173,7 @@
 /turf/simulated/shuttle/plating/airless/carry,
 /area/shuttle/specialops_overmap)
 "md" = (
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/airless,
 /area/shuttle/specialops_overmap)
 "me" = (
@@ -6169,12 +6186,14 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/wall/dark,
 /area/shuttle/specialops_overmap)
 "mf" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 9
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/wall/rplastitanium,
 /area/shuttle/specialops_overmap)
 "mg" = (
@@ -6187,6 +6206,7 @@
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 10
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec/sterile,
 /area/shuttle/specialops_overmap)
 "mh" = (
@@ -6195,6 +6215,7 @@
 	},
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/corner/blue/border,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec/sterile,
 /area/shuttle/specialops_overmap)
 "mi" = (
@@ -6218,6 +6239,7 @@
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 6
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec/sterile,
 /area/shuttle/specialops_overmap)
 "mk" = (
@@ -6231,6 +6253,7 @@
 /obj/structure/handrail{
 	dir = 4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -6249,6 +6272,7 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/industrial/loading/red,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -6391,6 +6415,7 @@
 /obj/effect/floor_decal/corner/red/border{
 	dir = 6
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -6407,10 +6432,12 @@
 	dir = 8
 	},
 /obj/structure/fans/hardlight,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/specialops_overmap)
 "mF" = (
 /obj/structure/fans/hardlight,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/specialops_overmap)
 "mG" = (
@@ -6421,6 +6448,7 @@
 	dir = 4
 	},
 /obj/structure/fans/hardlight,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/specialops_overmap)
 "mH" = (
@@ -6434,6 +6462,7 @@
 /obj/structure/window/maintenance_panel{
 	dir = 1
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/airless,
 /area/shuttle/specialops_overmap)
 "mJ" = (
@@ -6449,6 +6478,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/wall/dark,
 /area/shuttle/specialops_overmap)
 "mK" = (
@@ -6458,6 +6488,7 @@
 /obj/effect/floor_decal/milspec/color/orange/corner{
 	dir = 1
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/mercenary)
 "mL" = (
@@ -6478,12 +6509,14 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/fuel{
 	dir = 1
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/wall/rplastitanium,
 /area/shuttle/specialops_overmap)
 "mP" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/wall/rplastitanium,
 /area/shuttle/specialops_overmap)
 "mQ" = (
@@ -6499,12 +6532,14 @@
 /obj/structure/handrail{
 	dir = 4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec/sterile,
 /area/shuttle/specialops_overmap)
 "mR" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 9
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec/sterile,
 /area/shuttle/specialops_overmap)
 "mS" = (
@@ -6569,6 +6604,7 @@
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec/sterile,
 /area/shuttle/specialops_overmap)
 "mU" = (
@@ -6607,6 +6643,7 @@
 /area/space)
 "nb" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/fuel,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/specialops_overmap)
 "nc" = (
@@ -6675,6 +6712,7 @@
 /obj/structure/handrail{
 	dir = 1
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -6804,6 +6842,7 @@
 /obj/structure/bed/chair/bay/comfy/teal{
 	dir = 1
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -7356,6 +7395,7 @@
 /obj/item/disk/tech_disk,
 /obj/item/storage/box,
 /obj/item/storage/box,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -7557,6 +7597,7 @@
 /obj/structure/cable/cyan{
 	icon_state = "4-8"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -7999,6 +8040,7 @@
 /area/centcom/simulated/cent_sat)
 "qh" = (
 /obj/machinery/computer/ship/engines/abductor,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -8195,6 +8237,7 @@
 /area/syndicate_mothership)
 "qA" = (
 /obj/structure/bed/chair/bay/comfy/teal,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -8320,6 +8363,7 @@
 /obj/effect/floor_decal/milspec/color/orange/half{
 	dir = 4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "qQ" = (
@@ -8367,6 +8411,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/specialops_overmap)
 "qX" = (
@@ -8375,11 +8420,13 @@
 /obj/machinery/atmospherics/portables_connector/fuel{
 	dir = 8
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/specialops_overmap)
 "qY" = (
 /obj/structure/ship_munition/disperser_charge/explosive,
 /obj/effect/floor_decal/industrial/outline/cut_corners/red,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/specialops_overmap)
 "qZ" = (
@@ -8395,6 +8442,7 @@
 /obj/effect/floor_decal/corner/red/border{
 	dir = 8
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -8413,6 +8461,7 @@
 /obj/effect/floor_decal/corner/red/border{
 	dir = 4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -8434,6 +8483,7 @@
 /obj/effect/floor_decal/corner/black/border{
 	dir = 10
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -8446,13 +8496,16 @@
 /obj/effect/floor_decal/industrial/warning/color/red{
 	dir = 8
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/shuttle/specialops_overmap)
 "rg" = (
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/shuttle/specialops_overmap)
 "rh" = (
 /obj/mecha/combat/fighter/pinnace/loaded,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/shuttle/specialops_overmap)
 "ri" = (
@@ -8462,6 +8515,7 @@
 /obj/effect/floor_decal/industrial/warning/color/red{
 	dir = 4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/shuttle/specialops_overmap)
 "rj" = (
@@ -8481,6 +8535,7 @@
 /obj/machinery/porta_turret/heavy/lmg{
 	req_one_access = list(101,103)
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -8512,6 +8567,7 @@
 	dir = 8
 	},
 /obj/machinery/oxygen_pump/mobile/stabilizer,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec/sterile,
 /area/shuttle/specialops_overmap)
 "rp" = (
@@ -8522,6 +8578,7 @@
 /obj/machinery/light/floortube{
 	dir = 8
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec/sterile,
 /area/shuttle/specialops_overmap)
 "rq" = (
@@ -8570,13 +8627,16 @@
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec/sterile,
 /area/shuttle/specialops_overmap)
 "rs" = (
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/specialops_overmap)
 "rt" = (
 /obj/machinery/status_display,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/wall/rplastitanium,
 /area/shuttle/mercenary)
 "ru" = (
@@ -8604,6 +8664,7 @@
 	name = "ammo rack";
 	req_one_access = list(101,103)
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/shuttle/specialops_overmap)
 "rw" = (
@@ -8613,6 +8674,7 @@
 /obj/machinery/light/floortube{
 	dir = 8
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -8624,6 +8686,7 @@
 /obj/effect/floor_decal/corner/red/border{
 	dir = 4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -8635,6 +8698,7 @@
 /obj/effect/floor_decal/corner/black/border{
 	dir = 8
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -8646,6 +8710,7 @@
 /obj/effect/floor_decal/industrial/warning/color/red{
 	dir = 9
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/shuttle/specialops_overmap)
 "rA" = (
@@ -8687,6 +8752,7 @@
 /obj/effect/floor_decal/industrial/warning/color/red{
 	dir = 1
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/shuttle/specialops_overmap)
 "rD" = (
@@ -8696,6 +8762,7 @@
 /obj/effect/floor_decal/industrial/warning/color/red{
 	dir = 5
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/shuttle/specialops_overmap)
 "rE" = (
@@ -8734,6 +8801,7 @@
 /obj/effect/floor_decal/corner/black/border{
 	dir = 4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -8747,6 +8815,7 @@
 	icon_state = "4-8"
 	},
 /obj/structure/table/alien/blue,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -8793,6 +8862,7 @@
 /obj/machinery/shipsensors{
 	dir = 8
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced/airless,
 /area/shuttle/specialops_overmap)
 "rN" = (
@@ -8809,12 +8879,14 @@
 /obj/machinery/oxygen_pump/anesthetic{
 	pixel_x = -32
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec/sterile,
 /area/shuttle/specialops_overmap)
 "rO" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/fuel{
 	dir = 4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/specialops_overmap)
 "rP" = (
@@ -8833,6 +8905,7 @@
 /obj/item/tank/phoron,
 /obj/item/tank/phoron,
 /obj/item/tank/phoron,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/specialops_overmap)
 "rR" = (
@@ -8840,6 +8913,7 @@
 	dir = 8;
 	pixel_x = 4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/specialops_overmap)
 "rS" = (
@@ -8869,6 +8943,7 @@
 	dir = 9
 	},
 /obj/structure/handrail,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -8886,6 +8961,7 @@
 /obj/effect/floor_decal/corner/red/bordercorner{
 	dir = 4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -8898,12 +8974,14 @@
 /obj/effect/floor_decal/corner/black/border{
 	dir = 8
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
 /area/shuttle/specialops_overmap)
 "rY" = (
 /obj/machinery/light/floortube,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -8916,6 +8994,7 @@
 /obj/effect/floor_decal/industrial/stand_clear/red{
 	dir = 1
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -8928,6 +9007,7 @@
 /obj/effect/floor_decal/corner/black/border{
 	dir = 4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -8942,6 +9022,7 @@
 /obj/structure/window/plastitanium{
 	dir = 4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/specialops_overmap)
 "sd" = (
@@ -8956,6 +9037,7 @@
 /obj/effect/floor_decal/corner/white/bordercorner{
 	dir = 4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -8969,6 +9051,7 @@
 /obj/effect/floor_decal/corner/white/border{
 	dir = 1
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -8985,6 +9068,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospheric_field_generator/perma/underdoors,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/shuttle/specialops_overmap)
 "si" = (
@@ -8996,6 +9080,7 @@
 /obj/effect/floor_decal/corner/brown/bordercorner{
 	dir = 1
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -9057,6 +9142,7 @@
 	dir = 6
 	},
 /obj/effect/floor_decal/industrial/outline/cut_corners/yellow,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -9107,6 +9193,7 @@
 /obj/machinery/door/airlock/angled_tgmc/engineering{
 	req_one_access = list(101,103)
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/shuttle/specialops_overmap)
 "su" = (
@@ -9115,6 +9202,7 @@
 	name = "chase cannon";
 	req_one_access = list(101,103)
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/shuttle/specialops_overmap)
 "sv" = (
@@ -9127,6 +9215,7 @@
 	dir = 9
 	},
 /obj/item/cell/slime,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -9139,6 +9228,7 @@
 	dir = 1
 	},
 /obj/structure/handrail,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -9164,6 +9254,7 @@
 /obj/effect/floor_decal/corner/red/bordercorner{
 	dir = 1
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -9179,6 +9270,7 @@
 /obj/effect/floor_decal/corner/red/bordercorner{
 	dir = 4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -9193,6 +9285,7 @@
 	dir = 5
 	},
 /obj/item/cell/slime,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -9208,6 +9301,7 @@
 	dir = 4;
 	pixel_x = -4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -9219,6 +9313,7 @@
 /obj/effect/floor_decal/corner/white/border{
 	dir = 4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -9230,6 +9325,7 @@
 /obj/effect/floor_decal/corner/brown/border{
 	dir = 8
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -9244,6 +9340,7 @@
 "sG" = (
 /obj/effect/floor_decal/borderfloorblack/corner,
 /obj/effect/floor_decal/corner/brown/bordercorner,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -9255,6 +9352,7 @@
 	},
 /obj/effect/floor_decal/corner/brown/border,
 /obj/effect/floor_decal/industrial/outline/cut_corners/yellow,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -9270,6 +9368,7 @@
 	dir = 6
 	},
 /obj/effect/floor_decal/industrial/outline/cut_corners/yellow,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -9295,6 +9394,7 @@
 /obj/fiftyspawner/phoronglass,
 /obj/fiftyspawner/phoronrglass,
 /obj/structure/table/alien/blue,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -9313,6 +9413,7 @@
 "sM" = (
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/corner/red/border,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/specialops_overmap)
 "sN" = (
@@ -9324,6 +9425,7 @@
 /obj/effect/floor_decal/industrial/warning/color/red{
 	dir = 4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/specialops_overmap)
 "sO" = (
@@ -9372,6 +9474,7 @@
 	pixel_x = -6;
 	dir = 1
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/specialops_overmap)
 "sR" = (
@@ -9391,6 +9494,7 @@
 	},
 /area/syndicate_mothership)
 "sS" = (
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -9405,6 +9509,7 @@
 /obj/effect/floor_decal/corner/blue/bordercorner{
 	dir = 8
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -9433,6 +9538,7 @@
 /obj/structure/window/plastitanium{
 	dir = 8
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/specialops_overmap)
 "sW" = (
@@ -9445,6 +9551,7 @@
 /obj/structure/window/plastitanium{
 	dir = 4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/specialops_overmap)
 "sX" = (
@@ -9455,6 +9562,7 @@
 	dir = 10
 	},
 /obj/machinery/recharge_station,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -9481,6 +9589,7 @@
 	},
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/corner/red/border,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -9494,6 +9603,7 @@
 /obj/machinery/status_display{
 	pixel_y = -32
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -9507,6 +9617,7 @@
 /obj/effect/floor_decal/corner/red/bordercorner{
 	dir = 8
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -9536,6 +9647,7 @@
 /obj/effect/floor_decal/corner/red/border{
 	dir = 6
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -9547,10 +9659,12 @@
 	req_one_access = list(101,103);
 	name = "fighter bay"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/shuttle/specialops_overmap)
 "th" = (
 /obj/machinery/atmospheric_field_generator/perma/underdoors,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/shuttle/specialops_overmap)
 "ti" = (
@@ -9563,6 +9677,7 @@
 /obj/machinery/pointdefense_control{
 	id_tag = "pd_interferon"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -9570,6 +9685,7 @@
 "tj" = (
 /obj/effect/floor_decal/borderfloorblack/corner,
 /obj/effect/floor_decal/corner/white/bordercorner,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -9601,6 +9717,7 @@
 	},
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/corner/white/border,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -9616,6 +9733,7 @@
 	dir = 8;
 	pixel_x = 4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -9631,6 +9749,7 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/industrial/outline/cut_corners/yellow,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -9642,6 +9761,7 @@
 	},
 /obj/effect/floor_decal/corner/brown/border,
 /obj/effect/floor_decal/industrial/outline/cut_corners/yellow,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -9657,6 +9777,7 @@
 	dir = 6
 	},
 /obj/effect/floor_decal/industrial/outline/cut_corners/yellow,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -9668,6 +9789,7 @@
 /obj/machinery/light/floortube,
 /obj/effect/overmap/visitable/ship/landable/specialops_overmap,
 /obj/effect/shuttle_landmark/premade/specialops_overmap/central_command,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/specialops_overmap)
 "tq" = (
@@ -9677,12 +9799,14 @@
 /obj/effect/floor_decal/industrial/warning/color/red{
 	dir = 4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/specialops_overmap)
 "tr" = (
 /obj/effect/floor_decal/industrial/loading{
 	dir = 8
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -9695,6 +9819,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/fuel{
 	dir = 8
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -9711,6 +9836,7 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/corner/red/bordercorner,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -9726,6 +9852,7 @@
 	check_records = 0;
 	faction = "vox"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -9741,6 +9868,7 @@
 	req_one_access = list(101,103);
 	dir = 4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/shuttle/specialops_overmap)
 "tw" = (
@@ -9768,6 +9896,7 @@
 /obj/effect/floor_decal/corner/red/bordercorner{
 	dir = 1
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -9776,6 +9905,7 @@
 /obj/machinery/ai_status_display{
 	pixel_y = 32
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -9792,6 +9922,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 10
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -9804,6 +9935,7 @@
 /obj/structure/cable/orange{
 	icon_state = "1-2"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -9817,6 +9949,7 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/corner/red/bordercorner,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -9827,6 +9960,7 @@
 	req_one_access = list(101,103);
 	dir = 4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/shuttle/specialops_overmap)
 "tE" = (
@@ -9834,6 +9968,7 @@
 /obj/machinery/light/floortube{
 	dir = 1
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -9847,6 +9982,7 @@
 /obj/effect/floor_decal/corner/red/bordercorner{
 	dir = 4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -9867,6 +10003,7 @@
 /obj/structure/handrail{
 	dir = 1
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -9876,6 +10013,7 @@
 /obj/machinery/door/airlock/angled_tgmc/medical_glass{
 	req_one_access = list(101,103)
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/shuttle/specialops_overmap)
 "tI" = (
@@ -9887,6 +10025,7 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/red/border,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -9904,6 +10043,7 @@
 /obj/effect/floor_decal/corner/red/bordercorner{
 	dir = 8
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -9928,6 +10068,7 @@
 /obj/structure/handrail{
 	dir = 1
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -9954,6 +10095,7 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/white/border,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -9976,6 +10118,7 @@
 	dir = 4;
 	req_one_access = list(101,103)
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/shuttle/specialops_overmap)
 "tQ" = (
@@ -9991,6 +10134,7 @@
 /obj/effect/floor_decal/corner/white/bordercorner{
 	dir = 1
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -10000,6 +10144,7 @@
 	dir = 1
 	},
 /obj/machinery/light/floortube,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -10012,6 +10157,7 @@
 	dir = 8;
 	pixel_x = 4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -10019,6 +10165,7 @@
 "tT" = (
 /obj/effect/floor_decal/industrial/outline/cut_corners/yellow,
 /obj/machinery/shieldwallgen,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -10032,6 +10179,7 @@
 /obj/effect/floor_decal/corner/brown/bordercorner{
 	dir = 4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -10047,6 +10195,7 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/industrial/outline/cut_corners/yellow,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -10084,6 +10233,7 @@
 	dir = 1
 	},
 /obj/structure/handrail,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/specialops_overmap)
 "tZ" = (
@@ -10107,6 +10257,7 @@
 /obj/effect/floor_decal/industrial/warning/color/red{
 	dir = 4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/specialops_overmap)
 "ua" = (
@@ -10115,6 +10266,7 @@
 /obj/machinery/light/floortube{
 	dir = 1
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/specialops_overmap)
 "ub" = (
@@ -10126,6 +10278,7 @@
 	},
 /obj/machinery/mech_recharger,
 /obj/effect/floor_decal/industrial/warning/full,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/specialops_overmap)
 "uc" = (
@@ -10142,6 +10295,7 @@
 /obj/effect/floor_decal/corner/lightgrey/bordercorner{
 	dir = 4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -10154,6 +10308,7 @@
 /obj/structure/window/plastitanium{
 	dir = 8
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/specialops_overmap)
 "ue" = (
@@ -10164,6 +10319,7 @@
 /obj/structure/window/plastitanium{
 	dir = 4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/specialops_overmap)
 "uf" = (
@@ -10178,6 +10334,7 @@
 	dir = 1
 	},
 /obj/structure/handrail,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -10196,6 +10353,7 @@
 	pixel_y = 28;
 	id_tag = "int_interior_sensor"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -10215,6 +10373,7 @@
 	broadcasting = 1
 	},
 /obj/structure/bed/chair/bay/shuttle,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -10235,6 +10394,7 @@
 	pixel_x = 4;
 	pixel_y = 30
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -10252,12 +10412,14 @@
 /obj/effect/floor_decal/corner/red/bordercorner{
 	dir = 4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
 /area/shuttle/specialops_overmap)
 "ul" = (
 /obj/structure/bed/chair/hammock_kbraid_n,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -10327,6 +10489,7 @@
 /obj/effect/floor_decal/corner/red/border{
 	dir = 5
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -10421,6 +10584,7 @@
 /obj/structure/panic_button{
 	pixel_x = -30
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -10432,6 +10596,7 @@
 /obj/effect/floor_decal/corner/white/bordercorner{
 	dir = 4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -10469,6 +10634,7 @@
 	broadcasting = 1;
 	pixel_x = 29
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -10488,6 +10654,7 @@
 	dir = 8;
 	pixel_x = 4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -10499,6 +10666,7 @@
 /obj/effect/floor_decal/corner/brown/bordercorner{
 	dir = 4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -10512,6 +10680,7 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/industrial/outline/cut_corners/yellow,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -10532,6 +10701,7 @@
 	dir = 5
 	},
 /obj/effect/floor_decal/industrial/outline/cut_corners/yellow,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -10568,6 +10738,7 @@
 	id_tag = "int_docker_door_int";
 	frequency = 1381
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/shuttle/specialops_overmap)
 "uN" = (
@@ -10577,6 +10748,7 @@
 /obj/structure/cable/orange{
 	icon_state = "1-2"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/shuttle/specialops_overmap)
 "uO" = (
@@ -10589,6 +10761,7 @@
 	dir = 10
 	},
 /obj/item/cell/slime,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -10606,6 +10779,7 @@
 /obj/structure/handrail{
 	dir = 1
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -10624,6 +10798,7 @@
 /obj/effect/floor_decal/corner/red/bordercorner{
 	dir = 8
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -10631,6 +10806,7 @@
 "uS" = (
 /obj/effect/floor_decal/borderfloorblack/corner,
 /obj/effect/floor_decal/corner/red/bordercorner,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -10645,6 +10821,7 @@
 	dir = 6
 	},
 /obj/item/cell/slime,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -10657,6 +10834,7 @@
 	dir = 8
 	},
 /obj/structure/prop/machine/bsb_on,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -10670,6 +10848,7 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/industrial/outline/cut_corners/yellow,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -10689,6 +10868,7 @@
 	dir = 5
 	},
 /obj/effect/floor_decal/industrial/outline/cut_corners/yellow,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -10708,6 +10888,7 @@
 /obj/item/hoist_kit,
 /obj/item/hoist_kit,
 /obj/structure/table/steel_reinforced,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -10727,6 +10908,7 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -10745,6 +10927,7 @@
 	name = "Bluespace Inhibitor";
 	desc = "An E-Shui proprietary machine that de-phases Shadekin that enter its area of effect. It's unclear how it works, or why it smells vaguely floral..."
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -10754,6 +10937,7 @@
 /obj/item/stock_parts/capacitor/hyper,
 /obj/item/stock_parts/micro_laser/hyper,
 /obj/structure/cable/orange,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/specialops_overmap)
 "ve" = (
@@ -10765,11 +10949,13 @@
 /obj/structure/cable/orange{
 	icon_state = "0-8"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/specialops_overmap)
 "vf" = (
 /obj/effect/floor_decal/industrial/outline/cut_corners/red,
 /obj/structure/ship_munition/disperser_charge/mining,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/specialops_overmap)
 "vg" = (
@@ -10796,6 +10982,7 @@
 /obj/item/reagent_containers/spray/cleaner,
 /obj/item/reagent_containers/spray/cleaner,
 /obj/item/reagent_containers/spray/cleaner,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -10805,6 +10992,7 @@
 /obj/machinery/light/floortube{
 	dir = 1
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -10819,6 +11007,7 @@
 /area/wizard_station)
 "vl" = (
 /obj/effect/floor_decal/industrial/stand_clear/red,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -10832,6 +11021,7 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/white/bordercorner,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -10867,6 +11057,7 @@
 /obj/effect/floor_decal/corner/white/border{
 	dir = 1
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -10884,6 +11075,7 @@
 /obj/effect/floor_decal/corner/brown/bordercorner{
 	dir = 8
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -10897,6 +11089,7 @@
 	},
 /obj/effect/floor_decal/industrial/outline/cut_corners/yellow,
 /obj/machinery/space_heater,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -10928,6 +11121,7 @@
 	frequency = 1381;
 	id_tag = "int_vent"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -10943,6 +11137,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -10955,6 +11150,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/tank/air/full,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -10975,6 +11171,7 @@
 /obj/effect/floor_decal/corner/red/bordercorner{
 	dir = 1
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -10986,6 +11183,7 @@
 /obj/machinery/light/floortube{
 	dir = 4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -11000,6 +11198,7 @@
 /obj/effect/floor_decal/industrial/warning/color/red{
 	dir = 10
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/shuttle/specialops_overmap)
 "vF" = (
@@ -11015,6 +11214,7 @@
 "vG" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/effect/floor_decal/industrial/warning/color/red,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/shuttle/specialops_overmap)
 "vI" = (
@@ -11023,6 +11223,7 @@
 	},
 /obj/effect/floor_decal/industrial/warning,
 /obj/effect/floor_decal/industrial/warning/color/red,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/shuttle/specialops_overmap)
 "vJ" = (
@@ -11033,6 +11234,7 @@
 	check_records = 0;
 	faction = "vox"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alien/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -11045,10 +11247,12 @@
 /obj/effect/floor_decal/industrial/warning/color/red{
 	dir = 6
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/shuttle/specialops_overmap)
 "vL" = (
 /obj/machinery/recharge_station,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alien/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -11064,6 +11268,7 @@
 /area/shuttle/specialops_overmap)
 "vN" = (
 /obj/structure/window/maintenance_panel,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/airless,
 /area/shuttle/specialops_overmap)
 "vO" = (
@@ -11077,6 +11282,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/wall/dark,
 /area/shuttle/specialops_overmap)
 "vP" = (
@@ -11085,6 +11291,7 @@
 /area/planet/clown)
 "vQ" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/fuel,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/wall/rplastitanium,
 /area/shuttle/specialops_overmap)
 "vR" = (
@@ -11102,6 +11309,7 @@
 	frequency = 1381;
 	id_tag = "int_vent"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -11113,6 +11321,7 @@
 	pixel_x = -1
 	},
 /obj/effect/floor_decal/industrial/bot_outline/blue,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/kafel_full/beige,
 /area/shuttle/specialops_overmap)
 "vT" = (
@@ -11124,6 +11333,7 @@
 	},
 /obj/structure/cable/orange,
 /obj/effect/floor_decal/milspec/color/orange/half,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/mercenary)
 "vU" = (
@@ -11133,12 +11343,14 @@
 /obj/structure/cable/orange{
 	icon_state = "0-2"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/specialops_overmap)
 "vV" = (
 /obj/structure/prop/machine/nt_biocan{
 	name = "Ftl fuel reserve"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/specialops_overmap)
 "vW" = (
@@ -11147,6 +11359,7 @@
 	dir = 1;
 	pixel_y = 32
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alien/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -11165,6 +11378,7 @@
 	dir = 1;
 	pixel_y = 32
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alien/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -11174,11 +11388,13 @@
 /obj/structure/prop/machine/tube/starts_down{
 	name = "FTL core"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/specialops_overmap)
 "vZ" = (
 /obj/structure/ship_munition/disperser_charge/emp,
 /obj/effect/floor_decal/industrial/outline/cut_corners/red,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/specialops_overmap)
 "wa" = (
@@ -11191,6 +11407,7 @@
 /obj/machinery/sleep_console{
 	dir = 4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alien/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -11203,6 +11420,7 @@
 /obj/structure/cable/cyan{
 	icon_state = "1-2"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alien/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -11213,21 +11431,25 @@
 	dir = 4
 	},
 /obj/effect/shuttle_landmark/premade/skipjack/base,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/voidcraft/turfpack/airless,
 /area/shuttle/skipjack)
 "we" = (
 /obj/structure/ship_munition/disperser_charge/fire,
 /obj/effect/floor_decal/industrial/outline/cut_corners/red,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/specialops_overmap)
 "wf" = (
 /obj/structure/handrail{
 	dir = 8
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/voidcraft/turfpack/airless,
 /area/shuttle/skipjack)
 "wg" = (
 /obj/machinery/door/airlock/alien/blue,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -11247,6 +11469,7 @@
 /obj/effect/floor_decal/corner/red/border{
 	dir = 4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -11265,6 +11488,7 @@
 /obj/effect/floor_decal/corner/black/border{
 	dir = 9
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -11273,6 +11497,7 @@
 /obj/structure/cable/cyan{
 	icon_state = "1-4"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -11285,6 +11510,7 @@
 /obj/effect/floor_decal/industrial/warning/color/red{
 	dir = 8
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/shuttle/specialops_overmap)
 "wm" = (
@@ -11297,6 +11523,7 @@
 /obj/machinery/porta_turret/heavy/lmg{
 	req_one_access = list(101,103)
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -11305,6 +11532,7 @@
 /obj/structure/cable/cyan{
 	icon_state = "2-8"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -11313,6 +11541,7 @@
 "wo" = (
 /obj/item/tank/phoroanesthetic,
 /obj/machinery/portable_atmospherics/canister/nitrophoric_oxide,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -11333,6 +11562,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 10
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/wall/rplastitanium,
 /area/shuttle/specialops_overmap)
 "wr" = (
@@ -11364,6 +11594,7 @@
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 9
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -11381,6 +11612,7 @@
 /obj/effect/floor_decal/corner/lightgrey/bordercorner{
 	dir = 4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -11398,6 +11630,7 @@
 /obj/structure/handrail{
 	dir = 4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -11435,33 +11668,11 @@
 /obj/effect/floor_decal/industrial/loading/red{
 	dir = 1
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
 /area/shuttle/specialops_overmap)
-"wz" = (
-/obj/structure/grille{
-	desc = "A flimsy lattice of metal rods, with screws to secure it to the floor. This grille seems slightly more sturdy than others probably reinforced to withstand the wildlife.";
-	health = 25;
-	name = "Reinforced Grille"
-	},
-/obj/structure/window/phoronreinforced{
-	dir = 8
-	},
-/obj/structure/window/phoronreinforced{
-	dir = 4
-	},
-/obj/structure/window/phoronreinforced,
-/obj/machinery/door/blast/regular{
-	id = "skipjackshutters";
-	name = "Skipjack Blast Shielding"
-	},
-/obj/structure/cable/cyan,
-/turf/simulated/shuttle/floor/alienplating/blue{
-	oxygen = 0;
-	phoron = 21.8366
-	},
-/area/shuttle/skipjack)
 "wA" = (
 /obj/machinery/computer/ship/disperser{
 	dir = 8;
@@ -11476,6 +11687,7 @@
 /obj/effect/floor_decal/corner/red/border{
 	dir = 5
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -11492,6 +11704,7 @@
 	dir = 8
 	},
 /obj/structure/fans/hardlight,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/specialops_overmap)
 "wC" = (
@@ -11517,6 +11730,7 @@
 	},
 /obj/structure/ship_munition/disperser_charge/emp,
 /obj/effect/floor_decal/industrial/outline/cut_corners/red,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/specialops_overmap)
 "wF" = (
@@ -11576,6 +11790,7 @@
 "wM" = (
 /obj/machinery/chemical_analyzer,
 /obj/structure/table/alien,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alien/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -11593,6 +11808,7 @@
 "wP" = (
 /obj/machinery/chemical_dispenser/full,
 /obj/structure/table/alien,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alien/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -11608,6 +11824,7 @@
 "wS" = (
 /obj/machinery/chem_master,
 /obj/structure/table/alien,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alien/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -11681,6 +11898,7 @@
 "xb" = (
 /obj/structure/table/alien,
 /obj/machinery/chemical_dispenser/ert/specialops/abductor,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alien/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -11715,6 +11933,7 @@
 /obj/item/extraction_pack,
 /obj/item/extraction_pack,
 /obj/item/extraction_pack,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alien/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -11730,6 +11949,7 @@
 	pixel_y = 4
 	},
 /obj/structure/table/alien/blue,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alien/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -11761,6 +11981,7 @@
 "xk" = (
 /obj/structure/table/alien/blue,
 /obj/item/bluespaceradio/outpost_prelinked,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alien/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -11776,6 +11997,7 @@
 	pixel_x = -32
 	},
 /obj/machinery/optable,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -11786,6 +12008,7 @@
 /obj/structure/table/alien/blue,
 /obj/item/storage/belt/medical/alien,
 /obj/item/storage/belt/medical/alien,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alien/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -11795,6 +12018,7 @@
 /obj/structure/handrail{
 	dir = 4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alien/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -11823,6 +12047,7 @@
 /obj/structure/handrail{
 	dir = 8
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alien/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -11844,6 +12069,7 @@
 	dir = 8;
 	pixel_x = 30
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alien/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -11871,6 +12097,7 @@
 /obj/item/disk/design_disk,
 /obj/item/storage/box,
 /obj/item/storage/box,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -11892,6 +12119,7 @@
 	id = "skipjackshutters";
 	name = "Skipjack Blast Shielding"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -11901,6 +12129,7 @@
 /obj/machinery/shipsensors{
 	dir = 8
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/voidcraft/turfpack/airless,
 /area/shuttle/skipjack)
 "xB" = (
@@ -11934,6 +12163,7 @@
 /obj/item/surgical/surgicaldrill/alien{
 	pixel_y = -7
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -11984,6 +12214,7 @@
 /obj/item/surgical/scalpel/alien{
 	pixel_y = 8
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -12007,6 +12238,7 @@
 /obj/item/surgical/circular_saw/alien{
 	pixel_y = 6
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alien/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -12063,6 +12295,7 @@
 /obj/structure/cable/cyan{
 	icon_state = "1-2"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alien/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -12093,6 +12326,7 @@
 /obj/structure/table/alien/blue,
 /obj/item/surgical/bioregen,
 /obj/item/surgical/bonegel,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alien/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -12102,6 +12336,7 @@
 /obj/structure/cable/cyan{
 	icon_state = "2-8"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/voidcraft/turfpack/airless,
 /area/shuttle/skipjack)
 "yb" = (
@@ -12111,6 +12346,7 @@
 /obj/structure/cable/cyan{
 	icon_state = "1-2"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/voidcraft/turfpack/airless,
 /area/shuttle/skipjack)
 "yd" = (
@@ -12194,6 +12430,7 @@
 /area/specialty/thedarkplace)
 "yo" = (
 /obj/structure/table/alien/blue,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alien/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -12240,6 +12477,7 @@
 	dir = 1;
 	pixel_y = 32
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alien/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -12262,6 +12500,7 @@
 /area/specialty/thedarkplace)
 "yv" = (
 /obj/machinery/floodlight,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alien/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -12287,6 +12526,7 @@
 /obj/structure/sign/flag/catpirate/left{
 	pixel_y = 32
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -12324,6 +12564,7 @@
 /obj/structure/sign/flag/catpirate/right{
 	pixel_y = 32
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -12339,6 +12580,7 @@
 	layer = 4;
 	pixel_y = 32
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -12375,6 +12617,7 @@
 /obj/structure/cable/cyan{
 	icon_state = "4-8"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/voidcraft/turfpack/airless,
 /area/shuttle/skipjack)
 "yJ" = (
@@ -12403,6 +12646,7 @@
 /obj/structure/cable/cyan{
 	icon_state = "0-4"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -12424,6 +12668,7 @@
 	icon_state = "0-4"
 	},
 /obj/machinery/power/rtg/abductor/built,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -12446,6 +12691,7 @@
 /obj/structure/cable/cyan{
 	icon_state = "1-8"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -12510,6 +12756,7 @@
 /obj/structure/cable/cyan{
 	icon_state = "4-8"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -12522,6 +12769,7 @@
 /obj/structure/cable/cyan{
 	icon_state = "4-8"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alien/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -12577,6 +12825,7 @@
 /obj/structure/cable/cyan{
 	icon_state = "4-8"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -12629,17 +12878,20 @@
 /obj/structure/cable/cyan{
 	icon_state = "1-8"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/voidcraft/turfpack/airless,
 /area/shuttle/skipjack)
 "zk" = (
 /obj/structure/handrail{
 	dir = 1
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/voidcraft/turfpack/airless,
 /area/shuttle/skipjack)
 "zl" = (
 /obj/structure/table/alien/blue,
 /obj/item/beacon_locator,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alien/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -12655,35 +12907,8 @@
 /obj/structure/bed/chair/bay/shuttle{
 	dir = 1
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alien/blue{
-	oxygen = 0;
-	phoron = 21.8366
-	},
-/area/shuttle/skipjack)
-"zo" = (
-/obj/structure/window/phoronreinforced,
-/obj/structure/grille{
-	desc = "A flimsy lattice of metal rods, with screws to secure it to the floor. This grille seems slightly more sturdy than others probably reinforced to withstand the wildlife.";
-	health = 25;
-	name = "Reinforced Grille"
-	},
-/obj/structure/window/phoronreinforced{
-	dir = 1
-	},
-/obj/structure/window/phoronreinforced{
-	dir = 4
-	},
-/obj/machinery/door/blast/regular{
-	id = "skipjackshutters";
-	name = "Skipjack Blast Shielding"
-	},
-/obj/structure/cable/cyan{
-	icon_state = "0-8"
-	},
-/obj/structure/cable/cyan{
-	icon_state = "0-2"
-	},
-/turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
 	},
@@ -12698,6 +12923,7 @@
 /area/wizard_station)
 "zq" = (
 /obj/machinery/floodlight,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -12723,6 +12949,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 10
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -12747,6 +12974,7 @@
 /obj/structure/cable/cyan{
 	icon_state = "0-4"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -12756,6 +12984,7 @@
 /obj/structure/prop/alien/computer/hybrid{
 	dir = 4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -12791,6 +13020,7 @@
 	req_access = null;
 	req_one_access = list(300)
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -12891,6 +13121,7 @@
 	dir = 1;
 	pixel_y = 32
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alien/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -12899,6 +13130,7 @@
 "zF" = (
 /obj/structure/table/alien/blue,
 /obj/machinery/computer/ship/navigation/telescreen,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -12925,6 +13157,7 @@
 /turf/unsimulated/wall,
 /area/space)
 "zJ" = (
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alien/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -12935,6 +13168,7 @@
 /obj/item/clothing/suit/hgpirate,
 /obj/item/clothing/head/hgpiratecap,
 /obj/item/material/sword/sabre,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -12960,12 +13194,14 @@
 	dir = 10
 	},
 /obj/effect/floor_decal/industrial/bot_outline/yellow,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/mercenary)
 "zN" = (
 /obj/machinery/computer/security/abductor{
 	dir = 8
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -12978,6 +13214,7 @@
 	req_access = null
 	},
 /obj/item/radio_jammer,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alien/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -12987,6 +13224,7 @@
 /obj/item/storage/belt/utility/alien/full,
 /obj/item/storage/belt/utility/alien/full,
 /obj/structure/table/alien/blue,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -13015,6 +13253,7 @@
 /obj/item/melee/energy/sword/pirate,
 /obj/item/melee/energy/sword/pirate,
 /obj/item/melee/energy/sword/pirate,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -13022,6 +13261,7 @@
 /area/shuttle/skipjack)
 "zT" = (
 /obj/structure/bed/chair/bay/shuttle,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alien/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -13037,6 +13277,7 @@
 	req_access = null
 	},
 /obj/structure/window/reinforced,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alien/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -13061,6 +13302,7 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/industrial/hatch/red,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/mercenary)
 "zX" = (
@@ -13083,6 +13325,7 @@
 	},
 /obj/structure/window/phoronbasic,
 /obj/structure/curtain/open/shower/security,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -13095,10 +13338,12 @@
 /obj/effect/floor_decal/milspec/color/orange/corner{
 	dir = 8
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/mercenary)
 "Aa" = (
 /obj/structure/handrail,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -13112,6 +13357,7 @@
 	req_one_access = list(150);
 	dir = 4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/mercenary)
 "Ac" = (
@@ -13131,6 +13377,7 @@
 /obj/structure/cable/orange{
 	icon_state = "1-4"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "Ad" = (
@@ -13140,18 +13387,6 @@
 	icon_state = "vault"
 	},
 /area/wizard_station)
-"Ae" = (
-/obj/structure/shuttle/engine/heater{
-	dir = 8
-	},
-/obj/structure/window/maintenance_panel{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/fuel{
-	dir = 4
-	},
-/turf/simulated/wall/rplastitanium,
-/area/shuttle/mercenary)
 "Af" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/fuel{
 	dir = 1
@@ -13160,11 +13395,13 @@
 	dir = 8
 	},
 /obj/machinery/transportpod/alt,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/mercenary)
 "Ag" = (
 /obj/effect/floor_decal/industrial/outline/cut_corners/red,
 /obj/structure/ship_munition/disperser_charge/fire,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/specialops_overmap)
 "Ah" = (
@@ -13174,6 +13411,7 @@
 /obj/structure/window/phoronreinforced{
 	dir = 4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -13181,10 +13419,12 @@
 /area/shuttle/skipjack)
 "Ai" = (
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/fuel,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/mercenary)
 "Aj" = (
 /obj/structure/fans,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -13197,6 +13437,7 @@
 /obj/structure/cable/orange{
 	icon_state = "2-4"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/specialops_overmap)
 "Al" = (
@@ -13210,6 +13451,7 @@
 /obj/structure/cable/orange{
 	icon_state = "1-2"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "Am" = (
@@ -13225,9 +13467,11 @@
 	pixel_x = -28;
 	pixel_y = -4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/shuttle/mercenary)
 "An" = (
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/shuttle/mercenary)
 "Ao" = (
@@ -13244,6 +13488,7 @@
 /obj/structure/handrail{
 	dir = 1
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alien/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -13251,6 +13496,7 @@
 /area/shuttle/skipjack)
 "Ar" = (
 /obj/structure/prop/dominator/purple,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -13273,6 +13519,7 @@
 	dir = 8;
 	req_access = list(300)
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alien/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -13287,6 +13534,7 @@
 /obj/item/perfect_tele/alien,
 /obj/item/clothing/glasses/omni,
 /obj/item/storage/pouch/holding,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alien/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -13340,6 +13588,7 @@
 /obj/effect/floor_decal/milspec/color/orange/half{
 	dir = 8
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/mercenary)
 "Ay" = (
@@ -13348,6 +13597,7 @@
 /obj/machinery/light/floortube{
 	dir = 1
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/mercenary)
 "Az" = (
@@ -13357,6 +13607,7 @@
 	req_access = null
 	},
 /obj/structure/window/reinforced,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alien/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -13368,6 +13619,7 @@
 	pixel_x = 5
 	},
 /obj/structure/curtain/open/shower/security,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -13376,6 +13628,7 @@
 "AB" = (
 /obj/structure/bed/alien,
 /obj/item/bedsheet/pirate,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -13400,6 +13653,7 @@
 	id_tag = "pd_merc"
 	},
 /obj/effect/floor_decal/industrial/bot_outline/red,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/shuttle/mercenary)
 "AE" = (
@@ -13407,6 +13661,7 @@
 	dir = 1
 	},
 /obj/machinery/light/floortube,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/shuttle/mercenary)
 "AF" = (
@@ -13421,6 +13676,7 @@
 	dir = 6
 	},
 /obj/structure/table/steel_reinforced,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/shuttle/mercenary)
 "AH" = (
@@ -13436,6 +13692,7 @@
 /obj/effect/floor_decal/milspec/color/orange/half{
 	dir = 8
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/mercenary)
 "AJ" = (
@@ -13462,12 +13719,14 @@
 	dir = 4;
 	pixel_x = -4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/shuttle/mercenary)
 "AL" = (
 /obj/structure/prop/alien/computer/camera/flipped{
 	dir = 4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alien/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -13481,6 +13740,7 @@
 /obj/item/cell/device/weapon/recharge/alien/omni,
 /obj/item/cell/device/weapon/recharge/alien/omni,
 /obj/item/cell/device/weapon/recharge/alien/omni,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alien/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -13488,6 +13748,7 @@
 /area/shuttle/skipjack)
 "AN" = (
 /obj/structure/prop/alien/dispenser,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -13511,6 +13772,7 @@
 /obj/item/clothing/mask/muzzle,
 /obj/item/clothing/mask/muzzle,
 /obj/effect/floor_decal/industrial/bot_outline/yellow,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "AQ" = (
@@ -13558,6 +13820,7 @@
 	check_records = 0;
 	faction = "vox"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -13585,10 +13848,12 @@
 	dir = 9
 	},
 /obj/effect/floor_decal/industrial/bot_outline/yellow,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/mercenary)
 "AW" = (
 /obj/structure/table/alien/blue,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -13600,9 +13865,11 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/industrial/bot_outline/yellow,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/mercenary)
 "AY" = (
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -13615,6 +13882,7 @@
 /obj/structure/cable/cyan{
 	icon_state = "2-4"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -13633,6 +13901,7 @@
 	dir = 5
 	},
 /obj/effect/floor_decal/industrial/bot_outline/yellow,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/mercenary)
 "Bc" = (
@@ -13642,6 +13911,7 @@
 /obj/structure/cable/cyan{
 	icon_state = "4-8"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alien{
 	oxygen = 0;
 	phoron = 21.8366
@@ -13654,6 +13924,7 @@
 /obj/structure/cable/cyan{
 	icon_state = "2-4"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -13672,6 +13943,7 @@
 /obj/structure/cable/cyan{
 	icon_state = "1-8"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -13680,6 +13952,7 @@
 "Bg" = (
 /obj/item/clothing/accessory/medal/dungeon/alien_ufo,
 /obj/structure/table/alien/blue,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alien/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -13720,6 +13993,7 @@
 /obj/effect/floor_decal/corner/white/full{
 	dir = 8
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/shuttle/mercenary)
 "Bk" = (
@@ -13734,11 +14008,9 @@
 /obj/effect/floor_decal/corner/white{
 	dir = 5
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/shuttle/mercenary)
-"Bm" = (
-/turf/simulated/shuttle/wall/alien/blue,
-/area/shuttle/skipjack)
 "Bn" = (
 /obj/machinery/turretid/lethal{
 	req_one_access = list(150);
@@ -13765,6 +14037,7 @@
 	dir = 4;
 	name = "Pilot Seat"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/shuttle/mercenary)
 "Bo" = (
@@ -13775,6 +14048,7 @@
 /obj/effect/floor_decal/corner/white/full{
 	dir = 1
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec/raised,
 /area/shuttle/mercenary)
 "Bp" = (
@@ -13788,6 +14062,7 @@
 	icon_state = "1-4"
 	},
 /obj/effect/floor_decal/corner/black/bordercorner,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "Bq" = (
@@ -13799,6 +14074,7 @@
 /obj/structure/cable/orange{
 	icon_state = "4-8"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/mercenary)
 "Br" = (
@@ -13808,6 +14084,7 @@
 /obj/structure/cable/orange{
 	icon_state = "4-8"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/mercenary)
 "Bs" = (
@@ -13819,6 +14096,7 @@
 /obj/item/tool/crowbar/brace_jack,
 /obj/item/tool/crowbar/brace_jack,
 /obj/item/tool/crowbar/brace_jack,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -13828,6 +14106,7 @@
 /obj/machinery/portable_atmospherics/canister/phoron,
 /obj/item/tank/vox,
 /obj/item/tank/vox,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -13838,11 +14117,13 @@
 /obj/structure/cable/orange{
 	icon_state = "2-8"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/mercenary)
 "Bv" = (
 /obj/structure/bed/padded,
 /obj/effect/floor_decal/milspec/color/black/half,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/mercenary)
 "Bw" = (
@@ -13851,6 +14132,7 @@
 /obj/item/storage/firstaid/regular,
 /obj/item/storage/firstaid/bonemed,
 /obj/item/storage/firstaid/clotting,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alien/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -13859,6 +14141,7 @@
 "Bx" = (
 /obj/effect/floor_decal/milspec/color/black/half,
 /obj/structure/bed/padded,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/mercenary)
 "By" = (
@@ -13866,6 +14149,7 @@
 	dir = 6
 	},
 /obj/structure/bed/padded,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/mercenary)
 "Bz" = (
@@ -13878,15 +14162,18 @@
 /obj/structure/cable/orange{
 	icon_state = "1-2"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "BA" = (
 /obj/effect/floor_decal/milspec/color/black/half{
 	dir = 8
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/mercenary)
 "BB" = (
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/mercenary)
 "BC" = (
@@ -13894,12 +14181,14 @@
 /obj/machinery/light/floortube{
 	dir = 1
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/mercenary)
 "BD" = (
 /obj/effect/floor_decal/milspec/color/black/half{
 	dir = 4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/mercenary)
 "BE" = (
@@ -13915,12 +14204,10 @@
 /obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/plating/airless/carry,
 /area/shuttle/mercenary)
-"BG" = (
-/turf/simulated/floor/reinforced/airless,
-/area/shuttle/mercenary)
 "BH" = (
 /obj/structure/table/alien/blue,
 /obj/item/juke_remote,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -13934,6 +14221,7 @@
 /obj/structure/cable/orange{
 	icon_state = "4-8"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "BJ" = (
@@ -13944,6 +14232,7 @@
 /obj/structure/cable/orange{
 	icon_state = "4-8"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "BK" = (
@@ -13987,6 +14276,7 @@
 /obj/structure/cable/orange{
 	icon_state = "2-8"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "BM" = (
@@ -13994,6 +14284,7 @@
 /obj/effect/floor_decal/milspec/color/black/half{
 	dir = 9
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/mercenary)
 "BN" = (
@@ -14001,6 +14292,7 @@
 /obj/effect/floor_decal/milspec/color/black/half{
 	dir = 1
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/mercenary)
 "BO" = (
@@ -14008,6 +14300,7 @@
 /obj/effect/floor_decal/milspec/color/black/half{
 	dir = 1
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/mercenary)
 "BP" = (
@@ -14044,6 +14337,7 @@
 /obj/effect/floor_decal/milspec/color/black/half{
 	dir = 1
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/mercenary)
 "BS" = (
@@ -14060,6 +14354,7 @@
 /obj/effect/floor_decal/milspec/color/black/half{
 	dir = 5
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/mercenary)
 "BU" = (
@@ -14078,6 +14373,7 @@
 /obj/structure/cable/orange{
 	icon_state = "0-2"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/plating,
 /area/shuttle/mercenary)
 "BV" = (
@@ -14085,10 +14381,12 @@
 /obj/machinery/door/airlock/angled_tgmc/wide/generic_steel{
 	dir = 4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/mercenary)
 "BW" = (
 /obj/machinery/door/firedoor/glass,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/mercenary)
 "BX" = (
@@ -14114,6 +14412,7 @@
 	pixel_x = 11;
 	pixel_y = -8
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/white,
 /area/shuttle/mercenary)
 "BY" = (
@@ -14122,6 +14421,7 @@
 	},
 /obj/machinery/chemical_dispenser/ert,
 /obj/structure/table/steel_reinforced,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/white,
 /area/shuttle/mercenary)
 "BZ" = (
@@ -14129,6 +14429,7 @@
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 10
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/white,
 /area/shuttle/mercenary)
 "Ca" = (
@@ -14136,6 +14437,7 @@
 /obj/effect/floor_decal/corner/paleblue/full{
 	dir = 4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/white,
 /area/shuttle/mercenary)
 "Cb" = (
@@ -14189,6 +14491,7 @@
 	dir = 10
 	},
 /obj/effect/floor_decal/industrial/hatch/red,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/mercenary)
 "Ch" = (
@@ -14205,6 +14508,7 @@
 	dir = 1;
 	pixel_y = 32
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alien/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -14219,6 +14523,7 @@
 	pixel_x = 7;
 	pixel_y = 9
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alien/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -14260,6 +14565,7 @@
 	dir = 6
 	},
 /obj/effect/floor_decal/industrial/bot_outline/red,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/mercenary)
 "Cn" = (
@@ -14278,6 +14584,7 @@
 /obj/structure/cable/orange{
 	icon_state = "0-4"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/plating,
 /area/shuttle/mercenary)
 "Co" = (
@@ -14285,6 +14592,7 @@
 	dir = 5
 	},
 /obj/effect/floor_decal/milspec/color/orange/half,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "Cp" = (
@@ -14310,6 +14618,7 @@
 	req_one_access = list(150);
 	dir = 4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/mercenary)
 "Cs" = (
@@ -14322,6 +14631,7 @@
 /obj/effect/floor_decal/corner/lightorange/bordercorner{
 	dir = 8
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "Ct" = (
@@ -14331,6 +14641,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 9
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "Cu" = (
@@ -14346,6 +14657,7 @@
 /obj/effect/floor_decal/milspec/color/red/half{
 	dir = 10
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/mercenary)
 "Cv" = (
@@ -14368,6 +14680,7 @@
 	req_one_access = list(150);
 	pixel_y = 3
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/mercenary)
 "Cx" = (
@@ -14386,6 +14699,7 @@
 /obj/effect/floor_decal/milspec/color/red/half{
 	dir = 6
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/mercenary)
 "Cy" = (
@@ -14428,20 +14742,24 @@
 /obj/item/reagent_containers/blood/OMinus,
 /obj/item/reagent_containers/blood/OMinus,
 /obj/item/reagent_containers/blood/OMinus,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/white,
 /area/shuttle/mercenary)
 "CB" = (
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/white,
 /area/shuttle/mercenary)
 "CC" = (
 /obj/effect/floor_decal/industrial/stand_clear/blue,
 /obj/effect/floor_decal/industrial/bot_outline/blue,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/white,
 /area/shuttle/mercenary)
 "CD" = (
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 6
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/white,
 /area/shuttle/mercenary)
 "CE" = (
@@ -14462,6 +14780,7 @@
 	},
 /obj/structure/window/reinforced,
 /obj/structure/cable/orange,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/plating,
 /area/shuttle/mercenary)
 "CG" = (
@@ -14472,6 +14791,7 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/corner/lightgrey/border,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "CH" = (
@@ -14482,6 +14802,7 @@
 /obj/structure/cable/orange{
 	icon_state = "2-9"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "CI" = (
@@ -14493,6 +14814,7 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/lightgrey/border,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "CK" = (
@@ -14500,6 +14822,7 @@
 /obj/machinery/vending/fitness{
 	dir = 1
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "CL" = (
@@ -14509,6 +14832,7 @@
 /obj/machinery/vending/fitness{
 	dir = 1
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "CM" = (
@@ -14571,6 +14895,7 @@
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 5
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec/sterile,
 /area/shuttle/specialops_overmap)
 "CT" = (
@@ -14590,12 +14915,14 @@
 /area/shuttle/mercenary)
 "CV" = (
 /obj/effect/floor_decal/corner/lightgrey/border,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/mercenary)
 "CW" = (
 /obj/effect/floor_decal/corner/lightgrey/bordercorner{
 	dir = 8
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/mercenary)
 "CX" = (
@@ -14610,6 +14937,7 @@
 /area/tdome/tdomeobserve)
 "CY" = (
 /obj/effect/floor_decal/corner/lightgrey/bordercorner,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/mercenary)
 "CZ" = (
@@ -14618,6 +14946,7 @@
 	req_one_access = null
 	},
 /obj/structure/fans/hardlight,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/shuttle/mercenary)
 "Da" = (
@@ -14631,6 +14960,7 @@
 /obj/structure/cable/orange{
 	icon_state = "1-2"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "Db" = (
@@ -14639,10 +14969,12 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/industrial/bot_outline,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "Dc" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "Dd" = (
@@ -14651,6 +14983,7 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/industrial/bot_outline,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "De" = (
@@ -14668,6 +15001,7 @@
 /obj/effect/floor_decal/corner/lightorange/border{
 	dir = 8
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "Dg" = (
@@ -14682,12 +15016,14 @@
 /obj/effect/floor_decal/corner/red/border{
 	dir = 4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "Di" = (
 /obj/effect/floor_decal/milspec/color/red/half{
 	dir = 8
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/mercenary)
 "Dj" = (
@@ -14698,29 +15034,22 @@
 /obj/structure/cable/orange{
 	icon_state = "4-9"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/mercenary)
 "Dk" = (
 /obj/structure/cable/orange{
 	icon_state = "4-8"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/mercenary)
-"Dl" = (
-/obj/structure/fans/hardlight/colorable/abductor,
-/obj/machinery/door/airlock/alien/blue{
-	name = "Exterior"
-	},
-/turf/simulated/shuttle/floor/alienplating/blue{
-	oxygen = 0;
-	phoron = 21.8366
-	},
-/area/shuttle/skipjack)
 "Dm" = (
 /obj/item/gps/syndie,
 /obj/item/gps/syndie,
 /obj/item/gps/syndie,
 /obj/structure/table/alien/blue,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alien/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -14740,6 +15069,7 @@
 /obj/effect/floor_decal/corner/blue/bordercorner{
 	dir = 4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec/sterile,
 /area/shuttle/specialops_overmap)
 "Do" = (
@@ -14749,6 +15079,7 @@
 /obj/structure/cable/orange{
 	icon_state = "4-8"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/mercenary)
 "Dp" = (
@@ -14770,6 +15101,7 @@
 /obj/structure/cable/orange{
 	icon_state = "0-4"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/plating,
 /area/shuttle/mercenary)
 "Dq" = (
@@ -14780,6 +15112,7 @@
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/industrial/bot_outline/blue,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/white,
 /area/shuttle/mercenary)
 "Dr" = (
@@ -14789,6 +15122,7 @@
 /obj/structure/cable/orange{
 	icon_state = "4-8"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/white,
 /area/shuttle/mercenary)
 "Ds" = (
@@ -14798,6 +15132,7 @@
 /obj/structure/cable/orange{
 	icon_state = "4-8"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/white,
 /area/shuttle/mercenary)
 "Dt" = (
@@ -14819,6 +15154,7 @@
 /obj/structure/cable/orange{
 	icon_state = "0-4"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/plating,
 /area/shuttle/mercenary)
 "Du" = (
@@ -14837,6 +15173,7 @@
 /obj/structure/cable/orange{
 	icon_state = "6-8"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "Dv" = (
@@ -14846,12 +15183,14 @@
 /obj/structure/cable/cyan{
 	icon_state = "1-4"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/voidcraft/turfpack/airless,
 /area/shuttle/skipjack)
 "Dw" = (
 /obj/structure/cable/orange{
 	icon_state = "4-8"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "Dx" = (
@@ -14862,6 +15201,7 @@
 /obj/structure/cable/orange{
 	icon_state = "4-8"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "Dy" = (
@@ -14871,6 +15211,7 @@
 /obj/structure/cable/orange{
 	icon_state = "4-8"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "Dz" = (
@@ -14889,6 +15230,7 @@
 /obj/structure/cable/orange{
 	icon_state = "0-8"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/plating,
 /area/shuttle/mercenary)
 "DA" = (
@@ -14905,6 +15247,7 @@
 /obj/structure/window/plastitanium{
 	dir = 4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/mercenary)
 "DB" = (
@@ -14912,12 +15255,14 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/lightgrey/border,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/mercenary)
 "DC" = (
 /obj/structure/handrail{
 	dir = 4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -14932,13 +15277,11 @@
 	icon_state = "wood"
 	},
 /area/wizard_station)
-"DE" = (
-/turf/simulated/shuttle/wall/alien/blue/hard_corner,
-/area/shuttle/skipjack)
 "DF" = (
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 6
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/mercenary)
 "DG" = (
@@ -14977,6 +15320,7 @@
 "DL" = (
 /obj/effect/shuttle_landmark/premade/mercenary/base,
 /obj/effect/overmap/visitable/ship/landable/mercenary_overmap,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/mercenary)
 "DM" = (
@@ -14984,9 +15328,11 @@
 	dir = 1
 	},
 /obj/machinery/light/floortube,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/mercenary)
 "DN" = (
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/mercenary)
 "DO" = (
@@ -14997,6 +15343,7 @@
 /obj/machinery/light/floortube{
 	dir = 4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "DP" = (
@@ -15015,6 +15362,7 @@
 /obj/structure/cable/orange{
 	icon_state = "1-2"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -15031,6 +15379,7 @@
 /obj/effect/floor_decal/corner/red/bordercorner{
 	dir = 4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "DS" = (
@@ -15048,6 +15397,7 @@
 	req_one_access = list(150);
 	dir = 4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/mercenary)
 "DU" = (
@@ -15074,6 +15424,7 @@
 	pixel_x = 4;
 	pixel_y = 23
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/mercenary)
 "DX" = (
@@ -15087,12 +15438,14 @@
 /obj/structure/cable/orange{
 	icon_state = "1-6"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/mercenary)
 "DZ" = (
 /obj/effect/floor_decal/milspec/color/red/half{
 	dir = 1
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/mercenary)
 "Ea" = (
@@ -15116,6 +15469,7 @@
 	pixel_y = 23
 	},
 /obj/item/hoist_kit,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec,
 /area/shuttle/mercenary)
 "Ec" = (
@@ -15132,6 +15486,7 @@
 /obj/effect/floor_decal/corner/paleblue/full{
 	dir = 8
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/white,
 /area/shuttle/mercenary)
 "Ee" = (
@@ -15140,6 +15495,7 @@
 	},
 /obj/structure/medical_stand/anesthetic,
 /obj/item/reagent_containers/blood/OMinus,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/white,
 /area/shuttle/mercenary)
 "Ef" = (
@@ -15190,6 +15546,7 @@
 /obj/item/reagent_containers/syringe/antiviral,
 /obj/item/reagent_containers/syringe/antiviral,
 /obj/item/reagent_containers/syringe/antiviral,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/white,
 /area/shuttle/mercenary)
 "Eg" = (
@@ -15207,6 +15564,7 @@
 /obj/structure/cable/orange{
 	icon_state = "0-2"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/plating,
 /area/shuttle/mercenary)
 "Eh" = (
@@ -15214,6 +15572,7 @@
 	dir = 8
 	},
 /obj/machinery/recharge_station,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "Ei" = (
@@ -15229,6 +15588,7 @@
 /obj/structure/cable/orange{
 	icon_state = "1-10"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "Ej" = (
@@ -15242,6 +15602,7 @@
 /area/planet/clown)
 "Ek" = (
 /obj/structure/bed/chair/bay/shuttle,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "El" = (
@@ -15252,6 +15613,7 @@
 /obj/effect/floor_decal/corner/lightgrey/bordercorner{
 	dir = 4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "Em" = (
@@ -15262,6 +15624,7 @@
 	req_access = list(150);
 	req_one_access = null
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/shuttle/mercenary)
 "En" = (
@@ -15274,10 +15637,12 @@
 /obj/effect/floor_decal/corner/lightgrey/bordercorner{
 	dir = 8
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/mercenary)
 "Eo" = (
 /obj/machinery/atmospherics/pipe/manifold4w/hidden,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/mercenary)
 "Ep" = (
@@ -15295,6 +15660,7 @@
 /obj/machinery/light/floortube{
 	dir = 1
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/mercenary)
 "Er" = (
@@ -15302,6 +15668,7 @@
 /obj/effect/floor_decal/corner/lightgrey/bordercorner{
 	dir = 4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/mercenary)
 "Es" = (
@@ -15410,18 +15777,21 @@
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 1
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/mercenary)
 "EC" = (
 /obj/effect/floor_decal/corner/lightgrey/bordercorner{
 	dir = 1
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/mercenary)
 "ED" = (
 /obj/effect/floor_decal/corner/lightgrey/bordercorner{
 	dir = 4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/mercenary)
 "EE" = (
@@ -15435,6 +15805,7 @@
 /obj/structure/cable/orange{
 	icon_state = "1-2"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "EF" = (
@@ -15444,6 +15815,7 @@
 /obj/effect/floor_decal/milspec/color/orange/half{
 	dir = 8
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "EG" = (
@@ -15456,6 +15828,7 @@
 /obj/effect/floor_decal/corner/lightorange/border{
 	dir = 8
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "EH" = (
@@ -15488,6 +15861,7 @@
 /obj/structure/cable/orange{
 	icon_state = "0-4"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/plating,
 /area/shuttle/mercenary)
 "EK" = (
@@ -15498,6 +15872,7 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/industrial/outline/cut_corners/red,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/specialops_overmap)
 "EM" = (
@@ -15513,6 +15888,7 @@
 /obj/structure/cable/orange{
 	icon_state = "0-8"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/plating,
 /area/shuttle/mercenary)
 "EN" = (
@@ -15537,6 +15913,7 @@
 /obj/structure/cable/orange{
 	icon_state = "0-8"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/plating,
 /area/shuttle/mercenary)
 "EP" = (
@@ -15544,6 +15921,7 @@
 /obj/machinery/door/airlock/angled_tgmc/medical_glass{
 	req_one_access = list(150)
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/mercenary)
 "EQ" = (
@@ -15555,6 +15933,7 @@
 	dir = 8;
 	pixel_x = -22
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "ER" = (
@@ -15565,6 +15944,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/window/reinforced,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "ES" = (
@@ -15587,6 +15967,7 @@
 	dir = 1
 	},
 /obj/structure/window/reinforced,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "EU" = (
@@ -15594,6 +15975,7 @@
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "EV" = (
@@ -15606,6 +15988,7 @@
 /obj/effect/floor_decal/corner/lightorange/bordercorner{
 	dir = 8
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -15658,6 +16041,7 @@
 	dir = 9
 	},
 /obj/machinery/transportpod/alt,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/mercenary)
 "Fc" = (
@@ -15665,6 +16049,7 @@
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 1
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/mercenary)
 "Fe" = (
@@ -15701,6 +16086,7 @@
 	dir = 5
 	},
 /obj/machinery/transportpod/alt,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/mercenary)
 "Fj" = (
@@ -15708,6 +16094,7 @@
 /obj/structure/cable/cyan{
 	icon_state = "1-2"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -15758,6 +16145,7 @@
 	dir = 9
 	},
 /obj/effect/floor_decal/industrial/hatch/red,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/mercenary)
 "Fq" = (
@@ -15766,6 +16154,7 @@
 	dir = 5
 	},
 /obj/effect/floor_decal/industrial/bot_outline/red,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/mercenary)
 "Fr" = (
@@ -15774,6 +16163,7 @@
 	dir = 9
 	},
 /obj/effect/floor_decal/industrial/outline/cut_corners,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "Fs" = (
@@ -15782,6 +16172,7 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/industrial/outline/cut_corners,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "Ft" = (
@@ -15791,6 +16182,7 @@
 	dir = 5
 	},
 /obj/effect/floor_decal/industrial/outline/cut_corners,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "Fu" = (
@@ -15804,6 +16196,7 @@
 	dir = 6
 	},
 /obj/effect/floor_decal/corner/red/bordercorner,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "Fw" = (
@@ -15812,6 +16205,7 @@
 	dir = 4
 	},
 /obj/machinery/door/airlock/angled_tgmc/wide/generic_steel,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/mercenary)
 "Fx" = (
@@ -15819,6 +16213,7 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/corner/red/border,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "Fy" = (
@@ -15829,6 +16224,7 @@
 /obj/structure/cable/orange{
 	icon_state = "1-2"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "Fz" = (
@@ -15840,6 +16236,7 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/red/border,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "FA" = (
@@ -15847,6 +16244,7 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/corner/paleblue/border,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "FB" = (
@@ -15866,6 +16264,7 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/paleblue/border,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "FD" = (
@@ -15885,6 +16284,7 @@
 /obj/machinery/door/airlock/angled_tgmc/secure{
 	dir = 4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/mercenary)
 "FF" = (
@@ -15900,6 +16300,7 @@
 /obj/effect/floor_decal/corner/paleblue/bordercorner{
 	dir = 8
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "FG" = (
@@ -15912,6 +16313,7 @@
 /obj/structure/cable/orange{
 	icon_state = "1-2"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "FH" = (
@@ -15932,6 +16334,7 @@
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 1
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "FJ" = (
@@ -15944,6 +16347,7 @@
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 1
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "FK" = (
@@ -15957,6 +16361,7 @@
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 5
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "FL" = (
@@ -16022,6 +16427,7 @@
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 8
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "FS" = (
@@ -16037,6 +16443,7 @@
 /obj/structure/cable/orange{
 	icon_state = "4-9"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "FU" = (
@@ -16044,6 +16451,7 @@
 /obj/structure/cable/orange{
 	icon_state = "4-8"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/mercenary)
 "FV" = (
@@ -16053,6 +16461,7 @@
 /obj/structure/cable/orange{
 	icon_state = "4-8"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "FW" = (
@@ -16071,12 +16480,14 @@
 /obj/effect/floor_decal/steeldecal/steel_decals_central7{
 	dir = 4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "FX" = (
 /obj/effect/floor_decal/corner/red/border{
 	dir = 1
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "FY" = (
@@ -16091,6 +16502,7 @@
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 1
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "FZ" = (
@@ -16113,6 +16525,7 @@
 	},
 /obj/item/storage/backpack/dufflebag/syndie/med,
 /obj/structure/table/alien/blue,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -16123,6 +16536,7 @@
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 1
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "Gc" = (
@@ -16130,6 +16544,7 @@
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 1
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "Gd" = (
@@ -16137,6 +16552,7 @@
 /obj/effect/floor_decal/corner/lightgrey/border{
 	dir = 5
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "Ge" = (
@@ -16199,12 +16615,14 @@
 /obj/structure/window/reinforced/tinted/frosted{
 	dir = 1
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/kafel_full/beige,
 /area/shuttle/mercenary)
 "Gj" = (
 /obj/structure/table/glass,
 /obj/random/soap,
 /obj/random/soap,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/kafel_full/beige,
 /area/shuttle/mercenary)
 "Gk" = (
@@ -16214,12 +16632,14 @@
 /obj/structure/cable/orange{
 	icon_state = "1-6"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "Gl" = (
 /obj/effect/floor_decal/corner/red/border{
 	dir = 4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "Gm" = (
@@ -16230,6 +16650,7 @@
 /obj/structure/cable/orange{
 	icon_state = "1-2"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/mercenary)
 "Gn" = (
@@ -16269,6 +16690,7 @@
 /obj/structure/cable/cyan{
 	icon_state = "1-2"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -16317,9 +16739,11 @@
 /area/syndicate_mothership)
 "Gw" = (
 /obj/structure/toilet,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/kafel_full/beige,
 /area/shuttle/mercenary)
 "Gx" = (
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/kafel_full/beige,
 /area/shuttle/mercenary)
 "Gy" = (
@@ -16327,6 +16751,7 @@
 /obj/machinery/door/airlock/angled_tgmc/personal{
 	dir = 4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/mercenary)
 "Gz" = (
@@ -16347,23 +16772,27 @@
 /obj/structure/cable/orange{
 	icon_state = "1-2"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "GB" = (
 /obj/structure/ship_munition/disperser_charge/explosive,
 /obj/effect/floor_decal/corner/red/full,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "GC" = (
 /obj/structure/cable/orange{
 	icon_state = "1-2"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "GD" = (
 /obj/effect/floor_decal/corner/red{
 	dir = 10
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "GE" = (
@@ -16373,6 +16802,7 @@
 /obj/effect/floor_decal/industrial/loading/red{
 	dir = 4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "GF" = (
@@ -16384,6 +16814,7 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/industrial/bot_outline/red,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/mercenary)
 "GG" = (
@@ -16398,6 +16829,7 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/industrial/hatch/red,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/mercenary)
 "GH" = (
@@ -16509,6 +16941,7 @@
 	dir = 10
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/mercenary)
 "GU" = (
@@ -16519,6 +16952,7 @@
 	},
 /obj/item/smes_coil/super_io/hyper,
 /obj/item/smes_coil/super_capacity/hyper,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/mercenary)
 "GV" = (
@@ -16529,6 +16963,7 @@
 /obj/structure/cable/orange{
 	icon_state = "1-2"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/mercenary)
 "GW" = (
@@ -16536,6 +16971,7 @@
 /obj/effect/floor_decal/corner/red/full{
 	dir = 8
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "GX" = (
@@ -16545,6 +16981,7 @@
 /obj/structure/cable/orange{
 	icon_state = "1-2"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "GY" = (
@@ -16555,12 +16992,14 @@
 /obj/effect/floor_decal/corner/red{
 	dir = 5
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "GZ" = (
 /obj/effect/floor_decal/corner/red{
 	dir = 5
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "Ha" = (
@@ -16571,6 +17010,7 @@
 /obj/effect/floor_decal/corner/red/full{
 	dir = 1
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "Hb" = (
@@ -16587,6 +17027,7 @@
 	hacked = 1;
 	name = "unlocked autolathe"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -16651,6 +17092,7 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/mercenary)
 "Hl" = (
@@ -16665,6 +17107,7 @@
 	},
 /obj/item/storage/toolbox/syndicate/powertools,
 /obj/structure/table/steel_reinforced,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/mercenary)
 "Hm" = (
@@ -16679,6 +17122,7 @@
 /obj/structure/cable/orange{
 	icon_state = "4-8"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "Hn" = (
@@ -16689,6 +17133,7 @@
 /obj/structure/cable/orange{
 	icon_state = "4-8"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "Ho" = (
@@ -16702,6 +17147,7 @@
 /obj/structure/cable/orange{
 	icon_state = "4-8"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "Hp" = (
@@ -16714,6 +17160,7 @@
 /obj/structure/cable/orange{
 	icon_state = "2-8"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "Hq" = (
@@ -16724,6 +17171,7 @@
 /obj/effect/floor_decal/corner/red/border{
 	dir = 5
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "Hr" = (
@@ -16753,6 +17201,7 @@
 /obj/effect/floor_decal/milspec/color/orange/half{
 	dir = 4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/mercenary)
 "Hv" = (
@@ -16763,6 +17212,7 @@
 /obj/effect/floor_decal/corner/red/border{
 	dir = 4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "Hw" = (
@@ -16773,6 +17223,7 @@
 /obj/machinery/door/airlock/angled_tgmc/security_glass{
 	req_one_access = list(150)
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/mercenary)
 "Hy" = (
@@ -16780,6 +17231,7 @@
 /obj/structure/dancepole{
 	name = "hammock pole"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -16827,6 +17279,7 @@
 /obj/item/stock_parts/micro_laser/hyper,
 /obj/item/stock_parts/capacitor/hyper,
 /obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/mercenary)
 "HD" = (
@@ -16837,6 +17290,7 @@
 /obj/structure/cable/orange{
 	icon_state = "2-8"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/mercenary)
 "HE" = (
@@ -16851,18 +17305,21 @@
 /obj/effect/floor_decal/milspec/color/orange/half{
 	dir = 4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/mercenary)
 "HG" = (
 /obj/structure/ship_munition/disperser_charge/explosive,
 /obj/effect/floor_decal/corner/red/full,
 /obj/effect/floor_decal/industrial/bot_outline/red,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "HH" = (
 /obj/structure/bed/chair/bay/shuttle{
 	dir = 1
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -16874,6 +17331,7 @@
 	dir = 10
 	},
 /obj/effect/floor_decal/industrial/bot_outline/red,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "HJ" = (
@@ -16971,6 +17429,7 @@
 	desc = "An E-Shui proprietary machine that de-phases Shadekin that enter its area of effect. It's unclear how it works, or why it smells vaguely floral..."
 	},
 /obj/effect/floor_decal/industrial/bot_outline/blue,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/mercenary)
 "HS" = (
@@ -17009,6 +17468,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/mercenary)
 "HX" = (
@@ -17030,6 +17490,7 @@
 /obj/effect/floor_decal/corner/lightorange/bordercorner{
 	dir = 8
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "HY" = (
@@ -17044,12 +17505,14 @@
 	dir = 9
 	},
 /obj/effect/floor_decal/industrial/bot_outline/yellow,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "Ia" = (
 /obj/effect/floor_decal/corner/red/full{
 	dir = 1
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "Ib" = (
@@ -17090,6 +17553,7 @@
 	dir = 9
 	},
 /obj/effect/floor_decal/industrial/bot_outline/red,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/mercenary)
 "Ig" = (
@@ -17098,12 +17562,14 @@
 	},
 /obj/structure/window/plastitanium,
 /obj/effect/floor_decal/industrial/hatch/red,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/mercenary)
 "Ih" = (
 /obj/structure/prop/alien/computer/camera{
 	dir = 4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -17115,6 +17581,7 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/industrial/bot_outline/blue,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/mercenary)
 "Ij" = (
@@ -17172,31 +17639,6 @@
 	icon_state = "dark"
 	},
 /area/syndicate_mothership)
-"Ip" = (
-/obj/structure/window/phoronreinforced,
-/obj/structure/grille{
-	desc = "A flimsy lattice of metal rods, with screws to secure it to the floor. This grille seems slightly more sturdy than others probably reinforced to withstand the wildlife.";
-	health = 25;
-	name = "Reinforced Grille"
-	},
-/obj/structure/window/phoronreinforced{
-	dir = 1
-	},
-/obj/structure/window/phoronreinforced{
-	dir = 8
-	},
-/obj/machinery/door/blast/regular{
-	id = "skipjackshutters";
-	name = "Skipjack Blast Shielding"
-	},
-/obj/structure/cable/cyan{
-	icon_state = "0-4"
-	},
-/turf/simulated/shuttle/floor/alienplating/blue{
-	oxygen = 0;
-	phoron = 21.8366
-	},
-/area/shuttle/skipjack)
 "Iq" = (
 /obj/effect/floor_decal/industrial/arrows/red{
 	dir = 4
@@ -17446,6 +17888,7 @@
 /obj/machinery/door/airlock/alien/blue{
 	name = "Engine"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -17658,6 +18101,7 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/corner/red/bordercorner,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -17760,6 +18204,7 @@
 /obj/structure/cable/orange{
 	icon_state = "0-8"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/specialops_overmap)
 "Ko" = (
@@ -18026,12 +18471,6 @@
 /obj/item/gun/launcher/confetti_cannon/pie/super,
 /turf/simulated/floor/carpet/geo,
 /area/planet/clown)
-"Nb" = (
-/obj/machinery/porta_turret/heavy/sniper{
-	req_one_access = list(101,103)
-	},
-/turf/simulated/floor/reinforced/airless,
-/area/shuttle/specialops_overmap)
 "Ni" = (
 /obj/structure/closet/crate,
 /turf/unsimulated/floor{
@@ -18251,6 +18690,7 @@
 /obj/structure/cable/orange{
 	icon_state = "0-8"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -18301,6 +18741,7 @@
 /obj/machinery/porta_turret/heavy{
 	req_one_access = list(101,103)
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -18348,6 +18789,7 @@
 /obj/machinery/light/floortube{
 	dir = 1
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/specialops_overmap)
 "Pu" = (
@@ -18506,6 +18948,7 @@
 /obj/item/storage/firstaid/fire,
 /obj/item/storage/firstaid/toxin,
 /obj/item/storage/firstaid/adv,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alien/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -18571,6 +19014,7 @@
 /area/shuttle/trade/centcom)
 "Qo" = (
 /obj/structure/handrail,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alien/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -18608,6 +19052,7 @@
 /obj/structure/bed/chair/bay/comfy/captain{
 	dir = 8
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -19135,6 +19580,7 @@
 	icon_state = "2-4"
 	},
 /obj/effect/floor_decal/industrial/rad_floor/yellow,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/specialops_overmap)
 "TR" = (
@@ -19387,9 +19833,6 @@
 /obj/item/poster,
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/trade/centcom)
-"Vs" = (
-/turf/simulated/shuttle/floor/voidcraft/turfpack/airless,
-/area/shuttle/skipjack)
 "Vt" = (
 /obj/machinery/door/window/northleft{
 	name = "Cargo Hold";
@@ -19472,6 +19915,7 @@
 /obj/structure/fireaxecabinet{
 	pixel_y = 32
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -19580,6 +20024,7 @@
 /area/shuttle/trade/centcom)
 "WA" = (
 /obj/machinery/washing_machine,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -19587,6 +20032,7 @@
 /area/shuttle/skipjack)
 "WB" = (
 /obj/structure/handrail,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/voidcraft/turfpack/airless,
 /area/shuttle/skipjack)
 "WD" = (
@@ -19606,6 +20052,7 @@
 /obj/structure/cable/cyan{
 	icon_state = "0-8"
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -19634,6 +20081,7 @@
 /obj/structure/bed/chair/bay/comfy/captain{
 	dir = 4
 	},
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/shuttle/floor/alienplating/blue{
 	oxygen = 0;
 	phoron = 21.8366
@@ -19706,6 +20154,7 @@
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/corner/lightorange/border,
 /obj/machinery/power/breakerbox,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/tiled/milspec{
 	icon_state = "milspec_outerhull"
 	},
@@ -20113,6 +20562,7 @@
 	dir = 1
 	},
 /obj/machinery/light/floortube,
+/obj/effect/step_trigger/dephase_shadekin,
 /turf/simulated/floor/reinforced,
 /area/shuttle/specialops_overmap)
 "YX" = (
@@ -35896,7 +36346,7 @@ nL
 nf
 mN
 mN
-lr
+Ew
 mN
 mN
 mN
@@ -36058,7 +36508,7 @@ nL
 nf
 mN
 mN
-iO
+DH
 mN
 mN
 mN
@@ -36547,7 +36997,7 @@ mN
 DH
 me
 vO
-Nb
+GP
 rn
 DH
 tX
@@ -36555,7 +37005,7 @@ tp
 sM
 DH
 rn
-Nb
+GP
 mJ
 me
 DH
@@ -36709,15 +37159,15 @@ ln
 DH
 wq
 vQ
-iO
+DH
 rM
-iO
+DH
 tY
 rs
 lp
-iO
+DH
 rM
-iO
+DH
 mO
 mf
 DH
@@ -36869,19 +37319,19 @@ nf
 mN
 lo
 DH
-iO
+DH
 mP
-iO
-iO
-iO
+DH
+DH
+DH
 tZ
 tq
 sN
-iO
-iO
-iO
+DH
+DH
+DH
 mP
-iO
+DH
 DH
 lo
 mN
@@ -37035,11 +37485,11 @@ wt
 vR
 vw
 uZ
-iO
+DH
 ub
 tr
 sQ
-iO
+DH
 rN
 ro
 mQ
@@ -37359,11 +37809,11 @@ vS
 vS
 vy
 vc
-iO
+DH
 ud
 tt
 sV
-iO
+DH
 CS
 rr
 mT
@@ -37517,19 +37967,19 @@ mN
 mN
 mN
 DH
-iO
-iO
-iO
-iO
-iO
-iO
+DH
+DH
+DH
+DH
+DH
+DH
 tv
-iO
-iO
-iO
-iO
-iO
-iO
+DH
+DH
+DH
+DH
+DH
+DH
 DH
 mN
 mN
@@ -37683,11 +38133,11 @@ DH
 vU
 Ak
 vd
-iO
+DH
 ue
 tx
 sW
-iO
+DH
 EL
 EL
 EL
@@ -37845,7 +38295,7 @@ DH
 vU
 YV
 vd
-iO
+DH
 ug
 tA
 EV
@@ -38011,7 +38461,7 @@ uN
 DP
 tB
 Xh
-iO
+DH
 rQ
 qW
 ll
@@ -38165,19 +38615,19 @@ mN
 mN
 iO
 DH
-iO
+DH
 vY
 gt
 ve
-iO
+DH
 uh
 tC
 OJ
-iO
+DH
 rR
 qX
 qX
-iO
+DH
 DH
 iO
 mN
@@ -38327,19 +38777,19 @@ mN
 mN
 mN
 DH
-iO
-iO
-iO
-iO
-iO
-iO
+DH
+DH
+DH
+DH
+DH
+DH
 tD
-iO
-iO
-iO
-iO
-iO
-iO
+DH
+DH
+DH
+DH
+DH
+DH
 DH
 mN
 mN
@@ -38493,11 +38943,11 @@ DH
 vZ
 rs
 vf
-iO
+DH
 ui
 ha
 sX
-iO
+DH
 qY
 qY
 qY
@@ -38655,11 +39105,11 @@ DH
 vZ
 Pr
 vf
-iO
+DH
 uj
 sS
 ta
-iO
+DH
 qY
 Pr
 qY
@@ -38817,11 +39267,11 @@ DH
 we
 rs
 vf
-iO
+DH
 uj
 sS
 tb
-iO
+DH
 qY
 rs
 qY
@@ -38979,11 +39429,11 @@ DH
 we
 rs
 Ag
-iO
+DH
 gT
 tE
 lm
-iO
+DH
 qY
 rs
 qY
@@ -39137,19 +39587,19 @@ mN
 mN
 DG
 DH
-iO
-iO
+DH
+DH
 rv
-iO
-iO
+DH
+DH
 VR
 sS
 ta
-iO
-iO
+DH
+DH
 rv
-iO
-iO
+DH
+DH
 DH
 DG
 mN
@@ -39298,21 +39748,21 @@ mN
 mN
 mN
 DH
-iO
+DH
 wv
 ra
 vA
 nm
-iO
+DH
 gT
 sS
 ta
-iO
+DH
 rV
 ha
 ra
 mk
-iO
+DH
 DH
 mN
 mN
@@ -39627,11 +40077,11 @@ wA
 wh
 rx
 OY
-iO
+DH
 un
 tF
 tf
-iO
+DH
 OY
 rx
 rb
@@ -39785,19 +40235,19 @@ mN
 mN
 DH
 wF
-iO
-iO
-iO
-iO
-iO
-iO
+DH
+DH
+DH
+DH
+DH
+DH
 tD
-iO
-iO
-iO
-iO
-iO
-iO
+DH
+DH
+DH
+DH
+DH
+DH
 lF
 DH
 mN
@@ -39947,19 +40397,19 @@ mN
 mN
 mN
 lH
-iO
+DH
 wj
 ry
 rX
 uO
-iO
+DH
 tG
-iO
+DH
 sv
 rX
 ry
 re
-iO
+DH
 lH
 mN
 mN
@@ -40114,9 +40564,9 @@ wl
 vE
 vj
 uQ
-iO
+DH
 tI
-iO
+DH
 sw
 rY
 rz
@@ -40600,9 +41050,9 @@ ri
 vK
 vj
 uQ
-iO
+DH
 tK
-iO
+DH
 sw
 rY
 rD
@@ -40757,19 +41207,19 @@ mN
 mN
 mN
 lJ
-iO
+DH
 wm
 rG
 sb
 uT
-iO
+DH
 tM
-iO
+DH
 sB
 sb
 rG
 rk
-iO
+DH
 lJ
 mN
 mN
@@ -40920,17 +41370,17 @@ mN
 mN
 lJ
 DH
-iO
-iO
-iO
-iO
-iO
+DH
+DH
+DH
+DH
+DH
 tP
-iO
-iO
-iO
-iO
-iO
+DH
+DH
+DH
+DH
+DH
 DH
 lJ
 mN
@@ -41083,7 +41533,7 @@ mN
 mN
 Ex
 DH
-iO
+DH
 ue
 uU
 uy
@@ -41091,7 +41541,7 @@ tQ
 ti
 sC
 sc
-iO
+DH
 DH
 Ex
 mN
@@ -41409,11 +41859,11 @@ mN
 mN
 DH
 vq
-iO
+DH
 uB
 sS
 tk
-iO
+DH
 sf
 DH
 mN
@@ -41571,11 +42021,11 @@ mN
 mN
 DH
 vq
-iO
+DH
 uC
 tS
 tl
-iO
+DH
 sf
 DH
 mN
@@ -41733,11 +42183,11 @@ mN
 mN
 DH
 sh
-iO
-iO
-iO
-iO
-iO
+DH
+DH
+DH
+DH
+DH
 sh
 DH
 mN
@@ -42218,13 +42668,13 @@ mN
 mN
 mN
 DH
-iO
+DH
 uV
 sS
 tT
 sS
 sH
-iO
+DH
 DH
 mN
 mN
@@ -42380,13 +42830,13 @@ mN
 mN
 mN
 DH
-iO
+DH
 uX
 uD
 tR
 sG
 sI
-iO
+DH
 DH
 mN
 mN
@@ -42543,11 +42993,11 @@ mN
 mN
 Ex
 DH
-iO
+DH
 uE
 sS
 tn
-iO
+DH
 DH
 Ex
 mN
@@ -42868,9 +43318,9 @@ mN
 mN
 mN
 DH
-iO
+DH
 tV
-iO
+DH
 DH
 mN
 mN
@@ -43030,9 +43480,9 @@ mN
 mN
 mN
 DH
-iO
-iO
-iO
+DH
+DH
+DH
 DH
 mN
 mN
@@ -43193,7 +43643,7 @@ mN
 mN
 GP
 DH
-iO
+DH
 DH
 GP
 mN
@@ -57934,10 +58384,10 @@ yb
 mN
 fR
 zX
-Ae
-fo
-fo
-fo
+zX
+fR
+fR
+fR
 fR
 mN
 mN
@@ -57949,10 +58399,10 @@ fR
 mN
 mN
 fR
-fo
-fo
-fo
-Ae
+fR
+fR
+fR
+zX
 zX
 fR
 mN
@@ -58262,17 +58712,17 @@ HD
 dC
 dC
 vT
-fo
-bn
-fo
+fR
+BF
+fR
 Fp
 EC
 DM
 CW
 Cg
-fo
-bn
-fo
+fR
+BF
+fR
 AX
 Ai
 Ay
@@ -58424,17 +58874,17 @@ HF
 Hu
 Hl
 GU
-fo
-BG
-fo
+fR
+fO
+fR
 Fq
 ED
 DN
 CY
 Cm
-fo
-BG
-fo
+fR
+fO
+fR
 Bb
 en
 fx
@@ -58580,29 +59030,29 @@ Is
 mM
 Hc
 fR
-fo
+fR
 HW
-fo
-fo
+fR
+fR
 Dp
-fo
-fo
-fo
-fo
+fR
+fR
+fR
+fR
 Cn
 er
 er
 CZ
 Cn
-fo
-fo
-fo
-fo
+fR
+fR
+fR
+fR
 eo
-fo
-fo
+fR
+fR
 Ab
-fo
+fR
 fR
 mN
 ab
@@ -58904,29 +59354,29 @@ sg
 mM
 yb
 fR
-fo
-fo
-fo
-fo
+fR
+fR
+fR
+fR
 Hm
-fo
-fo
-fo
-fo
-fo
-fo
-fo
-fo
-fo
-fo
+fR
+fR
+fR
+fR
+fR
+fR
+fR
+fR
+fR
+fR
 gz
-fo
-fo
-fo
-fo
-fo
+fR
+fR
+fR
+fR
+fR
 ef
-fo
+fR
 fR
 mN
 ab
@@ -59069,18 +59519,18 @@ fR
 Ii
 HZ
 HG
-fo
+fR
 Hn
-fo
+fR
 Gw
 Gi
-fo
+fR
 Fr
 EF
 hB
 Db
 hd
-fo
+fR
 BI
 rt
 Bj
@@ -59088,7 +59538,7 @@ AK
 AD
 Am
 eh
-fo
+fR
 fR
 mN
 ab
@@ -59231,12 +59681,12 @@ fR
 hO
 hM
 HI
-fo
+fR
 Hn
-fo
+fR
 Gx
 eJ
-fo
+fR
 Fs
 eG
 DO
@@ -59244,13 +59694,13 @@ Dc
 Co
 BU
 ey
-fo
+fR
 Bl
 fL
 AE
 An
 ej
-fo
+fR
 fR
 mN
 ab
@@ -59393,26 +59843,26 @@ fR
 Ia
 eX
 HI
-fo
+fR
 Hn
-fo
+fR
 eN
 Gj
-fo
+fR
 Ft
 qP
 eF
 Dd
 eD
-fo
+fR
 BI
-fo
+fR
 Bn
 An
 An
 An
 ej
-fo
+fR
 fR
 mN
 ab
@@ -59552,29 +60002,29 @@ Iq
 Io
 Hc
 fR
-fo
+fR
 Ia
 eU
 Hx
 Ho
-fo
+fR
 Gy
-fo
-fo
-fo
-fo
-fo
-fo
+fR
+fR
+fR
+fR
+fR
+fR
 Cr
-fo
+fR
 BI
-fo
+fR
 Bo
 hh
 AG
 dW
 hl
-fo
+fR
 fR
 mN
 ab
@@ -59717,7 +60167,7 @@ fd
 fR
 fR
 fR
-fo
+fR
 Hp
 GV
 GA
@@ -59730,10 +60180,10 @@ Df
 Cs
 BV
 BJ
-fo
-fo
-fo
-fo
+fR
+fR
+fR
+fR
 fR
 fR
 fR
@@ -60043,18 +60493,18 @@ mN
 mN
 fR
 fR
-fo
-fo
-fo
+fR
+fR
+fR
 FU
 Fw
-fo
+fR
 DT
-fo
-fo
-fo
-fo
-fo
+fR
+fR
+fR
+fR
+fR
 Bq
 fR
 fR
@@ -60207,14 +60657,14 @@ mN
 fR
 GW
 GB
-fo
+fR
 FV
 Fx
-fo
+fR
 DW
 Di
 Cu
-fo
+fR
 BM
 BA
 Br
@@ -60376,7 +60826,7 @@ EJ
 DY
 BB
 Cw
-fo
+fR
 BN
 BB
 Bu
@@ -60531,14 +60981,14 @@ mN
 AS
 GY
 GD
-fo
+fR
 FX
 Fz
 EM
 DZ
 Dj
 Cw
-fo
+fR
 BO
 BC
 Bv
@@ -60693,14 +61143,14 @@ mN
 fR
 GZ
 GE
-fo
+fR
 FX
 Fx
 EO
 DZ
 Dk
 Cw
-fo
+fR
 BR
 BB
 Bx
@@ -60855,14 +61305,14 @@ mN
 fR
 Ha
 GF
-fo
+fR
 FX
 Fx
-fo
+fR
 Eb
 Do
 Cx
-fo
+fR
 BT
 BD
 By
@@ -61017,16 +61467,16 @@ mN
 fR
 fR
 GG
-fo
+fR
 BW
 Fw
-fo
-fo
+fR
+fR
 Dp
-fo
-fo
-fo
-fo
+fR
+fR
+fR
+fR
 fR
 fR
 mN
@@ -61182,7 +61632,7 @@ GL
 fR
 FY
 FA
-fo
+fR
 Ed
 Dq
 CA
@@ -61506,7 +61956,7 @@ mN
 fR
 Gc
 FA
-fo
+fR
 Ef
 Ds
 CC
@@ -61828,13 +62278,13 @@ mN
 mN
 mN
 fR
-fo
+fR
 FE
-fo
+fR
 Eg
 Dt
 CF
-fo
+fR
 fR
 mN
 mN
@@ -62801,11 +63251,11 @@ jC
 mN
 mN
 fR
-fo
-fo
+fR
+fR
 Em
 Dz
-fo
+fR
 fR
 mN
 mN
@@ -74165,11 +74615,11 @@ zA
 zA
 Ff
 de
-Bm
-Bm
-DE
+de
+de
+fK
 IQ
-DE
+fK
 de
 mN
 mN
@@ -74326,7 +74776,7 @@ yc
 Dv
 yc
 zj
-Bm
+de
 zv
 Ih
 AL
@@ -74482,13 +74932,13 @@ zJ
 zJ
 xs
 xz
-Vs
-Vs
-Vs
+zA
+zA
+zA
 yI
-Vs
+zA
 zk
-Bm
+de
 zy
 AY
 AY
@@ -74642,15 +75092,15 @@ de
 Ci
 zJ
 Dm
-Bm
-DE
+de
+fK
 WB
 kD
-Vs
+zA
 yI
 kD
 zk
-Bm
+de
 zE
 AY
 AY
@@ -74801,18 +75251,18 @@ mN
 mN
 mN
 de
-DE
+fK
 wg
-DE
-Bm
-Vs
-Vs
-Vs
-Vs
+fK
+de
+zA
+zA
+zA
+zA
 yI
-Vs
-Vs
-Bm
+zA
+zA
+de
 zF
 AY
 AY
@@ -74966,15 +75416,15 @@ de
 vL
 AY
 xf
-Bm
-Vs
-Vs
-Vs
-Vs
+de
+zA
+zA
+zA
+zA
 yI
-Vs
-Vs
-Ip
+zA
+zA
+dk
 zK
 WP
 AY
@@ -75128,14 +75578,14 @@ de
 vW
 AY
 xg
-Bm
-Vs
-Vs
+de
+zA
+zA
 kD
-Vs
+zA
 yI
 kD
-Vs
+zA
 zu
 zN
 At
@@ -75290,15 +75740,15 @@ de
 vL
 AY
 xk
-Bm
+de
 xA
-Vs
-Vs
-Vs
+zA
+zA
+zA
 yI
-Vs
-Vs
-zo
+zA
+zA
+Av
 Gr
 Gr
 Gr
@@ -75449,18 +75899,18 @@ mN
 mN
 mN
 de
-DE
+fK
 wg
-DE
-Bm
-Bm
-Bm
-kC
-Vs
+fK
+de
+de
+de
+Aw
+zA
 yI
-Vs
-kC
-Bm
+zA
+Aw
+de
 zO
 Au
 zJ
@@ -75616,20 +76066,20 @@ AY
 xm
 DC
 xF
-Bm
-Bm
-fa
+de
+de
+zD
 yJ
-wz
-Bm
-Bm
-Bm
-Bm
-DE
+zB
+de
+de
+de
+de
+fK
 Bc
-DE
-Bm
-Bm
+fK
+de
+de
 de
 mN
 mN
@@ -75778,13 +76228,13 @@ AY
 AY
 AY
 xM
-Bm
+de
 Ga
 Gr
 yL
 AY
 Hd
-Bm
+de
 zP
 fs
 xo
@@ -75940,13 +76390,13 @@ wk
 AY
 AY
 xO
-DE
+fK
 zl
 AY
 pq
 AY
 sK
-Bm
+de
 zS
 AY
 AY
@@ -76108,7 +76558,7 @@ Gr
 yN
 AY
 zn
-DE
+fK
 zT
 AY
 AY
@@ -76259,12 +76709,12 @@ mN
 mN
 mN
 de
-Bm
+de
 wo
 xn
 zJ
 xZ
-DE
+fK
 Bw
 AY
 yU
@@ -76421,18 +76871,18 @@ uI
 uI
 va
 Aw
-DE
-DE
-DE
+fK
+fK
+fK
 wg
-DE
-DE
+fK
+fK
 PV
 AY
 pq
 AY
 zn
-DE
+fK
 zT
 AY
 AY
@@ -76584,7 +77034,7 @@ uJ
 uJ
 zA
 wd
-Dl
+zL
 xo
 zJ
 zJ
@@ -76594,7 +77044,7 @@ AY
 pq
 AY
 vi
-Bm
+de
 AY
 AY
 AY
@@ -76746,17 +77196,17 @@ uJ
 uJ
 zA
 wf
-Dl
+zL
 xs
 xv
 vJ
-DE
+fK
 yv
 xs
 yW
 xs
 zq
-Bm
+de
 zU
 Az
 AM
@@ -76907,20 +77357,20 @@ uP
 uP
 va
 Aw
-DE
-DE
-Bm
-Bm
-Bm
-Bm
-Bm
-DE
+fK
+fK
+de
+de
+de
+de
+de
+fK
 zd
-DE
-Bm
-Bm
-Bm
-Bm
+fK
+de
+de
+de
+de
 de
 de
 mN
@@ -77069,18 +77519,18 @@ mN
 mN
 mN
 de
-Bm
+de
 wM
 AY
 AY
 HH
-Bm
+de
 yx
 xo
 yW
 xo
 HH
-Bm
+de
 zY
 AA
 de
@@ -77236,13 +77686,13 @@ wP
 HH
 AY
 HH
-Bm
+de
 yB
 AY
 pq
 AY
 HH
-Bm
+de
 AY
 AY
 de
@@ -77398,13 +77848,13 @@ wS
 HH
 AY
 zJ
-DE
+fK
 yt
 AY
 pq
 AY
 Aq
-DE
+fK
 Qo
 AB
 de
@@ -77722,13 +78172,13 @@ de
 ay
 AY
 zJ
-DE
+fK
 zJ
 qA
 rI
 nG
 Aq
-DE
+fK
 Qo
 AY
 AY
@@ -77884,13 +78334,13 @@ de
 aY
 AY
 AY
-Bm
+de
 ty
 qA
 rI
 nG
 eO
-Bm
+de
 Aa
 AY
 AY
@@ -78046,13 +78496,13 @@ de
 de
 ul
 Hy
-Bm
+de
 yD
 qA
 rI
 nG
 AY
-Bm
+de
 kf
 AY
 AB
@@ -78207,14 +78657,14 @@ mN
 mN
 de
 de
-Bm
-Bm
+de
+de
 AY
 qA
 rI
 nG
 AY
-Bm
+de
 AY
 AB
 de
@@ -78370,13 +78820,13 @@ mN
 mN
 zV
 de
-Bm
+de
 AY
 AY
 Qy
 AY
 AY
-Bm
+de
 WA
 de
 de
@@ -78538,8 +78988,8 @@ AY
 WF
 AY
 AY
-Bm
-DE
+de
+fK
 fK
 mN
 mN
