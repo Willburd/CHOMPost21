@@ -77380,10 +77380,6 @@
 	},
 /turf/simulated/floor/tiled/steel,
 /area/hallway/primary/central_two)
-"tvL" = (
-/mob/living/simple_mob/vore/horse/kelpie,
-/turf/simulated/floor/outdoors/shelfice/turfpack/muriki,
-/area/mine/unexplored/muriki/valleyeast)
 "tvM" = (
 /obj/effect/floor_decal/borderfloor{
 	dir = 8
@@ -148885,7 +148881,7 @@ aiU
 aiU
 aiU
 aiU
-tvL
+aiU
 aiU
 aiU
 aiU
