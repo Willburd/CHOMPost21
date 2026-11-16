@@ -226,7 +226,7 @@ Class Procs:
 
 ////////////////////////////////////////////////////////////////////////////////////////////
 
-/obj/machinery/attack_ai(mob/user as mob)
+/obj/machinery/attack_ai(mob/user)
 	if(isrobot(user))
 		// For some reason attack_robot doesn't work
 		// This is to stop robots from using cameras to remotely control machines.
@@ -235,22 +235,15 @@ Class Procs:
 	else
 		return attack_hand(user)
 
-/obj/machinery/attack_hand(mob/user as mob)
-
+/obj/machinery/attack_hand(mob/user)
 	if(inoperable(MAINT))
 		return 1
-	// Outpost 21 edit(port) begin - Suppress runtime that EMs will not care about
 	if(isliving(user))
 		if(user.lying || user.stat)
 			return 1
 		if(!user.IsAdvancedToolUser())  //Vorestation edit
 			to_chat(user, span_warning("You don't have the dexterity to do this!"))
 			return 1
-	// Outpost 21 edit(port) end
-	if(ishuman(user))
-		var/mob/living/carbon/human/H = user
-		if(H.getBrainLoss() >= 55)
-			visible_message(span_warning("[H] stares cluelessly at [src]."))
 			return 1
 		else if(prob(H.getBrainLoss()))
 			to_chat(user, span_warning("You momentarily forget how to use [src]."))
