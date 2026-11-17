@@ -451,6 +451,10 @@ emp_act
 
 /mob/living/carbon/human/can_slip(lube)
 	if(lube & PUZZLE_ICE) //Skip the gear checks for puzzle ice.
+		// Outpost 21 edit begin - Snowshoes block ice slips
+		if(istype(shoes, /obj/item/clothing/shoes/boots/winter))
+			return FALSE
+		// Outpost 21 edit end
 		return ..()
 	if(!(lube & GALOSHES_DONT_HELP))	//normal slip checks here.
 		if(shoes && ((shoes.item_flags & NOSLIP) || (shoes.item_flags & NOSLIP_LUBE)))
