@@ -32,6 +32,10 @@ GLOBAL_LIST_EMPTY(adminfaxes)	//cache for faxes that have been sent to admins
 	. = ..()
 	GLOB.allfaxes += src
 	if(!destination) destination = "[using_map.boss_name]"
+	// Outpost 21 edit begin - Hide admin only fax machines
+	if(istype(src, /obj/machinery/photocopier/faxmachine/admin_only))
+		return
+	// Outpost 21 edit end
 	if( !(("[department]" in GLOB.alldepartments) || ("[department]" in GLOB.admin_departments)) )
 		GLOB.alldepartments |= department
 
