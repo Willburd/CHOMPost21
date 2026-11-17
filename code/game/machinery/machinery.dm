@@ -244,6 +244,10 @@ Class Procs:
 		if(!user.IsAdvancedToolUser())  //Vorestation edit
 			to_chat(user, span_warning("You don't have the dexterity to do this!"))
 			return 1
+	if(ishuman(user))
+		var/mob/living/carbon/human/H = user
+		if(H.getBrainLoss() >= 55)
+			visible_message(span_warning("[H] stares cluelessly at [src]."))
 			return 1
 		else if(prob(H.getBrainLoss()))
 			to_chat(user, span_warning("You momentarily forget how to use [src]."))
