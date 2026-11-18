@@ -18,6 +18,7 @@
 
 // Lateload Z level names
 #define Z_NAME_OUTPOST_CENTCOM					"Outpost21 - Central Command" // Aliased to Z_NAME_ALIAS_CENTCOM
+#define Z_NAME_OUTPOST_TERRACE					"Outpost21 - Terrace" // Aliased to Z_NAME_ALIAS_SURFACE_WILDS
 #define Z_NAME_OUTPOST_MISC						"Outpost21 - Misc" // Aliased to Z_NAME_ALIAS_MISC
 #define Z_NAME_OUTPOST_ROGUEMINE_1 				"Asteroid Belt 1"
 #define Z_NAME_OUTPOST_ROGUEMINE_2 				"Asteroid Belt 2"
