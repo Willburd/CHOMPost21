@@ -235,12 +235,13 @@
 /obj/structure/cable/yellow{
 	icon_state = "1-4"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/aux{
-	dir = 6
-	},
 /obj/effect/floor_decal/corner/orange{
 	dir = 4
 	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	frequency = 1381
+	},
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/power_distribution)
 "aE" = (
@@ -666,8 +667,8 @@
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/aux{
-	dir = 10
+/obj/machinery/atmospherics/pipe/manifold/hidden/aux{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/south_engine_access_east)
@@ -2315,6 +2316,9 @@
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/aux{
+	dir = 9
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/power_distribution)
 "ez" = (
@@ -3132,6 +3136,11 @@
 /obj/effect/floor_decal/corner/orange{
 	dir = 8
 	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	frequency = 1381;
+	dir = 1
+	},
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/power_distribution)
 "fW" = (
@@ -5680,8 +5689,8 @@
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/aux{
-	dir = 6
+/obj/machinery/atmospherics/pipe/manifold/hidden/aux{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/south_engine_access_west)
@@ -10304,9 +10313,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/aux{
-	dir = 1
-	},
+/obj/machinery/atmospherics/pipe/manifold4w/hidden/aux,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/south_engine_access_west)
 "tJ" = (
@@ -10926,6 +10933,9 @@
 	},
 /obj/effect/floor_decal/corner/brown/border{
 	dir = 1
+	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	frequency = 1381
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/dockingarm)
@@ -13628,9 +13638,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/aux{
-	dir = 1
-	},
+/obj/machinery/atmospherics/pipe/manifold4w/hidden/aux,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/south_engine_access_east)
 "zz" = (
@@ -13687,6 +13695,10 @@
 /obj/effect/floor_decal/corner/orange/full{
 	dir = 8
 	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	frequency = 1381
+	},
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/south_engine_access_east)
 "zD" = (
@@ -13706,6 +13718,10 @@
 	pixel_x = 30;
 	pixel_y = 6
 	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	frequency = 1381
+	},
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/south_engine_access_east)
 "zF" = (
@@ -14343,12 +14359,13 @@
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/aux{
-	dir = 1
-	},
 /obj/machinery/camera/network/engineering_outpost{
 	c_tag = "REX - Power Distribution Airlock"
 	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	frequency = 1381
+	},
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/power_distribution)
 "AG" = (
@@ -15637,7 +15654,11 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/obj/machinery/hologram/holopad,
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	frequency = 1381;
+	dir = 1
+	},
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/power_distribution)
 "Dn" = (
@@ -15665,15 +15686,13 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/aux{
-	dir = 1
-	},
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/brown/bordercorner{
 	dir = 1
 	},
+/obj/machinery/atmospherics/pipe/manifold4w/hidden/aux,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/dockingarm)
 "Dr" = (
@@ -17420,6 +17439,11 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/aux,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/power_distribution)
+"GN" = (
+/obj/machinery/hologram/holopad,
+/obj/machinery/atmospherics/pipe/manifold4w/hidden/aux,
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/power_distribution)
 "GO" = (
 /obj/structure/reagent_dispensers/fueltank/high,
 /turf/simulated/floor/tiled/milspec/airless,
@@ -17487,6 +17511,10 @@
 	c_tag = "REX - Primary Engine Airlock West";
 	dir = 4
 	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	frequency = 1381
+	},
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/south_engine_access_west)
 "GW" = (
@@ -18120,6 +18148,7 @@
 /obj/effect/floor_decal/corner/white/border{
 	dir = 9
 	},
+/obj/structure/closet/emcloset,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/fore)
 "In" = (
@@ -18332,6 +18361,10 @@
 	},
 /turf/simulated/floor/tiled/milspec/raised,
 /area/ai_upload_foyer)
+"IF" = (
+/obj/machinery/atmospherics/pipe/manifold4w/hidden/aux,
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/power_distribution)
 "IH" = (
 /obj/structure/bed/chair/bay/chair/padded/purple{
 	dir = 4
@@ -18374,6 +18407,9 @@
 	},
 /obj/effect/floor_decal/corner/brown/border{
 	dir = 9
+	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	frequency = 1381
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/dockingarm)
@@ -18755,6 +18791,10 @@
 /obj/effect/floor_decal/corner/orange/full{
 	dir = 1
 	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	frequency = 1381
+	},
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/south_engine_access_west)
 "Kh" = (
@@ -20111,11 +20151,9 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/power_distribution)
 "Pf" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1381;
-	dir = 1
+/obj/machinery/atmospherics/pipe/manifold/hidden/aux{
+	dir = 8
 	},
-/obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/power_distribution)
 "Ph" = (
@@ -21369,9 +21407,7 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/aux{
-	dir = 9
-	},
+/obj/machinery/atmospherics/pipe/simple/hidden/aux,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/power_distribution)
 "Tp" = (
@@ -21423,9 +21459,7 @@
 /obj/structure/cable/green{
 	icon_state = "2-8"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/aux{
-	dir = 4
-	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/aux,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/dockingarm)
 "Tz" = (
@@ -21621,9 +21655,10 @@
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
 	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/aux{
-	dir = 1
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	frequency = 1381
 	},
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/power_distribution)
 "Un" = (
@@ -21661,6 +21696,11 @@
 	dir = 1
 	},
 /obj/effect/map_helper/airlock/sensor/chamber_sensor,
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	frequency = 1381;
+	dir = 1
+	},
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/power_distribution)
 "Uq" = (
@@ -40400,7 +40440,7 @@ Jg
 Lt
 Ch
 AF
-Pf
+GN
 Dm
 SX
 Sd
@@ -40562,7 +40602,7 @@ So
 IJ
 eo
 Uk
-Pf
+IF
 fV
 wR
 Ug
@@ -43598,7 +43638,7 @@ qz
 qz
 qz
 qz
-fj
+OQ
 ev
 cG
 kG
@@ -43759,7 +43799,7 @@ qz
 qz
 qz
 qz
-fj
+OQ
 OQ
 cQ
 WN
@@ -43922,7 +43962,7 @@ qz
 qz
 fj
 OQ
-Au
+OQ
 cQ
 cG
 iy
