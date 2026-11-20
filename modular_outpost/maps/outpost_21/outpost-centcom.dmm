@@ -3605,6 +3605,23 @@
 	dir = 1
 	},
 /obj/structure/table/reinforced,
+/obj/item/reagent_containers/glass/bottle/rezadone,
+/obj/item/reagent_containers/glass/bottle/rezadone,
+/obj/item/reagent_containers/glass/bottle/rezadone,
+/obj/item/reagent_containers/glass/bottle/rezadone,
+/obj/item/reagent_containers/glass/bottle/rezadone,
+/obj/item/storage/pill_bottle/rezadone{
+	pixel_x = 8
+	},
+/obj/item/storage/pill_bottle/rezadone{
+	pixel_x = 8
+	},
+/obj/item/storage/pill_bottle/rezadone{
+	pixel_x = 8
+	},
+/obj/item/storage/pill_bottle/rezadone{
+	pixel_x = 8
+	},
 /turf/unsimulated/floor/steel{
 	icon_state = "milspec"
 	},
@@ -6316,6 +6333,9 @@
 /obj/item/stack/nanopaste/advanced,
 /obj/item/stack/nanopaste/advanced,
 /obj/item/stack/nanopaste/advanced,
+/obj/item/reagent_containers/chem_disp_cartridge/rezadone{
+	pixel_x = 14
+	},
 /turf/unsimulated/floor/steel{
 	icon_state = "milspec"
 	},
@@ -7241,6 +7261,20 @@
 /obj/structure/window/basic/full,
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/centcom/security)
+"aqh" = (
+/obj/effect/floor_decal/corner/black{
+	dir = 5
+	},
+/obj/effect/floor_decal/corner/red{
+	dir = 1
+	},
+/obj/structure/table/reinforced,
+/obj/item/medigun_backpack/cmo,
+/obj/item/medigun_backpack/cmo,
+/turf/unsimulated/floor/steel{
+	icon_state = "milspec"
+	},
+/area/centcom/specops)
 "aqp" = (
 /obj/machinery/button/remote/blast_door{
 	name = "Bridge Blastdoors";
@@ -67510,7 +67544,7 @@ uho
 uho
 uho
 hPE
-aic
+aqh
 ahX
 ahX
 anV

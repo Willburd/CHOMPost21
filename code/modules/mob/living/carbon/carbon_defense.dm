@@ -196,6 +196,10 @@
 	if(is_incorporeal())
 		return FALSE
 	if(lube & PUZZLE_ICE) //Puzzle ice. Gear cant help block these slips.
+		// Outpost 21 edit begin - Snowshoes block ice slips
+		if(istype(shoes, /obj/item/clothing/shoes/boots/winter))
+			return FALSE
+		// Outpost 21 edit end
 		return TRUE
 	// General magboot check to my knowledge. Should block lube-level slips.
 	if(Check_Shoegrip())

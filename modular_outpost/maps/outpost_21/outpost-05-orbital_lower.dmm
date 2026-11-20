@@ -74,6 +74,10 @@
 /obj/effect/floor_decal/corner/orange{
 	dir = 5
 	},
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	frequency = 1381
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/south_power_airlock)
 "aj" = (
@@ -651,7 +655,7 @@
 /obj/structure/disposalpipe/segment,
 /obj/machinery/door/airlock/glass_engineering{
 	name = "Engineering Hallway";
-	req_one_access = list(10,24,29,40)
+	req_one_access = list(1,5,10,24,29,40)
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/aux,
 /obj/structure/cable/green{
@@ -855,7 +859,11 @@
 /obj/effect/floor_decal/corner/orange{
 	dir = 10
 	},
-/obj/machinery/hologram/holopad,
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	frequency = 1381;
+	dir = 1
+	},
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/lower/central)
 "bM" = (
@@ -1409,6 +1417,9 @@
 	dir = 4;
 	pixel_x = 10
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/aux{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/port_airlock)
 "cZ" = (
@@ -1428,9 +1439,6 @@
 /obj/effect/map_helper/airlock/door/int_door,
 /obj/structure/cable/green{
 	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/aux{
-	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/port_airlock)
@@ -1683,6 +1691,11 @@
 "dK" = (
 /obj/machinery/light,
 /obj/effect/floor_decal/corner/orange/full,
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	frequency = 1381;
+	dir = 1
+	},
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/port_airlock)
 "dL" = (
@@ -1701,6 +1714,11 @@
 /obj/effect/floor_decal/corner/orange{
 	dir = 10
 	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	frequency = 1381;
+	dir = 1
+	},
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/port_airlock)
 "dM" = (
@@ -1972,7 +1990,6 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/rust_tool_storage)
 "ex" = (
-/obj/machinery/door/airlock/maintenance_hatch,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 1
 	},
@@ -1982,6 +1999,9 @@
 	},
 /obj/machinery/door/firedoor,
 /obj/structure/disposalpipe/segment,
+/obj/machinery/door/airlock/maintenance_hatch{
+	req_one_access = list(1,5,10,24,29,40)
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/halls/rust_tool_storage)
 "ey" = (
@@ -2643,7 +2663,6 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/stairs_lower)
 "gh" = (
-/obj/machinery/door/airlock/maintenance_hatch,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
 	},
@@ -2654,6 +2673,9 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/maintenance_hatch{
+	req_one_access = list(1,5,10,24,29,40)
+	},
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/rust_core)
 "gi" = (
@@ -2692,10 +2714,14 @@
 	icon_state = "2-4"
 	},
 /obj/effect/floor_decal/corner/orange,
-/obj/machinery/atmospherics/pipe/manifold/hidden/aux,
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	frequency = 1381;
+	dir = 1
+	},
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/south_power_airlock)
 "gn" = (
@@ -2973,7 +2999,7 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/glass_engineering{
 	name = "Engineering Hallway";
-	req_one_access = list(10,24,29,40)
+	req_one_access = list(1,5,10,24,29,40)
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/beam_emitter)
@@ -3066,7 +3092,6 @@
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/atmos_primary)
 "he" = (
-/obj/machinery/door/airlock/maintenance_hatch,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 1
 	},
@@ -3075,6 +3100,9 @@
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable/green{
 	icon_state = "1-2"
+	},
+/obj/machinery/door/airlock/maintenance_hatch{
+	req_one_access = list(1,5,10,24,29,40)
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/rust_core)
@@ -3121,7 +3149,7 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/glass_engineering{
 	name = "Engineering Hallway";
-	req_one_access = list(10,24,29,40)
+	req_one_access = list(1,5,10,24,29,40)
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/halls/rust_entry)
@@ -3198,7 +3226,6 @@
 /turf/simulated/wall/r_wall,
 /area/offworld/orbital/station/halls/rust_tool_storage)
 "ht" = (
-/obj/machinery/door/airlock/maintenance_hatch,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 1
 	},
@@ -3208,6 +3235,9 @@
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
+/obj/machinery/door/airlock/maintenance_hatch{
+	req_one_access = list(1,5,10,24,29,40)
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/rust_gas_storage)
 "hu" = (
@@ -3525,6 +3555,9 @@
 	locked = 1
 	},
 /obj/effect/map_helper/airlock/door/int_door,
+/obj/machinery/atmospherics/pipe/simple/hidden/aux{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/south_power_airlock)
 "ib" = (
@@ -3653,12 +3686,13 @@
 /turf/simulated/floor/tiled/monotile,
 /area/offworld/orbital/xenoarcheology)
 "in" = (
-/obj/machinery/door/airlock/glass_engineeringatmos,
 /obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/glass_engineeringatmos{
+	req_one_access = list(1,5,19,24)
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/atmos_primary)
 "io" = (
-/obj/machinery/door/airlock/glass_engineeringatmos,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/aux,
@@ -3667,6 +3701,9 @@
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
+/obj/machinery/door/airlock/glass_engineeringatmos{
+	req_one_access = list(1,5,19,24)
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/atmos_primary)
 "ip" = (
@@ -3974,6 +4011,7 @@
 "iV" = (
 /obj/machinery/light,
 /obj/effect/floor_decal/corner/orange/full,
+/obj/structure/closet/emcloset,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/lower/central)
 "iW" = (
@@ -4172,6 +4210,11 @@
 	name = "Station Intercom (General)";
 	pixel_y = -22
 	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	frequency = 1381;
+	dir = 1
+	},
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/lower/central)
 "jq" = (
@@ -4356,9 +4399,10 @@
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/aux{
-	dir = 1
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	frequency = 1381
 	},
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/port_airlock)
 "jB" = (
@@ -4941,11 +4985,7 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/lower/port)
 "kE" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1381;
-	dir = 1
-	},
-/obj/effect/map_helper/airlock/atmos/chamber_pump,
+/obj/machinery/atmospherics/pipe/manifold4w/hidden/aux,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/port_airlock)
 "kF" = (
@@ -5705,7 +5745,7 @@
 	},
 /obj/machinery/door/airlock/glass_engineering{
 	name = "Engineering Hallway";
-	req_one_access = list(10,24,29,40)
+	req_one_access = list(1,5,10,24,29,40)
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/aux{
 	dir = 4
@@ -5831,13 +5871,11 @@
 /turf/simulated/floor/airless,
 /area/offworld/orbital/exterior/emitter_cooling)
 "md" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1381;
-	id_tag = "orbyard_vent"
-	},
-/obj/effect/map_helper/airlock/atmos/chamber_pump,
 /obj/effect/floor_decal/corner/orange{
 	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/aux{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/south_power_airlock)
@@ -5856,19 +5894,18 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/lower/fore)
 "mf" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1381;
-	id_tag = "orbyard_vent"
-	},
-/obj/effect/map_helper/airlock/atmos/chamber_pump,
 /obj/effect/floor_decal/corner/orange{
 	dir = 4
 	},
+/obj/machinery/atmospherics/pipe/manifold4w/hidden/aux,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/south_power_airlock)
 "mg" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/aux{
+	dir = 10
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/beam_emitter)
@@ -5924,7 +5961,8 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/lower/central)
 "mn" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden/aux,
+/obj/machinery/hologram/holopad,
+/obj/machinery/atmospherics/pipe/manifold4w/hidden/aux,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/lower/central)
 "mo" = (
@@ -5976,13 +6014,12 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/rust_control)
 "ms" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1381;
-	id_tag = "orbyard_vent"
-	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
 /obj/effect/floor_decal/corner/orange/full{
 	dir = 1
+	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	frequency = 1381
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/lower/central)
@@ -6097,7 +6134,7 @@
 /obj/effect/floor_decal/corner/orange{
 	dir = 1
 	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/aux,
+/obj/machinery/atmospherics/pipe/manifold4w/hidden/aux,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/lower/central)
 "mG" = (
@@ -6175,23 +6212,17 @@
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/aux_equipment)
 "mO" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1381;
-	dir = 1
-	},
-/obj/effect/map_helper/airlock/atmos/chamber_pump,
 /obj/effect/floor_decal/corner/orange{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/aux{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/port_airlock)
 "mP" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1381;
-	dir = 1
-	},
-/obj/effect/map_helper/airlock/atmos/chamber_pump,
 /obj/effect/floor_decal/corner/orange,
+/obj/machinery/atmospherics/pipe/manifold4w/hidden/aux,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/port_airlock)
 "mQ" = (
@@ -6204,6 +6235,9 @@
 /obj/effect/floor_decal/corner/orange{
 	dir = 8
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/aux{
+	dir = 9
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/beam_emitter)
 "mS" = (
@@ -6213,9 +6247,10 @@
 /obj/effect/floor_decal/corner/orange{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/aux{
-	dir = 1
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	frequency = 1381
 	},
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/port_airlock)
 "mT" = (
@@ -6937,16 +6972,15 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/lower/port)
 "on" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1381;
-	id_tag = "orbyard_vent"
-	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
 /obj/machinery/light{
 	dir = 1
 	},
 /obj/effect/floor_decal/corner/orange/full{
 	dir = 8
+	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	frequency = 1381
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/lower/central)
@@ -7083,9 +7117,6 @@
 /obj/effect/map_helper/airlock/sensor/int_sensor,
 /obj/structure/cable/green{
 	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/aux{
-	dir = 4
 	},
 /obj/machinery/airlock_sensor/airlock_interior/shuttle{
 	pixel_y = -27;
@@ -7369,10 +7400,14 @@
 /turf/simulated/wall/r_wall,
 /area/offworld/orbital/station/telecomms)
 "pb" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden/aux,
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	frequency = 1381;
+	dir = 1
+	},
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/south_power_airlock)
 "pc" = (
@@ -7647,6 +7682,11 @@
 	dir = 1;
 	c_tag = "REX - Beam Fore Airlock"
 	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	frequency = 1381;
+	dir = 1
+	},
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/port_airlock)
 "pC" = (
@@ -7860,7 +7900,7 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/glass_engineering{
 	name = "Engineering Hallway";
-	req_one_access = list(10,24,29,40)
+	req_one_access = list(1,5,10,24,29,40)
 	},
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -7880,7 +7920,7 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/glass_engineering{
 	name = "Engineering Hallway";
-	req_one_access = list(10,24,29,40)
+	req_one_access = list(1,5,10,24,29,40)
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/beam_emitter)
@@ -8299,7 +8339,7 @@
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/glass_engineering{
 	name = "Engineering Hazmat Suit Storage";
-	req_one_access = list(10,24,29,40)
+	req_one_access = list(1,5,10,24,29,40)
 	},
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -8901,7 +8941,7 @@
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/glass_engineering{
 	name = "Engineering Hazmat Suit Storage";
-	req_one_access = list(10,24,29,40)
+	req_one_access = list(1,5,10,24,29,40)
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/halls/lower/fore)
@@ -8952,6 +8992,11 @@
 	dir = 1;
 	c_tag = "REX - Starboard Solar Airlock"
 	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	frequency = 1381;
+	dir = 1
+	},
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/lower/central)
 "rW" = (
@@ -9105,6 +9150,7 @@
 /obj/effect/floor_decal/corner/orange{
 	dir = 10
 	},
+/obj/structure/closet/emcloset,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/rust_entry)
 "sk" = (
@@ -9875,7 +9921,6 @@
 /turf/simulated/floor/plating,
 /area/maintenance/orbital/lower/fore)
 "tJ" = (
-/obj/machinery/door/airlock/maintenance_hatch,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
 	},
@@ -9885,6 +9930,9 @@
 /obj/machinery/door/firedoor,
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
+	},
+/obj/machinery/door/airlock/maintenance_hatch{
+	req_one_access = list(1,5,10,24,29,40)
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/rust_core)
@@ -10212,7 +10260,7 @@
 /obj/structure/disposalpipe/segment,
 /obj/machinery/door/airlock/glass_engineering{
 	name = "Engineering Hallway";
-	req_one_access = list(10,24,29,40)
+	req_one_access = list(1,5,10,24,29,40)
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/beam_emitter)
@@ -10539,8 +10587,10 @@
 /obj/structure/cable/green{
 	icon_state = "5-6"
 	},
-/obj/machinery/door/airlock/maintenance_hatch,
 /obj/structure/disposalpipe/segment,
+/obj/machinery/door/airlock/maintenance_hatch{
+	req_one_access = list(1,5,10,24,29,40)
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/rust_backup_power)
 "vc" = (
@@ -12156,7 +12206,7 @@
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/glass_atmos{
 	name = "Burn Chamber";
-	req_one_access = list(24,40)
+	req_one_access = list(19,24,40)
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/phoronics/burn_chamber)
@@ -12187,7 +12237,7 @@
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/glass_atmos{
 	name = "Burn Chamber";
-	req_one_access = list(24,40)
+	req_one_access = list(19,24,40)
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/phoronics/burn_chamber)
@@ -13332,7 +13382,7 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/aux{
-	dir = 4
+	dir = 5
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/beam_emitter)
@@ -13417,7 +13467,7 @@
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/glass_atmos{
 	name = "Phoronics Break Room";
-	req_one_access = list(24,40)
+	req_one_access = list(1,5,19,24,40)
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/phoronics/breakroom)
@@ -13664,7 +13714,7 @@
 	},
 /obj/machinery/door/airlock/glass_atmos{
 	name = "Phoronics Break Room";
-	req_one_access = list(24,40)
+	req_one_access = list(1,5,19,24,40)
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/phoronics/breakroom)
@@ -13746,6 +13796,10 @@
 	},
 /obj/machinery/camera/network/engineering_outpost{
 	c_tag = "REX - Beam Aft Airlock"
+	},
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	frequency = 1381
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/south_power_airlock)
@@ -14736,7 +14790,7 @@
 /obj/structure/disposalpipe/segment,
 /obj/machinery/door/airlock/glass_atmos{
 	name = "Phoronics EVA";
-	req_one_access = list(24,40)
+	req_one_access = list(1,5,19,24,40)
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/phoronics/airlock)
@@ -14792,7 +14846,7 @@
 	dir = 5
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/aux{
-	dir = 4
+	dir = 6
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/beam_emitter)
@@ -15031,12 +15085,14 @@
 /obj/effect/floor_decal/corner/orange{
 	dir = 8
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/aux{
-	dir = 5
-	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
 	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	frequency = 1381;
+	dir = 1
+	},
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/south_power_airlock)
 "Dh" = (
@@ -15057,6 +15113,11 @@
 /obj/effect/floor_decal/corner/black{
 	dir = 1
 	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	frequency = 1381;
+	dir = 1
+	},
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/phoronics/airlock)
 "Di" = (
@@ -15090,6 +15151,11 @@
 	dir = 10
 	},
 /obj/effect/floor_decal/corner/black,
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	frequency = 1381;
+	dir = 1
+	},
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/phoronics/airlock)
 "Dl" = (
@@ -15117,6 +15183,11 @@
 	dir = 6
 	},
 /obj/effect/floor_decal/corner/black,
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	frequency = 1381;
+	dir = 1
+	},
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/phoronics/airlock)
 "Dn" = (
@@ -15433,12 +15504,12 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/phoronics/airlock)
 "DQ" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden/aux,
+/obj/machinery/atmospherics/pipe/manifold4w/hidden/aux,
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/phoronics/airlock)
 "DR" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/aux{
-	dir = 9
+/obj/machinery/atmospherics/pipe/manifold/hidden/aux{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/phoronics/airlock)
@@ -15472,7 +15543,7 @@
 	},
 /obj/machinery/door/airlock/glass_atmos{
 	name = "Phoronics Break Room";
-	req_one_access = list(24,40)
+	req_one_access = list(1,5,19,24,40)
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/phoronics/breakroom)
@@ -15692,11 +15763,11 @@
 /turf/simulated/floor/tiled/white,
 /area/offworld/orbital/phoronics/airlock)
 "Ej" = (
+/obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/glass_atmos{
 	name = "Phoronics";
-	req_one_access = list(24,40)
+	req_one_access = list(1,5,19,24,40)
 	},
-/obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/phoronics)
 "Ek" = (
@@ -15818,11 +15889,11 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/aux{
 	dir = 4
 	},
+/obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/glass_atmos{
 	name = "Phoronics";
-	req_one_access = list(24,40)
+	req_one_access = list(1,5,19,24,40)
 	},
-/obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/phoronics)
 "Es" = (
@@ -16035,6 +16106,10 @@
 /obj/effect/floor_decal/corner/orange/full{
 	dir = 1
 	},
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	frequency = 1381
+	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/south_power_airlock)
 "EG" = (
@@ -16219,17 +16294,13 @@
 /area/offworld/orbital/phoronics/gas_storage)
 "EZ" = (
 /obj/machinery/door/airlock/highsecurity{
-	req_one_access = list(24,40);
+	req_one_access = list(19,24,40);
 	name = "Gas Storage"
 	},
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/phoronics/gas_storage)
 "Fa" = (
-/obj/machinery/door/airlock/highsecurity{
-	req_one_access = list(24,40);
-	name = "Gas Storage"
-	},
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -16239,6 +16310,10 @@
 	icon_state = "1-2"
 	},
 /obj/structure/disposalpipe/segment,
+/obj/machinery/door/airlock/highsecurity{
+	req_one_access = list(19,24,40);
+	name = "Gas Storage"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/phoronics/gas_storage)
 "Fb" = (
@@ -16920,6 +16995,13 @@
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/backup_power)
+"GF" = (
+/obj/effect/floor_decal/corner/orange{
+	dir = 9
+	},
+/obj/structure/closet/emcloset,
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/beam_emitter)
 "GG" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -18254,7 +18336,7 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/glass_engineering{
 	name = "Engineering Hallway";
-	req_one_access = list(10,24,29,40)
+	req_one_access = list(1,5,10,24,29,40)
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/beam_emitter)
@@ -18503,9 +18585,10 @@
 /obj/effect/floor_decal/corner/orange{
 	dir = 1
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/aux{
-	dir = 6
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	frequency = 1381
 	},
+/obj/effect/map_helper/airlock/atmos/chamber_pump,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/port_airlock)
 "Jz" = (
@@ -18772,8 +18855,8 @@
 /obj/effect/floor_decal/corner/orange{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/aux{
-	dir = 9
+/obj/machinery/atmospherics/pipe/manifold/hidden/aux{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/lower/central)
@@ -19641,7 +19724,8 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock/glass_mining{
-	name = "Xenoarcheology Tank Storage"
+	name = "Xenoarcheology Tank Storage";
+	req_one_access = list(1,5,19,48)
 	},
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/techfloor,
@@ -19784,7 +19868,8 @@
 "LK" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/airlock/glass_mining{
-	name = "Xenoarcheology Equipment Storage"
+	name = "Xenoarcheology Equipment Storage";
+	req_one_access = list(1,5,19,48)
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/xenoarcheology/exp_prep)
@@ -19848,7 +19933,8 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock/glass_mining{
-	name = "Xenoarcheology Equipment Storage"
+	name = "Xenoarcheology Equipment Storage";
+	req_one_access = list(1,5,19,48)
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/xenoarcheology/exp_prep)
@@ -20017,7 +20103,8 @@
 	pixel_y = -26
 	},
 /obj/machinery/door/airlock/glass_mining{
-	name = "Xenoarcheology"
+	name = "Xenoarcheology";
+	req_one_access = list(1,5,19,48)
 	},
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled/steel_ridged,
@@ -20415,10 +20502,11 @@
 /turf/simulated/floor/tiled,
 /area/offworld/orbital/xenoarcheology)
 "MG" = (
-/obj/machinery/door/airlock/glass_mining{
-	name = "Xenoarcheology"
-	},
 /obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/glass_mining{
+	name = "Xenoarcheology";
+	req_one_access = list(1,5,19,48)
+	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/offworld/orbital/xenoarcheology)
 "MH" = (
@@ -20445,7 +20533,7 @@
 	},
 /obj/machinery/door/airlock/glass_engineering{
 	name = "Engineering Hallway";
-	req_one_access = list(10,24,29,40)
+	req_one_access = list(1,5,10,24,29,40)
 	},
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/techfloor,
@@ -20605,6 +20693,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/aux{
 	dir = 5
 	},
+/obj/structure/closet/emcloset,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/lower/central)
 "MZ" = (
@@ -20670,7 +20759,8 @@
 	icon_state = "4-10"
 	},
 /obj/machinery/door/airlock/glass_mining{
-	name = "Isolation A"
+	name = "Isolation A";
+	req_one_access = list(19,48)
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/xenoarcheology/isolation_a)
@@ -21009,7 +21099,7 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/glass_engineering{
 	name = "Engineering Hallway";
-	req_one_access = list(10,24,29,40)
+	req_one_access = list(1,5,10,24,29,40)
 	},
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
@@ -21091,7 +21181,8 @@
 	icon_state = "2-9"
 	},
 /obj/machinery/door/airlock/glass_mining{
-	name = "Isolation B"
+	name = "Isolation B";
+	req_one_access = list(19,48)
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/xenoarcheology/isolation_b)
@@ -21124,7 +21215,8 @@
 	icon_state = "2-9"
 	},
 /obj/machinery/door/airlock/glass_mining{
-	name = "Isolation C"
+	name = "Isolation C";
+	req_one_access = list(19,48)
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/xenoarcheology/isolation_c)
@@ -21510,6 +21602,16 @@
 /obj/item/flashlight/lamp,
 /turf/simulated/floor/tiled/dark,
 /area/offworld/orbital/xenoarcheology/isolation_c)
+"OF" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner/orange{
+	dir = 9
+	},
+/obj/structure/closet/emcloset,
+/turf/simulated/floor/tiled/milspec,
+/area/offworld/orbital/station/beam_emitter)
 "OH" = (
 /turf/simulated/wall/r_wall,
 /area/maintenance/orbital/lower/starboard)
@@ -22046,13 +22148,12 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/beam_emitter)
 "RL" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1381;
-	id_tag = "orbyard_vent"
-	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
 /obj/effect/floor_decal/corner/orange{
 	dir = 5
+	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	frequency = 1381
 	},
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/lower/central)
@@ -22168,7 +22269,6 @@
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/rust_core)
 "SP" = (
-/obj/machinery/door/airlock/maintenance_hatch,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
@@ -22178,6 +22278,9 @@
 /obj/machinery/door/firedoor,
 /obj/structure/cable{
 	icon_state = "4-8"
+	},
+/obj/machinery/door/airlock/maintenance_hatch{
+	req_one_access = list(1,5,10,24,29,40)
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/rust_core)
@@ -22198,7 +22301,9 @@
 /turf/simulated/floor/plating,
 /area/offworld/orbital/station/beam_emitter)
 "Tb" = (
-/obj/machinery/door/airlock/maintenance_hatch,
+/obj/machinery/door/airlock/maintenance_hatch{
+	req_one_access = list(1,5,10,24,29,40)
+	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 1
 	},
@@ -22260,7 +22365,6 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/halls/lower/fore)
 "TC" = (
-/obj/machinery/door/airlock/maintenance_hatch,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
 	},
@@ -22273,6 +22377,9 @@
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
+	},
+/obj/machinery/door/airlock/maintenance_hatch{
+	req_one_access = list(1,5,10,24,29,40)
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/halls/rust_entry)
@@ -22596,11 +22703,7 @@
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/beam_emitter)
 "VU" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume{
-	frequency = 1381;
-	id_tag = "orbyard_vent"
-	},
-/obj/effect/map_helper/airlock/atmos/chamber_pump,
+/obj/machinery/atmospherics/pipe/manifold4w/hidden/aux,
 /turf/simulated/floor/tiled/milspec,
 /area/offworld/orbital/station/south_power_airlock)
 "VV" = (
@@ -22659,7 +22762,7 @@
 	},
 /obj/machinery/door/airlock/glass_engineering{
 	name = "Engineering Hallway";
-	req_one_access = list(10,24,29,40)
+	req_one_access = list(1,5,10,24,29,40)
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/offworld/orbital/station/halls/rust_entry)
@@ -39794,7 +39897,7 @@ IU
 IE
 HZ
 HI
-bo
+rA
 bq
 eO
 bo
@@ -40534,7 +40637,7 @@ rS
 CP
 mR
 KR
-au
+OF
 mK
 tE
 yI
@@ -40551,7 +40654,7 @@ yI
 tE
 ww
 mk
-KR
+GF
 mg
 Ai
 au

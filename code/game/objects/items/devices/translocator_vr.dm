@@ -130,7 +130,7 @@
 			if(nb.tele_network == loc_network)
 				beacons[nb.tele_name] = nb
 		loc_network = null //Consumed
-		rebuild_radial_images() // Outpost 21 edit(port) - Getting the station network is gonna rebuild the entries
+		rebuild_radial_images()
 
 	if(!(user.ckey in warned_users))
 		warned_users |= user.ckey

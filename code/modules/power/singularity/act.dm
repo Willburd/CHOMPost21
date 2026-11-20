@@ -135,7 +135,7 @@
 /mob/new_player/singuloCanEat()
 	return 0
 
-/turf/unsimulated/wall/supermatter/singuloCanEat() // Outpost 21 edit(port) - stop eating bluespace!
+/turf/unsimulated/wall/supermatter/singuloCanEat()
 	return 0
 
 /mob/obj/structure/stairs/singuloCanEat() // Outpost 21 edit(port) - stop eating stairs!

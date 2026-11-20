@@ -28890,6 +28890,7 @@
 "beB" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/closet/crate/wooden,
+/obj/item/chainsaw/alt/sword,
 /turf/simulated/floor/reinforced,
 /area/rnd/xenobiology/xenobioh)
 "beC" = (
@@ -28906,6 +28907,7 @@
 /obj/structure/closet/crate/wooden,
 /obj/item/gun/projectile/automatic/serdy/m4a1,
 /obj/item/tool/crowbar/brace_jack,
+/obj/item/gun/projectile/p92x/rubber,
 /turf/simulated/floor/reinforced,
 /area/rnd/xenobiology/xenobioh)
 "beE" = (
@@ -29225,16 +29227,16 @@
 /area/engineering/trammaint)
 "bfD" = (
 /obj/item/flashlight,
-/turf/simulated/mineral/floor/turfpack,
+/turf/simulated/mineral/floor/ignore_cavegen,
 /area/maintenance/oldbridge)
 "bfE" = (
-/turf/simulated/mineral/floor/turfpack,
+/turf/simulated/mineral/floor/ignore_cavegen,
 /area/maintenance/oldbridge)
 "bfF" = (
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 4
 	},
-/turf/simulated/mineral/floor/turfpack,
+/turf/simulated/mineral/floor/ignore_cavegen,
 /area/maintenance/oldbridge)
 "bfG" = (
 /obj/structure/grille,
@@ -29301,10 +29303,22 @@
 	},
 /turf/simulated/floor/plating/turfpack/muriki,
 /area/maintenance/cargo)
+"bfP" = (
+/obj/structure/disposalpipe/segment,
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/item/grenade/flashbang,
+/turf/simulated/floor/reinforced,
+/area/rnd/xenobiology/xenobioh)
 "bfQ" = (
 /obj/machinery/light/floortube,
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/pool)
+"bfR" = (
+/mob/living/simple_mob/vore/horse/kelpie,
+/turf/simulated/floor/water/turfpack/muriki,
+/area/mine/unexplored/muriki/cave/sci)
 "bfW" = (
 /obj/effect/floor_decal/borderfloor/corner{
 	dir = 8
@@ -47149,7 +47163,7 @@
 /area/maintenance/sec)
 "bSx" = (
 /obj/item/material/barbedwire/glass/start_active,
-/turf/simulated/mineral/floor/turfpack,
+/turf/simulated/mineral/floor/ignore_cavegen,
 /area/maintenance/oldbridge)
 "bSy" = (
 /obj/item/material/barbedwire/glass/start_active,
@@ -142066,7 +142080,7 @@ pmN
 pmN
 aaf
 aaj
-aal
+bfP
 aau
 aay
 aaI
@@ -148398,7 +148412,7 @@ pmN
 pmN
 pup
 lLS
-lLS
+bfR
 lLS
 cIZ
 pmN
