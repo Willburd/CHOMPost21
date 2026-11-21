@@ -109,7 +109,7 @@
 					continue
 				if(used == amount)
 					break
-				if(!do_after(user, (W.damage / (2 + ((user != M)*3))) SECONDS, affecting)) // Outpost 21 edit - Bandage to seconds instead of ticks. other people bandaging you helps massively
+				if(!do_after(user, (2 + ((user == M)*3)) SECONDS, M)) // Outpost 21 edit - Bandage to seconds instead of ticks. other people bandaging you helps massively
 					balloon_alert(user, "stand still to bandage wounds.")
 					break
 
@@ -176,7 +176,7 @@
 					continue
 				if(used == amount)
 					break
-				if(!do_after(user, (W.damage / (2 + ((user != M)*3))) SECONDS, M)) // Outpost 21 edit - Bandage to seconds instead of ticks. other people bandaging you helps massively
+				if(!do_after(user, (2 + ((user == M)*3)) SECONDS, M)) // Outpost 21 edit - Bandage to seconds instead of ticks. other people bandaging you helps massively
 					balloon_alert(user, "stand still to bandage wounds.")
 					break
 
@@ -295,7 +295,7 @@
 					continue
 				//if(used == amount)
 				//	break
-				if(!do_after(user, (W.damage / (2 + ((user != M)*3))) SECONDS, M)) // Outpost 21 edit - Bandage to seconds instead of ticks. other people bandaging you helps massively
+				if(!do_after(user, (2 + ((user == M)*3)) SECONDS, M)) // Outpost 21 edit - Bandage to seconds instead of ticks. other people bandaging you helps massively
 					balloon_alert(user, "stand still to bandage wounds.")
 					break
 				if(affecting.is_bandaged() && affecting.is_disinfected()) // We do a second check after the delay, in case it was bandaged after the first check.
