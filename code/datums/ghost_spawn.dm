@@ -208,7 +208,7 @@ GLOBAL_VAR_INIT(allowed_ghost_spawns, 2)
 			soulcatcher_vore_active = TRUE
 		*/
 
-		if(!player.no_vore && (get_z(player) in using_map.station_levels))
+		if(!player.no_vore && (get_z(player) in using_map.player_levels))
 			if(ishuman(player))
 				var/mob/living/carbon/human/H = player
 				if(H.latejoin_vore)
