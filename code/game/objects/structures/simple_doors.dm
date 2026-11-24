@@ -112,7 +112,7 @@
 		if(locked && state == 0)
 			to_chat(M,span_warning("It's locked!"))
 			return
-		if(world.time - last_bumped <= 10) // Outpost 21 edit(port) - Bumping simple doors has less use delay 60 -> 10
+		if(world.time - last_bumped <= 10)
 			return
 		if(M.client)
 			if(iscarbon(M))
