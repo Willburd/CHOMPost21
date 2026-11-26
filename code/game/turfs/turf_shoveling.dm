@@ -1,6 +1,12 @@
 /turf/proc/handle_turf_dig(mob/user, obj/item/shovel/our_shovel)
 	SHOULD_NOT_OVERRIDE(TRUE)
 
+	// Outpost 21 edit begin - Digging trenches
+	if(our_shovel.grave_mode == 2)
+		shovel_dig_trench(user, our_shovel)
+		return
+	// Outpost 21 edit end
+
 	// Grave digging
 	if(our_shovel.grave_mode)
 		shovel_dig_grave(user, our_shovel)

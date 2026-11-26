@@ -144,8 +144,17 @@
 	var/grave_mode = FALSE
 
 /obj/item/shovel/click_alt(mob/user)
-	grave_mode = !grave_mode
-	to_chat(user, span_notice("You'll now dig [grave_mode ? "out graves" : "for loot"]."))
+	// Outpost 21 edit begin - Digging trenches
+	grave_mode += 1
+	if(grave_mode > 2)
+		grave_mode = 0
+	if(grave_mode == 0)
+		to_chat(user, span_notice("You'll now dig for loot."))
+	if(grave_mode == 1)
+		to_chat(user, span_notice("You'll now dig out graves."))
+	if(grave_mode == 2)
+		to_chat(user, span_notice("You'll now dig a trench."))
+	// Outpost 21 edit end
 	. = ..()
 
 /obj/item/shovel/wood
