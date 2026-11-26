@@ -2276,6 +2276,10 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/trawler)
+"ada" = (
+/obj/structure/reagent_dispensers/fueltank,
+/turf/simulated/floor/outdoors/ice/turfpack/muriki,
+/area/mine/unexplored/muriki/valleyeast)
 "adb" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 6
@@ -17965,6 +17969,9 @@
 /area/muriki/yard)
 "aNP" = (
 /obj/structure/window/reinforced/survival_pod,
+/obj/structure/salvageable/console{
+	dir = 1
+	},
 /obj/effect/auto_roof,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/muriki/grounds/shutt)
@@ -18010,11 +18017,6 @@
 /obj/structure/prop/rock/small/alt,
 /turf/simulated/floor/outdoors/ice/dark/turfpack/muriki,
 /area/muriki/grounds/civ)
-"aNY" = (
-/obj/effect/auto_roof,
-/obj/effect/map_effect/event_explosions/start_explosion/small,
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/muriki/grounds/shutt)
 "aNZ" = (
 /obj/item/beartrap{
 	anchored = 1;
@@ -18053,7 +18055,7 @@
 /turf/simulated/floor/outdoors/ice/dark/turfpack/muriki,
 /area/muriki/yard)
 "aOd" = (
-/obj/item/modular_computer/console,
+/obj/structure/salvageable/shuttle_console,
 /obj/effect/auto_roof,
 /obj/effect/map_effect/event_explosions/start_explosion/small,
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -18077,7 +18079,7 @@
 	},
 /area/maintenance/wastedisposal)
 "aOh" = (
-/obj/item/modular_computer/console,
+/obj/structure/salvageable/shuttle_console,
 /obj/effect/auto_roof,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/muriki/grounds/shutt)
@@ -18564,11 +18566,11 @@
 /turf/simulated/floor/outdoors/snow/newdirt_under/turfpack/muriki,
 /area/muriki/grounds/sci)
 "aPN" = (
-/obj/item/modular_computer/console{
-	dir = 4
-	},
 /obj/structure/window/reinforced/survival_pod{
 	dir = 8
+	},
+/obj/structure/salvageable/console{
+	dir = 4
 	},
 /obj/effect/auto_roof,
 /turf/simulated/floor/tiled/techfloor/grid,
@@ -18589,7 +18591,7 @@
 /turf/simulated/floor/outdoors/ice/dark/turfpack/muriki,
 /area/mine/explored/muriki/mountaineast)
 "aPR" = (
-/obj/item/modular_computer/console{
+/obj/structure/salvageable/console{
 	dir = 8
 	},
 /obj/effect/auto_roof,
@@ -18777,7 +18779,7 @@
 /turf/simulated/floor/outdoors/ice/dark/turfpack/muriki,
 /area/mine/explored/muriki/mountainnorth)
 "aQs" = (
-/obj/item/modular_computer/console{
+/obj/structure/salvageable/console{
 	dir = 8
 	},
 /obj/effect/auto_roof,
@@ -20671,13 +20673,13 @@
 /turf/simulated/floor/outdoors/shelfice/turfpack/muriki,
 /area/mine/unexplored/muriki/valleyeast)
 "aUD" = (
-/obj/item/modular_computer/console{
-	dir = 4
-	},
 /obj/structure/window/reinforced/survival_pod{
 	dir = 8
 	},
 /obj/effect/decal/cleanable/blood/old,
+/obj/structure/salvageable/console{
+	dir = 4
+	},
 /obj/effect/auto_roof,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/muriki/yard)
@@ -145959,7 +145961,7 @@ aLx
 aLT
 aLT
 aOh
-aNY
+aMy
 aNR
 aMy
 aMU
@@ -149053,7 +149055,7 @@ mAK
 aiR
 aiR
 aiR
-aiR
+ada
 aiU
 aiU
 aiU

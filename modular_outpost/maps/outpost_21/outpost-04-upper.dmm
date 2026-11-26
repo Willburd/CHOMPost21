@@ -1690,6 +1690,12 @@
 /obj/effect/floor_decal/industrial/outline/cut_corners/red,
 /turf/simulated/floor/tiled,
 /area/security/vacantoffice)
+"adE" = (
+/obj/effect/auto_crayon{
+	icon_state = "right"
+	},
+/turf/simulated/floor/tiled/hydro,
+/area/djstation)
 "adF" = (
 /obj/structure/barricade{
 	material = "steel"
@@ -1742,7 +1748,7 @@
 	icon_state = "1-2"
 	},
 /obj/structure/window/maintenance_panel{
-	dir = 1
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/tcommsat/powercontrol)
@@ -2278,6 +2284,12 @@
 /obj/structure/reagent_dispensers/watertank,
 /turf/simulated/floor/plating,
 /area/maintenance/secelev)
+"aeX" = (
+/obj/effect/step_trigger/dephase_shadekin,
+/turf/simulated/wall/r_wall{
+	can_open = 1
+	},
+/area/tcommsat/computer)
 "aeY" = (
 /obj/effect/floor_decal/corner/red{
 	dir = 5
@@ -4520,6 +4532,28 @@
 	},
 /turf/simulated/floor/outdoors/snow/roofing_under/turfpack/muriki,
 /area/muriki/rooftop/science)
+"akt" = (
+/obj/structure/cable/yellow{
+	icon_state = "0-4"
+	},
+/turf/simulated/floor/reinforced/airless,
+/area/tcommsat/computer)
+"aku" = (
+/obj/structure/cable/yellow{
+	icon_state = "0-4"
+	},
+/obj/structure/cable/yellow{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/reinforced/airless,
+/area/tcommsat/computer)
+"akv" = (
+/turf/simulated/floor/plating/snow/plating/turfpack/muriki,
+/area/djstation)
+"akw" = (
+/obj/structure/reagent_dispensers/fueltank,
+/turf/simulated/floor/wood,
+/area/library)
 "akx" = (
 /turf/simulated/wall/r_wall{
 	can_open = 1
@@ -4540,6 +4574,28 @@
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/hydroponics/publicgarden)
+"akz" = (
+/obj/structure/bookcase{
+	name = "bookcase (Religious)"
+	},
+/turf/simulated/floor/wood,
+/area/library)
+"akA" = (
+/obj/structure/cable/green{
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/bookcase{
+	name = "bookcase (Religious)"
+	},
+/turf/simulated/floor/wood,
+/area/library)
+"akB" = (
+/obj/structure/disposalpipe/segment,
+/obj/structure/girder/reinforced,
+/turf/simulated/floor,
+/area/rnd/hallway/phoronicsbridge)
 "akN" = (
 /turf/simulated/wall/r_wall,
 /area/tcommsat/powercontrol)
@@ -12081,6 +12137,7 @@
 "azk" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/girder/reinforced,
 /turf/simulated/floor,
 /area/rnd/hallway/phoronicsbridge)
 "azl" = (
@@ -12883,6 +12940,9 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
 	},
+/obj/structure/bookcase{
+	name = "bookcase (Religious)"
+	},
 /turf/simulated/floor/wood,
 /area/library)
 "aWD" = (
@@ -13378,9 +13438,6 @@
 /obj/structure/lattice,
 /obj/structure/ladder,
 /obj/structure/railing,
-/obj/structure/railing{
-	dir = 8
-	},
 /obj/structure/catwalk,
 /turf/simulated/open/muriki,
 /area/djstation)
@@ -16373,12 +16430,8 @@
 /turf/simulated/floor/plating,
 /area/maintenance/substation/cargo)
 "cJg" = (
-/obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
-/obj/structure/window/reinforced/holiday/vertical{
-	dir = 8
-	},
-/obj/structure/window/reinforced/full/holiday/vertical,
+/obj/structure/inflatable/door,
 /turf/simulated/floor/plating,
 /area/library)
 "cJX" = (
@@ -19222,6 +19275,9 @@
 /obj/effect/floor_decal/spline/fancy/wood/corner{
 	dir = 8
 	},
+/obj/structure/bookcase{
+	name = "bookcase (Religious)"
+	},
 /turf/simulated/floor/wood,
 /area/library)
 "eme" = (
@@ -21306,7 +21362,10 @@
 /turf/simulated/floor/plating,
 /area/maintenance/medbay_fore)
 "fvz" = (
-/obj/structure/reagent_dispensers/fueltank,
+/obj/item/stock_parts/subspace/ansible,
+/obj/item/stock_parts/subspace/ansible,
+/obj/item/stock_parts/subspace/ansible,
+/obj/structure/table/standard,
 /turf/simulated/floor/plating,
 /area/tcommsat/powercontrol)
 "fvI" = (
@@ -27705,7 +27764,6 @@
 /obj/machinery/camera/network/substations{
 	c_tag = "PWR - Substation Civilian"
 	},
-/obj/structure/reagent_dispensers/fueltank,
 /turf/simulated/floor,
 /area/maintenance/substation/civilian)
 "jbI" = (
@@ -27770,6 +27828,9 @@
 	dir = 1
 	},
 /obj/effect/floor_decal/spline/fancy/wood,
+/obj/structure/bookcase{
+	name = "bookcase (Religious)"
+	},
 /turf/simulated/floor/wood,
 /area/library)
 "jcR" = (
@@ -32822,9 +32883,6 @@
 /turf/simulated/floor/plating,
 /area/medical/hangar)
 "lUS" = (
-/obj/structure/bookcase{
-	name = "bookcase (Adult)"
-	},
 /obj/machinery/light{
 	dir = 1
 	},
@@ -32935,10 +32993,6 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/coffee_shop)
-"lYL" = (
-/obj/structure/reagent_dispensers/fueltank,
-/turf/simulated/floor,
-/area/maintenance/substation/command)
 "lYP" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
@@ -33805,6 +33859,9 @@
 /obj/effect/floor_decal/spline/fancy/wood/corner{
 	dir = 1
 	},
+/obj/structure/bookcase{
+	name = "bookcase (Religious)"
+	},
 /turf/simulated/floor/wood,
 /area/library)
 "myR" = (
@@ -34560,12 +34617,10 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/medical/resleeving)
 "mRI" = (
-/obj/structure/bookcase{
-	name = "bookcase (Adult)"
-	},
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 1
 	},
+/obj/structure/reagent_dispensers/fueltank,
 /turf/simulated/floor/wood,
 /area/library)
 "mRN" = (
@@ -36377,6 +36432,7 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 6
 	},
+/obj/structure/inflatable/door,
 /turf/simulated/floor/wood,
 /area/library)
 "nSv" = (
@@ -36826,7 +36882,6 @@
 /obj/structure/cable/yellow{
 	icon_state = "0-4"
 	},
-/obj/structure/grille,
 /obj/structure/cable/yellow{
 	icon_state = "0-8"
 	},
@@ -44965,15 +45020,6 @@
 "sII" = (
 /turf/simulated/floor/glass/reinforced/turfpack/muriki,
 /area/muriki/rooftop/medical)
-"sJb" = (
-/obj/structure/bookcase{
-	name = "bookcase (Fiction)"
-	},
-/obj/effect/floor_decal/spline/fancy/wood{
-	dir = 8
-	},
-/turf/simulated/floor/wood,
-/area/library)
 "sJj" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 8
@@ -47730,13 +47776,11 @@
 /turf/simulated/floor/outdoors/snow/roofing_under/turfpack/muriki,
 /area/muriki/rooftop/security)
 "udJ" = (
-/obj/structure/bookcase{
-	name = "bookcase (Religious)"
-	},
 /obj/structure/sign/painting/library_secure{
 	pixel_y = -32
 	},
 /obj/effect/floor_decal/spline/fancy/wood,
+/obj/structure/reagent_dispensers/fueltank,
 /turf/simulated/floor/wood,
 /area/library)
 "udM" = (
@@ -48348,9 +48392,6 @@
 	},
 /area/comms)
 "uub" = (
-/obj/structure/bookcase{
-	name = "bookcase (Religious)"
-	},
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 10
 	},
@@ -48749,6 +48790,7 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
+/obj/machinery/portable_atmospherics/hydroponics,
 /turf/simulated/floor/tiled/hydro,
 /area/djstation)
 "uEC" = (
@@ -48760,12 +48802,6 @@
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/heads/cmo)
-"uEH" = (
-/obj/structure/bookcase{
-	name = "bookcase (Fiction)"
-	},
-/turf/simulated/floor/wood,
-/area/library)
 "uFy" = (
 /obj/structure/cable/green{
 	icon_state = "0-2"
@@ -51690,10 +51726,6 @@
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
 	},
-/obj/structure/table/standard,
-/obj/item/stock_parts/subspace/ansible,
-/obj/item/stock_parts/subspace/ansible,
-/obj/item/stock_parts/subspace/ansible,
 /turf/simulated/floor/plating,
 /area/tcommsat/powercontrol)
 "wjN" = (
@@ -53608,6 +53640,7 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	dir = 5
 	},
+/obj/structure/inflatable/door,
 /turf/simulated/floor/wood,
 /area/library)
 "xoV" = (
@@ -104834,7 +104867,7 @@ vOa
 aze
 ruw
 kia
-lYL
+jHp
 jHp
 ekG
 aqj
@@ -105148,7 +105181,7 @@ lPA
 qIp
 lPA
 hHL
-wAN
+akB
 wAN
 wTp
 lXR
@@ -105472,7 +105505,7 @@ wlC
 avB
 wlC
 pir
-wAN
+akB
 gNO
 tSo
 psL
@@ -105852,7 +105885,7 @@ geW
 exW
 lUS
 iDd
-sJb
+iDd
 iDd
 uub
 kWq
@@ -106014,7 +106047,7 @@ nXB
 exW
 mRI
 uVS
-uEH
+uVS
 uVS
 udJ
 kWq
@@ -106176,7 +106209,7 @@ ieh
 cHJ
 iez
 bIe
-uVS
+akz
 beG
 jcO
 kWq
@@ -106338,7 +106371,7 @@ kHC
 pZN
 myN
 hza
-ktF
+akA
 ktF
 elK
 cVj
@@ -106987,7 +107020,7 @@ buk
 ndL
 nuS
 qXL
-uVS
+akw
 umg
 oYz
 qXL
@@ -114326,7 +114359,7 @@ luR
 feX
 qsj
 kMc
-kMc
+akv
 fIB
 dvt
 dvt
@@ -116272,7 +116305,7 @@ cgN
 cgN
 sOd
 lHs
-qIA
+adE
 szB
 szB
 szB
@@ -116434,7 +116467,7 @@ xqC
 cgN
 cgN
 cgN
-cgN
+aeX
 cgN
 szB
 mxN
@@ -116596,7 +116629,7 @@ vVO
 xpu
 xpu
 eKE
-wlP
+akt
 phU
 szB
 iPH
@@ -116758,7 +116791,7 @@ vnt
 iLX
 kfm
 xpu
-ofL
+aku
 cgN
 szB
 wTv
@@ -116920,7 +116953,7 @@ wLC
 qPW
 gnn
 xpu
-ofL
+aku
 cgN
 szB
 dqq
@@ -117082,7 +117115,7 @@ wSp
 qPW
 sbM
 xpu
-ofL
+aku
 cgN
 szB
 szB
@@ -117244,7 +117277,7 @@ wSp
 rjd
 kfm
 xpu
-ofL
+aku
 cgN
 qll
 luR
@@ -117406,7 +117439,7 @@ akN
 xtq
 akN
 akN
-ofL
+aku
 cgN
 luR
 luR
@@ -117568,7 +117601,7 @@ urC
 bDO
 pqX
 akN
-ofL
+aku
 cgN
 luR
 luR
@@ -117730,7 +117763,7 @@ xoC
 odX
 kAX
 akN
-ofL
+aku
 phU
 luR
 luR
@@ -117892,7 +117925,7 @@ rNj
 ufK
 pHx
 akN
-ofL
+aku
 cgN
 luR
 luR
