@@ -383,7 +383,7 @@ GLOBAL_LIST_EMPTY(mining_overlay_cache)
 		if(istype(W, /obj/item/shovel))
 			var/obj/item/shovel/S = W
 			// Outpost 21 edit begin - Digging trenches
-			if(our_shovel.grave_mode == 2)
+			if(S.grave_mode == 2)
 				shovel_dig_trench(user, S)
 				return
 			// Outpost 21 edit end
