@@ -207,6 +207,7 @@ CHOMP Removal End */
 	icon_state = "dirt0"
 	edge_blending_priority = 2
 	initial_flooring = /datum/decl/flooring/outdoors/newdirt
+	flags = TURF_CAN_DIG_SHOVEL // Outpost 21 edit - Allow digging this turf
 
 /turf/simulated/floor/outdoors/newdirt_nograss/Initialize(mapload)
 	var/possibledirts = list(
