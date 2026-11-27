@@ -31,6 +31,14 @@
 	holomap_color = HOLOMAP_AREACOLOR_ARRIVALS
 	color_grading = COLORTINT_DARK
 
+// Event level
+/area/mine/unexplored/muriki_wilds/terrace
+	name = "\improper Muriki Wilderness Mountain Terrace"
+	icon_state = "red2"
+	sound_env = SOUND_ENVIRONMENT_MOUNTAINS
+	music = 'sound/ambience/ambiatm1.ogg'
+	ambience = AMBIENCE_MURIKIOUTSIDE
+	base_turf = /turf/simulated/floor/outdoors/newdirt_nograss/turfpack/muriki
 
 
 //Station! Y'know, the important stuff.
