@@ -29,7 +29,7 @@
 
 	var/excavation_amount = 200
 	var/destroy_artefacts = FALSE // some mining tools will destroy artefacts completely while avoiding side-effects.
-	var/borg_flags = COUNTS_AS_ROBOTIC_MELEE //The ONLY reason this gets this here is because pickaxes are SO hardcoded that it's easier to add it here than everywhere else. Please do not attach this to everything that you desire. Only VERY SPECIFIC THINGS under CERTAIN CIRCUMSTANCES, PLEASE. 99% of things can be added to code\modules\projectiles\guns\energy\cyborg.dm
+	borg_flags = COUNTS_AS_ROBOT_DRILL | COUNTS_AS_ROBOTIC_MELEE
 
 
 /obj/item/pickaxe/silver
@@ -144,8 +144,17 @@
 	var/grave_mode = FALSE
 
 /obj/item/shovel/click_alt(mob/user)
-	grave_mode = !grave_mode
-	to_chat(user, span_notice("You'll now dig [grave_mode ? "out graves" : "for loot"]."))
+	// Outpost 21 edit begin - Digging trenches
+	grave_mode += 1
+	if(grave_mode > 2)
+		grave_mode = 0
+	if(grave_mode == 0)
+		to_chat(user, span_notice("You'll now dig for loot."))
+	if(grave_mode == 1)
+		to_chat(user, span_notice("You'll now dig out graves."))
+	if(grave_mode == 2)
+		to_chat(user, span_notice("You'll now dig a trench."))
+	// Outpost 21 edit end
 	. = ..()
 
 /obj/item/shovel/wood
